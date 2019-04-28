@@ -10,11 +10,11 @@ helpviewer_keywords:
 - OnFileSendMail method [MFC]
 ms.assetid: cafbecb1-0427-4077-b4b8-159bae5b49b8
 ms.openlocfilehash: 9b873ca1b3384adab6487fb3af9dc1401aaad12c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57281643"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62225529"
 ---
 # <a name="mapi-support-in-mfc"></a>MFC での MAPI サポート
 
@@ -32,7 +32,7 @@ MAPI の添付ファイルを送信するファイルを読み取る必要があ
 
 #### <a name="to-implement-a-send-mail-command-with-mfc"></a>MFC での送信 コマンドを実装するには
 
-1. コマンド ID が判定するメニュー項目を追加するのにには、Visual C のメニュー エディターを使用します。
+1. ビジュアルを使用して、C++コマンド ID が判定するメニュー項目を追加するメニュー エディター。
 
    このコマンド ID は、コマによって提供されます。H. 任意のメニューにコマンドを追加できますが、通常に追加されて、**ファイル**メニュー。
 
@@ -48,7 +48,7 @@ MAPI の添付ファイルを送信するファイルを読み取る必要があ
 MFC が使用してメニュー項目でメール サポートを使用できる場合`OnUpdateFileSendMail`後にコマンドを処理および`OnFileSendMail`します。 メールのサポートが利用できない場合は、MFC で、ユーザーに表示しないように、メニュー項目が自動的に削除されます。
 
 > [!TIP]
->  前述したように、メッセージ マップ エントリを手動で追加することがなく、メッセージを関数にマップするのにクラスのプロパティ ウィンドウを使用できます。 詳細については、[関数へのメッセージの割り当て](../mfc/reference/mapping-messages-to-functions.md)を参照してください。
+>  前述したように、メッセージ マップ エントリを手動で追加することがなく、メッセージを関数にマップするのにクラスのプロパティ ウィンドウを使用できます。 詳細については、次を参照してください。[関数へのメッセージの割り当て](../mfc/reference/mapping-messages-to-functions.md)します。
 
 関連情報については、次を参照してください。、 [MAPI](../mfc/mapi.md)の概要。
 

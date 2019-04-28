@@ -17,11 +17,11 @@ helpviewer_keywords:
 - background processing [MFC]
 ms.assetid: 5c7c46c1-6107-4304-895f-480983bb1e44
 ms.openlocfilehash: 0d0e3fcba9ce447ec359958fc5ed59c6d596dd7a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57287136"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62219491"
 ---
 # <a name="idle-loop-processing"></a>アイドリング ループ処理
 
@@ -42,7 +42,7 @@ MFC で開発したアプリケーションは、メイン メッセージ ル�
 > [!NOTE]
 >  `Run`、 `OnIdle`、およびその他の特定のメンバー関数は、クラスのメンバーであるようになりました`CWinThread`クラスのではなく`CWinApp`します。 `CWinApp` は、`CWinThread` から派生しています。
 
-アイドル処理の詳細については、[OnIdle](../mfc/reference/cwinthread-class.md#onidle)で、 *MFC リファレンス*を参照してください。
+アイドル処理の詳細については、次を参照してください。 [OnIdle](../mfc/reference/cwinthread-class.md#onidle)で、 *MFC リファレンス*します。
 
 ##  <a name="_core_peekmessage_elsewhere_in_your_application"></a> PeekMessage、アプリケーションで別の場所
 

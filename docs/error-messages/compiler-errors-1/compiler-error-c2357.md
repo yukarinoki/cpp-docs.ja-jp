@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2357
 ms.assetid: d1083945-0ea2-4385-9e66-8c665978806c
 ms.openlocfilehash: 1872672e776ad13bf16be5ae69729f4f68d8f3b0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531782"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62302034"
 ---
 # <a name="compiler-error-c2357"></a>コンパイラ エラー C2357
 
@@ -23,7 +23,7 @@ ms.locfileid: "50531782"
 int __cdecl atexit(void (__cdecl *)());
 ```
 
-詳細については、[init_seg](../../preprocessor/init-seg.md)を参照してください。
+詳細については、次を参照してください。 [init_seg](../../preprocessor/init-seg.md)します。
 
 次の例では、C2357 が生成されます。
 

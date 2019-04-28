@@ -53,11 +53,11 @@ helpviewer_keywords:
 - CMFCToolBarEditBoxButton [MFC], SetFlatMode
 ms.assetid: b21d9b67-6bf7-4ca9-bd62-b237756e0ab3
 ms.openlocfilehash: ac07ff4e6bf97518e2c659a9d6df9bd721b6b806
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57291614"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62218259"
 ---
 # <a name="cmfctoolbareditboxbutton-class"></a>CMFCToolBarEditBoxButton クラス
 
@@ -123,8 +123,7 @@ class CMFCToolBarEditBoxButton : public CMFCToolBarButton
 
 1. 親ツール バー リソースでボタンのダミー リソース ID を予約します。
 
-2. 
-  `CMFCToolBarEditBoxButton` オブジェクトを構築します。
+2. `CMFCToolBarEditBoxButton` オブジェクトを構築します。
 
 3. AFX_WM_RESETTOOLBAR メッセージを処理するメッセージ ハンドラーで、ダミー ボタンを置き換える新しいコンボ ボックス ボタンを使用して[CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)します。
 
@@ -504,7 +503,7 @@ virtual HBRUSH OnCtlColor(
 
 このメソッドは、基本クラスの実装 ( [CMFCToolBarButton::OnCtlColor](../../mfc/reference/cmfctoolbarbutton-class.md#onctlcolor)) それぞれグローバル テキストと背景の色を指定されたデバイス コンテキストのテキストと背景色を設定します。
 
-アプリケーションに使用できるグローバル オプションの詳細については、[AFX_GLOBAL_DATA 構造体](../../mfc/reference/afx-global-data-structure.md)を参照してください。
+アプリケーションに使用できるグローバル オプションの詳細については、次を参照してください。 [AFX_GLOBAL_DATA 構造体](../../mfc/reference/afx-global-data-structure.md)します。
 
 ##  <a name="onglobalfontschanged"></a>  CMFCToolBarEditBoxButton::OnGlobalFontsChanged
 
@@ -518,7 +517,7 @@ virtual void OnGlobalFontsChanged();
 
 このメソッドが基底クラスの実装を拡張 ( [CMFCToolBarButton::OnGlobalFontsChanged](../../mfc/reference/cmfctoolbarbutton-class.md#onglobalfontschanged)) のグローバルのフォントのコントロールのフォントを変更することで。
 
-アプリケーションに使用できるグローバル オプションの詳細については、[AFX_GLOBAL_DATA 構造体](../../mfc/reference/afx-global-data-structure.md)を参照してください。
+アプリケーションに使用できるグローバル オプションの詳細については、次を参照してください。 [AFX_GLOBAL_DATA 構造体](../../mfc/reference/afx-global-data-structure.md)します。
 
 ##  <a name="onmove"></a>  CMFCToolBarEditBoxButton::OnMove
 
@@ -693,4 +692,4 @@ virtual void SetStyle(UINT nStyle);
 [CMFCToolBarButton クラス](../../mfc/reference/cmfctoolbarbutton-class.md)<br/>
 [CEdit クラス](../../mfc/reference/cedit-class.md)<br/>
 [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)<br/>
-[チュートリアル: ツールバーのコントロールの追加](../../mfc/walkthrough-putting-controls-on-toolbars.md)
+[チュートリアル: ツール バーへのコントロールの追加](../../mfc/walkthrough-putting-controls-on-toolbars.md)

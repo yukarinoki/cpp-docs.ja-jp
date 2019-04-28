@@ -43,11 +43,11 @@ helpviewer_keywords:
 - llrintl function
 ms.assetid: 28ccd5b3-5e6f-434f-997d-a21d51b8ce7f
 ms.openlocfilehash: 01680a62e654112475a55bd8eac0cc14d254e2a2
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523238"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62285773"
 ---
 # <a name="lrint-lrintf-lrintl-llrint-llrintf-llrintl"></a>lrint、lrintf、lrintl、llrint、llrintf、llrintl
 
@@ -116,7 +116,7 @@ long long int llrintl(
 
 場合*x*の整数値、これらの関数の生成と等価の浮動小数点を表さない**FE_INEXACT**します。
 
-**Microsoft 固有**: 結果が戻りの型の範囲外の場合、またはパラメーターが非数 (NaN) または無限値 (infinity) の場合、戻り値は実装で定義されます。 Microsoft コンパイラは0 の値を返します。
+**Microsoft 固有の仕様**:結果が戻り値の型の範囲外にある場合、またはパラメーターが NaN または無限大の場合は、定義された実装を返します。 Microsoft コンパイラは0 の値を返します。
 
 ## <a name="requirements"></a>必要条件
 

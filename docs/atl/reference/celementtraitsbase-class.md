@@ -12,11 +12,11 @@ helpviewer_keywords:
 - CElementTraitsBase class
 ms.assetid: 75284caf-347e-4355-a7d8-efc708dd514a
 ms.openlocfilehash: 207207d26a2c43367a00b382f80761429159a7b4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57263677"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62259119"
 ---
 # <a name="celementtraitsbase-class"></a>CElementTraitsBase クラス
 
@@ -54,7 +54,7 @@ class CElementTraitsBase
 
 この基本クラスは、コピーおよびコレクション クラス内の要素を再配置するためのメソッドを定義します。 クラスによって使用されて、 [CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)、 [CStringRefElementTraits](../../atl/reference/cstringrefelementtraits-class.md)、および[CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md)します。
 
-詳細については、[ATL コレクション クラス](../../atl/atl-collection-classes.md)を参照してください。
+詳細については、次を参照してください。 [ATL コレクション クラス](../../atl/atl-collection-classes.md)します。
 
 ## <a name="requirements"></a>必要条件
 

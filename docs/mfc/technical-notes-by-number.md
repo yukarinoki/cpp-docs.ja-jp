@@ -5,15 +5,15 @@ f1_keywords:
 - vc.tables.mfc.technotes
 ms.assetid: aaa449be-9167-4510-a490-af872c4f60a2
 ms.openlocfilehash: c5a102f36c5556af48a1b3f79e39f256bc5797ab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50634877"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62306406"
 ---
 # <a name="technical-notes-by-number"></a>番号順テクニカル ノート
 
-次のテクニカル ノートが先に表示数値の場合、直前に書き込まれたテクニカル ノートでします。 カテゴリ別一覧については、[カテゴリ別テクニカル ノート](../mfc/technical-notes-by-category.md)を参照してください。
+次のテクニカル ノートが先に表示数値の場合、直前に書き込まれたテクニカル ノートでします。 カテゴリ別一覧については、次を参照してください。[カテゴリ別テクニカル ノート](../mfc/technical-notes-by-category.md)します。
 
 |数値|Title|
 |------------|-----------|

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - strings [C++], Unicode
 - strings [C++], character set support
 ms.openlocfilehash: 59e8759ffbe61b80c74d8b5aba5bc50886d6b23d
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743908"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62252676"
 ---
 # <a name="unicode-and-multibyte-character-set-mbcs-support"></a>Unicode とマルチバイト文字セット (MBCS: Multibyte Character Set) のサポート
 
@@ -89,7 +89,7 @@ DBCS では、文字列の中に任意の ANSI の 1 バイト文字と 2 バイ
 > [!NOTE]
 > _UNICODE、_MBCS のシンボルは、相互に排他的です。
 
-すべてのランタイム文字列処理ルーチンの汎用テキスト関数マッピングは、後ほど[C ランタイム ライブラリ リファレンス](../c-runtime-library/c-run-time-library-reference.md)します。 一覧については、[国際化](../c-runtime-library/internationalization.md)を参照してください。
+すべてのランタイム文字列処理ルーチンの汎用テキスト関数マッピングは、後ほど[C ランタイム ライブラリ リファレンス](../c-runtime-library/c-run-time-library-reference.md)します。 一覧については、次を参照してください。[国際化](../c-runtime-library/internationalization.md)します。
 
 同様に、`CString`メソッドは、汎用的なデータ型マッピングを使用して実装されます。 TCHAR を使用する MFC MBCS および Unicode の両方を有効にするには、 **char**または`wchar_t`の LPTSTR **char** <strong>\*</strong>または`wchar_t*`、およびのLPCTSTR**const char** <strong>\*</strong>または`const wchar_t*`します。 これによって、MBCS または Unicode への正しいマッピングが確保されます。
 

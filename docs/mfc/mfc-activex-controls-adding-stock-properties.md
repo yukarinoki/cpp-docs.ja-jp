@@ -10,15 +10,15 @@ helpviewer_keywords:
 - foreground colors [MFC]
 ms.assetid: 8b98c8c5-5b69-4366-87bf-0e61e6668ecb
 ms.openlocfilehash: 940f61c9ce6ccb57843333582455e61c1f7ac73b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289690"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62225344"
 ---
 # <a name="mfc-activex-controls-adding-stock-properties"></a>MFC ActiveX コントロール:ストック プロパティの追加
 
-ストック プロパティは、クラスによって既に実装されている点で、カスタム プロパティとは異なります。`COleControl`します。 `COleControl` コントロールの共通プロパティをサポートする定義済みのメンバー関数が含まれています。 いくつかの一般的なプロパティには、コントロールのキャプションと前景色と背景色が含まれます。 その他のストック プロパティについては、[プロパティの追加ウィザードでサポートするストック プロパティ](#_core_stock_properties_supported_by_classwizard)この記事で後述を参照してください。 ストック プロパティが常に付きます DISP_STOCKPROP のディスパッチ マップ エントリ。
+ストック プロパティは、クラスによって既に実装されている点で、カスタム プロパティとは異なります。`COleControl`します。 `COleControl` コントロールの共通プロパティをサポートする定義済みのメンバー関数が含まれています。 いくつかの一般的なプロパティには、コントロールのキャプションと前景色と背景色が含まれます。 その他のストック プロパティについては、次を参照してください。[プロパティの追加ウィザードでサポートするストック プロパティ](#_core_stock_properties_supported_by_classwizard)この記事で後述します。 ストック プロパティが常に付きます DISP_STOCKPROP のディスパッチ マップ エントリ。
 
 この記事では、プロパティの追加ウィザードを使用して ActiveX コントロールを (この例では、キャプション) ではストック プロパティを追加する方法について説明し、結果として得られるコードの変更について説明します。 ここでは、次の内容について説明します。
 
@@ -103,6 +103,6 @@ ms.locfileid: "57289690"
 ## <a name="see-also"></a>関連項目
 
 [MFC ActiveX コントロール](../mfc/mfc-activex-controls.md)<br/>
-[MFC ActiveX コントロール:プロパティ](../mfc/mfc-activex-controls-properties.md)<br/>
-[MFC ActiveX コントロール:メソッド](../mfc/mfc-activex-controls-methods.md)<br/>
+[MFC ActiveX コントロール: プロパティ](../mfc/mfc-activex-controls-properties.md)<br/>
+[MFC ActiveX コントロール: メソッド](../mfc/mfc-activex-controls-methods.md)<br/>
 [COleControl クラス](../mfc/reference/colecontrol-class.md)

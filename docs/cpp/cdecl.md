@@ -10,17 +10,17 @@ helpviewer_keywords:
 - __cdecl keyword [C++]
 ms.assetid: 1ff1d03e-fb4e-4562-8be1-74f1ad6427f1
 ms.openlocfilehash: 298485d310ee4039b13781a8b5cd88a489af3b8b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550216"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62232403"
 ---
 # <a name="cdecl"></a>__cdecl
 
 **Microsoft 固有の仕様**
 
-**_ _cdecl** C および C++ プログラムの呼び出し規約を既定値です。 実行できるため、スタックは呼び出し元によってクリーンアップ、`vararg`関数。 **_ _Cdecl**よりも大きな実行可能ファイルを作成する呼び出し規約[_ _stdcall](../cpp/stdcall.md)、各関数の呼び出しにスタック クリーンアップ コードを含める必要があるためです。 次の一覧は、この呼び出し規則の実装例を示しています。
+**_ _cdecl**は既定の C の呼び出し規約とC++プログラム。 実行できるため、スタックは呼び出し元によってクリーンアップ、`vararg`関数。 **_ _Cdecl**よりも大きな実行可能ファイルを作成する呼び出し規約[_ _stdcall](../cpp/stdcall.md)、各関数の呼び出しにスタック クリーンアップ コードを含める必要があるためです。 次の一覧は、この呼び出し規則の実装例を示しています。
 
 |要素|実装|
 |-------------|--------------------|
@@ -30,7 +30,7 @@ ms.locfileid: "50550216"
 |大文字と小文字の変換規約|大文字小文字は変換されません。|
 
 > [!NOTE]
->  関連情報については、[装飾名](../build/reference/decorated-names.md)を参照してください。
+>  関連情報については、次を参照してください。[装飾名](../build/reference/decorated-names.md)します。
 
 場所、 **_ _cdecl**変数または関数名の前に修飾子。 C の名前と呼び出し規則は、既定値であるためだけの時間使用する必要あります **_ _cdecl** x86 コードは、指定したときに、 `/Gv` (vectorcall)、 `/Gz` (stdcall)、または`/Gr`(fastcall)コンパイラ オプション。 [/Gd](../build/reference/gd-gr-gv-gz-calling-convention.md)コンパイラ オプションの強制、 **_ _cdecl**呼び出し規約。
 

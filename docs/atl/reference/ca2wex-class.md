@@ -11,11 +11,11 @@ helpviewer_keywords:
 - CA2WEX class
 ms.assetid: 317d9ffb-e84f-47e8-beda-57e28fb19124
 ms.openlocfilehash: 7bfce54253ffcd217bb98345893724a509879abc
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57274459"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62247514"
 ---
 # <a name="ca2wex-class"></a>CA2WEX クラス
 
@@ -82,7 +82,7 @@ class CA2WEX
 
 - CA2W
 
-これらのテキスト変換マクロの詳細については、[ATL と MFC 文字列変換マクロ](string-conversion-macros.md)を参照してください。
+これらのテキスト変換マクロの詳細については、次を参照してください。 [ATL と MFC 文字列変換マクロ](string-conversion-macros.md)します。
 
 ## <a name="example"></a>例
 

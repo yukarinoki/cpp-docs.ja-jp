@@ -11,11 +11,11 @@ helpviewer_keywords:
 - cl.exe compiler [C++], controlling linker
 ms.assetid: eae47ef7-09eb-40c9-b318-7c714cd452fc
 ms.openlocfilehash: f8d8c5e1b0ca4d2a35a57683fea2e6de12747860
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57821484"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62294539"
 ---
 # <a name="cl-invokes-the-linker"></a>リンカーを呼び出す CL
 
@@ -28,7 +28,7 @@ ms.locfileid: "57821484"
 |/Zg|関数プロトタイプを生成します。|
 |/Zs|構文の確認|
 
-リンクの詳細については、[MSVC リンカー オプション](linker-options.md)を参照してください。
+リンクの詳細については、次を参照してください。 [MSVC リンカー オプション](linker-options.md)します。
 
 ## <a name="example"></a>例
 
@@ -46,7 +46,7 @@ ms.locfileid: "57821484"
 CL MAIN.c MOD1.C MOD2.C MYGRAPH.lib
 ```
 
-まず、CL は C ソース ファイルをコンパイルし、MAIN.obj、MOD1.obj、および MOD2.obj オブジェクト ファイルを作成します。コンパイラは、標準ライブラリの名前を各 .obj ファイルに配置します。 詳細については、[ランタイム ライブラリの使用](md-mt-ld-use-run-time-library.md)を参照してください。
+まず、CL は C ソース ファイルをコンパイルし、MAIN.obj、MOD1.obj、および MOD2.obj オブジェクト ファイルを作成します。コンパイラは、標準ライブラリの名前を各 .obj ファイルに配置します。 詳細については、次を参照してください。[ランタイム ライブラリの使用](md-mt-ld-use-run-time-library.md)します。
 
 CL は、名前、MYGRAPH.lib と共に、.obj ファイルの名前をリンカーに渡します。 リンカーは、次のように外部参照を解決します。
 

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - naked functions [C++]
 ms.assetid: ff203858-2dd3-4a76-8a57-d0d06817adef
 ms.openlocfilehash: c813b97b85469165aae892b0a4cce888112e3dc5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605154"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62267377"
 ---
 # <a name="rules-and-limitations-for-naked-functions"></a>naked 関数の規則と制限
 
@@ -33,7 +33,7 @@ ms.locfileid: "50605154"
 
 - **Naked**でコンパイルするときに、キーワードは無視されます[/clr](../build/reference/clr-common-language-runtime-compilation.md)します。
 
-- [_ _Fastcall](../cpp/fastcall.md) naked 関数は、レジスタ引数のいずれかに C と C++ コードでの参照があるときに、プロローグ コードがその変数のスタックの場所にそのレジスタの値を格納する必要があります。 例えば:
+- [_ _Fastcall](../cpp/fastcall.md) C での参照があるたびに、naked 関数/C++コード プロローグ コードにレジスタ引数のいずれか、その変数のスタックの場所にそのレジスタの値を格納する必要があります。 例:
 
 ```cpp
 // nkdfastcl.cpp

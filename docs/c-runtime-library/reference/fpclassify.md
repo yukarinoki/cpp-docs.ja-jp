@@ -23,11 +23,11 @@ helpviewer_keywords:
 - fpclassify function
 ms.assetid: bf549499-7ff9-4a58-8692-f2d1cb6bab81
 ms.openlocfilehash: a25897a110d96923a45695d61f923dc7818c7e3a
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518361"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62287942"
 ---
 # <a name="fpclassify"></a>fpclassify
 
@@ -72,7 +72,7 @@ int fpclassify(
 
 ## <a name="remarks"></a>Remarks
 
-C では、 **fpclassify**マクロは C++ では、 **fpclassify**の引数の型を使用するオーバー ロードされた関数は、 **float**、**二重**、または**長い****二重**します。 どちらの場合も、返される値は、中間表記ではなく、引数式の有効な型に依存します。 たとえば、通常**二重**または**長い****二重**値は、無限になる、denormal、またはゼロ値に変換すると、 **float**。
+C では、 **fpclassify**マクロは C++ では、 **fpclassify**の引数の型を使用するオーバー ロードされた関数は、 **float**、**二重**、または**長い** **二重**します。 どちらの場合も、返される値は、中間表記ではなく、引数式の有効な型に依存します。 たとえば、通常**二重**または**長い** **二重**値は、無限になる、denormal、またはゼロ値に変換すると、 **float**。
 
 ## <a name="requirements"></a>必要条件
 

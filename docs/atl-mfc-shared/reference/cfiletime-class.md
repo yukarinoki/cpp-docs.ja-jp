@@ -21,11 +21,11 @@ helpviewer_keywords:
 - shared classes, CFileTime
 ms.assetid: 1a358a65-1383-4124-b0d4-59b026e6860f
 ms.openlocfilehash: 07b888b031a38dc2f09404a14e729e26b3eaa019
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746098"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62235134"
 ---
 # <a name="cfiletime-class"></a>CFileTime クラス
 
@@ -99,7 +99,7 @@ Const 静的メンバー変数は、計算が簡単に用意されています�
 |Day|1 時間\*24|
 |週|1 日\*7|
 
-**注**作成を記録できるすべてのファイル システムと最終アクセス時刻およびすべてのファイル システム、同じ方法でそれらを記録します。 Windows NT FAT ファイル システム上の例の作成の時間が 10 ミリ秒の解像度、書き込み時間が 2 秒単位の解像度およびアクセス時間が 1 日 (アクセス日) の解像度。 NTFS では、アクセス時間は 1 時間の解像度が。 さらに、FAT ディスク上の時刻を現地時刻に記録するが、NTFS がディスク上の時刻を UTC に記録します。 詳細については、[ファイル回](/windows/desktop/SysInfo/file-times)を参照してください。
+**注**作成を記録できるすべてのファイル システムと最終アクセス時刻およびすべてのファイル システム、同じ方法でそれらを記録します。 Windows NT FAT ファイル システム上の例の作成の時間が 10 ミリ秒の解像度、書き込み時間が 2 秒単位の解像度およびアクセス時間が 1 日 (アクセス日) の解像度。 NTFS では、アクセス時間は 1 時間の解像度が。 さらに、FAT ディスク上の時刻を現地時刻に記録するが、NTFS がディスク上の時刻を UTC に記録します。 詳細については、次を参照してください。[ファイル回](/windows/desktop/SysInfo/file-times)します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 

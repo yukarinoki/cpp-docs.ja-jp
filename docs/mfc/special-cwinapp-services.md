@@ -31,11 +31,11 @@ helpviewer_keywords:
 - registration [MFC], shell
 ms.assetid: 0480cd01-f629-4249-b221-93432d95b431
 ms.openlocfilehash: 910660253c9d306b13294a710021a6bbd36c1952
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258087"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62307316"
 ---
 # <a name="special-cwinapp-services"></a>CWinApp のその他のサービス
 
@@ -53,7 +53,7 @@ MFC アプリケーション ウィザードは既定では、により、ユー
 
 アプリの GDI + を初期化するかどうか (呼び出して[GdiplusStartup](/windows/desktop/api/gdiplusinit/nf-gdiplusinit-gdiplusstartup)で、 [InitInstance](../mfc/reference/cwinapp-class.md#initinstance)関数)、GDI + のバック グラウンド スレッドを抑制する必要があります。
 
-設定してこれを行う、`SuppressBackgroundThread`のメンバー、 [GdiplusStartupInput](/windows/desktop/api/gdiplusinit/ns-gdiplusinit-gdiplusstartupinput)構造体を**TRUE**します。 ときに、スレッドがバック グラウンド GDI + の抑制、`NotificationHook`と`NotificationUnhook`呼び出しが行われる直前に入力し、アプリケーションのメッセージ ループを終了します。 これらの呼び出しの詳細については、[GdiplusStartupOutput](/windows/desktop/api/gdiplusinit/ns-gdiplusinit-gdiplusstartupoutput)を参照してください。 そのため、適してを呼び出す`GdiplusStartup`フックの通知関数は仮想関数のオーバーライドでは[使わ](../mfc/reference/cwinapp-class.md#run)以下に示すように。
+設定してこれを行う、`SuppressBackgroundThread`のメンバー、 [GdiplusStartupInput](/windows/desktop/api/gdiplusinit/ns-gdiplusinit-gdiplusstartupinput)構造体を**TRUE**します。 ときに、スレッドがバック グラウンド GDI + の抑制、`NotificationHook`と`NotificationUnhook`呼び出しが行われる直前に入力し、アプリケーションのメッセージ ループを終了します。 これらの呼び出しの詳細については、次を参照してください。 [GdiplusStartupOutput](/windows/desktop/api/gdiplusinit/ns-gdiplusinit-gdiplusstartupoutput)します。 そのため、適してを呼び出す`GdiplusStartup`フックの通知関数は仮想関数のオーバーライドでは[使わ](../mfc/reference/cwinapp-class.md#run)以下に示すように。
 
 [!code-cpp[NVC_MFCDocView#6](../mfc/codesnippet/cpp/special-cwinapp-services_1.cpp)]
 
@@ -82,4 +82,4 @@ MFC アプリケーション ウィザードは既定では、により、ユー
 
 ## <a name="see-also"></a>関連項目
 
-[CWinApp:アプリケーション クラス](../mfc/cwinapp-the-application-class.md)
+[CWinApp: アプリケーション クラス](../mfc/cwinapp-the-application-class.md)

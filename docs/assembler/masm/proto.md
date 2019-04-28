@@ -7,11 +7,11 @@ helpviewer_keywords:
 - PROTO directive
 ms.assetid: 0487ee16-9dc7-43d1-9445-cd1601f5a080
 ms.openlocfilehash: 616b6be2a5c191ebc67d61288cb5fa6c183091fa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536727"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62210522"
 ---
 # <a name="proto"></a>PROTO
 
@@ -19,7 +19,7 @@ ms.locfileid: "50536727"
 
 ## <a name="syntax"></a>構文
 
-> *ラベル* **PROTO** \[*距離*] \[ *langtype*] \[ __、__ \[*パラメーター*]__:__*タグ*].
+> *label* **PROTO** \[*distance*] \[*langtype*] \[__,__ \[*parameter*]__:__*tag*] ...
 
 ### <a name="parameters"></a>パラメーター
 
@@ -32,9 +32,9 @@ ms.locfileid: "50536727"
 *langtype*<br/>
 (省略可能)プロシージャとパブリック シンボルの呼び出し元と名前付け規則を設定します。 サポートされている規則は次のとおりです。
 
-- 32 ビット**フラット**モデル: **C**、 **STDCALL**
+- 32 ビット**フラット**モデル。**C**、 **STDCALL**
 
-- 16 ビット モデル: **C**、 **BASIC**、 **FORTRAN**、 **PASCAL**、 **SYSCALL**、 **STDCALL**
+- 16 ビット モデル:**C**, **BASIC**, **FORTRAN**, **PASCAL**, **SYSCALL**, **STDCALL**
 
 *parameter*<br/>
 関数パラメーターのオプション名。

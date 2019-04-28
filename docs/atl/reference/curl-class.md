@@ -36,11 +36,11 @@ helpviewer_keywords:
 - CUrl class
 ms.assetid: b3894d34-47b9-4961-9719-4197153793da
 ms.openlocfilehash: 913365e2b20015b22480dfd364d75b2be3c6355b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57295657"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62277254"
 ---
 # <a name="curl-class"></a>CUrl クラス
 
@@ -189,7 +189,7 @@ BOOL CrackUrl(LPCTSTR lpszUrl, DWORD dwFlags = 0) throw();
 URL。
 
 *dwFlags*<br/>
-内のすべてのエスケープ文字を変換するには、ATL_URL_DECODE または ATL_URL_ESCAPE 指定*lpszUrl*に解析後に実際の値。 (Visual C 2005 では、以前 ATL_URL_DECODE 変換すべてのエスケープ文字を解析する前にします。)
+内のすべてのエスケープ文字を変換するには、ATL_URL_DECODE または ATL_URL_ESCAPE 指定*lpszUrl*に解析後に実際の値。 (Visual の前にC++2005 では、解析する前に変換されたすべてのエスケープ文字を ATL_URL_DECODE)。
 
 ### <a name="return-value"></a>戻り値
 
@@ -482,7 +482,7 @@ inline BOOL SetHostName(LPCTSTR lpszHost) throw();
 ### <a name="parameters"></a>パラメーター
 
 *lpszHost*<br/>
-ホスト名。
+ホスト名です。
 
 ### <a name="return-value"></a>戻り値
 

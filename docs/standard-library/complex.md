@@ -8,11 +8,11 @@ helpviewer_keywords:
 - complex header
 ms.assetid: 5e728995-3059-496a-9ce9-61d1bfbe4f2b
 ms.openlocfilehash: afcdb1246d9c02f83dbc8708326d10e802ad2779
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525867"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62212093"
 ---
 # <a name="ltcomplexgt"></a>&lt;complex&gt;
 
@@ -42,9 +42,9 @@ ms.locfileid: "50525867"
 
    (*、*/(*、*<sup>2</sup> + *b*<sup>2</sup>)、-*b*/(*、*<sup>2</sup> + *b*<sup>2</sup>))
 
-複素数を表す*z* = (*、*、 *b*) 形式で*z* = *、*  + *双*ここで、*は*<sup>2</sup> =-1 の場合、規則の複素数のセットとその要素の実際の数値のセットの代数を適用できます。 例えば:
+複素数を表す*z* = (*、*、 *b*) 形式で*z* = *、*  + *双*ここで、*は*<sup>2</sup> =-1 の場合、規則の複素数のセットとその要素の実際の数値のセットの代数を適用できます。 例:
 
-   (1 + 2*は*) \* (2 + 3*は*) = 1 \* (2 + 3*は*) + 2*は* \* (2 + 3*i*)= (2 + 3*は*) + (4*は*6 +*は*<sup>2</sup>) (2. ~ 6.) + (3 + 4) =*は*-4 7 + =*は*
+   (1 + 2*i*) \* (2 + 3*i*) = 1 \* (2 + 3*i*) + 2*i* \* (2 + 3*i*) = (2 + 3*i*) + (4*i* + 6*i*<sup>2</sup>) = (2 - 6) + (3 + 4)*i* = -4 + 7*i*
 
 複素数系は体 (field) ですが、順序体 (ordered field) ではありません。 実際の数値およびそのサブセットでは、フィールドが実数には、複素数に不等式を適用できませんので、複素数の順序がありません。
 

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - MessageHandler function
 ms.assetid: 8a0acf97-1b0d-4226-91b9-75446634a03c
 ms.openlocfilehash: 1acd56357f9ce234e3c479fd8fa88c1ed8407878
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57818233"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62261697"
 ---
 # <a name="messagehandler"></a>MessageHandler
 
@@ -46,7 +46,7 @@ LRESULT MessageHandler(
 
 ## <a name="remarks"></a>Remarks
 
-このメッセージ ハンドラーを使用して、メッセージ マップの例は、[MESSAGE_HANDLER](reference/message-map-macros-atl.md#message_handler)を参照してください。
+このメッセージ ハンドラーを使用して、メッセージ マップの例は、次を参照してください。 [MESSAGE_HANDLER](reference/message-map-macros-atl.md#message_handler)します。
 
 ## <a name="see-also"></a>関連項目
 

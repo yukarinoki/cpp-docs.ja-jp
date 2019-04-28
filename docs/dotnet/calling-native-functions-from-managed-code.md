@@ -10,11 +10,11 @@ helpviewer_keywords:
 - interop [C++], calling native functions from managed code
 ms.assetid: 982cef18-20d9-42b4-8242-a77fa65f2e36
 ms.openlocfilehash: 285bfabbd5935df303a39ada11c388713ae24f34
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743249"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62209192"
 ---
 # <a name="calling-native-functions-from-managed-code"></a>マネージド コードからのネイティブ関数の呼び出し
 
@@ -217,7 +217,7 @@ int main() {
 
 MarshalAs 属性は System::Runtime::InteropServices 名前空間にあります。 この属性は、配列などのほかのデータ型にも使用できます。
 
-このトピックで既に述べたように、マーシャリング ライブラリにより、最適化された新しい方法でネイティブ環境とマネージド環境との間でデータ変換を行うことができます。 詳細については、[c++ Overview of Marshaling](../dotnet/overview-of-marshaling-in-cpp.md)を参照してください。
+このトピックで既に述べたように、マーシャリング ライブラリにより、最適化された新しい方法でネイティブ環境とマネージド環境との間でデータ変換を行うことができます。 詳細については、次を参照してください。 [c++ Overview of Marshaling](../dotnet/overview-of-marshaling-in-cpp.md)します。
 
 ## <a name="performance-considerations"></a>パフォーマンスに関する考慮事項
 

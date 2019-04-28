@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ATL, C Run-Time library (CRT)
 ms.assetid: 650957ae-362c-4ecf-8b03-5d49138e8b5b
 ms.openlocfilehash: e247897f42eea5b4ced5bc40b556137a1a5cd228
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57820183"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62261931"
 ---
 # <a name="linking-to-the-crt-in-your-atl-project"></a>ATL プロジェクトで CRT にリンクするには
 
@@ -29,7 +29,7 @@ CRT に静的にリンクする場合は CRT からのコードは、実行可�
 
 ## <a name="optimization-options"></a>最適化オプション
 
-/OPT:NOWIN98 リンカー オプションを使用してさらに低下 10 k は、既定の ATL コントロール譲歩読み込み Windows 98 システム上の時間が増加します。 リンク オプションの詳細については、[/OPT (最適化)](../build/reference/opt-optimizations.md)を参照してください。
+/OPT:NOWIN98 リンカー オプションを使用してさらに低下 10 k は、既定の ATL コントロール譲歩読み込み Windows 98 システム上の時間が増加します。 リンク オプションの詳細については、次を参照してください。 [/OPT (最適化)](../build/reference/opt-optimizations.md)します。
 
 ## <a name="see-also"></a>関連項目
 

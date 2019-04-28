@@ -7,11 +7,11 @@ helpviewer_keywords:
 - _ITERATOR_DEBUG_LEVEL
 ms.assetid: 718549cd-a9a9-4ab3-867b-aac00b321e67
 ms.openlocfilehash: a584fe5a97e251205e750507b27e53e6e7b9a20e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502818"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62224195"
 ---
 # <a name="iteratordebuglevel"></a>_ITERATOR_DEBUG_LEVEL
 
@@ -49,7 +49,7 @@ _ITERATOR_DEBUG_LEVEL マクロが、_SECURE_SCL マクロおよび _HAS_ITERATO
 
 ### <a name="example"></a>例
 
-_ITERATOR_DEBUG_LEVEL マクロの値を指定するには、使用、 [/D](../build/reference/d-preprocessor-definitions.md)コンパイラ オプションで、コマンドラインで定義または使用`#define`ソース ファイルで、C++ 標準ライブラリの前にヘッダーが含まれています。 コンパイル、コマンドラインでなど*sample.cpp*デバッグ モードで、反復子のデバッグのサポートを使用するには、_ITERATOR_DEBUG_LEVEL マクロの定義を指定することができます。
+_ITERATOR_DEBUG_LEVEL マクロの値を指定するには、使用、 [/D](../build/reference/d-preprocessor-definitions.md)コンパイラ オプションで、コマンドラインで定義または使用`#define`する前に、C++標準ライブラリ ヘッダーは、ソース ファイルに含まれます。 コンパイル、コマンドラインでなど*sample.cpp*デバッグ モードで、反復子のデバッグのサポートを使用するには、_ITERATOR_DEBUG_LEVEL マクロの定義を指定することができます。
 
 `cl /EHsc /Zi /MDd /D_ITERATOR_DEBUG_LEVEL=1 sample.cpp`
 

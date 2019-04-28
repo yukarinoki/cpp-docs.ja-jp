@@ -51,11 +51,11 @@ helpviewer_keywords:
 - CDatabase [MFC], m_hdbc
 ms.assetid: bd0de70a-e3c3-4441-bcaa-bbf434426ca8
 ms.openlocfilehash: ebc36d82af9bfe12ab30a86214e58610b5eaab95
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58329001"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62253715"
 ---
 # <a name="cdatabase-class"></a>CDatabase クラス
 
@@ -144,7 +144,7 @@ BOOL BeginTrans();
 トランザクションでは、1 つまたは複数の呼び出しの`AddNew`、 `Edit`、 `Delete`、および`Update`のメンバー関数は、`CRecordset`オブジェクト。 トランザクションを開始する前に、`CDatabase`オブジェクトする必要があります既にに接続されているデータ ソースを呼び出してその`OpenEx`または`Open`メンバー関数。 トランザクションを終了するには、呼び出し[CommitTrans](#committrans)データ ソースへのすべての変更を受け入れる (およびそれらを実行) を呼び出したり[ロールバック](#rollback)全体のトランザクションを中止します。 呼び出す`BeginTrans`した後、トランザクションに関連するすべてのレコード セットを開くし、として、実際の更新操作。
 
 > [!CAUTION]
->  ODBC ドライバーによって呼び出す前にレコード セットを開く`BeginTrans`を呼び出すときに問題が発生する可能性があります`Rollback`します。 使用する特定のドライバーを確認する必要があります。 たとえば、Microsoft ODBC デスクトップ Driver パック 3.0 に含まれる Microsoft Access ドライバーを使用する場合、開いているカーソルのある任意のデータベースのトランザクションを開始する必要がありますいない Jet データベース エンジンの要件の考慮する必要があります。 MFC データベース クラスで、開いているカーソルは開いていることを意味`CRecordset`オブジェクト。 詳細については、[テクニカル ノート 68](../../mfc/tn068-performing-transactions-with-the-microsoft-access-7-odbc-driver.md)を参照してください。
+>  ODBC ドライバーによって呼び出す前にレコード セットを開く`BeginTrans`を呼び出すときに問題が発生する可能性があります`Rollback`します。 使用する特定のドライバーを確認する必要があります。 たとえば、Microsoft ODBC デスクトップ Driver パック 3.0 に含まれる Microsoft Access ドライバーを使用する場合、開いているカーソルのある任意のデータベースのトランザクションを開始する必要がありますいない Jet データベース エンジンの要件の考慮する必要があります。 MFC データベース クラスで、開いているカーソルは開いていることを意味`CRecordset`オブジェクト。 詳細については、次を参照してください。[テクニカル ノート 68](../../mfc/tn068-performing-transactions-with-the-microsoft-access-7-odbc-driver.md)します。
 
 `BeginTrans` 要求された同時実行とデータ ソースの機能に応じて、サーバー上のデータ レコードをロックも可能性があります。 データのロックについては、記事を参照してください。[レコード セット。レコードのロック (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)します。
 
@@ -192,7 +192,7 @@ void Cancel();
 
 ### <a name="remarks"></a>Remarks
 
-MFC ODBC クラスは、非同期処理を不要になった使用に注意してください。非同期操作を実行する ODBC API 関数を直接に呼び出す必要があります[SQLSetConnectOption](/sql/odbc/reference/syntax/sqlsetconnectoption-function)します。 詳細については、[非同期実行](/sql/odbc/reference/develop-app/asynchronous-execution)を参照してください。
+MFC ODBC クラスは、非同期処理を不要になった使用に注意してください。非同期操作を実行する ODBC API 関数を直接に呼び出す必要があります[SQLSetConnectOption](/sql/odbc/reference/syntax/sqlsetconnectoption-function)します。 詳細については、次を参照してください。[非同期実行](/sql/odbc/reference/develop-app/asynchronous-execution)します。
 
 ##  <a name="cantransact"></a>  CDatabase::CanTransact
 
@@ -327,11 +327,9 @@ DWORD GetBookmarkPersistence() const;
 
 ### <a name="remarks"></a>Remarks
 
-たとえば、`CRecordset::GetBookmark` を呼び出してから `CRecordset::Requery` を呼び出した場合、`GetBookmark` から取得されたブックマークは有効ではなくなっている場合があります。 
-  `GetBookmarkPersistence` を呼び出してから `CRecordset::SetBookmark` を呼び出す必要があります。
+たとえば、`CRecordset::GetBookmark` を呼び出してから `CRecordset::Requery` を呼び出した場合、`GetBookmark` から取得されたブックマークは有効ではなくなっている場合があります。 `GetBookmarkPersistence` を呼び出してから `CRecordset::SetBookmark` を呼び出す必要があります。
 
-
-  `GetBookmarkPersistence` の戻り値として組み合わせることができるビットマスク値の一覧を次の表に示します。
+`GetBookmarkPersistence` の戻り値として組み合わせることができるビットマスク値の一覧を次の表に示します。
 
 |ビットマスク値|ブックマークの永続性|
 |-------------------|--------------------------|

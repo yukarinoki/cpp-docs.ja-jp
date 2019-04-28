@@ -8,25 +8,25 @@ helpviewer_keywords:
 - pointers, declarations
 ms.assetid: 595387c5-8e58-4670-848f-344c7caf985e
 ms.openlocfilehash: a258a71b8b89643ee98785ee9dfbf30cdf128db7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667871"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62223067"
 ---
 # <a name="pointers-c"></a>ポインター (C++)
 
 ポインターは次の順序で宣言します。
 
-> \[*ストレージ クラス指定子*] \[ *cv 修飾子*]*型指定子* \[ *ms 修飾子*] *宣言子* **;**
+> \[*storage-class-specifiers*] \[*cv-qualifiers*] *type-specifiers* \[*ms-modifier*] *declarator* **;**
 
 任意の有効なポインター宣言子を使用できます*宣言子*します。 単純なポインター宣言子の構文は、次のとおりです。
 
-> __\*__ \[*cv 修飾子*]*識別子* \[ **=** *式*]
+> __\*__ \[*cv-qualifiers*] *identifier* \[**=** *expression*]
 
 1. 宣言指定子:
 
-   - ストレージ クラスの指定子 (省略可能)。 詳細については、[指定子](../cpp/specifiers.md)を参照してください。
+   - ストレージ クラスの指定子 (省略可能)。 詳細については、次を参照してください。[指定子](../cpp/specifiers.md)します。
 
    - 省略可能な**const**または**揮発性**指されるオブジェクトの型に適用するキーワード。
 
@@ -34,7 +34,7 @@ ms.locfileid: "50667871"
 
 1. 宣言子: 
 
-   - オプションの Microsoft 固有の修飾子。 詳細については、[Microsoft 固有の修飾子](../cpp/microsoft-specific-modifiers.md)を参照してください。
+   - オプションの Microsoft 固有の修飾子。 詳細については、次を参照してください。 [Microsoft 固有の修飾子](../cpp/microsoft-specific-modifiers.md)します。
 
    - __\*__ 演算子。
 
@@ -50,7 +50,7 @@ ms.locfileid: "50667871"
 
 ポインターの配列の場合、構文は次のようになります。
 
-> __\*__ *識別子* **\[** \[*定数式*] **]**
+> __\*__ *identifier* **\[** \[*constant-expression*] **]**
 
 1 つの宣言内で、宣言指定子の後ろのコンマ区切りリストとして、複数の宣言子とその初期化子をまとめて指定することができます。
 

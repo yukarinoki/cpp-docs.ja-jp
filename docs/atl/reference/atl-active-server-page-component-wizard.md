@@ -8,11 +8,11 @@ helpviewer_keywords:
 - ATL Active Server Page Component Wizard
 ms.assetid: 5a5cb904-dbbf-44ea-ad3d-2ddd14c1d3c5
 ms.openlocfilehash: f020ed9b58f631bfff09fe54c70e36146eb03368
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57288091"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62249017"
 ---
 # <a name="atl-active-server-page-component-wizard"></a>ATL Active Server Page コンポーネント ウィザード
 
@@ -75,7 +75,7 @@ Visual Studio 2008 以降では、このウィザードによって生成され�
 
    オブジェクトによってサポートされるインターフェイスの一覧を含むコンポーネント クラスの名前を設定します。 ATL が含まれていないために、このオプションを変更することはできません、プロジェクトまたはこのオブジェクトは、属性を使用している場合、**コクラス**属性。
 
-- **型**
+- **Type**
 
    コクラスのレジストリに表示されるオブジェクトの説明を設定します。
 

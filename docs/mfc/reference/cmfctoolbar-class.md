@@ -312,11 +312,11 @@ helpviewer_keywords:
 - CMFCToolBar [MFC], m_dblLargeImageRatio
 ms.assetid: e7679c01-fb94-44c0-98c6-3af955292fb5
 ms.openlocfilehash: 523e89859a6726bdff1dd27975077263abe481c4
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58775635"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62218371"
 ---
 # <a name="cmfctoolbar-class"></a>CMFCToolBar クラス
 
@@ -3905,4 +3905,4 @@ AFX_IMPORT_DATA static BOOL m_bDontScaleImages;
 [CMFCMenuBar クラス](../../mfc/reference/cmfcmenubar-class.md)<br/>
 [CMFCPopupMenuBar クラス](../../mfc/reference/cmfcpopupmenubar-class.md)<br/>
 [CMFCDropDownToolBar クラス](../../mfc/reference/cmfcdropdowntoolbar-class.md)<br/>
-[チュートリアル: ツールバーのコントロールの追加](../../mfc/walkthrough-putting-controls-on-toolbars.md)
+[チュートリアル: ツール バーへのコントロールの追加](../../mfc/walkthrough-putting-controls-on-toolbars.md)

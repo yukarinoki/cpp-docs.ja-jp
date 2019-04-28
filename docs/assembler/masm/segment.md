@@ -7,11 +7,11 @@ helpviewer_keywords:
 - SEGMENT directive
 ms.assetid: e6f68367-6714-4f06-a79c-edfa88014430
 ms.openlocfilehash: f37be47b92a71e20821cd1e40f8cf1350dfedaff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615424"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62210376"
 ---
 # <a name="segment"></a>SEGMENT
 
@@ -19,7 +19,7 @@ ms.locfileid: "50615424"
 
 ## <a name="syntax"></a>構文
 
-> *名前*セグメント [READONLY] [*align*] [*結合*] [*使用*] [*特性*] エイリアス (*文字列*) ['*クラス*']<br/>
+> *name* SEGMENT [[READONLY]] [[*align*]] [[*combine*]] [[*use*]] [[*characteristics*]] ALIAS(*string*) [['*class*']]<br/>
 > *ステートメント*<br/>
 > *名前*終了
 
@@ -50,7 +50,7 @@ ms.locfileid: "50615424"
 
 これら COFF ののみがサポートし、類似した名前の COFF セクション特性に対応しています (たとえば、 **SHARED** IMAGE_SCN_MEM_SHARED に対応しています)。 読み取りは、IMAGE_SCN_MEM_READ フラグを設定します。 古い形式の読み取り専用フラグの原因となった IMG_SCN_MEM_WRITE フラグをクリアするセクション。 存在する場合*特性*既定の特性は使用されず、プログラマが指定したフラグのみが有効に設定されます。
 
-`ALIAS(` *文字列* `)`<br/>
+`ALIAS(` *string* `)`<br/>
 この文字列は、生成された COFF オブジェクト内のセクション名として使用されます。  異なる MASM セグメント名では、同じ外部名を複数のセクションを作成します。
 
 サポートされていません **/omf**します。

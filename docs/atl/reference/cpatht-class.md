@@ -50,11 +50,11 @@ helpviewer_keywords:
 - CPathT class
 ms.assetid: eba4137d-1fd2-4b44-a2e1-0944db64df3c
 ms.openlocfilehash: 109f9baefd0e6775db05eeba8cb78542bf60a9ac
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58565793"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62278177"
 ---
 # <a name="cpatht-class"></a>CPathT クラス
 
@@ -172,7 +172,7 @@ void AddBackslash();
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、[PathAddBackSlash](/windows/desktop/api/shlwapi/nf-shlwapi-pathaddbackslasha)を参照してください。
+詳細については、次を参照してください。 [PathAddBackSlash](/windows/desktop/api/shlwapi/nf-shlwapi-pathaddbackslasha)します。
 
 ##  <a name="addextension"></a>  CPathT::AddExtension
 
@@ -193,7 +193,7 @@ BOOL AddExtension(PCXSTR pszExtension);
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、[PathAddExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathaddextensiona)を参照してください。
+詳細については、次を参照してください。 [PathAddExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathaddextensiona)します。
 
 ##  <a name="append"></a>  CPathT::Append
 
@@ -214,7 +214,7 @@ BOOL Append(PCXSTR pszMore);
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、[PathAppend](/windows/desktop/api/shlwapi/nf-shlwapi-pathappenda)を参照してください。
+詳細については、次を参照してください。 [PathAppend](/windows/desktop/api/shlwapi/nf-shlwapi-pathappenda)します。
 
 ##  <a name="buildroot"></a>  CPathT::BuildRoot
 
@@ -231,7 +231,7 @@ void BuildRoot(int iDrive);
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、[PathBuildRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathbuildroota)を参照してください。
+詳細については、次を参照してください。 [PathBuildRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathbuildroota)します。
 
 ##  <a name="canonicalize"></a>  CPathT::Canonicalize
 
@@ -243,7 +243,7 @@ void Canonicalize();
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、[PathCanonicalize](/windows/desktop/api/shlwapi/nf-shlwapi-pathcanonicalizea)を参照してください。
+詳細については、次を参照してください。 [PathCanonicalize](/windows/desktop/api/shlwapi/nf-shlwapi-pathcanonicalizea)します。
 
 ##  <a name="combine"></a>  CPathT::Combine
 
@@ -263,7 +263,7 @@ void Combine(PCXSTR pszDir, PCXSTR  pszFile);
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、[PathCombine](/windows/desktop/api/shlwapi/nf-shlwapi-pathcombinea)を参照してください。
+詳細については、次を参照してください。 [PathCombine](/windows/desktop/api/shlwapi/nf-shlwapi-pathcombinea)します。
 
 ##  <a name="commonprefix"></a>  CPathT::CommonPrefix
 
@@ -284,7 +284,7 @@ CPathT<StringType> CommonPrefix(PCXSTR pszOther);
 
 ### <a name="remarks"></a>Remarks
 
-プレフィックスでは、これらの型の 1 つです。"C:\\\\「,」.「,」..「,」..\\\\". 詳細については、[PathCommonPrefix](/windows/desktop/api/shlwapi/nf-shlwapi-pathcommonprefixa)を参照してください。
+プレフィックスでは、これらの型の 1 つです。"C:\\\\「,」.「,」..「,」..\\\\". 詳細については、次を参照してください。 [PathCommonPrefix](/windows/desktop/api/shlwapi/nf-shlwapi-pathcommonprefixa)します。
 
 ##  <a name="compactpath"></a>  CPathT::CompactPath
 
@@ -308,7 +308,7 @@ BOOL CompactPath(HDC hDC, UINT nWidth);
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、[PathCompactPath](/windows/desktop/api/shlwapi/nf-shlwapi-pathcompactpatha)を参照してください。
+詳細については、次を参照してください。 [PathCompactPath](/windows/desktop/api/shlwapi/nf-shlwapi-pathcompactpatha)します。
 
 ##  <a name="compactpathex"></a>  CPathT::CompactPathEx
 
@@ -332,7 +332,7 @@ BOOL CompactPathEx(UINT nMaxChars, DWORD dwFlags = 0);
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、[PathCompactPathEx](/windows/desktop/api/shlwapi/nf-shlwapi-pathcompactpathexa)を参照してください。
+詳細については、次を参照してください。 [PathCompactPathEx](/windows/desktop/api/shlwapi/nf-shlwapi-pathcompactpathexa)します。
 
 ##  <a name="cpatht"></a>  CPathT::CPathT
 
@@ -366,7 +366,7 @@ BOOL FileExists() const;
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、[PathFileExists](/windows/desktop/api/shlwapi/nf-shlwapi-pathfileexistsa)を参照してください。
+詳細については、次を参照してください。 [PathFileExists](/windows/desktop/api/shlwapi/nf-shlwapi-pathfileexistsa)します。
 
 ##  <a name="findextension"></a>  CPathT::FindExtension
 
@@ -382,7 +382,7 @@ int FindExtension() const;
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、[PathFindExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathfindextensiona)を参照してください。
+詳細については、次を参照してください。 [PathFindExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathfindextensiona)します。
 
 ##  <a name="findfilename"></a>  CPathT::FindFileName
 
@@ -398,7 +398,7 @@ int FindFileName() const;
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、[PathFindFileName](/windows/desktop/api/shlwapi/nf-shlwapi-pathfindfilenamea)を参照してください。
+詳細については、次を参照してください。 [PathFindFileName](/windows/desktop/api/shlwapi/nf-shlwapi-pathfindfilenamea)します。
 
 ##  <a name="getdrivenumber"></a>  CPathT::GetDriveNumber
 
@@ -414,7 +414,7 @@ int GetDriveNumber() const;
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、[PathGetDriveNumber](/windows/desktop/api/shlwapi/nf-shlwapi-pathgetdrivenumbera)を参照してください。
+詳細については、次を参照してください。 [PathGetDriveNumber](/windows/desktop/api/shlwapi/nf-shlwapi-pathgetdrivenumbera)します。
 
 ##  <a name="getextension"></a>  CPathT::GetExtension
 
@@ -442,7 +442,7 @@ BOOL IsDirectory() const;
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、[PathIsDirectory](/windows/desktop/api/shlwapi/nf-shlwapi-pathisdirectorya)を参照してください。
+詳細については、次を参照してください。 [PathIsDirectory](/windows/desktop/api/shlwapi/nf-shlwapi-pathisdirectorya)します。
 
 ##  <a name="isfilespec"></a>  CPathT::IsFileSpec
 
@@ -458,7 +458,7 @@ BOOL IsFileSpec() const;
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、[PathIsFileSpec](/windows/desktop/api/shlwapi/nf-shlwapi-pathisfilespeca)を参照してください。
+詳細については、次を参照してください。 [PathIsFileSpec](/windows/desktop/api/shlwapi/nf-shlwapi-pathisfilespeca)します。
 
 ##  <a name="isprefix"></a>  CPathT::IsPrefix
 
@@ -479,7 +479,7 @@ BOOL IsPrefix(PCXSTR pszPrefix) const;
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、[PathIsPrefix](/windows/desktop/api/shlwapi/nf-shlwapi-pathisprefixa)を参照してください。
+詳細については、次を参照してください。 [PathIsPrefix](/windows/desktop/api/shlwapi/nf-shlwapi-pathisprefixa)します。
 
 ##  <a name="isrelative"></a>  CPathT::IsRelative
 
@@ -495,7 +495,7 @@ BOOL IsRelative() const;
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、[PathIsRelative](/windows/desktop/api/shlwapi/nf-shlwapi-pathisrelativea)を参照してください。
+詳細については、次を参照してください。 [PathIsRelative](/windows/desktop/api/shlwapi/nf-shlwapi-pathisrelativea)します。
 
 ##  <a name="isroot"></a>  CPathT::IsRoot
 
@@ -511,7 +511,7 @@ BOOL IsRoot() const;
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、[PathIsRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathisroota)を参照してください。
+詳細については、次を参照してください。 [PathIsRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathisroota)します。
 
 ##  <a name="issameroot"></a>  CPathT::IsSameRoot
 
@@ -532,7 +532,7 @@ BOOL IsSameRoot(PCXSTR pszOther) const;
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、[PathIsSameRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathissameroota)を参照してください。
+詳細については、次を参照してください。 [PathIsSameRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathissameroota)します。
 
 ##  <a name="isunc"></a>  CPathT::IsUNC
 
@@ -548,7 +548,7 @@ BOOL IsUNC() const;
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、[PathIsUNC](/windows/desktop/api/shlwapi/nf-shlwapi-pathisunca)を参照してください。
+詳細については、次を参照してください。 [PathIsUNC](/windows/desktop/api/shlwapi/nf-shlwapi-pathisunca)します。
 
 ##  <a name="isuncserver"></a>  CPathT::IsUNCServer
 
@@ -564,7 +564,7 @@ BOOL IsUNCServer() const;
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、[PathIsUNCServer](/windows/desktop/api/shlwapi/nf-shlwapi-pathisuncservera)を参照してください。
+詳細については、次を参照してください。 [PathIsUNCServer](/windows/desktop/api/shlwapi/nf-shlwapi-pathisuncservera)します。
 
 ##  <a name="isuncservershare"></a>  CPathT::IsUNCServerShare
 
@@ -580,7 +580,7 @@ BOOL IsUNCServerShare() const;
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、[PathIsUNCServerShare](/windows/desktop/api/shlwapi/nf-shlwapi-pathisuncserversharea)を参照してください。
+詳細については、次を参照してください。 [PathIsUNCServerShare](/windows/desktop/api/shlwapi/nf-shlwapi-pathisuncserversharea)します。
 
 ##  <a name="m_strpath"></a>  CPathT::m_strPath
 
@@ -608,7 +608,7 @@ BOOL MakePretty();
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、[PathMakePretty](/windows/desktop/api/shlwapi/nf-shlwapi-pathmakeprettya)を参照してください。
+詳細については、次を参照してください。 [PathMakePretty](/windows/desktop/api/shlwapi/nf-shlwapi-pathmakeprettya)します。
 
 ##  <a name="matchspec"></a>  CPathT::MatchSpec
 
@@ -629,7 +629,7 @@ BOOL MatchSpec(PCXSTR pszSpec) const;
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、[PathMatchSpec](/windows/desktop/api/shlwapi/nf-shlwapi-pathmatchspeca)を参照してください。
+詳細については、次を参照してください。 [PathMatchSpec](/windows/desktop/api/shlwapi/nf-shlwapi-pathmatchspeca)します。
 
 ##  <a name="operator_add_eq"></a>  CPathT::operator +=
 
@@ -718,7 +718,7 @@ void QuoteSpaces();
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、[PathQuoteSpaces](/windows/desktop/api/shlwapi/nf-shlwapi-pathquotespacesa)を参照してください。
+詳細については、次を参照してください。 [PathQuoteSpaces](/windows/desktop/api/shlwapi/nf-shlwapi-pathquotespacesa)します。
 
 ##  <a name="relativepathto"></a>  CPathT::RelativePathTo
 
@@ -752,7 +752,7 @@ BOOL RelativePathTo(
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、[PathRelativePathTo](/windows/desktop/api/shlwapi/nf-shlwapi-pathrelativepathtoa)を参照してください。
+詳細については、次を参照してください。 [PathRelativePathTo](/windows/desktop/api/shlwapi/nf-shlwapi-pathrelativepathtoa)します。
 
 ##  <a name="removeargs"></a>  CPathT::RemoveArgs
 
@@ -764,7 +764,7 @@ void RemoveArgs();
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、[PathRemoveArgs](/windows/desktop/api/shlwapi/nf-shlwapi-pathremoveargsa)を参照してください。
+詳細については、次を参照してください。 [PathRemoveArgs](/windows/desktop/api/shlwapi/nf-shlwapi-pathremoveargsa)します。
 
 ##  <a name="removebackslash"></a>  CPathT::RemoveBackslash
 
@@ -776,7 +776,7 @@ void RemoveBackslash();
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、[PathRemoveBackslash](/windows/desktop/api/shlwapi/nf-shlwapi-pathremovebackslasha)を参照してください。
+詳細については、次を参照してください。 [PathRemoveBackslash](/windows/desktop/api/shlwapi/nf-shlwapi-pathremovebackslasha)します。
 
 ##  <a name="removeblanks"></a>  CPathT::RemoveBlanks
 
@@ -788,7 +788,7 @@ void RemoveBlanks();
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、[PathRemoveBlanks](/windows/desktop/api/shlwapi/nf-shlwapi-pathremoveblanksa)を参照してください。
+詳細については、次を参照してください。 [PathRemoveBlanks](/windows/desktop/api/shlwapi/nf-shlwapi-pathremoveblanksa)します。
 
 ##  <a name="removeextension"></a>  CPathT::RemoveExtension
 
@@ -800,7 +800,7 @@ void RemoveExtension();
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、[PathRemoveExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathremoveextensiona)を参照してください。
+詳細については、次を参照してください。 [PathRemoveExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathremoveextensiona)します。
 
 ##  <a name="removefilespec"></a>  CPathT::RemoveFileSpec
 
@@ -816,7 +816,7 @@ BOOL RemoveFileSpec();
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、[PathRemoveFileSpec](/windows/desktop/api/shlwapi/nf-shlwapi-pathremovefilespeca)を参照してください。
+詳細については、次を参照してください。 [PathRemoveFileSpec](/windows/desktop/api/shlwapi/nf-shlwapi-pathremovefilespeca)します。
 
 ##  <a name="renameextension"></a>  CPathT::RenameExtension
 
@@ -837,7 +837,7 @@ BOOL RenameExtension(PCXSTR pszExtension);
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、[PathRenameExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathrenameextensiona)を参照してください。
+詳細については、次を参照してください。 [PathRenameExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathrenameextensiona)します。
 
 ##  <a name="skiproot"></a>  CPathT::SkipRoot
 
@@ -853,7 +853,7 @@ int SkipRoot() const;
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、[PathSkipRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathskiproota)を参照してください。
+詳細については、次を参照してください。 [PathSkipRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathskiproota)します。
 
 ##  <a name="strippath"></a>  CPathT::StripPath
 
@@ -865,7 +865,7 @@ void StripPath();
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、[PathStripPath](/windows/desktop/api/shlwapi/nf-shlwapi-pathstrippatha)を参照してください。
+詳細については、次を参照してください。 [PathStripPath](/windows/desktop/api/shlwapi/nf-shlwapi-pathstrippatha)します。
 
 ##  <a name="striptoroot"></a>  CPathT::StripToRoot
 
@@ -881,7 +881,7 @@ BOOL StripToRoot();
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、[PathStripToRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathstriptoroota)を参照してください。
+詳細については、次を参照してください。 [PathStripToRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathstriptoroota)します。
 
 ##  <a name="unquotespaces"></a>  CPathT::UnquoteSpaces
 
@@ -893,7 +893,7 @@ void UnquoteSpaces();
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、[PathUnquoteSpaces](/windows/desktop/api/shlwapi/nf-shlwapi-pathunquotespacesa)を参照してください。
+詳細については、次を参照してください。 [PathUnquoteSpaces](/windows/desktop/api/shlwapi/nf-shlwapi-pathunquotespacesa)します。
 
 ##  <a name="xchar"></a>  CPathT::XCHAR
 

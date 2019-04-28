@@ -5,18 +5,18 @@ helpviewer_keywords:
 - ActiveX control containers [MFC], application support
 ms.assetid: 5ff0bf37-07f4-49aa-ad9c-c63d3756243a
 ms.openlocfilehash: 23cd9e41ee704327728322f869e67d1a2d0c6cd9
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57279823"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62302196"
 ---
 # <a name="containers-for-activex-controls"></a>ActiveX コントロールのコンテナー
 
 ActiveX コントロール コンテナーをサポートしている限り、他のアプリケーションでの Visual C で開発された ActiveX コントロールを使用することができます。 以降で、表示されているバージョンの Microsoft アプリケーションの多くは、ActiveX コントロール コンテナーをサポートします。
 
 >[!IMPORTANT]
-> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の置き換えの最新のテクノロジの詳細については、[ActiveX コントロール](activex-controls.md)を参照してください。
+> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の置き換えの最新のテクノロジの詳細については、次を参照してください。 [ActiveX コントロール](activex-controls.md)します。
 
 > [!NOTE]
 >  次の一覧は ActiveX コントロールをサポートするテストで最もよく使用されるセットを表すアプリケーションの完全な一覧です。

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2346
 ms.assetid: 246145be-5645-4cd6-867c-e3bc39e33dca
 ms.openlocfilehash: a6d75ca671e22203cb40ca18de21606834eeefa8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50527362"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62188092"
 ---
 # <a name="compiler-error-c2346"></a>コンパイラ エラー C2346
 
@@ -19,7 +19,7 @@ ms.locfileid: "50527362"
 
 コンパイラは、MSIL に関数をコンパイルできませんでした。
 
-詳細については、[マネージ、アンマネージ](../../preprocessor/managed-unmanaged.md)と[/clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)を参照してください。
+詳細については、次を参照してください。[マネージ、アンマネージ](../../preprocessor/managed-unmanaged.md)と[/clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)します。
 
 ### <a name="to-correct-this-error"></a>このエラーを解決するには
 

@@ -12,16 +12,15 @@ helpviewer_keywords:
 - threading [MFC], user interface threads
 ms.assetid: 446925c1-db59-46ea-ae5b-d5ae5d5b91d8
 ms.openlocfilehash: ac22fad95041b07e132d31a2d246e58c3b40d30c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293317"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62212910"
 ---
 # <a name="multithreading-creating-mfc-user-interface-threads"></a>マルチ スレッド。MFC ユーザー インターフェイス スレッドの作成
 
-ユーザー インターフェイス スレッドでは、主にユーザー入力を処理し、ユーザーが生成したイベントに応答します。この処理は、アプリケーションのほかの部分を実行しているスレッドとは無関係に行われます。 
-  `CWinApp` の派生クラスで提供されるメイン アプリケーション スレッドは、既に生成され実行を開始しています。 このトピックでは、ユーザー インターフェイス スレッドを作成するための手順について説明します。
+ユーザー インターフェイス スレッドでは、主にユーザー入力を処理し、ユーザーが生成したイベントに応答します。この処理は、アプリケーションのほかの部分を実行しているスレッドとは無関係に行われます。 `CWinApp` の派生クラスで提供されるメイン アプリケーション スレッドは、既に生成され実行を開始しています。 このトピックでは、ユーザー インターフェイス スレッドを作成するための手順について説明します。
 
 まず、ユーザー インターフェイス スレッドを作成するときに行う必要がありますからクラスを派生[CWinThread](../mfc/reference/cwinthread-class.md)します。 宣言し、これを実装するクラスを使用して、 [DECLARE_DYNCREATE](../mfc/reference/run-time-object-model-services.md#declare_dyncreate)と[IMPLEMENT_DYNCREATE](../mfc/reference/run-time-object-model-services.md#implement_dyncreate)マクロ。 このクラスでは、一部の関数をオーバーライドする必要があります。また、他の関数も必要に応じてオーバーライドできます。 次の表に、各関数とその用途を示します。
 
@@ -52,9 +51,9 @@ MFC は、パラメーターのオーバーロードによって `AfxBeginThread
 
 ## <a name="what-do-you-want-to-know-more-about"></a>さらに詳しくは次のトピックをクリックしてください
 
-- [マルチ スレッド。スレッドの終了](multithreading-terminating-threads.md)
+- [マルチスレッド: スレッドの終了](multithreading-terminating-threads.md)
 
-- [マルチ スレッド。ワーカー スレッドを作成します。](multithreading-creating-worker-threads.md)
+- [マルチスレッド: マルチスレッド : ワーカー スレッドの作成](multithreading-creating-worker-threads.md)
 
 - [プロセスとスレッド](/windows/desktop/ProcThread/processes-and-threads)
 

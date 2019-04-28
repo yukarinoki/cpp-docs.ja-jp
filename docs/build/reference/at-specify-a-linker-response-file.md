@@ -11,11 +11,11 @@ helpviewer_keywords:
 - response files, C/C++ linker
 ms.assetid: 5530014f-17d0-4f6b-a6b0-a6ba34f34cfd
 ms.openlocfilehash: 9e595857a6089c59aa6638ed51acacae3a0eb5e9
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816504"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62294997"
 ---
 # <a name="-specify-a-linker-response-file"></a>@ (リンカー応答ファイルの指定)
 
@@ -44,5 +44,5 @@ ms.locfileid: "57816504"
 
 ## <a name="see-also"></a>関連項目
 
-[MSVC リンカーの参照](linking.md)<br/>
+[MSVC リンカーのリファレンス](linking.md)<br/>
 [MSVC リンカー オプション](linker-options.md)

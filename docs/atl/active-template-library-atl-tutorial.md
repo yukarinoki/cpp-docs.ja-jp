@@ -10,11 +10,11 @@ helpviewer_keywords:
 - ATL, tutorials
 ms.assetid: f921a121-09c8-4812-9317-e15b2f1471fa
 ms.openlocfilehash: 716818306c751a8d774a8fc6c311694a7932be2c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270112"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62198480"
 ---
 # <a name="active-template-library-atl-tutorial"></a>Active Template Library (ATL) のチュートリアル
 
@@ -24,7 +24,7 @@ ATL は軽量効率的で柔軟なコントロールを作成すると、簡単�
 
 このチュートリアルは、7 つのステップに分割されます。 後の手順は、以前に完了したタスクに依存するための順序で各手順を行う必要があります。 開始する前に、特定のコンピューターに ActiveX コンポーネントを登録するための権限があることを確認してください。 ターミナル サービス接続経由で Visual Studio .NET を実行している場合は、通常は問題になるだけになります。
 
-- [ステップ 1: プロジェクトの作成](../atl/creating-the-project-atl-tutorial-part-1.md)
+- [手順 1:プロジェクトの作成](../atl/creating-the-project-atl-tutorial-part-1.md)
 
 - [手順 2:プロジェクトにコントロールの追加](../atl/adding-a-control-atl-tutorial-part-2.md)
 

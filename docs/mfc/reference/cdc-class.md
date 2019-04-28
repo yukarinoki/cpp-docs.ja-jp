@@ -403,11 +403,11 @@ helpviewer_keywords:
 - CDC [MFC], m_hDC
 ms.assetid: 715b3334-cb2b-4c9c-8067-02eb7c66c8b2
 ms.openlocfilehash: fc5d41221ab0f9679e7d38a399464efc1a38dd52
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305082"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62173567"
 ---
 # <a name="cdc-class"></a>CDC クラス
 
@@ -479,8 +479,7 @@ class CDC : public CObject
 |[CDC::FloodFill](#floodfill)|現在のブラシで領域を塗りつぶします。|
 |[CDC::FrameRect](#framerect)|四角形の境界線を描画します。|
 |[CDC::FrameRgn](#framergn)|境界線を描画ブラシを使用して、特定のリージョン。|
-|[CDC::FromHandle](#fromhandle)|ポインターを返します、`CDC`デバイス コンテキストを識別するハンドルが指定されるとします。 
-  `CDC` オブジェクトがハンドルに関連付けられていない場合は、一時的な `CDC` オブジェクトが生成され、関連付けられます。|
+|[CDC::FromHandle](#fromhandle)|ポインターを返します、`CDC`デバイス コンテキストを識別するハンドルが指定されるとします。 `CDC` オブジェクトがハンドルに関連付けられていない場合は、一時的な `CDC` オブジェクトが生成され、関連付けられます。|
 |[CDC::GetArcDirection](#getarcdirection)|デバイス コンテキストの現在の円弧の方向を取得します。|
 |[CDC::GetAspectRatioFilter](#getaspectratiofilter)|現在の縦横比のフィルターの設定を取得します。|
 |[CDC::GetBkColor](#getbkcolor)|現在の背景色を取得します。|
@@ -2568,8 +2567,7 @@ Windows デバイス コンテキストを識別するハンドルが含まれ�
 
 ### <a name="remarks"></a>Remarks
 
-
-  `CDC` オブジェクトがハンドルに関連付けられていない場合は、一時的な `CDC` オブジェクトが生成され、関連付けられます。
+`CDC` オブジェクトがハンドルに関連付けられていない場合は、一時的な `CDC` オブジェクトが生成され、関連付けられます。
 
 ### <a name="example"></a>例
 
@@ -2720,7 +2718,7 @@ DWORD GetCharacterPlacement(
 処理する文字列へのポインター。
 
 *nCount*<br/>
-文字列の長さを指定します。 ANSI バージョンの場合は BYTE カウント、Unicode 関数の場合は WORD カウントです。 詳細については、[GetCharacterPlacement](/windows/desktop/api/wingdi/nf-wingdi-getcharacterplacementa)を参照してください。
+文字列の長さを指定します。 ANSI バージョンの場合は BYTE カウント、Unicode 関数の場合は WORD カウントです。 詳細については、次を参照してください。 [GetCharacterPlacement](/windows/desktop/api/wingdi/nf-wingdi-getcharacterplacementa)します。
 
 *nMaxExtent*<br/>
 処理する文字列の最大エクステントを論理単位で指定します。 このエクステントを超えて処理された文字列は無視されます。 並べ替えやグリフの配列に必要な演算は、範囲に含まれている文字だけに適用されます。 GCP_MAXEXTENT 値が指定されている場合にのみ、このパラメーターが使用される、 *dwFlags*パラメーター。 入力文字列を処理するときは、エクステントの合計が最大値を超えない限り、各文字と文字のエクステントが出力、エクステント、および他の配列に追加されます。 制限に達すると、処理は停止します。
@@ -3151,7 +3149,7 @@ DWORD GetFontLanguageInfo() const;
 
 ### <a name="return-value"></a>戻り値
 
-戻り値は、現在選択されているフォントの特性を識別します。 使用可能な値の完全な一覧については、[GetFontLanguageInfo](/windows/desktop/api/wingdi/nf-wingdi-getfontlanguageinfo)を参照してください。
+戻り値は、現在選択されているフォントの特性を識別します。 使用可能な値の完全な一覧については、次を参照してください。 [GetFontLanguageInfo](/windows/desktop/api/wingdi/nf-wingdi-getfontlanguageinfo)します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -3218,7 +3216,7 @@ int GetGraphicsMode() const;
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合に、現在のグラフィックス モードを返します。 このメソッドが返すことができる値については、[については](/windows/desktop/api/wingdi/nf-wingdi-getgraphicsmode)を参照してください。
+成功した場合に、現在のグラフィックス モードを返します。 このメソッドが返すことができる値については、次を参照してください。[については](/windows/desktop/api/wingdi/nf-wingdi-getgraphicsmode)します。
 
 失敗した場合は 0 を返します。
 
@@ -3278,7 +3276,7 @@ DWORD GetLayout() const;
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合、レイアウトは、現在のデバイス コンテキストのフラグします。 それ以外の場合、GDI_ERROR します。 エラーの詳細については、呼び出す[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)します。 レイアウトのフラグの一覧は、[CDC::SetLayout](#setlayout)を参照してください。
+成功した場合、レイアウトは、現在のデバイス コンテキストのフラグします。 それ以外の場合、GDI_ERROR します。 エラーの詳細については、呼び出す[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)します。 レイアウトのフラグの一覧は、次を参照してください。 [CDC::SetLayout](#setlayout)します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -4453,7 +4451,7 @@ BOOL ModifyWorldTransform(
 参照、 [XFORM](/windows/desktop/api/wingdi/ns-wingdi-tagxform)構造体の特定のデバイス コンテキストのワールド変換を変更するために使用します。
 
 *i モード*<br/>
-変換データが現在のワールド変換を変更する方法を指定します。 このパラメーターが取る値の一覧では、[ModifyWorldTransform](/windows/desktop/api/wingdi/nf-wingdi-modifyworldtransform)を参照してください。
+変換データが現在のワールド変換を変更する方法を指定します。 このパラメーターが取る値の一覧では、次を参照してください。 [ModifyWorldTransform](/windows/desktop/api/wingdi/nf-wingdi-modifyworldtransform)します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -5722,7 +5720,7 @@ int SetAbortProc(BOOL (CALLBACK* lpfn)(HDC, int));
 ### <a name="parameters"></a>パラメーター
 
 *lpfn*<br/>
-中止の手順に従ってインストールを中止関数へのポインター。 詳細については、コールバック関数は、[cdc::setabortproc 用コールバック関数](callback-functions-used-by-mfc.md#setabortproc)を参照してください。
+中止の手順に従ってインストールを中止関数へのポインター。 詳細については、コールバック関数は、次を参照してください。 [cdc::setabortproc 用コールバック関数](callback-functions-used-by-mfc.md#setabortproc)します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -5999,7 +5997,7 @@ int SetGraphicsMode(int iMode);
 ### <a name="parameters"></a>パラメーター
 
 *i モード*<br/>
-グラフィック モードを指定します。 このパラメーターが取る値の一覧では、[SetGraphicsMode](/windows/desktop/api/wingdi/nf-wingdi-setgraphicsmode)を参照してください。
+グラフィック モードを指定します。 このパラメーターが取る値の一覧では、次を参照してください。 [SetGraphicsMode](/windows/desktop/api/wingdi/nf-wingdi-setgraphicsmode)します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -6818,8 +6816,7 @@ BOOL StretchBlt(
 
 `StretchBlt`場合、関数は、ビットマップのミラー イメージを作成しますの症状、 *nSrcWidth*と*nWidth*または*nSrcHeight*と*パラメーター nHeight。* パラメーターは異なります。 場合*nSrcWidth*と*nWidth*符号が異なる関数が x 軸に沿ったビットマップのミラー イメージを作成します。 場合*nSrcHeight*と*パラメーター nHeight*符号が異なる、関数は、y 軸に沿ったビットマップのミラー イメージを作成します。
 
-
-  `StretchBlt` 関数は、メモリ内のコピー元ビットマップを拡大または縮小し、その結果をコピー先にコピーします。 パターンを結果とマージする場合、そのパターンは、拡大されたコピー元ビットマップがコピー先にコピーされるまでマージされません。 ブラシを使用する場合、そのブラシは、コピー先デバイス コンテキストで選択されたブラシです。 コピー先の座標は、コピー先デバイス コンテキストに従って変換されます。コピー元の座標は、コピー元デバイス コンテキストに従って変換されます。
+`StretchBlt` 関数は、メモリ内のコピー元ビットマップを拡大または縮小し、その結果をコピー先にコピーします。 パターンを結果とマージする場合、そのパターンは、拡大されたコピー元ビットマップがコピー先にコピーされるまでマージされません。 ブラシを使用する場合、そのブラシは、コピー先デバイス コンテキストで選択されたブラシです。 コピー先の座標は、コピー先デバイス コンテキストに従って変換されます。コピー元の座標は、コピー元デバイス コンテキストに従って変換されます。
 
 コピー先ビットマップ、コピー元ビットマップ、およびパターン ビットマップの色の形式が異なる場合は、`StretchBlt` によって、コピー元ビットマップとパターン ビットマップが、コピー先ビットマップに合わせて変換されます。 変換では、コピー先デバイス コンテキストの前景色と背景色が使用されます。
 

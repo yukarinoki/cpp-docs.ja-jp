@@ -10,11 +10,11 @@ helpviewer_keywords:
 - CDefaultCompareTraits class
 ms.assetid: a17e2740-e7b4-48f2-aeb7-c80ce84b63f7
 ms.openlocfilehash: c5f4ab3737838af11501c4a0f2037b57087939c9
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273596"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62245921"
 ---
 # <a name="cdefaultcomparetraits-class"></a>CDefaultCompareTraits クラス
 
@@ -45,7 +45,7 @@ class CDefaultCompareTraits
 
 このクラスには、コレクション クラスのオブジェクトに格納されている要素を比較するための 2 つの静的関数が含まれています。 このクラスは、によって使用されて、 [CDefaultElementTraits クラス](../../atl/reference/cdefaultelementtraits-class.md)します。
 
-詳細については、[ATL コレクション クラス](../../atl/atl-collection-classes.md)を参照してください。
+詳細については、次を参照してください。 [ATL コレクション クラス](../../atl/atl-collection-classes.md)します。
 
 ## <a name="requirements"></a>必要条件
 

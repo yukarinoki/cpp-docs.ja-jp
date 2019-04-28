@@ -55,11 +55,11 @@ helpviewer_keywords:
 - transparent color
 ms.assetid: 52861e3d-bf7e-481f-a240-90e88f76c490
 ms.openlocfilehash: 14a4691e0c1f25a8f9e8b2b652c6e582f51c954a
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58775947"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62235123"
 ---
 # <a name="cimage-class"></a>CImage クラス
 
@@ -715,7 +715,7 @@ static HRESULT GetExporterFilterString(
 *pszAllFilesDescription*<br/>
 このパラメーターが NULL でない場合、フィルター文字列は、一覧の先頭に 1 つの追加フィルターがあります。 このフィルターの現在の値になります*pszAllFilesDescription*説明の一覧で、その他のエクスポーターでサポートされている任意の拡張機能のファイルを受け取るとします。
 
-例:
+例えば:
 
 ```cpp
 //First filter in the list will be titled "All Image Files", and
@@ -810,7 +810,7 @@ static HRESULT GetImporterFilterString(
 *pszAllFilesDescription*<br/>
 このパラメーターが NULL でない場合、フィルター文字列は、一覧の先頭に 1 つの追加フィルターがあります。 このフィルターの現在の値になります*pszAllFilesDescription*説明の一覧で、その他のエクスポーターでサポートされている任意の拡張機能のファイルを受け取るとします。
 
-例:
+例えば:
 
 ```cpp
 //First filter in the list will be titled "All Image Files", and
@@ -856,7 +856,7 @@ Mfc の結果の書式指定文字列を渡すことができます[CFileDialog]
 
 ファイルの description0&#124;\*.ext0&#124;filedescription1&#124;\*.ext1&#124;... .file 説明*n*&#124;\*.ext *n*&#124;&#124;
 
-場所 '&#124;' で指定された区切り記号*chSeparator*します。 例:
+場所 '&#124;' で指定された区切り記号*chSeparator*します。 例えば:
 
 `"Bitmap format|*.bmp|JPEG format|*.jpg|GIF format|*.gif|PNG format|*.png||"`
 

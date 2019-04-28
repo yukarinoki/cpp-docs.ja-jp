@@ -9,15 +9,15 @@ helpviewer_keywords:
 - IUMSScheduler structure
 ms.assetid: 3a500225-4e02-4849-bb56-d744865f5870
 ms.openlocfilehash: f377d6079017266630434ce71602a7e70e58ae21
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57282306"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62301865"
 ---
 # <a name="iumsscheduler-structure"></a>IUMSScheduler 構造体
 
-同時実行ランタイムのリソース マネージャーによってユーザー モード スケジュール可能 (UMS) スレッドが渡される必要がある作業スケジューラの抽象化のインターフェイスです。 リソース マネージャーでは、このインターフェイスを使用して UMS スレッド スケジューラと通信します。 `IUMSScheduler` インターフェイスは `IScheduler` のインターフェイスから継承されます。
+同時実行ランタイムのリソース マネージャーによってユーザー モード スケジュール可能 (UMS) スレッドが渡される必要がある作業スケジューラの抽象化のインターフェイスです。 リソース マネージャーでは、このインターフェイスを使用して UMS スレッド スケジューラと通信します。 `IUMSScheduler` インターフェイスは `IScheduler` インターフェイスを継承します。
 
 ## <a name="syntax"></a>構文
 

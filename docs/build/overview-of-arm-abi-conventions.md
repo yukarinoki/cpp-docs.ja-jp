@@ -3,15 +3,15 @@ title: ARM ABI 規則の概要
 ms.date: 07/11/2018
 ms.assetid: 23f4ae8c-3148-4657-8c47-e933a9f387de
 ms.openlocfilehash: 17f2598912879d0eb54fd189e1fae541ba2f874f
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57810459"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62295241"
 ---
 # <a name="overview-of-arm32-abi-conventions"></a>ARM32 ABI 規則の概要
 
-ARM プロセッサ上の Windows 用にコンパイルされたコードのアプリケーション バイナリ インターフェイス (ABI) は、標準の ARM EABI に基づいています。 この記事では、ARM 上の Windows と標準との主な相違点を取り上げています。 このドキュメントでは、ARM32 ABI について説明します。 ARM64 ABI の詳細については、[概要の ARM64 ABI 規則](arm64-windows-abi-conventions.md)を参照してください。 標準の ARM EABI の詳細については、次を参照してください。[アプリケーション バイナリ インターフェイス (ABI)、ARM アーキテクチャ用](http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.subset.swdev.abi/index.html)(外部リンク)。
+ARM プロセッサ上の Windows 用にコンパイルされたコードのアプリケーション バイナリ インターフェイス (ABI) は、標準の ARM EABI に基づいています。 この記事では、ARM 上の Windows と標準との主な相違点を取り上げています。 このドキュメントでは、ARM32 ABI について説明します。 ARM64 ABI の詳細については、次を参照してください。[概要の ARM64 ABI 規則](arm64-windows-abi-conventions.md)します。 標準の ARM EABI の詳細については、次を参照してください。[アプリケーション バイナリ インターフェイス (ABI)、ARM アーキテクチャ用](http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.subset.swdev.abi/index.html)(外部リンク)。
 
 ## <a name="base-requirements"></a>基本的な要件
 
@@ -211,7 +211,7 @@ Windows のコードをコンパイルが有効になっているフレーム �
 
 例外処理中のスタック アンワインドは、アンワインド コードを使用することで可能になります。 アンワインド コードは、実行可能イメージの .xdata セクションに格納されているバイト シーケンスです。 このコードには、関数プロローグおよびエピローグ コードの操作が抽象的に示されています。このため、呼び出し元のスタック フレームへのアンワインドの準備段階で関数のプロローグの効果を元に戻すことができます。
 
-ARM EABI では、アンワインド コードを使用する例外アンワインド モデルが指定されています。 ただし、Windows のアンワインドでは、プロセッサが関数のプロローグまたはエピローグの中間に存在するケースを取り扱う必要があるため、この仕様は不十分です。 ARM 例外データおよびアンワインドの詳細については、Windows は、[ARM 例外処理](arm-exception-handling.md)を参照してください。
+ARM EABI では、アンワインド コードを使用する例外アンワインド モデルが指定されています。 ただし、Windows のアンワインドでは、プロセッサが関数のプロローグまたはエピローグの中間に存在するケースを取り扱う必要があるため、この仕様は不十分です。 ARM 例外データおよびアンワインドの詳細については、Windows は、次を参照してください。 [ARM 例外処理](arm-exception-handling.md)します。
 
 生成されたコードが例外処理に関与できるように、`RtlAddFunctionTable` の呼び出しで指定された動的な関数テーブルおよび関連する関数を使用して、動的に生成されたコードを記述することをお勧めします。
 

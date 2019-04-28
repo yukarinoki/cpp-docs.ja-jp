@@ -10,11 +10,11 @@ helpviewer_keywords:
 - builds [C++], custom build steps
 ms.assetid: 92ad3e38-24d7-4b89-90e6-5a16f5f998da
 ms.openlocfilehash: b0e9a7514704742524f97e55c06ef47c7b36631b
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57827161"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62195369"
 ---
 # <a name="formatting-the-output-of-a-custom-build-step-or-build-event"></a>カスタム ビルド ステップまたはビルド イベントの出力の書式設定
 
@@ -40,7 +40,7 @@ ms.locfileid: "57827161"
 
 - **太字**はリテラルを表します。
 
-例えば:
+例:
 
 > C:\\*sourcefile.cpp*(134) : エラー C2143: 構文エラー: ';' が '}' の前にありません
 >

@@ -17,11 +17,11 @@ helpviewer_keywords:
 - CWin32Heap class
 ms.assetid: 69176022-ed98-4e3b-96d8-116b0c58ac95
 ms.openlocfilehash: 35c12a58adc846e0db6d7ee23f19984acbcfa861
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57297256"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62276914"
 ---
 # <a name="cwin32heap-class"></a>CWin32Heap クラス
 
@@ -157,8 +157,7 @@ CWin32Heap(
 
 [!code-cpp[NVC_ATL_Utilities#92](../../atl/codesnippet/cpp/cwin32heap-class_1.cpp)]
 
-また、コンストラクターに既存のヒープ ハンドルを提供できますが、その場合には新しいオブジェクトはヒープの所有権を引き継ぎません。 
-  `CWin32Heap` オブジェクトが削除されても、元のヒープ ハンドルは依然として有効です。
+また、コンストラクターに既存のヒープ ハンドルを提供できますが、その場合には新しいオブジェクトはヒープの所有権を引き継ぎません。 `CWin32Heap` オブジェクトが削除されても、元のヒープ ハンドルは依然として有効です。
 
 既存のヒープを新しいに添付することもできます。 オブジェクトを使用して[cwin32heap::attach](#attach)します。
 

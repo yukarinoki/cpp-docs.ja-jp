@@ -31,11 +31,11 @@ helpviewer_keywords:
 - ctanl function
 ms.assetid: d3cbd25c-1e93-4a6d-8154-da42921f7223
 ms.openlocfilehash: 2d4da5a39658e46bc633ae3bd9c8f6f0a01555aa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50661748"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62288755"
 ---
 # <a name="ctan-ctanf-ctanl"></a>ctan、ctanf、ctanl
 
@@ -77,7 +77,7 @@ _Lcomplex ctanl(
 
 ## <a name="remarks"></a>Remarks
 
-オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **ctan**を受け取って返す **_Fcomplex**と **_Lcomplex**値。 C プログラムで**ctan**は、 **_Dcomplex**値。
+C++では、オーバー ロードのオーバー ロードを呼び出すことができます**ctan**を受け取って返す **_Fcomplex**と **_Lcomplex**値。 C プログラムで**ctan**は、 **_Dcomplex**値。
 
 ## <a name="requirements"></a>必要条件
 

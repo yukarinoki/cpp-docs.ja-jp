@@ -56,11 +56,11 @@ helpviewer_keywords:
 - AFX_GLOBAL_DATA constructor
 ms.assetid: c7abf2fb-ad5e-4336-a01d-260c29ed53a2
 ms.openlocfilehash: 0fd8143564beecccd8943f3ceba531e8697151d1
-ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55850325"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62212923"
 ---
 # <a name="afxglobaldata-structure"></a>AFX_GLOBAL_DATA 構造体
 
@@ -299,7 +299,7 @@ void EnableAccessibilitySupport(BOOL bEnable=TRUE);
 
 ### <a name="remarks"></a>Remarks
 
-Active Accessibility は、プログラムと支援技術製品と共に、Windows オペレーティング システムの作業を改善する COM ベース テクノロジです。 ユーザー インターフェイス要素に関する情報を公開するための信頼性の高いメソッドを提供します。 ただし、Microsoft UI オートメーションと呼ばれる新しいユーザー補助モデルでは、使用できるようになりました。 2 つのテクノロジの比較は、[UI オートメーションと Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility)を参照してください。
+Active Accessibility は、プログラムと支援技術製品と共に、Windows オペレーティング システムの作業を改善する COM ベース テクノロジです。 ユーザー インターフェイス要素に関する情報を公開するための信頼性の高いメソッドを提供します。 ただし、Microsoft UI オートメーションと呼ばれる新しいユーザー補助モデルでは、使用できるようになりました。 2 つのテクノロジの比較は、次を参照してください。 [UI オートメーションと Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility)します。
 
 使用して、 [AFX_GLOBAL_DATA::IsAccessibilitySupport](#isaccessibilitysupport) Microsoft Active Accessibility のサポートが有効になっているかどうかを判断するメソッド。
 
@@ -702,7 +702,7 @@ CString RegisterWindowClass(LPCTSTR lpszClassNamePrefix);
 
 ### <a name="remarks"></a>Remarks
 
-戻り値はコロン区切りの一覧、 *lpszClassNamePrefix*パラメーター文字列、および現在のアプリケーション インスタンスのハンドルの 16 進数のテキスト表現の矢印は、アプリケーションのカーソル識別子を持つ IDC_ARROW; は、カーソル背景のブラシ。 MFC ウィンドウ クラスの登録の詳細については、[AfxRegisterClass](../../mfc/reference/application-information-and-management.md#afxregisterclass)を参照してください。
+戻り値はコロン区切りの一覧、 *lpszClassNamePrefix*パラメーター文字列、および現在のアプリケーション インスタンスのハンドルの 16 進数のテキスト表現の矢印は、アプリケーションのカーソル識別子を持つ IDC_ARROW; は、カーソル背景のブラシ。 MFC ウィンドウ クラスの登録の詳細については、次を参照してください。 [AfxRegisterClass](../../mfc/reference/application-information-and-management.md#afxregisterclass)します。
 
 ## <a name="resume"></a> AFX_GLOBAL_DATA::Resume
 
@@ -774,7 +774,7 @@ BOOL SetMenuFont(
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、水平正規フォントを下線付きのフォントを作成し、既定のメニュー項目に使用されるフォントを太字します。 このメソッドは、必要に応じて通常縦書きフォントを作成します。 論理フォントの詳細については、[CFont::CreateFontIndirect](../../mfc/reference/cfont-class.md#createfontindirect)を参照してください。
+このメソッドは、水平正規フォントを下線付きのフォントを作成し、既定のメニュー項目に使用されるフォントを太字します。 このメソッドは、必要に応じて通常縦書きフォントを作成します。 論理フォントの詳細については、次を参照してください。 [CFont::CreateFontIndirect](../../mfc/reference/cfont-class.md#createfontindirect)します。
 
 ## <a name="updatefonts"></a> AFX_GLOBAL_DATA::UpdateFonts
 
@@ -786,7 +786,7 @@ void UpdateFonts();
 
 ### <a name="remarks"></a>Remarks
 
-論理フォントの詳細については、`CFont::CreateFontIndirect`を参照してください。
+論理フォントの詳細については、次を参照してください。`CFont::CreateFontIndirect`します。
 
 ## <a name="updatesyscolors"></a> AFX_GLOBAL_DATA::UpdateSysColors
 

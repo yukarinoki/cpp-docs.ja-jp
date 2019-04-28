@@ -9,11 +9,11 @@ helpviewer_keywords:
 - resource identifiers, context-sensitive Help
 ms.assetid: 884f1c55-fa27-4d4c-984f-30907d477484
 ms.openlocfilehash: 5689e314c2ba94068619a066e5f458e06819b2b7
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58773477"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62305984"
 ---
 # <a name="tn028-context-sensitive-help-support"></a>TN028:状況依存のヘルプのサポート
 
@@ -132,7 +132,7 @@ HIWORD(lParam) には、y 軸座標が含まれています。
 
 MFC アプリケーション ウィザードでは、ヘルプ ファイル (.cnt および .hpj ファイル) をビルドするために必要なファイルを作成します。 Microsoft ヘルプ コンパイラによって受け入れられる事前構築済みの .rtf ファイル数も含まれています。 完了すると、多くのトピックがいくつかは、特定のアプリケーションを変更する必要があります。
 
-「ヘルプ マッピング」ファイルの自動作成は、makehm ユーティリティによってサポートされます。 MAKEHM ユーティリティでは、アプリケーションのリソースを翻訳できます。ヘルプのマッピング ファイルを H ファイルです。 例:
+「ヘルプ マッピング」ファイルの自動作成は、makehm ユーティリティによってサポートされます。 MAKEHM ユーティリティでは、アプリケーションのリソースを翻訳できます。ヘルプのマッピング ファイルを H ファイルです。 例えば:
 
 ```
 #define IDD_MY_DIALOG   2000

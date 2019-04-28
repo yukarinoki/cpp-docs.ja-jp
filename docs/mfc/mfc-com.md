@@ -12,17 +12,17 @@ helpviewer_keywords:
 - COM [MFC], MFC support
 ms.assetid: 7646bdcb-3a06-4ed5-9386-9b00f3979dcb
 ms.openlocfilehash: 67c7ea3e93b3158abc552c552c450c31c109be80
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57257827"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62239194"
 ---
 # <a name="mfc-com"></a>MFC COM
 
 Active Template Library (ATL) のほとんどは設計されています。 COM をサポートする MFC のサブセットがに設計された COM プログラミングします。 このセクションのトピックには、COM の MFC のサポートがについて説明します
 
-Active テクノロジ (など、ActiveX コントロール、Active ドキュメント コンテインメント、OLE、およびなど) が使用する言語に関係なく、ネットワーク環境で互いと対話するのにソフトウェア コンポーネントを有効にするのにコンポーネント オブジェクト モデル (COM) を使用します。作成されます。 Active テクノロジは、デスクトップまたはインターネット上で実行されるアプリケーションの作成に使用できます。 詳細については、[COM の概要](../atl/introduction-to-com.md)または[、コンポーネント オブジェクト モデル](/windows/desktop/com/the-component-object-model)を参照してください。
+Active テクノロジ (など、ActiveX コントロール、Active ドキュメント コンテインメント、OLE、およびなど) が使用する言語に関係なく、ネットワーク環境で互いと対話するのにソフトウェア コンポーネントを有効にするのにコンポーネント オブジェクト モデル (COM) を使用します。作成されます。 Active テクノロジは、デスクトップまたはインターネット上で実行されるアプリケーションの作成に使用できます。 詳細については、次を参照してください。 [COM の概要](../atl/introduction-to-com.md)または[、コンポーネント オブジェクト モデル](/windows/desktop/com/the-component-object-model)します。
 
 アクティブな技術には、次を含む、クライアントとサーバーの両方のテクノロジがあります。
 
@@ -38,7 +38,7 @@ Active テクノロジ (など、ActiveX コントロール、Active ドキュ�
 
    - [ActiveX コントロールのデバッグ](/visualstudio/debugger/how-to-debug-an-activex-control)
 
-- アクティブ スクリプトからブラウザーまたはサーバーの 1 つ以上の ActiveX コントロールの統合の動作を制御します。 アクティブ スクリプトの詳細については、[、インターネット上の Active テクノロジ](../mfc/active-technology-on-the-internet.md)を参照してください。
+- アクティブ スクリプトからブラウザーまたはサーバーの 1 つ以上の ActiveX コントロールの統合の動作を制御します。 アクティブ スクリプトの詳細については、次を参照してください。 [、インターネット上の Active テクノロジ](../mfc/active-technology-on-the-internet.md)します。
 
 - [Automation](../mfc/automation.md) (以前の OLE オートメーション) 1 つのアプリケーションを別のアプリケーションで実装されているオブジェクトを操作する"オブジェクトを公開したり"操作できるようにすることになります。
 

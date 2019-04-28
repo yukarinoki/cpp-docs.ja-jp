@@ -6,11 +6,11 @@ helpviewer_keywords:
 - OLE containers [MFC], implementing
 ms.assetid: af1e2079-619a-4eac-9327-985ad875823a
 ms.openlocfilehash: b0d737a2025ed0006db00425d42c02ebf0bdeda8
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58767887"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62302203"
 ---
 # <a name="containers-implementing-a-container"></a>コンテナー:コンテナーの実装
 
@@ -65,4 +65,4 @@ ms.locfileid: "58767887"
 ## <a name="see-also"></a>関連項目
 
 [コンテナー](../mfc/containers.md)<br/>
-[コンテナー:クライアント アイテム](../mfc/containers-client-items.md)
+[コンテナー: クライアント アイテム](../mfc/containers-client-items.md)

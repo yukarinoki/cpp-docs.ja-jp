@@ -23,11 +23,11 @@ helpviewer_keywords:
 - simple list collection classes [MFC]
 ms.assetid: c69fc95b-c8f6-4a99-abed-517c9898ef0c
 ms.openlocfilehash: 40633c8b2b09d27e97443364ed3ce711ee217e18
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57284659"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62306393"
 ---
 # <a name="template-based-classes"></a>テンプレート ベースのクラス
 
@@ -45,7 +45,7 @@ MFC 事前テンプレート ベースのコレクションの 2 つのカテゴ
 
 単純なコレクション クラスのすべてのクラスから派生`CObject`シリアル化、動的な作成は、その他のプロパティが継承されるよう、`CObject`します。 型付きポインター コレクション クラスから派生するクラスを指定する必要があります: などの MFC で定義済みテンプレート ポインター コレクションのいずれかを指定する必要があります`CPtrList`または`CPtrArray`します。 指定した基本クラスから新しいコレクション クラスを継承し、新しいクラスのメンバー関数では、基本クラスのメンバーをカプセル化された呼び出しを使用して、タイプ セーフを適用します。
 
-C++ テンプレートの詳細については、[テンプレート](../cpp/templates-cpp.md)で、 *C++ 言語リファレンス*を参照してください。
+C++ テンプレートの詳細については、次を参照してください。[テンプレート](../cpp/templates-cpp.md)で、 *C++ 言語リファレンス*します。
 
 ##  <a name="_core_using_simple_array.2c_.list.2c_.and_map_templates"></a> 単純な配列、リスト、およびマップ テンプレートを使用します。
 
@@ -110,7 +110,7 @@ C++ テンプレートの詳細については、[テンプレート](../cpp/tem
 > [!NOTE]
 >  指定した場合、**クラス**または**構造体**の入力、*値*ポインターや、型、クラスまたは構造体への参照ではなく、パラメーターには、コピー コンス トラクターを持つ必要があります。
 
-詳細については、[タイプ セーフなコレクションを作成する方法](../mfc/how-to-make-a-type-safe-collection.md)を参照してください。
+詳細については、次を参照してください。[タイプ セーフなコレクションを作成する方法](../mfc/how-to-make-a-type-safe-collection.md)します。
 
 ## <a name="see-also"></a>関連項目
 

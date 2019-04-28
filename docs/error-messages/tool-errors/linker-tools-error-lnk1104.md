@@ -7,11 +7,11 @@ helpviewer_keywords:
 - LNK1104
 ms.assetid: 9ca6f929-0efc-4055-8354-3cf5b4e636dc
 ms.openlocfilehash: eadeeb7ac19e3975a37a1364502b33400018cb05
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57818272"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62255514"
 ---
 # <a name="linker-tools-error-lnk1104"></a>リンカ ツール エラー LNK1104
 
@@ -31,9 +31,9 @@ ms.locfileid: "57818272"
 
 ### <a name="cannot-open-a-microsoft-library-file"></a>Microsoft ライブラリ ファイルを開くことができません。
 
-ファイルを開くことができませんが、kernel32.lib など、Microsoft によって提供される標準ライブラリ ファイルのいずれかである場合は、プロジェクトの構成エラーまたはインストール エラーがあります。 Windows SDK がインストールされていることを確認し、プロジェクトには、MFC などの他の Microsoft ライブラリが必要とする場合は、MFC コンポーネントも Visual Studio インストーラーがインストールされていることを確認します。 いつでも省略可能なコンポーネントを追加するには、もう一度インストーラーを実行することができます。 詳細については、[Visual Studio の変更](/visualstudio/install/modify-visual-studio)を参照してください。 インストーラーで、個々 のコンポーネント タブを使用して、特定のライブラリと Sdk を選択します。
+ファイルを開くことができませんが、kernel32.lib など、Microsoft によって提供される標準ライブラリ ファイルのいずれかである場合は、プロジェクトの構成エラーまたはインストール エラーがあります。 Windows SDK がインストールされていることを確認し、プロジェクトには、MFC などの他の Microsoft ライブラリが必要とする場合は、MFC コンポーネントも Visual Studio インストーラーがインストールされていることを確認します。 いつでも省略可能なコンポーネントを追加するには、もう一度インストーラーを実行することができます。 詳細については、次を参照してください。 [Visual Studio の変更](/visualstudio/install/modify-visual-studio)します。 インストーラーで、個々 のコンポーネント タブを使用して、特定のライブラリと Sdk を選択します。
 
-以前のバージョンの Visual Studio を使用して作成されたプロジェクトをビルドするいると、プラットフォームのツールセットとそのバージョンのライブラリがインストールしない可能性があります。 Msvcr100.lib などのバージョンのライブラリ名のエラー メッセージが発生した場合、これが原因である可能性がありますは。 この問題を解決する 2 つのオプションがある: をインストールした現在のプラットフォーム ツールセットを使用するプロジェクトをアップグレードするか、以前のツールセットをインストールして、変更されていないプロジェクトをビルドできます。 詳細については、[から旧バージョンの Visual c プロジェクトのアップグレード](../../porting/upgrading-projects-from-earlier-versions-of-visual-cpp.md)と[古いプロジェクトをビルドする Visual Studio でネイティブ マルチ ターゲットを使用](../../porting/use-native-multi-targeting.md)を参照してください。
+以前のバージョンの Visual Studio を使用して作成されたプロジェクトをビルドするいると、プラットフォームのツールセットとそのバージョンのライブラリがインストールしない可能性があります。 Msvcr100.lib などのバージョンのライブラリ名のエラー メッセージが発生した場合、これが原因である可能性がありますは。 この問題を解決する 2 つのオプションがある: をインストールした現在のプラットフォーム ツールセットを使用するプロジェクトをアップグレードするか、以前のツールセットをインストールして、変更されていないプロジェクトをビルドできます。 詳細については、次を参照してください。[から旧バージョンの Visual c プロジェクトのアップグレード](../../porting/upgrading-projects-from-earlier-versions-of-visual-cpp.md)と[古いプロジェクトをビルドする Visual Studio でネイティブ マルチ ターゲットを使用](../../porting/use-native-multi-targeting.md)します。
 
 このエラーが表示されるは、新しいターゲット プラットフォームまたは構成をビルドすると、そのプロジェクトの構成またはプラットフォーム ツールセットのライブラリはインストールできません。 いることを確認、**プラットフォーム ツールセット**と**Windows SDK バージョン**で指定されている、[全般 プロパティ ページ](../../build/reference/general-property-page-project.md)プロジェクトがインストールされ、いることを確認、必要なライブラリが表示されます、**ライブラリ ディレクトリ**で指定されている、 [vc++ Directories Property Page](../../build/reference/vcpp-directories-property-page.md)構成設定。 デバッグ用の個別の設定があるし、32 ビットおよび 64 ビットの構成と同様に小売構成では、1 つのビルドの動作が、エラーを原因別ようにして、設定が正しいとの必要なツールとライブラリがインストールされているすべて構成を作成します。
 
@@ -59,7 +59,7 @@ ms.locfileid: "57818272"
 
 ### <a name="cannot-open-a-file-built-by-your-project"></a>プロジェクトによってビルドされたファイルを開くことができません。
 
-場合にこのエラーが発生するファイル*filename*が、ソリューションによってビルドされたが、リンカーが、アクセスしようとしています。 にまだ存在しません。 これは、1 つのプロジェクトは、別のプロジェクトによって異なりますが、プロジェクトが正しい順序でビルドされない場合に発生します。 この問題を解決するには、プロジェクトの参照が要求される前に、不足しているファイルがビルドされたファイルを使用しているプロジェクトで設定されていることを確認します。 詳細については、[Visual c プロジェクトの参照の追加](../../build/adding-references-in-visual-cpp-projects.md)と[プロジェクト内の参照を管理する](/visualstudio/ide/managing-references-in-a-project)を参照してください。
+場合にこのエラーが発生するファイル*filename*が、ソリューションによってビルドされたが、リンカーが、アクセスしようとしています。 にまだ存在しません。 これは、1 つのプロジェクトは、別のプロジェクトによって異なりますが、プロジェクトが正しい順序でビルドされない場合に発生します。 この問題を解決するには、プロジェクトの参照が要求される前に、不足しているファイルがビルドされたファイルを使用しているプロジェクトで設定されていることを確認します。 詳細については、次を参照してください。 [Visual c プロジェクトの参照の追加](../../build/adding-references-in-visual-cpp-projects.md)と[プロジェクト内の参照を管理する](/visualstudio/ide/managing-references-in-a-project)します。
 
 ### <a name="cannot-open-file-cprogramobj"></a>ファイルを開くことができません ' c:\\Program.obj'
 

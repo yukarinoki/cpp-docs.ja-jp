@@ -81,11 +81,11 @@ helpviewer_keywords:
 - CComControlBase class
 ms.assetid: 3d1bf022-acf2-4092-8283-ff8cee6332f3
 ms.openlocfilehash: 698912100244189bdec99fa3726a063eb2e907a7
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298218"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62260111"
 ---
 # <a name="ccomcontrolbase-class"></a>CComControlBase クラス
 
@@ -200,7 +200,7 @@ class ATL_NO_VTABLE CComControlBase
 
 このクラスは、作成および ATL のコントロールを管理するためのメソッドを提供します。 [CComControl クラス](../../atl/reference/ccomcontrol-class.md)から派生した`CComControlBase`します。 ATL コントロール ウィザードを使用して、標準のコントロールまたは DHTML コントロールを作成するときに、ウィザードが自動的にからクラスを派生`CComControlBase`します。
 
-コントロールの作成の詳細については、、 [ATL チュートリアル](../../atl/active-template-library-atl-tutorial.md)を参照してください。 ATL プロジェクト ウィザードの詳細については、記事を参照してください。 [ATL プロジェクトの作成](../../atl/reference/creating-an-atl-project.md)です。
+コントロールの作成の詳細については、次を参照してください。、 [ATL チュートリアル](../../atl/active-template-library-atl-tutorial.md)します。 ATL プロジェクト ウィザードの詳細については、記事を参照してください。 [ATL プロジェクトの作成](../../atl/reference/creating-an-atl-project.md)です。
 
 ## <a name="requirements"></a>必要条件
 
@@ -801,7 +801,7 @@ void GetZoomInfo(ATL_DRAWINFO& di);
 ### <a name="parameters"></a>パラメーター
 
 *di*<br/>
-倍率の分子と分母を格納する構造体。 詳細については、[ATL_DRAWINFO](../../atl/reference/atl-drawinfo-structure.md)を参照してください。
+倍率の分子と分母を格納する構造体。 詳細については、次を参照してください。 [ATL_DRAWINFO](../../atl/reference/atl-drawinfo-structure.md)します。
 
 ### <a name="remarks"></a>Remarks
 

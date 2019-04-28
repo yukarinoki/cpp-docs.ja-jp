@@ -7,11 +7,11 @@ helpviewer_keywords:
 - LNK2031
 ms.assetid: 18ed4b6e-3e75-443c-bbd8-2f6030dc89ee
 ms.openlocfilehash: 003b9a58bfb08130f034530f59e2de27efa2ae8d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50484838"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62298920"
 ---
 # <a name="linker-tools-error-lnk2031"></a>リンカ ツール エラー LNK2031
 
@@ -19,7 +19,7 @@ ms.locfileid: "50484838"
 
 ## <a name="remarks"></a>Remarks
 
-ネイティブ関数を純粋なイメージにインポートしようとすると、暗黙の呼び出し規約がネイティブと純粋なコンパイルの間で異なることに注意してください。 純粋なイメージの詳細については、[純粋で検証可能なコード (C +/cli CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md)を参照してください。
+ネイティブ関数を純粋なイメージにインポートしようとすると、暗黙の呼び出し規約がネイティブと純粋なコンパイルの間で異なることに注意してください。 純粋なイメージの詳細については、次を参照してください。[純粋で検証可能なコード (C +/cli CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md)します。
 
 **/Clr: 純粋な**コンパイラ オプションは Visual Studio 2015 で非推奨とされ、Visual Studio 2017 でサポートされていません。
 

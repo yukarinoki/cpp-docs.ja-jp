@@ -9,11 +9,11 @@ helpviewer_keywords:
 - I/O [MFC], file-based options
 ms.assetid: d664b175-3b4a-40c3-b14b-39de6b12e419
 ms.openlocfilehash: 760c213c3af7f9c75374f04e3dfc6b9499eade5c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57261968"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62218565"
 ---
 # <a name="recommendations-for-handling-inputoutput"></a>入出力処理の推奨事項
 
@@ -45,8 +45,8 @@ ms.locfileid: "57261968"
 
 サポートし、オープン、保存、[ファイル] メニューのコマンドを付けて、フレームワークは、ドキュメントのシリアル化を提供します。 シリアル化データ読み取りし、書き込み、クラスから派生したオブジェクトを含む`CObject`に永続的なストレージ、通常のディスク ファイル。 シリアル化は簡単に使用し、ニーズの多くは機能しますが、多くのデータ アクセス アプリケーションで適切でない可能性があります。 データ アクセス アプリケーションは、通常、トランザクション単位でデータを更新します。 トランザクションではなく読み取りと書き込みデータ ファイル全体を一度に影響を受けるレコードだけが更新されます。
 
-シリアル化については、[シリアル化](../mfc/serialization-in-mfc.md)を参照してください。
+シリアル化については、次を参照してください。[シリアル化](../mfc/serialization-in-mfc.md)します。
 
 ## <a name="see-also"></a>関連項目
 
-[シリアル化:Vs のシリアル化します。データベースの入力/出力](../mfc/serialization-serialization-vs-database-input-output.md)
+[シリアル化: シリアル化とデータベースの入力/出力](../mfc/serialization-serialization-vs-database-input-output.md)

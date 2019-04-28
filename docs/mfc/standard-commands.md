@@ -16,11 +16,11 @@ helpviewer_keywords:
 - programmer-defined IDs [MFC]
 ms.assetid: 88cf3ab4-79b3-4ac6-9365-8ac561036fbf
 ms.openlocfilehash: 987023322e38584d10901c1ab1fe20ac46926bd2
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57272088"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62307160"
 ---
 # <a name="standard-commands"></a>標準コマンド
 
@@ -52,7 +52,7 @@ ms.locfileid: "57272088"
 
 フレームワークは、これらのコマンドのさまざまなレベルのサポートを提供します。 いくつかのコマンドは定義されているコマンドの Id としてのみサポートされている他のユーザーは完全に実装でサポートされています。 たとえば、フレームワークは、新しい document オブジェクトを作成を開く ダイアログ ボックスを表示する、開くと、ファイルの読み取りを ファイル メニュー、開く コマンドを実装します。 これに対し、する必要があります実装コマンド [編集] メニュー自分で、コピーするため ID_EDIT_COPY などのコマンドは、データの性質によって異なります。
 
-用意されている実装のレベルとサポートされているコマンドの詳細については、[テクニカル ノート 22:](../mfc/tn022-standard-commands-implementation.md)を参照してください。 標準のコマンドは、コマ ファイルで定義されます。H.
+用意されている実装のレベルとサポートされているコマンドの詳細については、次を参照してください。[テクニカル ノート 22:](../mfc/tn022-standard-commands-implementation.md)します。 標準のコマンドは、コマ ファイルで定義されます。H.
 
 ## <a name="see-also"></a>関連項目
 

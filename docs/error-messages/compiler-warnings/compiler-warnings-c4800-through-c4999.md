@@ -1,6 +1,6 @@
 ---
-title: コンパイラの警告 C4800 C5999 経由
-ms.date: 03/14/2019
+title: コンパイラ警告 (C4800 - C5999)
+ms.date: 04/21/2019
 f1_keywords:
 - C4808
 - C4809
@@ -153,14 +153,14 @@ helpviewer_keywords:
 - C5105
 - C5106
 - C5107
-ms.openlocfilehash: 46bb439b490295b7f3279f06421d3fd6b8d6ba8b
-ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
+ms.openlocfilehash: 93ff809d640efab6852e855f85e7b6e0109d9c1d
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356258"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62280322"
 ---
-# <a name="compiler-warnings-c4800-through-c5999"></a>コンパイラの警告 C4800 C5999 経由
+# <a name="compiler-warnings-c4800-through-c5999"></a>コンパイラ警告 (C4800 - C5999)
 
 ドキュメントのこのセクションの記事では、コンパイラによって生成される警告メッセージのサブセットについて説明します。
 
@@ -316,3 +316,8 @@ ms.locfileid: "58356258"
 | コンパイラの警告 (レベル 1) C5105 | 'defined' を生成するマクロの展開の動作が定義されていません |
 | コンパイラの警告 (レベル 1) C5106 | 別のパラメーター名で再定義マクロ |
 | コンパイラの警告 (レベル 1) C5107 | 終端がありません '*char*' 文字 |
+
+## <a name="see-also"></a>関連項目
+
+[C/C++コンパイラとビルド ツールのエラーと警告](../compiler-errors-1/c-cpp-build-errors.md) \
+[コンパイラの警告 C4000 - C5999](compiler-warnings-c4000-c5999.md)

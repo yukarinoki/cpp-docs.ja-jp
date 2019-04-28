@@ -11,11 +11,11 @@ helpviewer_keywords:
 - scope, C++ names
 ms.assetid: 81fecbb0-338b-4325-8332-49f33e716352
 ms.openlocfilehash: 534bb9711ff54e21ca091b399aa3d13ec5a7359d
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176758"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62267329"
 ---
 # <a name="scope-c"></a>スコープ (C)
 
@@ -105,7 +105,7 @@ class Account *Checking = new class Account( Account );
 > [!NOTE]
 > この例のように、識別子名を再使用するのは適切なプログラミング方法ではありません。
 
-クラス オブジェクトの宣言と初期化については、[クラス、構造、および共用体](../cpp/classes-and-structs-cpp.md)を参照してください。 使用方法について、**新しい**と**削除**フリー ストア演算子を参照してください[新しい演算子と delete 演算子](new-and-delete-operators.md)します。
+クラス オブジェクトの宣言と初期化については、次を参照してください。[クラス、構造、および共用体](../cpp/classes-and-structs-cpp.md)します。 使用方法について、**新しい**と**削除**フリー ストア演算子を参照してください[新しい演算子と delete 演算子](new-and-delete-operators.md)します。
 
 ## <a name="hiding-names-with-global-scope"></a>グローバル スコープの名前の隠ぺい
 

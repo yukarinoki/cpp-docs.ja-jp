@@ -6,11 +6,11 @@ helpviewer_keywords:
 - converting from OpenMP to the Concurrency Runtime, exception handling
 ms.assetid: 03c28196-21ba-439e-8641-afab1c283e1a
 ms.openlocfilehash: 118cf3e485fa78ae3eaa5efe34708924b89d6588
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57285153"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62296385"
 ---
 # <a name="how-to-convert-an-openmp-loop-that-uses-exception-handling-to-use-the-concurrency-runtime"></a>方法: 同時実行ランタイムを使用する例外処理を使用する OpenMP ループを変換します。
 
@@ -48,7 +48,7 @@ An error of type 'class std::bad_alloc' occurred.
 
 OpenMP を使用するバージョンを例外発生後に終了する必要がある場合は、ブール型のフラグを使用して、エラーが発生したことを他のループ反復に通知します。 トピックの例のように[方法。使用してキャンセルはされる同時実行ランタイムを使用する OpenMP ループを変換](../../parallel/concrt/convert-an-openmp-loop-that-uses-cancellation.md)、後続のループの反復は機能しません、フラグが設定されている場合。 一方、コンカレンシー ランタイムを使用するループを例外発生後に続行する必要がある場合は、並列ループの本体で例外を処理します。
 
-非同期エージェントや軽量タスクなど、コンカレンシー ランタイムの他のコンポーネントでは、例外は転送されません。 代わりに、ハンドルされない例外のハンドラーが例外をキャッチし、既定ではプロセスを終了します。 例外処理の詳細については、[例外処理](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)を参照してください。
+非同期エージェントや軽量タスクなど、コンカレンシー ランタイムの他のコンポーネントでは、例外は転送されません。 代わりに、ハンドルされない例外のハンドラーが例外をキャッチし、既定ではプロセスを終了します。 例外処理の詳細については、次を参照してください。[例外処理](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)します。
 
 詳細については`parallel_for`およびその他の並列アルゴリズムは、「[並列アルゴリズム](../../parallel/concrt/parallel-algorithms.md)します。
 

@@ -24,11 +24,11 @@ helpviewer_keywords:
 - locales, getting information on
 ms.assetid: 7ecdb1f2-88f5-4037-a0e7-c754ab003660
 ms.openlocfilehash: bf26e4f7b7fb4f0334b57604fe5c4996312bd62a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628142"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62286307"
 ---
 # <a name="localeconv"></a>localeconv
 
@@ -50,17 +50,17 @@ struct lconv *localeconv( void );
 
 |フィールド|説明|
 |-|-|
-decimal_point、<br/>_W_decimal_point|小数点の通貨でない数量の文字へのポインター。
+decimal_point,<br/>_W_decimal_point|小数点の通貨でない数量の文字へのポインター。
 thousands_sep、<br/>_W_thousands_sep|通貨でない数量の小数点の左側にある数字のグループを示す文字へのポインターに分離します。
 グループ化|ポインターを**char**-サイズの通貨でない数量の数字の各グループのサイズを含む整数です。
-int_curr_symbol、<br/>_W_int_curr_symbol|現在のロケールの国際通貨記号へのポインター。 最初の 3 文字は、*ISO 4217 Codes for the Representation of Currency and Funds* 規格で定義されている英字の国際通貨記号を指定します。 4 文字目 (null 文字の直前) は、国際通貨記号と通貨の数量を区切ります。
-通貨、<br/>_W_currency_symbol|現在のロケールの国内通貨記号へのポインター。
-mon_decimal_point、<br/>_W_mon_decimal_point|小数点の通貨数量の文字へのポインター。
-mon_thousands_sep、<br/>_W_mon_thousands_sep|通貨数量の小数点の左側にある数字のグループを区切る文字へのポインター。
+int_curr_symbol,<br/>_W_int_curr_symbol|現在のロケールの国際通貨記号へのポインター。 最初の 3 文字は、*ISO 4217 Codes for the Representation of Currency and Funds* 規格で定義されている英字の国際通貨記号を指定します。 4 文字目 (null 文字の直前) は、国際通貨記号と通貨の数量を区切ります。
+currency_symbol,<br/>_W_currency_symbol|現在のロケールの国内通貨記号へのポインター。
+mon_decimal_point,<br/>_W_mon_decimal_point|小数点の通貨数量の文字へのポインター。
+mon_thousands_sep,<br/>_W_mon_thousands_sep|通貨数量の小数点の左側にある数字のグループを区切る文字へのポインター。
 mon_grouping|ポインターを**char**-通貨数量の数字の各グループのサイズを格納する整数のサイズします。
 positive_sign、<br/>_W_positive_sign|負でない通貨数量の符号を示す文字列。
 negative_sign、<br/>_W_negative_sign|負の通貨数量の符号を示す文字列。
-する時|国際方式で書式化された通貨数量の小数点より右側の桁数。
+int_frac_digits|国際方式で書式化された通貨数量の小数点より右側の桁数。
 frac_digits|書式化された通貨数量の小数点より右側の桁数。
 p_cs_precedes|書式化された負でない通貨数量の値の前に通貨記号が付く場合は、1 に設定します。 値の後に記号が続く場合は、0 に設定します。
 p_sep_by_space|書式化された負でない通貨数量の値と通貨記号をスペースで区切る場合は、1 に設定します。 スペースで区切らない場合は、0 に設定します。

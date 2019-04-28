@@ -9,15 +9,15 @@ helpviewer_keywords:
 - exporting functions [C++], C functions in C++ executables
 ms.assetid: b51d6e5e-37cf-4c1c-b0bf-fcf188c82f00
 ms.openlocfilehash: b7ba2ed30615efb3b05e71cecf0ea69898feb8ba
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57812435"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62273574"
 ---
 # <a name="exporting-c-functions-for-use-in-c-or-c-language-executables"></a>C/C++ 言語の実行形式で使う C 関数のエクスポート
 
-C 言語または C++ 言語のモジュールからアクセスすることは、使用する必要があります、C で記述された DLL 内の関数がある場合、 **_ _cplusplus**言語を判断するプリプロセッサ マクロがコンパイルされると、これらを宣言C++ 言語のモジュールから使用されている場合、C リンケージを持つ関数です。 この手法を使用して DLL のヘッダー ファイルを提供する場合、変更なしでの C および C++ のユーザーがこれらの関数を使用できます。
+DLL 内の関数がある場合に C 言語からアクセスする C で記述されたまたはC++言語のモジュールを使用する必要がある、 **_ _cplusplus**言語を判断するプリプロセッサ マクロがコンパイルされると、これらを宣言使用されている場合は、C リンケージを持つ関数をC++言語モジュール。 この手法を使用して DLL のヘッダー ファイルを提供する場合、変更なしでの C および C++ のユーザーがこれらの関数を使用できます。
 
 次のコードでは、C および C++ のクライアント アプリケーションで使用できるヘッダー ファイルを示します。
 
@@ -54,7 +54,7 @@ extern "C" {
 
 - [エクスポート方式の使用](determining-which-exporting-method-to-use.md)
 
-- [使用してアプリケーションをインポートします。](importing-into-an-application-using-declspec-dllimport.md)
+- [__declspec(dllimport) を使用してアプリケーションにインポートする](importing-into-an-application-using-declspec-dllimport.md)
 
 - [DLL を初期化します。](run-time-library-behavior.md#initializing-a-dll)
 

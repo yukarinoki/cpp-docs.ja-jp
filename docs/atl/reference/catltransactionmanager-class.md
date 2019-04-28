@@ -26,11 +26,11 @@ helpviewer_keywords:
 - CAtlTransactionManager class
 ms.assetid: b01732dc-1d16-4b42-bfac-b137fca2b740
 ms.openlocfilehash: 031d72903d72af77f6929072e4605d32d81585a3
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270203"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62260055"
 ---
 # <a name="catltransactionmanager-class"></a>CAtlTransactionManager クラス
 
@@ -60,7 +60,7 @@ class CAtlTransactionManager;
 |----------|-----------------|
 |[閉じる](#close)|1 つのトランザクション ハンドルを閉じます。|
 |[コミット](#commit)|トランザクションをコミットすることを要求します。|
-|[作成します。](#create)|トランザクション ハンドルを作成します。|
+|[作成](#create)|トランザクション ハンドルを作成します。|
 |[CreateFile](#createfile)|作成するか、ファイル、ファイル ストリーム、またはトランザクション処理された操作とディレクトリを開きます。|
 |[DeleteFile](#deletefile)|トランザクション処理された操作として、既存のファイルを削除します。|
 |[FindFirstFile](#findfirstfile)|トランザクション処理された操作としては、ディレクトリのファイルまたはサブディレクトリを検索します。|
@@ -515,7 +515,7 @@ inline BOOL SetFileAttributes(LPCTSTR lpFileName, DWORD dwAttributes);
 ファイルまたはディレクトリの名前。
 
 *dwAttributes*<br/>
-ファイルに設定するファイル属性。 詳細については、[SetFileAttributesTransacted](/windows/desktop/api/winbase/nf-winbase-setfileattributestransacteda)を参照してください。
+ファイルに設定するファイル属性。 詳細については、次を参照してください。 [SetFileAttributesTransacted](/windows/desktop/api/winbase/nf-winbase-setfileattributestransacteda)します。
 
 ### <a name="remarks"></a>Remarks
 

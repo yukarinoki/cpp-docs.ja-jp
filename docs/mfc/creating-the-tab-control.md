@@ -11,11 +11,11 @@ helpviewer_keywords:
 - TCS_EX_FLATSEPARATORS extended style
 ms.assetid: 3a9c2d64-f5f4-41ea-84ab-fceb73c3dbdc
 ms.openlocfilehash: 4627009e2e07d1c5692d83d8d6262a9fcd37977e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304913"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62241963"
 ---
 # <a name="creating-the-tab-control"></a>タブ コントロールの作成
 
@@ -27,7 +27,7 @@ ms.locfileid: "57304913"
 
 1. 使用して、[メンバー変数の追加ウィザード](../ide/adding-a-member-variable-visual-cpp.md)型のメンバー変数を追加する[CTabCtrl](../mfc/reference/ctabctrl-class.md)コントロール プロパティにします。 このメンバーを使用するには、呼び出しと`CTabCtrl`メンバー関数。
 
-1. 処理する必要がある任意のタブ コントロール通知のメッセージのダイアログ クラスのハンドラー関数にマップします。 詳細については、[関数へのメッセージの割り当て](../mfc/reference/mapping-messages-to-functions.md)を参照してください。
+1. 処理する必要がある任意のタブ コントロール通知のメッセージのダイアログ クラスのハンドラー関数にマップします。 詳細については、次を参照してください。[関数へのメッセージの割り当て](../mfc/reference/mapping-messages-to-functions.md)します。
 
 1. [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog)のスタイルを設定、`CTabCtrl`します。
 

@@ -14,11 +14,11 @@ helpviewer_keywords:
 - operators [C++], shift
 ms.assetid: 25fa0cbb-5fdd-4657-8745-b35f7d8f1606
 ms.openlocfilehash: 2f118c11aab9fb2bbdd6cfa4f23425077b382b23
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565844"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62216422"
 ---
 # <a name="left-shift-and-right-shift-operators-gtgt-and-ltlt"></a>左 shift キーおよび右シフト演算子 (&gt; &gt;と&lt; &lt;)
 
@@ -26,8 +26,8 @@ ms.locfileid: "50565844"
 
 ## <a name="syntax"></a>構文
 
-> *シフト式* `<<` *加法式*
-> *シフト式* `>>` *加法式*
+> *shift-expression* `<<` *additive-expression*
+> *shift-expression* `>>` *additive-expression*
 
 ## <a name="remarks"></a>Remarks
 
@@ -36,9 +36,9 @@ ms.locfileid: "50565844"
 
 ## <a name="left-shifts"></a>左シフト
 
-左シフト演算子とビット*シフト式*で指定された位置数だけ左にシフトするときに*加法式*します。 シフト演算により空いたビット位置はゼロで埋められます。 左シフトは論理シフトです (符号ビットを含めてシフトし、溢れたビットは捨てます)。 ビットごとのシフトの種類の詳細については、[ビットごとのシフト](https://en.wikipedia.org/wiki/Bitwise_shift)を参照してください。
+左シフト演算子とビット*シフト式*で指定された位置数だけ左にシフトするときに*加法式*します。 シフト演算により空いたビット位置はゼロで埋められます。 左シフトは論理シフトです (符号ビットを含めてシフトし、溢れたビットは捨てます)。 ビットごとのシフトの種類の詳細については、次を参照してください。[ビットごとのシフト](https://en.wikipedia.org/wiki/Bitwise_shift)します。
 
-次の例では、符号なし数値を使用した左シフト演算を示しています。 値をビットセットとして表すことでビットがどうなるかを示しています。 詳細については、[bitset クラス](../standard-library/bitset-class.md)を参照してください。
+次の例では、符号なし数値を使用した左シフト演算を示しています。 値をビットセットとして表すことでビットがどうなるかを示しています。 詳細については、次を参照してください。 [bitset クラス](../standard-library/bitset-class.md)します。
 
 ```cpp
 #include <iostream>

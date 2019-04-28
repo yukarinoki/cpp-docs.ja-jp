@@ -11,11 +11,11 @@ helpviewer_keywords:
 - stack, setting size
 ms.assetid: 17320b6f-8305-445b-9ec2-75833f4b29e0
 ms.openlocfilehash: 9db595daa7de7820b594a8515ece7481b4382c98
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57820417"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62293096"
 ---
 # <a name="f-set-stack-size"></a>/F (スタック サイズの設定)
 
@@ -38,13 +38,13 @@ ms.locfileid: "57820417"
 
 スタック サイズを設定することもできます。
 
-- 使用して、 **/stack**リンカー オプション。 詳細については、[/stack](stack.md)を参照してください。
+- 使用して、 **/stack**リンカー オプション。 詳細については、次を参照してください。 [/stack](stack.md)します。
 
-- .Exe ファイルを EDITBIN を使用します。 詳細については、[EDITBIN リファレンス](editbin-reference.md)を参照してください。
+- .Exe ファイルを EDITBIN を使用します。 詳細については、次を参照してください。 [EDITBIN リファレンス](editbin-reference.md)します。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. 選択、**構成プロパティ** > **C/C++** > **コマンドライン**プロパティ ページ。
 
@@ -57,4 +57,4 @@ ms.locfileid: "57820417"
 ## <a name="see-also"></a>関連項目
 
 [MSVC コンパイラ オプション](compiler-options.md)<br/>
-[MSVC コンパイラ コマンドラインの構文](compiler-command-line-syntax.md)
+[MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)

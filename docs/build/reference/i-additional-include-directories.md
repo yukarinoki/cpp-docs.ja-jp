@@ -15,11 +15,11 @@ helpviewer_keywords:
 - include directories, compiler option [C++]
 ms.assetid: 3e9add2a-5ed8-4d15-ad79-5b411e313a49
 ms.openlocfilehash: 6ec8b15e77fec5214013c484e617904ed29e8197
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807638"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62270143"
 ---
 # <a name="i-additional-include-directories"></a>/I (追加のインクルード ディレクトリ)
 
@@ -50,7 +50,7 @@ ms.locfileid: "57807638"
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. 選択、**構成プロパティ** > **C/C++** > **全般**プロパティ ページ。
 
@@ -71,4 +71,4 @@ CL /I \INCLUDE /I\MY\INCLUDE MAIN.C
 ## <a name="see-also"></a>関連項目
 
 [MSVC コンパイラ オプション](compiler-options.md)<br/>
-[MSVC コンパイラ コマンドラインの構文](compiler-command-line-syntax.md)
+[MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)

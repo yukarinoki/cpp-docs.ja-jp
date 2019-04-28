@@ -9,11 +9,11 @@ helpviewer_keywords:
 - improving parallel performance with task groups [Concurrency Runtime]
 ms.assetid: 53979a2a-525d-4437-8952-f1ff85b37673
 ms.openlocfilehash: 329cf275f283ba7b57276d06e909905c9a900697
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57284178"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62252933"
 ---
 # <a name="how-to-use-parallelinvoke-to-write-a-parallel-sort-routine"></a>方法: Parallel_invoke を使用して並列並べ替えルーチンを記述するには
 
@@ -22,7 +22,7 @@ ms.locfileid: "57284178"
 バイトニック ソートの例に示しますが、*ソーティング ネットワーク*入力シーケンスのすべての組み合わせを並べ替えますが、この例は、シーケンスの長さが 2 の累乗を並べ替えます。
 
 > [!NOTE]
->  この例では、例を示す目的で、並列並べ替えルーチンを使用します。 PPL では、組み込みの並べ替えアルゴリズムを使用することもできます: [:parallel_sort](reference/concurrency-namespace-functions.md#parallel_sort)、 [concurrency::parallel_buffered_sort](reference/concurrency-namespace-functions.md#parallel_buffered_sort)、および[concurrency::parallel_radixsort](reference/concurrency-namespace-functions.md#parallel_radixsort)します。 詳細については、[並列アルゴリズム](../../parallel/concrt/parallel-algorithms.md)を参照してください。
+>  この例では、例を示す目的で、並列並べ替えルーチンを使用します。 PPL では、組み込みの並べ替えアルゴリズムを使用することもできます: [:parallel_sort](reference/concurrency-namespace-functions.md#parallel_sort)、 [concurrency::parallel_buffered_sort](reference/concurrency-namespace-functions.md#parallel_buffered_sort)、および[concurrency::parallel_radixsort](reference/concurrency-namespace-functions.md#parallel_radixsort)します。 詳細については、次を参照してください。[並列アルゴリズム](../../parallel/concrt/parallel-algorithms.md)します。
 
 ##  <a name="top"></a> セクション
 

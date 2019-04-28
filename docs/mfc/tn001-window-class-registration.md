@@ -9,11 +9,11 @@ helpviewer_keywords:
 - AfxRegisterClass function
 ms.assetid: 1abf678e-f220-4606-85e0-03df32f64c54
 ms.openlocfilehash: 68c851ae6a6b1b8578df90e2618f257122797aa5
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57294149"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62306272"
 ---
 # <a name="tn001-window-class-registration"></a>TN001:ウィンドウ クラスの登録
 
@@ -84,7 +84,7 @@ const char* AfxRegisterWndClass(UINT nClassStyle,
     HICON hIcon);
 ```
 
-この関数は、生成された登録済みのウィンドウ クラス名の一時的な文字列を返します。 この関数の詳細については、[AfxRegisterWndClass](../mfc/reference/application-information-and-management.md#afxregisterwndclass)を参照してください。
+この関数は、生成された登録済みのウィンドウ クラス名の一時的な文字列を返します。 この関数の詳細については、次を参照してください。 [AfxRegisterWndClass](../mfc/reference/application-information-and-management.md#afxregisterwndclass)します。
 
 返される文字列は、静的な文字列バッファーへの一時的なポインターです。 次の呼び出しまで有効です`AfxRegisterWndClass`します。 周りには、この文字列を保持する場合は、保存、 [CString](../atl-mfc-shared/using-cstring.md)この例のように、変数。
 

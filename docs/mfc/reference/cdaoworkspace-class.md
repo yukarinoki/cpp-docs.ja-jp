@@ -63,11 +63,11 @@ helpviewer_keywords:
 - CDaoWorkspace [MFC], m_pDAOWorkspace
 ms.assetid: 64f60de6-4df1-4d4a-a65b-c489b5257d52
 ms.openlocfilehash: 6aa404c5eb543db198043dba68d55a4b925739c8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57263456"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62253726"
 ---
 # <a name="cdaoworkspace-class"></a>CDaoWorkspace クラス
 
@@ -145,7 +145,7 @@ class CDaoWorkspace : public CObject
 
 ## <a name="security"></a>セキュリティ
 
-MFC dao でのセキュリティ制御に使用されるユーザーとグループのコレクションを実装しません。 DAO の機能を必要がある場合をする必要がありますプログラムに自分で DAO インターフェイスへの直接呼び出しを使用しています。 詳しくは、[テクニカル ノート 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md)を参照してください。
+MFC dao でのセキュリティ制御に使用されるユーザーとグループのコレクションを実装しません。 DAO の機能を必要がある場合をする必要がありますプログラムに自分で DAO インターフェイスへの直接呼び出しを使用しています。 詳しくは、次を参照してください。[テクニカル ノート 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md)します。
 
 ## <a name="usage"></a>使用法
 
@@ -181,7 +181,7 @@ MFC では、次の状況で暗黙的に DAO の既定のワークスペース�
 
 他のデータベース操作も提供されます、破損したデータベースの修復やデータベースの最適化など。
 
-DAO セキュリティと DAO の直接の呼び出しについては、[テクニカル ノート 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md)を参照してください。
+DAO セキュリティと DAO の直接の呼び出しについては、次を参照してください。[テクニカル ノート 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md)します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -431,7 +431,7 @@ short GetDatabaseCount();
 
 ### <a name="remarks"></a>Remarks
 
-`GetDatabaseCount` ワークスペースのデータベース コレクションで定義されているすべてのデータベースをループ処理する必要がある場合に便利です。 コレクション内の特定のデータベースに関する情報を取得するには、[GetDatabaseInfo](#getdatabaseinfo)を参照してください。 一般的な使用法は`GetDatabaseCount`開かれているデータベースの数、しを使用して、その数ループ インデックスとしてを繰り返し呼び出すの`GetDatabaseInfo`します。
+`GetDatabaseCount` ワークスペースのデータベース コレクションで定義されているすべてのデータベースをループ処理する必要がある場合に便利です。 コレクション内の特定のデータベースに関する情報を取得するには、次を参照してください。 [GetDatabaseInfo](#getdatabaseinfo)します。 一般的な使用法は`GetDatabaseCount`開かれているデータベースの数、しを使用して、その数ループ インデックスとしてを繰り返し呼び出すの`GetDatabaseInfo`します。
 
 ##  <a name="getdatabaseinfo"></a>  CDaoWorkspace::GetDatabaseInfo
 
@@ -601,7 +601,7 @@ short GetWorkspaceCount();
 
 ### <a name="remarks"></a>Remarks
 
-この数は、コレクションに追加されていない、開いているワークスペースには含まれません。 `GetWorkspaceCount` ワークスペース コレクションで定義されているすべてのワークスペースをループ処理する必要がある場合に便利です。 コレクション内の特定のワークスペースに関する情報を取得するには、[GetWorkspaceInfo](#getworkspaceinfo)を参照してください。 一般的な使用法は`GetWorkspaceCount`の開いているワークスペースの数、しを使用して、その番号ループ インデックスとしてを繰り返し呼び出すの`GetWorkspaceInfo`します。
+この数は、コレクションに追加されていない、開いているワークスペースには含まれません。 `GetWorkspaceCount` ワークスペース コレクションで定義されているすべてのワークスペースをループ処理する必要がある場合に便利です。 コレクション内の特定のワークスペースに関する情報を取得するには、次を参照してください。 [GetWorkspaceInfo](#getworkspaceinfo)します。 一般的な使用法は`GetWorkspaceCount`の開いているワークスペースの数、しを使用して、その番号ループ インデックスとしてを繰り返し呼び出すの`GetWorkspaceInfo`します。
 
 ##  <a name="getworkspaceinfo"></a>  CDaoWorkspace::GetWorkspaceInfo
 
@@ -693,7 +693,7 @@ BOOL IsOpen() const;
 
 基になる DAO オブジェクトへのアクセスを指示する必要がある場合は、このデータ メンバーを使用します。 このポインターを通じて、DAO オブジェクトのインターフェイスを呼び出すことができます。
 
-DAO オブジェクトに直接アクセスする方法の詳細については、[テクニカル ノート 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md)を参照してください。
+DAO オブジェクトに直接アクセスする方法の詳細については、次を参照してください。[テクニカル ノート 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md)します。
 
 ##  <a name="open"></a>  CDaoWorkspace::Open
 
@@ -722,7 +722,7 @@ virtual void Open(LPCTSTR lpszName = NULL);
 
 ||||
 |-|-|-|
-|[作成します。](#create)|[GetVersion](#getversion)|[SetDefaultUser](#setdefaultuser)|
+|[作成](#create)|[GetVersion](#getversion)|[SetDefaultUser](#setdefaultuser)|
 |[GetIniPath](#getinipath)|[アイドル状態します。](#idle)|[SetIniPath](#setinipath)|
 |[GetLoginTimeout](#getlogintimeout)|[SetDefaultPassword](#setdefaultpassword)|[SetLoginTimeout](#setlogintimeout)|
 

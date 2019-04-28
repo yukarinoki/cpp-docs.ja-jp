@@ -87,11 +87,11 @@ helpviewer_keywords:
 - std::set [C++], value_comp
 ms.assetid: 8991f9aa-5509-4440-adc1-371512d32018
 ms.openlocfilehash: 8f4ad77c28b4643a979d7c3fb22e44e4aebd43dd
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694739"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62295488"
 ---
 # <a name="set-class"></a>set クラス
 
@@ -1008,10 +1008,10 @@ size_type erase(
 *Where*<br/>
 削除される要素の位置。
 
-*まずは*<br/>
+*First*<br/>
 削除される最初の要素の位置。
 
-*前の*<br/>
+*Last*<br/>
 削除される最後の要素の次の位置。
 
 *Key*<br/>
@@ -1308,8 +1308,8 @@ IList);
 |*val*|値が同じ順序付けになる要素が set にまだ含まれていない場合に、set に挿入される要素の値。|
 |*Where*|正しい挿入ポイントの検索を開始する場所  (そのポイントの直前に場合*場所*、対数時間ではなく償却定数時間で実行できます)。|
 |*ValTy*|セットの要素の構築に使用できる引数の型を指定するテンプレート パラメーター [value_type](../standard-library/map-class.md#value_type)、および完全転送*Val*を引数として。|
-|*まずは*|コピーされる最初の要素の位置。|
-|*前の*|コピーされる最後の要素の次の位置。|
+|*First*|コピーされる最初の要素の位置。|
+|*Last*|コピーされる最後の要素の次の位置。|
 |*InputIterator*|[入力反復子](../standard-library/input-iterator-tag-struct.md)の要件を満たすテンプレート関数の引数。この反復子は、[value_type](../standard-library/map-class.md#value_type) オブジェクトの構築に使用できる型の要素を指し示します。|
 |*IList*|要素のコピー元の [initializer_list](../standard-library/initializer-list.md)。|
 
@@ -1992,8 +1992,8 @@ set(
 |*Al*|既定値は、このセット オブジェクトに使用するストレージ アロケーター クラス`Allocator`します。|
 |*コンポジション*|set 内の要素の並べ替えに使用される、`const Traits` 型の比較関数。既定では `Compare` です。|
 |*右*|構築される set のコピー元となる set。|
-|*まずは*|コピーする要素範囲内の最初の要素の位置。|
-|*前の*|コピーする要素範囲を超える最初の要素の位置。|
+|*First*|コピーする要素範囲内の最初の要素の位置。|
+|*Last*|コピーする要素範囲を超える最初の要素の位置。|
 |*IList*|要素のコピー元の initializer_list。|
 
 ### <a name="remarks"></a>Remarks

@@ -6,11 +6,11 @@ f1_keywords:
 - /kernel-
 ms.assetid: 6d7fdff0-c3d1-4b78-9367-4da588ce8b05
 ms.openlocfilehash: d065364cf6d3ae824098634c070f3651324aa52a
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816452"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62291341"
 ---
 # <a name="kernel-create-kernel-mode-binary"></a>/kernel (カーネル モード バイナリの作成)
 
@@ -88,7 +88,7 @@ class NONPAGESECTION MyNonPagedClass
 
 ### <a name="to-set-the-kernel-compiler-option-in-visual-studio"></a>Visual Studio で/kernel コンパイラ オプションを設定するには
 
-1. 開く、**プロパティ ページ**プロジェクトのダイアログ ボックス。 詳細については、[Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)を参照してください。
+1. 開く、**プロパティ ページ**プロジェクトのダイアログ ボックス。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. 選択、 **C/C++** フォルダー。
 
@@ -99,4 +99,4 @@ class NONPAGESECTION MyNonPagedClass
 ## <a name="see-also"></a>関連項目
 
 [MSVC コンパイラ オプション](compiler-options.md)<br/>
-[MSVC コンパイラ コマンドラインの構文](compiler-command-line-syntax.md)
+[MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)

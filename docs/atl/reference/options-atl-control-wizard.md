@@ -7,11 +7,11 @@ helpviewer_keywords:
 - ATL Control Wizard, options
 ms.assetid: 4607c51a-992d-433e-9281-919c6f519a3d
 ms.openlocfilehash: 1dd136739162c72d8064deb9b1498794f1985e1b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57282982"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62197355"
 ---
 # <a name="options-atl-control-wizard"></a>オプション、ATL コントロール ウィザード
 
@@ -37,11 +37,11 @@ ms.locfileid: "57282982"
 
   - 複合コントロールを含む HTML テスト ページ。
 
-    既定では、このコントロールの設定[CComControlBase::m_bWindowOnly](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly)ウィンドウ付きコントロールであることを示す true にします。 シンクのマップを実装します。 詳細については、[DHTML コントロールのサポート](../../atl/atl-support-for-dhtml-controls.md)を参照してください。
+    既定では、このコントロールの設定[CComControlBase::m_bWindowOnly](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly)ウィンドウ付きコントロールであることを示す true にします。 シンクのマップを実装します。 詳細については、次を参照してください。 [DHTML コントロールのサポート](../../atl/atl-support-for-dhtml-controls.md)します。
 
 - **DHTML コントロール**:ATL DHTML コントロールでは、HTML を使用して、ユーザー インターフェイスを指定します。 DHTML UI クラスには、COM マップが含まれています。 既定では、このコントロールの設定[CComControlBase::m_bWindowOnly](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly)ウィンドウ付きコントロールであることを示す true にします。
 
-   詳細については、[DHTML コントロール プロジェクトの要素の識別](../../atl/identifying-the-elements-of-the-dhtml-control-project.md)を参照してください。
+   詳細については、次を参照してください。 [DHTML コントロール プロジェクトの要素の識別](../../atl/identifying-the-elements-of-the-dhtml-control-project.md)します。
 
 ### <a name="minimal-control"></a>最小限の制御
 
@@ -49,7 +49,7 @@ ms.locfileid: "57282982"
 
 ### <a name="aggregation"></a>集約
 
-作成するコントロールの集計のサポートを追加します。 詳細については、[集計](../../atl/aggregation.md)を参照してください。
+作成するコントロールの集計のサポートを追加します。 詳細については、次を参照してください。[集計](../../atl/aggregation.md)します。
 
 - **[はい]**:集計可能なコントロールを作成します。
 

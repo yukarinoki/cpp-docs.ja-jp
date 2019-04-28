@@ -41,11 +41,11 @@ helpviewer_keywords:
 - fwscanf_l function
 ms.assetid: 9004e978-6c5f-4bb2-98fd-51e5948933f2
 ms.openlocfilehash: 5be3f4107d2f05c1863c9c8303ac89e184590baa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594506"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62287838"
 ---
 # <a name="fscanf-fscanfl-fwscanf-fwscanfl"></a>fscanf、_fscanf_l、fwscanf、_fwscanf_l
 
@@ -80,7 +80,7 @@ int _fwscanf_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*ストリーム*<br/>
+*stream*<br/>
 **FILE** 構造体へのポインター。
 
 *format*<br/>
@@ -113,7 +113,7 @@ int _fwscanf_l(
 |**_ftscanf**|**fscanf**|**fscanf**|**fwscanf**|
 |**_ftscanf_l**|**_fscanf_l**|**_fscanf_l**|**_fwscanf_l**|
 
-詳細については、[scanf 関数と wscanf 関数の書式指定フィールド](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md)を参照してください。
+詳細については、次を参照してください。 [scanf 関数と wscanf 関数の書式指定フィールド](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md)します。
 
 ## <a name="requirements"></a>必要条件
 

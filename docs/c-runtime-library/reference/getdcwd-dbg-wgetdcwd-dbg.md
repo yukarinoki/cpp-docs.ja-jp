@@ -31,11 +31,11 @@ helpviewer_keywords:
 - directories [C++], current working
 ms.assetid: 266bf6f0-0417-497f-963d-2e0f306d9385
 ms.openlocfilehash: 700cfe732dc390ca59a976694403bb3d91af5980
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50547176"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62331858"
 ---
 # <a name="getdcwddbg-wgetdcwddbg"></a>_getdcwd_dbg、_wgetdcwd_dbg
 

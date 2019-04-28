@@ -9,11 +9,11 @@ helpviewer_keywords:
 - identifiers [C++]
 ms.assetid: 03a0dfb1-4530-4cdf-8295-5ea4dca4c1b8
 ms.openlocfilehash: 6f87486d0bb2614a3b2542cf050172a47f152c4c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653662"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62184602"
 ---
 # <a name="identifiers-c"></a>識別子 (C++)
 
@@ -87,15 +87,15 @@ int main() {
 }
 ```
 
-識別子で許可される文字の範囲は、C++/CLI コードをコンパイルする場合よりも制限されません。 /clr を使用してコンパイルするコード内の識別子は、  [標準 ECMA 335: 共通言語基盤 (CLI)](http://www.ecma-international.org/publications/standards/Ecma-335.htm)に従う必要があります。
+識別子で許可される文字の範囲は、C++/CLI コードをコンパイルする場合よりも制限されません。 /Clr を使用してコンパイルされたコード内の識別子が従う必要があります[標準 ECMA 335。共通言語基盤 (CLI)](http://www.ecma-international.org/publications/standards/Ecma-335.htm)します。
 
-**END Microsoft 固有の仕様**
+**Microsoft 固有の仕様はここまで**
 
 識別子の先頭文字は、英字 (大文字でも小文字でもかまいません) またはアンダースコア ( **_** ) 文字にする必要があります。 C++ の識別子は大文字と小文字が区別されるため、 `fileName` は `FileName`とは異なります。
 
 識別子をキーワードとまったく同じスペルおよび大文字小文字にすることはできません。 キーワードを含む識別子は有効です。 たとえば、`Pint`が含まれている場合でも、有効な識別子を**int**、キーワードします。
 
-2 つの連続したアンダー スコア文字の使用 ( **_ _** ) 識別子、または大文字の後に 1 つ先頭のアンダー スコアでは、すべてのスコープで C++ の実装用に予約されています。 現在または将来の予約済み識別子と競合する可能性があるため、ファイルのスコープを含む名前には、先頭の 1 つのアンダースコアとそれに続く子文字を使用しないようにする必要があります。
+2 つの連続したアンダー スコア文字の使用 ( **_ _** ) 識別子、または大文字の後に 1 つ先頭のアンダー スコアでは、用に予約されてC++すべてのスコープで実装します。 現在または将来の予約済み識別子と競合する可能性があるため、ファイルのスコープを含む名前には、先頭の 1 つのアンダースコアとそれに続く子文字を使用しないようにする必要があります。
 
 ## <a name="see-also"></a>関連項目
 

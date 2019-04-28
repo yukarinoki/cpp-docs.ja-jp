@@ -7,18 +7,17 @@ helpviewer_keywords:
 - Windows Forms controls [C++], command routing
 ms.assetid: bf138ece-b463-442a-b0a0-de7063a760c0
 ms.openlocfilehash: 8f633cf744314833409a3ffeacf8c850429e099c
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750299"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62222911"
 ---
 # <a name="how-to-add-command-routing-to-the-windows-forms-control"></a>方法: コマンドの追加フォーム コントロールを Windows へのルーティング
 
 [CWinFormsView](../mfc/reference/cwinformsview-class.md)を MFC のコマンド (たとえば、フレームのメニュー項目やツールバーのボタン) を処理できるようにするユーザー コントロールにコマンドおよび更新コマンド UI メッセージをルーティングします。
 
-ユーザー コントロールを使用して[ICommandTarget::Initialize](../mfc/reference/icommandtarget-interface.md#initialize)コマンド ソース オブジェクトへの参照を格納する`m_CmdSrc`次の例のようにします。 
-  `ICommandTarget` を使用するには、mfcmifc80.dll への参照を追加する必要があります。
+ユーザー コントロールを使用して[ICommandTarget::Initialize](../mfc/reference/icommandtarget-interface.md#initialize)コマンド ソース オブジェクトへの参照を格納する`m_CmdSrc`次の例のようにします。 `ICommandTarget` を使用するには、mfcmifc80.dll への参照を追加する必要があります。
 
 `CWinFormsView` は、共通の MFC ビューの通知をマネージ ユーザー コントロールに転送することによって処理します。 これらの通知が含まれる、 [OnInitialUpdate](../mfc/reference/iview-interface.md#oninitialupdate)、 [OnUpdate](../mfc/reference/iview-interface.md#onupdate)と[OnActivateView](../mfc/reference/iview-interface.md#onactivateview)メソッド。
 
@@ -48,8 +47,7 @@ ms.locfileid: "57750299"
     partial class UserControl1 : System.Windows.Forms.UserControl, ICommandTarget
     ```
 
-1. 
-  `UserControl1` のクラス定義の最初の行として次の行を追加します。
+1. `UserControl1` のクラス定義の最初の行として次の行を追加します。
 
     ```
     private ICommandSource m_CmdSrc;
@@ -74,8 +72,7 @@ ms.locfileid: "57750299"
 
 1. 作成した MFC アプリケーションを開く[方法。ユーザー コントロールおよびホスト MDI ビューを作成する](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md)します。
 
-1. 
-  `singleMenuHandler` を呼び出すメニュー オプションを追加します。
+1. `singleMenuHandler` を呼び出すメニュー オプションを追加します。
 
    移動して**リソース ビュー** (Ctrl + Shift + E)、展開、**メニュー**フォルダー、およびダブルクリック**IDR_MFC02TYPE**します。 これにより、メニュー エディターが表示されます。
 

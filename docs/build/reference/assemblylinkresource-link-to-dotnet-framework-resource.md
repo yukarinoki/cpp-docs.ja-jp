@@ -10,11 +10,11 @@ helpviewer_keywords:
 - /ASSEMBLYLINKRESOURCE linker option
 ms.assetid: 8b6ad184-1b33-47a4-8513-4803cf915b64
 ms.openlocfilehash: fb707a2721ed40ee3ec37d01b2bbcfcc51f05c38
-ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57807807"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62295163"
 ---
 # <a name="assemblylinkresource-link-to-net-framework-resource"></a>/ASSEMBLYLINKRESOURCE (.NET Framework リソースへのリンク)
 
@@ -35,7 +35,7 @@ ms.locfileid: "57807807"
 
 /ASSEMBLYLINKRESOURCE では、コンパイルが含まれている必要があります[/clr](clr-common-language-runtime-compilation.md);[/LN](ln-create-msil-module.md)または[/NOASSEMBLY](noassembly-create-a-msil-module.md) /ASSEMBLYLINKRESOURCE で許可されていません。
 
-場合*filename*作成例についてでの .NET Framework リソース ファイルは、 [Resgen.exe](/dotnet/framework/tools/resgen-exe-resource-file-generator)または開発環境でアクセスできるメンバー間で、 **System.Resources**名前空間。 詳細については、[System.Resources.ResourceManager](/dotnet/api/system.resources.resourcemanager)を参照してください。 他のすべてのリソースを使用して、**それ以外**\*メソッド、 **System.Reflection.Assembly**実行時にリソースにアクセスするクラス。
+場合*filename*作成例についてでの .NET Framework リソース ファイルは、 [Resgen.exe](/dotnet/framework/tools/resgen-exe-resource-file-generator)または開発環境でアクセスできるメンバー間で、 **System.Resources**名前空間。 詳細については、次を参照してください。 [System.Resources.ResourceManager](/dotnet/api/system.resources.resourcemanager)します。 他のすべてのリソースを使用して、**それ以外**\*メソッド、 **System.Reflection.Assembly**実行時にリソースにアクセスするクラス。
 
 *ファイル名*任意のファイル形式を指定できます。 たとえば、グローバル アセンブリ キャッシュにインストールされているし、アセンブリ内のマネージ コードからアクセスできるように、ネイティブの DLL が、アセンブリの一部を作成したい場合があります。
 
@@ -57,7 +57,7 @@ ms.locfileid: "57807807"
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. をクリックして、**リンカー**フォルダー。
 
@@ -71,5 +71,5 @@ ms.locfileid: "57807807"
 
 ## <a name="see-also"></a>関連項目
 
-[MSVC リンカーの参照](linking.md)<br/>
+[MSVC リンカーのリファレンス](linking.md)<br/>
 [MSVC リンカー オプション](linker-options.md)
