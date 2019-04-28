@@ -5,11 +5,11 @@ helpviewer_keywords:
 - .vcxproj file structure
 ms.assetid: 14d0c552-29db-480e-80c1-7ea89d6d8e9c
 ms.openlocfilehash: 3b7c7bdad8848a3755db4ea565117459c72e939b
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57827961"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62317121"
 ---
 # <a name="vcxproj-and-props-file-structure"></a>.vcxproj ファイルと .props ファイルの構造
 
@@ -213,7 +213,7 @@ IDE は、すべての ProjectConfiguration 項目で使われている Configur
 
 プロジェクト内の項目 (ソース ファイルなど) が含まれます。 プロジェクト項目 (つまり、規則の定義によってプロジェクト項目として扱われる項目の種類) に対しては、条件はサポートされていません。
 
-メタデータでは、構成ごとに構成の条件が必要です (すべて同じであっても)。 例えば:
+メタデータでは、構成ごとに構成の条件が必要です (すべて同じであっても)。 例:
 
 ```xml
 <ItemGroup>
@@ -292,5 +292,5 @@ IDE では、全般プロパティ ページで **UseOfAtl** プロパティを�
 
 ## <a name="see-also"></a>関連項目
 
-[C++ コンパイラを設定し、Visual Studio でのプロパティのビルド](../working-with-project-properties.md)<br/>
+[Visual Studio で C++ コンパイラとビルド プロパティを設定する](../working-with-project-properties.md)<br/>
 [プロパティ ページの XML ファイル](property-page-xml-files.md)

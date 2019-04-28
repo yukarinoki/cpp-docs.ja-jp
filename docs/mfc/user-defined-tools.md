@@ -5,15 +5,15 @@ helpviewer_keywords:
 - user-defined tools (MFC Extensions)
 ms.assetid: cb887421-78ce-4652-bc67-96a53984ccaa
 ms.openlocfilehash: 785e37c63653dde91176bedd0321fc58ac122c7e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57269709"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62180843"
 ---
 # <a name="user-defined-tools"></a>ユーザー定義のツール
 
-MFC には、ユーザー定義のツールがサポートしています。 ユーザー定義のツールは、外部のユーザーが指定したプログラムを実行する特別なコマンドです。 カスタマイズのプロセスを使用して、ユーザー定義のツールを管理することができます。 アプリケーション オブジェクトがから派生していない場合にこのプロセスを使用することはできませんただし、 [CWinAppEx クラス](../mfc/reference/cwinappex-class.md)します。 カスタマイズの詳細については、[MFC のカスタマイズ](../mfc/customization-for-mfc.md)を参照してください。
+MFC には、ユーザー定義のツールがサポートしています。 ユーザー定義のツールは、外部のユーザーが指定したプログラムを実行する特別なコマンドです。 カスタマイズのプロセスを使用して、ユーザー定義のツールを管理することができます。 アプリケーション オブジェクトがから派生していない場合にこのプロセスを使用することはできませんただし、 [CWinAppEx クラス](../mfc/reference/cwinappex-class.md)します。 カスタマイズの詳細については、次を参照してください。 [MFC のカスタマイズ](../mfc/customization-for-mfc.md)します。
 
 カスタマイズ ダイアログ ボックスが自動的にユーザー定義のツールのサポートを有効にした場合、**ツール**タブ。次の図は、**ツール**ページ。
 

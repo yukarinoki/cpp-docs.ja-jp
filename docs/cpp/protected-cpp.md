@@ -8,11 +8,11 @@ helpviewer_keywords:
 - protected keyword [C++]
 ms.assetid: 863d299f-fc0d-45d5-a1a7-bd24b7778a93
 ms.openlocfilehash: 1cbe88a80b83caa78972d1e2799c1e0d87d1cb0a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50470991"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62244529"
 ---
 # <a name="protected-c"></a>protected (C++)
 
@@ -46,7 +46,7 @@ protected base-class
 
 ## <a name="clr-specific"></a>/clr 固有
 
-CLR 型では、C++ アクセス指定子のキーワード (**パブリック**、**プライベート**、および**保護**) 型およびアセンブリに関連メソッドの可視性に影響を与えることができます。 詳細については、[メンバー アクセス コントロール](member-access-control-cpp.md)を参照してください。
+CLR 型では、C++ アクセス指定子のキーワード (**パブリック**、**プライベート**、および**保護**) 型およびアセンブリに関連メソッドの可視性に影響を与えることができます。 詳細については、次を参照してください。[メンバー アクセス コントロール](member-access-control-cpp.md)します。
 
 > [!NOTE]
 >  ファイルがコンパイルされた[/LN](../build/reference/ln-create-msil-module.md)この動作の影響は受けません。 この場合、すべてのマネージド クラス (パブリックかプライベート) が表示されます。
