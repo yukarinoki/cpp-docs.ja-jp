@@ -14,11 +14,11 @@ helpviewer_keywords:
 - default char type is unsigned
 ms.assetid: 50973667-6638-491e-9c41-bff73acae19f
 ms.openlocfilehash: ed296d339949814dbd796bb5d8e23a406be71c69
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57814164"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62269402"
 ---
 # <a name="j-default-char-type-is-unsigned"></a>/J (既定の char 型の unsigned への変更)
 
@@ -56,5 +56,5 @@ ANSI C および C++ での特定の実装が必要ありません、`char`型�
 ## <a name="see-also"></a>関連項目
 
 [MSVC コンパイラ オプション](compiler-options.md)<br/>
-[MSVC コンパイラ コマンドラインの構文](compiler-command-line-syntax.md)<br/>
-[C++ コンパイラを設定し、Visual Studio でのプロパティのビルド](../working-with-project-properties.md)
+[MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)<br/>
+[Visual Studio で C++ コンパイラとビルド プロパティを設定する](../working-with-project-properties.md)
