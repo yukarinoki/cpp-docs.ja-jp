@@ -7,15 +7,15 @@ helpviewer_keywords:
 - -Zc:__cplusplus compiler option (C++)
 - __cplusplus macro (C++)
 ms.openlocfilehash: 89545f541f32374a47dce7f87958e61873c1b47c
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57810095"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62315717"
 ---
 # <a name="zccplusplus-enable-updated-cplusplus-macro"></a>/Zc: _ _cplusplus (更新された _ _cplusplus マクロを有効にする)
 
-**/Zc: _ _cplusplus**コンパイラ オプションにより、  **\_ \_cplusplus**プリプロセッサ マクロを最新の C++ 言語標準サポートの更新後の値を報告します。 既定では、Visual Studio 常の値を返す"199711 L"、  **\_ \_cplusplus**プリプロセッサ マクロ。
+**/Zc: _ _cplusplus**コンパイラ オプションにより、  **\_ \_cplusplus**プリプロセッサ マクロの値が更新を報告する最近C++言語標準をサポートします。 既定では、Visual Studio 常の値を返す"199711 L"、  **\_ \_cplusplus**プリプロセッサ マクロ。
 
 ## <a name="syntax"></a>構文
 
@@ -41,7 +41,7 @@ Zc:__cplusplus-(無効)|任意の値|199711 L
 
 ### <a name="to-set-this-compiler-option-in-visual-studio"></a>このコンパイラ オプションを Visual Studio で使用するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. 選択、**構成プロパティ** > **C/C++** > **コマンドライン**プロパティ ページ。
 

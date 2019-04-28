@@ -28,11 +28,11 @@ helpviewer_keywords:
 - _execle function
 ms.assetid: 75efa9c5-96b7-4e23-acab-06258901f63a
 ms.openlocfilehash: dbd84dd8d8e150a063dad4dc89a572c317bce544
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530521"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62288163"
 ---
 # <a name="execle-wexecle"></a>_execle、_wexecle
 
@@ -80,7 +80,7 @@ intptr_t _wexecle(
 |**E2BIG**|引数と環境設定に必要な領域が 32 KB を超えています。|
 |**EACCES**|指定されたファイルでロック違反または共有違反が発生しています。|
 |**EINVAL**|無効なパラメーター。|
-|**EMFILE**|開いているファイルの数が多すぎます (指定されたファイルは、実行可能ファイルであるかどうかを確認するために開く必要があります)。|
+|**EMFILE**|開いているファイルの数が多すぎます  (指定されたファイルは、実行可能ファイルであるかどうかを確認するために開く必要があります)。|
 |**ENOENT**|ファイルまたはパスが見つかりません。|
 |**ENOEXEC**|指定されたファイルが実行可能ファイルでないか、無効な実行可能ファイル形式です。|
 |**ENOMEM**|新しいプロセスを実行するのに十分なメモリがないか、使用できるメモリが破損しているか、または無効なブロックが存在します (これは、呼び出しプロセスが正しく割り当てられていないことを示します)。|

@@ -7,17 +7,17 @@ helpviewer_keywords:
 - C3463
 ms.assetid: 153efcc0-085c-4615-84ea-d22942618bdf
 ms.openlocfilehash: a0c7772291085bcd872cbc1ca23b79d2fa829ad9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50448673"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62222348"
 ---
 # <a name="compiler-error-c3463"></a>コンパイラ エラー C3463
 
 'type':型は属性 'implements' で使用できません
 
-[implements](../../windows/implements-cpp.md) 属性に正しくない型が渡されました。 たとえば、 `implements`にインターフェイスを渡すことはできますが、インターフェイスへのポインターを渡すことはできません。
+ [implements](../../windows/implements-cpp.md) 属性に正しくない型が渡されました。 たとえば、 `implements`にインターフェイスを渡すことはできますが、インターフェイスへのポインターを渡すことはできません。
 
 ## <a name="example"></a>例
 
