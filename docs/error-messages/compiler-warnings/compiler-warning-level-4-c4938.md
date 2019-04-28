@@ -7,15 +7,15 @@ helpviewer_keywords:
 - C4938
 ms.assetid: 6acac81a-9d23-465e-b700-ed4b6e8edcd0
 ms.openlocfilehash: da2725a398a99b5943e128038e75622115a9e34f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50524554"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62280205"
 ---
 # <a name="compiler-warning-level-4-c4938"></a>コンパイラの警告 (レベル 4) C4938
 
-'var' : 浮動小数点の減少変数は、/fp:strict または #pragma fenv_access で矛盾する結果を生じさせる可能性があります
+' var':浮動小数点の減少変数で矛盾する結果が発生する可能性があります厳密なまたは #pragma fenv_access。
 
 合計は異なる順序で計算されるため、OpenMP の浮動小数点の減少で、 [/fp:strict](../../build/reference/fp-specify-floating-point-behavior.md) または [fenv_access](../../preprocessor/fenv-access.md) を使用しないでください。 したがって、結果は、/openmp を使用しない場合の結果と異なる可能性があります。
 

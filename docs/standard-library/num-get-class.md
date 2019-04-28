@@ -15,11 +15,11 @@ helpviewer_keywords:
 - std::num_get [C++], get
 ms.assetid: 9933735d-3918-4b17-abad-5fca2adc62d7
 ms.openlocfilehash: c0984c15e2bf1682fc902264f47f340d0bd3c859
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50472762"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62223757"
 ---
 # <a name="numget-class"></a>num_get クラス
 
@@ -173,7 +173,7 @@ virtual iter_type do_get(
 *last*<br/>
 数値を読み取る文字の範囲の終了位置。
 
-*されている _Iosbase*<br/>
+*_Iosbase*<br/>
 変換で使用されるフラグが含まれる [Ios_base](../standard-library/ios-base-class.md)。
 
 *_State*<br/>
@@ -420,7 +420,7 @@ iter_type get(
 *last*<br/>
 数値を読み取る文字の範囲の終了位置。
 
-*されている _Iosbase*<br/>
+*_Iosbase*<br/>
 変換で使用されるフラグが含まれる [Ios_base](../standard-library/ios-base-class.md)。
 
 *_State*<br/>
@@ -580,11 +580,11 @@ explicit num_get(size_t _Refs = 0);
 
 使用可能な値を *_Refs*パラメーターとその重要性は。
 
-- 0: オブジェクトの有効期間はそれが含まれるロケールによって管理されます。
+- 0:オブジェクトの有効期間は、それが含まれるロケールによって管理されます。
 
-- 1: オブジェクトの有効期間を手動で管理する必要があります。
+- 1:オブジェクトの有効期間は、手動で管理する必要があります。
 
-- \> 1: これらの値が定義されていません。
+- \> 1:これらの値が定義されていません。
 
 デストラクターが保護されているため、利用できる直接的な例はありません。
 

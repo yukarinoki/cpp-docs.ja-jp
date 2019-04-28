@@ -11,15 +11,15 @@ helpviewer_keywords:
 - template classes [MFC]
 ms.assetid: a8331c4b-068a-48f8-a629-b8449601e121
 ms.openlocfilehash: be5639802f6f4a11a29326efd71d9634797c9f5c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57267005"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62306328"
 ---
 # <a name="template-classes-for-arrays-lists-and-maps"></a>配列、リスト、マップのテンプレート クラス
 
-これらのコレクション クラスは、集計に格納されているオブジェクトの種類を決めるパラメーターを持つテンプレートです。 `CArray`、 `CMap`、および`CList`クラスを使用して、グローバルのヘルパー関数が、通常、カスタマイズする必要があります。 これらのヘルパー関数の詳細については、[コレクション クラスのヘルパー](../mfc/reference/collection-class-helpers.md)を参照してください。 型指定されたポインター クラスは、クラス ライブラリの他のクラスのラッパーです。 これらのラッパーを使用すると、コンパイラの型チェックのエラーを回避するために参加します。 これらのクラスの使用に関する詳細については、[コレクション](../mfc/collections.md)を参照してください。
+これらのコレクション クラスは、集計に格納されているオブジェクトの種類を決めるパラメーターを持つテンプレートです。 `CArray`、 `CMap`、および`CList`クラスを使用して、グローバルのヘルパー関数が、通常、カスタマイズする必要があります。 これらのヘルパー関数の詳細については、次を参照してください。[コレクション クラスのヘルパー](../mfc/reference/collection-class-helpers.md)します。 型指定されたポインター クラスは、クラス ライブラリの他のクラスのラッパーです。 これらのラッパーを使用すると、コンパイラの型チェックのエラーを回避するために参加します。 これらのクラスの使用に関する詳細については、次を参照してください。[コレクション](../mfc/collections.md)します。
 
 これらのクラスは、配列、リスト、および任意のタイプを使用してマップを作成するために使用できるテンプレートを提供します。
 

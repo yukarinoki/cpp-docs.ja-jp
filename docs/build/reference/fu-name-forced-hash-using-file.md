@@ -11,11 +11,11 @@ helpviewer_keywords:
 - /FU compiler option [C++]
 ms.assetid: 698f8603-457f-435a-baff-5ac9243d6ca1
 ms.openlocfilehash: c47a45208ac5b5c7e0000516ed114c008feda7ca
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807520"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62292290"
 ---
 # <a name="fu-name-forced-using-file"></a>/FU (強制 #using ファイルの名前の指定)
 
@@ -36,11 +36,11 @@ ms.locfileid: "57807520"
 
 C + を使用している場合/cli CLI を使用するメタデータを参照していると、[フレンド アセンブリ](../../dotnet/friend-assemblies-cpp.md)機能は使用できません **/FU**します。 使用してコード内のメタデータを参照する必要があります`#using`— と共に、`[as friend]`属性。 Visual C コンポーネント拡張 C + では、フレンド アセンブリはサポートされていない/cli CX します。
 
-アセンブリまたは共通言語ランタイム (CLR) のモジュールを作成する方法については、[/clr (共通言語ランタイムのコンパイル)](clr-common-language-runtime-compilation.md)を参照してください。 C + で構築する方法については/cli CX を参照してください[アプリとライブラリのビルド](../../cppcx/building-apps-and-libraries-c-cx.md)します。
+アセンブリまたは共通言語ランタイム (CLR) のモジュールを作成する方法については、次を参照してください。 [/clr (共通言語ランタイムのコンパイル)](clr-common-language-runtime-compilation.md)します。 C + で構築する方法については/cli CX を参照してください[アプリとライブラリのビルド](../../cppcx/building-apps-and-libraries-c-cx.md)します。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. 選択、**構成プロパティ** > **C/C++** > **詳細**プロパティ ページ。
 
@@ -54,4 +54,4 @@ C + を使用している場合/cli CLI を使用するメタデータを参照�
 
 [出力ファイル (/F) オプション](output-file-f-options.md)<br/>
 [MSVC コンパイラ オプション](compiler-options.md)<br/>
-[MSVC コンパイラ コマンドラインの構文](compiler-command-line-syntax.md)
+[MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)

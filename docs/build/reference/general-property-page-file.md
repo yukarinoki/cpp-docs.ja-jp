@@ -6,11 +6,11 @@ f1_keywords:
 - VC.Project.VCFileConfiguration.Tool
 ms.assetid: 26e3711e-9e7d-4e8d-bc4c-2474538efdad
 ms.openlocfilehash: 66e26cabf5af85091000e6cda144898789c581df
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57826364"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62292226"
 ---
 # <a name="general-property-page-file"></a>[全般] プロパティ ページ (ファイル)
 
@@ -30,7 +30,7 @@ ms.locfileid: "57826364"
 
 アクセスする方法については、**全般**プロパティ ページ、**構成プロパティ**ノードを参照してください[Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
-Windows 以外のプロジェクトでは、[Linux c プロパティ ページ リファレンス](../../linux/prop-pages-linux.md)を参照してください。
+Windows 以外のプロジェクトでは、次を参照してください。 [Linux c プロパティ ページ リファレンス](../../linux/prop-pages-linux.md)します。
 
 ## <a name="see-also"></a>関連項目
 

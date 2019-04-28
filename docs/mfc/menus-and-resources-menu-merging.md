@@ -11,11 +11,11 @@ helpviewer_keywords:
 - menus [MFC], OLE document applications
 ms.assetid: 80b6bb17-d830-4122-83f0-651fc112d4d1
 ms.openlocfilehash: e00464e59de5e20627fd2423c101c23629d7c4d2
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57300350"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62225540"
 ---
 # <a name="menus-and-resources-menu-merging"></a>メニューとリソース:メニューのマージ
 
@@ -29,7 +29,7 @@ ms.locfileid: "57300350"
 
 ##  <a name="_core_menu_layouts"></a> メニューのレイアウト
 
-最初の手順 メニューのレイアウトを調整することです。 詳細については、、 **] メニューの [作成**セクション[ メニューのプログラミングに関する考慮事項](https://msdn.microsoft.com/library/ms647557.aspx)Windows SDK にを参照してください。
+最初の手順 メニューのレイアウトを調整することです。 詳細については、次を参照してください。、 **] メニューの [作成**セクション[ メニューのプログラミングに関する考慮事項](https://msdn.microsoft.com/library/ms647557.aspx)Windows SDK にします。
 
 コンテナー アプリケーションでは、埋め込みアイテムがインプレース アクティブ化されるときにのみ使用される新しいメニューを作成する必要があります。 少なくとも、このメニューは必要がありますを順番に、次ので構成されます。
 

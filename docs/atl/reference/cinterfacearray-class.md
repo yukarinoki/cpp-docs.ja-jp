@@ -9,11 +9,11 @@ helpviewer_keywords:
 - CInterfaceArray class
 ms.assetid: 1f29cf66-a086-4a7b-b6a8-64f73da39f79
 ms.openlocfilehash: 2e8714bf40e99a1014d7cd6de82cddb13cbbb9cf
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57282826"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62258872"
 ---
 # <a name="cinterfacearray-class"></a>CInterfaceArray クラス
 
@@ -48,7 +48,7 @@ COM インターフェイスを格納するポインターの種類を指定し�
 
 このクラスは、コンス トラクターおよび COM インターフェイス ポインターの配列を作成するための派生メソッドを提供します。 使用[CInterfaceList](../../atl/reference/cinterfacelist-class.md)一覧が必要な場合。
 
-詳細については、[ATL コレクション クラス](../../atl/atl-collection-classes.md)を参照してください。
+詳細については、次を参照してください。 [ATL コレクション クラス](../../atl/atl-collection-classes.md)します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 

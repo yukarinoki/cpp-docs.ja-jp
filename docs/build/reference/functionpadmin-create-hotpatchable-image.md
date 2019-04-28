@@ -8,11 +8,11 @@ helpviewer_keywords:
 - /FUNCTIONPADMIN linker option
 ms.assetid: 25b02c13-1add-4fbd-add9-fcb30eb2cae7
 ms.openlocfilehash: 699da3cea9914b5a10bdf769015d41c33936a902
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57818623"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62292396"
 ---
 # <a name="functionpadmin-create-hotpatchable-image"></a>/FUNCTIONPADMIN (ホットパッチ可能なイメージの作成)
 
@@ -35,7 +35,7 @@ ms.locfileid: "57818623"
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. 選択、**構成プロパティ** > **リンカー** > **コマンドライン**プロパティ ページ。
 
@@ -47,5 +47,5 @@ ms.locfileid: "57818623"
 
 ## <a name="see-also"></a>関連項目
 
-[MSVC リンカーの参照](linking.md)<br/>
+[MSVC リンカーのリファレンス](linking.md)<br/>
 [MSVC リンカー オプション](linker-options.md)

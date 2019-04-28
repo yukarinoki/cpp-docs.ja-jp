@@ -7,15 +7,15 @@ helpviewer_keywords:
 - greedy join [Concurrency Runtime]
 ms.assetid: 79c456c0-1692-480c-bb67-98f2434c1252
 ms.openlocfilehash: de6a433ab733207d5c56b46e693837056a0cd8b1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57274164"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62237078"
 ---
 # <a name="asynchronous-message-blocks"></a>非同期メッセージ ブロック
 
-エージェント ライブラリには、アプリケーション コンポーネント間でメッセージをスレッド セーフに伝達できるメッセージ ブロックの型がいくつか用意されています。 これらのメッセージ ブロックの型でよく使用される、さまざまなメッセージ パッシング ルーチンなど[concurrency::send](reference/concurrency-namespace-functions.md#send)、 [concurrency::asend](reference/concurrency-namespace-functions.md#asend)、 [concurrency::receive](reference/concurrency-namespace-functions.md#receive)、[concurrency::try_receive](reference/concurrency-namespace-functions.md#try_receive)します。 詳細については、メッセージ パッシング ルーチン エージェント ライブラリによって定義されている、[メッセージを渡す関数](../../parallel/concrt/message-passing-functions.md)を参照してください。
+エージェント ライブラリには、アプリケーション コンポーネント間でメッセージをスレッド セーフに伝達できるメッセージ ブロックの型がいくつか用意されています。 これらのメッセージ ブロックの型でよく使用される、さまざまなメッセージ パッシング ルーチンなど[concurrency::send](reference/concurrency-namespace-functions.md#send)、 [concurrency::asend](reference/concurrency-namespace-functions.md#asend)、 [concurrency::receive](reference/concurrency-namespace-functions.md#receive)、[concurrency::try_receive](reference/concurrency-namespace-functions.md#try_receive)します。 詳細については、メッセージ パッシング ルーチン エージェント ライブラリによって定義されている、次を参照してください。[メッセージを渡す関数](../../parallel/concrt/message-passing-functions.md)します。
 
 ##  <a name="top"></a> セクション
 
@@ -61,7 +61,7 @@ ms.locfileid: "57274164"
 
 メッセージ ブロックは、メッセージを受け入れるとき、必要に応じて処理を実行できます。メッセージ ブロックがソースである場合は、結果のメッセージをネットワークの別のメンバーに渡します。 メッセージ ブロックは、フィルター関数を使用して、不要なメッセージを拒否できます。 フィルターについては、後述のセクションでは、このトピックの後半で詳しく[メッセージ フィルター](#filtering)します。 メッセージを延期するメッセージ ブロックは、そのメッセージを予約しておいて後で処理できます。 メッセージの予約の詳細セクションで、このトピックの後半で説明されている[メッセージの予約](#reservation)します。
 
-エージェント ライブラリを使用すると、メッセージ ブロックによってメッセージを非同期的に渡すことも、同期的に渡すこともできます。 `send` 関数などを使用してメッセージを同期的にメッセージ ブロックに渡すと、ターゲット ブロックがそのメッセージを受け入れるか拒否するまで、ランタイムは現在のコンテキストをブロックします。 `asend` 関数などを使用してメッセージを非同期的にメッセージ ブロックに渡すと、ランタイムはそのメッセージをターゲットに提供します。ターゲットがそのメッセージを受け入れると、ランタイムはメッセージを受信側に伝達する非同期タスクをスケジュールします。 ランタイムは、軽量タスクを使用して、メッセージを協調的に伝達します。 軽量タスクの詳細については、[タスク スケジューラ](../../parallel/concrt/task-scheduler-concurrency-runtime.md)を参照してください。
+エージェント ライブラリを使用すると、メッセージ ブロックによってメッセージを非同期的に渡すことも、同期的に渡すこともできます。 `send` 関数などを使用してメッセージを同期的にメッセージ ブロックに渡すと、ターゲット ブロックがそのメッセージを受け入れるか拒否するまで、ランタイムは現在のコンテキストをブロックします。 `asend` 関数などを使用してメッセージを非同期的にメッセージ ブロックに渡すと、ランタイムはそのメッセージをターゲットに提供します。ターゲットがそのメッセージを受け入れると、ランタイムはメッセージを受信側に伝達する非同期タスクをスケジュールします。 ランタイムは、軽量タスクを使用して、メッセージを協調的に伝達します。 軽量タスクの詳細については、次を参照してください。[タスク スケジューラ](../../parallel/concrt/task-scheduler-concurrency-runtime.md)します。
 
 アプリケーションでは、ソースとターゲットを接続することでメッセージング ネットワークを形成します。 通常、ネットワークをリンクし、`send` または `asend` を呼び出してデータをネットワークに渡します。 ソース メッセージ ブロックをターゲットに接続するには、呼び出し、 [concurrency::ISource::link_target](reference/isource-class.md#link_target)メソッド。 呼び出しターゲットからソース ブロックを切断するには、 [concurrency::ISource::unlink_target](reference/isource-class.md#unlink_target)メソッド。 ソース ブロックからすべてのターゲットを切断するには、呼び出し、 [concurrency::ISource::unlink_targets](reference/isource-class.md#unlink_targets)メソッド。 定義済みのメッセージ ブロックの型のいずれかがスコープから外れるか、破棄されると、自動的にすべてのターゲット ブロックから接続解除されます。 メッセージ ブロックの型の中には、書き込み先として使用できるターゲットの最大数が制限されているものもあります。 次のセクションでは、定義済みのメッセージ ブロックの型に適用される制限事項について説明します。
 

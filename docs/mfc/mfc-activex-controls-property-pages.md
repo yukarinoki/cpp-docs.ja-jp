@@ -11,18 +11,18 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], property pages
 ms.assetid: 1506f87a-9fd6-4505-8380-0dbc9636230e
 ms.openlocfilehash: 3fe092e412cf11f7bf8600e8d0d7d43abb0e11c7
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57303899"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62239964"
 ---
 # <a name="mfc-activex-controls-property-pages"></a>MFC ActiveX コントロール:プロパティ ページ
 
 プロパティ ページを使用すると、ActiveX コントロールのユーザーを表示および ActiveX コントロールのプロパティを変更します。 これらのプロパティは、表示およびコントロールのプロパティを編集するため、カスタマイズされたグラフィカル インターフェイスを提供する 1 つまたは複数のプロパティ ページを含む、コントロールのプロパティのダイアログ ボックスを呼び出すことによってアクセスされます。
 
 >[!IMPORTANT]
-> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の置き換えの最新のテクノロジの詳細については、[ActiveX コントロール](activex-controls.md)を参照してください。
+> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の置き換えの最新のテクノロジの詳細については、次を参照してください。 [ActiveX コントロール](activex-controls.md)します。
 
 2 つの方法では、ActiveX コントロールのプロパティ ページが表示されます。
 
@@ -45,11 +45,11 @@ ms.locfileid: "57303899"
 
 ActiveX コントロールのプロパティ ページの使用に関する詳細については、次の記事を参照してください。
 
-- [MFC ActiveX コントロール:別のカスタム プロパティ ページの追加](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)
+- [MFC ActiveX コントロール: 別のカスタム プロパティ ページの追加](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)
 
-- [MFC ActiveX コントロール:ストック プロパティ ページを使用します。](../mfc/mfc-activex-controls-using-stock-property-pages.md)
+- [MFC ActiveX コントロール: ストック プロパティ ページの使用](../mfc/mfc-activex-controls-using-stock-property-pages.md)
 
-ActiveX コントロール以外の MFC アプリケーションでプロパティ シートの使用方法の詳細については、[プロパティ シート](../mfc/property-sheets-mfc.md)を参照してください。
+ActiveX コントロール以外の MFC アプリケーションでプロパティ シートの使用方法の詳細については、次を参照してください。[プロパティ シート](../mfc/property-sheets-mfc.md)します。
 
 ##  <a name="_core_implementing_the_default_property_page"></a> 既定のプロパティ ページを実装します。
 

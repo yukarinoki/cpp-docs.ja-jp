@@ -31,11 +31,11 @@ helpviewer_keywords:
 - threading [C++], terminating threads
 ms.assetid: 18a91f2f-659e-40b4-b266-ec12dcf2abf5
 ms.openlocfilehash: 2f54ca9c4cd5e863ca960f1d9c3634b85e7896dd
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54893302"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62288824"
 ---
 # <a name="endthread-endthreadex"></a>_endthread、_endthreadex
 
@@ -67,7 +67,7 @@ void _endthreadex(
 などの Win32 **ExitThread** API、 **_endthreadex**スレッド ハンドルを終了できません。 したがって、使用 **_beginthreadex**と **_endthreadex**、Win32 を呼び出してスレッド ハンドルを閉じる必要があります**CloseHandle** API。
 
 > [!NOTE]
-> **_endthread**と **_endthreadex**により呼び出されないスレッドで保留中の C++ デストラクター。
+> **_endthread**と **_endthreadex**原因C++呼び出されないスレッド内の保留中のデストラクター。
 
 ## <a name="requirements"></a>必要条件
 

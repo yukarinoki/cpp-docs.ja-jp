@@ -8,17 +8,17 @@ helpviewer_keywords:
 - practices to avoid, Asynchronous Agents Library
 ms.assetid: 85f52354-41eb-4b0d-98c5-f7344ee8a8cf
 ms.openlocfilehash: c61393957a63895a9ecbdaaae8d83a5fbd710de3
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266420"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62236558"
 ---
 # <a name="best-practices-in-the-asynchronous-agents-library"></a>非同期エージェント ライブラリに関するベスト プラクティス
 
 ここでは、非同期エージェント ライブラリを効果的に使用する方法について説明します。 エージェント ライブラリは、アクター ベースのプログラミング モデルと、粒度の粗いデータ フローおよびパイプライン処理タスクのためのインプロセス メッセージ パッシングを推進します。
 
-エージェント ライブラリの詳細については、[Asynchronous Agents Library](../../parallel/concrt/asynchronous-agents-library.md)を参照してください。
+エージェント ライブラリの詳細については、次を参照してください。 [Asynchronous Agents Library](../../parallel/concrt/asynchronous-agents-library.md)します。
 
 ##  <a name="top"></a> セクション
 
@@ -38,8 +38,7 @@ ms.locfileid: "57266420"
 
 エージェント ライブラリは、非同期メッセージ引き渡し方法を使用して分離コンポーネントを接続できるようにすることで、共有状態に代わる手段を提供します。 非同期エージェントは、他のコンポーネントから内部状態を分離する場合に最も効果的です。 状態を分離することによって、通常、複数のコンポーネントが共有データに作用することがなくなります。 状態分離により共有メモリの競合が軽減されるため、アプリケーションのスケーラビリティが高まります。 また、コンポーネントが共有データへのアクセスを同期する必要がなくなるため、デッドロックや競合状態が発生しにくくなります。
 
-通常、エージェントで状態を分離するには、エージェント クラスの `private` セクションまたは `protected` セクションにデータ メンバーを保持し、メッセージ バッファーを使用して状態の変化を通知します。 次の例は、`basic_agent`から派生したクラス[concurrency::agent](../../parallel/concrt/reference/agent-class.md)します。 
-  `basic_agent` クラスは、2 つのメッセージ バッファーを使用して外部コンポーネントと通信します。 2 つのメッセージ バッファーにはそれぞれ受信メッセージと送信メッセージが保持されます。
+通常、エージェントで状態を分離するには、エージェント クラスの `private` セクションまたは `protected` セクションにデータ メンバーを保持し、メッセージ バッファーを使用して状態の変化を通知します。 次の例は、`basic_agent`から派生したクラス[concurrency::agent](../../parallel/concrt/reference/agent-class.md)します。 `basic_agent` クラスは、2 つのメッセージ バッファーを使用して外部コンポーネントと通信します。 2 つのメッセージ バッファーにはそれぞれ受信メッセージと送信メッセージが保持されます。
 
 [!code-cpp[concrt-simple-agent#1](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-asynchronous-agents-library_1.cpp)]
 
@@ -55,8 +54,7 @@ ms.locfileid: "57266420"
 
 [!code-cpp[concrt-message-throttling#1](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-asynchronous-agents-library_2.cpp)]
 
-
-  `semaphore` オブジェクトでは、パイプラインで同時に処理するメッセージ数を 2 までに制限しています。
+`semaphore` オブジェクトでは、パイプラインで同時に処理するメッセージ数を 2 までに制限しています。
 
 この例では、プロデューサーからコンシューマーに送信されるメッセージは比較的少量です。 そのため、メモリ不足の状態は発生しません。 ただし、データ パイプラインに含まれるメッセージの数が比較的多い場合、この機構は便利です。
 
@@ -99,8 +97,7 @@ took 47ms.
 
 この問題を解決することができますメカニズムを使用する、たとえば、 [std::shared_ptr](../../standard-library/shared-ptr-class.md)、により、複数のコンポーネントが所有するへのポインター。 リソースを所有する最後の `shared_ptr` オブジェクトが破棄されると、そのリソースも解放されます。
 
-次の例では、`shared_ptr` を使用して複数のメッセージ バッファー間でポインター値を共有する方法を示します。 例では、接続、 [concurrency::overwrite_buffer](../../parallel/concrt/reference/overwrite-buffer-class.md)オブジェクトを 3 つ[concurrency::call](../../parallel/concrt/reference/call-class.md)オブジェクト。 
-  `overwrite_buffer` クラスは、メッセージを各ターゲットに提供します。 データ ネットワークの終端にはデータの所有者が複数存在するため、この例では `shared_ptr` を使用して各 `call` オブジェクトでメッセージの所有権を共有できるようにしています。
+次の例では、`shared_ptr` を使用して複数のメッセージ バッファー間でポインター値を共有する方法を示します。 例では、接続、 [concurrency::overwrite_buffer](../../parallel/concrt/reference/overwrite-buffer-class.md)オブジェクトを 3 つ[concurrency::call](../../parallel/concrt/reference/call-class.md)オブジェクト。 `overwrite_buffer` クラスは、メッセージを各ターゲットに提供します。 データ ネットワークの終端にはデータの所有者が複数存在するため、この例では `shared_ptr` を使用して各 `call` オブジェクトでメッセージの所有権を共有できるようにしています。
 
 [!code-cpp[concrt-message-sharing#1](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-asynchronous-agents-library_4.cpp)]
 

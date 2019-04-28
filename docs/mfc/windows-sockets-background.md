@@ -19,11 +19,11 @@ helpviewer_keywords:
 - stream sockets [MFC]
 ms.assetid: f60d4ed2-bf23-4a0e-98d2-fee77e8473dd
 ms.openlocfilehash: 6ab866609d0b75aaf9d06a01c204433d80e7e3d8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57274923"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62217879"
 ---
 # <a name="windows-sockets-background"></a>Windows ソケット:背景
 
@@ -93,11 +93,11 @@ Windows ソケット仕様では、Windows ソケット:ネットワーク コ�
 
 詳細については、Windows ソケット仕様を参照してください: **ntohs**、 **ntohl**、 **htons**、 **htonl**します。 次のトピックも参照してください。
 
-- [Windows ソケット:アーカイブ付きソケットの使用](../mfc/windows-sockets-using-sockets-with-archives.md)
+- [Windows ソケット: アーカイブ付きソケットの使用](../mfc/windows-sockets-using-sockets-with-archives.md)
 
-- [Windows ソケット:アーカイブを使用するソケットの例](../mfc/windows-sockets-example-of-sockets-using-archives.md)
+- [Windows ソケット: アーカイブを使用するソケットの例](../mfc/windows-sockets-example-of-sockets-using-archives.md)
 
-- [Windows ソケット:Casyncsocket クラス](../mfc/windows-sockets-using-class-casyncsocket.md)
+- [Windows ソケット: CAsyncSocket クラスの使い方](../mfc/windows-sockets-using-class-casyncsocket.md)
 
 ## <a name="see-also"></a>関連項目
 

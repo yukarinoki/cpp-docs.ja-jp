@@ -8,11 +8,11 @@ helpviewer_keywords:
 - -CLRTHREADATTRIBUTE linker option
 ms.assetid: 4907e9ef-5031-446c-aecf-0a0b32fae1e8
 ms.openlocfilehash: ad07c84a5c470cd5fa1ac10ff6d2baed5c35c025
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57806780"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62272469"
 ---
 # <a name="clrthreadattribute-set-clr-thread-attribute"></a>/CLRTHREADATTRIBUTE (CLR スレッド属性の設定)
 
@@ -29,7 +29,7 @@ CLR プログラムのエントリ ポイントにスレッド属性を明示的
 **MTA**<br/>
 MTAThreadAttribute 属性をプログラムのエントリ ポイントに適用されます。
 
-**[なし]**<br/>
+**NONE**<br/>
 /CLRTHREADATTRIBUTE を指定しないと同じです。  既定のスレッド属性を設定する共通言語ランタイム (CLR) を使用できます。
 
 **STA**<br/>
@@ -49,7 +49,7 @@ CLR プログラムは、シングル スレッドを使用する COM オブジ�
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. **[構成プロパティ]** ノードを展開します。
 
@@ -65,5 +65,5 @@ CLR プログラムは、シングル スレッドを使用する COM オブジ�
 
 ## <a name="see-also"></a>関連項目
 
-[MSVC リンカーの参照](linking.md)<br/>
+[MSVC リンカーのリファレンス](linking.md)<br/>
 [MSVC リンカー オプション](linker-options.md)

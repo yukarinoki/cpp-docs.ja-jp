@@ -13,11 +13,11 @@ helpviewer_keywords:
 - incremental linking
 ms.assetid: 135656ff-94fa-4ad4-a613-22e1a2a5d16b
 ms.openlocfilehash: 189affe57694a8369e9cf7ac98815cc5888b69aa
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816140"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62270013"
 ---
 # <a name="incremental-link-incrementally"></a>/INCREMENTAL (インクリメンタル リンクを行う)
 
@@ -72,7 +72,7 @@ ms.locfileid: "57816140"
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. 選択、**リンカー**フォルダー。
 
@@ -86,5 +86,5 @@ ms.locfileid: "57816140"
 
 ## <a name="see-also"></a>関連項目
 
-[MSVC リンカーの参照](linking.md)<br/>
+[MSVC リンカーのリファレンス](linking.md)<br/>
 [MSVC リンカー オプション](linker-options.md)

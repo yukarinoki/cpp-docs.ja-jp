@@ -17,11 +17,11 @@ helpviewer_keywords:
 - CMFCTabDropTarget [MFC], Register
 ms.assetid: 9777b7b6-10da-4c4b-b1d1-7ea795b0f1cb
 ms.openlocfilehash: 8b24d7679edfaab4d4eeb6d59770f30cd4253580
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57303938"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62252985"
 ---
 # <a name="cmfctabdroptarget-class"></a>CMFCTabDropTarget クラス
 
@@ -57,12 +57,11 @@ class CMFCTabDropTarget : public COleDropTarget
 
 このクラスをドラッグ アンド ドロップのサポートを提供する、`CMFCBaseTabCtrl`クラス。 使用して、アプリケーションが OLE ライブラリを初期化する場合、 [AfxOleInit](ole-initialization.md#afxoleinit)関数、`CMFCBaseTabCtrl`オブジェクトがドラッグ アンド ドロップ操作に対して自身を登録します。
 
-`CMFCTabDropTarget`クラスは、カーソルの下では、ドラッグ操作が行われるアクティブなタブのことで、基底クラスを拡張します。 ドラッグ アンド ドロップ操作の詳細については、[ドラッグ アンド ドロップ (OLE)](../../mfc/drag-and-drop-ole.md)を参照してください。
+`CMFCTabDropTarget`クラスは、カーソルの下では、ドラッグ操作が行われるアクティブなタブのことで、基底クラスを拡張します。 ドラッグ アンド ドロップ操作の詳細については、次を参照してください。[ドラッグ アンド ドロップ (OLE)](../../mfc/drag-and-drop-ole.md)します。
 
 ## <a name="example"></a>例
 
-
-  `CMFCTabDropTarget` オブジェクトを構築して、その `Register` メソッドを使用する方法を、次の例に示します。
+`CMFCTabDropTarget` オブジェクトを構築して、その `Register` メソッドを使用する方法を、次の例に示します。
 
 [!code-cpp[NVC_MFC_RibbonApp#39](../../mfc/reference/codesnippet/cpp/cmfctabdroptarget-class_1.cpp)]
 
@@ -120,7 +119,7 @@ virtual DROPEFFECT OnDragEnter(
 
 このメソッドは、カスタマイズ モードで、ツールバーのフレームワークがないか、クリップボード データ形式をご利用いただけませんせずを返します。 呼び出し元の結果を返しますそれ以外の場合、`CMFCBaseTabCtrl::OnDragEnter`指定されたパラメーターを使用します。
 
-カスタマイズ モードの詳細については、[CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode)を参照してください。 クリップボード データ形式の詳細については、[COleDataObject::IsDataAvailable](../../mfc/reference/coledataobject-class.md#isdataavailable)を参照してください。
+カスタマイズ モードの詳細については、次を参照してください。 [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode)します。 クリップボード データ形式の詳細については、次を参照してください。 [COleDataObject::IsDataAvailable](../../mfc/reference/coledataobject-class.md#isdataavailable)します。
 
 ##  <a name="ondragleave"></a>  CMFCTabDropTarget::OnDragLeave
 
@@ -181,7 +180,7 @@ virtual DROPEFFECT OnDragOver(
 
 このメソッドでは、ドラッグ操作が行われるアクティブなカーソルの下にあるタブで行います。 カスタマイズ モードで、ツールバーのフレームワークがないか、クリップボード データ形式は使用できません、せずが返されます。 呼び出し元の結果を返しますそれ以外の場合、`CMFCBaseTabCtrl::OnDragOver`指定されたパラメーターを使用します。
 
-カスタマイズ モードの詳細については、[CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode)を参照してください。 クリップボード データ形式の詳細については、[COleDataObject::IsDataAvailable](../../mfc/reference/coledataobject-class.md#isdataavailable)を参照してください。
+カスタマイズ モードの詳細については、次を参照してください。 [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode)します。 クリップボード データ形式の詳細については、次を参照してください。 [COleDataObject::IsDataAvailable](../../mfc/reference/coledataobject-class.md#isdataavailable)します。
 
 ##  <a name="ondropex"></a>  CMFCTabDropTarget::OnDropEx
 
@@ -223,9 +222,9 @@ virtual DROPEFFECT OnDropEx(
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドを呼び出す`CMFCBaseTabCtrl::OnDrop`ツールバー フレームワークは、カスタマイズ モードでは、クリップボード データ形式が利用できる場合。 場合に呼び出し`CMFCBaseTabCtrl::OnDrop`返します 0 以外の値、このメソッドで指定された既定のドロップ効果の返します*dropEffect*します。 それ以外の場合、このメソッドは、せずを返します。 ドロップ効果の詳細については、[COleDropTarget::OnDropEx](../../mfc/reference/coledroptarget-class.md#ondropex)を参照してください。
+このメソッドを呼び出す`CMFCBaseTabCtrl::OnDrop`ツールバー フレームワークは、カスタマイズ モードでは、クリップボード データ形式が利用できる場合。 場合に呼び出し`CMFCBaseTabCtrl::OnDrop`返します 0 以外の値、このメソッドで指定された既定のドロップ効果の返します*dropEffect*します。 それ以外の場合、このメソッドは、せずを返します。 ドロップ効果の詳細については、次を参照してください。 [COleDropTarget::OnDropEx](../../mfc/reference/coledroptarget-class.md#ondropex)します。
 
-カスタマイズ モードの詳細については、[CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode)を参照してください。 クリップボード データ形式の詳細については、[COleDataObject::IsDataAvailable](../../mfc/reference/coledataobject-class.md#isdataavailable)を参照してください。
+カスタマイズ モードの詳細については、次を参照してください。 [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode)します。 クリップボード データ形式の詳細については、次を参照してください。 [COleDataObject::IsDataAvailable](../../mfc/reference/coledataobject-class.md#isdataavailable)します。
 
 ##  <a name="register"></a>  CMFCTabDropTarget::Register
 

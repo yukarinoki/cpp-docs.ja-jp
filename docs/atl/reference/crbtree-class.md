@@ -28,11 +28,11 @@ helpviewer_keywords:
 - CRBTree class
 ms.assetid: a1b1cb63-38e4-4fc2-bb28-f774d1721760
 ms.openlocfilehash: 59416000eecf4be25746d9dedd86ea2af116087a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57281342"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62278073"
 ---
 # <a name="crbtree-class"></a>CRBTree クラス
 
@@ -112,7 +112,7 @@ class CRBTree
 
 このテンプレート クラスがによって使用されるように設計[CRBMap](../../atl/reference/crbmap-class.md)と[CRBMultiMap](../../atl/reference/crbmultimap-class.md)します。 これらの派生クラスを作成するメソッドの大部分がによって提供される`CRBTree`します。
 
-さまざまなコレクション クラスとその機能とパフォーマンス特性の詳細については、[ATL コレクション クラス](../../atl/atl-collection-classes.md)を参照してください。
+さまざまなコレクション クラスとその機能とパフォーマンス特性の詳細については、次を参照してください。 [ATL コレクション クラス](../../atl/atl-collection-classes.md)します。
 
 ## <a name="requirements"></a>必要条件
 

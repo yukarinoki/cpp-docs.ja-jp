@@ -14,11 +14,11 @@ helpviewer_keywords:
 - conventions [C++], argument names
 ms.assetid: de468979-eab8-4158-90c5-c198932f93b9
 ms.openlocfilehash: ca09d31d3d8d50ca94543c5e02262edd7b2deefc
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627242"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62184401"
 ---
 # <a name="argument-passing-and-naming-conventions"></a>引数の渡し規則と名前付け規則
 
@@ -33,9 +33,9 @@ x86 プラットフォームでは、すべての引数は渡されたときに 
 > [!NOTE]
 > 構造体、共用体、またはクラスが値渡しで関数から戻される場合は、型のすべての定義が同じである必要があります。そうでないと、実行時にプログラムが失敗することがあります。
 
-独自の関数プロローグおよびエピローグ コードを定義する方法については、[Naked 関数の呼び出し](../cpp/naked-function-calls.md)を参照してください。
+独自の関数プロローグおよびエピローグ コードを定義する方法については、次を参照してください。 [Naked 関数の呼び出し](../cpp/naked-function-calls.md)します。
 
-ターゲットが x64 プラットフォームでは、「コードで呼び出し規則については、既定[x64 呼び出し規則](../build/x64-calling-convention.md)します。 ARM プラットフォームを対象とするコードの呼び出し規約の問題については、[一般的な Visual c ARM の移行に関する問題](../build/common-visual-cpp-arm-migration-issues.md)を参照してください。
+ターゲットが x64 プラットフォームでは、「コードで呼び出し規則については、既定[x64 呼び出し規則](../build/x64-calling-convention.md)します。 ARM プラットフォームを対象とするコードの呼び出し規約の問題については、次を参照してください。[一般的な Visual c ARM の移行に関する問題](../build/common-visual-cpp-arm-migration-issues.md)します。
 
 次の呼び出し規則は Visual C/C++ コンパイラでサポートされます。
 
@@ -48,7 +48,7 @@ x86 プラットフォームでは、すべての引数は渡されたときに 
 |[__thiscall](../cpp/thiscall.md)|Callee|スタックにプッシュされます。**この**ECX に格納されているポインター|
 |[__vectorcall](../cpp/vectorcall.md)|Callee|レジスタに格納されてから、スタックに逆の順序で (右から左に) プッシュされる|
 
-関連情報については、[廃止された呼び出し規則](../cpp/obsolete-calling-conventions.md)を参照してください。
+関連情報については、次を参照してください。[廃止された呼び出し規則](../cpp/obsolete-calling-conventions.md)します。
 
 **Microsoft 固有の仕様はここまで**
 

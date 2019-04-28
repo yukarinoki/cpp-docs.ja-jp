@@ -28,11 +28,11 @@ f1_keywords:
 - wcstold
 ms.assetid: 928c0c9a-bc49-445b-8822-100eb5954115
 ms.openlocfilehash: dcf1eca5b163c8553b43d747d53537ec424a793c
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521337"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62269190"
 ---
 # <a name="strtold-strtoldl-wcstold-wcstoldl"></a>strtold、_strtold_l、wcstold、_wcstold_l
 
@@ -97,7 +97,7 @@ NULL で終わる変換対象の文字列。
 
 **strtold**が必要ですが*strSource*次の形式の文字列を指すようにします。
 
-[*空白*] [*サインオン*] [*桁*] [.*数字*] [{**d** &#124; **D** &#124; **e** &#124; **E**} [*記号*]*桁*]
+[*whitespace*] [*sign*] [*digits*] [.*digits*] [ {**d** &#124; **D** &#124; **e** &#124; **E**}[*sign*]*digits*]
 
 A*空白*は無視されますスペースやタブ文字で構成されている可能性があります。*サインオン*が plus (**+**) または負符号 (**-**); と*桁*は 1 つ以上の 10 進数字。 小数点文字の前に数字がない場合は、少なくとも 1 つの数字が小数点文字の後に必要です。 10 進数の後には指数部を指定できます。指数部は、指数部の開始文字 (**d**、**D**、**e**、**E**) および必要に応じて符号付き整数で構成されます。 指数部と小数点文字のいずれも指定されない場合は、文字列の最後の数字の後に小数点文字が続くと想定されます。 この形式に一致しない文字を見つけるとスキャンを停止します。
 

@@ -15,11 +15,11 @@ helpviewer_keywords:
 - CWinApp class [MFC], WinMain
 ms.assetid: 935822bb-d463-481b-a5f6-9719d68ed1d5
 ms.openlocfilehash: d9f0d4f5ba6b6b070b23ce98ecda8c7accf44934
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258711"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62241563"
 ---
 # <a name="cwinapp-the-application-class"></a>CWinApp:Application クラス
 
@@ -28,7 +28,7 @@ Mfc アプリケーションのメイン クラスには、初期化、実行、
 `CWinApp` 派生`CWinThread`、1 つまたは複数のスレッドがありますアプリケーションの実行のメイン スレッドを表します。 MFC の最近のバージョンで、 `InitInstance`、**実行**、 `ExitInstance`、および`OnIdle`クラスでメンバー関数が実際には`CWinThread`します。 場合と同様、これらの関数はここで説明`CWinApp`メンバー代わりに、あるプライマリ スレッドではなくアプリケーション オブジェクトとしてのオブジェクトの役割。
 
 > [!NOTE]
->  アプリケーション クラスでは、実行のアプリケーションのプライマリ スレッドを構成します。 Win32 API 関数を使用して、セカンダリ スレッドを作成することもできます。 これらのスレッドは、MFC ライブラリを使用できます。 詳細については、[マルチ スレッド](../parallel/multithreading-support-for-older-code-visual-cpp.md)を参照してください。
+>  アプリケーション クラスでは、実行のアプリケーションのプライマリ スレッドを構成します。 Win32 API 関数を使用して、セカンダリ スレッドを作成することもできます。 これらのスレッドは、MFC ライブラリを使用できます。 詳細については、次を参照してください。[マルチ スレッド](../parallel/multithreading-support-for-older-code-visual-cpp.md)します。
 
 Windows オペレーティング システムの任意のプログラムと同様に、framework のアプリケーションがあります、`WinMain`関数。 Framework アプリケーションでは、ただし、書き`WinMain`します。 クラス ライブラリによって提供され、アプリケーションが起動するときに呼び出されます。 `WinMain` ウィンドウ クラスの登録などの標準的なサービスを実行します。 呼び出してメンバーを初期化し、アプリケーションを実行するアプリケーション オブジェクトの関数。 (カスタマイズできる`WinMain`オーバーライドすることで、`CWinApp`メンバー関数を`WinMain`呼び出し)。
 

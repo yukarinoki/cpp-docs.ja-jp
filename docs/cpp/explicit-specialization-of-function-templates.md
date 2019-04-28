@@ -9,15 +9,15 @@ helpviewer_keywords:
 - specialization of function templates
 ms.assetid: eb0fcb73-eaed-42a1-9b83-14b055a34bf8
 ms.openlocfilehash: 3d91383f895f1a8be983efe42f685419ca988823
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665180"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62184275"
 ---
 # <a name="explicit-specialization-of-function-templates"></a>関数テンプレートの明示的特殊化
 
-関数テンプレートを使用すると、特定の型のために関数テンプレートの明示的な特殊化 (オーバーライド) を提供することによって、その型の特別な動作を定義できます。 例えば:
+関数テンプレートを使用すると、特定の型のために関数テンプレートの明示的な特殊化 (オーバーライド) を提供することによって、その型の特別な動作を定義できます。 例:
 
 ```cpp
 template<> void MySwap(double a, double b);

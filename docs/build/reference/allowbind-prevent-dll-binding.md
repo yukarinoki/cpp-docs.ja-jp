@@ -13,11 +13,11 @@ helpviewer_keywords:
 - DLLs [C++], preventing binding
 ms.assetid: 30e37e24-12e4-407e-988a-39d357403598
 ms.openlocfilehash: bd9976e434441d2480386ee6fa3d0315fd8d2ef5
-ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57818844"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62295151"
 ---
 # <a name="allowbind-prevent-dll-binding"></a>/ALLOWBIND (DLL をバインドしない)
 
@@ -33,7 +33,7 @@ ms.locfileid: "57818844"
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. 展開**構成プロパティ**、**リンカー**、選び**コマンド ライン**します。
 
@@ -45,7 +45,7 @@ ms.locfileid: "57818844"
 
 ## <a name="see-also"></a>関連項目
 
-[MSVC リンカーの参照](linking.md)<br/>
+[MSVC リンカーのリファレンス](linking.md)<br/>
 [MSVC リンカー オプション](linker-options.md)<br/>
 [BindImage 関数](/windows/desktop/api/imagehlp/nf-imagehlp-bindimage)<br/>
 [BindImageEx 関数](/windows/desktop/api/imagehlp/nf-imagehlp-bindimageex)

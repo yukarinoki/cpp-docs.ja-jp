@@ -33,11 +33,11 @@ helpviewer_keywords:
 - CAsyncMonikerFile [MFC], OnStopBinding
 ms.assetid: 17378b66-a49a-4b67-88e3-7756ad26a2fc
 ms.openlocfilehash: b86cba0c2e8f7991902a552d404355d6c1474138
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57425823"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62237862"
 ---
 # <a name="casyncmonikerfile-class"></a>CAsyncMonikerFile クラス
 
@@ -158,7 +158,7 @@ COM オブジェクトを呼び出すことで MFC の実装に委任できま�
 
 [CAsyncMonikerFile::Open](#open)呼び出し`CreateBindStatusCallback`します。
 
-非同期モニカーと非同期のバインドの詳細については、、 [IBindStatusCallback](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775060\(v=vs.85\))インターフェイスと[非同期バインド方法およびストレージ作業](/windows/desktop/Stg/how-asynchronous-binding-and-storage-work)を参照してください。 集計の詳細については、[集計](/windows/desktop/com/aggregation)を参照してください。 3 つすべてのトピックは、Windows SDK には。
+非同期モニカーと非同期のバインドの詳細については、次を参照してください。、 [IBindStatusCallback](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775060\(v=vs.85\))インターフェイスと[非同期バインド方法およびストレージ作業](/windows/desktop/Stg/how-asynchronous-binding-and-storage-work)します。 集計の詳細については、次を参照してください。[集計](/windows/desktop/com/aggregation)します。 3 つすべてのトピックは、Windows SDK には。
 
 ##  <a name="getbindinfo"></a>  CAsyncMonikerFile::GetBindInfo
 

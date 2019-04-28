@@ -7,11 +7,11 @@ helpviewer_keywords:
 - FAQs [C++], DLLs
 ms.assetid: 09dd068e-fc33-414e-82f7-289c70680256
 ms.openlocfilehash: 33a0c9dd1abbfb9375ce1aef53fd152a521ac97d
-ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57821938"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62274119"
 ---
 # <a name="dll-frequently-asked-questions"></a>DLL に関してよく寄せられる質問
 
@@ -29,7 +29,7 @@ ms.locfileid: "57821938"
 
 ## <a name="mfc_multithreaded_1"></a> MFC DLL に複数のスレッドを作成できますか。
 
-初期化中に、MFC の DLL を安全に作成できます複数のスレッド Win32 スレッド ローカル ストレージ (TLS) などの関数を使用する限り、点を除いて**TlsAlloc**スレッド ローカル ストレージを割り当てる。 ただし、MFC の DLL を使用している場合 **_declspec**スレッド ローカル ストレージを割り当てるにクライアント アプリケーションの暗黙的にリンクする DLL です。 クライアント アプリケーションが DLL への呼び出しに明示的にリンク**LoadLibrary** DLL は正常に読み込まれません。 Dll 内のスレッド ローカル変数の詳細については、[スレッド](../cpp/thread.md)を参照してください。
+初期化中に、MFC の DLL を安全に作成できます複数のスレッド Win32 スレッド ローカル ストレージ (TLS) などの関数を使用する限り、点を除いて**TlsAlloc**スレッド ローカル ストレージを割り当てる。 ただし、MFC の DLL を使用している場合 **_declspec**スレッド ローカル ストレージを割り当てるにクライアント アプリケーションの暗黙的にリンクする DLL です。 クライアント アプリケーションが DLL への呼び出しに明示的にリンク**LoadLibrary** DLL は正常に読み込まれません。 Dll 内のスレッド ローカル変数の詳細については、次を参照してください。[スレッド](../cpp/thread.md)します。
 
 スタートアップ中に、新しい MFC スレッドを作成する MFC DLL では、アプリケーションによって読み込まれるときの応答を停止します。 これは、スレッドが呼び出すことによって作成されるたびにも含まれます。`AfxBeginThread`または`CWinThread::CreateThread`内。
 
@@ -61,7 +61,7 @@ DLL が MFC では、標準に変更することに静的にリンクされる�
 
 DLL のエクスポートされた関数の数が多い場合は、.def ファイルを使用して関数をエクスポートする (を使用してではなく**方式**) .def ファイルを使用して[NONAME 属性](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md)各関数をエクスポートします。 NONAME 属性は、序数値のみと、ファイル サイズが縮小 DLL のエクスポート テーブルに格納される関数名ではなくです。
 
-アプリケーションの読み込み時に、アプリケーションに暗黙的にリンクされている Dll が読み込まれます。 読み込むときに、パフォーマンスを向上するには、DLL を異なる Dll に分割することをお試しください。 1 つの DLL の読み込み後すぐに呼び出し元アプリケーションに必要なすべての関数を配置し、呼び出し元のアプリケーションをその DLL を暗黙的にリンクします。 別の DLL を呼び出し元のアプリケーションが直ちに必要はなく、他の関数を追加しがアプリケーションに明示的にリンクする DLL です。 詳細については、[DLL と実行可能ファイルをリンク](linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)を参照してください。
+アプリケーションの読み込み時に、アプリケーションに暗黙的にリンクされている Dll が読み込まれます。 読み込むときに、パフォーマンスを向上するには、DLL を異なる Dll に分割することをお試しください。 1 つの DLL の読み込み後すぐに呼び出し元アプリケーションに必要なすべての関数を配置し、呼び出し元のアプリケーションをその DLL を暗黙的にリンクします。 別の DLL を呼び出し元のアプリケーションが直ちに必要はなく、他の関数を追加しがアプリケーションに明示的にリンクする DLL です。 詳細については、次を参照してください。 [DLL と実行可能ファイルをリンク](linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)します。
 
 ## <a name="memory_leak"></a> ある&#39;s レギュラー MFC DLL が自分のコードでのメモリ リークが問題ないようです。 メモリ リークを検出する方法はありますか
 

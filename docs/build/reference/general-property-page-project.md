@@ -26,11 +26,11 @@ helpviewer_keywords:
 - output files, setting directory
 - Unicode, creating C++ build configuration
 ms.openlocfilehash: c9b0eae9c0a1e074fb4f3f12ac38a737ef14c644
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57827441"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62270901"
 ---
 # <a name="general-property-page-project"></a>[全般] プロパティ ページ (プロジェクト)
 
@@ -40,7 +40,7 @@ ms.locfileid: "57827441"
 
 - [プロジェクトの既定値]
 
-Windows 以外のプロジェクトでは、[Linux c プロパティ ページ リファレンス](../../linux/prop-pages-linux.md)を参照してください。
+Windows 以外のプロジェクトでは、次を参照してください。 [Linux c プロパティ ページ リファレンス](../../linux/prop-pages-linux.md)します。
 
 ## <a name="general"></a>全般
 

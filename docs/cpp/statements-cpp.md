@@ -6,11 +6,11 @@ helpviewer_keywords:
 - statements [C++], C++
 ms.assetid: 7028fddf-0d47-469a-a7df-f8576423e066
 ms.openlocfilehash: 4cb4dc9b718e0e6b183df62ddd056da1e0ed398f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50527246"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62267194"
 ---
 # <a name="statements-c"></a>ステートメント (C++)
 
@@ -36,7 +36,7 @@ C++ ステートメントは、オブジェクトをどのような順序でど�
 
    - [宣言ステートメント](declarations-and-definitions-cpp.md)します。 宣言は、プログラムに名前を導入します。
 
-例外処理ステートメントについては、[例外処理](../cpp/exception-handling-in-visual-cpp.md)を参照してください。
+例外処理ステートメントについては、次を参照してください。[例外処理](../cpp/exception-handling-in-visual-cpp.md)します。
 
 ## <a name="see-also"></a>関連項目
 

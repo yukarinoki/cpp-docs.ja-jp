@@ -7,11 +7,11 @@ helpviewer_keywords:
 - /IGNORE linker option
 ms.assetid: 37e77387-8838-4697-898f-d376ac641124
 ms.openlocfilehash: 2b374e0e73f9fc14fa32ea4f63fa71039a5cf3c7
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57815841"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62270156"
 ---
 # <a name="ignore-ignore-specific-warnings"></a>/IGNORE (特定の警告を無視する)
 
@@ -54,7 +54,7 @@ ms.locfileid: "57815841"
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. **リンカー**フォルダーを選択、**コマンドライン**プロパティ ページ。
 

@@ -45,11 +45,11 @@ helpviewer_keywords:
 - strstr function
 ms.assetid: 03d70c3f-2473-45cb-a5f8-b35beeb2748a
 ms.openlocfilehash: 42e02473e062c3af9524ed432aa163b7574342de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541064"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62223082"
 ---
 # <a name="strstr-wcsstr-mbsstr-mbsstrl"></a>strstr、wcsstr、_mbsstr、_mbsstr_l
 
@@ -119,7 +119,7 @@ const unsigned char *_mbsstr_l(
 *str*<br/>
 NULL で終わる検索対象の文字列。
 
-*テキスト内*<br/>
+*strSearch*<br/>
 NULL で終わる検索する文字列。
 
 *locale*<br/>
@@ -136,9 +136,9 @@ NULL で終わる検索する文字列。
 > [!IMPORTANT]
 > これらの関数は、バッファー オーバーランの問題が原因で脅威を受ける可能性があります。 バッファー オーバーランにより、任意のコードが実行できるようになり、その結果認められていない特権の昇格が発生する可能性があるので、バッファー オーバーランの問題はシステムを攻撃するときに使用されることがあります。 詳しくは、「 [バッファー オーバーランの回避](/windows/desktop/SecBP/avoiding-buffer-overruns)」をご覧ください。
 
-C では、これらの関数の実行、 **const**最初の引数のポインター。 C++ では、2 つのオーバーロードを使用できます。 ポインターを受け取るオーバー ロード**const**へのポインターを返します**const**; へのポインターを受け取る非バージョン**const**へのポインターを返す非**const**します。 マクロ _CRT_CONST_CORRECT_OVERLOADS が定義されている場合は、両方の**const**と非-**const**これらの関数のバージョンを利用できます。 必要な以外の場合**const**両方の C++ オーバー ロードの動作は、シンボル _CONST_RETURN を定義します。
+C では、これらの関数の実行、 **const**最初の引数のポインター。 C++ では、2 つのオーバーロードを使用できます。 ポインターを受け取るオーバー ロード**const**へのポインターを返します**const**; へのポインターを受け取る非バージョン**const**へのポインターを返す非**const**します。 マクロ _CRT_CONST_CORRECT_OVERLOADS が定義されている場合は、両方の**const**と非-**const**これらの関数のバージョンを利用できます。 必要な以外の場合**const**両方の動作C++オーバー ロードは、シンボル _CONST_RETURN を定義します。
 
-出力値が LC_CTYPE; のロケール カテゴリ設定で影響を受ける詳細については、[setlocale、_wsetlocale](setlocale-wsetlocale.md)を参照してください。 これらの関数がないのバージョン、 **_l**を持つバージョンはこのロケールに依存する動作の現在のロケールのサフィックス使用、 **_l**サフィックスは、代わりに使用する点を除いて同じです渡されるロケール パラメーター。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+出力値が LC_CTYPE; のロケール カテゴリ設定で影響を受ける詳細については、次を参照してください。 [setlocale、_wsetlocale](setlocale-wsetlocale.md)します。 これらの関数がないのバージョン、 **_l**を持つバージョンはこのロケールに依存する動作の現在のロケールのサフィックス使用、 **_l**サフィックスは、代わりに使用する点を除いて同じです渡されるロケール パラメーター。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 

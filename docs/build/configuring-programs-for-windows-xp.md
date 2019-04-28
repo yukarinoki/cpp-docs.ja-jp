@@ -3,11 +3,11 @@ title: Windows XP 用プログラムの構成
 ms.date: 02/02/2018
 ms.assetid: 1e4487b3-d815-4123-878b-5718b22f0fd5
 ms.openlocfilehash: 989a4e2c7e91c05498902bf1c5cb9d838ee47c3b
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57814294"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62273803"
 ---
 # <a name="configuring-programs-for-windows-xp"></a>Windows XP 用プログラムの構成
 
@@ -25,7 +25,7 @@ Visual Studio に含まれている Windows XP プラットフォーム ツー�
 
 1. **ソリューション エクスプローラー**で、プロジェクトのショートカット メニューを開き、**[プロパティ]** を選択します。
 
-1. **プロパティ ページ**ダイアログ ボックスで、プロジェクトの**構成プロパティ** > **全般**、設定、**プラットフォーム ツールセット**プロパティが必要な Windows XP ツールセットにします。 たとえば、選択**Visual Studio 2017 - Windows XP (v141_xp)** Windows XP および Windows Server 2003、Microsoft Visual C 2017 コンパイラを使用してコードを作成します。
+1. **プロパティ ページ**ダイアログ ボックスで、プロジェクトの**構成プロパティ** > **全般**、設定、**プラットフォーム ツールセット**プロパティが必要な Windows XP ツールセットにします。 たとえば、選択**Visual Studio 2017 - Windows XP (v141_xp)** Windows XP および Windows Server 2003、Microsoft Visual を使用してコードを作成するC++2017年コンパイラ。
 
 ### <a name="c-runtime-support"></a>C++ ランタイムのサポート
 
@@ -67,4 +67,4 @@ Windows XP プラットフォーム ツールセット、C ランタイム ラ�
 
 - **HLSL の構築**
 
-   既定では、Windows XP ツールセットでは HLSL のソース コード ファイルはコンパイルされません。 HLSL ファイルをコンパイルするには、June 2010 DirectX SDK をダウンロードしてインストールし、プロジェクトの VC ディレクトリに含めるように設定します。 詳細については、、"DirectX SDK は登録されませんインクルード/ライブラリ パスを Visual Studio 2010"のセクション、 [June 2010 DirectX SDK ダウンロード ページ](http://www.microsoft.com/download/details.aspx?displaylang=en&id=6812)を参照してください。
+   既定では、Windows XP ツールセットでは HLSL のソース コード ファイルはコンパイルされません。 HLSL ファイルをコンパイルするには、June 2010 DirectX SDK をダウンロードしてインストールし、プロジェクトの VC ディレクトリに含めるように設定します。 詳細については、次を参照してください。、"DirectX SDK は登録されませんインクルード/ライブラリ パスを Visual Studio 2010"のセクション、 [June 2010 DirectX SDK ダウンロード ページ](http://www.microsoft.com/download/details.aspx?displaylang=en&id=6812)します。

@@ -29,11 +29,11 @@ helpviewer_keywords:
 - CComSafeArray class
 ms.assetid: ee349aef-33db-4c85-bd08-5d86a3c9d53a
 ms.openlocfilehash: 0262764c950b01acdb610873a995a9a6fd912997
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57280681"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62259444"
 ---
 # <a name="ccomsafearray-class"></a>CComSafeArray クラス
 
@@ -122,8 +122,8 @@ class CComSafeArray
 |VT_UI4|uint|
 |VT_UI4|ulong|
 |VT_UI8|ulonglong|
-|VT_R4|float|
-|VT_R8|double|
+|VT_R4|フローティング|
+|VT_R8|二重線|
 |VT_DECIMAL|10 進ポインター|
 |VT_VARIANT|バリアント ポインター|
 |VT_CY|Currency データ型|
@@ -211,8 +211,7 @@ CComSafeArray(const SAFEARRAY* psaSrc);
 ### <a name="parameters"></a>パラメーター
 
 *バインドされています。*<br/>
-
-  `SAFEARRAYBOUND` 構造。
+`SAFEARRAYBOUND` 構造。
 
 *ulCount*<br/>
 配列の要素数。
@@ -460,8 +459,8 @@ VARTYPE GetType() const;
 |VT_UI4|uint|
 |VT_UI4|ulong|
 |VT_UI8|ulonglong|
-|VT_R4|float|
-|VT_R8|double|
+|VT_R4|フローティング|
+|VT_R8|二重線|
 |VT_DECIMAL|10 進ポインター|
 |VT_VARIANT|バリアント ポインター|
 |VT_CY|Currency データ型|

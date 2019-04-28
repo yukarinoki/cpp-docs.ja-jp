@@ -14,11 +14,11 @@ helpviewer_keywords:
 - class instances [C++], static members
 ms.assetid: 9cc8cf0f-d74c-46f2-8e83-42d4e42c8370
 ms.openlocfilehash: 708f78c09db263584d478d16863999d4428e4891
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50635254"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62266947"
 ---
 # <a name="static-members-c"></a>静的メンバー (C++)
 
@@ -63,7 +63,7 @@ int main()
 long nBytes = BufferedOutput::bytecount;
 ```
 
-静的メンバーを存在させるために、クラス型のオブジェクトが存在する必要はありません。 静的メンバーは、メンバー選択を使用してアクセスすることもできます (**します。** **->**) 演算子。 例えば:
+静的メンバーを存在させるために、クラス型のオブジェクトが存在する必要はありません。 静的メンバーは、メンバー選択を使用してアクセスすることもできます (**します。** **->**) 演算子。 例:
 
 ```cpp
 BufferedOutput Console;

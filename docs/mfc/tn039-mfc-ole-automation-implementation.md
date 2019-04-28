@@ -1,5 +1,5 @@
 ---
-title: 'TN039: MFC/OLE オートメーションの実装'
+title: TN039:MFC OLE オートメーションの実装
 ms.date: 06/28/2018
 f1_keywords:
 - vc.mfc.ole
@@ -11,13 +11,13 @@ helpviewer_keywords:
 - Automation, MFC COM interface entry points
 ms.assetid: 765fa3e9-dd54-4f08-9ad2-26e0546ff8b6
 ms.openlocfilehash: cd6f8d681ef7e6517f2172ca6b22b13723a962fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658992"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62305490"
 ---
-# <a name="tn039-mfcole-automation-implementation"></a>テクニカル ノート 39: MFC/OLE オートメーションの実装
+# <a name="tn039-mfcole-automation-implementation"></a>TN039:しかし、MFC/OLE オートメーションの実装
 
 > [!NOTE]
 > 次のテクニカル ノートは、最初にオンライン ドキュメントの一部とされてから更新されていません。 結果として、一部のプロシージャおよびトピックが最新でないか、不正になります。 最新の情報について、オンライン ドキュメントのキーワードで関係のあるトピックを検索することをお勧めします。
@@ -120,7 +120,7 @@ DISP_PROPERTY_NOTIFY(
 *pszName*<br/>
 プロパティの外部名。
 
-*メンバー名*<br/>
+*memberName*<br/>
 プロパティが格納されているメンバー変数の名前。
 
 *pfnAfterSet*<br/>
@@ -156,7 +156,7 @@ DISP_PROPERTY_PARAM(
 *memberGet*<br/>
 プロパティを取得するために使用するメンバー関数の名前。
 
-*メンバー セット*<br/>
+*memberSet*<br/>
 プロパティを設定するために使用するメンバー関数の名前。
 
 *vtPropType*<br/>
@@ -167,7 +167,7 @@ DISP_PROPERTY_PARAM(
 
 ### <a name="remarks"></a>Remarks
 
-はるか DISP_PROPERTY_EX マクロにこのマクロは別々 の Get および Set メンバー関数でアクセスするプロパティを定義します。 ただし、このマクロを使用すると、プロパティのパラメーター リストを指定できます。 これは、他の方法では、インデックス付きまたはパラメーター化されたプロパティを実装する場合に便利です。 パラメーターは常に配置されます最初に、後に、プロパティの新しい値。 例えば:
+はるか DISP_PROPERTY_EX マクロにこのマクロは別々 の Get および Set メンバー関数でアクセスするプロパティを定義します。 ただし、このマクロを使用すると、プロパティのパラメーター リストを指定できます。 これは、他の方法では、インデックス付きまたはパラメーター化されたプロパティを実装する場合に便利です。 パラメーターは常に配置されます最初に、後に、プロパティの新しい値。 例:
 
 ```cpp
 DISP_PROPERTY_PARAM(CMyObject, "item", GetItem, SetItem, VT_DISPATCH, VTS_I2 VTS_I2)
@@ -237,7 +237,7 @@ DISP_PROPERTY_PARAM_ID(
 *pfnSet*<br/>
 プロパティを設定するために使用するメンバー関数の名前。
 
-*メンバー名*<br/>
+*memberName*<br/>
 プロパティにマップするメンバー変数の名前
 
 *vtPropType*<br/>
@@ -248,7 +248,7 @@ DISP_PROPERTY_PARAM_ID(
 
 ### <a name="remarks"></a>Remarks
 
-これらのマクロでは、指定できる、 **DISPID** mfc によって自動的にではなくいずれかを割り当てます。 その ID は、マクロ名に追加されます。 ただし、同じ名前を持つこれらのマクロの詳細 (例: **DISP_PROPERTY_ID**) 直後に指定されたパラメーターで ID を特定し、 *pszName*パラメーター。 子を参照してください。これらのマクロの詳細については H します。 **_ID**エントリは、ディスパッチ マップの末尾に配置する必要があります。 自動への影響は**DISPID**以外と同じ方法で生成 **_ID**マクロのバージョンは (、 **DISPID**s は位置によって決まります)。 例えば:
+これらのマクロでは、指定できる、 **DISPID** mfc によって自動的にではなくいずれかを割り当てます。 その ID は、マクロ名に追加されます。 ただし、同じ名前を持つこれらのマクロの詳細 (例: **DISP_PROPERTY_ID**) 直後に指定されたパラメーターで ID を特定し、 *pszName*パラメーター。 子を参照してください。これらのマクロの詳細については H します。 **_ID**エントリは、ディスパッチ マップの末尾に配置する必要があります。 自動への影響は**DISPID**以外と同じ方法で生成 **_ID**マクロのバージョンは (、 **DISPID**s は位置によって決まります)。 例:
 
 ```cpp
 BEGIN_DISPATCH_MAP(CDisp3DPoint, CCmdTarget)

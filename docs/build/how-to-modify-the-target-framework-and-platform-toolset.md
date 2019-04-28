@@ -8,18 +8,18 @@ helpviewer_keywords:
 - 'msbuild (c++), howto: modify target framework and platform toolset'
 ms.assetid: 031b1d54-e6e1-4da7-9868-3e75a87d9ffe
 ms.openlocfilehash: cf2078432f629a353e0c325b407db59681ffd9d3
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57820079"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62273496"
 ---
 # <a name="how-to-modify-the-target-framework-and-platform-toolset"></a>方法: ターゲット フレームワークおよびプラットフォームのツールセットを変更します。
 
 異なるバージョンの .NET Framework を対象として、別のプラットフォーム ツールセットを使用する Visual C プロジェクトの設定を変更することができます。 既定では、プロジェクト システムは、プロジェクトの作成に使用する Visual Studio のバージョンに対応する .NET Framework のバージョンおよびツールセットのバージョンを使用します。 プロジェクトのプロパティを変更することで、対象のプラットフォーム ツールセットを変更できます。 プロジェクト (.vcxproj) ファイルを変更すると、ターゲット フレームワークを変更できます。 それぞれの対象をコンパイルするために個別のコード ベースを保守する必要はありません。
 
 > [!IMPORTANT]
->  エディションによっては、変更されたターゲット フレームワークまたはプラットフォーム ツールセットがサポートされていない場合があります。 互換性については、[ポート、移行、および Visual Studio プロジェクトのアップグレード](/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects)を参照してください。
+>  エディションによっては、変更されたターゲット フレームワークまたはプラットフォーム ツールセットがサポートされていない場合があります。 互換性については、次を参照してください。[ポート、移行、および Visual Studio プロジェクトのアップグレード](/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects)します。
 
 ターゲット フレームワークを変更すると、プラットフォーム ツールセットのバージョンもそのターゲット フレームワークをサポートするように変更されます。 たとえば、.NET Framework 4.5 を対象とする場合、Visual Studio 2015 (v140)、Visual Studio 2013 (v120)、Visual Studio 2012 (v110) のような互換性のあるプラットフォーム ツールセットを使用する必要があります。 .NET Framework 2.0、3.0、3.5、4、および x86、Itanium、x64 プラットフォームを対象とするには、 **Windows7.1SDK** プラットフォーム ツールセットを使用します。
 

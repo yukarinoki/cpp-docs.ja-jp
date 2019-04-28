@@ -11,11 +11,11 @@ helpviewer_keywords:
 - CLSID_CPicturePropPage [MFC]
 ms.assetid: 2e49735c-21b9-4442-bb3d-c82ef258eec9
 ms.openlocfilehash: 86e9bd220d06e714030f7d44888b210ba35fd345
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57264561"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62239293"
 ---
 # <a name="mfc-activex-controls-using-pictures-in-an-activex-control"></a>MFC ActiveX コントロール:ActiveX コントロールにおけるピクチャの使用
 
@@ -45,7 +45,7 @@ ActiveX コントロール クラスには、コントロール内に Picture �
 
 - コントロールの Picture プロパティを操作するプロパティ ページ。
 
-   このプロパティ ページは、ActiveX コントロールで使用できる一連のストック プロパティ ページの 1 つです。 ActiveX コントロールのプロパティ ページの詳細については、記事を参照してください。 [MFC ActiveX コントロール。ストック プロパティ ページを使用します。](../mfc/mfc-activex-controls-using-stock-property-pages.md)
+   このプロパティ ページは、ActiveX コントロールで使用できる一連のストック プロパティ ページの 1 つです。 ActiveX コントロールのプロパティ ページの詳細については、記事を参照してください。 [MFC ActiveX コントロール。ストック プロパティ ページの使用](../mfc/mfc-activex-controls-using-stock-property-pages.md)
 
 ##  <a name="_core_implementing_a_custom_picture_property_in_your_activex_control"></a> ActiveX コントロールでのカスタム Picture プロパティの実装
 
@@ -150,5 +150,5 @@ BEGIN_PROPPAGEIDS マクロのカウント パラメーターは、いずれか�
 ## <a name="see-also"></a>関連項目
 
 [MFC ActiveX コントロール](../mfc/mfc-activex-controls.md)<br/>
-[MFC ActiveX コントロール:フォントの使用](../mfc/mfc-activex-controls-using-fonts.md)<br/>
-[MFC ActiveX コントロール:プロパティ ページ](../mfc/mfc-activex-controls-property-pages.md)
+[MFC ActiveX コントロール: フォントの使用](../mfc/mfc-activex-controls-using-fonts.md)<br/>
+[MFC ActiveX コントロール: プロパティ ページ](../mfc/mfc-activex-controls-property-pages.md)

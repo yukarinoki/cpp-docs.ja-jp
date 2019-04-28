@@ -7,11 +7,11 @@ helpviewer_keywords:
 - names [C++], decorated
 ms.assetid: a4e9ae8e-b239-4454-b401-4102793cb344
 ms.openlocfilehash: 3fae232e6ca886195315002f4e65063d8a23ddc8
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57815425"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62293902"
 ---
 # <a name="decorated-names"></a>装飾名
 
@@ -54,7 +54,7 @@ C++ の関数の装飾名には、次の情報が含まれます。
 
 C の関数の装飾形式は、次の表に示すように、その宣言で使用される呼び出し規則によって決まります。 これは、C++ のコードが `extern "C"` リンケージを持つように宣言されている場合に使用される装飾形式でも同様です。 既定の呼び出し規約は `__cdecl` です。 64 ビット環境では、関数は装飾されません。
 
-|呼び出し規約|[装飾]|
+|呼び出し規則|[装飾]|
 |------------------------|----------------|
 |`__cdecl`|先頭にアンダー スコア (**_**)|
 |`__stdcall`|先頭にアンダー スコア (**_**)、末尾にサインオン (**\@**) 後に 10 進数のパラメーター リスト内のバイト数|

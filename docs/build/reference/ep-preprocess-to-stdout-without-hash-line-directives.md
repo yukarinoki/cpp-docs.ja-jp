@@ -12,11 +12,11 @@ helpviewer_keywords:
 - /EP compiler option [C++]
 ms.assetid: 6ec411ae-e33d-4ef5-956e-0054635eabea
 ms.openlocfilehash: 49745b644234c0e5ce92661f14304531aaca5c69
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807339"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62293252"
 ---
 # <a name="ep-preprocess-to-stdout-without-line-directives"></a>/EP (#line ディレクティブを挿入しない stdout へのプリプロセス)
 
@@ -32,7 +32,7 @@ C および C++ ソース ファイルを前処理し、前処理済みファイ
 
 プロセスですべてのプリプロセッサ ディレクティブが実行されます、マクロの展開が実行されて、およびコメントを削除します。 前処理済みの出力内のコメントを保持するために使用して、 [/C (保持プリプロセス時のコメント)](c-preserve-comments-during-preprocessing.md)オプションと **/EP**します。
 
-**/EP**オプションはコンパイルを中止します。 Compilation の前処理済みファイルを再送信する必要があります。 **/EP**から出力ファイルも生成されません、 **/FA**、 **/Fa**、および **/Fm**オプション。 詳細については、[/FA、/Fa (リスティング ファイル)](fa-fa-listing-file.md)と[/Fm (マップ ファイルの名前)](fm-name-mapfile.md)を参照してください。
+**/EP**オプションはコンパイルを中止します。 Compilation の前処理済みファイルを再送信する必要があります。 **/EP**から出力ファイルも生成されません、 **/FA**、 **/Fa**、および **/Fm**オプション。 詳細については、次を参照してください。 [/FA、/Fa (リスティング ファイル)](fa-fa-listing-file.md)と[/Fm (マップ ファイルの名前)](fm-name-mapfile.md)します。
 
 処理の後のステージ中に生成されたエラーは、元のソース ファイルではなく、前処理済みファイルの行番号を参照してください。 行番号を元のソース ファイルを参照する場合は、使用[/E (stdout に前処理する)](e-preprocess-to-stdout.md)代わりにします。 **/E**オプションは、追加`#line`をこの目的の出力ディレクティブ。
 
@@ -44,7 +44,7 @@ C および C++ ソース ファイルを前処理し、前処理済みファイ
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. **[C/C++]** フォルダーをクリックします。
 
@@ -67,4 +67,4 @@ CL /EP /C ADD.C
 ## <a name="see-also"></a>関連項目
 
 [MSVC コンパイラ オプション](compiler-options.md)<br/>
-[MSVC コンパイラ コマンドラインの構文](compiler-command-line-syntax.md)
+[MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)

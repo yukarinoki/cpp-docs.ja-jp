@@ -33,11 +33,11 @@ helpviewer_keywords:
 - std::next [C++]
 - std::prev [C++]
 ms.openlocfilehash: f6ea1ac49dabbfc34af9c8ddd020543f606d37a4
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523677"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62224143"
 ---
 # <a name="ltiteratorgt-functions"></a>&lt;iterator&gt; 関数
 

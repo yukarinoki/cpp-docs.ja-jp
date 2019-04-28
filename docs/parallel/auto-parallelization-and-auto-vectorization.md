@@ -3,11 +3,11 @@ title: 自動並行化と自動ベクター化
 ms.date: 11/04/2016
 ms.assetid: ec71583a-287b-4599-8767-1d255e080fe3
 ms.openlocfilehash: 018289bc9499aee8d1739ebeed0c1cb847769a08
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57276625"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62236700"
 ---
 # <a name="auto-parallelization-and-auto-vectorization"></a>自動並行化と自動ベクター化
 
@@ -85,7 +85,7 @@ d:\myproject\mytest.cpp(4) : loop not parallelized due to reason '1008'
 
 2 つの異なる出力に違いに注意してください[/Qpar-report (自動並行化レポート作成レベル)](../build/reference/qpar-report-auto-parallelizer-reporting-level.md)オプション。 `/Qpar-report:1` を指定した場合は、正常に並行化されたループのみに関する並行化メッセージが出力されます。 `/Qpar-report:2` を指定した場合は、並行化したループと並行化しなかったループの両方に関する並行化メッセージが出力されます。
 
-理由コードとメッセージの詳細については、[ベクター化と並行化メッセージ](../error-messages/tool-errors/vectorizer-and-parallelizer-messages.md)を参照してください。
+理由コードとメッセージの詳細については、次を参照してください。[ベクター化と並行化メッセージ](../error-messages/tool-errors/vectorizer-and-parallelizer-messages.md)します。
 
 ## <a name="auto-vectorizer"></a>自動ベクター化
 
@@ -105,7 +105,7 @@ for (int i = 0; i < 1000; ++i)
 
 自動並行化を指定することができます、 [/Qvec-report (自動ベクター化レポート作成レベル)](../build/reference/qvec-report-auto-vectorizer-reporting-level.md)正常に報告するコマンド ライン オプションにのみループがベクター化 —`/Qvec-report:1`または両方が正常と失敗したループをベクター化 —`/Qvec-report:2`)。
 
-理由コードとメッセージの詳細については、[ベクター化と並行化メッセージ](../error-messages/tool-errors/vectorizer-and-parallelizer-messages.md)を参照してください。
+理由コードとメッセージの詳細については、次を参照してください。[ベクター化と並行化メッセージ](../error-messages/tool-errors/vectorizer-and-parallelizer-messages.md)します。
 
 実際には、ベクター化のしくみを示す例は、次を参照してください。 [Project Austin Part 2 of 6。ページ カーリング](http://blogs.msdn.com/b/vcblog/archive/2012/09/27/10348494.aspx)
 

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - CDefaultHashTraits class
 ms.assetid: d8ec4b37-6d58-447b-a0c1-8580c5b1ab85
 ms.openlocfilehash: a51b4460d7fcdf778fce24b6e404b75190f598f6
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57257300"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62245834"
 ---
 # <a name="cdefaulthashtraits-class"></a>CDefaultHashTraits クラス
 
@@ -43,7 +43,7 @@ class CDefaultHashTraits
 
 このクラスには、指定された要素のハッシュ値を返す 1 つの静的関数が含まれています。 このクラスは、によって使用されて、 [CDefaultElementTraits クラス](../../atl/reference/cdefaultelementtraits-class.md)します。
 
-詳細については、[ATL コレクション クラス](../../atl/atl-collection-classes.md)を参照してください。
+詳細については、次を参照してください。 [ATL コレクション クラス](../../atl/atl-collection-classes.md)します。
 
 ## <a name="requirements"></a>必要条件
 

@@ -195,18 +195,17 @@ helpviewer_keywords:
 - CMFCTasksPane [MFC], OnActivateTasksPanePage
 ms.assetid: b456328e-2525-4642-b78b-9edd1a1a7d3f
 ms.openlocfilehash: 137f30262ce01ad82c075302b6e85bf67ae7b9be
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293772"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62218671"
 ---
 # <a name="cmfctaskspane-class"></a>CMFCTasksPane クラス
 
 詳細についてにあるソース コードを参照してください、 **VC\\atlmfc\\src\\mfc** Visual Studio のインストールのフォルダー。
 
-
-  `CMFCTasksPane` クラスは、クリック可能な項目 (タスク) のリストを実装します。
+`CMFCTasksPane` クラスは、クリック可能な項目 (タスク) のリストを実装します。
 
 ## <a name="syntax"></a>構文
 
@@ -327,8 +326,7 @@ class CMFCTasksPane : public CDockablePane
 
 ## <a name="remarks"></a>Remarks
 
-
-  `CMFCTasksPane` クラスは次の機能を実装します。
+`CMFCTasksPane` クラスは次の機能を実装します。
 
 - 項目をグループ化し、項目の各グループにキャプションを関連付ける。
 
@@ -340,8 +338,7 @@ class CMFCTasksPane : public CDockablePane
 
 アプリケーションで、`CMFCTasksPane` コントロールを使用するには、次の手順に従います。
 
-1. 
-  `CMFCTasksPane` オブジェクトをメイン フレーム ウィンドウ クラスに埋め込みます。
+1. `CMFCTasksPane` オブジェクトをメイン フレーム ウィンドウ クラスに埋め込みます。
 
 1. WM_CREATE メッセージを処理するときに呼び出す、`Create`メソッド。 標準を使用する[CControlBar](../../mfc/reference/ccontrolbar-class.md)スタイル。 詳細については、「 `CControlBar::Create` 」を参照してください。
 
@@ -361,8 +358,7 @@ class CMFCTasksPane : public CDockablePane
 
 ## <a name="example"></a>例
 
-
-  `CMFCTasksPane` オブジェクトを構築して `CMFCTasksPane` クラスのさまざまなメソッドを使用する方法を次の例に示します。 ドロップダウン メニューを有効にするタスク グループの折りたたみを有効にする方法の例に示します、**次**と**前**ナビゲーション ボタン、スクロール バーではなくスクロール ボタンを有効にする、という単語を有効にします。ラベルのテキストの折り返しは、グループ キャプションのテキストの色を設定し、水平および垂直方向の余白を設定する [タスク] ウィンドウのキャプション名を設定します。
+`CMFCTasksPane` オブジェクトを構築して `CMFCTasksPane` クラスのさまざまなメソッドを使用する方法を次の例に示します。 ドロップダウン メニューを有効にするタスク グループの折りたたみを有効にする方法の例に示します、**次**と**前**ナビゲーション ボタン、スクロール バーではなくスクロール ボタンを有効にする、という単語を有効にします。ラベルのテキストの折り返しは、グループ キャプションのテキストの色を設定し、水平および垂直方向の余白を設定する [タスク] ウィンドウのキャプション名を設定します。
 
 [!code-cpp[NVC_MFC_RibbonApp#28](../../mfc/reference/codesnippet/cpp/cmfctaskspane-class_1.cpp)]
 
@@ -456,7 +452,7 @@ int AddLabel(
 
 ### <a name="remarks"></a>Remarks
 
-フレームワークは、タスクとラベルを異なる方法で処理します。 ユーザーがタスクをクリックしたときに、フレームワークは、コマンドを実行します。 ユーザーがラベルをクリックすると、コマンドは実行されません。 詳細については、[::addtask](#addtask)を参照してください。
+フレームワークは、タスクとラベルを異なる方法で処理します。 ユーザーがタスクをクリックしたときに、フレームワークは、コマンドを実行します。 ユーザーがラベルをクリックすると、コマンドは実行されません。 詳細については、次を参照してください。 [::addtask](#addtask)します。
 
 ##  <a name="addmrufileslist"></a>  CMFCTasksPane::AddMRUFilesList
 

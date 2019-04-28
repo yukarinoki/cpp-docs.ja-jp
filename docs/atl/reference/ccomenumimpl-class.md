@@ -19,11 +19,11 @@ helpviewer_keywords:
 - CComEnumImpl class
 ms.assetid: cc0d8e76-e608-46db-87cd-4c7161fe32d2
 ms.openlocfilehash: ccd083f3bfd9ae694c97e466fcb40b348fec0c27
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273777"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62259862"
 ---
 # <a name="ccomenumimpl-class"></a>CComEnumImpl クラス
 
@@ -91,7 +91,7 @@ COM の列挙子インターフェイス。 参照してください[IEnumString
 
 ただし、(たとえば、1 つだけでなく、列挙子インターフェイスのインターフェイスを公開している) カスタム列挙子を提供する必要がある場合は、このクラスから派生することができます。 このような状況で可能性をオーバーライドする必要がありますが、 [CComEnumImpl::Clone](#clone)独自の実装を提供するメソッド。
 
-詳細については、[ATL のコレクションと列挙子](../../atl/atl-collections-and-enumerators.md)を参照してください。
+詳細については、次を参照してください。 [ATL のコレクションと列挙子](../../atl/atl-collections-and-enumerators.md)します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 

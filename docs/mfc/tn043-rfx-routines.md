@@ -9,11 +9,11 @@ helpviewer_keywords:
 - RFX (record field exchange)
 ms.assetid: f552d0c1-2c83-4389-b472-42c9940aa713
 ms.openlocfilehash: 18820c7d17ddea355490ee32679d5d690ec3533e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57294487"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62305399"
 ---
 # <a name="tn043-rfx-routines"></a>TN043:RFX ルーチン
 
@@ -150,7 +150,7 @@ RFX_Custom(pFX, "Col2", m_Col2);
 
 `RFX_Text` `RFX_Binary`:これら 2 つの関数は、文字列/バイナリの情報を保持する静的バッファーを事前に割り当てるし、登録 (&) 値ではなく、ODBC SQLBindCol をこれらのバッファーを登録する必要があります。 このため、これら 2 つの関数は特殊なコードの多くがあります。
 
-`RFX_Date`:ODBC では、独自の TIMESTAMP_STRUCT データ構造で日付と時刻の情報を返します。 この関数では、「プロキシ」として、TIMESTAMP_STRUCT が動的に日付時刻のデータを送受信するために割り当てます。 さまざまな操作は、C++ の間で日付と時刻の情報を転送する必要があります`CTime`オブジェクトと TIMESTAMP_STRUCT プロキシ。 この関数を大きく複雑にこれが、データ転送にプロキシを使用する方法の良い例です。
+`RFX_Date`:ODBC では、独自の TIMESTAMP_STRUCT データ構造で日付と時刻の情報を返します。 この関数では、「プロキシ」として、TIMESTAMP_STRUCT が動的に日付時刻のデータを送受信するために割り当てます。 さまざまな操作の間で日付と時刻の情報を転送する必要があります、 C++ `CTime`オブジェクトと TIMESTAMP_STRUCT プロキシ。 この関数を大きく複雑にこれが、データ転送にプロキシを使用する方法の良い例です。
 
 `RFX_LongBinary`:これは、RFX 関数のデータを送受信する列のバインドを使用しない唯一のクラス ライブラリです。 この関数は BindFieldToColumn 操作を無視し、代わりに、フィックス アップ時に、着信 SQL_LONGVARCHAR または SQL_LONGVARBINARY データを保持するストレージが割り当てられます、割り当て済み記憶域に値を取得する SQLGetData 呼び出しを実行します。 (NameValue および値の操作) などのデータ ソースへのデータ値を返信する準備をするときに、この関数は、ODBC の DATA_AT_EXEC 機能を使用します。 参照してください[テクニカル ノート 45](../mfc/tn045-mfc-database-support-for-long-varchar-varbinary.md) SQL_LONGVARBINARY データ型と SQL_LONGVARCHARs の操作の詳細についてはします。
 

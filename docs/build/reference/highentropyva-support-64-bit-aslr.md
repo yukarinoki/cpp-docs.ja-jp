@@ -3,11 +3,11 @@ title: /HIGHENTROPYVA (64 ビット ASLR のサポート)
 ms.date: 06/12/2018
 ms.assetid: fe35f9f7-d28e-4694-9aeb-a79db06168e0
 ms.openlocfilehash: 5ecbbf8bbd8e74f80f2f5b2d7df0d2ef544112fc
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57822003"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62291601"
 ---
 # <a name="highentropyva-support-64-bit-aslr"></a>/HIGHENTROPYVA (64 ビット ASLR のサポート)
 
@@ -27,7 +27,7 @@ ms.locfileid: "57822003"
 
 ### <a name="to-set-this-linker-option-in-visual-studio"></a>このリンカー オプションを Visual Studio で設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. 選択、**構成プロパティ** > **リンカー** > **コマンドライン**プロパティ ページ。
 
@@ -35,7 +35,7 @@ ms.locfileid: "57822003"
 
 ## <a name="see-also"></a>関連項目
 
-- [MSVC リンカーの参照](linking.md)
+- [MSVC リンカーのリファレンス](linking.md)
 - [MSVC リンカー オプション](linker-options.md)
 - [/DYNAMICBASE](dynamicbase-use-address-space-layout-randomization.md)
 - [/LARGEADDRESSAWARE](largeaddressaware-handle-large-addresses.md)

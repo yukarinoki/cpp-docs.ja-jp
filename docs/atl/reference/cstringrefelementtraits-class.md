@@ -11,11 +11,11 @@ helpviewer_keywords:
 - CStringRefElementTraits class
 ms.assetid: cc15062d-5627-46cc-ac2b-1744afdc2dbd
 ms.openlocfilehash: c57fda64689a80dfa548977e56b0416641bb4360
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301624"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62277410"
 ---
 # <a name="cstringrefelementtraits-class"></a>CStringRefElementTraits クラス
 
@@ -47,7 +47,7 @@ class CStringRefElementTraits : public CElementTraitsBase<T>
 
 このクラスは、文字列を比較し、ハッシュ値を作成するために、静的関数を提供します。 これらの関数は、文字列ベースのデータを格納するコレクション クラスを使用する場合に便利です。 異なり[CStringElementTraits](../../atl/reference/cstringelementtraits-class.md)と[CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md)、`CStringRefElementTraits`により、`CString`として渡される引数を**const** `CString&`参照します。
 
-詳細については、[ATL コレクション クラス](../../atl/atl-collection-classes.md)を参照してください。
+詳細については、次を参照してください。 [ATL コレクション クラス](../../atl/atl-collection-classes.md)します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 

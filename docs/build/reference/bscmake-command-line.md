@@ -5,11 +5,11 @@ helpviewer_keywords:
 - BSCMAKE, command line
 ms.assetid: 8006e8cf-8bfe-4c23-868a-b0a25e6bbf0f
 ms.openlocfilehash: 61035ce0f211e6a474bb83fc7de7d95b4a29cf3d
-ms.sourcegitcommit: 06fc71a46e3c4f6202a1c0bc604aa40611f50d36
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58508768"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62272911"
 ---
 # <a name="bscmake-command-line"></a>BSCMAKE コマンド ライン
 
@@ -36,7 +36,7 @@ BSCMAKE [options] sbrfiles
 BSCMAKE main.sbr file1.sbr file2.sbr
 ```
 
-関連情報については、[BSCMAKE コマンド ファイル](bscmake-command-file-response-file.md)と[BSCMAKE オプション](bscmake-options.md)を参照してください。
+関連情報については、次を参照してください。 [BSCMAKE コマンド ファイル](bscmake-command-file-response-file.md)と[BSCMAKE オプション](bscmake-options.md)します。
 
 ## <a name="see-also"></a>関連項目
 

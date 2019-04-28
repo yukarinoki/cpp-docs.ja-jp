@@ -11,11 +11,11 @@ helpviewer_keywords:
 - libraries, adding to list of
 ms.assetid: 6af7ff49-c170-4a13-97e2-2b9ae2de20c9
 ms.openlocfilehash: 0b7d4569c7be70bd97094ebbe09a7ae462331983
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57815958"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62293863"
 ---
 # <a name="defaultlib-specify-default-library"></a>/DEFAULTLIB (既定のライブラリの指定)
 
@@ -38,7 +38,7 @@ ms.locfileid: "57815958"
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. 選択、**構成プロパティ** > **リンカー** > **コマンドライン**プロパティ ページ。
 
@@ -50,5 +50,5 @@ ms.locfileid: "57815958"
 
 ## <a name="see-also"></a>関連項目
 
-- [MSVC リンカーの参照](linking.md)
+- [MSVC リンカーのリファレンス](linking.md)
 - [MSVC リンカー オプション](linker-options.md)

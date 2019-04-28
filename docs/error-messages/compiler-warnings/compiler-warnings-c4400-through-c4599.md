@@ -1,6 +1,6 @@
 ---
-title: コンパイラの警告 C4400 C4599 経由
-ms.date: 05/30/2018
+title: コンパイラ警告 (C4400 - C4599)
+ms.date: 04/21/2019
 f1_keywords:
 - C4413
 - C4415
@@ -23,14 +23,10 @@ f1_keywords:
 - C4448
 - C4449
 - C4450
-- C4451
 - C4452
 - C4453
 - C4454
 - C4455
-- C4456
-- C4457
-- C4459
 - C4472
 - C4474
 - C4475
@@ -138,14 +134,14 @@ helpviewer_keywords:
 - C4594
 - C4595
 ms.assetid: b07850a5-ae89-48ea-bf9a-f0e30939f9b9
-ms.openlocfilehash: 990560e2c05f66a010382f736735c19c17d4dc28
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 7dd09e6f31592f6d4b62b94d8d3256fe1a432010
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816621"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62280315"
 ---
-# <a name="compiler-warnings-c4400-through-c4599"></a>コンパイラの警告 C4400 C4599 経由
+# <a name="compiler-warnings-c4400-through-c4599"></a>コンパイラ警告 (C4400 - C4599)
 
 ドキュメントのこのセクションの記事では、コンパイラによって生成される警告メッセージのサブセットについて説明します。
 
@@ -212,7 +208,7 @@ ms.locfileid: "57816621"
 |[コンパイラの警告 (レベル 4) C4457](compiler-warning-level-4-c4457.md)|宣言 '*識別子*' 関数のパラメーターを非表示にします|
 |[コンパイラの警告 (レベル 4) C4458](compiler-warning-level-4-c4458.md)|宣言 '*識別子*' クラスのメンバーを非表示にします|
 |[コンパイラの警告 (レベル 4) C4459](compiler-warning-level-4-c4459.md)|宣言 '*識別子*' グローバル宣言を隠します|
-|[コンパイラの警告 (レベル 4) C4460](../../error-messages/compiler-warnings/compiler-warning-level-4-c4460.md)|'WinRT&#124;管理' 演算子 '*演算子*' では、参照によって渡されるパラメーター。 'WinRT&#124;管理' 演算子 '*演算子*'C++ の演算子から別のセマンティクスがあります'*cpp_operator*'、値渡しするつもりでしたか?。|
+|[コンパイラの警告 (レベル 4) C4460](../../error-messages/compiler-warnings/compiler-warning-level-4-c4460.md)|'WinRT&#124;管理' 演算子 '*演算子*' では、参照によって渡されるパラメーター。 'WinRT&#124;管理' 演算子 '*演算子*' 異なる意味C++演算子 '*cpp_operator*'、値渡しするつもりでしたか?|
 |[コンパイラの警告 (レベル 1) C4461](../../error-messages/compiler-warnings/compiler-warning-level-1-c4461.md)|'*classname*': このクラスはファイナライザー '!*ファイナライザー*'が、デストラクター' ~*dtor*'|
 |[コンパイラの警告 (レベル 1、エラー) C4462](../../error-messages/compiler-warnings/compiler-warning-level-1-c4462.md)|'*型*': 型の GUID を特定できません。 プログラムは、実行時に失敗する可能性があります。|
 |[コンパイラの警告 (レベル 4) C4463](compiler-warning-level-4-c4463.md)|オーバーフローです。割り当てる '*値*'にビット フィールドの値を保持するだけの'*min_value*'to'*max_value*'|
@@ -329,3 +325,8 @@ ms.locfileid: "57816621"
 |コンパイラの警告 (エラー) C4597|未定義の動作: offsetof が仮想ベースのメンバーに適用|
 |コンパイラの警告 (レベル 1 およびレベル 3) C4598|' #include"*ヘッダー*"' ヘッダー番号*数*、プリコンパイル済みヘッダーと一致しませんその位置にある現在のコンパイル。|
 |コンパイラの警告 (レベル 3) C4599|'*フラグ**パス*': コマンドライン引数の数*数*プリコンパイル済みヘッダーと一致しません|
+
+## <a name="see-also"></a>関連項目
+
+[C/C++コンパイラとビルド ツールのエラーと警告](../compiler-errors-1/c-cpp-build-errors.md) \
+[コンパイラの警告 C4000 - C5999](compiler-warnings-c4000-c5999.md)

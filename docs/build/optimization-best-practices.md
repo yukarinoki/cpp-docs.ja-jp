@@ -6,11 +6,11 @@ helpviewer_keywords:
 - optimization, best practices
 ms.assetid: f3433148-7255-4ca6-8a4f-7c31aac88508
 ms.openlocfilehash: edb036292b87593a3f8bb9b3f5ec5f7beb84c3a5
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57827771"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62274171"
 ---
 # <a name="optimization-best-practices"></a>最適化のベスト プラクティス
 
@@ -20,11 +20,11 @@ ms.locfileid: "57827771"
 
 ### <a name="profile-guided-optimization"></a>プロファイル ガイド付き最適化
 
-Visual C がサポート*プロファイル ガイド付き最適化の*(PGO)。 この最適化では、アプリケーションのインストルメントされたバージョンのトレーニング実行からのプロファイル データを使用して、アプリケーションの最適化を行います。 PGO を使用すると時間がかかる場合があるため、すべての状況に適しているとは言えません。しかし、製品の最終リリース ビルドには PGO を使用することをお勧めします。 詳細については、[ガイド付き最適化の](profile-guided-optimizations.md)を参照してください。
+Visual C がサポート*プロファイル ガイド付き最適化の*(PGO)。 この最適化では、アプリケーションのインストルメントされたバージョンのトレーニング実行からのプロファイル データを使用して、アプリケーションの最適化を行います。 PGO を使用すると時間がかかる場合があるため、すべての状況に適しているとは言えません。しかし、製品の最終リリース ビルドには PGO を使用することをお勧めします。 詳細については、次を参照してください。[ガイド付き最適化の](profile-guided-optimizations.md)します。
 
 さらに、*プログラム全体の最適化*(リンク時コード生成も認識しています)、 **/O1**と **/O2**最適化が改善されました。 通常、これらのオプションのいずれかを指定してコンパイルしたアプリケーションの処理速度は、以前のコンパイラでコンパイルした同じアプリケーションよりも速くなります。
 
-詳細については、[/GL (Whole Program Optimization)](reference/gl-whole-program-optimization.md)と[/O1、/O2 (サイズの最小化、速度の最大化)](reference/o1-o2-minimize-size-maximize-speed.md)を参照してください。
+詳細については、次を参照してください。 [/GL (Whole Program Optimization)](reference/gl-whole-program-optimization.md)と[/O1、/O2 (サイズの最小化、速度の最大化)](reference/o1-o2-minimize-size-maximize-speed.md)します。
 
 ### <a name="which-level-of-optimization-to-use"></a>使用する最適化のレベル
 
@@ -32,7 +32,7 @@ Visual C がサポート*プロファイル ガイド付き最適化の*(PGO)。
 
 **/Gy**スイッチも非常に便利です。 このスイッチを使用すると、関数ごとに個別の COMDAT が生成されます。その結果、参照されていない COMDAT を取り除いたり COMDAT を圧縮したりでき、リンカーの柔軟性が向上します。 使用する唯一の欠点 **/Gy**はデバッグに問題が発生します。 重要な影響を受けるわけではないので、通常は、このスイッチを使用することをお勧めします。 詳細については、「[/Gy (関数レベルのリンクの有効化)](reference/gy-enable-function-level-linking.md)」を参照してください。
 
-64 ビット環境でリンクを使用する推奨は、 **/OPT:REF、ICF**リンカー オプション、および 32 ビット環境で **/OPT:REF**をお勧めします。 詳細については、[/OPT (最適化)](reference/opt-optimizations.md)を参照してください。
+64 ビット環境でリンクを使用する推奨は、 **/OPT:REF、ICF**リンカー オプション、および 32 ビット環境で **/OPT:REF**をお勧めします。 詳細については、次を参照してください。 [/OPT (最適化)](reference/opt-optimizations.md)します。
 
 また、デバッグ シンボルを生成することを強くお勧めします。これは、最適化されたリリース ビルドの場合も同様です。 生成されたコードに影響を与えないし、する必要は多くの場合、アプリケーションをデバッグしやすくなります。
 
@@ -53,18 +53,15 @@ Visual C がサポート*プロファイル ガイド付き最適化の*(PGO)。
 
 このセクションでは、パフォーマンスを改善するためにプログラム内で使用できる、`__declspec(restrict)` および `__declspec(noalias)` という 2 つの declspec について説明します。
 
+`restrict` declspec は、`__declspec(restrict) void *malloc(size_t size);` など、ポインターを返す関数宣言のみに適用できます。
 
-  `restrict` declspec は、`__declspec(restrict) void *malloc(size_t size);` など、ポインターを返す関数宣言のみに適用できます。
+`restrict` declspec は、エイリアスを使用しないポインターを返す関数で使用されます。 このキーワードは、現在のプログラムで既に使用されているポインター値を返さないため、解放済みのメモリを使用するなどの無効な操作を行う場合を除いて、C ランタイム ライブラリの `malloc` の実装に使用できます。
 
-
-  `restrict` declspec は、エイリアスを使用しないポインターを返す関数で使用されます。 このキーワードは、現在のプログラムで既に使用されているポインター値を返さないため、解放済みのメモリを使用するなどの無効な操作を行う場合を除いて、C ランタイム ライブラリの `malloc` の実装に使用できます。
-
-
-  `restrict` declspec は、コンパイラが最適化を実行するための詳細情報をコンパイラに伝えます。 コンパイラにとって最も困難なことの 1 つは、どのポインターが他のポインターのエイリアスとなっているかを判断することですが、その際、この詳細情報はコンパイラにとって非常に役立ちます。
+`restrict` declspec は、コンパイラが最適化を実行するための詳細情報をコンパイラに伝えます。 コンパイラにとって最も困難なことの 1 つは、どのポインターが他のポインターのエイリアスとなっているかを判断することですが、その際、この詳細情報はコンパイラにとって非常に役立ちます。
 
 この情報はコンパイラでは前提とされ、コンパイラが検証することはありません。 プログラムでこの `restrict` declspec を不適切に使用すると、プログラムが不正な動作をするおそれがあります。
 
-詳細については、[制限](../cpp/restrict.md)を参照してください。
+詳細については、次を参照してください。[制限](../cpp/restrict.md)します。
 
 また、`noalias` declspec も関数だけに適用され、その関数が準純粋関数であることを示します。 準純粋関数は、ローカル、引数、引数の第 1 レベルの間接参照だけを参照または変更する関数です。 この declspec はコンパイラでは前提とされます。準純粋関数がグローバル、またはポインター引数の第 2 レベルの間接指定を参照する場合、コンパイラが生成するコードはアプリケーションを中断させる可能性があります。
 
@@ -86,17 +83,17 @@ int myFunc() {...}
 #pragma optimize("", on)
 ```
 
-詳細については、[最適化](../preprocessor/optimize.md)を参照してください。
+詳細については、次を参照してください。[最適化](../preprocessor/optimize.md)します。
 
 コンパイラで実行する最適化のうち、最も重要な最適化の 1 つにインライン展開があります。ここでは、インライン展開の動作を変更できるプラグマをいくつか紹介します。
 
-`#pragma inline_recursion` は、アプリケーションで再帰呼び出しをインライン展開できるようにするかどうかを指定する場合に役立ちます。 既定では、インライン展開は無効になっています。 関数が小さく、再帰の数が少ない場合は、このプラグマを有効にできます。 詳細については、[inline_recursion](../preprocessor/inline-recursion.md)を参照してください。
+`#pragma inline_recursion` は、アプリケーションで再帰呼び出しをインライン展開できるようにするかどうかを指定する場合に役立ちます。 既定では、インライン展開は無効になっています。 関数が小さく、再帰の数が少ない場合は、このプラグマを有効にできます。 詳細については、次を参照してください。 [inline_recursion](../preprocessor/inline-recursion.md)します。
 
-インライン展開の深さを制限する場合に役立つ別のプラグマとして、`#pragma inline_depth` があります。 このプラグマは通常、プログラムまたは関数のサイズを制限する場合に役立ちます。 詳細については、[inline_depth](../preprocessor/inline-depth.md)を参照してください。
+インライン展開の深さを制限する場合に役立つ別のプラグマとして、`#pragma inline_depth` があります。 このプラグマは通常、プログラムまたは関数のサイズを制限する場合に役立ちます。 詳細については、次を参照してください。 [inline_depth](../preprocessor/inline-depth.md)します。
 
 ## <a name="restrict-and-assume"></a>_ _restrict と\__assume
 
-パフォーマンスに役立つ Visual C のキーワードのいくつか: [_ _restrict](../cpp/extension-restrict.md)と[_assume](../intrinsics/assume.md)します。
+ビジュアルでのキーワードのいくつかC++パフォーマンスに役立つことができます: [_ _restrict](../cpp/extension-restrict.md)と[_assume](../intrinsics/assume.md)します。
 
 まず、`__restrict` と `__declspec(restrict)` が異なるものであることに注意する必要があります。 この 2 つのキーワードは多少関連がありますが、意味が異なります。 `__restrict` は、`const` や `volatile` のような型修飾子ですが、ポインター型に対してのみ使用できます。
 
@@ -110,8 +107,7 @@ int myFunc() {...}
 
 たとえば、`__assume(a < 5);` とすると、そのコード行では `a` 変数の値が 5 未満であることがオプティマイザーに伝えられます。 これも、コンパイラにとっての前提になります。 プログラム内のこの時点で `a` が実際には 6 である場合、コンパイラでプログラムを最適化すると、意図したとおりに動作しない可能性があります。 `__assume` は、switch ステートメントや条件式の前で使用するのが最も効果的です。
 
-
-  `__assume` には、いくつかの制約があります。 まず、このキーワードは `__restrict` と同様に推奨されているだけなので、コンパイラに無視される可能性があります。 また、`__assume` は、現在、変数を定数と比較する場合にのみ機能します。 assume(a < b) など、シンボルどうしの不等式には応用できません。
+`__assume` には、いくつかの制約があります。 まず、このキーワードは `__restrict` と同様に推奨されているだけなので、コンパイラに無視される可能性があります。 また、`__assume` は、現在、変数を定数と比較する場合にのみ機能します。 assume(a < b) など、シンボルどうしの不等式には応用できません。
 
 ## <a name="intrinsic-support"></a>組み込みのサポート
 
@@ -125,7 +121,7 @@ int myFunc() {...}
 
 - コードはコンパイラの最適化による恩恵を受けることができます。 コンパイラが進歩すると、組み込みのコード生成も進歩します。
 
-詳細については、[コンパイラ組み込み](../intrinsics/compiler-intrinsics.md)を参照してください。
+詳細については、次を参照してください。[コンパイラ組み込み](../intrinsics/compiler-intrinsics.md)します。
 
 ## <a name="exceptions"></a>例外
 

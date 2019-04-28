@@ -17,11 +17,11 @@ helpviewer_keywords:
 - concurrent_queue class
 ms.assetid: c2218996-d0ea-40e9-b002-e9a15b085f51
 ms.openlocfilehash: d5bbd361dc2dedc24c2a59050ffa680517186494
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304692"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62263088"
 ---
 # <a name="concurrentqueue-class"></a>concurrent_queue クラス
 
@@ -79,7 +79,7 @@ class concurrent_queue: public ::Concurrency::details::_Concurrent_queue_base_v4
 
 ## <a name="remarks"></a>Remarks
 
-詳細については、[並列コンテナーとオブジェクト](../../../parallel/concrt/parallel-containers-and-objects.md)を参照してください。
+詳細については、次を参照してください。[並列コンテナーとオブジェクト](../../../parallel/concrt/parallel-containers-and-objects.md)します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 

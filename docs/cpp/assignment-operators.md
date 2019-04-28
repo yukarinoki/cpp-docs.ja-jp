@@ -32,11 +32,11 @@ helpviewer_keywords:
 - <<= operator
 ms.assetid: b028cf35-2ff1-4f14-9027-fd53ebec8aa0
 ms.openlocfilehash: 758c82f02d2b113f6c750f7f0ede662c97b646b0
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58565481"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62184388"
 ---
 # <a name="assignment-operators"></a>代入演算子
 
@@ -115,7 +115,7 @@ int main() {
 
 オブジェクトの**const**と**揮発性**型を割り当てるだけである型の左辺値に**揮発性**またはのどちらでもない**const**も**揮発性**します。
 
-クラス型 (構造体、共用体、およびクラスの型) のオブジェクトへの割り当てという名前の関数によって実行されます`operator=`します。 この演算子関数の既定の動作は、ビットごとのコピーです。ただしこの動作は、オーバーロードした演算子により変更できます  参照してください[演算子のオーバー ロード](../cpp/operator-overloading.md)詳細についてはします。 さらに、クラス型を持つことができます*コピー割り当て*と*移動の代入*演算子。 詳細については、[コピー コンス トラクターとコピー代入演算子](copy-constructors-and-copy-assignment-operators-cpp.md)と[移動コンス トラクターと移動代入演算子](move-constructors-and-move-assignment-operators-cpp.md)を参照してください。
+クラス型 (構造体、共用体、およびクラスの型) のオブジェクトへの割り当てという名前の関数によって実行されます`operator=`します。 この演算子関数の既定の動作は、ビットごとのコピーです。ただしこの動作は、オーバーロードした演算子により変更できます  参照してください[演算子のオーバー ロード](../cpp/operator-overloading.md)詳細についてはします。 さらに、クラス型を持つことができます*コピー割り当て*と*移動の代入*演算子。 詳細については、次を参照してください。[コピー コンス トラクターとコピー代入演算子](copy-constructors-and-copy-assignment-operators-cpp.md)と[移動コンス トラクターと移動代入演算子](move-constructors-and-move-assignment-operators-cpp.md)します。
 
 特定の基底クラスからの任意の明確な派生クラスのオブジェクトは、その基底クラスのオブジェクトに代入できます。 派生クラスから基底クラスへの暗黙の変換は存在しますが、基底クラスから派生クラスへの暗黙の変換は存在しないため、逆は当てはまりません。 例:
 

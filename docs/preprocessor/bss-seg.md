@@ -9,11 +9,11 @@ helpviewer_keywords:
 - bss_seg pragma
 ms.assetid: 755f0154-de51-4778-97d3-c9b24e445079
 ms.openlocfilehash: 489ced11bb6024fdf9818872c07ab7feebfeabf3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566310"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62212415"
 ---
 # <a name="bssseg"></a>bss_seg
 
@@ -36,10 +36,10 @@ ms.locfileid: "50566310"
 *identifier*<br/>
 (省略可能)使用すると**プッシュ**、内部コンパイラ スタックのレコードに名前を割り当てます。 *識別子*により、複数のレコードを 1 つのポップを**pop**コマンド。 使用すると**pop**、ディレクティブのポップ レコードまで内部スタックからポップ*識別子*が削除された場合*識別子*が見つからない内部スタックではありませんポップされます。
 
-*「セグメント名」*<br/>
+*"segment-name"*<br/>
 (省略可能)セグメントの名前。 使用すると**pop**、スタックがポップされ、*セグメント名*がアクティブなセグメント名になります。
 
-*「セグメント クラス」*<br/>
+*"segment-class"*<br/>
 (省略可能)C++ との互換性をバージョン 2.0 より前に含まれています。 これは無視されます。
 
 ## <a name="remarks"></a>Remarks

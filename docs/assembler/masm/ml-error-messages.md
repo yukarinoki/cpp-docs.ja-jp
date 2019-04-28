@@ -8,11 +8,11 @@ helpviewer_keywords:
 - MASM (Microsoft Macro Assembler), ML error messages
 ms.assetid: e7e164b3-6d65-4b5b-8925-bfbebc043523
 ms.openlocfilehash: aa0440afae980e218c32ab3296bd7c6fb2b444d9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677800"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62202212"
 ---
 # <a name="ml-error-messages"></a>ML エラー メッセージ
 
@@ -26,7 +26,7 @@ MASM のコンポーネントによって生成されるエラー メッセー�
 
 すべてのエラー メッセージは、次の形式をとります。
 
-> *ユーティリティ*: *Filename* (*行*): {*Error_type*} (*コード*):*テキスト*
+> *ユーティリティ*:*ファイル名*(*行*): {*Error_type*} (*コード*)。*Message_text*
 
 それぞれの文字について以下に説明します。
 
