@@ -19,11 +19,11 @@ helpviewer_keywords:
 - memory [C++], overwrites
 ms.assetid: 73cbc1f9-3e33-472d-9880-39a8e9977b95
 ms.openlocfilehash: 7420fd5bbdeec30e9839206803952c02b8b56421
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57827658"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62273924"
 ---
 # <a name="common-problems-when-creating-a-release-build"></a>リリース ビルド作成時によくある問題
 
@@ -47,11 +47,11 @@ ms.locfileid: "57827658"
 
 デバッグするためにプロジェクトをビルドすると、デバッグ メモリ アロケーターを使用しています。 これは、すべてのメモリ割り当ての周囲に配置するガード バイトであることを意味します。 これらガード バイトがメモリの上書きを検出します。 ヒープ レイアウトはリリースおよびデバッグの間で異なるため、バージョンでは、メモリの上書きは、デバッグ ビルドで問題を作成しない可能性がありますが、リリース ビルドで致命的な影響があります。
 
-詳細については、[メモリ上書きのチェック](checking-for-memory-overwrites.md)と[、デバッグ ビルドにチェックを使用して、メモリ上書きの](using-the-debug-build-to-check-for-memory-overwrite.md)を参照してください。
+詳細については、次を参照してください。[メモリ上書きのチェック](checking-for-memory-overwrites.md)と[、デバッグ ビルドにチェックを使用して、メモリ上書きの](using-the-debug-build-to-check-for-memory-overwrite.md)します。
 
 ##  <a name="_core_compilation"></a> コンパイル
 
-MFC マクロとリリースをビルドするときは、MFC 実装の変更の多くの多くは。 具体的には、ASSERT マクロは、アサートで見つかったコードのいずれも実行されるため、リリース ビルドでは nothing に評価されます。 詳細については、[ASSERT ステートメントの確認](using-verify-instead-of-assert.md)を参照してください。
+MFC マクロとリリースをビルドするときは、MFC 実装の変更の多くの多くは。 具体的には、ASSERT マクロは、アサートで見つかったコードのいずれも実行されるため、リリース ビルドでは nothing に評価されます。 詳細については、次を参照してください。 [ASSERT ステートメントの確認](using-verify-instead-of-assert.md)します。
 
 一部の関数では、リリース ビルドで速度を上げるためインライン化できません。 一般に、最適化は、リリース ビルドでになっています。 さまざまなメモリ アロケーターが使用されてもいます。
 
@@ -61,7 +61,7 @@ MFC マクロとリリースをビルドするときは、MFC 実装の変更の
 
 ##  <a name="_core_optimizations"></a> 最適化
 
-、特定のコード セグメントの性質に応じて最適化コンパイラは、予期しないコードを生成可能性があります。 これはリリース ビルドの問題の最も可能性の高い原因ですが、場合によっては、発生する場合は。 ソリューションで、[コードの最適化](optimizing-your-code.md)を参照してください。
+、特定のコード セグメントの性質に応じて最適化コンパイラは、予期しないコードを生成可能性があります。 これはリリース ビルドの問題の最も可能性の高い原因ですが、場合によっては、発生する場合は。 ソリューションで、次を参照してください。[コードの最適化](optimizing-your-code.md)します。
 
 ## <a name="see-also"></a>関連項目
 

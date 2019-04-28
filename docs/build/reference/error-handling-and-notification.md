@@ -5,17 +5,17 @@ helpviewer_keywords:
 - error handling, and notification
 ms.assetid: b621cf60-d869-451a-b05e-dc86d78addaa
 ms.openlocfilehash: 29fe46e15712609ec0c4f268749aaefed103117e
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57812942"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62293187"
 ---
 # <a name="error-handling-and-notification"></a>エラー処理と通知
 
-エラー処理と通知の詳細については、[ヘルパー関数について](understanding-the-helper-function.md)を参照してください。
+エラー処理と通知の詳細については、次を参照してください。[ヘルパー関数について](understanding-the-helper-function.md)します。
 
-用のフック関数の詳細については、[構造体と定数定義](structure-and-constant-definitions.md)を参照してください。
+用のフック関数の詳細については、次を参照してください。[構造体と定数定義](structure-and-constant-definitions.md)します。
 
 プログラムでは、Dll の遅延読み込みを使用する場合、プログラムの実行中に発生する障害が発生した未処理の例外から確実エラーを処理にする必要があります。 エラー処理は、2 つの部分で構成されます。
 

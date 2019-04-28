@@ -14,11 +14,11 @@ helpviewer_keywords:
 - concurrent_unordered_multimap class
 ms.assetid: 4dada5d7-15df-4382-b9c9-348e75b2f3c1
 ms.openlocfilehash: 446060656a79380f85d3faac560bd48910bfb2db
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57294357"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62262763"
 ---
 # <a name="concurrentunorderedmultimap-class"></a>concurrent_unordered_multimap クラス
 
@@ -98,14 +98,14 @@ true>>;
 |[hash_function](#hash_function)|格納されているハッシュ関数オブジェクトを返します。|
 |[insert](#insert)|オーバーロードされます。 要素を `concurrent_unordered_multimap` オブジェクトに追加します。|
 |[key_eq](#key_eq)|格納された等価比較関数のオブジェクトを返します。|
-|[swap](#swap)|2 つの `concurrent_unordered_multimap` オブジェクトのコンテンツを交換します。 このメソッドはコンカレンシー セーフではありません。|
-|[unsafe_erase](#unsafe_erase)|オーバーロードされます。 `concurrent_unordered_multimap` から指定した位置にある要素を削除します。 このメソッドはコンカレンシー セーフではありません。|
+|[swap](#swap)|2 つの `concurrent_unordered_multimap` オブジェクトのコンテンツを交換します。 このメソッドは同時実行セーフではありません。|
+|[unsafe_erase](#unsafe_erase)|オーバーロードされます。 `concurrent_unordered_multimap` から指定した位置にある要素を削除します。 このメソッドは同時実行セーフではありません。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
 |名前|説明|
 |----------|-----------------|
-|[operator=](#operator_eq)|オーバーロードされます。 別の `concurrent_unordered_multimap` オブジェクトの内容をこのオブジェクトに割り当てます。 このメソッドはコンカレンシー セーフではありません。|
+|[operator=](#operator_eq)|オーバーロードされます。 別の `concurrent_unordered_multimap` オブジェクトの内容をこのオブジェクトに割り当てます。 このメソッドは同時実行セーフではありません。|
 
 ## <a name="remarks"></a>Remarks
 
@@ -483,7 +483,7 @@ size_type max_size() const;
 
 ##  <a name="operator_eq"></a> 演算子 =
 
-別の `concurrent_unordered_multimap` オブジェクトの内容をこのオブジェクトに割り当てます。 このメソッドはコンカレンシー セーフではありません。
+別の `concurrent_unordered_multimap` オブジェクトの内容をこのオブジェクトに割り当てます。 このメソッドは同時実行セーフではありません。
 
 ```
 concurrent_unordered_multimap& operator= (const concurrent_unordered_multimap& _Umap);
@@ -541,7 +541,7 @@ size_type size() const;
 
 ##  <a name="swap"></a> スワップ
 
-2 つの `concurrent_unordered_multimap` オブジェクトのコンテンツを交換します。 このメソッドはコンカレンシー セーフではありません。
+2 つの `concurrent_unordered_multimap` オブジェクトのコンテンツを交換します。 このメソッドは同時実行セーフではありません。
 
 ```
 void swap(concurrent_unordered_multimap& _Umap);
@@ -672,7 +672,7 @@ const_local_iterator unsafe_end(size_type _Bucket) const;
 
 ##  <a name="unsafe_erase"></a> unsafe_erase
 
-`concurrent_unordered_multimap` から指定した位置にある要素を削除します。 このメソッドはコンカレンシー セーフではありません。
+`concurrent_unordered_multimap` から指定した位置にある要素を削除します。 このメソッドは同時実行セーフではありません。
 
 ```
 iterator unsafe_erase(

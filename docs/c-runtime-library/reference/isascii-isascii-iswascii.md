@@ -35,11 +35,11 @@ helpviewer_keywords:
 - iswascii function
 ms.assetid: ba4325ad-7cb3-4fb9-b096-58906d67971a
 ms.openlocfilehash: d150e7bb335dc77ed86f445128eebf97b8be5ac3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50433658"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62287470"
 ---
 # <a name="isascii-isascii-iswascii"></a>isascii、__isascii、iswascii
 
@@ -83,7 +83,7 @@ int iswascii(
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
-|**isascii**、 **_ _isascii**|C: \<ctype.h><br /><br /> C++: \<cctype> または \<ctype.h>|
+|**isascii**, **__isascii**|C: \<ctype.h><br /><br /> C++: \<cctype> または \<ctype.h>|
 |**iswascii**|C: \<wctype.h>、\<ctype.h>、または \<wchar.h><br /><br /> C++: \<cwctype>、\<cctype>、\<wctype.h>、\<ctype.h>、または \<wchar.h>|
 
 **Isascii**、 **_ _isascii**と**iswascii**関数は、Microsoft 固有の仕様。 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。

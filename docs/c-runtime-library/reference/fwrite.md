@@ -23,11 +23,11 @@ helpviewer_keywords:
 - fwrite function
 ms.assetid: 7afacf3a-72d7-4a50-ba2e-bea1ab9f4124
 ms.openlocfilehash: b4d6b9ce4fb66ee545f52946e28e4984d9e4f924
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506747"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62287548"
 ---
 # <a name="fwrite"></a>fwrite
 
@@ -55,7 +55,7 @@ size_t fwrite(
 *count*<br/>
 書き込む項目の最大数。
 
-*ストリーム*<br/>
+*stream*<br/>
 **FILE** 構造体へのポインター。
 
 ## <a name="return-value"></a>戻り値
@@ -68,7 +68,7 @@ size_t fwrite(
 
 ときに*ストリーム*は Unicode 変換モードで開かれます — たとえば場合、*ストリーム*が呼び出すことによって開かれた**fopen**を含むモード パラメーターを使用して、 **ccs= UNICODE**、 **ccs = UTF 16LE**、または**ccs = utf-8**を使用して、モードが Unicode 変換モードに変更された場合または **_setmode**とモードパラメーターが含まれる **_O_WTEXT**、 **_O_U16TEXT**、または **_O_U8TEXT**—*バッファー*へのポインターとして解釈されますが、配列**wchar_t** utf-16 データを格納しています。 このモードで奇数バイトの書き込みを試みると、パラメーター検証エラーが発生します。
 
-この関数は呼び出し元スレッドをロックするため、スレッド セーフです。 ロックしないバージョンでは、**_fwrite_nolock**を参照してください。
+この関数は呼び出し元スレッドをロックするため、スレッド セーフです。 ロックしないバージョンでは、次を参照してください。 **_fwrite_nolock**します。
 
 ## <a name="requirements"></a>必要条件
 

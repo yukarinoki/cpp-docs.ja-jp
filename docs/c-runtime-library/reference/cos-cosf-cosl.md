@@ -32,11 +32,11 @@ helpviewer_keywords:
 - cosines, calculating
 ms.assetid: ae90435e-6b68-4a47-a81f-be87d5c08f16
 ms.openlocfilehash: b050fd98a35028b121def8b665fce62ad58ec437
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519897"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335361"
 ---
 # <a name="cos-cosf-cosl"></a>cos、cosf、cosl
 
@@ -66,8 +66,8 @@ long double cos( long double x );  // C++ only
 
 |入力|SEH 例外|Matherr 例外|
 |-----------|-------------------|-----------------------|
-|± QNAN、IND|none|**(_D)**|
-|± INF|**無効です**|**(_D)**|
+|± QNAN、IND|none|**_DOMAIN**|
+|± INF|**無効です**|**_DOMAIN**|
 
 ## <a name="remarks"></a>Remarks
 

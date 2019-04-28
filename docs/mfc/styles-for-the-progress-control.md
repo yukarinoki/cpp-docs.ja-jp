@@ -8,11 +8,11 @@ helpviewer_keywords:
 - CProgressCtrl class [MFC], styles
 ms.assetid: 39eb8081-bc20-4552-91b9-e7cdd1b7d8ae
 ms.openlocfilehash: 3adbd32456b1375bd2dc8574220e083ca3d83ee9
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57296333"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62306815"
 ---
 # <a name="styles-for-the-progress-control"></a>プログレス コントロールのスタイル
 
@@ -40,7 +40,7 @@ PBS_SMOOTH と PBS_VERTICAL スタイル。
 
 ![進行状況バーがスタイル、スムーズおよび垂直方向](../mfc/media/vc4ruw2.gif "バーのスタイル、スムーズおよび垂直方向の進行状況")
 
-詳細については、[ウィンドウ スタイル](../mfc/reference/styles-used-by-mfc.md#frame-window-styles-mfc)で、 *MFC リファレンス*を参照してください。
+詳細については、次を参照してください。[ウィンドウ スタイル](../mfc/reference/styles-used-by-mfc.md#frame-window-styles-mfc)で、 *MFC リファレンス*します。
 
 ## <a name="see-also"></a>関連項目
 

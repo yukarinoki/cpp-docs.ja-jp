@@ -7,11 +7,11 @@ helpviewer_keywords:
 - macros, environment-variable
 ms.assetid: f8e96635-0906-47b0-9f56-12a6fdf5e347
 ms.openlocfilehash: 7f7f8a05545658142001b75ac78975251185a033
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57826356"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62272612"
 ---
 # <a name="environment-variable-macros"></a>環境変数マクロ
 
@@ -19,7 +19,7 @@ NMAKE は、マクロの定義のセッションの開始前に存在する環�
 
 セッションで、環境変数マクロを再定義することができ、これが、対応する環境変数を変更します。 SET コマンドで環境変数を変更することもできます。 SET コマンドを使用して、セッションで環境変数を変更するのには変更されません、対応するマクロが。
 
-例えば:
+例:
 
 ```
 PATH=$(PATH);\nonesuch

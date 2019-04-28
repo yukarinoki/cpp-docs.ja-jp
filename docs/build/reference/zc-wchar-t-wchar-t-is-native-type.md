@@ -13,16 +13,15 @@ helpviewer_keywords:
 - Zc compiler options [C++]
 ms.assetid: b0de5a84-da72-4e5a-9a4e-541099f939e0
 ms.openlocfilehash: b2563ba0ae2a07bc9f9d81128745ed4b9651fb6c
-ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57815178"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62315639"
 ---
 # <a name="zcwchart-wchart-is-native-type"></a>/Zc:wchar_t (wchar_t をネイティブ型として認識)
 
-
-  `wchar_t` を、C++ 標準に従って組み込み型として解析します。
+`wchar_t` を、C++ 標準に従って組み込み型として解析します。
 
 ## <a name="syntax"></a>構文
 
@@ -30,12 +29,11 @@ ms.locfileid: "57815178"
 
 ## <a name="remarks"></a>Remarks
 
-場合 **/Zc:wchar_t** 、`wchar_t`は C++ としてコンパイルされたコードで組み込みの整数型のキーワードです。 場合 **/Zc:wchar_t-** (マイナス記号) で指定された、またはコードで C としてコンパイルされた、`wchar_t`組み込み型ではありません。 代わりに、`wchar_t`として定義されている場合は、`typedef`の`unsigned short`標準ヘッダー stddef.h でします。 (Microsoft による実装を定義、stddef.h に含まれているもう 1 つのヘッダーとその他の標準ヘッダー。)
+場合 **/Zc:wchar_t** 、`wchar_t`としてコンパイルされたコードで組み込みの整数型のキーワードは、C++します。 場合 **/Zc:wchar_t-** (マイナス記号) で指定された、またはコードで C としてコンパイルされた、`wchar_t`組み込み型ではありません。 代わりに、`wchar_t`として定義されている場合は、`typedef`の`unsigned short`標準ヘッダー stddef.h でします。 (Microsoft による実装を定義、stddef.h に含まれているもう 1 つのヘッダーとその他の標準ヘッダー。)
 
-お勧めしません **/Zc:wchar_t-** C++ 標準である必要がありますので`wchar_t`組み込み型を指定します。 
-  `typedef` バージョンを使用すると、移植性の問題が発生することがあります。 Visual C の以前のバージョンからアップグレードし、コンパイラ エラーが発生したかどうかは[C2664](../../error-messages/compiler-errors-2/compiler-error-c2664.md)コードが暗黙的に変換しようとしているため、`wchar_t`に`unsigned short`、代わりに、エラーを修正するコードを変更することをお勧めします。設定の **/Zc:wchar_t-** します。
+お勧めしません **/Zc:wchar_t-** ため、C++標準である必要があります`wchar_t`組み込み型を指定します。 `typedef` バージョンを使用すると、移植性の問題が発生することがあります。 ビジュアルの以前のバージョンからアップグレードする場合C++とコンパイラ エラーが発生した[C2664](../../error-messages/compiler-errors-2/compiler-error-c2664.md)コードが暗黙的に変換しようとしているため、`wchar_t`に`unsigned short`、エラーを修正するコードを変更することをお勧めします。設定ではなく **/Zc:wchar_t-** します。
 
-**/Zc:wchar_t**オプションは C++ のコンパイルでは既定で、C のコンパイルでは無視されます。 [/Permissive -](permissive-standards-conformance.md)オプションには影響しません **/Zc:wchar_t**します。
+**/Zc:wchar_t**オプションが既定では  C++ 、コンパイル、C のコンパイルでは無視されます。 [/Permissive -](permissive-standards-conformance.md)オプションには影響しません **/Zc:wchar_t**します。
 
 Microsoft では、`wchar_t` が 2 バイトの符号なしの値として実装されます。 Microsoft 固有のネイティブ型にマップされます`__wchar_t`します。 詳細については`wchar_t`を参照してください[データ型の範囲](../../cpp/data-type-ranges.md)と[基本的な型](../../cpp/fundamental-types-cpp.md)します。
 
@@ -43,13 +41,13 @@ Microsoft では、`wchar_t` が 2 バイトの符号なしの値として実装
 
 ときに **/Zc:wchar_t**が指定されている **\_WCHAR\_T\_定義**と**\_ネイティブ\_WCHAR\_T\_定義**シンボルが定義されます。 詳細については、「 [Predefined Macros](../../preprocessor/predefined-macros.md)」を参照してください。
 
-に、コードがコンパイラ COM グローバル関数を使用する場合 **/Zc:wchar_t**は既定では、お勧め comsupp.lib への明示的な参照を変更するようになりました (のいずれかから、[コメント プラグマ](../../preprocessor/comment-c-cpp.md)か、または、コマンド ライン) comsuppw.lib または comsuppwd.lib のいずれかにします。 (指定してコンパイルする必要がある場合 **/Zc:wchar_t-** comsupp.lib を使用します)。comdef.h のヘッダー ファイルを含めると、適切なライブラリが自動的に指定されます。 コンパイラ COM サポートについては、[コンパイラ COM サポート](../../cpp/compiler-com-support.md)を参照してください。
+に、コードがコンパイラ COM グローバル関数を使用する場合 **/Zc:wchar_t**は既定では、お勧め comsupp.lib への明示的な参照を変更するようになりました (のいずれかから、[コメント プラグマ](../../preprocessor/comment-c-cpp.md)か、または、コマンド ライン) comsuppw.lib または comsuppwd.lib のいずれかにします。 (指定してコンパイルする必要がある場合 **/Zc:wchar_t-** comsupp.lib を使用します)。comdef.h のヘッダー ファイルを含めると、適切なライブラリが自動的に指定されます。 コンパイラ COM サポートについては、次を参照してください。[コンパイラ COM サポート](../../cpp/compiler-com-support.md)します。
 
-`wchar_t` C コードをコンパイルするときに、組み込み型がサポートされていません。 Visual C の準拠の問題の詳細については、[非標準動作](../../cpp/nonstandard-behavior.md)を参照してください。
+`wchar_t` C コードをコンパイルするときに、組み込み型がサポートされていません。 Visual C の準拠の問題の詳細については、次を参照してください。[非標準動作](../../cpp/nonstandard-behavior.md)します。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. 選択、**構成プロパティ** > **C/C++** > **言語**ページ。
 

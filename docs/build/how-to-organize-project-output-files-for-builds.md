@@ -6,11 +6,11 @@ helpviewer_keywords:
 - output files, organizing
 ms.assetid: 521d95ea-2dcc-4da0-b5eb-ac3e57941446
 ms.openlocfilehash: a675b535577b8757e92246249c94cd9760534740
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57827091"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62188819"
 ---
 # <a name="how-to-organize-project-output-files-for-builds"></a>方法: ビルドのプロジェクト出力ファイルを編成する
 
@@ -20,8 +20,7 @@ ms.locfileid: "57827091"
 
 #### <a name="to-reference-assemblies-with-using"></a>#using を使用してアセンブリを参照するには
 
-1. 
-  `#using <System.Data.dll>` などの #using ディレクティブを使用し、コードから直接アセンブリを参照できます。 詳細については、「[#using ディレクティブ](../preprocessor/hash-using-directive-cpp.md)」を参照してください。
+1. `#using <System.Data.dll>` などの #using ディレクティブを使用し、コードから直接アセンブリを参照できます。 詳細については、「[#using ディレクティブ](../preprocessor/hash-using-directive-cpp.md)」を参照してください。
 
    指定するファイルは、MSIL にある限り、.exe、.dll、.netmodule、または .obj のいずれでも使用できます。 参照先コンポーネントは、すべての言語でビルドできます。 このオプションを使用すると、メタデータが MSIL から抽出されるため、IntelliSense にアクセスできるようになります。 指定したファイルはプロジェクトのパスに配置する必要があります。配置しないと、プロジェクトはコンパイルされず、IntelliSense も使用できません。 ファイルがプロジェクトのパスに配置されているかどうかを簡単に確認するには、#using 行を右クリックし、**[ドキュメントを開く]** コマンドを選択します。 ファイルが見つからなかった場合は、そのことが通知されます。
 

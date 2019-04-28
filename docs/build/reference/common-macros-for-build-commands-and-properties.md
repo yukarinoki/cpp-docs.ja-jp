@@ -94,11 +94,11 @@ helpviewer_keywords:
 - SolutionPath macro $(SolutionPath)
 ms.assetid: 239bd708-2ea9-4687-b264-043f1febf98b
 ms.openlocfilehash: 46fdd5e356ded96388a154ff459ef4cc3c02267f
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58327679"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62294453"
 ---
 # <a name="common-macros-for-msbuild-commands-and-properties"></a>MSBuild コマンドとプロパティの共通マクロ
 
@@ -106,7 +106,7 @@ ms.locfileid: "58327679"
 
 ## <a name="view-the-current-properties-and-macros"></a>現在のプロパティとマクロを表示する
 
-現在使用可能なマクロでは、すべてを表示する、**プロパティ ページ**ダイアログで、 **vc++ ディレクトリ**プロパティの行の末尾にあるドロップダウン矢印をクリックします。 をクリックして**編集**し、編集ダイアログ ボックスの 、**マクロ**ボタンをクリックします。 Visual Studio に表示されているプロパティとマクロの現在のセットが、それぞれの現在の値と共に表示されます。 詳細については、、 **Specifying User-Defined 値**の[C++ プロジェクト プロパティ ページ リファレンス](property-pages-visual-cpp.md)を参照してください。
+現在使用可能なマクロでは、すべてを表示する、**プロパティ ページ**ダイアログで、 **vc++ ディレクトリ**プロパティの行の末尾にあるドロップダウン矢印をクリックします。 をクリックして**編集**し、編集ダイアログ ボックスの 、**マクロ**ボタンをクリックします。 Visual Studio に表示されているプロパティとマクロの現在のセットが、それぞれの現在の値と共に表示されます。 詳細については、次を参照してください。、 **Specifying User-Defined 値**の[C++ プロジェクト プロパティ ページ リファレンス](property-pages-visual-cpp.md)します。
 
 ![VC + + マクロ ボタン](../media/vcppdir_libdir_macros.png "マクロ メニュー")
 

@@ -27,11 +27,11 @@ helpviewer_keywords:
 - _abnormal_termination keyword [C++]
 ms.assetid: 30d60071-ea49-4bfb-a8e6-7a420de66381
 ms.openlocfilehash: 400c831eec1c570f26dfc010b4e4c61e7d21b1c4
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326655"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62266843"
 ---
 # <a name="try-except-statement"></a>try-except ステートメント
 
@@ -45,7 +45,7 @@ ms.locfileid: "51326655"
 > {<br/>
 > &nbsp;&nbsp;&nbsp;&nbsp;保護されたコード<br/>
 > }<br/>
-> **\_\_除く**(*式*)<br/>
+> **\_\_except** ( *expression* )<br/>
 > {<br/>
 > &nbsp;&nbsp;&nbsp;&nbsp;例外ハンドラーのコード<br/>
 > }<br/>
@@ -54,7 +54,7 @@ ms.locfileid: "51326655"
 
 **を再試行してください-を除く**ステートメントは C に対する Microsoft 拡張機能であり、C++ 言語を取得する対象アプリケーションをできるようにするプログラムの実行を正常に終了するイベントが発生したときを制御します。 このようなイベントが呼び出されます*例外*、例外を処理するメカニズムを呼び出すと*例外処理を構造化*(SEH)。
 
-関連情報については、、 [try-finally ステートメント](../cpp/try-finally-statement.md)を参照してください。
+関連情報については、次を参照してください。、 [try-finally ステートメント](../cpp/try-finally-statement.md)します。
 
 例外は、ハードウェア例外またはソフトウェア例外です。 アプリケーションがハードウェア例外またはソフトウェア例外から完全に回復できない場合でも、構造化例外処理はエラー情報を表示し、問題の診断に役立つアプリケーションの内部状態をトラップすることができます。 これは、簡単に再現できない断続的な問題の場合に特に便利です。
 

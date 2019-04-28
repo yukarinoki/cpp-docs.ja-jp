@@ -10,11 +10,11 @@ helpviewer_keywords:
 - LINK tool [C++], linker options
 ms.assetid: c1d51b8a-bd23-416d-81e4-900e02b2c129
 ms.openlocfilehash: 7ff8ecd6a607aac59fca6d32fa2784e7e3e4268f
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57817355"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62301761"
 ---
 # <a name="linker-options"></a>リンカー オプション
 
@@ -137,4 +137,4 @@ LINK.exe のオプションの一覧を次の表に示します。 LINK の詳�
 ## <a name="see-also"></a>関連項目
 
 [C/C++ ビルドのリファレンス](c-cpp-building-reference.md)<br/>
-[MSVC リンカーの参照](linking.md)
+[MSVC リンカーのリファレンス](linking.md)

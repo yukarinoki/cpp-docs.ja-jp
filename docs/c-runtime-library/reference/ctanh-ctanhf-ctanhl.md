@@ -31,11 +31,11 @@ helpviewer_keywords:
 - ctanhf function
 ms.assetid: 807f2cd1-8740-4988-afff-5911c346385b
 ms.openlocfilehash: f63329e45fdcd3a26d613f73cd911fdf6fb10401
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55702688"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62288941"
 ---
 # <a name="ctanh-ctanhf-ctanhl"></a>ctanh、ctanhf、ctanhl
 
@@ -77,7 +77,7 @@ _Lcomplex ctanhl(
 
 ## <a name="remarks"></a>Remarks
 
-オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **ctanh**を受け取って返す **_Fcomplex**と **_Lcomplex**値。 C プログラムで**ctanh**は、 **_Dcomplex**値。
+C++では、オーバー ロードのオーバー ロードを呼び出すことができます**ctanh**を受け取って返す **_Fcomplex**と **_Lcomplex**値。 C プログラムで**ctanh**は、 **_Dcomplex**値。
 
 ## <a name="requirements"></a>必要条件
 

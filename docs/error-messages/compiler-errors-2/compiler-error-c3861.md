@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3861
 ms.assetid: 0a1eee30-b3db-41b1-b1e5-35949c3924d7
 ms.openlocfilehash: 4ebfd3b0129e25cf543cac803a3b33fb074f3d70
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530807"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62302413"
 ---
 # <a name="compiler-error-c3861"></a>コンパイラ エラー C3861
 
@@ -23,9 +23,9 @@ ms.locfileid: "50530807"
 
 このエラーを解決するには、使用を比較*識別子*大文字小文字とスペルの識別子の宣言にします。 いることを確認[スコープ解決演算子](../../cpp/scope-resolution-operator.md)と名前空間[ディレクティブを使用して](../../cpp/namespaces-cpp.md#using_directives)が正しく使用します。 識別子がヘッダー ファイルで宣言されている場合は、識別子が参照される前に、ヘッダーが含まれることを確認します。 識別子は、外部から参照するものでは、それを使用する任意のソース ファイルで宣言されていることを確認します。 識別子の宣言または定義をによって除外されていないことを確認も[条件付きコンパイル ディレクティブ](../../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md)します。
 
-変更を Visual Studio 2015 での C ランタイム ライブラリの廃止された関数を削除するには、C3861 可能性があります。 このエラーを解決するには、これらの関数への参照を削除するか、存在する場合、セキュリティで保護されたその代替手段で置き換えます。 詳細については、[廃止された関数](../../c-runtime-library/obsolete-functions.md)を参照してください。
+変更を Visual Studio 2015 での C ランタイム ライブラリの廃止された関数を削除するには、C3861 可能性があります。 このエラーを解決するには、これらの関数への参照を削除するか、存在する場合、セキュリティで保護されたその代替手段で置き換えます。 詳細については、次を参照してください。[廃止された関数](../../c-runtime-library/obsolete-functions.md)します。
 
-コンパイラの以前のバージョンからのプロジェクトの移行後にエラー C3861 が表示された場合は、サポートされている Windows バージョンに関連する問題があります。 Visual C++ では、Windows 95、Windows 98、Windows ME、Windows NT、および Windows 2000 がサポート対象外になりました。 **WINVER** マクロまたは **_WIN32_WINNT** マクロをこれらのいずれかのバージョンの Windows に割り当てている場合は、そのマクロを修正する必要があります。 詳細については、[WINVER および _win32_winnt の変更](../../porting/modifying-winver-and-win32-winnt.md)を参照してください。
+コンパイラの以前のバージョンからのプロジェクトの移行後にエラー C3861 が表示された場合は、サポートされている Windows バージョンに関連する問題があります。 Visual C++ では、Windows 95、Windows 98、Windows ME、Windows NT、および Windows 2000 がサポート対象外になりました。 **WINVER** マクロまたは **_WIN32_WINNT** マクロをこれらのいずれかのバージョンの Windows に割り当てている場合は、そのマクロを修正する必要があります。 詳細については、次を参照してください。 [WINVER および _win32_winnt の変更](../../porting/modifying-winver-and-win32-winnt.md)します。
 
 ## <a name="examples"></a>使用例
 

@@ -18,11 +18,11 @@ helpviewer_keywords:
 - CurrentScheduler class
 ms.assetid: 31c20e0e-4cdf-49b4-8220-d726130aad2b
 ms.openlocfilehash: a27ec7c25962b6addd26e61af8f33130d4c653ba
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326791"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62296157"
 ---
 # <a name="currentscheduler-class"></a>CurrentScheduler クラス
 
@@ -40,7 +40,7 @@ class CurrentScheduler;
 
 |名前|説明|
 |----------|-----------------|
-|[作成します。](#create)|動作が説明されている新しいスケジューラを作成、`_Policy`パラメーター呼び出し元のコンテキストにアタッチします。 新しく作成されたスケジューラには、呼び出し元のコンテキストの現在のスケジューラになります。|
+|[作成](#create)|動作が説明されている新しいスケジューラを作成、`_Policy`パラメーター呼び出し元のコンテキストにアタッチします。 新しく作成されたスケジューラには、呼び出し元のコンテキストの現在のスケジューラになります。|
 |[CreateScheduleGroup](#createschedulegroup)|オーバーロードされます。 呼び出し元のコンテキストに関連付けられたスケジューラ内で新しいスケジュール グループを作成します。 パラメーターを受け取るバージョン`_Placement`にそのパラメーターで指定された場所で実行に偏っていますが、新しく作成したスケジュール グループ内のタスクが原因です。|
 |[Detach](#detach)|呼び出し元のコンテキストから現在のスケジューラをデタッチし、存在する場合、現在のスケジューラとして以前に接続されているスケジューラを復元します。 呼び出し元のコンテキストがいずれかを使用して、コンテキストに接続されていたスケジューラによって管理し、このメソッドから制御が戻た後、`CurrentScheduler::Create`または`Scheduler::Attach`メソッド。|
 |[Get](#get)|現在のスケジューラとも呼ばれます、呼び出し元コンテキストに関連付けられたスケジューラへのポインターを返します。|

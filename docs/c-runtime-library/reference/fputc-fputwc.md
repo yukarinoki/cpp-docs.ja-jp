@@ -29,11 +29,11 @@ helpviewer_keywords:
 - fputc function
 ms.assetid: 5a0a593d-43f4-4fa2-a401-ec4e23de4d2f
 ms.openlocfilehash: fc06c9f2060baae63071339768cef11fc5f34023
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447178"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62288020"
 ---
 # <a name="fputc-fputwc"></a>fputc、fputwc
 
@@ -57,7 +57,7 @@ wint_t fputwc(
 *c*<br/>
 書き込む文字。
 
-*ストリーム*<br/>
+*stream*<br/>
 **FILE** 構造体へのポインター。
 
 ## <a name="return-value"></a>戻り値

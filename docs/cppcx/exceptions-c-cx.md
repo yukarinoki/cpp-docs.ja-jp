@@ -3,11 +3,11 @@ title: 例外 (C++/CX)
 ms.date: 01/18/2018
 ms.assetid: 6cbdc1f1-e4d7-4707-a670-86365146432f
 ms.openlocfilehash: 7134cbb9e90f0355a3b2a912330027cf73876443
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471702"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62301527"
 ---
 # <a name="exceptions-ccx"></a>例外 (C++/CX)
 
@@ -15,13 +15,13 @@ ms.locfileid: "50471702"
 
 ## <a name="exceptions"></a>例外
 
-C++ プログラムでスローおよび Windows ランタイム操作から派生したから派生した例外をキャッチ`std::exception`、またはユーザー定義型です。 アプリケーション バイナリ インターフェイス (ABI) の境界を越えるなど、例外をキャッチするコードが JavaScript で記述されたときに場合にのみ、Windows ランタイムの例外をスローする必要があります。 非 Windows ランタイム C++ 例外が ABI 境界に達すると、例外に変換されます、 `Platform::FailureException` E_FAIL HRESULT を表す例外。 ABI の詳細については、「 [Creating Windows Runtime Components in C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)」を参照してください。
+C++ プログラムでスローおよび Windows ランタイム操作から派生したから派生した例外をキャッチ`std::exception`、またはユーザー定義型です。 アプリケーション バイナリ インターフェイス (ABI) の境界を越えるなど、例外をキャッチするコードが JavaScript で記述されたときに場合にのみ、Windows ランタイムの例外をスローする必要があります。 ときに、非 Windows ランタイムC++例外が ABI 境界に達すると、例外に変換される、 `Platform::FailureException` 、E_FAIL HRESULT を表す例外。 ABI の詳細については、「 [Creating Windows Runtime Components in C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)」を参照してください。
 
 宣言することができます、 [platform::exception](platform-exception-class.md)を HRESULT パラメーター、または HRESULT パラメーターを受け取る 2 つのコンス トラクターのいずれかを使用して、 [platform::string](platform-string-class.md)^ パラメーター間で渡すことができますが、これを処理するすべての Windows ランタイム アプリに ABI です。 または、1 つの HRESULT パラメーター、または 1 つの HRESULT パラメーターと [パラメーターのいずれかを受け取る 2 つの](platform-exception-class.md#createexception) Exception::CreateException メソッド `Platform::String^` オーバーロードの 1 つを使用して、例外を宣言できます。
 
 ## <a name="standard-exceptions"></a>標準の例外
 
-C + + CX は、一般的な HRESULT エラーを表す標準の例外のセットをサポートしています。 この標準例外は [Platform::COMException](platform-comexception-class.md)から派生し、その例外は `Platform::Exception`から派生します。 ABI の境界を越えて例外をスローするときは、標準の例外の 1 つをスローする必要があります。
+C++/CX では、一般的な HRESULT エラーを表す標準の例外のセットをサポートします。 この標準例外は [Platform::COMException](platform-comexception-class.md)から派生し、その例外は `Platform::Exception`から派生します。 ABI の境界を越えて例外をスローするときは、標準の例外の 1 つをスローする必要があります。
 
 `Platform::Exception`から独自の例外の種類を派生させることはできません。 カスタム例外をスローするには、ユーザー定義の HRESULT を使用して `COMException` オブジェクトを構築します。
 
@@ -99,7 +99,7 @@ void App::OnUnhandledException(Platform::Object^ sender, Windows::ApplicationMod
 
 ### <a name="remarks"></a>Remarks
 
-C + + CX は使用しない、`finally`句。
+C++/CX が使用しない、`finally`句。
 
 ## <a name="see-also"></a>関連項目
 

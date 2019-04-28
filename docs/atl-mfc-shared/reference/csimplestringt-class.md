@@ -37,11 +37,11 @@ helpviewer_keywords:
 - CSimpleStringT class
 ms.assetid: 15814fcb-5b8f-4425-a97e-3b61fc9b48d8
 ms.openlocfilehash: 1ec28ed5b2f5428cabcf7570c7ac53904e9a64f0
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57748230"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62252639"
 ---
 # <a name="csimplestringt-class"></a>CSimpleStringT クラス
 
@@ -121,7 +121,7 @@ String クラスの文字型。 次のいずれかの値を指定します。
 
 ### <a name="remarks"></a>Remarks
 
-`CSimpleStringT` Visual C でサポートされているさまざまな文字列クラスの基本クラスです。 バッファーの基本的な操作、文字列オブジェクトのメモリ管理のため、最小限のサポートを提供します。 高度な文字列オブジェクトでは、[CStringT クラス](../../atl-mfc-shared/reference/cstringt-class.md)を参照してください。
+`CSimpleStringT` Visual C でサポートされているさまざまな文字列クラスの基本クラスです。 バッファーの基本的な操作、文字列オブジェクトのメモリ管理のため、最小限のサポートを提供します。 高度な文字列オブジェクトでは、次を参照してください。 [CStringT クラス](../../atl-mfc-shared/reference/cstringt-class.md)します。
 
 ### <a name="requirements"></a>要件
 
@@ -576,7 +576,7 @@ IAtlStringMgr* GetManager() const throw();
 
 ### <a name="remarks"></a>Remarks
 
-Manager で使用されるメモリを取得するには、このメソッドを呼び出し、`CSimpleStringT`オブジェクト。 メモリ マネージャーと文字列オブジェクトの詳細については、[メモリ管理と CStringT](../memory-management-with-cstringt.md)を参照してください。
+Manager で使用されるメモリを取得するには、このメソッドを呼び出し、`CSimpleStringT`オブジェクト。 メモリ マネージャーと文字列オブジェクトの詳細については、次を参照してください。[メモリ管理と CStringT](../memory-management-with-cstringt.md)します。
 
 ##  <a name="getstring"></a>  CSimpleStringT::GetString
 
@@ -1040,7 +1040,7 @@ void SetManager(IAtlStringMgr* pStringMgr);
 
 ### <a name="remarks"></a>Remarks
 
-新しいメモリを指定するには、このメソッドで使用されるマネージャーを呼び出し、`CSimpleStringT`オブジェクト。 メモリ マネージャーと文字列オブジェクトの詳細については、[メモリ管理と CStringT](../memory-management-with-cstringt.md)を参照してください。
+新しいメモリを指定するには、このメソッドで使用されるマネージャーを呼び出し、`CSimpleStringT`オブジェクト。 メモリ マネージャーと文字列オブジェクトの詳細については、次を参照してください。[メモリ管理と CStringT](../memory-management-with-cstringt.md)します。
 
 ### <a name="example"></a>例
 
@@ -1144,7 +1144,7 @@ void Truncate(int nNewLength);
 新しい長さに文字列の内容を切り捨てるには、このメソッドを呼び出します。
 
 > [!NOTE]
->  これには、割り当てられたバッファーの長さは影響しません。 現在のバッファーを増減するには、[FreeExtra](#freeextra)と[Preallocate](#preallocate)を参照してください。
+>  これには、割り当てられたバッファーの長さは影響しません。 現在のバッファーを増減するには、次を参照してください。 [FreeExtra](#freeextra)と[Preallocate](#preallocate)します。
 
 ### <a name="example"></a>例
 
@@ -1173,7 +1173,7 @@ void UnlockBuffer() throw();
 
 文字列の参照カウントを 1 にリセットするには、このメソッドを呼び出します。
 
-`CSimpleStringT`デストラクターが自動的に呼び出します`UnlockBuffer`にデストラクターが呼び出されたときに、バッファーはロックされないことを確認します。 このメソッドの例は、[LockBuffer](#lockbuffer)を参照してください。
+`CSimpleStringT`デストラクターが自動的に呼び出します`UnlockBuffer`にデストラクターが呼び出されたときに、バッファーはロックされないことを確認します。 このメソッドの例は、次を参照してください。 [LockBuffer](#lockbuffer)します。
 
 ##  <a name="dtor"></a>  CSimpleStringT:: ~ CSimpleStringT
 

@@ -7,17 +7,17 @@ helpviewer_keywords:
 - cl.exe compiler, setting options
 ms.assetid: f3eef5ab-d0be-4fb2-90f9-927e6ed58736
 ms.openlocfilehash: 2269ba69cea2702ff190c791eb6753acb3619f7d
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57810303"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62294149"
 ---
 # <a name="compiling-a-cc-project"></a>C と C++ プロジェクトのコンパイル
 
 Visual Studio IDE またはコマンドラインで、C および C++ のコンパイラ オプションを設定できます。 
 
-## <a name="in-visual-studio"></a>Visual Studio で
+## <a name="in-visual-studio"></a>Visual Studio 内
 
 各プロジェクトのコンパイラ オプションを設定するには、Visual Studio で**プロパティ ページ** ダイアログ ボックス。 左側のウィンドウで次のように選択します。**構成プロパティ**、 **c/c++** コンパイラ オプションのカテゴリを選択するとします。 各コンパイラ オプションのトピックで、開発環境でオプションを設定する方法と、そのオプションがどこにあるかを説明します。 参照してください[MSVC コンパイラ オプション](compiler-options.md)完全な一覧についてはします。
 
@@ -43,7 +43,7 @@ Visual Studio IDE またはコマンドラインで、C および C++ のコン�
 
 - [リンカーを呼び出す CL](cl-invokes-the-linker.md)
 
-コンパイラのホストとターゲット アーキテクチャを選択する方法については、[64 ビット、x64 ターゲットで構成する C++ プロジェクト](../configuring-programs-for-64-bit-visual-cpp.md)を参照してください。
+コンパイラのホストとターゲット アーキテクチャを選択する方法については、次を参照してください。 [64 ビット、x64 ターゲットで構成する C++ プロジェクト](../configuring-programs-for-64-bit-visual-cpp.md)します。
 
 ## <a name="see-also"></a>関連項目
 

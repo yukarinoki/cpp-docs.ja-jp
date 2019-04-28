@@ -3,11 +3,11 @@ title: 1. はじめに
 ms.date: 01/16/2019
 ms.assetid: c42e72bc-0e31-4b1c-b670-cd82673c0c5a
 ms.openlocfilehash: 8c735408bdf9f9a13693bd0ad25df185bb1db42a
-ms.sourcegitcommit: 382e247c0f1b4cb7c2dab837b8b6fdff24bff47a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087276"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62236451"
 ---
 # <a name="1-introduction"></a>1.はじめに
 
@@ -117,7 +117,7 @@ OpenMP C および C++ API は、実装でサポートされているベース�
 
 すべての C および C++ の標準ライブラリ関数と組み込み関数 (つまり、コンパイラが特定のナレッジには、関数) スレッド セーフである必要があります。 同期されていない使用の並列領域内の別のスレッドでスレッド セーフな関数の未定義の動作は生成されません。 ただし、動作できない serial リージョンと同じです。 (ランダムな番号の生成関数は、例を示します)。
 
-OpenMP C と C++ API では、特定の動作は、ことを指定します*実装で定義されます。* OpenMP に準拠した実装は、定義し、このような場合は、その動作を文書化する必要があります。 動作の実装定義の一覧は、[付録 E](e-implementation-defined-behaviors-in-openmp-c-cpp.md)を参照してください。
+OpenMP C と C++ API では、特定の動作は、ことを指定します*実装で定義されます。* OpenMP に準拠した実装は、定義し、このような場合は、その動作を文書化する必要があります。 動作の実装定義の一覧は、次を参照してください。[付録 E](e-implementation-defined-behaviors-in-openmp-c-cpp.md)します。
 
 ## <a name="15-normative-references"></a>1.5 標準リファレンス
 
@@ -131,7 +131,7 @@ OpenMP API 仕様は、C を参照している場合は、基本実装でサポ�
 
 ## <a name="16-organization"></a>1.6 階層
 
-- [ランタイム ライブラリ関数](3-run-time-library-functions.md)
+- [ランタイム ライブラリの関数](3-run-time-library-functions.md)
 - [環境変数](4-environment-variables.md)
-- [OpenMP C/C の実装で定義された動作](e-implementation-defined-behaviors-in-openmp-c-cpp.md)
+- [OpenMP C/C++ の実装で定義されている動作](e-implementation-defined-behaviors-in-openmp-c-cpp.md)
 - [OpenMP C と C++ のバージョン 2.0 の新機能](f-new-features-and-clarifications-in-version-2-0.md)

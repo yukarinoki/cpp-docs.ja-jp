@@ -8,11 +8,11 @@ helpviewer_keywords:
 - templates [C++]
 ms.assetid: 90fcc14a-2092-47af-9d2e-dba26d25b872
 ms.openlocfilehash: f1532b5aa4ea712feab08b49b7c035187ca0d042
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50547952"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62330493"
 ---
 # <a name="templates-c"></a>テンプレート (C++)
 
@@ -55,7 +55,7 @@ int minimum(const int& lhs, const int& rhs)
 }
 ```
 
-関数テンプレートで、コンパイラが型の推論を実行する方法のルールは、通常の関数の規則に基づいています。 詳細については、[オーバー ロード解決の関数テンプレート呼び出し](../cpp/overload-resolution-of-function-template-calls.md)を参照してください。
+関数テンプレートで、コンパイラが型の推論を実行する方法のルールは、通常の関数の規則に基づいています。 詳細については、次を参照してください。[オーバー ロード解決の関数テンプレート呼び出し](../cpp/overload-resolution-of-function-template-calls.md)します。
 
 ## <a id="type_parameters"></a> 型パラメーター
 
@@ -219,4 +219,4 @@ MyMap<string, MyClass> classes2; // uses the partial specialization
 
 テンプレートには、それぞれの特殊化された型パラメーターが一意に任意の数の特殊化のことができます。 クラス テンプレートのみを部分的に特殊化することがあります。 テンプレートのすべての完全および部分的な特殊化は、元のテンプレートと同じ名前空間で宣言する必要があります。
 
-詳細については、[テンプレートの特殊化](../cpp/template-specialization-cpp.md)を参照してください。
+詳細については、次を参照してください。[テンプレートの特殊化](../cpp/template-specialization-cpp.md)します。

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - __declspec keyword [C++], appdomain
 ms.assetid: 29d843cb-cb6b-4d1b-a48d-d928a877234d
 ms.openlocfilehash: 3f83841565eb6a097f306129fe8f6d121f837c27
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476974"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62184496"
 ---
 # <a name="appdomain"></a>appdomain
 
@@ -30,7 +30,7 @@ ms.locfileid: "50476974"
 
 たとえば、プログラムの開始時に、すべての process ごとの変数が初期化され、続いて、すべての appdomain ごとの変数が初期化されます。 そのため、process ごとの変数が初期化されるときには、appdomain ごとの変数の値に依存することはできません。 appdomain ごとの変数と process ごとの変数を混在使用 (代入) することは好ましくありません。
 
-特定のアプリケーション ドメインで関数を呼び出す方法については、[call_in_appdomain 関数](../dotnet/call-in-appdomain-function.md)を参照してください。
+特定のアプリケーション ドメインで関数を呼び出す方法については、次を参照してください。 [call_in_appdomain 関数](../dotnet/call-in-appdomain-function.md)します。
 
 ## <a name="example"></a>例
 

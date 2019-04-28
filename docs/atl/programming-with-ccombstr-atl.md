@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Unicode, using CComBSTR [ATL]
 ms.assetid: d3bd0851-d132-4be9-9c4c-6ccba17acb2b
 ms.openlocfilehash: 806d23730a0657fc1e0c154e20dc9abd62f7e8af
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259413"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62261814"
 ---
 # <a name="programming-with-ccombstr-atl"></a>CComBSTR を使用したプログラミング (ATL)
 
@@ -28,7 +28,7 @@ ATL クラス[CComBSTR](../atl/reference/ccombstr-class.md) BSTR データ型ラ
 
 ##  <a name="programmingwithccombstr_conversionissues"></a> 変換の問題
 
-いくつか`CComBSTR`メソッドが Unicode に ANSI 文字列引数を自動的に変換されます、メソッドは常に Unicode 形式の文字列を返します。 出力文字列を ANSI に変換する、するには、ATL 変換クラスを使用します。 ATL 変換クラスの詳細については、[ATL と MFC 文字列変換マクロ](reference/string-conversion-macros.md)を参照してください。
+いくつか`CComBSTR`メソッドが Unicode に ANSI 文字列引数を自動的に変換されます、メソッドは常に Unicode 形式の文字列を返します。 出力文字列を ANSI に変換する、するには、ATL 変換クラスを使用します。 ATL 変換クラスの詳細については、次を参照してください。 [ATL と MFC 文字列変換マクロ](reference/string-conversion-macros.md)します。
 
 ### <a name="example"></a>例
 

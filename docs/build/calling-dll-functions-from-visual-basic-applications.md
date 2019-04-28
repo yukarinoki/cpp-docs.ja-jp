@@ -11,17 +11,17 @@ helpviewer_keywords:
 - DLL functions [C++], calling
 ms.assetid: 282f7fbf-a0f2-4b9f-b277-1982710be56c
 ms.openlocfilehash: 1e4f1a538da2394c6cead6ea011faf126b022a3f
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57814970"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62195343"
 ---
 # <a name="calling-dll-functions-from-visual-basic-applications"></a>DLL 関数の Visual Basic アプリケーションからの呼び出し方
 
 Visual Basic アプリケーション (または Pascal、Fortran などの他の言語でのアプリケーション) の C と C++ の DLL で関数を呼び出すの関数をエクスポート正しい呼び出し規則を使用して、コンパイラによって装飾された名前なし
 
-`__stdcall` は、関数の正しい呼び出し規約を作成します。つまり、呼び出された関数がスタックをクリアし、パラメーターは右から左へ渡されます。ただし、関数名は異なる方法で装飾されます。 したがって、**方式**使用 DLL でエクスポートされた関数の装飾名がエクスポートされます。
+`__stdcall` は、関数の正しい呼び出し規則を作成します。つまり、呼び出された関数がスタックをクリアし、パラメーターは右から左へ渡されます。ただし、関数名は異なる方法で装飾されます。 したがって、**方式**使用 DLL でエクスポートされた関数の装飾名がエクスポートされます。
 
 `__stdcall`名前の装飾をアンダー スコアでシンボル名のプレフィックス ( **\_** ) のシンボルを追加し、アット マーク (**\@**) 文字の数が続く引数リスト (必要なスタック空間) のバイト数。 結果として、宣言時の関数は次のようになります。
 
@@ -39,8 +39,7 @@ C の呼び出し規則 (`__cdecl`) による装飾では、名前は `_func` �
 
 - エクスポートされる関数が C の呼び出し規則を使わない場合 (`__stdcall` など) は、装飾名がエクスポートされます。
 
-スタックがクリアされた場所をオーバーライドする方法はないので、`__stdcall` を使う必要があります。 
-  `__stdcall` を使って装飾を外すには、.def ファイルの EXPORTS セクションにエイリアスを使って、その名前を指定する必要があります。 関数宣言の例を次に示します。
+スタックがクリアされた場所をオーバーライドする方法はないので、`__stdcall` を使う必要があります。 `__stdcall` を使って装飾を外すには、.def ファイルの EXPORTS セクションにエイリアスを使って、その名前を指定する必要があります。 関数宣言の例を次に示します。
 
 ```C
 int  __stdcall MyFunc (int a, double b);

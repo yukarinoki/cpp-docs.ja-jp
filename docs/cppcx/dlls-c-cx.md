@@ -3,11 +3,11 @@ title: DLL (C++/CX)
 ms.date: 02/06/2018
 ms.assetid: 5b8bcc57-64dd-4c54-9f24-26a25bd5dddd
 ms.openlocfilehash: 1a72ecc5eb46abfbc7b9a52a168510ce0873ee04
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445709"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62183287"
 ---
 # <a name="dlls-ccx"></a>DLL (C++/CX)
 
@@ -23,7 +23,7 @@ Visual Studio を使用して、標準の Win32 DLL または Windows ランタ�
 
 1. DLL を使用するプロジェクトのショートカット メニューを開き、 **[プロパティ]** をクリックします。 **[共通プロパティ]** ページで、 **[新しい参照の追加]** をクリックします。
 
-1. Windows ランタイム コンポーネントは、DLL ファイルとメタデータを含む .winmd ファイルで構成されます。 通常、これらのファイルは同じフォルダーにあります。 **[参照の追加]** ダイアログ ボックスの左ペインで、 **[参照]** をクリックし、DLL とその .winmd ファイルの場所に移動します。 詳細については、[拡張 Sdk](/visualstudio/extensibility/creating-a-software-development-kit#ExtensionSDKs)を参照してください。
+1. Windows ランタイム コンポーネントは、DLL ファイルとメタデータを含む .winmd ファイルで構成されます。 通常、これらのファイルは同じフォルダーにあります。 **[参照の追加]** ダイアログ ボックスの左ペインで、 **[参照]** をクリックし、DLL とその .winmd ファイルの場所に移動します。 詳細については、次を参照してください。[拡張 Sdk](/visualstudio/extensibility/creating-a-software-development-kit#ExtensionSDKs)します。
 
 ## <a name="standard-dlls"></a>標準 DLL
 

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - release builds, debugging
 ms.assetid: d333e4d1-4e6c-4384-84a9-cb549702da25
 ms.openlocfilehash: 6d93fac4e980085c322acb55e6f8758e6cea0a00
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57828081"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62188965"
 ---
 # <a name="how-to-debug-a-release-build"></a>方法: リリース ビルドをデバッグします。
 
@@ -18,7 +18,7 @@ ms.locfileid: "57828081"
 
 ### <a name="to-debug-a-release-build"></a>リリース ビルドをデバッグするには
 
-1. 開く、**プロパティ ページ**プロジェクトのダイアログ ボックス。 詳細については、[Visual Studio での設定の C++ コンパイラとビルド プロパティ](working-with-project-properties.md)を参照してください。
+1. 開く、**プロパティ ページ**プロジェクトのダイアログ ボックス。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](working-with-project-properties.md)します。
 
 1. をクリックして、 **C/C++** ノード。 設定**デバッグ情報の形式**に[C7 互換 (/Z7)](reference/z7-zi-zi-debug-information-format.md)または**プログラム データベース (/Zi)** します。
 
@@ -34,7 +34,7 @@ ms.locfileid: "57828081"
 
    使用することができます[/RTC](reference/rtc-run-time-error-checks.md)デバッグ ビルドでは、このようなバグを公開しようとします。
 
-   詳細については、[コードの最適化](optimizing-your-code.md)を参照してください。
+   詳細については、次を参照してください。[コードの最適化](optimizing-your-code.md)します。
 
 ## <a name="see-also"></a>関連項目
 

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - LNK2027
 ms.assetid: e2f857a8-8e8a-4697-bbff-12ccb84a35c1
 ms.openlocfilehash: e74912780bab3056ead36ae3705f0910805228e9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50545900"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62299011"
 ---
 # <a name="linker-tools-error-lnk2027"></a>リンカ ツール エラー LNK2027
 
@@ -27,4 +27,4 @@ LNK2027 を解決するには、次のいずれかの操作を行います。
 
 - モジュールが安全な .netmodule の場合は、リンカーに直接モジュールを渡します。
 
-詳細については、[/ASSEMBLYMODULE (MSIL モジュールのアセンブリへの追加)](../../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md)と[リンカー入力としての .netmodule ファイル](../../build/reference/netmodule-files-as-linker-input.md)を参照してください。
+詳細については、次を参照してください。 [/ASSEMBLYMODULE (MSIL モジュールのアセンブリへの追加)](../../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md)と[リンカー入力としての .netmodule ファイル](../../build/reference/netmodule-files-as-linker-input.md)します。

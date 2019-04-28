@@ -13,11 +13,11 @@ helpviewer_keywords:
 - combinable class
 ms.assetid: fe0bfbf6-6250-47da-b8d0-f75369f0b5be
 ms.openlocfilehash: 05256516c0a693a282b8d0de56d6c9e7465f2740
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57299974"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62252972"
 ---
 # <a name="combinable-class"></a>combinable クラス
 
@@ -61,7 +61,7 @@ class combinable;
 
 ## <a name="remarks"></a>Remarks
 
-詳細については、[並列コンテナーとオブジェクト](../../../parallel/concrt/parallel-containers-and-objects.md)を参照してください。
+詳細については、次を参照してください。[並列コンテナーとオブジェクト](../../../parallel/concrt/parallel-containers-and-objects.md)します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 

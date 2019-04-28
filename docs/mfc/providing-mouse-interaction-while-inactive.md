@@ -5,11 +5,11 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], mouse interaction
 ms.assetid: b09106bf-44c7-4b9b-a6d9-0d624f16f5b3
 ms.openlocfilehash: d37deeec06551ae8bf340c99a9759327ce2ec2b7
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57287844"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62297126"
 ---
 # <a name="providing-mouse-interaction-while-inactive"></a>コントロールがアクティブでないときのマウスとの対話
 
@@ -33,4 +33,4 @@ OLE ドラッグ アンド ドロップ操作の対象となる、非アクテ�
 
 ## <a name="see-also"></a>関連項目
 
-[MFC ActiveX コントロール:最適化](../mfc/mfc-activex-controls-optimization.md)
+[MFC ActiveX コントロール: 最適化](../mfc/mfc-activex-controls-optimization.md)

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - default keyword [C++]
 ms.assetid: 6c3f3ed3-5593-463c-8f4b-b33742b455c6
 ms.openlocfilehash: 67918b7df747d3bee923da500729e60b4fe04336
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51328852"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62267090"
 ---
 # <a name="switch-statement-c"></a>switch ステートメント (C++)
 
@@ -45,7 +45,7 @@ ms.locfileid: "51328852"
 |含まれている定数に一致、定数のいずれも、**ケース**ラベル、**既定**ラベルが存在します。|制御が移ります、**既定**ラベル。|
 |含まれている定数に一致、定数のいずれも、**ケース**ラベル。**既定**ラベルが存在しません。|後のステートメントに制御が移ります、**切り替える**ステートメント。|
 
-コントロールがそれ以降によって妨げられるいない一致する式が見つかった場合**ケース**または**既定**ラベル。 [Break](../cpp/break-statement-cpp.md)ステートメントが実行を停止し、後のステートメントに制御を転送するために使用、**切り替える**ステートメント。 なし、 **break**ステートメントでは、すべてのステートメントから、一致する**ケース**の末尾にラベル、**切り替える**など、**既定**は実行されます。 例えば:
+コントロールがそれ以降によって妨げられるいない一致する式が見つかった場合**ケース**または**既定**ラベル。 [Break](../cpp/break-statement-cpp.md)ステートメントが実行を停止し、後のステートメントに制御を転送するために使用、**切り替える**ステートメント。 なし、 **break**ステートメントでは、すべてのステートメントから、一致する**ケース**の末尾にラベル、**切り替える**など、**既定**は実行されます。 例:
 
 ```cpp
 // switch_statement1.cpp
@@ -106,7 +106,7 @@ int main()
 }
 ```
 
-**Visual Studio 2017 バージョン 15.3 以降**(で使用可能な[/std:c + + 17](../build/reference/std-specify-language-standard-version.md)): switch ステートメントが紹介し、スコープは、switch ステートメントのブロックに限定する変数を初期化する場合があります。
+**Visual Studio 2017 バージョン 15.3 以降**(で使用可能な[/std:c + + 17](../build/reference/std-specify-language-standard-version.md))。Switch ステートメントは、紹介し、スコープは、switch ステートメントのブロックに限定する変数を初期化することがあります。
 
 ```cpp
     switch (Gadget gadget(args); auto s = gadget.get_status())
@@ -119,7 +119,7 @@ int main()
     };
 ```
 
-内側のブロックを**切り替える**が到達可能な限り、ステートメントで初期化の定義を含めることができます: ないは、すべての実行可能なパスではバイパスされます。 これらの宣言を使用して導入された名前にはローカル スコープがあります。 例えば:
+内側のブロックを**切り替える**が到達可能な限り、ステートメントで初期化の定義を含めることができます: ないは、すべての実行可能なパスではバイパスされます。 これらの宣言を使用して導入された名前にはローカル スコープがあります。 例:
 
 ```cpp
 // switch_statement2.cpp

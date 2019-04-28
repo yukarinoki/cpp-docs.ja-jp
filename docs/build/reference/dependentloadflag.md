@@ -11,11 +11,11 @@ helpviewer_keywords:
 - DEPENDENTLOADFLAG linker option
 - /DEPENDENTLOADFLAG linker option
 ms.openlocfilehash: 94998e06f23a7e70524221d3cb75166b5d3f2c44
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57815971"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62272088"
 ---
 # <a name="dependentloadflag-set-default-dependent-load-flags"></a>/DEPENDENTLOADFLAG (既定依存読み込みフラグを設定します)
 
@@ -36,13 +36,13 @@ ms.locfileid: "57815971"
 
 サポートされるオペレーティング システムでは、このオプションがへの呼び出しを変更した効果`LoadLibrary("dependent.dll")`を同等の`LoadLibraryEx("dependent.dll", 0, loadflags)`します。 呼び出す[LoadLibraryEx](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexa)は影響を受けません。 このオプションでは、アプリを読み込んだ Dll を再帰的には適用されません。
 
-このフラグは、攻撃を仕掛ける DLL を防ぐために使用できます。 たとえば、アプリで使用`LoadLibrary`依存 DLL を読み込むには、攻撃者で使用される検索パスに同じ名前の DLL を工場でした`LoadLibrary`、現在のディレクトリなどセーフ DLL の検索モードがある場合、システムのディレクトリの前にするチェック可能性があります無効になります。 セーフ DLL の検索モードでは、検索の順序で後で、ユーザーの現在のディレクトリに配置し、Windows XP SP2 以降では既定で有効にします。 詳細については、[ダイナミック リンク ライブラリの検索順序](/windows/desktop/Dlls/dynamic-link-library-search-order)を参照してください。
+このフラグは、攻撃を仕掛ける DLL を防ぐために使用できます。 たとえば、アプリで使用`LoadLibrary`依存 DLL を読み込むには、攻撃者で使用される検索パスに同じ名前の DLL を工場でした`LoadLibrary`、現在のディレクトリなどセーフ DLL の検索モードがある場合、システムのディレクトリの前にするチェック可能性があります無効になります。 セーフ DLL の検索モードでは、検索の順序で後で、ユーザーの現在のディレクトリに配置し、Windows XP SP2 以降では既定で有効にします。 詳細については、次を参照してください。[ダイナミック リンク ライブラリの検索順序](/windows/desktop/Dlls/dynamic-link-library-search-order)します。
 
-リンク オプションを指定する場合`/DEPENDENTLOADFLAG:0xA00`(結合フラグの値`LOAD_LIBRARY_SEARCH_APPLICATION_DIR | LOAD_LIBRARY_SEARCH_SYSTEM32`)、DLL 検索パスは、攻撃者がより困難である保護されたディレクトリに制限ユーザーのコンピューターに安全な DLL の検索モードが無効の場合でも変更します。 使用可能なフラグと、そのシンボリックと数値の値は、、 *dwFlags*パラメーターの説明を[LoadLibraryEx](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexa)を参照してください。
+リンク オプションを指定する場合`/DEPENDENTLOADFLAG:0xA00`(結合フラグの値`LOAD_LIBRARY_SEARCH_APPLICATION_DIR | LOAD_LIBRARY_SEARCH_SYSTEM32`)、DLL 検索パスは、攻撃者がより困難である保護されたディレクトリに制限ユーザーのコンピューターに安全な DLL の検索モードが無効の場合でも変更します。 使用可能なフラグと、そのシンボリックと数値の値は、次を参照してください。、 *dwFlags*パラメーターの説明を[LoadLibraryEx](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexa)します。
 
 ### <a name="to-set-the-dependentloadflag-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境で DEPENDENTLOADFLAG リンカー オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. 選択、**構成プロパティ** > **リンカー** > **コマンドライン**プロパティ ページ。
 
@@ -54,7 +54,7 @@ ms.locfileid: "57815971"
 
 ## <a name="see-also"></a>関連項目
 
-- [MSVC リンカーの参照](linking.md)
+- [MSVC リンカーのリファレンス](linking.md)
 - [MSVC リンカー オプション](linker-options.md)
 - [実行可能ファイルと DLL のリンク](../linking-an-executable-to-a-dll.md#linking-implicitly)
 - [実行可能ファイルと DLL のリンク](../linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)

@@ -23,11 +23,11 @@ helpviewer_keywords:
 - std::unique_ptr [C++], swap
 ms.assetid: acdf046b-831e-4a4a-83aa-6d4ee467db9a
 ms.openlocfilehash: b0751d7716e2f8587ab410e57c2bea17c5dd3e21
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520973"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62295462"
 ---
 # <a name="uniqueptr-class"></a>unique_ptr クラス
 
@@ -117,7 +117,7 @@ public:
 
 `unique_ptr` は一意にリソースを管理します。 `unique_ptr` オブジェクトは null ポインターを所有または保存するオブジェクトへのポインターを格納します。 1 つのリソースは、1 つの `unique_ptr` オブジェクトによってのみ所有されます。特定のリソースを所有する `unique_ptr` オブジェクトが破棄された時点で、リソースが解放されます。 `unique_ptr` オブジェクトを移動することはできますが、コピーすることはできません。詳細については、「[右辺値参照宣言子: &&](../cpp/rvalue-reference-declarator-amp-amp.md)」を参照してください。
 
-特定の `deleter` に対するリソースの割り当てを認識する、`Del` 型の格納された `unique_ptr` オブジェクトを呼び出すことによって、リソースが解放されます。 既定の`deleter``default_delete<T>`がでリソースを指すことを前提としています`ptr`使用が割り当てられた`new`、呼び出すことによって解放できることと`delete _Ptr`します。 (部分的特殊化 `unique_ptr<T[]>` は `new[]` で割り当てられた配列オブジェクトを管理します。また、delete[] `deleter` の呼び出しに特化した既定の `default_delete<T[]>` `ptr` があります)。
+特定の `deleter` に対するリソースの割り当てを認識する、`Del` 型の格納された `unique_ptr` オブジェクトを呼び出すことによって、リソースが解放されます。 既定の`deleter``default_delete<T>`がでリソースを指すことを前提としています`ptr`使用が割り当てられた`new`、呼び出すことによって解放できることと`delete _Ptr`します。 (部分的特殊化`unique_ptr<T[]>`で割り当てられた配列オブジェクトを管理`new[]`の既定値は`deleter` `default_delete<T[]>`delete[] を呼び出しに特化した、 `ptr`)。
 
 所有されたリソースに対する格納されたポインター、`stored_ptr` には、`pointer` 型があります。 これは、定義されている場合は `Del::pointer`、定義されていない場合は `T *` です。 `deleter` がステートレスである場合、格納された `stored_deleter` オブジェクトである `deleter` はオブジェクト内の領域を使用しません。 `Del` が参照型である場合があることに注意してください。
 
