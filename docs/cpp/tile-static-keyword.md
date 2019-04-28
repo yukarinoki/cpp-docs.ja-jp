@@ -7,15 +7,15 @@ helpviewer_keywords:
 - tile_static keyword
 ms.assetid: d78384d4-65d9-45cf-b3df-7e904f489d06
 ms.openlocfilehash: 1e0e967edd1808b27d3d4e92f29f7472608f8e65
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588163"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62330467"
 ---
 # <a name="tilestatic-keyword"></a>tile_static キーワード
 
-**Tile_static**スレッドのタイルのすべてのスレッドによってアクセスできる変数を宣言するキーワードを使用します。 実行が宣言の位置を達したときに変数の有効期間が開始し、カーネル関数の復帰時に終了します。 タイルの使用に関する詳細については、[を使用してタイル](../parallel/amp/using-tiles.md)を参照してください。
+**Tile_static**スレッドのタイルのすべてのスレッドによってアクセスできる変数を宣言するキーワードを使用します。 実行が宣言の位置を達したときに変数の有効期間が開始し、カーネル関数の復帰時に終了します。 タイルの使用に関する詳細については、次を参照してください。[を使用してタイル](../parallel/amp/using-tiles.md)します。
 
 **Tile_static**キーワードには、次の制限事項。
 

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - dynamically linked DLLs [C++]
 ms.assetid: b4f7ab92-8723-42a5-890e-214f4e29dcd0
 ms.openlocfilehash: 3bfed5f75dab4c501708950fdb99f53c40ec142c
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57821301"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62315002"
 ---
 # <a name="regular-mfc-dlls-dynamically-linked-to-mfc"></a>MFC と動的にリンクされるレギュラー MFC Dll
 
@@ -77,7 +77,7 @@ extern "C" __declspec(dllexport) MyExportedFunction( );
 AFX_MANAGE_STATE(AfxGetStaticModuleState( ))
 ```
 
-**AFX_MANAGE_STATE**または MFC 拡張 Dll で MFC を静的にリンクされるレギュラー MFC Dll で、マクロを使用しない必要があります。 詳細については、[MFC モジュールの状態データを管理する](../mfc/managing-the-state-data-of-mfc-modules.md)を参照してください。
+**AFX_MANAGE_STATE**または MFC 拡張 Dll で MFC を静的にリンクされるレギュラー MFC Dll で、マクロを使用しない必要があります。 詳細については、次を参照してください。 [MFC モジュールの状態データを管理する](../mfc/managing-the-state-data-of-mfc-modules.md)します。
 
 作成、ビルド、およびレギュラー MFC DLL を使用する方法の例は、サンプルを参照してください。[は](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/advanced/DllScreenCap)します。 MFC と動的にリンクされるレギュラー MFC Dll の詳細については、サンプルの要約を"変換を動的にリンクを MFC DLL"というセクションを参照してください。
 

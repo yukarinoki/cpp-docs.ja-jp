@@ -10,18 +10,18 @@ helpviewer_keywords:
 - Windows API [MFC], Internet classes
 ms.assetid: b49601d5-3025-4068-9408-316b54ee4375
 ms.openlocfilehash: c067d0c0067ee13b0e6ce6d84fd97135274c88b5
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57260557"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62326730"
 ---
 # <a name="win32-internet-classes"></a>Win32 インターネット クラス
 
 MFC は、インターネット プログラミングを簡単には、Win32 のインターネット (WinInet) と ActiveX テクノロジをラップします。
 
 >[!IMPORTANT]
-> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の置き換えの最新のテクノロジの詳細については、[ActiveX コントロール](activex-controls.md)を参照してください。
+> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の置き換えの最新のテクノロジの詳細については、次を参照してください。 [ActiveX コントロール](activex-controls.md)します。
 
 [CInternetSession](../mfc/reference/cinternetsession-class.md)<br/>
 作成しインターネット セッションを 1 つまたは複数の同時インターネット セッションを初期化し、必要に応じて、プロキシ サーバーへの接続をについて説明します。

@@ -14,17 +14,17 @@ helpviewer_keywords:
 - macros
 ms.assetid: add4e33f-0e62-4d27-be14-896cb8675d22
 ms.openlocfilehash: 27664d4e48c0c4e09439f9e970ded9f2a630d90d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57268188"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62310275"
 ---
 # <a name="mfc-macros-and-globals"></a>MFC マクロとグローバル
 
 Microsoft Foundation Class ライブラリは、2 つの主要なセクションに分類できます。(MFC クラスと (2) マクロとグローバル 1)。 クラスのメンバーではない関数や変数は、グローバル関数またはグローバル変数です。
 
-MFC ライブラリと ATL (Active Template Library) は文字列変換マクロを共有します。 詳細については、[文字列変換マクロ](../../atl/reference/string-conversion-macros.md)、ATL のドキュメントにを参照してください。
+MFC ライブラリと ATL (Active Template Library) は文字列変換マクロを共有します。 詳細については、次を参照してください。[文字列変換マクロ](../../atl/reference/string-conversion-macros.md)、ATL のドキュメントにします。
 
 MFC のマクロ、グローバル関数、およびグローバル変数には、次の機能が用意されています。
 

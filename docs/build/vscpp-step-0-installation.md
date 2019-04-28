@@ -7,11 +7,11 @@ ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
 ms.openlocfilehash: 2c2bed4063194bdc3c0f3fbc405be6bf9a4031e7
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58870781"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62315196"
 ---
 # <a name="install-c-support-in-visual-studio"></a>Visual Studio での C++ のサポートをインストール
 
@@ -22,7 +22,7 @@ ms.locfileid: "58870781"
 
 ## <a name="visual-studio-2019-installation"></a>Visual Studio 2019 のインストール
 
-Studio 2019 のビジュアルへようこそ! このバージョンでは、簡単に選択し、必要な機能だけをインストールできますが。 制限の最小フット プリントにより迅速に、少ないシステムへの影響をインストールします。
+Visual Studio 2019 へようこそ このバージョンでは、必要な機能だけを簡単に選択してインストールできます。 占有領域が最小限まで小さくなっているため、インストールが速く、システムにほとんど影響しません。
 
 > [!NOTE]
 > このトピックでは、Windows 上の Visual Studio のインストールに適用されます。 [Visual Studio Code](https://code.visualstudio.com/)は Windows、Mac、および Linux システムで実行される軽量のクロスプラット フォーム開発環境です。 Microsoft [for Visual Studio Code には、C/C++](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools)拡張機能は、IntelliSense、デバッグ、コードの書式設定、オート コンプリートをサポートしています。 Visual Studio for Mac では、Microsoft C でサポートされていませんは .NET 言語とクロス プラットフォーム開発をサポートします。 インストール手順については、次を参照してください。 [Visual Studio for Mac をインストール](/visualstudio/mac/installation/)します。
@@ -35,7 +35,7 @@ Studio 2019 のビジュアルへようこそ! このバージョンでは、簡
 
 Visual Studio のインストールを開始する前に
 
-1. [システム要件](/visualstudio/releases/2019/system-requirements)を確認します。 これらの要件では、コンピューターに Visual Studio 2019 がサポートしているかどうかを知ることができます。
+1. [システム要件](/visualstudio/releases/2019/system-requirements)を確認します。 これらの要件により、ご利用のコンピューターが Visual Studio 2019 に対応しているかどうかを確認できます。
 
 1. 最新の Windows 更新プログラムを適用します。 これらの更新プログラムにより、Visual Studio の最新のセキュリティ更新プログラムと必要なシステム コンポーネントの両方がコンピューターにインストールされます。
 
@@ -43,18 +43,18 @@ Visual Studio のインストールを開始する前に
 
 1. 記憶域を解放します。 ディスク クリーンアップ アプリを実行するなどして、%SystemDrive% から不要なファイルとアプリケーションを削除します。
 
-Visual Studio 2019 で以前のバージョンの Visual Studio のサイド バイ サイドの実行に関する質問については、次を参照してください。、 [Visual Studio 2019 対象プラットフォームと互換性](/visualstudio/releases/2019/compatibility/)ページ。
+Visual Studio 2019 と以前のバージョンの Visual Studio を共存させて実行することについて疑問点がある場合は、「[Visual Studio 2019 の対象プラットフォームと互換性](/visualstudio/releases/2019/compatibility/)」ページをご覧ください。
 
 ### <a name="step-2---download-visual-studio"></a>手順 2 - Visual Studio をダウンロードする
 
-次に、Visual Studio ブートストラップ ファイルをダウンロードします。 これを行うには、次のボタン クリックしてを選択して、必要な Visual Studio のエディションを選択**保存**を選び、**フォルダーを開く**します。
+次に、Visual Studio ブートストラップ ファイルをダウンロードします。 これを行うには、以下のボタンを選択し、必要な Visual Studio のエディションを選択して、**[保存]**、**[フォルダーを開く]** の順に選択します。
 
  > [!div class="button"]
  > [Visual Studio のダウンロード](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2019+rc)
 
 ### <a name="step-3---install-the-visual-studio-installer"></a>手順 3 - Visual Studio インストーラーをインストールする
 
-Visual Studio インストーラーをインストールするブートス トラップ ファイルを実行します。 この新しい軽量インストーラーには、両方をインストールして Visual Studio をカスタマイズする必要があるすべてのものが含まれます。
+ブートストラップ ファイルを実行して、Visual Studio インストーラーをインストールします。 この新しい軽量インストーラーには、Visual Studio のインストールとカスタマイズの両方に必要なすべてのものが含まれています。
 
 1. **[ダウンロード]** フォルダーで、次のいずれかのファイルと一致する、または似ているブートストラップをダブルクリックします。
 
@@ -62,17 +62,17 @@ Visual Studio インストーラーをインストールするブートス ト�
    * Visual Studio Professional の場合は **vs_professional.exe**
    * Visual Studio Enterprise の場合は **vs_enterprise.exe**
 
-   ユーザー アカウント制御の通知を受信する場合は、選択**はい**します。
+   ユーザー アカウント制御の通知を受信する場合、**[はい]** を選択します。
 
-1. Microsoft の[ライセンス条項](https://visualstudio.microsoft.com/license-terms/)と[プライバシーに関する声明](https://privacy.microsoft.com/privacystatement)の確認を求められます。 選択**続行**します。
+1. Microsoft の[ライセンス条項](https://visualstudio.microsoft.com/license-terms/)と[プライバシーに関する声明](https://privacy.microsoft.com/privacystatement)の確認を求められます。 **[続行]** を選択します。
 
-### <a name="step-4---choose-workloads"></a>手順 4 - ワークロードの選択
+### <a name="step-4---choose-workloads"></a>手順 4 - ワークロードを選択する
 
 インストーラーがインストールされた後は、インストールを選択してカスタマイズするを使用できます、*ワークロード*の機能セットを使用するか。 ここではその方法を説明します。
 
 1. **[Visual Studio のインストール]** 画面で、必要なワークロードを見つけます。
 
-   ![Visual Studio 2019:ワークロードをインストールします。](../get-started/media/vs-installer-workloads.png)
+   ![Visual Studio 2019:ワークロードをインストールする](../get-started/media/vs-installer-workloads.png)
 
    C++ のコア サポートについては、「C++ によるデスクトップ開発」ワークロードを選択します。 これには既定のコア エディターが用意されており、20 を超える言語の基本的なコード編集サポートが含まれ、プロジェクトなしで任意のフォルダーからコードを開いて編集することができます。また、統合ソース コード管理を利用できます。
 
@@ -85,19 +85,19 @@ Visual Studio インストーラーをインストールするブートス ト�
     そうすると、ステータス画面が表示され、Visual Studio のインストールの進行状況が示されます。
 
 > [!TIP]
-> インストール後いつでも、最初にインストールしなかったワークロードまたはコンポーネントをインストールできます。 Visual Studio を開いている場合は、**[ツール]** > **[ツールと機能を取得]** に移動すると、Visual Studio インストーラーが開きます。 または、スタート メニューから **Visual Studio インストーラー**を開きます。 そこから、ワークロードまたはコンポーネントをインストールするを選択できます。 次に、選択**変更**します。
+> インストール後いつでも、最初にインストールしなかったワークロードまたはコンポーネントをインストールできます。 Visual Studio を開いている場合は、**[ツール]** > **[ツールと機能を取得]** に移動すると、Visual Studio インストーラーが開きます。 または、スタート メニューから **Visual Studio インストーラー**を開きます。 そこから、インストールするワークロードまたはコンポーネントを選択できます。 次に、**[変更]** を選択します。
 
-## <a name="step-5---choose-individual-components-optional"></a>手順 5 - 個々 のコンポーネント (省略可能) を選択
+## <a name="step-5---choose-individual-components-optional"></a>手順 5 - 個々のコンポーネントを選択する (省略可能)
 
-ワークロードの機能を使用して、Visual Studio のインストールをカスタマイズする必要はありません、またはワークロードのインストール以外のコンポーネントを追加する、これを行うをインストールまたはから個々 のコンポーネントを追加、 **の個々のコンポーネント**タブ。次の選択画面の指示します。
+ワークロード機能を使用して Visual Studio のインストールをカスタマイズしない場合、またはワークロードのインストール以外のコンポーネントを追加する場合は、**[個別のコンポーネント]** タブから個々のコンポーネントをインストールまたは追加することによって行うことができます。必要なものを選択した後、画面の指示に従います。
 
-  ![Visual Studio 2019 - 個々 のコンポーネントのインストール](../get-started/media/vs-installer-individual-components.png "個々 のコンポーネントを Visual Studio のインストール")
+  ![Visual Studio 2019 - 個々のコンポーネントのインストール](../get-started/media/vs-installer-individual-components.png "Visual Studio の個々のコンポーネントのインストール")
 
 ## <a name="step-6---install-language-packs-optional"></a>手順 6 - 言語パックをインストールする (省略可能)
 
-既定では、インストーラー プログラムが、最初の実行時にオペレーティング システムの言語の照合を試みます。 好きな言語で Visual Studio をインストールするには、選択、**言語パック**タブから、Visual Studio インストーラーとし、指示に従います。
+既定では、インストーラー プログラムが、最初の実行時にオペレーティング システムの言語の照合を試みます。 選択した言語で Visual Studio をインストールするには、Visual Studio インストーラーで **[言語パック]** タブをクリックした後、画面の指示に従います。
 
-  ![Visual Studio 2019 - 言語パックをインストール](../get-started/media/vs-installer-language-packs.png "Visual Studio のインストールの言語パック")
+  ![Visual Studio 2019 - 言語パックのインストール](../get-started/media/vs-installer-language-packs.png "Visual Studio の言語パックのインストール")
 
 ### <a name="change-the-installer-language-from-the-command-line"></a>コマンド ラインかインストーラーの言語を変更する
 
@@ -105,24 +105,24 @@ Visual Studio インストーラーをインストールするブートス ト�
 
 ### <a name="step-7---change-the-installation-location-optional"></a>手順 7 - インストール場所の変更 (省略可能)
 
-システム ドライブには、Visual Studio のインストール フット プリントを削減できます。 ダウンロード キャッシュ、共有コンポーネント、SDK、およびツールを別のドライブに移動して、Visual Studio を最速で実行できるドライブで維持できます。
+システム ドライブ上の Visual Studio のインストール占有領域を小さくすることができます。 ダウンロード キャッシュ、共有コンポーネント、SDK、およびツールを別のドライブに移動して、Visual Studio を最速で実行できるドライブで維持できます。
 
-  ![Visual Studio 2019 - 変更の場所からインストール](../get-started/media/vs-installer-installation-locations.png "インストール場所の変更")
+  ![Visual Studio 2019 - インストール場所を変更する](../get-started/media/vs-installer-installation-locations.png "インストール場所を変更する")
 
 > [!IMPORTANT]
-> Visual Studio を初めてインストールしたときにのみ、別のドライブを選択できます。 既にインストール済みのドライブを変更する場合は、Visual Studio をアンインストールおよび再インストールする必要があります。
+> Visual Studio を初めてインストールするときにのみ、別のドライブを選択できます。 既にインストールしてあるドライブを変更する場合は、Visual Studio をアンインストールした後、再インストールする必要があります。
 
 ## <a name="step-8---start-developing"></a>手順 8 - 開発を始める
 
-1. Visual Studio のインストールが完了したら、選択、**起動**Visual Studio を使用した開発を開始するボタンをクリックします。
+1. Visual Studio のインストールが完了したら **[起動]** を選択して、Visual Studio を使用した開発を開始します。
 
 1. スタート ウィンドウで、**[新しいプロジェクトの作成]** を選択します。
 
-1. 検索ボックスで、使用可能なテンプレートの一覧を表示するを作成するアプリの種類を入力します。 テンプレートの一覧は、インストール時に選択したワークロードに依存します。 別のテンプレートに表示するには、さまざまなワークロードを選択します。
+1. 検索ボックスに作成するアプリの種類を入力し、使用可能なテンプレートの一覧を表示します。 テンプレートの一覧は、インストール時に選択したワークロードに依存します。 別のテンプレートを表示するには、異なるワークロードを選択します。
 
-   使用して、特定のプログラミング言語の検索をフィルターすることもできます、**言語**ドロップダウン リスト。 使用してフィルター処理することができます、**プラットフォーム**一覧と**プロジェクトの種類**も一覧表示します。
+   **[言語]** ドロップダウン リストを使用して、特定のプログラミング言語に検索をフィルター処理することもできます。 **[プラットフォーム]** の一覧や **[プロジェクトの種類]** の一覧を使用して、フィルター処理することもできます。
 
-1. Visual Studio は、新しいプロジェクトを開き、コードする準備ができました!
+1. Visual Studio で新しいプロジェクトが開き、コーディングできる状態になります。
 
 ::: moniker-end
 
@@ -130,7 +130,7 @@ Visual Studio インストーラーをインストールするブートス ト�
 
 ## <a name="visual-studio-2017-installation"></a>Visual Studio 2017 のインストール
 
-Visual Studio 2017 では、簡単に選択し、必要な機能だけをインストールできますが。 制限の最小フット プリントにより迅速に、少ないシステムへの影響をインストールします。
+Visual Studio 2017 では、簡単に選択し、必要な機能だけをインストールできますが。 占有領域が最小限まで小さくなっているため、インストールが速く、システムにほとんど影響しません。
 
 ### <a name="prerequisites"></a>必須コンポーネント
 

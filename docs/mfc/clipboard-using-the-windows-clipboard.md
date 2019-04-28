@@ -12,11 +12,11 @@ helpviewer_keywords:
 - Clipboard [MFC], Windows Clipboard API
 ms.assetid: 24415b42-9301-4a70-b69a-44c97918319f
 ms.openlocfilehash: 49111e4efd2a12264d61030fe038d80b974514c1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57264795"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62326990"
 ---
 # <a name="clipboard-using-the-windows-clipboard"></a>クリップボード:Windows クリップボードの使用方法
 
@@ -28,7 +28,7 @@ Windows のほとんどのアプリケーションでは、切り取りまたは
 
 [!code-cpp[NVC_MFCListView#2](../atl/reference/codesnippet/cpp/clipboard-using-the-windows-clipboard_1.cpp)]
 
-切り取り、コピー、および貼り付けのコマンドでは、特定のコンテキストで意味のあるのみです。 何かが選択されているときのみ貼り付けコマンドが、クリップボードで場合にのみ、切り取り、コピー コマンドを有効にする必要があります。 更新ハンドラー関数を有効または無効、コンテキストに応じてこれらのコマンドを定義することで、この動作を行うことができます。 詳細については、[ユーザー インターフェイス オブジェクトを更新する方法](../mfc/how-to-update-user-interface-objects.md)を参照してください。
+切り取り、コピー、および貼り付けのコマンドでは、特定のコンテキストで意味のあるのみです。 何かが選択されているときのみ貼り付けコマンドが、クリップボードで場合にのみ、切り取り、コピー コマンドを有効にする必要があります。 更新ハンドラー関数を有効または無効、コンテキストに応じてこれらのコマンドを定義することで、この動作を行うことができます。 詳細については、次を参照してください。[ユーザー インターフェイス オブジェクトを更新する方法](../mfc/how-to-update-user-interface-objects.md)します。
 
 Microsoft Foundation Class ライブラリは、テキストの編集でクリップボードのサポートを提供して、`CEdit`と`CEditView`クラス。 OLE クラスには、OLE アイテムに関連する実装のクリップボード操作も簡略化します。 OLE クラスの詳細については、次を参照してください。[クリップボード。OLE クリップボード機構を使用して](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)します。
 

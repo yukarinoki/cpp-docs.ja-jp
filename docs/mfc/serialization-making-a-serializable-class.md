@@ -17,11 +17,11 @@ helpviewer_keywords:
 - no default constructor
 ms.assetid: 59a14d32-1cc8-4275-9829-99639beee27c
 ms.openlocfilehash: 995744381c8f82dc637e4aa0452e37af170b168b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57281461"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62308102"
 ---
 # <a name="serialization-making-a-serializable-class"></a>シリアル化:シリアル化可能なクラスの作成
 
@@ -86,7 +86,7 @@ IMPLEMENT_SERIAL マクロを使用して必要なときにクラスを派生す
 
 MFC のシリアル化コードは、メモリにオブジェクトを読み取るときに、スキーマの番号を確認します。 ディスク上のオブジェクトのスキーマの数がメモリ内のクラスのスキーマの数が一致しない場合、ライブラリがスローされます、`CArchiveException`プログラムのオブジェクトの正しくないバージョンの読み取りを防止します。
 
-場合は、`Serialize`メンバー関数は複数のバージョンを読み取ることができる、アプリケーションのさまざまなバージョンで書き込まれるファイルは、-値を使用することができます*VERSIONABLE_SCHEMA* IMPLEMENT_SERIAL への引数としてマクロ。 使用状況に関する情報と例では、、`GetObjectSchema`クラスのメンバー関数`CArchive`を参照してください。
+場合は、`Serialize`メンバー関数は複数のバージョンを読み取ることができる、アプリケーションのさまざまなバージョンで書き込まれるファイルは、-値を使用することができます*VERSIONABLE_SCHEMA* IMPLEMENT_SERIAL への引数としてマクロ。 使用状況に関する情報と例では、次を参照してください。、`GetObjectSchema`クラスのメンバー関数`CArchive`します。
 
 次の例は、クラスの IMPLEMENT_SERIAL を使用する方法を示します`CPerson`、つまりから派生した`CObject`:
 

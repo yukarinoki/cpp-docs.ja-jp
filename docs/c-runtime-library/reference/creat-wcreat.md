@@ -33,11 +33,11 @@ helpviewer_keywords:
 - _tcreat function
 ms.assetid: 3b3b795d-1620-40ec-bd2b-a4bbb0d20fe5
 ms.openlocfilehash: 901a95a6a9361f95f38749dacf1a5001d97b3761
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50494992"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335309"
 ---
 # <a name="creat-wcreat"></a>_creat、_wcreat
 
@@ -94,7 +94,7 @@ int _wcreat(
 |-----------|----------------|
 |**_S_IWRITE**|書き込みが許可されます。|
 |**_S_IREAD**|読み取りが許可されます。|
-|**_S_IREAD** &AMP;#124; **_S_IWRITE**|読み取りと書き込みが許可されます。|
+|**_S_IREAD** &#124; **_S_IWRITE**|読み取りと書き込みが許可されます。|
 
 書き込みアクセス許可が与えられない場合、ファイルは読み取り専用になります。 ファイルはすべて常に読み取り可能です。書き込みのみのアクセス許可を与えることはできません。 モード **_S_IWRITE**と **_S_IREAD** | **_S_IWRITE**は同じになります。 使用して開かれたファイル **_creat**は常に、互換性モードで開く (を参照してください[_sopen](sopen-wsopen.md)) と **_SH_DENYNO**します。
 

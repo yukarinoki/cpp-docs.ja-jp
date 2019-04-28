@@ -1,5 +1,5 @@
 ---
-title: ビルドおよび C++ コンソール アプリ プロジェクトの実行
+title: C++ コンソール アプリ プロジェクトのビルドと実行
 description: Visual C での Hello World コンソール アプリをビルドおよび実行します。
 ms.custom: mvc
 ms.date: 12/12/2017
@@ -7,13 +7,13 @@ ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d71-719d-42dc-90d7-1d0ca31a2f55
 ms.openlocfilehash: 59813a553a9034503d8bf432400db31e6e3d9478
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57813548"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62314272"
 ---
-# <a name="build-and-run-a-c-console-app-project"></a>ビルドおよび C++ コンソール アプリ プロジェクトの実行
+# <a name="build-and-run-a-c-console-app-project"></a>C++ コンソール アプリ プロジェクトのビルドと実行
 
 C++ コンソール アプリケーション プロジェクトを作成しコードを入力すれば、Visual Studio 内でビルドおよび実行できます。そして、コマンドラインからスタンドアロンのアプリとしても実行できます。
 
@@ -31,13 +31,13 @@ C++ コンソール アプリケーション プロジェクトを作成しコ�
 
 1. プロジェクトをビルドするには、**ビルド** メニューから **ソリューションのビルド** を選択します。 **出力** ウィンドウは、ビルド プロセスの結果を示しています。
 
-   ![プロジェクトをビルド](media/vscpp-build-solution.gif "プロジェクトをビルドします")
+   ![プロジェクトのビルド](media/vscpp-build-solution.gif "プロジェクトのビルド")
 
 1. コードを実行するには、メニュー バー上にある **デバッグ** を選び、それから **デバッグなしで開始** を選んでください。
 
-   ![プロジェクトを開始する](media/vscpp-start-without-debugging.gif "プロジェクトを開始します")
+   ![プロジェクトの開始](media/vscpp-start-without-debugging.gif "プロジェクトの開始")
 
-   Visual Studio 内でコンソール ウィンドウが開かれ、アプリが実行されます。 コードが実行された後に、「続行するには何かキーを押してください. . .」 . ." と表示されますので、出力の表示を見れる機会があります。
+   Visual Studio 内でコンソール ウィンドウが開かれ、アプリが実行されます。 コードが実行された後に、「続行するには何かキーを押してください. . .」 . "  と表示されますので、出力の表示を見れる機会があります。
 
 おめでとうございます! 初めての「Hello, world!」 コンソール アプリが Visual Studio で作成されました。 任意のキーを押せば、コンソール ウィンドウが閉じられ、Visual Studio に戻ります。
 

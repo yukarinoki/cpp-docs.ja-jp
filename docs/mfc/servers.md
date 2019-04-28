@@ -11,11 +11,11 @@ helpviewer_keywords:
 - server applications [MFC]
 ms.assetid: e45172e8-eae3-400a-8139-0fa009a42fdc
 ms.openlocfilehash: 7b1eb0df439bcfde3aa295f23a90291e865df3a9
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57290803"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62307836"
 ---
 # <a name="servers"></a>サーバー
 
@@ -32,7 +32,7 @@ ms.locfileid: "57290803"
 |サーバーの種類|複数のインスタンスをサポートしています|ドキュメントごとの項目|インスタンスあたりのドキュメント|
 |--------------------|---------------------------------|------------------------|----------------------------|
 |ミニサーバー|[はい]|1|1|
-|SDI サーバー全体|[はい]|1 (リンクがサポートされている場合は、1 つ以上)|1|
+|SDI サーバー全体|はい|1 (リンクがサポートされている場合は、1 つ以上)|1|
 |MDI フル サーバー|いいえ (不要)|1 (リンクがサポートされている場合は、1 つ以上)|0 個以上|
 
 サーバー アプリケーションは、1 つ以上のコンテナーは、埋め込みまたはリンクされた項目の編集に使用されること、複数のコンテナーを同時に、サポートする必要があります。 サーバーが SDI アプリケーション (またはダイアログ ボックスのインターフェイスを持つミニサーバー) の場合、サーバーの複数のインスタンスが同時に実行できる必要があります。 これにより、各コンテナーからの要求を処理するために、アプリケーションの別のインスタンス。
@@ -43,21 +43,21 @@ MDI アプリケーションをサーバーには場合、は、コンテナー�
 
 サーバーの詳細についてを参照してください。
 
-- [サーバー:サーバーの実装](../mfc/servers-implementing-a-server.md)
+- [サーバー: サーバーの実装](../mfc/servers-implementing-a-server.md)
 
-- [サーバー:サーバー ドキュメントの実装](../mfc/servers-implementing-server-documents.md)
+- [サーバー: サーバー ドキュメントの実装](../mfc/servers-implementing-server-documents.md)
 
-- [サーバー:フレームの Windows を実装します。](../mfc/servers-implementing-in-place-frame-windows.md)
+- [サーバー: 埋め込み先フレーム ウィンドウの実装](../mfc/servers-implementing-in-place-frame-windows.md)
 
-- [サーバー:サーバー項目](../mfc/servers-server-items.md)
+- [サーバー: サーバー アイテム](../mfc/servers-server-items.md)
 
-- [サーバー:ユーザー インターフェイスの問題](../mfc/servers-user-interface-issues.md)
+- [サーバー: ユーザー インターフェイスの問題](../mfc/servers-user-interface-issues.md)
 
 ## <a name="see-also"></a>関連項目
 
 [OLE](../mfc/ole-in-mfc.md)<br/>
 [コンテナー](../mfc/containers.md)<br/>
-[コンテナー:高度な機能](../mfc/containers-advanced-features.md)<br/>
+[コンテナー: 高度な機能](../mfc/containers-advanced-features.md)<br/>
 [メニューとリソース (OLE)](../mfc/menus-and-resources-ole.md)<br/>
 [登録](../mfc/registration.md)<br/>
 [オートメーション サーバー](../mfc/automation-servers.md)

@@ -13,11 +13,11 @@ helpviewer_keywords:
 - writing to files [MFC]
 ms.assetid: cac0c826-ba56-495f-99b3-ce6336f65763
 ms.openlocfilehash: ab1ddc58ec6cc2b67e5843f46afbead3ead54eba
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57267675"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62324260"
 ---
 # <a name="reading-and-writing-files"></a>ファイルの読み書き
 
@@ -36,7 +36,7 @@ C ランタイム ライブラリのファイル処理関数を使用した場�
 [!code-cpp[NVC_MFCFiles#2](../atl-mfc-shared/reference/codesnippet/cpp/reading-and-writing-files_1.cpp)]
 
 > [!NOTE]
->  通常、内の入力/出力操作を実行する必要があります、**お試しください**/**キャッチ**例外処理ブロック。 詳細については、[例外処理 (MFC)](../mfc/exception-handling-in-mfc.md)を参照してください。
+>  通常、内の入力/出力操作を実行する必要があります、**お試しください**/**キャッチ**例外処理ブロック。 詳細については、次を参照してください。[例外処理 (MFC)](../mfc/exception-handling-in-mfc.md)します。
 
 ## <a name="see-also"></a>関連項目
 

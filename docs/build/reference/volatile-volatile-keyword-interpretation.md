@@ -14,11 +14,11 @@ helpviewer_keywords:
 - -volatile compiler option [C++]
 ms.assetid: 9d08fcc6-5bda-44c8-8151-8d8d54f164b8
 ms.openlocfilehash: 02871622242930d7419fda16f4d106fccb2056f0
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57819494"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62316640"
 ---
 # <a name="volatile-volatile-keyword-interpretation"></a>/volatile (volatile キーワードの解釈を)
 
@@ -38,16 +38,15 @@ Microsoft 拡張 `volatile` セマンティクスを選択すると、ISO 標準
 
 ## <a name="remarks"></a>Remarks
 
-使用することを強くお勧め **/volatile:iso**明示的な同期プリミティブやスレッド間で共有されているメモリを扱うときのコンパイラ組み込みと共にします。 詳細については、[揮発性](../../cpp/volatile-cpp.md)を参照してください。
+使用することを強くお勧め **/volatile:iso**明示的な同期プリミティブやスレッド間で共有されているメモリを扱うときのコンパイラ組み込みと共にします。 詳細については、次を参照してください。[揮発性](../../cpp/volatile-cpp.md)します。
 
 既存のコードを移植したり、プロジェクトの途中でこのオプションを変更した場合は、警告を有効にする時間が立つ可能性[C4746](../../error-messages/compiler-warnings/compiler-warning-c4746.md)セマンティクスの違いによって影響を受けるコードの場所を識別します。
 
-
-  `#pragma` には、このオプションを制御するための相当するものはありません。
+`#pragma` には、このオプションを制御するための相当するものはありません。
 
 ### <a name="to-set-the-volatile-compiler-option-in-visual-studio"></a>/volatile コンパイラ オプションを Visual Studio で設定するには
 
-1. 開く、**プロパティ ページ**プロジェクトのダイアログ ボックス。 詳細については、[Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)を参照してください。
+1. 開く、**プロパティ ページ**プロジェクトのダイアログ ボックス。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. 選択、**構成プロパティ** > **C/C++** > **コマンドライン**プロパティ ページ。
 
@@ -57,4 +56,4 @@ Microsoft 拡張 `volatile` セマンティクスを選択すると、ISO 標準
 
 [volatile](../../cpp/volatile-cpp.md)<br/>
 [MSVC コンパイラ オプション](compiler-options.md)<br/>
-[MSVC コンパイラ コマンドラインの構文](compiler-command-line-syntax.md)
+[MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)

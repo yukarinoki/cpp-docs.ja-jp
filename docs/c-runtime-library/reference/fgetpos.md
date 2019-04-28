@@ -23,11 +23,11 @@ helpviewer_keywords:
 - streams, file position indicator
 ms.assetid: bfa05c38-1135-418c-bda1-d41be51acb62
 ms.openlocfilehash: e213c9830ffe6edf04b12a80828f14cc48f77524
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658420"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62333931"
 ---
 # <a name="fgetpos"></a>fgetpos
 
@@ -44,7 +44,7 @@ int fgetpos(
 
 ### <a name="parameters"></a>パラメーター
 
-*ストリーム*<br/>
+*stream*<br/>
 対象のストリーム。
 
 *pos*<br/>
@@ -52,7 +52,7 @@ int fgetpos(
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合、 **fgetpos** 0 を返します。 失敗した場合、0 以外の値を返す設定と**errno**次のいずれかのマニフェスト定数 (STDIO で定義されています。H): **EBADF**、つまり、指定したストリームが有効なファイル ポインターでないまたはアクセスできない、または**EINVAL**、つまり、*ストリーム*値またはの値*pos*がいる場合など、有効ないずれかが null ポインターでないです。 場合*ストリーム*または*pos*は、 **NULL**ポインター、関数は無効なパラメーター ハンドラーを呼び出します」の説明に従って[パラメーターの検証](../../c-runtime-library/parameter-validation.md).
+成功した場合、 **fgetpos** 0 を返します。 失敗した場合、0 以外の値を返す設定と**errno**次のいずれかのマニフェスト定数 (STDIO で定義されています。H):**EBADF**、つまり、指定したストリームが有効なファイル ポインターでないまたはアクセスできない、または**EINVAL**、つまり、*ストリーム*値または値の*pos*がいる場合など、有効ないずれかが null ポインターでないです。 場合*ストリーム*または*pos*は、 **NULL**ポインター、関数は無効なパラメーター ハンドラーを呼び出します」の説明に従って[パラメーターの検証](../../c-runtime-library/parameter-validation.md).
 
 ## <a name="remarks"></a>Remarks
 

@@ -6,11 +6,11 @@ f1_keywords:
 helpviewer_keywords:
 - /Qspectre
 ms.openlocfilehash: 42adff6564dc1c2ef47abffe9f9e6e630279ea7d
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57812461"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62319188"
 ---
 # <a name="qspectre"></a>/Qspectre
 
@@ -36,7 +36,7 @@ Microsoft Visual C ライブラリでは、Spectre の軽減策のバージョ�
 
 ### <a name="availability"></a>可用性
 
-**/Qspectre**オプションは Visual Studio 2017 バージョン 15.5.5 では、2018 年 1 月 23 日以降に行われたすべての更新を Microsoft の MSVC コンパイラ (MSVC) で使用できます。 Visual Studio インストーラーを使用して、個々 のコンポーネントとして、Spectre 軽減ライブラリをインストールして、コンパイラを更新します。 **/Qspectre**オプションも Visual Studio 2015 Update 3 で修正プログラムを利用します。 詳細については、[KB 4338871](https://support.microsoft.com/help/4338871)を参照してください。
+**/Qspectre**オプションは Visual Studio 2017 バージョン 15.5.5 では、2018 年 1 月 23 日以降に行われたすべての更新を Microsoft の MSVC コンパイラ (MSVC) で使用できます。 Visual Studio インストーラーを使用して、個々 のコンポーネントとして、Spectre 軽減ライブラリをインストールして、コンパイラを更新します。 **/Qspectre**オプションも Visual Studio 2015 Update 3 で修正プログラムを利用します。 詳細については、次を参照してください。 [KB 4338871](https://support.microsoft.com/help/4338871)します。
 
 15.5 とすべてのプレビューの Visual Studio 2017 バージョン 15.6 では、文書化されていないオプションでは、Visual Studio 2017 バージョンのすべてのバージョン **/d2guardspecload**、つまりと同等の初期動作 **/Qspectre**. 使用することができます **/d2guardspecload**これらのバージョンのコンパイラでは、コードに同じの軽減策を適用します。 使用するようにビルドを更新してください。 **/Qspectre** ; オプションをサポートするためのコンパイラで、 **/Qspectre**オプションは新しい軽減策を以降のバージョンのコンパイラでサポートも可能性があります。
 
@@ -55,18 +55,18 @@ Microsoft Visual C ライブラリでは、Spectre の軽減策のバージョ�
 **/Qspectre**コンパイラ オプションは、暗黙的に組み込まれている Spectre の軽減策を提供するランタイム ライブラリのバージョンをリンクするコードを生成します。 これらのライブラリは、省略可能なコンポーネント、Visual Studio インストーラーを使用してインストールする必要があります。
 
 - Vc++ 2017 バージョン*version_numbers* Spectre 用ライブラリ\[(x86 および x64) |(ARM) |(ARM64)]
-- 用の visual C ATL \[(x86 または x64) |ARM |ARM64] Spectre の軽減策
-- 用の visual C MFC \[x86 または x64 |ARM |ARM64] Spectre の軽減策
+- VisualC++の ATL \[(x86 または x64) |ARM |ARM64] Spectre の軽減策
+- VisualC++の MFC \[x86 または x64 |ARM |ARM64] Spectre の軽減策
 
 使用して、コードをビルドする場合 **/Qspectre**おり、これらのライブラリがないビルド システム レポートをインストールします。**警告 msb 8038。Spectre の軽減策が有効になっているが、Spectre 軽減ライブラリが見つかりません**します。 場合は、MFC または ATL コードのビルドに失敗して、リンカーなどのエラーのレポート**致命的なエラー LNK1104: ファイル 'oldnames.lib' を開くことができません**、これらの不足しているライブラリが原因になる可能性があります。
 
 ### <a name="additional-information"></a>追加情報
 
-詳細については、公式ページをご覧ください[予測実行のサイド チャネルの脆弱性を軽減するには、Microsoft セキュリティ アドバイザリ ADV180002、ガイダンス](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/ADV180002)します。 ガイダンスは、Intel から入手できるも[投機実行サイド チャネルの軽減策](https://software.intel.com/sites/default/files/managed/c5/63/336996-Speculative-Execution-Side-Channel-Mitigations.pdf)、および ARM、[キャッシュ推理のサイド チャネル](https://developer.arm.com/-/media/Files/pdf/Cache_Speculation_Side-channels.pdf)します。 Spectre や Meltdown の軽減策の特定の Windows の概要については、次を参照してください。[の Windows システムで Spectre や Meltdown の軽減策のパフォーマンスに与える影響を理解する](https://cloudblogs.microsoft.com/microsoftsecure/2018/01/09/understanding-the-performance-impact-of-spectre-and-meltdown-mitigations-on-windows-systems/)Microsoft セキュリティで保護されたブログ。 MSVC の軽減策が指す Spectre 脆弱性の概要については、[MSVC の、Spectre の軽減策](https://blogs.msdn.microsoft.com/vcblog/2018/01/15/spectre-mitigations-in-msvc./)Visual c チーム ブログにを参照してください。
+詳細については、公式ページをご覧ください[予測実行のサイド チャネルの脆弱性を軽減するには、Microsoft セキュリティ アドバイザリ ADV180002、ガイダンス](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/ADV180002)します。 ガイダンスは、Intel から入手できるも[投機実行サイド チャネルの軽減策](https://software.intel.com/sites/default/files/managed/c5/63/336996-Speculative-Execution-Side-Channel-Mitigations.pdf)、および ARM、[キャッシュ推理のサイド チャネル](https://developer.arm.com/-/media/Files/pdf/Cache_Speculation_Side-channels.pdf)します。 Spectre や Meltdown の軽減策の特定の Windows の概要については、次を参照してください。[の Windows システムで Spectre や Meltdown の軽減策のパフォーマンスに与える影響を理解する](https://cloudblogs.microsoft.com/microsoftsecure/2018/01/09/understanding-the-performance-impact-of-spectre-and-meltdown-mitigations-on-windows-systems/)Microsoft セキュリティで保護されたブログ。 MSVC の軽減策が指す Spectre 脆弱性の概要については、次を参照してください。 [MSVC の、Spectre の軽減策](https://blogs.msdn.microsoft.com/vcblog/2018/01/15/spectre-mitigations-in-msvc./)Visual c チーム ブログにします。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. 選択、**構成プロパティ** > **C/C++** > **コマンドライン**プロパティ ページ。
 
@@ -80,4 +80,4 @@ Microsoft Visual C ライブラリでは、Spectre の軽減策のバージョ�
 
 [/Q オプション (低水準の操作)](q-options-low-level-operations.md)<br/>
 [MSVC コンパイラ オプション](compiler-options.md)<br/>
-[MSVC コンパイラ コマンドラインの構文](compiler-command-line-syntax.md)
+[MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)

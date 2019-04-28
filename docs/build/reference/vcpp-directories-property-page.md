@@ -14,11 +14,11 @@ helpviewer_keywords:
 - VC++ Directories Property Page
 ms.assetid: 428eeef6-f127-4271-b3ea-0ae6f2c3d624
 ms.openlocfilehash: 3822a3c751ac06154e4b13a12f449e7f0ff2cc07
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57826901"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62316874"
 ---
 # <a name="vc-directories-property-page-windows"></a>[VC++ ディレクトリ] プロパティ ページ (Windows)
 
@@ -54,7 +54,7 @@ ms.locfileid: "57826901"
 
 ![ライブラリ ディレクトリの表示](../media/vcppdir_libdir.png "ライブラリ パスを削除するためのダイアログ")
 
-現在のディレクトリを表示するには、このダイアログ ボックスを使用します。 ただし、ディレクトリを変更または追加する場合は、**プロパティ マネージャー**を使用してプロパティ シートを作成するか、既定のユーザー プロパティ シートを変更することをお勧めします。 詳細については、[Visual Studio の C++ プロジェクトの設定を共有または resuse](../create-reusable-property-configurations.md)を参照してください。
+現在のディレクトリを表示するには、このダイアログ ボックスを使用します。 ただし、ディレクトリを変更または追加する場合は、**プロパティ マネージャー**を使用してプロパティ シートを作成するか、既定のユーザー プロパティ シートを変更することをお勧めします。 詳細については、次を参照してください。 [Visual Studio の C++ プロジェクトの設定を共有または resuse](../create-reusable-property-configurations.md)します。
 
 上記のように、継承されたパスの多くがマクロとして提供されます。  マクロの現在の値を調べるには、ダイアログ ボックスの右下隅の **[マクロ]** ボタンを選択します。 多くのマクロは、構成の種類に依存していることに注意してください。 デバッグ ビルドでのマクロは、リリース ビルドの同じマクロとは異なるパスに評価される場合があります。
 
@@ -64,9 +64,9 @@ ms.locfileid: "57826901"
 
 メモ:入力すると、一覧が表示されます。 **Enter** キーを押さないでください。
 
-マクロとそれらを可能であればハード コードされたパスの代わりに使用する理由の詳細については、[Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)を参照してください。
+マクロとそれらを可能であればハード コードされたパスの代わりに使用する理由の詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
-一般的に使用されるマクロの一覧は、[用マクロの一般的なコマンドとプロパティのビルド](common-macros-for-build-commands-and-properties.md)を参照してください。
+一般的に使用されるマクロの一覧は、次を参照してください。[用マクロの一般的なコマンドとプロパティのビルド](common-macros-for-build-commands-and-properties.md)します。
 
 独自のマクロは次の 2 通りの方法で定義できます。
 
@@ -103,4 +103,4 @@ IntelliSense で使用されるソース ファイルを検索するディレク
 
 ## <a name="sharing-the-settings"></a>設定の共有
 
-プロジェクトのプロパティを、他のユーザーと共有したり、複数のコンピューター間で共有したりできます。 詳細については、[Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)を参照してください。
+プロジェクトのプロパティを、他のユーザーと共有したり、複数のコンピューター間で共有したりできます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。

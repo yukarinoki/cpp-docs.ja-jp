@@ -6,11 +6,11 @@ helpviewer_keywords:
 - OLE server applications [MFC], implementing OLE servers
 ms.assetid: 5bd57e8e-3b23-4f23-9597-496fac2d24b5
 ms.openlocfilehash: 953d157f4bbad0b460947740a2622074dfc90f4f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57267564"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62308018"
 ---
 # <a name="servers-implementing-a-server"></a>サーバー:サーバーの実装
 
@@ -34,11 +34,11 @@ ms.locfileid: "57267564"
 
 - 派生したフレーム ウィンドウ クラスを定義する`COleIPFrameWnd`します。 詳細については、次を参照してください。[サーバー。フレームの Windows を実装する](../mfc/servers-implementing-in-place-frame-windows.md)します。
 
-- Windows の登録データベースにサーバー アプリケーションのエントリを作成し、OLE システム、サーバーの新しいインスタンスを登録します。 このトピックでは、[登録](../mfc/registration.md)を参照してください。
+- Windows の登録データベースにサーバー アプリケーションのエントリを作成し、OLE システム、サーバーの新しいインスタンスを登録します。 このトピックでは、次を参照してください。[登録](../mfc/registration.md)します。
 
-- 初期化とサーバー アプリケーションを起動します。 このトピックでは、[登録](../mfc/registration.md)を参照してください。
+- 初期化とサーバー アプリケーションを起動します。 このトピックでは、次を参照してください。[登録](../mfc/registration.md)します。
 
-詳細については、[COleServerItem](../mfc/reference/coleserveritem-class.md)、 [COleServerDoc](../mfc/reference/coleserverdoc-class.md)、および[COleIPFrameWnd](../mfc/reference/coleipframewnd-class.md)で、*クラス ライブラリ リファレンス*を参照してください。
+詳細については、次を参照してください。 [COleServerItem](../mfc/reference/coleserveritem-class.md)、 [COleServerDoc](../mfc/reference/coleserverdoc-class.md)、および[COleIPFrameWnd](../mfc/reference/coleipframewnd-class.md)で、*クラス ライブラリ リファレンス*します。
 
 ## <a name="see-also"></a>関連項目
 

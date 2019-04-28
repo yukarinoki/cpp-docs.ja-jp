@@ -45,11 +45,11 @@ helpviewer_keywords:
 - CStatusBarCtrl [MFC], SetTipText
 ms.assetid: 8504ad38-7b91-4746-aede-ac98886eb47b
 ms.openlocfilehash: 8db2be9b14f9d60f2103ce0b63b772962b079bbe
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426135"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62323831"
 ---
 # <a name="cstatusbarctrl-class"></a>CStatusBarCtrl クラス
 
@@ -284,7 +284,7 @@ HICON GetIcon(int iPart) const;
 
 このメソッドは、送信、 [SB_GETICON](/windows/desktop/Controls/sb-geticon)メッセージは、Windows SDK で説明します。
 
-ステータス バー コントロールとも呼ばれる部分には、テキスト出力ペインの行で構成されます。 ステータス バーの詳細については、[MFC でのステータス バーの実装](../../mfc/status-bar-implementation-in-mfc.md)と[CStatusBarCtrl オブジェクトのモードの設定](../../mfc/setting-the-mode-of-a-cstatusbarctrl-object.md)を参照してください。
+ステータス バー コントロールとも呼ばれる部分には、テキスト出力ペインの行で構成されます。 ステータス バーの詳細については、次を参照してください。 [MFC でのステータス バーの実装](../../mfc/status-bar-implementation-in-mfc.md)と[CStatusBarCtrl オブジェクトのモードの設定](../../mfc/setting-the-mode-of-a-cstatusbarctrl-object.md)します。
 
 ### <a name="example"></a>例
 

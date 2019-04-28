@@ -6,11 +6,11 @@ helpviewer_keywords:
 - classes [MFC], MFC
 ms.assetid: 7b6db805-a572-43fd-9046-0fa6e3663e63
 ms.openlocfilehash: e31e7d68676a40da51f214496a13072d0d4d2b28
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57288644"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62310316"
 ---
 # <a name="mfc-classes"></a>MFC クラス
 
@@ -109,7 +109,7 @@ Windows のグラフィック デバイス インターフェイス (GDI: Graphi
 ラベルがテキストではなくビットマップ イメージのプッシュ ボタン コントロールを作成します。
 
 [CBitmapRenderTarget クラス](../../mfc/reference/cbitmaprendertarget-class.md)<br/>
-`ID2D1BitmapRenderTarget` のラッパー。
+`ID2D1BitmapRenderTarget`のラッパー。
 
 [CBrush クラス](../../mfc/reference/cbrush-class.md)<br/>
 Windows のグラフィック デバイス インターフェイス (GDI) のブラシをカプセル化します。
@@ -133,7 +133,7 @@ Windows のチェックリスト ボックスの機能を提供します。
 Microsoft Foundation Class ライブラリのメッセージ マップ アーキテクチャに関する基底クラスです。
 
 [CCmdUI クラス](../../mfc/reference/ccmdui-class.md)<br/>
-`ON_UPDATE_COMMAND_UI` の派生クラスの `CCmdTarget` ハンドラー内でのみ使用されます。
+`ON_UPDATE_COMMAND_UI` の派生クラスの `CCmdTarget`ハンドラー内でのみ使用されます。
 
 [CColorDialog クラス](../../mfc/reference/ccolordialog-class.md)<br/>
 色の選択ダイアログ ボックスをアプリケーションに組み込むことができます。
@@ -178,76 +178,76 @@ Windows 98 および Windows NT Version 3.51 以降がサポートするコモ�
 カスタム遷移を実装します。
 
 [CD2DBitmap クラス](../../mfc/reference/cd2dbitmap-class.md)<br/>
-`ID2D1Bitmap` のラッパー。
+`ID2D1Bitmap`のラッパー。
 
 [CD2DBitmapBrush クラス](../../mfc/reference/cd2dbitmapbrush-class.md)<br/>
-`ID2D1BitmapBrush` のラッパー。
+`ID2D1BitmapBrush`のラッパー。
 
 [CD2DBrush クラス](../../mfc/reference/cd2dbrush-class.md)<br/>
-`ID2D1Brush` のラッパー。
+`ID2D1Brush`のラッパー。
 
 [CD2DBrushProperties クラス](../../mfc/reference/cd2dbrushproperties-class.md)<br/>
-`D2D1_BRUSH_PROPERTIES` のラッパー。
+`D2D1_BRUSH_PROPERTIES`のラッパー。
 
 [CD2DEllipse クラス](../../mfc/reference/cd2dellipse-class.md)<br/>
-`D2D1_BRUSH_PROPERTIES` のラッパー。
+`D2D1_BRUSH_PROPERTIES`のラッパー。
 
 [CD2DGeometry クラス](../../mfc/reference/cd2dgeometry-class.md)<br/>
-`ID2D1Geometry` のラッパー。
+`ID2D1Geometry`のラッパー。
 
 [CD2DGeometrySink クラス](../../mfc/reference/cd2dgeometrysink-class.md)<br/>
-`ID2D1GeometrySink` のラッパー。
+`ID2D1GeometrySink`のラッパー。
 
 [CD2DGradientBrush クラス](../../mfc/reference/cd2dgradientbrush-class.md)<br/>
 `CD2DLinearGradientBrush` クラスおよび `CD2DRadialGradientBrush` クラスの基底クラス。
 
 [CD2DLayer クラス](../../mfc/reference/cd2dlayer-class.md)<br/>
-`ID2D1Layer` のラッパー。
+`ID2D1Layer`のラッパー。
 
 [CD2DLinearGradientBrush クラス](../../mfc/reference/cd2dlineargradientbrush-class.md)<br/>
-`ID2D1LinearGradientBrush` のラッパー。
+`ID2D1LinearGradientBrush`のラッパー。
 
 [CD2DMesh クラス](../../mfc/reference/cd2dmesh-class.md)<br/>
-`ID2D1Mesh` のラッパー。
+`ID2D1Mesh`のラッパー。
 
 [CD2DPathGeometry クラス](../../mfc/reference/cd2dpathgeometry-class.md)<br/>
-`ID2D1PathGeometry` のラッパー。
+`ID2D1PathGeometry`のラッパー。
 
 [CD2DPointF クラス](../../mfc/reference/cd2dpointf-class.md)<br/>
-`D2D1_POINT_2F` のラッパー。
+`D2D1_POINT_2F`のラッパー。
 
 [CD2DPointU クラス](../../mfc/reference/cd2dpointu-class.md)<br/>
-`D2D1_POINT_2U` のラッパー。
+`D2D1_POINT_2U`のラッパー。
 
 [CD2DRadialGradientBrush クラス](../../mfc/reference/cd2dradialgradientbrush-class.md)<br/>
-`ID2D1RadialGradientBrush` のラッパー。
+`ID2D1RadialGradientBrush`のラッパー。
 
 [CD2DRectF クラス](../../mfc/reference/cd2drectf-class.md)<br/>
-`D2D1_RECT_F` のラッパー。
+`D2D1_RECT_F`のラッパー。
 
 [CD2DRectU クラス](../../mfc/reference/cd2drectu-class.md)<br/>
-`D2D1_RECT_U` のラッパー。
+`D2D1_RECT_U`のラッパー。
 
 [CD2DResource クラス](../../mfc/reference/cd2dresource-class.md)<br/>
 ブラシ、レイヤー、テキストなどの `D2D` リソースを作成および管理するためのインターフェイスを提供する抽象クラス。
 
 [CD2DRoundedRect クラス](../../mfc/reference/cd2droundedrect-class.md)<br/>
-`D2D1_ROUNDED_RECT` のラッパー。
+`D2D1_ROUNDED_RECT`のラッパー。
 
 [CD2DSizeF クラス](../../mfc/reference/cd2dsizef-class.md)<br/>
-`D2D1_SIZE_F` のラッパー。
+`D2D1_SIZE_F`のラッパー。
 
 [CD2DSizeU クラス](../../mfc/reference/cd2dsizeu-class.md)<br/>
-`D2D1_SIZE_U` のラッパー。
+`D2D1_SIZE_U`のラッパー。
 
 [CD2DSolidColorBrush クラス](../../mfc/reference/cd2dsolidcolorbrush-class.md)<br/>
-`ID2D1SolidColorBrush` のラッパー。
+`ID2D1SolidColorBrush`のラッパー。
 
 [CD2DTextFormat クラス](../../mfc/reference/cd2dtextformat-class.md)<br/>
-`IDWriteTextFormat` のラッパー。
+`IDWriteTextFormat`のラッパー。
 
 [CD2DTextLayout クラス](../../mfc/reference/cd2dtextlayout-class.md)<br/>
-`IDWriteTextLayout` のラッパー。
+`IDWriteTextLayout`のラッパー。
 
 [CDaoDatabase クラス](../../mfc/reference/cdaodatabase-class.md)<br/>
 それを通じてデータを操作することのできるデータベースへの接続を表します。
@@ -277,7 +277,7 @@ DAO データベース クラスで使われる DAO レコード フィールド
 データ ソースへの接続を表します。これを通じてデータ ソース上で操作を行うことができます。
 
 [CDataExchange クラス](../../mfc/reference/cdataexchange-class.md)<br/>
-MFC で使われているダイアログ データ エクスチェンジ (DDX) およびダイアログ データ バリデーション (DDV) の両ルーチンをサポートします。
+MFC で使われているダイアログ データ エクスチェンジ (DDX) およびダイアログ データ検証 (DDV) の両ルーチンをサポートします。
 
 [CDataPathProperty クラス](../../mfc/reference/cdatapathproperty-class.md)<br/>
 非同期で読み込める OLE コントロール プロパティを実装します。
@@ -298,7 +298,7 @@ MFC ODBC クラスのバリアント型を表します。
 デバイス コンテキスト オブジェクトのクラスを定義します。
 
 [CDCRenderTarget クラス](../../mfc/reference/cdcrendertarget-class.md)<br/>
-`ID2D1DCRenderTarget` のラッパー。
+`ID2D1DCRenderTarget`のラッパー。
 
 [CDHtmlDialog クラス](../../mfc/reference/cdhtmldialog-class.md)<br/>
 ダイアログ リソースではなく、HTML によってユーザー インターフェイスを実装するダイアログ ボックスを作成するために使用します。
@@ -322,7 +322,7 @@ MFC ODBC クラスのバリアント型を表します。
 ドッキング サイトにドッキングできる、またはタブ付きペインに含めることができるペインを実装します。
 
 [CDockablePaneAdapter クラス](../../mfc/reference/cdockablepaneadapter-class.md)<br/>
-`CWnd` の派生ペインのドッキングをサポートします。
+`CWnd`の派生ペインのドッキングをサポートします。
 
 [CDockingManager クラス](../../mfc/reference/cdockingmanager-class.md)<br/>
 メイン フレーム ウィンドウのドッキング レイアウトを制御するコア機能を実装します。
@@ -337,7 +337,7 @@ MFC ODBC クラスのバリアント型を表します。
 いくつかのドッキング コントロール バーの状態を 2 次メモリ (ファイル) で読み込み、アンロード、またはクリアするシリアル化された `CObject` クラスです。
 
 [CDocObjectServer クラス](../../mfc/reference/cdocobjectserver-class.md)<br/>
-標準の `COleDocument` サーバーを完全な DocObject サーバーにするために必要な、`IOleDocument`、`IOleDocumentView`、`IOleCommandTarget`、`IPrint` などの追加 OLE インターフェイスを実装します。
+標準の `COleDocument` サーバーを完全な DocObject サーバーにするために必要な、 `IOleDocument`、 `IOleDocumentView`、 `IOleCommandTarget`、 `IPrint`などの追加 OLE インターフェイスを実装します。
 
 [CDocObjectServerItem クラス](../../mfc/reference/cdocobjectserveritem-class.md)<br/>
 OLE サーバー動詞を DocObject サーバー用に実装します。
@@ -460,7 +460,7 @@ HTTP サーバーへの接続を管理します。
 HTTP サーバー上のファイルを要求し、読み込む機能が用意されています。
 
 [CHwndRenderTarget クラス](../../mfc/reference/chwndrendertarget-class.md)<br/>
-`ID2D1HwndRenderTarget` のラッパー。
+`ID2D1HwndRenderTarget`のラッパー。
 
 [CImageList クラス](../../mfc/reference/cimagelist-class.md)<br/>
 Windows コモン イメージ リスト コントロールの機能が用意されています。
@@ -553,7 +553,7 @@ void ポインターをキーとした 16 ビット ワードのマップをサ�
 Windows のマルチ ドキュメント インターフェイス (MDI) の子ウィンドウの機能を提供します。 機能を拡張[CMDIChildWnd クラス](../../mfc/reference/cmdichildwnd-class.md)します。 ある特定の MFC クラスを MDI アプリケーションで使用するときは、フレームワークにこのクラスが必要です。
 
 [CMDIFrameWnd クラス](../../mfc/reference/cmdiframewnd-class.md)<br/>
- Windows のマルチ ドキュメント インターフェイス (MDI: Multiple Document Interface) のフレーム ウィンドウの機能が用意されています。さらに、ウィンドウを管理するメンバーも用意されています。
+Windows のマルチ ドキュメント インターフェイス (MDI: Multiple Document Interface) のフレーム ウィンドウの機能が用意されています。さらに、ウィンドウを管理するメンバーも用意されています。
 
 [CMDIFrameWndEx クラス](../../mfc/reference/cmdiframewndex-class.md)<br/>
 機能を拡張[CFrameWnd クラス](../../mfc/reference/cframewnd-class.md)Windows のマルチ ドキュメント インターフェイス (MDI) のフレーム ウィンドウ。
@@ -568,7 +568,7 @@ Windows のマルチ ドキュメント インターフェイス (MDI) の子ウ
 メモリ不足例外条件を表します。
 
 [CMenu クラス](../../mfc/reference/cmenu-class.md)<br/>
-Windows の `HMENU` をカプセル化したものです。
+Windows の `HMENU`をカプセル化したものです。
 
 [CMenuTearOffManager クラス](../../mfc/reference/cmenutearoffmanager-class.md)<br/>
 ティアオフ メニューを管理します。 ティアオフ メニューはメニュー バー上のメニューの一種です。 ユーザーは、ティアオフ メニューをメニュー バーから外して、フローティング メニューにすることができます。
@@ -829,7 +829,7 @@ Windows のリスト コントロールの機能を提供し、シェル項目�
 ツールヒントの外観に関する情報を格納します。
 
 [CMFCVisualManager クラス](../../mfc/reference/cmfcvisualmanager-class.md)<br/>
-グローバル レベルでアプリケーションの外観変更のサポートを提供します。 `CMFCVisualManager` クラスは、一貫したスタイルを使用してアプリケーションの GUI コントロールを描画する機能を提供するクラスと連携します。 これらの連携するクラスはビジュアル マネージャーと呼ばれ、`CMFCBaseVisualManager` から継承されます。
+グローバル レベルでアプリケーションの外観変更のサポートを提供します。 `CMFCVisualManager` クラスは、一貫したスタイルを使用してアプリケーションの GUI コントロールを描画する機能を提供するクラスと連携します。 これらの連携するクラスはビジュアル マネージャーと呼ばれ、 `CMFCBaseVisualManager`から継承されます。
 
 [CMFCVisualManagerOffice2003 クラス](../../mfc/reference/cmfcvisualmanageroffice2003-class.md)<br/>
 アプリケーションに Microsoft Office 2003 の外観を与えます。
@@ -907,7 +907,7 @@ OLE の [ソースの変更] ダイアログ ボックスに使用します。
 OLE アイテムへのコンテナー インターフェイスを定義します。
 
 [COleCmdUI クラス](../../mfc/reference/colecmdui-class.md)<br/>
-アプリケーションの `IOleCommandTarget` ドリブンの機能に関連するユーザー インターフェイス オブジェクトの状態を更新するメソッドを MFC に提供します。
+アプリケーションの `IOleCommandTarget`ドリブンの機能に関連するユーザー インターフェイス オブジェクトの状態を更新するメソッドを MFC に提供します。
 
 [COleControl クラス](../../mfc/reference/colecontrol-class.md)<br/>
 OLE コントロールを開発するための強力な基底クラスです。
@@ -976,7 +976,7 @@ OLE コンテナー ドキュメントの基底クラスです。OLE コンテ�
 OLE の [リンクの編集] ダイアログ ボックスに使用します。
 
 [COleMessageFilter クラス](../../mfc/reference/colemessagefilter-class.md)<br/>
-OLE アプリケーション間の相互の要求を同時に管理します。
+OLE アプリケーション間の相互に要求されるコンカレンシーを管理します。
 
 [COleObjectFactory クラス](../../mfc/reference/coleobjectfactory-class.md)<br/>
 OLE クラスのファクトリを実装しています。このクラスによって、サーバー、オートメーション オブジェクト、ドキュメントなどの OLE オブジェクトを作成できます。
@@ -1027,7 +1027,7 @@ OLE の [リンクの編集] ダイアログ ボックスを使って、ドキ�
 Windows のカラー パレットをカプセル化します。
 
 [CPane Class](../../mfc/reference/cpane-class.md)<br/>
-[CControlBar Class](../../mfc/reference/ccontrolbar-class.md)の拡張です。 既存の MFC プロジェクトをアップグレードしている場合は、`CControlBar` の出現箇所をすべて `CPane` に置き換える必要があります。
+[CControlBar Class](../../mfc/reference/ccontrolbar-class.md)の拡張です。 既存の MFC プロジェクトをアップグレードしている場合は、 `CControlBar` の出現箇所をすべて `CPane`に置き換える必要があります。
 
 [CPaneContainer クラス](../../mfc/reference/cpanecontainer-class.md)<br/>
 MFC によって実装されるドッキング モデルの基本コンポーネントです。 このクラスのオブジェクトは、2 つのドッキング ペイン、または `CPaneContainer.` の 2 つのインスタンスへのポインターを格納します。また、ペイン (またはコンテナー) を分割している区分線へのポインターも格納します。 コンテナー内にコンテナーを入れ子にすると、フレームワークは複雑なドッキング レイアウトを表すバイナリ ツリーを構築します。 バイナリ ツリーのルートが格納されている、 [CPaneContainerManager クラス](../../mfc/reference/cpanecontainermanager-class.md)オブジェクト。
@@ -1105,7 +1105,7 @@ Windows のような[RECT 構造体](/windows/desktop/api/windef/ns-windef-tagre
 アイテムを異なる方法で表示、移動、サイズ変更できるようにします。
 
 [CRenderTarget クラス](../../mfc/reference/crendertarget-class.md)<br/>
-`ID2D1RenderTarget` のラッパー。
+`ID2D1RenderTarget`のラッパー。
 
 [CResourceException クラス](../../mfc/reference/cresourceexception-class.md)<br/>
 Windows が要求されたリソースを見つけられないか、割り当てられないときに生成されます。
@@ -1162,7 +1162,7 @@ SDI (シングル ドキュメント インターフェイス) を実装する�
 振幅が指定の範囲である正弦波範囲遷移をカプセル化します。
 
 [CSinusoidalTransitionFromVelocity クラス](../../mfc/reference/csinusoidaltransitionfromvelocity-class.md)<br/>
-アニメーション変数の初期速度によって振幅が決まる正弦波速度遷移をカプセル化します。
+アニメーション変数の初期ベロシティによって振幅が決まる正弦波ベロシティ遷移をカプセル化します。
 
 [CSize クラス](../../atl-mfc-shared/reference/csize-class.md)<br/>
 Windows の [SIZE](/windows/desktop/api/windef/ns-windef-tagsize) 構造体と同様に、相対座標や位置を実装します。
@@ -1177,7 +1177,7 @@ Windows コモン スライダー コントロールの機能を提供します�
 スムーズ停止遷移をカプセル化します。
 
 [CSocket クラス](../../mfc/reference/csocket-class.md)<br/>
-`CAsyncSocket` から派生し、高いレベルの Windows ソケット API の抽象化を表します。
+`CAsyncSocket`から派生し、高いレベルの Windows ソケット API の抽象化を表します。
 
 [CSocketFile クラス](../../mfc/reference/csocketfile-class.md)<br/>
 Windows ソケットを使ったネットワーク間でのデータの送受信に使われる `CFile` オブジェクトです。
@@ -1246,13 +1246,13 @@ Windows コモン ツリー ビュー コントロールの機能が用意され
 ツリー コントロール、およびツリー コントロールの機能をカプセル化する [CTreeCtrl Class](../../mfc/reference/ctreectrl-class.md)クラスを、MFC のドキュメント/ビュー アーキテクチャで簡単に使用できるようにします。
 
 [CTypedPtrArray クラス](../../mfc/reference/ctypedptrarray-class.md)<br/>
-`CPtrArray` クラスまたは `CObArray` クラスのオブジェクトに対してタイプセーフな "ラッパー" を提供します。
+`CPtrArray` クラスまたは `CObArray`クラスのオブジェクトに対してタイプセーフな "ラッパー" を提供します。
 
 [CTypedPtrList クラス](../../mfc/reference/ctypedptrlist-class.md)<br/>
-`CPtrList` クラスのオブジェクトに対してタイプ セーフな "ラップ" が用意されています。
+`CPtrList`クラスのオブジェクトに対してタイプ セーフな "ラップ" が用意されています。
 
 [CTypedPtrMap クラス](../../mfc/reference/ctypedptrmap-class.md)<br/>
-ポインター マップ クラス `CMapPtrToPtr`、`CMapPtrToWord`、`CMapWordToPtr`、および `CMapStringToPtr` のオブジェクトに対してタイプ セーフな "ラップ" が用意されています。
+ポインター マップ クラス `CMapPtrToPtr`、 `CMapPtrToWord`、 `CMapWordToPtr`、および `CMapStringToPtr`のオブジェクトに対してタイプ セーフな "ラップ" が用意されています。
 
 [CUIntArray クラス](../../mfc/reference/cuintarray-class.md)<br/>
 符号なし整数の配列をサポートします。
@@ -1282,7 +1282,7 @@ Windows のアプリケーション オブジェクトを派生させるため�
 アプリケーション状態の処理、レジストリへの状態の保存、レジストリからの状態の読み込み、アプリケーション マネージャーの初期化、および同じアプリケーション マネージャーへのリンクの提供を行います。
 
 [CWindowDC クラス](../../mfc/reference/cwindowdc-class.md)<br/>
-`CDC` の派生クラスです。
+`CDC`の派生クラスです。
 
 [CWinFormsControl クラス](../../mfc/reference/cwinformscontrol-class.md)<br/>
 Windows フォーム コントロールのホスティング用の基本機能を提供します。

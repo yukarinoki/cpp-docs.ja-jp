@@ -34,11 +34,11 @@ helpviewer_keywords:
 - Unicode [C++], files
 ms.assetid: c534857e-39ee-4a3f-bd26-dfe551ac96c3
 ms.openlocfilehash: 1309f991b8251bde7d614aa274d8d2e9da7a8ed3
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333352"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62333327"
 ---
 # <a name="fopens-wfopens"></a>fopen_s、_wfopen_s
 
@@ -98,7 +98,7 @@ errno_t _wfopen_s(
 
 **fopen_s** Unicode のファイル ストリームをサポートしています。 新規または既存の Unicode ファイルを開くには、渡す、 *ccs*に目的のエンコーディングを指定するフラグ**fopen_s**:
 
-**fopen_s ((& a) fp、"newfile.txt"、"rw、ccs =**_エンコード_**");**
+**fopen_s(&fp, "newfile.txt", "rw, ccs=**_encoding_**");**
 
 値を許可*エンコード*は**UNICODE**、 **utf-8**、および**UTF 16LE**します。 ある値を指定しない場合の*エンコード*、 **fopen_s**は ANSI エンコーディングを使用します。
 
@@ -111,7 +111,7 @@ errno_t _wfopen_s(
 
 ### <a name="encodings-used-based-on-ccs-flag-and-bom"></a>ccs フラグおよび BOM に基づいて使用されるエンコーディング
 
-|ccs フラグ|BOM なし (または新しいファイル)|BOM: UTF-8|BOM: UTF-16|
+|ccs フラグ|BOM なし (または新しいファイル)|BOM:UTF-8|BOM:UTF-16|
 |----------------|----------------------------|-----------------|------------------|
 |**UNICODE**|**UTF-16LE**|**UTF-8**|**UTF-16LE**|
 |**UTF-8**|**UTF-8**|**UTF-8**|**UTF-16LE**|
@@ -168,18 +168,18 @@ Unicode およびマルチバイトのストリーム入出力におけるテキ
 | **R** | キャッシュがディスクからのランダム アクセスに最適化されるように指定します。ただし、ランダム アクセスに限定されるわけではありません。 |
 | **T** | ファイルを一時ファイルとして指定します。 可能な場合、ファイルはディスクにフラッシュされません。 |
 | **D** | ファイルを一時ファイルとして指定します。 最後のファイル ポインターが閉じられると、ファイルは削除されます。 |
-| **ccs =**_エンコード_ | 使用する設定でエンコードされた文字を指定します (いずれかの**utf-8**、 **UTF 16LE**、または**UNICODE**) このファイル。 何も指定しない場合は、ANSI エンコーディングが使用されます。 |
+| **ccs=**_encoding_ | 使用する設定でエンコードされた文字を指定します (いずれかの**utf-8**、 **UTF 16LE**、または**UNICODE**) このファイル。 何も指定しない場合は、ANSI エンコーディングが使用されます。 |
 
 有効な文字は、*モード*で使用される文字列**fopen_s**と[_fdopen](fdopen-wfdopen.md)に対応して*oflag*で使用される引数[_開く](open-wopen.md)と[_sopen](sopen-wsopen.md)、次のようにします。
 
 |文字*モード*文字列|等価*oflag*開く (_o)/_sopen の値|
 |-------------------------------|----------------------------------------------------|
-|**a**|**_O_WRONLY** &#124; **_O_APPEND** (通常は **_O_WRONLY** &#124; **_O_CREAT** &#124;* * * * _O_APPEND)|
-|**+**|**_O_RDWR** &#124; **_O_APPEND** (通常は **_O_RDWR** &#124; **_O_APPEND** &#124; **_O_CREAT** )|
+|**a**|**_O_WRONLY** &#124; **_O_APPEND** (usually **_O_WRONLY** &#124; **_O_CREAT** &#124;** _O_APPEND**)|
+|**+**|**_O_RDWR** &#124; **_O_APPEND** (usually **_O_RDWR** &#124; **_O_APPEND** &#124; **_O_CREAT** )|
 |**r**|**_O_RDONLY**|
-|**r +**|**_O_RDWR**|
-|**w**|**_O_WRONLY** (通常は **_O_WRONLY** &#124; **_O_CREAT** &#124;* * * * _O_TRUNC)|
-|**w +**|**_O_RDWR** (通常は **_O_RDWR** &#124; **_O_CREAT** &#124; **_O_TRUNC**)|
+|**r+**|**_O_RDWR**|
+|**w**|**_O_WRONLY** (usually **_O_WRONLY** &#124; **_O_CREAT** &#124;** _O_TRUNC**)|
+|**w +**|**_O_RDWR** (usually **_O_RDWR** &#124; **_O_CREAT** &#124; **_O_TRUNC**)|
 |**b**|**_O_BINARY**|
 |**t**|**_O_TEXT**|
 |**c**|なし|
@@ -188,9 +188,9 @@ Unicode およびマルチバイトのストリーム入出力におけるテキ
 |**R**|**_O_RANDOM**|
 |**T**|**_O_SHORTLIVED**|
 |**D**|**_O_TEMPORARY**|
-|**ccs = UNICODE**|**_O_WTEXT**|
-|**ccs utf-8 を =**|**_O_UTF8**|
-|**ccs UTF 16LE を =**|**_O_UTF16**|
+|**ccs=UNICODE**|**_O_WTEXT**|
+|**ccs=UTF-8**|**_O_UTF8**|
+|**ccs=UTF-16LE**|**_O_UTF16**|
 
 使用する場合**rb**モードは、コードを移植して、大量のファイルを読み取る必要はありませんやネットワークのパフォーマンスは気にしない、Win32 メモリ マップト ファイルはオプションにもあります。
 

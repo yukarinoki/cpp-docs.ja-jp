@@ -9,11 +9,11 @@ helpviewer_keywords:
 - projects [C++], properties
 ms.assetid: 9b0d6f8b-7d4e-4e61-aa75-7d14944816cd
 ms.openlocfilehash: ab5456bfc8a1b8305813f4ee4a4399091de15aee
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58564915"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62314094"
 ---
 # <a name="set-compiler-and-build-properties"></a>セットのコンパイラとビルド プロパティ
 
@@ -55,7 +55,7 @@ IDE では、プロジェクトをビルドするために必要なすべての�
 
 C++ コンパイラとリンカーのオプションが下にある、 **C/C++** と**リンカー**下の左ペインでノード**構成プロパティ**します。 これらは、コンパイラに渡されるコマンド ライン オプションに直接変換します。 特定のオプションに関するドキュメントを読み取り、中央のウィンドウとキーを押してオプションを選択します。 **F1**します。 またはにあるすべてのオプションのドキュメントを参照する[MSVC コンパイラ オプション](reference/compiler-options.md)と[MSVC リンカー オプション](reference/linker-options.md)します。 
 
-**プロパティ ページ**ダイアログ ボックスで、現在のプロジェクトに関連するプロパティ ページのみが表示されます。 たとえば、プロジェクトに .idl ファイルが含まれていない場合、MIDL プロパティ ページは表示されません。 各プロパティ ページで、設定に関する詳細については、[プロパティ ページ (C++)](reference/property-pages-visual-cpp.md)を参照してください。 
+**プロパティ ページ**ダイアログ ボックスで、現在のプロジェクトに関連するプロパティ ページのみが表示されます。 たとえば、プロジェクトに .idl ファイルが含まれていない場合、MIDL プロパティ ページは表示されません。 各プロパティ ページで、設定に関する詳細については、次を参照してください。[プロパティ ページ (C++)](reference/property-pages-visual-cpp.md)します。 
 
 ## <a name="directory-and-path-values"></a>ディレクトリとパスの値
 

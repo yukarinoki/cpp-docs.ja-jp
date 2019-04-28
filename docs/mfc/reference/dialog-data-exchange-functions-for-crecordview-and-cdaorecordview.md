@@ -21,11 +21,11 @@ helpviewer_keywords:
 - DAO [MFC], dialog data exchange (DDX) support
 ms.assetid: 0d8cde38-3a2c-4100-9589-ac80a7b1ce91
 ms.openlocfilehash: 2a794d16b2f94bf8ba66b6c0398dec262d8829e5
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57269891"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62322554"
 ---
 # <a name="dialog-data-exchange-functions-for-crecordview-and-cdaorecordview"></a>CRecordView と CDaoRecordView のダイアログ データ エクスチェンジ (DDX) 関数
 
@@ -517,7 +517,7 @@ void AFXAPI DDX_FieldSlider(
 
 ODBC ベースのクラスを使用する場合は、関数の最初のオーバーライドを使用します。 DAO ベースのクラスでは、2 番目のオーバーライドを使用します。
 
-DDX の詳細については、「 [ダイアログ データ エクスチェンジとダイアログ データ バリデーション](../dialog-data-exchange-and-validation.md)」を参照してください。 例との DDX の詳細について`CRecordView`と`CDaoRecordView`フィールドを参照してください[レコード ビュー](../../data/record-views-mfc-data-access.md)します。 スライダー コントロールの概要については、[を使用して CSliderCtrl](../using-csliderctrl.md)を参照してください。
+DDX の詳細については、「 [ダイアログ データ エクスチェンジとダイアログ データ バリデーション](../dialog-data-exchange-and-validation.md)」を参照してください。 例との DDX の詳細について`CRecordView`と`CDaoRecordView`フィールドを参照してください[レコード ビュー](../../data/record-views-mfc-data-access.md)します。 スライダー コントロールの概要については、次を参照してください。[を使用して CSliderCtrl](../using-csliderctrl.md)します。
 
 ### <a name="example"></a>例
 
