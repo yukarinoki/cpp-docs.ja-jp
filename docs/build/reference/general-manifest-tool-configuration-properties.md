@@ -10,11 +10,11 @@ f1_keywords:
 - VC.Project.VCManifestTool.AssemblyIdentity
 ms.assetid: b99368a5-6819-482c-a06e-f2409290cfd1
 ms.openlocfilehash: 9acdb7f5c934a8cabdd1803074778ac9f01f4960
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57827768"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62271031"
 ---
 # <a name="general-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>[全般] ([&lt;プロジェクト名&gt; プロパティ ページ] ダイアログ ボックス - [構成プロパティ] - [マニフェスト ツール])
 
@@ -44,4 +44,4 @@ ms.locfileid: "57827768"
 
 [ClickOnce Application Manifest](/visualstudio/deployment/clickonce-application-manifest)<br>
 [[マニフェスト ツール] プロパティ ページ](manifest-tool-property-pages.md)<br>
-[C++ コンパイラを設定し、Visual Studio でのプロパティのビルド](../working-with-project-properties.md)
+[Visual Studio で C++ コンパイラとビルド プロパティを設定する](../working-with-project-properties.md)

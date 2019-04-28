@@ -6,11 +6,11 @@ helpviewer_keywords:
 - C++ projects, project file format
 ms.assetid: 5261cf45-3136-40a6-899e-dc1339551401
 ms.openlocfilehash: cfe40d6520187212ab77607273c555f12012fd02
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57826501"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62319825"
 ---
 # <a name="project-files"></a>プロジェクト ファイル
 
@@ -120,5 +120,5 @@ Visual C++ プロジェクト ファイルは、.vcxproj ファイル名拡張�
 
 ## <a name="see-also"></a>関連項目
 
-[Visual Studio プロジェクトの C++](../creating-and-managing-visual-cpp-projects.md)<br>
-[C++ コンパイラを設定し、Visual Studio でのプロパティのビルド](../working-with-project-properties.md)
+[Visual Studio プロジェクト - C++](../creating-and-managing-visual-cpp-projects.md)<br>
+[Visual Studio で C++ コンパイラとビルド プロパティを設定する](../working-with-project-properties.md)

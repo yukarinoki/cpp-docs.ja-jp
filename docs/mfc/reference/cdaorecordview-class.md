@@ -17,11 +17,11 @@ helpviewer_keywords:
 - CDaoRecordView [MFC], OnMove
 ms.assetid: 5aa7d0e2-bd05-413e-b216-80c404ce18ac
 ms.openlocfilehash: f63aa8ed17619a9eef36e36bcc9243a3b973889a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57277775"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62207195"
 ---
 # <a name="cdaorecordview-class"></a>CDaoRecordView クラス
 
@@ -63,7 +63,7 @@ class AFX_NOVTABLE CDaoRecordView : public CFormView
 
 メニュー (および必要に応じてツールバー) に、レコード ビューのレコード間を移動するエンドユーザーのために、アプリケーション ウィザードで作成リソースを移動するために、最初次、前、または最後のレコード。 ClassWizard でレコード ビュー クラスを作成する場合は、これらのリソースを自分で作成メニューとビットマップ エディター必要があります。
 
-レコード間を移動するための既定の実装については、`IsOnFirstRecord`と`IsOnLastRecord`」および「[レコード ビューを使用して](../../data/using-a-record-view-mfc-data-access.md)、両方に適用される`CRecordView`と`CDaoRecordView`を参照してください。
+レコード間を移動するための既定の実装については、次を参照してください。`IsOnFirstRecord`と`IsOnLastRecord`」および「[レコード ビューを使用して](../../data/using-a-record-view-mfc-data-access.md)、両方に適用される`CRecordView`と`CDaoRecordView`します。
 
 `CDaoRecordView` レコード ビューは、ユーザー インターフェイスを更新できるようにはのレコード セット内のユーザーの位置を追跡します。 ユーザーは、レコード セットのいずれかの端に移動、レコード ビュー、ユーザー インターフェイス オブジェクトを無効にします: メニュー項目またはツール バー ボタンなど — を移動する同じ方向にさらにします。
 

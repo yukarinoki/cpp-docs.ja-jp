@@ -10,11 +10,11 @@ helpviewer_keywords:
 - CHeapPtrElementTraits class
 ms.assetid: 910e0e06-3c8b-4242-bf00-b57eb74fbc77
 ms.openlocfilehash: e535afb3a49a5720c8394cc1ab9186c360527fea
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57257284"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62258924"
 ---
 # <a name="cheapptrelementtraits-class"></a>CHeapPtrElementTraits クラス
 
@@ -52,7 +52,7 @@ class CHeapPtrElementTraits :
 
 このクラスは、ヒープのポインターを含むコレクション クラスのオブジェクトを作成するときに役立つ方法、静的関数、および typedef を提供します。 クラスは、`CHeapPtrList`から派生した`CHeapPtrElementTraits`します。
 
-詳細については、[ATL コレクション クラス](../../atl/atl-collection-classes.md)を参照してください。
+詳細については、次を参照してください。 [ATL コレクション クラス](../../atl/atl-collection-classes.md)します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 

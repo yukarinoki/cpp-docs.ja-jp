@@ -8,11 +8,11 @@ helpviewer_keywords:
 - CComEnum class
 ms.assetid: bff7dd7b-eb6e-4d6e-96ed-2706e66c8b3b
 ms.openlocfilehash: 4d83b06f37c132c0d2325304e2cc155ccb490690
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57290366"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62246396"
 ---
 # <a name="ccomenum-class"></a>CComEnum クラス
 
@@ -48,7 +48,7 @@ COM の列挙子インターフェイス。 参照してください[IEnumString
 
 ## <a name="remarks"></a>Remarks
 
-`CComEnum` 配列に基づいて、COM の列挙子オブジェクトを定義します。 このクラスに似ています[CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md) C++ 標準ライブラリ コンテナーに基づく列挙子を実装します。 このクラスを使用するための一般的な手順は次のとおりです。 詳細については、[ATL のコレクションと列挙子](../../atl/atl-collections-and-enumerators.md)を参照してください。
+`CComEnum` 配列に基づいて、COM の列挙子オブジェクトを定義します。 このクラスに似ています[CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md) C++ 標準ライブラリ コンテナーに基づく列挙子を実装します。 このクラスを使用するための一般的な手順は次のとおりです。 詳細については、次を参照してください。 [ATL のコレクションと列挙子](../../atl/atl-collections-and-enumerators.md)します。
 
 ## <a name="to-use-this-class"></a>このクラスを使用します。
 

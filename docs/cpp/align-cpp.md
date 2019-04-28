@@ -8,11 +8,11 @@ helpviewer_keywords:
 - __declspec keyword [C++], align
 ms.assetid: 9cb63f58-658b-4425-ac47-af8eabfc5878
 ms.openlocfilehash: 1bfe6e7a4646be8cea622078b4d85f20f458e1c5
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627333"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62258150"
 ---
 # <a name="align-c"></a>align (C++)
 
@@ -32,7 +32,7 @@ Visual Studio 2015 以降では、c++ 11 標準を使用して、`alignas`コン
 
 \# アラインメント値です。 有効なエントリは、1 ～ 8192 (バイト) の 2 の整数乗 (2、4、8、16、32、64 など) です。 `declarator` は、aligned として宣言するデータです。
 
-型の値を返す方法については`size_t`型のアラインメント要件を参照してください[_ _alignof](../cpp/alignof-operator.md)します。 64 ビット プロセッサを対象とするときにアラインされていないポインターを宣言する方法については、[_ _unaligned](../cpp/unaligned.md)を参照してください。
+型の値を返す方法については`size_t`型のアラインメント要件を参照してください[_ _alignof](../cpp/alignof-operator.md)します。 64 ビット プロセッサを対象とするときにアラインされていないポインターを宣言する方法については、次を参照してください。 [_ _unaligned](../cpp/unaligned.md)します。
 
 使用することができます`__declspec(align(#))`を定義するとき、**構造体**、**共用体**、または**クラス**変数を宣言する場合またはします。
 

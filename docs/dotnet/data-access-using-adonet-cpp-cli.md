@@ -23,11 +23,11 @@ helpviewer_keywords:
 - ADO.NET [C++], marshaling SAFEARRAY types
 ms.assetid: b0cd987d-1ea7-4f76-ba01-cbd52503d06d
 ms.openlocfilehash: b258e574b912b1c32e5ffae7ba29cfc5f9903685
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57749348"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62209093"
 ---
 # <a name="data-access-using-adonet-ccli"></a>ADO.NET によるデータ アクセス (C++/CLI)
 
@@ -41,7 +41,7 @@ ADO.NET では、共通言語ランタイム (CLR) 下で実行されます。 �
 
 ### <a name="example"></a>例
 
-この例で、クラス DatabaseClass が作成される ADO.NET と対話する<xref:System.Data.DataTable>オブジェクト。 このクラスは、ネイティブ C++ `class` (と比較する`ref class`または`value class`)。 これは、機能は、ネイティブ コードからこのクラスを使用して、マネージ型をネイティブ コードで使用することはできませんので必要です。 このクラスは、CLR を対象にコンパイルされる、`#pragma managed`クラス宣言の前のディレクティブ。 このディレクティブの詳細については、[マネージ、アンマネージ](../preprocessor/managed-unmanaged.md)を参照してください。
+この例で、クラス DatabaseClass が作成される ADO.NET と対話する<xref:System.Data.DataTable>オブジェクト。 このクラスは、ネイティブ C++ `class` (と比較する`ref class`または`value class`)。 これは、機能は、ネイティブ コードからこのクラスを使用して、マネージ型をネイティブ コードで使用することはできませんので必要です。 このクラスは、CLR を対象にコンパイルされる、`#pragma managed`クラス宣言の前のディレクティブ。 このディレクティブの詳細については、次を参照してください。[マネージ、アンマネージ](../preprocessor/managed-unmanaged.md)します。
 
 DatabaseClass クラスのプライベート メンバーに注意してください:`gcroot<DataTable ^> table`します。 ネイティブ型は、管理対象の型を含めることはできませんので、`gcroot`キーワードが必要です。 詳細については`gcroot`を参照してください[方法。ネイティブ型のハンドルを宣言](../dotnet/how-to-declare-handles-in-native-types.md)します。
 
@@ -167,7 +167,7 @@ COM 文字列を追加する方法を示します (`BSTR`) をマーシャ リ�
 
 ### <a name="example"></a>例
 
-この例で、クラス DatabaseClass が作成される ADO.NET と対話する<xref:System.Data.DataTable>オブジェクト。 このクラスは、ネイティブ C++ `class` (と比較する`ref class`または`value class`)。 これは、機能は、ネイティブ コードからこのクラスを使用して、マネージ型をネイティブ コードで使用することはできませんので必要です。 このクラスは、CLR を対象にコンパイルされる、`#pragma managed`クラス宣言の前のディレクティブ。 このディレクティブの詳細については、[マネージ、アンマネージ](../preprocessor/managed-unmanaged.md)を参照してください。
+この例で、クラス DatabaseClass が作成される ADO.NET と対話する<xref:System.Data.DataTable>オブジェクト。 このクラスは、ネイティブ C++ `class` (と比較する`ref class`または`value class`)。 これは、機能は、ネイティブ コードからこのクラスを使用して、マネージ型をネイティブ コードで使用することはできませんので必要です。 このクラスは、CLR を対象にコンパイルされる、`#pragma managed`クラス宣言の前のディレクティブ。 このディレクティブの詳細については、次を参照してください。[マネージ、アンマネージ](../preprocessor/managed-unmanaged.md)します。
 
 DatabaseClass クラスのプライベート メンバーに注意してください:`gcroot<DataTable ^> table`します。 ネイティブ型は、管理対象の型を含めることはできませんので、`gcroot`キーワードが必要です。 詳細については`gcroot`を参照してください[方法。ネイティブ型のハンドルを宣言](../dotnet/how-to-declare-handles-in-native-types.md)します。
 
@@ -301,7 +301,7 @@ StringCol: This is string 2.
 
 ### <a name="example"></a>例
 
-この例で、クラス DatabaseClass が作成される ADO.NET と対話する<xref:System.Data.DataTable>オブジェクト。 このクラスは、ネイティブ C++ `class` (と比較する`ref class`または`value class`)。 これは、機能は、ネイティブ コードからこのクラスを使用して、マネージ型をネイティブ コードで使用することはできませんので必要です。 このクラスは、CLR を対象にコンパイルされる、`#pragma managed`クラス宣言の前のディレクティブ。 このディレクティブの詳細については、[マネージ、アンマネージ](../preprocessor/managed-unmanaged.md)を参照してください。
+この例で、クラス DatabaseClass が作成される ADO.NET と対話する<xref:System.Data.DataTable>オブジェクト。 このクラスは、ネイティブ C++ `class` (と比較する`ref class`または`value class`)。 これは、機能は、ネイティブ コードからこのクラスを使用して、マネージ型をネイティブ コードで使用することはできませんので必要です。 このクラスは、CLR を対象にコンパイルされる、`#pragma managed`クラス宣言の前のディレクティブ。 このディレクティブの詳細については、次を参照してください。[マネージ、アンマネージ](../preprocessor/managed-unmanaged.md)します。
 
 DatabaseClass クラスのプライベート メンバーに注意してください:`gcroot<DataTable ^> table`します。 ネイティブ型は、管理対象の型を含めることはできませんので、`gcroot`キーワードが必要です。 詳細については`gcroot`を参照してください[方法。ネイティブ型のハンドルを宣言](../dotnet/how-to-declare-handles-in-native-types.md)します。
 
@@ -427,7 +427,7 @@ StringCol: This is string 2.
 
 ### <a name="example"></a>例
 
-この例で、クラス DatabaseClass が作成される ADO.NET と対話する<xref:System.Data.DataTable>オブジェクト。 このクラスは、ネイティブ C++ `class` (と比較する`ref class`または`value class`)。 これは、機能は、ネイティブ コードからこのクラスを使用して、マネージ型をネイティブ コードで使用することはできませんので必要です。 このクラスは、CLR を対象にコンパイルされる、`#pragma managed`クラス宣言の前のディレクティブ。 このディレクティブの詳細については、[マネージ、アンマネージ](../preprocessor/managed-unmanaged.md)を参照してください。
+この例で、クラス DatabaseClass が作成される ADO.NET と対話する<xref:System.Data.DataTable>オブジェクト。 このクラスは、ネイティブ C++ `class` (と比較する`ref class`または`value class`)。 これは、機能は、ネイティブ コードからこのクラスを使用して、マネージ型をネイティブ コードで使用することはできませんので必要です。 このクラスは、CLR を対象にコンパイルされる、`#pragma managed`クラス宣言の前のディレクティブ。 このディレクティブの詳細については、次を参照してください。[マネージ、アンマネージ](../preprocessor/managed-unmanaged.md)します。
 
 DatabaseClass クラスのプライベート メンバーに注意してください:`gcroot<DataTable ^> table`します。 ネイティブ型は、管理対象の型を含めることはできませんので、`gcroot`キーワードが必要です。 詳細については`gcroot`を参照してください[方法。ネイティブ型のハンドルを宣言](../dotnet/how-to-declare-handles-in-native-types.md)します。
 
@@ -568,7 +568,7 @@ ObjectCol: 42
 
 ### <a name="example"></a>例
 
-この例で、クラス DatabaseClass が作成される ADO.NET と対話する<xref:System.Data.DataTable>オブジェクト。 このクラスは、ネイティブ C++ `class` (と比較する`ref class`または`value class`)。 これは、機能は、ネイティブ コードからこのクラスを使用して、マネージ型をネイティブ コードで使用することはできませんので必要です。 このクラスは、CLR を対象にコンパイルされる、`#pragma managed`クラス宣言の前のディレクティブ。 このディレクティブの詳細については、[マネージ、アンマネージ](../preprocessor/managed-unmanaged.md)を参照してください。
+この例で、クラス DatabaseClass が作成される ADO.NET と対話する<xref:System.Data.DataTable>オブジェクト。 このクラスは、ネイティブ C++ `class` (と比較する`ref class`または`value class`)。 これは、機能は、ネイティブ コードからこのクラスを使用して、マネージ型をネイティブ コードで使用することはできませんので必要です。 このクラスは、CLR を対象にコンパイルされる、`#pragma managed`クラス宣言の前のディレクティブ。 このディレクティブの詳細については、次を参照してください。[マネージ、アンマネージ](../preprocessor/managed-unmanaged.md)します。
 
 DatabaseClass クラスのプライベート メンバーに注意してください:`gcroot<DataTable ^> table`します。 ネイティブ型は、管理対象の型を含めることはできませんので、`gcroot`キーワードが必要です。 詳細については`gcroot`を参照してください[方法。ネイティブ型のハンドルを宣言](../dotnet/how-to-declare-handles-in-native-types.md)します。
 
@@ -717,7 +717,7 @@ int main()
 
 ## <a name="net-framework-security"></a>.NET Framework セキュリティ
 
-ADO.NET に関連するセキュリティ問題については、[ADO.NET アプリケーションのセキュリティで保護する](/dotnet/framework/data/adonet/securing-ado-net-applications)を参照してください。
+ADO.NET に関連するセキュリティ問題については、次を参照してください。 [ADO.NET アプリケーションのセキュリティで保護する](/dotnet/framework/data/adonet/securing-ado-net-applications)します。
 
 ## <a name="related-sections"></a>関連項目
 

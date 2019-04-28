@@ -23,11 +23,11 @@ helpviewer_keywords:
 - CAcl class
 ms.assetid: 20bcb9af-dc1c-4737-b923-3864776680d6
 ms.openlocfilehash: 05d9d5fe9cc344be3f903f247f34003056404c9d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258568"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62247652"
 ---
 # <a name="cacl-class"></a>CAcl クラス
 
@@ -96,7 +96,7 @@ class CAcl
 
 オブジェクトには、システム レベルのセキュリティ情報がシステムには、システム管理者によって制御される ACL の形式で、それに関連付けられていることもできます。 システムの ACL は、オブジェクトにアクセスするすべての試行を監査するシステム管理者に許可できます。
 
-詳細については、、 [ACL](/windows/desktop/SecAuthZ/access-control-lists) Windows SDK で説明を参照してください。
+詳細については、次を参照してください。、 [ACL](/windows/desktop/SecAuthZ/access-control-lists) Windows SDK で説明します。
 
 Windows でのアクセス制御モデルの概要については、次を参照してください。[アクセス制御](/windows/desktop/SecAuthZ/access-control)Windows SDK に含まれています。
 

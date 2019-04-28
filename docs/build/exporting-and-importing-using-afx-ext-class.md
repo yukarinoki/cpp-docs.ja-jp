@@ -12,11 +12,11 @@ helpviewer_keywords:
 - exporting DLLs [C++], AFX_EXT_CLASS macro
 ms.assetid: 6b72cb2b-e92e-4ecd-bcab-c335e1d1cfde
 ms.openlocfilehash: bcfdc94e8db80daec227d77c20ecec6b14d5af11
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57821223"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62195330"
 ---
 # <a name="exporting-and-importing-using-afxextclass"></a>AFX_EXT_CLASS を使ったエクスポート/インポート
 
@@ -81,7 +81,7 @@ public: \
 
 静的で始まる行`AFX_DATA`クラスの内部静的オブジェクトを宣言しています。 でこのクラスを正しくエクスポートして、クライアントの実行可能ファイルの実行時情報にアクセスするには、この静的オブジェクトをエクスポートする必要があります。 静的オブジェクトは、修飾子で宣言されているため`AFX_DATA`、のみを定義する必要があります`AFX_DATA`する`__declspec(dllexport)`、DLL のビルド時として定義し、`__declspec(dllimport)`クライアント実行可能ファイルを作成するときにします。 `AFX_EXT_CLASS`は既に定義されて、この方法でだけを再定義する`AFX_DATA`と同じである`AFX_EXT_CLASS`クラス定義をします。
 
-例:
+例えば:
 
 ```cpp
 #undef  AFX_DATA
@@ -114,7 +114,7 @@ MFC は常に使用されるため、`AFX_DATA`このようなシナリオの場
 
 - [エクスポート方式の使用](determining-which-exporting-method-to-use.md)
 
-- [使用してアプリケーションをインポートします。](importing-into-an-application-using-declspec-dllimport.md)
+- [__declspec(dllimport) を使用してアプリケーションにインポートする](importing-into-an-application-using-declspec-dllimport.md)
 
 - [DLL を初期化します。](run-time-library-behavior.md#initializing-a-dll)
 
@@ -122,7 +122,7 @@ MFC は常に使用されるため、`AFX_DATA`このようなシナリオの場
 
 - [装飾名](reference/decorated-names.md)
 
-- [インポートとエクスポートのインライン関数](importing-and-exporting-inline-functions.md)
+- [インライン関数のインポートとエクスポート](importing-and-exporting-inline-functions.md)
 
 - [相互インポート](mutual-imports.md)
 

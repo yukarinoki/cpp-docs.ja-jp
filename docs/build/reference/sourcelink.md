@@ -7,11 +7,11 @@ helpviewer_keywords:
 - /SOURCELINK linker option
 - /SOURCELINK
 ms.openlocfilehash: 1643727d8f556a905eccbfa9626d1aaa8ea63cbf
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816608"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62317953"
 ---
 # <a name="sourcelink-include-source-link-file-in-pdb"></a>/SOURCELINK (PDB にソース リンクを含めるファイル)
 
@@ -24,15 +24,15 @@ ms.locfileid: "57816608"
 ## <a name="arguments"></a>引数
 
 *ファイル名*<br/>
-JSON 形式の構成ファイルの Url へのローカル ファイル パスの単純なマッピングを含むソース ファイルを取得できる、デバッガーによって表示を指定します。 このファイルの形式の詳細については、[ソース リンクの JSON スキーマ](https://github.com/dotnet/designs/blob/master/accepted/diagnostics/source-link.md#source-link-json-schema)を参照してください。
+JSON 形式の構成ファイルの Url へのローカル ファイル パスの単純なマッピングを含むソース ファイルを取得できる、デバッガーによって表示を指定します。 このファイルの形式の詳細については、次を参照してください。[ソース リンクの JSON スキーマ](https://github.com/dotnet/designs/blob/master/accepted/diagnostics/source-link.md#source-link-json-schema)します。
 
 ## <a name="remarks"></a>Remarks
 
-ソース リンクは、ソースのバイナリのデバッグを提供するために依存しない言語とソース管理システムです。 ソース リンクは、ネイティブの C++ バイナリが Visual Studio 2017 バージョン 15.8 以降でサポートされます。 ソース リンクの概要については、[ソース リンク](https://github.com/dotnet/designs/blob/master/accepted/diagnostics/source-link.md)を参照してください。 プロジェクトでソース リンクを使用する方法と、プロジェクトの一部として、SourceLink ファイルを生成する方法については、[を使用してソース リンク](https://github.com/dotnet/sourcelink#using-source-link-in-c-projects)を参照してください。
+ソース リンクは、ソースのバイナリのデバッグを提供するために依存しない言語とソース管理システムです。 ソース リンクは、ネイティブの C++ バイナリが Visual Studio 2017 バージョン 15.8 以降でサポートされます。 ソース リンクの概要については、次を参照してください。[ソース リンク](https://github.com/dotnet/designs/blob/master/accepted/diagnostics/source-link.md)します。 プロジェクトでソース リンクを使用する方法と、プロジェクトの一部として、SourceLink ファイルを生成する方法については、次を参照してください。[を使用してソース リンク](https://github.com/dotnet/sourcelink#using-source-link-in-c-projects)します。
 
 ### <a name="to-set-the-sourcelink-linker-option-in-visual-studio"></a>Visual Studio で/SOURCELINK リンカー オプションを設定するには
 
-1. 開く、**プロパティ ページ**プロジェクトのダイアログ ボックス。 詳細については、[Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)を参照してください。
+1. 開く、**プロパティ ページ**プロジェクトのダイアログ ボックス。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. 選択、**構成プロパティ** > **リンカー** > **コマンドライン**プロパティ ページ。
 
@@ -44,5 +44,5 @@ JSON 形式の構成ファイルの Url へのローカル ファイル パス�
 
 ## <a name="see-also"></a>関連項目
 
-[MSVC リンカーの参照](linking.md)<br/>
+[MSVC リンカーのリファレンス](linking.md)<br/>
 [MSVC リンカー オプション](linker-options.md)

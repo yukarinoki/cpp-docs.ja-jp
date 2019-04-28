@@ -107,11 +107,11 @@ helpviewer_keywords:
 - COleControlSite [MFC], m_rect
 ms.assetid: 43970644-5eab-434a-8ba6-56d144ff1e3f
 ms.openlocfilehash: 31502f2ecda1c14cb68c83da98cf2b764baba461
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57264132"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62310384"
 ---
 # <a name="colecontrolsite-class"></a>COleControlSite クラス
 
@@ -280,7 +280,7 @@ explicit COleControlSite(COleControlContainer* pCtrlCont);
 
 ### <a name="remarks"></a>Remarks
 
-この関数を呼び出して、 [COccManager::CreateContainer](../../mfc/reference/coccmanager-class.md#createcontainer)関数。 コンテナーの作成のカスタマイズの詳細については、[COccManager::CreateSite](../../mfc/reference/coccmanager-class.md#createsite)を参照してください。
+この関数を呼び出して、 [COccManager::CreateContainer](../../mfc/reference/coccmanager-class.md#createcontainer)関数。 コンテナーの作成のカスタマイズの詳細については、次を参照してください。 [COccManager::CreateSite](../../mfc/reference/coccmanager-class.md#createsite)します。
 
 ##  <a name="createcontrol"></a>  COleControlSite::CreateControl
 
@@ -368,8 +368,7 @@ Windows のサブセットのみ*dwStyle*でフラグがサポートされる`Cr
 
 ##  <a name="destroycontrol"></a>  COleControlSite::DestroyControl
 
-
-  `COleControlSite` オブジェクトを破棄します。
+`COleControlSite` オブジェクトを破棄します。
 
 ```
 virtual BOOL DestroyControl();
@@ -586,7 +585,7 @@ virtual DWORD GetStyle() const;
 
 ### <a name="remarks"></a>Remarks
 
-使用可能な値の一覧は、[Windows スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)を参照してください。 コントロールのサイトの拡張スタイルを取得する[COleControlSite::GetExStyle](#getexstyle)します。
+使用可能な値の一覧は、次を参照してください。 [Windows スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)します。 コントロールのサイトの拡張スタイルを取得する[COleControlSite::GetExStyle](#getexstyle)します。
 
 ##  <a name="getwindowtext"></a>  COleControlSite::GetWindowText
 

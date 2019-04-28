@@ -16,11 +16,11 @@ helpviewer_keywords:
 - post-build events
 ms.assetid: 788a6c18-2dbe-4a49-8cd6-86c1ad7a95cc
 ms.openlocfilehash: c8097e013f934c45b8e3860b8377bdb2bdb9d9a0
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57827221"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62315236"
 ---
 # <a name="specifying-build-events"></a>ビルド イベントの指定
 
@@ -36,7 +36,7 @@ ms.locfileid: "57827221"
 
 1. **ソリューション エクスプローラー**で、ビルド イベントを指定するプロジェクトを選択します。
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での設定の C++ コンパイラとビルド プロパティ](working-with-project-properties.md)を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](working-with-project-properties.md)します。
 
 1. **[ビルド イベント]** フォルダーで、ビルド イベント プロパティ ページを選択します。
 
@@ -44,7 +44,7 @@ ms.locfileid: "57827221"
 
    - **[コマンド ライン]** で、コマンド プロンプトの場合と同様にコマンドを指定します。 有効なコマンドまたはバッチ ファイルと必要な入力ファイルまたは出力ファイルがあればそれを指定します。 後続のコマンドがすべて確実に実行されるように、バッチ ファイル名の前に **call** バッチ コマンドを指定します。
 
-      MSBuild マクロを利用すれば、複数の入力ファイルと出力ファイルを数式で指定できます。 ファイルの場所または一連のファイルの名前を指定する方法については、[用マクロの一般的なコマンドとプロパティのビルド](reference/common-macros-for-build-commands-and-properties.md)を参照してください。
+      MSBuild マクロを利用すれば、複数の入力ファイルと出力ファイルを数式で指定できます。 ファイルの場所または一連のファイルの名前を指定する方法については、次を参照してください。[用マクロの一般的なコマンドとプロパティのビルド](reference/common-macros-for-build-commands-and-properties.md)します。
 
       '%' は MSBuild に予約されている文字です。環境変数を指定する場合、エスケープ文字 **%** をそれぞれ、16 進数エスケープ シーケンス **%25** に変更してください。 たとえば、**%WINDIR%** を **%25WINDIR%25** に変更します。 MSBuild は **%25** シーケンスをそれぞれ **%** 文字に変更し、それから環境変数にアクセスします。
 

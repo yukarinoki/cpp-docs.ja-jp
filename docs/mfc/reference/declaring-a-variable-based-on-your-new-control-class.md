@@ -9,15 +9,15 @@ helpviewer_keywords:
 - classes [MFC], declaring variables based on
 ms.assetid: 5722dc38-c0eb-40bd-93da-67a808140d03
 ms.openlocfilehash: b3b1a168619c1c111db3e71e1a9562d441cc710d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57302079"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62323009"
 ---
 # <a name="declaring-a-variable-based-on-your-new-control-class"></a>新しいコントロール クラスに基づいた変数の宣言
 
-MFC コントロール クラスを作成すると、それに基づいて変数を宣言することができます。 新しい変数のコンテキストを提供するには、は、ダイアログ エディターを開き、再利用可能なコントロールを使用する ダイアログ ボックスを編集する必要があります。 また、ダイアログ ボックスは、関連付けられているクラスを既にが必要です。 ダイアログ エディターを使用する方法の詳細については、[ダイアログ エディター](../../windows/dialog-editor.md)を参照してください。
+MFC コントロール クラスを作成すると、それに基づいて変数を宣言することができます。 新しい変数のコンテキストを提供するには、は、ダイアログ エディターを開き、再利用可能なコントロールを使用する ダイアログ ボックスを編集する必要があります。 また、ダイアログ ボックスは、関連付けられているクラスを既にが必要です。 ダイアログ エディターを使用する方法の詳細については、次を参照してください。[ダイアログ エディター](../../windows/dialog-editor.md)します。
 
 ### <a name="to-declare-a-variable-based-on-your-reusable-class"></a>再利用可能なクラスに基づいた変数を宣言するには
 

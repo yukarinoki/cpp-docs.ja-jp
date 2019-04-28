@@ -7,11 +7,11 @@ helpviewer_keywords:
 - applications [OLE], implementing OLE
 ms.assetid: 0875ddae-99df-488c-82c6-164074a81058
 ms.openlocfilehash: 83a1089ecaaaa9bd0dd1d928cd3d1869e5017a4a
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58774387"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62186866"
 ---
 # <a name="ole-background-implementation-strategies"></a>OLE の背景知識:Implementation Strategies
 
@@ -38,6 +38,6 @@ ms.locfileid: "58774387"
 ## <a name="see-also"></a>関連項目
 
 [OLE の背景知識](../mfc/ole-background.md)<br/>
-[コンテナー:コンテナーの実装](../mfc/containers-implementing-a-container.md)<br/>
-[サーバー:サーバーの実装](../mfc/servers-implementing-a-server.md)<br/>
+[コンテナー: コンテナーの実装](../mfc/containers-implementing-a-container.md)<br/>
+[サーバー: サーバーの実装](../mfc/servers-implementing-a-server.md)<br/>
 [MFC アプリケーション ウィザード](../mfc/reference/mfc-application-wizard.md)

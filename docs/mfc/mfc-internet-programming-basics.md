@@ -17,18 +17,18 @@ helpviewer_keywords:
 - WinInet classes [MFC]
 ms.assetid: 6df2dfd0-6e3f-4587-9d01-2a32f00f8a6f
 ms.openlocfilehash: 814e63272058200850424e9d5355637111527e1c
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750286"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62239144"
 ---
 # <a name="mfc-internet-programming-basics"></a>MFC インターネット プログラミングの基礎
 
 Microsoft では、クライアントとサーバーの両方のアプリケーションのプログラミングの多くの Api を提供します。 多くの新しいアプリケーションが、インターネットに書き込まれていると、テクノロジ、ブラウザーの機能、およびセキュリティ オプションの変更、新しい種類のアプリケーションが書き込まれます。 World Wide Web にアクセスするため、テキスト、グラフィックス、ActiveX コントロール、およびドキュメントを含む HTML ページを表示して、クライアント コンピューターでブラウザーを実行します。 サーバーは、FTP、HTTP、および、gopher サービスを提供し、CGI を使用してサーバー拡張機能のアプリケーションを実行します。 カスタム アプリケーションでは、情報を取得でき、インターネット上のデータを提供することができます。
 
 >[!IMPORTANT]
-> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 詳細については、[ActiveX コントロール](activex-controls.md)を参照してください。
+> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 詳細については、次を参照してください。 [ActiveX コントロール](activex-controls.md)します。
 
 ![クライアントとサーバー アプリケーション](../mfc/media/vc38bq1.gif "クライアントおよびサーバー アプリケーション")
 

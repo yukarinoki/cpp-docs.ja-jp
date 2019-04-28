@@ -11,11 +11,11 @@ helpviewer_keywords:
 - exports table [C++]
 ms.assetid: a08f86c4-5996-460b-ae54-da2b764045f0
 ms.openlocfilehash: 6bdf5b86724ae07aa073a9feb1cc4d5723bc6e6b
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57819119"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62196743"
 ---
 # <a name="exporting-from-a-dll"></a>DLL からのエクスポート
 
@@ -53,7 +53,7 @@ DLL から関数をエクスポートする方法には、次の 2 つがあり�
 
 - [アプリケーションへのインポート](importing-into-an-application.md)
 
-- [インポートとエクスポートのインライン関数](importing-and-exporting-inline-functions.md)
+- [インライン関数のインポートとエクスポート](importing-and-exporting-inline-functions.md)
 
 - [相互インポート](mutual-imports.md)
 

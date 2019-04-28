@@ -3,15 +3,15 @@ title: キャスト (C++/CX)
 ms.date: 06/19/2018
 ms.assetid: 5247f6c7-6a0a-4021-97c9-21c868bd9455
 ms.openlocfilehash: 65d489d14c91b462e5a2bbe8bd60fce2657904a7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454822"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62258214"
 ---
 # <a name="casting-ccx"></a>キャスト (C++/CX)
 
-Windows ランタイム型に 4 つの異なるキャスト演算子が適用されます: [static_cast 演算子](../cpp/static-cast-operator.md)、 [dynamic_cast Operator](../cpp/dynamic-cast-operator.md)、 **safe_cast Operator**、および[reinterpret_cast 演算子](../cpp/reinterpret-cast-operator.md)します。 **safe_cast**と**static_cast**変換を実行することはできませんが、例外をスロー[static_cast 演算子](../cpp/static-cast-operator.md)もはコンパイル時の型チェックを実行します。 **dynamic_cast**返します**nullptr**型変換に失敗した場合。 **Reinterpret_cast** null 以外の値を返す有効でない可能性があります。 このため、お勧めします使用しないこと**reinterpret_cast**キャストが成功することがわかっていない限り、します。 C++ で C スタイル キャストは使用しないこと勧めさらに、/cli CX コードと同じですが**reinterpret_cast**します。
+Windows ランタイム型に 4 つの異なるキャスト演算子が適用されます: [static_cast 演算子](../cpp/static-cast-operator.md)、 [dynamic_cast Operator](../cpp/dynamic-cast-operator.md)、 **safe_cast Operator**、および[reinterpret_cast 演算子](../cpp/reinterpret-cast-operator.md)します。 **safe_cast**と**static_cast**変換を実行することはできませんが、例外をスロー[static_cast 演算子](../cpp/static-cast-operator.md)もはコンパイル時の型チェックを実行します。 **dynamic_cast**返します**nullptr**型変換に失敗した場合。 **Reinterpret_cast** null 以外の値を返す有効でない可能性があります。 このため、お勧めします使用しないこと**reinterpret_cast**キャストが成功することがわかっていない限り、します。 さらに、お勧めの C スタイルのキャストを使用しないこと、 C++/CX コードと同じですが**reinterpret_cast**します。
 
 コンパイラとランタイムは、暗黙的なキャストも実行します。たとえば、ボックス化操作で、パラメーターの型が `Object^`であるメソッドに値型または組み込み型が引数として渡される場合です。 理論的には、暗黙的なキャストは実行時に例外を引き起こしません。コンパイラが暗黙的な変換を実行できない場合は、コンパイル時にエラーが発生します。
 

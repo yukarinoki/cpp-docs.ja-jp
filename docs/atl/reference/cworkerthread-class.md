@@ -16,11 +16,11 @@ helpviewer_keywords:
 - CWorkerThread class
 ms.assetid: be79a832-1345-4a36-a13e-a406cc65286f
 ms.openlocfilehash: d4645f4a57ce70c3683972c22e0f99cbce87ca6b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57287779"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62276660"
 ---
 # <a name="cworkerthread-class"></a>CWorkerThread クラス
 
@@ -277,5 +277,5 @@ HRESULT Shutdown(DWORD dwWait = ATL_WORKER_THREAD_WAIT) throw();
 
 [DefaultThreadTraits](atl-typedefs.md#defaultthreadtraits)<br/>
 [クラス](../../atl/reference/atl-classes.md)<br/>
-[マルチ スレッド。ワーカー スレッドを作成します。](../../parallel/multithreading-creating-worker-threads.md)<br/>
+[マルチスレッド: マルチスレッド : ワーカー スレッドの作成](../../parallel/multithreading-creating-worker-threads.md)<br/>
 [IWorkerThreadClient インターフェイス](../../atl/reference/iworkerthreadclient-interface.md)

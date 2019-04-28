@@ -10,15 +10,15 @@ helpviewer_keywords:
 - external linkage, extern modifier
 ms.assetid: 1e2f0ae3-ae98-4410-85b5-222d6abc865a
 ms.openlocfilehash: 4a3a4e158794e06f28c638e87e014ddc3fb99837
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648722"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62183740"
 ---
 # <a name="extern-c"></a>extern (C++)
 
-**Extern**キーワードがそのリソースの名があることを指定するグローバル変数、関数、またはテンプレート宣言に適用される*外部リンケージ*します。 リンケージとグローバル変数の使用が推奨されない理由の背景については、[プログラムとリンケージ](program-and-linkage-cpp.md)を参照してください。
+**Extern**キーワードがそのリソースの名があることを指定するグローバル変数、関数、またはテンプレート宣言に適用される*外部リンケージ*します。 リンケージとグローバル変数の使用が推奨されない理由の背景については、次を参照してください。[プログラムとリンケージ](program-and-linkage-cpp.md)します。
 
 **Extern**キーワードには、コンテキストに応じて次の 4 つの意味があります。
 

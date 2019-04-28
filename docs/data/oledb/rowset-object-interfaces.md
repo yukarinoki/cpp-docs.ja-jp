@@ -9,11 +9,11 @@ helpviewer_keywords:
 - interfaces, list of
 ms.assetid: 0d7a5d48-2fe4-434f-a84b-157c1fdc3494
 ms.openlocfilehash: 1f3e6066af4b6870c5fa90f7bde373bb7be476ce
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59032954"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62243979"
 ---
 # <a name="rowset-object-interfaces"></a>行セット オブジェクト インターフェイス
 
@@ -21,7 +21,7 @@ ms.locfileid: "59032954"
 
 |Interface|必須?|OLE DB テンプレートによって実装されるでしょうか。|
 |---------------|---------------|--------------------------------------|
-|[IAccessor](/previous-versions/windows/desktop/ms719672(v=vs.85))|必須|[はい]|
+|[IAccessor](/previous-versions/windows/desktop/ms719672(v=vs.85))|必須|はい|
 |[IColumnsInfo](/previous-versions/windows/desktop/ms724541(v=vs.85))|必須|はい|
 |[IConvertType](/previous-versions/windows/desktop/ms715926(v=vs.85))|必須|はい|
 |[IRowset](/previous-versions/windows/desktop/ms720986(v=vs.85))|必須|はい|
@@ -32,7 +32,7 @@ ms.locfileid: "59032954"
 |[IConnectionPointContainer](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpointcontainer)|Optional|はい (ATL) を使用|
 |[IDBAsynchStatus](/previous-versions/windows/desktop/ms709832(v=vs.85))|Optional|いいえ|
 |[IGetRow](/previous-versions/windows/desktop/ms718047(v=vs.85))|Optional|いいえ|
-|[IRowsetChange](/previous-versions/windows/desktop/ms715790(v=vs.85))|Optional|はい|
+|[IRowsetChange](/previous-versions/windows/desktop/ms715790(v=vs.85))|Optional|[はい]|
 |[IRowsetChapterMember](/previous-versions/windows/desktop/ms725430(v=vs.85))|Optional|いいえ|
 |[IRowsetCurrentIndex](/previous-versions/windows/desktop/ms709700(v=vs.85))|Optional|いいえ|
 |[IRowsetFind](/previous-versions/windows/desktop/ms724221(v=vs.85))|Optional|いいえ|

@@ -193,11 +193,11 @@ helpviewer_keywords:
 - CWinApp [MFC], m_pDataRecoveryHandler
 ms.assetid: e426a3cd-0d15-40d6-bd55-beaa5feb2343
 ms.openlocfilehash: 6366638ebfd5e78ad517a8913e4276d5cd820670
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57264674"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62323360"
 ---
 # <a name="cwinapp-class"></a>CWinApp クラス
 
@@ -699,7 +699,7 @@ virtual LPVOID GetApplicationRecoveryParameter();
 
 この関数の既定の動作は、NULL を返します。
 
-詳細については、[CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback)を参照してください。
+詳細については、次を参照してください。 [CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback)します。
 
 ##  <a name="getapplicationrecoverypinginterval"></a>  CWinApp::GetApplicationRecoveryPingInterval
 
@@ -780,7 +780,7 @@ virtual CDataRecoveryHandler *GetDataRecoveryHandler();
 
 ### <a name="remarks"></a>Remarks
 
-再起動マネージャーを使用する各アプリケーションは、1 つのインスタンスをいる必要があります、 [CDataRecoveryHandler クラス](../../mfc/reference/cdatarecoveryhandler-class.md)します。 このクラスは、開いているドキュメントと自動保存ファイルの監視を担当します。 動作、`CDataRecoveryHandler`再起動マネージャーの構成によって異なります。 詳細については、[CDataRecoveryHandler クラス](../../mfc/reference/cdatarecoveryhandler-class.md)を参照してください。
+再起動マネージャーを使用する各アプリケーションは、1 つのインスタンスをいる必要があります、 [CDataRecoveryHandler クラス](../../mfc/reference/cdatarecoveryhandler-class.md)します。 このクラスは、開いているドキュメントと自動保存ファイルの監視を担当します。 動作、`CDataRecoveryHandler`再起動マネージャーの構成によって異なります。 詳細については、次を参照してください。 [CDataRecoveryHandler クラス](../../mfc/reference/cdatarecoveryhandler-class.md)します。
 
 このメソッドは、Windows Vista より前のオペレーティング システムで NULL を返します。 再起動マネージャーは、Windows Vista より前のオペレーティング システムではサポートされていません。
 
@@ -908,7 +908,7 @@ BOOL GetProfileBinary(
 
 [!code-cpp[NVC_MFCWindowing#41](../../mfc/reference/codesnippet/cpp/cwinapp-class_7.cpp)]
 
-たとえば、[CWinApp::WriteProfileBinary](#writeprofilebinary)を参照してください。
+たとえば、次を参照してください。 [CWinApp::WriteProfileBinary](#writeprofilebinary)します。
 
 ##  <a name="getprofileint"></a>  CWinApp::GetProfileInt
 
@@ -949,7 +949,7 @@ UINT GetProfileInt(
 
 [!code-cpp[NVC_MFCWindowing#42](../../mfc/reference/codesnippet/cpp/cwinapp-class_8.cpp)]
 
-たとえば、[cwinapp::writeprofileint](#writeprofileint)を参照してください。
+たとえば、次を参照してください。 [cwinapp::writeprofileint](#writeprofileint)します。
 
 ##  <a name="getprofilestring"></a>  CWinApp::GetProfileString
 
@@ -1252,7 +1252,7 @@ HICON LoadStandardIcon(LPCTSTR lpszIconName) const;
 ### <a name="parameters"></a>パラメーター
 
 *lpszIconName*<br/>
-定義済みの Windows アイコンを指定するマニフェスト定数の識別子。 WINDOWS では、これらの識別子が定義されています。H. 可能な定義済みの値とその説明の一覧は、、*されています*パラメーター [LoadIcon](/windows/desktop/api/winuser/nf-winuser-loadicona) Windows SDK にを参照してください。
+定義済みの Windows アイコンを指定するマニフェスト定数の識別子。 WINDOWS では、これらの識別子が定義されています。H. 可能な定義済みの値とその説明の一覧は、次を参照してください。、*されています*パラメーター [LoadIcon](/windows/desktop/api/winuser/nf-winuser-loadicona) Windows SDK にします。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1420,7 +1420,7 @@ CDataRecoveryHandler* m_pDataRecoveryHandler;
 
 ### <a name="remarks"></a>Remarks
 
-アプリケーションのデータ復旧のハンドラーは、開いているドキュメントと自動保存を監視しています。 フレームワークは、アプリケーションが予期せず終了した後に再起動すると、自動保存されたファイルを復元するのにデータ回復のハンドラーを使用します。 詳細については、[CDataRecoveryHandler クラス](../../mfc/reference/cdatarecoveryhandler-class.md)を参照してください。
+アプリケーションのデータ復旧のハンドラーは、開いているドキュメントと自動保存を監視しています。 フレームワークは、アプリケーションが予期せず終了した後に再起動すると、自動保存されたファイルを復元するのにデータ回復のハンドラーを使用します。 詳細については、次を参照してください。 [CDataRecoveryHandler クラス](../../mfc/reference/cdatarecoveryhandler-class.md)します。
 
 ##  <a name="m_pszappname"></a>  CWinApp::m_pszAppName
 
@@ -1595,7 +1595,7 @@ afx_msg void OnFileOpen();
 
 追加する必要があります、`ON_COMMAND( ID_FILE_OPEN, OnFileOpen )`ステートメントを`CWinApp`このメンバー関数を有効にするクラスのメッセージ マップです。 有効な場合、この関数は、ファイルを開くコマンドの実行を処理します。
 
-既定の動作と、このメンバー関数をオーバーライドする方法のガイダンスについては、[テクニカル ノート 22:](../../mfc/tn022-standard-commands-implementation.md)を参照してください。
+既定の動作と、このメンバー関数をオーバーライドする方法のガイダンスについては、次を参照してください。[テクニカル ノート 22:](../../mfc/tn022-standard-commands-implementation.md)します。
 
 ### <a name="example"></a>例
 
@@ -1615,7 +1615,7 @@ afx_msg void OnFilePrintSetup();
 
 追加する必要があります、`ON_COMMAND( ID_FILE_PRINT_SETUP, OnFilePrintSetup )`ステートメントを`CWinApp`このメンバー関数を有効にするクラスのメッセージ マップです。 有効な場合、この関数は、ファイルの印刷コマンドの実行を処理します。
 
-既定の動作と、このメンバー関数をオーバーライドする方法のガイダンスについては、[テクニカル ノート 22:](../../mfc/tn022-standard-commands-implementation.md)を参照してください。
+既定の動作と、このメンバー関数をオーバーライドする方法のガイダンスについては、次を参照してください。[テクニカル ノート 22:](../../mfc/tn022-standard-commands-implementation.md)します。
 
 ### <a name="example"></a>例
 
@@ -1780,7 +1780,7 @@ void ParseCommandLine(CCommandLineInfo& rCmdInfo);
 
 呼び出すことのできる注`ParseCommandLine`必要に応じて、直接します。
 
-コマンド ライン フラグの説明は、[CCommandLineInfo::m_nShellCommand](../../mfc/reference/ccommandlineinfo-class.md#m_nshellcommand)を参照してください。
+コマンド ライン フラグの説明は、次を参照してください。 [CCommandLineInfo::m_nShellCommand](../../mfc/reference/ccommandlineinfo-class.md#m_nshellcommand)します。
 
 ##  <a name="pretranslatemessage"></a>  CWinApp::PreTranslateMessage
 
@@ -1963,12 +1963,12 @@ virtual HRESULT RegisterWithRestartManager(
 |||
 |-|-|
 |パラメーター|説明|
-|*bRegisterRecoveryCallback*|[in]TRUE は、アプリケーションのこのインスタンスが回復のコールバック関数では; を使用することを示しますFALSE は、しないことを示します。 フレームワークは、アプリケーションが予期せず終了したときに、回復のコールバック関数を呼び出します。 詳細については、[CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback)を参照してください。|
+|*bRegisterRecoveryCallback*|[in]TRUE は、アプリケーションのこのインスタンスが回復のコールバック関数では; を使用することを示しますFALSE は、しないことを示します。 フレームワークは、アプリケーションが予期せず終了したときに、回復のコールバック関数を呼び出します。 詳細については、次を参照してください。 [CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback)します。|
 |*strRestartIdentifier*|[in]再起動マネージャーのインスタンスを識別する一意の文字列。 再起動マネージャー識別子は、アプリケーションの各インスタンスに対して一意です。|
 |*pwzCommandLineArgs*|[in]コマンドラインから余分な引数を含む文字列。|
 |*dwRestartFlags*|[in]再起動マネージャーのオプションのフラグ。 詳細については、「解説」を参照してください。|
 |*pRecoveryCallback*|[in]回復のコールバック関数。 この関数は、入力として LPVOID パラメーターを受け取るし、DWORD を返す必要があります。 既定の復旧のコールバック関数は、`CWinApp::ApplicationRecoveryCallback`します。|
-|*lpvParam*|[in]回復のコールバック関数の入力パラメーター。 詳細については、[CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback)を参照してください。|
+|*lpvParam*|[in]回復のコールバック関数の入力パラメーター。 詳細については、次を参照してください。 [CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback)します。|
 |*dwPingInterval*|[in]再起動マネージャーが回復のコールバック関数が返すを待機する時間の長さ。 このパラメーターは、ミリ秒単位です。|
 |*dwCallbackFlags*|[in]フラグは、回復のコールバック関数に渡されます。 将来使用するために予約されています。|
 
@@ -2395,4 +2395,4 @@ void SetAppID(LPCTSTR lpcszAppID);
 
 [CWinThread クラス](../../mfc/reference/cwinthread-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)<br/>
-[方法: 再起動マネージャーのサポートを追加します。](../../mfc/how-to-add-restart-manager-support.md)
+[方法: 再起動マネージャーのサポートを追加する](../../mfc/how-to-add-restart-manager-support.md)

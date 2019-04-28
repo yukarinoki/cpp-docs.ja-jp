@@ -22,11 +22,11 @@ helpviewer_keywords:
 - feraiseexcept function
 ms.assetid: 87e89151-83c2-4563-9a9a-45666245d437
 ms.openlocfilehash: 581dd4026a20ce7221945c5815af3ae102f132fa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532250"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62334360"
 ---
 # <a name="feraiseexcept"></a>feraiseexcept
 
@@ -42,7 +42,7 @@ int feraiseexcept(
 
 ### <a name="parameters"></a>パラメーター
 
-*除く*<br/>
+*excepts*<br/>
 発生させる浮動小数点例外。
 
 ## <a name="return-value"></a>戻り値
@@ -66,7 +66,7 @@ int feraiseexcept(
 
 この関数を使用するには、呼び出しの前に `#pragma fenv_access(on)` ディレクティブを使用してアクセスを妨げる可能性のある浮動小数点の最適化をオフにする必要があります。 詳細については、「 [fenv_access](../../preprocessor/fenv-access.md)」を参照してください。
 
-**Microsoft 固有:** に指定した例外*除く*FE_INVALID の順序で発生 FE_DIVBYZERO、FE_OVERFLOW、FE_UNDERFLOW、FE_INEXACT します。 ただし、FE_INEXACT 発生する可能性が FE_OVERFLOW または FE_UNDERFLOW が発生したときに指定されていない場合でも*除く*します。 **END Microsoft 固有の仕様**
+**Microsoft 固有の仕様:** 指定された例外*除く*FE_INVALID の順序で発生 FE_DIVBYZERO、FE_OVERFLOW、FE_UNDERFLOW、FE_INEXACT します。 ただし、FE_INEXACT 発生する可能性が FE_OVERFLOW または FE_UNDERFLOW が発生したときに指定されていない場合でも*除く*します。 **END Microsoft 固有の仕様**
 
 ## <a name="requirements"></a>必要条件
 

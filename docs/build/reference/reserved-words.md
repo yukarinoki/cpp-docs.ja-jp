@@ -18,11 +18,11 @@ helpviewer_keywords:
 - reserved words [C++]
 ms.assetid: 9b9f49e5-0739-45ab-a37e-81e3915ceb25
 ms.openlocfilehash: 7d51f599dfb81dfa860e1bdba86c4372e80379fb
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57822445"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62319422"
 ---
 # <a name="reserved-words"></a>予約語
 
@@ -45,7 +45,7 @@ ms.locfileid: "57822445"
 |**EXETYPE**|**NONAME**|**1 つ**|
 |**エクスポート**|**準拠していない**<sup>1</sup>|**スタックサイズ**|
 |**固定**<sup>1</sup>|**NONDISCARDABLE**|**スタブ**|
-|**関数**<sup>2</sup>|**[なし]**|**バージョン**|
+|**関数**<sup>2</sup>|**NONE**|**バージョン**|
 |**ヒープサイズ**|**非共有**|**WINDOWAPI**|
 |**インポート**|**NOTWINDOWCOMPAT**<sup>1</sup>|**WINDOWCOMPAT**|
 |**非純粋**<sup>1</sup>|**オブジェクト**|**WINDOWS**|
@@ -57,5 +57,5 @@ ms.locfileid: "57822445"
 
 ## <a name="see-also"></a>関連項目
 
-- [MSVC リンカーの参照](linking.md)
+- [MSVC リンカーのリファレンス](linking.md)
 - [MSVC リンカー オプション](linker-options.md)

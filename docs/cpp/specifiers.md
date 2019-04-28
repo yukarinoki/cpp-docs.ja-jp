@@ -7,11 +7,11 @@ helpviewer_keywords:
 - specifiers, in declarations
 ms.assetid: 8b14e844-9880-4571-8779-28c8efe44633
 ms.openlocfilehash: aef967b26321f289cb8c7bd0402d7fe8f12b77b6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50611407"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62330987"
 ---
 # <a name="specifiers"></a>指定子
 
@@ -19,17 +19,17 @@ ms.locfileid: "50611407"
 
 次のプレースホルダーと言語キーワードは宣言指定子です。
 
-*ストレージ クラス指定子*
+*storage-class-specifier*
 
-*型指定子*
+*type-specifier*
 
-*関数指定子*
+*function-specifier*
 
 [friend](friend-cpp.md)
 
-[typedef](aliases-and-typedefs-cpp.md) `(` *拡張修飾子宣言 seq* `)`
+[typedef](aliases-and-typedefs-cpp.md) `(` *extended-decl-modifier-seq* `)`
 
-[_ _declspec](declspec.md) `(` *拡張修飾子宣言 seq* `)`
+[__declspec](declspec.md) `(` *extended-decl-modifier-seq* `)`
 
 ## <a name="remarks"></a>Remarks
 

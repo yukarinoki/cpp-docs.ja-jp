@@ -27,11 +27,11 @@ helpviewer_keywords:
 - / command files
 ms.assetid: d54f5c81-7147-4b2c-a8db-68ce6eb1eabd
 ms.openlocfilehash: e95427b571cd14ad39a7ba4f368b90e806f13862
-ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57820365"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62318694"
 ---
 # <a name="running-lib"></a>LIB の実行
 
@@ -74,7 +74,7 @@ LIB のすべてのモードに、次のオプションが適用されます。
 
 LIB の **/LTCG**オプションは、cl.exe からの入力を使用して生成されたオブジェクト ファイルを含めることを指定します、 [/GL](gl-whole-program-optimization.md)コンパイラ オプション。 LIB のような入力が発生した場合と **/LTCG**が指定されていない、情報メッセージを表示した後有効になっている/LTCG を再起動します。 つまり、このオプションを明示的に設定する必要はありませんが、処理のため、LIB はそれ自体を再起動する必要はありません、ビルド パフォーマンス速度。
 
-ビルド プロセスでは、LIB の出力はリンクに送信されます。 リンクが、独自の独立した **/LTCG**オプション プログラム全体の最適化、最適化のガイド付きプロファイル (PGO) インストルメンテーションなど、さまざまな最適化を実行するために使用します。 リンク オプションの詳細については、[/LTCG](ltcg-link-time-code-generation.md)を参照してください。
+ビルド プロセスでは、LIB の出力はリンクに送信されます。 リンクが、独自の独立した **/LTCG**オプション プログラム全体の最適化、最適化のガイド付きプロファイル (PGO) インストルメンテーションなど、さまざまな最適化を実行するために使用します。 リンク オプションの詳細については、次を参照してください。 [/LTCG](ltcg-link-time-code-generation.md)します。
 
 > **/MACHINE**
 

@@ -1,18 +1,18 @@
 ---
-title: '[Hlsl] プロパティ ページ:詳細設定'
+title: '[HLSL] プロパティ ページ:詳細設定'
 ms.date: 11/04/2016
 f1_keywords:
 - VC.Project.FXCompilerTool.SuppressStartupBanner
 - VC.Project.FXCompilerTool.TreatWarningAsError
 ms.assetid: a4f05aed-2c0e-4e7d-b7a4-bc2f228112c5
 ms.openlocfilehash: 32e14bef5b8612c37d3d0de9f2e34a65d8331c44
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57827368"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62291406"
 ---
-# <a name="hlsl-property-pages-advanced"></a>[Hlsl] プロパティ ページ:詳細設定
+# <a name="hlsl-property-pages-advanced"></a>[HLSL] プロパティ ページ:詳細設定
 
 HLSL コンパイラ (fxc.exe) の次のプロパティを構成するには、その **[詳細]** プロパティ ページを使用します。 アクセスする方法については、**詳細**HLSL フォルダーで、プロパティ ページを参照してください[Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 

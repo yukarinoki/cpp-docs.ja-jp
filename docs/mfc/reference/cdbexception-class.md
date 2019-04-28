@@ -13,11 +13,11 @@ helpviewer_keywords:
 - CDBException [MFC], m_strStateNativeOrigin
 ms.assetid: eb9e1119-89f5-49a7-b9d4-b91cee1ccc82
 ms.openlocfilehash: 755b89635eedd7808f900dc63cd3039845db1dd3
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328533"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62253414"
 ---
 # <a name="cdbexception-class"></a>CDBException クラス
 
@@ -140,7 +140,7 @@ Sql コードは、ODBC によって定義されます。 AFX プレフィック
 
 フレームワークは、エラー文字列を解釈し、そのコンポーネントには、`m_strStateNativeOrigin`場合`m_strStateNativeOrigin`情報が含まれています、1 つ以上のエラー、エラーが改行で区切られました。 フレームワークは、英数字のエラー テキストを`m_strError`します。
 
-この文字列を構成するために使用するコードの詳細については、、 [SQLError](/previous-versions/windows/desktop/ms716312(v=vs.85))で機能、 *ODBC プログラマ リファレンス*を参照してください。
+この文字列を構成するために使用するコードの詳細については、次を参照してください。、 [SQLError](/previous-versions/windows/desktop/ms716312(v=vs.85))で機能、 *ODBC プログラマ リファレンス*します。
 
 ### <a name="example"></a>例
 

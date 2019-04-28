@@ -19,11 +19,11 @@ helpviewer_keywords:
 - CStdioFile [MFC], m_pStream
 ms.assetid: 88c2274c-4f0e-4327-882a-557ba4b3ae15
 ms.openlocfilehash: fd42934107591905a1bbc273ee9eec4b37e58ea7
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258789"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62323805"
 ---
 # <a name="cstdiofile-class"></a>CStdioFile クラス
 
@@ -84,8 +84,7 @@ Stream ファイルは、バッファーに格納され、テキスト モード
 
 ##  <a name="cstdiofile"></a>  CStdioFile::CStdioFile
 
-
-  `CStdioFile` オブジェクトを構築して初期化します。
+`CStdioFile` オブジェクトを構築して初期化します。
 
 ```
 CStdioFile();
@@ -257,7 +256,7 @@ virtual ULONGLONG Seek(
 
 ファイルが開かれたときに、ファイル ポインターがオフセット 0 で、ファイルの先頭に配置されます。
 
-この実装の`Seek`ランタイム ライブラリ (CRT) 関数に基づく`fseek`します。 使用法にいくつかの制限があります`Seek`テキスト モードで開かれたストリームにします。 詳細については、[fseek、_fseeki64](../../c-runtime-library/reference/fseek-fseeki64.md)を参照してください。
+この実装の`Seek`ランタイム ライブラリ (CRT) 関数に基づく`fseek`します。 使用法にいくつかの制限があります`Seek`テキスト モードで開かれたストリームにします。 詳細については、次を参照してください。 [fseek、_fseeki64](../../c-runtime-library/reference/fseek-fseeki64.md)します。
 
 ### <a name="example"></a>例
 

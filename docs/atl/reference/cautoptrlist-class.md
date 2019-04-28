@@ -9,11 +9,11 @@ helpviewer_keywords:
 - CAutoPtrList class
 ms.assetid: 11de4aca-28b0-4ff2-a74a-cb602312ffbd
 ms.openlocfilehash: 2558c522f7903e8d59363cd77d1a86027f6a7511
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57285413"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62260280"
 ---
 # <a name="cautoptrlist-class"></a>CAutoPtrList クラス
 
@@ -47,7 +47,7 @@ class CAutoPtrList :
 
 このクラスは、コンス トラクターを提供し、メソッドからの派生[CAtlList](../../atl/reference/catllist-class.md)と[CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md)スマート ポインターを格納するリスト オブジェクトの作成を支援します。 クラスは、 [CAutoPtrArray](../../atl/reference/cautoptrarray-class.md) array オブジェクトと同様の機能を提供します。
 
-詳細については、[ATL コレクション クラス](../../atl/atl-collection-classes.md)を参照してください。
+詳細については、次を参照してください。 [ATL コレクション クラス](../../atl/atl-collection-classes.md)します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 

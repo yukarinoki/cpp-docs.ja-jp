@@ -30,11 +30,11 @@ helpviewer_keywords:
 - file pointers [C++], getting current position
 ms.assetid: 84e68b0a-32f8-4c4a-90ad-3f2387685ede
 ms.openlocfilehash: 58bfc8c7a8b8e820fdec09d52e24dfcb07f328f8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50580844"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62332937"
 ---
 # <a name="ftellnolock-ftelli64nolock"></a>_ftell_nolock、_ftelli64_nolock
 
@@ -53,12 +53,12 @@ __int64 _ftelli64_nolock(
 
 ### <a name="parameters"></a>パラメーター
 
-*ストリーム*<br/>
+*stream*<br/>
 ターゲット、**ファイル**構造体。
 
 ## <a name="return-value"></a>戻り値
 
-同じ**ftell**と **_ftelli64**します。 詳細については、[ftell、_ftelli64](ftell-ftelli64.md)を参照してください。
+同じ**ftell**と **_ftelli64**します。 詳細については、次を参照してください。 [ftell、_ftelli64](ftell-ftelli64.md)します。
 
 ## <a name="remarks"></a>Remarks
 

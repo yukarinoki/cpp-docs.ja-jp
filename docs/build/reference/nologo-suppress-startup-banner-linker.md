@@ -14,11 +14,11 @@ helpviewer_keywords:
 - NOLOGO linker option
 ms.assetid: 3b20dddd-eca6-4545-a331-9f70bf720197
 ms.openlocfilehash: 0ef0c6f8e0073e7450daa8d0433ce4d6e82ceab8
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57812500"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62320527"
 ---
 # <a name="nologo-suppress-startup-banner-linker"></a>/NOLOGO (著作権情報の非表示) (リンカー)
 
@@ -30,7 +30,7 @@ ms.locfileid: "57812500"
 
 /NOLOGO オプションでは、著作権のメッセージとバージョン番号が表示されなくなります。
 
-このオプションはまた、コマンド ファイルのエコーを抑制します。 詳細については、[LINK コマンド ファイル](linking.md)を参照してください。
+このオプションはまた、コマンド ファイルのエコーを抑制します。 詳細については、次を参照してください。 [LINK コマンド ファイル](linking.md)します。
 
 既定では、この情報は、出力ウィンドウに、リンカーによって送信されます。 コマンドラインでは、標準出力に送信され、ファイルにリダイレクトできます。
 
@@ -44,5 +44,5 @@ ms.locfileid: "57812500"
 
 ## <a name="see-also"></a>関連項目
 
-[MSVC リンカーの参照](linking.md)<br/>
+[MSVC リンカーのリファレンス](linking.md)<br/>
 [MSVC リンカー オプション](linker-options.md)

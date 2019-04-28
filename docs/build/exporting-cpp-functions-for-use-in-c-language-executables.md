@@ -8,17 +8,17 @@ helpviewer_keywords:
 - functions [C++], exporting
 ms.assetid: 80b9e982-f52d-4312-a891-f73cc69f3c2b
 ms.openlocfilehash: a694b77e3730ab82ec1698076cc66729ff115cdc
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57814021"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62195235"
 ---
 # <a name="exporting-c-functions-for-use-in-c-language-executables"></a>C 言語の実行形式で使う C++ 関数のエクスポート
 
 C++ で記述された DLL 内の関数に C 言語のモジュールからアクセスするには、C++ リンケージではなく C リンケージを使って関数を宣言する必要があります。 特に指定しない限り、C++ コンパイラは C++ のタイプ セーフな名前付け規約 (名前の装飾) と C++ の呼び出し規則を使います。C++ の規約を使うと、C からの呼び出しが難しくなります。
 
-C リンケージを指定するには、指定`extern "C"`関数の宣言にします。 例:
+C リンケージを指定するには、指定`extern "C"`関数の宣言にします。 例えば:
 
 ```
 extern "C" __declspec( dllexport ) int MyFunc(long parm1);
@@ -36,7 +36,7 @@ extern "C" __declspec( dllexport ) int MyFunc(long parm1);
 
 - [エクスポート方式の使用](determining-which-exporting-method-to-use.md)
 
-- [使用してアプリケーションをインポートします。](importing-into-an-application-using-declspec-dllimport.md)
+- [__declspec(dllimport) を使用してアプリケーションにインポートする](importing-into-an-application-using-declspec-dllimport.md)
 
 - [DLL を初期化します。](run-time-library-behavior.md#initializing-a-dll)
 

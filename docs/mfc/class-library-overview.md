@@ -11,11 +11,11 @@ helpviewer_keywords:
 - class libraries
 ms.assetid: 9b0e3152-ac39-4f52-91b4-f20aa3a674aa
 ms.openlocfilehash: aec295ea93868ff1fe6e0d3d1d2370a344e47c73
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278765"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62327315"
 ---
 # <a name="class-library-overview"></a>クラス ライブラリの概要
 
@@ -23,7 +23,7 @@ ms.locfileid: "57278765"
 
 ここでは、ライブラリのクラスを次のカテゴリで表します。
 
-- [ルート クラス:CObject](../mfc/root-class-cobject.md)
+- [ルート クラス: CObject](../mfc/root-class-cobject.md)
 
 - [MFC アプリケーション アーキテクチャ クラス](../mfc/mfc-application-architecture-classes.md)
 
@@ -111,7 +111,7 @@ ms.locfileid: "57278765"
 
 セクション[一般的なクラス デザインの考え方](../mfc/general-class-design-philosophy.md)MFC ライブラリの設計方法について説明します。
 
-フレームワークの概要については、[Windows のアプリケーションを記述するクラスを使用して](../mfc/using-the-classes-to-write-applications-for-windows.md)を参照してください。 上記のクラスの一部は、フレームワークの外部で使用できる汎用クラスであり、コレクション、例外、ファイル、文字列などの便利な抽象化を提供します。
+フレームワークの概要については、次を参照してください。 [Windows のアプリケーションを記述するクラスを使用して](../mfc/using-the-classes-to-write-applications-for-windows.md)します。 上記のクラスの一部は、フレームワークの外部で使用できる汎用クラスであり、コレクション、例外、ファイル、文字列などの便利な抽象化を提供します。
 
 クラスの継承を表示するには、使用、[クラス階層図](../mfc/hierarchy-chart.md)します。
 

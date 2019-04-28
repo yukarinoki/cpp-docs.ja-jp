@@ -12,11 +12,11 @@ helpviewer_keywords:
 - analyze compiler option [C++]
 ms.assetid: 81da536a-e030-4bd4-be18-383927597d08
 ms.openlocfilehash: 63cfd2bd206a361301c75110a684e1d2c642a1f2
-ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57819507"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62273158"
 ---
 # <a name="analyze-code-analysis"></a>/analyze (コード分析)
 
@@ -75,11 +75,11 @@ set Esp.Extensions=CppCoreCheck.dll
 
 ## <a name="remarks"></a>Remarks
 
-詳細については、[Code Analysis for C と C++ の概要](/visualstudio/code-quality/code-analysis-for-c-cpp-overview)と[c/c++ の警告のコード分析](/visualstudio/code-quality/code-analysis-for-c-cpp-warnings)を参照してください。
+詳細については、次を参照してください。 [Code Analysis for C と C++ の概要](/visualstudio/code-quality/code-analysis-for-c-cpp-overview)と[c/c++ の警告のコード分析](/visualstudio/code-quality/code-analysis-for-c-cpp-warnings)します。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. **[構成プロパティ]** ノードを展開します。
 
@@ -96,4 +96,4 @@ set Esp.Extensions=CppCoreCheck.dll
 ## <a name="see-also"></a>関連項目
 
 - [MSVC コンパイラ オプション](compiler-options.md)
-- [MSVC コンパイラ コマンドラインの構文](compiler-command-line-syntax.md)
+- [MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)

@@ -14,11 +14,11 @@ helpviewer_keywords:
 - CRBMultiMap class
 ms.assetid: 94d3ec0c-3e30-4ab7-a101-d8da4fb8add3
 ms.openlocfilehash: 03a9639e8b0b3d11a414e5db0ce874d7ca8f2d45
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57267486"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62278138"
 ---
 # <a name="crbmultimap-class"></a>CRBMultiMap クラス
 
@@ -79,7 +79,7 @@ class CRBMultiMap : public CRBTree<K, V, KTraits, VTraits>
 
 `CRBMultiMap` 派生[CRBTree](../../atl/reference/crbtree-class.md)、レッド ブラック アルゴリズムを使用してバイナリ ツリーを実装します。 代わりに`CRBMultiMap`と`CRBMap`によって提供される、 [CAtlMap](../../atl/reference/catlmap-class.md)クラス。 格納する要素の数が少ない場合は、使用を検討して、 [CSimpleMap](../../atl/reference/csimplemap-class.md)クラスの代わりにします。
 
-さまざまなコレクション クラスとその機能とパフォーマンス特性の詳細については、[ATL コレクション クラス](../../atl/atl-collection-classes.md)を参照してください。
+さまざまなコレクション クラスとその機能とパフォーマンス特性の詳細については、次を参照してください。 [ATL コレクション クラス](../../atl/atl-collection-classes.md)します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 

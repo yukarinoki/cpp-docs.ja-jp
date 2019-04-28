@@ -1,6 +1,6 @@
 ---
-title: コンパイラの警告 s C4200 C4399 Through
-ms.date: 11/17/2017
+title: コンパイラ警告 (C4200 - C4399)
+ms.date: 04/21/2019
 f1_keywords:
 - C4203
 - C4277
@@ -28,14 +28,14 @@ f1_keywords:
 - C4387
 - C4388
 ms.assetid: 170248db-7bf2-4823-92d9-437b04c1290d
-ms.openlocfilehash: d79c9c12664f9920f03490b8cb53ec671d3d78a3
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: 5a257fa5ac39a9b8f593062d6a670c8d1ce4187f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328266"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62280582"
 ---
-# <a name="compiler-warnings-c4200-through-c4399"></a>コンパイラの警告 s C4200 C4399 Through
+# <a name="compiler-warnings-c4200-through-c4399"></a>コンパイラ警告 (C4200 - C4399)
 
 ドキュメントのこのセクションの記事では、コンパイラによって生成される警告メッセージのサブセットについて説明します。
 
@@ -114,7 +114,7 @@ ms.locfileid: "58328266"
 |[コンパイラの警告 (レベル 3) C4287](../../error-messages/compiler-warnings/compiler-warning-level-3-c4287.md)|'*演算子*': 符号なし/負の定数が一致しません|
 |[コンパイラの警告 (レベル 1) C4288](../../error-messages/compiler-warnings/compiler-warning-level-1-c4288.md)|標準の拡張機能を使用します '*変数*': は for ループ スコープの外側のループで宣言したループ コントロール変数が使用されます。 外側のスコープの宣言と競合。|
 |[コンパイラの警告 (レベル 4) C4289](../../error-messages/compiler-warnings/compiler-warning-level-4-c4289.md)|標準の拡張機能を使用します '*変数*': for ループで宣言したループ コントロール変数が for ループ スコープの外側で使用。|
-|[コンパイラの警告 (レベル 3) C4290](../../error-messages/compiler-warnings/compiler-warning-level-3-c4290.md)|関数の指定以外 C++ 例外の指定は無視されます。|
+|[コンパイラの警告 (レベル 3) C4290](../../error-messages/compiler-warnings/compiler-warning-level-3-c4290.md)|C++関数の指定以外の例外の指定は無視されます。|
 |[コンパイラの警告 (レベル 1) C4291](../../error-messages/compiler-warnings/compiler-warning-level-1-c4291.md)|'*宣言*': 一致する delete 演算子が見つかりません初期化は、例外をスローすると、メモリは解放されません。|
 |[コンパイラの警告 (レベル 1) C4293](../../error-messages/compiler-warnings/compiler-warning-level-1-c4293.md)|'*shift_operator*': シフト数が負の値または大きすぎて、未定義の動作|
 |[コンパイラの警告 (レベル 4) C4295](../../error-messages/compiler-warnings/compiler-warning-level-4-c4295.md)|'*配列*': 配列が小さすぎる、終端の null 文字を含める|
@@ -176,7 +176,7 @@ ms.locfileid: "58328266"
 |[コンパイラの警告 (レベル 4) C4365](../../error-messages/compiler-warnings/compiler-warning-level-4-c4365.md)|'*式*': から変換'*type1*'to'*type2*'、signed/unsigned が一致しません|
 |[コンパイラの警告 (レベル 4) C4366](../../error-messages/compiler-warnings/compiler-warning-level-4-c4366.md)|単項の結果 '*演算子*' 演算子を配置できない可能性があります|
 |コンパイラの警告 (レベル 3) C4367|変換 '*type1*'to'*type2*' データ型の不整合例外が発生する可能性があります|
-|[コンパイラの警告 (エラー) C4368](../../error-messages/compiler-warnings/compiler-warning-c4368.md)|定義できません '*メンバー*'のメンバーが管理対象' として*型*': 型が混在はサポートされていません。|
+|[コンパイラの警告 C4368 を (エラー)](../../error-messages/compiler-warnings/compiler-warning-c4368.md)|定義できません '*メンバー*'のメンバーが管理対象' として*型*': 型が混在はサポートされていません。|
 |[コンパイラの警告 (レベル 1) C4369](../../error-messages/compiler-warnings/compiler-warning-level-1-c4369.md)|'*列挙子*': 列挙子の値'*値*'として表すことができない'*型*'、値は'*new_value*'|
 |C4370 コンパイラ|'*classname*': パッキングの改善のため、コンパイラの以前のバージョンからのクラスのレイアウトが変更されました|
 |[コンパイラの警告 (レベル 3) C4371](../../error-messages/compiler-warnings/c4371.md)|'*classname*': クラスのレイアウトは、メンバーのパッキングの改善のため、コンパイラの以前のバージョンから変更された可能性があります'*メンバー*'|
@@ -205,3 +205,8 @@ ms.locfileid: "58328266"
 |[コンパイラの警告 (レベル 1) C4397](../../error-messages/compiler-warnings/compiler-warning-level-1-c4397.md)|DefaultCharSetAttribute は無視されます。|
 |[コンパイラの警告 (レベル 3) C4398](../../error-messages/compiler-warnings/compiler-warning-level-3-c4398.md)|'*変数*': プロセスごとのグローバル オブジェクトは複数の appdomain と共に動作しない可能性があります、__declspec(appdomain) を使用してみてください。|
 |[コンパイラの警告 (レベル 1) C4399](../../error-messages/compiler-warnings/compiler-warning-level-1-c4399.md)|'*シンボル*': __declspec('dllimport')/clr でコンパイルされたときに、プロセスごとのシンボルをマークしない必要があります: 純粋な|
+
+## <a name="see-also"></a>関連項目
+
+[C/C++コンパイラとビルド ツールのエラーと警告](../compiler-errors-1/c-cpp-build-errors.md) \
+[コンパイラの警告 C4000 - C5999](compiler-warnings-c4000-c5999.md)

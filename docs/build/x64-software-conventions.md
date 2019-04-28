@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Visual C++, x64 calling conventions
 ms.assetid: 750f3d97-1706-4840-b2fc-41a007329a08
 ms.openlocfilehash: 11d29b6c31ccecfe5b9c51c2f9311213bd4a6732
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420272"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62313856"
 ---
 # <a name="x64-software-conventions"></a>x64 ソフトウェア規約
 
@@ -222,11 +222,11 @@ _declspec(align(8)) union {
 
 ## <a name="prolog-and-epilog"></a>プロローグとエピローグ
 
-スタック領域の割り当て、その他の関数を呼び出し、不揮発性レジスタを保存または例外処理を使用するすべての関数のプロローグに関連付けられた各関数のテーブルのエントリとエピローグのアンワインド データのアドレスの制限が説明されている必要があります。関数を各終了します。 必要なプロローグの詳細と x64 のエピローグ コードは、[x64 プロローグとエピローグ](prolog-and-epilog.md)を参照してください。
+スタック領域の割り当て、その他の関数を呼び出し、不揮発性レジスタを保存または例外処理を使用するすべての関数のプロローグに関連付けられた各関数のテーブルのエントリとエピローグのアンワインド データのアドレスの制限が説明されている必要があります。関数を各終了します。 必要なプロローグの詳細と x64 のエピローグ コードは、次を参照してください。 [x64 プロローグとエピローグ](prolog-and-epilog.md)します。
 
 ## <a name="x64-exception-handling"></a>x64 例外処理
 
-規則と構造化例外処理と C++ 例外処理、x64 での動作を実装するために使用するデータ構造については、[x64 例外処理](exception-handling-x64.md)を参照してください。
+規則と構造化例外処理と C++ 例外処理、x64 での動作を実装するために使用するデータ構造については、次を参照してください。 [x64 例外処理](exception-handling-x64.md)します。
 
 ## <a name="intrinsics-and-inline-assembly"></a>組み込みおよびインライン アセンブリ
 

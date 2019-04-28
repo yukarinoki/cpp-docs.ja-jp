@@ -8,11 +8,11 @@ helpviewer_keywords:
 - DAO (Data Access Objects), Workspaces collection
 ms.assetid: a1f4b25e-f9c6-4196-b075-d1df99c54124
 ms.openlocfilehash: afbc73c079a6deec3f3e1b7455f9f2dbface5025
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57271555"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62253636"
 ---
 # <a name="cdaoworkspaceinfo-structure"></a>CDaoWorkspaceInfo 構造体
 
@@ -38,7 +38,7 @@ Workspace オブジェクトの一意名します。 このプロパティの値
 Workspace オブジェクトの所有者を表す値。 関連情報については、「UserName プロパティ」DAO ヘルプのトピックを参照してください。
 
 *m_bIsolateODBCTrans*<br/>
-同じ ODBC データベースが関係する複数のトランザクションが分離されたかどうかを示す値。 詳細については、[CDaoWorkspace::SetIsolateODBCTrans](../../mfc/reference/cdaoworkspace-class.md#setisolateodbctrans)を参照してください。 関連情報については、「IsolateODBCTrans プロパティ」DAO ヘルプのトピックを参照してください。
+同じ ODBC データベースが関係する複数のトランザクションが分離されたかどうかを示す値。 詳細については、次を参照してください。 [CDaoWorkspace::SetIsolateODBCTrans](../../mfc/reference/cdaoworkspace-class.md#setisolateodbctrans)します。 関連情報については、「IsolateODBCTrans プロパティ」DAO ヘルプのトピックを参照してください。
 
 ## <a name="remarks"></a>Remarks
 

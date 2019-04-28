@@ -6,11 +6,11 @@ helpviewer_keywords:
 - DHTML controls, ATL support
 ms.assetid: b627547a-3768-4346-9900-4b7a21fb8e27
 ms.openlocfilehash: 32b1c00e3ad3ed15fa56f7718789fe1a2e3ecbab
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424380"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62261963"
 ---
 # <a name="identifying-the-elements-of-the-dhtml-control-project"></a>DHTML コントロール プロジェクトの要素の識別
 
@@ -39,7 +39,7 @@ DHTML コントロールは、ATL コントロールに似ていますを除く�
 
    - `IDHCTL1` コンテナーでのみ使用するためのコントロールによって公開されるインターフェイス。
 
-   - `IDHCTLUI1` C++ コードと HTML ユーザー インターフェイスの間の通信のディスパッチ インターフェイス。 Web ブラウザーでは、コントロールを表示するのにコントロールのディスパッチ インターフェイスを使用します。 呼び出すことによって、コントロールのユーザー インターフェイスからこのディスパッチ インターフェイスのさまざまなメソッドを呼び出すことができます`window.external`、その後に呼び出すこのディスパッチ インターフェイスでメソッド名。 アクセスするには`window.external`このコントロールの UI を構成する HTML 内のスクリプト タグから。 リソース ファイル内の外部メソッドの呼び出しの詳細については、[DHTML から C++ コードを呼び出す](../atl/calling-cpp-code-from-dhtml.md)を参照してください。
+   - `IDHCTLUI1` C++ コードと HTML ユーザー インターフェイスの間の通信のディスパッチ インターフェイス。 Web ブラウザーでは、コントロールを表示するのにコントロールのディスパッチ インターフェイスを使用します。 呼び出すことによって、コントロールのユーザー インターフェイスからこのディスパッチ インターフェイスのさまざまなメソッドを呼び出すことができます`window.external`、その後に呼び出すこのディスパッチ インターフェイスでメソッド名。 アクセスするには`window.external`このコントロールの UI を構成する HTML 内のスクリプト タグから。 リソース ファイル内の外部メソッドの呼び出しの詳細については、次を参照してください。 [DHTML から C++ コードを呼び出す](../atl/calling-cpp-code-from-dhtml.md)します。
 
 - **IDR_CTL1** HTML リソースのリソース ID。 そのファイル名では、DHCTL1UI.htm ここでは。 DHTML コントロールは、標準の HTML タグとテキスト エディターを使用して編集可能な外部ウィンドウ ディスパッチ コマンドを含む HTML リソースを使用します。
 

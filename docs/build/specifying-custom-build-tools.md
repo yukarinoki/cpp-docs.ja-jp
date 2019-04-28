@@ -16,11 +16,11 @@ helpviewer_keywords:
 - custom build tools (C++), specifying
 - builds (C++), custom build tools
 ms.openlocfilehash: dbce226b34503a9e8e70b6f19d9aa0c68ef487f3
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57828088"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62314755"
 ---
 # <a name="specify-custom-build-tools"></a>カスタム ビルド ツールを指定する
 
@@ -30,7 +30,7 @@ ms.locfileid: "57828088"
 
 ### <a name="to-specify-a-custom-build-tool"></a>カスタム ビルド ツールを指定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での設定の C++ コンパイラとビルド プロパティ](working-with-project-properties.md)を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](working-with-project-properties.md)します。
 
 1. **[構成プロパティ]** を選択し、**[構成]** ボックスを有効にします。 **[構成]** ボックスで、カスタム ビルド ツールを指定する構成を選択します。
 
@@ -50,7 +50,7 @@ ms.locfileid: "57828088"
 
    - **[コマンド ライン]** で、コマンド プロンプトの場合と同様にコマンドを指定します。 有効なコマンドまたはバッチ ファイルと必要な入力ファイルまたは出力ファイルがあればそれを指定します。 後続のコマンドがすべて確実に実行されるように、バッチ ファイル名の前に **call** バッチ コマンドを指定します。
 
-      MSBuild マクロを利用すれば、複数の入力ファイルと出力ファイルを数式で指定できます。 ファイルの場所または一連のファイルの名前を指定する方法については、[用マクロの一般的なコマンドとプロパティのビルド](reference/common-macros-for-build-commands-and-properties.md)を参照してください。
+      MSBuild マクロを利用すれば、複数の入力ファイルと出力ファイルを数式で指定できます。 ファイルの場所または一連のファイルの名前を指定する方法については、次を参照してください。[用マクロの一般的なコマンドとプロパティのビルド](reference/common-macros-for-build-commands-and-properties.md)します。
 
       '%' は MSBuild に予約されている文字です。環境変数を指定する場合、エスケープ文字 **%** をそれぞれ、16 進数エスケープ シーケンス **%25** に変更してください。 たとえば、**%WINDIR%** を **%25WINDIR%25** に変更します。 MSBuild は **%25** シーケンスをそれぞれ **%** 文字に変更し、それから環境変数にアクセスします。
 

@@ -73,11 +73,11 @@ helpviewer_keywords:
 - CToolTipCtrl [MFC], UpdateTipText
 ms.assetid: 8973f70c-b73a-46c7-908d-758f364b9a97
 ms.openlocfilehash: 6055926e05f8a7f9fbecec113e859d08e6b6e636
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420844"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62323675"
 ---
 # <a name="ctooltipctrl-class"></a>CToolTipCtrl Class
 
@@ -142,7 +142,7 @@ class CToolTipCtrl : public CWnd
 
 `CToolTipCtrl`クラスには、Windows の一般的なツール ヒント コントロールの機能が用意されています。 このコントロール (つまり、`CToolTipCtrl`クラス) は以降 Windows 95/98 および Windows NT 3.51 の下で実行中のプログラムにのみ使用できます。
 
-ツール ヒントを有効にする方法の詳細については、[いない CFrameWnd から派生した Windows でのツール ヒント](../../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)を参照してください。
+ツール ヒントを有効にする方法の詳細については、次を参照してください。[いない CFrameWnd から派生した Windows でのツール ヒント](../../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)します。
 
 使用しての詳細については`CToolTipCtrl`を参照してください[コントロール](../../mfc/controls-mfc.md)と[を使用して CToolTipCtrl](../../mfc/using-ctooltipctrl.md)します。
 

@@ -18,11 +18,11 @@ helpviewer_keywords:
 - /OPT linker option
 ms.assetid: 8f229863-5f53-48a8-9478-243a647093ac
 ms.openlocfilehash: fb59b861bc46c93a3f5fa1b6c6b8d1b73ddefc66
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57818298"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62320247"
 ---
 # <a name="opt-optimizations"></a>/OPT (最適化)
 
@@ -42,7 +42,7 @@ LINK がビルド時に実行する最適化を制御します。
 
 未参照のパッケージ化された関数と呼ばれる、データ リンクの削除/OPT:REF を有効にすると、 *Comdat*します。 この最適化は、中間 COMDAT 除去として知られています。 **/OPT:REF**もオプションではインクリメンタル リンクを無効になります。
 
-インライン関数とクラス宣言内で定義されているメンバー関数は comdat 形式では常にです。 すべてのオブジェクト ファイルに関数を使用してコンパイルされる場合 Comdat を行う、 [/Gy](gy-enable-function-level-linking.md)オプション。 配置する**const** comdat 形式でデータをする必要がありますを宣言することを使用して`__declspec(selectany)`します。 データの削除または折りたたみを指定する方法については、[selectany](../../cpp/selectany.md)を参照してください。
+インライン関数とクラス宣言内で定義されているメンバー関数は comdat 形式では常にです。 すべてのオブジェクト ファイルに関数を使用してコンパイルされる場合 Comdat を行う、 [/Gy](gy-enable-function-level-linking.md)オプション。 配置する**const** comdat 形式でデータをする必要がありますを宣言することを使用して`__declspec(selectany)`します。 データの削除または折りたたみを指定する方法については、次を参照してください。 [selectany](../../cpp/selectany.md)します。
 
 既定では、 **/OPT:REF**がリンカーによって有効になっていない限り **/OPT:NOREF**または[/debug](debug-generate-debug-info.md)を指定します。 この既定のオーバーライドをプログラムで参照されない Comdat の保持は、次のように指定します。 **/OPT:NOREF**します。 使用することができます、 [/include](include-force-symbol-references.md)特定のシンボルの削除のオーバーライド オプションを指定します。
 
@@ -81,7 +81,7 @@ LINK がビルド時に実行する最適化を制御します。
 
 ### <a name="to-set-the-opticf-or-optref-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境で OPT:ICF リンカー オプションまたは OPT:REF リンカー オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. 選択、**構成プロパティ** > **リンカー** > **最適化**プロパティ ページ。
 
@@ -93,7 +93,7 @@ LINK がビルド時に実行する最適化を制御します。
 
 ### <a name="to-set-the-optlbr-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境で OPT:LBR リンカー オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. 選択、**構成プロパティ** > **リンカー** > **コマンドライン**プロパティ ページ。
 
@@ -107,5 +107,5 @@ LINK がビルド時に実行する最適化を制御します。
 
 ## <a name="see-also"></a>関連項目
 
-- [MSVC リンカーの参照](linking.md)
+- [MSVC リンカーのリファレンス](linking.md)
 - [MSVC リンカー オプション](linker-options.md)

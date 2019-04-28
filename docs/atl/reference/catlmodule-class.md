@@ -21,11 +21,11 @@ helpviewer_keywords:
 - CAtlModule class
 ms.assetid: 63fe02f1-4c4b-4e7c-ae97-7ad7b4252415
 ms.openlocfilehash: f01734d4ec9de323325dc793756f421388542ef2
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57302014"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62247008"
 ---
 # <a name="catlmodule-class"></a>CAtlModule クラス
 
@@ -72,7 +72,7 @@ class ATL_NO_VTABLE CAtlModule : public _ATL_MODULE
 
 このクラスによって使用されます[CAtlDllModuleT クラス](../../atl/reference/catldllmodulet-class.md)、 [CAtlExeModuleT クラス](../../atl/reference/catlexemodulet-class.md)、および[CAtlServiceModuleT クラス](../../atl/reference/catlservicemodulet-class.md)DLL アプリケーションでは、EXE アプリケーションでは、サポートを提供してWindows サービスは、それぞれします。
 
-ATL でモジュールの詳細については、[ATL モジュール クラス](../../atl/atl-module-classes.md)を参照してください。
+ATL でモジュールの詳細については、次を参照してください。 [ATL モジュール クラス](../../atl/atl-module-classes.md)します。
 
 このクラスは廃止された置換[CComModule クラス](../../atl/reference/ccommodule-class.md)以前のバージョンの ATL の使用
 
@@ -270,7 +270,7 @@ HRESULT WINAPI UpdateRegistryFromResourceD(
 TRUE の場合は、オブジェクトを登録する必要があります。FALSE それ以外の場合。
 
 *この配列*<br/>
-スクリプトの置き換え可能パラメーターに関連付けられている値を格納する置換マップへのポインター。 ATL は、% モジュールを自動的に使用します。 追加の置き換え可能パラメーターを使用する、[CAtlModule::AddCommonRGSReplacements](#addcommonrgsreplacements)を参照してください。 それ以外の場合、NULL 既定値を使用します。
+スクリプトの置き換え可能パラメーターに関連付けられている値を格納する置換マップへのポインター。 ATL は、% モジュールを自動的に使用します。 追加の置き換え可能パラメーターを使用する、次を参照してください。 [CAtlModule::AddCommonRGSReplacements](#addcommonrgsreplacements)します。 それ以外の場合、NULL 既定値を使用します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -304,7 +304,7 @@ inline HRESULT WINAPI UpdateRegistryFromResourceDHelper(
 オブジェクトを登録するかどうかを示します。
 
 *この配列*<br/>
-スクリプトの置き換え可能パラメーターに関連付けられている値を格納する置換マップへのポインター。 ATL は、% モジュールを自動的に使用します。 追加の置き換え可能パラメーターを使用する、[CAtlModule::AddCommonRGSReplacements](#addcommonrgsreplacements)を参照してください。 それ以外の場合、NULL 既定値を使用します。
+スクリプトの置き換え可能パラメーターに関連付けられている値を格納する置換マップへのポインター。 ATL は、% モジュールを自動的に使用します。 追加の置き換え可能パラメーターを使用する、次を参照してください。 [CAtlModule::AddCommonRGSReplacements](#addcommonrgsreplacements)します。 それ以外の場合、NULL 既定値を使用します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -342,7 +342,7 @@ HRESULT WINAPI UpdateRegistryFromResourceS(
 リソース スクリプトを登録する必要があるかどうかを示します。
 
 *この配列*<br/>
-スクリプトの置き換え可能パラメーターに関連付けられている値を格納する置換マップへのポインター。 ATL は、% モジュールを自動的に使用します。 追加の置き換え可能パラメーターを使用する、[CAtlModule::AddCommonRGSReplacements](#addcommonrgsreplacements)を参照してください。 それ以外の場合、NULL 既定値を使用します。
+スクリプトの置き換え可能パラメーターに関連付けられている値を格納する置換マップへのポインター。 ATL は、% モジュールを自動的に使用します。 追加の置き換え可能パラメーターを使用する、次を参照してください。 [CAtlModule::AddCommonRGSReplacements](#addcommonrgsreplacements)します。 それ以外の場合、NULL 既定値を使用します。
 
 ### <a name="return-value"></a>戻り値
 

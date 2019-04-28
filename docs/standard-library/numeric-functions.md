@@ -15,11 +15,11 @@ helpviewer_keywords:
 - std::iota [C++]
 - std::partial_sum [C++]
 ms.openlocfilehash: 6df37cf4f6c8afe09f25550d4fc0d9acb553ac52
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50475102"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62236559"
 ---
 # <a name="ltnumericgt-functions"></a>&lt;numeric&gt; 関数
 
@@ -440,7 +440,7 @@ void iota(ForwardIterator first, ForwardIterator last, Type value);
 *last*<br/>
 入力する必要がある、範囲内の最後の要素を示す入力反復子。
 
-*値*<br/>
+*value*<br/>
 先頭の要素に格納し、以降の要素に関して連続してインクリメントするための開始値。
 
 ### <a name="remarks"></a>Remarks

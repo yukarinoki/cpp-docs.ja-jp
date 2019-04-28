@@ -15,11 +15,11 @@ helpviewer_keywords:
 - std::num_put [C++], put
 ms.assetid: 36c5bffc-8283-4201-8ed4-78c4d81f8a17
 ms.openlocfilehash: 2ede0ccd85f116f300939c819ae8209435da72b7
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327331"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62223559"
 ---
 # <a name="numput-class"></a>num_put クラス
 
@@ -142,7 +142,7 @@ virtual iter_type do_put(
 *next*<br/>
 挿入された文字列の先頭の要素を示す反復子。
 
-*されている _Iosbase*<br/>
+*_Iosbase*<br/>
 出力に句読点を付けるために使用される numpunct ファセットを持つロケールおよび出力を書式設定するためのフラグを含むストリームを指定します。
 
 *_Fill*<br/>
@@ -315,11 +315,11 @@ explicit num_put(size_t _Refs = 0);
 
 使用可能な値を *_Refs*パラメーターとその重要性は。
 
-- 0: オブジェクトの有効期間はそれが含まれるロケールによって管理されます。
+- 0:オブジェクトの有効期間は、それが含まれるロケールによって管理されます。
 
-- 1: オブジェクトの有効期間を手動で管理する必要があります。
+- 1:オブジェクトの有効期間は、手動で管理する必要があります。
 
-- \> 1: これらの値が定義されていません。
+- \> 1:これらの値が定義されていません。
 
 デストラクターが保護されているため、利用できる直接的な例はありません。
 
@@ -384,7 +384,7 @@ iter_type put(
 *dest*<br/>
 挿入された文字列の先頭の要素を示す反復子。
 
-*されている _Iosbase*<br/>
+*_Iosbase*<br/>
 出力に句読点を付けるために使用される numpunct ファセットを持つロケールおよび出力を書式設定するためのフラグを含むストリームを指定します。
 
 *_Fill*<br/>

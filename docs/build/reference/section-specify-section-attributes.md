@@ -9,11 +9,11 @@ helpviewer_keywords:
 - section attributes
 - /SECTION linker option
 ms.openlocfilehash: 8fb73043c9c185adee0859bb81098eab022430c2
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816556"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62318564"
 ---
 # <a name="section-specify-section-attributes"></a>/SECTION (セクション属性の指定)
 
@@ -23,7 +23,7 @@ ms.locfileid: "57816556"
 
 **/Section**オプションは、属性は、セクションの .obj ファイルがコンパイルされたときの設定をオーバーライドするセクションの属性を変更します。
 
-A*セクション*ポータブル実行可能 (PE) ファイルがコードまたはデータを含むメモリの連続する名前付きブロック。 いくつかのセクションには、コードまたはプログラムが宣言され、データのセクションでは他のリンカーと (lib.exe) ライブラリ マネージャーを作成し、オペレーティング システムに不可欠な情報が含まれてときに、直接使用するデータが含まれます。 詳細については、[PE 形式](/windows/desktop/Debug/pe-format)を参照してください。
+A*セクション*ポータブル実行可能 (PE) ファイルがコードまたはデータを含むメモリの連続する名前付きブロック。 いくつかのセクションには、コードまたはプログラムが宣言され、データのセクションでは他のリンカーと (lib.exe) ライブラリ マネージャーを作成し、オペレーティング システムに不可欠な情報が含まれてときに、直接使用するデータが含まれます。 詳細については、次を参照してください。 [PE 形式](/windows/desktop/Debug/pe-format)します。
 
 コロン (:) とセクション指定*名前*します。 *名前*は大文字小文字を区別します。
 
@@ -79,7 +79,7 @@ K および P は、それらに対応するセクションのフラグが負の
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. 選択、**構成プロパティ** > **リンカー** > **コマンドライン**プロパティ ページ。
 
@@ -91,5 +91,5 @@ K および P は、それらに対応するセクションのフラグが負の
 
 ## <a name="see-also"></a>関連項目
 
-[MSVC リンカーの参照](linking.md)<br/>
+[MSVC リンカーのリファレンス](linking.md)<br/>
 [MSVC リンカー オプション](linker-options.md)

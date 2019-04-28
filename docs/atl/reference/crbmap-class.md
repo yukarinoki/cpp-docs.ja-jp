@@ -12,11 +12,11 @@ helpviewer_keywords:
 - CRBMap class
 ms.assetid: 658e94dc-e835-4356-aed1-1513e1f66969
 ms.openlocfilehash: e5dedb26544bb2755bc74894cf36a622f5141f89
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301507"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62278125"
 ---
 # <a name="crbmap-class"></a>CRBMap クラス
 
@@ -75,7 +75,7 @@ class CRBMap : public CRBTree<K, V, KTraits, VTraits>
 
 両方に代替`CRBMap`と`CRBMultiMap`によって提供される、 [CAtlMap](../../atl/reference/catlmap-class.md)クラス。 格納する要素の数が少ない場合は、使用を検討して、 [CSimpleMap](../../atl/reference/csimplemap-class.md)クラスの代わりにします。
 
-さまざまなコレクション クラスとその機能とパフォーマンス特性の詳細については、[ATL コレクション クラス](../../atl/atl-collection-classes.md)を参照してください。
+さまざまなコレクション クラスとその機能とパフォーマンス特性の詳細については、次を参照してください。 [ATL コレクション クラス](../../atl/atl-collection-classes.md)します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 

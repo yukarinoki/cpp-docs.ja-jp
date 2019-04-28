@@ -8,11 +8,11 @@ helpviewer_keywords:
 - server documents [MFC], implementing
 ms.assetid: cca1451a-ad09-47ed-b56e-bccd78fc86d1
 ms.openlocfilehash: 17ced1cdb0b40b13fbda68150030efde5735ba7b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57261870"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62307914"
 ---
 # <a name="servers-implementing-server-documents"></a>サーバー:サーバー ドキュメントの実装
 
@@ -32,11 +32,11 @@ ms.locfileid: "57261870"
 
 サーバーのドキュメントが作成されると、フレームワークは、ドキュメントを自動的に OLE システム Dll に登録します。 これにより、サーバーのドキュメントを識別する Dll です。
 
-詳細については、[COleServerItem](../mfc/reference/coleserveritem-class.md)と[COleServerDoc](../mfc/reference/coleserverdoc-class.md)で、*クラス ライブラリ リファレンス*を参照してください。
+詳細については、次を参照してください。 [COleServerItem](../mfc/reference/coleserveritem-class.md)と[COleServerDoc](../mfc/reference/coleserverdoc-class.md)で、*クラス ライブラリ リファレンス*します。
 
 ## <a name="see-also"></a>関連項目
 
 [サーバー](../mfc/servers.md)<br/>
-[サーバー:サーバー項目](../mfc/servers-server-items.md)<br/>
-[サーバー:サーバーの実装](../mfc/servers-implementing-a-server.md)<br/>
-[サーバー:フレームの Windows を実装します。](../mfc/servers-implementing-in-place-frame-windows.md)
+[サーバー: サーバー アイテム](../mfc/servers-server-items.md)<br/>
+[サーバー: サーバーの実装](../mfc/servers-implementing-a-server.md)<br/>
+[サーバー: 埋め込み先フレーム ウィンドウの実装](../mfc/servers-implementing-in-place-frame-windows.md)

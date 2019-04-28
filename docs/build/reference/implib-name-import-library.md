@@ -11,11 +11,11 @@ helpviewer_keywords:
 - import libraries, overriding default name
 ms.assetid: fe8f71ab-7055-41b5-8ef8-2b97cfa4a432
 ms.openlocfilehash: dc9a9220d55f7831a00f70ec155cc5b57a695818
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57821314"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62269987"
 ---
 # <a name="implib-name-import-library"></a>/IMPLIB (インポート ライブラリ名の設定)
 
@@ -36,11 +36,11 @@ ms.locfileid: "57821314"
 
 - [/Export](export-exports-a-function.md) LINK コマンド内の指定
 
-リンクは、インポート ライブラリが作成されていない場合、/IMPLIB を無視します。 エクスポートが指定されていない場合、リンクは、インポート ライブラリを作成できません。 エクスポート ファイルをビルドに使用する場合、リンクでは、インポート ライブラリが既に存在し、作成されていないこと前提としています。 インポート ライブラリとエクスポート ファイルには、[LIB リファレンス](lib-reference.md)を参照してください。
+リンクは、インポート ライブラリが作成されていない場合、/IMPLIB を無視します。 エクスポートが指定されていない場合、リンクは、インポート ライブラリを作成できません。 エクスポート ファイルをビルドに使用する場合、リンクでは、インポート ライブラリが既に存在し、作成されていないこと前提としています。 インポート ライブラリとエクスポート ファイルには、次を参照してください。 [LIB リファレンス](lib-reference.md)します。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. をクリックして、**リンカー**フォルダー。
 
@@ -54,5 +54,5 @@ ms.locfileid: "57821314"
 
 ## <a name="see-also"></a>関連項目
 
-[MSVC リンカーの参照](linking.md)<br/>
+[MSVC リンカーのリファレンス](linking.md)<br/>
 [MSVC リンカー オプション](linker-options.md)

@@ -7,15 +7,15 @@ helpviewer_keywords:
 - C4369
 ms.assetid: ade87e84-36be-4e00-be99-2930af848feb
 ms.openlocfilehash: b374b67fa3319be35490358d7664bcb45bc640db
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623954"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62207031"
 ---
 # <a name="compiler-warning-level-1-c4369"></a>コンパイラの警告 (レベル 1) C4369
 
-'列挙子': 列挙子の値 'value' を 'type' として表現できず、値は 'new_value'
+'enumerator' :  enumerator value 'value' cannot be represented as 'type', value is 'new_value'
 
 列挙子を計算すると、指定した基になる型の最大値よりも大きい値を指定します。  これにより、オーバーフローが発生し、コンパイラが型の最小値を列挙子の値をラップします。
 

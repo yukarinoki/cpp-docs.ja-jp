@@ -8,11 +8,11 @@ helpviewer_keywords:
 - notifications [MFC], from CRichEditCtrl
 ms.assetid: eb5304fe-f4f3-4557-9ebf-3095dea383c4
 ms.openlocfilehash: fcb1dda1d915dc13e01effed9ba99070b825a15e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57274532"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62238211"
 ---
 # <a name="notifications-from-a-rich-edit-control"></a>リッチ エディット コントロールからの通知メッセージ
 
@@ -24,7 +24,7 @@ ms.locfileid: "57274532"
 
 - EN_MSGFILTER EN_MSGFILTER 通知の処理により、クラスか、リッチ エディット コントロールまたはその親ウィンドウは、すべてのキーボードとマウスをコントロールに入力をフィルター処理できます。 ハンドラーがキーボードまたはマウス メッセージが処理するを防ぐことができます、または指定した変更することによって、メッセージを変更できます[MSGFILTER](/windows/desktop/api/richedit/ns-richedit-_msgfilter)構造体。
 
-- EN_PROTECTED では、ユーザーが保護されたテキストを変更しようとしたときを検出するために EN_PROTECTED 通知メッセージを処理します。 テキストの範囲をマークするは、保護対象として、保護されている文字の効果を設定できます。 詳細については、[リッチ エディット コントロールで書式設定文字](../mfc/character-formatting-in-rich-edit-controls.md)を参照してください。
+- EN_PROTECTED では、ユーザーが保護されたテキストを変更しようとしたときを検出するために EN_PROTECTED 通知メッセージを処理します。 テキストの範囲をマークするは、保護対象として、保護されている文字の効果を設定できます。 詳細については、次を参照してください。[リッチ エディット コントロールで書式設定文字](../mfc/character-formatting-in-rich-edit-controls.md)します。
 
 - EN_DROPFILES 通知メッセージを処理することによって、リッチ エディット コントロール内のファイルを削除するユーザーを有効にする EN_DROPFILES することができます。 指定した[ENDROPFILES](/windows/desktop/api/richedit/ns-richedit-_endropfiles)構造が削除されているファイルに関する情報が含まれています。
 

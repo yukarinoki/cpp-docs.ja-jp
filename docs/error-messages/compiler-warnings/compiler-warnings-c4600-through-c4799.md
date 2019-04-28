@@ -1,6 +1,6 @@
 ---
-title: コンパイラの警告 C4600 C4799 から
-ms.date: 07/03/2018
+title: コンパイラ警告 (C4600 - C4799)
+ms.date: 04/21/2019
 f1_keywords:
 - C4609
 - C4658
@@ -40,14 +40,14 @@ helpviewer_keywords:
 - C4767
 - C4770
 ms.assetid: 22bd4392-f3be-445c-9f23-6126aebac901
-ms.openlocfilehash: d1b1e06d3a2be71d6386554c704c547c6f2a4672
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: 3df17b115797f4d68621854d072c41aca14a0fd8
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328375"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62227032"
 ---
-# <a name="compiler-warnings-c4600-through-c4799"></a>コンパイラの警告 C4600 C4799 から
+# <a name="compiler-warnings-c4600-through-c4799"></a>コンパイラ警告 (C4600 - C4799)
 
 ドキュメントのこのセクションの記事では、コンパイラによって生成される警告メッセージのサブセットについて説明します。
 
@@ -201,3 +201,8 @@ ms.locfileid: "58328375"
 |[コンパイラの警告 (レベル 1 および 3) C4793](../../error-messages/compiler-warnings/compiler-warning-level-1-and-3-c4793.md)|'function': ネイティブ: \n\t'reason としてコンパイルされた関数 '|
 |[コンパイラの警告 (レベル 1) C4794](compiler-warning-level-1-c4794.md)|スレッド ローカル ストレージ変数 '%s' '%s' から '%s' に変更のセグメント|
 |[コンパイラの警告 (レベル 1) C4799](../../error-messages/compiler-warnings/compiler-warning-level-1-c4799.md)|関数 'function' に EMMS 命令がありません。|
+
+## <a name="see-also"></a>関連項目
+
+[C/C++コンパイラとビルド ツールのエラーと警告](../compiler-errors-1/c-cpp-build-errors.md) \
+[コンパイラの警告 C4000 - C5999](compiler-warnings-c4000-c5999.md)

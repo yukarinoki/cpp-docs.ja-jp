@@ -6,11 +6,11 @@ helpviewer_keywords:
 - ATL, vs. MFC
 ms.assetid: 269325bb-11a8-4330-ad2b-a14a2458679e
 ms.openlocfilehash: e4e51f81bbdc54ff09980acfba22037df77abac9
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259777"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62261339"
 ---
 # <a name="recommendations-for-choosing-between-atl-and-mfc"></a>ATL と MFC の選択に関する推奨事項
 
@@ -26,7 +26,7 @@ MFC では、完全なアプリケーション、ActiveX コントロール、�
 
 ## <a name="using-atl-in-an-mfc-project"></a>MFC プロジェクトで ATL を使用します。
 
-ウィザードを実行して既存の MFC プロジェクトで ATL を使用するためのサポートを追加することができます。 詳細については、[MFC プロジェクトへの ATL サポートの追加](../mfc/reference/adding-atl-support-to-your-mfc-project.md)を参照してください。
+ウィザードを実行して既存の MFC プロジェクトで ATL を使用するためのサポートを追加することができます。 詳細については、次を参照してください。 [MFC プロジェクトへの ATL サポートの追加](../mfc/reference/adding-atl-support-to-your-mfc-project.md)します。
 
 ## <a name="see-also"></a>関連項目
 

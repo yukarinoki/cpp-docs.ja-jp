@@ -8,11 +8,11 @@ helpviewer_keywords:
 - modules, Visual C++
 ms.assetid: a4bcbe8a-4255-451d-853b-f88cfd82f4e1
 ms.openlocfilehash: fcba363cff567c69ac0fbd0a541953dfe2c8e910
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57818103"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62320670"
 ---
 # <a name="netmodule-files-as-linker-input"></a>リンカー入力としての .netmodule ファイル
 
@@ -24,7 +24,7 @@ link.exe では、入力として MSIL .obj と .netmodule を今すぐ受け取
 
 コマンドラインからリンカーを呼び出す方法については、次を参照してください[リンカーのコマンドライン構文](linking.md)、[コマンドラインから MSVC ツールセットを使用して](../building-on-the-command-line.md)、および[パスと環境変数の設定。コマンド ライン ビルドの](../setting-the-path-and-environment-variables-for-command-line-builds.md)します。
 
-MSVC コンパイラをしてコンパイルされたリンカーに .netmodule または .dll ファイルを渡す **/clr**リンカー エラーが発生することができます。 詳細については、[.netmodule 入力ファイルの形式を選択する](choosing-the-format-of-netmodule-input-files.md)を参照してください。
+MSVC コンパイラをしてコンパイルされたリンカーに .netmodule または .dll ファイルを渡す **/clr**リンカー エラーが発生することができます。 詳細については、次を参照してください。 [.netmodule 入力ファイルの形式を選択する](choosing-the-format-of-netmodule-input-files.md)します。
 
 リンカーは、ネイティブの .obj ファイルだけでコンパイルされた MSIL .obj ファイルを受け入れる **/clr**します。 同じビルドで混合の .obj を渡すと、生成される出力ファイルの検証可能性は、既定では、最低レベルの入力モジュールの検証可能性と等しくなります。
 

@@ -14,11 +14,11 @@ helpviewer_keywords:
 - CSocketAddr class
 ms.assetid: 2fb2d8a7-899e-4a36-a342-cc9f4fcdd68c
 ms.openlocfilehash: e94d92b11a7f200edb1815a0b384d0fc0428001f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57280330"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62277475"
 ---
 # <a name="csocketaddr-class"></a>CSocketAddr クラス
 
@@ -220,7 +220,7 @@ addrinfo* const GetAddrInfoList() const;
 
 ### <a name="return-value"></a>戻り値
 
-1 つまたは複数のリンク リストへのポインター`addrinfo`応答については、ホストを含む構造体。 詳細については、[addrinfo 構造](/windows/desktop/api/ws2def/ns-ws2def-addrinfoa)を参照してください。
+1 つまたは複数のリンク リストへのポインター`addrinfo`応答については、ホストを含む構造体。 詳細については、次を参照してください。 [addrinfo 構造](/windows/desktop/api/ws2def/ns-ws2def-addrinfoa)します。
 
 ## <a name="see-also"></a>関連項目
 

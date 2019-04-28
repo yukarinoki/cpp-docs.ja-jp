@@ -8,11 +8,11 @@ helpviewer_keywords:
 - return keyword [C++]
 ms.assetid: a498903a-056a-4df0-a6cf-72f633a62210
 ms.openlocfilehash: 47bf9c50a2da039b0ffa074796a768290b732bb3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507195"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62268539"
 ---
 # <a name="return-statement-c"></a>return ステートメント (C++)
 
@@ -26,7 +26,7 @@ return [expression];
 
 ## <a name="remarks"></a>Remarks
 
-`expression` 句は、存在する場合、初期化が実行されたときと同様に、関数宣言で指定された型に変換されます。 式の型からの変換、**返す**関数の型は、一時オブジェクトを作成できます。 一時要素を作成する方法とタイミングの詳細については、[一時オブジェクト](../cpp/temporary-objects.md)を参照してください。
+`expression` 句は、存在する場合、初期化が実行されたときと同様に、関数宣言で指定された型に変換されます。 式の型からの変換、**返す**関数の型は、一時オブジェクトを作成できます。 一時要素を作成する方法とタイミングの詳細については、次を参照してください。[一時オブジェクト](../cpp/temporary-objects.md)します。
 
 `expression` 句の値が呼び出し元の関数に返されます。 expression が省略されている場合、関数の戻り値は未定義です。 コンス トラクターとデストラクター、および関数型の**void**で式を指定することはできません、**返す**ステートメント。 その他のすべての種類の関数で式を指定する必要があります、**返す**ステートメント。
 

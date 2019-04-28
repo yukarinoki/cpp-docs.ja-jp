@@ -10,11 +10,11 @@ helpviewer_keywords:
 - preprocessing translation phase
 ms.assetid: 5036c7b7-ccff-4e2c-b052-a9ea6c71af87
 ms.openlocfilehash: cb8a8fea2411e4eb7de78545f70021f3617b0f52
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50442862"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62325144"
 ---
 # <a name="overview-of-file-translation"></a>ファイル変換の概要
 
@@ -24,7 +24,7 @@ C++ プログラムは、C プログラムと同様、1 つ以上のファイル
 
 1. プリプロセス。 この変換フェーズでによって参照される補助ソース ファイルは`#include`ディレクティブでは、「文字列化」と"charizing"ディレクティブを処理し、トークン連結およびマクロの展開を実行します (を参照してください[プリプロセッサ ディレクティブ](../preprocessor/preprocessor-directives.md)*プリプロセッサ リファレンス*詳細については)。 プリプロセス フェーズの結果、まとまって「翻訳単位」を定義する一連のトークンができます。
 
-   プリプロセッサ ディレクティブは、常にシャープ記号で始まります (**#**) 文字 (つまり、行の最初の非空白文字はシャープ記号とあります)。 1 行に 1 つのプリプロセッサ ディレクティブだけを指定できます。 例えば:
+   プリプロセッサ ディレクティブは、常にシャープ記号で始まります (**#**) 文字 (つまり、行の最初の非空白文字はシャープ記号とあります)。 1 行に 1 つのプリプロセッサ ディレクティブだけを指定できます。 例:
 
     ```cpp
     #include <iostream>  // Include text of iostream in

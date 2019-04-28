@@ -7,15 +7,15 @@ helpviewer_keywords:
 - Windows Sockets [MFC], byte order issues
 ms.assetid: 8a787a65-f9f4-4002-a02f-ac25a5dace5d
 ms.openlocfilehash: ca572ad32a9a46756cacf0221d80b2953b710723
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278094"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62217572"
 ---
 # <a name="windows-sockets-byte-ordering"></a>Windows ソケット:バイトの順序付け
 
-この記事と関連記事では 2 つは、Windows ソケット プログラミングのいくつかの問題を説明します。 この記事では、バイトの順序付けについて説明します。 記事では、その他の問題がについて説明します。[Windows ソケット:ブロック](../mfc/windows-sockets-blocking.md)と[Windows ソケット。文字列を変換する](../mfc/windows-sockets-converting-strings.md)します。
+この記事と関連記事では 2 つは、Windows ソケット プログラミングのいくつかの問題を説明します。 この記事では、バイトの順序付けについて説明します。 記事では、その他の問題がについて説明します。[Windows ソケット: ブロック](../mfc/windows-sockets-blocking.md)と[Windows ソケット。文字列を変換する](../mfc/windows-sockets-converting-strings.md)します。
 
 使用するか、またはクラスから派生させる場合[CAsyncSocket](../mfc/reference/casyncsocket-class.md)、これらの問題を自分で管理する必要があります。 使用するか、またはクラスから派生させる場合[CSocket](../mfc/reference/csocket-class.md)MFC を管理します。
 
@@ -98,13 +98,13 @@ C++ を**構造体**クラスとして基本的に同じです。 `Message`構�
 
 詳細については次を参照してください:
 
-- [Windows ソケット:Casyncsocket クラス](../mfc/windows-sockets-using-class-casyncsocket.md)
+- [Windows ソケット: CAsyncSocket クラスの使い方](../mfc/windows-sockets-using-class-casyncsocket.md)
 
-- [Windows ソケット:バック グラウンド](../mfc/windows-sockets-background.md)
+- [Windows ソケット: 予備知識](../mfc/windows-sockets-background.md)
 
-- [Windows ソケット:Stream ソケット](../mfc/windows-sockets-stream-sockets.md)
+- [Windows ソケット: ストリーム ソケット](../mfc/windows-sockets-stream-sockets.md)
 
-- [Windows ソケット:データグラム ソケット](../mfc/windows-sockets-datagram-sockets.md)
+- [Windows ソケット: データグラム ソケット](../mfc/windows-sockets-datagram-sockets.md)
 
 ## <a name="see-also"></a>関連項目
 
