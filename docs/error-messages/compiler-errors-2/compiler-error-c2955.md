@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2955
 ms.assetid: 77709fb6-d69b-46fd-a62f-e8564563d01b
 ms.openlocfilehash: c012e5189b9ca1d0b0e786cbddacedee7c6728d2
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519998"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62300740"
 ---
 # <a name="compiler-error-c2955"></a>コンパイラ エラー C2955
 
@@ -19,7 +19,7 @@ ms.locfileid: "51519998"
 
 クラス テンプレートまたはクラス ジェネリックは、テンプレートまたは汎用引数リストを付けずに識別子として使用することはできません。
 
-詳細については、[クラス テンプレート](../../cpp/class-templates.md)を参照してください。
+詳細については、次を参照してください。[クラス テンプレート](../../cpp/class-templates.md)します。
 
 次の例では C2955 が生成され、その修正方法が示されています。
 
@@ -70,7 +70,7 @@ int main() {
 
 ## <a name="example"></a>例
 
-**Visual Studio 2017 以降:** コンパイラは見つからないテンプレート引数リストを正しく診断 (たとえば、既定のテンプレート引数または非型テンプレート パラメーターの一部) として、テンプレート パラメーター リストが表示されたら、テンプレート。 次のコードは、Visual Studio 2015 ではコンパイルされますが、Visual Studio 2017 ではエラーが発生します。
+**Visual Studio 2017 以降:** コンパイラは、(たとえば、既定のテンプレート引数または非型テンプレート パラメーターの一部) として、テンプレートがテンプレート パラメーター リストが表示されたら、見つからないテンプレート引数リストを正しく診断します。 次のコードは、Visual Studio 2015 ではコンパイルされますが、Visual Studio 2017 ではエラーが発生します。
 
 ```
 template <class T> class ListNode;

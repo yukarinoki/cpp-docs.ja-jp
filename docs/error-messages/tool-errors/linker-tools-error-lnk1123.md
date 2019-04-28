@@ -6,11 +6,11 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1123
 ms.openlocfilehash: b67a2a4ddad13988967b7cc7d827862a2a6fe933
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456421"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62255230"
 ---
 # <a name="linker-tools-error-lnk1123"></a>リンカ ツール エラー LNK1123
 
@@ -31,7 +31,7 @@ ms.locfileid: "50456421"
 
 - [埋め込みマニフェスト] のオプションをオフにしてください。 メニュー バーで、**[プロジェクト]**、**[プロパティ]** の順に選びます。 **プロパティ ページ** ダイアログ ボックスで、展開**構成プロパティ**、**マニフェスト ツール**、**入力し、出力**します。 値を変更**埋め込みマニフェスト**に**いいえ**します。
 
-- ファイルの種類が有効であることを確認します。 たとえば OMF オブジェクトが 16 ビットではなく 32 ビットであることを確認します。 詳細については、[を参照してください。リンカー入力として Obj ファイル](../../build/reference/dot-obj-files-as-linker-input.md)と[PE 形式](/windows/desktop/Debug/pe-format)します。
+- ファイルの種類が有効であることを確認します。 たとえば OMF オブジェクトが 16 ビットではなく 32 ビットであることを確認します。 詳細については、次を参照してください。[します。リンカー入力として Obj ファイル](../../build/reference/dot-obj-files-as-linker-input.md)と[PE 形式](/windows/desktop/Debug/pe-format)します。
 
 - ファイルが破損していないことを確認してください。 必要に応じて再構築します。
 

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - CTabCtrl class [MFC], tab control attributes
 ms.assetid: ecf190cb-f323-4751-bfdb-766dbe6bb553
 ms.openlocfilehash: ca9f89565770e60a59007d609d132fae15eacae6
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304796"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62306458"
 ---
 # <a name="tabs-and-tab-control-attributes"></a>タブおよびタブ コントロールの属性
 
@@ -25,7 +25,7 @@ ms.locfileid: "57304796"
 
 [!code-cpp[NVC_MFCControlLadenDialog#32](../mfc/codesnippet/cpp/tabs-and-tab-control-attributes_1.cpp)]
 
-タブの属性の詳細については、次を参照してください。[タブおよびタブ属性](/windows/desktop/Controls/tab-controls)Windows SDK に含まれています。 タブ コントロールにタブを追加する方法の詳細については、[タブ コントロールを追加するタブ](../mfc/adding-tabs-to-a-tab-control.md)このトピックで後述を参照してください。
+タブの属性の詳細については、次を参照してください。[タブおよびタブ属性](/windows/desktop/Controls/tab-controls)Windows SDK に含まれています。 タブ コントロールにタブを追加する方法の詳細については、次を参照してください。[タブ コントロールを追加するタブ](../mfc/adding-tabs-to-a-tab-control.md)このトピックで後述します。
 
 ## <a name="see-also"></a>関連項目
 

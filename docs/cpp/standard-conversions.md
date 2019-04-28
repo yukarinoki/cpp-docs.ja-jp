@@ -7,11 +7,11 @@ helpviewer_keywords:
 - conversions, standard
 ms.assetid: ce7ac8d3-5c99-4674-8229-0672de05528d
 ms.openlocfilehash: aee100bdc7e8ba6dd7d06c6bca9ed39c09cf2d97
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176979"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62267290"
 ---
 # <a name="standard-conversions"></a>標準変換
 
@@ -198,15 +198,15 @@ int main() {
 
 |関数の型|派生|変換 (<br /><br /> B * A から\*法的でしょうか。|
 |----------------------|----------------|-------------------------------------------|
-|外部 (非クラス スコープ) 関数|Private|いいえ|
+|外部 (非クラス スコープ) 関数|プライベート|いいえ|
 ||プロテクト|いいえ|
 ||Public|はい|
-|B のメンバー関数 (B のスコープ内)|Private|はい|
-||プロテクト|はい|
-||パブリック|はい|
+|B のメンバー関数 (B のスコープ内)|プライベート|はい|
+||プロテクト|[はい]|
+||Public|[はい]|
 |C のメンバー関数 (C のスコープ内)|プライベート|いいえ|
-||プロテクト|はい|
-||パブリック|はい|
+||プロテクト|[はい]|
+||Public|はい|
 
 クラスへのポインターを基底クラスへのポインターに変換できる 2 番目のケースは、明示的な型変換を使用する場合です  (を参照してください[明示的な型変換演算子](explicit-type-conversion-operator-parens.md)明示的な型変換の詳細についてはします)。
 

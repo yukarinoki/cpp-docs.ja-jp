@@ -21,11 +21,11 @@ helpviewer_keywords:
 - reference counting
 ms.assetid: 894a3d7c-2daf-4fd0-8fa4-e6a05bcfb631
 ms.openlocfilehash: 06a0c0e4b650945e10015c3220b926399ec9c6fd
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57280642"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62246314"
 ---
 # <a name="ccomobjectrootex-class"></a>CComObjectRootEx クラス
 
@@ -305,7 +305,7 @@ static void WINAPI ObjectMain(bool bStarting);
 
 値、 *bStarting*パラメーターは、モジュールがされているかどうかを示します初期化または終了します。 既定の実装`ObjectMain`、何も行われませんが、初期化またはクラスに割り当てるリソースをクリーンアップするには、クラスでこの関数をオーバーライドすることができます。 なお`ObjectMain`クラスのすべてのインスタンスが要求される前に呼び出されます。
 
-`ObjectMain` エントリ ポイント関数が実行できる操作の種類が制限されているために、DLL のエントリ ポイントから呼び出されます。 これらの制限の詳細については、[Dll と Visual c ランタイム ライブラリの動作](../../build/run-time-library-behavior.md)と[DllMain](/windows/desktop/Dlls/dllmain)を参照してください。
+`ObjectMain` エントリ ポイント関数が実行できる操作の種類が制限されているために、DLL のエントリ ポイントから呼び出されます。 これらの制限の詳細については、次を参照してください。 [Dll と Visual c ランタイム ライブラリの動作](../../build/run-time-library-behavior.md)と[DllMain](/windows/desktop/Dlls/dllmain)します。
 
 ### <a name="example"></a>例
 

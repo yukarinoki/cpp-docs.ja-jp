@@ -3,11 +3,11 @@ title: Microsoft 固有の修飾子
 ms.date: 08/16/2018
 ms.assetid: 22c7178c-f854-47fa-9de6-07d23fda58e1
 ms.openlocfilehash: 119e4d06d0235bbf637eefe8754668d3e90b0c52
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57749725"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62301787"
 ---
 # <a name="microsoft-specific-modifiers"></a>Microsoft 固有の修飾子
 
@@ -23,7 +23,7 @@ ms.locfileid: "57749725"
 
 ## <a name="microsoft-specific-keywords"></a>Microsoft 固有キーワード
 
-Microsoft 固有キーワードの多くは、宣言子を変更して派生型を作成する際に使用できます。 宣言子の詳細については、[宣言子](overview-of-declarators.md)を参照してください。
+Microsoft 固有キーワードの多くは、宣言子を変更して派生型を作成する際に使用できます。 宣言子の詳細については、次を参照してください。[宣言子](overview-of-declarators.md)します。
 
 |キーワード|説明|派生型を作成するために使用しますか?|
 |-------------|-------------|---------------------------------|

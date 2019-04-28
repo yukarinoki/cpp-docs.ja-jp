@@ -15,11 +15,11 @@ helpviewer_keywords:
 - buffers [C++], avoiding overruns
 ms.assetid: 8d8a5ea1-cd5e-42e1-bc36-66e1cd7e731e
 ms.openlocfilehash: 10afa874092eb563903ba5f49c6add136afc869c
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57820235"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62292173"
 ---
 # <a name="gs-buffer-security-check"></a>/GS (バッファーのセキュリティ チェック)
 
@@ -33,7 +33,7 @@ ms.locfileid: "57820235"
 
 ## <a name="remarks"></a>Remarks
 
-**/GS**が既定でオンです。 アプリケーションにセキュリティを損なうがない場合を使用して、 **/GS-** します。 バッファー オーバーランの検出を抑制する詳細については、[safebuffers](../../cpp/safebuffers.md)を参照してください。
+**/GS**が既定でオンです。 アプリケーションにセキュリティを損なうがない場合を使用して、 **/GS-** します。 バッファー オーバーランの検出を抑制する詳細については、次を参照してください。 [safebuffers](../../cpp/safebuffers.md)します。
 
 ## <a name="security-checks"></a>セキュリティ チェック
 
@@ -116,7 +116,7 @@ x86 で、関数が例外ハンドラーを使用する場合、コンパイラ�
 
 1. **ソリューション エクスプ ローラー**プロジェクトを右クリックし、クリックして**プロパティ**します。
 
-   詳細については、[Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)を参照してください。
+   詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. **プロパティ ページ**ダイアログ ボックスで、をクリックして、 **C/C++** フォルダー。
 
@@ -158,4 +158,4 @@ int main() {
 ## <a name="see-also"></a>関連項目
 
 [MSVC コンパイラ オプション](compiler-options.md)<br/>
-[MSVC コンパイラ コマンドラインの構文](compiler-command-line-syntax.md)
+[MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)

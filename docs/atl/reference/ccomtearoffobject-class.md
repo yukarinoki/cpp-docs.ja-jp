@@ -16,11 +16,11 @@ helpviewer_keywords:
 - CComTearOffObject class
 ms.assetid: d974b598-c6b2-42b1-8360-9190d9d0fbf3
 ms.openlocfilehash: fd35b1e9e69c97402dd1ec357fd25fa1dcd5dd49
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57274610"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62259418"
 ---
 # <a name="ccomtearoffobject-class"></a>CComTearOffObject クラス
 
@@ -154,7 +154,7 @@ CComObject<Owner>* m_pOwner;
 
 ### <a name="parameters"></a>パラメーター
 
-*所有者*<br/>
+*[所有者]*<br/>
 [in]ティアオフが実装されているクラスです。
 
 ### <a name="remarks"></a>Remarks

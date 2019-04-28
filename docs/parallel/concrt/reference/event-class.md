@@ -13,11 +13,11 @@ helpviewer_keywords:
 - event class
 ms.assetid: fba35a53-6568-4bfa-9aaf-07c0928cf73d
 ms.openlocfilehash: aa9d46b868c1a31729a9590db3b3f67179903881
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57264667"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62262392"
 ---
 # <a name="event-class"></a>event クラス
 
@@ -54,7 +54,7 @@ class event;
 
 ## <a name="remarks"></a>Remarks
 
-詳細については、[同期データ構造](../../../parallel/concrt/synchronization-data-structures.md)を参照してください。
+詳細については、次を参照してください。[同期データ構造](../../../parallel/concrt/synchronization-data-structures.md)します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -168,8 +168,7 @@ static size_t __cdecl wait_for_multiple(
 
 ### <a name="remarks"></a>Remarks
 
-
-  `_FWaitAll` パラメーターの値を `true` に設定した場合は、すべてのイベントがシグナル状態になって初めて待機条件を満たしたことになります。その場合、この関数によって返されるインデックスには、`COOPERATIVE_WAIT_TIMEOUT` 値ではないという事実を除いて、特別な意味はありません。
+`_FWaitAll` パラメーターの値を `true` に設定した場合は、すべてのイベントがシグナル状態になって初めて待機条件を満たしたことになります。その場合、この関数によって返されるインデックスには、`COOPERATIVE_WAIT_TIMEOUT` 値ではないという事実を除いて、特別な意味はありません。
 
 > [!IMPORTANT]
 > ユニバーサル Windows プラットフォーム (UWP) アプリで呼び出さないでください`wait_for_multiple`ASTA のスレッドこの呼び出しは、現在のスレッドをブロックすることができ、アプリが応答しなくなる可能性があるためです。

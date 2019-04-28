@@ -1,5 +1,5 @@
 ---
-title: '[Hlsl] プロパティ ページ:出力ファイル'
+title: '[HLSL] プロパティ ページ:出力ファイル'
 ms.date: 11/04/2016
 f1_keywords:
 - VC.Project.FXCompilerTool.AssemblerOutput
@@ -9,13 +9,13 @@ f1_keywords:
 - VC.Project.FXCompilerTool.AssemblerOutputFile
 ms.assetid: c5ba1e72-30de-43eb-a15a-5b0ae58e55c2
 ms.openlocfilehash: 6ee8042fccf2e0b635535a77d9c9a6bc68bd9999
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57826357"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62291549"
 ---
-# <a name="hlsl-property-pages-output-files"></a>[Hlsl] プロパティ ページ:出力ファイル
+# <a name="hlsl-property-pages-output-files"></a>[HLSL] プロパティ ページ:出力ファイル
 
 HLSL コンパイラ (fxc.exe) の次のプロパティを構成するには、その **[出力ファイル]** プロパティを使用します。 アクセスする方法については、**出力ファイル**HLSL フォルダーで、プロパティ ページを参照してください[Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 

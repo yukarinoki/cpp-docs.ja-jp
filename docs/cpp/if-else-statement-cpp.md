@@ -10,11 +10,11 @@ helpviewer_keywords:
 - if keyword [C++], if-else
 ms.assetid: f8c45cde-6bce-42ae-81db-426b3dbd4caa
 ms.openlocfilehash: 16aa65ab64d9fd855ae3306da88f8eb14eec759c
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330834"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62183649"
 ---
 # <a name="if-else-statement-c"></a>if-else ステートメント (C++)
 
@@ -113,7 +113,7 @@ int main()
 
 ## <a name="if_with_init"></a> 場合、初期化子と共にステートメント
 
-**Visual Studio 2017 バージョン 15.3 以降**(で使用可能な[/std:c + + 17](../build/reference/std-specify-language-standard-version.md)):**場合**ステートメントは、式を宣言し、名前付きの変数の初期化を含めることもできます。 変数が if ブロックのスコープ内だけに必要なときは、この形式の if ステートメントを使用します。
+**Visual Studio 2017 バージョン 15.3 以降**(で使用可能な[/std:c + + 17](../build/reference/std-specify-language-standard-version.md))。**場合**ステートメントは、式を宣言し、名前付きの変数の初期化を含めることもできます。 変数が if ブロックのスコープ内だけに必要なときは、この形式の if ステートメントを使用します。
 
 ## <a name="example"></a>例
 
@@ -165,7 +165,7 @@ int main()
 
 ## <a name="a-nameifconstexpr-if-constexpr-statements"></a><a name="if_constexpr"> 場合 constexpr ステートメント
 
-**Visual Studio 2017 バージョン 15.3 以降**(で使用可能な[/std:c + + 17](../build/reference/std-specify-language-standard-version.md)): 関数テンプレートで使用することができます、**場合 constexpr**ことがなくコンパイル時の分岐決定を行うステートメント複数の関数オーバー ロードを使用することです。 たとえば、1 つの関数を記述する、そのハンドル パラメーターのアンパック (ゼロのパラメーター オーバー ロードは必要ありません)。
+**Visual Studio 2017 バージョン 15.3 以降**(で使用可能な[/std:c + + 17](../build/reference/std-specify-language-standard-version.md))。関数のテンプレートで使用することができます、**場合 constexpr**ステートメントを複数の関数オーバー ロードに頼ることがなくコンパイル時の分岐の意思決定します。 たとえば、1 つの関数を記述する、そのハンドル パラメーターのアンパック (ゼロのパラメーター オーバー ロードは必要ありません)。
 
 ```cpp
 template <class T, class... Rest>

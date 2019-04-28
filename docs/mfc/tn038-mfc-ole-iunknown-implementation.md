@@ -1,5 +1,5 @@
 ---
-title: 'TN038: MFC/OLE IUnknown の実装'
+title: TN038:MFC/OLE IUnknown の実装
 ms.date: 06/28/2018
 f1_keywords:
 - vc.mfc.ole
@@ -19,13 +19,13 @@ helpviewer_keywords:
 - INTERFACE_PART macro
 ms.assetid: 19d946ba-beaf-4881-85c6-0b598d7f6f11
 ms.openlocfilehash: 0722ce294e6a088446b8ba681810cf3f7885f122
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571432"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62305477"
 ---
-# <a name="tn038-mfcole-iunknown-implementation"></a>テクニカル ノート 38: MFC/OLE IUnknown の実装
+# <a name="tn038-mfcole-iunknown-implementation"></a>TN038:しかし、MFC/OLE IUnknown の実装
 
 > [!NOTE]
 > 次のテクニカル ノートは、最初にオンライン ドキュメントの一部とされてから更新されていません。 結果として、一部のプロシージャおよびトピックが最新でないか、不正になります。 最新の情報について、オンライン ドキュメントのキーワードで関係のあるトピックを検索することをお勧めします。
@@ -47,7 +47,7 @@ public:
 ```
 
 > [!NOTE]
-> この説明では、必要な呼び出し規則の詳細の一部 (`__stdcall` など) を省略しています。
+> この説明では、必要な呼び出し規約の詳細の一部 (`__stdcall` など) を省略しています。
 
 [AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref)と[リリース](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release)メンバー関数は、オブジェクトのメモリ管理を制御します。 COM は、参照カウント スキームを使用してオブジェクトを追跡します。 C++ と異なり、オブジェクトが直接参照されることはありません。 COM オブジェクトは、常にポインターを通じて参照されます。 所有者が行われるときに、オブジェクトを解放するを使用して、オブジェクトの[リリース](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release)(従来の C++ オブジェクトの実行はような delete 演算子を使用して) ではなくメンバーが呼び出されます。 参照カウント スキームを使用することで、単一オブジェクトに対する多重参照を管理できます。 実装[AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref)と[リリース](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release)オブジェクトの参照カウントを維持 — オブジェクトは、参照カウントが 0 になるまでは削除されません。
 
@@ -92,7 +92,7 @@ if (pUnk->QueryInterface(IID_IPrintInterface, (void**)&pPrint) == NOERROR)
 }
 ```
 
-非常に簡単に思えますが、両方、IPrintInterface をサポートするオブジェクトを実行する方法と[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)インターフェイスは単純な IPrintInterface はから直接派生ためここで[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) —、IPrintInterface を実装する[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)は自動的にサポートします。 例えば:
+非常に簡単に思えますが、両方、IPrintInterface をサポートするオブジェクトを実行する方法と[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)インターフェイスは単純な IPrintInterface はから直接派生ためここで[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) —、IPrintInterface を実装する[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)は自動的にサポートします。 例:
 
 ```cpp
 class CPrintObj : public CPrintInterface
@@ -367,7 +367,7 @@ CEditPrintObj::CPrintObj の実装は、上の CEditPrintObj::CEditObj の定義
 
 MFC はスタンドアロンの COM オブジェクトのほかに、集約もサポートしています。 集約自体が複雑すぎます。 ここで説明するトピックです。参照してください、[集計](/windows/desktop/com/aggregation)集計の詳細についてはトピック。 ここではフレームワークとインターフェイス マップに組み込まれている集約に限定して説明します。
 
-集約の利用方法には、(1) 集約をサポートする COM オブジェクトの利用、(2) 集約の一部となることができるオブジェクトの作成の 2 種類があります。 これらの機能はそれぞれ "集約オブジェクトの利用" と "集約可能オブジェクトの作成" と呼ばれます。 MFC ではこの両方がサポートされています。
+集計を使用する 2 つの方法はあります。(1)、集計をサポートする COM オブジェクトを使用して (2) 別に集計が可能なオブジェクトを実装します。 これらの機能はそれぞれ "集約オブジェクトの利用" と "集約可能オブジェクトの作成" と呼ばれます。 MFC ではこの両方がサポートされています。
 
 ### <a name="using-an-aggregate-object"></a>集約オブジェクトの利用
 
@@ -381,7 +381,7 @@ MFC はスタンドアロンの COM オブジェクトのほかに、集約も�
 
 3. 適切な時点で (普通は `CCmdTarget::OnCreateAggregates` 内) このメンバー変数を NULL 値以外の値に初期化します。
 
-例えば:
+例:
 
 ```cpp
 class CAggrExample : public CCmdTarget

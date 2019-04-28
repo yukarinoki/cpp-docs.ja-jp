@@ -10,11 +10,11 @@ helpviewer_keywords:
 - __declspec keyword [C++], thread
 ms.assetid: 667f2a77-6d1f-4b41-bee8-05e67324fab8
 ms.openlocfilehash: 089f339e5d203fe44789a7df1607f73ab13b8a24
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440080"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62330519"
 ---
 # <a name="thread"></a>スレッド
 
@@ -28,7 +28,7 @@ ms.locfileid: "50440080"
 
 ## <a name="remarks"></a>Remarks
 
-スレッド ローカル ストレージ (TLS) は、特定のマルチスレッド プロセスの各スレッドが、スレッド固有のデータを格納するための場所を割り当てる機能です。 標準のマルチスレッド プログラムでは、データは特定のプロセスのすべてのスレッド間で共有されますが、スレッド ローカル ストレージはスレッドごとのデータを割り当てるための機能です。 スレッドの詳細については、[マルチ スレッド](../parallel/multithreading-support-for-older-code-visual-cpp.md)を参照してください。
+スレッド ローカル ストレージ (TLS) は、特定のマルチスレッド プロセスの各スレッドが、スレッド固有のデータを格納するための場所を割り当てる機能です。 標準のマルチスレッド プログラムでは、データは特定のプロセスのすべてのスレッド間で共有されますが、スレッド ローカル ストレージはスレッドごとのデータを割り当てるための機能です。 スレッドの詳細については、次を参照してください。[マルチ スレッド](../parallel/multithreading-support-for-older-code-visual-cpp.md)します。
 
 スレッド ローカル変数の宣言を使用する必要があります[拡張属性構文](../cpp/declspec.md)と **_ _declspec**キーワード、**スレッド**キーワード。 たとえば、次に示すコードは、整数型のスレッド ローカル変数を宣言して特定の値に初期化します。
 
@@ -42,7 +42,7 @@ __declspec( thread ) int tls_i = 1;
 
 1. 定数値を持つ静的に初期化されるスレッド ローカル変数は、すべてのスレッドでは正しく初期化一般にされます。 ただし、2017 年 12 月の時点で問題がある既知の準拠 constexpr 変数が表示されるため、Microsoft Visual C コンパイラでの静的な初期化ではなく動的です。
 
-   注: 両方の問題の将来のコンパイラの更新プログラムで修正する必要があります。
+   メモ:将来のコンパイラの更新プログラムで修正するのには、これらの問題の両方が必要です。
 
 さらに、スレッド ローカル オブジェクトと変数を宣言するときに、次のガイドラインを確認する必要があります。
 

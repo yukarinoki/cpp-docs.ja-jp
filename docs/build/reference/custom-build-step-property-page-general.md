@@ -1,5 +1,5 @@
 ---
-title: カスタムは、ステップ プロパティ ページをビルドします。全般
+title: '[カスタム ビルド ステップ] プロパティ ページ: 全般'
 ms.date: 11/04/2016
 f1_keywords:
 - VC.Project.VCCustomBuildStep.AdditionalInputs
@@ -13,13 +13,13 @@ helpviewer_keywords:
 - custom build step (general)
 ms.assetid: bd319741-0491-46c4-a428-7c61b4b46a02
 ms.openlocfilehash: 329923140cf5a8f05e5c032ddb9e25c0ea45ec2a
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57827758"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62273080"
 ---
-# <a name="custom-build-step-property-page-general"></a>カスタムは、ステップ プロパティ ページをビルドします。全般
+# <a name="custom-build-step-property-page-general"></a>[カスタム ビルド ステップ] プロパティ ページ: 全般
 
 プロジェクトにおけるプロジェクト構成とターゲット プラットフォームの組み合わせごとに、プロジェクトをビルドするときに実行するカスタム ステップを指定できます。
 
@@ -53,7 +53,7 @@ ms.locfileid: "57827758"
 
 ### <a name="to-specify-a-custom-build-step"></a>カスタム ビルド ステップを指定するには
 
-1. メニュー バーで、**[プロジェクト]**、**[プロパティ]** の順に選びます。 詳細については、[Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)を参照してください。
+1. メニュー バーで、**[プロジェクト]**、**[プロパティ]** の順に選びます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. **[プロパティ ページ]** ダイアログ ボックスで、**[構成プロパティ]**、**[カスタム ビルド ステップ]**、**[全般]** ページの順に移動します。
 

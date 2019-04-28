@@ -5,11 +5,11 @@ helpviewer_keywords:
 - file types [C++], WinHelp files
 ms.assetid: 4fdcbd66-66b0-4866-894a-fd7b4c2557e4
 ms.openlocfilehash: 376d9faa87868cce842a1cb70273e220ff691fa4
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57827241"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62270199"
 ---
 # <a name="help-files-winhelp"></a>ヘルプ ファイル (WinHelp)
 
@@ -29,7 +29,7 @@ MFC ActiveX コントロール プロジェクトに WinHelp サポートを追�
 |ファイル名|ディレクトリの場所|ソリューション エクスプローラーでの場所|説明|
 |---------------|------------------------|--------------------------------|-----------------|
 |*Projname*.hpj|*Projname*\hlp|ソース ファイル|プログラムまたはコントロールのヘルプ ファイルを作成するためにヘルプ コンパイラで使用されるプロジェクト ファイルです。|
-|*Projname*.rtf|*Projname*\hlp|Project|編集可能なテンプレート トピックと、.hpj ファイルのカスタマイズに関する情報が含まれます。|
+|*Projname*.rtf|*Projname*\hlp|プロジェクト|編集可能なテンプレート トピックと、.hpj ファイルのカスタマイズに関する情報が含まれます。|
 |Makehelp.bat|*Projname*|ソース ファイル|プロジェクトのコンパイル時に、ヘルプ プロジェクトをビルドするためにシステムで使用します。|
 |Bullet.bmp|*Projname*|リソース ファイル (Visual Studio)|箇条書きを表すために標準のヘルプ ファイル トピックで使用されます。|
 

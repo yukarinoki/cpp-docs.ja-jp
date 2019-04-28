@@ -3,11 +3,11 @@ title: /GUARD (ガード チェックを有効にする)
 ms.date: 11/04/2016
 ms.assetid: 72758e23-70ac-4616-94d7-d767477406d1
 ms.openlocfilehash: e48921e57977cc7a1ca6a580fed78a6a2a960a02
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57818415"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62292251"
 ---
 # <a name="guard-enable-guard-checks"></a>/GUARD (ガード チェックを有効にする)
 
@@ -29,7 +29,7 @@ ms.locfileid: "57818415"
 
 ### <a name="to-set-this-linker-option-in-visual-studio"></a>このリンカー オプションを Visual Studio で設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. 展開**構成プロパティ**、**リンカー**、**コマンドライン**します。
 
@@ -38,5 +38,5 @@ ms.locfileid: "57818415"
 ## <a name="see-also"></a>関連項目
 
 [/guard (制御フロー ガードを有効にする)](guard-enable-control-flow-guard.md)<br/>
-[MSVC リンカーの参照](linking.md)<br/>
+[MSVC リンカーのリファレンス](linking.md)<br/>
 [MSVC リンカー オプション](linker-options.md)

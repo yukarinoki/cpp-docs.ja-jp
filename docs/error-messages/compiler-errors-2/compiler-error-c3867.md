@@ -7,15 +7,15 @@ helpviewer_keywords:
 - C3867
 ms.assetid: bc5de03f-e01a-4407-88c3-2c63f0016a1e
 ms.openlocfilehash: 9308e238c86c7b8a957720228a823688fac289d3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571198"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62242880"
 ---
 # <a name="compiler-error-c3867"></a>コンパイラ エラー C3867
 
-'func': 関数呼び出しには引数リストがありません。メンバーへのポインターを作成するために '&func' を使用してください
+'func': 関数呼び出しの引数リストがありません。使用して、' & func' メンバーへのポインターを作成するには
 
 メンバー関数をクラス名とアドレス演算子で修飾せずに、メンバー関数のアドレスを取得しようとしました。
 

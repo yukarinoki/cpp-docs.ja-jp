@@ -11,11 +11,11 @@ helpviewer_keywords:
 - GL compiler option [C++]
 ms.assetid: 09d51e2d-9728-4bd0-b5dc-3b8284aca1d1
 ms.openlocfilehash: 6251209dac74a504bb0635f0c544c39935090a42
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57812383"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62292134"
 ---
 # <a name="gl-whole-program-optimization"></a>/GL (プログラム全体の最適化)
 
@@ -53,7 +53,7 @@ ms.locfileid: "57812383"
 
 生成された .obj ファイル **/GL**プリコンパイル済みヘッダー ファイルは .lib ファイルを生成したのと同じコンピューターにリンクする場合を除き、.lib ファイルの作成に使用する必要があります、 **/GL** .obj ファイル。 .Obj ファイルのプリコンパイル済みヘッダー ファイルからの情報は、リンク時に必要になります。
 
-使用可能な最適化と、プログラム全体の最適化の制限事項の詳細については、[/LTCG](ltcg-link-time-code-generation.md)を参照してください。  **/GL**もでは使用できるガイド付き最適化のプロファイルは、/LTCG を参照してください。  ガイド付き最適化と関数の最適化のプロファイル ガイド付きの順序付けをするかどうかのプロファイルのコンパイルをするときに使用してコンパイルする必要があります[/Gy](gy-enable-function-level-linking.md)またはコンパイラ オプション/Gy ことを意味します。
+使用可能な最適化と、プログラム全体の最適化の制限事項の詳細については、次を参照してください。 [/LTCG](ltcg-link-time-code-generation.md)します。  **/GL**もでは使用できるガイド付き最適化のプロファイルは、/LTCG を参照してください。  ガイド付き最適化と関数の最適化のプロファイル ガイド付きの順序付けをするかどうかのプロファイルのコンパイルをするときに使用してコンパイルする必要があります[/Gy](gy-enable-function-level-linking.md)またはコンパイラ オプション/Gy ことを意味します。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
@@ -66,4 +66,4 @@ ms.locfileid: "57812383"
 ## <a name="see-also"></a>関連項目
 
 [MSVC コンパイラ オプション](compiler-options.md)<br/>
-[MSVC コンパイラ コマンドラインの構文](compiler-command-line-syntax.md)
+[MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)

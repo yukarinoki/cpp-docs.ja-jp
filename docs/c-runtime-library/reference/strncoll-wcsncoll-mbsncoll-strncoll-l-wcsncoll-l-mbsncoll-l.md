@@ -61,11 +61,11 @@ helpviewer_keywords:
 - _wcsncoll_l function
 ms.assetid: e659a5a4-8afe-4033-8e72-17ffd4bdd8e9
 ms.openlocfilehash: fe6c3283c9379b370911cc63184535e813b96d8c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658537"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62209777"
 ---
 # <a name="strncoll-wcsncoll-mbsncoll-strncolll-wcsncolll-mbsncolll"></a>_strncoll、_wcsncoll、_mbsncoll、_strncoll_l、_wcsncoll_l、_mbsncoll_l
 
@@ -114,7 +114,7 @@ int _mbsncoll_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*string1*、 *string2*<br/>
+*string1*, *string2*<br/>
 Null で終わる比較対象の文字列。
 
 *count*<br/>
@@ -152,7 +152,7 @@ Null で終わる比較対象の文字列。
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
-|**_strncoll**、 **_strncoll_l**|\<string.h>|
+|**_strncoll**, **_strncoll_l**|\<string.h>|
 |**_wcsncoll**、 **_wcsncoll_l**|\<wchar.h> または \<string.h>|
 |**_mbsncoll**、 **_mbsncoll_l**|\<mbstring.h>|
 

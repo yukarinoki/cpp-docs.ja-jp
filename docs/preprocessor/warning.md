@@ -11,11 +11,11 @@ helpviewer_keywords:
 - warning pragma
 ms.assetid: 8e9a0dec-e223-4657-b21d-5417ebe29cc8
 ms.openlocfilehash: 1341472af22582635207a2bdff93b4367fd59330
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59037751"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62179933"
 ---
 # <a name="warning-pragma"></a>warning プラグマ
 コンパイラの警告メッセージの動作の選択的な変更を有効にします。

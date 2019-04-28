@@ -9,11 +9,11 @@ helpviewer_keywords:
 - pointers, declarations
 ms.assetid: f42ddb79-9721-4e39-95b1-c56b55591f68
 ms.openlocfilehash: a15e519be14d9a05cb30a8c9282baccc87a5f35e
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326967"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62267690"
 ---
 # <a name="pointers-to-members"></a>メンバーへのポインター
 
@@ -34,7 +34,7 @@ ms.locfileid: "51326967"
 
 1. 宣言子: 
 
-   - オプションの Microsoft 固有の修飾子。 詳細については、[Microsoft 固有の修飾子](../cpp/microsoft-specific-modifiers.md)を参照してください。
+   - オプションの Microsoft 固有の修飾子。 詳細については、次を参照してください。 [Microsoft 固有の修飾子](../cpp/microsoft-specific-modifiers.md)します。
 
    - 指されるメンバーが含まれるクラスの修飾名。
 

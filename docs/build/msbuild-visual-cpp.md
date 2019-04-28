@@ -7,11 +7,11 @@ helpviewer_keywords:
 - MSBuild
 ms.assetid: 7a1be7ff-0312-4669-adf2-5f5bf507d560
 ms.openlocfilehash: 565b1c47b4476fa7cb830e15b978b389f4344ee1
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57820472"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62273314"
 ---
 # <a name="msbuild-on-the-command-line---c"></a>コマンド ライン - C++ での MSBuild
 
@@ -27,7 +27,7 @@ ms.locfileid: "57820472"
 
 A*タスク パラメーター*クラス タスクのプロパティは、通常、実行可能なコマンドのコマンド ライン オプションを表します。 たとえば、`FavorSizeOrSpeed`のパラメーター、`CL`タスクに対応する、 **/Os**と **/Ot**コンパイラ オプション。
 
-追加のタスク パラメーターは、MSBuild インフラストラクチャをサポートします。 たとえば、`Sources` タスク パラメーターは、他のタスクで使用できる一連のタスクを指定します。 MSBuild タスクの詳細については、[タスク リファレンス](/visualstudio/msbuild/msbuild-task-reference)を参照してください。
+追加のタスク パラメーターは、MSBuild インフラストラクチャをサポートします。 たとえば、`Sources` タスク パラメーターは、他のタスクで使用できる一連のタスクを指定します。 MSBuild タスクの詳細については、次を参照してください。[タスク リファレンス](/visualstudio/msbuild/msbuild-task-reference)します。
 
 ほとんどのタスクには入力と出力が必要です。これには、ファイル名、パス、文字列パラメーター、数値パラメーター、ブール値パラメーターなどがあります。 たとえば、一般的な入力は、コンパイルする .cpp ソース ファイルの名前です。 重要な入力パラメーターは、たとえば、ビルド構成とプラットフォームを指定する文字列"デバッグ\|Win32"です。 入力と出力は、`Item` 要素に含まれる 1 つ以上のユーザー定義の XML `ItemGroup` 要素で指定します。
 
@@ -62,4 +62,4 @@ MSBuild の詳細についてを参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[コマンドラインから MSVC ツールセットを使用してください。](building-on-the-command-line.md)
+[コマンド ラインから MSVC ツールセットを使用する](building-on-the-command-line.md)

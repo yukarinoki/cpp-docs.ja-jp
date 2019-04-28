@@ -10,11 +10,11 @@ helpviewer_keywords:
 - referencing objects, declarator syntax
 ms.assetid: 68156f7f-97a0-4b66-b26d-b25ade5e3bd8
 ms.openlocfilehash: aafc582299402eabab2736ac7d07b6c4c397413c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50616457"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62244222"
 ---
 # <a name="references-c"></a>参照 (C++)
 
@@ -22,7 +22,7 @@ ms.locfileid: "50616457"
 
 参照は次の構文を使用して宣言できます。
 
-> \[*ストレージ クラス指定子*] \[ *cv 修飾子*]*型指定子* \[ *ms 修飾子*] *宣言子* \[ **=** *式*]**;**
+> \[*storage-class-specifiers*] \[*cv-qualifiers*] *type-specifiers* \[*ms-modifier*] *declarator* \[**=** *expression*]**;**
 
 参照を指定する任意の有効な宣言子を使用できます。 参照が関数または配列型への参照でない限り、次の簡略化された構文が適用されます。
 
@@ -40,7 +40,7 @@ ms.locfileid: "50616457"
 
 1. 宣言子: 
 
-   - オプションの Microsoft 固有の修飾子。 詳細については、[Microsoft 固有の修飾子](../cpp/microsoft-specific-modifiers.md)を参照してください。
+   - オプションの Microsoft 固有の修飾子。 詳細については、次を参照してください。 [Microsoft 固有の修飾子](../cpp/microsoft-specific-modifiers.md)します。
 
    - **&** 演算子または**&&** 演算子。
 
@@ -50,7 +50,7 @@ ms.locfileid: "50616457"
 
 1. 初期化子 (省略可能)。
 
-複雑な宣言子の形式の配列および関数へのポインターは配列および関数への参照にも適用されます。 詳細については、[ポインター](../cpp/pointers-cpp.md)を参照してください。
+複雑な宣言子の形式の配列および関数へのポインターは配列および関数への参照にも適用されます。 詳細については、次を参照してください。[ポインター](../cpp/pointers-cpp.md)します。
 
 1 つの宣言指定子の後のコンマ区切りリストに、複数の宣言子と初期化子を含めることができます。 例えば:
 

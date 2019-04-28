@@ -7,11 +7,11 @@ helpviewer_keywords:
 - dialog boxes, ATL
 ms.assetid: 152a378f-7b24-4f66-aeba-c740973f03a6
 ms.openlocfilehash: ebbb610debe5d480cd1161149f89c4d357f9cd02
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57275801"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62261606"
 ---
 # <a name="adding-an-atl-dialog-box"></a>ATL ダイアログ ボックスを追加します。
 
@@ -30,7 +30,7 @@ ATL ダイアログ ウィザード実装から派生したダイアログ ボ�
 
 1. **テンプレート**のウィンドウ、[クラスの追加](../../ide/add-class-dialog-box.md)ダイアログ ボックスで、をクリックして**ATL ダイアログ**します。 クリックして**オープン**を表示する、 [ATL ダイアログ ウィザード](../../atl/reference/atl-dialog-wizard.md)します。
 
-詳細については、[ ダイアログ ボックスを実装する](../../atl/implementing-a-dialog-box.md)を参照してください。
+詳細については、次を参照してください。 [ ダイアログ ボックスを実装する](../../atl/implementing-a-dialog-box.md)します。
 
 ## <a name="see-also"></a>関連項目
 

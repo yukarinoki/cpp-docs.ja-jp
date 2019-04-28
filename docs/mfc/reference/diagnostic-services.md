@@ -21,11 +21,11 @@ helpviewer_keywords:
 - diagnostic functions and variables [MFC]
 ms.assetid: 8d78454f-9fae-49c2-88c9-d3fabd5393e8
 ms.openlocfilehash: a4979ab7bbc0e396de5629fba1b86f3bfb602dcf
-ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55850441"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62322723"
 ---
 # <a name="diagnostic-services"></a>診断サービス
 
@@ -230,7 +230,7 @@ MFC のリリース バージョンでは ASSERT_VALID は何も行いません�
 > [!NOTE]
 >  この関数は、MFC のデバッグ バージョンでのみ使用できます。
 
-詳細と例については、[MFC アプリケーションのデバッグ](/visualstudio/debugger/mfc-debugging-techniques)を参照してください。
+詳細と例については、次を参照してください。 [MFC アプリケーションのデバッグ](/visualstudio/debugger/mfc-debugging-techniques)します。
 
 ### <a name="example"></a>例
 
@@ -365,7 +365,7 @@ TRACE(DWORD  category,  UINT  level, LPCSTR lpszFormat, ...)
 
 MFC のデバッグ バージョンでは、このマクロは、現在のアプリケーションのデバッガーに、指定した文字列を送信します。 リリース ビルドでは、このマクロは、(コードが生成されないすべての) nothing にコンパイルします。
 
-詳細については、[MFC アプリケーションのデバッグ](/visualstudio/debugger/mfc-debugging-techniques)を参照してください。
+詳細については、次を参照してください。 [MFC アプリケーションのデバッグ](/visualstudio/debugger/mfc-debugging-techniques)します。
 
 ### <a name="requirements"></a>必要条件
 

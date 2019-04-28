@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Rollback method, ODBC transactions
 ms.assetid: 9e00bbf4-e9fb-4332-87fc-ec8ac61b3f68
 ms.openlocfilehash: 996b8410366661cb91cf82cfff823f17d3aad8b4
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59033113"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62329908"
 ---
 # <a name="transaction-how-transactions-affect-updates-odbc"></a>トランザクション:トランザクション (ODBC) の更新プログラムに与える影響
 
@@ -56,6 +56,6 @@ ms.locfileid: "59033113"
 
 [トランザクション (ODBC)](../../data/odbc/transaction-odbc.md)<br/>
 [トランザクション (ODBC)](../../data/odbc/transaction-odbc.md)<br/>
-[トランザクション:レコード セット (ODBC) でトランザクションを実行します。](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)<br/>
+[トランザクション: レコードセットでのトランザクションの実行 (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)<br/>
 [CDatabase クラス](../../mfc/reference/cdatabase-class.md)<br/>
 [CRecordset クラス](../../mfc/reference/crecordset-class.md)

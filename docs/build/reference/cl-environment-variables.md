@@ -10,11 +10,11 @@ helpviewer_keywords:
 - environment variables, CL compiler
 ms.assetid: 2606585b-a681-42ee-986e-1c9a2da32108
 ms.openlocfilehash: a15bedc0a5aa8215356a98c3635a2edd1f3cfc5f
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807963"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62294474"
 ---
 # <a name="cl-environment-variables"></a>環境変数 CL
 
@@ -36,7 +36,7 @@ CL を設定するか、 \_CL\_次の構文を使用して環境変数。
 
 /D オプションを使用して等号 (=) を使用するシンボルを定義することはできません。 等号の代わりにシャープ記号 (#) を使用することができます。 この方法では、CL を使用することができますまたは\_CL\_明示的な値を持つプリプロセッサ定数を定義する環境変数: たとえば、`/DDEBUG#1`を定義する`DEBUG=1`します。
 
-関連情報については、[環境変数を設定](../setting-the-path-and-environment-variables-for-command-line-builds.md)を参照してください。
+関連情報については、次を参照してください。[環境変数を設定](../setting-the-path-and-environment-variables-for-command-line-builds.md)します。
 
 ## <a name="examples"></a>使用例
 

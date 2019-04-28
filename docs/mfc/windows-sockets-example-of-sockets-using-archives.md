@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Windows Sockets [MFC], with archives
 ms.assetid: 2e3c9bb2-7e7b-4f28-8dc5-6cb7a484edac
 ms.openlocfilehash: 4ea1e2911b156066360da09993fa7302db79f12b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57295260"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62305295"
 ---
 # <a name="windows-sockets-example-of-sockets-using-archives"></a>Windows ソケット:アーカイブを使用するソケットの例
 
@@ -21,7 +21,7 @@ ms.locfileid: "57295260"
 
 [!code-cpp[NVC_MFCSimpleSocket#1](../mfc/codesnippet/cpp/windows-sockets-example-of-sockets-using-archives_1.cpp)]
 
-この例に関する最も重要な点は、その構造が似て、MFC の`Serialize`関数。 `PacketSerialize`メンバー関数から成る、**場合**ステートメントを**他**句。 2 つ、関数が受け取った[CArchive](../mfc/reference/carchive-class.md)パラメーターとして参照: *arData*と*arAck*。 場合、 *arData* (送信) を格納するためにアーカイブ オブジェクトが設定されて、**場合**分岐が実行されます。 場合*arData*設定されている (受信) を読み込むため、この関数では、を受け取ります。**他**分岐します。 MFC におけるシリアル化の詳細については、[シリアル化](../mfc/how-to-make-a-type-safe-collection.md)を参照してください。
+この例に関する最も重要な点は、その構造が似て、MFC の`Serialize`関数。 `PacketSerialize`メンバー関数から成る、**場合**ステートメントを**他**句。 2 つ、関数が受け取った[CArchive](../mfc/reference/carchive-class.md)パラメーターとして参照: *arData*と*arAck*。 場合、 *arData* (送信) を格納するためにアーカイブ オブジェクトが設定されて、**場合**分岐が実行されます。 場合*arData*設定されている (受信) を読み込むため、この関数では、を受け取ります。**他**分岐します。 MFC におけるシリアル化の詳細については、次を参照してください。[シリアル化](../mfc/how-to-make-a-type-safe-collection.md)します。
 
 > [!NOTE]
 >  *ArAck*アーカイブ オブジェクトの反対と見なされます*arData*します。 場合*arData*を送信するは*arAck*を受け取ると、その逆は true です。
@@ -47,11 +47,11 @@ ms.locfileid: "57295260"
 
 詳細については、Windows ソケット仕様を参照してください: **htonl**、 **htons**、 **ntohl**、 **ntohs**します。 また、詳細については、次のように表示します。
 
-- [Windows ソケット:ソケット クラスから派生します。](../mfc/windows-sockets-deriving-from-socket-classes.md)
+- [Windows ソケット: ソケット クラスからの派生](../mfc/windows-sockets-deriving-from-socket-classes.md)
 
-- [Windows ソケット:アーカイブ付きソケットのしくみ](../mfc/windows-sockets-how-sockets-with-archives-work.md)
+- [Windows ソケット: アーカイブ付きソケットの動作](../mfc/windows-sockets-how-sockets-with-archives-work.md)
 
-- [Windows ソケット:バック グラウンド](../mfc/windows-sockets-background.md)
+- [Windows ソケット: 予備知識](../mfc/windows-sockets-background.md)
 
 ## <a name="see-also"></a>関連項目
 
