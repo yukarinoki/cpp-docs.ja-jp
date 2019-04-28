@@ -7,11 +7,11 @@ helpviewer_keywords:
 - hosting Windows Forms control [C++]
 ms.assetid: 0434a9d7-8b14-48e6-ad69-9ba9a684677a
 ms.openlocfilehash: 4c4ee8c8b4570b598ba20b3bd5e1cf4c706ee885
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740782"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62222950"
 ---
 # <a name="hosting-a-windows-form-user-control-as-an-mfc-dialog-box"></a>MFC ダイアログ ボックスとしての Windows フォーム ユーザー コントロールのホスト
 
@@ -19,7 +19,7 @@ MFC は、テンプレート クラスを提供します。 [CWinFormsDialog](..
 
 プロセスを`CWinFormsDialog`ユーザー コントロールをホストするために使用が記載されているに似ています。 [MFC ダイアログ ボックスでは、Windows フォーム ユーザー コントロールをホストしている](../dotnet/hosting-a-windows-form-user-control-in-an-mfc-dialog-box.md)します。 ただし、`CWinFormsDialog` は、ユーザー コントロールの初期化およびホストを管理するため、手動でプログラムを作成する必要はありません。
 
-Windows フォームと MFC を示すサンプル アプリケーションの場合、[MFC と Windows フォーム統合](http://www.microsoft.com/downloads/details.aspx?FamilyID=987021bc-e575-4fe3-baa9-15aa50b0f599&displaylang=en)を参照してください。
+Windows フォームと MFC を示すサンプル アプリケーションの場合、次を参照してください。 [MFC と Windows フォーム統合](http://www.microsoft.com/downloads/details.aspx?FamilyID=987021bc-e575-4fe3-baa9-15aa50b0f599&displaylang=en)します。
 
 ### <a name="to-create-the-mfc-host-application"></a>MFC ホスト アプリケーションを作成するには
 
@@ -43,8 +43,7 @@ Windows フォームと MFC を示すサンプル アプリケーションの場
 
 1. stdafx.h の既存の `#include <afxwinforms.h>` ステートメントの最後に `#include` を追加します。
 
-1. 
-  `CDialog` をサブクラスとして持つ新しいクラスを追加します。
+1. `CDialog` をサブクラスとして持つ新しいクラスを追加します。
 
    プロジェクト名を右クリックし、`CDialog` をサブクラスとして持つ (CHostForWinForm という名前の) MFC クラスを追加します。 ダイアログ ボックスのリソースを使用する必要はありません、ために、リソース ID を削除することができます (選択**リソース ビュー**、展開、**ダイアログ**フォルダーおよび delete`IDD_HOSTFORWINFORM`リソース。  次に、コード内のこの ID への参照を削除します。
 

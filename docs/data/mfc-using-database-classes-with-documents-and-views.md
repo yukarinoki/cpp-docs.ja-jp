@@ -15,11 +15,11 @@ helpviewer_keywords:
 - ODBC [C++], forms
 ms.assetid: 83979974-fc63-46ac-b162-e8403a572e2c
 ms.openlocfilehash: 78765d17b52889123f13c492699230834decba66
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59026293"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62182900"
 ---
 # <a name="mfc-using-database-classes-with-documents-and-views"></a>MFC:ドキュメントとビューを用いたデータベース クラス
 
@@ -63,7 +63,7 @@ ms.locfileid: "59026293"
 
 ##  <a name="_core_other_factors"></a> その他の要因
 
-フォーム ベースのアプリケーションが含まれていないフレームワークのドキュメントのシリアル化機構を使用して、削除、無効にする、または置換をする可能性があります、**新規**と**オープン**コマンド、 **ファイル**メニュー。 記事をご覧ください[シリアル化します。Vs のシリアル化します。データベースの入力/出力](../mfc/serialization-serialization-vs-database-input-output.md)します。
+フォーム ベースのアプリケーションが含まれていないフレームワークのドキュメントのシリアル化機構を使用して、削除、無効にする、または置換をする可能性があります、**新規**と**オープン**コマンド、 **ファイル**メニュー。 記事をご覧ください[シリアル化します。シリアル化とデータベースの入力/出力](../mfc/serialization-serialization-vs-database-input-output.md)します。
 
 することがありますもフレームワークがサポートする多くのユーザー インターフェイス可能性を使用します。 たとえば、複数を使用できます`CRecordView`複数ドキュメント インターフェイス (MDI) 子ウィンドウは、という具合分割ウィンドウ内のオブジェクトが異なる複数のレコード セットを開きます。
 

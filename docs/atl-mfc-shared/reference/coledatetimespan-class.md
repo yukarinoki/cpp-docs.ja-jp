@@ -27,11 +27,11 @@ helpviewer_keywords:
 - COleDateTimeSpan class
 ms.assetid: 7441526d-a30a-4019-8fb3-3fee6f897cbe
 ms.openlocfilehash: b68a984488f37326f3b0c1249a5f17a3eb76548b
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58565650"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62198201"
 ---
 # <a name="coledatetimespan-class"></a>COleDateTimeSpan クラス
 
@@ -401,7 +401,7 @@ enum DateTimeSpanStatus{
 
 - このオブジェクトの状態が明示的に設定を使用して無効に`SetStatus`します。
 
-無効な状態を設定することがありますのある操作の詳細については、[COleDateTimeSpan::operator +、-](../../atl-mfc-shared/reference/coledatetime-class.md#operator_add_-)と[COleDateTimeSpan::operator + =、-=](../../atl-mfc-shared/reference/coledatetime-class.md#operator_add_eq_-_eq)を参照してください。
+無効な状態を設定することがありますのある操作の詳細については、次を参照してください。 [COleDateTimeSpan::operator +、-](../../atl-mfc-shared/reference/coledatetime-class.md#operator_add_-)と[COleDateTimeSpan::operator + =、-=](../../atl-mfc-shared/reference/coledatetime-class.md#operator_add_eq_-_eq)します。
 
 境界の詳細については`COleDateTimeSpan`、値は、記事をご覧ください。[日付と時刻。オートメーションのサポート](../../atl-mfc-shared/date-and-time-automation-support.md)します。
 
@@ -598,7 +598,7 @@ enum DateTimeSpanStatus{
 
 - このオブジェクトの状態が明示的に設定を使用して無効に[SetStatus](#setstatus)します。
 
-無効な状態を設定することがありますのある操作の詳細については、[COleDateTimeSpan::operator +、-](../../atl-mfc-shared/reference/coledatetime-class.md#operator_add_-)と[COleDateTimeSpan::operator + =、-=](../../atl-mfc-shared/reference/coledatetime-class.md#operator_add_eq_-_eq)を参照してください。
+無効な状態を設定することがありますのある操作の詳細については、次を参照してください。 [COleDateTimeSpan::operator +、-](../../atl-mfc-shared/reference/coledatetime-class.md#operator_add_-)と[COleDateTimeSpan::operator + =、-=](../../atl-mfc-shared/reference/coledatetime-class.md#operator_add_eq_-_eq)します。
 
 > [!CAUTION]
 >  このデータ メンバーは、高度なプログラミングに適しています。 インライン メンバー関数を使用する必要があります[GetStatus](#getstatus)と[SetStatus](#setstatus)します。 参照してください`SetStatus`の他の注意に関するこのデータ メンバーを明示的に設定します。

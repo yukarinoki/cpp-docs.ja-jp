@@ -8,18 +8,18 @@ helpviewer_keywords:
 - projects [C++], converting to intermediate language
 ms.assetid: 855f9e3c-4f09-4bfe-8eab-a45f68292be9
 ms.openlocfilehash: 93eff646fb582e25ad70549afc714c5321e56079
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328585"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62209244"
 ---
 # <a name="converting-projects-from-mixed-mode-to-pure-intermediate-language"></a>混在モードから純粋な中間言語へのプロジェクトの変換
 
 すべてのビジュアルの C++ CLR プロジェクトは、既定では、C ランタイム ライブラリにリンクします。 その結果、ネイティブ コードと共通言語ランタイム (マネージ コード) を対象とするコードを結合するために、これらのプロジェクトは、混合モード アプリケーションとして分類されます。 コンパイル時に、中間言語 (IL) とも呼ばれる Microsoft intermediate language (MSIL) にコンパイルされます。
 
 > [!IMPORTANT]
-> Visual Studio 2015 で非推奨とされ、Visual Studio 2017 の作成をサポートできなく **/clr: 純粋な**または **/clr:safe** CLR アプリケーションのコード。 純粋なまたは安全なアセンブリを必要とする場合は、アプリケーションを C# に変換するをお勧めします。
+> Visual Studio 2015 で非推奨とされ、Visual Studio 2017 の作成をサポートできなく **/clr: 純粋な**または **/clr:safe** CLR アプリケーションのコード。 純粋なまたは安全なアセンブリを必要とする場合は、アプリケーションを c# に変換するをお勧めします。
 
 以前のバージョンをサポートする Visual C コンパイラ ツールセットを使用している場合 **/clr: 純粋な**または **/clr:safe**コードを純粋 MSIL に変換するこの手順を使用することができます。
 

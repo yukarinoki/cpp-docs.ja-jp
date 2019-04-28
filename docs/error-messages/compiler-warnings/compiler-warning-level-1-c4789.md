@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4789
 ms.assetid: 5800c301-5afb-4af0-85c1-ceb54d775234
 ms.openlocfilehash: 36a5032098c5caabb1b050833e487fd58679a782
-ms.sourcegitcommit: 6e4dd21759caaed262a7255735cf8d6e8fb9f4d7
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58476854"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62187232"
 ---
 # <a name="compiler-warning-level-1-c4789"></a>コンパイラの警告 (レベル 1) C4789
 
@@ -42,7 +42,7 @@ Visual C では、決して実行されるコード パスに対してこの警�
 #pragma warning( pop )
 ```
 
-この手法では、その特定のコード ブロックの警告を生成すると Visual C が保持されます。 `#pragma warning(push)` は、`#pragma warning(disable: 4789)` によって変更される前に、既存の状態を維持します。 `#pragma warning(pop)` はプッシュされた状態を復元し、`#pragma warning(disable:4789)` の効果を削除します。 C++ プリプロセッサ ディレクティブの詳細については`#pragma`を参照してください[警告](../../preprocessor/warning.md)と[プラグマ ディレクティブと _ _pragma キーワード](../../preprocessor/pragma-directives-and-the-pragma-keyword.md)します。
+この手法では、その特定のコード ブロックの警告を生成すると Visual C が保持されます。 `#pragma warning(push)` は、`#pragma warning(disable: 4789)` によって変更される前に、既存の状態を維持します。 `#pragma warning(pop)` はプッシュされた状態を復元し、`#pragma warning(disable:4789)` の効果を削除します。 詳細については、C++プリプロセッサ ディレクティブ`#pragma`を参照してください[警告](../../preprocessor/warning.md)と[プラグマ ディレクティブと _ _pragma キーワード](../../preprocessor/pragma-directives-and-the-pragma-keyword.md)します。
 
 ## <a name="example"></a>例
 

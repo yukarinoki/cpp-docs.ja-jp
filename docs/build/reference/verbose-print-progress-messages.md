@@ -14,11 +14,11 @@ helpviewer_keywords:
 - VERBOSE linker option
 ms.assetid: 9c347d98-4c37-4724-a39e-0983934693ab
 ms.openlocfilehash: 7aed1e17034b40ffdad4da4136fc5a64361b3d77
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57809146"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62317303"
 ---
 # <a name="verbose-print-progress-messages"></a>/VERBOSE (進行状況メッセージの出力)
 
@@ -42,7 +42,7 @@ ms.locfileid: "57809146"
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. 展開、**リンカー**フォルダー。
 
@@ -56,5 +56,5 @@ ms.locfileid: "57809146"
 
 ## <a name="see-also"></a>関連項目
 
-[MSVC リンカーの参照](linking.md)<br/>
+[MSVC リンカーのリファレンス](linking.md)<br/>
 [MSVC リンカー オプション](linker-options.md)

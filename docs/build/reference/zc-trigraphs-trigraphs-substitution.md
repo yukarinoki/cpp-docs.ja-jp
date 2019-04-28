@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Zc compiler options (C++)
 ms.assetid: e3d6058f-400d-4966-a3aa-800cfdf69cbf
 ms.openlocfilehash: 7a20123603030dfe719cd8990018f795df137981
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57814268"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62316003"
 ---
 # <a name="zctrigraphs-trigraphs-substitution"></a>/Zc:trigraphs (トライグラフの置換)
 
@@ -30,11 +30,11 @@ A*トライグラフ*の 2 つの連続する疑問符で構成されます ("??
 
 **/Zc:trigraphs**オプションは既定でオフですし、オプションでない場合の影響を受ける、 [/permissive -](permissive-standards-conformance.md)オプションを指定します。
 
-C と C++ のトライグラフとトライグラフは、使用する方法の例の一覧は、[トライグラフ](../../c-language/trigraphs.md)を参照してください。
+C と C++ のトライグラフとトライグラフは、使用する方法の例の一覧は、次を参照してください。[トライグラフ](../../c-language/trigraphs.md)します。
 
 ## <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. 選択、**構成プロパティ** > **C/C++** > **コマンドライン**プロパティ ページ。
 

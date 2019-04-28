@@ -9,11 +9,11 @@ helpviewer_keywords:
 - -Zc:implicitNoexcept
 ms.assetid: 71807652-6f9d-436b-899e-f52daa6f500b
 ms.openlocfilehash: ec2b8c8fb4c7730a78c4403606d6fa61c0ddc374
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57810017"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62315561"
 ---
 # <a name="zcimplicitnoexcept-implicit-exception-specifiers"></a>/Zc:implicitNoexcept (暗黙の例外指定子)
 
@@ -129,7 +129,7 @@ Visual C++ の準拠に関する問題について詳しくは、「 [Nonstandar
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. 選択、**構成プロパティ** > **C/C++** > **コマンドライン**プロパティ ページ。
 

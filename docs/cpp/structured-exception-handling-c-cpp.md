@@ -10,11 +10,11 @@ helpviewer_keywords:
 - C++ exception handling, exception handlers
 ms.assetid: dd3b647d-c269-43a8-aab9-ad1458712976
 ms.openlocfilehash: b77a218340399578e3c9428100476787e2e60b25
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534564"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62330571"
 ---
 # <a name="structured-exception-handling-cc"></a>Structured Exception Handling (C/C++)
 
@@ -25,10 +25,10 @@ ms.locfileid: "50534564"
 ## <a name="grammar"></a>文法
 
 *try-ステートメントを除く*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**_ _try** *複合ステートメント* **_ _except** **(** *式* **)** *複合ステートメント*
+&nbsp;&nbsp;&nbsp;&nbsp;**__try** *compound-statement* **__except** **(** *expression* **)** *compound-statement*
 
 *try-最後に、ステートメント*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**_ _try** *複合ステートメント* **_ _finally** *複合ステートメント*
+&nbsp;&nbsp;&nbsp;&nbsp;**__try** *compound-statement* **__finally** *compound-statement*
 
 ## <a name="remarks"></a>Remarks
 
@@ -36,7 +36,7 @@ Seh を使うと、実行が予期せず終了した場合にメモリ ブロッ
 
 ここで説明する try-except および try-finally ステートメントは C 言語に対する Microsoft の拡張機能です。 これらは、イベント後にプログラムの制御をアプリケーションが取得するようにし、そうでない場合は実行を終了させることによって SEH をサポートします。 SEH は C++ ソース ファイルと連携しますが、C++ 向けに設計されていません。 使用してコンパイルする C++ プログラムで SEH を使用するかどうか、 [/EHa または/EHsc](../build/reference/eh-exception-handling-model.md)オプションの場合は、ローカル オブジェクトと呼ばれますが、その他の実行動作が期待どおりではないデストラクター。 例については、この記事の後半の例を参照してください。 ほとんどの場合、SEH の代わりに勧め ISO 標準を使用する[C++ 例外処理](../cpp/try-throw-and-catch-statements-cpp.md)、Visual C もサポートします。 C++ 例外処理を使用すると、コードの移植性が高くなり、すべての種類の例外を処理できるようになります。
 
-SEH を使用する C# コードを使っている場合は、C++ 例外処理を使用する C++ コードと混在させることができます。 詳しくは、[C++ で構造化例外処理](../cpp/exception-handling-differences.md)を参照してください。
+SEH を使用する C# コードを使っている場合は、C++ 例外処理を使用する C++ コードと混在させることができます。 詳しくは、次を参照してください。 [C++ で構造化例外処理](../cpp/exception-handling-differences.md)します。
 
 SEH メカニズムには次の 2 つがあります。
 

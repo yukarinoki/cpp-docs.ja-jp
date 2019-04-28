@@ -9,11 +9,11 @@ helpviewer_keywords:
 - serialization [MFC], bypassing
 ms.assetid: fb596a18-4522-47e0-96e0-192732d24c12
 ms.openlocfilehash: 5c7dec140635b6d83bdae936d1bb0cef144f825b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57262143"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62308214"
 ---
 # <a name="serialization-in-mfc"></a>MFC におけるシリアル化
 
@@ -36,11 +36,11 @@ A`CArchive`オブジェクトは、オーバー ロードされた挿入を使�
 
 次の記事では、シリアル化に必要な 2 つの主要なタスクを説明します。
 
-- [シリアル化:シリアル化可能なクラスの作成](../mfc/serialization-making-a-serializable-class.md)
+- [シリアル化: シリアル化可能なクラスの作成](../mfc/serialization-making-a-serializable-class.md)
 
-- [シリアル化:オブジェクトのシリアル化](../mfc/serialization-serializing-an-object.md)
+- [シリアル化: オブジェクトのシリアル化](../mfc/serialization-serializing-an-object.md)
 
-この記事[シリアル化します。Vs のシリアル化します。データベースの入力/出力](../mfc/serialization-serialization-vs-database-input-output.md)とシリアル化は、データベース アプリケーションでの適切な入力/出力手法について説明します。
+この記事[シリアル化します。シリアル化とデータベースの入力/出力](../mfc/serialization-serialization-vs-database-input-output.md)とシリアル化は、データベース アプリケーションでの適切な入力/出力手法について説明します。
 
 ## <a name="see-also"></a>関連項目
 

@@ -10,11 +10,11 @@ f1_keywords:
 - VCCORLIB/Platform::StringReference::GetString
 ms.assetid: 2d09c7ec-0f16-458e-83ed-7225a1b9221e
 ms.openlocfilehash: 7b6ab42dc630ce7e0014534064e8f1ce6da00857
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750924"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62182991"
 ---
 # <a name="platformstringreference-class"></a>Platform::StringReference クラス
 
@@ -78,8 +78,7 @@ char16 UNICODE テキスト文字の配列。
 
 ## <a name="gethstring"></a>  Stringreference::gethstring メソッド
 
-
-  `__abi_HSTRING` として文字列の内容を返します。
+`__abi_HSTRING` として文字列の内容を返します。
 
 ### <a name="syntax"></a>構文
 
@@ -145,8 +144,7 @@ StringReference& operator=(const ::default::char16* __strArg);
 
 ### <a name="return-value"></a>戻り値
 
-
-  `StringReference` 型のオブジェクトへの参照。
+`StringReference` 型のオブジェクトへの参照。
 
 ### <a name="remarks"></a>Remarks
 
@@ -165,8 +163,7 @@ __declspec(no_release_return) __declspec(no_refcount)
 
 ### <a name="return-value"></a>戻り値
 
-
-  `Platform::String` 型のオブジェクトへのハンドル。
+`Platform::String` 型のオブジェクトへのハンドル。
 
 ## <a name="ctor"></a>  StringReference::StringReference コンストラクター
 
@@ -190,8 +187,7 @@ StringReference(const ::default::char16* __strArg, size_t __lenArg);
 新しいインスタンスを初期化するために使用される char16 値の配列へのポインター。
 
 *__lenArg*<br/>
-
-  `__strArg` にある要素の数。
+`__strArg` にある要素の数。
 
 ### <a name="remarks"></a>Remarks
 

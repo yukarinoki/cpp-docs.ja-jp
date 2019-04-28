@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4788
 ms.assetid: 47d75bda-f833-4bdd-93a0-a134df0cd303
 ms.openlocfilehash: c51a4409c2a3028823462539343654b5eac365d0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50598173"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62187206"
 ---
 # <a name="compiler-warning-level-1-c4788"></a>コンパイラの警告 (レベル 1) C4788
 
@@ -21,7 +21,7 @@ ms.locfileid: "50598173"
 
 作成された funclet 名が長すぎる場合、コンパイラはこれを切り捨てて C4788 を生成します。
 
-この警告を解決するには、元の関数名を短くします。 関数が C++ テンプレート関数またはメソッドの場合は、名前の一部に typedef を使用します。 例えば:
+この警告を解決するには、元の関数名を短くします。 関数が C++ テンプレート関数またはメソッドの場合は、名前の一部に typedef を使用します。 例:
 
 ```
 C1<x, y, z<T>>::C2<a,b,c>::f

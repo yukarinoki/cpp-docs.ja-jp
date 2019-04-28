@@ -9,11 +9,11 @@ helpviewer_keywords:
 - this pointer
 ms.assetid: 92e3256a-4ad9-4d46-8be1-d77fad90791f
 ms.openlocfilehash: c90a843ba978a98c1c61d9e096d62b85256ab0c4
-ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678328"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62330480"
 ---
 # <a name="this-pointer"></a>this ポインター
 
@@ -40,7 +40,7 @@ myDate.setMonth( 3 );
 setMonth( &myDate, 3 );
 ```
 
-オブジェクトのアドレスは、メンバー関数内から利用できる、**この**ポインター。 ほとんどの用途**この**が暗黙的に指定します。 明示的に使用する、不要な場合は法律、**この**クラスのメンバーを参照する場合。 例えば:
+オブジェクトのアドレスは、メンバー関数内から利用できる、**この**ポインター。 ほとんどの用途**この**が暗黙的に指定します。 明示的に使用する、不要な場合は法律、**この**クラスのメンバーを参照する場合。 例:
 
 ```cpp
 void Date::setMonth( int mn )

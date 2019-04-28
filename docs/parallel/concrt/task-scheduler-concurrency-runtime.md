@@ -17,18 +17,18 @@ helpviewer_keywords:
 - task scheduler [Concurrency Runtime], wait function
 ms.assetid: 9aba278c-e0c9-4ede-b7c6-fedf7a365d90
 ms.openlocfilehash: c5d37d320344d2ebf83be2c939f5a7372d4af306
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57286810"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62180057"
 ---
 # <a name="task-scheduler-concurrency-runtime"></a>タスク スケジューラ (同時実行ランタイム)
 
 ドキュメントのこの部分のトピックでは、コンカレンシー ランタイムのタスク スケジューラの重要な機能について説明します。 タスク スケジューラは、コンカレンシー ランタイムを使用する既存のコードのパフォーマンスを微調整するときに役立ちます。
 
 > [!IMPORTANT]
->  タスク スケジューラは、ユニバーサル Windows プラットフォーム (UWP) アプリからご利用いただけません。 詳細については、[を作成する非同期操作で C++ UWP アプリの](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)を参照してください。
+>  タスク スケジューラは、ユニバーサル Windows プラットフォーム (UWP) アプリからご利用いただけません。 詳細については、次を参照してください。[を作成する非同期操作で C++ UWP アプリの](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)します。
 >
 >  Visual Studio 2015 以降では、 [concurrency::task](../../parallel/concrt/reference/task-class.md)クラスおよび ppltasks.h で関連する型は、スケジューラとして Windows ThreadPool を使用します。 このトピックは、ppltasks.h で定義されている型には該当しなくなりました。 parallel_for などの並列アルゴリズムでは引き続き、既定のスケジューラとしてコンカレンシー ランタイムが使用されます。
 

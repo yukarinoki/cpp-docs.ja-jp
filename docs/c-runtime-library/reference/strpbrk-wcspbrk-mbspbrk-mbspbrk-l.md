@@ -45,11 +45,11 @@ helpviewer_keywords:
 - mbspbrk_l function
 ms.assetid: 80b504f7-a167-4dde-97ad-4ae3000dc810
 ms.openlocfilehash: 059b0659a8088783c6d169288de486b41a6e8d82
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468966"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62209568"
 ---
 # <a name="strpbrk-wcspbrk-mbspbrk-mbspbrkl"></a>strpbrk、wcspbrk、_mbspbrk、_mbspbrk_l
 
@@ -139,9 +139,9 @@ NULL で終わる文字セット。
 
 `_mbspbrk` と `_mbscspn` は似ていますが、`_mbspbrk` は [size_t](../../c-runtime-library/standard-types.md) 型の値ではなくポインターを返す点が異なります。
 
-C では、これらの関数の実行、 **const**最初の引数のポインター。 C++ では、2 つのオーバーロードを使用できます。 ポインターを受け取るオーバー ロード**const**へのポインターを返します**const**; へのポインターを受け取る非バージョン**const**へのポインターを返す非**定数**. マクロ _CRT_CONST_CORRECT_OVERLOADS が定義されている場合は、両方の**const**と非-**const**これらの関数のバージョンを利用できます。 必要な以外の場合**const**両方の C++ オーバー ロードの動作は、シンボル _CONST_RETURN を定義します。
+C では、これらの関数の実行、 **const**最初の引数のポインター。 C++ では、2 つのオーバーロードを使用できます。 ポインターを受け取るオーバー ロード**const**へのポインターを返します**const**; へのポインターを受け取る非バージョン**const**へのポインターを返す非**定数**. マクロ _CRT_CONST_CORRECT_OVERLOADS が定義されている場合は、両方の**const**と非-**const**これらの関数のバージョンを利用できます。 必要な以外の場合**const**両方の動作C++オーバー ロードは、シンボル _CONST_RETURN を定義します。
 
-出力値は、ロケールの LC_CTYPE カテゴリの設定の設定の影響を受ける詳細については、[setlocale](setlocale-wsetlocale.md)を参照してください。 この関数のバージョン、 **_l**このロケールに依存する動作の現在のロケールのサフィックス使用; のバージョン、 **_l**サフィックスは、ロケール パラメーターを使用すると同じです代わりに渡されます。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+出力値は、ロケールの LC_CTYPE カテゴリの設定の設定の影響を受ける詳細については、次を参照してください。 [setlocale](setlocale-wsetlocale.md)します。 この関数のバージョン、 **_l**このロケールに依存する動作の現在のロケールのサフィックス使用; のバージョン、 **_l**サフィックスは、ロケール パラメーターを使用すると同じです代わりに渡されます。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 

@@ -15,11 +15,11 @@ helpviewer_keywords:
 - ICommandUI interface [MFC]
 ms.assetid: 134afe8d-dcdf-47ca-857a-a166a6b665dd
 ms.openlocfilehash: 31157ba2445a432af274650011b839fb3df9b3c2
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57268175"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62322057"
 ---
 # <a name="icommandui-interface"></a>ICommandUI インターフェイス
 
@@ -53,9 +53,9 @@ interface class ICommandUI
 
 方法の詳細については`ICommandUI`コマンド ルーティングのインターフェイスを使用してを参照してください[方法。コマンドの追加フォーム コントロールを Windows へのルーティング](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)します。
 
-Windows フォームの使用に関する詳細については、[MFC における Windows フォーム ユーザー コントロールを使用して](../../dotnet/using-a-windows-form-user-control-in-mfc.md)を参照してください。
+Windows フォームの使用に関する詳細については、次を参照してください。 [MFC における Windows フォーム ユーザー コントロールを使用して](../../dotnet/using-a-windows-form-user-control-in-mfc.md)します。
 
-MFC でのユーザー インターフェイスのコマンドを管理する方法の詳細については、[CCmdUI クラス](../../mfc/reference/ccmdui-class.md)を参照してください。
+MFC でのユーザー インターフェイスのコマンドを管理する方法の詳細については、次を参照してください。 [CCmdUI クラス](../../mfc/reference/ccmdui-class.md)します。
 
 ## <a name="check"></a> ICommandUI::Check
 

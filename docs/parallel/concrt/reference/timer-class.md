@@ -19,11 +19,11 @@ helpviewer_keywords:
 - timer class
 ms.assetid: 4f4dea51-de9f-40f9-93f5-dd724c567b49
 ms.openlocfilehash: e36441f53c9b53c9826ee92b2892142a522d7243
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298153"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62180122"
 ---
 # <a name="timer-class"></a>timer クラス
 
@@ -72,7 +72,7 @@ class timer : public Concurrency::details::_Timer, public source_block<single_li
 
 ## <a name="remarks"></a>Remarks
 
-詳細については、[非同期メッセージ ブロック](../../../parallel/concrt/asynchronous-message-blocks.md)を参照してください。
+詳細については、次を参照してください。[非同期メッセージ ブロック](../../../parallel/concrt/asynchronous-message-blocks.md)します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 

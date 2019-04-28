@@ -15,15 +15,15 @@ helpviewer_keywords:
 - user-defined macros
 ms.assetid: 13ffe3ea-1bc3-4bee-be5e-053a8a99cce4
 ms.openlocfilehash: 8a5d696c385c9c7a1c953bd28ea4da3c67369a2c
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57827811"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62319344"
 ---
 # <a name="c-project-property-page-reference"></a>C++ プロジェクト プロパティ ページの参照
 
-プロパティ ページを使用することで、Visual Studio プロジェクトの設定を指定できます。 Visual Studio プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開くには、**[プロジェクト]** メニューで **[プロパティ]** を選びます。 プロジェクトのプロパティの詳細については、[Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)を参照してください。
+プロパティ ページを使用することで、Visual Studio プロジェクトの設定を指定できます。 Visual Studio プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開くには、**[プロジェクト]** メニューで **[プロパティ]** を選びます。 プロジェクトのプロパティの詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 Windows 以外のプロジェクトのプロパティ ページを参照してください。 [Linux c プロパティ ページ リファレンス](../../linux/prop-pages-linux.md)します。
 
@@ -83,5 +83,5 @@ Windows 以外のプロジェクトのプロパティ ページを参照して�
 
 ## <a name="see-also"></a>関連項目
 
-[方法: 作成し、プロジェクトの依存関係の削除](/visualstudio/ide/how-to-create-and-remove-project-dependencies)<br>
+[方法: プロジェクトの依存関係を作成および削除する](/visualstudio/ide/how-to-create-and-remove-project-dependencies)<br>
 [方法: 構成を作成および編集する](/visualstudio/ide/how-to-create-and-edit-configurations)

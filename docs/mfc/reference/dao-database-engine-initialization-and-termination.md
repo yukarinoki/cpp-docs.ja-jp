@@ -8,11 +8,11 @@ helpviewer_keywords:
 - DAO (Data Access Objects), initialization
 ms.assetid: a7edf31c-e7c2-4f3e-aada-63c3e48781da
 ms.openlocfilehash: 8ad0c1df2f5b6a7b1b48d2db119b04e4b3234f10
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57297636"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62323217"
 ---
 # <a name="dao-database-engine-initialization-and-termination"></a>DAO データベース エンジンの初期化と終了
 
@@ -61,7 +61,7 @@ void AfxDaoTerm();
 
 レギュラー MFC Dll を呼び出す`AfxDaoTerm`する前に、`ExitInstance`関数が、すべての MFC DAO オブジェクトが破棄された後にします。
 
-関連情報については、[テクニカル ノート 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md)を参照してください。
+関連情報については、次を参照してください。[テクニカル ノート 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md)します。
 
 ### <a name="requirements"></a>必要条件
 

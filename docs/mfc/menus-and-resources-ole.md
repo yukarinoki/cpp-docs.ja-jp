@@ -19,11 +19,11 @@ helpviewer_keywords:
 - OLE menus and resources [MFC]
 ms.assetid: 52bfa086-7d3d-466f-94c7-c7061f3bdb3a
 ms.openlocfilehash: 4e8f8c7fa8e24349a741b99822f13d5473373e17
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57268526"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62225468"
 ---
 # <a name="menus-and-resources-ole"></a>メニューとリソース (OLE)
 
@@ -43,7 +43,7 @@ OLE ビジュアル編集は追加の要件をメニューとコンテナー両�
 
 これらの問題があるためアプリケーション ウィザードで作成した OLE ドキュメント アプリケーションは最大 4 つの独立したメニューとアクセラレータ テーブル リソースを持つことができます。 これらは、次の理由で使用されます。
 
-|リソース名|使用|
+|リソース名|用途|
 |-------------------|---------|
 |IDR_MAINFRAME|ファイルが開いていない場合は、MDI アプリケーションで、または開いているファイルに関係なく SDI アプリケーションで使用されます。 これは、非 OLE アプリケーションで使用される標準のメニューです。|
 |Idr _\<プロジェクト > の種類|ファイルが開いている場合は、MDI アプリケーションで使用されます。 アプリケーションがスタンドアロンで実行されているときに使用されます。 これは、非 OLE アプリケーションで使用される標準のメニューです。|
@@ -54,11 +54,11 @@ OLE ビジュアル編集は追加の要件をメニューとコンテナー両�
 
 次の記事では、コンテナー、サーバー、およびインプレース アクティブ化を実装するために必要なマージ メニューに関連するトピックについて説明します。
 
-- [メニューとリソース:コンテナーの変更点](../mfc/menus-and-resources-container-additions.md)
+- [メニューとリソース: コンテナーの変更点](../mfc/menus-and-resources-container-additions.md)
 
-- [メニューとリソース:サーバーの変更点](../mfc/menus-and-resources-server-additions.md)
+- [メニューとリソース: サーバーの変更点](../mfc/menus-and-resources-server-additions.md)
 
-- [メニューとリソース:メニューのマージ](../mfc/menus-and-resources-menu-merging.md)
+- [メニューとリソース: メニューの結合](../mfc/menus-and-resources-menu-merging.md)
 
 ## <a name="see-also"></a>関連項目
 

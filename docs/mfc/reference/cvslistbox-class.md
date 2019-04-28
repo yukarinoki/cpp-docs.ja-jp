@@ -29,11 +29,11 @@ helpviewer_keywords:
 - CVSListBox [MFC], GetListHwnd
 ms.assetid: c79be7b4-46ed-4af8-a41e-68962782d8ef
 ms.openlocfilehash: 618f4f386db477dd301ada862ebd2094a6c6651f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301520"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62324447"
 ---
 # <a name="cvslistbox-class"></a>CVSListBox クラス
 
@@ -64,7 +64,7 @@ class CVSListBox : public CVSListBoxBase
 |[CVSListBox::GetItemData](#getitemdata)|編集可能なリスト コントロール項目に関連付けられているアプリケーションに固有の 32 ビット値を取得します。 (`CVSListBoxBase::GetItemData` をオーバーライドします)。|
 |[CVSListBox::GetItemText](#getitemtext)|編集可能なリスト コントロール項目のテキストを取得します。 (`CVSListBoxBase::GetItemText` をオーバーライドします)。|
 |[CVSListBox::GetSelItem](#getselitem)|編集可能なリスト コントロールで現在選択されている項目の 0 から始まるインデックスを取得します。 (`CVSListBoxBase::GetSelItem` をオーバーライドします)。|
-|`CVSListBox::PreTranslateMessage`|ディスパッチされる前に、ウィンドウ メッセージを変換する、 [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)と[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows 関数。 詳細とメソッド構文は、[cwnd::pretranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)を参照してください。 (`CVSListBoxBase::PreTranslateMessage` をオーバーライドします)。|
+|`CVSListBox::PreTranslateMessage`|ディスパッチされる前に、ウィンドウ メッセージを変換する、 [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)と[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows 関数。 詳細とメソッド構文は、次を参照してください。 [cwnd::pretranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)します。 (`CVSListBoxBase::PreTranslateMessage` をオーバーライドします)。|
 |[CVSListBox::RemoveItem](#removeitem)|編集可能なリスト コントロールから項目を削除します。 (`CVSListBoxBase::RemoveItem` をオーバーライドします)。|
 |[CVSListBox::SelectItem](#selectitem)|編集可能なリスト文字列を選択します。 (`CVSListBoxBase::SelectItem` をオーバーライドします)。|
 |[CVSListBox::SetItemData](#setitemdata)|アプリケーション固有の 32 ビット値を編集可能なリスト コントロール項目に関連付けます。 (`CVSListBoxBase::SetItemData` をオーバーライドします)。|

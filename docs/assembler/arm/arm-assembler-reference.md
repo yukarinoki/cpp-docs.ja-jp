@@ -3,11 +3,11 @@ title: ARM アセンブラー リファレンス
 ms.date: 08/28/2017
 ms.assetid: f8a076cc-9627-4328-a34a-9c44f7a3aab1
 ms.openlocfilehash: 698bbae8e3ed48ff89c851baba380d7d9de7432a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50474192"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62167544"
 ---
 # <a name="arm-assembler-reference"></a>ARM アセンブラー リファレンス
 
@@ -15,7 +15,7 @@ ms.locfileid: "50474192"
 
 ## <a name="related-articles"></a>関連トピック
 
-|タイトル|説明|
+|Title|説明|
 |-----------|-----------------|
 |[ARM アセンブラーのコマンド ライン リファレンス](../../assembler/arm/arm-assembler-command-line-reference.md)|Armasm コマンド ライン オプションをについて説明します。|
 |[ARM アセンブラー診断メッセージ](../../assembler/arm/arm-assembler-diagnostic-messages.md)|一般的に見られる armasm 警告とエラー メッセージをについて説明します。|

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - dispatch map macros [MFC]
 ms.assetid: bef9d08b-ad35-4c3a-99d8-04150c7c04e2
 ms.openlocfilehash: 5ebedaa02a03bcc7802110977b96659dae45f174
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585082"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62322515"
 ---
 # <a name="dispatch-maps"></a>ディスパッチ マップ
 
@@ -46,7 +46,7 @@ DECLARE_DISPATCH_MAP()
 > [!NOTE]
 > DECLARE_DISPATCH_MAP 後にすべてのメンバーを宣言する場合は、新しいアクセスの種類を指定する必要があります (**パブリック**、**プライベート**、または**保護**) にします。
 
-アプリケーション ウィザードとコード ウィザードでは、オートメーション クラスの作成とディスパッチ マップの管理を支援します。 ディスパッチ マップの詳細については、[オートメーション サーバー](../../mfc/automation-servers.md)を参照してください。
+アプリケーション ウィザードとコード ウィザードでは、オートメーション クラスの作成とディスパッチ マップの管理を支援します。 ディスパッチ マップの詳細については、次を参照してください。[オートメーション サーバー](../../mfc/automation-servers.md)します。
 
 ### <a name="example"></a>例
 
@@ -206,7 +206,7 @@ DISP_PROPERTY(
 *pszName*<br/>
 プロパティの外部名。
 
-*メンバー名*<br/>
+*memberName*<br/>
 プロパティが格納されているメンバー変数の名前。
 
 *vtPropType*<br/>
@@ -261,7 +261,7 @@ DISP_PROPERTY_EX(
 *memberGet*<br/>
 プロパティを取得するために使用するメンバー関数の名前。
 
-*メンバー セット*<br/>
+*memberSet*<br/>
 プロパティを設定するために使用するメンバー関数の名前。
 
 *vtPropType*<br/>
@@ -298,7 +298,7 @@ DISP_PROPERTY_NOTIFY(
 *szExternalName*<br/>
 プロパティの外部名。
 
-*メンバー名*<br/>
+*memberName*<br/>
 プロパティが格納されているメンバー変数の名前。
 
 *pfnAfterSet*<br/>

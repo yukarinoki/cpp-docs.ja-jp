@@ -9,17 +9,17 @@ helpviewer_keywords:
 - C program compiling [C++]
 ms.assetid: 7e74cc2d-54b1-49de-b7ad-d3ae6b39ab8d
 ms.openlocfilehash: 54f5810e60cdaada6a99651a732570c88ea883ce
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57822224"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62314183"
 ---
 # <a name="walkthrough-compile-a-c-program-on-the-command-line"></a>チュートリアル: コマンドラインでの C プログラムをコンパイルします。
 
 Visual C には、完全な Windows デスクトップ アプリケーション、モバイル アプリは、基本的なコンソール プログラムから作成するすべてのものを使用できる C コンパイラが含まれています。
 
-このチュートリアルは、basic、「こんにちは, World」を作成する方法を示します-エディターでテキストを使用して C プログラムをスタイル設定し、それをコマンドラインでコンパイルします。 場合は、コマンドラインで C で作業する場合ではなくを参照してください。[チュートリアル。コマンドラインでネイティブ C++ プログラムのコンパイル](walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)します。 コマンドラインを使用する代わりに、Visual Studio IDE を再試行してくださいを参照してくださいしたい場合[チュートリアル。プロジェクトとソリューション (C++)](../ide/walkthrough-working-with-projects-and-solutions-cpp.md)または[C++ デスクトップ開発用 Visual Studio IDE を使用して](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)します。
+このチュートリアルは、basic、「こんにちは, World」を作成する方法を示します-エディターでテキストを使用して C プログラムをスタイル設定し、それをコマンドラインでコンパイルします。 場合は、コマンドラインで C で作業する場合ではなくを参照してください。[チュートリアル。コマンド ラインでのネイティブ C++ プログラムのコンパイル](walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)」を参照してください。 コマンドラインを使用する代わりに、Visual Studio IDE を再試行してくださいを参照してくださいしたい場合[チュートリアル。プロジェクトとソリューション (C++)](../ide/walkthrough-working-with-projects-and-solutions-cpp.md)または[C++ デスクトップ開発用 Visual Studio IDE を使用して](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)します。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
@@ -32,7 +32,7 @@ Visual Studio のバージョンの Visual Studio の Build Tools は、のみ�
 C または C++ プログラムを作成するには、コマンドラインで、前に、ツールがインストールされているし、コマンドラインからアクセスできることを確認する必要があります。 Visual C には、コマンド ライン ツール、ヘッダー、および使用するライブラリを検索する環境の複雑な要件があります。 **普通のコマンド プロンプト ウィンドウで、Visual C を使用することはできません**準備なし。 必要があります、*開発者コマンド プロンプト*ウィンドウで、これは通常のコマンド プロンプト ウィンドウを持つすべての必要な環境変数を設定します。 さいわい、Visual C では、コマンド ライン ビルドを設定する環境の開発者コマンド プロンプトを起動するためのショートカットをインストールします。 残念ながら、開発者コマンド プロンプトのショートカットとされている名前は、ほぼすべてのバージョンの Visual C とに異なるバージョンの Windows で異なる。 最初のチュートリアル タスクを使用する適切なショートカットを検索します。
 
 > [!NOTE]
-> 開発者コマンド プロンプトのショートカットは、コンパイラおよびツール、および必要なヘッダーとライブラリによって正しいパスを自動的に設定します。 これらの値の一部は、ビルド構成ごとに異なります。 必要がありますこれらの環境値自分で設定した場合は、ショートカットのいずれかを使用しないでください。 詳細については、[コマンド ライン ビルドのパスと環境変数を設定する](setting-the-path-and-environment-variables-for-command-line-builds.md)を参照してください。 ビルド環境は複雑なため、開発者コマンド プロンプト ショートカットを使用して、独自に構築する代わりを強くお勧めします。
+> 開発者コマンド プロンプトのショートカットは、コンパイラおよびツール、および必要なヘッダーとライブラリによって正しいパスを自動的に設定します。 これらの値の一部は、ビルド構成ごとに異なります。 必要がありますこれらの環境値自分で設定した場合は、ショートカットのいずれかを使用しないでください。 詳細については、次を参照してください。[コマンド ライン ビルドのパスと環境変数を設定する](setting-the-path-and-environment-variables-for-command-line-builds.md)します。 ビルド環境は複雑なため、開発者コマンド プロンプト ショートカットを使用して、独自に構築する代わりを強くお勧めします。
 
 ## <a name="open-a-developer-command-prompt"></a>開発者コマンド プロンプトを開きます
 
@@ -57,7 +57,7 @@ C または C++ プログラムを作成するには、コマンドラインで�
    > [!NOTE]
    > 「'Cl' は、内部または外部コマンド、操作可能なプログラムまたはバッチ ファイルとしては認識されません"など、エラーが発生した場合エラー C1034 またはエラー LNK1104 を実行すると、 **cl**コマンドを使用するか、開発者コマンド プロンプトを使用しない、またはVisual C のインストールに問題があります。 続行するには、この問題を修正する必要があります。
 
-   開発者コマンド プロンプトのショートカットを見つけられない場合、または入力すると、エラー メッセージが表示された場合`cl`、Visual C インストール問題がある可能性があります。 Visual Studio 2017 を使用している場合は、再インストールしてください。、 **C++ によるデスクトップ開発**Visual Studio インストーラーのワークロード。 詳細については、[Visual Studio で C++ のインストール サポート](vscpp-step-0-installation.md)を参照してください。 または、再インストール、 [for Visual Studio Build Tools](https://go.microsoft.com/fwlink/p/?linkid=875721)します。 を接続しない次のセクションにはこれまでです。 インストールして、Visual Studio のトラブルシューティングの詳細については、[Visual Studio のインストール](/visualstudio/install/install-visual-studio)を参照してください。
+   開発者コマンド プロンプトのショートカットを見つけられない場合、または入力すると、エラー メッセージが表示された場合`cl`、Visual C インストール問題がある可能性があります。 Visual Studio 2017 を使用している場合は、再インストールしてください。、 **C++ によるデスクトップ開発**Visual Studio インストーラーのワークロード。 詳細については、次を参照してください。 [Visual Studio で C++ のインストール サポート](vscpp-step-0-installation.md)します。 または、再インストール、 [for Visual Studio Build Tools](https://go.microsoft.com/fwlink/p/?linkid=875721)します。 を接続しない次のセクションにはこれまでです。 インストールして、Visual Studio のトラブルシューティングの詳細については、次を参照してください。 [Visual Studio のインストール](/visualstudio/install/install-visual-studio)します。
 
    > [!NOTE]
    > によって、コンピューターとシステムのセキュリティ構成の Windows のバージョンを右クリックすると、開発者コマンド プロンプト ショートカットのショートカット メニューを開き、選択し、必要があります**管理者として実行**に正常にビルドして、このチュートリアルで作成するプログラムを実行します。
@@ -150,13 +150,13 @@ C または C++ プログラムを作成するには、コマンドラインで�
 
 `cl /W4 file1.c file2.c file3.c /link /out:program1.exe`
 
-コンパイラ (cl.exe) はその他の多くのオプションをビルド、最適化、デバッグ、適用し、コードを分析することができます。 クイック一覧は、次のように入力します。`cl /?`開発者コマンド プロンプトでします。 コンパイル、リンクを別々 にし、およびより複雑なビルド シナリオでリンカー オプションの適用もできます。 コンパイラとリンカー オプション、使用状況の詳細については、[c/c++ ビルドのリファレンス](reference/c-cpp-building-reference.md)を参照してください。
+コンパイラ (cl.exe) はその他の多くのオプションをビルド、最適化、デバッグ、適用し、コードを分析することができます。 クイック一覧は、次のように入力します。`cl /?`開発者コマンド プロンプトでします。 コンパイル、リンクを別々 にし、およびより複雑なビルド シナリオでリンカー オプションの適用もできます。 コンパイラとリンカー オプション、使用状況の詳細については、次を参照してください。 [c/c++ ビルドのリファレンス](reference/c-cpp-building-reference.md)します。
 
-構成して、コマンドラインでより複雑なプロジェクトをビルドする NMAKE やメイクファイル、MSBuild とプロジェクト ファイルを使用できます。 これらのツールの使用に関する詳細については、[NMAKE リファレンス](reference/nmake-reference.md)と[MSBuild](msbuild-visual-cpp.md)を参照してください。
+構成して、コマンドラインでより複雑なプロジェクトをビルドする NMAKE やメイクファイル、MSBuild とプロジェクト ファイルを使用できます。 これらのツールの使用に関する詳細については、次を参照してください。 [NMAKE リファレンス](reference/nmake-reference.md)と[MSBuild](msbuild-visual-cpp.md)します。
 
 C および C++ 言語は似ていますが、同じではありません。 MSVC コンパイラでは、単純なルールを使用して、コードをコンパイルするときに使用する言語を決定します。 既定では、MSVC コンパイラは C ソース コード、.c で終わるすべてのファイルと C++ ソース コードとして .cpp で終わるすべてのファイルを扱います。 C 非依存のファイル名拡張子としてすべてのファイルを処理するコンパイラが使用して、 [/Tc](reference/tc-tp-tc-tp-specify-source-file-type.md)コンパイラ オプション。
 
-C++ の Visual C コンパイラは、ISO C99 標準と互換性が厳密に準拠していないです。 ほとんどの場合、移植可能な C コードはコンパイルし、想定どおりに実行します。 Visual C では、ISO c11 変更のほとんどをサポートしていません。 MSVC コンパイラでは、特定のライブラリの関数と POSIX 関数名は非推奨します。 関数がサポートされますが、優先名が変更されました。 詳細については、[CRT のセキュリティ機能](../c-runtime-library/security-features-in-the-crt.md)と[コンパイラの警告 (レベル 3) C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)を参照してください。
+C++ の Visual C コンパイラは、ISO C99 標準と互換性が厳密に準拠していないです。 ほとんどの場合、移植可能な C コードはコンパイルし、想定どおりに実行します。 Visual C では、ISO c11 変更のほとんどをサポートしていません。 MSVC コンパイラでは、特定のライブラリの関数と POSIX 関数名は非推奨します。 関数がサポートされますが、優先名が変更されました。 詳細については、次を参照してください。 [CRT のセキュリティ機能](../c-runtime-library/security-features-in-the-crt.md)と[コンパイラの警告 (レベル 3) C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)します。
 
 ## <a name="see-also"></a>関連項目
 

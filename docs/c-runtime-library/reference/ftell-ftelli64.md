@@ -28,11 +28,11 @@ helpviewer_keywords:
 - file pointers [C++]
 ms.assetid: 40149cd8-65f2-42ff-b70c-68e3e918cdd7
 ms.openlocfilehash: cc76ad0776ae82637b95d32cdc6254d3c40da5b5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660526"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62332789"
 ---
 # <a name="ftell-ftelli64"></a>ftell、_ftelli64
 
@@ -51,7 +51,7 @@ __int64 _ftelli64(
 
 ### <a name="parameters"></a>パラメーター
 
-*ストリーム*<br/>
+*stream*<br/>
 ターゲット**ファイル**構造体。
 
 ## <a name="return-value"></a>戻り値
@@ -68,7 +68,7 @@ __int64 _ftelli64(
 
 テキスト モードでは、Ctrl + Z は入力時に EOF (end-of-file) 文字として解釈されます。 ファイルを読み取り/書き込み、開いた**fopen**と関連するすべてのルーチンは、ファイルの末尾に CTRL + Z 確認し、可能であれば削除します。 これはの組み合わせを使用して、 **ftell**と[fseek](fseek-fseeki64.md)または **_ftelli64**と[_fseeki64](fseek-fseeki64.md)で終わるファイル内で移動するには、CTRL + Z が生じる**ftell**または **_ftelli64**ファイルの末尾近くが正しく動作しません。
 
-この関数は実行中に呼び出し元スレッドをロックするため、スレッド セーフです。 ロックしないバージョンでは、**_ftell_nolock**を参照してください。
+この関数は実行中に呼び出し元スレッドをロックするため、スレッド セーフです。 ロックしないバージョンでは、次を参照してください。 **_ftell_nolock**します。
 
 ## <a name="requirements"></a>必要条件
 

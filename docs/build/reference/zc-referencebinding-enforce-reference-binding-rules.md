@@ -12,11 +12,11 @@ helpviewer_keywords:
 - Zc compiler options (C++)
 ms.assetid: 0c6cfaac-9c2a-41a3-aa94-64ca8ef261fc
 ms.openlocfilehash: 9dfe8f5b4713d9567f6e98af6685c552fb51160e
-ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57822159"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62316107"
 ---
 # <a name="zcreferencebinding-enforce-reference-binding-rules"></a>/Zc: referencebinding (参照のバインディング ルールの適用)
 
@@ -59,7 +59,7 @@ Visual C++ の準拠に関する問題について詳しくは、「 [Nonstandar
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. 選択、**構成プロパティ** > **C/C++** > **コマンドライン**プロパティ ページ。
 
@@ -68,5 +68,5 @@ Visual C++ の準拠に関する問題について詳しくは、「 [Nonstandar
 ## <a name="see-also"></a>関連項目
 
 [MSVC コンパイラ オプション](compiler-options.md)<br/>
-[MSVC コンパイラ コマンドラインの構文](compiler-command-line-syntax.md)<br/>
+[MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)<br/>
 [/Zc (準拠)](zc-conformance.md)<br/>

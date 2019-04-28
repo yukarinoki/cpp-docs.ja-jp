@@ -9,11 +9,11 @@ helpviewer_keywords:
 - MDI [MFC], vs. SDI
 ms.assetid: bb7239d9-4759-4f63-bfff-44a04b48c067
 ms.openlocfilehash: 725249e5a71e8ee097c641e5972e3cc8bb0e3e33
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57284152"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62308535"
 ---
 # <a name="sdi-and-mdi"></a>SDI と MDI
 
@@ -24,7 +24,7 @@ SDI アプリケーションでは、一度に 1 つだけ開いているドキ�
 > [!NOTE]
 >  Windows 95 以降、アプリケーションは通常、SDI のため、オペレーティング システムは、「ドキュメント中心の」ビューを採用しています。
 
-詳細については、[ドキュメント、ビュー、およびフレームワーク](../mfc/documents-views-and-the-framework.md)を参照してください。
+詳細については、次を参照してください。[ドキュメント、ビュー、およびフレームワーク](../mfc/documents-views-and-the-framework.md)します。
 
 ## <a name="see-also"></a>関連項目
 

@@ -17,11 +17,11 @@ helpviewer_keywords:
 - CEvent [MFC], Unlock
 ms.assetid: df676042-ce27-4702-800a-e73ff4f44395
 ms.openlocfilehash: d7731c87c6d6b0ebdec9a0c72c24b04334aa0662
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57300272"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62206044"
 ---
 # <a name="cevent-class"></a>CEvent クラス
 
@@ -107,8 +107,7 @@ TRUE の場合、スレッド、`CMultilock`または`CSingleLock`オブジェ�
 TRUE の場合は、イベント オブジェクトは、手動イベント、それ以外の場合、イベント オブジェクトは、自動のイベントを指定します。
 
 *lpszName*<br/>
-
-  `CEvent` オブジェクトの名前。 プロセスの境界を越えてオブジェクトを使用する場合を指定する必要があります。 名前が既存のイベントに一致する場合、コンス トラクターは新しい`CEvent`その名前のイベントを参照するオブジェクト。 名前には、イベントではない既存の同期オブジェクトが一致すると、構築は失敗します。 NULL の場合、名前が null になります。
+`CEvent` オブジェクトの名前。 プロセスの境界を越えてオブジェクトを使用する場合を指定する必要があります。 名前が既存のイベントに一致する場合、コンス トラクターは新しい`CEvent`その名前のイベントを参照するオブジェクト。 名前には、イベントではない既存の同期オブジェクトが一致すると、構築は失敗します。 NULL の場合、名前が null になります。
 
 *lpsaAttribute*<br/>
 イベント オブジェクトのセキュリティ属性。 この構造体の詳細については、次を参照してください。 [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) Windows SDK に含まれています。
@@ -140,7 +139,7 @@ BOOL PulseEvent();
 
 スレッドが待機しているないか、すぐに解放する`PulseEvent`するイベントの状態を非シグナル状態に設定し、返します。
 
-`PulseEvent` 基になる Win32 を使用して`PulseEvent`関数は、一時的に削除できる待機状態からカーネル モードの非同期プロシージャ呼び出しで。 そのため、`PulseEvent`の信頼性が低いと、新しいアプリケーションでは使用されません。 詳細については、、 [PulseEvent 関数](/windows/desktop/api/winbase/nf-winbase-pulseevent)を参照してください。
+`PulseEvent` 基になる Win32 を使用して`PulseEvent`関数は、一時的に削除できる待機状態からカーネル モードの非同期プロシージャ呼び出しで。 そのため、`PulseEvent`の信頼性が低いと、新しいアプリケーションでは使用されません。 詳細については、次を参照してください。、 [PulseEvent 関数](/windows/desktop/api/winbase/nf-winbase-pulseevent)します。
 
 ##  <a name="resetevent"></a>  CEvent::ResetEvent
 

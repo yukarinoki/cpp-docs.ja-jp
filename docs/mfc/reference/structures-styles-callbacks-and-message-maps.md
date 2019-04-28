@@ -10,11 +10,11 @@ helpviewer_keywords:
 - structures, MFC
 ms.assetid: 27566602-7d84-4089-880c-8e90fb04fa56
 ms.openlocfilehash: a5f0be66cdcb5c4a37d16b1e83cbc40cf023df32
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58780198"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62309981"
 ---
 # <a name="structures-styles-callbacks-and-message-maps"></a>構造体、スタイル、コールバック関数とメッセージ マップ
 
@@ -36,7 +36,7 @@ MFC ライブラリに表示されているコールバック関数へのリン�
 
 ## <a name="related-sections"></a>関連項目
 
-[クラス ライブラリの概要](../../mfc/class-library-overview.md)<br/>
+[.NET クラス ライブラリの概要](../../mfc/class-library-overview.md)<br/>
 MFC ライブラリのクラスをカテゴリ別に一覧表示します。
 
 [MFC のサンプル](../../overview/visual-cpp-samples.md)<br/>

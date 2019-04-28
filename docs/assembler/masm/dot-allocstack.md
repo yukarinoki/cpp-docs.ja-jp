@@ -7,11 +7,11 @@ helpviewer_keywords:
 - .ALLOCSTACK directive
 ms.assetid: 9801594b-7ac2-4df2-a49d-07d9dd9af99e
 ms.openlocfilehash: b92db3d03bb5c45e67473cd4085f2369698f6b42
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50661384"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62185654"
 ---
 # <a name="allocstack"></a>.ALLOCSTACK
 
@@ -29,7 +29,7 @@ MASM は最も効率的なエンコーディングを指定されたサイズを
 
 `size`オペランドは 8 の倍数である必要があります。
 
-詳細については、[x64 用 MASM (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md)を参照してください。
+詳細については、次を参照してください。 [x64 用 MASM (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md)します。
 
 ## <a name="sample"></a>サンプル
 

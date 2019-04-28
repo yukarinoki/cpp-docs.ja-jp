@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4571
 ms.assetid: 07aa17bd-b15c-4266-824c-57cc445e8edd
 ms.openlocfilehash: 92164bf297a44871897b6c6150eb54f8c5ccf3cc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50431058"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62220456"
 ---
 # <a name="compiler-warning-level-4-c4571"></a>コンパイラの警告 (レベル 4) C4571
 
@@ -29,7 +29,7 @@ C4571 を解決するには、次の方法のいずれかで
 
 - 構造化例外をキャッチ、catch (...) ブロックされないようにするには、catch (...) ブロックを使用する場合は、C4571 を有効にしないでください。  構造化例外処理キーワードを使用して構造化例外をキャッチすることもできます (**_ _try**、 **_ _except**、および **_ _finally**)。  ただし、コンパイル時に **/EHs**デストラクターは SEH 例外が発生したときではなく、C++ 例外がスローされたときにのみ呼び出すことです。
 
-- 特定の C++ 例外の catch ブロックと catch (...) ブロックを置き換えるし、構造化例外処理に関する C++ の例外処理を必要に応じて、追加 (**_ _try**、 **_ _except**、および **__finally**)。  参照してください[構造化例外処理 (C/C++)](../../cpp/structured-exception-handling-c-cpp.md)詳細についてはします。
+- Catch (...) ブロックを特定の catch ブロックに置き換えますC++例外、必要に応じて、構造化例外処理の周囲に追加し、C++例外処理 (**_ _try**、 **_ _except**と **_ _finally**)。  参照してください[構造化例外処理 (C/C++)](../../cpp/structured-exception-handling-c-cpp.md)詳細についてはします。
 
 参照してください[/EH (例外処理モデル)](../../build/reference/eh-exception-handling-model.md)詳細についてはします。
 

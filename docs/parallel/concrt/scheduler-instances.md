@@ -5,11 +5,11 @@ helpviewer_keywords:
 - scheduler instances
 ms.assetid: 4819365f-ef99-49cc-963e-50a2a35a8d6b
 ms.openlocfilehash: 19bd871857dcef6aaef153798388c0272239fa1f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301299"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62180168"
 ---
 # <a name="scheduler-instances"></a>スケジューラ インスタンス
 
@@ -52,7 +52,7 @@ ms.locfileid: "57301299"
 
 - [:Create](reference/scheduler-class.md#create)メソッドを作成、`Scheduler`オブジェクトを特定のポリシーを使用しますが、現在のコンテキストは関連付けできません。
 
-同じスケジューラを共有するすべての同時実行タスクにより、ランタイムが既定のスケジューラを作成することができます。 によって提供される機能では、通常、[並列パターン ライブラリ](../../parallel/concrt/parallel-patterns-library-ppl.md)(PPL)、または[Asynchronous Agents Library](../../parallel/concrt/asynchronous-agents-library.md)並列処理を実行するために使用します。 そのため、そのポリシーまたは有効期間を制御するスケジューラを直接操作する必要はありません。 PPL またはエージェント ライブラリを使用する場合、ランタイムは、各コンテキストの現在のスケジューラになりますが存在しない場合、既定のスケジューラを作成します。 スケジューラを作成し、ランタイムでは、そのスケジューラを使用して、タスクをスケジュールし、現在のスケジューラとして設定します。 特定のスケジューリング ポリシーを必要とする場合にのみ、追加のスケジューラ インスタンスを作成します。 スケジューラに関連付けられているポリシーの詳細については、[スケジューラ ポリシー](../../parallel/concrt/scheduler-policies.md)を参照してください。
+同じスケジューラを共有するすべての同時実行タスクにより、ランタイムが既定のスケジューラを作成することができます。 によって提供される機能では、通常、[並列パターン ライブラリ](../../parallel/concrt/parallel-patterns-library-ppl.md)(PPL)、または[Asynchronous Agents Library](../../parallel/concrt/asynchronous-agents-library.md)並列処理を実行するために使用します。 そのため、そのポリシーまたは有効期間を制御するスケジューラを直接操作する必要はありません。 PPL またはエージェント ライブラリを使用する場合、ランタイムは、各コンテキストの現在のスケジューラになりますが存在しない場合、既定のスケジューラを作成します。 スケジューラを作成し、ランタイムでは、そのスケジューラを使用して、タスクをスケジュールし、現在のスケジューラとして設定します。 特定のスケジューリング ポリシーを必要とする場合にのみ、追加のスケジューラ インスタンスを作成します。 スケジューラに関連付けられているポリシーの詳細については、次を参照してください。[スケジューラ ポリシー](../../parallel/concrt/scheduler-policies.md)します。
 
 [[トップ](#top)]
 
@@ -93,7 +93,7 @@ ms.locfileid: "57301299"
 
 |メソッド|説明|
 |------------|-----------------|
-|[作成します。](reference/currentscheduler-class.md#create)|作成、`Scheduler`オブジェクトを指定したポリシーを使用し、現在のコンテキストに関連付けます。|
+|[作成](reference/currentscheduler-class.md#create)|作成、`Scheduler`オブジェクトを指定したポリシーを使用し、現在のコンテキストに関連付けます。|
 |[Get](reference/currentscheduler-class.md#get)|ポインターを取得、`Scheduler`現在のコンテキストに関連付けられているオブジェクト。 このメソッドの参照カウントをインクリメントしていない、`Scheduler`オブジェクト。|
 |[Detach](reference/currentscheduler-class.md#detach)|現在のコンテキストから現在のスケジューラをデタッチし、現在のスケジューラとして 1 つ前を設定します。|
 |[RegisterShutdownEvent](reference/currentscheduler-class.md#registershutdownevent)|現在のスケジューラが破棄されるときに、ランタイムが設定されるイベントを登録します。|
@@ -105,7 +105,7 @@ ms.locfileid: "57301299"
 
 |メソッド|説明|
 |------------|-----------------|
-|[作成します。](reference/scheduler-class.md#create)|作成、`Scheduler`オブジェクトを指定したポリシーを使用します。|
+|[作成](reference/scheduler-class.md#create)|作成、`Scheduler`オブジェクトを指定したポリシーを使用します。|
 |[Attach](reference/scheduler-class.md#attach)|関連付けます、`Scheduler`と共に、現在のコンテキスト オブジェクト。|
 |[参照](reference/scheduler-class.md#reference)|参照カウンターをインクリメント、`Scheduler`オブジェクト。|
 |[Release](reference/scheduler-class.md#release)|デクリメントの参照カウンター、`Scheduler`オブジェクト。|

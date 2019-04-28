@@ -21,11 +21,11 @@ helpviewer_keywords:
 - _countof macro
 ms.assetid: 86198767-f7e5-4beb-898d-3cbbf60350a3
 ms.openlocfilehash: 60b4350d6cf14a545de67de0bdaee70ee2099006
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536137"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335348"
 ---
 # <a name="countof-macro"></a>_countof マクロ
 
@@ -50,7 +50,7 @@ ms.locfileid: "50536137"
 
 **_countof**関数のようなプリプロセッサ マクロとして実装されます。 C++ のバージョンには、静的に宣言された配列の代わりに、ポインターが渡された場合は、コンパイル時に検出するために余分なテンプレート メカニズムがあります。
 
-いることを確認*配列*は実際には配列、ポインターではなくです。 C では、 **_countof**場合に、誤った結果を生成*配列*のポインターです。 C++ では、 **_countof**場合のコンパイルに失敗した*配列*のポインターです。  関数にパラメーターとして渡される配列*ポインターに減衰*、つまり、関数内で使用することはできません **_countof**配列の範囲を確認します。
+いることを確認*配列*は実際には配列、ポインターではなくです。 C では、 **_countof**場合に、誤った結果を生成*配列*のポインターです。 C++、 **_Countof**場合のコンパイルに失敗した*配列*のポインターです。  関数にパラメーターとして渡される配列*ポインターに減衰*、つまり、関数内で使用することはできません **_countof**配列の範囲を確認します。
 
 ## <a name="requirements"></a>必要条件
 

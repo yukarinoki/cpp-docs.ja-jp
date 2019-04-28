@@ -31,11 +31,11 @@ helpviewer_keywords:
 - catanl function
 ms.assetid: 8415ed9c-7909-4d08-b532-4630bafdc7e8
 ms.openlocfilehash: 99acdccca1b83be2fa667b5e5ef6e5181dc1ba81
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50455225"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335517"
 ---
 # <a name="catan-catanf-catanl"></a>catan、catanf、catanl
 
@@ -65,7 +65,7 @@ _Lcomplex catan( _Lcomplex z );  // C++ only
 
 ## <a name="remarks"></a>Remarks
 
-オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **catan**を受け取って返す **_Fcomplex**と **_Lcomplex**値。 C プログラムで**catan**は、 **_Dcomplex**値。
+C++では、オーバー ロードのオーバー ロードを呼び出すことができます**catan**を受け取って返す **_Fcomplex**と **_Lcomplex**値。 C プログラムで**catan**は、 **_Dcomplex**値。
 
 ## <a name="requirements"></a>必要条件
 

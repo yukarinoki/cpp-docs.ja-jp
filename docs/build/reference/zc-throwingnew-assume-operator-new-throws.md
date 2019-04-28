@@ -12,11 +12,11 @@ helpviewer_keywords:
 - Zc compiler options (C++)
 ms.assetid: 20ff0101-9677-4d83-8c7b-8ec9ca49f04f
 ms.openlocfilehash: c8c7b4e7246cc3bb1b3a73cde4f6830eb7178dd2
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57813514"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62315990"
 ---
 # <a name="zcthrowingnew-assume-operator-new-throws"></a>/Zc:throwingNew (演算子の新しいスロー)
 
@@ -44,7 +44,7 @@ Visual C++ の準拠に関する問題について詳しくは、「 [Nonstandar
 
 ## <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. **構成**ドロップダウン メニューで、**すべて構成**します。
 
@@ -55,7 +55,7 @@ Visual C++ の準拠に関する問題について詳しくは、「 [Nonstandar
 ## <a name="see-also"></a>関連項目
 
 [MSVC コンパイラ オプション](compiler-options.md)<br/>
-[MSVC コンパイラ コマンドラインの構文](compiler-command-line-syntax.md)<br/>
+[MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)<br/>
 [/Zc (準拠)](zc-conformance.md)<br/>
 [noexcept (C++)](../../cpp/noexcept-cpp.md)<br/>
 [例外の仕様 (スロー) (C++)](../../cpp/exception-specifications-throw-cpp.md)<br/>

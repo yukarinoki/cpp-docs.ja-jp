@@ -131,11 +131,11 @@ helpviewer_keywords:
 - CMFCRibbonCategory [MFC], SetTabColor
 ms.assetid: 99ba25b6-d060-4fdd-bfab-3c46c22981bb
 ms.openlocfilehash: 14ce057c141f22c14361bafd55fce3ccd345d4dd
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57279472"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62237415"
 ---
 # <a name="cmfcribboncategory-class"></a>CMFCRibbonCategory クラス
 
@@ -918,7 +918,7 @@ CMFCRibbonPanel* HighlightPanel(
 
 ### <a name="remarks"></a>Remarks
 
-リボン パネルを強調表示の詳細については、[CMFCRibbonPanel::Highlight](../../mfc/reference/cmfcribbonpanel-class.md#highlight)を参照してください。
+リボン パネルを強調表示の詳細については、次を参照してください。 [CMFCRibbonPanel::Highlight](../../mfc/reference/cmfcribbonpanel-class.md#highlight)します。
 
 ##  <a name="hittest"></a>  CMFCRibbonCategory::HitTest
 

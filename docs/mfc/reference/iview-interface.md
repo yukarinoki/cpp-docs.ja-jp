@@ -13,11 +13,11 @@ helpviewer_keywords:
 - views [MFC], classes
 ms.assetid: 9321f299-486e-4551-bee9-d2c4a7b91548
 ms.openlocfilehash: 22e08a70ff4cc742406a1489899c0ba1df7eb664
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57267824"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62321950"
 ---
 # <a name="iview-interface"></a>IView インターフェイス
 
@@ -45,7 +45,7 @@ interface class IView
 
 `IView` ような[CView](../../mfc/reference/cview-class.md)が管理されたビューとコントロールでのみ使用されます。
 
-Windows フォームの使用に関する詳細については、[MFC における Windows フォーム ユーザー コントロールを使用して](../../dotnet/using-a-windows-form-user-control-in-mfc.md)を参照してください。
+Windows フォームの使用に関する詳細については、次を参照してください。 [MFC における Windows フォーム ユーザー コントロールを使用して](../../dotnet/using-a-windows-form-user-control-in-mfc.md)します。
 
 ## <a name="requirements"></a>必要条件
 

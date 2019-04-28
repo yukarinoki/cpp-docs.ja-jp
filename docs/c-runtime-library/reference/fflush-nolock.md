@@ -26,11 +26,11 @@ helpviewer_keywords:
 - flushing
 ms.assetid: 5e33c4a1-b10c-4001-ad01-210757919291
 ms.openlocfilehash: 721098899525df02dc3b3d121cf894f8056fcb98
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464104"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62334298"
 ---
 # <a name="fflushnolock"></a>_fflush_nolock
 
@@ -46,7 +46,7 @@ int _fflush_nolock(
 
 ### <a name="parameters"></a>パラメーター
 
-*ストリーム*<br/>
+*stream*<br/>
 **FILE** 構造体へのポインター。
 
 ## <a name="return-value"></a>戻り値

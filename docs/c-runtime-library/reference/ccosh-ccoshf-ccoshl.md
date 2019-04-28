@@ -31,11 +31,11 @@ helpviewer_keywords:
 - ccoshl function
 ms.assetid: 79667449-4edf-4948-bf6b-720adf2b3f3b
 ms.openlocfilehash: c25441d4f25f9e77a0cb71d942e132f34c4c1f5a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50676838"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335556"
 ---
 # <a name="ccosh-ccoshf-ccoshl"></a>ccosh、ccoshf、ccoshl
 
@@ -72,7 +72,7 @@ _Lcomplex ccoshl(
 
 ## <a name="remarks"></a>Remarks
 
-オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **ccosh**を受け取って返す **_Fcomplex**と **_Lcomplex**値。 C プログラムで**ccosh**は、 **_Dcomplex**値。
+C++では、オーバー ロードのオーバー ロードを呼び出すことができます**ccosh**を受け取って返す **_Fcomplex**と **_Lcomplex**値。 C プログラムで**ccosh**は、 **_Dcomplex**値。
 
 ## <a name="requirements"></a>必要条件
 

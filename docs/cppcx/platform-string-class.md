@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::String
 ms.assetid: 72dd04a4-a694-40d3-b899-eaa0b503eab8
-ms.openlocfilehash: ac9ee843f5f11d4a42377b16ec77b266238fc461
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 0b8a29efc5b18432eabfeddc75af12737538281c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746189"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62330207"
 ---
 # <a name="platformstring-class"></a>Platform::String クラス
 
-テキストを表現するために使用される Unicode 文字のシーケンシャル コレクションを表します。 詳細と例については、[文字列](../cppcx/strings-c-cx.md)を参照してください。
+テキストを表現するために使用される Unicode 文字のシーケンシャル コレクションを表します。 詳細と例については、次を参照してください。[文字列](../cppcx/strings-c-cx.md)します。
 
 ## <a name="syntax"></a>構文
 
@@ -85,11 +85,11 @@ String クラスは、 [Platform::Object Class](../cppcx/platform-object-class.m
 
 |メンバー|説明|
 |------------|-----------------|
-|[String::operator = 演算子](#operator-equality)|指定された 2 つの String オブジェクトの値が同じかどうかを示します。|
+|[String::operator = 演算子](#operator-equality)|指定した 2 つの文字列オブジェクトが同じ値を持つかどうかを示します。|
 |[operator+ Operator](#operator-plus)|2 つの String オブジェクトを連結して新しい String オブジェクトを作成します。|
 |[String::operator > 演算子](#operator-greater-than)|1 つの String オブジェクトの値が、2 番目の String オブジェクトの値より大きいかどうかを示します。|
 |[String::operator > = 演算子](#operator-greater-than-or-equals)|1 つの String オブジェクトの値が、2 番目の String オブジェクトの値以上かどうかを示します。|
-|[String::operator! = 演算子](#operator-inequality)|指定された 2 つの String オブジェクトの値が異なるかどうかを示します。|
+|[String::operator! = 演算子](#operator-inequality)|指定した 2 つの文字列オブジェクトが異なる値を持つかどうかを示します。|
 |[String::operator < 演算子](#operator-less-than)|1 つの String オブジェクトの値が、2 番目の String オブジェクトの値より小さいかどうかを示します。|
 
 ### <a name="requirements"></a>必要条件
@@ -166,9 +166,7 @@ String^ Concat( String^ str1, String^ str2);
 
 `str1` と `str2` を連結した値を持つ新しい String^ オブジェクト。
 
-
-  `str1` が `null` で、`str2` がそうでない場合は、`str1` が返されます。 
-  `str2` が `null` で、`str1` がそうでない場合は、`str2` が返されます。 `str1` と `str2` の両方が `null` の場合は、空の文字列 (L"") が返されます。
+`str1` が `null` で、`str2` がそうでない場合は、`str1` が返されます。 `str2` が `null` で、`str1` がそうでない場合は、`str2` が返されます。 `str1` と `str2` の両方が `null` の場合は、空の文字列 (L"") が返されます。
 
 ## <a name="data"></a>  String::data メソッド
 
@@ -413,7 +411,7 @@ bool String::operator>=( String^ str1, String^ str2);
 
 ## <a name="operator-inequality"></a> String::operator! =
 
-示す 2 つかどうか指定`String`オブジェクトが異なる値を持ちます。
+指定した 2 つかどうかを示す`String`オブジェクトが異なる値を設定します。
 
 ### <a name="syntax"></a>構文
 
@@ -500,4 +498,4 @@ A`String`オブジェクトの値は、現在の文字列と同じです。
 
 ## <a name="see-also"></a>関連項目
 
-[Platform 名前空間](../cppcx/platform-namespace-c-cx.md)
+[プラットフォーム名前空間](../cppcx/platform-namespace-c-cx.md)

@@ -16,11 +16,11 @@ f1_keywords:
 - AFXLAYOUT/CMFCDynamicLayout::SetMinSize
 ms.assetid: c2df2976-f049-47fc-9cf0-abe3e01948bc
 ms.openlocfilehash: 40dedbe2737a79b7531b8acd47870ce7cb788604
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57288403"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62237591"
 ---
 # <a name="cmfcdynamiclayout-class"></a>CMFCDynamicLayout クラス
 
@@ -334,8 +334,7 @@ BOOL IsHorizontal() const
 
 ## <a name="return-value"></a>戻り値
 
-
-  `MoveSettings` オブジェクトが 0 以外の水平方向の移動を指定している場合は TRUE です。
+`MoveSettings` オブジェクトが 0 以外の水平方向の移動を指定している場合は TRUE です。
 
 ## <a name="cmfcdynamiclayoutmovesettingsisnone"></a>CMFCDynamicLayout::MoveSettings::IsNone
 
@@ -347,8 +346,7 @@ BOOL IsNone() const
 
 ## <a name="return-value"></a>戻り値
 
-
-  `MoveSettings` オブジェクトが移動なしを指定している場合は TRUE です。
+`MoveSettings` オブジェクトが移動なしを指定している場合は TRUE です。
 
 ## <a name="cmfcdynamiclayoutmovesettingsisvertical"></a>CMFCDynamicLayout::MoveSettings::IsVertical
 
@@ -360,8 +358,7 @@ BOOL IsVertical() const
 
 ## <a name="return-value"></a>戻り値
 
-
-  `MoveSettings` オブジェクトが 0 以外の垂直方向の移動を指定している場合は TRUE です。
+`MoveSettings` オブジェクトが 0 以外の垂直方向の移動を指定している場合は TRUE です。
 
 ##  <a name="movevertical"></a>  CMFCDynamicLayout::MoveVertical
 
@@ -476,8 +473,7 @@ BOOL IsHorizontal() const
 
 ## <a name="return-value"></a>戻り値
 
-
-  `SizeSettings` オブジェクトが、0 以外の水平方向のサイズ変更枠を指定している場合は TRUE です。
+`SizeSettings` オブジェクトが、0 以外の水平方向のサイズ変更枠を指定している場合は TRUE です。
 
 ## <a name="cmfcdynamiclayoutsizesettingsisnone"></a>CMFCDynamicLayout::SizeSettings::IsNone
 
@@ -489,8 +485,7 @@ BOOL IsNone() const
 
 ## <a name="return-value"></a>戻り値
 
-
-  `SizeSettings` オブジェクトがサイズ変更枠を指定しない場合は TRUE です。
+`SizeSettings` オブジェクトがサイズ変更枠を指定しない場合は TRUE です。
 
 ## <a name="cmfcdynamiclayoutsizesettingsisvertical"></a>CMFCDynamicLayout::SizeSettings::IsVertical
 
@@ -502,8 +497,7 @@ BOOL IsVertical() const
 
 ## <a name="return-value"></a>戻り値
 
-
-  `SizeSettings` オブジェクトが、0 以外の垂直方向のサイズ変更枠を指定している場合は TRUE です。
+`SizeSettings` オブジェクトが、0 以外の垂直方向のサイズ変更枠を指定している場合は TRUE です。
 
 ##  <a name="sizevertical"></a>  CMFCDynamicLayout::SizeVertical
 

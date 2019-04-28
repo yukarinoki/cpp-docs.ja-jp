@@ -11,11 +11,11 @@ helpviewer_keywords:
 - CWinFormsView [MFC], GetControl
 ms.assetid: d597e397-6529-469b-88f5-7f65a6b9e895
 ms.openlocfilehash: f4a5e6b88527dad8606092ccebd4899bba5181f6
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289339"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62323308"
 ---
 # <a name="cwinformsview-class"></a>CWinFormsView クラス
 
@@ -51,7 +51,7 @@ class CWinFormsView : public CView;
 
 MFC を使用して、 `CWinFormsView` MFC ビュー内での .NET Framework Windows フォーム コントロールをホストするクラス。 コントロールは、ネイティブ ビューの子であるし、MFC ビューの全体のクライアント領域を占有します。 結果は、`CFormView`ビューで、Windows フォーム デザイナーを利用し、実行時に豊富なフォーム ベースのビューを作成することができます。
 
-Windows フォームの使用に関する詳細については、[MFC における Windows フォーム ユーザー コントロールを使用して](../../dotnet/using-a-windows-form-user-control-in-mfc.md)を参照してください。
+Windows フォームの使用に関する詳細については、次を参照してください。 [MFC における Windows フォーム ユーザー コントロールを使用して](../../dotnet/using-a-windows-form-user-control-in-mfc.md)します。
 
 > [!NOTE]
 >  MFC Windows フォームの統合は、MFC と動的にリンクするプロジェクトでのみ機能 (プロジェクトの AFXDLL が定義されている場合)。
@@ -98,7 +98,7 @@ System::Windows::Forms::Control^ GetControl() const;
 
 ### <a name="remarks"></a>Remarks
 
-Windows フォームを使用する方法の例は、[MFC における Windows フォーム ユーザー コントロールを使用して](../../dotnet/using-a-windows-form-user-control-in-mfc.md)を参照してください。
+Windows フォームを使用する方法の例は、次を参照してください。 [MFC における Windows フォーム ユーザー コントロールを使用して](../../dotnet/using-a-windows-form-user-control-in-mfc.md)します。
 
 ##  <a name="operator_control"></a>  CWinFormsView::operator コントロール ^
 

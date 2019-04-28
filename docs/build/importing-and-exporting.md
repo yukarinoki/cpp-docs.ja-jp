@@ -9,11 +9,11 @@ helpviewer_keywords:
 - __declspec(dllimport) keyword [C++]
 ms.assetid: 7c44c2aa-2117-4cec-9615-a65bfd3f8f7b
 ms.openlocfilehash: 882010cd28c291e9f49ca0f7dd9d646c70130184
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57815828"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62188848"
 ---
 # <a name="importing-and-exporting"></a>インポートとエクスポート
 
@@ -31,7 +31,7 @@ ms.locfileid: "57815828"
 
 ## <a name="using-declspec"></a>_ _Declspec を使用します。
 
-C++ での visual **_declspec**と**方式**を置き換える、 **_ _export**キーワードの 16 ビット バージョンの Visual C で以前に使用します。
+VisualC++使用 **_declspec**と**方式**を置き換える、 **_ _export**ビジュアルC++.
 
 使用する必要はありません **_declspec**そうですが、正しくコンパイルするコードのより優れたコードを生成するコンパイラを使用します。 コンパイラはかどうか、関数が存在する DLL にか、DLL の境界を越える関数呼び出し内に存在するが通常の間接参照のレベルをスキップするコードを生成するために、コンパイラにより決定できるためより優れたコードを生成できません。 ただし、使用する必要があります **_declspec** DLL で使用される変数をインポートします。
 

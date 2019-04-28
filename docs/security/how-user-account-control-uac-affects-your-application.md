@@ -8,11 +8,11 @@ helpviewer_keywords:
 - User Account Control [C++]
 ms.assetid: 0d001870-253e-4989-b689-f78035953799
 ms.openlocfilehash: 3702462ec892025cfb4f24d9c91e6db705b1b9a5
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57751404"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62179256"
 ---
 # <a name="how-user-account-control-uac-affects-your-application"></a>ユーザー アカウント制御 (UAC: User Account Control) がアプリケーションに与える影響
 
@@ -28,7 +28,7 @@ UAC を無効にした状態で Windows Vista で Visual C++ プロジェクト�
 
 既定では、Visual C リンカーは、アプリケーションの実行レベルでのマニフェストに UAC フラグメントを組み込みます`asInvoker`します。 正しく実行するためにアプリケーションが管理特権を必要とする場合 (たとえば、アプリケーションがレジストリの HKLM ノードを変更する場合、または Windows ディレクトリなどのディスクの保護領域に書き込みを行う場合)、アプリケーションを変更する必要があります。
 
-最初のオプションは、実行レベルを変更するマニフェストの UAC フラグメントを変更するのには*requireAdministrator*します。 これにより、アプリケーションは実行前に管理資格情報を求めてユーザーにプロンプトを表示するようになります。 これを行う方法については、[/MANIFESTUAC (UAC 情報をマニフェスト)](../build/reference/manifestuac-embeds-uac-information-in-manifest.md)を参照してください。
+最初のオプションは、実行レベルを変更するマニフェストの UAC フラグメントを変更するのには*requireAdministrator*します。 これにより、アプリケーションは実行前に管理資格情報を求めてユーザーにプロンプトを表示するようになります。 これを行う方法については、次を参照してください。 [/MANIFESTUAC (UAC 情報をマニフェスト)](../build/reference/manifestuac-embeds-uac-information-in-manifest.md)します。
 
 2 番目は、`/MANIFESTUAC:NO` リンカー オプションを指定してマニフェストに UAC フラグメントを組み込まない方法です。 この場合、アプリケーションは仮想実行されます。 レジストリまたはファイル システムに変更を加えた場合、その変更はすべてアプリケーションの終了後に失われます。
 

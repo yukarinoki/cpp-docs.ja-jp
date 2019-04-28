@@ -8,11 +8,11 @@ helpviewer_keywords:
 - per-thread locale
 ms.assetid: d6fb159a-eaca-4130-a51a-f95d62f71485
 ms.openlocfilehash: c12a3fa1922db7a1ec0a7bcd43ddf09000d97961
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293603"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62213252"
 ---
 # <a name="multithreading-and-locales"></a>マルチスレッドとロケール
 
@@ -20,7 +20,7 @@ C ランタイム ライブラリと C++ 標準ライブラリの両方、プロ
 
 ## <a name="remarks"></a>Remarks
 
-使用してマルチ スレッド アプリケーションを作成すると、C ランタイム ライブラリ、`_beginthread`と`_beginthreadex`関数。 このトピックでは、これらの関数を使用して作成されたマルチ スレッド アプリケーションのみを説明します。 詳細については、[_beginthread、_beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md)を参照してください。
+使用してマルチ スレッド アプリケーションを作成すると、C ランタイム ライブラリ、`_beginthread`と`_beginthreadex`関数。 このトピックでは、これらの関数を使用して作成されたマルチ スレッド アプリケーションのみを説明します。 詳細については、次を参照してください。 [_beginthread、_beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md)します。
 
 C ランタイム ライブラリを使用してロケールを変更するには、使用、 [setlocale](../preprocessor/setlocale.md)関数。 以前のバージョンの Visual C では、この関数は常に、アプリケーション全体のロケールを変更していました。 これは、スレッドごとに、ロケールを設定するようになりました。 これを使用して、 [_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md)関数。 指定する[setlocale](../preprocessor/setlocale.md)のみ呼び出し、現在のスレッドのロケールを変更する必要があります`_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`そのスレッドでします。 逆に、呼び出す`_configthreadlocale(_DISABLE_PER_THREAD_LOCALE)`と、そのスレッドでは、グローバル ロケールを使用してすべての呼び出しに[setlocale](../preprocessor/setlocale.md)ことで、スレッドはスレッドごとのロケールを明示的に有効にしていないすべてのスレッドのロケールを変更します。
 

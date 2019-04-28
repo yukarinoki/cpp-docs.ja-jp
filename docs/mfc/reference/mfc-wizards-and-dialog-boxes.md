@@ -3,11 +3,11 @@ title: MFC ウィザードとダイアログ ボックス
 ms.date: 11/04/2016
 ms.assetid: 2fae0a2c-d147-4468-a547-f7b85df767a1
 ms.openlocfilehash: 4a82ee0b8eccde65aeffacb05695eed4b1f14cdc
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57267473"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62310189"
 ---
 # <a name="mfc-wizards-and-dialog-boxes"></a>MFC ウィザードとダイアログ ボックス
 
@@ -15,7 +15,7 @@ Microsoft Foundation Class (MFC) ウィザードでは、さまざまな種類�
 
 ## <a name="related-articles"></a>関連トピック
 
-|タイトル|説明|
+|Title|説明|
 |-----------|-----------------|
 |[MFC DLL プロジェクトの作成](../../mfc/reference/creating-an-mfc-dll-project.md)|MFC ベースで DLL を作成します。|
 |[MFC アプリケーションの作成](../../mfc/reference/creating-an-mfc-application.md)|MFC アプリケーションが生成されます。|

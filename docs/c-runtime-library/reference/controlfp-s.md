@@ -27,11 +27,11 @@ helpviewer_keywords:
 - _controlfp_s function
 ms.assetid: a51fc3f6-ab13-41f0-b227-6bf02d98e987
 ms.openlocfilehash: 0624cbfb4870ca87efebac01a8de682b588a4ca3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506679"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335382"
 ---
 # <a name="controlfps"></a>_controlfp_s
 
@@ -68,7 +68,7 @@ errno_t _controlfp_s(
 
 場合の値は、*マスク*が 0、 **_controlfp_s**浮動小数点制御ワードを取得し、取得した値を*currentControl*します。
 
-場合*マスク*が 0 以外の場合、制御ワードに新しい値が設定: ビットが設定のいずれか (つまり、1 に等しく) で*マスク*、対応するビット*新しい*コントロールを更新するために使用単語があります。 つまり、 *fpcntrl* = ((*fpcntrl* & ~*マスク*) &#124; (*newControl* & *マスク*))、 *fpcntrl*浮動小数点制御ワードです。 このシナリオで*currentControl*後の値に設定されている、変更の完了は、古い制御ワードのビット値ではありません。
+場合*マスク*が 0 以外の場合、制御ワードに新しい値が設定。いずれかのビットが設定されます (つまり、1 に等しく) で*マスク*、対応するビット*新しい*制御ワードの更新に使用します。 つまり、 *fpcntrl* = ((*fpcntrl* & ~*マスク*) &#124; (*newControl* & *マスク*))、 *fpcntrl*浮動小数点制御ワードです。 このシナリオで*currentControl*後の値に設定されている、変更の完了は、古い制御ワードのビット値ではありません。
 
 > [!NOTE]
 > 既定では、ランタイム ライブラリは、すべての浮動小数点例外をマスクします。

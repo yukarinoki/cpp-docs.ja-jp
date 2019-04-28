@@ -8,17 +8,17 @@ helpviewer_keywords:
 - message handling [MFC], reflected messages
 ms.assetid: 5a403528-58c5-46e7-90d5-4a77f0ab9b9c
 ms.openlocfilehash: 250d1a838787d1ace682c084bdceeb0e1e6d3c92
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278965"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62322996"
 ---
 # <a name="defining-a-message-handler-for-a-reflected-message"></a>リフレクション メッセージ用のメッセージ ハンドラーの定義
 
 新しい MFC コントロール クラスを作成すると、そのメッセージ ハンドラーを定義できます。 リフレクション メッセージ ハンドラーは、親によってメッセージの受信前に、独自のメッセージを処理するコントロール クラスを使用できます。 MFC を使用する[CWnd::SendMessage](../../mfc/reference/cwnd-class.md#sendmessage)コントロールから親ウィンドウにメッセージを送信する関数。
 
-(オーナー描画) を実行する親ウィンドウに依存するのではなくなどのことがこの機能により、自身を再描画するリスト ボックスを作成します。 反映されたメッセージの詳細については、[反映されたメッセージの処理](../../mfc/handling-reflected-messages.md)を参照してください。
+(オーナー描画) を実行する親ウィンドウに依存するのではなくなどのことがこの機能により、自身を再描画するリスト ボックスを作成します。 反映されたメッセージの詳細については、次を参照してください。[反映されたメッセージの処理](../../mfc/handling-reflected-messages.md)します。
 
 作成する、 [ActiveX コントロール](../../mfc/activex-controls-on-the-internet.md)、同じ機能を持つ ActiveX コントロールのプロジェクトを作成する必要があります。
 

@@ -12,11 +12,11 @@ helpviewer_keywords:
 - precompiled header files, use existing
 ms.assetid: 24f1bd0e-b624-4296-a17e-d4b53e374e1f
 ms.openlocfilehash: c0dcb045450d6e6eca31b8c76a92726e62400656
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57810121"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62316146"
 ---
 # <a name="yu-use-precompiled-header-file"></a>/Yu (プリコンパイル済みヘッダー ファイルの使用)
 
@@ -63,7 +63,7 @@ ms.locfileid: "57810121"
 
 1. 指定[/Yc (プリコンパイル済みヘッダー ファイルの作成)](yc-create-precompiled-header-file.md)プロジェクトで .cpp ファイルでします。
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. **[C/C++]** フォルダーをクリックします。
 
@@ -99,4 +99,4 @@ CL /YuMYAPP.H /FpMYPCH.pch PROG.CPP
 ## <a name="see-also"></a>関連項目
 
 [MSVC コンパイラ オプション](compiler-options.md)<br/>
-[MSVC コンパイラ コマンドラインの構文](compiler-command-line-syntax.md)
+[MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)

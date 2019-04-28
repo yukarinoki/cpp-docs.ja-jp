@@ -11,11 +11,11 @@ helpviewer_keywords:
 - generate function prototypes compiler option
 ms.assetid: c8df1b46-24ff-46f2-8356-e0a144b21dd2
 ms.openlocfilehash: 684174cf46e644c22e072e3fa60f75f9434c7e54
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816166"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62315899"
 ---
 # <a name="zg-generate-function-prototypes"></a>/Zg (関数プロトタイプの生成)
 
@@ -44,11 +44,11 @@ typedef struct MyStruct { int i; } T2;
 void f2(T2 * t) {}
 ```
 
-**/Zg**オプションは Visual Studio 2005 で非推奨とされました、Visual Studio 2015 で削除されました。 MSVC コンパイラには、サポート、C スタイルの古いコードが削除されました。 非推奨のコンパイラ オプションの一覧は、**非推奨とされた削除済みのコンパイラ オプション**で[Compiler Options Listed by Category](compiler-options-listed-by-category.md)を参照してください。
+**/Zg**オプションは Visual Studio 2005 で非推奨とされました、Visual Studio 2015 で削除されました。 MSVC コンパイラには、サポート、C スタイルの古いコードが削除されました。 非推奨のコンパイラ オプションの一覧は、次を参照してください。**非推奨とされた削除済みのコンパイラ オプション**で[Compiler Options Listed by Category](compiler-options-listed-by-category.md)します。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. **[C/C++]** フォルダーをクリックします。
 
@@ -63,4 +63,4 @@ void f2(T2 * t) {}
 ## <a name="see-also"></a>関連項目
 
 [MSVC コンパイラ オプション](compiler-options.md)<br/>
-[MSVC コンパイラ コマンドラインの構文](compiler-command-line-syntax.md)
+[MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)

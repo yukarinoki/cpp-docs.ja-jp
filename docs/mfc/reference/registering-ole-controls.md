@@ -8,11 +8,11 @@ helpviewer_keywords:
 - OLE controls [MFC], registering
 ms.assetid: 73c45b7f-7dbc-43f5-bd17-dd77c6acec72
 ms.openlocfilehash: 9c480696bdec3591f0509cbad04051a2b3af4070
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57262156"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62310137"
 ---
 # <a name="registering-ole-controls"></a>OLE コントロールの登録
 
@@ -137,7 +137,7 @@ OLE コントロールのツールバーまたはパレットを表すために�
 
 ### <a name="remarks"></a>Remarks
 
-これにより、OLE コントロールの対応するコンテナーで使用されるコントロール。 `AfxOleRegisterControlClass` コントロールの名前と、システム上の場所で、レジストリを更新しもレジストリにコントロールをサポートするスレッド処理モデルを設定します。 詳細については、[テクニカル ノート 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md)、"アパートメント モデルのスレッドで OLE コントロール"は、と[に関するプロセスとスレッド](/windows/desktop/ProcThread/about-processes-and-threads)Windows SDK にを参照してください。
+これにより、OLE コントロールの対応するコンテナーで使用されるコントロール。 `AfxOleRegisterControlClass` コントロールの名前と、システム上の場所で、レジストリを更新しもレジストリにコントロールをサポートするスレッド処理モデルを設定します。 詳細については、次を参照してください。[テクニカル ノート 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md)、"アパートメント モデルのスレッドで OLE コントロール"は、と[に関するプロセスとスレッド](/windows/desktop/ProcThread/about-processes-and-threads)Windows SDK にします。
 
 ### <a name="example"></a>例
 
@@ -190,7 +190,7 @@ BOOL AFXAPI AfxOleRegisterPropertyPageClass(
 
 ### <a name="remarks"></a>Remarks
 
-これにより、OLE コントロールの対応するコンテナーで使用されるプロパティ ページができます。 `AfxOleRegisterPropertyPageClass` プロパティ ページの名前と、システム上の場所のレジストリを更新しもレジストリにコントロールをサポートするスレッド処理モデルを設定します。 詳細については、[テクニカル ノート 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md)、"アパートメント モデルのスレッドで OLE コントロール"は、と[に関するプロセスとスレッド](/windows/desktop/ProcThread/about-processes-and-threads)Windows SDK にを参照してください。
+これにより、OLE コントロールの対応するコンテナーで使用されるプロパティ ページができます。 `AfxOleRegisterPropertyPageClass` プロパティ ページの名前と、システム上の場所のレジストリを更新しもレジストリにコントロールをサポートするスレッド処理モデルを設定します。 詳細については、次を参照してください。[テクニカル ノート 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md)、"アパートメント モデルのスレッドで OLE コントロール"は、と[に関するプロセスとスレッド](/windows/desktop/ProcThread/about-processes-and-threads)Windows SDK にします。
 
 ### <a name="requirements"></a>必要条件
 

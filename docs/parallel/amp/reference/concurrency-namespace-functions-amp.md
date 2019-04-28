@@ -14,11 +14,11 @@ f1_keywords:
 - amp/Concurrency::tile_static_memory_fence
 ms.assetid: 2bef0985-cb90-4ece-90b9-66529aec73c9
 ms.openlocfilehash: 7baae51480c273ca023856253af7963ac83d7c92
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57284841"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62180389"
 ---
 # <a name="concurrency-namespace-functions-amp"></a>Concurrency 名前空間関数 (AMP)
 
@@ -80,8 +80,7 @@ inline bool atomic_compare_exchange(
 比較される 2 番目の値が読み取られる位置。
 
 *value*<br/>
-
-  `_Dest` が `_Dest` と等しい場合、`_Expected_value` によって指定したメモリ位置に格納される値。
+`_Dest` が `_Dest` と等しい場合、`_Expected_value` によって指定したメモリ位置に格納される値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -454,7 +453,7 @@ void copy(
 
 ##  <a name="copy_async"></a>  copy_async
 
-C++ AMP オブジェクトをコピーし、返します、 [completion_future](completion-future-class.md)待機できるオブジェクト。 アクセラレータでコードを実行しているときにデータをコピーすることはできません。  この関数の一般的な形式は `copy(src, dest)` です。
+コピーをC++AMP オブジェクトを返します、 [completion_future](completion-future-class.md)待機できるオブジェクト。 アクセラレータでコードを実行しているときにデータをコピーすることはできません。  この関数の一般的な形式は `copy(src, dest)` です。
 
 ```
 template <typename value_type, int _Rank>
@@ -588,7 +587,7 @@ tile_barrier オブジェクト
 
 ##  <a name="parallel_for_each"></a>  parallel_for_each 関数 (C++ AMP)
 
-計算ドメインを越えて関数を実行します。 詳細については、[C++ AMP の概要](../../../parallel/amp/cpp-amp-overview.md)を参照してください。
+計算ドメインを越えて関数を実行します。 詳細については、次を参照してください。 [C++ AMP の概要](../../../parallel/amp/cpp-amp-overview.md)します。
 
 ```
 template <int _Rank, typename _Kernel_type>
@@ -645,16 +644,13 @@ void parallel_for_each(
 計算用のデータを含む `extent` オブジェクト。
 
 *_Dim0*<br/>
-
-  `tiled_extent` オブジェクトの次元。
+`tiled_extent` オブジェクトの次元。
 
 *_Dim1*<br/>
-
-  `tiled_extent` オブジェクトの次元。
+`tiled_extent` オブジェクトの次元。
 
 *_Dim2*<br/>
-
-  `tiled_extent` オブジェクトの次元。
+`tiled_extent` オブジェクトの次元。
 
 *_Kernel*<br/>
 型の引数を受け取るラムダまたは関数オブジェクトを"インデックス\<_Rank >"し、並列計算を実行します。

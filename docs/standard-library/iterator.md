@@ -8,11 +8,11 @@ helpviewer_keywords:
 - iterator header
 ms.assetid: c61a3962-f3ed-411a-b5a3-e8b3c2b500bd
 ms.openlocfilehash: 1b0d3282075246f3b217f0c8acac19ed8ece79cb
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520752"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62224091"
 ---
 # <a name="ltiteratorgt"></a>&lt;Iterator&gt;
 
@@ -40,7 +40,7 @@ ms.locfileid: "51520752"
 
 より多くの要件を持ち、より強力に要素にアクセスできる反復子が、要件の少ない反復子の代わりに使用される場合があります。 たとえば、前方反復子が呼び出された場合は、ランダム アクセス反復子が代わりに使用される可能性があります。
 
-Visual Studio では、C++ 標準ライブラリの反復子に、チェックを行う反復子とチェックを行わない反復子のさまざまなデバッグ モードの状況をサポートする拡張機能が追加されました。 詳細については、「[安全なライブラリ: C++ 標準ライブラリ](../standard-library/safe-libraries-cpp-standard-library.md)」をご覧ください。
+Visual Studio では、C++ 標準ライブラリの反復子に、チェックを行う反復子とチェックを行わない反復子のさまざまなデバッグ モードの状況をサポートする拡張機能が追加されました。 詳細については、次を参照してください。[安全なライブラリ。C++標準ライブラリ](../standard-library/safe-libraries-cpp-standard-library.md)します。
 
 ### <a name="functions"></a>関数
 

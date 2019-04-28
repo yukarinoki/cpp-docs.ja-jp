@@ -10,11 +10,11 @@ helpviewer_keywords:
 - COM interfaces, entry points
 ms.assetid: 9e7421dc-0731-4748-9e1b-90acbaf26d77
 ms.openlocfilehash: eb8fc425d6b9849f6367d9b207e5181652386be3
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58564737"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62207853"
 ---
 # <a name="com-interface-entry-points"></a>COM インターフェイスのエントリ ポイント
 
@@ -24,7 +24,7 @@ COM インターフェイスのメンバー関数は、使用、`METHOD_PROLOGUE
 
 [!code-cpp[NVC_MFCConnectionPoints#5](../mfc/codesnippet/cpp/com-interface-entry-points_1.cpp)]
 
-詳細については、[テクニカル ノート 38](../mfc/tn038-mfc-ole-iunknown-implementation.md) MFC/OLE で`IUnknown`実装を参照してください。
+詳細については、次を参照してください。[テクニカル ノート 38](../mfc/tn038-mfc-ole-iunknown-implementation.md) MFC/OLE で`IUnknown`実装します。
 
 `METHOD_PROLOGUE`としてマクロが定義されます。
 

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - CString objects [MFC], formatting and message boxes
 ms.assetid: d1068cf4-9cc5-4952-b9e7-d612c53cbc28
 ms.openlocfilehash: fee8ba89605e6425b511407dab62be1f32e94a9d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57272647"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62323792"
 ---
 # <a name="cstring-formatting-and-message-box-display"></a>CString の書式指定とメッセージ ボックスの表示
 
@@ -171,8 +171,7 @@ int AFXAPI AfxMessageBox(
 ### <a name="parameters"></a>パラメーター
 
 *lpszText*<br/>
-
-  `CString` オブジェクト、またはメッセージ ボックスに表示されるメッセージを含む null で終了する文字列をポイントします。
+`CString` オブジェクト、またはメッセージ ボックスに表示されるメッセージを含む null で終了する文字列をポイントします。
 
 *nType*<br/>
 メッセージ ボックスのスタイル。 任意の適用、[メッセージ ボックス スタイル](../../mfc/reference/styles-used-by-mfc.md#message-box-styles)をボックスにします。
@@ -209,7 +208,7 @@ int AFXAPI AfxMessageBox(
 
 これの最初のフォームには、関数の表示によって示されるテキスト文字列がオーバー ロードされた*lpszText*使用してメッセージ ボックス*nIDHelp*ヘルプ コンテキストを記述します。 ヘルプ コンテキストは、ユーザーがヘルプ キー (通常は F1 キー) を押したときに関連するヘルプ トピックにジャンプするために使用されます。
 
-関数の 2 番目の形式は文字列リソースを使用して ID を持つ*nIDPrompt*メッセージ ボックスに、メッセージを表示します。 値によって、関連するヘルプ ページが検出された*nIDHelp*します。 場合の既定値*nIDHelp*に使用される (-1) は、文字列リソース ID、 *nIDPrompt*、ヘルプ コンテキストを使用します。 ヘルプ コンテキストの定義の詳細については、[テクニカル ノート 28:](../../mfc/tn028-context-sensitive-help-support.md)を参照してください。
+関数の 2 番目の形式は文字列リソースを使用して ID を持つ*nIDPrompt*メッセージ ボックスに、メッセージを表示します。 値によって、関連するヘルプ ページが検出された*nIDHelp*します。 場合の既定値*nIDHelp*に使用される (-1) は、文字列リソース ID、 *nIDPrompt*、ヘルプ コンテキストを使用します。 ヘルプ コンテキストの定義の詳細については、次を参照してください。[テクニカル ノート 28:](../../mfc/tn028-context-sensitive-help-support.md)します。
 
 ### <a name="example"></a>例
 

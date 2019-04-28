@@ -167,11 +167,11 @@ helpviewer_keywords:
 - CDaoRecordset [MFC], m_strSort
 ms.assetid: 2322067f-1027-4662-a5d7-aa2fc7488630
 ms.openlocfilehash: 96118645aa656e97fcb93a0fd223045208ab03a3
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273895"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62206360"
 ---
 # <a name="cdaorecordset-class"></a>CDaoRecordset クラス
 
@@ -354,13 +354,13 @@ virtual void AddNew();
 
 - インデックスが指定されているタイプのレコード、並べ替え順序において適切な場所でレコードが返されます。 インデックスが指定されていない場合は、レコード セットの末尾に新しいレコードが返されます。
 
-レコードは、使用する前にカレント`AddNew`を最新の状態します。 現在、新しいレコードを作成して、レコード セットは、ブックマーク、呼び出しをサポートしている場合[SetBookmark](#setbookmark)を LastModified プロパティの設定の基になる DAO レコード セット オブジェクトで識別されるブックマーク。 これは、追加したレコード内のカウンター (自動インクリメント) フィールドの値を決定するために役立ちます。 詳細については、[GetLastModifiedBookmark](#getlastmodifiedbookmark)を参照してください。
+レコードは、使用する前にカレント`AddNew`を最新の状態します。 現在、新しいレコードを作成して、レコード セットは、ブックマーク、呼び出しをサポートしている場合[SetBookmark](#setbookmark)を LastModified プロパティの設定の基になる DAO レコード セット オブジェクトで識別されるブックマーク。 これは、追加したレコード内のカウンター (自動インクリメント) フィールドの値を決定するために役立ちます。 詳細については、次を参照してください。 [GetLastModifiedBookmark](#getlastmodifiedbookmark)します。
 
 データベースでは、トランザクションをサポートする場合は、`AddNew`トランザクションの一部を呼び出します。 トランザクションの詳細については、クラスを参照してください。 [CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md)します。 呼び出す必要がありますので注意[CDaoWorkspace::BeginTrans](../../mfc/reference/cdaoworkspace-class.md#begintrans)呼び出す前に`AddNew`します。
 
 呼び出すことはできません`AddNew`レコード セットを持つ[オープン](#open)メンバー関数が呼び出されていません。 A`CDaoException`を呼び出す場合にスローされる`AddNew`のレコード セットに追加することはできません。 呼び出すことによって、レコード セットは更新可能かどうかを判断する[CanAppend](#canappend)します。
 
-フレームワークでは、フィールド データ メンバーに DAO レコード フィールド エクス (チェンジ DFX) メカニズムによって、データ ソースのレコードに記述が変更されました。 フィールドの値を変更すると、通常フィールド ダーティ設定、自動的に呼び出す必要はめったにありません[き](#setfielddirty)が、自分でことがありますようにすることも、列が明示的に更新または挿入に関係なくどのような値のフィールドのデータ メンバーです。 DFX メカニズムは、の使用も採用されています。**擬似 NULL**します。 詳細については、[CDaoFieldExchange::m_nOperation](../../mfc/reference/cdaofieldexchange-class.md#m_noperation)を参照してください。
+フレームワークでは、フィールド データ メンバーに DAO レコード フィールド エクス (チェンジ DFX) メカニズムによって、データ ソースのレコードに記述が変更されました。 フィールドの値を変更すると、通常フィールド ダーティ設定、自動的に呼び出す必要はめったにありません[き](#setfielddirty)が、自分でことがありますようにすることも、列が明示的に更新または挿入に関係なくどのような値のフィールドのデータ メンバーです。 DFX メカニズムは、の使用も採用されています。**擬似 NULL**します。 詳細については、次を参照してください。 [CDaoFieldExchange::m_nOperation](../../mfc/reference/cdaofieldexchange-class.md#m_noperation)します。
 
 ダブル バッファリング機構を使用しない場合、フィールドの値を変更して自動的に設定しませんフィールド ダーティとして。 この場合は、ダーティ フィールドを明示的に設定する必要があります。 含まれているフラグ[m_bCheckCacheForDirtyFields](#m_bcheckcachefordirtyfields)このフィールドの自動チェックを制御します。
 
@@ -514,7 +514,7 @@ CDaoRecordset(CDaoDatabase* pDatabase = NULL);
 > [!NOTE]
 >  派生した場合、`CDaoRecordset`クラス、派生クラスは、独自のコンス トラクターを指定する必要があります。 派生クラスのコンス トラクターでコンス トラクターを呼び出す`CDaoRecordset::CDaoRecordset`に沿った適切なパラメーターを渡します。
 
-レコード セットのコンス トラクターに NULL を渡す、`CDaoDatabase`オブジェクトが構築され、自動的に結合します。 これは、構築し、接続を必要としないの便利なショートカットを`CDaoDatabase`レコード セットを作成する前にオブジェクト。 場合、`CDaoDatabase`オブジェクトが開いていない、 [CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md)オブジェクトは、既定のワークスペースを使用するのも作成されます。 詳細については、[CDaoDatabase::CDaoDatabase](../../mfc/reference/cdaodatabase-class.md#cdaodatabase)を参照してください。
+レコード セットのコンス トラクターに NULL を渡す、`CDaoDatabase`オブジェクトが構築され、自動的に結合します。 これは、構築し、接続を必要としないの便利なショートカットを`CDaoDatabase`レコード セットを作成する前にオブジェクト。 場合、`CDaoDatabase`オブジェクトが開いていない、 [CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md)オブジェクトは、既定のワークスペースを使用するのも作成されます。 詳細については、次を参照してください。 [CDaoDatabase::CDaoDatabase](../../mfc/reference/cdaodatabase-class.md#cdaodatabase)します。
 
 ##  <a name="close"></a>  CDaoRecordset::Close
 
@@ -597,7 +597,7 @@ virtual void Edit();
 
 場合によっては、Null (データを含まない) ようにすることで、列を更新する場合があります。 これを行うには、呼び出す`SetFieldNull`マーク フィールドを Null の場合は true のパラメーターを使ってこれもにより、更新する列。 場合は、フィールドの値が変更されていない場合でも、データ ソースに書き込む、呼び出し`SetFieldDirty`TRUE の場合のパラメーターを使用します。 これは、フィールド値が Null 場合でも機能します。
 
-フレームワークでは、フィールド データ メンバーに DAO レコード フィールド エクス (チェンジ DFX) メカニズムによって、データ ソースのレコードに記述が変更されました。 フィールドの値を変更すると、通常フィールド ダーティ設定、自動的に呼び出す必要はめったにありません[き](#setfielddirty)が、自分でことがありますようにすることも、列が明示的に更新または挿入に関係なくどのような値のフィールドのデータ メンバーです。 DFX メカニズムは、の使用も採用されています。**擬似 NULL**します。 詳細については、[CDaoFieldExchange::m_nOperation](../../mfc/reference/cdaofieldexchange-class.md#m_noperation)を参照してください。
+フレームワークでは、フィールド データ メンバーに DAO レコード フィールド エクス (チェンジ DFX) メカニズムによって、データ ソースのレコードに記述が変更されました。 フィールドの値を変更すると、通常フィールド ダーティ設定、自動的に呼び出す必要はめったにありません[き](#setfielddirty)が、自分でことがありますようにすることも、列が明示的に更新または挿入に関係なくどのような値のフィールドのデータ メンバーです。 DFX メカニズムは、の使用も採用されています。**擬似 NULL**します。 詳細については、次を参照してください。 [CDaoFieldExchange::m_nOperation](../../mfc/reference/cdaofieldexchange-class.md#m_noperation)します。
 
 ダブル バッファリング機構を使用しない場合、フィールドの値を変更して自動的に設定しませんフィールド ダーティとして。 この場合は、ダーティ フィールドを明示的に設定する必要があります。 含まれているフラグ[m_bCheckCacheForDirtyFields](#m_bcheckcachefordirtyfields)このフィールドの自動チェックを制御します。
 
@@ -1239,7 +1239,7 @@ void GetIndexInfo(
 
 - `AFX_DAO_SECONDARY_INFO` プライマリの情報と。プライマリで一意で、クラスター化 IgnoreNulls、必要に応じて、外部
 
-- `AFX_DAO_ALL_INFO` プライマリとセカンダリの情報と。個別のカウント
+- `AFX_DAO_ALL_INFO` プライマリとセカンダリの情報と。Distinct Count
 
 *lpszName*<br/>
 名前で検索する場合、インデックス オブジェクトの名前へのポインター。
@@ -2008,8 +2008,7 @@ virtual void Open(
 
 |パラメーター `lpszSQL` の値。|レコードの選択基準|例|
 |--------------------------------------|----------------------------------------|-------------|
-|NULL|
-  `GetDefaultSQL` の返す文字列。||
+|NULL|`GetDefaultSQL` の返す文字列。||
 |1 つまたは複数のテーブル定義やクエリ定義名のコンマ区切りの一覧。|表されるすべての列、`DoFieldExchange`します。|`"Customer"`|
 |**選択**列リスト**FROM**テーブル リスト|指定されたテーブルまたはクエリ定義から指定された列です。|`"SELECT CustId, CustName`<br /><br /> `FROM Customer"`|
 
@@ -2272,7 +2271,7 @@ void SetFieldDirty(
 
 フィールドの変更をマークすることにより、フィールドは更新されません。
 
-フレームワークでは、フィールド データ メンバーに DAO レコード フィールド エクス (チェンジ DFX) メカニズムによって、データ ソースのレコードに記述が変更されました。 フィールドの値を変更すると、通常フィールド ダーティ設定、自動的に呼び出す必要はめったにありません`SetFieldDirty`が、自分でことがありますようにすることも、列が明示的に更新または挿入フィールドのデータがどのような値に関係なくメンバー。 DFX メカニズムには、PSEUDONULL の使用も採用されています。 詳細については、[CDaoFieldExchange::m_nOperation](../../mfc/reference/cdaofieldexchange-class.md#m_noperation)を参照してください。
+フレームワークでは、フィールド データ メンバーに DAO レコード フィールド エクス (チェンジ DFX) メカニズムによって、データ ソースのレコードに記述が変更されました。 フィールドの値を変更すると、通常フィールド ダーティ設定、自動的に呼び出す必要はめったにありません`SetFieldDirty`が、自分でことがありますようにすることも、列が明示的に更新または挿入フィールドのデータがどのような値に関係なくメンバー。 DFX メカニズムには、PSEUDONULL の使用も採用されています。 詳細については、次を参照してください。 [CDaoFieldExchange::m_nOperation](../../mfc/reference/cdaofieldexchange-class.md#m_noperation)します。
 
 ダブル バッファリング機構を使用しない場合、フィールドの値を変更して自動的に設定しませんフィールド ダーティとして。 この場合、フィールドをダーティとして明示的に設定する必要があります。 含まれているフラグ[m_bCheckCacheForDirtyFields](#m_bcheckcachefordirtyfields)このフィールドの自動チェックを制御します。
 
@@ -2321,7 +2320,7 @@ void SetFieldNull(
 
 ダブル バッファリング機構を使用していない場合、フィールドの値を変更して自動的に設定しませんフィールドとして、ダーティと Null 以外。 具体的にはダーティと非 Null フィールドを設定する必要があります。 含まれているフラグ[m_bCheckCacheForDirtyFields](#m_bcheckcachefordirtyfields)このフィールドの自動チェックを制御します。
 
-DFX メカニズムでは、PSEUDONULL の使用を採用しています。 詳細については、[CDaoFieldExchange::m_nOperation](../../mfc/reference/cdaofieldexchange-class.md#m_noperation)を参照してください。
+DFX メカニズムでは、PSEUDONULL の使用を採用しています。 詳細については、次を参照してください。 [CDaoFieldExchange::m_nOperation](../../mfc/reference/cdaofieldexchange-class.md#m_noperation)します。
 
 > [!NOTE]
 >  呼び出した後にのみ、このメンバー関数を呼び出す[編集](#edit)または[AddNew](#addnew)します。

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - module macros in MFC
 ms.assetid: 303f4161-cb5e-4099-81ad-acdb11aa60fb
 ms.openlocfilehash: b27f8763b60dc7ce3ee074cad1365e7e1de3a7e6
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58565426"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62322203"
 ---
 # <a name="macros-and-functions-for-managing-dlls"></a>マクロと Dll を管理するための関数
 
@@ -42,7 +42,7 @@ class AFX_EXT_CLASS CMyClass : public CDocument
 };
 ```
 
-詳細については、[エクスポートとインポートを使用して AFX_EXT_CLASS](../../build/exporting-and-importing-using-afx-ext-class.md)を参照してください。
+詳細については、次を参照してください。[エクスポートとインポートを使用して AFX_EXT_CLASS](../../build/exporting-and-importing-using-afx-ext-class.md)します。
 
 ### <a name="requirements"></a>必要条件
 
@@ -79,7 +79,7 @@ AFX_MANAGE_STATE(AfxGetStaticModuleState( ));
 モジュールの状態と MFC の詳細についてを参照してください「の管理モジュールの状態データの MFC モジュール」[新しいドキュメントの作成、Windows、およびビュー](../creating-new-documents-windows-and-views.md)と[テクニカル ノート 58](../tn058-mfc-module-state-implementation.md)します。
 
 > [!NOTE]
->  MFC では、アセンブリのアクティベーション コンテキストを作成するときに使用して[AfxWinInit](application-information-and-management.md#afxwininit)コンテキストを作成して`AFX_MANAGE_STATE`をアクティブ化して、非アクティブ化します。 また、 `AFX_MANAGE_STATE` MFC コードがユーザーの DLL によって選択されている適切なライセンス認証のコンテキストで実行するには静的の MFC ライブラリと MFC の Dll に対してを有効にします。 詳細については、[の MFC モジュール状態でアクティブ化コンテキストのサポート](../support-for-activation-contexts-in-the-mfc-module-state.md)を参照してください。
+>  MFC では、アセンブリのアクティベーション コンテキストを作成するときに使用して[AfxWinInit](application-information-and-management.md#afxwininit)コンテキストを作成して`AFX_MANAGE_STATE`をアクティブ化して、非アクティブ化します。 また、 `AFX_MANAGE_STATE` MFC コードがユーザーの DLL によって選択されている適切なライセンス認証のコンテキストで実行するには静的の MFC ライブラリと MFC の Dll に対してを有効にします。 詳細については、次を参照してください。[の MFC モジュール状態でアクティブ化コンテキストのサポート](../support-for-activation-contexts-in-the-mfc-module-state.md)します。
 
 ### <a name="requirements"></a>必要条件
 

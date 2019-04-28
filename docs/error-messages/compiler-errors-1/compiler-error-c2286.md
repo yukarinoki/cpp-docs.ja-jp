@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2286
 ms.assetid: 078e0201-35cc-42e2-8dbc-6f8cf557b098
 ms.openlocfilehash: 7d3b8297c5f5da29b99abe78999396e8c44df0fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667507"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62182770"
 ---
 # <a name="compiler-error-c2286"></a>コンパイラ エラー C2286
 
@@ -19,7 +19,7 @@ ms.locfileid: "50667507"
 
 クラスには、2 つの異なるメンバーへのポインター表現が存在します。
 
-詳細については、[継承キーワード](../../cpp/inheritance-keywords.md)を参照してください。
+詳細については、次を参照してください。[継承キーワード](../../cpp/inheritance-keywords.md)します。
 
 ## <a name="example"></a>例
 

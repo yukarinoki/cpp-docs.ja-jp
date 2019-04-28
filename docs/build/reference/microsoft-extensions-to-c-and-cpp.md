@@ -30,11 +30,11 @@ helpviewer_keywords:
 - compl method
 ms.assetid: e811a74a-45ba-4c00-b206-2f2321b8689a
 ms.openlocfilehash: dab8ac23be8b66ca84c57514c6c04e94dddebaae
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57813891"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62321190"
 ---
 # <a name="microsoft-extensions-to-c-and-c"></a>C および C++ の Microsoft 拡張機能
 
@@ -59,7 +59,7 @@ const int CMyClass::max;   // out of class definition
 
 **/Ze**クラスの定義は静的で定数の型の整数および列挙データ メンバーの省略可能です。 クラス内に初期化子を持つことができるのは、静的で定数型の整数と列挙だけです。初期化式には、定数型の式を使用する必要があります。
 
-使用して、クラスの定義がヘッダーでファイルとヘッダー ファイルが含まれている複数のソース ファイルで提供されるときにエラーを回避する[selectany](../../cpp/selectany.md)します。 例えば:
+使用して、クラスの定義がヘッダーでファイルとヘッダー ファイルが含まれている複数のソース ファイルで提供されるときにエラーを回避する[selectany](../../cpp/selectany.md)します。 例:
 
 ```cpp
 __declspec(selectany) const int CMyClass::max = 5;
@@ -85,7 +85,7 @@ C++ コンパイラおよび C コンパイラは、次の種類の非 ANSI キ�
    p = ( char * )(( int * )p + 1 );
    ```
 
-- 関数ポインターからデータ ポインターへの非 ANSI キャスト。 例:
+- 関数ポインターからデータ ポインターへの非 ANSI キャスト。 例えば:
 
    ```C
    int ( * pfunc ) ();
@@ -262,11 +262,11 @@ void func ()
 
 **/Ze**、表示形式は次の演算子を使用する場合は、iso646.h をインクルードする必要があります。
 
-- && (and)
+- & & (および)
 
-- &= (and_eq)
+- & = (and_eq)
 
-- & (bitand)
+- (& a) (bitand)
 
 - &#124;(bitor)
 
@@ -302,4 +302,4 @@ int main()
 
 - [/Za、/Ze (言語拡張機能の無効化)](za-ze-disable-language-extensions.md)
 - [MSVC コンパイラ オプション](compiler-options.md)
-- [MSVC コンパイラ コマンドラインの構文](compiler-command-line-syntax.md)
+- [MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)

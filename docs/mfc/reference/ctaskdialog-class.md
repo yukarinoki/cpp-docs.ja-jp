@@ -117,11 +117,11 @@ helpviewer_keywords:
 - CTaskDialog [MFC], TaskDialogCallback
 ms.assetid: 1991ec98-ae56-4483-958b-233809c8c559
 ms.openlocfilehash: 04c8a60f546700be8eeb2ec8a948e0ea321d12f8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57265016"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62324317"
 ---
 # <a name="ctaskdialog-class"></a>CTaskDialog Class
 
@@ -220,7 +220,7 @@ class CTaskDialog : public CObject
 |`m_nProgressPos`|進行状況バーの現在の位置。  この値の有効値の範囲は `m_nProgressRangeMin` ～ `m_nProgressRangeMax` です。|
 |`m_nProgressRangeMax`|進行状況バーの最大値。|
 |`m_nProgressRangeMin`|進行状況バーの最小値。|
-|`m_nProgressState`|進行状況バーの状態。 詳細については、[CTaskDialog::SetProgressBarState](#setprogressbarstate)を参照してください。|
+|`m_nProgressState`|進行状況バーの状態。 詳細については、次を参照してください。 [CTaskDialog::SetProgressBarState](#setprogressbarstate)します。|
 |`m_nRadioId`|選択したラジオ ボタン コントロールの ID。|
 |`m_nWidth`|幅、 `CTaskDialog` (ピクセル単位)。|
 |`m_strCollapse`|文字列、`CTaskDialog`展開された情報が非表示の場合、展開 ボックスの右側に表示されます。|
@@ -238,7 +238,7 @@ class CTaskDialog : public CObject
 
 `CTaskDialog`は Unicode ライブラリを使用してアプリケーションをビルドするときにのみ使用できます。
 
-`CTaskDialog` 2 つの異なるコンス トラクターがあります。 1 つのコンス トラクターでは、2 つのコマンド ボタンと最大 6 つの標準ボタン コントロールを指定することができます。 さらにコマンド ボタンを追加するには、作成した後、`CTaskDialog`します。 2 番目のコンス トラクターは、コマンド ボタンをサポートしていませんが、無制限の数の標準ボタン コントロールを追加することができます。 コンス トラクターの詳細については、[CTaskDialog::CTaskDialog](#ctaskdialog)を参照してください。
+`CTaskDialog` 2 つの異なるコンス トラクターがあります。 1 つのコンス トラクターでは、2 つのコマンド ボタンと最大 6 つの標準ボタン コントロールを指定することができます。 さらにコマンド ボタンを追加するには、作成した後、`CTaskDialog`します。 2 番目のコンス トラクターは、コマンド ボタンをサポートしていませんが、無制限の数の標準ボタン コントロールを追加することができます。 コンス トラクターの詳細については、次を参照してください。 [CTaskDialog::CTaskDialog](#ctaskdialog)します。
 
 次の図は、サンプル`CTaskDialog`を一部のコントロールの場所を示します。
 

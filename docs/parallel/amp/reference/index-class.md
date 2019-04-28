@@ -1,6 +1,6 @@
 ---
 title: index クラス
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - AMP/index
 - AMP/Concurrency::index::index
@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - index structure
 ms.assetid: cbe79b08-0ba7-474c-9828-f1a71da39eb3
-ms.openlocfilehash: 054db83e4d8e140af37dcff9a7664ffdf7902325
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
-ms.translationtype: HT
+ms.openlocfilehash: 5226440e49aab5766fc7992e0651e2b5ee5d4981
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57284646"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62180239"
 ---
 # <a name="index-class"></a>index クラス
 
@@ -37,14 +37,14 @@ class index;
 
 |名前|説明|
 |----------|-----------------|
-|[インデックスのコンス トラクター](#ctor)|`index` クラスの新しいインスタンスを初期化します。|
+|[インデックスのコンス トラクター](#index_ctor)|`index` クラスの新しいインスタンスを初期化します。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
 |名前|説明|
 |----------|-----------------|
 |[operator--](#operator--)|`index` オブジェクトの各要素をデクリメントします。|
-|[operator(mod)=](#operator_mod_eq)|その要素がある数で除算された場合、`index` オブジェクトの各要素の剰余を計算します。|
+|[operator%=](#operator_mod_eq)|その要素がある数で除算された場合、`index` オブジェクトの各要素の剰余を計算します。|
 |[operator*=](#operator_star_eq)|`index` オブジェクトの各要素をある数で乗算します。|
 |[operator/=](#operator_div_eq)|`index` オブジェクトの各要素をある数で除算します。|
 |[index::operator\[\]](#operator_at)|指定したインデックス位置にある要素を返します。|
@@ -139,7 +139,7 @@ index operator--(
 
 前置演算子のインデックスのオブジェクト (* この)。 サフィックス演算子の場合、新しいインデックス オブジェクトです。
 
-## <a name="operator_mod_eq"></a>  operator(mod)=
+## <a name="operator_mod_eq"></a>  operator%=
 
 その要素が、指定した数で除算したときに、インデックスのオブジェクト内の各要素の剰余 (余り) を計算します。
 

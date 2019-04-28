@@ -7,11 +7,11 @@ helpviewer_keywords:
 - MFC Application Wizard, user interface features
 ms.assetid: 59e7b829-a665-42eb-be23-3f2a36eb2dad
 ms.openlocfilehash: 6ca67d4cac3786ce8bb059464d47acf17e3ecdc7
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266068"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62309488"
 ---
 # <a name="user-interface-features-mfc-application-wizard"></a>[ユーザー インターフェイスの機能] (MFC アプリケーション ウィザード)
 
@@ -59,7 +59,7 @@ ms.locfileid: "57266068"
 
 - **ダイアログのタイトル**
 
-   [CDialog クラス](../../mfc/reference/cdialog-class.md)-ベースのアプリケーションにのみ、このタイトルは、ダイアログ ボックスのタイトル バーに表示されます。 このフィールドを編集する必要がありますまず選択、**ダイアログ ベース**オプションで **アプリケーションの種類**します。 詳細については、[アプリケーションの種類、MFC アプリケーション ウィザード](../../mfc/reference/application-type-mfc-application-wizard.md)を参照してください。
+   [CDialog クラス](../../mfc/reference/cdialog-class.md)-ベースのアプリケーションにのみ、このタイトルは、ダイアログ ボックスのタイトル バーに表示されます。 このフィールドを編集する必要がありますまず選択、**ダイアログ ベース**オプションで **アプリケーションの種類**します。 詳細については、次を参照してください。[アプリケーションの種類、MFC アプリケーション ウィザード](../../mfc/reference/application-type-mfc-application-wizard.md)します。
 
 ## <a name="see-also"></a>関連項目
 

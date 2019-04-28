@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4364
 ms.assetid: 1477634c-d60f-4570-ad16-1aaeae24ac7f
 ms.openlocfilehash: db2774b6a73a989b4e9250719f99122826b486fe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643600"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62207109"
 ---
 # <a name="compiler-warning-level-1-c4364"></a>コンパイラの警告 (レベル 1) C4364
 
@@ -19,7 +19,7 @@ ms.locfileid: "50643600"
 
 A`#using`ディレクティブが指定したメタデータ ファイルは、繰り返されましたが、`as_friend`修飾子は、最初に見つかったでは使用されませんでした。 コンパイラは、2 つ目を無視`as_friend`します。
 
-詳細については、[フレンド アセンブリ (C++)](../../dotnet/friend-assemblies-cpp.md)を参照してください。
+詳細については、次を参照してください。[フレンド アセンブリ (C++)](../../dotnet/friend-assemblies-cpp.md)します。
 
 ## <a name="example"></a>例
 

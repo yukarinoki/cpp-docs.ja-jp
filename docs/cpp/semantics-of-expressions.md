@@ -8,11 +8,11 @@ helpviewer_keywords:
 - expression evaluation, about expression evaluation
 ms.assetid: 4a792154-533b-48b9-8709-31bfc170f0a7
 ms.openlocfilehash: d2ce510478bcf1574429c85f704552e6b73100ea
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175786"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62331214"
 ---
 # <a name="semantics-of-expressions"></a>式のセマンティクス
 
@@ -52,7 +52,7 @@ int main()
 
 1. 次に優先順位が高いのは加算 (+) であるため、`a` と `b` の積に `c` が加算されます。
 
-1. 左シフト (<<) は最も優先順位が低いですが、2 つ出現しています。 左シフト演算子は左から右にグループ化されるため、左の部分式が最初に評価され、次に右の部分式が評価されます。
+1. 左シフト (<<) の式で最低の優先順位を持つが、2 つのアイテムがあります。 左シフト演算子は左から右にグループ化されるため、左の部分式が最初に評価され、次に右の部分式が評価されます。
 
 かっこを使用して部分式がグループ化されている場合は、優先順位が変更されるため、次の図に示すように、式の評価順序も変更されます。
 
@@ -70,7 +70,7 @@ C++ 言語では、オペランドを指定するときに、特定の互換性�
 |想定される型|許可される型|
 |-------------------|-------------------|
 |*type*|`const` *type*<br /> `volatile` *type*<br /> *type*&<br /> `const` *type*&<br /> `volatile` *type*&<br /> `volatile const` *type*<br /> `volatile const` *type*&|
-|*型* \*|*型* \*<br /> `const` *型* \*<br /> `volatile` *型* \*<br /> `volatile const` *型* \*|
+|*type* \*|*type* \*<br /> `const` *type* \*<br /> `volatile` *type* \*<br /> `volatile const` *type* \*|
 |`const` *type*|*type*<br /> `const` *type*<br />`const` *type*&|
 |`volatile` *type*|*type*<br /> `volatile` *type*<br /> `volatile` *type*&|
 
@@ -94,7 +94,7 @@ C++ 言語では、関数呼び出しの引数が評価される順序は保証�
 
 C++ 言語の定義では、現在シーケンス ポイントは指定されていません。 Microsoft C++ では、C の演算子を伴い、オーバーロードされた演算子を伴わないすべての式に、ANSI C と同じシーケンス ポイントを使用します。 演算子がオーバーロードされている場合、セマンティクスは演算子のシーケンスから関数呼び出しのシーケンスに変更されます。 Microsoft C++ は、次のシーケンス ポイントを使用します。
 
-- 論理 AND 演算子 (&&) の左オペランド。 論理 AND 演算子の左オペランドは完全に評価され、すべての副作用は続行の前に完了します。 論理 AND 演算子の右オペランドが評価される保証はありません。
+- 論理 AND 演算子のオペランドを左 ((& a) (& a))。 論理 AND 演算子の左オペランドは完全に評価され、すべての副作用は続行の前に完了します。 論理 AND 演算子の右オペランドが評価される保証はありません。
 
 - 論理 OR 演算子のオペランドを左 (&#124;&#124;)。 論理 OR 演算子の左オペランドは完全に評価され、すべての副作用は続行の前に完了します。 論理 OR 演算子の右オペランドが評価される保証はありません。
 

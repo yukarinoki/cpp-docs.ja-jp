@@ -12,11 +12,11 @@ helpviewer_keywords:
 - OLE server applications [MFC], registering servers
 ms.assetid: 991d5684-72c1-4f9e-a09a-9184ed12bbb9
 ms.openlocfilehash: 0bc606acfba26d27d0ab36045e4772593e760e98
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57272170"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62309099"
 ---
 # <a name="registration"></a>登録
 
@@ -26,7 +26,7 @@ ms.locfileid: "57272170"
 
 この記事では、各サーバー アプリケーションの必要がインストールされている場合の対処方法について説明し、毎回実行されます。
 
-システムの登録データベースと更新に使用される .reg ファイルの形式の詳細については、、 *OLE プログラマーズ リファレンス*を参照してください。
+システムの登録データベースと更新に使用される .reg ファイルの形式の詳細については、次を参照してください。、 *OLE プログラマーズ リファレンス*します。
 
 ##  <a name="_core_server_installation"></a> サーバーのインストール
 

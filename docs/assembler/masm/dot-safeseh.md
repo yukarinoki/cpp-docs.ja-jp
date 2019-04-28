@@ -9,11 +9,11 @@ helpviewer_keywords:
 - .SAFESEH directive
 ms.assetid: 6eaac8c4-c46f-47ae-8a66-f5cfeb267e43
 ms.openlocfilehash: 417aea13518621f775cafa176ff7d74f9704d511
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51328358"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62178294"
 ---
 # <a name="safeseh"></a>.SAFESEH
 
@@ -27,7 +27,7 @@ ms.locfileid: "51328358"
 
 *識別子*の ID をローカルで定義されている必要があります[PROC](../../assembler/masm/proc.md)または[EXTRN](../../assembler/masm/extrn.md)プロシージャ A[ラベル](../../assembler/masm/label-masm.md)は許可されていません。 します。SAFESEH ディレクティブに必要な[/safeseh](../../assembler/masm/ml-and-ml64-command-line-reference.md) ml.exe コマンド ライン オプション。
 
-構造化例外ハンドラーの詳細については、[/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md)を参照してください。
+構造化例外ハンドラーの詳細については、次を参照してください。 [/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md)します。
 
 など安全な例外ハンドラーを登録する (次のように) 新しい MASM ファイルを作成、/safeseh でアセンブリおよびリンク オブジェクトに追加します。
 

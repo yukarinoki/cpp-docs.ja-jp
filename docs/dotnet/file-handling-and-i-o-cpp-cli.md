@@ -25,11 +25,11 @@ helpviewer_keywords:
 - text files, writing in C++
 ms.assetid: 3296fd59-a83a-40d4-bd4a-6096cc13101b
 ms.openlocfilehash: 7009c0b017c403c3f0108aa84b8ddb25a1d1564f
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57749374"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62325001"
 ---
 # <a name="file-handling-and-io-ccli"></a>ファイル処理と I/O (C++/CLI)
 

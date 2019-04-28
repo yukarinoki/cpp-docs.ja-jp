@@ -9,11 +9,11 @@ helpviewer_keywords:
 - pragmas, once
 ms.assetid: c7517556-6403-4b16-8898-f2aa0a6f685f
 ms.openlocfilehash: 6061fe77960aa64e2dcb39db05897ef0e7fb5f2e
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59039885"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62326341"
 ---
 # <a name="once"></a>once
 ソース コード ファイルをコンパイルする際、コンパイラによってファイルが 1 回だけ取り込まれる (開かれる) ようにします。
@@ -28,7 +28,7 @@ ms.locfileid: "59039885"
 
 使用`#pragma once`コンパイラが開き、いない最初の後に、ファイルを読み取ると、ビルド時間を短縮できます`#include`の翻訳単位内のファイル。 呼ばれる*複数インクルードの最適化*します。 同様の効果がある、`#include guard`表現形式は、プリプロセッサ マクロの定義を使用して、ファイルの内容の複数のインクルードされないようにします。 これは、違反を防ぐためにも役立ちます、*単一定義規則*: 要件のすべてのテンプレート、型、関数、およびオブジェクトに、コードにある複数の定義があること。
 
-例えば:
+例:
 
 ```
 // header.h

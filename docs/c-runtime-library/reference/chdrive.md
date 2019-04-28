@@ -25,11 +25,11 @@ helpviewer_keywords:
 - chdrive function
 ms.assetid: 212a1a4b-4fa8-444e-9677-7fca4c8c47e3
 ms.openlocfilehash: 963b7b7b40b632981abfc1529beb9c48a5b991ba
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602307"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335478"
 ---
 # <a name="chdrive"></a>_chdrive
 
@@ -59,7 +59,7 @@ int _chdrive(
 
 場合*ドライブ*は」の説明に従って、1 ~ 26 の範囲ではなく、無効なパラメーター ハンドラーが呼び出される[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、実行が許可された場合、 **_chdrive**関数は-1 を返します**errno**に設定されている**EACCES**、および **_doserrno** に設定されています。**ERROR_INVALID_DRIVE**します。
 
-**_chdrive** 関数は、スレッド セーフではない **SetCurrentDirectory** 関数に依存するため、スレッド セーフではありません。 マルチスレッド アプリケーションで **_chdrive** を安全に使用するには、独自のスレッド同期を用意する必要があります。 詳細については、[SetCurrentDirectory](/windows/desktop/api/winbase/nf-winbase-setcurrentdirectory)を参照してください。
+**_chdrive** 関数は、スレッド セーフではない **SetCurrentDirectory** 関数に依存するため、スレッド セーフではありません。 マルチスレッド アプリケーションで **_chdrive** を安全に使用するには、独自のスレッド同期を用意する必要があります。 詳細については、次を参照してください。 [SetCurrentDirectory](/windows/desktop/api/winbase/nf-winbase-setcurrentdirectory)します。
 
 **_chdrive** 関数は現在の作業ドライブのみを変更します。**_chdir** は現在の作業ディレクトリを変更します。
 

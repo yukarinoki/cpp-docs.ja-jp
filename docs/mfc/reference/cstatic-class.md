@@ -29,11 +29,11 @@ helpviewer_keywords:
 - CStatic [MFC], SetIcon
 ms.assetid: e7c94cd9-5ebd-428a-aa30-b3e51f8efb95
 ms.openlocfilehash: 02e2f20cc568e8846923f7189da3ea45478fc289
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57284438"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62323870"
 ---
 # <a name="cstatic-class"></a>CStatic クラス
 
@@ -276,7 +276,7 @@ HBITMAP SetBitmap(HBITMAP hBitmap);
 
 - MFC クラスを提供します。 `CBitmap`、はより呼び出すだけで、Win32 のビットマップ イメージで機能する必要があるときに使用できる`LoadBitmap`します。 `CBitmap`、連携でよく使用されて、GDI オブジェクトの 1 つの種類が含まれています`CStatic`、これは、`CWnd`グラフィック オブジェクトを静的なコントロールとして表示するために使用されるクラスです。
 
-`CImage` ATL と MFC クラス デバイス独立ビットマップ (DIB) を簡単に操作することができます。 詳細については、[CImage クラス](../../atl-mfc-shared/reference/cimage-class.md)を参照してください。
+`CImage` ATL と MFC クラス デバイス独立ビットマップ (DIB) を簡単に操作することができます。 詳細については、次を参照してください。 [CImage クラス](../../atl-mfc-shared/reference/cimage-class.md)します。
 
 - 一般的な使用方法は、提示する`CStatic::SetBitmap`の HBITMAP 演算子によって返される GDI オブジェクトを`CBitmap`または`CImage`オブジェクト。 これを行うコードでは、次の行に似ています。
 
