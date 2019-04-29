@@ -1,6 +1,6 @@
 ---
 title: コードの最適化
-ms.date: 12/10/2018
+ms.date: 04/23/2019
 helpviewer_keywords:
 - performance, optimizing code
 - optimization
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - optimization, C++ code
 - code, optimizing
 - performance, compiler
-ms.openlocfilehash: ae60070959c683a6365992e7b6cc510fd4111b36
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
-ms.translationtype: MT
+ms.openlocfilehash: 430ac9ef1b2946e511d04f7ce18bb0f20d727d75
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57828101"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64341115"
 ---
 # <a name="optimizing-your-code"></a>コードの最適化
 
@@ -23,13 +23,13 @@ ms.locfileid: "57828101"
 
 次のトピックでは、C と C++ 言語の最適化機能の一部について説明します。
 
-[最適化に影響するプラグマおよびキーワード](optimization-pragmas-and-keywords.md)<br/>
+[最適化のプラグマおよびキーワード](optimization-pragmas-and-keywords.md) \
 一連のキーワードとプラグマのパフォーマンスを向上させるために、コードで使用できます。
 
-[カテゴリ別のコンパイラ オプション](reference/compiler-options-listed-by-category.md)<br/>
+[コンパイラ オプションのカテゴリ別一覧](reference/compiler-options-listed-by-category.md) \
 一連の **/O**コンパイラ オプションが具体的には実行の速度やコードのサイズに影響します。
 
-[右辺値参照宣言子: &&](../cpp/rvalue-reference-declarator-amp-amp.md)<br/>
+[右辺値参照宣言子: & &](../cpp/rvalue-reference-declarator-amp-amp.md) \
 右辺値参照の実装をサポートする*移動セマンティクス*します。 移動セマンティクスをテンプレート ライブラリでは、これらのテンプレートを使用するアプリケーションのパフォーマンスを実装するために使用が大幅に向上させることができます。 場合、
 
 ### <a name="the-optimize-pragma"></a>Optimize プラグマ
@@ -52,10 +52,10 @@ ms.locfileid: "57828101"
 
 次のトピックでは、適切なプログラミング方法について説明します。
 
-[タイム クリティカルなコードを高速化するためのヒント](tips-for-improving-time-critical-code.md)<br/>
+[タイム クリティカル コードを改善するためのヒント](tips-for-improving-time-critical-code.md) \
 適切なコーディング テクニックと、パフォーマンスを向上できます。 このトピックでは、コーディング、コードの時間が重要な部分が満足することを確認するのに役立つ手法を提案します。
 
-[最適化の推奨事項](optimization-best-practices.md)<br/>
+[最適化のベスト プラクティス](optimization-best-practices.md) \
 アプリケーションを最適化する最善の方法に関する一般的なガイドラインを提供します。
 
 ## <a name="debugging-optimized-code"></a>最適化されたコードのデバッグ
@@ -86,20 +86,19 @@ ms.locfileid: "57828101"
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-[最適化に影響するプラグマおよびキーワード](optimization-pragmas-and-keywords.md)<br/>
-[コンパイラのスループットの向上](improving-compiler-throughput.md)<br/>
-[浮動小数点数の精度の低下](why-floating-point-numbers-may-lose-precision.md)<br/>
-[IEEE 浮動小数点表現](ieee-floating-point-representation.md)<br/>
-[タイム クリティカルなコードを高速化するためのヒント](tips-for-improving-time-critical-code.md)<br/>
-[() のない関数名とコードの生成](using-function-name-without-parens-produces-no-code.md)<br/>
-[最適化の推奨事項](optimization-best-practices.md)<br/>
-[ガイド付き最適化のプロファイル](profile-guided-optimizations.md)<br/>
-[ガイド付き最適化のプロファイルの環境変数](environment-variables-for-profile-guided-optimizations.md)<br/>
-[PgoAutoSweep](pgoautosweep.md)<br/>
-[pgomgr](pgomgr.md)<br/>
-[pgosweep](pgosweep.md)<br/>
-[方法: 複数の PGO プロファイルを単一のプロファイルにマージする](how-to-merge-multiple-pgo-profiles-into-a-single-profile.md)<br/>
-[パフォーマンスと診断ハブでの Visual Studio 2013 PGO アドイン](profile-guided-optimization-in-the-performance-and-diagnostics-hub.md)<br/>
+[最適化のプラグマおよびキーワード](optimization-pragmas-and-keywords.md) \
+[コンパイラのスループットの向上](improving-compiler-throughput.md) \
+[なぜ浮動小数点数が有効桁数を失う可能性があります。](why-floating-point-numbers-may-lose-precision.md) \
+[IEEE 浮動小数点表現](ieee-floating-point-representation.md) \
+[タイム クリティカル コードを改善するためのヒント](tips-for-improving-time-critical-code.md) \
+[() のない関数名を使用してコードを生成します。](using-function-name-without-parens-produces-no-code.md) \
+[最適化のベスト プラクティス](optimization-best-practices.md) \
+[プロファイル ガイド付き最適化](profile-guided-optimizations.md) \
+[プロファイル ガイド付き最適化のための環境変数](environment-variables-for-profile-guided-optimizations.md) \
+[しています](pgoautosweep.md) \
+[pgomgr](pgomgr.md) \
+[pgosweep](pgosweep.md) \
+[方法: 複数の PGO プロファイルを単一のプロファイルにマージする](how-to-merge-multiple-pgo-profiles-into-a-single-profile.md)
 
 ## <a name="see-also"></a>関連項目
 
