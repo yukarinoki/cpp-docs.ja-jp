@@ -4,12 +4,12 @@ ms.date: 05/11/2018
 helpviewer_keywords:
 - deploying the CRT [C++]
 - application CRT deployment [C++]
-ms.openlocfilehash: 90f859eb0e9134c997e7eecad118cfb8ec00b782
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
-ms.translationtype: MT
+ms.openlocfilehash: 7952d2ec6e8f502b0edf776811a492c67f495cce
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58786467"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64344175"
 ---
 # <a name="universal-crt-deployment"></a>ユニバーサル CRT の配置
 
@@ -23,7 +23,9 @@ Visual Studio .NET から Visual Studio 2013 では、各メジャー リリー�
 
 すべての Microsoft Windows コンピューターで Windows Update を使用して定期的に更新プログラムがインストールされるわけではありません。一部のコンピューターでは推奨される更新プログラムがすべてインストールされない場合があります。 そのようなコンピューターで Visual Studio 2015 以降の C++ ツールセットを使ってビルドされたアプリケーションの使用をサポートするために、オフライン配布用のユニバーサル CRT 再頒布可能パッケージを利用できます。 これらの再頒布可能パッケージは、上記の KB リンクのいずれかからダウンロードできます。 ユニバーサル CRT の再頒布可能パッケージを利用するには、コンピューターが現在のサービス パックに更新されている必要があることに注意してください。 したがって、たとえば、Windows 7 用の再頒布可能パッケージは、Windows 7 RTM ではなく、Windows 7 SP1 にのみインストールされます。
 
-ユニバーサル CRT は C++ ライブラリの基本的な依存関係であるため、Visual C++ の再頒布可能パッケージ (VCRedist) では、C++ ライブラリの依存関係を満たすのに十分なバージョンがまだインストールされていないコンピューター上に基本バージョンのユニバーサル CRT がインストールされます。 ご利用のアプリケーションがユニバーサル CRT のより新しいバージョンに依存している場合、そのより新しいバージョンを明示的にインストールする必要があります。 何度も再起動しなくて済むように、VCRedist の前にこれをインストールすることをお勧めします。
+ユニバーサル CRT がの基本的な依存関係であるため、C++ライブラリ、ビジュアルC++再頒布可能パッケージ (VCRedist) がユニバーサル CRT (バージョン 10.0.10240) の初期のバージョンを既にインストールされているバージョンがないマシン上にインストールします。 このバージョンでは満たすために、C++ライブラリの依存関係。 Universal CRT のより新しいバージョンに依存するアプリケーション場合、は、Windows Update を使用して、完全に最新の状態でマシンを移行またはそのバージョンを明示的にインストールする必要があります。 必要な再起動を繰り返しても既に可能性を回避するために、VCRedist をインストールする前に Windows Update を使用してまたは MSU インストールされているユニバーサル C ランタイムがあることをお勧めします。
+
+すべてのオペレーティング システムでは、Windows Update を使用して、最新のユニバーサル C ランタイムの対象です。 Windows 10 で一元的に展開されているバージョンは、オペレーティング システムのバージョンと一致します。 さらに、ユニバーサル C ランタイムを更新するには、オペレーティング システムを更新する必要があります。 Windows 8.1 から Windows Vista では、最新使用可能なユニバーサル C ランタイムは現在な追加の修正プログラム (バージョン 10.0.14393)、Windows 10 Anniversary Update に含まれるバージョンに基づきます。
 
 ## <a name="local-deployment"></a>ローカル配置
 
