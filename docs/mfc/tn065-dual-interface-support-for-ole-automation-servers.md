@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Automation servers [MFC], dual-interface support
 ms.assetid: b5c8ed09-2f7f-483c-80fc-2a47ad896063
 ms.openlocfilehash: 33828f3979fb938ae6e88fa3cb0d6ee24daa958c
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58776675"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62351801"
 ---
 # <a name="tn065-dual-interface-support-for-ole-automation-servers"></a>TN065:OLE オートメーション サーバー用デュアル インターフェイス サポート
 
@@ -55,14 +55,14 @@ interface IDualAClick : IDispatch
     };
 ```
 
-インターフェイス ステートメントである場合は、メソッドおよびプロパティのエントリの追加を開始します。 デュアル インターフェイスのメソッドとプロパティのアクセサー関数、デュアル インターフェイス内で返されるように、パラメーター リストを再配置する必要があります、 **HRESULT** 属性を持つパラメーターとして、戻り値を渡すと`[retval,out]`. プロパティが必要な読み書きの両方を追加するに注意してください (`propget`) と書き込み (`propput`) 同じ id を持つ関数にアクセスします。例えば:
+インターフェイス ステートメントである場合は、メソッドおよびプロパティのエントリの追加を開始します。 デュアル インターフェイスのメソッドとプロパティのアクセサー関数、デュアル インターフェイス内で返されるように、パラメーター リストを再配置する必要があります、 **HRESULT** 属性を持つパラメーターとして、戻り値を渡すと`[retval,out]`. プロパティが必要な読み書きの両方を追加するに注意してください (`propget`) と書き込み (`propput`) 同じ id を持つ関数にアクセスします。例:
 
 ```IDL
 [propput, id(1)] HRESULT text([in] BSTR newText);
 [propget, id(1)] HRESULT text([out, retval] BSTR* retval);
 ```
 
-メソッドとプロパティを定義した後、coclass ステートメントで、インターフェイス ステートメントへの参照を追加する必要があります。 例:
+メソッドとプロパティを定義した後、coclass ステートメントで、インターフェイス ステートメントへの参照を追加する必要があります。 例えば:
 
 ```IDL
 [ uuid(4B115281-32F0-11cf-AC85-444553540000) ]
@@ -102,7 +102,7 @@ BEGIN_INTERFACE_MAP(CAutoClickDoc, CDocument)
 END_INTERFACE_MAP()
 ```
 
-次に、インターフェイスの実装を入力する必要があります。 ほとんどの場合、ことができますに委任する既存の MFC`IDispatch`実装します。 例:
+次に、インターフェイスの実装を入力する必要があります。 ほとんどの場合、ことができますに委任する既存の MFC`IDispatch`実装します。 例えば:
 
 ```cpp
 STDMETHODIMP_(ULONG) CAutoClickDoc::XDualAClick::AddRef()
@@ -203,7 +203,7 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::get_text(BSTR* retval)
 
 ## <a name="passing-dual-interface-pointers"></a>デュアル インターフェイス ポインターを渡す
 
-呼び出す必要がある場合に特に簡単です。 デュアル インターフェイス ポインターを渡していない`CCmdTarget::FromIDispatch`します。 `FromIDispatch` MFC のでのみ機能`IDispatch`ポインター。 これを回避する 1 つの方法は、元のクエリに`IDispatch`ポインター セットは、MFC でし、必要な関数にそのポインターを渡します。 例えば:
+呼び出す必要がある場合に特に簡単です。 デュアル インターフェイス ポインターを渡していない`CCmdTarget::FromIDispatch`します。 `FromIDispatch` MFC のでのみ機能`IDispatch`ポインター。 これを回避する 1 つの方法は、元のクエリに`IDispatch`ポインター セットは、MFC でし、必要な関数にそのポインターを渡します。 例:
 
 ```
 STDMETHODIMP CAutoClickDoc::XDualAClick::put_Position(

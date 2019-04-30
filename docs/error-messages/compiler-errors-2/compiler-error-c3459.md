@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3459
 ms.assetid: 3d290a20-d313-4c07-9bd8-c5c159cb169f
 ms.openlocfilehash: aaad9610ffec3efc73b1ff5650472689a2d2e82a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438017"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62363740"
 ---
 # <a name="compiler-error-c3459"></a>コンパイラ エラー C3459
 
@@ -19,7 +19,7 @@ ms.locfileid: "50438017"
 
 クラス インデクサー プロパティに適用されるように設計された属性が正しく使用されていません。
 
-詳細については、[方法: プロパティを使用して c++/cli CLI](../../dotnet/how-to-use-properties-in-cpp-cli.md)を参照してください。
+詳細については、「[方法 :プロパティを使用してC++/CLI](../../dotnet/how-to-use-properties-in-cpp-cli.md)します。
 
 ## <a name="example"></a>例
 

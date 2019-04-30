@@ -101,11 +101,11 @@ helpviewer_keywords:
 - SET_PARAM_TYPE macro
 ms.assetid: 8765eb7b-32dd-407c-bacf-8890ef959837
 ms.openlocfilehash: d4ed6b86d99cdfc272b5df10ede6af6bd05ed366
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426291"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62361348"
 ---
 # <a name="macros-and-global-functions-for-ole-db-consumer-templates"></a>OLE DB コンシューマー テンプレート用マクロおよびグローバル関数
 
@@ -198,7 +198,7 @@ inline void AtlTraceErrorRecords(HRESULT hrErr = S_OK);
 
 #### <a name="remarks"></a>Remarks
 
-場合*だ*は S_OK、`AtlTraceErrorRecords`ダンプ デバイスに OLE DB エラー レコード情報をダンプ (、**デバッグ**ファイルまたは出力ウィンドウのタブ)。 プロバイダーから取得されるエラー レコード情報には、各エラー レコード エントリの行番号、ソース、説明、ヘルプ ファイル、コンテキスト、および GUID が含まれます。 `AtlTraceErrorRecords` デバッグ ビルドでのみこの情報をダンプします。 リリース ビルドでは、out に最適化された空のスタブを勧めします。詳細については、[CDBErrorInfo クラス](../../data/oledb/cdberrorinfo-class.md)を参照してください。
+場合*だ*は S_OK、`AtlTraceErrorRecords`ダンプ デバイスに OLE DB エラー レコード情報をダンプ (、**デバッグ**ファイルまたは出力ウィンドウのタブ)。 プロバイダーから取得されるエラー レコード情報には、各エラー レコード エントリの行番号、ソース、説明、ヘルプ ファイル、コンテキスト、および GUID が含まれます。 `AtlTraceErrorRecords` デバッグ ビルドでのみこの情報をダンプします。 リリース ビルドでは、out に最適化された空のスタブを勧めします。詳細については、次を参照してください。 [CDBErrorInfo クラス](../../data/oledb/cdberrorinfo-class.md)します。
 
 ### <a name="begin_accessor"></a> BEGIN_ACCESSOR
 
@@ -665,7 +665,7 @@ END_COLUMN_MAP()
 };
 ```
 
-詳細については、[ブックマークを使って](using-bookmarks.md)と[CBookmark クラス](../../data/oledb/cbookmark-class.md)を参照してください。
+詳細については、次を参照してください。[ブックマークを使って](using-bookmarks.md)と[CBookmark クラス](../../data/oledb/cbookmark-class.md)します。
 
 ### <a name="column_entry"></a> COLUMN_ENTRY
 

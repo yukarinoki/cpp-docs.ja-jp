@@ -40,11 +40,11 @@ helpviewer_keywords:
 - error messages, getting
 ms.assetid: 9e5b15a0-efe1-4586-b7e3-e1d7c31a03d6
 ms.openlocfilehash: 00ff9d0df1a78d07eaa509201fb998b30396cc4c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429641"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62353823"
 ---
 # <a name="strerrors-strerrors-wcserrors-wcserrors"></a>strerror_s、_strerror_s、_wcserror_s、__wcserror_s
 
@@ -117,12 +117,12 @@ errno_t __wcserror_s(
 
 |*バッファー*|*numberOfElements*|*strErrMsg*|内容*バッファー*|
 |--------------|------------------------|-----------------|--------------------------|
-|**NULL**|任意|任意|N/A|
+|**NULL**|任意|任意|適用なし|
 |任意|0|任意|変更されない|
 
 ## <a name="remarks"></a>Remarks
 
-**Strerror_s**関数のマップ*errnum*エラー メッセージの文字列への文字列を返す*バッファー*します。 **_strerror_s**はエラー番号を受け取りませんの現在の値を使用して**errno**を適切なメッセージを確認します。 どちらも**strerror_s**も **_strerror_s**実際には、メッセージを出力しますそのため、出力関数を呼び出す必要があります[fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md):。
+**Strerror_s**関数のマップ*errnum*エラー メッセージの文字列への文字列を返す*バッファー*します。 **_strerror_s**はエラー番号を受け取りませんの現在の値を使用して**errno**を適切なメッセージを確認します。 どちらも**strerror_s**も **_strerror_s**実際には、メッセージを出力します。そのため、出力関数を呼び出す必要があります[fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md):
 
 ```C
 if (( _access( "datafile",2 )) == -1 )
@@ -158,8 +158,8 @@ C++ では、テンプレートのオーバーロードによってこれらの�
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
-|**strerror_s**、 **_strerror_s 関数**|\<string.h>|
-|**_wcserror_s**、 **_ _wcserror_s**|\<string.h> または \<wchar.h>|
+|**strerror_s**, **_strerror_s**|\<string.h>|
+|**_wcserror_s**, **__wcserror_s**|\<string.h> または \<wchar.h>|
 
 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 

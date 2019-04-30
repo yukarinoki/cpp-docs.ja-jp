@@ -21,11 +21,11 @@ helpviewer_keywords:
 - _aligned_msize_dbg
 ms.assetid: f1c44af0-3f66-4033-81d1-d71d3afecba0
 ms.openlocfilehash: 054f7b88f93eef37a9a88fbb7895452f7c158716
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451299"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62342036"
 ---
 # <a name="alignedmsizedbg"></a>_aligned_msize_dbg
 
@@ -60,7 +60,7 @@ size_t _aligned_msize_dbg(
 
 *配置*と*オフセット*値は、ブロックを割り当てた関数に渡される値と同じである必要があります。
 
-**_aligned_msize_dbg**のデバッグ バージョンです、 [_aligned_msize](aligned-msize.md)関数。 ときに[_DEBUG](../../c-runtime-library/debug.md)が定義されていない呼び出しごとに **_aligned_msize_dbg**への呼び出しに減少 **_aligned_msize**します。 両方 **_aligned_msize**と **_aligned_msize_dbg**ベースのヒープにメモリ ブロックのサイズの計算が **_aligned_msize_dbg**デバッグ機能を追加します: が含まれていますメモリのユーザー部分の両側のバッファーは、返されるサイズのブロックします。
+**_aligned_msize_dbg**のデバッグ バージョンです、 [_aligned_msize](aligned-msize.md)関数。 ときに[_DEBUG](../../c-runtime-library/debug.md)が定義されていない呼び出しごとに **_aligned_msize_dbg**への呼び出しに減少 **_aligned_msize**します。 両方 **_aligned_msize**と **_aligned_msize_dbg**ベースのヒープにメモリ ブロックのサイズの計算が **_aligned_msize_dbg**デバッグ機能を追加します。返されるサイズでは、メモリ ブロックのユーザー部分の両側のバッファーが含まれます。
 
 この関数は、そのパラメーターを検証します。 場合 *_expand* null ポインターまたは*配置*が 2 の累乗でない **_msize**で説明されているように、無効なパラメーター ハンドラーを呼び出します[パラメーターの検証](../../c-runtime-library/parameter-validation.md). 関数は、エラーが処理される場合、設定**errno**に**EINVAL** -1 を返します。
 

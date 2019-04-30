@@ -24,11 +24,11 @@ helpviewer_keywords:
 - environment variables, setting time
 ms.assetid: 3f6ed537-b414-444d-b272-5dd377481930
 ms.openlocfilehash: 6312297e6daa9b4790674bd26d21812d5bee34c6
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330256"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62385194"
 ---
 # <a name="tzset"></a>_tzset
 
@@ -72,7 +72,7 @@ void _tzset( void );
 
 |グローバル変数|説明|既定値|
 |---------------------|-----------------|-------------------|
-|**詳細については**|0 以外の値に夏時間のタイム ゾーンが指定されている場合**TZ** ; の設定は 0。|1|
+|**_daylight**|0 以外の値に夏時間のタイム ゾーンが指定されている場合**TZ** ; の設定は 0。|1|
 |**_timezone**|現地時刻と UTC の秒単位での時差。|28800 (28800 秒は 8 時間に相当)|
 |**_tzname**[0]|タイム ゾーン名の文字列値**TZ**環境変数に空の場合**TZ**が設定されていません。|PST|
 |**_tzname**[1]|夏時間のタイム ゾーンの文字列値夏時間のタイム ゾーンが省略されている場合は、空**TZ**環境変数。|PDT|

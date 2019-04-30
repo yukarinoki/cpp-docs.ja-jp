@@ -21,11 +21,11 @@ helpviewer_keywords:
 - choice class
 ms.assetid: 4157a539-d5c2-4161-b1ab-536ce2888397
 ms.openlocfilehash: aa4945bb5f9ef28937487ba504e23c461992b263
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57267018"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62337571"
 ---
 # <a name="choice-class"></a>choice クラス
 
@@ -81,7 +81,7 @@ A `tuple`-ベースの入力ソースのペイロードを表す型。
 
 Choice ブロックにより、受信メッセージの 1 つだけが使用されます。
 
-詳細については、[非同期メッセージ ブロック](../../../parallel/concrt/asynchronous-message-blocks.md)を参照してください。
+詳細については、次を参照してください。[非同期メッセージ ブロック](../../../parallel/concrt/asynchronous-message-blocks.md)します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 

@@ -75,11 +75,11 @@ helpviewer_keywords:
 - CImageList [MFC], m_hImageList
 ms.assetid: b6d1a704-1c82-4548-8a8f-77972adc98a5
 ms.openlocfilehash: 2fc92858f84826e2b953fcbc9de020741e97b007
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57416008"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62346367"
 ---
 # <a name="cimagelist-class"></a>CImageList クラス
 
@@ -120,8 +120,7 @@ class CImageList : public CObject
 |[CImageList::DrawIndirect](#drawindirect)|イメージの一覧からイメージを描画します。|
 |[CImageList::EndDrag](#enddrag)|ドラッグ操作を終了します。|
 |[CImageList::ExtractIcon](#extracticon)|アイコンのイメージとイメージ リスト内のマスクに基づいて作成します。|
-|[CImageList::FromHandle](#fromhandle)|ポインターを返します、`CImageList`イメージ リストへのハンドルが指定されるとします。 
-  `CImageList` オブジェクトがハンドルに関連付けられていない場合は、一時的な `CImageList` オブジェクトが生成され、関連付けられます。|
+|[CImageList::FromHandle](#fromhandle)|ポインターを返します、`CImageList`イメージ リストへのハンドルが指定されるとします。 `CImageList` オブジェクトがハンドルに関連付けられていない場合は、一時的な `CImageList` オブジェクトが生成され、関連付けられます。|
 |[CImageList::FromHandlePermanent](#fromhandlepermanent)|ポインターを返します、`CImageList`イメージ リストへのハンドルが指定されるとします。 場合、`CImageList`ハンドルには、オブジェクトはアタッチされていない、NULL が返されます。|
 |[CImageList::GetBkColor](#getbkcolor)|イメージ リストの現在の背景色を取得します。|
 |[CImageList::GetDragImage](#getdragimage)|ドラッグで使用する一時イメージ リストを取得します。|

@@ -31,18 +31,18 @@ helpviewer_keywords:
 - function calls, terminating
 - process termination, calling
 ms.openlocfilehash: 7b2a22649d779f382bb4055b1e44c14312627ccd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451754"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62339352"
 ---
 # <a name="exit-exit-exit"></a>exit、_Exit、_exit
 
 呼び出しプロセスを終了します。 **exit**はクリーンアップ後に、関数が終了されます。**\_exit**と **\_Exit**は直ちに終了します。
 
 > [!NOTE]
-> テスト シナリオまたはデバッグ シナリオを除く、ユニバーサル Windows プラットフォーム (UWP) アプリをシャット ダウンは、このメソッドを使用しないでください。 ストア アプリを終了するプログラムや UI の方法はに従って許可されていません、 [Microsoft Store ポリシー](/legal/windows/agreements/store-policies)します。 詳細については、[UWP アプリのライフ サイクル](/windows/uwp/launch-resume/app-lifecycle)を参照してください。 Windows 10 アプリについて詳しくは、「 [Windows 10 アプリの使用方法のガイド](https://developer.microsoft.com/windows/apps)」をご覧ください。
+> テスト シナリオまたはデバッグ シナリオを除く、ユニバーサル Windows プラットフォーム (UWP) アプリをシャット ダウンは、このメソッドを使用しないでください。 ストア アプリを終了するプログラムや UI の方法はに従って許可されていません、 [Microsoft Store ポリシー](/legal/windows/agreements/store-policies)します。 詳細については、次を参照してください。 [UWP アプリのライフ サイクル](/windows/uwp/launch-resume/app-lifecycle)します。 Windows 10 アプリについて詳しくは、「 [Windows 10 アプリの使用方法のガイド](https://developer.microsoft.com/windows/apps)」をご覧ください。
 
 ## <a name="syntax"></a>構文
 
@@ -65,9 +65,9 @@ void _exit(
 
 ## <a name="remarks"></a>Remarks
 
-**exit**、 **\_Exit**と **\_exit**関数が呼び出し元のプロセスを終了します。 **exit**関数がデストラクターを呼び出します、スレッド ローカル オブジェクトの呼び出し、— 後入れ先出し (LIFO) の順序で — によって登録されている関数**atexit**と **\_onexit**をプロセスが終了する前にすべてのファイル バッファーをフラッシュします。 **_Exit**と **_exit**関数は、スレッド ローカル オブジェクトの破棄または処理せず、プロセスを終了**atexit**または **_onexit**関数、ストリーム バッファーのフラッシュもしないでします。
+**exit**、 **\_Exit**と **\_exit**関数が呼び出し元のプロセスを終了します。 **exit**関数がデストラクターを呼び出します、スレッド ローカル オブジェクトの呼び出し、— 後入れ先出し (LIFO) の順序で — によって登録されている関数**atexit**と **\_onexit**をプロセスが終了する前にすべてのファイル バッファーをフラッシュします。 **\_Exit**と **\_exit**関数は、スレッド ローカル オブジェクトの破棄または処理せず、プロセスを終了**atexit**または **\_onexit**関数、ストリーム バッファーのフラッシュもしないでします。
 
-ですが、 **exit**、 **\_Exit** と **\_exit** 呼び出しは、値の値を返しません *状態* ホスト環境を使用可能にまたは、プロセスの終了後、存在する場合、呼び出し元のプロセスを待機しています。 呼び出し元のセットでは、通常、 *状態* 値を通常の終了を示す 0 またはその他の値はエラーを示します。 *状態* 値は、オペレーティング システムのバッチ コマンドを使用可能な **ERRORLEVEL** は 2 つの定数のいずれかで表されます: **EXIT\_SUCCESS** 値を表す0、または **EXIT\_FAILURE** 1 の値を表します。
+ですが、 **exit**、 **\_Exit** と **\_exit** 呼び出しは、値の値を返しません *状態* ホスト環境を使用可能にまたは、プロセスの終了後、存在する場合、呼び出し元のプロセスを待機しています。 呼び出し元のセットでは、通常、 *状態* 値を通常の終了を示す 0 またはその他の値はエラーを示します。 *状態*値は、オペレーティング システムのバッチ コマンドを使用可能な**ERRORLEVEL**は 2 つの定数のいずれかで表されます。**EXIT_SUCCESS**、0 の値を表すまたは**EXIT_FAILURE**1 の値を表します。
 
 **exit**、 **\_Exit**、 **\_exit**、 **quick\_exit**、 **\_cexit**、および **\_c\_exit**関数の動作は次のようにします。
 

@@ -7,17 +7,17 @@ helpviewer_keywords:
 - C2719
 ms.assetid: ea6236d3-8286-45cc-9478-c84ad3dd3c8e
 ms.openlocfilehash: d635601fbf8b36218fb47c09444f3f5d023c823e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653116"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383088"
 ---
 # <a name="compiler-error-c2719"></a>コンパイラ エラー C2719
 
 'parameter': __declspec(align('#')) の仮引数はアラインされません。
 
-[Align](../../cpp/align-cpp.md) `__declspec`修飾子は関数のパラメーターでは許可されていません。 関数パラメーターのアラインメントは、呼び出し規則によって制御されます。 詳細については、[呼び出し規則](../../cpp/calling-conventions.md)を参照してください。
+[Align](../../cpp/align-cpp.md) `__declspec`修飾子は関数のパラメーターでは許可されていません。 関数パラメーターのアラインメントは、呼び出し規則によって制御されます。 詳細については、次を参照してください。[呼び出し規則](../../cpp/calling-conventions.md)します。
 
 次の例は C2719 を生成し、その修正方法を示しています。
 

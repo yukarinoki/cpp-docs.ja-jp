@@ -31,11 +31,11 @@ helpviewer_keywords:
 - cacoshl function
 ms.assetid: 83fd05eb-3587-4741-9be6-589a830a1703
 ms.openlocfilehash: aa31dfa1b29eda18d34528fc8aa9544e58a5a082
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668196"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62340730"
 ---
 # <a name="cacosh-cacoshf-cacoshl"></a>cacosh、cacoshf、cacoshl
 
@@ -72,7 +72,7 @@ _Lcomplex cacoshl(
 
 ## <a name="remarks"></a>Remarks
 
-オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **cacosh**を受け取って返す **_Fcomplex**と **_Lcomplex**値。 C プログラムで**cacosh**は、 **_Dcomplex**値。
+C++では、オーバー ロードのオーバー ロードを呼び出すことができます**cacosh**を受け取って返す **_Fcomplex**と **_Lcomplex**値。 C プログラムで**cacosh**は、 **_Dcomplex**値。
 
 ## <a name="requirements"></a>必要条件
 

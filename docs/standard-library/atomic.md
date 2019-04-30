@@ -49,11 +49,11 @@ f1_keywords:
 - atomic/std::atomic_uint_least64_t
 ms.assetid: e79a6b9f-52ff-48da-9554-654c4e1999f6
 ms.openlocfilehash: e2146c7424d4903523372ad54b0cd2eece525cbe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50600487"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62376602"
 ---
 # <a name="ltatomicgt"></a>&lt;atomic&gt;
 
@@ -78,7 +78,7 @@ ms.locfileid: "50600487"
 
 一部のプラットフォームでは、`mutex` を使用しないと、一部の型にアトミック操作を効率的に実装できない場合があります。 その型に対するアトミック操作においてロックが使用される場合、アトミック型は*ロック制御不要*になります。
 
-**C++11**: 通知ハンドラーでは、`obj.is_lock_free()` または `atomic_is_lock_free(x)` が true の場合、オブジェクト `obj` でのアトミック操作を実行できます。
+**C++ 11**:通知ハンドラー内のオブジェクトに対するアトミック操作を行うことができます`obj`場合`obj.is_lock_free()`または`atomic_is_lock_free(x)`に該当します。
 
 クラスは、 [atomic_flag](../standard-library/atomic-flag-structure.md)を保持する最小のアトミック型の提供、 **bool**フラグ。 その操作は常にロック制御不要です。
 
@@ -101,7 +101,7 @@ ms.locfileid: "50600487"
 |`atomic_integral` の型|整数型|`atomic_is_lock_free` マクロ|
 |----------------------------|-------------------|---------------------------------|
 |`atomic_char`|**char**|ATOMIC_CHAR_LOCK_FREE|
-|`atomic_schar`|**符号付き文字**|ATOMIC_CHAR_LOCK_FREE|
+|`atomic_schar`|**signed char**|ATOMIC_CHAR_LOCK_FREE|
 |`atomic_uchar`|**unsigned char**|ATOMIC_CHAR_LOCK_FREE|
 |`atomic_char16_t`|`char16_t`|ATOMIC_CHAR16_T_LOCK_FREE|
 |`atomic_char32_t`|`char32_t`|ATOMIC_CHAR32_T_LOCK_FREE|
@@ -113,7 +113,7 @@ ms.locfileid: "50600487"
 |`atomic_long`|**long**|ATOMIC_LONG_LOCK_FREE|
 |`atomic_ulong`|**unsigned long**|ATOMIC_LONG_LOCK_FREE|
 |`atomic_llong`|**long long**|ATOMIC_LLONG_LOCK_FREE|
-|`atomic_ullong`|**符号なし long long 型**|ATOMIC_LLONG_LOCK_FREE|
+|`atomic_ullong`|**unsigned long long**|ATOMIC_LLONG_LOCK_FREE|
 
 Typedef 名は、ヘッダー \<inttypes.h> で定義されている一部の型のアトミック テンプレートの特殊化のために存在します。
 

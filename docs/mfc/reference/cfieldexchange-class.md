@@ -11,11 +11,11 @@ helpviewer_keywords:
 - CFieldExchange [MFC], SetFieldType
 ms.assetid: 24c5c0b3-06a6-430e-9b6f-005a2c65e29f
 ms.openlocfilehash: e66b3ed16d4f21d46567c37bfaf7929d32f63b8e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57294981"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62346354"
 ---
 # <a name="cfieldexchange-class"></a>CFieldExchange クラス
 
@@ -55,7 +55,7 @@ A`CFieldExchange`コンテキスト情報に必要なレコード フィール�
 
 - `CFieldExchange::inoutParam` 入力/出力パラメーターのデータ メンバーにします。
 
-ほとんどのクラスのメンバー関数とデータ メンバーは、独自のカスタム RFX ルーチンを記述するために提供されます。 使用する`SetFieldType`頻繁にします。 詳細については、記事をご覧ください。[レコード フィールド エクス チェンジ (RFX)](../../data/odbc/record-field-exchange-rfx.md)と[レコード セット (ODBC)](../../data/odbc/recordset-odbc.md)します。 バルク行フェッチの詳細については、この記事を参照してください。[レコード セット。(ODBC) バルク行フェッチ](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)します。 グローバル関数とバルク RFX に関する詳細については、[レコード フィールド エクス チェンジ関数](../../mfc/reference/record-field-exchange-functions.md)この参照の MFC マクロとグローバルのセクションでを参照してください。
+ほとんどのクラスのメンバー関数とデータ メンバーは、独自のカスタム RFX ルーチンを記述するために提供されます。 使用する`SetFieldType`頻繁にします。 詳細については、記事をご覧ください。[レコード フィールド エクス チェンジ (RFX)](../../data/odbc/record-field-exchange-rfx.md)と[レコード セット (ODBC)](../../data/odbc/recordset-odbc.md)します。 バルク行フェッチの詳細については、この記事を参照してください。[レコード セット。(ODBC) バルク行フェッチ](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)します。 グローバル関数とバルク RFX に関する詳細については、次を参照してください。[レコード フィールド エクス チェンジ関数](../../mfc/reference/record-field-exchange-functions.md)この参照の MFC マクロとグローバルのセクションでします。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -124,7 +124,7 @@ void SetFieldType(UINT nFieldType);
 
 一般に、フィールド データ メンバーまたはパラメーターのデータ メンバーに関連付けられた RFX 関数の呼び出しの各グループへの呼び出し前が必要`SetFieldType`します。 *NFieldType*の各パラメーター`SetFieldType`呼び出しに続く RFX 関数の呼び出しによって表されるデータ メンバーの種類を識別する、`SetFieldType`呼び出します。
 
-出力および入力/出力パラメーターの処理方法の詳細については、、`CRecordset`メンバー関数は[FlushResultSet](../../mfc/reference/crecordset-class.md#flushresultset)を参照してください。 バルク RFX 関数の詳細については、トピックを参照してください。[レコード フィールド エクス チェンジ関数](../../mfc/reference/record-field-exchange-functions.md)します。 バルク行フェッチの詳細については、この記事を参照してください。[レコード セット。(ODBC) バルク行フェッチ](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)します。
+出力および入力/出力パラメーターの処理方法の詳細については、次を参照してください。、`CRecordset`メンバー関数は[FlushResultSet](../../mfc/reference/crecordset-class.md#flushresultset)します。 バルク RFX 関数の詳細については、トピックを参照してください。[レコード フィールド エクス チェンジ関数](../../mfc/reference/record-field-exchange-functions.md)します。 バルク行フェッチの詳細については、この記事を参照してください。[レコード セット。(ODBC) バルク行フェッチ](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)します。
 
 ### <a name="example"></a>例
 

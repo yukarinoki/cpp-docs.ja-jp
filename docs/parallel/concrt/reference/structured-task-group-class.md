@@ -14,11 +14,11 @@ helpviewer_keywords:
 - structured_task_group class
 ms.assetid: 742afa8c-c7b6-482c-b0ba-04c809927b22
 ms.openlocfilehash: 27610539ab500a113ea41021744c55425fe9cd9b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57299297"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62337194"
 ---
 # <a name="structuredtaskgroup-class"></a>structured_task_group クラス
 
@@ -61,7 +61,7 @@ class structured_task_group;
 
 - 一般的なとは異なり`task_group`クラス内のすべての状態、`structured_task_group`クラスは元に戻せません。 グループにタスクをキューに登録し、その完了を待機した後、同じグループをもう一度使用することはできません。
 
-詳細については、[タスクの並列化](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)を参照してください。
+詳細については、次を参照してください。[タスクの並列化](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -83,7 +83,7 @@ void cancel();
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、[キャンセル](../../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md#cancellation)を参照してください。
+詳細については、次を参照してください。[キャンセル](../../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md#cancellation)します。
 
 ##  <a name="is_canceling"></a> is_canceling
 
@@ -99,7 +99,7 @@ bool is_canceling();
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、[キャンセル](../../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md#cancellation)を参照してください。
+詳細については、次を参照してください。[キャンセル](../../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md#cancellation)します。
 
 ##  <a name="run"></a> 実行
 

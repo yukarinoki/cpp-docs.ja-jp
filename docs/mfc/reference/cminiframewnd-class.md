@@ -13,11 +13,11 @@ helpviewer_keywords:
 - CMiniFrameWnd [MFC], CreateEx
 ms.assetid: b8f534ed-0532-4d8e-9657-5595cf677749
 ms.openlocfilehash: 70f090e2d9830ccfdd98640b54ff07440064d542
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293265"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62337818"
 ---
 # <a name="cminiframewnd-class"></a>CMiniFrameWnd クラス
 
@@ -202,7 +202,7 @@ WS_VISIBLE スタイルを指定すると、Windows はアクティブ化し、�
 
 *DwStyle*パラメーターの任意の組み合わせを指定できます[ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)します。
 
-古いスタイル パレットのツールボックス ウィンドウがサポートされていません。 以前のバージョンの Windows では、MFC アプリケーションを実行するときに、"X"の閉じるボタンを設定されていない、以前のスタイルがサポートされていましたが、Visual C .NET でサポートされて不要になった。 新しい WS_EX_TOOLWINDOW スタイルのみがサポートされるようになりました。このスタイルの説明は、[拡張ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)を参照してください。
+古いスタイル パレットのツールボックス ウィンドウがサポートされていません。 以前のバージョンの Windows では、MFC アプリケーションを実行するときに、"X"の閉じるボタンを設定されていない、以前のスタイルがサポートされていましたが、Visual C .NET でサポートされて不要になった。 新しい WS_EX_TOOLWINDOW スタイルのみがサポートされるようになりました。このスタイルの説明は、次を参照してください。[拡張ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)します。
 
 ## <a name="see-also"></a>関連項目
 

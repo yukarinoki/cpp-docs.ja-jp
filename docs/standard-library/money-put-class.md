@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::money_put [C++], put
 ms.assetid: f439fd56-c9b1-414c-95e1-66c918c6eee6
 ms.openlocfilehash: 346dd4f681432143c954ca125c3862fc6827db60
-ms.sourcegitcommit: b04160e9ed58f83bdc8ace218ae64b35395f6ea2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50968105"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383543"
 ---
 # <a name="moneyput-class"></a>money_put クラス
 
@@ -114,7 +114,7 @@ virtual iter_type do_put(
 *_Intl*<br/>
 シーケンスで期待される通貨記号の種類を示すブール値。国際通貨の場合は **true**、国内通貨の場合は **false**。
 
-*されている _Iosbase*<br/>
+*_Iosbase*<br/>
 書式設定フラグ。これが設定されている場合、通貨記号は省略可能です。それ以外の場合は必須です
 
 *_Fill*<br/>
@@ -236,7 +236,7 @@ iter_type put(
 *_Intl*<br/>
 シーケンスで期待される通貨記号の種類を示すブール値。国際通貨の場合は **true**、国内通貨の場合は **false**。
 
-*されている _Iosbase*<br/>
+*_Iosbase*<br/>
 書式設定フラグ。これが設定されている場合、通貨記号は省略可能です。それ以外の場合は必須です
 
 *_Fill*<br/>

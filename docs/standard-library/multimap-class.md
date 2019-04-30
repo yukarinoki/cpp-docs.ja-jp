@@ -87,11 +87,11 @@ helpviewer_keywords:
 - std::multimap [C++], value_comp
 ms.assetid: 8796ae05-37c4-475a-9e61-75fde9d4a463
 ms.openlocfilehash: caffa84052f774803b92730f7906bf53cb3c824a
-ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678521"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62348368"
 ---
 # <a name="multimap-class"></a>multimap クラス
 
@@ -515,7 +515,7 @@ size_type count(const Key& key) const;
 
 メンバー関数は、
 
-\[ lower_bound (*キー*)、upper_bound (*キー*))
+\[ lower_bound(*key*), upper_bound(*key*) )
 
 キーの値がある*キー*します。
 
@@ -993,10 +993,10 @@ size_type erase(
 *Where*<br/>
 削除される要素の位置。
 
-*まずは*<br/>
+*First*<br/>
 削除される最初の要素の位置。
 
-*前の*<br/>
+*Last*<br/>
 削除される最後の要素の次の位置。
 
 *Key*<br/>
@@ -1216,8 +1216,8 @@ IList);
 |*val*|multimap に挿入される要素の値。|
 |*Where*|正しい挿入ポイントの検索を開始する場所  (そのポイントの直前に場合*場所*、対数時間ではなく償却定数時間で実行できます)。|
 |*ValTy*|マップの要素の構築に使用できる引数の型を指定するテンプレート パラメーター [value_type](../standard-library/map-class.md#value_type)、および完全転送*Val*を引数として。|
-|*まずは*|コピーされる最初の要素の位置。|
-|*前の*|コピーされる最後の要素の次の位置。|
+|*First*|コピーされる最初の要素の位置。|
+|*Last*|コピーされる最後の要素の次の位置。|
 |*InputIterator*|[入力反復子](../standard-library/input-iterator-tag-struct.md)の要件を満たすテンプレート関数の引数。この反復子は、[value_type](../standard-library/map-class.md#value_type) オブジェクトの構築に使用できる型の要素を指し示します。|
 |*IList*|要素のコピー元の [initializer_list](../standard-library/initializer-list.md)。|
 
@@ -1656,8 +1656,8 @@ multimap(
 |*Al*|この multimap オブジェクトに使用するストレージ アロケーター クラス。既定では、Allocator です。|
 |*コンポジション*|マップ内の要素の並べ替えに使用される、型 `constTraits` の比較関数。既定では `Traits` です。|
 |*右*|構築される map のコピー元となる map。|
-|*まずは*|コピーする要素範囲内の最初の要素の位置。|
-|*前の*|コピーする要素範囲を超える最初の要素の位置。|
+|*First*|コピーする要素範囲内の最初の要素の位置。|
+|*Last*|コピーする要素範囲を超える最初の要素の位置。|
 |*IList*|要素のコピー元の initializer_list。|
 
 ### <a name="remarks"></a>Remarks

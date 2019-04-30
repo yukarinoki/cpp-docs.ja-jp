@@ -21,18 +21,18 @@ f1_keywords:
 helpviewer_keywords:
 - signal function
 ms.openlocfilehash: 351bdbe1d787fc5e5d741460adfe415df7fda756
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51328579"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62356291"
 ---
 # <a name="signal"></a>signal
 
 割り込みシグナル処理を設定します。
 
 > [!IMPORTANT]
-> テストまたはデバッグ シナリオにを除き、Microsoft Store アプリをシャット ダウンは、このメソッドを使用しないでください。 ストア アプリを終了するプログラムや UI の方法はに従って許可されていません、 [Microsoft Store ポリシー](/legal/windows/agreements/store-policies)します。 詳細については、[UWP アプリのライフ サイクル](/windows/uwp/launch-resume/app-lifecycle)を参照してください。
+> テストまたはデバッグ シナリオにを除き、Microsoft Store アプリをシャット ダウンは、このメソッドを使用しないでください。 ストア アプリを終了するプログラムや UI の方法はに従って許可されていません、 [Microsoft Store ポリシー](/legal/windows/agreements/store-policies)します。 詳細については、次を参照してください。 [UWP アプリのライフ サイクル](/windows/uwp/launch-resume/app-lifecycle)します。
 
 ## <a name="syntax"></a>構文
 

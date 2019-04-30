@@ -24,11 +24,11 @@ helpviewer_keywords:
 - files [C++], writing to
 ms.assetid: 7b868c33-766f-4e1a-95a7-e8d25f0604c4
 ms.openlocfilehash: b3fa53b21d4ea23c5f8e59de673f4074deedb505
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519250"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383413"
 ---
 # <a name="write"></a>_write
 
@@ -57,7 +57,7 @@ int _write(
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合、 **_write**実際に書き込まれたバイト数を返します。 ディスクに残っている実際の領域が、関数が、ディスクに書き込むしようとしたバッファーのサイズより小さい場合 **_write**が失敗し、バッファーの内容をディスクにフラッシュしません。 戻り値-1 はエラーを示します。 無効なパラメーターが渡されると、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、この関数は無効なパラメーター ハンドラーを呼び出します。 実行の継続が許可された場合、関数は-1 を返しますと**errno** 3 つの値のいずれかに設定されている: **EBADF**、つまり、ファイル記述子が正しくないか、ファイルが書き込み用に開かれていません。**ENOSPC**、十分な空き領域が残って操作については、デバイスがないことを意味または**EINVAL**、つまり*バッファー*が null ポインターかを奇数*カウント*Unicode モードでのファイルに書き込まれるバイトが渡されました。
+成功した場合、 **_write**実際に書き込まれたバイト数を返します。 ディスクに残っている実際の領域が、関数が、ディスクに書き込むしようとしたバッファーのサイズより小さい場合 **_write**が失敗し、バッファーの内容をディスクにフラッシュしません。 戻り値-1 はエラーを示します。 無効なパラメーターが渡されると、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、この関数は無効なパラメーター ハンドラーを呼び出します。 実行の継続が許可された場合、関数は-1 を返しますと**errno** 3 つの値のいずれかに設定されます。**EBADF**、つまり、ファイル記述子が正しくないか、ファイルが書き込み用に開かれていません。**ENOSPC**、十分な空き領域が残って操作については、デバイスがないことを意味または**EINVAL**、つまり*バッファー*が null ポインターまたは半端な*カウント*Unicode モードでのファイルに書き込まれるバイトが渡されました。
 
 これらのリターン コードとその他のリターン コードの詳細については、「[errno、_doserrno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 

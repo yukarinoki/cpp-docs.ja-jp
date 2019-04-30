@@ -15,11 +15,11 @@ helpviewer_keywords:
 - task class
 ms.assetid: cdc3a8c0-5cbe-45a0-b5d5-e9f81d94df1a
 ms.openlocfilehash: 99676ac0fff9584cd8453562f8918f6cadd66666
-ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58278538"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62385207"
 ---
 # <a name="task-class-concurrency-runtime"></a>task クラス (コンカレンシー ランタイム)
 
@@ -81,7 +81,7 @@ class task;
 
 ## <a name="remarks"></a>Remarks
 
-詳細については、[タスクの並列化](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)を参照してください。
+詳細については、次を参照してください。[タスクの並列化](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -263,7 +263,7 @@ task(
 
 :Iasyncinfo インターフェイスまたはそのようなインターフェイスを返すラムダを取るコンス トラクター オーバー ロードでは、Windows ランタイム アプリで使用できるのみです。
 
-詳細については、[タスクの並列化](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)を参照してください。
+詳細については、次を参照してください。[タスクの並列化](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)します。
 
 ##  <a name="then"></a> そうしたら
 
@@ -327,7 +327,7 @@ __declspec(
 
 オーバー ロード`then`ラムダまたはファンクタを:iasyncinfo インターフェイスを返すは Windows ランタイム アプリで使用できるのみです。
 
-タスクの継続を使用して非同期操作を構成する方法の詳細については、[タスクの並列化](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)を参照してください。
+タスクの継続を使用して非同期操作を構成する方法の詳細については、次を参照してください。[タスクの並列化](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)します。
 
 ##  <a name="wait"></a> 待機
 

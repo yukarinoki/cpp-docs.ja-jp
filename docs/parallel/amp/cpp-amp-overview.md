@@ -9,11 +9,11 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism
 ms.assetid: 9e593b06-6e3c-43e9-8bae-6d89efdd39fc
 ms.openlocfilehash: 258266768d3f456fb761a9d5a403a92c502dbe32
-ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356245"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62349912"
 ---
 # <a name="c-amp-overview"></a>C++ AMP の概要
 
@@ -27,7 +27,7 @@ C++ Accelerated Massive Parallelism (C++ AMP) は、独立したグラフィッ�
 
 - DirectX 11 機能レベル 11.0 以降のハードウェア
 
-- ソフトウェア エミュレーターでデバッグは、Windows 8 または Windows Server 2012 が必要です。 ハードウェアでデバッグするには、使用するグラフィックス カードのドライバーをインストールする必要があります。 詳細については、[GPU コードのデバッグ](/visualstudio/debugger/debugging-gpu-code)を参照してください。
+- ソフトウェア エミュレーターでデバッグは、Windows 8 または Windows Server 2012 が必要です。 ハードウェアでデバッグするには、使用するグラフィックス カードのドライバーをインストールする必要があります。 詳細については、次を参照してください。 [GPU コードのデバッグ](/visualstudio/debugger/debugging-gpu-code)します。
 
 - メモ:AMP は現在 ARM64 でサポートされていません。
 
@@ -102,10 +102,9 @@ void CppAmpMethod() {
 
 基本的な要素は同じですが、C++ AMP のコンストラクトが使用されています。
 
-- データ:C++ 配列を使用して、次の 3 つの C++ AMP を構築する[array_view](../../parallel/amp/reference/array-view-class.md)オブジェクト。 4 個の値を指定して `array_view` オブジェクトを構築します。すなわち、各次元の `array_view` オブジェクトのデータ値、ランク、要素の型、および長さです。 ランクと型は型パラメーターとして渡されます。 データと長さは、コンストラクターのパラメーターとして渡されます。 この例では、コンストラクターに渡される C++ 配列は 1 次元です。 ランクと長さは `array_view` オブジェクト内のデータの四角形を構築するために使用され、データ値は配列の値を設定するために使用されます。 ランタイム ライブラリも含まれています、 [array クラス](../../parallel/amp/reference/array-class.md)のようなインターフェイスを持つ、`array_view`クラスであり、この記事の後半で説明します。
+- データ:使用するC++3 つを作成する配列C++AMP [array_view](../../parallel/amp/reference/array-view-class.md)オブジェクト。 4 個の値を指定して `array_view` オブジェクトを構築します。すなわち、各次元の `array_view` オブジェクトのデータ値、ランク、要素の型、および長さです。 ランクと型は型パラメーターとして渡されます。 データと長さは、コンストラクターのパラメーターとして渡されます。 この例では、コンストラクターに渡される C++ 配列は 1 次元です。 ランクと長さは `array_view` オブジェクト内のデータの四角形を構築するために使用され、データ値は配列の値を設定するために使用されます。 ランタイム ライブラリも含まれています、 [array クラス](../../parallel/amp/reference/array-class.md)のようなインターフェイスを持つ、`array_view`クラスであり、この記事の後半で説明します。
 
-- イテレーション:[Parallel_for_each 関数 (C++ AMP)](reference/concurrency-namespace-functions-amp.md#parallel_for_each) 、データ要素を反復処理するためのメカニズムを提供または*計算ドメイン*します。 この例では、計算のドメインは `sum.extent` によって指定されます。 ラムダ式を実行するコードが含まれているまたは*カーネル関数*します。 
-  `restrict(amp)` は、C++ AMP で高速化できる C++ 言語のサブセットのみが使用されることを示します。
+- イテレーション:[Parallel_for_each 関数 (C++ AMP)](reference/concurrency-namespace-functions-amp.md#parallel_for_each) 、データ要素を反復処理するためのメカニズムを提供または*計算ドメイン*します。 この例では、計算のドメインは `sum.extent` によって指定されます。 ラムダ式を実行するコードが含まれているまたは*カーネル関数*します。 `restrict(amp)` は、C++ AMP で高速化できる C++ 言語のサブセットのみが使用されることを示します。
 
 - インデックス:[Index クラス](../../parallel/amp/reference/index-class.md)変数`idx`、順位のランクと一致する 1 つの宣言は、`array_view`オブジェクト。 インデックスを使用することによって、`array_view` オブジェクトの個々の要素にアクセスできます。
 
@@ -129,8 +128,7 @@ std::cout << a[idx] << "\n";
 // Output: 3
 ```
 
-次の例では、2 次元の `array_view` オブジェクト内で、行 = 1、列 = 2 にある要素を指定する 2 次元インデックスを作成します。 
-  `index` コンストラクターの最初のパラメーターは行コンポーネントで、2 番目のパラメーターは列コンポーネントです。 出力には 6 です。
+次の例では、2 次元の `array_view` オブジェクト内で、行 = 1、列 = 2 にある要素を指定する 2 次元インデックスを作成します。 `index` コンストラクターの最初のパラメーターは行コンポーネントで、2 番目のパラメーターは列コンポーネントです。 出力には 6 です。
 
 ```cpp
 int aCPP[] = {1, 2, 3, 4, 5, 6};
@@ -190,14 +188,11 @@ std::cout << "The depth is " << a.extent[0] << "\n";
 
 ## <a name="moving-data-to-the-accelerator-array-and-arrayview"></a>アクセラレータにデータを移動する: array と array_view
 
-アクセラレータにデータを移動するために使用される 2 つのデータ コンテナーがランタイム ライブラリで定義されています。 [Array クラス](../../parallel/amp/reference/array-class.md)と[array_view クラス](../../parallel/amp/reference/array-view-class.md)します。 
-  `array` クラスは、オブジェクトの構築時にデータの詳細コピーを作成するコンテナー クラスです。 
-  `array_view` クラスは、カーネル関数がデータにアクセスするときにデータをコピーするラッパー クラスです。 ソース デバイスでデータが必要になったときは、データがコピーして戻されます。
+アクセラレータにデータを移動するために使用される 2 つのデータ コンテナーがランタイム ライブラリで定義されています。 [Array クラス](../../parallel/amp/reference/array-class.md)と[array_view クラス](../../parallel/amp/reference/array-view-class.md)します。 `array` クラスは、オブジェクトの構築時にデータの詳細コピーを作成するコンテナー クラスです。 `array_view` クラスは、カーネル関数がデータにアクセスするときにデータをコピーするラッパー クラスです。 ソース デバイスでデータが必要になったときは、データがコピーして戻されます。
 
 ### <a name="array-class"></a>array クラス
 
-
-  `array` オブジェクトを構築するときに、データ セットへのポインターを含むコンストラクターを使用している場合、アクセラレータでデータの詳細コピーが作成されます。 カーネル関数は、アクセラレータ上のコピーを変更します。 カーネル関数の実行が終了すると、ソースのデータ構造にデータをコピーして戻す必要があります。 次の例では、ベクター内の各要素に 10 を乗算します。 カーネル関数が完了したら、 `vector conversion operator` vector オブジェクトにデータをコピーするために使用します。
+`array` オブジェクトを構築するときに、データ セットへのポインターを含むコンストラクターを使用している場合、アクセラレータでデータの詳細コピーが作成されます。 カーネル関数は、アクセラレータ上のコピーを変更します。 カーネル関数の実行が終了すると、ソースのデータ構造にデータをコピーして戻す必要があります。 次の例では、ベクター内の各要素に 10 を乗算します。 カーネル関数が完了したら、 `vector conversion operator` vector オブジェクトにデータをコピーするために使用します。
 
 ```cpp
 std::vector<int> data(5);
@@ -224,10 +219,7 @@ for (int i = 0; i < 5; i++)
 
 ### <a name="arrayview-class"></a>array_view クラス
 
-
-  `array_view` のメンバーは `array` クラスとほとんど同じですが、基になる動作は同じではありません。 
-  `array_view` コンストラクターに渡されるデータは、`array` コンストラクターの場合とは異なり、GPU に複製されません。 代わりに、カーネル関数が実行されたときに、データはアクセラレータにコピーされます。 したがって、同じデータを使用する `array_view` オブジェクトを 2 つ作成する場合、両方の `array_view` オブジェクトは同じメモリ空間を参照します。 この場合、マルチスレッド アクセスを同期する必要があります。 
-  `array_view` クラスを使用する主な利点は、必要な場合にのみデータが移動されることです。
+`array_view` のメンバーは `array` クラスとほとんど同じですが、基になる動作は同じではありません。 `array_view` コンストラクターに渡されるデータは、`array` コンストラクターの場合とは異なり、GPU に複製されません。 代わりに、カーネル関数が実行されたときに、データはアクセラレータにコピーされます。 したがって、同じデータを使用する `array_view` オブジェクトを 2 つ作成する場合、両方の `array_view` オブジェクトは同じメモリ空間を参照します。 この場合、マルチスレッド アクセスを同期する必要があります。 `array_view` クラスを使用する主な利点は、必要な場合にのみデータが移動されることです。
 
 ### <a name="comparison-of-array-and-arrayview"></a>array と array_view の比較
 
@@ -248,8 +240,7 @@ for (int i = 0; i < 5; i++)
 
 関連するアクセラレータがサポートする場合、`array` オブジェクトを使用して、共有メモリの使用のきめ細かな制御を指定できます。 アクセラレータが共有メモリをサポートするかどうかは、アクセラレータのによって決まります[supports_cpu_shared_memory](reference/accelerator-class.md#supports_cpu_shared_memory)を返すプロパティ**true**共有メモリがサポートされている場合。 共有メモリがサポートされている場合、既定[access_type 列挙](reference/concurrency-namespace-enums-amp.md#access_type)メモリは、アクセラレータ上での割り当てによって決定されます、`default_cpu_access_type`プロパティ。 既定では、`array` オブジェクトと `array_view` のオブジェクトはプライマリに関連する `access_type` と同じ `accelerator` を取得します。
 
-設定して、 [array::cpu_access_type データ メンバー](reference/array-class.md#cpu_access_type)のプロパティ、`array`明示的にきめ細かく制御できます、どのように共有メモリが使用できるように、ハードウェアのパフォーマンスのアプリを最適化することができますこの特性を使用して、その計算カーネルのメモリ アクセス パターンに基づいて。 
-  `array_view` は、関連付けられている `cpu_access_type` と同じ `array` を反映するか、または、array_view がデータ ソースを使用せずに構築される場合は、その `access_type` は、まずストレージを割り当てるようにする環境を反映します。 つまり、まずホスト (CPU) によってアクセスされた場合は、CPU データ ソースに対して作成されたかのように動作し、キャプチャによって関連付けられた `access_type` の `accelerator_view` を共有します。ただし、まず `accelerator_view` によってアクセスされた場合は、その `array` 上で作成された `accelerator_view` に対して作成されたかのように動作し、`array` の `access_type` を共有します。
+設定して、 [array::cpu_access_type データ メンバー](reference/array-class.md#cpu_access_type)のプロパティ、`array`明示的にきめ細かく制御できます、どのように共有メモリが使用できるように、ハードウェアのパフォーマンスのアプリを最適化することができますこの特性を使用して、その計算カーネルのメモリ アクセス パターンに基づいて。 `array_view` は、関連付けられている `cpu_access_type` と同じ `array` を反映するか、または、array_view がデータ ソースを使用せずに構築される場合は、その `access_type` は、まずストレージを割り当てるようにする環境を反映します。 つまり、まずホスト (CPU) によってアクセスされた場合は、CPU データ ソースに対して作成されたかのように動作し、キャプチャによって関連付けられた `access_type` の `accelerator_view` を共有します。ただし、まず `accelerator_view` によってアクセスされた場合は、その `array` 上で作成された `accelerator_view` に対して作成されたかのように動作し、`array` の `access_type` を共有します。
 
 次のコード例では、既定のアクセラレータが共有メモリをサポートし、異なる cpu_access_type 構成を持つ複数の配列を作成するかどうかを確認する方法を説明します。
 
@@ -323,14 +314,11 @@ void AddArrays() {
 }
 ```
 
-
-  `parallel_for_each` メソッドは、計算ドメインとラムダ式の 2 個の引数を使用します。
+`parallel_for_each` メソッドは、計算ドメインとラムダ式の 2 個の引数を使用します。
 
 *計算ドメイン*は、`extent`オブジェクトまたは`tiled_extent`の並列実行を作成するスレッドのセットを定義するオブジェクト。 計算ドメインの各要素について、1 つのスレッドが生成されます。 この場合、`extent` オブジェクトは 1 次元で、5 個の要素があります。 したがって、5 個のスレッドが開始されます。
 
-*ラムダ式*各スレッドで実行するコードを定義します。 Capture 句に`[=]`、ここでは、値によってキャプチャされたすべての変数がラムダ式の本体にアクセスすることを指定します。 `a`、 `b`、および`sum`します。 この例では、パラメーター リストは `index`という名前の 1 次元の `idx` 変数を作成します。 
-  `idx[0]` の値は、最初のスレッドでは 0、それ以降の各スレッドでは 1 ずつ増加します。 
-  `restrict(amp)` は、C++ AMP で高速化できる C++ 言語のサブセットのみが使用されることを示します。  Restrict 修飾子を持つ関数に関する制限事項が記載されて[制限 (C++ AMP)](../../cpp/restrict-cpp-amp.md)します。 詳細についてを参照してください、[ラムダ式の構文](../../cpp/lambda-expression-syntax.md)します。
+*ラムダ式*各スレッドで実行するコードを定義します。 Capture 句に`[=]`、ここでは、値によってキャプチャされたすべての変数がラムダ式の本体にアクセスすることを指定します。 `a`、 `b`、および`sum`します。 この例では、パラメーター リストは `index`という名前の 1 次元の `idx` 変数を作成します。 `idx[0]` の値は、最初のスレッドでは 0、それ以降の各スレッドでは 1 ずつ増加します。 `restrict(amp)` は、C++ AMP で高速化できる C++ 言語のサブセットのみが使用されることを示します。  Restrict 修飾子を持つ関数に関する制限事項が記載されて[制限 (C++ AMP)](../../cpp/restrict-cpp-amp.md)します。 詳細についてを参照してください、[ラムダ式の構文](../../cpp/lambda-expression-syntax.md)します。
 
 ラムダ式では、実行するコードを含めることも、別のカーネル関数を呼び出すこともできます。 カーネル関数には `restrict(amp)` 修飾子を含める必要があります。 次の例は前の例と同じですが、別のカーネル関数を呼び出します。
 
@@ -473,8 +461,7 @@ void MathExample() {
 
 C++ AMP には、アクセラレータ機能を使用するグラフィックスのプログラミング用に設計されたグラフィックス ライブラリが含まれます。 このライブラリは、ネイティブ グラフィックス機能をサポートするデバイスでのみ使用されます。 メソッドは、 [concurrency::graphics Namespace](../../parallel/amp/reference/concurrency-graphics-namespace.md)に含まれると、 \<amp_graphics.h > ヘッダー ファイル。 グラフィックス ライブラリの主要コンポーネントは次のとおりです。
 
-- [texture クラス](../../parallel/amp/reference/texture-class.md):Texture クラスを使用して、メモリまたはファイルからテクスチャを作成することができます。 テクスチャは、データが含まれていると、割り当てとコピーの構築に関して、C++ 標準ライブラリ内のコンテナーに似ているため、配列のようになります。 詳細については、「[C++ Standard Library Containers (C++ 標準ライブラリ コンテナ―)](../../standard-library/stl-containers.md)」をご覧ください。 
-  `texture` クラスのテンプレート パラメーターは、要素型とランクです。 ランクには 1、2、または 3 を指定できます。 要素型には、後で説明する short ベクター型のいずれかを指定できます。
+- [texture クラス](../../parallel/amp/reference/texture-class.md):Texture クラスを使用して、メモリまたはファイルからテクスチャを作成することができます。 テクスチャは、データが含まれていると、割り当てとコピーの構築に関して、C++ 標準ライブラリ内のコンテナーに似ているため、配列のようになります。 詳細については、「[C++ Standard Library Containers (C++ 標準ライブラリ コンテナ―)](../../standard-library/stl-containers.md)」をご覧ください。 `texture` クラスのテンプレート パラメーターは、要素型とランクです。 ランクには 1、2、または 3 を指定できます。 要素型には、後で説明する short ベクター型のいずれかを指定できます。
 
 - [writeonly_texture_view クラス](../../parallel/amp/reference/writeonly-texture-view-class.md):すべてのテクスチャに書き込み専用のアクセスを提供します。
 
@@ -490,7 +477,7 @@ C++ AMP には、アクセラレータ機能を使用するグラフィックス
 
 - [Bing マップ トリップ オプティマイザーでは、JavaScript および C++ での Windows ストア アプリ](http://go.microsoft.com/fwlink/p/?linkid=249078)
 
-- [Windows ランタイムを使用して C# から C++ AMP を使用する方法](http://go.microsoft.com/fwlink/p/?linkid=249080)
+- [Windows ランタイムを使用して c# から C++ AMP を使用する方法](http://go.microsoft.com/fwlink/p/?linkid=249080)
 
 - [C# から C++ AMP を使用する方法](http://go.microsoft.com/fwlink/p/?linkid=249081)
 

@@ -25,11 +25,11 @@ helpviewer_keywords:
 - _query_new_mode function
 ms.assetid: e185c5f9-b73b-4257-8eff-b47648374768
 ms.openlocfilehash: 327f22c847793316bd126721b4a66846d7da84dd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620026"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62358074"
 ---
 # <a name="querynewmode"></a>_query_new_mode
 
@@ -49,7 +49,7 @@ int _query_new_mode(
 
 ## <a name="remarks"></a>Remarks
 
-C++ **_query_new_mode**関数が C++ によって設定された新しいハンドラー モードを示す整数を返します[_set_new_mode](set-new-mode.md)機能[malloc](malloc.md)します。 新しいハンドラー モードを示す、メモリの割り当てに失敗したときか**malloc**によって設定された新しいハンドラー ルーチンを呼び出すには、 [_set_new_handler](set-new-handler.md)します。 既定では、 **malloc**失敗によって新しいハンドラー ルーチンを呼び出しません。 使用することができます **_set_new_mode**この動作をオーバーライドする障害で**malloc**に同じ新しいハンドラー ルーチンを呼び出す方法、**新しい**演算子に失敗した場合メモリを割り当てます。 詳細については、C++ 言語リファレンスの「[new および delete 演算子](../../cpp/new-and-delete-operators.md)」の説明をご覧ください。
+C++ **_Query_new_mode**によって設定された新しいハンドラー モードを示す整数を返す、 C++ [_set_new_mode](set-new-mode.md)機能[malloc](malloc.md)します。 新しいハンドラー モードを示す、メモリの割り当てに失敗したときか**malloc**によって設定された新しいハンドラー ルーチンを呼び出すには、 [_set_new_handler](set-new-handler.md)します。 既定では、 **malloc**失敗によって新しいハンドラー ルーチンを呼び出しません。 使用することができます **_set_new_mode**この動作をオーバーライドする障害で**malloc**に同じ新しいハンドラー ルーチンを呼び出す方法、**新しい**演算子に失敗した場合メモリを割り当てます。 詳細については、C++ 言語リファレンスの「[new および delete 演算子](../../cpp/new-and-delete-operators.md)」の説明をご覧ください。
 
 ## <a name="requirements"></a>必要条件
 

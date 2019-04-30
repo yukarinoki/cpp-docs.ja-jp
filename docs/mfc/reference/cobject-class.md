@@ -21,11 +21,11 @@ helpviewer_keywords:
 - CObject [MFC], Serialize
 ms.assetid: 95e9acd3-d9eb-4ac0-b52b-ca4a501a7a3a
 ms.openlocfilehash: 515c4e90ee6ab77a6c7c1ae108393ea1aafb7c17
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304068"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62388320"
 ---
 # <a name="cobject-class"></a>CObject クラス
 
@@ -117,7 +117,7 @@ virtual void AssertValid() const;
 
 [!code-cpp[NVC_MFCCObjectSample#7](../../mfc/codesnippet/cpp/cobject-class_1.cpp)]
 
-別の例では、[AfxDoForAllObjects](diagnostic-services.md#afxdoforallobjects)を参照してください。
+別の例では、次を参照してください。 [AfxDoForAllObjects](diagnostic-services.md#afxdoforallobjects)します。
 
 ##  <a name="cobject"></a>  CObject::CObject
 
@@ -137,7 +137,7 @@ CObject(const CObject& objectSrc);
 
 既定のバージョンは、派生クラスのコンス トラクターによって自動的に呼び出されます。
 
-クラスがシリアル化可能な場合 (が組み込まれて IMPLEMENT_SERIAL マクロ)、クラス宣言で既定のコンス トラクター (引数なしのコンス トラクター) があります。 既定のコンス トラクターを必要がない場合、private を宣言または「空」のコンス トラクターを保護します。 詳細については、[を使用して CObject](../../mfc/using-cobject.md)を参照してください。
+クラスがシリアル化可能な場合 (が組み込まれて IMPLEMENT_SERIAL マクロ)、クラス宣言で既定のコンス トラクター (引数なしのコンス トラクター) があります。 既定のコンス トラクターを必要がない場合、private を宣言または「空」のコンス トラクターを保護します。 詳細については、次を参照してください。[を使用して CObject](../../mfc/using-cobject.md)します。
 
 標準 C++ 既定クラスのコピー コンス トラクターは、メンバー間でコピーします。 プライベートのプレゼンス`CObject`コピー コンス トラクターで、クラスのコピー コンス トラクターが必要なは利用できない場合、コンパイラ エラー メッセージが保証されます。 クラスには、この機能が必要な場合にそのため、コピー コンス トラクターを提供する必要があります。
 

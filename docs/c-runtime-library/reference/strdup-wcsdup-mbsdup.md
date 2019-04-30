@@ -43,18 +43,18 @@ helpviewer_keywords:
 - _tcsdup function
 ms.assetid: 8604f8bb-95e9-45d3-93ef-20397ebf247a
 ms.openlocfilehash: 094843fdb1432aa58ec04b3b4e39ac8861b928ec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461517"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62353898"
 ---
 # <a name="strdup-wcsdup-mbsdup"></a>_strdup、_wcsdup、_mbsdup
 
 文字列を複製します。
 
 > [!IMPORTANT]
-> **_mbsdup** Windows ランタイムで実行するアプリケーションでは使用できません。 詳細については、[ユニバーサル Windows プラットフォーム アプリでサポートされない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)を参照してください。
+> **_mbsdup** Windows ランタイムで実行するアプリケーションでは使用できません。 詳細については、次を参照してください。[ユニバーサル Windows プラットフォーム アプリでサポートされない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)します。
 
 ## <a name="syntax"></a>構文
 

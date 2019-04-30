@@ -31,11 +31,11 @@ helpviewer_keywords:
 - cargl function
 ms.assetid: 610d6a93-b929-46ab-a966-b77db0b804be
 ms.openlocfilehash: 584732594cd9ca9579907986e3dc3b5f3dbf52c0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665596"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62340717"
 ---
 # <a name="carg-cargf-cargl"></a>carg、cargf、cargl
 
@@ -72,7 +72,7 @@ long double cargl(
 
 ## <a name="remarks"></a>Remarks
 
-オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **carg**を受け取る **_Fcomplex**または **_Lcomplex**値、および戻り値**float**または**長い****二重**値。 C プログラムで**carg**は常に、 **_Dcomplex**値を返します、**二重**値。
+C++では、オーバー ロードのオーバー ロードを呼び出すことができます**carg**を受け取る **_Fcomplex**または **_Lcomplex**値、および戻り値**float**または**長い****二重**値。 C プログラムで**carg**は常に、 **_Dcomplex**値を返します、**二重**値。
 
 ## <a name="requirements"></a>必要条件
 

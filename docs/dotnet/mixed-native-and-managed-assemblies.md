@@ -13,11 +13,11 @@ helpviewer_keywords:
 - native code [C++], .NET interoperatibility
 ms.assetid: 4299dfce-392f-4933-8bf0-5da2f0d1c282
 ms.openlocfilehash: 78e95177282804369bac2065582a06b8acbc975b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428678"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384856"
 ---
 # <a name="mixed-native-and-managed-assemblies"></a>混在 (ネイティブおよびマネージ) アセンブリ
 
@@ -31,10 +31,10 @@ Visual C を使用してマネージの混在のアセンブリの生成をサ�
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-[方法:/clr:pure に移行](../dotnet/how-to-migrate-to-clr.md)<br/>
+[方法: /Clr:pure に移行します。](../dotnet/how-to-migrate-to-clr.md)<br/>
 アプリケーションへの .NET 機能の導入またはアプリケーション内の .NET 機能の更新を行うための推奨処理手順について説明します。
 
-[方法: MFC および ATL コードを使用して、/clr のコンパイル](../dotnet/how-to-compile-mfc-and-atl-code-by-using-clr.md)<br/>
+[方法: MFC および ATL コードを使用して、/clr をコンパイルします。](../dotnet/how-to-compile-mfc-and-atl-code-by-using-clr.md)<br/>
 共通言語ランタイムをターゲットに既存の MFC および ATL プログラムをコンパイルする方法について説明します。
 
 [混在アセンブリの初期化](../dotnet/initialization-of-mixed-assemblies.md)<br/>

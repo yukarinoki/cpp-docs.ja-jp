@@ -51,11 +51,11 @@ helpviewer_keywords:
 - _CRTDBG_CHECK_CRT_DF macro
 ms.assetid: b5657ffb-6178-4cbf-9886-1af904ede94c
 ms.openlocfilehash: dcb8e37090e4c15ba849e76ca1cb1cc646a7bcc0
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556804"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62348186"
 ---
 # <a name="crtsetdbgflag"></a>_CrtSetDbgFlag
 
@@ -71,7 +71,7 @@ int _CrtSetDbgFlag(
 
 ### <a name="parameters"></a>パラメーター
 
-*されたフラグ*<br/>
+*newFlag*<br/>
 **_crtDbgFlag** の新しい状態。
 
 ## <a name="return-value"></a>戻り値
@@ -86,11 +86,11 @@ int _CrtSetDbgFlag(
 
 |ビット フィールド|既定値|説明|
 |---------------|-------------|-----------------|
-|**_CRTDBG_ALLOC_MEM_DF**|ON|オン: デバッグ ヒープ割り当てと、メモリ ブロック型識別子の使用をなど有効 **_CLIENT_BLOCK**します。 オフ: ヒープのリンク リストに新しい割り当てを追加しますが、ブロックの型を **_IGNORE_BLOCK** に設定します。<br /><br /> ヒープ頻度チェック マクロのいずれかと組み合わせることもできます。|
-|**_CRTDBG_CHECK_ALWAYS_DF**|OFF|オン: 割り当て要求および解放要求のたびに [_CrtCheckMemory](crtcheckmemory.md) を呼び出します。 オフ: **_CrtCheckMemory**明示的に呼び出す必要があります。<br /><br /> このフラグが設定されている場合、ヒープ頻度チェック マクロは効果がありません。|
-|**_CRTDBG_CHECK_CRT_DF**|OFF|オン: 含める **_CRT_BLOCK**リークの検出とメモリの状態の種類の操作の差します。 オフ: ランタイム ライブラリによって内部的に使用されるメモリは、これらの操作では無視されます。<br /><br /> ヒープ頻度チェック マクロのいずれかと組み合わせることもできます。|
-|**_CRTDBG_DELAY_FREE_MEM_DF**|OFF|オン: 解放されたメモリ ブロックをヒープのリンク リストに保持し、それらに **_FREE_BLOCK** 型を割り当てて、バイト値 0xDD を設定します。 オフ: 解放されたブロックをヒープのリンク リストに保持しません。<br /><br /> ヒープ頻度チェック マクロのいずれかと組み合わせることもできます。|
-|**_CRTDBG_LEAK_CHECK_DF**|OFF|オン: [_CrtDumpMemoryLeaks](crtdumpmemoryleaks.md) を呼び出すことによってプログラムの終了時に自動リーク チェックを実行し、アプリケーションが割り当てたすべてのメモリを解放できなかった場合はエラー レポートを生成します。 オフ: プログラムの終了時に自動的なリーク チェックを行いません。<br /><br /> ヒープ頻度チェック マクロのいずれかと組み合わせることもできます。|
+|**_CRTDBG_ALLOC_MEM_DF**|ON|オン:など、デバッグ ヒープ割り当てと、メモリ ブロック型識別子の使用を有効にする **_CLIENT_BLOCK**します。 オフします。ヒープのリンクのリストに新しい割り当てを追加、設定が、ブロックの型を **_IGNORE_BLOCK**します。<br /><br /> ヒープ頻度チェック マクロのいずれかと組み合わせることもできます。|
+|**_CRTDBG_CHECK_ALWAYS_DF**|OFF|オン:呼び出す[_CrtCheckMemory](crtcheckmemory.md)すべて割り当てと解放の要求にします。 オフ: **_CrtCheckMemory**明示的に呼び出す必要があります。<br /><br /> このフラグが設定されている場合、ヒープ頻度チェック マクロは効果がありません。|
+|**_CRTDBG_CHECK_CRT_DF**|OFF|オン:含める **_CRT_BLOCK**リークの検出とメモリの状態の種類の操作の差します。 オフします。これらの操作では、ランタイム ライブラリによって内部的に使用されるメモリは無視されます。<br /><br /> ヒープ頻度チェック マクロのいずれかと組み合わせることもできます。|
+|**_CRTDBG_DELAY_FREE_MEM_DF**|OFF|オン:解放されたメモリ ブロックをヒープのリンク リストに保持するを割り当てて、 **_FREE_BLOCK**を入力し、バイト値 0 xdd を設定します。 オフします。解放されたブロックをヒープのリンク リストに保持しません。<br /><br /> ヒープ頻度チェック マクロのいずれかと組み合わせることもできます。|
+|**_CRTDBG_LEAK_CHECK_DF**|OFF|オン:実行に自動リーク チェックを呼び出すことによってプログラムの終了時[_CrtDumpMemoryLeaks](crtdumpmemoryleaks.md)して、アプリケーションが割り当てたすべてのメモリを解放できなかった場合は、エラー レポートを生成します。 オフします。プログラムの終了時にリーク チェックを自動的に実行しません。<br /><br /> ヒープ頻度チェック マクロのいずれかと組み合わせることもできます。|
 
 **ヒープ頻度チェック マクロ**
 

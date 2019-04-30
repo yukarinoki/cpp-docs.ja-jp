@@ -24,11 +24,11 @@ helpviewer_keywords:
 - setjmp function
 ms.assetid: 684a8b27-e8eb-455b-b4a8-733ca1cbd7d2
 ms.openlocfilehash: 9f1a2b71a7b8fc7603c36938879348dca16288e2
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57210511"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62356421"
 ---
 # <a name="setjmp"></a>setjmp
 
@@ -61,7 +61,7 @@ int setjmp(
 
 **Microsoft 固有の仕様**
 
-Windows、Microsoft C コードで**longjmp**例外処理コードと同じスタック アンワインド セマンティクスを使用します。 C++ の例外が発生することと同じ場所で使用しても安全になります。 ただし、この使用法は、ポータブルでないし、いくつかの重要な注意事項が付属しています。 詳細については、[longjmp](longjmp.md)を参照してください。
+Windows、Microsoft C コードで**longjmp**例外処理コードと同じスタック アンワインド セマンティクスを使用します。 C++ の例外が発生することと同じ場所で使用しても安全になります。 ただし、この使用法は、ポータブルでないし、いくつかの重要な注意事項が付属しています。 詳細については、次を参照してください。 [longjmp](longjmp.md)します。
 
 **Microsoft 固有の仕様はここまで**
 

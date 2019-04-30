@@ -3,11 +3,11 @@ title: その他の言語との相互運用 (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: f74db99f-7dbd-421e-99e6-c34bbebf5cea
 ms.openlocfilehash: 72e1f08464085197bd3581405f6b8d31749dbeff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551192"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62375237"
 ---
 # <a name="interoperating-with-other-languages-ccx"></a>その他の言語との相互運用 (C++/CX)
 

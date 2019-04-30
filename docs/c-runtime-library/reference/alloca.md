@@ -24,11 +24,11 @@ helpviewer_keywords:
 - _alloca function
 ms.assetid: 74488eb1-b71f-4515-88e1-cdd03b6f8225
 ms.openlocfilehash: 7c083e791301d3224709a5fc6c711ceaa6397d38
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668075"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62341601"
 ---
 # <a name="alloca"></a>_alloca
 
@@ -57,7 +57,7 @@ void *_alloca(
 
 **_alloca**割り当てます*サイズ*プログラム スタックからのバイト数。 (ときではなく、割り当てがスコープ外に渡すだけです)、呼び出し元関数の終了時に割り当てられた領域は自動的に解放されます。 そのため、によって返されるポインター値を渡していない **_alloca**への引数として[無料](free.md)します。
 
-明示的に呼び出すには制限 **_alloca**例外ハンドラー (EH)。 x86 クラスのプロセッサで動作する EH ルーチンは、自身のメモリ フレーム内で処理されるため、外側の関数のスタック ポインターが示す現在位置を基にしたメモリ領域ではタスクを実行しません。 最も一般的な実装には、Windows NT 構造化例外処理 (SEH) や C++ catch 句の式などがあります。 そのため、明示的に呼び出す **_alloca**呼び出した EH ルーチンへの復帰時にプログラム エラー シナリオ結果は次のいずれかで。
+明示的に呼び出すには制限 **_alloca**例外ハンドラー (EH)。 X86 クラスのプロセッサ上で実行される EH ルーチンは、独自のメモリ フレームで動作します。外側の関数のスタック ポインターの現在の場所には基づいていないメモリ領域でタスクを実行します。 最も一般的な実装には、Windows NT 構造化例外処理 (SEH) や C++ catch 句の式などがあります。 そのため、明示的に呼び出す **_alloca**呼び出した EH ルーチンへの復帰時にプログラム エラー シナリオ結果は次のいずれかで。
 
 - Windows NT SEH 例外フィルター式: `__except ( _alloca() )`
 

@@ -26,11 +26,11 @@ helpviewer_keywords:
 - transferring control to error handler
 ms.assetid: 1d1781b6-5cf8-486a-b430-f365e0bb023f
 ms.openlocfilehash: bc7718503f59c69868a75cac9383286a548fc307
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640311"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62356500"
 ---
 # <a name="setnewhandler"></a>_set_new_handler
 
@@ -53,7 +53,7 @@ _PNH _set_new_handler( _PNH pNewHandler );
 
 ## <a name="remarks"></a>Remarks
 
-C++ **_set_new_handler**関数を場合は、制御を獲得する例外処理関数を指定します、**新しい**演算子がメモリの割り当てに失敗します。 場合**新しい**失敗した場合、実行時のシステムは自動的に例外処理関数に引数として渡された呼び出し **_set_new_handler**します。 **_PNH**New.h に定義されている型を返す関数へのポインターには、 **int**型の引数を取ります**size_t**します。 使用**size_t**に割り当てられる領域の量を指定します。
+C++ **_Set_new_handler**関数を場合は、制御を獲得する例外処理関数を指定します、**新しい**演算子がメモリの割り当てに失敗します。 場合**新しい**失敗した場合、実行時のシステムは自動的に例外処理関数に引数として渡された呼び出し **_set_new_handler**します。 **_PNH**New.h に定義されている型を返す関数へのポインターには、 **int**型の引数を取ります**size_t**します。 使用**size_t**に割り当てられる領域の量を指定します。
 
 既定のハンドラーはありません。
 

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - calling multiple functions in parallel [Concurrency Runtime]
 ms.assetid: a6aea69b-d647-4b7e-bf3b-e6a6a9880072
 ms.openlocfilehash: d618b5f202c6aaf454a60f4f37211d9000600562
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293525"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62345657"
 ---
 # <a name="how-to-use-parallelinvoke-to-execute-parallel-operations"></a>方法: Parallel.invoke to Execute Parallel Operations を使用してください。
 
@@ -22,13 +22,11 @@ ms.locfileid: "57293525"
 
 [!code-cpp[concrt-parallel-word-mining#1](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-invoke-to-execute-parallel-operations_1.cpp)]
 
-
-  `lengthy_operation1`、`lengthy_operation2`、および `lengthy_operation3` の各関数が `MyDataType` 変数を変更しない場合は、追加の修正を行わなくても、これらの関数を並列に実行できます。
+`lengthy_operation1`、`lengthy_operation2`、および `lengthy_operation3` の各関数が `MyDataType` 変数を変更しない場合は、追加の修正を行わなくても、これらの関数を並列に実行できます。
 
 ## <a name="example"></a>例
 
-次の例では、並列で実行するように前の例を修正します。 
-  `parallel_invoke` アルゴリズムは、各タスクを並列に実行し、すべてのタスクが終了した後に制御を戻します。
+次の例では、並列で実行するように前の例を修正します。 `parallel_invoke` アルゴリズムは、各タスクを並列に実行し、すべてのタスクが終了した後に制御を戻します。
 
 [!code-cpp[concrt-parallel-word-mining#2](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-invoke-to-execute-parallel-operations_2.cpp)]
 
@@ -64,11 +62,9 @@ The following palindromes appear in the text:
     keels sleek
 ```
 
-この例では、`parallel_invoke` アルゴリズムを使用して、同じデータ ソースに対して作用する複数の関数を呼び出します。 
-  `parallel_invoke` アルゴリズムを使用すると、同じデータ ソースに対して作用する関数だけでなく、任意の関数セットを並列に呼び出すことができます。
+この例では、`parallel_invoke` アルゴリズムを使用して、同じデータ ソースに対して作用する複数の関数を呼び出します。 `parallel_invoke` アルゴリズムを使用すると、同じデータ ソースに対して作用する関数だけでなく、任意の関数セットを並列に呼び出すことができます。
 
-
-  `parallel_invoke` アルゴリズムでは各処理関数を並列で呼び出すため、そのパフォーマンスは (ランタイムが各関数を別々のプロセッサで処理する場合に) 最も時間がかかる関数によって制限されます。 この例で、使用できるプロセッサの数よりも多くのタスクを並列で実行すると、各プロセッサで複数のタスクを実行できます。 その場合のパフォーマンスは、最も時間のかかるタスクのグループによって制限されます。
+`parallel_invoke` アルゴリズムでは各処理関数を並列で呼び出すため、そのパフォーマンスは (ランタイムが各関数を別々のプロセッサで処理する場合に) 最も時間がかかる関数によって制限されます。 この例で、使用できるプロセッサの数よりも多くのタスクを並列で実行すると、各プロセッサで複数のタスクを実行できます。 その場合のパフォーマンスは、最も時間のかかるタスクのグループによって制限されます。
 
 この例では 3 つのタスクを並列に実行するので、4 つ以上のプロセッサを搭載したコンピューターではパフォーマンスの向上を期待できません。 パフォーマンスを向上させるには、最も時間のかかるタスクを小さなタスクに分割し、それらのタスクを並列に実行します。
 

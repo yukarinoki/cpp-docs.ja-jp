@@ -47,11 +47,11 @@ helpviewer_keywords:
 - string conversion, to floating point values
 ms.assetid: eb513241-c9a9-4f5c-b7e7-a49b14abfb75
 ms.openlocfilehash: 6c2ec158ac0b75a861b5b226d33de113d76988cb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471176"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62341354"
 ---
 # <a name="atof-atofl-wtof-wtofl"></a>atof、_atof_l、_wtof、_wtof_l
 
@@ -98,7 +98,7 @@ double _wtof_l(
 
 *Str*引数**atof**と **_wtof**は次の形式があります。
 
-[*空白*] [*サインオン*] [*桁*] [__.__*桁*] [{**e** &#124; **E** } [*サインオン*]*桁*]
+[*whitespace*] [*sign*] [*digits*] [__.__*digits*] [ {**e** &#124; **E** }[*sign*]*digits*]
 
 A*空白*は無視されますスペースまたはタブ文字含まれています。*記号*はプラス (+) またはマイナス (–) と*桁*は 1 つ以上の 10 進数字。 小数点の前に数字がない場合は、少なくとも 1 つの数字が小数点の後に必要です。 10 進数字の後に、指数部の開始文字で構成されること (**e**、または**E**) および必要に応じて符号付き 10 進整数。
 

@@ -44,11 +44,11 @@ helpviewer_keywords:
 - _wtol function
 ms.assetid: cedfc21c-2d64-4e9c-bd04-bdf60b12db46
 ms.openlocfilehash: 486b6dc3bdfbbaf4b7becadde76768a0bb1c7c00
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537190"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62347809"
 ---
 # <a name="atol-atoll-wtol-wtoll"></a>atol、_atol_l、_wtol、_wtol_l
 
@@ -95,7 +95,7 @@ long _wtol_l(
 
 *Str*引数**atol**は次の形式があります。
 
-> [*空白*] [*サインオン*] [*桁*]
+> [*whitespace*] [*sign*] [*digits*]]
 
 A*空白*は無視されますスペースまたはタブ文字含まれています。*記号*はプラス (+) またはマイナス (–) と*桁*は 1 つ以上の数字。
 

@@ -23,18 +23,18 @@ helpviewer_keywords:
 - abort function
 - processes, aborting
 ms.openlocfilehash: d8cb190e36a64e8bd8cfcb75bc9a19c2a394fc48
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532796"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62342199"
 ---
 # <a name="abort"></a>を呼び出してプログラム実行を終了する際、
 
 現在のプロセスを中止し、エラー コードを返します。
 
 > [!NOTE]
-> テスト シナリオまたはデバッグ シナリオでは、を除き、Microsoft Store アプリまたはユニバーサル Windows プラットフォーム (UWP) アプリをシャット ダウンは、このメソッドを使用しないでください。 ストア アプリを終了するプログラムや UI の方法はに従って許可されていません、 [Microsoft Store ポリシー](/legal/windows/agreements/store-policies)します。 詳細については、[UWP アプリのライフ サイクル](/windows/uwp/launch-resume/app-lifecycle)を参照してください。
+> テスト シナリオまたはデバッグ シナリオでは、を除き、Microsoft Store アプリまたはユニバーサル Windows プラットフォーム (UWP) アプリをシャット ダウンは、このメソッドを使用しないでください。 ストア アプリを終了するプログラムや UI の方法はに従って許可されていません、 [Microsoft Store ポリシー](/legal/windows/agreements/store-policies)します。 詳細については、次を参照してください。 [UWP アプリのライフ サイクル](/windows/uwp/launch-resume/app-lifecycle)します。
 
 ## <a name="syntax"></a>構文
 

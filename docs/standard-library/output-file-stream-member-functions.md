@@ -5,11 +5,11 @@ helpviewer_keywords:
 - output streams [C++], member functions
 ms.assetid: 38aaf710-8035-4a34-a0c4-123a5327f28a
 ms.openlocfilehash: eba627c69437754a9c0a819167443aa00c025fef
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50621768"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62370841"
 ---
 # <a name="output-file-stream-member-functions"></a>出力ファイル ストリームのメンバー関数
 
@@ -109,7 +109,7 @@ int main( )
 |[good](basic-ios-class.md#good)|エラー条件 (回復不可能かどうかを問わず) がなく、ファイルの終わりフラグが設定されていない場合は **true** を返します。|
 |[eof](basic-ios-class.md#eof)|ファイルの終わり条件で **true** を返します。|
 |[clear](basic-ios-class.md#clear)|内部エラー状態を設定します。 既定の引数を指定して呼び出すと、すべてのエラー ビットがクリアされます。|
-|[rdstate](basic-ios-class.md #rdstate|現在のエラー状態を返します。|
+|[rdstate](basic-ios-class.md#rdstate|現在のエラー状態を返します。|
 
 **!** 同じ機能を実行する演算子をオーバー ロード、`fail`関数。 したがって次のような式があるとします。
 

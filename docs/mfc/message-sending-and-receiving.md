@@ -10,11 +10,11 @@ helpviewer_keywords:
 - messages [MFC], sending
 ms.assetid: 9ce189cb-b259-4c3b-b6f2-9cfbed18b98b
 ms.openlocfilehash: bda261f4141a7ceb4e678535d9012650818fabce
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57274909"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384050"
 ---
 # <a name="message-sending-and-receiving"></a>メッセージの送信と受信
 
@@ -30,7 +30,7 @@ ms.locfileid: "57274909"
 
 メッセージまたはコマンドを受信できる各オブジェクトには、独自のメッセージをメッセージやコマンドのハンドラーの名前のマップがあります。
 
-コマンド ターゲット オブジェクトを受信すると、メッセージまたはコマンドの一致をメッセージ マップを検索します。 メッセージのハンドラーが見つかると、ハンドラーを呼び出します。 メッセージ マップを検索する方法の詳細については、[方法、フレームワークのメッセージ マップ検索](../mfc/how-the-framework-searches-message-maps.md)を参照してください。 図をもう一度参照してください。[フレームワークにおけるコマンド](../mfc/user-interface-objects-and-command-ids.md)します。
+コマンド ターゲット オブジェクトを受信すると、メッセージまたはコマンドの一致をメッセージ マップを検索します。 メッセージのハンドラーが見つかると、ハンドラーを呼び出します。 メッセージ マップを検索する方法の詳細については、次を参照してください。[方法、フレームワークのメッセージ マップ検索](../mfc/how-the-framework-searches-message-maps.md)します。 図をもう一度参照してください。[フレームワークにおけるコマンド](../mfc/user-interface-objects-and-command-ids.md)します。
 
 ## <a name="see-also"></a>関連項目
 

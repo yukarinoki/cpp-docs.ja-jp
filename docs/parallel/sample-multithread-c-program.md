@@ -3,15 +3,15 @@ title: マルチスレッドの C サンプル プログラム
 ms.date: 11/04/2016
 ms.assetid: 4706f6cd-ff9c-4dbf-99a2-1c999b568f17
 ms.openlocfilehash: 560fdd9e1d5633a240ada8979dc059a901690476
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293226"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62363025"
 ---
 # <a name="sample-multithread-c-program"></a>マルチスレッドの C サンプル プログラム
 
-Bounce.c は新たに作成するサンプルのマルチ スレッド プログラム スレッドごとに、文字`a`または`A`は型指定されています。 各スレッドは、それぞれ異なる色のハッピー フェイスを画面上で移動します。 最大で 32 のスレッドを作成できます。 プログラムの正常終了が発生したときに`q`または`Q`は型指定します。 コンパイルと Bounce.c のリンクについては、[のコンパイルとリンクのマルチ スレッド プログラム](compiling-and-linking-multithread-programs.md)を参照してください。
+Bounce.c は新たに作成するサンプルのマルチ スレッド プログラム スレッドごとに、文字`a`または`A`は型指定されています。 各スレッドは、それぞれ異なる色のハッピー フェイスを画面上で移動します。 最大で 32 のスレッドを作成できます。 プログラムの正常終了が発生したときに`q`または`Q`は型指定します。 コンパイルと Bounce.c のリンクについては、次を参照してください。[のコンパイルとリンクのマルチ スレッド プログラム](compiling-and-linking-multithread-programs.md)します。
 
 ## <a name="example"></a>例
 

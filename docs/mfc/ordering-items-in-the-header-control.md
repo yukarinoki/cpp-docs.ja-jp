@@ -13,11 +13,11 @@ helpviewer_keywords:
 - header controls [MFC], ordering items
 ms.assetid: 5aaef872-75b5-49c5-8fed-6f9a81fca812
 ms.openlocfilehash: bae351d921c25993d6b7029f9052e1938179673b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57282022"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392651"
 ---
 # <a name="ordering-items-in-the-header-control"></a>ヘッダー コントロールの項目の並べ替え
 
@@ -31,7 +31,7 @@ ms.locfileid: "57282022"
 
    特定のヘッダー項目のインデックス値を取得します。
 
-に加えて、前のメンバー関数は、HDS_DRAGDROP 形式は、ドラッグ アンド ドロップのヘッダー コントロールのヘッダー項目にユーザーをできます。 詳細については、[ヘッダー項目に対するドラッグ アンド ドロップのサポートを提供する](../mfc/providing-drag-and-drop-support-for-header-items.md)を参照してください。
+に加えて、前のメンバー関数は、HDS_DRAGDROP 形式は、ドラッグ アンド ドロップのヘッダー コントロールのヘッダー項目にユーザーをできます。 詳細については、次を参照してください。[ヘッダー項目に対するドラッグ アンド ドロップのサポートを提供する](../mfc/providing-drag-and-drop-support-for-header-items.md)します。
 
 ## <a name="see-also"></a>関連項目
 

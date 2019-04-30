@@ -5,15 +5,15 @@ f1_keywords:
 - vc.tables.runtime
 ms.assetid: c2169b0e-cd86-489a-a2fa-2ee15c03b5c2
 ms.openlocfilehash: 855af5b7518ba36418d58f1dc2ac5f0bb6e54208
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55703117"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62340340"
 ---
 # <a name="ucrt-alphabetical-function-reference"></a>UCRT のアルファベット順の関数リファレンス
 
-ルーチンがユニバーサル C ランタイム (UCRT、だけで多くの場合、CRT) ライブラリのリファレンス ドキュメントがアルファベット順に配置されています。 機能に基づいた CRT ルーチンを検索するには、[カテゴリ別ユニバーサル C ランタイム ルーチン](../../c-runtime-library/run-time-routines-by-category.md)を参照してください。
+ルーチンがユニバーサル C ランタイム (UCRT、だけで多くの場合、CRT) ライブラリのリファレンス ドキュメントがアルファベット順に配置されています。 機能に基づいた CRT ルーチンを検索するには、次を参照してください。[カテゴリ別ユニバーサル C ランタイム ルーチン](../../c-runtime-library/run-time-routines-by-category.md)します。
 
 ## <a name="a"></a>A
 

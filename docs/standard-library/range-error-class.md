@@ -7,11 +7,11 @@ helpviewer_keywords:
 - range_error class
 ms.assetid: 8afb3e88-fc49-4213-b096-ed63d7aea37c
 ms.openlocfilehash: a4b7e90e5806713408c6779b288cafe008e2b4ed
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50439502"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62369807"
 ---
 # <a name="rangeerror-class"></a>range_error クラス
 
@@ -29,7 +29,7 @@ public:
 
 ## <a name="remarks"></a>Remarks
 
-によって返される値[何](../standard-library/exception-class.md)のコピーである`message.data`します。 詳細については、[basic_string::data](../standard-library/basic-string-class.md#data)を参照してください。
+によって返される値[何](../standard-library/exception-class.md)のコピーである`message.data`します。 詳細については、次を参照してください。 [basic_string::data](../standard-library/basic-string-class.md#data)します。
 
 ## <a name="example"></a>例
 

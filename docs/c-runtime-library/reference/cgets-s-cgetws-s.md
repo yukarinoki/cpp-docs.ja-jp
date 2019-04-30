@@ -31,11 +31,11 @@ helpviewer_keywords:
 - cgetws_s function
 ms.assetid: 38b74897-afe6-4dd9-a43f-36a3c0d72c5c
 ms.openlocfilehash: 8341b775df3b9cbaececdfaa1f17e075d7c7416c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588540"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62340586"
 ---
 # <a name="cgetss-cgetwss"></a>_cgets_s、_cgetws_s
 
@@ -77,7 +77,7 @@ errno_t _cgetws_s(
 *numberOfElements*<br/>
 バッファーのサイズです。単位はバイト数またワイド文字数です。これは、読み取る最大の文字数でもあります。
 
-*読み取ら*<br/>
+*pSizeRead*<br/>
 実際に読み取った文字数。
 
 ## <a name="return-value"></a>戻り値
@@ -86,9 +86,9 @@ errno_t _cgetws_s(
 
 ### <a name="error-conditions"></a>エラー条件
 
-|*バッファー*|*numberOfElements*|*読み取ら*|Return|内容*バッファー*|
+|*バッファー*|*numberOfElements*|*pSizeRead*|Return|内容*バッファー*|
 |--------------|------------------------|-----------------|------------|--------------------------|
-|**NULL**|任意|任意|**EINVAL**|N/A|
+|**NULL**|任意|任意|**EINVAL**|適用なし|
 |いない**NULL**|ゼロ|任意|**EINVAL**|変更されない|
 |いない**NULL**|任意|**NULL**|**EINVAL**|長さゼロの文字列|
 

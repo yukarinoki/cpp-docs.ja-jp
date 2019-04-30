@@ -31,11 +31,11 @@ helpviewer_keywords:
 - ccosl function
 ms.assetid: 4ab936ac-ff85-49ac-9418-2b69cf5d4696
 ms.openlocfilehash: d1a94f7ad0bbd525480d344fa8ac5b3ee591a1b2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50489688"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62340444"
 ---
 # <a name="ccos-ccosf-ccosl"></a>ccos、ccosf、ccosl
 
@@ -72,7 +72,7 @@ _Lcomplex ccosl(
 
 ## <a name="remarks"></a>Remarks
 
-オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **ccos**を受け取って返す **_Fcomplex**と **_Lcomplex**値。 C プログラムで**ccos**は、 **_Dcomplex**値。
+C++では、オーバー ロードのオーバー ロードを呼び出すことができます**ccos**を受け取って返す **_Fcomplex**と **_Lcomplex**値。 C プログラムで**ccos**は、 **_Dcomplex**値。
 
 ## <a name="requirements"></a>必要条件
 

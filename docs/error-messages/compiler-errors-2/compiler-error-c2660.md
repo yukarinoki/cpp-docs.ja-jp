@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2660
 ms.assetid: 2e01a1db-4f00-4df6-a04d-cb6f70a6922b
 ms.openlocfilehash: 3f236f18faa92df660ed677df293373fe9f0800c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50626695"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62360373"
 ---
 # <a name="compiler-error-c2660"></a>コンパイラ エラー C2660
 
@@ -41,7 +41,7 @@ int main() {
 
 ## <a name="example"></a>例
 
-C2660 エラーは、マネージド型の Dispose メソッドを直接呼び出す場合にも発生することがあります。 詳細については、[デストラクターおよびファイナライザー](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)を参照してください。 次の例では、C2660 が生成されます。
+C2660 エラーは、マネージド型の Dispose メソッドを直接呼び出す場合にも発生することがあります。 詳細については、次を参照してください。[デストラクターおよびファイナライザー](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)します。 次の例では、C2660 が生成されます。
 
 ```
 // C2660_a.cpp

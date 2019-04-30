@@ -19,11 +19,11 @@ helpviewer_keywords:
 - CPen [MFC], GetLogPen
 ms.assetid: 93175a3a-d46c-4768-be8d-863254f97a5f
 ms.openlocfilehash: 8510c29571e6a370c7948ebe49e53b2c22dbfb9c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293720"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62372921"
 ---
 # <a name="cpen-class"></a>CPen クラス
 
@@ -285,8 +285,7 @@ static CPen* PASCAL FromHandle(HPEN hPen);
 
 ### <a name="remarks"></a>Remarks
 
-
-  `CPen` オブジェクトがハンドルに関連付けられていない場合は、一時的な `CPen` オブジェクトが生成され、関連付けられます。 この一時`CPen`すべて一時的なグラフィックを時間があるオブジェクトは削除まで、次回、アプリケーションは、イベント ループでのアイドル時間は、専用、オブジェクトが無効です。 つまり、一時オブジェクトは 1 つのウィンドウ メッセージを処理中に無効のみなりました。
+`CPen` オブジェクトがハンドルに関連付けられていない場合は、一時的な `CPen` オブジェクトが生成され、関連付けられます。 この一時`CPen`すべて一時的なグラフィックを時間があるオブジェクトは削除まで、次回、アプリケーションは、イベント ループでのアイドル時間は、専用、オブジェクトが無効です。 つまり、一時オブジェクトは 1 つのウィンドウ メッセージを処理中に無効のみなりました。
 
 ### <a name="example"></a>例
 

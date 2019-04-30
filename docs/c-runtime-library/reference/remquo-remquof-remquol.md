@@ -28,11 +28,11 @@ helpviewer_keywords:
 - remquo function
 ms.assetid: a1d3cb8b-8027-4cd3-8deb-04eb17f299fc
 ms.openlocfilehash: 4c7e93806600ff674baf186a66662aafdeceeaca
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605106"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62357552"
 ---
 # <a name="remquo-remquof-remquol"></a>remquo、remquof、remquol
 
@@ -59,7 +59,7 @@ long double remquo( long double numer, long double denom, int* quo ); /* C++ onl
 *denom*<br/>
 分母。
 
-*これまで*<br/>
+*quo*<br/>
 符号と商の近似値を持つ値を格納する整数へのポインター。
 
 ## <a name="return-value"></a>戻り値

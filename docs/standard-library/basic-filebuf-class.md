@@ -41,11 +41,11 @@ helpviewer_keywords:
 - std::basic_filebuf [C++], underflow
 ms.assetid: 3196ba5c-bf38-41bd-9a95-70323ddfca1a
 ms.openlocfilehash: 817e7fb2b434d06d6c0dfdfc100be8004f6fa4ef
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332648"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62377153"
 ---
 # <a name="basicfilebuf-class"></a>basic_filebuf クラス
 
@@ -405,7 +405,7 @@ basic_filebuf<Elem, Tr> *open(
 *_Filename*<br/>
 開くファイルの名前。
 
-*モード (_m)*<br/>
+*_Mode*<br/>
 [ios_base::openmode](../standard-library/ios-base-class.md#openmode) の列挙値のうちの 1 つ。
 
 *_Prot*<br/>
@@ -433,7 +433,7 @@ basic_filebuf<Elem, Tr> *open(
 
 場合**mode & ios_base::binary**は、関数は、0 以外の場合、追加`b`に`strmode`をテキスト ストリームではなくバイナリ ストリームを開きます。 によって返される値を格納し、`fopen`ファイル ポインターで`fp`します。 **mode & ios_base::ate** が 0 以外の値で、ファイル ポインターがNull ポインターでない場合、関数は `fseek`( **fp**, 0, `SEEK_END`) を呼び出してファイルの終端にストリームを配置します。 配置操作失敗したかどうか、関数呼び出し[閉じます](#close)( `fp`) し、ファイル ポインターに null ポインターを格納します。
 
-ファイル ポインターが Null ポインターでない場合、関数は[underflow](#underflow) と [overflow](#overflow) で使用するために、ファイル変換ファセット `use_facet`< `codecvt`< **Elem**, `char`, **traits_type::**[state_type](../standard-library/char-traits-struct.md#state_type)> >( [getloc](../standard-library/basic-streambuf-class.md#getloc)) を決定します。
+ファイル ポインターが null ポインターではない場合、関数は、ファイル変換ファセットを指定できます。`use_facet`< `codecvt`< **Elem**、 `char`、 **traits_type::**[state_type](../standard-library/char-traits-struct.md#state_type)>> ( [getloc](../standard-library/basic-streambuf-class.md#getloc)) で使用するため[アンダー フロー](#underflow)と[オーバーフロー](#overflow)します。
 
 ファイル ポインターが Null ポインターの場合、関数は Null ポインターを返します。 それ以外の場合は、**this** を返します。
 
