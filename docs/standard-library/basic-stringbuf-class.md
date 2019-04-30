@@ -31,11 +31,11 @@ helpviewer_keywords:
 - std::basic_stringbuf [C++], underflow
 ms.assetid: 40c85f9e-42a5-4a65-af5c-23c8e3bf8113
 ms.openlocfilehash: 1ed9deee46f7c99750ee3260a6b2a8de1f0f3397
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329645"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62409760"
 ---
 # <a name="basicstringbuf-class"></a>basic_stringbuf クラス
 
@@ -128,7 +128,7 @@ basic_stringbuf(
 
 ### <a name="parameters"></a>パラメーター
 
-*モード (_m)*<br/>
+*_Mode*<br/>
 [ios_base::openmode](../standard-library/ios-base-class.md#openmode) の列挙値のうちの 1 つ。
 
 *str*<br/>
@@ -241,7 +241,7 @@ virtual pos_type seekoff(
 *_Way*<br/>
 オフセット演算の開始位置。 有効値については、「[ios_base::seekdir](../standard-library/ios-base-class.md#seekdir)」を参照してください。
 
-*モード (_m)*<br/>
+*_Mode*<br/>
 ポインター位置のモードを指定します。 既定では、読み取り位置および書き込み位置を変更できます。 詳細については、「[ios_base::openmode](../standard-library/ios-base-class.md#openmode)」を参照してください。
 
 ### <a name="return-value"></a>戻り値
@@ -277,7 +277,7 @@ virtual pos_type seekpos(pos_type _Sp, ios_base::openmode _Mode = ios_base::in |
 *_Sp*<br/>
 シークする位置。
 
-*モード (_m)*<br/>
+*_Mode*<br/>
 ポインター位置のモードを指定します。 既定では、読み取り位置および書き込み位置を変更できます。
 
 ### <a name="return-value"></a>戻り値
@@ -379,7 +379,7 @@ virtual int_type underflow();
 
 ### <a name="remarks"></a>Remarks
 
-現在の要素を抽出しようとするプロテクト仮想メンバー関数`byte`は入力バッファーから現在のストリームの位置を進めるし、要素を返す**traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)(**バイト**)。 1 つの方法で行うことができます。 かかる読み取り位置が使用可能な場合は、`byte`要素は、読み取り位置に格納されていると、入力バッファーのネクスト ポインターを進めます。
+現在の要素を抽出しようとするプロテクト仮想メンバー関数`byte`は入力バッファーから現在のストリームの位置を進めるし、要素を返す**traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)(**バイト**)。 1 つの方法で実行ができます。読み取り位置が使用可能なかかる`byte`要素は、読み取り位置に格納されているし、入力バッファーのネクスト ポインターを進めます。
 
 ## <a name="swap"></a>  basic_streambuf::swap
 

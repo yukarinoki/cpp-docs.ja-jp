@@ -23,11 +23,11 @@ helpviewer_keywords:
 - COleCurrency [MFC], m_status
 ms.assetid: 3a36e345-303f-46fb-a57c-858274378a8d
 ms.openlocfilehash: 64f2b00c8a5aefe8a39c24d26af2a97625225059
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273180"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62375744"
 ---
 # <a name="colecurrency-class"></a>COleCurrency クラス
 
@@ -480,7 +480,7 @@ throw(COleException*);
 
 ソース文字列に数値以外の文字の意味は、ローカルの言語仕様 (ロケール Id) を使用します。
 
-ロケール ID の値の詳細については、[複数の言語をサポートしている](/previous-versions/windows/desktop/automat/supporting-multiple-national-languages)を参照してください。
+ロケール ID の値の詳細については、次を参照してください。[複数の言語をサポートしている](/previous-versions/windows/desktop/automat/supporting-multiple-national-languages)します。
 
 文字列が通貨に変換できた場合の値、この値`COleCurrency`オブジェクトが有効な値をその状態を設定します。
 

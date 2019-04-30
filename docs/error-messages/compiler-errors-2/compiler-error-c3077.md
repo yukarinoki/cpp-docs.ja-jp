@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3077
 ms.assetid: d9f3c619-d1e2-4656-81a5-a35a9586a7d4
 ms.openlocfilehash: d59859b82c1a8d506bb793a2c4dcd887b0898d85
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644042"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62406692"
 ---
 # <a name="compiler-error-c3077"></a>コンパイラ エラー C3077
 
@@ -19,7 +19,7 @@ ms.locfileid: "50644042"
 
 ネイティブ型または値型でファイナライザーを宣言することはできません。
 
-詳細については、[する方法のデストラクターおよびファイナライザー: クラスと構造体定義および使用 (C +/cli CLI)](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)を参照してください。
+詳細については、次を参照してください。[する方法のデストラクターおよびファイナライザー。クラスと構造体定義および使用 (C +/cli CLI)](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)します。
 
 ## <a name="example"></a>例
 

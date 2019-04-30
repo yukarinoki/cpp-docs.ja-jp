@@ -15,11 +15,11 @@ helpviewer_keywords:
 - std::time_put [C++], put
 ms.assetid: df79493e-3331-48d2-97c3-ac3a745f0791
 ms.openlocfilehash: b9c6f8db26cdc67d3a1bc752b9b5eb31f7dc220b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452508"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411930"
 ---
 # <a name="timeput-class"></a>time_put クラス
 
@@ -101,7 +101,7 @@ virtual iter_type do_put(
 *next*<br/>
 時刻と日付を表す文字のシーケンスが挿入される出力反復子。
 
-*されている _Iosbase*<br/>
+*_Iosbase*<br/>
 使用されません。
 
 *_Pt*<br/>
@@ -164,7 +164,7 @@ iter_type put(iter_type next,
 *next*<br/>
 時刻と日付を表す文字のシーケンスが挿入される出力反復子。
 
-*されている _Iosbase*<br/>
+*_Iosbase*<br/>
 使用されません。
 
 *_Fill*<br/>
@@ -254,11 +254,11 @@ explicit time_put(size_t _Refs = 0);
 
 使用可能な値を *_Refs*パラメーターとその重要性は。
 
-- 0: オブジェクトの有効期間はそれが含まれるロケールによって管理されます。
+- 0:オブジェクトの有効期間は、それが含まれるロケールによって管理されます。
 
-- 1: オブジェクトの有効期間を手動で管理する必要があります。
+- 1:オブジェクトの有効期間は、手動で管理する必要があります。
 
-- \> 1: これらの値が定義されていません。
+- \> 1:これらの値が定義されていません。
 
 コンス トラクターを使用してその基本オブジェクトを初期化します[locale::facet](../standard-library/locale-class.md#facet_class)(*_Refs*)。
 

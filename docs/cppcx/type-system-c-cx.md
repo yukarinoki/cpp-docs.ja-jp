@@ -3,29 +3,29 @@ title: 型システム (C++/CX)
 ms.date: 02/03/2017
 ms.assetid: b67bee8a-b526-4872-969e-ef22724e88fe
 ms.openlocfilehash: fbc7a178621624e396c80509703ce1b5b4c19162
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57745955"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392090"
 ---
 # <a name="type-system-ccx"></a>型システム (C++/CX)
 
-Windows ランタイムのアーキテクチャを使用すると、使用することが C + + CX、Visual Basic、Visual c# および JavaScript を直接 Windows API にアクセスし、その他の Windows ランタイム アプリおよびコンポーネントと相互運用するアプリやコンポーネントを記述します。 C++ で記述されているユニバーサル Windows プラットフォーム アプリは、CPU で直接実行するネイティブ コードにコンパイルします。 C# または Visual Basic で記述されているユニバーサル Windows プラットフォーム アプリでは、Microsoft intermediate language (MSIL) にコンパイルし、共通言語ランタイム (CLR) で実行します。 JavaScript で記述されているユニバーサル Windows プラットフォーム アプリでは、実行時環境で実行します。 Windows ランタイムのオペレーティング システム コンポーネント自体は C++ で記述し、ネイティブ コードとして実行します。 これらのコンポーネントとユニバーサル Windows プラットフォーム アプリのすべては、Windows ランタイム アプリケーション バイナリ インターフェイス (ABI) を介して直接通信します。
+Windows ランタイムのアーキテクチャを使用すると、使用することができますC++/CX、Visual Basic、VisualC#と JavaScript を直接 Windows API にアクセスし、その他の Windows ランタイム アプリおよびコンポーネントと相互運用するアプリやコンポーネントを記述します。 C++ で記述されているユニバーサル Windows プラットフォーム アプリは、CPU で直接実行するネイティブ コードにコンパイルします。 C# または Visual Basic で記述されているユニバーサル Windows プラットフォーム アプリでは、Microsoft intermediate language (MSIL) にコンパイルし、共通言語ランタイム (CLR) で実行します。 JavaScript で記述されているユニバーサル Windows プラットフォーム アプリでは、実行時環境で実行します。 Windows ランタイムのオペレーティング システム コンポーネント自体は C++ で記述し、ネイティブ コードとして実行します。 これらのコンポーネントとユニバーサル Windows プラットフォーム アプリのすべては、Windows ランタイム アプリケーション バイナリ インターフェイス (ABI) を介して直接通信します。
 
-最新の C++ 表現での Windows ランタイムのサポートを有効にするのには、Microsoft が作成された C + + CX します。 C + + CX 組み込み基本型と C++ アプリと他の言語で記述されたアプリが ABI 間で通信するコンポーネントを有効にする基本的な Windows ランタイム型の実装を提供します。 任意の Windows ランタイム型を使用したり、クラス、構造体、インターフェイス、およびその他のユニバーサル Windows プラットフォーム アプリおよびコンポーネントで使用できるその他のユーザー定義型を作成できます。 C + で記述されたユニバーサル Windows プラットフォーム アプリ/cli CX できますもを使用して、通常の C++ クラスと構造体のパブリック アクセシビリティがあるない限り、します。
+最新の Windows ランタイムのサポートを有効にするC++表現形式、Microsoft が作成された、 C++/CX。 C++/CX は、組み込み基本型と基本的な Windows ランタイムの実装の種類を有効にするC++アプリと他の言語で記述されたアプリが ABI 間で通信するコンポーネント。 任意の Windows ランタイム型を使用したり、クラス、構造体、インターフェイス、およびその他のユニバーサル Windows プラットフォーム アプリおよびコンポーネントで使用できるその他のユーザー定義型を作成できます。 C + で記述されたユニバーサル Windows プラットフォーム アプリ/cli CX できますもを使用して、通常の C++ クラスと構造体のパブリック アクセシビリティがあるない限り、します。
 
 C++/CX 言語プロジェクションと内部動作の詳しい説明については、次のブログ記事を参照してください。
 
-1. [C + +/CX Part 0 of \[n\]:概要](https://blogs.msdn.microsoft.com/vcblog/2012/08/29/ccx-part-0-of-n-an-introduction)
+1. [C++/CX part 0 of \[n\]:概要](https://blogs.msdn.microsoft.com/vcblog/2012/08/29/ccx-part-0-of-n-an-introduction)
 
-1. [C + +/CX Part 1 of \[n\]:単純なクラス](https://blogs.msdn.microsoft.com/vcblog/2012/09/05/ccx-part-1-of-n-a-simple-class)
+1. [C++/CX パート 1 の\[n\]:単純なクラス](https://blogs.msdn.microsoft.com/vcblog/2012/09/05/ccx-part-1-of-n-a-simple-class)
 
-1. [C + +/CX Part 2 of \[n\]:ハット記号が型](https://blogs.msdn.microsoft.com/vcblog/2012/09/17/ccx-part-2-of-n-types-that-wear-hats)
+1. [C++/CX パート 2 の\[n\]:ハット記号が型](https://blogs.msdn.microsoft.com/vcblog/2012/09/17/ccx-part-2-of-n-types-that-wear-hats)
 
-1. [C + +/CX Part 3 of \[n\]:工事中](https://blogs.msdn.microsoft.com/vcblog/2012/10/05/ccx-part-3-of-n-under-construction/)
+1. [C++/CX パート 3 の\[n\]:工事中](https://blogs.msdn.microsoft.com/vcblog/2012/10/05/ccx-part-3-of-n-under-construction/)
 
-1. [C + +/CX Part 4 of \[n\]:静的メンバー関数](https://blogs.msdn.microsoft.com/vcblog/2012/10/19/ccx-part-4-of-n-static-member-functions)
+1. [C++/CX パート 4 の\[n\]:静的メンバー関数](https://blogs.msdn.microsoft.com/vcblog/2012/10/19/ccx-part-4-of-n-static-member-functions)
 
 ## <a name="windows-metadata-winmd-files"></a>Windows メタデータ (.winmd) ファイル
 
@@ -47,7 +47,7 @@ C++ で記述されたユニバーサル Windows プラットフォーム アプ
 > [!TIP]
 > [Platform::Collections Namespace](../cppcx/platform-collections-namespace.md) 型は、パブリックではないので、.winmd ファイルには表示されません。 これらは、 `Windows::Foundation::Collections`で定義されているインターフェイスのプライベート C++ 固有の実装です。 JavaScript または c# で記述された Windows ランタイム アプリが不明な[platform::collections: クラス](../cppcx/platform-collections-vector-class.md)は、使用できるが、 `Windows::Foundation::Collections::IVector`。 `Platform::Collections` 型は、collection.h で定義されます。
 
-## <a name="windows-runtime-type-system-in-ccx"></a>Windows ランタイム型システムの C + + CX
+## <a name="windows-runtime-type-system-in-ccx"></a>Windows ランタイム型システムのC++/CX
 
 次のセクションでは、Windows ランタイムの型システムと c++ のサポートについての主要な機能を説明する/cli CX します。
 
@@ -57,11 +57,11 @@ C++ で記述されたユニバーサル Windows プラットフォーム アプ
 
 Windows API 自体が、名前空間ごとに構成された、十分にファクタリングされたクラス ライブラリとして再開発されました。  すべての Windows ランタイム コンポーネントは、Windows.* 名前空間で宣言されます。
 
-詳細については、[名前空間と型の可視性](../cppcx/namespaces-and-type-visibility-c-cx.md)を参照してください。
+詳細については、次を参照してください。[名前空間と型の可視性](../cppcx/namespaces-and-type-visibility-c-cx.md)します。
 
 ### <a name="fundamental-types"></a>基本的な型
 
-Windows ランタイムには、次の基本的な型、UInt8、Int16、UInt16、Int32、UInt32、Int64、UInt64、1 つ、Double、Char16、Boolean、および文字列を定義します。 C + + CX は、uint16、uint32、uint64、int16、int32、int64、float32、float64、および char16 として、既定の名前空間で基本的な数値型をサポートします。 ブール値と文字列も、Platform 名前空間で定義されます。
+Windows ランタイムには、次の基本的な型、UInt8、Int16、UInt16、Int32、UInt32、Int64、UInt64、1 つ、Double、Char16、Boolean、および文字列を定義します。 C++/CX では、uint16、uint32、uint64、int16、int32、int64、float32、float64、および char16 として、既定の名前空間の基本的な数値型をサポートします。 ブール値と文字列も、Platform 名前空間で定義されます。
 
 C +/cli CX は、uint8、等しくも定義されています。 `unsigned char`、Windows ランタイムでサポートされていないとパブリック Api では使用できません。
 
@@ -119,7 +119,7 @@ Windows ランタイム クラスが投影される C +/cli CX ref クラスま�
 
 Windows ランタイムでは、各言語が独自の方法で実装するコレクション型のインターフェイスのセットを定義します。 C +/cli CX 実装を提供します、 [platform::collections: クラス](../cppcx/platform-collections-vector-class.md)、 [::map クラス](../cppcx/platform-collections-map-class.md)、および他の関連する具象コレクション型と互換性がある、標準テンプレート ライブラリ (STL) の対応します。
 
-詳細については、[コレクション](../cppcx/collections-c-cx.md)を参照してください。
+詳細については、次を参照してください。[コレクション](../cppcx/collections-c-cx.md)します。
 
 ### <a name="template-ref-classes"></a>テンプレート ref クラス
 
@@ -177,7 +177,7 @@ C++/CX は、標準 C++ のキャスト演算子 [static_cast](../cpp/static-cas
 
 パブリック Api を Windows ランタイム システムの種類で使用される同じ属性を使用して非推奨としてマークする方法について説明します。
 
-詳細については、[型とメンバーを非推奨化](../cppcx/deprecating-types-and-members-c-cx.md)を参照してください。
+詳細については、次を参照してください。[型とメンバーを非推奨化](../cppcx/deprecating-types-and-members-c-cx.md)します。
 
 ## <a name="see-also"></a>関連項目
 

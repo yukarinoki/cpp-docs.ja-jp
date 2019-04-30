@@ -7,11 +7,11 @@ helpviewer_keywords:
 - active document servers [MFC]
 ms.assetid: 131fec1e-02a0-4305-a7ab-903b911232a7
 ms.openlocfilehash: 7050b810bb5e1f0c240222cd9b8c4922ced4238a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270775"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394976"
 ---
 # <a name="active-document-servers"></a>Active ドキュメント サーバー
 
@@ -27,7 +27,7 @@ MFC でのアクティブなドキュメントをサポートしています、 
 
 通常の MFC サーバー フック独自`COleServerItem`-クラスを派生します。 MFC アプリケーション ウィザードは、選択した場合のこのクラスを生成、**ミニ サーバー**または**フル サーバー**複合ドキュメント サポートをアプリケーション サーバーに付与する チェック ボックス。 選択した場合、 **Active ドキュメント サーバー**チェック ボックスをオンから派生したクラスを生成する MFC アプリケーション ウィザード`CDocObjectServerItem`代わりにします。
 
-`COleDocObjectItem`クラスが、OLE コンテナーの active ドキュメント コンテナーになることができます。 MFC アプリケーション ウィザードを使用して、選択して、active ドキュメント コンテナーを作成することができます、 **Active ドキュメント コンテナー** MFC アプリケーション ウィザードの [複合ドキュメント サポート] ページでチェック ボックスをオンします。 詳細については、[Active ドキュメント コンテナー アプリケーションを作成する](../mfc/creating-an-active-document-container-application.md)を参照してください。
+`COleDocObjectItem`クラスが、OLE コンテナーの active ドキュメント コンテナーになることができます。 MFC アプリケーション ウィザードを使用して、選択して、active ドキュメント コンテナーを作成することができます、 **Active ドキュメント コンテナー** MFC アプリケーション ウィザードの [複合ドキュメント サポート] ページでチェック ボックスをオンします。 詳細については、次を参照してください。 [Active ドキュメント コンテナー アプリケーションを作成する](../mfc/creating-an-active-document-container-application.md)します。
 
 ## <a name="see-also"></a>関連項目
 

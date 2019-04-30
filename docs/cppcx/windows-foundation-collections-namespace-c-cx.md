@@ -7,15 +7,15 @@ helpviewer_keywords:
 - Windows::Foundation::Collections Namespace (C++/CX)
 ms.assetid: 04bd3543-e30f-4fd2-95ee-272a3fcd0158
 ms.openlocfilehash: 9a8118886f4556343f2e4a494fdbea6d240d1c77
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57738745"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62404612"
 ---
 # <a name="windowsfoundationcollections-namespace-ccx"></a>Windows::Foundation::Collections 名前空間 (C++/CX)
 
-C + + CX Vector、VectorView、マップ、および MapView コレクション クラスを使用して単純化する関数を持つ:foundation 名前空間を補足するものです。
+C++/CX では、Vector、VectorView、マップ、および MapView コレクション クラスを使用して単純化する関数を持つ:foundation 名前空間を補足します。
 
 ## <a name="syntax"></a>構文
 

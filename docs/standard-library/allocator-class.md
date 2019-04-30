@@ -35,11 +35,11 @@ helpviewer_keywords:
 - std::allocator [C++], rebind
 ms.assetid: 3fd58076-56cc-43bb-ad58-b4b7c9c6b410
 ms.openlocfilehash: 40e99901d4d4105902010a9e5b71ed3edf7d00db
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518867"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411046"
 ---
 # <a name="allocator-class"></a>allocator クラス
 
@@ -77,7 +77,7 @@ class allocator
 
 これら`Type`は割り当てられる要素に対してポインターと参照を行う必要のある形式を指定します。 ( [allocator::pointer](#pointer)が必ずしも同じ`Type*`のすべてのアロケーター オブジェクトがあるにもかかわらず、クラスの明確な定義`allocator`)。
 
-**C++ 11 以降:** アロケーターでの移動操作を有効にするには、最小限のアロケーター インターフェイスを使用し、さらにコピー コンストラクター、== 演算子、! = 演算子、allocate、および deallocate を実装します。 詳細および例については、「[アロケーター](../standard-library/allocators.md)」を参照してください。
+**C++ 11 以降。** アロケーターでの移動操作を有効にする、最小アロケーター インターフェイスを使用し、コピー コンス トラクターを実装、= =、! = 演算子、および割り当て解除します。 詳細および例については、「[アロケーター](../standard-library/allocators.md)」を参照してください。
 
 ## <a name="members"></a>メンバー
 

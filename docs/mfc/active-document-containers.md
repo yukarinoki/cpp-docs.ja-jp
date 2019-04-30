@@ -8,17 +8,17 @@ helpviewer_keywords:
 - MFC COM, active document containment
 ms.assetid: ba20183a-8b4c-440f-9031-e5fcc41d391b
 ms.openlocfilehash: 6e4defaf347f0d539ef023ee9c0e1e85dd2390db
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57288962"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62395033"
 ---
 # <a name="active-document-containers"></a>Active ドキュメント コンテナー
 
 Microsoft Office バインダーまたは Internet Explorer など、active ドキュメント コンテナーでは、異なるアプリケーションの種類を作成し、各アプリケーションの複数のフレームを使用して強制ではなく 1 つのフレーム内のいくつかのドキュメントを操作できます。ドキュメントの種類の場合)。
 
-MFC での active ドキュメント コンテナーの完全なサポートを提供します、`COleDocObjectItem`クラス。 MFC アプリケーション ウィザードを使用して、選択して、active ドキュメント コンテナーを作成することができます、 **Active ドキュメント コンテナー**チェック ボックスをオン、**複合ドキュメント サポート**MFC アプリケーション ウィザードのページ。 詳細については、[Active ドキュメント コンテナー アプリケーションを作成する](../mfc/creating-an-active-document-container-application.md)を参照してください。
+MFC での active ドキュメント コンテナーの完全なサポートを提供します、`COleDocObjectItem`クラス。 MFC アプリケーション ウィザードを使用して、選択して、active ドキュメント コンテナーを作成することができます、 **Active ドキュメント コンテナー**チェック ボックスをオン、**複合ドキュメント サポート**MFC アプリケーション ウィザードのページ。 詳細については、次を参照してください。 [Active ドキュメント コンテナー アプリケーションを作成する](../mfc/creating-an-active-document-container-application.md)します。
 
 Active ドキュメント コンテナーの詳細についてを参照してください。
 
@@ -81,7 +81,7 @@ interface IOleDocumentSite : IUnknown
 
 コンテナーのフレーム オブジェクトは、ほとんどの場合、つまり OLE ドキュメントでは、インプレース アクティブ化に使用される同じフレーム、メニューとツールバーのネゴシエーションを処理する 1 つです。 ビュー オブジェクトが使用してこのフレーム オブジェクトへのアクセス`IOleInPlaceSite::GetWindowContext`、コンテナー ドキュメント (これは、ウィンドウ レベルのツールバーのネゴシエーションと含まれるオブジェクトの列挙体を処理することができます) を表すコンテナー オブジェクトへのアクセスを提供することもできます。
 
-Active ドキュメント コンテナーは、追加することで、フレームを補強できます`IOleCommandTarget`します。 これにより、このインターフェイスは、同じコマンドを送信するためのコンテナーを許可するには、同じ方法でアクティブなドキュメントのユーザー インターフェイスで発生するコマンドを受信する (など**ファイル新しい**、**オープン**、 **名前を付けて**、**印刷**;**コピーして編集**、**貼り付け**、**を元に戻す**、およびその他の) アクティブなドキュメントにします。 詳細については、[コマンド ターゲット](../mfc/message-handling-and-command-targets.md)を参照してください。
+Active ドキュメント コンテナーは、追加することで、フレームを補強できます`IOleCommandTarget`します。 これにより、このインターフェイスは、同じコマンドを送信するためのコンテナーを許可するには、同じ方法でアクティブなドキュメントのユーザー インターフェイスで発生するコマンドを受信する (など**ファイル新しい**、**オープン**、 **名前を付けて**、**印刷**;**コピーして編集**、**貼り付け**、**を元に戻す**、およびその他の) アクティブなドキュメントにします。 詳細については、次を参照してください。[コマンド ターゲット](../mfc/message-handling-and-command-targets.md)します。
 
 ## <a name="see-also"></a>関連項目
 

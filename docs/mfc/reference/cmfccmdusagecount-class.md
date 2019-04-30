@@ -21,11 +21,11 @@ helpviewer_keywords:
 - CMFCCmdUsageCount [MFC], SetOptions
 ms.assetid: 9c33b783-37c0-43ea-9f31-3c75e246c841
 ms.openlocfilehash: b4ad9a60831feb6fa1147ea3f8bcfd5c6badd06c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57275364"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403803"
 ---
 # <a name="cmfccmdusagecount-class"></a>CMFCCmdUsageCount クラス
 
@@ -206,7 +206,7 @@ virtual void Serialize(CArchive& ar);
 
 このメソッドは、コマンドの数のマップの構造体をシリアル化します`m_CmdUsage`、および合計コマンドの使用法、 `m_nTotalUsage`、または指定されたアーカイブするカウンター。
 
-シリアル化の例については、[シリアル化を参照してください。オブジェクトのシリアル化](../../mfc/serialization-serializing-an-object.md)します。
+シリアル化の例については、次を参照してください。[シリアル化します。オブジェクトのシリアル化](../../mfc/serialization-serializing-an-object.md)します。
 
 ##  <a name="setoptions"></a>  CMFCCmdUsageCount::SetOptions
 

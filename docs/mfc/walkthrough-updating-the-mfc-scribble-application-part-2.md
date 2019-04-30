@@ -1,15 +1,15 @@
 ---
 title: 'チュートリアル: MFC Scribble アプリケーション (第 2 部) の更新'
-ms.date: 09/20/2018
+ms.date: 04/25/2019
 helpviewer_keywords:
 - walkthroughs [MFC]
 ms.assetid: 602df5c2-17d4-4cd9-8cf6-dff652c4cae5
 ms.openlocfilehash: c22a11c54b1957c1d4ac735fe8cb577d9c483d35
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
-ms.translationtype: MT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58781706"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62371938"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-2"></a>チュートリアル: MFC Scribble アプリケーション (第 2 部) の更新
 
@@ -338,4 +338,4 @@ MFC Scribble アプリケーションを更新しました。 既存のアプリ
 ## <a name="see-also"></a>関連項目
 
 [チュートリアル](../mfc/walkthroughs-mfc.md)<br/>
-[チュートリアル: MFC Scribble アプリケーション (パート 1) の更新](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)
+[チュートリアル: MFC Scribble アプリケーションの更新 (パート 1)](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)

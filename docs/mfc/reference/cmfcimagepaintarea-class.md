@@ -17,11 +17,11 @@ helpviewer_keywords:
 - CMFCImagePaintArea [MFC], SetMode
 ms.assetid: c59eec22-f15a-4e58-8c4d-4a18a41f4452
 ms.openlocfilehash: 37d975ace4d144cc6274b49a3406382f0fb300ee
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57290745"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62374182"
 ---
 # <a name="cmfcimagepaintarea-class"></a>CMFCImagePaintArea クラス
 
@@ -57,7 +57,7 @@ class CMFCImagePaintArea : public CButton
 
 このクラスは、コードから直接使用するものではありません。
 
-フレームワークでは、このクラスを使用して、イメージ エディター ダイアログ ボックスで、ピクチャの領域を表示します。 イメージ エディターのダイアログ ボックスの詳細については、[CMFCImageEditorDialog クラス](../../mfc/reference/cmfcimageeditordialog-class.md)を参照してください。
+フレームワークでは、このクラスを使用して、イメージ エディター ダイアログ ボックスで、ピクチャの領域を表示します。 イメージ エディターのダイアログ ボックスの詳細については、次を参照してください。 [CMFCImageEditorDialog クラス](../../mfc/reference/cmfcimageeditordialog-class.md)します。
 
 ## <a name="example"></a>例
 
@@ -146,7 +146,7 @@ void SetColor(COLORREF color);
 
 ときに、イメージ エディター パレット バーから色を選択またはカラー ピッカー、フレームワークは、現在の描画の色を更新するには、このメソッドを呼び出します。 初期の描画の色は黒 (0 の COLORREF 値)。
 
-描画の色は、IMAGE_EDIT_MODE_COLOR を除くすべての描画モードのイメージ エディターのダイアログ ボックスで使用されます。 描画モードの詳細については、[cmfcimagepaintarea::image_edit_mode 列挙体](cmfcimagepaintarea-image-edit-mode-enumeration.md)を参照してください。
+描画の色は、IMAGE_EDIT_MODE_COLOR を除くすべての描画モードのイメージ エディターのダイアログ ボックスで使用されます。 描画モードの詳細については、次を参照してください。 [cmfcimagepaintarea::image_edit_mode 列挙体](cmfcimagepaintarea-image-edit-mode-enumeration.md)します。
 
 ##  <a name="setmode"></a>  CMFCImagePaintArea::SetMode
 

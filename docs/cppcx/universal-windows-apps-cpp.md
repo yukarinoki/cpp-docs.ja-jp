@@ -3,11 +3,11 @@ title: ユニバーサル Windows アプリ (C++)
 ms.date: 03/30/2018
 ms.assetid: 357121cc-d390-4bae-b34a-39614861a9f4
 ms.openlocfilehash: fbd5366ee52dfe32baef9458a82c16914666699e
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58784822"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392064"
 ---
 # <a name="universal-windows-apps-c"></a>ユニバーサル Windows アプリ (C++)
 
@@ -35,5 +35,5 @@ Windows ランタイム C++ テンプレート ライブラリでは、例外の
 
 ## <a name="see-also"></a>関連項目
 
-[Visual Studio で C++](../overview/visual-cpp-in-visual-studio.md)<br/>
+[Visual Studio での C++](../overview/visual-cpp-in-visual-studio.md)<br/>
 [C++ でプログラミングする Windows の概要](../windows/overview-of-windows-programming-in-cpp.md)<br/>

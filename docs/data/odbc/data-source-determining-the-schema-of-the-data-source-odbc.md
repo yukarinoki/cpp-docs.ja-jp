@@ -7,11 +7,11 @@ helpviewer_keywords:
 - data sources [C++], determining schema
 ms.assetid: 17284acb-eb10-4f27-9944-ad1d973c0b05
 ms.openlocfilehash: c419a3ac2d870e6a85675492ee6c9b726427a0e9
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59040031"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62395977"
 ---
 # <a name="data-source-determining-the-schema-of-the-data-source-odbc"></a>データ ソース:データ ソース (ODBC) のスキーマを決定します。
 
@@ -22,4 +22,4 @@ ms.locfileid: "59040031"
 ## <a name="see-also"></a>関連項目
 
 [データ ソース (ODBC)](../../data/odbc/data-source-odbc.md)<br/>
-[データ ソース:接続 (ODBC)](../../data/odbc/data-source-managing-connections-odbc.md)
+[データ ソース: 接続の管理 (ODBC)](../../data/odbc/data-source-managing-connections-odbc.md)

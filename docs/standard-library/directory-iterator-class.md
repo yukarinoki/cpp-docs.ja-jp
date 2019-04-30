@@ -26,11 +26,11 @@ helpviewer_keywords:
 - std::experimental::filesystem::directory_iterator::operator-&gt;
 - std::experimental::filesystem::directory_iterator::operator++
 ms.openlocfilehash: 6763f2a96b771fadbec311cf8740352fff53e29a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610198"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413847"
 ---
 # <a name="directoryiterator-class"></a>directory_iterator クラス
 
@@ -142,7 +142,7 @@ directory_iterator& operator=(directory_iterator&&) noexcept = default;
 *right*<br/>
 [Directory_iterator](../standard-library/directory-iterator-class.md)にコピーされる、`directory_iterator`します。
 
-## <a name="op_eq"></a> directory_iterator::operator = =
+## <a name="op_eq"></a> directory_iterator::operator==
 
 メンバー演算子を返します**true**両方の場合にのみ`*this`と*右*シーケンス末尾の反復子またはその両方がないエンド-の-シーケンスの反復子。
 
@@ -155,7 +155,7 @@ bool operator==(const directory_iterator& right) const;
 *right*<br/>
 [Directory_iterator](../standard-library/directory-iterator-class.md)と比較される、`directory_iterator`します。
 
-## <a name="op_star"></a> directory_iterator::operator *
+## <a name="op_star"></a> directory_iterator::operator*
 
 このメンバー演算子は、 `myentry`を返します。
 
@@ -163,7 +163,7 @@ bool operator==(const directory_iterator& right) const;
 const directory_entry& operator*() const;
 ```
 
-## <a name="op_cast"></a> directory_iterator::operator -> します。
+## <a name="op_cast"></a> directory_iterator::operator->
 
 このメンバー関数は、`&**this` を返します。
 

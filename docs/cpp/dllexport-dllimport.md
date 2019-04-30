@@ -11,11 +11,11 @@ helpviewer_keywords:
 - __declspec keyword [C++], dllimport
 ms.assetid: ff95b645-ef55-4e72-b848-df44657b3208
 ms.openlocfilehash: 2ae284172828ed63b6499475df108c28aecb32ae
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525958"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62398928"
 ---
 # <a name="dllexport-dllimport"></a>dllexport、dllimport
 
@@ -36,9 +36,9 @@ ms.locfileid: "50525958"
 
 クラスを declspec(dllexport) とマークした場合、そのクラス階層内のクラス テンプレートの特殊化は暗黙的に declspec(dllexport) とマークされます。 つまり、クラス テンプレートが明示的にインスタンス化され、クラスのメンバーの定義が必要になります。
 
-**dllexport**関数の装飾名を使用して、関数を公開します。 C++ の関数の場合、この処理には名前のマングルが含まれます。 C 関数または `extern "C"` として宣言されている関数の場合、この処理には呼び出し規則に基づいたプラットフォーム固有の装飾が含まれます。 C/C++ コードで名前の装飾については、[装飾名](../build/reference/decorated-names.md)を参照してください。 `__cdecl` 呼び出し規則を使用する エクスポートされた C 関数や C++ `extern "C"` 関数には、名前の装飾が適用されません。
+**dllexport**関数の装飾名を使用して、関数を公開します。 C++ の関数の場合、この処理には名前のマングルが含まれます。 C 関数または `extern "C"` として宣言されている関数の場合、この処理には呼び出し規則に基づいたプラットフォーム固有の装飾が含まれます。 C/C++ コードで名前の装飾については、次を参照してください。[装飾名](../build/reference/decorated-names.md)します。 `__cdecl` 呼び出し規則を使用する エクスポートされた C 関数や C++ `extern "C"` 関数には、名前の装飾が適用されません。
 
-修飾されていない名前をエクスポートするには、EXPORTS セクションに非装飾名を定義したモジュール定義 (.def) ファイルを使用してリンクできます。 詳細については、[エクスポート](../build/reference/exports.md)を参照してください。 非装飾の名前をエクスポートすることもできますが、使用する、`#pragma comment(linker, "/export:alias=decorated_name")`ディレクティブで、ソース コード。
+修飾されていない名前をエクスポートするには、EXPORTS セクションに非装飾名を定義したモジュール定義 (.def) ファイルを使用してリンクできます。 詳細については、次を参照してください。[エクスポート](../build/reference/exports.md)します。 非装飾の名前をエクスポートすることもできますが、使用する、`#pragma comment(linker, "/export:alias=decorated_name")`ディレクティブで、ソース コード。
 
 宣言すると**dllexport**または**dllimport**、使用する必要があります[拡張属性構文](../cpp/declspec.md)と **_ _declspec**キーワード。
 

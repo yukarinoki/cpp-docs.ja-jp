@@ -14,11 +14,11 @@ helpviewer_keywords:
 - user interface threads [C++]
 ms.assetid: 979605f8-3988-44b5-ac9c-b8cce7fcce14
 ms.openlocfilehash: bcffc2964d8e15fd47f437366863748175e12622
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258347"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62407667"
 ---
 # <a name="multithreading-with-c-and-mfc"></a>C++ と MFC を使用するマルチスレッド
 
@@ -32,7 +32,7 @@ MFC (Microsoft Foundation Class) ライブラリでは、マルチスレッド �
 
 MFC では、ユーザー インターフェイス スレッドとワーカー スレッドの 2 種類に区別されます。 ユーザー インターフェイス スレッドでは主に、ユーザー入力を処理し、ユーザーが生成したイベントおよびメッセージに応答します。 ワーカー スレッドでは、ユーザー入力が必要ない、再計算などのタスクを行います。 Win32 API ではこの 2 つのスレッドを区別しません。スレッドの起動アドレスがわかれば、スレッドを実行できます。 MFC では、ユーザー インターフェイス上のイベントに対してメッセージ ポンプを指定することにより、ユーザー インターフェイス スレッドに対して専用の処理を行います。 `CWinApp` は、`CWinThread` から派生したユーザー インターフェイス スレッド オブジェクトの例であり、ユーザーが生成したイベントおよびメッセージを処理します。
 
-複数のスレッドが同一のオブジェクトにアクセスする場合は注意が必要です。 [マルチ スレッド。プログラミングのヒント](multithreading-programming-tips.md)このような状況で発生する可能性のある問題を回避するのに使用できる手法について説明します。 [マルチ スレッド。同期クラスの使用方法](multithreading-how-to-use-the-synchronization-classes.md)複数のスレッドから 1 つのオブジェクトへのアクセスを同期に使用できるクラスを使用する方法について説明します。
+複数のスレッドが同一のオブジェクトにアクセスする場合は注意が必要です。 [マルチスレッド: プログラミングのヒント](multithreading-programming-tips.md)このような状況で発生する可能性のある問題を回避するのに使用できる手法について説明します。 [マルチスレッド: 同期クラスの使用方法](multithreading-how-to-use-the-synchronization-classes.md)複数のスレッドから 1 つのオブジェクトへのアクセスを同期に使用できるクラスを使用する方法について説明します。
 
 マルチスレッド プログラムの作成とデバッグには高度な技術が必要です。プログラマはオブジェクトが一度に複数のスレッドからアクセスされないようにする必要があるからです。 マルチスレッドに関連するトピックでは、マルチスレッド プログラムで MFC を使用する方法について説明しますが、マルチスレッド プログラミング技術の基礎については説明していません。 Visual C++ に付属のマルチスレッド MFC サンプル アプリケーションでは、マルチスレッド機能の追加方法や MFC でサポートされない Win32 API を利用した例が示されていますが、これはほんの出発点です。
 
@@ -40,17 +40,17 @@ MFC では、ユーザー インターフェイス スレッドとワーカー �
 
 MFC がサポートするマルチスレッド機能の詳細については、次のトピックを参照してください。
 
-- [マルチ スレッド。ユーザー インターフェイス スレッドの作成](multithreading-creating-user-interface-threads.md)
+- [マルチスレッド: ユーザー インターフェイス スレッドの生成](multithreading-creating-user-interface-threads.md)
 
-- [マルチ スレッド。ワーカー スレッドを作成します。](multithreading-creating-worker-threads.md)
+- [マルチスレッド: マルチスレッド : ワーカー スレッドの作成](multithreading-creating-worker-threads.md)
 
-- [マルチ スレッド。同期クラスを使用する方法](multithreading-how-to-use-the-synchronization-classes.md)
+- [マルチスレッド: 同期クラスの使用法](multithreading-how-to-use-the-synchronization-classes.md)
 
-- [マルチ スレッド。スレッドの終了](multithreading-terminating-threads.md)
+- [マルチスレッド: スレッドの終了](multithreading-terminating-threads.md)
 
-- [マルチ スレッド。プログラミングのヒント](multithreading-programming-tips.md)
+- [マルチスレッド: プログラミングのヒント](multithreading-programming-tips.md)
 
-- [マルチ スレッド。同期クラスを使用する場合](multithreading-when-to-use-the-synchronization-classes.md)
+- [マルチスレッド: 同期クラスの使い分け](multithreading-when-to-use-the-synchronization-classes.md)
 
 ## <a name="see-also"></a>関連項目
 

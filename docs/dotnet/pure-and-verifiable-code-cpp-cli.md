@@ -18,11 +18,11 @@ helpviewer_keywords:
 - assemblies [C++], pure code
 ms.assetid: 9050e110-fa11-4356-b56c-665187ff871c
 ms.openlocfilehash: 66f3b5a33791d20297cde6e6223ba65189a99682
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743832"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384715"
 ---
 # <a name="pure-and-verifiable-code-ccli"></a>検証可能な純粋なコード (C +/cli CLI)
 
@@ -30,7 +30,7 @@ ms.locfileid: "57743832"
 
 ## <a name="mixed-clr"></a>混合 (/clr)
 
-混在アセンブリ (コンパイルした **/clr**)、アンマネージ両方を含めるし、.NET の機能を使用するようにできるので、管理対象のパーツには、ネイティブ コードも含めることができます。 このため、プロジェクト全体を書き直すことなく、.NET 機能を使用するようにアプリケーションやコンポーネントを更新できます。 Visual C を使用して、この方法でマネージ コードとネイティブ コードを混在させると、C++ Interop は呼び出されます。 詳細については、[混在 (ネイティブおよびマネージ) アセンブリ](../dotnet/mixed-native-and-managed-assemblies.md)と[ネイティブと .NET の相互運用性](../dotnet/native-and-dotnet-interoperability.md)を参照してください。
+混在アセンブリ (コンパイルした **/clr**)、アンマネージ両方を含めるし、.NET の機能を使用するようにできるので、管理対象のパーツには、ネイティブ コードも含めることができます。 このため、プロジェクト全体を書き直すことなく、.NET 機能を使用するようにアプリケーションやコンポーネントを更新できます。 Visual C を使用して、この方法でマネージ コードとネイティブ コードを混在させると、C++ Interop は呼び出されます。 詳細については、次を参照してください。[混在 (ネイティブおよびマネージ) アセンブリ](../dotnet/mixed-native-and-managed-assemblies.md)と[ネイティブと .NET の相互運用性](../dotnet/native-and-dotnet-interoperability.md)します。
 
 マネージ アセンブリから P/invoke を通じてネイティブ Dll への呼び出しでは、コンパイルされますが、セキュリティ設定によっては実行時に失敗する可能性があります。
 

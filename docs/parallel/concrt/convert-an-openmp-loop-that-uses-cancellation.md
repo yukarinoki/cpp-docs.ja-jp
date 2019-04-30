@@ -6,11 +6,11 @@ helpviewer_keywords:
 - cancellation, converting from OpenMP to the Concurrency Runtime
 ms.assetid: 4b0b3c33-bfa9-4e96-ae08-aef245a39cbb
 ms.openlocfilehash: 618e93c18173bfe3e5f5b5f3058a8bb3d61e98ec
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57300675"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413945"
 ---
 # <a name="how-to-convert-an-openmp-loop-that-uses-cancellation-to-use-the-concurrency-runtime"></a>方法: 取り消しを使用して、同時実行ランタイムを使用する OpenMP ループを変換します。
 
@@ -37,7 +37,7 @@ OpenMP を使用するバージョンでは、フラグが設定されている�
 
 この例に示すどちらのバージョンでも、配列に検索対象値の複数のコピーが含まれている場合は、複数のループ反復でそれぞれ同時に結果が設定され、操作全体が取り消されることがあります。 条件が満たされたときに 1 つのタスクだけが実行されるようにする必要がある場合は、クリティカル セクションなどの同期プリミティブを使用できます。
 
-また、例外処理を使用して、PPL を使用するタスクを取り消すこともできます。 キャンセルの詳細については、[PPL における取り消し処理](cancellation-in-the-ppl.md)を参照してください。
+また、例外処理を使用して、PPL を使用するタスクを取り消すこともできます。 キャンセルの詳細については、次を参照してください。 [PPL における取り消し処理](cancellation-in-the-ppl.md)します。
 
 詳細については`parallel_for_each`およびその他の並列アルゴリズムは、「[並列アルゴリズム](../../parallel/concrt/parallel-algorithms.md)します。
 

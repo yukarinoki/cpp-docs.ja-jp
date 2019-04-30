@@ -15,11 +15,11 @@ helpviewer_keywords:
 - decrement operators [C++]
 ms.assetid: 0204d5c8-51b0-4108-b8a1-074c5754d89c
 ms.openlocfilehash: e1a87fe4815a75b97616d7b11a4b9aa4ae65eb9f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438828"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392142"
 ---
 # <a name="postfix-increment-and-decrement-operators--and---"></a>後置インクリメント演算子と後置デクリメント演算子: ++ および --
 
@@ -48,7 +48,7 @@ i++;
 
 置インクリメント演算子と前置デクリメント演算子を後置のオペランドは変更可能である必要があります (いない**const**) 演算またはポインター型の左辺値です。 結果の型はいるのと同じ、*後置式*が左辺値ではなくなりました。
 
-**Visual Studio 2017 バージョン 15.3 以降**(で使用可能な[/std:c + + 17](../build/reference/std-specify-language-standard-version.md)): オペランドの後置インクリメントまたはデクリメント演算子できない可能性があります型の**bool**します。
+**Visual Studio 2017 バージョン 15.3 以降**(で使用可能な[/std:c + + 17](../build/reference/std-specify-language-standard-version.md))。オペランドの後置インクリメントまたはデクリメント演算子できない可能性があります型の**bool**します。
 
 次のコードは、後置インクリメント演算子を示しています。
 

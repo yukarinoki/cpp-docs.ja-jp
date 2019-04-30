@@ -3,11 +3,11 @@ title: 宣言と定義 (C++)
 ms.date: 11/04/2016
 ms.assetid: 678f1424-e12f-45e0-a957-8169e5fef6cb
 ms.openlocfilehash: 1e76f636a6efd652ac629ad2f97f0b09f6171f9c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50432113"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399071"
 ---
 # <a name="declarations-and-definitions-c"></a>宣言と定義 (C++)
 
@@ -57,9 +57,9 @@ extern int i;
 char *strchr( const char *Str, const char Target );
 ```
 
-名前は宣言子の直後、ただし初期化子 (省略可能) よりも前の位置で宣言されるものと見なされます 詳細については、[宣言の位置](../cpp/point-of-declaration-in-cpp.md)を参照してください。
+名前は宣言子の直後、ただし初期化子 (省略可能) よりも前の位置で宣言されるものと見なされます 詳細については、次を参照してください。[宣言の位置](../cpp/point-of-declaration-in-cpp.md)します。
 
-宣言が発生する、*スコープ*します。 スコープは、宣言された名前の可視性と定義されたオブジェクトの継続時間 (存在する場合) を制御します。 スコープ規則と宣言の使用方法の詳細については、[スコープ](../cpp/scope-visual-cpp.md)を参照してください。
+宣言が発生する、*スコープ*します。 スコープは、宣言された名前の可視性と定義されたオブジェクトの継続時間 (存在する場合) を制御します。 スコープ規則と宣言の使用方法の詳細については、次を参照してください。[スコープ](../cpp/scope-visual-cpp.md)します。
 
 オブジェクトの宣言も定義が含まれている場合を除き、 **extern**で説明されているストレージ クラス指定子[ストレージ クラス](storage-classes-cpp.md)します。 関数宣言は、プロトタイプでない限り定義でもあります。 プロトタイプは定義する関数本体がない関数ヘッダーです。 オブジェクトの定義により、そのオブジェクトのストレージの割り当てと適切な初期化が行われます。
 

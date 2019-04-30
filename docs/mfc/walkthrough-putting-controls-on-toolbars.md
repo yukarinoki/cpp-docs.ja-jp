@@ -1,16 +1,16 @@
 ---
 title: 'チュートリアル: ツールバーのコントロールの追加'
-ms.date: 09/20/2018
+ms.date: 04/25/2019
 helpviewer_keywords:
 - Customize dialog box, adding controls
 - toolbars [MFC], adding controls
 ms.assetid: 8fc94bdf-0da7-45d9-8bc4-52b7b1edf205
 ms.openlocfilehash: 0b5b8685b3062bf63187a765b7e90e26f8c65681
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
-ms.translationtype: MT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57291389"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392454"
 ---
 # <a name="walkthrough-putting-controls-on-toolbars"></a>チュートリアル: ツールバーのコントロールの追加
 
@@ -62,7 +62,7 @@ ms.locfileid: "57291389"
 
 1. `CFindComboBox` クラスで、`PreTranslateMessage` 仮想メソッドをオーバーライドします。 このメソッドは、処理するコンボ ボックスを有効になります、 [WM_KEYDOWN](/windows/desktop/inputdev/wm-keydown)メッセージ。 ユーザーが Esc キーを押す (`VK_ESCAPE`) と、フォーカスがメイン フレーム ウィンドウに戻ります。 ユーザーが Enter キーを押す (`VK_ENTER`) と、`WM_COMMAND` コマンド ID を含む `ID_EDIT_FIND_COMBO` メッセージがメイン フレーム ウィンドウにポストされます。
 
-1. クラスを作成、**検索**から派生した、コンボ ボックス ボタン[CMFCToolBarComboBoxButton クラス](../mfc/reference/cmfctoolbarcomboboxbutton-class.md)します。 この例では、名前付き`CFindComboButton`します。
+1. クラスを作成、**検索**から派生した、コンボ ボックス ボタン[CMFCToolBarComboBoxButton クラス](../mfc/reference/cmfctoolbarcomboboxbutton-class.md)します。 この例では、それには `CFindComboButton` という名前が付いています。
 
 1. `CMFCToolbarComboBoxButton` のコンストラクターは、3 つのパラメーター (ボタンのコマンド ID、ボタン イメージのインデックス、およびコンボ ボックスのスタイル) を受け取ります。 これらのパラメーターを次のように設定します。
 
@@ -70,7 +70,7 @@ ms.locfileid: "57291389"
 
    1. 使用[CCommandManager::GetCmdImage](reference/internal-classes.md)で`ID_EDIT_FIND`イメージ インデックスを取得します。
 
-   1. 使用可能なコンボ ボックス スタイルの一覧は、[コンボ ボックス スタイル](../mfc/reference/styles-used-by-mfc.md#combo-box-styles)を参照してください。
+   1. 使用可能なコンボ ボックス スタイルの一覧は、次を参照してください。[コンボ ボックス スタイル](../mfc/reference/styles-used-by-mfc.md#combo-box-styles)します。
 
 1. `CFindComboButton` クラスで、`CMFCToolbarComboBoxButton::CreateCombo` メソッドをオーバーライドします。 ここで、`CFindComboButton` オブジェクトを作成し、オブジェクトへのポインターを返す必要があります。
 

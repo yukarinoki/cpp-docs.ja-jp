@@ -9,11 +9,11 @@ helpviewer_keywords:
 - include_alias pragma
 ms.assetid: 3256d589-12b3-4af0-a586-199e96eabacc
 ms.openlocfilehash: 187fa94f7c2a5457df655081b87a7f49d38adfa2
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59024102"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384043"
 ---
 # <a name="includealias"></a>include_alias
 
@@ -26,7 +26,7 @@ ms.locfileid: "59024102"
 
 ## <a name="remarks"></a>Remarks
 
-**Include_alias**プラグマ ディレクティブを使用すると、別の名前またはパスのソース ファイルが含まれているファイル名を持つファイルを置き換えてください。 たとえば、一部のファイル システムは、FAT ファイル システムの 8.3 制限よりも長いヘッダー ファイル名を許可します。 長いヘッダー ファイル名の最初の 8 文字は一意でない可能性があるため、コンパイラは、長い名前を単純に 8.3 形式に切り詰めることはできません。 たびに、コンパイラが検出されると、 *alias_filename* 、文字列を置き換える*actual_filename*、ヘッダー ファイルの検索と*actual_filename*代わりにします。 このプラグマは、対応する `#include` ディレクティブよりも前に記述する必要があります。 例えば:
+**Include_alias**プラグマ ディレクティブを使用すると、別の名前またはパスのソース ファイルが含まれているファイル名を持つファイルを置き換えてください。 たとえば、一部のファイル システムは、FAT ファイル システムの 8.3 制限よりも長いヘッダー ファイル名を許可します。 長いヘッダー ファイル名の最初の 8 文字は一意でない可能性があるため、コンパイラは、長い名前を単純に 8.3 形式に切り詰めることはできません。 たびに、コンパイラが検出されると、 *alias_filename* 、文字列を置き換える*actual_filename*、ヘッダー ファイルの検索と*actual_filename*代わりにします。 このプラグマは、対応する `#include` ディレクティブよりも前に記述する必要があります。 例:
 
 ```cpp
 // First eight characters of these two files not unique.

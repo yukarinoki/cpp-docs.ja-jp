@@ -14,11 +14,11 @@ helpviewer_keywords:
 - dynasets
 ms.assetid: 333337c5-575e-4d26-b5f6-47166ad7874d
 ms.openlocfilehash: b201e152d83d3812253aa4803eebe715d726219d
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59034496"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62397745"
 ---
 # <a name="recordset-odbc"></a>レコードセット (ODBC)
 
@@ -77,49 +77,49 @@ A [CRecordset](../../mfc/reference/crecordset-class.md)オブジェクト デー
 
 ### <a name="topics-about-the-mechanics-of-opening-reading-and-closing-recordsets"></a>開く、読み取り、およびレコード セットの終了のしくみに関するトピック
 
-- [レコード セット:構造 (ODBC)](../../data/odbc/recordset-architecture-odbc.md)
+- [レコードセット: アーキテクチャ (ODBC)](../../data/odbc/recordset-architecture-odbc.md)
 
-- [レコード セット:テーブル (ODBC) クラスの宣言](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)
+- [レコードセット: テーブル用のクラスの宣言 (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)
 
-- [レコード セット:作成するレコード セットと破棄 (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)
+- [レコードセット: レコードセットの作成成と破棄 (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)
 
-- [レコード セット:スクロール (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)
+- [レコードセット: スクロール (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)
 
-- [レコード セット:ブックマークと絶対位置 (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)
+- [レコードセット: ブックマークと絶対位置 (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)
 
-- [レコード セット:レコードのフィルター処理 (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)
+- [レコードセット: レコードのフィルター処理 (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)
 
-- [レコード セット:レコードの並べ替え (ODBC)](../../data/odbc/recordset-sorting-records-odbc.md)
+- [レコードセット: レコードの並べ替え (ODBC)](../../data/odbc/recordset-sorting-records-odbc.md)
 
-- [レコード セット:レコード セット (ODBC) をパラメーター化](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)
+- [レコードセット: レコードセットのパラメーター化 (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)
 
 ### <a name="topics-about-the-mechanics-of-modifying-recordsets"></a>レコード セットの変更のしくみに関するトピック
 
-- [レコード セット:追加、更新、および削除 (Odbc)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)
+- [レコードセット: レコードの追加、更新、削除 (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)
 
-- [レコード セット:レコードのロック (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)
+- [レコードセット: レコードのロック (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)
 
-- [レコード セット:クエリの再実行 (Odbc)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)
+- [レコードセット: レコードセットのクエリの再実行 (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)
 
 ### <a name="topics-about-somewhat-more-advanced-techniques"></a>高度な手法をいくらかに関するトピック
 
-- [レコード セット:結合 (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)
+- [レコードセット: 結合の実行 (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)
 
-- [レコード セット:クラスの宣言、定義済みクエリ (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)
+- [レコードセット: 定義済みクエリのクラスの宣言 (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)
 
-- [レコード セット:動的に結びつける方法 (ODBC) のデータ列](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)
+- [レコードセット: データ列の動的なバインド (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)
 
-- [レコード セット:方法 (ODBC) 内のレコードをフェッチしています](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)
+- [レコードセット: レコードの一括フェッチ (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)
 
-- [レコード セット:大規模なデータ アイテム (ODBC) の操作](../../data/odbc/recordset-working-with-large-data-items-odbc.md)
+- [レコードセット: 大きいデータ項目の処理 (ODBC)](../../data/odbc/recordset-working-with-large-data-items-odbc.md)
 
-- [レコード セット:合計およびその他の集計の計算 (ODBC) を取得します。](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)
+- [レコードセット: 合計とその他の集計結果 (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)
 
 ### <a name="topics-about-how-recordsets-work"></a>レコード セットのしくみに関するトピック
 
-- [レコード セット:レコード セットの選択が (ODBC) を記録する方法](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)
+- [レコードセット: レコードセットでのレコード選択のしくみ (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)
 
-- [レコード セット:レコード セットの更新が (ODBC) を記録する方法](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)
+- [レコードセット: レコードセットでのレコード更新のしくみ (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)
 
 ## <a name="see-also"></a>関連項目
 

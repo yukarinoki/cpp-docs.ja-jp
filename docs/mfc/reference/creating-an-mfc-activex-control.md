@@ -8,18 +8,18 @@ helpviewer_keywords:
 - ActiveX controls [MFC], creating
 ms.assetid: 8bd5a93c-d04d-414e-bb28-163fdc1c0dd5
 ms.openlocfilehash: b2dc48e2568e180820f8bca008c66878af4b575e
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57818545"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62372297"
 ---
 # <a name="creating-an-mfc-activex-control"></a>MFC ActiveX コントロールの作成
 
 ActiveX コントロール プログラムは、親アプリケーションに特定の機能を提供するモジュール プログラムです。 たとえば、ダイアログ ボックスのボタンや Web ページのツール バーなどのコントロールを作成できます。
 
 >[!IMPORTANT]
-> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 詳細については、[ActiveX コントロール](../activex-controls.md)を参照してください。
+> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 詳細については、次を参照してください。 [ActiveX コントロール](../activex-controls.md)します。
 
 MFC ActiveX コントロールを作成する最も簡単な方法が使用するには、 [MFC ActiveX コントロール ウィザード](../../mfc/reference/mfc-activex-control-wizard.md)します。
 
@@ -36,9 +36,9 @@ MFC ActiveX コントロールを作成する最も簡単な方法が使用す�
 
 1. クリックして**完了**ウィザードを終了し、開発環境で新しいプロジェクトを開きます。
 
-作成されたファイルを表示するには、プロジェクトを作成した後**ソリューション エクスプ ローラー**します。 ウィザードでプロジェクト用に作成されるファイルの詳細については、プロジェクトが生成する ReadMe.txt ファイルを参照してください。 ファイルの種類についての詳細については、[Visual c プロジェクトに対して作成されるファイルの種類](../../build/reference/file-types-created-for-visual-cpp-projects.md)を参照してください。
+作成されたファイルを表示するには、プロジェクトを作成した後**ソリューション エクスプ ローラー**します。 ウィザードでプロジェクト用に作成されるファイルの詳細については、プロジェクトが生成する ReadMe.txt ファイルを参照してください。 ファイルの種類についての詳細については、次を参照してください。 [Visual c プロジェクトに対して作成されるファイルの種類](../../build/reference/file-types-created-for-visual-cpp-projects.md)します。
 
-追加するコード ウィザードを使用するには、プロジェクトを作成した後[関数](../../ide/add-member-function-wizard.md)、[変数](../../ide/add-member-variable-wizard.md)、[イベント](../../ide/add-event-wizard.md)、[プロパティ](../../ide/names-add-property-wizard.md)と[メソッド](../../ide/add-method-wizard.md)します。 ActiveX コントロールのカスタマイズの詳細については、[MFC ActiveX コントロール](../../mfc/mfc-activex-controls.md)を参照してください。
+追加するコード ウィザードを使用するには、プロジェクトを作成した後[関数](../../ide/add-member-function-wizard.md)、[変数](../../ide/add-member-variable-wizard.md)、[イベント](../../ide/add-event-wizard.md)、[プロパティ](../../ide/names-add-property-wizard.md)と[メソッド](../../ide/add-method-wizard.md)します。 ActiveX コントロールのカスタマイズの詳細については、次を参照してください。 [MFC ActiveX コントロール](../../mfc/mfc-activex-controls.md)します。
 
 ## <a name="see-also"></a>関連項目
 

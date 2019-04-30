@@ -7,11 +7,11 @@ helpviewer_keywords:
 - RW2002
 ms.assetid: b1d1a49b-b50b-4b0b-9f09-c7762e2dbe8f
 ms.openlocfilehash: 4cd922fff691b524ec9d278ac5948992fc096e09
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523505"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62396788"
 ---
 # <a name="resource-compiler-error-rw2002"></a>リソース コンパイラ エラー RW2002
 
@@ -69,7 +69,7 @@ ms.locfileid: "51523505"
 
 1. **予想されるコントロールのクラス名**
 
-   `class`のフィールドを**コントロール**内のステートメント、**ダイアログ**ステートメントは、次の種類のいずれかを指定する必要があります: ボタン、コンボ ボックス、編集、リスト ボックス、スクロール バー、STATIC、またはユーザー定義します。 クラスのスペルが正しいことを確認します。
+   `class`のフィールドを**コントロール**内のステートメント、**ダイアログ**ステートメントは、次の種類のいずれかを指定する必要があります。ボタン、コンボ ボックス、編集、リスト ボックス、スクロール バー、STATIC、またはユーザー定義します。 クラスのスペルが正しいことを確認します。
 
 1. **フォント フェイス名が必要です。**
 
@@ -141,7 +141,7 @@ ms.locfileid: "51523505"
 
 1. **無効なコントロール型**
 
-   内の各コントロール ステートメント、**ダイアログ**ステートメントは、次のいずれかを指定する必要があります: チェック ボックス、コンボ ボックス、コントロール、CTEXT、DEFPUSHBUTTON、EDITTEXT、GROUPBOX、アイコン、リスト ボックス、LTEXT、プッシュ ボタン、RADIOBUTTON、RTEXT、スクロール バー。 これらのコントロール ステートメントのスペルが正しいことを確認します。
+   内の各コントロール ステートメント、**ダイアログ**ステートメントは、次のいずれかを指定する必要があります。チェック ボックス、コンボ ボックス、コントロール、CTEXT、DEFPUSHBUTTON、EDITTEXT、GROUPBOX、アイコン、リスト ボックス、LTEXT、プッシュ ボタン、RADIOBUTTON、RTEXT、スクロール バー。 これらのコントロール ステートメントのスペルが正しいことを確認します。
 
 1. **型が無効です。**
 

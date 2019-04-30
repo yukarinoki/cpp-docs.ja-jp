@@ -6,11 +6,11 @@ helpviewer_keywords:
 - event class, example
 ms.assetid: 8b0b1a3a-ef80-408c-91fa-93e6af920b4e
 ms.openlocfilehash: 4fa0d3fbf3457bfafab731275584d206206161dd
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57275975"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62414036"
 ---
 # <a name="comparing-synchronization-data-structures-to-the-windows-api"></a>同期データ構造と Windows API の比較
 
@@ -20,7 +20,7 @@ ms.locfileid: "57275975"
 
 ## <a name="criticalsection"></a>critical_section
 
-[Concurrency::critical_section](../../parallel/concrt/reference/critical-section-class.md) 、Windows と似ています`CRITICAL_SECTION`のため、1 つのプロセスのスレッドでのみ使用できます。 Windows API のクリティカル セクションの詳細については、[クリティカル セクション オブジェクト](/windows/desktop/Sync/critical-section-objects)を参照してください。
+[Concurrency::critical_section](../../parallel/concrt/reference/critical-section-class.md) 、Windows と似ています`CRITICAL_SECTION`のため、1 つのプロセスのスレッドでのみ使用できます。 Windows API のクリティカル セクションの詳細については、次を参照してください。[クリティカル セクション オブジェクト](/windows/desktop/Sync/critical-section-objects)します。
 
 ## <a name="readerwriterlock"></a>reader_writer_lock
 
@@ -38,7 +38,7 @@ SRW ロックの詳細については、次を参照してください。[スリ
 
 ## <a name="event"></a>event
 
-[Concurrency::event](../../parallel/concrt/reference/event-class.md)名前のない Windows 手動リセット イベントと似ています。 ただし、`event` オブジェクトは協調して動作しますが、Windows イベントはプリエンプティブに動作します。 Windows イベントの詳細については、[イベント オブジェクト](/windows/desktop/Sync/event-objects)を参照してください。
+[Concurrency::event](../../parallel/concrt/reference/event-class.md)名前のない Windows 手動リセット イベントと似ています。 ただし、`event` オブジェクトは協調して動作しますが、Windows イベントはプリエンプティブに動作します。 Windows イベントの詳細については、次を参照してください。[イベント オブジェクト](/windows/desktop/Sync/event-objects)します。
 
 ## <a name="example"></a>例
 
@@ -83,7 +83,7 @@ Windows event:
 
 `event` クラスは協調して動作するため、イベントがシグナル状態になるのを待機している場合、スケジューラは処理リソースを別のコンテキストに再割り当てすることができます。 したがって、`event` クラスを使用するバージョンで、より多くの作業が実行されます。 Windows イベントを使用するバージョンでは、待機中の各タスクは次のタスクが開始される前にシグナル状態になる必要があります。
 
-タスクの詳細については、[タスクの並列化](../../parallel/concrt/task-parallelism-concurrency-runtime.md)を参照してください。
+タスクの詳細については、次を参照してください。[タスクの並列化](../../parallel/concrt/task-parallelism-concurrency-runtime.md)します。
 
 ## <a name="see-also"></a>関連項目
 

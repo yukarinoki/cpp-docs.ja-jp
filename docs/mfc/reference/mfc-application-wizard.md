@@ -8,11 +8,11 @@ helpviewer_keywords:
 - executable files, creating
 ms.assetid: 227ac090-921d-4b2f-be0a-66a5f4cab0d4
 ms.openlocfilehash: 808e8364764dd826ee82e445627ba21b06946ed6
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57822666"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412749"
 ---
 # <a name="mfc-application-wizard"></a>MFC アプリケーション ウィザード
 
@@ -27,7 +27,7 @@ MFC アプリケーション ウィザードでは、コンパイル時に Windo
 
 - [[アプリケーションの種類] (MFC アプリケーション ウィザード)](../../mfc/reference/application-type-mfc-application-wizard.md)
 
-   - タブ付きのマルチ ドキュメント インターフェイス (MDI: Multiple Document Interface) をサポートするプロジェクト。 詳細については、[SDI と MDI](../../mfc/sdi-and-mdi.md)を参照してください。
+   - タブ付きのマルチ ドキュメント インターフェイス (MDI: Multiple Document Interface) をサポートするプロジェクト。 詳細については、次を参照してください。 [SDI と MDI](../../mfc/sdi-and-mdi.md)します。
 
    - プロジェクトを使用して、[ドキュメント/ビュー アーキテクチャ](../../mfc/document-view-architecture.md)します。
 
@@ -57,7 +57,7 @@ MFC アプリケーション ウィザードでは、コンパイル時に Windo
 
    - 印刷と印刷プレビューをサポートするプロジェクト
 
-   - ActiveX コントロールをサポートするプロジェクト 詳細については、[ActiveX コントロールの作成の操作のシーケンス](../../mfc/sequence-of-operations-for-creating-activex-controls.md)を参照してください。
+   - ActiveX コントロールをサポートするプロジェクト 詳細については、次を参照してください。 [ActiveX コントロールの作成の操作のシーケンス](../../mfc/sequence-of-operations-for-creating-activex-controls.md)します。
 
    - プロジェクトのサポートを提供しない[Automation](../../mfc/automation.md)、 [MAPI](../../mfc/mapi-support-in-mfc.md)、 [Windows Sockets](../../mfc/windows-sockets-in-mfc.md)、または Active Accessibility します。
 

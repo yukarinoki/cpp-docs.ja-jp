@@ -6,11 +6,11 @@ helpviewer_keywords:
 - removing work from user-interface threads [Concurrency Runtime]
 ms.assetid: a4a65cc2-b3bc-4216-8fa8-90529491de02
 ms.openlocfilehash: 1838ad0d6adb146adacb8b3a395f44f76e2a8d3f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
-ms.translationtype: MT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304718"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62407815"
 ---
 # <a name="walkthrough-removing-work-from-a-user-interface-thread"></a>チュートリアル: ユーザー インターフェイス スレッドからの処理の除去
 
@@ -32,7 +32,7 @@ UI スレッドから作業を削除するには、ブロック操作をオフ�
 
 - [PPL における取り消し処理](cancellation-in-the-ppl.md)
 
-また、このチュートリアルを開始する前に、MFC アプリケーションの開発と GDI + の基本を理解することをお勧めします。 MFC の詳細については、[MFC Desktop Applications](../../mfc/mfc-desktop-applications.md)を参照してください。 GDI + の詳細については、[GDI +](https://msdn.microsoft.com/library/windows/desktop/ms533798)を参照してください。
+また、このチュートリアルを開始する前に、MFC アプリケーションの開発と GDI + の基本を理解することをお勧めします。 MFC の詳細については、次を参照してください。 [MFC Desktop Applications](../../mfc/mfc-desktop-applications.md)します。 GDI + の詳細については、次を参照してください。 [GDI +](https://msdn.microsoft.com/library/windows/desktop/ms533798)します。
 
 ##  <a name="top"></a> セクション
 

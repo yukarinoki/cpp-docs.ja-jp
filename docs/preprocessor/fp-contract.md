@@ -9,11 +9,11 @@ helpviewer_keywords:
 - fp_contract pragma
 ms.assetid: 15b97338-6680-4287-ba2a-2dccc5b2ccf5
 ms.openlocfilehash: 14c3ac60d4fc0f45fcf0ece6c3f73153e5de4271
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476506"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62409916"
 ---
 # <a name="fpcontract"></a>fp_contract
 
@@ -27,7 +27,7 @@ ms.locfileid: "50476506"
 
 既定では、 **fp_contract**は**で**します。 これは、ように可能であれば、浮動小数点の省略形の手順を使用してコンパイラに指示します。 設定**fp_contract**に**オフ**個々 の浮動小数点命令を維持します。
 
-浮動小数点の動作の詳細については、[/fp (浮動小数点の動作の指定)](../build/reference/fp-specify-floating-point-behavior.md)を参照してください。
+浮動小数点の動作の詳細については、次を参照してください。 [/fp (浮動小数点の動作の指定)](../build/reference/fp-specify-floating-point-behavior.md)します。
 
 その他の浮動小数点プラグマには以下があります。
 

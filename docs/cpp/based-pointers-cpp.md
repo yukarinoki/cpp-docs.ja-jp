@@ -11,11 +11,11 @@ helpviewer_keywords:
 - pointers, based
 ms.assetid: 1e5f2e96-c52e-4738-8e14-87278681205e
 ms.openlocfilehash: 771d3ee132e4cd63499fec886ef9f7cd06ec0260
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50676370"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62393962"
 ---
 # <a name="based-pointers-c"></a>ベース ポインター (C++)
 
@@ -34,7 +34,7 @@ type __based( base ) declarator
 
 ポインター アドレスに基づくポインターは唯一の形式では、 **_ _based** 32 ビットまたは 64 ビット コンパイルで有効なキーワード。 Microsoft の 32 ビット C/C++ コンパイラでは、based ポインターは 32 ビットのポインター ベースからの 32 ビットのオフセットになります。 同様の制限は 64 ビット環境にもあり、based ポインターは 64 ビット ベースからの 64 ビット オフセットになります。
 
-ポインターに基づいたポインターの使用方法の 1 つは、ポインターを含む永続的な識別子での使用です。 ポインターに基づくポインターで構成されるリンク リストをディスクに保存でき、メモリ内の別の場所に再読み込みしても、ポインターは有効なままです。 例えば:
+ポインターに基づいたポインターの使用方法の 1 つは、ポインターを含む永続的な識別子での使用です。 ポインターに基づくポインターで構成されるリンク リストをディスクに保存でき、メモリ内の別の場所に再読み込みしても、ポインターは有効なままです。 例:
 
 ```cpp
 // based_pointers1.cpp

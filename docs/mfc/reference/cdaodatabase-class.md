@@ -59,11 +59,11 @@ helpviewer_keywords:
 - CDaoDatabase [MFC], m_pWorkspace
 ms.assetid: 8ff5b342-964d-449d-bef1-d0ff56aadf6d
 ms.openlocfilehash: d1e9db1ddebe05d42cbb8c4ba242938d6d86cc81
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57272902"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399841"
 ---
 # <a name="cdaodatabase-class"></a>CDaoDatabase クラス
 
@@ -556,7 +556,7 @@ short GetQueryDefCount();
 
 ### <a name="remarks"></a>Remarks
 
-`GetQueryDefCount` QueryDefs コレクション内のすべてのクエリ定義をループ処理する必要がある場合に便利です。 コレクション内の指定されたクエリに関する情報を取得するには、[GetQueryDefInfo](#getquerydefinfo)を参照してください。
+`GetQueryDefCount` QueryDefs コレクション内のすべてのクエリ定義をループ処理する必要がある場合に便利です。 コレクション内の指定されたクエリに関する情報を取得するには、次を参照してください。 [GetQueryDefInfo](#getquerydefinfo)します。
 
 ##  <a name="getquerydefinfo"></a>  CDaoDatabase::GetQueryDefInfo
 
@@ -652,7 +652,7 @@ short GetRelationCount();
 
 ### <a name="remarks"></a>Remarks
 
-`GetRelationCount` データベースの関係のコレクションで定義されているすべての関係をループ処理する必要がある場合に便利です。 コレクション内の特定の関係に関する情報を取得するには、[GetRelationInfo](#getrelationinfo)を参照してください。
+`GetRelationCount` データベースの関係のコレクションで定義されているすべての関係をループ処理する必要がある場合に便利です。 コレクション内の特定の関係に関する情報を取得するには、次を参照してください。 [GetRelationInfo](#getrelationinfo)します。
 
 リレーションシップの概念を説明するために、Suppliers テーブルと一対多のリレーションシップがあります製品のテーブルを検討してください。 このリレーションシップでは、1 つの仕入先は 1 つ以上の製品を指定できます。 その他の関係は、一対一および多対多です。
 
@@ -713,7 +713,7 @@ short GetTableDefCount();
 
 ### <a name="remarks"></a>Remarks
 
-`GetTableDefCount` データベースのテーブル定義のコレクション内のすべてのテーブルをループ処理する必要がある場合に便利です。 コレクション内の特定のテーブルに関する情報を取得するには、[プライマリ](#gettabledefinfo)を参照してください。
+`GetTableDefCount` データベースのテーブル定義のコレクション内のすべてのテーブルをループ処理する必要がある場合に便利です。 コレクション内の特定のテーブルに関する情報を取得するには、次を参照してください。[プライマリ](#gettabledefinfo)します。
 
 ##  <a name="gettabledefinfo"></a>  CDaoDatabase::GetTableDefInfo
 

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - concurrent_vector class, examples
 ms.assetid: bd00046d-e9b6-4ae1-b661-3995f671b867
 ms.openlocfilehash: 2479915b167ee3dbc2ce43d9c2733efc74818bbe
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57300636"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394443"
 ---
 # <a name="how-to-use-parallel-containers-to-increase-efficiency"></a>方法: 並列コンテナーを使用して、効率を向上させる
 
@@ -27,7 +27,7 @@ ms.locfileid: "57300636"
 
 ## <a name="example"></a>例
 
-次の例では、`is_prime` 関数と `is_carmichael` 関数を使用して、素数とカーマイケル数のセットを計算します。 この例では、 [concurrency::parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke)と[concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for)それぞれ計算するアルゴリズムを並列で設定します。 並列アルゴリズムの詳細については、[並列アルゴリズム](../../parallel/concrt/parallel-algorithms.md)を参照してください。
+次の例では、`is_prime` 関数と `is_carmichael` 関数を使用して、素数とカーマイケル数のセットを計算します。 この例では、 [concurrency::parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke)と[concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for)それぞれ計算するアルゴリズムを並列で設定します。 並列アルゴリズムの詳細については、次を参照してください。[並列アルゴリズム](../../parallel/concrt/parallel-algorithms.md)します。
 
 この例では、 [concurrency::concurrent_queue](../../parallel/concrt/reference/concurrent-queue-class.md)は作業キューとしてに後でそのオブジェクトを使用してそのため、カーマイケルのセットを保持するオブジェクトの数値します。 使用して、 [concurrency::concurrent_vector](../../parallel/concrt/reference/concurrent-vector-class.md)この素因数を検出するセットを反復処理には後であるために、素数のセットを保持するオブジェクト。
 
@@ -37,14 +37,13 @@ ms.locfileid: "57300636"
 
 次の例は、`prime_factors_of` 関数を示しています。この関数は試行除算を使用して、指定された値のすべての素因数を検出します。
 
-この関数を使用して、 [concurrency::parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each)素数のコレクションを反復処理するアルゴリズム。 
-  `concurrent_vector` オブジェクトを使用すると、並行ループで素因数を結果に同時に加算できます。
+この関数を使用して、 [concurrency::parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each)素数のコレクションを反復処理するアルゴリズム。 `concurrent_vector` オブジェクトを使用すると、並行ループで素因数を結果に同時に加算できます。
 
 [!code-cpp[concrt-carmichael-primes#3](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-containers-to-increase-efficiency_3.cpp)]
 
 ## <a name="example"></a>例
 
-この例では、カーマイケル数のキュー内の各要素を、`prime_factors_of` 関数を呼び出してその素因数を計算することで処理します。 この作業を並列実行するために、タスク グループを使用します。 タスク グループの詳細については、[タスクの並列化](../../parallel/concrt/task-parallelism-concurrency-runtime.md)を参照してください。
+この例では、カーマイケル数のキュー内の各要素を、`prime_factors_of` 関数を呼び出してその素因数を計算することで処理します。 この作業を並列実行するために、タスク グループを使用します。 タスク グループの詳細については、次を参照してください。[タスクの並列化](../../parallel/concrt/task-parallelism-concurrency-runtime.md)します。
 
 この例では、カーマイケル数に 5 つ以上の素因数がある場合、カーマイケル数ごとに素因数を出力します。
 

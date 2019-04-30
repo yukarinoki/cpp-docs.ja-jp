@@ -10,11 +10,11 @@ helpviewer_keywords:
 - handlers [MFC], message
 ms.assetid: 51bc4e76-dbe3-4cc2-b026-3199d56b2fa9
 ms.openlocfilehash: 0d3ed6239b638a0e161cd7e3580f4fe6e1b4a7e7
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304868"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383764"
 ---
 # <a name="message-handlers"></a>メッセージ ハンドラー
 
@@ -24,7 +24,7 @@ Mfc では、専用*ハンドラー*関数は各メッセージを処理しま�
 
 メッセージのハンドラーはどのような実行は何でもそのメッセージへの応答で完了します。 クラスのプロパティ ウィンドウを使用してハンドラーを作成でき、ソース コード エディターを使用して、ハンドラーのコードを入力できます。
 
-すべての Microsoft Visual C と MFC の機能を使用するには、ハンドラーを記述します。 すべてのクラスの一覧は、[クラス ライブラリの概要](../mfc/class-library-overview.md)で、 *MFC リファレンス*を参照してください。
+すべての Microsoft Visual C と MFC の機能を使用するには、ハンドラーを記述します。 すべてのクラスの一覧は、次を参照してください。[クラス ライブラリの概要](../mfc/class-library-overview.md)で、 *MFC リファレンス*します。
 
 ## <a name="see-also"></a>関連項目
 

@@ -87,11 +87,11 @@ helpviewer_keywords:
 - stdext::hash_set::value_comp
 ms.assetid: c765c06e-cbb6-48c2-93ca-d15468eb28d7
 ms.openlocfilehash: c7d5df87dc6c8529d18b9f5fb960148c7362129a
-ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678575"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405041"
 ---
 # <a name="hashset-class"></a>hash_set クラス
 
@@ -1424,8 +1424,8 @@ hash_set(
 |*Al*|この `hash_set` オブジェクトに使用するストレージ アロケーター クラス。既定では、`Allocator` です。|
 |*コンポジション*|`const Traits` 内の要素の並べ替えに使用される、`hash_set` 型の比較関数。既定では `hash_compare` です。|
 |*右*|構築された `hash_set` のコピー元となる `hash_set`。|
-|*まずは*|コピーする要素範囲内の最初の要素の位置。|
-|*前の*|コピーする要素範囲を超える最初の要素の位置。|
+|*First*|コピーする要素範囲内の最初の要素の位置。|
+|*Last*|コピーする要素範囲を超える最初の要素の位置。|
 
 ### <a name="remarks"></a>Remarks
 
@@ -1476,8 +1476,8 @@ void insert(
 |-|-|
 |*val*|挿入される要素が `hash_set` にまだ含まれていない場合、より一般的には、キーが同じ順序付けになる要素がまだ含まれていない場合に、`hash_set` に挿入される要素の値。|
 |*Where*|正しい挿入ポイントの検索を開始する場所  (挿入ポイントが `_Where` の直後にある場合、挿入処理は対数時間ではなく償却定数時間で実行できます)。|
-|*まずは*|`hash_set` からコピーされる最初の要素の位置。|
-|*前の*|`hash_set` からコピーされる最後の要素の次の位置。|
+|*First*|`hash_set` からコピーされる最初の要素の位置。|
+|*Last*|`hash_set` からコピーされる最後の要素の次の位置。|
 |*IList*|要素のコピー元の initializer_list。|
 
 ### <a name="return-value"></a>戻り値

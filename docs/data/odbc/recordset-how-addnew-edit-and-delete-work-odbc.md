@@ -18,11 +18,11 @@ helpviewer_keywords:
 - records [C++], editing
 ms.assetid: cab43d43-235a-4bed-ac05-67d10e94f34e
 ms.openlocfilehash: e5fc6ad2a1fe00367cd8a0b1c53ac914b95018ab
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59033210"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62397836"
 ---
 # <a name="recordset-how-addnew-edit-and-delete-work-odbc"></a>レコード セット:AddNew が編集、および作業 (ODBC) を削除する方法
 
@@ -160,5 +160,5 @@ ODBC ドライバーがサポートしている場合、 `::SQLSetPos` MFC ODBC 
 ## <a name="see-also"></a>関連項目
 
 [レコードセット (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[レコード セット:詳細については、更新 (ODBC)](../../data/odbc/recordset-more-about-updates-odbc.md)<br/>
+[レコードセット: 更新処理の詳細 (ODBC)](../../data/odbc/recordset-more-about-updates-odbc.md)<br/>
 [レコード フィールド エクスチェンジ (RFX)](../../data/odbc/record-field-exchange-rfx.md)

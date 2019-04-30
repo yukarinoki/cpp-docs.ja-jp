@@ -5,11 +5,11 @@ helpviewer_keywords:
 - record views [C++], customizing default code
 ms.assetid: 9992ed37-a6bf-45a5-a572-5c14e42b6628
 ms.openlocfilehash: fc448ae1e13025a83b33386c2845bdf7bb4d5eec
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59038636"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62398023"
 ---
 # <a name="changes-you-might-make-to-the-default-code--mfc-data-access"></a>既定の処理の変更 (MFC データ アクセス)
 
@@ -17,7 +17,7 @@ ms.locfileid: "59038636"
 
 - レコードセットのフィルターまたは並べ替え順序の設定。 これを行う`OnInitialUpdate`recordset オブジェクトを構築する前にその`Open`メンバー関数が呼び出されます。 詳細については、次を参照してください。[レコード セット。レコード (ODBC) のフィルター処理](../data/odbc/recordset-filtering-records-odbc.md)と[レコード セット。レコードの並べ替え (ODBC)](../data/odbc/recordset-sorting-records-odbc.md)します。
 
-- レコードセットのパラメーター化。 実際のランタイム パラメーター値はフィルターの後に指定します。 詳細については、次を参照してください。[レコード セット。レコード セット (ODBC) をパラメーター化](../data/odbc/recordset-parameterizing-a-recordset-odbc.md)
+- レコードセットのパラメーター化。 実際のランタイム パラメーター値はフィルターの後に指定します。 詳細については、次を参照してください。[レコード セット。レコードセットのパラメーター化 (ODBC)](../data/odbc/recordset-parameterizing-a-recordset-odbc.md)
 
 - カスタマイズされた SQL 文字列を渡す、[オープン](../mfc/reference/crecordset-class.md#open)メンバー関数。 この手法で行うことができますの詳細については、次を参照してください[SQL:。レコード セットの SQL ステートメント (ODBC) のカスタマイズ](../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)します。
 

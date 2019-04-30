@@ -7,11 +7,11 @@ f1_keywords:
 - VCCORLIB/Namespace not found::Platform::Value
 ms.assetid: 774df45d-f8a7-45a3-ae24-eecc3c681040
 ms.openlocfilehash: 24e70ad646e2673869b135e8cc7657910b9b499c
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57747061"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383296"
 ---
 # <a name="platformibox-interface"></a>Platform::IBox インターフェイス
 
@@ -31,7 +31,7 @@ interface class IBox
 
 ### <a name="remarks"></a>Remarks
 
-`IBox<T>` インターフェイスは、「 [値クラスと構造体 (C++/CX)](../cppcx/value-classes-and-structs-c-cx.md)」で説明されているように、主に内部的に使用され、null 許容値型を表します。 インターフェイスは、 `Object^`型のパラメーターを受け取る C++ のメソッドに渡される値の型をボックス化するためにも使用されます。 入力パラメーターは `IBox<SomeValueType>`として明示的に宣言できます。 例については、[ボックス化](../cppcx/boxing-c-cx.md)を参照してください。
+`IBox<T>` インターフェイスは、「 [値クラスと構造体 (C++/CX)](../cppcx/value-classes-and-structs-c-cx.md)」で説明されているように、主に内部的に使用され、null 許容値型を表します。 インターフェイスは、 `Object^`型のパラメーターを受け取る C++ のメソッドに渡される値の型をボックス化するためにも使用されます。 入力パラメーターは `IBox<SomeValueType>`として明示的に宣言できます。 例については、次を参照してください。[ボックス化](../cppcx/boxing-c-cx.md)します。
 
 ### <a name="requirements"></a>必要条件
 
@@ -66,8 +66,8 @@ property T Value {T get();}
 
 ### <a name="remarks"></a>Remarks
 
-例については、[ボックス化](../cppcx/boxing-c-cx.md)を参照してください。
+例については、次を参照してください。[ボックス化](../cppcx/boxing-c-cx.md)します。
 
 ## <a name="see-also"></a>関連項目
 
-[Platform 名前空間](../cppcx/platform-namespace-c-cx.md)
+[プラットフォーム名前空間](../cppcx/platform-namespace-c-cx.md)

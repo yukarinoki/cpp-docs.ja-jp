@@ -67,11 +67,11 @@ helpviewer_keywords:
 - CDaoQueryDef [MFC], m_pDatabase
 ms.assetid: 9676a4a3-c712-44d4-8c5d-d1cc78288d3a
 ms.openlocfilehash: 08fb2909a4fd2e5bda3dfc63d19224a515c7c699
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283645"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399747"
 ---
 # <a name="cdaoquerydef-class"></a>CDaoQueryDef クラス
 
@@ -164,7 +164,7 @@ class CDaoQueryDef : public CObject
 
 - オブジェクトの呼び出しに`Execute`アクション クエリまたは SQL パススルー クエリを直接実行するメンバー関数
 
-Select、アクション、クロス集計、削除、更新プログラムを含めて、クエリの任意の型のクエリ定義のオブジェクトを使用し、追加、テーブルの作成、データ定義、SQL パススルー、共用体、一括クエリできます。 クエリの種類については、指定した SQL ステートメントの内容によって決まります。 クエリの種類については、次を参照してください。、`Execute`と[GetType](#gettype)メンバー関数。 レコード セットは行を返すのよく使用されるクエリは、通常を使用して、**を選択しています.** キーワード。 `Execute` 一括操作の最もよく使用されます。 詳細については、[Execute](#execute)と[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)を参照してください。
+Select、アクション、クロス集計、削除、更新プログラムを含めて、クエリの任意の型のクエリ定義のオブジェクトを使用し、追加、テーブルの作成、データ定義、SQL パススルー、共用体、一括クエリできます。 クエリの種類については、指定した SQL ステートメントの内容によって決まります。 クエリの種類については、次を参照してください。、`Execute`と[GetType](#gettype)メンバー関数。 レコード セットは行を返すのよく使用されるクエリは、通常を使用して、**を選択しています.** キーワード。 `Execute` 一括操作の最もよく使用されます。 詳細については、次を参照してください。 [Execute](#execute)と[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)します。
 
 ## <a name="querydefs-and-recordsets"></a>クエリ定義とレコード セット
 
@@ -351,7 +351,7 @@ A [CString](../../atl-mfc-shared/reference/cstringt-class.md)クエリ定義の�
 
 ### <a name="remarks"></a>Remarks
 
-この関数は、ODBC データ ソースと特定の ISAM ドライバーでのみ使用されます。 Microsoft Jet では使用されません (します。MDB) データベース。この場合、`GetConnect`空の文字列を返します。 詳細については、[SetConnect](#setconnect)を参照してください。
+この関数は、ODBC データ ソースと特定の ISAM ドライバーでのみ使用されます。 Microsoft Jet では使用されません (します。MDB) データベース。この場合、`GetConnect`空の文字列を返します。 詳細については、次を参照してください。 [SetConnect](#setconnect)します。
 
 > [!TIP]
 >  ODBC テーブルを使用することをお勧めが接続先にするには、します。MDB データベースです。 詳細については、"にアクセスする外部のデータベースと DAO"DAO ヘルプのトピックを参照してください。
@@ -659,7 +659,7 @@ short GetType();
 > [!NOTE]
 >  SQL パススルー クエリを作成するに設定しないでください、`dbSQLPassThrough`定数。 これは自動的に設定、Microsoft Jet データベース エンジンによってクエリ定義のオブジェクトを作成し、接続文字列を設定します。
 
-SQL 文字列については、[GetSQL](#getsql)を参照してください。 クエリの種類については、[Execute](#execute)を参照してください。
+SQL 文字列については、次を参照してください。 [GetSQL](#getsql)します。 クエリの種類については、次を参照してください。 [Execute](#execute)します。
 
 ##  <a name="isopen"></a>  CDaoQueryDef::IsOpen
 
@@ -816,7 +816,7 @@ void SetReturnsRecords(BOOL bReturnsRecords);
 
 ### <a name="remarks"></a>Remarks
 
-このような場合は、クエリ定義を作成し、他を使用してそのプロパティを設定`CDaoQueryDef`メンバー関数。 外部データベースについては、[SetConnect](#setconnect)を参照してください。
+このような場合は、クエリ定義を作成し、他を使用してそのプロパティを設定`CDaoQueryDef`メンバー関数。 外部データベースについては、次を参照してください。 [SetConnect](#setconnect)します。
 
 ##  <a name="setsql"></a>  CDaoQueryDef::SetSQL
 

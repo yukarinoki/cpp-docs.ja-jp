@@ -6,11 +6,11 @@ helpviewer_keywords:
 - preprocessor, reference overview
 ms.assetid: e4a52843-7016-4f6d-8b40-cb1ace18f805
 ms.openlocfilehash: a9e5be5895d8a90d93d0060e2bd2a7d0a9f84dbd
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57814424"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403519"
 ---
 # <a name="cc-preprocessor-reference"></a>C/C++ プリプロセッサ リファレンス
 *C/C++ プリプロセッサ リファレンス*Microsoft C/C で実装されているプリプロセッサについて説明します。 プリプロセッサは C および C++ ファイルをコンパイラに渡す前の準備的な処理を実行します。 プリプロセッサを使用して、コードの条件付きコンパイル、ファイルの挿入、コンパイル時のエラー メッセージの指定、コード セクションへのコンピューター固有の規則の適用を行うことができます。
@@ -21,8 +21,7 @@ ms.locfileid: "57814424"
 さまざまな実行環境でのソース プログラムの変更やコンパイルを容易にするために通常使用される、ディレクティブについて説明します。
 
 [プリプロセッサ演算子](../preprocessor/preprocessor-operators.md)<br/>
-
-  `#define` ディレクティブのコンテキストで使用される、4 つのプリプロセッサ固有の演算子について説明します。
+`#define` ディレクティブのコンテキストで使用される、4 つのプリプロセッサ固有の演算子について説明します。
 
 [定義済みマクロ](../preprocessor/predefined-macros.md)<br/>
 ANSI および Microsoft C++ 準拠の定義済みマクロについて説明します。

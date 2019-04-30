@@ -87,11 +87,11 @@ helpviewer_keywords:
 - std::vector [C++], swap
 ms.assetid: a3e0a8f8-7565-4fe0-93e4-e4d74ae1b70d
 ms.openlocfilehash: 80416e3af18774a7a8bf64264dca2906995ae202
-ms.sourcegitcommit: 185b8ee6dd4e10045df730c5b957b9729813da2d
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53411963"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410903"
 ---
 # <a name="vector-class"></a>vector クラス
 
@@ -224,10 +224,10 @@ void assign(InputIterator First, InputIterator Last);
 
 ### <a name="parameters"></a>パラメーター
 
-*まずは*<br/>
+*First*<br/>
 コピーする要素範囲内の最初の要素の位置。
 
-*前の*<br/>
+*Last*<br/>
 コピーする要素範囲を超える最初の要素の位置。
 
 *カウント*<br/>
@@ -2102,8 +2102,8 @@ vector(InputIterator First, InputIterator Last, const Allocator& Al);
 |*カウント*|構築されたベクター内の要素の数。|
 |*val*|構築されたベクターの要素の値。|
 |*右*|構築されたベクターがコピーになる元のベクター。|
-|*まずは*|コピーする要素範囲内の最初の要素の位置。|
-|*前の*|コピーする要素範囲を超える最初の要素の位置。|
+|*First*|コピーする要素範囲内の最初の要素の位置。|
+|*Last*|コピーする要素範囲を超える最初の要素の位置。|
 |*IList*|コピーする要素を含む initializer_list。|
 
 ### <a name="remarks"></a>Remarks

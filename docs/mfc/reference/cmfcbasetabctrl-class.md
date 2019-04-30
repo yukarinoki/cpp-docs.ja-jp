@@ -239,11 +239,11 @@ helpviewer_keywords:
 - CMFCBaseTabCtrl [MFC], m_bAutoDestroyWindow
 ms.assetid: 7270c55f-6f6e-4dd2-b0d2-291afeac3882
 ms.openlocfilehash: 889bb9c48899691554a22435ffee71d6f68a6409
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57261857"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403888"
 ---
 # <a name="cmfcbasetabctrl-class"></a>CMFCBaseTabCtrl Class
 
@@ -646,7 +646,7 @@ BOOL EnableCustomToolTips(BOOL bEnable = TRUE);
 
 ### <a name="remarks"></a>Remarks
 
-カスタム ヒントが有効な場合、タブ コントロールはメイン フレームに AFX_WM_ON_GET_TAB_TOOLTIP メッセージを送信します。 アプリケーションでカスタム ヒントをサポートする場合は、メイン フレーム ウィンドウはこのメソッドを処理し、カスタム ツールヒント テキストを提供する必要があります。 カスタムのツールヒント テキストを提供する詳細については、[CMFCTabToolTipInfo 構造体](../../mfc/reference/cmfctabtooltipinfo-structure.md)を参照してください。
+カスタム ヒントが有効な場合、タブ コントロールはメイン フレームに AFX_WM_ON_GET_TAB_TOOLTIP メッセージを送信します。 アプリケーションでカスタム ヒントをサポートする場合は、メイン フレーム ウィンドウはこのメソッドを処理し、カスタム ツールヒント テキストを提供する必要があります。 カスタムのツールヒント テキストを提供する詳細については、次を参照してください。 [CMFCTabToolTipInfo 構造体](../../mfc/reference/cmfctabtooltipinfo-structure.md)します。
 
 ##  <a name="enableinplaceedit"></a>  CMFCBaseTabCtrl::EnableInPlaceEdit
 
@@ -1283,7 +1283,7 @@ virtual CWnd* GetTabWnd(int iTab) const;
 
 返されるオブジェクトは、いずれかが呼び出されたときに、アプリケーションが追加される[::addtab](#addtab)または[cmfcbasetabctrl::inserttab](#inserttab)します。
 
-タブ上のオブジェクトにラッパーがある場合は、このメソッドはオブジェクトのラッパーを返します。 ラッパーの詳細については、[CMFCBaseTabCtrl::CreateWrapper](#createwrapper)を参照してください。 メソッドを使用して、ラッパーを用意しなくても直接オブジェクトへのポインターにアクセスする場合は、 [CMFCBaseTabCtrl::GetTabWndNoWrapper](#gettabwndnowrapper)します。
+タブ上のオブジェクトにラッパーがある場合は、このメソッドはオブジェクトのラッパーを返します。 ラッパーの詳細については、次を参照してください。 [CMFCBaseTabCtrl::CreateWrapper](#createwrapper)します。 メソッドを使用して、ラッパーを用意しなくても直接オブジェクトへのポインターにアクセスする場合は、 [CMFCBaseTabCtrl::GetTabWndNoWrapper](#gettabwndnowrapper)します。
 
 ##  <a name="gettabwndnowrapper"></a>  CMFCBaseTabCtrl::GetTabWndNoWrapper
 

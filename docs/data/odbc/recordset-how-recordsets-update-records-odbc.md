@@ -9,11 +9,11 @@ helpviewer_keywords:
 - recordsets, updating
 ms.assetid: 5ceecc06-7a86-43b1-93db-a54fb1e717c7
 ms.openlocfilehash: bf71f562714e2dacfe75540e1e532219b3eb307f
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59034483"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62397810"
 ---
 # <a name="recordset-how-recordsets-update-records-odbc"></a>レコード セット:レコード セットの更新が (ODBC) を記録する方法
 
@@ -33,9 +33,9 @@ ms.locfileid: "59034483"
 
 - [レコード セットをエディット バッファーとして](#_core_the_edit_buffer)と[ダイナセットを使う場合とスナップショットの相違点](#_core_dynasets_and_snapshots)します。
 
-[レコード セット:どの AddNew、Edit、および作業の削除 (ODBC)](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md)レコード セットの観点からこれらの関数の動作について説明します。
+[レコードセット: どの AddNew、Edit、および作業の削除 (ODBC)](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md)レコード セットの観点からこれらの関数の動作について説明します。
 
-[レコード セット:詳細についての更新 (ODBC)](../../data/odbc/recordset-more-about-updates-odbc.md)レコード セットの更新プログラムのストーリーを完了するには、トランザクションが更新プログラムに与える影響、レコード セットを閉じるか、またはスクロールが進行中の更新プログラムに影響し、更新プログラムが他のユーザーの更新プログラムとやり取りする方法を説明します。
+[レコードセット: 詳細についての更新 (ODBC)](../../data/odbc/recordset-more-about-updates-odbc.md)レコード セットの更新プログラムのストーリーを完了するには、トランザクションが更新プログラムに与える影響、レコード セットを閉じるか、またはスクロールが進行中の更新プログラムに影響し、更新プログラムが他のユーザーの更新プログラムとやり取りする方法を説明します。
 
 ##  <a name="_core_your_role_in_recordset_updating"></a> レコード セットを更新
 
@@ -73,4 +73,4 @@ ms.locfileid: "59034483"
 ## <a name="see-also"></a>関連項目
 
 [レコードセット (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[レコード セット:AddNew が編集、および作業 (ODBC) を削除する方法](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md)
+[レコードセット: AddNew、Edit、Delete の動作のしくみ (ODBC)](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md)

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], optimizing
 ms.assetid: 29ff985d-9bf5-4678-b62d-aad12def75fb
 ms.openlocfilehash: 4d0037ebdfe56690be2f18a2790b2b13967e337c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57274181"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62378317"
 ---
 # <a name="optimizing-control-drawing"></a>コントロールの描画の最適化
 
@@ -44,9 +44,9 @@ ms.locfileid: "57274181"
 
 ## <a name="see-also"></a>関連項目
 
-[MFC ActiveX コントロール:最適化](../mfc/mfc-activex-controls-optimization.md)<br/>
+[MFC ActiveX コントロール: 最適化](../mfc/mfc-activex-controls-optimization.md)<br/>
 [COleControl クラス](../mfc/reference/colecontrol-class.md)<br/>
 [MFC ActiveX コントロール](../mfc/mfc-activex-controls.md)<br/>
 [MFC ActiveX コントロール](../mfc/mfc-activex-controls.md)<br/>
 [MFC ActiveX コントロール ウィザード](../mfc/reference/mfc-activex-control-wizard.md)<br/>
-[MFC ActiveX コントロール:ActiveX コントロールの描画](../mfc/mfc-activex-controls-painting-an-activex-control.md)
+[MFC ActiveX コントロール: ActiveX コントロールの描画](../mfc/mfc-activex-controls-painting-an-activex-control.md)

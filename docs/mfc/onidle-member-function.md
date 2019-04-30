@@ -11,11 +11,11 @@ helpviewer_keywords:
 - message handling [MFC], OnIdle method [MFC]
 ms.assetid: 51adc874-0075-4f76-be1c-79283f46c10b
 ms.openlocfilehash: c7cdd5cd2327be1b90e7fdb3694353acf8adcafe
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304444"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394565"
 ---
 # <a name="onidle-member-function"></a>OnIdle メンバー関数
 
@@ -26,8 +26,8 @@ Windows メッセージが処理されていないときに、フレームワー
 ![メッセージ ループ プロセス](../mfc/media/vc387c1.gif "メッセージ ループ プロセス") <br/>
 メッセージ ループ
 
-アイドル ループで実行できる操作についての詳細については、[アイドル ループ プロセシング](../mfc/idle-loop-processing.md)を参照してください。
+アイドル ループで実行できる操作についての詳細については、次を参照してください。[アイドル ループ プロセシング](../mfc/idle-loop-processing.md)します。
 
 ## <a name="see-also"></a>関連項目
 
-[CWinApp:アプリケーション クラス](../mfc/cwinapp-the-application-class.md)
+[CWinApp: アプリケーション クラス](../mfc/cwinapp-the-application-class.md)
