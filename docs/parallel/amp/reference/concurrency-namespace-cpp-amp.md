@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Concurrency namespace
 ms.assetid: b5aab265-3bac-42c5-8ead-f92ce05ef267
 ms.openlocfilehash: e0870eb046f1cec091a72d49c94a2fea41484340
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278692"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64346032"
 ---
 # <a name="concurrency-namespace-c-amp"></a>Concurrency 名前空間 (C++ AMP)
 
@@ -30,11 +30,9 @@ namespace Concurrency;
 |名前|説明|
 |----------|-----------------|
 |[Concurrency::direct3d 名前空間](concurrency-direct3d-namespace.md)|D3D の相互運用性をサポートする関数を提供します。 AMP コードでの計算に D3D のリソースをシームレスに使用できるようになり、AMP で作成したリソースを D3D コードで使用することができ、冗長な中間コピーを作成する必要がありません。 C++ AMP を使用して、DirectX アプリケーションの計算中心のセクションの処理をインクリメントに加速し、AMP の計算から生成されるデータに対して D3D API を使用することができます。|
-|[Concurrency::fast_math 名前空間](concurrency-fast-math-namespace.md)|
-  `fast_math` 名前空間の関数は C99 に準拠していません。 各関数の各単精度のバージョンのみが用意されています。 これらの関数は DirectX 組み込み関数を使用します。これは、`precise_math` 名前空間の対応する関数よりも高速で、アクセラレータでの倍精度の拡張サポートを必要としませんが、正確さに欠けます。 C99 コードとのソース レベルの互換性のための各関数には 2 つのバージョンがあります。どちらのバージョンも単精度の値を受け取り、返します。|
+|[Concurrency::fast_math 名前空間](concurrency-fast-math-namespace.md)|`fast_math` 名前空間の関数は C99 に準拠していません。 各関数の各単精度のバージョンのみが用意されています。 これらの関数は DirectX 組み込み関数を使用します。これは、`precise_math` 名前空間の対応する関数よりも高速で、アクセラレータでの倍精度の拡張サポートを必要としませんが、正確さに欠けます。 C99 コードとのソース レベルの互換性のための各関数には 2 つのバージョンがあります。どちらのバージョンも単精度の値を受け取り、返します。|
 |[Concurrency::graphics 名前空間](concurrency-graphics-namespace.md)|グラフィックス プログラミング用に設計された型と関数を提供します。|
-|[Concurrency::precise_math 名前空間](concurrency-precise-math-namespace.md)|
-  `precise_math` 名前空間の関数は C99 に準拠しています。 各関数の単精度バージョンと倍精度のバージョンの両方が含まれます。 単精度関数を含む、これらの関数ではアクセラレータでの倍精度の拡張サポートが必要です。|
+|[Concurrency::precise_math 名前空間](concurrency-precise-math-namespace.md)|`precise_math` 名前空間の関数は C99 に準拠しています。 各関数の単精度バージョンと倍精度のバージョンの両方が含まれます。 単精度関数を含む、これらの関数ではアクセラレータでの倍精度の拡張サポートが必要です。|
 
 ### <a name="classes"></a>クラス
 
@@ -52,10 +50,8 @@ namespace Concurrency;
 |[out_of_memory クラス](out-of-memory-class.md)|システムまたはデバイスのメモリ不足のためにメソッドが失敗した場合にスローされる例外。|
 |[runtime_exception クラス](runtime-exception-class.md)|C++ AMP ライブラリの例外の基本型。|
 |[tile_barrier クラス](tile-barrier-class.md)|システムによってのみ作成できる機能クラスであり、`parallel_for_each` パラメーターの一部として、タイルの `tiled_index` ラムダに渡されます。 これは 1 つのメソッド、`wait()` を提供します。その目的は、スレッド グループ (タイル) で実行されるスレッドの実行を同期することです。|
-|[tiled_extent クラス](tiled-extent-class.md)|
-  `tiled_extent` オブジェクトは 3 つの次元のいずれかの `extent` オブジェクトであり、範囲空間を 1、2、または 3 次元のタイルに再分割します。|
-|[tiled_index クラス](tiled-index-class.md)|
-  `tiled_grid` オブジェクトにインデックスを提供します。 このクラスには、ローカル タイルの原点およびグローバル原点を基準として要素にアクセスするためのプロパティがあります。|
+|[tiled_extent クラス](tiled-extent-class.md)|`tiled_extent` オブジェクトは 3 つの次元のいずれかの `extent` オブジェクトであり、範囲空間を 1、2、または 3 次元のタイルに再分割します。|
+|[tiled_index クラス](tiled-index-class.md)|`tiled_grid` オブジェクトにインデックスを提供します。 このクラスには、ローカル タイルの原点およびグローバル原点を基準として要素にアクセスするためのプロパティがあります。|
 |[uninitialized_object クラス](uninitialized-object-class.md)|初期化されていないオブジェクトが使用される場合にスローされる例外です。|
 |[unsupported_feature クラス](unsupported-feature-class.md)|サポートされていない機能が使用される場合にスローされる例外です。|
 
@@ -96,14 +92,13 @@ namespace Concurrency;
 |[atomic_fetch_sub](concurrency-namespace-functions-amp.md#atomic_fetch_sub)|オーバーロードされます。 指定された位置に格納された値を、その値と分割不可能な操作として指定された値の差に設定します。|
 |[atomic_fetch_xor](concurrency-namespace-functions-amp.md#atomic_fetch_xor)|オーバーロードされます。 指定された位置に格納されている値をその値と分割不可能な操作として指定された値のビットごとの `xor` に設定します。|
 |[copy](concurrency-namespace-functions-amp.md#copy)|C++ AMP オブジェクトをコピーします。 すべての同期データ転送の要件が満たされます。 アクセラレータでコードを実行しているときにデータをコピーすることはできません。 この関数の一般的な形式は `copy(src, dest)` です。|
-|[copy_async](concurrency-namespace-functions-amp.md#copy_async)|C++ AMP オブジェクトをコピーし、返します[completion_future](completion-future-class.md)待機できます。 アクセラレータでコードを実行しているときにデータはコピーできません。 この関数の一般的な形式は `copy(src, dest)` です。|
+|[copy_async](concurrency-namespace-functions-amp.md#copy_async)|コピーをC++AMP オブジェクトを返します[completion_future](completion-future-class.md)待機できます。 アクセラレータでコードを実行しているときにデータはコピーできません。 この関数の一般的な形式は `copy(src, dest)` です。|
 |[direct3d_abort](concurrency-namespace-functions-amp.md#direct3d_abort)|制限句 `restrict(amp)` がある関数の実行を中止します。|
 |[direct3d_errorf](concurrency-namespace-functions-amp.md#direct3d_errorf)|Visual Studio に書式設定された文字列を出力します**出力**ウィンドウと発生させ、 [runtime_exception](runtime-exception-class.md)文字列の書式設定が同じ例外。|
 |[direct3d_printf](concurrency-namespace-functions-amp.md#direct3d_printf)|Visual Studio に書式設定された文字列を出力します**出力**ウィンドウ。 これは制限句 `restrict(amp)` がある関数から呼び出されます。|
 |[global_memory_fence](concurrency-namespace-functions-amp.md#global_memory_fence)|すべてのグローバル メモリ アクセスが完了するまでタイルのすべてのスレッドの実行をブロックします。|
 |[parallel_for_each 関数 (C++ AMP)](concurrency-namespace-functions-amp.md#parallel_for_each)|計算ドメインを越えて関数を実行します。|
-|[tile_static_memory_fence](concurrency-namespace-functions-amp.md#tile_static_memory_fence)|
-  `tile_static` メモリ アクセスが完了するまでタイルのすべてのスレッドの実行をブロックします。|
+|[tile_static_memory_fence](concurrency-namespace-functions-amp.md#tile_static_memory_fence)|`tile_static` メモリ アクセスが完了するまでタイルのすべてのスレッドの実行をブロックします。|
 
 ## <a name="constants"></a>定数
 

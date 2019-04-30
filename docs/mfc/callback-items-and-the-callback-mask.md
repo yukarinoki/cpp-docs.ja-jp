@@ -6,11 +6,11 @@ helpviewer_keywords:
 - CListCtrl class [MFC], callback item and callback mask
 ms.assetid: 67c1f76f-6144-453e-9376-6712f89430ae
 ms.openlocfilehash: 35967f128c6cc59bc9cea90da559b32c51fb38d1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57261077"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64344278"
 ---
 # <a name="callback-items-and-the-callback-mask"></a>コールバック項目とコールバック マスク
 
@@ -32,7 +32,7 @@ ms.locfileid: "57261077"
 
 - **LVIS_STATEIMAGEMASK**アプリケーションの各項目の現在の状態イメージのイメージ リスト インデックスを格納します。
 
-取得して、このマスクの設定の詳細については、[CListCtrl::GetCallbackMask](../mfc/reference/clistctrl-class.md#getcallbackmask)と[CListCtrl::SetCallbackMask](../mfc/reference/clistctrl-class.md#setcallbackmask)を参照してください。
+取得して、このマスクの設定の詳細については、次を参照してください。 [CListCtrl::GetCallbackMask](../mfc/reference/clistctrl-class.md#getcallbackmask)と[CListCtrl::SetCallbackMask](../mfc/reference/clistctrl-class.md#setcallbackmask)します。
 
 ## <a name="see-also"></a>関連項目
 
