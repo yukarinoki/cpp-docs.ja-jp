@@ -1,6 +1,6 @@
 ---
 title: 'チュートリアル: join を使用したデッドロックの防止'
-ms.date: 11/19/2018
+ms.date: 04/25/2019
 helpviewer_keywords:
 - preventing deadlock with joins [Concurrency Runtime]
 - deadlock, preventing [Concurrency Runtime]
@@ -8,11 +8,11 @@ helpviewer_keywords:
 - join class, example
 ms.assetid: d791f697-bb93-463e-84bd-5df1651b7446
 ms.openlocfilehash: 2f9e0f50866ed0635fbaa4b700dbf522f09458d9
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
-ms.translationtype: MT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57303054"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62407906"
 ---
 # <a name="walkthrough-using-join-to-prevent-deadlock"></a>チュートリアル: join を使用したデッドロックの防止
 
@@ -90,7 +90,7 @@ ms.locfileid: "57303054"
 
 この例では、最短一致の `join` オブジェクトを使用しています。最短一致の join は、両方の `philosopher` オブジェクトにメッセージが含まれる場合に限り、各 `unbounded_buffer` オブジェクトに対し、両方の箸へのアクセス権を与えるためです。 最長一致の join は、メッセージが使用できるようになるとすぐにメッセージを受け取るため、最長一致の join ではデッドロックは防止されません。 すべての最長一致 `join` オブジェクトがメッセージのいずれかを受け取り、一方で他のメッセージが使用できるようになるのを長時間待つ場合、デッドロックが発生する可能性があります。
 
-最長一致と最短一致の結合、およびメッセージ バッファーのさまざまな種類の違いの詳細については、[非同期メッセージ ブロック](../../parallel/concrt/asynchronous-message-blocks.md)を参照してください。
+最長一致と最短一致の結合、およびメッセージ バッファーのさまざまな種類の違いの詳細については、次を参照してください。[非同期メッセージ ブロック](../../parallel/concrt/asynchronous-message-blocks.md)します。
 
 #### <a name="to-prevent-deadlock-in-this-example"></a>この例でデッドロックを防止するには
 

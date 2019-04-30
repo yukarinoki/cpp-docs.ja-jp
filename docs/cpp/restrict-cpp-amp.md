@@ -8,11 +8,11 @@ helpviewer_keywords:
 - restrict clause (C++ AMP)
 ms.assetid: 07d3291f-7edf-456b-8828-283ac8673661
 ms.openlocfilehash: 3609e3f0541cfd8a8af8559d8d49e6a77c00d91c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660006"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403387"
 ---
 # <a name="restrict-c-amp"></a>restrict (C++ AMP)
 
@@ -79,7 +79,7 @@ ms.locfileid: "50660006"
 
    - 可変個引数
 
-関数の制限事項の詳細については、[(amp) の制限を制限する](https://blogs.msdn.microsoft.com/nativeconcurrency/2011/12/19/restrictamp-restrictions-part-0-of-n-introduction/)を参照してください。
+関数の制限事項の詳細については、次を参照してください。 [(amp) の制限を制限する](https://blogs.msdn.microsoft.com/nativeconcurrency/2011/12/19/restrictamp-restrictions-part-0-of-n-introduction/)します。
 
 ## <a name="example"></a>例
 

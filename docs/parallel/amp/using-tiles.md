@@ -3,11 +3,11 @@ title: タイルの使用
 ms.date: 11/19/2018
 ms.assetid: acb86a86-2b7f-43f1-8fcf-bcc79b21d9a8
 ms.openlocfilehash: ede62c80a83b5f5fc1d691bf52dde67140e68246
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176095"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405384"
 ---
 # <a name="using-tiles"></a>タイルの使用
 
@@ -291,17 +291,17 @@ t_idx.barrier.wait();
 
 A*メモリ フェンス*により、アクセスがスレッド タイルの他のスレッドを使用可能なメモリ、そのメモリへのアクセスは、プログラムの順序に従って実行されます。 これを実現するために、コンパイラとプロセッサは、フェンスを越えて読み取りと書き込みの順序を変更しません。 C++ AMP では、メモリ フェンスは、次のいずれかのメソッドを呼び出すことによって作成されます。
 
-- [tile_barrier::wait メソッド](reference/tile-barrier-class.md#wait): グローバルの両方の周囲にフェンスを作成し、`tile_static`メモリ。
+- [tile_barrier::wait メソッド](reference/tile-barrier-class.md#wait):グローバルの両方の周囲にフェンスを作成し、`tile_static`メモリ。
 
-- [tile_barrier::wait_with_all_memory_fence メソッド](reference/tile-barrier-class.md#wait_with_all_memory_fence): グローバルの両方の周囲にフェンスを作成し、`tile_static`メモリ。
+- [tile_barrier::wait_with_all_memory_fence メソッド](reference/tile-barrier-class.md#wait_with_all_memory_fence):グローバルの両方の周囲にフェンスを作成し、`tile_static`メモリ。
 
-- [tile_barrier::wait_with_global_memory_fence メソッド](reference/tile-barrier-class.md#wait_with_global_memory_fence): グローバル メモリのみフェンスを作成します。
+- [tile_barrier::wait_with_global_memory_fence メソッド](reference/tile-barrier-class.md#wait_with_global_memory_fence):グローバル メモリのみフェンスを作成します。
 
-- [tile_barrier::wait_with_tile_static_memory_fence メソッド](reference/tile-barrier-class.md#wait_with_tile_static_memory_fence): 周囲にのみフェンスを作成します`tile_static`メモリ。
+- [tile_barrier::wait_with_tile_static_memory_fence メソッド](reference/tile-barrier-class.md#wait_with_tile_static_memory_fence):周囲にのみフェンスを作成します`tile_static`メモリ。
 
 必要な特定のフェンスを呼び出すことによって、アプリのパフォーマンスが向上する場合があります。 バリアの種類は、コンパイラやハードウェアによるステートメントの並べ替えに影響します。 たとえば、グローバル メモリ フェンスを使用する場合、フェンスはグローバル メモリ アクセスにのみ適用されます。このため、コンパイラやハードウェアは、フェンスの両側で `tile_static` 変数の読み取りや書き込みを並べ替える可能性があります。
 
-次の例では、バリアは `tile_static` 変数である `tileValues` への書き込みを同期します。 この例では、`tile_barrier::wait_with_tile_static_memory_fence` の代わりに `tile_barrier::wait` を呼び出しています。
+次の例では、バリアは `tileValues` 変数である `tile_static` への書き込みを同期します。 この例では、`tile_barrier::wait_with_tile_static_memory_fence` の代わりに `tile_barrier::wait` を呼び出しています。
 
 ```cpp
 // Using a tile_static memory fence.

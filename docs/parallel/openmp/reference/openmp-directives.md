@@ -30,11 +30,11 @@ helpviewer_keywords:
 - threadprivate OpenMP directive
 ms.assetid: 0562c263-344c-466d-843e-de830d918940
 ms.openlocfilehash: d644b612c0c326692786c94046d799163dfbce8d
-ms.sourcegitcommit: 14b292596bc9b9b883a9c58cd3e366b282a1f7b3
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60124955"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62362687"
 ---
 # <a name="openmp-directives"></a>OpenMP ディレクティブ
 
@@ -716,7 +716,7 @@ write output
 
 使用することができます`threadprivate`でプロセスの起動時に静的に読み込まれる DLL、ただしは使用できません`threadprivate`経由で読み込まれる DLL で[LoadLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya)で読み込まれる Dll など[/DELAYLOAD (遅延読み込みのインポート)](../../../build/reference/delayload-delay-load-import.md)、使用することも`LoadLibrary`します。
 
-A`threadprivate`の変数を*破棄可能な*と呼ばれる、デストラクターがある型は保証されません。 例えば:
+A`threadprivate`の変数を*破棄可能な*と呼ばれる、デストラクターがある型は保証されません。 例:
 
 ```
 struct MyType

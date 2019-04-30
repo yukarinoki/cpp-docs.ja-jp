@@ -7,11 +7,11 @@ helpviewer_keywords:
 - aligned_union
 ms.assetid: 9931a44d-3a67-4f29-a0f6-d47a7cf560ac
 ms.openlocfilehash: 1a26675879c50440a4955989aca178dbe5049fdf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50606870"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411111"
 ---
 # <a name="alignedunion-class"></a>aligned_union クラス
 
@@ -29,7 +29,7 @@ using aligned_union_t = typename aligned_union<Len, Types...>::type;
 
 ### <a name="parameters"></a>パラメーター
 
-*len*<br/>
+*Len*<br/>
 共用体内の最大の型に関するアラインメント値を指定します。
 
 *型*<br/>

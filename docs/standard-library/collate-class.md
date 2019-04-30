@@ -23,11 +23,11 @@ helpviewer_keywords:
 - std::collate [C++], transform
 ms.assetid: 92168798-9628-4a2e-be6e-fa62dcd4d6a6
 ms.openlocfilehash: 21d5825f8d9ea00359f2aa1c87291b831d1f330f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630114"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405171"
 ---
 # <a name="collate-class"></a>collate クラス
 
@@ -118,11 +118,11 @@ const char* _Locname,
 
 使用可能な値を *_Refs*パラメーターとその重要性は。
 
-- 0: オブジェクトの有効期間はそれが含まれるロケールによって管理されます。
+- 0:オブジェクトの有効期間は、それが含まれるロケールによって管理されます。
 
-- 1: オブジェクトの有効期間を手動で管理する必要があります。
+- 1:オブジェクトの有効期間は、手動で管理する必要があります。
 
-- \> 1: これらの値が定義されていません。
+- \> 1:これらの値が定義されていません。
 
 コンス トラクターを使用してその基本オブジェクトを初期化します**ロケール::**[ファセット](../standard-library/locale-class.md#facet_class)(`_Refs`)。
 

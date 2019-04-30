@@ -3,11 +3,11 @@ title: デリゲート (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 3175bf1c-86d8-4eda-8d8f-c5b6753d8e38
 ms.openlocfilehash: e2158adad288045c9a98889dbe97e834dc93ea71
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57745589"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62406926"
 ---
 # <a name="delegates-ccx"></a>デリゲート (C++/CX)
 
@@ -43,7 +43,7 @@ app.cpp で:
 [!code-cpp[cx_delegates#121](../cppcx/codesnippet/CPP/delegatesevents/class1.cpp#121)]
 
 > [!WARNING]
-> 細心の注意を払って循環参照を回避する場合を除き、一般にイベント ハンドラーにはラムダではなく名前付き関数を使用する方が適しています。 名前付き関数では弱い参照によって "this" ポインターをキャプチャしますが、ラムダでは強い参照によって "this" ポインターをキャプチャし、循環参照を作成します。 詳細については、[弱い参照および中断サイクル](../cppcx/weak-references-and-breaking-cycles-c-cx.md)を参照してください。
+> 細心の注意を払って循環参照を回避する場合を除き、一般にイベント ハンドラーにはラムダではなく名前付き関数を使用する方が適しています。 名前付き関数では弱い参照によって "this" ポインターをキャプチャしますが、ラムダでは強い参照によって "this" ポインターをキャプチャし、循環参照を作成します。 詳細については、次を参照してください。[弱い参照および中断サイクル](../cppcx/weak-references-and-breaking-cycles-c-cx.md)します。
 
 慣例により、Windows ランタイムによって定義されているイベント ハンドラー デリゲートの名前があるフォーム * EventHandler — などの RoutedEventHandler、SizeChangedEventHandler、suspendingeventhandler します。 同様に、慣例に基づき、イベント ハンドラー デリゲートは 2 つのパラメーターを持ち、void を返します。 型パラメーターがないデリゲートでは、最初のパラメーターは [Platform::Object^](../cppcx/platform-object-class.md)型です。これは、イベントを発生させたオブジェクトである送信元への参照を保持します。 イベント ハンドラー メソッドで引数を使用する前に、元の型にキャスト バックする必要があります。 型パラメーターを持つイベント ハンドラー デリゲートでは、最初の型パラメーターは送信元の種類を指定し、2 番目のパラメーターはイベントに関する情報を保持する ref クラスへのハンドルです。 慣例により、そのクラスの名前が\*EventArgs。 たとえば、RoutedEventHandler デリゲートには RoutedEventArgs^ 型の 2 番目のパラメーターがあり、DragEventHander には DragEventArgs^ 型の 2 番目のパラメーターがあります。
 

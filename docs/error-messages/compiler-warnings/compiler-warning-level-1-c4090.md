@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4090
 ms.assetid: baad469d-23d4-45aa-ad9c-305b32d61e9a
 ms.openlocfilehash: b47d0bfbb6eab24fbe811d3e4f79b6bd86b3bb11
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462375"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62406484"
 ---
 # <a name="compiler-warning-level-1-c4090"></a>コンパイラの警告 (レベル 1) C4090
 
@@ -21,7 +21,7 @@ ms.locfileid: "50462375"
 
 この警告はへのポインターの場合に発生、 **const**または`volatile`を指すとして宣言されていないポインターに項目が割り当てられている**const**または`volatile`。
 
-C プログラムの警告が表示されます。 C++ プログラムでは、コンパイラがエラーを発行: [C2440](../../error-messages/compiler-errors-1/compiler-error-c2440.md)します。
+C プログラムの警告が表示されます。 C++プログラムをコンパイラは、エラー。[C2440](../../error-messages/compiler-errors-1/compiler-error-c2440.md)します。
 
 次の例では、C4090 が生成されます。
 

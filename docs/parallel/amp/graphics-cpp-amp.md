@@ -3,11 +3,11 @@ title: グラフィックス (C++ AMP)
 ms.date: 11/04/2016
 ms.assetid: 190a98a4-5f7d-442e-866b-b374ca74c16f
 ms.openlocfilehash: 4a40575d84c9a0efedcb3c7c9717fc310870b530
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57260882"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405665"
 ---
 # <a name="graphics-c-amp"></a>グラフィックス (C++ AMP)
 
@@ -67,7 +67,7 @@ short ベクター ライブラリは、short ベクターのコンポーネン�
 
 - 2 つまたは 4 つのコンポーネントを持つ short ベクター。 許可されない唯一の例外は `double_4` です。
 
-`texture` オブジェクトは、1、2、または 3 のランクになります。 `texture` オブジェクトは `parallel_for_each` の呼び出しのラムダの参照によってのみキャプチャできます。 テクスチャは、Direct3D テクスチャ オブジェクトとして GPU に格納されます。 テクスチャおよびテクセル Direct3D の詳細については、[direct3d11 のテクスチャの概要](http://go.microsoft.com/fwlink/p/?linkid=248502)を参照してください。
+`texture` オブジェクトは、1、2、または 3 のランクになります。 `texture` オブジェクトは `parallel_for_each` の呼び出しのラムダの参照によってのみキャプチャできます。 テクスチャは、Direct3D テクスチャ オブジェクトとして GPU に格納されます。 テクスチャおよびテクセル Direct3D の詳細については、次を参照してください。 [direct3d11 のテクスチャの概要](http://go.microsoft.com/fwlink/p/?linkid=248502)します。
 
 使用するテクセル型が、グラフィックス プログラミングで使用される多くのテクスチャ形式の 1 つになっている場合があります。 たとえば、RGBA 形式は、R、G、B、A のスカラー要素に対してそれぞれ 8 ビットで、32 ビットを使用できます。 グラフィックス カードのテクスチャ ハードウェアは、形式に基づいて個々の要素にアクセスできます。 たとえば、RGBA 形式を使用すると、テクスチャ ハードウェアは各 8 ビット要素を 32 ビット形式に復元できます。 C++ AMP では、ビット シフトを使用しないでコードの個々のスカラー要素に自動的にアクセスできるように、テクセルのスカラー要素ごとにビットを設定できます。
 
@@ -263,7 +263,7 @@ void copyHostArrayToTexture() { // Copy from source array to texture object by u
 
 ## <a name="texture-view-classes"></a>テクスチャ ビューのクラス
 
-C++ AMP の紹介、 [texture_view クラス](../../parallel/amp/reference/texture-view-class.md)Visual Studio 2013 でします。 テクスチャ ビューは、同じテクセル型とランクとしてをサポート、 [texture クラス](../../parallel/amp/reference/texture-class.md)が、テクスチャとは異なり、テクスチャ サンプリングや mipmap などの追加のハードウェア機能へのアクセスを提供します。 テクスチャ ビューは基になるテクスチャ データへの読み取り専用、書き込み専用、読み取り/書き込みアクセスをサポートします。
+C++AMP が導入されています、 [texture_view クラス](../../parallel/amp/reference/texture-view-class.md)Visual Studio 2013 でします。 テクスチャ ビューは、同じテクセル型とランクとしてをサポート、 [texture クラス](../../parallel/amp/reference/texture-class.md)が、テクスチャとは異なり、テクスチャ サンプリングや mipmap などの追加のハードウェア機能へのアクセスを提供します。 テクスチャ ビューは基になるテクスチャ データへの読み取り専用、書き込み専用、読み取り/書き込みアクセスをサポートします。
 
 - 読み取り専用アクセスは `texture_view<const T, N>` テンプレートの特殊化によって提供されます。これは 1、2、または 4 つのコンポーネント、テクスチャ サンプリング、およびビューをインスタンス化するときに決定される MIPMAP レベルの範囲への動的アクセスを持つ要素をサポートします。
 
@@ -275,7 +275,7 @@ C++ AMP の紹介、 [texture_view クラス](../../parallel/amp/reference/textu
 
 ### <a name="writeonlytextureview-deprecated"></a>使用されない writeonly_texture_view
 
-Visual Studio 2013 で C++ AMP サンプリングや mipmap でサポートされていませんでしたなどのハードウェア テクスチャ機能に対する優れたサポートが導入されています、 [writeonly_texture_view クラス](../../parallel/amp/reference/writeonly-texture-view-class.md)します。 最近導入された `texture_view` クラスは `writeonly_texture_view` の機能のスーパーセットをサポートしており、その結果、`writeonly_texture_view` は使用されません。
+Visual Studio 2013 でC++AMP サンプリングや mipmap でサポートされていませんでしたなどのハードウェア テクスチャ機能に対する優れたサポートが導入されています、 [writeonly_texture_view クラス](../../parallel/amp/reference/writeonly-texture-view-class.md)します。 最近導入された `texture_view` クラスは `writeonly_texture_view` の機能のスーパーセットをサポートしており、その結果、`writeonly_texture_view` は使用されません。
 
 少なくとも新しいコードについては、以前は `texture_view` によって提供された機能へのアクセスに `writeonly_texture_view` を使用することをお勧めします。 2 つのコンポーネント (int_2) を持つテクスチャ オブジェクトに書き込む、次の 2 つのコード例を比較します。 どちらのケースでも、ビュー `wo_tv4` はラムダ式の値でキャプチャされる必要があることに注意してください。 新しい `texture_view` クラスを使用する例を次に示します。
 
@@ -377,11 +377,11 @@ void write2ComponentTexture() {
 }
 ```
 
-たとえば、float、float_2、または float_4 などの、浮動小数点型に基づく要素のテクスチャ ビューは、さまざまなフィルター処理モードおよびアドレッシング モードに対するハードウェア サポートを利用するにテクスチャ サンプリングを使用して読み取ることもできます。 C++ AMP は計算シナリオで最も一般的な 2 つのフィルター処理モード (ポイント フィルタリング (ニアレストネイバー) およびリニア フィルタリング (加重平均))、および 4 つのアドレッシング モード (wrapped、mirrored、clamped、border) をサポートしています。 アドレッシング モードの詳細については、[address_mode 列挙型](reference/concurrency-graphics-namespace-enums.md#address_mode)を参照してください。
+たとえば、float、float_2、または float_4 などの、浮動小数点型に基づく要素のテクスチャ ビューは、さまざまなフィルター処理モードおよびアドレッシング モードに対するハードウェア サポートを利用するにテクスチャ サンプリングを使用して読み取ることもできます。 C++ AMP は計算シナリオで最も一般的な 2 つのフィルター処理モード (ポイント フィルタリング (ニアレストネイバー) およびリニア フィルタリング (加重平均))、および 4 つのアドレッシング モード (wrapped、mirrored、clamped、border) をサポートしています。 アドレッシング モードの詳細については、次を参照してください。 [address_mode 列挙型](reference/concurrency-graphics-namespace-enums.md#address_mode)します。
 
-C++ AMP が直接サポートするモードに加えて、プラットフォーム API を直接使用して作成されたテクスチャ サンプラーを採用する相互運用 API を使用して、基になるプラットフォームの他のフィルター処理モードとアドレッシング モードにアクセスすることができます。 たとえば、Direct3D は異方性フィルタリングなどの他のフィルター処理モードをサポートし、テクスチャの大きさごとに別のアドレッシング モードを適用できます。 座標が垂直方向にラップされ、水平方向にミラー化され、Direct3D API を使用した異方性フィルタリングでサンプル化されるテクスチャ サンプラーを作成し、`make_sampler` 相互運用 API を使用して C++ AMP コードでサンプラーを利用することができます。 詳細については、[で C++ AMP テクスチャ サンプリング](http://blogs.msdn.com/b/nativeconcurrency/archive/2013/07/18/texture-sampling-in-c-amp.aspx)ネイティブ コードのブログでの並列プログラミングを参照してください。
+C++ AMP が直接サポートするモードに加えて、プラットフォーム API を直接使用して作成されたテクスチャ サンプラーを採用する相互運用 API を使用して、基になるプラットフォームの他のフィルター処理モードとアドレッシング モードにアクセスすることができます。 たとえば、Direct3D は異方性フィルタリングなどの他のフィルター処理モードをサポートし、テクスチャの大きさごとに別のアドレッシング モードを適用できます。 座標が垂直方向にラップされ、水平方向にミラー化され、Direct3D API を使用した異方性フィルタリングでサンプル化されるテクスチャ サンプラーを作成し、`make_sampler` 相互運用 API を使用して C++ AMP コードでサンプラーを利用することができます。 詳細については、次を参照してください。[で C++ AMP テクスチャ サンプリング](http://blogs.msdn.com/b/nativeconcurrency/archive/2013/07/18/texture-sampling-in-c-amp.aspx)ネイティブ コードのブログでの並列プログラミングします。
 
-また、テクスチャ ビューは MIPMAP の読み取りをサポートします。 定数要素型である読み取り専用のテクスチャ ビューは最も高い柔軟性を備えています。これはインスタンス化で決定された MIPMAP レベルの範囲が動的にサンプル化され、1、2、または 4 つのコンポーネントを持つ要素がサポートされるためです。 また、1 つのコンポーネントを持つ要素がある読み取り/書き込みテクスチャ ビューも MIPMAP をサポートしますが、インスタンス化で決定されたレベルのみです。 詳細については、[Mipmap を使用してテクスチャ](http://blogs.msdn.com/b/nativeconcurrency/archive/2013/08/22/texture-with-mipmaps.aspx)ネイティブ コードのブログでの並列プログラミングを参照してください。
+また、テクスチャ ビューは MIPMAP の読み取りをサポートします。 定数要素型である読み取り専用のテクスチャ ビューは最も高い柔軟性を備えています。これはインスタンス化で決定された MIPMAP レベルの範囲が動的にサンプル化され、1、2、または 4 つのコンポーネントを持つ要素がサポートされるためです。 また、1 つのコンポーネントを持つ要素がある読み取り/書き込みテクスチャ ビューも MIPMAP をサポートしますが、インスタンス化で決定されたレベルのみです。 詳細については、次を参照してください。 [Mipmap を使用してテクスチャ](http://blogs.msdn.com/b/nativeconcurrency/archive/2013/08/22/texture-with-mipmaps.aspx)ネイティブ コードのブログでの並列プログラミングします。
 
 ### <a name="writing-to-texture-view-objects"></a>テクスチャ ビュー オブジェクトへの書き込み
 

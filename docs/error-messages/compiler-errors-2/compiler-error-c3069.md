@@ -7,17 +7,17 @@ helpviewer_keywords:
 - C3069
 ms.assetid: ca94291b-2bb4-4e3f-9acf-534234b83513
 ms.openlocfilehash: 6c6451d31da2bb708d3f233225be713981b062e6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50474439"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62406757"
 ---
 # <a name="compiler-error-c3069"></a>コンパイラ エラー C3069
 
 'operator': 列挙型には使用できません
 
-演算子は CLR 列挙体ではサポートされていません。  詳細については、[方法: 定義および c++ の列挙型を使用する/cli CLI](../../dotnet/how-to-define-and-consume-enums-in-cpp-cli.md)を参照してください。
+演算子は CLR 列挙体ではサポートされていません。  詳細については、「[方法 :定義および使用で列挙型C++/CLI](../../dotnet/how-to-define-and-consume-enums-in-cpp-cli.md)します。
 
 ## <a name="example"></a>例
 

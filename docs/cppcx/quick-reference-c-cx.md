@@ -3,15 +3,15 @@ title: クイック リファレンス (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: ba457195-26e5-43aa-b99d-24a871e550f4
 ms.openlocfilehash: 0526c9083d177688146926598b79e66ca2f9723c
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57742069"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62362336"
 ---
 # <a name="quick-reference-ccx"></a>クイック リファレンス (C++/CX)
 
-Windows ランタイムでは、信頼できるオペレーティング システム環境でのみ実行し、承認済みの関数、データ型、およびデバイスを使用して、Microsoft Store で配布されてユニバーサル Windows プラットフォーム (UWP) アプリをサポートします。 C++/cli CX の Windows ランタイム アプリの作成を簡略化します。 この記事では、クイック リファレンスです。詳細なドキュメントは、[型システム](../cppcx/type-system-c-cx.md)を参照してください。
+Windows ランタイムでは、信頼できるオペレーティング システム環境でのみ実行し、承認済みの関数、データ型、およびデバイスを使用して、Microsoft Store で配布されてユニバーサル Windows プラットフォーム (UWP) アプリをサポートします。 C++/cli CX の Windows ランタイム アプリの作成を簡略化します。 この記事では、クイック リファレンスです。詳細なドキュメントは、次を参照してください。[型システム](../cppcx/type-system-c-cx.md)します。
 
 コマンドラインでビルドするときに使用して、 **/ZW**コンパイラ オプションを UWP アプリまたは Windows ランタイム コンポーネントをビルドします。 Windows ランタイム メタデータ (.winmd) ファイルで定義されている Windows ランタイムの宣言にアクセスする指定、`#using`ディレクティブまたは **/FU**コンパイラ オプション。 UWP アプリ用のプロジェクトを作成するときに、既定では、Visual Studio はこれらのオプションを設定し、すべての Windows ランタイム ライブラリへの参照を追加します。
 
@@ -19,7 +19,7 @@ Windows ランタイムでは、信頼できるオペレーティング シス�
 
 |概念|標準 C++|C++/CX|Remarks|
 |-------------|--------------------|------------------------------------------------------------------|-------------|
-|基本的な型|C++ の基本型。|C + + CX 基本型、Windows ランタイムで定義されている基本的な型を実装します。|`default`名前空間を含む C +/cli CX の組み込みの基本型。 コンパイラは暗黙的にマップ C +/cli 標準 C++ 型に CX 基本型。<br /><br /> `Platform`ファミリ名前空間のには基本的な Windows ランタイム型を実装する型が含まれています。|
+|基本的な型|C++ の基本型。|C++Windows ランタイムで定義されている基本的な型を実装する/CX の基本型。|`default`名前空間を含む C +/cli CX の組み込みの基本型。 コンパイラは暗黙的にマップ C +/cli 標準 C++ 型に CX 基本型。<br /><br /> `Platform`ファミリ名前空間のには基本的な Windows ランタイム型を実装する型が含まれています。|
 ||`bool`|`bool`|8 ビットのブール値。|
 ||`__wchar_t`|`char16`|Unicode (UTF-16) コード ポイントを表す 16 ビットの数字以外の値。|
 ||`short`<br /><br /> `unsigned short`|`int16`<br /><br /> `uint16`|16 ビット符号付き整数。<br /><br /> 16 ビット符号なし整数。|

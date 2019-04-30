@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Concurrency Runtime, lambda expressions
 ms.assetid: 56237d96-10b0-494a-9cb4-f5c5090436c5
 ms.openlocfilehash: 810d77abd37ff2c6f29e980b84645d16526744d8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305238"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412702"
 ---
 # <a name="overview-of-the-concurrency-runtime"></a>コンカレンシー ランタイムの概要
 
@@ -67,7 +67,7 @@ Visual Studio 2015 以降では、コンカレンシー ランタイムのタス
 
 同時実行ランタイムが高*コンポーザブル*、つまりより多くの既存の機能を組み合わせることができます。 コンカレンシー ランタイムでは、下位のコンポーネントから、並列アルゴリズムなど多数の機能を構成します。
 
-また、コンカレンシー ランタイムでは、協調ブロッキングを使用して、リソースへのアクセスを同期する同期プリミティブも提供されます。 これらの同期プリミティブの詳細については、[同期データ構造](../../parallel/concrt/synchronization-data-structures.md)を参照してください。
+また、コンカレンシー ランタイムでは、協調ブロッキングを使用して、リソースへのアクセスを同期する同期プリミティブも提供されます。 これらの同期プリミティブの詳細については、次を参照してください。[同期データ構造](../../parallel/concrt/synchronization-data-structures.md)します。
 
 以下のセクションでは、各コンポーネントが備えている機能と使用する場面についての概要を簡単に説明します。
 
@@ -77,7 +77,7 @@ Visual Studio 2015 以降では、コンカレンシー ランタイムのタス
 
 ローカルの計算で並列実行の利点を活用できる場合は、並列パターン ライブラリを使用します。 たとえば、使用することができます、 [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for)既存を変換するアルゴリズム`for`ループを並列で動作します。
 
-並列パターン ライブラリの詳細については、[並列パターン ライブラリ (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)を参照してください。
+並列パターン ライブラリの詳細については、次を参照してください。[並列パターン ライブラリ (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)します。
 
 ### <a name="asynchronous-agents-library"></a>非同期エージェント ライブラリ
 
@@ -85,7 +85,7 @@ Visual Studio 2015 以降では、コンカレンシー ランタイムのタス
 
 相互に非同期通信を行う複数のエンティティがある場合に、エージェント ライブラリを使用します。 たとえば、データをファイルまたはネットワーク接続から読み取って、そのデータをメッセージ パッシング インターフェイスで別のエージェントに送信するエージェントを作成できます。
 
-エージェント ライブラリの詳細については、[Asynchronous Agents Library](../../parallel/concrt/asynchronous-agents-library.md)を参照してください。
+エージェント ライブラリの詳細については、次を参照してください。 [Asynchronous Agents Library](../../parallel/concrt/asynchronous-agents-library.md)します。
 
 ### <a name="task-scheduler"></a>タスク スケジューラ
 
@@ -93,7 +93,7 @@ Visual Studio 2015 以降では、コンカレンシー ランタイムのタス
 
 コンカレンシー ランタイムには既定のスケジューラが用意されているため、インフラストラクチャの詳細を管理する必要はありません。 ただし、アプリケーションの品質ニーズを満たすために、独自のスケジューリング ポリシーを用意したり、特定のスケジューラを特定のタスクに関連付けたりすることもできます。
 
-タスク スケジューラの詳細については、[タスク スケジューラ](../../parallel/concrt/task-scheduler-concurrency-runtime.md)を参照してください。
+タスク スケジューラの詳細については、次を参照してください。[タスク スケジューラ](../../parallel/concrt/task-scheduler-concurrency-runtime.md)します。
 
 ### <a name="resource-manager"></a>リソース マネージャー
 
@@ -123,7 +123,7 @@ Visual Studio 2015 以降では、コンカレンシー ランタイムのタス
 390625
 ```
 
-C++ でのラムダ関数の詳細については、[ラムダ式](../../cpp/lambda-expressions-in-cpp.md)を参照してください。
+C++ でのラムダ関数の詳細については、次を参照してください。[ラムダ式](../../cpp/lambda-expressions-in-cpp.md)します。
 
 [[トップ](#top)]
 
@@ -140,6 +140,6 @@ C++ でのラムダ関数の詳細については、[ラムダ式](../../cpp/lam
 
 宣言されている同時実行ランタイム、[同時実行](../../parallel/concrt/reference/concurrency-namespace.md)名前空間。 (使用することも[同時実行](../../parallel/concrt/reference/concurrency-namespace.md)、この名前空間のエイリアスである)。`concurrency::details` 名前空間は、コンカレンシー ランタイム フレームワークをサポートしますが、コードから直接使用することを目的としていません。
 
-コンカレンシー ランタイムは、C ランタイム ライブラリ (CRT) の一部として提供されます。 CRT を使用するアプリケーションを構築する方法の詳細については、[CRT ライブラリの機能](../../c-runtime-library/crt-library-features.md)を参照してください。
+コンカレンシー ランタイムは、C ランタイム ライブラリ (CRT) の一部として提供されます。 CRT を使用するアプリケーションを構築する方法の詳細については、次を参照してください。 [CRT ライブラリの機能](../../c-runtime-library/crt-library-features.md)します。
 
 [[トップ](#top)]

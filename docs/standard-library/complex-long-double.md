@@ -9,11 +9,11 @@ helpviewer_keywords:
 - complex<long double> function
 ms.assetid: 37591991-b385-46e9-b727-d534dbc10432
 ms.openlocfilehash: 19d4569523879911209bf0c05e762eba2c9852a1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456577"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62389178"
 ---
 # <a name="complexltlong-doublegt"></a>complex&lt;long double&gt;
 
@@ -57,7 +57,7 @@ complex(
 
 テンプレート クラスの詳細については`complex`、そのメンバーを参照してくださいと[complex クラス](../standard-library/complex-class.md)します。
 
-**Microsoft 固有の仕様**: **long double**と**二重**型は、同じの表現が、別の型。 詳細については、[基本的な型](../cpp/fundamental-types-cpp.md)を参照してください。
+**Microsoft 固有の仕様**:**Long double**と**二重**型は、同じの表現が、別の型。 詳細については、次を参照してください。[基本的な型](../cpp/fundamental-types-cpp.md)します。
 
 ## <a name="example"></a>例
 

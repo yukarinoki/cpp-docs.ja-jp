@@ -18,11 +18,11 @@ helpviewer_keywords:
 - multitype_join class
 ms.assetid: 236e87a0-4867-49fd-869a-bef4010e49a7
 ms.openlocfilehash: 7a0c68c2c017eedfa23548bee1d17177e8eaaa1e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289027"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62409948"
 ---
 # <a name="multitypejoin-class"></a>multitype_join クラス
 
@@ -77,7 +77,7 @@ class multitype_join: public ISource<typename _Unwrap<T>::type>;
 
 ## <a name="remarks"></a>Remarks
 
-詳細については、[非同期メッセージ ブロック](../../../parallel/concrt/asynchronous-message-blocks.md)を参照してください。
+詳細については、次を参照してください。[非同期メッセージ ブロック](../../../parallel/concrt/asynchronous-message-blocks.md)します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 

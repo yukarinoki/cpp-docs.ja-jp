@@ -21,11 +21,11 @@ helpviewer_keywords:
 - MBCS [C++], enabling
 ms.assetid: 6179f6b7-bc61-4a48-9267-fb7951223e38
 ms.openlocfilehash: 3f57e9feac7f129b3fb8653c7b1a2eacb021bf29
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57818246"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410604"
 ---
 # <a name="mbcs-support-in-visual-c"></a>Visual C++ における MBCS のサポート
 
@@ -43,7 +43,7 @@ MBCS (たとえば、日本語) を使用して、通常東アジアの市場向
 
 ALT + によってアクティブ化、IME\`キーの組み合わせ、一連のボタン (評価指標) と変換ウィンドウとして表示されます。 アプリケーションでは、テキストのカーソル位置にウィンドウを配置します。 アプリケーションを処理する必要があります`WM_MOVE`と`WM_SIZE`変換ウィンドウの位置を変更してメッセージを新しい場所またはターゲット ウィンドウのサイズに準拠するようにします。
 
-漢字の文字を入力する機能があれば、アプリケーションのユーザーを設定する場合、アプリケーションは、IME の Windows メッセージを処理する必要があります。 IME のプログラミングの詳細については、[入力方式マネージャー](/windows/desktop/intl/input-method-manager)を参照してください。
+漢字の文字を入力する機能があれば、アプリケーションのユーザーを設定する場合、アプリケーションは、IME の Windows メッセージを処理する必要があります。 IME のプログラミングの詳細については、次を参照してください。[入力方式マネージャー](/windows/desktop/intl/input-method-manager)します。
 
 ## <a name="visual-c-debugger"></a>Visual C デバッガー
 

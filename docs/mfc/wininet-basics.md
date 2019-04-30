@@ -7,11 +7,11 @@ helpviewer_keywords:
 - WinInet classes [MFC], about WinInet classes
 ms.assetid: 665de5ac-e80d-427d-8d91-2ae466885940
 ms.openlocfilehash: 79ec102aa27440c64f03c6e22b9f2fe959cac6b9
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57264457"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399552"
 ---
 # <a name="wininet-basics"></a>WinInet の基礎
 
@@ -31,7 +31,7 @@ WinInet を使用して、ダウンロードしてから、アプリケーショ
 
 次のコードの抜粋では、単純なブラウザーを作成、Web ページでは、FTP、ファイルをダウンロードして gopher ファイルを検索する方法を示します。 完全な例としてはないし、例外処理が含まれていません。
 
-WinInet の詳細については、[Win32 インターネット拡張機能 (WinInet)](../mfc/win32-internet-extensions-wininet.md)を参照してください。
+WinInet の詳細については、次を参照してください。 [Win32 インターネット拡張機能 (WinInet)](../mfc/win32-internet-extensions-wininet.md)します。
 
 ##  <a name="_core_create_a_very_simple_browser"></a> 非常にシンプルなブラウザーを作成します。
 

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - OLE drag and drop [MFC]
 ms.assetid: a4595350-ca06-4400-88a1-f0175c76b77b
 ms.openlocfilehash: 98bd58745e56a62bf5700e9b5fe4963a7b584953
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58766808"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405925"
 ---
 # <a name="drag-and-drop-ole"></a>ドラッグ アンド ドロップ (OLE)
 
@@ -32,11 +32,11 @@ OLE のドラッグ アンド ドロップ機能を使用する場合は、「[�
 
 ドラッグ アンド ドロップする方法の詳細については、次を参照してください。
 
-- [ドラッグ アンド ドロップします。ドロップ ソースの実装](../mfc/drag-and-drop-implementing-a-drop-source.md)
+- [ドラッグ アンド ドロップ: ドロップ ソースの実装](../mfc/drag-and-drop-implementing-a-drop-source.md)
 
-- [ドラッグ アンド ドロップします。ドロップ ターゲットの実装](../mfc/drag-and-drop-implementing-a-drop-target.md)
+- [ドラッグ アンド ドロップ: ドロップ ターゲットの実装](../mfc/drag-and-drop-implementing-a-drop-target.md)
 
-- [ドラッグ アンド ドロップします。カスタマイズ](../mfc/drag-and-drop-customizing.md)
+- [ドラッグ アンド ドロップ: カスタマイズ](../mfc/drag-and-drop-customizing.md)
 
 ## <a name="see-also"></a>関連項目
 

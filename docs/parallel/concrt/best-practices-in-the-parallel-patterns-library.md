@@ -8,17 +8,17 @@ helpviewer_keywords:
 - Parallel Patterns Library, best practices
 ms.assetid: e43e0304-4d54-4bd8-a3b3-b8673559a9d7
 ms.openlocfilehash: fc120ecc122678b54c7dd27b95445f523bc114a6
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293616"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394495"
 ---
 # <a name="best-practices-in-the-parallel-patterns-library"></a>並列パターン ライブラリに関するベスト プラクティス
 
 ここでは、並列パターン ライブラリ (PPL) を効果的に使用する方法について説明します。 PPL は、粒度の細かい並列化を実行するための汎用的なコンテナー、オブジェクト、およびアルゴリズムを提供します。
 
-PPL の詳細については、[並列パターン ライブラリ (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)を参照してください。
+PPL の詳細については、次を参照してください。[並列パターン ライブラリ (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)します。
 
 ##  <a name="top"></a> セクション
 
@@ -114,7 +114,7 @@ PPL では、2 とおりの方法を使用して、タスク グループまた�
 
 この例の完全なバージョンを参照してください。[方法。並列ループから処理を中断する例外を使用して](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md)します。
 
-キャンセルと PPL によって提供される例外処理メカニズムの概要については、[PPL における取り消し処理](cancellation-in-the-ppl.md)と[例外処理](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)を参照してください。
+キャンセルと PPL によって提供される例外処理メカニズムの概要については、次を参照してください。 [PPL における取り消し処理](cancellation-in-the-ppl.md)と[例外処理](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)します。
 
 [[トップ](#top)]
 

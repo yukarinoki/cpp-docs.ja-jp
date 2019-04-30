@@ -22,11 +22,11 @@ f1_keywords:
 - amp/Concurrency::direct3d::umin
 ms.assetid: 28943b62-52c9-42dc-baf1-ca7b095c1a19
 ms.openlocfilehash: 0a2977faf094aafb6290063e39e062ffaeaaec81
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57281332"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405587"
 ---
 # <a name="concurrencydirect3d-namespace-functions-amp"></a>Concurrency::direct3d 名前空間関数 (AMP)
 
@@ -92,8 +92,7 @@ inline int clamp(
 
 ### <a name="return-value"></a>戻り値
 
-
-  `_X` の固定された値。
+`_X` の固定された値。
 
 ##  <a name="countbits"></a>  countbits
 
@@ -151,9 +150,7 @@ Direct3D デバイス インターフェイスへのポインター。
 
 この関数は、Direct3D デバイス インターフェイスへの既存のポインターから新しい `accelerator_view` オブジェクトを作成します。 関数呼び出しが成功した場合、パラメーターの参照カウントはインターフェイスに対する `AddRef` 呼び出しを使用してインクリメントされます。 DirectX コードで不要になった場合は、オブジェクトを安全に解放できます。 メソッドの呼び出しに失敗した場合、 [runtime_exception](runtime-exception-class.md)がスローされます。
 
-この関数を使用して作成する `accelerator_view` オブジェクトはスレッド セーフです。 
-  `accelerator_view` オブジェクトの同時使用を同期する必要があります。 
-  `accelerator_view` オブジェクトと生の ID3D11Device インターフェイスを非同期で同時に使用すると、未定義の動作が発生します。
+この関数を使用して作成する `accelerator_view` オブジェクトはスレッド セーフです。 `accelerator_view` オブジェクトの同時使用を同期する必要があります。 `accelerator_view` オブジェクトと生の ID3D11Device インターフェイスを非同期で同時に使用すると、未定義の動作が発生します。
 
 C++ AMP ランタイムは、`D3D11_CREATE_DEVICE_DEBUG` フラグを使用すると D3D デバッグ レイヤーを使用してデバッグ モードで詳細なエラー情報を提供します。
 

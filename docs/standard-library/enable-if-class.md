@@ -8,11 +8,11 @@ helpviewer_keywords:
 - enable_if
 ms.assetid: c6b8d41c-a18f-4e30-a39e-b3aa0e8fd926
 ms.openlocfilehash: b6990dba20643b35dde36a492d40c3e3e76ae0b4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591881"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413763"
 ---
 # <a name="enableif-class"></a>enable_if クラス
 
@@ -50,7 +50,7 @@ C++ では、テンプレート パラメーターの置き換えの失敗は、
 
 次に、4 つのシナリオの例を示します。
 
-- シナリオ 1: 関数の戻り値の型をラッピングする
+- シナリオ 1:関数の戻り値の型をラッピングします。
 
 ```cpp
     template <your_stuff>
@@ -64,7 +64,7 @@ yourfunction(args) {// ...
 }
 ```
 
-- シナリオ 2: 既定の引数を持つ関数パラメーターを追加する
+- シナリオ 2:既定の引数を持つ関数パラメーターを追加するには。
 
 ```cpp
     template <your_stuff>
@@ -73,14 +73,14 @@ your_return_type_if_present
 }
 ```
 
-- シナリオ 3: 既定の引数を持つテンプレート パラメーターを追加する
+- シナリオ 3:既定の引数を持つテンプレート パラメーターを追加するには。
 
 ```cpp
     template <your_stuff, typename Dummy = enable_if_t<your_condition>>
 rest_of_function_declaration_goes_here
 ```
 
-- シナリオ 4: 関数がテンプレート化されていない引数を持っている場合、その型をラッピングできる
+- シナリオ 4:関数にテンプレート化されていない引数がある場合は、その型をラップすることができます。
 
 ```cpp
     template <typename T>
@@ -105,7 +105,7 @@ yourfunction(args, typename enable_if<your_condition, void **>::type = nullptr) 
 
 シナリオ 3 は、`Dummy` という名前を使用しますが、これは任意です。 単に "`typename = typename`" だけで機能しますが、少し変に見えるかもしれないので、"dummy" という名前を使用できます。関数定義で使用される可能性のある名前は使用しないでください。 `enable_if` に型を指定しない場合、既定値は void になります。ユーザーは `Dummy` が何かを気にしなくていないため、これは非常に理にかなっています。 これは、変換演算子や [variadic](../cpp/ellipses-and-variadic-templates.md) コンストラクターなど、すべてにおいて機能します。
 
-シナリオ 4 は、戻り値の型を持たないコンストラクターで機能するため、シナリオ 1 のラッピングの制約を解決します。  ただし、シナリオ 4 は非テンプレート関数の引数に限定されますが、このような引数は必ず利用できるわけではありません  (テンプレート関数の引数でシナリオ 4 を使用すると、テンプレート引数の推定が機能しません)。
+シナリオ 4 は、戻り値の型を持たないコンストラクターで機能するため、シナリオ 1 のラッピングの制約を解決します。  ただし、シナリオ 4 は非テンプレート関数の引数に限定されますが、このような引数は必ず利用できるわけではありません   (テンプレート関数の引数でシナリオ 4 を使用すると、テンプレート引数の推定が機能しません)。
 
 `enable_if` は強力ですが、誤って使用すると危険です。  enable_if の目的はオーバーロードの解決前に候補を除外することなので、誤って使用すると、その影響によって混乱が生じます。  次に、いくつか推奨例を示します。
 

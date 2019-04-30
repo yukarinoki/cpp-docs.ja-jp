@@ -5,15 +5,15 @@ helpviewer_keywords:
 - schedule groups
 ms.assetid: 03523572-5891-4d17-89ce-fa795605f28b
 ms.openlocfilehash: febcc0a9c7af75801962ea6be687ce87cc5501d4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57295976"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62407914"
 ---
 # <a name="schedule-groups"></a>スケジュール グループ
 
-このドキュメントでは、同時実行ランタイムのスケジュール グループの役割について説明します。 A*スケジュール グループ*で、またはグループ、関連するタスク化します。 すべてのスケジューラでは、1 つまたは複数のスケジュール グループがあります。 スケジュール グループは、タスク間で高いレベルの局所性が求められる場合 (たとえば、関連するタスクのグループが同一プロセッサ ノードでの実行によって恩恵を受ける場合) に使用します。 逆に、アプリケーションがある特定の品質要件、たとえば、一連のタスクに割り当てられている処理リソースの量を制限する場合に場合は、スケジューラ インスタンスを使用します。 スケジューラ インスタンスの詳細については、[スケジューラ インスタンス](../../parallel/concrt/scheduler-instances.md)を参照してください。
+このドキュメントでは、同時実行ランタイムのスケジュール グループの役割について説明します。 A*スケジュール グループ*で、またはグループ、関連するタスク化します。 すべてのスケジューラでは、1 つまたは複数のスケジュール グループがあります。 スケジュール グループは、タスク間で高いレベルの局所性が求められる場合 (たとえば、関連するタスクのグループが同一プロセッサ ノードでの実行によって恩恵を受ける場合) に使用します。 逆に、アプリケーションがある特定の品質要件、たとえば、一連のタスクに割り当てられている処理リソースの量を制限する場合に場合は、スケジューラ インスタンスを使用します。 スケジューラ インスタンスの詳細については、次を参照してください。[スケジューラ インスタンス](../../parallel/concrt/scheduler-instances.md)します。
 
 > [!TIP]
 >  コンカレンシー ランタイムには既定のスケジューラが用意されているため、アプリケーションにスケジューラを作成する必要はありません。 開始するので、タスク スケジューラを使用してアプリケーションのパフォーマンスを微調整する、推奨、[並列パターン ライブラリ (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)または[Asynchronous Agents Library](../../parallel/concrt/asynchronous-agents-library.md)場合新しい同時実行ランタイムにします。
@@ -26,7 +26,7 @@ ms.locfileid: "57295976"
 
 多くの同時実行ランタイム型では、スケジュール グループと共にオブジェクトを関連付けることができます。 たとえば、 [concurrency::agent](../../parallel/concrt/reference/agent-class.md)などのクラスとメッセージ ブロック クラス[concurrency::unbounded_buffer](reference/unbounded-buffer-class.md)、 [concurrency::join](../../parallel/concrt/reference/join-class.md)、および同時実行::[タイマー](reference/timer-class.md)、取得するコンス トラクターのオーバー ロードされたバージョンの提供、`ScheduleGroup`オブジェクト。 ランタイムを使用して、`Scheduler`これに関連付けられているオブジェクト`ScheduleGroup`タスクをスケジュールするオブジェクト。
 
-使用することも、 [concurrency::ScheduleGroup::ScheduleTask](reference/schedulegroup-class.md#scheduletask)軽量タスクをスケジュールする方法。 軽量タスクの詳細については、[軽量タスク](../../parallel/concrt/lightweight-tasks.md)を参照してください。
+使用することも、 [concurrency::ScheduleGroup::ScheduleTask](reference/schedulegroup-class.md#scheduletask)軽量タスクをスケジュールする方法。 軽量タスクの詳細については、次を参照してください。[軽量タスク](../../parallel/concrt/lightweight-tasks.md)します。
 
 ## <a name="example"></a>例
 

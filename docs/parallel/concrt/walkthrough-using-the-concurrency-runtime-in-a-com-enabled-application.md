@@ -1,16 +1,16 @@
 ---
 title: 'チュートリアル: COM 対応アプリケーションで同時実行ランタイムの使用'
-ms.date: 11/04/2016
+ms.date: 04/25/2019
 helpviewer_keywords:
 - Concurrency Runtime, use with COM
 - COM, use with the Concurrency Runtime
 ms.assetid: a7c798b8-0fc8-4bee-972f-22ef158f7f48
 ms.openlocfilehash: 9d306377be4a000c54fb5556b15263a15b2d4618
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
-ms.translationtype: MT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278198"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62407785"
 ---
 # <a name="walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application"></a>チュートリアル: COM 対応アプリケーションで同時実行ランタイムの使用
 
@@ -28,7 +28,7 @@ ms.locfileid: "57278198"
 
 - [例外処理](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)
 
-COM の詳細については、[コンポーネント オブジェクト モデル (COM)](/windows/desktop/com/component-object-model--com--portal)を参照してください。
+COM の詳細については、次を参照してください。[コンポーネント オブジェクト モデル (COM)](/windows/desktop/com/component-object-model--com--portal)します。
 
 ## <a name="managing-the-lifetime-of-the-com-library"></a>COM ライブラリの有効期間の管理
 
@@ -58,12 +58,11 @@ COM の詳細については、[コンポーネント オブジェクト モデ�
 
 [!code-cpp[concrt-parallel-scripts#3](../../parallel/concrt/codesnippet/cpp/walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application_3.cpp)]
 
-
-  `CCoInitializer` クラスを使用すると、次のように、タスクが終了するときに COM ライブラリを自動的に解放できます。
+`CCoInitializer` クラスを使用すると、次のように、タスクが終了するときに COM ライブラリを自動的に解放できます。
 
 [!code-cpp[concrt-parallel-scripts#4](../../parallel/concrt/codesnippet/cpp/walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application_4.cpp)]
 
-同時実行ランタイムでの取り消し処理の詳細については、[PPL における取り消し処理](cancellation-in-the-ppl.md)を参照してください。
+同時実行ランタイムでの取り消し処理の詳細については、次を参照してください。 [PPL における取り消し処理](cancellation-in-the-ppl.md)します。
 
 ### <a name="using-com-with-asynchronous-agents"></a>非同期エージェントでの COM の使用
 
@@ -105,9 +104,7 @@ COM の詳細については、[コンポーネント オブジェクト モデ�
 
 ### <a name="calling-the-script-from-an-agent"></a>エージェントからのスクリプトの呼び出し
 
-次の例は、`FibonacciScriptAgent`クラスで、n を計算するスクリプト プロシージャを呼び出す<sup>th</sup>フィボナッチ数。 
-  `FibonacciScriptAgent` クラスは、メッセージ パッシングを使用して、スクリプト関数への入力値をメイン プログラムから受け取ります。 
-  `run` メソッドは、タスク全体を通じて COM ライブラリの有効期間を管理します。
+次の例は、`FibonacciScriptAgent`クラスで、n を計算するスクリプト プロシージャを呼び出す<sup>th</sup>フィボナッチ数。 `FibonacciScriptAgent` クラスは、メッセージ パッシングを使用して、スクリプト関数への入力値をメイン プログラムから受け取ります。 `run` メソッドは、タスク全体を通じて COM ライブラリの有効期間を管理します。
 
 [!code-cpp[concrt-parallel-scripts#11](../../parallel/concrt/codesnippet/cpp/walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application_11.cpp)]
 

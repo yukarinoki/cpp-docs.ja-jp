@@ -12,11 +12,11 @@ f1_keywords:
 - filesystem/std::experimental::filesystem::perms
 ms.assetid: 0096c046-d101-464c-8259-b878a48280b0
 ms.openlocfilehash: 9c4efa145455240c4420a51c4a01662a30dc0761
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50538932"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405132"
 ---
 # <a name="ltfilesystemgt-enumerations"></a>&lt;filesystem&gt; 列挙体
 
@@ -107,7 +107,7 @@ enum class file_type {
 
 ### <a name="values"></a>値
 
-|名前|[値]|説明|
+|名前|値|説明|
 |----------|-----------|-----------------|
 |`not_found`|-1|存在しないファイルを表します。|
 |`none`|0|type 属性を持たないファイルを表します  (サポートされていません)。|

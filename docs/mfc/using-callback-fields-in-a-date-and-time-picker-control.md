@@ -14,11 +14,11 @@ helpviewer_keywords:
 - DateTimePicker control [MFC]
 ms.assetid: 404f4ba9-cba7-4718-9faa-bc6b274a723f
 ms.openlocfilehash: 874f73df3dda3a720d4346ae3fb0136c662221db
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57299401"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403582"
 ---
 # <a name="using-callback-fields-in-a-date-and-time-picker-control"></a>日時指定コントロールでのコールバック フィールドの使い方
 
@@ -42,7 +42,7 @@ ms.locfileid: "57299401"
 
 ## <a name="initializing-the-custom-format-string"></a>カスタム書式指定文字列を初期化しています
 
-呼び出してカスタム文字列を初期化`CDateTimeCtrl::SetFormat`します。 詳細については、[日付と時刻の選択コントロールでカスタム書式指定文字列を使用して](../mfc/using-custom-format-strings-in-a-date-and-time-picker-control.md)を参照してください。 カスタム書式指定文字列を設定する一般的な場所は、`OnInitDialog`含むダイアログ クラスの関数または`OnInitialUpdate`親ビュー クラスの関数。
+呼び出してカスタム文字列を初期化`CDateTimeCtrl::SetFormat`します。 詳細については、次を参照してください。[日付と時刻の選択コントロールでカスタム書式指定文字列を使用して](../mfc/using-custom-format-strings-in-a-date-and-time-picker-control.md)します。 カスタム書式指定文字列を設定する一般的な場所は、`OnInitDialog`含むダイアログ クラスの関数または`OnInitialUpdate`親ビュー クラスの関数。
 
 ## <a name="handling-the-dtnformatquery-notification"></a>DTN_FORMATQUERY 通知の処理
 

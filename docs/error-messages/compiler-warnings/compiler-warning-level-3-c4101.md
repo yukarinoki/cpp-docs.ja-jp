@@ -7,15 +7,15 @@ helpviewer_keywords:
 - C4101
 ms.assetid: d98563cd-9dce-4aae-8f12-bd552a4ea677
 ms.openlocfilehash: d1109a32e754a6055e5e1d90632ad85332d832f1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50661124"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62402321"
 ---
 # <a name="compiler-warning-level-3-c4101"></a>コンパイラの警告 (レベル 3) C4101
 
-'identifier': 参照されていないローカル変数
+'identifier' : unreferenced local variable
 
 ローカル変数は使用されません。 この警告は、明確な状況で発生します。
 
