@@ -3,15 +3,15 @@ title: 依存する型の名前解決
 ms.date: 11/04/2016
 ms.assetid: 34066bb4-0c79-4fd8-bda7-539a60a277ab
 ms.openlocfilehash: 04db4b0efc5e58dbd3de6fc9979c3a3cdd44d84e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50563154"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64345938"
 ---
 # <a name="name-resolution-for-dependent-types"></a>依存する型の名前解決
 
-使用**typename**の修飾名で指定した修飾名が型を識別するようにコンパイラに指示するテンプレートの定義。 詳細については、[typename](../cpp/typename.md)を参照してください。
+使用**typename**の修飾名で指定した修飾名が型を識別するようにコンパイラに指示するテンプレートの定義。 詳細については、次を参照してください。 [typename](../cpp/typename.md)します。
 
 ```cpp
 // template_name_resolution1.cpp

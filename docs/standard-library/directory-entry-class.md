@@ -35,11 +35,11 @@ helpviewer_keywords:
 - std::experimental::filesystem::directory_entry::operator&gt;
 - std::experimental::filesystem::directory_entry::operator&gt;=
 ms.openlocfilehash: c1b68aefd44d8f0ac60c36307dee93333d801bb9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533823"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64342984"
 ---
 # <a name="directoryentry-class"></a>directory_entry クラス
 
@@ -84,7 +84,7 @@ class directory_entry;
 |[operator<=](#op_lteq)|`!(right < *this)` を返します。|
 |[operator>](#op_gt)|`right < *this` を返します。|
 |[operator>=](#op_gteq)|`!(*this < right)` を返します。|
-|[operator const path_type &](#path_type)|`mypath` を返します。|
+|[operator const path_type&](#path_type)|`mypath` を返します。|
 
 ## <a name="requirements"></a>必要条件
 
@@ -110,7 +110,7 @@ void assign(const std::experimental::filesystem::path& pval,
 *stat_arg*<br/>
 格納されているファイル名の状態。
 
-*symstat_arg と置き換えます。*<br/>
+*symstat_arg*<br/>
 格納されているファイル名のシンボリック リンクの状態。
 
 ## <a name="directory_entry"></a> directory_entry
@@ -134,7 +134,7 @@ explicit directory_entry(const std::experimental::filesystem::path& pval,
 *stat_arg*<br/>
 格納されているファイル名の状態。
 
-*symstat_arg と置き換えます。*<br/>
+*symstat_arg*<br/>
 格納されているファイル名のシンボリック リンクの状態。
 
 ## <a name="op_neq"></a> operator!=
@@ -264,7 +264,7 @@ void replace_filename(
 *stat_arg*<br/>
 格納されているファイル名の状態。
 
-*symstat_arg と置き換えます。*<br/>
+*symstat_arg*<br/>
 格納されているファイル名のシンボリック リンクの状態。
 
 ## <a name="status"></a> 状態
@@ -287,7 +287,7 @@ file_status status(error_code& ec) const noexcept;
 
 ## <a name="symlink_status"></a> symlink_status
 
-両方のメンバー関数が返す`mysymstat`可能性があります最初に変更される次のように: 場合`status_known(mysymstat)`し何も操作を行います。 それ以外の場合は `mysymstat = symlink_status(mypval)`。
+両方のメンバー関数が返す`mysymstat`可能性がありますまずように変更します。場合`status_known(mysymstat)`し何も操作を行います。 それ以外の場合は `mysymstat = symlink_status(mypval)`。
 
 ```cpp
 file_status symlink_status() const;

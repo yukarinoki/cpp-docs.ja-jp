@@ -10,11 +10,11 @@ helpviewer_keywords:
 - .pch files, creating
 ms.assetid: e2cdb404-a517-4189-9771-c869c660cb1b
 ms.openlocfilehash: 5afda50c43f93baa2d73e6afb68f436560c3243e
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57826381"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64341748"
 ---
 # <a name="precompiled-header-files"></a>プリコンパイル済みヘッダー ファイル
 
@@ -221,7 +221,7 @@ NMAKE
 NMAKE DEBUG=0
 ```
 
-メイクファイルの詳細については、[NMAKE リファレンス](reference/nmake-reference.md)を参照してください。 参照してください[MSVC コンパイラ オプション](reference/compiler-options.md)と[MSVC リンカー オプション](reference/linker-options.md)します。
+メイクファイルの詳細については、次を参照してください。 [NMAKE リファレンス](reference/nmake-reference.md)します。 参照してください[MSVC コンパイラ オプション](reference/compiler-options.md)と[MSVC リンカー オプション](reference/linker-options.md)します。
 
 ## <a name="example-code-for-pch"></a>PCH のサンプル コード
 

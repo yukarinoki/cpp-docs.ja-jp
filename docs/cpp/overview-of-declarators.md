@@ -5,11 +5,11 @@ helpviewer_keywords:
 - declarators, about declarators
 ms.assetid: 0f2e2312-80bd-4154-8345-718bd9ed2173
 ms.openlocfilehash: e651b4422a159bf947e364c82cc4aac1b888d30d
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52177083"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64345845"
 ---
 # <a name="overview-of-declarators"></a>宣言の概要
 
@@ -140,7 +140,7 @@ PIFN pifnDispatchArray[7];
 int ( *pifnDispatchArray[7] )( char * );
 ```
 
-Typedef の詳細については、[エイリアスと typedef](aliases-and-typedefs-cpp.md)を参照してください。
+Typedef の詳細については、次を参照してください。[エイリアスと typedef](aliases-and-typedefs-cpp.md)します。
 
 単一の基本型のポインター、参照、配列は、次のように (コンマで区切って) 1 つの宣言にまとめることができます。
 
@@ -159,7 +159,7 @@ int a, *b, c[5], **d, &e=a;
   - identifier
   - 修飾された名前
   - 宣言子 (引数リスト) [cv qualfiers] [例外 spec]
-  - 宣言子 [定数式]
+  - declarator [ [ constant-expression ] ]
   - ポインター演算子の宣言子
   - (宣言子)
 

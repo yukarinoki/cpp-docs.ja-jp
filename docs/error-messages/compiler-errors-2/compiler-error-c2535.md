@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2535
 ms.assetid: a958f83e-e2bf-4a59-b44b-d406ec325d7e
 ms.openlocfilehash: b2b5452cfe59284d56b019674ffbabbda0dc62d1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50574024"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64344705"
 ---
 # <a name="compiler-error-c2535"></a>コンパイラ エラー C2535
 
@@ -19,7 +19,7 @@ ms.locfileid: "50574024"
 
 このエラーは、オーバーロードされた関数の定義または宣言で、同じ仮パラメーター リストを繰り返し使用した場合に発生します。
 
-Dispose 関数が原因で C2535 が発生した場合は、[デストラクターおよびファイナライザー](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)詳細についてはを参照してください。
+Dispose 関数が原因で C2535 が発生した場合は、次を参照してください。[デストラクターおよびファイナライザー](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)詳細についてはします。
 
 次の例では、C2535 が生成されます。
 

@@ -1,6 +1,6 @@
 ---
-title: コンパイラ エラー (致命的なエラー) C999 から C1999
-ms.date: 11/17/2017
+title: コンパイラの致命的なエラー (C999 - C1999)
+ms.date: 04/21/2019
 f1_keywords:
 - C1034
 - C1036
@@ -52,16 +52,16 @@ helpviewer_keywords:
 - C1505
 - C1901
 ms.assetid: 6c8df109-7594-48ed-987a-97d9fe2b04af
-ms.openlocfilehash: 17c456f6ab248964cbd19cd9695da290254ccf1b
-ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
-ms.translationtype: MT
+ms.openlocfilehash: 5ffa1a2633877c8a16eb424f1ddc100bfd6142b8
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356219"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64344827"
 ---
-# <a name="compiler-fatal-errors-c999-through-c1999"></a>コンパイラ エラー (致命的なエラー) C999 から C1999
+# <a name="compiler-fatal-errors-c999-through-c1999"></a>コンパイラの致命的なエラー (C999 - C1999)
 
-ドキュメントのこのセクションの記事では、コンパイラによって生成されるエラー メッセージのサブセットについて説明します。
+Microsoft C で生成されるエラー メッセージのサブセットを説明するドキュメントのこのセクションの記事/C++コンパイラ。
 
 [!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
 
@@ -214,3 +214,7 @@ ms.locfileid: "58356219"
 |[致命的なエラー C1903](fatal-error-c1903.md)|直前のエラーを修復できません。コンパイルを中止します。|
 |[致命的なエラー C1904](fatal-error-c1904.md)|プロバイダーの動作が不適切です:*file*|
 |[致命的なエラー C1905](../../error-messages/compiler-errors-1/fatal-error-c1905.md)|フロント エンドとバック エンドに互換性がありません (同じプロセッサを対象としなければなりません)。|
+
+## <a name="see-also"></a>関連項目
+
+[C/C++コンパイラとビルド ツールのエラーと警告](../compiler-errors-1/c-cpp-build-errors.md)

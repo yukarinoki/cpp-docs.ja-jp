@@ -10,19 +10,19 @@ helpviewer_keywords:
 - delete keyword [C++], syntax
 ms.assetid: fa721b9e-0374-4f04-bb87-032ea775bcc8
 ms.openlocfilehash: 1ac6282ecbf45f22e7dd66b94f8bccdbc4e505ce
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441302"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64345896"
 ---
 # <a name="new-and-delete-operators"></a>new および delete 演算子
 
 C++ を使用してオブジェクトの動的な割り当てと解放をサポートしています、[新しい](../cpp/new-operator-cpp.md)と[削除](../cpp/delete-operator-cpp.md)演算子。 これらの演算子は、フリー ストアと呼ばれるプールからオブジェクトのメモリを割り当てます。 **新しい**演算子は、特殊な関数を呼び出す[演算子 new](../cpp/new-operator-cpp.md)、および**削除**演算子は、特殊な関数を呼び出す[演算子 delete](../cpp/delete-operator-cpp.md).
 
-**新しい**C++ 標準ライブラリ内の関数は、これは、メモリの割り当てが失敗した場合は、std::bad_alloc 例外をスローする C++ 標準で指定された動作をサポートしています。 でも、スローしないバージョンの場合**新しい**プログラムを nothrownew.obj とリンクします。ただし、場合 nothrownew.obj とリンクする、既定の**演算子 new** C++ 標準ライブラリでは機能しなくします。
+**新しい**で機能、C++標準ライブラリで指定された動作をサポートしている、C++標準である、メモリの割り当てが失敗した場合は、std::bad_alloc 例外をスローします。 でも、スローしないバージョンの場合**新しい**プログラムを nothrownew.obj とリンクします。ただし、場合 nothrownew.obj とリンクする、既定の**演算子 new** C++ 標準ライブラリでは機能しなくします。
 
-C ランタイム ライブラリと C++ 標準ライブラリを構成するライブラリ ファイルの一覧は、[CRT ライブラリの機能](../c-runtime-library/crt-library-features.md)を参照してください。
+C ランタイム ライブラリと C++ 標準ライブラリを構成するライブラリ ファイルの一覧は、次を参照してください。 [CRT ライブラリの機能](../c-runtime-library/crt-library-features.md)します。
 
 ##  <a id="new_operator"> </a> New 演算子
 
@@ -43,7 +43,7 @@ char *pch = new char[BUFFER_SIZE];
 |演算子|スコープ|
 |--------------|-----------|
 |**: new 演算子**|Global|
-|*クラス名* **:: new 演算子**|クラス|
+|*class-name* **::operator new**|クラス|
 
 最初の引数**演算子 new**型でなければなりません`size_t`(で定義された型\<stddef.h >)、戻り値の型は常に**void** <strong>\*</strong>.
 

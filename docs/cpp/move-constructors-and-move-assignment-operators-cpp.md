@@ -1,19 +1,19 @@
 ---
-title: '方法: 移動コンス トラクターと移動代入演算子 (C++) の定義'
+title: '方法: 定義の移動コンス トラクターと移動代入演算子 (C++)'
 ms.date: 03/05/2018
 helpviewer_keywords:
 - move constructor [C++]
 ms.assetid: e75efe0e-4b74-47a9-96ed-4e83cfc4378d
 ms.openlocfilehash: b601c53c01940fe110036d569e0be9d43a123a91
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50504521"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64345023"
 ---
 # <a name="move-constructors-and-move-assignment-operators-c"></a>移動コンストラクターと移動代入演算子 (C++)
 
-このトピックでは、記述する方法を説明します、*移動コンス トラクター*と C++ のクラスの移動代入演算子。 移動コンス トラクターには、右辺値をコピーせず、左辺値に移動するオブジェクトによって所有されているリソースができます。 移動セマンティクスの詳細については、[右辺値参照宣言子: & &](../cpp/rvalue-reference-declarator-amp-amp.md)を参照してください。
+このトピックでは、記述する方法を説明します、*移動コンス トラクター*と C++ のクラスの移動代入演算子。 移動コンス トラクターには、右辺値をコピーせず、左辺値に移動するオブジェクトによって所有されているリソースができます。 移動セマンティクスの詳細については、次を参照してください。[右辺値参照宣言子: & &](../cpp/rvalue-reference-declarator-amp-amp.md)します。
 
 このセクションは、メモリ バッファーを管理する次の C++ クラス、`MemoryBlock` に基づいています。
 

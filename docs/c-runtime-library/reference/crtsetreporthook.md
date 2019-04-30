@@ -23,11 +23,11 @@ helpviewer_keywords:
 - _CrtSetReportHook function
 ms.assetid: 1ae7c64f-8c84-4797-9574-b59f00f7a509
 ms.openlocfilehash: 7dcb916ea920751618ffa6a4afbcde8df5e35cba
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50478339"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64343048"
 ---
 # <a name="crtsetreporthook"></a>_CrtSetReportHook
 
@@ -64,7 +64,7 @@ int YourReportHook( int reportType, char *message, int *returnValue );
 
 場所*reportType*はデバッグ レポートの種類 (**前述**、 **_CRT_ERROR**、または **_CRT_ASSERT**)、 *メッセージ*は、レポートに含まれるよう、完全に組み立てられたデバッグ ユーザー メッセージと**returnValue**クライアント定義によって指定された値がによって返される関数を報告 **_CrtDbgReport**します。 使用できるレポートの種類の詳細については、[_CrtSetReportMode](crtsetreportmode.md) 関数を参照してください。
 
-クライアント定義レポート関数は、それ以上のレポートの必要はありませんように完全にデバッグ メッセージを処理する場合、関数が返す**TRUE**します。 関数が返す場合**FALSE**、 **_CrtDbgReport**が呼び出され、レポートの種類、モード、およびファイルの現在の設定を使用してデバッグ レポートを生成します。 指定することでさらに、 **_CrtDbgReport**で値を返す**returnValue**アプリケーションは、デバッグ ブレークが発生したかどうかも制御できます。 デバッグ レポートを構成および生成する方法の詳細については、**_CrtSetReportMode**、 [_CrtSetReportFile](crtsetreportfile.md)、および **_CrtDbgReport**を参照してください。
+クライアント定義レポート関数は、それ以上のレポートの必要はありませんように完全にデバッグ メッセージを処理する場合、関数が返す**TRUE**します。 関数が返す場合**FALSE**、 **_CrtDbgReport**が呼び出され、レポートの種類、モード、およびファイルの現在の設定を使用してデバッグ レポートを生成します。 指定することでさらに、 **_CrtDbgReport**で値を返す**returnValue**アプリケーションは、デバッグ ブレークが発生したかどうかも制御できます。 デバッグ レポートを構成および生成する方法の詳細については、次を参照してください。 **_CrtSetReportMode**、 [_CrtSetReportFile](crtsetreportfile.md)、および **_CrtDbgReport**します。
 
 フックをサポートするその他のランタイム関数の使い方の詳細と、独自のクライアント定義フック関数の記述方法については、「[デバッグ用フック関数の作成](/visualstudio/debugger/debug-hook-function-writing)」を参照してください。
 

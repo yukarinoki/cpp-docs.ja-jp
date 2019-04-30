@@ -12,11 +12,11 @@ helpviewer_keywords:
 - Visual C++, namespaces
 ms.assetid: d1a5a9ab-1cad-47e6-a82d-385bb77f4188
 ms.openlocfilehash: 532fdcb5de179bd2fdeb25091ace7210d55a2658
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50508850"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64345911"
 ---
 # <a name="namespaces-c"></a>名前空間 (C++)
 
@@ -102,7 +102,7 @@ int ContosoDataServer::Bar(){return 0;}
 
 名前空間は、1 つのファイルにある複数のブロック、および複数のファイルで宣言できます。 コンパイラは、プリプロセス時にパーツを結合します。結果として生成される名前空間には、すべてのパーツで宣言されるすべてのメンバーが含まれます。 この一例が、標準ライブラリの各ヘッダー ファイルで宣言されている std 名前空間です。
 
-名前付きの名前空間のメンバーを定義する名前の明示的な修飾で宣言されている名前空間の外部定義できます。 ただし、定義は、宣言の名前空間を囲う名前空間内で、宣言の位置の後に記述する必要があります。 例えば:
+名前付きの名前空間のメンバーを定義する名前の明示的な修飾で宣言されている名前空間の外部定義できます。 ただし、定義は、宣言の名前空間を囲う名前空間内で、宣言の位置の後に記述する必要があります。 例:
 
 ```cpp
 // defining_namespace_members.cpp
@@ -248,7 +248,7 @@ namespace Contoso
 
 ## <a id="namespace_aliases"></a> Namespace エイリアス
 
-名前空間の名前は一意である必要があります。つまり、多くの場合、短くなりすぎないようにする必要があります。 名前が長くてコードが読みにくい場合、または using ディレクティブを使用できないヘッダー ファイルに入力するのが面倒な場合は、実際の名前の省略形として機能する名前空間のエイリアスを作成することができます。 例えば:
+名前空間の名前は一意である必要があります。つまり、多くの場合、短くなりすぎないようにする必要があります。 名前が長くてコードが読みにくい場合、または using ディレクティブを使用できないヘッダー ファイルに入力するのが面倒な場合は、実際の名前の省略形として機能する名前空間のエイリアスを作成することができます。 例:
 
 ```cpp
 namespace a_very_long_namespace_name { class Foo {}; }

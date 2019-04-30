@@ -9,11 +9,11 @@ helpviewer_keywords:
 - notifications [MFC], month calendar control
 ms.assetid: 607c3e90-0756-493b-9503-ce835a50c7ab
 ms.openlocfilehash: fc0bb475a95450c281c92b500083c9502df50931
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57280759"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64346144"
 ---
 # <a name="processing-notification-messages-in-month-calendar-controls"></a>月間予定表コントロールでの通知メッセージの処理
 
@@ -23,7 +23,7 @@ ms.locfileid: "57280759"
 
 次の一覧には、月間予定表コントロールから送信されたさまざまな通知がについて説明します。
 
-- MCN_GETDAYSTATE 要求の情報については、日を太字で表示される必要があります。 この通知の処理方法の詳細については、[月間予定表コントロールの日付状態の設定](../mfc/setting-the-day-state-of-a-month-calendar-control.md)を参照してください。
+- MCN_GETDAYSTATE 要求の情報については、日を太字で表示される必要があります。 この通知の処理方法の詳細については、次を参照してください。[月間予定表コントロールの日付状態の設定](../mfc/setting-the-day-state-of-a-month-calendar-control.md)します。
 
 - MCN_SELCHANGE、選択した日付または日付の範囲が変更された親に通知します。
 
