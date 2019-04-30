@@ -13,11 +13,11 @@ helpviewer_keywords:
 - message class
 ms.assetid: 3e1f3505-6c0c-486c-8191-666d0880ec62
 ms.openlocfilehash: 83cfdb5807581f7092709691a1839052abdd657c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57263079"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64343849"
 ---
 # <a name="message-class"></a>message クラス
 
@@ -66,7 +66,7 @@ class message : public ::Concurrency::details::_Runtime_object;
 
 ## <a name="remarks"></a>Remarks
 
-詳細については、[非同期メッセージ ブロック](../../../parallel/concrt/asynchronous-message-blocks.md)を参照してください。
+詳細については、次を参照してください。[非同期メッセージ ブロック](../../../parallel/concrt/asynchronous-message-blocks.md)します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 

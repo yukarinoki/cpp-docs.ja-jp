@@ -17,11 +17,11 @@ helpviewer_keywords:
 - join class
 ms.assetid: d2217119-70a1-40b6-809f-c1c13a571c3f
 ms.openlocfilehash: d04ef90750c609d77fc8bf963bb996a90444f079
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57281591"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64343875"
 ---
 # <a name="join-class"></a>join クラス
 
@@ -68,7 +68,7 @@ class join : public propagator_block<single_link_registry<ITarget<std::vector<T>
 
 ## <a name="remarks"></a>Remarks
 
-詳細については、[非同期メッセージ ブロック](../../../parallel/concrt/asynchronous-message-blocks.md)を参照してください。
+詳細については、次を参照してください。[非同期メッセージ ブロック](../../../parallel/concrt/asynchronous-message-blocks.md)します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -206,8 +206,7 @@ message_status propagate_message(
 ### <a name="parameters"></a>パラメーター
 
 *_PMessage*<br/>
-
-  `message` オブジェクトを指すポインター。
+`message` オブジェクトを指すポインター。
 
 *_PSource*<br/>
 メッセージを提供するソース ブロックへのポインター。

@@ -23,11 +23,11 @@ helpviewer_keywords:
 - _CrtSetReportFile function
 ms.assetid: 3126537e-511b-44af-9c1c-0605265eabc4
 ms.openlocfilehash: 32a560e09c47468daf48c185e23d6e289c6d1d9b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464247"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64343020"
 ---
 # <a name="crtsetreportfile"></a>_CrtSetReportFile
 
@@ -62,7 +62,7 @@ _HFILE _CrtSetReportFile(
 
 - **ファイル ハンドル**
 
-   メッセージの送信先となるファイルのハンドル。 ハンドルの有効性は検証されません。 ファイルのハンドルを開いたり閉じたりする必要があります。 例えば:
+   メッセージの送信先となるファイルのハンドル。 ハンドルの有効性は検証されません。 ファイルのハンドルを開いたり閉じたりする必要があります。 例:
 
    ```C
    HANDLE hLogFile;
@@ -106,7 +106,7 @@ _HFILE _CrtSetReportFile(
 
 ユニバーサル Windows プラットフォーム (UWP) アプリでは、コンソールがサポートされていません。 コンソールに関連付けられている標準ストリームのハンドル**stdin**、 **stdout**、および**stderr**、C ランタイム関数が UWP アプリで使用する前にリダイレクトする必要があります. 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
-**ライブラリ:** [CRT ライブラリの機能](../../c-runtime-library/crt-library-features.md)のデバッグ バージョンのみ。
+**ライブラリ:** デバッグ バージョン[CRT ライブラリの機能](../../c-runtime-library/crt-library-features.md)のみです。
 
 ## <a name="see-also"></a>関連項目
 

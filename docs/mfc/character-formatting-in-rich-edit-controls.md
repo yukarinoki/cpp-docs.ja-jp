@@ -7,11 +7,11 @@ helpviewer_keywords:
 - CRichEditCtrl class [MFC], character formatting in
 ms.assetid: c80f4305-75ad-45f9-8d17-d83d0fe79be5
 ms.openlocfilehash: a7467f9cd6a14dc6dfc2c03b6eb35f71802454fb
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57268643"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64344298"
 ---
 # <a name="character-formatting-in-rich-edit-controls"></a>リッチ エディット コントロールでの文字書式の設定
 
@@ -21,7 +21,7 @@ ms.locfileid: "57268643"
 
 取得でき、"既定の文字の書式設定、"これは、その後に挿入された文字に適用される書式設定できます。 たとえば、アプリケーションは、既定の文字を太字に書式を設定し、ユーザーが文字を入力し場合、その文字が太字にします。 既定の文字書式設定を使用して、 [GetDefaultCharFormat](../mfc/reference/cricheditctrl-class.md#getdefaultcharformat)と[SetDefaultCharFormat](../mfc/reference/cricheditctrl-class.md#setdefaultcharformat)メンバー関数。
 
-"Protected"文字の属性には、テキストの外観は変わりません。 リッチ エディット コントロールがその親ウィンドウを送信する場合は、ユーザーが保護されたテキストを変更しようとすると、 **EN_PROTECTED**通知メッセージを許可するか、変更を禁止する親ウィンドウ。 この通知メッセージを受信する必要があります有効にするを使用して、 [SetEventMask](../mfc/reference/cricheditctrl-class.md#seteventmask)メンバー関数。 詳細については、イベント マスクは、[リッチ エディット コントロールからの通知](../mfc/notifications-from-a-rich-edit-control.md)、このトピックで後述を参照してください。
+"Protected"文字の属性には、テキストの外観は変わりません。 リッチ エディット コントロールがその親ウィンドウを送信する場合は、ユーザーが保護されたテキストを変更しようとすると、 **EN_PROTECTED**通知メッセージを許可するか、変更を禁止する親ウィンドウ。 この通知メッセージを受信する必要があります有効にするを使用して、 [SetEventMask](../mfc/reference/cricheditctrl-class.md#seteventmask)メンバー関数。 詳細については、イベント マスクは、次を参照してください。[リッチ エディット コントロールからの通知](../mfc/notifications-from-a-rich-edit-control.md)、このトピックで後述します。
 
 前景の色は文字の属性が、背景色はリッチ エディット コントロールのプロパティです。 背景色を設定するには、使用、 [SetBackgroundColor](../mfc/reference/cricheditctrl-class.md#setbackgroundcolor)メンバー関数。
 

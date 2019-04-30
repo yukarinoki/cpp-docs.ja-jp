@@ -41,16 +41,15 @@ helpviewer_keywords:
 - CMFCPropertySheet [MFC], SetLook
 ms.assetid: 01d93573-9698-440f-a6a4-5bebbee879dc
 ms.openlocfilehash: 7e5b553e6a10bee0e5b05bb32b9af3069269ca91
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57294565"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64344221"
 ---
 # <a name="cmfcpropertysheet-class"></a>CMFCPropertySheet クラス
 
-
-  `CMFCPropertySheet` クラスは、各プロパティ ページがページ タブ、ツール バー ボタン、ツリー コントロールのノード、またはリスト項目で示されるプロパティ シートをサポートします。
+`CMFCPropertySheet` クラスは、各プロパティ ページがページ タブ、ツール バー ボタン、ツリー コントロールのノード、またはリスト項目で示されるプロパティ シートをサポートします。
 
 ## <a name="syntax"></a>構文
 
@@ -93,14 +92,11 @@ class CMFCPropertySheet : public CPropertySheet
 
 ## <a name="remarks"></a>Remarks
 
-
-  `CMFCPropertySheet` クラスは、プロパティ シート (タブ ダイアログ ボックスとも呼ばれます) を表します。 
-  `CMFCPropertySheet` クラスは、さまざまな方法でプロパティ ページを表示できます。
+`CMFCPropertySheet` クラスは、プロパティ シート (タブ ダイアログ ボックスとも呼ばれます) を表します。 `CMFCPropertySheet` クラスは、さまざまな方法でプロパティ ページを表示できます。
 
 アプリケーションで `CMFCPropertySheet` クラスを使用するには、次の手順を実行します。
 
-1. 
-  `CMFCPropertySheet` クラスから派生クラスを作成し、名前 (CMyPropertySheet など) を付けます。
+1. `CMFCPropertySheet` クラスから派生クラスを作成し、名前 (CMyPropertySheet など) を付けます。
 
 1. 構築、 [CMFCPropertyPage](../../mfc/reference/cmfcpropertypage-class.md)各プロパティ ページのオブジェクト。
 
@@ -110,8 +106,7 @@ class CMFCPropertySheet : public CPropertySheet
 
 1. 呼び出す、 [cmfcpropertysheet::addpage](#addpage)各プロパティ ページのメソッド。
 
-1. 
-  `CMFCPropertySheet` コントロールを作成し、その `DoModal` メソッドを呼び出します。
+1. `CMFCPropertySheet` コントロールを作成し、その `DoModal` メソッドを呼び出します。
 
 ## <a name="illustrations"></a>図
 
@@ -160,7 +155,7 @@ void AddPage(CPropertyPage* pPage);
 
 このメソッドは、プロパティ シートの一番右のタブとして、指定したプロパティ ページを追加します。 そのため、このメソッドを使用して、左から右の順序でページを追加します。
 
-Microsoft Outlook のスタイルがプロパティ シートにある場合、フレームワークは、プロパティ シートの左側にあるナビゲーション ボタンの一覧を表示します。 このメソッドは、プロパティ ページを追加、リストに対応するボタンを追加します。 プロパティ ページを表示するには、その対応するボタンをクリックします。 プロパティ シートのスタイルの詳細については、[:setlook](#setlook)を参照してください。
+Microsoft Outlook のスタイルがプロパティ シートにある場合、フレームワークは、プロパティ シートの左側にあるナビゲーション ボタンの一覧を表示します。 このメソッドは、プロパティ ページを追加、リストに対応するボタンを追加します。 プロパティ ページを表示するには、その対応するボタンをクリックします。 プロパティ シートのスタイルの詳細については、次を参照してください。 [:setlook](#setlook)します。
 
 ##  <a name="addpagetotree"></a>  CMFCPropertySheet::AddPageToTree
 
@@ -487,7 +482,7 @@ void SetIconsList(HIMAGELIST hIcons);
 
 プロパティ シートは、Microsoft Outlook のスタイルでは、フレームワークは、プロパティ シートの左側にある Outlook ウィンドウのコントロールと呼ばれる、ナビゲーション ボタンの一覧を表示します。 このメソッドを使用すると、Outlook のウィンドウ コントロールで使用されるイメージのリストを設定できます。
 
-このメソッドをサポートする方法の詳細については、[CImageList::Create](../../mfc/reference/cimagelist-class.md#create)と[CImageList::Add](../../mfc/reference/cimagelist-class.md#add)を参照してください。 プロパティ シートのスタイルを設定する方法の詳細については、[:setlook](#setlook)を参照してください。
+このメソッドをサポートする方法の詳細については、次を参照してください。 [CImageList::Create](../../mfc/reference/cimagelist-class.md#create)と[CImageList::Add](../../mfc/reference/cimagelist-class.md#add)します。 プロパティ シートのスタイルを設定する方法の詳細については、次を参照してください。 [:setlook](#setlook)します。
 
 ##  <a name="setlook"></a>  CMFCPropertySheet::SetLook
 

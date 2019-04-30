@@ -5,11 +5,11 @@ helpviewer_keywords:
 - parallel algorithms [Concurrency Runtime]
 ms.assetid: 045dca7b-4d73-4558-a44c-383b88a28473
 ms.openlocfilehash: 75491130e8e5fc426116685332490efd2c5fe60b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57262871"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64346336"
 ---
 # <a name="parallel-algorithms"></a>並列アルゴリズム
 
@@ -57,12 +57,12 @@ ms.locfileid: "57262871"
 
 - ループの反復処理は、転送する必要があります。 `parallel_for`アルゴリズムの種類の例外をスローする[std::invalid_argument](../../standard-library/invalid-argument-class.md)場合、`_Step`パラメーターが 1 未満です。
 
-- 例外処理メカニズム、`parallel_for`のデータ型とは異なるアルゴリズムを`for`ループします。 並列ループの本体で複数の例外が同時に発生した場合、ランタイムを伝達を呼び出したスレッドの例外の 1 つだけ`parallel_for`です。 さらに、1 つのループの反復処理では、例外をスローするときに、ランタイムすぐに停止しません、全体的なループ。 代わりに、ループは取り消し済み状態で配置し、ランタイムがまだ開始されていないすべてのタスクを破棄します。 例外処理と並列アルゴリズムの詳細については、[例外処理](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)を参照してください。
+- 例外処理メカニズム、`parallel_for`のデータ型とは異なるアルゴリズムを`for`ループします。 並列ループの本体で複数の例外が同時に発生した場合、ランタイムを伝達を呼び出したスレッドの例外の 1 つだけ`parallel_for`です。 さらに、1 つのループの反復処理では、例外をスローするときに、ランタイムすぐに停止しません、全体的なループ。 代わりに、ループは取り消し済み状態で配置し、ランタイムがまだ開始されていないすべてのタスクを破棄します。 例外処理と並列アルゴリズムの詳細については、次を参照してください。[例外処理](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)します。
 
-ただし、`parallel_for`アルゴリズムは、任意の終了条件をサポートしていません、取り消しを使用して、すべてのタスクを停止することができます。 キャンセルの詳細については、[PPL における取り消し処理](cancellation-in-the-ppl.md)を参照してください。
+ただし、`parallel_for`アルゴリズムは、任意の終了条件をサポートしていません、取り消しを使用して、すべてのタスクを停止することができます。 キャンセルの詳細については、次を参照してください。 [PPL における取り消し処理](cancellation-in-the-ppl.md)します。
 
 > [!NOTE]
->  負荷分散と取り消しなどの機能のサポートからの結果がループの本体を並列実行の利点を克服可能性がありますいないスケジュール コスト、特にときに、ループの本体が比較的小さい。 パーティショナーを使用して、並列ループで、このオーバーヘッドを最小限に抑えることができます。 詳細については、[パーティション分割作業](#partitions)このドキュメントで後述を参照してください。
+>  負荷分散と取り消しなどの機能のサポートからの結果がループの本体を並列実行の利点を克服可能性がありますいないスケジュール コスト、特にときに、ループの本体が比較的小さい。 パーティショナーを使用して、並列ループで、このオーバーヘッドを最小限に抑えることができます。 詳細については、次を参照してください。[パーティション分割作業](#partitions)このドキュメントで後述します。
 
 ### <a name="example"></a>例
 
@@ -84,9 +84,9 @@ ms.locfileid: "57262871"
 
 ##  <a name="parallel_for_each"></a> Parallel_for_each アルゴリズム
 
-[Concurrency::parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each)アルゴリズムは、タスクを並列での C++ 標準ライブラリで提供されるものなど、反復的なコンテナーを実行します。 このアルゴリズムでは、`parallel_for` アルゴリズムで使用されるのと同じ分割ロジックが使用されます。
+[Concurrency::parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each)アルゴリズムで提供されるものなど、反復的なコンテナーでタスクを実行する、C++並列での標準ライブラリ。 このアルゴリズムでは、`parallel_for` アルゴリズムで使用されるのと同じ分割ロジックが使用されます。
 
-`parallel_for_each`アルゴリズムが、C++ 標準ライブラリに似ています[std::for_each](../../standard-library/algorithm-functions.md#for_each)点を除いて、アルゴリズム、`parallel_for_each`アルゴリズムでは、タスクを同時に実行します。 などの他の並列アルゴリズム`parallel_for_each`特定の順序では、タスクは実行されません。
+`parallel_for_each`アルゴリズムに似ています、C++標準ライブラリ[std::for_each](../../standard-library/algorithm-functions.md#for_each)点を除いて、アルゴリズム、`parallel_for_each`アルゴリズムでは、タスクを同時に実行します。 などの他の並列アルゴリズム`parallel_for_each`特定の順序では、タスクは実行されません。
 
 ですが、`parallel_for_each`アルゴリズムは前方反復子とランダム アクセス反復子の両方で動作、ランダム アクセス反復子で優れています。
 
@@ -134,7 +134,7 @@ ms.locfileid: "57262871"
 
 ##  <a name="parallel_transform_reduce"></a> Parallel_transform と parallel_reduce アルゴリズム
 
-[Concurrency::parallel_transform](reference/concurrency-namespace-functions.md#parallel_transform)と[concurrency::parallel_reduce](reference/concurrency-namespace-functions.md#parallel_reduce)アルゴリズムは、C++ 標準ライブラリ アルゴリズムの並列バージョン[std::transform](../../standard-library/algorithm-functions.md#transform)と[std::accumulate](../../standard-library/numeric-functions.md#accumulate)、それぞれします。 同時実行ランタイムのバージョンは、並列で実行するため、操作の順序が決定されないことを除いて、C++ 標準ライブラリのバージョンと同様に動作します。 並列に処理されてからのパフォーマンスとスケーラビリティのメリットを活用するのに十分な大きさであるセットを操作する場合は、これらのアルゴリズムを使用します。
+[Concurrency::parallel_transform](reference/concurrency-namespace-functions.md#parallel_transform)と[concurrency::parallel_reduce](reference/concurrency-namespace-functions.md#parallel_reduce)アルゴリズムは、並列バージョンのC++標準ライブラリ アルゴリズム[std::transform](../../standard-library/algorithm-functions.md#transform)と[std::accumulate](../../standard-library/numeric-functions.md#accumulate)、それぞれします。 同時実行ランタイムのバージョンは、並列で実行するため、操作の順序が決定されないことを除いて、C++ 標準ライブラリのバージョンと同様に動作します。 並列に処理されてからのパフォーマンスとスケーラビリティのメリットを活用するのに十分な大きさであるセットを操作する場合は、これらのアルゴリズムを使用します。
 
 > [!IMPORTANT]
 >  `parallel_transform`と`parallel_reduce`アルゴリズムは、これらの反復子が安定したメモリ アドレスを生成するためにのみランダム アクセス、双方向、および前方反復子をサポートします。 また、これらの反復子を生成する必要があります以外`const`左辺値です。
@@ -249,10 +249,10 @@ PPL では、3 つの並べ替えアルゴリズム: [:parallel_sort](reference/
 
 ![並べ替えアルゴリズムの比較](../../parallel/concrt/media/concrt_parallel_sorting.png "並べ替えアルゴリズムの比較")
 
-これらのアルゴリズムを並列並べ替え取り消しおよび例外処理の規則に従います。 キャンセルと同時実行ランタイムの例外処理の詳細については、[並列アルゴリズムの取り消し](../../parallel/concrt/cancellation-in-the-ppl.md#algorithms)と[例外処理](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)を参照してください。
+これらのアルゴリズムを並列並べ替え取り消しおよび例外処理の規則に従います。 キャンセルと同時実行ランタイムの例外処理の詳細については、次を参照してください。[並列アルゴリズムの取り消し](../../parallel/concrt/cancellation-in-the-ppl.md#algorithms)と[例外処理](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)します。
 
 > [!TIP]
->  並列並べ替えアルゴリズムこれらは、移動セマンティクスをサポートします。 スワップ操作をより効率的に実行を有効にする移動代入演算子を定義することができます。 移動セマンティクスと、移動代入演算子の詳細については、[右辺値参照宣言子: & &](../../cpp/rvalue-reference-declarator-amp-amp.md)、および[移動コンス トラクターと移動代入演算子 (C++)](../../cpp/move-constructors-and-move-assignment-operators-cpp.md)を参照してください。 移動代入演算子または swap 関数を指定しない場合、並べ替えのアルゴリズムは、コピー コンス トラクターを使用します。
+>  並列並べ替えアルゴリズムこれらは、移動セマンティクスをサポートします。 スワップ操作をより効率的に実行を有効にする移動代入演算子を定義することができます。 移動セマンティクスと、移動代入演算子の詳細については、次を参照してください。[右辺値参照宣言子: & &](../../cpp/rvalue-reference-declarator-amp-amp.md)、および[移動コンス トラクターと移動代入演算子 (C++)](../../cpp/move-constructors-and-move-assignment-operators-cpp.md)します。 移動代入演算子または swap 関数を指定しない場合、並べ替えのアルゴリズムは、コピー コンス トラクターを使用します。
 
 次の基本的な例は、使用する方法を示します`parallel_sort`を並べ替える、`vector`の`int`値。 既定では、`parallel_sort`使用[std::less](../../standard-library/less-struct.md)値を比較します。
 

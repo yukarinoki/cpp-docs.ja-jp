@@ -17,11 +17,11 @@ helpviewer_keywords:
 - update handlers, calling
 ms.assetid: 7359f6b1-4669-477d-bd99-690affed08d9
 ms.openlocfilehash: 4a52c147d1abf02b7c5e89abf868f87a07ab32cc
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57277587"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64346062"
 ---
 # <a name="when-update-handlers-are-called"></a>更新ハンドラーが呼び出されるタイミング
 
@@ -31,10 +31,10 @@ ms.locfileid: "57277587"
 
 フレームワークが見つからない場合、`ON_UPDATE_COMMAND_UI`コマンド ルーティング中にエントリを自動的に有効にしたユーザー インターフェイス オブジェクトがある場合、`ON_COMMAND`同じコマンド ID に置き換えますどこかのエントリ。 それ以外の場合、ユーザー インターフェイス オブジェクトが無効にします。 そのため、ユーザー インターフェイス オブジェクトが有効にするためには、オブジェクトを生成するコマンドのハンドラーを指定または、更新ハンドラーを指定します。 トピックの図を参照してください。[ユーザー インターフェイス オブジェクトとコマンド Id](../mfc/user-interface-objects-and-command-ids.md)します。
 
-ユーザー インターフェイス オブジェクトの既定の無効化を無効にすることになります。 詳細については、、 [m_bAutoMenuEnable](../mfc/reference/cframewnd-class.md#m_bautomenuenable)クラスのメンバー`CFrameWnd`で、 *MFC リファレンス*を参照してください。
+ユーザー インターフェイス オブジェクトの既定の無効化を無効にすることになります。 詳細については、次を参照してください。、 [m_bAutoMenuEnable](../mfc/reference/cframewnd-class.md#m_bautomenuenable)クラスのメンバー`CFrameWnd`で、 *MFC リファレンス*します。
 
 メニューの初期化は、アプリケーションがポインター メッセージを受信する際に発生、フレームワークでは、自動です。 アイドル状態のループの中には、フレームワークは、コマンドのルーティングをボタンの更新ハンドラーのと同じようにメニューの場合と同様を検索します。
 
 ## <a name="see-also"></a>関連項目
 
-[方法: ユーザー インターフェイス オブジェクトを更新します。](../mfc/how-to-update-user-interface-objects.md)
+[方法: ユーザー インターフェイス オブジェクトを更新する](../mfc/how-to-update-user-interface-objects.md)
