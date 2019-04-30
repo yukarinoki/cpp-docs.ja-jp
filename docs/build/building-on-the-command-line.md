@@ -11,11 +11,11 @@ helpviewer_keywords:
 - command line [C++], compilers
 ms.assetid: 7ca9daed-a003-4162-842d-908f79058365
 ms.openlocfilehash: 21d1c9063a1d6dd154de8d2caca913ea3fd0ce37
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
-ms.translationtype: MT
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57812123"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64342167"
 ---
 # <a name="use-the-msvc-toolset-from-the-command-line"></a>コマンドラインから MSVC ツールセットを使用してください。
 
@@ -31,7 +31,7 @@ Visual Studio インストーラーで C++ のワークロードのいずれか�
 
 正常に機能するには、ツールはいくつかの特定の環境変数を設定する必要があります。 これらは、パスに追加して、設定に使用されますファイル、ライブラリ ファイル、および SDK の場所が含まれます。 インストーラーによりカスタマイズされた、簡単にこれらの環境変数を設定する*コマンド ファイル*インストール時にバッチ ファイル、または。 特定のホストとターゲットのビルドのアーキテクチャ、Windows SDK のバージョン、ターゲット プラットフォーム、およびプラットフォーム ツールセットを設定するコマンド プロンプト ウィンドウで、これらのコマンド ファイルのいずれかを行うことができます。 便宜上、インストーラーは、すべての必要な環境変数が設定して使用できるように、これらのコマンド ファイルを使用して、開発者コマンド プロンプト ウィンドウを起動する、[スタート] メニューのショートカットも作成します。
 
-必要な環境変数に、ビルドのアーキテクチャを選択し、製品の更新プログラムやアップグレードによって変更される可能性が、インストールに固有です。 そのため、インストールされているコマンド プロンプト ショートカットまたはコマンド ファイルのいずれかを自分で Windows の環境変数を設定する代わりに使用することを強くお勧めします。 詳細については、[コマンド ライン ビルドのパスと環境変数を設定する](setting-the-path-and-environment-variables-for-command-line-builds.md)を参照してください。
+必要な環境変数に、ビルドのアーキテクチャを選択し、製品の更新プログラムやアップグレードによって変更される可能性が、インストールに固有です。 そのため、インストールされているコマンド プロンプト ショートカットまたはコマンド ファイルのいずれかを自分で Windows の環境変数を設定する代わりに使用することを強くお勧めします。 詳細については、次を参照してください。[コマンド ライン ビルドのパスと環境変数を設定する](setting-the-path-and-environment-variables-for-command-line-builds.md)します。
 
 ## <a name="developer_command_prompt_shortcuts"></a> 開発者コマンド プロンプト ショートカット
 
