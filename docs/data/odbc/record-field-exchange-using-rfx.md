@@ -5,11 +5,11 @@ helpviewer_keywords:
 - RFX (ODBC), implementing
 ms.assetid: ada8f043-37e6-4d41-9db3-92c997a61957
 ms.openlocfilehash: 2a029f653753363e08b3c4f8b9fceab6295924af
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59034116"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62395652"
 ---
 # <a name="record-field-exchange-using-rfx"></a>レコード フィールド エクス チェンジ:RFX の使い方
 
@@ -20,9 +20,9 @@ ms.locfileid: "59034116"
 
 次のトピックでは、関連情報を含めます。
 
-- [レコード フィールド エクス チェンジ:ウィザード コードの使用](../../data/odbc/record-field-exchange-working-with-the-wizard-code.md)RFX の主要なコンポーネントを紹介し、コードについて説明する MFC アプリケーション ウィザードと**クラスの追加**(」の説明に従って[MFC ODBC コンシューマーの追加](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) 書き込みRFX とウィザード コードを変更する方法をサポートします。
+- [レコード フィールド エクスチェンジ: ウィザード コードの使用](../../data/odbc/record-field-exchange-working-with-the-wizard-code.md)RFX の主要なコンポーネントを紹介し、コードについて説明する MFC アプリケーション ウィザードと**クラスの追加**(」の説明に従って[MFC ODBC コンシューマーの追加](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) 書き込みRFX とウィザード コードを変更する方法をサポートします。
 
-- [レコード フィールド エクス チェンジ:RFX 関数を使用して](../../data/odbc/record-field-exchange-using-the-rfx-functions.md)で RFX 関数への書き込み呼び出しについて説明します、`DoFieldExchange`をオーバーライドします。
+- [レコード フィールド エクスチェンジ: RFX 関数を使用して](../../data/odbc/record-field-exchange-using-the-rfx-functions.md)で RFX 関数への書き込み呼び出しについて説明します、`DoFieldExchange`をオーバーライドします。
 
 次の表では、関連するは、フレームワーク、ロールを示します。
 
@@ -41,8 +41,8 @@ ms.locfileid: "59034116"
 ## <a name="see-also"></a>関連項目
 
 [レコード フィールド エクスチェンジ (RFX)](../../data/odbc/record-field-exchange-rfx.md)<br/>
-[レコード フィールド エクス チェンジ:RFX のしくみ](../../data/odbc/record-field-exchange-how-rfx-works.md)<br/>
-[レコード セット:合計およびその他の集計の計算 (ODBC) を取得します。](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)<br/>
+[レコード フィールド エクスチェンジ: RFX の動作のしくみ](../../data/odbc/record-field-exchange-how-rfx-works.md)<br/>
+[レコードセット: 合計とその他の集計結果 (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)<br/>
 [CRecordset クラス](../../mfc/reference/crecordset-class.md)<br/>
 [CFieldExchange クラス](../../mfc/reference/cfieldexchange-class.md)<br/>
 [マクロ、グローバル関数、およびグローバル変数](../../mfc/reference/mfc-macros-and-globals.md)

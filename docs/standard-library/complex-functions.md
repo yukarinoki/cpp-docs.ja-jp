@@ -43,11 +43,11 @@ helpviewer_keywords:
 - std::tan [C++]
 - std::tanh [C++]
 ms.openlocfilehash: a67955da21c1229c3492d5b52dd6e14c9caa33fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50474283"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62389204"
 ---
 # <a name="ltcomplexgt-functions"></a>&lt;complex&gt; 関数
 
@@ -934,7 +934,7 @@ complex<Type> pow(const Type& _Base, const complex<Type>& _Power);
 
 ### <a name="parameters"></a>パラメーター
 
-*(_B)*<br/>
+*_Base*<br/>
 複素数、または底をメンバー関数で累乗する複素数のパラメーター型の数値。
 
 *_Power*<br/>
@@ -1133,7 +1133,7 @@ complex<Type> sin(const complex<Type>& complexNum);
 
 複素数のサインを定義する単位元は次のようになります。
 
-sin ( *z*) = (1/2*は*)\*(exp ( *iz*)-exp (- *iz*))
+sin ( *z*) = (1/2 *i*)\*( exp ( *iz*) - exp (- *iz*) )
 
 sin ( *z*) = sin ( *a + bi*) = sin ( *a*) cosh ( *b*) + icos ( *a*) sinh ( *b*)
 
@@ -1392,7 +1392,7 @@ complex<Type> tan(const complex<Type>& complexNum);
 
 複素数のコタンジェントを定義する単位元は次のようになります。
 
-tan ( *z*) = sin ( *z*)]、[cos ( *z*) = (exp ( *iz*)-exp (- *iz*))/ *i*(exp ( *iz*) + exp (- *iz*))
+tan ( *z*) = sin ( *z*) / cos ( *z*) = ( exp ( *iz*) - exp (- *iz*) ) / *i*( exp ( *iz*) + exp (- *iz*) )
 
 ### <a name="example"></a>例
 
@@ -1481,7 +1481,7 @@ complex<Type> tanh(const complex<Type>& complexNum);
 
 複素数のハイパーボリック コタンジェントを定義する単位元は次のようになります。
 
-tanh ( *z*) = sinh ( *z*)/cosh ( *z*) = (exp ( *z*)-exp (- *z*))/(exp ( *z*)+ exp (- *z*))
+tanh ( *z*) = sinh ( *z*) / cosh ( *z*) = ( exp ( *z*) - exp (- *z*) ) / ( exp ( *z*) + exp (- *z*) )
 
 ### <a name="example"></a>例
 

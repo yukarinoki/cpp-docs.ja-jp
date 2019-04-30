@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Web applications [MFC], creating
 ms.assetid: 257f8c03-33c3-428c-832e-0b70aff6168d
 ms.openlocfilehash: 12df36188bd858f73ff4834236a19583023e5f93
-ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57809874"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62372232"
 ---
 # <a name="creating-a-web-browser-style-mfc-application"></a>Web ブラウザー形式の MFC アプリケーションの作成
 
@@ -54,7 +54,7 @@ void CWebView::OnInitialUpdate()
 }
 ```
 
-このサイトは、独自のいずれかで置き換えることができます。 または使用できます、 [LoadFromResource](../../mfc/reference/chtmlview-class.md#loadfromresource)メンバー関数は、ビューの既定の内容として、プロジェクトのリソース スクリプトに存在する HTML ページを開きます。 例:
+このサイトは、独自のいずれかで置き換えることができます。 または使用できます、 [LoadFromResource](../../mfc/reference/chtmlview-class.md#loadfromresource)メンバー関数は、ビューの既定の内容として、プロジェクトのリソース スクリプトに存在する HTML ページを開きます。 例えば:
 
 ```cpp
 void CWebView::OnInitialUpdate()
@@ -71,7 +71,7 @@ void CWebView::OnInitialUpdate()
 
 [MFC サンプル MFCIE](https://github.com/Microsoft/VCSamples)<br/>
 [MFC アプリケーション ウィザード](../../mfc/reference/mfc-application-wizard.md)<br/>
-[セットのコンパイラとビルド プロパティ](../../build/working-with-project-properties.md)<br/>
+[コンパイラとビルドのプロパティの設定](../../build/working-with-project-properties.md)<br/>
 [プロパティ ページ](../../build/reference/property-pages-visual-cpp.md)<br/>
-[セットのコンパイラとビルド プロパティ](../../build/working-with-project-properties.md)
+[コンパイラとビルドのプロパティの設定](../../build/working-with-project-properties.md)
 

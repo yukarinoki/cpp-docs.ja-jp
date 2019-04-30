@@ -7,18 +7,18 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], properties
 ms.assetid: ec2e6759-5a8e-41d8-a275-99af8ff6f32e
 ms.openlocfilehash: 438c95c56961cc587b64e494678ade191f18ab6b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266966"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392805"
 ---
 # <a name="mfc-activex-controls-advanced-property-implementation"></a>MFC ActiveX コントロール:高度なプロパティの実装
 
 この記事では、ActiveX コントロールのプロパティを高度な実装に関連するトピックについて説明します。
 
 >[!IMPORTANT]
-> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の置き換えの最新のテクノロジの詳細については、[ActiveX コントロール](activex-controls.md)を参照してください。
+> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の置き換えの最新のテクノロジの詳細については、次を参照してください。 [ActiveX コントロール](activex-controls.md)します。
 
 - [読み取り専用であり、書き込み専用のプロパティ](#_core_read2donly_and_write2donly_properties)
 
@@ -74,6 +74,6 @@ ms.locfileid: "57266966"
 ## <a name="see-also"></a>関連項目
 
 [MFC ActiveX コントロール](../mfc/mfc-activex-controls.md)<br/>
-[MFC ActiveX コントロール:プロパティ](../mfc/mfc-activex-controls-properties.md)<br/>
-[MFC ActiveX コントロール:メソッド](../mfc/mfc-activex-controls-methods.md)<br/>
+[MFC ActiveX コントロール: プロパティ](../mfc/mfc-activex-controls-properties.md)<br/>
+[MFC ActiveX コントロール: メソッド](../mfc/mfc-activex-controls-methods.md)<br/>
 [COleControl クラス](../mfc/reference/colecontrol-class.md)

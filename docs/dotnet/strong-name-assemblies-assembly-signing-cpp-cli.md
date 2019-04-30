@@ -10,11 +10,11 @@ helpviewer_keywords:
 - strong-named assemblies [C++]
 ms.assetid: c337cd3f-e5dd-4c6f-a1ad-437e85dba1cc
 ms.openlocfilehash: ac46d069ece3c75af93f93497169d054b45267d0
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57813930"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384583"
 ---
 # <a name="strong-name-assemblies-assembly-signing-ccli"></a>厳密名アセンブリ (アセンブリ署名) (C++/CLI)
 
@@ -44,7 +44,7 @@ Sn.exe を明示的に呼び出すことによってアセンブリに署名す�
 
 - [/KEYCONTAINER (アセンブリに署名するためのキー コンテナーの指定)](../build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly.md)
 
-厳密なアセンブリの詳細については、[の作成と using strong-named Assemblies](/dotnet/framework/app-domains/create-and-use-strong-named-assemblies)を参照してください。
+厳密なアセンブリの詳細については、次を参照してください。[の作成と using strong-named Assemblies](/dotnet/framework/app-domains/create-and-use-strong-named-assemblies)します。
 
 ## <a name="see-also"></a>関連項目
 

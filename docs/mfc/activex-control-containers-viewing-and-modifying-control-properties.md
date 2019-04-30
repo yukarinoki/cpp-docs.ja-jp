@@ -9,11 +9,11 @@ helpviewer_keywords:
 - controls [MFC], properties
 ms.assetid: 14ce5152-742b-4e0d-a9ab-c7b456e32918
 ms.openlocfilehash: 0a03acfd880bcf63017eec9796315b98e5d5f4d9
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326362"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394885"
 ---
 # <a name="activex-control-containers-viewing-and-modifying-control-properties"></a>ActiveX コントロール コンテナー:コントロールのプロパティ表示および変更
 
@@ -31,7 +31,7 @@ ActiveX コントロール コンテナー アプリケーションでは、埋�
 
 1. [メイン] ダイアログ ボックスのテンプレートを開きます。
 
-1. ActiveX コントロールを使用して、挿入、 **ActiveX コントロールの挿入** ダイアログ ボックス。 詳細については、[表示およびダイアログ ボックスに ActiveX コントロールを追加](../windows/viewing-and-adding-activex-controls-to-a-dialog-box.md)を参照してください。
+1. ActiveX コントロールを使用して、挿入、 **ActiveX コントロールの挿入** ダイアログ ボックス。 詳細については、次を参照してください。[表示およびダイアログ ボックスに ActiveX コントロールを追加](../windows/viewing-and-adding-activex-controls-to-a-dialog-box.md)します。
 
 1. ダイアログ ボックスでは、ActiveX コントロールを選択します。
 

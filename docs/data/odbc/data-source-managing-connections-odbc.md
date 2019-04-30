@@ -19,11 +19,11 @@ helpviewer_keywords:
 - database connections [C++], MFC ODBC classes
 ms.assetid: c0adbcdd-c000-40c6-b199-09ffdc7b6ef2
 ms.openlocfilehash: 5b646ca0eb86d3addabaad59ca23f56cfe914114
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59041164"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62395951"
 ---
 # <a name="data-source-managing-connections-odbc"></a>データ ソース:接続 (ODBC)
 
@@ -139,5 +139,5 @@ ODBC ドライバーがあるデータ ソースならば、どのデータ ソ�
 ## <a name="see-also"></a>関連項目
 
 [データ ソース (ODBC)](../../data/odbc/data-source-odbc.md)<br/>
-[データ ソース:データ ソース (ODBC) のスキーマを決定します。](../../data/odbc/data-source-determining-the-schema-of-the-data-source-odbc.md)<br/>
+[データ ソース: データ ソースのスキーマの判定 (ODBC)](../../data/odbc/data-source-determining-the-schema-of-the-data-source-odbc.md)<br/>
 [CRecordset クラス](../../mfc/reference/crecordset-class.md)

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - '& operator [C++], address-of operator'
 ms.assetid: 2828221a-15f6-4acc-87fe-25e34feebb88
 ms.openlocfilehash: a03a6100c372e059bd9ef2ddde0558da307923dc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519120"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62385025"
 ---
 # <a name="address-of-operator-amp"></a>Address-of 演算子: &amp;
 
@@ -53,7 +53,7 @@ int main() {
 
 オーバーロード関数のアドレスは、どのバージョンの関数が参照されているかが明らかな場合にのみ受け取ることができます。 参照してください[関数のオーバー ロード](function-overloading.md)特定のアドレスを取得する方法については、関数をオーバー ロードします。
 
-参照型にアドレス演算子を適用すると、参照がバインドされたオブジェクトに演算子を適用するのと同じ結果を生成します。 例えば:
+参照型にアドレス演算子を適用すると、参照がバインドされたオブジェクトに演算子を適用するのと同じ結果を生成します。 例:
 
 ## <a name="example"></a>例
 

@@ -99,11 +99,11 @@ helpviewer_keywords:
 - operator>= member [STL/CLR]
 ms.assetid: dd669da3-3c0e-45e9-8596-f6b483720941
 ms.openlocfilehash: ff5ddcfa101baf4c85145d1c6d64a6a3b9e7df58
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445059"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62393767"
 ---
 # <a name="deque-stlclr"></a>deque (STL/CLR)
 
@@ -745,7 +745,7 @@ deque(System::Collections::Generic::IEnumerable<Value>^ right);
 
 `deque(deque<Value>% right);`
 
-シーケンスが被制御シーケンスを初期化します [`right.begin()`、 `right.end()`)。 Deque オブジェクトによって制御されるシーケンスのコピーである初期被制御シーケンスを指定するために使用*右*します。 反復子の詳細については、[deque::begin (STL/CLR)](#begin)と[deque::end (STL/CLR)](#end)を参照してください。
+シーケンスが被制御シーケンスを初期化します [`right.begin()`、 `right.end()`)。 Deque オブジェクトによって制御されるシーケンスのコピーである初期被制御シーケンスを指定するために使用*右*します。 反復子の詳細については、次を参照してください。 [deque::begin (STL/CLR)](#begin)と[deque::end (STL/CLR)](#end)します。
 
 コンス トラクター。
 

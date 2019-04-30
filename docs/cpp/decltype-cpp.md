@@ -10,11 +10,11 @@ helpviewer_keywords:
 - operators [C++], deduce expression type
 ms.assetid: 6dcf8888-8196-4f13-af50-51e3797255d4
 ms.openlocfilehash: 6c1c91aec7d974836b1ec031a1e8b38e8abb65ce
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50527947"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399084"
 ---
 # <a name="decltype--c"></a>decltype (C++)
 
@@ -30,7 +30,7 @@ decltype( expression )
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*式*|任意の式を指定します。 詳細については、[式](../cpp/expressions-cpp.md)を参照してください。|
+|*式 (expression)*|任意の式を指定します。 詳細については、次を参照してください。[式](../cpp/expressions-cpp.md)します。|
 
 ## <a name="return-value"></a>戻り値
 
@@ -179,7 +179,7 @@ x3.Dump() = 42
 
 ## <a name="example"></a>例
 
-**Visual Studio 2017 以降:** コンパイラが、テンプレートは宣言ではなくインスタンス化されるときに、decltype 引数を解析します。 その結果、decltype 引数に非依存の特殊化が見つかった場合、インスタンス化時まで遅延されずにすぐに処理され、結果として発生したエラーは、その時点で診断されます。
+**Visual Studio 2017 以降:** コンパイラは、テンプレートは宣言ではなくインスタンス化されるときに、decltype 引数を解析します。 その結果、decltype 引数に非依存の特殊化が見つかった場合、インスタンス化時まで遅延されずにすぐに処理され、結果として発生したエラーは、その時点で診断されます。
 
 次の例は、宣言時に発生するこのようなコンパイラ エラーを示しています。
 
