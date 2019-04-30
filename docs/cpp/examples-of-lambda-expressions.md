@@ -5,15 +5,15 @@ helpviewer_keywords:
 - lambda expressions [C++], examples
 ms.assetid: 52506b15-0771-4190-a966-2f302049ca86
 ms.openlocfilehash: 6854c5710d8a27093078c0f2013d691ac22c5870
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663954"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392194"
 ---
 # <a name="examples-of-lambda-expressions"></a>ラムダ式の例
 
-この記事では、プログラムでラムダ式を使用する方法を示します。 ラムダ式の概要については、[ラムダ式](../cpp/lambda-expressions-in-cpp.md)を参照してください。 ラムダ式の構造の詳細については、[ラムダ式の構文](../cpp/lambda-expression-syntax.md)を参照してください。
+この記事では、プログラムでラムダ式を使用する方法を示します。 ラムダ式の概要については、次を参照してください。[ラムダ式](../cpp/lambda-expressions-in-cpp.md)します。 ラムダ式の構造の詳細については、次を参照してください。[ラムダ式の構文](../cpp/lambda-expression-syntax.md)します。
 
 ##  <a name="declaringLambdaExpressions"></a> ラムダ式の宣言
 
@@ -55,7 +55,7 @@ int main()
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、[自動](../cpp/auto-cpp.md)、 [function クラス](../standard-library/function-class.md)、および[関数を呼び出す](../cpp/function-call-cpp.md)を参照してください。
+詳細については、次を参照してください。[自動](../cpp/auto-cpp.md)、 [function クラス](../standard-library/function-class.md)、および[関数を呼び出す](../cpp/function-call-cpp.md)します。
 
 ラムダ式は関数の本体で最も頻繁に宣言されますが、変数を初期化できる場所ならどこでも宣言できます。
 
@@ -175,7 +175,7 @@ The first even number in the list is 42.
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、`find_if`関数を参照してください[find_if](../standard-library/algorithm-functions.md#find_if)します。 一般的なアルゴリズムを実行する C++ 標準ライブラリ関数の詳細については、[\<アルゴリズム >](../standard-library/algorithm.md)を参照してください。
+詳細については、`find_if`関数を参照してください[find_if](../standard-library/algorithm-functions.md#find_if)します。 一般的なアルゴリズムを実行する C++ 標準ライブラリ関数の詳細については、次を参照してください。 [\<アルゴリズム >](../standard-library/algorithm.md)します。
 
 [[この記事の内容](#top)]
 
@@ -271,7 +271,7 @@ int main()
 ### <a name="example"></a>例
 
 関数の本体でラムダ式を使用できます。 ラムダ式は、外側の関数がアクセスできる任意の関数またはデータ メンバーにアクセスできます。 明示的または暗黙的にキャプチャできます、**この**外側のクラスのメンバー関数とデータ メンバーにアクセスできるようにへのポインター。
-**Visual Studio 2017 バージョン 15.3 以降**(で使用可能な[/std:c + + 17](../build/reference/std-specify-language-standard-version.md)): キャプチャ**この**値によって (`[*this]`) 非同期または並列操作でラムダを使用する場合コードを実行後に、元のオブジェクトがスコープから外れます。
+**Visual Studio 2017 バージョン 15.3 以降**(で使用可能な[/std:c + + 17](../build/reference/std-specify-language-standard-version.md))。キャプチャ**この**値によって (`[*this]`) ときに、ラムダで使用される非同期または並列操作コードが、元のオブジェクトがスコープ外になった後に実行可能性があります。
 
 使用することができます、**この**関数の場合、次に示すように明示的にポインター。
 
@@ -419,7 +419,7 @@ After negate_all():
 
 ### <a name="remarks"></a>Remarks
 
-C++ テンプレートの詳細については、[テンプレート](../cpp/templates-cpp.md)を参照してください。
+C++ テンプレートの詳細については、次を参照してください。[テンプレート](../cpp/templates-cpp.md)します。
 
 [[この記事の内容](#top)]
 
@@ -475,7 +475,7 @@ Caught 'invalid vector<T> subscript'.
 
 ### <a name="remarks"></a>Remarks
 
-例外処理の詳細については、[例外処理](../cpp/exception-handling-in-visual-cpp.md)を参照してください。
+例外処理の詳細については、次を参照してください。[例外処理](../cpp/exception-handling-in-visual-cpp.md)します。
 
 [[この記事の内容](#top)]
 
@@ -512,7 +512,7 @@ Hello!
 
 ### <a name="remarks"></a>Remarks
 
-ラムダ式を STL/CLR ライブラリで使用することもできます。 詳細については、[STL/CLR ライブラリ リファレンス](../dotnet/stl-clr-library-reference.md)を参照してください。
+ラムダ式を STL/CLR ライブラリで使用することもできます。 詳細については、次を参照してください。 [STL/CLR ライブラリ リファレンス](../dotnet/stl-clr-library-reference.md)します。
 
 > [!IMPORTANT]
 >  ラムダは、これらの共通言語ランタイム (CLR) によって管理されるエンティティでサポートされていません: **ref クラス**、 **ref 構造体**、**値クラス**、および**値構造体**.
