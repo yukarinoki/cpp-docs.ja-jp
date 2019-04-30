@@ -9,11 +9,11 @@ helpviewer_keywords:
 - columns [C++], binding to recordsets
 ms.assetid: bff67254-d953-4ae4-9716-91c348cb840b
 ms.openlocfilehash: c2f2a6a6696f46fb5b8f2777c6c911269c9e7a80
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59035132"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62397906"
 ---
 # <a name="recordset-dynamically-binding-data-columns-odbc"></a>レコード セット:動的に結びつける方法 (ODBC) のデータ列
 
@@ -171,4 +171,4 @@ RFX 関数の詳細については、次を参照してください。[マクロ
 ## <a name="see-also"></a>関連項目
 
 [レコードセット (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[レコード セット:大規模なデータ アイテム (ODBC) の操作](../../data/odbc/recordset-working-with-large-data-items-odbc.md)
+[レコードセット: 大きいデータ項目の処理 (ODBC)](../../data/odbc/recordset-working-with-large-data-items-odbc.md)

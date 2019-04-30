@@ -99,11 +99,11 @@ helpviewer_keywords:
 - std::list [C++], unique
 ms.assetid: d3707f4a-10fd-444f-b856-f9ca2077c1cd
 ms.openlocfilehash: d990efb7d4c363b8d8e38f42f9edac7eea0a3882
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522533"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413217"
 ---
 # <a name="list-class"></a>list クラス
 
@@ -242,10 +242,10 @@ void assign(
 
 ### <a name="parameters"></a>パラメーター
 
-*まずは*<br/>
+*First*<br/>
 引数リストからコピーされる要素範囲内の最初の要素の位置。
 
-*前の*<br/>
+*Last*<br/>
 引数リストからコピーされる要素範囲を超える最初の要素の位置。
 
 *カウント*<br/>
@@ -1153,8 +1153,8 @@ void insert(iterator Where, InputIterator First, InputIterator Last);
 |*Where*|最初の要素が挿入される、ターゲット リスト内の位置。|
 |*val*|リストに挿入される要素の値。|
 |*カウント*|リストに挿入される要素の数。|
-|*まずは*|コピーされる引数リストの要素範囲内にある最初の要素の位置。|
-|*前の*|コピーされる引数リストの要素範囲外にある最初の要素の位置。|
+|*First*|コピーされる引数リストの要素範囲内にある最初の要素の位置。|
+|*Last*|コピーされる引数リストの要素範囲外にある最初の要素の位置。|
 
 ### <a name="return-value"></a>戻り値
 
@@ -1276,8 +1276,8 @@ list(InputIterator First, InputIterator Last, const Allocator& Al);
 |*カウント*|構築されたリスト内の要素の数。|
 |*val*|リスト内の要素の値。|
 |*右*|構築されたリストがコピーになる元のリスト。|
-|*まずは*|コピーする要素範囲内の最初の要素の位置。|
-|*前の*|コピーする要素範囲を超える最初の要素の位置。|
+|*First*|コピーする要素範囲内の最初の要素の位置。|
+|*Last*|コピーする要素範囲を超える最初の要素の位置。|
 |*IList*|コピーされる要素を含む initializer_list。|
 
 ### <a name="remarks"></a>Remarks
@@ -2366,10 +2366,10 @@ void splice(const_iterator Where, list<Type, Allocator>&& Source, const_iterator
 *Iter*<br/>
 ソース リストから挿入される要素。
 
-*まずは*<br/>
+*First*<br/>
 ソース リストから挿入される範囲内の最初の要素。
 
-*前の*<br/>
+*Last*<br/>
 ソース リストから挿入される範囲内の最後の要素を超える最初の位置。
 
 ### <a name="remarks"></a>Remarks

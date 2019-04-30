@@ -10,11 +10,11 @@ helpviewer_keywords:
 - ODBC recordsets, selecting records
 ms.assetid: 343a6a91-aa4c-4ef7-b21f-2f2bfd0d3787
 ms.openlocfilehash: 310481a6ea6637de817bf29d528cbdfe70ae70db
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59041326"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62397823"
 ---
 # <a name="recordset-how-recordsets-select-records-odbc"></a>レコード セット:レコード セットの選択が (ODBC) を記録する方法
 
@@ -99,7 +99,7 @@ ms.locfileid: "59041326"
 ## <a name="see-also"></a>関連項目
 
 [レコードセット (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[レコード セット:レコード セットの更新が (ODBC) を記録する方法](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)<br/>
+[レコードセット: レコードセットでのレコード更新のしくみ (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)<br/>
 [ODBC の基礎](../../data/odbc/odbc-basics.md)<br/>
 [SQL](../../data/odbc/sql.md)<br/>
-[レコード セット:レコードのロック (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)
+[レコードセット: レコードのロック (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)

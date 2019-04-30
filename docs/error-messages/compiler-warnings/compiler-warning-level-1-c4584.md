@@ -7,17 +7,17 @@ helpviewer_keywords:
 - C4584
 ms.assetid: ad86582f-cb8c-4d21-8c4c-a6c800059e25
 ms.openlocfilehash: 3c60575e766ea3490a40711fe26c3e402c41fbdd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50552734"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62397251"
 ---
 # <a name="compiler-warning-level-1-c4584"></a>コンパイラの警告 (レベル 1) C4584
 
 'class1': 基底クラス 'class2' が 'class3' の基底クラスでは既に
 
-定義したクラスは、うちの 1 つが継承、他の 2 つのクラスから継承します。 例えば:
+定義したクラスは、うちの 1 つが継承、他の 2 つのクラスから継承します。 例:
 
 ```
 // C4584.cpp

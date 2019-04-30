@@ -5,11 +5,11 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], methods
 ms.assetid: e20271de-6ffa-4ba0-848b-bafe6c9e510c
 ms.openlocfilehash: 71c4cdd5ea07b3468b7878a221129a0de5eb4974
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57268409"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62386370"
 ---
 # <a name="mfc-activex-controls-methods"></a>MFC ActiveX コントロール:メソッド
 
@@ -34,11 +34,11 @@ Microsoft Foundation Class ライブラリ (MFC) は、株価、カスタム メ
 
 次の記事では、メソッドの詳細について説明します。
 
-- [MFC ActiveX コントロール:ストック メソッドの追加](../mfc/mfc-activex-controls-adding-stock-methods.md)
+- [MFC ActiveX コントロール: ストック メソッドの追加](../mfc/mfc-activex-controls-adding-stock-methods.md)
 
-- [MFC ActiveX コントロール:カスタム メソッドの追加](../mfc/mfc-activex-controls-adding-custom-methods.md)
+- [MFC ActiveX コントロール: カスタム メソッドの追加](../mfc/mfc-activex-controls-adding-custom-methods.md)
 
-- [MFC ActiveX コントロール:メソッドから返されるエラー コード](../mfc/mfc-activex-controls-returning-error-codes-from-a-method.md)
+- [MFC ActiveX コントロール: メソッドからのエラー コードのリターン](../mfc/mfc-activex-controls-returning-error-codes-from-a-method.md)
 
 ## <a name="see-also"></a>関連項目
 

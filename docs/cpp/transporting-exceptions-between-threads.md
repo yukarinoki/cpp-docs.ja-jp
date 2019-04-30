@@ -15,15 +15,15 @@ helpviewer_keywords:
 - move exceptions between threads
 ms.assetid: 5c95d57b-acf5-491f-8122-57c5df0edd98
 ms.openlocfilehash: f403b1448855b60f323ed582794a00c3e6ae1b3a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464444"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62404742"
 ---
 # <a name="transporting-exceptions-between-threads"></a>スレッド間の例外を転送
 
-Visual C がサポート*例外の転送*を別の 1 つのスレッドから。 例外の転送により、1 つのスレッドで例外をキャッチし、その例外が別のスレッドにスローされたように見せることができます。 たとえば、この機能を使用して、プライマリ スレッドでそのセカンダリ スレッドによってスローされたすべての例外を処理するマルチスレッド アプリケーションを作成できます。 例外の転送は、主に並列プログラミング ライブラリまたはシステムを作成する開発者にとって便利です。 Visual C では例外の転送を実装するために、 [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)型と[current_exception](../standard-library/exception-functions.md#current_exception)、 [rethrow_exception](../standard-library/exception-functions.md#rethrow_exception)、および[make_exception_ptr](../standard-library/exception-functions.md#make_exception_ptr)関数。
+Visual C がサポート*例外の転送*を別の 1 つのスレッドから。 例外の転送により、1 つのスレッドで例外をキャッチし、その例外が別のスレッドにスローされたように見せることができます。 たとえば、この機能を使用して、プライマリ スレッドでそのセカンダリ スレッドによってスローされたすべての例外を処理するマルチスレッド アプリケーションを作成できます。 例外の転送は、主に並列プログラミング ライブラリまたはシステムを作成する開発者にとって便利です。 例外の転送、ビジュアルを実装するC++提供、 [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)型と[current_exception](../standard-library/exception-functions.md#current_exception)、 [rethrow_exception](../standard-library/exception-functions.md#rethrow_exception)と[make_exception_ptr](../standard-library/exception-functions.md#make_exception_ptr)関数。
 
 ## <a name="syntax"></a>構文
 
@@ -42,7 +42,7 @@ namespace std
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*指定されていません。*|`exception_ptr` 型を実装するために使用される未指定の内部クラス。|
+|*unspecified*|`exception_ptr` 型を実装するために使用される未指定の内部クラス。|
 |*p*|例外を参照する `exception_ptr` オブジェクト。|
 |*E*|例外を表すクラス。|
 |*e*|パラメーター `E` クラスのインスタンス。|
@@ -130,7 +130,7 @@ C++ 標準委員会の提案の詳細については、「Language Support for T
 
 SEH 例外をキャッチする場合、`EXCEPTION_RECORD.ExceptionInformation` データ メンバー配列のポインターで参照されるメモリを管理する必要があります。 対応する `exception_ptr` オブジェクトの有効期間中はメモリが有効であること、および `exception_ptr` オブジェクトが削除されるときにメモリが解放されることを保証する必要があります。
 
-転送例外の機能と共に構造化例外 (SE) 変換関数を使用できます。 SEH 例外が C++ 例外に変換される場合、`current_exception` 関数は、元の SEH 例外ではなく変換された例外を参照する `exception_ptr` を返します。 `rethrow_exception` 関数は、その後、元の例外ではなく変換された例外をスローします。 SE 変換関数の詳細については、[_set_se_translator](../c-runtime-library/reference/set-se-translator.md)を参照してください。
+転送例外の機能と共に構造化例外 (SE) 変換関数を使用できます。 SEH 例外が C++ 例外に変換される場合、`current_exception` 関数は、元の SEH 例外ではなく変換された例外を参照する `exception_ptr` を返します。 `rethrow_exception` 関数は、その後、元の例外ではなく変換された例外をスローします。 SE 変換関数の詳細については、次を参照してください。 [_set_se_translator](../c-runtime-library/reference/set-se-translator.md)します。
 
 ## <a name="rethrowexception-function"></a>rethrow_exception 関数
 

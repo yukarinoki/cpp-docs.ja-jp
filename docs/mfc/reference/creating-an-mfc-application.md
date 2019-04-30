@@ -7,11 +7,11 @@ helpviewer_keywords:
 - MFC applications
 ms.assetid: b8b8aa08-9c49-404c-8078-b42079ac18f0
 ms.openlocfilehash: 251275fd866ce7c9d697787c35c6207ef77862db
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57818597"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62372310"
 ---
 # <a name="creating-an-mfc-application"></a>MFC アプリケーションの作成
 
@@ -47,7 +47,7 @@ MFC アプリケーション ウィザードでは、これらのアプリケー
 
 1. クリックして**完了**ウィザードを終了し、開発環境で新しいプロジェクトを開きます。
 
-作成されたファイルを表示するには、プロジェクトが作成されると、**ソリューション エクスプ ローラー**します。 ウィザードでプロジェクト用に作成されるファイルの詳細については、プロジェクトが生成する ReadMe.txt ファイルを参照してください。 ファイルの種類についての詳細については、[Visual c プロジェクトに対して作成されるファイルの種類](../../build/reference/file-types-created-for-visual-cpp-projects.md)を参照してください。
+作成されたファイルを表示するには、プロジェクトが作成されると、**ソリューション エクスプ ローラー**します。 ウィザードでプロジェクト用に作成されるファイルの詳細については、プロジェクトが生成する ReadMe.txt ファイルを参照してください。 ファイルの種類についての詳細については、次を参照してください。 [Visual c プロジェクトに対して作成されるファイルの種類](../../build/reference/file-types-created-for-visual-cpp-projects.md)します。
 
 ## <a name="see-also"></a>関連項目
 

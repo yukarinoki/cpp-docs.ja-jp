@@ -9,11 +9,11 @@ helpviewer_keywords:
 - marshaling [C++], structures
 ms.assetid: 35997e6f-9251-4af3-8c6e-0712d64d6a5d
 ms.openlocfilehash: d5c64a3e93cd85d7e38bac7c0ea3fa3c3301abc9
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57747996"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387241"
 ---
 # <a name="how-to-marshal-structures-using-pinvoke"></a>方法: 構造体のマーシャ リングを使用して PInvoke
 
@@ -25,7 +25,7 @@ ms.locfileid: "57747996"
 
 既定では、ネイティブおよびマネージ構造体レイアウトが異なる、メモリ内構造体のマネージ/アンマネージの境界を越えて受け渡しには、データの整合性を保持するために余分な手順が必要です。 正常されます。
 
-このドキュメントでは、ネイティブの構造と結果の構造をアンマネージ関数に渡す方法に相当するマネージドを定義するために必要な手順について説明します。 このドキュメントで単純な構造体-文字列またはポインターを含まないもの — 使用されます。 Blittable でない相互運用性については、[を使用して C++ Interop (暗黙の PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)を参照してください。 P/invoke は、戻り値として非 blittable 型を含めることはできません。 Blittable 型のマネージ コードとアンマネージ コードで同じ表現であります。 詳細については、[blittable 型と非 Blittable 型](/dotnet/framework/interop/blittable-and-non-blittable-types)を参照してください。
+このドキュメントでは、ネイティブの構造と結果の構造をアンマネージ関数に渡す方法に相当するマネージドを定義するために必要な手順について説明します。 このドキュメントで単純な構造体-文字列またはポインターを含まないもの — 使用されます。 Blittable でない相互運用性については、次を参照してください。[を使用して C++ Interop (暗黙の PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)します。 P/invoke は、戻り値として非 blittable 型を含めることはできません。 Blittable 型のマネージ コードとアンマネージ コードで同じ表現であります。 詳細については、次を参照してください。 [blittable 型と非 Blittable 型](/dotnet/framework/interop/blittable-and-non-blittable-types)します。
 
 単純なをマーシャ リングするマネージ/アンマネージの境界を越えて blittable 構造最初が必要です各ネイティブ構造体のマネージ バージョンが定義されています。 これらの構造は、任意の有効な名前を持つことができます。2 つの構造、データ レイアウト以外のネイティブおよびマネージ バージョン間の関係はありません。 したがって、管理対象のバージョンには、サイズとネイティブ バージョンと同じ順序で同じフィールドが含まれている重要なは。 (非互換性が明確にならない実行時まで、構造体のマネージ コードとネイティブ バージョン、それと同等であることを確認するためのメカニズムはありません。 2 つの構造は、同じデータのレイアウトでいることを確認するはプログラマの役目です。)
 

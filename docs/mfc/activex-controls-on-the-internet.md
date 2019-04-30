@@ -10,18 +10,18 @@ helpviewer_keywords:
 - networks [MFC], downloading with ActiveX controls
 ms.assetid: 7ab943c8-2022-41df-9065-d629b616eeec
 ms.openlocfilehash: c019c922a5690d4ead861c40bed3c0c1c76cea28
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283008"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394845"
 ---
 # <a name="activex-controls-on-the-internet"></a>インターネット上の ActiveX コントロール
 
 ActiveX コントロールは、更新されたバージョンの OLE コントロールの仕様です。
 
 >[!IMPORTANT]
-> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 詳細については、[ActiveX コントロール](activex-controls.md)を参照してください。
+> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 詳細については、次を参照してください。 [ActiveX コントロール](activex-controls.md)します。
 
 コントロールは、さまざまなインターネット上の COM 対応の Web ブラウザーなど、別のコンテナーで使用できるプログラミング可能なソフトウェア コンポーネントを開発するための基本的なアーキテクチャです。 ActiveX コントロールことができます、インターネット コントロールし、アクティブなドキュメントにその機能を追加したり Web ページの一部にします。 Web ページ上のコントロールは、スクリプトを使用して相互に通信できます。
 
@@ -127,8 +127,7 @@ ActiveX コントロールは、インターネットに限定されません。
 
    [!code-cpp[NVC_MFCActiveXControl#3](../mfc/codesnippet/cpp/activex-controls-on-the-internet_3.h)]
 
-1. 
-  `Get/Set` メソッドを実装します。 `Get`文字列を返します。 `Set`、プロパティと呼び出しを読み込む`SetModifiedFlag`します。
+1. `Get/Set` メソッドを実装します。 `Get`文字列を返します。 `Set`、プロパティと呼び出しを読み込む`SetModifiedFlag`します。
 
    [!code-cpp[NVC_MFCActiveXControl#4](../mfc/codesnippet/cpp/activex-controls-on-the-internet_4.cpp)]
 

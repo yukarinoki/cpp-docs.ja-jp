@@ -14,11 +14,11 @@ helpviewer_keywords:
 - OLE events [MFC]
 ms.assetid: e1e57e0c-206b-4923-a0b5-682c26564f74
 ms.openlocfilehash: 0d8a881d07a3e48673c6dc3298816d165273be0d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57276768"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392675"
 ---
 # <a name="mfc-activex-controls-events"></a>MFC ActiveX コントロール:イベント
 
@@ -43,12 +43,12 @@ MFC ActiveX コントロール ウィザードを使用してプロジェクト�
 
 その他の 2 つの記事では、イベントの詳細について説明します。
 
-- [MFC ActiveX コントロール:ストック イベントの追加](../mfc/mfc-activex-controls-adding-stock-events-to-an-activex-control.md)
+- [MFC ActiveX コントロール: ストック イベントの追加](../mfc/mfc-activex-controls-adding-stock-events-to-an-activex-control.md)
 
-- [MFC ActiveX コントロール:カスタム イベントの追加](../mfc/mfc-activex-controls-adding-custom-events.md)
+- [MFC ActiveX コントロール: カスタム イベントの追加](../mfc/mfc-activex-controls-adding-custom-events.md)
 
 ## <a name="see-also"></a>関連項目
 
 [MFC ActiveX コントロール](../mfc/mfc-activex-controls.md)<br/>
-[MFC ActiveX コントロール:メソッド](../mfc/mfc-activex-controls-methods.md)<br/>
+[MFC ActiveX コントロール: メソッド](../mfc/mfc-activex-controls-methods.md)<br/>
 [COleControl クラス](../mfc/reference/colecontrol-class.md)

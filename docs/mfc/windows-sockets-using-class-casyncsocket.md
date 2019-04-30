@@ -12,11 +12,11 @@ helpviewer_keywords:
 - Windows Sockets [MFC], converting Unicode and MBCS strings
 ms.assetid: 825dae17-7c1b-4b86-8d6c-da7f1afb5d8d
 ms.openlocfilehash: 51274791393d95517bd8de5ae7248dc634018037
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57263110"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399565"
 ---
 # <a name="windows-sockets-using-class-casyncsocket"></a>Windows ソケット:Casyncsocket クラス
 
@@ -89,7 +89,7 @@ ms.locfileid: "57263110"
 
 ##  <a name="_core_your_responsibilities_with_casyncsocket"></a> CAsyncSocket でお客様の責任
 
-クラスのオブジェクトを作成するときに[CAsyncSocket](../mfc/reference/casyncsocket-class.md)、オブジェクトには、Windows がカプセル化**ソケット**を処理し、そのハンドルに対する操作を提供します。 使用すると`CAsyncSocket`API を直接使用する場合に発生する可能性がありますすべての問題に対処する必要があります。 例:
+クラスのオブジェクトを作成するときに[CAsyncSocket](../mfc/reference/casyncsocket-class.md)、オブジェクトには、Windows がカプセル化**ソケット**を処理し、そのハンドルに対する操作を提供します。 使用すると`CAsyncSocket`API を直接使用する場合に発生する可能性がありますすべての問題に対処する必要があります。 例えば:
 
 - シナリオの「ブロック」されます。
 
@@ -103,11 +103,11 @@ ms.locfileid: "57263110"
 
 詳細については次を参照してください:
 
-- [Windows ソケット:バック グラウンド](../mfc/windows-sockets-background.md)
+- [Windows ソケット: 予備知識](../mfc/windows-sockets-background.md)
 
-- [Windows ソケット:Stream ソケット](../mfc/windows-sockets-stream-sockets.md)
+- [Windows ソケット: ストリーム ソケット](../mfc/windows-sockets-stream-sockets.md)
 
-- [Windows ソケット:データグラム ソケット](../mfc/windows-sockets-datagram-sockets.md)
+- [Windows ソケット: データグラム ソケット](../mfc/windows-sockets-datagram-sockets.md)
 
 ## <a name="see-also"></a>関連項目
 

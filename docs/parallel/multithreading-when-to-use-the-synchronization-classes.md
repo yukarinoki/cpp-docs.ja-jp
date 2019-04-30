@@ -12,11 +12,11 @@ helpviewer_keywords:
 - multithreading [C++], synchronization classes
 ms.assetid: 4914f54e-68ac-438f-93c9-c013455a657e
 ms.openlocfilehash: 72cf5310704c1ae959cc012146a03dd32cff4068
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57284373"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62407654"
 ---
 # <a name="multithreading-when-to-use-the-mfc-synchronization-classes"></a>マルチ スレッド。MFC 同期クラスを使用する場合
 
@@ -52,7 +52,7 @@ MFC で提供されるマルチ スレッドのクラスが 2 つのカテゴリ
 
 同期アクセス クラスを使用して、さらに簡単かを選択します。 場合は、アプリケーションは、1 つの被制御リソースのみへのアクセスを使用して、`CSingleLock`します。 被制御リソース数のいずれかへのアクセスを必要がある場合を使用して、`CMultiLock`します。 例 1 で`CSingleLock`使用された、特定の時点に各ケースの 1 つだけのリソースが必要なためです。
 
-同期クラスの使用方法については、次を参照してください。[マルチ スレッド。同期クラスの使用方法](multithreading-how-to-use-the-synchronization-classes.md)します。 同期の詳細については、次を参照してください。[同期](/windows/desktop/Sync/synchronization)Windows SDK に含まれています。 MFC でマルチ スレッドのサポートについては、[C++ と MFC を使用するマルチ スレッド](multithreading-with-cpp-and-mfc.md)を参照してください。
+同期クラスの使用方法については、次を参照してください。[マルチ スレッド。同期クラスの使用方法](multithreading-how-to-use-the-synchronization-classes.md)します。 同期の詳細については、次を参照してください。[同期](/windows/desktop/Sync/synchronization)Windows SDK に含まれています。 MFC でマルチ スレッドのサポートについては、次を参照してください。 [C++ と MFC を使用するマルチ スレッド](multithreading-with-cpp-and-mfc.md)します。
 
 ## <a name="see-also"></a>関連項目
 

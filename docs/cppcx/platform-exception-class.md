@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Platform::Exception Class
 ms.assetid: ca1d5a67-3a5a-48fe-8099-f9c38a2d2dce
 ms.openlocfilehash: d37d55c56e3c23d8d9129c985cb4272d2e3ee47a
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743420"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62368735"
 ---
 # <a name="platformexception-class"></a>Platform::Exception クラス
 
@@ -149,8 +149,8 @@ Windows ランタイムで発生する例外では、システムで用意され
 
 ### <a name="remarks"></a>Remarks
 
-Windows 8 で、このプロパティは読み取り専用ため、そのバージョンの Windows ランタイムで例外が HRESULT として ABI 間で転送されます。 Windows 8.1 では、豊富な例外情報が ABI 経由で伝達され、開発者はカスタム メッセージを提供し、他のコンポーネントにはプログラムでそのメッセージにアクセスすることができます。 詳細については、[例外 (C + + CX)](../cppcx/exceptions-c-cx.md)を参照してください。
+Windows 8 で、このプロパティは読み取り専用ため、そのバージョンの Windows ランタイムで例外が HRESULT として ABI 間で転送されます。 Windows 8.1 では、豊富な例外情報が ABI 経由で伝達され、開発者はカスタム メッセージを提供し、他のコンポーネントにはプログラムでそのメッセージにアクセスすることができます。 詳細については、次を参照してください。[例外 (C++/CX)](../cppcx/exceptions-c-cx.md)します。
 
 ## <a name="see-also"></a>関連項目
 
-[Platform 名前空間](../cppcx/platform-namespace-c-cx.md)
+[プラットフォーム名前空間](../cppcx/platform-namespace-c-cx.md)

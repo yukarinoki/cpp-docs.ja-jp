@@ -21,11 +21,11 @@ helpviewer_keywords:
 - std::basic_ostream [C++], write
 ms.assetid: 5baadc65-b662-4fab-8c9f-94457c58cda1
 ms.openlocfilehash: 64a32513e9dc151e64fccdb0ef678a75588f0a41
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58565728"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62371659"
 ---
 # <a name="basicostream-class"></a>basic_ostream クラス
 
@@ -252,7 +252,7 @@ basic_ostream オブジェクトへの参照。
 
 ### <a name="remarks"></a>Remarks
 
-\<Ostream > ヘッダーでは、いくつかのグローバル挿入演算子も定義します。 詳細については、[演算子 <<](../standard-library/ostream-operators.md#op_lt_lt)を参照してください。
+\<Ostream > ヘッダーでは、いくつかのグローバル挿入演算子も定義します。 詳細については、次を参照してください。[演算子 <<](../standard-library/ostream-operators.md#op_lt_lt)します。
 
 最初のメンバー関数により、式形式の`ostr << endl`呼び出し[endl](../standard-library/ostream-functions.md#endl)**(ostr)**、し、返します**\*この**します。 2 番目と 3 番目の関数は、[hex](../standard-library/ios-functions.md#hex) などの他のマニピュレーターが同じように動作することを保証します。 残りの関数はすべて書式付き出力関数です。
 

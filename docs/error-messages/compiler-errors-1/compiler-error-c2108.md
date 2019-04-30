@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2108
 ms.assetid: c84f0b47-5e2c-47d2-8edb-427a40e17c36
 ms.openlocfilehash: 3979fce67f1ecb7f78bd02d4f1c4d2cca287ceca
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628216"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62364559"
 ---
 # <a name="compiler-error-c2108"></a>コンパイラ エラー C2108
 
@@ -21,7 +21,7 @@ ms.locfileid: "50628216"
 
 ## <a name="example"></a>例
 
-C2108 が正しくない使用する場合に発生、`this`型の既定のインデクサーにアクセスする値型のポインター。 詳細については、[セマンティクスは、このポインター](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Semantics_of_the_this_pointer)を参照してください。
+C2108 が正しくない使用する場合に発生、`this`型の既定のインデクサーにアクセスする値型のポインター。 詳細については、次を参照してください。[セマンティクスは、このポインター](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Semantics_of_the_this_pointer)します。
 
 次の例では、C2108 が生成されます。
 

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - handlers [MFC], command
 ms.assetid: 20f57f4a-f577-4c09-80a2-43faf32a1c2e
 ms.openlocfilehash: 6c92660c67fa91c27bb094111cebfef57904cdc7
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57296697"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62358995"
 ---
 # <a name="handlers-for-commands-and-control-notifications"></a>コマンドとコントロール通知のハンドラー
 
@@ -25,7 +25,7 @@ ms.locfileid: "57296697"
 
 [!code-cpp[NVC_MFCMessageHandling#4](../mfc/codesnippet/cpp/handlers-for-commands-and-control-notifications_1.h)]
 
-として Cut コマンドのコマンド ID は、フレームワークが組み込まれて Cut コマンドは、アプリケーションによくため実装されたため、 **ID_EDIT_CUT**します。 定義済みのすべてのコマンド Id の一覧は、コマ ファイルを参照してください。H. 詳細については、[標準コマンド](../mfc/standard-commands.md)を参照してください。
+として Cut コマンドのコマンド ID は、フレームワークが組み込まれて Cut コマンドは、アプリケーションによくため実装されたため、 **ID_EDIT_CUT**します。 定義済みのすべてのコマンド Id の一覧は、コマ ファイルを参照してください。H. 詳細については、次を参照してください。[標準コマンド](../mfc/standard-commands.md)します。
 
 さらに、規則がのハンドラーを提案、 **BN_CLICKED**名前に「マイ ボタン」というラベルのボタンからの通知メッセージ
 

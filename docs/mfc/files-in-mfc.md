@@ -15,11 +15,11 @@ helpviewer_keywords:
 - binary access [MFC]
 ms.assetid: ae25e2c5-2859-4679-ab97-438824e93ce1
 ms.openlocfilehash: cf53c498e61bdf0a233d7638649b30e498e27cc5
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57297932"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392857"
 ---
 # <a name="files-in-mfc"></a>MFC のファイル
 
@@ -30,7 +30,7 @@ Microsoft Foundation Class ライブラリ (MFC) でクラス[CFile](../mfc/refe
 
 `CFile`クラスは、汎用のバイナリ ファイルの操作のインターフェイスを提供します。 `CStdioFile`と`CMemFile`クラスから派生した`CFile`と`CSharedFile`から派生したクラス`CMemFile`より専門的なファイル サービスを提供します。
 
-MFC のファイルの処理に代わる方法の詳細については、[ファイル処理](../c-runtime-library/file-handling.md)で、*ランタイム ライブラリ リファレンス*を参照してください。
+MFC のファイルの処理に代わる方法の詳細については、次を参照してください。[ファイル処理](../c-runtime-library/file-handling.md)で、*ランタイム ライブラリ リファレンス*します。
 
 については、派生した`CFile`クラスを参照してください、 [MFC 階層グラフ](../mfc/hierarchy-chart.md)します。
 

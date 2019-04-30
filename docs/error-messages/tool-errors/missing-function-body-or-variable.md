@@ -5,12 +5,12 @@ helpviewer_keywords:
 - function body
 - variables, missing
 ms.assetid: 1a88d809-b14f-46a4-97c4-3e48beb418f2
-ms.openlocfilehash: c287d804df3222475d7cf32c6eb025f642dfb913
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
-ms.translationtype: MT
+ms.openlocfilehash: 5e3436054d69da7fb67c240c1d684585734635c3
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59031860"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62378442"
 ---
 # <a name="missing-function-body-or-variable"></a>関数本体または変数の未定義
 
@@ -20,7 +20,7 @@ ms.locfileid: "59031860"
 
 メインの関数呼び出しは、プロトタイプにより、関数の存在を考慮するため、lnk2019 エラーが発生します。  リンカーは、しないことを検出します。
 
-```
+```cpp
 // LNK2019_MFBV.cpp
 // LNK2019 expected
 void DoSomething(void);
@@ -33,7 +33,7 @@ int main() {
 
 C++ では、クラス定義でクラスをプロトタイプだけでなく、特定の関数の実装を含めることを確認します。 ヘッダー ファイルの外部でクラスを定義する場合は、関数の前にクラス名を含めることを確認する (`Classname::memberfunction`)。
 
-```
+```cpp
 // LNK2019_MFBV_2.cpp
 // LNK2019 expected
 struct A {

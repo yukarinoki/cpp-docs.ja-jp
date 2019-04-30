@@ -5,11 +5,11 @@ f1_keywords:
 - AMP_GRAPHICS/Concurrency
 ms.assetid: 4529d3b1-d7da-4ffb-82bf-080915e0f23e
 ms.openlocfilehash: ef61c93e062b375377a0afe62aa7f622f6c0d4ac
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326537"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62375601"
 ---
 # <a name="concurrencygraphics-namespace"></a>Concurrency::graphics 名前空間
 
@@ -82,7 +82,7 @@ namespace graphics;
 
 **ヘッダー:** amp_graphics.h
 
-**名前空間:** 並行性
+**名前空間:** コンカレンシー
 
 ## <a name="see-also"></a>関連項目
 

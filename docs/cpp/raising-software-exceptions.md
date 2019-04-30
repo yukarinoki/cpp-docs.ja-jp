@@ -14,11 +14,11 @@ helpviewer_keywords:
 - formats [C++], exception codes
 ms.assetid: be1376c3-c46a-4f52-ad1d-c2362840746a
 ms.openlocfilehash: 49ee800bafff017c29b73c5f6fd64318009a140a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562046"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403465"
 ---
 # <a name="raising-software-exceptions"></a>ソフトウェア例外の発生
 
@@ -36,9 +36,9 @@ ms.locfileid: "50562046"
 
 \<Winerror.h > ファイルは例外コードの形式を示しています。 既存の例外コードと競合するコードを定義しないように、第 3 上位ビットを 1 に設定します。 4 つの最上位ビットは、次の表に示すように設定する必要があります。
 
-|Bits|推奨バイナリ設定|説明|
+|ビット|推奨バイナリ設定|説明|
 |----------|--------------------------------|-----------------|
-|31-30|11|これら 2 つのビットは、コードの基本的なステータスを示します (11 = エラー、00 = 成功、01 = 情報、10 = 警告)。|
+|31-30|11|これら 2 つのビットには、コードの基本的なステータスがについて説明します。11 = エラー、00 = 成功、01 = 情報、10 = 警告します。|
 |29|1|クライアント ビット。 ユーザー定義コードの場合は 1 に設定します。|
 |28|0|予約済みのビット  (0 に設定しておきます)。|
 
@@ -61,7 +61,7 @@ if (lpstr == NULL)
 
 例外を簡単に発生させるには、最後の 3 つのパラメーターを 0 に設定します。 最後の 3 つのパラメーターは、追加情報を渡し、ハンドラーの実行を中止するフラグを設定するときに使用します。 参照してください、 [RaiseException](https://msdn.microsoft.com/library/windows/desktop/ms680552)詳細については、Windows SDK 内の関数。
 
-例外処理フィルターで、定義したコードをテストできます。 例えば:
+例外処理フィルターで、定義したコードをテストできます。 例:
 
 ```cpp
 __try {

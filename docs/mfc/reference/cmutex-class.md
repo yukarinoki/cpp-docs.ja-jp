@@ -9,11 +9,11 @@ helpviewer_keywords:
 - CMutex [MFC], CMutex
 ms.assetid: 6330c050-4f01-4195-a099-2029b92f8cf1
 ms.openlocfilehash: f85e562af9d048503be20d1ab5d219fe8d2d039f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273297"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62373649"
 ---
 # <a name="cmutex-class"></a>CMutex クラス
 
@@ -74,8 +74,7 @@ CMutex(
 場合を指定します、スレッドを作成する、`CMutex`オブジェクトが最初に、ミュー テックスによって制御されるリソースへのアクセスを持ちます。
 
 *lpszName*<br/>
-
-  `CMutex` オブジェクトの名前。 同じ名前の別のミュー テックスが存在する場合、 *lpszName*プロセスの境界を越えてオブジェクトを使用する場合に指定する必要があります。 場合**NULL**、ミュー テックスは名前付きできません。 名前が既存のミュー テックスに一致する場合、コンス トラクターは新しい`CMutex`その名前のミュー テックスを参照するオブジェクト。 名前には、ミュー テックスではない既存の同期オブジェクトが一致すると、構築は失敗します。
+`CMutex` オブジェクトの名前。 同じ名前の別のミュー テックスが存在する場合、 *lpszName*プロセスの境界を越えてオブジェクトを使用する場合に指定する必要があります。 場合**NULL**、ミュー テックスは名前付きできません。 名前が既存のミュー テックスに一致する場合、コンス トラクターは新しい`CMutex`その名前のミュー テックスを参照するオブジェクト。 名前には、ミュー テックスではない既存の同期オブジェクトが一致すると、構築は失敗します。
 
 *lpsaAttribute*<br/>
 ミュー テックス オブジェクトのセキュリティ属性。 この構造体の詳細については、次を参照してください。 [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) Windows SDK に含まれています。

@@ -18,11 +18,11 @@ helpviewer_keywords:
 - CRecordView [MFC], OnMove
 ms.assetid: 9b4b0897-bd50-4d48-a0b4-f3323f5ccc55
 ms.openlocfilehash: a91a9e320b4221b04bbcf996ffa60f1de4b35ec5
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57262468"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62372219"
 ---
 # <a name="crecordview-class"></a>CRecordView クラス
 
@@ -68,7 +68,7 @@ class AFX_NOVTABLE CRecordView : public CFormView
 
 メニュー (および必要に応じてツールバー) に、レコード ビューのレコード間を移動するエンドユーザーのために、アプリケーション ウィザードで作成リソースを移動するために、最初次、前、または最後のレコード。 ClassWizard でレコード ビュー クラスを作成する場合は、これらのリソースを自分で作成メニューとビットマップ エディター必要があります。
 
-レコード間を移動するための既定の実装については、`IsOnFirstRecord`と`IsOnLastRecord`」および「[レコード ビューを使用して](../../data/using-a-record-view-mfc-data-access.md)を参照してください。
+レコード間を移動するための既定の実装については、次を参照してください。`IsOnFirstRecord`と`IsOnLastRecord`」および「[レコード ビューを使用して](../../data/using-a-record-view-mfc-data-access.md)します。
 
 `CRecordView` レコード ビューは、ユーザー インターフェイスを更新できるようにはのレコード セット内のユーザーの位置を追跡します。 ユーザーは、レコード セットのいずれかの端に移動、レコード ビュー、ユーザー インターフェイス オブジェクトを無効にします: メニュー項目またはツール バー ボタンなど — を移動する同じ方向にさらにします。
 

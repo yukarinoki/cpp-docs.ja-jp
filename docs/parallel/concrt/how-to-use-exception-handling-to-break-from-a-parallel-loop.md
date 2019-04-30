@@ -6,11 +6,11 @@ helpviewer_keywords:
 - writing a search algorithm [Concurrency Runtime]
 ms.assetid: 16d7278c-2d10-4014-9f58-f1899e719ff9
 ms.openlocfilehash: 19d732d98f24172471d96cd5e2962b2a99ab0203
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57262312"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62409994"
 ---
 # <a name="how-to-use-exception-handling-to-break-from-a-parallel-loop"></a>方法: 並列ループから処理を中断する例外を使用して、
 
@@ -46,7 +46,7 @@ ms.locfileid: "57262312"
 
 [!code-cpp[concrt-task-tree-search#4](../../parallel/concrt/codesnippet/cpp/how-to-use-exception-handling-to-break-from-a-parallel-loop_4.cpp)]
 
-この例では、 [concurrency::parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke)アルゴリズムを並列で値を検索します。 このアルゴリズムの詳細については、[並列アルゴリズム](../../parallel/concrt/parallel-algorithms.md)を参照してください。
+この例では、 [concurrency::parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke)アルゴリズムを並列で値を検索します。 このアルゴリズムの詳細については、次を参照してください。[並列アルゴリズム](../../parallel/concrt/parallel-algorithms.md)します。
 
 ## <a name="example"></a>例
 

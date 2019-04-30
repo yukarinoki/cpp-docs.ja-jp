@@ -7,18 +7,18 @@ helpviewer_keywords:
 - ActiveX controls [MFC], enabling containers
 ms.assetid: 833bcde9-c9ad-4709-ad12-2fc2150fb6a5
 ms.openlocfilehash: 80ca25192f3dbda711b0398917cfa68571cd2c55
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57302725"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394937"
 ---
 # <a name="activex-control-containers-manually-enabling-activex-control-containment"></a>ActiveX コントロール コンテナー:ActiveX コントロール サポートを手動で有効にします。
 
 場合は、MFC アプリケーション ウィザードを使用してアプリケーションを作成すると ActiveX コントロールのサポートを有効にしなかった、手動でこのサポートを追加する必要があります。 この記事では、既存の OLE コンテナー アプリケーションを手動で ActiveX コントロールのサポートを追加するためのプロセスについて説明します。 事前に、OLE コンテナーで ActiveX コントロールのサポートをすることがわかっている場合、情報の記事を参照してください。 [MFC ActiveX コントロール コンテナーの作成](../mfc/reference/creating-an-mfc-activex-control-container.md)です。
 
 >[!IMPORTANT]
-> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の置き換えの最新のテクノロジの詳細については、[ActiveX コントロール](activex-controls.md)を参照してください。
+> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の置き換えの最新のテクノロジの詳細については、次を参照してください。 [ActiveX コントロール](activex-controls.md)します。
 
 > [!NOTE]
 >  この記事では、ダイアログ ベース ActiveX コントロール コンテナーという名前のプロジェクト コンテナーと円をという名前のプロシージャとコードの例として、埋め込みのコントロールを使用します。
