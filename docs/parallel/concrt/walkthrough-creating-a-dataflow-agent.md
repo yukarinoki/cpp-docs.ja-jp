@@ -1,16 +1,16 @@
 ---
 title: 'チュートリアル: データフロー エージェントの作成'
-ms.date: 11/19/2018
+ms.date: 04/25/2019
 helpviewer_keywords:
 - creating dataflow agents [Concurrency Runtime]
 - dataflow agents, creating [Concurrency Runtime]
 ms.assetid: 9db5ce3f-c51b-4de1-b79b-9ac2a0cbd130
 ms.openlocfilehash: bba72404b1c39ef1835b0c96883154b385181b6a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
-ms.translationtype: MT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266758"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62378290"
 ---
 # <a name="walkthrough-creating-a-dataflow-agent"></a>チュートリアル: データフロー エージェントの作成
 
@@ -42,11 +42,7 @@ ms.locfileid: "57266758"
 
 ##  <a name="control-flow"></a> 基本的な制御フロー エージェントを作成します。
 
-
-  `control_flow_agent` クラスを定義する次の例について考えます。 
-  `control_flow_agent` クラスは、1 つの入力バッファーと 2 つの出力バッファーの合計 3 つのメッセージ バッファーに対して作用します。 
-  `run` メソッドは、ループ内でソース メッセージ バッファーから読み取り、条件付きステートメントを使用してプログラムの実行フローを調整します。 エージェントは、ゼロ以外の負の値に対してカウンターの 1 つをインクリメントし、ゼロ以外の正の値に対して別のカウンターをインクリメントします。 エージェントは、sentinel 値のゼロを受信すると、カウンターの値を出力メッセージ バッファーに送信します。 
-  `negatives` メソッドと `positives` メソッドは、アプリケーションがエージェントから負の値と正の値のカウントを読み取ることができるようにします。
+`control_flow_agent` クラスを定義する次の例について考えます。 `control_flow_agent` クラスは、1 つの入力バッファーと 2 つの出力バッファーの合計 3 つのメッセージ バッファーに対して作用します。 `run` メソッドは、ループ内でソース メッセージ バッファーから読み取り、条件付きステートメントを使用してプログラムの実行フローを調整します。 エージェントは、ゼロ以外の負の値に対してカウンターの 1 つをインクリメントし、ゼロ以外の正の値に対して別のカウンターをインクリメントします。 エージェントは、sentinel 値のゼロを受信すると、カウンターの値を出力メッセージ バッファーに送信します。 `negatives` メソッドと `positives` メソッドは、アプリケーションがエージェントから負の値と正の値のカウントを読み取ることができるようにします。
 
 [!code-cpp[concrt-dataflow-agent#1](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-dataflow-agent_1.cpp)]
 
@@ -62,21 +58,17 @@ ms.locfileid: "57266758"
 
 #### <a name="to-convert-the-control-flow-agent-to-a-dataflow-agent"></a>制御フロー エージェントからデータ フロー エージェントに切り替えるには
 
-1. 
-  `control_flow_agent` クラスの本体を別のクラス (`dataflow_agent` など) にコピーします。 代わりに、`control_flow_agent` クラスの名前を変更してもかまいません。
+1. `control_flow_agent` クラスの本体を別のクラス (`dataflow_agent` など) にコピーします。 代わりに、`control_flow_agent` クラスの名前を変更してもかまいません。
 
-1. 
-  `receive` を呼び出すループの本体を `run` メソッドから削除します。
+1. `receive` を呼び出すループの本体を `run` メソッドから削除します。
 
 [!code-cpp[concrt-dataflow-agent#2](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-dataflow-agent_2.cpp)]
 
-1. 
-  `run` メソッド内の `negative_count` および `positive_count` 変数の初期化コードの後に、アクティブな操作のカウントを追跡する `countdown_event` オブジェクトを追加します。
+1. `run` メソッド内の `negative_count` および `positive_count` 変数の初期化コードの後に、アクティブな操作のカウントを追跡する `countdown_event` オブジェクトを追加します。
 
 [!code-cpp[concrt-dataflow-agent#6](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-dataflow-agent_3.cpp)]
 
-   
-  `countdown_event` クラスについては、このトピックの後半で説明します。
+   `countdown_event` クラスについては、このトピックの後半で説明します。
 
 1. データ フロー ネットワークに参加するメッセージ バッファー オブジェクトを作成します。
 
@@ -86,8 +78,7 @@ ms.locfileid: "57266758"
 
 [!code-cpp[concrt-dataflow-agent#4](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-dataflow-agent_5.cpp)]
 
-1. 
-  `event` オブジェクトと `countdown event` オブジェクトが設定されるまで待ちます。 これらのイベントは、エージェントが sentinel 値を受信したことと、すべての操作が完了したことを通知します。
+1. `event` オブジェクトと `countdown event` オブジェクトが設定されるまで待ちます。 これらのイベントは、エージェントが sentinel 値を受信したことと、すべての操作が完了したことを通知します。
 
 [!code-cpp[concrt-dataflow-agent#5](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-dataflow-agent_6.cpp)]
 
@@ -104,15 +95,11 @@ ms.locfileid: "57266758"
 |`sentinel`|A [concurrency::call](../../parallel/concrt/reference/call-class.md)をアクティブなイベント カウンターはゼロでデクリメント sentinel 値のみを受け入れるオブジェクト。|
 |`connector`|A [concurrency::unbounded_buffer](reference/unbounded-buffer-class.md)ソース メッセージ バッファーを内部ネットワークに接続するオブジェクト。|
 
+`run` メソッドは別個のスレッドで呼び出されるため、ネットワークが完全に接続される前に、他のスレッドからネットワークにメッセージが送信されることがあります。 `_source` データ メンバーは、アプリケーションからエージェントに送信されるすべての入力をバッファーに格納する `unbounded_buffer` オブジェクトです。 ネットワークですべての入力メッセージが処理されるように、エージェントは最初にネットワークの内部ノードをリンクしてから、そのネットワークの始端 `connector` を `_source` データ メンバーにリンクします。 これにより、ネットワークの形成中にメッセージが処理されることがなくなります。
 
-  `run` メソッドは別個のスレッドで呼び出されるため、ネットワークが完全に接続される前に、他のスレッドからネットワークにメッセージが送信されることがあります。 
-  `_source` データ メンバーは、アプリケーションからエージェントに送信されるすべての入力をバッファーに格納する `unbounded_buffer` オブジェクトです。 ネットワークですべての入力メッセージが処理されるように、エージェントは最初にネットワークの内部ノードをリンクしてから、そのネットワークの始端 `connector` を `_source` データ メンバーにリンクします。 これにより、ネットワークの形成中にメッセージが処理されることがなくなります。
+この例のネットワークは制御フローではなくデータ フローに基づいているため、各入力値の処理が終了したこと、および sentinel ノードがその値を受信したことがエージェントに通知される必要があります。 この例では、`countdown_event`オブジェクトからすべての入力値が処理されたことを通知し、 [concurrency::event](../../parallel/concrt/reference/event-class.md) sentinel ノードがその値を受信したことを示すオブジェクト。 `countdown_event` クラスは、`event` オブジェクトを使用して、カウンター値がゼロになったときに通知します。 データ フロー ネットワークのヘッド ノードは、値を受信するたびにカウンターをインクリメントします。 ネットワークの各ターミナル ノードは、入力値を処理した後、カウンターをデクリメントします。 エージェントは、データ フロー ネットワークを形成した後、sentinel ノードが `event` オブジェクトを設定し、カウンターがゼロになったことが `countdown_event` オブジェクトから通知されるまで待機します。
 
-この例のネットワークは制御フローではなくデータ フローに基づいているため、各入力値の処理が終了したこと、および sentinel ノードがその値を受信したことがエージェントに通知される必要があります。 この例では、`countdown_event`オブジェクトからすべての入力値が処理されたことを通知し、 [concurrency::event](../../parallel/concrt/reference/event-class.md) sentinel ノードがその値を受信したことを示すオブジェクト。 
-  `countdown_event` クラスは、`event` オブジェクトを使用して、カウンター値がゼロになったときに通知します。 データ フロー ネットワークのヘッド ノードは、値を受信するたびにカウンターをインクリメントします。 ネットワークの各ターミナル ノードは、入力値を処理した後、カウンターをデクリメントします。 エージェントは、データ フロー ネットワークを形成した後、sentinel ノードが `event` オブジェクトを設定し、カウンターがゼロになったことが `countdown_event` オブジェクトから通知されるまで待機します。
-
-次の例では、`control_flow_agent`、`dataflow_agent`、および `countdown_event` クラスを示します。 
-  `wmain` 関数は、`control_flow_agent` オブジェクトと `dataflow_agent` オブジェクトを作成し、`send_values` 関数を使用して一連のランダム値をエージェントに送信します。
+次の例では、`control_flow_agent`、`dataflow_agent`、および `countdown_event` クラスを示します。 `wmain` 関数は、`control_flow_agent` オブジェクトと `dataflow_agent` オブジェクトを作成し、`send_values` 関数を使用して一連のランダム値をエージェントに送信します。
 
 [!code-cpp[concrt-dataflow-agent#7](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-dataflow-agent_7.cpp)]
 
@@ -137,9 +124,7 @@ There are 499477 positive numbers.
 
 ##  <a name="logging"></a> メッセージ ログ エージェントを作成します。
 
-次の例では、`log_agent` クラスに似た `dataflow_agent` クラスを示します。 
-  `log_agent` クラスは、ログ メッセージをファイルおよびコンソールに書き込む非同期ログ エージェントを実装します。 
-  `log_agent` クラスは、アプリケーションがメッセージを情報、警告、またはエラーとして分類できるようにします。 また、アプリケーションが各ログ カテゴリをファイルとコンソールのどちらに書き込むか、または両方に書き込むかを指定できるようにします。 この例では、ファイルにすべてのログ メッセージが書き込まれ、コンソールにはエラー メッセージのみが書き込まれます。
+次の例では、`log_agent` クラスに似た `dataflow_agent` クラスを示します。 `log_agent` クラスは、ログ メッセージをファイルおよびコンソールに書き込む非同期ログ エージェントを実装します。 `log_agent` クラスは、アプリケーションがメッセージを情報、警告、またはエラーとして分類できるようにします。 また、アプリケーションが各ログ カテゴリをファイルとコンソールのどちらに書き込むか、または両方に書き込むかを指定できるようにします。 この例では、ファイルにすべてのログ メッセージが書き込まれ、コンソールにはエラー メッセージのみが書き込まれます。
 
 [!code-cpp[concrt-log-filter#1](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-dataflow-agent_8.cpp)]
 

@@ -30,11 +30,11 @@ helpviewer_keywords:
 - arcsine function
 ms.assetid: ca05f9ea-b711-49f6-9f32-2f4019abfd69
 ms.openlocfilehash: 20a2ffc37ea666207b9558cb5c282c414cfd4838
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476050"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62347965"
 ---
 # <a name="asin-asinf-asinl"></a>asin、asinf、asinl
 
@@ -66,9 +66,9 @@ long double asin( long double x );  // C++ only
 
 |入力|SEH 例外|Matherr 例外|
 |-----------|-------------------|-----------------------|
-|± ∞|**無効です**|**(_D)**|
-|± **QNAN**、 **IND**|none|**(_D)**|
-|&#124;x&#124;>1|**無効です**|**(_D)**|
+|± ∞|**無効です**|**_DOMAIN**|
+|± **QNAN**、 **IND**|none|**_DOMAIN**|
+|&#124;x&#124;>1|**無効です**|**_DOMAIN**|
 
 ## <a name="remarks"></a>Remarks
 

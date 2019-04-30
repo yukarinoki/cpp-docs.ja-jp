@@ -138,11 +138,11 @@ helpviewer_keywords:
 - std::unordered_multimap::swap
 ms.assetid: 4baead6c-5870-4b85-940f-a47d6b891c27
 ms.openlocfilehash: ca080cfee9869985c322bf1311fabf8aff72383a
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519933"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62362934"
 ---
 # <a name="unorderedmultimap-class"></a>unordered_multimap クラス
 
@@ -1252,10 +1252,10 @@ size_type erase(
 *Where*<br/>
 削除される要素の位置。
 
-*まずは*<br/>
+*First*<br/>
 削除される最初の要素の位置。
 
-*前の*<br/>
+*Last*<br/>
 削除される最後の要素の次の位置。
 
 *Key*<br/>
@@ -1490,8 +1490,8 @@ IList);
 |*val*|unordered_multimap に挿入される要素の値。|
 |*Where*|正しい挿入ポイントの検索を開始する場所 |
 |*ValTy*|Unordered_multimap がの要素を構築に使用できる引数の型を指定するテンプレート パラメーター [value_type](../standard-library/map-class.md#value_type)、および完全転送*Val*を引数として。|
-|*まずは*|コピーされる最初の要素の位置。|
-|*前の*|コピーされる最後の要素の次の位置。|
+|*First*|コピーされる最初の要素の位置。|
+|*Last*|コピーされる最後の要素の次の位置。|
 |*InputIterator*|[入力反復子](../standard-library/input-iterator-tag-struct.md)の要件を満たすテンプレート関数の引数。この反復子は、[value_type](../standard-library/map-class.md#value_type) オブジェクトの構築に使用できる型の要素を指し示します。|
 |*IList*|要素のコピー元の [initializer_list](../standard-library/initializer-list.md)。|
 

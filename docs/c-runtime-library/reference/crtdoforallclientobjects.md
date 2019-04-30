@@ -24,11 +24,11 @@ helpviewer_keywords:
 - CrtDoForAllClientObjects function
 ms.assetid: d0fdb835-3cdc-45f1-9a21-54208e8df248
 ms.openlocfilehash: 86268bd9ac49c8ea27f715404236bcb9291f5d8b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50521191"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62339719"
 ---
 # <a name="crtdoforallclientobjects"></a>_CrtDoForAllClientObjects
 
@@ -69,7 +69,7 @@ void _CrtDoForAllClientObjects(
 
 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
-**ライブラリ:** ユニバーサル C ランタイム ライブラリのデバッグ バージョンのみ。
+**ライブラリ:** ユニバーサル C ランタイム ライブラリをのみのデバッグ バージョン。
 
 ## <a name="see-also"></a>関連項目
 

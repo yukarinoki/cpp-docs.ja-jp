@@ -30,11 +30,11 @@ helpviewer_keywords:
 - console, writing characters to
 ms.assetid: 3babc7cf-e333-405d-8449-c788d61d51aa
 ms.openlocfilehash: da45744fe56c198cc97228cae8043abbb5436fbd
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326993"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62358158"
 ---
 # <a name="putch-putwch"></a>_putch、_putwch
 
@@ -68,7 +68,7 @@ wint_t _putwch(
 
 これらの関数は、文字を書き込む*c*コンソールには、バッファーなしで直接、します。 Windows NT では、**_putwch** は現在のコンソールのロケール設定を使用して Unicode 文字を書き出します。
 
-**_nolock** サフィックスが付いているバージョンは同じものですが、他のスレッドによる干渉から保護されない点が異なります。 詳細については、**_putch_nolock**、 **_putwch_nolock**を参照してください。
+**_nolock** サフィックスが付いているバージョンは同じものですが、他のスレッドによる干渉から保護されない点が異なります。 詳細については、次を参照してください。 **_putch_nolock**、 **_putwch_nolock**します。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 

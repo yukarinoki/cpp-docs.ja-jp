@@ -29,11 +29,11 @@ helpviewer_keywords:
 - trigonometric functions
 - hyperbolic functions
 ms.openlocfilehash: 0f55e084e760cb6d04dbe7ec4fefb5e2ac1d79fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609535"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62347445"
 ---
 # <a name="cosh-coshf-coshl"></a>cosh、coshf、coshl
 
@@ -65,7 +65,7 @@ long double cosh( long double x );  // C++ only
 
 |入力|SEH 例外|Matherr 例外|
 |-----------|-------------------|-----------------------|
-|± **QNAN**、 **IND**|none|**(_D)**|
+|± **QNAN**、 **IND**|none|**_DOMAIN**|
 |*x* ≥ 7.104760 e + 002|**不正確な**+**オーバーフロー**|**オーバーフロー**|
 
 ## <a name="remarks"></a>Remarks

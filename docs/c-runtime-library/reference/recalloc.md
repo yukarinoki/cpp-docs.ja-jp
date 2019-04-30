@@ -24,11 +24,11 @@ helpviewer_keywords:
 - recalloc function
 ms.assetid: 1db8305a-3f03-418c-8844-bf9149f63046
 ms.openlocfilehash: 3bcc238dcb950a8e30af16efc557e99d933efe92
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436518"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62357723"
 ---
 # <a name="recalloc"></a>_recalloc
 
@@ -49,7 +49,7 @@ void *_recalloc(
 *memblock*<br/>
 以前に割り当てられたメモリ ブロックへのポインター。
 
-*数*<br/>
+*number*<br/>
 要素の数。
 
 *size*<br/>
@@ -73,7 +73,7 @@ void *_recalloc(
 
 **_recalloc**設定**errno**に**ENOMEM** 、メモリの割り当てが失敗した場合、または、要求されたメモリ量を超える場合 **_HEAP_MAXREQ**します。 その他のエラー コードの詳細については、「[errno、_doserrno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
-**recalloc**呼び出し**realloc** 、C++ を使用するには[_set_new_mode](set-new-mode.md)新しいハンドラー モードを設定します。 新しいハンドラー モードを示すかどうか、失敗した場合、 **realloc**によって設定された新しいハンドラー ルーチンを呼び出すには、 [_set_new_handler](set-new-handler.md)します。 既定では、 **realloc**でメモリの割り当ての失敗によって新しいハンドラー ルーチンを呼び出しません。 この既定の動作をオーバーライドするように、 **_recalloc** 、メモリの割り当てに失敗した**realloc**に同じ新しいハンドラー ルーチンを呼び出す方法、**新しい**演算子同じ理由で失敗した場合は。 既定の動作をオーバーライドするには、次の関数を呼び出します。
+**recalloc**呼び出し**realloc**使用するには、 C++ [_set_new_mode](set-new-mode.md)新しいハンドラー モードを設定します。 新しいハンドラー モードを示すかどうか、失敗した場合、 **realloc**によって設定された新しいハンドラー ルーチンを呼び出すには、 [_set_new_handler](set-new-handler.md)します。 既定では、 **realloc**でメモリの割り当ての失敗によって新しいハンドラー ルーチンを呼び出しません。 この既定の動作をオーバーライドするように、 **_recalloc** 、メモリの割り当てに失敗した**realloc**に同じ新しいハンドラー ルーチンを呼び出す方法、**新しい**演算子同じ理由で失敗した場合は。 既定の動作をオーバーライドするには、次の関数を呼び出します。
 
 ```C
 _set_new_mode(1);

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C1083
 ms.assetid: 97e52df3-e79c-4f85-8f1e-bbd1057d55e7
 ms.openlocfilehash: 522bc4a36be59d4e2c9425e50b1238eb9f4aba61
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57822198"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62368059"
 ---
 # <a name="fatal-error-c1083"></a>致命的なエラー C1083
 
@@ -71,11 +71,11 @@ ms.locfileid: "57822198"
 
 この問題を解決するには、インクルード ファイルまたはインポートされたファイルを検索するときにコンパイラが使用するパスを修正します。 新しいプロジェクトは既定には、検索パスが含まれます。 プロジェクトのディレクトリを追加するインクルード検索パスを変更する必要があります。 コマンドラインでコンパイルする場合へのパスを追加、 **INCLUDE**環境変数または **/I**コンパイラ オプションをファイルへのパスを指定します。
 
-Visual Studio のインクルード ディレクトリのパスを設定するには、プロジェクトを開きます**プロパティ ページ** ダイアログ ボックス。 選択**vc++ ディレクトリ**  **構成プロパティ**し編集して、左側のウィンドウで、**のインクルード ディレクトリ**プロパティ。 Visual Studio で、コンパイラによって検索するユーザーごとと、プロジェクトごとのディレクトリの詳細については、[vc++ Directories Property Page](../../build/reference/vcpp-directories-property-page.md)を参照してください。 詳細については、 **/I**コンパイラ オプションを参照してください[/I (追加インクルード ディレクトリ)](../../build/reference/i-additional-include-directories.md)します。
+Visual Studio のインクルード ディレクトリのパスを設定するには、プロジェクトを開きます**プロパティ ページ** ダイアログ ボックス。 選択**vc++ ディレクトリ**  **構成プロパティ**し編集して、左側のウィンドウで、**のインクルード ディレクトリ**プロパティ。 Visual Studio で、コンパイラによって検索するユーザーごとと、プロジェクトごとのディレクトリの詳細については、次を参照してください。 [vc++ Directories Property Page](../../build/reference/vcpp-directories-property-page.md)します。 詳細については、 **/I**コンパイラ オプションを参照してください[/I (追加インクルード ディレクトリ)](../../build/reference/i-additional-include-directories.md)します。
 
 ## <a name="the-command-line-include-or-lib-environment-is-not-set"></a>コマンドラインを含めるか、LIB 環境が設定されていません。
 
-コマンド ラインでコンパイラを実行するときに、環境変数を使用して、検索パスを指定することはよくあります。 検索パスが記述されている場合、 **INCLUDE**または**LIB**環境変数が正しく設定されていない、C1083 エラーが生成されます。 開発者コマンド プロンプトのショートカットを使用して、コマンドラインのための基本的な環境を設定するビルドを強くお勧めします。 詳細については、[コマンドラインで C と C++ ビルド](../../build/building-on-the-command-line.md)を参照してください。 環境変数を使用する方法の詳細については、次を参照してください。[方法。ビルドで環境変数を使用して](/visualstudio/msbuild/how-to-use-environment-variables-in-a-build)します。
+コマンド ラインでコンパイラを実行するときに、環境変数を使用して、検索パスを指定することはよくあります。 検索パスが記述されている場合、 **INCLUDE**または**LIB**環境変数が正しく設定されていない、C1083 エラーが生成されます。 開発者コマンド プロンプトのショートカットを使用して、コマンドラインのための基本的な環境を設定するビルドを強くお勧めします。 詳細については、次を参照してください。[コマンドラインで C と C++ ビルド](../../build/building-on-the-command-line.md)します。 環境変数を使用する方法の詳細については、次を参照してください。[方法。ビルドで環境変数を使用して](/visualstudio/msbuild/how-to-use-environment-variables-in-a-build)します。
 
 ## <a name="the-file-may-be-locked-or-in-use"></a>ファイルがロックされているか、使用中
 
@@ -87,7 +87,7 @@ C1083 エラーは、誤ったバージョンのファイルがインクルー�
 
 ## <a name="the-precompiled-headers-are-not-yet-precompiled"></a>プリコンパイル済みヘッダーがプリコンパイルされていない
 
-プロジェクトがプリコンパイル済みヘッダーを使用するように設定されている場合、関連する .pch ファイルが作成されて、そのヘッダーの内容を使用するファイルをコンパイルできるようにする必要があります。 たとえば、stdafx.cpp ファイルは新しいプロジェクトのプロジェクト ディレクトリに自動的に作成します。 そのファイルを最初にコンパイルして、プリコンパイル済みヘッダー ファイルを作成してください。 通常のビルド プロセスの設計でこの自動的に行われます。 詳細については、[プリコンパイル済みヘッダー ファイルの作成](../../build/creating-precompiled-header-files.md)を参照してください。
+プロジェクトがプリコンパイル済みヘッダーを使用するように設定されている場合、関連する .pch ファイルが作成されて、そのヘッダーの内容を使用するファイルをコンパイルできるようにする必要があります。 たとえば、stdafx.cpp ファイルは新しいプロジェクトのプロジェクト ディレクトリに自動的に作成します。 そのファイルを最初にコンパイルして、プリコンパイル済みヘッダー ファイルを作成してください。 通常のビルド プロセスの設計でこの自動的に行われます。 詳細については、次を参照してください。[プリコンパイル済みヘッダー ファイルの作成](../../build/creating-precompiled-header-files.md)です。
 
 ## <a name="additional-causes"></a>その他の理由
 
@@ -116,7 +116,7 @@ C1083 エラーは、誤ったバージョンのファイルがインクルー�
 #include "stdio.h"  // OK
 ```
 
-IDE またはコマンドラインで C/C++ プロジェクトをビルドする方法については、環境変数の設定については、[プロジェクトおよびビルド システム](../../build/projects-and-build-systems-cpp.md)を参照してください。
+IDE またはコマンドラインで C/C++ プロジェクトをビルドする方法については、環境変数の設定については、次を参照してください。[プロジェクトおよびビルド システム](../../build/projects-and-build-systems-cpp.md)します。
 
 ## <a name="see-also"></a>関連項目
 

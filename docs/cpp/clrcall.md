@@ -7,11 +7,11 @@ helpviewer_keywords:
 - __clrcall keyword [C++]
 ms.assetid: 92096695-683a-40ed-bf65-0c8443572152
 ms.openlocfilehash: bc44feb97223de47f45734f75777ee040d0ebdd8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534577"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62364572"
 ---
 # <a name="clrcall"></a>__clrcall
 
@@ -25,13 +25,13 @@ ms.locfileid: "50534577"
 
 場合は、ネイティブ関数のアドレスを作成する際 **_ _clrcall**が指定されていない、コンパイラはネイティブ エントリ ポイントを使用します。 **_ _clrcall**関数が管理されからの移行を経由する必要があるがネイティブに管理対象があることを示します。 その場合、コンパイラはマネージド エントリ ポイントを使用します。
 
-ときに`/clr`(いない`/clr:pure`または`/clr:safe`) は使用と **_ _clrcall**は、ネイティブ エントリ ポイント関数のアドレスを返しますを使用しない関数のアドレスを常に取得します。 ときに **_ _clrcall**が使用すると、ネイティブ エントリ ポイント関数は作成されず、いないエントリ ポイント サンク関数のマネージ関数のアドレスを取得するようにします。 詳細については、[ダブル サンキング](../dotnet/double-thunking-cpp.md)を参照してください。 **/Clr: 純粋な**と **/clr:safe**コンパイラ オプションは Visual Studio 2015 で非推奨とされ、Visual Studio 2017 でサポートされていません。
+ときに`/clr`(いない`/clr:pure`または`/clr:safe`) は使用と **_ _clrcall**は、ネイティブ エントリ ポイント関数のアドレスを返しますを使用しない関数のアドレスを常に取得します。 ときに **_ _clrcall**が使用すると、ネイティブ エントリ ポイント関数は作成されず、いないエントリ ポイント サンク関数のマネージ関数のアドレスを取得するようにします。 詳細については、次を参照してください。[ダブル サンキング](../dotnet/double-thunking-cpp.md)します。 **/Clr: 純粋な**と **/clr:safe**コンパイラ オプションは Visual Studio 2015 で非推奨とされ、Visual Studio 2017 でサポートされていません。
 
 [/clr (共通言語ランタイムのコンパイル)](../build/reference/clr-common-language-runtime-compilation.md)すべての関数と関数ポインターがあることを意味 **_ _clrcall** 以外のものとしてマークするコンパイル単位内の関数が許可されず、コンパイラと **_ _clrcall**します。 ときに **/clr: 純粋な**を使用する **_ _clrcall**関数ポインターと外部宣言でのみ指定できます。
 
-直接呼び出すことができます **_ _clrcall**関数を使用してコンパイルされた既存の C++ コードから **/clr**限り、その関数がある MSIL を実装します。 **_ _clrcall**でこれらの関数がコンパイルされた場合でも、関数をインライン asm を持ち CPU 固有の組み込み関数を呼び出すから直接関数を呼び出すことができません`/clr`します。
+直接呼び出すことができます **_ _clrcall**から既存の関数C++を使用してコンパイルされたコード **/clr**限り、その関数がある MSIL を実装します。 **_ _clrcall**でこれらの関数がコンパイルされた場合でも、関数をインライン asm を持ち CPU 固有の組み込み関数を呼び出すから直接関数を呼び出すことができません`/clr`します。
 
-**_ _clrcall**関数ポインターが作成されたアプリケーション ドメインで使用するもののみです。  渡すのではなく **_ _clrcall**アプリケーション ドメイン間で関数ポインターを使用して<xref:System.CrossAppDomainDelegate>します。 詳細については、[アプリケーション ドメインと Visual c](../dotnet/application-domains-and-visual-cpp.md)を参照してください。
+**_ _clrcall**関数ポインターが作成されたアプリケーション ドメインで使用するもののみです。  渡すのではなく **_ _clrcall**アプリケーション ドメイン間で関数ポインターを使用して<xref:System.CrossAppDomainDelegate>します。 詳細については、次を参照してください。[アプリケーション ドメインと Visual c](../dotnet/application-domains-and-visual-cpp.md)します。
 
 ## <a name="example"></a>例
 

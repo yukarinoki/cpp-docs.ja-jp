@@ -5,11 +5,11 @@ helpviewer_keywords:
 - insertion operators
 ms.assetid: cdefe986-6548-4cd1-8a67-b431d7d36a1c
 ms.openlocfilehash: 8c04cc6d5deeaf5dfea65a7f8e92a8569084c077
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565413"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62362271"
 ---
 # <a name="using-insertion-operators-and-controlling-format"></a>挿入演算子と制御形式の使用
 
@@ -207,7 +207,7 @@ std::cout << extracted;    //  This
 
 挿入演算子と抽出演算子の空白の処理は、コード内での文字列の表記方法に依存しません。そのため、入力文字列が未加工の文字列リテラルであるか、標準の文字列であるかにかかわらず、quoted 演算子は便利です。 埋め込みの引用符、改行、タブなどが含まれる入力文字列は、書式にかかわらず、quoted() マニピュレーターで保持されます。
 
-詳細と完全なコード例については、[引用符で囲まれた](../standard-library/iomanip-functions.md#quoted)を参照してください。
+詳細と完全なコード例については、次を参照してください。[引用符で囲まれた](../standard-library/iomanip-functions.md#quoted)します。
 
 ## <a name="see-also"></a>関連項目
 

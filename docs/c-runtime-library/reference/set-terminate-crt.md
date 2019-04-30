@@ -24,11 +24,11 @@ helpviewer_keywords:
 - exception handling, termination
 ms.assetid: 3ff1456a-7898-44bc-9266-a328a80b6006
 ms.openlocfilehash: 7be81dec7fba80a273d635cbd30b96b09928bc66
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50493913"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62356447"
 ---
 # <a name="setterminate-crt"></a>set_terminate (CRT)
 
@@ -51,7 +51,7 @@ terminate_function set_terminate( terminate_function termFunction );
 
 ## <a name="remarks"></a>Remarks
 
-**Set_terminate**インストールに機能*termFunction*によって呼び出される関数として**終了**します。 **set_terminate**は C++ 例外処理で使用され、例外がスローされる前に、プログラムのどの時点でも呼び出すことができます。 **終了**呼び出し[中止](abort.md)既定。 この既定の設定を変更するには、独自の終了関数を作成し、呼び出すことによって**set_terminate**引数として関数の名前に置き換えます。 **終了**への引数として渡された最後関数を呼び出す**set_terminate**します。 必要なクリーンアップ タスクのいずれかを実行した後*termFunction*プログラムを終了する必要があります。 かどうか (この場合、呼び出し元に返す) 終了せず、[中止](abort.md)が呼び出されます。
+**Set_terminate**インストールに機能*termFunction*によって呼び出される関数として**終了**します。 **set_terminate**併用C++例外処理と、例外がスローされる前に、プログラムのどの時点でも呼び出すことができます。 **終了**呼び出し[中止](abort.md)既定。 この既定の設定を変更するには、独自の終了関数を作成し、呼び出すことによって**set_terminate**引数として関数の名前に置き換えます。 **終了**への引数として渡された最後関数を呼び出す**set_terminate**します。 必要なクリーンアップ タスクのいずれかを実行した後*termFunction*プログラムを終了する必要があります。 かどうか (この場合、呼び出し元に返す) 終了せず、[中止](abort.md)が呼び出されます。
 
 マルチ スレッド環境では、終了関数はスレッドごとに別々に管理されます。 新しいスレッドは各々、それぞれの終了関数をインストールする必要があります。 したがって、各スレッドがそれぞれの終了処理を担当します。
 

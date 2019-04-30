@@ -33,11 +33,11 @@ helpviewer_keywords:
 - CInternetSession [MFC], SetOption
 ms.assetid: ef54feb4-9d0f-4e65-a45d-7a4cf6c40e51
 ms.openlocfilehash: 5ad1a1a0dde32358828d58a8f237337c4f62f3e5
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57261298"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62345592"
 ---
 # <a name="cinternetsession-class"></a>CInternetSession クラス
 
@@ -143,10 +143,10 @@ CInternetSession(
 
 - INTERNET_OPEN_TYPE_PROXY CERN プロキシ経由で接続します。
 
-さまざまな種類のプロキシに接続する方法については、[典型的な FTP クライアント アプリケーションでのステップ](../../mfc/steps-in-a-typical-ftp-client-application.md)を参照してください。
+さまざまな種類のプロキシに接続する方法については、次を参照してください。[典型的な FTP クライアント アプリケーションでのステップ](../../mfc/steps-in-a-typical-ftp-client-application.md)します。
 
 *pstrProxyName*<br/>
-優先 CERN プロキシの名前場合*は*INTERNET_OPEN_TYPE_PROXY として設定されます。 既定では NULL です。
+優先 CERN プロキシの名前場合*は*INTERNET_OPEN_TYPE_PROXY として設定されます。 既定値は NULL です。
 
 *pstrProxyBypass*<br/>
 サーバーのアドレスのオプションのリストを含む文字列へのポインター。 プロキシへのアクセスを使用する場合は、これらのアドレスを迂回する可能性があります。 NULL 値が指定されている場合は、レジストリからバイパス リストを読み取ります。 このパラメーターは、意味のある場合にのみ*は*INTERNET_OPEN_TYPE_PROXY に設定されます。

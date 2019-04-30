@@ -10,15 +10,15 @@ helpviewer_keywords:
 - walkthroughs [MFC], update existing application
 ms.assetid: aa6330d3-6cfc-4c79-8fcb-0282263025f7
 ms.openlocfilehash: 213bc8087b58eac232cc8fcfccc88e13785a807e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
-ms.translationtype: MT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258763"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62358295"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>チュートリアル: MFC Scribble アプリケーション (パート 1) の更新
 
-このチュートリアルでは、リボン ユーザー インターフェイスを使用するために MFC アプリケーションを修正する方法を説明します。 Visual Studio は、Office 2007 リボンと Windows 7 Scenic リボンの両方をサポートしています。 リボンのユーザー インターフェイスの詳細については、[リボン](/windows/desktop/uxguide/cmd-ribbons)を参照してください。
+このチュートリアルでは、リボン ユーザー インターフェイスを使用するために MFC アプリケーションを修正する方法を説明します。 Visual Studio は、Office 2007 リボンと Windows 7 Scenic リボンの両方をサポートしています。 リボンのユーザー インターフェイスの詳細については、次を参照してください。[リボン](/windows/desktop/uxguide/cmd-ribbons)します。
 
 このチュートリアルでは、マウスを使用して線画を描く、従来の Scribble 1.0 MFC サンプルを変更します。 ここでは、リボン バーを表示するよう Scribble サンプルを変更します。 [第 2 部](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md)リボン バーにボタンを追加します。
 
@@ -87,14 +87,11 @@ ms.locfileid: "57258763"
 
 1. mainfrm.cpp ファイルでは、次の手順に従います。
 
-    1. 
-  `m_wndToolBar.SetBarStyle` を `m_wndToolBar.SetPaneStyle` に置き換えます。
+    1. `m_wndToolBar.SetBarStyle` を `m_wndToolBar.SetPaneStyle` に置き換えます。
 
-    1. 
-  `m_wndToolBar.GetBarStyle` を `m_wndToolBar.GetPaneStyle` に置き換えます。
+    1. `m_wndToolBar.GetBarStyle` を `m_wndToolBar.GetPaneStyle` に置き換えます。
 
-    1. 
-  `DockControlBar(&m_wndToolBar)` を `DockPane(&m_wndToolBar)` に置き換えます。
+    1. `DockControlBar(&m_wndToolBar)` を `DockPane(&m_wndToolBar)` に置き換えます。
 
 1. ipframe.cpp ファイルでは、コードの次の 3 行をコメント アウトします。
 
@@ -272,4 +269,4 @@ A*ビジュアル マネージャー*はアプリケーションのすべての�
 ## <a name="see-also"></a>関連項目
 
 [チュートリアル](../mfc/walkthroughs-mfc.md)<br/>
-[チュートリアル: MFC Scribble アプリケーション (第 2 部) の更新](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md)
+[チュートリアル: MFC Scribble アプリケーションの更新 (パート 2)](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md)

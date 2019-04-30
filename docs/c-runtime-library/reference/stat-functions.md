@@ -107,11 +107,11 @@ helpviewer_keywords:
 - files [C++], getting status information
 ms.assetid: 99a75ae6-ff26-47ad-af70-5ea7e17226a5
 ms.openlocfilehash: d9272cd4596a54a38e1ba21ac92b038c2da0d207
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51331205"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62354717"
 ---
 # <a name="stat-stat32-stat64-stati64-stat32i64-stat64i32-wstat-wstat32-wstat64-wstati64-wstat32i64-wstat64i32"></a>_stat、_stat32、_stat64、_stati64、_stat32i64、_stat64i32、_wstat、_wstat32、_wstat64、_wstati64、_wstat32i64、_wstat64i32
 
@@ -207,12 +207,12 @@ int _wstat64i32(
 |---------------|------------------------------------|---------------|----------------------|
 |**_stat**、 **_wstat**|未定義|64 ビット|32 ビット|
 |**_stat**、 **_wstat**|定義済み|32 ビット|32 ビット|
-|**_stat32**、 **_wstat32**|マクロ定義の影響を受けない|32 ビット|32 ビット|
+|**_stat32**, **_wstat32**|マクロ定義の影響を受けない|32 ビット|32 ビット|
 |**_stat64**、 **_wstat64**|マクロ定義の影響を受けない|64 ビット|64 ビット|
 |**_stati64**、 **_wstati64**|未定義|64 ビット|64 ビット|
 |**_stati64**、 **_wstati64**|定義済み|32 ビット|64 ビット|
 |**_stat32i64**、 **_wstat32i64**|マクロ定義の影響を受けない|32 ビット|64 ビット|
-|**_stat64i32**、 **_wstat64i32**|マクロ定義の影響を受けない|64 ビット|32 ビット|
+|**_stat64i32**, **_wstat64i32**|マクロ定義の影響を受けない|64 ビット|32 ビット|
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -228,17 +228,17 @@ int _wstat64i32(
 
 |フィールド||
 |-|-|
-| **時刻** | ファイル (UNIX 固有) を所有するグループの数値 ID。Windows システムでは、このフィールドは常に 0 になります。 リダイレクトされたファイルは、Windows ファイルとして分類されます。 |
+| **st_gid** | ファイル (UNIX 固有) を所有するグループの数値 ID。Windows システムでは、このフィールドは常に 0 になります。 リダイレクトされたファイルは、Windows ファイルとして分類されます。 |
 | **st_atime** | ファイルに最後にアクセスした時刻。 NTFS では有効ですが、FAT 形式のディスク ドライブでは無効です。 |
 | **st_ctime** | ファイルの作成時刻。 NTFS では有効ですが、FAT 形式のディスク ドライブでは無効です。 |
 | **st_dev** | ファイルを含むディスクのドライブ番号 (同じ**st_rdev**)。 |
-| **値と同じ** | 情報ノードの数 (、 **inode**) ファイル (UNIX 固有)。 UNIX ファイル システムで、 **inode**ファイルの日付と時刻スタンプ、アクセス許可、コンテンツを説明します。 同じ共有ファイルが互いにハードリンクされている場合、 **inode**します。 **Inode**、したがって**値と同じ**FAT、HPFS、または NTFS ファイル システムでは意味を持ちません。 |
+| **st_ino** | 情報ノードの数 (、 **inode**) ファイル (UNIX 固有)。 UNIX ファイル システムで、 **inode**ファイルの日付と時刻スタンプ、アクセス許可、コンテンツを説明します。 同じ共有ファイルが互いにハードリンクされている場合、 **inode**します。 **Inode**、したがって**値と同じ**FAT、HPFS、または NTFS ファイル システムでは意味を持ちません。 |
 | **st_mode** | ファイル モード情報のビット マスク。 **_S_IFDIR**場合に設定されます*パス*ディレクトリを指定します、 **_S_IFREG**場合に設定されます*パス*通常のファイルまたはデバイスを指定します。 ユーザーの読み取り/書き込みビットは、ファイルのアクセス許可モードに応じて設定されます。ユーザー実行ビットは、ファイル名の拡張子に応じて設定されます。 |
 | **st_mtime** | ファイルの最終変更時刻。 |
 | **st_nlink** | 非 NTFS ファイル システムでは常に 1 です。 |
 | **st_rdev** | ファイルを含むディスクのドライブ番号 (同じ**st_dev**)。 |
 | **st_size** | (バイト単位)、ファイルのサイズ持つバリエーションの 64 ビット整数、 **i64**サフィックス。 |
-| **は** | ファイルを所有するユーザーの数値識別子 (UNIX 固有)。 Windows システムでは、このフィールドは常に 0 です。 リダイレクトされたファイルは、Windows ファイルとして分類されます。 |
+| **st_uid** | ファイルを所有するユーザーの数値識別子 (UNIX 固有)。 Windows システムでは、このフィールドは常に 0 です。 リダイレクトされたファイルは、Windows ファイルとして分類されます。 |
 
 場合*パス*デバイスを参照、 **st_size**、各種時刻フィールド、 **st_dev**、および**st_rdev**フィールド、 **_stat**構造は意味がありません。 STAT.H はTYPES.Hで定義される [_dev_t](../../c-runtime-library/standard-types.md) 型を使用するため、コードで STAT.H の前に ES.H を組み込む必要があります。
 
@@ -246,8 +246,8 @@ int _wstat64i32(
 
 |ルーチンによって返される値|必須ヘッダー|省略可能なヘッダー|
 |-------------|---------------------|----------------------|
-|**_stat**、 **_stat32**、 **_stat64**、 **_stati64**、 **_stat32i64**、 **_stat64i32**|\<sys/types.h>、その後に \<sys/stat.h>|\<errno.h>|
-|**_wstat**、 **_wstat32**、 **_wstat64**、 **_wstati64**、 **_wstat32i64**、 **_wstat64i32**|\<sys/types.h>、その後に \<sys/stat.h> または \<wchar.h>|\<errno.h>|
+|**_stat**, **_stat32**, **_stat64**, **_stati64**, **_stat32i64**, **_stat64i32**|\<sys/types.h>、その後に \<sys/stat.h>|\<errno.h>|
+|**_wstat**, **_wstat32**, **_wstat64**, **_wstati64**, **_wstat32i64**, **_wstat64i32**|\<sys/types.h>、その後に \<sys/stat.h> または \<wchar.h>|\<errno.h>|
 
 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 

@@ -31,11 +31,11 @@ helpviewer_keywords:
 - catanhl function
 ms.assetid: 1b6021cb-647a-41b4-9d7f-919cc8b57b86
 ms.openlocfilehash: 8c71d4e44de72b54fd334fc2464ca221f36855a3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50646363"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62340964"
 ---
 # <a name="catanh-catanhf-catanhl"></a>catanh、catanhf、catanhl
 
@@ -72,7 +72,7 @@ _Lcomplex catanhl(
 
 ## <a name="remarks"></a>Remarks
 
-オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **catanh**を受け取って返す **_Fcomplex**と **_Lcomplex**値。 C プログラムで**catanh**は、 **_Dcomplex**値。
+C++では、オーバー ロードのオーバー ロードを呼び出すことができます**catanh**を受け取って返す **_Fcomplex**と **_Lcomplex**値。 C プログラムで**catanh**は、 **_Dcomplex**値。
 
 ## <a name="requirements"></a>必要条件
 

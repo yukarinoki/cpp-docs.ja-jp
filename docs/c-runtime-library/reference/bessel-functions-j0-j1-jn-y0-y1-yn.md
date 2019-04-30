@@ -39,11 +39,11 @@ helpviewer_keywords:
 - _yn function
 ms.assetid: a21a8bf1-df9d-4ba0-a8c2-e7ef71921d96
 ms.openlocfilehash: 682eaa99d0be1b959152ff94cc10a86aa68d988d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531864"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62341122"
 ---
 # <a name="bessel-functions-j0-j1-jn-y0-y1-yn"></a>Bessel 系関数: _j0、_j1、_jn、_y0、_y1、_yn
 
@@ -92,21 +92,21 @@ Bessel 系関数の整数順序。
 
 |入力|SEH 例外|Matherr 例外|
 |-----------|-------------------|-----------------------|
-|± **QNAN**、 **IND**|**無効です**|**(_D)**|
+|± **QNAN**、 **IND**|**無効です**|**_DOMAIN**|
 
 **_Y0**、 **_y1**、および **_yn**ルーチンは bessel 系関数の 2 つ目の種類を返します。 順序は 0、1、および n、それぞれします。
 
 |入力|SEH 例外|Matherr 例外|
 |-----------|-------------------|-----------------------|
-|± **QNAN**、 **IND**|**無効です**|**(_D)**|
+|± **QNAN**、 **IND**|**無効です**|**_DOMAIN**|
 |± 0|**ZERODIVIDE**|**_SING**|
-|&#124;x&#124; < 0.0|**無効です**|**(_D)**|
+|&#124;x&#124; < 0.0|**無効です**|**_DOMAIN**|
 
 ## <a name="requirements"></a>必要条件
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
-|**_j0**、 **_j1**、 **_jn**、 **_y0**、 **_y1**、 **_yn**|\<cmath> (C++), \<math.h> (C, C++)|
+|**_j0**, **_j1**, **_jn**, **_y0**, **_y1**, **_yn**|\<cmath> (C++), \<math.h> (C, C++)|
 
 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 

@@ -31,11 +31,11 @@ helpviewer_keywords:
 - time, converting
 ms.assetid: 974f1727-10ff-4ed4-8cac-2eb2d681f576
 ms.openlocfilehash: bc2d7a50442d9000eaaebf7a06bf336b3317e4df
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50577901"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62341809"
 ---
 # <a name="asctime-wasctime"></a>asctime、_wasctime
 
@@ -72,7 +72,7 @@ wchar_t *_wasctime(
 |**tm_hour**|時間午前 0 時 (0 ~ 23) 以降|
 |**tm_isdst**|夏時間が有効な場合は正、夏時間が無効な場合は 0、夏時間かどうかが不明な場合は負。 C ランタイム ライブラリでは、アメリカ合衆国の規則を前提に夏時間 (DST) を計算します。|
 |**tm_mday**|(1 ~ 31) の月の日|
-|**未満**|分 (0 ~ 59)|
+|**tm_min**|分 (0 ~ 59)|
 |**tm_mon**|月 (0 ~ 11。年 1 月 = 0 です)|
 |**tm_sec**|秒 (0 ~ 59)|
 |**tm_wday**|曜日 (0 ~ 6 です。日曜日 = 0)|

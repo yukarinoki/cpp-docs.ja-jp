@@ -99,11 +99,11 @@ helpviewer_keywords:
 - CReBarCtrl [MFC], SizeToRect
 ms.assetid: 154570d7-e48c-425d-8c7e-c64542bcb4cc
 ms.openlocfilehash: db72dbab14db69f14d7c3d813562ec661df4b424
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417659"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62372393"
 ---
 # <a name="crebarctrl-class"></a>CReBarCtrl クラス
 
@@ -203,7 +203,7 @@ Rebar コントロールでは、指定した背景ビットマップを子ウ�
 
 - さまざまな標準のウィンドウ スタイルだけでなく、コントロールのスタイル。 これらのスタイルの一覧は、次を参照してください。 [Rebar コントロールのスタイル](/windows/desktop/Controls/rebar-control-styles)Windows SDK に含まれています。
 
-詳細については、[を使用して CReBarCtrl](../../mfc/using-crebarctrl.md)を参照してください。
+詳細については、次を参照してください。[を使用して CReBarCtrl](../../mfc/using-crebarctrl.md)します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 

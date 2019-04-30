@@ -24,11 +24,11 @@ helpviewer_keywords:
 - _set_se_translator function
 ms.assetid: 280842bc-d72a-468b-a565-2d3db893ae0f
 ms.openlocfilehash: 18ee500d7b884d1934c29dc91d9bcb03d507680d
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57808379"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62356551"
 ---
 # <a name="setsetranslator"></a>_set_se_translator
 
@@ -53,7 +53,7 @@ _se_translator_function _set_se_translator(
 
 ## <a name="remarks"></a>Remarks
 
-**_Set_se_translator**関数として C++ Win32 例外 (C 構造化例外) を処理する方法を提供する型指定例外。 C++ で処理する C の例外を許可する**キャッチ**ハンドラーでは、まず、使用するかを C 例外の特定のクラス型の属性に由来する C 例外のラッパー クラスを定義します。 このクラスを使用するには、C 例外が発生するたびに内部例外処理メカニズムによって呼び出されるカスタム C 例外変換関数をインストールします。 一致する C++ でキャッチできる任意の型例外をスローする変換関数内で**キャッチ**ハンドラー。
+**_Set_se_translator**関数として Win32 例外 (C 構造化例外) を処理する方法を提供するC++例外の型を指定します。 C++ で処理する C の例外を許可する**キャッチ**ハンドラーでは、まず、使用するかを C 例外の特定のクラス型の属性に由来する C 例外のラッパー クラスを定義します。 このクラスを使用するには、C 例外が発生するたびに内部例外処理メカニズムによって呼び出されるカスタム C 例外変換関数をインストールします。 一致する C++ でキャッチできる任意の型例外をスローする変換関数内で**キャッチ**ハンドラー。
 
 使用する必要があります[/EHa](../../build/reference/eh-exception-handling-model.md)を使用する場合 **_set_se_translator**します。
 

@@ -24,11 +24,11 @@ helpviewer_keywords:
 - setvbuf function
 ms.assetid: 6aa5aa37-3408-4fa0-992f-87f9f9c4baea
 ms.openlocfilehash: d4336c6cc478a035fcc0b9b059a7161d58bc4442
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51328098"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62356317"
 ---
 # <a name="setvbuf"></a>setvbuf
 
@@ -47,7 +47,7 @@ int setvbuf(
 
 ### <a name="parameters"></a>パラメーター
 
-*ストリーム*<br/>
+*stream*<br/>
 **FILE** 構造体へのポインター。
 
 *バッファー*<br/>
@@ -57,7 +57,7 @@ int setvbuf(
 バッファリングのモード。
 
 *size*<br/>
-バイト単位のバッファー サイズ。 許容範囲: 2 < =*サイズ*< = INT_MAX (2147483647)。 指定された値では内部的には、*サイズ*は最も近い 2 の倍数に切り下げ。
+バイト単位のバッファー サイズ。 許容範囲:2 < =*サイズ*< = INT_MAX (2147483647)。 指定された値では内部的には、*サイズ*は最も近い 2 の倍数に切り下げ。
 
 ## <a name="return-value"></a>戻り値
 

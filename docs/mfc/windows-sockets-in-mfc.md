@@ -11,11 +11,11 @@ helpviewer_keywords:
 - sockets [MFC], MFC
 ms.assetid: 1f3c476a-9c68-49fe-9a25-d22971a334d0
 ms.openlocfilehash: 9992d2054c04eea1b3b63d591601acf0091acb5e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266785"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62348563"
 ---
 # <a name="windows-sockets-in-mfc"></a>MFC における Windows ソケット
 
@@ -46,31 +46,31 @@ Microsoft Windows オペレーティング システムでは、Windows ソケ�
 
 Windows ソケットの詳細についてを参照してください。
 
-- [Windows ソケット:Stream ソケット](../mfc/windows-sockets-stream-sockets.md)
+- [Windows ソケット: ストリーム ソケット](../mfc/windows-sockets-stream-sockets.md)
 
-- [Windows ソケット:データグラム ソケット](../mfc/windows-sockets-datagram-sockets.md)
+- [Windows ソケット: データグラム ソケット](../mfc/windows-sockets-datagram-sockets.md)
 
-- [Windows ソケット:アーカイブ付きソケットの使用](../mfc/windows-sockets-using-sockets-with-archives.md)
+- [Windows ソケット: アーカイブ付きソケットの使用](../mfc/windows-sockets-using-sockets-with-archives.md)
 
-- [Windows ソケット:一連の操作](../mfc/windows-sockets-sequence-of-operations.md)
+- [Windows ソケット: 動作シーケンス](../mfc/windows-sockets-sequence-of-operations.md)
 
-- [Windows ソケット:アーカイブを使用するソケットの例](../mfc/windows-sockets-example-of-sockets-using-archives.md)
+- [Windows ソケット: アーカイブを使用するソケットの例](../mfc/windows-sockets-example-of-sockets-using-archives.md)
 
-- [Windows ソケット:アーカイブ付きソケットのしくみ](../mfc/windows-sockets-how-sockets-with-archives-work.md)
+- [Windows ソケット: アーカイブ付きソケットの動作](../mfc/windows-sockets-how-sockets-with-archives-work.md)
 
-- [Windows ソケット:Casyncsocket クラス](../mfc/windows-sockets-using-class-casyncsocket.md)
+- [Windows ソケット: CAsyncSocket クラスの使い方](../mfc/windows-sockets-using-class-casyncsocket.md)
 
-- [Windows ソケット:ソケット クラスから派生します。](../mfc/windows-sockets-deriving-from-socket-classes.md)
+- [Windows ソケット: ソケット クラスからの派生](../mfc/windows-sockets-deriving-from-socket-classes.md)
 
-- [Windows ソケット:ソケット通知](../mfc/windows-sockets-socket-notifications.md)
+- [Windows ソケット: ソケット通知](../mfc/windows-sockets-socket-notifications.md)
 
-- [Windows ソケット:ブロック](../mfc/windows-sockets-blocking.md)
+- [Windows ソケット: ブロッキング](../mfc/windows-sockets-blocking.md)
 
-- [Windows ソケット:バイトの順序付け](../mfc/windows-sockets-byte-ordering.md)
+- [Windows ソケット: バイトの順序付け](../mfc/windows-sockets-byte-ordering.md)
 
-- [Windows ソケット:文字列の変換](../mfc/windows-sockets-converting-strings.md)
+- [Windows ソケット: 文字列の変換](../mfc/windows-sockets-converting-strings.md)
 
-- [Windows ソケット:ポートとソケット アドレス](../mfc/windows-sockets-ports-and-socket-addresses.md)
+- [Windows ソケット: ポートとソケット アドレス](../mfc/windows-sockets-ports-and-socket-addresses.md)
 
 ## <a name="see-also"></a>関連項目
 

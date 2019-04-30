@@ -38,11 +38,11 @@ helpviewer_keywords:
 - va_copy macro
 ms.assetid: a700dbbd-bfe5-4077-87b6-3a07af74a907
 ms.openlocfilehash: cc0a903f6bc4895f7d2ea6e80990dea94f28c6c2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506354"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62353574"
 ---
 # <a name="vaarg-vacopy-vaend-vastart"></a>va_arg、va_copy、va_end、va_start
 
@@ -94,7 +94,7 @@ void va_start(
 
 ## <a name="remarks"></a>Remarks
 
-**Va_arg**、 **va_copy**、 **va_end**、および**va_start**マクロは、移植可能な関数の引数にアクセスするときに、関数は、可変個の引数を受け取ります。 このマクロには 2 種類のバージョンがあります。STDARG.H で定義されているマクロは、ISO C99 標準に準拠します。VARARGS.H で定義されているマクロは非推奨とされましたが、ANSI C89 標準以前に作成されたコードの下位互換性のために残されています。
+**Va_arg**、 **va_copy**、 **va_end**、および**va_start**マクロは、移植可能な関数の引数にアクセスするときに、関数は、可変個の引数を受け取ります。 マクロの 2 つのバージョンがあります。STDARG で定義されているマクロ。H は、ISO C99 標準; に準拠しています。VARARGS で定義されているマクロ。H は非推奨とされますが、ANSI C89 標準する前に記述されたコードとの下位互換性は保持されます。
 
 これらのマクロは、関数が固定の個数の必須の引数の後に、省略可能な引数を可変個数受け取るものと想定します。 必須の引数は、関数の通常のパラメーターのように宣言され、パラメーター名でアクセスできます。 省略可能な引数は、STDARG.H (または、ANSI C89 標準以前に書かれたコードの場合は VARARGS.H) のマクロを使用してアクセスします。これらのマクロは、ポインターを引数リストの最初の省略可能な引数へセットし、リストから引数を取得し引数の処理が終了するとポインターをリセットします。
 

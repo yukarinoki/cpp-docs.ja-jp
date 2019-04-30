@@ -11,11 +11,11 @@ helpviewer_keywords:
 - messages [MFC], Windows
 ms.assetid: 19412a8b-2c38-4502-81da-13c823c7e36c
 ms.openlocfilehash: d60ae52225ddd993c1768d0b5ce1989ab0192e45
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57275390"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62358238"
 ---
 # <a name="handlers-for-standard-windows-messages"></a>標準 Windows メッセージのハンドラー
 
@@ -23,7 +23,7 @@ ms.locfileid: "57275390"
 
 `afx_msg void OnPaint();`
 
-**Afx_msg**キーワードは C++ の効果を提案**仮想**他のハンドラーを区別することによってキーワード`CWnd`メンバー関数。 ただし、関数は実際には仮想; 関数代わりにメッセージ マップを通じて実装されます。 メッセージ マップは、C++ 言語の拡張機能ではなく、標準のプリプロセッサ マクロのみに依存します。 **Afx_msg**キーワードは、前処理した後、空白文字に解決されます。
+**Afx_msg**キーワードの効果を提案する、 C++ **仮想**他のハンドラーを区別することによってキーワード`CWnd`メンバー関数。 ただし、関数は実際には仮想; 関数代わりにメッセージ マップを通じて実装されます。 メッセージ マップは、C++ 言語の拡張機能ではなく、標準のプリプロセッサ マクロのみに依存します。 **Afx_msg**キーワードは、前処理した後、空白文字に解決されます。
 
 基底クラスで定義されているハンドラーを上書きするには、ハンドラーのメッセージ マップ エントリを作成して、派生クラスで同じプロトタイプを持つ関数を定義します。 ハンドラーは、クラスの基底クラスのいずれかで同じ名前のいずれかのハンドラーを「上書き」。
 

@@ -9,15 +9,15 @@ helpviewer_keywords:
 - blocking mode sockets
 ms.assetid: 10aca9b1-bfba-41a8-9c55-ea8082181e63
 ms.openlocfilehash: 26a361bc63da5f6e75144cc91fe837498a7f656b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57272348"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62371965"
 ---
 # <a name="windows-sockets-blocking"></a>Windows ソケット:ブロック
 
-この記事と関連記事では 2 つは、Windows ソケット プログラミングのいくつかの問題を説明します。 この記事では、ブロックについて説明します。 記事では、その他の問題がについて説明します。[Windows ソケット:バイトの順序付け](../mfc/windows-sockets-byte-ordering.md)と[Windows ソケット。文字列を変換する](../mfc/windows-sockets-converting-strings.md)します。
+この記事と関連記事では 2 つは、Windows ソケット プログラミングのいくつかの問題を説明します。 この記事では、ブロックについて説明します。 記事では、その他の問題がについて説明します。[Windows ソケット: バイトの順序付け](../mfc/windows-sockets-byte-ordering.md)と[Windows ソケット。文字列を変換する](../mfc/windows-sockets-converting-strings.md)します。
 
 使用するか、またはクラスから派生させる場合[CAsyncSocket](../mfc/reference/casyncsocket-class.md)、これらの問題を自分で管理する必要があります。 使用するか、またはクラスから派生させる場合[CSocket](../mfc/reference/csocket-class.md)MFC を管理します。
 
@@ -40,15 +40,15 @@ Windows では、下のブロッキング呼び出しが不適切な手法と見
 
 詳細については次を参照してください:
 
-- [Windows ソケット:Casyncsocket クラス](../mfc/windows-sockets-using-class-casyncsocket.md)
+- [Windows ソケット: CAsyncSocket クラスの使い方](../mfc/windows-sockets-using-class-casyncsocket.md)
 
-- [Windows ソケット:アーカイブ付きソケットの使用](../mfc/windows-sockets-using-sockets-with-archives.md)
+- [Windows ソケット: アーカイブ付きソケットの使用](../mfc/windows-sockets-using-sockets-with-archives.md)
 
-- [Windows ソケット:バック グラウンド](../mfc/windows-sockets-background.md)
+- [Windows ソケット: 予備知識](../mfc/windows-sockets-background.md)
 
-- [Windows ソケット:Stream ソケット](../mfc/windows-sockets-stream-sockets.md)
+- [Windows ソケット: ストリーム ソケット](../mfc/windows-sockets-stream-sockets.md)
 
-- [Windows ソケット:データグラム ソケット](../mfc/windows-sockets-datagram-sockets.md)
+- [Windows ソケット: データグラム ソケット](../mfc/windows-sockets-datagram-sockets.md)
 
 ## <a name="see-also"></a>関連項目
 

@@ -29,11 +29,11 @@ helpviewer_keywords:
 - _execvpe function
 ms.assetid: c0c3c986-d9c0-4814-a96c-10f0b3092766
 ms.openlocfilehash: 064f8b94a9a97795015c09c11cd56e0370dcc60c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50431695"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62339404"
 ---
 # <a name="execvpe-wexecvpe"></a>_execvpe、_wexecvpe
 
@@ -76,7 +76,7 @@ intptr_t _wexecvpe(
 |-------------------|-----------------|
 |**E2BIG**|引数と環境設定に必要な領域が 32 KB を超えています。|
 |**EACCES**|指定されたファイルでロック違反または共有違反が発生しています。|
-|**EMFILE**|開いているファイルの数が多すぎます (指定されたファイルは、実行可能ファイルであるかどうかを確認するために開く必要があります)。|
+|**EMFILE**|開いているファイルの数が多すぎます  (指定されたファイルは、実行可能ファイルであるかどうかを確認するために開く必要があります)。|
 |**ENOENT**|ファイルまたはパスが見つかりません。|
 |**ENOEXEC**|指定されたファイルが実行可能ファイルでないか、無効な実行可能ファイル形式です。|
 |**ENOMEM**|新しいプロセスを実行するのに十分なメモリがないか、使用できるメモリが破損しているか、または無効なブロックが存在します (これは、呼び出しプロセスが正しく割り当てられていないことを示します)。|

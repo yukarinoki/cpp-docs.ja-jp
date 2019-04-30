@@ -3,11 +3,11 @@ title: 'A:  使用例'
 ms.date: 01/18/2019
 ms.assetid: c0f6192f-a205-449b-b84c-cb30dbcc8b8f
 ms.openlocfilehash: 061490d34829175bfbdcd84d6208aa396bb19671
-ms.sourcegitcommit: 382e247c0f1b4cb7c2dab837b8b6fdff24bff47a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087302"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62362973"
 ---
 # <a name="a-examples"></a>A:  使用例
 
@@ -566,7 +566,7 @@ void wrong6()
 
 ## <a name="a20-bind-barrier-directives"></a>A.20 バインド barrier ディレクティブ
 
-ディレクティブのバインディング ルールの呼び出しを`barrier`最も近い外側にバインドするディレクティブ`parallel`ディレクティブ。 ディレクティブのバインディングの詳細については、[セクション 2.8](2-directives.md#28-directive-binding)を参照してください。
+ディレクティブのバインディング ルールの呼び出しを`barrier`最も近い外側にバインドするディレクティブ`parallel`ディレクティブ。 ディレクティブのバインディングの詳細については、次を参照してください。[セクション 2.8](2-directives.md#28-directive-binding)します。
 
 次の例からの呼び出しで*メイン*に*sub2*が準拠しているため、 `barrier` (で*sub3*) で並列領域にバインドします*sub2*. 呼び出しから*メイン*に*sub1*が準拠しているため、`barrier`サブルーチン内での並列領域にバインドします*sub2*。  呼び出しから*メイン*に*sub3*が準拠しているため、`barrier`並列の任意のリージョンにはバインドされません、無視されます。 また、`barrier`のみ、チームの外側の並列領域でスレッドとで作成されたすべてのスレッドを同期*sub1*します。
 
@@ -735,7 +735,7 @@ void g(int k, int n)
 
 ## <a name="a25-examples-of-the-copyprivate-data-attribute-clause"></a>A.25 copyprivate データ属性句の例
 
-**例 1:**[Copyprivate](2-directives.md#2728-copyprivate)他のスレッド内のプライベート変数のすべてのインスタンスに直接 1 つのスレッドによって取得された値をブロードキャストする句を使用できます。
+**例 1:** [Copyprivate](2-directives.md#2728-copyprivate)他のスレッド内のプライベート変数のすべてのインスタンスに直接 1 つのスレッドによって取得された値をブロードキャストする句を使用できます。
 
 ```cpp
 float x, y;
@@ -917,7 +917,7 @@ int i, a;
 
 ## <a name="a31-thread-safe-lock-functions"></a>A.31 スレッド セーフなロック関数
 
-次の C++ の例を使用して、並列領域でロックの配列を初期化する方法を示します[omp_init_lock 関数](3-run-time-library-functions.md#321-omp_init_lock-and-omp_init_nest_lock-functions)します。
+次C++を使用して、並列領域でロックの配列を初期化する方法の例[omp_init_lock 関数](3-run-time-library-functions.md#321-omp_init_lock-and-omp_init_nest_lock-functions)します。
 
 ```cpp
 // A_13_omp_init_lock.cpp

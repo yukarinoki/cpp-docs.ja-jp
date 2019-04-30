@@ -24,18 +24,18 @@ helpviewer_keywords:
 - _set_abort_behavior function
 - set_abort_behavior function
 ms.openlocfilehash: 8b36a771a3694c6d01573d619990743c7ddc0f3e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643054"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62356694"
 ---
 # <a name="setabortbehavior"></a>_set_abort_behavior
 
 プログラムが異常終了した場合に実行するアクションを指定します。
 
 > [!NOTE]
-> 使用しないでください、[中止](abort.md)関数をテストまたはデバッグ シナリオにを除き、Microsoft Store アプリをシャット ダウンします。 ストア アプリを終了するプログラムや UI の方法はに従って許可されていません、 [Microsoft Store ポリシー](/legal/windows/agreements/store-policies)します。 詳細については、[UWP アプリのライフ サイクル](/windows/uwp/launch-resume/app-lifecycle)を参照してください。
+> 使用しないでください、[中止](abort.md)関数をテストまたはデバッグ シナリオにを除き、Microsoft Store アプリをシャット ダウンします。 ストア アプリを終了するプログラムや UI の方法はに従って許可されていません、 [Microsoft Store ポリシー](/legal/windows/agreements/store-policies)します。 詳細については、次を参照してください。 [UWP アプリのライフ サイクル](/windows/uwp/launch-resume/app-lifecycle)します。
 
 ## <a name="syntax"></a>構文
 

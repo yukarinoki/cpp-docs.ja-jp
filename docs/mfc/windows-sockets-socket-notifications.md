@@ -7,11 +7,11 @@ helpviewer_keywords:
 - sockets [MFC], notifications
 ms.assetid: 87d5bf70-6e77-49a9-9a64-aaadee2ad018
 ms.openlocfilehash: df7bfe8a95221682d0f7f4ebb123bd15b79144d5
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58774335"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62358192"
 ---
 # <a name="windows-sockets-socket-notifications"></a>Windows ソケット:ソケット通知
 
@@ -47,17 +47,17 @@ MFC が通知される時に、ソケットの動作をカスタマイズでき�
 
 詳細については次を参照してください:
 
-- [Windows ソケット:Casyncsocket クラス](../mfc/windows-sockets-using-class-casyncsocket.md)
+- [Windows ソケット: CAsyncSocket クラスの使い方](../mfc/windows-sockets-using-class-casyncsocket.md)
 
-- [Windows ソケット:ソケット クラスから派生します。](../mfc/windows-sockets-deriving-from-socket-classes.md)
+- [Windows ソケット: ソケット クラスからの派生](../mfc/windows-sockets-deriving-from-socket-classes.md)
 
-- [Windows ソケット:アーカイブ付きソケットのしくみ](../mfc/windows-sockets-how-sockets-with-archives-work.md)
+- [Windows ソケット: アーカイブ付きソケットの動作](../mfc/windows-sockets-how-sockets-with-archives-work.md)
 
-- [Windows ソケット:ブロック](../mfc/windows-sockets-blocking.md)
+- [Windows ソケット: ブロッキング](../mfc/windows-sockets-blocking.md)
 
-- [Windows ソケット:バイトの順序付け](../mfc/windows-sockets-byte-ordering.md)
+- [Windows ソケット: バイトの順序付け](../mfc/windows-sockets-byte-ordering.md)
 
-- [Windows ソケット:文字列の変換](../mfc/windows-sockets-converting-strings.md)
+- [Windows ソケット: 文字列の変換](../mfc/windows-sockets-converting-strings.md)
 
 ## <a name="see-also"></a>関連項目
 

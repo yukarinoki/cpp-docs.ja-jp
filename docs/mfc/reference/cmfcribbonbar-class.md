@@ -189,16 +189,15 @@ helpviewer_keywords:
 - CMFCRibbonBar [MFC], TranslateChar
 ms.assetid: a65d06fa-1a28-4cc0-8971-bc9d7c9198fe
 ms.openlocfilehash: 3656b6a135757a4658f2ef08b80a54efffe89012
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57288416"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62351983"
 ---
 # <a name="cmfcribbonbar-class"></a>CMFCRibbonBar クラス
 
-
-  `CMFCRibbonBar` クラスは、Office 2007 で使用されているものに似たリボン バーを実装します。
+`CMFCRibbonBar` クラスは、Office 2007 で使用されているものに似たリボン バーを実装します。
 
 詳細についてにあるソース コードを参照してください、 **VC\\atlmfc\\src\\mfc** Visual Studio のインストールのフォルダー。
 
@@ -318,8 +317,7 @@ Microsoft は、Microsoft Office 2007 のリリースと同時に Office Fluent 
 
 リボン バーに表示される要素を拡大および縮小することで、スペースを最大限に活用します。 たとえば、リボン パネルに要素を表示するための十分なスペースがない場合、リボン パネルはポップアップ メニューにサブアイテムを表示するメニュー ボタンになります。 リボン バーは、静的 (フローティングでない) コントロール バーとして動作し、フレームの上部にドッキングできます。
 
-
-  `CMFCRibbonStatusBar` クラスを使用すると、Office 2007 で使われているようなステータス バーを実装できます。 リボン カテゴリが含まれています (表示) のグループと[リボン パネル](../../mfc/reference/cmfcribbonpanel-class.md)します。 各リボン パネルから派生した、1 つまたは複数のリボン要素が含まれています。 [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)します。
+`CMFCRibbonStatusBar` クラスを使用すると、Office 2007 で使われているようなステータス バーを実装できます。 リボン カテゴリが含まれています (表示) のグループと[リボン パネル](../../mfc/reference/cmfcribbonpanel-class.md)します。 各リボン パネルから派生した、1 つまたは複数のリボン要素が含まれています。 [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)します。
 
 既存の MFC アプリケーションにリボン バーを追加する方法については、次を参照してください。[チュートリアル。MFC Scribble アプリケーションの更新](../../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)します。
 

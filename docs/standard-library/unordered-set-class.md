@@ -135,11 +135,11 @@ helpviewer_keywords:
 - std::unordered_set::swap
 ms.assetid: ac08084e-05a7-48c0-9ae4-d40c529922dd
 ms.openlocfilehash: 01c8b79f596c2fda8cef0a74a7b5dcdc70786dbf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534993"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62362739"
 ---
 # <a name="unorderedset-class"></a>unordered_set クラス
 
@@ -1236,10 +1236,10 @@ size_type erase(const key_type& Key);
 *Where*<br/>
 削除される要素の位置。
 
-*まずは*<br/>
+*First*<br/>
 削除される最初の要素の位置。
 
-*前の*<br/>
+*Last*<br/>
 削除される最後の要素の次の位置。
 
 *Key*<br/>
@@ -1462,8 +1462,8 @@ void insert(initializer_list<value_type> IList);
 |*val*|キーが同じ順序付けになる要素が unordered_set にまだ含まれていない場合に、unordered_set に挿入される要素の値。|
 |*Where*|正しい挿入ポイントの検索を開始する場所 |
 |*ValTy*|Unordered_set がの要素を構築に使用できる引数の型を指定するテンプレート パラメーター[value_type](../standard-library/map-class.md#value_type)、および完全転送*Val*を引数として。|
-|*まずは*|コピーされる最初の要素の位置。|
-|*前の*|コピーされる最後の要素の次の位置。|
+|*First*|コピーされる最初の要素の位置。|
+|*Last*|コピーされる最後の要素の次の位置。|
 |*InputIterator*|[入力反復子](../standard-library/input-iterator-tag-struct.md)の要件を満たすテンプレート関数の引数。この反復子は、[value_type](../standard-library/map-class.md#value_type) オブジェクトの作成に使用できる型の要素を指し示します。|
 |*IList*|要素のコピー元の [initializer_list](../standard-library/initializer-list.md)。|
 

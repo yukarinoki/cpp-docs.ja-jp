@@ -37,11 +37,11 @@ helpviewer_keywords:
 - calculating absolute values
 ms.assetid: 60f789d1-4a1e-49f5-9e4e-0bdb277ea26a
 ms.openlocfilehash: 61aa0a48757a35708ffb85d2c0525bb4eac82d56
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506237"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62341991"
 ---
 # <a name="abs-labs-llabs-abs64"></a>abs、labs、llabs、_abs64
 
@@ -77,7 +77,7 @@ float abs( float n );   // C++ only
 
 オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **abs**を受け取って返す**長い**、**長い****長い**、 **float**、**二重**、および**長い****二重**値。 これらのオーバーロードは \<cmath> ヘッダーで定義されています。 C プログラムで**abs**は、 **int**します。
 
-**Microsoft 固有の仕様**: 任意の整数型を使用して表すことができる負の整数の範囲はその型を使用して表すことができる正の整数の範囲より大きいため、これらの引数を指定することは変換できない機能です。 引数の絶対値を戻り値の型で表すことができない場合、 **abs**関数が変更されていない引数の値を返します。 具体的には、`abs(INT_MIN)` は `INT_MIN` を返し、`labs(LONG_MIN)` は `LONG_MIN` を返します。また `llabs(LLONG_MIN)` は `LLONG_MIN` を返し、`_abs64(_I64_MIN)` は `_I64_MIN` を返します。 つまり、 **abs**関数を使用して、正の値を保証することはできません。
+**Microsoft 固有の仕様**:整数型を使用して表すことができる負の整数の範囲は、正の整数が表すことができる範囲より大きいため、変換できないこれらの関数に引数を指定できます。 引数の絶対値を戻り値の型で表すことができない場合、 **abs**関数が変更されていない引数の値を返します。 具体的には、`abs(INT_MIN)` は `INT_MIN` を返し、`labs(LONG_MIN)` は `LONG_MIN` を返します。また `llabs(LLONG_MIN)` は `LLONG_MIN` を返し、`_abs64(_I64_MIN)` は `_I64_MIN` を返します。 つまり、 **abs**関数を使用して、正の値を保証することはできません。
 
 ## <a name="requirements"></a>必要条件
 

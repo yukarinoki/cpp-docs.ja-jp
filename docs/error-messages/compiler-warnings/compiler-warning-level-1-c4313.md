@@ -7,15 +7,15 @@ helpviewer_keywords:
 - C4313
 ms.assetid: bcf64191-e2cf-452e-97b4-423fcec2d07c
 ms.openlocfilehash: 774af2d5d29112d56adf97e22d1bdd758a816ef1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555710"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62352937"
 ---
 # <a name="compiler-warning-level-1-c4313"></a>コンパイラの警告 (レベル 1) C4313
 
-'function': 書式指定文字列内の 'format specifier' が引数 ('type' 型) と競合しています。
+'function' : 書式指定文字列内の 'format specifier' が引数 ('type' 型) と競合しています。
 
 指定された書式と渡された値が矛盾しています。 たとえば、32 ビット整数パラメーターを想定している修飾されていない %d 書式指定子に 64 ビット パラメーターを渡しました。 この警告は、コードの 64 ビット ターゲットのコンパイル時にのみ有効です。
 

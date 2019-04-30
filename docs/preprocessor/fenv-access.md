@@ -9,24 +9,24 @@ helpviewer_keywords:
 - fenv_access pragma
 ms.assetid: 2ccea292-0ae4-42ce-9c67-cc189299857b
 ms.openlocfilehash: 507e78dd9f9571cc9ce44d7fd91e78b1c955ba73
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50664036"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62389256"
 ---
 # <a name="fenvaccess"></a>fenv_access
 無効にします (**で**) または有効 (**オフ**) 浮動小数点環境に影響する最適化フラグ テストとモードの変更。
 
 ## <a name="syntax"></a>構文
 
-> **#pragma fenv_access (** {**で** | **オフ**} **)**
+> **#pragma fenv_access (** { **on** | **off** } **)**
 
 ## <a name="remarks"></a>Remarks
 
 既定では、 **fenv_access**は**オフ**します。 コンパイラが想定する場合は、コードはアクセスしないか、または浮動小数点の環境を操作し、さまざまな浮動小数点コードの最適化を実行できます。 設定**fenv_access**に**で**コードが例外状態フラグをテストする、またはコントロール モード フラグを設定するのには、浮動小数点環境にアクセスすることをコンパイラに通知します。 コンパイラは、コードでは、浮動小数点環境を一貫してアクセスできるように、これらの最適化を無効にします。
 
-浮動小数点の動作の詳細については、[/fp (浮動小数点の動作の指定)](../build/reference/fp-specify-floating-point-behavior.md)を参照してください。
+浮動小数点の動作の詳細については、次を参照してください。 [/fp (浮動小数点の動作の指定)](../build/reference/fp-specify-floating-point-behavior.md)します。
 
 適用される最適化の種類**fenv_access**は。
 

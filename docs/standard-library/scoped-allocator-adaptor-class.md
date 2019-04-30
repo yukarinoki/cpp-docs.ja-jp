@@ -24,11 +24,11 @@ helpviewer_keywords:
 - std::scoped_allocator_adaptor::select_on_container_copy_construction
 ms.assetid: 0d9b06a1-9a4a-4669-9470-8805cae48e89
 ms.openlocfilehash: c02f5171fac862b6f79e194f5940b0adeb2e93e0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601423"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62348212"
 ---
 # <a name="scopedallocatoradaptor-class"></a>scoped_allocator_adaptor クラス
 
@@ -271,7 +271,7 @@ const outer_allocator_type& outer_allocator() const noexcept;
 
 `scoped_allocator_adaptor\<Other, Inner...>` のシノニムとして `Outer::rebind\<Other>::other` 型を定義します。
 
-構造体の再バインド {typedef Other_traits::rebind\<他 > Other_alloc; typedef scoped_allocator_adaptor\<Other_alloc、内部... > 他;};
+struct rebind{ typedef Other_traits::rebind\<Other> Other_alloc; typedef scoped_allocator_adaptor\<Other_alloc, Inner...> other; };
 
 ## <a name="scoped_allocator_adaptor"></a>  scoped_allocator_adaptor::scoped_allocator_adaptor コンストラクター
 
@@ -300,7 +300,7 @@ scoped_allocator_adaptor(Outer2&& al,
 *Al*<br/>
 外側のアロケーターとして使用する既存のアロケーター。
 
-*残りの部分*<br/>
+*rest*<br/>
 内側のアロケーターとして使用するアロケーターのリスト。
 
 ### <a name="remarks"></a>Remarks

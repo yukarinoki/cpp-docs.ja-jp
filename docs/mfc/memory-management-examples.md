@@ -20,11 +20,11 @@ helpviewer_keywords:
 - memory allocation [MFC], data structures
 ms.assetid: f10240f8-b698-4c83-9288-97a54318930b
 ms.openlocfilehash: 5ed50bfba03f29fdd16e6f615b193109656f3ce6
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57294344"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62352165"
 ---
 # <a name="memory-management-examples"></a>メモリ管理:使用例
 
@@ -100,4 +100,4 @@ ms.locfileid: "57294344"
 
 ## <a name="see-also"></a>関連項目
 
-[メモリ管理:ヒープの割り当て](../mfc/memory-management-heap-allocation.md)
+[メモリ管理: ヒープの割り当て](../mfc/memory-management-heap-allocation.md)

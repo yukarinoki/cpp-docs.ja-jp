@@ -31,11 +31,11 @@ helpviewer_keywords:
 - cimagl function
 ms.assetid: 0d8836f5-d61d-44cd-8731-6f75cb776def
 ms.openlocfilehash: 6f5067967aa62894abb5316f60074b5125b1cba1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50572732"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62347601"
 ---
 # <a name="cimag-cimagf-cimagl"></a>cimag、cimagf、cimagl
 
@@ -65,7 +65,7 @@ long double cimag( _Lcomplex z );  // C++
 
 ## <a name="remarks"></a>Remarks
 
-オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **cimag**を受け取る **_Fcomplex**または **_Lcomplex**値、および戻り値**float**または**長い****二重**値。 C プログラムで**cimag**は常に、 **_Dcomplex**値を返します、**二重**値。
+C++では、オーバー ロードのオーバー ロードを呼び出すことができます**cimag**を受け取る **_Fcomplex**または **_Lcomplex**値、および戻り値**float**または**長い****二重**値。 C プログラムで**cimag**は常に、 **_Dcomplex**値を返します、**二重**値。
 
 ## <a name="requirements"></a>必要条件
 

@@ -47,11 +47,11 @@ helpviewer_keywords:
 - _atoi64 function
 ms.assetid: 2c3e30fd-545d-4222-8364-0c5905df9526
 ms.openlocfilehash: c80480be8895db6afe499d5426b91dcde786d654
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50515480"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62341536"
 ---
 # <a name="atoi64-atoi64l-wtoi64-wtoi64l"></a>_atoi64、_atoi64_l、_wtoi64、_wtoi64_l
 
@@ -100,7 +100,7 @@ __int64 _wtoi64_l(
 
 *Str*引数 **_atoi64**は次の形式があります。
 
-> [*空白*] [*サインオン*] [*桁*]
+> [*whitespace*] [*sign*] [*digits*]
 
 A*空白*は無視されますスペースまたはタブ文字含まれています。*記号*はプラス (+) またはマイナス (–) と*桁*は 1 つ以上の数字。
 

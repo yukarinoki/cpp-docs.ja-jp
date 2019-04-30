@@ -35,11 +35,11 @@ helpviewer_keywords:
 - time strings
 ms.assetid: 6330ff20-4729-4c4a-82af-932915d893ea
 ms.openlocfilehash: 932a7827ef61a5e111f86f8bc44291827843b76e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505665"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62353847"
 ---
 # <a name="strftime-wcsftime-strftimel-wcsftimel"></a>strftime、wcsftime、_strftime_l、_wcsftime_l
 
@@ -163,8 +163,8 @@ size_t _wcsftime_l(
 |[書式コード]|説明|
 |-----------------|-------------|
 |**% #a**、 **%#A**、 **%#b**、 **%#B**、 **%#g**、 **%#G**、 **%#h**、 **%#n**、 **%#p**、 **%#t**、 **%#u**、 **%#w**、 **%#X**、 **%#z**、 **%#Z**、 **%#%**|**#** フラグは無視されます。|
-|**%#c**|時間の長い日付と時刻形式、ロケールに対応します。 たとえば、"Tuesday, March 14, 1995, 12:41:29" です。|
-|**%#x**|長い日付形式、ロケールに適切です。 たとえば、"Tuesday, March 14, 1995" です。|
+|**%#c**|時間の長い日付と時刻形式、ロケールに対応します。 例えば:「Tuesday, March 14日 1995、12時 41分: 29」です。|
+|**%#x**|長い日付形式、ロケールに適切です。 例えば:「Tuesday, March 14日 1995」です。|
 |**%#d**、 **%#D**、 **%#e**、 **%#F**、 **%#H**、 **% #I**、 **%#j**、 **%#m**、 **%#M**、 **%#r**、 **%#R**、 **%#S**、 **%#T**、 **%#U**、 **%#V**、 **%#W**、 **%#y**、 **%#Y**|先頭のゼロまたは空白 (ある場合) を削除します。|
 
 によって生成された、ISO 8601 曜日と年の週に基づく **%V**、 **%g**、および **%G**、第 1 週の曜日を含む年 1 月 4 日、これは、最初が始まりを月曜日を週の使用含む、少なくとも 4 日、年の週。 年の最初の月曜日が 2 番目の場合は、3 番目、または第 4、前の日の一部である前の年の最後の週。 この日の間の **%V** 53 と置き換え **%g**と **%G**は前の年の桁の数字によって置き換えられます。

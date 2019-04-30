@@ -52,11 +52,11 @@ helpviewer_keywords:
 - ftcsicoll function
 ms.assetid: 8ec93016-5a49-49d2-930f-721566661d82
 ms.openlocfilehash: bd2406751fd2855afd02743c98938e530398e7d1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579670"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62353665"
 ---
 # <a name="stricoll-wcsicoll-mbsicoll-stricolll-wcsicolll-mbsicolll"></a>_stricoll、_wcsicoll、_mbsicoll、_stricoll_l、_wcsicoll_l、_mbsicoll_l
 
@@ -99,7 +99,7 @@ int _mbsicoll_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*string1*、 *string2*<br/>
+*string1*, *string2*<br/>
 Null で終わる比較対象の文字列。
 
 *locale*<br/>
@@ -114,7 +114,7 @@ Null で終わる比較対象の文字列。
 |< 0|*string1*未満*string2*|
 |0|*string1*と同じ*string2*|
 |> 0|*string1*より大きい*string2*|
-|**すると**|エラーが発生しました。|
+|**_NLSCMPERROR**|エラーが発生しました。|
 
 これらの関数を返します。**すると**します。 使用する**すると**、いずれかを含める\<string.h > または\<mbstring.h >。 **_wcsicoll**場合に失敗できる*string1*または*string2*に照合シーケンスのドメイン外のワイド文字コードが含まれています。 エラーが発生したときに **_wcsicoll**設定**errno**に**EINVAL**します。 呼び出しでエラーをチェックする **_wcsicoll**設定**errno**を 0 にし、確認**errno**呼び出した後 **_wcsicoll**します。
 

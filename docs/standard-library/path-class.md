@@ -5,11 +5,11 @@ f1_keywords:
 - filesystem/std::experimental::filesystem::path
 ms.assetid: 8a1227ca-aeb2-4e0e-84aa-86e34e4f4fe8
 ms.openlocfilehash: 486245df3433f552c289786a0b20deb33c8fb6c0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618219"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62370451"
 ---
 # <a name="path-class"></a>path クラス
 
@@ -75,10 +75,10 @@ class path;
 |[remove_filename](#remove_filename)|ファイル名を削除します。|
 |[replace_extension](#replace_extension)|拡張機能を置き換える`myname`します。 |
 |[replace_filename](#replace_filename)|RReplaces ファイル名。|
-|[ただし、物理的な](#root_directory)|ルート ディレクトリ コンポーネントを返します`myname`します。 |
+|[root_directory](#root_directory)|ルート ディレクトリ コンポーネントを返します`myname`します。 |
 |[root_name](#root_name)|ルート名の部分を返します`myname`します。 |
 |[root_path](#root_path)|ルート パス コンポーネントを返します`myname`します。|
-|[理工系](#stem)|返します、`stem`のコンポーネントである`myname`します。|
+|[stem](#stem)|返します、`stem`のコンポーネントである`myname`します。|
 |[string](#string)|格納されているシーケンスに変換します`mypath`します。|
 |[swap](#swap)|実行`swap(mypath, right.mypath)`します。|
 |[u16string](#u16string)|格納されているシーケンスに変換します`mypath`を utf-16 型のオブジェクトに格納されていることを返す`u16string`します。|
@@ -471,7 +471,7 @@ path& operator=(const Source& source);
 
 最初のメンバー演算子コピー`right.myname`に`myname`します。 2 番目のメンバー演算子は、移動`right.myname`に`myname`します。 3 番目のメンバー演算子の動作と同じ`*this = path(source)`します。
 
-## <a name="op_add"></a> path::operator + =
+## <a name="op_add"></a> path::operator+=
 
 さまざまな`concat`式。
 
@@ -499,7 +499,7 @@ path& operator+=(Elem elem);
 *ptr*<br/>
 追加のポインター。
 
-*Elem*<br/>
+*elem*<br/>
 追加された`value_type`または`Elem`します。
 
 *source*<br/>
@@ -599,7 +599,7 @@ path(InIt first, InIt last, const locale& loc);
 *source*<br/>
 構築されたパスがコピーのソース。
 
-*Loc*<br/>
+*loc*<br/>
 指定されたロケール。
 
 *first*<br/>
@@ -672,7 +672,7 @@ path& replace_extension(const path& newext = path());
 
 ### <a name="parameters"></a>パラメーター
 
-*最後に、newext*<br/>
+*newext*<br/>
 新しい拡張機能。
 
 ### <a name="remarks"></a>Remarks

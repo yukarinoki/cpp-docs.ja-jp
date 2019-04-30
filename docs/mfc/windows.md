@@ -8,11 +8,11 @@ helpviewer_keywords:
 - window objects [MFC], MFC Framework
 ms.assetid: dd92bf34-842e-40fe-8aea-3028b55314d5
 ms.openlocfilehash: ee5e6fef58b9ddfa2172b9024d414bdb03e93283
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326661"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62338000"
 ---
 # <a name="windows"></a>Windows
 
@@ -108,6 +108,6 @@ ms.locfileid: "57326661"
 
 [ユーザー インターフェイス要素](../mfc/user-interface-elements-mfc.md)<br/>
 [ダイアログ ボックス](../mfc/dialog-boxes.md)<br/>
-[[ツール バー]](../mfc/toolbars.md)<br/>
+[ツールバー](../mfc/toolbars.md)<br/>
 [ステータス バー](../mfc/status-bars.md)<br/>
 [ダイアログ バー](../mfc/dialog-bars.md)

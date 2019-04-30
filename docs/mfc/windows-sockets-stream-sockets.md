@@ -7,11 +7,11 @@ helpviewer_keywords:
 - stream sockets [MFC]
 ms.assetid: 31faaa34-a995-493f-a30b-b8115293d619
 ms.openlocfilehash: 91f06c4a36e76638708edf085987e51418913fd6
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57271295"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62337831"
 ---
 # <a name="windows-sockets-stream-sockets"></a>Windows ソケット:Stream ソケット
 
@@ -43,4 +43,4 @@ Stream ソケットは、データの到着することが保証する必要が�
 ## <a name="see-also"></a>関連項目
 
 [MFC における Windows ソケット](../mfc/windows-sockets-in-mfc.md)<br/>
-[Windows ソケット:バック グラウンド](../mfc/windows-sockets-background.md)
+[Windows ソケット: 予備知識](../mfc/windows-sockets-background.md)

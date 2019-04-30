@@ -25,11 +25,11 @@ helpviewer_keywords:
 - multibyte code pages
 ms.assetid: cfde53b5-0b73-4684-81b1-a8d3aafc85de
 ms.openlocfilehash: c1f4967baa5fda68a7df33bcd08935dca23fab16
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532211"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62356460"
 ---
 # <a name="setmbcp"></a>_setmbcp
 
@@ -62,7 +62,7 @@ int _setmbcp(
 |-|-|-|
 |[_exec 関数](../../c-runtime-library/exec-wexec-functions.md)|[_mktemp](mktemp-wmktemp.md)|[_stat](stat-functions.md)|
 |[_fullpath](fullpath-wfullpath.md)|[_spawn 関数](../../c-runtime-library/spawn-wspawn-functions.md)|[_tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md)|
-|[_makepath](makepath-wmakepath.md)|[_splitpath](splitpath-wsplitpath.md)|[tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md)|
+|[_makepath](makepath-wmakepath.md)|[_splitpath](splitpath-wsplitpath.md)|[tmpnam](tempnam-wtempnam-tmpnam-wtmpnam.md)|
 
 さらに、マルチバイト文字が表示されるすべてのランタイム ライブラリ ルーチン*argv*または*envp*プログラム引数をパラメーターとして (など、 **_exec**と **_spawn**ファミリ) これらの文字列のマルチバイト コード ページに従って処理します。 そのため、これらのルーチンの呼び出しによって影響を受けるはも **_setmbcp**マルチバイト コード ページを変更します。
 

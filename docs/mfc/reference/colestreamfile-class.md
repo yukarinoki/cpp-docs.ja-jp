@@ -21,11 +21,11 @@ helpviewer_keywords:
 - COleStreamFile [MFC], OpenStream
 ms.assetid: e4f93698-e17c-4a18-a7c0-4b4df8eb4d93
 ms.openlocfilehash: 2bc943c74f456302b13db77bf28b6e4b21a5524b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258733"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62373515"
 ---
 # <a name="colestreamfile-class"></a>COleStreamFile クラス
 
@@ -226,7 +226,7 @@ BOOL OpenStream(
 開かれるストリームの名前です。 Nll は指定できません。
 
 *nOpenFlags*<br/>
-ストリームを開くときに使用するアクセス モード。 排他的読み取り/書き込みモードは既定で使用されます。 使用可能なモードの完全な一覧で、[ほか](../../mfc/reference/cfile-class.md#cfile)を参照してください。
+ストリームを開くときに使用するアクセス モード。 排他的読み取り/書き込みモードは既定で使用されます。 使用可能なモードの完全な一覧で、次を参照してください。[ほか](../../mfc/reference/cfile-class.md#cfile)します。
 
 *pError*<br/>
 指す、 [CFileException](../../mfc/reference/cfileexception-class.md)オブジェクトまたは NULL。 ストリームを開こうとしたによって生成される可能性のある例外を監視する場合は、このパラメーターを指定します。
