@@ -4,11 +4,11 @@ ms.date: 09/17/2018
 ms.topic: conceptual
 ms.assetid: a6c111d0-24f9-4bbb-997d-3db4569761b7
 ms.openlocfilehash: c3def77d8b7a22be05259784e3b80562c8728c15
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220570"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62398915"
 ---
 # <a name="errors-and-exception-handling-modern-c"></a>エラーと例外の処理 (Modern C++)
 
@@ -60,7 +60,7 @@ int main()
 }
 ```
 
-C++ の例外は、C# や Java などの言語と似ています。 **を再試行してください**ブロック、例外がある場合*スロー*なります*キャッチ*の最初の関連付けられている**キャッチ**のと同じ型のブロック、例外。 つまり、実行が移動することから、**スロー**ステートメントを**キャッチ**ステートメント。 使用可能な catch ブロックが見つからない場合、`std::terminate` が呼び出されてプログラムが終了します。 C++ では、どの種類もスローされる可能性があります。ただし、`std::exception` から直接または間接的に派生した型をスローすることをお勧めします。 前の例では、例外の種類で[invalid_argument](../standard-library/invalid-argument-class.md)、標準ライブラリで定義されて、 [ \<stdexcept >](../standard-library/stdexcept.md)ヘッダー ファイル。 C++ を指定しないは必要ありません、**最後に**ブロックに例外がスローされた場合に、すべてのリソースが解放されるかどうかを確認します。 スマート ポインターを使用する Resource Acquisition Is Initialization (RAII) の表現形式には、リソース クリーンアップのための必須機能が用意されています。 詳細については、「[方法 :例外安全性のための設計](../cpp/how-to-design-for-exception-safety.md)します。 C++ のスタック アンワインド機構については、[例外とスタック アンワインド](../cpp/exceptions-and-stack-unwinding-in-cpp.md)を参照してください。
+C++ の例外は、C# や Java などの言語と似ています。 **を再試行してください**ブロック、例外がある場合*スロー*なります*キャッチ*の最初の関連付けられている**キャッチ**のと同じ型のブロック、例外。 つまり、実行が移動することから、**スロー**ステートメントを**キャッチ**ステートメント。 使用可能な catch ブロックが見つからない場合、`std::terminate` が呼び出されてプログラムが終了します。 C++ では、どの種類もスローされる可能性があります。ただし、`std::exception` から直接または間接的に派生した型をスローすることをお勧めします。 前の例では、例外の種類で[invalid_argument](../standard-library/invalid-argument-class.md)、標準ライブラリで定義されて、 [ \<stdexcept >](../standard-library/stdexcept.md)ヘッダー ファイル。 C++ を指定しないは必要ありません、**最後に**ブロックに例外がスローされた場合に、すべてのリソースが解放されるかどうかを確認します。 スマート ポインターを使用する Resource Acquisition Is Initialization (RAII) の表現形式には、リソース クリーンアップのための必須機能が用意されています。 詳細については、「[方法 :例外安全性のための設計](../cpp/how-to-design-for-exception-safety.md)します。 C++ のスタック アンワインド機構については、次を参照してください。[例外とスタック アンワインド](../cpp/exceptions-and-stack-unwinding-in-cpp.md)します。
 
 ## <a name="basic-guidelines"></a>基本的なガイドライン
 
@@ -90,17 +90,17 @@ C++ の例外は、C# や Java などの言語と似ています。 **を再試�
 
 ## <a name="c-exceptions-versus-windows-seh-exceptions"></a>C++ 例外と Windows SEH 例外
 
-C プログラムと C++ プログラムのどちらでも、Windows オペレーティング システムの構造化例外処理 (SEH) 機構を使用できます。 SEH の概念のように、C++ 例外で SEH を使用する点を除いて、 **_ _try**、 **_ _except**、および **_ _finally**の代わりに構築**をお試しください**と**キャッチ**します。 Visual C++ では、C++ 例外が SEH 用に実装されています。 ただし、C++ コードを記述するときは、C++ 例外構文を使用してください。
+C プログラムと C++ プログラムのどちらでも、Windows オペレーティング システムの構造化例外処理 (SEH) 機構を使用できます。 SEH の概念とで似てC++例外、その SEH を使用して点を除いて、 **_ _try**、 **_ _except**、および **_ _finally**の代わりに構築**を再試行してください**と**キャッチ**します。 Visual C++ では、C++ 例外が SEH 用に実装されています。 ただし、C++ コードを記述するときは、C++ 例外構文を使用してください。
 
-SEH の詳細については、[構造化例外処理 (c/c++)](../cpp/structured-exception-handling-c-cpp.md)を参照してください。
+SEH の詳細については、次を参照してください。[構造化例外処理 (c/c++)](../cpp/structured-exception-handling-c-cpp.md)します。
 
 ## <a name="exception-specifications-and-noexcept"></a>例外指定と noexcept
 
-例外指定は、関数がスローする可能性がある例外を指定する方法として C++ に導入されました。 ただし、実際には例外指定に問題があることがわかったため、C++11 ドラフト標準では非推奨とされます。 以外の例外の仕様を使用しないことをお勧めします。 `throw()`、関数が例外のエスケープを許可されませんを示します。 型の例外の仕様を使用する必要がある場合`throw(`*型*`)`、Visual C が、特定の方法で、標準と異なることに注意してください。 詳細については、[例外の仕様 (スロー)](../cpp/exception-specifications-throw-cpp.md)を参照してください。 `noexcept` 指定子は、`throw()` の推奨される代替手段として C++11 に導入されました。
+例外指定は、関数がスローする可能性がある例外を指定する方法として C++ に導入されました。 ただし、実際には例外指定に問題があることがわかったため、C++11 ドラフト標準では非推奨とされます。 以外の例外の仕様を使用しないことをお勧めします。 `throw()`、関数が例外のエスケープを許可されませんを示します。 型の例外の仕様を使用する必要がある場合`throw(`*型*`)`、Visual C が、特定の方法で、標準と異なることに注意してください。 詳細については、次を参照してください。[例外の仕様 (スロー)](../cpp/exception-specifications-throw-cpp.md)します。 `noexcept` 指定子は、`throw()` の推奨される代替手段として C++11 に導入されました。
 
 ## <a name="see-also"></a>関連項目
 
-[方法: 例外と非例外的なコードの間のインターフェイスします。](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)<br/>
+[方法: 例外的なコードと非例外的なコードをインターフェイスで連結する](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)<br/>
 [C++ へようこそ (Modern C++)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [C++ 言語リファレンス](../cpp/cpp-language-reference.md)<br/>
 [.NET 標準ライブラリ](../standard-library/cpp-standard-library-reference.md)

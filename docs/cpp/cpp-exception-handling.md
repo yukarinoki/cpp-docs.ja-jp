@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Visual C++, exception handling
 ms.assetid: 65f80b44-9d0f-4d17-b910-07205a5c5c40
 ms.openlocfilehash: b4eaab7d5bb352cccc612dd950572464b82b67e8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614748"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392311"
 ---
 # <a name="c-exception-handling"></a>C++ 例外処理
 
@@ -38,7 +38,7 @@ C++ 例外処理についてのこの説明には、次の事項が含まれま�
 
 ## <a name="support-for-earlier-mfc-exceptions"></a>MFC の以前のバージョンの例外のサポート
 
-バージョン 4.0 の時点で、MFC は C++ 例外処理メカニズムの使用を開始しました。 新しいコードで C++ 例外処理を使用するように推奨されますが、古いコードが壊れないように、MFC のバージョン 4.0 以降では MFC の以前のバージョンのマクロを保持します。 マクロと新しいメカニズムも組み合わせることができます。 マクロと C++ 例外処理および新しいメカニズムを使用して古いコードを変換する方法の詳細については、記事を参照してください[例外: を使用して MFC マクロと C++ 例外](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md)と[例外: MFC からの変換。例外処理マクロ](../mfc/exceptions-converting-from-mfc-exception-macros.md)します。 以前の MFC 例外マクロを使用している場合、これは C++ の例外のキーワードに評価されます。 参照してください[例外: Version 3.0 での例外処理マクロを変更](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md)します。
+バージョン 4.0 の時点で、MFC は C++ 例外処理メカニズムの使用を開始しました。 新しいコードで C++ 例外処理を使用するように推奨されますが、古いコードが壊れないように、MFC のバージョン 4.0 以降では MFC の以前のバージョンのマクロを保持します。 マクロと新しいメカニズムも組み合わせることができます。 についてはマクロを混在させるとC++例外処理と変換前のコードの新しいメカニズムを使用して、記事を参照してください[例外。MFC マクロの使用とC++例外](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md)と[例外。MFC 例外マクロからの変換](../mfc/exceptions-converting-from-mfc-exception-macros.md)します。 以前の MFC 例外マクロを使用している場合、これは C++ の例外のキーワードに評価されます。 参照してください[例外。バージョン 3.0 での例外処理マクロを変更](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md)します。
 
 ## <a name="see-also"></a>関連項目
 

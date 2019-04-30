@@ -8,11 +8,11 @@ helpviewer_keywords:
 - derived classes [C++], abstract classes [C++]
 ms.assetid: f0c5975b-39de-4d68-9640-6ce57f4632e6
 ms.openlocfilehash: a7b41a2cabc2cff2eca24cf50c6c30d5190d39a9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461309"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62385090"
 ---
 # <a name="abstract-classes-c"></a>抽象クラス (C++)
 
@@ -53,7 +53,7 @@ private:
 
 純粋仮想関数は抽象クラスに対して定義できますが、直接呼び出すには次の構文を使用する必要があります。
 
-*抽象クラス名*::*関数名*)
+*abstract-class-name*::*function-name*()
 
 これが役立つのは、オブジェクトを破棄する処理では常に基底クラスのデストラクターが呼び出されるため、基底クラスに純粋仮想デストラクターが含まれているクラスの階層構造をデザインするときです。 次に例を示します。
 

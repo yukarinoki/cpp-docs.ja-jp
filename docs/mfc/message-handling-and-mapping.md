@@ -7,11 +7,11 @@ helpviewer_keywords:
 - message maps [MFC]
 ms.assetid: 62fe2a1b-944c-449d-a0f0-63c11ee0a3cb
 ms.openlocfilehash: 41f3432b3741019a787ee24b0f508fe8e65e0470
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57279667"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383972"
 ---
 # <a name="message-handling-and-mapping"></a>メッセージの処理とマップ
 
@@ -41,7 +41,7 @@ WM_COMMAND メッセージ-通常、メニューのツールバーのボタン�
 
 - [ユーザー インターフェイス オブジェクトの動的更新](../mfc/how-to-update-user-interface-objects.md)
 
-- [方法: テンプレート クラスのメッセージ マップを作成します。](../mfc/how-to-create-a-message-map-for-a-template-class.md)
+- [方法: テンプレート クラスのメッセージ マップを作成する](../mfc/how-to-create-a-message-map-for-a-template-class.md)
 
 ## <a name="see-also"></a>関連項目
 

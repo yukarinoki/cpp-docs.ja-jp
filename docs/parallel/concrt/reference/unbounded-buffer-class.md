@@ -20,11 +20,11 @@ f1_keywords:
 - AGENTS/concurrency::unbounded_buffer::supports_anonymous_source
 ms.assetid: 6b1a939a-1819-4385-b1d8-708f83d4ec47
 ms.openlocfilehash: 1474381a2d1c0947b2428ab4cf0b4683198eef84
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57288145"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62407836"
 ---
 # <a name="unboundedbuffer-class"></a>unbounded_buffer クラス
 
@@ -76,7 +76,7 @@ class unbounded_buffer : public propagator_block<multi_link_registry<ITarget<   
 |[send_message](#send_message)|メッセージを同期的に渡す、`ISource`このブロック`unbounded_buffer`メッセージング ブロックします。 によって呼び出されます、`send`メソッドは、ソース ブロックによって呼び出されます。|
 |[supports_anonymous_source](#supports_anonymous_source)|上書き、`supports_anonymous_source`メソッドをこのブロックがリンクされていないソースによって提供されたメッセージを受け入れることを示します。 (上書き[itarget::supports_anonymous_source](itarget-class.md#supports_anonymous_source))。|
 
-詳細については、[非同期メッセージ ブロック](../asynchronous-message-blocks.md)を参照してください。
+詳細については、次を参照してください。[非同期メッセージ ブロック](../asynchronous-message-blocks.md)します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -198,8 +198,7 @@ virtual message_status propagate_message(
 ### <a name="parameters"></a>パラメーター
 
 *_PMessage*<br/>
-
-  `message` オブジェクトを指すポインター。
+`message` オブジェクトを指すポインター。
 
 *_PSource*<br/>
 メッセージを提供するソース ブロックへのポインター。
@@ -295,8 +294,7 @@ virtual message_status send_message(
 ### <a name="parameters"></a>パラメーター
 
 *_PMessage*<br/>
-
-  `message` オブジェクトを指すポインター。
+`message` オブジェクトを指すポインター。
 
 *_PSource*<br/>
 メッセージを提供するソース ブロックへのポインター。

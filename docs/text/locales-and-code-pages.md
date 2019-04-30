@@ -16,11 +16,11 @@ helpviewer_keywords:
 - conventions [C++], international character support
 ms.assetid: bd937361-b6d3-4c98-af95-beb7c903187b
 ms.openlocfilehash: c0cfc7f192b65738984feb1933ea720fdf18fc6d
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750716"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410643"
 ---
 # <a name="locales-and-code-pages"></a>ロケールとコード ページ
 
@@ -36,8 +36,7 @@ ms.locfileid: "57750716"
 
 C のランタイム ライブラリには、ロケールとマルチバイトの 2 種類の内部コード ページが存在します。 プログラムの実行中に現在のコード ページを変更することができます (ドキュメントを参照して、 [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)と[_setmbcp](../c-runtime-library/reference/setmbcp.md)関数)。 また、ランタイム ライブラリは、入手して、プログラムの実行中の定数は、オペレーティング システム コード ページの値を使用します。
 
-ロケールのコード ページを変更すると、ロケールに依存する関数の動作は、そのコード ページで規定されている動作に変更されます。 ロケールに依存する関数はすべて、既定で、まず "C" ロケール固有のコード ページを基に動作します。 システム内部のロケールのコード ページもロケールに特有なその他の属性も、`setlocale` 関数を呼び出すことで変更できます。 
-  `setlocale` (LC_ALL, "") を呼び出すと、オペレーティング システムのユーザー ロケールが示すロケールに設定されます。
+ロケールのコード ページを変更すると、ロケールに依存する関数の動作は、そのコード ページで規定されている動作に変更されます。 ロケールに依存する関数はすべて、既定で、まず "C" ロケール固有のコード ページを基に動作します。 システム内部のロケールのコード ページもロケールに特有なその他の属性も、`setlocale` 関数を呼び出すことで変更できます。 `setlocale` (LC_ALL, "") を呼び出すと、オペレーティング システムのユーザー ロケールが示すロケールに設定されます。
 
 同様に、マルチバイトのコード ページを変更すると、マルチバイト関数の動作は、そのコード ページで規定されている動作に変更されます。 既定では、マルチバイト関数はすべて、オペレーティング システム既定のコード ページに対応しているマルチバイト コード ページを使って動作します。 システム内部のマルチバイトのコード ページは、`_setmbcp` 関数を呼び出すことによって変更できます。
 

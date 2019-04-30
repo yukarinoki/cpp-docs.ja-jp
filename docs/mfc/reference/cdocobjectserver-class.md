@@ -17,11 +17,11 @@ helpviewer_keywords:
 - CDocObjectServer [MFC], OnSaveViewState
 ms.assetid: 18cd0dff-0616-4472-b8d9-66c081bc383a
 ms.openlocfilehash: f4b1a352a9fa62dfcb46d1c1cb0784661e66e5b4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289898"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62391137"
 ---
 # <a name="cdocobjectserver-class"></a>CDocObjectServer クラス
 
@@ -63,7 +63,7 @@ DocObject サーバーのドキュメントに含めることができます[CDo
 
 DocObject サーバーをカスタマイズする、独自のクラスから派生させる`CDocObjectServer`そのビューのセットアップ関数をオーバーライドして[OnActivateView](#onactivateview)、 [OnApplyViewState](#onapplyviewstate)、および[OnSaveViewState](#onsaveviewstate). フレームワークの呼び出しに応答クラスの新しいインスタンスを提供する必要があります。
 
-DocObjects については、[CDocObjectServerItem](../../mfc/reference/cdocobjectserveritem-class.md)と[COleCmdUI](../../mfc/reference/colecmdui-class.md)で、 *MFC リファレンス*を参照してください。
+DocObjects については、次を参照してください。 [CDocObjectServerItem](../../mfc/reference/cdocobjectserveritem-class.md)と[COleCmdUI](../../mfc/reference/colecmdui-class.md)で、 *MFC リファレンス*します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -93,8 +93,7 @@ void ActivateDocObject();
 
 ##  <a name="cdocobjectserver"></a>  CDocObjectServer::CDocObjectServer
 
-
-  `CDocObjectServer` オブジェクトを構築して初期化します。
+`CDocObjectServer` オブジェクトを構築して初期化します。
 
 ```
 explicit CDocObjectServer(

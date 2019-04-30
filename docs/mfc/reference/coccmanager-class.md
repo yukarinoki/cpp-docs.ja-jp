@@ -31,11 +31,11 @@ helpviewer_keywords:
 - COccManager [MFC], SplitDialogTemplate
 ms.assetid: 7d47aeed-d1ab-48e3-b4cf-d429718e370a
 ms.openlocfilehash: a83f58b8de2411577d9fc025f7a8f8dc535ea8b3
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57276651"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62388268"
 ---
 # <a name="coccmanager-class"></a>COccManager クラス
 
@@ -99,7 +99,7 @@ virtual COleControlContainer* CreateContainer(CWnd* pWnd);
 
 ### <a name="remarks"></a>Remarks
 
-カスタムのサイトを作成する方法の詳細については、[COleControlContainer::AttachControlSite](../../mfc/reference/colecontrolcontainer-class.md#attachcontrolsite)を参照してください。
+カスタムのサイトを作成する方法の詳細については、次を参照してください。 [COleControlContainer::AttachControlSite](../../mfc/reference/colecontrolcontainer-class.md#attachcontrolsite)します。
 
 ##  <a name="createdlgcontrols"></a>  COccManager::CreateDlgControls
 
@@ -365,7 +365,7 @@ static void AFX_CDECL SetDefaultButton(
 ### <a name="remarks"></a>Remarks
 
 > [!NOTE]
->  コントロールには、OLEMISC_ACTSLIKEBUTTON ステータス ビット セットが必要です。 入りますフラグの詳細については、、[入ります](/windows/desktop/api/oleidl/ne-oleidl-tagolemisc)Windows SDK のトピックを参照してください。
+>  コントロールには、OLEMISC_ACTSLIKEBUTTON ステータス ビット セットが必要です。 入りますフラグの詳細については、次を参照してください。、[入ります](/windows/desktop/api/oleidl/ne-oleidl-tagolemisc)Windows SDK のトピックです。
 
 ##  <a name="splitdialogtemplate"></a>  COccManager::SplitDialogTemplate
 

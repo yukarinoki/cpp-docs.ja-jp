@@ -6,11 +6,11 @@ helpviewer_keywords:
 - window objects [MFC], working with
 ms.assetid: f73aa254-90e3-46a9-8e9b-d78b7054a331
 ms.openlocfilehash: c696d880ffa69b0a0399c5282621546c5783ebe4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57265640"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399487"
 ---
 # <a name="working-with-window-objects"></a>ウィンドウ オブジェクトの操作
 
@@ -20,7 +20,7 @@ Windows の呼び出しの 2 種類のアクティビティの使用。
 
 - ウィンドウでの描画
 
-独自の子ウィンドウを含む任意のウィンドウでの Windows メッセージを処理するために、[関数へのメッセージの割り当て](../mfc/reference/mapping-messages-to-functions.md)C++ window クラスに、メッセージをマップを参照してください。 メッセージ ハンドラー メンバー関数を記述し、クラス。
+独自の子ウィンドウを含む任意のウィンドウでの Windows メッセージを処理するために、次を参照してください。[関数へのメッセージの割り当て](../mfc/reference/mapping-messages-to-functions.md)C++ window クラスに、メッセージをマップします。 メッセージ ハンドラー メンバー関数を記述し、クラス。
 
 ビューで、発生 framework アプリケーションで描画のほとんどが[OnDraw](../mfc/reference/cview-class.md#ondraw)ウィンドウの内容を描画する必要があるたびに、メンバー関数が呼び出されます。 ウィンドウがビューの子である場合は、可能性がありますを委任するいくつかのビューの描画を子ウィンドウさせて`OnDraw`ウィンドウのメンバー関数のいずれかを呼び出します。
 

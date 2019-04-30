@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3075
 ms.assetid: f431daa9-e0fa-48f0-a5c3-f99be96b55e3
 ms.openlocfilehash: 0494961b47e99ce1f3e559302aff56278098a912
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591634"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62406718"
 ---
 # <a name="compiler-error-c3075"></a>コンパイラ エラー C3075
 
@@ -19,7 +19,7 @@ ms.locfileid: "50591634"
 
 値型に参照型のインスタンスを含めることはできません。
 
-詳細については、[参照型の C++ スタック セマンティクス](../../dotnet/cpp-stack-semantics-for-reference-types.md)を参照してください。
+詳細については、次を参照してください。[参照型の C++ スタック セマンティクス](../../dotnet/cpp-stack-semantics-for-reference-types.md)します。
 
 ## <a name="example"></a>例
 

@@ -32,11 +32,11 @@ helpviewer_keywords:
 - std::shared_ptr [C++], use_count
 ms.assetid: 1469fc51-c658-43f1-886c-f4530dd84860
 ms.openlocfilehash: 791a18461b3a0ee8237dec47c87f9d441221141d
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519361"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412554"
 ---
 # <a name="sharedptr-class"></a>shared_ptr クラス
 
@@ -57,7 +57,7 @@ shared_ptr クラスは、参照カウントを使ってリソースを管理す
 
 テンプレートの引数 `T` は、特定のメンバー関数について注記がある場合を除き、不完全な型になる場合があります。
 
-`shared_ptr<T>` オブジェクトを `G*` 型のリソース ポインターまたは `shared_ptr<G>` から構築する場合、ポインターの型 `G*` は `T*` に変換可能であることが必要です。 この条件が満たされていない場合、コードはコンパイルされません。 例えば:
+`shared_ptr<T>` オブジェクトを `G*` 型のリソース ポインターまたは `shared_ptr<G>` から構築する場合、ポインターの型 `G*` は `T*` に変換可能であることが必要です。 この条件が満たされていない場合、コードはコンパイルされません。 例:
 
 ```cpp
 #include <memory>
@@ -134,7 +134,7 @@ null ポインターを使用して初期化される `shared_ptr` オブジェ�
 |[shared_ptr](#shared_ptr)|`shared_ptr` を構築します。|
 |[shared_ptr::~shared_ptr](#dtorshared_ptr)|`shared_ptr` を破棄します。|
 
-### <a name="types"></a>種類
+### <a name="types"></a>型
 
 |型名|説明|
 |-|-|
@@ -468,7 +468,7 @@ void reset(Other *ptr, D dtor, A alloc);
 *A*<br/>
 アロケーターの型。
 
-*Alloc*<br/>
+*alloc*<br/>
 コピーするアロケーター。
 
 ### <a name="remarks"></a>Remarks

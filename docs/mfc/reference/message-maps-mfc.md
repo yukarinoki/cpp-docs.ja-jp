@@ -10,17 +10,17 @@ helpviewer_keywords:
 - MFC, messages
 ms.assetid: 3f9855e4-9d7d-4b64-8f3f-a19ea3cf79ba
 ms.openlocfilehash: 91b7f21d92b2f899895b008b3fab8b541aec9963
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57300103"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412788"
 ---
 # <a name="message-maps-mfc"></a>メッセージ マップ (MFC)
 
 参照のこのセクションでは、すべて一覧表示[メッセージ マップ マクロ](../../mfc/reference/message-map-macros-mfc.md)すべて[CWnd](../../mfc/reference/cwnd-class.md)メッセージ マップ エントリと、対応するメンバー関数のプロトタイプ。
 
-|Category|説明|
+|カテゴリ|説明|
 |--------------|-----------------|
 |ON\_コマンド メッセージ ハンドラー|処理`WM_COMMAND`ユーザー メニューの選択項目またはメニュー アクセス キーによって生成されるメッセージ。|
 |[子ウィンドウの通知メッセージ ハンドラー](../../mfc/reference/child-window-notification-message-handlers.md)|子ウィンドウからの通知メッセージを処理します。|

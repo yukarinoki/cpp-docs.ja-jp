@@ -53,11 +53,11 @@ helpviewer_keywords:
 - CArchive [MFC], m_pDocument
 ms.assetid: 9e950d23-b874-456e-ae4b-fe00781a7699
 ms.openlocfilehash: 8f169964c6a313f37b5ea50a5105af29af7b59b1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266329"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62391323"
 ---
 # <a name="carchive-class"></a>CArchive クラス
 
@@ -296,7 +296,7 @@ BOOL IsBufferEmpty() const;
 
 MFC Windows Sockets クラスを使用したプログラミングをサポートするためにこの関数に渡された`CSocketFile`します。 関連付けられているアーカイブに使用する必要はありません、`CFile`オブジェクト。
 
-使用する理由`IsBufferEmpty`に関連付けられているアーカイブを使用して、`CSocketFile`オブジェクトは、アーカイブのバッファーにが 1 つ以上のメッセージまたはレコードに含まれます。 1 つのメッセージを受信するには、後に使用する必要があります`IsBufferEmpty`バッファーが空になるまでデータの受信を継続するループを制御します。 詳細については、、[受信](../../mfc/reference/casyncsocket-class.md#receive)クラスのメンバー関数`CAsyncSocket`、使用する方法を示す`IsBufferEmpty`を参照してください。
+使用する理由`IsBufferEmpty`に関連付けられているアーカイブを使用して、`CSocketFile`オブジェクトは、アーカイブのバッファーにが 1 つ以上のメッセージまたはレコードに含まれます。 1 つのメッセージを受信するには、後に使用する必要があります`IsBufferEmpty`バッファーが空になるまでデータの受信を継続するループを制御します。 詳細については、次を参照してください。、[受信](../../mfc/reference/casyncsocket-class.md#receive)クラスのメンバー関数`CAsyncSocket`、使用する方法を示す`IsBufferEmpty`します。
 
 詳細については、次を参照してください。 [Windows ソケット。アーカイブ付きソケットの使用](../../mfc/windows-sockets-using-sockets-with-archives.md)します。
 

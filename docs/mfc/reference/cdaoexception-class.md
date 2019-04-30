@@ -19,11 +19,11 @@ helpviewer_keywords:
 - CDaoException [MFC], m_scode
 ms.assetid: b2b01fa9-7ce2-42a1-842e-40f13dc50da4
 ms.openlocfilehash: 8d49291c51f66ee837f9b31a2ade390cec48c51a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289001"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399805"
 ---
 # <a name="cdaoexception-class"></a>CDaoException クラス
 
@@ -63,7 +63,7 @@ class CDaoException : public CException
 クラスには、例外の原因を調べて使用できるパブリック データ メンバーが含まれています。 `CDaoException` オブジェクトが構築され、DAO データベース クラスのメンバー関数によってスローされます。
 
 > [!NOTE]
->  DAO データベース クラスは、ベースの開いているデータベースの接続 (ODBC) で MFC データベース クラスとは異なります。 DAO データベース クラスの名前には、"CDao"プレフィックスが付いています。 DAO クラスで ODBC データ ソースのアクセスできます。 一般に、DAO に基づいて MFC クラスは ODBC; に基づいて MFC クラスよりもより高機能ですDAO ベースのクラスは、独自のデータベース エンジンを使用して、ODBC ドライバーを含む、データにアクセスできます。 DAO ベースのクラスには、DAO を直接呼び出すことがなく、クラスを使用してテーブルの追加などのデータ定義言語 (DDL) 操作もサポートします。 ODBC クラスによってスローされた例外については、[CDBException](../../mfc/reference/cdbexception-class.md)を参照してください。
+>  DAO データベース クラスは、ベースの開いているデータベースの接続 (ODBC) で MFC データベース クラスとは異なります。 DAO データベース クラスの名前には、"CDao"プレフィックスが付いています。 DAO クラスで ODBC データ ソースのアクセスできます。 一般に、DAO に基づいて MFC クラスは ODBC; に基づいて MFC クラスよりもより高機能ですDAO ベースのクラスは、独自のデータベース エンジンを使用して、ODBC ドライバーを含む、データにアクセスできます。 DAO ベースのクラスには、DAO を直接呼び出すことがなく、クラスを使用してテーブルの追加などのデータ定義言語 (DDL) 操作もサポートします。 ODBC クラスによってスローされた例外については、次を参照してください。 [CDBException](../../mfc/reference/cdbexception-class.md)します。
 
 スコープ内で例外オブジェクトにアクセスすることができます、[キャッチ](../../mfc/reference/exception-processing.md#catch)式。 スローすることもできます`CDaoException`で独自のコードからのオブジェクト、 [AfxThrowDaoException](../../mfc/reference/exception-processing.md#afxthrowdaoexception)グローバル関数。
 
@@ -101,8 +101,7 @@ CDaoException();
 
 ##### <a name="to-retrieve-the-dao-error-information"></a>DAO のエラー情報を取得するには
 
-1. 
-  `CDaoException` オブジェクトを構築します。
+1. `CDaoException` オブジェクトを構築します。
 
 1. 例外オブジェクトの[GetErrorCount](#geterrorcount)は、データベース エンジンのエラーのコレクション内のエラー オブジェクトの数を調べます。 (通常 1 つだけ、ODBC データ ソースを使用している場合を除き、します)。
 

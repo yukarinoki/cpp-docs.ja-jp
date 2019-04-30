@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ODBC [C++], RFX
 ms.assetid: f5ddfbf0-2901-48d7-9848-4fb84de3c7ee
 ms.openlocfilehash: 8630fab11728b0c0cd16eee5035df028a8382706
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59032220"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62395717"
 ---
 # <a name="record-field-exchange-rfx"></a>レコード フィールド エクスチェンジ (RFX)
 
@@ -38,11 +38,11 @@ RFX の高度な知識が必要な場合は、次を参照してください。[
 
 次のトピックでは、レコード セット オブジェクトの使用の詳細について説明します。
 
-- [レコード フィールド エクス チェンジ:RFX の使い方](../../data/odbc/record-field-exchange-using-rfx.md)
+- [レコード フィールド エクスチェンジ: RFX の使い方](../../data/odbc/record-field-exchange-using-rfx.md)
 
-- [レコード フィールド エクス チェンジ:RFX 関数の使い方](../../data/odbc/record-field-exchange-using-the-rfx-functions.md)
+- [レコード フィールド エクスチェンジ: RFX 関数の使い方](../../data/odbc/record-field-exchange-using-the-rfx-functions.md)
 
-- [レコード フィールド エクス チェンジ:RFX のしくみ](../../data/odbc/record-field-exchange-how-rfx-works.md)
+- [レコード フィールド エクスチェンジ: RFX の動作のしくみ](../../data/odbc/record-field-exchange-how-rfx-works.md)
 
 ## <a name="see-also"></a>関連項目
 

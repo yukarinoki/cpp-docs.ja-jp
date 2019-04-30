@@ -11,11 +11,11 @@ helpviewer_keywords:
 - sockets [MFC], ports
 ms.assetid: e050261a-9285-4f31-a1c5-6c8033af5b4a
 ms.openlocfilehash: c33ec1376c1898272cf80e8d77c5cc273e16f9de
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57277778"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62389373"
 ---
 # <a name="windows-sockets-ports-and-socket-addresses"></a>Windows ソケット:ポートとソケット アドレス
 
@@ -40,15 +40,15 @@ ms.locfileid: "57277778"
 
 詳細については次を参照してください:
 
-- [Windows ソケット:Casyncsocket クラス](../mfc/windows-sockets-using-class-casyncsocket.md)
+- [Windows ソケット: CAsyncSocket クラスの使い方](../mfc/windows-sockets-using-class-casyncsocket.md)
 
-- [Windows ソケット:アーカイブ付きソケットの使用](../mfc/windows-sockets-using-sockets-with-archives.md)
+- [Windows ソケット: アーカイブ付きソケットの使用](../mfc/windows-sockets-using-sockets-with-archives.md)
 
-- [Windows ソケット:アーカイブ付きソケットのしくみ](../mfc/windows-sockets-how-sockets-with-archives-work.md)
+- [Windows ソケット: アーカイブ付きソケットの動作](../mfc/windows-sockets-how-sockets-with-archives-work.md)
 
-- [Windows ソケット:Stream ソケット](../mfc/windows-sockets-stream-sockets.md)
+- [Windows ソケット: ストリーム ソケット](../mfc/windows-sockets-stream-sockets.md)
 
-- [Windows ソケット:データグラム ソケット](../mfc/windows-sockets-datagram-sockets.md)
+- [Windows ソケット: データグラム ソケット](../mfc/windows-sockets-datagram-sockets.md)
 
 ## <a name="see-also"></a>関連項目
 

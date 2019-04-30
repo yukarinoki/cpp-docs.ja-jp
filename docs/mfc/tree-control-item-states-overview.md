@@ -7,11 +7,11 @@ helpviewer_keywords:
 - CTreeCtrl class [MFC], item states
 ms.assetid: 2db11ae0-0d87-499d-8c1f-5e0dbe9e94c8
 ms.openlocfilehash: 57c6714073f4939ffb791a78454e9eac6342309b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57264600"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392467"
 ---
 # <a name="tree-control-item-states-overview"></a>ツリー コントロール項目の状態の概要
 
@@ -25,7 +25,7 @@ ms.locfileid: "57264600"
 
 状態を変更する別の例は、アイテムのオーバーレイのイメージを設定することです。 これを実現する*取得*含める必要があります、`TVIS_OVERLAYMASK`値、および *%n 状態*1 ベース イメージのインデックス、オーバーレイ シフトを使用して 8 ビットを左に含める必要があります、 [INDEXTOOVERLAYMASK](/windows/desktop/api/commctrl/nf-commctrl-indextooverlaymask)マクロです。 インデックスには、0 をオーバーレイ画像を指定しない場合があります。 オーバーレイ画像する必要がありますに加えオーバーレイのイメージのツリー コントロールの一覧に以前の呼び出しによって、 [CImageList::SetOverlayImage](../mfc/reference/cimagelist-class.md#setoverlayimage)関数。 関数を追加するには、イメージの 1 から始まるインデックスを指定しますこれからマクロを使用するインデックスです。 ツリー コントロールでは、最大 4 つのオーバーレイ画像を持つことができます。
 
-項目の状態のイメージを設定する*取得*含める必要があります、`TVIS_STATEIMAGEMASK`値、および*状態*1 から始まるインデックスのシフト状態のイメージを使用して、12 ビットを左に含める必要があります、 [INDEXTOSTATEIMAGEMASK](/windows/desktop/api/commctrl/nf-commctrl-indextostateimagemask)マクロ。 インデックスは、状態の画像を含まないように指定する 0 にできます。 イメージのオーバーレイと状態の詳細については、[ツリー コントロールのイメージ リスト](../mfc/tree-control-image-lists.md)を参照してください。
+項目の状態のイメージを設定する*取得*含める必要があります、`TVIS_STATEIMAGEMASK`値、および*状態*1 から始まるインデックスのシフト状態のイメージを使用して、12 ビットを左に含める必要があります、 [INDEXTOSTATEIMAGEMASK](/windows/desktop/api/commctrl/nf-commctrl-indextostateimagemask)マクロ。 インデックスは、状態の画像を含まないように指定する 0 にできます。 イメージのオーバーレイと状態の詳細については、次を参照してください。[ツリー コントロールのイメージ リスト](../mfc/tree-control-image-lists.md)します。
 
 ## <a name="see-also"></a>関連項目
 

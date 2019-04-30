@@ -7,11 +7,11 @@ helpviewer_keywords:
 - sockets [MFC], deriving from socket classes
 ms.assetid: 3a26e67a-e323-433b-9b05-eca018799801
 ms.openlocfilehash: 12ab66cfd9212cd79752e2f6359b857194c6428c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270311"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62385259"
 ---
 # <a name="windows-sockets-deriving-from-socket-classes"></a>Windows ソケット:ソケット クラスから派生します。
 
@@ -27,15 +27,15 @@ ms.locfileid: "57270311"
 
 詳細については次を参照してください:
 
-- [Windows ソケット:アーカイブ付きソケットの使用](../mfc/windows-sockets-using-sockets-with-archives.md)
+- [Windows ソケット: アーカイブ付きソケットの使用](../mfc/windows-sockets-using-sockets-with-archives.md)
 
-- [Windows ソケット:Casyncsocket クラス](../mfc/windows-sockets-using-class-casyncsocket.md)
+- [Windows ソケット: CAsyncSocket クラスの使い方](../mfc/windows-sockets-using-class-casyncsocket.md)
 
-- [Windows ソケット:ブロック](../mfc/windows-sockets-blocking.md)
+- [Windows ソケット: ブロッキング](../mfc/windows-sockets-blocking.md)
 
-- [Windows ソケット:バイトの順序付け](../mfc/windows-sockets-byte-ordering.md)
+- [Windows ソケット: バイトの順序付け](../mfc/windows-sockets-byte-ordering.md)
 
-- [Windows ソケット:文字列の変換](../mfc/windows-sockets-converting-strings.md)
+- [Windows ソケット: 文字列の変換](../mfc/windows-sockets-converting-strings.md)
 
 ## <a name="see-also"></a>関連項目
 

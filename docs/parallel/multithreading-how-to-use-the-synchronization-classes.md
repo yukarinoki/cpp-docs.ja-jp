@@ -14,11 +14,11 @@ helpviewer_keywords:
 - threading [C++], thread-safe class design
 ms.assetid: f266d4c6-0454-4bda-9758-26157ef74cc5
 ms.openlocfilehash: 6115d942abc61fbfc9d60ca1ccf97d4b423ff7c1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304653"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62407693"
 ---
 # <a name="multithreading-how-to-use-the-mfc-synchronization-classes"></a>マルチ スレッド。MFC 同期クラスを使用する方法
 
@@ -38,8 +38,7 @@ ms.locfileid: "57304653"
 
 このようにスレッド セーフなクラスをデザインすると、非スレッド セーフなクラスと同じように、マルチスレッド アプリケーションで簡単に使用できるだけでなく、安全性も保証されます。 同期オブジェクトと同期アクセス オブジェクトをリソースのクラスにカプセル化すると、同期コードを使わずに、スレッドを安全に使用できます。
 
-次のコード例では、共有リソース クラスで宣言されたデータ メンバー `m_CritSection` (`CCriticalSection` 型) と `CSingleLock` オブジェクトを使って、この方法を示します。 
-  `CWinThread` から派生する共有リソースの同期は、`m_CritSection` オブジェクトのアドレスを使って `CSingleLock` オブジェクトを作成することによって行います。 まず、リソースのロックを行い、ロックを取得すると、共有オブジェクト側の作業は完了です。 作業が完了すると、`Unlock` 呼び出しによってリソースのロックが解除されます。
+次のコード例では、共有リソース クラスで宣言されたデータ メンバー `m_CritSection` (`CCriticalSection` 型) と `CSingleLock` オブジェクトを使って、この方法を示します。 `CWinThread` から派生する共有リソースの同期は、`m_CritSection` オブジェクトのアドレスを使って `CSingleLock` オブジェクトを作成することによって行います。 まず、リソースのロックを行い、ロックを取得すると、共有オブジェクト側の作業は完了です。 作業が完了すると、`Unlock` 呼び出しによってリソースのロックが解除されます。
 
 ```
 CSingleLock singleLock(&m_CritSection);
@@ -55,7 +54,7 @@ singleLock.Unlock();
 
 この手法の欠点は、同期オブジェクトを追加しない場合と比べて、クラスの動作が少し遅くなることです。 また、同期オブジェクトを複数のスレッドで削除した場合は、マージが成功するとは限りません。 このような場合は、同期オブジェクトを別個に管理します。
 
-さまざまな状況で使用する同期クラスを決定する方法の詳細については、次を参照してください。[マルチ スレッド。同期クラスを使用するときに](multithreading-when-to-use-the-synchronization-classes.md)します。 同期の詳細については、次を参照してください。[同期](/windows/desktop/Sync/synchronization)Windows SDK に含まれています。 MFC でマルチ スレッドのサポートの詳細については、[C++ と MFC を使用するマルチ スレッド](multithreading-with-cpp-and-mfc.md)を参照してください。
+さまざまな状況で使用する同期クラスを決定する方法の詳細については、次を参照してください。[マルチ スレッド。同期クラスを使用するときに](multithreading-when-to-use-the-synchronization-classes.md)します。 同期の詳細については、次を参照してください。[同期](/windows/desktop/Sync/synchronization)Windows SDK に含まれています。 MFC でマルチ スレッドのサポートの詳細については、次を参照してください。 [C++ と MFC を使用するマルチ スレッド](multithreading-with-cpp-and-mfc.md)します。
 
 ## <a name="see-also"></a>関連項目
 

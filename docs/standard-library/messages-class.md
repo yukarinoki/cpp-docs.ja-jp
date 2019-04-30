@@ -23,11 +23,11 @@ helpviewer_keywords:
 - std::messages [C++], open
 ms.assetid: c4c71f40-4f24-48ab-9f7c-daccd8d5bd83
 ms.openlocfilehash: 7a024a8cad8c536b25127d033468874de5ebd8af
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568532"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383582"
 ---
 # <a name="messages-class"></a>messages クラス
 
@@ -152,10 +152,10 @@ virtual string_type do_get(
 *_Catval*<br/>
 検索されるメッセージ カタログを示す識別値。
 
-*設定 (_s)*<br/>
+*_Set*<br/>
 メッセージ カタログ内のメッセージの検索に使用される最初の識別値。
 
-*メッセージ (_m)*<br/>
+*_Message*<br/>
 メッセージ カタログ内のメッセージの検索に使用される 2 番目の識別値。
 
 *_Dfault*<br/>
@@ -222,10 +222,10 @@ string_type get(
 *_Catval*<br/>
 検索されるメッセージ カタログを示す識別値。
 
-*設定 (_s)*<br/>
+*_Set*<br/>
 メッセージ カタログ内のメッセージの検索に使用される最初の識別値。
 
-*メッセージ (_m)*<br/>
+*_Message*<br/>
 メッセージ カタログ内のメッセージの検索に使用される 2 番目の識別値。
 
 *_Dfault*<br/>
@@ -264,11 +264,11 @@ protected: messages(
 
 使用可能な値を *_Refs*パラメーターとその重要性は。
 
-- 0: オブジェクトの有効期間はそれが含まれるロケールによって管理されます。
+- 0:オブジェクトの有効期間は、それが含まれるロケールによって管理されます。
 
-- 1: オブジェクトの有効期間を手動で管理する必要があります。
+- 1:オブジェクトの有効期間は、手動で管理する必要があります。
 
-- \> 1: これらの値が定義されていません。
+- \> 1:これらの値が定義されていません。
 
 デストラクターが保護されているため、利用できる直接的な例はありません。
 

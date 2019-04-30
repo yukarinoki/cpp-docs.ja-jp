@@ -8,11 +8,11 @@ helpviewer_keywords:
 - passing parameters, to queries at runtime
 ms.assetid: 7d1dfeb6-5ee0-45e2-aacc-63bc52a465cd
 ms.openlocfilehash: df67256c54cae3e2adb054d653d3e58bb91dd631
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59026163"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62397758"
 ---
 # <a name="recordset-parameterizing-a-recordset-odbc"></a>レコード セット:レコード セット (ODBC) をパラメーター化
 
@@ -176,5 +176,5 @@ if( !rsStudents.Requery( ) )
 ## <a name="see-also"></a>関連項目
 
 [レコードセット (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[レコード セット:追加、更新、および削除 (Odbc)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)<br/>
-[レコード セット:レコード セットの選択が (ODBC) を記録する方法](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)
+[レコードセット: レコードの追加、更新、削除 (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)<br/>
+[レコードセット: レコードセットでのレコード選択のしくみ (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)

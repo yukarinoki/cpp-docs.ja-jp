@@ -7,18 +7,18 @@ helpviewer_keywords:
 - Visual C++ projects
 ms.assetid: 4ef2cc1a-e3e5-4d67-8d8d-9c614f8ec5d3
 ms.openlocfilehash: de3742717bf55c53ab4007aaed18b6ce687fbede
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57817379"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387462"
 ---
 # <a name="how-to-create-verifiable-c-projects-ccli"></a>方法: 検証可能な C++ プロジェクトを作成 (C +/cli CLI)
 
 Visual C アプリケーション ウィザードでは、検証可能なプロジェクトは作成されません。
 
 > [!IMPORTANT]
-> Visual Studio 2015 で非推奨とされ、Visual Studio 2017 がサポートしていない、 **/clr: 純粋な**と **/clr:safe**検証可能なプロジェクトを作成します。 検証可能なコードが必要な場合は、C# コードを変換することをお勧めします。
+> Visual Studio 2015 で非推奨とされ、Visual Studio 2017 がサポートしていない、 **/clr: 純粋な**と **/clr:safe**検証可能なプロジェクトを作成します。 検証可能なコードが必要な場合は、c# コードを変換することをお勧めします。
 
 ただし、以前のバージョンをサポートする Visual C コンパイラ ツールセットを使用している場合 **/clr: 純粋な**と **/clr:safe**、検証可能にするプロジェクトを変換できます。 このトピックでは、プロジェクトのプロパティを設定し、検証可能なアプリケーションを生成するために、Visual C プロジェクトを変換するプロジェクトのソース ファイルを変更する方法について説明します。
 
@@ -28,7 +28,7 @@ Visual C アプリケーション ウィザードでは、検証可能なプロ�
 
 ### <a name="to-change-the-compiler-and-linker-settings"></a>コンパイラとリンカーの設定を変更するには
 
-1. プロジェクトのプロパティ ページを表示します。 詳細については、[コンパイラを設定し、ビルド プロパティ](../build/working-with-project-properties.md)を参照してください。
+1. プロジェクトのプロパティ ページを表示します。 詳細については、次を参照してください。[コンパイラを設定し、ビルド プロパティ](../build/working-with-project-properties.md)します。
 
 1. **全般**ページで、**構成プロパティ**、ノード セット、**共通言語ランタイム サポート**プロパティを**安全な MSIL 共通言語ランタイム サポート (//clr:safe)** します。
 
@@ -56,7 +56,7 @@ Visual C アプリケーション ウィザードでは、検証可能なプロ�
 
 1. プロジェクトのメインの .cpp ファイルで Main() _tmain() に変更します。
 
-1. プロジェクトのプロパティ ページを表示します。 詳細については、[コンパイラを設定し、ビルド プロパティ](../build/working-with-project-properties.md)を参照してください。
+1. プロジェクトのプロパティ ページを表示します。 詳細については、次を参照してください。[コンパイラを設定し、ビルド プロパティ](../build/working-with-project-properties.md)します。
 
 1. **[詳細設定]** ページで、**リンカー**ノード、入力`Main`として、**エントリ ポイント**プロパティの値。
 

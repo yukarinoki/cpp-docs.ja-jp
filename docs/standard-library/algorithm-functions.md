@@ -201,11 +201,11 @@ helpviewer_keywords:
 - std::partition_copy [C++]
 - std::swap [C++]
 ms.openlocfilehash: 260b2ee780956550678fcb01b3a018a60fb58deb
-ms.sourcegitcommit: 360b55e89e5954f494e52b1cf989fbaceda06f1c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54334678"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411189"
 ---
 # <a name="ltalgorithmgt-functions"></a>&lt;algorithm&gt; 関数
 
@@ -1281,7 +1281,7 @@ OutputIterator fill_n(
 
 ### <a name="parameters"></a>パラメーター
 
-*まずは*<br/>
+*First*<br/>
 値が割り当てられる出力反復子の範囲の最初の要素の位置を示す*Val*します。
 
 *カウント*<br/>
@@ -2055,7 +2055,7 @@ void generate_n(
 
 ### <a name="parameters"></a>パラメーター
 
-*まずは*<br/>
+*First*<br/>
 値が割り当てられる範囲の最初の要素の位置を示す出力反復子。
 
 *カウント*<br/>
@@ -4261,7 +4261,7 @@ constexpr pair<Type&, Type&> minmax(
 
 ### <a name="remarks"></a>Remarks
 
-最初のテンプレート関数を返します`pair<const Type&, const Type&>( right , left )`場合*右*がより小さい*左*します。 返しますそれ以外の場合、`pair<const Type&, const Type&>( left , right )`します。
+最初のテンプレート関数を返します`pair<const Type&, const Type&>( right , left )`場合*右*がより小さい*左*します。 それ以外の場合は、 `pair<const Type&, const Type&>( left , right )`を返します。
 
 2 番目のメンバー関数は、最初の要素はより小さく、2 番目が大きい、述語で比較した場合のペアを返します*comp*します。
 
@@ -6430,7 +6430,7 @@ void rotate(
 *中間*<br/>
 範囲の境界を定義する前方反復子。範囲の最初の部分にある要素と交換される要素が含まれる 2 番目の部分の最初の要素の位置を示します。
 
-*前の*<br/>
+*Last*<br/>
 回転対象の範囲内の最後の要素の 1 つ後ろの位置を示す前方反復子。
 
 ### <a name="remarks"></a>Remarks

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - images [MFC], combo box items
 ms.assetid: dfff25fe-af70-47a2-8032-3901d1e6842d
 ms.openlocfilehash: 6e4d983d53e49fc8d9c80c206f1a23078eb82f61
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266992"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411553"
 ---
 # <a name="using-image-lists-in-an-extended-combo-box-control"></a>拡張コンボ ボックス コントロールでのイメージ リストの使い方
 
@@ -33,7 +33,7 @@ ms.locfileid: "57266992"
 
 1. イメージ リストへの呼び出しにコントロールを関連付ける[CComboBoxEx::SetImageList](../mfc/reference/ccomboboxex-class.md#setimagelist)します。
 
-イメージ リスト コントロールに関連付けられていると、個別には次の 3 つの可能な状態の各項目を使用するイメージを指定できます。 詳細については、[、個々 の項目のイメージの設定](../mfc/setting-the-images-for-an-individual-item.md)を参照してください。
+イメージ リスト コントロールに関連付けられていると、個別には次の 3 つの可能な状態の各項目を使用するイメージを指定できます。 詳細については、次を参照してください。 [、個々 の項目のイメージの設定](../mfc/setting-the-images-for-an-individual-item.md)します。
 
 ## <a name="see-also"></a>関連項目
 

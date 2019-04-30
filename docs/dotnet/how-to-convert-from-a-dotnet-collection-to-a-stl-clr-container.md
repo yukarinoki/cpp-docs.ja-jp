@@ -6,11 +6,11 @@ helpviewer_keywords:
 - STL/CLR Containers [STL/CLR]
 ms.assetid: bb927c48-78e8-4150-bd0b-787c651f4a87
 ms.openlocfilehash: 836623f6d539b7b28765763a3dc36d477f8c1499
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57741686"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387553"
 ---
 # <a name="how-to-convert-from-a-net-collection-to-a-stlclr-container"></a>方法: .NET コレクションを STL/CLR コンテナーに変換します。
 
@@ -24,7 +24,7 @@ ms.locfileid: "57741686"
 
 または
 
-1. 作成して汎用 STL/CLR コンテナーを作成、 [collection_adapter](../dotnet/collection-adapter-stl-clr.md)オブジェクト。 .NET コレクション インターフェイスは、このテンプレート クラスは、引数として受け取ります。 どのインターフェイスがサポートされていることを確認するには、[collection_adapter (STL/CLR)](../dotnet/collection-adapter-stl-clr.md)を参照してください。
+1. 作成して汎用 STL/CLR コンテナーを作成、 [collection_adapter](../dotnet/collection-adapter-stl-clr.md)オブジェクト。 .NET コレクション インターフェイスは、このテンプレート クラスは、引数として受け取ります。 どのインターフェイスがサポートされていることを確認するには、次を参照してください。 [collection_adapter (STL/CLR)](../dotnet/collection-adapter-stl-clr.md)します。
 
 1. コンテナーを .NET コレクションの内容をコピーします。 これを行う、STL/CLR を使用して[アルゴリズム](../dotnet/algorithm-stl-clr.md)、またはによって .NET コレクションを反復処理して、各要素のコピーを STL/CLR コンテナーに挿入します。
 

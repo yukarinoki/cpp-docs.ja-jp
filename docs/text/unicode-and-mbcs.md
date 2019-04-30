@@ -12,11 +12,11 @@ helpviewer_keywords:
 - runtime [C++], language portability
 ms.assetid: 677baec6-71b4-4579-94df-64f18bc117c4
 ms.openlocfilehash: e884dcfaa22bf720e9579bf2d5d866d595501887
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57820781"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410526"
 ---
 # <a name="unicode-and-mbcs"></a>Unicode と MBCS
 
@@ -32,7 +32,7 @@ MFC (Microsoft Foundation Class) ライブラリ、Visual C++ の C ランタイ
 
 - 国際市場向けに作成されたアプリケーションの MBCS プログラミングを簡略化するツールをサポート。
 
-   MBCS をサポートしている Windows オペレーティング システム上で Visual C++ 開発システムを実行すると、システム内の統合ソース コード エディター、デバッガー、コマンド ライン ツールなどを含むすべてが MBCS をサポートします。 詳細については、[Visual c における MBCS のサポート](../text/mbcs-support-in-visual-cpp.md)を参照してください。
+   MBCS をサポートしている Windows オペレーティング システム上で Visual C++ 開発システムを実行すると、システム内の統合ソース コード エディター、デバッガー、コマンド ライン ツールなどを含むすべてが MBCS をサポートします。 詳細については、次を参照してください。 [Visual c における MBCS のサポート](../text/mbcs-support-in-visual-cpp.md)します。
 
 > [!NOTE]
 >  このドキュメントでは、MBCS は、Unicode でサポートされていないすべてのマルチバイト文字を指します。 Visual C++ では、MBCS は常に DBCS を意味します。 2 バイトを超える文字セットはサポートされていません。

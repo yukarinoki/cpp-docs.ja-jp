@@ -8,11 +8,11 @@ helpviewer_keywords:
 - MFC, application development
 ms.assetid: 6a8d8a03-abfa-4976-86c2-c5773a4b7179
 ms.openlocfilehash: 63636e8c5738eb3823de0befa6237f7ae5b3491d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57288169"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399461"
 ---
 # <a name="writing-mfc-applications"></a>MFC アプリケーションの作成
 
@@ -32,7 +32,7 @@ ms.locfileid: "57288169"
 
 インターネット アプリケーションに関する初期の設計に関する決定を行った後に開始するアプリケーション ウィザードを使用できます。 アプリケーション ウィザードを使用して、スケルトン アプリケーションを作成し、次の記事で説明されているようにコードを変更します。
 
-- ActiveX コントロールは、[インターネット上の ActiveX コントロール](../mfc/activex-controls-on-the-internet.md)を参照してください。
+- ActiveX コントロールは、次を参照してください。[インターネット上の ActiveX コントロール](../mfc/activex-controls-on-the-internet.md)します。
 
 次の記事では、プログラミング タスクを開始するための手順も提供します。
 

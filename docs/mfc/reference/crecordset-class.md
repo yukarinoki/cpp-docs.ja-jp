@@ -131,11 +131,11 @@ helpviewer_keywords:
 - CRecordset [MFC], m_strSort
 ms.assetid: dd89a21d-ef39-4aab-891b-1e373d67c855
 ms.openlocfilehash: efb833a8d4cc0b801f75951bc648d6b83df5bae8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305186"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62372206"
 ---
 # <a name="crecordset-class"></a>CRecordset クラス
 
@@ -288,7 +288,7 @@ virtual void AddNew();
 
 呼び出すことはできません`AddNew`レコード セットを持つ`Open`メンバー関数が呼び出されていません。 A`CDBException`を呼び出す場合にスローされる`AddNew`レコード セットに追加することはできません。 呼び出すことによって、レコード セットは更新可能かどうかを判断する[CanAppend](#canappend)します。
 
-詳細については、次の記事を参照してください。[レコード セット:レコード セットの更新プログラムによる (ODBC) の記録](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)、[レコード セット。追加、更新、および削除 (Odbc)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)、および[トランザクション (ODBC)](../../data/odbc/transaction-odbc.md)します。
+詳細については、次の記事を参照してください。[レコードセット: レコード セットの更新プログラムによる (ODBC) の記録](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)、[レコード セット。追加、更新、および削除 (Odbc)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)、および[トランザクション (ODBC)](../../data/odbc/transaction-odbc.md)します。
 
 ### <a name="example"></a>例
 
@@ -1580,7 +1580,7 @@ virtual BOOL Open(
 
 レコードセットによって定義されたクエリを実行するには、このメンバー関数を呼び出す必要があります。 呼び出しの前に`Open`、レコード セット オブジェクトを構築する必要があります。
 
-データ ソースへの接続をこのレコード セットは、呼び出す前に、レコード セットを作成する方法に依存`Open`します。 渡す場合、 [CDatabase](../../mfc/reference/cdatabase-class.md)このメンバー関数を使用して、オブジェクトがデータ ソースに接続されていないレコード セットのコンス トラクターを[GetDefaultConnect](#getdefaultconnect)しようとするデータベース オブジェクトを開きます。 コンス トラクターが構築する場合は、レコード セットのコンス トラクターに NULL を渡すと、 `CDatabase` 、オブジェクトと`Open`データベース オブジェクトの接続を試みます。 レコード セットとさまざまな状況で接続を閉じる方法の詳細については、[閉じる](#close)を参照してください。
+データ ソースへの接続をこのレコード セットは、呼び出す前に、レコード セットを作成する方法に依存`Open`します。 渡す場合、 [CDatabase](../../mfc/reference/cdatabase-class.md)このメンバー関数を使用して、オブジェクトがデータ ソースに接続されていないレコード セットのコンス トラクターを[GetDefaultConnect](#getdefaultconnect)しようとするデータベース オブジェクトを開きます。 コンス トラクターが構築する場合は、レコード セットのコンス トラクターに NULL を渡すと、 `CDatabase` 、オブジェクトと`Open`データベース オブジェクトの接続を試みます。 レコード セットとさまざまな状況で接続を閉じる方法の詳細については、次を参照してください。[閉じる](#close)します。
 
 > [!NOTE]
 >  `CRecordset` オブジェクトを使用したデータ ソースへのアクセスは常に共有されます。 `CDaoRecordset` クラスとは異なり、`CRecordset` オブジェクトを使用して排他アクセスでデータ ソースを開くことはできません。

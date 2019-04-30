@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4398
 ms.assetid: b6221432-9fed-4272-a547-a73f587904e6
 ms.openlocfilehash: 4126a1267b41cdf9c0161c7e85a9057b2a301d77
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50578465"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62401970"
 ---
 # <a name="compiler-warning-level-3-c4398"></a>コンパイラの警告 (レベル 3) C4398
 
@@ -23,7 +23,7 @@ ms.locfileid: "50578465"
 
 この警告を解決するには、変数を明示的にマークすることによって`__declspec(appdomain)`します。 Visual Studio 2017 の前に Visual Studio のバージョンでは、この警告を解決でコンパイルする **/clr: 純粋な**、appdomain ごとのグローバル変数は既定では、これです。 **/Clr: 純粋な**コンパイラ オプションは Visual Studio 2015 で非推奨とされ、Visual Studio 2017 でサポートされていません。
 
-詳細については、[appdomain](../../cpp/appdomain.md)と[アプリケーション ドメインと Visual c](../../dotnet/application-domains-and-visual-cpp.md)を参照してください。
+詳細については、次を参照してください。 [appdomain](../../cpp/appdomain.md)と[アプリケーション ドメインと Visual c](../../dotnet/application-domains-and-visual-cpp.md)します。
 
 ## <a name="example"></a>例
 

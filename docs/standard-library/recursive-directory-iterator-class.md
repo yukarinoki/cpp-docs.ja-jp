@@ -5,11 +5,11 @@ f1_keywords:
 - filesystem/std::tr2::sys::recursive_directory_iterator
 ms.assetid: 79a061bd-5b64-404c-97e8-749c888c2ced
 ms.openlocfilehash: 52e6f738aa226dba26bae0cf6e97cd18d107d677
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50593340"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62370132"
 ---
 # <a name="recursivedirectoryiterator-class"></a>recursive_directory_iterator クラス
 
@@ -142,7 +142,7 @@ recursive_directory_iterator& operator=(recursive_directory_iterator&&) noexcept
 *recursive_directory_iterator*<br/>
 [Recursive_directory_iterator](../standard-library/recursive-directory-iterator-class.md)にコピーされる、`recursive_directory_iterator`します。
 
-## <a name="op_eq"></a> recursive_directory_iterator::operator = =
+## <a name="op_eq"></a> recursive_directory_iterator::operator==
 
 返します**true**両方の場合にのみ`*this`と*右*シーケンス末尾の反復子またはその両方がないエンド-の-シーケンスの反復子。
 
@@ -163,7 +163,7 @@ bool operator==(const recursive_directory_iterator& right) const;
 const directory_entry& operator*() const;
 ```
 
-## <a name="op_cast"></a> recursive_directory_iterator::operator -> します。
+## <a name="op_cast"></a> recursive_directory_iterator::operator->
 
 `&**this` を返します。
 
@@ -171,7 +171,7 @@ const directory_entry& operator*() const;
 const directory_entry * operator->() const;
 ```
 
-## <a name="op_increment"></a> recursive_directory_iterator::operator:operator++
+## <a name="op_increment"></a> recursive_directory_iterator::operator++
 
 インクリメント、`recursive_directory_iterator`します。
 

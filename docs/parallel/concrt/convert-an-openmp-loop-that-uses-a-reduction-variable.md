@@ -6,11 +6,11 @@ helpviewer_keywords:
 - reduction variables, converting from OpenMP to the Concurrency Runtime
 ms.assetid: 96623f36-5e57-4d3f-8c13-669e6cd535b1
 ms.openlocfilehash: d75e115bdb1d13c9e8f45ed67d0f3993eac1b387
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57257320"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413958"
 ---
 # <a name="how-to-convert-an-openmp-loop-that-uses-a-reduction-variable-to-use-the-concurrency-runtime"></a>方法: 減少変数を使用して、同時実行ランタイムを使用する OpenMP ループを変換します。
 
@@ -18,8 +18,7 @@ OpenMP を変換する方法を示します[並列](../../parallel/concrt/how-to
 
 OpenMP `reduction` 句を使用すると、並列領域の最後にあるリダクション演算の対象となる 1 つ以上のスレッド プライベート変数を指定できます。 OpenMP には、リダクション演算子のセットがあらかじめ定義されています。 各リダクション変数はスカラー (`int`、`long`、`float` など) にする必要があります。 OpenMP には、並列領域でのリダクション変数の使用方法に関する制限事項もいくつか定義されています。
 
-並列パターン ライブラリ (PPL) の提供、 [concurrency::combinable](../../parallel/concrt/reference/combinable-class.md)クラスで、詳細な計算を実行し、最後に、その計算をマージすることができます再利用可能なスレッド ローカル ストレージを提供します。結果。 
-  `combinable` クラスは、スカラー型と複合型の両方に作用するテンプレートです。 使用する、`combinable`クラスや parallel コンストラクトの本体でサブ計算を実行し、呼び出す、 [concurrency::combinable::combine](reference/combinable-class.md#combine)または[:combine_each](reference/combinable-class.md#combine_each)最終的な結果を生成するメソッドです。 `combine`と`combine_each`各メソッドを*関数を組み合わせる*要素の各ペアを結合する方法を指定します。 したがって、`combinable` クラスは、リダクション演算子の固定セットだけに制限されません。
+並列パターン ライブラリ (PPL) の提供、 [concurrency::combinable](../../parallel/concrt/reference/combinable-class.md)クラスで、詳細な計算を実行し、最後に、その計算をマージすることができます再利用可能なスレッド ローカル ストレージを提供します。結果。 `combinable` クラスは、スカラー型と複合型の両方に作用するテンプレートです。 使用する、`combinable`クラスや parallel コンストラクトの本体でサブ計算を実行し、呼び出す、 [concurrency::combinable::combine](reference/combinable-class.md#combine)または[:combine_each](reference/combinable-class.md#combine_each)最終的な結果を生成するメソッドです。 `combine`と`combine_each`各メソッドを*関数を組み合わせる*要素の各ペアを結合する方法を指定します。 したがって、`combinable` クラスは、リダクション演算子の固定セットだけに制限されません。
 
 ## <a name="example"></a>例
 

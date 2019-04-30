@@ -12,11 +12,11 @@ helpviewer_keywords:
 - mappings [C++], TCHAR.H
 ms.assetid: 298583c5-22c3-40f6-920e-9ec96d42abd8
 ms.openlocfilehash: 0e26aefd8b9099a2ca5e76ce9e2b7d1def2f9854
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57813826"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410500"
 ---
 # <a name="using-tcharh-data-types-with-mbcs-code"></a>_MBCS コードでの TCHAR.H データ型の使用
 
@@ -63,7 +63,7 @@ ms.locfileid: "57813826"
     #define _tcschr _mbschr
     ```
 
-   この方法で実行する場合は、必ず適切なデータ型の文字列引数と文字列の戻り値の使用を確認してする必要があります。 適切に型を一致させるために型キャストを使用できます。または、汎用テキストのデータ型である `_TXCHAR` を使用できます。 `_TXCHAR` 型にマップ**char**型にマップされますが SBCS コードで**unsigned char** MBCS コードでします。 汎用テキストのマクロの詳細については、[汎用テキスト マッピング](../c-runtime-library/generic-text-mappings.md)で、*ランタイム ライブラリ リファレンス*を参照してください。
+   この方法で実行する場合は、必ず適切なデータ型の文字列引数と文字列の戻り値の使用を確認してする必要があります。 適切に型を一致させるために型キャストを使用できます。または、汎用テキストのデータ型である `_TXCHAR` を使用できます。 `_TXCHAR` 型にマップ**char**型にマップされますが SBCS コードで**unsigned char** MBCS コードでします。 汎用テキストのマクロの詳細については、次を参照してください。[汎用テキスト マッピング](../c-runtime-library/generic-text-mappings.md)で、*ランタイム ライブラリ リファレンス*します。
 
 ## <a name="see-also"></a>関連項目
 

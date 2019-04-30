@@ -7,17 +7,17 @@ helpviewer_keywords:
 - C4431
 ms.assetid: 58434ab6-dd8d-427b-953a-602fb7453ae6
 ms.openlocfilehash: 1cef70ab02148924bf6a0f29e298b34c54b28bc4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624329"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62391518"
 ---
 # <a name="compiler-warning-level-4-c4431"></a>コンパイラの警告 (レベル 4) C4431
 
-型指定子がありません - int と仮定しました。 メモ: C は、現在 int を既定値としてサポートしていません
+型指定子がありません - int と仮定しました。 メモ:C は、int を既定値をサポートしていません
 
-このエラーは、Visual C 2005 で行ったコンパイラ準拠作業の結果として生成されることができます。 Visual c 不要になった型指定されていない識別子は int として既定で作成されます。 識別子の型を明示的に指定する必要があります。
+このエラーはビジュアルで行ったコンパイラ準拠作業の結果として生成されるC++2005。VisualC++されなくを既定では int として型指定されていない識別子を作成します。 識別子の型を明示的に指定する必要があります。
 
 既定では、この警告はオフに設定されています。 詳細については、「 [既定で無効になっているコンパイラ警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md) 」を参照してください。
 

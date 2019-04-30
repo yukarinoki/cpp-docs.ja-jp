@@ -8,11 +8,11 @@ helpviewer_keywords:
 - parallel loops, converting from OpenMP to the Concurrency Runtime
 ms.assetid: d8a7b656-f86c-456e-9c5d-a7d52f94646e
 ms.openlocfilehash: bc408465f34f0558e9f426ae35b83d4610898414
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57296138"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413893"
 ---
 # <a name="how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime"></a>方法: 変換、OpenMP 並列 for ループ、同時実行ランタイムを使用するには
 
@@ -33,8 +33,7 @@ Using the Concurrency Runtime...
 found 107254 prime numbers.
 ```
 
-
-  `parallel_for` アルゴリズムおよび OpenMP 3.0 では、インデックス型を符号付き整数型として使用することも、符号なし整数型として使用することもできます。 また、`parallel_for` アルゴリズムを使用すると、指定の範囲が符号付きの型をオーバーフローすることがなくなります。 OpenMP Version 2.0 および 2.5 では、符号付き整数のインデックス型しか使用できません。 また、OpenMP でインデックス範囲は検証されません。
+`parallel_for` アルゴリズムおよび OpenMP 3.0 では、インデックス型を符号付き整数型として使用することも、符号なし整数型として使用することもできます。 また、`parallel_for` アルゴリズムを使用すると、指定の範囲が符号付きの型をオーバーフローすることがなくなります。 OpenMP Version 2.0 および 2.5 では、符号付き整数のインデックス型しか使用できません。 また、OpenMP でインデックス範囲は検証されません。
 
 同時実行ランタイムを使用するこの例のバージョンを使用しても、 [concurrency::combinable](../../parallel/concrt/reference/combinable-class.md)オブジェクトの代わりに、[アトミック](../../parallel/openmp/reference/atomic.md)を必要とせず、カウンターの値をインクリメントするディレクティブ同期します。
 
@@ -42,7 +41,7 @@ found 107254 prime numbers.
 
 ## <a name="example"></a>例
 
-この例で機能する 1 つ前の変更、 [std::array](../../standard-library/array-class-stl.md)オブジェクトの代わりに、ネイティブの配列にします。 OpenMP version 2.0 および 2.5 の整数のインデックス型を符号付きでのみを許可するため、`parallel_for`コンストラクト、並列での C++ 標準ライブラリ コンテナーの要素にアクセスする反復子を使用することはできません。 並列パターン ライブラリ (PPL) の提供、 [concurrency::parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each)アルゴリズムで、C++ 標準ライブラリで提供されるものなど、反復的なコンテナーに同時に、タスクを実行します。 このアルゴリズムでは、`parallel_for` アルゴリズムで使用されるのと同じ分割ロジックが使用されます。 `parallel_for_each`アルゴリズムが、C++ 標準ライブラリに似ています[std::for_each](../../standard-library/algorithm-functions.md#for_each)点を除いて、アルゴリズム、`parallel_for_each`アルゴリズムでは、タスクを同時に実行します。
+この例で機能する 1 つ前の変更、 [std::array](../../standard-library/array-class-stl.md)オブジェクトの代わりに、ネイティブの配列にします。 OpenMP version 2.0 および 2.5 の整数のインデックス型を符号付きでのみを許可するため、`parallel_for`コンストラクト、並列での C++ 標準ライブラリ コンテナーの要素にアクセスする反復子を使用することはできません。 並列パターン ライブラリ (PPL) の提供、 [concurrency::parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) 、反復的なコンテナーによって提供されるように同時に、タスクを実行するには、アルゴリズム、C++標準ライブラリ。 このアルゴリズムでは、`parallel_for` アルゴリズムで使用されるのと同じ分割ロジックが使用されます。 `parallel_for_each`アルゴリズムに似ています、C++標準ライブラリ[std::for_each](../../standard-library/algorithm-functions.md#for_each)点を除いて、アルゴリズム、`parallel_for_each`アルゴリズムでは、タスクを同時に実行します。
 
 [!code-cpp[concrt-openmp#10](../../parallel/concrt/codesnippet/cpp/how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime_2.cpp)]
 

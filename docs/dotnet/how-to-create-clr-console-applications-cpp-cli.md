@@ -6,11 +6,11 @@ helpviewer_keywords:
 - CLR console applications, project template
 ms.assetid: e89bce3c-706f-4ae0-8a90-cb1a0f674e70
 ms.openlocfilehash: ba0fa81aa42f946dbaf005c00380573e44312c5a
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816361"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387481"
 ---
 # <a name="how-to-create-clr-console-applications-ccli"></a>方法: CLR コンソール アプリケーションを作成 (C +/cli CLI)
 
@@ -30,7 +30,7 @@ ms.locfileid: "57816361"
 
    - コンソール (.cpp ファイル) - 作成したアプリのエントリ ポイントへのメイン ソース ファイルとエントリ ポイント。 プロジェクトの .dll ファイルと、プロジェクトの名前空間を特定します。 このファイルには、独自のコードを記述します。
 
-   - AssemblyInfo.cpp - プロジェクトのアセンブリ メタデータの変更に使用できる属性、ファイル、リソース、型、バージョン管理情報、署名情報などが含まれます。 詳細については、[アセンブリの内容を](/dotnet/framework/app-domains/assembly-contents)を参照してください。
+   - AssemblyInfo.cpp - プロジェクトのアセンブリ メタデータの変更に使用できる属性、ファイル、リソース、型、バージョン管理情報、署名情報などが含まれます。 詳細については、次を参照してください。[アセンブリの内容を](/dotnet/framework/app-domains/assembly-contents)します。
 
    - Stdafx.cpp - Win32.pch という名前のプリコンパイル済みヘッダー ファイルと、StdAfx.obj という名前のプリコンパイル済み型ファイルをビルドするために使用されます。
 

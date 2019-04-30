@@ -15,11 +15,11 @@ helpviewer_keywords:
 - CMFCDesktopAlertDialog [MFC], PreTranslateMessage
 ms.assetid: a53c60aa-9607-485b-b826-ec64962075f6
 ms.openlocfilehash: 02086e09ca3229fae28359b1ea81e4708c5d1865
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57288104"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403712"
 ---
 # <a name="cmfcdesktopalertdialog-class"></a>CMFCDesktopAlertDialog クラス
 
@@ -48,8 +48,7 @@ class CMFCDesktopAlertDialog : public CDialogEx
 
 次の手順を実行し、ポップアップ ウィンドウにカスタム ダイアログを表示します。
 
-1. 
-  `CMFCDesktopAlertDialog` の派生クラスを作成します。
+1. `CMFCDesktopAlertDialog` の派生クラスを作成します。
 
 1. プロジェクトのリソースに、子のダイアログ テンプレートを作成します。
 

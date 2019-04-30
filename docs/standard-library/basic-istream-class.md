@@ -35,11 +35,11 @@ helpviewer_keywords:
 - std::basic_istream [C++], unget
 ms.assetid: c7c27111-de6d-42b4-95a3-a7e65259bf17
 ms.openlocfilehash: 5e7f6ae0728a7d28af1992cf4186d533f1a97330
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522507"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62414166"
 ---
 # <a name="basicistream-class"></a>basic_istream クラス
 
@@ -867,7 +867,7 @@ int main ( )
 
 この入れ子になったクラスは、オブジェクトの宣言が書式設定された入力関数と書式設定されていない入力関数を構築するオブジェクトについて記述します。
 
-クラスの sentry {パブリック: 明示的な sentry (basic_istream\<Elem, Tr > & _Istr、bool _Noskip = false); 演算子 bool() const;};
+class sentry { public: explicit sentry( basic_istream\<Elem, Tr>& _Istr, bool _Noskip = false); operator bool() const; };
 
 ### <a name="remarks"></a>Remarks
 

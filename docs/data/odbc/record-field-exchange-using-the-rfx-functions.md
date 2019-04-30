@@ -11,11 +11,11 @@ helpviewer_keywords:
 - function calls, RFX functions
 ms.assetid: c594300b-5a29-4119-a68b-e7ca32def696
 ms.openlocfilehash: dc717336a5279e7eda1b7c39b19a7c76f9055cd3
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59035985"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62395691"
 ---
 # <a name="record-field-exchange-using-the-rfx-functions"></a>レコード フィールド エクス チェンジ:RFX 関数の使い方
 
@@ -65,8 +65,8 @@ RFX のグローバル関数では、レコード セットのデータ ソー�
 ## <a name="see-also"></a>関連項目
 
 [レコード フィールド エクスチェンジ (RFX)](../../data/odbc/record-field-exchange-rfx.md)<br/>
-[レコード フィールド エクス チェンジ:RFX のしくみ](../../data/odbc/record-field-exchange-how-rfx-works.md)<br/>
-[レコード セット:レコード セット (ODBC) をパラメーター化](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)<br/>
-[レコード セット:動的に結びつける方法 (ODBC) のデータ列](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)<br/>
+[レコード フィールド エクスチェンジ: RFX の動作のしくみ](../../data/odbc/record-field-exchange-how-rfx-works.md)<br/>
+[レコードセット: レコードセットのパラメーター化 (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)<br/>
+[レコードセット: データ列の動的なバインド (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)<br/>
 [CRecordset クラス](../../mfc/reference/crecordset-class.md)<br/>
 [CFieldExchange クラス](../../mfc/reference/cfieldexchange-class.md)

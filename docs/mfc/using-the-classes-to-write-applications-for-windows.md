@@ -10,11 +10,11 @@ helpviewer_keywords:
 - database applications [MFC], creating
 ms.assetid: 73f63470-857d-43dd-9a54-b38b7be0f1b7
 ms.openlocfilehash: c8b3d7061c0ef06063d9c6993f24d23fc2e1f92e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57265302"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411475"
 ---
 # <a name="using-the-classes-to-write-applications-for-windows"></a>クラスを使用した Windows アプリケーションの作成
 
@@ -68,7 +68,7 @@ ms.locfileid: "57265302"
 
    さらに、MFC が Unicode を使用するアプリケーションの記述を完全に有効にし、マルチバイト文字セット (MBCS)、具体的には 2 バイト文字セット (DBCS)。
 
-MFC のドキュメントを一般的なガイドは、[MFC の一般的なトピック](../mfc/general-mfc-topics.md)を参照してください。
+MFC のドキュメントを一般的なガイドは、次を参照してください。 [MFC の一般的なトピック](../mfc/general-mfc-topics.md)します。
 
 ## <a name="see-also"></a>関連項目
 

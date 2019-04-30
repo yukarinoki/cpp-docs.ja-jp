@@ -3,11 +3,11 @@ title: テンプレート ref クラス (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: a24d5f45-8dbb-4540-958f-c76c90d8ed93
 ms.openlocfilehash: 4398cc2c545a57277289a6aa41fc4664d9734eed
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57744343"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62396038"
 ---
 # <a name="template-ref-classes-ccx"></a>テンプレート ref クラス (C++/CX)
 
@@ -15,7 +15,7 @@ C++ テンプレートはメタデータに発行されないため、プログ�
 
 ## <a name="authoring-ref-class-templates"></a>ref クラス テンプレートの作成
 
-次の例は、プライベート ref クラスをテンプレートとして宣言する方法だけでなく、標準 C++ テンプレートを宣言し、それら両方をパブリック ref クラスのメンバーとして宣言する方法も示します。 これで、Windows ランタイムの種類によって、標準 C++ テンプレートを特化できることに注意してください場合は、platform::string ^ です。
+次の例は、プライベート ref クラスをテンプレートとして宣言する方法だけでなく、標準 C++ テンプレートを宣言し、それら両方をパブリック ref クラスのメンバーとして宣言する方法も示します。 なお、標準C++platform::string をここでは、Windows ランタイム型でテンプレートを特化できる ^ です。
 
 [!code-cpp[cx_templates#01](../cppcx/codesnippet/CPP/templatedemo/class1.h#01)]
 

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - DAO (Data Access Objects), Databases collection
 ms.assetid: 68e9e0da-8382-4fc6-8115-1b1519392ddb
 ms.openlocfilehash: 920301af6f660aeac010ecbf844b80ea628bbfd7
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57285634"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405769"
 ---
 # <a name="cdaodatabaseinfo-structure"></a>CDaoDatabaseInfo 構造体
 
@@ -48,7 +48,7 @@ struct CDaoDatabaseInfo
 Microsoft Jet データベース エンジンのバージョンを示します。 このプロパティの値を直接取得する呼び出し、データベース オブジェクトの[GetVersion](../../mfc/reference/cdaodatabase-class.md#getversion)メンバー関数。 詳細については、「バージョンのプロパティ」DAO ヘルプのトピックを参照してください。
 
 *m_lCollatingOrder*<br/>
-文字列比較または並べ替え用のテキストの並べ替え順序を指定します。 次の値を使用できます。
+文字列比較または並べ替え用のテキストの並べ替え順序を指定します。 次のような値となる場合があります。
 
 - `dbSortGeneral` [全般] (英語、フランス語、ドイツ語、ポルトガル語、イタリア語、および最新のスペイン語) の並べ替え順序を使用します。
 

@@ -63,11 +63,11 @@ helpviewer_keywords:
 - CBaseTabbedPane [MFC], ShowTab
 ms.assetid: f22c0080-5b29-4a0a-8f74-8f0a4cd2dbcf
 ms.openlocfilehash: d7ffaa7274a8ed12944cdbc5dcbbdcb8fd3fd2b9
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259296"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62388593"
 ---
 # <a name="cbasetabbedpane-class"></a>CBaseTabbedPane クラス
 
@@ -133,7 +133,7 @@ class CBaseTabbedPane : public CDockablePane
 
 A`CBaseTabbedPane`オブジェクトへのポインターをラップする、 [CMFCBaseTabCtrl クラス](../../mfc/reference/cmfcbasetabctrl-class.md)オブジェクト。 [CMFCBaseTabCtrl クラス](../../mfc/reference/cmfcbasetabctrl-class.md)タブ付きウィンドウの子ウィンドウになります。
 
-タブ付きペインを作成する方法の詳細については、[CDockablePane クラス](../../mfc/reference/cdockablepane-class.md)、 [CTabbedPane クラス](../../mfc/reference/ctabbedpane-class.md)、および[CMFCOutlookBar クラス](../../mfc/reference/cmfcoutlookbar-class.md)を参照してください。
+タブ付きペインを作成する方法の詳細については、次を参照してください。 [CDockablePane クラス](../../mfc/reference/cdockablepane-class.md)、 [CTabbedPane クラス](../../mfc/reference/ctabbedpane-class.md)、および[CMFCOutlookBar クラス](../../mfc/reference/cmfcoutlookbar-class.md)します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -287,7 +287,7 @@ virtual BOOL DetachPane(
 
 ### <a name="remarks"></a>Remarks
 
-フレームワークは、可能であれば、デタッチされたウィンドウをフローティングします。 詳細については、[CBasePane::CanFloat](../../mfc/reference/cbasepane-class.md#canfloat)を参照してください。
+フレームワークは、可能であれば、デタッチされたウィンドウをフローティングします。 詳細については、次を参照してください。 [CBasePane::CanFloat](../../mfc/reference/cbasepane-class.md#canfloat)します。
 
 ##  <a name="enablesetcaptiontexttotabname"></a>  CBaseTabbedPane::EnableSetCaptionTextToTabName
 
@@ -680,7 +680,7 @@ virtual CMFCAutoHideToolBar* SetAutoHideMode(
 [in]自動非表示モードを有効にする場合は TRUE通常のドッキング モードを有効にする場合は FALSE。
 
 *dwAlignment*<br/>
-[in]作成される自動非表示ウィンドウの配置を指定します。 使用可能な値の一覧は、[CPane::MoveByAlignment](../../mfc/reference/cpane-class.md#movebyalignment)を参照してください。
+[in]作成される自動非表示ウィンドウの配置を指定します。 使用可能な値の一覧は、次を参照してください。 [CPane::MoveByAlignment](../../mfc/reference/cpane-class.md#movebyalignment)します。
 
 *pCurrAutoHideBar*<br/>
 [入力、出力]現在、自動的に隠すツールバーへのポインター。 NULL にすることができます。
@@ -696,7 +696,7 @@ virtual CMFCAutoHideToolBar* SetAutoHideMode(
 
 フレームワークは、ユーザーが [ピン留めする] ボタンを自動的に隠すモードまたは標準ドッキング モードには、タブ付きペインを切り替えるには、このメソッドを呼び出します。
 
-タブ付きペインの切り離し可能な各ペインに自動的に隠すモードが設定されています。 切り離し不可能なペインは無視されます。 詳細については、[cmfcbasetabctrl::enabletabdetach](../../mfc/reference/cmfcbasetabctrl-class.md#enabletabdetach)を参照してください。
+タブ付きペインの切り離し可能な各ペインに自動的に隠すモードが設定されています。 切り離し不可能なペインは無視されます。 詳細については、次を参照してください。 [cmfcbasetabctrl::enabletabdetach](../../mfc/reference/cmfcbasetabctrl-class.md#enabletabdetach)します。
 
 タブ付きペインをプログラムによって自動的に隠すモードに切り替えるには、このメソッドを呼び出します。 メイン フレーム ウィンドウに、ウィンドウをドッキングする必要があります ( [CDockablePane::GetDefaultPaneDivider](../../mfc/reference/cdockablepane-class.md#getdefaultpanedivider)への有効なポインターを返す必要があります、 [CPaneDivider](../../mfc/reference/cpanedivider-class.md))。
 

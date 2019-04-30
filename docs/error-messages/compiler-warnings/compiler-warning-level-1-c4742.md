@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4742
 ms.assetid: e520881d-1eeb-48b1-9df0-8017ee8ba076
 ms.openlocfilehash: 00ac67fec3aafa5a259b5222bd6bb8654210fa61
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436363"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62390426"
 ---
 # <a name="compiler-warning-level-1-c4742"></a>コンパイラの警告 (レベル 1) C4742
 
@@ -21,7 +21,7 @@ ms.locfileid: "50436363"
 
 この警告を解決するには、同じ種類の定義を使用するか異なる名前の変数を使用します。
 
-詳細については、[パック](../../preprocessor/pack.md)と[_ _alignof 演算子](../../cpp/alignof-operator.md)を参照してください。
+詳細については、次を参照してください。[パック](../../preprocessor/pack.md)と[_ _alignof 演算子](../../cpp/alignof-operator.md)します。
 
 ## <a name="example"></a>例
 

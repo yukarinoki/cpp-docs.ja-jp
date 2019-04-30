@@ -18,11 +18,11 @@ helpviewer_keywords:
 - collection classes [MFC], shapes
 ms.assetid: 02586e4c-851d-41d0-a722-feb11c17c74c
 ms.openlocfilehash: f3dea68deaae73313fe389be49e8bbed7da3c93a
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58767185"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383848"
 ---
 # <a name="collections"></a>コレクション
 
@@ -98,7 +98,7 @@ MFC コレクション クラスの特性がテーブルに[コレクション �
 
 - [コレクション クラスの選択に関する推奨事項](../mfc/recommendations-for-choosing-a-collection-class.md)
 
-- [方法: タイプ セーフなコレクションを作成します。](../mfc/how-to-make-a-type-safe-collection.md)
+- [方法: タイプ セーフなコレクションを作成する](../mfc/how-to-make-a-type-safe-collection.md)
 
 - [スタック コレクションとキュー コレクションの作成](../mfc/creating-stack-and-queue-collections.md)
 

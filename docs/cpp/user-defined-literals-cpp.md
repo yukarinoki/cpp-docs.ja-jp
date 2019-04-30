@@ -3,11 +3,11 @@ title: ユーザー定義リテラル (C++)
 ms.date: 11/04/2016
 ms.assetid: ff4a5bec-f795-4705-a2c0-53788fd57609
 ms.openlocfilehash: 1de94b43423bb5b420be29d3cace146e265a1459
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665115"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392116"
 ---
 # <a name="user-defined-literals--c"></a>ユーザー定義リテラル (C++)
 
@@ -109,7 +109,7 @@ template<char...> ReturnType operator "" _t();       // Literal operator templat
 
 未加工リテラルを使用して、入力シーケンスについて、コンパイラが実行するものとは異なるカスタムの解釈を提供できます。 たとえば、シーケンス `4.75987` を、IEEE 754 浮動小数点型ではなく、カスタム 10 進数型に変換するリテラルを定義できます。 また、cooked リテラルと同様、未加工リテラルは、入力シーケンスのコンパイル時の検証を実行するために使用することもできます。
 
-### <a name="example-limitations-of-raw-literals"></a>未加工リテラルの例: 制限事項
+### <a name="example-limitations-of-raw-literals"></a>例:未加工リテラルの制限事項
 
 未加工リテラルの演算子とリテラルの演算子のテンプレートは、次の例に示すように、整数および浮動小数点のユーザー定義リテラルに対してのみ動作します。
 

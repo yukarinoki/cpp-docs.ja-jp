@@ -7,11 +7,11 @@ helpviewer_keywords:
 - match_results class
 ms.assetid: b504fdca-e5dd-429d-9960-6e27c9167fa6
 ms.openlocfilehash: 32a5f9d20999740d4368f7901c797d87acce0be9
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657462"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412970"
 ---
 # <a name="matchresults-class"></a>match_results クラス
 
@@ -68,8 +68,8 @@ class match_results
 |[get_allocator](#get_allocator)|格納されているアロケーターを返します。|
 |[length](#length)|サブマッチの長さを返します。|
 |[max_size](#max_size)|サブマッチの最大数を取得します。|
-|[位置](#position)|サブグループの開始オフセットを取得します。|
-|[prefix](#prefix)|最初のサブマッチの前のシーケンスを取得します。|
+|[position](#position)|サブグループの開始オフセットを取得します。|
+|[プレフィックス](#prefix)|最初のサブマッチの前のシーケンスを取得します。|
 |[size](#size)|サブマッチの数をカウントします。|
 |[str](#str)|サブマッチが返されます。|
 |[サフィックス](#suffix)|最後のサブマッチ後に、シーケンスを取得します。|
@@ -369,7 +369,7 @@ match_results(const match_results& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*Alloc*<br/>
+*alloc*<br/>
 格納するアロケーター オブジェクト。
 
 *right*<br/>

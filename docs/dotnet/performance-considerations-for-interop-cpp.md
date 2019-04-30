@@ -9,11 +9,11 @@ helpviewer_keywords:
 - interoperability [C++], performance considerations
 ms.assetid: bb9a282e-c3f8-40eb-a2fa-45d80d578932
 ms.openlocfilehash: c6b4456d9c75061c9a8c93f37f98b58f92adc899
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57741846"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384752"
 ---
 # <a name="performance-considerations-for-interop-c"></a>Interop (C++) のパフォーマンスに関する考慮事項
 
@@ -51,7 +51,7 @@ Visual Basic や c# などの .NET 言語は、ネイティブ コンポーネ�
 
 したがって、C++ 相互運用機能には、データのマーシャ リングし、明示的に指定する必要がありますが、利点は、プログラマが、データの性質に応じて、適切な新機能とが使用されるようにする方法を決定することが必要です。 さらに、P/invoke データのマーシャ リングの動作は、ある程度カスタマイズで変更できます、C++ Interop できますデータ マーシャ リングの呼び出しによってごとにカスタマイズします。 これは、P/invoke でことはできません。
 
-C++ 相互運用機能の詳細については、[を使用して C++ Interop (暗黙の PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)を参照してください。
+C++ 相互運用機能の詳細については、次を参照してください。[を使用して C++ Interop (暗黙の PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)します。
 
 ## <a name="see-also"></a>関連項目
 
