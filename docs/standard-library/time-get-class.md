@@ -39,11 +39,11 @@ helpviewer_keywords:
 - std::time_get [C++], get_year
 ms.assetid: 869d5f5b-dbab-4628-8333-bdea7e272023
 ms.openlocfilehash: df5a6da3995b1485585a3105ac027f19a27dc8eb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505184"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412034"
 ---
 # <a name="timeget-class"></a>time_get クラス
 
@@ -590,7 +590,7 @@ iter_type get(
 
 2 番目のメンバー関数は `[fmt_first, fmt_last)` で区切られた形式の制御下で `do_get` を呼び出します。 この形式はフィールドのシーケンスとして扱われ、`[first, last)` で区切られたゼロ個以上の入力要素の変換をそれぞれのフィールドが決定します。 これは、変換されていない最初の要素を指定する反復子を返します。 フィールドには次の 3 つの種類があります。
 
-形式で、1 秒あたりパーセント (%) の後にオプションの修飾子*mod*変換指定子の後に [EOQ #]、セットで*fmt*、置換*最初*によって返される値を持つ`do_get(first, last, iosbase, state, ptm, fmt, mod)`. 変換エラー設定`ios_base::failbit`で*状態*を返します。
+パーセント (%)省略可能な修飾子の後の形式で*mod*変換指定子の後に [EOQ #]、セット内*fmt*、置換*最初*によって返される値を持つ`do_get(first, last, iosbase, state, ptm, fmt, mod)`. 変換エラー設定`ios_base::failbit`で*状態*を返します。
 
 この形式の空白要素は、ゼロ個以上の入力の空白要素をスキップします。
 
@@ -1047,11 +1047,11 @@ explicit time_get(size_t refs = 0);
 
 使用可能な値を*refs*パラメーターとその重要性は。
 
-- 0: オブジェクトの有効期間はそれが含まれるロケールによって管理されます。
+- 0:オブジェクトの有効期間は、それが含まれるロケールによって管理されます。
 
-- 1: オブジェクトの有効期間を手動で管理する必要があります。
+- 1:オブジェクトの有効期間は、手動で管理する必要があります。
 
-- \> 1: これらの値が定義されていません。
+- \> 1:これらの値が定義されていません。
 
 デストラクターが保護されているため、利用できる直接的な例はありません。
 

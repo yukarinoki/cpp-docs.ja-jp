@@ -7,15 +7,15 @@ helpviewer_keywords:
 - C3519
 ms.assetid: ca24b2bc-7e90-4448-ae84-3fedddf9bca7
 ms.openlocfilehash: e9a998e1c3a6c2fb770fb9d26d97b8a24e5554d3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50432774"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62360035"
 ---
 # <a name="compiler-error-c3519"></a>コンパイラ エラー C3519
 
-'invalid_param': embedded_idl 属性に無効なパラメーター
+'invalid_param' : invalid parameter to embedded_idl attribute
 
 渡されたパラメーター、`embedded_idl`属性の[#import](../../preprocessor/hash-import-directive-cpp.md)コンパイラでは、パラメーターが認識されませんでしたが。
 

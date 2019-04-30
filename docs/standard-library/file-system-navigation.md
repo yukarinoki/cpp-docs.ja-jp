@@ -3,15 +3,15 @@ title: ファイル システムのナビゲーション
 ms.date: 11/04/2016
 ms.assetid: f7cc5f5e-a541-4e00-87c7-a3769ef6096d
 ms.openlocfilehash: cfdc789daab5b476566f2072109d23fb9310094f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509614"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405197"
 ---
 # <a name="file-system-navigation"></a>ファイル システムのナビゲーション
 
-\<filesystem> ヘッダーは、File System Technical Specification ISO/IEC TS 18822:2015 (最終ドラフト: [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf)) を実装し、型および関数により、ファイル システムを移動するためのプラットフォームに依存しないコードを記述できます。 それはクロス プラットフォームなので、Windows システムに関連しない API が含まれます。 たとえば、これは`is_fifo(const path&)`は常に返します**false** Windows にします。
+\<Filesystem > ヘッダーの実装、C++ファイル System Technical Specification ISO/IEC TS 18822: 2015 (最終ドラフト。[ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf)) 型および関数を使用すると、ファイル システムを移動するためのプラットフォームに依存しないコードを記述するとします。 それはクロス プラットフォームなので、Windows システムに関連しない API が含まれます。 たとえば、これは`is_fifo(const path&)`は常に返します**false** Windows にします。
 
 ## <a name="overview"></a>概要
 

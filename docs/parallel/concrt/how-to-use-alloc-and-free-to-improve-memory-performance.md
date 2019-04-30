@@ -6,18 +6,17 @@ helpviewer_keywords:
 - Using Alloc and Free [Concurrency Runtime]
 ms.assetid: e1fab9e8-a97d-4104-bead-e95958db79f9
 ms.openlocfilehash: f55bf360ac2b4c7162c1ed2b917ac6ce8c7cd11f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57296125"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410020"
 ---
 # <a name="how-to-use-alloc-and-free-to-improve-memory-performance"></a>方法: 割り当てを使用し、メモリのパフォーマンスを向上させるために無料
 
 このドキュメントは、使用する方法を示します、 [concurrency::alloc](reference/concurrency-namespace-functions.md#alloc)と[concurrency::free](reference/concurrency-namespace-functions.md#free)メモリのパフォーマンスを向上させるために機能します。 ここでは、それぞれが `new` 演算子と `delete` 演算子を指定する、配列の 3 種類の要素を並行して反転するときの所要時間を比較します。
 
-
-  `Alloc` 関数と `Free` 関数は、複数のスレッドで `Alloc` と `Free` の両方を頻繁に呼び出す場合に最も役に立ちます。 ランタイムは、スレッドごとに個別のメモリ キャッシュを保持します。したがって、ランタイムは、ロックまたはメモリ バリアを使用せずにメモリを管理します。
+`Alloc` 関数と `Free` 関数は、複数のスレッドで `Alloc` と `Free` の両方を頻繁に呼び出す場合に最も役に立ちます。 ランタイムは、スレッドごとに個別のメモリ キャッシュを保持します。したがって、ランタイムは、ロックまたはメモリ バリアを使用せずにメモリを管理します。
 
 ## <a name="example"></a>例
 
@@ -27,10 +26,7 @@ ms.locfileid: "57296125"
 
 ## <a name="example"></a>例
 
-
-  `swap` 関数および `reverse_array` 関数の例を次に示します。 
-  `swap` 関数は、配列の指定されたインデックス位置の内容を交換します。 また、テンポラリ変数のヒープからメモリを割り当てます。 
-  `reverse_array` 関数は、大きな配列を作成し、その配列を並行して複数回反転したときの所要時間を計算します。
+`swap` 関数および `reverse_array` 関数の例を次に示します。 `swap` 関数は、配列の指定されたインデックス位置の内容を交換します。 また、テンポラリ変数のヒープからメモリを割り当てます。 `reverse_array` 関数は、大きな配列を作成し、その配列を並行して複数回反転したときの所要時間を計算します。
 
 [!code-cpp[concrt-allocators#2](../../parallel/concrt/codesnippet/cpp/how-to-use-alloc-and-free-to-improve-memory-performance_2.cpp)]
 

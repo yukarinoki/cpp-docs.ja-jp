@@ -19,11 +19,11 @@ helpviewer_keywords:
 - transformer class
 ms.assetid: eea71925-7043-4a92-bfd4-dbc0ece5d081
 ms.openlocfilehash: c07017539bc0125e9e8c27e208480a50ccc7a719
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57299180"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62408070"
 ---
 # <a name="transformer-class"></a>transformer クラス
 
@@ -71,7 +71,7 @@ class transformer : public propagator_block<single_link_registry<ITarget<_Output
 
 ## <a name="remarks"></a>Remarks
 
-詳細については、[非同期メッセージ ブロック](../../../parallel/concrt/asynchronous-message-blocks.md)を参照してください。
+詳細については、次を参照してください。[非同期メッセージ ブロック](../../../parallel/concrt/asynchronous-message-blocks.md)します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 

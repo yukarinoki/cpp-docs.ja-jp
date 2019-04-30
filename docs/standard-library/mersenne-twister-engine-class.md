@@ -7,11 +7,11 @@ helpviewer_keywords:
 - mersenne_twister_engine class
 ms.assetid: 7ee968fa-a1cc-450f-890f-7305de062685
 ms.openlocfilehash: c0f30eacb308da61064a0383a6433b7127032a3e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607455"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410981"
 ---
 # <a name="mersennetwisterengine-class"></a>mersenne_twister_engine クラス
 
@@ -77,7 +77,7 @@ class mersenne_twister_engine;
 
 このエンジンから直接ジェネレーターを構築できますが、次の表にある定義済みの typedef のいずれかを使用することをお勧めします。
 
-`mt19937`: 32 ビット メルセンヌ ツイスタ エンジン (松本、西村、1998年)。
+`mt19937`:32 ビット メルセンヌ ツイスタ エンジン (松本、西村、1998年)。
 
 ```cpp
 typedef mersenne_twister_engine<unsigned int, 32, 624, 397,
@@ -88,7 +88,7 @@ typedef mersenne_twister_engine<unsigned int, 32, 624, 397,
     18, 1812433253> mt19937;
 ```
 
-`mt19937_64`: 64 ビット メルセンヌ ツイスタ エンジン (松本、西村、2000年)。
+`mt19937_64`:64 ビット メルセンヌ ツイスタ エンジン (松本、西村、2000年)。
 
 ```cpp
 typedef mersenne_twister_engine<unsigned long long, 64, 312, 156,

@@ -89,11 +89,11 @@ helpviewer_keywords:
 - stdext::hash_map::value_comp
 ms.assetid: 40879dfc-51ba-4a59-9f9e-26208de568a8
 ms.openlocfilehash: da046a467333fba9aa106b97e21cf583c8cef75d
-ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678562"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405067"
 ---
 # <a name="hashmap-class"></a>hash_map クラス
 
@@ -121,7 +121,7 @@ hash_map に格納されるキーのデータ型。
 hash_map に格納される要素のデータ型。
 
 *Traits*<br/>
-2 つの関数オブジェクトを含む型。2 つの要素の値を並べ替えキーとして比較し、要素の相対順序を決定できるクラス比較、または要素のキー値を `size_t` 型の符号なし整数にマップする単項述語であるハッシュ関数のいずれかを使用できます。 この引数は省略可能であり、既定値は hash_compare<`Key`, less<`Key`> > です。
+2 つの関数オブジェクトを含む型。2 つの要素の値を並べ替えキーとして比較し、要素の相対順序を決定できるクラス比較、または要素のキー値を `size_t` 型の符号なし整数にマップする単項述語であるハッシュ関数のいずれかを使用できます。 この引数は省略可能、および hash_compare <`Key`, less <`Key`>> は既定値です。
 
 *アロケーター*<br/>
 メモリの hash_map の割り当てと解放に関する詳細をカプセル化する、格納されたアロケーター オブジェクトを表す型。 この引数は省略可能であり、既定値は allocator<pair <const `Key`, `Type`>> です。
@@ -648,7 +648,7 @@ hash_map に、並べ替えキーがパラメーター キーと一致する要�
 
 メンバー関数は、次の範囲内の要素 *x* の数を返します。
 
-\[ lower_bound (*キー*)、upper_bound (*キー*))
+\[ lower_bound(*key*), upper_bound(*key*) )
 
 一意の連想コンテナーである hash_map の場合、これは 0 または 1 です。
 
@@ -1538,8 +1538,8 @@ hash_map(
 |*Al*|既定値は、この hash_map オブジェクトに使用するストレージ アロケーター クラス`Allocator`します。|
 |*コンポジション*|hash_map 内の要素の並べ替えに使用される、型 const `Traits` の比較関数。既定では `hash_compare` です。|
 |*右*|構築されたマップがコピーになる元の hash_map。|
-|*まずは*|コピーする要素範囲内の最初の要素の位置。|
-|*前の*|コピーする要素範囲を超える最初の要素の位置。|
+|*First*|コピーする要素範囲内の最初の要素の位置。|
+|*Last*|コピーする要素範囲を超える最初の要素の位置。|
 |*IList*|initializer_list|
 
 ### <a name="remarks"></a>Remarks

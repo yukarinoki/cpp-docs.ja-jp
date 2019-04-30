@@ -10,11 +10,11 @@ helpviewer_keywords:
 - declarations [C++], namespaces
 ms.assetid: 4184e2b1-3adc-408e-b5f3-0b3f8b554723
 ms.openlocfilehash: 46d8b1e13b55988efd40643482ffd6123034ccb5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559846"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403348"
 ---
 # <a name="using-declaration"></a>using 宣言
 
@@ -306,7 +306,7 @@ In D::g(char)
 
 using 宣言で定義された名前のすべてのインスタンスはアクセス可能である必要があります。 特に、派生クラスが基底クラスのメンバーにアクセスするために using 宣言を使用する場合は、そのメンバー名がアクセス可能である必要があります。 名前がオーバーロードされたメンバー関数の名前である場合、その名前のすべての関数にアクセス可能である必要があります。
 
-メンバーのアクセシビリティの詳細については、[メンバー アクセス コントロール](../cpp/member-access-control-cpp.md)を参照してください。
+メンバーのアクセシビリティの詳細については、次を参照してください。[メンバー アクセス コントロール](../cpp/member-access-control-cpp.md)します。
 
 ```cpp
 // using_declaration_inheritance2.cpp

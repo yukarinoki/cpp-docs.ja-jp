@@ -6,11 +6,11 @@ helpviewer_keywords:
 - create a task that completes after a delay, example [C++]
 ms.assetid: 3fc0a194-3fdb-4eba-8b8a-b890981a985d
 ms.openlocfilehash: 3292043d7900d5dc2bfba0afa5fdc237853a5be0
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57272260"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413906"
 ---
 # <a name="how-to-create-a-task-that-completes-after-a-delay"></a>方法: 遅延後に完了するタスクを作成します。
 
@@ -33,7 +33,7 @@ ms.locfileid: "57272260"
 
 [!code-cpp[concrt-task-delay#2](../../parallel/concrt/codesnippet/cpp/how-to-create-a-task-that-completes-after-a-delay_2.cpp)]
 
-この手法を使用して遅延後にタスクをキャンセルするときにタスク全体が取り消された後、まだ開始していないタスクは開始されません。 ただし、適切なタイミングで、キャンセルに応答する、実行時間の長いタスクの重要なは。 タスクのキャンセルの詳細については、[PPL における取り消し処理](cancellation-in-the-ppl.md)を参照してください。
+この手法を使用して遅延後にタスクをキャンセルするときにタスク全体が取り消された後、まだ開始していないタスクは開始されません。 ただし、適切なタイミングで、キャンセルに応答する、実行時間の長いタスクの重要なは。 タスクのキャンセルの詳細については、次を参照してください。 [PPL における取り消し処理](cancellation-in-the-ppl.md)します。
 
 ## <a name="example"></a>例
 

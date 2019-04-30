@@ -7,17 +7,17 @@ helpviewer_keywords:
 - Concurrency Runtime
 ms.assetid: 874bc58f-8dce-483e-a3a1-4dcc9e52ed2c
 ms.openlocfilehash: 6f7b70dcbee639bdd44a195709bddde9e06dee21
-ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58278555"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62414010"
 ---
 # <a name="concurrency-runtime"></a>コンカレンシー ランタイム
 
 C++ のコンカレンシー ランタイムにより、信頼性が高く、スケーラブルで、応答性の高い並行アプリケーションを作成できます。 このフレームワークでは抽象のレベルが引き上げられるので、コンカレンシーに関連するインフラストラクチャの詳細を管理する必要はありません。 また、アプリケーションのサービスの品質への要求を満たすスケジューリング ポリシーを指定するためにも使用できます。 コンカレンシー ランタイムを初めて使用する場合に役立つ情報が記載されている次の各ドキュメントを活用してください。
 
-リファレンス ドキュメントについては、[参照](../../parallel/concrt/reference/reference-concurrency-runtime.md)を参照してください。
+リファレンス ドキュメントについては、次を参照してください。[参照](../../parallel/concrt/reference/reference-concurrency-runtime.md)します。
 
 > [!TIP]
 >  コンカレンシー ランタイムは C++11 機能に大きく依存しており、最新の C++ のスタイルが採用されています。 詳細については、「[を C++ で戻る"ようこそ](../../cpp/welcome-back-to-cpp-modern-cpp.md)します。

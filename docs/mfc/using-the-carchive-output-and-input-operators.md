@@ -9,11 +9,11 @@ helpviewer_keywords:
 - CArchive class [MFC], operators
 ms.assetid: 56aef326-02dc-4992-8282-f0a4b78a064e
 ms.openlocfilehash: 9b4192e79b68388e45eb9837e056bbd881de2933
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259673"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411501"
 ---
 # <a name="using-the-carchive-ltlt-and-gtgt-operators"></a>CArchive を使用して&lt;&lt;と&gt;&gt;演算子
 
@@ -53,7 +53,7 @@ ms.locfileid: "57259673"
 |`COleDateTime`|`COleDateTimeSpan`||
 
 > [!NOTE]
->  格納と読み込み`CObject`アーカイブを通じて追加の考慮事項が必要です。 詳細については、[の保存とアーカイブを通じた Cobject の読み込み](../mfc/storing-and-loading-cobjects-via-an-archive.md)を参照してください。
+>  格納と読み込み`CObject`アーカイブを通じて追加の考慮事項が必要です。 詳細については、次を参照してください。[の保存とアーカイブを通じた Cobject の読み込み](../mfc/storing-and-loading-cobjects-via-an-archive.md)します。
 
 **CArchive <\<** と**>>** 演算子が常にへの参照を返す、`CArchive`最初のオペランドとなるオブジェクト。 これによりに、演算子のチェーンに次の図に。
 
@@ -61,4 +61,4 @@ ms.locfileid: "57259673"
 
 ## <a name="see-also"></a>関連項目
 
-[シリアル化:オブジェクトのシリアル化](../mfc/serialization-serializing-an-object.md)
+[シリアル化: オブジェクトのシリアル化](../mfc/serialization-serializing-an-object.md)

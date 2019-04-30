@@ -39,11 +39,11 @@ helpviewer_keywords:
 - std::regex_traits [C++], getloc
 ms.assetid: bc5a5eed-32fc-4eb7-913d-71c42e729e81
 ms.openlocfilehash: 80739d3d8f4bfd38dc3d252a5f3d6308653a7bb9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50484059"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62369125"
 ---
 # <a name="regextraits-class"></a>regex_traits クラス
 
@@ -95,9 +95,9 @@ class regex_traits
 |[lookup_collatename](#lookup_collatename)|シーケンスを照合要素にマップします。|
 |[transform](#transform)|同等の順序付けられたシーケンスに変換します。|
 |[transform_primary](#transform_primary)|同等のケースレス順序付きシーケンスに変換します。|
-|[翻訳](#translate)|一致する同等の要素に変換します。|
+|[translate](#translate)|一致する同等の要素に変換します。|
 |[translate_nocase](#translate_nocase)|一致する同等のケースレス要素に変換します。|
-|[値](#value)|要素を数値に変換します。|
+|[value](#value)|要素を数値に変換します。|
 
 ## <a name="requirements"></a>必要条件
 
@@ -221,7 +221,7 @@ locale_type imbue(locale_type loc);
 
 ### <a name="parameters"></a>パラメーター
 
-*Loc*<br/>
+*loc*<br/>
 格納するロケール オブジェクト。
 
 ### <a name="remarks"></a>Remarks

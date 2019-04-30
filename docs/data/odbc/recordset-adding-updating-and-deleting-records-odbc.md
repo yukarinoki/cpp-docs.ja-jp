@@ -19,11 +19,11 @@ helpviewer_keywords:
 - records [C++], editing
 ms.assetid: 760c8889-bec4-482b-a8f2-319792a6af98
 ms.openlocfilehash: 28c885119816c1df662cc0b941e02cb3cf747f3d
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59024609"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62395626"
 ---
 # <a name="recordset-adding-updating-and-deleting-records-odbc"></a>レコード セット:追加、更新、および削除 (Odbc)
 
@@ -202,4 +202,4 @@ rsStudent.MoveNext( );
 ## <a name="see-also"></a>関連項目
 
 [レコードセット (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[レコード セット:レコードのロック (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)
+[レコードセット: レコードのロック (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)

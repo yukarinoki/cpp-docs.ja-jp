@@ -7,11 +7,11 @@ helpviewer_keywords:
 - linear_congruential_engine class
 ms.assetid: 30e00ca6-1933-4701-9561-54f3e810a5a1
 ms.openlocfilehash: 83306e47995f652014682d6bcc94966aab75c062
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568162"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413256"
 ---
 # <a name="linearcongruentialengine-class"></a>linear_congruential_engine クラス
 
@@ -49,10 +49,10 @@ class linear_congruential_engine{
 結果を表す符号なし整数型。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
 
 *A*<br/>
-**乗数**します。 **Precondition**: セクションの「解説」を参照してください。
+**乗数**します。 **Precondition**:「解説」セクションをご覧ください。
 
 *C*<br/>
-**インクリメント**します。 **Precondition**: セクションの「解説」を参照してください。
+**インクリメント**します。 **Precondition**:「解説」セクションをご覧ください。
 
 *M*<br/>
 **剰余**します。 **Precondition**:「解説」を参照してください。
@@ -80,13 +80,13 @@ class linear_congruential_engine{
 
 このエンジンから直接ジェネレーターを構築できますが、定義済みの typedef のいずれかを使用することもできます。
 
-`minstd_rand0`: 1988 年の最小標準エンジン (ルイス、グッドマン、ミラー、1969 年)。
+`minstd_rand0`:1988 年の最小標準エンジン (ルイス、グッドマン、ミラー、1969 年)。
 
 ```cpp
 typedef linear_congruential_engine<unsigned int, 16807, 0, 2147483647> minstd_rand0;
 ```
 
-`minstd_rand`: `minstd_rand0` の改良版最小標準エンジン (パーク、ミラー、ストックマイヤー、1993 年)。
+`minstd_rand`:`minstd_rand0` の改良版最小標準エンジン (パーク、ミラー、ストックマイヤー、1993 年)。
 
 ```cpp
 typedef linear_congruential_engine<unsigned int, 48271, 0, 2147483647> minstd_rand;

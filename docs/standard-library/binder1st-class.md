@@ -7,11 +7,11 @@ helpviewer_keywords:
 - binder1st class
 ms.assetid: 6b8ee343-c82f-48f8-867d-06f9d1d324c0
 ms.openlocfilehash: f70a1a4a0903b66edf5f42e59788b9a2d97fc967
-ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "57006631"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62388216"
 ---
 # <a name="binder1st-class"></a>binder1st クラス
 
@@ -60,7 +60,7 @@ protected:
 
 テンプレート クラスは、二項関数オブジェクトのコピーを格納する*binary_fn*で`op`のコピーと*左*で`value`します。 そのメンバー関数`operator()`返すよう`op( value, right )`します。
 
-場合*binary_fn*型のオブジェクトは、`Operation`と`c`が定数の場合、`bind1st( binary_fn, c )`より便利な相当するは`binder1st<Operation>( binary_fn, c )`します。 詳細については、[bind1st](../standard-library/functional-functions.md#bind1st)を参照してください。
+場合*binary_fn*型のオブジェクトは、`Operation`と`c`が定数の場合、`bind1st( binary_fn, c )`より便利な相当するは`binder1st<Operation>( binary_fn, c )`します。 詳細については、次を参照してください。 [bind1st](../standard-library/functional-functions.md#bind1st)します。
 
 ## <a name="example"></a>例
 

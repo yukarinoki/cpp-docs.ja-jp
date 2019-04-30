@@ -11,11 +11,11 @@ helpviewer_keywords:
 - recordsets, updating
 ms.assetid: 0353a742-d226-4fe2-8881-a7daeffe86cd
 ms.openlocfilehash: c29ff110fc507c4e449b2f3d082d98c159a35107
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59040769"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62397771"
 ---
 # <a name="recordset-more-about-updates-odbc"></a>レコード セット:詳細については、更新 (ODBC)
 
@@ -105,7 +105,7 @@ ms.locfileid: "59040769"
 ## <a name="see-also"></a>関連項目
 
 [レコードセット (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[レコード セット:レコード セットの選択が (ODBC) を記録する方法](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)<br/>
+[レコードセット: レコードセットでのレコード選択のしくみ (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)<br/>
 [レコード フィールド エクスチェンジ (RFX)](../../data/odbc/record-field-exchange-rfx.md)<br/>
 [SQL](../../data/odbc/sql.md)<br/>
-[例外処理:データベースの例外](../../mfc/exceptions-database-exceptions.md)
+[例外: データベースの例外](../../mfc/exceptions-database-exceptions.md)

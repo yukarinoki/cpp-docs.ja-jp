@@ -19,11 +19,11 @@ helpviewer_keywords:
 - std::shared_future [C++], wait_for
 - std::shared_future [C++], wait_until
 ms.openlocfilehash: 2280c17c4ce58fe06365c107ad26d646c7ae2d72
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575631"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412606"
 ---
 # <a name="sharedfuture-class"></a>shared_future クラス
 

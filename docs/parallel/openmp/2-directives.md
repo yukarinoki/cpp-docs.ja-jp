@@ -3,11 +3,11 @@ title: 2. ディレクティブ
 ms.date: 01/18/2019
 ms.assetid: d1a69374-6c03-45fb-8c86-e91cea8adae8
 ms.openlocfilehash: 125d2d83b277e62d007e3a208e426ea717d52790
-ms.sourcegitcommit: 382e247c0f1b4cb7c2dab837b8b6fdff24bff47a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087341"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62363714"
 ---
 # <a name="2-directives"></a>2.ディレクティブ
 
@@ -378,7 +378,7 @@ OpenMP は、次の作業の共有のコンストラクトを定義し、これ�
 #pragma omp barrier new-line
 ```
 
-チームのすべてのスレッドは、障害が発生した、チーム内の各スレッドが並列で barrier ディレクティブの後、ステートメントの実行開始されます。 `barrier`ディレクティブは、構文の一部として、C 言語のステートメントがない、プログラム内の位置でいくつかの制限があります。 正式な文法の詳細については、[付録 C](c-openmp-c-and-cpp-grammar.md)を参照してください。次の例では、これらの制限事項を示します。
+チームのすべてのスレッドは、障害が発生した、チーム内の各スレッドが並列で barrier ディレクティブの後、ステートメントの実行開始されます。 `barrier`ディレクティブは、構文の一部として、C 言語のステートメントがない、プログラム内の位置でいくつかの制限があります。 正式な文法の詳細については、次を参照してください。[付録 C](c-openmp-c-and-cpp-grammar.md)します。次の例では、これらの制限事項を示します。
 
 ```cpp
 /* ERROR - The barrier directive cannot be the immediate
@@ -480,7 +480,7 @@ A`flush`せずディレクティブ、*変数一覧*自動ストレージ存続�
 
 Volatile で修飾された型のオブジェクトの値にアクセスするための参照があった場合と同様に、`flush`ディレクティブの前のシーケンス ポイントにそのオブジェクトを指定します。 Volatile で修飾された型のオブジェクトの値を変更するための参照があった場合と同様に、`flush`後続シーケンス ポイントにそのオブジェクトを指定するディレクティブ。
 
-`flush`ディレクティブは、構文の一部として、C 言語のステートメントがない、プログラム内の位置でいくつかの制限があります。 正式な文法の詳細については、[付録 C](c-openmp-c-and-cpp-grammar.md)を参照してください。次の例では、これらの制限事項を示します。
+`flush`ディレクティブは、構文の一部として、C 言語のステートメントがない、プログラム内の位置でいくつかの制限があります。 正式な文法の詳細については、次を参照してください。[付録 C](c-openmp-c-and-cpp-grammar.md)します。次の例では、これらの制限事項を示します。
 
 ```cpp
 /* ERROR - The flush directive cannot be the immediate

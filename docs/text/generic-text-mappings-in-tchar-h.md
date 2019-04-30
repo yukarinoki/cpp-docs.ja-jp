@@ -11,11 +11,11 @@ helpviewer_keywords:
 - mappings [C++], TCHAR.H
 ms.assetid: 01e1bb74-5a01-4093-8720-68b6c1fdda80
 ms.openlocfilehash: 779702aa33e2aa24bf5a380bd8435745cc0aadbd
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57822640"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410708"
 ---
 # <a name="generic-text-mappings-in-tcharh"></a>Tchar.h における汎用テキスト マッピング
 
@@ -45,7 +45,7 @@ Tchar.h を使用すると、1 バイト、マルチバイト文字のセット 
 
 ### <a name="generic-text-data-type-mappings"></a>汎用テキストのデータ型のマップ
 
-|汎用テキスト<br /> データ型名|_UNICODE &<br /> _MBCS が未定義の場合|_MBCS<br /> 定義済み|_UNICODE<br /> 定義済み|
+|汎用テキスト<br /> データ型名|_UNICODE (&AMP; A)<br /> _MBCS が未定義の場合|_MBCS<br /> 定義済み|_UNICODE<br /> 定義済み|
 |--------------------------------------|----------------------------------------|------------------------|---------------------------|
 |`_TCHAR`|**char**|**char**|**wchar_t**|
 |`_TINT`|**int**|**unsigned int**|`wint_t`|

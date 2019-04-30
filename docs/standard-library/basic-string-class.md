@@ -117,11 +117,11 @@ helpviewer_keywords:
 - std::basic_string [C++], swap
 ms.assetid: a9c3e0a2-39bf-4c8a-b093-9abe30839591
 ms.openlocfilehash: ab93f8b225e27c0cf4d294d176c566bd6f2b5d02
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518575"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62409786"
 ---
 # <a name="basicstring-class"></a>basic_string クラス
 
@@ -137,7 +137,7 @@ class basic_string;
 ### <a name="parameters"></a>パラメーター
 
 *CharType*<br/>
-文字列に格納される単一文字のデータ型。 C++ 標準ライブラリの型定義は、このテンプレート クラスの特殊化を提供する[文字列](../standard-library/string-typedefs.md#string)型の要素に対して**char**、 [wstring](../standard-library/string-typedefs.md#wstring)の**wchar_t**、 [u16string](../standard-library/string-typedefs.md#u16string)の`char16_t`、および[u32string](../standard-library/string-typedefs.md#u32string)の`char32_t`します。
+文字列に格納される単一文字のデータ型。 C++標準ライブラリの型定義は、このテンプレート クラスの特殊化を提供する[文字列](../standard-library/string-typedefs.md#string)型の要素に対して**char**、 [wstring](../standard-library/string-typedefs.md#wstring)、の**wchar_t**、 [u16string](../standard-library/string-typedefs.md#u16string)の`char16_t`、および[u32string](../standard-library/string-typedefs.md#u32string)の`char32_t`します。
 
 *Traits*<br/>
 さまざまな重要なプロパティ、 `CharType` basic_string 特化の要素がクラスで説明されている`Traits`します。 既定値は `char_traits`< `CharType`> です。

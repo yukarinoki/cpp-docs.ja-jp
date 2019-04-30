@@ -87,11 +87,11 @@ helpviewer_keywords:
 - RPTW1 macro
 ms.assetid: a5bf8b30-57f7-4971-8030-e773b7a1ae13
 ms.openlocfilehash: 61748cca2cdfcc2d72b6943bfeedd9597009e20b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440095"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62357506"
 ---
 # <a name="rpt-rptf-rptw-rptfw-macros"></a>_RPT、_RPTF、_RPTW、_RPTFW のマクロ
 
@@ -151,7 +151,7 @@ _RPTFWn(
 
 |レポートの種類|出力先|
 |-----------------|------------------------|
-|**前述**|警告テキストは表示されません。|
+|**_CRT_WARN**|警告テキストは表示されません。|
 |**_CRT_ERROR**|ポップアップ ウィンドウ。 `_CrtSetReportMode(_CRT_ERROR, _CRTDBG_MODE_WNDW);` が指定されている場合と同じです。|
 |**_CRT_ASSERT**|同じ **_CRT_ERROR**します。|
 

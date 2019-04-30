@@ -89,11 +89,11 @@ helpviewer_keywords:
 - std::map [C++], value_comp
 ms.assetid: 7876f4c9-ebb4-4878-af1e-09364c43af0a
 ms.openlocfilehash: 52a24bb2372cc7f22797ae7122b6659724c47b55
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694869"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413009"
 ---
 # <a name="map-class"></a>map クラス
 
@@ -577,7 +577,7 @@ map に、並べ替えキーがパラメーター キーと一致する要素が
 
 メンバー関数は、次の範囲内の要素 *x* の数を返します。
 
-\[ lower_bound (*キー*)、upper_bound (*キー*))
+\[ lower_bound(*key*), upper_bound(*key*) )
 
 一意の連想コンテナーである map の場合、これは 0 または 1 です。
 
@@ -1115,10 +1115,10 @@ size_type erase(
 *Where*<br/>
 削除される要素の位置。
 
-*まずは*<br/>
+*First*<br/>
 削除される最初の要素の位置。
 
-*前の*<br/>
+*Last*<br/>
 削除される最後の要素の次の位置。
 
 *Key*<br/>
@@ -1413,8 +1413,8 @@ IList);
 |*val*|キーが同じ順序付けになる要素が map にまだ含まれていない場合に、map に挿入される要素の値。|
 |*Where*|正しい挿入ポイントの検索を開始する場所  (そのポイントの直前に場合*場所*、対数時間ではなく償却定数時間で実行できます)。|
 |*ValTy*|マップの要素の構築に使用できる引数の型を指定するテンプレート パラメーター [value_type](#value_type)、および完全転送*Val*を引数として。|
-|*まずは*|コピーされる最初の要素の位置。|
-|*前の*|コピーされる最後の要素の次の位置。|
+|*First*|コピーされる最初の要素の位置。|
+|*Last*|コピーされる最後の要素の次の位置。|
 |*InputIterator*|[入力反復子](../standard-library/input-iterator-tag-struct.md)の要件を満たすテンプレート関数の引数。この反復子は、[value_type](#value_type) オブジェクトの構築に使用できる型の要素を指し示します。|
 |*IList*|要素のコピー元の [initializer_list](../standard-library/initializer-list.md)。|
 
@@ -1795,8 +1795,8 @@ map(
 |*Al*|このマップ オブジェクトに使用するストレージ アロケーター クラス。既定では、`Allocator` です。|
 |*コンポジション*|マップ内の要素の並べ替えに使用される、型 `const Traits` の比較関数。既定では `hash_compare` です。|
 |*右*|構築される map のコピー元となる map。|
-|*まずは*|コピーする要素範囲内の最初の要素の位置。|
-|*前の*|コピーする要素範囲を超える最初の要素の位置。|
+|*First*|コピーする要素範囲内の最初の要素の位置。|
+|*Last*|コピーする要素範囲を超える最初の要素の位置。|
 |*IList*|要素のコピー元の initializer_list。|
 
 ### <a name="remarks"></a>Remarks
