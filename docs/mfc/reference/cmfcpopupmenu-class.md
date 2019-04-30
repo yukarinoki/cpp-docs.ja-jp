@@ -161,11 +161,11 @@ helpviewer_keywords:
 - CMFCPopupMenu [MFC], OnChooseItem
 ms.assetid: 9555dca1-8c9c-44c9-af72-0659ddad128e
 ms.openlocfilehash: bd6629df4274af8a4f450024f0bad6da45ae3683
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58776012"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62388333"
 ---
 # <a name="cmfcpopupmenu-class"></a>CMFCPopupMenu クラス
 
@@ -497,7 +497,7 @@ void EnableMenuLogo(
 ### <a name="parameters"></a>パラメーター
 
 *iLogoSize*<br/>
-[in](ピクセル単位)、ロゴのサイズ。
+[in]\(ピクセル単位)、ロゴのサイズ。
 
 *nLogoLocation*<br/>
 [in]ロゴの位置を示す列挙型。

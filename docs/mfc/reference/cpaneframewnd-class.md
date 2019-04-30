@@ -133,11 +133,11 @@ helpviewer_keywords:
 - CPaneFrameWnd [MFC], m_bUseSaveBits
 ms.assetid: ea3423a3-2763-482e-b763-817036ded10d
 ms.openlocfilehash: 3172556b3b12141aaae45992dee36061aebf2a15
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278822"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62372908"
 ---
 # <a name="cpaneframewnd-class"></a>CPaneFrameWnd クラス
 
@@ -237,7 +237,7 @@ class CPaneFrameWnd : public CWnd
 
 ペインがドッキング状態からフローティング状態に切り替わるときに、フレームワークは自動的に `CPaneFrameWnd` オブジェクトを作成します。
 
-ミニフレーム ウィンドウは内容を表示した状態でドラッグ (直接ドッキング) するか、ドラッグ四角形を使用してドラッグ (標準ドッキング) することができます。 ミニフレームのコンテナー ペインのドッキング モードにより、ミニフレームのドラッグ動作が決まります。 詳細については、[cbasepane::getdockingmode](../../mfc/reference/cbasepane-class.md#getdockingmode)を参照してください。
+ミニフレーム ウィンドウは内容を表示した状態でドラッグ (直接ドッキング) するか、ドラッグ四角形を使用してドラッグ (標準ドッキング) することができます。 ミニフレームのコンテナー ペインのドッキング モードにより、ミニフレームのドラッグ動作が決まります。 詳細については、次を参照してください。 [cbasepane::getdockingmode](../../mfc/reference/cbasepane-class.md#getdockingmode)します。
 
 ミニフレーム ウィンドウには、含まれているペインのスタイルに従って、キャプションのボタンが表示されます。 場合は、ウィンドウを閉じることができます ( [cbasepane::canbeclosed](../../mfc/reference/cbasepane-class.md#canbeclosed))、[閉じる] ボタンが表示されます。 ウィンドウが AFX_CBRS_AUTO_ROLLUP スタイルは、pin が表示されます。
 
@@ -423,7 +423,7 @@ virtual BOOL Create(
 [in]ミニフレーム ウィンドウに表示されるテキストを指定します。
 
 *dwStyle*<br/>
-[in]ウィンドウ スタイルを指定します。 詳細については、[ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)を参照してください。
+[in]ウィンドウ スタイルを指定します。 詳細については、次を参照してください。[ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)します。
 
 *rect*<br/>
 [in]ミニフレーム ウィンドウの位置と初期サイズを指定します。
@@ -465,7 +465,7 @@ virtual BOOL CreateEx(
 [in]ミニフレーム ウィンドウに表示されるテキストを指定します。
 
 *dwStyle*<br/>
-[in]ウィンドウ スタイルを指定します。 詳細については、[ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)を参照してください。
+[in]ウィンドウ スタイルを指定します。 詳細については、次を参照してください。[ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)します。
 
 *rect*<br/>
 [in]ミニフレーム ウィンドウの位置と初期サイズを指定します。
@@ -562,7 +562,7 @@ virtual int GetCaptionHeight() const;
 
 ### <a name="remarks"></a>Remarks
 
-ミニフレーム ウィンドウの高さを決定するには、このメソッドを呼び出します。 既定では、高さは SM_CYSMCAPTION に設定されます。 詳細については、[GetSystemMetrics 関数](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics)を参照してください。
+ミニフレーム ウィンドウの高さを決定するには、このメソッドを呼び出します。 既定では、高さは SM_CYSMCAPTION に設定されます。 詳細については、次を参照してください。 [GetSystemMetrics 関数](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics)します。
 
 ##  <a name="getcaptionrect"></a>  CPaneFrameWnd::GetCaptionRect
 
@@ -789,7 +789,7 @@ virtual BOOL IsRollDown() const;
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、ミニフレーム ウィンドウをロール ダウンするかどうかを判断するためにフレームワークによって呼び出されます。 プログラムのロールアップ/ロールダウン機能は、AFX_CBRS_AUTO_ROLLUP フラグが少なくとも 1 つのペインが含まれている場合に、ミニフレーム ウィンドウに有効です。 ウィンドウが作成されたときに、このフラグが設定されます。 詳細については、[cbasepane::createex](../../mfc/reference/cbasepane-class.md#createex)を参照してください。
+このメソッドは、ミニフレーム ウィンドウをロール ダウンするかどうかを判断するためにフレームワークによって呼び出されます。 プログラムのロールアップ/ロールダウン機能は、AFX_CBRS_AUTO_ROLLUP フラグが少なくとも 1 つのペインが含まれている場合に、ミニフレーム ウィンドウに有効です。 ウィンドウが作成されたときに、このフラグが設定されます。 詳細については、次を参照してください。 [cbasepane::createex](../../mfc/reference/cbasepane-class.md#createex)します。
 
 既定では、フレームワークは、マウス ポインターをウィンドウをロール ダウンする必要があるかどうかを判断するミニフレーム ウィンドウ外接する四角形がかどうかをチェックします。 派生クラスでは、この動作をオーバーライドすることができます。
 
@@ -807,7 +807,7 @@ virtual BOOL IsRollUp() const;
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、ミニフレーム ウィンドウをロール アップするかどうかを判断するためにフレームワークによって呼び出されます。 プログラムのロールアップ/ロールダウン機能は、AFX_CBRS_AUTO_ROLLUP フラグが少なくとも 1 つのペインが含まれている場合に、ミニフレーム ウィンドウに有効です。 ウィンドウが作成されたときに、このフラグが設定されます。 詳細については、[cbasepane::createex](../../mfc/reference/cbasepane-class.md#createex)を参照してください。
+このメソッドは、ミニフレーム ウィンドウをロール アップするかどうかを判断するためにフレームワークによって呼び出されます。 プログラムのロールアップ/ロールダウン機能は、AFX_CBRS_AUTO_ROLLUP フラグが少なくとも 1 つのペインが含まれている場合に、ミニフレーム ウィンドウに有効です。 ウィンドウが作成されたときに、このフラグが設定されます。 詳細については、次を参照してください。 [cbasepane::createex](../../mfc/reference/cbasepane-class.md#createex)します。
 
 既定では、フレームワークは、マウス ポインターが、ウィンドウが、ロール アップするかどうかを判断するミニフレーム ウィンドウ外接する四角形がかどうかをチェックします。 派生クラスでは、この動作をオーバーライドすることができます。
 

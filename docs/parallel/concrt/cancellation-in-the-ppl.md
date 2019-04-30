@@ -10,11 +10,11 @@ helpviewer_keywords:
 - canceling parallel tasks [Concurrency Runtime]
 ms.assetid: baaef417-b2f9-470e-b8bd-9ed890725b35
 ms.openlocfilehash: fae45e04d8b573cca29cc31403a39fc7ee53cc6a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57271737"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394604"
 ---
 # <a name="cancellation-in-the-ppl"></a>PPL における取り消し処理
 
@@ -63,7 +63,7 @@ PPL は、細かく分類されたタスクおよび計算を管理するため�
 
 [!code-cpp[concrt-task-tree#1](../../parallel/concrt/codesnippet/cpp/cancellation-in-the-ppl_1.cpp)]
 
-使用することも、 [concurrency::task_group](reference/task-group-class.md)同様の処理ツリーを作成するクラス。 [Concurrency::task](../../parallel/concrt/reference/task-class.md)クラスには、処理ツリーの概念もサポートしています。 ただし、`task` ツリーは依存ツリーです。 `task` ツリーでは、将来の処理は現在の処理の後に完了します。 タスク グループ ツリーでは、内部処理は外部処理の前に完了します。 タスクとタスク グループの違いの詳細については、[タスクの並列化](../../parallel/concrt/task-parallelism-concurrency-runtime.md)を参照してください。
+使用することも、 [concurrency::task_group](reference/task-group-class.md)同様の処理ツリーを作成するクラス。 [Concurrency::task](../../parallel/concrt/reference/task-class.md)クラスには、処理ツリーの概念もサポートしています。 ただし、`task` ツリーは依存ツリーです。 `task` ツリーでは、将来の処理は現在の処理の後に完了します。 タスク グループ ツリーでは、内部処理は外部処理の前に完了します。 タスクとタスク グループの違いの詳細については、次を参照してください。[タスクの並列化](../../parallel/concrt/task-parallelism-concurrency-runtime.md)します。
 
 [[トップ](#top)]
 
@@ -81,7 +81,7 @@ PPL は、細かく分類されたタスクおよび計算を管理するため�
 
 - `task` 、オブジェクトを使用して、 [concurrency::cancel_current_task](reference/concurrency-namespace-functions.md#cancel_current_task)関数。 `cancel_current_task` が現在のタスクとすべての値ベースの継続を取り消します (取り消し操作は取り消されません*トークン*タスクまたはその継続に関連付けられている)。
 
-- タスク グループと並列アルゴリズムでは、使用して、 [concurrency::is_current_task_group_canceling](reference/concurrency-namespace-functions.md#is_current_task_group_canceling)キャンセルを検出し、この関数によって返されるときにタスクの本体から直ちにを返す関数を**は true**. (タスク グループから `cancel_current_task` を呼び出さないでください)。
+- タスク グループと並列アルゴリズムでは、使用して、 [concurrency::is_current_task_group_canceling](reference/concurrency-namespace-functions.md#is_current_task_group_canceling)キャンセルを検出し、この関数によって返されるときにタスクの本体から直ちにを返す関数を**は true**。 (タスク グループから `cancel_current_task` を呼び出さないでください)。
 
 次の例では、タスク取り消し処理の最初の基本的なパターンを示しています。 タスクの本体は、ループ内の取り消し状態を適宜チェックします。
 

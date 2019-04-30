@@ -9,11 +9,11 @@ helpviewer_keywords:
 - _InterlockedCompareExchange128 intrinsic
 ms.assetid: f05918fc-716a-4f6d-b746-1456d6b96c56
 ms.openlocfilehash: 9330b1405ca247364cd04d3ab399f66e4f332273
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59037871"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62348771"
 ---
 # <a name="interlockedcompareexchange128"></a>_InterlockedCompareExchange128
 
@@ -44,7 +44,7 @@ unsigned char _InterlockedCompareExchange128(
 [in]64 ビットの整数で、変換先の低い部分と交換される可能性があります。
 
 *ComparandResult*<br/>
-[入力、出力](128 ビット フィールドとしてと見なされます) 2 つの 64 ビット整数の配列へのポインターのコピー先と比較します。  出力では、これは、変換先の元の値で上書きされます。
+[入力、出力]\(128 ビット フィールドとしてと見なされます) 2 つの 64 ビット整数の配列へのポインターのコピー先と比較します。  出力では、これは、変換先の元の値で上書きされます。
 
 ## <a name="return-value"></a>戻り値
 

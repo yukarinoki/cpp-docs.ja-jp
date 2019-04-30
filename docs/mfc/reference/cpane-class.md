@@ -134,11 +134,11 @@ helpviewer_keywords:
 - CPane [MFC], m_recentDockInfo
 ms.assetid: 5c651a64-3c79-4d94-9676-45f6402a6bc5
 ms.openlocfilehash: b660d181aada8abeb61b397fb30b097897e74f65
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326778"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62373155"
 ---
 # <a name="cpane-class"></a>CPane Class
 
@@ -445,7 +445,7 @@ virtual void ConvertToTabbedDocument(BOOL bActiveTabOnly = TRUE);
 
 ### <a name="remarks"></a>Remarks
 
-ドッキング可能ペインだけは、タブ付きドキュメントに変換できます。 詳しくは、[CDockablePane::ConvertToTabbedDocument](../../mfc/reference/cdockablepane-class.md#converttotabbeddocument)を参照してください。
+ドッキング可能ペインだけは、タブ付きドキュメントに変換できます。 詳しくは、次を参照してください。 [CDockablePane::ConvertToTabbedDocument](../../mfc/reference/cdockablepane-class.md#converttotabbeddocument)します。
 
 ##  <a name="copystate"></a>  CPane::CopyState
 
@@ -485,7 +485,7 @@ virtual BOOL Create(
 [in]Windows クラスの名前を指定します。
 
 *dwStyle*<br/>
-[in]ウィンドウのスタイル属性を指定します。 詳細については、[ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)を参照してください。
+[in]ウィンドウのスタイル属性を指定します。 詳細については、次を参照してください。[ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)します。
 
 *rect*<br/>
 [in]初期サイズと位置を指定します、 *pParentWnd*クライアント座標でのウィンドウ。
@@ -497,7 +497,7 @@ virtual BOOL Create(
 [in]ペインの ID を指定します。
 
 *dwControlBarStyle*<br/>
-[in]ウィンドウのスタイルを指定します。 詳細については、[cbasepane::createex](../../mfc/reference/cbasepane-class.md#createex)を参照してください。
+[in]ウィンドウのスタイルを指定します。 詳細については、次を参照してください。 [cbasepane::createex](../../mfc/reference/cbasepane-class.md#createex)します。
 
 *pContext*<br/>
 [入力、出力]ウィンドウの作成のコンテキストを指定します。
@@ -554,13 +554,13 @@ virtual BOOL CreateEx(
 ### <a name="parameters"></a>パラメーター
 
 *dwStyleEx*<br/>
-[in]拡張ウィンドウ スタイル属性を指定します。 詳細については、[拡張ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)を参照してください。
+[in]拡張ウィンドウ スタイル属性を指定します。 詳細については、次を参照してください。[拡張ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)します。
 
 *lpszClassName*<br/>
 [in]Windows クラスの名前を指定します。
 
 *dwStyle*<br/>
-[in]ウィンドウのスタイル属性を指定します。 詳細については、[ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)を参照してください。
+[in]ウィンドウのスタイル属性を指定します。 詳細については、次を参照してください。[ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)します。
 
 *rect*<br/>
 [in]初期サイズと位置を指定します、 *pParentWnd*クライアント座標でのウィンドウ。
@@ -572,7 +572,7 @@ virtual BOOL CreateEx(
 [in]ペインの ID を指定します。
 
 *dwControlBarStyle*<br/>
-[in]ウィンドウのスタイルを指定します。 詳細については、[cbasepane::createex](../../mfc/reference/cbasepane-class.md#createex)を参照してください。
+[in]ウィンドウのスタイルを指定します。 詳細については、次を参照してください。 [cbasepane::createex](../../mfc/reference/cbasepane-class.md#createex)します。
 
 *pContext*<br/>
 [入力、出力]ウィンドウの作成のコンテキストを指定します。
@@ -662,7 +662,7 @@ virtual CPane* DockPaneStandard(BOOL& bWasDocked);
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドはから派生したペインに対してのみ使用、 [CDockablePane クラス](../../mfc/reference/cdockablepane-class.md)します。 詳細については、[CDockablePane::DockPaneStandard](../../mfc/reference/cdockablepane-class.md#dockpanestandard)を参照してください。
+このメソッドはから派生したペインに対してのみ使用、 [CDockablePane クラス](../../mfc/reference/cdockablepane-class.md)します。 詳細については、次を参照してください。 [CDockablePane::DockPaneStandard](../../mfc/reference/cdockablepane-class.md#dockpanestandard)します。
 
 ##  <a name="docktoframewindow"></a>  CPane::DockToFrameWindow
 
@@ -739,7 +739,7 @@ virtual BOOL FloatPane(
 [in]画面座標、フローティング、ときに、ウィンドウを配置する場所を指定します。
 
 *dockMethod*<br/>
-[in]ドッキング ウィンドウがフローティング状態のときに使用する方法を指定します。 使用可能な値の一覧は、[CPane::DockPane](#dockpane)を参照してください。
+[in]ドッキング ウィンドウがフローティング状態のときに使用する方法を指定します。 使用可能な値の一覧は、次を参照してください。 [CPane::DockPane](#dockpane)します。
 
 *bShow*<br/>
 [in]フローティング状態になったときにウィンドウを表示する場合は TRUEそれ以外の場合、FALSE です。
@@ -838,7 +838,7 @@ virtual BOOL GetExclusiveRowMode() const;
 
 ### <a name="remarks"></a>Remarks
 
-排他行モードの詳細については、[CPane::SetExclusiveRowMode](#setexclusiverowmode)を参照してください。
+排他行モードの詳細については、次を参照してください。 [CPane::SetExclusiveRowMode](#setexclusiverowmode)します。
 
 ##  <a name="gethotspot"></a>  CPane::GetHotSpot
 
@@ -1444,7 +1444,7 @@ virtual void SetDockState(CDockingManager* pDockManager);
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、ウィンドウの最近のドッキング状態情報を復元するためにフレームワークによって呼び出されます。 ペインでの最近のドッキング状態情報を格納する[:m_recentdockinfo](#m_recentdockinfo)します。 詳細については、、 [CRecentDockSiteInfo クラス](../../mfc/reference/crecentdocksiteinfo-class.md)を参照してください。
+このメソッドは、ウィンドウの最近のドッキング状態情報を復元するためにフレームワークによって呼び出されます。 ペインでの最近のドッキング状態情報を格納する[:m_recentdockinfo](#m_recentdockinfo)します。 詳細については、次を参照してください。、 [CRecentDockSiteInfo クラス](../../mfc/reference/crecentdocksiteinfo-class.md)します。
 
 外部ソースからウィンドウの情報を読み込むときに、ドッキング状態を設定するには、このメソッドを呼び出すこともできます。
 
