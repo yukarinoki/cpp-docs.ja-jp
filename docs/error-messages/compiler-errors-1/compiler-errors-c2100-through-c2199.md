@@ -1,6 +1,6 @@
 ---
-title: コンパイラ エラーs C2100 through C2199
-ms.date: 11/17/2017
+title: コンパイラ エラー (C2100 - C2199)
+ms.date: 04/21/2019
 f1_keywords:
 - C2119
 - C2123
@@ -23,14 +23,14 @@ helpviewer_keywords:
 - C2187
 - C2189
 ms.assetid: 1ccab076-0954-4386-b959-d3112a6793ae
-ms.openlocfilehash: 31974bb830364b2ef41a7da17cb0ad95d931f771
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
-ms.translationtype: MT
+ms.openlocfilehash: 3a5a5368700eb1c4c585826021fefc21c25ecedf
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57423535"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62360542"
 ---
-# <a name="compiler-errors-c2100-through-c2199"></a>コンパイラ エラーs C2100 through C2199
+# <a name="compiler-errors-c2100-through-c2199"></a>コンパイラ エラー (C2100 - C2199)
 
 ドキュメントのこのセクションの記事では、コンパイラによって生成されるエラー メッセージのサブセットについて説明します。
 
@@ -140,3 +140,8 @@ ms.locfileid: "57423535"
 |[コンパイラ エラー C2197](compiler-error-c2197.md)|'*関数*': 呼び出しの引数が多すぎます|
 |[コンパイラ エラー C2198](compiler-error-c2198.md)|'*関数*': 呼び出しの引数が少なすぎます|
 |[コンパイラ エラー C2199](compiler-error-c2199.md)|構文エラー: 検出された '*識別子*(' グローバル スコープで (宣言のためのものでしたか?)|
+
+## <a name="see-also"></a>関連項目
+
+[C/C++コンパイラとビルド ツールのエラーと警告](../compiler-errors-1/c-cpp-build-errors.md) \
+[コンパイラ エラー C2000 - C3999](../compiler-errors-1/compiler-errors-c2000-c3999.md)

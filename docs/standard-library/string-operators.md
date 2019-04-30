@@ -21,11 +21,11 @@ helpviewer_keywords:
 - std::operator&lt;&lt; (string)
 - std::operator&lt;= (string), std::operator== (string)
 ms.openlocfilehash: a3ca469058ba65f83b0df60a93c63895e34f916e
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332219"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412359"
 ---
 # <a name="ltstringgt-operators"></a>&lt;string&gt; 演算子
 
@@ -115,7 +115,7 @@ basic_string<CharType, Traits, Allocator>&& operator+(
 
 ### <a name="remarks"></a>Remarks
 
-関数はそれぞれ `operator+` をオーバーロードして、テンプレート クラス [basic_string クラス](../standard-library/basic-string-class.md)の 2 つのオブジェクトを連結します。 すべては実質的に戻り`basic_string< CharType, Traits, Allocator>(Left).append(right)`します。 詳細については、[追加](../standard-library/basic-string-class.md#append)を参照してください。
+関数はそれぞれ `operator+` をオーバーロードして、テンプレート クラス [basic_string クラス](../standard-library/basic-string-class.md)の 2 つのオブジェクトを連結します。 すべては実質的に戻り`basic_string< CharType, Traits, Allocator>(Left).append(right)`します。 詳細については、次を参照してください。[追加](../standard-library/basic-string-class.md#append)します。
 
 ### <a name="example"></a>例
 

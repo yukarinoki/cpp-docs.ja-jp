@@ -13,11 +13,11 @@ helpviewer_keywords:
 - CMFCAcceleratorKey [MFC], SetAccelerator
 ms.assetid: d140fbf7-23db-45ea-a63e-414a5ec7b3d5
 ms.openlocfilehash: 6a99ad00a43ac7912320ee469d542b6bf9cca3de
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57292264"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403959"
 ---
 # <a name="cmfcacceleratorkey-class"></a>CMFCAcceleratorKey クラス
 
@@ -48,7 +48,7 @@ class CMFCAcceleratorKey : public CObject
 
 アクセラレータ キーは、ショートカット キーとも呼ばれます。 ユーザーが入力するキーボード ショートカットを表示する場合、 [CMFCAcceleratorKeyAssignCtrl クラス](../../mfc/reference/cmfcacceleratorkeyassignctrl-class.md)マップのショートカット キー、Alt + Shift + S など"Alt + Shift + S"などのカスタム テキスト形式にします。 各`CMFCAcceleratorKey`オブジェクトがテキスト形式を単一のショートカット キーをマップします。
 
-ショートカット キーとアクセラレータ テーブルを使用する方法の詳細については、[CKeyboardManager クラス](../../mfc/reference/ckeyboardmanager-class.md)を参照してください。
+ショートカット キーとアクセラレータ テーブルを使用する方法の詳細については、次を参照してください。 [CKeyboardManager クラス](../../mfc/reference/ckeyboardmanager-class.md)します。
 
 ## <a name="example"></a>例
 

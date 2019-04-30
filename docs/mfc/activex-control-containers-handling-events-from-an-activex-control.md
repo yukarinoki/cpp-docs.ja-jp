@@ -12,25 +12,25 @@ helpviewer_keywords:
 - BEGIN_EVENTSINK_MAP macro
 ms.assetid: f9c106db-052f-4e32-82ad-750646aa760b
 ms.openlocfilehash: 8087d84d2203e4f910200acdd1b00e58d14f920e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293564"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394898"
 ---
 # <a name="activex-control-containers-handling-events-from-an-activex-control"></a>ActiveX コントロール コンテナー:ActiveX コントロールからのイベントの処理
 
 この記事では、[プロパティ] ウィンドウを使用して ActiveX コントロール コンテナーで ActiveX コントロールのイベント ハンドラーをインストールするについて説明します。 イベント ハンドラーは、特定のイベントの (制御) から通知を受け取り、応答で何らかのアクションを実行に使用されます。 この通知は、イベントを「起動」と呼ばれます。
 
 >[!IMPORTANT]
-> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の置き換えの最新のテクノロジの詳細については、[ActiveX コントロール](activex-controls.md)を参照してください。
+> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の置き換えの最新のテクノロジの詳細については、次を参照してください。 [ActiveX コントロール](activex-controls.md)します。
 
 > [!NOTE]
 >  この記事では、ダイアログ ベース ActiveX コントロール コンテナーという名前のプロジェクト コンテナーと円をという名前のプロシージャとコードの例として、埋め込みのコントロールを使用します。
 
 イベント ボタンを使用して、[プロパティ] ウィンドウで、ActiveX コントロール コンテナー アプリケーションで発生するイベントのマップを作成することができます。 「イベント シンク マップ」と呼ばれる、このマップは作成され、コントロールのコンテナー クラスにイベント ハンドラーを追加すると、Visual C で保持されます。 イベント マップ エントリの場合は、実装、各イベント ハンドラーは、特定のイベントをコンテナーのイベント ハンドラーのメンバー関数にマップします。 ActiveX コントロールのオブジェクトによって指定されたイベントが発生したときに、このイベント ハンドラー関数が呼び出されます。
 
-イベント シンク マップの詳細については、[イベント シンク マップ](../mfc/reference/event-sink-maps.md)で、*クラス ライブラリ リファレンス*を参照してください。
+イベント シンク マップの詳細については、次を参照してください。[イベント シンク マップ](../mfc/reference/event-sink-maps.md)で、*クラス ライブラリ リファレンス*します。
 
 ##  <a name="_core_event_handler_modifications_to_the_project"></a> プロジェクトにイベント ハンドラーの変更
 
@@ -49,7 +49,7 @@ ms.locfileid: "57293564"
 
 [!code-cpp[NVC_MFC_AxCont#11](../mfc/codesnippet/cpp/activex-control-containers-handling-events-from-an-activex-control_4.cpp)]
 
-イベント シンク マクロの詳細については、[イベント シンク マップ](../mfc/reference/event-sink-maps.md)で、*クラス ライブラリ リファレンス*を参照してください。
+イベント シンク マクロの詳細については、次を参照してください。[イベント シンク マップ](../mfc/reference/event-sink-maps.md)で、*クラス ライブラリ リファレンス*します。
 
 #### <a name="to-create-an-event-handler-function"></a>イベント ハンドラー関数を作成するには
 

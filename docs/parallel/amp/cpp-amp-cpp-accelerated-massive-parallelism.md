@@ -6,11 +6,11 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, getting started
 ms.assetid: e27824cb-3167-409b-8c3f-a0e476d8f349
 ms.openlocfilehash: f8ac71023f66868a66fb8c54a5e86678225378a1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613175"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62400696"
 ---
 # <a name="c-amp-c-accelerated-massive-parallelism"></a>C++ AMP (C++ Accelerated Massive Parallelism)
 
@@ -18,7 +18,7 @@ C++ AMP (C++ Accelerated Massive Parallelism) は、独立したグラフィッ�
 
 ## <a name="related-topics"></a>関連トピック
 
-|Title|説明|
+|タイトル|説明|
 |-----------|-----------------|
 |[C++ AMP の概要](../../parallel/amp/cpp-amp-overview.md)|C++ AMP および数値演算ライブラリの主な機能について説明します。|
 |[ラムダ、関数オブジェクト、および制限関数の使用](../../parallel/amp/using-lambdas-function-objects-and-restricted-functions.md)|呼び出しでラムダ式、関数オブジェクト、および制限関数を使用する方法について説明します、 [parallel_for_each](reference/concurrency-namespace-functions-amp.md#parallel_for_each)メソッド。|

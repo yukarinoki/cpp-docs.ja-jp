@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4996
 ms.assetid: 926c7cc2-921d-43ed-ae75-634f560dd317
 ms.openlocfilehash: ef1bc46b64ccbe1374fd795a9b5d56e091b47f48
-ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57816426"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62401502"
 ---
 # <a name="compiler-warning-level-3-c4996"></a>コンパイラの警告 (レベル 3) C4996
 
@@ -19,7 +19,7 @@ ms.locfileid: "57816426"
 
 これらは、C ランタイム ライブラリと標準のライブラリが完全なリストではなくによって生成されるいくつかの一般的な C4996 メッセージです。 リンクや、警告をオフにしたり、問題を解決する方法についてお読みください。
 
-- [このアイテムの POSIX 名が非推奨とされます。代わりに、ISO C および C++ に準拠する名前を使用: *new_name*します。詳しくは、オンライン ヘルプをご覧ください。](#posix-function-names)
+- [このアイテムの POSIX 名が非推奨とされます。代わりに、ISO C を使用し、C++に準拠する名前: *new_name*します。詳しくは、オンライン ヘルプをご覧ください。](#posix-function-names)
 
 - [この関数または変数が安全なない可能性があります。使用を検討して*safe_version*代わりにします。非推奨を無効にするには、 \_CRT\_SECURE\_いいえ\_警告します。詳しくは、オンライン ヘルプをご覧ください。](#unsafe-crt-library-functions)
 
@@ -45,7 +45,7 @@ C4996 は、コンパイラは、関数または変数としてマークされ�
 
 Visual Studio IDE でプロジェクト全体の警告をオフにするには。
 
-- 開く、**プロパティ ページ**プロジェクトのダイアログ。 プロパティ ページ ダイアログを使用する方法については、[プロパティ ページ](../../build/reference/property-pages-visual-cpp.md)を参照してください。
+- 開く、**プロパティ ページ**プロジェクトのダイアログ。 プロパティ ページ ダイアログを使用する方法については、次を参照してください。[プロパティ ページ](../../build/reference/property-pages-visual-cpp.md)します。
 - 選択、**構成プロパティ**、 **C/C++**、**詳細**ページ。
 - 編集、**特定の警告を無効にする**プロパティを追加する`4996`します。 選択**OK**変更を適用します。
 
@@ -53,7 +53,7 @@ Visual Studio IDE でプロジェクト全体の警告をオフにするには�
 
 Visual Studio では、プリプロセッサ マクロを定義します。
 
-- 開く、**プロパティ ページ**プロジェクトのダイアログ。 プロパティ ページ ダイアログを使用する方法については、[プロパティ ページ](../../build/reference/property-pages-visual-cpp.md)を参照してください。
+- 開く、**プロパティ ページ**プロジェクトのダイアログ。 プロパティ ページ ダイアログを使用する方法については、次を参照してください。[プロパティ ページ](../../build/reference/property-pages-visual-cpp.md)します。
 - 展開**構成プロパティ > [C/C++] > プリプロセッサ**します。
 - **プリプロセッサの定義**プロパティ、マクロ名を追加します。 **[OK]** を選んで保存し、プロジェクトをリビルドします。
 
@@ -65,7 +65,7 @@ C4996 が警告およびエラーの一般的なソースの一部を示しま�
 
 ### <a name="posix-function-names"></a>POSIX 関数名
 
-**このアイテムの POSIX 名が非推奨とされます。代わりに、ISO C および C++ に準拠する名前を使用:** *new_name*します。 **詳細については、オンライン ヘルプを参照してください。**
+**このアイテムの POSIX 名が非推奨とされます。代わりに、ISO C を使用し、C++に準拠する名前:** *new_name*します。 **詳細については、オンライン ヘルプを参照してください。**
 
 Microsoft は C99 と c++ 03 の規則の実装で定義されたグローバル関数名に準拠するように CRT で一部の POSIX 関数の名前を変更します。 元の POSIX 名のみの非推奨とされますが、関数自体ではありません。 ほとんどの場合、標準準拠の名前を作成するため POSIX 関数名の先頭にアンダースコアが追加されています。 コンパイラは、元の関数名の非推奨の警告を発行し、優先名を提案します。
 
@@ -242,7 +242,7 @@ C4996 は、セキュリティ上の理由から非推奨とされた MFC また
 
 この問題を解決するには、強くお勧めの更新された関数を代わりに使用するコードを変更します。
 
-これらの警告を抑制する方法については、[_AFX_SECURE_NO_WARNINGS](../../mfc/reference/diagnostic-services.md#afx_secure_no_warnings)を参照してください。
+これらの警告を抑制する方法については、次を参照してください。 [_AFX_SECURE_NO_WARNINGS](../../mfc/reference/diagnostic-services.md#afx_secure_no_warnings)します。
 
 ### <a name="obsolete-crt-functions-and-variables"></a>廃止された CRT 関数と変数
 

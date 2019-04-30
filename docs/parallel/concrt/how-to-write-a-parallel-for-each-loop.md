@@ -6,11 +6,11 @@ helpviewer_keywords:
 - parallel_for_each function, example
 ms.assetid: fa9c0ba6-ace0-4f88-8681-c7c1f52aff20
 ms.openlocfilehash: 19af9be8ef6d9c38a0942e7c85caa0a8bc4e6813
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57272218"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62375562"
 ---
 # <a name="how-to-write-a-parallelforeach-loop"></a>方法: Parallel_for_each ループを記述します。
 
@@ -42,8 +42,7 @@ took 1653 ms
 
 ## <a name="robust-programming"></a>信頼性の高いプログラミング
 
-この例で `parallel_for_each` アルゴリズムに渡すラムダ式では、`InterlockedIncrement` 関数を使用して、ループの反復処理を並列で行い、カウンターを同時にインクリメントします。 
-  `InterlockedIncrement` などの関数を使用して共有リソースへのアクセスを同期化すると、コードのパフォーマンスのボトルネックを示すことができます。 たとえば、ロックフリー同期メカニズムを使用することができます、 [concurrency::combinable](../../parallel/concrt/reference/combinable-class.md)共有リソースへの同時アクセスをなくすのクラス。 使用する例については、`combinable`この方法でクラスを参照してください[方法。パフォーマンスを向上させる combinable を使用して](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md)します。
+この例で `parallel_for_each` アルゴリズムに渡すラムダ式では、`InterlockedIncrement` 関数を使用して、ループの反復処理を並列で行い、カウンターを同時にインクリメントします。 `InterlockedIncrement` などの関数を使用して共有リソースへのアクセスを同期化すると、コードのパフォーマンスのボトルネックを示すことができます。 たとえば、ロックフリー同期メカニズムを使用することができます、 [concurrency::combinable](../../parallel/concrt/reference/combinable-class.md)共有リソースへの同時アクセスをなくすのクラス。 使用する例については、`combinable`この方法でクラスを参照してください[方法。パフォーマンスを向上させる combinable を使用して](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md)します。
 
 ## <a name="see-also"></a>関連項目
 

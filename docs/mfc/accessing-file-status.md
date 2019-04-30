@@ -9,11 +9,11 @@ helpviewer_keywords:
 - status of files [MFC]
 ms.assetid: 1b8891d6-eb0f-4037-a837-4928fe595222
 ms.openlocfilehash: 26c263b2d7e4e0243444925cb9416cb337dcd79d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298894"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392961"
 ---
 # <a name="accessing-file-status"></a>ファイルの状態の操作
 
@@ -27,7 +27,7 @@ ms.locfileid: "57298894"
 
 [!code-cpp[NVC_MFCFiles#3](../atl-mfc-shared/reference/codesnippet/cpp/accessing-file-status_1.cpp)]
 
-関連情報については、[シリアル化](../mfc/serialization-in-mfc.md)を参照してください。
+関連情報については、次を参照してください。[シリアル化](../mfc/serialization-in-mfc.md)します。
 
 ## <a name="see-also"></a>関連項目
 

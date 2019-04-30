@@ -7,11 +7,11 @@ helpviewer_keywords:
 - random header
 ms.assetid: 60afc25c-b162-4811-97c1-1b65398d4c57
 ms.openlocfilehash: 5b246be02c860ede6691db1c4d21af7e6b4da26a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50511853"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62369814"
 ---
 # <a name="ltrandomgt"></a>&lt;random&gt;
 
@@ -212,11 +212,11 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 
 URNG は、次の特性においてよく説明されます。
 
-1. **周期の長さ**: 生成された数のシーケンスを繰り返すために、どれだけの回数の反復処理を行うか。 長いほど良いです。
+1. **期間の長さ**:繰り返し回数を生成された数値のシーケンスを繰り返すかかります。 長いほど良いです。
 
-2. **パフォーマンス**: どれだけ迅速に数を生成できるか、どれだけメモリを使用するか。 値が小さいほど良いです。
+2. **パフォーマンス**:メモリのサイズと数を生成できる時間かかります。 値が小さいほど良いです。
 
-3. **品質**: 生成されたシーケンスがどれほど真の乱数に近いか。 これは通常 "*ランダム性*" と呼ばれます。
+3. **品質**:生成されたシーケンスが真の乱数に近い方法。 これは通常 "*ランダム性*" と呼ばれます。
 
 次のセクションでは、一覧の uniform random number generator (Urng) で提供される、 \<random > ヘッダー。
 

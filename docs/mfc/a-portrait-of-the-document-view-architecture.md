@@ -15,11 +15,11 @@ helpviewer_keywords:
 - views [MFC], accessing document data from
 ms.assetid: 4e7f65dc-b166-45d8-bcd5-9bb0d399b946
 ms.openlocfilehash: 51f963acf5aacdfe4050a076d3bb0e651a92d021
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298868"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392976"
 ---
 # <a name="a-portrait-of-the-documentview-architecture"></a>ドキュメント/ビュー アーキテクチャの全体像
 
@@ -29,7 +29,7 @@ ms.locfileid: "57298868"
 
 ビュー データにアクセスする、ドキュメントのいずれかで、 [GetDocument](../mfc/reference/cview-class.md#getdocument)関数は、ドキュメント、または C++ のクラス ビューを作成して、ポインターを返します`friend`ドキュメント クラスの。 ビューは、このデータへのアクセスを使用して描画したり、それ以外の場合を操作するのに準備ができた場合は、データを取得します。
 
-ビューの例: から[OnDraw](../mfc/reference/cview-class.md#ondraw)ビューで使用するメンバー関数は、`GetDocument`ドキュメント ポインターを取得します。 アクセスにそのポインターを使用して、`CString`ドキュメント内のデータ メンバー。 文字列に、ビュー、`TextOut`関数。 この例のコードを表示するには、[ビューの描画](../mfc/drawing-in-a-view.md)を参照してください。
+ビューの例: から[OnDraw](../mfc/reference/cview-class.md#ondraw)ビューで使用するメンバー関数は、`GetDocument`ドキュメント ポインターを取得します。 アクセスにそのポインターを使用して、`CString`ドキュメント内のデータ メンバー。 文字列に、ビュー、`TextOut`関数。 この例のコードを表示するには、次を参照してください。[ビューの描画](../mfc/drawing-in-a-view.md)します。
 
 ## <a name="user-input-to-the-view"></a>ビューにユーザー入力
 

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3073
 ms.assetid: b24b9b8b-f9fb-4c3c-a1a0-97fad2081bfc
 ms.openlocfilehash: 8a4a2011124056af7064c8241450e1f3613776a9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50580870"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62406705"
 ---
 # <a name="compiler-error-c3073"></a>コンパイラ エラー C3073
 
@@ -19,7 +19,7 @@ ms.locfileid: "50580870"
 
 [/Clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)のコンパイル時に、コンパイラでは、参照型のコピー コンス トラクターは生成されません。 いずれかで **/clr**のコンパイル時にコピーする型のインスタンスが予想される場合、参照型の独自のコピー コンス トラクターを定義する必要があります。
 
-詳細については、[参照型の C++ スタック セマンティクス](../../dotnet/cpp-stack-semantics-for-reference-types.md)を参照してください。
+詳細については、次を参照してください。[参照型の C++ スタック セマンティクス](../../dotnet/cpp-stack-semantics-for-reference-types.md)します。
 
 ## <a name="example"></a>例
 

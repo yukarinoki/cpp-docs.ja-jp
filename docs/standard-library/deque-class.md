@@ -89,11 +89,11 @@ helpviewer_keywords:
 - std::deque [C++], swap
 ms.assetid: 64842ee5-057a-4063-8c16-4267a0332584
 ms.openlocfilehash: 8a50d04751ac5b4abaf94d0d9fd16f57c6200f66
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525393"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394014"
 ---
 # <a name="deque-class"></a>deque クラス
 
@@ -235,10 +235,10 @@ void assign(initializer_list<Type> IList);
 
 ### <a name="parameters"></a>パラメーター
 
-*まずは*<br/>
+*First*<br/>
 deque 引数からコピーされる要素範囲内の最初の要素の位置。
 
-*前の*<br/>
+*Last*<br/>
 deque 引数からコピーされる要素範囲を超える最初の要素の位置。
 
 *カウント*<br/>
@@ -775,8 +775,8 @@ deque(initializer_list<value_type> IList, const Allocator& Al);
 |*カウント*|構築された deque 内の要素の数。|
 |*val*|構築された deque の要素の値。|
 |*右*|構築された deque がコピーになる元の deque。|
-|*まずは*|コピーする要素範囲内の最初の要素の位置。|
-|*前の*|コピーする要素範囲を超える最初の要素の位置。|
+|*First*|コピーする要素範囲内の最初の要素の位置。|
+|*Last*|コピーする要素範囲を超える最初の要素の位置。|
 |* IList'|コピーされる initializer_list。|
 
 ### <a name="remarks"></a>Remarks
@@ -1520,8 +1520,8 @@ IList);
 |*Where*|最初の要素が挿入される、ターゲット deque 内の位置。|
 |*val*|deque に挿入される要素の値。|
 |*カウント*|deque に挿入される要素の数。|
-|*まずは*|コピーされる引数 deque の要素範囲内にある最初の要素の位置。|
-|*前の*|コピーされる引数 deque の要素範囲外にある最初の要素の位置。|
+|*First*|コピーされる引数 deque の要素範囲内にある最初の要素の位置。|
+|*Last*|コピーされる引数 deque の要素範囲外にある最初の要素の位置。|
 |*IList*|挿入する要素の initializer_list。|
 
 ### <a name="return-value"></a>戻り値

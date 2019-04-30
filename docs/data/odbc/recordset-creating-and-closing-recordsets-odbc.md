@@ -10,11 +10,11 @@ helpviewer_keywords:
 - ODBC recordsets, opening
 ms.assetid: 8d2aac23-4396-4ce2-8c60-5ecf1b360d3d
 ms.openlocfilehash: 5d5dae5bc766c0cfc31b4fb76f7fe104be0dbd74
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59041268"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62395587"
 ---
 # <a name="recordset-creating-and-closing-recordsets-odbc"></a>レコード セット:作成するレコード セットと破棄 (ODBC)
 
@@ -110,5 +110,5 @@ if(!rsStudent.Open(CRecordset::snapshot, NULL, CRecordset::readOnly))
 ## <a name="see-also"></a>関連項目
 
 [レコードセット (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[レコード セット:スクロール (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)<br/>
-[レコード セット:追加、更新、および削除 (Odbc)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)
+[レコードセット: スクロール (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)<br/>
+[レコードセット: レコードの追加、更新、削除 (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)

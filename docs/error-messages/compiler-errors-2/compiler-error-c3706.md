@@ -7,17 +7,17 @@ helpviewer_keywords:
 - C3706
 ms.assetid: d20a33eb-d625-46c5-ac87-32075a590d07
 ms.openlocfilehash: 2d474db5a4d50aed7b59e6f48fb5a3e8165f10c6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468616"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62400293"
 ---
 # <a name="compiler-error-c3706"></a>コンパイラ エラー C3706
 
 'function': COM イベントを発生させる COM インターフェイスを使用する必要があります
 
-COM イベントを発生させるを使用するイベント インターフェイスでは、COM インターフェイスを使用する必要があります。 このような状況で、インターフェイスは Visual C 属性を使用して定義する必要がありますか、またはを使用してインポート[#import](../../preprocessor/hash-import-directive-cpp.md) #import の embedded_idl 属性を持つタイプ ライブラリから。
+COM イベントを発生させるを使用するイベント インターフェイスでは、COM インターフェイスを使用する必要があります。 このような状況でインターフェイスが定義することも、ビジュアルを使用してC++属性、またはインポートを使用して[#import](../../preprocessor/hash-import-directive-cpp.md) #import の embedded_idl 属性を持つタイプ ライブラリから。
 
 なお、`#include`次の例に示すように、ATL ヘッダー ファイルの行は COM イベントを使用するために必要です。 このエラーを修正するように`IEvents`(イベントのインターフェイス)、次のいずれかの操作を適用することで、COM インターフェイスのインターフェイス定義に属性:[オブジェクト](../../windows/object-cpp.md)、[デュアル](../../windows/dual.md)、または[dispinterface](../../windows/dispinterface.md)します。
 

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - dynamic_cast keyword [C++]
 ms.assetid: f380ada8-6a18-4547-93c9-63407f19856b
 ms.openlocfilehash: 3b359885eb72f9272fb1efe14afe9a6cbe6ddb30
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176966"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399058"
 ---
 # <a name="dynamiccast-operator"></a>dynamic_cast 演算子
 
@@ -54,7 +54,7 @@ void f(D* pd) {
 
 このような変換は "アップキャスト" と呼ばれます。理由は、クラスの階層構造で、派生したクラスから上位に (つまり、そのクラスの派生元のクラスに) ポインターを移動するためです。 アップキャストは暗黙の変換です。
 
-`type-id` が void* の場合、`expression` の実際の型を確認するためにランタイム チェックが行われます。 結果は `expression` によってポイントされた完全なオブジェクトへのポインターです。 例えば:
+`type-id` が void* の場合、`expression` の実際の型を確認するためにランタイム チェックが行われます。 結果は `expression` によってポイントされた完全なオブジェクトへのポインターです。 例:
 
 ```cpp
 // dynamic_cast_2.cpp
@@ -152,7 +152,7 @@ void f() {
 ![クラスの基底クラスの複製を示す階層](../cpp/media/vc39013.gif "クラスを基底クラスの複製を示す階層") <br/>
 重複基底クラスを示すクラスの階層構造
 
-`E` 型のオブジェクトと `D` サブオブジェクトへのポインターがあるとして、`D` サブオブジェクトから左端の `A` サブオブジェクトに移動するには、変換を 3 回行います。 行うことができます、 **dynamic_cast**からの変換、`D`へのポインター、`E`ポインターの場合、変換 (か**dynamic_cast**または暗黙の変換)から`E`に`B`、および暗黙的な変換から最後に`B`に`A`します。 例えば:
+`E` 型のオブジェクトと `D` サブオブジェクトへのポインターがあるとして、`D` サブオブジェクトから左端の `A` サブオブジェクトに移動するには、変換を 3 回行います。 行うことができます、 **dynamic_cast**からの変換、`D`へのポインター、`E`ポインターの場合、変換 (か**dynamic_cast**または暗黙の変換)から`E`に`B`、および暗黙的な変換から最後に`B`に`A`します。 例:
 
 ```cpp
 // dynamic_cast_5.cpp
@@ -191,7 +191,7 @@ void f(D* pd) {
 
 Null ポインター値は、変換先の型の null ポインター値に変換されます**dynamic_cast**します。
 
-`dynamic_cast < type-id > ( expression )` を使用するときに、`expression` を型 `type-id` に安全に変換できない場合、ランタイム チェックにより、キャストは失敗します。 例えば:
+`dynamic_cast < type-id > ( expression )` を使用するときに、`expression` を型 `type-id` に安全に変換できない場合、ランタイム チェックにより、キャストは失敗します。 例:
 
 ```cpp
 // dynamic_cast_7.cpp

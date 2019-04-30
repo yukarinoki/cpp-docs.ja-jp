@@ -6,11 +6,11 @@ helpviewer_keywords:
 - STL/CLR, cross-assembly issues
 ms.assetid: 87efb41b-3db3-4498-a2e7-f3ef8a99f04d
 ms.openlocfilehash: 206a95cbaa808f54d7ae0e500b5a2bea272d974b
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57748438"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387332"
 ---
 # <a name="how-to-expose-an-stlclr-container-from-an-assembly"></a>方法: アセンブリから STL/CLR コンテナーを公開します。
 
@@ -107,7 +107,7 @@ namespace StlClrClassLibrary {
 
 この例では、例 1 で宣言されたクラスを実装します。 マニフェスト ツールを使用してクライアントがこのクラス ライブラリを使用するためには、 **mt.exe** DLL にマニフェスト ファイルを埋め込む。 詳細については、コードのコメントを参照してください。
 
-マニフェスト ツールとサイド バイ サイド アセンブリの詳細については、[c/c++ 分離アプリケーションの構築とサイド バイ サイド アセンブリ](../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)を参照してください。
+マニフェスト ツールとサイド バイ サイド アセンブリの詳細については、次を参照してください。 [c/c++ 分離アプリケーションの構築とサイド バイ サイド アセンブリ](../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)します。
 
 ### <a name="code"></a>コード
 

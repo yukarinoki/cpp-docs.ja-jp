@@ -47,11 +47,11 @@ helpviewer_keywords:
 - std::moneypunct [C++], thousands_sep
 ms.assetid: cf2650da-3e6f-491c-95d5-23e57f582ee6
 ms.openlocfilehash: 750b61100f7e3fe15851fffbedeb5b60d4d7034f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468654"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62349122"
 ---
 # <a name="moneypunct-class"></a>moneypunct クラス
 
@@ -530,11 +530,11 @@ explicit moneypunct(size_t _Refs = 0);
 
 使用可能な値を *_Refs*パラメーターとその重要性は。
 
-- 0: オブジェクトの有効期間はそれが含まれるロケールによって管理されます。
+- 0:オブジェクトの有効期間は、それが含まれるロケールによって管理されます。
 
-- 1: オブジェクトの有効期間を手動で管理する必要があります。
+- 1:オブジェクトの有効期間は、手動で管理する必要があります。
 
-- \> 1: これらの値が定義されていません。
+- \> 1:これらの値が定義されていません。
 
 デストラクターが保護されているため、利用できる直接的な例はありません。
 

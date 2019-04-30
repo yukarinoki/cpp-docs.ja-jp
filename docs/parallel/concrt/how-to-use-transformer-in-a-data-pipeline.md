@@ -7,18 +7,17 @@ helpviewer_keywords:
 - using transformer in data pipelines [Concurrency Runtime]
 ms.assetid: ca49cb3f-4dab-4b09-a9c9-d3a109ae4c29
 ms.openlocfilehash: 59c4854eea985b3c91fad6e7dc6c47ca9b07d333
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57291471"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62375588"
 ---
 # <a name="how-to-use-transformer-in-a-data-pipeline"></a>方法: データ パイプラインでトランスフォーマーを使用します。
 
 このトピックでには使用する方法を示す基本的な例が含まれています、 [concurrency::transformer](../../parallel/concrt/reference/transformer-class.md)データ パイプラインでのクラス。 データ パイプラインを使用してイメージ処理を実行するより詳細な例を参照してください。[チュートリアル。イメージ処理ネットワークの作成](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)です。
 
-*データのパイプライン処理*同時実行プログラミングにおける一般的なパターンです。 データ パイプラインは一連のステージで構成され、各ステージで処理を実行し、その処理の結果を次のステージに渡します。 
-  `transformer` クラスは、入力値を受け取り、その値に対して処理を実行し、別のコンポーネントで使用する結果を生成するため、データ パイプラインにおいて重要なコンポーネントとなっています。
+*データのパイプライン処理*同時実行プログラミングにおける一般的なパターンです。 データ パイプラインは一連のステージで構成され、各ステージで処理を実行し、その処理の結果を次のステージに渡します。 `transformer` クラスは、入力値を受け取り、その値に対して処理を実行し、別のコンポーネントで使用する結果を生成するため、データ パイプラインにおいて重要なコンポーネントとなっています。
 
 ## <a name="example"></a>例
 

@@ -3,11 +3,11 @@ title: OpenMP C および C++ アプリケーション プログラミング イ
 ms.date: 03/20/2019
 ms.assetid: efec8865-a755-452f-838f-ddbfecab44d4
 ms.openlocfilehash: dc3ab50059f16abc2cc6148395ef6982e5f85449
-ms.sourcegitcommit: 14b292596bc9b9b883a9c58cd3e366b282a1f7b3
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60124838"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62362700"
 ---
 # <a name="openmp-c-and-c-application-program-interface"></a>OpenMP C および C++ アプリケーション プログラミング インターフェイス
 
@@ -25,7 +25,7 @@ OpenMP アーキテクチャのレビュー委員会の著作権情報を提供�
 
 1. [ディレクティブ](2-directives.md)
 
-1. [ランタイム ライブラリ関数](3-run-time-library-functions.md)
+1. [ランタイム ライブラリの関数](3-run-time-library-functions.md)
 
 1. [環境変数](4-environment-variables.md)
 
@@ -35,13 +35,13 @@ A:  [例](a-examples.md)
 
 B:  [ランタイム ライブラリ関数のスタブ](b-stubs-for-run-time-library-functions.md)
 
-C:  [OpenMP C および C++ の文法](c-openmp-c-and-cpp-grammar.md)
+C:  [OpenMP C と C++ の文法](c-openmp-c-and-cpp-grammar.md)
 
-D: [スケジュール句](d-using-the-schedule-clause.md)
+D: [schedule 句](d-using-the-schedule-clause.md)
 
-E. [OpenMP C/C の実装で定義された動作](e-implementation-defined-behaviors-in-openmp-c-cpp.md)
+E. [OpenMP C/C++ の実装で定義されている動作](e-implementation-defined-behaviors-in-openmp-c-cpp.md)
 
-F. [新機能とバージョン 2.0 の説明](f-new-features-and-clarifications-in-version-2-0.md)
+F. [Version 2.0 の新機能と説明](f-new-features-and-clarifications-in-version-2-0.md)
 
 ## <a name="see-also"></a>関連項目
 

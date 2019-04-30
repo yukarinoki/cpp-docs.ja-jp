@@ -21,11 +21,11 @@ helpviewer_keywords:
 - overwrite_buffer class
 ms.assetid: 5cc428fe-3697-419c-9fb2-78f6181c9293
 ms.openlocfilehash: adac6e220a60a49a2b9bfa9463f16f8956b08d2e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57299310"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394352"
 ---
 # <a name="overwritebuffer-class"></a>overwrite_buffer クラス
 
@@ -78,7 +78,7 @@ class overwrite_buffer : public propagator_block<multi_link_registry<ITarget<T>>
 
 `overwrite_buffer`メッセージング ブロックが各ターゲットが格納されているメッセージのコピーを伝達します。
 
-詳細については、[非同期メッセージ ブロック](../../../parallel/concrt/asynchronous-message-blocks.md)を参照してください。
+詳細については、次を参照してください。[非同期メッセージ ブロック](../../../parallel/concrt/asynchronous-message-blocks.md)します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 

@@ -5,11 +5,11 @@ f1_keywords:
 - atomic/std::atomic
 ms.assetid: 261628ed-7049-41ac-99b9-cfe49f696b44
 ms.openlocfilehash: 258812f033d34f040d96847581d6f51692a933b6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50590061"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62376670"
 ---
 # <a name="atomic-structure"></a>atomic 構造体
 
@@ -30,14 +30,14 @@ struct atomic;
 |[atomic](#atomic)|アトミック オブジェクトを構築します。|
 |**演算子**||
 |[atomic::operator Ty](#op_ty)|格納されている値を読み取って返します。 ([atomic::load](#load))|
-|[atomic::operator =](#op_eq)|格納されている値を置き換えるために指定された値を使用します。 ([atomic::store](#store))|
+|[atomic::operator=](#op_eq)|格納されている値を置き換えるために指定された値を使用します。 ([atomic::store](#store))|
 |[atomic::operator++](#op_inc)|格納されている値をインクリメントします。 整数およびポインターの特殊化でのみ使用されます。|
-|[atomic::operator + =](#op_add_eq)|指定した値を格納されている値に加算します。 整数およびポインターの特殊化でのみ使用されます。|
+|[atomic::operator+=](#op_add_eq)|指定した値を格納されている値に加算します。 整数およびポインターの特殊化でのみ使用されます。|
 |[atomic::operator--](#op_dec)|格納されている値をデクリメントします。 整数およびポインターの特殊化でのみ使用されます。|
 |[atomic::operator-=](#op_sub_eq)|指定した値を格納されている値から減算します。 整数およびポインターの特殊化でのみ使用されます。|
-|[atomic::operator & =](#op_and_eq)|和演算を実行し、指定した値と格納されている値。 整数の特殊化でのみ使用されます。|
+|[atomic::operator&=](#op_and_eq)|和演算を実行し、指定した値と格納されている値。 整数の特殊化でのみ使用されます。|
 |[atomic::operator&#124;=](#op_or_eq)|ビットごとの実行または指定した値と格納されている値。 整数の特殊化でのみ使用されます。|
-|[atomic::operator ^ =](#op_xor_eq)|ビットごとの排他的を実行します。 または、指定した値と格納されている値。 整数の特殊化でのみ使用されます。|
+|[atomic::operator^=](#op_xor_eq)|ビットごとの排他的を実行します。 または、指定した値と格納されている値。 整数の特殊化でのみ使用されます。|
 |**関数**||
 |[compare_exchange_strong](#compare_exchange_strong)|実行、 *atomic_compare_and_exchange*操作**これ**し、結果を返します。|
 |[compare_exchange_weak](#compare_exchange_weak)|実行、 *weak_atomic_compare_and_exchange*操作**この**し、結果を返します。|
@@ -61,10 +61,10 @@ struct atomic;
 ||||
 |-|-|-|
 |**アトミック\<char >**|**アトミック\<署名 char >**|**アトミック\<unsigned char >**|
-|**アトミック\<char16_t >**|**アトミック\<char32_t >**|**アトミック\<wchar_t >**|
-|**アトミック\<短い >**|**アトミック\<短い符号なし >**|**アトミック\<int >**|
-|**アトミック\<符号なし int >**|**アトミック\<長い >**|**アトミック\<時間の長い符号なし >**|
-|**アトミック\<long >**|**アトミック\<unsigned long long 型 >**|
+|**atomic\<char16_t>**|**atomic\<char32_t>**|**atomic\<wchar_t>**|
+|**atomic\<short>**|**atomic\<unsigned short>**|**atomic\<int>**|
+|**atomic\<unsigned int>**|**atomic\<long>**|**atomic\<unsigned long>**|
+|**atomic\<long long>**|**atomic\<unsigned long long>**|
 
 整数の特殊化は、対応する `atomic_integral` 型から派生します。 たとえば、**アトミック\<符号なし int >** から派生`atomic_uint`します。
 

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - CMultiDocTemplate [MFC], CMultiDocTemplate
 ms.assetid: 5b8aa328-e461-41d0-b388-00594535e119
 ms.openlocfilehash: 5fefe91fa2067831c0263146ff3b2cd143b9c647
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57284256"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62366941"
 ---
 # <a name="cmultidoctemplate-class"></a>CMultiDocTemplate クラス
 
@@ -35,7 +35,7 @@ class CMultiDocTemplate : public CDocTemplate
 
 ## <a name="remarks"></a>Remarks
 
-MDI アプリケーションでは、ドキュメントを表示、ユーザーが 0 個以上のドキュメント フレーム ウィンドウを開くことができますワークスペースとしてメイン フレーム ウィンドウを使用します。 MDI の詳細については、*ソフトウェア設計の Windows のインターフェイス ガイドライン*を参照してください。
+MDI アプリケーションでは、ドキュメントを表示、ユーザーが 0 個以上のドキュメント フレーム ウィンドウを開くことができますワークスペースとしてメイン フレーム ウィンドウを使用します。 MDI の詳細については、次を参照してください。*ソフトウェア設計の Windows のインターフェイス ガイドライン*します。
 
 ドキュメント テンプレートでは、3 種類のクラス間のリレーションシップを定義します。
 
@@ -84,7 +84,7 @@ CMultiDocTemplate(
 *可能*<br/>
 ドキュメントの種類で使用するリソースの ID を指定します。 これには、メニューのアイコン、アクセラレータ テーブル、および文字列リソースを含めることができます。
 
-文字列リソースは、'\n' 文字で区切られた最大 7 つの部分文字列で構成されます (部分文字列が含まれない場合 '\n' 文字はプレース ホルダーとして必要です。 ただし、末尾の '\n' 文字は必要ありません)。これらの部分文字列には、ドキュメントの種類について説明します。 これらの部分文字列については、[CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring)を参照してください。 この文字列リソースには、アプリケーションのリソース ファイルが記載されています。 例:
+文字列リソースは、'\n' 文字で区切られた最大 7 つの部分文字列で構成されます (部分文字列が含まれない場合 '\n' 文字はプレース ホルダーとして必要です。 ただし、末尾の '\n' 文字は必要ありません)。これらの部分文字列には、ドキュメントの種類について説明します。 これらの部分文字列については、次を参照してください。 [CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring)します。 この文字列リソースには、アプリケーションのリソース ファイルが記載されています。 例:
 
 ```RC
 // MYCALC.RC
@@ -96,7 +96,7 @@ END
 
 文字列が、'\n' 文字で始まることに注意してください。これは、最初の部分文字列が MDI アプリケーションは使用されません、これが含まれていないためです。 ストリング エディターを使用してこの文字列を編集できます。文字列全体は、7 つの個別のエントリとしてではなく文字列エディターで、1 つのエントリとして表示されます。
 
-これらのリソースの種類の詳細については、[リソース エディター](../../windows/resource-editors.md)を参照してください。
+これらのリソースの種類の詳細については、次を参照してください。[リソース エディター](../../windows/resource-editors.md)します。
 
 *pDocClass*<br/>
 指す、`CRuntimeClass`ドキュメント クラスのオブジェクト。 このクラスは、 `CDocument`-ドキュメントを表すために定義するクラスを派生します。

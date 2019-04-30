@@ -36,11 +36,11 @@ helpviewer_keywords:
 - unsigned long int [C++]
 ms.assetid: 3691ceca-05fb-4b82-b1ae-5c4618cda91a
 ms.openlocfilehash: 88fbb128d995338e5976fbb3df939524f3ef8b63
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50495031"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392234"
 ---
 # <a name="data-type-ranges"></a>データ型の範囲
 
@@ -71,28 +71,28 @@ Visual C++ の 32 ビットおよび 64 ビット コンパイラは、この記
 |**int**|4|**signed**|-2,147,483,648 ～ 2,147,483,647|
 |**unsigned int**|4|**unsigned**|0 ～ 4,294,967,295|
 |**__int8**|1|**char**|-128 ～ 127|
-|**符号なし _ _int8**|1|**unsigned char**|0 ～ 255|
+|**unsigned __int8**|1|**unsigned char**|0 ～ 255|
 |**__int16**|2|**短い**、 **short int**、**署名 short int**|-32,768 ～ 32,767|
-|**符号なし _ _int16**|2|**unsigned short**、**符号なし short int**|0 ～ 65,535|
+|**unsigned __int16**|2|**unsigned short**、**符号なし short int**|0 ～ 65,535|
 |**__int32**|4|**署名**、 **int を署名**、 **int**|-2,147,483,648 ～ 2,147,483,647|
-|**符号なし _ _int32**|4|**符号なし**、**符号なし int**|0 ～ 4,294,967,295|
+|**unsigned __int32**|4|**符号なし**、**符号なし int**|0 ～ 4,294,967,295|
 |**__int64**|8|**long**、 **long long 型の署名**|-9,223,372,036,854,775,808 から 9,223,372,036,854,775,807|
-|**unsigned __int64**|8|**符号なし long long 型**|0 ～ 18,446,744,073,709,551,615|
+|**unsigned __int64**|8|**unsigned long long**|0 ～ 18,446,744,073,709,551,615|
 |**bool**|1|none|**false**または**は true。**|
-|**char**|1|none|既定では、128 ~ 127<br /><br /> [/J](../build/reference/j-default-char-type-is-unsigned.md)を使用してコンパイルするときは 0 〜 255|
-|**符号付き文字**|1|none|-128 ～ 127|
+|**char**|1|none|既定では、128 ~ 127<br /><br />  [/J](../build/reference/j-default-char-type-is-unsigned.md)を使用してコンパイルするときは 0 〜 255|
+|**signed char**|1|none|-128 ～ 127|
 |**unsigned char**|1|none|0 ～ 255|
 |**short**|2|**short int**、**署名 short int**|-32,768 ～ 32,767|
 |**unsigned short**|2|**unsigned short int**|0 ～ 65,535|
 |**long**|4|**long int**、 **long int の署名**|-2,147,483,648 ～ 2,147,483,647|
 |**unsigned long**|4|**unsigned long int**|0 ～ 4,294,967,295|
 |**long long**|8|none (と同等では **_ _int64**)|-9,223,372,036,854,775,808 から 9,223,372,036,854,775,807|
-|**符号なし long long 型**|8|none (と同等では**符号なし _ _int64**)|0 ～ 18,446,744,073,709,551,615|
+|**unsigned long long**|8|none (と同等では**符号なし _ _int64**)|0 ～ 18,446,744,073,709,551,615|
 |**enum**|可変|none| |
 |**float**|4|none|3.4E +/- 38 (7 桁)|
 |**double**|8|none|1.7E +/- 308 (15 桁)|
 |**long double**|同じ**double**|none|同じ**double**|
-|**wchar_t**|2|**_ _wchar_t**|0 ～ 65,535|
+|**wchar_t**|2|**__wchar_t**|0 ～ 65,535|
 
 使用方法に応じて、変数の **_ _wchar_t**ワイド文字型またはマルチバイト文字の種類のいずれかを指定します。 ワイド文字型の定数を指定するには、文字または文字列定数の前に `L` のプレフィックスを使用します。
 

@@ -25,11 +25,11 @@ helpviewer_keywords:
 - _resetstkoflw function
 ms.assetid: 319529cd-4306-4d22-810b-2063f3ad9e14
 ms.openlocfilehash: ad8c9b470c33a4c84f46ac7758d368917e7938e0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480549"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62357539"
 ---
 # <a name="resetstkoflw"></a>_resetstkoflw
 
@@ -88,7 +88,7 @@ int _resetstkoflw( void );
 
 これらの時点では、スタックは完全にはアンワインドされていません。
 
-スタック オーバーフロー例外が C++ 例外ではなく、構造化例外としてため生成された **_resetstkoflw**は通常の役に立ちません**キャッチ**これは、スタック オーバーフロー例外をキャッチできないために、ブロックします。 ただし、[_set_se_translator](set-se-translator.md) を使用して C++ 例外をスローする構造化例外の変換を実装すると (2 番目の例のように)、スタック オーバーフロー例外によって C ++ 例外が発生します。これは C++ の catch ブロックで処理できます。
+スタック オーバーフロー例外がない構造化例外として生成されたC++例外のため、 **_resetstkoflw**は通常の役に立ちません**キャッチ**これは、スタック オーバーフローをキャッチできないために、ブロック例外。 ただし、[_set_se_translator](set-se-translator.md) を使用して C++ 例外をスローする構造化例外の変換を実装すると (2 番目の例のように)、スタック オーバーフロー例外によって C ++ 例外が発生します。これは C++ の catch ブロックで処理できます。
 
 構造化例外変換関数によってスローされる例外から到達した C ++ catch ブロックでの **_resetstkoflw** の呼び出しは安全ではありません。 この場合、catch ブロックの前で消滅させられるオブジェクトに対してデストラクターが呼び出された場合でも、catch ブロックの外部に出るまでスタック領域は解放されず、スタック ポインターはリセットされません。 この関数は、スタック領域が解放され、スタック ポインターがリセットされるまで呼び出さないようにする必要があります。 したがって、catch ブロックが終了した後でのみ呼び出すようにします。 catch ブロックではできるだけ小さなスタック領域を使用するようにします。これは、前回のスタック オーバーフローから自身で回復しようとしている catch ブロックでスタック オーバーフローが発生すると回復できなくなり、catch ブロック内でのオーバーフローによって同じ catch ブロックによってハンドルされる例外がトリガーされてプログラムの応答が停止するおそれがあるためです。
 
@@ -104,7 +104,7 @@ int _resetstkoflw( void );
 
 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
-**ライブラリ:** [CRT ライブラリの機能](../../c-runtime-library/crt-library-features.md)のすべてのバージョンです。
+**ライブラリ:** すべてのバージョン、 [CRT ライブラリの機能](../../c-runtime-library/crt-library-features.md)します。
 
 ## <a name="example"></a>例
 
@@ -212,7 +212,7 @@ resetting stack overflow
 
 ### <a name="description"></a>説明
 
-次の例では、推奨される使用 **_resetstkoflw**プログラム構造化例外が C++ 例外に変換されます。
+次の例では、推奨される使用 **_resetstkoflw**に構造化例外が変換されるプログラムでC++例外。
 
 ### <a name="code"></a>コード
 
