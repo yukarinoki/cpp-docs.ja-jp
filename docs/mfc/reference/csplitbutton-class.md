@@ -15,11 +15,11 @@ helpviewer_keywords:
 - CSplitButton [MFC], OnDropDown
 ms.assetid: 6844d0a9-6408-4e44-9b5f-57628ed8bad6
 ms.openlocfilehash: 70bba379f33be2d4df05f6b96eac14bf248cf356
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414648"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64346274"
 ---
 # <a name="csplitbutton-class"></a>CSplitButton クラス
 
@@ -96,7 +96,7 @@ virtual BOOL Create(
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*dwStyle*|[in]コントロールに適用されるスタイルのビットごとの組み合わせ (OR)。 詳細については、[ボタンのスタイル](../../mfc/reference/styles-used-by-mfc.md#button-styles)を参照してください。|
+|*dwStyle*|[in]コントロールに適用されるスタイルのビットごとの組み合わせ (OR)。 詳細については、次を参照してください。[ボタンのスタイル](../../mfc/reference/styles-used-by-mfc.md#button-styles)します。|
 |*rect*|[in]参照を[RECT](/previous-versions/dd162897\(v=vs.85\))コントロールのサイズと位置を含む構造体。|
 |*pParentWnd*|[in]Null 以外のポインターを[CWnd](../../mfc/reference/cwnd-class.md)オブジェクトは、コントロールの親ウィンドウです。|
 |*nID*|[in]コントロールの ID。|
@@ -151,7 +151,7 @@ afx_msg void OnDropDown(
 
 BCN_DROPDOWN 通知が送信され、ユーザーは、分割ボタン コントロールにドロップダウン矢印をクリックすると、メッセージを`OnDropDown`メソッド ハンドル。 ただし、`CSplitButton`オブジェクトは、分割ボタン コントロールを含むコントロールに BCN_DROPDOWN 通知を転送しません。 その結果、格納しているコントロールは、通知への応答でカスタム アクションをサポートできません。
 
-格納しているコントロールをサポートするカスタム アクションを実装するには、使用、 [CButton](../../mfc/reference/cbutton-class.md)の代わりに BS_SPLITBUTTON スタイルを持つオブジェクトを`CSplitButton`オブジェクト。 BCN_DROPDOWN 通知のハンドラーを実装し、`CButton`オブジェクト。 詳細については、[ボタンのスタイル](../../mfc/reference/styles-used-by-mfc.md#button-styles)を参照してください。
+格納しているコントロールをサポートするカスタム アクションを実装するには、使用、 [CButton](../../mfc/reference/cbutton-class.md)の代わりに BS_SPLITBUTTON スタイルを持つオブジェクトを`CSplitButton`オブジェクト。 BCN_DROPDOWN 通知のハンドラーを実装し、`CButton`オブジェクト。 詳細については、次を参照してください。[ボタンのスタイル](../../mfc/reference/styles-used-by-mfc.md#button-styles)します。
 
 使用して、分割ボタン コントロール自体でサポートするカスタム アクションを実装する[メッセージ リフレクション](../../mfc/tn062-message-reflection-for-windows-controls.md)します。 クラスを派生、`CSplitButton`クラスし、名前を付け、CMySplitButton など。 BCN_DROPDOWN 通知を処理するアプリケーションに、次のメッセージ マップを追加します。
 
