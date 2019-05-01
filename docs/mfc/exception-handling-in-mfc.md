@@ -34,11 +34,11 @@ helpviewer_keywords:
 - out-of-memory exceptions [MFC]
 ms.assetid: 0926627d-2ba7-44a6-babe-d851a4a2517c
 ms.openlocfilehash: afa49a4d54397cf79a3bd0af28e4a0f0a4c7639e
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57818636"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64346050"
 ---
 # <a name="exception-handling-in-mfc"></a>例外処理 (MFC)
 
@@ -55,7 +55,7 @@ MFC 例外処理マクロではなく、C++ 例外を使用する既存のコー
 MFC 例外処理マクロを使用してアプリケーションを既に開発した場合は、新しいコードで C++ 例外を使用している、既存のコードでこれらのマクロを使用を続行できます。 この記事[例外。バージョン 3.0 での例外処理マクロを変更](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md)これを行うためのガイドラインを提供します。
 
 > [!NOTE]
->  コードの C++ 例外処理を有効にするコードの生成 ページで、プロジェクトの [C/C++] フォルダーを有効にする C++ の例外を選択します。[プロパティ ページ](../build/reference/property-pages-visual-cpp.md)ダイアログ ボックスで、または使用して、 [/EHsc](../build/reference/eh-exception-handling-model.md)コンパイラ オプション。
+>  コードの C++ 例外処理を有効にするコードの生成] ページで、プロジェクトの [C/C++] フォルダーを有効にする C++ の例外を選択します。[プロパティ ページ](../build/reference/property-pages-visual-cpp.md)ダイアログ ボックスで、または使用して、 [/EHsc](../build/reference/eh-exception-handling-model.md)コンパイラ オプション。
 
 ここでは、次のトピックについて説明します。
 
@@ -109,25 +109,25 @@ MFC 例外処理マクロを使用してアプリケーションを既に開発�
 
 次の記事では、例外処理の MFC ライブラリの使用について説明します。
 
-- [例外処理:キャッチと削除例外](../mfc/exceptions-catching-and-deleting-exceptions.md)
+- [例外: 例外のキャッチと削除](../mfc/exceptions-catching-and-deleting-exceptions.md)
 
-- [例外処理:例外の内容の調査](../mfc/exceptions-examining-exception-contents.md)
+- [例外: 例外の内容の調査](../mfc/exceptions-examining-exception-contents.md)
 
-- [例外処理:例外オブジェクトの解放](../mfc/exceptions-freeing-objects-in-exceptions.md)
+- [例外: 例外でのオブジェクトの解放](../mfc/exceptions-freeing-objects-in-exceptions.md)
 
-- [例外処理:独自の関数からの例外のスロー](../mfc/exceptions-throwing-exceptions-from-your-own-functions.md)
+- [例外: 独自関数からの例外のスロー](../mfc/exceptions-throwing-exceptions-from-your-own-functions.md)
 
-- [例外処理:データベースの例外](../mfc/exceptions-database-exceptions.md)
+- [例外: データベースの例外](../mfc/exceptions-database-exceptions.md)
 
-- [例外処理:OLE の例外](../mfc/exceptions-ole-exceptions.md)
+- [例外: OLE の例外](../mfc/exceptions-ole-exceptions.md)
 
 次の記事では、C++ 例外のキーワードを持つ MFC 例外マクロを比較し、コードを改変する方法について説明します。
 
-- [例外処理:バージョン 3.0 での例外処理マクロの変更](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md)
+- [例外: Version 3.0 での例外マクロの変更点](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md)
 
-- [例外処理:MFC 例外マクロからの変換](../mfc/exceptions-converting-from-mfc-exception-macros.md)
+- [例外: MFC 例外マクロからの変換](../mfc/exceptions-converting-from-mfc-exception-macros.md)
 
-- [例外処理:MFC マクロと C++ 例外を使用します。](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md)
+- [例外: MFC マクロと C++ の例外の使用](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md)
 
 ## <a name="see-also"></a>関連項目
 
