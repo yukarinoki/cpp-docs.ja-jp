@@ -136,7 +136,7 @@ helpviewer_keywords:
 ms.assetid: b07850a5-ae89-48ea-bf9a-f0e30939f9b9
 ms.openlocfilehash: 7dd09e6f31592f6d4b62b94d8d3256fe1a432010
 ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62280315"
@@ -324,7 +324,7 @@ ms.locfileid: "62280315"
 |コンパイラの警告 (レベル 4) C4596|'*識別子*': メンバー宣言での無効な修飾名|
 |コンパイラの警告 (エラー) C4597|未定義の動作: offsetof が仮想ベースのメンバーに適用|
 |コンパイラの警告 (レベル 1 およびレベル 3) C4598|' #include"*ヘッダー*"' ヘッダー番号*数*、プリコンパイル済みヘッダーと一致しませんその位置にある現在のコンパイル。|
-|コンパイラの警告 (レベル 3) C4599|'*フラグ**パス*': コマンドライン引数の数*数*プリコンパイル済みヘッダーと一致しません|
+|コンパイラの警告 (レベル 3) C4599|'*フラグ* *パス*': コマンドライン引数の数 *数* プリコンパイル済みヘッダーと一致しません|
 
 ## <a name="see-also"></a>関連項目
 
