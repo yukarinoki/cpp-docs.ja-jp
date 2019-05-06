@@ -657,7 +657,7 @@ POSITION InsertAfter(
 |クラス|メンバー関数|
 |-----------|---------------------|
 |[CPtrList](../../mfc/reference/cptrlist-class.md)|**POSITION InsertAfter( POSITION** *position* **, void** <strong>\*</strong> `newElement` **);**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**位置 InsertAfter (位置***位置* **、const の CString &** `newElement` **)。**<br /><br /> **POSITION InsertAfter( POSITION** *position* **, LPCTSTR** `newElement` **);**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**位置 InsertAfter (位置** *位置* **、const の CString &** `newElement` **)。**<br /><br /> **POSITION InsertAfter( POSITION** *position* **, LPCTSTR** `newElement` **);**|
 
 ### <a name="return-value"></a>戻り値
 
@@ -705,7 +705,7 @@ POSITION InsertBefore(
 |クラス|メンバー関数|
 |-----------|---------------------|
 |[CPtrList](../../mfc/reference/cptrlist-class.md)|**POSITION InsertBefore( POSITION** *position* **, void** <strong>\*</strong> `newElement` **);**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**位置 InsertBefore (位置***位置* **、const の CString &** `newElement` **)。**<br /><br /> **POSITION InsertBefore( POSITION** *position* **, LPCTSTR** `newElement` **);**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**位置 InsertBefore (位置** *位置* **、const の CString &** `newElement` **)。**<br /><br /> **POSITION InsertBefore( POSITION** *position* **, LPCTSTR** `newElement` **);**|
 
 ### <a name="example"></a>例
 
