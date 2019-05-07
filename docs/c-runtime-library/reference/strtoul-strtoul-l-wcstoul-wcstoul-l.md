@@ -95,7 +95,7 @@ NULL で終わる変換対象の文字列。
 
 ## <a name="remarks"></a>Remarks
 
-入力文字列の各関数に変換します*strSource*を**符号なし****長い**します。
+入力文字列の各関数に変換します *strSource* を **符号なし** **長い**します。
 
 **strtoul**文字列の読み取りを停止する*strSource*数値の一部として認識できない最初の文字。 終端の null 文字がありますまたは以上の値には、最初の数値文字がある可能性があります*基本*します。 **LC_NUMERIC**ロケールのカテゴリの設定は、基数文字が認識を決定します。 *strSource*; 詳細については、を参照してください[setlocale](setlocale-wsetlocale.md)します。 **strtoul**と**wcstoul** ; 現在のロケールを使用します **_strtoul_l**と **_wcstoul_l**は、代わりに渡されたロケールを使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
