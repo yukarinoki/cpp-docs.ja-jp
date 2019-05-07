@@ -62,7 +62,7 @@ extern "C" __declspec(dllexport) MyExportedFunction( );
 
 MFC と静的にリンクされている DLL は、共有 MFC Dll に動的にリンクできません。 MFC と静的にリンクする DLL がその他の DLL と同じようにアプリケーションを動的にバインドされています。アプリケーションは、その他の DLL と同じようにリンクします。
 
-標準の MFC のスタティック リンク ライブラリの名前がで説明されている規則に従って[MFC Dll の名前付け規則](../mfc/mfc-library-versions.md#mfc-static-library-naming-conventions)します。 ただし、mfc バージョン 3.0 以降でリンクする MFC ライブラリのバージョンをリンカーに手動で指定する必要は不要になった。 代わりに、MFC ヘッダー ファイルを自動的に決定に基づいてプリプロセッサでリンクする MFC ライブラリの正しいバージョンを定義するよう**\_デバッグ**または **_UNICODE**します。 MFC ヘッダー ファイルでは、特定のバージョンの MFC ライブラリにリンクする、リンカーに指示する/DEFAULTLIB ディレクティブを追加します。
+標準の MFC のスタティック リンク ライブラリの名前がで説明されている規則に従って[MFC Dll の名前付け規則](../mfc/mfc-library-versions.md#mfc-static-library-naming-conventions)します。 ただし、mfc バージョン 3.0 以降でリンクする MFC ライブラリのバージョンをリンカーに手動で指定する必要は不要になった。 代わりに、MFC ヘッダー ファイルを自動的に決定に基づいてプリプロセッサでリンクする MFC ライブラリの正しいバージョンを定義するよう **\_デバッグ** または **_UNICODE** します。 MFC ヘッダー ファイルでは、特定のバージョンの MFC ライブラリにリンクする、リンカーに指示する/DEFAULTLIB ディレクティブを追加します。
 
 ## <a name="what-do-you-want-to-do"></a>実行する操作
 

@@ -69,7 +69,7 @@ ms.locfileid: "62392727"
 |KeyUp|**FireKeyUp を無効にする (短い**`nChar` **、短い**`nShiftState`**)**|ときに発生する、`WM_SYSKEYUP`または`WM_KEYUP`メッセージを受信します。<br /><br /> イベント マップ エントリ:**EVENT_STOCK_KEYUP( )**|
 |MouseDown|**void FireMouseDown( short**  `nButton` **, short**  `nShiftState` **, float**  *x* **, float**  *y*  **)**|存在する場合に発生した**BUTTONDOWN** (左、中央、または右) を受信します。 このイベントが発生する直前に、マウスがキャプチャされます。<br /><br /> イベント マップ エントリ:**EVENT_STOCK_MOUSEDOWN( )**|
 |MouseMove|**void FireMouseMove( short**  `nButton` **, short**  `nShiftState` **, float**  *x* **, float**  *y*  **)**|WM_MOUSEMOVE メッセージを受信したときに発生します。<br /><br /> イベント マップ エントリ:**EVENT_STOCK_MOUSEMOVE( )**|
-|MouseUp|**FireMouseUp を無効にする (短い**`nButton` **、短い**`nShiftState` **、float***x* **、float** *y***)**|存在する場合に発生した**BUTTONUP** (左、中央、または右) を受信します。 このイベントが発生する前に、マウス キャプチャが解放されます。<br /><br /> イベント マップ エントリ:**EVENT_STOCK_MOUSEUP( )**|
+|MouseUp|**FireMouseUp を無効にする (短い**`nButton` **、短い**`nShiftState` **、float** *x* **、float** *y*  **)**|存在する場合に発生した**BUTTONUP** (左、中央、または右) を受信します。 このイベントが発生する前に、マウス キャプチャが解放されます。<br /><br /> イベント マップ エントリ:**EVENT_STOCK_MOUSEUP( )**|
 |ReadyStateChange|**void FireReadyStateChange( )**|受信データの量のための次の準備完了状態にコントロールの遷移するときに発生します。<br /><br /> イベント マップ エントリ:**EVENT_STOCK_READYSTATECHANGE( )**|
 
 ##  <a name="_core_adding_a_stock_event_using_classwizard"></a> ストック イベントを使用して追加のイベント追加ウィザード
