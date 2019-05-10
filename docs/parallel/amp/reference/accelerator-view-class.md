@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - accelerator_view class
 ms.assetid: 9f298c21-bf62-46e0-88b8-01c5c78ef144
-ms.openlocfilehash: 4075051ec07fc1331d815534a715c0411160fe14
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 35bcd4d951ee0340709976807de3a1d5e984cf29
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405639"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65524826"
 ---
 # <a name="acceleratorview-class"></a>accelerator_view クラス
 
@@ -121,7 +121,7 @@ accelerator_view( const accelerator_view & other );
 *other*<br/>
 コピーする `accelerator_view` オブジェクト。
 
-## <a name="createmarker"></a>create_marker
+## <a name="create_marker"></a>create_marker
 
 これまでにこの `accelerator_view` オブジェクトに送信されたすべてのコマンドの完了を追跡するために予定を返します。
 
@@ -149,7 +149,7 @@ void flush();
 
 `void` を返します。
 
-## <a name="getaccelerator"></a>get_accelerator
+## <a name="get_accelerator"></a>get_accelerator
 
 Accelerator_view オブジェクトのアクセラレータのオブジェクトを返します。
 ### <a name="syntax"></a>構文
@@ -162,7 +162,7 @@ accelerator get_accelerator() const;
 
 Accelerator_view オブジェクトのアクセラレータのオブジェクト。
 
-## <a name="getisautoselection"></a>get_is_auto_selection
+## <a name="get_is_auto_selection"></a>get_is_auto_selection
 
 選択かどうか、ランタイムは自動的に適切なアクセラレータ accelerator_view に渡されるかを示すブール値を返します、 [parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each)します。
 
@@ -176,7 +176,7 @@ bool get_is_auto_selection() const;
 
 **true**場合は、ランタイムが適切なアクセラレータ; を選択して自動的にそれ以外の場合、 **false**します。
 
-## <a name="getisdebug"></a>get_is_debug
+## <a name="get_is_debug"></a> get_is_debug
 
 Accelerator_view オブジェクトに広範なエラー レポートに有効なデバッグ レイヤーがあるかどうかを示すブール値を返します。
 
@@ -190,7 +190,7 @@ bool get_is_debug() const;
 
 示すブール値かどうか、`accelerator_view`オブジェクトに広範なエラー レポートに有効なデバッグ レイヤー。
 
-## <a name="getqueuingmode"></a>get_queuing_mode
+## <a name="get_queuing_mode"></a>get_queuing_mode
 
 Accelerator_view オブジェクトのキュー モードを返します。
 
@@ -204,7 +204,7 @@ queuing_mode get_queuing_mode() const;
 
 キュー モード、`accelerator_view`オブジェクト。
 
-## <a name="getversion"></a>get_version
+## <a name="get_version"></a>get_version
 
 Accelerator_view のバージョンを返します。
 
@@ -218,7 +218,7 @@ unsigned int get_version() const;
 
 バージョン、`accelerator_view`します。
 
-## <a name="isautoselection"></a>is_auto_selection
+## <a name="is_auto_selection"></a>is_auto_selection
 
 選択かどうか、ランタイムは自動的に適切なアクセラレータ accelerator_view に渡されるかを示すブール値を取得、 [parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each)します。
 
@@ -228,7 +228,7 @@ unsigned int get_version() const;
 __declspec(property(get= get_is_auto_selection)) bool is_auto_selection;
 ```
 
-## <a name="isdebug"></a>is_debug
+## <a name="is_debug"></a>is_debug
 
 Accelerator_view オブジェクトに広範なエラー レポートに有効なデバッグ レイヤーがあるかどうかを示すブール値を取得します。
 
@@ -295,7 +295,7 @@ bool operator== ( const accelerator_view & other ) const;
 
 **true**場合 2 つのオブジェクトは同じです。 それ以外の場合、 **false**します。
 
-## <a name="queuingmode"></a>queuing_mode
+## <a name="queuing_mode"></a>queuing_mode
 
 Accelerator_view オブジェクトのキュー モードを取得します。
 

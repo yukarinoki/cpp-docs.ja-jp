@@ -2,12 +2,12 @@
 title: 3. ランタイム ライブラリ関数
 ms.date: 01/17/2019
 ms.assetid: b226e512-6822-4cbe-a2ca-74cc2bb7e880
-ms.openlocfilehash: 4e72d2d74bb26f8eeeb422881cabf92630cced43
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3eb6dc4110145a6c45dbdd772deaee3023e68e9d
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62363233"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525042"
 ---
 # <a name="3-run-time-library-functions"></a>3.ランタイム ライブラリ関数
 
@@ -40,7 +40,7 @@ ms.locfileid: "62363233"
 - [omp_set_nested](#319-omp_set_nested-function)
 - [omp_get_nested](#3110-omp_get_nested-function)
 
-### <a name="311-ompsetnumthreads-function"></a>3.1.1 omp_set_num_threads 関数
+### <a name="311-omp_set_num_threads-function"></a>3.1.1 omp_set_num_threads 関数
 
 `omp_set_num_threads`関数に指定しないと、並行領域後で使用するスレッド数の既定の設定、`num_threads`句。 形式は次のとおりです。
 
@@ -62,7 +62,7 @@ void omp_set_num_threads(int num_threads);
 - [OMP_NUM_THREADS](4-environment-variables.md#42-omp_num_threads)環境変数
 - [num_threads](2-directives.md#23-parallel-construct)句
 
-### <a name="312-ompgetnumthreads-function"></a>3.1.2 omp_get_num_threads 関数
+### <a name="312-omp_get_num_threads-function"></a>3.1.2 omp_get_num_threads 関数
 
 `omp_get_num_threads`関数の数を返しますスレッド現在、チームが並列に呼び出し元のリージョンを実行します。 形式は次のとおりです。
 
@@ -81,7 +81,7 @@ int omp_get_num_threads(void);
 - [num_threads](2-directives.md#23-parallel-construct)
 - [parallel](2-directives.md#23-parallel-construct)
 
-### <a name="313-ompgetmaxthreads-function"></a>3.1.3 omp_get_max_threads 関数
+### <a name="313-omp_get_max_threads-function"></a>3.1.3 omp_get_max_threads 関数
 
 `omp_get_max_threads`関数は、チームを作ることがなく、並行領域の場合に使用されるスレッドの数とサイズ以上であることが保証が整数を返します、`num_threads`句がその時点で、コードで確認します。 形式は次のとおりです。
 
@@ -109,7 +109,7 @@ threads-used-for-next-team
 - [omp_set_dynamic](#317-omp_set_dynamic-function)
 - [num_threads](2-directives.md#23-parallel-construct)
 
-### <a name="314-ompgetthreadnum-function"></a>3.1.4 omp_get_thread_num 関数
+### <a name="314-omp_get_thread_num-function"></a>3.1.4 omp_get_thread_num 関数
 
 `omp_get_thread_num`関数のスレッドの数を返します、のチーム内で関数を実行するスレッド。 スレッドの番号は 0 との間および`omp_get_num_threads()`-1、包括的です。 チームのマスター スレッドはスレッド 0 です。
 
@@ -126,7 +126,7 @@ int omp_get_thread_num(void);
 
 - [omp_get_num_threads](#312-omp_get_num_threads-function)関数
 
-### <a name="315-ompgetnumprocs-function"></a>3.1.5 omp_get_num_procs 関数
+### <a name="315-omp_get_num_procs-function"></a>3.1.5 omp_get_num_procs 関数
 
 `omp_get_num_procs`関数は、関数が呼び出された時点で、プログラムに使用できるプロセッサの数を返します。 形式は次のとおりです。
 
@@ -135,7 +135,7 @@ int omp_get_thread_num(void);
 int omp_get_num_procs(void);
 ```
 
-### <a name="316-ompinparallel-function"></a>3.1.6 omp_in_parallel 関数
+### <a name="316-omp_in_parallel-function"></a>3.1.6 omp_in_parallel 関数
 
 `omp_in_parallel`関数は、並列で実行される並列領域の動的範囲内で呼び出された場合に 0 以外の値を返します。 それ以外の場合、0 を返します。 形式は次のとおりです。
 
@@ -146,7 +146,7 @@ int omp_in_parallel(void);
 
 この関数は、シリアル化される入れ子になったリージョンを含む、並列で実行される領域内から呼び出された場合は 0 以外の値を返します。
 
-### <a name="317-ompsetdynamic-function"></a>3.1.7 omp_set_dynamic 関数
+### <a name="317-omp_set_dynamic-function"></a>3.1.7 omp_set_dynamic 関数
 
 `omp_set_dynamic`関数が有効にまたは並行領域の実行に使用できるスレッドの数を動的に調整を無効にします。 形式は次のとおりです。
 
@@ -171,7 +171,7 @@ void omp_set_dynamic(int dynamic_threads);
 - [OMP_DYNAMIC](4-environment-variables.md#43-omp_dynamic)
 - [omp_in_parallel](#316-omp_in_parallel-function)
 
-### <a name="318-ompgetdynamic-function"></a>3.1.8 omp_get_dynamic 関数
+### <a name="318-omp_get_dynamic-function"></a>3.1.8 omp_get_dynamic 関数
 
 `omp_get_dynamic`関数は、スレッドの動的な調整が有効であり、それ以外の場合は 0 を返す場合に 0 以外の値を返します。 形式は次のとおりです。
 
@@ -186,7 +186,7 @@ int omp_get_dynamic(void);
 
 - 動的なスレッドの調整については、次を参照してください。 [omp_set_dynamic](#317-omp_set_dynamic-function)します。
 
-### <a name="319-ompsetnested-function"></a>3.1.9 omp_set_nested 関数
+### <a name="319-omp_set_nested-function"></a>3.1.9 omp_set_nested 関数
 
 `omp_set_nested`関数を有効または入れ子になった並列処理を無効にします。 形式は次のとおりです。
 
@@ -208,7 +208,7 @@ void omp_set_nested(int nested);
 - [OMP_NESTED](4-environment-variables.md#44-omp_nested)
 - [omp_in_parallel](#316-omp_in_parallel-function)
 
-### <a name="3110-ompgetnested-function"></a>3.1.10 omp_get_nested 関数
+### <a name="3110-omp_get_nested-function"></a>3.1.10 omp_get_nested 関数
 
 `omp_get_nested`関数 0 を返します 0 以外の値を使用している場合、入れ子になった並列処理が有効になっている場合は無効になります。 入れ子になった並列処理の詳細については、次を参照してください。 [omp_set_nested](#319-omp_set_nested-function)します。 形式は次のとおりです。
 
@@ -241,7 +241,7 @@ int omp_get_nested(void);
 
 OpenMP のロック関数が常に読み取りをロック変数の最新の値を更新方法でロック変数にアクセスします。 そのため、OpenMP プログラムの明示的なを含める必要はありません`flush`ロック変数の値が別のスレッド間で一貫性のあることを確認するためのディレクティブ。 (必要である可能性があります`flush`ディレクティブを一貫性のあるその他の変数の値を作成します)。
 
-### <a name="321-ompinitlock-and-ompinitnestlock-functions"></a>3.2.1 omp_init_lock 関数と omp_init_nest_lock 関数
+### <a name="321-omp_init_lock-and-omp_init_nest_lock-functions"></a>3.2.1 omp_init_lock 関数と omp_init_nest_lock 関数
 
 これらの関数は、ロックの初期化の唯一の手段を提供します。 各関数の初期化パラメーターに関連付けられているロック*ロック*今後の呼び出しで使用します。 形式は次のとおりです。
 
@@ -253,7 +253,7 @@ void omp_init_nest_lock(omp_nest_lock_t *lock);
 
 初期状態がロックされている (つまり、スレッド ロックを所有していません)。 入れ子にできるロックでは、入れ子の最初の数は 0 です。 これらのルーチンには、既に初期化されているロック変数のいずれかを呼び出さない非準拠になります。
 
-### <a name="322-ompdestroylock-and-ompdestroynestlock-functions"></a>3.2.2 omp_destroy_lock 関数と omp_destroy_nest_lock 関数
+### <a name="322-omp_destroy_lock-and-omp_destroy_nest_lock-functions"></a>3.2.2 omp_destroy_lock 関数と omp_destroy_nest_lock 関数
 
 これらの関数を確認する変数をロックするには、指す*ロック*が初期化されていません。 形式は次のとおりです。
 
@@ -265,7 +265,7 @@ void omp_destroy_nest_lock(omp_nest_lock_t *lock);
 
 呼び出しが初期化されていないロック変数でこれらのルーチンのいずれかに準拠していないか、ロックされていません。
 
-### <a name="323-ompsetlock-and-ompsetnestlock-functions"></a>3.2.3 omp_set_lock 関数と omp_set_nest_lock 関数
+### <a name="323-omp_set_lock-and-omp_set_nest_lock-functions"></a>3.2.3 omp_set_lock 関数と omp_set_nest_lock 関数
 
 これらの各関数は、指定されたロックがあるし、ロックを設定するまで、関数の実行スレッドをブロックします。 単純なロックがである場合に使用可能なロックを解除します。 入れ子にできるロックがである場合に使用可能なロックされていない、または関数を実行するスレッドによって既に所有している場合。 形式は次のとおりです。
 
@@ -279,7 +279,7 @@ void omp_set_nest_lock(omp_nest_lock_t *lock);
 
 入れ子にできるロックでの引数、`omp_set_nest_lock`関数は、初期化されたロックの変数を指す必要があります。 入れ子のカウントがインクリメントされ、スレッドが付与される、またはロックの所有権を保持します。
 
-### <a name="324-ompunsetlock-and-ompunsetnestlock-functions"></a>3.2.4 omp_unset_lock 関数と omp_unset_nest_lock 関数
+### <a name="324-omp_unset_lock-and-omp_unset_nest_lock-functions"></a>3.2.4 omp_unset_lock 関数と omp_unset_nest_lock 関数
 
 これらの関数では、ロックの所有権を解放する手段を提供します。 形式は次のとおりです。
 
@@ -295,7 +295,7 @@ void omp_unset_nest_lock(omp_nest_lock_t *lock);
 
 入れ子にできるロックで、`omp_unset_nest_lock`関数デクリメント、入れ子のカウントとリリース、結果のカウントが 0 の場合、ロックの所有権から関数を実行するスレッド。
 
-### <a name="325-omptestlock-and-omptestnestlock-functions"></a>3.2.5 omp_test_lock 関数と omp_test_nest_lock 関数
+### <a name="325-omp_test_lock-and-omp_test_nest_lock-functions"></a>3.2.5 omp_test_lock 関数と omp_test_nest_lock 関数
 
 これらの関数は、ロックを設定しようとしていますが、スレッドの実行をブロックしません。 形式は次のとおりです。
 
@@ -318,7 +318,7 @@ int omp_test_nest_lock(omp_nest_lock_t *lock);
 - [Omp_get_wtime](#331-omp_get_wtime-function)経過したウォール クロック時間を返します。
 - [Omp_get_wtick](#332-omp_get_wtick-function)関数は、連続したクロックのティック間 (秒) を返します。
 
-### <a name="331-ompgetwtime-function"></a>3.3.1 omp_get_wtime 関数
+### <a name="331-omp_get_wtime-function"></a>3.3.1 omp_get_wtime 関数
 
 `omp_get_wtime` 「過去の時間」からの秒数で関数が経過したウォール クロック時間に等しいにある倍精度浮動小数点値を返します。  実際「の時間、過去に」は任意ですが、アプリケーション プログラムの実行中に変わらないことを保証しています。 形式は次のとおりです。
 
@@ -340,7 +340,7 @@ printf_s("Work took %f sec. time.\n", end-start);
 
 返される時間は、「スレッドごとの時間」を使用してアプリケーションに参加しているすべてのスレッド間でグローバルに一貫性がある必要はありませんがありました。
 
-### <a name="332-ompgetwtick-function"></a>3.3.2 omp_get_wtick 関数
+### <a name="332-omp_get_wtick-function"></a>3.3.2 omp_get_wtick 関数
 
 `omp_get_wtick`連続クロックのティック間関数が秒数に等しいにある倍精度浮動小数点値を返します。 形式は次のとおりです。
 

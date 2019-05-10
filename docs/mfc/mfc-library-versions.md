@@ -1,6 +1,6 @@
 ---
 title: MFC ライブラリのバージョン
-ms.date: 1/09/2018
+ms.date: 05/08/2019
 helpviewer_keywords:
 - class libraries [MFC], building versions
 - version information [MFC], MFC library
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MFC libraries
 - MFC, library versions
 - libraries [MFC], versions
-ms.openlocfilehash: c0dc724566063066175ea54e2b7734892e3c6e05
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b8e32366d9ff43bd6e5770f64f0ba9d8bf6e56ab
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62238506"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65524796"
 ---
 # <a name="mfc-library-versions"></a>MFC ライブラリのバージョン
 
@@ -129,7 +129,7 @@ MFC Dll が*バージョン*バイナリの互換性を示す番号。 その他
 
 一致する MFC を含める必要がありますが、アプリケーションまたは MFC 拡張 DLL からかどうか、MFC の共有 DLL バージョンにリンクしている動的に場合、*バージョン*します。DLL または MFC*バージョン*U.DLL、製品を展開するときにします。
 
-アプリケーションで配布できる Visual C Dll の一覧は、次を参照してください。 [Microsoft Visual Studio 2017 および Microsoft Visual Studio 2017 SDK (が含まれていますユーティリティおよび BuildServer ファイルを含む) の再頒布可能コード](http://go.microsoft.com/fwlink/p/?LinkId=823098)します。
+ビジュアルの一覧についてC++Dll を参照してください、アプリケーションと共に配布できます[Microsoft Visual Studio 2017 および Microsoft Visual Studio 2017 SDK (が含まれていますユーティリティおよび BuildServer ファイルを含む) の再頒布可能コード](/visualstudio/productinfo/2017-redistribution-vs)または[Visual Studio 2019 の再頒布可能コード](/visualstudio/releases/2019/redistribution)します。
 
 MFC の MBCS および Unicode のサポートの詳細については、次を参照してください。 [Unicode およびマルチバイト文字セット (MBCS) のサポート](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md)します。
 
