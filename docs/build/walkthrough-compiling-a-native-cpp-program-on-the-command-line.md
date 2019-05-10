@@ -1,23 +1,24 @@
 ---
 title: 'チュートリアル: コマンドラインでネイティブ C++ プログラムのコンパイル'
+description: 使用して、MicrosoftC++コマンド プロンプトからコンパイラ。
 ms.custom: conceptual
-ms.date: 09/24/2018
+ms.date: 04/23/2019
 helpviewer_keywords:
 - native code [C++]
 - Visual C++, native code
 - compiling programs [C++]
 - command-line applications [C++], native
 ms.assetid: b200cfd1-0440-498f-90ee-7ecf92492dc0
-ms.openlocfilehash: d7b5bc88966f7edbb7179c36398b1dd95afb971f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 64300c8683dd5d1c40638ba7d50acfca6abc40c0
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62313884"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65217713"
 ---
 # <a name="walkthrough-compiling-a-native-c-program-on-the-command-line"></a>チュートリアル: コマンドラインでネイティブ C++ プログラムのコンパイル
 
-Visual C には、ユニバーサル Windows プラットフォーム アプリを基本的なコンソール アプリ、デスクトップ アプリ、デバイス ドライバー、および .NET コンポーネントからのすべての作成に使用できるコマンドライン C++ コンパイラが含まれています。
+Visual Studio が含まれていますが、コマンド ラインC++コンパイラ基本的なコンソール アプリからユニバーサル Windows プラットフォーム アプリ、デスクトップ アプリ、デバイス ドライバー、および .NET コンポーネントへのすべての作成に使用できます。
 
 このチュートリアルでは、「こんにちは, World」の基本的な作成-エディターでテキストを使用して C++ プログラムのスタイル設定し、それをコマンドラインでコンパイルします。 コマンドラインを使用する代わりに、Visual Studio IDE を再試行してくださいを参照してくださいしたい場合[チュートリアル。プロジェクトとソリューション (C++)](../ide/walkthrough-working-with-projects-and-solutions-cpp.md)または[C++ デスクトップ開発用 Visual Studio IDE を使用して](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)します。
 
@@ -29,7 +30,7 @@ Visual C には、ユニバーサル Windows プラットフォーム アプリ�
 
 Visual Studio は、多くの言語とプラットフォームの全機能装備のエディター、リソース マネージャー、デバッガー、およびコンパイラをサポートする強力な統合開発環境 (IDE) です。 C と C++ の開発をサポートするように、ダウンロードして無料の Visual Studio Community edition など、Visual Studio をインストールする方法については、次を参照してください。 [Visual Studio で C++ のインストール サポート](vscpp-step-0-installation.md)します。
 
-For Visual Studio Build Tools は、コマンド ライン コンパイラ、ツール、および C および C++ プログラムをビルドする必要があるライブラリのみをインストールします。 ビルド環境に最適なまたはと比較的高速インストールを実行します。 コマンド ライン ツールのみをインストールするには、ダウンロード[Build Tools for Visual Studio 2017](https://go.microsoft.com/fwlink/p/?linkid=875721)します。
+For Visual Studio Build Tools は、コマンド ライン コンパイラ、ツール、および C および C++ プログラムをビルドする必要があるライブラリのみをインストールします。 ビルド環境に最適なまたはと比較的高速インストールを実行します。 コマンド ライン ツールのみをインストールするには、探して Build Tools for Visual Studio、 [Visual Studio のダウンロード](https://visualstudio.microsoft.com/downloads/)ページ。
 
 C または C++ プログラムを作成するには、コマンドラインで、前に、ツールがインストールされているし、コマンドラインからアクセスできることを確認する必要があります。 Visual C には、コマンド ライン ツール、ヘッダー、および使用するライブラリを検索する環境の複雑な要件があります。 **普通のコマンド プロンプト ウィンドウで、Visual C を使用することはできません**準備作業を実行しなくてもします。 さいわい、Visual C では、コマンド ライン ビルドを設定する環境のある開発者コマンド プロンプトを起動するためのショートカットをインストールします。 残念ながら、開発者コマンド プロンプトのショートカットとされている名前は、ほぼすべてのバージョンの Visual C とに異なるバージョンの Windows で異なる。 最初のチュートリアル タスクでは、使用する適切なものを見つけることです。
 
@@ -38,11 +39,11 @@ C または C++ プログラムを作成するには、コマンドラインで�
 
 ### <a name="open-a-developer-command-prompt"></a>開発者コマンド プロンプトを開きます
 
-1. Windows 10 に Visual Studio 2017 をインストールした場合、スタート メニューを開き**すべてのアプリ**します。 スクロール ダウンして開く、 **Visual Studio 2017**フォルダー (Visual Studio 2017 のアプリとは異なる)。 選択**開発者コマンド プロンプト for VS 2017**コマンド プロンプト ウィンドウを開きます。
+1. Visual Studio 2017 または後で Windows 10 をインストールする場合、[スタート] メニューを開くし、選択**すべてのアプリ**します。 スクロール ダウンして開く、 **Visual Studio**フォルダー (Visual Studio アプリケーションではありません)。 選択**開発者コマンド プロンプト for VS**コマンド プロンプト ウィンドウを開きます。
 
    Windows 10 に Microsoft Visual C Build Tools 2015 をインストールした場合は、開く、**開始**メニュー選択**すべてのアプリ**。 スクロール ダウンして開く、 **Visual C Build Tools**フォルダー。 選択**Visual C 2015 x86 Native Tools コマンド プロンプト**コマンド プロンプト ウィンドウを開きます。
 
-   異なるバージョンの Visual Studio を使用しているか、異なるバージョンの Windows を実行している場合は、[スタート] メニューでは、ファイルの場所か、開発者コマンド プロンプトのショートカットが含まれる Visual Studio ツール フォルダーのページを開始します。 「開発者コマンド プロンプト」を検索し、Visual Studio のインストールされているバージョンと一致するものを選択して、Windows 検索機能を使用することもできます。 ショートカットを使用して、コマンド プロンプト ウィンドウを開きます。
+   「開発者コマンド プロンプト」を検索し、Visual Studio のインストールされているバージョンと一致するものを選択して、Windows 検索機能を使用することもできます。 ショートカットを使用して、コマンド プロンプト ウィンドウを開きます。
 
 1. 次に、Visual C の開発者コマンド プロンプトが正しく設定されていることを確認します。 コマンド プロンプト ウィンドウで、入力`cl`し、出力は次ようなコードのことを確認します。
 
@@ -87,7 +88,7 @@ C または C++ プログラムを作成するには、コマンドラインで�
 
 1. 作業内容を保存します。 メモ帳で、 **[ファイル]** メニューの **[保存]** を選びます。
 
-   これで、Visual C ソース ファイルをコンパイルする準備ができて hello.cpp を作成しました。
+   これで、作成した、C++ソース ファイルをコンパイルする準備ができて hello.cpp します。
 
 1. 開発者コマンド プロンプト ウィンドウに切り替えます。 入力`dir`c:\hello ディレクトリの内容を一覧表示するコマンド プロンプトでします。 ように、ディレクトリのリストにソース ファイル hello.cpp が表示されます。
 

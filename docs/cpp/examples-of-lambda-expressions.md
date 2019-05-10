@@ -1,15 +1,15 @@
 ---
 title: ラムダ式の例
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 helpviewer_keywords:
 - lambda expressions [C++], examples
 ms.assetid: 52506b15-0771-4190-a966-2f302049ca86
-ms.openlocfilehash: 6854c5710d8a27093078c0f2013d691ac22c5870
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: f9f2c3e014e44c9f6a9ce10dd8388a1578ba3987
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392194"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222093"
 ---
 # <a name="examples-of-lambda-expressions"></a>ラムダ式の例
 
@@ -61,7 +61,7 @@ int main()
 
 ### <a name="example-2"></a>例 2
 
-Visual C++ コンパイラは、式が呼び出されるときではなく式が宣言されるときに、ラムダ式をキャプチャされた変数にバインドします。 次の例では、ローカル変数 `i` を明示的に値でキャプチャし、ローカル変数 `j` を暗黙的に参照でキャプチャするラムダ式を示しています。 ラムダ式は `i` を値でキャプチャするため、プログラムが後で `i` を再割り当てしても式の結果に影響しません。 ただし、ラムダ式は `j` を参照でキャプチャするため、`j` の再割り当ては式の結果に影響します。
+MicrosoftC++式が呼び出されたときの代わりに、式が宣言されている場合、コンパイラがそのキャプチャされた変数にラムダ式をバインドします。 次の例では、ローカル変数 `i` を明示的に値でキャプチャし、ローカル変数 `j` を暗黙的に参照でキャプチャするラムダ式を示しています。 ラムダ式は `i` を値でキャプチャするため、プログラムが後で `i` を再割り当てしても式の結果に影響しません。 ただし、ラムダ式は `j` を参照でキャプチャするため、`j` の再割り当ては式の結果に影響します。
 
 ### <a name="code"></a>コード
 

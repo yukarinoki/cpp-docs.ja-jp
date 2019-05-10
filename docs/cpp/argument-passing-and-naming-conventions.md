@@ -13,18 +13,18 @@ helpviewer_keywords:
 - passing arguments [C++], conventions
 - conventions [C++], argument names
 ms.assetid: de468979-eab8-4158-90c5-c198932f93b9
-ms.openlocfilehash: ca09d31d3d8d50ca94543c5e02262edd7b2deefc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 1928f8e479b0533c5a8b2e60de7af9eff93f7eed
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62184401"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222268"
 ---
 # <a name="argument-passing-and-naming-conventions"></a>引数の渡し規則と名前付け規則
 
 **Microsoft 固有の仕様**
 
-Visual C++ コンパイラでは、関数と呼び出し元の間の、引数と戻り値の受け渡しに関する規約を指定することができます。 サポートされるすべてのプラットフォームですべての規約がサポートされるわけではありません。また、一部の規約は、プラットフォーム固有の実装を使用します。 ほとんどの場合、特定のプラットフォームでサポートされていない規約を指定するキーワードやコンパイラ スイッチは無視され、プラットフォームの既定の規約が使用されます。
+MicrosoftC++コンパイラでは、引数を渡すための規則を指定し、関数と呼び出し元の値を返すことができます。 サポートされるすべてのプラットフォームですべての規約がサポートされるわけではありません。また、一部の規約は、プラットフォーム固有の実装を使用します。 ほとんどの場合、特定のプラットフォームでサポートされていない規約を指定するキーワードやコンパイラ スイッチは無視され、プラットフォームの既定の規約が使用されます。
 
 x86 プラットフォームでは、すべての引数は渡されたときに 32 ビットに拡大変換されます。 EDX:EAX レジスタ ペアに返される 8 バイトの構造体を除き、戻り値も 32 ビットに拡張され、EAX レジスタに返されます。 より大きな構造体は、非表示の戻り値の構造体へのポインターとして EAX レジスタに返されます。 パラメーターは、スタックに右から左へプッシュされます。 POD ではない構造体はレジスタ内では返されません。
 

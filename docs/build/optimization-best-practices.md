@@ -1,26 +1,26 @@
 ---
 title: 最適化のベスト プラクティス
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
-- Visual C++, optimization
+- C++, optimization
 - optimization, best practices
 ms.assetid: f3433148-7255-4ca6-8a4f-7c31aac88508
-ms.openlocfilehash: edb036292b87593a3f8bb9b3f5ec5f7beb84c3a5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 42178f8326def78f37bfcc905b96f37c7fc3affc
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62274171"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220269"
 ---
 # <a name="optimization-best-practices"></a>最適化のベスト プラクティス
 
-このドキュメントでは、Visual C++ での最適化に関する推奨事項について説明します。
+このドキュメントを最適化するためのベスト プラクティスを説明しますC++Visual Studio でのプログラム。
 
 ## <a name="compiler-and-linker-options"></a>コンパイラとリンカーのオプション
 
 ### <a name="profile-guided-optimization"></a>プロファイル ガイド付き最適化
 
-Visual C がサポート*プロファイル ガイド付き最適化の*(PGO)。 この最適化では、アプリケーションのインストルメントされたバージョンのトレーニング実行からのプロファイル データを使用して、アプリケーションの最適化を行います。 PGO を使用すると時間がかかる場合があるため、すべての状況に適しているとは言えません。しかし、製品の最終リリース ビルドには PGO を使用することをお勧めします。 詳細については、次を参照してください。[ガイド付き最適化の](profile-guided-optimizations.md)します。
+Visual Studio では*プロファイル ガイド付き最適化の*(PGO)。 この最適化では、アプリケーションのインストルメントされたバージョンのトレーニング実行からのプロファイル データを使用して、アプリケーションの最適化を行います。 PGO を使用すると時間がかかる場合があるため、すべての状況に適しているとは言えません。しかし、製品の最終リリース ビルドには PGO を使用することをお勧めします。 詳細については、次を参照してください。[ガイド付き最適化の](profile-guided-optimizations.md)します。
 
 さらに、*プログラム全体の最適化*(リンク時コード生成も認識しています)、 **/O1**と **/O2**最適化が改善されました。 通常、これらのオプションのいずれかを指定してコンパイルしたアプリケーションの処理速度は、以前のコンパイラでコンパイルした同じアプリケーションよりも速くなります。
 
@@ -93,13 +93,13 @@ int myFunc() {...}
 
 ## <a name="restrict-and-assume"></a>_ _restrict と\__assume
 
-ビジュアルでのキーワードのいくつかC++パフォーマンスに役立つことができます: [_ _restrict](../cpp/extension-restrict.md)と[_assume](../intrinsics/assume.md)します。
+パフォーマンスに役立つ Visual Studio でのキーワードのいくつか: [_ _restrict](../cpp/extension-restrict.md)と[_assume](../intrinsics/assume.md)します。
 
 まず、`__restrict` と `__declspec(restrict)` が異なるものであることに注意する必要があります。 この 2 つのキーワードは多少関連がありますが、意味が異なります。 `__restrict` は、`const` や `volatile` のような型修飾子ですが、ポインター型に対してのみ使用できます。
 
 変更されたポインター`__restrict`と呼ばれますが、 *_ _restrict ポインター*します。 _ _Restrict ポインターのポインターを介してのみアクセスできるは、 \__restrict ポインター。 つまり、によって示されるデータにアクセスする別のポインターを使用できません、 \__restrict ポインター。
 
-`__restrict` は Visual C++ オプティマイザーにとって強力なツールになりますが、慎重に使用する必要があります。 誤って使用すると、オプティマイザーで最適化を実行した結果としてアプリケーションが破壊されることがあります。
+`__restrict` Microsoft の強力なツールを指定できますC++、オプティマイザーが十分に注意して使用します。 誤って使用すると、オプティマイザーで最適化を実行した結果としてアプリケーションが破壊されることがあります。
 
 `__restrict`キーワードに置き換えられます、 **/Oa**以前のバージョンから切り替えます。
 

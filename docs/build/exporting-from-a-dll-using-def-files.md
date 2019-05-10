@@ -1,17 +1,17 @@
 ---
 title: DEF ファイルを使った DLL からのエクスポート
-ms.date: 01/09/2018
+ms.date: 05/06/2019
 helpviewer_keywords:
 - def files [C++], exporting from DLLs
 - .def files [C++], exporting from DLLs
 - exporting DLLs [C++], DEF files
 ms.assetid: 9d31eda2-184e-47de-a2ee-a93ebd603f8e
-ms.openlocfilehash: 35f55ea525bd03c5b0b1b1750d25c1223bc608fc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 92a140c6491e9e3f0d356509862dee39ebe3fae6
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62195482"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220785"
 ---
 # <a name="exporting-from-a-dll-using-def-files"></a>DEF ファイルを使った DLL からのエクスポート
 
@@ -36,7 +36,10 @@ EXPORTS
 
 使用する場合、 [MFC DLL ウィザード](../mfc/reference/mfc-dll-wizard.md)MFC DLL を作成するウィザードはスケルトン DEF ファイルを作成して、自動的にそれをプロジェクトに追加します。 エクスポートされる関数の名前は、このファイルに追加します。 非 MFC Dll の場合は、自分で DEF ファイルを作成し、プロジェクトに追加します。 移動し、**プロジェクト** > **プロパティ** > **リンカー** > **入力** > **モジュール定義ファイル**DEF ファイルの名前を入力します。 構成およびプラットフォームごとにこの手順を繰り返し表示するかを選択して一度にすべて行う**構成のすべての構成を =** と**プラットフォーム = すべてのプラットフォーム**します。
 
-C++ ファイルで関数をエクスポートする場合は、装飾名を DEF ファイルに配置するか、extern"C"を使用して、標準の C リンケージを持つエクスポート関数を定義する必要があります。 使用して取得できます、DEF ファイルに装飾名を格納する必要がある場合、 [DUMPBIN](../build/reference/dumpbin-reference.md)ツールまたはリンカーを使用して[/map](../build/reference/map-generate-mapfile.md)オプション。 コンパイラが作成した装飾名は、コンパイラ独自のものであることに注意してください。 DEF ファイルに、Visual C コンパイラで生成される装飾名を配置する場合はアプリケーション DLL にリンクする必要がありますも構築する呼び出し元のアプリケーション内の装飾名が、DLL の DEF f でのエクスポート名に一致するように、同じバージョンの Visual C を使用してファイル ()。
+C++ ファイルで関数をエクスポートする場合は、装飾名を DEF ファイルに配置するか、extern"C"を使用して、標準の C リンケージを持つエクスポート関数を定義する必要があります。 使用して取得できます、DEF ファイルに装飾名を格納する必要がある場合、 [DUMPBIN](../build/reference/dumpbin-reference.md)ツールまたはリンカーを使用して[/map](../build/reference/map-generate-mapfile.md)オプション。 コンパイラが作成した装飾名は、コンパイラ独自のものであることに注意してください。 Microsoft によって生成された装飾名を配置するかどうかはC++DEF ファイルに、コンパイラ (MSVC) アプリケーション、DLL にリンクしている必要がありますも構築する呼び出し元のアプリケーション内の装飾名のエクスポート名が一致するように、MSVC の同じバージョンを使用します。DLL の DEF ファイルです。 
+
+> [!NOTE]
+> Visual Studio 2015 でビルドされた DLL は、Visual Studio 2017 または Visual Studio 2019 でビルドされたアプリケーションで使用できます。
 
 構築している場合、[拡張 DLL](../build/extension-dlls-overview.md)、エクスポートされたクラスを含むヘッダー ファイルの末尾、先頭にある次のコードを配置、DEF ファイルを使用したエクスポートします。
 

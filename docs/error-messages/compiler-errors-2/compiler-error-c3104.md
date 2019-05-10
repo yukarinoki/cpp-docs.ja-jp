@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3104
 ms.assetid: b5648d47-e5d3-4b45-a3c0-f46e04eae731
-ms.openlocfilehash: 3b2737bd67798fd467649be175d581ca551e1331
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fee023809246634f2f3da266a718e45861eae76e
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404170"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447833"
 ---
 # <a name="compiler-error-c3104"></a>コンパイラ エラー C3104
 
@@ -21,7 +21,7 @@ ms.locfileid: "62404170"
 
 参照してください[属性パラメーターの型](../../extensions/attribute-parameter-types-cpp-component-extensions.md)詳細についてはします。
 
-このエラーは、Visual C 2005 で行ったコンパイラ準拠作業の結果として生成されることができます: 集約の初期化リストから配列の型が推測不要になったときに、カスタム属性には、マネージ配列を渡すことです。 これで、コンパイラでは初期化子リストと同様に、配列の型を指定することが必要です。
+このエラーは、Visual Studio 2005 で行ったコンパイラ準拠作業の結果として生成されることができます: 集約の初期化リストから配列の型が推測不要になったときに、カスタム属性には、マネージ配列を渡すことです。 これで、コンパイラでは初期化子リストと同様に、配列の型を指定することが必要です。
 
 ## <a name="example"></a>例
 

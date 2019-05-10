@@ -2,7 +2,7 @@
 title: コマンドラインの Visual Studio から MSVC ツールセットを使用してください。
 description: Visual Studio IDE の外部でコマンドラインから、Microsoft C コンパイラ ツール チェーン (MSVC) を使用します。
 ms.custom: conceptual
-ms.date: 12/10/2018
+ms.date: 04/25/2019
 helpviewer_keywords:
 - command-line builds [C++]
 - compiling source code [C++], command line
@@ -10,16 +10,16 @@ helpviewer_keywords:
 - command line [C++], building from
 - command line [C++], compilers
 ms.assetid: 7ca9daed-a003-4162-842d-908f79058365
-ms.openlocfilehash: 21d1c9063a1d6dd154de8d2caca913ea3fd0ce37
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 5f9ac1e4753fdba412af26bcc45022dee354cacf
+ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64342167"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64877125"
 ---
 # <a name="use-the-msvc-toolset-from-the-command-line"></a>コマンドラインから MSVC ツールセットを使用してください。
 
-Visual Studio に含まれているツールを使用して、コマンドラインでの C および C++ のアプリケーションを構築できます。 スタンドアロン パッケージとしてコンパイラ ツールセットをダウンロードすることもできます。 [Build Tools for Visual Studio 2017](https://go.microsoft.com/fwlink/p/?linkid=875721)します。
+Visual Studio に含まれているツールを使用して、コマンドラインでの C および C++ のアプリケーションを構築できます。 スタンドアロン パッケージとしてコンパイラ ツールセットをダウンロードすることも、 [Visual Studio のダウンロード](https://visualstudio.microsoft.com/downloads/)ページ。 一部では、 **for Visual Studio Build Tools**パッケージ; 必要なツールだけをダウンロードすることもできますC++開発します。
 
 ## <a name="how-to-use-the-command-line-tools"></a>コマンド ライン ツールを使用する方法
 
@@ -43,13 +43,11 @@ Visual Studio インストーラーで C++ のワークロードのいずれか�
 - **x86_x64 Cross Tools コマンド プロンプト**-32 ビットの x86 ネイティブ ツールを使用して、64 ビットの x64 ネイティブ コードを構築する環境を設定します。
 - **x64_x86 Cross Tools コマンド プロンプト**-64 ビットの x64 ネイティブ ツールを使用して、32 ビットの x86 ネイティブ コードを構築する環境を設定します。
 
-実際のスタート メニュー フォルダーとショートカット名は、1 つを設定した場合、インストールすると、Visual Studio のバージョンとインストールのニックネームによって異なります。 例では、Visual Studio 2017 がインストールされている必要がある場合のしただインストール ニックネームの*プレビュー*、開発者コマンド プロンプトのショートカットの名前は**開発者コマンド プロンプト for VS 2017 (プレビュー)**、という名前のフォルダーで**Visual Studio 2017**します。
-
-インストールした場合、 [Build Tools for Visual Studio 2017](https://go.microsoft.com/fwlink/p/?linkid=875721) (これも含む、Visual Studio 2015 Update 3 のコンパイラ ツールセット) で、アーキテクチャ固有のネイティブまたはクロス ツールの開発者コマンド プロンプトのインストール オプション、および一般的ないない**開発者コマンド プロンプト**ショートカット。
+実際のスタート メニュー フォルダーとショートカット名は、1 つを設定した場合、インストールすると、Visual Studio のバージョンとインストールのニックネームによって異なります。 例では、Visual Studio 2017 がインストールされている必要がある場合のしただインストール ニックネームの*プレビュー*、開発者コマンド プロンプトのショートカットの名前は**開発者コマンド プロンプト for VS 2019**で、という名前のフォルダー **Visual Studio 2019**します。
 
 ## <a name="developer_command_prompt"></a> 開発者コマンド プロンプト ウィンドウを開く
 
-1. デスクトップで開き、Windows**開始**メニューのおよび下へスクロールを検索してなど、Visual Studio のバージョンのフォルダーを開く**Visual Studio 2017**します。 いくつか以前のバージョンの Visual Studio で、ショートカットはというサブフォルダーに、 **Visual Studio Tools**します。
+1. デスクトップで開き、Windows**開始**メニューのおよび下へスクロールを検索してなど、Visual Studio のバージョンのフォルダーを開く**Visual Studio 2019**します。 いくつか以前のバージョンの Visual Studio で、ショートカットはというサブフォルダーに、 **Visual Studio Tools**します。
 
 1. フォルダーで、選択、**開発者コマンド プロンプト**Visual Studio のバージョンにします。 このショートカットは、32 ビットの x86 ネイティブ コードをビルドする 32 ビットの x86 ネイティブ ツールの既定のビルドのアーキテクチャを使用する開発者コマンド プロンプト ウィンドウを起動します。 既定以外のビルド アーキテクチャ場合は、ネイティブのいずれかを選択またはクロス ツール コマンド プロンプトをホストおよびターゲット アーキテクチャを指定します。
 
@@ -57,11 +55,11 @@ Visual Studio インストーラーで C++ のワークロードのいずれか�
 
 ## <a name="developer_command_file_locations"></a> 開発者コマンド ファイルの場所
 
-既存のコマンド プロンプト ウィンドウで、アーキテクチャのビルド環境を設定する場合は、必要な環境を設定するインストーラーによって作成されたコマンド ファイル (バッチ ファイル) のいずれかを使用できます。 推奨するだけで新しいコマンド プロンプト ウィンドウでは、これを行うし、お勧めしませんが、同じコマンド ウィンドウで後に環境を切り替えます。 これらのファイルの場所は、インストールすると、Visual Studio のバージョンおよび場所と名前付けの選択肢のインストール中に行われたによって異なります。 Visual Studio 2017 では、64 ビット コンピューター上の一般的なインストール場所は \Program Files (x86) \Microsoft Visual Studio\2017 で\\*edition*ここで、 *edition*コミュニティがあります。Professional、Enterprise、build Tools、または別の名前を指定します。 For Visual Studio 2015 では、一般的なインストール場所は、\Program Files (x86) \Microsoft Visual Studio 14.0 にします。
+既存のコマンド プロンプト ウィンドウで、アーキテクチャのビルド環境を設定する場合は、必要な環境を設定するインストーラーによって作成されたコマンド ファイル (バッチ ファイル) のいずれかを使用できます。 推奨するだけで新しいコマンド プロンプト ウィンドウでは、これを行うし、お勧めしませんが、同じコマンド ウィンドウで後に環境を切り替えます。 これらのファイルの場所は、インストールすると、Visual Studio のバージョンおよび場所と名前付けの選択肢のインストール中に行われたによって異なります。 Visual Studio 2019、64 ビット コンピューター上の一般的なインストール場所は \Program Files (x86) \Microsoft Visual Studio\2019 で\\*edition*ここで、 *edition*コミュニティがあります。Professional、Enterprise、build Tools、または別の名前を指定します。 Visual Studio 2017 の場所は似ています。 For Visual Studio 2015 では、一般的なインストール場所は、\Program Files (x86) \Microsoft Visual Studio 14.0 にします。
 
 主な開発者コマンド プロンプトのコマンド ファイルを VsDevCmd.bat は次のインストール ディレクトリの Common7\Tools サブディレクトリにあります。 パラメーターを指定しないと、環境を設定して、ホストとターゲットは、32 ビット x86 ネイティブ ツールを使用して、32 ビット x86 を構築するアーキテクチャを構築コード。
 
-追加のコマンド ファイルは、プロセッサ アーキテクチャと、Visual Studio のワークロードとインストールしたオプションに応じて、特定のビルドのアーキテクチャを設定します。 Visual Studio 2017 では、Visual Studio のインストール ディレクトリの VC\Auxiliary\Build サブディレクトリにあるこれらは。 Visual Studio 2015 では、これらが VC、vc \bin、または vc \bin にあります\\*アーキテクチャ*インストール ディレクトリのサブディレクトリで*アーキテクチャ*はネイティブのいずれかまたは。クロス コンパイラ オプション。 これらのコマンド ファイルは、既定のパラメーターを設定し、指定したビルドのアーキテクチャの環境をセットアップする VsDevCmd.bat を呼び出します。 一般的なインストールでは、これらのコマンド ファイルを含めることができます。
+追加のコマンド ファイルは、プロセッサ アーキテクチャと、Visual Studio のワークロードとインストールしたオプションに応じて、特定のビルドのアーキテクチャを設定します。 Visual Studio 2017 と Visual Studio 2019 では、Visual Studio のインストール ディレクトリの VC\Auxiliary\Build サブディレクトリにあるこれらは。 Visual Studio 2015 では、これらが VC、vc \bin、または vc \bin にあります\\*アーキテクチャ*インストール ディレクトリのサブディレクトリで*アーキテクチャ*はネイティブのいずれかまたは。クロス コンパイラ オプション。 これらのコマンド ファイルは、既定のパラメーターを設定し、指定したビルドのアーキテクチャの環境をセットアップする VsDevCmd.bat を呼び出します。 一般的なインストールでは、これらのコマンド ファイルを含めることができます。
 
 |コマンド ファイル|ホストとターゲット アーキテクチャ|
 |---|---|
@@ -107,28 +105,28 @@ Visual Studio インストーラーで C++ のワークロードのいずれか�
 必要に応じて使用する Windows SDK のバージョンを指定します。 既定では、最新インストールされている Windows SDK が使用されます。 Windows SDK のバージョンを指定するには番号を使用する完全な Windows 10 SDK など**10.0.10240.0**、または指定**8.1** Windows 8.1 の SDK を使用しています。
 
 *vcversion*<br/>
-必要に応じて使用する Visual Studio コンパイラ ツールセットを指定します。 既定では、Visual Studio 2017 の現在のコンパイラ ツールセットを使用する環境が設定されます。 使用 **-'-vcvars_ver=14.0' = 14.0** Visual Studio 2015 コンパイラ ツールセットを指定します。
+必要に応じて使用する Visual Studio コンパイラ ツールセットを指定します。 既定では、環境は、現在の Visual Studio コンパイラ ツールセットを使用してに設定されます。 使用 **-'-vcvars_ver=14.0' = 14.0** 、Visual Studio 2015 コンパイラ ツールセットを指定するまたは **-'-vcvars_ver=14.0' 15.0 を =** を Visual Studio 2017 のコンパイラ ツールセットを指定します。
 
 <a name="vcvarsall"></a>
 #### <a name="to-set-up-the-build-environment-in-an-existing-command-prompt-window"></a>既存のコマンド プロンプト ウィンドウで、ビルド環境を設定するには
 
-1. コマンド プロンプトでは、Visual Studio のインストール ディレクトリに変更する CD コマンドを使用します。 次に、構成に固有のコマンド ファイルを含むサブディレクトリに変更する CD をもう一度使用します。 Visual Studio 2017 では、これは VC\Auxiliary\Build サブディレクトリです。 Visual Studio 2015 では、VC サブディレクトリを使用します。
+1. コマンド プロンプトでは、Visual Studio のインストール ディレクトリに変更する CD コマンドを使用します。 次に、構成に固有のコマンド ファイルを含むサブディレクトリに変更する CD をもう一度使用します。 Visual Studio 2017 と 2019 は、これは、VC\Auxiliary\Build サブディレクトリです。 Visual Studio 2015 では、VC サブディレクトリを使用します。
 
-1. 優先の開発環境のコマンドを入力します。 たとえば、最新の Windows SDK と Visual Studio 2017 RTM のコンパイラ ツールセットを使用して、64 ビット プラットフォームでの UWP の ARM コードを構築するには、このコマンドラインを使用します。
+1. 優先の開発環境のコマンドを入力します。 たとえば、最新の Windows SDK と Visual Studio 2019 コンパイラ ツールセットを使用して、64 ビット プラットフォームでの UWP の ARM コードを構築するには、このコマンドラインを使用します。
 
-   `vcvarsall.bat amd64_arm uwp -vcvars_ver=14.10`
+   `vcvarsall.bat amd64_arm uwp`
 
 ## <a name="create-your-own-command-prompt-shortcut"></a>コマンド プロンプト ショートカットを作成します。
 
-既存の開発者コマンド プロンプト ショートカットのいずれかのプロパティ ダイアログを開く場合に使用されるコマンドのターゲットを確認できます。 ターゲットなど、 **x64 Native Tools コマンド プロンプト for VS 2017**ショートカットは、以下のようにします。
+既存の開発者コマンド プロンプト ショートカットのいずれかのプロパティ ダイアログを開く場合に使用されるコマンドのターゲットを確認できます。 ターゲットなど、 **x64 VS 2019 用の Native Tools コマンド プロンプト**ショートカットは、以下のようにします。
 
-`%comspec% /k "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvars64.bat"`
+`%comspec% /k "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvars64.bat"`
 
-アーキテクチャに固有のバッチ ファイルのセット、*アーキテクチャ*vcvarsall.bat のパラメーターを呼び出します。 Vcvarsall.bat にも直接 vcvarsall.bat だけ呼び出すことができます、これらのバッチ ファイルを同じ追加のオプションを渡すことができます。 コマンドのショートカットのパラメーターを指定するには、二重引用符で囲まれたコマンドの末尾に追加します。 たとえば、最新の Windows SDK と Visual Studio 2017 RTM のコンパイラ ツールセットを使用して、64 ビット プラットフォームで UWP の ARM コードをビルドするショートカットを設定するを使用して、コマンド ターゲットはこのようなもののショートカットで。
+アーキテクチャに固有のバッチ ファイルのセット、*アーキテクチャ*vcvarsall.bat のパラメーターを呼び出します。 Vcvarsall.bat にも直接 vcvarsall.bat だけ呼び出すことができます、これらのバッチ ファイルを同じ追加のオプションを渡すことができます。 コマンドのショートカットのパラメーターを指定するには、二重引用符で囲まれたコマンドの末尾に追加します。 など、最新の Windows SDK と、現在のバージョンよりも古いコンパイラ ツールセットを使用して、64 ビット プラットフォームで UWP の ARM コードをビルドするショートカットを設定するには、バージョン番号を指定する必要があります。 ショートカットでは、このコマンドの対象のようなものを使用します。
 
-`%comspec% /k "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvarsall.bat amd64_arm uwp -vcvars_ver=14.10"`
+`%comspec% /k "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvarsall.bat amd64_arm uwp -vcvars_ver=15.0"`
 
-Visual Studio インストール ディレクトリを反映するようにパスを調整する必要があります。
+Visual Studio インストール ディレクトリを反映するようにパスを調整する必要があります。 Vcvarsall.bat ファイルは、特定のバージョン番号に関する追加情報を持ちます。
 
 ## <a name="command-line-tools"></a>コマンド ライン ツール
 

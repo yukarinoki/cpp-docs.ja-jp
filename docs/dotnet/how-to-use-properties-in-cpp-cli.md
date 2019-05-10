@@ -5,12 +5,12 @@ helpviewer_keywords:
 - simple properties
 - properties [C++], simple
 ms.assetid: f5d82547-e214-4f05-9e1b-ddb6d0dc5e4c
-ms.openlocfilehash: cd0748993b6ac92bbf9f66fa868ac6e814e21bb5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 47cfd4c633942874b7b349da5635b34ea42090ee
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387150"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447313"
 ---
 # <a name="how-to-use-properties-in-ccli"></a>方法: プロパティを使用して、c++/cli CLI
 
@@ -259,7 +259,7 @@ int main() {
 
 ## <a name="abstract-and-sealed-properties"></a>Abstract および sealed プロパティ
 
-ですが、[抽象](../extensions/abstract-cpp-component-extensions.md)と[シール](../extensions/sealed-cpp-component-extensions.md)キーワードが有効で、ECMA C + と指定されて/cli の Visual C コンパイラでの CLI 仕様できませんしたり、指定したプロパティにも単純なプロパティで非 trivial プロパティの宣言。
+[抽象](../extensions/abstract-cpp-component-extensions.md)と[シール](../extensions/sealed-cpp-component-extensions.md)キーワードは、ECMA で有効と指定されたC++、microsoft の/CLI 仕様C++コンパイラ、ことはできませんに指定しても、単純なプロパティでの非 trivial プロパティのプロパティの宣言。
 
 Sealed または抽象プロパティを宣言するには、重要なプロパティを定義し、指定する必要があります、`abstract`または`sealed`キーワードを get と set アクセサー関数。
 

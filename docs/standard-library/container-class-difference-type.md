@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - difference_type typedef
 ms.assetid: fae52485-d424-484e-9856-13505cfe528c
-ms.openlocfilehash: aa742c0df9a8647bb08dcc0c7f5391afcdc94b96
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5cef7bc44c2339e4ef2771cac346443dd67f94aa
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62211270"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221665"
 ---
 # <a name="container-classdifferencetype"></a>コンテナー クラス::difference_type
 
 > [!NOTE]
-> このトピックは、C++ 標準ライブラリで使用されるコンテナーの例 (実際には機能しない) として、Visual C++ ドキュメントに含まれています。 詳しくは、「[C++ 標準ライブラリのコンテナー](../standard-library/stl-containers.md)」をご覧ください。
+> このトピックでは、Microsoft では、C++ドキュメントで使用されるコンテナーの機能の例として、C++標準ライブラリ。 詳細については、「[C++ Standard Library Containers (C++ 標準ライブラリ コンテナ―)](../standard-library/stl-containers.md)」をご覧ください。
 
 被制御シーケンス内にある任意の 2 つの要素のアドレスの違いを表現できるオブジェクトを記述します。
 

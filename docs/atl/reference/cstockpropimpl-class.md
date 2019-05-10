@@ -1,6 +1,6 @@
 ---
 title: CStockPropImpl クラス
-ms.date: 11/06/2018
+ms.date: 05/06/2019
 f1_keywords:
 - CStockPropImpl
 - ATLCTL/ATL::CStockPropImpl
@@ -64,12 +64,12 @@ helpviewer_keywords:
 - controls [ATL], stock properties
 - stock properties, ATL controls
 ms.assetid: 45f11d7d-6580-4a0e-872d-3bc8b836cfda
-ms.openlocfilehash: 148c9571bb37e2b9063ca9290f51caa1fabb2d21
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 246e2a26db6adde0fec06523c1b8db09c5f552f3
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62277488"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221063"
 ---
 # <a name="cstockpropimpl-class"></a>CStockPropImpl クラス
 
@@ -182,7 +182,7 @@ class ATL_NO_VTABLE CStockPropImpl :
 
 `CStockPropImpl` 提供**配置**と**取得**ストックの各プロパティのメソッド。 これらのメソッドは、各プロパティに関連付けられたデータ メンバーを取得または設定して、通知し、任意のプロパティが変更されたときに、コンテナーと同期に必要なコードを提供します。
 
-Visual C では、そのウィザードを使用するストック プロパティのサポートを提供します。 ストック プロパティをコントロールに追加する方法の詳細については、次を参照してください。、 [ATL チュートリアル](../../atl/active-template-library-atl-tutorial.md)します。
+Visual Studio では、そのウィザードを使用するストック プロパティのサポートを提供します。 ストック プロパティをコントロールに追加する方法の詳細については、次を参照してください。、 [ATL チュートリアル](../../atl/active-template-library-atl-tutorial.md)します。
 
 旧バージョンと互換性のため、`CStockPropImpl`も公開`get_Window`と`put_Window`メソッドを呼び出すだけで`get_HWND`と`put_HWND`、それぞれします。 既定の実装`put_HWND`HWND は読み取り専用プロパティである必要がありますので、E_FAIL を返します。
 

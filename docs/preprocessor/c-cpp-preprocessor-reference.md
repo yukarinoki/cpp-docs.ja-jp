@@ -5,12 +5,12 @@ helpviewer_keywords:
 - preprocessor
 - preprocessor, reference overview
 ms.assetid: e4a52843-7016-4f6d-8b40-cb1ace18f805
-ms.openlocfilehash: a9e5be5895d8a90d93d0060e2bd2a7d0a9f84dbd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9eb94b105af976d1e1f49e212e0117c43c430683
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403519"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220403"
 ---
 # <a name="cc-preprocessor-reference"></a>C/C++ プリプロセッサ リファレンス
 *C/C++ プリプロセッサ リファレンス*Microsoft C/C で実装されているプリプロセッサについて説明します。 プリプロセッサは C および C++ ファイルをコンパイラに渡す前の準備的な処理を実行します。 プリプロセッサを使用して、コードの条件付きコンパイル、ファイルの挿入、コンパイル時のエラー メッセージの指定、コード セクションへのコンピューター固有の規則の適用を行うことができます。
@@ -40,5 +40,5 @@ C 言語の Microsoft 実装に関するリファレンス ドキュメントを
 [C/C++ プログラムのビルド](../build/reference/c-cpp-building-reference.md)<br/>
 コンパイラとリンカーのオプション関するトピックへのリンクを示します。
 
-[Visual C++ プロジェクトの作成と管理](../build/creating-and-managing-visual-cpp-projects.md)<br/>
+[Visual Studio プロジェクト - C++](../build/creating-and-managing-visual-cpp-projects.md)<br/>
 プロジェクト システムが C++ プロジェクトのファイルを見つけるために検索するディレクトリを指定できる、Visual Studio のユーザー インターフェイスについて説明します。

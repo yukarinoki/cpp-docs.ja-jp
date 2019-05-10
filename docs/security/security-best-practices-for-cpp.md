@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [C++]
 - security [C++], best practices
 ms.assetid: 86acaccf-cdb4-4517-bd58-553618e3ec42
-ms.openlocfilehash: bc449d0bbf222391868dc7586e0245fd6e8cd2ac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b43658eda749e68c17659fcb41248b88fd843792
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411267"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448503"
 ---
 # <a name="security-best-practices-for-c"></a>C++ のセキュリティ推奨事項
 
@@ -21,7 +21,7 @@ ms.locfileid: "62411267"
 
 ## <a name="visual-c-security-features"></a>Visual C++ セキュリティ機能
 
-Visual C++ コンパイラおよびリンカーには、次のセキュリティ機能が組み込まれています。
+これらのセキュリティ機能は、Microsoft に組み込まれているC++コンパイラとリンカー。
 
 [/guard (制御フロー ガードを有効にする)](../build/reference/guard-enable-control-flow-guard.md)<br/>
 コンパイラでコンパイル時に間接的な呼び出しターゲットに関する制御フローを分析し、実行時にターゲットを確認するコードを挿入します。

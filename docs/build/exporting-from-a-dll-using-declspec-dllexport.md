@@ -1,6 +1,6 @@
 ---
 title: __declspec(dllexport) を使った DLL からのエクスポート
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 f1_keywords:
 - dllexport
 - __declspec
@@ -10,18 +10,16 @@ helpviewer_keywords:
 - export directives [C++]
 - exporting DLLs [C++], __declspec(dllexport) keyword
 ms.assetid: a35e25e8-7263-4a04-bad4-00b284458679
-ms.openlocfilehash: 3b6b9733776f30fc8dcbfeee709b7d24e0f0187b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 167060d0270004b8648d32af206865bfe66c3b4b
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62195317"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220789"
 ---
 # <a name="exporting-from-a-dll-using-declspecdllexport"></a>__declspec(dllexport) を使った DLL からのエクスポート
 
-導入された Microsoft **_ _export**ビジュアルの 16 ビットのコンパイラのバージョンでC++コンパイラは、エクスポート名を自動的に生成し、.lib ファイルに配置します。 この .lib ファイルは、DLL とリンクするスタティック ライブラリと同じように使用できます。
-
-新しいバージョンのコンパイラからエクスポートできますデータ、関数、クラス、またはクラス メンバー関数を使用して、DLL、**方式**キーワード。 **方式**.def ファイルを使用する必要はありませんので、オブジェクト ファイルにエクスポート ディレクティブを追加します。
+DLL を使用してから、データ、関数、クラス、またはクラス メンバー関数をエクスポートすることができます、**方式**キーワード。 **方式**.def ファイルを使用する必要はありませんので、オブジェクト ファイルにエクスポート ディレクティブを追加します。
 
 この機能は、C++ 関数の装飾名をエクスポートする場合に特に便利です。 名前の装飾には標準仕様がないので、エクスポート関数の名前は、コンパイラのバージョン間で変わる場合があります。 使用する場合**方式**アカウントにのみ、名前付け規約の変更のために必要なは、DLL と従属する .exe ファイルを再コンパイルします。
 
@@ -50,11 +48,6 @@ class __declspec(dllexport) CExampleExport : public CObject
 ```
 
 **方式**ストア機能の DLL のエクスポート テーブル内の名前。 テーブルのサイズを最適化する場合を参照してください。[関数ではなく序数値の名前を DLL からエクスポート](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md)します。
-
-> [!NOTE]
->  Win16 から Win32 への DLL ソース コードを移植するときの各インスタンスを置き換える **_ _export**で**方式**します。
-
-参考として、Win32 の Winbase.h ヘッダー ファイルを検索してください。 例が含まれている **_declspec**使用量。
 
 ## <a name="what-do-you-want-to-do"></a>実行する操作
 

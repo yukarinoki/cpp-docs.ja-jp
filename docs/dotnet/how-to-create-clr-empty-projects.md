@@ -5,12 +5,12 @@ helpviewer_keywords:
 - CLR empty projects
 - CLR empty projects, creating
 ms.assetid: edb4574f-fea7-426d-9b5c-fa4ecad2befb
-ms.openlocfilehash: 068b1328925c2e5040316d197b80076549aea321
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: bd57ac4c6a821536b1c2cf3d222327d9924700cb
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387455"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221820"
 ---
 # <a name="how-to-create-clr-empty-projects"></a>方法: 空の CLR プロジェクトを作成します。
 
@@ -36,5 +36,5 @@ ms.locfileid: "62387455"
 
 ## <a name="see-also"></a>関連項目
 
-[Visual C++ プロジェクトの種類](../build/reference/visual-cpp-project-types.md)<br/>
+[C++Visual Studio でプロジェクトの種類](../build/reference/visual-cpp-project-types.md)<br/>
 [C++ プロジェクトのデバッグ](/visualstudio/debugger/debugging-preparation-visual-cpp-project-types)

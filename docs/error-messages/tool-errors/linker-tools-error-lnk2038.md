@@ -5,12 +5,12 @@ f1_keywords:
 - LNK2038
 helpviewer_keywords:
 - LNK2038
-ms.openlocfilehash: a22b31f1ac3226271ed7ff03b5be7dad7fff6b93
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f2839494232e7b57325b6f7abb960a258ba13078
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62298868"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446954"
 ---
 # <a name="linker-tools-error-lnk2038"></a>リンカ ツール エラー LNK2038
 
@@ -24,9 +24,9 @@ ms.locfileid: "62298868"
 
 Visual Studio は、実行時エラーまたはその他の予測できない動作を発生させる可能性のある互換性のないコードのリンクを防ぐために、次のシンボルを定義します。
 
-- `_MSC_VER` アプリまたはライブラリをビルドするために使用する Visual C コンパイラのメジャーおよびマイナー バージョン番号を示します。 Visual C++ コンパイラの 1 種類のバージョンを使用してコンパイルされたコードは、さまざまなメジャー バージョン番号とマイナー バージョン番号のあるバージョンを使用してコンパイルされたコードと互換性がありません。 詳細については、次を参照してください。`_MSC_VER`で[定義済みマクロ](../../preprocessor/predefined-macros.md)します。
+- `_MSC_VER` Microsoft のメジャーおよびマイナー バージョン番号を示すC++コンパイラ (MSVC) アプリまたはライブラリを構築するために使用します。 MSVC の 1 つのバージョンを使用してコンパイルされたコードは、別のメジャーおよびマイナー バージョン番号のあるバージョンを使用してコンパイルされたコードと互換性がありません。 詳細については、次を参照してください。`_MSC_VER`で[定義済みマクロ](../../preprocessor/predefined-macros.md)します。
 
-   を使用していると、取得またはライブラリの互換性のあるバージョンをビルドすることはできませんが、Visual C コンパイラのバージョンと互換性がないライブラリをリンクする場合は、プロジェクトをビルドする以前のバージョンのコンパイラを使用できます。 変更、 **プラットフォーム ツールセット**以前のツールセットにプロジェクトのプロパティ。 詳細については、「[方法 :ターゲット フレームワークおよびプラットフォームのツールセットを変更する](../../build/how-to-modify-the-target-framework-and-platform-toolset.md)」を参照してください。
+   を使用していると、取得またはライブラリの互換性のあるバージョンをビルドすることはできませんが、MSVC のバージョンと互換性がないライブラリをリンクする場合は、プロジェクトをビルドする以前のバージョンのコンパイラを使用できます。 変更、 **プラットフォーム ツールセット**以前のツールセットにプロジェクトのプロパティ。 詳細については、「[方法 :ターゲット フレームワークおよびプラットフォームのツールセットを変更する](../../build/how-to-modify-the-target-framework-and-platform-toolset.md)」を参照してください。
 
 - `_ITERATOR_DEBUG_LEVEL` セキュリティ機能とデバッグ、C++ 標準ライブラリで有効になっている機能のレベルを示します。 これらの機能は、特定の C++ 標準ライブラリのオブジェクトの表示を変更できるため、こうしたオブジェクトは、異なるセキュリティ機能とデバッグ機能を使用するオブジェクトと互換性がなくなります。 詳細については、「[_ITERATOR_DEBUG_LEVEL](../../standard-library/iterator-debug-level.md)」を参照してください。
 

@@ -37,11 +37,11 @@ helpviewer_keywords:
 - C2098
 ms.assetid: d99a19eb-eeeb-4181-9b33-9cbe4459767b
 ms.openlocfilehash: cf1d2f647c13b589463624749e29dc277f6f1d3e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360490"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64857139"
 ---
 # <a name="compiler-errors-c2000-through-c2099"></a>コンパイラ エラー (C2000 - C2099)
 
@@ -65,7 +65,7 @@ ms.locfileid: "62360490"
 |[コンパイラ エラー C2009](compiler-error-c2009.md)|マクロの仮の '*識別子*'|
 |[コンパイラ エラー C2010](compiler-error-c2010.md)|'*文字*': マクロの仮パラメーター リストで予期しません。|
 |[コンパイラ エラー C2011](compiler-error-c2011.md)|'*識別子*':'*型*' の再定義の入力|
-|[コンパイラ エラー C2012](compiler-error-c2012.md)|次の名前がありません ' <'|
+|[コンパイラ エラー C2012](compiler-error-c2012.md)|'<' の後にファイル名がありません。|
 |[コンパイラ エラー C2013](compiler-error-c2013.md)|'>' がありません。|
 |[コンパイラ エラー C2014](compiler-error-c2014.md)|プリプロセッサ コマンドは、最初の空白として起動する必要があります。|
 |[コンパイラ エラー C2015](compiler-error-c2015.md)|定数の文字列の文字が多すぎます|

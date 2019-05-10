@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CDBException [MFC], m_strError
 - CDBException [MFC], m_strStateNativeOrigin
 ms.assetid: eb9e1119-89f5-49a7-b9d4-b91cee1ccc82
-ms.openlocfilehash: 755b89635eedd7808f900dc63cd3039845db1dd3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bdfb9bd0b45fd241de4378a2caa19e7dd9f9bdf2
+ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62253414"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64877488"
 ---
 # <a name="cdbexception-class"></a>CDBException クラス
 
@@ -132,7 +132,7 @@ Sql コードは、ODBC によって定義されます。 AFX プレフィック
 
 文字列が、フォーム"の状態: %s、ネイティブ: %ld 配信元: %s"での順序で、書式コードが記述する値を置き換え。
 
-- SQLSTATE、5 文字のエラー コードを含む null で終わる文字列が返される、 *szSqlState* ODBC 関数のパラメーター`SQLError`します。 SQLSTATE 値は、付録 A に記載されて[ODBC エラー コード](/previous-versions/windows/desktop/ms714687(v=vs.85))の*ODBC プログラマ リファレンス*します。 例:"S0022"。
+- SQLSTATE、5 文字のエラー コードを含む null で終わる文字列が返される、 *szSqlState* ODBC 関数のパラメーター`SQLError`します。 SQLSTATE 値は、付録 A に記載されて[ODBC エラー コード](/sql/odbc/reference/appendixes/appendix-a-odbc-error-codes)の*ODBC プログラマ リファレンス*します。 例:"S0022"。
 
 - データ ソースに固有のネイティブ エラー コードが返される、 *pfNativeError*のパラメーター、`SQLError`関数。 例:207.
 
@@ -140,11 +140,11 @@ Sql コードは、ODBC によって定義されます。 AFX プレフィック
 
 フレームワークは、エラー文字列を解釈し、そのコンポーネントには、`m_strStateNativeOrigin`場合`m_strStateNativeOrigin`情報が含まれています、1 つ以上のエラー、エラーが改行で区切られました。 フレームワークは、英数字のエラー テキストを`m_strError`します。
 
-この文字列を構成するために使用するコードの詳細については、次を参照してください。、 [SQLError](/previous-versions/windows/desktop/ms716312(v=vs.85))で機能、 *ODBC プログラマ リファレンス*します。
+この文字列を構成するために使用するコードの詳細については、次を参照してください。、 [SQLError](/sql/odbc/reference/syntax/sqlerror-function)で機能、 *ODBC プログラマ リファレンス*します。
 
 ### <a name="example"></a>例
 
-  ODBC: から"の状態: S0022、ネイティブ: 207、配信元:\[Microsoft]\[ODBC SQL Server Driver]\[SQL Server] 'ColName' の無効な列名"
+ODBC: から"の状態: S0022、ネイティブ: 207、配信元:\[Microsoft]\[ODBC SQL Server Driver]\[SQL Server] 'ColName' の無効な列名"
 
 `m_strStateNativeOrigin`の場合:"の状態: S0022、ネイティブ: 207、配信元:\[Microsoft]\[ODBC SQL Server Driver]\[SQL Server]」
 

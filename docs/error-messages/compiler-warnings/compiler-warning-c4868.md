@@ -4,12 +4,12 @@ ms.date: 10/26/2017
 f1_keywords:
 - C4868
 ms.assetid: fc6aa7e5-34dd-4ec2-88bd-16e430361dc7
-ms.openlocfilehash: d0bc8716e53e71c52f6a31036a95d0b4cefedd79
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 72700091fcd22271e6913228a1206b3d5efcbdef
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388710"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447171"
 ---
 # <a name="compiler-warning-level-4-c4868"></a>コンパイラの警告 (レベル 4) C4868
 
@@ -17,7 +17,7 @@ ms.locfileid: "62388710"
 
 中かっこで囲んだ初期化子リストの要素では、左から右の順序で評価します。 2 つのケースをコンパイラはこの順序を保証することができません: オブジェクトの値によって渡された要素の一部は、1 つは2 番目でコンパイルする場合は、`/clr`オブジェクトのフィールドまたは配列要素は要素の一部であるとします。 コンパイラは、左から右に評価を保証できない場合に警告 C4868 を出力します。
 
-この警告は、Visual C 2015 Update 2 で行ったコンパイラ準拠作業の結果として生成できます。 C4868 Visual C 2015 Update 2 の前にコンパイルされたコードを生成できます。
+この警告は、Visual Studio 2015 Update 2 で行ったコンパイラ準拠作業の結果として生成できます。 Visual Studio 2015 Update 2 より前にコンパイルされたコード C4868 を生成できます。
 
 既定では、この警告はオフに設定されています。 使用`/Wall`この警告をアクティブ化します。
 

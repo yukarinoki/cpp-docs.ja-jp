@@ -2,12 +2,12 @@
 title: スタティック ライブラリ (C++/CX)
 ms.date: 02/03/2017
 ms.assetid: 7faf53c8-fa21-42cc-8246-d32533ef9dfa
-ms.openlocfilehash: 242ba10b29a8efe0c3e9580f1d0d0c3be529a7d2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 188ba06518bf6cdd154b7d6bd61216ed1e4ffad3
+ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398863"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64877242"
 ---
 # <a name="static-libraries-ccx"></a>スタティック ライブラリ (C++/CX)
 
@@ -15,11 +15,32 @@ ms.locfileid: "62398863"
 
 ## <a name="creating-static-libraries"></a>スタティック ライブラリの作成
 
-#### <a name="to-create-a-static-library-for-use-in-a-uwp-app"></a>UWP アプリで使用するためのスタティック ライブラリを作成するには
+
+新しいプロジェクトを作成する方法については、インストールした Visual Studio のバージョンによって異なります。 バージョン セレクターで、適切なバージョンに設定して左上にあることを確認します。
+
+::: moniker range="vs-2019"
+
+### <a name="to-create-a-uwp-static-library-in-visual-studio-2019"></a>Visual Studio 2019 で UWP のスタティック ライブラリを作成するには
+
+1. メニュー バーで、**ファイル** > **新規** > **プロジェクト**を開く、**新しいプロジェクトを作成** ダイアログ ボックス。
+
+1. ダイアログ ボックスの上部にある次のように設定します**言語**に **C++** 設定**プラットフォーム**に**Windows**、設定と**プロジェクトの種類。** に**UWP**します。 
+
+1. プロジェクトの種類の結果の一覧から選択**スタティック ライブラリ (ユニバーサル Windows - C++/CX)** 選択 **[次へ]** します。 次のページで、プロジェクトに名前を付けし、必要な場合は、プロジェクトの場所を指定します。
+
+1. 選択、**作成**プロジェクトを作成するボタンをクリックします。
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
+
+### <a name="to-create-a-uwp-static-library-in-visual-studio-2017-or-visual-studio-2015"></a>Visual Studio 2017 または Visual Studio 2015 で UWP のスタティック ライブラリを作成するには
 
 1. メニュー バーで、**[ファイル]**  >  **[新規作成]**  >  **[プロジェクト]** を選択します。 **Visual C** > **Windows ユニバーサル**選択**スタティック ライブラリ (ユニバーサル Windows)** します。
 
 1. **ソリューション エクスプローラー**で、プロジェクトのショートカット メニューを開き、 **[プロパティ]** をクリックします。 **プロパティ** ダイアログ ボックスで、**構成プロパティ** > **C/C++** 設定ページで、 **Windows ランタイム拡張機能の使用**に**はい (/ZW)** します。
+
+::: moniker-end
 
 UWP アプリの除外されている Win32 API の呼び出しを行った場合に新規のスタティック ライブラリをコンパイルするときに、コンパイラによってエラー C3861「識別子が見つかりません。」が発生します。 Windows ランタイムのサポートされている別の方法を探すを参照してください。 [UWP アプリでの Windows Api の代替](/uwp/win32-and-com/alternatives-to-windows-apis-uwp)します。
 

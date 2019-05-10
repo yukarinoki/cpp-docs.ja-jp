@@ -1,6 +1,6 @@
 ---
 title: スレッド間の例外を転送
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 helpviewer_keywords:
 - std::current_exception
 - transporting exceptions between threads
@@ -14,16 +14,16 @@ helpviewer_keywords:
 - rethrow_exception
 - move exceptions between threads
 ms.assetid: 5c95d57b-acf5-491f-8122-57c5df0edd98
-ms.openlocfilehash: f403b1448855b60f323ed582794a00c3e6ae1b3a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: e59883c75fde9938a213fb4e888e6b05a79cf4f7
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404742"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221926"
 ---
 # <a name="transporting-exceptions-between-threads"></a>スレッド間の例外を転送
 
-Visual C がサポート*例外の転送*を別の 1 つのスレッドから。 例外の転送により、1 つのスレッドで例外をキャッチし、その例外が別のスレッドにスローされたように見せることができます。 たとえば、この機能を使用して、プライマリ スレッドでそのセカンダリ スレッドによってスローされたすべての例外を処理するマルチスレッド アプリケーションを作成できます。 例外の転送は、主に並列プログラミング ライブラリまたはシステムを作成する開発者にとって便利です。 例外の転送、ビジュアルを実装するC++提供、 [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)型と[current_exception](../standard-library/exception-functions.md#current_exception)、 [rethrow_exception](../standard-library/exception-functions.md#rethrow_exception)と[make_exception_ptr](../standard-library/exception-functions.md#make_exception_ptr)関数。
+MicrosoftC++コンパイラ (MSVC) がサポート*例外の転送*別に 1 つのスレッドから。 例外の転送により、1 つのスレッドで例外をキャッチし、その例外が別のスレッドにスローされたように見せることができます。 たとえば、この機能を使用して、プライマリ スレッドでそのセカンダリ スレッドによってスローされたすべての例外を処理するマルチスレッド アプリケーションを作成できます。 例外の転送は、主に並列プログラミング ライブラリまたはシステムを作成する開発者にとって便利です。 MSVC は、例外の転送を実装するために、 [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)型と[current_exception](../standard-library/exception-functions.md#current_exception)、 [rethrow_exception](../standard-library/exception-functions.md#rethrow_exception)、および[make_exception_ptr](../standard-library/exception-functions.md#make_exception_ptr)関数。
 
 ## <a name="syntax"></a>構文
 

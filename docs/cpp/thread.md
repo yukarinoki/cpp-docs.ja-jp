@@ -1,6 +1,6 @@
 ---
 title: スレッド
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 f1_keywords:
 - thread_cpp
 helpviewer_keywords:
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - TLS (thread local storage), compiler implementation
 - __declspec keyword [C++], thread
 ms.assetid: 667f2a77-6d1f-4b41-bee8-05e67324fab8
-ms.openlocfilehash: 089f339e5d203fe44789a7df1607f73ab13b8a24
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 59a1af8a7eb73207f84ddf2194d5fe9e77d7d46a
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330519"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221964"
 ---
 # <a name="thread"></a>スレッド
 
@@ -40,7 +40,7 @@ __declspec( thread ) int tls_i = 1;
 
 1. (コンス トラクターを含む) が関数呼び出しで、変数が初期化されると、バイナリまたは DLL が読み込まれた後に開始されたスレッドのスレッド、プロセスに読み込むバイナリまたは DLL の原因となったに、この関数が呼び出すのみ。 DLL が読み込まれるときに既に実行されているその他のスレッドの初期化関数は呼び出されません。 動的な初期化は、決して、スレッドの開始時に、DLL がプロセスに含まれていない場合にメッセージを取得の DLL_THREAD_ATTACH、DllMain 呼び出しが、DLL で発生します。
 
-1. 定数値を持つ静的に初期化されるスレッド ローカル変数は、すべてのスレッドでは正しく初期化一般にされます。 ただし、2017 年 12 月の時点で問題がある既知の準拠 constexpr 変数が表示されるため、Microsoft Visual C コンパイラでの静的な初期化ではなく動的です。
+1. 定数値を持つ静的に初期化されるスレッド ローカル変数は、すべてのスレッドでは正しく初期化一般にされます。 ただし、2017 年 12 月の時点では、既知の準拠の問題では、Microsoft C++ constexpr 変数が静的な初期化ではなく動的設けてコンパイラ。
 
    メモ:将来のコンパイラの更新プログラムで修正するのには、これらの問題の両方が必要です。
 

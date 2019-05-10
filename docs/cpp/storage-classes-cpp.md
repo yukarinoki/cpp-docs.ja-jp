@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - storage classes [C++], basic concepts
 ms.assetid: f10e1c56-6249-4eb6-b08f-09ab1eef1992
-ms.openlocfilehash: e50e5da5ea24d59131f123bb0c772897f9a30218
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 92435b2bab670dd366f26c981443e98e4a4e3c29
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62266934"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221985"
 ---
 # <a name="storage-classes-c"></a>ストレージ クラス (C++)
 
@@ -24,7 +24,7 @@ A*ストレージ クラス*C++ のコンテキストでの変数宣言は、オ
 
 1. [変更可能な](../cpp/mutable-data-members-cpp.md)キーワードが、ストレージ クラス指定子として見なされます。 ただし、クラス定義のメンバー一覧でのみ使用できます。
 
-1. **Visual C 2010 以降:****自動**キーワードは C++ ストレージ クラス指定子では不要になったと**登録**キーワードは非推奨とされます。 **Visual Studio 2017 バージョン 15.7 以降:** (で使用可能な[/std:c + + 17](../build/reference/std-specify-language-standard-version.md))。**登録**キーワードは C++ 言語から削除されます。
+1. **Visual Studio 2010 以降の場合:****自動**キーワードは C++ ストレージ クラス指定子では不要になったと**登録**キーワードは非推奨とされます。 **Visual Studio 2017 バージョン 15.7 以降:** (で使用可能な[/std:c + + 17](../build/reference/std-specify-language-standard-version.md))。**登録**キーワードは C++ 言語から削除されます。
 
 ```cpp
    register int val; // warning C5033: 'register' is no longer a supported storage class
