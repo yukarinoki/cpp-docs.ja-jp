@@ -1,6 +1,6 @@
 ---
 title: '&lt;chrono&gt;'
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 f1_keywords:
 - chrono/std::chrono::nanoseconds
 - chrono/std::chrono::minutes
@@ -10,18 +10,18 @@ f1_keywords:
 - chrono/std::chrono::milliseconds
 - chrono/std::chrono::microseconds
 ms.assetid: 844de749-f306-482e-89bc-6f53c99c8324
-ms.openlocfilehash: 1fcf87d84b2c99b89217b7f2e0fc7fecd55fff02
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 44620b6ea6c970027a8e9a023c0972c6dec43ee0
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62279100"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220251"
 ---
 # <a name="ltchronogt"></a>&lt;chrono&gt;
 
 期間と時点を表し、操作するクラスと関数を定義するために、標準ヘッダー \<chrono> を含めます。
 
-Visual Studio 2015 での実装を開始`steady_clock`がされと単調性の C++ 標準の要件を満たすために変更します。 現在、`steady_clock` は QueryPerformanceCounter() に基づき、`high_resolution_clock` は `steady_clock` の typedef です。 結果として、Visual C++ では現在、`steady_clock::time_point` は `chrono::time_point<steady_clock>` の typedef です。ただし、他の実装では異なる場合があります。
+Visual Studio 2015 での実装を開始`steady_clock`がされと単調性の C++ 標準の要件を満たすために変更します。 現在、`steady_clock` は QueryPerformanceCounter() に基づき、`high_resolution_clock` は `steady_clock` の typedef です。 Microsoft でこの結果、C++コンパイラ`steady_clock::time_point`は typedef の`chrono::time_point<steady_clock>`。 ただし、これとは限りませんのその他の実装。
 
 ## <a name="syntax"></a>構文
 

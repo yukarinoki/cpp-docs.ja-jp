@@ -1,38 +1,140 @@
 ---
 title: Visual Studio で CMake のビルド設定をカスタマイズする
-ms.date: 03/05/2019
+ms.date: 04/25/2019
 helpviewer_keywords:
 - CMake build settings
-ms.openlocfilehash: 4864e094ab967a563b153fa79fd0bf5c375f40f7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 20ed066f71a5c8c3acb00ef5923fa5c9f16ac229
+ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62274628"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64877156"
 ---
 # <a name="customize-cmake-build-settings"></a>CMake のビルド設定をカスタマイズする
 
-Visual Studio では、特定のプロジェクトの CMake キャッシュを作成するために CMake.exe が呼び出される方法を定義する複数の CMake 構成が用意されています。 新しい構成を追加するには、ツール バーの [構成] ドロップダウンをクリックして **[構成の管理]** を選択します。
+::: moniker range="vs-2019"
 
-   ![CMake の構成の管理](media/cmake-manage-configurations.png)
+Visual Studio 2019 以降では、構成を追加し、使用してその設定をカスタマイズ、、 **CMake の設定エディター**します。 エディターは、CMakeSettings.json ファイルを手動で編集する代わりに簡単にするものですが、ファイルを直接編集する場合は、クリックして、 **JSON の編集**エディターの右上のリンク。 
 
-定義済みの構成のリストから選択できます。
+エディターを開くには、をクリックして、**構成**メイン ツールバーでは、ドロップダウンを選択**構成の管理**します。
 
-   ![CMake の定義済み構成](media/cmake-configurations.png)
+![CMake 構成ドロップダウン](media/vs2019-cmake-manage-configurations.png)
 
-初めて構成を選択すると、Visual Studio によって `CMakeSettings.json` ファイルがプロジェクトのルート フォルダー内に作成されます。 このファイルは、たとえば**クリーン**操作の後などに、CMake キャッシュ ファイルを再作成するために使われます。 
+表示、**設定エディター**左側でインストールされている構成を使っています。 
 
-追加の構成を追加するには、`CMakeSettings.json` を右クリックして、**[構成の追加]** を選択します。 
+![CMake の設定エディター](media/cmake-settings-editor.png)
 
-   ![CMake の構成の追加](media/cmake-add-configuration.png "CMake の構成の追加")
+Visual Studio では、既定で 2 つの構成が用意されています:`x64-Debug`と`x86-Debug`します。 追加の構成を追加するには、緑色のプラス記号をクリックします。エディターで表示される設定は、構成の選択に応じて異なる場合があります。
 
-JSON の IntelliSense は、`CMakeSettings.json` ファイルの編集を支援します。
+エディターで選択したオプションは、CMakeSettings.json をという名前のファイルに書き込まれます。 このファイルは、コマンドライン引数と、プロジェクトをビルドするときに、CMake に渡される環境変数を提供します。 Visual Studio で CMakeLists.txt を自動的に変更は行わないCMakeSettings.json を使用して他のチームを使用している任意のツールで使用できるように、CMake プロジェクト ファイルの変更を加えずまま中に Visual Studio を使用してビルドをカスタマイズできます。
 
-   ![CMake の JSON IntelliSense](media/cmake-json-intellisense.png "CMake の JSON IntelliSense")
+## <a name="cmake-general-settings"></a>CMake の 全般設定
 
-**CMake の設定エディター**を使用してファイルを編集することもできます。 **ソリューション エクスプローラー**で `CMakeSettings.json` を右クリックして、**[CMake 設定の編集]** を選択します。 または、エディター ウィンドウの上部にある構成ドロップダウンから **[構成の管理]** を選択します。 
+次の設定は 使用可能な**全般**見出し。
 
-また、`CMakeSettings.json` を直接編集してカスタム構成を作成することもできます。次の例は、開始点として使用できるサンプルの構成を示しています。
+### <a name="configuration-name"></a>構成名
+
+対応する、**名前**設定します。 これに表示される名前、C++構成 ドロップダウン リスト。 使用することができます、`${name}`マクロをパスなどの他のプロパティ値を作成します。
+
+
+### <a name="configuration-type"></a>構成の種類
+
+対応する、 **configurationType**設定します。 選択したジェネレーターのビルド構成の種類を定義します。 現在サポートされている値は、"Debug"、"MinSizeRel"、"Release"、"RelWithDebInfo" です。
+
+### <a name="toolset"></a>ツールセット
+
+対応する、 **inheritedEnvironments**設定します。 選択した構成のビルドに使用されるコンパイラ環境を定義します。 サポートされている値は、構成の種類によって異なります。 カスタム環境を作成する をクリックして、**編集 JSON**設定エディターの右上隅にあるリンクし、CMakeSettings.json ファイルを直接編集します。
+
+### <a name="cmake-toolchain-file"></a>CMake ツール チェーンのファイル
+
+CMake ツール チェーンのファイルへのパス。 として CMake に渡される"-DCMAKE_TOOLCHAIN_FILE = \<filepath >"。
+
+### <a name="build-root"></a>ルートを作成します。
+
+対応する**buildRoot**します。 マップ **-DCMAKE_BINARY_DIR**切り替え、CMake キャッシュが作成される場所を指定します。 フォルダーが存在しない場合は、作成されます。
+
+## <a name="command-arguments"></a>コマンド引数
+
+次の設定は 使用可能な**コマンド引数**見出し。
+
+### <a name="cmake-command-arguments"></a>CMake コマンド引数
+
+対応する**cmakeCommandArgs**します。 CMake.exe を通過するすべてのスイッチを指定します。
+
+### <a name="build-command-arguments"></a>ビルド コマンドの引数
+
+対応する**buildCommandArgs**: ビルド システムを基になるに渡す追加のスイッチを指定します。 たとえば、Ninja ジェネレーターの使用時に -v を渡すと、コマンド ラインの出力が Ninja に強制されます。
+
+
+### <a name="ctest-command-arguments"></a>CTest コマンド引数
+
+対応する**ctestCommandArgs**: テストの実行時に CTest に渡す追加のスイッチを指定します。
+
+## <a name="general-settings-for-remote-builds"></a>リモート ビルドの全般設定
+
+リモート ビルドを使用する Linux などの構成を次の設定を使用できますも。
+
+### <a name="rsync-command-arguments"></a>rsync コマンド引数
+
+Rsync に渡されるコマンドライン引数を提供します。 
+
+## <a name="cmake-variables-and-cache"></a>CMake 変数とキャッシュ
+
+これらの設定を使用すると、CMake 変数を設定し、CMakeSettings.json で保存できます。 ビルド時に CMake に渡されるされ、どのような値があります CMakeLists.txt ファイルが上書きされます。 このセクションでは、編集する使用可能なすべての CMake 変数の一覧を表示する、CMakeGUI を使用するのと同じ方法で使用できます。 をクリックして、**を保存し、キャッシュの生成**(CMakeGUI) ごとの高度な変数を編集する使用可能なすべての CMake 変数の一覧を表示するボタンをクリックします。 変数名で一覧をフィルター処理できます。 
+
+対応する**変数**: として返されます CMake 変数の名前と値のペアを含む **-d** *_名前_= _値_* に CMake にします。 CMake プロジェクトのビルド命令で CMake キャッシュ ファイルに直接変数を追加するように指定している場合は、代わりにここで追加することをお勧めします。
+
+## <a name="advanced-settings"></a>詳細設定
+
+### <a name="cmake-generator"></a>CMake ジェネレーター
+
+対応する**ジェネレーター**: CMake にマップ **-g**スイッチを使用するコード ジェネレーターを指定します。 他のプロパティ値を作成するときに、このプロパティをマクロ `${generator}` として使うこともできます。 現在、Visual Studio では次の CMake ジェネレーターがサポートされています。
+
+  - "Ninja"
+  - 「Unix メイクファイル」
+  - "Visual Studio 16 2019"
+  - "Visual Studio 16 2019 Win64"
+  - - "Visual Studio 16 2019 ARM"
+  - "Visual Studio 15 2017"
+  - "Visual Studio 15 2017 Win64"
+  - "Visual Studio 15 2017 ARM"
+  - "Visual Studio 14 2015"
+  - "Visual Studio 14 2015 Win64"
+  - "Visual Studio 14 2015 ARM"
+  
+  Ninja は柔軟性や機能ではなく、ビルド速度が速いことを目的に設計されているため、既定値としてこれが設定されます。 ただし、CMake プロジェクトによっては、Ninja を使うと正しくビルドできないことがあります。 そのような場合は、代わりに Visual Studio プロジェクトを生成するように CMake に指示できます。
+
+### <a name="intellisense-mode"></a>IntelliSense モード
+
+正確な intellisense は、プロジェクトの適切な値に設定します。
+
+### <a name="install-directory"></a>インストール ディレクトリ
+
+CMake が構築されているターゲットをインストールするディレクトリ。
+
+### <a name="cmake-executable"></a>CMake の実行可能ファイル
+
+ファイル名と拡張子を含む、CMake 実行ファイルの完全パスです。 リモート ビルドを行うには、リモート コンピューターで CMake の場所を指定します。
+
+リモート ビルドを使用する Linux などの構成を次の設定を使用できますも。
+
+### <a name="remote-cmakeliststxt-root"></a>リモートの CMakeLists.txt ルート
+
+ルートの CMakeLists.txt ファイルが含まれているリモート コンピューター上のディレクトリ。
+
+### <a name="remote-install-root"></a>リモート インストール ルート
+
+CMake がターゲットをインストールするリモート コンピューター上のディレクトリ。
+
+### <a name="remote-copy-sources"></a>リモート コピーのソース
+
+ソース ファイルをリモート コンピューターにコピーするかどうかを指定し、指定することができますか sftp、rsync を使用するかどうか。 
+
+## <a name="directly-edit-cmakesettingsjson"></a>CMakeSettings.json を直接編集します。
+
+直接編集することができます`CMakeSettings.json`カスタム構成を作成します。 **設定エディター**が、 **JSON の編集**ファイルを編集用に表示される右上のボタンをクリックします。 
+
+次の例は、サンプル構成には、開始点として使用することを示しています。
 
 ```json
     {
@@ -49,196 +151,58 @@ JSON の IntelliSense は、`CMakeSettings.json` ファイルの編集を支援�
 
 ```
 
-- **name**: C++ の構成ドロップダウンに表示される名前です。 `${name}` マクロを使用すると、パスなどの他のプロパティ値を作成するときに、この値を使用することができます。 例については、`CMakeSettings.json` の **buildRoot** の定義をご覧ください。
+編集が JSON の IntelliSense によって、`CMakeSettings.json`ファイル。
 
-- **generator**: CMake **-G** スイッチに対応し、使用するジェネレーターを指定します。 他のプロパティ値を作成するときに、このプロパティをマクロ `${generator}` として使うこともできます。 現在、Visual Studio では次の CMake ジェネレーターがサポートされています。
+   ![CMake の JSON IntelliSense](media/cmake-json-intellisense.png "CMake の JSON IntelliSense")
 
-  - "Ninja"
-  - "Visual Studio 14 2015"
-  - "Visual Studio 14 2015 ARM"
-  - "Visual Studio 14 2015 Win64"
-  - "Visual Studio 15 2017"
-  - "Visual Studio 15 2017 ARM"
-  - "Visual Studio 15 2017 Win64"
+JSON エディターも通知する互換性のない設定を選択するとします。
 
-  Ninja は柔軟性や機能ではなく、ビルド速度が速いことを目的に設計されているため、既定値としてこれが設定されます。 ただし、CMake プロジェクトによっては、Ninja を使うと正しくビルドできないことがあります。 そのような場合は、代わりに Visual Studio プロジェクトを生成するように CMake に指示できます。
+各ファイルのプロパティの詳細については、次を参照してください。 [CMakeSettings.json スキーマ リファレンス](cmakesettings-reference.md)します。
 
-  Visual Studio ジェネレーターを指定するには、メイン メニューから **[CMake] > [CMake の設定を変更]** を選んで、`CMakeSettings.json` を開きます。 "Ninja" を削除して「V」と入力します。 これにより IntelliSense がアクティブになり、必要なジェネレーターを選択できます。
+::: moniker-end
 
-  アクティブな構成で Visual Studio ジェネレーターを指定すると、`-m -v:minimal` 引数を指定して MSBuild.exe が既定で呼び出されます。 ビルドをカスタマイズするには、`CMakeSettings.json` ファイル内で、`buildCommandArgs` プロパティによりビルド システムに渡される追加の [MSBuild コマンド ライン引数](../build/reference/msbuild-visual-cpp-overview.md)を指定できます。
-    
-    ```json
-    "buildCommandArgs": "-m:8 -v:minimal -p:PreferredToolArchitecture=x64"
-    ```
+::: moniker range="<=vs-2017"
 
-- **buildRoot**: **-DCMAKE_BINARY_DIR** スイッチに対応し、CMake キャッシュが作成される場所を指定します。 フォルダーが存在しない場合は、作成されます。
+Visual Studio 2017 には、指定したプロジェクトの CMake キャッシュを作成する CMake.exe を呼び出す方法を定義するいくつかの CMake 構成が用意されています。 新しい構成を追加するには、ツール バーの [構成] ドロップダウンをクリックして **[構成の管理]** を選択します。
 
-- **variables**: **-D** *_name_=_value_* として CMake に渡される、CMake 変数の名前と値のペアを含みます。 CMake プロジェクトのビルド命令で CMake キャッシュ ファイルに直接変数を追加するように指定している場合は、代わりにここで追加することをお勧めします。 次の例は、14.14.26428 MSVC ツールセットに名前と値のペアを指定する方法を示しています。
+   ![CMake の構成の管理](media/cmake-manage-configurations.png)
 
-```json
-"variables": [
-    {
-      "name": "CMAKE_CXX_COMPILER",
-      "value": "C:/Program Files (x86)/Microsoft Visual Studio/157/Enterprise/VC/Tools/MSVC/14.14.26428/bin/HostX86/x86/cl.exe",
-      "type": "FILEPATH"
-    },
-    {
-      "name": "CMAKE_C_COMPILER",
-      "value": "C:/Program Files (x86)/Microsoft Visual Studio/157/Enterprise/VC/Tools/MSVC/14.14.26428/bin/HostX86/x86/cl.exe",
-      "type": "FILEPATH"
-    }
-  ]
-```
+定義済みの構成のリストから選択できます。
 
-定義していない場合、 `"type"`、既定では"STRING"型と見なされます。
+   ![CMake の定義済み構成](media/cmake-configurations.png)
 
-- **cmakeCommandArgs**: CMake.exe に渡す追加のスイッチを指定します。
+初めて構成を選択すると、Visual Studio によって `CMakeSettings.json` ファイルがプロジェクトのルート フォルダー内に作成されます。 このファイルは、たとえば**クリーン**操作の後などに、CMake キャッシュ ファイルを再作成するために使われます。 
 
-- **configurationType**: 選択したジェネレーターのビルド構成の種類を定義します。 現在サポートされている値は、"Debug"、"MinSizeRel"、"Release"、"RelWithDebInfo" です。
+追加の構成を追加するには、`CMakeSettings.json` を右クリックして、**[構成の追加]** を選択します。 
 
-- **ctestCommandArgs**: テストの実行時に CTest に渡される追加スイッチを指定します。
+   ![CMake の構成の追加](media/cmake-add-configuration.png "CMake の構成の追加")
 
-- **buildCommandArgs**: 基礎となるビルド システムに渡される追加スイッチを指定します。 たとえば、Ninja ジェネレーターの使用時に -v を渡すと、コマンド ラインの出力が Ninja に強制されます。
+**CMake の設定エディター**を使用してファイルを編集することもできます。 **ソリューション エクスプローラー**で `CMakeSettings.json` を右クリックして、**[CMake 設定の編集]** を選択します。 または、エディター ウィンドウの上部にある構成ドロップダウンから **[構成の管理]** を選択します。 
 
-CMake Linux プロジェクトでは、追加の設定が使用できます。 「[Configure a CMake Linux project](../linux/cmake-linux-project.md)」 (CMake Linux プロジェクトの構成) を参照してください。
-
-## <a name="environment-variables"></a>環境変数
-
- `CMakeSettings.json` では、上記のすべてのプロパティにおいて環境変数を使うこともできます。 `${env.FOO}` という構文を使うと、環境変数 %FOO% が展開されます。
-このファイルの内部で組み込みマクロにアクセスすることもできます。
-
-- `${workspaceRoot}` – ワークスペース フォルダーの完全なパスを提供します
-- `${workspaceHash}` – ワークスペースの場所のハッシュです。現在のワークスペースの一意識別子を作成するのに便利です (たとえば、フォルダーのパスで使用する場合)
-- `${projectFile}` – ルート CMakeLists.txt ファイルの完全なパスです
-- `${projectDir}` – ルート CMakeLists.txt ファイルのフォルダーの完全なパスです
-- `${thisFile}` – `CMakeSettings.json` ファイルの完全なパスです
-- `${name}` – 構成の名前です
-- `${generator}` – この構成で使用される CMake ジェネレーターの名前です
-
-## <a name="ninja-command-line-arguments"></a>Ninja のコマンド ライン引数
-
-ターゲットを指定しないと、"default" ターゲットがビルドされます (マニュアルを参照)。
-
-```cmd
-C:\Program Files (x86)\Microsoft Visual Studio\Preview\Enterprise>ninja -?
-ninja: invalid option -- `-?'
-usage: ninja [options] [targets...]
-```
-
-|オプション|説明|
-|--------------|------------|
-| --version  | Ninja のバージョンを書き出します ("1.7.1")|
-|   -C DIR   | 何かを実行する前に、DIR (ディレクトリ) に変更します|
-|   -f FILE  | 入力ビルド ファイルを指定します (既定値は build.ninja)|
-|   -j N     | N 個のジョブを並列実行します (既定値は 14、使用可能な CPU の数から派生)|
-|   -k N     | N 個のジョブが失敗するまで続けます (既定値は 1)|
-|   -l N     | 負荷の平均が N より大きい場合は、新しいジョブを開始しません|
-|   -n       | ドライ実行 (コマンドを実行しませんが、成功したように動作します)|
-|   -v       | ビルド中にすべてのコマンド ラインを表示します|
-|   -d MODE  | デバッグを有効にします (モードを一覧表示するには -d list を使用)|
-|   -t TOOL  | サブツールを実行します (サブツールを一覧表示するには -t list を使用)。 最上位レベルのオプションを終了します。さらに、ツールに渡される、フラグ|
-|   -w FLAG  | 警告を調整します (警告を一覧表示するには -w list を使用)|
-
-## <a name="inherited-environments"></a>継承された環境
-
- `CMakeSettings.json` は継承された環境をサポートします。 この機能を使うと、(1) 既定の環境を継承することができ、(2) 実行時に CMake.exe に渡されるカスタム環境変数を作成できます。
+直接編集することができます`CMakeSettings.json`カスタム構成を作成するには、次の例を示しますサンプル構成には、開始点として使用することができます。
 
 ```json
-  "inheritEnvironments": [ "msvc_x64_x64" ]
-```
-
-上の例は、**-arch=amd64 -host_arch=amd64** 引数を指定して **VS 2017 の開発者コマンド プロンプト**を実行するのと同じです。
-
-次の表は、既定の値を示します。
-
-|コンテキスト名|説明|
-|-----------|-----------------|
-|vsdev|既定の Visual Studio 環境|
-|msvc_x86|x86 ツールを使って、x86 用にコンパイルします|
-|msvc_arm| x86 ツールを使って、ARM 用にコンパイルします|
-|msvc_arm64|x86 ツールを使って、ARM64 用にコンパイルします|
-|msvc_x86_x64|x86 ツールを使って、AMD64 用にコンパイルします|
-|msvc_x64_x64|64 ビット ツールを使って、AMD64 用にコンパイルします|
-|msvc_arm_x64|64 ビット ツールを使って、ARM 用にコンパイルします|
-|msvc_arm64_x64|64 ビット ツールを使って、ARM64 用にコンパイルします|
-
-### <a name="custom-environment-variables"></a>カスタム環境変数
-
-`CMakeSettings.json` では、グローバルに、または **environments** プロパティを使用して構成ごとに、カスタム環境変数を定義できます。 次の例では、1 つのグローバル変数 **BuildDir** を定義します。これは、x86-Debug と x64-Debug の両方の構成で継承されます。 各構成は、この変数を使って、その構成の **buildRoot** プロパティの値を指定します。 各構成が **inheritEnvironments** プロパティを使ってその構成のみに適用される変数を指定する方法にも注意してください。
-
-```json
-{
-  // The "environments" property is an array of key value pairs of the form
-  // { "EnvVar1": "Value1", "EnvVar2": "Value2" }
-  "environments": [
-    {
-      "BuildDir": "${env.USERPROFILE}\\CMakeBuilds\\${workspaceHash}\\build",
-    }
-  ],
-
-  "configurations": [
     {
       "name": "x86-Debug",
       "generator": "Ninja",
       "configurationType": "Debug",
-      // Inherit the defaults for using the MSVC x86 compiler.
       "inheritEnvironments": [ "msvc_x86" ],
-      "buildRoot": "${env.BuildDir}\\${name}"    },
-    {
-      "name": "x64-Debug",
-      "generator": "Ninja",
-      "configurationType": "Debug",
-      // Inherit the defaults for using the MSVC x64 compiler.
-      "inheritEnvironments": [ "msvc_x64" ],
-      "buildRoot": "${env.BuildDir}\\${name}"
-    }
-  ]
-}
-```
-
-次の例では、x86 デバッグ構成が **BuildDir** プロパティに対して独自の値を定義します。 この値は、**BuildRoot** が `D:\custom-builddir\x86-Debug` に評価されるように、グローバル **BuildDir** プロパティによって設定される値をオーバーライドします。
-
-```json
-{
-  "environments": [
-    {
-      "BuildDir": "${env.USERPROFILE}\\CMakeBuilds\\${workspaceHash}",
-    }
-  ],
-
-  "configurations": [
-    {
-      "name": "x86-Debug",
-
-      // The syntax for this property is the same as the global one above.
-      "environments": [
-        {
-          // Replace the global property entirely.
-          "BuildDir": "D:\\custom-builddir"
-          // This environment does not specify a namespace, hence by default "env" will be assumed.
-          // "namespace" : "name" would require that this variable be referenced with "${name.BuildDir}".
-        }
-      ],
-
-      "generator": "Ninja",
-      "configurationType": "Debug",
-      "inheritEnvironments": [ "msvc_x86" ],
-      // Evaluates to "D:\custom-builddir\x86-Debug"
-      "buildRoot": "${env.BuildDir}\\${name}"
+      "buildRoot": "${env.USERPROFILE}\\CMakeBuilds\\${workspaceHash}\\build\\${name}",
+      "installRoot": "${env.USERPROFILE}\\CMakeBuilds\\${workspaceHash}\\install\\${name}",
+      "cmakeCommandArgs": "",
+      "buildCommandArgs": "-v",
+      "ctestCommandArgs": ""
     },
-    {
-      "name": "x64-Debug",
 
-      "generator": "Ninja",
-      "configurationType": "Debug",
-      "inheritEnvironments": [ "msvc_x64" ],
-      // Since this configuration doesn’t modify BuildDir, it inherits
-      // from the one defined globally.
-      "buildRoot": "${env.BuildDir}\\${name}"
-    }
-  ]
-}
 ```
+
+JSON の IntelliSense は、`CMakeSettings.json` ファイルの編集を支援します。
+
+   ![CMake の JSON IntelliSense](media/cmake-json-intellisense.png "CMake の JSON IntelliSense")
+
+各ファイルのプロパティの詳細については、次を参照してください。 [CMakeSettings.json スキーマ リファレンス](cmakesettings-reference.md)します。
+
+::: moniker-end
 
 ## <a name="see-also"></a>関連項目
 

@@ -1,17 +1,17 @@
 ---
 title: Visual C++ の ARM への移行に関する一般的な問題
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 ms.assetid: 0f4c434e-0679-4331-ba0a-cc15dd435a46
-ms.openlocfilehash: a39e1d5e26a62cafa093067bb42f33178a1af6af
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 78d87000240acd394edf823a778ae29060c6d09c
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62195267"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220885"
 ---
 # <a name="common-visual-c-arm-migration-issues"></a>Visual C++ の ARM への移行に関する一般的な問題
 
-Microsoft Visual C (MSVC) を使用する場合同じ C++ ソース コードは、x86 または x64 のアーキテクチャではよりも、ARM アーキテクチャに異なる結果を生成可能性があります。
+Microsoft を使用する場合C++コンパイラ (MSVC) 同じC++x86 または x64 のアーキテクチャではよりも、ソース コードは、ARM アーキテクチャに異なる結果を生成可能性があります。
 
 ## <a name="sources-of-migration-issues"></a>移行に関する問題のソース
 

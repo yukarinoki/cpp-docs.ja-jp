@@ -1,6 +1,6 @@
 ---
 title: IEEE 浮動小数点表現
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - float keyword
 - real*8 value
@@ -11,16 +11,16 @@ helpviewer_keywords:
 - long double
 - real*4 value
 ms.assetid: 537833e8-fe05-49fc-8169-55fd0314b195
-ms.openlocfilehash: 69686e7e1c8994b799607eebf7e50387ed688272
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 130a79ae6846df27ffabfd6cb6649e0a0de03e4b
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188835"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220623"
 ---
 # <a name="ieee-floating-point-representation"></a>IEEE 浮動小数点表現
 
-Microsoft Visual C は、IEEE 数値標準に準拠しています。 IEEE 754 標準では、浮動小数点形式、ハードウェアの実際の数値を表す方法について説明します。 少なくとも 5 つの内部形式は MSVC コンパイラでは、対象となるハードウェアで表現可能な浮動小数点数が、2 つは、コンパイラがのみ使用します。 *単精度*(4 バイト) と*倍精度*(8 バイト) の形式は、Visual C で使用します。 単精度がキーワードで宣言されている**float**します。 倍精度がキーワードで宣言されている**二重**します。 指定して、IEEE 標準*半制度*(2 バイト) と*クオドループル精度*(16 バイト) の形式、および*倍拡張精度*(10 バイト)一部の C および C++ コンパイラの実装として、形式、 **long double**データ型。 MSVC コンパイラで、 **long double**データ型は別個の型として扱われますが、ストレージ型にマップされます**二重**します。 ただし、組み込みとアセンブリ言語サポート、倍拡張精度 (10 バイト) の形式を含む、他の形式を使用して計算のハードウェアによってサポートされている場合。
+Microsoft C++ (MSVC) は、IEEE 数値標準に準拠しています。 IEEE 754 標準では、浮動小数点形式、ハードウェアの実際の数値を表す方法について説明します。 少なくとも 5 つの内部形式は MSVC コンパイラでは、対象となるハードウェアで表現可能な浮動小数点数が、2 つは、コンパイラがのみ使用します。 *単精度*(4 バイト) と*倍精度*MSVC で (8 バイト) の形式が使用されます。 単精度がキーワードで宣言されている**float**します。 倍精度がキーワードで宣言されている**二重**します。 指定して、IEEE 標準*半制度*(2 バイト) と*クオドループル精度*(16 バイト) の形式、および*倍拡張精度*(10 バイト)一部の C および C++ コンパイラの実装として、形式、 **long double**データ型。 MSVC コンパイラで、 **long double**データ型は別個の型として扱われますが、ストレージ型にマップされます**二重**します。 ただし、組み込みとアセンブリ言語サポート、倍拡張精度 (10 バイト) の形式を含む、他の形式を使用して計算のハードウェアによってサポートされている場合。
 
 次のように値が格納されます。
 

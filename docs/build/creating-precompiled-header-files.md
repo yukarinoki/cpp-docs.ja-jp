@@ -1,20 +1,18 @@
 ---
 title: プリコンパイル済みヘッダー ファイル
-ms.date: 12/10/2018
-f1_keywords:
-- pch
+ms.date: 05/06/2019
 helpviewer_keywords:
 - precompiled header files, creating
 - PCH files, creating
 - cl.exe compiler, precompiling code
 - .pch files, creating
 ms.assetid: e2cdb404-a517-4189-9771-c869c660cb1b
-ms.openlocfilehash: 5afda50c43f93baa2d73e6afb68f436560c3243e
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
-ms.translationtype: MT
+ms.openlocfilehash: 1dc6ff9de94f98a4eef3d3827bec177f22672674
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64341748"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220820"
 ---
 # <a name="precompiled-header-files"></a>プリコンパイル済みヘッダー ファイル
 
@@ -43,7 +41,7 @@ C および C++ の両方のアプリケーションをプリコンパイルす�
 
 ## <a name="two-choices-for-precompiling-code"></a>コードをプリコンパイルする 2 つの方法
 
-Visual c には、C または C++ コードをプリコンパイルすることができます。プリコンパイル ヘッダー ファイルのみに限定されません。
+すべての C をプリコンパイルするまたはC++コードです。プリコンパイル ヘッダー ファイルのみに限定されません。
 
 プリコンパイルする場合は、計画、する必要がありますが、単純なヘッダー ファイル以外のソース コードをプリコンパイルする場合は、はるかに高速コンパイルします。
 
@@ -133,7 +131,7 @@ PCH ファイルには作成時に有効であったインクルード パスに
 
 前のセクションでは、プリコンパイル済みヘッダーの概要を紹介:/Yc および/Yu、/Fp オプション、および[hdrstop](../preprocessor/hdrstop.md)プラグマ。 このセクションは、プロジェクトで手動のプリコンパイル済みヘッダー オプションを使用する方法を説明します。サンプル メイクファイルと、管理しているコードで終了します。
 
-プロジェクトで手動のプリコンパイル済みヘッダー オプションを使用する別の方法については、Visual C の既定のセットアップ中に作成された mfc \src のディレクトリにメイクファイルのいずれかを調べます。 これらメイクファイルは、同じアプローチをここで説明したもの、Microsoft プログラムのメンテナンス ユーティリティ (NMAKE) マクロを使用していて、ビルド プロセスの制御を提供します。
+プロジェクトで手動のプリコンパイル済みヘッダー オプションを使用する別の方法については、Visual Studio の既定のセットアップ中に作成された mfc \src のディレクトリにメイクファイルのいずれかを調べます。 これらメイクファイルは、同じアプローチをここで説明したもの、Microsoft プログラムのメンテナンス ユーティリティ (NMAKE) マクロを使用していて、ビルド プロセスの制御を提供します。
 
 ## <a name="pch-files-in-the-build-process"></a>ビルド プロセスでの PCH ファイル
 

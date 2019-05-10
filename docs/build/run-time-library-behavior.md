@@ -1,6 +1,6 @@
 ---
 title: Dll と Visual C ランタイム ライブラリの動作
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 f1_keywords:
 - _DllMainCRTStartup
 - CRT_INIT
@@ -15,16 +15,16 @@ helpviewer_keywords:
 - run-time [C++], DLL startup sequence
 - DLLs [C++], startup sequence
 ms.assetid: e06f24ab-6ca5-44ef-9857-aed0c6f049f2
-ms.openlocfilehash: ea970f010e86d655963485339c48b8f7d36d6270
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: d3f3197b6b7b01e7f69767b72286d6d21470cb0e
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62314794"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65217754"
 ---
 # <a name="dlls-and-visual-c-run-time-library-behavior"></a>Dll と Visual C ランタイム ライブラリの動作
 
-既定では、Visual C を使用してダイナミック リンク ライブラリ (DLL) をビルドすると、リンカーには、Visual C ランタイム ライブラリ (VCRuntime) が含まれています。 VCRuntime には、初期化および C と C++ 実行可能ファイルを終了するに必要なコードが含まれています。 VCRuntime コードが呼び出される内部の DLL エントリ ポイント関数を提供する DLL にリンクされている、`_DllMainCRTStartup`アタッチまたはデタッチ プロセスまたはスレッドを DLL への Windows OS メッセージを処理します。 `_DllMainCRTStartup`関数がスタック バッファーのセキュリティを設定する、C ランタイム ライブラリ (CRT) の初期化と終了などの必須のタスクを実行し、静的とグローバル オブジェクトのコンス トラクターとデストラクターを呼び出します。 `_DllMainCRTStartup` 呼び出しは、独自の初期化と終了を実行するには、WinRT、MFC、および ATL などの他のライブラリの関数をフックします。 この初期化、CRT とその他のライブラリだけでなく、静的変数、なしのままになりますが初期化されていない状態です。 静的にリンクされた CRT または CRT DLL を動的にリンクされた DLL を使用しているかどうか、同じ VCRuntime の内部初期化および終了ルーチンが呼び出されます。
+リンカーには既定では、Visual Studio を使用してダイナミック リンク ライブラリ (DLL) をビルドすると、ビジュアルが含まれていますC++ランタイム ライブラリ (VCRuntime)。 VCRuntime には、初期化および C と C++ 実行可能ファイルを終了するに必要なコードが含まれています。 VCRuntime コードが呼び出される内部の DLL エントリ ポイント関数を提供する DLL にリンクされている、`_DllMainCRTStartup`アタッチまたはデタッチ プロセスまたはスレッドを DLL への Windows OS メッセージを処理します。 `_DllMainCRTStartup`関数がスタック バッファーのセキュリティを設定する、C ランタイム ライブラリ (CRT) の初期化と終了などの必須のタスクを実行し、静的とグローバル オブジェクトのコンス トラクターとデストラクターを呼び出します。 `_DllMainCRTStartup` 呼び出しは、独自の初期化と終了を実行するには、WinRT、MFC、および ATL などの他のライブラリの関数をフックします。 この初期化、CRT とその他のライブラリだけでなく、静的変数、なしのままになりますが初期化されていない状態です。 静的にリンクされた CRT または CRT DLL を動的にリンクされた DLL を使用しているかどうか、同じ VCRuntime の内部初期化および終了ルーチンが呼び出されます。
 
 ## <a name="default-dll-entry-point-dllmaincrtstartup"></a>既定の DLL エントリ ポイント _DllMainCRTStartup
 
@@ -32,7 +32,7 @@ ms.locfileid: "62314794"
 
 VCRuntime ライブラリには、呼び出されるエントリ ポイント関数が用意されています`_DllMainCRTStartup`既定の初期化と終了操作を処理します。 プロセスにアタッチ、`_DllMainCRTStartup`関数バッファー セキュリティ チェックを設定、CRT とその他のライブラリを初期化します、実行時の型情報を初期化しますを初期化し、静的および非ローカルのデータのコンス トラクターを呼び出す、スレッド ローカル ストレージを初期化します、、各接続の内部の静的なカウンターをインクリメントし、ユーザーまたはライブラリの指定を呼び出して`DllMain`します。 プロセスのデタッチ、関数は逆の順序でこれらの手順を実行します。 呼び出す`DllMain`デクリメント内部のカウンターにデストラクターを呼び出して、CRT の呼び出しの終了関数、および登録されている`atexit`関数、およびその他のライブラリの終了を通知します。 添付ファイルのカウンターがゼロに時を返します`FALSE`を Windows に DLL がアンロードできることを示します。 `_DllMainCRTStartup`スレッドで呼び出されますもアタッチし、スレッドをデタッチします。 このような場合は、VCRuntime コードが追加の初期化や終了、単独ではありませんし、呼び出すだけです`DllMain`に沿ってメッセージを渡す。 場合`DllMain`返します`FALSE`プロセスからアタッチ、障害の通知`_DllMainCRTStartup`呼び出し`DllMain`もう一度渡します`DLL_PROCESS_DETACH`として、*理由*引数は、その後の残りが、終了プロセス。
 
-既定のエントリ ポイントの Visual C の Dll を作成するときに`_DllMainCRTStartup`によって提供される VCRuntime が自動的にリンクされています。 使用して DLL のエントリ ポイント関数を指定する必要はありません、 [/ENTRY (エントリ ポイント シンボル)](reference/entry-entry-point-symbol.md)リンカー オプション。
+Visual studio の既定のエントリ ポイント Dll を作成するときに`_DllMainCRTStartup`によって提供される VCRuntime が自動的にリンクされています。 使用して DLL のエントリ ポイント関数を指定する必要はありません、 [/ENTRY (エントリ ポイント シンボル)](reference/entry-entry-point-symbol.md)リンカー オプション。
 
 > [!NOTE]
 > Dll の場合、/ENTRY を使用して別のエントリ ポイント関数を指定することは可能です: リンカー オプション、お勧めしませんが、エントリ ポイント関数がすべてのものを複製する必要がありますのでを`_DllMainCRTStartup`は、同じ順序で。 VCRuntime は、その動作を複製するための機能を提供します。 たとえば、呼び出すことができます[_ _security_init_cookie](../c-runtime-library/reference/security-init-cookie.md)すぐにプロセスをサポートするアタッチ、 [/GS (バッファー セキュリティ チェック)](reference/gs-buffer-security-check.md)オプションをオンにするバッファー。 呼び出すことができます、`_CRT_INIT`関数、エントリ ポイント関数の DLL の初期化や終了処理関数の残りの部分を実行すると、同じパラメーターを渡します。
@@ -41,7 +41,7 @@ VCRuntime ライブラリには、呼び出されるエントリ ポイント関
 
 ## <a name="initialize-a-dll"></a>DLL の初期化
 
-DLL、DLL の読み込み時に実行する必要があります初期化コードがあります。 独自 DLL の初期化と終了関数を実行するための順序で`_DllMainCRTStartup`という名前の関数を呼び出す`DllMain`を行うことができます。 `DllMain` DLL エントリ ポイントに必要な署名が必要です。 既定のエントリ ポイント関数`_DllMainCRTStartup`呼び出し`DllMain`Windows に渡し、同じパラメーターを使用します。 指定しない場合、既定で、`DllMain`関数の場合、Visual C に付属およびリンクでように`_DllMainCRTStartup`を呼び出すものは常に持ちます。 これは、DLL を初期化する必要がない場合は、DLL のビルド時に影響を行う必要がある特別なものを意味します。
+DLL、DLL の読み込み時に実行する必要があります初期化コードがあります。 独自 DLL の初期化と終了関数を実行するための順序で`_DllMainCRTStartup`という名前の関数を呼び出す`DllMain`を行うことができます。 `DllMain` DLL エントリ ポイントに必要な署名が必要です。 既定のエントリ ポイント関数`_DllMainCRTStartup`呼び出し`DllMain`Windows に渡し、同じパラメーターを使用します。 指定しない場合、既定で、`DllMain`関数、Visual Studio に付属およびリンクでように`_DllMainCRTStartup`を呼び出すものは常に持ちます。 これは、DLL を初期化する必要がない場合は、DLL のビルド時に影響を行う必要がある特別なものを意味します。
 
 これは、使用される署名`DllMain`:
 
@@ -98,7 +98,7 @@ extern "C" BOOL WINAPI DllMain (
 ```
 
 > [!NOTE]
-> 以前の Windows SDK ドキュメントでは、リンカーの/ENTRY オプションを使用してコマンドラインで DLL のエントリ ポイント関数の実際の名前を指定する必要がありますされることを述べています。 Visual c には、エントリ ポイント関数の名前がある場合は、/ENTRY オプションを使用する必要はありません`DllMain`します。 実際には、名前と/ENTRY オプションを使用する場合、エントリ ポイント関数もの以外の`DllMain`、CRT は適切に初期化されません、エントリ ポイント関数が、同じ初期化呼び出しを行わない限り、`_DllMainCRTStartup`なります。
+> 以前の Windows SDK ドキュメントでは、リンカーの/ENTRY オプションを使用してコマンドラインで DLL のエントリ ポイント関数の実際の名前を指定する必要がありますされることを述べています。 Visual studio では、エントリ ポイント関数の名前がある場合、/ENTRY オプションを使用する必要はありません`DllMain`します。 実際には、名前と/ENTRY オプションを使用する場合、エントリ ポイント関数もの以外の`DllMain`、CRT は適切に初期化されません、エントリ ポイント関数が、同じ初期化呼び出しを行わない限り、`_DllMainCRTStartup`なります。
 
 <a name="initializing-regular-dlls"></a>
 
@@ -180,6 +180,6 @@ Afxdllx.h ヘッダー ファイルには、構造体の定義などの MFC 拡�
 
 ## <a name="see-also"></a>関連項目
 
-[Visual C++ の DLL](dlls-in-visual-cpp.md)<br/>
+[Visual Studio で C/C++ Dll を作成します。](dlls-in-visual-cpp.md)<br/>
 [DllMain のエントリ ポイント](/windows/desktop/Dlls/dllmain)<br/>
 [ダイナミック リンク ライブラリのベスト プラクティス](/windows/desktop/Dlls/dynamic-link-library-best-practices)

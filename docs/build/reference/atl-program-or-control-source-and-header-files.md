@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - file types [C++], ATL source and headers
 ms.assetid: cb65372f-4880-4007-b582-a52eaa568fd1
-ms.openlocfilehash: e315586de57ca65c60c435c436734bcdededed54
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 15d49cf984e45feeaad454de13c4ab37622000a4
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273028"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446582"
 ---
 # <a name="atl-program-or-control-source-and-header-files"></a>ATL プログラムまたはコントロールのソース ファイルとヘッダー ファイル
 
@@ -27,6 +27,6 @@ Visual Studio で ATL プロジェクトを作成する場合、作成するプ�
 
 ## <a name="see-also"></a>関連項目
 
-[Visual C++ プロジェクトに対して作成されるファイルの種類](file-types-created-for-visual-cpp-projects.md)<br>
+[ファイルのビジュアルの種類が作成されたC++プロジェクト](file-types-created-for-visual-cpp-projects.md)<br>
 [MFC プログラムまたはコントロールのソース ファイルとヘッダー ファイル](mfc-program-or-control-source-and-header-files.md)<br>
 [CLR プロジェクト](files-created-for-clr-projects.md)

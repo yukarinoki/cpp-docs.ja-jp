@@ -1,19 +1,19 @@
 ---
-title: '方法: Visual C プロジェクトを 64 ビット、x64 を構成プラットフォーム'
+title: '方法: Visual Studio 構成C++を 64 ビット、x64 プラットフォームのプロジェクト'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - platforms [C++], 64-bit
 - 64-bit programming [C++], configuring projects
 - project configurations [C++]
 ms.assetid: 2b9ae001-df36-4750-83b2-982145d632ad
-ms.openlocfilehash: 21c812efd101c64e250a545d2a40df6adc31c414
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: a063c2f333a755ab86a4f91c9d14d0c65a6d1414
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62274474"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446394"
 ---
-# <a name="how-to-configure-visual-c-projects-to-target-64-bit-x64-platforms"></a>方法: Visual C プロジェクトを 64 ビット、x64 を構成プラットフォーム
+# <a name="how-to-configure-visual-studio-c-projects-to-target-64-bit-x64-platforms"></a>方法: Visual Studio 構成C++を 64 ビット、x64 プラットフォームのプロジェクト
 
 Visual Studio IDE でプロジェクト構成を使用すると、プラットフォームに C++ アプリケーションを 64 ビット、x64 を設定します。 Win32 プロジェクトの設定を 64 ビットのプロジェクト構成に移行することもできます。
 

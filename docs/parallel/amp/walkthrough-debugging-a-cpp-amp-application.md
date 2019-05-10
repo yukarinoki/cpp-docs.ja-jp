@@ -1,18 +1,18 @@
 ---
 title: 'チュートリアル: C++ AMP アプリケーションのデバッグ'
-ms.date: 11/19/2018
+ms.date: 04/23/2019
 helpviewer_keywords:
 - debugging, C++ Accelerated Massive Parallelism
 - C++ AMP, debugging
 - C++ Accelerated Massive Parallelism, debugging
 - debugging, C++ AMP
 ms.assetid: 40e92ecc-f6ba-411c-960c-b3047b854fb5
-ms.openlocfilehash: 5312ba7354c28286cafb092711d66d56a920581a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3f358f66d1e8a64c5042b60d7385de26a559642e
+ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62238016"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64877544"
 ---
 # <a name="walkthrough-debugging-a-c-amp-application"></a>チュートリアル: C++ AMP アプリケーションのデバッグ
 
@@ -38,15 +38,37 @@ ms.locfileid: "62238016"
 
 - その行を確認の数字をテキスト エディターで表示されます。 詳細については、「[方法 :エディターで行番号を表示](/visualstudio/ide/reference/how-to-display-line-numbers-in-the-editor)します。
 
-- ソフトウェア エミュレーターでデバッグをサポートするには、Windows 8 または Windows Server 2012 を実行していることを確認します。
+- 以上で実行しているかどうかを確認、ソフトウェア エミュレーターでデバッグをサポートするには、Windows 8 または Windows Server 2012。 
 
 [!INCLUDE[note_settings_general](../../mfc/includes/note_settings_general_md.md)]
 
 ### <a name="to-create-the-sample-project"></a>サンプル プロジェクトを作成するには
 
+プロジェクトを作成するための手順は、使用して Visual Studio のバージョンによって異なります。 このページの左上で選択されている適切なバージョンであることを確認します。
+
+::: moniker range="vs-2019"
+
+### <a name="to-create-the-sample-project-in-visual-studio-2019"></a>Visual Studio 2019 でサンプル プロジェクトを作成するには
+
+1. メニュー バーで、**ファイル** > **新規** > **プロジェクト**を開く、**新しいプロジェクトを作成** ダイアログ ボックス。
+
+1. ダイアログ ボックスの上部にある次のように設定します**言語**に **C++** 設定**プラットフォーム**に**Windows**、設定と**プロジェクトの種類。** に**コンソール**します。 
+
+1. プロジェクトの種類の結果の一覧から選択**コンソール アプリ**選択 **[次へ]** します。 次のページで次のように入力します。`AMPMapReduce`で、**名前**ボックス、プロジェクトの名前を指定すると、必要な場合は、プロジェクトの場所を指定します。
+
+   ![プロジェクトに名前を](../../build/media/mathclient-project-name-2019.png "プロジェクトの名前")
+
+1. 選択、**作成**クライアント プロジェクトを作成するボタンをクリックします。
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
+
+### <a name="to-create-the-sample-project-in-visual-studio-2017-or-visual-studio-2015"></a>Visual Studio 2017 または Visual Studio 2015 でサンプル プロジェクトを作成するには
+
 1. Visual Studio を起動します。
 
-2. メニュー バーで、**[ファイル]**  >  **[新規作成]**  >  **[プロジェクト]** を選択します。
+2. メニュー バーで、**[ファイル]** > **[新規作成]** > **[プロジェクト]** の順に選択します。
 
 3. [**インストール済み**テンプレート] ペインで選択**Visual C**します。
 
@@ -57,6 +79,9 @@ ms.locfileid: "62238016"
 6. クリア、**プリコンパイル済みヘッダー**チェック ボックスをオンにして、**完了**ボタンをクリックします。
 
 7. **ソリューション エクスプ ローラー**stdafx.h、targetver.h、stdafx.cpp をプロジェクトから削除します。
+
+::: moniker-end
+
 
 8. AMPMapReduce.cpp を開き、次のコードでそのコンテンツを置き換えます。
 

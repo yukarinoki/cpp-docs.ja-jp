@@ -1,16 +1,16 @@
 ---
 title: 'チュートリアル: エージェント ベースのアプリケーションを作成します。'
-ms.date: 11/04/2016
+ms.date: 04/25/2019
 helpviewer_keywords:
 - asynchronous agents, creating
 - agent class, example
 ms.assetid: 730f42ce-6d58-4753-b948-fd9c9ef2ce6c
-ms.openlocfilehash: 1d55c9879a3dd90bb4a40b61a3bf958dbe960bc3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: c249bc8138a3617cce3eae836751575b2626f4aa
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62378064"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64857312"
 ---
 # <a name="walkthrough-creating-an-agent-based-application"></a>チュートリアル: エージェント ベースのアプリケーションを作成します。
 
@@ -40,9 +40,27 @@ ms.locfileid: "62378064"
 
 ##  <a name="createapplication"></a> コンソール アプリケーションを作成します。
 
-ここでは、プログラムで使用されるヘッダー ファイルを参照する Visual C++ コンソール アプリケーションの作成方法について説明します。
+このセクションでは、作成する方法を示します、C++コンソール アプリケーション、プログラムで使用されるヘッダー ファイルを参照します。 最初の手順は、使用して Visual Studio のバージョンによって異なります。 このページの左上のバージョン セレクターが正しく設定することを確認します。
 
-#### <a name="to-create-a-visual-c-application-by-using-the-win32-console-application-wizard"></a>Win32 コンソール アプリケーション ウィザードを使用して Visual C++ アプリケーションを作成するには
+::: moniker range="vs-2019"
+
+### <a name="to-create-a-c-console-application-in-visual-studio-2019"></a>作成する、C++コンソール アプリケーションを Visual Studio 2019
+
+1. メイン メニューで、次のように選択します**ファイル** > **新規** > **プロジェクト**を開く、**新しいプロジェクトを作成**ダイアログ。ボックス。
+
+1. ダイアログ ボックスの上部にある次のように設定します**言語**に **C++** 設定**プラットフォーム**に**Windows**、設定と**プロジェクトの種類。** に**コンソール**します。 
+
+1. プロジェクトの種類の結果の一覧から選択**コンソール アプリ**選択 **[次へ]** します。 次のページで次のように入力します。 `BasicAgent` 、プロジェクトの名前としてし、必要な場合は、プロジェクトの場所を指定します。
+
+1. 選択、**作成**プロジェクトを作成するボタンをクリックします。
+
+1. プロジェクト ノードを右クリックして**ソリューション エクスプ ローラー**、選択**プロパティ**します。 **構成プロパティ** > **C/C++** > **プリコンパイル済みヘッダー** > **プリコンパイル済みヘッダー**選択**作成**です。
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
+
+### <a name="to-create-a-c-console-application-in-visual-studio-2017-and-earlier"></a>作成する、C++コンソール アプリケーションを Visual Studio 2017 以降
 
 1. **ファイル** メニューのをクリックして**新規**、 をクリックし、**プロジェクト**を表示する、**新しいプロジェクト** ダイアログ ボックス。
 
@@ -50,7 +68,9 @@ ms.locfileid: "62378064"
 
 1. **Win32 コンソール アプリケーション ウィザード**ダイアログ ボックスで、をクリックして**完了**します。
 
-1. stdafx.h に、次のコードを追加します。
+::: moniker-end
+
+1. Stdafx.h (または、Visual Studio のバージョンによって pch.h) では、次のコードを追加します。
 
 [!code-cpp[concrt-basic-agent#1](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_1.h)]
 

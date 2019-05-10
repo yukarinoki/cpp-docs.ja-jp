@@ -1,14 +1,14 @@
 ---
 title: Web ページへのコントロールの配置 (ATL チュートリアル、パート 7)
 ms.custom: get-started-article
-ms.date: 09/27/2018
+ms.date: 05/06/2019
 ms.assetid: 50dc4c95-c95b-4006-b88a-9826f7bdb222
-ms.openlocfilehash: baf0ca56ae7512ac76f64b29e3060e0749c083c1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: aab9557fd73e870c0362f876642e828616b538bd
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62261541"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221238"
 ---
 # <a name="putting-the-control-on-a-web-page-atl-tutorial-part-7"></a>Web ページへのコントロールの配置 (ATL チュートリアル、パート 7)
 
@@ -29,7 +29,7 @@ ms.locfileid: "62261541"
         Fire_ClickOut(xPos, yPos);
     ```
 
-    代入
+    with
 
     ```cpp
     short temp = m_nSides;
@@ -74,7 +74,7 @@ ms.locfileid: "62261541"
 
 ## <a name="indicating-that-the-control-is-safe-for-scripting"></a>コントロールのスクリプトが安全であることを示す
 
-コントロールが含まれた Web ページは、Internet Explorer で表示できます。Visual C++ に組み込まれている Web ブラウザー ビューを使用すると、さらに便利です。 Web ブラウザー ビューでコントロールを表示するには、PolyCtl.htm を右クリックし、クリックして**ブラウザーで表示**します。
+Internet Explorer でのみ、コントロールを含む Web ページを表示できます。 その他のブラウザーはセキュリティの脆弱性のために ActiveX コントロールをサポートしません。 
 
 > [!NOTE]
 > コントロールが表示されない場合は、一部のブラウザーが ActiveX コントロールの実行設定の調整を必要と知っています。 ActiveX コントロールを有効にする方法については、ブラウザーのドキュメントを参照してください。

@@ -3,12 +3,12 @@ title: C++ 型システム (Modern C++)
 ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
-ms.openlocfilehash: 4dfbf408654ccc92c92d6855c15238cb07c01b58
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 3fa13d2f0b274361c2ad34b0eb64421d2d1d037e
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392290"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222133"
 ---
 # <a name="c-type-system-modern-c"></a>C++ 型システム (Modern C++)
 
@@ -53,7 +53,7 @@ int maxValue;                // Not recommended! maxValue contains
 
 ## <a name="fundamental-built-in-types"></a>基本 (組み込み) 型
 
-一部の言語とは異なり、C++ には他のすべての型の派生元となる汎用基本型はありません。 各種言語の Visual C 実装*基本的な型*とも呼ばれます*組み込み型*します。 などの数値型が含まれます**int**、**二重**、**長い**、 **bool**、だけでなく、 **char**と**wchar_t**それぞれ ASCII および UNICODE の文字の型します。 ほとんどの基本型 (を除く**bool**、**二重**、 **wchar_t**と関連する型) のすべてが符号なしのバージョンでは、変数に格納できる値の範囲を変更します。 たとえば、 **int**、32 ビット符号付き整数に格納される値を表すこと-2,147, 483,648 から 2,147, 483,647 です。 **符号なし int**、32 ビットとしても格納される 4,294,967,295 ~ 0 の値を格納できます。 各ケースで格納できる値の合計数は同じです。範囲のみ異なります。
+一部の言語とは異なり、C++ には他のすべての型の派生元となる汎用基本型はありません。 言語が多く含まれています*基本的な型*とも呼ばれる、*組み込み型*します。 などの数値型が含まれます**int**、**二重**、**長い**、 **bool**、だけでなく、 **char**と**wchar_t**それぞれ ASCII および UNICODE の文字の型します。 ほとんどの基本型 (を除く**bool**、**二重**、 **wchar_t**と関連する型) のすべてが符号なしのバージョンでは、変数に格納できる値の範囲を変更します。 たとえば、 **int**、32 ビット符号付き整数に格納される値を表すこと-2,147, 483,648 から 2,147, 483,647 です。 **符号なし int**、32 ビットとしても格納される 4,294,967,295 ~ 0 の値を格納できます。 各ケースで格納できる値の合計数は同じです。範囲のみ異なります。
 
 基本型は、実行可能な操作や他の基本型に変換する方法を制御する組み込みの規則を持つコンパイラにより認識されます。 組み込み型およびサイズと数値の制限の完全な一覧を参照してください。[基本的な型](../cpp/fundamental-types-cpp.md)します。
 

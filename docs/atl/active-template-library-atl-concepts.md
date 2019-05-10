@@ -1,21 +1,21 @@
 ---
 title: ATL (Active Template Library) の概念
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - ATL, about ATL
 ms.assetid: a3960991-4d76-4da5-9568-3fa7fde53ff4
-ms.openlocfilehash: 7eb7eb1c369f825fbb689cd476d43be538ae8d9a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 785b929e935962f6461ffbc3722f573a61cb8749
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223455"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221302"
 ---
 # <a name="active-template-library-atl-concepts"></a>ATL (Active Template Library) の概念
 
 Active Template Library (ATL) は、小規模で高速のコンポーネント オブジェクト モデル (COM) オブジェクトを作成できるテンプレート ベースの C++ クラスのセットです。 ストックの実装、デュアル インターフェイス、列挙子の COM インターフェイスの標準的な接続ポイント、ティアオフ インターフェイス、および ActiveX コントロールをなど、キーの COM 機能用の特別なサポートしています。
 
-ATL プログラミングの多くを実行する場合は、COM プログラミングを簡略化するように設計された Visual C .NET の新機能である属性の詳細についてはします。 詳細については、次を参照してください。[属性付きプログラミング](../windows/attributed-programming-concepts.md)します。
+ATL プログラミングの多くを行うは場合 COM と .NET の属性の詳細については、COM プログラミングを簡略化するために設計します。 詳細については、次を参照してください。[属性付きプログラミング](../windows/attributed-programming-concepts.md)します。 (COM と .NET の属性がないと混同、 \[\[属性] 機能で、C++標準です)。
 
 ## <a name="in-this-section"></a>このセクションの内容
 

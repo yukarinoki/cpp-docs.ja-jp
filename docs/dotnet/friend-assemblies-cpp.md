@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - friend assemblies, Visual C++
 ms.assetid: 8d55fee0-b7c2-4fbe-a23b-dfe424dc71cd
-ms.openlocfilehash: e469556a773ffcdbf50e53d94022c0b6b7abf869
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 05b9d8bcf5d7364e1dcd31940bc0db64a5e605f1
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404430"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447305"
 ---
 # <a name="friend-assemblies-c"></a>フレンド アセンブリ (C++)
 
@@ -47,7 +47,7 @@ ms.locfileid: "62404430"
 
 アセンブリ内のすべての型へのアクセスを明示的に付与する必要があります。  たとえば、アセンブリ C がアクセスできないすべての種類にアセンブリ A でアセンブリ C がアセンブリ B を参照し、アセンブリ B はアセンブリ A のすべての型へのアクセスを持つ場合
 
-署名する方法についてに厳密な名前を付与する方法: Visual C コンパイラを使用してビルドするアセンブリを参照してください[厳密な名前のアセンブリ (アセンブリ署名) (C +/cli CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md)します。
+署名する方法についてに厳密な名前を付与する方法: アセンブリは、Microsoft を使用して構築されたC++コンパイラを参照してください[厳密な名前のアセンブリ (アセンブリ署名) (C++/CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md)。
 
 フレンド アセンブリの機能を使用する代わりに、使用することができます<xref:System.Security.Permissions.StrongNameIdentityPermission>個々 の型へのアクセスを制限します。
 

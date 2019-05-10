@@ -5,12 +5,12 @@ helpviewer_keywords:
 - iterator conventions
 - C++ Standard Library, iterator conventions
 ms.assetid: 2f746be7-b37d-4bfc-bf05-be4336ca982f
-ms.openlocfilehash: 3b6713a80244d7063baac2c75ffead76fe93facc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ae4193b8e6edf94ab0f8d839ac36fc1addfd8d04
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396146"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220323"
 ---
 # <a name="iterators"></a>Iterators
 
@@ -86,7 +86,7 @@ C++ 標準ライブラリのコンテナーとアルゴリズムで反復子が�
 > [!NOTE]
 > range-for ループを使用することにより、反復子の明示的な使用を避けることができます。 詳細については、次を参照してください。[範囲ベースの for ステートメント](../cpp/range-based-for-statement-cpp.md)します。
 
-Visual C には、コンテナーの境界を上書きしないことを確認するには、checked 反復子とデバッグ反復子が用意されています。 詳細については、「[チェックを行う反復子](../standard-library/checked-iterators.md)」および「[デバッグ反復子のサポート](../standard-library/debug-iterator-support.md)」をご覧ください。
+MicrosoftC++プランようになりましたが、コンテナーの境界を上書きしないことを確認するには、反復子とデバッグ反復子を確認します。 詳細については、「[チェックを行う反復子](../standard-library/checked-iterators.md)」および「[デバッグ反復子のサポート](../standard-library/debug-iterator-support.md)」をご覧ください。
 
 ## <a name="see-also"></a>関連項目
 

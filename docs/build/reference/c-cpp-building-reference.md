@@ -1,23 +1,23 @@
 ---
 title: C/C++ ビルドのリファレンス - Visual Studio
 description: Visual Studio で C/C++ プロジェクト システムとビルド ツールの参照コンテンツです。
-ms.date: 12/10/2018
+ms.date: 05/06/2019
 helpviewer_keywords:
 - compiling source code [C++], additional information
 - cl.exe compiler [C++], building programs
 - linker [C++], building reference
 - builds [C++], additional information
 ms.assetid: 100b4ccf-572c-4d1f-970c-fa0bc0cc0d2d
-ms.openlocfilehash: 4c3f7aa598a9c43af04c148ed0d4b3f555566ec7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: abe946ce516e915cd597a0f863c5949fed212bfa
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294760"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221441"
 ---
 # <a name="cc-building-reference"></a>C/C++ ビルドのリファレンス
 
-Visual C には、C/C++ プログラムのビルドの 2 つの方法が用意されています。 最も簡単な (および最も一般的な) 方法は、する[Visual Studio IDE 内でビルド](../creating-and-managing-visual-cpp-projects.md)します。 その他の方法は、する[コマンド ライン ツールを使用してコマンド プロンプトからビルド](../building-on-the-command-line.md)します。 どちらの場合は、作成し、Visual Studio または任意のサード パーティ製エディターを使用してソース ファイルを編集します。
+Visual Studio C 構築するための 2 つの方法を提供する/C++プログラム。 最も簡単な (および最も一般的な) 方法は、する[Visual Studio IDE 内でビルド](../creating-and-managing-visual-cpp-projects.md)します。 その他の方法は、する[コマンド ライン ツールを使用してコマンド プロンプトからビルド](../building-on-the-command-line.md)します。 どちらの場合は、作成し、Visual Studio または任意のサード パーティ製エディターを使用してソース ファイルを編集します。
 
 ## <a name="in-this-section"></a>このセクションの内容
 

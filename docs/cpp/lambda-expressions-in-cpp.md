@@ -1,17 +1,17 @@
 ---
 title: C++ でのラムダ式
-ms.date: 11/19/2018
+ms.date: 05/07/2019
 helpviewer_keywords:
 - lambda expressions [C++]
 - lambda expressions [C++], overview
 - lambda expressions [C++], vs. function objects
 ms.assetid: 713c7638-92be-4ade-ab22-fa33417073bf
-ms.openlocfilehash: 9ebe4fec06996e908c619b6ac14af098b1c07a01
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: c7543b3558da88b41102fa7b790bb9d9f3f18463
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62216504"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222376"
 ---
 # <a name="lambda-expressions-in-c"></a>C++ でのラムダ式
 
@@ -157,7 +157,7 @@ auto y = [] (auto first, auto second)
 
 ### <a name="exception-specification"></a>例外の指定
 
-`noexcept` 例外の指定を使用して、ラムダ式が例外をスローしないことを示すことができます。 Visual C コンパイラが警告を生成する通常の関数として[C4297](../error-messages/compiler-warnings/compiler-warning-level-1-c4297.md)ラムダ式を宣言する場合、`noexcept`例外仕様とラムダ式の本体は、ここに示すように、例外がスローします。
+`noexcept` 例外の指定を使用して、ラムダ式が例外をスローしないことを示すことができます。 通常の関数は、Microsoft と同様C++コンパイラは警告を生成[C4297](../error-messages/compiler-warnings/compiler-warning-level-1-c4297.md)ラムダ式を宣言する場合、`noexcept`例外仕様とラムダ式の本体は、ここに示すように、例外がスローします。
 
 ```cpp
 // throw_lambda_expression.cpp

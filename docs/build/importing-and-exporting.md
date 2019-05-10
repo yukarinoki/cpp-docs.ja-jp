@@ -1,6 +1,6 @@
 ---
 title: インポートとエクスポート
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - DLLs [C++], importing
 - exporting DLLs [C++]
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DLLs [C++], exporting from
 - __declspec(dllimport) keyword [C++]
 ms.assetid: 7c44c2aa-2117-4cec-9615-a65bfd3f8f7b
-ms.openlocfilehash: 882010cd28c291e9f49ca0f7dd9d646c70130184
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 03931f7f128ab0666890bb8e76677db67dda8fc7
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188848"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220641"
 ---
 # <a name="importing-and-exporting"></a>インポートとエクスポート
 
@@ -31,8 +31,6 @@ ms.locfileid: "62188848"
 
 ## <a name="using-declspec"></a>_ _Declspec を使用します。
 
-VisualC++使用 **_declspec**と**方式**を置き換える、 **_ _export**ビジュアルC++.
-
 使用する必要はありません **_declspec**そうですが、正しくコンパイルするコードのより優れたコードを生成するコンパイラを使用します。 コンパイラはかどうか、関数が存在する DLL にか、DLL の境界を越える関数呼び出し内に存在するが通常の間接参照のレベルをスキップするコードを生成するために、コンパイラにより決定できるためより優れたコードを生成できません。 ただし、使用する必要があります **_declspec** DLL で使用される変数をインポートします。
 
 適切な .def ファイルの EXPORTS セクションに**方式**は必要ありません。 **方式**.def ファイルを使用せずに、.exe や .dll ファイルから関数をエクスポートする簡単な方法を提供するようになりました。
@@ -47,4 +45,4 @@ VisualC++使用 **_declspec**と**方式**を置き換える、 **_ _export**ビ
 
 ## <a name="see-also"></a>関連項目
 
-[Visual C++ の DLL](dlls-in-visual-cpp.md)
+[Visual Studio で C/C++ Dll を作成します。](dlls-in-visual-cpp.md)

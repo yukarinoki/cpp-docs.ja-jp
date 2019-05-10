@@ -1,16 +1,16 @@
 ---
 title: 'チュートリアル: アプリケーションへの CTaskDialog の追加'
-ms.date: 09/19/2018
+ms.date: 04/25/2019
 helpviewer_keywords:
 - CTaskDialog, adding
 - walkthroughs [MFC], dialogs
 ms.assetid: 3a62abb8-2d86-4bec-bdb8-5784d5f9a9f8
-ms.openlocfilehash: f0992d476326e5175db799ea0f9e5667eab3704b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 8cf2223b2859a2dfa6ecc7582ec2f171a056152c
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358262"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64558196"
 ---
 # <a name="walkthrough-adding-a-ctaskdialog-to-an-application"></a>チュートリアル: アプリケーションへの CTaskDialog の追加
 
@@ -37,7 +37,9 @@ ms.locfileid: "62358262"
 
 ### <a name="to-replace-a-windows-message-box-with-a-ctaskdialog"></a>Windows メッセージ ボックスを CTaskDialog に置き換えるには
 
-1. 既定の設定で、新しい MFC アプリケーション プロジェクトを作成します。 呼び出す*MyProject*します。
+1. 使用して、 **MFC アプリケーション ウィザード**すべての既定の設定で、MFC アプリケーションを作成します。 「[チュートリアル:新しい MFC シェル コントロールを使用して](walkthrough-using-the-new-mfc-shell-controls.md)Visual Studio のバージョンのウィザードを開く方法の詳細について。
+
+1. 呼び出す*MyProject*します。 
 
 1. **ソリューション エクスプローラー** を使用して、MyProject.cpp ファイルを開きます。
 

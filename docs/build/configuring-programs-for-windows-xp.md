@@ -2,12 +2,12 @@
 title: Windows XP 用プログラムの構成
 ms.date: 02/02/2018
 ms.assetid: 1e4487b3-d815-4123-878b-5718b22f0fd5
-ms.openlocfilehash: 989a4e2c7e91c05498902bf1c5cb9d838ee47c3b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: f27921e062fd8abb7bc9b63bfbb9b050f25ee54b
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273803"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446365"
 ---
 # <a name="configuring-programs-for-windows-xp"></a>Windows XP 用プログラムの構成
 
@@ -25,7 +25,7 @@ Visual Studio に含まれている Windows XP プラットフォーム ツー�
 
 1. **ソリューション エクスプローラー**で、プロジェクトのショートカット メニューを開き、**[プロパティ]** を選択します。
 
-1. **プロパティ ページ**ダイアログ ボックスで、プロジェクトの**構成プロパティ** > **全般**、設定、**プラットフォーム ツールセット**プロパティが必要な Windows XP ツールセットにします。 たとえば、選択**Visual Studio 2017 - Windows XP (v141_xp)** Windows XP および Windows Server 2003、Microsoft Visual を使用してコードを作成するC++2017年コンパイラ。
+1. **プロパティ ページ**ダイアログ ボックスで、プロジェクトの**構成プロパティ** > **全般**、設定、**プラットフォーム ツールセット**プロパティが必要な Windows XP ツールセットにします。 たとえば、選択**Visual Studio 2017 - Windows XP (v141_xp)** Windows XP および Windows Server 2003、Microsoft を使用してコードを作成するC++Visual Studio 2017 でのコンパイラ。
 
 ### <a name="c-runtime-support"></a>C++ ランタイムのサポート
 
@@ -35,10 +35,10 @@ Windows XP プラットフォーム ツールセット、C ランタイム ラ�
 
 |ライブラリ|Windows デスクトップ アプリを対象とする既定のプラットフォーム ツールセット|既定のプラットフォーム ツールセットの対象とするストア アプリ|Windows XP、Windows Server 2003 を対象とする Windows XP プラットフォーム ツールセット|
 |---|---|---|---|
-|CRT|X|x|x|
-|C++ 標準ライブラリ|x|x|X|
-|[ATL]|X|x|X|
-|ConCRT/PPL|X|x|X|
+|CRT|X|X|x|
+|C++ 標準ライブラリ|x|X|X|
+|[ATL]|X|X|X|
+|ConCRT/PPL|X|X|X|
 |MFC|X||X|
 |C++ AMP|X|x||
 

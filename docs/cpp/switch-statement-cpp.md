@@ -1,6 +1,6 @@
 ---
 title: switch ステートメント (C++)
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 f1_keywords:
 - default_cpp
 - switch_cpp
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - case keyword [C++], in switch statements
 - default keyword [C++]
 ms.assetid: 6c3f3ed3-5593-463c-8f4b-b33742b455c6
-ms.openlocfilehash: 67918b7df747d3bee923da500729e60b4fe04336
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 8136b03d9e54b4d49bcb1417238066bd86bc6b89
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62267090"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221936"
 ---
 # <a name="switch-statement-c"></a>switch ステートメント (C++)
 
@@ -78,7 +78,7 @@ int main() {
 
 上の例では、`capa` は `c` が大文字 `A` の場合、インクリメントします。 **Break**後のステートメント`capa++`の実行を終了、**スイッチ**をステートメント本体と制御を渡します、**中**ループします。 なし、 **break**ステートメントでは、実行は「フォール スルー」[次へ] のラベル付きステートメントにように`lettera`と`nota`もインクリメントされます。 目的は同じですが、によって処理される、 **break**ステートメント`case 'a'`。 場合`c`が小文字`a`、`lettera`がインクリメントされます、 **break**ステートメントが終了、**切り替える**ステートメント本体。 場合`c`でない、`a`または`A`、**既定**ステートメントが実行されます。
 
-**Visual Studio 2017 以降:** (で使用可能な[/std:c + + + 17](../build/reference/std-specify-language-standard-version.md))、`[[fallthrough]]`標準の c++ 17 で属性を指定します。 使用できます、**切り替える**ステートメントは、フォールスルー動作を意図 (または、コードを読むすべてのユーザーに) コンパイラにヒントとして。 Visual C コンパイラ現在は、警告、fallthrough 動作ため、この属性はコンパイラの動作に影響を与えません。 属性をラベル付きステートメント内で空のステートメントに適用されるに注意してください。つまり、セミコロンは必要があります。
+**Visual Studio 2017 以降:** (で使用可能な[/std:c + + + 17](../build/reference/std-specify-language-standard-version.md))、`[[fallthrough]]`標準の c++ 17 で属性を指定します。 使用できます、**切り替える**ステートメントは、フォールスルー動作を意図 (または、コードを読むすべてのユーザーに) コンパイラにヒントとして。 MicrosoftC++コンパイラ現在は、警告、fallthrough 動作のため、この属性はコンパイラの動作に影響を与えません。 属性をラベル付きステートメント内で空のステートメントに適用されるに注意してください。つまり、セミコロンは必要があります。
 
 ```cpp
 int main()

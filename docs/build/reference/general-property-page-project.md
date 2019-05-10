@@ -25,12 +25,12 @@ helpviewer_keywords:
 - Clean Build option
 - output files, setting directory
 - Unicode, creating C++ build configuration
-ms.openlocfilehash: c9b0eae9c0a1e074fb4f3f12ac38a737ef14c644
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: e6d418c1668a0757349c7e5c3bb38f7cda801223
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62270901"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446565"
 ---
 # <a name="general-property-page-project"></a>[全般] プロパティ ページ (プロジェクト)
 
@@ -98,7 +98,7 @@ Windows 以外のプロジェクトでは、次を参照してください。 [L
 
 - **プラットフォームのツールセット**
 
-   プロジェクトの対象を別のバージョンの Visual C++ のライブラリおよびコンパイラにすることができます。 Visual C++ プロジェクトは、Visual Studio によってインストールされた既定のツールセット、または Visual Studio の以前の複数のバージョンでインストールされたツールセット (Windows XP で実行可能な実行可能ファイルを作成するツールセットを含む) のいずれかをターゲットにすることができます。 プラットフォーム ツールセットを変更する方法については、次を参照してください。[方法。ターゲット フレームワークおよびプラットフォームのツールセットを変更する](../how-to-modify-the-target-framework-and-platform-toolset.md)」を参照してください。
+   プロジェクトの対象を別のバージョンの Visual C++ のライブラリおよびコンパイラにすることができます。 Visual StudioC++プロジェクトが Visual Studio、または対象 XP を実行できる実行可能ファイルを作成するツールセットを含む Visual Studio の以前のバージョンをいくつかでインストールされたツールセットのいずれかでインストールされているか、既定ツールセットを対象します。 プラットフォーム ツールセットを変更する方法については、次を参照してください。[方法。ターゲット フレームワークおよびプラットフォームのツールセットを変更する](../how-to-modify-the-target-framework-and-platform-toolset.md)」を参照してください。
 
 - **マネージド インクリメンタル ビルドを有効にする**
 

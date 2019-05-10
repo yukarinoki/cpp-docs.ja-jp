@@ -2,16 +2,16 @@
 title: DLL (C++/CX)
 ms.date: 02/06/2018
 ms.assetid: 5b8bcc57-64dd-4c54-9f24-26a25bd5dddd
-ms.openlocfilehash: 1a72ecc5eb46abfbc7b9a52a168510ce0873ee04
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 13e733f0be27fe532af6109bdd6fc53291265e66
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183287"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447240"
 ---
 # <a name="dlls-ccx"></a>DLL (C++/CX)
 
-Visual Studio を使用して、標準の Win32 DLL または Windows ランタイム コンポーネントのユニバーサル Windows プラットフォーム (UWP) アプリで使用できる DLL を作成することができます。 Visual Studio または Visual Studio 2012 は UWP アプリでは正しく読み込まれない可能性があり、Microsoft Store でアプリの検証テストに合格しない場合がありますより前である Visual C コンパイラのバージョンを使用して作成された標準 DLL です。
+Visual Studio を使用して、標準の Win32 DLL または Windows ランタイム コンポーネントのユニバーサル Windows プラットフォーム (UWP) アプリで使用できる DLL を作成することができます。 Visual Studio または Microsoft のバージョンを使用して作成された標準 DLLC++コンパイラがより Visual Studio 2012 の UWP アプリでは正しく読み込まれない可能性があります、Microsoft Store でアプリの検証テストに合格しない場合があります。
 
 ## <a name="windows-runtime-component-dlls"></a>Windows ランタイム コンポーネント Dll
 

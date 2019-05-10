@@ -1,6 +1,6 @@
 ---
 title: volatile (C++)
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 f1_keywords:
 - volatile_cpp
 helpviewer_keywords:
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - volatile objects
 - objects [C++], volatile
 ms.assetid: 81db4a85-ed5a-4a2c-9a53-5d07a771d2de
-ms.openlocfilehash: 73243841b2ad02bcc165b2910ac54283028e6cf3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 2396b5afaed09a28fd83f22fccde0be04e3d7790
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62243948"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221877"
 ---
 # <a name="volatile-c"></a>volatile (C++)
 
@@ -50,7 +50,7 @@ Visual Studio の解釈、**揮発性**ターゲット アーキテクチャに�
 
 ## <a name="iso-compliant"></a>ISO 準拠 →
 
-C# volatile キーワード、慣れてまたはの動作に慣れている場合**揮発性**Visual C の以前のバージョンで、対応するが、c++ 11 ISO 標準**揮発性**キーワードは異なっており、Visual Studio でサポートされているときに、 [/volatile:iso](../build/reference/volatile-volatile-keyword-interpretation.md)コンパイラ オプションを指定します。 ARM では、このオプションが既定で指定されています。 **揮発性**; ハードウェアへのアクセスにのみ使用する c++ 11 ISO 標準コードのキーワードは、スレッド間通信に使用しないでください。 スレッド間の通信の場合などのメカニズムを使用して[std::atomic\<T >](../standard-library/atomic.md)から、 [C++ 標準ライブラリ](../standard-library/cpp-standard-library-reference.md)します。
+慣れている場合、 C# volatile キーワード、またはの動作に慣れて**揮発性**以前のバージョンの MicrosoftC++コンパイラ (MSVC) がありますが、c++ 11 ISO 標準**volatile**キーワードは異なっており、MSVC のサポートは、ときに、 [/volatile:iso](../build/reference/volatile-volatile-keyword-interpretation.md)コンパイラ オプションを指定します。 ARM では、このオプションが既定で指定されています。 **揮発性**; ハードウェアへのアクセスにのみ使用する c++ 11 ISO 標準コードのキーワードは、スレッド間通信に使用しないでください。 スレッド間の通信の場合などのメカニズムを使用して[std::atomic\<T >](../standard-library/atomic.md)から、 [C++ 標準ライブラリ](../standard-library/cpp-standard-library-reference.md)します。
 
 ## <a name="end-of-iso-compliant"></a>END ISO 準拠
 

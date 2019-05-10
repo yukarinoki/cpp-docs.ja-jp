@@ -1,6 +1,6 @@
 ---
 title: '方法: 既存のコードから C++ プロジェクトを作成する'
-ms.date: 01/15/2019
+ms.date: 05/06/2019
 helpviewer_keywords:
 - C++, creating projects from existing code
 - Create New Project From Existing Code Files Wizard, project settings
@@ -10,12 +10,12 @@ f1_keywords:
 - vc.appwiz.importwiz.debugsettings
 - vc.appwiz.importwiz.releasesettings
 ms.assetid: e328a938-395c-48ea-9e35-dd433de12b31
-ms.openlocfilehash: 1658e19595d8cfc7966ca881abfdd2aa8acf76ab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: a899fe7f1b038ac1497465171098183f63f40564
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62189043"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221453"
 ---
 # <a name="how-to-create-a-c-project-from-existing-code"></a>方法: 既存のコードから C++ プロジェクトを作成する
 
@@ -26,8 +26,6 @@ Visual Studio で、**既存コード ファイルからの新しいプロジェ
 ### <a name="to-create-a-c-project-from-existing-code"></a>既存のコードから C++ プロジェクトを作成するには
 
 1. **[ファイル]** メニューで、**[新規作成]** > **[Project From Existing Code]\(既存のコードのプロジェクト\)** の順に選択します。
-
-1. **既存コード ファイルからの新しいプロジェクトの作成**ウィザードの最初のページで、**[作成するプロジェクトの種類を入力してください]** ボックスの一覧の **[Visual C++]** をクリックします。 **[次へ]** を選択して続行します。
 
 1. プロジェクトの場所、ソース ファイルのディレクトリ、ウィザードが新しいプロジェクトにインポートするファイルの種類を指定します。 **[次へ]** を選択して続行します。
 
@@ -44,7 +42,7 @@ Visual Studio で、**既存コード ファイルからの新しいプロジェ
 
     | 設定 | 説明 |
     | --- | --- |
-    | **Visual Studio を使用する** | 新しいプロジェクトをビルドするため、Visual Studio に含まれているビルド ツールを使用するように指定します。 既定では、このオプションはオンです。<br/><br/>ウィザードで生成されるプロジェクトのタイプを指定するには、**[プロジェクト タイプ]** を選択します。 **[Windows アプリケーション プロジェクト]**、**[コンソール アプリケーション プロジェクト]**、**[ダイナミック リンク ライブラリ (DLL) プロジェクト]**、または **[スタティック ライブラリ (LIB) プロジェクト]** を選択します。<br/><br/>新しいプロジェクトに ATL サポートを追加するには、**[Add support for ATL]\(ATL サポートの追加\)** をオンにします。<br/><br/>新しいプロジェクトに MFC サポートを追加するには、**[Add support for MFC]\(MFC サポートの追加\)** をオンにします。<br/><br/>プロジェクトに CLR プログラミングのサポートを追加するには、**[Add support for the Common Language Runtime]\(共通言語ランタイムのサポートの追加\)** をオンにします。 Managed Extensions for C++ 構文、Visual C++ 2005 より前の CLR プログラミングと適合させるには、**[Common Language Runtime (old syntax)]\(共通言語ランタイム (古い構文)\)** などのコンプライアンス タイプに **[共通言語ランタイム サポート]** を選択します。 |
+    | **Visual Studio を使用する** | 新しいプロジェクトをビルドするため、Visual Studio に含まれているビルド ツールを使用するように指定します。 既定では、このオプションはオンです。<br/><br/>ウィザードで生成されるプロジェクトのタイプを指定するには、**[プロジェクト タイプ]** を選択します。 **[Windows アプリケーション プロジェクト]**、**[コンソール アプリケーション プロジェクト]**、**[ダイナミック リンク ライブラリ (DLL) プロジェクト]**、または **[スタティック ライブラリ (LIB) プロジェクト]** を選択します。<br/><br/>新しいプロジェクトに ATL サポートを追加するには、**[Add support for ATL]\(ATL サポートの追加\)** をオンにします。<br/><br/>新しいプロジェクトに MFC サポートを追加するには、**[Add support for MFC]\(MFC サポートの追加\)** をオンにします。<br/><br/>プロジェクトに CLR プログラミングのサポートを追加するには、**[Add support for the Common Language Runtime]\(共通言語ランタイムのサポートの追加\)** をオンにします。 選択、**共通言語ランタイム サポート**のコンプライアンスの種類など**共通言語ランタイム (古い構文)** のコンプライアンスのマネージ拡張でC++構文、CLR プログラミングの構文Visual Studio 2005: する前に |
     | **外部のビルドシステムを使用する** | 新しいプロジェクトをビルドするため、Visual Studio に含まれていないビルド ツールを使用するように指定します。 このオプションを選択すると、**[デバッグの構成設定の指定]** ページと **[リリースの構成設定の指定]** ページでビルドのコマンド ラインを指定できます。 |
 
     ![プロジェクト設定](media/settings.png)

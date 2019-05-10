@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Internet applications [MFC], ActiveX controls
 - networks [MFC], downloading with ActiveX controls
 ms.assetid: 7ab943c8-2022-41df-9065-d629b616eeec
-ms.openlocfilehash: c019c922a5690d4ead861c40bed3c0c1c76cea28
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d268da8bef4facfb9259e6ce43648c8713464ec9
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394845"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448192"
 ---
 # <a name="activex-controls-on-the-internet"></a>インターネット上の ActiveX コントロール
 
@@ -85,7 +85,7 @@ ActiveX コントロールは、インターネットに限定されません。
 
 1. クリックして**新規**上、**ファイル**メニュー。
 
-1. 選択**MFC ActiveX コントロール ウィザード**から Visual C プロジェクトし、プロジェクトの名前します。
+1. 選択**MFC ActiveX コントロール ウィザード**Visual Studio からC++プロジェクトし、プロジェクトの名前します。
 
 1. **コントロール設定**] ページで、[**プロパティを非同期的に読み込みます**します。 このオプションを選択する準備完了状態プロパティおよび状態変更イベントを設定します。
 
@@ -127,7 +127,8 @@ ActiveX コントロールは、インターネットに限定されません。
 
    [!code-cpp[NVC_MFCActiveXControl#3](../mfc/codesnippet/cpp/activex-controls-on-the-internet_3.h)]
 
-1. `Get/Set` メソッドを実装します。 `Get`文字列を返します。 `Set`、プロパティと呼び出しを読み込む`SetModifiedFlag`します。
+1. 
+  `Get/Set` メソッドを実装します。 `Get`文字列を返します。 `Set`、プロパティと呼び出しを読み込む`SetModifiedFlag`します。
 
    [!code-cpp[NVC_MFCActiveXControl#4](../mfc/codesnippet/cpp/activex-controls-on-the-internet_4.cpp)]
 

@@ -93,12 +93,12 @@ helpviewer_keywords:
 - $(PlatformShortName) macro
 - SolutionPath macro $(SolutionPath)
 ms.assetid: 239bd708-2ea9-4687-b264-043f1febf98b
-ms.openlocfilehash: 46fdd5e356ded96388a154ff459ef4cc3c02267f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: abb42db6a44f1c48d120eff1f117e06c970b6b44
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294453"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221788"
 ---
 # <a name="common-macros-for-msbuild-commands-and-properties"></a>MSBuild コマンドとプロパティの共通マクロ
 
@@ -121,7 +121,7 @@ ms.locfileid: "62294453"
 |**$(FrameworkDir)**|.NET Framework をインストールしたディレクトリです。|
 |**$(FrameworkSDKDir)**|.NET Framework をインストールしたディレクトリです。 .NET Framework は、Visual Studio 一部としてインストールされている場合も、個別にインストールされている場合もあります。|
 |**$(FrameworkVersion)**|Visual Studio が使用する .NET Framework のバージョンです。 **$(FrameworkDir)** と組み合わせると、Visual Studio が使用する .NET Framework のバージョンへの完全なパスになります。|
-|**$(FxCopDir)**|fxcop.cmd ファイルへのパスです。 fxcop.cmd ファイルは、Visual C++ のすべてのエディションでインストールされるとは限りません。|
+|**$(FxCopDir)**|fxcop.cmd ファイルへのパスです。 Fxcop.cmd ファイルは、すべての Visual Studio エディションではインストールされません。|
 |**$(IntDir)**|中間ファイルに指定されたディレクトリへのパスです。 これが相対パスの場合、中間ファイルはこのパスを通じてプロジェクト ディレクトリに追加されます。 このパスの末尾にはスラッシュが必要です。 これは **Intermediate Directory** プロパティの値に解決されます。 **$(OutDir)** を使用して、このプロパティを定義しないでください。|
 |**$(OutDir)**|出力ファイルのディレクトリへのパスです。 これが相対パスの場合、出力ファイルはこのパスを通じてプロジェクト ディレクトリに追加されます。 このパスの末尾にはスラッシュが必要です。 これは **Output Directory** プロパティの値に解決されます。 **$(IntDir)** を使用して、このプロパティを定義しないでください。|
 |**$(Platform)**|現在のプロジェクト プラットフォームの名前 (例: "Win32") です。|
@@ -143,7 +143,7 @@ ms.locfileid: "62294453"
 |**$(TargetFileName)**|ビルドのプライマリ出力ファイルの名前 (基本名 + ファイル拡張子で定義) です。|
 |**$(TargetName)**|ビルドのプライマリ出力ファイルの基本名です。|
 |**$(TargetPath)**|ビルドのプライマリ出力ファイルの絶対パス名 (ドライブ + パス + 基本名 + ファイル拡張子で定義) です。|
-|**$(VCInstallDir)**|Visual Studio インストールの C++ コンテンツを格納するディレクトリ。 このプロパティにはターゲットの Visual C++ ツールセットのバージョンが含まれますが、ホストの Visual C++ とは異なることがあります。 たとえば、`$(PlatformToolset) = v140` を設定してビルドした場合、**$(VCInstallDir)** には Visual C++ 2015 インストールへのパスが含まれます。|
+|**$(VCInstallDir)**|Visual Studio インストールの C++ コンテンツを格納するディレクトリ。 このプロパティには、対象となる Microsoft のバージョンが含まれています。C++が異なる場合があります (MSVC) ツールセットを Visual Studio ホスト。 たとえばを構築するときに`$(PlatformToolset) = v140`、 **$ (vcinstalldir)** Visual Studio 2015 のインストールへのパスが含まれています。|
 |**$(VSInstallDir)**|Visual Studio をインストールしたディレクトリです。 このプロパティにはターゲットの Visual Studio ツールセットのバージョンが含まれますが、ホストの Visual C++ とは異なることがあります。 たとえば、 `$(PlatformToolset) = v110`を設定してビルドした場合、 **$(VSInstallDir)** には Visual Studio 2012 インストールへのパスが含まれます。|
 |**$(WebDeployPath)**|Web 配置のルートから、プロジェクト出力が存在するディレクトリへの相対パスです。 <xref:Microsoft.VisualStudio.VCProjectEngine.VCWebDeploymentTool.RelativePath%2A>と同じ値を返します。|
 |**$(WebDeployRoot)**|**\<localhost>** への絶対パスです。 たとえば、c:\inetpub\wwwroot などです。|

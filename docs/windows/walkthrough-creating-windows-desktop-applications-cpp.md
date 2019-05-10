@@ -1,17 +1,17 @@
 ---
 title: 'チュートリアル: 従来の Windows デスクトップ アプリケーション (C++) の作成します。'
 ms.custom: get-started-article
-ms.date: 09/18/2018
+ms.date: 04/23/2019
 helpviewer_keywords:
 - Windows applications [C++], Win32
 - Windows Desktop applications [C++]
 - Windows API [C++]
-ms.openlocfilehash: cb6d09acc00f2e38ee41180c81c1877bc53027c2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 0bc9ef82863fde361964234cca54f12aac1e2abe
+ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388085"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64877389"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>チュートリアル: 従来の Windows デスクトップ アプリケーション (C++) の作成します。
 
@@ -26,7 +26,7 @@ Windows API (とも呼ばれる、Win32 API、Windows デスクトップ API、�
 
 - Microsoft Windows 7 またはそれ以降のバージョンを実行するコンピューター。 開発のベスト エクスペリエンスを実現するには Windows 10 をお勧めします。
 
-- Visual Studio 2017 のコピー。 ダウンロードして Visual Studio をインストールする方法については、次を参照してください。 [Visual Studio のインストール](/visualstudio/install/install-visual-studio)します。 インストーラーを実行するときに、以下のことを確認、 **C++ によるデスクトップ開発**ワークロードがチェックされます。 Visual Studio をインストールしたときに、このワークロードをインストールしなかった場合、心配しないでください。 インストーラーをもう一度実行して、今すぐインストールします。
+- Visual Studio のコピー。 ダウンロードして Visual Studio をインストールする方法については、次を参照してください。 [Visual Studio のインストール](/visualstudio/install/install-visual-studio)します。 インストーラーを実行するときに、以下のことを確認、 **C++ によるデスクトップ開発**ワークロードがチェックされます。 Visual Studio をインストールしたときに、このワークロードをインストールしなかった場合、心配しないでください。 インストーラーをもう一度実行して、今すぐインストールします。
 
    ![C++ によるデスクトップ開発](../build/media/desktop-development-with-cpp.png "C++ によるデスクトップ開発")
 
@@ -36,9 +36,37 @@ Windows API (とも呼ばれる、Win32 API、Windows デスクトップ API、�
 
 ## <a name="create-a-windows-desktop-project"></a>Windows デスクトップ プロジェクトを作成します。
 
-以下の手順を実行する最初の Windows デスクトップ プロジェクトを作成し、動作する Windows デスクトップ アプリケーションのコードを入力します。 Visual Studio の Visual Studio 2017 バージョン 15.3 より前のバージョンを使用している場合に進みます[Visual Studio 2017 RTM での Windows デスクトップ プロジェクトを作成する](#create-in-vs2017-rtm)します。
+以下の手順を実行する最初の Windows デスクトップ プロジェクトを作成し、動作する Windows デスクトップ アプリケーションのコードを入力します。 このページの左上の [バージョン] セレクターが使用している Visual Studio の正しいバージョンに設定されていることを確認します。
 
-### <a name="to-create-a-windows-desktop-project-in-visual-studio-2017-update-153-and-later"></a>Visual Studio 2017 Update 15.3 以降の Windows デスクトップ プロジェクトを作成するには
+::: moniker range="vs-2019"
+
+### <a name="to-create-a-windows-desktop-project-in-visual-studio-2019"></a>Visual Studio 2019 で Windows デスクトップ プロジェクトを作成するには
+
+1. メイン メニューで、次のように選択します**ファイル** > **新規** > **プロジェクト**を開く、**新しいプロジェクトを作成**ダイアログ。ボックス。
+
+1. ダイアログ ボックスの上部にある次のように設定します**言語**に **C++** 設定**プラットフォーム**に**Windows**、設定と**プロジェクトの種類。** に**デスクトップ**します。 
+
+1. プロジェクトの種類の結果の一覧から選択**Windows デスクトップ ウィザード**選択 **[次へ]** します。 次のページで、プロジェクトの名前を入力し、必要な場合は、プロジェクトの場所を指定します。
+
+1. 選択、**作成**プロジェクトを作成するボタンをクリックします。
+
+1. **Windows デスクトップ プロジェクト**ダイアログが表示されます。 **アプリケーションの種類**、 **Windows アプリケーション (.exe)** します。 **[追加のオプション]** の **[空のプロジェクト]** を選択します。 その後、**OK** を選択すると、プロジェクトが作成されます。
+
+1. **ソリューション エクスプ ローラー**を右クリックし、 **DesktopApp**プロジェクトで、選択**追加**を選び、**新しい項目の**。
+
+   ![DesktopApp プロジェクトに新しい項目の追加](../build/media/desktop-app-project-add-new-item-153.gif "DesktopApp プロジェクトに新しい項目の追加")
+
+1. **[新しい項目の追加]** ダイアログ ボックスで、 **[C++ ファイル (.cpp)]** をクリックします。 **名前**など、ファイルの名前を入力ボックスに、 *HelloWindowsDesktop.cpp*します。 **[追加]** をクリックします。
+
+   ![DesktopApp プロジェクトに追加の .cpp ファイル](../build/media/desktop-app-add-cpp-file-153.png "DesktopApp プロジェクトに .cpp ファイルの追加")
+
+プロジェクトが作成され、ソース ファイルが、エディターで開かれます。 続けるには、」に進みます[コードを作成する](#create-the-code)します。
+
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+### <a name="to-create-a-windows-desktop-project-in-visual-studio-2017"></a>Visual Studio 2017 での Windows デスクトップ プロジェクトを作成するには
 
 1. **[ファイル]** メニューの **[新規作成]** を選択し、**[プロジェクト]** を選択します。
 
@@ -62,7 +90,11 @@ Windows API (とも呼ばれる、Win32 API、Windows デスクトップ API、�
 
 プロジェクトが作成され、ソース ファイルが、エディターで開かれます。 続けるには、」に進みます[コードを作成する](#create-the-code)します。
 
-### <a id="create-in-vs2017-rtm"></a> Visual Studio 2017 RTM での Windows デスクトップ プロジェクトを作成するには
+::: moniker-end
+
+::: moniker range="vs-2015"
+
+### <a name="to-create-a-windows-desktop-project-in-visual-studio-2015"></a>Visual Studio 2015 での Windows デスクトップ プロジェクトを作成するには
 
 1. **[ファイル]** メニューの **[新規作成]** を選択し、**[プロジェクト]** を選択します。
 
@@ -89,6 +121,8 @@ Windows API (とも呼ばれる、Win32 API、Windows デスクトップ API、�
    ![DesktopApp プロジェクトに追加の .cpp ファイル](../build/media/desktop-app-add-cpp-file-150.png "DesktopApp プロジェクトに .cpp ファイルの追加")
 
 プロジェクトが作成され、ソース ファイルが、エディターで開かれます。
+
+::: moniker-end
 
 ## <a name="create-the-code"></a>コードを作成します。
 

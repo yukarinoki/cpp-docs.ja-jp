@@ -80,12 +80,12 @@ helpviewer_keywords:
 - std::forward_list::swap
 - std::forward_list::unique
 ms.assetid: 89a3b805-ab60-4858-b772-5855130c11b1
-ms.openlocfilehash: 5eaa8eba1904dc0a729fb66b280b8d3fa4bb78f1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8d1f6f7500446081bd0b2dec0fea12b03f4e87d6
+ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159783"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64877535"
 ---
 # <a name="forwardlist-class"></a>forward_list クラス
 
@@ -219,7 +219,7 @@ void assign(InputIterator First, InputIterator Last);
 |*count*|割り当てる要素の数。|
 |*val*|各要素に割り当てる値。|
 |*Type*|値の型。|
-|* IList'|コピーする initializer_list。|
+|*IList*|コピーする initializer_list。|
 
 ### <a name="remarks"></a>Remarks
 
