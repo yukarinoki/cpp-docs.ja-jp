@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2440
 ms.assetid: 36e6676c-f04f-4715-8ba1-f096c4bf3b44
-ms.openlocfilehash: c85a8284c91037e981f0d1ea82507b49be8121a3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8de433361901b5d247616c154afc48d637373d43
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62338936"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448030"
 ---
 # <a name="compiler-error-c2440"></a>コンパイラ エラー C2440
 
@@ -194,7 +194,7 @@ C2440 は、属性機能の変更が原因で発生することもあります�
 
 ## <a name="example"></a>例
 
-ビジュアルC++コンパイラことはできなくなりました、 [const_cast 演算子](../../cpp/const-cast-operator.md)ダウン キャストするときに使用するソース コード **/clr**プログラミングがコンパイルされます。
+MicrosoftC++コンパイラことはできなくなりました、 [const_cast 演算子](../../cpp/const-cast-operator.md)ダウン キャストするときに使用するソース コード **/clr**プログラミングがコンパイルされます。
 
 この C2440 エラーを解決するには、正しいキャスト演算子を使用します。 詳細については、次を参照してください。[キャスト演算子](../../cpp/casting-operators.md)します。
 

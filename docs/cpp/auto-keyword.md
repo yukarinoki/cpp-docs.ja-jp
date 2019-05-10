@@ -1,17 +1,17 @@
 ---
 title: auto キーワード
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 ms.assetid: 744a41c0-2510-4140-a1be-96257e722908
-ms.openlocfilehash: 3477bd5033fac5b69733db5d6095c1317aac42ee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: a695c33ab55601bb8d81b00f963646f6a48f09d5
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62284728"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222251"
 ---
 # <a name="auto-keyword"></a>auto キーワード
 
-**自動**キーワードは宣言指定子。 ただし、C++ 標準ではこのキーワードの元の意味と変更後の意味が定義されます。 Visual C 2010 では、前に、**自動**キーワードで変数の宣言、*自動*ストレージ クラス、つまり、ローカルな有効期間を持つ変数です。 Visual C 2010 では、以降、**自動**キーワードは、その宣言の初期化式から推測される型の変数を宣言します。 [/Zc:auto&#91;-&#93; ](../build/reference/zc-auto-deduce-variable-type.md)コンパイラ オプションの意味を制御する、**自動**キーワード。
+**自動**キーワードは宣言指定子。 ただし、C++ 標準ではこのキーワードの元の意味と変更後の意味が定義されます。 Visual Studio 2010 では、前に、**自動**キーワードで変数の宣言、*自動*ストレージ クラス、つまり、ローカルな有効期間を持つ変数です。 Visual Studio 2010 以降で、**自動**キーワードは、その宣言の初期化式から推測される型の変数を宣言します。 [/Zc:auto&#91;-&#93; ](../build/reference/zc-auto-deduce-variable-type.md)コンパイラ オプションの意味を制御する、**自動**キーワード。
 
 ## <a name="syntax"></a>構文
 

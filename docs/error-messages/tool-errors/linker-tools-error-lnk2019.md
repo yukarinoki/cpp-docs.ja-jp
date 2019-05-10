@@ -7,12 +7,12 @@ helpviewer_keywords:
 - nochkclr.obj
 - LNK2019
 - _check_commonlanguageruntime_version
-ms.openlocfilehash: af40a48e36d316842ec9a744ad95d6c3b3af3731
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0ef0bfd565b8c76816cc1f8a20b1521da238cdfc
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386344"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447712"
 ---
 # <a name="linker-tools-error-lnk2019"></a>リンカ ツール エラー LNK2019
 
@@ -86,7 +86,7 @@ Visual Studio の以前のバージョンでは、このレベルの依存関係
 
 ### <a name="you-mix-code-that-uses-native-wchart-with-code-that-doesnt"></a>ネイティブ wchar を使用するコードが混在して\_しないコードと t
 
-Visual C++ 2005 で行われた C++ 言語への準拠作業により、 `wchar_t` は既定でネイティブ型になりました。 それより前のバージョンの Visual C++ を使用してコンパイルされたライブラリ ファイルおよびオブジェクト ファイルと互換性のあるコードを生成するには、 [/Zc:wchar_t-](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md) コンパイラ オプションを使用する必要があります。 すべてのファイルは、同じを使用してコンパイルされている場合 **/Zc:wchar\_t**設定、型の参照が互換性のある型に解決されない可能性があります。 すべてのライブラリ ファイルとオブジェクト ファイル内の `wchar_t` の型に互換性があることを検証し、使用する型を更新するか、コンパイル時に使用する **/Zc:wchar_t** の設定を一貫させるようにしてください。
+C++言語への準拠作業が行われる、Visual Studio 2005 で実施された`wchar_t`既定でネイティブ型です。 使用する必要があります、 [/Zc:wchar_t-](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md)コンパイラ オプションを以前のバージョンの Visual Studio を使用してコンパイルされたライブラリとオブジェクトのファイルと互換性のあるコードを生成します。 すべてのファイルは、同じを使用してコンパイルされている場合 **/Zc:wchar\_t**設定、型の参照が互換性のある型に解決されない可能性があります。 すべてのライブラリ ファイルとオブジェクト ファイル内の `wchar_t` の型に互換性があることを検証し、使用する型を更新するか、コンパイル時に使用する **/Zc:wchar_t** の設定を一貫させるようにしてください。
 
 ## <a name="third-party-library-issues-and-vcpkg"></a>サード パーティ製のライブラリの問題と Vcpkg
 

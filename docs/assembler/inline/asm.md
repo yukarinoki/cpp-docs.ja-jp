@@ -9,12 +9,12 @@ helpviewer_keywords:
 - __asm keyword [C++], vs. asm blocks
 - __asm keyword [C++]
 ms.assetid: 77ff3bc9-a492-4b5e-85e1-fa4e414e79cd
-ms.openlocfilehash: 6b94bf73e66550d0245ef1f55c17d6676e3b4356
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 43c7ae02e465ce8de2871d78e7ba604221aa7426
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62167557"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65445908"
 ---
 # <a name="asm"></a>__asm
 
@@ -41,7 +41,7 @@ ms.locfileid: "62167557"
 
 `__asm` キーワードはステートメント区切り文字であるため、アセンブリ命令も同じ行に記述できます。
 
-Visual C++ 2005 以前で、次の命令が実行されたとします。
+Visual Studio 2005 で命令する前に
 
 ```cpp
 __asm int 3

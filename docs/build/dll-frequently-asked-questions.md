@@ -1,17 +1,17 @@
 ---
 title: MFC DLL についてよく寄せられる質問
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - troubleshooting [C++], DLLs
 - DLLs [C++], frequently asked questions
 - FAQs [C++], DLLs
 ms.assetid: 09dd068e-fc33-414e-82f7-289c70680256
-ms.openlocfilehash: 33a0c9dd1abbfb9375ce1aef53fd152a521ac97d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 9108aaf3fcface847b0391455a2aecd4d45658c4
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62274119"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220938"
 ---
 # <a name="dll-frequently-asked-questions"></a>DLL に関してよく寄せられる質問
 
@@ -41,11 +41,7 @@ ms.locfileid: "62274119"
 
 ## <a name="mfc_multithreaded_2"></a> マルチ スレッド アプリケーションは別のスレッド内の MFC DLL にアクセスできますか。
 
-マルチ スレッド アプリケーションでは、MFC と動的にリンクされるレギュラー MFC Dll と MFC 拡張 Dll を別のスレッドからアクセスできます。 Visual c バージョン 4.2 では、アプリケーションは、アプリケーションで作成された複数のスレッドから MFC を静的にリンクされるレギュラー MFC Dll にアクセスします。
-
-前のバージョン 4.2 では、外部の 1 つだけのスレッドは、MFC と静的にリンクされるレギュラー MFC DLL を添付できます。
-
-USRDLL という用語は、Visual C のドキュメントでは使用されなくに注意してください。 MFC と静的にリンクされるレギュラー MFC DLL は、USRDLL と同じ特性を持ちます。
+マルチ スレッド アプリケーションでは、MFC と動的にリンクされるレギュラー MFC Dll と MFC 拡張 Dll を別のスレッドからアクセスできます。 アプリケーションは、アプリケーションで作成された複数のスレッドから MFC を静的にリンクされるレギュラー MFC Dll にアクセスします。
 
 ## <a name="mfc_prohibited_classes"></a> MFC クラスまたは MFC DLL では使用できません関数はありますか。
 
@@ -69,4 +65,4 @@ DLL のエクスポートされた関数の数が多い場合は、.def ファ�
 
 ## <a name="see-also"></a>関連項目
 
-[Visual C++ の DLL](dlls-in-visual-cpp.md)
+[Visual Studio で C/C++ Dll を作成します。](dlls-in-visual-cpp.md)

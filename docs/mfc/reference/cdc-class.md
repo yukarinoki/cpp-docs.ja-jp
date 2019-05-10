@@ -402,12 +402,12 @@ helpviewer_keywords:
 - CDC [MFC], m_hAttribDC
 - CDC [MFC], m_hDC
 ms.assetid: 715b3334-cb2b-4c9c-8067-02eb7c66c8b2
-ms.openlocfilehash: fc5d41221ab0f9679e7d38a399464efc1a38dd52
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2ff6cd6e0817f74c7688fc573d4b98f70704f96c
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62173567"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222579"
 ---
 # <a name="cdc-class"></a>CDC クラス
 
@@ -3424,7 +3424,7 @@ CSize GetOutputTabbedTextExtent(
 測定する文字の文字列を指します。 渡すことも、 [CString](../../atl-mfc-shared/reference/cstringt-class.md)このパラメーターのオブジェクト。
 
 *nCount*<br/>
-文字列の文字数を指定します。 場合*nCount* -1 で、長さが計算されます。
+指定します、[文字列の長さ](/windows/desktop/gdi/specifying-length-of-text-output-string)によって示される*lpszString*します。
 
 *nTabPositions*<br/>
 指す配列内のタブ ストップの位置の数を指定します*いる*します。
@@ -3467,7 +3467,7 @@ CSize GetOutputTextExtent(const CString& str) const;
 文字の文字列を指します。 渡すことも、 [CString](../../atl-mfc-shared/reference/cstringt-class.md)このパラメーターのオブジェクト。
 
 *nCount*<br/>
-文字列の文字数を指定します。 場合*nCount* -1 で、長さが計算されます。
+指定します、[文字列の長さ](/windows/desktop/gdi/specifying-length-of-text-output-string)によって示される*lpszString*します。
 
 *str*<br/>
 A`CString`を測定する指定された文字を含むオブジェクト。
@@ -3669,7 +3669,7 @@ CSize GetTabbedTextExtent(
 文字の文字列を指します。 渡すことも、 [CString](../../atl-mfc-shared/reference/cstringt-class.md)このパラメーターのオブジェクト。
 
 *nCount*<br/>
-文字列の文字数を指定します。 場合*nCount* -1 で、長さが計算されます。
+指定します、[文字列の長さ](/windows/desktop/gdi/specifying-length-of-text-output-string)によって示される*lpszString*します。
 
 *nTabPositions*<br/>
 指す配列内のタブ ストップの位置の数を指定します*いる*します。
@@ -4087,7 +4087,7 @@ virtual BOOL GrayString(
 出力関数に渡されるデータへの far ポインターを指定します。 場合*lpfnOutput*が null の場合、 *lpData*出力する文字列への long ポインターである必要があります。
 
 *nCount*<br/>
-出力する文字数を指定します。 このパラメーターが 0 の場合`GrayString`文字列の長さを計算します (仮定*lpData*文字列へのポインターです)。 場合*nCount* -1 とによって示される関数は、 *lpfnOutput*返します 0 の場合、イメージが表示が淡色表示にします。
+出力する文字数を指定します。 このパラメーターが 0 の場合`GrayString`文字列の長さを計算します (仮定*lpData*文字列へのポインターです)。 場合*nCount*は 1 が指す関数*lpfnOutput*返します 0 の場合、イメージが表示が淡色表示にします。
 
 *x*<br/>
 論理で文字列を囲む四角形の開始位置の x 座標を指定します。
@@ -6891,7 +6891,7 @@ CSize TabbedTextOut(
 描画する文字列を指します。 文字の配列へのポインターを渡すことができます、 [CString](../../atl-mfc-shared/reference/cstringt-class.md)このパラメーターのオブジェクト。
 
 *nCount*<br/>
-文字列の文字数を指定します。 場合*nCount* -1 で、長さが計算されます。
+指定します、[文字列の長さ](/windows/desktop/gdi/specifying-length-of-text-output-string)によって示される*lpszString*します。
 
 *nTabPositions*<br/>
 タブ ストップの位置の配列内の値の数を指定します。

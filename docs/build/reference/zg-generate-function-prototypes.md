@@ -10,12 +10,12 @@ helpviewer_keywords:
 - -Zg compiler option [C++]
 - generate function prototypes compiler option
 ms.assetid: c8df1b46-24ff-46f2-8356-e0a144b21dd2
-ms.openlocfilehash: 684174cf46e644c22e072e3fa60f75f9434c7e54
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 591460b78a461aa2e33f873b79d6dcec0277f99f
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62315899"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446201"
 ---
 # <a name="zg-generate-function-prototypes"></a>/Zg (関数プロトタイプの生成)
 
@@ -29,7 +29,7 @@ ms.locfileid: "62315899"
 
 ## <a name="remarks"></a>Remarks
 
-このコンパイラ オプションは使用できなくなりました。 Visual C++ 2015 で削除されました。 このページは、前のバージョンの Visual C++ のユーザーのために残されています。
+このコンパイラ オプションは使用できなくなりました。 Visual Studio 2015 で削除されました。 このページは、古いバージョンの Visual Studio のユーザーのままです。
 
 関数プロトタイプには、この関数の戻り値の型と引数の型リストが含まれます。 引数の型リストは、関数の仮パラメーターの型から作成されます。 ソース ファイル内に既に存在する関数プロトタイプは無視されます。
 

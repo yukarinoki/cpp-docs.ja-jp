@@ -1,20 +1,19 @@
 ---
 title: new および delete 演算子
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 f1_keywords:
 - delete_cpp
 - new
 helpviewer_keywords:
-- new keyword [C++], dynamic allocation of objects
-- nothrownew.obj
-- delete keyword [C++], syntax
+- new keyword [C++]
+- delete keyword [C++]
 ms.assetid: fa721b9e-0374-4f04-bb87-032ea775bcc8
-ms.openlocfilehash: 1ac6282ecbf45f22e7dd66b94f8bccdbc4e505ce
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
-ms.translationtype: MT
+ms.openlocfilehash: 8dd5e6a555872c443e32e9ea464ea49d4ae18f99
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345896"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222366"
 ---
 # <a name="new-and-delete-operators"></a>new および delete 演算子
 
@@ -85,9 +84,7 @@ int main()
 Blanks *SomeBlanks = new Blanks;
 ```
 
-Visual C 5.0 以前のバージョンをクラス型とすべての配列で (のあったかどうかに関係なく**クラス**型) を使用して割り当て、**新しい**演算子は常にグローバル使用**演算子 new**関数。
-
-Visual C 5.0 以降では、コンパイラはメンバーの配列をサポート**新しい**と**削除**クラス宣言で演算子。 例えば:
+コンパイラはメンバーの配列をサポートしている**新しい**と**削除**クラス宣言で演算子。 例:
 
 ```cpp
 // spec1_the_operator_new_function2.cpp
@@ -203,7 +200,7 @@ int main( int argc, char *argv[] ) {
 
 上記のコードを "メモリ リーク" の検出に使うことができます。メモリ リークとは、フリー ストアに割り当てられ、解放されていないメモリを指します。 この検出は、グローバルなを実行する**新しい**と**削除**演算子がメモリの数の割り当てと解放を再定義します。
 
-Visual C 5.0 以降では、コンパイラはメンバーの配列をサポート**新しい**と**削除**クラス宣言で演算子。 例えば:
+コンパイラはメンバーの配列をサポートしている**新しい**と**削除**クラス宣言で演算子。 例えば:
 
 ```cpp
 // spec1_the_operator_delete_function2.cpp

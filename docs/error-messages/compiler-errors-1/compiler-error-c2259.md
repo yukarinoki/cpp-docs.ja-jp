@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2259
 ms.assetid: e458236f-bdea-4786-9aa6-a98d8bffa5f4
-ms.openlocfilehash: 0310f20854185a6f8a5ccb0ce7b087c4d7c5f29d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 562882f50edfe2d44ab1f08ee9dbe88fe468af63
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387072"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447382"
 ---
 # <a name="compiler-error-c2259"></a>コンパイラ エラー C2259
 
@@ -50,7 +50,7 @@ B b;  // OK, B defines func()
 
 - 派生クラスに実装されるインターフェイス メソッドに対してスコープ解決演算子を使用して、実装されるメソッド名をインターフェイスの名前で修飾します。
 
-C2259 がビジュアルで行った準拠作業の結果として発生する可能性がもC++2005 では、 **/Zc:wchar_t**既定でになります。 このような状況で C2599 を使用してコンパイルする解決できる **/Zc:wchar_t-** を以前のバージョンから可能であれば、互換性があるため、型を更新するか、動作を取得します。 「[/Zc:wchar_t (wchar_t をネイティブ型として認識)](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md)」を参照してください。
+C2259 は、Visual Studio 2005 で行った準拠作業の結果として発生する可能性がも **/Zc:wchar_t**既定でになります。 このような状況で C2599 を使用してコンパイルする解決できる **/Zc:wchar_t-** を以前のバージョンから可能であれば、互換性があるため、型を更新するか、動作を取得します。 「[/Zc:wchar_t (wchar_t をネイティブ型として認識)](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md)」を参照してください。
 
 次の例では、C2259 が生成されます。
 

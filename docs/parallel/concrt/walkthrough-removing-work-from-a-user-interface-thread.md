@@ -1,16 +1,16 @@
 ---
 title: 'チュートリアル: ユーザー インターフェイス スレッドからの処理の除去'
-ms.date: 11/19/2018
+ms.date: 04/25/2019
 helpviewer_keywords:
 - user-interface threads, removing work from [Concurrency Runtime]
 - removing work from user-interface threads [Concurrency Runtime]
 ms.assetid: a4a65cc2-b3bc-4216-8fa8-90529491de02
-ms.openlocfilehash: 1838ad0d6adb146adacb8b3a395f44f76e2a8d3f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 3bd41b1815737730067929c4728b32181cb2fc03
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407815"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64856997"
 ---
 # <a name="walkthrough-removing-work-from-a-user-interface-thread"></a>チュートリアル: ユーザー インターフェイス スレッドからの処理の除去
 
@@ -54,9 +54,9 @@ UI スレッドから作業を削除するには、ブロック操作をオフ�
 
 ### <a name="to-create-a-visual-c-mfc-application"></a>Visual C MFC アプリケーションを作成するには
 
-1. **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。
+1. 使用して、 **MFC アプリケーション ウィザード**すべての既定の設定で、MFC アプリケーションを作成します。 「[チュートリアル:新しい MFC シェル コントロールを使用して](../../mfc/walkthrough-using-the-new-mfc-shell-controls.md)Visual Studio のバージョンのウィザードを開く方法の詳細について。
 
-1. **新しいプロジェクト**] ダイアログ ボックスで、**インストールされたテンプレート**ペインで、 **Visual C**、[、**テンプレート**ペインで、**MFC アプリケーション**します。 たとえば、プロジェクトの名前を入力`Mandelbrot`、順にクリックします**OK**を表示する、 **MFC アプリケーション ウィザード**。
+1. たとえば、プロジェクトの名前を入力`Mandelbrot`、順にクリックします**OK**を表示する、 **MFC アプリケーション ウィザード**。
 
 1. **アプリケーションの種類**ペインで、 **1 つのドキュメント**します。 いることを確認、**ドキュメント/ビュー アーキテクチャ サポート** チェック ボックスがオフになっています。
 

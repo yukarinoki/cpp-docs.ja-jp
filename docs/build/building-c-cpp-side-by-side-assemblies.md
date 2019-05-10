@@ -4,18 +4,18 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - side-by-side applications [C++]
 ms.assetid: 7fa20b16-3737-4f76-a0b5-1dacea19a1e8
-ms.openlocfilehash: 037fde58366ea4548ce3c7ff56c38cfc1a58aa17
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: d5d7652b6424177191275f8f80d7b1f6cf02b261
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62195145"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221131"
 ---
 # <a name="building-cc-side-by-side-assemblies"></a>C/C++ side-by-side アセンブリのビルド
 
 A[サイド バイ サイド アセンブリ](/windows/desktop/SbsCs/about-side-by-side-assemblies-)リソースのコレクションです: Dll、windows のクラス、COM サーバー、タイプ ライブラリ、またはインターフェイスのグループ-実行時に使用するアプリケーションで使用できます。 アセンブリ Dll を再パッケージ化の主な利点は、更新プログラムのリリースが発生した場合、サービスが現在インストールされているアセンブリを行うことが、アセンブリの複数のバージョンは、同時にアプリケーションで使用できます。
 
-Visual C アプリケーションでは、アプリケーションのさまざまな部分の 1 つまたは複数の Dll を使用できます。 、実行時に、メイン プロセスに Dll が読み込まれ、必要なコードが実行されます。 アプリケーションは、要求された Dll を見つけ、読み込むと、要求された DLL と共にロードがあるその他の依存 Dll を理解するには、オペレーティング システムに依存します。 Windows オペレーティング システムのバージョンで Windows XP、Windows Server 2003、および Windows Vista より前のオペレーティング システム ローダー依存 Dll を検索、アプリケーションのローカル フォルダーまたはシステム パスで指定した別のフォルダーのいずれかで。 Windows XP、Windows Server 2003、および Windows Vista の場合で、オペレーティング システム ローダーを使用して依存 Dll の検索もできます、[マニフェスト](/windows/desktop/sbscs/manifests)ファイルとこれらの Dll を含むサイド バイ サイド アセンブリを検索します。
+AC++アプリケーションは、アプリケーションのさまざまな部分の 1 つまたは複数の Dll を使用します。 、実行時に、メイン プロセスに Dll が読み込まれ、必要なコードが実行されます。 アプリケーションは、要求された Dll を見つけ、読み込むと、要求された DLL と共にロードがあるその他の依存 Dll を理解するには、オペレーティング システムに依存します。 Windows オペレーティング システムのバージョンで Windows XP、Windows Server 2003、および Windows Vista より前のオペレーティング システム ローダー依存 Dll を検索、アプリケーションのローカル フォルダーまたはシステム パスで指定した別のフォルダーのいずれかで。 Windows XP、Windows Server 2003、および Windows Vista の場合で、オペレーティング システム ローダーを使用して依存 Dll の検索もできます、[マニフェスト](/windows/desktop/sbscs/manifests)ファイルとこれらの Dll を含むサイド バイ サイド アセンブリを検索します。
 
 既定で、Visual Studio を使用して、DLL のビルド時に、[アプリケーション マニフェスト](/windows/desktop/SbsCs/application-manifests)ID 2 RT_MANIFEST のリソースとして埋め込まれています。 、実行可能ファイルと同じ動作は、このマニフェストは、他のアセンブリでこの DLL の依存関係を記述します。 これには、DLL でサイド バイ サイド アセンブリの一部でないし、この DLL に依存するアプリケーションは、アプリケーション マニフェストを使用して、読み込んでが代わりに、システム パスにこの DLL を検索するオペレーティング システム ローダーに依存するしないことが前提としています。
 

@@ -1,43 +1,76 @@
 ---
 title: コンパイルするには c++/cli プログラムを CLR を対象とします。
-ms.date: 09/17/2018
+description: 使用して、MicrosoftC++ネイティブ プログラムと接続できるライブラリを作成するC++コードや .NET プログラムです。
+ms.date: 04/23/2019
 helpviewer_keywords:
 - command-line applications [C++], managed code
 - compiling programs [C++]
 - Visual C++, managed code
 - managed code [C++]
 ms.assetid: 339f89df-a5d2-4040-831a-ddbe25b5dce4
-ms.openlocfilehash: fcac0079185b6ceef981b9acfeb555ef29d464e0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8462b2b031bdcdebf65d58974c521d80e57d856d
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384401"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221805"
 ---
 # <a name="walkthrough-compile-a-ccli-program-that-targets-the-clr-in-visual-studio"></a>チュートリアル: コンパイルするには c++/cli プログラムを Visual Studio で CLR を対象とします。
 
-C + を使用して/cli 言語拡張 .NET クラスを使用し、Visual Studio 開発環境を使用してコンパイルする C プログラムを作成することができます。
+使用してC++/作成できる CLIC++ネイティブと .NET クラスを使用するプログラムC++型。 C++/CLI ネイティブをラップする Dll およびコンソール アプリケーションで使用されるC++コードし、.NET プログラムからアクセスできるようにします。 .NET ベースの Windows ユーザー インターフェイスを作成するには、使用C#または Visual Basic です。 
 
 この手順では、C++ プログラムを入力するか、サンプル プログラムのいずれかを使用します。 この手順で使用するサンプル プログラムでは、textfile.txt という名前のテキスト ファイルを作成し、プロジェクト ディレクトリに保存します。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-これらのトピックは、C++ 言語の基本を理解していることを前提としています。
+- C++ 言語の基本の理解。
+- Visual Studio 2017 以降では、 C++CLI のサポートは、オプションのコンポーネント/。 これをインストールするには、開く、 **Visual Studio インストーラー** Windows [スタート] メニューから。 確認します、**によるデスクトップ開発C++** タイルがチェックされ、し、 **(省略可能)** コンポーネント セクションもチェック **C++CLI サポート**します。
 
-### <a name="to-create-a-new-project-in-visual-studio-and-add-a-new-source-file"></a>Visual Studio で新しいプロジェクトを作成して新しいソース ファイルを追加するには
+## <a name="create-a-new-project"></a>新しいプロジェクトを作成する
+
+次の手順は、使用して Visual Studio のバージョンによって異なります。 左上隅の [バージョン] セレクターのこのページが正しく設定することを確認します。
+
+::: moniker range="vs-2019"
+
+### <a name="to-create-a-ccli-project-in-visual-studio-2019"></a>作成する、 C++/CLI プロジェクトで Visual Studio 2019
+
+1. **ソリューション エクスプ ローラー**、開く上部を右クリックし、**新しいプロジェクトを作成** ダイアログ ボックス。
+
+1. ダイアログ ボックスの上部にある次のように入力します。 **CLR** 、検索ボックスをクリック**CLR 空プロジェクト**結果リストから。 
+
+1. 選択、**作成**プロジェクトを作成するボタンをクリックします。
+
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+### <a name="to-create-a-ccli-project-in-visual-studio-2017"></a>作成する、 C++/CLI プロジェクトで Visual Studio 2017
 
 1. 新しいプロジェクトを作成します。 **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。
 
 1. Visual C++ プロジェクトの種類から、**[CLR]**、**[CLR 空プロジェクト]** の順にクリックします。
 
-   > [!NOTE]
-   > プロジェクトの種類として **[CLR 空プロジェクト]** (Visual Studio 2017 のみ) がない場合は、**[新しいプロジェクト]** ダイアログ ボックスの左ウィンドウで、**[Visual Studio インストーラーを開く]** を選択します。 **[省略可能]** コンポーネント セクションの **[C++ によるデスクトップ開発]** で、"**C++/CLI サポート**" という名前のオプションをインストールします。<br/>
+1. プロジェクト名を入力します。 既定では、プロジェクトを含むソリューションは新しいプロジェクトと同じ名前になりますが、別の名前を入力してもかまいません。 必要に応じて、プロジェクトの場所として別の場所を入力することもできます。
 
-1. プロジェクト名を入力します。
+1. **[OK]** をクリックして、新しいプロジェクトを作成します。
 
-   既定では、プロジェクトを含むソリューションは新しいプロジェクトと同じ名前になりますが、別の名前を入力してもかまいません。 必要に応じて、プロジェクトの場所として別の場所を入力することもできます。
+::: moniker-end
 
-   **[OK]** をクリックして、新しいプロジェクトを作成します。
+::: moniker range="vs-2015"
+
+### <a name="to-create-a-ccli-project-in-visual-studio-2015"></a>作成する、 C++/CLI プロジェクトで Visual Studio 2015
+
+1. 新しいプロジェクトを作成します。 **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。
+
+1. Visual C++ プロジェクトの種類から、**[CLR]**、**[CLR 空プロジェクト]** の順にクリックします。
+
+1. プロジェクト名を入力します。 既定では、プロジェクトを含むソリューションは新しいプロジェクトと同じ名前になりますが、別の名前を入力してもかまいません。 必要に応じて、プロジェクトの場所として別の場所を入力することもできます。
+
+1. **[OK]** をクリックして、新しいプロジェクトを作成します。
+
+::: moniker-end
+
+## <a name="add-a-source-file"></a>ソース ファイルを追加します。
 
 1. **ソリューション エクスプローラー**が表示されていない場合は、**[表示]** メニューの **[ソリューション エクスプローラー]** をクリックします。
 
@@ -57,7 +90,7 @@ C + を使用して/cli 言語拡張 .NET クラスを使用し、Visual Studio 
 
    `StreamWriter^ sw = gcnew StreamWriter(fileName);`
 
-   新しい Visual C++ 構文の詳細については、「[ランタイム プラットフォームのコンポーネントの拡張機能](../extensions/component-extensions-for-runtime-platforms.md)」を参照してください。
+   詳細についてはC++/CLI 構文を参照してください[Component Extensions for Runtime Platforms](../extensions/component-extensions-for-runtime-platforms.md)します。
 
 1. **[ビルド]** メニューの **[ソリューションのビルド]** をクリックします。
 

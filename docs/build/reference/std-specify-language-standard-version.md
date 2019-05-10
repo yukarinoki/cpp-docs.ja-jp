@@ -6,12 +6,12 @@ f1_keywords:
 - -std
 - VC.Project.VCCLCompilerTool.CppLanguageStandard
 ms.assetid: 0acb74ba-1aa8-4c05-b96c-682988dc19bd
-ms.openlocfilehash: 32c63240f578b6170ae351cdf0cd1628167464b6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: de3389a52781f541143268e3ede79eae375ff1d3
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317888"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446228"
 ---
 # <a name="std-specify-language-standard-version"></a>/std (言語標準バージョンの指定)
 
@@ -48,10 +48,10 @@ ms.locfileid: "62317888"
 
 C++ のコンパイル時に影響する **/Std** オプションは [\_MSVC\_LANG](../../preprocessor/predefined-macros.md)プリプロセッサ マクロを使用することで検出できます。 詳細については、[プリプロセッサ マクロ](../../preprocessor/predefined-macros.md)を参照してください。
 
-**/Std:c + + + 14** と **/std:c + + latent**  オプションは、Visual C++ 2015 Update 3 以降で使用可能です。 **/Std:c + + 17** オプションは、Visual C++ 2017 バージョン 15.3 以降で使用できます。 上述したようにいくつかのC++17の標準的な機能は **/std:c + + + 14** オプションで使用可能ですが、 **/std:c + + 17** オプションでその他のすべてのC++17の機能が使用可能になります。
+**/Std:c + + 14**と **/std:c + + 最新**オプションは、Visual Studio 2015 Update 3 以降を使用できます。 **/Std:c + + 17**オプションは、Visual Studio 2017 バージョン 15.3 以降を使用できます。 上述したようにいくつかのC++17の標準的な機能は **/std:c + + + 14** オプションで使用可能ですが、 **/std:c + + 17** オプションでその他のすべてのC++17の機能が使用可能になります。
 
 > [!NOTE]
-> MSVC コンパイラ バージョンまたは更新プログラム レベルに応じて特定の C++ 14 または c++ 17 機能は完全に実装できませんまたは完全に準拠するを指定すると、 **/std:c + + 14**または **/std:c + + 17**オプション。 例えば、Visual C++ 2017 RTM コンパイラは `constexpr`、SFINAE 式、2-phase name lookupについて、c++ 14 の準拠が不完全です。 Visual C++ のリリース バージョンでの C++ 言語準拠の概要については、[Visual c 言語への準拠](../../overview/visual-cpp-language-conformance.md)を参照してください。
+> MSVC コンパイラ バージョンまたは更新プログラム レベルに応じて特定の C++ 14 または c++ 17 機能は完全に実装できませんまたは完全に準拠するを指定すると、 **/std:c + + 14**または **/std:c + + 17**オプション。 など、Visual Studio 2017 RTM コンパイラで c++ 14 の準拠が完全にサポートされていない`constexpr`、式 SFINAE、または 2 段階名前検索します。 Visual C++ のリリース バージョンでの C++ 言語準拠の概要については、[Visual c 言語への準拠](../../overview/visual-cpp-language-conformance.md)を参照してください。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 

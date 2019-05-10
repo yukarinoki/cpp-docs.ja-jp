@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3867
 ms.assetid: bc5de03f-e01a-4407-88c3-2c63f0016a1e
-ms.openlocfilehash: 9308e238c86c7b8a957720228a823688fac289d3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9a5094b6c3d914c2f66ee8ed94bcdcce5827f130
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62242880"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447188"
 ---
 # <a name="compiler-error-c3867"></a>コンパイラ エラー C3867
 
@@ -19,7 +19,7 @@ ms.locfileid: "62242880"
 
 メンバー関数をクラス名とアドレス演算子で修飾せずに、メンバー関数のアドレスを取得しようとしました。
 
-このエラーは、ポインターからメンバーへの準拠が強化された Visual C++ 2005 で実施されたコンパイラ準拠作業の結果として生成されることもあります。 Visual C++ 2005 より前にコンパイルされたコードで C3867 が生成されるようになりました。
+このエラーは、for Visual Studio 2005 で行ったコンパイラ準拠作業の結果として生成することもできます。 準拠が強化されたメンバーへのポインター。 Visual Studio 2005 より前にコンパイルされたコードには C3867 が生成されるようになりました。
 
 ## <a name="example"></a>例
 

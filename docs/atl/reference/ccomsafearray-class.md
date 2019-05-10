@@ -1,6 +1,6 @@
 ---
 title: CComSafeArray クラス
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 f1_keywords:
 - CComSafeArray
 - ATLSAFE/ATL::CComSafeArray
@@ -28,12 +28,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComSafeArray class
 ms.assetid: ee349aef-33db-4c85-bd08-5d86a3c9d53a
-ms.openlocfilehash: 0262764c950b01acdb610873a995a9a6fd912997
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: dec6bbad0aa4a8409b9f3d24476dcc94b8eaefe3
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62259444"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221159"
 ---
 # <a name="ccomsafearray-class"></a>CComSafeArray クラス
 
@@ -122,8 +122,8 @@ class CComSafeArray
 |VT_UI4|uint|
 |VT_UI4|ulong|
 |VT_UI8|ulonglong|
-|VT_R4|フローティング|
-|VT_R8|二重線|
+|VT_R4|float|
+|VT_R8|double|
 |VT_DECIMAL|10 進ポインター|
 |VT_VARIANT|バリアント ポインター|
 |VT_CY|Currency データ型|
@@ -211,7 +211,8 @@ CComSafeArray(const SAFEARRAY* psaSrc);
 ### <a name="parameters"></a>パラメーター
 
 *バインドされています。*<br/>
-`SAFEARRAYBOUND` 構造。
+
+  `SAFEARRAYBOUND` 構造。
 
 *ulCount*<br/>
 配列の要素数。
@@ -318,7 +319,7 @@ HRESULT Create(ULONG ulCount = 0, LONG lLBound = 0);
 
 ### <a name="remarks"></a>Remarks
 
-A`CComSafeArray`既存のオブジェクトを作成できる`SAFEARRAYBOUND`構造体、または、配列と下限の境界内の要素の数を指定することで、ディメンションの数。 配列は、Visual C からアクセスするのには、下限が 0 になります。 他の言語は、下限の境界 (たとえば、-10 ~ 10 などの範囲を持つ要素を Visual Basic のサポート配列) の他の値を許可する可能性があります。
+A`CComSafeArray`既存のオブジェクトを作成できる`SAFEARRAYBOUND`構造体、または、配列と下限の境界内の要素の数を指定することで、ディメンションの数。 アクセスする場合は、配列C++、下限が 0 にする必要があります。 他の言語は、下限の境界 (たとえば、-10 ~ 10 などの範囲を持つ要素を Visual Basic のサポート配列) の他の値を許可する可能性があります。
 
 ##  <a name="destroy"></a>  CComSafeArray::Destroy
 
@@ -459,8 +460,8 @@ VARTYPE GetType() const;
 |VT_UI4|uint|
 |VT_UI4|ulong|
 |VT_UI8|ulonglong|
-|VT_R4|フローティング|
-|VT_R8|二重線|
+|VT_R4|float|
+|VT_R8|double|
 |VT_DECIMAL|10 進ポインター|
 |VT_VARIANT|バリアント ポインター|
 |VT_CY|Currency データ型|

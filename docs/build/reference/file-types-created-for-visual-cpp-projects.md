@@ -1,5 +1,5 @@
 ---
-title: Visual C++ プロジェクトに対して作成されるファイルの種類
+title: Visual Studio のファイルの種類を作成C++プロジェクト
 ms.date: 04/08/2019
 helpviewer_keywords:
 - header files [C++], Visual Studio projects
@@ -14,12 +14,12 @@ helpviewer_keywords:
 - .def files
 - licensing ActiveX controls
 ms.assetid: 2b0ee2e0-ae81-4185-9bb9-11da3c99a283
-ms.openlocfilehash: eee53acbb8b0b8432a7d5819fb773b616f0e8897
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 42040854b7a038ebe32d67e305c947d095d5391a
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62271167"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446292"
 ---
 # <a name="file-types-created-for-visual-studio-c-projects"></a>Visual Studio の C++ プロジェクトに対して作成されるファイルの種類
 
@@ -50,16 +50,16 @@ Visual Studio プロジェクトを作成する場合は、新しいソリュー
 |ファイル拡張子|型|目次|
 |--------------------|----------|--------------|
 |.asmx|ソース|配置ファイル。|
-|.asp|Source|ASP (Active Server Page) ファイル。|
+|.asp|ソース|ASP (Active Server Page) ファイル。|
 |.atp|プロジェクト|アプリケーション テンプレート プロジェクト ファイル。|
 |.bmp、.dib、.gif、.jpg、.jpe、.png|リソース|一般的なイメージ ファイル。|
 |.bsc|コンパイル|ブラウザー コード ファイル。|
-|.cpp、.c|Source|アプリケーションの主要なソース コード ファイル。|
+|.cpp、.c|ソース|アプリケーションの主要なソース コード ファイル。|
 |.cur|リソース|カーソルのビットマップ グラフィック ファイル。|
 |.dbp|プロジェクト|データベース プロジェクト ファイル。|
-|.disco|Source|動的探索ドキュメント ファイル。 XML Web サービス探索を処理します。|
+|.disco|ソース|動的探索ドキュメント ファイル。 XML Web サービス探索を処理します。|
 |.exe、.dll|プロジェクト|実行可能ファイルまたはダイナミック リンク ライブラリ ファイル。|
-|.h|Source|ヘッダー ファイルまたはインクルード ファイル。|
+|.h|ソース|ヘッダー ファイルまたはインクルード ファイル。|
 |.htm、.html、.xsp、.asp、.htc、.hta、.xml|リソース|共通 Web ファイル。|
 |.HxC|プロジェクト|ヘルプ プロジェクト ファイル。|
 |.ico|リソース|アイコンのビットマップ グラフィック ファイル。|

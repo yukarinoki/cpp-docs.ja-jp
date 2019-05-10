@@ -21,12 +21,12 @@ helpviewer_keywords:
 - properties [C++], resources
 - resources [C++], properties
 ms.assetid: e20a29ec-d6fb-4ead-98f3-431a0e23aaaf
-ms.openlocfilehash: 774575e978a8e7f94868eb1b5dad90c6ac345460
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a752122d89b3d952aec664f0dec092af1599f143
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388177"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448919"
 ---
 # <a name="resource-editors-c"></a>リソース エディター (C++)
 
@@ -39,15 +39,15 @@ ms.locfileid: "62388177"
 
 |使用|編集|
 |----------------|----------------|
-|[アクセラレータ エディター](../windows/accelerator-editor.md)|アクセラレータ テーブル (Visual C++ プロジェクトでの)|
+|[アクセラレータ エディター](../windows/accelerator-editor.md)|Visual Studio でアクセラレータ テーブルC++プロジェクト。|
 |[Binary Editor](binary-editor.md)|Visual C++、Visual Basic、または Visual C# プロジェクトのバイナリ データの情報およびカスタム リソース。|
-|[ダイアログ エディター](../windows/dialog-editor.md)|ダイアログ ボックス (Visual C++ プロジェクトでの)|
+|[ダイアログ エディター](../windows/dialog-editor.md)|Visual Studio のダイアログ ボックスC++プロジェクト。|
 |[Image Editor](../windows/image-editor-for-icons.md)|Visual C++、Visual Basic、または Visual C# プロジェクトのビットマップ、アイコン、カーソル、およびその他のイメージ ファイル。|
-|[メニュー エディター](../windows/menu-editor.md)|Visual C++ プロジェクトのメニュー リソース。|
+|[メニュー エディター](../windows/menu-editor.md)|Visual Studio でメニュー リソースC++プロジェクト。|
 |[Ribbon エディター](../mfc/ribbon-designer-mfc.md)|MFC プロジェクトのリボン リソース。|
-|[ストリング エディター](../windows/string-editor.md)|文字列テーブル (Visual C++ プロジェクトでの)|
-|[ツール バー エディター](../windows/toolbar-editor.md)|Visual C++ プロジェクトのツール バー リソース。 **ツール バー エディター**の一部である、**イメージ エディター**します。|
-|[バージョン エディター](../windows/version-information-editor.md)|Visual C++ プロジェクトのバージョン情報です。|
+|[ストリング エディター](../windows/string-editor.md)|Visual Studio でのテーブルの文字列C++プロジェクト。|
+|[ツール バー エディター](../windows/toolbar-editor.md)|Visual Studio のツール バー リソースC++プロジェクト。 **ツール バー エディター**の一部である、**イメージ エディター**します。|
+|[バージョン エディター](../windows/version-information-editor.md)|Visual Studio のバージョン情報C++プロジェクト。|
 
 > [!NOTE]
 > 場合は、プロジェクトに .rc ファイル含まれていないを参照してください[方法。リソースを作成する](../windows/how-to-create-a-resource-script-file.md)します。

@@ -4,12 +4,12 @@ ms.date: 04/22/2019
 helpviewer_keywords:
 - warnings, by compiler version
 - cl.exe compiler, setting warning options
-ms.openlocfilehash: a84c3f14b8e6a6c877a13c3c9b1b851b0fc5ad05
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: e417de57292e4b21d81e8d6643ba77d8b169af07
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62359905"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448178"
 ---
 # <a name="compiler-warnings-by-compiler-version"></a>コンパイラのバージョンによるコンパイラの警告
 
@@ -19,25 +19,25 @@ ms.locfileid: "62359905"
 
 | 製品 | コンパイラのバージョン番号 |
 |-|-|
-| Visual C 2002 | 13.00.9466 |
-| Visual C 2003 | 13.10.3077 |
-| Visual C++ 2005 | 14.00.50727.762 |
-| Visual C++ 2008 | 15.00.21022.08 |
-| Visual C++ 2010 | 16.00.40219.01 |
-| Visual C 2012 | 17.00.51106.1 |
-| Visual C 2013 | 18.00.21005.1 |
-| ビジュアルの C++ 2015 RTM | 19.00.23026.0 |
-| Visual C 2015 Update 1 | 19.00.23506.0 |
-| Visual C 2015 Update 2 | 19.00.23918.0 |
-| Visual C 2015 Update 3 | 19.00.24215.1 |
-| ビジュアルの C++ 2017 RTM | 19.10.25017.0 |
-| Visual C 2017 バージョン 15.3 | 19.11.25506.0 |
-| Visual C 2017 バージョン 15.5 | 19.12.25830.0 |
-| Visual C 2017 バージョン 15.6 | 19.13.26128.0 |
-| Visual C 2017 バージョン 15.7 | 19.14.26428.0 |
-| Visual C 2017 バージョン 15.8 | 19.15.26726.0 |
-| Visual C 2017 バージョン 15.9 | 19.16.26926.0 |
-| ビジュアルの C++ 2019 RTM | 19.20.27004.0 |
+| Visual Studio 2002 | 13.00.9466 |
+| Visual Studio 2003 | 13.10.3077 |
+| Visual Studio 2005 | 14.00.50727.762 |
+| Visual Studio 2008 | 15.00.21022.08 |
+| Visual Studio 2010 | 16.00.40219.01 |
+| Visual Studio 2012 | 17.00.51106.1 |
+| Visual Studio 2013 | 18.00.21005.1 |
+| Visual Studio 2015 RTM | 19.00.23026.0 |
+| Visual Studio 2015 更新プログラム 1 | 19.00.23506.0 |
+| Visual Studio 2015 更新プログラム 2 | 19.00.23918.0 |
+| Visual Studio 2015 更新プログラム 3 | 19.00.24215.1 |
+| Visual Studio 2017 RTM | 19.10.25017.0 |
+| Visual Studio 2017 バージョン 15.3 | 19.11.25506.0 |
+| Visual Studio 2017 バージョン 15.5 | 19.12.25830.0 |
+| Visual Studio 2017 バージョン 15.6 | 19.13.26128.0 |
+| Visual Studio 2017 バージョン 15.7 | 19.14.26428.0 |
+| Visual Studio 2017 バージョン 15.8 | 19.15.26726.0 |
+| Visual Studio 2017 バージョン 15.9 | 19.16.26926.0 |
+| Visual Studio 2019 RTM | 19.20.27004.0 |
 
 メジャー番号のみ、メジャーおよびマイナー番号、またはメジャー、マイナーを指定し、ためにビルド番号、`/Wv`オプション。 コンパイラは、指定した数値で始まるバージョンに一致するすべての警告を報告し、指定した数よりも大きいバージョンのすべての警告を抑制します。 たとえば、`/Wv:17`中または任意のバージョンの Visual Studio 2012 では前に、導入された警告を報告し、Visual Studio 2013 (バージョン 18) から、またはそれ以降の任意のコンパイラで導入された警告を抑制します。 Visual Studio 2015 で導入された警告の update 2 を抑制して、使用することができます`/Wv:19.00.23506`します。 使用`/Wv:19.11`Visual Studio 2017 バージョン 15.5 では、前に Visual Studio の任意のバージョンで導入された警告を報告しますが、Visual Studio 2017 バージョン 15.5 以降で導入された警告を非表示にします。
 
@@ -45,7 +45,7 @@ ms.locfileid: "62359905"
 
 ::: moniker range=">= vs-2019"
 
-## <a name="warnings-introduced-in-visual-c-2019-rtw-compiler-version-1920270040"></a>ビジュアルで導入された警告C++2019 RTW (コンパイラ バージョン 19.20.27004.0)
+## <a name="warnings-introduced-in-visual-studio-2019-rtw-compiler-version-1920270040"></a>Visual Studio 2019 RTW (コンパイラ バージョン 19.20.27004.0) で導入された警告
 
 コンパイラ オプションを使用してこれらの警告と以降のバージョンですべての警告を抑制`/Wv:19.15`します。
 
@@ -57,7 +57,7 @@ ms.locfileid: "62359905"
 ::: moniker range=">= vs-2017"
 
 
-## <a name="warnings-introduced-in-visual-c-2017-version-158-compiler-version-1915267260"></a>Visual C 2017 15.8 (コンパイラ バージョン 19.15.26726.0) のバージョンで導入された警告
+## <a name="warnings-introduced-in-visual-studio-2017-version-158-compiler-version-1915267260"></a>Visual Studio 2017 バージョン 15.8 (コンパイラ バージョン 19.15.26726.0) で導入された警告
 
 コンパイラ オプションを使用してこれらの警告と以降のバージョンですべての警告を抑制`/Wv:19.14`します。
 
@@ -83,7 +83,7 @@ ms.locfileid: "62359905"
 | C5106 | `macro redefined with different parameter names` |
 | C5107 | `missing terminating 'char' character` |
 
-## <a name="warnings-introduced-in-visual-c-2017-version-157-compiler-version-1914264280"></a>Visual C 2017 バージョン 15.7 (コンパイラ バージョン 19.14.26428.0) で導入された警告
+## <a name="warnings-introduced-in-visual-studio-2017-version-157-compiler-version-1914264280"></a>Visual Studio 2017 バージョン 15.7 (コンパイラ バージョン 19.14.26428.0) で導入された警告
 
 コンパイラ オプションを使用してこれらの警告と以降のバージョンですべての警告を抑制`/Wv:19.13`します。
 
@@ -92,7 +92,7 @@ ms.locfileid: "62359905"
 | C4642 | `'issue': could not import the constraints for generic parameter 'parameter'` |
 | C5045 | `Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified` |
 
-## <a name="warnings-introduced-in-visual-c-2017-version-156-compiler-version-1913261280"></a>Visual C 2017 バージョン 15.6 (コンパイラ バージョン 19.13.26128.0) で導入された警告
+## <a name="warnings-introduced-in-visual-studio-2017-version-156-compiler-version-1913261280"></a>Visual Studio 2017 バージョン 15.6 (コンパイラ バージョン 19.13.26128.0) で導入された警告
 
 コンパイラ オプションを使用してこれらの警告と以降のバージョンですべての警告を抑制`/Wv:19.12`します。
 
@@ -100,7 +100,7 @@ ms.locfileid: "62359905"
 |-|-|
 | C5044 | `An argument to command-line option option points to a path 'path' that does not exist` |
 
-## <a name="warnings-introduced-in-visual-c-2017-version-155-compiler-version-1912258300"></a>Visual C 2017 バージョン 15.5 (コンパイラ バージョン 19.12.25830.0) で導入された警告
+## <a name="warnings-introduced-in-visual-studio-2017-version-155-compiler-version-1912258300"></a>Visual Studio 2017 バージョン 15.5 (コンパイラ バージョン 19.12.25830.0) で導入された警告
 
 コンパイラ オプションを使用してこれらの警告と以降のバージョンですべての警告を抑制`/Wv:19.11`します。
 
@@ -114,7 +114,7 @@ ms.locfileid: "62359905"
 | C5042 | `'declaration': function declarations at block scope cannot be specified 'inline' in standard C++; remove 'inline' specifier` |
 | C5043 | `'specification': exception specification does not match previous declaration` |
 
-## <a name="warnings-introduced-in-visual-c-2017-version-153-compiler-version-1911255060"></a>Visual C 2017 バージョン 15.3 (コンパイラ バージョン 19.11.25506.0) で導入された警告
+## <a name="warnings-introduced-in-visual-studio-2017-version-153-compiler-version-1911255060"></a>Visual Studio 2017 バージョン 15.3 (コンパイラ バージョン 19.11.25506.0) で導入された警告
 
 コンパイラ オプションを使用してこれらの警告と以降のバージョンですべての警告を抑制`/Wv:19.10`します。
 
@@ -135,7 +135,7 @@ ms.locfileid: "62359905"
 | C5037 | `'*member-function*': an out-of-line definition of a member of a class template cannot have default arguments` |
 | C5038 | `data member 'member1' will be initialized after data member 'member2'` |
 
-## <a name="warnings-introduced-in-visual-c-2017-rtm-compiler-version-1910250170"></a>Visual C 2017 RTM (コンパイラ バージョン 19.10.25017.0) で導入された警告
+## <a name="warnings-introduced-in-visual-studio-2017-rtm-compiler-version-1910250170"></a>Visual Studio 2017 RTM (コンパイラ バージョン 19.10.25017.0) で導入された警告
 
 コンパイラ オプションを使用してこれらの警告と以降のバージョンですべての警告を抑制`/Wv:19.00`します。
 
@@ -148,7 +148,7 @@ ms.locfileid: "62359905"
 
 ::: moniker-end
 
-## <a name="warnings-introduced-in-visual-c-2015-update-3-compiler-version-1900242151"></a>Visual C 2015 Update 3 (コンパイラ バージョン 19.00.24215.1) で導入された警告
+## <a name="warnings-introduced-in-visual-studio-2015-update-3-compiler-version-1900242151"></a>Visual Studio 2015 Update 3 (コンパイラ バージョン 19.00.24215.1) で導入された警告
 
 コンパイラ オプションを使用してこれらの警告と以降のバージョンですべての警告を抑制`/Wv:19.00.23918`します。
 
@@ -159,7 +159,7 @@ ms.locfileid: "62359905"
 | C4598 | `'#include <header>': header number number in the source does not match source at that position` |
 | C4599 | `'argument': source argument number number does not match source` |
 
-## <a name="warnings-introduced-in-visual-c-2015-update-2-compiler-version-1900239180"></a>Visual C 2015 Update 2 (コンパイラ バージョン 19.00.23918.0) で導入された警告
+## <a name="warnings-introduced-in-visual-studio-2015-update-2-compiler-version-1900239180"></a>Visual Studio 2015 Update 2 (コンパイラ バージョン 19.00.23918.0) で導入された警告
 
 コンパイラ オプションを使用してこれらの警告と以降のバージョンですべての警告を抑制`/Wv:19.00.23506`します。
 
@@ -170,7 +170,7 @@ ms.locfileid: "62359905"
 | C4828 | `The file contains a character starting at offset 0xvalue that is illegal in the current source character set (codepage number).` |
 | C4868 | `compiler may not enforce left-to-right evaluation order in braced initializer list` |
 
-## <a name="warnings-introduced-in-visual-c-2015-update-1-compiler-version-1900235060"></a>Visual C 2015 Update 1 (コンパイラ バージョン 19.00.23506.0) で導入された警告
+## <a name="warnings-introduced-in-visual-studio-2015-update-1-compiler-version-1900235060"></a>Visual Studio 2015 Update 1 (コンパイラ バージョン 19.00.23506.0) で導入された警告
 
 コンパイラ オプションを使用してこれらの警告と以降のバージョンですべての警告を抑制`/Wv:19.00.23026`します。
 
@@ -181,7 +181,7 @@ ms.locfileid: "62359905"
 | C5031 | `#pragma warning(pop): likely mismatch, popping warning state pushed in different file` |
 | C5032 | `detected #pragma warning(push) with no corresponding #pragma warning(pop)` |
 
-## <a name="warnings-introduced-in-visual-c-2015-rtm-compiler-version-1900230260"></a>Visual C 2015 RTM (コンパイラ バージョン 19.00.23026.0) で導入された警告
+## <a name="warnings-introduced-in-visual-studio-2015-rtm-compiler-version-1900230260"></a>Visual Studio 2015 RTM (コンパイラ バージョン 19.00.23026.0) で導入された警告
 
 コンパイラ オプションを使用してこれらの警告と以降のバージョンですべての警告を抑制`/Wv:18`します。
 
@@ -240,7 +240,7 @@ ms.locfileid: "62359905"
 | C5029 | `nonstandard extension used: alignment attributes in C++ apply to variables, data members and tag types only` |
 | C5030 | `attribute 'attribute' is not recognized` |
 
-## <a name="warnings-introduced-in-visual-c-2013-compiler-version-1800210051"></a>Visual C 2013 (コンパイラ バージョン 18.00.21005.1) で導入された警告
+## <a name="warnings-introduced-in-visual-studio-2013-compiler-version-1800210051"></a>Visual Studio 2013 (コンパイラ バージョン 18.00.21005.1) で導入された警告
 
 コンパイラ オプションを使用してこれらの警告と以降のバージョンですべての警告を抑制`/Wv:17`します。
 
@@ -269,7 +269,7 @@ ms.locfileid: "62359905"
 | C4991 | `Warbird: function 'declaration' marked as __forceinline not inlined because protection level of inlinee is greater than the parent` |
 | C4992 | `Warbird: function 'declaration' marked as __forceinline not inlined because it contains inline assembly which cannot be protected` |
 
-## <a name="warnings-introduced-in-visual-c-2012-compiler-version-1700511061"></a>Visual C 2012 (コンパイラ バージョン 17.00.51106.1 である) で導入された警告
+## <a name="warnings-introduced-in-visual-studio-2012-compiler-version-1700511061"></a>Visual Studio 2012 (コンパイラ バージョン 17.00.51106.1 である) で導入された警告
 
 コンパイラ オプションを使用してこれらの警告と以降のバージョンですべての警告を抑制`/Wv:16`します。
 
@@ -312,7 +312,7 @@ ms.locfileid: "62359905"
 | C4988 | `'type': variable declared outside class/function scope` |
 | C4989 | `'description': type has conflicting definitions.` |
 
-## <a name="warnings-introduced-in-visual-c-2010-compiler-version-16004021901"></a>Visual C 2010 (コンパイラ バージョン 16.00.40219.01) で導入された警告
+## <a name="warnings-introduced-in-visual-studio-2010-compiler-version-16004021901"></a>Visual Studio 2010 (コンパイラ バージョン 16.00.40219.01) で導入された警告
 
 コンパイラ オプションを使用してこれらの警告と以降のバージョンですべての警告を抑制`/Wv:15`します。
 
@@ -328,7 +328,7 @@ ms.locfileid: "62359905"
 | C4986 | `'declaration': exception specification does not match previous declaration` |
 | C4987 | `nonstandard extension used: 'throw (...)'` |
 
-## <a name="warnings-introduced-in-visual-c-2008-compiler-version-15002102208"></a>Visual C 2008 (コンパイラ バージョン 15.00.21022.08) で導入された警告
+## <a name="warnings-introduced-in-visual-studio-2008-compiler-version-15002102208"></a>Visual Studio 2008 (コンパイラ バージョン 15.00.21022.08) で導入された警告
 
 コンパイラ オプションを使用してこれらの警告と以降のバージョンですべての警告を抑制`/Wv:14`します。
 
@@ -343,7 +343,7 @@ ms.locfileid: "62359905"
 | C4910 | `'type': '__declspec(dllexport)' and 'extern' are incompatible on an explicit instantiation` |
 | C4985 | `'declaration': attributes not present on previous declaration.` |
 
-## <a name="warnings-introduced-in-visual-c-2005-compiler-version-140050727762"></a>Visual C 2005 (コンパイラ バージョン 14.00.50727.762) で導入された警告
+## <a name="warnings-introduced-in-visual-studio-2005-compiler-version-140050727762"></a>Visual Studio 2005 (コンパイラ バージョン 14.00.50727.762) で導入された警告
 
 コンパイラ オプションを使用してこれらの警告と以降のバージョンですべての警告を抑制`/Wv:13`します。
 
@@ -486,7 +486,7 @@ ms.locfileid: "62359905"
 | C4971 | `Argument order: <target object>, <target function> for delegate constructor is deprecated, use <target function>, <target object>` |
 | C4972 | `Directly modifying or treating the result of an unbox operation as an lvalue is unverifiable` |
 
-## <a name="warnings-introduced-in-visual-c-2003-compiler-version-13103077"></a>Visual C 2003 (コンパイラ バージョン 13.10.3077) で導入された警告
+## <a name="warnings-introduced-in-visual-studio-2003-compiler-version-13103077"></a>Visual Studio 2003 (コンパイラ バージョン 13.10.3077) で導入された警告
 
 コンパイラ オプションを使用してこれらの警告と以降のバージョンですべての警告を抑制`/Wv:13.00.9466`します。
 
@@ -522,7 +522,7 @@ ms.locfileid: "62359905"
 | C4953 | `Inlinee 'description' has been edited since profile data was collected, profile data not used` |
 | C4954 | `'description': not profiled (contains __int64 switch expression)` |
 
-## <a name="warnings-introduced-in-visual-c-2002-compiler-version-13009466"></a>Visual C 2002 (コンパイラ バージョン 13.00.9466) で導入された警告
+## <a name="warnings-introduced-in-visual-studio-2002-compiler-version-13009466"></a>Visual Studio 2002 (コンパイラ バージョン 13.00.9466) で導入された警告
 
 コンパイラ オプションを使用してこれらの警告と以降のバージョンですべての警告を抑制`/Wv:12`します。
 

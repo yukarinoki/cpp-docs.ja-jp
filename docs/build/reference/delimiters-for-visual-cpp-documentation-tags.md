@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - XML documentation, delimiters
 ms.assetid: debfbdd9-63fa-4c58-a18e-a4d203d241d7
-ms.openlocfilehash: fec10171270a76ed90e2a7459103a148af0ba735
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: a5a0534ba74cc9b125e94d4ece133c2449700a67
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272166"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446536"
 ---
 # <a name="delimiters-for-visual-c-documentation-tags"></a>Visual C++ ドキュメント タグの区切り記号
 
@@ -19,7 +19,7 @@ XML ドキュメント タグでは、次の種類の区切り記号を使用で
 
 | | |
 |-|-|
-| `///` | これは、ドキュメント例に示されている形式であり、Visual C++ プロジェクト テンプレートで使用されます。  |
+| `///` | これは、ドキュメントの例に示すように、Visual Studio によって使用される形式C++プロジェクト テンプレート。  |
 | `/** */`  | これらは複数行の区切り記号です。  |
 
 `/** */` 区切り記号を使用する場合は、次のいくつかの書式設定規則があります。

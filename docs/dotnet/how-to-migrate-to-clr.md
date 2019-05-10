@@ -10,12 +10,12 @@ helpviewer_keywords:
 - migration [C++], /clr compiler option
 - /clr compiler option [C++], porting to
 ms.assetid: c9290b8b-436a-4510-8b56-eae51f4a9afc
-ms.openlocfilehash: 6ac470b85a14bfe32c7f3fe47168180687669ec6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 9abc85227d6091005d7e097d3305150f4ca347a1
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387254"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448092"
 ---
 # <a name="how-to-migrate-to-clr"></a>方法: /Clr:pure に移行します。
 
@@ -41,13 +41,13 @@ Visual Studio がライブラリ プロジェクトをコンパイルすると�
 
 最も簡単なパスを指定する順番では、その後に、次の手順を **/clr**コンパイルします。 これらの手順では、手順ごとにプロジェクトをコンパイルして実行することが重要です。
 
-### <a name="versions-prior-to-visual-c-2003"></a>Visual C++ 2003 以前のバージョン
+### <a name="versions-prior-to-visual-studio-2003"></a>Visual Studio 2003 より前のバージョン
 
-Visual C++ 2003 以前のバージョンから Visual Studio 2010 にアップグレードする場合、Visual C++ 2003 の C++ 標準に対する準拠が強化されたことに関連するコンパイル エラーが発生することがあります。
+強化されたに関連するコンパイラ エラーが発生する可能性があります Visual Studio 2003 より前のバージョンから Visual Studio 2010 にアップグレードする場合C++Visual Studio 2003 で標準の準拠
 
-### <a name="upgrading-from-visual-c-2003"></a>Visual C++ 2003 からのアップグレード
+### <a name="upgrading-from-visual-studio-2003"></a>Visual Studio 2003 からアップグレードします。
 
-せず以前に Visual C 2003 で作成されたプロジェクトをコンパイルするときも、まず **/clr** ANSI/ISO 準拠といくつかの重大な変更に、Visual Studio が今すぐ増加はします。 最も注意が必要な可能性のある変更は[CRT のセキュリティ機能](../c-runtime-library/security-features-in-the-crt.md)します。 CRT を使用するコードでは、廃止警告が生成される可能性があります。 これらの警告は、抑制しますですが、新しい移行[セキュリティが強化されたバージョンの CRT 関数](../c-runtime-library/security-enhanced-versions-of-crt-functions.md)はより強力なセキュリティを提供し、コードのセキュリティの問題を表示することがあります。
+せず以前に Visual Studio 2003 で作成されたプロジェクトをコンパイルするときも、まず **/clr** ANSI/ISO 準拠といくつかの重大な変更に、Visual Studio が今すぐ増加はします。 最も注意が必要な可能性のある変更は[CRT のセキュリティ機能](../c-runtime-library/security-features-in-the-crt.md)します。 CRT を使用するコードでは、廃止警告が生成される可能性があります。 これらの警告は、抑制しますですが、新しい移行[セキュリティが強化されたバージョンの CRT 関数](../c-runtime-library/security-enhanced-versions-of-crt-functions.md)はより強力なセキュリティを提供し、コードのセキュリティの問題を表示することがあります。
 
 ### <a name="upgrading-from-managed-extensions-for-c"></a>C++ マネージド拡張からのアップグレード
 
@@ -98,7 +98,7 @@ COMObj2->Method(args);  // C++ equivalent
 **/clr**開発環境で次の手順で選択できる[/clr (共通言語ランタイムのコンパイル)](../build/reference/clr-common-language-runtime-compilation.md)します。 既に説明したように、この手順によって競合するプロジェクト設定は自動的に無効になります。
 
 > [!NOTE]
->  マネージ ライブラリまたは web サービス プロジェクトを Visual C 2003 からアップグレードする場合、 **/Zl**に追加されたコンパイラ オプションは、**コマンドライン**プロパティ ページ。 これによって LNK2001 が発生します。 削除 **/Zl**から、**コマンドライン**解決するのには、プロパティ ページ。 参照してください[/Zl (Omit Default Library Name)](../build/reference/zl-omit-default-library-name.md)と[コンパイラを設定し、ビルド プロパティ](../build/working-with-project-properties.md)詳細についてはします。 または、msvcrt.lib および msvcmrt.lib をリンカーに追加**追加の依存関係**プロパティ。
+>  マネージ ライブラリまたは web サービス プロジェクトを Visual Studio 2003 からアップグレードする場合、 **/Zl**に追加されたコンパイラ オプションは、**コマンドライン**プロパティ ページ。 これによって LNK2001 が発生します。 削除 **/Zl**から、**コマンドライン**解決するのには、プロパティ ページ。 参照してください[/Zl (Omit Default Library Name)](../build/reference/zl-omit-default-library-name.md)と[コンパイラを設定し、ビルド プロパティ](../build/working-with-project-properties.md)詳細についてはします。 または、msvcrt.lib および msvcmrt.lib をリンカーに追加**追加の依存関係**プロパティ。
 
 メイクファイルでビルドされたプロジェクトでは、互換性のないコンパイラ オプションを後に手動で無効する必要があります **/clr**が追加されます。 参照してください/[/clr の制約](../build/reference/clr-restrictions.md)と互換性のないコンパイラ オプションについて **/clr**します。
 

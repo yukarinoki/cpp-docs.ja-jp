@@ -1,14 +1,14 @@
 ---
 title: アルファベット順のコンパイラ オプション
-ms.date: 04/08/2019
+ms.date: 05/06/2019
 helpviewer_keywords:
 - compiler options, C++
-ms.openlocfilehash: d8ab1cbac7ad8eb44f16c7829ccac20a6d3e73ff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: ba4357f4c14e5cca9363ad2029374ede93529a2a
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272335"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221764"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>アルファベット順のコンパイラ オプション
 
@@ -34,7 +34,7 @@ ms.locfileid: "62272335"
 |[/E](e-preprocess-to-stdout.md)|プリプロセッサ出力を標準出力にコピーします。|
 |[/EH](eh-exception-handling-model.md)|例外処理のモデルを指定します。|
 |[/EP](ep-preprocess-to-stdout-without-hash-line-directives.md)|プリプロセッサ出力を標準出力にコピーします。|
-|[/errorReport](errorreport-report-internal-compiler-errors.md)|内部コンパイラ エラー (ICE) 情報を Visual C++ チームに直接報告できます。|
+|[/errorReport](errorreport-report-internal-compiler-errors.md)|内部コンパイラ エラー (ICE) 情報を Microsoft に直接提供することができますC++チーム。|
 |[/execution-charset](execution-charset-set-execution-character-set.md)|実行文字セットを設定します。|
 |[/F](f-set-stack-size.md)|スタック サイズを設定します。|
 |[/favor](favor-optimize-for-architecture-specifics.md)|特定の x64 向けに最適化されたコードを生成のアーキテクチャ、または両方の AMD64 アーキテクチャおよび Extended Memory 64 Technology (EM64T) アーキテクチャでのマイクロ アーキテクチャの仕様。|
@@ -153,7 +153,7 @@ ms.locfileid: "62272335"
 |[/Zc](zc-conformance.md)|標準の動作を指定します[/Ze](za-ze-disable-language-extensions.md).[/Za、/Ze (言語拡張を無効にする)](za-ze-disable-language-extensions.md)|
 |[/Ze](za-ze-disable-language-extensions.md)|非推奨。 言語拡張機能を有効にします。|
 |[/Zf](zf.md)|並行ビルドで生成時に PDB を向上します。|
-|[/Zg](zg-generate-function-prototypes.md)|Visual C++ 2015 では削除されています。 関数プロトタイプを生成します。|
+|[/Zg](zg-generate-function-prototypes.md)|Visual Studio 2015 で削除します。 関数プロトタイプを生成します。|
 |[/ZI](z7-zi-zi-debug-information-format.md)|エディット コンティニュと互換性のあるプログラム データベースにデバッグ情報を含めます。|
 |[/Zi](z7-zi-zi-debug-information-format.md)|詳細なデバッグ情報を生成します。|
 |[/Zl](zl-omit-default-library-name.md)|.obj ファイルから既定のライブラリ名を削除します (x86 のみ)。|

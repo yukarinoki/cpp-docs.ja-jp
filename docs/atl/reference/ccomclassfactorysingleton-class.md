@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComClassFactorySingleton class
 ms.assetid: debb983c-382b-487b-8d42-7ea26dc158b8
-ms.openlocfilehash: 480b4c2a6e052e8e0823b97b548fc5d07b55230f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: c415da15341f7800a706379d991cb753f5991170
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62260176"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221176"
 ---
 # <a name="ccomclassfactorysingleton-class"></a>CComClassFactorySingleton クラス
 
@@ -53,7 +53,7 @@ class CComClassFactorySingleton : public CComClassFactory
 
 ## <a name="remarks"></a>Remarks
 
-ATL オブジェクトから派生することによって、クラス ファクトリを取得する通常[CComCoClass](../../atl/reference/ccomcoclass-class.md)します。 このクラスには、マクロが含まれています。 [DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory)、宣言する`CComClassFactory`既定のクラス ファクトリとして。 使用する`CComClassFactorySingleton`、指定、 [DECLARE_CLASSFACTORY_SINGLETON](aggregation-and-class-factory-macros.md#declare_classfactory_singleton)オブジェクトのクラス定義でマクロ。 例えば:
+ATL オブジェクトから派生することによって、クラス ファクトリを取得する通常[CComCoClass](../../atl/reference/ccomcoclass-class.md)します。 このクラスには、マクロが含まれています。 [DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory)、宣言する`CComClassFactory`既定のクラス ファクトリとして。 使用する`CComClassFactorySingleton`、指定、 [DECLARE_CLASSFACTORY_SINGLETON](aggregation-and-class-factory-macros.md#declare_classfactory_singleton)オブジェクトのクラス定義でマクロ。 例:
 
 [!code-cpp[NVC_ATL_COM#10](../../atl/codesnippet/cpp/ccomclassfactorysingleton-class_1.h)]
 
@@ -108,7 +108,7 @@ CComPtr<IUnknown> m_spObj;
 
 呼び出しごとに、 [CreateInstance](#createinstance)メソッドは単にインターフェイス ポインターをこのオブジェクトを照会します。
 
-なお、現在のフォームの`m_spObj`方法から重大な変更を表示しますを`CComClassFactorySingleton`ATL の以前のバージョンで動作 以前のバージョンで、`CComClassFactorySingleton`オブジェクトは、サーバーの初期化中に、クラス ファクトリと同時に作成されました。 Visual C .NET 2003年では、最初の要求で、オブジェクトが遅れて、作成されます。 この変更の初期化に依存するプログラムでエラーが発生する可能性があります。
+なお、現在のフォームの`m_spObj`方法から重大な変更を表示しますを`CComClassFactorySingleton`ATL の以前のバージョンで動作 以前のバージョンで、`CComClassFactorySingleton`オブジェクトは、サーバーの初期化中に、クラス ファクトリと同時に作成されました。 ビジュアルでC++.NET 2003 以降では、オブジェクトの作成後、最初の要求でします。 この変更の初期化に依存するプログラムでエラーが発生する可能性があります。
 
 ## <a name="see-also"></a>関連項目
 

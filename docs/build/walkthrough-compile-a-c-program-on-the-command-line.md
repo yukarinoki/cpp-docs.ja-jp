@@ -1,19 +1,19 @@
 ---
 title: 'チュートリアル: コマンドラインでの C プログラムをコンパイルします。'
 ms.custom: conceptual
-ms.date: 09/24/2018
+ms.date: 04/25/2019
 helpviewer_keywords:
 - command-line applications [C++], C programs
 - Visual C, compiling
 - compiling programs [C++]
 - C program compiling [C++]
 ms.assetid: 7e74cc2d-54b1-49de-b7ad-d3ae6b39ab8d
-ms.openlocfilehash: 54f5810e60cdaada6a99651a732570c88ea883ce
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 03876ba47270252caa21d7e2994a4f8321a6d59e
+ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62314183"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64877198"
 ---
 # <a name="walkthrough-compile-a-c-program-on-the-command-line"></a>チュートリアル: コマンドラインでの C プログラムをコンパイルします。
 
@@ -27,40 +27,65 @@ Visual C には、完全な Windows デスクトップ アプリケーション�
 
 Visual Studio は、多くの言語とプラットフォームの全機能装備のエディター、リソース マネージャー、デバッガー、およびコンパイラをサポートする強力な統合開発環境です。 これらの機能とをダウンロードして無料の Visual Studio Community edition など、Visual Studio をインストールする方法についてを参照してください。 [Visual Studio のインストール](/visualstudio/install/install-visual-studio)します。
 
-Visual Studio のバージョンの Visual Studio の Build Tools は、のみコマンド ライン ツールセット、コンパイラ、ツール、および C および C++ プログラムの構築に必要なライブラリをインストールします。 ビルド環境に最適なまたはと比較的高速インストールを実行します。 コマンド ライン ツールセットのみをインストールするには、ダウンロード[for Visual Studio Build Tools](https://go.microsoft.com/fwlink/p/?linkid=875721)し、インストーラーを実行します。
+Visual Studio のバージョンの Visual Studio の Build Tools は、のみコマンド ライン ツールセット、コンパイラ、ツール、および C および C++ プログラムの構築に必要なライブラリをインストールします。 ビルド環境に最適なまたはと比較的高速インストールを実行します。 コマンド ライン ツールセットのみをインストールするには、Visual Studio からの Build Tools をダウンロード、 [Visual Studio のダウンロード](https://visualstudio.microsoft.com/downloads/)ページし、インストーラーを実行します。
 
 C または C++ プログラムを作成するには、コマンドラインで、前に、ツールがインストールされているし、コマンドラインからアクセスできることを確認する必要があります。 Visual C には、コマンド ライン ツール、ヘッダー、および使用するライブラリを検索する環境の複雑な要件があります。 **普通のコマンド プロンプト ウィンドウで、Visual C を使用することはできません**準備なし。 必要があります、*開発者コマンド プロンプト*ウィンドウで、これは通常のコマンド プロンプト ウィンドウを持つすべての必要な環境変数を設定します。 さいわい、Visual C では、コマンド ライン ビルドを設定する環境の開発者コマンド プロンプトを起動するためのショートカットをインストールします。 残念ながら、開発者コマンド プロンプトのショートカットとされている名前は、ほぼすべてのバージョンの Visual C とに異なるバージョンの Windows で異なる。 最初のチュートリアル タスクを使用する適切なショートカットを検索します。
 
 > [!NOTE]
 > 開発者コマンド プロンプトのショートカットは、コンパイラおよびツール、および必要なヘッダーとライブラリによって正しいパスを自動的に設定します。 これらの値の一部は、ビルド構成ごとに異なります。 必要がありますこれらの環境値自分で設定した場合は、ショートカットのいずれかを使用しないでください。 詳細については、次を参照してください。[コマンド ライン ビルドのパスと環境変数を設定する](setting-the-path-and-environment-variables-for-command-line-builds.md)します。 ビルド環境は複雑なため、開発者コマンド プロンプト ショートカットを使用して、独自に構築する代わりを強くお勧めします。
 
-## <a name="open-a-developer-command-prompt"></a>開発者コマンド プロンプトを開きます
+これらの手順は、使用して Visual Studio のバージョンによって異なります。 続行する前にバージョン セレクターで、左上のこのページが正しく設定されていることを確認します。
 
-1. Windows 10 に Visual Studio 2017 をインストールした場合、スタート メニューを開きし、下へスクロールしとを開く、 **Visual Studio 2017**フォルダー (Visual Studio 2017 のアプリとは異なる)。 選択**開発者コマンド プロンプト for VS 2017**コマンド プロンプト ウィンドウを開きます。
+::: moniker range="vs-2019"
 
-   Windows 10 に Microsoft Visual C Build Tools 2015 をインストールした場合は、開く、**開始**] メニューの [下へスクロールして開く、 **Visual C Build Tools**フォルダー。 選択**Visual C 2015 x86 Native Tools コマンド プロンプト**コマンド プロンプト ウィンドウを開きます。
+## <a name="open-a-developer-command-prompt-in-visual-studio-2019"></a>Visual Studio 2019 で開発者コマンド プロンプトを開く
 
-   異なるバージョンの Visual Studio を使用しているか、異なるバージョンの Windows を実行している場合は、[スタート] メニューでは、ファイルの場所か、開発者コマンド プロンプトのショートカットが含まれる Visual Studio ツール フォルダーのページを開始します。 「開発者コマンド プロンプト」を検索し、Visual Studio のインストールされているバージョンと一致するものを選択して、Windows 検索機能を使用することもできます。 ショートカットを使用して、コマンド プロンプト ウィンドウを開きます。
+Windows 10 に Visual Studio 2019 をインストールした場合、スタート メニューを開きし、下へスクロールしとを開く、 **Visual Studio 2019**フォルダー (Visual Studio 2019 アプリではありません)。 選択**開発者コマンド プロンプト for VS 2019**コマンド プロンプト ウィンドウを開きます。
 
-1. 次に、Visual C の開発者コマンド プロンプトが正しく設定されていることを確認します。 コマンド プロンプト ウィンドウで、入力`cl`し、出力は次ようなコードのことを確認します。
+別のバージョンの Windows を使用している場合は、[スタート] メニューでは、ファイルの場所か、開発者コマンド プロンプトのショートカットが含まれる Visual Studio ツール フォルダーのページを開始します。 「開発者コマンド プロンプト」を検索し、Visual Studio のインストールされているバージョンと一致するものを選択して、Windows 検索機能を使用することもできます。 ショートカットを使用して、コマンド プロンプト ウィンドウを開きます。
 
-   ```Output
-   C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise>cl
-   Microsoft (R) C/C++ Optimizing Compiler Version 19.10.25017 for x86
-   Copyright (C) Microsoft Corporation.  All rights reserved.
+::: moniker-end
 
-   usage: cl [ option... ] filename... [ /link linkoption... ]
-   ```
+::: moniker range="vs-2017"
 
-   現在のディレクトリまたは Visual C と更新プログラムがインストールされている任意のバージョンに応じて、バージョン番号の相違がある可能性があります。 上記の出力が表示される内容のような場合は、コマンドラインでの C または C++ プログラムを作成する準備ができました。
+## <a name="open-a-developer-command-prompt-in-visual-studio-2017"></a>Visual Studio 2017 で、開発者コマンド プロンプトを開く
 
-   > [!NOTE]
-   > 「'Cl' は、内部または外部コマンド、操作可能なプログラムまたはバッチ ファイルとしては認識されません"など、エラーが発生した場合エラー C1034 またはエラー LNK1104 を実行すると、 **cl**コマンドを使用するか、開発者コマンド プロンプトを使用しない、またはVisual C のインストールに問題があります。 続行するには、この問題を修正する必要があります。
+Windows 10 に Visual Studio 2017 をインストールした場合、スタート メニューを開きし、下へスクロールしとを開く、 **Visual Studio 2017**フォルダー (Visual Studio 2017 のアプリとは異なる)。 選択**開発者コマンド プロンプト for VS 2017**コマンド プロンプト ウィンドウを開きます。
 
-   開発者コマンド プロンプトのショートカットを見つけられない場合、または入力すると、エラー メッセージが表示された場合`cl`、Visual C インストール問題がある可能性があります。 Visual Studio 2017 を使用している場合は、再インストールしてください。、 **C++ によるデスクトップ開発**Visual Studio インストーラーのワークロード。 詳細については、次を参照してください。 [Visual Studio で C++ のインストール サポート](vscpp-step-0-installation.md)します。 または、再インストール、 [for Visual Studio Build Tools](https://go.microsoft.com/fwlink/p/?linkid=875721)します。 を接続しない次のセクションにはこれまでです。 インストールして、Visual Studio のトラブルシューティングの詳細については、次を参照してください。 [Visual Studio のインストール](/visualstudio/install/install-visual-studio)します。
+別のバージョンの Windows を実行している場合は、[スタート] メニューでは、ファイルの場所か、開発者コマンド プロンプトのショートカットが含まれる Visual Studio ツール フォルダーのページを開始します。 「開発者コマンド プロンプト」を検索し、Visual Studio のインストールされているバージョンと一致するものを選択して、Windows 検索機能を使用することもできます。 ショートカットを使用して、コマンド プロンプト ウィンドウを開きます。
 
-   > [!NOTE]
-   > によって、コンピューターとシステムのセキュリティ構成の Windows のバージョンを右クリックすると、開発者コマンド プロンプト ショートカットのショートカット メニューを開き、選択し、必要があります**管理者として実行**に正常にビルドして、このチュートリアルで作成するプログラムを実行します。
+::: moniker-end
+
+::: moniker range="vs-2015"
+
+## <a name="open-a-developer-command-prompt-in-visual-studio-2015"></a>Visual Studio 2015 で、開発者コマンド プロンプトを開く
+
+Windows 10 に Microsoft Visual C Build Tools 2015 をインストールした場合は、開く、**開始**] メニューの [下へスクロールして開く、 **Visual C Build Tools**フォルダー。 選択**Visual C 2015 x86 Native Tools コマンド プロンプト**コマンド プロンプト ウィンドウを開きます。
+
+別のバージョンの Windows を実行している場合は、[スタート] メニューでは、ファイルの場所か、開発者コマンド プロンプトのショートカットが含まれる Visual Studio ツール フォルダーのページを開始します。 「開発者コマンド プロンプト」を検索し、Visual Studio のインストールされているバージョンと一致するものを選択して、Windows 検索機能を使用することもできます。 ショートカットを使用して、コマンド プロンプト ウィンドウを開きます。
+   
+::: moniker-end
+
+
+次に、Visual C の開発者コマンド プロンプトが正しく設定されていることを確認します。 コマンド プロンプト ウィンドウで、入力`cl`し、出力は次ようなコードのことを確認します。
+
+```Output
+C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise>cl
+Microsoft (R) C/C++ Optimizing Compiler Version 19.10.25017 for x86
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+usage: cl [ option... ] filename... [ /link linkoption... ]
+```
+
+現在のディレクトリまたは Visual C と更新プログラムがインストールされている任意のバージョンに応じて、バージョン番号の相違がある可能性があります。 上記の出力が表示される内容のような場合は、コマンドラインでの C または C++ プログラムを作成する準備ができました。
+
+> [!NOTE]
+> 「'Cl' は、内部または外部コマンド、操作可能なプログラムまたはバッチ ファイルとしては認識されません"など、エラーが発生した場合エラー C1034 またはエラー LNK1104 を実行すると、 **cl**コマンドを使用するか、開発者コマンド プロンプトを使用しない、またはVisual C のインストールに問題があります。 続行するには、この問題を修正する必要があります。
+
+開発者コマンド プロンプトのショートカットを見つけられない場合、または入力すると、エラー メッセージが表示された場合`cl`、Visual C インストール問題がある可能性があります。 Visual Studio 2017 を使用している場合は、後で再インストールしてください、**によるデスクトップ開発C++**  Visual Studio インストーラーのワークロード。 詳細については、次を参照してください。 [Visual Studio で C++ のインストール サポート](vscpp-step-0-installation.md)します。 またはからのビルド ツールを再インストール、 [Visual Studio のダウンロード](https://visualstudio.microsoft.com/downloads/)ページ。 を接続しない次のセクションにはこれまでです。 インストールして、Visual Studio のトラブルシューティングの詳細については、次を参照してください。 [Visual Studio のインストール](/visualstudio/install/install-visual-studio)します。
+
+> [!NOTE]
+> によって、コンピューターとシステムのセキュリティ構成の Windows のバージョンを右クリックすると、開発者コマンド プロンプト ショートカットのショートカット メニューを開き、選択し、必要があります**管理者として実行**に正常にビルドして、このチュートリアルで作成するプログラムを実行します。
 
 ## <a name="create-a-c-source-file-and-compile-it-on-the-command-line"></a>C ソース ファイルを作成し、コマンドラインでコンパイル
 
@@ -154,9 +179,9 @@ C または C++ プログラムを作成するには、コマンドラインで�
 
 構成して、コマンドラインでより複雑なプロジェクトをビルドする NMAKE やメイクファイル、MSBuild とプロジェクト ファイルを使用できます。 これらのツールの使用に関する詳細については、次を参照してください。 [NMAKE リファレンス](reference/nmake-reference.md)と[MSBuild](msbuild-visual-cpp.md)します。
 
-C および C++ 言語は似ていますが、同じではありません。 MSVC コンパイラでは、単純なルールを使用して、コードをコンパイルするときに使用する言語を決定します。 既定では、MSVC コンパイラは C ソース コード、.c で終わるすべてのファイルと C++ ソース コードとして .cpp で終わるすべてのファイルを扱います。 C 非依存のファイル名拡張子としてすべてのファイルを処理するコンパイラが使用して、 [/Tc](reference/tc-tp-tc-tp-specify-source-file-type.md)コンパイラ オプション。
+C および C++ 言語は似ていますが、同じではありません。 Microsoft C/C++コンパイラ (MSVC) では、単純なルールを使用して、コードをコンパイルするときに使用する言語を決定します。 既定では、MSVC コンパイラは C ソース コード、.c で終わるすべてのファイルと C++ ソース コードとして .cpp で終わるすべてのファイルを扱います。 C 非依存のファイル名拡張子としてすべてのファイルを処理するコンパイラが使用して、 [/Tc](reference/tc-tp-tc-tp-specify-source-file-type.md)コンパイラ オプション。
 
-C++ の Visual C コンパイラは、ISO C99 標準と互換性が厳密に準拠していないです。 ほとんどの場合、移植可能な C コードはコンパイルし、想定どおりに実行します。 Visual C では、ISO c11 変更のほとんどをサポートしていません。 MSVC コンパイラでは、特定のライブラリの関数と POSIX 関数名は非推奨します。 関数がサポートされますが、優先名が変更されました。 詳細については、次を参照してください。 [CRT のセキュリティ機能](../c-runtime-library/security-features-in-the-crt.md)と[コンパイラの警告 (レベル 3) C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)します。
+MSVC は、ISO C99 標準と互換性のある厳密に準拠していないです。 ほとんどの場合、移植可能な C コードはコンパイルし、想定どおりに実行します。 Visual C では、ISO c11 変更のほとんどをサポートしていません。 特定のライブラリの関数と POSIX 関数名は、MSVC で非推奨とされます。 関数がサポートされますが、優先名が変更されました。 詳細については、次を参照してください。 [CRT のセキュリティ機能](../c-runtime-library/security-features-in-the-crt.md)と[コンパイラの警告 (レベル 3) C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)します。
 
 ## <a name="see-also"></a>関連項目
 

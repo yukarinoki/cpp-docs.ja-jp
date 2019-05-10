@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4581
 ms.assetid: 598bcd87-257d-4eb3-94e4-15bb31aadc99
-ms.openlocfilehash: 9e370bcff0c30fb508ebc22aaff1f6a56dd420a1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9868d33538a1f56906455f2b1772b53eb3a7734d
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397277"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447100"
 ---
 # <a name="compiler-warning-level-1-c4581"></a>コンパイラの警告 (レベル 1) C4581
 
 非推奨の動作: 'string2' 属性を処理"string1"に置き換え
 
-このエラーは、Visual C 2005 で行ったコンパイラ準拠作業の結果として生成されることができます。 Visual c 属性のパラメーター チェックします。
+このエラーは、Visual Studio 2005 で行ったコンパイラ準拠作業の結果として生成されることができます: ビジュアルのパラメーター チェックC++属性。
 
 以前のバージョンでは、属性値は引用符で囲まれているかどうかに受け入れられました。 値が列挙体の場合は、引用符で囲んでいない必要があります。
 

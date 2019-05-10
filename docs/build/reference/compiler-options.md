@@ -1,6 +1,6 @@
 ---
 title: MSVC コンパイラ オプション
-ms.date: 01/29/2018
+ms.date: 05/06/2019
 helpviewer_keywords:
 - cl.exe compiler
 - x86 MSVC compiler
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - compiler options, C++
 - x64 MSVC compiler
 ms.assetid: ed3376c8-bef4-4c9a-80e9-3b5da232644c
-ms.openlocfilehash: 831aade72cd728ec42aee5ef1f320deb7bdf173d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: ab41a5de027f28b361937e58fb179fd72db54e4e
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294266"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221746"
 ---
 # <a name="compiler-options"></a>コンパイラ オプション
 
-cl.exe は、Microsoft Visual C (MSVC) C と C++ コンパイラとリンカーを制御するツールです。 cl.exe は、Microsoft Visual Studio for Windows をサポートするオペレーティング システムでのみ実行できます。
+cl.exe は、Microsoft を制御するツールC++(MSVC) C とC++コンパイラとリンカーします。 cl.exe は、Microsoft Visual Studio for Windows をサポートするオペレーティング システムでのみ実行できます。
 
 > [!NOTE]
 > このツールは、Visual Studio 開発者コマンド プロンプトからのみ起動できます。 システム コマンド プロンプトやエクスプローラーからは開始できません。 詳細については、次を参照してください。[コマンドラインから MSVC ツールセットを使用して](../building-on-the-command-line.md)します。

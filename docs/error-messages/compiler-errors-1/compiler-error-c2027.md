@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2027
 ms.assetid: a39150c0-ec04-45ec-934c-a838bfe76627
-ms.openlocfilehash: 3f3fac9d5410595fe5653e257d97d2fd7c858545
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 901e9b791616c5684b352c1fda7687f67b895d9c
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62303490"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447373"
 ---
 # <a name="compiler-error-c2027"></a>コンパイラ エラー C2027
 
@@ -43,7 +43,7 @@ int main() {
 
 ## <a name="example"></a>例
 
-宣言されているが未定義の型へのポインターを宣言することになります。  Visual C が未定義の型への参照を許可されていません。
+宣言されているが未定義の型へのポインターを宣言することになります。 C++未定義の型への参照を許可しません。
 
 次の例では、C2027 が生成されます。
 

@@ -1,8 +1,6 @@
 ---
 title: 拡張 DLL
-ms.date: 11/04/2016
-f1_keywords:
-- afxdll
+ms.date: 05/06/2019
 helpviewer_keywords:
 - memory [C++], DLLs
 - MFC extension DLLs [C++]
@@ -15,12 +13,12 @@ helpviewer_keywords:
 - extension DLLs [C++]
 - extension DLLs [C++], about MFC extension DLLs
 ms.assetid: f69ac3d4-e474-4b1c-87a1-6738843a135c
-ms.openlocfilehash: eca33b60b8fa6ba812bf5fa68520f51ceb1d164b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 55b1e55a9c7bdf6daaff98a7fe3f1a2a55f68334
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62195661"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220766"
 ---
 # <a name="mfc-extension-dlls"></a>MFC 拡張 Dll
 
@@ -52,7 +50,7 @@ MFC の拡張 DLL で MFC の共有バージョンを使う方法は、アプリ
 
 MFC のバージョン 4.0 以前では、このような特徴を持つ DLL を AFXDLL と呼んでいました。 AFXDLL を指す、 `_AFXDLL` DLL のビルド時に定義されているプリプロセッサ シンボル。
 
-MFC の共有バージョン用のインポート ライブラリの名前がで説明されている規則に従って[MFC Dll の名前付け規則](../mfc/mfc-library-versions.md#mfc-static-library-naming-conventions)します。 Visual C++ は、MFC DLL のプレビルド バージョンのほか、いくつかの非 MFC DLL も提供します。これらの DLL は、アプリケーションで使用したり、アプリケーションと共に頒布できます。 また、Program Files\Microsoft Visual Studio フォルダーにインストールされている Redist.txt に説明があります。
+MFC の共有バージョン用のインポート ライブラリの名前がで説明されている規則に従って[MFC Dll の名前付け規則](../mfc/mfc-library-versions.md#mfc-static-library-naming-conventions)します。 Visual Studio には、事前構築済みのバージョン、MFC Dll に加え、多くの非 MFC Dll を使用して、アプリケーションと共に配布するが用意されています。 また、Program Files\Microsoft Visual Studio フォルダーにインストールされている Redist.txt に説明があります。
 
 .def ファイルを使ってエクスポートする場合は、以下のコードをヘッダー ファイルの先頭と末尾に記述します。
 
@@ -132,4 +130,4 @@ MFCxx.dll は、通常、リソース リストやクラス リストの最後�
 
 ## <a name="see-also"></a>関連項目
 
-[Visual C++ の DLL](dlls-in-visual-cpp.md)
+[Visual Studio で C/C++ Dll を作成します。](dlls-in-visual-cpp.md)

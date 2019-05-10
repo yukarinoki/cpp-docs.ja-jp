@@ -1,13 +1,13 @@
 ---
 title: C++ での属性
-ms.date: 06/01/2018
+ms.date: 05/06/2019
 ms.assetid: 748340d9-8abf-4940-b0a0-91b6156a3ff8
-ms.openlocfilehash: 81de2816c208d5ddc879f04d70912c3dddcd7832
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: bc92e5f3e279edc6fbea7f99d52c469f9fdf04f8
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62284748"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222304"
 ---
 # <a name="attributes-in-c"></a>C++ での属性
 
@@ -41,7 +41,7 @@ void Foo(int);
 
 - `[[deprecated]]` **Visual Studio 2015 以降:** 関数を使用するありませんを指定し、将来のバージョンのライブラリ インターフェイスは存在可能性があります。 コンパイラは、これを使用すると、クライアント コードが、関数を呼び出すしようとしたときに、情報メッセージを生成できます。 クラス、typedef 名、変数、非静的データ メンバー、関数、名前空間、列挙体、列挙子、またはテンプレートの特殊化の宣言に適用できます。
 
-- `[[fallthrough]]` **Visual Studio 2017 以降:** (で使用可能な[/std:c + + + 17](../build/reference/std-specify-language-standard-version.md))、`[[fallthrough]]`のコンテキストで属性を使用できる[スイッチ](switch-statement-cpp.md)コンパイラ (または読むすべてのユーザーへのヒントとしてステートメントコード)、fallthrough 動作が想定されています。 Visual C コンパイラ現在は、警告、fallthrough 動作ため、この属性には、コンパイラの動作の効果はありません。
+- `[[fallthrough]]` **Visual Studio 2017 以降:** (で使用可能な[/std:c + + + 17](../build/reference/std-specify-language-standard-version.md))、`[[fallthrough]]`のコンテキストで属性を使用できる[スイッチ](switch-statement-cpp.md)コンパイラ (または読むすべてのユーザーへのヒントとしてステートメントコード)、fallthrough 動作が想定されています。 MicrosoftC++コンパイラ現在は、警告、fallthrough 動作のため、この属性には、コンパイラの動作の効果はありません。
 
 - `[[nodiscard]]` **Visual Studio 2017 バージョン 15.3 以降:** (で使用可能な[/std:c + + 17](../build/reference/std-specify-language-standard-version.md)) 関数の戻り値が破棄されますを意図しないことを指定します。 この例で示すように、C4834 の警告を発生させます。
 

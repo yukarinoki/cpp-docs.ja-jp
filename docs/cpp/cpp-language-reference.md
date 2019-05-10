@@ -1,23 +1,20 @@
 ---
 title: C++ 言語リファレンス
 ms.custom: index-page
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
-- language reference
 - C++, language reference
-- language reference, Visual C++
-- Visual C++, language reference
 ms.assetid: 4be9cacb-c862-4391-894a-3a118c9c93ce
-ms.openlocfilehash: 8da5a4f7113bbb4256e45e7ec3c91a9c6677643c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 1790f5d7ecf834c97a9242e8f42d1fb402604ac6
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154660"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222480"
 ---
 # <a name="c-language-reference"></a>C++ 言語リファレンス
 
-このリファレンスでは、Microsoft Visual C++ に実装されている C++ プログラミング言語について説明します。 組織がに基づいて[ *The Annotated C Reference Manual* ](http://www.stroustrup.com/arm.html) Margaret Ellis と Bjarne Stroustrup と、ANSI/ISO C 国際規格 (ISO/IEC FDIS 14882)。 Microsoft 固有の C++ 言語機能の実装も含まれます。
+この参照がについて説明します、C++プログラミング言語を Microsoft で実装されているC++コンパイラ。 組織がに基づいて[ *The Annotated C Reference Manual* ](http://www.stroustrup.com/arm.html) Margaret Ellis と Bjarne Stroustrup と、ANSI/ISO C 国際規格 (ISO/IEC FDIS 14882)。 Microsoft 固有の C++ 言語機能の実装も含まれます。
 
 最新の C++ プログラミングの概要については、次を参照してください。[C++ へようこそ](welcome-back-to-cpp-modern-cpp.md)に戻ってください。
 
@@ -90,7 +87,7 @@ COM 型をサポートするために使用する Microsoft 固有のクラス�
 C++ の Microsoft 拡張機能。
 
 [非標準動作](../cpp/nonstandard-behavior.md)<br/>
-Visual C++ コンパイラの非標準動作に関する情報。
+Microsoft の標準的な動作についてC++コンパイラ。
 
 [C++ へようこそ](welcome-back-to-cpp-modern-cpp.md)<br/>
 最新の C++ プログラミングの概要については、安全な正確で効率的なプログラムの記述のベスト プラクティスです。
@@ -98,7 +95,7 @@ Visual C++ コンパイラの非標準動作に関する情報。
 ## <a name="related-sections"></a>関連項目
 
 [ランタイム プラットフォームのコンポーネントの拡張機能](../extensions/component-extensions-for-runtime-platforms.md)<br/>
-.NET をターゲットに Visual C の使用に関するリファレンス資料。
+Microsoft の使用に関する資料を参照C++コンパイラ .NET をターゲットにします。
 
 [C/C++ ビルドのリファレンス](../build/reference/c-cpp-building-reference.md)<br/>
 コンパイラ オプション、リンカー オプション、およびその他のビルド ツール。
@@ -107,7 +104,7 @@ Visual C++ コンパイラの非標準動作に関する情報。
 プラグマ、プリプロセッサ ディレクティブ、定義済みマクロ、およびプリプロセッサに関するリファレンス資料。
 
 [Visual C++ ライブラリ](../standard-library/cpp-standard-library-reference.md)<br/>
-Visual C++ のさまざまなライブラリの参照のスタート ページへのリンクの一覧。
+さまざまな Microsoft のスタート ページを参照へのリンクの一覧C++ライブラリ。
 
 ## <a name="see-also"></a>関連項目
 

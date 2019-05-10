@@ -5,12 +5,12 @@ helpviewer_keywords:
 - structs [C++]
 - classes [C++], instantiating
 ms.assetid: 1c03cb0d-1459-4b5e-af65-97d6b3094fd7
-ms.openlocfilehash: 090259a4ad6b46eccf66dca6c99b4eb532b7ae5c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 5fe7d6876b094c84fe3d4cdbba417106edcca528
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387488"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447299"
 ---
 # <a name="how-to-define-and-consume-classes-and-structs-ccli"></a>方法: クラスと構造体定義および使用 (C +/cli CLI)
 
@@ -127,7 +127,7 @@ int main() {
 
 `public` 含むソース ファイルに表示されることを示します、`#using`型を含むアセンブリのディレクティブ。  `private` 型が含むソース ファイルに表示されないことを示します、`#using`型を含むアセンブリのディレクティブ。 ただし、プライベート型は、同じアセンブリ内には表示されます。 既定では、クラスの可視性は `private` です。
 
-Visual C++ 2005 より前の既定では、ネイティブ型の場合、アセンブリ外にパブリック アクセシビリティがありました。 有効にする[コンパイラの警告 (レベル 1) C4692](../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md)プライベート ネイティブ型が使用されている正しく確認できるようにします。 使用して、 [make_public](../preprocessor/make-public.md)プラグマで変更できないソース コード ファイルをネイティブ型にパブリック アクセシビリティをできるようにします。
+Visual Studio 2005 の前に、既定では、ネイティブ型には、アセンブリ外にパブリック アクセシビリティが必要があります。 有効にする[コンパイラの警告 (レベル 1) C4692](../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md)プライベート ネイティブ型が使用されている正しく確認できるようにします。 使用して、 [make_public](../preprocessor/make-public.md)プラグマで変更できないソース コード ファイルをネイティブ型にパブリック アクセシビリティをできるようにします。
 
 詳細については、「[#using ディレクティブ](../preprocessor/hash-using-directive-cpp.md)」を参照してください。
 
@@ -588,7 +588,7 @@ int main() {
 Base::Test
 ```
 
-次の例では、Visual C++ コンパイラは、1 つ以上のパラメーターを一致させるために変換が必要な場合でも、最派生クラスで関数を呼び出します。関数呼び出しにより適合する基底クラスの関数は呼び出されません。
+次の例を示します MicrosoftC++コンパイラは、最派生クラスで関数を呼び出す-場合でも、1 つまたは複数のパラメーターと一致する変換が必要です: 関数呼び出しにより適合する基底クラスで関数を呼び出していません。
 
 ```cpp
 // compile with: /clr
@@ -736,7 +736,7 @@ CLR ガベージ コレクターは、不要になった未使用マネージド
 
 Visual C++ ファイナライザーは、<xref:System.Object.Finalize%2A> メソッドと同じではありません  (CLR ドキュメントでは、ファイナライザーと <xref:System.Object.Finalize%2A> メソッドが同じ意味で使用されます)。 <xref:System.Object.Finalize%2A> メソッドはガベージ コレクターによって呼び出され、これにより、クラス継承チェーンの各ファイナライザーが開始されます。 Visual C++ デストラクターとは異なり、派生クラスのファイナライザーの呼び出しにより、コンパイラがすべての基底クラスのファイナライザーを開始することはありません。
 
-Visual C++ コンパイラではリソースの確定的な解放がサポートされるため、<xref:System.IDisposable.Dispose%2A> メソッドまたは <xref:System.Object.Finalize%2A> メソッドは実装しようとしないでください。 ただし、これらのメソッドに慣れている方を対象に、ここでは、Visual C++ ファイナライザーとそのファイナライザーを呼び出すデストラクターが、どのように <xref:System.IDisposable.Dispose%2A> パターンに割り当てられるかを示します。
+MicrosoftC++コンパイラは、リソースの確定的解放をサポートしている、実装しようとしないでください、<xref:System.IDisposable.Dispose%2A>または<xref:System.Object.Finalize%2A>メソッド。 ただし、これらのメソッドに慣れている方を対象に、ここでは、Visual C++ ファイナライザーとそのファイナライザーを呼び出すデストラクターが、どのように <xref:System.IDisposable.Dispose%2A> パターンに割り当てられるかを示します。
 
 ```cpp
 // Visual C++ code
@@ -757,7 +757,7 @@ void Dispose(bool disposing) {
 
 マネージド型が、確定的に解放することが望ましいマネージド リソースを使用しており、オブジェクトが不要になった後のある時点においてガベージ コレクターで非確定的に解放したくないこともあります。 リソースを確定的に解放すると、パフォーマンスが大幅に向上する可能性があります。
 
-Visual C++ コンパイラを使用すると、デストラクターの定義によりオブジェクトを確定的にクリーンアップできます。 デストラクターを使用して、確定的に解放するすべてのリソースを解放します。  ファイナライザーが存在する場合は、デストラクターからそのファイナライザーを呼び出して、コードの重複を回避します。
+MicrosoftC++コンパイラ確定的にオブジェクトをクリーンアップするデストラクターの定義を有効にします。 デストラクターを使用して、確定的に解放するすべてのリソースを解放します。  ファイナライザーが存在する場合は、デストラクターからそのファイナライザーを呼び出して、コードの重複を回避します。
 
 ```cpp
 // compile with: /clr /c

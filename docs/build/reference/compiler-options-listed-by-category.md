@@ -1,15 +1,15 @@
 ---
 title: カテゴリ別のコンパイラ オプション
-ms.date: 11/12/2018
+ms.date: 05/06/2019
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: d3ebfbc3661ba648c2fdb73c697db42735faf422
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 0d12c0f82d3595ee6b61edcd21fb01dd7f49163b
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294162"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221756"
 ---
 # <a name="compiler-options-listed-by-category"></a>コンパイラ オプションのカテゴリ別一覧
 
@@ -153,7 +153,7 @@ ms.locfileid: "62294162"
 |[/bigobj](bigobj-increase-number-of-sections-in-dot-obj-file.md)|.obj ファイル内のアドレス指定可能なセクションの数を増やします。|
 |[/c](c-compile-without-linking.md)|リンクを行わないでコンパイルします。|
 |[/cgthreads](cgthreads-code-generation-threads.md)|最適化およびコード生成に使用する cl.exe スレッド数を指定します。|
-|[/errorReport](errorreport-report-internal-compiler-errors.md)|内部コンパイラ エラー (ICE: Internal Compiler Error) 情報を Visual C++ チームに直接報告できます。|
+|[/errorReport](errorreport-report-internal-compiler-errors.md)|内部コンパイラ エラー (ICE) 情報を Microsoft に直接提供できるようにC++チーム。|
 |[/FC](fc-full-path-of-source-code-file-in-diagnostics.md)|診断テキストで cl.exe に渡されるソース コード ファイルの完全パスを表示します。|
 |[/FS](fs-force-synchronous-pdb-writes.md)|プログラム データベース (PDB) ファイルへの書き込みを MSPDBSRV.EXE によりシリアル化します。|
 |[/H](h-restrict-length-of-external-names.md)|非推奨。 外部名 (パブリック名) の長さを制限します。|
@@ -213,7 +213,7 @@ ms.locfileid: "62294162"
 |[/Yd](yd-place-debug-information-in-object-file.md)|非推奨。 すべてのオブジェクト ファイルに、詳細なデバッグ情報を取り込みます。 代わりに [/Zi](z7-zi-zi-debug-information-format.md) を使用してください。|
 |[/Zc:forScope-](zc-forscope-force-conformance-in-for-loop-scope.md)|非推奨。 for ループ スコープの準拠を無効にします。|
 |[/Ze](za-ze-disable-language-extensions.md)|非推奨。 言語拡張機能を有効にします。|
-|[/Zg](zg-generate-function-prototypes.md)|Visual C++ 2015 では削除されています。 関数プロトタイプを生成します。|
+|[/Zg](zg-generate-function-prototypes.md)|Visual Studio 2015 で削除します。 関数プロトタイプを生成します。|
 
 ## <a name="see-also"></a>関連項目
 

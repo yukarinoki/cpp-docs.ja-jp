@@ -9,16 +9,16 @@ helpviewer_keywords:
 - thread attribute
 - Thread Local Storage [C++]
 ms.assetid: 80801907-d792-45ca-b776-df0cf2e9f197
-ms.openlocfilehash: f5a75f7964b0291a980b22d36e7ce6a0a87d3dc3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5c7bf2ae7cb5bfe71be9a1d72147e97c894064b3
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362726"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448899"
 ---
 # <a name="thread-local-storage-tls"></a>スレッド ローカル ストレージ (TLS: Thread Local Storage)
 
-スレッド ローカル ストレージ (TLS) は、指定されたマルチスレッド プロセスの各スレッドが、スレッド固有のデータを格納する場所を割り当てるための手段です。 TLS API を使用してバインド (実行時に) スレッド固有のデータが動的にサポートされている ([TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc)します。  Win32 および Visual C コンパイラでは、現在、既存の API の実装に加えて、(読み込み時に) スレッドごとに静的にバインドされるデータをサポートしています。
+スレッド ローカル ストレージ (TLS) は、指定されたマルチスレッド プロセスの各スレッドが、スレッド固有のデータを格納する場所を割り当てるための手段です。 TLS API を使用してバインド (実行時に) スレッド固有のデータが動的にサポートされている ([TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc)します。  Win32 と MicrosoftC++コンパイラ サポートには、既存の API の実装だけでなく、スレッドごとに (読み込み時に) データ静的にバインドされているようになりました。
 
 ##  <a name="_core_compiler_implementation_for_tls"></a> コンパイラによる TLS の実装
 

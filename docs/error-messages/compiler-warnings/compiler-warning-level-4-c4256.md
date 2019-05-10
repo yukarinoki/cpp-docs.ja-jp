@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4256
 ms.assetid: a755a32e-895a-4837-a2b5-4ea06b736798
-ms.openlocfilehash: b1f7534098a04c7c65a380d302999260c960f284
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3e8a3ab1b11c719730016e6a0cd248770cd89af8
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400961"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447774"
 ---
 # <a name="compiler-warning-level-4-c4256"></a>コンパイラの警告 (レベル 4) C4256
 
@@ -19,7 +19,7 @@ ms.locfileid: "62400961"
 
 可能な互換性がないです。
 
-次のコード例について考えます。 場合 S2::S2 コンス トラクターの定義 (int i,...) より前のバージョン 7、に、Visual C コンパイラのバージョンを使用してコンパイルされましたが、現在のバージョンを使用して次の例をコンパイルするのためのコンス トラクターの呼び出しを s3 の場合は正しく動作しません特殊な呼び出し規約の変更。 両方は、Visual C 6.0 を使用してコンパイルした場合、呼び出しは機能しませんうまくか、省略記号のパラメーターが渡されない場合を除き、します。
+次のコード例について考えます。 場合 S2::S2 コンス トラクターの定義 (int i,...)、Microsoft のバージョンを使用してコンパイルされたC++バージョン 7 が次の例では、前にコンパイラが現在のバージョンを使用してコンパイルすると、s3 の場合、コンス トラクターの呼び出しは正しく動作しませんため特殊な呼び出し規約の変更。 両方は、Visual C 6.0 を使用してコンパイルした場合、呼び出しは機能しませんうまくか、省略記号のパラメーターが渡されない場合を除き、します。
 
 この警告を修正するには
 

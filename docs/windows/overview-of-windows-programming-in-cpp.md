@@ -1,13 +1,13 @@
 ---
 title: C++ でプログラミングする Windows の概要
-ms.date: 03/28/2019
+ms.date: 05/06/2019
 ms.assetid: efc691d7-21f3-47ae-ae56-cab999ccf59d
-ms.openlocfilehash: 48c7f419b6c69955ab25db528c8d3d86a7249391
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 40028794a6df30db619965181f2e31d7c9a2745c
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362349"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221328"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>C++ でプログラミングする Windows の概要
 
@@ -21,7 +21,7 @@ C++ コンソール アプリケーションでは、コンソール ウィン�
 
 用語*ネイティブのデスクトップ クライアント アプリケーション*元ネイティブを使用するための C または C++ ウィンドウを持つアプリケーションを指す[Windows C Api および COM Api](/windows/desktop/apiindex/windows-api-list)オペレーティング システムにアクセスします。 これらの Api は c 言語でほとんどの場合使用してオペレーティング システムのイベントを処理する C スタイルのメッセージ ループに対して直接プログラミングするかを選択する必要があるこの種のアプリケーションを作成するときに*Microsoft Foundation Classes* (MFC) Win32 をラップする C++ ライブラリ方法では、ある程度のオブジェクト指向です。 どちらのアプローチは、「最新」と比較して、ユニバーサル Windows プラットフォーム (下記参照) が、どちらも完全にサポートされているがあり、何百万もの世界中で現在実行しているコードの行があると見なされます。 ウィンドウで実行される Win32 アプリケーションでは、Windows プロシージャ関数内での Windows メッセージを明示的に使用する開発者が必要です。 名前にかかわらず、Win32 アプリケーションは、32 ビット (x86) または 64 ビット (x64) バイナリとしてコンパイルできます。 Visual Studio ide、Win32、x86 の用語は同義です。
 
-従来の Windows C プログラミングを開始するを参照してください。 [Win32 と C++ の概要](/windows/desktop/LearnWin32/learn-to-program-for-windows)します。 Win32 のいくつか理解できるように後の詳細について簡単になります[MFC Desktop Applications](/mfc/mfc-desktop-applications)します。 高度なグラフィックスを使用する従来の C++ デスクトップ アプリケーションの例は、次を参照してください[Hilo:。Windows 対応 C++ アプリケーションの開発](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx)します。
+従来の Windows C プログラミングを開始するを参照してください。 [Win32 と C++ の概要](/windows/desktop/LearnWin32/learn-to-program-for-windows)します。 Win32 のいくつか理解できるように後の詳細について簡単になります[MFC Desktop Applications](../mfc/mfc-desktop-applications.md)します。 高度なグラフィックスを使用する従来の C++ デスクトップ アプリケーションの例は、次を参照してください[Hilo:。Windows 対応 C++ アプリケーションの開発](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx)します。
 
 ### <a name="c-or-net"></a>C++ または .NET でしょうか。 
 

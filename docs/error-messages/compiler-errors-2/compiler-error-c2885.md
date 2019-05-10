@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2885
 ms.assetid: 7743e5f3-a034-44b4-9ee8-5a6254c27f8c
-ms.openlocfilehash: 8174faed09bdffbdc6974390cceb7c17661eab4b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ff5e770052301e95f694d3712f95b82732c2faba
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388775"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447698"
 ---
 # <a name="compiler-error-c2885"></a>コンパイラ エラー C2885
 
@@ -21,7 +21,7 @@ ms.locfileid: "62388775"
 
 ## <a name="example"></a>例
 
-このエラーは、Visual C 2005 で行ったコンパイラ準拠作業の結果として生成されることができます: がすることは不要になった、 `using` ; 入れ子になった型の宣言型の名前に、入れ子にされた型に行った各参照を明示的に修飾する必要がありますスペース、または typedef を作成します。
+このエラーは、Visual Studio 2005 で行ったコンパイラ準拠作業の結果として生成されることができます: がすることはできなく、 `using` ; 入れ子になった型宣言を入れ子になった型に、n に型を配置を行う各参照を明示的に修飾する必要がありますamespace、または typedef を作成します。
 
 次の例では、C2885 が生成されます。
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - mixed-mode applications, intermediate language
 - projects [C++], converting to intermediate language
 ms.assetid: 855f9e3c-4f09-4bfe-8eab-a45f68292be9
-ms.openlocfilehash: 93eff646fb582e25ad70549afc714c5321e56079
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 2f63b6860157e315d44f7c050812a7f0b97f2726
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209244"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448042"
 ---
 # <a name="converting-projects-from-mixed-mode-to-pure-intermediate-language"></a>混在モードから純粋な中間言語へのプロジェクトの変換
 
@@ -21,7 +21,7 @@ ms.locfileid: "62209244"
 > [!IMPORTANT]
 > Visual Studio 2015 で非推奨とされ、Visual Studio 2017 の作成をサポートできなく **/clr: 純粋な**または **/clr:safe** CLR アプリケーションのコード。 純粋なまたは安全なアセンブリを必要とする場合は、アプリケーションを c# に変換するをお勧めします。
 
-以前のバージョンをサポートする Visual C コンパイラ ツールセットを使用している場合 **/clr: 純粋な**または **/clr:safe**コードを純粋 MSIL に変換するこの手順を使用することができます。
+Microsoft の以前のバージョンを使用しているかどうかはC++コンパイラ ツールセットをサポートする **/clr: 純粋な**または **/clr:safe**、コードを純粋 MSIL に変換するこの手順を使用することができます。
 
 ### <a name="to-convert-your-mixed-mode-application-into-pure-intermediate-language"></a>混合モード アプリケーションを純粋な中間言語に変換するには
 

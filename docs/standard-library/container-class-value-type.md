@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - value_type typedef
 ms.assetid: e89d5a71-b48c-47fa-aa78-682243e6e97f
-ms.openlocfilehash: 195cd6c72f392dc9308971bb4adb4b0a79ff9370
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bba94e290e691c807d9db7f40f2fa6f0d3c7965b
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210789"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221356"
 ---
 # <a name="container-classvaluetype"></a>コンテナー クラス::value_type
 
 > [!NOTE]
-> このトピックは、C++ 標準ライブラリで使用されるコンテナーの例 (実際には機能しない) として、Visual C++ ドキュメントに含まれています。 詳細については、「[C++ Standard Library Containers (C++ 標準ライブラリ コンテナ―)](../standard-library/stl-containers.md)」をご覧ください。
+> このトピックでは、Microsoft では、C++ドキュメントで使用されるコンテナーの機能の例として、C++標準ライブラリ。 詳細については、「[C++ Standard Library Containers (C++ 標準ライブラリ コンテナ―)](../standard-library/stl-containers.md)」をご覧ください。
 
 テンプレート パラメーター *Ty* のシノニムとして動作します。
 

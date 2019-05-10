@@ -6,12 +6,12 @@ helpviewer_keywords:
 - application deployment [C++], ClickOnce
 - ClickOnce deployment [C++], C++ applications
 ms.assetid: 9988c546-0936-452c-932f-9c76daa42157
-ms.openlocfilehash: 83ee85dbf952fd78a1cd1b8d0c932b9dcd02682d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f78aca6621462ccbd86cfe09ae71b715b5e56f09
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407082"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448462"
 ---
 # <a name="clickonce-deployment-for-visual-c-applications"></a>Visual C++ アプリケーションの ClickOnce 配置
 
@@ -19,10 +19,10 @@ Visual Studio では、Windows アプリケーションを配置するための 
 
 ## <a name="clickonce-deployment-in-c"></a>C++ の ClickOnce 配置
 
-Visual C++ 開発環境では ClickOnce による Visual C++ プロジェクトの配置は直接はサポートされませんが、それを使用するためのツールを利用できます。
+ビジュアルC++開発環境が Visual Studio の展開を直接サポートしていませんC++ツールが、ClickOnce を使用したプロジェクトはそれを使用できます。
 
 > [!NOTE]
->  Visual Studio では Visual C# および Visual Basic の開発環境で ClickOnce をサポートします。 Visual C++ プロジェクトが Visual C# プロジェクトの依存関係である場合は、Visual C# 開発環境から ClickOnce 配置を使用して、アプリケーションを (その依存関係を含めて) 発行できます。
+>  Visual Studio では Visual C# および Visual Basic の開発環境で ClickOnce をサポートします。 場合、Visual StudioC++プロジェクトは、ビジュアルの依存関係C#プロジェクト、(その依存関係を含む)、アプリケーションを発行するビジュアルからの ClickOnce 配置を使用してC#開発環境。
 
 ClickOnce を使用して Visual C++ アプリケーションを配置するには、[Mage.exe (マニフェストの生成および編集ツール)](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool) またはそのグラフィカル ユーザー インターフェイス バージョン (詳細については「[MageUI.exe (マニフェスト生成および編集ツールのグラフィカル クライアント)](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client)」を参照) を使用して、最初に [ClickOnce アプリケーション マニフェスト](/visualstudio/deployment/clickonce-application-manifest)および [ClickOnce 配置マニフェスト](/visualstudio/deployment/clickonce-deployment-manifest)を作成する必要があります。
 

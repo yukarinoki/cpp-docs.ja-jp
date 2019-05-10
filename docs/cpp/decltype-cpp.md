@@ -9,12 +9,12 @@ helpviewer_keywords:
 - operators [C++], type of an expression
 - operators [C++], deduce expression type
 ms.assetid: 6dcf8888-8196-4f13-af50-51e3797255d4
-ms.openlocfilehash: 6c1c91aec7d974836b1ec031a1e8b38e8abb65ce
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 0a4e9eb015df056dfe2a35da18cfa50875ced432
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399084"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222458"
 ---
 # <a name="decltype--c"></a>decltype (C++)
 
@@ -38,7 +38,7 @@ decltype( expression )
 
 ## <a name="remarks"></a>Remarks
 
-**Decltype**型指定子は、Visual C 2010 またはそれ以降のバージョンでサポートされて、ネイティブまたはマネージ コードで使用できます。 `decltype(auto)` (C++14) は Visual Studio 2015 以降でサポートされています。
+**Decltype**型指定子は、Visual Studio 2010 またはそれ以降のバージョンでサポートされて、ネイティブまたはマネージ コードで使用できます。 `decltype(auto)` (C++14) は Visual Studio 2015 以降でサポートされています。
 
 コンパイラの種類を決定する、次の規則を使用して、*式*パラメーター。
 
@@ -204,6 +204,6 @@ static_assert(test2, "PASS2");
 
 ## <a name="requirements"></a>必要条件
 
-Visual C++ 2010 以降のバージョン。
+Visual Studio 2010 またはそれ以降のバージョン。
 
 `decltype(auto)` Visual Studio 2015 またはそれ以降が必要です。
