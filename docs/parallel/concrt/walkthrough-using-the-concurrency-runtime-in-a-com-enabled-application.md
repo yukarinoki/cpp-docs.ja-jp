@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Concurrency Runtime, use with COM
 - COM, use with the Concurrency Runtime
 ms.assetid: a7c798b8-0fc8-4bee-972f-22ef158f7f48
-ms.openlocfilehash: 9d306377be4a000c54fb5556b15263a15b2d4618
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 7249dc1c715861230170bc3efd4fb4aa75029bdb
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407785"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64857512"
 ---
 # <a name="walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application"></a>チュートリアル: COM 対応アプリケーションで同時実行ランタイムの使用
 
@@ -58,7 +58,8 @@ COM の詳細については、次を参照してください。[コンポーネ
 
 [!code-cpp[concrt-parallel-scripts#3](../../parallel/concrt/codesnippet/cpp/walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application_3.cpp)]
 
-`CCoInitializer` クラスを使用すると、次のように、タスクが終了するときに COM ライブラリを自動的に解放できます。
+
+  `CCoInitializer` クラスを使用すると、次のように、タスクが終了するときに COM ライブラリを自動的に解放できます。
 
 [!code-cpp[concrt-parallel-scripts#4](../../parallel/concrt/codesnippet/cpp/walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application_4.cpp)]
 
@@ -104,7 +105,9 @@ COM の詳細については、次を参照してください。[コンポーネ
 
 ### <a name="calling-the-script-from-an-agent"></a>エージェントからのスクリプトの呼び出し
 
-次の例は、`FibonacciScriptAgent`クラスで、n を計算するスクリプト プロシージャを呼び出す<sup>th</sup>フィボナッチ数。 `FibonacciScriptAgent` クラスは、メッセージ パッシングを使用して、スクリプト関数への入力値をメイン プログラムから受け取ります。 `run` メソッドは、タスク全体を通じて COM ライブラリの有効期間を管理します。
+次の例は、`FibonacciScriptAgent`クラスで、n を計算するスクリプト プロシージャを呼び出す<sup>th</sup>フィボナッチ数。 
+  `FibonacciScriptAgent` クラスは、メッセージ パッシングを使用して、スクリプト関数への入力値をメイン プログラムから受け取ります。 
+  `run` メソッドは、タスク全体を通じて COM ライブラリの有効期間を管理します。
 
 [!code-cpp[concrt-parallel-scripts#11](../../parallel/concrt/codesnippet/cpp/walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application_11.cpp)]
 

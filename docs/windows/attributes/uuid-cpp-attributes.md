@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - uuid attribute
 ms.assetid: 90562a94-5e28-451b-a4b0-cadda7f66efe
-ms.openlocfilehash: 8d9d55fc2a340165480cab4036ad1e5323e6b625
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eae79f9a4d0af6375834c0792c4004f52a16e07e
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407199"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448935"
 ---
 # <a name="uuid-c-attributes"></a>uuid (C++ 属性)
 
@@ -32,7 +32,7 @@ ms.locfileid: "62407199"
 
 ## <a name="remarks"></a>Remarks
 
-インターフェイスまたはクラスの定義が指定しないかどうか、 **uuid** C++ 属性に、その後、Visual C コンパイラはいずれかで提供されます。 指定した場合、 **uuid**引用符を含める必要があります。
+インターフェイスまたはクラスの定義が指定しないかどうか、 **uuid** C++属性、MicrosoftC++コンパイラが 1 つを提供します。 指定した場合、 **uuid**引用符を含める必要があります。
 
 指定しない場合**uuid**コンパイラが、マシン上の別の属性プロジェクトでのインターフェイスまたはクラスと同じ名前の同じ GUID を生成します。
 

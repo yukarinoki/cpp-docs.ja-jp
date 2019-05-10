@@ -8,12 +8,12 @@ helpviewer_keywords:
 - agility, C++/CX
 - C++/CX, threading issues
 ms.assetid: 83e9ca1d-5107-4194-ae6f-e01bd928c614
-ms.openlocfilehash: c5bce60e564bef490bcfafd6f8559dffe5fd4f1d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 4206dd9c675325d3141a56b0e57f6cf67dc5693d
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404638"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448152"
 ---
 # <a name="threading-and-marshaling-ccx"></a>スレッドとマーシャリング (C++/CX)
 
@@ -35,7 +35,7 @@ ms.locfileid: "62404638"
 
 ### <a name="compiler-warning-c4451-when-consuming-non-agile-classes"></a>コンパイラの C4451 を非アジャイル クラスを使用するときに警告
 
-さまざまな理由で、一部のクラスはアジャイルにすることができません。 ユーザー インターフェイス スレッドとバックグラウンド スレッドの両方から非アジャイル クラスのインスタンスにアクセスする場合は、実行時の動作が正しいことを注意深く確認する必要があります。 アプリケーション内のグローバル スコープで非アジャイルのランタイム クラスをインスタンス化する場合、またはそれ自体がアジャイルとマーク付けされている ref クラスのクラス メンバーとして非アジャイル型を宣言する場合、Visual C++ コンパイラは警告を発します。
+さまざまな理由で、一部のクラスはアジャイルにすることができません。 ユーザー インターフェイス スレッドとバックグラウンド スレッドの両方から非アジャイル クラスのインスタンスにアクセスする場合は、実行時の動作が正しいことを注意深く確認する必要があります。 MicrosoftC++グローバル スコープで、アプリの実行時の非アジャイル クラスのインスタンスを作成またはクラス メンバーを ref クラスでは、アジャイルでマークされているために、非アジャイル型を宣言するときに、コンパイラは警告を発行します。
 
 非アジャイル クラスで扱いが最も簡単なのは、 `ThreadingModel`=Bothおよび `MarshallingType`=Standard が指定されているものです。  これらのクラスをアジャイルにするには、単に `Agile<T>` ヘルパー クラスを使用します。   次の例は、 `Windows::Security::Credentials::UI::CredentialPickerOptions^`型の非アジャイル オブジェクトの宣言、および結果として生成されるコンパイラの警告を示しています。
 

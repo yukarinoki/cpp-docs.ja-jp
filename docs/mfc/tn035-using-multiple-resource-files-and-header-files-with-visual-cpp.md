@@ -7,12 +7,12 @@ helpviewer_keywords:
 - resource files, multiple
 - TN035
 ms.assetid: 1f08ce5e-a912-44cc-ac56-7dd93ad73fb6
-ms.openlocfilehash: 0493dd45caf5eb78da435987a4590442a908a5a3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8ce38c2f3f4effa993dfa32221d82bece65096dd
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62305516"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448532"
 ---
 # <a name="tn035-using-multiple-resource-files-and-header-files-with-visual-c"></a>TN035:Visual C での複数のリソース ファイルとヘッダー ファイルの使用
 
@@ -204,7 +204,7 @@ RESOURCE.H     AFXRES.H
     AFXPRINT.RC
 ```
 
-[コンパイル時に追加するファイル] を使用して、Visual C++ で編集可能なリソースと編集不可能なリソースを複数の .RC ファイルに編成することができます。ここで、"マスター" の MYAPP.RC は、他の .RC ファイルの #include を行うだけで、それ以外は何もしません。 Visual C++ プロジェクト .MAK ファイルを使用する場合は、プロジェクト内に "マスター" .RC ファイルをインクルードする必要があります。その結果、その中でインクルードされているすべてのリソースがアプリケーションにコンパイルされます。
+[コンパイル時に追加するファイル] を使用して、Visual C++ で編集可能なリソースと編集不可能なリソースを複数の .RC ファイルに編成することができます。ここで、"マスター" の MYAPP.RC は、他の .RC ファイルの #include を行うだけで、それ以外は何もしません。 Visual Studio を使用している場合C++プロジェクト。MAK ファイルは、"master"を含める必要があります。RC ファイル、プロジェクトでこれをすべて、# インクルードされたリソースは、アプリケーションと共にコンパイルされます。
 
 **編集不可能な Visual C ファイルの適用**
 

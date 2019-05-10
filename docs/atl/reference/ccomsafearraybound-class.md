@@ -1,6 +1,6 @@
 ---
 title: CComSafeArrayBound クラス
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 f1_keywords:
 - CComSafeArrayBound
 - ATLSAFE/ATL::CComSafeArrayBound
@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComSafeArrayBound class
 ms.assetid: dd6299db-5f84-4630-bbf0-f5add5318437
-ms.openlocfilehash: a79079c95536746cf5a4fa4b35caf39a55ca0f42
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 6d4650273661c0ce40558a37ef02bb2a3ff81809
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62246141"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221140"
 ---
 # <a name="ccomsafearraybound-class"></a>CComSafeArrayBound クラス
 
@@ -76,7 +76,7 @@ CComSafeArrayBound(ULONG ulCount = 0, LONG lLowerBound = 0) throw();
 
 ### <a name="remarks"></a>Remarks
 
-配列が、Visual C プログラムからアクセスする場合は、下限が 0 として定義することをお勧めします。 配列の Visual Basic などの他の言語で使用する場合は、別の下限値を使用する方が望ましい場合があります。
+配列からアクセスする場合、C++プログラムをお勧め、下限を 0 として定義します。 配列の Visual Basic などの他の言語で使用する場合は、別の下限値を使用する方が望ましい場合があります。
 
 ##  <a name="getcount"></a>  CComSafeArrayBound::GetCount
 

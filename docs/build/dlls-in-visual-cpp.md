@@ -1,6 +1,6 @@
 ---
 title: Visual Studio で C/C++ Dll を作成します。
-ms.date: 12/10/2018
+ms.date: 05/06/2019
 helpviewer_keywords:
 - executable files [C++]
 - dynamic linking [C++]
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DLLs [C++]
 - DLLs [C++], about DLLs
 ms.assetid: 5216bca4-51e2-466b-b221-0e3e776056f0
-ms.openlocfilehash: 5bd30c84ba202c3f772ad4451368efde10285e6c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 7f1c2b71a58c59bf0662aa4ffec53344ce657df0
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62195463"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220750"
 ---
 # <a name="create-cc-dlls-in-visual-studio"></a>Visual Studio で C/C++ Dll を作成します。
 
@@ -59,7 +59,7 @@ Dll を使用する潜在的なデメリットは、アプリケーションが�
 
 ## <a name="more-information-on-how-to-create-and-use-dlls"></a>作成して Dll を使用する方法の詳細について
 
-次のトピックでは、Visual c dll のプログラミン方法に関する詳細を説明します。
+次のトピックは、C を作成する方法についての詳細情報を提供/C++ Visual Studio で Dll。
 
 [チュートリアル: ダイナミック リンク ライブラリの作成と使用 (C++)](walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)<br/>
 Visual Studio を使用して DLL を作成および使用する方法について説明します。

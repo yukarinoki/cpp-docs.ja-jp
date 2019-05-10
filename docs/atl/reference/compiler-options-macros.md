@@ -1,6 +1,6 @@
 ---
 title: コンパイラ オプションに関するマクロ
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 f1_keywords:
 - _ATL_ALL_WARNINGS
 - _ATL_APARTMENT_THREADED
@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - compiler options, macros
 ms.assetid: a869adc6-b3de-4299-b040-9ae20b45f82c
-ms.openlocfilehash: 79b1cabc0304e905012db5f6dd73ed71073c0c1e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: e1d0f6e068989179dd9498e399ca5304a2b378b8
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62278424"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221118"
 ---
 # <a name="compiler-options-macros"></a>コンパイラ オプションに関するマクロ
 
@@ -32,10 +32,10 @@ ms.locfileid: "62278424"
 |[_ATL_ALL_WARNINGS](#_atl_all_warnings)|以前のバージョンの ATL から変換されたプロジェクトでのエラーを有効にするシンボル|
 |[_ATL_APARTMENT_THREADED](#_atl_apartment_threaded)|アパートメント スレッドを使用して 1 つまたは複数のオブジェクトの場合を定義します。|
 |[_ATL_CSTRING_EXPLICIT_CONSTRUCTORS](#_atl_cstring_explicit_constructors)|によって、`CString`コンス トラクターの明示的な意図しない変換を防止します。|
-|[_ATL_ENABLE_PTM_WARNING](#_atl_enable_ptm_warning)|C++ 標準準拠の構文、メンバー関数へのポインターを初期化するために非標準の構文を使用する場合、C4867 コンパイラのエラーが発生するを使用するには、このマクロを定義します。|
+|[_ATL_ENABLE_PTM_WARNING](#_atl_enable_ptm_warning)|このマクロを使用するには定義C++準拠している標準の構文、メンバー関数へのポインターを初期化するために非標準の構文を使用する場合、C4867 コンパイラのエラーが発生します。|
 |[_ATL_FREE_THREADED](#_atl_free_threaded)|無料またはニュートラル スレッドを使用して 1 つまたは複数のオブジェクトの場合を定義します。|
 |[_ATL_MULTI_THREADED](#_atl_multi_threaded)|プロジェクトを表す記号には、Free または Neutral 両方としてマークされているオブジェクトがあります。 マクロ[_ATL_FREE_THREADED](#_atl_free_threaded)代わりに使用する必要があります。|
-|[_ATL_NO_AUTOMATIC_NAMESPACE](#_atl_no_automatic_namespace)|ATL として名前空間を既定で使用できないようにするシンボル|
+|[_ATL_NO_AUTOMATIC_NAMESPACE](#_atl_no_automatic_namespace)|ATL として名前空間の既定使用を禁止するシンボル|
 |[_ATL_NO_COM_SUPPORT](#_atl_no_com_support)|COM に関連するコードがプロジェクトにコンパイルされていることを防止する記号です。|
 |[ATL_NO_VTABLE](#atl_no_vtable)|Vtable ポインターが、クラスのコンス トラクターとデストラクター内で初期化されることを防止する記号です。|
 |[ATL_NOINLINE](#atl_noinline)|関数を示す記号をインライン化することはできません。|
@@ -63,7 +63,7 @@ Visual C .NET 2002 では、前に、ATL は、多くの警告を無効になり
 
 - C4291 'declaration': 一致する演算子が見つかりました削除。初期化が例外をスローすると、メモリは解放されません。
 
-- C4268 'identifier': 'const' static/global データがコンパイラによって生成された既定のコンス トラクターで初期化オブジェクトをゼロでの入力
+- C4268 'identifier': 'const' の静的/グローバルなデータがコンパイラによって生成された既定のコンス トラクターで初期化されたオブジェクトをゼロでの入力
 
 - C4702 到達できないコード
 
@@ -113,7 +113,7 @@ _T マクロでは、すべてのコンス トラクター文字列引数を使�
 
 ### <a name="remarks"></a>Remarks
 
-Visual C コンパイラの標準的な C++ 準拠の強化を一致するように、ATL と MFC ライブラリが変更されました。 クラスのメンバー関数へのポインターの構文は、ANSI C 標準に従って`&CMyClass::MyFunc`します。
+Microsoft の一致するように、ATL と MFC ライブラリが変更されたC++コンパイラの強化された標準C++コンプライアンス。 クラスのメンバー関数へのポインターの構文は、ANSI C 標準に従って`&CMyClass::MyFunc`します。
 
 ときに[_ATL_ENABLE_PTM_WARNING](#_atl_enable_ptm_warning)が定義されていません (既定では、)、ATL と MFC を無効にします (特にメッセージ マップ) マクロ maps C4867 エラー以前のバージョンで作成されたコードが以前と同様にビルドを続行できるようにします。 定義する場合 **_ATL_ENABLE_PTM_WARNING**、コードにする必要がありますC++標準に準拠します。
 
@@ -153,7 +153,7 @@ _ATL_MULTI_THREADED
 
 ##  <a name="_atl_no_automatic_namespace"></a>  _ATL_NO_AUTOMATIC_NAMESPACE
 
-ATL として名前空間を既定で使用できないようにするシンボル
+ATL として名前空間の既定使用を禁止するシンボル
 
 ```
 _ATL_NO_AUTOMATIC_NAMESPACE

@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - swap method
 ms.assetid: 898c219c-bc8e-4d14-a149-6240426c693f
-ms.openlocfilehash: 2c2b87e8cc51248fd3d29df7f361fff92da72957
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b344747c42e9b8b751b97747aacec0b39d10d6a1
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210845"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221516"
 ---
 # <a name="container-classswap"></a>コンテナー クラス::swap
 
 > [!NOTE]
-> このトピックは、C++ 標準ライブラリで使用されるコンテナーの例 (実際には機能しない) として、Visual C++ ドキュメントに含まれています。 詳細については、「[C++ Standard Library Containers (C++ 標準ライブラリ コンテナ―)](../standard-library/stl-containers.md)」をご覧ください。
+> このトピックでは、Microsoft では、C++ドキュメントで使用されるコンテナーの機能の例として、C++標準ライブラリ。 詳細については、「[C++ Standard Library Containers (C++ 標準ライブラリ コンテナ―)](../standard-library/stl-containers.md)」をご覧ください。
 
 **\*this** とその引数の間で被制御シーケンスを交換します。
 

@@ -1,17 +1,15 @@
 ---
 title: コマンド ライン - C++ での MSBuild
 ms.date: 12/12/2018
-f1_keywords:
-- MSBuild
 helpviewer_keywords:
 - MSBuild
 ms.assetid: 7a1be7ff-0312-4669-adf2-5f5bf507d560
-ms.openlocfilehash: 565b1c47b4476fa7cb830e15b978b389f4344ee1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: e95d99cf5c63c824bb9bade8e76bc3ca99079669
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273314"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220566"
 ---
 # <a name="msbuild-on-the-command-line---c"></a>コマンド ライン - C++ での MSBuild
 
@@ -53,7 +51,7 @@ MSBuild の詳細についてを参照してください。
 
 |用語|定義|
 |----------|----------------|
-|[チュートリアル: MSBuild を使用した Visual C++ プロジェクトの作成](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)|使用して Visual C プロジェクトを作成する方法を示します**MSBuild**します。|
+|[チュートリアル: MSBuild を使用した C++ プロジェクトの作成](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)|Visual Studio を作成する方法を示しますC++プロジェクトを使用して**MSBuild**します。|
 |[方法: MSBuild プロジェクトでビルド イベントを使用する](how-to-use-build-events-in-msbuild-projects.md)|ビルドのビルド ステージで発生するアクションを指定する方法を示します: ビルドの開始前にリンクの手順を開始する前にまたは、ビルドが終了した後。|
 |[方法: MSBuild プロジェクトにカスタム ビルド ステップを追加する](how-to-add-a-custom-build-step-to-msbuild-projects.md)|ビルドのシーケンスにユーザー定義のステージを追加する方法を示します。|
 |[方法: MSBuild プロジェクトにカスタム ビルド ツールを追加する](how-to-add-custom-build-tools-to-msbuild-projects.md)|ビルド ツールを特定のファイルに関連付ける方法を示します。|

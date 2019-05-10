@@ -1,16 +1,16 @@
 ---
 title: 'チュートリアル: MFC プロジェクトへの D2D オブジェクトの追加'
-ms.date: 09/20/2018
+ms.date: 04/25/2019
 helpviewer_keywords:
 - MFC, D2D
 - D2D [MFC]
 ms.assetid: dda36c33-c231-4da6-a62f-72d69a12b6dd
-ms.openlocfilehash: 0793511f09be9dcb37732c4c16bfd2b3038a6cf4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 5710add59c0e5d27b2969ae22087533cae901ca9
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358618"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64558174"
 ---
 # <a name="walkthrough-adding-a-d2d-object-to-an-mfc-project"></a>チュートリアル: MFC プロジェクトへの D2D オブジェクトの追加
 
@@ -36,9 +36,9 @@ ms.locfileid: "62358618"
 
 ## <a name="to-create-an-mfc-application"></a>MFC アプリケーションを作成するには
 
-1. **ファイル**メニューで、**新規**選び、**プロジェクト**します。
+1. 使用して、 **MFC アプリケーション ウィザード**MFC アプリケーションを作成します。 「[チュートリアル:新しい MFC シェル コントロールを使用して](walkthrough-using-the-new-mfc-shell-controls.md)Visual Studio のバージョンのウィザードを開く方法の詳細について。
 
-1. **新しいプロジェクト** ダイアログ ボックスで、下の左ペインで**インストールされたテンプレート**、展開**Visual C**選び**MFC**。 中央のペインで選択**MFC アプリケーション**します。 **名前**ボックスに「 *MFCD2DWalkthrough*します。 **[OK]** をクリックします。
+1. **名前**ボックスに「 *MFCD2DWalkthrough*します。 **[OK]** をクリックします。
 
 1. **MFC アプリケーション ウィザード**、選択**完了**すべての設定を変更することがなく。
 

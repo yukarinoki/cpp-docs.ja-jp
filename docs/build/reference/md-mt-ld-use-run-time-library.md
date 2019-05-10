@@ -35,12 +35,12 @@ helpviewer_keywords:
 - LIBCMTD.lib
 - -MT compiler option [C++]
 ms.assetid: cf7ed652-dc3a-49b3-aab9-ad60e5395579
-ms.openlocfilehash: 59b0483d76a2a98c1f278a323a827b243d21adea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 4ae63f2d45d5a1170f94de0480711bc719e4a2e0
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62321294"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65217620"
 ---
 # <a name="md-mt-ld-use-run-time-library"></a>/MD、/MT、/LD (ランタイム ライブラリの使用)
 
@@ -71,7 +71,7 @@ C ランタイム ライブラリと指定してコンパイルしたときに�
 
 ランタイム ライブラリのデバッグ バージョンを使用する方法の詳細については、次を参照してください。 [C ランタイム ライブラリ リファレンス](../../c-runtime-library/c-run-time-library-reference.md)します。
 
-詳細については、Dll は、次を参照してください。 [Visual c の Dll](../dlls-in-visual-cpp.md)します。
+詳細については、Dll は、次を参照してください。[作成 C/C++ Visual Studio で Dll](../dlls-in-visual-cpp.md)します。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 

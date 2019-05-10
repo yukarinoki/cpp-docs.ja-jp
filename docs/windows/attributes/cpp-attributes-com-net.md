@@ -6,12 +6,12 @@ ms.topic: conceptual
 helpviewer_keywords:
 - attributes [C++/CLI], reference topics
 ms.assetid: 613a3611-b3eb-4347-aa38-99b654600e1c
-ms.openlocfilehash: f9d339860e9d2bdb8d66f6b7f8f49d3993b2d5cf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9b985799849a268010dff63f9f7bc25e474b365e
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148334"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448513"
 ---
 # <a name="c-attributes-for-com-and-net"></a>COM および .NET C++ 属性
 
@@ -34,7 +34,7 @@ Microsoft では、COM プログラミングと .NET Framework 共通言語ラ�
 
 - 大量の簡潔ないくつかの属性を持つ COM コンポーネントで必要な IDL コードに置き換えます。
 
-たとえば、ATL のジェネリック クラスの単純なイベント シンクを実装する可能性がありますを適用する、 [event_receiver](event-receiver.md)など特定のクラスに属性`CMyReceiver`します。 `event_receiver`属性は、オブジェクト ファイルに適切なコードを挿入する Visual C コンパイラでコンパイルされます。
+たとえば、ATL のジェネリック クラスの単純なイベント シンクを実装する可能性がありますを適用する、 [event_receiver](event-receiver.md)など特定のクラスに属性`CMyReceiver`します。 `event_receiver`属性は、Microsoft でコンパイルし、C++コンパイラで、オブジェクト ファイルに適切なコードを挿入します。
 
 ```cpp
 [event_receiver(com)]
@@ -49,7 +49,7 @@ class CMyReceiver
 
 ## <a name="basic-mechanics-of-attributes"></a>属性の基本的なしくみ
 
-プロジェクトに属性を挿入する次の 3 つの方法はあります。 最初に挿入できますに手動でソース コード。 次に、プロジェクトでオブジェクトのプロパティ グリッドを使用してそれらを挿入できます。 最後に、さまざまなウィザードを使用してそれらを挿入できます。 使用しての詳細については、**プロパティ**ウィンドウとさまざまなウィザードを参照してください。 [Visual c プロジェクトの管理の作成と](../../build/creating-and-managing-visual-cpp-projects.md)します。
+プロジェクトに属性を挿入する次の 3 つの方法はあります。 最初に挿入できますに手動でソース コード。 次に、プロジェクトでオブジェクトのプロパティ グリッドを使用してそれらを挿入できます。 最後に、さまざまなウィザードを使用してそれらを挿入できます。 使用しての詳細については、**プロパティ**ウィンドウとさまざまなウィザードを参照してください。 [Visual Studio プロジェクト - C++](../../build/creating-and-managing-visual-cpp-projects.md)します。
 
 としてする前に、プロジェクトをビルドするとき、コンパイラ解析各 C++ ソース ファイルのオブジェクト ファイルを生成します。 ただし、コンパイラが属性を検出する場合は解析し、構文を検査します。 コンパイラに動的を呼び出してコードを挿入またはコンパイル時にその他の変更、属性プロバイダー。 プロバイダーの実装は、属性の型によって異なります。 たとえば、ATL 関連の属性は、Atlprov.dll によって実装されます。
 
@@ -64,7 +64,7 @@ class CMyReceiver
 
 ## <a name="building-an-attributed-program"></a>属性付きプログラムの作成
 
-Visual C 属性をソース コードに追加した後のタイプ ライブラリおよび .idl ファイルを生成するために、Visual C コンパイラをする可能性があります。 次のリンカー オプションの .tlb および .idl ファイルの構築に役立つ。
+ビジュアルに追加した後C++属性ソース コードに組み込むには、Microsoft する可能性がありますC++コンパイラにタイプ ライブラリおよび .idl ファイルを生成します。 次のリンカー オプションの .tlb および .idl ファイルの構築に役立つ。
 
 - [/IDLOUT](../../build/reference/idlout-name-midl-output-files.md)
 

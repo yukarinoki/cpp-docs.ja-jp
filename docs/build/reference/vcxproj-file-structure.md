@@ -4,12 +4,12 @@ ms.date: 09/18/2018
 helpviewer_keywords:
 - .vcxproj file structure
 ms.assetid: 14d0c552-29db-480e-80c1-7ea89d6d8e9c
-ms.openlocfilehash: 3b7c7bdad8848a3755db4ea565117459c72e939b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: a1052d0a0eeeff177f0a22883fe06cd07d7b03f6
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317121"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446506"
 ---
 # <a name="vcxproj-and-props-file-structure"></a>.vcxproj ファイルと .props ファイルの構造
 
@@ -21,13 +21,13 @@ ms.locfileid: "62317121"
 
 1. ファイルの構造は、この記事に記載されている所定のフォームに従う必要があります。
 
-1. Visual C++ プロジェクト システムは現在、プロジェクト項目でのワイルドカードをサポートしていません。 たとえば、次のような記述はサポートされていません。
+1. Visual StudioC++プロジェクト システム現在ワイルカードはサポートされませんプロジェクト項目にします。 たとえば、次のような記述はサポートされていません。
 
    ```xml
    <ClCompile Include="*.cpp"/>
    ```
 
-1. Visual C++ プロジェクト システムは現在、プロジェクト項目のパスでのマクロをサポートしていません。 たとえば、次のような記述はサポートされていません。
+1. Visual StudioC++プロジェクト システム現在サポートしていませんマクロ プロジェクト項目のパスにします。 たとえば、次のような記述はサポートされていません。
 
    ```xml
    <ClCompile Include="$(IntDir)\generated.cpp"/>
@@ -47,7 +47,7 @@ ms.locfileid: "62317121"
 
 任意のテキスト エディターまたは XML エディターを使って、.vcxproj ファイルの内容を調べることができます。 Visual Studio のソリューション エクスプローラーでプロジェクトを右クリックし、**[プロジェクトのアンロード]**、**[Foo.vcxproj の編集]** の順に選ぶと表示されます。
 
-最初に注目する点は、最上位の要素が特定の順序で表示されることです。 例:
+最初に注目する点は、最上位の要素が特定の順序で表示されることです。 例えば:
 
 - ほとんどのプロパティ グループおよび項目定義グループは、Microsoft.Cpp.Default.props のインポートの後に出現します。
 
@@ -213,7 +213,7 @@ IDE は、すべての ProjectConfiguration 項目で使われている Configur
 
 プロジェクト内の項目 (ソース ファイルなど) が含まれます。 プロジェクト項目 (つまり、規則の定義によってプロジェクト項目として扱われる項目の種類) に対しては、条件はサポートされていません。
 
-メタデータでは、構成ごとに構成の条件が必要です (すべて同じであっても)。 例:
+メタデータでは、構成ごとに構成の条件が必要です (すべて同じであっても)。 例えば:
 
 ```xml
 <ItemGroup>
@@ -224,7 +224,7 @@ IDE は、すべての ProjectConfiguration 項目で使われている Configur
 </ItemGroup>
 ```
 
-Visual C++ プロジェクト システムは現在、プロジェクト項目でのワイルドカードをサポートしていません。
+Visual StudioC++プロジェクト システム現在ワイルカードはサポートされませんプロジェクト項目にします。
 
 ```xml
 <ItemGroup>
@@ -232,7 +232,7 @@ Visual C++ プロジェクト システムは現在、プロジェクト項目�
 </ItemGroup>
 ```
 
-Visual C++ プロジェクト システムは現在、プロジェクト項目でのマクロをサポートしていません。
+Visual StudioC++プロジェクト システム現在サポートしていませんマクロ プロジェクト項目にします。
 
 ```xml
 <ItemGroup>

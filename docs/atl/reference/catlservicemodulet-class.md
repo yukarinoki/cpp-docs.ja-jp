@@ -1,6 +1,6 @@
 ---
 title: CAtlServiceModuleT クラス
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 f1_keywords:
 - CAtlServiceModuleT
 - ATLBASE/ATL::CAtlServiceModuleT
@@ -35,12 +35,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlServiceModuleT class
 ms.assetid: 8fc753ce-4a50-402b-9b4a-0a4ce5dd496c
-ms.openlocfilehash: 2d4d5d4a5c4d8a52f792cc04a968974967c1e13a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 1d44e356d907afcb261c0b4a765f8807bb54dc19
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62260202"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221185"
 ---
 # <a name="catlservicemodulet-class"></a>CAtlServiceModuleT クラス
 
@@ -186,7 +186,7 @@ HRESULT InitializeSecurity() throw();
 
 ### <a name="remarks"></a>Remarks
 
-Visual Studio .NET 2003 では、このメソッドが基底クラスで実装されていません。 Visual Studio プロジェクト ウィザードには、このメソッドにはで生成されたコードが含まれていますが、ATL 7.1 を使用して、以前のバージョンの Visual C で作成されたプロジェクトがコンパイルされている場合、コンパイル エラーが発生します。 任意のクラスから派生した`CAtlServiceModuleT`派生クラスでこのメソッドを実装する必要があります。
+任意のクラスから派生した`CAtlServiceModuleT`派生クラスでこのメソッドを実装する必要があります。
 
 呼び出しの PKT レベルの認証、RPC_C_IMP_LEVEL_IDENTIFY の偽装レベル、および適切な非 null セキュリティ記述子を使用して`CoInitializeSecurity`します。
 

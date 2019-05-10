@@ -4,14 +4,14 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - verifiable assemblies [C++], creating
 - conversions, C++ projects
-- Visual C++ projects
+- Visual Studio C++ projects
 ms.assetid: 4ef2cc1a-e3e5-4d67-8d8d-9c614f8ec5d3
-ms.openlocfilehash: de3742717bf55c53ab4007aaed18b6ce687fbede
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 0784e6f202750e846c75434eef62a12dab3952f1
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387462"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448115"
 ---
 # <a name="how-to-create-verifiable-c-projects-ccli"></a>方法: 検証可能な C++ プロジェクトを作成 (C +/cli CLI)
 
@@ -20,7 +20,7 @@ Visual C アプリケーション ウィザードでは、検証可能なプロ�
 > [!IMPORTANT]
 > Visual Studio 2015 で非推奨とされ、Visual Studio 2017 がサポートしていない、 **/clr: 純粋な**と **/clr:safe**検証可能なプロジェクトを作成します。 検証可能なコードが必要な場合は、c# コードを変換することをお勧めします。
 
-ただし、以前のバージョンをサポートする Visual C コンパイラ ツールセットを使用している場合 **/clr: 純粋な**と **/clr:safe**、検証可能にするプロジェクトを変換できます。 このトピックでは、プロジェクトのプロパティを設定し、検証可能なアプリケーションを生成するために、Visual C プロジェクトを変換するプロジェクトのソース ファイルを変更する方法について説明します。
+ただしかどうかは、Microsoft の以前のバージョンを使用しているC++コンパイラ ツールセットをサポートする **/clr: 純粋な**と **/clr:safe**、検証可能にするプロジェクトを変換できます。 このトピックでは、プロジェクトのプロパティを設定し、Visual Studio を変換するソース ファイルをプロジェクトを変更する方法を説明しますC++検証可能なアプリケーションを作成するプロジェクト。
 
 ## <a name="compiler-and-linker-settings"></a>コンパイラとリンカーの設定
 

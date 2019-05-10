@@ -8,12 +8,12 @@ helpviewer_keywords:
 - deploying applications [C++], about deploying applications
 - libraries [C++], application deployment issues
 ms.assetid: ebd7f246-ab54-40e8-87fa-dac02c0047b3
-ms.openlocfilehash: ec472e506e78a57b65186bf6a5b801419fb141fb
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: ac3565b4ec465ec60672d2238fbe81b71613a6c1
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346399"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65449047"
 ---
 # <a name="deployment-concepts"></a>配置の概念
 
@@ -21,7 +21,7 @@ ms.locfileid: "64346399"
 
 ## <a name="windows-installer-deployment-in-c"></a>C++ での Windows インストーラーの配置
 
-Visual C++ では、通常、配置用の従来の Windows インストーラー セットアップを使用します。 Windows インストーラーの配置を準備するには、setup.exe ファイルにアプリケーションをパッケージ化し、インストーラー パッケージ (.msi) と共に、そのファイルを配布します。 その後、ユーザーは setup.exe を実行して、アプリケーションをインストールします。
+Visual StudioC++プロジェクトは通常、展開を従来の Windows インストーラーのセットアップを使用します。 Windows インストーラーの配置を準備するには、setup.exe ファイルにアプリケーションをパッケージ化し、インストーラー パッケージ (.msi) と共に、そのファイルを配布します。 その後、ユーザーは setup.exe を実行して、アプリケーションをインストールします。
 
 アプリケーションをパッケージ化するには、セットアップ プロジェクトをソリューションに追加します。これにより、ユーザーに配布するセットアップおよびインストーラー パッケージ ファイルがビルド時に作成されます。 詳細については、「[配置方法の選択](choosing-a-deployment-method.md)」を参照してください。
 

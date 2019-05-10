@@ -1,14 +1,14 @@
 ---
 title: エラーと例外の処理 (Modern C++)
-ms.date: 09/17/2018
+ms.date: 05/07/2019
 ms.topic: conceptual
 ms.assetid: a6c111d0-24f9-4bbb-997d-3db4569761b7
-ms.openlocfilehash: c3def77d8b7a22be05259784e3b80562c8728c15
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: bb27a92347b327e22afc4f6bb2fb248c12290cae
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398915"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222145"
 ---
 # <a name="errors-and-exception-handling-modern-c"></a>エラーと例外の処理 (Modern C++)
 
@@ -90,13 +90,13 @@ C++ の例外は、C# や Java などの言語と似ています。 **を再試�
 
 ## <a name="c-exceptions-versus-windows-seh-exceptions"></a>C++ 例外と Windows SEH 例外
 
-C プログラムと C++ プログラムのどちらでも、Windows オペレーティング システムの構造化例外処理 (SEH) 機構を使用できます。 SEH の概念とで似てC++例外、その SEH を使用して点を除いて、 **_ _try**、 **_ _except**、および **_ _finally**の代わりに構築**を再試行してください**と**キャッチ**します。 Visual C++ では、C++ 例外が SEH 用に実装されています。 ただし、C++ コードを記述するときは、C++ 例外構文を使用してください。
+C プログラムと C++ プログラムのどちらでも、Windows オペレーティング システムの構造化例外処理 (SEH) 機構を使用できます。 SEH の概念とで似てC++例外、その SEH を使用して点を除いて、 **_ _try**、 **_ _except**、および **_ _finally**の代わりに構築**を再試行してください**と**キャッチ**します。 MicrosoftC++コンパイラ (MSVC) C++ SEH の例外が実装されます。 ただし、C++ コードを記述するときは、C++ 例外構文を使用してください。
 
 SEH の詳細については、次を参照してください。[構造化例外処理 (c/c++)](../cpp/structured-exception-handling-c-cpp.md)します。
 
 ## <a name="exception-specifications-and-noexcept"></a>例外指定と noexcept
 
-例外指定は、関数がスローする可能性がある例外を指定する方法として C++ に導入されました。 ただし、実際には例外指定に問題があることがわかったため、C++11 ドラフト標準では非推奨とされます。 以外の例外の仕様を使用しないことをお勧めします。 `throw()`、関数が例外のエスケープを許可されませんを示します。 型の例外の仕様を使用する必要がある場合`throw(`*型*`)`、Visual C が、特定の方法で、標準と異なることに注意してください。 詳細については、次を参照してください。[例外の仕様 (スロー)](../cpp/exception-specifications-throw-cpp.md)します。 `noexcept` 指定子は、`throw()` の推奨される代替手段として C++11 に導入されました。
+例外指定は、関数がスローする可能性がある例外を指定する方法として C++ に導入されました。 ただし、実際には例外指定に問題があることがわかったため、C++11 ドラフト標準では非推奨とされます。 以外の例外の仕様を使用しないことをお勧めします。 `throw()`、関数が例外のエスケープを許可されませんを示します。 型の例外の仕様を使用する必要がある場合`throw(`*型*`)`MSVC が、特定の方法で、標準と異なることに注意してください。 詳細については、次を参照してください。[例外の仕様 (スロー)](../cpp/exception-specifications-throw-cpp.md)します。 `noexcept` 指定子は、`throw()` の推奨される代替手段として C++11 に導入されました。
 
 ## <a name="see-also"></a>関連項目
 

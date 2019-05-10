@@ -1,15 +1,15 @@
 ---
 title: プロパティ ページの XML 規則ファイル
-ms.date: 04/27/2017
+ms.date: 05/06/2019
 helpviewer_keywords:
 - property page XML files
 ms.assetid: dd9d9734-4387-4098-8ba6-85b93507731d
-ms.openlocfilehash: 17b89f00b2e51c960ed7d3219427b56d92851b81
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 610dc7341a35845b35d8ed80f52b421d1c2fb5d1
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62319479"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65217725"
 ---
 # <a name="property-page-xml-rule-files"></a>プロパティ ページの XML 規則ファイル
 
@@ -19,7 +19,7 @@ IDE のプロジェクト プロパティ ページは、VCTargets フォルダ�
 
 最初に、プロジェクトのプロパティ ページを開いてみましょう (**ソリューション エクスプローラー**でプロジェクト ノードを右クリックして、[プロパティ] を選択します)。
 
-![Visual C++ プロジェクトのプロパティ](../media/cpp-property-page-2017.png)
+![Visual StudioC++プロジェクトのプロパティ](../media/cpp-property-page-2017.png)
 
 **[構成プロパティ]** の下の各ノードは、Rule (規則) と呼ばれます。 Rule は、コンパイラのような 1 つのツールを表すこともありますが、通常はプロパティを持つもの、実行するもの、および何らかの出力を生成するものを指す用語です。 各規則は VCTargets フォルダー内の xml ファイルから設定されます。 たとえば、上記に示した C/C++ 規則は、'cl.xml' によって設定されます。
 

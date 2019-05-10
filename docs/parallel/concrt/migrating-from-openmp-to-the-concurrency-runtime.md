@@ -5,18 +5,18 @@ helpviewer_keywords:
 - Concurrency Runtime, migrating from OpenMP
 - OpenMP, migrating to the Concurrency Runtime
 ms.assetid: 9bab7bb1-e45d-44b2-8509-3b226be2c93b
-ms.openlocfilehash: 16b0f175867e18e127997749098cce998674b3d2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ba2b413d40da601029f5c4e1d861576212c10494
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412671"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448424"
 ---
 # <a name="migrating-from-openmp-to-the-concurrency-runtime"></a>OpenMP からコンカレンシー ランタイムへの移行
 
 コンカレンシー ランタイムでは、さまざまなプログラミング モデルを使用できます。 これらのモデルは、他のライブラリのモデルと重複する場合や、他のライブラリのモデルを補完する場合があります。 このドキュメントのセクション比較[OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp)同時実行ランタイムにし、同時実行ランタイムを使用する既存の OpenMP コードを移行する方法について例を示します。
 
-OpenMP プログラミング モデルは、オープン標準により定義されており、Fortran および C/C++ プログラミング言語へのバインドが適切に定義されています。 OpenMP version 2.0 および 2.5 では、Visual C コンパイラでサポートされているは反復的な; の並列アルゴリズムに最適これは、データの配列を並列反復処理を実行します。 OpenMP 3.0 では、反復的なタスクに加え、非反復タスクをサポートします。
+OpenMP プログラミング モデルは、オープン標準により定義されており、Fortran および C/C++ プログラミング言語へのバインドが適切に定義されています。 OpenMP version 2.0 および 2.5 では、Microsoft でサポートされているC++コンパイラ、反復的な; の並列アルゴリズムに適していますこれは、データの配列を並列反復処理を実行します。 OpenMP 3.0 では、反復的なタスクに加え、非反復タスクをサポートします。
 
 OpenMP は、並列化の度合いが事前に決定され、システムで使用可能なリソースと対応する場合に最も効果的です。 OpenMP モデルは、高パフォーマンス コンピューティングに特に適したは非常に大きい計算の問題が 1 台のコンピューターの処理リソースを分散します。 このシナリオでは、ハードウェア環境が一般に、固定し、開発者は、アルゴリズムが実行されたときに、すべてのコンピューティング リソースへの排他アクセスに予測できます。
 

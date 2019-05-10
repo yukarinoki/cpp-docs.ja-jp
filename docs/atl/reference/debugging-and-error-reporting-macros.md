@@ -1,6 +1,6 @@
 ---
 title: デバッグとエラー報告のマクロ
-ms.date: 03/27/2019
+ms.date: 05/06/2019
 f1_keywords:
 - atldef/ATL::_ATL_DEBUG_INTERFACES
 - atldef/ATL::_ATL_DEBUG_QI
@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - macros, error reporting
 ms.assetid: 4da9b87f-ec5c-4a32-ab93-637780909b9d
-ms.openlocfilehash: 0d5010f913521848675987b145a1277c7b00decf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: a243351ff337cb517f8a8231c18c495c8d2ca302
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62276628"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221081"
 ---
 # <a name="debugging-and-error-reporting-macros"></a>デバッグとエラー報告のマクロ
 
@@ -176,7 +176,7 @@ ATLTRACE(
 ### <a name="parameters"></a>パラメーター
 
 *exp*<br/>
-[in]文字列と、ビジュアルを送信する変数C++出力ウィンドウまたはアプリケーションがこれらのメッセージをトラップします。
+[in]文字列と、出力ウィンドウまたはこれらのメッセージをトラップする任意のアプリケーションに送信する変数。
 
 *category*<br/>
 [in]イベントまたはレポートをメソッドの型。 カテゴリの一覧については、「解説」を参照してください。
@@ -207,7 +207,7 @@ ATLTRACE2(
 ### <a name="parameters"></a>パラメーター
 
 *exp*<br/>
-[in]ビジュアルに送信する文字列C++出力ウィンドウまたはアプリケーションがこれらのメッセージをトラップします。
+[in]出力ウィンドウ、またはこれらのメッセージをトラップする任意のアプリケーションに送信する文字列。
 
 *category*<br/>
 [in]イベントまたはレポートをメソッドの型。 カテゴリの一覧については、「解説」を参照してください。

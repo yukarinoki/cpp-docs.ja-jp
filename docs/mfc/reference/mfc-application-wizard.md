@@ -7,19 +7,19 @@ helpviewer_keywords:
 - MFC Application Wizard
 - executable files, creating
 ms.assetid: 227ac090-921d-4b2f-be0a-66a5f4cab0d4
-ms.openlocfilehash: 808e8364764dd826ee82e445627ba21b06946ed6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f69f0a19cdcd3526d8afac2e1492da806c2dffd3
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412749"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448495"
 ---
 # <a name="mfc-application-wizard"></a>MFC アプリケーション ウィザード
 
 MFC アプリケーション ウィザードでは、コンパイル時に Windows 実行可能アプリケーション (.exe) の基本機能が実装されるアプリケーションが生成されます。 MFC の初期アプリケーションには、C++ ソース (.cpp) ファイル、リソース (.rc) ファイル、ヘッダー (.h) ファイル、およびプロジェクト (.vcxproj) ファイルが含まれます。 これらの初期ファイルで生成されるコードは、MFC に基づいています。
 
 > [!NOTE]
->  選択したオプションに応じて、ウィザードがこの他のファイルをプロジェクトに作成します。 例では、選択した場合の**状況依存のヘルプ**上、[高度な機能](../../mfc/reference/advanced-features-mfc-application-wizard.md) ページで、ウィザードは、プロジェクトのヘルプ ファイルをコンパイルするために必要なファイルを作成します。 ウィザードで作成されるファイルの詳細については、次を参照してください。 [Visual c プロジェクトに対して作成されるファイルの種類](../../build/reference/file-types-created-for-visual-cpp-projects.md)、およびプロジェクトの Readme.txt ファイルを参照してください。
+>  選択したオプションに応じて、ウィザードがこの他のファイルをプロジェクトに作成します。 例では、選択した場合の**状況依存のヘルプ**上、[高度な機能](../../mfc/reference/advanced-features-mfc-application-wizard.md) ページで、ウィザードは、プロジェクトのヘルプ ファイルをコンパイルするために必要なファイルを作成します。 ウィザードで作成されるファイルの詳細については、次を参照してください。 [Visual に対して作成されるファイルの種類C++プロジェクト](../../build/reference/file-types-created-for-visual-cpp-projects.md)、およびプロジェクトの Readme.txt ファイルを参照してください。
 
 ## <a name="overview"></a>概要
 
@@ -35,7 +35,7 @@ MFC アプリケーション ウィザードでは、コンパイル時に Windo
 
    - Visual Studio のプロジェクト形式を使用して作成された、表示形式の切り替えができるプロジェクト
 
-   - 共有 DLL 内の MFC を使用するプロジェクト 詳細については、「[Visual C++ の DLL](../../build/dlls-in-visual-cpp.md)」をご覧ください。
+   - 共有 DLL 内の MFC を使用するプロジェクト 詳細については、次を参照してください。[作成 C/C++ Visual Studio で Dll](../../build/dlls-in-visual-cpp.md)します。
 
 - [[複合ドキュメント サポート] (MFC アプリケーション ウィザード)](../../mfc/reference/compound-document-support-mfc-application-wizard.md)
 

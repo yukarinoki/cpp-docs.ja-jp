@@ -1,18 +1,21 @@
 ---
 title: 'チュートリアル: WRL および Media Foundation を使用して UWP アプリの作成'
-ms.date: 09/17/2018
+ms.date: 04/23/2019
 ms.topic: reference
 ms.assetid: 0336c550-fbeb-4dc4-aa9b-660f9fc45382
-ms.openlocfilehash: e0254be8c6fa185f75c46898d4da51742195550a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 28e8d4b2871dbd3bef0f30bae5480d346af50706
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409219"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64558273"
 ---
 # <a name="walkthrough-creating-a-uwp-app-using-wrl-and-media-foundation"></a>チュートリアル: WRL および Media Foundation を使用して UWP アプリの作成
 
-Windows ランタイム C++ テンプレート ライブラリ (WRL) を使用して、使用するユニバーサル Windows プラットフォーム (UWP) アプリを作成する方法について説明します[Microsoft メディア ファンデーション](/windows/desktop/medfound/microsoft-media-foundation-sdk)します。
+> [!NOTE]
+> 新しい UWP アプリとコンポーネントは、お勧めしますを使用すること[C +/cli WinRT](/windows/uwp/cpp-and-winrt-apis/)、新しい標準 c++ 17 の言語プロジェクションの Windows ランタイム Api です。 C +/cli WinRT はバージョン 1803 以降から Windows 10 SDK で使用できます。 C +/cli WinRT はヘッダー ファイル、完全に実装されは最新の Windows API にファースト クラスのアクセス提供するために設計されています。
+
+このチュートリアルでは、Windows ランタイムを使用する方法を学習します。C++を使用するユニバーサル Windows プラットフォーム (UWP) アプリを作成するテンプレート ライブラリ (WRL) [Microsoft メディア ファンデーション](/windows/desktop/medfound/microsoft-media-foundation-sdk)します。
 
 この例では、Web カメラからキャプチャしたイメージにグレースケール効果を適用するカスタム メディア ファンデーション変換を作成します。 アプリでは、カスタム変換の定義のために C++ を使用し、キャプチャしたイメージを変換するコンポーネントを使用するために C# を使用しています。
 
@@ -25,6 +28,8 @@ Windows ランタイム C++ テンプレート ライブラリ (WRL) を使用�
 > このコード例は長いですが、役に立つメディア ファンデーション変換を作成するために必要な最低限のコードを示しています。 独自のカスタム変換を作成するための出発点として、このコード例を使用することができます。 この例の出典元は、[メディア拡張機能サンプル](http://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096)ビデオへの適用を使用してメディア拡張機能の効果、ビデオのデコード、メディア ストリームを生成するスキーム ハンドラーを作成します。
 
 ## <a name="prerequisites"></a>必須コンポーネント
+
+- Visual Studio 2017 以降では、UWP のサポートは省略可能なコンポーネントです。 これをインストールするには、Windows [スタート] メニューから、Visual Studio インストーラーを開き、Visual Studio のバージョンの検索します。 選択**変更**し、確認、**ユニバーサル Windows プラットフォーム開発**タイルがチェックされます。 **オプション コンポーネント**確認 **C++ UWP (v141) 用のツール**for Visual Studio 2017、または **C++ UWP (v142) 用のツール**Visual Studio 2019 の。 使用する Windows SDK のバージョンを確認します。 
 
 - 使用したエクスペリエンス、 [Windows ランタイム](https://msdn.microsoft.com/library/windows/apps/br211377.aspx)します。
 

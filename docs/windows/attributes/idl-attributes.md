@@ -8,12 +8,12 @@ helpviewer_keywords:
 - IDL files [C++], attributes
 - .idl files [C++]
 ms.assetid: 04c596f4-c97b-4952-8053-316678b1d0b6
-ms.openlocfilehash: a699e327eec056bbb36747840990bb9c7ccc259b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 29761d814505d2c2dd435d3416fe2367e1c16073
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409552"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448407"
 ---
 # <a name="idl-attributes"></a>IDL 属性
 
@@ -27,7 +27,7 @@ ms.locfileid: "62409552"
 
 と共に使用しない場合[COM 属性](com-attributes.md)、IDL 属性を使用して、インターフェイスを定義できます。 ソース コードをコンパイルすると、属性は、生成された .idl ファイルの定義に使用されます。 ATL プロジェクトで COM 属性と共に使用するといくつかの IDL などの属性、`coclass`プロジェクトに挿入するコードが発生します。
 
-なお[idl_quote](idl-quote.md)ビジュアルの現在のバージョンでサポートされていない MIDL コンストラクトを使用するとC++します。 これと他の属性など[importlib](importlib.md)と[includelib](includelib-cpp.md)現在の Visual C プロジェクトで既存の .idl ファイルを使用する際に役立ちます。
+なお[idl_quote](idl-quote.md)ビジュアルの現在のバージョンでサポートされていない MIDL コンストラクトを使用するとC++します。 これと他の属性など[importlib](importlib.md)と[includelib](includelib-cpp.md) 、現在の Visual Studio での既存の .idl ファイルを使用するのに役立つC++プロジェクト。
 
 |属性|説明|
 |---------------|-----------------|

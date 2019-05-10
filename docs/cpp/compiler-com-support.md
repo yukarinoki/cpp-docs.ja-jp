@@ -1,22 +1,22 @@
 ---
 title: コンパイラの COM サポート
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - cl.exe compiler, COM support
 - COM, compiler support
 ms.assetid: 76a78442-f2a4-4985-9967-67e20773f847
-ms.openlocfilehash: f0b1d6280dc27641287de8fe539cd3a148048245
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: e13874bad44610821bed9c588af6bd9124162116
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154839"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222213"
 ---
 # <a name="compiler-com-support"></a>コンパイラの COM サポート
 
 ## <a name="microsoft-specific"></a>Microsoft 固有の仕様
 
-Visual C++ コンパイラはコンポーネント オブジェクト モデル (COM) タイプ ライブラリを直接読み取り、コンパイルに含めることのできる C++ ソース コードにコンテンツを変換します。 言語拡張機能はクライアント側の COM プログラミングを簡単にします。
+MicrosoftC++コンパイラ直接を読み取り、コンポーネント オブジェクト モデル (COM) タイプ ライブラリにコンテンツを翻訳C++ソース コードをコンパイルに含めることができます。 言語拡張機能はクライアント側の COM プログラミングを簡単にします。
 
 使用して、 [#import プリプロセッサ ディレクティブ](../preprocessor/hash-import-directive-cpp.md)クラスのインターフェイスとして COM を記述する C++ ヘッダー ファイルに変換や、コンパイラは、タイプ ライブラリを読み取ることができます。 一連の `#import` 属性は、結果の種類のライブラリのヘッダー ファイルのコンテンツのユーザー コントロールで使用できます。
 

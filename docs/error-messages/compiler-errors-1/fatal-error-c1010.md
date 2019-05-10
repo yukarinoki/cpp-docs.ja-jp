@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C1010
 ms.assetid: dfd035f1-a7a2-40bc-bc92-dc4d7f456767
-ms.openlocfilehash: 6974f0d82653203973be50b5ea709bd9487a215f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 204c7ef94d82513338f6635ec9eb22f26fc090a7
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62363974"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448019"
 ---
 # <a name="fatal-error-c1010"></a>致命的なエラー C1010
 
 プリコンパイル ヘッダーを検索中に不明な EOF が見つかりました。 追加を忘れました ' # 名 include' ソースにでしょうか。
 
-指定されたインクルード ファイル[/Yu](../../build/reference/yu-use-precompiled-header-file.md)はソース ファイルに表示されません。  このオプションは既定ではほとんどの Visual C プロジェクトの種類で有効にして、"stdafx.h"が既定値は、このオプションで指定されたファイルを含めます。
+指定されたインクルード ファイル[/Yu](../../build/reference/yu-use-precompiled-header-file.md)はソース ファイルに表示されません。  既定ではほとんどの Visual Studio でこのオプションが有効になっているC++プロジェクトの種類と"stdafx.h"が既定値は、このオプションで指定されたファイルをインクルードします。
 
 Visual Studio 環境でこのエラーを解決するのには、次のメソッドのいずれかを使用します。
 

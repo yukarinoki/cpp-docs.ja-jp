@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Conformance compiler options
 - Zc compiler options [C++]
 ms.assetid: b0de5a84-da72-4e5a-9a4e-541099f939e0
-ms.openlocfilehash: b2563ba0ae2a07bc9f9d81128745ed4b9651fb6c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 962bb2aaa2f05ad0dc4c9c86cd5cc9694cfad98b
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62315639"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446162"
 ---
 # <a name="zcwchart-wchart-is-native-type"></a>/Zc:wchar_t (wchar_t をネイティブ型として認識)
 
@@ -31,7 +31,7 @@ ms.locfileid: "62315639"
 
 場合 **/Zc:wchar_t** 、`wchar_t`としてコンパイルされたコードで組み込みの整数型のキーワードは、C++します。 場合 **/Zc:wchar_t-** (マイナス記号) で指定された、またはコードで C としてコンパイルされた、`wchar_t`組み込み型ではありません。 代わりに、`wchar_t`として定義されている場合は、`typedef`の`unsigned short`標準ヘッダー stddef.h でします。 (Microsoft による実装を定義、stddef.h に含まれているもう 1 つのヘッダーとその他の標準ヘッダー。)
 
-お勧めしません **/Zc:wchar_t-** ため、C++標準である必要があります`wchar_t`組み込み型を指定します。 `typedef` バージョンを使用すると、移植性の問題が発生することがあります。 ビジュアルの以前のバージョンからアップグレードする場合C++とコンパイラ エラーが発生した[C2664](../../error-messages/compiler-errors-2/compiler-error-c2664.md)コードが暗黙的に変換しようとしているため、`wchar_t`に`unsigned short`、エラーを修正するコードを変更することをお勧めします。設定ではなく **/Zc:wchar_t-** します。
+お勧めしません **/Zc:wchar_t-** ため、C++標準である必要があります`wchar_t`組み込み型を指定します。 `typedef` バージョンを使用すると、移植性の問題が発生することがあります。 Visual Studio の以前のバージョンからアップグレードし、コンパイラ エラーが発生したかどうかは[C2664](../../error-messages/compiler-errors-2/compiler-error-c2664.md)コードが暗黙的に変換しようとしているため、`wchar_t`に`unsigned short`エラーを修正するコードを変更することをお勧めします。設定ではなく **/Zc:wchar_t-** します。
 
 **/Zc:wchar_t**オプションが既定では  C++ 、コンパイル、C のコンパイルでは無視されます。 [/Permissive -](permissive-standards-conformance.md)オプションには影響しません **/Zc:wchar_t**します。
 

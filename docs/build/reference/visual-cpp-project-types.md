@@ -8,25 +8,25 @@ helpviewer_keywords:
 - projects [C++], types
 - templates [C++], projects
 - applications [C++], projects
-- Visual C++ projects, types
+- C++ projects, types
 ms.assetid: 7337987e-1e7b-4120-9a4b-94f0401f15e7
-ms.openlocfilehash: cac194ed2c830541711161dc139a42ed0529340f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: dce96a221804e5538929d63fa3c125a27e7fc36d
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62316757"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65217776"
 ---
 # <a name="c-project-templates"></a>C++ プロジェクト テンプレート
 
-Visual Studio プロジェクト テンプレートの生成のソース コード ファイル、コンパイラ オプション、メニューのツールバー、アイコン、参照、および`#include`を作成するプロジェクトの種類に適したステートメント。 Visual Studio には、数種類の Visual C++ プロジェクト テンプレートが含まれ、これらのテンプレートの多くにはウィザードが用意されているため、プロジェクトを作成しながらカスタマイズを行うことができます。 プロジェクトを作成したらすぐにプロジェクトをビルドし、アプリケーションを実行できます。アプリケーションを開発しながら、断続的にビルドすることをお勧めします。
+Visual Studio プロジェクト テンプレートの生成のソース コード ファイル、コンパイラ オプション、メニューのツールバー、アイコン、参照、および`#include`を作成するプロジェクトの種類に適したステートメント。 Visual Studio には、いくつかの種類が含まれています。 のC++プロジェクト テンプレートと、それらの多くのウィザードを提供できるように、作成するには、プロジェクトをカスタマイズすることができます。 プロジェクトを作成したらすぐにプロジェクトをビルドし、アプリケーションを実行できます。アプリケーションを開発しながら、断続的にビルドすることをお勧めします。
 
 > [!NOTE]
 > C++ プロジェクト テンプレートを使用して C 言語プロジェクトを作成できます。 生成されたプロジェクトで、.cpp ファイル名拡張子を持つファイルを検索して .c に変更します。 次に、プロジェクト (ソリューションではない) の **[プロジェクトのプロパティ]** ページで、 **[構成プロパティ]**、 **[C/C++]** の順に展開し、 **[詳細]** を選択します。 **[コンパイル言語の選択]** 設定を **[C コードとしてコンパイル (/TC)]** に変更します。
 
 ## <a name="project-templates"></a>プロジェクト テンプレート
 
-Visual Studio に含まれるプロジェクト テンプレートは、製品のバージョンとインストールされているワークロードによって異なります。 C++ によるデスクトップ開発ワークロードをインストールした場合、Visual Studio には次の Visual C++ プロジェクト テンプレートが含まれます。
+Visual Studio に含まれるプロジェクト テンプレートは、製品のバージョンとインストールされているワークロードによって異なります。 によるデスクトップ開発をインストールした場合C++ワークロードでは、Visual Studio がこれらC++プロジェクト テンプレート。
 
 ### <a name="windows-desktop"></a>Windows デスクトップ
 

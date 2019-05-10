@@ -1,17 +1,17 @@
 ---
 title: 'チュートリアル: タスクおよび XML HTTP 要求を使用して接続します。'
-ms.date: 11/19/2018
+ms.date: 04/25/2019
 helpviewer_keywords:
 - connecting to web services, UWP apps [C++]
 - IXMLHTTPRequest2 and tasks, example
 - IXHR2 and tasks, example
 ms.assetid: e8e12d46-604c-42a7-abfd-b1d1bb2ed6b3
-ms.openlocfilehash: f78adda7625d3a3def60de968c5e7be97f282a7f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 449f99f37f0d328b7c874730b814335f8b69e807
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411415"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64856281"
 ---
 # <a name="walkthrough-connecting-using-tasks-and-xml-http-requests"></a>チュートリアル: タスクおよび XML HTTP 要求を使用して接続します。
 
@@ -31,6 +31,8 @@ ms.locfileid: "62411415"
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
+UWP のサポートは、Visual Studio 2017 では省略可能以降です。 これをインストールするには、Windows [スタート] メニューから、Visual Studio インストーラーを開くし、Visual Studio を使用しているのバージョンを選択します。 をクリックして、**変更**ボタンをクリックし、確認、 **UWP 開発**タイルがチェックされます。 **オプション コンポーネント**ことを確認します **C++ UWP ツール**がチェックされます。 Visual Studio 2017 または Visual Studio 2019 の v142 v141 を使用します。
+
 ## <a name="defining-the-httprequest-httprequestbufferscallback-and-httprequeststringcallback-classes"></a>HttpRequest、HttpRequestBuffersCallback、および HttpRequestStringCallback クラスを定義する
 
 `IXMLHTTPRequest2` インターフェイスを使用して HTTP を通じた Web 要求を作成する場合、`IXMLHTTPRequest2Callback` インターフェイスを実装して、サーバーの応答を受け取り、他のイベントに対応します。 この例では `HttpRequest` クラスを定義して Web 要求を作成し、`HttpRequestBuffersCallback` と `HttpRequestStringCallback` クラスを定義して応答を処理しています。 `HttpRequestBuffersCallback` および `HttpRequestStringCallback` クラスは `HttpRequest` クラスをサポートします。`HttpRequest` クラスはアプリケーション コードからのみ使用できます。
@@ -43,7 +45,9 @@ ms.locfileid: "62411415"
 
 #### <a name="to-define-the-httprequest-class"></a>HttpRequest クラスを定義するには
 
-1. Visual C を使用して、**空白アプリ (XAML)** 空の XAML アプリ プロジェクトを作成するテンプレート。 この例では、プロジェクトの名前を `UsingIXMLHTTPRequest2`とします。
+1. メイン メニューで、次のように選択します。**ファイル** > **新規** > **プロジェクト**します。 
+
+1. 使用して、 C++ **空のアプリ (ユニバーサル Windows)** 空の XAML アプリ プロジェクトを作成するテンプレート。 この例では、プロジェクトの名前を `UsingIXMLHTTPRequest2`とします。
 
 1. プロジェクトに HttpRequest.h という名前のヘッダー ファイルと HttpRequest.cpp という名前のソース ファイルを追加します。
 

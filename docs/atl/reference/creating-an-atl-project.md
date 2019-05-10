@@ -1,6 +1,6 @@
 ---
 title: ATL プロジェクトの作成
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 f1_keywords:
 - vc.appwiz.ATL.project
 helpviewer_keywords:
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - _ATL_MIN_CRT macro
 - distributing files with ATL components
 ms.assetid: 061d5f98-f669-440e-9380-42f017a0f9e8
-ms.openlocfilehash: d44434a36c8d757fb8f79d36a672c4c77de64ade
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: c36200d7f0d41aa4f116fdee3f5d95ff1e80e839
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62278112"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65445988"
 ---
 # <a name="creating-an-atl-project"></a>ATL プロジェクトの作成
 
@@ -33,7 +33,7 @@ ATL プロジェクトを作成する最も簡単である、ATL プロジェク
 
 1. クリックして**完了**ウィザードを終了し、開発環境で新しいプロジェクトを開きます。
 
-作成されたファイルを表示するには、プロジェクトが作成されると、**ソリューション エクスプ ローラー**します。 ウィザードでプロジェクト用に作成されるファイルの詳細については、プロジェクトが生成する ReadMe.txt ファイルを参照してください。 ファイルの種類についての詳細については、次を参照してください。 [Visual c プロジェクトに対して作成されるファイルの種類](../../build/reference/file-types-created-for-visual-cpp-projects.md)します。 新しい ATL プロジェクト、およびそれらを変更する方法の構成の詳細については、次を参照してください。 [ATL プロジェクトの既定の構成](../../atl/reference/default-atl-project-configurations.md)します。
+作成されたファイルを表示するには、プロジェクトが作成されると、**ソリューション エクスプ ローラー**します。 ウィザードでプロジェクト用に作成されるファイルの詳細については、プロジェクトが生成する ReadMe.txt ファイルを参照してください。 ファイルの種類についての詳細については、次を参照してください。 [Visual に対して作成されるファイルの種類C++プロジェクト](../../build/reference/file-types-created-for-visual-cpp-projects.md)します。 新しい ATL プロジェクト、およびそれらを変更する方法の構成の詳細については、次を参照してください。 [ATL プロジェクトの既定の構成](../../atl/reference/default-atl-project-configurations.md)します。
 
 ## <a name="see-also"></a>関連項目
 

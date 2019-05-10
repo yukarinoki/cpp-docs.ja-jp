@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual C++ projects, properties
 - projects [C++], properties
 ms.assetid: 9b0d6f8b-7d4e-4e61-aa75-7d14944816cd
-ms.openlocfilehash: ab5456bfc8a1b8305813f4ee4a4399091de15aee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: a8c15de43a3843b8ff12cb4ad3d951d76b90c039
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62314094"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446183"
 ---
 # <a name="set-compiler-and-build-properties"></a>セットのコンパイラとビルド プロパティ
 
@@ -23,7 +23,7 @@ IDE では、プロジェクトをビルドするために必要なすべての�
 
 プロジェクトを作成すると、システムによってさまざまなプロパティの値が割り当てられます。 プロジェクトの種類およびアプリ ウィザードで選んだオプションにより、既定値は若干異なります。 たとえば、ATL プロジェクトには MIDL ファイルに関するプロパティがありますが、基本的なコンソール アプリケーションにはありません。 既定のプロパティは、プロパティ ページの [全般] ウィンドウに表示されます。
 
-![Visual C&#43;&#43; プロジェクトの既定値](media/visual-c---project-defaults.png "Visual C++ プロジェクトの既定値")
+![Visual C&#43; &#43;プロジェクトの既定値](media/visual-c---project-defaults.png "VisualC++プロジェクトの既定値")
 
 ## <a name="applying-properties-to-build-configurations-and-target-platforms"></a>構成とターゲット プラットフォームを構築するプロパティの適用
 
@@ -61,7 +61,7 @@ C++ コンパイラとリンカーのオプションが下にある、 **C/C++**
 
 MSBuild では、特定の文字列値に含まれているディレクトリとパスに「マクロ」と呼ばれる、コンパイル時定数の使用をサポートします。 これらには、公開するを参照してくださいし、それらを使用して、変更、プロパティ ページで、[プロパティ エディター](#property_editor)します。 
 
-次の図は、Visual C++ プロジェクトのプロパティ ページを示しています。 左側のウィンドウでは **[VC++ ディレクトリ]** *ルール* が選択され、右側のウィンドウには、そのルールに関連付けられているプロパティの一覧が表示されています。 `$(...)`値と呼ばれる*マクロ*します。 "*マクロ*" とは、Visual Studio や MSBuild システムによって定義されている値またはユーザー定義の値を参照できるコンパイル時定数です。 マクロを使用するとディレクトリのパスなどのハード コーディングされた値ではなく、マシン間およびバージョンの Visual Studio は、プロパティの設定を簡単に共有できるし、プロジェクトの設定が正常に参加をより確実[プロパティの継承](project-property-inheritance.md)します。 
+次の図は、Visual Studio のプロパティ ページを示しますC++プロジェクト。 左側のウィンドウでは **[VC++ ディレクトリ]** *ルール* が選択され、右側のウィンドウには、そのルールに関連付けられているプロパティの一覧が表示されています。 `$(...)`値と呼ばれる*マクロ*します。 "*マクロ*" とは、Visual Studio や MSBuild システムによって定義されている値またはユーザー定義の値を参照できるコンパイル時定数です。 マクロを使用するとディレクトリのパスなどのハード コーディングされた値ではなく、マシン間およびバージョンの Visual Studio は、プロパティの設定を簡単に共有できるし、プロジェクトの設定が正常に参加をより確実[プロパティの継承](project-property-inheritance.md)します。 
 
 ![プロジェクトのプロパティ ページ](media/project_property_pages_vc.png "Project_Property_Pages_VC")
 

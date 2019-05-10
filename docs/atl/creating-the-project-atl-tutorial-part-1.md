@@ -1,14 +1,14 @@
 ---
 title: プロジェクトの作成 (ATL チュートリアル、パート 1)
 ms.custom: get-started-article
-ms.date: 09/26/2018
+ms.date: 05/06/2019
 ms.assetid: f6b727d1-390a-4b27-b82f-daadcd9fc059
-ms.openlocfilehash: 4a608fb3a096dee2420ef652ba213c534d8fb426
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 292faf1769baa2e1c3fc6e52ba6df065cf08766e
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262087"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221405"
 ---
 # <a name="creating-the-project-atl-tutorial-part-1"></a>プロジェクトの作成 (ATL チュートリアル、パート 1)
 
@@ -25,7 +25,7 @@ ms.locfileid: "62262087"
 > #define WINVER 0x0400
 > #endif
 > ```
-> 代入
+> with
 > ```
 > #ifndef WINVER
 > #define WINVER 0x0500
@@ -36,9 +36,9 @@ ms.locfileid: "62262087"
 
 ### <a name="to-create-the-initial-atl-project-using-the-atl-project-wizard"></a>ATL プロジェクト ウィザードを使用して、初期の ATL プロジェクトを作成するには
 
-1. Visual Studio 開発環境で次のようにクリックします。**新規**上、**ファイル** メニューをクリック**プロジェクト**します。
+1. Visual studio 2017 およびそれ以前。**ファイル** > **新しい** > **プロジェクト**します。 開く、 **Visual C++** タブ**MFC/ATL**します。 選択**ATL プロジェクト**します。
 
-1. 開く、 **Visual C**タブ**MFC/ATL**します。 選択**ATL プロジェクト**します。
+   Visual Studio 2019: で選択**ファイル** > **新規** > **プロジェクト**、検索ボックスで、"atl"を入力し、 **ATL プロジェクト**します。
 
 1. 型*多角形*プロジェクト名として。
 

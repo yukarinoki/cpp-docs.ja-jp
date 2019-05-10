@@ -9,16 +9,16 @@ helpviewer_keywords:
 - try-catch keyword [C++], termination handlers
 - C++ exception handling, exception handlers
 ms.assetid: dd3b647d-c269-43a8-aab9-ad1458712976
-ms.openlocfilehash: b77a218340399578e3c9428100476787e2e60b25
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: e948d941afa1459623619e385aa67b1c60490245
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330571"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221948"
 ---
 # <a name="structured-exception-handling-cc"></a>Structured Exception Handling (C/C++)
 
-構造化例外処理 (SEH) は、ハードウェアの障害などの特定のコードを例外的な状況を適切に処理するために C# の Microsoft 拡張機能です。 Windows および Visual C は SEH をサポートよりポータブルで柔軟なコードがあるために、ISO 標準 C++ の例外処理を使用することをお勧めします。 ただし、既存のコードを維持するために特定の種類のプログラムでは、まだ必要があります SEH を使用するか。
+構造化例外処理 (SEH) は、ハードウェアの障害などの特定のコードを例外的な状況を適切に処理するために C# の Microsoft 拡張機能です。 Windows と Microsoft C++ 、SEH をサポートする ISO 標準を使用することをお勧めします。C++よりポータブルで柔軟なコードがあるために例外が処理します。 ただし、既存のコードを維持するために特定の種類のプログラムでは、まだ必要があります SEH を使用するか。
 
 **Microsoft 固有:**
 
@@ -34,7 +34,7 @@ ms.locfileid: "62330571"
 
 Seh を使うと、実行が予期せず終了した場合にメモリ ブロックやファイルなどのリソースが正しく解放されることを確認できます。 特定の問題を処理することもできます。-メモリの不足など — に依存しない簡潔の構造化されたコードを使用して**goto**ステートメントやリターン コードの複雑なテスト。
 
-ここで説明する try-except および try-finally ステートメントは C 言語に対する Microsoft の拡張機能です。 これらは、イベント後にプログラムの制御をアプリケーションが取得するようにし、そうでない場合は実行を終了させることによって SEH をサポートします。 SEH は C++ ソース ファイルと連携しますが、C++ 向けに設計されていません。 使用してコンパイルする C++ プログラムで SEH を使用するかどうか、 [/EHa または/EHsc](../build/reference/eh-exception-handling-model.md)オプションの場合は、ローカル オブジェクトと呼ばれますが、その他の実行動作が期待どおりではないデストラクター。 例については、この記事の後半の例を参照してください。 ほとんどの場合、SEH の代わりに勧め ISO 標準を使用する[C++ 例外処理](../cpp/try-throw-and-catch-statements-cpp.md)、Visual C もサポートします。 C++ 例外処理を使用すると、コードの移植性が高くなり、すべての種類の例外を処理できるようになります。
+ここで説明する try-except および try-finally ステートメントは C 言語に対する Microsoft の拡張機能です。 これらは、イベント後にプログラムの制御をアプリケーションが取得するようにし、そうでない場合は実行を終了させることによって SEH をサポートします。 SEH は C++ ソース ファイルと連携しますが、C++ 向けに設計されていません。 使用してコンパイルする C++ プログラムで SEH を使用するかどうか、 [/EHa または/EHsc](../build/reference/eh-exception-handling-model.md)オプションの場合は、ローカル オブジェクトと呼ばれますが、その他の実行動作が期待どおりではないデストラクター。 例については、この記事の後半の例を参照してください。 ほとんどの場合、SEH の代わりに勧め ISO 標準を使用する[C++例外処理](../cpp/try-throw-and-catch-statements-cpp.md)、どの MicrosoftC++コンパイラもサポートしています。 C++ 例外処理を使用すると、コードの移植性が高くなり、すべての種類の例外を処理できるようになります。
 
 SEH を使用する C# コードを使っている場合は、C++ 例外処理を使用する C++ コードと混在させることができます。 詳しくは、次を参照してください。 [C++ で構造化例外処理](../cpp/exception-handling-differences.md)します。
 

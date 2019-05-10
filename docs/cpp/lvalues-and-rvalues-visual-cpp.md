@@ -1,18 +1,18 @@
 ---
-title: 値のカテゴリ。左辺値と右辺値 (Visual C)
-ms.date: 04/06/2018
+title: 値のカテゴリ。左辺値と右辺値 (C++)
+ms.date: 05/07/2019
 helpviewer_keywords:
 - R-values [C++]
 - L-values [C++]
 ms.assetid: a8843344-cccc-40be-b701-b71f7b5cdcaf
-ms.openlocfilehash: 74bfac5f5bb56549eee41a5479babf8e71b00aa6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 4e3cfa87a8f1ae9b17f7c08afd8faeabea7102b3
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245575"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222013"
 ---
-# <a name="lvalues-and-rvalues-visual-c"></a>左辺値と右辺値 (Visual C)
+# <a name="lvalues-and-rvalues-c"></a>左辺値と右辺値 (C++)
 
 すべての C++ 式の型を持つし、に属する、*値カテゴリ*します。 値のカテゴリは、コンパイラが作成、コピー、および式の評価中に一時オブジェクトを移動するときに従う必要があるルールの基礎です。
 

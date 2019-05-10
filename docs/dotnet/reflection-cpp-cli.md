@@ -18,12 +18,12 @@ helpviewer_keywords:
 - data types [C++], enumerating
 - public members [C++]
 ms.assetid: 46b6ff4a-e441-4022-8892-78e69422f230
-ms.openlocfilehash: a17910e0288b81723aa837ba9204bb40713d5d49
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 5f18a7faa4e77571a87cc0d76a43240aaf1fd52c
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384687"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447225"
 ---
 # <a name="reflection-ccli"></a>リフレクション (C++/CLI)
 
@@ -34,7 +34,7 @@ ms.locfileid: "62384687"
 リフレクションの機能にアクセスする最も一般的な方法は、<xref:System.Object.GetType%2A> メソッドを使用することです。 このメソッドがによって提供される<xref:System.Object?displayProperty=nameWithType>からガベージ コレクションのすべてのクラスが派生します。
 
 > [!NOTE]
-> Visual C コンパイラで構築された .exe のリフレクションは、.exe に組み込まれている場合にのみ使用できます、 **/clr: 純粋な**または **/clr:safe**コンパイラ オプション。 **/Clr: 純粋な**と **/clr:safe**コンパイラ オプションは、Visual Studio 2015 で非推奨と Visual Studio 2017 では使用できません。 参照してください[/clr (共通言語ランタイムのコンパイル)](../build/reference/clr-common-language-runtime-compilation.md)詳細についてはします。
+> Microsoft で構築された .exe のリフレクションC++コンパイラは、.exe に組み込まれている場合にのみ使用できます、 **/clr: 純粋な**または **/clr:safe**コンパイラ オプション。 **/Clr: 純粋な**と **/clr:safe**コンパイラ オプションは、Visual Studio 2015 で非推奨と Visual Studio 2017 では使用できません。 参照してください[/clr (共通言語ランタイムのコンパイル)](../build/reference/clr-common-language-runtime-compilation.md)詳細についてはします。
 
 詳細については、「<xref:System.Reflection>」を参照してください。
 
@@ -181,7 +181,7 @@ public:
 
 リフレクション システムが、アセンブリの配列を正常に読み込まれたら**型**でオブジェクトを取得、<xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=nameWithType>関数。 各配列要素には、異なる型の情報が含まれています。ただし、この例で定義されているクラスは 1 つだけです。 ループを使用して各**型**型のメンバーを使用してこの配列をクエリ、 **:getmembers**関数。 この関数の配列を返します**MethodInfo**オブジェクト、メンバー関数は、データ メンバー、または型のプロパティに関する情報を格納している各オブジェクト。
 
-定義されているメソッドの一覧が、関数には明示的に含まれているメモ**TestClass**関数が暗黙的に継承し、 **system::object**クラス。 Visual C++ 構文ではなく .NET で記述されている部分では、プロパティは get 関数と set 関数でアクセスする基底のデータ メンバーとして表示されます。 get 関数と set 関数は、通常のメソッドとしてこのリストに表示されています。 リフレクションは、Visual C++ コンパイラではなく、共通言語ランタイムを通じてサポートされています。
+定義されているメソッドの一覧が、関数には明示的に含まれているメモ**TestClass**関数が暗黙的に継承し、 **system::object**クラス。 Visual C++ 構文ではなく .NET で記述されている部分では、プロパティは get 関数と set 関数でアクセスする基底のデータ メンバーとして表示されます。 get 関数と set 関数は、通常のメソッドとしてこのリストに表示されています。 リフレクションは、マイクロソフトではなく、共通言語ランタイムを通じてサポートC++コンパイラ。
 
 このコードを使用すると、定義したアセンブリを調べるだけでなく、.NET アセンブリを調べることもできます。 たとえば、TestAssembly を mscorlib に置き換えると、mscorlib.dll に定義されているすべての型とメソッドのリストが表示されます。
 

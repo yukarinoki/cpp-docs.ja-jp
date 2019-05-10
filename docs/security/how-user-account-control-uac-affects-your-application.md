@@ -7,12 +7,12 @@ helpviewer_keywords:
 - user accounts [C++]
 - User Account Control [C++]
 ms.assetid: 0d001870-253e-4989-b689-f78035953799
-ms.openlocfilehash: 3702462ec892025cfb4f24d9c91e6db705b1b9a5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3818b0ff7d4e4c551c41726dd44935beb5d32842
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179256"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448478"
 ---
 # <a name="how-user-account-control-uac-affects-your-application"></a>ユーザー アカウント制御 (UAC: User Account Control) がアプリケーションに与える影響
 
@@ -22,7 +22,7 @@ ms.locfileid: "62179256"
 
 ## <a name="building-projects-after-enabling-uac"></a>UAC を有効にした後のプロジェクトのビルド
 
-UAC を無効にした状態で Windows Vista で Visual C++ プロジェクトをビルドし、後で UAC を有効にする場合は、正しく動作させるためにプロジェクトを消去して、リビルドする必要があります。
+Visual Studio をビルドする場合C++プロジェクトに Windows Vista で UAC を無効に、後で UAC を有効にし、消去し、正常に動作するためにプロジェクトをリビルドする必要があります。
 
 ## <a name="applications-that-require-administrative-privileges"></a>管理特権を必要とするアプリケーション
 
