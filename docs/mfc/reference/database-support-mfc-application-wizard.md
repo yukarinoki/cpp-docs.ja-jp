@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC Application Wizard, database support
 ms.assetid: 9ddf4558-fd41-4ac7-8d9b-c93d9c68ab59
-ms.openlocfilehash: a1e0519e1351a48bbd969168d62f163c9dde7e7e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 94ed75ffd59294d5beb076ef4d66e57ef763f10e
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323115"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525458"
 ---
 # <a name="database-support-mfc-application-wizard"></a>[データベース サポート] (MFC アプリケーション ウィザード)
 
@@ -46,15 +46,15 @@ ms.locfileid: "62323115"
 
 - **Data Source**
 
+   > [!NOTE]
+   > Visual Studio 2019 で使用でき、後で、ATL OLE DB コンシューマー ウィザードと MFC ODBC コンシューマー ウィザードはできません。 まだ機能を手動で追加できます。 詳細については、次を参照してください。[ウィザードの作成、コンシューマーを使用せずに](../../data/oledb/creating-a-consumer-without-using-a-wizard.md)します。
+
    をクリックして、**データ ソース**指定のドライバーまたはプロバイダーとデータベースを使用してデータ ソースを設定するボタンをクリックします。 OLE DB を選択した場合、**クライアント型**オプション、このボタンが表示されます、**データ リンク プロパティ** ダイアログ ボックス。 ODBC を選択した場合、**クライアントの種類**オプション、このボタンは、提供、**データ ソースの選択** ダイアログ ボックス。 このオプションは、アプリケーションでデータベースのビューを含めるように選択する場合にのみ使用できます。
 
    |オプション|説明|
    |------------|-----------------|
    |**データ リンク プロパティ**(OLE DB)|指定した OLE DB プロバイダーを使用して、指定されたデータ ソースを確立します。 OLE DB プロバイダー、データ、データ ソース、ログオン ID、および (必要に応じて) パスワードの場所を指定する必要があります。 このダイアログ ボックスの詳細については、「**データソース**で[ATL OLE DB コンシューマー ウィザード](../../atl/reference/atl-ole-db-consumer-wizard.md)します。|
    |**データ ソースの選択**(ODBC)|指定された ODBC ドライバーを使用して、指定されたデータ ソースを確立します。 データ ソースのテーブルを選択するデータ ソース名を選択する必要があります。 ウィザードでは、テーブルのすべての列をバインドのメンバー変数に、 `CRecordset`-クラスを派生します。 このダイアログ ボックスの詳細については、「**データソース**で[MFC ODBC コンシューマー ウィザード](../../mfc/reference/mfc-odbc-consumer-wizard.md)します。|
-
-   > [!NOTE]
-   > Shift キーを押し、以前のリリースで、**データソース**Data Link (.udl) ファイルを選択できるようにファイルを開く ダイアログを開くボタンをクリックします。 この機能はサポートされなくなりました。
 
 - **属性データベース クラスを生成します。**
 

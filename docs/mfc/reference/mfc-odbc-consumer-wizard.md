@@ -1,23 +1,25 @@
 ---
 title: MFC ODBC コンシューマー ウィザード
-ms.date: 10/03/2018
-f1_keywords:
-- vc.codewiz.class.mfc.consumer.overview
+ms.date: 05/09/2019
 helpviewer_keywords:
-- MFC ODBC Consumer Wizard
 - wizards [MFC]
 ms.assetid: f64a890b-a252-4887-88a1-782a7cd4ff3d
-ms.openlocfilehash: b6009a1e6b6100eabaa2ed05404217c0d2906be0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 20357646bbb7aa4fe00db43d8e77f9bf0b95c9b5
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62310312"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525360"
 ---
 # <a name="mfc-odbc-consumer-wizard"></a>MFC ODBC コンシューマー ウィザード
 
-> [!WARNING]
-> Visual Studio 2017 バージョン 15.9 では、このコード ウィザードは非推奨になっており、Visual Studio の今後のバージョンで削除されます。 このウィザードはほとんど使用されません。 このウィザードを削除しても、ATL と MFC の一般的なサポートには影響ありません。 この非推奨に関するご意見を共有したい場合は、[こちらのアンケート](https://www.surveymonkey.com/r/QDWKKCN)にお答えください。 お客様のご意見は私どもにとって重要です。
+::: moniker range="vs-2019"
+
+このウィザードでは以降では、Visual Studio 2019 利用できます。
+
+::: moniker-end
+
+::: moniker range="vs-2017"
 
 このウィザードを設定する ODBC レコード セット クラスとデータ バインディング、指定されたデータ ソースにアクセスするために必要です。
 
@@ -73,6 +75,8 @@ ms.locfileid: "62310312"
 - **すべての列をバインドします。**
 
    選択したテーブルのすべての列がバインドされているかどうかを指定します。 (既定値) は、このボックスを選択すると、すべての列がバインドされます。このボックスを選択しない場合は、列がバインドされていないと、レコード セット クラスで手動でバインドする必要があります。
+
+::: moniker-end
 
 ## <a name="see-also"></a>関連項目
 
