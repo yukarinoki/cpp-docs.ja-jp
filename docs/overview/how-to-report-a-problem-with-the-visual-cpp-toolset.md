@@ -4,16 +4,16 @@ ms.date: 06/21/2018
 ms.technology: cpp-ide
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 266ea37510b636cd1dc1cfa5909552ace50df1bc
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: 21931fc4976c909c77120e696f25f93c0a0fda0b
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58782259"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446774"
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset-or-documentation"></a>Visual C++ ツールセットまたはドキュメントの問題を報告する方法
 
-Microsoft Visual C++ のコンパイラ、リンカー、その他のツールとライブラリを使っていて問題が発生した場合は、Microsoft にお知らせください。 ドキュメントに問題がある場合は、そちらもお知らせください。
+Microsoft C++ コンパイラ、リンカー、またはその他のツールやライブラリで問題が発生した場合は、それらをお知らせください。 ドキュメントに問題がある場合は、そちらもお知らせください。
 
 ## <a name="how-to-report-a-c-toolset-issue"></a>Visual C++ ツールセットの問題を報告する方法
 

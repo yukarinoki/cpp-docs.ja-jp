@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C++, home page
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: d8826c92077ac374b67a7294fe040d6fe8dea927
-ms.sourcegitcommit: 14b292596bc9b9b883a9c58cd3e366b282a1f7b3
+ms.openlocfilehash: a01c6448174a35da900b7b50a1df5916a2983201
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60124747"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222601"
 ---
 # <a name="c-in-visual-studio"></a>Visual Studio での C++
 
@@ -103,7 +103,7 @@ Windows 向けの従来のネイティブ C++ デスクトップ アプリケー
 [Linux でのプログラミング](../linux/index.md)<br/>
 GCC でコンパイルするためにリモートの Linux マシンにコードを記述し配置するために Visual Studio IDE を使用する方法。
 
-[Visual C++ の DLL](../build/dlls-in-visual-cpp.md)<br/>
+[Visual Studio での C/C++ Dll の作成](../build/dlls-in-visual-cpp.md)<br/>
 Win32、ATL、および MFC を使用して Windows のデスクトップ DLL を作成する方法、さらには DLL をコンパイルおよび登録する方法。
 
 [並列プログラミング](../parallel/parallel-programming-in-visual-cpp.md)<br/>
