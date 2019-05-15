@@ -1,8 +1,6 @@
 ---
 title: TN039:MFC OLE オートメーションの実装
 ms.date: 06/28/2018
-f1_keywords:
-- vc.mfc.ole
 helpviewer_keywords:
 - MFC, COM support
 - IDispatch interface
@@ -10,12 +8,12 @@ helpviewer_keywords:
 - TN039
 - Automation, MFC COM interface entry points
 ms.assetid: 765fa3e9-dd54-4f08-9ad2-26e0546ff8b6
-ms.openlocfilehash: cd6f8d681ef7e6517f2172ca6b22b13723a962fd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e71b3795396aa73135e8dac022182d4371bb19ac
+ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62305490"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65611244"
 ---
 # <a name="tn039-mfcole-automation-implementation"></a>TN039:しかし、MFC/OLE オートメーションの実装
 
@@ -40,7 +38,7 @@ MFC の決定、 **DISPID**と各メソッドのプロパティは、次の 2 �
 
 - 最派生クラス (0 相対) からディスパッチ マップの距離は、
 
-**DISPID**は 2 つの部分に分かれています。 **LOWORD**の**DISPID**最初のコンポーネントでは、ディスパッチ マップの上部からの距離が含まれています。 **HIWORD**最派生クラスからの距離が含まれています。 例えば:
+**DISPID**は 2 つの部分に分かれています。 **LOWORD**の**DISPID**最初のコンポーネントでは、ディスパッチ マップの上部からの距離が含まれています。 **HIWORD**最派生クラスからの距離が含まれています。 例:
 
 ```cpp
 class CDispPoint : public CCmdTarget
@@ -167,7 +165,7 @@ DISP_PROPERTY_PARAM(
 
 ### <a name="remarks"></a>Remarks
 
-はるか DISP_PROPERTY_EX マクロにこのマクロは別々 の Get および Set メンバー関数でアクセスするプロパティを定義します。 ただし、このマクロを使用すると、プロパティのパラメーター リストを指定できます。 これは、他の方法では、インデックス付きまたはパラメーター化されたプロパティを実装する場合に便利です。 パラメーターは常に配置されます最初に、後に、プロパティの新しい値。 例:
+はるか DISP_PROPERTY_EX マクロにこのマクロは別々 の Get および Set メンバー関数でアクセスするプロパティを定義します。 ただし、このマクロを使用すると、プロパティのパラメーター リストを指定できます。 これは、他の方法では、インデックス付きまたはパラメーター化されたプロパティを実装する場合に便利です。 パラメーターは常に配置されます最初に、後に、プロパティの新しい値。 例えば:
 
 ```cpp
 DISP_PROPERTY_PARAM(CMyObject, "item", GetItem, SetItem, VT_DISPATCH, VTS_I2 VTS_I2)
@@ -248,7 +246,7 @@ DISP_PROPERTY_PARAM_ID(
 
 ### <a name="remarks"></a>Remarks
 
-これらのマクロでは、指定できる、 **DISPID** mfc によって自動的にではなくいずれかを割り当てます。 その ID は、マクロ名に追加されます。 ただし、同じ名前を持つこれらのマクロの詳細 (例: **DISP_PROPERTY_ID**) 直後に指定されたパラメーターで ID を特定し、 *pszName*パラメーター。 子を参照してください。これらのマクロの詳細については H します。 **_ID**エントリは、ディスパッチ マップの末尾に配置する必要があります。 自動への影響は**DISPID**以外と同じ方法で生成 **_ID**マクロのバージョンは (、 **DISPID**s は位置によって決まります)。 例:
+これらのマクロでは、指定できる、 **DISPID** mfc によって自動的にではなくいずれかを割り当てます。 その ID は、マクロ名に追加されます。 ただし、同じ名前を持つこれらのマクロの詳細 (例: **DISP_PROPERTY_ID**) 直後に指定されたパラメーターで ID を特定し、 *pszName*パラメーター。 子を参照してください。これらのマクロの詳細については H します。 **_ID**エントリは、ディスパッチ マップの末尾に配置する必要があります。 自動への影響は**DISPID**以外と同じ方法で生成 **_ID**マクロのバージョンは (、 **DISPID**s は位置によって決まります)。 例えば:
 
 ```cpp
 BEGIN_DISPATCH_MAP(CDisp3DPoint, CCmdTarget)

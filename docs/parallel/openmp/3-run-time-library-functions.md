@@ -1,13 +1,13 @@
 ---
 title: 3. ランタイム ライブラリ関数
-ms.date: 01/17/2019
+ms.date: 05/13/2019
 ms.assetid: b226e512-6822-4cbe-a2ca-74cc2bb7e880
-ms.openlocfilehash: 3eb6dc4110145a6c45dbdd772deaee3023e68e9d
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: 7ecb2a79ad61169cdeabc9bd4893147a5de6a210
+ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525042"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65611188"
 ---
 # <a name="3-run-time-library-functions"></a>3.ランタイム ライブラリ関数
 
@@ -55,6 +55,8 @@ void omp_set_num_threads(int num_threads);
 
 この呼び出しに優先、`OMP_NUM_THREADS`環境変数。 スレッドである可能性がありますが呼び出すことで確立されている数の既定値`omp_set_num_threads`かを設定して、`OMP_NUM_THREADS`環境変数は、1 つで明示的にオーバーライド`parallel`ディレクティブを指定して、`num_threads`句。
 
+詳細については、次を参照してください。 [omp_set_dynamic](#317-omp_set_dynamic-function)します。
+
 #### <a name="cross-references"></a>相互参照
 
 - [omp_set_dynamic](#317-omp_set_dynamic-function)関数
@@ -74,6 +76,8 @@ int omp_get_num_threads(void);
 `num_threads`句、`omp_set_num_threads`関数、および`OMP_NUM_THREADS`環境変数は、チーム内のスレッドの数を制御します。
 
 スレッドの数は、ユーザーが明示的に設定されていない場合、既定値は実装定義には。 この関数に最も近い外側バインド`parallel`ディレクティブ。 シリアル、プログラムの一部から、またはシリアル化される入れ子になった並列領域から呼び出されると、この関数は 1 を返します。
+
+詳細については、次を参照してください。 [omp_set_dynamic](#317-omp_set_dynamic-function)します。
 
 #### <a name="cross-references"></a>相互参照
 
@@ -165,6 +169,12 @@ void omp_set_dynamic(int dynamic_threads);
 
 動的に調整するスレッドの既定値は、実装定義です。 結果として、適切な実行のスレッドの特定の数に依存しているユーザー コードは、明示的に動的スレッドを無効にする必要があります。 実装がスレッドの数を動的に調整する機能を提供する必要はありませんが、すべてのプラットフォーム間で移植性をサポートするインターフェイスを提供する必要があります。
 
+#### <a name="microsoft-specific"></a>Microsoft 固有の仕様
+
+現在のサポートの`omp_get_dynamic`と`omp_set_dynamic`のとおりです。 
+
+入力パラメーター`omp_set_dynamic`スレッド処理のポリシーには影響しませんし、スレッドの数は変わりません。 `omp_get_num_threads` 常にユーザーが定義した回数、設定されている場合、または既定のスレッド数を返します。 現在の Microsoft 実装で`omp_set_dynamic(0)`スレッドの既存のセットは、次の並列領域の再利用できるように、動的なスレッド処理をオフにします。 `omp_set_dynamic(1)` 既存のスレッドのセットを破棄し、今後の並列領域の新しいセットを作成して動的なスレッド処理をオンにします。 新しいセット内のスレッドの数は、以前のセットと同じとの戻り値に基づきます`omp_get_num_threads`します。 そのため、最適なパフォーマンスを使用して`omp_set_dynamic(0)`を既存のスレッドを再利用します。
+
 #### <a name="cross-references"></a>相互参照
 
 - [omp_get_num_threads](#312-omp_get_num_threads-function)
@@ -180,7 +190,7 @@ void omp_set_dynamic(int dynamic_threads);
 int omp_get_dynamic(void);
 ```
 
-実装がスレッドの数を動的に調整を実装していない場合、この関数は常に 0 を返します。
+実装がスレッドの数を動的に調整を実装していない場合、この関数は常に 0 を返します。 詳細については、次を参照してください。 [omp_set_dynamic](#317-omp_set_dynamic-function)します。
 
 #### <a name="cross-references"></a>相互参照
 
