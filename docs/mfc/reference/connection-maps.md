@@ -1,17 +1,15 @@
 ---
 title: コネクション マップ
 ms.date: 11/04/2016
-f1_keywords:
-- vc.mfc.macros.maps
 helpviewer_keywords:
 - connection maps
 ms.assetid: 1f25a9bc-6d09-4614-99cf-dc38e8ddfa73
-ms.openlocfilehash: cbd993e7172ca9a25f25db18d5d0fa042db847b3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a36c112de8c760f91afd5cf544b355f7cb8e1bed
+ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62373298"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65612278"
 ---
 # <a name="connection-maps"></a>コネクション マップ
 
@@ -98,7 +96,7 @@ CONNECTION_IID(iid)
 
 ### <a name="remarks"></a>Remarks
 
-*Iid*引数は、ID が接続されているシンクでは、接続ポイントを呼び出すインターフェイスを識別するために使用されるインターフェイス。 例:
+*Iid*引数は、ID が接続されているシンクでは、接続ポイントを呼び出すインターフェイスを識別するために使用されるインターフェイス。 例えば:
 
 [!code-cpp[NVC_MFCConnectionPoints#10](../../mfc/codesnippet/cpp/connection-maps_1.h)]
 
@@ -181,7 +179,7 @@ CONNECTION_PART(theClass, iid, localClass)
 
 ### <a name="remarks"></a>Remarks
 
-例えば:
+例:
 
 [!code-cpp[NVC_MFCConnectionPoints#2](../../mfc/codesnippet/cpp/connection-maps_2.cpp)]
 
