@@ -95,7 +95,7 @@
 ## [ATL コレクション クラス](atl-collection-classes.md)
 ## [ATL レジストリ コンポーネント (レジストラー)](atl-registry-component-registrar.md)
 ### [レジストラー スクリプトの作成](creating-registrar-scripts.md)
-#### [バッカス ナウア記法 (BNF) 構文を理解する](understanding-backus-nauer-form-bnf-syntax.md)
+#### [Backus-Naur form (BNF) 構文を理解する](understanding-backus-naur-form-bnf-syntax.md)
 #### [パース ツリーを理解する](understanding-parse-trees.md)
 #### [レジストリ スクリプトの例](registry-scripting-examples.md)
 #### [置き換え可能パラメーターの使用 (レジストラー プリプロセッサ)](using-replaceable-parameters-the-registrar-s-preprocessor.md)
