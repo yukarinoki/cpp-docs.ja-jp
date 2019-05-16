@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Desktop Wizard
 - Win32 Project Wizard
 ms.assetid: 5d7b3a5e-8461-479a-969a-67b7883725b9
-ms.openlocfilehash: b86536cb6177390ab89d235ecb8e093006dd8cff
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: a434a329febc38d6a46881dcabba6b05a402fbca
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448564"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65708050"
 ---
 # <a name="windows-desktop-wizard"></a>Windows デスクトップ ウィザード
 
@@ -25,10 +25,10 @@ Windows デスクトップ ウィザードには、Visual Studio 2017 以降の 
 
 |アプリケーションの種類|コンソール アプリケーション|実行可能 (Windows) アプリケーション|ダイナミック リンク ライブラリ|スタティック ライブラリ|
 |---------------------|-------------------------|----------------------------------------|---------------------------|--------------------|
-|**空のプロジェクト**|[はい]|はい|[はい]|いいえ|
+|**空のプロジェクト**|はい|はい|[はい]|いいえ|
 |**シンボルのエクスポート**|いいえ|×|はい|いいえ|
-|**プリコンパイル済みヘッダー**|いいえ|×|×|はい|
-|**ATL サポート**|はい|×|×|いいえ|
+|**プリコンパイル済みヘッダー**|いいえ|×|×|[はい]|
+|**ATL サポート**|[はい]|×|×|いいえ|
 |**MFC サポート**|[はい]|×|×|[はい]|
 
 ## <a name="overview"></a>概要
@@ -83,7 +83,7 @@ Windows デスクトップ アプリケーションを作成したら、 [汎用
 > [!NOTE]
 > ATL クラスは追加できません。また、MFC クラスを追加できるのは、MFC をサポートするタイプの Windows デスクトップ アプリケーションだけです。上の表を参照してください。
 
-ウィザードでプロジェクト用に作成されるファイルは、 **ソリューション エクスプローラー**で表示できます。 ウィザードは、プロジェクトの作成、ファイルの詳細については、プロジェクトで生成されたファイルを参照してください。`ReadMe.txt`します。 ファイルの種類の詳細については[Visual に対して作成されるファイルの種類C++プロジェクト](../build/reference/file-types-created-for-visual-cpp-projects.md)します。
+ウィザードでプロジェクト用に作成されるファイルは、 **ソリューション エクスプローラー**で表示できます。 ウィザードは、プロジェクトの作成、ファイルの詳細については、プロジェクトで生成されたファイルを参照してください。`ReadMe.txt`します。 ファイルの種類の詳細については[Visual Studio に対して作成されるファイルの種類C++プロジェクト](../build/reference/file-types-created-for-visual-cpp-projects.md)します。
 
 ## <a name="see-also"></a>関連項目
 
