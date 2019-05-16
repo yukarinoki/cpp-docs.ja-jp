@@ -2,12 +2,12 @@
 title: Visual C++ の並列プログラミング
 ms.date: 11/04/2016
 ms.assetid: f5c28ab6-a1d9-492f-b207-05e8aee73e96
-ms.openlocfilehash: 80f3708b7c5f5a2c5167e0c27324898195e9d340
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9a14768f9ff19fddd811166e4c8fffe90fc46cb8
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362570"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65708074"
 ---
 # <a name="parallel-programming-in-visual-c"></a>Visual C++ の並列プログラミング
 
@@ -22,4 +22,4 @@ Visual C++ は次のようなテクノロジを提供し、汎用のプログラ
 |[C++ AMP (C++ Accelerated Massive Parallelism)](amp/cpp-amp-cpp-accelerated-massive-parallelism.md)|汎用のプログラミングのために最新グラフィックス プロセッサの使用を可能とするクラス。|
 |[旧形式のコードのためのマルチスレッド サポート (Visual C++)](multithreading-support-for-older-code-visual-cpp.md)|従来のアプリケーションに役立つ、従来のテクノロジ。 新しいアプリケーションにはコンカレンシー ランタイムまたは C++ AMP を使用します。|
 |[OpenMP](openmp/openmp-in-visual-cpp.md)|OpenMP API のマイクロソフトの実装。|
-|[Visual C++](../overview/visual-cpp-in-visual-studio.md)|ドキュメントのこのセクションでは、Visual C++ の機能のほとんどについての情報が含まれます。|
+|[Visual Studio での C++](../overview/visual-cpp-in-visual-studio.md)|ドキュメントのこのセクションでは、Visual C++ の機能のほとんどについての情報が含まれます。|
