@@ -4,12 +4,12 @@ title: Visual C++ ドキュメント
 description: C++ を使って、プラットフォームやデバイス用のアプリケーション、サービス、ツールを開発する方法について説明します。
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: f402087b101487a444996e7e27b186382c4874fd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5db891bd1ed7a51a623dadfd5cc4e40a081cf0e7
+ms.sourcegitcommit: bc1b14f29a02685f97c7ef5c098d16db6eaf369f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62264440"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65789012"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -423,7 +423,7 @@ ms.locfileid: "62264440"
                                 </a>
                             </li>
                             <li>
-                                <a href="https://github.com/Microsoft/cpprestsdk">
+                                <a href="/cpp/cloud/cloud-and-web-programming-in-visual-cpp">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -433,8 +433,8 @@ ms.locfileid: "62264440"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>ネットワーク ライブラリ</h3>
-                                                    <p>Web プログラミング用の C++ REST SDK (コード名 Casablanca) オープン ソース ライブラリ。</p>
+                                                    <h3>クラウドとネットワーク ライブラリ</h3>
+                                                    <p>Microsoft Azure /C++ SDK を、IoT、ストレージ、その他、およびWeb プログラミング用の C++ REST SDK のオープン ソース ライブラリのために使用します。</p>
                                                 </div>
                                             </div>
                                         </div>
