@@ -5,18 +5,16 @@ ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: e74f8270d241b9725a24ee257fb846a7cc4e079e
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: 0a32e4fcc959d7fcdc8e99bb77510d5f292c1986
+ms.sourcegitcommit: 61121faf879cc581a4d39e4baccabf7cf1f673a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59779494"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65934125"
 ---
 # <a name="whats-new-for-c-in-visual-studio-2017"></a>Visual Studio 2017 での C++ の新機能
 
 Visual Studio 2017 には、C++ 環境に対する多くの更新プログラムと修正プログラムが導入されています。 コンパイラおよびツールの、250 以上のバグおよびレポートされた問題を修正してきました。その多くは、**[フィードバックの送信]** の [[問題の報告] オプションおよび [提案の送信]](/visualstudio/how-to-report-a-problem-with-visual-studio-2017) オプションを通じてお客様から寄せられたものです。 バグ レポートをお寄せいただきありがとうございました。 Visual Studio 全体の新機能の詳細については、「[Visual Studio 2017 の新機能](/visualstudio/ide/whats-new-in-visual-studio)」を参照してください。
-
-<!--The compiler and tools version number in Visual Studio 2017 is 14.10.24629. -->
 
 ## <a name="c-compiler"></a>C++ コンパイラ
 

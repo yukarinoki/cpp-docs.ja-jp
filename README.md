@@ -1,10 +1,18 @@
+---
+ms.openlocfilehash: 279d5c5cbc86297df51ad3862a2e32d5e7bae5d2
+ms.sourcegitcommit: 61121faf879cc581a4d39e4baccabf7cf1f673a5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65934198"
+---
 # <a name="visual-studio-2017-documentation-for-visual-c"></a>Visual Studio 2017 の Visual C++ に関するドキュメント
 
 ようこそ このリポジトリには、開発作業中である Visual C++ のテクニカル ドキュメント用のソース ファイルが含まれます。 トピックは、[Visual C++ ドキュメント サイト](https://docs.microsoft.com/cpp)で公開されています。
 
 このリポジトリは、2017 年 6 月 23 日に Microsoft/vcppdocs から MicrosoftDocs/cpp-docs-pr に移動されました。
 
-Visual Basic と Visual C# のドキュメントは別のリポジトリ [http://github.com/dotnet/core-docs](http://github.com/dotnet/core-docs) にあり、Visual Studio 2017 のドキュメントは [http://github.com/Microsoft/visualstudio-docs](http://github.com/Microsoft/visualstudio-docs) のリポジトリにあります。
+Visual Basic と Visual C# のドキュメントは別のリポジトリ [https://github.com/dotnet/core-docs](https://github.com/dotnet/core-docs) にあり、Visual Studio 2017 のドキュメントは [https://github.com/Microsoft/visualstudio-docs](https://github.com/Microsoft/visualstudio-docs) のリポジトリにあります。
 
 ## <a name="contributing-to-the-documentation"></a>ドキュメントへの貢献
 
