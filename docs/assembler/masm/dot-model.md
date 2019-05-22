@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - .MODEL directive
 ms.assetid: 057f00df-1515-4c55-852a-d936c8a34b53
-ms.openlocfilehash: c3917fea0f13e54d5f8f73599a2d28482bb6d259
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: c409bf10a2f863c380cda6b4822583ffb3787da6
+ms.sourcegitcommit: 61121faf879cc581a4d39e4baccabf7cf1f673a5
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62204098"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65934090"
 ---
 # <a name="model"></a>.MODEL
 
-プログラムのメモリ モデルを初期化します。
+プログラム メモリ モデルを初期化します。
 
 ## <a name="syntax"></a>構文
 
@@ -24,35 +24,35 @@ ms.locfileid: "62204098"
 ### <a name="parameters"></a>パラメーター
 
 *memorymodel*<br/>
-コードとデータのポインターのサイズを決定する必須パラメーターです。
+コードとデータ ポインターのサイズを決定する必須パラメーターです。
 
 *langtype*<br/>
-プロシージャとパブリック シンボルの呼び出し元と名前付け規則を設定する省略可能なパラメーター。
+プロシージャとパブリック シンボルの呼び出しと名前付けの規則を設定する省略可能なパラメーターです。
 
 *stackoption*<br/>
 省略可能なパラメーターです。
 
-*stackoption*場合は使用されません*memorymodel*は`FLAT`します。
+*memorymodel* が `FLAT` である場合は *stackoption* は使用されません。
 
-指定する`NEARSTACK`スタック セグメントを 1 つの物理セグメントにグループ化 (`DGROUP`) のデータと共にします。 スタック セグメント レジスタ (`SS`) がデータ セグメントの登録と同じアドレスを保持するために使用されます (`DS`)。 `FARSTACK` スタックにはグループ化されません`DGROUP`ため`SS`と等しくない`DS`します。
+`NEARSTACK` を指定すると、スタック セグメントがデータと共に 1 つの物理セグメント (`DGROUP`) にグループ化されます。 スタック セグメント レジスタ (`SS`) では、データ セグメント レジスタ (`DS`) と同じアドレスを保持することが想定されます。 `FARSTACK` は `DGROUP` でスタックをグループ化しないため、`SS` と `DS` は同じではありません。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-.`MODEL` 使用されていない[x64 用 MASM (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md)します。
+.`MODEL` は [x64 用 MASM (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md) では使用されません。
 
-次の表は、16 ビットおよび 32 ビットのプラットフォームを対象とする場合に、各パラメーターの値を示します。
+次の表は、16 ビットおよび 32 ビットのプラットフォームを対象とする場合に各パラメーターで使用できる値を示しています。
 
-|パラメーター|32 ビット値|16 ビット値 (以前の 16 ビットの開発のサポート)|
+|パラメーター|32 ビットの値|16 ビットの値 (以前の 16 ビット開発のサポート)|
 |---------------|--------------------|----------------------------------------------------------------|
 |*memorymodel*|`FLAT`|`TINY`, `SMALL`, `COMPACT`, `MEDIUM`, `LARGE`, `HUGE`, `FLAT`|
-|*langtype*|`C`, `STDCALL`|`C`, `BASIC`, `FORTRAN`, `PASCAL`, `SYSCALL`, `STDCALL`|
-|*stackoption*|未使用|`NEARSTACK`, `FARSTACK`|
+|*langtype*|`C`、 `STDCALL`|`C`, `BASIC`, `FORTRAN`, `PASCAL`, `SYSCALL`, `STDCALL`|
+|*stackoption*|未使用|`NEARSTACK`、 `FARSTACK`|
 
 ## <a name="code"></a>コード
 
-MASM 関連のサンプルでは、コンパイラ、サンプルのダウンロード[Visual C のサンプルおよび関連ドキュメントを Visual Studio 2010 の](http://go.microsoft.com/fwlink/p/?linkid=178749)します。
+MASM 関連のサンプルについては、[Visual Studio 2010 向けの Visual C++ サンプルと関連ドキュメント](https://go.microsoft.com/fwlink/p/?linkid=178749)からコンパイラのサンプルをダウンロードしてください。
 
-次の例では、使用、`.MODEL`ディレクティブ。
+`.MODEL` ディレクティブの使用例を次に示します。
 
 ## <a name="example"></a>例
 
