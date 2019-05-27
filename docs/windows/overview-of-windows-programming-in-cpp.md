@@ -2,12 +2,12 @@
 title: C++ でプログラミングする Windows の概要
 ms.date: 05/06/2019
 ms.assetid: efc691d7-21f3-47ae-ae56-cab999ccf59d
-ms.openlocfilehash: 036da87c24eef38f3c88bb5f73808a434b9da6a1
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: 957e3565ad4caa12da5e7d10915ca159d00954b8
+ms.sourcegitcommit: 79e985d3c6e8ccaf94f6e641972887cae8c6eeb0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837561"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66197747"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>C++ でプログラミングする Windows の概要
 
@@ -100,7 +100,7 @@ Visual Studio には、ネイティブ コード用の強力なデバッガー�
 |[チュートリアル: Windows デスクトップ アプリケーション (C++) の作成](walkthrough-creating-windows-desktop-applications-cpp.md)|ネイティブの Windows デスクトップ アプリケーションを作成します。|
 |[Windows デスクトップ ウィザード](windows-desktop-wizard.md)|ウィザードを使用して、新しい Windows プロジェクトを作成します。|
 |[Active Template Library (ATL)](../atl/atl-com-desktop-components.md)|C++ での COM コンポーネントを作成するのにには、ATL ライブラリを使用します。|
-|[Microsoft Foundation Classes (MFC)](../mfc/TOC.md)|MFC を使用して、ダイアログ、コントロール、大小の Windows アプリケーションを作成するには|
+|[Microsoft Foundation Classes (MFC)](../mfc/mfc-desktop-applications.md)|MFC を使用して、ダイアログ、コントロール、大小の Windows アプリケーションを作成するには|
 |[ATL と MFC の共有クラス](../atl-mfc-shared/TOC.md)|ATL と MFC で共有される CString などのクラスを使用します。|
 |[データ アクセス](../data/data-access-in-cpp.md)| OLE DB および ODBC|
 |[テキストと文字列](../text/text-and-strings-in-visual-cpp.md)|Windows 上のさまざまな文字列型。|

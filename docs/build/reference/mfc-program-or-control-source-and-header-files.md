@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - file types [C++], MFC source and header
 ms.assetid: f61419a8-bf69-4bbb-8f7c-1734be5e6db6
-ms.openlocfilehash: 89e02054b72946c4b1b773ce79b1c380da6ef01a
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: 6a6561e993016e70764186114e1f7cabd93cdc2d
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446248"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707435"
 ---
 # <a name="mfc-program-or-control-source-and-header-files"></a>MFC プログラムまたはコントロールのソース ファイルとヘッダー ファイル
 
@@ -34,6 +34,6 @@ Visual Studio で MFC プロジェクトを作成する場合、作成するプ�
 
 ## <a name="see-also"></a>関連項目
 
-[ファイルのビジュアルの種類が作成されたC++プロジェクト](file-types-created-for-visual-cpp-projects.md)<br>
+[Visual Studio の C++ プロジェクトに対して作成されるファイルの種類](file-types-created-for-visual-cpp-projects.md)<br>
 [ATL プログラムまたはコントロールのソース ファイルとヘッダー ファイル](atl-program-or-control-source-and-header-files.md)<br>
 [CLR プロジェクト](files-created-for-clr-projects.md)

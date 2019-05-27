@@ -3,7 +3,7 @@
 # [チュートリアル: Windows デスクトップ アプリケーションの作成](walkthrough-creating-windows-desktop-applications-cpp.md)
 # [Windows デスクトップ ウィザード](win32-application-wizard.md)
 # [Active Template Library (ATL)](../atl/atl-com-desktop-components.md)
-# [Microsoft Foundation Classes (MFC)](../mfc/TOC.md)
+# [Microsoft Foundation Classes (MFC)](../mfc/mfc-desktop-applications.md)
 # [ATL と MFC の共有クラス](../atl-mfc-shared/TOC.md)
 # [データ アクセス](../data/data-access-in-cpp.md)
 # [テキストと文字列](../text/text-and-strings-in-visual-cpp.md)

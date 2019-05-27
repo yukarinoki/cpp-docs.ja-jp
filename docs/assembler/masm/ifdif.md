@@ -1,30 +1,33 @@
 ---
-title: IFDIF]
-ms.date: 08/30/2018
+title: IFDIF、IFDIFI
+ms.date: 05/23/2019
 f1_keywords:
-- IFDIF[[I]]
+- IFDIF
+- IFDIFI
 helpviewer_keywords:
 - IFDIF[[I]] directive
+- IFDIF directive
+- IFDIFI directive
 ms.assetid: b85a553c-9098-4a57-a24f-596456eefa1c
-ms.openlocfilehash: 6e5c8f05ecc2a7abbd0facdfba8e3ab8bcfe66b3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c799cdeb4046692c4b2254e9f54d4ca364ee8b7f
+ms.sourcegitcommit: 79e985d3c6e8ccaf94f6e641972887cae8c6eeb0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62202961"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66197690"
 ---
-# <a name="ifdif"></a>IFDIF]
+# <a name="ifdif-ifdifi"></a>IFDIF、IFDIFI
 
 テキスト項目が異なる場合は、アセンブリを行います。
 
 ## <a name="syntax"></a>構文
 
-> IFDIF [I] textitem1、textitem2
+> **IFDIF**\[**I**] *textitem1* __,__ *textitem2*
 
 ## <a name="remarks"></a>Remarks
 
-場合**は**は、比較では大文字小文字を区別します。 参照してください[場合](../../assembler/masm/if-masm.md)の完全な構文です。
+場合**IFDIFI**は、比較では大文字小文字を区別します。 参照してください[場合](../../assembler/masm/if-masm.md)の完全な構文です。
 
 ## <a name="see-also"></a>関連項目
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
+[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)
