@@ -1,25 +1,21 @@
 ---
 title: Visual C++ でのクラウドおよび Web プログラミング
-ms.date: 11/04/2016
+ms.date: 05/14/2019
 ms.assetid: b63611f1-9723-44d0-ba7f-c3ebef341313
-ms.openlocfilehash: 3d71e36b6209c693940f2ebe6b5e9c73bc0c9d9d
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: 677e9da18e8d171f523994d21bfbd0411270e3c8
+ms.sourcegitcommit: bc1b14f29a02685f97c7ef5c098d16db6eaf369f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65708038"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65790357"
 ---
 # <a name="cloud-and-web-programming-in-visual-c"></a>Visual C++ でのクラウドおよび Web プログラミング
 
 C++ では、Web とクラウドに接続するためのいくつかの方法があります。
 
-## <a name="cloud-programming-options"></a>クラウドのプログラミング オプション
+## <a name="microsoft-azure-sdks-and-rest-services"></a>Microsoft Azure の SDK および REST サービス
 
-- [Microsoft Azure Mobile Services](http://www.windowsazure.com/develop/mobile/)
-
-  ユニバーサル Windows プラットフォーム (UWP) アプリまたは Windows デスクトップ アプリで、Microsoft Azure Mobile Services に接続するために使用できる、ネイティブな API を提供します。 Web サイトの例のほとんどは C# を使用していますが、C++ も使用できます。 詳細については、「[クイック スタート:CC++ を使ったモバイル サービスの追加](https://msdn.microsoft.com/library/windows/apps/dn263181.aspx)」を参照してください。
-
-- [C++ 用 Microsoft Azure Storage クライアント ライブラリ](https://blogs.msdn.microsoft.com/windowsazurestorage/2015/04/29/microsoft-azure-storage-client-library-for-c-v1-0-0-general-availability/)
+- [C++ 用 Microsoft Azure Storage クライアント ライブラリ](https://azure.github.io/azure-storage-cpp/)
 
   C++ 用 Microsoft Azure Storage クライアント ライブラリでは、Azure Storage を操作するための包括的な API が提供されています。これには次の機能が含まれますが、これに限定されるわけではありません。
 
@@ -29,18 +25,22 @@ C++ では、Web とクラウドに接続するためのいくつかの方法が
   - Azure キューでのメッセージのエンキューとデキュー。
   - コンテナー、BLOB、テーブル、キューの遅延リスト、およびエンティティの遅延クエリ
 
-- [OneDrive API](https://dev.onedrive.com/README.htm)
+- モノのインターネットに関する ANSI C99 の [Azure IoT Hub SDK](/azure/iot-hub/iot-hub-devguide-sdks) により、IoT アプリケーションがデバイスまたはバックエンドで実行できるようになります。
+
+- [Microsoft Graph での OneDrive および SharePoint](https://dev.onedrive.com/README.htm)
 
   OneDrive API では、アプリケーションを Office 365 と SharePoint Server 2016 のファイルとフォルダーに接続する一連の HTTP サービスが提供されます。
 
-- [C++ REST SDK (Codename "Casablanca")](https://github.com/Microsoft/cpprestsdk)
+## <a name="windows-and-cross-platform-networking-apis"></a>Windows およびクロスプラットフォームのネットワーク API
+
+- [C++ REST SDK (コードネーム "Casablanca")](https://github.com/Microsoft/cpprestsdk)
 
   REST サービスと対話するための最新のクロスプラットフォームの非同期 API を提供します。
 
   - JSON ドキュメントの解析とシリアル化の組み込みサポートにより、任意の HTTP サーバーに対して REST 呼び出しを実行する
   - OAuth 1 と 2 (ローカル リダイレクト リスナーを含む) をサポート
-  - リモート サービスに対する Websocket 接続
-  - PPL に基づく完全な非同期タスク API (組み込みの Threadpool を含む)
+  - リモート サービスに対する WebSocket 接続
+  - PPL に基づく完全な非同期タスク API (組み込みのスレッド プールを含む)
 
   Windows デスクトップ (7 以降)、Windows Server (2012 以降)、ユニバーサル Windows プラットフォーム、Linux、OSX、Android、および iOS をサポートしています。
 
@@ -59,4 +59,5 @@ C++ では、Web とクラウドに接続するためのいくつかの方法が
 ## <a name="see-also"></a>関連項目
 
 [Visual Studio での C++](../overview/visual-cpp-in-visual-studio.md) <br/>
-[ネットワークと Web サービス](/windows/uwp/networking/)
+[Microsoft Azure C および C++ デベロッパー センター](https://azure.microsoft.com/develop/cpp/) <br/>
+[ネットワークと Web サービス (UWP)](/windows/uwp/networking/)
