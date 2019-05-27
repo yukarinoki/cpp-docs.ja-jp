@@ -5,16 +5,16 @@ ms.technology: cpp-language
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 6a0e296e4a5542c1aad848c55d35d3e40244478d
-ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
+ms.openlocfilehash: 726d9f6573b4a3457205001875dac80b3a2997d7
+ms.sourcegitcommit: 61121faf879cc581a4d39e4baccabf7cf1f673a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58899448"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65934164"
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157-158update158-159improvements159"></a>Visual Studio 2017 バージョン 15.0、[15.3](#improvements_153)、[15.5](#improvements_155)、[15.6](#improvements_156)、[15.7](#improvements_157)、[15.8](#update_158)、[15.9](#improvements_159) での C++ 準拠の改善
 
-Microsoft Visual C++ コンパイラは、汎用の constexpr および集計用の NSDMI をサポートし、C++ 14 標準で追加されたすべての機能に対応するようになりました。 コンパイラには、C++11 標準および C++98 標準の一部の機能がないことに注意してください。 コンパイラの現在の状態については、「[Visual C++ Language Conformance (Visual C++ 言語への準拠)](../visual-cpp-language-conformance.md)」の表を参照してください。
+Microsoft C++ コンパイラは、汎用の constexpr および集計用の NSDMI のサポートと共に、C++ 14 標準で追加されたすべての機能に対応するようになりました。 コンパイラには、C++11 標準および C++98 標準の一部の機能がないことに注意してください。 コンパイラの現在の状態については、「[Visual C++ Language Conformance (Visual C++ 言語への準拠)](../visual-cpp-language-conformance.md)」の表を参照してください。
 
 ## <a name="c11"></a>C++11
 
@@ -70,7 +70,7 @@ static_assert の message パラメーターは省略可能です。 詳細に�
 
 ### <a name="structured-bindings"></a>構造化バインド
 
-値が、配列、std::tuple または std::pair のいずれかである、または、すべてのパブリックの非静的データ メンバーを持つときに、1 つの宣言で、そのコンポーネントの個別の名前を持つ値を格納できるようになりました。 詳細については、「[Structured Bindings](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0144r0.pdf)」(構造化バインド) と「[Returning multiple values from a function](../../cpp/functions-cpp.md#multi_val)」(関数から複数の値を返す) をご覧ください。
+値が、配列、`std::tuple`、`std::pair` のいずれかであるか、すべてのパブリックの非静的データ メンバーを持つときに、1 つの宣言で、そのコンポーネントの個別の名前を持つ値を格納できるようになりました。 詳細については、「[Structured Bindings](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0144r0.pdf)」(構造化バインド) と「[Returning multiple values from a function](../../cpp/functions-cpp.md#multi_val)」(関数から複数の値を返す) をご覧ください。
 
 ### <a name="construction-rules-for-enum-class-values"></a>列挙型クラスの値の構築ルール
 
@@ -82,7 +82,7 @@ static_assert の message パラメーターは省略可能です。 詳細に�
 
 ### <a name="removing-operator-for-bool"></a>ブール型の operator++ を削除する
 
-`operator++` は `bool` 型でサポートされなくなりました。 詳しくは、「[Remove Deprecated operator++(bool) (非推奨の operator++(bool) の削除)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0002r1.html)」をご覧ください。
+`operator++` は、`bool` 型ではサポートされなくなりました。 詳しくは、「[Remove Deprecated operator++(bool) (非推奨の operator++(bool) の削除)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0002r1.html)」をご覧ください。
 
 ### <a name="removing-deprecated-register-keyword"></a>非推奨の "register" キーワードの削除
 
@@ -92,7 +92,7 @@ Visual Studio 2015 更新プログラム 3 での準拠の機能強化の完全�
 
 ## <a name="improvements_155"></a>Visual Studio 2017 バージョン 15.5 の Git 機能の強化
 
-[14] でマークされた機能は、**/std:c++14** モードでも無条件で使用できます。
+[14] でマークされた機能は、 **/std:c++14** モードでも無条件で使用できます。
 
 ### <a name="new-compiler-switch-for-extern-constexpr"></a>extern constexpr の新しいコンパイラ スイッチ
 
@@ -146,7 +146,7 @@ Visual Studio の以前のバージョンでは、変数が `extern` として�
 
 C++ 標準の Annex D は、`shared_ptr::unique()`、`<codecvt>`、`namespace std::tr1` を含む非推奨になったすべての機能を含んでいます。 **/std:c++17** コンパイラ スイッチが設定されている場合、Annex D のほとんどすべての標準ライブラリの機能は非推奨としてマークされます。 詳細については、「[非推奨としてマークされた Annex D の標準ライブラリの機能](#annex_d)」を参照してください。
 
-`<experimental/filesystem>` の `std::tr2::sys` 名前空間は、**/std:c++14** の下では既定で非推奨の警告を出し、**/std:c++17** では既定で削除されました。
+`<experimental/filesystem>` の `std::tr2::sys` 名前空間は、 **/std:c++14** の下では既定で非推奨の警告を出し、 **/std:c++17** では既定で削除されました。
 
 非標準の拡張 (クラス内の明示的な特殊化) を回避することで Iostreams の適合性を向上させます。
 
@@ -826,7 +826,7 @@ void f()
 
 ### <a name="default-arguments-are-not-allowed-on-out-of-line-definitions-of-member-functions"></a>メンバー関数のアウトオブライン定義で既定の引数が許可されない
 
-テンプレート クラス内のメンバー関数のアウトオブライン定義では、既定の引数が許可されません。コンパイラは **/permissive** では警告を発し、**/permissive-** ではハード エラーを発します。
+テンプレート クラス内のメンバー関数のアウトオブライン定義では、既定の引数が許可されません。コンパイラは **/permissive** では警告を発し、 **/permissive-** ではハード エラーを発します。
 
 Visual Studio の以前のバージョンでは、形式が間違っている次のコードでランタイム クラッシュが発生する可能性がありました。 Visual Studio 2017 バージョン 15.3 では次の警告 C5034 が発生します。'A\<T>::f': クラス テンプレートのメンバーのアウトオブライン定義において既定の引数を使用することはできません。
 
@@ -847,7 +847,7 @@ T A<T>::f(T t, bool b = false) // C5034
 
 ### <a name="use-of-offsetof-with-compound-member-designator"></a>複合メンバー指定子での offsetof の使用
 
-Visual Studio 2017 バージョン 15.3 では、*m* が "複合メンバー指定子" である `offsetof(T, m)` を使用して、**/Wall** オプションを指定してコンパイルすると、警告が発生します。 次のコードは形式が不適切であり、実行時にクラッシュが発生する可能性があります。 Visual Studio 2017 バージョン 15.3 では、"警告 C4841: 非標準の拡張機能が使用されています:複合メンバー指定子が offsetof で使用されています" が生成されます。
+Visual Studio 2017 バージョン 15.3 では、*m* が "複合メンバー指定子" である `offsetof(T, m)` を使用して、 **/Wall** オプションを指定してコンパイルすると、警告が発生します。 次のコードは形式が不適切であり、実行時にクラッシュが発生する可能性があります。 Visual Studio 2017 バージョン 15.3 では、"警告 C4841: 非標準の拡張機能が使用されています:複合メンバー指定子が offsetof で使用されています" が生成されます。
 
 ```cpp
 struct A {
@@ -899,7 +899,7 @@ __declspec(noinline) extern "C" HRESULT __stdcall //C4768
 extern "C" __declspec(noinline) HRESULT __stdcall
 ```
 
-15.3 の既定ではこの警告はオフになっており (15.5 では既定でオン)、**/Wall** **/WX** を指定してコンパイルされたコードにのみ影響します。
+15.3 の既定ではこの警告はオフになっており (15.5 では既定でオン)、 **/Wall** **/WX** を指定してコンパイルされたコードにのみ影響します。
 
 ### <a name="decltype-and-calls-to-deleted-destructors"></a>decltype と削除されたデストラクターの呼び出し
 
@@ -951,11 +951,11 @@ C;      // warning C4091 : '' : ignored on left of 'C' when no variable is decla
 
 警告を解決するには、空の宣言をコメントにするか、削除します。 名前のないオブジェクトが副作用 (RAII など) を意図したものである場合、名前を指定する必要があります。
 
-警告は、**/Wv:18** では除外され、警告レベル W2 では既定で有効になります。
+警告は、 **/Wv:18** では除外され、警告レベル W2 では既定で有効になります。
 
 ### <a name="stdisconvertible-for-array-types"></a>配列型の std::is_convertible
 
-以前のバージョンのコンパイラでは、配列型の [std::is_convertible](../../standard-library/is-convertible-class.md) で正しい結果が得られませんでした。 そのため、ライブラリの作成者は `std::is_convertible<...>` 型の特徴を使用する場合に、Microsoft Visual C++ コンパイラを特例処理する必要がありました。 次の例では、静的アサートは以前のバージョンの Visual Studio では成功しますが、Visual Studio 2017 バージョン 15.3 では失敗します。
+以前のバージョンのコンパイラでは、配列型の [std::is_convertible](../../standard-library/is-convertible-class.md) で正しい結果が得られませんでした。 そのため、ライブラリの作成者は `std::is_convertible<...>` 型の特徴を使用する場合に、Microsoft C++ コンパイラを特例処理する必要がありました。 次の例では、静的アサートは以前のバージョンの Visual Studio では成功しますが、Visual Studio 2017 バージョン 15.3 では失敗します。
 
 ```cpp
 #include <type_traits>
@@ -1048,7 +1048,7 @@ void g()
 
 ### <a name="c5038-order-of-initialization-in-initializer-lists"></a>C5038: 初期化子リストの初期化の順序
 
-クラス メンバーは、初期化子リストに表示される順序ではなく、宣言される順序で初期化されます。 以前のバージョンのコンパイラでは、初期化子リストの順序が宣言の順序と異なる場合に警告されませんでした。 そのため、あるメンバーの初期化が、既に初期化されている、リスト内の別のメンバーに依存していた場合に、ランタイム動作が未定義になることがありました。 次の例では、Visual Studio 2017 バージョン 15.3 (**/Wall** を使用) は、"警告 C5038: データ メンバー 'A::x' の後にデータ メンバー 'A::y' が初期化されます" という警告を出します。
+クラス メンバーは、初期化子リストに表示される順序ではなく、宣言される順序で初期化されます。 以前のバージョンのコンパイラでは、初期化子リストの順序が宣言の順序と異なる場合に警告されませんでした。 そのため、あるメンバーの初期化が、既に初期化されている、リスト内の別のメンバーに依存していた場合に、ランタイム動作が未定義になることがありました。 次の例では、Visual Studio 2017 バージョン 15.3 ( **/Wall** を使用) は、"警告 C5038: データ メンバー 'A::x' の後にデータ メンバー 'A::y' が初期化されます" という警告を出します。
 
 ```cpp
 struct A
@@ -1061,7 +1061,7 @@ struct A
 
 この問題を解決するには、宣言と同じ順序になるように初期化子リストを整列します。 初期化子のいずれかまたは両方で基底クラス メンバーが参照される場合に同様の警告が発生します。
 
-警告は既定ではオフになっており、**/Wall** でコンパイルされたコードにのみ影響することに注意してください。
+警告は既定ではオフになっており、 **/Wall** でコンパイルされたコードにのみ影響することに注意してください。
 
 ## <a name="update_155"></a> Visual Studio 2017 バージョン 15.5 のバグの修正およびその他の動作の変更
 
@@ -1248,7 +1248,7 @@ warning C4189: 's': local variable is initialized but not referenced
 
 ### <a name="single-line-comments"></a>1 つの行のコメント
 
-Visual Studio 2017 バージョン 15.5 では、警告 C4001 と C4179 が、C コンパイラで生成されなくなりました。 以前は、それらは、**/Za**コンパイラ スイッチでのみ生成されていました。  C99 以降、単一行のコメントが C 規格の一部であるため、警告は必要なくなりました。
+Visual Studio 2017 バージョン 15.5 では、警告 C4001 と C4179 が、C コンパイラで生成されなくなりました。 以前は、それらは、 **/Za**コンパイラ スイッチでのみ生成されていました。  C99 以降、単一行のコメントが C 規格の一部であるため、警告は必要なくなりました。
 
 ```cpp
 /* C only */
@@ -1309,7 +1309,7 @@ extern "C" __declspec(noinline) HRESULT __stdcall
 
 ### <a name="extern_linkage"></a>Extern constexpr リンケージ
 
-Visual Studio の以前のバージョンでは、変数が `extern` としてマークされている場合でも、コンパイラは常に `constexpr` 変数を提供しました。 Visual Studio 2017 バージョン 15.5 では、新しいコンパイラ スイッチ (**/Zc:externConstexpr**) により、正しい標準準拠の動作が可能になります。 最終的にこれは既定値になります。
+Visual Studio の以前のバージョンでは、変数が `extern` としてマークされている場合でも、コンパイラは常に `constexpr` 変数を提供しました。 Visual Studio 2017 バージョン 15.5 では、新しいコンパイラ スイッチ ( **/Zc:externConstexpr**) により、正しい標準準拠の動作が可能になります。 最終的にこれは既定値になります。
 
 ```cpp
 extern constexpr int x = 10;
@@ -1387,7 +1387,7 @@ struct B : A {
 };
 ```
 
-**/std:c + + 17** の使用中にエラーを削除するには、**/Zc:noexceptTypes-** スイッチをコマンド ラインに追加するか、次の例のように、`noexcept` を使用するようにコードを更新します。
+**/std:c + + 17** の使用中にエラーを削除するには、 **/Zc:noexceptTypes-** スイッチをコマンド ラインに追加するか、次の例のように、`noexcept` を使用するようにコードを更新します。
 
 ```cpp
 void f() noexcept;
@@ -1405,7 +1405,7 @@ struct B : A {
 
 ### <a name="inline-variables"></a>インライン変数
 
-静的 Constexpr データ メンバーは、暗黙的にインラインになり、クラス内でその宣言がそれらの定義になるようになりました。 静的 Constexpr データ メンバーのアウトオブライン定義は、冗長であり、現在は非推奨とされます。 Visual Studio 2017 バージョン 15.5 では、**/std:c++17** スイッチが適用される場合、次のコードは、警告 C5041 "*'size': constexpr 静的データ メンバーのアウトオブライン定義は不要で、C++17 では非推奨とされます*" を生成するようになりました：
+静的 Constexpr データ メンバーは、暗黙的にインラインになり、クラス内でその宣言がそれらの定義になるようになりました。 静的 Constexpr データ メンバーのアウトオブライン定義は、冗長であり、現在は非推奨とされます。 Visual Studio 2017 バージョン 15.5 では、 **/std:c++17** スイッチが適用される場合、次のコードは、警告 C5041 " *'size': constexpr 静的データ メンバーのアウトオブライン定義は不要で、C++17 では非推奨とされます*" を生成するようになりました：
 
 ```cpp
 struct X {
@@ -1420,7 +1420,7 @@ Visual Studio 2017 バージョン 15.3 で警告が追加されましたが、�
 
 ### <a name="defaulted-functions-and-declspecnothrow"></a>既定値の関数と __declspec(nothrow)
 
-コンパイラは以前、対応する base/member 関数で例外が許可されている場合、`__declspec(nothrow)` を使用した既定の関数の宣言を許可していました。 この動作は、C++ 標準に反しており、実行時に未定義の動作が発生することがあります。 標準では、例外の指定の不一致がある場合、そのような関数は削除済みとして定義する必要があります。  **/std:c++17** で、次のコードに対して、C2280 "*削除された関数を参照しようとしています" が発生します。明示的な例外の指定にその暗黙の宣言と互換性がないために、関数は暗黙的に削除されました。*:
+コンパイラは以前、対応する base/member 関数で例外が許可されている場合、`__declspec(nothrow)` を使用した既定の関数の宣言を許可していました。 この動作は、C++ 標準に反しており、実行時に未定義の動作が発生することがあります。 標準では、例外の指定の不一致がある場合、そのような関数は削除済みとして定義する必要があります。  **/std:c++17** で、次のコードに対して、C2280 "*削除された関数を参照しようとしています" が発生します。明示的な例外の指定にその暗黙の宣言と互換性がないために、関数は暗黙的に削除されました。* :
 
 ```cpp
 struct A {
@@ -1464,9 +1464,9 @@ int main()
 
 型システムで noexcept を使用すると、特定の "呼び出し可能な" 型と一致させるための部分的な特殊化で、pointers-to-noexcept-functions の部分的な特殊化がないために、コンパイルまたはプライマリ テンプレートの選択に失敗することがあります。
 
-このような場合は、noexcept 関数ポインターおよびメンバー関数への noexcept ポインターを処理するために、部分的な特殊化を追加する必要があります。 これらのオーバーロードは、**/std:c++17** モードでのみ有効です。 C++ 14 との下位互換性を維持する必要があるときに、他のユーザーが使用するコードを記述している場合、`#ifdef` ディレクティブ内でこれらの新しいオーバーロードを保護する必要があります。 自己完結型のモジュールを使用している場合、`#ifdef` ガードを使用する代わりに、**/Zc:noexceptTypes-** スイッチを使用してコンパイルすることができます。
+このような場合は、noexcept 関数ポインターおよびメンバー関数への noexcept ポインターを処理するために、部分的な特殊化を追加する必要があります。 これらのオーバーロードは、 **/std:c++17** モードでのみ有効です。 C++ 14 との下位互換性を維持する必要があるときに、他のユーザーが使用するコードを記述している場合、`#ifdef` ディレクティブ内でこれらの新しいオーバーロードを保護する必要があります。 自己完結型のモジュールを使用している場合、`#ifdef` ガードを使用する代わりに、 **/Zc:noexceptTypes-** スイッチを使用してコンパイルすることができます。
 
-次のコードは **/std:c++14** ではコンパイルされますが、**/std:c++17** では、"エラー C2027: 認識できない型 'A\<T>' が使用されています" で失敗します。
+次のコードは **/std:c++14** ではコンパイルされますが、 **/std:c++17** では、"エラー C2027: 認識できない型 'A\<T>' が使用されています" で失敗します。
 
 ```cpp
 template <typename T> struct A;
@@ -1491,7 +1491,7 @@ int main()
 }
 ```
 
-次のコードは、コンパイラが新しい部分的な特殊化 `A<void (*)() noexcept>` を選択するので、**/std:c++17** で成功します。
+次のコードは、コンパイラが新しい部分的な特殊化 `A<void (*)() noexcept>` を選択するので、 **/std:c++17** で成功します。
 
 ```cpp
 template <typename T> struct A;
@@ -1764,11 +1764,11 @@ public:
 
 ### <a name="offsetof-with-constant-expressions"></a>定数式を含む offsetof
 
-[offsetof](../../c-runtime-library/reference/offsetof-macro.md) は従来から [reinterpret_cast](../../cpp/reinterpret-cast-operator.md) を必要とするマクロを使用して実装されています。 これは、定数式を必要とするコンテキストでは正しくありませんが、Microsoft C++ コンパイラではこれまで許可されていました。 STL の一部としてリリースされている offsetof マクロはコンパイラ組み込み型 (**__builtin_offsetof**) が正しく使用されますが、多くのユーザーはマクロのトリックを使用して独自の **offsetof** を定義しています。
+[offsetof](../../c-runtime-library/reference/offsetof-macro.md) は従来から [reinterpret_cast](../../cpp/reinterpret-cast-operator.md) を必要とするマクロを使用して実装されています。 これは、定数式を必要とするコンテキストでは正しくありませんが、Microsoft C++ コンパイラではこれまで許可されていました。 STL の一部としてリリースされている offsetof マクロはコンパイラ組み込み型 ( **__builtin_offsetof**) が正しく使用されますが、多くのユーザーはマクロのトリックを使用して独自の **offsetof** を定義しています。
 
 Visual Studio 2017 バージョン 15.8 では、コードが標準の C++ の動作に準拠するように、これらの reinterpret_casts が既定のモードで表示される領域を制約します。 [/permissive-](../../build/reference/permissive-standards-conformance.md) の下では、制約がさらに厳しくなります。 定数式を必要とする場所で offsetof の結果を使用すると、警告 C4644 *usage of the macro-based offsetof pattern in constant expressions is non-standard; use offsetof defined in the C++ standard library instead\(定数式でマクロに基づく offsetof パターンを使用することは標準ではありません。C++ 標準ライブラリで定義された offsetof を使用してください\)* または C2975 *invalid template argument, expected compile-time constant expression\(無効なテンプレート引数です。予期されたコンパイル時の定数式です\)* を発行するコードが生成される場合があります。
 
-次のコードにより **/default** モードと **/std:c++17** モードで C4644 が、**/permissive-** モードで C2975 が発生します。
+次のコードにより **/default** モードと **/std:c++17** モードで C4644 が、 **/permissive-** モードで C2975 が発生します。
 
 ```cpp
 struct Data {
@@ -1828,7 +1828,7 @@ int main()
 
 **/permissive-** モードでは、コンパイラが依存する nested-name-specifier の後にある場合にテンプレート名が優先されるためには、コンパイラで `template` キーワードが必要になりました。
 
-**/permissive-** モードでは次のコードにより、C7510 が発生します: *'foo': use of dependent template name must be prefixed with 'template'. note: see reference to class template instantiation 'X<T>' being compiled\('foo': 依存するテンプレート名を使用する場合は 'template' のプレフィックスが必要です。注: コンパイルされているクラス テンプレートのインスタンス化 ’X<T>’ のリファレンスを参照してください\)*。
+**/permissive-** モードでは次のコードにより、C7510 が発生します: *'foo': use of dependent template name must be prefixed with 'template'. note: see reference to class template instantiation 'X<T>' being compiled\('foo': 依存するテンプレート名を使用する場合は 'template' のプレフィックスが必要です。注: コンパイルされているクラス テンプレートのインスタンス化 ’X<T>’ のリファレンスを参照してください\)* 。
 
 ```cpp
 template<typename T> struct Base
@@ -1903,13 +1903,13 @@ cl /EHsc /std:c++17 m.ixx /experimental:module
 cl /experimental:module /module:reference m.ifc main.cpp /std:c++14
 ```
 
-このどちらの場合でも、コンパイラで次の C5050 が発生します。*警告 C5050: モジュール 'm' のインポート中に互換性のない環境が発生する可能性があります: C++ のバージョンが一致しません。Current "201402" module version "201703"\(C++ のバージョンが一致せず環境に互換性がないためモジュール 'm' をインポートできない可能性があります: 現在 "201402" モジュール バージョン "201703"\)*.
+このどちらの場合でも、コンパイラで次の C5050 が発生します。*警告 C5050: モジュール 'm' のインポート中に互換性のない環境が発生する可能性があります: C++ のバージョンが一致しません。Current "201402" module version "201703"\(C++ のバージョンが一致せず環境に互換性がないためモジュール 'm' をインポートできない可能性があります: 現在 "201402" モジュール バージョン "201703"\)* .
 
 さらに、.ifc ファイルが改ざんされている場合には必ずコンパイラで C7536 が発生します。 モジュール インターフェイスのヘッダーの下には、コンテンツの SHA2 ハッシュが含まれています。 インポート時に .ifc ファイルが同じようにハッシュされ、ヘッダーに提供されたハッシュと照合されます。これらが一致しない場合は C7536: *ifc が整合性チェックに失敗しました。SHA2: '66d5c8154df0c71d4cab7665bab4a125c7ce5cb9a401a4d8b461b706ddd771c6' が必要です* が発生します。
 
 ### <a name="partial-ordering-involving-aliases-and-non-deduced-contexts"></a>別名と非推定コンテキストが含まれる部分的な順序付け
 
-非推定コンテキストに別名が含まれる部分的な順序付けルールには実装方法に違いがあります。 次の例では、GCC と Microsoft C++ コンパイラ (**/permissive-** モード) ではエラーが発生しますが、Clang ではコードが受け入れられます。 
+非推定コンテキストに別名が含まれる部分的な順序付けルールには実装方法に違いがあります。 次の例では、GCC と Microsoft C++ コンパイラ ( **/permissive-** モード) ではエラーが発生しますが、Clang ではコードが受け入れられます。 
 
 ```cpp
 #include <utility>
@@ -2039,4 +2039,4 @@ Visual Studio 2017 バージョン 15.9 では、このコードでは次のエ�
 
 ## <a name="see-also"></a>関連項目
 
-[Visual C++ 言語の準拠](../visual-cpp-language-conformance.md)
+[Visual C++ 言語への準拠](../visual-cpp-language-conformance.md)

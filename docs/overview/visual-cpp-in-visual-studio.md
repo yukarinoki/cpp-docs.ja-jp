@@ -1,28 +1,29 @@
 ---
 title: Visual Studio での C++
 description: Visual C++ とは、Microsoft C++ のコンパイラ、コード エディターおよび Visual Studio IDE の関連ツールの名称です。 Visual C++ を使用すると、Windows、Linux、Android および iOS 用のプログラムを開発できます。
-ms.date: 09/26/2018
+ms.date: 05/13/2019
 ms.technology: cpp-ide
 helpviewer_keywords:
 - Visual C++, home page
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: a01c6448174a35da900b7b50a1df5916a2983201
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 2706d232dba2a7971edd8d84da2b1d1399ed6e25
+ms.sourcegitcommit: 61121faf879cc581a4d39e4baccabf7cf1f673a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222601"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65934150"
 ---
 # <a name="c-in-visual-studio"></a>Visual Studio での C++
 
 > [!NOTE]
-> この開発者向けドキュメントは、Visual Studio 2015 と Visual Studio 2017 に適用されます。
+> この開発者向けドキュメントは、Visual Studio 2015 以降に適用されます。 自分の Visual Studio のバージョンと合わせるには、ページの左上にあるバージョン セレクターを使います。
 >
 > プログラムを実行するために Visual C++ 再頒布可能パッケージを探している場合、[Microsoft ダウンロード センター](http://www.microsoft.com/download/)にアクセスして検索ボックスに「**Visual C++**」と入力してください。
 
-
 Microsoft Visual C++ (通常は短縮形で Visual C++ または MSVC と表現される) とは、Windows 上で Visual Studio の一部として利用できる C++、C、およびアセンブリ言語の開発ツールおよびライブラリの名前です。 これらのツールとライブラリでは、ユニバーサル Windows プラットフォーム (UWP) アプリ、ネイティブ Windows デスクトップおよびサーバー アプリケーション、Windows、Linux、Android、iOS 上で実行されるクロスプラットフォーム ライブラリおよびアプリに加えて、.NET Framework を使用する管理対象のアプリおよびライブラリを作成できます。 Visual C++ を使用すると、単純なコンソール アプリから最も高度で複雑な Windows デスクトップ用アプリまで、またデバイス ドライバーやオペレーティング システムのコンポーネントからモバイル デバイス用のクロスプラットフォーム ゲームまで、さらに最小の IoT デバイスから Azure クラウドにおけるマルチ サーバー ハイ パフォーマンス コンピューティングに至るまであらゆるアプリを記述することができます。
+
+Visual Studio 2015、2017、および 2019 は、サイド バイ サイドでインストールできます。 Visual Studio 2019 (コンパイラ ツールセット v142) を使い、Visual Studio 2015 (v140) と Visual Studio 2017 (v141) のツールセットを使ってプログラムの編集とビルドを行えます。
 
 ## <a name="whats-new-and-conformance-history"></a>新機能と準拠の履歴
 
