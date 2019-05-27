@@ -1,28 +1,31 @@
 ---
-title: レコード セット:テーブル (ODBC) クラスの宣言
-ms.date: 11/04/2016
+title: 'レコードセット: テーブル用のクラスの宣言 (ODBC)'
+ms.date: 05/09/2019
 helpviewer_keywords:
 - ODBC recordsets, declaring class for tables
 - recordsets, declaring classes for tables
 ms.assetid: 3fe286c2-3f3d-493d-9d8c-762310939d08
-ms.openlocfilehash: 17adc6e26dcbb39453d9009d82843d213271cc78
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: ea17f131552fe7f71d9106a8979bb661955fe850
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397875"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707945"
 ---
-# <a name="recordset-declaring-a-class-for-a-table-odbc"></a>レコード セット:テーブル (ODBC) クラスの宣言
+# <a name="recordset-declaring-a-class-for-a-table-odbc"></a>レコードセット: テーブル用のクラスの宣言 (ODBC)
+
+> [!NOTE] 
+> MFC ODBC コンシューマー ウィザードは、Visual Studio 2019 以降では利用できません。 ただし、手動でコンシューマーを作成することはできます。
 
 このトピックの内容は、MFC ODBC クラスに該当します。
 
-最も一般的なレコード セット クラスでは、1 つのテーブルを開きます。 1 つのテーブルのレコード セット クラスを宣言するには、使用、 [MFC ODBC コンシューマー ウィザード](../../mfc/reference/adding-an-mfc-odbc-consumer.md)から**クラスの追加**対応するレコード セット フィールド データ メンバーの名前を付け、各列を選択します。
+最も一般的なレコードセット クラスでは、1 つのテーブルが開かれます。 1 つのテーブルのレコードセット クラスを宣言するには、**[クラスの追加]** から [MFC ODBC コンシューマー ウィザード](../../mfc/reference/adding-an-mfc-odbc-consumer.md)を使い、対応するレコードセット フィールド データ メンバーの名前を指定することによって必要な各列を選択します。
 
-レコード セットの他の用途は次のとおりです。
+レコードセットには他に次の用途があります。
 
 - 2 つ以上のテーブルを結合します。
 
-- 定義済みのクエリの結果を格納しています。
+- 定義済みのクエリの結果を格納します。
 
 ## <a name="see-also"></a>関連項目
 

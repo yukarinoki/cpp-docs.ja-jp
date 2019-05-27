@@ -9,31 +9,31 @@ helpviewer_keywords:
 - _ATL_MIN_CRT macro
 - distributing files with ATL components
 ms.assetid: 061d5f98-f669-440e-9380-42f017a0f9e8
-ms.openlocfilehash: c36200d7f0d41aa4f116fdee3f5d95ff1e80e839
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: 971d6c05ad4669f32e3b232d5e91c501e197be30
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65445988"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707426"
 ---
 # <a name="creating-an-atl-project"></a>ATL プロジェクトの作成
 
-ATL プロジェクトを作成する最も簡単である、ATL プロジェクト ウィザードを使用には、 **Win32 プロジェクト**のフォルダー、**新しいプロジェクト** ダイアログ ボックス。
+ATL プロジェクトを作成する最も簡単な方法は、**[新しいプロジェクト]** ダイアログ ボックスの **[Win32 プロジェクト]** フォルダーにある ATL プロジェクト ウィザードを使用することです。
 
 ## <a name="to-create-an-atl-project-using-the-atl-project-wizard"></a>ATL プロジェクト ウィザードを使用して ATL プロジェクトを作成するには
 
-1. Visual Studio で、次のように選択します。**ファイル > 新規 > プロジェクト**メイン メニューから。
+1. Visual Studio で、メイン メニューから **[ファイル] > [新規作成] > [プロジェクト]** の順に選択します。
 
-1. 選択、 **ATL プロジェクト**アイコン、**テンプレート**ウィンドウを開き、 **ATL プロジェクト ウィザード**します。
+1. **[テンプレート]** ウィンドウの **[ATL プロジェクト]** アイコンを選択し、**ATL プロジェクト ウィザード**を開きます。
 
-1. 使用して、アプリケーションの設定を定義、[アプリケーション設定](../../atl/reference/application-settings-atl-project-wizard.md)のページ、 **ATL プロジェクト ウィザード**します。
+1. **ATL プロジェクト ウィザード**の [[アプリケーションの設定]](../../atl/reference/application-settings-atl-project-wizard.md) ページを使用して、アプリケーションの設定を定義します。
 
    > [!NOTE]
    > ウィザードの既定の設定を使用する場合は、この手順を省略します。
 
-1. クリックして**完了**ウィザードを終了し、開発環境で新しいプロジェクトを開きます。
+1. **[完了]** をクリックしてウィザードを閉じ、新しいプロジェクトを開発環境で開きます。
 
-作成されたファイルを表示するには、プロジェクトが作成されると、**ソリューション エクスプ ローラー**します。 ウィザードでプロジェクト用に作成されるファイルの詳細については、プロジェクトが生成する ReadMe.txt ファイルを参照してください。 ファイルの種類についての詳細については、次を参照してください。 [Visual に対して作成されるファイルの種類C++プロジェクト](../../build/reference/file-types-created-for-visual-cpp-projects.md)します。 新しい ATL プロジェクト、およびそれらを変更する方法の構成の詳細については、次を参照してください。 [ATL プロジェクトの既定の構成](../../atl/reference/default-atl-project-configurations.md)します。
+プロジェクトを作成したら、**ソリューション エクスプローラー**で、作成したファイルを表示できます。 ウィザードでプロジェクト用に作成されるファイルの詳細については、プロジェクトが生成する ReadMe.txt ファイルを参照してください。 ファイルの種類の詳細については、「[Visual Studio の C++ プロジェクトに対して作成されるファイルの種類](../../build/reference/file-types-created-for-visual-cpp-projects.md)」を参照してください。 新しい ATL プロジェクトの構成の詳細とそれらの変更方法については、「[ATL プロジェクトの既定の構成](../../atl/reference/default-atl-project-configurations.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

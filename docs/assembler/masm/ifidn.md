@@ -1,30 +1,34 @@
 ---
-title: IFIDN]
-ms.date: 08/30/2018
+title: IFIDN、IFIDNI
+ms.date: 05/23/2019
 f1_keywords:
 - IFIDN[[I]]
+- IFIDN
+- IFIDNI
 helpviewer_keywords:
 - IFIDN[[I]] directive
+- IFIDN directive
+- IFIDNI directive
 ms.assetid: 957893b1-1a30-4ffd-96f2-6663604a5058
-ms.openlocfilehash: d727c47d5c92d3c8b12c2701bdd8264db4fd5abc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9dab7771e96848fd77aec7e601b9da2f1bc8610d
+ms.sourcegitcommit: 79e985d3c6e8ccaf94f6e641972887cae8c6eeb0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62202883"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66197669"
 ---
-# <a name="ifidn"></a>IFIDN]
+# <a name="ifidn-ifidni"></a>IFIDN、IFIDNI
 
 テキスト項目が同一の場合は、アセンブリを行います。
 
 ## <a name="syntax"></a>構文
 
-> IFIDN[[I]] textitem1, textitem2
+> **IFIDN**\[**I**] *textitem1* __,__ *textitem2*
 
 ## <a name="remarks"></a>Remarks
 
-場合**は**は、比較では大文字小文字を区別します。 参照してください[場合](../../assembler/masm/if-masm.md)の完全な構文です。
+場合**IFIDNI**は、比較では大文字小文字を区別します。 参照してください[場合](../../assembler/masm/if-masm.md)の完全な構文です。
 
 ## <a name="see-also"></a>関連項目
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
+[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)
