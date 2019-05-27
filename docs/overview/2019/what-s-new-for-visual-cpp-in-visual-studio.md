@@ -1,34 +1,30 @@
 ---
 title: Visual Studio 2019 での C++ の新機能
-ms.date: 04/02/2019
+ms.date: 05/13/2019
 ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 493b96a8ce3359cc18287adbae8cbd6c374671ec
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: 19eaa9d4ed1cf12e721825f998fa674363eda488
+ms.sourcegitcommit: 61121faf879cc581a4d39e4baccabf7cf1f673a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59779493"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65934132"
 ---
-<!--NOTE all https:// links to docs.microsoft.com need to be converted to site-relative links prior to publishing-->
-
 # <a name="whats-new-for-c-in-visual-studio-2019"></a>Visual Studio 2019 での C++ の新機能
 
-Visual Studio 2019 には、Microsoft C++ 環境に対する多くの更新プログラムと修正プログラムが導入されています。 コンパイラとツールに存在したたくさんのバグと報告された問題を修正してきました。その多くは、**[フィードバックの送信]** の [[問題の報告]](/visualstudio/how-to-report-a-problem-with-visual-studio-2017) オプションおよび [[提案の送信]](https://developercommunity.visualstudio.com/spaces/62/index.html) オプションを通じてお客様から寄せられたものです。 バグ レポートをお寄せいただきありがとうございました。 Visual Studio 全体の新機能の詳細については、「[Visual Studio の新機能](/visualstudio/ide/whats-new-visual-studio-2019)」を参照してください。
+Visual Studio 2019 には、Microsoft C++ 環境に対する多くの更新プログラムと修正プログラムが導入されています。 コンパイラとツールに存在した多くのバグや問題を修正しました。その多くは、 **[フィードバックの送信]** の [[問題の報告]](/visualstudio/how-to-report-a-problem-with-visual-studio-2017) および [[提案の送信]](https://developercommunity.visualstudio.com/spaces/62/index.html) オプションを通じてお客様から寄せられたものです。 バグ レポートをお寄せいただきありがとうございました。 Visual Studio 全体の新機能の詳細については、「[Visual Studio の新機能](/visualstudio/ide/whats-new-visual-studio-2019)」を参照してください。
 
 ## <a name="c-compiler"></a>C++ コンパイラ
 
-- `/std:c++latest` オプションには現在、3 方向比較のための C++20 演算子 <=> ("宇宙船") の初期サポートなど、必ずしも完全ではない C++20 機能が含まれています。
+- C++17 機能と正確性の修正に関するサポート強化に加え、モジュールやコルーチンなど、C++20 機能の実験的サポート。 詳しくは、「[C++ Conformance Improvements in Visual Studio 2019](../cpp-conformance-improvements.md)」(Visual Studio 2019 での C++ 準拠の強化) をご覧ください。
 
-- [P0941R2 - 機能テスト マクロ](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0941r2.html)は完全であり、`__has_cpp_attribute` がサポートされています。 機能テスト マクロはすべての標準モードでサポートされています。
-
-- [C++20 P1008R1 - ユーザー宣言コンストラクターによる集計の禁止](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p1008r1.pdf)も完全です。
-
-- C++17 機能のサポート強化に加え、モジュールやコルーチンなど、C++20 機能の実験的サポート。 詳しくは、「[C++ Conformance Improvements in Visual Studio 2019](../cpp-conformance-improvements.md)」(Visual Studio 2019 での C++ 準拠の強化) をご覧ください。
+- `/std:c++latest` オプションには現在、3 方向比較のための C++20 演算子 \<=> ("宇宙船") の初期サポートなど、必ずしも完全ではない C++20 機能が含まれています。
 
 - C++ コンパイラ スイッチ `/Gm` は現在、非推奨になっています。 ご自分のビルド スクリプト内の `/Gm` スイッチが明示的に定義されている場合は、それを無効にすることを検討してください。 ただし、"警告をエラーとして扱う" (`/WX`) を使用しているとき、`/Gm` の非推奨化に関する警告はエラーとして扱われないので無視してもかまいません。
+
+- MSVC により、`/std:c++latest` フラグの下で C++20 標準ドラフトの機能の実装が開始されたため、`/std:c++latest` と `/clr` (すべてのフレーバー)、`/ZW`、`/Gm` との互換性がなくなりました。 Visual Studio 2019 では、`/clr`、`/ZW`、または `/Gm` を使ってコンパイルする場合は `/std:c++17` または `/std:c++14` モードを使ってください (ただし、前の項目を確認してください)。
 
 - C++ コンソール アプリとデスクトップ アプリに対して、プリコンパイル済みヘッダーが既定では生成されなくなりました。
 
@@ -38,25 +34,17 @@ Spectre Variant 1 のリスク軽減サポートを提供するため、`/Qspect
 
 ## <a name="c-standard-library-improvements"></a>C++ 標準ライブラリの機能強化
 
-- [C++20 P0550R2 \(remove_cvref)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0550r2.pdf) は完全です。
+- 追加の C++17 と C++20 のライブラリ機能と正確性の修正の実装。 詳しくは、「[C++ Conformance Improvements in Visual Studio 2019](../cpp-conformance-improvements.md)」(Visual Studio 2019 での C++ 準拠の強化) をご覧ください。
 
-- C++17 \<charconv> floating-point to_chars() の改善: 最短 chars_format::fixed は 60-80% 速くなり、最短/高精度 chars_format::hex は完全です。
+- Clang-Format が C++ 標準ライブラリのヘッダーに適用され、読みやすさが向上しました。
 
-- 実装が並列化されるアルゴリズムが増えました: is_sorted()、is_sorted_until()、is_partitioned()、set_difference()、set_intersection()、is_heap()、is_heap_until()。
+- Visual Studio で C++ の [マイ コードのみ] がサポートされるようになったため、同じ効果を実現するため標準ライブラリで `std::function` と `std::visit` のカスタム メカニズムを提供する必要がなくなりました。 そのメカニズムが削除されても、ユーザーが確認できる影響はほとんどありません。ただし、コンパイラにより、\<type_traits> または \<variant> の行 15732480 または 16707566 上の問題を示す診断が生成されなくなります。
 
-- `std::variant` が改善され、最適化がより簡単になりました。結果的に、より良いコードが生成されます。 `std::visit` を利用することで、コードのインライン展開が改善されます。
-
-- clang-format を C++ Standard Library に適用し、読みやすくしました。
-
-- `if constexpr` を利用して一部の標準ライブラリ機能をコンパイルするときのスループットが改善されました。
-
-- 標準ライブラリで #include が使用されない部分のコンパイルを回避するよう、標準ライブラリの物理的設計を最適化しました。\<vector> しか含まれない空のファイルをビルドする時間が半分になります。
-
-## <a name="performancethroughput-fixes"></a>パフォーマンスやスループットの修正
+## <a name="performancethroughput-improvements-in-the-compiler-and-standard-library"></a>コンパイラと標準ライブラリでのパフォーマンス/スループットの向上
 
 - リンカーによるファイル I/O の処理や PDB タイプのマージと作成のリンク時間など、ビルドのスループットが改善されました。
 
-- OpenMP SIMD ベクター化の基本的なサポートが追加されました。 新しい CL スイッチ `-openmp:experimental` を使用して有効にできます。 このオプションにより、`#pragma omp simd` で注釈が付けられたループをベクター化できる可能性があります。 ベクター化は保証されておらず、注釈が付けられていてもベクター化されていないループに対しては警告が報告されます。 SIMD 句はサポートされていません。無視され、警告が報告されます。
+- OpenMP SIMD ベクター化の基本的なサポートが追加されました。 これは新しいコンパイラ スイッチ `-openmp:experimental` を使用して有効にできます。 このオプションにより、`#pragma omp simd` で注釈が付けられたループをベクター化できる可能性があります。 ベクター化は保証されておらず、注釈が付けられていてもベクター化されていないループに対しては警告が報告されます。 SIMD 句はサポートされていません。無視され、警告が報告されます。
 
 - 新しいインライン展開コマンド ライン スイッチ `-Ob3` が追加されました。これは、`-Ob2` より積極的なバージョンです。 `-O2` (速さのためにバイナリを最適化) は引き続き、既定で `-Ob2` を意味します。 コンパイラのインライン展開が十分に積極的でない場合、`-O2 -Ob3` を渡すことを検討してください。
 
@@ -74,6 +62,32 @@ Spectre Variant 1 のリスク軽減サポートを提供するため、`/Qspect
 
   - `std::copy` または `std::vector` および `std::string` 構築など、`memmove` を利用したコードの最適化の改善。
 
+- 標準ライブラリで #include されない部分のコンパイルを回避するよう、標準ライブラリの物理的設計を最適化しました。\<vector> しか含まれない空のファイルをビルドする時間が半分になります。 この変更の結果として、以前は間接的に含まれていたヘッダーの #include ディレクティブの追加が必要になることがあります。 たとえば、`std::out_of_range` を使うコードでは、\<stdexcept> の #include が必要になることがあります。 ストリーム挿入演算子を使うコードでは、\<ostream> の #include が必要になることがあります。 その利点は、実際に \<stdexcept> または \<ostream> コンポーネントを使う変換単位のみで、それらをコンパイルするスループットのコストがかかるようになることです。
+
+- 標準ライブラリのさらに多くの場所で `if constexpr` が適用され、コピー操作、反転や回転のような順列、および並列アルゴリズムのライブラリにおいて、スループットが向上し、コードのサイズが削減されました。 
+
+- 標準ライブラリで内部的に `if constexpr` を使うようになり、C++14 モードであってもコンパイル時間が短縮されます。
+
+- 並列アルゴリズムのライブラリの実行時の動的リンク検出で、関数ポインターの配列を格納するためにページ全体が使われなくなりました。 このメモリを読み取り専用にすることは、セキュリティのために重要だと見なされなくなりました。
+
+- `std::thread` のコンストラクターでスレッドの開始が待機されなくなり、基になる C ライブラリ `_beginthreadex` と指定された呼び出し可能オブジェクトの間にそれほど多くの関数呼び出しのレイヤーが挿入されなくなりました。 以前の `std::thread` では、`_beginthreadex` と、指定された呼び出し可能オブジェクトの間に 6 個の関数が置かれていましたが、3 個だけに減りました (うち 2 個は単なる `std::invoke` です)。 また、これにより、`std::thread` の作成とちょうど同じ時間にシステム クロックが変更された場合に `std::thread` のコンストラクターがハングするという、あいまいなタイミングのバグも解決されます。
+
+- `std::hash<std::filesystem::path>` を実装する際に導入された `std::hash` のパフォーマンス低下を修正しました。
+
+- 標準ライブラリのいくつかの場所で、正確性を実現するために catch ブロックの代わりにデストラクターが使われるようになりました。 この結果、デバッガーの操作性が向上します。標準ライブラリの影響を受けた場所を通じてスローした例外は、再スローではなく、その元のスロー サイトからスローされたものとして表示されるようになります。 標準ライブラリのすべての catch ブロックが削除されたわけではありません。MSVC の今後のリリースでは、catch ブロックの数を減らす予定です。
+
+- noexcept 関数内の条件付きスローが原因となる `std::bitset` の準最適な codegen が、スローのパスを取り除くことで修正されました。
+
+- `std::list` および `std::unordered_*` ファミリで、より多くの場所で内部的に非デバッグの反復子が使われます。
+
+- `std::list` のいくつかのメンバーが変更され、リスト ノードを開放して再割り当てする代わりに、可能であればそれらを再利用するようになりました。 たとえば、既にサイズ 3 を持っている `list<int>` があるとします。`assign(4, 1729)` を呼び出すと、3 つのリスト ノードすべてを開放してから新しい 4 つのリスト ノードを値 1729 と共に割り当てる代わりに、最初の 3 つのリスト ノードの整数値を上書きし、値 1729 と共に 1 つの新しいリスト ノードを割り当てるようになります。
+
+- 標準ライブラリのすべての `erase(begin(), end())` 呼び出しが `clear()` に変更されました。
+
+- `std::vector` で、特定のケースでより効率的に要素を初期化および消去できるようになりました。
+
+- `std::variant` が改善され、最適化がより簡単になりました。結果的に、より良いコードが生成されます。 `std::visit` を利用することで、コードのインライン展開が改善されます。
+
 ## <a name="c-ide"></a>C++ IDE
 
 ### <a name="live-share-c-support"></a>Live Share C++ サポート
@@ -82,7 +96,7 @@ Spectre Variant 1 のリスク軽減サポートを提供するため、`/Qspect
 
 ### <a name="intellicode-for-c"></a>C++ 向けの IntelliCode
 
-IntelliCode はオプションの拡張機能であり、独自の広範囲なトレーニングとコード コンテキストを使用し、入力候補一覧の上部に使用頻度が高いものを配置します。 多くの場合、一覧を見るとき下にスクロールする必要がなくなります。 C++ の場合、標準ライブラリのような一般的なライブラリを使用しているときには、IntelliCode からほとんどのヘルプが提供されます。 詳細については、「[AI-Assisted Code Completion Suggestions Come to C++ via IntelliCode](https://devblogs.microsoft.com/cppblog/cppintellicode/)」 (AI によるコード入力支援機能が IntelliCode 経由で C++ でも利用可能に) を参照してください。
+IntelliCode はオプションの拡張機能です (16.1 のワークロード コンポーネントとして追加されました)。独自の広範囲なトレーニングとコード コンテキストを使用し、入力候補一覧の最上位に使用頻度が高いものを配置します。 多くの場合、一覧を見るとき下にスクロールする必要がなくなります。 C++ の場合、標準ライブラリのような一般的なライブラリを使用しているときには、IntelliCode からほとんどのヘルプが提供されます。 詳細については、「[AI-Assisted Code Completion Suggestions Come to C++ via IntelliCode](https://devblogs.microsoft.com/cppblog/cppintellicode/)」 (AI によるコード入力支援機能が IntelliCode 経由で C++ でも利用可能に) を参照してください。
 
 ### <a name="template-intellisense"></a>テンプレート IntelliSense
 
@@ -112,7 +126,19 @@ Visual Studio 2019 では、コードをもっと簡単に、もっと直観的�
 
 詳細については、「[C++ Productivity Improvements in Visual Studio 2019 Preview 2](https://devblogs.microsoft.com/cppblog/c-productivity-improvements-in-visual-studio-2019-preview-2/)」 (Visual Studio 2019 プレビュー 2 の C++ 生産性向上) を参照してください。
 
+**Visual Studio 2019 バージョン 16.1**
+
+### <a name="quickinfo-improvements"></a>QuickInfo の機能強化
+
+クイック ツールヒントで、エディターのセマンティクスの色づけが考慮されるようになりました。 また、 **[オンラインで検索]** リンクも新しくなりました。カーソルを置いたコード コンストラクターについて詳しく学習するためのオンライン ドキュメントを検索できます。 赤い波線が引かれているコードについては、クイック ヒントで提供されるリンクによってオンラインでエラーを検索します。 この方法では、自分のブラウザーにメッセージを再入力する必要はありません。 詳細については、「[Quick Info Improvements in Visual Studio 2019:Colorization and Search Online (Visual Studio 2019 のクイック ヒントの機能強化: 色づけとオンライン検索)](https://devblogs.microsoft.com/cppblog/quick-info-improvements-in-visual-studio-2019-colorization-and-search-online/)」をご覧ください。
+
+### <a name="intellicode-available-in-c-workload"></a>C++ ワークロードで使用できる IntelliCode
+
+IntelliCode がオプションのコンポーネントとして**C++ によるデスクトップ開発**ワークロードに付属するようになりました。 詳細については、[Visual Studio 2019 に付属する強化された C++ IntelliCode](https://devblogs.microsoft.com/cppblog/) に関するページをご覧ください。
+
 ## <a name="cmake-support"></a>CMake サポート
+
+- CMake 3.14 のサポート
 
 - Visual Studio では、CMakeGUI などの外部ツール、カスタマイズされたメタビルド システム、cmake.exe をそれ自体で呼び出すビルド スクリプトによって生成された既存の CMake キャッシュを開けるようになりました。
 
@@ -130,15 +156,33 @@ Visual Studio 2019 では、コードをもっと簡単に、もっと直観的�
 
 - CMake プロジェクトのスタティック分析の警告をバックグラウンドで処理し、エディターに表示できるようになりました。
 
-- CMake プロジェクトのビルドと構成の "開始" および "終了" に関するいっそう明確なメッセージと、Visual Studio のビルドの進行状況 UI のサポート。 さらに、出力ウィンドウに表示される CMake のビルドおよび構成に関するメッセージの詳細レベルをカスタマイズできる CMake の詳細さの設定が、**[ツール] の [オプション]** に追加されました。
+- CMake プロジェクトのビルドと構成の "開始" および "終了" に関するいっそう明確なメッセージと、Visual Studio のビルドの進行状況 UI のサポート。 さらに、出力ウィンドウに表示される CMake のビルドおよび構成に関するメッセージの詳細レベルをカスタマイズできる CMake の詳細さの設定が、 **[ツール] の [オプション]** に追加されました。
 
 - CMake のコマンド ラインを手動で変更することなくツールチェーンを指定するための `cmakeToolchain` の設定が、CMakeSettings.json でサポートされるようになりました。
 
 - 新しい **[すべてビルド]** メニューのショートカット **Ctrl+Shift+B**。
 
+**Visual Studio 2019 バージョン 16.1**
+
+- Clang/LLVM を使った CMake プロジェクトの編集、ビルド、デバッグの統合サポート。 詳細については、「[Clang/LLVM Support in Visual Studio (Visual Studio での Clang/LLVM のサポート)](https://devblogs.microsoft.com/cppblog/clang-llvm-support-in-visual-studio/)」をご覧ください。
+
+## <a name="linux-and-wsl"></a>Linux と WSL
+
+**Visual Studio 2019 バージョン 16.1**
+
+- Linux および CMake クロスプラットフォーム プロジェクトでの [AddressSanitizer (ASan)](https://github.com/google/sanitizers/wiki/AddressSanitizer) のサポート。 詳細については、「[AddressSanitizer (ASan) for the Linux Workload in Visual Studio 2019 (Visual Studio 2019 の Linux ワークロード用の AddressSanitizer (ASan))](https://devblogs.microsoft.com/cppblog/addresssanitizer-asan-for-the-linux-workload-in-visual-studio-2019/)」をご覧ください。
+
+- Windows Subsystem for Linux (WSL) で C++ を使うための統合された Visual Studio サポート。 詳細については、「[C++ with Visual Studio 2019 and Windows Subsystem for Linux (WSL) (Visual Studio 2019 と Windows Subsystem for Linux (WSL) を使った C++)](https://devblogs.microsoft.com/cppblog/c-with-visual-studio-2019-and-windows-subsystem-for-linux-wsl/)」をご覧ください。
+
+## <a name="incredibuild-integration"></a>IncrediBuild の統合
+
+IncrediBuild がオプションのコンポーネントとして**C++ によるデスクトップ開発**ワークロードに含まれるようになりました。 IncrediBuild のビルド モニターは、Visual Studio IDE に完全に統合されています。 詳細については、「[Visualize your build with IncrediBuild’s Build Monitor and Visual Studio 2019 (IncrediBuild のビルド モニターと Visual Studio 2019 を使ってビルドを視覚化する)](https://devblogs.microsoft.com/cppblog/visualize-your-build-with-incredibuilds-build-monitor-and-visual-studio-2019/)」をご覧ください。
+ 
 ## <a name="debugging"></a>デバッグ
 
 - Windows 上で実行される C++ アプリケーションの場合、PDB ファイルは別個の 64 ビット プロセスで読み込まれるようになりました。 この変更では、モジュールと PDB ファイルが多数含まれているアプリケーションをデバッグするときにメモリ不足が原因で発生するさまざまなクラッシュに対処しています。
+
+- **[ウォッチ]** 、 **[自動]** 、 **[ローカル]** ウィンドウで検索が有効になります。
 
 ## <a name="windows-desktop-development-with-c"></a>C++ による Windows デスクトップ開発
 
@@ -178,6 +222,10 @@ C++ Android エクスペリエンスは、既定では Android SDK 25 および 
 - [Lifetime プロファイル チェッカー](https://herbsutter.com/2018/09/20/lifetime-profile-v1-0-posted/)の更新された部分的な実装。これは未解決のポインターと参照を検出します。 詳細については、「[Lifetime Profile Update in Visual Studio 2019 Preview 2](https://devblogs.microsoft.com/cppblog/lifetime-profile-update-in-visual-studio-2019-preview-2/)」 (Visual Studio 2019 プレビュー 2 の Lifetime プロファイル更新) を参照してください。
 
 - C26138、C26810、C26811、試験段階規則 C26800 など、コルーチン関連のチェックを増やしました。 詳細については、「[New Code Analysis Checks in Visual Studio 2019: use-after-move and coroutine](https://devblogs.microsoft.com/cppblog/new-code-analysis-checks-in-visual-studio-2019-use-after-move-and-coroutine/)」 (Visual Studio 2019 の新しいコード分析チェック: use-after-move とコルーチン) を参照してください。
+
+**Visual Studio 2019 バージョン 16.1**
+
+初期化されていない変数のチェックに対する新しいクイック修正。 詳細については、「[New code analysis quick fixes for uninitialized memory (C6001) and use before init (C26494) warnings (初期化されていないメモリ (C6001) と初期化前の使用 (C26494) 警告に関するコード分析の新しいクイック修正)](https://devblogs.microsoft.com/cppblog/new-code-analysis-quick-fixes-for-uninitialized-memory-c6001-and-use-before-init-c26494-warnings/)」をご覧ください。
 
 ## <a name="unit-testing"></a>単体テスト
 
