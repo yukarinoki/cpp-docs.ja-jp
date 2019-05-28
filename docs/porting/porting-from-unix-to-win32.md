@@ -1,6 +1,6 @@
 ---
 title: UNIX から Win32 への移植
-ms.date: 08/02/2018
+ms.date: 05/02/2019
 helpviewer_keywords:
 - APIs [C++], porting to Win32
 - Windows API [C++], migrating from UNIX
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - porting to Win32 [C++]
 - Win32 applications [C++], migrating from UNIX
 ms.assetid: 3837e4fe-3f96-4f24-b2a1-7be94718a881
-ms.openlocfilehash: 3146c94879532a5c58208369bb6d131a3a027c33
-ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
+ms.openlocfilehash: 66ac5b478929a42b37d6d0b712063552cfae9104
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58278477"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65449020"
 ---
 # <a name="porting-from-unix-to-win32"></a>UNIX から Win32 への移植
 
@@ -39,17 +39,9 @@ UNIX を Visual C++ に移植してサポートするためのMicrosoft とサ�
 
 [Unix 移行プロジェクト ガイド](https://technet.microsoft.com/library/bb656287.aspx)は、大規模なプロジェクトを UNIX から Win32 に移行する場合の高度なサポートを提供する点で、UNIX カスタム アプリケーション移行ガイドを補足します。 ガイドは、プロジェクトの移行の各段階で考慮する問題へのアドバイスを提供します。
 
-### <a name="interopsystemscom"></a>InteropSystems.com
-
-[http://www.interopsystems.com/](http://www.interopsystems.com/)
-
-UNIX から Win32 への移植をサポートするソフトウェアを提供する企業のサードパーティ サイトです。
-
 ### <a name="c-boost-web-site"></a>C++ による Web サイトの向上
 
-[http://boost.sourceforge.net/regression-logs/](http://boost.sourceforge.net/regression-logs/)
-
-[http://boost.sourceforge.net/boost-build2/](http://boost.sourceforge.net/boost-build2/)
+[https://www.boost.org/](https://www.boost.org/)
 
 ## <a name="porting-unix-applications-directly-to-win32"></a>Win32 に UNIX アプリケーションを直接移植する
 
