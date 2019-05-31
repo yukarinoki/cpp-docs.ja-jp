@@ -1,36 +1,44 @@
 ---
 title: ATL OLE DB コンシューマーの追加
-ms.date: 11/04/2016
+ms.date: 05/09/2019
 helpviewer_keywords:
-- ATL projects, adding ATL OLE DB consumers
-- OLE DB, adding ATL OLE DB consumer to projects
 - ATL OLE DB consumers
 ms.assetid: f940a513-4e42-4148-b521-dd0d7dc89fa2
-ms.openlocfilehash: d93bf715f8fd8a03c75b1d1bf2e44f12c1d1b9c0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 7925063e03522c96d251748b23b6b929733999a1
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62261378"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65524635"
 ---
 # <a name="adding-an-atl-ole-db-consumer"></a>ATL OLE DB コンシューマーの追加
 
-このウィザードを使用すると、プロジェクトに ATL OLE DB コンシューマーを追加します。 ATL OLE DB コンシューマーは、OLE DB アクセサー クラスとデータ バインディングのデータ ソースへのアクセスに必要なので構成されます。 ATL COM アプリケーションまたは ATL のサポート (ATL OLE DB コンシューマー ウィザードが自動的に追加します) を含む MFC または Win32 アプリケーションとして、プロジェクトが作成されましたがする必要があります。
+::: moniker range="vs-2019"
+
+ATL OLE DB コンシューマー ウィザードは、Visual Studio 2019 以降では使用できません。 ただし、この機能を手動で追加することは可能です。 詳細については、「[ウィザードを使用しないコンシューマーの作成](../../data/oledb/creating-a-consumer-without-using-a-wizard.md)」を参照してください。
+
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+このウィザードを使用して、ATL OLE DB コンシューマーをプロジェクトに追加します。 ATL OLE DB コンシューマーは、OLE DB アクセサー クラスとデータ ソースにアクセスするために必要データ バインドで構成されます。 プロジェクトは、ATL COM アプリケーションとして作成されているか、ATL のサポート (ATL OLE DB コンシューマー ウィザードによって自動的に追加されます) を含む MFC または Win32 アプリケーションとして作成されている必要があります。
 
 > [!NOTE]
-> OLE DB コンシューマーは、MFC プロジェクトに追加できます。 場合は、ATL OLE DB コンシューマー ウィザードは、プロジェクトに必要な COM サポートを追加します。 これは、MFC プロジェクトを作成したときに選択した前提としています。、 **ActiveX コントロール**チェック ボックスをオン (で、**高度な機能**、MFC アプリケーション ウィザードのページ)、既定でチェックされます。 アプリケーションを呼び出すことにより、このオプションを選択する`CoInitialize`と`CoUninitialize`します。 選択しなかった場合**ActiveX コントロール**MFC プロジェクトを作成したときに、呼び出す必要があります。`CoInitialize`と`CoUninitialize`、メインのコードにします。
+> MFC プロジェクトに OLE DB コンシューマーを追加できます。 これを行った場合は、プロジェクトに必要な COM サポートが ATL OLE DB コンシューマー ウィザードによって追加されます。 これは、MFC プロジェクトの作成時に、 **[ActiveX コントロール]** チェック ボックス (MFC プロジェクト アプリケーション ウィザードの **[高度な機能]** ページ内) がオンになっていることを前提としています (このチェックボックスは既定でオンになっています)。 このオプションを選択することで、アプリケーションで `CoInitialize` と `CoUninitialize` が必ず呼び出されます。 MFC プロジェクトの作成時に **[ActiveX コントロール]** を選択しなかった場合は、メイン コードで `CoInitialize` と `CoUninitialize` を呼び出す必要があります。
 
-## <a name="to-add-an-atl-ole-db-consumer-to-your-project"></a>ATL OLE DB コンシューマーをプロジェクトに追加するには
+## <a name="to-add-an-atl-ole-db-consumer-to-your-project"></a>プロジェクトに ATL OLE DB コンシューマーを追加するには
 
-1. **クラス ビュー**プロジェクトを右クリックします。 ショートカット メニューで、**追加** をクリックし、**クラスの追加**します。
+1. **クラス ビュー**で、プロジェクトを右クリックします。 ショートカット メニューの **[追加]** をクリックし、 **[クラスの追加]** をクリックします。
 
-1. Visual C フォルダーで、ダブルクリック、 **ATL OLE DB コンシューマー**アイコンを選択し、クリックしてまたは**オープン**。
+1. Visual C++ フォルダーで **[ATL OLE DB コンシューマー]** アイコンをダブルクリックするかそれを選択し、 **[開く]** をクリックします。
 
    ATL OLE DB コンシューマー ウィザードが開きます。
 
-1. 」の説明に従って設定を定義[ATL OLE DB コンシューマー ウィザード](../../atl/reference/atl-ole-db-consumer-wizard.md)します。
+1. 「[ATL OLE DB コンシューマー ウィザード](../../atl/reference/atl-ole-db-consumer-wizard.md)」の説明に従って設定を定義します。
 
-1. クリックして**完了**ウィザードを閉じます。 新しく作成された OLE DB コンシューマー コードは、プロジェクトに挿入されます。
+1. **[完了]** をクリックして、ウィザードを終了します。 新しく作成された OLE DB コンシューマー コードがプロジェクトに挿入されます。
+
+::: moniker-end
 
 ## <a name="see-also"></a>関連項目
 

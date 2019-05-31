@@ -1,25 +1,35 @@
 ---
 title: OLE DB コンシューマーの作成
-ms.date: 10/22/2018
+ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB consumers, creating
 ms.assetid: 652309d3-7736-4354-89ec-28ec80a83f9a
-ms.openlocfilehash: 9198ecce949a53190551a9c0c86c414ecdcbeb9f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 21b0e0452d702cfe8a32561eb8b22ebd9b3a98d2
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62361986"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525007"
 ---
 # <a name="creating-an-ole-db-consumer"></a>OLE DB コンシューマーの作成
 
-コンシューマーを OLE DB テンプレートを作成するには、有無、 **ATL OLE DB コンシューマー ウィザード**できたとして、ウィザードを使用して推奨される方法です。 コンシューマーが ATL をサポートする任意のアプリケーションで運用します。
+::: moniker range="vs-2019"
+
+ATL OLE DB コンシューマー ウィザードは、Visual Studio 2019 以降では使用できません。 ただし、この機能を手動で追加することは可能です。 詳細については、「[ウィザードを使用しないコンシューマーの作成](creating-a-consumer-without-using-a-wizard.md)」を参照してください。
+
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+OLE DB テンプレート コンシューマーを作成する場合、**ATL OLE DB コンシューマー ウィザード**を使用する方法と使用しない方法がありますが、ウィザードを使用する方法をお勧めします。 コンシューマーは、ATL をサポートする任意のアプリケーションで動作します。
 
 ここでは、次のトピックについて説明します。
 
 - [ウィザードを使用した OLE DB コンシューマーの作成](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)
 
 - [ウィザードを使用しない OLE DB コンシューマーの作成](../../data/oledb/creating-a-consumer-without-using-a-wizard.md)
+
+::: moniker-end
 
 ## <a name="see-also"></a>関連項目
 
