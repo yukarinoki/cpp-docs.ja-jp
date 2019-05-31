@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::lognormal_distribution [C++], param_type
 - std::lognormal_distribution [C++], param_type
 ms.assetid: f2d6a431-6c3a-4370-b12e-4adb4ddf6cc4
-ms.openlocfilehash: bd57b45ec08d044719caa60635f731276794d407
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eb92844ae1af36b9f4f7146e378fed1832c0b4f9
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413074"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449793"
 ---
 # <a name="lognormaldistribution-class"></a>lognormal_distribution クラス
 
@@ -92,7 +92,7 @@ public:
 
 分布クラスとそのメンバーの詳細については、[\<random>](../standard-library/random.md) をご覧ください。
 
-LogNormal 分布の詳細については、Wolfram MathWorld の記事「[LogNormal Distribution](http://go.microsoft.com/fwlink/p/?linkid=400917)」をご覧ください。
+LogNormal 分布の詳細については、Wolfram MathWorld の記事「[LogNormal Distribution](https://go.microsoft.com/fwlink/p/?linkid=400917)」をご覧ください。
 
 ## <a name="example"></a>例
 

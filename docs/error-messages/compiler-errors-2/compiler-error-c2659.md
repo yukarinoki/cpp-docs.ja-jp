@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2659
 ms.assetid: b0883600-4d27-4ca7-a931-8ca6bd48654d
-ms.openlocfilehash: b8b6493b01ac2b88ea50ba50157328f59fdbedf9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1b44ef825626f60e9ae6c6e8600953959fcd7b3a
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360386"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449231"
 ---
 # <a name="compiler-error-c2659"></a>コンパイラ エラー C2659
 
 '演算子' : 関数が演算子の左辺にあります
 
-関数が、指定された演算子の左側にあります。 このエラーの最も一般的な原因は、開発者が変数のつもりで提供した演算子の左側にある ID を、コンパイラが関数として解析したことです。 詳細については、Wikipedia を参照してください。 記事[最も厄介な解析](http://en.wikipedia.org/wiki/Most_vexing_parse)します。 この例は、混乱しやすい関数宣言と変数定義を示しています。
+関数が、指定された演算子の左側にあります。 このエラーの最も一般的な原因は、開発者が変数のつもりで提供した演算子の左側にある ID を、コンパイラが関数として解析したことです。 詳細については、Wikipedia を参照してください。 記事[最も厄介な解析](https://en.wikipedia.org/wiki/Most_vexing_parse)します。 この例は、混乱しやすい関数宣言と変数定義を示しています。
 
 ```
 // C2659a.cpp

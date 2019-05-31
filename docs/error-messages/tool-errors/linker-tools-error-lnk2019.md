@@ -7,12 +7,12 @@ helpviewer_keywords:
 - nochkclr.obj
 - LNK2019
 - _check_commonlanguageruntime_version
-ms.openlocfilehash: 0ef0bfd565b8c76816cc1f8a20b1521da238cdfc
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: eb28ff3673c054b8ac1876d8ba736ceddfa5fd1a
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447712"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449614"
 ---
 # <a name="linker-tools-error-lnk2019"></a>リンカ ツール エラー LNK2019
 
@@ -217,5 +217,5 @@ int main() {
 
 ## <a name="additional-resources"></a>その他の技術情報
 
-LNK2001 の考えられる原因および解決方法に関する詳細については、Stack Overflow の質問を参照してください。 [、未定義の参照/未解決外部シンボルというエラーと解決方法でしょうか。](http://stackoverflow.com/q/12573816/2002113)します。
+LNK2001 の考えられる原因および解決方法に関する詳細については、Stack Overflow の質問を参照してください。 [、未定義の参照/未解決外部シンボルというエラーと解決方法でしょうか。](https://stackoverflow.com/q/12573816/2002113)します。
 

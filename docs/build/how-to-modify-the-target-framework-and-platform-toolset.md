@@ -5,12 +5,12 @@ ms.date: 05/06/2019
 helpviewer_keywords:
 - 'msbuild (c++), howto: modify target framework and platform toolset'
 ms.assetid: 031b1d54-e6e1-4da7-9868-3e75a87d9ffe
-ms.openlocfilehash: c3d6b50a57cab9cc63657949fceccebf4ea6b8c9
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: b2cf5ac5c6a339917b87a25001be568a7caa2247
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220676"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450738"
 ---
 # <a name="how-to-modify-the-target-framework-and-platform-toolset"></a>方法: ターゲット フレームワークおよびプラットフォームのツールセットを変更します。
 
@@ -22,7 +22,7 @@ Visual Studio を変更するC++プロジェクトの異なるバージョンの
 ターゲット フレームワークを変更すると、プラットフォーム ツールセットのバージョンもそのターゲット フレームワークをサポートするように変更されます。 たとえば、.NET Framework 4.5 を対象とする場合、Visual Studio 2015 (v140)、Visual Studio 2013 (v120)、Visual Studio 2012 (v110) のような互換性のあるプラットフォーム ツールセットを使用する必要があります。 .NET Framework 2.0、3.0、3.5、4、および x86、Itanium、x64 プラットフォームを対象とするには、 **Windows7.1SDK** プラットフォーム ツールセットを使用します。
 
 > [!NOTE]
->  対象とするプラットフォーム ツールセットを変更するには、関連付けられたバージョンの Visual Studio または Windows プラットフォーム SDK がインストールされている必要があります。 たとえば、 **Windows7.1SDK** のプラットフォーム ツールセットを使って Itanium プラットフォームを対象とするには、 [Microsoft Windows SDK for Windows 7 と .NET Framework 4 SP1](http://www.microsoft.com/download/details.aspx?id=8279) がインストールされている必要があります。ただし、正しい Framework のバージョンとプラットフォーム ツールセットを対象としている場合には、開発作業を行うために Visual Studio の別の互換性のあるバージョンを使います。
+>  対象とするプラットフォーム ツールセットを変更するには、関連付けられたバージョンの Visual Studio または Windows プラットフォーム SDK がインストールされている必要があります。 たとえば、 **Windows7.1SDK** のプラットフォーム ツールセットを使って Itanium プラットフォームを対象とするには、 [Microsoft Windows SDK for Windows 7 と .NET Framework 4 SP1](https://www.microsoft.com/download/details.aspx?id=8279) がインストールされている必要があります。ただし、正しい Framework のバージョンとプラットフォーム ツールセットを対象としている場合には、開発作業を行うために Visual Studio の別の互換性のあるバージョンを使います。
 
 カスタム プラットフォーム ツールセットを作成することで、さらにターゲット フレームワークを拡張できます。 詳細については、Visual C++ チーム ブログの [C++ Native Multi-Targeting (C++ ネイティブ マルチ ターゲット)](https://blogs.msdn.microsoft.com/vcblog/2009/12/08/c-native-multi-targeting/) をご覧ください。
 
@@ -33,7 +33,7 @@ Visual Studio を変更するC++プロジェクトの異なるバージョンの
     > [!NOTE]
     >  Visual Studio ではプロジェクト ファイルの変更中には、C ++ プロジェクトを読み込むことはできません。 ただし、プロジェクトが Visual Studio に読み込まれるとき、メモ帳などの別のエディターを使用して、プロジェクト ファイルを変更することができます。 Visual Studio はプロジェクト ファイルが変更されたことを検知して、プロジェクトを再度読み込むように求めるメッセージが表示されます。
 
-1. メニュー バーで、 **[ファイル]**、 **[開く]**、 **[ファイル]** の順に選択します。 **[ファイルを開く]** のダイアログ ボックスで、プロジェクトのフォルダーに移動し、プロジェクト (.vcxproj) ファイルを開きます。
+1. メニュー バーで、 **[ファイル]** 、 **[開く]** 、 **[ファイル]** の順に選択します。 **[ファイルを開く]** のダイアログ ボックスで、プロジェクトのフォルダーに移動し、プロジェクト (.vcxproj) ファイルを開きます。
 
 1. プロジェクト ファイルで、ターゲット フレームワークのバージョンに対するエントリを見つけます。 たとえば、.NET Framework 4.5 を使用するプロジェクトの場合は、 `<TargetFrameworkVersion>v4.5</TargetFrameworkVersion>` 要素の `<PropertyGroup Label="Globals">` 要素の中の `<Project>` を探します。 `<TargetFrameworkVersion>` 要素が存在しない場合には、プロジェクトは .NET Framework を使用しないため、変更の必要はありません。
 
@@ -59,4 +59,4 @@ Visual Studio を変更するC++プロジェクトの異なるバージョンの
 
 ## <a name="see-also"></a>関連項目
 
-[コマンド ライン - C++ での MSBuild](msbuild-visual-cpp.md)
+[コマンド ラインでの MSBuild - C++](msbuild-visual-cpp.md)

@@ -8,17 +8,17 @@ helpviewer_keywords:
 - file redistribution [C++]
 - redistributing applications [C++], about redistributing applications
 ms.assetid: d201b2ce-36f1-44e5-a96c-0db81a1ba652
-ms.openlocfilehash: 2bf4297a6c61d16c68d6a9cb893aed78b9d7609d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b64fac7086dcc22199ca359a163074b967c56f95
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388164"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450620"
 ---
 # <a name="redistributing-visual-c-files"></a>Visual C++ ファイルの再配布
 
 > [!NOTE]
-> Visual C++ ランタイム ファイルのいずれかのダウンロードをお探しの場合は、 移動して、 [Microsoft web サイト](http://www.microsoft.com/)入力**Visual C Redistributable**検索ボックスにします。 次に、お使いのコンピューターのアーキテクチャ用の再頒布可能パッケージ (たとえば、64 ビット Windows を実行している場合は x64) と、必要な Visual C++ のバージョン (たとえば、2015) をダウンロードしてインストールします。
+> Visual C++ ランタイム ファイルのいずれかのダウンロードをお探しの場合は、 移動して、 [Microsoft web サイト](https://www.microsoft.com/)入力**Visual C Redistributable**検索ボックスにします。 次に、お使いのコンピューターのアーキテクチャ用の再頒布可能パッケージ (たとえば、64 ビット Windows を実行している場合は x64) と、必要な Visual C++ のバージョン (たとえば、2015) をダウンロードしてインストールします。
 
 アプリケーションを配置する場合は、アプリケーションをサポートするために必要なすべてのファイルも配置する必要があります。 必要なファイルに Microsoft から提供されるファイルが含まれる場合、それを再配布する権限を持っているかどうか確認します。 Visual Studio のライセンス条項を確認するには、IDE の Microsoft Visual Studio のバージョン情報ダイアログ ボックスでライセンス条項リンクを参照するか、[マイクロソフト ソフトウェア ライセンス条項](https://visualstudio.microsoft.com/license-terms/mlt687465/)ファイルをダウンロードします。 Visual Studio の特定のエディションのマイクロソフト ソフトウェア ライセンス条項の「頒布可能コード」セクションで言及されている "再頒布リスト" を表示する場合は、「[Microsoft Visual Studio 2017 の頒布可能コード (ユーティリティ、機能拡張、および BuildServer ファイルを含む)](/visualstudio/productinfo/2017-redistribution-vs)」を参照してください。Visual Studio 2015 の場合は、「[Microsoft Visual Studio 2015 および Microsoft Visual Studio 2015 SDK の頒布可能コード (ユーティリティおよび BuildServer ファイルを含む)](/visualstudio/productinfo/2015-redistribution-vs)」を参照してください。 再頒布可能ファイルの詳細については、「[再配布する Dll の決定](determining-which-dlls-to-redistribute.md)」と「[配置例](deployment-examples.md)」を参照してください。
 
@@ -26,7 +26,7 @@ ms.locfileid: "62388164"
 
 Visual C++ 再頒布可能パッケージでは、すべての Visual C++ ライブラリがインストールされ、登録されます。 その 1 つを使用する場合は、アプリケーション インストールの必要条件として、インストール先のシステムでそれが実行されるように設定する必要があります。 配置ではこのパッケージを使用することをお勧めします。これにより、Visual C++ ライブラリの自動更新が有効になるためです。 例については、これらのパッケージを使用する方法は、次を参照してください。[チュートリアル。Visual C++ 再頒布可能パッケージを使用した Visual C++ アプリケーションの配置](deploying-visual-cpp-application-by-using-the-vcpp-redistributable-package.md)」を参照してください。
 
-各 Visual C++ 再頒布可能パッケージは、より新しいバージョンがコンピューター上に存在するかどうかを確認します。 より新しいバージョンが見つかった場合、パッケージはインストールされません。 Visual Studio 2015 以降では、再頒布可能パッケージのセットアップが失敗したことを示すエラー メッセージが表示されます。 **/quiet** フラグを使用してパッケージを実行した場合、エラー メッセージは表示されません。 いずれの場合も、Microsoft インストーラーによってエラーがログ記録され、エラー結果が呼び出し元に返されます。 Visual Studio 2015 パッケージ以降では、レジストリを確認して、より新しいバージョンがインストールされているかどうかを調べると、このエラーを回避できます。 現在インストールされているバージョンは HKEY_LOCAL_MACHINE\SOFTWARE[\Wow6432Node]\Microsoft\VisualStudio\\_vs-version_\VC\Runtimes\\{x86|x64|ARM} キーに格納されています。ここで、_vs-version_ は Visual Studio のバージョン番号 (更新された 2017 再頒布可能パッケージは 2015 バージョンとバイナリ互換性があるため、Visual Studio 2015 と Visual Studio 2017 の両方とも 14.0)、キーはプラットフォームのインストールされている vcredist バージョンに応じて ARM、x86、または x64 となります  (RegEdit を使用して x64 プラットフォームにインストールされている x86 パッケージのバージョンを表示する場合を除き、Wow6432Node サブキーの下を確認する必要はありません)。バージョン番号は REG_SZ 文字列値の **Version** に格納されています。また、**Major**、**Minor**、**Bld**、および **Rbld** REG_DWORD の値のセットで示されています。 インストール時のエラーを回避するため、現在インストールされているバージョンの方が新しい場合は、再頒布可能パッケージのインストールをスキップする必要があります。
+各 Visual C++ 再頒布可能パッケージは、より新しいバージョンがコンピューター上に存在するかどうかを確認します。 より新しいバージョンが見つかった場合、パッケージはインストールされません。 Visual Studio 2015 以降では、再頒布可能パッケージのセットアップが失敗したことを示すエラー メッセージが表示されます。 **/quiet** フラグを使用してパッケージを実行した場合、エラー メッセージは表示されません。 いずれの場合も、Microsoft インストーラーによってエラーがログ記録され、エラー結果が呼び出し元に返されます。 Visual Studio 2015 パッケージ以降では、レジストリを確認して、より新しいバージョンがインストールされているかどうかを調べると、このエラーを回避できます。 現在インストールされているバージョンは HKEY_LOCAL_MACHINE\SOFTWARE[\Wow6432Node]\Microsoft\VisualStudio\\_vs-version_\VC\Runtimes\\{x86|x64|ARM} キーに格納されています。ここで、_vs-version_ は Visual Studio のバージョン番号 (更新された 2017 再頒布可能パッケージは 2015 バージョンとバイナリ互換性があるため、Visual Studio 2015 と Visual Studio 2017 の両方とも 14.0)、キーはプラットフォームのインストールされている vcredist バージョンに応じて ARM、x86、または x64 となります (RegEdit を使用して x64 プラットフォームにインストールされている x86 パッケージのバージョンを表示する場合を除き、Wow6432Node サブキーの下を確認する必要はありません)。バージョン番号は REG_SZ 文字列値の **Version** に格納されています。また、**Major**、**Minor**、**Bld**、および **Rbld** REG_DWORD の値のセットで示されています。 インストール時のエラーを回避するため、現在インストールされているバージョンの方が新しい場合は、再頒布可能パッケージのインストールをスキップする必要があります。
 
 Visual C++ DLL を含むマージ モジュールを使用する場合は、アプリケーションを配置するために使用する Windows インストーラー パッケージ (または同様のインストール パッケージ) にそのモジュール含める必要があります。 詳細については、「[マージ モジュールを使用した再配布](redistributing-components-by-using-merge-modules.md)」を参照してください。 例については、「[チュートリアル: セットアップ プロジェクトを Visual C++ を使ったアプリケーションを配置](walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md)、InstallShield Limited Edition を使用して、インストール パッケージを作成する方法も示しています。
 

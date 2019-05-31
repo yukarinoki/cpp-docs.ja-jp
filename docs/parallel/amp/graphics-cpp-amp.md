@@ -2,12 +2,12 @@
 title: グラフィックス (C++ AMP)
 ms.date: 11/04/2016
 ms.assetid: 190a98a4-5f7d-442e-866b-b374ca74c16f
-ms.openlocfilehash: 4a40575d84c9a0efedcb3c7c9717fc310870b530
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6e21c5af094ce90c8e4365ed4263198422ad1905
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405665"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449869"
 ---
 # <a name="graphics-c-amp"></a>グラフィックス (C++ AMP)
 
@@ -25,7 +25,7 @@ C++ AMP にはでいくつかの Api が含まれています、 [concurrency::g
 
 ## <a name="short-vector-library"></a>short ベクター ライブラリ
 
-Short ベクター ライブラリは、いくつかの機能の[ベクター型](http://go.microsoft.com/fwlink/p/?linkid=248500)は HLSL で定義され、テクセルの定義に通常使用します。 short ベクターは同じ型の 1 ～ 4 つの値を保持するデータ構造体です。 サポートされる種類は**二重**、 **float**、 **int**、 `norm`、 `uint`、および`unorm`します。 次の表に型名を示します。 種類ごとにある対応も**typedef**名にアンダー スコアが含まれない。 アンダー スコアを含む型が、 [concurrency::graphics Namespace](../../parallel/amp/reference/concurrency-graphics-namespace.md)します。 アンダー スコアがない型が、 [Concurrency::graphics::direct3d Namespace](../../parallel/amp/reference/concurrency-graphics-direct3d-namespace.md)が明確に区別同様にという名前の基本型からなどように **_ _int8**と **_ _int16**します。
+Short ベクター ライブラリは、いくつかの機能の[ベクター型](https://go.microsoft.com/fwlink/p/?linkid=248500)は HLSL で定義され、テクセルの定義に通常使用します。 short ベクターは同じ型の 1 ～ 4 つの値を保持するデータ構造体です。 サポートされる種類は**二重**、 **float**、 **int**、 `norm`、 `uint`、および`unorm`します。 次の表に型名を示します。 種類ごとにある対応も**typedef**名にアンダー スコアが含まれない。 アンダー スコアを含む型が、 [concurrency::graphics Namespace](../../parallel/amp/reference/concurrency-graphics-namespace.md)します。 アンダー スコアがない型が、 [Concurrency::graphics::direct3d Namespace](../../parallel/amp/reference/concurrency-graphics-direct3d-namespace.md)が明確に区別同様にという名前の基本型からなどように **_ _int8**と **_ _int16**します。
 
 ||長さ 2|長さが 3|長さ 4|
 |-|--------------|--------------|--------------|
@@ -67,7 +67,7 @@ short ベクター ライブラリは、short ベクターのコンポーネン�
 
 - 2 つまたは 4 つのコンポーネントを持つ short ベクター。 許可されない唯一の例外は `double_4` です。
 
-`texture` オブジェクトは、1、2、または 3 のランクになります。 `texture` オブジェクトは `parallel_for_each` の呼び出しのラムダの参照によってのみキャプチャできます。 テクスチャは、Direct3D テクスチャ オブジェクトとして GPU に格納されます。 テクスチャおよびテクセル Direct3D の詳細については、次を参照してください。 [direct3d11 のテクスチャの概要](http://go.microsoft.com/fwlink/p/?linkid=248502)します。
+`texture` オブジェクトは、1、2、または 3 のランクになります。 `texture` オブジェクトは `parallel_for_each` の呼び出しのラムダの参照によってのみキャプチャできます。 テクスチャは、Direct3D テクスチャ オブジェクトとして GPU に格納されます。 テクスチャおよびテクセル Direct3D の詳細については、次を参照してください。 [direct3d11 のテクスチャの概要](https://go.microsoft.com/fwlink/p/?linkid=248502)します。
 
 使用するテクセル型が、グラフィックス プログラミングで使用される多くのテクスチャ形式の 1 つになっている場合があります。 たとえば、RGBA 形式は、R、G、B、A のスカラー要素に対してそれぞれ 8 ビットで、32 ビットを使用できます。 グラフィックス カードのテクスチャ ハードウェアは、形式に基づいて個々の要素にアクセスできます。 たとえば、RGBA 形式を使用すると、テクスチャ ハードウェアは各 8 ビット要素を 32 ビット形式に復元できます。 C++ AMP では、ビット シフトを使用しないでコードの個々のスカラー要素に自動的にアクセスできるように、テクセルのスカラー要素ごとにビットを設定できます。
 
@@ -307,7 +307,7 @@ void write2ComponentTexture() {
 
 おわかりのように、2 つのコード例は、プライマリ MIPMAP レベルに書き込んでいるだけである場合にはほぼ同じです。 既存のコードで `writeonly_texture_view` を使用し、そのコードを拡張するつもりがない限り、変更する必要はありません。 ただし、そのコードをさらに改善するつもりであるなら、その中で機能を強化すると新しいハードウェア テクスチャ機能をサポートできるため、`texture_view` を使用できるように書き直すことをお勧めします。 これらの新しい機能の詳細については、以下をお読みください。
 
-廃止の詳細については`writeonly_texture_view`を参照してください[で C++ AMP テクスチャ ビュー デザインの概要](http://blogs.msdn.com/b/nativeconcurrency/archive/2013/07/25/overview-of-the-texture-view-design-in-c-amp.aspx)ネイティブ コードのブログでの並列プログラミングします。
+廃止の詳細については`writeonly_texture_view`を参照してください[で C++ AMP テクスチャ ビュー デザインの概要](https://blogs.msdn.com/b/nativeconcurrency/archive/2013/07/25/overview-of-the-texture-view-design-in-c-amp.aspx)ネイティブ コードのブログでの並列プログラミングします。
 
 ### <a name="instantiating-texture-view-objects"></a>テクスチャ ビュー オブジェクトのインスタンス化
 
@@ -379,9 +379,9 @@ void write2ComponentTexture() {
 
 たとえば、float、float_2、または float_4 などの、浮動小数点型に基づく要素のテクスチャ ビューは、さまざまなフィルター処理モードおよびアドレッシング モードに対するハードウェア サポートを利用するにテクスチャ サンプリングを使用して読み取ることもできます。 C++ AMP は計算シナリオで最も一般的な 2 つのフィルター処理モード (ポイント フィルタリング (ニアレストネイバー) およびリニア フィルタリング (加重平均))、および 4 つのアドレッシング モード (wrapped、mirrored、clamped、border) をサポートしています。 アドレッシング モードの詳細については、次を参照してください。 [address_mode 列挙型](reference/concurrency-graphics-namespace-enums.md#address_mode)します。
 
-C++ AMP が直接サポートするモードに加えて、プラットフォーム API を直接使用して作成されたテクスチャ サンプラーを採用する相互運用 API を使用して、基になるプラットフォームの他のフィルター処理モードとアドレッシング モードにアクセスすることができます。 たとえば、Direct3D は異方性フィルタリングなどの他のフィルター処理モードをサポートし、テクスチャの大きさごとに別のアドレッシング モードを適用できます。 座標が垂直方向にラップされ、水平方向にミラー化され、Direct3D API を使用した異方性フィルタリングでサンプル化されるテクスチャ サンプラーを作成し、`make_sampler` 相互運用 API を使用して C++ AMP コードでサンプラーを利用することができます。 詳細については、次を参照してください。[で C++ AMP テクスチャ サンプリング](http://blogs.msdn.com/b/nativeconcurrency/archive/2013/07/18/texture-sampling-in-c-amp.aspx)ネイティブ コードのブログでの並列プログラミングします。
+C++ AMP が直接サポートするモードに加えて、プラットフォーム API を直接使用して作成されたテクスチャ サンプラーを採用する相互運用 API を使用して、基になるプラットフォームの他のフィルター処理モードとアドレッシング モードにアクセスすることができます。 たとえば、Direct3D は異方性フィルタリングなどの他のフィルター処理モードをサポートし、テクスチャの大きさごとに別のアドレッシング モードを適用できます。 座標が垂直方向にラップされ、水平方向にミラー化され、Direct3D API を使用した異方性フィルタリングでサンプル化されるテクスチャ サンプラーを作成し、`make_sampler` 相互運用 API を使用して C++ AMP コードでサンプラーを利用することができます。 詳細については、次を参照してください。[で C++ AMP テクスチャ サンプリング](https://blogs.msdn.com/b/nativeconcurrency/archive/2013/07/18/texture-sampling-in-c-amp.aspx)ネイティブ コードのブログでの並列プログラミングします。
 
-また、テクスチャ ビューは MIPMAP の読み取りをサポートします。 定数要素型である読み取り専用のテクスチャ ビューは最も高い柔軟性を備えています。これはインスタンス化で決定された MIPMAP レベルの範囲が動的にサンプル化され、1、2、または 4 つのコンポーネントを持つ要素がサポートされるためです。 また、1 つのコンポーネントを持つ要素がある読み取り/書き込みテクスチャ ビューも MIPMAP をサポートしますが、インスタンス化で決定されたレベルのみです。 詳細については、次を参照してください。 [Mipmap を使用してテクスチャ](http://blogs.msdn.com/b/nativeconcurrency/archive/2013/08/22/texture-with-mipmaps.aspx)ネイティブ コードのブログでの並列プログラミングします。
+また、テクスチャ ビューは MIPMAP の読み取りをサポートします。 定数要素型である読み取り専用のテクスチャ ビューは最も高い柔軟性を備えています。これはインスタンス化で決定された MIPMAP レベルの範囲が動的にサンプル化され、1、2、または 4 つのコンポーネントを持つ要素がサポートされるためです。 また、1 つのコンポーネントを持つ要素がある読み取り/書き込みテクスチャ ビューも MIPMAP をサポートしますが、インスタンス化で決定されたレベルのみです。 詳細については、次を参照してください。 [Mipmap を使用してテクスチャ](https://blogs.msdn.com/b/nativeconcurrency/archive/2013/08/22/texture-with-mipmaps.aspx)ネイティブ コードのブログでの並列プログラミングします。
 
 ### <a name="writing-to-texture-view-objects"></a>テクスチャ ビュー オブジェクトへの書き込み
 
@@ -404,7 +404,7 @@ parallel_for_each(w_view.extent, [=](index<2> idx) restrict(amp)
 
 ## <a name="interoperability"></a>相互運用性
 
-C++ AMP ランタイム間の相互運用をサポートしている`texture<T,1>`と[ID3D11Texture1D インターフェイス](http://go.microsoft.com/fwlink/p/?linkId=248503)間に、`texture<T,2>`と[ID3D11Texture2D インターフェイス](http://go.microsoft.com/fwlink/p/?linkId=255317)間および`texture<T,3>`と[ID3D11Texture3D インターフェイス](http://go.microsoft.com/fwlink/p/?linkId=255377)します。 [Get_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#get_texture)メソッドは、`texture`オブジェクトを返します、`IUnknown`インターフェイス。 [Make_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#make_texture)メソッドは、`IUnknown`インターフェイスと`accelerator_view`オブジェクトを返します、`texture`オブジェクト。
+C++ AMP ランタイム間の相互運用をサポートしている`texture<T,1>`と[ID3D11Texture1D インターフェイス](https://go.microsoft.com/fwlink/p/?linkId=248503)間に、`texture<T,2>`と[ID3D11Texture2D インターフェイス](https://go.microsoft.com/fwlink/p/?linkId=255317)間および`texture<T,3>`と[ID3D11Texture3D インターフェイス](https://go.microsoft.com/fwlink/p/?linkId=255377)します。 [Get_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#get_texture)メソッドは、`texture`オブジェクトを返します、`IUnknown`インターフェイス。 [Make_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#make_texture)メソッドは、`IUnknown`インターフェイスと`accelerator_view`オブジェクトを返します、`texture`オブジェクト。
 
 ## <a name="see-also"></a>関連項目
 

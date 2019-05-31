@@ -9,12 +9,12 @@ helpviewer_keywords:
 - cpuid instruction
 - cpuid intrinsic
 ms.assetid: f8c344d3-91bf-405f-8622-cb0e337a6bdc
-ms.openlocfilehash: 30b66c78c6c3477c4da634901058d77d0e362101
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c66a3fe7b923b214c4cf2bd84fc03f535d5f4973
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349083"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449984"
 ---
 # <a name="cpuid-cpuidex"></a>__cpuid、__cpuidex
 
@@ -63,9 +63,9 @@ CPU のサポートされる機能に関して EAX、EBX、ECX、および EDX �
 
 `__cpuid` の組み込みは、`cpuid` 命令を呼び出す前に ECX レジスタをクリアします。 `__cpuidex`組み込みに ECX レジスタの値を設定する*subfunction_id*を生成する前に、`cpuid`命令。 これにより、プロセッサに関する追加情報を収集できます。
 
-および Intel プロセッサでこれらの組み込みによって返される値を使用する特定のパラメーターの詳細については、ドキュメントを参照してください、`cpuid`で命令[Intel 64 および ia-32 アーキテクチャ ソフトウェア開発者のマニュアル第 2 部:命令セットを参照](http://go.microsoft.com/fwlink/p/?LinkID=510021)と[Intel アーキテクチャ命令セット拡張機能プログラミング リファレンス](http://go.microsoft.com/fwlink/p/?LinkID=506627)します。 Intel のドキュメントの用語「リーフ」および"subleaf"を使用して、 *function_id*と*subfunction_id* EAX および ECX で渡されるパラメーター。
+および Intel プロセッサでこれらの組み込みによって返される値を使用する特定のパラメーターの詳細については、ドキュメントを参照してください、`cpuid`で命令[Intel 64 および ia-32 アーキテクチャ ソフトウェア開発者のマニュアル第 2 部:命令セットを参照](https://go.microsoft.com/fwlink/p/?LinkID=510021)と[Intel アーキテクチャ命令セット拡張機能プログラミング リファレンス](https://go.microsoft.com/fwlink/p/?LinkID=506627)します。 Intel のドキュメントの用語「リーフ」および"subleaf"を使用して、 *function_id*と*subfunction_id* EAX および ECX で渡されるパラメーター。
 
-および AMD プロセッサでこれらの組み込みによって返される値を使用する特定のパラメーターの詳細については、ドキュメントを参照してください、 `cpuid` AMD64 アーキテクチャ プログラマーズ手動ボリューム 3 命令。汎用やシステムの手順と、特定のプロセッサ ファミリのリビジョン ガイドで説明します。 これらのドキュメントおよびその他の情報へのリンクを参照してください、AMD[開発者ガイド、マニュアル、およびドキュメントの ISA](http://go.microsoft.com/fwlink/p/?LinkId=510023)ページ。 AMD のマニュアルの"function number"および"subfunction number"を使用して、 *function_id*と*subfunction_id* EAX および ECX で渡されるパラメーター。
+および AMD プロセッサでこれらの組み込みによって返される値を使用する特定のパラメーターの詳細については、ドキュメントを参照してください、 `cpuid` AMD64 アーキテクチャ プログラマーズ手動ボリューム 3 命令。汎用やシステムの手順と、特定のプロセッサ ファミリのリビジョン ガイドで説明します。 これらのドキュメントおよびその他の情報へのリンクを参照してください、AMD[開発者ガイド、マニュアル、およびドキュメントの ISA](https://go.microsoft.com/fwlink/p/?LinkId=510023)ページ。 AMD のマニュアルの"function number"および"subfunction number"を使用して、 *function_id*と*subfunction_id* EAX および ECX で渡されるパラメーター。
 
 ときに、 *function_id*引数が 0 の場合、 *cpuInfo*最高の値を返します [0] 使用可能な拡張されていない*function_id*プロセッサでサポートされる値。 プロセッサの製造元がでエンコードされた*cpuInfo*[1]、 *cpuInfo*[2]、および*cpuInfo*[3]。
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC ActiveX Control Wizard, control settings
 ms.assetid: 2ccaa4fc-0d52-413e-afa3-ecd474c3f6f0
-ms.openlocfilehash: 34cc49fff88399a6c3cf5f7db71410c88e5c9bab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9d7653e61e6aada9205f599cf7a7ca6187dd139d
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62373285"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450557"
 ---
 # <a name="control-settings-mfc-activex-control-wizard"></a>[コントロールの設定] (MFC ActiveX コントロール ウィザード)
 
@@ -57,7 +57,7 @@ ms.locfileid: "62373285"
    コントロールに標準の Windows があることを指定します。**について** ダイアログ ボックスで、バージョン番号と著作権情報が表示されます。
 
    > [!NOTE]
-   > ユーザーがコントロールのヘルプにアクセスする方法は、ヘルプを実装する方法と、コンテナーのヘルプとコントロールのヘルプを統合しているかどうかによって異なります。 上のヘルプを統合する方法について、 [MSDN ライブラリ](http://go.microsoft.com/fwlink/p/?linkid=150542)web サイト、「を追加する状況依存ヘルプに、MFC ActiveX コントロール」を検索します。
+   > ユーザーがコントロールのヘルプにアクセスする方法は、ヘルプを実装する方法と、コンテナーのヘルプとコントロールのヘルプを統合しているかどうかによって異なります。 上のヘルプを統合する方法について、 [MSDN ライブラリ](https://go.microsoft.com/fwlink/p/?linkid=150542)web サイト、「を追加する状況依存ヘルプに、MFC ActiveX コントロール」を検索します。
 
    このオプションを選択すると、挿入、`AboutBox`プロジェクト コントロール クラスのメソッドの制御 (C*ProjName*Ctrl.cpp) オンをプロジェクトのディスパッチ マップに追加します。 既定では、このチェック ボックスはオンになっています。
 
@@ -87,7 +87,7 @@ ms.locfileid: "62373285"
 
 - **シンプル フレーム コントロールとして機能します**
 
-   コントロールのコントロールのビット OLEMISC_SIMPLEFRAME を設定して他のコントロールのコンテナーがあるを指定します。 詳細については、上、 [MSDN ライブラリ](http://go.microsoft.com/fwlink/p/?linkid=150542)web サイト、「単純なフレーム サイト含有」を検索します。
+   コントロールのコントロールのビット OLEMISC_SIMPLEFRAME を設定して他のコントロールのコンテナーがあるを指定します。 詳細については、上、 [MSDN ライブラリ](https://go.microsoft.com/fwlink/p/?linkid=150542)web サイト、「単純なフレーム サイト含有」を検索します。
 
 - **プロパティを非同期的に読み込みます**
 

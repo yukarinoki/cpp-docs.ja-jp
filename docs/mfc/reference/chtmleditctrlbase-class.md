@@ -220,12 +220,12 @@ helpviewer_keywords:
 - CHtmlEditCtrlBase [MFC], Unlink
 - CHtmlEditCtrlBase [MFC], UnorderList
 ms.assetid: e0cc74b4-8320-4570-b673-16c03d2ae266
-ms.openlocfilehash: a3c90f4b75b79dc51091c87a5a84b5c59a70646f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a336804889a3ad10818ff0883c55f9141f9e210d
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375822"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450266"
 ---
 # <a name="chtmleditctrlbase-class"></a>CHtmlEditCtrlBase クラス
 
@@ -1700,7 +1700,7 @@ long QueryStatus(long cmdID) const;
 ### <a name="parameters"></a>パラメーター
 
 *cmdID*<br/>
-コマンド ID。 コマンド識別子は、CGID_MSHTML コマンドのグループから取得されます。 これらのコマンドは、Mshtmcid.h で定義されます。 オンラインにある一覧を検索することもできます。 [MSHTML コマンド識別子](http://go.microsoft.com/fwlink/p/?linkid=149220)します。
+コマンド ID。 コマンド識別子は、CGID_MSHTML コマンドのグループから取得されます。 これらのコマンドは、Mshtmcid.h で定義されます。 オンラインにある一覧を検索することもできます。 [MSHTML コマンド識別子](https://go.microsoft.com/fwlink/p/?linkid=149220)します。
 
 ### <a name="return-value"></a>戻り値
 

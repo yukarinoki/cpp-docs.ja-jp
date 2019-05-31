@@ -7,12 +7,12 @@ helpviewer_keywords:
 - /Gw compiler option [C++]
 - -Gw compiler option [C++]
 ms.assetid: 6f90f4e9-5eb8-4c47-886e-631278a5a4a9
-ms.openlocfilehash: 5796f353414a021908147bdd2f296ef8e02f69ad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8afdb21defbbc8309b27749ab18a40f9555139e5
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62270712"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450135"
 ---
 # <a name="gw-optimize-global-data"></a>/Gw (グローバル データの最適化)
 
@@ -32,11 +32,11 @@ ms.locfileid: "62270712"
 
 使用することも、 [/OPT:ICF](opt-optimizations.md)と[/LTCG](ltcg-link-time-code-generation.md)で複数のオブジェクト ファイルと同じ読み取り専用グローバル データがコンパイルされた実行可能ファイルにマージするリンカー オプション、 **/Gw**オプション。
 
-詳細については、次を参照してください。 [Introducing/Gw コンパイラ スイッチ](http://blogs.msdn.com/b/vcblog/archive/2013/09/11/introducing-gw-compiler-switch.aspx)Visual c チーム ブログにします。
+詳細については、次を参照してください。 [Introducing/Gw コンパイラ スイッチ](https://devblogs.microsoft.com/cppblog/introducing-gw-compiler-switch/)上、C++チームのブログ。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
 
 1. 選択、 **C/C++** フォルダー。
 

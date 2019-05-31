@@ -162,12 +162,12 @@ helpviewer_keywords:
 - CTreeCtrl [MFC], SortChildren
 - CTreeCtrl [MFC], SortChildrenCB
 ms.assetid: 96e20031-6161-4143-8c12-8d1816c66d90
-ms.openlocfilehash: 3819e861b7a5e6ff27fe632a33413b588a5a4835
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2428c94eaa5dd371d58680f6317173709f684507
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323636"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449566"
 ---
 # <a name="ctreectrl-class"></a>CTreeCtrl Class
 
@@ -1505,7 +1505,7 @@ HTREEITEM MapAccIdToItem(UINT uAccId) const;
 
 ### <a name="remarks"></a>Remarks
 
-ユーザー補助機能は、障碍を持つユーザーを支援するアプリケーションでは、コンピューターを使用します。 ユーザー補助識別子を使用して、`IAccessible`ウィンドウで要素を一意に指定するインターフェイス。 ユーザー補助機能の識別子の詳細については、検索では、「について Active Accessibility のサポート」トピックの[Microsoft Developer Network](http://go.microsoft.com/fwlink/p/?linkid=56322)します。
+ユーザー補助機能は、障碍を持つユーザーを支援するアプリケーションでは、コンピューターを使用します。 ユーザー補助識別子を使用して、`IAccessible`ウィンドウで要素を一意に指定するインターフェイス。 ユーザー補助機能の識別子の詳細については、検索では、「について Active Accessibility のサポート」トピックの[Microsoft Developer Network](https://go.microsoft.com/fwlink/p/?linkid=56322)します。
 
 このメソッドは、送信、 [TVM_MAPACCIDTOHTREEITEM](/windows/desktop/Controls/tvm-mapaccidtohtreeitem)メッセージは、Windows SDK で説明します。
 
@@ -1541,7 +1541,7 @@ UINT MapItemToAccID(HTREEITEM hItem) const;
 
 ### <a name="remarks"></a>Remarks
 
-ユーザー補助機能は、障碍を持つユーザーを支援するアプリケーションでは、コンピューターを使用します。 ユーザー補助識別子を使用して、`IAccessible`ウィンドウで要素を一意に指定するインターフェイス。 ユーザー補助機能の識別子の詳細については、検索では、「について Active Accessibility のサポート」トピックの[Microsoft Developer Network](http://go.microsoft.com/fwlink/p/?linkid=56322)します。
+ユーザー補助機能は、障碍を持つユーザーを支援するアプリケーションでは、コンピューターを使用します。 ユーザー補助識別子を使用して、`IAccessible`ウィンドウで要素を一意に指定するインターフェイス。 ユーザー補助機能の識別子の詳細については、検索では、「について Active Accessibility のサポート」トピックの[Microsoft Developer Network](https://go.microsoft.com/fwlink/p/?linkid=56322)します。
 
 このメソッドは、送信、 [TVM_MAPHTREEITEMTOACCID](/windows/desktop/Controls/tvm-maphtreeitemtoaccid)メッセージは、Windows SDK で説明します。
 
@@ -2281,7 +2281,7 @@ void ShowInfoTip(HTREEITEM hItem);
 
 ### <a name="remarks"></a>Remarks
 
-ツールヒントとヒントの違いの詳細については、検索では、「ツールヒントとヒント」トピックの[Microsoft Developer Network](http://go.microsoft.com/fwlink/p/?linkid=56322)します。
+ツールヒントとヒントの違いの詳細については、検索では、「ツールヒントとヒント」トピックの[Microsoft Developer Network](https://go.microsoft.com/fwlink/p/?linkid=56322)します。
 
 このメソッドは、送信、 [TVM_SHOWINFOTIP](/windows/desktop/Controls/tvm-showinfotip)メッセージは、Windows SDK で説明します。
 

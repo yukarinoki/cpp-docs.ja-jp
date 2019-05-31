@@ -14,12 +14,12 @@ helpviewer_keywords:
 - GF compiler option [C++]
 - strings [C++], pooling
 ms.assetid: bb7b5d1c-8e1f-453b-9298-8fcebf37d16c
-ms.openlocfilehash: 2f2bec446fcec522857b4c05a34311e6c26c9b75
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 90d3fb5c601d9534215a46594884be5d168fe0aa
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62270890"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449545"
 ---
 # <a name="gf-eliminate-duplicate-strings"></a>/GF (同一文字列の削除)
 
@@ -50,11 +50,11 @@ char *t = "This is a character buffer";
 > [!NOTE]
 >  **/GF**コンパイラ オプションはそれぞれ一意の文字列のアドレス指定可能なセクションを作成します。 既定では、オブジェクト ファイルには最大で 65,536 個のアドレス指定可能なセクションも含めることができます。 使用して、プログラムが 65,536 を超える文字列が含まれる場合、 [/bigobj](bigobj-increase-number-of-sections-in-dot-obj-file.md)コンパイラ オプションを複数のセクションを作成します。
 
-**/GF**ときは、 [/O1](o1-o2-minimize-size-maximize-speed.md)または **/O2**使用されます。
+**/GF**ときは、 [/O1](o1-o2-minimize-size-maximize-speed.md)または[/O2](o1-o2-minimize-size-maximize-speed.md)使用されます。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
 
 1. **[C/C++]** フォルダーをクリックします。
 

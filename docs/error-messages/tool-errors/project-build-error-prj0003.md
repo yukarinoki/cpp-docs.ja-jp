@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0003
 ms.assetid: fc5a84bb-c6d3-41d6-8dd6-475455820778
-ms.openlocfilehash: 00d101e62d49078ebfcfff9455497f30224b84fe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e30a63ba48434196478b52283880864d3e4ae6ea
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62359697"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450757"
 ---
 # <a name="project-build-error-prj0003"></a>プロジェクト ビルド エラー PRJ0003
 
@@ -21,7 +21,7 @@ ms.locfileid: "62359697"
 
 このエラーの考えられる理由は次のとおりです。
 
-- プロジェクトは、ATL Server に依存します。 Visual Studio 2008 以降では、ATL Server は、Visual Studio の一部として含めるでされていませんが、CodePlex での共有ソース プロジェクトとしてリリースされています。 ATL Server のソース コードとツールをダウンロードするには[ATL サーバー ライブラリとツール](http://go.microsoft.com/fwlink/p/?linkid=81979)します。
+- プロジェクトは、ATL Server に依存します。 Visual Studio 2008 以降では、ATL Server は、Visual Studio の一部として含めるでされていませんが、CodePlex での共有ソース プロジェクトとしてリリースされています。 ATL Server のソース コードとツールをダウンロードするには[ATL サーバー ライブラリとツール](https://go.microsoft.com/fwlink/p/?linkid=81979)します。
 
 - リソースが不足します。 これを解決する一部のアプリケーションを閉じます。
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - white space, in C++ identifiers
 - identifiers [C++]
 ms.assetid: 03a0dfb1-4530-4cdf-8295-5ea4dca4c1b8
-ms.openlocfilehash: 61ca021a8f41074dcef6bf9df2e5683ede98deee
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: c905d6acc52f2f4f2a7bf3e92426f76adf25390e
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222435"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450316"
 ---
 # <a name="identifiers-c"></a>識別子 (C++)
 
@@ -87,7 +87,7 @@ int main() {
 }
 ```
 
-識別子で許可される文字の範囲は、C++/CLI コードをコンパイルする場合よりも制限されません。 /Clr を使用してコンパイルされたコード内の識別子が従う必要があります[標準 ECMA 335。共通言語基盤 (CLI)](http://www.ecma-international.org/publications/standards/Ecma-335.htm)します。
+識別子で許可される文字の範囲は、C++/CLI コードをコンパイルする場合よりも制限されません。 /Clr を使用してコンパイルされたコード内の識別子が従う必要があります[標準 ECMA 335。共通言語基盤 (CLI)](https://www.ecma-international.org/publications/standards/Ecma-335.htm)します。
 
 **Microsoft 固有の仕様はここまで**
 
