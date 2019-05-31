@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - ATL Property Page Wizard, strings
 ms.assetid: 00547db6-911f-49eb-92e1-2ba67079d4df
-ms.openlocfilehash: 29a7129e25f7db992fec7214e66996fbbd3248ff
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
-ms.translationtype: HT
+ms.openlocfilehash: 04178c435bbd0ca80e412efc39a1b736062d95e7
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65524480"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65706763"
 ---
 # <a name="strings-atl-property-page-wizard"></a>文字列、ATL プロパティ ページ ウィザード
 
@@ -21,7 +21,7 @@ ATL プロパティ ページ ウィザードは、Visual Studio 2019 以降で�
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="<=vs-2017"
 
 プロパティ ページに関連付けられるテキストを提供します。
 

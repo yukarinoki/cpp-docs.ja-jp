@@ -5,12 +5,12 @@ helpviewer_keywords:
 - OLE DB providers, creating
 - OLE DB provider templates, creating providers
 ms.assetid: ade8ccdd-9ea4-4e46-a964-18460c2a2401
-ms.openlocfilehash: c0f31818002ce4611926d942b3bc556e31c1ae6f
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: 466530cb8c2ebca7f1c87370389309d3a0486e26
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65524708"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707622"
 ---
 # <a name="creating-a-simple-read-only-provider"></a>単純な読み取り専用プロバイダーの作成
 
@@ -20,7 +20,7 @@ ATL OLE DB プロバイダー ウィザードは、Visual Studio 2019 以降で�
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="<=vs-2017"
 
 **ATL プロジェクト ウィザード**と **ATL OLE DB プロバイダー ウィザード**を使用して OLE DB プロバイダーを作成した場合、サポートしたい他の機能を追加することができます。 コンシューマーに送信するデータの種類とその条件を調べることからプロバイダーの設計を始めます。 特に重要なのは、コマンド、トランザクション、およびその他の省略可能なオブジェクトをサポートする必要があるかどうかを判断することです。 最初の設計が優れていれば、実装とテストの時間が短縮されます。
 
