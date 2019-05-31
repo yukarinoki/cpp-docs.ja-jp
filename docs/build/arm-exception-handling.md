@@ -2,12 +2,12 @@
 title: ARM 例外処理
 ms.date: 07/11/2018
 ms.assetid: fe0e615f-c033-4ad5-97f4-ff96af45b201
-ms.openlocfilehash: 8a2bae8e42ac6a624bebe7c185ac7e0ade8d5491
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f4e56284ce8db18ec76b0143253ee1e25f3fd82c
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62195356"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450484"
 ---
 # <a name="arm-exception-handling"></a>ARM 例外処理
 
@@ -21,7 +21,7 @@ ARM EABI (埋め込みアプリケーション バイナリ インターフェ�
 
 ### <a name="assumptions"></a>外部からの影響
 
-ARM 版 Windows 用の実行可能イメージでは、移植可能な実行可能 (PE) 形式が使用されます。 詳細については、次を参照してください。 [Microsoft PE and COFF 仕様](http://go.microsoft.com/fwlink/p/?linkid=84140)します。 例外処理情報は、イメージの .pdata および .xdata セクションに格納されます。
+ARM 版 Windows 用の実行可能イメージでは、移植可能な実行可能 (PE) 形式が使用されます。 詳細については、次を参照してください。 [Microsoft PE and COFF 仕様](https://go.microsoft.com/fwlink/p/?linkid=84140)します。 例外処理情報は、イメージの .pdata および .xdata セクションに格納されます。
 
 例外処理メカニズムでは、ARM 版 Windows の ABI に従うコードについて、次のことを想定しています。
 

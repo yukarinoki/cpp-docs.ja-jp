@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::exponential_distribution [C++], param_type
 - std::exponential_distribution [C++], param_type
 ms.assetid: d54f3126-a09b-45f9-a30b-0d94d03bcdc9
-ms.openlocfilehash: b419869785e9b6c2086ec6614363af3a3e12cb50
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a8dd8168075a0fff3b61154098c0bee100961f98
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62371570"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66451248"
 ---
 # <a name="exponentialdistribution-class"></a>exponential_distribution クラス
 
@@ -88,7 +88,7 @@ Random number generator エンジン。 使用可能な型については、[\<r
 
 分布クラスとそのメンバーの詳細については、[\<random>](../standard-library/random.md) をご覧ください。
 
-指数分布の詳細については、Wolfram MathWorld の記事「[指数分布](http://go.microsoft.com/fwlink/p/?linkid=401098)」を参照してください。
+指数分布の詳細については、Wolfram MathWorld の記事「[指数分布](https://go.microsoft.com/fwlink/p/?linkid=401098)」を参照してください。
 
 ## <a name="example"></a>例
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - upgrading ActiveX controls
 - licensing ActiveX controls
 ms.assetid: 4d12ddfa-b491-4f9f-a0b7-b51458e05651
-ms.openlocfilehash: fc7313c862d3536326894c947fa371d833e8fab8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 57d94a51d9dfb78dfaf3a690c43c74a2d6ab6db3
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180760"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450602"
 ---
 # <a name="upgrading-an-existing-activex-control"></a>既存の ActiveX コントロールのアップグレード
 
@@ -181,7 +181,7 @@ Internet Explorer でライセンスされた ActiveX コントロールを使�
 
 - コードベースのパラメーターの使用
 
-ライセンスのないコンピューターで、HTML ページでライセンスされたコントロールを使用するには、ライセンス パッケージ ファイル (LPK) を生成する必要があります。 LPK ファイルには、HTML ページでライセンスされたコントロールの実行時のライセンスが含まれています。 このファイルは、LPK_TOOL を使用して生成されます。ActiveX SDK に付属している実行可能ファイルです。 詳細については、MSDN Web サイトを参照してください。 [ http://msdn.microsoft.com](http://msdn.microsoft.com)します。
+ライセンスのないコンピューターで、HTML ページでライセンスされたコントロールを使用するには、ライセンス パッケージ ファイル (LPK) を生成する必要があります。 LPK ファイルには、HTML ページでライセンスされたコントロールの実行時のライセンスが含まれています。 このファイルは、LPK_TOOL を使用して生成されます。ActiveX SDK に付属している実行可能ファイルです。 詳細については、MSDN Web サイトを参照してください。 [ https://msdn.microsoft.com](https://msdn.microsoft.com)します。
 
 #### <a name="to-create-an-lpk-file"></a>LPK ファイルを作成するには
 

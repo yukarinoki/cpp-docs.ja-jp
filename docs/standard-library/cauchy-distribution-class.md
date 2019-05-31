@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::cauchy_distribution [C++], param_type
 - std::cauchy_distribution [C++], param_type
 ms.assetid: 21522351-f2f1-46d9-97f0-d358c932356c
-ms.openlocfilehash: 2aeb45054a06446c1fae092d4c07f297580684ad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 680ceb29514265ff77be6f6ae708fea0a8e769af
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351236"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450228"
 ---
 # <a name="cauchydistribution-class"></a>cauchy_distribution クラス
 
@@ -97,7 +97,7 @@ Uniform random number generator エンジン。 使用可能な型について�
 
 分布クラスとそのメンバーの詳細については、[\<random>](../standard-library/random.md) をご覧ください。
 
-コーシー分布の詳細については、Wolfram MathWorld の記事「[Cauchy Distribution](http://go.microsoft.com/fwlink/p/?linkid=400523)」(コーシー分布) を参照してください。
+コーシー分布の詳細については、Wolfram MathWorld の記事「[Cauchy Distribution](https://go.microsoft.com/fwlink/p/?linkid=400523)」(コーシー分布) を参照してください。
 
 ## <a name="example"></a>例
 

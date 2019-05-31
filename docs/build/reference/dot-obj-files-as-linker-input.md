@@ -9,12 +9,12 @@ helpviewer_keywords:
 - COFF files
 - OBJ files as linker input
 - .obj files as linker input
-ms.openlocfilehash: c55c3181c2ddfabddce882a473e56d952a7e5d81
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 36f41077fcba6b093865625d426b8009f6185e7b
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62293278"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450581"
 ---
 # <a name="obj-files-as-linker-input"></a>リンカー入力としての .obj ファイル
 
@@ -28,7 +28,7 @@ Microsoft では、一般的なオブジェクト ファイル形式の完全な
 
 Visual Studio 2005 以降では、Microsoft の MSVC コンパイラは、ISO/IEC C および C++ 標準で定義されている識別子に Unicode 文字をサポートします。 以前のバージョンのコンパイラでは、識別子で ASCII 文字のみがサポートされています。 関数、クラス、および静的変数の名前で Unicode をサポートするために、コンパイラとリンカーは、COFF シンボル .obj ファイル内の Unicode utf-8 エンコードを使用して。 Utf-8 エンコーディングは、Visual Studio の以前のバージョンで使用される ASCII エンコーディングと互換性のある上方は。
 
-コンパイラとリンカーの詳細については、次を参照してください。[コンパイラおよびリンカーで Unicode のサポート](unicode-support-in-the-compiler-and-linker.md)します。 Unicode 規格の詳細については、次を参照してください。、 [Unicode](http://www.unicode.org/)組織。
+コンパイラとリンカーの詳細については、次を参照してください。[コンパイラおよびリンカーで Unicode のサポート](unicode-support-in-the-compiler-and-linker.md)します。 Unicode 規格の詳細については、次を参照してください。、 [Unicode](https://www.unicode.org/)組織。
 
 ## <a name="see-also"></a>関連項目
 
@@ -36,5 +36,5 @@ Visual Studio 2005 以降では、Microsoft の MSVC コンパイラは、ISO/IE
 [MSVC リンカー オプション](linker-options.md)<br/>
 [Unicode のサポート](../../text/support-for-unicode.md)<br/>
 [コンパイラおよびリンカーでの Unicode のサポート](unicode-support-in-the-compiler-and-linker.md)<br/>
-[Unicode 標準](http://www.unicode.org/)<br/>
+[Unicode 標準](https://www.unicode.org/)<br/>
 [PE 形式](/windows/desktop/Debug/pe-format)

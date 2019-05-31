@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::binomial_distribution [C++], param_type
 - std::binomial_distribution [C++], param_type
 ms.assetid: b7c8a26a-da8c-45a5-a3a8-208f7a3609ce
-ms.openlocfilehash: 1cbb7aff254cee848d711b22414b38deee8cfc07
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ee61b79848a5649d44cf02384f32ad8e0226feb0
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380222"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66451112"
 ---
 # <a name="binomialdistribution-class"></a>binomial_distribution クラス
 
@@ -98,7 +98,7 @@ Uniform random number generator エンジン。 使用可能な型について�
 
 分布クラスとそのメンバーの詳細については、[\<random>](../standard-library/random.md) を参照してください。
 
-二項分布の離散確率関数の詳細については、Wolfram MathWorld の記事「[二項分布](http://go.microsoft.com/fwlink/p/?linkid=398469)」を参照してください。
+二項分布の離散確率関数の詳細については、Wolfram MathWorld の記事「[二項分布](https://go.microsoft.com/fwlink/p/?linkid=398469)」を参照してください。
 
 ## <a name="example"></a>例
 

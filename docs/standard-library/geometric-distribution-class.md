@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::geometric_distribution [C++], param_type
 - std::geometric_distribution [C++], param_type
 ms.assetid: 38f933af-3b49-492e-9d26-b6b272a60013
-ms.openlocfilehash: 600459784b4db620b6b717b5ffdfaf24d1ceb757
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 115d1c6f3298ea08b7c97061d37d4e27829247ea
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159315"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450672"
 ---
 # <a name="geometricdistribution-class"></a>geometric_distribution クラス
 
@@ -93,7 +93,7 @@ Uniform random number generator エンジン。 使用可能な型について�
 
 分布クラスとそのメンバーの詳細については、[\<random>](../standard-library/random.md) をご覧ください。
 
-カイ 2 乗分布の詳細については、Wolfram MathWorld の記事「[Geometric Distribution (幾何分布)](http://go.microsoft.com/fwlink/p/?linkid=400529)」をご覧ください。
+カイ 2 乗分布の詳細については、Wolfram MathWorld の記事「[Geometric Distribution (幾何分布)](https://go.microsoft.com/fwlink/p/?linkid=400529)」をご覧ください。
 
 ## <a name="example"></a>例
 

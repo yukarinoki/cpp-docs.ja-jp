@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MFC Feature Pack, update existing application
 - walkthroughs [MFC], update existing application
 ms.assetid: aa6330d3-6cfc-4c79-8fcb-0282263025f7
-ms.openlocfilehash: cba28039cb7755149b35a47ddee82b6274fe4c72
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: a12c2bd2c1c1963630a1bd74b56f2c832573cc94
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64558214"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450516"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>チュートリアル: MFC Scribble アプリケーション (パート 1) の更新
 
@@ -24,7 +24,7 @@ ms.locfileid: "64558214"
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-[Scribble 1.0 MFC サンプル](http://download.microsoft.com/download/4/0/9/40946FEC-EE5C-48C2-8750-B0F8DA1C99A8/MFC/general/Scribble.zip.exe)します。 Visual Studio 2017 またはそれ以降に変換する方法については、次を参照してください。[移植のガイド。MFC Scribble](../porting/porting-guide-mfc-scribble.md)します。
+[Scribble 1.0 MFC サンプル](https://download.microsoft.com/download/4/0/9/40946FEC-EE5C-48C2-8750-B0F8DA1C99A8/MFC/general/Scribble.zip.exe)します。 Visual Studio 2017 またはそれ以降に変換する方法については、次を参照してください。[移植のガイド。MFC Scribble](../porting/porting-guide-mfc-scribble.md)します。
 
 ##  <a name="top"></a> セクション
 
@@ -44,7 +44,7 @@ ms.locfileid: "64558214"
 
 ##  <a name="replaceclass"></a> 基底クラスの置き換え
 
-メニュー ベースのアプリケーションをリボン ベースのアプリケーションに変換するには、アプリケーション、フレーム ウィンドウ、ツール バーの各クラスを、更新された基底クラスから派生させる必要があります  (元の Scribble サンプルを変更しないことが推奨されます。 代わりに、Scribble プロジェクトをクリーンアップ、別のディレクトリにコピーし、変更、コピー。)
+メニュー ベースのアプリケーションをリボン ベースのアプリケーションに変換するには、アプリケーション、フレーム ウィンドウ、ツール バーの各クラスを、更新された基底クラスから派生させる必要があります (元の Scribble サンプルを変更しないことが推奨されます。 代わりに、Scribble プロジェクトをクリーンアップ、別のディレクトリにコピーし、変更、コピー。)
 
 ### <a name="to-replace-the-base-classes-in-the-scribble-application"></a>Scribble アプリケーションの基底クラスを置き換えるには
 
@@ -171,7 +171,7 @@ ms.locfileid: "64558214"
 
 1. デザイン ビューでクリックして、**アプリケーション**プロパティを表示するボタンをクリックします。 プロパティの値を次の手順に変更します。**イメージ**に`IDB_RIBBON_MAIN`、**プロンプト**に`File`、**キー**に`f`、 **Large Images**に`IDB_RIBBON_FILELARGE`、および**Small Images**に`IDB_RIBBON_FILESMALL`します。
 
-1. 次の変更は、ユーザーがクリックしたときに表示されるメニューを作成、**アプリケーション**ボタンをクリックします。 省略記号をクリックします (**.**) 横に**Main Items**を開く、**項目エディター**します。
+1. 次の変更は、ユーザーがクリックしたときに表示されるメニューを作成、**アプリケーション**ボタンをクリックします。 省略記号をクリックします ( **.** ) 横に**Main Items**を開く、**項目エディター**します。
 
    1. **項目**型**ボタン**選択されていること、**追加**ボタンを追加します。 変更**キャプション**に`&New`、 **ID**に`ID_FILE_NEW`、**イメージ**に`0`、**大きいイメージ**に`0`.
 
@@ -199,7 +199,7 @@ ms.locfileid: "64558214"
 
 1. 次の変更の下部に表示される終了ボタンを作成し、**アプリケーション** ボタン メニュー。
 
-   1. **プロパティ**ウィンドウで、省略記号をクリックします (**.**) 横に**ボタン**を開く、**項目エディター**します。
+   1. **プロパティ**ウィンドウで、省略記号をクリックします ( **.** ) 横に**ボタン**を開く、**項目エディター**します。
 
    1. **項目**型**ボタン**選択されていること、**追加**ボタンを追加します。 変更**キャプション**に`E&xit`、 **ID**に`ID_APP_EXIT`、**イメージ**に`8`します。
 

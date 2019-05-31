@@ -200,12 +200,12 @@ helpviewer_keywords:
 - std::count_if [C++]
 - std::partition_copy [C++]
 - std::swap [C++]
-ms.openlocfilehash: 260b2ee780956550678fcb01b3a018a60fb58deb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b914b3d2ed61c81629c06739eac86692d1444e58
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411189"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450422"
 ---
 # <a name="ltalgorithmgt-functions"></a>&lt;algorithm&gt; 関数
 
@@ -223,7 +223,7 @@ ms.locfileid: "62411189"
 |[is_partitioned](#is_partitioned)|[is_permutation](#is_permutation)|[is_sorted](#is_sorted)|
 |[is_sorted_until](#is_sorted_until)|[iter_swap](#iter_swap)|[lexicographical_compare](#lexicographical_compare)|
 |[lower_bound](#lower_bound)|[make_heap](#make_heap)|[max](#max)|
-|[max_element](#max_element)|[merge](#merge)|[分](#min)|
+|[max_element](#max_element)|[merge](#merge)|[min](#min)|
 |[min_element](#min_element)|[minmax](#minmax)|[minmax_element](#minmax_element)|
 |[mismatch](#mismatch)|[move_backward](#move_backward)|[next_permutation](#next_permutation)|
 |[none_of](#none_of)|[nth_element](#nth_element)|[partial_sort](#partial_sort)|
@@ -3681,7 +3681,7 @@ OutputIterator merge(
 *last2*<br/>
 結合して単一の範囲に分類する 2 つの連続する並べ替えられたソース範囲の、2 番目の範囲の最後の要素の 1 つ後ろの位置を示す入力反復子。
 
-*結果*<br/>
+*result*<br/>
 2 つのソース範囲が単一の並べ替えられた範囲に結合されるターゲット範囲の、最初の要素の位置を示す出力反復子。
 
 *comp*<br/>
@@ -5561,7 +5561,7 @@ int main() {
 
 ## <a name="random_shuffle"></a>  random_shuffle
 
-Std::random_shuffle() 関数は非推奨、置き換え[std::shuffle](../standard-library/algorithm-functions.md#shuffle)します。 コード例と詳細については、「 [\<ランダム >](../standard-library/random.md)と Stack Overflow の投稿[理由は std::random_shuffle メソッド非推奨に c++ 14 で?](http://go.microsoft.com/fwlink/p/?linkid=397954)します。
+Std::random_shuffle() 関数は非推奨、置き換え[std::shuffle](../standard-library/algorithm-functions.md#shuffle)します。 コード例と詳細については、「 [\<ランダム >](../standard-library/random.md)と Stack Overflow の投稿[理由は std::random_shuffle メソッド非推奨に c++ 14 で?](https://go.microsoft.com/fwlink/p/?linkid=397954)します。
 
 ## <a name="remove"></a>  remove
 
@@ -5662,7 +5662,7 @@ OutputIterator remove_copy(InputIterator first, InputIterator last, OutputIterat
 *last*<br/>
 要素が削除される範囲内の最後の要素の 1 つ後ろの位置を示す入力反復子。
 
-*結果*<br/>
+*result*<br/>
 要素が削除されるターゲット範囲内の最初の要素の位置を示す出力反復子。
 
 *val*<br/>
@@ -5744,7 +5744,7 @@ OutputIterator remove_copy_if(InputIterator first, InputIterator Last, OutputIte
 *last*<br/>
 要素が削除される範囲内の最後の要素の 1 つ後ろの位置を示す入力反復子。
 
-*結果*<br/>
+*result*<br/>
 要素が削除されるターゲット範囲内の最初の要素の位置を示す出力反復子。
 
 *_Pred*<br/>
@@ -6004,7 +6004,7 @@ OutputIterator replace_copy(
 *last*<br/>
 要素が置き換えられる範囲内の最後の要素の 1 つ後ろの位置を指定する入力反復子。
 
-*結果*<br/>
+*result*<br/>
 変更された要素シーケンスのコピー先ターゲット範囲の、最初の要素を指定する出力反復子。
 
 *_OldVal*<br/>
@@ -6106,7 +6106,7 @@ OutputIterator replace_copy_if(
 *last*<br/>
 要素が置き換えられる範囲内の最後の要素の 1 つ後ろの位置を指定する入力反復子。
 
-*結果*<br/>
+*result*<br/>
 要素のコピー先ターゲット範囲内の最初の要素の位置を指し示す出力反復子。
 
 *_Pred*<br/>
@@ -6359,7 +6359,7 @@ OutputIterator reverse_copy(
 *last*<br/>
 要素の順序を変えるソース範囲内の、最後の要素の 1 つ後ろの位置を指し示す入力反復子。
 
-*結果*<br/>
+*result*<br/>
 要素のコピー先ターゲット範囲内の最初の要素の位置を指し示す出力反復子。
 
 ### <a name="return-value"></a>戻り値
@@ -6537,7 +6537,7 @@ OutputIterator rotate_copy(
 
 _*最後*回転する前方反復子の位置を示す過去の最後の要素範囲内です。
 
-*結果*<br/>
+*result*<br/>
 ターゲット範囲の最初の要素の位置を示す出力反復子。
 
 ### <a name="return-value"></a>戻り値
@@ -6927,7 +6927,7 @@ OutputIterator set_difference(
 *last2*<br/>
 2 つのソース範囲の差を表すために単一の範囲に結合され並べ替えられる 2 つの連続する並べ替え済みソース範囲の、2 番目の範囲の最後の要素の 1 つ後ろの位置を示す入力反復子。
 
-*結果*<br/>
+*result*<br/>
 2 つのソース範囲の差を表すために 2 つのソース範囲が単一の並べ替え済みの範囲に結合されるターゲット範囲の、最初の要素の位置を示す出力反復子。
 
 *comp*<br/>
@@ -7661,7 +7661,7 @@ template<class RandomAccessIterator, class Predicate>
 
 どちらの要素も他方より小さくない場合、要素は同等ですが、必ずしも等しいわけではありません。 `sort` アルゴリズムは安定していないため、同等の要素の相対順序が保持されることを保証しません。 アルゴリズム `stable_sort` は元の順序を保持します。
 
-並べ替えの複雑さの平均は*O*( *N*ログ*N*) ここで、 *N* =  *姓 -*.
+並べ替えの複雑さの平均は*O*( *N*ログ*N*) ここで、 *N* =  *姓 -* .
 
 ### <a name="example"></a>例
 
@@ -8215,7 +8215,7 @@ OutputIterator transform(
 *first2*<br/>
 操作する 2 番目のソース範囲内の最初の要素の位置を示す入力反復子。
 
-*結果*<br/>
+*result*<br/>
 ターゲット範囲の最初の要素の位置を示す出力反復子。
 
 *_Func*<br/>
@@ -8478,7 +8478,7 @@ OutputIterator unique_copy( InputIterator first,
 *last*<br/>
 ソース範囲内のコピーする最後の要素の 1 つ後ろの位置を示す前方反復子。
 
-*結果*<br/>
+*result*<br/>
 連続する重複が削除されたコピーを受け取るターゲット範囲の最初の要素の位置を示す出力反復子。
 
 *comp*<br/>

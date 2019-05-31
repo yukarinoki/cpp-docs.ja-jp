@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::poisson_distribution [C++], param_type
 - std::poisson_distribution [C++], param_type
 ms.assetid: 09614281-349a-45f7-8e95-c0196be0a937
-ms.openlocfilehash: 4c8e35c097513176551db16471ed3a8c4ca1e824
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2653af7b0582995f8a2643486585fca6a5edc395
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62370178"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450161"
 ---
 # <a name="poissondistribution-class"></a>poisson_distribution クラス
 
@@ -91,7 +91,7 @@ public:
 
 分布クラスとそのメンバーの詳細については、[\<random>](../standard-library/random.md) をご覧ください。
 
-ポワソン分布の詳細については、Wolfram MathWorld の記事「[ポワソン分布](http://go.microsoft.com/fwlink/p/?linkid=401112)」をご覧ください。
+ポワソン分布の詳細については、Wolfram MathWorld の記事「[ポワソン分布](https://go.microsoft.com/fwlink/p/?linkid=401112)」をご覧ください。
 
 ## <a name="example"></a>例
 

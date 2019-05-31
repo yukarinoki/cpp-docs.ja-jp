@@ -20,12 +20,12 @@ helpviewer_keywords:
 - A4508
 - A4509
 ms.assetid: 52b38267-6023-4bdc-a0ef-863362f48eec
-ms.openlocfilehash: 867ef50065c6ed63a4da6d37523bd5a1f3cbadba
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 72c1ea64501ef8104fee9bdf914a1464c07c3b76
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62167844"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449216"
 ---
 # <a name="arm-assembler-diagnostic-messages"></a>ARM アセンブラー診断メッセージ
 
@@ -33,13 +33,13 @@ Microsoft ARM アセンブラー (*armasm*) それらを見つけたときに、
 
 ## <a name="syntax"></a>構文
 
-> <em>ファイル名</em>**(**<em>行番号</em>**):** \[**エラー**|**警告**] **A**<em>数</em>**:** *メッセージ*
+> <em>ファイル名</em> **(** <em>行番号</em> **):** \[**エラー**|**警告**] **A**<em>数</em> **:** *メッセージ*
 
 ## <a name="diagnostic-messages---errors"></a>エラーの診断メッセージ
 
 > この命令の A2193: は予期しない動作が生成されます。
 
-ARM アーキテクチャでは、この命令が実行されるときの動作を保証できません。  詳細については、この命令の明確に定義されたフォームを参照してください、 [ARM アーキテクチャ リファレンス マニュアル](http://go.microsoft.com/fwlink/p/?linkid=246464)します。
+ARM アーキテクチャでは、この命令が実行されるときの動作を保証できません。  詳細については、この命令の明確に定義されたフォームを参照してください、 [ARM アーキテクチャ リファレンス マニュアル](https://go.microsoft.com/fwlink/p/?linkid=246464)します。
 
 ```asm
     ADD r0, r8, pc         ; A2193: this instruction generates unpredictable behavior
@@ -115,7 +115,7 @@ ARM モードでは、定数を指定するための代替構文です。  書�
 
 > A4509:この形式の条件付き命令が非推奨とされます。
 
-この形式の条件付き命令は ARMv8 アーキテクチャでは ARM で廃止されました。 条件付き分岐を使用するコードを変更することをお勧めします。 どの条件付き命令は引き続きサポートを表示するを参照してください、 [ARM アーキテクチャ リファレンス マニュアル](http://go.microsoft.com/fwlink/p/?linkid=246464)します。
+この形式の条件付き命令は ARMv8 アーキテクチャでは ARM で廃止されました。 条件付き分岐を使用するコードを変更することをお勧めします。 どの条件付き命令は引き続きサポートを表示するを参照してください、 [ARM アーキテクチャ リファレンス マニュアル](https://go.microsoft.com/fwlink/p/?linkid=246464)します。
 
 この警告がないときに出力、 **- oldit**コマンド ライン スイッチを使用します。
 

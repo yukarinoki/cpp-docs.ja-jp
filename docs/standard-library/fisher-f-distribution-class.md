@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::fisher_f_distribution [C++], param_type
 - std::fisher_f_distribution [C++], param_type
 ms.assetid: 9513b6ce-3309-4be1-829b-f504bca35bbf
-ms.openlocfilehash: cff7883c0b563e7d6a377bffcd0e48192dc01071
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 643c564d7407a79bd9e2e776946c4b8df37a2974
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159809"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449923"
 ---
 # <a name="fisherfdistribution-class"></a>fisher_f_distribution クラス
 
@@ -96,7 +96,7 @@ Uniform random number generator エンジン。 使用可能な型について�
 
 分布クラスとそのメンバーの詳細については、[\<random>](../standard-library/random.md) をご覧ください。
 
-F 分布の詳細については、Wolfram MathWorld の記事「[F-Distribution](http://go.microsoft.com/fwlink/p/?linkid=400899)」(F 分布) を参照してください。
+F 分布の詳細については、Wolfram MathWorld の記事「[F-Distribution](https://go.microsoft.com/fwlink/p/?linkid=400899)」(F 分布) を参照してください。
 
 ## <a name="example"></a>例
 
@@ -157,7 +157,7 @@ int main()
 }
 ```
 
-## <a name="output"></a>出力
+## <a name="output"></a>Output
 
 最初の実行:
 

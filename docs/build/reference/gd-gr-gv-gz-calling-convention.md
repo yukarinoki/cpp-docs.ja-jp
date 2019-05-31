@@ -21,12 +21,12 @@ helpviewer_keywords:
 - Gv compiler option [C++]
 - /Gr compiler option [C++]
 ms.assetid: fd3110cb-2d77-49f2-99cf-a03f9ead00a3
-ms.openlocfilehash: 4e3da750b174fa92e28c1d0d5a8cbc035738ee51
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: 72d65ce7471ed047ab8347a45c58a6b8a9f39a7a
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837276"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450853"
 ---
 # <a name="gd-gr-gv-gz-calling-convention"></a>/Gd、/Gr、/Gv、/Gz (呼び出し規約)
 
@@ -39,7 +39,7 @@ ms.locfileid: "65837276"
 > **/Gv**<br/>
 > **/Gz**<br/>
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
 
 **/Gd** では、[__stdcall](../../cpp/stdcall.md)、[__fastcall](../../cpp/fastcall.md)、または [__vectorcall](../../cpp/vectorcall.md) が指定されている関数と C++ メンバー関数を除く、すべての関数の [__cdecl](../../cpp/cdecl.md) 呼び出し規約を指定します。これは既定の設定です。
 
@@ -47,7 +47,7 @@ ms.locfileid: "65837276"
 
 **/Gz** では、C++ メンバー関数、`main` という名前の関数、および `__cdecl`、`__fastcall`、または `__vectorcall` が指定されている関数を除く、すべての関数の `__stdcall` 呼び出し規約を指定します。 すべての `__stdcall` 関数には、プロトタイプ宣言が必要です。 この呼び出し規約は、x86 を対象とするコンパイラでのみ使用され、他のアーキテクチャを対象とするコンパイラでは無視されます。
 
-**/Gv** では、C++ メンバー関数、main という名前の関数、可変個引数リスト `vararg` を使用する関数、または競合する属性 `__cdecl`、`__stdcall`、または `__fastcall` が指定されている関数を除く、すべての関数の `__vectorcall` 呼び出し規則を指定します。 この呼び出し規約は、/arch:SSE2 以上をサポートする x86 アーキテクチャおよび x64 アーキテクチャのみで使用され、ARM アーキテクチャを対象とするコンパイラでは無視されます。
+**/Gv**を指定します、`__vectorcall`を除くすべての関数の呼び出し規約をC++メンバー関数、関数の名前付き`main`、関数、`vararg`可変個引数リスト、または競合するいるとマークされている関数`__cdecl`、 `__stdcall`、または`__fastcall`属性。 この呼び出し規約は、/arch:SSE2 以上をサポートする x86 アーキテクチャおよび x64 アーキテクチャのみで使用され、ARM アーキテクチャを対象とするコンパイラでは無視されます。
 
 可変数の引数を受け取る関数には `__cdecl` が指定されている必要があります。
 
@@ -70,7 +70,7 @@ C の `__cdecl` 名前付け規則では、関数名の前にアンダースコ�
 
 ## <a name="fastcall-specifics"></a>__fastcall の場合
 
-`__fastcall` 関数の一部の引数はレジスタ (x86 プロセッサの場合 ECX および EDX) で渡され、その他の引数は右から左の順にスタックにプッシュされます。 これらの引数は、呼び出し元に制御が戻る前に、呼び出し先のルーチンによってスタックからポップされます。 通常、 **/Gr** オプションを使用すると実行時間が短縮されます。
+`__fastcall` 関数の一部の引数はレジスタ (x86 プロセッサの場合 ECX および EDX) で渡され、その他の引数は右から左の順にスタックにプッシュされます。 これらの引数は、呼び出し元に制御が戻る前に、呼び出し先のルーチンによってスタックからポップされます。 通常、 **/Gr** 実行時間を短縮します。
 
 > [!NOTE]
 > インライン アセンブリ言語で記述された関数に対して `__fastcall` 呼び出し規則を使用する場合は注意してください。 レジスタを使用すると、コンパイラ側で使用するレジスタと競合する場合があります。
@@ -97,7 +97,7 @@ C の `__vectorcall` 名前付け規則では、関数名の後ろに 2 つの�
 
 `functionname@@number`
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
 1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
 

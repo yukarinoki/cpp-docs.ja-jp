@@ -3,12 +3,12 @@ title: 'チュートリアル: WRL および Media Foundation を使用して UW
 ms.date: 04/23/2019
 ms.topic: reference
 ms.assetid: 0336c550-fbeb-4dc4-aa9b-660f9fc45382
-ms.openlocfilehash: 28e8d4b2871dbd3bef0f30bae5480d346af50706
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
-ms.translationtype: HT
+ms.openlocfilehash: 1eee353bb13a3fa03fda42c3d0f7a4103dc5ad13
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64558273"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450146"
 ---
 # <a name="walkthrough-creating-a-uwp-app-using-wrl-and-media-foundation"></a>チュートリアル: WRL および Media Foundation を使用して UWP アプリの作成
 
@@ -25,7 +25,7 @@ ms.locfileid: "64558273"
 ほとんどの場合にを使用することが C +/cli/CX を Windows ランタイムを作成します。 ただし、場合によって、WRL を使用する必要があります。 などの Microsoft メディア ファンデーションのメディア拡張機能を作成するときに、COM および Windows ランタイムの両方のインターフェイスを実装するコンポーネントを作成する必要があります。 C++/CX では、Windows ランタイム オブジェクトを作成できるのみ、COM および Windows ランタイムの両方のインターフェイスの実装を可能にするため、メディア拡張機能を作成する、WRL を使用する必要があります。
 
 > [!NOTE]
-> このコード例は長いですが、役に立つメディア ファンデーション変換を作成するために必要な最低限のコードを示しています。 独自のカスタム変換を作成するための出発点として、このコード例を使用することができます。 この例の出典元は、[メディア拡張機能サンプル](http://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096)ビデオへの適用を使用してメディア拡張機能の効果、ビデオのデコード、メディア ストリームを生成するスキーム ハンドラーを作成します。
+> このコード例は長いですが、役に立つメディア ファンデーション変換を作成するために必要な最低限のコードを示しています。 独自のカスタム変換を作成するための出発点として、このコード例を使用することができます。 この例の出典元は、[メディア拡張機能サンプル](https://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096)ビデオへの適用を使用してメディア拡張機能の効果、ビデオのデコード、メディア ストリームを生成するスキーム ハンドラーを作成します。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
@@ -122,10 +122,10 @@ ms.locfileid: "64558273"
 
 ## <a name="next-steps"></a>次の手順
 
-例では、既定の Web カメラから写真を 1 枚ずつキャプチャする方法を示します。 [メディア拡張機能サンプル](http://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096)は以上です。 そのサンプルでは、Web カメラ デバイスを列挙し、ローカル スキーム ハンドラーを使用する方法や、個別の写真とビデオ ストリームの両方で機能する追加のメディア効果について示します。
+例では、既定の Web カメラから写真を 1 枚ずつキャプチャする方法を示します。 [メディア拡張機能サンプル](https://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096)は以上です。 そのサンプルでは、Web カメラ デバイスを列挙し、ローカル スキーム ハンドラーを使用する方法や、個別の写真とビデオ ストリームの両方で機能する追加のメディア効果について示します。
 
 ## <a name="see-also"></a>関連項目
 
 [Windows ランタイム C++ テンプレート ライブラリ (WRL)](windows-runtime-cpp-template-library-wrl.md)<br/>
 [Microsoft Media Foundation](/windows/desktop/medfound/microsoft-media-foundation-sdk)<br/>
-[メディア拡張機能サンプル](http://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096)
+[メディア拡張機能サンプル](https://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096)

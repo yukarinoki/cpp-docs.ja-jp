@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CException [MFC], Delete
 - CException [MFC], ReportError
 ms.assetid: cfacf14d-bfe4-4666-a5c7-38b800512920
-ms.openlocfilehash: 689afa2ffbc27feec6f9e1704a6b295d5eabfaee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5942e636809e3758f34d209a3da80f0d903ab708
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62164001"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450367"
 ---
 # <a name="cexception-class"></a>CException クラス
 
@@ -231,4 +231,4 @@ else
 [CObject クラス](cobject-class.md)<br/>
 [階層図](../hierarchy-chart.md)<br/>
 [例外処理](exception-processing.md)<br/>
-[How Do i:独自のカスタム例外クラスを作成します。](http://go.microsoft.com/fwlink/p/?linkid=128045)
+[How Do i:独自のカスタム例外クラスを作成します。](https://go.microsoft.com/fwlink/p/?linkid=128045)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ConcRT (see Concurrency Runtime)
 - Concurrency Runtime
 ms.assetid: 874bc58f-8dce-483e-a3a1-4dcc9e52ed2c
-ms.openlocfilehash: 6f7b70dcbee639bdd44a195709bddde9e06dee21
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fa64e2536fd1697e839f1b4921a290e1b7a30a35
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62414010"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449683"
 ---
 # <a name="concurrency-runtime"></a>コンカレンシー ランタイム
 
@@ -63,7 +63,7 @@ C++ のコンカレンシー ランタイムにより、信頼性が高く、ス
 |-|-|
 |[C++ における UWP アプリ用の非同期操作の作成](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)|同時実行ランタイムを使用して UWP アプリで非同期操作を生成するときに留意する重要な点について説明します。|
 |[チュートリアル: タスクおよび XML HTTP 要求を使用した接続](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)|PPL タスクを結合する方法を示しています、`IXMLHTTPRequest2`と`IXMLHTTPRequest2Callback`インターフェイス UWP アプリで web サービスに HTTP GET および POST 要求を送信します。|
-|[Windows ランタイム アプリのサンプル](http://code.msdn.microsoft.com/windowsapps)|ダウンロード可能なコード サンプルとデモを含む Windows 用のアプリ 8.x します。 C++ のサンプルでは、UX の応答性を保つためにバックグラウンドでデータを処理する PPL のタスクなど、コンカレンシー ランタイムの機能を使用します。|
+|[Windows ランタイム アプリのサンプル](https://code.msdn.microsoft.com/windowsapps)|ダウンロード可能なコード サンプルとデモを含む Windows 用のアプリ 8.x します。 C++ のサンプルでは、UX の応答性を保つためにバックグラウンドでデータを処理する PPL のタスクなど、コンカレンシー ランタイムの機能を使用します。|
 
 ## <a name="dataflow-programming-in-the-asynchronous-agents-library"></a>非同期エージェント ライブラリでのデータ フロー プログラミング
 
@@ -99,8 +99,8 @@ C++ のコンカレンシー ランタイムにより、信頼性が高く、ス
 |||
 |-|-|
 |[Hilo での非同期プログラミング パターンとヒント (C++ と XAML を使った Windows ストア アプリ)](https://msdn.microsoft.com/library/windows/apps/jj160321.aspx)|同時実行ランタイムを使用して C++ と XAML を使った Windows ランタイム アプリである Hilo での非同期操作を実装する方法について説明します。|
-|[Parallel Programming in Native Code blog (ネイティブ コードでの並行プログラミング ブログ)](http://go.microsoft.com/fwlink/p/?linkid=183873)|コンカレンシー ランタイムでの並列プログラミングに関する詳細なブログ記事を別途紹介しています。|
-|[Parallel Computing in C++ and Native Code forum (C++ とネイティブ コードでの並列コンピューティング フォーラム)](http://go.microsoft.com/fwlink/p/?linkid=183874)|コンカレンシー ランタイムに関するコミュニティ ディスカッションに参加できます。|
+|[Parallel Programming in Native Code blog (ネイティブ コードでの並行プログラミング ブログ)](https://go.microsoft.com/fwlink/p/?linkid=183873)|コンカレンシー ランタイムでの並列プログラミングに関する詳細なブログ記事を別途紹介しています。|
+|[Parallel Computing in C++ and Native Code forum (C++ とネイティブ コードでの並列コンピューティング フォーラム)](https://go.microsoft.com/fwlink/p/?linkid=183874)|コンカレンシー ランタイムに関するコミュニティ ディスカッションに参加できます。|
 |[並列プログラミング](/dotnet/standard/parallel-programming/index)|.NET Framework で使用できる並列プログラミング モデルについてを説明します。|
 
 ## <a name="see-also"></a>関連項目

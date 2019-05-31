@@ -1,18 +1,19 @@
 ---
-title: 文字列および I/o に書式設定 (Modern C)
-ms.date: 11/04/2016
+title: 文字列および I/O の書式設定 (Modern C++)
+description: 書式設定された文字列 I/O の使用可能な最新の選択肢C++します。
+ms.date: 05/30/2019
 ms.topic: conceptual
 ms.assetid: 3954e8de-a59b-4175-89c9-4ee842ab89ed
-ms.openlocfilehash: c051a7d70042456d30bee0ebb2b362c5d05b8e37
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e22c745798109a2dbef82297c45256593823f806
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62266921"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450499"
 ---
 # <a name="string-and-io-formatting-modern-c"></a>文字列および I/O の書式設定 (Modern C++)
 
-C++ [iostreams](../standard-library/iostream.md)の I/O の書式設定された文字列に対応します。 たとえば、次のコードは、整数を書式設定して 16 進数で出力するための cout を設定する方法を示します。まず現在の状態を保存し、後で再度設定します。これは、状態の書式設定が一度 cout に渡されると、1 行のコードの間だけでなく、変更されるまでその状態を保つためです。
+C++[ \<iostream >](../standard-library/iostream.md)クラス、関数、および演算子は、I/O の書式設定された文字列をサポートします。 たとえば、次のコードが設定する方法を示します`cout`を 16 進数で出力の整数を書式設定します。 形式の状態が 1 回に渡されるためにその後、リセットするために現在の状態を保存、最初に、 `cout`、変更されるまでのままになります。 1 行のコードにだけは適用されません。
 
 ```cpp
 #include <iostream>
@@ -38,17 +39,21 @@ int main()
 }
 ```
 
-これは、多くの場合、非常に面倒です。 別の方法として、非標準ですが、Boost C++ ライブラリの Boost.Format を使用できます。 任意の Boost ライブラリをダウンロードすることができます、 [Boost](http://www.boost.org/) web サイト。
+この方法は、タイプ セーフと拡張性を併せ持つが複雑で冗長ではも。
 
-Boost.Format の利点は以下のとおりです。
+## <a name="alternative-format-options"></a>代替形式のオプション
 
-- 安全性:タイプ セーフで、エラーの例外をスロー-項目が多すぎるか少なすぎるの仕様など。
+代わりに、使用することができます`Boost.Format`、Boost からC++が標準でない場合でも、ライブラリ。 任意の Boost ライブラリをダウンロードすることができます、 [Boost](https://www.boost.org/) web サイト。
+
+いくつかの利点の`Boost.Format`は。
+
+- 安全性:タイプ セーフが多すぎるか少なすぎます項目の仕様などのエラー、例外をスローします。
 
 - 拡張。ストリーム配信できる任意の型に対して機能します。
 
 - 便利です。標準 Posix と類似の書式指定文字列。
 
-Boost.Format は C++ でビルドが[iostreams](../standard-library/iostream-programming.md)パフォーマンスが最適化されたは安全で拡張可能である、これらはありません。 パフォーマンスの最適化を必要とする場合は、C を検討してください[printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)と[sprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)は高速で簡単に使用します。 ただし、それらは拡張可能でなく、また脆弱性から安全ではありません。 (セキュリティが強化されたバージョンがありますが、わずかながらパフォーマンスが低下します。 詳細については、次を参照してください。 [printf_s、_printf_s_l、wprintf_s、_wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)と[sprintf_s、_sprintf_s_l、swprintf_s、_swprintf_s_l](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md))。
+`Boost.Format`上に構築されたC++ [ \<iostream >](../standard-library/iostream-programming.md)施設で、安全で拡張可能では、パフォーマンスが最適化されたはありません。 パフォーマンスの最適化を必要とする場合は、C を検討してください[printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)と[sprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)は高速で簡単に使用します。 ただし、これらは、拡張可能なまたは脆弱性から安全はありません。 (セキュリティが強化されたバージョンがありますが、わずかながらパフォーマンスが低下します。 詳細については、次を参照してください。 [printf_s、_printf_s_l、wprintf_s、_wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)と[sprintf_s、_sprintf_s_l、swprintf_s、_swprintf_s_l](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md))。
 
 次のコードは、Boost の書式設定機能のいくつかを示します。
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1104
 ms.assetid: 9ca6f929-0efc-4055-8354-3cf5b4e636dc
-ms.openlocfilehash: bc6305ab2e96496aa212004e186150d4a51cf3fc
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: fcd3c06ae2db5c43aacbf781800870a83d2d77c1
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446968"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66451136"
 ---
 # <a name="linker-tools-error-lnk1104"></a>リンカ ツール エラー LNK1104
 
@@ -81,7 +81,7 @@ IDE でこの問題を解決するには、確認、**ライブラリ ディレ�
 
 このエラーが発生する可能性がありますとパス*filename* 260 文字以上に展開されます。 名前を変更するか、必要なファイルへのパスを短縮するために必要な場合に、ディレクトリ構造を再配置。
 
-ファイルが大きすぎるために、このエラーが発生することができます。 ライブラリまたはオブジェクト ファイルのサイズで 1 ギガバイトでは、32 ビット リンカーの問題が生じるよりも大きくします。 この問題の考えられる修正では、64 ビット ツールセットを使用します。 コマンドラインでこれを行う方法の詳細については、次を参照してください。[方法。コマンドラインで 64 ビット Visual C ツールセットを有効にする](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)します。 これは、IDE で実行する方法については、次を参照してください。 [64 ビットのコンパイラおよびツールを使用して MSBuild](../../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md#using-msbuild-to-build-your-project)とこの Stack Overflow の投稿。[Visual Studio のネイティブ amd64 ツール チェーンを使用する方法](http://stackoverflow.com/questions/19820718/how-to-make-visual-studio-use-the-native-amd64-toolchain/23793055)します。
+ファイルが大きすぎるために、このエラーが発生することができます。 ライブラリまたはオブジェクト ファイルのサイズで 1 ギガバイトでは、32 ビット リンカーの問題が生じるよりも大きくします。 この問題の考えられる修正では、64 ビット ツールセットを使用します。 コマンドラインでこれを行う方法の詳細については、次を参照してください。[方法。コマンドラインで 64 ビット Visual C ツールセットを有効にする](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)します。 これは、IDE で実行する方法については、次を参照してください。 [64 ビットのコンパイラおよびツールを使用して MSBuild](../../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md#using-msbuild-to-build-your-project)とこの Stack Overflow の投稿。[Visual Studio のネイティブ amd64 ツール チェーンを使用する方法](https://stackoverflow.com/questions/19820718/how-to-make-visual-studio-use-the-native-amd64-toolchain/23793055)します。
 
 このエラーにアクセスするが不足しているファイルのアクセス許可がある場合に発生する可能性が*filename*します。 これは、ライブラリ ファイルが保護されたシステムのディレクトリにアクセスする通常のユーザー アカウントとの試行を使用するか、元のアクセス許可を持っている他のユーザーからコピーされたファイルを使用する場合に発生することができますを設定します。 この問題を解決するには、ファイルを書き込み可能なプロジェクト ディレクトリに移動します。 ファイルが書き込み可能なディレクトリにアクセスできないアクセス許可を持つ場合は、管理者のコマンド プロンプトを使用して、およびファイルの所有権を取得する takeown.exe コマンドを実行します。
 

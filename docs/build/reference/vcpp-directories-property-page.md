@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - VC++ Directories Property Page
 ms.assetid: 428eeef6-f127-4271-b3ea-0ae6f2c3d624
-ms.openlocfilehash: 3822a3c751ac06154e4b13a12f449e7f0ff2cc07
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e739ea99df424f44dc43a28e3dc01c3529bb0c1a
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62316874"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450719"
 ---
 # <a name="vc-directories-property-page-windows"></a>[VC++ ディレクトリ] プロパティ ページ (Windows)
 
@@ -28,11 +28,11 @@ ms.locfileid: "62316874"
 
 **[VC++ ディレクトリ]** プロパティ ページにアクセスするには:
 
-1. **ソリューション エクスプローラー** ウィンドウが表示されない場合は、メイン メニューで **[表示]** > **[ソリューション エクスプローラー]** を選択します。
-1. (最上位レベルのソリューションではなく) プロジェクト ノードを右クリックして、**[プロパティ]** を選択します。
-1. **[プロパティ ページ]** ダイアログ ボックスの左側のウィンドウで **[構成プロパティ]** > **[VC++ ディレクトリ]** の順に選択します。
+1. **ソリューション エクスプローラー** ウィンドウが表示されない場合は、メイン メニューで **[表示]**  >  **[ソリューション エクスプローラー]** を選択します。
+1. (最上位レベルのソリューションではなく) プロジェクト ノードを右クリックして、 **[プロパティ]** を選択します。
+1. **[プロパティ ページ]** ダイアログ ボックスの左側のウィンドウで **[構成プロパティ]**  >  **[VC++ ディレクトリ]** の順に選択します。
 
-[VC++ ディレクトリ] プロパティは、最上位のソリューション ノードではなく、プロジェクトに適用されます。 **[構成プロパティ]** の下に **[VC++ ディレクトリ]** が表示されない場合は、**[ソリューション エクスプローラー]** ウィンドウで C++ プロジェクト ノードを選択します。
+[VC++ ディレクトリ] プロパティは、最上位のソリューション ノードではなく、プロジェクトに適用されます。 **[構成プロパティ]** の下に **[VC++ ディレクトリ]** が表示されない場合は、 **[ソリューション エクスプローラー]** ウィンドウで C++ プロジェクト ノードを選択します。
 
 ![プロジェクト ノードを選択](../media/vcppdir.png "プロジェクト ノードを選択して、VC++ ディレクトリのプロパティを表示する")
 
@@ -40,11 +40,11 @@ ms.locfileid: "62316874"
 
 慣れていない場合*プロジェクト プロパティ*Visual Studio で、役に立つその最初の読み取り専用に[Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
-**VC++ ディレクトリ** プロパティの既定の設定は、プロジェクトの種類によって異なります。 デスクトップ プロジェクトの場合、特定のプラットフォーム ツールセットの C++ ツールの場所と、Windows SDK の場所が含まれます。 **プラットフォーム ツールセット**と **Windows SDK バージョン**は、**[構成プロパティ]** > **[全般]** ページで変更できます。
+**VC++ ディレクトリ** プロパティの既定の設定は、プロジェクトの種類によって異なります。 デスクトップ プロジェクトの場合、特定のプラットフォーム ツールセットの C++ ツールの場所と、Windows SDK の場所が含まれます。 **プラットフォーム ツールセット**と **Windows SDK バージョン**は、 **[構成プロパティ]**  >  **[全般]** ページで変更できます。
 
 いずれかのディレクトリの値を表示するには:
 
-1. **[VC++ ディレクトリ]** ページで、プロパティのいずれか 1 つを選択します。 たとえば、**[ライブラリ ディレクトリ]** を選択します。
+1. **[VC++ ディレクトリ]** ページで、プロパティのいずれか 1 つを選択します。 たとえば、 **[ライブラリ ディレクトリ]** を選択します。
 1. プロパティの値フィールドの末尾にある下向きの矢印ボタンを選択します。
 1. ドロップダウン メニューで **[編集]** を選択します。
 
@@ -74,7 +74,7 @@ ms.locfileid: "62316874"
 
 - .props ファイルでユーザー マクロを定義します。 詳細については、「[Property page macros](../working-with-project-properties.md)」 (プロパティ ページ マクロ) を参照してください。
 
-詳細については、次のブログ投稿を参照してください。[Vc++ ディレクトリ](http://blogs.msdn.com/b/vsproject/archive/2009/07/07/vc-directories.aspx)、[継承されたプロパティとプロパティ シート](http://blogs.msdn.com/b/vsproject/archive/2009/06/23/inherited-properties-and-property-sheets.aspx)、および[Visual Studio 2010 C プロジェクト アップグレード ガイド](http://blogs.msdn.com/b/vcblog/archive/2010/03/02/visual-studio-2010-c-project-upgrade-guide.aspx)します。
+詳細については、次のブログ投稿を参照してください。[Vc++ ディレクトリ](https://blogs.msdn.com/b/vsproject/archive/2009/07/07/vc-directories.aspx)、[継承されたプロパティとプロパティ シート](https://blogs.msdn.com/b/vsproject/archive/2009/06/23/inherited-properties-and-property-sheets.aspx)、および[Visual Studio 2010 C プロジェクト アップグレード ガイド](https://devblogs.microsoft.com/cppblog/visual-studio-2010-c-project-upgrade-guide/)します。
 
 ## <a name="directory-types"></a>ディレクトリの種類
 
@@ -90,7 +90,7 @@ ms.locfileid: "62316874"
 [#using](../../preprocessor/hash-using-directive-cpp.md) ディレクティブによってソース コード内で参照されるアセンブリおよびモジュール (メタデータ) ファイルを検索するディレクトリ。 **LIBPATH** 環境変数に対応します。
 
 **ライブラリ ディレクトリ**<br/>
-ライブラリ (.lib) ファイル (ランタイム ライブラリを含む) を検索するディレクトリ。 **LIB** 環境変数に対応します。 この設定は、.obj ファイルには適用されません。 .obj ファイルにリンクするには、**[構成プロパティ]** > **[リンカー]** > **[全般]** プロパティ ページで **[Additional Library Dependencies]\(追加のライブラリ依存関係\)** を選択してファイルの相対パスを指定します。 詳細については、「[[リンカー] プロパティ ページ](linker-property-pages.md)」を参照してください。
+ライブラリ (.lib) ファイル (ランタイム ライブラリを含む) を検索するディレクトリ。 **LIB** 環境変数に対応します。 この設定は、.obj ファイルには適用されません。 .obj ファイルにリンクするには、 **[構成プロパティ]**  >  **[リンカー]**  >  **[全般]** プロパティ ページで **[Additional Library Dependencies]\(追加のライブラリ依存関係\)** を選択してファイルの相対パスを指定します。 詳細については、「[[リンカー] プロパティ ページ](linker-property-pages.md)」を参照してください。
 
 **ライブラリ WinRT ディレクトリ**<br/>
 ユニバーサル Windows プラットフォーム (UWP) アプリで WinRT ライブラリ ファイルを検索するためのディレクトリ。
@@ -103,4 +103,4 @@ IntelliSense で使用されるソース ファイルを検索するディレク
 
 ## <a name="sharing-the-settings"></a>設定の共有
 
-プロジェクトのプロパティを、他のユーザーと共有したり、複数のコンピューター間で共有したりできます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+プロジェクトのプロパティを、他のユーザーと共有したり、複数のコンピューター間で共有したりできます。 詳しくは、「[Visual Studio で C++ コンパイラとビルド プロパティを設定する](../working-with-project-properties.md)」をご覧ください。

@@ -1931,22 +1931,22 @@ helpviewer_keywords:
 - cl.exe compiler, intrinsics
 - intrinsics, ARM
 ms.assetid: d3d7dadd-7bd5-4508-8bff-371a66913e20
-ms.openlocfilehash: 8590f6ac056bf561960f9c02ff4a4cc6a4d3bfa0
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 0f63112f04da317371c15e1fd6ba22fc7e2bd6e1
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447724"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450788"
 ---
 # <a name="arm-intrinsics"></a>ARM 組み込み
 
-MicrosoftC++コンパイラ (MSVC) は、ARM アーキテクチャに次の組み込みを使用します。 ARM の詳細については、次を参照してください。、 [ARM アーキテクチャ リファレンス マニュアル](http://go.microsoft.com/fwlink/p/?LinkId=522049)と[ARM アセンブラー ツール ガイド](http://go.microsoft.com/fwlink/p/?LinkId=246102)、ARM Infocenter web サイトにします。
+MicrosoftC++コンパイラ (MSVC) は、ARM アーキテクチャに次の組み込みを使用します。 ARM の詳細については、次を参照してください。、 [ARM アーキテクチャ リファレンス マニュアル](https://go.microsoft.com/fwlink/p/?LinkId=522049)と[ARM アセンブラー ツール ガイド](https://go.microsoft.com/fwlink/p/?LinkId=246102)、ARM Infocenter web サイトにします。
 
 ##  <a name="top"></a> NEON
 
 ARM の NEON ベクター命令セット拡張は、x86 および x64 アーキテクチャのプロセッサに共通する MMX と SSE ベクター命令セットの拡張に類似したSingle Instruction Multiple Data (SIMD) 機能を提供します。
 
-ヘッダー ファイル `arm_neon.h` に記載されているように、NEON 組み込みはサポートされています。 NEON 組み込みの MSVC サポートに似ている ARM コンパイラの付録 G に記載されている、 [ARM コンパイラ ツール チェーンは、バージョン 4.1 コンパイラ リファレンス](http://go.microsoft.com/fwlink/p/?LinkId=251083)ARM Infocenter web サイトにします。
+ヘッダー ファイル `arm_neon.h` に記載されているように、NEON 組み込みはサポートされています。 NEON 組み込みの MSVC サポートに似ている ARM コンパイラの付録 G に記載されている、 [ARM コンパイラ ツール チェーンは、バージョン 4.1 コンパイラ リファレンス](https://go.microsoft.com/fwlink/p/?LinkId=251083)ARM Infocenter web サイトにします。
 
 MSVC と ARM コンパイラの主な違いは、MSVC が追加される`_ex`のバリアント、`vldX`と`vstX`ベクターのロードおよびストアします。 `_ex` バリアントは、ポインター引数の配置を指定する追加パラメーターを受け取りますが、それ以外は `_ex` の付かない命令と変わりありません。
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - random header
 ms.assetid: 60afc25c-b162-4811-97c1-1b65398d4c57
-ms.openlocfilehash: 5b246be02c860ede6691db1c4d21af7e6b4da26a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3fd6272ebcb58d48cc943541f32d1195c3fab498
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62369814"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450794"
 ---
 # <a name="ltrandomgt"></a>&lt;random&gt;
 
@@ -49,7 +49,7 @@ ms.locfileid: "62369814"
 
 - 大部分のアプリケーションに対して最も役立つ組み合わせは、`mt19937` エンジンと `uniform_int_distribution` の組み合わせです (この記事の後の方にある[コード例](#code)に示されています)。
 
-多くのオプションがある、 \<random > ヘッダー、およびこれらのいずれかが期限切れの C ランタイム関数のことをお勧め`rand()`します。 スクリプトに問題がについて`rand()`とどのように\<ランダム > これらの欠点を補いを参照してください[このビデオ](http://go.microsoft.com/fwlink/p/?linkid=397615)。
+多くのオプションがある、 \<random > ヘッダー、およびこれらのいずれかが期限切れの C ランタイム関数のことをお勧め`rand()`します。 スクリプトに問題がについて`rand()`とどのように\<ランダム > これらの欠点を補いを参照してください[このビデオ](https://go.microsoft.com/fwlink/p/?linkid=397615)。
 
 ## <a name="code"></a> 例
 
@@ -495,12 +495,12 @@ URNG は、次の特性においてよく説明されます。
 
 |URNG|Fast|暗号的に安全|シード設定可能|Deterministic|
 |----------|-----------|---------------------|---------------|--------------------|
-|`mt19937`|はい|×|はい|はい<sup>*</sup>|
+|`mt19937`|はい|×|[はい]|はい<sup>*</sup>|
 |`random_device`|いいえ|はい|×|いいえ|
 
 <sup>* 既知のシードが提供される場合。</sup>
 
-ISO C++ 標準では `random_device` が暗号的に安全であることは要求されていませんが、Visual Studio では暗号的に安全であるように実装されています ("暗号的に安全" という用語は保証を示すものではありません。特定のランダム化アルゴリズムが提供する最小限のレベルのエントロピ (それによる予測可能性レベル) を意味しています。 詳細については、Wikipedia の記事「[Cryptographically secure pseudorandom number generator](http://go.microsoft.com/fwlink/p/?linkid=398017) (暗号論的擬似乱数生成器)」を参照してください)。ISO C++ 標準ではこのことを要求していないため、他のプラットフォームでは (暗号的に安全でない) 簡単な疑似乱数ジェネレーターとして `random_device` が実装され、別のジェネレーターのシード ソースとしてのみ適する場合もあります。 クロスプラットフォーム コードで `random_device` を使用する場合は、これらのプラットフォームのドキュメントを参照してください。
+ISO C++ 標準では `random_device` が暗号的に安全であることは要求されていませんが、Visual Studio では暗号的に安全であるように実装されています ("暗号的に安全" という用語は保証を示すものではありません。特定のランダム化アルゴリズムが提供する最小限のレベルのエントロピ (それによる予測可能性レベル) を意味しています。 詳細については、Wikipedia の記事「[Cryptographically secure pseudorandom number generator](https://go.microsoft.com/fwlink/p/?linkid=398017) (暗号論的擬似乱数生成器)」を参照してください)。ISO C++ 標準ではこのことを要求していないため、他のプラットフォームでは (暗号的に安全でない) 簡単な疑似乱数ジェネレーターとして `random_device` が実装され、別のジェネレーターのシード ソースとしてのみ適する場合もあります。 クロスプラットフォーム コードで `random_device` を使用する場合は、これらのプラットフォームのドキュメントを参照してください。
 
 定義上、`random_device` の結果は再現可能でなく、また、副作用として、他の URNG よりも実行がかなり遅い場合があります。 暗号的に安全であることが要求されない大部分のアプリケーションでは `mt19937` または類似のエンジンを使用しますが、[コード例](#code)に示すように、`random_device` の呼び出しでシードを設定することもできます。
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2001
 ms.assetid: dc1cf267-c984-486c-abd2-fd07c799f7ef
-ms.openlocfilehash: 824fa9108e6322b1bcf77d6c28c7fb843b743833
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 916c37e3283f40ff5ded865a573ff45839de6e2a
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161018"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449624"
 ---
 # <a name="linker-tools-error-lnk2001"></a>リンカ ツール エラー LNK2001
 
@@ -71,7 +71,7 @@ ATL プロジェクトのリリース バージョンをビルドすると、CRT
 
 現在の標準はありません[C++ の名前付け](../../error-messages/tool-errors/name-decoration.md)コンパイラ ベンダー間またはコンパイラの異なるバージョン間であってもします。 そのため、他のコンパイラでコンパイルされたオブジェクト ファイルをリンク可能性があります、同じ名前付けスキームが生成されず、エラー LNK2001 が発生するため。
 
-[コンパイル オプションのミキシングのインラインと非インライン](../../error-messages/tool-errors/function-inlining-problems.md)モジュールごとに異なることができます、lnk2001 します。 関数のインライン化がオンで C++ のライブラリが作成されたかどうか (**/Ob1**または **/Ob2**) 関数を記述する、対応するヘッダー ファイルがインライン化を無効になっていますが、(ありません`inline`キーワード)、このエラー発生します。 この問題を解決する関数を定義する`inline`ヘッダー ファイルを他のソース ファイルが含まれます。
+[コンパイル オプションのミキシングのインラインと非インライン](../../error-messages/tool-errors/function-inlining-problems.md)モジュールごとに異なることができます、lnk2001 します。 関数のインライン化がオンで C++ のライブラリが作成されたかどうか ( **/Ob1**または **/Ob2**) 関数を記述する、対応するヘッダー ファイルがインライン化を無効になっていますが、(ありません`inline`キーワード)、このエラー発生します。 この問題を解決する関数を定義する`inline`ヘッダー ファイルを他のソース ファイルが含まれます。
 
 使用する場合、`#pragma inline_depth`があるコンパイラ ディレクティブを確認してください、 [2 以上のセットの値](../../error-messages/tool-errors/function-inlining-problems.md)、使用することも確認して、 [/Ob1](../../build/reference/ob-inline-function-expansion.md)または[/Ob2](../../build/reference/ob-inline-function-expansion.md)コンパイラ オプション。
 
@@ -101,5 +101,5 @@ C++ コンパイラとリンカーの使用[名前の装飾](../../error-message
 
 ## <a name="additional-resources"></a>その他の技術情報
 
-LNK2001 の考えられる原因および解決方法に関する詳細については、Stack Overflow の質問を参照してください。 [、未定義の参照/未解決外部シンボルというエラーと解決方法でしょうか。](http://stackoverflow.com/q/12573816/2002113)します。
+LNK2001 の考えられる原因および解決方法に関する詳細については、Stack Overflow の質問を参照してください。 [、未定義の参照/未解決外部シンボルというエラーと解決方法でしょうか。](https://stackoverflow.com/q/12573816/2002113)します。
 

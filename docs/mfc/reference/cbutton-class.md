@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CButton [MFC], SetState
 - CButton [MFC], SetTextMargin
 ms.assetid: cdc76d5b-31da-43c5-bc43-fde4cb39de5b
-ms.openlocfilehash: b1a02d995594f5e079359151167ac970a3d1ab37
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3283e974dc2b933049599fba0b6cf51c32a18ef3
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348693"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450832"
 ---
 # <a name="cbutton-class"></a>CButton クラス
 
@@ -153,7 +153,7 @@ class CButton : public CWnd
 
 各メッセージ マップ エントリは、次の形式をとります。
 
-**ON\_**_Notification_ **(** _id_, _memberFxn_ **)**
+**ON\_** _Notification_ **(** _id_, _memberFxn_ **)**
 
 場所*id*通知を送信するコントロールの子ウィンドウ ID を指定および*memberFxn*通知を処理するために記述した親メンバー関数の名前を指定します。
 
@@ -808,7 +808,7 @@ BOOL SetElevationRequired(BOOL fElevationRequired);
 
 ### <a name="remarks"></a>Remarks
 
-ボタンまたはコマンド リンク コントロールは、操作を実行する管理者特権でのセキュリティ アクセス許可を必要とする場合は、コントロールを設定`elevation required`状態。 その後、Windows では、コントロールのユーザー アカウント制御 (UAC) 盾のアイコンが表示されます。 詳細についてを参照してください「ユーザー アカウント制御」 [MSDN](http://go.microsoft.com/fwlink/p/?linkid=18507)します。
+ボタンまたはコマンド リンク コントロールは、操作を実行する管理者特権でのセキュリティ アクセス許可を必要とする場合は、コントロールを設定`elevation required`状態。 その後、Windows では、コントロールのユーザー アカウント制御 (UAC) 盾のアイコンが表示されます。 詳細についてを参照してください「ユーザー アカウント制御」 [MSDN](https://go.microsoft.com/fwlink/p/?linkid=18507)します。
 
 このメソッドは、送信、 [BCM_SETSHIELD](/windows/desktop/Controls/bcm-setshield)メッセージは、Windows SDK で説明します。
 
