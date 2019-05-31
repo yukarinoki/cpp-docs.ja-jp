@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - ATL OLE DB consumers
 ms.assetid: f940a513-4e42-4148-b521-dd0d7dc89fa2
-ms.openlocfilehash: 7925063e03522c96d251748b23b6b929733999a1
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
-ms.translationtype: HT
+ms.openlocfilehash: 1e384a283a2a149faa5b8d6e0817eac3cacfeff9
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65524635"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65706920"
 ---
 # <a name="adding-an-atl-ole-db-consumer"></a>ATL OLE DB コンシューマーの追加
 
@@ -19,7 +19,7 @@ ATL OLE DB コンシューマー ウィザードは、Visual Studio 2019 以降�
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="<=vs-2017"
 
 このウィザードを使用して、ATL OLE DB コンシューマーをプロジェクトに追加します。 ATL OLE DB コンシューマーは、OLE DB アクセサー クラスとデータ ソースにアクセスするために必要データ バインドで構成されます。 プロジェクトは、ATL COM アプリケーションとして作成されているか、ATL のサポート (ATL OLE DB コンシューマー ウィザードによって自動的に追加されます) を含む MFC または Win32 アプリケーションとして作成されている必要があります。
 

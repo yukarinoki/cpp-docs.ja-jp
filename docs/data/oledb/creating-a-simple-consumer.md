@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB consumers, creating
 ms.assetid: ae32d657-72ea-4db8-9839-75cb5cff68ae
-ms.openlocfilehash: f72363478696baccb0473e37104427b1516b39c3
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: cc24df1f15d43c384e6bf3853766fad82cf51255
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525000"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707713"
 ---
 # <a name="creating-a-simple-consumer"></a>単純なコンシューマーの作成
 
@@ -19,7 +19,7 @@ ATL OLE DB コンシューマー ウィザードは、Visual Studio 2019 以降�
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="<=vs-2017"
 
 **ATL プロジェクト ウィザード**と **ATL OLE DB コンシューマー ウィザード**を使用して OLE DB テンプレート コンシューマーを生成します。
 

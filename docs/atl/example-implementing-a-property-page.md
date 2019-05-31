@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - property pages, implementing
 ms.assetid: c30b67fe-ce08-4249-ae29-f3060fa8d61e
-ms.openlocfilehash: 1da7a2691465162e645ae9790eecdb08d9a2ce98
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
-ms.translationtype: HT
+ms.openlocfilehash: 1f2c0387cd0a78ad0179e251654d2fa82b1eef13
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65524571"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707099"
 ---
 # <a name="example-implementing-a-property-page"></a>例:プロパティ ページの実装
 
@@ -19,7 +19,7 @@ ATL プロパティ ページ ウィザードは、Visual Studio 2019 以降で�
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="<=vs-2017"
 
 この例では、[ドキュメント クラス](../mfc/document-classes.md) インターフェイスのプロパティを表示する (変更することもできる)プロパティ ページの作成方法を示します。
 
@@ -49,7 +49,7 @@ ATL プロパティ ページ ウィザードは、Visual Studio 2019 以降で�
 
 まず、`ATLPages7` という名前の DLL サーバー用の新しい ATL プロジェクトを作成します。 次に、[ATL プロパティ ページ ウィザード](../atl/reference/atl-property-page-wizard.md)を使用してプロパティ ページを生成します。 プロパティ ページに **DocProperties** という**短い名前**を付けた後、 **[文字列]** ページに切り替えて、次の表に示すプロパティ ページに固有の項目を設定します。
 
-|項目|値|
+|アイテム|[値]|
 |----------|-----------|
 |Title|TextDocument|
 |Doc String|VCUE TextDocument のプロパティ|
@@ -135,7 +135,7 @@ ATL プロパティ ページ ウィザードは、Visual Studio 2019 以降で�
 
 [[クラスの追加] ダイアログ ボックス](../ide/add-class-dialog-box.md)と [ATL シンプル オブジェクト ウィザード](../atl/reference/atl-simple-object-wizard.md)を使用して新しいクラスを作成し、その短い名前として `Helper` を使用します。 作成したら、次の表に示すように、メソッドを追加します。
 
-|項目|値|
+|アイテム|[値]|
 |----------|-----------|
 |メソッド名|`ShowPage`|
 |パラメーター|`[in] BSTR bstrCaption, [in] BSTR bstrID, [in] IUnknown* pUnk`|
