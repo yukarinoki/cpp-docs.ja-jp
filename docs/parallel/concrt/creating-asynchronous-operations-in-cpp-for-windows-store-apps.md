@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows 8.x apps, creating C++ async operations
 - Creating C++ async operations
 ms.assetid: a57cecf4-394a-4391-a957-1d52ed2e5494
-ms.openlocfilehash: 8815861e525a2824bb1bc7a7d0e40f96b053c6a4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 92226d8db9fa87ce829ae96b4802ad2f45bc3e54
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413990"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450186"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>C++ における UWP アプリ用の非同期操作の作成
 
@@ -77,7 +77,7 @@ Windows ランタイムを使用すると、さまざまなプログラミング
 
 次の表では、アプリケーションの非同期操作を定義するために使用できる組み合わせを示します。
 
-|この Windows ランタイム インターフェイスを作成するには| `create_async`|これらのパラメーターの型を処理関数に渡して、暗黙的なキャンセル トークンを使用する|これらのパラメーターの型を処理関数に渡して、明示的なキャンセル トークンを使用する|
+|この Windows ランタイム インターフェイスを作成するには|`create_async`|これらのパラメーターの型を処理関数に渡して、暗黙的なキャンセル トークンを使用する|これらのパラメーターの型を処理関数に渡して、明示的なキャンセル トークンを使用する|
 |----------------------------------------------------------------------------------|------------------------------------------|--------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|
 |`IAsyncAction`|`void` または `task<void>`|(なし)|(`cancellation_token`)|
 |`IAsyncActionWithProgress<TProgress>`|`void` または `task<void>`|(`progress_reporter`)|(`progress_reporter`, `cancellation_token`)|
@@ -126,7 +126,7 @@ MainPage.xaml で、次のコードを `MainPage` クラスに追加します。
 
 ![Windows ランタイム Primes アプリ](../../parallel/concrt/media/concrt_windows_primes.png "Windows ランタイム Primes アプリ")
 
-`create_async` を使って他の言語で使用される非同期タスクを作成する例については、「 [Bing Maps Trip Optimizer のサンプルでの C++ の使用](https://msdn.microsoft.com/library/windows/apps/hh699891.aspx) 」および「 [Windows 8 Asynchronous Operations in C++ with PPL (PPL を使った C++ による Windows 8 の非同期操作)](http://code.msdn.microsoft.com/windowsapps/windows-8-asynchronous-08009a0d)」を参照してください。
+`create_async` を使って他の言語で使用される非同期タスクを作成する例については、「 [Bing Maps Trip Optimizer のサンプルでの C++ の使用](https://msdn.microsoft.com/library/windows/apps/hh699891.aspx) 」および「 [Windows 8 Asynchronous Operations in C++ with PPL (PPL を使った C++ による Windows 8 の非同期操作)](https://code.msdn.microsoft.com/windowsapps/windows-8-asynchronous-08009a0d)」を参照してください。
 
 ##  <a name="exethread"></a> 実行スレッドを制御する
 

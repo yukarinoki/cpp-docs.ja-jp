@@ -2,12 +2,12 @@
 title: Windows XP 用プログラムの構成
 ms.date: 05/16/2019
 ms.assetid: 1e4487b3-d815-4123-878b-5718b22f0fd5
-ms.openlocfilehash: 6c94c6a66d0f22b8707012856a65df4b19965acb
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: 55753737b4868f33487ed980eaf37a8801f59638
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837139"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450702"
 ---
 # <a name="configuring-programs-for-windows-xp"></a>Windows XP 用プログラムの構成
 
@@ -37,12 +37,12 @@ Windows XP のプラットフォーム ツールセットの他に、C ランタ
 
 |ライブラリ|Windows デスクトップ アプリを対象とする既定のプラットフォーム ツールセット|Store アプリを対象とする既定のプラットフォーム ツールセット|Windows XP と Windows Server 2003 を対象とする Windows XP プラットフォーム ツールセット|
 |---|---|---|---|
-|CRT|x|x|x|
-|C++ 標準ライブラリ|x|x|x|
-|ATL|x|x|x|
-|ConCRT/PPL|x|x|x|
-|MFC|x||x|
-|C++ AMP|x|x||
+|CRT|X|X|x|
+|C++ 標準ライブラリ|x|X|X|
+|[ATL]|X|X|X|
+|ConCRT/PPL|X|X|X|
+|MFC|X||X|
+|C++ AMP|X|x||
 
 > [!NOTE]
 > C++/CLI で作成され、.NET Framework 4 を対象とするアプリは、Windows XP と Windows Server 2003 で動作します。
@@ -69,4 +69,4 @@ Windows XP のプラットフォーム ツールセットの他に、C ランタ
 
 - **HLSL の構築**
 
-   既定では、Windows XP ツールセットでは HLSL のソース コード ファイルはコンパイルされません。 HLSL ファイルをコンパイルするには、June 2010 DirectX SDK をダウンロードしてインストールし、プロジェクトの VC ディレクトリに含めるように設定します。 詳細については、[June 2010 DirectX SDK ダウンロード ページ](http://www.microsoft.com/download/details.aspx?displaylang=en&id=6812)の「DirectX SDK はインクルード/ライブラリ パスを Visual Studio 2010 に登録しない」セクションを参照してください。
+   既定では、Windows XP ツールセットでは HLSL のソース コード ファイルはコンパイルされません。 HLSL ファイルをコンパイルするには、June 2010 DirectX SDK をダウンロードしてインストールし、プロジェクトの VC ディレクトリに含めるように設定します。 詳細については、[June 2010 DirectX SDK ダウンロード ページ](https://www.microsoft.com/download/details.aspx?displaylang=en&id=6812)の「DirectX SDK はインクルード/ライブラリ パスを Visual Studio 2010 に登録しない」セクションを参照してください。
