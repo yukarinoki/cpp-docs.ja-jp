@@ -32,7 +32,7 @@ ms.locfileid: "62252564"
 
 ### <a name="to-add-the-clickin-and-clickout-methods"></a>ClickIn と ClickOut メソッドを追加するには
 
-1. **ソリューション エクスプ ローラー**Polygon.idl を開き、[次のコードを追加`methods:`で、 `dispInterface_IPolyCtlEvents` PolygonLib ライブラリの宣言。
+1. **ソリューション エクスプ ローラー**Polygon.idl を開き、次のコードを追加`methods:`で、 `dispInterface_IPolyCtlEvents` PolygonLib ライブラリの宣言。
 
     ```cpp
    [id(1), helpstring("method ClickIn")] void ClickIn([in] LONG x,[in] LONG y);
@@ -65,7 +65,7 @@ ms.locfileid: "62252564"
 
 ### <a name="to-implement-the-connection-points"></a>接続ポイントを実装するには
 
-1. **ソリューション エクスプ ローラー**_IPolyCtlEvents_CP.h を開き、[次のコードを追加、`public:`内のステートメント、`CProxy_IPolyCtlEvents`クラス。
+1. **ソリューション エクスプ ローラー**_IPolyCtlEvents_CP.h を開き、次のコードを追加、`public:`内のステートメント、`CProxy_IPolyCtlEvents`クラス。
 
     ```cpp
     VOID Fire_ClickIn(LONG x, LONG y)
@@ -130,7 +130,7 @@ ms.locfileid: "62252564"
 
 ### <a name="to-add-a-handler-for-the-wmlbuttondown-message"></a>WM_LBUTTONDOWN メッセージ ハンドラーを追加するには
 
-1. **クラス ビュー**を右クリックし、`CPolyCtl`クラスし、クリックして**プロパティ**ショートカット メニューの [します。
+1. **クラス ビュー**を右クリックし、`CPolyCtl`クラスし、クリックして**プロパティ**ショートカット メニューの します。
 
 1. **プロパティ**ウィンドウで、をクリックして、**メッセージ**アイコンをクリック`WM_LBUTTONDOWN`、左側の一覧から。
 
@@ -150,7 +150,7 @@ ms.locfileid: "62252564"
 
 ## <a name="building-and-testing-the-control"></a>コントロールのビルドとテスト
 
-イベントを試すようになりました。 コントロールをビルドし、ActiveX コントロール テスト コンテナーをもう一度開始します。 今回では、イベント ログ] ウィンドウを表示します。 出力ウィンドウにイベントをルーティングする] をクリックして**ログ**から、**オプション**メニュー選択し、**出力ウィンドウにログ**します。 インポート コントロールの挿入] ウィンドウでクリックして操作をやり直してください。 注意`ClickIn`、多角形内をクリックした場合に発生し、`ClickOut`外部をクリックしたときに発生します。
+イベントを試すようになりました。 コントロールをビルドし、ActiveX コントロール テスト コンテナーをもう一度開始します。 今回では、イベント ログ ウィンドウを表示します。 出力ウィンドウにイベントをルーティングする をクリックして**ログ**から、**オプション**メニュー選択し、**出力ウィンドウにログ**します。 インポート コントロールの挿入 ウィンドウでクリックして操作をやり直してください。 注意`ClickIn`、多角形内をクリックした場合に発生し、`ClickOut`外部をクリックしたときに発生します。
 
 次に、プロパティ ページを追加します。
 

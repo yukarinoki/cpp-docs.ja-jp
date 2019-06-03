@@ -73,7 +73,7 @@ static bool CompareElements(const T& element1, const T& element2);
 
 ### <a name="remarks"></a>Remarks
 
-この関数の既定の実装は、等しいかどうか (**==**) 演算子。 単純なデータ型以外のオブジェクト、この関数は、オーバーライドする必要があります。
+この関数の既定の実装は、等しいかどうか ( **==** ) 演算子。 単純なデータ型以外のオブジェクト、この関数は、オーバーライドする必要があります。
 
 ##  <a name="compareelementsordered"></a>  CDefaultCompareTraits::CompareElementsOrdered
 
@@ -103,7 +103,7 @@ static int CompareElementsOrdered(const T& element1, const T& element2);
 
 ### <a name="remarks"></a>Remarks
 
-この関数の既定の実装を使用して、 **==**、 **\<**、および**>** 演算子。 単純なデータ型以外のオブジェクト、この関数は、オーバーライドする必要があります。
+この関数の既定の実装を使用して、 **==** 、 **\<** 、および **>** 演算子。 単純なデータ型以外のオブジェクト、この関数は、オーバーライドする必要があります。
 
 ## <a name="see-also"></a>関連項目
 
