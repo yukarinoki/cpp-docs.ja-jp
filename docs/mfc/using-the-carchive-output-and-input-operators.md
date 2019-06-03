@@ -41,7 +41,7 @@ ms.locfileid: "62411501"
 
 [!code-cpp[NVC_MFCSerialization#10](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_4.cpp)]
 
-ライブラリ定義**< \<** と**>>** 演算子の`CArchive`最初のオペランドと、次のデータ型と 2 番目のオペランドとしてクラス型として:
+ライブラリ定義 **< \<** と **>>** 演算子の`CArchive`最初のオペランドと、次のデータ型と 2 番目のオペランドとしてクラス型として:
 
 ||||
 |-|-|-|
@@ -55,7 +55,7 @@ ms.locfileid: "62411501"
 > [!NOTE]
 >  格納と読み込み`CObject`アーカイブを通じて追加の考慮事項が必要です。 詳細については、次を参照してください。[の保存とアーカイブを通じた Cobject の読み込み](../mfc/storing-and-loading-cobjects-via-an-archive.md)します。
 
-**CArchive <\<** と**>>** 演算子が常にへの参照を返す、`CArchive`最初のオペランドとなるオブジェクト。 これによりに、演算子のチェーンに次の図に。
+**CArchive <\<** と **>>** 演算子が常にへの参照を返す、`CArchive`最初のオペランドとなるオブジェクト。 これによりに、演算子のチェーンに次の図に。
 
 [!code-cpp[NVC_MFCSerialization#11](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_5.cpp)]
 
