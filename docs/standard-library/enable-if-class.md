@@ -7,12 +7,12 @@ helpviewer_keywords:
 - enable_if class
 - enable_if
 ms.assetid: c6b8d41c-a18f-4e30-a39e-b3aa0e8fd926
-ms.openlocfilehash: b6990dba20643b35dde36a492d40c3e3e76ae0b4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 450664f71851778cc40160e55cbb80bcb51330d5
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413763"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66451256"
 ---
 # <a name="enableif-class"></a>enable_if クラス
 
@@ -46,7 +46,7 @@ template <bool B, class T = void>
 using enable_if_t = typename enable_if<B,T>::type;
 ```
 
-C++ では、テンプレート パラメーターの置き換えの失敗は、それ自体はエラーではありません。これは *SFINAE* (substitution failure is not an error: 置き換えの失敗はエラーではない) と呼ばれます。 一般的に、`enable_if` はオーバーロード解決から候補を外す (つまりオーバーロード セットを除外する) ために使用します。一方を優先させて他方の定義が拒否されることもあります。 これは、SFINAE の動作に適合します。 SFINAE の詳細については、Wikipedia の「[Substitution failure is not an error](http://go.microsoft.com/fwlink/p/?linkid=394798)」を参照してください。
+C++ では、テンプレート パラメーターの置き換えの失敗は、それ自体はエラーではありません。これは *SFINAE* (substitution failure is not an error: 置き換えの失敗はエラーではない) と呼ばれます。 一般的に、`enable_if` はオーバーロード解決から候補を外す (つまりオーバーロード セットを除外する) ために使用します。一方を優先させて他方の定義が拒否されることもあります。 これは、SFINAE の動作に適合します。 SFINAE の詳細については、Wikipedia の「[Substitution failure is not an error](https://go.microsoft.com/fwlink/p/?linkid=394798)」を参照してください。
 
 次に、4 つのシナリオの例を示します。
 
@@ -105,7 +105,7 @@ yourfunction(args, typename enable_if<your_condition, void **>::type = nullptr) 
 
 シナリオ 3 は、`Dummy` という名前を使用しますが、これは任意です。 単に "`typename = typename`" だけで機能しますが、少し変に見えるかもしれないので、"dummy" という名前を使用できます。関数定義で使用される可能性のある名前は使用しないでください。 `enable_if` に型を指定しない場合、既定値は void になります。ユーザーは `Dummy` が何かを気にしなくていないため、これは非常に理にかなっています。 これは、変換演算子や [variadic](../cpp/ellipses-and-variadic-templates.md) コンストラクターなど、すべてにおいて機能します。
 
-シナリオ 4 は、戻り値の型を持たないコンストラクターで機能するため、シナリオ 1 のラッピングの制約を解決します。  ただし、シナリオ 4 は非テンプレート関数の引数に限定されますが、このような引数は必ず利用できるわけではありません   (テンプレート関数の引数でシナリオ 4 を使用すると、テンプレート引数の推定が機能しません)。
+シナリオ 4 は、戻り値の型を持たないコンストラクターで機能するため、シナリオ 1 のラッピングの制約を解決します。  ただし、シナリオ 4 は非テンプレート関数の引数に限定されますが、このような引数は必ず利用できるわけではありません  (テンプレート関数の引数でシナリオ 4 を使用すると、テンプレート引数の推定が機能しません)。
 
 `enable_if` は強力ですが、誤って使用すると危険です。  enable_if の目的はオーバーロードの解決前に候補を除外することなので、誤って使用すると、その影響によって混乱が生じます。  次に、いくつか推奨例を示します。
 

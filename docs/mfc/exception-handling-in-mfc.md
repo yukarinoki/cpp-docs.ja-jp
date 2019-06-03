@@ -33,12 +33,12 @@ helpviewer_keywords:
 - function calls [MFC], results
 - out-of-memory exceptions [MFC]
 ms.assetid: 0926627d-2ba7-44a6-babe-d851a4a2517c
-ms.openlocfilehash: afa49a4d54397cf79a3bd0af28e4a0f0a4c7639e
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 69bb5a9478120db322b5727af491be7943f44cbe
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346050"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449714"
 ---
 # <a name="exception-handling-in-mfc"></a>例外処理 (MFC)
 
@@ -55,7 +55,7 @@ MFC 例外処理マクロではなく、C++ 例外を使用する既存のコー
 MFC 例外処理マクロを使用してアプリケーションを既に開発した場合は、新しいコードで C++ 例外を使用している、既存のコードでこれらのマクロを使用を続行できます。 この記事[例外。バージョン 3.0 での例外処理マクロを変更](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md)これを行うためのガイドラインを提供します。
 
 > [!NOTE]
->  コードの C++ 例外処理を有効にするコードの生成] ページで、プロジェクトの [C/C++] フォルダーを有効にする C++ の例外を選択します。[プロパティ ページ](../build/reference/property-pages-visual-cpp.md)ダイアログ ボックスで、または使用して、 [/EHsc](../build/reference/eh-exception-handling-model.md)コンパイラ オプション。
+>  コードの C++ 例外処理を有効にするコードの生成 ページで、プロジェクトの [C/C++] フォルダーを有効にする C++ の例外を選択します。[プロパティ ページ](../build/reference/property-pages-visual-cpp.md)ダイアログ ボックスで、または使用して、 [/EHsc](../build/reference/eh-exception-handling-model.md)コンパイラ オプション。
 
 ここでは、次のトピックについて説明します。
 
@@ -132,4 +132,4 @@ MFC 例外処理マクロを使用してアプリケーションを既に開発�
 ## <a name="see-also"></a>関連項目
 
 [C++ 例外処理](../cpp/cpp-exception-handling.md)<br/>
-[How Do i:独自のカスタム例外クラスを作成します。](http://go.microsoft.com/fwlink/p/?linkid=128045)
+[How Do i:独自のカスタム例外クラスを作成します。](https://go.microsoft.com/fwlink/p/?linkid=128045)
