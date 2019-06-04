@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - ATL_DRAWINFO structure
 ms.assetid: dd2e2aa8-e8c5-403b-b4df-35c0f6f57fb7
-ms.openlocfilehash: 70329d3b2c18c8cd8e94854f40ff971c0b39a8f4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 77ef56f73be1ed9ddfc63c459b6bab3ad4decb3f
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62261066"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503413"
 ---
 # <a name="atldrawinfo-structure"></a>ATL_DRAWINFO 構造体
 
@@ -60,7 +60,7 @@ struct ATL_DRAWINFO {
 描画するためにデバイス コンテキスト。 ウィンドウなしのオブジェクト、`hdcDraw`メンバーが、`MM_TEXT`マッピング モードの論理座標が格納先ウィンドウのクライアント座標に一致するとします。 さらに、デバイス コンテキストが、通常 1 つと同じ状態にあります。、`WM_PAINT`メッセージ。
 
 `prcBounds`<br/>
-ポインターを[RECTL](https://msdn.microsoft.com/library/windows/desktop/dd162907)の四角形を指定する構造体`hdcDraw`オブジェクトを描画する必要があります。 このメンバーは、移動とオブジェクトの拡大を制御します。 このメンバーは、ウィンドウなしのインプレース アクティブなオブジェクトを描画するために NULL にする必要があります。 他のすべての状況で NULL が有効な値と発生する必要があります、`E_INVALIDARG`エラー コード。 ウィンドウなしのオブジェクトに、コンテナーが NULL 以外の値を渡すと、オブジェクトは、指定したデバイス コンテキストと四角形に要求された外観をレンダリングする必要があります。 コンテナーは、オブジェクトの 2 つ目の非アクティブなビューを表示するために、またはオブジェクトを印刷するウィンドウなしのオブジェクトからこれを要求できます。
+ポインターを[RECTL](/previous-versions//dd162907\(v=vs.85\))の四角形を指定する構造体`hdcDraw`オブジェクトを描画する必要があります。 このメンバーは、移動とオブジェクトの拡大を制御します。 このメンバーは、ウィンドウなしのインプレース アクティブなオブジェクトを描画するために NULL にする必要があります。 他のすべての状況で NULL が有効な値と発生する必要があります、`E_INVALIDARG`エラー コード。 ウィンドウなしのオブジェクトに、コンテナーが NULL 以外の値を渡すと、オブジェクトは、指定したデバイス コンテキストと四角形に要求された外観をレンダリングする必要があります。 コンテナーは、オブジェクトの 2 つ目の非アクティブなビューを表示するために、またはオブジェクトを印刷するウィンドウなしのオブジェクトからこれを要求できます。
 
 `prcWBounds`<br/>
 場合`hdcDraw`メタファイル デバイス コンテキストは、(を参照してください[調べるため](/windows/desktop/api/wingdi/nf-wingdi-getdevicecaps)Windows sdk) へのポインターは、これを`RECTL`基になるメタファイルに外接する四角形を指定する構造体。 四角形の構造には、ウィンドウのエクステントとウィンドウの原点が含まれています。 これらの値は、メタファイルに描画するために便利です。 によって示される四角形`prcBounds`内に入れ子になって`prcWBounds`を表す四角形が同じ座標領域。

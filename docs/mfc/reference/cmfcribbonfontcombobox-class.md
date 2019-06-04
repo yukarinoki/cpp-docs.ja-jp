@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMFCRibbonFontComboBox [MFC], RebuildFonts
 - CMFCRibbonFontComboBox [MFC], SetFont
 ms.assetid: 33b4db50-df4f-45fa-8f05-2e6e73c31435
-ms.openlocfilehash: 643e2a519c6d96c1070990dd86d571c5b7c09f95
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f17ad9157ff40620a68073eea85acb6fff104bb4
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62237026"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504836"
 ---
 # <a name="cmfcribbonfontcombobox-class"></a>CMFCRibbonFontComboBox クラス
 
@@ -143,7 +143,7 @@ CMFCRibbonFontComboBox(
 
 ### <a name="remarks"></a>Remarks
 
-可能な限りの詳細については*nFontType*パラメーターの値を参照してください[EnumFontFamProc](https://msdn.microsoft.com/library/windows/desktop/dd162621) Windows SDK のドキュメント。
+可能な限りの詳細については*nFontType*パラメーターの値を参照してください[EnumFontFamProc](/previous-versions/dd162621\(v=vs.85\)) Windows SDK のドキュメント。
 
 割り当てることができる有効な文字セットの詳細については*nCharSet*、および有効な値を割り当てることができる*nPitchAndFamily*を参照してください[LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)で、Windows SDK のドキュメントです。
 

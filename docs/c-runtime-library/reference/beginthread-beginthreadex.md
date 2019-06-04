@@ -29,12 +29,12 @@ helpviewer_keywords:
 - _beginthreadex function
 - beginthread function
 ms.assetid: 0df64740-a978-4358-a88f-fb0702720091
-ms.openlocfilehash: d70d2fb0ecb647d4854a6277d6c69cd9886e072f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f64fd7b945fc8ea2e5c111d300266e07faade0e7
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349265"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504542"
 ---
 # <a name="beginthread-beginthreadex"></a>_beginthread、_beginthreadex
 
@@ -83,7 +83,7 @@ uintptr_t _beginthreadex( // MANAGED CODE
 新しいスレッドに渡される引数リストまたは**NULL**します。
 
 *セキュリティ*<br/>
-[SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) 構造体へのポインター。この構造体は、返されたハンドルを子プロセスが継承できるかどうかを決定します。 場合*セキュリティ*は**NULL**ハンドルを継承することはできません。 必要があります**NULL** Windows 95 アプリケーション。
+[SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) 構造体へのポインター。この構造体は、返されたハンドルを子プロセスが継承できるかどうかを決定します。 場合*セキュリティ*は**NULL**ハンドルを継承することはできません。 必要があります**NULL** Windows 95 アプリケーション。
 
 *initflag*<br/>
 新しいスレッドの初期状態を制御するフラグ。 設定*initflag*をすぐに実行するには 0 または**CREATE_SUSPENDED**停止状態でスレッドを作成するを使用して、 [ResumeThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-resumethread)スレッドを実行します。 設定*initflag*に**STACK_SIZE_PARAM_IS_A_RESERVATION**フラグを使用する*stack_size*初期予約サイズ (バイト単位)、スタックは、このフラグが指定されていないので、 *stack_size*コミット サイズを指定します。

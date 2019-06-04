@@ -194,12 +194,12 @@ helpviewer_keywords:
 - CHtmlView [MFC], SetWidth
 - CHtmlView [MFC], Stop
 ms.assetid: 904976af-73de-4aba-84ac-cfae8e2be09a
-ms.openlocfilehash: 17979dce7899820db3da3c24968385914c3a57e9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5ea7b59ccb95078324ae85bbf04c11c537f0f525
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62337896"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503564"
 ---
 # <a name="chtmlview-class"></a>CHtmlView クラス
 
@@ -493,7 +493,7 @@ void ExecWB(
 
 ### <a name="remarks"></a>Remarks
 
-参照してください[IWebBrowser2::ExecWB](https://msdn.microsoft.com/library/aa752117.aspx) Windows SDK にします。
+参照してください[IWebBrowser2::ExecWB](/previous-versions//aa752117\(v=vs.85\)) Windows SDK にします。
 
 ##  <a name="getaddressbar"></a>  CHtmlView::GetAddressBar
 
@@ -759,7 +759,7 @@ READYSTATE GetReadyState() const;
 
 ### <a name="return-value"></a>戻り値
 
-A [READYSTATE](https://msdn.microsoft.com/library/aa768362.aspx)値を Windows SDK で説明します。
+A [READYSTATE](/previous-versions//aa768362\(v=vs.85\))値を Windows SDK で説明します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -1307,7 +1307,7 @@ virtual HRESULT OnFrameWindowActivate(BOOL fActivate);
 
 ##  <a name="onfullscreen"></a>  CHtmlView::OnFullScreen
 
-このメンバー関数が、フレームワークによって呼び出されますときに、[全画面表示](https://msdn.microsoft.com/library/aa752119.aspx)プロパティが変更されました。
+このメンバー関数が、フレームワークによって呼び出されますときに、[全画面表示](/previous-versions/aa752119\(v=vs.85\))プロパティが変更されました。
 
 ```
 virtual void OnFullScreen(BOOL bFullScreen);
@@ -1430,7 +1430,7 @@ virtual HRESULT OnHideUI();
 
 ##  <a name="onmenubar"></a>  CHtmlView::OnMenuBar
 
-このメンバー関数が、フレームワークによって呼び出されますときに、 [MenuBar](https://msdn.microsoft.com/library/aa752131.aspx)プロパティが変更されました。
+このメンバー関数が、フレームワークによって呼び出されますときに、 [MenuBar](/previous-versions/aa752131\(v=vs.85\))プロパティが変更されました。
 
 ```
 virtual void OnMenuBar(BOOL bMenuBar);
@@ -1481,7 +1481,7 @@ URL はナビゲーションに失敗しました。
 リソースの表示、またはリソースの名前付きフレームのターゲットがない場合は NULL にするフレームの名前。
 
 *dwError*<br/>
-エラー状態コード、使用可能な場合。 可能な HRESULT と HTTP 状態コードの一覧は、次を参照してください。 [NavigateError イベントの状態コード。](https://msdn.microsoft.com/library/aa768365.aspx)
+エラー状態コード、使用可能な場合。 可能な HRESULT と HTTP 状態コードの一覧は、次を参照してください。 [NavigateError イベントの状態コード。](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768365\(v=vs.85\))します。
 
 *pbCancel*<br/>
 エラー ページまたはその他の自動検索へのナビゲーションをキャンセルするかどうかを指定します。 場合は TRUE (既定値) は、引き続き、[エラー] ページまたは自動検索; への移動FALSE の場合は、エラー ページまたは自動検索へのナビゲーションをキャンセルします。
@@ -1490,7 +1490,7 @@ URL はナビゲーションに失敗しました。
 
 カスタム ナビゲーション エラーの処理を提供するには、このメソッドをオーバーライドします。
 
-詳細については、次を参照してください[DWebBrowserEvents2::NavigateError。](https://msdn.microsoft.com/library/aa768286.aspx)
+詳細については、次を参照してください[DWebBrowserEvents2::NavigateError。](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768286\(v=vs.85\))
 
 ##  <a name="onnewwindow2"></a>  CHtmlView::OnNewWindow2
 
@@ -1661,7 +1661,7 @@ virtual HRESULT OnShowUI(
 
 ##  <a name="onstatusbar"></a>  CHtmlView::OnStatusBar
 
-このメンバー関数が、フレームワークによって呼び出されますときに、 [StatusBar](https://msdn.microsoft.com/library/aa768270.aspx)プロパティが変更されました。
+このメンバー関数が、フレームワークによって呼び出されますときに、 [StatusBar](/previous-versions//aa768270\(v=vs.85\))プロパティが変更されました。
 
 ```
 virtual void OnStatusBar(BOOL bStatusBar);
@@ -1687,7 +1687,7 @@ virtual void OnStatusTextChange(LPCTSTR lpszText);
 
 ##  <a name="ontheatermode"></a>  CHtmlView::OnTheaterMode
 
-このメンバー関数が、フレームワークによって呼び出されますときに、 [TheaterMode](https://msdn.microsoft.com/library/aa768273.aspx)プロパティが変更されました。
+このメンバー関数が、フレームワークによって呼び出されますときに、 [TheaterMode](/previous-versions/aa768273\(v=vs.85\))プロパティが変更されました。
 
 ```
 virtual void OnTheaterMode(BOOL bTheaterMode);
@@ -1717,7 +1717,7 @@ HTML、タイトルを変更する可能性があります。HTML はまだダ�
 
 ##  <a name="ontoolbar"></a>  CHtmlView::OnToolBar
 
-このメンバー関数が、フレームワークによって呼び出されますときに、[ツールバー](https://msdn.microsoft.com/library/aa768274.aspx)プロパティが変更されました。
+このメンバー関数が、フレームワークによって呼び出されますときに、[ツールバー](/previous-versions/aa768274\(v=vs.85\))プロパティが変更されました。
 
 ```
 virtual void OnToolBar(BOOL bToolBar);
@@ -1956,7 +1956,7 @@ void Refresh2(int nLevel);
 ### <a name="parameters"></a>パラメーター
 
 *nLevel*<br/>
-更新レベルを指定する変数のアドレス。 可能な変数が定義されている[RefreshConstants](https://msdn.microsoft.com/library/aa768363.aspx)、Windows SDK に含まれています。
+更新レベルを指定する変数のアドレス。 可能な変数が定義されている[RefreshConstants](/previous-versions/aa768363\(v=vs.85\))、Windows SDK に含まれています。
 
 ### <a name="remarks"></a>Remarks
 

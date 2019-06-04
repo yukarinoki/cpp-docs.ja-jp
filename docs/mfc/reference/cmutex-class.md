@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMutex [MFC], CMutex
 ms.assetid: 6330c050-4f01-4195-a099-2029b92f8cf1
-ms.openlocfilehash: f85e562af9d048503be20d1ab5d219fe8d2d039f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9c55da8a7692982fc18589fa69e9e2b0749cb6eb
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62373649"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504186"
 ---
 # <a name="cmutex-class"></a>CMutex クラス
 
@@ -74,17 +74,17 @@ CMutex(
 場合を指定します、スレッドを作成する、`CMutex`オブジェクトが最初に、ミュー テックスによって制御されるリソースへのアクセスを持ちます。
 
 *lpszName*<br/>
-`CMutex` オブジェクトの名前。 同じ名前の別のミュー テックスが存在する場合、 *lpszName*プロセスの境界を越えてオブジェクトを使用する場合に指定する必要があります。 場合**NULL**、ミュー テックスは名前付きできません。 名前が既存のミュー テックスに一致する場合、コンス トラクターは新しい`CMutex`その名前のミュー テックスを参照するオブジェクト。 名前には、ミュー テックスではない既存の同期オブジェクトが一致すると、構築は失敗します。
+  `CMutex` オブジェクトの名前。 同じ名前の別のミュー テックスが存在する場合、 *lpszName*プロセスの境界を越えてオブジェクトを使用する場合に指定する必要があります。 場合**NULL**、ミュー テックスは名前付きできません。 名前が既存のミュー テックスに一致する場合、コンス トラクターは新しい`CMutex`その名前のミュー テックスを参照するオブジェクト。 名前には、ミュー テックスではない既存の同期オブジェクトが一致すると、構築は失敗します。
 
 *lpsaAttribute*<br/>
-ミュー テックス オブジェクトのセキュリティ属性。 この構造体の詳細については、次を参照してください。 [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) Windows SDK に含まれています。
+ミュー テックス オブジェクトのセキュリティ属性。 この構造体の詳細については、次を参照してください。 [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) Windows SDK に含まれています。
 
 ### <a name="remarks"></a>Remarks
 
 アクセスまたはリリースを`CMutex`オブジェクトを作成、 [CMultiLock](../../mfc/reference/cmultilock-class.md)または[CSingleLock](../../mfc/reference/csinglelock-class.md)オブジェクトと呼び出しの[ロック](../../mfc/reference/csinglelock-class.md#lock)と[Unlock](../../mfc/reference/csinglelock-class.md#unlock)メンバー関数。 場合、`CMutex`オブジェクトがスタンドアロンの使用にされている場合、呼び出しの`Unlock`メンバー関数は、それを解放します。
 
 > [!IMPORTANT]
->  作成した後、`CMutex`オブジェクトを使用して[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)ミュー テックスがまだ存在しないことを確認します。 予期せずにミュー テックスが存在して、不正なプロセスが発生したり、悪意のあるミュー テックスを使用するつもりが可能性があります。 ここでは、セキュリティ意識の推奨手順は、ハンドルを終了し、クリックすると、オブジェクトの作成でエラーが発生しました。
+>  作成した後、`CMutex`オブジェクトを使用して[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)ミュー テックスがまだ存在しないことを確認します。 予期せずにミュー テックスが存在して、不正なプロセスが発生したり、悪意のあるミュー テックスを使用するつもりが可能性があります。 ここでは、セキュリティ意識の推奨手順は、ハンドルを終了し、クリックすると、オブジェクトの作成でエラーが発生しました。
 
 ## <a name="see-also"></a>関連項目
 

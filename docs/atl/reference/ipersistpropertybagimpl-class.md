@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - IPersistPropertyBagImpl class
 ms.assetid: 712af24d-99f8-40f2-9811-53b3ff6e5b19
-ms.openlocfilehash: 800c38c15e4ec8028fba9188d75e49be7ca51146
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 569a24fd08801de952e998f772afbc3478096628
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62274894"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503143"
 ---
 # <a name="ipersistpropertybagimpl-class"></a>IPersistPropertyBagImpl クラス
 
@@ -50,9 +50,9 @@ class ATL_NO_VTABLE IPersistPropertyBagImpl : public IPersistPropertyBag
 
 ## <a name="remarks"></a>Remarks
 
-[IPersistPropertyBag](https://msdn.microsoft.com/library/aa768205.aspx)インターフェイスにより、クライアントが指定したプロパティ バッグのプロパティを保存するオブジェクト。 クラス`IPersistPropertyBagImpl`このインターフェイスの既定の実装を提供し、実装`IUnknown`ダンプ情報を送信することによってデバッグでのデバイスをビルドします。
+[IPersistPropertyBag](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768205\(v=vs.85\))インターフェイスにより、クライアントが指定したプロパティ バッグのプロパティを保存するオブジェクト。 クラス`IPersistPropertyBagImpl`このインターフェイスの既定の実装を提供し、実装`IUnknown`ダンプ情報を送信することによってデバッグでのデバイスをビルドします。
 
-`IPersistPropertyBag` 連携して[IPropertyBag](https://msdn.microsoft.com/library/aa768196.aspx)と[IErrorLog](https://msdn.microsoft.com/library/aa768231.aspx)します。 クライアントによってこれら後者の 2 つのインターフェイスを実装する必要があります。 を通じて`IPropertyBag`クライアントが保存され、オブジェクトの個々 のプロパティを読み込みます。 を通じて`IErrorLog`オブジェクトとクライアントの両方が発生したエラーを報告できます。
+`IPersistPropertyBag` 連携して[IPropertyBag](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768196\(v=vs.85\))と[IErrorLog](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768231\(v=vs.85\))します。 クライアントによってこれら後者の 2 つのインターフェイスを実装する必要があります。 を通じて`IPropertyBag`クライアントが保存され、オブジェクトの個々 のプロパティを読み込みます。 を通じて`IErrorLog`オブジェクトとクライアントの両方が発生したエラーを報告できます。
 
 **関連資料** [ATL チュートリアル](../../atl/active-template-library-atl-tutorial.md)、 [ATL プロジェクトの作成](../../atl/reference/creating-an-atl-project.md)
 
@@ -92,7 +92,7 @@ S_OK を返します。
 
 ### <a name="remarks"></a>Remarks
 
-参照してください[IPersistPropertyBag::InitNew](https://msdn.microsoft.com/library/aa768204.aspx) Windows SDK にします。
+参照してください[IPersistPropertyBag::InitNew](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768204\(v=vs.85\)) Windows SDK にします。
 
 ##  <a name="load"></a>  IPersistPropertyBagImpl::Load
 
@@ -106,7 +106,7 @@ STDMETHOD(Load)(LPPROPERTYBAG pPropBag, LPERRORLOG pErrorLog);
 
 ATL では、オブジェクトのプロパティのマップを使用して、この情報を取得します。
 
-参照してください[IPersistPropertyBag::Load](https://msdn.microsoft.com/library/aa768206.aspx) Windows SDK にします。
+参照してください[IPersistPropertyBag::Load](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768206\(v=vs.85\)) Windows SDK にします。
 
 ##  <a name="save"></a>  IPersistPropertyBagImpl::Save
 
@@ -123,7 +123,7 @@ STDMETHOD(Save)(
 
 ATL では、オブジェクトのプロパティ マップを使用して、この情報を格納します。 既定では、このメソッドの値に関係なく、すべてのプロパティを保存します。 *fSaveAllProperties*します。
 
-参照してください[IPersistPropertyBag::Save](https://msdn.microsoft.com/library/aa768207.aspx) Windows SDK にします。
+参照してください[IPersistPropertyBag::Save](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768207\(v=vs.85\)) Windows SDK にします。
 
 ## <a name="see-also"></a>関連項目
 

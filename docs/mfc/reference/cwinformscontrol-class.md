@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CWinFormsControl [MFC], GetControl
 - CWinFormsControl [MFC], GetControlHandle
 ms.assetid: 6406dd7b-fb89-4a18-ac3a-c010d6b6289a
-ms.openlocfilehash: 91691203f88f07f597aaad6a5db32b03e7ad11c4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c1c7a394317fefba7911e9500126919e83389f20
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323301"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504662"
 ---
 # <a name="cwinformscontrol-class"></a>CWinFormsControl クラス
 
@@ -108,7 +108,7 @@ inline BOOL CreateManagedControl(
 ### <a name="parameters"></a>パラメーター
 
 *pType*<br/>
-作成するコントロールのデータ型。 必要があります、[型](https://msdn.microsoft.com/library/system.type)データ型。
+作成するコントロールのデータ型。 必要があります、[型](/dotnet/api/system.type)データ型。
 
 *dwStyle*<br/>
 コントロールに適用するウィンドウ スタイル。 組み合わせを指定[ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)します。 現時点では、次のスタイルのみがサポートされています。WS_TABSTOP、WS_VISIBLE、WS_DISABLED および WS_GROUP します。
@@ -136,7 +136,7 @@ A [RECT 構造体](/windows/desktop/api/windef/ns-windef-tagrect)コントロー
 
 このメソッドは、MFC コンテナーで .NET Framework Windows フォーム コントロールをインスタンス化します。
 
-メソッドの最初のオーバー ロードは、.NET Framework データ型を受け入れる*p 入力してください*MFC は、この型の新しいオブジェクトをインスタンス化できるようにします。 *p 入力してください*必要があります、[型](https://msdn.microsoft.com/library/system.type)データ型。
+メソッドの最初のオーバー ロードは、.NET Framework データ型を受け入れる*p 入力してください*MFC は、この型の新しいオブジェクトをインスタンス化できるようにします。 *p 入力してください*必要があります、[型](/dotnet/api/system.type)データ型。
 
 メソッドの 2 番目のオーバー ロードに基づき、Windows フォーム コントロールを作成し、`TManagedControl`のテンプレート パラメーター、`CWinFormsControl`クラス。 コントロールの位置とサイズがに基づいて、`RECT`メソッドに渡された構造体。 のみ*dwStyle*のスタイルには重要です。
 
@@ -144,7 +144,7 @@ A [RECT 構造体](/windows/desktop/api/windef/ns-windef-tagrect)コントロー
 
 メソッドの 4 番目のオーバー ロードは、既にインスタンス化された Windows フォーム コントロールに渡すことができる*pControl* MFC をラップします。 同じ型でなければなりません、`TManagedControl`のテンプレート パラメーター、`CWinFormsControl`クラス。
 
-参照してください[MFC における Windows フォーム ユーザー コントロールを使用して](../../dotnet/using-a-windows-form-user-control-in-mfc.md)サンプル Windows フォームを使用して制御します。
+参照してください[MFC における Windows フォーム ユーザー コントロールを使用して](../../dotnet/using-a-windows-form-user-control-in-mfc.md)サンプル [Windows フォームを使用して制御します。
 
 ##  <a name="cwinformscontrol"></a>  CWinFormsControl::CWinFormsControl
 

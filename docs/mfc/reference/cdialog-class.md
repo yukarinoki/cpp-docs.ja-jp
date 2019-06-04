@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CDialog [MFC], OnCancel
 - CDialog [MFC], OnOK
 ms.assetid: ca64b77e-2cd2-47e3-8eff-c2645ad578f9
-ms.openlocfilehash: 9918b1ae38caacf2b2355ace6337e8e5e6260605
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 23d170cf023374fe61e13d907e3c3466c0352fe6
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62168324"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504444"
 ---
 # <a name="cdialog-class"></a>CDialog クラス
 
@@ -276,7 +276,7 @@ virtual INT_PTR DoModal();
 
 ### <a name="return-value"></a>戻り値
 
-**Int**の値を指定する値、*れた*パラメーターに渡された、 [CDialog::EndDialog](#enddialog)メンバー関数は、ダイアログ ボックスを閉じるために使用します。 関数を作成できませんでした ダイアログ ボックスで、または IDABORT 出力ウィンドウがからエラー情報がどのように格納する場合、その他のエラーが発生した場合の場合、戻り値は-1 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)します。
+**Int**の値を指定する値、*れた*パラメーターに渡された、 [CDialog::EndDialog](#enddialog)メンバー関数は、ダイアログ ボックスを閉じるために使用します。 関数を作成できませんでした ダイアログ ボックスで、または IDABORT 出力ウィンドウがからエラー情報がどのように格納する場合、その他のエラーが発生した場合の場合、戻り値は-1 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)します。
 
 ### <a name="remarks"></a>Remarks
 

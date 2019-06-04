@@ -54,12 +54,12 @@ helpviewer_keywords:
 - CImage class
 - transparent color
 ms.assetid: 52861e3d-bf7e-481f-a240-90e88f76c490
-ms.openlocfilehash: 14a4691e0c1f25a8f9e8b2b652c6e582f51c954a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0b61d38d141392dc85a150ddd2caf50b28146ae7
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62235123"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503170"
 ---
 # <a name="cimage-class"></a>CImage クラス
 
@@ -158,7 +158,7 @@ class CImage
 > [!NOTE]
 > グローバルを使用して`CImage`DLL 内のオブジェクトはお勧めしません。 グローバルを使用する必要がある場合`CImage`呼び出し、DLL 内のオブジェクト[CImage::ReleaseGDIPlus](#releasegdiplus) GDI + で使用されるリソースを明示的に解放します。
 
-`CImage` 新しい選択できない[CDC](../../mfc/reference/cdc-class.md)します。 `CImage` イメージの独自の HDC を作成します。 HBITMAP を 1 つ HDC を選択するには、一度に、ため、HBITMAP に関連付けられている、`CImage`別 HDC を選択することはできません。 HDC をな CDC の場合は、取得、`CImage`し [CDC::FromHandle] を付けます (../../mfc/reference/cdc-class.md#cdc__fromhandle します。
+`CImage` 新しい選択できない[CDC](../../mfc/reference/cdc-class.md)します。 `CImage` イメージの独自の HDC を作成します。 HBITMAP を 1 つ HDC を選択するには、一度に、ため、HBITMAP に関連付けられている、`CImage`別 HDC を選択することはできません。 HDC をな CDC の場合は、取得、`CImage`しに付けます[CDC::FromHandle](../../mfc/reference/cdc-class.md#fromhandle)します。
 
 ## <a name="example"></a>例
 
@@ -480,7 +480,7 @@ BOOL CreateEx(
 - BI_BITFIELDS 形式が圧縮されていないと、各ピクセルの赤、緑、および青のコンポーネントをそれぞれ指定する 3 つの DWORD 色マスクのカラー テーブルで構成されます。 これは、16、32 bpp のビットマップを使用すると有効です。
 
 *pdwBitfields*<br/>
-場合にのみ使用*eCompression*設定に BI_BITFIELDS、それ以外の場合があります NULL。 各ピクセルのビットが、色の赤、緑、および青のコンポーネントをそれぞれ使用されますを指定する、3 つの DWORD ビットマスクの配列へのポインター。 ビット フィールドの制限については、次を参照してください。 [BITMAPINFOHEADER](https://msdn.microsoft.com/library/windows/desktop/dd183376) Windows SDK に含まれています。
+場合にのみ使用*eCompression*設定に BI_BITFIELDS、それ以外の場合があります NULL。 各ピクセルのビットが、色の赤、緑、および青のコンポーネントをそれぞれ使用されますを指定する、3 つの DWORD ビットマスクの配列へのポインター。 ビット フィールドの制限については、次を参照してください。 [BITMAPINFOHEADER](/previous-versions//dd183376\(v=vs.85\)) Windows SDK に含まれています。
 
 *dwFlags*<br/>
 Bitmap オブジェクトがアルファ チャネルを持つかどうかを指定します。 次の値の 0 個以上の組み合わせになります。
@@ -648,7 +648,7 @@ int GetBPP() const throw();
 
 この値は、各ピクセルを定義するビットの数と、ビットマップの色の最大数を決定します。
 
-1、4、8、16、24、または 32 ビット/ピクセルは通常は。 参照してください、`biBitCount`のメンバー [BITMAPINFOHEADER](https://msdn.microsoft.com/library/windows/desktop/dd183376)この値の詳細については、Windows SDK に含まれています。
+1、4、8、16、24、または 32 ビット/ピクセルは通常は。 参照してください、`biBitCount`のメンバー [BITMAPINFOHEADER](/previous-versions//dd183376\(v=vs.85\))この値の詳細については、Windows SDK に含まれています。
 
 ##  <a name="getcolortable"></a>  CImage::GetColorTable
 
@@ -715,7 +715,7 @@ static HRESULT GetExporterFilterString(
 *pszAllFilesDescription*<br/>
 このパラメーターが NULL でない場合、フィルター文字列は、一覧の先頭に 1 つの追加フィルターがあります。 このフィルターの現在の値になります*pszAllFilesDescription*説明の一覧で、その他のエクスポーターでサポートされている任意の拡張機能のファイルを受け取るとします。
 
-例えば:
+例:
 
 ```cpp
 //First filter in the list will be titled "All Image Files", and
@@ -765,7 +765,7 @@ Mfc の結果の書式指定文字列を渡すことができます[CFileDialog]
 
 ファイルの description0&#124;\*.ext0&#124;filedescription1&#124;\*.ext1&#124;... .file 説明*n*&#124;\*.ext *n*&#124;&#124;
 
-場所 '&#124;' で指定された区切り記号文字`chSeparator`します。 例:
+場所 '&#124;' で指定された区切り記号文字`chSeparator`します。 例えば:
 
 `"Bitmap format|*.bmp|JPEG format|*.jpg|GIF format|*.gif|PNG format|*.png||"`
 
@@ -810,7 +810,7 @@ static HRESULT GetImporterFilterString(
 *pszAllFilesDescription*<br/>
 このパラメーターが NULL でない場合、フィルター文字列は、一覧の先頭に 1 つの追加フィルターがあります。 このフィルターの現在の値になります*pszAllFilesDescription*説明の一覧で、その他のエクスポーターでサポートされている任意の拡張機能のファイルを受け取るとします。
 
-例えば:
+例:
 
 ```cpp
 //First filter in the list will be titled "All Image Files", and
@@ -856,7 +856,7 @@ Mfc の結果の書式指定文字列を渡すことができます[CFileDialog]
 
 ファイルの description0&#124;\*.ext0&#124;filedescription1&#124;\*.ext1&#124;... .file 説明*n*&#124;\*.ext *n*&#124;&#124;
 
-場所 '&#124;' で指定された区切り記号*chSeparator*します。 例えば:
+場所 '&#124;' で指定された区切り記号*chSeparator*します。 例:
 
 `"Bitmap format|*.bmp|JPEG format|*.jpg|GIF format|*.gif|PNG format|*.png||"`
 

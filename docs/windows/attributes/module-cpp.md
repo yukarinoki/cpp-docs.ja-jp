@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - module attributes
 ms.assetid: 02223b2a-62b5-4262-832f-564b1e11e58e
-ms.openlocfilehash: 5c69e0aa9e3444ec9b43470f8feb4d1f870dc9c8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8348a56171836642db5c44cd5d075ba9d2c33769
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409188"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503853"
 ---
 # <a name="module-c"></a>module (C++)
 
@@ -73,7 +73,7 @@ ms.locfileid: "62409188"
 (省略可能)ライブラリのメンバーは、任意に呼び出すことはできません。 詳細については、「 [restricted](/windows/desktop/Midl/restricted) 」の MIDL 属性に関する説明を参照してください。
 
 *custom*<br/>
-(省略可能)1 つまたは複数の属性です。これに似ています、[カスタム](custom-cpp.md)属性。 最初のパラメーター*カスタム*属性の GUID です。 例:
+(省略可能)1 つまたは複数の属性です。これに似ています、[カスタム](custom-cpp.md)属性。 最初のパラメーター*カスタム*属性の GUID です。 例えば:
 
 ```
 [module(custom={guid,1}, custom={guid1,2})]
@@ -97,7 +97,7 @@ DLL、実行可能ファイルまたはサービスの登録に使用される .
 
 - `type` = **dll**
 
-   [CAtlDllModuleT](../../atl/reference/catldllmodulet-class.md) は COM サーバーに必要な基本クラスと標準の DLL エントリ ポイントとして使用されます。 これらのエントリ ポイントは、 [DllMain](/windows/desktop/Dlls/dllmain)、 [DllRegisterServer](/windows/desktop/api/olectl/nf-olectl-dllregisterserver)、 [DllUnRegisterServer](/windows/desktop/api/olectl/nf-olectl-dllunregisterserver)、 [DllCanUnloadNow](/windows/desktop/api/combaseapi/nf-combaseapi-dllcanunloadnow)、および [DllGetClassObject](https://msdn.microsoft.com/library/windows/desktop/dd797891)です。
+   [CAtlDllModuleT](../../atl/reference/catldllmodulet-class.md) は COM サーバーに必要な基本クラスと標準の DLL エントリ ポイントとして使用されます。 これらのエントリ ポイントは、 [DllMain](/windows/desktop/Dlls/dllmain)、 [DllRegisterServer](/windows/desktop/api/olectl/nf-olectl-dllregisterserver)、 [DllUnRegisterServer](/windows/desktop/api/olectl/nf-olectl-dllunregisterserver)、 [DllCanUnloadNow](/windows/desktop/api/combaseapi/nf-combaseapi-dllcanunloadnow)、および [DllGetClassObject](/previous-versions//dd797891\(v=vs.85\))です。
 
 - `type` = **exe**
 

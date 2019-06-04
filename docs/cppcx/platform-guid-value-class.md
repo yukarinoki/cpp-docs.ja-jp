@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Guid Struct
 ms.assetid: 25c0bfb2-7f93-44d8-bdf4-ef4fbac3424a
-ms.openlocfilehash: 64c70b619380d7c2ed4aaaecad3ee01a1d0f79c7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8d6c71028e4f93064c7b4df978678b5f7c26d6bc
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383322"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504530"
 ---
 # <a name="platformguid-value-class"></a>Platform::Guid 値クラス
 
-[GUID](https://msdn.microsoft.com/library/windows/desktop/aa373931) の種類を、Windows ランタイムの型システムで表します。
+[GUID](/previous-versions/aa373931\(v=vs.80\)) の種類を、Windows ランタイムの型システムで表します。
 
 ## <a name="syntax"></a>構文
 
@@ -115,7 +115,7 @@ Guid(
 次のバイト、`GUID`します。
 
 *m*<br/>
-A`GUID`形式で、 [GUID 構造体](https://msdn.microsoft.com/library/windows/desktop/aa373931)します。
+A`GUID`形式で、 [GUID 構造体](/previous-versions/aa373931\(v=vs.80\))します。
 
 *n*<br/>
 残りの 8 バイト、`GUID`します。
@@ -194,7 +194,7 @@ True の場合*guid1*前に順序付けは*guid2*します。 各に扱える後
 
 ## <a name="operator-call"></a> Guid::operator() 演算子
 
-暗黙的に変換を`Platform::Guid`を[GUID 構造体](https://msdn.microsoft.com/library/windows/desktop/aa373931)します。
+暗黙的に変換を`Platform::Guid`を[GUID 構造体](/previous-versions/aa373931\(v=vs.80\))します。
 
 ### <a name="syntax"></a>構文
 
@@ -204,7 +204,7 @@ const GUID& Platform::Guid::operator();
 
 ### <a name="return-value"></a>戻り値
 
-A [GUID 構造体](https://msdn.microsoft.com/library/windows/desktop/aa373931)します。
+A [GUID 構造体](/previous-versions/aa373931\(v=vs.80\))します。
 
 ## <a name="see-also"></a>関連項目
 

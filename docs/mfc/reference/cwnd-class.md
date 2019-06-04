@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: fc92497c4d43238f9cf6aea7132afb8c8dc27fbd
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 50558e6959789dddc8223804394a0b242f793de5
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66451231"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504250"
 ---
 # <a name="cwnd-class"></a>CWnd クラス
 
@@ -5607,7 +5607,7 @@ BOOL LockWindowUpdate();
 
 ロックされたウィンドウを移動することはできません。 一度に 1 つのウィンドウをロックできます。 ロックされているウィンドウのロックを解除する`LockWindowUpdate`、呼び出す[UnlockWindowUpdate](#unlockwindowupdate)します。
 
-場合、ロックされているウィンドウ (またはロックされている子ウィンドウ) でアプリケーションの呼び出し、 [GetDC、](https://msdn.microsoft.com/library/windows/desktop/dd144871) [GetDCEx、](https://msdn.microsoft.com/library/windows/desktop/dd144873)または[BeginPaint](/windows/desktop/api/winuser/nf-winuser-beginpaint) Windows 関数の場合は、呼び出された関数が、デバイスを返しますコンテキストの可視領域が空です。 これは、アプリケーションを呼び出して、ウィンドウのロックを解除するまで、発生、`UnlockWindowUpdate`メンバー関数。
+場合、ロックされているウィンドウ (またはロックされている子ウィンドウ) でアプリケーションの呼び出し、 [GetDC、](/windows/desktop/api/winuser/nf-winuser-getdc) [GetDCEx、](/windows/desktop/api/winuser/nf-winuser-getdcex)または[BeginPaint](/windows/desktop/api/winuser/nf-winuser-beginpaint) Windows 関数の場合は、呼び出された関数が、デバイスを返しますコンテキストの可視領域が空です。 これは、アプリケーションを呼び出して、ウィンドウのロックを解除するまで、発生、`UnlockWindowUpdate`メンバー関数。
 
 ウィンドウの更新がロックされているときに、システムの追跡、ロックされているウィンドウに関連付けられているデバイス コンテキストへの描画操作の外接する四角形。 ロックされたウィンドウと強制的にその子ウィンドウのこの外接する四角形が無効な描画が再び有効にすると[WM_PAINT](/windows/desktop/gdi/wm-paint)画面を更新するメッセージ。 描画が発生していない場合、ウィンドウが更新されたロック中に無効に領域はされません。
 
@@ -10038,7 +10038,7 @@ afx_msg void OnUserChanged();
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは受信、 [WM_USERCHANGED](https://msdn.microsoft.com/library/windows/desktop/ms632651)通知メッセージは、Windows SDK に記載されています。 ユーザーがログオンまたはログオフ、オペレーティング システムは、ユーザーに固有の設定を更新します。 システムでは、設定を更新した後すぐにこのメッセージを送信します。
+このメソッドは受信、 [WM_USERCHANGED](/windows/desktop/winmsg/wm-userchanged)通知メッセージは、Windows SDK に記載されています。 ユーザーがログオンまたはログオフ、オペレーティング システムは、ユーザーに固有の設定を更新します。 システムでは、設定を更新した後すぐにこのメッセージを送信します。
 
 > [!NOTE]
 > このメンバー関数は、アプリケーションで Windows メッセージを処理できるようにするためにフレームワークによって呼び出されます。 関数に渡されるパラメーターは、メッセージを受信したときにフレームワークが受信したパラメーターを反映します。 この関数の基底クラス実装を呼び出す場合、その実装は、関数に指定したパラメーターではなく、メッセージと共に渡されたパラメーターを使用します。

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CNetAddressCtrl [MFC], GetAllowType
 - CNetAddressCtrl [MFC], SetAllowType
 ms.assetid: cb4c6aca-3f49-4b52-b76c-65f57096155b
-ms.openlocfilehash: ec4d7aa6f2a1061e632b81a27a0233cf5fdd1c63
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 23160c51466ce1a2857d3648dd5f4970dfe172f7
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62373823"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504209"
 ---
 # <a name="cnetaddressctrl-class"></a>CNetAddressCtrl クラス
 
@@ -74,7 +74,7 @@ class CNetAddressCtrl : public CEdit
 
 ## <a name="example"></a>例
 
-ダイアログのヘッダー ファイルから次のコード例を定義、 [NC_ADDRESS](/windows/desktop/api/shellapi/ns-shellapi-tagnc_address)と[NET_ADDRESS_INFO](https://msdn.microsoft.com/library/windows/desktop/bb773346)に必要な変数、 [CNetAddressCtrl::GetAddress](#getaddress)メソッド。
+ダイアログのヘッダー ファイルから次のコード例を定義、 [NC_ADDRESS](/windows/desktop/api/shellapi/ns-shellapi-tagnc_address)と[NET_ADDRESS_INFO](/windows/desktop/shell/hkey-type)に必要な変数、 [CNetAddressCtrl::GetAddress](#getaddress)メソッド。
 
 [!code-cpp[NVC_MFC_CNetAddressCtrl_s1#2](../../mfc/reference/codesnippet/cpp/cnetaddressctrl-class_2.h)]
 
@@ -191,7 +191,7 @@ HRESULT GetAddress(PNC_ADDRESS pAddress) const;
 ### <a name="parameters"></a>パラメーター
 
 *pAddress*<br/>
-[入力、出力]ポインター、 [NC_ADDRESS](/windows/desktop/api/shellapi/ns-shellapi-tagnc_address)構造体。  設定、 *pAddrInfo*のアドレスにこの構造体のメンバー、 [NET_ADDRESS_INFO](https://msdn.microsoft.com/library/windows/desktop/bb773346) GetAddress メソッドを呼び出す前に構造体します。
+[入力、出力]ポインター、 [NC_ADDRESS](/windows/desktop/api/shellapi/ns-shellapi-tagnc_address)構造体。  設定、 *pAddrInfo*のアドレスにこの構造体のメンバー、 [NET_ADDRESS_INFO](/windows/desktop/shell/hkey-type) GetAddress メソッドを呼び出す前に構造体します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -199,7 +199,7 @@ HRESULT GetAddress(PNC_ADDRESS pAddress) const;
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドが成功した場合、 [NET_ADDRESS_INFO](https://msdn.microsoft.com/library/windows/desktop/bb773346)構造体には、ネットワーク アドレスに関する追加情報が含まれています。
+このメソッドが成功した場合、 [NET_ADDRESS_INFO](/windows/desktop/shell/hkey-type)構造体には、ネットワーク アドレスに関する追加情報が含まれています。
 
 使用して、 [CNetAddressCtrl::SetAllowType](#setallowtype)メソッドを現在のネットワーク アドレス コントロールがサポートできるアドレスの種類を指定します。 使用して、 [CNetAddressCtrl::GetAddress](#getaddress)メソッドを検証して、ユーザーが入力したネットワーク アドレスを解析します。 使用して、 [CNetAddressCtrl::DisplayErrorTip](#displayerrortip)場合に、エラー メッセージのヒントを表示するメソッド、 [CNetAddressCtrl::GetAddress](#getaddress)メソッドが成功しました。
 
@@ -215,7 +215,7 @@ DWORD GetAllowType() const;
 
 ### <a name="return-value"></a>戻り値
 
-アドレスの種類を指定するフラグのビットごとの組み合わせ (OR)、ネットワーク アドレス コントロールをサポートできます。 詳細については、次を参照してください。 [NET_STRING](https://msdn.microsoft.com/library/windows/desktop/bb762586)します。
+アドレスの種類を指定するフラグのビットごとの組み合わせ (OR)、ネットワーク アドレス コントロールをサポートできます。 詳細については、次を参照してください。 [NET_STRING](/windows/desktop/shell/net-string)します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -233,7 +233,7 @@ HRESULT SetAllowType(DWORD dwAddrMask);
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*dwAddrMask*|[in]アドレスの種類を指定するフラグのビットごとの組み合わせ (OR)、ネットワーク アドレス コントロールをサポートできます。 詳細については、次を参照してください。 [NET_STRING](https://msdn.microsoft.com/library/windows/desktop/bb762586)します。|
+|*dwAddrMask*|[in]アドレスの種類を指定するフラグのビットごとの組み合わせ (OR)、ネットワーク アドレス コントロールをサポートできます。 詳細については、次を参照してください。 [NET_STRING](/windows/desktop/shell/net-string)します。|
 
 ### <a name="return-value"></a>戻り値
 

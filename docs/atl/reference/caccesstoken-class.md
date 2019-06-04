@@ -52,12 +52,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAccessToken class
 ms.assetid: bb5c5945-56a5-4083-b442-76573cee83ab
-ms.openlocfilehash: 0b98df740b751d019c9b2852d682f61a51384818
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ce5c29c2399fd47bdb1ad0135257b41617094aa9
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62260728"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503379"
 ---
 # <a name="caccesstoken-class"></a>CAccessToken クラス
 
@@ -246,7 +246,7 @@ bool CreatePrimaryToken(
 新しいトークンの要求されたアクセス権を指定します。 MAXIMUM_ALLOWED、既定では、呼び出し元が有効なすべてのアクセス権を要求します。 参照してください[アクセス権やアクセス マスク](/windows/desktop/SecAuthZ/access-rights-and-access-masks)詳細にアクセス権限。
 
 *pTokenAttributes*<br/>
-ポインターを[SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560)構造体を新しいトークンのセキュリティ記述子を指定し、子プロセスが、トークンを継承できるかどうかを決定します。 場合*pTokenAttributes* null、トークンは、既定のセキュリティ記述子を取得およびハンドルは継承できません。
+ポインターを[SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\))構造体を新しいトークンのセキュリティ記述子を指定し、子プロセスが、トークンを継承できるかどうかを決定します。 場合*pTokenAttributes* null、トークンは、既定のセキュリティ記述子を取得およびハンドルは継承できません。
 
 ### <a name="return-value"></a>戻り値
 
@@ -295,10 +295,10 @@ bool CreateProcessAsUser(
 ユーザーのプロファイルが読み込まれる TRUE の場合、 [LoadUserProfile](/windows/desktop/api/userenv/nf-userenv-loaduserprofilea)します。
 
 *pProcessAttributes*<br/>
-ポインターを[SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560)構造体を新しいプロセスのセキュリティ記述子を指定し、返されたハンドルを子プロセスが継承するかどうかを決定します。 場合*pProcessAttributes* null、プロセスは、既定のセキュリティ記述子を取得およびハンドルは継承できません。
+ポインターを[SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\))構造体を新しいプロセスのセキュリティ記述子を指定し、返されたハンドルを子プロセスが継承するかどうかを決定します。 場合*pProcessAttributes* null、プロセスは、既定のセキュリティ記述子を取得およびハンドルは継承できません。
 
 *pThreadAttributes*<br/>
-ポインターを[SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560)構造体を新しいスレッドのセキュリティ記述子を指定し、返されたハンドルを子プロセスが継承するかどうかを決定します。 場合*pThreadAttributes* null、スレッドは、既定のセキュリティ記述子を取得およびハンドルは継承できません。
+ポインターを[SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\))構造体を新しいスレッドのセキュリティ記述子を指定し、返されたハンドルを子プロセスが継承するかどうかを決定します。 場合*pThreadAttributes* null、スレッドは、既定のセキュリティ記述子を取得およびハンドルは継承できません。
 
 *bInherit*<br/>
 新しいプロセスが呼び出し元のプロセスからハンドルを継承するかどうかを示します。 TRUE の場合、呼び出し元のプロセスで継承可能な各開いているハンドルは、新しいプロセスによって継承されます。 継承されたハンドルは、元のハンドルと同じ値とアクセス権限を持っています。

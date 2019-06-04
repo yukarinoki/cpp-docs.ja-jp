@@ -64,12 +64,12 @@ helpviewer_keywords:
 - CHeaderCtrl [MFC], SetItem
 - CHeaderCtrl [MFC], SetOrderArray
 ms.assetid: b847ac90-5fae-4a87-88e0-ca45f77b8b3b
-ms.openlocfilehash: 51cdfb481892ba5057d4ca26ff4d6e51665557e5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5268a5ae336b0f96dfd6c0bd348a883e85ac32e6
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160199"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503554"
 ---
 # <a name="cheaderctrl-class"></a>CHeaderCtrl クラス
 
@@ -761,7 +761,7 @@ int OrderToIndex(int nOrder) const;
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は、Win32 のマクロの動作を実装[HDM_ORDERTOINDEX](https://msdn.microsoft.com/library/windows/desktop/bb775355)」の説明に従って、Windows SDK。 ヘッダー項目の並べ替えをサポートするために提供されます。
+このメンバー関数は、Win32 のマクロの動作を実装[HDM_ORDERTOINDEX](/windows/desktop/controls/hdm-ordertoindex)」の説明に従って、Windows SDK。 ヘッダー項目の並べ替えをサポートするために提供されます。
 
 ##  <a name="setbitmapmargin"></a>  CHeaderCtrl::SetBitmapMargin
 

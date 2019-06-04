@@ -132,12 +132,12 @@ helpviewer_keywords:
 - CFileDialog [MFC], OnTypeChange
 - CFileDialog [MFC], m_ofn
 ms.assetid: fda4fd3c-08b8-4ce0-8e9d-7bab23f8c6c0
-ms.openlocfilehash: f74d883fa0dcdce025345848caf49069736ee0fa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fe4994b91813e2965972b47c838ddaf5333cc5f0
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385366"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503776"
 ---
 # <a name="cfiledialog-class"></a>CFileDialog クラス
 
@@ -512,7 +512,7 @@ void ApplyOFNToShellDialog();
 
 ### <a name="remarks"></a>Remarks
 
-Windows Vista では、メンバーの前に Windows のバージョンで[OPENFILENAME](https://msdn.microsoft.com/library/ms911906.aspx)データ構造がの状態と同期が継続的に、`CFileDialog`します。 変更、 [m_ofn](#m_ofn)メンバー変数が、ダイアログ ボックスの状態に直ちに反映されます。 ダイアログ ボックスの状態に変更がすぐに更新することも、`m_ofn`メンバー変数。
+Windows Vista では、メンバーの前に Windows のバージョンで[OPENFILENAME](/previous-versions/windows/embedded/ms911906\(v=msdn.10\))データ構造がの状態と同期が継続的に、`CFileDialog`します。 変更、 [m_ofn](#m_ofn)メンバー変数が、ダイアログ ボックスの状態に直ちに反映されます。 ダイアログ ボックスの状態に変更がすぐに更新することも、`m_ofn`メンバー変数。
 
 Windows Vista 以降では、値、`m_ofn`メンバー変数との状態、`CFileDialog`が同期されるとは限りません。 この関数の状態の強制、`CFileDialog`一致するように更新する、`m_ofn`構造体。 Windows の呼び出し時に自動的にこの関数[CFileDialog::DoModal](#domodal)します。
 
@@ -1626,7 +1626,7 @@ void UpdateOFNFromShellDialog();
 
 ### <a name="remarks"></a>Remarks
 
-Windows Vista では、メンバーの前に Windows のバージョンで[OPENFILENAME](https://msdn.microsoft.com/library/ms911906.aspx)データ構造がの状態と同期が継続的に、`CFileDialog`します。 変更、 [m_ofn](#m_ofn)メンバー変数 ダイアログ ボックスの状態に直接影響します。 また、ダイアログの状態を変更はすぐに m_ofn メンバー変数を更新します。
+Windows Vista では、メンバーの前に Windows のバージョンで[OPENFILENAME](/previous-versions/windows/embedded/ms911906\(v=msdn.10\))データ構造がの状態と同期が継続的に、`CFileDialog`します。 変更、 [m_ofn](#m_ofn)メンバー変数 ダイアログ ボックスの状態に直接影響します。 また、ダイアログの状態を変更はすぐに m_ofn メンバー変数を更新します。
 
 Windows Vista 以降では、`m_ofn`データ構造が自動的に更新されません。 内のデータの精度を保証するために、`m_ofn`メンバー変数を呼び出す必要があります、`UpdateOFNFromShellDialog`データにアクセスする前に関数。 Windows からこの関数が自動的に処理中に[IFileDialog::OnFileOK](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ifiledialogevents-onfileok)します。
 
