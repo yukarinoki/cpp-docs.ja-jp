@@ -402,12 +402,12 @@ helpviewer_keywords:
 - CDC [MFC], m_hAttribDC
 - CDC [MFC], m_hDC
 ms.assetid: 715b3334-cb2b-4c9c-8067-02eb7c66c8b2
-ms.openlocfilehash: 2ff6cd6e0817f74c7688fc573d4b98f70704f96c
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: a6b6c872963dbbdf991d013cceba66ffd20bac5c
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222579"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504399"
 ---
 # <a name="cdc-class"></a>CDC クラス
 
@@ -3220,7 +3220,7 @@ int GetGraphicsMode() const;
 
 失敗した場合は 0 を返します。
 
-拡張エラー情報を取得するには呼び出します[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)します。
+拡張エラー情報を取得するには呼び出します[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -3276,7 +3276,7 @@ DWORD GetLayout() const;
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合、レイアウトは、現在のデバイス コンテキストのフラグします。 それ以外の場合、GDI_ERROR します。 エラーの詳細については、呼び出す[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)します。 レイアウトのフラグの一覧は、次を参照してください。 [CDC::SetLayout](#setlayout)します。
+成功した場合、レイアウトは、現在のデバイス コンテキストのフラグします。 それ以外の場合、GDI_ERROR します。 エラーの詳細については、呼び出す[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)します。 レイアウトのフラグの一覧は、次を参照してください。 [CDC::SetLayout](#setlayout)します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -4012,7 +4012,7 @@ BOOL GetWorldTransform(XFORM& rXform) const;
 
 失敗した場合は 0 を返します。
 
-拡張エラー情報を取得するには呼び出します[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)します。
+拡張エラー情報を取得するには呼び出します[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -4459,7 +4459,7 @@ BOOL ModifyWorldTransform(
 
 失敗した場合は 0 を返します。
 
-拡張エラー情報を取得するには呼び出します[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)します。
+拡張エラー情報を取得するには呼び出します[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -6003,7 +6003,7 @@ int SetGraphicsMode(int iMode);
 
 成功した場合、古いグラフィックス モードを返します。
 
-失敗した場合は 0 を返します。 拡張エラー情報を取得するには呼び出します[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)します。
+失敗した場合は 0 を返します。 拡張エラー情報を取得するには呼び出します[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -6032,7 +6032,7 @@ DWORD SetLayout(DWORD dwLayout);
 
 成功した場合、デバイス コンテキストの以前のレイアウト。
 
-失敗した場合、GDI_ERROR します。 拡張エラー情報を取得するには呼び出します[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)します。
+失敗した場合、GDI_ERROR します。 拡張エラー情報を取得するには呼び出します[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -6657,7 +6657,7 @@ BOOL SetWorldTransform(const XFORM& rXform);
 
 失敗した場合は 0 を返します。
 
-拡張エラー情報を取得するには呼び出します[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)します。
+拡張エラー情報を取得するには呼び出します[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)します。
 
 ### <a name="remarks"></a>Remarks
 

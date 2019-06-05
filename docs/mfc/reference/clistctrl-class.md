@@ -264,12 +264,12 @@ helpviewer_keywords:
 - CListCtrl [MFC], SubItemHitTest
 - CListCtrl [MFC], Update
 ms.assetid: fe08a1ca-4b05-4ff7-a12a-ee4c765a2197
-ms.openlocfilehash: eea37d03ca5a4fab450fbca0c4c3f6c76fefb407
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1cdc4bfacee4913d3a38aaa45aadf0a430e547ab
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62225252"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503441"
 ---
 # <a name="clistctrl-class"></a>CListCtrl クラス
 
@@ -1367,7 +1367,7 @@ BOOL GetGroupInfoByIndex(
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、 [LVM_GETGROUPINFOBYINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774933)メッセージは、Windows SDK で説明-->。
+このメソッドは、送信、 [LVM_GETGROUPINFOBYINDEX](/windows/desktop/controls/lvm-getgroupinfobyindex)メッセージは、Windows SDK で説明-->。
 
 ### <a name="example"></a>例
 
@@ -1787,7 +1787,7 @@ BOOL GetItemIndexRect(
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*pItemIndex*|[in]ポインター、[記述](https://msdn.microsoft.com/library/windows/desktop/bb774762)サブ項目の親項目の構造体。<br /><br /> 呼び出し元がのメンバーを設定したり、[記述](https://msdn.microsoft.com/library/windows/desktop/bb774762)構造体。 このパラメーターは、NULL にすることはできません。|
+|*pItemIndex*|[in]ポインター、[記述](/windows/desktop/api/commctrl/ns-commctrl-lvitemindex)サブ項目の親項目の構造体。<br /><br /> 呼び出し元がのメンバーを設定したり、[記述](/windows/desktop/api/commctrl/ns-commctrl-lvitemindex)構造体。 このパラメーターは、NULL にすることはできません。|
 |*iColumn*|[in]コントロール内の列の 0 から始まるインデックス。|
 |*rectType*|[in]外接する四角形を取得するリスト ビューのサブ項目の部分です。 次のいずれかの値を指定します。<br /><br /> LVIR_BOUNDS - アイコンとラベルを含む全体のサブ項目の外接する四角形を返します。<br /><br /> LVIR_ICON は、アイコンまたは小さいアイコンのサブ項目の外接する四角形を返します。<br /><br /> LVIR_LABEL - は、サブ項目のテキストの外接する四角形を返します。|
 |*pRect*|[out]ポインターを[RECT](/previous-versions/dd162897\(v=vs.85\))サブ項目の外接する四角形に関する情報を受け取る構造体。<br /><br /> 呼び出し元を割り当て、 [RECT](/previous-versions/dd162897\(v=vs.85\))構造体。 このパラメーターは、NULL にすることはできません。|
@@ -2093,8 +2093,8 @@ BOOL GetNextItemIndex(
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*pItemIndex*|[入力、出力]ポインター、[記述](https://msdn.microsoft.com/library/windows/desktop/bb774762)検索開始位置となる項目を記述する構造体または内のフラグに一致する最初の項目を検索する場合は-1、 *nFlags*パラメーター。<br /><br /> このメソッドが成功した場合、`LVITEMINDEX`構造体には、検索で見つかった項目がについて説明します。|
-|*nFlags*|[in]検索を実行する方法を指定するフラグのビットごとの組み合わせ (OR)。<br /><br /> 検索インデックス、状態、または、ターゲット項目の外観に依存またはで指定された項目を基準としたターゲット項目の物理的な位置、 *pItemIndex*パラメーター。 詳細については、次を参照してください。、*フラグ*パラメーター、 [LVM_GETNEXTITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb761059)メッセージ。|
+|*pItemIndex*|[入力、出力]ポインター、[記述](/windows/desktop/api/commctrl/ns-commctrl-lvitemindex)検索開始位置となる項目を記述する構造体または内のフラグに一致する最初の項目を検索する場合は-1、 *nFlags*パラメーター。<br /><br /> このメソッドが成功した場合、`LVITEMINDEX`構造体には、検索で見つかった項目がについて説明します。|
+|*nFlags*|[in]検索を実行する方法を指定するフラグのビットごとの組み合わせ (OR)。<br /><br /> 検索インデックス、状態、または、ターゲット項目の外観に依存またはで指定された項目を基準としたターゲット項目の物理的な位置、 *pItemIndex*パラメーター。 詳細については、次を参照してください。、*フラグ*パラメーター、 [LVM_GETNEXTITEMINDEX](/windows/desktop/controls/lvm-getnextitemindex)メッセージ。|
 
 ### <a name="return-value"></a>戻り値
 
@@ -2104,7 +2104,7 @@ BOOL GetNextItemIndex(
 
 呼び出し元がのメンバーを設定したり、`LVITEMINDEX`によって示される構造体、 *pItemIndex*パラメーター。
 
-このメソッドは、送信、 [LVM_GETNEXTITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb761059)メッセージは、Windows SDK で説明します。
+このメソッドは、送信、 [LVM_GETNEXTITEMINDEX](/windows/desktop/controls/lvm-getnextitemindex)メッセージは、Windows SDK で説明します。
 
 ## <a name="getnextselecteditem"></a>  CListCtrl::GetNextSelectedItem
 
@@ -2909,7 +2909,7 @@ UINT MapIDToIndex(UINT id) const;
 
 マルチ スレッド環境で、インデックスが保証されるは、バック グラウンド スレッドではなく、リスト ビュー コントロールをホストしているスレッドでのみに注意してください。
 
-このメソッドは、送信、 [LVM_MAPIDTOINDEX](https://msdn.microsoft.com/library/windows/desktop/bb761137)メッセージは、Windows SDK で説明します。
+このメソッドは、送信、 [LVM_MAPIDTOINDEX](/windows/desktop/controls/lvm-mapidtoindex)メッセージは、Windows SDK で説明します。
 
 ## <a name="mapindextoid"></a>  CListCtrl::MapIndexToID
 
@@ -3822,7 +3822,7 @@ BOOL SetItemIndexState(
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*pItemIndex*|[in]ポインター、[記述](https://msdn.microsoft.com/library/windows/desktop/bb774762)項目を記述する構造体。 呼び出し元は、この構造体を割り当てると、そのメンバーを設定します。|
+|*pItemIndex*|[in]ポインター、[記述](/windows/desktop/api/commctrl/ns-commctrl-lvitemindex)項目を記述する構造体。 呼び出し元は、この構造体を割り当てると、そのメンバーを設定します。|
 |*dwState*|[in]項目を設定する状態のビットごとの組み合わせである[ビュー項目の状態を一覧表示](/windows/desktop/Controls/list-view-item-states)します。 0 にリセット、または、状態を設定するいずれかを指定します。|
 |*dwMask*|[in]指定された状態の有効なビット マスク、 *dwState*パラメーター。 ビットごとの組み合わせ (OR) を指定[ビュー項目の状態を一覧表示](/windows/desktop/Controls/list-view-item-states)します。|
 

@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CPalette [MFC], ResizePalette
 - CPalette [MFC], SetPaletteEntries
 ms.assetid: 8cd95498-53ed-4852-85e1-70e522541114
-ms.openlocfilehash: f0105a8ee33a57f7431a9c6a97b4b132f291f42a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1dc29a675f6ab3883683b3afae7e22e7ed0f1cc3
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62373181"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504760"
 ---
 # <a name="cpalette-class"></a>CPalette クラス
 
@@ -111,7 +111,7 @@ void AnimatePalette(
 アニメーション化するパレット内のエントリの数を指定します。
 
 *lpPaletteColors*<br/>
-配列の最初のメンバーを指す[受け取る](https://msdn.microsoft.com/library/windows/desktop/dd162769)構造で識別されるパレット エントリを置き換え*nStartIndex*と*とも*します。
+配列の最初のメンバーを指す[受け取る](/previous-versions/dd162769\(v=vs.85\))構造で識別されるパレット エントリを置き換え*nStartIndex*と*とも*します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -245,7 +245,7 @@ UINT GetPaletteEntries(
 論理パレットを取得するエントリの数を指定します。
 
 *lpPaletteColors*<br/>
-配列を指す[受け取る](https://msdn.microsoft.com/library/windows/desktop/dd162769)パレット エントリを受信するデータ構造体。 配列で指定された数以上のデータ構造を含める必要があります*とも*します。
+配列を指す[受け取る](/previous-versions/dd162769\(v=vs.85\))パレット エントリを受信するデータ構造体。 配列で指定された数以上のデータ構造を含める必要があります*とも*します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -312,7 +312,7 @@ UINT SetPaletteEntries(
 設定する論理パレットのエントリの数を指定します。
 
 *lpPaletteColors*<br/>
-配列を指す[受け取る](https://msdn.microsoft.com/library/windows/desktop/dd162769)パレット エントリを受信するデータ構造体。 配列で指定された数以上のデータ構造を含める必要があります*とも*します。
+配列を指す[受け取る](/previous-versions/dd162769\(v=vs.85\))パレット エントリを受信するデータ構造体。 配列で指定された数以上のデータ構造を含める必要があります*とも*します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -322,7 +322,7 @@ UINT SetPaletteEntries(
 
 アプリケーションを呼び出すときに、論理パレットがデバイス コンテキストに選択されるかどうか`SetPaletteEntries`、変更は反映されません、アプリケーションが[:realizepalette](../../mfc/reference/cdc-class.md#realizepalette)します。
 
-Windows 構造体の詳細については`PALETTEENTRY`を参照してください[受け取る](https://msdn.microsoft.com/library/windows/desktop/dd162769)Windows SDK に含まれています。
+詳細については、次を参照してください。[受け取る](/previous-versions/dd162769\(v=vs.85\))Windows SDK に含まれています。
 
 ## <a name="see-also"></a>関連項目
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - implements_category attribute
 ms.assetid: fb162df3-1ebe-43dc-a084-668d7ef8c03f
-ms.openlocfilehash: beca804fae8d6e82b4664102b39d76a23e66ca59
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bbd859018210d3c972ae9d4b0e9f659d96d95aab
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409409"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504204"
 ---
 # <a name="implementscategory"></a>implements_category
 
@@ -30,7 +30,7 @@ ms.locfileid: "62409409"
 
 ## <a name="remarks"></a>Remarks
 
-**Implements_category** C++属性がターゲット クラスで実装されたコンポーネントのカテゴリを指定します。 これは、カテゴリのマップを作成して、によって指定された別のエントリを追加することで、 **implements_category**属性。 詳細については、次を参照してください。[コンポーネントのカテゴリと方法は、作業には何ですか?](https://msdn.microsoft.com/library/windows/desktop/ms694322)します。
+**Implements_category** C++属性がターゲット クラスで実装されたコンポーネントのカテゴリを指定します。 これは、カテゴリのマップを作成して、によって指定された別のエントリを追加することで、 **implements_category**属性。 詳細については、次を参照してください。[コンポーネント カテゴリ and How They Work](/windows/desktop/com/component-categories-and-how-they-work)します。
 
 この属性を使用するには、 [coclass](coclass.md)、 [progid](progid.md)、または [vi_progid](vi-progid.md) 属性 (または、これらのいずれかを意味する別の属性) も同じ要素に適用する必要があります。 いずれか 1 つの属性を使用すると、他の 2 つも自動的に適用されます。 たとえば場合、`progid`が適用される`vi_progid`と`coclass`も適用されます。
 

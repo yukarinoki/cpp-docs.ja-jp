@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CCmdTarget [MFC], OnFinalRelease
 - CCmdTarget [MFC], RestoreWaitCursor
 ms.assetid: 8883b132-2057-4ce0-a5f2-88979f8f2b13
-ms.openlocfilehash: 9314717fab53b1a89b87d657ec617a4c6bd45b8b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4db220ce28ecd762796f196e611a69ce157d2efa
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62206442"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504460"
 ---
 # <a name="ccmdtarget-class"></a>CCmdTarget クラス
 
@@ -284,7 +284,7 @@ virtual BOOL GetDispatchIID(IID* pIID);
 ### <a name="parameters"></a>パラメーター
 
 *pIID*<br/>
-インターフェイス ID へのポインター (、 [GUID](https://msdn.microsoft.com/library/windows/desktop/aa373931))。
+インターフェイス ID へのポインター (、 [GUID](/previous-versions/aa373931\(v=vs.80\)))。
 
 ### <a name="return-value"></a>戻り値
 
@@ -350,7 +350,7 @@ HRESULT GetTypeInfoOfGuid(
 ロケール識別子 ( `LCID`)。
 
 *guid*<br/>
-[GUID](https://msdn.microsoft.com/library/windows/desktop/aa373931)の型の説明。
+[GUID](/previous-versions/aa373931\(v=vs.80\))の型の説明。
 
 *ppTypeInfo*<br/>
 ポインターへのポインター、`ITypeInfo`インターフェイス。

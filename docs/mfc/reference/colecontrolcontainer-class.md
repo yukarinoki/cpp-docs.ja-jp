@@ -72,12 +72,12 @@ helpviewer_keywords:
 - COleControlContainer [MFC], m_pWnd
 - COleControlContainer [MFC], m_siteMap
 ms.assetid: f7ce9246-0fb7-4f07-a83a-6c2390d0fdf8
-ms.openlocfilehash: 6e97f7ceafb92098d701cba64b4ec01d26d3991a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1d386072b67568ecf58afd0853df2d7fbaeac68d
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62310438"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504560"
 ---
 # <a name="colecontrolcontainer-class"></a>COleControlContainer クラス
 
@@ -473,7 +473,7 @@ virtual UINT GetDlgItemInt(
 関数の成功/失敗の値を受信するブール値変数へのポインター (成功を true、FALSE がエラーを示します)。
 
 *bSigned*<br/>
-関数が先頭にマイナス記号のテキストを確認し、いずれか見つかった場合は、符号付き整数値を返すかどうかを指定します。 場合、 *bSigned*パラメーターが TRUE、戻り値をキャストを取得する値が符号付き整数値を指定する、 **int**型。 拡張エラー情報を取得するには呼び出します[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)します。
+関数が先頭にマイナス記号のテキストを確認し、いずれか見つかった場合は、符号付き整数値を返すかどうかを指定します。 場合、 *bSigned*パラメーターが TRUE、戻り値をキャストを取得する値が符号付き整数値を指定する、 **int**型。 拡張エラー情報を取得するには呼び出します[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -515,7 +515,7 @@ virtual int GetDlgItemText(
 
 関数が成功した場合、戻り値は、終端の null 文字を含まない、バッファーにコピーされた文字数を指定します。
 
-関数が失敗した場合は、0 を返します。 拡張エラー情報を取得するには呼び出します[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)します。
+関数が失敗した場合は、0 を返します。 拡張エラー情報を取得するには呼び出します[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)します。
 
 ##  <a name="handlesetfocus"></a>  COleControlContainer::HandleSetFocus
 

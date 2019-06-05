@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CGopherFileFind [MFC], GetScreenName
 - CGopherFileFind [MFC], IsDots
 ms.assetid: 8465a979-6323-496d-ab4b-e81383fb999d
-ms.openlocfilehash: c1157b3583e266a09840f710b46766ffc4f31b5e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bced5a95f65713915a1f06094bfe059db79aab2d
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62345761"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503641"
 ---
 # <a name="cgopherfilefind-class"></a>CGopherFileFind クラス
 
@@ -161,7 +161,7 @@ virtual BOOL FindFile(
 
 ### <a name="return-value"></a>戻り値
 
-正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 拡張エラー情報を取得するには、Win32 関数を呼び出す[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)します。
+正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 拡張エラー情報を取得するには、Win32 関数を呼び出す[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -177,7 +177,7 @@ virtual BOOL FindNextFile();
 
 ### <a name="return-value"></a>戻り値
 
-以上のファイルがある場合、0 以外の場合ファイルが見つかりましたが、ディレクトリ内の最後の 1 つである場合や、エラーが発生した場合は 0 します。 拡張エラー情報を取得するには、Win32 関数を呼び出す[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)します。 ファイルが見つかりましたが、ディレクトリ内の最後のファイル、または一致する場合は、ファイルが見つからなかんだことができます、 `GetLastError` ERROR_NO_MORE_FILES を返します。
+以上のファイルがある場合、0 以外の場合ファイルが見つかりましたが、ディレクトリ内の最後の 1 つである場合や、エラーが発生した場合は 0 します。 拡張エラー情報を取得するには、Win32 関数を呼び出す[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)します。 ファイルが見つかりましたが、ディレクトリ内の最後のファイル、または一致する場合は、ファイルが見つからなかんだことができます、 `GetLastError` ERROR_NO_MORE_FILES を返します。
 
 ##  <a name="getcreationtime"></a>  CGopherFileFind::GetCreationTime
 

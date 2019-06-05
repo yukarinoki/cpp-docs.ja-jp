@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CPrivateObjectSecurityDesc class
 ms.assetid: 2c4bbb13-bf99-4833-912a-197f6815bb5d
-ms.openlocfilehash: 99b47c15af4cdb87fb35d5c7342ea2719d341868
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cc726892515ea38a559bdf182affa96f84be3449
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62278151"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503300"
 ---
 # <a name="cprivateobjectsecuritydesc-class"></a>CPrivateObjectSecurityDesc クラス
 
@@ -173,7 +173,7 @@ bool Create(
 新しいオブジェクトが他のオブジェクトを含めるかどうかを指定します。 値が true は、新しいオブジェクトがコンテナーであることを示します。 False の値は、新しいオブジェクトがコンテナーではないことを示します。
 
 *AutoInheritFlags*<br/>
-アクセス制御エントリ (Ace) の継承方法を制御するビット フラグのセット*pParent*します。 参照してください[CreatePrivateObjectSecurityEx](https://msdn.microsoft.com/library/windows/desktop/aa446581)の詳細。
+アクセス制御エントリ (Ace) の継承方法を制御するビット フラグのセット*pParent*します。 参照してください[CreatePrivateObjectSecurityEx](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex)の詳細。
 
 ### <a name="return-value"></a>戻り値
 
@@ -181,7 +181,7 @@ bool Create(
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドを呼び出す[CreatePrivateObjectSercurity](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurity)または[CreatePrivateObjectSecurityEx](https://msdn.microsoft.com/library/windows/desktop/aa446581)します。
+このメソッドを呼び出す[CreatePrivateObjectSercurity](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurity)または[CreatePrivateObjectSecurityEx](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex)します。
 
 2 番目のメソッドは、新しいオブジェクトのオブジェクトの種類の GUID を指定するか、Ace が継承される方法を制御するを許可します。
 
@@ -265,7 +265,7 @@ bool Set(
 参照、 [CAccessToken](../../atl/reference/caccesstoken-class.md)オブジェクトが作成されている対象のクライアント プロセスのオブジェクト。
 
 *AutoInheritFlags*<br/>
-アクセス制御エントリ (Ace) の継承方法を制御するビット フラグのセット*pParent*します。 参照してください[CreatePrivateObjectSecurityEx](https://msdn.microsoft.com/library/windows/desktop/aa446581)の詳細。
+アクセス制御エントリ (Ace) の継承方法を制御するビット フラグのセット*pParent*します。 参照してください[CreatePrivateObjectSecurityEx](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex)の詳細。
 
 ### <a name="return-value"></a>戻り値
 

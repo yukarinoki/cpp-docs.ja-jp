@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CInternetFile [MFC], WriteString
 - CInternetFile [MFC], m_hFile
 ms.assetid: 96935681-ee71-4a8d-9783-5abc7b3e6f10
-ms.openlocfilehash: 65bc36856e253d086cc430a600daa9255e21ea75
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: facd1c10781546fc692e8896e463d70637a33630
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405743"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503483"
 ---
 # <a name="cinternetfile-class"></a>CInternetFile クラス
 
@@ -337,7 +337,7 @@ BOOL SetReadBufferSize(UINT nReadSize);
 
 ### <a name="return-value"></a>戻り値
 
-正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 呼び出しが失敗した場合は、Win32 関数[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)エラーの原因を特定するということがあります。
+正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 呼び出しが失敗した場合は、Win32 関数[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)エラーの原因を特定するということがあります。
 
 ### <a name="remarks"></a>Remarks
 
@@ -362,7 +362,7 @@ BOOL SetWriteBufferSize(UINT nWriteSize);
 
 ### <a name="return-value"></a>戻り値
 
-正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 呼び出しが失敗した場合は、Win32 関数[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)エラーの原因を特定するということがあります。
+正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 呼び出しが失敗した場合は、Win32 関数[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)エラーの原因を特定するということがあります。
 
 ### <a name="remarks"></a>Remarks
 

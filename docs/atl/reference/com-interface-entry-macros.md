@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - COM interfaces, COM interface entry macros
 ms.assetid: 19dcb768-2e1f-4b8d-a618-453a01a4bd00
-ms.openlocfilehash: ed2b8445a0f13b82338d2904d43fd17688d05b9e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f8439e973c935108d645076bb7e2bfae7207e65d
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245583"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503342"
 ---
 # <a name="cominterfaceentry-macros"></a>COM_INTERFACE_ENTRY マクロ
 
@@ -39,7 +39,7 @@ ms.locfileid: "62245583"
 |[COM_INTERFACE_ENTRY_AGGREGATE_BLIND](#com_interface_entry_aggregate_blind)|同じ[で定義](#com_interface_entry_aggregate)にクエリを転送するために結果の任意の IID のクエリを実行することを除いて、 *punk*します。|
 |[COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate)|同じ[で定義](#com_interface_entry_aggregate)、場合を除く*punk*が null の場合で説明されている集計を自動的に作成、 *clsid*します。|
 |[COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND](#com_interface_entry_autoaggregate_blind)|同じ[COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate)にクエリを転送するために結果の任意の IID のクエリを実行することを除いて、 *punk*、場合*punk*が null の場合、自動的に作成します。説明されている集計、 *clsid*します。|
-|[COM_INTERFACE_ENTRY_BREAK](#com_interface_entry_break)|プログラムを呼び出すと、 [DebugBreak](https://msdn.microsoft.com/library/windows/desktop/ms679297)について、指定したインターフェイスを照会する場合。|
+|[COM_INTERFACE_ENTRY_BREAK](#com_interface_entry_break)|プログラムを呼び出すと、 [DebugBreak](/windows/desktop/api/debugapi/nf-debugapi-debugbreak)について、指定したインターフェイスを照会する場合。|
 |[COM_INTERFACE_ENTRY_CACHED_TEAR_OFF](#com_interface_entry_cached_tear_off)|インスタンスごとにインターフェイスに固有のデータを保存します。|
 |[COM_INTERFACE_ENTRY_TEAR_OFF](#com_interface_entry_tear_off)|ティアオフ インターフェイスを公開します。|
 |[COM_INTERFACE_ENTRY_CHAIN](#com_interface_entry_chain)|COM マップ内のこのエントリに達したら、処理は、基底クラスの COM マップを処理します。|
@@ -243,7 +243,7 @@ COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND(punk, clsid)
 
 ##  <a name="com_interface_entry_break"></a>  COM_INTERFACE_ENTRY_BREAK
 
-プログラムを呼び出すと、 [DebugBreak](https://msdn.microsoft.com/library/windows/desktop/ms679297)について、指定したインターフェイスを照会する場合。
+プログラムを呼び出すと、 [DebugBreak](/windows/desktop/api/debugapi/nf-debugapi-debugbreak)について、指定したインターフェイスを照会する場合。
 
 ```
 COM_INTERFACE_ENTRY_BREAK(x)
@@ -328,7 +328,7 @@ COM_INTERFACE_ENTRY_CHAIN(classname)
 
 [!code-cpp[NVC_ATL_Windowing#116](../../atl/codesnippet/cpp/com-map-macros_9.h)]
 
-COM マップの最初のエントリは、COM マップを格納しているオブジェクトのインターフェイスである必要がありますに注意してください。 したがって、COM_INTERFACE_ENTRY_CHAIN、これにより、ポイントで検索する別のオブジェクトの COM マップで、COM マップ エントリを開始することはできません、 **COM_INTERFACE_ENTRY_CHAIN (**`COtherObject`**)** オブジェクトの COM マップに表示されます。 別のオブジェクトの COM マップを最初に検索する場合は、インターフェイスのエントリを追加`IUnknown`COM マップに、その他のオブジェクトの COM マップし、チェーンします。 例:
+COM マップの最初のエントリは、COM マップを格納しているオブジェクトのインターフェイスである必要がありますに注意してください。 したがって、COM_INTERFACE_ENTRY_CHAIN、これにより、ポイントで検索する別のオブジェクトの COM マップで、COM マップ エントリを開始することはできません、 **COM_INTERFACE_ENTRY_CHAIN (** `COtherObject` **)** オブジェクトの COM マップに表示されます。 別のオブジェクトの COM マップを最初に検索する場合は、インターフェイスのエントリを追加`IUnknown`COM マップに、その他のオブジェクトの COM マップし、チェーンします。 例:
 
 [!code-cpp[NVC_ATL_Windowing#111](../../atl/codesnippet/cpp/com-map-macros_10.h)]
 

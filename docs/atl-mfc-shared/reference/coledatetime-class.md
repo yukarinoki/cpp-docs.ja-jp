@@ -34,12 +34,12 @@ helpviewer_keywords:
 - dates, handling in MFC
 - time, handling in MFC
 ms.assetid: e718f294-16ec-4649-88b6-a4dbae5178fb
-ms.openlocfilehash: 46b5f15a2f6048745a12b8c3a8c8a63404f71aa2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 63c2971f5d55cb5198925650bcf90b2f1a8b0958
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62252702"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503225"
 ---
 # <a name="coledatetime-class"></a>COleDateTime クラス
 
@@ -169,7 +169,7 @@ bool operator>=(const COleDateTime& date) const throw();
 
 ### <a name="example"></a>例
 
-演算子 **>=** 、 **\<=**、 **>**、および **<**、場合、アサートは、`COleDateTime`オブジェクトの設定を null にします。
+演算子 **>=** 、 **\<=** 、 **>** 、および **<** 、場合、アサートは、`COleDateTime`オブジェクトの設定を null にします。
 
 [!code-cpp[NVC_ATLMFC_Utilities#170](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_3.cpp)]
 
@@ -225,7 +225,7 @@ A`FILETIME`構造体の日付/時刻値に変換して、新しいコピーを`C
 日付と時刻の値を日付/時刻値に変換して、新しいコピーを MS-DOS`COleDateTime`オブジェクト。
 
 *タイムスタンプ*<br/>
-参照を[DBTimeStamp](https://msdn.microsoft.com/library/system.data.oledb.oledbtype)現在の現地時刻を含む構造体。
+参照を[DBTimeStamp](/dotnet/api/system.data.oledb.oledbtype)現在の現地時刻を含む構造体。
 
 ### <a name="remarks"></a>Remarks
 
@@ -347,7 +347,7 @@ bool GetAsDBTIMESTAMP(DBTIMESTAMP& timeStamp) const throw();
 ### <a name="parameters"></a>パラメーター
 
 *タイムスタンプ*<br/>
-参照を[DBTimeStamp](https://msdn.microsoft.com/library/system.data.oledb.oledbtype)構造体。
+参照を[DBTimeStamp](/dotnet/api/system.data.oledb.oledbtype)構造体。
 
 ### <a name="return-value"></a>戻り値
 

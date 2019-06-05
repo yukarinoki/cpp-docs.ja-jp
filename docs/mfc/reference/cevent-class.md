@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CEvent [MFC], SetEvent
 - CEvent [MFC], Unlock
 ms.assetid: df676042-ce27-4702-800a-e73ff4f44395
-ms.openlocfilehash: d7731c87c6d6b0ebdec9a0c72c24b04334aa0662
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 54501e5ff690b855ca65652e76d45b9c6cfb6259
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62206044"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503716"
 ---
 # <a name="cevent-class"></a>CEvent クラス
 
@@ -107,10 +107,10 @@ TRUE の場合、スレッド、`CMultilock`または`CSingleLock`オブジェ�
 TRUE の場合は、イベント オブジェクトは、手動イベント、それ以外の場合、イベント オブジェクトは、自動のイベントを指定します。
 
 *lpszName*<br/>
-`CEvent` オブジェクトの名前。 プロセスの境界を越えてオブジェクトを使用する場合を指定する必要があります。 名前が既存のイベントに一致する場合、コンス トラクターは新しい`CEvent`その名前のイベントを参照するオブジェクト。 名前には、イベントではない既存の同期オブジェクトが一致すると、構築は失敗します。 NULL の場合、名前が null になります。
+  `CEvent` オブジェクトの名前。 プロセスの境界を越えてオブジェクトを使用する場合を指定する必要があります。 名前が既存のイベントに一致する場合、コンス トラクターは新しい`CEvent`その名前のイベントを参照するオブジェクト。 名前には、イベントではない既存の同期オブジェクトが一致すると、構築は失敗します。 NULL の場合、名前が null になります。
 
 *lpsaAttribute*<br/>
-イベント オブジェクトのセキュリティ属性。 この構造体の詳細については、次を参照してください。 [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) Windows SDK に含まれています。
+イベント オブジェクトのセキュリティ属性。 この構造体の詳細については、次を参照してください。 [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) Windows SDK に含まれています。
 
 ### <a name="remarks"></a>Remarks
 
@@ -119,7 +119,7 @@ TRUE の場合は、イベント オブジェクトは、手動イベント、�
 状態を変更する、`CEvent`シグナル状態になるオブジェクト (スレッドがないを待機する) を呼び出す[SetEvent](#setevent)または[PulseEvent](#pulseevent)します。 状態を設定する、`CEvent`非シグナル状態のオブジェクト (スレッド待つ必要があります)、呼び出す[ResetEvent](#resetevent)します。
 
 > [!IMPORTANT]
->  作成した後、`CEvent`オブジェクトを使用して[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)ミュー テックスが既に存在していないことを確認します。 予期せずにミュー テックスが存在して、不正なプロセスが発生したり、悪意のあるミュー テックスを使用するつもりが可能性があります。 ここでは、セキュリティ意識の推奨手順は、ハンドルを終了し、クリックすると、オブジェクトの作成でエラーが発生しました。
+>  作成した後、`CEvent`オブジェクトを使用して[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)ミュー テックスが既に存在していないことを確認します。 予期せずにミュー テックスが存在して、不正なプロセスが発生したり、悪意のあるミュー テックスを使用するつもりが可能性があります。 ここでは、セキュリティ意識の推奨手順は、ハンドルを終了し、クリックすると、オブジェクトの作成でエラーが発生しました。
 
 ##  <a name="pulseevent"></a>  CEvent::PulseEvent
 

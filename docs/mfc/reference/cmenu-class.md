@@ -84,12 +84,12 @@ helpviewer_keywords:
 - CMenu [MFC], TrackPopupMenuEx
 - CMenu [MFC], m_hMenu
 ms.assetid: 40cacfdc-d45c-4ec7-bf28-991c72812499
-ms.openlocfilehash: 464b59f7e598ea1901cf88c47c5887cbbf308607
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5df6515573cfca784d1e59f34342466dde2e42e4
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375796"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504845"
 ---
 # <a name="cmenu-class"></a>CMenu クラス
 
@@ -769,7 +769,7 @@ BOOL GetMenuItemInfo(
 
 ### <a name="return-value"></a>戻り値
 
-関数が成功した場合、戻り値は 0 以外の値です。 関数が失敗した場合は、0 を返します。 拡張エラー情報を取得するには、Win32 関数を使用して[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)」の説明に従って、Windows SDK。
+関数が成功した場合、戻り値は 0 以外の値です。 関数が失敗した場合は、0 を返します。 拡張エラー情報を取得するには、Win32 関数を使用して[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)」の説明に従って、Windows SDK。
 
 ### <a name="remarks"></a>Remarks
 
@@ -1267,7 +1267,7 @@ BOOL SetDefaultItem(
 
 ### <a name="return-value"></a>戻り値
 
-関数が成功した場合、戻り値は 0 以外の値です。 関数が失敗した場合は、0 を返します。 拡張エラー情報を取得するには、Win32 関数を使用して[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)」の説明に従って、Windows SDK。
+関数が成功した場合、戻り値は 0 以外の値です。 関数が失敗した場合は、0 を返します。 拡張エラー情報を取得するには、Win32 関数を使用して[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)」の説明に従って、Windows SDK。
 
 ### <a name="remarks"></a>Remarks
 
@@ -1476,7 +1476,7 @@ BOOL TrackPopupMenuEx(
 
 TPM_RETURNCMD を指定する場合、 *fuFlags*パラメーター、戻り値は、ユーザーが選択した項目をメニュー項目の識別子。 ユーザーが、選択を行わず、メニューを取り消した場合、またはエラーが発生した場合は、戻り値は 0 です。
 
-TPM_RETURNCMD を指定しない場合、 *fuFlags*パラメーター、戻り値は 0 以外の場合、関数が成功した場合、0、失敗した場合。 拡張エラー情報を取得するには呼び出します[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)します。
+TPM_RETURNCMD を指定しない場合、 *fuFlags*パラメーター、戻り値は 0 以外の場合、関数が成功した場合、0、失敗した場合。 拡張エラー情報を取得するには呼び出します[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)します。
 
 ### <a name="remarks"></a>Remarks
 

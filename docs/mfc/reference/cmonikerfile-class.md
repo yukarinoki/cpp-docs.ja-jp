@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CMonikerFile [MFC], Open
 - CMonikerFile [MFC], CreateBindContext
 ms.assetid: 87be5966-f4f7-4235-bce2-1fa39e9417de
-ms.openlocfilehash: ecffdb3a6f44f60004cf4f039bdab9c98e212ce1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7fb0ad3eef781be1b5ca358e825c09a88c0109e3
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62338039"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503819"
 ---
 # <a name="cmonikerfile-class"></a>CMonikerFile クラス
 
@@ -117,7 +117,7 @@ IBindCtx* CreateBindContext(CFileException* pError);
 
 ### <a name="return-value"></a>戻り値
 
-バインド コンテキストへのポインター [IBindCtx](/windows/desktop/api/objidl/nn-objidl-ibindctx)成功。 それ以外の場合に NULL の場合は、バインドします。 インスタンスが開かれた場合、`IBindHost`バインド コンテキストがから取得した、インターフェイス、 `IBindHost`。 存在する場合ありません`IBindHost`インターフェイスまたはインターフェイスは、バインド コンテキストに失敗した場合、バインド コンテキストが作成されます。 説明については、 [IBindHost](https://msdn.microsoft.com/library/ie/ms775076)インターフェイス、Windows SDK を参照してください。
+バインド コンテキストへのポインター [IBindCtx](/windows/desktop/api/objidl/nn-objidl-ibindctx)成功。 それ以外の場合に NULL の場合は、バインドします。 インスタンスが開かれた場合、`IBindHost`バインド コンテキストがから取得した、インターフェイス、 `IBindHost`。 存在する場合ありません`IBindHost`インターフェイスまたはインターフェイスは、バインド コンテキストに失敗した場合、バインド コンテキストが作成されます。 説明については、 [IBindHost](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775076\(v=vs.85\))インターフェイス、Windows SDK を参照してください。
 
 ### <a name="remarks"></a>Remarks
 

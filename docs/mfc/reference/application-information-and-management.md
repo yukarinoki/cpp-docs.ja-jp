@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - applications [MFC], managing
 ms.assetid: b72f4154-24db-4e75-bca3-6873e2459c15
-ms.openlocfilehash: 84d11b5c2d456a55e09b8512a3c0af06409939e8
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: b106a8874d1b0243f408a6c6c7311a9ce791e019
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65612286"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504495"
 ---
 # <a name="application-information-and-management"></a>アプリケーションの情報と管理
 
@@ -98,7 +98,7 @@ CWinThread* AfxBeginThread(
 - **0**作成後すぐにスレッドを開始します。
 
 *lpSecurityAttrs*<br/>
-指す、 [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560)スレッドのセキュリティ属性を指定する構造体。 NULL の場合、スレッドの作成と同じセキュリティ属性が使用されます。 この構造体の詳細については、Windows SDK を参照してください。
+指す、 [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\))スレッドのセキュリティ属性を指定する構造体。 NULL の場合、スレッドの作成と同じセキュリティ属性が使用されます。 この構造体の詳細については、Windows SDK を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
@@ -648,7 +648,7 @@ LPCTSTR AFXAPI AfxRegisterWndClass(
 ### <a name="parameters"></a>パラメーター
 
 *nClassStyle*<br/>
-Windows クラスのスタイルまたはビットごとの OR を使用して作成されたスタイルの組み合わせを指定します ( **&#124;**) ウィンドウ クラスの演算子。 クラスのスタイルの一覧は、次を参照してください。、 [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa) Windows SDK の構造体。 NULL の場合、既定値としては、次のように設定されます。
+Windows クラスのスタイルまたはビットごとの OR を使用して作成されたスタイルの組み合わせを指定します ( **&#124;** ) ウィンドウ クラスの演算子。 クラスのスタイルの一覧は、次を参照してください。、 [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa) Windows SDK の構造体。 NULL の場合、既定値としては、次のように設定されます。
 
 - CS_DBLCLKS、送信メッセージをダブルクリックしてウィンドウ プロシージャ、ユーザーがマウスをダブルクリックしたときにマウスのスタイルを設定します。
 

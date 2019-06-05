@@ -56,12 +56,12 @@ helpviewer_keywords:
 - CFileFind [MFC], CloseContext
 - CFileFind [MFC], m_pTM
 ms.assetid: 9990068c-b023-4114-9580-a50182d15240
-ms.openlocfilehash: da08b04b314df4916a290d4929a4cbaac87434d8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5534b61b3c588c79c0120f1a5bc8064b5a605e8a
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62296632"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503778"
 ---
 # <a name="cfilefind-class"></a>CFileFind クラス
 
@@ -212,7 +212,7 @@ virtual BOOL FindFile(
 
 ### <a name="return-value"></a>戻り値
 
-正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 拡張エラー情報を取得するには、Win32 関数を呼び出す[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)します。
+正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 拡張エラー情報を取得するには、Win32 関数を呼び出す[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -270,7 +270,7 @@ virtual BOOL FindNextFile();
 
 ### <a name="return-value"></a>戻り値
 
-以上のファイルがある場合、0 以外の場合ファイルが見つかりましたが、ディレクトリ内の最後の 1 つである場合や、エラーが発生した場合は 0 します。 拡張エラー情報を取得するには、Win32 関数を呼び出す[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)します。 ファイルが見つかりましたが、ディレクトリ内の最後のファイル、または一致する場合は、ファイルが見つからなかんだことができます、 `GetLastError` ERROR_NO_MORE_FILES を返します。
+以上のファイルがある場合、0 以外の場合ファイルが見つかりましたが、ディレクトリ内の最後の 1 つである場合や、エラーが発生した場合は 0 します。 拡張エラー情報を取得するには、Win32 関数を呼び出す[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)します。 ファイルが見つかりましたが、ディレクトリ内の最後のファイル、または一致する場合は、ファイルが見つからなかんだことができます、 `GetLastError` ERROR_NO_MORE_FILES を返します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -824,7 +824,7 @@ virtual BOOL MatchesMask(DWORD dwMask) const;
 
 ### <a name="return-value"></a>戻り値
 
-正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 拡張エラー情報を取得するには、Win32 関数を呼び出す[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)します。
+正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 拡張エラー情報を取得するには、Win32 関数を呼び出す[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)します。
 
 ### <a name="remarks"></a>Remarks
 

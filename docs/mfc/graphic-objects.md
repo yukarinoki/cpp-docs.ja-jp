@@ -41,19 +41,19 @@ helpviewer_keywords:
 - painting and device context [MFC]
 - CPalette class [MFC], HPALETTE handle type
 ms.assetid: 41963b25-34b7-4343-8446-34ba516b83ca
-ms.openlocfilehash: 58ecf680d64f39ab61589a0ad668c15d1a9cd68c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3058bc5793a7766b0a6849ba77f0533f0bbbcef6
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62359066"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503807"
 ---
 # <a name="graphic-objects"></a>グラフィック オブジェクト
 
 Windows には、さまざまなデバイス コンテキストで使用する描画ツールが用意されています。 たとえば、線を描画するためのペン、内部を塗りつぶすためのブラシ、テキストを描画するためのフォントがあります。 MFC には、Windows の描画ツールと同等のグラフィック オブジェクト クラスが用意されています。 使用可能なクラスと、それに対応する Windows グラフィックス デバイス インターフェイス (GDI) ハンドル型を次の表に示します。
 
 > [!NOTE]
->  詳細については、GDI + SDK のドキュメントを参照してください: [ https://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/GDIPlus/GDIPlus.asp](https://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/gdiplus/gdiplus.asp)します。
+>  詳細については、次を参照してください。、 [GDI + SDK ドキュメント](/windows/desktop/gdiplus/-gdiplus-gdi-start)します。
 
 この記事では、これらのグラフィック オブジェクト クラスの使用方法について説明します。
 

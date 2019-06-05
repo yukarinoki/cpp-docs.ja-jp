@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CWinThread [MFC], m_pActiveWnd
 - CWinThread [MFC], m_pMainWnd
 ms.assetid: 10cdc294-4057-4e76-ac7c-a8967a89af0b
-ms.openlocfilehash: 9f17561941d785e5eb7b5fd8c52ab452aa6369e7
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 4d3582493489faf44afece9338b1491620ca798a
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220421"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504652"
 ---
 # <a name="cwinthread-class"></a>CWinThread クラス
 
@@ -156,8 +156,7 @@ BOOL CreateThread(
 *dwCreateFlags*<br/>
 スレッドの作成を制御する追加のフラグを指定します。 このフラグは、2 つの値の 1 つを含めることができます。
 
-- CREATE_SUSPENDED 中断カウントが 1 つのスレッドを開始します。 メンバー データの初期化に使用する場合は、CREATE_SUSPENDED を使用して、`CWinThread`などオブジェクト[m_bAutoDelete](#m_bautodelete)またはスレッドが実行を開始する前に、派生クラスのメンバー。 使用して、初期化が完了すると、 [cwinthread::resumethread](#resumethread)を実行しているスレッドを開始します。 
-  `CWinThread::ResumeThread` が呼び出されるまでは、スレッドは実行されません。
+- CREATE_SUSPENDED 中断カウントが 1 つのスレッドを開始します。 メンバー データの初期化に使用する場合は、CREATE_SUSPENDED を使用して、`CWinThread`などオブジェクト[m_bAutoDelete](#m_bautodelete)またはスレッドが実行を開始する前に、派生クラスのメンバー。 使用して、初期化が完了すると、 [cwinthread::resumethread](#resumethread)を実行しているスレッドを開始します。   `CWinThread::ResumeThread` が呼び出されるまでは、スレッドは実行されません。
 
 - **0**作成後すぐにスレッドを開始します。
 
@@ -165,7 +164,7 @@ BOOL CreateThread(
 新しいスレッドへのスタックのバイト サイズを指定します。 場合**0**プロセスのプライマリ スレッドの場合と同じサイズに既定のスタック サイズ。
 
 *lpSecurityAttrs*<br/>
-指す、 [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560)スレッドのセキュリティ属性を指定する構造体。
+指す、 [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\))スレッドのセキュリティ属性を指定する構造体。
 
 ### <a name="return-value"></a>戻り値
 

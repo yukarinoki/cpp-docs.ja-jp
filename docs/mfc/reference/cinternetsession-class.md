@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CInternetSession [MFC], SetCookie
 - CInternetSession [MFC], SetOption
 ms.assetid: ef54feb4-9d0f-4e65-a45d-7a4cf6c40e51
-ms.openlocfilehash: 5ad1a1a0dde32358828d58a8f237337c4f62f3e5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e3d6d319a963fbc24e89bf8c4c0858cd80ec5a9d
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62345592"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503458"
 ---
 # <a name="cinternetsession-class"></a>CInternetSession クラス
 
@@ -156,7 +156,7 @@ CInternetSession(
 
 - ローカルまたはゲートウェイ サーバーでは、データをキャッシュ INTERNET_FLAG_DONT_CACHE しません。
 
-- INTERNET_FLAG_OFFLINE ダウンロード操作は、により、永続的なキャッシュにのみ満たされます。 項目がキャッシュに存在しない場合は、適切なエラー コードが返されます。 このフラグは、ビットごとに組み合わせることができます**または**( **&#124;**) 演算子。
+- INTERNET_FLAG_OFFLINE ダウンロード操作は、により、永続的なキャッシュにのみ満たされます。 項目がキャッシュに存在しない場合は、適切なエラー コードが返されます。 このフラグは、ビットごとに組み合わせることができます**または**( **&#124;** ) 演算子。
 
 ### <a name="remarks"></a>Remarks
 
@@ -258,7 +258,7 @@ URL を含む文字列へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-それ以外の場合、成功した場合、TRUE または FALSE を返します。 呼び出しに失敗した場合は、Win32 関数を呼び出す[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)エラーの原因を特定します。 次のエラー値が適用されます。
+それ以外の場合、成功した場合、TRUE または FALSE を返します。 呼び出しに失敗した場合は、Win32 関数を呼び出す[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)エラーの原因を特定します。 次のエラー値が適用されます。
 
 - ERROR_NO_MORE_ITEMS は指定された URL の cookie とそのすべての親です。
 
@@ -536,7 +536,7 @@ FTP、GOPHER、HTTP、およびファイルの種類のインターネット サ
 
 ### <a name="remarks"></a>Remarks
 
-パラメーター *dwFlags* INTERNET_FLAG_TRANSFER_ASCII または INTERNET_FLAG_TRANSFER_BINARY の両方ではなくいずれかに含める必要があります。 その他のフラグをビットごとに結合できます**または**演算子 ( **&#124;**)。
+パラメーター *dwFlags* INTERNET_FLAG_TRANSFER_ASCII または INTERNET_FLAG_TRANSFER_BINARY の両方ではなくいずれかに含める必要があります。 その他のフラグをビットごとに結合できます**または**演算子 ( **&#124;** )。
 
 `OpenURL`、Win32 関数をラップする`InternetOpenURL`、唯一のダウンロード、取得、およびインターネット サーバーからのデータの読み取りを許可します。 `OpenURL` 必要のないように、リモートの場所でのファイル操作できることはありません[CInternetConnection](../../mfc/reference/cinternetconnection-class.md)オブジェクト。
 
@@ -616,11 +616,11 @@ BOOL SetOption(
 
 - ローカルまたはゲートウェイ サーバーでは、データをキャッシュ INTERNET_FLAG_DONT_CACHE しません。
 
-- INTERNET_FLAG_OFFLINE ダウンロード操作は、により、永続的なキャッシュにのみ満たされます。 項目がキャッシュに存在しない場合は、適切なエラー コードが返されます。 このフラグは、ビットごとに組み合わせることができます**または**( **&#124;**) 演算子。
+- INTERNET_FLAG_OFFLINE ダウンロード操作は、により、永続的なキャッシュにのみ満たされます。 項目がキャッシュに存在しない場合は、適切なエラー コードが返されます。 このフラグは、ビットごとに組み合わせることができます**または**( **&#124;** ) 演算子。
 
 ### <a name="return-value"></a>戻り値
 
-操作が成功した場合は、値 TRUE が返されます。 エラーが発生した場合、値は FALSE が返されます。 呼び出しが失敗した場合は、Win32 関数[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)エラーの原因を特定するということがあります。
+操作が成功した場合は、値 TRUE が返されます。 エラーが発生した場合、値は FALSE が返されます。 呼び出しが失敗した場合は、Win32 関数[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)エラーの原因を特定するということがあります。
 
 ## <a name="see-also"></a>関連項目
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - merging toolbar and status bar [MFC]
 - menus [MFC], OLE document applications
 ms.assetid: 80b6bb17-d830-4122-83f0-651fc112d4d1
-ms.openlocfilehash: e00464e59de5e20627fd2423c101c23629d7c4d2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1f7af7007e72cb8e01022c81a244fc70ba52a5cc
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62225540"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504821"
 ---
 # <a name="menus-and-resources-menu-merging"></a>メニューとリソース:メニューのマージ
 
@@ -29,9 +29,7 @@ ms.locfileid: "62225540"
 
 ##  <a name="_core_menu_layouts"></a> メニューのレイアウト
 
-最初の手順 メニューのレイアウトを調整することです。 詳細については、次を参照してください。、 **] メニューの [作成**セクション[ メニューのプログラミングに関する考慮事項](https://msdn.microsoft.com/library/ms647557.aspx)Windows SDK にします。
-
-コンテナー アプリケーションでは、埋め込みアイテムがインプレース アクティブ化されるときにのみ使用される新しいメニューを作成する必要があります。 少なくとも、このメニューは必要がありますを順番に、次ので構成されます。
+最初の手順 メニューのレイアウトを調整することです。 コンテナー アプリケーションでは、埋め込みアイテムがインプレース アクティブ化されるときにのみ使用される新しいメニューを作成する必要があります。 少なくとも、このメニューは必要がありますを順番に、次ので構成されます。
 
 1. [ファイル] メニューが、ファイルを開いているときに使用されるものと同じです。 (通常は他のメニュー項目が適用されません次の項目の前にします。)
 

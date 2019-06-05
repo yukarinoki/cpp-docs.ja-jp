@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CGopherLocator [MFC], CGopherLocator
 - CGopherLocator [MFC], GetLocatorType
 ms.assetid: 6fcc015f-5ae6-4959-b936-858634c71019
-ms.openlocfilehash: 79adbf126438c7d9f2884987c53b573991f92cf1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f25273f1d982092adc8b8010cc60818e7c0e24a2
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62205984"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503660"
 ---
 # <a name="cgopherlocator-class"></a>CGopherLocator クラス
 
@@ -102,13 +102,13 @@ BOOL GetLocatorType(DWORD& dwRef) const;
 
 ### <a name="return-value"></a>戻り値
 
-正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 呼び出しが失敗した場合は、Win32 関数[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)エラーの原因を特定するということがあります。
+正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 呼び出しが失敗した場合は、Win32 関数[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)エラーの原因を特定するということがあります。
 
 ### <a name="remarks"></a>Remarks
 
 使用可能な型は次のとおりです。
 
-|[値]|説明|
+|値|説明|
 |-----------|-------------|
 |GOPHER_TYPE_TEXT_FILE|ASCII テキスト ファイル。|
 |GOPHER_TYPE_DIRECTORY|Gopher 項目の追加のディレクトリ。|
