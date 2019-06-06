@@ -37,9 +37,9 @@ void Attach( Interface* pInterface, bool fAddRef ) throw( );
 
 ## <a name="remarks"></a>Remarks
 
-- **アタッチ (***pInterface***)** `AddRef`は呼び出されません。 インターフェイスの所有権は、この `_com_ptr_t` オブジェクトに渡されます。 `Release` 以前にカプセル化されたポインターの参照カウントをデクリメントすると呼びます。
+- **アタッチ (** *pInterface* **)** `AddRef`は呼び出されません。 インターフェイスの所有権は、この `_com_ptr_t` オブジェクトに渡されます。 `Release` 以前にカプセル化されたポインターの参照カウントをデクリメントすると呼びます。
 
-- **アタッチ (***pInterface* **、***fAddRef***)** 場合*fAddRef*が true の場合、 `AddRef`カプセル化されたインターフェイス ポインターの参照カウントをインクリメントすると呼びます。 場合*fAddRef* false で、この`_com_ptr_t`オブジェクト呼び出さずに生のインターフェイス ポインターの所有権を取得する`AddRef`します。 `Release` 以前にカプセル化されたポインターの参照カウントをデクリメントすると呼びます。
+- **アタッチ (** *pInterface* **、** *fAddRef* **)** 場合*fAddRef*が true の場合、 `AddRef`カプセル化されたインターフェイス ポインターの参照カウントをインクリメントすると呼びます。 場合*fAddRef* false で、この`_com_ptr_t`オブジェクト呼び出さずに生のインターフェイス ポインターの所有権を取得する`AddRef`します。 `Release` 以前にカプセル化されたポインターの参照カウントをデクリメントすると呼びます。
 
 **Microsoft 固有の仕様はここまで**
 
