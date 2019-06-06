@@ -15,7 +15,7 @@ ms.locfileid: "62242891"
 
 '\<identifier>' : '__declspec(dllexport)' and 'extern' are incompatible on an explicit instantiation
 
-という名前の明示的なテンプレートをインスタンス化*\<識別子 >* 両方で変更されたが、`__declspec(dllexport)`と`extern`キーワード。 ただし、これらのキーワードは、相互に排他的です。 `__declspec(dllexport)` キーワードは、テンプレート クラスのインスタンス化を意味しますが、 `extern` キーワードは、テンプレート クラスを自動的にインスタンス化しないことを意味します。
+という名前の明示的なテンプレートをインスタンス化 *\<識別子 >* 両方で変更されたが、`__declspec(dllexport)`と`extern`キーワード。 ただし、これらのキーワードは、相互に排他的です。 `__declspec(dllexport)` キーワードは、テンプレート クラスのインスタンス化を意味しますが、 `extern` キーワードは、テンプレート クラスを自動的にインスタンス化しないことを意味します。
 
 ## <a name="see-also"></a>関連項目
 
