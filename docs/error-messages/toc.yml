@@ -4246,6 +4246,8 @@
           href: compiler-warnings/c5046.md
 - name: コンパイラのバージョンによるコンパイラ警告
   href: compiler-warnings/compiler-warnings-by-compiler-version.md
+- name: 既定で無効になっているコンパイラ警告
+  href: ../preprocessor/compiler-warnings-that-are-off-by-default.md
 - name: C ランタイム エラー
   expanded: false
   items:
