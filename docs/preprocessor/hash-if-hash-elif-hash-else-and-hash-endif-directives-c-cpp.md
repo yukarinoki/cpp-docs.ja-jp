@@ -41,25 +41,25 @@ ms.locfileid: "62409890"
 &nbsp;&nbsp;&nbsp;&nbsp;*if 行のテキスト*
 
 *if 行*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#if**  *constant-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#ifdef**  *identifier*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#ifndef**  *identifier*
+&nbsp;&nbsp;&nbsp;&nbsp; **#if** *constant-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **#ifdef** *identifier*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **#ifndef** *identifier*
 
 *elif パーツ*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*elif 行のテキスト*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*elif パーツ elif 行のテキスト*
 
 *elif 行*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#elif**  *constant-expression*
+&nbsp;&nbsp;&nbsp;&nbsp; **#elif** *constant-expression*
 
 *他の部分から成る*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*他の行のテキスト*
 
 *他の行*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#else**
+&nbsp;&nbsp;&nbsp;&nbsp; **#else**
 
 *endif 行*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#endif**
+&nbsp;&nbsp;&nbsp;&nbsp; **#endif**
 
 各 **#if**ソース ファイルのディレクティブを終了して一致する必要が **#endif**ディレクティブ。 任意の数の **#elif**間ディレクティブを表示できる、 **#if**と **#endif**ディレクティブでは、最大で 1 つが、 **#else**ディレクティブを使用します。 **#Else**ディレクティブ、存在する場合は前に、の最後のディレクティブ **#endif**します。
 
@@ -73,7 +73,7 @@ ms.locfileid: "62409890"
 
 プリプロセッサは、選択した処理*テキスト*をコンパイラに渡します。 場合*テキスト*プリプロセッサはそれらのディレクティブのプリプロセッサ ディレクティブが含まれています。 プリプロセッサによって選択されたテキスト ブロックだけがコンパイルされます。
 
-プリプロセッサは、1 つを選択します*テキスト*続く定数式を評価することによって項目 **#if**または **#elif** true (0 以外) の定数が見つかるまでディレクティブ。式。 すべてのテキストを選択します (以降では他のプリプロセッサ ディレクティブを含む**#**) それに関連付けられた最大 **#elif**、 **#else**、または **#endif**.
+プリプロセッサは、1 つを選択します*テキスト*続く定数式を評価することによって項目 **#if**または **#elif** true (0 以外) の定数が見つかるまでディレクティブ。式。 すべてのテキストを選択します (以降では他のプリプロセッサ ディレクティブを含む **#** ) それに関連付けられた最大 **#elif**、 **#else**、または **#endif**.
 
 場合のすべての出現箇所*定数式*が false の場合、いない場合または **#elif**ディレクティブの表示をプリプロセッサが後のテキスト ブロックを選択して、 **#else**句。 場合、 **#else**句を省略するのすべてのインスタンス*定数式*で、 **#if**が false のブロック、テキスト ブロックが選択されていません。
 
