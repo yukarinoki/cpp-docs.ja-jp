@@ -7,12 +7,12 @@ helpviewer_keywords:
 - messages [MFC], reflected
 - message handling [MFC], reflected messages
 ms.assetid: 5a403528-58c5-46e7-90d5-4a77f0ab9b9c
-ms.openlocfilehash: 250d1a838787d1ace682c084bdceeb0e1e6d3c92
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 970dd7072cb8391d76d39536e442d5aab8e0f61d
+ms.sourcegitcommit: 65ed563a8a1d4d90f872a2a6edcb086f84ec9f77
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62322996"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66741598"
 ---
 # <a name="defining-a-message-handler-for-a-reflected-message"></a>リフレクション メッセージ用のメッセージ ハンドラーの定義
 
@@ -56,4 +56,4 @@ ms.locfileid: "62322996"
 [メンバー変数の追加](../../ide/adding-a-member-variable-visual-cpp.md)<br/>
 [仮想関数のオーバーライド](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
 [MFC メッセージ ハンドラー](../../mfc/reference/adding-an-mfc-message-handler.md)<br/>
-[クラス各部へのジャンプ](../../ide/navigating-the-class-structure-visual-cpp.md)
+[クラス各部へのジャンプ](../../ide/navigate-code-cpp.md)

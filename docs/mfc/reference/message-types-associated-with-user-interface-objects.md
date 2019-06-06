@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - message types and user interface objects [MFC]
 ms.assetid: 681ee1a7-f6e6-4ea0-9fc6-1fb53a35516e
-ms.openlocfilehash: 1676edf487d536d75ccd7901c5bdfa827cc143fe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 37638d12c65986d40e7df9f0fbfdef4b8207e418
+ms.sourcegitcommit: 65ed563a8a1d4d90f872a2a6edcb086f84ec9f77
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412768"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66741576"
 ---
 # <a name="message-types-associated-with-user-interface-objects"></a>ユーザー インターフェイス オブジェクトに関連付けられたメッセージ
 
@@ -19,7 +19,7 @@ ms.locfileid: "62412768"
 
 ### <a name="user-interface-objects-and-associated-messages"></a>ユーザー インターフェイス オブジェクトと関連付けられているメッセージ
 
-|Object ID|メッセージ|
+|Object ID|[メッセージ]|
 |---------------|--------------|
 |格納先ウィンドウを表すクラス名|適切な Windows メッセージ、 [CWnd](../../mfc/reference/cwnd-class.md)-クラスを派生: ダイアログ ボックス、ウィンドウ、子ウィンドウ、MDI 子ウィンドウ、または最上位のフレーム ウィンドウ。|
 |メニューまたはアクセラレータの識別子|-コマンド メッセージ (プログラムの関数を実行します)。<br />-UPDATE_COMMAND_UI メッセージ (メニュー項目を動的に更新) します。|
@@ -34,4 +34,4 @@ ms.locfileid: "62412768"
 [メンバー変数の追加](../../ide/adding-a-member-variable-visual-cpp.md)<br/>
 [仮想関数のオーバーライド](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
 [MFC メッセージ ハンドラー](../../mfc/reference/adding-an-mfc-message-handler.md)<br/>
-[クラス各部へのジャンプ](../../ide/navigating-the-class-structure-visual-cpp.md)
+[クラス各部へのジャンプ](../../ide/navigate-code-cpp.md)

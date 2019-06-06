@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MFC, ATL support
 - ATL, MFC projects
 ms.assetid: b5fe15d6-7752-4818-b9f9-62482ad35c95
-ms.openlocfilehash: 2870bf70492dc09d1a0af3664d1a819aec354b92
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0f75ffd09da1502e5f1488dbce0d8d2b9623d396
+ms.sourcegitcommit: 65ed563a8a1d4d90f872a2a6edcb086f84ec9f77
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62296710"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66741728"
 ---
 # <a name="adding-atl-support-to-your-mfc-project"></a>MFC プロジェクトへの ATL サポートの追加
 
@@ -28,7 +28,7 @@ MFC ベースのアプリケーションを既に作成している場合、サ�
 
 1. ソリューション エクスプ ローラーでは、ATL サポートを追加するプロジェクトを右クリックします。
 
-1. ショートカット メニューで、**追加**、 をクリックし、**クラスの追加**します。
+1. ショートカット メニューの **[追加]** 、 **[クラスの追加]** を順にクリックします。
 
 1. 選択、 **MFC プロジェクトへの ATL サポートの追加**アイコン。
 
@@ -47,4 +47,4 @@ MFC プロジェクトのコード変更 ATL サポートを追加する方法�
 [メンバー変数の追加](../../ide/adding-a-member-variable-visual-cpp.md)<br/>
 [仮想関数のオーバーライド](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
 [MFC メッセージ ハンドラー](../../mfc/reference/adding-an-mfc-message-handler.md)<br/>
-[クラス各部へのジャンプ](../../ide/navigating-the-class-structure-visual-cpp.md)
+[クラス各部へのジャンプ](../../ide/navigate-code-cpp.md)
