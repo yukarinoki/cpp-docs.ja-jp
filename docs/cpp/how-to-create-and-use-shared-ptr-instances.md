@@ -4,12 +4,12 @@ ms.custom: how-to
 ms.date: 05/22/2019
 ms.topic: conceptual
 ms.assetid: 7d6ebb73-fa0d-4b0b-a528-bf05de96518e
-ms.openlocfilehash: 4e7d63840f60c00f97b02825965cc247cddc38fd
-ms.sourcegitcommit: bde3279f70432f819018df74923a8bb895636f81
+ms.openlocfilehash: ac6db74122383ef8adb0f208860a6f6fba02dcc7
+ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66174816"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66821686"
 ---
 # <a name="how-to-create-and-use-sharedptr-instances"></a>方法: shared_ptr インスタンスを作成して使用する
 
@@ -108,7 +108,7 @@ int main()
 
 - 基になるポインターへのアクセスをヘルパー関数に付与する必要があり、ヘルパー関数がそのポインターを使用するだけであり、呼び出し元関数が制御を返す前にヘルパー関数が制御を返すことがわかっている場合は、関数は基になるポインターの所有権を共有する必要はありません。 ヘルパー関数は、呼び出し元の `shared_ptr` の有効期間内にのみ、ポインターにアクセスする必要があります。 この場合は、`shared_ptr` を参照渡しにするか、生ポインターを渡すか、基になるオブジェクトへの参照を渡す方法が安全です。 この方法で渡すと、パフォーマンスに関するある程度の利点が生じ、プログラミングの意図を示すのに役立つ可能性もあります。
 
-- 時には、たとえば `std:vector<shared_ptr<T>>` のように、各 `shared_ptr` をラムダ式の本体または名前付き関数オブジェクトに渡す必要が生じることがあります。 ラムダまたは関数がそのポインターを格納しない場合は、`shared_ptr` の参照渡しを行い、各要素に対してコピー コンストラクターが呼び出されることを防止します。
+- 時には、たとえば `std::vector<shared_ptr<T>>` のように、各 `shared_ptr` をラムダ式の本体または名前付き関数オブジェクトに渡す必要が生じることがあります。 ラムダまたは関数がそのポインターを格納しない場合は、`shared_ptr` の参照渡しを行い、各要素に対してコピー コンストラクターが呼び出されることを防止します。
 
 ## <a name="example-6"></a>例 6
 
