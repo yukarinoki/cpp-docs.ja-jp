@@ -1,25 +1,25 @@
 ---
-title: Visual Studio 2015 と Visual Studio 2017 の間の C++ バイナリ互換性
-ms.date: 09/24/2018
+title: Visual Studio 2015 と Visual Studio 2019 の間の C++ バイナリ互換性
+ms.date: 05/03/2019
 helpviewer_keywords:
 - binary compatibility, Visual C++
 ms.assetid: 591580f6-3181-4bbe-8ac3-f4fbaca949e6
-ms.openlocfilehash: d0291ef75bda2e4da994e40ad55d94ae1042e57e
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 052874eb9273ee9a9ce1695ffdadedd9911673e1
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740510"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65449032"
 ---
-# <a name="c-binary-compatibility-between-visual-studio-2015-and-visual-studio-2017"></a>Visual Studio 2015 と Visual Studio 2017 の間の C++ バイナリ互換性
+# <a name="c-binary-compatibility-between-visual-studio-2015-and-visual-studio-2019"></a>Visual Studio 2015 と Visual Studio 2019 の間の C++ バイナリ互換性
 
-以前のバージョンの Visual Studio では、バージョンの異なるコンパイラ ツールセットやランタイム ライブラリで構築されたオブジェクト ファイル (OBJ)、スタティック ライブラリ (LIB)、ダイナミック ライブラリ (DLL)、実行可能ファイル (EXE) の間のバイナリ互換性が保証されていませんでした。 これが Visual Studio 2017 で変わりました。 Visual Studio 2015 と Visual Studio 2017 では、C++ ツールセットのメジャー番号が 14 になります (Visual Studio 2015 は v140、Visual Studio 2017 は v141)。 これは、ランタイム ライブラリといずれかのバージョンのコンパイラでコンパイルされたアプリケーションの両方に、ほとんどの部分において、バイナリ互換性があるという事実を反映するものです。 つまり、たとえば Visual Studio 2015 の DLL がある場合、Visual Studio 2017 でビルドされたアプリケーションからこの DLL を使用するために再コンパイルする必要はありません。
+Visual Studio 2013 以前では、バージョンの異なるコンパイラ ツールセットやランタイム ライブラリで構築されたオブジェクト ファイル (OBJ)、スタティック ライブラリ (LIB)、ダイナミック ライブラリ (DLL)、実行可能ファイル (EXE) の間のバイナリ互換性が保証されていませんでした。 
 
-このルールには例外が 2 つあります。 以下の場合、バイナリ互換性は保証されません。
+Visual Studio 2015 以降では、C++ ツールセットのメジャー番号が 14 になります (Visual Studio 2015 は v140、Visual Studio 2017 は v141、Visual Studio 2019 は v142)。 これは、ランタイム ライブラリといずれかのバージョンのコンパイラでコンパイルされたアプリケーションの両方に、バイナリ互換性があるという事実を反映するものです。 つまり、Visual Studio 2015 でビルドされたサードパーティのライブラリがある場合、Visual Studio 2017 または Visual Studio 2019 でビルドされたアプリケーションからこのライブラリを使用するために再コンパイルする必要はありません。
 
-1. スタティック ライブラリまたはオブジェクト ファイルが `/GL` コンパイラ スイッチでコンパイルされる場合。
+このルールの唯一の例外として、`/GL` コンパイラ スイッチでコンパイルされたスタティック ライブラリまたはオブジェクト ファイルは、バイナリ互換性がありません。 
 
-2. アプリケーションのコンパイルとリンクで使用されたツールセットよりもバージョンが新しいツールセットで構築されたライブラリを使用する場合。 たとえば、コンパイラ バージョン 19.12 でコンパイルしてリンクされたプログラムは、19.0 から 19.12 でコンパイルされたライブラリを使用することができます。 また、バイナリ互換性は Visual Studio 2015 と Visual Studio 2017 の間にのみ存在します。Visual Studio 2013 以前で生成されたライブラリと 19.x のプログラムとのリンクはサポートされていません。
+サポート対象のさまざまなバージョンの MSVC ツールセットでビルドされたバイナリを混在させると、アプリケーションの実行基盤の Visual C++ 再頒布可能パッケージには、アプリまたはそれが使用するすべてのライブラリのビルドに使用されるツールセットのいずれのバージョンよりも古いものは使用できません。 
 
 ## <a name="see-also"></a>関連項目
 

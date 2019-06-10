@@ -4,12 +4,12 @@ ms.date: 09/01/2017
 helpviewer_keywords:
 - UNIX [C++]
 ms.assetid: 36108b31-e7fa-49a8-a1f7-7077fcbec873
-ms.openlocfilehash: 2b0736bca9cc0b67f9ea8ac83dc18fadaeefdb3c
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: 17f8082ac0442f65b9195b37da18b04f795d3d66
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58780822"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448956"
 ---
 # <a name="introduction-to-visual-c-for-unix-users"></a>Visual C++ の紹介 (UNIX ユーザー向け)
 
@@ -21,7 +21,7 @@ UNIX のコマンドライン環境を使用する場合と同様の方法で、
 
 UNIX では、コマンドは /usr/bin などの共通のフォルダーにインストールされます。 Visual Studio の場合、コマンドライン ツールは Visual Studio のインストール ディレクトリにインストールされます。VC\bin サブディレクトリとそのサブディレクトリです。 UNIX とは異なり、これらのツールは普通のコマンド プロンプト ウィンドウでは利用できません。 コマンドライン ツールを使用するには、開発者コマンド プロンプト ショートカットを使用するか、vcvarsall.bat など、開発者コマンド ファイルを実行してください。 これで、コマンド ラインから C++ プログラムをコンパイルするために必要なパスとその他の環境変数が設定されます。 詳細については、「[コマンドラインでの C/C++ コードのビルド](../build/building-on-the-command-line.md)」および「[チュートリアル: コマンド ラインでのネイティブ C++ プログラムのコンパイル](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)」を参照してください。
 
-開発者コマンド プロンプト ショートカットを開くには、デスクトップの検索コントロールに「*developer command prompt*」と入力し、検索結果からお使いのバージョンの Visual Studio の**開発者コマンド プロンプト**を選びます。 特定のホストとターゲット アーキテクチャに事前構成した開発者コマンド プロンプトを選ぶには、**[スタート]** メニュー (デスクトップの隅にある Windows アイコン) を開き、お使いのバージョンの Visual Studio (**Visual Studio 2017** など) のフォルダーまでスクロールします。 フォルダーを開き、任意のホストとターゲット アーキテクチャのコマンド プロンプト ショートカットを選びます。
+開発者コマンド プロンプト ショートカットを開くには、デスクトップの検索コントロールに「*developer command prompt*」と入力し、検索結果からお使いのバージョンの Visual Studio の**開発者コマンド プロンプト**を選びます。 特定のホストとターゲット アーキテクチャに事前構成した開発者コマンド プロンプトを選ぶには、 **[スタート]** メニュー (デスクトップの隅にある Windows アイコン) を開き、お使いのバージョンの Visual Studio (**Visual Studio 2017** など) のフォルダーまでスクロールします。 フォルダーを開き、任意のホストとターゲット アーキテクチャのコマンド プロンプト ショートカットを選びます。
 
 Visual Studio デバッガー、IntelliSense のコード参照とステートメント入力候補、ビジュアル デザイナー、プロジェクト管理など、さらに強力な機能を活用するには、Visual Studio IDE を使用する必要があります。
 
@@ -49,7 +49,7 @@ C++ コンパイラを使用すれば、メイクファイルでコンパイル�
 
 ## <a name="microsoft-specific-modifiers"></a>Microsoft 固有の修飾子
 
-Microsoft Visual C++ コンパイラは、Windows オペレーティング システムのプログラミングをサポートする目的で、標準 C++ プログラミング言語にいくつかの拡張機能を実装します。 これらの拡張機能は、ストレージ クラス属性、関数の呼び出し規約、ベース アドレス指定などを指定するために使用されます。 サポートされているすべての C++ の拡張機能の完全な一覧については、「[Microsoft 固有の修飾子](../cpp/microsoft-specific-modifiers.md)」を参照してください。
+Microsoft C++ コンパイラでは、Windows オペレーティング システムのプログラミングをサポートする目的で、標準 C++ プログラミング言語にいくつかの拡張機能が実装されます。 これらの拡張機能は、ストレージ クラス属性、関数の呼び出し規約、ベース アドレス指定などを指定するために使用されます。 サポートされているすべての C++ の拡張機能の完全な一覧については、「[Microsoft 固有の修飾子](../cpp/microsoft-specific-modifiers.md)」を参照してください。
 
 `/Za` コンパイラ オプションを使用して、C++ へのすべての Microsoft 固有の拡張機能を無効にすることができます。 複数のプラットフォームで実行するコードを記述する場合、このオプションが推奨されます。 `/Za` コンパイラ オプションの詳細については、「[/Za、/Ze (言語拡張機能の無効化)](../build/reference/za-ze-disable-language-extensions.md)」を参照してください。 C++ コンパイラの準拠の詳細については、「[Visual C++ 言語への準拠](../overview/visual-cpp-language-conformance.md)」および「[非標準動作](../cpp/nonstandard-behavior.md)」を参照してください。
 
@@ -57,7 +57,7 @@ Microsoft Visual C++ コンパイラは、Windows オペレーティング シ�
 
 Microsoft C および C++ コンパイラは、インライン コードを含む、C または C++ コードをプリコンパイルするためのオプションを提供します。 このパフォーマンス機能を使用して、安定したコードの本体をコンパイルし、ファイル内のコードのコンパイル済みの状態を格納します。さらに、後続のコンパイル中に、プリコンパイルされたコードと開発中のコードを結合できます。 安定したコードは再コンパイルする必要がないので、後続のコンパイルが高速化します。
 
-既定では、プリコンパイル済みのすべてのコードは、ファイル stdafx.h と stdafx.cpp で指定されます。 **[プリコンパイル済みヘッダー]** オプションをオフにしない限り、**[新しいプロジェクト]** ウィザードは自動的にこれらのファイルを作成します。 プリコンパイルされたヘッダーの詳細については、「[プリコンパイル済みヘッダー ファイルの作成](../build/creating-precompiled-header-files.md)」を参照してください。
+既定では、プリコンパイル済みのすべてのコードは、ファイル stdafx.h と stdafx.cpp で指定されます。 **[プリコンパイル済みヘッダー]** オプションをオフにしない限り、 **[新しいプロジェクト]** ウィザードは自動的にこれらのファイルを作成します。 プリコンパイルされたヘッダーの詳細については、「[プリコンパイル済みヘッダー ファイルの作成](../build/creating-precompiled-header-files.md)」を参照してください。
 
 ## <a name="related-sections"></a>関連項目
 

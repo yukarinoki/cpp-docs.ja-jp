@@ -2,12 +2,12 @@
 title: Universal CRT へのコードのアップグレード
 ms.date: 03/31/2017
 ms.assetid: eaf34c1b-da98-4058-a059-a10db693a5ce
-ms.openlocfilehash: bdf1615d47361654e9690977520d01c332098438
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: 68edcd57ee03ac861a6d2105456f4dbf699c1210
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58898766"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448998"
 ---
 # <a name="upgrade-your-code-to-the-universal-crt"></a>Universal CRT へのコードのアップグレード
 
@@ -19,7 +19,7 @@ UCRT は Windows コンポーネントであり、Windows 10 の一部として�
 
 ## <a name="where-to-find-the-universal-crt-files"></a>ユニバーサル CRT ファイルの場所
 
-Windows コンポーネントと同じように、UCRT ライブラリのファイルとヘッダーは現在、Windows ソフトウェア開発キット (SDK) の一部です。 Visual Studio をインストールするときに、UCRT を使用するために必要な Windows SDK の一部もインストールされます。 Visual Studio インストーラーでは、Visual Studio のプロジェクト ビルド システムで使用される既定のパスに、UCRT ヘッダー、ライブラリ、および DLL ファイルの場所が追加されます。 Visual C++ プロジェクトを更新するときに、既定のプロジェクトの設定が使用されている場合、IDE がヘッダー ファイルの新しい場所を自動的に検出し、リンカーが新しい既定の UCRT ライブラリと vcruntime ライブラリを自動的に使用します。 同様に、Developer コマンド プロンプトを使用してコマンド ライン ビルドを実行する場合、ヘッダーとライブラリのパスを含む環境変数が更新され、こちらも自動的に動作します。
+Windows コンポーネントと同じように、UCRT ライブラリのファイルとヘッダーは現在、Windows ソフトウェア開発キット (SDK) の一部です。 Visual Studio をインストールするときに、UCRT を使用するために必要な Windows SDK の一部もインストールされます。 Visual Studio インストーラーでは、Visual Studio のプロジェクト ビルド システムで使用される既定のパスに、UCRT ヘッダー、ライブラリ、および DLL ファイルの場所が追加されます。 Visual Studio C++ プロジェクトを更新するときに、既定のプロジェクトの設定が使用されている場合、IDE でヘッダー ファイルの新しい場所が自動的に検出され、リンカーでは新しい既定の UCRT ライブラリと vcruntime ライブラリが自動的に使用されます。 同様に、Developer コマンド プロンプトを使用してコマンド ライン ビルドを実行する場合、ヘッダーとライブラリのパスを含む環境変数が更新され、こちらも自動的に動作します。
 
 標準 C ライブラリ ヘッダー ファイルが、Windows SDK に含まれるようになり、SDK バージョン固有のディレクトリのインクルード フォルダーに置かれます。 ヘッダー ファイルの標準的な場所は、Program Files または Program Files (x86) ディレクトリにある Windows Kits\\10\\Include\\_sdk-version_\\ucrt です。ここで _sdk-version_ は、Windows のバージョンまたは更新プログラムに対応します。たとえば、Windows 10 Anniversary Update の場合は 10.0.14393.0 です。
 
@@ -29,7 +29,7 @@ UCRT スタティック ライブラリとダイナミック リンク スタブ
 
 C および C++ コンパイラ固有のランタイム サポート ライブラリ **vcruntime** には、プログラムの起動、および例外処理や組み込みなどの機能をサポートするために必要なコードが含まれています。 ライブラリとそのヘッダー ファイルは、Program Files または Program files (x86) ディレクトリのバージョン固有の Microsoft Visual Studio フォルダーに引き続き置かれています。 Visual Studio 2017 では、ヘッダーは、Microsoft Visual Studio\\2017\\_edition_\\VC\\Tools\\MSVC\\_lib-version_\\include にあり、リンク ライブラリは、Microsoft Visual Studio\\2017\\_edition_\\VC\\Tools\\MSVC\\_lib-version_\\lib\\_architecture_ にあります。ここで、_edition_ はインストールされている Visual Studio のエディションであり、_lib-version_ はライブラリのバージョンで、_architecture_ はプロセッサのアーキテクチャです。 OneCore とストアのリンク ライブラリは、libraries フォルダーにもあります。 スタティック ライブラリの製品版とデバッグ バージョンは、libvcruntime.lib と libvcruntimed.lib です。 ダイナミック リンク ライブラリの製品版とデバッグのスタブ ライブラリは、それぞれ vcruntime.lib と vcruntimed.lib です。
 
-Visual C++ プロジェクトを更新するときに、プロジェクトの **[リンカー]** プロパティの **[すべての既定のライブラリの無視]** を **[はい]** に設定するか、コマンドラインで `/NODEFAULTLIB` リンカー オプションを使用する場合、ライブラリのリストを更新して、新しいリファクタリング ライブラリを組み込む必要があります。 古い CRT ライブラリ (libcmt.lib、libcmtd.lib、msvcrt.lib、msvcrtd.lib など) をリファクタリングした同等のライブラリで置き換えます。 使用する特定のライブラリの詳細については、「[CRT ライブラリの機能](../c-runtime-library/crt-library-features.md)」を参照してください。
+Visual Studio C++ プロジェクトを更新するときに、プロジェクトの **[リンカー]** プロパティの **[すべての既定のライブラリの無視]** を **[はい]** に設定するか、コマンドラインで `/NODEFAULTLIB` リンカー オプションを使用する場合、ライブラリのリストを更新して、新しいリファクタリング ライブラリを組み込む必要があります。 古い CRT ライブラリ (libcmt.lib、libcmtd.lib、msvcrt.lib、msvcrtd.lib など) をリファクタリングした同等のライブラリで置き換えます。 使用する特定のライブラリの詳細については、「[CRT ライブラリの機能](../c-runtime-library/crt-library-features.md)」を参照してください。
 
 ## <a name="deployment-and-redistribution-of-the-universal-crt"></a>ユニバーサル CRT の配置と再配布
 

@@ -1,21 +1,21 @@
 ---
 title: 'チュートリアル: プロジェクトの構築 (C++)'
-ms.date: 09/14/2018
+ms.date: 04/25/2019
 helpviewer_keywords:
 - building projects [C++]
 - projects [C++], building
 - project building [C++]
 ms.assetid: d459bc03-88ef-48d0-9f9a-82d17f0b6a4d
-ms.openlocfilehash: 8aadb6983cc096ff75785c6bab7ace6bd5f0c632
-ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
+ms.openlocfilehash: ea477e7b2f5435e049b242e68d151cc1f2d20624
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57809010"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "66182692"
 ---
 # <a name="walkthrough-building-a-project-c"></a>チュートリアル: プロジェクトの構築 (C++)
 
-このチュートリアルでは、コードに意図的に Visual C++ 構文のエラーを挿入し、コンパイル エラーがどのように表示されるかを確認し、その修正方法について説明します。 プロジェクトをコンパイルすると、エラー メッセージによって問題の内容と発生した場所が示されます。
+このチュートリアルでは、コードに意図的に C++ 構文のエラーを挿入し、コンパイル エラーがどのように表示されるかを確認し、その修正方法について説明します。 プロジェクトをコンパイルすると、エラー メッセージによって問題の内容と発生した場所が示されます。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
@@ -29,19 +29,19 @@ ms.locfileid: "57809010"
 
    `return 0`
 
-1. メニュー バーで、**[ビルド]** > **[ソリューションのビルド]** の順にクリックします。
+1. メニュー バーで、 **[ビルド]**  >  **[ソリューションのビルド]** の順にクリックします。
 
 1. **[エラー一覧]** ウィンドウに、プロジェクトのビルド中にエラーが発生したことを示すメッセージが表示されます。 たとえば、エラーの説明はこのエラー メッセージのようになります。
 
    `error C2143: syntax error: missing ';' before '}'`
 
-   このエラーに関するヘルプ情報を表示するには、**[エラー一覧]** ウィンドウでそのエラーを強調表示し、**F1** キーを押します。
+   このエラーに関するヘルプ情報を表示するには、 **[エラー一覧]** ウィンドウでそのエラーを強調表示し、**F1** キーを押します。
 
 1. 構文エラーのある行の最後に、セミコロンを戻します。
 
    `return 0;`
 
-1. メニュー バーで、**[ビルド]** > **[ソリューションのビルド]** の順にクリックします。
+1. メニュー バーで、 **[ビルド]**  >  **[ソリューションのビルド]** の順にクリックします。
 
    **[出力]** ウィンドウに、プロジェクトが正常にコンパイルされたことを示すメッセージが表示されます。
 
@@ -54,8 +54,8 @@ ms.locfileid: "57809010"
 
 ## <a name="next-steps"></a>次の手順
 
-**前へ:**[チュートリアル:プロジェクトとソリューションの使用 (C++)](../ide/walkthrough-working-with-projects-and-solutions-cpp.md)<br/>
-**次へ:**[チュートリアル:プロジェクトのテスト (C++)](../ide/walkthrough-testing-a-project-cpp.md)<br/>
+**前へ:** [チュートリアル:プロジェクトとソリューションの使用 (C++)](../ide/walkthrough-working-with-projects-and-solutions-cpp.md)<br/>
+**次へ:** [チュートリアル:プロジェクトのテスト (C++)](../ide/walkthrough-testing-a-project-cpp.md)<br/>
 
 ## <a name="see-also"></a>関連項目
 

@@ -1,16 +1,16 @@
 ---
 title: Microsoft C++ 言語の準拠表
-ms.date: 05/19/2019
+ms.date: 05/20/2019
 ms.technology: cpp-language
 ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: c36256988e2698cb6f04e0ab71dbf6211b596033
-ms.sourcegitcommit: 61121faf879cc581a4d39e4baccabf7cf1f673a5
+ms.openlocfilehash: 994878509c4fc1bf14390fad8ff4c112a4af8242
+ms.sourcegitcommit: a61d17cffdd50f1c3c6e082a01bbcbc85b6cc5a7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65934170"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65975162"
 ---
 # <a name="microsoft-c-language-conformance-table"></a>Microsoft C++ 言語の準拠表
 
@@ -89,32 +89,33 @@ Visual Studio 2017 または Visual Studio 2019 で加えられた準拠の強�
 |----|---|
 |__C++17 コア言語機能 (不具合報告)__|__サポート状況__|
 |&nbsp;&nbsp;[P0702R1 初期化子リスト ctors のクラス テンプレート引数の推論の修正](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0702r1.html)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0588R1 暗黙の lambda キャプチャの簡略化](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0588r1.html)|いいえ|
 |&nbsp;&nbsp;[P0961R1 構造化バインディング カスタマイゼーション ポイントを見つけるルールの緩和](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0961r1.html)|VS 2019 16.0 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0962R2 範囲 for ループのカスタマイゼーション ポイントを見つけるルールの緩和](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0962r1.html)|いいえ|
 |&nbsp;&nbsp;[P0969R0 アクセス可能なメンバーへの構造化バインディングの許可](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0969r0.pdf)|VS 2019 16.0 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0859R0 CWG 1581:constexpr メンバー関数を定義するタイミング](https://wg21.link/P0859R0)|いいえ|
+|&nbsp;&nbsp;[P0588R1 暗黙の lambda キャプチャの簡略化](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0588r1.html)|いいえ|
+|&nbsp;&nbsp;[P0962R2 範囲 for ループのカスタマイゼーション ポイントを見つけるルールの緩和](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0962r1.html)|いいえ|
 |&nbsp;&nbsp;[P0929R2 抽象クラス型のチェック](https://wg21.link/P0929R2)|いいえ|
 |&nbsp;&nbsp;[P1009R2 new 式での配列サイズの推論](https://wg21.link/P1009R2)|いいえ|
 |&nbsp;&nbsp;[P1286R2 CWG DR1778 に対する反対](https://wg21.link/P1286R2)|いいえ|
-
 |機能分野| |
 |----|---|
 |__C++20 Core 言語機能__|__サポート状況__|
 |&nbsp;&nbsp;[P0704R1 メンバーへの const lvalue ref-qualified ポインターの修正](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0704r1.html)|VS 2015 <sup>[14](#note_14)</sup>|
-|&nbsp;&nbsp;[P0972R0 \<chrono> zero()、min()、max() の noexcept](https://wg21.link/P0972R0)|VS 2017 15.7 <sup>[14](#note_14)</sup>|
+|&nbsp;&nbsp;[P1041R4 char16_t/char32_t 文字列リテラルを UTF-16/32 にする](https://wg21.link/P1041R4)|VS 2015 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[P1330R0 constexpr 内での共用体のアクティブなメンバーの変更](https://wg21.link/P1330R0)|VS 2017 15.0 <sup>[14](#note_14)</sup>|
+|&nbsp;&nbsp;[P0972R0 \<chrono> zero()、min()、max() の noexcept](https://wg21.link/P0972R0)|VS 2017 15.7 <sup>[14](#note_14)</sup>|
+|&nbsp;&nbsp;[P0515R3 3 方向 (宇宙船) 比較演算子 <=>](https://wg21.link/P0515R3)|VS 2019 16.0 <sup>[20](#note_20)</sup>|
+|&nbsp;&nbsp;[P1008R1 ユーザー宣言コンストラクターによる集計の禁止](https://wg21.link/P1008R1)|VS 2019 16.0 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0329R4 指定の初期化](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0329r4.pdf)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0409R2 ラムダ キャプチャ \[=, this\] の許可](http://open-std.org/JTC1/SC22/WG21/docs/papers/2017/p0409r2.html)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
-|&nbsp;&nbsp;[P0515R3 3 方向 (宇宙船) 比較演算子 <=>](https://wg21.link/P0515R3) および [P0905R1 宇宙船の対称性](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0905r1.html)|VS 2019 16.0 <sup>[20](#note_20)</sup>|
+|&nbsp;&nbsp;[P0515R3 3 方向 (宇宙船) 比較演算子 <=>](https://wg21.link/P0515R3)|VS 2019 16.0 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0941R2 機能テストのマクロ](https://wg21.link/P0941R2)|VS 2019 16.0 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[P1008R1 ユーザー宣言コンストラクターによる集計の禁止](https://wg21.link/P1008R1)|VS 2019 16.0 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0846R0 ADL と表示されない関数テンプレート](https://wg21.link/P0846R0)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0641R2 規定化コピー コンストラクターでの const の不一致](https://wg21.link/P0641R2)|Partial|
-|&nbsp;&nbsp;[P0306R4 コンマ省略とコンマ削除のための \_\_VA_OPT\_\_ の追加](https://wg21.link/P0306R4)および [P1042R1 \_\_VA_OPT\_\_ 言い回しの分類](https://wg21.link/P1042R1)|いいえ|
+|&nbsp;&nbsp;[P0306R4 コンマ省略とコンマ削除のための \_\_VA_OPT\_\_ の追加](https://wg21.link/P0306R4)|いいえ|
 |&nbsp;&nbsp;[P0315R4 未評価のコンテキストでのラムダの許可](https://wg21.link/P0315R4)|いいえ|
 |&nbsp;&nbsp;[P0409R2 ラムダ キャプチャ \[=, this\] の許可](https://wg21.link/P0409R2)|いいえ|
-|&nbsp;&nbsp;[P0428R2 汎用ラムダの使い慣れたテンプレート構文](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0428r2.pdf)|いいえ|
+|&nbsp;&nbsp;[P0428R2 汎用ラムダの使い慣れたテンプレート構文](http://www.open-std.org/jtc1/sc22/wg21/docs/pa pers/2017/p0428r2.pdf)|いいえ|
 |&nbsp;&nbsp;[P0479R5 \[\[likely\]\] および \[\[unlikely\]\] 属性](https://wg21.link/P0479R5)|いいえ|
 |&nbsp;&nbsp;[P0542R5 constract](https://wg21.link/P0542R5)|いいえ|
 |&nbsp;&nbsp;[P0614R1 初期化を使う範囲ベースの for-loop](https://wg21.link/P0614R1)|いいえ|
@@ -133,7 +134,6 @@ Visual Studio 2017 または Visual Studio 2019 で加えられた準拠の強�
 |&nbsp;&nbsp;[P0912R5 コルーチン](https://wg21.link/P0912R5)|いいえ|
 |&nbsp;&nbsp;[P0960R3 かっこで囲まれた値のリストからの集計の初期化を許可する](https://wg21.link/P0960R3)|いいえ|
 |&nbsp;&nbsp;[P1002R1 constexpr 関数での try-catch ブロック](https://wg21.link/P1002R1)|いいえ|
-|&nbsp;&nbsp;[P1041R4 char16_t/char32_t 文字列リテラルを UTF-16/32 にする](https://wg21.link/P1041R4)|VS 2015 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[P1064R0 定数式での仮想関数呼び出しの許可](https://wg21.link/P1064R0)|いいえ|
 |&nbsp;&nbsp;[P1073R3 即時関数](https://wg21.link/P1073R3)|いいえ|
 |&nbsp;&nbsp;[P1084R2 現在の戻り値の型の要件は不十分である](https://wg21.link/P1084R2)|いいえ|
@@ -156,12 +156,21 @@ Visual Studio 2017 または Visual Studio 2019 で加えられた準拠の強�
 |機能分野| |
 |---|---|
 |__C++20 標準ライブラリの機能__|__サポート状況__|
+|&nbsp;&nbsp;[P0809R0 順序なしのコンテナーの比較](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0809r0.pdf)| VS 2010 <sup>[14](#note_14)</sup>|
+|&nbsp;&nbsp;[P0858R0 Constexpr 反復子の要件](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0858r0.html)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
+|&nbsp;&nbsp;[P0777R1 不要な Decay の回避](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0777r1.pdf)|VS 2017 15.7 <sup>[14](#note_14)</sup>|
+|&nbsp;&nbsp;[P0550R2 remove_cvref](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0550r2.pdf)|VS 2019 16.0 <sup>[20](#note_20)</sup>|
+|&nbsp;&nbsp;[P0318R1 unwrap_reference、unwrap_ref_decay](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0318r1.pdf)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
+|&nbsp;&nbsp;[P0457R2 basic_string/basic_string_view の starts_with()/ends_with()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0457r2.html)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
+|&nbsp;&nbsp;[P0458R2 順序付きおよび順序なし連想コンテナーの contains()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0458r2.html)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
+|&nbsp;&nbsp;[P0646R1 list/forward_list remove()/remove_if()/unique() Return size_type](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0646r1.pdf)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
+|&nbsp;&nbsp;[P0769R2 shift_left()、shift_right()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0769r2.pdf)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
+|&nbsp;&nbsp;[P0887R1 type_identity](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0887r1.pdf)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0019R8 atomic_ref](https://wg21.link/P0019R8)|いいえ|
 |&nbsp;&nbsp;[P0020R6 atomic\<float>、atomic\<double>、atomic\<long double>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0020r6.html)|いいえ|
 |&nbsp;&nbsp;[P0053R7 \<syncstream>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0053r7.pdf)<br/>&nbsp;&nbsp;[P0753R2 osyncstream マニピュレーター](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0753r2.pdf)|いいえ|
 |&nbsp;&nbsp;[P0122R7 \<span>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0122r7.pdf)|いいえ|
 |&nbsp;&nbsp;[P0202R3 \<algorithm> および exchange() に対する constexpr](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0202r3.html)|いいえ|
-|&nbsp;&nbsp;[P0318R1 unwrap_reference、unwrap_ref_decay](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0318r1.pdf)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0339R6 polymorphic_allocator<>](https://wg21.link/P0339R6)|いいえ|
 |&nbsp;&nbsp;[P0340R3 SFINAE 対応 underlying_type](https://wg21.link/P0340R3)|いいえ|
 |&nbsp;&nbsp;[P0355R7 \<chrono> カレンダーおよびタイム ゾーン](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0355r7.html)|いいえ|
@@ -169,22 +178,18 @@ Visual Studio 2017 または Visual Studio 2019 で加えられた準拠の強�
 |&nbsp;&nbsp;[P0357R3 reference_wrapper での不完全な型のサポート](https://wg21.link/P0357R3)|いいえ|
 |&nbsp;&nbsp;[P0415R1 \<complex> に対する constexpr (再度)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0415r1.html)|いいえ|
 |&nbsp;&nbsp;[P0439R0 列挙型クラス memory_order](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0439r0.html)|いいえ|
-|&nbsp;&nbsp;[P0457R2 basic_string/basic_string_view の starts_with()/ends_with()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0457r2.html)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
-|&nbsp;&nbsp;[P0458R2 順序付きおよび順序なし連想コンテナーの contains()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0458r2.html)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0463R1 エンディアン](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0463r1.html)|いいえ|
 |&nbsp;&nbsp;[P0475R1 区分コンストラクションのコピー省略の保証](https://wg21.link/P0475R1)|いいえ|
 |&nbsp;&nbsp;[P0476R2 <bit> bit_cast](https://wg21.link/P0476R2)|いいえ|
 |&nbsp;&nbsp;[P0482R6 char8_t:UTF-8 文字と文字列用の型](https://wg21.link/P0482R6)|いいえ|
 |&nbsp;&nbsp;[P0487R1 演算子>>(basic_istream&, CharT*) の修正](https://wg21.link/P0487R1)|いいえ|
 |&nbsp;&nbsp;[P0528R3 パディングのビットを使ったアトミックな比較と交換](https://wg21.link/P0528R3)|いいえ|
-|&nbsp;&nbsp;[P0550R2 remove_cvref](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0550r2.pdf)|VS 2019 16.0 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0556R3 <bit> ispow2()、ceil2()、floor2()、log2p1()](https://wg21.link/P0556R3)|いいえ|
 |&nbsp;&nbsp;[P0591R4 uses-allocator コンストラクション用のユーティリティ関数](https://wg21.link/P0591R4)|いいえ|
 |&nbsp;&nbsp;[P0600R1 STL の \[\[nodiscard\]\]、パート 1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0600r1.pdf)|いいえ|
 |&nbsp;&nbsp;[P0608R3 バリアントのコンストラクター/割り当ての変換の強化](https://wg21.link/P0608R3)|いいえ|
 |&nbsp;&nbsp;[P0616R0 \<numeric> での move() の使用](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0616r0.pdf)|いいえ|
 |&nbsp;&nbsp;[P0619R4 C++20 の C++17 非推奨機能の削除](https://wg21.link/P0619R4)|いいえ|
-|&nbsp;&nbsp;[P0646R1 list/forward_list remove()/remove_if()/unique() Return size_type](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0646r1.pdf)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0653R2 to_address()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0653r2.html)|いいえ|
 |&nbsp;&nbsp;[P0655R1 visit<R>()](https://wg21.link/P0655R1)|いいえ|
 |&nbsp;&nbsp;[P0674R1 配列の make_shared()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0674r1.html)|いいえ|
@@ -194,14 +199,9 @@ Visual Studio 2017 または Visual Studio 2019 で加えられた準拠の強�
 |&nbsp;&nbsp;[P0758R1 is_nothrow_convertible](https://wg21.link/P0758R1)|いいえ|
 |&nbsp;&nbsp;[P0767R1 is_pod の非推奨](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0767r1.html)|いいえ|
 |&nbsp;&nbsp;[P0768R1 宇宙船比較演算子のライブラリ サポート\<=>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0768r1.pdf)|いいえ|
-|&nbsp;&nbsp;[P0769R2 shift_left()、shift_right()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0769r2.pdf)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0771R1 std::function の移動コンストラクター用の noexcept](https://wg21.link/P0771R1)|いいえ|
-|&nbsp;&nbsp;[P0777R1 不要な Decay の回避](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0777r1.pdf)|VS 2017 15.7 <sup>[14](#note_14)</sup>|
-|&nbsp;&nbsp;[P0809R0 順序なしのコンテナーの比較](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0809r0.pdf)| VS 2010 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[P0811R3 midpoint()、lerp()](https://wg21.link/P0811R3)|いいえ|
-|&nbsp;&nbsp;[P0858R0 Constexpr 反復子の要件](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0858r0.html)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0879R0 スワップ関数の constexpr](https://wg21.link/P0879R0)|いいえ|
-|&nbsp;&nbsp;[P0887R1 type_identity](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0887r1.pdf)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0896R4 \<ranges\>](https://wg21.link/P0896R4)|いいえ|
 |&nbsp;&nbsp;[P0898R3 標準ライブラリの概念](https://wg21.link/P0898R3)|いいえ|
 |&nbsp;&nbsp;[P0912R5 コルーチンに対するライブラリのサポート](https://wg21.link/P0912R5)|いいえ|
@@ -215,7 +215,6 @@ Visual Studio 2017 または Visual Studio 2019 で加えられた準拠の強�
 |&nbsp;&nbsp;[P1020R1 既定値初期化を使ったスマート ポインターの作成](https://wg21.link/P1020R1)|いいえ|
 |&nbsp;&nbsp;[P1023R0 std::array 比較の constexpr](https://wg21.link/P1023R0)|いいえ|
 |&nbsp;&nbsp;[P1032R1 その他の constexpr](https://wg21.link/P1032R1)|いいえ|
-|&nbsp;&nbsp;[P1164R1 create_directory() を直感的にする (障害レポート)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1164r1.pdf)|VS 2019 16.0 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[P1165R1 basic_string の operator+() における一貫して反映されるステートフル アロケーター](https://wg21.link/P1165R1)|いいえ|
 |&nbsp;&nbsp;[P1209R0 erase_if()、erase()](https://wg21.link/P1209R0)|いいえ|
 |&nbsp;&nbsp;[P1227R2 符合付き std::ssize()、符号なし span::size()](https://wg21.link/P1227R2)|いいえ|
@@ -274,7 +273,7 @@ Visual Studio 2017 または Visual Studio 2019 で加えられた準拠の強�
 |&nbsp;&nbsp;[P0185R1 is_swappable、is_nothrow_swappable](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0185r1.html)|VS 2015.3|
 |&nbsp;&nbsp;[P0209R2 make_from_tuple()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0209r2.pdf)|VS 2017 15.0|
 |&nbsp;&nbsp;[P0218R1 \<filesystem>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0218r1.html)<br/>&nbsp;&nbsp;[P0219R1 ファイル システムの相対パス](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0219r1.html)<br/>&nbsp;&nbsp;[P0317R1 ファイル システムのディレクトリ エントリのキャッシュ](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0317r1.html)<br/>&nbsp;&nbsp;[P0392R0 ファイル システム パスの string_view のサポート](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0392r0.pdf)<br/>&nbsp;&nbsp;[P0430R2 POSIX 以外のファイル システムのサポート](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0430r2.pdf)<br/>&nbsp;&nbsp;[P0492R2 ファイル システムに関する NB コメントの解決](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0492r2.html)|VS 2017 15.7 <sup>[E](#note_E)</sup>|
-|&nbsp;&nbsp;[P0220R1 ライブラリ基礎 V1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0220r1.html)|VS 2017 15.6 <sup>[F](#note_F)</sup>|
+|&nbsp;&nbsp;[P0220R1 ライブラリ基礎 V1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0220r1.html)|VS 2017 15.6|
 |&nbsp;&nbsp;[P0226R1 数学的特殊関数](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0226r1.pdf)|VS 2017 15.7|
 |&nbsp;&nbsp;[P0254R2 string_view と std::string の統合](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0254r2.pdf)|VS 2017 15.0|
 |&nbsp;&nbsp;[P0258R2 has_unique_object_representations](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0258r2.html)|VS 2017 15.3 <sup>[G](#note_G)</sup>|
@@ -362,15 +361,13 @@ __VS 2019 16.1__ は、Visual Studio 2019 バージョン 16.1 でサポート�
 
 <a name="note_E"></a>__E__ これは、完全に新しい実装であり、以前の `std::experimental` バージョンとは対応していません。これは、symlink サポート、バグ修正、標準で要求される動作への変更で必要です。 現在、\<filesystem> を含めると、新しい `std::filesystem` と以前の `std::experimental::filesystem` が提供され、\<experimental/filesystem> を含めると、古い実験的な実装のみが提供されます。 この実験的な実装は、ライブラリの次の ABI の重大なリリースで削除されます。
 
-<a name="note_F"></a>__F__ Visual Studio 2015 では完全ではなかった機能は、この表の他の箇所に記載されています。
-
 <a name="note_G"></a>__G__ コンパイラ組み込みでサポートされています。
 
 <a name="note_14"></a>__14__ これらの C++17/20 機能は、[/std:c++14](../build/reference/std-specify-language-standard-version.md) (既定) が指定されているときでも、常に有効です。 この理由は、 **/std** オプションを導入する前に機能が実装されたため、または条件付きの実装が許容範囲を超えて複雑なためです。
 
 <a name="note_17"></a>__17__ これらの機能は [/std:c++17](../build/reference/std-specify-language-standard-version.md) (または [/std:c++latest](../build/reference/std-specify-language-standard-version.md)) コンパイラ オプションにより保護されています。
 
-<a name="note_20"></a>__20__ これらの機能は [/std:c++latest](../build/reference/std-specify-language-standard-version.md) コンパイラ オプションにより有効化されています。 C++20 の実装が完了すると、新しい **/std:c++20** コンパイラ オプションが追加されます。
+<a name="note_20"></a>__20__ これらの機能は [/std:c++latest](../build/reference/std-specify-language-standard-version.md) コンパイラ オプションにより有効化されています。 C++20 の実装が完了すると、新しい **/std:c++20** コンパイラ オプションが追加され、ここでもこれらの機能が使用可能になります。
 
 <a name="note_byte"></a>__byte__ `std::byte` は [/std:c++17](../build/reference/std-specify-language-standard-version.md) (または [/std:c++latest](../build/reference/std-specify-language-standard-version.md)) により有効になっていますが、Windows SDK のヘッダーと競合することがあるため、細かいオプトアウト マクロがあります。 `_HAS_STD_BYTE` を `0` として定義することで無効にできます。
 

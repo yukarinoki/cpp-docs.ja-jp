@@ -2,12 +2,12 @@
 title: Visual C++  移植とアップグレードのガイド
 ms.date: 09/18/2018
 ms.assetid: f5fbcc3d-aa72-41a6-ad9a-a706af2166fb
-ms.openlocfilehash: 8798d8b3da5a91adfc6f77912d4f34bf62549f54
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: 5659ca362204c62ab8fb21a74dccf8e29f33912c
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58898792"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450378"
 ---
 # <a name="visual-c-porting-and-upgrading-guide"></a>Visual C++  移植とアップグレードのガイド
 
@@ -53,7 +53,7 @@ Visual Studio のビルド システムを使用していない場合は、MSBui
 
 8. 動作の変更による実行時エラーまたは予期しない結果
 
-9. ツールで導入されたエラーによるエラー 問題が発生した場合には、通常のサポート チャネルを通じて、または [Visual Studio フィードバック センター](http://connect.microsoft.com/VisualStudio/Feedback)を使用して、Visual C++ チームに報告してください。
+9. ツールで導入されたエラーによるエラー 問題が発生した場合には、通常のサポート チャネルを通じて、または [Visual Studio C++ 開発者コミュニティ](https://developercommunity.visualstudio.com/spaces/62/index.html) ページを使用して、Visual C++ チームに報告してください。
 
 コンパイラのエラーにより回避することができない変更の他に、次のようないくつかの変更は、アップグレード プロセスで省略可能です。
 
@@ -75,7 +75,7 @@ Visual Studio のビルド システムを使用していない場合は、MSBui
 
 |Title|説明|
 |-----------|-----------------|
-|[旧バージョンの Visual C++ からのプロジェクトのアップグレード](upgrading-projects-from-earlier-versions-of-visual-cpp.md)|以前のバージョンの Visual C++ で作成されたプロジェクトを使用する方法について説明します。|
+|[旧バージョンの Visual C++ からのプロジェクトのアップグレード](upgrading-projects-from-earlier-versions-of-visual-cpp.md)|以前のバージョンの Visual Studio で作成されたプロジェクトを使用する方法について説明します。|
 |[Visual Studio での C++ コンパイラの新機能](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)|現行版の Visual Studio に合わせた IDE とツールの変更|
 |[Visual Studio の C++ 準拠の強化](../overview/cpp-conformance-improvements.md)|Visual Studio 2015 から Visual Studio における標準の準拠の強化|
 |[2003 から 2015 の Visual C++ の履歴の変更](visual-cpp-change-history-2003-2015.md)|コードの変更が必要となる可能性のある、Visual Studio 2003 から 2015 における Visual C++ ライブラリおよびビルド ツールのすべての変更の一覧。|
@@ -88,4 +88,4 @@ Visual Studio のビルド システムを使用していない場合は、MSBui
 
 ## <a name="see-also"></a>関連項目
 
-[Visual C++](../overview/visual-cpp-in-visual-studio.md)
+[Visual Studio での C++](../overview/visual-cpp-in-visual-studio.md)
