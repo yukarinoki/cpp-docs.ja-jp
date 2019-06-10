@@ -1,25 +1,25 @@
 ---
 title: Visual Studio での C++
 description: Visual C++ とは、Microsoft C++ のコンパイラ、コード エディターおよび Visual Studio IDE の関連ツールの名称です。 Visual C++ を使用すると、Windows、Linux、Android および iOS 用のプログラムを開発できます。
-ms.date: 05/13/2019
+ms.date: 05/14/2019
 ms.technology: cpp-ide
 helpviewer_keywords:
 - Visual C++, home page
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 2706d232dba2a7971edd8d84da2b1d1399ed6e25
-ms.sourcegitcommit: 61121faf879cc581a4d39e4baccabf7cf1f673a5
+ms.openlocfilehash: c2a38d13cd7b34880b64521af99103ed8192bfd0
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65934150"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66451206"
 ---
 # <a name="c-in-visual-studio"></a>Visual Studio での C++
 
 > [!NOTE]
 > この開発者向けドキュメントは、Visual Studio 2015 以降に適用されます。 自分の Visual Studio のバージョンと合わせるには、ページの左上にあるバージョン セレクターを使います。
 >
-> プログラムを実行するために Visual C++ 再頒布可能パッケージを探している場合、[Microsoft ダウンロード センター](http://www.microsoft.com/download/)にアクセスして検索ボックスに「**Visual C++**」と入力してください。
+> プログラムを実行するために Visual C++ 再頒布可能パッケージを探している場合、[Microsoft ダウンロード センター](https://www.microsoft.com/download/)にアクセスして検索ボックスに「**Visual C++** 」と入力してください。
 
 Microsoft Visual C++ (通常は短縮形で Visual C++ または MSVC と表現される) とは、Windows 上で Visual Studio の一部として利用できる C++、C、およびアセンブリ言語の開発ツールおよびライブラリの名前です。 これらのツールとライブラリでは、ユニバーサル Windows プラットフォーム (UWP) アプリ、ネイティブ Windows デスクトップおよびサーバー アプリケーション、Windows、Linux、Android、iOS 上で実行されるクロスプラットフォーム ライブラリおよびアプリに加えて、.NET Framework を使用する管理対象のアプリおよびライブラリを作成できます。 Visual C++ を使用すると、単純なコンソール アプリから最も高度で複雑な Windows デスクトップ用アプリまで、またデバイス ドライバーやオペレーティング システムのコンポーネントからモバイル デバイス用のクロスプラットフォーム ゲームまで、さらに最小の IoT デバイスから Azure クラウドにおけるマルチ サーバー ハイ パフォーマンス コンピューティングに至るまであらゆるアプリを記述することができます。
 
@@ -45,10 +45,10 @@ MSVC C++ コンパイラの各機能の準拠状態を一覧にしています�
 ## <a name="install-visual-studio-and-upgrade-from-earlier-versions"></a>Visual Studio をインストールして、以前のバージョンからアップグレードする
 
 [Visual Studio での C++ サポートのインストール](../build/vscpp-step-0-installation.md)<br/>
-Visual Studio 2015 または Visual Studio 2017 をダウンロードして、Visual C++ ツールセットをインストールします。
+Visual Studio 2017 または Visual Studio 2019 をダウンロードして、Visual C++ ツールセットをインストールします。
 
 [Visual C++ 移植とアップグレードのガイド](../porting/visual-cpp-porting-and-upgrading-guide.md)<br/>
-Windows 10 とユニバーサル Windows プラットフォームに C++ コードを移植するなど、Visual Studio 2015 または Visual Studio 2017 へのコードの移植およびプロジェクトのアップグレードのガイダンス。
+より高度な C++ 標準へのコンパイラの準拠および大幅に向上したコンパイル時間とセキュリティ機能 (Spectre の軽減策など) を活用するために、コードを移植してプロジェクトを Visual Studio 2015 以降にアップグレードするためのガイダンス。
 
 [さまざまな Visual Studio エディションの Visual C++ ツールおよび機能](visual-cpp-tools-and-features-in-visual-studio-editions.md)<br/>
 さまざまな Visual Studio のエディションに関する情報。
@@ -59,9 +59,9 @@ Windows 10 とユニバーサル Windows プラットフォームに C++ コー�
 ## <a name="learn-c"></a>C++ について
 
 [C++ へようこそ](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
-C++11 と C++14 を基盤とする現代的な C++ プログラミング手法にかんする情報。高速で安全なコードを記述し、C スタイルのプログラミングの潜在的な危険を回避できます。
+C++11 以降に基づく現代的な C++ プログラミング手法に関する情報。高速で安全なコードを記述し、C スタイルのプログラミングの多くの潜在的な危険を回避できます。
 
-[標準 C++](http://isocpp.org/)<br/>
+[標準 C++](https://isocpp.org/)<br/>
 C++ について学び、最新の C++ の概要を把握し、書籍、記事、講演、イベントなどへのリンクを探します
 
 [Visual C++ に関する詳細情報](../build/vscpp-step-1-create.md)<br/>
@@ -79,7 +79,7 @@ Visual Studio IDE を使用し、プロジェクトの作成、コードの編�
 MSVC のコンパイラ オプションとリンカー オプションを使用し、Visual Studio C++ プロジェクト、CMake プロジェクト、その他のプロジェクトを作成し、構成する方法。
 
 [C++ コードの作成とリファクタリング](../ide/writing-and-refactoring-code-cpp.md)<br/>
-C++ エディターの生産性機能を使用し、コードのリファクタリング、移動、作成を行う方法。
+C++ エディターの生産性機能を使用し、コードのリファクタリング、理解、記述を行う方法。
 
 [ネイティブ コードのデバッグ](/visualstudio/debugger/debugging-native-code)<br/>
 C++ プロジェクトで Visual Studio デバッガーを使用する。
@@ -117,7 +117,7 @@ Win32、ATL、および MFC を使用して Windows のデスクトップ DLL �
 C++ では、Web とクラウドに接続するためのいくつかの方法があります。
 
 [データ アクセス](../data/data-access-in-cpp.md)<br/>
-ODBC およびその他のデータベース アクセス テクノロジを使用してデータベースに接続します。
+ODBC と OLE DB を使用してデータベースに接続します。
 
 [テキストと文字列](../text/text-and-strings-in-visual-cpp.md)<br/>
 さまざまなテキスト形式および文字列形式の処理、およびローカルおよび国際対応の開発におけるエンコーディングの処理について説明します。
