@@ -35,7 +35,7 @@ Windows で`steady_clock`ラップ、`QueryPerformanceCounter`関数。
 |----------|-----------------|
 |`steady_clock::duration`|シノニム`nanoseconds`で定義された\<chrono >。|
 |`steady_clock::period`|シノニム`nano`で定義された\<ratio >。|
-|`steady_clock::rep`|シノニム**長い****長い**に含まれているインスタンス化のクロック ティック数を表すために使用される型`duration`します。|
+|`steady_clock::rep`|シノニム**長い** **長い**に含まれているインスタンス化のクロック ティック数を表すために使用される型`duration`します。|
 |`steady_clock::time_point`|`chrono::time_point<steady_clock>` と同義。|
 
 ## <a name="public-functions"></a>パブリック関数
