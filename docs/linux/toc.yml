@@ -10,6 +10,8 @@
   href: create-a-new-linux-project.md
 - name: リモートの Linux コンピューターに接続する
   href: connect-to-your-remote-linux-computer.md
+- name: Linux プロジェクトを構成してアドレス サニタイザーを使用する
+  href: linux-asan-configuration.md
 - name: Linux プロジェクトのデプロイ、実行、デバッグ
   href: deploy-run-and-debug-your-linux-project.md
 - name: 'チュートリアル: Visual Studio で C++ クロスプラットフォーム プロジェクトを作成する'

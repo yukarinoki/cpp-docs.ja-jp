@@ -2,16 +2,16 @@
 layout: LandingPage
 title: C++ ドキュメントによる Linux 開発
 description: Linux で実行されているアプリケーションを作成し、デバッグする。
-ms.openlocfilehash: 516b57ca976ddd89081581978c6ac5f86c64876e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f57777451e861a8ea0df1eb81fc97553c176ebec
+ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393143"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66821632"
 ---
 # <a name="linux-development-with-c-documentation"></a>C++ ドキュメントによる Linux 開発
 
-Visual Studio 2017 を使用して、Linux で実行されているアプリケーションを作成し、デバッグします。
+Visual Studio 2017 以降を使用して、Linux リモート マシンまたは Linux 用 Windows サブシステムで実行されているアプリケーションを作成およびデバッグします。
 
 <ul class="panelContent cardsF">
     <li>
@@ -64,8 +64,8 @@ Visual Studio 2017 を使用して、Linux で実行されているアプリケ�
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-                        <h3><a href="/cpp/overview/visual-cpp-in-visual-studio.md">Visual C++</a></h3>
-                        <p><a href="/cpp/overview-of-cpp-development">IDE と Visual C++ 開発用ツール</a></p>
+                        <h3><a href="/cpp/overview/visual-cpp-in-visual-studio.md">Visual Studio での C++</a></h3>
+                        <p><a href="/cpp/overview-of-cpp-development">Visual Studio での C++ 開発の概要</a></p>
                     </div>
                 </div>
             </div>
