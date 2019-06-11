@@ -155,7 +155,7 @@ Windows を使用するための Microsoft Foundation Class (MFC) アプリケ�
 > [!NOTE]
 > 言語固有のテンプレート ファイルをメイン テンプレートのディレクトリのサブディレクトリに配置します。 英語版のみのテンプレート ファイルを移動するなど、 *.\\< リソース テンプレート ディレクトリ\>\1033*します。
 >
-> Visual Studio で新しい .rct ファイル検索*\Program Files\Microsoft Visual Studio\<バージョン\>\VC\VCResourceTemplates*、 *\Program Files\Microsoft Visual Studio \<バージョン > \VC\VCResourceTemplates\\< LCID\>*  (など、1033 は英語の LCID)、または任意の場所に、[インクルード パス](../windows/how-to-specify-include-directories-for-resources.md)します。 別の場所の .rct ファイルを格納する場合は、インクルード パスに場所を追加する必要があります。
+> Visual Studio で新しい .rct ファイル検索 *\Program Files\Microsoft Visual Studio\<バージョン\>\VC\VCResourceTemplates*、 *\Program Files\Microsoft Visual Studio \<バージョン > \VC\VCResourceTemplates\\< LCID\>*  (など、1033 は英語の LCID)、または任意の場所に、[インクルード パス](../windows/how-to-specify-include-directories-for-resources.md)します。 別の場所の .rct ファイルを格納する場合は、インクルード パスに場所を追加する必要があります。
 
 ### <a name="to-create-and-use-a-resource-template"></a>作成してリソース テンプレートを使用するには
 
@@ -173,7 +173,7 @@ Windows を使用するための Microsoft Foundation Class (MFC) アプリケ�
 
 1. **リソース ビュー**ウィンドウで、右クリックし、 *.rc*ファイル**リソースの追加**します。
 
-1. プラス記号を選択します (**+**) リソース ノードを展開し、そのリソースの使用可能なテンプレートを表示するリソースの横にあります。
+1. プラス記号を選択します ( **+** ) リソース ノードを展開し、そのリソースの使用可能なテンプレートを表示するリソースの横にあります。
 
 1. 使用するテンプレートをダブルクリックします。
 
