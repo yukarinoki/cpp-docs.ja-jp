@@ -4,12 +4,12 @@ ms.date: 05/16/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: 018a755aa4f3acde44fe1dbb33b07b49c8d1c223
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: 0dcd05833af005807d874d71e8f6a07d4e738e8c
+ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837252"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67042592"
 ---
 # <a name="cmakesettingsjson-schema-reference"></a>CMakeSettings.json スキーマ リファレンス
 
@@ -51,12 +51,12 @@ ms.locfileid: "65837252"
 - `description`: メニューに表示されるこの構成の説明。
 - `generator`: この構成に使用する CMake ジェネレーターを指定します。 次のいずれかを指定できます。
   
-  **Visual Studio 2019 のみ:** 
+  **Visual Studio 2019 のみ:**
   - Visual Studio 16 2019
   - Visual Studio 16 2019 Win64
   - Visual Studio 16 2019 ARM
 
-  **Visual Studio 2017 以降:** 
+  **Visual Studio 2017 以降:**
   - Visual Studio 15 2017
   - Visual Studio 15 2017 Win64
   - Visual Studio 15 2017 ARM
@@ -121,7 +121,7 @@ Visual Studio 2019 で Visual Studio ジェネレーターを指定するには�
 
 - `remoteMachineName`: CMake、ビルド、およびデバッガーをホストするリモートの Linux マシンの名前を指定します。 新しい Linux マシンを追加するには、接続マネージャーを使用します。 サポートされているマクロには、`${defaultRemoteMachineName}` が含まれます。
 - `remoteCopySourcesOutputVerbosity`: リモート マシンへのソース コピー操作の詳細レベルを指定します。 "ノーマル"、"詳細"、"診断" のいずれかを指定できます。
-- `remoteCopySourcesConcurrentCopies`: ソースからリモート マシンへの同期中に使用される同時コピー数を指定します。
+- `remoteCopySourcesConcurrentCopies`: リモート コンピューター (sftp の場合のみ) にソースの同期中に使用される同時コピー数を指定します。
 - `remoteCopySourcesMethod`: リモート マシンにファイルをコピーするメソッドを指定します。 "rsync" または "sftp" のいずれかを指定できます。
 - `remoteCMakeListsRoot`: CMake プロジェクトを含むリモート マシン上のディレクトリを指定します。 サポートされているマクロには、`${workspaceRoot}`、`${workspaceHash}`、`${projectFile}`、`${projectDir}`、`${thisFile}`、`${thisFileDir}`、`${name}`、`${generator}`、`${env.VARIABLE}` などがあります。
 - `remoteBuildRoot`: 選択したジェネレーターに CMake がビルド スクリプトを生成するリモート マシン上のディレクトリを指定します。 サポートされているマクロには、`${workspaceRoot}`、`${workspaceHash}`、`${projectFile}`、`${projectDir}`、`${thisFile}`、`${thisFileDir}`、`${name}`、`${generator}`、`${env.VARIABLE}` などがあります。

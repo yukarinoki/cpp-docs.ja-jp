@@ -4,24 +4,24 @@ ms.date: 03/21/2019
 helpviewer_keywords:
 - Open Folder Projects in Visual Studio
 ms.assetid: abd1985e-3717-4338-9e80-869db5435175
-ms.openlocfilehash: 4f59781833a303ad2db837549eddca2f2ce291b1
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 8856a5b1782c75c5a59dfdc93a8203627059ea12
+ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220498"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67042720"
 ---
 # <a name="open-folder-projects-for-c"></a>C++ の [フォルダーを開く] プロジェクト
 
 Visual Studio 2017 以降で "フォルダーを開く" 機能を使うと、ソース ファイルのフォルダーを開き、IntelliSense、参照、リファクタリング、デバッグなどのサポートを利用してコーディングをすぐに始めることができます。 .sln または .vcxproj ファイルは読み込まれません。必要な場合は、カスタム タスクを指定し、簡単な .json ファイルを使ってパラメーターをビルドして起動できます。 [フォルダーを開く] に関する詳細については、「[プロジェクトまたはソリューションを使用せずに Visual Studio でコードを開発する](/visualstudio/ide/develop-code-in-visual-studio-without-projects-or-solutions)」を参照してください。
 
-CMake は、C++ デスクトップ ワークロードのコンポーネントである CMake Tools for Visual Studio として Visual Studio IDE に統合されています。 詳細については、「[CMake projects in Visual Studio](cmake-projects-in-visual-studio.md)」 (Visual Studio の CMake プロジェクト) をご覧ください。 他の任意のビルド システムでは、[フォルダーを開く] 機能を使用することができます。 [フォルダーを開く] によって、ビルド システムおよびコンパイラ ツールセットから、コード エディター、デバッガー、およびアナライザーが事実上切り離されます。 CMake、Ninja、QMake (Qt プロジェクトの場合)、gyp、SCons、Gradle、Buck、make などのほとんどすべてのビルド システムで、豊富な IntelliSense 機能を備えた C++ コード エディター、コード アナライザー、Visual Studio デバッガーを使用できます。 ビルド システムがない 1 つのファイルでもファイルの緩やかな集合でも動作します。
+CMake がのコンポーネントとして Visual Studio IDE に統合されて、C++デスクトップ ワークロード。 詳細については、「[CMake projects in Visual Studio](cmake-projects-in-visual-studio.md)」 (Visual Studio の CMake プロジェクト) をご覧ください。 他の任意のビルド システムでは、[フォルダーを開く] 機能を使用することができます。 [フォルダーを開く] によって、ビルド システムおよびコンパイラ ツールセットから、コード エディター、デバッガー、およびアナライザーが事実上切り離されます。 CMake、Ninja、QMake (Qt プロジェクトの場合)、gyp、SCons、Gradle、Buck、make などのほとんどすべてのビルド システムで、豊富な IntelliSense 機能を備えた C++ コード エディター、コード アナライザー、Visual Studio デバッガーを使用できます。 ビルド システムがない 1 つのファイルでもファイルの緩やかな集合でも動作します。
 
 "フォルダーを開く" を使うには、メイン メニューから **[ファイル] > [開く] > [フォルダー]** を選ぶか、**Ctrl + Shift + Alt + O** キーを押します。フォルダー内のすべてのファイルがソリューション エクスプローラーにすぐに表示されます。 任意のファイルをクリックして、編集を開始できます。 バックグラウンドでは、Visual Studio は、ファイルのインデックス作成を開始して、IntelliSense、ナビゲーション、およびリファクタリング機能を有効にします。 ファイルを編集、作成、移動、または削除すると、Visual Studio は自動的に変更を追跡し、IntelliSense インデックスを継続的に更新します。 
 
 ## <a name="qmake-projects-that-target-the-qt-framework"></a>Qt フレームワークを対象とする QMake プロジェクト
 
-CMake Tools for Visual Studio を使って Qt を対象に Qt プロジェクトをビルドするか、または Visual Studio 2015 または Visual Studio 2017 のどちらかで [Qt Visual Studio 拡張機能](https://download.qt.io/development_releases/vsaddin/)を使うことができます。
+Qt のプロジェクトをビルドする CMake を使用するか、使用することができます、 [Qt Visual Studio 拡張機能](https://download.qt.io/development_releases/vsaddin/)の Visual Studio 2015 または Visual Studio 2017 のいずれか。
 
 ## <a name="gyp-cons-scons-buck-etc"></a>gyp、Cons、SCons、Buck など
 
@@ -60,7 +60,7 @@ IntelliSense と参照の動作は、#include のパス、コンパイラ スイ
 
 ### <a name="define-build-tasks-with-tasksvsjson"></a>tasks.vs.json でビルド タスクを定義する
 
-IDE でタスクとして直接実行することで、現在のワークスペースにあるファイルに対してビルド スクリプトやその他の外部操作を自動化できます。 ファイルまたはフォルダーを右クリックし、**[タスクの構成]** を選択すると、新しいタスクを構成できます。
+IDE でタスクとして直接実行することで、現在のワークスペースにあるファイルに対してビルド スクリプトやその他の外部操作を自動化できます。 ファイルまたはフォルダーを右クリックし、 **[タスクの構成]** を選択すると、新しいタスクを構成できます。
 
 !["フォルダーを開く" のタスクの構成](media/open-folder-config-tasks.png)
 
@@ -87,7 +87,7 @@ tasks.vs.json を保存した後、フォルダー内の任意の .cpp ファイ
 
 ### <a name="configure-debugging-parameters-with-launchvsjson"></a>launch.vs.json でデバッグ パラメーターを構成する
 
-プログラムのコマンド ライン引数をカスタマイズするには、**ソリューション エクスプローラー**で実行可能ファイルを右クリックし、**[デバッグ設定と起動設定]** を選びます。 これが、既存開きます**launch.vs.json**ファイル、または存在しない場合は、選択したプログラムに関する情報があらかじめ設定された新しいファイルが作成されます。
+プログラムのコマンド ライン引数をカスタマイズするには、**ソリューション エクスプローラー**で実行可能ファイルを右クリックし、 **[デバッグ設定と起動設定]** を選びます。 これが、既存開きます**launch.vs.json**ファイル、または存在しない場合は、選択したプログラムに関する情報があらかじめ設定された新しいファイルが作成されます。
 
 追加の引数を指定するには、次の例で示すように、`args` JSON 配列に追加するだけです。
 
