@@ -4,12 +4,12 @@ ms.date: 05/14/2019
 helpviewer_keywords:
 - code wizards [C++]
 ms.assetid: 6afb7ef9-7056-423d-b244-91bb4236d1d7
-ms.openlocfilehash: 8c88936edcb9110fe7482281f483f11c542b83c1
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: efced3be3a0bcc7efe16aef1061c4cd9ec1ed21c
+ms.sourcegitcommit: 65ed563a8a1d4d90f872a2a6edcb086f84ec9f77
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "66182652"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66741637"
 ---
 # <a name="adding-functionality-with-code-wizards-c"></a>コード ウィザードを使用した機能の追加 (C++)
 
@@ -76,6 +76,6 @@ C++ コード ウィザードには、次の 3 つの場所からアクセスで
 ## <a name="see-also"></a>関連項目
 
 [仮想関数のオーバーライド](../ide/overriding-a-virtual-function-visual-cpp.md)<br>
-[クラス各部へのジャンプ](../ide/navigating-the-class-structure-visual-cpp.md)<br>
+[Visual Studio で C++コード ベース内を移動する](../ide/navigate-code-cpp.md)<br>
 [Visual Studio の C++ プロジェクトの種類](../build/reference/visual-cpp-project-types.md)<br>
 [Visual Studio の C++ プロジェクトに対して作成されるファイルの種類](../build/reference/file-types-created-for-visual-cpp-projects.md)

@@ -1,24 +1,36 @@
 ---
 title: Visual Studio でのリモートの Linux コンピューターへの接続
 description: Visual Studio の C++ プロジェクト内からリモートの Linux マシンに接続する方法。
-ms.date: 07/20/2018
+ms.date: 06/07/2019
 ms.assetid: 5eeaa683-4e63-4c46-99ef-2d5f294040d4
-ms.openlocfilehash: e20714308448349ee5dac8951a7b5d7bfd2f29ef
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 6348681ecc8e6f7863b2119810db24879526a1c6
+ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562849"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66821612"
 ---
 # <a name="connect-to-your-remote-linux-computer"></a>リモートの Linux コンピューターに接続する
 
-Visual Studio で C++ の Linux プロジェクトをビルドするときに、Linux コードはリモートの Linux コンピューターにコピーされ、Visual Studio の設定に基づいてコンパイルされます。 このリモート接続をセットアップするには、次のようにします。
+::: moniker range="vs-2015"
 
-1. 最初にプロジェクトをビルドするか、新しいエントリを手動で作成します。その場合、**[ツール]、[オプション]** の順に選択し、**[クロス プラットフォーム]、[接続マネージャー]** ノードの順に開き、**[追加]** ボタンをクリックします。
+Linux サポートは Visual Studio 2017 以降で使用できます。
+
+::: moniker-end
+
+::: moniker range="vs-2019"
+
+Windows Subsystem for Linux (WSL) を対象とした場合、Visual Studio はファイル システムを介して Linux ディストリビューションと直接通信します。リモート接続は不要です。
+
+::: moniker-end
+
+リモートの Linux システム (VM または物理マシン) 用に C++ の Linux プロジェクトをビルドする場合、Linux コードはリモートの Linux コンピューターにコピーされ、Visual Studio の設定に基づいてコンパイルされます。 このリモート接続をセットアップするには、次のようにします。
+
+1. 最初にプロジェクトをビルドするか、新しいエントリを手動で作成します。その場合、 **[ツール]、[オプション]** の順に選択し、 **[クロス プラットフォーム]、[接続マネージャー]** ノードの順に開き、 **[追加]** ボタンをクリックします。
 
    ![接続マネージャー](media/settings_connectionmanager.png)
 
-   いずれの場合も、**[Connect to Remote System]** (リモート システムへの接続) ウィンドウが表示されます。
+   いずれの場合も、 **[Connect to Remote System]** (リモート システムへの接続) ウィンドウが表示されます。
 
    ![リモート システムへの接続](media/connect.png)
 
