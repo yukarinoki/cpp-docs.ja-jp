@@ -2,14 +2,14 @@
   href: index.md
 - name: Linux Development ワークロードのダウンロード、インストール、設定
   href: download-install-and-setup-the-linux-development-workload.md
-- name: Linux プロジェクトを構成する
-  href: configure-a-linux-project.md
-- name: Linux CMake プロジェクトを構成する
-  href: cmake-linux-project.md
-- name: 新しい Linux プロジェクトを作成する
-  href: create-a-new-linux-project.md
 - name: リモートの Linux コンピューターに接続する
   href: connect-to-your-remote-linux-computer.md
+- name: 新しい Linux プロジェクトを作成する
+  href: create-a-new-linux-project.md
+- name: Linux プロジェクトを構成する
+  href: configure-a-linux-project.md
+- name: Linux CMake プロジェクトの作成と構成
+  href: cmake-linux-project.md
 - name: Linux プロジェクトを構成してアドレス サニタイザーを使用する
   href: linux-asan-configuration.md
 - name: Linux プロジェクトのデプロイ、実行、デバッグ

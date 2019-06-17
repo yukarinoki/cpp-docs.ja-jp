@@ -1,16 +1,22 @@
 ---
 title: Visual Studio で Linux CMake プロジェクトを構成する
 description: Visual Studio で Linux CMake プロジェクトを構成、編集、コンパイルする方法
-ms.date: 05/21/2019
+ms.date: 06/07/2019
 ms.assetid: f8707b32-f90d-494d-ae0b-1d44425fdc25
-ms.openlocfilehash: e2cda5e9b942342cca035c48054aadb5425b69cf
-ms.sourcegitcommit: bde3279f70432f819018df74923a8bb895636f81
+ms.openlocfilehash: e0a4abb7fe62880af12277d5c5c474d6ec4e0202
+ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66182892"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66821676"
 ---
 # <a name="configure-a-linux-cmake-project"></a>Linux CMake プロジェクトを構成する
+
+::: moniker range="vs-2015"
+
+Linux サポートは Visual Studio 2017 以降で使用できます。
+
+::: moniker-end
 
 CMake プロジェクトを含むフォルダーを開くと、Visual Studio によって、CMake が生成するメタデータを使用して、IntelliSense が構成され、自動的にビルドされます。 ローカルの構成およびデバッグ設定は、必要に応じて Visual Studio を使用している他のユーザーと共有できる JSON ファイルに格納されます。 
 
@@ -22,7 +28,7 @@ Visual Studio での CMake サポートに関する一般的な情報につい�
 
 まず、CMake コンポーネントを含む **C++ による Linux 開発** ワークロードがインストールされていることを確認します。 [Visual Studio での C++ Linux ワークロードのインストール](download-install-and-setup-the-linux-development-workload.md)に関するページを参照してください。 
 
-Linux マシンに次のものがインストールされていることを確認してください。 
+Linux システムに次のものがインストールされていることを確認してください。 
 
 - gcc
 - gdb
@@ -31,15 +37,15 @@ Linux マシンに次のものがインストールされていることを確�
 
 ::: moniker range="vs-2019"
 
-Linux による CMake プロジェクトのサポートには、ターゲット マシンに CMake の最新バージョンがインストールされていることが必要となります。 多くの場合、ディストリビューションの既定のパッケージ マネージャーによって提供されるバージョンは、IDE のすべての機能をサポートできるほど最新ではありません。 Visual Studio 2019 では、CMake の最新バージョンがインストールされていないリモートの Linux マシンに、CMake のユーザー ローカル コピーを自動的にインストールできます。 プロジェクトを最初にビルドするときに CMake の互換性のあるバージョンが検出されなかった場合、CMake をインストールすることを勧める情報バーが表示されます。
-
-バイナリは `~/.vs/cmake` にインストールされます。 バイナリを配布すると、プロジェクトが自動的に再生成されます。 `CMakeSettings.json` の `cmakeExecutable` フィールドで指定する CMake が無効 (存在しない、またはサポートされていないバージョン) で、かつビルド済みバイナリが存在している場合は、Visual Studio では `cmakeExecutable` が無視され、ビルド済みバイナリが使われます。
+Linux による CMake プロジェクトのサポートには、ターゲット マシンに CMake の最新バージョンがインストールされていることが必要となります。 ディストリビューションの既定のパッケージ マネージャーが提供するバージョンは、しばしば最新ではなく、Visual Studio で必要なすべての機能をサポートしていません。 Visual Studio 2019 では、Linux システムに CMake の最新バージョンがインストールされているかどうかを検出します。 見つからない場合、Visual Studio のエディター ウィンドウの上部に、それをインストールするかどうかをたたずねる情報バーが表示されます。
 
 ::: moniker-end
 
 ::: moniker range="vs-2017"
 
 Visual Studio で CMake を利用するには、CMake 3.8 で導入されたサーバー モードに対応する必要があります。 Microsoft から提供されている CMake バリアントについては、[https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases) から最新のビルド済みバイナリをダウンロードします。
+
+バイナリは `~/.vs/cmake` にインストールされます。 バイナリを配布すると、プロジェクトが自動的に再生成されます。 `CMakeSettings.json` の `cmakeExecutable` フィールドで指定する CMake が無効 (存在しない、またはサポートされていないバージョン) で、かつビルド済みバイナリが存在している場合は、Visual Studio では `cmakeExecutable` が無視され、ビルド済みバイナリが使われます。
 
 :::moniker-end
 
@@ -68,19 +74,29 @@ add_executable(hello-cmake hello.cpp)
 
 ## <a name="choose-a-linux-target"></a>Linux ターゲットを選ぶ
 
-フォルダーを開くとすぐに、Visual Studio によって CMakeLists.txt ファイルが解析され、**x86-Debug** の Windows ターゲットが指定されます。 Linux を対象とするには、プロジェクト設定を **Linux-Debug** または **Linux-Release** に変更します。
+フォルダーを開くとすぐに、Visual Studio によって CMakeLists.txt ファイルが解析され、**x86-Debug** の Windows ターゲットが指定されます。 リモートの Linux を対象とするには、プロジェクト設定を **Linux-Debug** または **Linux-Release** に変更します。 
 
-既定では、 **[ツール]**  >  **[オプション]**  >  **[クロス プラットフォーム]**  >  **[接続マネージャー]** の下にある一覧の、最初のリモート システムが選ばれます。 リモート接続が見つからない場合、リモート接続を作成するように求められます。 詳細については、[リモートの Linux コンピューターへの接続](connect-to-your-remote-linux-computer.md)に関するページを参照してください。
+::: moniker range="vs-2019"
 
-Linux ターゲットを指定すると、ソースが Linux マシンにコピーされます。 次に、Linux マシンで CMake が実行され、プロジェクトの CMake キャッシュが生成されます。
+Linux 用の Windows サブシステムを対象とする場合、GCC を使用している場合は **WSL-Debug** または **WSL-Release** を選択します。Clang/LLVM ツールセットを使用している場合は Clang のバージョンを使用します。 
+
+**Visual Studio 2019 バージョン 16.1** WSL を対象とする場合、Linux 上のコンパイラは、ソース ファイルが配置されている Windows ファイル システムに直接アクセスでき、Visual Studio も同様に Linux ヘッダー ファイルに直接アクセスできるため、コピーや、ソースやヘッダーは不要です。
+
+::: moniker-end
+
+対象がリモートの場合、Visual Studio では既定で **[ツール]**  >  **[オプション]**  >  **[クロス プラットフォーム]**  >  **[接続マネージャー]** の下にある最初のリモート システムが選択されます。 リモート接続が見つからない場合、リモート接続を作成するように求められます。 詳細については、[リモートの Linux コンピューターへの接続](connect-to-your-remote-linux-computer.md)に関するページを参照してください。
+
+リモートの Linux を対象に指定した場合、ソースはリモート システムにコピーされます。
+
+対象を選択したら、CMake は Linux システム上で自動実行され、プロジェクト用の CMake キャッシュを生成します。 
 
 ![Linux で CMake キャッシュを生成する](media/cmake-linux-1.png "Linux で CMake キャッシュを生成する")
 
-リモート ヘッダーの IntelliSense サポートを提供するため、Visual Studio によって、Linux コンピューターからローカルの Windows コンピューター上のディレクトリにそれらが自動的にコピーされます。 詳細については、[リモート ヘッダーの IntelliSense](configure-a-linux-project.md#remote_intellisense) のセクションを参照してください。
+Visual Studio は、これらを Linux マシンからローカルの Windows コンピューター上のディレクトリに自動的にコピーして、リモートの Linux システムのヘッダーに IntelliSense のサポートを提供します。 詳細については、[リモート ヘッダーの IntelliSense](configure-a-linux-project.md#remote_intellisense) のセクションを参照してください。
 
 ## <a name="debug-the-project"></a>プロジェクトをデバッグする
 
-リモート システムでコードをデバッグするには、ブレークポイントを設定し、プロジェクト設定の隣にあるツール バー メニューのスタートアップ項目として CMake ターゲットを選び、ツール バーの **[&#x23f5; 実行]** を選択するか、F5 キーを押します。
+指定したデバッグ対象のシステムでコードをデバッグするには、ブレークポイントを設定し、プロジェクト設定の隣にあるツール バー メニューのスタートアップ項目として CMake ターゲットを選び、ツール バーの **[&#x23f5; 実行]** を選択するか、F5 キーを押します。
 
 プログラムのコマンド ライン引数をカスタマイズするには、**ソリューション エクスプローラー**で実行可能ファイルを右クリックし、 **[デバッグ設定と起動設定]** を選びます。 これにより、プログラムに関する情報を含んだ launch.vs.json 構成ファイルが開かれるか、作成されます。 追加の引数を指定するには、`args` JSON 配列に引数を追加します。 詳細については、「[Open Folder projects for C++](../build/open-folder-projects-cpp.md)」 (C++ の [フォルダーを開く] プロジェクト) と [CMake デバッグ セッションの構成](../build/configure-cmake-debugging-sessions.md)に関するページを参照してください。
 
@@ -92,7 +108,7 @@ CMake Linux プロジェクト内の CMakeSettings.json ファイルで、[CMake
 
 Visual Studio 2019 の CMake の既定の設定を変更するには、メイン ツールバーから **[構成]** ドロップダウンを開き、 **[構成の管理]** を選択します。 
 
-   ![CMake 構成の管理](../build/media/vs2019-cmake-manage-configurations.png "CMake 構成ドロップダウン")
+![CMake 構成の管理](../build/media/vs2019-cmake-manage-configurations.png "CMake 構成ドロップダウン")
 
 これにより **CMake 設定エディター**が表示されます。これを使用してルート プロジェクト フォルダー内の `CMakeSettings.json` ファイルを編集できます。 エディターの **[JSON の編集]** ボタンをクリックしてファイルを直接開くこともできます。 詳細については、[CMake 設定のカスタマイズ](../build/customize-cmake-settings.md)に関するページを参照してください。
 
@@ -158,7 +174,7 @@ Visual Studio 2017 の既定の CMake 設定を変更するには、メイン �
 }
 ```
 
-そうしたオプションでは、ビルドの前後や CMake 生成の前にリモート システムでコマンドを実行できます。 値は、リモート システムで有効な任意のコマンドを指定できます。 出力はパイプで Visual Studio に戻されます。
+これらのオプションでは、ビルドの前後や CMake 生成の前に Linux システムでコマンドを実行できます。 値は、リモート システムで有効な任意のコマンドを指定できます。 出力はパイプで Visual Studio に戻されます。
 
 ::: moniker range="vs-2019"
 

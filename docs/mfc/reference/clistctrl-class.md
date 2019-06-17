@@ -1,6 +1,6 @@
 ---
 title: CListCtrl クラス
-ms.date: 11/04/2016
+ms.date: 06/13/2019
 f1_keywords:
 - CListCtrl
 - AFXCMN/CListCtrl
@@ -264,12 +264,12 @@ helpviewer_keywords:
 - CListCtrl [MFC], SubItemHitTest
 - CListCtrl [MFC], Update
 ms.assetid: fe08a1ca-4b05-4ff7-a12a-ee4c765a2197
-ms.openlocfilehash: 1cdc4bfacee4913d3a38aaa45aadf0a430e547ab
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 63668de8134267880b48a3406c552d06376ea4f7
+ms.sourcegitcommit: e79188287189b76b34eb7e8fb1bfe646bdb586bc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66503441"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67141674"
 ---
 # <a name="clistctrl-class"></a>CListCtrl クラス
 
@@ -522,8 +522,7 @@ class CListCtrl : public CWnd
 
 ```
 CSize ApproximateViewRect(
-    CSize sz = CSize(-1,
--1),
+    CSize sz = CSize(-1, -1),
     int iCount = -1) const;
 ```
 
@@ -683,7 +682,7 @@ virtual BOOL CreateEx(
 
 使用`CreateEx`の代わりに[作成](#create)、Windows の拡張スタイルの先頭で指定された、Windows の拡張スタイルを適用する**WS_EX**します。
 
-`CreateEx` 指定された拡張の Windows スタイルでコントロールを作成します。 *dwExStyle*します。 コントロール固有の拡張スタイルを設定するには、呼び出す[SetExtendedStyle](#setextendedstyle)します。 たとえば、使用して`CreateEx`WS_EX_CONTEXTHELP、としてこのようなスタイルの設定が使用する`SetExtendedStyle`LVS_EX_FULLROWSELECT としてこのようなスタイルを設定します。 詳細については、トピックで説明されているスタイルを参照してください。[リスト ビューのスタイルを拡張](/windows/desktop/Controls/extended-list-view-styles)Windows SDK に含まれています。
+`CreateEx` 指定された拡張の Windows スタイルでコントロールを作成します。 *dwExStyle*します。 コントロール固有の拡張スタイルを設定するには、呼び出す[SetExtendedStyle](#setextendedstyle)します。 たとえば、使用して`CreateEx`WS_EX_CONTEXTHELP、としてこのようなスタイルの設定が使用する`SetExtendedStyle`LVS_EX_FULLROWSELECT としてこのようなスタイルを設定します。 詳細については、この記事で説明されているスタイルを参照してください。[リスト ビューのスタイルを拡張](/windows/desktop/Controls/extended-list-view-styles)Windows SDK に含まれています。
 
 ## <a name="createdragimage"></a>  CListCtrl::CreateDragImage
 
@@ -971,7 +970,7 @@ RGB 色を指定するために使用する 32 ビット値。
 
 ### <a name="example"></a>例
 
-  例をご覧ください[CListCtrl::SetBkColor](#setbkcolor)します。
+例をご覧ください[CListCtrl::SetBkColor](#setbkcolor)します。
 
 ## <a name="getbkimage"></a>  CListCtrl::GetBkImage
 
@@ -1027,7 +1026,7 @@ UINT GetCallbackMask() const;
 
 ### <a name="example"></a>例
 
-  例をご覧ください[CListCtrl::SetCallbackMask](#setcallbackmask)します。
+例をご覧ください[CListCtrl::SetCallbackMask](#setcallbackmask)します。
 
 ## <a name="getcheck"></a>  CListCtrl::GetCheck
 
@@ -1052,7 +1051,7 @@ BOOL GetCheck(int nItem) const;
 
 ### <a name="example"></a>例
 
-  例をご覧ください[CListCtrl::SetCheck](#setcheck)します。
+例をご覧ください[CListCtrl::SetCheck](#setcheck)します。
 
 ## <a name="getcolumn"></a>  CListCtrl::GetColumn
 
@@ -1134,7 +1133,7 @@ BOOL GetColumnOrderArray(
             int  nColumnCount = pHeaderCtrl->GetItemCount();
             LPINT pnOrder = (LPINT) malloc(nColumnCount*sizeof(int));
             ASSERT(pnOrder != NULL);
-m_myListCtrl.GetColumnOrderArray(pnOrder, nColumnCount);
+            m_myListCtrl.GetColumnOrderArray(pnOrder, nColumnCount);
 
             int i, j, nTemp;
             for (i = 0, j = nColumnCount-1; i < j; i++, j--)
@@ -1188,7 +1187,7 @@ int GetCountPerPage() const;
 
 ### <a name="example"></a>例
 
-  例をご覧ください[CListCtrl::GetTopIndex](#gettopindex)します。
+例をご覧ください[CListCtrl::GetTopIndex](#gettopindex)します。
 
 ## <a name="geteditcontrol"></a>  CListCtrl::GetEditControl
 
@@ -1243,7 +1242,7 @@ DWORD GetExtendedStyle();
 
 ### <a name="return-value"></a>戻り値
 
-一覧で使用されている拡張スタイルの組み合わせでは、コントロールを表示します。 これらの拡張スタイルの説明については、次を参照してください。、[拡張リスト ビューのスタイル](/windows/desktop/Controls/extended-list-view-styles)Windows SDK のトピックです。
+一覧で使用されている拡張スタイルの組み合わせでは、コントロールを表示します。 これらの拡張スタイルの説明については、次を参照してください。、[拡張リスト ビューのスタイル](/windows/desktop/Controls/extended-list-view-styles)Windows SDK の記事。
 
 ### <a name="remarks"></a>Remarks
 
@@ -1251,7 +1250,7 @@ DWORD GetExtendedStyle();
 
 ### <a name="example"></a>例
 
-  例をご覧ください[かざして](#setextendedstyle)します。
+例をご覧ください[かざして](#setextendedstyle)します。
 
 ## <a name="getfirstselecteditemposition"></a>  CListCtrl::GetFirstSelectedItemPosition
 
@@ -1381,7 +1380,7 @@ public:
 
 ### <a name="example"></a>例
 
-次のコード例に示します、`GetGroupInfoByIndex`メソッド。 このコードの前のセクションでは、リスト ビュー コントロールを作成した例は、レポート ビューの"ClientID"と"Grade"をという 2 つの列を表示します。 次のコード例は、このようなグループが存在する場合、インデックスが 0 の場合、グループに関する情報を取得します。
+次のコード例に示します、`GetGroupInfoByIndex`メソッド。 このコード例の前のセクションでは、レポート ビューの"ClientID"と"Grade"をという 2 つの列を表示するリスト ビュー コントロールを作成しました。 次のコード例は、このようなグループが存在する場合、インデックスが 0 の場合、グループに関する情報を取得します。
 ```cpp
     // GetGroupInfoByIndex
     const int GROUP_HEADER_BUFFER_SIZE = 40;
@@ -1528,7 +1527,7 @@ CHeaderCtrl* GetHeaderCtrl();
 
 ### <a name="example"></a>例
 
-  例をご覧ください[CListCtrl::GetColumnOrderArray](#getcolumnorderarray)します。
+例をご覧ください[CListCtrl::GetColumnOrderArray](#getcolumnorderarray)します。
 
 ## <a name="gethotcursor"></a>  CListCtrl::GetHotCursor
 
@@ -1634,7 +1633,7 @@ CImageList* GetImageList(int nImageList) const;
 
 ```cpp
         ASSERT(m_myListCtrl.GetImageList(LVSIL_NORMAL) == NULL);
-m_myListCtrl.SetImageList(&m_lcImageList, LVSIL_NORMAL);
+        m_myListCtrl.SetImageList(&m_lcImageList, LVSIL_NORMAL);
         ASSERT(m_myListCtrl.GetImageList(LVSIL_NORMAL) == &m_lcImageList);
 ```
 
@@ -1643,12 +1642,12 @@ m_myListCtrl.SetImageList(&m_lcImageList, LVSIL_NORMAL);
 挿入マークの現在の位置を取得します。
 
 ```
-BOOL GetInsertMark(LPLVINSERTMARK lvim) const;
+BOOL GetInsertMark(LPLVINSERTMARK plvim) const;
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*lvim*<br/>
+*plvim*<br/>
 ポインター、 [LVINSERTMARK](/windows/desktop/api/commctrl/ns-commctrl-lvinsertmark)挿入マークの情報を含む構造体。
 
 ### <a name="return-value"></a>戻り値
@@ -1735,7 +1734,7 @@ int GetItemCount() const;
 
 ### <a name="example"></a>例
 
-  例をご覧ください[CListCtrl::DeleteItem](#deleteitem)します。
+例をご覧ください[CListCtrl::DeleteItem](#deleteitem)します。
 
 ## <a name="getitemdata"></a>  CListCtrl::GetItemData
 
@@ -1905,7 +1904,7 @@ BOOL GetItemRect(
 void CListCtrlDlg::OnClick(NMHDR* pNMHDR, LRESULT* pResult)
 {
     UNREFERENCED_PARAMETER(pResult);
-LPNMITEMACTIVATE pia = (LPNMITEMACTIVATE)pNMHDR;
+    LPNMITEMACTIVATE pia = (LPNMITEMACTIVATE)pNMHDR;
 
     // Get the current mouse location and convert it to client
     // coordinates.
@@ -1995,7 +1994,7 @@ UINT GetItemState(
 
 ### <a name="example"></a>例
 
-  例をご覧ください[CListCtrl::GetTopIndex](#gettopindex)します。
+例をご覧ください[CListCtrl::GetTopIndex](#gettopindex)します。
 
 ## <a name="getitemtext"></a>  CListCtrl::GetItemText
 
@@ -2388,7 +2387,7 @@ RGB 色を指定するために使用する 32 ビット値。
 
 ### <a name="example"></a>例
 
-  例をご覧ください[CListCtrl::SetTextBkColor](#settextbkcolor)します。
+例をご覧ください[CListCtrl::SetTextBkColor](#settextbkcolor)します。
 
 ## <a name="gettextcolor"></a>  CListCtrl::GetTextColor
 
@@ -2404,19 +2403,19 @@ RGB 色を指定するために使用する 32 ビット値。
 
 ### <a name="example"></a>例
 
-  例をご覧ください[CListCtrl::SetTextColor](#settextcolor)します。
+例をご覧ください[CListCtrl::SetTextColor](#settextcolor)します。
 
 ## <a name="gettileinfo"></a>  CListCtrl::GetTileInfo
 
 リスト ビュー コントロール内のタイルをに関する情報を取得します。
 
 ```
-BOOL GetTileInfo(PLVTILEINFO pti) const;
+BOOL GetTileInfo(PLVTILEINFO plvti) const;
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*pti*<br/>
+*plvti*<br/>
 ポインター、[保持](/windows/desktop/api/commctrl/ns-commctrl-taglvtileinfo)タイル情報を受け取る構造体。
 
 ### <a name="return-value"></a>戻り値
@@ -2548,15 +2547,15 @@ BOOL GetViewRect(LPRECT lpRect) const;
 ```
 void GetWorkAreas(
     int nWorkAreas,
-    LPRECT prc) const;
+    LPRECT pRect) const;
 ```
 
 ### <a name="parameters"></a>パラメーター
 
 *nWorkAreas*<br/>
-数`RECT`構造体に含まれている、 *prc*配列。
+数`RECT`構造体に含まれている、 *pRect*配列。
 
-*中華人民共和国*<br/>
+*pRect*<br/>
 配列へのポインター`RECT`構造体 (または[CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクト)、リスト ビュー コントロールの作業領域を受信します。 これらの構造体の値は、クライアント座標です。
 
 ### <a name="remarks"></a>Remarks
@@ -2565,7 +2564,7 @@ void GetWorkAreas(
 
 ### <a name="example"></a>例
 
-  例をご覧ください[CListCtrl::GetNumberOfWorkAreas](#getnumberofworkareas)します。
+例をご覧ください[CListCtrl::GetNumberOfWorkAreas](#getnumberofworkareas)します。
 
 ## <a name="hasgroup"></a>  CListCtrl::HasGroup
 
@@ -2781,10 +2780,10 @@ int InsertItem(
 *いる*パラメーターは、どの項目を指定します。 パラメーターとして渡される属性は有効です。 いずれかまたはマスクの値の詳細が記載[LVITEM 構造体](/windows/desktop/api/commctrl/ns-commctrl-taglvitema)Windows SDK に含まれています。 有効な値は、ビットごとの OR 演算子と組み合わせることができます。
 
 *nState*<br/>
-項目の状態、状態の画像、およびオーバーレイ画像を示します。 Windows SDK のトピックを参照して[LVITEM 構造](/windows/desktop/api/commctrl/ns-commctrl-taglvitema)詳細については、[リスト ビュー項目の状態](/windows/desktop/Controls/list-view-item-states)有効なフラグの一覧についてはします。
+項目の状態、状態の画像、およびオーバーレイ画像を示します。 詳細については、Windows SDK のトピックを参照してください。 [LVITEM 構造](/windows/desktop/api/commctrl/ns-commctrl-taglvitema)と[リスト ビュー項目の状態](/windows/desktop/Controls/list-view-item-states)有効なフラグの一覧についてはします。
 
 *nStateMask*<br/>
-状態のメンバーのビットを取得または変更はことを示します。 参照してください[LVITEM 構造](/windows/desktop/api/commctrl/ns-commctrl-taglvitema)詳細については、Windows SDK に含まれています。
+状態のメンバーのビットを取得または変更はことを示します。 詳細については、次を参照してください。 [LVITEM 構造](/windows/desktop/api/commctrl/ns-commctrl-taglvitema)Windows SDK に含まれています。
 
 *lParam*<br/>
 項目に関連付けられている 32 ビット アプリケーションに固有の値。 設定する必要がありますこのパラメーターが指定されている場合、*いる*されています。
@@ -2795,7 +2794,7 @@ int InsertItem(
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドを呼び出すと、呼び出すメッセージをコントロール ウィンドウに送信する場合があります。 コントロールに関連付けられているメッセージ ハンドラーが失敗すると、(LVS_OWNERDRAW などのウィンドウ スタイルを使用) などの特定の条件下で、項目のテキストを設定します。 これらの条件の詳細についてを参照してください[呼び出す](/windows/desktop/Controls/lvm-insertitem)Windows SDK に含まれています。
+このメソッドを呼び出すと、呼び出すメッセージをコントロール ウィンドウに送信する場合があります。 コントロールに関連付けられているメッセージ ハンドラーが失敗すると、(LVS_OWNERDRAW などのウィンドウ スタイルを使用) などの特定の条件下で、項目のテキストを設定します。 これらの条件の詳細については、次を参照してください。[呼び出す](/windows/desktop/Controls/lvm-insertitem)Windows SDK に含まれています。
 
 ### <a name="example"></a>例
 
@@ -2828,7 +2827,7 @@ int InsertItem(
 ```
 int InsertMarkHitTest(
     LPPOINT pPoint,
-    LPLVINSERTMARK lvim) const;
+    LPLVINSERTMARK plvim) const;
 ```
 
 ### <a name="parameters"></a>パラメーター
@@ -2836,7 +2835,7 @@ int InsertMarkHitTest(
 *pPoint*<br/>
 ポインターを[ポイント](/previous-versions/dd162805\(v=vs.85\))リスト コントロールのクライアント領域を基準と、ヒット テストを含む構造体を調整します。
 
-*lvim*<br/>
+*plvim*<br/>
 ポインター、 [LVINSERTMARK](/windows/desktop/api/commctrl/ns-commctrl-lvinsertmark)パラメーターで定義されている座標に最も近い挿入ポイントを指定する構造体。
 
 ### <a name="return-value"></a>戻り値
@@ -2879,7 +2878,7 @@ BOOL IsItemVisible(int index) const;
 
 ### <a name="return-value"></a>戻り値
 
-指定した項目が表示されている以外の場合、FALSE の場合は TRUE。
+指定した項目が表示されている場合は TRUE。それ以外の場合、FALSE です。
 
 ### <a name="remarks"></a>Remarks
 
@@ -3138,7 +3137,7 @@ BOOL SetBkColor(COLORREF cr);
 BOOL SetBkImage(LVBKIMAGE* plvbkImage);
 
 BOOL SetBkImage(
-    HBITMAP hbm,
+    HBITMAP hBitmap,
     BOOL fTile = TRUE,
     int xOffsetPercent = 0,
     int yOffsetPercent = 0);
@@ -3155,7 +3154,7 @@ BOOL SetBkImage(
 *plvbkImage*<br/>
 アドレス、 `LVBKIMAGE` 、新しいバック グラウンド イメージ情報を含む構造体。
 
-*hbm*<br/>
+*hBitmap*<br/>
 ビットマップへのハンドルします。
 
 *pszUrl*<br/>
@@ -3181,7 +3180,7 @@ BOOL SetBkImage(
 
 ### <a name="example"></a>例
 
-  例をご覧ください[CListCtrl::GetBkImage](#getbkimage)します。
+例をご覧ください[CListCtrl::GetBkImage](#getbkimage)します。
 
 ## <a name="setcallbackmask"></a>  CListCtrl::SetCallbackMask
 
@@ -3273,7 +3272,7 @@ BOOL SetColumn(
 
 ### <a name="example"></a>例
 
-  例をご覧ください[CListCtrl::GetColumn](#getcolumn)します。
+例をご覧ください[CListCtrl::GetColumn](#getcolumn)します。
 
 ## <a name="setcolumnorderarray"></a>  CListCtrl::SetColumnOrderArray
 
@@ -3303,7 +3302,7 @@ BOOL SetColumnOrderArray(
 
 ### <a name="example"></a>例
 
-  例をご覧ください[CListCtrl::GetColumnOrderArray](#getcolumnorderarray)します。
+例をご覧ください[CListCtrl::GetColumnOrderArray](#getcolumnorderarray)します。
 
 ## <a name="setcolumnwidth"></a>  CListCtrl::SetColumnWidth
 
@@ -3424,7 +3423,7 @@ HCURSOR SetHotCursor(HCURSOR hc);
 
 ### <a name="example"></a>例
 
-  例をご覧ください[CListCtrl::GetHotCursor](#gethotcursor)します。
+例をご覧ください[CListCtrl::GetHotCursor](#gethotcursor)します。
 
 ## <a name="sethotitem"></a>  CListCtrl::SetHotItem
 
@@ -3449,7 +3448,7 @@ int SetHotItem(int iIndex);
 
 ### <a name="example"></a>例
 
-  例をご覧ください[CListCtrl::GetHotItem](#gethotitem)します。
+例をご覧ください[CListCtrl::GetHotItem](#gethotitem)します。
 
 ## <a name="sethovertime"></a>  CListCtrl::SetHoverTime
 
@@ -3474,7 +3473,7 @@ DWORD SetHoverTime(DWORD dwHoverTime = (DWORD)-1);
 
 ### <a name="example"></a>例
 
-  例をご覧ください[CListCtrl::GetHoverTime](#gethovertime)します。
+例をご覧ください[CListCtrl::GetHoverTime](#gethovertime)します。
 
 ## <a name="seticonspacing"></a>  CListCtrl::SetIconSpacing
 
@@ -3544,7 +3543,7 @@ CImageList* SetImageList(
 
 ### <a name="example"></a>例
 
-  例をご覧ください[CListCtrl::GetImageList](#getimagelist)します。
+例をご覧ください[CListCtrl::GetImageList](#getimagelist)します。
 
 ## <a name="setinfotip"></a>  CListCtrl::SetInfoTip
 
@@ -3572,12 +3571,12 @@ BOOL SetInfoTip(PLVSETINFOTIP plvInfoTip);
 定義されている位置にカーソルを設定します。
 
 ```
-BOOL SetInsertMark(LPLVINSERTMARK lvim);
+BOOL SetInsertMark(LPLVINSERTMARK plvim);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*lvim*<br/>
+*plvim*<br/>
 ポインター、 [LVINSERTMARK](/windows/desktop/api/commctrl/ns-commctrl-lvinsertmark)挿入ポイントを設定する場所を指定する構造体。
 
 ### <a name="return-value"></a>戻り値
@@ -3686,7 +3685,7 @@ BOOL SetItem(
 
 ### <a name="example"></a>例
 
-  例をご覧ください[CListCtrl::HitTest](#hittest)します。
+例をご覧ください[CListCtrl::HitTest](#hittest)します。
 
 ## <a name="setitemcount"></a>  CListCtrl::SetItemCount
 
@@ -3868,7 +3867,7 @@ A[ポイント](/previous-versions/dd162805\(v=vs.85\))アイテムの左上隅�
 
 ### <a name="example"></a>例
 
-  例をご覧ください[CListCtrl::GetItemPosition](#getitemposition)します。
+例をご覧ください[CListCtrl::GetItemPosition](#getitemposition)します。
 
 ## <a name="setitemstate"></a>  CListCtrl::SetItemState
 
@@ -3909,7 +3908,7 @@ BOOL SetItemState(
 
 ### <a name="example"></a>例
 
-  例をご覧ください[CListCtrl::GetTopIndex](#gettopindex)します。
+例をご覧ください[CListCtrl::GetTopIndex](#gettopindex)します。
 
 ## <a name="setitemtext"></a>  CListCtrl::SetItemText
 
@@ -3943,7 +3942,7 @@ BOOL SetItemText(
 
 ### <a name="example"></a>例
 
-  例をご覧ください[CListCtrl::InsertItem](#insertitem)します。
+例をご覧ください[CListCtrl::InsertItem](#insertitem)します。
 
 ## <a name="setoutlinecolor"></a>  CListCtrl::SetOutlineColor
 
@@ -4010,7 +4009,7 @@ int SetSelectionMark(int iIndex);
 
 ### <a name="example"></a>例
 
-  例をご覧ください[CListCtrl::GetSelectionMark](#getselectionmark)します。
+例をご覧ください[CListCtrl::GetSelectionMark](#getselectionmark)します。
 
 ## <a name="settextbkcolor"></a>  CListCtrl::SetTextBkColor
 
@@ -4070,12 +4069,12 @@ BOOL SetTextColor(COLORREF cr);
 リスト ビュー コントロールのタイルの情報を設定します。
 
 ```
-BOOL SetTileInfo(PLVTILEINFO pti);
+BOOL SetTileInfo(PLVTILEINFO pTileInfo);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*pti*<br/>
+*pTileInfo*<br/>
 ポインター、[保持](/windows/desktop/api/commctrl/ns-commctrl-taglvtileinfo)設定される情報を含む構造体。
 
 ### <a name="return-value"></a>戻り値
@@ -4257,7 +4256,7 @@ int CALLBACK CListCtrlDlg::MyCompareProc(LPARAM lParam1, LPARAM lParam2,
     LPARAM lParamSort)
 {
     UNREFERENCED_PARAMETER(lParamSort);
-return (int)(lParam1 - lParam2);
+    return (int)(lParam1 - lParam2);
 }
 ```
 
@@ -4381,7 +4380,7 @@ int SubItemHitTest(LPLVHITTESTINFO pInfo);
 void CListCtrlDlg::OnDblClk(NMHDR* pNMHDR, LRESULT* pResult)
 {
     UNREFERENCED_PARAMETER(pResult);
-LPNMITEMACTIVATE pia = (LPNMITEMACTIVATE)pNMHDR;
+    LPNMITEMACTIVATE pia = (LPNMITEMACTIVATE)pNMHDR;
     LVHITTESTINFO lvhti;
 
     // Clear the subitem text the user clicked on.
@@ -4418,7 +4417,7 @@ BOOL Update(int nItem);
 
 ### <a name="example"></a>例
 
-  例をご覧ください[CListCtrl::GetSelectedCount](#getselectedcount)します。
+例をご覧ください[CListCtrl::GetSelectedCount](#getselectedcount)します。
 
 ## <a name="see-also"></a>関連項目
 
