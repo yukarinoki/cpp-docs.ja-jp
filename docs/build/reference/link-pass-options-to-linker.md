@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -link compiler option [C++]
 - cl.exe compiler [C++], passing options to linker
 ms.assetid: 16902a94-c094-4328-841f-3ac94ca04848
-ms.openlocfilehash: ef81a6617df811660506c08434f3b65e29155794
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 37743e855c933b6236b5e7a837db257f332a3037
+ms.sourcegitcommit: bbaf65f8ed1af12828b38f8eacd24f934ac0e538
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62290684"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67155774"
 ---
 # <a name="link-pass-options-to-linker"></a>/link (リンカーにオプションを渡す)
 
@@ -33,7 +33,7 @@ ms.locfileid: "62290684"
 
 ## <a name="remarks"></a>Remarks
 
-**/Link**オプションとリンカー オプションは、ファイル名と CL オプションの後に表示する必要があります。 スペースは間で必要な **/link**と`linkeroptions`します。 詳細については、次を参照してください。 [MSVC リンカー参照](linking.md)します。
+**/Link**オプションとリンカー オプションは、ファイル名と CL オプションの後に表示する必要があります。 スペースは間で必要な **/link**およびリンカー オプション。 詳細については、次を参照してください。 [MSVC リンカー参照](linking.md)します。
 
 ## <a name="example"></a>例
 
@@ -45,7 +45,7 @@ ms.locfileid: "62290684"
 
 IDE は、通常のコンパイルし、コードをリンクする個別のコマンドを送信します。 プロジェクトのプロパティ ページで、リンカー オプションを設定できます。
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
 
 1. 選択、**構成プロパティ** > **リンカー**フォルダー。
 
