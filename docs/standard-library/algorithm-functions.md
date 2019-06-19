@@ -200,12 +200,12 @@ helpviewer_keywords:
 - std::count_if [C++]
 - std::partition_copy [C++]
 - std::swap [C++]
-ms.openlocfilehash: b914b3d2ed61c81629c06739eac86692d1444e58
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 17ce5628dbf7c781cfc9d3ebdf348d003c863f76
+ms.sourcegitcommit: 0ad35b26e405bbde17dc0bd0141e72f78f0a38fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450422"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67194777"
 ---
 # <a name="ltalgorithmgt-functions"></a>&lt;algorithm&gt; 関数
 
@@ -317,19 +317,21 @@ int main()
       cout << "There are not two adjacent elements that are equal."
            << endl;
    else
-      cout << "There are two adjacent elements that are equal."
-           << "\n They have a value of "
-           <<  *( result1 ) << "." << endl;
+      cout << "There are two adjacent elements that are equal.\n"
+           << "They have a value of "
+           << *( result1 ) << "." << endl;
 
    result2 = adjacent_find( L.begin( ), L.end( ), twice );
    if ( result2 == L.end( ) )
       cout << "There are not two adjacent elements where the "
-           << " second is twice the first." << endl;
+           << "second is twice the first." << endl;
    else
+   {
       cout << "There are two adjacent elements where "
-           << "the second is twice the first."
-           << "\n They have values of " << *(result2++);
-      cout << " & " << *result2 << "." << endl;
+           << "the second is twice the first.\n"
+           << "They have values of " << *(result2++)
+           << " & " << *result2 << "." << endl;
+   }
 }
 ```
 
@@ -366,11 +368,46 @@ bool all_of(
 
 ### <a name="return-value"></a>戻り値
 
-返します**true**条件が指定された範囲内の各要素で検出された場合と**false**条件が少なくとも 1 つの時間が検出されない場合。
+返します**true**条件が指定された範囲内の各要素で検出された場合、または、範囲が空の場合と**false**それ以外の場合。
 
 ### <a name="remarks"></a>Remarks
 
 テンプレート関数を返します**true**場合にのみ各`N`の範囲の`[0,Last - first)`、述語`comp(*(_First + N))`は**true**します。
+
+### <a name="example"></a>例
+
+```cpp
+// alg_all_of.cpp
+// compile with: /EHsc
+#include <list>
+#include <algorithm>
+#include <iostream>
+
+int main()
+{
+    using namespace std;
+
+    list<int> li { 50, 40, 10, 20, 20 };
+    list<int>::iterator iter;
+
+    cout << "li = ( ";
+    for (iter = li.begin(); iter != li.end(); iter++)
+        cout << *iter << " ";
+    cout << ")" << endl;
+
+    // Check if all elements in li are even.
+    auto is_even = [](int elem){ return !(elem % 2); };
+    if (all_of(li.begin(), li.end(), is_even))
+        cout << "All the elements are even numbers.\n";
+    else
+        cout << "Not all the elements are even numbers.\n";
+}
+```
+
+```Output
+L = ( 50 40 10 20 20 )
+All the elements are even numbers.
+```
 
 ## <a name="any_of"></a>  any_of
 
@@ -404,6 +441,40 @@ bool any_of(
 テンプレート関数を返します**true**いくつかの場合にのみ`N`範囲内
 
 `[0, last - first)`、述語`comp(*(first + N))`は true。
+
+### <a name="example"></a>例
+
+```cpp
+// alg_any_of.cpp
+// compile with: /EHsc
+#include <list>
+#include <algorithm>
+#include <iostream>
+
+int main()
+{
+    using namespace std;
+
+    list<int> li { 51, 41, 11, 21, 20 };
+
+    cout << "li = ( ";
+    for (auto const& el : li)
+        cout << el << " ";
+    cout << ")" << endl;
+
+    // Check if there is an even elememt in li.
+    auto is_even = [](int const elem){ return !(elem % 2); };
+    if (any_of(li.begin(), li.end(), is_even))
+        cout << "There's an even element in li.\n";
+    else
+        cout << "There are no even elements in li.\n";
+}
+```
+
+```Output
+L = ( 51 41 11 21 20 )
+There's an even element in li.
+```
 
 ## <a name="binary_search"></a>  binary_search
 
@@ -7653,7 +7724,7 @@ template<class RandomAccessIterator, class Predicate>
 並べ替えられる範囲内の最後の要素の 1 つ後ろの位置を示すランダム アクセス反復子。
 
 *comp*<br/>
-順序内の次の要素によって満たされる比較条件を定義するユーザー定義の述語関数オブジェクト。 この二項述語は 2 つの引数を受け取りし、返します**true**場合は、2 つの引数が順番と**false**それ以外の場合。 この比較子関数は、シーケンスからの要素のペアで厳密弱順序を強制する必要があります。 詳細については、「[アルゴリズム](../standard-library/algorithms.md)」を参照してください。
+順序内の次の要素によって満たされる比較条件を定義するユーザー定義の述語関数オブジェクト。 この二項述語は 2 つの引数を受け取りし、返します**true**場合は、2 つの引数が順番と**false**それ以外の場合。 この比較子関数は、シーケンスからの要素のペアで厳密弱順序を強制する必要があります。 詳細については、「[アルゴリズム](../standard-library/algorithms.md)」をご覧ください。
 
 ### <a name="remarks"></a>Remarks
 
