@@ -14,19 +14,19 @@ helpviewer_keywords:
 - dialog boxes [C++], size
 - dialog boxes [C++], positioning
 ms.assetid: 303de801-c4f8-42e1-b622-353f6423f688
-ms.openlocfilehash: c5f026683881ba8e608bd00089879e0e2a7b4af2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 28ed6c8be262e0446b828cfa3e6e9fe2ba53672a
+ms.sourcegitcommit: 6cf0c67acce633b07ff31b56cebd5de3218fd733
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223572"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67344205"
 ---
 # <a name="how-to-create-a-dialog-box-c"></a>方法: 作成 ダイアログ ボックス (C++)
 
 場所と C++ のダイアログ ボックスと場所のサイズと、内のコントロールのサイズは、ダイアログ単位で測定されます。 個々 のコントロールと、ダイアログ ボックスの値は、Visual Studio のステータス バーの選択した場合の右下に表示されます。
 
 > [!NOTE]
-> プロジェクトに .rc ファイルがまだ含まれていない場合は、「 [リソース スクリプト ファイルの新規作成](../windows/how-to-create-a-resource-script-file.md)」を参照してください。
+> 場合は、プロジェクトに .rc ファイル含まれていないを参照してください。[リソース スクリプト ファイルの新規作成](../windows/how-to-create-a-resource-script-file.md)です。
 
 ## <a name="how-to"></a>方法
 
@@ -38,7 +38,7 @@ ms.locfileid: "62223572"
 
 1. **リソースの追加**ダイアログ ボックスで、**ダイアログ**で、**リソースの種類**し選択**新規**します。
 
-   プラス記号の場合 (**+**) 横に表示されます、**ダイアログ**ダイアログ ボックスのテンプレートが使用できることを意味、リソースの種類。 テンプレートの一覧を展開し、テンプレートを選択して、選択、プラス記号を選択します。**新規**します。
+   プラス記号の場合 ( **+** ) 横に表示されます、**ダイアログ**ダイアログ ボックスのテンプレートが使用できることを意味、リソースの種類。 テンプレートの一覧を展開し、テンプレートを選択して、選択、プラス記号を選択します。**新規**します。
 
    新しいダイアログ ボックスが開き、**ダイアログ エディター**します。
 
