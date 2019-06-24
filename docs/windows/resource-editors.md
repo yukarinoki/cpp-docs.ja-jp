@@ -21,12 +21,12 @@ helpviewer_keywords:
 - properties [C++], resources
 - resources [C++], properties
 ms.assetid: e20a29ec-d6fb-4ead-98f3-431a0e23aaaf
-ms.openlocfilehash: a752122d89b3d952aec664f0dec092af1599f143
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 850d4b72ddb45551528526cd9e02345aee74d751
+ms.sourcegitcommit: 6cf0c67acce633b07ff31b56cebd5de3218fd733
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448919"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67344222"
 ---
 # <a name="resource-editors-c"></a>リソース エディター (C++)
 
@@ -50,7 +50,7 @@ ms.locfileid: "65448919"
 |[バージョン エディター](../windows/version-information-editor.md)|Visual Studio のバージョン情報C++プロジェクト。|
 
 > [!NOTE]
-> 場合は、プロジェクトに .rc ファイル含まれていないを参照してください[方法。リソースを作成する](../windows/how-to-create-a-resource-script-file.md)します。
+> 場合は、プロジェクトに .rc ファイル含まれていないを参照してください。[方法。リソースを作成する](../windows/how-to-create-a-resource-script-file.md)します。
 
 ## <a name="view-and-edit-resources"></a>ビューと編集リソース
 

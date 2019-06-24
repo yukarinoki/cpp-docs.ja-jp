@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CSharedFile [MFC], Detach
 - CSharedFile [MFC], SetHandle
 ms.assetid: 5d000422-9ede-4318-a8c9-f7412b674f39
-ms.openlocfilehash: e86e64c1de232aba0c17a0fdfb3600e480567a57
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0a9bbf3072a665c04501025d421839fa90a37225
+ms.sourcegitcommit: 6cf0c67acce633b07ff31b56cebd5de3218fd733
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324130"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67344421"
 ---
 # <a name="csharedfile-class"></a>CSharedFile クラス
 
@@ -46,15 +46,15 @@ class CSharedFile : public CMemFile
 
 ## <a name="remarks"></a>Remarks
 
-メモリのファイルは、ファイルがディスクではなく RAM に格納されていることを除いて、ディスク ファイルと同様に動作します。 メモリ ファイルは高速な一時ストレージまたは生バイトを転送するために役立ちます。 または、独立したプロセスの間でオブジェクトをシリアル化します。
+メモリのファイルは、ディスク ファイルと同様に動作します。 違いは、メモリ ファイルがディスクではなく RAM に格納されます。 メモリ ファイルは高速な一時ストレージ、または実際のバイト数を転送するために役立ちます。 または、独立したプロセスの間でオブジェクトをシリアル化します。
 
 使用してメモリが割り当てられた、他のメモリ ファイルの共有メモリ ファイルとは異なる、 [GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc) Windows 関数。 `CSharedFile`クラスは、グローバルに割り当てられたメモリ ブロックにデータを保存 (を使用して作成`GlobalAlloc`)、このメモリ ブロックを共有できる DDE、クリップボード、またはその他の OLE と COM uniform データ転送操作、たとえばを使用してを使用して、`IDataObject`します。
 
 `GlobalAlloc` によって返されたポインターなどのメモリへのポインターではなく、HGLOBAL がハンドルを返します[malloc](../../c-runtime-library/reference/malloc.md)します。 HGLOBAL ハンドルは、特定のアプリケーションで必要です。 たとえば、クリップボードにデータを格納する書き込むようが必要です。
 
-なお、`CSharedFile`使用メモリ マップト ファイルではなくを行い、プロセス間でデータを直接共有することはできません。
+`CSharedFile` メモリ マップト ファイルの使用、およびデータできません直接プロセス間で共有します。
 
-`CSharedFile` 独自のメモリ ブロックをアタッチするオブジェクトが独自のメモリを自動的に割り当てることも、`CSharedFile`オブジェクトを呼び出すことによって[CSharedFile::SetHandle](#sethandle)します。 いずれの場合も、メモリ ファイルを自動的に拡大するためのメモリが割り当てられている`nGrowBytes`-場合分ずつ`nGrowBytes`がゼロでないです。
+`CSharedFile` オブジェクトは、独自のメモリを自動的に割り当てることができます。 または、独自のメモリ ブロックを割り当てることができます、`CSharedFile`オブジェクトを呼び出すことによって[CSharedFile::SetHandle](#sethandle)します。 いずれの場合も、メモリ ファイルを自動的に拡大するためのメモリが割り当てられている`nGrowBytes`-場合分ずつ`nGrowBytes`0 はありません。
 
 詳細については、この記事を参照してください。 [MFC のファイル](../../mfc/files-in-mfc.md)と[ファイル処理](../../c-runtime-library/file-handling.md)で、*ランタイム ライブラリ リファレンス*します。
 
@@ -126,7 +126,7 @@ void SetHandle(
 
 ### <a name="remarks"></a>Remarks
 
-場合*bAllowGrow*が 0 以外の場合、メモリ ブロックのサイズはたとえば、この必要に応じて、増加が、うまくいかない場合に加えられたメモリ ブロックに割り当てられたよりもファイルにバイトを書き込みます。
+場合*bAllowGrow*が 0 以外の場合、メモリ ブロックのサイズ増加、必要に応じて、しようとするメモリ ブロックのサイズよりもファイルにバイトを書き込みます。
 
 ## <a name="see-also"></a>関連項目
 

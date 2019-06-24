@@ -48,18 +48,18 @@ helpviewer_keywords:
 - InterlockedCompareExchange64_rel intrinsic
 - _InterlockedCompareExchange64_rel intrinsic
 ms.assetid: c3ad79c0-a523-4930-a3a4-69a65d7d5c81
-ms.openlocfilehash: 6c0fabe7cbada87253960faca8e207bb10dd07bd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6ac3ea1c97fe78cf2a145cd2ce62f7b3f198ab3c
+ms.sourcegitcommit: 6cf0c67acce633b07ff31b56cebd5de3218fd733
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263738"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67344449"
 ---
 # <a name="interlockedcompareexchange-intrinsic-functions"></a>_InterlockedCompareExchange の組み込み関数
 
 **Microsoft 固有の仕様**
 
-インタロックされた比較および交換を実行します。
+インタロックされた比較し、交換します。
 
 ## <a name="syntax"></a>構文
 
@@ -202,25 +202,25 @@ __int64 _InterlockedCompareExchange64_rel(
 
 ## <a name="remarks"></a>Remarks
 
-`_InterlockedCompareExchange` は、`Destination` 値と `Comparand` 値のアトミックな比較を実行します。 `Destination` 値が `Comparand` 値と等しい場合、`Exchange` 値は `Destination` で指定されたアドレスに格納されます。 それ以外の場合は演算が実行されません。
+`_InterlockedCompareExchange` アトミックの比較には、`Destination`値を`Comparand`値。 `Destination` 値が `Comparand` 値と等しい場合、`Exchange` 値は `Destination` で指定されたアドレスに格納されます。 それ以外の場合、操作は行われません。
 
 `_InterlockedCompareExchange` Win32 Windows SDK のコンパイラ組み込みサポートを提供します。 [InterlockedCompareExchange](/windows/desktop/api/winnt/nf-winnt-interlockedcompareexchange)関数。
 
-`_InterlockedCompareExchange` には、格納するデータ型、およびプロセッサ固有の取得または解放のセマンティクスを使用するかどうかに基づき、異なるいくつかの種類があります。
+いくつかのバリエーションがある`_InterlockedCompareExchange`が含まれるデータ型と異なるかどうか特定のプロセッサを取得または解放のセマンティクスを使用します。
 
-`_InterlockedCompareExchange` 関数は long 型の整数値で動作しますが、`_InterlockedCompareExchange8` は 8 ビット整数値、`_InterlockedCompareExchange16` は short 型の整数値、および `_InterlockedCompareExchange64` は 64 ビット整数値で動作します。
+中に、`_InterlockedCompareExchange`関数は長整数値、`_InterlockedCompareExchange8`は 8 ビット整数値、`_InterlockedCompareExchange16`は short 型整数値、および`_InterlockedCompareExchange64`は 64 ビット整数値で動作します。
 
-ARM プラットフォームでは、クリティカル セクションの最初と最後などでの取得と解放のセマンティクスのために、`_acq` および `_rel` サフィックスの付いた組み込みを使用します。 `_nf` ("フェンスなし") サフィックスの付いた ARM 組み込みはメモリ バリアとしては機能しません。
+ARM プラットフォームでは、クリティカル セクションの最初と最後などでの取得と解放のセマンティクスのために、`_acq` および `_rel` サフィックスの付いた組み込みを使用します。 付いた ARM 組み込み、 `_nf` (「フェンスなし」) サフィックスはメモリ バリアとして機能はありません。
 
 組み込みに `_np` ("プリフェッチなし") サフィックスが付いていると、コンパイラによってプリフェッチ操作が挿入される可能性がなくなります。
 
-Hardware Lock Elision (HLE) 命令をサポートする Intel プラットフォームでは、`_HLEAcquire` および `_HLERelease` サフィックスの付いた組み込みにプロセッサへのヒントが含まれています。このヒントによりハードウェアでのロック書き込み手順を省くことで、パフォーマンスを向上させることができます。 HLE をサポートしていないプラットフォームでこれらの組み込みが呼び出された場合、ヒントは無視されます。
+Hardware Lock Elision (HLE) 命令をサポートする Intel プラットフォームでは、`_HLEAcquire` および `_HLERelease` サフィックスの付いた組み込みにプロセッサへのヒントが含まれています。このヒントによりハードウェアでのロック書き込み手順を省くことで、パフォーマンスを向上させることができます。 HLE をサポートしていないプラットフォームでは、これらの組み込みが呼び出されると、ヒントは無視されます。
 
 これらのルーチンは、組み込みとしてのみ使用できます。
 
 ## <a name="example"></a>例
 
-次の例では、単純な低レベルのスレッド同期に `_InterlockedCompareExchange` を使用しています。 マルチスレッド プログラミングの基本であるこの方法には制限がありますが、インタロックされた組み込みの代表的な使用例を示すために紹介します。 最適な結果を得るには Windows API を使用してください。 マルチ スレッド プログラミングの詳細については、次を参照してください。[マルチ スレッド Win32 プログラムの作成](../parallel/writing-a-multithreaded-win32-program.md)です。
+次の例では、単純な低レベルのスレッド同期に `_InterlockedCompareExchange` を使用しています。 アプローチは、マルチ スレッド プログラミングの基礎として制限があります。インタロックされた組み込みの一般的な用途を説明するために表示されます。 最適な結果を得るには Windows API を使用してください。 マルチ スレッド プログラミングの詳細については、次を参照してください。[マルチ スレッド Win32 プログラムの作成](../parallel/writing-a-multithreaded-win32-program.md)です。
 
 ```
 // intrinExample.cpp
@@ -248,7 +248,7 @@ using namespace std;
 //#define SKIP_LOCKING
 
 // A common way of locking using _InterlockedCompareExchange.
-// Please refer to other sources for a discussion of the many issues
+// Refer to other sources for a discussion of the many issues
 // involved. For example, this particular locking scheme performs well
 // when lock contention is low, as the while loop overhead is small and
 // locks are acquired very quickly, but degrades as many callers want

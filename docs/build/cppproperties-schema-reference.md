@@ -3,12 +3,12 @@ title: CppProperties.json スキーマ リファレンス
 ms.date: 05/16/2019
 helpviewer_keywords:
 - CMake in Visual Studio
-ms.openlocfilehash: e80f4e8a189510a9a3e8860609d74121b7cbb0ef
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: 8432b72deaef99ee20147505030cbc8a9a270869
+ms.sourcegitcommit: 6cf0c67acce633b07ff31b56cebd5de3218fd733
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837058"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67344403"
 ---
 # <a name="cpppropertiesjson-schema-reference"></a>CppProperties.json スキーマ リファレンス
 
@@ -17,9 +17,9 @@ CMake を使用していない "フォルダーを開く" プロジェクトで�
 
 ## <a name="default-configurations"></a>既定の構成
 
-Visual Studio では、x86 と x64 のデバッグとリリースに対する定義済みの構成が提供されます。 既定では、x86 のデバッグ構成は `CppProperties.json` にあります。 新しい構成を追加するには、**ソリューション エクスプローラー**で `CppProperties.json` ファイルを右クリックして、 **[構成の追加]** を選択します。
+Visual Studio では、x86 と x64 のデバッグとリリースに対する定義済みの構成が提供されます。 既定では、x86 のデバッグ構成は `CppProperties.json` にあります。 新しい構成を追加するを右クリックし、`CppProperties.json`ファイル**ソリューション エクスプ ローラー**選択**構成の追加**:
 
-!["フォルダーを開く" の構成の追加](media/open-folder-add-config.png "\"フォルダーを開く\" の新しい構成の追加")
+![フォルダーを開き、新しい構成を追加する-](media/open-folder-add-config.png "新しい構成を追加するフォルダーを開く")
 
 既定の構成を次に示します。
 
@@ -115,9 +115,9 @@ Visual Studio では、x86 と x64 のデバッグとリリースに対する定
 |`compilerSwitches`|IntelliSense の動作に影響を与えることができる 1 つ以上の追加スイッチ|
 |`forcedInclude`|すべてのコンパイル単位に自動的にインクルードされるヘッダー (MSVC の /FI または clang の -include に対応します)|
 |`undefines`|未定義にするマクロのリスト (MSVC の /U に対応します)|
-|`intelliSenseMode`|使用する IntelliSense エンジン。 MSVC、gcc、または Clang に対するアーキテクチャ固有のバリエーションを指定できます。<br/><br/>- windows-msvc-x86 (既定)<br/>- windows-msvc-x64<br/>- msvc-arm<br/>- windows-clang-x86<br/>- windows-clang-x64<br/>- windows-clang-arm<br/>- Linux-x64<br/>- Linux-x86<br/>- Linux-arm<br/>- gccarm|
+|`intelliSenseMode`|使用する IntelliSense エンジン。 アーキテクチャ固有のバリアントは、MSVC、Clang、gcc を指定できます。<br/><br/>- windows-msvc-x86 (既定)<br/>- windows-msvc-x64<br/>- msvc-arm<br/>- windows-clang-x86<br/>- windows-clang-x64<br/>- windows-clang-arm<br/>- Linux-x64<br/>- Linux-x86<br/>- Linux-arm<br/>- gccarm|
 
-メモ:値 `msvc-x86` および `msvc-x64` は、レガシの理由でのみサポートされます。 `windows-msvc*` のバリエーションを使ってください。
+メモ:値 `msvc-x86` および `msvc-x64` は、レガシの理由でのみサポートされます。 使用して、`windows-msvc-*`バリアント代わりにします。
 
 ## <a name="custom-configurations"></a>カスタム構成
 
@@ -208,7 +208,7 @@ Linux ワークロードがインストールされている場合、Linux お�
 ```
 ## <a name="per-configuration-environment-variables"></a>構成ごとの環境変数
 
-構成の内部で **environments** プロパティを定義することで、その構成のみにプロパティを適用して、同じ名前のグローバル変数をオーバーライドすることもできます。 次の例の x64 構成で定義されているローカルな **INCLUDE** 変数は、グローバルな値をオーバーライドします。
+定義することも、**環境**構成内のプロパティ。 その構成にのみ適用され、同じ名前のグローバル変数をオーバーライドします。 次の例の x64 構成で定義されているローカルな **INCLUDE** 変数は、グローバルな値をオーバーライドします。
 
 ```json
 {
@@ -266,7 +266,7 @@ Linux ワークロードがインストールされている場合、Linux お�
 |`${projectRoot}`| `CppProperties.json` が配置されているフォルダーへの完全なパスです|
 |`${vsInstallDir}`| Visual Studio の実行中のインスタンスがインストールされているフォルダーへの完全なパスです|
 
-たとえば、プロジェクトにインクルード フォルダーがあるだけでなく、windows.h および他の共通ヘッダーを Windows SDK からもインクルードしている場合、`CppProperties.json` の構成ファイルをこれらのインクルードで更新したい場合があります。
+たとえば、プロジェクトには、含めるフォルダーがあり、windows.h および Windows SDK から他の一般的なヘッダーも含まれます、場合を更新する、`CppProperties.json`を次の構成ファイルが含まれています。
 
 ```json
 {
@@ -294,6 +294,3 @@ Linux ワークロードがインストールされている場合、Linux お�
 ## <a name="troubleshoot-intellisense-errors"></a>IntelliSense エラーのトラブルシューティング
 
 インクルード パスがないことにより発生する IntelliSense のエラーをトラブルシューティングするには、 **[エラー一覧]** を開き、出力を "IntelliSense のみ" およびエラー コード E1696 "ソース ファイル ... を開くことができません" でフィルター処理します。
-
-
-
