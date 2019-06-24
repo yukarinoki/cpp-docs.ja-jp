@@ -200,12 +200,12 @@ helpviewer_keywords:
 - std::count_if [C++]
 - std::partition_copy [C++]
 - std::swap [C++]
-ms.openlocfilehash: 17ce5628dbf7c781cfc9d3ebdf348d003c863f76
-ms.sourcegitcommit: 0ad35b26e405bbde17dc0bd0141e72f78f0a38fb
+ms.openlocfilehash: 7dc5554b2d49e4c306aa64c32d7c9f8cc8a5bb6a
+ms.sourcegitcommit: 1acb6755e11379026a96f63facac4d33f4dc47ae
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67194777"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67314282"
 ---
 # <a name="ltalgorithmgt-functions"></a>&lt;algorithm&gt; 関数
 
@@ -405,7 +405,7 @@ int main()
 ```
 
 ```Output
-L = ( 50 40 10 20 20 )
+li = ( 50 40 10 20 20 )
 All the elements are even numbers.
 ```
 
@@ -472,7 +472,7 @@ int main()
 ```
 
 ```Output
-L = ( 51 41 11 21 20 )
+li = ( 51 41 11 21 20 )
 There's an even element in li.
 ```
 
@@ -859,6 +859,35 @@ OutputIterator copy_n(
 ### <a name="remarks"></a>Remarks
 
 テンプレート関数は評価`*(dest + N) = *(first + N))`ごとに 1 回`N`範囲`[0, count)`、の値を確実に増加`N`最低値から。 その後で `dest + N` が返されます。 場合*dest*と*最初*、記憶域の領域を指定*dest* 、範囲内で指定する必要がありますいない`[first, last)`します。
+
+### <a name="example"></a>例
+
+```cpp
+// alg_copy_n.cpp
+// compile with: cl /EHsc /W4 alg_copy_n.cpp
+#include <algorithm>
+#include <iostream>
+#include <string>
+
+int main()
+{
+    using namespace std;
+    string s1{"dandelion"};
+    string s2{"badger"};
+
+    cout << s1 << " + " << s2 << " = ";
+    
+    // Copy the first 3 letters from s1 
+    // to the first 3 positions in s2
+    copy_n(s1.begin(), 3, s2.begin());
+
+    cout << s2 << endl;
+}
+```
+
+```Output
+dandelion + badger = danger
+```
 
 ## <a name="count"></a>  count
 
@@ -7724,7 +7753,7 @@ template<class RandomAccessIterator, class Predicate>
 並べ替えられる範囲内の最後の要素の 1 つ後ろの位置を示すランダム アクセス反復子。
 
 *comp*<br/>
-順序内の次の要素によって満たされる比較条件を定義するユーザー定義の述語関数オブジェクト。 この二項述語は 2 つの引数を受け取りし、返します**true**場合は、2 つの引数が順番と**false**それ以外の場合。 この比較子関数は、シーケンスからの要素のペアで厳密弱順序を強制する必要があります。 詳細については、「[アルゴリズム](../standard-library/algorithms.md)」をご覧ください。
+順序内の次の要素によって満たされる比較条件を定義するユーザー定義の述語関数オブジェクト。 この二項述語は 2 つの引数を受け取りし、返します**true**場合は、2 つの引数が順番と**false**それ以外の場合。 この比較子関数は、シーケンスからの要素のペアで厳密弱順序を強制する必要があります。 詳細については、「[アルゴリズム](../standard-library/algorithms.md)」を参照してください。
 
 ### <a name="remarks"></a>Remarks
 
