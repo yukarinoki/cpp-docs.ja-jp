@@ -92,14 +92,14 @@ int _CrtDbgReportW(
 
 **_CrtDbgReportW**のワイド文字バージョンは、 **_CrtDbgReport**します。 すべての出力および文字列のパラメーターは、ワイド文字列内にあり、それ以外の場合は 1 バイト文字バージョンと同じです。
 
-**_CrtDbgReport**と **_CrtDbgReportW**に置き換えることによって、デバッグ レポートのユーザー メッセージを作成、*引数***[n]**、引数*形式*によって定義された同じルールを使用して、文字列、 **printf**または**wprintf**関数。 に対して定義されているファイルと、これらの関数はデバッグ レポートを生成し、現在のレポート モードに基づいて、宛先を決定*reportType*します。 レポートは、デバッグ メッセージ ウィンドウに送信されるときに、 *filename*、 **lineNumber**と*moduleName*ウィンドウに表示される情報に含まれます。
+**_CrtDbgReport**と **_CrtDbgReportW**に置き換えることによって、デバッグ レポートのユーザー メッセージを作成、*引数* **[n]** 、引数*形式*によって定義された同じルールを使用して、文字列、 **printf**または**wprintf**関数。 に対して定義されているファイルと、これらの関数はデバッグ レポートを生成し、現在のレポート モードに基づいて、宛先を決定*reportType*します。 レポートは、デバッグ メッセージ ウィンドウに送信されるときに、 *filename*、 **lineNumber**と*moduleName*ウィンドウに表示される情報に含まれます。
 
 次の表に、レポート モードまたはモードおよびファイルと結果の動作を使用できる選択肢 **_CrtDbgReport**と **_CrtDbgReportW**します。 これらのオプションは、\<crtdbg.h> でビット フラグとして定義されています。
 
 |レポート モード|レポート ファイル|**_CrtDbgReport**、 **_CrtDbgReportW**動作|
 |-----------------|-----------------|------------------------------------------------|
 |**_CRTDBG_MODE_DEBUG**|利用不可|Windows [OutputDebugString](https://msdn.microsoft.com/library/windows/desktop/aa363362.aspx) API にメッセージを書き込みます。|
-|**_CRTDBG_MODE_WNDW**|利用不可|Windows [MessageBox](/windows/desktop/api/winuser/nf-winuser-messagebox) API を呼び出して、メッセージおよび **[中止]**、**[再試行]**、**[無視]** の各ボタンを表示するメッセージ ボックスを作成します。 クリックすると**中止**、 **_CrtDbgReport**または **_CrtDbgReport**すぐに中止されます。 ユーザーが **[再試行]** をクリックすると、1 を返します。 クリックすると**無視**、実行が継続と **_CrtDbgReport**と **_CrtDbgReportW** 0 が返されます。 エラー状況が存在するときに **[無視]** をクリックすると、"未定義の動作" という結果になることがよくあります。|
+|**_CRTDBG_MODE_WNDW**|利用不可|Windows [MessageBox](/windows/desktop/api/winuser/nf-winuser-messagebox) API を呼び出して、メッセージおよび **[中止]** 、 **[再試行]** 、 **[無視]** の各ボタンを表示するメッセージ ボックスを作成します。 クリックすると**中止**、 **_CrtDbgReport**または **_CrtDbgReport**すぐに中止されます。 ユーザーが **[再試行]** をクリックすると、1 を返します。 クリックすると**無視**、実行が継続と **_CrtDbgReport**と **_CrtDbgReportW** 0 が返されます。 エラー状況が存在するときに **[無視]** をクリックすると、"未定義の動作" という結果になることがよくあります。|
 |**_CRTDBG_MODE_FILE**|**__HFILE**|メッセージをユーザーが指定した書き込みます**処理**、Windows を使用して[WriteFile](/windows/desktop/api/fileapi/nf-fileapi-writefile) API とはファイル ハンドルの有効性を確認できませんアプリケーションは、レポート ファイルを開き、有効なファイルを渡す。処理します。|
 |**_CRTDBG_MODE_FILE**|**_CRTDBG_FILE_STDERR**|メッセージを書き込みます**stderr**します。|
 |**_CRTDBG_MODE_FILE**|**_CRTDBG_FILE_STDOUT**|メッセージを書き込みます**stdout**します。|

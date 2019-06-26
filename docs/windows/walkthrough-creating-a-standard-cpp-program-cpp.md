@@ -6,12 +6,12 @@ helpviewer_keywords:
 - command-line applications [C++], standard
 - standard applications [C++]
 ms.assetid: 48217e35-d892-46b7-93e3-f6f0b7e2da35
-ms.openlocfilehash: ed9c19dad029f8fc9495d38ab6e5c0ba8ad6d529
-ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
+ms.openlocfilehash: b3172dd6ed4c438bacedd6760da5ab65228396f3
+ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64877415"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400907"
 ---
 # <a name="walkthrough-creating-a-standard-c-program-c"></a>チュートリアル: 標準の C++ プログラム (C++) を作成します。
 
@@ -28,19 +28,19 @@ Visual Studio を使用するには Standard を作成するC++プログラム�
 
 ### <a name="to-create-a-project-and-add-a-source-file"></a>プロジェクトを作成してソース ファイルを追加するには
 
-次の手順は、使用して Visual Studio のバージョンによって異なります。 左上隅の [バージョン] セレクターのこのページが正しく設定することを確認します。
+次の手順は、使っている Visual Studio のバージョンによって異なります。 このページの左上にあるバージョン セレクターが適切に設定されていることを確認してください。
 
 ::: moniker range="vs-2019"
 
 ### <a name="to-create-a-c-project-in-visual-studio-2019"></a>作成する、C++で Visual Studio 2019 プロジェクト
 
-1. メイン メニューで、次のように選択します**ファイル** > **新規** > **プロジェクト**を開く、**新しいプロジェクトを作成**ダイアログ。ボックス。
+1. メイン メニューで、 **[ファイル]** > **[新規作成]** > **[プロジェクト]** の順に選択して、 **[新しいプロジェクトの作成]** ダイアログ ボックスを開きます。
 
-1. ダイアログ ボックスの上部にある次のように設定します**言語**に **C++** 設定**プラットフォーム**に**Windows**、設定と**プロジェクトの種類。** に**コンソール**します。 
+1. ダイアログの上部で、 **[言語]** を **[C++]** に、 **[プラットフォーム]** を **[Windows]** に、 **[プロジェクト タイプ]** を **[コンソール]** に設定します。 
 
-1. プロジェクトの種類の結果の一覧から選択**コンソール アプリ**選択 **[次へ]** します。 次のページで、プロジェクトの名前を入力し、必要な場合は、プロジェクトの場所を指定します。
+1. フィルター処理されたプロジェクト タイプの一覧から、 **[コンソール アプリ]** を選択して、 **[次へ]** を選択します。 次のページで、プロジェクトの名前を入力し、必要な場合は、プロジェクトの場所を指定します。
 
-1. 選択、**作成**プロジェクトを作成するボタンをクリックします。
+1. **[作成]** ボタンをクリックしてプロジェクトを作成します。
 
 ::: moniker-end
 
@@ -88,7 +88,7 @@ Visual Studio を使用するには Standard を作成するC++プログラム�
 
    1. **ソリューション エクスプ ローラー**を右クリックし、**ソース ファイル**フォルダーを指す**追加**、順にクリックします**新しい項目の**します。
 
-   1. **コード**ノード、をクリックして**C++ ファイル (.cpp)**、ファイルの名前を入力し、クリックして**追加**します。
+   1. **コード**ノード、をクリックして**C++ ファイル (.cpp)** 、ファイルの名前を入力し、クリックして**追加**します。
 
    .Cpp ファイルに表示されます、**ソース ファイル**フォルダー**ソリューション エクスプ ローラー**、Visual Studio エディターでファイルを開くとします。
 
@@ -106,10 +106,10 @@ Visual Studio を使用するには Standard を作成するC++プログラム�
 
 ## <a name="next-steps"></a>次の手順
 
-**前へ:**[Visual C++ のコンソール アプリケーション](../windows/console-applications-in-visual-cpp.md)<br/>
-**次へ:**[チュートリアル:コマンド ラインでのネイティブ C++ プログラムのコンパイル](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)<br/>
+**前へ:** [Visual C++ のコンソール アプリケーション](../windows/console-applications-in-visual-cpp.md)<br/>
+**次へ:** [チュートリアル:コマンド ラインでのネイティブ C++ プログラムのコンパイル](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)
 
 ## <a name="see-also"></a>関連項目
 
 [C++ 言語リファレンス](../cpp/cpp-language-reference.md)<br/>
-[.NET 標準ライブラリ](../standard-library/cpp-standard-library-reference.md)<br/>
+[.NET 標準ライブラリ](../standard-library/cpp-standard-library-reference.md)
