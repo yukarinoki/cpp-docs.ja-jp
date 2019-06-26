@@ -82,12 +82,12 @@ helpviewer_keywords:
 - std::regex_constants [C++], optimize
 - std::regex_constants [C++], collate
 ms.assetid: 4a69c0ba-c46d-46e4-bd29-6f4efb805f26
-ms.openlocfilehash: f3e733bced407f96414783612165984c71b63775
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b657dbc5ae537e15f6638ffbd3594cd52b644f3b
+ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62369568"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400776"
 ---
 # <a name="regexconstants-namespace"></a>regex_constants 名前空間
 
@@ -210,7 +210,7 @@ enum match_flag_type
 
 照合オプションは次のとおりです。
 
-*match_default*<br/>
+`match_default`
 
 `match_not_bol` - ターゲット シーケンス内の先頭の位置を行の始まりとして処理しません
 

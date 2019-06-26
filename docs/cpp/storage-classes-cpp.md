@@ -11,7 +11,7 @@ helpviewer_keywords:
 ms.assetid: f10e1c56-6249-4eb6-b08f-09ab1eef1992
 ms.openlocfilehash: 92435b2bab670dd366f26c981443e98e4a4e3c29
 ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2019
 ms.locfileid: "65221985"
@@ -24,7 +24,7 @@ A*ストレージ クラス*C++ のコンテキストでの変数宣言は、オ
 
 1. [変更可能な](../cpp/mutable-data-members-cpp.md)キーワードが、ストレージ クラス指定子として見なされます。 ただし、クラス定義のメンバー一覧でのみ使用できます。
 
-1. **Visual Studio 2010 以降の場合:****自動**キーワードは C++ ストレージ クラス指定子では不要になったと**登録**キーワードは非推奨とされます。 **Visual Studio 2017 バージョン 15.7 以降:** (で使用可能な[/std:c + + 17](../build/reference/std-specify-language-standard-version.md))。**登録**キーワードは C++ 言語から削除されます。
+1. **Visual Studio 2010 以降の場合:** **自動**キーワードは C++ ストレージ クラス指定子では不要になったと**登録**キーワードは非推奨とされます。 **Visual Studio 2017 バージョン 15.7 以降:** (で使用可能な[/std:c + + 17](../build/reference/std-specify-language-standard-version.md))。**登録**キーワードは C++ 言語から削除されます。
 
 ```cpp
    register int val; // warning C5033: 'register' is no longer a supported storage class
@@ -306,7 +306,7 @@ Destroying: Static I3
 
 - 最初に、制御フローが `I1` と `I2` を定義しているブロックを終了すると、これらは自動的に破棄されます。
 
-- 次に、C++ では、ブロックの先頭でオブジェクトや変数を宣言する必要はありません。 さらに、これらのオブジェクトは、制御フローが定義に到達した場合にのみ初期化されます  (このような定義には、`I2` や `I3` などがあります)。出力は、これらがいつ初期化されるかを正確に示します。
+- 次に、C++ では、ブロックの先頭でオブジェクトや変数を宣言する必要はありません。 さらに、これらのオブジェクトは、制御フローが定義に到達した場合にのみ初期化されます (このような定義には、`I2` や `I3` などがあります)。出力は、これらがいつ初期化されるかを正確に示します。
 
 - 最後に、`I3` などの静的ローカル変数は、プログラム実行中は値が保持されますが、プログラムが終了すると破棄されます。
 

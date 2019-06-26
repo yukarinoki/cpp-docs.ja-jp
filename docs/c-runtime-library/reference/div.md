@@ -74,13 +74,13 @@ lldiv_t div(
 
 ## <a name="return-value"></a>戻り値
 
-**div**型の引数を使用して呼び出す**int**型の構造体を返す**div_t**商と剰余で構成されます。 型の引数と戻り値**長い**は**ldiv_t**と型の引数と戻り値**長い****長い**は**lldiv_t**します。 **div_t**、 **ldiv_t**、および**lldiv_t**で定義された\<stdlib.h >。
+**div**型の引数を使用して呼び出す**int**型の構造体を返す**div_t**商と剰余で構成されます。 型の引数と戻り値**長い**は**ldiv_t**と型の引数と戻り値**長い** **長い**は**lldiv_t**します。 **div_t**、 **ldiv_t**、および**lldiv_t**で定義された\<stdlib.h >。
 
 ## <a name="remarks"></a>Remarks
 
 **Div**関数は*数値*によって*denom*し、それによって、商と剰余を計算します。 [Div_t](../../c-runtime-library/standard-types.md)構造に含まれる、商**quot**、し、残りの**rem**します。商の符号は、数学的な商の符号と同じです。 この絶対値が最も大きい整数であり、商の絶対値よりも小さくなります。 分母が 0 の場合、プログラムはエラー メッセージにより終了します。
 
-オーバー ロード**div**型の引数を受け取る**長い**または**長い****長い**はのみの C++ コードを使用できます。 戻り値の型[ldiv_t](../../c-runtime-library/standard-types.md)と[lldiv_t](../../c-runtime-library/standard-types.md)メンバーが含まれる**quot**と**rem**のメンバーと同じ意味であります。**div_t**します。
+オーバー ロード**div**型の引数を受け取る**長い**または**長い** **長い**はのみの C++ コードを使用できます。 戻り値の型[ldiv_t](../../c-runtime-library/standard-types.md)と[lldiv_t](../../c-runtime-library/standard-types.md)メンバーが含まれる**quot**と**rem**のメンバーと同じ意味であります。**div_t**します。
 
 ## <a name="requirements"></a>必要条件
 

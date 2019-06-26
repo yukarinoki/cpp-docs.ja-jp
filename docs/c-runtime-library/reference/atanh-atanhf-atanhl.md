@@ -67,7 +67,7 @@ long double atanh( long double x );  // C++ only
 
 ## <a name="remarks"></a>Remarks
 
-オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **atanh**を受け取って返す**float**または**長い****二重**値。 C プログラムで**atanh**は**二重**します。
+オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **atanh**を受け取って返す**float**または**長い** **二重**値。 C プログラムで**atanh**は**二重**します。
 
 ## <a name="requirements"></a>必要条件
 

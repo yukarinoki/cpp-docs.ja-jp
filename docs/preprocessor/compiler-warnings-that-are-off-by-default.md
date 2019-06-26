@@ -5,14 +5,14 @@ helpviewer_keywords:
 - warnings, compiler
 - cl.exe compiler, setting options
 ms.assetid: 69809cfb-a38a-4035-b154-283a61938df8
-ms.openlocfilehash: ee2b6097a62a8f1030dc631354f96ec7a33d2f11
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0f306ef11b17ac94281dc9a5fdba55a34d236eb1
+ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62236571"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400921"
 ---
-# <a name="compiler-warnings-that-are-off-by-default"></a>既定で無効になっているコンパイラの警告
+# <a name="compiler-warnings-that-are-off-by-default"></a>既定で無効になっているコンパイラ警告
 
 コンパイラは、ほとんどの開発者はありませんに役に立つために、既定でオフになっている警告をサポートします。 場合によっては、以前のコードで共通の表現方法やスタイルの選択に関する、警告します。 他の警告は、言語の Microsoft 拡張機能の使用方法についてはします。 それ以外の場合でプログラマは予期されない、または未定義の動作につながる可能性がありますが、誤った仮定で動作を行う多くの場合、領域を示します。 有効な場合は、ライブラリ ヘッダー何度も一部これらの警告の表示可能性があります。 C ランタイム ライブラリと C++ 標準ライブラリは、警告レベルでのみ警告を発するありません[/W4](../build/reference/compiler-option-warning-level.md)します。
 
@@ -159,7 +159,7 @@ ms.locfileid: "62236571"
 ::: moniker range=">= vs-2019"
 <sup>16.0</sup>この警告は Visual Studio 2019 RTM 以降を使用します。<br/>
 ::: moniker-end
-<sup>Perm</sup>しない限り、この警告はオフ、 [/permissive -](../build/reference/permissive-standards-conformance.md)コンパイラ オプションを設定します。<br/>
+<sup>Perm</sup>しない限り、この警告はオフ、 [/permissive -](../build/reference/permissive-standards-conformance.md)コンパイラ オプションを設定します。
 
 ## <a name="warnings-off-by-default-in-earlier-versions"></a>以前のバージョンで既定でオフの警告
 

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - -LTCG linker option
 - LTCG linker option
 ms.assetid: 788c6f52-fdb8-40c2-90af-4026ea2cf2e2
-ms.openlocfilehash: a8f13c32593d1cfef690d63d506faf14490de02d
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: 1e33d62694fe782b1a1719fa3c5a36c6fb04670a
+ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837268"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400627"
 ---
 # <a name="ltcg-link-time-code-generation"></a>/LTCG (リンク時のコード生成)
 
@@ -26,11 +26,11 @@ ms.locfileid: "65837268"
 
 ## <a name="syntax"></a>構文
 
-> **/LTCG**[ **:** {**INCREMENTAL**|**NOSTATUS**|**STATUS**|**OFF**}]<br/>
+> **/LTCG**[ **:** {**INCREMENTAL**|**NOSTATUS**|**STATUS**|**OFF**}]
 
 これらのオプションは、Visual Studio 2015 から非推奨とされます。
 
-> **/LTCG:** {**PGINSTRUMENT**|**PGOPTIMIZE**|**PGUPDATE**}<br/>
+> **/LTCG:** {**PGINSTRUMENT**|**PGOPTIMIZE**|**PGUPDATE**}
 
 ### <a name="arguments"></a>引数
 
@@ -52,9 +52,9 @@ ms.locfileid: "65837268"
 **PGUPDATE**<br/>
 (省略可能) このオプションは、Visual Studio 2015 から非推奨とされます。 代わりに、 **/LTCG** と **/USEPROFILE** を使用して、最適化されたイメージを再作成します。 詳細については、「[ガイド付き最適化のプロファイル](../profile-guided-optimizations.md)」を参照してください。 このオプションの短い形式は **/LTCG:PGU** です。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
 
-**/LTCG** オプションでは、コンパイラを呼び出してプログラム全体の最適化を実行するようにリンカーに指示します。 または、ガイド付き最適化のプロファイルを実行することもできます。 詳細については、「[ガイド付き最適化のプロファイル](../profile-guided-optimizations.md)」を参照してください。
+**/LTCG** オプションでは、コンパイラを呼び出してプログラム全体の最適化を実行するようにリンカーに指示します。 または、ガイド付きプロファイルの最適化を実行することもできます。 詳細については、「[ガイド付き最適化のプロファイル](../profile-guided-optimizations.md)」を参照してください。
 
 次の例外を除き、以前の PGO 初期化の組み合わせである **/LTCG** オプションと **/GENPROFILE** オプションで指定されていないリンカー オプションを、PGO の組み合わせである **/LTCG** と **/USEPROFILE** に追加することはできません。
 
@@ -90,7 +90,7 @@ ms.locfileid: "65837268"
 
 **/GL** モジュールまたは MSIL モジュールを使用してコンパイルされたモジュールを渡された場合、リンカーにより、リンク時のコード生成が呼び出されます (「[リンカー入力としての .netmodule ファイル](netmodule-files-as-linker-input.md)」を参照)。 明示的に **/LTCG** を指定せずに **/GL** モジュールまたは MSIL モジュールをリンカーに渡すと、最終的にリンカーによってこれが検出され、 **/LTCG** を使用してリンクが再実行されます。 明示的に **/LTCG** を指定した上で **/GL** モジュールや MSIL モジュールをリンカーに渡すと、最大限に高速のパフォーマンスでビルドが実行されます。
 
-パフォーマンスをさらに高速にするには、 **/LTCG:INCREMENTAL** を使用します。 このオプションを指定すると、リンカーにより、プロジェクト全体ではなく、ソース ファイルの変更によって影響を受ける一連のファイルのみが再び最適化されます。 これにより、リンクに必要な時間を大幅に削減できます。 これは、インクリメンタル リンクと同じオプションではありません。
+パフォーマンスをさらに高速にするには、 **/LTCG:INCREMENTAL** を使用します。 このオプションを指定すると、リンカーは、プロジェクト全体ではなく、ソース ファイルの変更によって影響を受ける一連のファイルのみを再び最適化します。 これにより、リンクに必要な時間を大幅に削減できます。 これは、インクリメンタル リンクと同じオプションではありません。
 
 **/LTCG** は、[/INCREMENTAL](incremental-link-incrementally.md) では使用できません。
 
@@ -136,7 +136,7 @@ ms.locfileid: "65837268"
 
 - **/LTCG:PGI** では、 **/GL** や **/clr** を使用してコンパイルされたネイティブ モジュールは受け付けられません
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
 1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 「[Visual Studio で C++ コンパイラとビルド プロパティを設定する](../working-with-project-properties.md)」を参照してください。
 
