@@ -4,12 +4,12 @@ ms.date: 05/21/2019
 helpviewer_keywords:
 - tools and platforms [C++]
 ms.assetid: 3d88607b-9cc4-490a-8d4c-31ee7610a26f
-ms.openlocfilehash: c5c0459888f8787fd8abba495395130d64a193e0
-ms.sourcegitcommit: bde3279f70432f819018df74923a8bb895636f81
+ms.openlocfilehash: a7514e5cc52b24740b82cc067e77955c4784c9f0
+ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66182912"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400639"
 ---
 # <a name="c-tools-and-features-in-visual-studio-editions"></a>さまざまな Visual Studio エディションの C++ ツールと機能
 
@@ -295,7 +295,7 @@ Linux の場合:
 
 [Visual Studio のインストール](/visualstudio/install/install-visual-studio)<br/>
 [Visual Studio の新機能](/visualstudio/ide/whats-new-in-visual-studio)<br/>
-[Visual Studio の C++ プロジェクトの種類](../build/reference/visual-cpp-project-types.md)<br/>
+[Visual Studio の C++ プロジェクトの種類](../build/reference/visual-cpp-project-types.md)
 
 ::: moniker-end
 
@@ -463,6 +463,6 @@ Visual Studio 2017 で使用できる Visual C++ の機能を次の表に示し�
 
 [Visual Studio のインストール](/visualstudio/install/install-visual-studio)<br/>
 [Visual Studio の新機能](/visualstudio/ide/whats-new-in-visual-studio)<br/>
-[Visual Studio の C++ プロジェクトの種類](../build/reference/visual-cpp-project-types.md)<br/>
+[Visual Studio の C++ プロジェクトの種類](../build/reference/visual-cpp-project-types.md)
 
 ::: moniker-end
