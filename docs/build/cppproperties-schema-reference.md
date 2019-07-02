@@ -3,12 +3,12 @@ title: CppProperties.json スキーマ リファレンス
 ms.date: 05/16/2019
 helpviewer_keywords:
 - CMake in Visual Studio
-ms.openlocfilehash: 8432b72deaef99ee20147505030cbc8a9a270869
-ms.sourcegitcommit: 6cf0c67acce633b07ff31b56cebd5de3218fd733
+ms.openlocfilehash: cf5cd964068ad2e3aeeaf1e057c9bf407f4985f5
+ms.sourcegitcommit: b233f05adae607f75815111006a771c432df5a9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67344403"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67516365"
 ---
 # <a name="cpppropertiesjson-schema-reference"></a>CppProperties.json スキーマ リファレンス
 
@@ -264,7 +264,7 @@ Linux ワークロードがインストールされている場合、Linux お�
 |-|-|
 |`${workspaceRoot}`| ワークスペース フォルダーへの完全なパスです|
 |`${projectRoot}`| `CppProperties.json` が配置されているフォルダーへの完全なパスです|
-|`${vsInstallDir}`| Visual Studio の実行中のインスタンスがインストールされているフォルダーへの完全なパスです|
+|`${env.vsInstallDir}`| Visual Studio の実行中のインスタンスがインストールされているフォルダーへの完全なパスです|
 
 たとえば、プロジェクトには、含めるフォルダーがあり、windows.h および Windows SDK から他の一般的なヘッダーも含まれます、場合を更新する、`CppProperties.json`を次の構成ファイルが含まれています。
 

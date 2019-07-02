@@ -4,16 +4,16 @@ ms.date: 05/16/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: 0dcd05833af005807d874d71e8f6a07d4e738e8c
-ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
+ms.openlocfilehash: cc9b9a788f17e9257bed628024e3f65dfc89fb23
+ms.sourcegitcommit: b233f05adae607f75815111006a771c432df5a9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67042592"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67516382"
 ---
 # <a name="cmakesettingsjson-schema-reference"></a>CMakeSettings.json スキーマ リファレンス
 
-**cmakesettings.json** ファイルには、指定したプラットフォームのプロジェクトをビルドするために、Visual Studio と CMake との対話方法を指定する情報が含まれています。 このファイルには、cmake.exe 環境の環境変数や引数などの情報が格納されます。 直接編集するか、または **CMake 設定エディター** (Visual Studio 2019 以降) を使用することができます。 このエディターの詳細については、「[Visual Studio で CMake のビルド設定をカスタマイズする](customize-cmake-settings.md)」を参照してください。
+**Cmakesettings.json**ファイルには、指定したプラットフォームのプロジェクトをビルドするために CMake と Visual Studio の対話方法を指定する情報が含まれています。 このファイルには、cmake.exe 環境の環境変数や引数などの情報が格納されます。 直接編集するか、または **CMake 設定エディター** (Visual Studio 2019 以降) を使用することができます。 このエディターの詳細については、「[Visual Studio で CMake のビルド設定をカスタマイズする](customize-cmake-settings.md)」を参照してください。
 
 ## <a name="environments"></a>環境
 
@@ -80,7 +80,7 @@ Visual Studio 2019 で Visual Studio ジェネレーターを指定するには�
 
 - `configurationType`: 選択したジェネレーターにビルドの種類の構成を指定します。 次のいずれかを指定できます。
  
-  - デバッグ
+  - Debug
   - 解放
   - MinSizeRel
   - RelWithDebInfo
