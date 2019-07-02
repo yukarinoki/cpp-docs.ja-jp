@@ -6,12 +6,12 @@ helpviewer_keywords:
 - 32-bit code porting
 - upgrading Visual C++ applications, 32-bit code
 ms.assetid: 18cdacaa-4742-43db-9e4c-2d9e73d8cc84
-ms.openlocfilehash: fca4a87310f7ba0c21a6a7512dd93dce0f915f6b
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 25cf8d451c0efb5234fba5e56b6bfe7ceb7c2c08
+ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220389"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400815"
 ---
 # <a name="upgrading-projects-from-earlier-versions-of-visual-c"></a>旧バージョンの Visual C++ からのプロジェクトのアップグレード
 
@@ -42,7 +42,7 @@ ms.locfileid: "65220389"
 [浮動小数点の移行に関する問題](floating-point-migration-issues.md)<br/>
 [Visual Studio でネイティブ マルチ ターゲットを利用し、古いプロジェクトを作成する](use-native-multi-targeting.md)<br/>
 [Visual Studio 2019 プレビューでの非推奨の Visual C++ 機能](features-deprecated-in-visual-studio.md)<br/>
-[ビルド システムの変更点](build-system-changes.md)<br/>
+[ビルド システムの変更点](build-system-changes.md)
 
 ## <a name="see-also"></a>関連項目
 
