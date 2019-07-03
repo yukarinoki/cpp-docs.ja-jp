@@ -1,16 +1,16 @@
 ---
-title: Visual Studio で Linux CMake プロジェクトを構成する
-description: Visual Studio で Linux CMake プロジェクトを構成、編集、コンパイルする方法
-ms.date: 06/07/2019
+title: Visual Studio で Linux CMake プロジェクトを作成および構成する
+description: Visual Studio で Linux CMake プロジェクトを作成、構成、編集、コンパイルする方法
+ms.date: 06/12/2019
 ms.assetid: f8707b32-f90d-494d-ae0b-1d44425fdc25
-ms.openlocfilehash: e0a4abb7fe62880af12277d5c5c474d6ec4e0202
-ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
+ms.openlocfilehash: d70ffe593cc014bca40a447a9cdb1c1c96a40e3f
+ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66821676"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67042669"
 ---
-# <a name="configure-a-linux-cmake-project"></a>Linux CMake プロジェクトを構成する
+# <a name="create-and-configure-a-linux-cmake-project"></a>Linux CMake プロジェクトの作成と構成
 
 ::: moniker range="vs-2015"
 
@@ -18,11 +18,22 @@ Linux サポートは Visual Studio 2017 以降で使用できます。
 
 ::: moniker-end
 
-CMake プロジェクトを含むフォルダーを開くと、Visual Studio によって、CMake が生成するメタデータを使用して、IntelliSense が構成され、自動的にビルドされます。 ローカルの構成およびデバッグ設定は、必要に応じて Visual Studio を使用している他のユーザーと共有できる JSON ファイルに格納されます。 
+::: moniker range="vs-2019"
 
-Visual Studio では CMakeLists.txt ファイルまたは元の CMake キャッシュが変更されないため、同じプロジェクトで作業している他のユーザーが、既に使用している任意のツールを使用し続けることができます。
+Visual Studio 2019 で新しい Linux CMake プロジェクトを作成するには:
 
-Visual Studio での CMake サポートに関する一般的な情報については、[CMake Tools for Visual Studio](../build/cmake-projects-in-visual-studio.md) に関するページを参照してください。 まずこちらを読んでから、ここでの作業を進めてください。
+1. Visual Studio で **[ファイル]、[新しいプロジェクト]** の順に選択するか、**Ctrl + Shift + N** キーを押します。
+1. **[言語]** を **[C++]** に設定し、「CMake」を検索します。 その後、 **[次へ]** をクリックします。 **[名前]** と **[場所]** を入力し、 **[作成]** を選択します。
+
+Visual Studio では、実行可能ファイルの名前と、要求される最小の CMake バージョンのみを使用して、最小限の CMakeLists.txt ファイルが作成されます。 このファイルを手動で自由に編集でき、Visual Studio によって変更が上書きされることはありません。 **ソリューション エクスプローラー**で CMakeLists.txt ファイルを右クリックし、 **[CMake settings for project]\(プロジェクト用の CMake の設定\)** を選択することで、CMake コマンドライン引数と環境変数を指定できます。 デバッグ用のオプションを指定するには、プロジェクト ノードを右クリックし、 **[デバッグ設定と起動設定]** を選択します。
+
+::: moniker-end
+
+既存の CMake プロジェクトを含むフォルダーを開くと、Visual Studio では、CMake によって生成される IntelliSense とビルドを構成するためのメタデータが自動的に使用されます。 ローカルの構成およびデバッグ設定は、必要に応じて Visual Studio を使用している他のユーザーと共有できる JSON ファイルに格納されます。 
+
+Visual Studio では CMakeLists.txt ファイルが変更されないため、同じプロジェクトで作業している他のユーザーが、既に使用している任意のツールを使用し続けることができます。 Visual Studio では、CMakeLists.txt (場合によっては CMakeSettings.json) が編集された場合は、キャッシュが再生成されます。 ただし、**既存のキャッシュ**構成が使用されている場合、Visual Studio によるキャッシュの変更は行われません。
+
+Visual Studio での CMake のサポートに関する一般的な情報については、「[Visual Studio の CMake プロジェクト](../build/cmake-projects-in-visual-studio.md)」を参照してください。 まずこちらを読んでから、ここでの作業を進めてください。
 
 ## <a name="before-you-begin"></a>始める前に
 
@@ -37,7 +48,9 @@ Linux システムに次のものがインストールされていることを�
 
 ::: moniker range="vs-2019"
 
-Linux による CMake プロジェクトのサポートには、ターゲット マシンに CMake の最新バージョンがインストールされていることが必要となります。 ディストリビューションの既定のパッケージ マネージャーが提供するバージョンは、しばしば最新ではなく、Visual Studio で必要なすべての機能をサポートしていません。 Visual Studio 2019 では、Linux システムに CMake の最新バージョンがインストールされているかどうかを検出します。 見つからない場合、Visual Studio のエディター ウィンドウの上部に、それをインストールするかどうかをたたずねる情報バーが表示されます。
+Linux による CMake プロジェクトのサポートには、ターゲット マシンに CMake の最新バージョンがインストールされていることが必要となります。 ディストリビューションの既定のパッケージ マネージャーが提供するバージョンは、しばしば最新ではなく、Visual Studio で必要なすべての機能をサポートしていません。 Visual Studio 2019 では、Linux システムに CMake の最新バージョンがインストールされているかどうかを検出します。 見つからない場合は、Visual Studio のエディター ウィンドウの上部に、[https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases) からそれをインストールするかどうかを尋ねる情報バーが表示されます。
+
+Visual Studio で CMake を利用するには、CMake 3.8 で導入されたサーバー モードに対応する必要があります。 Visual Studio 2019 では、バージョン 3.14 以降をお勧めします。
 
 ::: moniker-end
 
@@ -68,19 +81,20 @@ int main(int argc, char* argv[])
 CMakeLists.txt:
 
 ```cmd
+cmake_minimum_required(VERSION 3.8)
 project (hello-cmake)
 add_executable(hello-cmake hello.cpp)
 ```
 
 ## <a name="choose-a-linux-target"></a>Linux ターゲットを選ぶ
 
-フォルダーを開くとすぐに、Visual Studio によって CMakeLists.txt ファイルが解析され、**x86-Debug** の Windows ターゲットが指定されます。 リモートの Linux を対象とするには、プロジェクト設定を **Linux-Debug** または **Linux-Release** に変更します。 
+フォルダーを開くとすぐに、Visual Studio によって CMakeLists.txt ファイルが解析され、**x86-Debug** の Windows ターゲットが指定されます。 リモートの Linux を対象とするには、プロジェクト設定を **Linux-Debug** または **Linux-Release** に変更します。 (後述の「[Linux 用の CMake 設定を構成する](#configure_cmake_linux)」を参照してください)。
 
 ::: moniker range="vs-2019"
 
-Linux 用の Windows サブシステムを対象とする場合、GCC を使用している場合は **WSL-Debug** または **WSL-Release** を選択します。Clang/LLVM ツールセットを使用している場合は Clang のバージョンを使用します。 
+Windows Subsystem for Linux をターゲットにするには、メイン ツールバーの構成ドロップダウンの **[構成の管理]** をクリックします。 次に、 **[構成の追加]** ボタンを押し、GCC を使用する場合は **[WSL-Debug]** または **[WSL-Release]** を選択し、Clang/LLVM ツールセットを使用する場合は [Clang バリアント] を選択します。 
 
-**Visual Studio 2019 バージョン 16.1** WSL を対象とする場合、Linux 上のコンパイラは、ソース ファイルが配置されている Windows ファイル システムに直接アクセスでき、Visual Studio も同様に Linux ヘッダー ファイルに直接アクセスできるため、コピーや、ソースやヘッダーは不要です。
+**Visual Studio 2019 バージョン 16.1** では、WSL をターゲットにする場合、ソース ファイルが配置されている Windows ファイル システムに Linux 上のコンパイラが直接アクセスできるため、ソースやヘッダーをコピーする必要はありません (Windows バージョン 1903 以降では、Windows アプリケーションも Linux のヘッダー ファイルに直接アクセスできますが、Visual Studio ではこの機能はまだ活用されていません)。
 
 ::: moniker-end
 
@@ -94,13 +108,13 @@ Linux 用の Windows サブシステムを対象とする場合、GCC を使用�
 
 Visual Studio は、これらを Linux マシンからローカルの Windows コンピューター上のディレクトリに自動的にコピーして、リモートの Linux システムのヘッダーに IntelliSense のサポートを提供します。 詳細については、[リモート ヘッダーの IntelliSense](configure-a-linux-project.md#remote_intellisense) のセクションを参照してください。
 
-## <a name="debug-the-project"></a>プロジェクトをデバッグする
+## <a name="debug_cmake_project"></a> CMake プロジェクトをデバッグする
 
 指定したデバッグ対象のシステムでコードをデバッグするには、ブレークポイントを設定し、プロジェクト設定の隣にあるツール バー メニューのスタートアップ項目として CMake ターゲットを選び、ツール バーの **[&#x23f5; 実行]** を選択するか、F5 キーを押します。
 
-プログラムのコマンド ライン引数をカスタマイズするには、**ソリューション エクスプローラー**で実行可能ファイルを右クリックし、 **[デバッグ設定と起動設定]** を選びます。 これにより、プログラムに関する情報を含んだ launch.vs.json 構成ファイルが開かれるか、作成されます。 追加の引数を指定するには、`args` JSON 配列に引数を追加します。 詳細については、「[Open Folder projects for C++](../build/open-folder-projects-cpp.md)」 (C++ の [フォルダーを開く] プロジェクト) と [CMake デバッグ セッションの構成](../build/configure-cmake-debugging-sessions.md)に関するページを参照してください。
+プログラムのコマンドライン引数をカスタマイズするには、**ソリューション エクスプローラー**の上部にある **[ターゲットの切り替え]** ボタンを押し、 **[ターゲット ビュー]** を選択します。 次に、ターゲットを右クリックし、 **[デバッグ設定と起動設定]** を選択します。 これにより、プログラムに関する情報を含んだ launch.vs.json 構成ファイルが開かれるか、作成されます。 追加の引数を指定するには、`args` JSON 配列に引数を追加します。 詳細については、「[Open Folder projects for C++](../build/open-folder-projects-cpp.md)」 (C++ の [フォルダーを開く] プロジェクト) と [CMake デバッグ セッションの構成](../build/configure-cmake-debugging-sessions.md)に関するページを参照してください。
 
-## <a name="configure-cmake-settings-for-linux"></a>Linux の CMake 設定を構成する
+## <a name="configure_cmake_linux"></a>Linux 用の CMake 設定を構成する
 
 CMake Linux プロジェクト内の CMakeSettings.json ファイルで、[CMake 設定のカスタマイズ](../build/customize-cmake-settings.md)に関するページで一覧表示されているすべてのプロパティに加え、リモートの Linux コンピューター上のビルド設定を制御する追加のプロパティを指定できます。 
 
@@ -118,9 +132,7 @@ Visual Studio 2019 の CMake の既定の設定を変更するには、メイン
 
 Visual Studio 2017 の既定の CMake 設定を変更するには、メイン メニューから **[CMake]、[CMake の設定の変更]、[CMakeLists.txt]** の順に選択するか、 **[ソリューション エクスプローラー]** の CMakeSettings.txt を右クリックし、 **[Change CMake Settings]\(CMake の設定の変更\)** を選びます。 Visual Studio によって、ルート プロジェクト フォルダー内に新しい `CMakeSettings.json` ファイルが作成されます。 **CMake 設定**エディター使用してファイルを開いたり、ファイルを直接変更したりできます。 詳細については、「[Customize CMake settings](../build/customize-cmake-settings.md)」 (CMake 設定のカスタマイズ) を参照してください。
 
-::: moniker-end
-
-次のサンプルでは、前のコード サンプルに基づく、Linux デバッグの既定の構成を確認できます。
+次の例は、前のコード サンプルに基づく Visual Studio 2017 (および Visual Studio 2019 バージョン 16.0) での Linux-Debug 用の既定の構成を示しています。
 
 ```json
 {
@@ -147,24 +159,46 @@ Visual Studio 2017 の既定の CMake 設定を変更するには、メイン �
       "inheritEnvironments": [ "linux-x64" ]
 }
 ```
-次の表に、設定をまとめています。
 
-|設定|説明|
-|-----------|-----------------|
-|`name`|この値には、任意の値を指定できます。|
-|`remoteMachineName`|リモート システムが複数存在する場合、ターゲットとするリモート システムを指定します。 このフィールドには IntelliSense が有効になっており、適切なシステムの選択を支援します。|
-|`remoteCMakeListsRoot`|リモート システム上の、プロジェクト ソースのコピー先を指定します。|
-|`remoteBuildRoot`|リモート システムでビルド出力が生成される場所を指定します。 その出力は、`buildRoot` によって指定される場所にもローカル コピーされます。|
-|`remoteInstallRoot` および `installRoot`| CMake インストールを行うときに適用されることを除き、`remoteBuildRoot` フィールドと `buildRoot` フィールドに似ています。|
-|`remoteCopySources`|ローカル ソースがリモート コンピューターにコピーされるかどうかを指定します。 ファイルが多数あり、自分で既にソースを同期している場合、これを false に設定することがあります。|
-|`remoteCopyOutputVerbosity`| エラーを診断する必要がある場合のコピー ステップの詳細度を指定します。|
-|`remoteCopySourcesConcurrentCopies`| コピーのために生成されるプロセスの数を指定します。|
-|`remoteCopySourcesMethod`| `rsync` または `sftp` を指定できます。|
-|`remoteCopySourcesExclusionList`| リモート コンピューターにコピーされないようにするファイルを指定します。|
-|`rsyncCommandArgs`|コピーの rsync メソッドを制御します。|
-|`remoteCopyBuildOutput`| リモート ビルド出力がローカル ビルド フォルダーにコピーされるかどうかを制御します。|
+::: moniker-end
 
-さらに制御するためにこれらのオプション設定を使用できます。
+::: moniker range="vs-2019"
+
+ Visual Studio 2019 バージョン 16.1 以降での既定の Linux-Debug 構成を次に示します。
+
+```json
+{
+      "name": "Linux-Debug",
+      "generator": "Unix Makefiles",
+      "configurationType": "Debug",
+      "cmakeExecutable": "/usr/bin/cmake",
+      "remoteCopySourcesExclusionList": [ ".vs", ".git", "out" ],
+      "cmakeCommandArgs": "",
+      "buildCommandArgs": "",
+      "ctestCommandArgs": "",
+      "inheritEnvironments": [ "linux_x64" ],
+      "remoteMachineName": "${defaultRemoteMachineName}",
+      "remoteCMakeListsRoot": "$HOME/.vs/${projectDirName}/${workspaceHash}/src",
+      "remoteBuildRoot": "$HOME/.vs/${projectDirName}/${workspaceHash}/out/build/${name}",
+      "remoteInstallRoot": "$HOME/.vs/${projectDirName}/${workspaceHash}/out/install/${name}",
+      "remoteCopySources": true,
+      "rsyncCommandArgs": "-t --delete --delete-excluded",
+      "remoteCopyBuildOutput": false,
+      "remoteCopySourcesMethod": "rsync",
+      "addressSanitizerRuntimeFlags": "detect_leaks=0",
+      "variables": []
+    }
+  ]
+}
+```
+::: moniker-end
+
+これらの設定の詳細については、[CMakeSettings.json リファレンス](../build/cmakesettings-reference.md)を参照してください。
+
+
+## <a name="optional-settings"></a>オプション設定
+
+さらに制御するために次のオプション設定を使用できます。
 
 ```json
 {
@@ -176,11 +210,7 @@ Visual Studio 2017 の既定の CMake 設定を変更するには、メイン �
 
 これらのオプションでは、ビルドの前後や CMake 生成の前に Linux システムでコマンドを実行できます。 値は、リモート システムで有効な任意のコマンドを指定できます。 出力はパイプで Visual Studio に戻されます。
 
-::: moniker range="vs-2019"
 
-Visual Studio 2019 では、**CMake 設定エディター**でこれらの設定すべてを編集することができます。
-
-::: moniker-end
 
 ## <a name="see-also"></a>関連項目
 

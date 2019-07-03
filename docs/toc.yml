@@ -93,6 +93,8 @@
           href: build/cmake-projects-in-visual-studio.md
         - name: 'チュートリアル: Visual Studio で C++ クロスプラットフォーム プロジェクトを作成する'
           href: build/get-started-linux-cmake.md
+        - name: CMake プロジェクトでの Clang/LLVM
+          href: build/clang-support-cmake.md
         - name: Linux CMake プロジェクトを構成する
           href: build/../linux/cmake-linux-project.md
         - name: CMake のビルド設定をカスタマイズする
