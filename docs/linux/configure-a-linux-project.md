@@ -1,13 +1,13 @@
 ---
 title: Visual Studio で C++ Linux プロジェクトを構成する
-ms.date: 06/07/2019
+ms.date: 06/11/2019
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: 5acd9edeef8f09f86c394c39939d8408821dd691
-ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
+ms.openlocfilehash: a4e20222cc0b04f496989bf2d51fc12c85f5d162
+ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66821567"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67042637"
 ---
 # <a name="configure-a-linux-project"></a>Linux プロジェクトを構成する
 
@@ -37,7 +37,7 @@ Linux サポートは Visual Studio 2017 以降で使用できます。
 
 ![全般構成](media/settings_general.png)
 
-既定では、実行可能ファイル (.out) は、ツールを使用してビルドされます。 静的または動的なライブラリをビルドする場合や、既存のメイクファイルを使用する場合は、 **[構成の種類]** 設定を使用します。
+既定では、実行可能ファイル (.out) がビルドされます。 静的または動的なライブラリをビルドする場合や、既存のメイクファイルを使用する場合は、 **[構成の種類]** 設定を使用します。
 
 プロパティ ページの設定に関する詳細については、「[Linux プロジェクト プロパティ ページの参照](prop-pages-linux.md)」を参照してください。
 
@@ -105,7 +105,7 @@ Linux サポートは Visual Studio 2017 以降で使用できます。
 この機能は、Linux コンピューターにインストールされている zip に依存します。 この apt-get コマンドを使用して、zip をインストールできます。
 
 ```cmd
-apt install zip
+sudo apt install zip
 ```
 
 ヘッダーのキャッシュを管理するには、 **[ツール] > [オプション]、[クロス プラットフォーム] > [接続マネージャー] > [リモート ヘッダー IntelliSense マネージャー]** の順に移動します。 Linux コンピューターに変更を行った後にヘッダー キャッシュ更新するには、リモート接続を選択してから、 **[更新]** を選択します。 接続自体を削除せずにヘッダーを削除するには、 **[削除]** を選択します。 **ファイル エクスプローラー**でローカル ディレクトリを開くには、 **[探索]** を選択します。 このフォルダーを読み取り専用として扱います。 Visual Studio 2017 バージョン 15.3 より前に作成された既存の接続用にヘッダーをダウンロードするには、その接続を選択し、 **[ダウンロード]** を選択します。

@@ -1,17 +1,22 @@
 ---
 title: Visual Studio で C++ の Linux ワークロードをインストールする
 description: Visual Studio で C++ の Linux ワークロードをダウンロード、インストール、セットアップする方法について説明します。
-ms.date: 06/07/2019
+ms.date: 06/11/2019
 ms.assetid: e11b40b2-f3a4-4f06-b788-73334d58dfd9
-ms.openlocfilehash: af4e3ec0ac21951163e92786555559cd02e8148f
-ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
+ms.openlocfilehash: d5c099794f781fa9e6217f3796d24d1a63fd7b53
+ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66821582"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67042751"
 ---
 # <a name="download-install-and-set-up-the-linux-workload"></a>Linux ワークロードのダウンロード、インストール、セットアップ
 
+::: moniker range="vs-2015"
+
+Linux プロジェクトは Visual Studio 2017 以降でサポートされます。
+
+::: moniker-end
 
 ::: moniker range=">=vs-2017"
 
@@ -35,7 +40,10 @@ Visual Studio for Linux のプロジェクトでは、[AddressSanitizer (ASan)](
 
 ## <a name="visual-studio-setup"></a>Visual Studio のセットアップ
 
-1. Windows 検索ボックスに「Visual Studio インストーラー」と入力します。![Windows 検索ボックス](media/visual-studio-installer-search.png)
+1. Windows 検索ボックスに「Visual Studio インストーラー」と入力します。
+
+   ![Windows 検索ボックス](media/visual-studio-installer-search.png)
+
 2. **アプリ**の結果でインストーラーを探し、それをダブルクリックします。 インストーラーが開いたら、 **[変更]** を選択して **[ワークロード]** タブをクリックします。 **[Other toolsets]\(その他のツールセット\)** まで下へスクロールして、 **[C++ による Linux 開発]** ワークロードを選択します。
 
    ![Visual C++ for Linux Development ワークロード](media/linuxworkload.png)
@@ -56,10 +64,10 @@ Windows 10 の Windows Subsystem for Linux (WSL) では、お好みの Linux デ
 
 ## <a name="linux-setup-ubuntu-on-wsl"></a>Linux のセットアップ: WSL 上の Ubuntu
 
-WSL では、リモート接続は必要はありません。 Intellisense のサポートで Linux のヘッダーを Visual Studio と自動的に同期するには、**zip** と **rsync** が必要です。 必要なアプリケーションがまだない場合は、次の手順でインストールできます。
+WSL をターゲットにしている場合は、ビルドとデバッグを行うためにリモート接続を追加したり、SSH を構成したりする必要はありません。 Intellisense のサポートで Linux のヘッダーを Visual Studio と自動的に同期するには、**zip** と **rsync** が必要です。 必要なアプリケーションがまだない場合は、次の手順でインストールできます。
 
 ```bash
-sudo g++ gdb make rsync zip
+sudo apt-get install g++ gdb make rsync zip
 ```
 ::: moniker-end
 
