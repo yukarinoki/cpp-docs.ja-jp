@@ -1,6 +1,6 @@
 ---
 title: Visual C++ プロジェクトの種類
-ms.date: 11/29/2018
+ms.date: 07/02/2019
 helpviewer_keywords:
 - programs [C++], projects
 - project templates [Visual Studio], C++
@@ -10,19 +10,19 @@ helpviewer_keywords:
 - applications [C++], projects
 - C++ projects, types
 ms.assetid: 7337987e-1e7b-4120-9a4b-94f0401f15e7
-ms.openlocfilehash: dce96a221804e5538929d63fa3c125a27e7fc36d
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 98f8ea11cce61ca91fbdc8f8afb900a7ba5b42c9
+ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65217776"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67552213"
 ---
 # <a name="c-project-templates"></a>C++ プロジェクト テンプレート
 
 Visual Studio プロジェクト テンプレートの生成のソース コード ファイル、コンパイラ オプション、メニューのツールバー、アイコン、参照、および`#include`を作成するプロジェクトの種類に適したステートメント。 Visual Studio には、いくつかの種類が含まれています。 のC++プロジェクト テンプレートと、それらの多くのウィザードを提供できるように、作成するには、プロジェクトをカスタマイズすることができます。 プロジェクトを作成したらすぐにプロジェクトをビルドし、アプリケーションを実行できます。アプリケーションを開発しながら、断続的にビルドすることをお勧めします。
 
 > [!NOTE]
-> C++ プロジェクト テンプレートを使用して C 言語プロジェクトを作成できます。 生成されたプロジェクトで、.cpp ファイル名拡張子を持つファイルを検索して .c に変更します。 次に、プロジェクト (ソリューションではない) の **[プロジェクトのプロパティ]** ページで、 **[構成プロパティ]**、 **[C/C++]** の順に展開し、 **[詳細]** を選択します。 **[コンパイル言語の選択]** 設定を **[C コードとしてコンパイル (/TC)]** に変更します。
+> C++ プロジェクト テンプレートを使用して C 言語プロジェクトを作成できます。 生成されたプロジェクトで、.cpp ファイル名拡張子を持つファイルを検索して .c に変更します。 次に、プロジェクト (ソリューションではない) の **[プロジェクトのプロパティ]** ページで、 **[構成プロパティ]** 、 **[C/C++]** の順に展開し、 **[詳細]** を選択します。 **[コンパイル言語の選択]** 設定を **[C コードとしてコンパイル (/TC)]** に変更します。
 
 ## <a name="project-templates"></a>プロジェクト テンプレート
 
@@ -72,7 +72,7 @@ MFC および ATL のサポート コンポーネントを Visual Studio のイ�
 
 C++ Windows ユニバーサル プラットフォーム ツール コンポーネントを Visual Studio のインストールに追加した場合、これらのプロジェクト テンプレートが Visual Studio に追加されます。
 
-C++ でのユニバーサル Windows アプリの概要については、「[ユニバーサル Windows アプリ (C++)](../../windows/universal-windows-apps-cpp.md)」をご覧ください。
+C++ でのユニバーサル Windows アプリの概要については、「[ユニバーサル Windows アプリ (C++)](../../cppcx/universal-windows-apps-cpp.md)」をご覧ください。
 
 |プロジェクト テンプレート|説明|
 |----------------------|-----------------------------|

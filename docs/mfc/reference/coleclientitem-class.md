@@ -1,6 +1,6 @@
 ---
 title: COleClientItem クラス
-ms.date: 11/04/2016
+ms.date: 07/02/2019
 f1_keywords:
 - COleClientItem
 - AFXOLE/COleClientItem
@@ -164,12 +164,12 @@ helpviewer_keywords:
 - COleClientItem [MFC], OnScrollBy
 - COleClientItem [MFC], OnShowItem
 ms.assetid: 7f571b7c-2758-4839-847a-0cf1ef643128
-ms.openlocfilehash: cd04b2aa6dd1d539e357a69666bafc80e3ea5eba
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: 6c370271f1508f79ea20cdf84b38b1f3dc2df023
+ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65708159"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67552266"
 ---
 # <a name="coleclientitem-class"></a>COleClientItem クラス
 
@@ -2151,7 +2151,7 @@ BOOL SetPrintDevice(const PRINTDLG* ppd);
 ポインターを[DVTARGETDEVICE](/windows/desktop/api/objidl/ns-objidl-tagdvtargetdevice)データ構造は、新しい印刷対象デバイスに関する情報が含まれます。 NULL にすることができます。
 
 *ppd*<br/>
-ポインターを[PRINTDLG](/windows/desktop/ms646940)データ構造は、新しい印刷対象デバイスに関する情報が含まれます。 NULL にすることができます。
+ポインターを[PRINTDLG](/windows/desktop/api/commdlg/ns-commdlg-tagpda)データ構造は、新しい印刷対象デバイスに関する情報が含まれます。 NULL にすることができます。
 
 ### <a name="return-value"></a>戻り値
 

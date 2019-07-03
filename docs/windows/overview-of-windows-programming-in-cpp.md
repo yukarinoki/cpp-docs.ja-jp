@@ -1,13 +1,13 @@
 ---
 title: C++ でプログラミングする Windows の概要
-ms.date: 05/06/2019
+ms.date: 07/02/2019
 ms.assetid: efc691d7-21f3-47ae-ae56-cab999ccf59d
-ms.openlocfilehash: 585fda614acce85e286e25b807d0fda57d03758b
-ms.sourcegitcommit: af580f3a11b19d22288424eac7ceae1bc24ab312
+ms.openlocfilehash: 1f49c9f8f78f83d6ae991b7427b28f7f5cbf7f0c
+ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66355562"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67552307"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>C++ でプログラミングする Windows の概要
 
@@ -118,5 +118,5 @@ Visual Studio には、ネイティブ コード用の強力なデバッガー�
 |[Visual Studio での C++](../overview/visual-cpp-in-visual-studio.md)|Visual C 開発者向けコンテンツの親トピック。|
 [C++/CLI による .NET の開発](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)|.NET アプリケーションおよびコンポーネントとの通信を有効にするネイティブの C++ ライブラリのラッパーを作成します。|
 |[.NET および UWP でのコンポーネント拡張](../extensions/component-extensions-for-runtime-platforms.md)|リファレンスの構文要素が共有によって C +/cli/CX および C++/cli CLI。|
-|[ユニバーサル Windows アプリ (C++)](universal-windows-apps-cpp.md)|C + を使用して、UWP アプリケーションを記述/cli/CX または Windows ランタイム テンプレート ライブラリ (WRL)。|
+|[ユニバーサル Windows アプリ (C++)](../cppcx/universal-windows-apps-cpp.md)|C + を使用して、UWP アプリケーションを記述/cli/CX または Windows ランタイム テンプレート ライブラリ (WRL)。|
 |[COM および .NET の C++ の属性](attributes/cpp-attributes-com-net.md)|.NET または COM を使用して Windows 専用のプログラミングの非標準の属性|

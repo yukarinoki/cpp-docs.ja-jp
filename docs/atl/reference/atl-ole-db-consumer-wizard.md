@@ -1,15 +1,15 @@
 ---
 title: ATL OLE DB コンシューマー ウィザード
-ms.date: 05/09/2019
+ms.date: 07/02/2019
 helpviewer_keywords:
 - ATL projects, adding ATL OLE DB consumers
 ms.assetid: dcb68ed1-2224-422f-9f7b-108a74864204
-ms.openlocfilehash: bd7af5c9788f5075f38f85bd035ba8cd09e8baec
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: 7195d712474765258ac0319539697b3517cb91b3
+ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65706987"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67552226"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>ATL OLE DB コンシューマー ウィザード
 
@@ -30,7 +30,7 @@ ms.locfileid: "65706987"
 
 - **データ ソース**
 
-   **[データ ソース]** ボタンによって、指定した OLE DB プロバイダーを使用するデータ ソースを設定できます。 このボタンをクリックすると、 **[データ リンク プロパティ]** ダイアログ ボックスが表示されます。 接続文字列の作成と **[データ リンク プロパティ]** ダイアログ ボックスの詳細については、Windows SDK ドキュメントの「[Data Link API の概要](/previous-versions/windows/desktop/ms718102)」を参照してください。
+   **[データ ソース]** ボタンによって、指定した OLE DB プロバイダーを使用するデータ ソースを設定できます。 このボタンをクリックすると、 **[データ リンク プロパティ]** ダイアログ ボックスが表示されます。 接続文字列の作成と **[データ リンク プロパティ]** ダイアログ ボックスの詳細については、Windows SDK ドキュメントの「[Data Link API の概要](/previous-versions/windows/desktop/ms718102(v=vs.85))」を参照してください。
 
    以下の追加情報では、 **[データ リンク プロパティ]** ダイアログ ボックスのタブについて説明します。
 
@@ -59,7 +59,7 @@ ms.locfileid: "65706987"
 
       1. **サーバー上のデータベースを選択する:** ドロップダウン メニューをクリックして、データ サーバー上の登録済みのすべてのデータベースを表示し、いずれかを選択します。
 
-         \- または
+         \- または -
 
          **データベース ファイルをデータベース名として添付する:** データベースとして使用するファイルを指定します。明示的なパス名を入力します。
 
@@ -69,7 +69,7 @@ ms.locfileid: "65706987"
 
          **データ ソース名を使用する:** このドロップダウン リストには、コンピューターに登録されているデータ ソースが表示されます。 事前に、ODBC データ ソース アドミニストレーターを使用してデータ ソースを設定できます。
 
-         \- または
+         \- または -
 
          **接続文字列を使用する:** 取得済みの接続文字列を入力するか、 **[ビルド]** ボタンをクリックします。 **[データ ソースの選択]** ダイアログ ボックスが表示されます。 ファイルまたはコンピューターのデータ ソースを選択し、 **[OK]** をクリックします。
 
@@ -96,7 +96,7 @@ ms.locfileid: "65706987"
 
       **[OK]** をクリックして終了します。 **[データベース オブジェクトの選択]** ダイアログ ボックスが表示されます。 このダイアログ ボックスから、コンシューマーが使用するテーブル、ビュー、またはストアド プロシージャを選択します。
 
-- **クラス**
+- **Class**
 
    データ ソースを選択すると、このボックスには、選択したテーブルまたはストアド プロシージャ―に基づいて既定のクラス名が入力されます (後述の「**データ ソースを選択する**」を参照してください)。 クラス名を編集できます。
 
@@ -171,7 +171,7 @@ ms.locfileid: "65706987"
 
 - **サポート**
 
-   コンシューマーでサポートされる更新の種類を指定するチェック ボックスを選択します (既定値は none です)。 以下のそれぞれによって、[DBPROP_IRowsetChange](/previous-versions/windows/desktop/ms715892) と [DBPROP_UPDATABILITY](/previous-versions/windows/desktop/ms722676) の適切なエントリがプロパティ セット マップに設定されます。
+   コンシューマーでサポートされる更新の種類を指定するチェック ボックスを選択します (既定値は none です)。 以下のそれぞれによって、[DBPROP_IRowsetChange](/previous-versions/windows/desktop/ms715892(v=vs.85)) と [DBPROP_UPDATABILITY](/previous-versions/windows/desktop/ms722676(v=vs.85)) の適切なエントリがプロパティ セット マップに設定されます。
 
    - **変更**
 
@@ -191,4 +191,4 @@ ms.locfileid: "65706987"
 
 [ATL OLE DB コンシューマー](../../atl/reference/adding-an-atl-ole-db-consumer.md)<br/>
 [コード ウィザードを使用した機能の追加](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
-[接続文字列およびデータ リンク (OLE DB)](/previous-versions/windows/desktop/ms718376)
+[接続文字列およびデータ リンク (OLE DB)](/previous-versions/windows/desktop/ms718376(v=vs.85))

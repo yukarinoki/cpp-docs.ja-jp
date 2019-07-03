@@ -1,6 +1,6 @@
 ---
 title: CMFCTasksPane クラス
-ms.date: 11/19/2018
+ms.date: 07/02/2019
 f1_keywords:
 - CMFCTasksPane
 - AFXTASKSPANE/CMFCTasksPane
@@ -194,12 +194,12 @@ helpviewer_keywords:
 - CMFCTasksPane [MFC], Update
 - CMFCTasksPane [MFC], OnActivateTasksPanePage
 ms.assetid: b456328e-2525-4642-b78b-9edd1a1a7d3f
-ms.openlocfilehash: 137f30262ce01ad82c075302b6e85bf67ae7b9be
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eeb24a0a02d1a084c83e280705344a9e5c505724
+ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62218671"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67552283"
 ---
 # <a name="cmfctaskspane-class"></a>CMFCTasksPane クラス
 
@@ -294,7 +294,7 @@ class CMFCTasksPane : public CDockablePane
 |[CMFCTasksPane::RemovePage](#removepage)|指定されたページを作業ウィンドウから削除します。|
 |[CMFCTasksPane::RemoveTask](#removetask)|タスク グループからタスクを削除します。|
 |[CMFCTasksPane::SaveState](#savestate)|(上書き[cdockablepane::savestate](cdockablepane-class.md))。|
-|[CMFCTasksPane::Serialize](#serialize)|(上書き[cdockablepane::serialize]())。|
+|[CMFCTasksPane::Serialize](#serialize)|(上書き[cdockablepane::serialize](cdockablepane-class.md))。|
 |[CMFCTasksPane::SetActivePage](#setactivepage)|作業ウィンドウの指定されたページをアクティブにします。|
 |[CMFCTasksPane::SetCaption](#setcaption)|作業ウィンドウのキャプション名を設定します。|
 |[CMFCTasksPane::SetGroupCaptionHeight](#setgroupcaptionheight)|グループ キャプションの高さを設定します。|
