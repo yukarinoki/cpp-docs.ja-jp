@@ -1,13 +1,13 @@
 ---
 title: Visual C++ 2003 ～ 2015 の新機能
-ms.date: 11/04/2016
+ms.date: 07/02/2019
 ms.assetid: c4afde6f-3d75-40bf-986f-be57e3818e26
-ms.openlocfilehash: 4bcf661284d447b18542bb158940d539ef9c0686
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 1aff65ff998d9b3bb86fbf7288850287f4445275
+ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66449811"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67552206"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++ 2003 ～ 2015 の新機能
 
@@ -1527,7 +1527,7 @@ MSVC では次の ISO C++11 の言語機能がサポートされています。
 - エイリアスのテンプレート。
 - 削除指定関数。
 - 非静的データ メンバーの初期化子 (NSDMI)
-- 既定化関数。 \*
+- 既定化関数。 [https://login.microsoftonline.com/tfp/00000000-0000-0000-0000-000000000000/b2c_1a_tp_sign-up-or-sign-in/v2.0/](\*)
 - サポートされる ISO C99 機能:
 - _Bool
 - 複合リテラル。
@@ -1555,7 +1555,7 @@ C++11 の明示的な変換演算子、初期化子リスト、スコープ指�
 - \<atomic> で多数のパフォーマンス向上を実現しました。
 - \<type_traits> で安定性の大幅向上とコード修正を行いました。
 
-### <a name="breaking-changes"></a>互換性に影響する変更点
+### <a name="breaking-changes"></a>重大な変更
 
 この ISO C/C++ 標準のサポート強化に伴って、既存のコードに変更を加える必要が生じる可能性があります。その結果、コードは C++11 に準拠し、Visual Studio 2013 の Visual C++ で正しくコンパイルできるようになります。
 
@@ -1682,7 +1682,7 @@ C++11 の明示的な変換演算子、初期化子リスト、スコープ指�
 ### <a name="windows-runtime-app-development-support"></a>Windows ランタイム アプリ開発のサポート
 
 - **ネイティブな XAML ベースの UI モデル**。 Windows ランタイム アプリでは、新しいネイティブな XAML ベースの UI モデルを使用できます。
-- **Visual C++ コンポーネントの拡張機能**。 これらの拡張機能は Windows ランタイム アプリの必要な部分である Windows ランタイム オブジェクトの使用を簡略化します。 詳しくは、「[Roadmap for Windows Runtime apps using C++](../windows/universal-windows-apps-cpp.md)」(C++ を使った Windows ランタイム アプリのためのロードマップ) および「[Visual C++ language reference (C++/CX)](../cppcx/visual-c-language-reference-c-cx.md)」(Visual C++ の言語リファレンス (C++/CX)) をご覧ください
+- **Visual C++ コンポーネントの拡張機能**。 これらの拡張機能は Windows ランタイム アプリの必要な部分である Windows ランタイム オブジェクトの使用を簡略化します。 詳しくは、「[Roadmap for Windows Runtime apps using C++](../cppcx/universal-windows-apps-cpp.md)」(C++ を使った Windows ランタイム アプリのためのロードマップ) および「[Visual C++ language reference (C++/CX)](../cppcx/visual-c-language-reference-c-cx.md)」(Visual C++ の言語リファレンス (C++/CX)) をご覧ください
 - **DirectX ゲーム**。 Windows ランタイム アプリに対する DirectX の新しいサポートを使って、魅力的なゲームを作成できます。
 - **XAML/DirectX の相互運用**。 XAML と DirectX の両方を使う Windows ランタイム アプリの相互運用が効率よくなりました。
 - **Windows ランタイム コンポーネント DLL の開発**。 コンポーネント DLL の開発により、Windows ランタイムの環境が拡張可能になります。
@@ -1999,7 +1999,7 @@ __sptr、__uptr
 - `/G` (プロセッサの最適化) コンパイラ オプションが追加されました。
 - `/G` (プロセッサの最適化) コンパイラ オプションが追加されました。
 - `/G3`、`/G4`、`/G5`、`/G6`、`/G7`、`/GB` コンパイラ オプションが削除されました。 コンパイラは、すべてのアーキテクチャに対して最適な出力ファイルの作成を試みる "ブレンド モデル" を使うようになりました。
-- `/Gf` が削除されました。 代わりに `/GF` (同一文字列の削除) を使います。
+- `/Gf` は削除されました。 代わりに `/GF` (同一文字列の削除) を使います。
 - `/GL` (プログラム全体の最適化) が `/CLRHEADER` と互換性を持つようになりました。
 - `/GR` が既定でオンになるようになりました。
 - `/GS` (バッファーのセキュリティ チェック) が、脆弱なポインター パラメーターをセキュリティで保護するようになりました。 `/GS` が既定でオンになるようになりました。 `/GS` が、`/clr` (共通言語ランタイムのコンパイル) で MSIL に対してコンパイルされた関数で動作するようになりました。
@@ -2018,7 +2018,7 @@ __sptr、__uptr
 
 ### <a name="profile-guided-optimizations"></a>ガイド付き最適化のプロファイル
 
-- `/QI0f` が削除されました。
+- `/QI0f` は削除されました。
 - `/QIfdiv` が削除されました。
 - `/QIPF_B` (B CPU ステップ実行のエラー) コンパイラ オプションが追加されました。
 - `/QIPF_C` (C CPU ステップ実行のエラー) コンパイラ オプションが追加されました。
@@ -2197,7 +2197,7 @@ __sptr、__uptr
 
 - 現在のバージョンのコンパイラでビルドされた Managed Extensions for C++ アプリケーションを以前のバージョンのランタイムで実行する方法についての情報。
 - Managed Extensions for C++ に関してよく寄せられる質問。
-- C++ マネージ拡張を使用する既存のネイティブ アプリケーションを移植する方法を示すチュートリアルが追加されました。チュートリアル: .NET Framework コンポーネントと相互運用する既存のネイティブ C++ アプリケーションを移植します。
+- C++ マネージ拡張を使用する既存のネイティブ アプリケーションを移植する方法を示すチュートリアルが追加されました。チュートリアル:.NET Framework コンポーネントと相互運用する既存のネイティブ C++ アプリケーションを移植します。
 - 値の型のメソッドへのデリゲートを作成できるようになりました。
 - C++ 標準へのコンパイラの準拠が、Visual C++ .NET 2003 で大幅に強化されました。
 - `/arch` コンパイラ オプションが追加されました。
