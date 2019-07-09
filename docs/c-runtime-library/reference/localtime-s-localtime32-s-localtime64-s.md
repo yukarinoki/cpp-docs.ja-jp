@@ -1,6 +1,6 @@
 ---
 title: localtime_s、_localtime32_s、_localtime64_s
-ms.date: 11/04/2016
+ms.date: 07/09/2019
 apiname:
 - _localtime64_s
 - _localtime32_s
@@ -32,12 +32,12 @@ helpviewer_keywords:
 - time, converting values
 - localtime_s function
 ms.assetid: 842d1dc7-d6f8-41d3-b340-108d4b90df54
-ms.openlocfilehash: 44b2eb2515035d56143a2aab251437a92515e652
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 454ab492fbe8a31b9ceeca518fa5e590271dbf06
+ms.sourcegitcommit: 07b34ca1c1fecced9fadc95de15dc5fee4f31e5a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157290"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67693414"
 ---
 # <a name="localtimes-localtime32s-localtime64s"></a>localtime_s、_localtime32_s、_localtime64_s
 
@@ -76,17 +76,17 @@ errno_t _localtime64_s(
 
 |*tmDest*|*sourceTime*|戻り値|値*tmDest*|無効なパラメーター ハンドラーを呼び出す|
 |-----------|------------|------------------|--------------------|---------------------------------------|
-|**NULL**|任意|**EINVAL**|変更されない|はい|
-|いない**NULL** (有効なメモリを指す)|**NULL**|**EINVAL**|すべてのフィールドが -1 に設定される|[はい]|
+|**NULL**|任意|**EINVAL**|変更されない|[はい]|
+|いない**NULL** (有効なメモリを指す)|**NULL**|**EINVAL**|すべてのフィールドが -1 に設定される|はい|
 |いない**NULL** (有効なメモリを指す)|0 より小さいかより大きい **_MAX__TIME64_T**|**EINVAL**|すべてのフィールドが -1 に設定される|いいえ|
 
 最初の 2 つのエラーの場合は、「[Parameter Validation](../../c-runtime-library/parameter-validation.md)」 (パラメーターの検証) に説明されているとおり、無効なパラメーター ハンドラーが呼び出されます。 実行の継続が許可された場合に、これらの関数が設定**errno**に**EINVAL**戻って**EINVAL**します。
 
 ## <a name="remarks"></a>Remarks
 
-**_Localtime32_s**関数として格納されている時刻の変換、 [time_t](../../c-runtime-library/standard-types.md)値し、その結果の種類の構造に格納[tm](../../c-runtime-library/standard-types.md)します。 **長い**値*sourceTime*午前 0 時以降の経過秒数を表します (00: 00:00)、UTC 1970 年 1 月 1 日です。 通常、この値はから取得、[時間](time-time32-time64.md)関数。
+**Localtime_s**関数として格納されている時刻の変換、 [time_t](../../c-runtime-library/standard-types.md)値し、その結果の種類の構造に格納[tm](../../c-runtime-library/standard-types.md)します。 **Time_t**値*sourceTime*午前 0 時以降の経過秒数を表します (00: 00:00)、UTC 1970 年 1 月 1 日です。 通常、この値はから取得、[時間](time-time32-time64.md)関数。
 
-**_localtime32_s** 、ユーザーが最初にグローバル環境変数を設定する場合、ローカル タイム ゾーンに合わせて修正**TZ**します。 ときに**TZ**設定は、その他の 3 つの環境変数 (**_timezone**、 **_daylight**、および **_tzname**) も自動的に設定します。 場合、 **TZ**変数が設定されていない**localtime32_s**コントロール パネルの 日付/時刻で指定されているタイム ゾーン情報を使用します。 この情報を取得できない場合、既定では、太平洋タイム ゾーンを表す PST8PDT が使用されます。 これらの変数の説明については、[_tzset](tzset.md) を参照してください。 **TZ**は Microsoft 拡張機能との ANSI 標準定義の一部ではない**localtime**します。
+**localtime_s** 、ユーザーが最初にグローバル環境変数を設定する場合、ローカル タイム ゾーンに合わせて修正**TZ**します。 ときに**TZ**設定は、その他の 3 つの環境変数 ( **_timezone**、 **_daylight**、および **_tzname**) も自動的に設定します。 場合、 **TZ**変数が設定されていない**localtime_s**コントロール パネルの 日付/時刻で指定されているタイム ゾーン情報を使用します。 この情報を取得できない場合、既定では、太平洋タイム ゾーンを表す PST8PDT が使用されます。 これらの変数の説明については、[_tzset](tzset.md) を参照してください。 **TZ**は Microsoft 拡張機能との ANSI 標準定義の一部ではない**localtime**します。
 
 > [!NOTE]
 > 対象の環境は、夏時間が有効かどうかを判断しようとします。
