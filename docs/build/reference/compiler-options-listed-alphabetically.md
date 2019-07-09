@@ -3,12 +3,12 @@ title: アルファベット順のコンパイラ オプション
 ms.date: 05/06/2019
 helpviewer_keywords:
 - compiler options, C++
-ms.openlocfilehash: ba4357f4c14e5cca9363ad2029374ede93529a2a
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 7e69aa501dd0a7dbf2af51b6fa2c5bf4339eb416
+ms.sourcegitcommit: 07b34ca1c1fecced9fadc95de15dc5fee4f31e5a
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221764"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67693423"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>アルファベット順のコンパイラ オプション
 
@@ -158,6 +158,7 @@ ms.locfileid: "65221764"
 |[/Zi](z7-zi-zi-debug-information-format.md)|詳細なデバッグ情報を生成します。|
 |[/Zl](zl-omit-default-library-name.md)|.obj ファイルから既定のライブラリ名を削除します (x86 のみ)。|
 |[/Zm](zm-specify-precompiled-header-memory-allocation-limit.md)|プリコンパイル済みヘッダーのメモリ割り当て制限を指定します。|
+|[/Zo](zo-enhance-optimized-debugging.md)|最適化されたコードに関する拡張デバッグ情報を生成します。|
 |[/Zp](zp-struct-member-alignment.md)|構造体メンバーをパックします。|
 |[/Zs](zs-syntax-check-only.md)|構文だけをチェックします。|
 |[/ZW](zw-windows-runtime-compilation.md)|Windows ランタイムで実行する出力ファイルを作成します。|
