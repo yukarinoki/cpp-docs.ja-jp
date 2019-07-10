@@ -143,12 +143,12 @@ helpviewer_keywords:
 - _WINRT_DLL macro
 - __func__ identifier
 ms.assetid: 1cc5f70a-a225-469c-aed0-fe766238e23f
-ms.openlocfilehash: dedcab9b0addd3696749b50fef92b70081981c03
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bf74bc3b5293cba018c07b6b5c56c85695db7635
+ms.sourcegitcommit: 6cb0670ca7d40e8ec55f162b8ce2847f5ae15f5c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179907"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67787363"
 ---
 # <a name="predefined-macros"></a>定義済みマクロ
 
@@ -362,7 +362,7 @@ MSVC には、これらの追加の定義済みマクロがサポートされて
 
 - **&#95;MSC&#95;VER**コンパイラのバージョン番号のメジャーおよびマイナー番号要素をエンコードする整数リテラルとして定義されています。 メジャー番号はピリオド区切りのバージョン番号の最初の要素と、マイナー番号は 2 番目の要素。 たとえば、Microsoft C と C++ コンパイラのバージョン番号が 17.00.51106.1 である、  **&#95;MSC&#95;VER**マクロは 1700 に評価されます。 入力`cl /?`コンパイラのバージョン番号を表示するのには、コマンドラインでします。 このマクロは常に定義します。
 
-   |Visual Studio のバージョン|**&AMP;#95;MSC&AMP;#95;VER**|
+   |Visual Studio のバージョン|**&#95;MSC&#95;VER**|
    |-|-|
    |Visual Studio 6.0|1200|
    |Visual Studio .NET 2002 (7.0)|1300|
@@ -381,6 +381,9 @@ MSVC には、これらの追加の定義済みマクロがサポートされて
    |Visual Studio 2017 バージョン 15.8|1915|
    |Visual Studio 2017 バージョン 15.9|1916|
    |Visual Studio 2019 RTW (16.0)|1920|
+   |Visual Studio 2019 バージョン 16.1|1921|
+   |Visual Studio 2019 バージョン 16.2|1922|
+   |Visual Studio 2019 バージョン 16.3|1923|
 
    コンパイラのリリースまたは特定のバージョンの Visual Studio、または後で更新プログラム、使用をテストする、 **>=** 演算子。 比較する条件付きディレクティブで使用できる **&#95;MSC&#95;VER**の既知のバージョンに対して。 比較するいくつかの相互に排他的なバージョンがあれば、バージョン番号の降順で比較を注文します。 たとえば、このコードは、Visual Studio 2017 以降のリリースのコンパイラをチェックします。 次に、Visual Studio 2015 以降にリリースされたコンパイラを確認します。 Visual Studio 2015 より前にリリースされたすべてのコンパイラにチェックされます。
 
