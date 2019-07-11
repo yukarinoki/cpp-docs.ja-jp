@@ -78,7 +78,7 @@ errno_t _wtmpnam_s(
 
 |||||
 |-|-|-|-|
-|*str*|*sizeInChars*|**戻り値**|**内容***str*|
+|*str*|*sizeInChars*|**戻り値**|**内容**  *str*|
 |**NULL**|任意|**EINVAL**|変更されない|
 |いない**NULL** (有効なメモリを指す)|短すぎる|**ERANGE**|変更されない|
 
