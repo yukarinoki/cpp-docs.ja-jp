@@ -3,12 +3,12 @@ title: プロジェクトの作成 (ATL チュートリアル、パート 1)
 ms.custom: get-started-article
 ms.date: 05/06/2019
 ms.assetid: f6b727d1-390a-4b27-b82f-daadcd9fc059
-ms.openlocfilehash: 292faf1769baa2e1c3fc6e52ba6df065cf08766e
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 0df793b23aaec57835774252eeac21b092f8a9e9
+ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221405"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67861021"
 ---
 # <a name="creating-the-project-atl-tutorial-part-1"></a>プロジェクトの作成 (ATL チュートリアル、パート 1)
 
@@ -44,17 +44,12 @@ ms.locfileid: "65221405"
 
     ソース コードの場所は、通常は既定では \Users\\\<ユーザー名 > \source\repos、および新しいフォルダーが自動的に作成されます。
 
-1. クリックして**OK**と**ATL プロジェクト**ウィザードが開きます。
+1. Visual Studio 2019 で既定値をそのまま使用し をクリックして**OK**します。 
+   Visual Studio 2017 では、次のようにクリックします。 **OK**を開く、 **ATL プロジェクト**ウィザード。 クリックして**アプリケーション設定**に使用できるオプションを参照してください。 このプロジェクトは、コントロールを作成し、コントロールは、インプロセス サーバーである必要があります、ためにままにして、**アプリケーションの種類**DLL として。 **[OK]** をクリックします。
 
-1. クリックして**アプリケーション設定**に使用できるオプションを参照してください。
+Visual Studio では、いくつかのファイルを生成することによって、プロジェクトを作成します。 これらのファイルを表示する**ソリューション エクスプ ローラー**を展開して、`Polygon`オブジェクト。 ファイルは、以下に示します。
 
-1. コントロールを作成すると、コントロールは、インプロセス サーバーである必要がありますのままにして、**アプリケーションの種類**DLL として。
-
-1. 既定値では、その他のオプションのままにし、をクリックして**OK**します。
-
-**ATL プロジェクト ウィザード**いくつかのファイルを生成することによって、プロジェクトを作成します。 これらのファイルを表示する**ソリューション エクスプ ローラー**を展開して、`Polygon`オブジェクト。 ファイルは、以下に示します。
-
-|ファイル|説明|
+|File|説明|
 |----------|-----------------|
 |Polygon.cpp|実装を含む`DllMain`、 `DllCanUnloadNow`、 `DllGetClassObject`、 `DllRegisterServer`、および`DllUnregisterServer`します。 また、プロジェクトで ATL オブジェクトの一覧であるオブジェクト マップが含まれます。 これは、最初は空です。|
 |Polygon.def|このモジュール定義ファイルでは、DLL に必要なエクスポートに関する情報をリンカーを提供します。|
@@ -66,7 +61,7 @@ ms.locfileid: "65221405"
 |stdafx.cpp|ファイル`#include`ATL 実装ファイルです。|
 |stdafx.h|ファイル`#include`ATL ヘッダー ファイル。|
 
-1. **ソリューション エクスプ ローラー**を右クリックし、`Polygon`プロジェクト。
+1. **ソリューション エクスプローラー**で、`Polygon` プロジェクトを右クリックします。
 
 1. ショートカット メニューで、**プロパティ**します。
 

@@ -13,16 +13,16 @@ f1_keywords:
 helpviewer_keywords:
 - VC++ Directories Property Page
 ms.assetid: 428eeef6-f127-4271-b3ea-0ae6f2c3d624
-ms.openlocfilehash: e739ea99df424f44dc43a28e3dc01c3529bb0c1a
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: aff143fca47cb5958b90e4a3f4c7ec284f2129f5
+ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450719"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67861045"
 ---
 # <a name="vc-directories-property-page-windows"></a>[VC++ ディレクトリ] プロパティ ページ (Windows)
 
-このプロパティ ページを使用して、現在選択されているプロジェクトをビルドするときに使用するディレクトリを Visual Studio に指示します。 ソリューションに複数のプロジェクトのディレクトリを設定するにはカスタム プロパティ シートを」の説明に従って使用[Visual Studio の C++ プロジェクトの設定を共有または resuse](../create-reusable-property-configurations.md)します。
+このプロパティ ページを使用して、現在選択されているプロジェクトをビルドするときに使用するディレクトリを Visual Studio に指示します。 ソリューションに複数のプロジェクトのディレクトリを設定するにはカスタム プロパティ シートを」の説明に従って使用[共有または Visual Studio を再利用C++プロジェクト設定](../create-reusable-property-configurations.md)します。
 
 このページの Linux バージョンについては、「[VC++ ディレクトリ (Linux C++)](../../linux/prop-pages/directories-linux.md)」を参照してください。
 
@@ -54,7 +54,7 @@ ms.locfileid: "66450719"
 
 ![ライブラリ ディレクトリの表示](../media/vcppdir_libdir.png "ライブラリ パスを削除するためのダイアログ")
 
-現在のディレクトリを表示するには、このダイアログ ボックスを使用します。 ただし、ディレクトリを変更または追加する場合は、**プロパティ マネージャー**を使用してプロパティ シートを作成するか、既定のユーザー プロパティ シートを変更することをお勧めします。 詳細については、次を参照してください。 [Visual Studio の C++ プロジェクトの設定を共有または resuse](../create-reusable-property-configurations.md)します。
+現在のディレクトリを表示するには、このダイアログ ボックスを使用します。 ただし、ディレクトリを変更または追加する場合は、**プロパティ マネージャー**を使用してプロパティ シートを作成するか、既定のユーザー プロパティ シートを変更することをお勧めします。 詳細については、次を参照してください。[共有または Visual Studio を再利用C++プロジェクト設定](../create-reusable-property-configurations.md)します。
 
 上記のように、継承されたパスの多くがマクロとして提供されます。  マクロの現在の値を調べるには、ダイアログ ボックスの右下隅の **[マクロ]** ボタンを選択します。 多くのマクロは、構成の種類に依存していることに注意してください。 デバッグ ビルドでのマクロは、リリース ビルドの同じマクロとは異なるパスに評価される場合があります。
 

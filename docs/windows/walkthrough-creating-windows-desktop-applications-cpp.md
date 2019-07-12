@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows applications [C++], Win32
 - Windows Desktop applications [C++]
 - Windows API [C++]
-ms.openlocfilehash: 0bc9ef82863fde361964234cca54f12aac1e2abe
-ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
+ms.openlocfilehash: 2cf9928d56c564edc0e3bda1935eb11004000985
+ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64877389"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67861120"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>チュートリアル: 従来の Windows デスクトップ アプリケーション (C++) の作成します。
 
@@ -24,15 +24,15 @@ Windows API (とも呼ばれる、Win32 API、Windows デスクトップ API、�
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-- Microsoft Windows 7 またはそれ以降のバージョンを実行するコンピューター。 開発のベスト エクスペリエンスを実現するには Windows 10 をお勧めします。
+- Microsoft Windows 7 またはそれ以降のバージョンを稼働しているコンピューター。 最適な開発作業のためには、Windows 10 をお勧めします。
 
-- Visual Studio のコピー。 ダウンロードして Visual Studio をインストールする方法については、次を参照してください。 [Visual Studio のインストール](/visualstudio/install/install-visual-studio)します。 インストーラーを実行するときに、以下のことを確認、 **C++ によるデスクトップ開発**ワークロードがチェックされます。 Visual Studio をインストールしたときに、このワークロードをインストールしなかった場合、心配しないでください。 インストーラーをもう一度実行して、今すぐインストールします。
+- Visual Studio。 Visual Studio をダウンロードしてインストールする方法について詳しくは、「[Visual Studio のインストール](/visualstudio/install/install-visual-studio)」をご覧ください。 インストーラーを実行するときに、 **[C++ によるデスクトップ開発]** ワークロードがオンになっていることを確認してください。 Visual Studio をインストールしたときにこのワークロードをインストールしていなくても問題ありません。 インストーラーをもう一度実行して、すぐにインストールできます。
 
    ![C++ によるデスクトップ開発](../build/media/desktop-development-with-cpp.png "C++ によるデスクトップ開発")
 
-- Visual Studio IDE の使用の基本を理解します。 前に、Windows デスクトップ アプリを使用した場合保持できます可能性があります。 概要については、次を参照してください。 [Visual Studio IDE 機能ツアー](/visualstudio/ide/visual-studio-ide)します。
+- Visual Studio IDE の使用に関する基本事項の理解。 以前に Windows デスクトップ アプリを使ったことがあれば、おそらく問題ありません。 概要については、[Visual Studio IDE の機能ツアー](/visualstudio/ide/visual-studio-ide)に関するページをご覧ください。
 
-- 十分な作業を進めるには C++ 言語の基礎について理解します。 ご心配なく、あまり複雑な何もしません。
+- 内容を理解するための、C++ 言語の基本に関する十分な理解。 あまり複雑な作業は行わないので、ご安心ください。
 
 ## <a name="create-a-windows-desktop-project"></a>Windows デスクトップ プロジェクトを作成します。
 
@@ -42,13 +42,13 @@ Windows API (とも呼ばれる、Win32 API、Windows デスクトップ API、�
 
 ### <a name="to-create-a-windows-desktop-project-in-visual-studio-2019"></a>Visual Studio 2019 で Windows デスクトップ プロジェクトを作成するには
 
-1. メイン メニューで、次のように選択します**ファイル** > **新規** > **プロジェクト**を開く、**新しいプロジェクトを作成**ダイアログ。ボックス。
+1. メイン メニューで、 **[ファイル]** > **[新規作成]** > **[プロジェクト]** の順に選択して、 **[新しいプロジェクトの作成]** ダイアログ ボックスを開きます。
 
 1. ダイアログ ボックスの上部にある次のように設定します**言語**に **C++** 設定**プラットフォーム**に**Windows**、設定と**プロジェクトの種類。** に**デスクトップ**します。 
 
 1. プロジェクトの種類の結果の一覧から選択**Windows デスクトップ ウィザード**選択 **[次へ]** します。 次のページで、プロジェクトの名前を入力し、必要な場合は、プロジェクトの場所を指定します。
 
-1. 選択、**作成**プロジェクトを作成するボタンをクリックします。
+1. **[作成]** ボタンをクリックしてプロジェクトを作成します。
 
 1. **Windows デスクトップ プロジェクト**ダイアログが表示されます。 **アプリケーションの種類**、 **Windows アプリケーション (.exe)** します。 **[追加のオプション]** の **[空のプロジェクト]** を選択します。 その後、**OK** を選択すると、プロジェクトが作成されます。
 
@@ -68,7 +68,7 @@ Windows API (とも呼ばれる、Win32 API、Windows デスクトップ API、�
 
 ### <a name="to-create-a-windows-desktop-project-in-visual-studio-2017"></a>Visual Studio 2017 での Windows デスクトップ プロジェクトを作成するには
 
-1. **[ファイル]** メニューの **[新規作成]** を選択し、**[プロジェクト]** を選択します。
+1. **[ファイル]** メニューの **[新規作成]** を選択し、 **[プロジェクト]** を選択します。
 
 1. **新しいプロジェクト**ダイアログ ボックスの左側のウィンドウで、**インストール済み** > **Visual C**を選択し、 **Windows デスクトップ**. 中央のペインで選択**Windows デスクトップ ウィザード**します。
 
@@ -96,7 +96,7 @@ Windows API (とも呼ばれる、Win32 API、Windows デスクトップ API、�
 
 ### <a name="to-create-a-windows-desktop-project-in-visual-studio-2015"></a>Visual Studio 2015 での Windows デスクトップ プロジェクトを作成するには
 
-1. **[ファイル]** メニューの **[新規作成]** を選択し、**[プロジェクト]** を選択します。
+1. **[ファイル]** メニューの **[新規作成]** を選択し、 **[プロジェクト]** を選択します。
 
 1. **新しいプロジェクト**ダイアログ ボックスの左側のウィンドウで、**インストール済み** > **テンプレート** > **Visual C**、し、 **Win32**します。 中央のペインで、 **[Win32 プロジェクト]** を選択します。
 
@@ -589,7 +589,7 @@ Windows API (とも呼ばれる、Win32 API、Windows デスクトップ API、�
 
 1. キーを押して、アプリケーションを実行する**F5**します。 テキスト「こんにちは, Windows デスクトップ!」を含むウィンドウ 画面の左上隅に表示されます。
 
-   ![DesktopApp プロジェクト実行](../build/media/desktop-app-project-run-157.png "DesktopApp プロジェクトを実行します。")
+   ![DesktopApp プロジェクト実行](../build/media/desktop-app-project-run-157.PNG "DesktopApp プロジェクトを実行します。")
 
 おめでとうございます! このチュートリアルを完了し、従来の Windows デスクトップ アプリケーションを構築しました。
 
