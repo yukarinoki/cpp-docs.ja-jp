@@ -18,7 +18,7 @@ ms.locfileid: "62406003"
 ---
 # <a name="exceptions-examining-exception-contents"></a>例外:例外の内容の調査
 
-ただし、**キャッチ**ブロックの引数は、ほぼすべてのデータ型であることができます、MFC 関数がクラスから派生した型の例外をスロー`CException`します。 MFC 関数によってスローされる例外をキャッチし、記述する、**キャッチ**ブロックの引数がポインターを`CException`オブジェクト (から派生したオブジェクトまたは`CException`など`CMemoryException`)。 例外の正確な型、に応じて例外の原因を特定の情報を収集する例外オブジェクトのデータ メンバーを調べることができます。
+ただし、**catch**ブロックの引数は、ほぼすべてのデータ型であることができます、MFC 関数がクラスから派生した型の例外をスロー`CException`します。 MFC 関数によってスローされる例外をキャッチし、記述する、**catch**ブロックの引数がポインターを`CException`オブジェクト (から派生したオブジェクトまたは`CException`など`CMemoryException`)。 例外の正確な型、に応じて例外の原因を特定の情報を収集する例外オブジェクトのデータ メンバーを調べることができます。
 
 たとえば、`CFileException`型には、`m_cause`データ メンバーは、ファイルの例外の原因を示す列挙型が含まれています。 考えられる例をいくつかの戻り値は`CFileException::fileNotFound`と`CFileException::readOnly`します。
 
