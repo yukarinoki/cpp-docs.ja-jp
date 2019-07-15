@@ -1,6 +1,6 @@
 ---
 title: CWinApp クラス
-ms.date: 11/04/2016
+ms.date: 07/15/2019
 f1_keywords:
 - CWinApp
 - AFXWIN/CWinApp
@@ -192,12 +192,12 @@ helpviewer_keywords:
 - CWinApp [MFC], m_nAutosaveInterval
 - CWinApp [MFC], m_pDataRecoveryHandler
 ms.assetid: e426a3cd-0d15-40d6-bd55-beaa5feb2343
-ms.openlocfilehash: 6366638ebfd5e78ad517a8913e4276d5cd820670
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a4ec6c976b6611563eb95cce1173d7c77c3b5ef0
+ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323360"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894498"
 ---
 # <a name="cwinapp-class"></a>CWinApp クラス
 
@@ -1033,10 +1033,10 @@ virtual void HtmlHelp(
 ### <a name="parameters"></a>パラメーター
 
 *dwData*<br/>
-追加のデータを指定します。 使用される値の値によって異なります、 *nCmd*パラメーター。
+追加のデータを指定します。 使用される値の値によって異なります、 *nCmd*パラメーター。 既定値は`0x000F`つまり[HH_HELP_CONTEXT](/previous-versions/windows/desktop/htmlhelp/hh-help-context-command)します。
 
 *nCmd*<br/>
-要求されるヘルプの種類を指定します。 使用可能な値、および影響についての一覧については、*指定*パラメーターを参照してください、 *uCommand*パラメーターについて、HTMLHelp API 関数で、Windows SDK で説明します。
+要求されるヘルプの種類を指定します。 使用可能な値、および影響についての一覧については、*指定*パラメーターを参照してください、 *uCommand*で説明されているパラメーター、 [HtmlHelpW](/windows/desktop/api/htmlhelp/nf-htmlhelp-htmlhelpw)または[HtmlHelpA](/windows/desktop/api/htmlhelp/nf-htmlhelp-htmlhelpa)Windows SDK の API 関数。  
 
 ### <a name="remarks"></a>Remarks
 

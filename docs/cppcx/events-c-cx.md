@@ -1,13 +1,13 @@
 ---
 title: イベント (C++/CX)
-ms.date: 01/22/2017
+ms.date: 07/15/2019
 ms.assetid: 31c8e08a-00ad-40f9-8f7e-124864aaad58
-ms.openlocfilehash: 8e7e8616831e66a7f59ed849fc92ef2553aadb5b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d0a3ab01628487dcca081eb300470cbd1bf3bb83
+ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301540"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894449"
 ---
 # <a name="events-ccx"></a>イベント (C++/CX)
 
@@ -15,7 +15,7 @@ ms.locfileid: "62301540"
 
 ## <a name="consuming-events-in-windows-components"></a>Windows コンポーネントでのイベントの利用
 
-多くの Windows ランタイム コンポーネントは、イベントを公開します。 たとえば、LightSensor オブジェクトは、センサーが新しい発光値を報告すると ReadingChanged イベントを発生させます。 プログラム内で LightSensor オブジェクトを使用する場合、ReadingChanged イベントが発生したときに呼び出されるメソッドを定義できます。 メソッドは処理でも行うことにしないでください。唯一の要件は、そのシグネチャがデリゲート イベント ハンドラーを作成し、イベントにサブスクライブするを参照してください方法の詳細については、デリゲートのシグネチャに一致する必要があります[デリゲート](../cppcx/delegates-c-cx.md)します。
+多くの Windows ランタイム コンポーネントは、イベントを公開します。 たとえば、LightSensor オブジェクトは、センサーが新しい発光値を報告すると ReadingChanged イベントを発生させます。 プログラム内で LightSensor オブジェクトを使用する場合、ReadingChanged イベントが発生したときに呼び出されるメソッドを定義できます。 メソッドは処理でも行うことにしないでください。唯一の要件は、署名が呼び出されるデリゲートのシグネチャに一致する必要があります。 デリゲート イベント ハンドラーを作成し、イベントをサブスクライブする方法の詳細については、次を参照してください。[デリゲート](../cppcx/delegates-c-cx.md)します。
 
 ## <a name="creating-custom-events"></a>カスタム イベントの作成
 
