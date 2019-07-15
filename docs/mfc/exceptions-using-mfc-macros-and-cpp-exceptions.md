@@ -43,13 +43,13 @@ MFC 例外マクロと同じプログラム内での C++ 例外のキーワー�
 
 [!code-cpp[NVC_MFCExceptions#10](../mfc/codesnippet/cpp/exceptions-using-mfc-macros-and-cpp-exceptions_1.cpp)]
 
-問題は、 `e` 「内部」から実行が成功したときに削除**キャッチ**ブロックします。 使用して、 **THROW_LAST**マクロの代わりに、**スロー**ステートメントが発生、「外部」**キャッチ**ブロックが有効なポインターを受け取る。
+実行が「内部」の **CATCH** ブロックから出ると、 `e`が削除されるため、問題が発生します。 **THROW** ステートメントの代わりに **THROW_LAST** マクロを使用すると、「外部」の **CATCH** ブロックが有効なポインタを受け取るようになります。
 
 [!code-cpp[NVC_MFCExceptions#11](../mfc/codesnippet/cpp/exceptions-using-mfc-macros-and-cpp-exceptions_2.cpp)]
 
 ##  <a name="_core_try_blocks_inside_catch_blocks"></a> Try Catch ブロック内でのブロック
 
-内から現在の例外を再スローすることはできません、**お試しください**ブロック内にある、**キャッチ**ブロックします。 次の例では、有効です。
+**CATCH** ブロック内の **try** ブロック内から現在の例外を再スローすることはできません。 次の例は無効です。
 
 [!code-cpp[NVC_MFCExceptions#12](../mfc/codesnippet/cpp/exceptions-using-mfc-macros-and-cpp-exceptions_3.cpp)]
 

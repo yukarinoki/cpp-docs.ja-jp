@@ -19,15 +19,15 @@ UWP ドキュメントのほとんどは、Windows のコンテンツ ツリー�
 
 Microsoft Store から展開の既存のデスクトップ アプリケーションをパッケージ化する、デスクトップ ブリッジ app converter を使うことができます。 詳細については、次を参照してください。 [Centennial プロジェクトで Visual c のランタイムを使用して](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project)と[デスクトップ ブリッジ](/windows/uwp/porting/desktop-to-uwp-root)します。
 
-## <a name="uwp-apps-that-use-ccx"></a>C + を使用する UWP アプリ/cli CX
+## <a name="uwp-apps-that-use-ccx"></a>C++/CX を使用する UWP アプリ
 
 |||
 |-|-|
-|[Visual C++ の言語リファレンス (C++/CX)](visual-c-language-reference-c-cx.md)|C++ を Windows ランタイム Api の使用を簡略化し、例外に基づいているエラー処理を有効にする拡張機能のセットについて説明します。|
-|[アプリケーションとライブラリのビルド (C++/CX)](building-apps-and-libraries-c-cx.md)|C ++/CX アプリケーションまたはコンポーネントからアクセスできるスタティック ライブラリと DLL を作成する方法について説明します。|
+|[Visual C++ の言語リファレンス (C++/CX)](visual-c-language-reference-c-cx.md)|C++ を Windows ランタイム API の使用を簡略化し、例外に基づいているエラー処理を有効にする拡張機能のセットについて説明します。|
+|[アプリケーションとライブラリのビルド (C++/CX)](building-apps-and-libraries-c-cx.md)|C++/CX アプリケーションまたはコンポーネントからアクセスできるスタティック ライブラリと DLL を作成する方法について説明します。|
 |[チュートリアル: UWP を作成する「こんにちは, World」のアプリを c++/cli CX](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp)|C++ UWP アプリ開発の基本的な概念を説明するチュートリアル/cli CX します。 |
-|[Windows ランタイム コンポーネントを作成する c++/cli CX](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)|その他の UWP アプリとコンポーネントが使用できる Dll を作成する方法について説明します。|
-|[UWP ゲーム プログラミング](/windows/uwp/gaming/)|DirectX および C++ を使用する方法について説明します/cli/CX をゲームを作成します。|
+|[Windows ランタイム コンポーネントを作成する C++/CX](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)|その他の UWP アプリとコンポーネントが使用できる Dll を作成する方法について説明します。|
+|[UWP ゲーム プログラミング](/windows/uwp/gaming/)|DirectX と C++/CX を使ってゲームを作成する方法を説明します。|
 
 ## <a name="uwp-apps-that-use-the-windows-runtime-c-template-library-wrl"></a>Windows ランタイム C++ テンプレート ライブラリ (WRL) を使用する UWP アプリ
 
