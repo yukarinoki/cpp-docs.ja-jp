@@ -26,7 +26,7 @@ ms.locfileid: "62406003"
 
 [!code-cpp[NVC_MFCExceptions#13](../mfc/codesnippet/cpp/exceptions-examining-exception-contents_1.cpp)]
 
-詳細については、次を参照してください。[例外。例外オブジェクトの解放](../mfc/exceptions-freeing-objects-in-exceptions.md)と[例外。キャッチと削除例外](../mfc/exceptions-catching-and-deleting-exceptions.md)します。
+詳細については、「[例外: 例外オブジェクトの解放](../mfc/exceptions-freeing-objects-in-exceptions.md)」と「[例外: キャッチと削除例外](../mfc/exceptions-catching-and-deleting-exceptions.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
