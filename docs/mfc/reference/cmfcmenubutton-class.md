@@ -1,6 +1,6 @@
 ---
 title: CMFCMenuButton クラス
-ms.date: 11/04/2016
+ms.date: 07/15/2019
 f1_keywords:
 - CMFCMenuButton
 - AFXMENUBUTTON/CMFCMenuButton
@@ -12,6 +12,7 @@ f1_keywords:
 - AFXMENUBUTTON/CMFCMenuButton::m_bStayPressed
 - AFXMENUBUTTON/CMFCMenuButton::m_hMenu
 - AFXMENUBUTTON/CMFCMenuButton::m_nMenuResult
+- AFXMENUBUTTON/CMFCMenuButton::m_bDefaultClick
 helpviewer_keywords:
 - CMFCMenuButton [MFC], CMFCMenuButton
 - CMFCMenuButton [MFC], PreTranslateMessage
@@ -21,13 +22,14 @@ helpviewer_keywords:
 - CMFCMenuButton [MFC], m_bStayPressed
 - CMFCMenuButton [MFC], m_hMenu
 - CMFCMenuButton [MFC], m_nMenuResult
+- CMFCMenuButton [MFC], m_bDefaultClick
 ms.assetid: 53d3d459-1e5a-47c5-8b7f-2e61f6af5187
-ms.openlocfilehash: cbdf4005ee1a0249e7ed2b5f1d50621fb951f64f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 71d239c9d1084c69ab2e159a479e66f0cbe66d7a
+ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388424"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894431"
 ---
 # <a name="cmfcmenubutton-class"></a>CMFCMenuButton クラス
 
@@ -63,6 +65,7 @@ class CMFCMenuButton : public CMFCButton
 |[CMFCMenuButton::m_bStayPressed](#m_bstaypressed)|メニュー ボタンが、ボタンを離した後に、状態を変更するかどうかを指定します。|
 |[CMFCMenuButton::m_hMenu](#m_hmenu)|関連付けられた Windows メニューへのハンドル。|
 |[CMFCMenuButton::m_nMenuResult](#m_nmenuresult)|項目を示す識別子、ユーザーは、ポップアップ メニューから選択します。|
+|[CMFCMenuButton::m_bDefaultClick](#m_bdefaultclick)| (ボタンのテキスト/画像) では既定の処理を許可します。|
 
 ## <a name="remarks"></a>Remarks
 
@@ -164,6 +167,28 @@ int m_nMenuResult;
 ### <a name="remarks"></a>Remarks
 
 このメンバー変数の値は、メニューを選択せずに取り消された場合、またはエラーが発生した場合、0 です。
+
+##  <a name="m_bdefaultclick"></a>  CMFCMenuButton::m_bDefaultClick
+
+ボタン上には、テキスト、イメージの既定の処理を許可します。
+
+```
+BOOL  m_bDefaultClick;
+```
+
+### <a name="remarks"></a>Remarks
+
+False に設定 m_bDefaultClick により、任意の場所 ボタンをクリックすると、メニューを表示するボタンをクリックします。
+
+##  <a name="m_nmenuresult"></a>  CMFCMenuButton::m_nMenuResult
+
+どの項目を示す整数をユーザーは、ポップアップ メニューから選択します。
+
+```
+int m_nMenuResult;
+```
+
+### <a name="remarks"></a>Remarks
 
 ##  <a name="pretranslatemessage"></a>  CMFCMenuButton::PreTranslateMessage
 

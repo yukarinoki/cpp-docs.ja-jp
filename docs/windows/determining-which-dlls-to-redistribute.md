@@ -1,6 +1,6 @@
 ---
 title: 再配布する DLL の決定
-ms.date: 03/25/2019
+ms.date: 07/15/2019
 helpviewer_keywords:
 - redistributing DLLs
 - DLLs [C++], redistributing
@@ -8,18 +8,18 @@ helpviewer_keywords:
 - application deployment [C++], DLL redistribution
 - deploying applications [C++], DLL redistribution
 ms.assetid: f7a2cb42-fb48-42ab-abd2-b35e2fd5601a
-ms.openlocfilehash: 4e4b53745c76a8e5b630bdd92633779e84262188
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 82fb582cae129b517a96deb3d4a9572ef8370a9d
+ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66451269"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894483"
 ---
 # <a name="determining-which-dlls-to-redistribute"></a>再配布する DLL の決定
 
 Visual Studio によって提供されるライブラリ DLL を使用するアプリケーションをビルドする場合、アプリケーションを実行するユーザーもその DLL を自分のコンピューター上に持っている必要があります。 多くのユーザーは Visual Studio をインストールしていないと考えられるので、それらの DLL をユーザーに提供する必要があります。 Visual Studio では、これらの DLL を、アプリケーションのインストーラーに含めることができる*再頒布可能ファイル*として利用できるようにしています。
 
-再頒布可能 DLL をインストーラーに含めやすくするために、DLL はスタンドアロンの*再頒布可能パッケージ*として入手できます。 これらはアーキテクチャ固有の実行可能ファイルであり、集中配置を使用してユーザーのコンピューターに再頒布可能ファイルをインストールします。 Vcredist など\_x86.exe x86 の 32 ビットのライブラリをインストールするコンピューター、vcredist\_x64.exe x64 の 64 ビット ライブラリをインストールするコンピューター、および vcredist\_ARM.exe は ARM コンピューターにライブラリをインストールします。 Microsoft では Windows Update サービスを利用して、これらのライブラリを個別に更新するため、集中配置をお勧めします。 Visual Studio インストールのコピーに加え、現在の再頒布可能パッケージをダウンロードして利用できます。 現在および以前のツールセットの両方でサポートされる最新の再頒布可能パッケージへのリンクについては、「[最新のサポートされる Visual C++ のダウンロード](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads)」を参照してください。 以前の特定のバージョンの再頒布可能パッケージは、[Microsoft ダウンロード センター](https://go.microsoft.com/fwlink/p/?LinkId=158431)で "Visual C++ 再頒布可能パッケージ" を検索すると見つけることができます。
+再頒布可能 DLL をインストーラーに含めやすくするために、DLL はスタンドアロンの*再頒布可能パッケージ*として入手できます。 これらはアーキテクチャ固有の実行可能ファイルであり、集中配置を使用してユーザーのコンピューターに再頒布可能ファイルをインストールします。 Vcredist など\_x86.exe ライブラリをインストール、32 ビットの x86 と x64 の両方のコンピューター、vcredist\_x64.exe x64 の 64 ビット ライブラリをインストールするコンピューター、および vcredist\_ARM.exe ARM 用のライブラリのインストールコンピューター。 Microsoft では Windows Update サービスを利用して、これらのライブラリを個別に更新するため、集中配置をお勧めします。 Visual Studio インストールのコピーに加え、現在の再頒布可能パッケージをダウンロードして利用できます。 現在および以前のツールセットの両方でサポートされる最新の再頒布可能パッケージへのリンクについては、「[最新のサポートされる Visual C++ のダウンロード](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads)」を参照してください。 以前の特定のバージョンの再頒布可能パッケージは、[Microsoft ダウンロード センター](https://go.microsoft.com/fwlink/p/?LinkId=158431)で "Visual C++ 再頒布可能パッケージ" を検索すると見つけることができます。
 
 配置する再頒布可能パッケージのメジャー バージョン番号は、アプリケーションの作成に使用した Visual Studio ツールセットのバージョンと一致している必要があります。マイナー バージョンは同じかそれ以上である必要があります。 Visual Studio 2017 と Visual Studio 2015 のツールセットのバージョン番号には互換性があります。つまり、Visual Studio 2017 の再頒布可能ファイルは、2015 ツールセットを使用してビルドされたアプリで使用することができます。 互換性があっても、2017 ツールセットを使用してビルドされたアプリでの 2015 の再頒布可能ファイルの使用はサポートされません。 サポートされるのは、ご利用のツールセットのバージョンと同じであるか、それ以降の再頒布可能パッケージの使用のみです。
 

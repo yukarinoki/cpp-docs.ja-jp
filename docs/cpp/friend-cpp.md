@@ -1,6 +1,6 @@
 ---
 title: friend (C++)
-ms.date: 11/19/2018
+ms.date: 07/15/2019
 f1_keywords:
 - friend_cpp
 helpviewer_keywords:
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - friend classes [C++]
 - friend keyword [C++]
 ms.assetid: 8fe9ee55-d56f-40cd-9075-d9fb1375aff4
-ms.openlocfilehash: 769720877cc58de530791b268811d7d01adad3e6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 03b6cb7f856ec59c10f5e410c947f74d17ec4e46
+ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154496"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894419"
 ---
 # <a name="friend-c"></a>friend (C++)
 
@@ -224,7 +224,7 @@ int main() {
 
 明示的に指定されていない限り、フレンド関係は相互関係ではありません。 上の例では、`YourClass` のメンバー関数は `YourOtherClass` のプライベート メンバーにアクセスできません。
 
-マネージド型に、フレンド関数、フレンド クラス、またはフレンド インターフェイスを含めることはできません。
+マネージ型 (でC++/CLI) 任意のフレンド関数、フレンド クラス、またはフレンド インターフェイスを持つことはできません。
 
 フレンド関係は継承されません。つまり、`YourOtherClass` から派生したクラスは `YourClass` のプライベート メンバーにアクセスできません。 フレンド関係は推移的ではないため、`YourOtherClass` のフレンドであるクラスは `YourClass` にアクセスできません。
 
@@ -235,9 +235,7 @@ int main() {
 
 ## <a name="inline-friend-definitions"></a>インラインのフレンドの定義
 
-friend 関数は、クラス宣言内で定義できます。 これらの関数はインライン関数であり、メンバーのインライン関数のように、すべてのクラス メンバーが発生した直後、クラス スコープが閉じる前に定義されているように動作します (クラス宣言の末尾)。
-
-クラス宣言内で定義された friend 関数は、それを囲んでいるクラスのスコープ内にあるとは見なされません。それらはファイル スコープ内にあると見なされます。
+フレンド関数は、クラス宣言内で (特定の関数本体) 定義できます。 これらの関数はインライン関数であり、メンバーのインライン関数のように、すべてのクラス メンバーが発生した直後、クラス スコープが閉じる前に定義されているように動作します (クラス宣言の末尾)。 クラス宣言内で定義されているフレンド関数は、外側のクラスのスコープになります。
 
 ## <a name="see-also"></a>関連項目
 

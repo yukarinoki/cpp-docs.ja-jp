@@ -1,6 +1,6 @@
 ---
 title: HString クラス
-ms.date: 09/24/2018
+ms.date: 07/15/2019
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::HString
@@ -8,6 +8,7 @@ f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::HString::CopyTo
 - corewrappers/Microsoft::WRL::Wrappers::HString::Detach
 - corewrappers/Microsoft::WRL::Wrappers::HString::Get
+- corewrappers/Microsoft::WRL::Wrappers::HString::GetRawBuffer
 - corewrappers/Microsoft::WRL::Wrappers::HString::GetAddressOf
 - corewrappers/Microsoft::WRL::Wrappers::HString::HString
 - corewrappers/Microsoft::WRL::Wrappers::HString::IsValid
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HString::Set method
 - Microsoft::WRL::Wrappers::HString::~HString, destructor
 ms.assetid: 6709dd2e-8d72-4675-8ec7-1baa7d71854d
-ms.openlocfilehash: 19ef11a5d33e69bb77049e450df1b386528b7f7b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 884efb2a69b05589ad9458148409533880073878
+ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398291"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894403"
 ---
 # <a name="hstring-class"></a>HString クラス
 
@@ -76,6 +77,7 @@ Windows ランタイムを使用して文字列へのアクセスを提供する
 [HString::Detach](#detach)               | 指定された関連付けを解除`HString`その基になる値からオブジェクトです。
 [HString::Get](#get)                     | 基になる HSTRING ハンドルの値を取得します。
 [HString::GetAddressOf](#getaddressof)   | 基になる HSTRING ハンドルへのポインターを取得します。
+[HString::GetRawBuffer](#getrawbuffer)   | 基になる文字列データへのポインターを取得します。
 [HString::IsValid](#isvalid)             | 示すかどうか、現在`HString`オブジェクトが無効です。
 [HString::MakeReference](#makereference) | 作成、`HStringReference`オブジェクト指定した文字列パラメーターから。
 [HString::Release](#release)             | 基になる文字列値を削除し、現在を初期化します。`HString`オブジェクトから空の値。
@@ -181,6 +183,22 @@ HSTRING* GetAddressOf() throw()
 ### <a name="remarks"></a>Remarks
 
 この操作の後は、基になる HSTRING ハンドルの文字列値が破棄されます。
+
+## <a name="getrawbuffer"></a>HString::GetRawBuffer
+
+基になる文字列データへのポインターを取得します。
+
+```cpp
+const wchar_t* GetRawBuffer(unsigned int* length) const;
+```
+### <a name="parameters"></a>パラメーター
+
+*長さ*へのポインター、 **int**データの長さを受け取る変数。
+
+### <a name="return-value"></a>戻り値
+
+A **const**基になる文字列データへのポインター。
+
 
 ## <a name="hstring"></a>HString::HString
 
