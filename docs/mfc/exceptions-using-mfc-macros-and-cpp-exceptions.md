@@ -1,4 +1,4 @@
----
+﻿---
 title: 例外:MFC マクロと C++ 例外の使用
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -35,7 +35,7 @@ ms.locfileid: "62406016"
 
 ##  <a name="_core_mixing_exception_keywords_and_macros"></a> 例外のキーワードとマクロの混在
 
-MFC 例外マクロと C++ 例外のキーワードを同じプログラムに混在させることができます。 ただし、同じブロック内で　MFC　マクロと　C ++　例外キーワードを混在させることはできません。例外処理キーワードを使用したコードでは削除されないのに対し、マクロは例外オブジェクトを自動的に削除するためです。 詳細については、[例外:例外のキャッチと削除](../mfc/exceptions-catching-and-deleting-exceptions.md) を参照してください。
+MFC 例外マクロと C++ 例外のキーワードを同じプログラムに混在させることができます。 ただし、同じブロック内で　MFC　マクロと　C ++　例外キーワードを混在させることはできません。例外処理キーワードを使用したコードでは削除されないのに対し、マクロは例外オブジェクトを自動的に削除するためです。詳細については、[例外: 例外のキャッチと削除](../mfc/exceptions-catching-and-deleting-exceptions.md) を参照してください。
 
 マクロとキーワードの主な違いでは、例外がスコープ外になる、マクロがそのキャッチされた例外を「自動的に」削除することです。 キーワードを使用してコードを削除しません。catch ブロックでキャッチされた例外を明示的に削除する必要があります。 マクロと C++ 例外のキーワードまたは、メモリ リークが発生する例外オブジェクトを削除できなかった場合、ヒープの破損、例外が 2 回削除されるとします。
 
@@ -43,13 +43,13 @@ MFC 例外マクロと C++ 例外のキーワードを同じプログラムに�
 
 [!code-cpp[NVC_MFCExceptions#10](../mfc/codesnippet/cpp/exceptions-using-mfc-macros-and-cpp-exceptions_1.cpp)]
 
-実行が「内部」の **CATCH** ブロックから出ると、 `e`が削除されるため、問題が発生します。 **THROW** ステートメントの代わりに **THROW_LAST** マクロを使用すると、「外部」の **CATCH** ブロックが有効なポインタを受け取るようになります。
+MFC 例外マクロと C++ 例外のキーワードを同じプログラムに混在させることができます。 ただし、同じブロック内で　MFC　マクロと　C ++　例外キーワードを混在させることはできません。例外処理キーワードを使用したコードでは削除されないのに対し、マクロは例外オブジェクトを自動的に削除するためです。詳細については、[例外: 例外のキャッチと削除](../mfc/exceptions-catching-and-deleting-exceptions.md) を参照してください。
 
 [!code-cpp[NVC_MFCExceptions#11](../mfc/codesnippet/cpp/exceptions-using-mfc-macros-and-cpp-exceptions_2.cpp)]
 
 ##  <a name="_core_try_blocks_inside_catch_blocks"></a> Try Catch ブロック内でのブロック
 
-**CATCH** ブロック内の **try** ブロック内から現在の例外を再スローすることはできません。 次の例は無効です。
+**CATCH** ブロック内の **try** ブロック内から現在の例外を再スローすることはできません。次の例は無効です。
 
 [!code-cpp[NVC_MFCExceptions#12](../mfc/codesnippet/cpp/exceptions-using-mfc-macros-and-cpp-exceptions_3.cpp)]
 
