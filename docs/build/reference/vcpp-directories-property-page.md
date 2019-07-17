@@ -1,6 +1,6 @@
 ---
 title: '[VC++ ディレクトリ] プロパティ ページ'
-ms.date: 10/09/2018
+ms.date: 07/17/2019
 f1_keywords:
 - VC.Project.VCDirectories.IncludePath
 - VC.Project.VCDirectories.ReferencePath
@@ -13,16 +13,16 @@ f1_keywords:
 helpviewer_keywords:
 - VC++ Directories Property Page
 ms.assetid: 428eeef6-f127-4271-b3ea-0ae6f2c3d624
-ms.openlocfilehash: aff143fca47cb5958b90e4a3f4c7ec284f2129f5
-ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
+ms.openlocfilehash: 9b005a89156db48615ec6ea8dfc4f07a7414fc3b
+ms.sourcegitcommit: 7f5b29e24e1be9b5985044a030977485fea0b50c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67861045"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68299789"
 ---
 # <a name="vc-directories-property-page-windows"></a>[VC++ ディレクトリ] プロパティ ページ (Windows)
 
-このプロパティ ページを使用して、現在選択されているプロジェクトをビルドするときに使用するディレクトリを Visual Studio に指示します。 ソリューションに複数のプロジェクトのディレクトリを設定するにはカスタム プロパティ シートを」の説明に従って使用[共有または Visual Studio を再利用C++プロジェクト設定](../create-reusable-property-configurations.md)します。
+このプロパティ ページを使用して、現在選択されているプロジェクトをビルドするときに使用するディレクトリを Visual Studio に指示します。 ソリューション内の複数のプロジェクトのディレクトリを設定するには、「 [Visual Studio C++プロジェクトの設定を共有または再利用](../create-reusable-property-configurations.md)する」の説明に従って、カスタムプロパティシートを使用します。
 
 このページの Linux バージョンについては、「[VC++ ディレクトリ (Linux C++)](../../linux/prop-pages/directories-linux.md)」を参照してください。
 
@@ -38,7 +38,7 @@ ms.locfileid: "67861045"
 
 クロスプラット フォーム プロジェクトの **[VC++ ディレクトリ]** プロパティ ページは外観が異なることに注意してください。 Linux C++ プロジェクトに固有の情報については、「[VC++ ディレクトリ (Linux C++)](../../linux/prop-pages/directories-linux.md)」を参照してください。
 
-慣れていない場合*プロジェクト プロパティ*Visual Studio で、役に立つその最初の読み取り専用に[Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+Visual Studio の*プロジェクトプロパティ*に慣れていない場合は、最初に[Visual studio で Set C++コンパイラとビルドプロパティ](../working-with-project-properties.md)を読み取ると役立つことがあります。
 
 **VC++ ディレクトリ** プロパティの既定の設定は、プロジェクトの種類によって異なります。 デスクトップ プロジェクトの場合、特定のプラットフォーム ツールセットの C++ ツールの場所と、Windows SDK の場所が含まれます。 **プラットフォーム ツールセット**と **Windows SDK バージョン**は、 **[構成プロパティ]**  >  **[全般]** ページで変更できます。
 
@@ -54,7 +54,7 @@ ms.locfileid: "67861045"
 
 ![ライブラリ ディレクトリの表示](../media/vcppdir_libdir.png "ライブラリ パスを削除するためのダイアログ")
 
-現在のディレクトリを表示するには、このダイアログ ボックスを使用します。 ただし、ディレクトリを変更または追加する場合は、**プロパティ マネージャー**を使用してプロパティ シートを作成するか、既定のユーザー プロパティ シートを変更することをお勧めします。 詳細については、次を参照してください。[共有または Visual Studio を再利用C++プロジェクト設定](../create-reusable-property-configurations.md)します。
+現在のディレクトリを表示するには、このダイアログ ボックスを使用します。 ただし、ディレクトリを変更または追加する場合は、**プロパティ マネージャー**を使用してプロパティ シートを作成するか、既定のユーザー プロパティ シートを変更することをお勧めします。 詳細については、「 [Visual Studio C++プロジェクトの設定を共有または再利用](../create-reusable-property-configurations.md)する」を参照してください。
 
 上記のように、継承されたパスの多くがマクロとして提供されます。  マクロの現在の値を調べるには、ダイアログ ボックスの右下隅の **[マクロ]** ボタンを選択します。 多くのマクロは、構成の種類に依存していることに注意してください。 デバッグ ビルドでのマクロは、リリース ビルドの同じマクロとは異なるパスに評価される場合があります。
 
@@ -62,11 +62,11 @@ ms.locfileid: "67861045"
 
 ![マクロ値の参照](../media/vcppdir_libdir_macros.png "マクロを編集するためのダイアログ")
 
-メモ:入力すると、一覧が表示されます。 **Enter** キーを押さないでください。
+メモ:入力すると、一覧に値が入力されます。 **Enter** キーを押さないでください。
 
-マクロとそれらを可能であればハード コードされたパスの代わりに使用する理由の詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+マクロの詳細と、可能な限りハードコーディングされたパスではなく、マクロを使用する必要がある理由については、「 [Visual Studio でのC++コンパイラとビルドプロパティの設定](../working-with-project-properties.md)」を参照してください。
 
-一般的に使用されるマクロの一覧は、次を参照してください。[用マクロの一般的なコマンドとプロパティのビルド](common-macros-for-build-commands-and-properties.md)します。
+一般的に使用されるマクロの一覧については、「[ビルドコマンドとプロパティの一般的なマクロ](common-macros-for-build-commands-and-properties.md)」を参照してください。
 
 独自のマクロは次の 2 通りの方法で定義できます。
 
@@ -74,7 +74,7 @@ ms.locfileid: "67861045"
 
 - .props ファイルでユーザー マクロを定義します。 詳細については、「[Property page macros](../working-with-project-properties.md)」 (プロパティ ページ マクロ) を参照してください。
 
-詳細については、次のブログ投稿を参照してください。[Vc++ ディレクトリ](https://blogs.msdn.com/b/vsproject/archive/2009/07/07/vc-directories.aspx)、[継承されたプロパティとプロパティ シート](https://blogs.msdn.com/b/vsproject/archive/2009/06/23/inherited-properties-and-property-sheets.aspx)、および[Visual Studio 2010 C プロジェクト アップグレード ガイド](https://devblogs.microsoft.com/cppblog/visual-studio-2010-c-project-upgrade-guide/)します。
+詳細については、次のブログ投稿を参照してください。[VC + + ディレクトリ](https://blogs.msdn.com/b/vsproject/archive/2009/07/07/vc-directories.aspx)、継承された[プロパティとプロパティシート](https://blogs.msdn.com/b/vsproject/archive/2009/06/23/inherited-properties-and-property-sheets.aspx)、および[Visual Studio 2010 C++プロジェクトアップグレードガイド](https://devblogs.microsoft.com/cppblog/visual-studio-2010-c-project-upgrade-guide/)。
 
 ## <a name="directory-types"></a>ディレクトリの種類
 
