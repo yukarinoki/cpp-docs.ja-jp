@@ -7,12 +7,12 @@ helpviewer_keywords:
 - typetrait header
 - type_traits
 ms.assetid: 2260b51f-8160-4c66-a82f-00b534cb60d4
-ms.openlocfilehash: c80629fd8771206d193b53aa7c32073de0ba45dd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c83949a2c74447735f6863c5f1af68b4dfe2ee4e
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62278983"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243520"
 ---
 # <a name="lttypetraitsgt"></a>&lt;type_traits&gt;
 
@@ -109,7 +109,8 @@ using add_const_t = typename add_const<T>::type;
 |[is_empty](../standard-library/is-empty-class.md)|型が空のクラスであるかどうかをテストします。|
 |[is_polymorphic](../standard-library/is-polymorphic-class.md)|型がポリモーフィックなクラスであるかどうかをテストします。|
 |[is_abstract](../standard-library/is-abstract-class.md)|型が抽象クラスであるかどうかをテストします。|
-|[is_final](../standard-library/is-final-class.md)|型が `final` とマークされるクラス型であるかどうかをテストします。|
+|[is_final](../standard-library/is-final-class.md)|型が `final` でマークされたクラス型であるかどうかをテストします。|
+|[is_aggregate](../standard-library/is-aggregate-class.md)||
 |[is_signed](../standard-library/is-signed-class.md)|型が符号付き整数であるかどうかをテストします。|
 |[is_unsigned](../standard-library/is-unsigned-class.md)|型が符号なし整数であるかどうかをテストします。|
 |[is_constructible](../standard-library/is-constructible-class.md)|型が、指定された引数の型を使用して構築できるかどうかをテストします。|
@@ -119,6 +120,8 @@ using add_const_t = typename add_const<T>::type;
 |[is_assignable](../standard-library/type-traits-functions.md#is_assignable)|最初の型に 2 番目の型の値を割り当てることができるかどうかをテストします。|
 |[is_copy_assignable](../standard-library/type-traits-functions.md#is_copy_assignable)|型に、その型の const 参照値を割り当てることができるかどうかをテストします。|
 |[is_move_assignable](../standard-library/type-traits-functions.md#is_move_assignable)|型に、その型の rvalue 参照を割り当てることができるかどうかをテストします。|
+|[is_swappable](../standard-library/type-traits-functions.md#is_swappable)||
+|[is_swappable_with](../standard-library/type-traits-functions.md#is_swappable_with)||
 |[is_destructible](../standard-library/is-destructible-class.md)|型が破棄可能かどうかをテストします。|
 |[is_trivially_constructible](../standard-library/is-trivially-constructible-class.md)|型が、指定された型を使用して作成されるときに、重要な操作を使用しないかどうかをテストします。|
 |[is_trivially_default_constructible](../standard-library/is-trivially-default-constructible-class.md)|型が、既定で作成されるときに、重要な操作を使用しないかどうかをテストします。|
@@ -135,8 +138,11 @@ using add_const_t = typename add_const<T>::type;
 |[is_nothrow_assignable](../standard-library/is-nothrow-assignable-class.md)|型が、指定された型を使用して割り当て可能で、割り当てがスローしないと判明しているかどうかをテストします。|
 |[is_nothrow_copy_assignable](../standard-library/is-nothrow-copy-assignable-class.md)|型が、コピーで割り当て可能で、割り当てがスローしないと判明しているかどうかをテストします。|
 |[is_nothrow_move_assignable](../standard-library/type-traits-functions.md#is_nothrow_move_assignable)|型が、移動で割り当て可能で、割り当てがスローしないと判明しているかどうかをテストします。|
+|[is_nothrow_swappable](../standard-library/type-traits-functions.md#is_nothrow_swappable)||
+|[is_nothrow_swappable_with](../standard-library/type-traits-functions.md#is_nothrow_swappable_with)||
 |[is_nothrow_destructible](../standard-library/is-nothrow-destructible-class.md)|型が破棄可能で、デストラクターがスローしないと判明しているかどうかをテストします。|
 |`has_virtual_destructor`|型に仮想デストラクターが存在するかどうかをテストします。|
+|`has_unique_object_representations`||
 | [is_invocable](is-invocable-classes.md) | 指定した引数型を使用して、呼び出し可能型を呼び出すことがあるかどうかをテストします。<br/> C++ 17 で追加されます。 |
 | [is_invocable_r](is-invocable-classes.md) | 指定した型に変換が指定した引数型と、結果を使用して、呼び出し可能型を呼び出すことがかどうかテストします。<br/> C++ 17 で追加されます。 |
 | [is_nothrow_invocable](is-invocable-classes.md) | 例外をスローしないが判明し、指定された引数を使用して、呼び出し可能型を呼び出すことがあるかどうかをテストします。<br/> C++ 17 で追加されます。 |
@@ -211,6 +217,14 @@ const/volatile の変更
 |[invoke_result](invoke-result-class.md)|指定された引数型を受け取る呼び出し可能型の戻り値の型を決定します。 <br/>C++ 17 で追加されます。 |
 |[result_of](../standard-library/result-of-class.md)|指定された引数型を受け取る呼び出し可能型の戻り値の型を決定します。 <br/>C++ 14、c++ 17 では非推奨に追加されます。 |
 |[underlying_type](../standard-library/underlying-type-class.md)|列挙型の基になる整数型を生成します。|
+
+論理演算子の特徴
+
+|||
+|-|-|
+|[組み合わせて](../standard-library/conjunction-class.md)||
+|[論理和](../standard-library/disjunction-class.md)||
+|[否定](../standard-library/negation-class.md)||
 
 ## <a name="see-also"></a>関連項目
 

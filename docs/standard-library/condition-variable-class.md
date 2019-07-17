@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::condition_variable::wait
 - std::condition_variable::wait_for
 - std::condition_variable::wait_until
-ms.openlocfilehash: 52e64df7522c5e58fa64398f599bffa4614a2684
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 69f356301ce5b546c8bebe9429ca64fa61eff404
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62212387"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244622"
 ---
 # <a name="conditionvariable-class"></a>condition_variable クラス
 
@@ -39,16 +39,16 @@ class condition_variable;
 
 ## <a name="members"></a>メンバー
 
-### <a name="public-constructors"></a>パブリック コンストラクター
+### <a name="constructors"></a>コンストラクター
 
-|名前|説明|
-|----------|-----------------|
+|||
+|-|-|
 |[condition_variable](#condition_variable)|`condition_variable` オブジェクトを構築します。|
 
-### <a name="public-methods"></a>パブリック メソッド
+### <a name="functions"></a>関数
 
-|名前|説明|
-|----------|-----------------|
+|||
+|-|-|
 |[native_handle](#native_handle)|condition_variable ハンドルを表す実装固有の型を返します。|
 |[notify_all](#notify_all)|`condition_variable` オブジェクトを待機しているすべてのスレッドのブロックを解除します。|
 |[notify_one](#notify_one)|`condition_variable` オブジェクトを待機しているスレッドの 1 つのブロックを解除します。|
@@ -56,13 +56,7 @@ class condition_variable;
 |[wait_for](#wait_for)|スレッドをブロックし、スレッドがブロック解除されるまでの時間間隔を設定します。|
 |[wait_until](#wait_until)|スレッドをブロックし、スレッドがブロック解除される最大の時刻を設定します。|
 
-## <a name="requirements"></a>必要条件
-
-**ヘッダー:** \<condition_variable >
-
-**名前空間:** std
-
-## <a name="condition_variable"></a>  condition_variable::condition_variable コンストラクター
+## <a name="condition_variable"></a> condition_variable
 
 `condition_variable` オブジェクトを構築します。
 
@@ -74,7 +68,7 @@ condition_variable();
 
 十分なメモリが使用できない場合、コンストラクターは `not_enough_memory` エラー コードがある [system_error](../standard-library/system-error-class.md) オブジェクトをスローします。 他のリソースをいくつか使用できないためにオブジェクトが構築できない場合、コンストラクターは `system_error` エラー コードがある `resource_unavailable_try_again` オブジェクトをスローします。
 
-## <a name="native_handle"></a>  condition_variable::native_handle
+## <a name="native_handle"></a> native_handle
 
 condition_variable ハンドルを表す実装固有の型を返します。
 
@@ -86,7 +80,7 @@ native_handle_type native_handle();
 
 `native_handle_type` は、コンカレンシー ランタイムの内部データ構造へのポインターとして定義されます。
 
-## <a name="notify_all"></a>  condition_variable::notify_all
+## <a name="notify_all"></a> notify_all
 
 `condition_variable` オブジェクトを待機しているすべてのスレッドのブロックを解除します。
 
@@ -94,7 +88,7 @@ native_handle_type native_handle();
 void notify_all() noexcept;
 ```
 
-## <a name="notify_one"></a>  condition_variable::notify_one
+## <a name="notify_one"></a> notify_one
 
 `condition_variable` オブジェクトを待機しているスレッドの 1 つのブロックを解除します。
 
@@ -102,7 +96,7 @@ void notify_all() noexcept;
 void notify_one() noexcept;
 ```
 
-## <a name="wait"></a>  condition_variable::wait
+## <a name="wait"></a> 待機
 
 スレッドをブロックします。
 
@@ -115,10 +109,10 @@ void wait(unique_lock<mutex>& Lck, Predicate Pred);
 
 ### <a name="parameters"></a>パラメーター
 
-*Lck*<br/>
+*Lck*\
 [unique_lock\<mutex>](../standard-library/unique-lock-class.md) オブジェクト。
 
-*Pred*<br/>
+*Pred*\
 任意の式を返す**true**または**false**します。
 
 ### <a name="remarks"></a>Remarks
@@ -132,7 +126,7 @@ while(!Pred())
     wait(Lck);
 ```
 
-## <a name="wait_for"></a>  condition_variable::wait_for
+## <a name="wait_for"></a> wait_for
 
 スレッドをブロックし、スレッドがブロック解除されるまでの時間間隔を設定します。
 
@@ -151,13 +145,13 @@ bool wait_for(
 
 ### <a name="parameters"></a>パラメーター
 
-*Lck*<br/>
+*Lck*\
 [unique_lock\<mutex>](../standard-library/unique-lock-class.md) オブジェクト。
 
-*Rel_time*<br/>
+*Rel_time*\
 スレッドが開始するまでの時間の長さを指定する `chrono::duration` オブジェクト。
 
-*Pred*<br/>
+*Pred*\
 任意の式を返す**true**または**false**します。
 
 ### <a name="return-value"></a>戻り値
@@ -180,7 +174,7 @@ while(!Pred())
 return true;
 ```
 
-## <a name="wait_until"></a>  condition_variable::wait_until
+## <a name="wait_until"></a> wait_until
 
 スレッドをブロックし、スレッドがブロック解除される最大の時刻を設定します。
 
@@ -209,13 +203,13 @@ bool wait_until(
 
 ### <a name="parameters"></a>パラメーター
 
-*Lck*<br/>
+*Lck*\
 [unique_lock\<mutex>](../standard-library/unique-lock-class.md) オブジェクト。
 
-*Abs_time*<br/>
+*Abs_time*\
 [chrono::time_point](../standard-library/time-point-class.md) オブジェクト。
 
-*Pred*<br/>
+*Pred*\
 任意の式を返す**true**または**false**します。
 
 ### <a name="return-value"></a>戻り値

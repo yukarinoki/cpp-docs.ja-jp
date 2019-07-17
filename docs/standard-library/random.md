@@ -6,22 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - random header
 ms.assetid: 60afc25c-b162-4811-97c1-1b65398d4c57
-ms.openlocfilehash: 3fd6272ebcb58d48cc943541f32d1195c3fab498
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 1448ad2b703aa6dcf26fad2e4adcbeb2aec2c956
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450794"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240414"
 ---
 # <a name="ltrandomgt"></a>&lt;random&gt;
 
 乱数生成の機能を定義し、一様に分布した乱数を作成できるようにします。
 
-## <a name="syntax"></a>構文
+## <a name="requirements"></a>必要条件
 
-```cpp
-#include <random>
-```
+**ヘッダー**:\<ランダム >
+
+**名前空間:** std
+
+> [!NOTE]
+> \<ランダム > ライブラリを使用して、' #include < initializer_list > include' ステートメント。
 
 ## <a name="summary"></a>まとめ
 
@@ -495,8 +498,8 @@ URNG は、次の特性においてよく説明されます。
 
 |URNG|Fast|暗号的に安全|シード設定可能|Deterministic|
 |----------|-----------|---------------------|---------------|--------------------|
-|`mt19937`|はい|×|[はい]|はい<sup>*</sup>|
-|`random_device`|いいえ|はい|×|いいえ|
+|`mt19937`|[はい]|×|[はい]|はい<sup>*</sup>|
+|`random_device`|いいえ|はい|いいえ|いいえ|
 
 <sup>* 既知のシードが提供される場合。</sup>
 

@@ -200,48 +200,16 @@ helpviewer_keywords:
 - std::count_if [C++]
 - std::partition_copy [C++]
 - std::swap [C++]
-ms.openlocfilehash: 7dc5554b2d49e4c306aa64c32d7c9f8cc8a5bb6a
-ms.sourcegitcommit: 1acb6755e11379026a96f63facac4d33f4dc47ae
+ms.openlocfilehash: 7b0a8b427b919b624928a7d37d67937ac04884db
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67314282"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245986"
 ---
 # <a name="ltalgorithmgt-functions"></a>&lt;algorithm&gt; 関数
 
-||||
-|-|-|-|
-|[move](#alg_move)|[adjacent_find](#adjacent_find)|[all_of](#all_of)|
-|[any_of](#any_of)|[binary_search](#binary_search)|[copy](#copy)|
-|[copy_backward](#copy_backward)|[copy_if](#copy_if)|[copy_n](#copy_n)|
-|[count](#count)|[count_if](#count_if)|[equal](#equal)|
-|[equal_range](#equal_range)|[fill](#fill)|[fill_n](#fill_n)|
-|[find](#find)|[find_end](#find_end)|[find_first_of](#find_first_of)|
-|[find_if](#find_if)|[find_if_not](#find_if_not)|[for_each](#for_each)|
-|[generate](#generate)|[generate_n](#generate_n)|[includes](#includes)|
-|[inplace_merge](#inplace_merge)|[is_heap](#is_heap)|[is_heap_until](#is_heap_until)|
-|[is_partitioned](#is_partitioned)|[is_permutation](#is_permutation)|[is_sorted](#is_sorted)|
-|[is_sorted_until](#is_sorted_until)|[iter_swap](#iter_swap)|[lexicographical_compare](#lexicographical_compare)|
-|[lower_bound](#lower_bound)|[make_heap](#make_heap)|[max](#max)|
-|[max_element](#max_element)|[merge](#merge)|[min](#min)|
-|[min_element](#min_element)|[minmax](#minmax)|[minmax_element](#minmax_element)|
-|[mismatch](#mismatch)|[move_backward](#move_backward)|[next_permutation](#next_permutation)|
-|[none_of](#none_of)|[nth_element](#nth_element)|[partial_sort](#partial_sort)|
-|[partial_sort_copy](#partial_sort_copy)|[partition](#partition)|[partition_copy](#partition_copy)|
-|[partition_point](#partition_point)|[pop_heap](#pop_heap)|[prev_permutation](#prev_permutation)|
-|[push_heap](#push_heap)|[random_shuffle](#random_shuffle)|[remove](#remove)|
-|[remove_copy](#remove_copy)|[remove_copy_if](#remove_copy_if)|[remove_if](#remove_if)|
-|[replace](#replace)|[replace_copy](#replace_copy)|[replace_copy_if](#replace_copy_if)|
-|[replace_if](#replace_if)|[reverse](#reverse)|[reverse_copy](#reverse_copy)|
-|[rotate](#rotate)|[rotate_copy](#rotate_copy)|[search](#search)|
-|[search_n](#search_n)|[set_difference](#set_difference)|[set_intersection](#set_intersection)|
-|[set_symmetric_difference](#set_symmetric_difference)|[set_union](#set_union)|[sort](#sort)|
-|[sort_heap](#sort_heap)|[stable_partition](#stable_partition)|[stable_sort](#stable_sort)|
-|[shuffle](#shuffle)|[swap](#swap)|[swap_ranges](#swap_ranges)|
-|[transform](#transform)|[unique](#unique)|[unique_copy](#unique_copy)|
-|[upper_bound](#upper_bound)|
-
-## <a name="adjacent_find"></a>  adjacent_find
+## <a name="adjacent_find"></a> adjacent_find
 
 等しいか、または指定された条件を満たす 2 個の隣接する要素を検索します。
 
@@ -256,17 +224,30 @@ ForwardIterator adjacent_find(
     ForwardIterator first,
     ForwardIterator last,
     BinaryPredicate comp);
+
+template<class ExecutionPolicy, class ForwardIterator>
+ForwardIterator adjacent_find(
+    ExecutionPolicy&& exec,
+    ForwardIterator first,
+    ForwardIterator last);
+
+template<class ExecutionPolicy, class ForwardIterator, class BinaryPredicate>
+ForwardIterator adjacent_find(
+    ExecutionPolicy&& exec,
+    ForwardIterator first,
+    ForwardIterator last,
+    BinaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*first*<br/>
+*まずは*\
 検索範囲内の先頭の要素の位置を示す前方反復子。
 
-*last*<br/>
+*前の*\
 検索範囲の最後の要素の 1 つ後ろの位置を示す前方反復子。
 
-*comp*<br/>
+*コンポジション*\
 検索範囲内の隣接する要素の値によって満たされる条件を提供する二項述語。
 
 ### <a name="return-value"></a>戻り値
@@ -343,7 +324,7 @@ There are two adjacent elements where the second is twice the first.
 They have values of 10 & 20.
 ```
 
-## <a name="all_of"></a>  all_of
+## <a name="all_of"></a> all_of
 
 返します**true**条件が特定の範囲内の各要素に存在する場合。
 
@@ -353,14 +334,21 @@ bool all_of(
     InputIterator first,
     InputIterator last,
     BinaryPredicatecomp);
+
+template <class ExecutionPolicy, class ForwardIterator, class Predicate>
+bool all_of(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last, 
+    Predicate pred);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*first*<br/>
+*まずは*\
 条件のチェックを開始する位置を示す入力反復子。 反復子は、要素の範囲の開始位置をマークします。
 
-*last*<br/>
+*前の*\
 条件をチェックする要素の範囲の終了を示す入力反復子。
 
 *comp*<br/>
@@ -409,7 +397,7 @@ li = ( 50 40 10 20 20 )
 All the elements are even numbers.
 ```
 
-## <a name="any_of"></a>  any_of
+## <a name="any_of"></a> any_of
 
 返します**true**条件が指定された要素の範囲に 1 回以上存在する場合。
 
@@ -419,17 +407,24 @@ bool any_of(
     InputIterator first,
     InputIterator last,
     UnaryPredicate comp);
+
+template <class ExecutionPolicy, class ForwardIterator, class Predicate>
+bool any_of(
+    ExecutionPolicy&& exec,
+    ForwardIterator first,
+    ForwardIterator last,
+    Predicate pred);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*first*<br/>
+*まずは*\
 条件の要素の範囲のチェックを開始する位置を示す入力反復子。
 
-*last*<br/>
+*前の*\
 条件をチェックする要素の範囲の終了を示す入力反復子。
 
-*comp*<br/>
+*コンポジション*\
 テストする条件。 これは、ユーザー定義の述語関数オブジェクトによって提供されます。 述語は、テスト対象の要素によって満たされる条件を定義します。 述語は 1 つの引数を取り、**true** または **false** を返します。
 
 ### <a name="return-value"></a>戻り値
@@ -476,7 +471,7 @@ li = ( 51 41 11 21 20 )
 There's an even element in li.
 ```
 
-## <a name="binary_search"></a>  binary_search
+## <a name="binary_search"></a> binary_search
 
 並べ替えられた範囲に、指定された値と等しい要素が存在するか、または二項述語で指定された意味で、指定された値と等価の要素が存在するかどうかをテストします。
 
@@ -497,16 +492,16 @@ bool binary_search(
 
 ### <a name="parameters"></a>パラメーター
 
-*first*<br/>
+*まずは*\
 検索範囲内の先頭の要素の位置を示す前方反復子。
 
-*last*<br/>
+*前の*\
 検索範囲の最後の要素の 1 つ後ろの位置を示す前方反復子。
 
-*value*<br/>
+*value*\
 要素の値が一致する必要がある値、または二項述語で指定された要素の値によって条件を満たす必要がある値。
 
-*comp*<br/>
+*コンポジション*\
 1 つの要素が別の要素より小さいという意味を定義するユーザー定義の述語関数オブジェクト。 二項述語は 2 つの引数を受け取り、条件が満たされている場合は **true** 、満たされていない場合は **false** を返します。
 
 ### <a name="return-value"></a>戻り値
@@ -607,7 +602,16 @@ int main()
 }
 ```
 
-## <a name="copy"></a>  copy
+## <a name="clamp"></a> クランプ
+
+```cpp
+template<class T>
+constexpr const T& clamp(const T& v, const T& lo, const T& hi);
+template<class T, class Compare>
+constexpr const T& clamp(const T& v, const T& lo, const T& hi, Compare comp);
+```
+
+## <a name="copy"></a> コピー
 
 要素のソース シーケンス全体を繰り返し、順方向の新しい位置を割り当てて、ソース範囲内からターゲットの範囲に要素の値を割り当てます。
 
@@ -617,17 +621,23 @@ OutputIterator copy(
     InputIterator first,
     InputIterator last,
     OutputIterator destBeg);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
+ForwardIterator2 copy(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first, ForwardIterator1 last,
+    ForwardIterator2 result);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*first*<br/>
+*まずは*\
 ソース範囲内の先頭の要素の位置を示す入力反復子。
 
-*last*<br/>
+*前の*\
 ソース範囲内の最後の要素の 1 つ後ろの位置を示す入力反復子。
 
-*destBeg*<br/>
+*destBeg*\
 ターゲット範囲の最初の要素の位置を示す出力反復子。
 
 ### <a name="return-value"></a>戻り値
@@ -700,7 +710,7 @@ v2 with v1 insert = ( 0 3 6 9 0 10 20 21 24 27 30 )
 v2 with shifted insert = ( 0 3 0 10 20 10 20 21 24 27 30 )
 ```
 
-## <a name="copy_backward"></a>  copy_backward
+## <a name="copy_backward"></a> copy_backward
 
 要素のソース シーケンス全体を繰り返し、逆方向の新しい位置を割り当てて、ソース範囲内からターゲットの範囲に要素の値を割り当てます。
 
@@ -714,13 +724,13 @@ BidirectionalIterator2 copy_backward(
 
 ### <a name="parameters"></a>パラメーター
 
-*first*<br/>
+*まずは*\
 ソース範囲内の先頭の要素の位置を示す双方向反復子。
 
-*last*<br/>
+*前の*\
 ソース範囲の最後の要素の 1 つ後ろの位置を示す双方向反復子。
 
-*destEnd*<br/>
+*destEnd*\
 移動先範囲の最後の要素の 1 つ後ろの位置を示す双方向反復子。
 
 ### <a name="return-value"></a>戻り値
@@ -790,7 +800,7 @@ int main() {
 }
 ```
 
-## <a name="copy_if"></a>  copy_if
+## <a name="copy_if"></a> copy_if
 
 、要素の範囲内である要素をコピー **true**指定の条件。
 
@@ -801,20 +811,27 @@ OutputIterator copy_if(
     InputIterator last,
     OutputIterator dest,
     Predicate pred);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class Predicate>
+ForwardIterator2 copy_if(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first, ForwardIterator1 last,
+    ForwardIterator2 result, Predicate pred);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*first*<br/>
+*まずは*\
 条件をチェックする範囲の先頭を指定する入力反復子。
 
-*last*<br/>
+*前の*\
 範囲の終了位置を示す入力反復子。
 
-*dest*<br/>
+*追加先*\
 コピーした要素のコピー先を示す出力反復子。
 
-*_Pred*<br/>
+*_Pred*\
 範囲内のすべての要素がテストされる条件。 この条件は、ユーザー定義の述語関数オブジェクトによって提供されます。 述語が 1 つの引数に受け取りを返す**true**または**false**します。
 
 ### <a name="return-value"></a>戻り値
@@ -829,7 +846,7 @@ OutputIterator copy_if(
 
 を `[0, last - first)` の範囲で、各 `N` に対して 1 回評価し、`N` の値を最低値から厳密に 1 ずつ増やします。 場合*dest*と*最初*、記憶域の領域を指定*dest* 、範囲内で指定する必要がありますいない`[ first, last )`します。
 
-## <a name="copy_n"></a>  copy_n
+## <a name="copy_n"></a> copy_n
 
 指定された数の要素をコピーします。
 
@@ -839,17 +856,24 @@ OutputIterator copy_n(
     InputIterator first,
     Size count,
     OutputIterator dest);
+
+template<class ExecutionPolicy, class ForwardIterator1, class Size,
+class ForwardIterator2>
+ForwardIterator2 copy_n(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first, Size n,
+    ForwardIterator2 result);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*first*<br/>
+*まずは*\
 要素のコピー元となる場所を示す入力反復子。
 
-*count*<br/>
+*カウント*\
 コピーする要素の数を指定する符号付きまたは符号なし整数型。
 
-*dest*<br/>
+*追加先*\
 要素のコピー先となる場所を示す出力反復子。
 
 ### <a name="return-value"></a>戻り値
@@ -889,7 +913,7 @@ int main()
 dandelion + badger = danger
 ```
 
-## <a name="count"></a>  count
+## <a name="count"></a> カウント
 
 範囲内で値が指定された値と一致する要素の数を返します。
 
@@ -899,17 +923,25 @@ typename iterator_traits<InputIterator>::difference_type count(
     InputIterator first,
     InputIterator last,
     const Type& val);
+    
+template<class ExecutionPolicy, class ForwardIterator, class T>
+typename iterator_traits<ForwardIterator>::difference_type
+count(
+    ExecutionPolicy&& exec,
+    ForwardIterator first,
+    ForwardIterator last,
+    const T& value);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*first*<br/>
+*まずは*\
 走査範囲内の最初の要素の位置を示す入力反復子。
 
-*last*<br/>
+*前の*\
 走査範囲内の最後の要素の 1 つ後ろの位置を示す入力反復子。
 
-*val*<br/>
+*val*\
 カウントされる要素の値。
 
 ### <a name="return-value"></a>戻り値
@@ -959,7 +991,7 @@ v1 = ( 10 20 10 40 10 )
 The number of 10s in v2 is: 3.
 ```
 
-## <a name="count_if"></a>  count_if
+## <a name="count_if"></a> count_if
 
 範囲内で値が指定された条件を満たす要素の数を返します。
 
@@ -969,17 +1001,25 @@ typename iterator_traits<InputIterator>::difference_type count_if(
     InputIterator first,
     InputIterator last,
     Predicate pred);
+    
+template<class ExecutionPolicy, class ForwardIterator, class Predicate>
+typename iterator_traits<ForwardIterator>::difference_type
+count_if(
+    ExecutionPolicy&& exec,
+    ForwardIterator first,
+    ForwardIterator last,
+    Predicate pred);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*first*<br/>
+*まずは*\
 検索範囲内の最初の要素の位置を示す入力反復子。
 
-*last*<br/>
+*前の*\
 検索範囲内の最後の要素の 1 つ後ろの位置を示す入力反復子。
 
-*_Pred*<br/>
+*_Pred*\
 要素がカウントされる場合に満たされる条件を定義するユーザー定義の述語関数オブジェクト。 述語は 1 つの引数を取り、**true** または **false** を返します。
 
 ### <a name="return-value"></a>戻り値
@@ -1033,7 +1073,7 @@ v1 = ( 10 20 10 40 10 )
 The number of elements in v1 greater than 10 is: 2.
 ```
 
-## <a name="equal"></a>  equal
+## <a name="equal"></a> 等しい
 
 二項述語によって指定された等値または等価について、2 つの範囲を要素ごとに比較します。
 
@@ -1069,23 +1109,50 @@ bool equal(
     InputIterator2  First2,
     InputIterator2  Last2,
     BinaryPredicate Comp);
+    
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
+bool equal(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, ForwardIterator1 last1,
+    ForwardIterator2 first2);
+    
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class BinaryPredicate>
+bool equal(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, ForwardIterator1 last1,
+    ForwardIterator2 first2, BinaryPredicate pred);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
+bool equal(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, ForwardIterator1 last1,
+    ForwardIterator2 first2, ForwardIterator2 last2);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class BinaryPredicate>
+bool equal(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, ForwardIterator1 last1,
+    ForwardIterator2 first2, ForwardIterator2 last2,
+    BinaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*first1*<br/>
+*first1*\
 テストする 1 つ目の範囲内の最初の要素の位置を示す入力反復子。
 
-*last1*<br/>
+*last1*\
 テストする 1 つ目の範囲内の最後の要素の 1 つ後の位置を示す入力反復子。
 
-*first2*<br/>
+*first2*\
 テストする 2 つ目の範囲内の最初の要素の位置を示す入力反復子。
 
-*first2*<br/>
+*first2*\
 テストする 2 つ目の範囲内の最後の要素の 1 つ後の位置を示す入力反復子。
 
-*コンポジション*<br/>
+*コンポジション*\
 2 つの要素が等価であると見なされた場合に条件が満たされると定義する、ユーザー定義の述語関数オブジェクト。 二項述語は 2 つの引数を受け取り、条件が満たされている場合は **true** 、満たされていない場合は **false** を返します。
 
 ### <a name="return-value"></a>戻り値
@@ -1133,7 +1200,7 @@ int main()
 }
 ```
 
-## <a name="equal_range"></a>  equal_range
+## <a name="equal_range"></a> equal_range
 
 順序付けられた対象範囲で、すべての要素が指定された値と等価であるサブ範囲を検索します。
 
@@ -1154,16 +1221,16 @@ pair<ForwardIterator, ForwardIterator> equal_range(
 
 ### <a name="parameters"></a>パラメーター
 
-*first*<br/>
+*まずは*\
 検索範囲内の先頭の要素の位置を示す前方反復子。
 
-*last*<br/>
+*前の*\
 検索範囲の最後の要素の 1 つ後ろの位置を示す前方反復子。
 
-*val*<br/>
+*val*\
 順序付けられた範囲内で検索する値。
 
-*comp*<br/>
+*コンポジション*\
 1 つの要素が別の要素より小さいという意味を定義するユーザー定義の述語関数オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -1299,7 +1366,7 @@ int main()
 }
 ```
 
-## <a name="fill"></a>  fill
+## <a name="fill"></a> 塗りつぶし
 
 指定された範囲のすべての要素に同じ新しい値を割り当てます。
 
@@ -1309,17 +1376,24 @@ void fill(
     ForwardIterator first,
     ForwardIterator last,
     const Type& val);
+
+template<class ExecutionPolicy, class ForwardIterator, class T>
+void fill(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last, 
+    const T& value);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*first*<br/>
+*まずは*\
 走査対象の範囲内の最初の要素の位置を示す前方反復子。
 
-*last*<br/>
+*前の*\
 走査対象の範囲内の最後の要素の 1 つ後ろの位置を示す前方反復子。
 
-*val*<br/>
+*val*\
 範囲内の要素に割り当てられる値 [*最初*、*最後*)。
 
 ### <a name="remarks"></a>Remarks
@@ -1367,7 +1441,7 @@ Vector v1 = ( 0 5 10 15 20 25 30 35 40 45 )
 Modified v1 = ( 0 5 10 15 20 2 2 2 2 2 )
 ```
 
-## <a name="fill_n"></a>  fill_n
+## <a name="fill_n"></a> fill_n
 
 特定の要素で始まる要素範囲で、指定された数の要素に新しい値を割り当てます。
 
@@ -1377,17 +1451,25 @@ OutputIterator fill_n(
     OutputIterator First,
     Size Count,
     const Type& Val);
+
+template<class ExecutionPolicy, class ForwardIterator,
+class Size, class T>
+ForwardIterator fill_n(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    Size n, 
+    const T& value);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*First*<br/>
+*まずは*\
 値が割り当てられる出力反復子の範囲の最初の要素の位置を示す*Val*します。
 
-*カウント*<br/>
+*カウント*\
 値を代入する要素の数を指定する符号付きまたは符号なし整数の型。
 
-*val*<br/>
+*val*\
 範囲内の要素に割り当てられる値 [*最初*、 *first+count*)。
 
 ### <a name="return-value"></a>戻り値
@@ -1446,7 +1528,7 @@ int main()
 }
 ```
 
-## <a name="find"></a>  find
+## <a name="find"></a> 検索
 
 範囲内で指定された値を持つ要素が最初に出現する位置を検索します。
 
@@ -1456,17 +1538,24 @@ InputIterator find(
     InputIterator first,
     InputIterator last,
     const T& val);
+
+template<class ExecutionPolicy, class ForwardIterator, class T>
+ForwardIterator find(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last,
+    const T& value);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*first*<br/>
+*まずは*\
 指定された値に対する検索範囲内の先頭の要素の位置を示す入力反復子。
 
-*last*<br/>
+*前の*\
 指定された値に対する検索範囲内の末尾の要素の 1 つ後ろの位置を示す入力反復子。
 
-*val*<br/>
+*val*\
 検索対象の値。
 
 ### <a name="return-value"></a>戻り値
@@ -1479,7 +1568,7 @@ InputIterator find(
 
 `find()` を使用したコード例については、「[find_if](../standard-library/algorithm-functions.md#find_if)」を参照してください。
 
-## <a name="find_end"></a>  find_end
+## <a name="find_end"></a> find_end
 
 範囲内で指定されたシーケンスと等しい、つまり二項述語で指定された意味で等価である最後のサブシーケンスを検索します。
 
@@ -1498,23 +1587,43 @@ ForwardIterator1 find_end(
     ForwardIterator2 First2,
     ForwardIterator2 Last2,
     Pred Comp);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
+ForwardIterator1
+find_end(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2);
+    
+template<class ExecutionPolicy, class ForwardIterator1,
+class ForwardIterator2, class BinaryPredicate>
+ForwardIterator1
+find_end(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2,
+    BinaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*first1*<br/>
+*first1*\
 検索範囲内の先頭の要素の位置を示す前方反復子。
 
-*last1*<br/>
+*last1*\
 検索範囲の最後の要素の 1 つ後ろの位置を示す前方反復子。
 
-*first2*<br/>
+*first2*\
 検索範囲内の先頭の要素の位置を示す前方反復子。
 
-*last2*<br/>
+*last2*\
 検索範囲の最後の要素の 1 つ後ろの位置を示す前方反復子。
 
-*コンポジション*<br/>
+*コンポジション*\
 2 つの要素が等価であると見なされた場合に条件が満たされると定義する、ユーザー定義の述語関数オブジェクト。 二項述語は 2 つの引数を受け取り、条件が満たされている場合は **true** 、満たされていない場合は **false** を返します。
 
 ### <a name="return-value"></a>戻り値
@@ -1623,7 +1732,7 @@ There is a sequence of elements in v1 that are equivalent to those
 in v2 under the binary predicate twice and that begins at position 8.
 ```
 
-## <a name="find_first_of"></a>  find_first_of
+## <a name="find_first_of"></a> find_first_of
 
 対象範囲内で複数の値のうち最初に出現するもの、つまり二項述語で指定された意味で、指定された要素のセットと等価である複数の要素のうち最初に出現するものを検索します。
 
@@ -1642,23 +1751,43 @@ ForwardIterator1 find_first_of(
     ForwardIterator2  first2,
     ForwardIterator2 Last2,
     BinaryPredicate  comp);
+    
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
+ForwardIterator1
+find_first_of(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2);
+
+template<class ExecutionPolicy, class ForwardIterator1,
+class ForwardIterator2, class BinaryPredicate>
+ForwardIterator1
+find_first_of(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2,
+    BinaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*first1*<br/>
+*first1*\
 検索範囲内の先頭の要素の位置を示す前方反復子。
 
-*last1*<br/>
+*last1*\
 検索範囲の最後の要素の 1 つ後ろの位置を示す前方反復子。
 
-*first2*<br/>
+*first2*\
 照合範囲内の先頭の要素の位置を示す前方反復子。
 
-*last2*<br/>
+*last2*\
 照合範囲の最後の要素の 1 つ後ろの位置を示す前方反復子。
 
-*comp*<br/>
+*コンポジション*\
 2 つの要素が等価であると見なされた場合に条件が満たされると定義する、ユーザー定義の述語関数オブジェクト。 二項述語は 2 つの引数を受け取り、条件が満たされている場合は **true** 、満たされていない場合は **false** を返します。
 
 ### <a name="return-value"></a>戻り値
@@ -1770,7 +1899,7 @@ to those in v2 under the binary predicate twice
 and the first one begins at position 2.
 ```
 
-## <a name="find_if"></a>  find_if
+## <a name="find_if"></a> find_if
 
 範囲内で指定された条件を満たす要素が最初に出現する位置を検索します。
 
@@ -1780,17 +1909,23 @@ InputIterator find_if(
     InputIterator first,
     InputIterator last,
     Predicate pred);
+
+template<class ExecutionPolicy, class ForwardIterator, class Predicate>
+ForwardIterator find_if(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, ForwardIterator last,
+    Predicate pred);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*first*<br/>
+*まずは*\
 検索範囲内の最初の要素の位置を示す入力反復子。
 
-*last*<br/>
+*前の*\
 検索範囲内の最後の要素の 1 つ後ろの位置を示す入力反復子。
 
-*Pred*<br/>
+*Pred*\
 ユーザー定義の述語関数オブジェクト、または検索対象の要素によって満たされる条件を定義する[ラムダ式](../cpp/lambda-expressions-in-cpp.md)。 述語は 1 つの引数し、返します**true** (満たされる) または**false** (満たされていません)。 シグネチャ*pred*効果的にする必要があります`bool pred(const T& arg);`ここで、`T`先の型は、`InputIterator`逆参照時に暗黙的に変換できます。 **Const**キーワードが関数オブジェクトまたはラムダ引数は変更しないでくださいことを示すためにのみ表示されます。
 
 ### <a name="return-value"></a>戻り値
@@ -1886,7 +2021,7 @@ int main()
 }
 ```
 
-## <a name="find_if_not"></a>  find_if_not
+## <a name="find_if_not"></a> find_if_not
 
 指定された範囲内で条件を満たさない最初の要素を返します。
 
@@ -1896,17 +2031,23 @@ InputIterator find_if_not(
     InputIterator first,
     InputIterator last,
     Predicate pred);
+
+template<class ExecutionPolicy, class ForwardIterator, class Predicate>
+ForwardIterator find_if_not(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, ForwardIterator last,
+    Predicate pred);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*first*<br/>
+*まずは*\
 検索範囲内の最初の要素の位置を示す入力反復子。
 
-*last*<br/>
+*前の*\
 検索範囲内の最後の要素の 1 つ後ろの位置を示す入力反復子。
 
-*Pred*<br/>
+*Pred*\
 検索対象の要素が満たさない条件を定義する、ユーザー定義の述語関数オブジェクトまたは[ラムダ式](../cpp/lambda-expressions-in-cpp.md)。 述語は 1 つの引数し、返します**true** (満たされる) または**false** (満たされていません)。 シグネチャ*pred*効果的にする必要があります`bool pred(const T& arg);`ここで、`T`先の型は、`InputIterator`逆参照時に暗黙的に変換できます。 **Const**キーワードが関数オブジェクトまたはラムダ引数は変更しないでくださいことを示すためにのみ表示されます。
 
 ### <a name="return-value"></a>戻り値
@@ -1919,7 +2060,7 @@ InputIterator find_if_not(
 
 `find_if_not()` に簡単に適用できるコード例については、「[find_if](../standard-library/algorithm-functions.md#find_if)」を参照してください。
 
-## <a name="for_each"></a>  for_each
+## <a name="for_each"></a> for_each
 
 範囲内で順方向順序で各要素に対して指定された関数を適用し、関数オブジェクトを返します。
 
@@ -1929,17 +2070,24 @@ Function for_each(
     InputIterator first,
     InputIterator last,
     Function func);
+    
+template<class ExecutionPolicy, class ForwardIterator, class Function>
+void for_each(
+    ExecutionPolicy&& exec,
+    ForwardIterator first,
+    ForwardIterator last,
+    Function f);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*first*<br/>
+*まずは*\
 操作範囲内の最初の要素の位置を示す入力反復子。
 
-*last*<br/>
+*前の*\
 操作範囲内の最後の要素の 1 つ後ろの位置を示す入力反復子。
 
-*_Func*<br/>
+*_Func*\
 範囲内の各要素に適用されるユーザー定義関数オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -1952,7 +2100,7 @@ Function for_each(
 
 参照される範囲が有効であり、すべてのポインターが逆参照可能であって、かつシーケンス内で先頭位置からのインクリメントにより最後の位置に到達可能である必要があります。
 
-複雑さは線形的で最大で (*最後* -  *最初*) の比較。
+複雑さは線形的で最大で (*最後* - *最初*) の比較。
 
 ### <a name="example"></a>例
 
@@ -2067,7 +2215,24 @@ The average of the elements of v1 is:
 Average ( v1mod2 ) = 10.
 ```
 
-## <a name="generate"></a>  generate
+## <a name="for_each_n"></a> for_each_n
+
+```cpp
+template<class InputIterator, class Size, class Function>
+InputIterator for_each_n(
+    InputIterator first, 
+    Size n, 
+    Function f);
+
+template<class ExecutionPolicy, class ForwardIterator, class Size, class Function>
+ForwardIterator for_each_n(
+    ExecutionPolicy&& exec, 
+    ForwardIterator first, 
+    Size n, 
+    Function f);
+```
+
+## <a name="generate"></a> 生成します。
 
 範囲内の各要素に関数オブジェクトによって生成される値を割り当てます。
 
@@ -2077,17 +2242,23 @@ void generate(
     ForwardIterator first,
     ForwardIterator last,
     Generator _Gen);
+    
+template<class ExecutionPolicy, class ForwardIterator, class Generator>
+void generate(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, ForwardIterator last,
+    Generator gen);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*first*<br/>
+*まずは*\
 値が割り当てられる範囲の最初の要素の位置を示す前方反復子。
 
-*last*<br/>
+*前の*\
 値が割り当てられる範囲の最初の要素の 1 つ後ろの位置を示す前方反復子。
 
-*_Gen*<br/>
+*_Gen*\
 引数を指定しないで呼び出され、範囲内の各要素に割り当てられる値を生成するために使用される関数オブジェクト。
 
 ### <a name="remarks"></a>Remarks
@@ -2141,7 +2312,7 @@ Vector v1 is ( 41 18467 6334 26500 19169 ).
 Deque deq1 is ( 15724 11478 29358 26962 24464 ).
 ```
 
-## <a name="generate_n"></a>  generate_n
+## <a name="generate_n"></a> generate_n
 
 範囲内の指定された数の要素に関数オブジェクトによって生成される値を割り当て、最後に割り当てられた値を 1 つ超えた位置を返します。
 
@@ -2151,17 +2322,24 @@ void generate_n(
     OutputIterator First,
     Diff Count,
     Generator Gen);
+
+template<class ExecutionPolicy, class ForwardIterator, class Size, class Generator>
+ForwardIterator generate_n(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    Size n, 
+    Generator gen);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*First*<br/>
+*まずは*\
 値が割り当てられる範囲の最初の要素の位置を示す出力反復子。
 
-*カウント*<br/>
+*カウント*\
 ジェネレーター関数によって値が割り当てられる要素の数を指定する符号付きまたは符号なし整数の型。
 
-*汎用*<br/>
+*汎用*\
 引数を指定しないで呼び出され、範囲内の各要素に割り当てられる値を生成するために使用される関数オブジェクト。
 
 ### <a name="remarks"></a>Remarks
@@ -2215,7 +2393,7 @@ int main()
 }
 ```
 
-## <a name="includes"></a>  includes
+## <a name="includes"></a> 含まれています
 
 1 つの並べ替えられた範囲に、別の並べ替えられた範囲内のすべての要素が含まれるかどうかをテストします。要素間の順序または等価の基準は二項述語によって指定できます。
 
@@ -2234,23 +2412,41 @@ bool includes(
     InputIterator2 first2,
     InputIterator2 last2,
     BinaryPredicate comp );
+    
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
+bool includes(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2);
+    
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class Compare>
+bool includes(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2, 
+    Compare comp);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*first1*<br/>
+*first1*\
 2 番目のすべての要素が 1 番目に含まれているかどうかをテストするため、2 つの並べ替えられたソース範囲の、最初の範囲の最初の要素の位置を示す入力反復子。
 
-*last1*<br/>
+*last1*\
 2 番目のすべての要素が 1 番目に含まれているかどうかをテストするため、2 つの並べ替えられたソース範囲の、最初の範囲の最後の要素の 1 つ後ろの位置を示す入力反復子。
 
-*first2*<br/>
+*first2*\
 2 番目のすべての要素が 1 番目に含まれているかどうかをテストするため、2 つの連続する並べ替えられたソース範囲の、2 番目の範囲の最初の要素の位置を示す入力反復子。
 
-*last2*<br/>
+*last2*\
 2 番目のすべての要素が 1 番目に含まれているかどうかをテストするため、2 つの連続する並べ替えられたソース範囲の、2 番目の範囲の最後の要素の 1 つ後ろの位置を示す入力反復子。
 
-*comp*<br/>
+*コンポジション*\
 1 つの要素が別の要素より小さいという意味を定義するユーザー定義の述語関数オブジェクト。 二項述語は 2 つの引数を受け取り、条件が満たされている場合は **true** 、満たされていない場合は **false** を返します。
 
 ### <a name="return-value"></a>戻り値
@@ -2420,7 +2616,7 @@ At least one of the elements in vector v2b is not contained in vector v2a.
 At least one of the elements in vector v3b is  not contained under mod_lesser in vector v3a.
 ```
 
-## <a name="inplace_merge"></a>  inplace_merge
+## <a name="inplace_merge"></a> inplace_merge
 
 2 つの連続する並べ替えられた範囲の要素を単一の並べ替えられた範囲として連結します。順序の基準は二項述語によって指定できます。
 
@@ -2437,20 +2633,35 @@ void inplace_merge(
     BidirectionalIterator middle,
     BidirectionalIterator last,
     Predicate comp);
+    
+template<class ExecutionPolicy, class BidirectionalIterator>
+void inplace_merge(
+    ExecutionPolicy&& exec,
+    BidirectionalIterator first,
+    BidirectionalIterator middle,
+    BidirectionalIterator last);
+    
+template<class ExecutionPolicy, class BidirectionalIterator, class Compare>
+void inplace_merge(
+    ExecutionPolicy&& exec,
+    BidirectionalIterator first,
+    BidirectionalIterator middle,
+    BidirectionalIterator last, 
+    Compare comp);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*first*<br/>
+*まずは*\
 結合して単一の範囲に分類する 2 つの連続する並べ替えられた範囲の、最初の範囲の最初の要素の位置を示す双方向反復子。
 
-*中間*<br/>
+*中間*\
 結合して単一の範囲に分類する 2 つの連続する並べ替えられた範囲の、2 番目の範囲の最初の要素の位置を示す双方向反復子。
 
-*last*<br/>
+*前の*\
 結合して単一の範囲に分類する 2 つの連続する並べ替えられたソース範囲の、2 番目の範囲の最後の要素の 1 つ後ろの位置を示す双方向反復子。
 
-*comp*<br/>
+*コンポジション*\
 1 つの要素が別の要素より大きいという意味を定義するユーザー定義の述語関数オブジェクト。 2 項述語は 2 つの引数を受け取り、最初の要素が 2 番目の要素より小さい場合は **true** 、そうでない場合は **false** を返す必要があります。
 
 ### <a name="remarks"></a>Remarks
@@ -2572,7 +2783,7 @@ Merged inplace with binary predicate mod_lesser specified,
 vector v3mod = ( 0 0 1 -1 2 -2 3 -3 4 -4 5 -5 )
 ```
 
-## <a name="is_heap"></a>  is_heap
+## <a name="is_heap"></a> is_heap
 
 返します**true**場合は、指定された範囲内の要素がヒープを形成します。
 
@@ -2587,17 +2798,30 @@ bool is_heap(
     RandomAccessIterator first,
     RandomAccessIterator last,
     BinaryPredicate comp);
+    
+template<class ExecutionPolicy, class RandomAccessIterator>
+bool is_heap(
+    ExecutionPolicy&& exec,
+    RandomAccessIterator first, 
+    RandomAccessIterator last);
+
+template<class ExecutionPolicy, class RandomAccessIterator, class Compare>
+bool is_heap(
+    ExecutionPolicy&& exec,
+    RandomAccessIterator first, 
+    RandomAccessIterator last, 
+    Compare comp);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*first*<br/>
+*まずは*\
 ヒープをチェックする範囲の先頭を指定するランダム アクセス反復子。
 
-*last*<br/>
+*前の*\
 範囲の最後を指定するランダム アクセス反復子。
 
-*comp*<br/>
+*コンポジション*\
 要素の並べ替えをテストするための条件。 二項述語は 1 つの引数し、返します**true**または**false**します。
 
 ### <a name="return-value"></a>戻り値
@@ -2612,7 +2836,7 @@ bool is_heap(
 
 `is_heap_until(first, last, comp) == last`。
 
-## <a name="is_heap_until"></a>  is_heap_until
+## <a name="is_heap_until"></a> is_heap_until
 
 範囲の最初の要素に配置されている反復子を返します [ `begin`、 `end`)、ヒープの順序付け条件を満たさないまたは*エンド*範囲がヒープを形成する場合。
 
@@ -2627,17 +2851,30 @@ RandomAccessIterator is_heap_until(
     RandomAccessIterator begin,
     RandomAccessIterator end,
     BinaryPredicate compare);
+    
+template<class ExecutionPolicy, class RandomAccessIterator>
+RandomAccessIterator is_heap_until(
+    ExecutionPolicy&& exec,
+    RandomAccessIterator first, 
+    RandomAccessIterator last);
+
+template<class ExecutionPolicy, class RandomAccessIterator, class Compare>
+RandomAccessIterator is_heap_until(
+    ExecutionPolicy&& exec,
+    RandomAccessIterator first, 
+    RandomAccessIterator last,
+    Compare comp);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*begin*<br/>
+*開始*\
 ヒープを確認する範囲の最初の要素を指定するランダム アクセス反復子。
 
-*end*<br/>
+*終わり*\
 ヒープを確認する範囲の末尾を指定するランダム アクセス反復子。
 
-*compare*<br/>
+*比較*\
 ヒープを定義する厳密弱順序の条件を指定する二項述語。 既定の述語*比較*が指定されていないが`std::less<>`します。
 
 ### <a name="return-value"></a>戻り値
@@ -2646,11 +2883,11 @@ RandomAccessIterator is_heap_until(
 
 ### <a name="remarks"></a>Remarks
 
-最初のテンプレート関数は、最後の反復子を返します`next`で`[ begin , end ]`場所`[ begin , next)`が関数オブジェクトによって順序付けられるヒープ`std::less<>`します。 場合、距離`end - begin < 2`、関数を返します*エンド*します。
+最初のテンプレート関数は、最後の反復子を返します`next`で`[begin , end]`場所`[begin , next)`が関数オブジェクトによって順序付けられるヒープ`std::less<>`します。 場合、距離`end - begin < 2`、関数を返します*エンド*します。
 
 2 つ目のテンプレート関数は 1 つ目の関数と同様の動作をしますが、ヒープの順序付け条件として `compare` ではなく、述語 `std::less<>` を使用します。
 
-## <a name="is_partitioned"></a>  is_partitioned
+## <a name="is_partitioned"></a> is_partitioned
 
 返します**true**かどうかは特定の範囲内のすべての要素をテスト**true**の条件がテストする任意の要素の前に**false**します。
 
@@ -2660,17 +2897,24 @@ bool is_partitioned(
     InputIterator first,
     InputIterator last,
     BinaryPredicate comp);
+    
+template <class ExecutionPolicy, class ForwardIterator, class Predicate>
+bool is_partitioned(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last, 
+    Predicate pred);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*first*<br/>
+*まずは*\
 条件をチェックする範囲の先頭を指定する入力反復子。
 
-*last*<br/>
+*前の*\
 範囲の終了位置を示す入力反復子。
 
-*comp*<br/>
+*コンポジション*\
 テストする条件。 これは、検索対象の要素によって満たされる条件を定義するユーザー定義の述語関数オブジェクトによって提供されます。 述語は 1 つの引数を取り、**true** または **false** を返します。
 
 ### <a name="return-value"></a>戻り値
@@ -2679,9 +2923,9 @@ True が返されますすべてをテストする特定の範囲内の要素の
 
 ### <a name="remarks"></a>Remarks
 
-テンプレート関数を返します**true**場合にのみのすべての要素`[` `first ,` `last )`はによってパーティション分割*comp*; すべての要素は、 `X` で`[` `first ,` `last )`を`comp (X)`は true、すべての要素の前に出現`Y`を`comp (Y)`は**false**します。
+テンプレート関数を返します**true**場合にのみのすべての要素`[first, last)`はによってパーティション分割*comp*; すべての要素は、`X`で`[first, last)`を`comp (X)`が trueすべての要素の前に出現`Y`を`comp (Y)`は**false**します。
 
-## <a name="is_permutation"></a>  is_permutation
+## <a name="is_permutation"></a> is_permutation
 
 要素が同じ順序であるかどうかに関係なく、両方の範囲に同じ要素が含まれる場合に true を返します。 C++14 コードでは 2 範囲のオーバーロードを使用します。これは、2 つ目の範囲に対して 1 つの反復子のみを受け取るオーバーロードでは、2 つ目の範囲が 1 つ目の範囲より大きい場合にその差を検出できず、2 つ目の範囲が 1 つ目の範囲より小さい場合に未定義の動作が発生するためです。
 
@@ -2718,19 +2962,19 @@ bool is_permutation(
 
 ### <a name="parameters"></a>パラメーター
 
-*first1*<br/>
+*first1*\
 範囲の最初の要素を参照する前方反復子。
 
-*last1*<br/>
+*last1*\
 範囲の最後の要素の 1 つ後ろの要素を参照する前方反復子。
 
-*first2*<br/>
+*first2*\
 比較に使用される、2 つ目の範囲の最初の要素を参照する前方反復子。
 
-*last2*<br/>
+*last2*\
 比較に使用される、2 つ目の範囲の最後の要素の 1 つ後ろの要素を参照する前方反復子。
 
-*Pred*<br/>
+*Pred*\
 等しいかどうかをテストし、返す述語を**bool**します。
 
 ### <a name="return-value"></a>戻り値
@@ -2801,7 +3045,7 @@ int main()
 }
 ```
 
-## <a name="is_sorted"></a>  is_sorted
+## <a name="is_sorted"></a> is_sorted
 
 返します**true**並べ替えられた順序での指定した範囲内の要素がある場合。
 
@@ -2816,17 +3060,30 @@ bool is_sorted(
     ForwardIterator first,
     ForwardIterator last,
     BinaryPredicate comp);
+    
+template<class ExecutionPolicy, class ForwardIterator>
+bool is_sorted(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last);
+    
+template<class ExecutionPolicy, class ForwardIterator, class Compare>
+bool is_sorted(
+    ExecutionPolicy&& exec,
+    ForwardIterator first,
+    ForwardIterator last,
+    Compare comp);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*first*<br/>
+*まずは*\
 チェックする範囲の開始位置を示す前方反復子。
 
-*last*<br/>
+*前の*\
 範囲の終了位置を示す前方反復子。
 
-*comp*<br/>
+*コンポジション*\
 2 つの要素間の順序を決定するテストの条件。 述語は 1 つの引数を取り、**true** または **false** を返します。 これは `operator<` と同じタスクを実行します。
 
 ### <a name="remarks"></a>Remarks
@@ -2835,7 +3092,7 @@ bool is_sorted(
 
 2 番目のテンプレート関数を返します`is_sorted_until( first, last , comp ) == last`します。 *Comp*述語関数は、順序比較を実行します。
 
-## <a name="is_sorted_until"></a>  is_sorted_until
+## <a name="is_sorted_until"></a> is_sorted_until
 
 指定した範囲から並べ替え順序で最後の要素に設定されている `ForwardIterator` を返します。
 
@@ -2851,17 +3108,30 @@ ForwardIterator is_sorted_until(
     ForwardIterator first,
     ForwardIterator last,
     BinaryPredicate comp);
+    
+template<class ExecutionPolicy, class ForwardIterator>
+ForwardIterator is_sorted_until(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last);
+
+template<class ExecutionPolicy, class ForwardIterator, class Compare>
+ForwardIterator is_sorted_until(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last,
+    Compare comp);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*first*<br/>
+*まずは*\
 チェックする範囲の開始位置を示す前方反復子。
 
-*last*<br/>
+*前の*\
 範囲の終了位置を示す前方反復子。
 
-*comp*<br/>
+*コンポジション*\
 2 つの要素間の順序を決定するテストの条件。 述語は 1 つの引数を取り、**true** または **false** を返します。
 
 ### <a name="return-value"></a>戻り値
@@ -2870,11 +3140,11 @@ ForwardIterator is_sorted_until(
 
 ### <a name="remarks"></a>Remarks
 
-1 つ目のテンプレート関数は、`[` `first , next)` が `operator<` によって並べ替えられたシーケンス順序になるように、`[` `first ,` `last ]` の中で最後の反復子 `next` を返します。 場合`distance()``< 2`返します*最後*します。
+最初のテンプレート関数は、最後の反復子を返します`next`で`[first, last]`ように`[first, next)`がによって順序付けに並べ替えられたシーケンス`operator<`します。 場合`distance()``< 2`返します*最後*します。
 
 2 番目のテンプレート関数は、`operator<(X, Y)` と `comp (X, Y)` を置き換える点を除いて、同じ動作をします。
 
-## <a name="iter_swap"></a>  iter_swap
+## <a name="iter_swap"></a> iter_swap
 
 指定された反復子のペアで参照される 2 個の値を交換します。
 
@@ -2885,15 +3155,15 @@ void iter_swap( ForwardIterator1 left, ForwardIterator2 right );
 
 ### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左*\
 値が交換される前方反復子の 1 つ。
 
-*right*<br/>
+*そうです*\
 値が交換される 2 つ目の前方反復子。
 
 ### <a name="remarks"></a>Remarks
 
-`swap` は、旧バージョンとの互換性のために C++ 標準に含まれていた i **ter_swap** よりも優先的に使用する必要があります。 場合`Fit1`と`Fit2`は前方反復子、 `iter_swap` ( `Fit1`、 `Fit2` ) と等価`swap`( \* `Fit1`、 \* `Fit2` )。
+`swap` は、旧バージョンとの互換性のために C++ 標準に含まれていた i **ter_swap** よりも優先的に使用する必要があります。 場合`Fit1`と`Fit2`は前方反復子、`iter_swap(Fit1, Fit2)`と等価`swap( *Fit1, *Fit2)`します。
 
 入力前方反復子の値の型は、同じ値にする必要があります。
 
@@ -3030,7 +3300,7 @@ vector v1 is: v1 = ( 4 1 2 3 ).
 & deque deq2 is: deq2 = ( 0 5 ).
 ```
 
-## <a name="lexicographical_compare"></a>  lexicographical_compare
+## <a name="lexicographical_compare"></a> lexicographical_compare
 
 2 つのシーケンスを要素ごとに比較して、2 つのうちどちらが小さいかを判断します。
 
@@ -3049,23 +3319,41 @@ bool lexicographical_compare(
     InputIterator2  first2,
     InputIterator2 Last2,
     BinaryPredicate  comp  );
+    
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
+bool lexicographical_compare(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class Compare>
+bool lexicographical_compare(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2,
+    Compare comp);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*first1*<br/>
+*first1*\
 比較する 1 つ目の範囲内の最初の要素の位置を示す入力反復子。
 
-*last1*<br/>
+*last1*\
 比較する 1 つ目の範囲内の最後の要素の 1 つ後ろの位置を示す入力反復子。
 
-*first2*<br/>
+*first2*\
 比較する 2 つ目の範囲内の最初の要素の位置を示す入力反復子。
 
-*last2*<br/>
+*last2*\
 比較する 2 つ目の範囲内の最後の要素の 1 つ後ろの位置を示す入力反復子。
 
-*comp*<br/>
+*コンポジション*\
 1 つの要素が別の要素より小さいという意味を定義するユーザー定義の述語関数オブジェクト。 二項述語は 2 つの引数を受け取り、条件が満たされている場合は **true** 、満たされていない場合は **false** を返します。
 
 ### <a name="return-value"></a>戻り値
@@ -3177,7 +3465,7 @@ Vector v1 is lexicographically_less than L1.
 Vector v1 is not lexicographically_less than v2 under twice.
 ```
 
-## <a name="lower_bound"></a>  lower_bound
+## <a name="lower_bound"></a> lower_bound
 
 順序の基準が二項述語で指定できる場合に、順序付けられた範囲内で、指定した値と等価以上の値を持つ最初の要素の位置を検索します。
 
@@ -3198,16 +3486,16 @@ ForwardIterator lower_bound(
 
 ### <a name="parameters"></a>パラメーター
 
-*first*<br/>
+*まずは*\
 検索範囲内の先頭の要素の位置を示す前方反復子。
 
-*last*<br/>
+*前の*\
 検索範囲の最後の要素の 1 つ後ろの位置を示す前方反復子。
 
-*value*<br/>
+*value*\
 順序付けられた範囲内で、最初の位置や可能な最初の位置を検索する対象の値。
 
-*comp*<br/>
+*コンポジション*\
 1 つの要素が別の要素より小さいという意味を定義するユーザー定義の述語関数オブジェクト。 二項述語は 2 つの引数を受け取り、条件が満たされている場合は **true** 、満たされていない場合は **false** を返します。
 
 ### <a name="return-value"></a>戻り値
@@ -3316,7 +3604,7 @@ int main()
 }
 ```
 
-## <a name="make_heap"></a>  make_heap
+## <a name="make_heap"></a> make_heap
 
 指定された範囲の要素を、最初の要素が最大であるヒープに変換します。並べ替えの基準は二項述語によって指定できます。
 
@@ -3335,13 +3623,13 @@ void make_heap(
 
 ### <a name="parameters"></a>パラメーター
 
-*first*<br/>
+*まずは*\
 ヒープに変換される範囲内の最初の要素の位置を示すランダム アクセス反復子。
 
-*last*<br/>
+*前の*\
 ヒープに変換される範囲内の最後の要素の 1 つ後ろの位置を示すランダム アクセス反復子。
 
-*comp*<br/>
+*コンポジション*\
 1 つの要素が別の要素より小さいという意味を定義するユーザー定義の述語関数オブジェクト。 二項述語は 2 つの引数を受け取り、条件が満たされている場合は **true** 、満たされていない場合は **false** を返します。
 
 ### <a name="remarks"></a>Remarks
@@ -3398,7 +3686,7 @@ int main() {
 }
 ```
 
-## <a name="max"></a>  max
+## <a name="max"></a> 最大
 
 2 つのオブジェクトを比較し、大きい方のオブジェクトを返します。順序の基準は、二項述語によって指定できます。
 
@@ -3423,16 +3711,16 @@ constexpr Type& max(
 
 ### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左*\
 比較される 2 つのオブジェクトの 1 番目のオブジェクト。
 
-*right*<br/>
+*そうです*\
 比較される 2 つのオブジェクトの 2 番目のオブジェクト。
 
-*comp*<br/>
+*コンポジション*\
 2 つのオブジェクトの比較で使用される二項述語。
 
-*_IList*<br/>
+*_IList*\
 比較されるオブジェクトを含む初期化子リスト。
 
 ### <a name="return-value"></a>戻り値
@@ -3611,7 +3899,7 @@ Vector v4 = max (v1,v2) is ( 0 1 2 ).
 Vector v5 = max (v1,v3) is ( 0 2 4 ).
 ```
 
-## <a name="max_element"></a>  max_element
+## <a name="max_element"></a> max_element
 
 並べ替え基準をバイナリ述語で指定できる、指定された範囲内の最大の要素の最初の出現箇所を検索します。
 
@@ -3621,17 +3909,30 @@ constexpr ForwardIterator max_element(ForwardIterator first, ForwardIterator las
 
 template<class ForwardIterator, class BinaryPredicate>
 constexpr ForwardIterator max_element(ForwardIterator first, ForwardIterator last, BinaryPredicate comp );
+
+template<class ExecutionPolicy, class ForwardIterator>
+ForwardIterator max_element(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last);
+
+template<class ExecutionPolicy, class ForwardIterator, class Compare>
+ForwardIterator max_element(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last,
+    Compare comp);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*first*<br/>
+*まずは*\
 最大の要素の検索範囲内の先頭の要素の位置を示す前方反復子。
 
-*last*<br/>
+*前の*\
 最大の要素の検索範囲内の末尾の要素の 1 つ後の位置を示す前方反復子。
 
-*comp*<br/>
+*コンポジション*\
 1 つの要素が別の要素より大きいという意味を定義するユーザー定義の述語関数オブジェクト。 2 項述語は 2 つの引数を受け取り、最初の要素が 2 番目の要素より小さい場合は **true** 、そうでない場合は **false** を返す必要があります。
 
 ### <a name="return-value"></a>戻り値
@@ -3744,7 +4045,7 @@ int main()
 }
 ```
 
-## <a name="merge"></a>  merge
+## <a name="merge"></a> マージ
 
 2 つの並べ替えられたソース範囲のすべての要素を、単一の並べ替えられたターゲット範囲として連結します。順序の基準は二項述語によって指定できます。
 
@@ -3765,26 +4066,47 @@ OutputIterator merge(
     InputIterator2 last2,
     OutputIterator result,
     BinaryPredicate comp );
+    
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class ForwardIterator>
+ForwardIterator merge(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2,
+    ForwardIterator result);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class ForwardIterator, class Compare>
+ForwardIterator merge(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2,
+    ForwardIterator result, 
+    Compare comp);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*first1*<br/>
+*first1*\
 結合して単一の範囲に分類する 2 つの並べ替えられたソース範囲の、最初の範囲の最初の要素の位置を示す入力反復子。
 
-*last1*<br/>
+*last1*\
 結合して単一の範囲に分類する 2 つの並べ替えられたソース範囲の、最初の範囲の最後の要素の 1 つ後ろの位置を示す入力反復子。
 
-*first2*<br/>
+*first2*\
 結合して単一の範囲に分類する 2 つの連続する並べ替えられたソース範囲の、2 番目の範囲の最初の要素の位置を示す入力反復子。
 
-*last2*<br/>
+*last2*\
 結合して単一の範囲に分類する 2 つの連続する並べ替えられたソース範囲の、2 番目の範囲の最後の要素の 1 つ後ろの位置を示す入力反復子。
 
-*result*<br/>
+*結果*\
 2 つのソース範囲が単一の並べ替えられた範囲に結合されるターゲット範囲の、最初の要素の位置を示す出力反復子。
 
-*comp*<br/>
+*コンポジション*\
 1 つの要素が別の要素より大きいという意味を定義するユーザー定義の述語関数オブジェクト。 2 項述語は 2 つの引数を受け取り、最初の要素が 2 番目の要素より小さい場合は **true** 、そうでない場合は **false** を返す必要があります。
 
 ### <a name="return-value"></a>戻り値
@@ -3917,7 +4239,7 @@ int main() {
 }
 ```
 
-## <a name="min"></a>  min
+## <a name="min"></a> 最小値
 
 2 つのオブジェクトを比較し、小さい方のオブジェクトを返します。順序の基準は、二項述語によって指定できます。
 
@@ -3942,16 +4264,16 @@ constexpr Type min(
 
 ### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左*\
 比較される 2 つのオブジェクトの 1 番目のオブジェクト。
 
-*right*<br/>
+*そうです*\
 比較される 2 つのオブジェクトの 2 番目のオブジェクト。
 
-*comp*<br/>
+*コンポジション*\
 2 つのオブジェクトの比較で使用される二項述語。
 
-*_IList*<br/>
+*_IList*\
 比較されるメンバーを含む initializer_list。
 
 ### <a name="return-value"></a>戻り値
@@ -4129,7 +4451,7 @@ Vector v4 = min ( v1,v2 ) is ( 0 1 2 ).
 Vector v5 = min ( v1,v3 ) is ( 0 1 2 ).
 ```
 
-## <a name="min_element"></a>  min_element
+## <a name="min_element"></a> min_element
 
 指定された範囲内の最小の要素の最初の出現箇所を検索します。順序の基準は二項述語によって指定できます。
 
@@ -4142,17 +4464,30 @@ constexpr ForwardIterator min_element(
     ForwardIterator first,
     ForwardIterator last,
     BinaryPredicate comp);
+
+template<class ExecutionPolicy, class ForwardIterator>
+ForwardIterator min_element(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last);
+
+template<class ExecutionPolicy, class ForwardIterator, class Compare>
+ForwardIterator min_element(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last,
+    Compare comp);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*first*<br/>
+*まずは*\
 最小の要素の検索範囲内の先頭の要素の位置を示す前方反復子。
 
-*last*<br/>
+*前の*\
 最小の要素の検索範囲内の最後の要素の 1 つ後ろの位置を示す前方反復子。
 
-*comp*<br/>
+*コンポジション*\
 1 つの要素が別の要素より大きいという意味を定義するユーザー定義の述語関数オブジェクト。 2 項述語は 2 つの引数を受け取り、最初の要素が 2 番目の要素より小さい場合は **true** 、そうでない場合は **false** を返す必要があります。
 
 ### <a name="return-value"></a>戻り値
@@ -4275,7 +4610,7 @@ The smallest element in v1 under the mod_lesser
 binary predicate is: 0
 ```
 
-## <a name="minmax_element"></a>  minmax_element
+## <a name="minmax_element"></a> minmax_element
 
 `min_element` と `max_element` によって実行される作業を 1 回の呼び出しで実行します。
 
@@ -4289,17 +4624,32 @@ constexpr pair<ForwardIterator, ForwardIterator> minmax_element(
     ForwardIterator  first,
     ForwardIterator Last,
     BinaryPredicate  comp);
+    
+template<class ExecutionPolicy, class ForwardIterator>
+pair<ForwardIterator, ForwardIterator>
+minmax_element(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last);
+
+template<class ExecutionPolicy, class ForwardIterator, class Compare>
+pair<ForwardIterator, ForwardIterator>
+minmax_element(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last, 
+    Compare comp);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*first*<br/>
+*まずは*\
 範囲の開始位置を示す前方反復子。
 
-*last*<br/>
+*前の*\
 範囲の終了位置を示す前方反復子。
 
-*comp*<br/>
+*コンポジション*\
 要素を並べ替えるのに使用される省略可能なテストです。
 
 ### <a name="return-value"></a>戻り値
@@ -4322,7 +4672,7 @@ constexpr pair<ForwardIterator, ForwardIterator> minmax_element(
 
 関数が最大実行シーケンスが空でない場合、`3 * (last - first - 1) / 2`比較します。
 
-## <a name="minmax"></a>  minmax
+## <a name="minmax"></a> minmax
 
 2 つの入力パラメーターを比較し、それらを昇順のペアとして返します。
 
@@ -4347,16 +4697,16 @@ constexpr pair<Type&, Type&> minmax(
 
 ### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左*\
 比較される 2 つのオブジェクトの 1 番目のオブジェクト。
 
-*right*<br/>
+*そうです*\
 比較される 2 つのオブジェクトの 2 番目のオブジェクト。
 
-*comp*<br/>
+*コンポジション*\
 2 つのオブジェクトの比較で使用される二項述語。
 
-*_IList*<br/>
+*_IList*\
 比較されるメンバーを含む initializer_list。
 
 ### <a name="remarks"></a>Remarks
@@ -4369,7 +4719,7 @@ constexpr pair<Type&, Type&> minmax(
 
 関数は比較を 1 回だけ実行します。
 
-## <a name="mismatch"></a>  mismatch
+## <a name="mismatch"></a> 一致しません
 
 要素ごとに 2 つの範囲を比較し、最初に違いが発生する位置を特定します。
 
@@ -4406,23 +4756,62 @@ mismatch(
     InputIterator2 First2,
     InputIterator2 Last2,
     BinaryPredicate Comp);
+
+//C++17
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
+pair<ForwardIterator1, ForwardIterator2>
+mismatch(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class BinaryPredicate>
+pair<ForwardIterator1, ForwardIterator2>
+mismatch(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    BinaryPredicate pred);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
+pair<ForwardIterator1, ForwardIterator2>
+mismatch(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class BinaryPredicate>
+pair<ForwardIterator1, ForwardIterator2>
+mismatch(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2,
+    BinaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*first1*<br/>
+*first1*\
 テストする 1 つ目の範囲内の最初の要素の位置を示す入力反復子。
 
-*last1*<br/>
+*last1*\
 テストする 1 つ目の範囲内の最後の要素の 1 つ後の位置を示す入力反復子。
 
-*first2*<br/>
+*first2*\
 テストする 2 つ目の範囲内の最初の要素の位置を示す入力反復子。
 
-*last2*<br/>
+*last2*\
 テストする 2 つ目の範囲内の最後の要素の 1 つ後の位置を示す入力反復子。
 
-*コンポジション*<br/>
+*コンポジション*\
 各範囲内の現在の要素を比較し、それらが等しいかどうかを判定するための、ユーザー定義の述語関数オブジェクト。 条件が満たされている場合は **true**、満たされていない場合は **false** を返します。
 
 ### <a name="return-value"></a>戻り値
@@ -4522,9 +4911,9 @@ int main()
     cin >> c;
 
 }
+```
 
-/*
-Output:
+```Output
 C++03: vec_1 and vec_2 are a mismatch: false
 C++14: vec_1 and vec_2: mismatch. Left iterator at end right iterator at 30
 C++14 vec_1 v. vec_2 modified: mismatch. Left iterator at 15 right iterator at 42
@@ -4532,10 +4921,9 @@ C++14 vec_3 v. vec_4 with pred:  match.
 C++14 vec_3 v. modified vec_4 with pred: mismatch. Left iterator at 60 right iterator at 31
 C++14: vec_1 and list_1 are a mismatch: false
 Press a key
-*/
 ```
 
-## <a name="alg_move"></a>  &lt;alg&gt; move
+## <a name="alg_move"></a> &lt;alg&gt;移動
 
 指定された範囲に関連付けられている要素を移動します。
 
@@ -4545,24 +4933,32 @@ OutputIterator move(
     InputIterator first,
     InputIterator last,
     OutputIterator dest);
+    
+template<class ExecutionPolicy, class ForwardIterator1,
+class ForwardIterator2>
+ForwardIterator2 move(
+    ExecutionPolicy&& exec, 
+    ForwardIterator1 first, 
+    ForwardIterator1 last,
+    ForwardIterator2 result);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*first*<br/>
+*まずは*\
 移動する要素の範囲の先頭を示す入力反復子。
 
-*last*<br/>
+*前の*\
 移動する要素の範囲の最後を示す入力反復子。
 
-*dest*<br/>
+*追加先*\
 移動された要素が格納される出力反復子。
 
 ### <a name="remarks"></a>Remarks
 
 テンプレート関数は評価`*(dest + N) = move(*(first + N))`ごとに 1 回`N`範囲`[0, last - first)`、の値を確実に増加`N`最低値から。 その後で `dest + N` が返されます。 場合`dest`と*最初*、記憶域の領域を指定*dest* 、範囲内で指定する必要がありますいない`[first, last)`します。
 
-## <a name="move_backward"></a>  move_backward
+## <a name="move_backward"></a> move_backward
 
 ある反復子の要素を別の反復子に移動します。 移動は、指定した範囲の最後の要素から開始され、その範囲内の先頭の要素で終了します。
 
@@ -4576,13 +4972,13 @@ template<class BidirectionalIterator1, class BidirectionalIterator2>
 
 ### <a name="parameters"></a>パラメーター
 
-*first*<br/>
+*まずは*\
 要素の移動元の範囲の先頭を指定する反復子。
 
-*last*<br/>
+*前の*\
 要素の移動元の範囲の最後を指定する反復子。 この要素は移動されません。
 
-*destEnd*<br/>
+*destEnd*\
 移動先範囲の最後の要素の 1 つ後ろの位置を示す双方向反復子。
 
 ### <a name="remarks"></a>Remarks
@@ -4591,7 +4987,7 @@ template<class BidirectionalIterator1, class BidirectionalIterator2>
 
 `move` と `move_backward` は、移動反復子と共に `copy` と `copy_backward` を使用するのと機能的には同じです。
 
-## <a name="next_permutation"></a>  next_permutation
+## <a name="next_permutation"></a> next_permutation
 
 範囲内の要素の順序を変更し、元の順序を辞書式に次に大きい順列 (存在する場合) に置き換えます。next の意味は二項述語によって指定できます。
 
@@ -4605,13 +5001,13 @@ bool next_permutation(BidirectionalIterator first, BidirectionalIterator last, B
 
 ### <a name="parameters"></a>パラメーター
 
-*first*<br/>
+*まずは*\
 順序を変える範囲内の最初の要素の位置を指す双方向反復子。
 
-*last*<br/>
+*前の*\
 順序を変える範囲内の最後の要素の 1 つ後ろの位置を指す双方向反復子。
 
-*comp*<br/>
+*コンポジション*\
 順序内の次の要素によって満たされる比較条件を定義するユーザー定義の述語関数オブジェクト。 二項述語は 2 つの引数を受け取り、条件が満たされている場合は **true** 、満たされていない場合は **false** を返します。
 
 ### <a name="return-value"></a>戻り値
@@ -4765,7 +5161,7 @@ After another next_permutation of vector v1,
 v1 =   ( -3 -2 -1 1 0 2 3 ).
 ```
 
-## <a name="nth_element"></a>  nth_element
+## <a name="nth_element"></a> nth_element
 
 範囲内のシーケンスの *n* 番目の要素を正しく検索し、その要素の前にあるすべての要素がその要素以下、シーケンス内でその要素に続くすべての要素がその要素以上になるようにして、要素の範囲を分割します。
 
@@ -4775,20 +5171,35 @@ void nth_element( RandomAccessIterator first, RandomAccessIterator _Nth, RandomA
 
 template<class RandomAccessIterator, class BinaryPredicate>
 void nth_element( RandomAccessIterator first, RandomAccessIterator _Nth, RandomAccessIterator last, BinaryPredicate comp);
+
+template<class ExecutionPolicy, class RandomAccessIterator>
+void nth_element(
+    ExecutionPolicy&& exec,
+    RandomAccessIterator first, 
+    RandomAccessIterator nth,
+    RandomAccessIterator last);
+
+template<class ExecutionPolicy, class RandomAccessIterator, class Compare>
+void nth_element(
+    ExecutionPolicy&& exec,
+    RandomAccessIterator first, 
+    RandomAccessIterator nth,
+    RandomAccessIterator last, 
+    Compare comp);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*first*<br/>
+*まずは*\
 パーティション分割される範囲内の最初の要素の位置を示すランダム アクセス反復子。
 
-*_Nth*<br/>
+*_Nth*\
 パーティションの境界で正しく並べ替えられる要素の位置を示すランダム アクセス反復子。
 
-*last*<br/>
+*前の*\
 パーティション分割される範囲内の最後の要素の 1 つ後ろの位置を示すランダム アクセス反復子。
 
-*comp*<br/>
+*コンポジション*\
 順序内の次の要素によって満たされる比較条件を定義するユーザー定義の述語関数オブジェクト。 二項述語は 2 つの引数を受け取り、条件が満たされている場合は **true** 、満たされていない場合は **false** を返します。
 
 ### <a name="remarks"></a>Remarks
@@ -4867,24 +5278,31 @@ int main() {
 }
 ```
 
-## <a name="none_of"></a>  none_of
+## <a name="none_of"></a> none_of
 
 返します**true**条件場合要素間で指定された範囲内に存在することはありません。
 
 ```cpp
 template<class InputIterator, class BinaryPredicate>
 bool none_of(InputIterator first, InputIterator last, BinaryPredicate comp);
+
+template <class ExecutionPolicy, class ForwardIterator, class Predicate>
+bool none_of(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last, 
+    Predicate pred);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*first*<br/>
+*まずは*\
 条件の要素の範囲のチェックを開始する位置を示す入力反復子。
 
-*last*<br/>
+*前の*\
 要素の範囲の最後を示す入力反復子。
 
-*comp*<br/>
+*コンポジション*\
 テストする条件。 これは、条件を定義するユーザー定義の述語関数オブジェクトによって提供されます。 述語は 1 つの引数を取り、**true** または **false** を返します。
 
 ### <a name="return-value"></a>戻り値
@@ -4895,7 +5313,7 @@ bool none_of(InputIterator first, InputIterator last, BinaryPredicate comp);
 
 テンプレート関数を返します**true**いくつかの場合にのみ`N`範囲`[0, last - first)`、述語`comp(*(first + N))`は常に**false**します。
 
-## <a name="partial_sort"></a>  partial_sort
+## <a name="partial_sort"></a> partial_sort
 
 範囲内で指定された数の、より小さい要素を、降順以外の順序、または二項述語で指定された順序の基準に従って配置します。
 
@@ -4912,20 +5330,35 @@ void partial_sort(
     RandomAccessIterator sortEnd,
     RandomAccessIterator last
     BinaryPredicate comp);
+    
+template<class ExecutionPolicy, class RandomAccessIterator>
+void partial_sort(
+    ExecutionPolicy&& exec,
+    RandomAccessIterator first,
+    RandomAccessIterator middle,
+    RandomAccessIterator last);
+
+template<class ExecutionPolicy, class RandomAccessIterator, class Compare>
+void partial_sort(
+    ExecutionPolicy&& exec,
+    RandomAccessIterator first,
+    RandomAccessIterator middle,
+    RandomAccessIterator last, 
+    Compare comp);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*first*<br/>
+*まずは*\
 並べ替えられる範囲内の最初の要素の位置を示すランダム アクセス反復子。
 
-*sortEnd*<br/>
+*sortEnd*\
 並べ替えられるサブ範囲内の最後の要素の 1 つ後ろの位置を示すランダム アクセス反復子。
 
-*last*<br/>
+*前の*\
 部分的に並べ替えられる範囲内の最後の要素の 1 つ後ろの位置を示すランダム アクセス反復子。
 
-*comp*<br/>
+*コンポジション*\
 順序内の次の要素によって満たされる比較条件を定義するユーザー定義の述語関数オブジェクト。 二項述語は 2 つの引数を受け取り、条件が満たされている場合は **true** 、満たされていない場合は **false** を返します。
 
 ### <a name="remarks"></a>Remarks
@@ -5009,7 +5442,7 @@ Partially resorted (UDgreater) vector:
 v1 = ( 11 10 9 8 7 6 5 4 0 1 2 3 )
 ```
 
-## <a name="partial_sort_copy"></a>  partial_sort_copy
+## <a name="partial_sort_copy"></a> partial_sort_copy
 
 ソース範囲からターゲット範囲に要素をコピーします。ソース要素は小なりまたは指定された別の二項述語によって並べ替えられます。
 
@@ -5028,23 +5461,41 @@ RandomAccessIterator partial_sort_copy(
     RandomAccessIterator first2,
     RandomAccessIterator last2,
     BinaryPredicate comp);
+    
+template<class ExecutionPolicy, class ForwardIterator, class RandomAccessIterator>
+RandomAccessIterator partial_sort_copy(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last,
+    RandomAccessIterator result_first,
+    RandomAccessIterator result_last);
+
+template<class ExecutionPolicy, class ForwardIterator, class RandomAccessIterator,
+class Compare>
+RandomAccessIterator partial_sort_copy(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last,
+    RandomAccessIterator result_first,
+    RandomAccessIterator result_last,
+    Compare comp);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*first1*<br/>
+*first1*\
 ソース範囲内の先頭の要素の位置を示す入力反復子。
 
-*last1*<br/>
+*last1*\
 ソース範囲内の最後の要素の 1 つ後ろの位置を示す入力反復子。
 
-*first2*<br/>
+*first2*\
 並べ替えられたターゲット範囲内の最初の要素の位置を示すランダム アクセス反復子。
 
-*last2*<br/>
+*last2*\
 並べ替えられたターゲット範囲内の最後の要素の 1 つ後ろの位置を示すランダム アクセス反復子。
 
-*comp*<br/>
+*コンポジション*\
 2 つの要素が等価であると見なされた場合に条件が満たされると定義する、ユーザー定義の述語関数オブジェクト。 二項述語は 2 つの引数を受け取り、条件が満たされている場合は **true** 、満たされていない場合は **false** を返します。
 
 ### <a name="return-value"></a>戻り値
@@ -5133,7 +5584,7 @@ int main() {
 }
 ```
 
-## <a name="partition"></a>  partition
+## <a name="partition"></a> パーティション
 
 範囲内の要素を 2 つの分離されたセットに分類し、単項述語を満たす要素が単項述語を満たさない要素よりも前に来るように配置します。
 
@@ -5143,17 +5594,24 @@ BidirectionalIterator partition(
     BidirectionalIterator first,
     BidirectionalIterator last,
     Predicate comp);
+    
+template<class ExecutionPolicy, class ForwardIterator, class Predicate>
+ForwardIterator partition(
+    ExecutionPolicy&& exec,
+    ForwardIterator first,
+    ForwardIterator last,
+    Predicate pred);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*first*<br/>
+*まずは*\
 パーティション分割される範囲内の最初の要素の位置を示す双方向反復子。
 
-*last*<br/>
+*前の*\
 パーティション分割される範囲内の最後の要素の 1 つ後ろの位置を示す双方向反復子。
 
-*comp*<br/>
+*コンポジション*\
 要素が分類される場合に満たされる条件を定義するユーザー定義の述語関数オブジェクト。 述語は 1 つの引数を取り、**true** または **false** を返します。
 
 ### <a name="return-value"></a>戻り値
@@ -5207,7 +5665,7 @@ int main() {
 }
 ```
 
-## <a name="partition_copy"></a>  partition_copy
+## <a name="partition_copy"></a> partition_copy
 
 条件の要素をコピー **true** 、条件が、1 つの宛先に**false**間。 要素は指定された範囲に含まれている必要があります。
 
@@ -5220,30 +5678,41 @@ pair<OutputIterator1, OutputIterator2>
     OutputIterator1 dest1,
     OutputIterator2 dest2,
     Predicate pred);
+    
+template <class ExecutionPolicy, class ForwardIterator, class ForwardIterator1,
+class ForwardIterator2, class Predicate>
+pair<ForwardIterator1, ForwardIterator2>
+partition_copy(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last,
+    ForwardIterator1 out_true, 
+    ForwardIterator2 out_false,
+    Predicate pred);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*first*<br/>
+*まずは*\
 条件をチェックする範囲の先頭を指定する入力反復子。
 
-*last*<br/>
+*前の*\
 範囲の終了位置を示す入力反復子。
 
-*dest1*<br/>
+*dest1*\
 条件は true を返す要素をコピーするために使用する出力反復子を使用してテスト *_Pred*します。
 
-*dest2*<br/>
+*れた dest2*\
 使用条件の場合は false を返す要素をコピーする出力反復子を使用してテスト *_Pred*します。
 
-*_Pred*<br/>
+*_Pred*\
 テストする条件。 これは、テストする条件を定義するユーザー定義の述語関数オブジェクトによって提供されます。 述語は 1 つの引数を取り、**true** または **false** を返します。
 
 ### <a name="remarks"></a>Remarks
 
 テンプレート関数は、各要素をコピーする`X`で`[first,last)`に`*dest1++`場合`_Pred(X)`が true の場合または`*dest2++`かどうか。 `pair<OutputIterator1, OutputIterator2>(dest1, dest2)` を返します。
 
-## <a name="partition_point"></a>  partition_point
+## <a name="partition_point"></a> partition_point
 
 特定の範囲内で条件を満たさない最初の要素を返します。 要素は、条件を満たす要素が条件を満たさない要素の前に来るように並べ替えられます。
 
@@ -5257,13 +5726,13 @@ ForwardIterator partition_point(
 
 ### <a name="parameters"></a>パラメーター
 
-*first*<br/>
+*まずは*\
 条件をチェックする範囲の先頭を指定する `ForwardIterator`。
 
-*last*<br/>
+*前の*\
 範囲の終了位置を示す `ForwardIterator`。
 
-*comp*<br/>
+*コンポジション*\
 テストする条件。 これは、検索対象の要素によって満たされる条件を定義するユーザー定義の述語関数オブジェクトによって提供されます。 述語は 1 つの引数を取り、**true** または **false** を返します。
 
 ### <a name="return-value"></a>戻り値
@@ -5274,7 +5743,7 @@ ForwardIterator partition_point(
 
 テンプレート関数は、最初の反復子を検索します。`it`で`[first, last)`を`comp(*it)`は**false**します。 シーケンスを並べ替えて*comp*します。
 
-## <a name="pop_heap"></a>  pop_heap
+## <a name="pop_heap"></a> pop_heap
 
 ヒープの先頭と範囲内の最後から 2 番目の位置との間で最大の要素を削除し、残りの要素から新しいヒープを形成します。
 
@@ -5288,13 +5757,13 @@ void pop_heap(RandomAccessIterator first, RandomAccessIterator last, BinaryPredi
 
 ### <a name="parameters"></a>パラメーター
 
-*first*<br/>
+*まずは*\
 ヒープ内の最初の要素の位置を示すランダム アクセス反復子。
 
-*last*<br/>
+*前の*\
 ヒープ内の最後の要素の 1 つ後ろの位置を示すランダム アクセス反復子。
 
-*comp*<br/>
+*コンポジション*\
 1 つの要素が別の要素より小さいという意味を定義するユーザー定義の述語関数オブジェクト。 二項述語は 2 つの引数を受け取り、条件が満たされている場合は **true** 、満たされていない場合は **false** を返します。
 
 ### <a name="remarks"></a>Remarks
@@ -5377,7 +5846,7 @@ int main()  {
 }
 ```
 
-## <a name="prev_permutation"></a>  prev_permutation
+## <a name="prev_permutation"></a> prev_permutation
 
 範囲内の要素の順序を変更し、元の順序を辞書式で前の大きい順列 (存在する場合) に置き換えます。previous の意味は二項述語によって指定できます。
 
@@ -5396,13 +5865,13 @@ bool prev_permutation(
 
 ### <a name="parameters"></a>パラメーター
 
-*first*<br/>
+*まずは*\
 順序を変える範囲内の最初の要素の位置を指す双方向反復子。
 
-*last*<br/>
+*前の*\
 順序を変える範囲内の最後の要素の 1 つ後ろの位置を指す双方向反復子。
 
-*comp*<br/>
+*コンポジション*\
 順序内の次の要素によって満たされる比較条件を定義するユーザー定義の述語関数オブジェクト。 二項述語は 2 つの引数を受け取り、条件が満たされている場合は **true** 、満たされていない場合は **false** を返します。
 
 ### <a name="return-value"></a>戻り値
@@ -5551,7 +6020,7 @@ After another prev_permutation of vector v1,
 v1 =   ( -3 -2 0 2 -1 1 3 ).
 ```
 
-## <a name="push_heap"></a>  push_heap
+## <a name="push_heap"></a> push_heap
 
 範囲の末尾にある要素を、範囲内の以前の要素で構成される既存のヒープに追加します。
 
@@ -5565,13 +6034,13 @@ void push_heap( RandomAccessIterator first, RandomAccessIterator last, BinaryPre
 
 ### <a name="parameters"></a>パラメーター
 
-*first*<br/>
+*まずは*\
 ヒープ内の最初の要素の位置を示すランダム アクセス反復子。
 
-*last*<br/>
+*前の*\
 ヒープに変換される範囲内の最後の要素の 1 つ後ろの位置を示すランダム アクセス反復子。
 
-*comp*<br/>
+*コンポジション*\
 1 つの要素が別の要素より小さいという意味を定義するユーザー定義の述語関数オブジェクト。 二項述語は 2 つの引数を受け取り、条件が満たされている場合は **true** 、満たされていない場合は **false** を返します。
 
 ### <a name="remarks"></a>Remarks
@@ -5659,28 +6128,35 @@ int main() {
 }
 ```
 
-## <a name="random_shuffle"></a>  random_shuffle
+## <a name="random_shuffle"></a> random_shuffle
 
 Std::random_shuffle() 関数は非推奨、置き換え[std::shuffle](../standard-library/algorithm-functions.md#shuffle)します。 コード例と詳細については、「 [\<ランダム >](../standard-library/random.md)と Stack Overflow の投稿[理由は std::random_shuffle メソッド非推奨に c++ 14 で?](https://go.microsoft.com/fwlink/p/?linkid=397954)します。
 
-## <a name="remove"></a>  remove
+## <a name="remove"></a> 削除します。
 
 特定の範囲から指定された値を除去します。残りの要素の順序に影響を及ぼすことはなく、指定された値を含まない新しい範囲の末尾を返します。
 
 ```cpp
 template<class ForwardIterator, class Type>
 ForwardIterator remove(ForwardIterator first, ForwardIterator last, const Type& val);
+
+template<class ExecutionPolicy, class ForwardIterator, class T>
+ForwardIterator remove(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last,
+    const T& value);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*first*<br/>
+*まずは*\
 要素が削除される範囲内の先頭の要素の位置を示す前方反復子。
 
-*last*<br/>
+*前の*\
 要素が削除される範囲内の末尾の要素の 1 つ後の位置を示す前方反復子。
 
-*val*<br/>
+*val*\
 範囲から削除される値。
 
 ### <a name="return-value"></a>戻り値
@@ -5745,27 +6221,36 @@ int main() {
 }
 ```
 
-## <a name="remove_copy"></a>  remove_copy
+## <a name="remove_copy"></a> remove_copy
 
 ソース範囲からターゲット範囲に要素をコピーしますが、指定された値の要素はコピーされません。残りの要素の順序に影響を及ぼすことはなく、新しいターゲット範囲の末尾を返します。
 
 ```cpp
 template<class InputIterator, class OutputIterator, class Type>
 OutputIterator remove_copy(InputIterator first, InputIterator last, OutputIterator result, const Type& val);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class T>
+ForwardIterator2 remove_copy(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first, 
+    ForwardIterator1 last,
+    ForwardIterator2 result, 
+    const T& value);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*first*<br/>
+*まずは*\
 要素が削除される範囲内の最初の要素の位置を示す入力反復子。
 
-*last*<br/>
+*前の*\
 要素が削除される範囲内の最後の要素の 1 つ後ろの位置を示す入力反復子。
 
-*result*<br/>
+*結果*\
 要素が削除されるターゲット範囲内の最初の要素の位置を示す出力反復子。
 
-*val*<br/>
+*val*\
 範囲から削除される値。
 
 ### <a name="return-value"></a>戻り値
@@ -5827,27 +6312,36 @@ int main() {
 }
 ```
 
-## <a name="remove_copy_if"></a>  remove_copy_if
+## <a name="remove_copy_if"></a> remove_copy_if
 
 ソース範囲からターゲット範囲に要素をコピーしますが、述語を満たす要素はコピーされません。残りの要素の順序に影響を及ぼすことはなく、新しいターゲット範囲の末尾を返します。
 
 ```cpp
 template<class InputIterator, class OutputIterator, class Predicate>
 OutputIterator remove_copy_if(InputIterator first, InputIterator Last, OutputIterator result, Predicate pred);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class Predicate>
+ForwardIterator2 remove_copy_if(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first, 
+    ForwardIterator1 last,
+    ForwardIterator2 result, 
+    Predicate pred);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*first*<br/>
+*まずは*\
 要素が削除される範囲内の最初の要素の位置を示す入力反復子。
 
-*last*<br/>
+*前の*\
 要素が削除される範囲内の最後の要素の 1 つ後ろの位置を示す入力反復子。
 
-*result*<br/>
+*結果*\
 要素が削除されるターゲット範囲内の最初の要素の位置を示す出力反復子。
 
-*_Pred*<br/>
+*_Pred*\
 満たす必要のある単項述語は、置き換えられる要素の値です。
 
 ### <a name="return-value"></a>戻り値
@@ -5918,7 +6412,7 @@ int main() {
 }
 ```
 
-## <a name="remove_if"></a>  remove_if
+## <a name="remove_if"></a> remove_if
 
 特定の範囲から述語を満たす要素を除去します。残りの要素の順序に影響を及ぼすことはなく、指定された値を含まない新しい範囲の末尾を返します。
 
@@ -5928,17 +6422,24 @@ ForwardIterator remove_if(
     ForwardIterator first,
     ForwardIterator last,
     Predicate pred);
+    
+template<class ExecutionPolicy, class ForwardIterator, class Predicate>
+ForwardIterator remove_if(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last,
+    Predicate pred);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*first*<br/>
+*まずは*\
 要素が削除される範囲内の最初の要素の位置を指定する前方反復子。
 
-*last*<br/>
+*前の*\
 要素が削除される範囲内の最後の要素の 1 つ後ろの位置を指定する前方反復子。
 
-*_Pred*<br/>
+*_Pred*\
 満たす必要のある単項述語は、置き換えられる要素の値です。
 
 ### <a name="return-value"></a>戻り値
@@ -6007,7 +6508,7 @@ int main() {
 }
 ```
 
-## <a name="replace"></a>  replace
+## <a name="replace"></a> 置換
 
 範囲内の各要素が指定された値に一致するかどうかを調べ、一致する場合は置き換えます。
 
@@ -6018,20 +6519,28 @@ void replace(
     ForwardIterator last,
     const Type& oldVal,
     const Type& newVal);
+    
+template<class ExecutionPolicy, class ForwardIterator, class T>
+void replace(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last,
+    const T& old_value, 
+    const T& new_value);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*first*<br/>
+*まずは*\
 要素が置き換えられる範囲内の最初の要素の位置を指定する前方反復子。
 
-*last*<br/>
+*前の*\
 要素が置き換えられる範囲内の最後の要素の 1 つ後ろの位置を指定する前方反復子。
 
-*_OldVal*<br/>
+*_OldVal*\
 置き換えられる要素の古い値。
 
-*_NewVal*<br/>
+*_NewVal*\
 古い値を持つ要素に割り当てられる新しい値。
 
 ### <a name="remarks"></a>Remarks
@@ -6082,7 +6591,7 @@ int main() {
 }
 ```
 
-## <a name="replace_copy"></a>  replace_copy
+## <a name="replace_copy"></a> replace_copy
 
 ソース範囲内の各要素が指定された値に一致するかどうかを調べ、一致する場合は置き換えて結果を新しいターゲット範囲にコピーします。
 
@@ -6094,23 +6603,32 @@ OutputIterator replace_copy(
     OutputIterator result,
     const Type& oldVal,
     const Type& newVal);
+    
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class T>
+ForwardIterator2 replace_copy(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first, 
+    ForwardIterator1 last,
+    ForwardIterator2 result,
+    const T& old_value, 
+    const T& new_value);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*first*<br/>
+*まずは*\
 要素が置き換えられる範囲内の最初の要素の位置を指定する入力反復子。
 
-*last*<br/>
+*前の*\
 要素が置き換えられる範囲内の最後の要素の 1 つ後ろの位置を指定する入力反復子。
 
-*result*<br/>
+*結果*\
 変更された要素シーケンスのコピー先ターゲット範囲の、最初の要素を指定する出力反復子。
 
-*_OldVal*<br/>
+*_OldVal*\
 置き換えられる要素の古い値。
 
-*_NewVal*<br/>
+*_NewVal*\
 古い値を持つ要素に割り当てられる新しい値。
 
 ### <a name="return-value"></a>戻り値
@@ -6184,7 +6702,7 @@ int main() {
 }
 ```
 
-## <a name="replace_copy_if"></a>  replace_copy_if
+## <a name="replace_copy_if"></a> replace_copy_if
 
 ソース範囲内の各要素が指定された述語を満たすかどうかを調べ、満たす場合は置き換えて結果を新しいターゲット範囲にコピーします。
 
@@ -6196,23 +6714,33 @@ OutputIterator replace_copy_if(
     OutputIterator result,
     Predicate pred,
     const Type& val);
+    
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class Predicate, class T>
+ForwardIterator2 replace_copy_if(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first, 
+    ForwardIterator1 last,
+    ForwardIterator2 result,
+    Predicate pred, 
+    const T& new_value);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*first*<br/>
+*まずは*\
 要素が置き換えられる範囲内の最初の要素の位置を指定する入力反復子。
 
-*last*<br/>
+*前の*\
 要素が置き換えられる範囲内の最後の要素の 1 つ後ろの位置を指定する入力反復子。
 
-*result*<br/>
+*結果*\
 要素のコピー先ターゲット範囲内の最初の要素の位置を指し示す出力反復子。
 
-*_Pred*<br/>
+*_Pred*\
 満たす必要のある単項述語は、置き換えられる要素の値です。
 
-*val*<br/>
+*val*\
 古い値が述語を満たす要素に割り当てられている新しい値。
 
 ### <a name="return-value"></a>戻り値
@@ -6293,7 +6821,7 @@ int main() {
 }
 ```
 
-## <a name="replace_if"></a>  replace_if
+## <a name="replace_if"></a> replace_if
 
 範囲内の各要素が指定された述語を満たすかどうかを調べ、満たす場合は置き換えます。
 
@@ -6304,20 +6832,28 @@ void replace_if(
     ForwardIterator last,
     Predicate pred,
     const Type& val);
+    
+template<class ExecutionPolicy, class ForwardIterator, class Predicate, class T>
+void replace_if(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last,
+    Predicate pred, 
+    const T& new_value);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*first*<br/>
+*まずは*\
 要素が置き換えられる範囲内の最初の要素の位置を指定する前方反復子。
 
-*last*<br/>
+*前の*\
 要素が置き換えられる範囲内の最後の要素の 1 つ後ろの位置を指定する反復子。
 
-*_Pred*<br/>
+*_Pred*\
 満たす必要のある単項述語は、置き換えられる要素の値です。
 
-*val*<br/>
+*val*\
 古い値が述語を満たす要素に割り当てられている新しい値。
 
 ### <a name="remarks"></a>Remarks
@@ -6376,21 +6912,27 @@ int main() {
 }
 ```
 
-## <a name="reverse"></a>  reverse
+## <a name="reverse"></a> 反転
 
 範囲内の要素の順序を反転させます。
 
 ```cpp
 template<class BidirectionalIterator>
 void reverse(BidirectionalIterator first, BidirectionalIterator last);
+
+template<class ExecutionPolicy, class BidirectionalIterator>
+void reverse(
+    ExecutionPolicy&& exec,
+    BidirectionalIterator first, 
+    BidirectionalIterator last);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*first*<br/>
+*まずは*\
 要素の順序を変える範囲内の最初の要素の位置を指し示す双方向反復子。
 
-*last*<br/>
+*前の*\
 要素の順序を変える範囲内の、最後の要素の 1 つ後ろの位置を指し示す入力反復子。
 
 ### <a name="remarks"></a>Remarks
@@ -6439,7 +6981,7 @@ The modified vector v1 with values reversed is:
 ( 9 8 7 6 5 4 3 2 1 0 ).
 ```
 
-## <a name="reverse_copy"></a>  reverse_copy
+## <a name="reverse_copy"></a> reverse_copy
 
 ソース範囲内の要素の順序を反転し、結果をターゲット範囲にコピーします。
 
@@ -6449,17 +6991,24 @@ OutputIterator reverse_copy(
     BidirectionalIterator first,
     BidirectionalIterator Last,
     OutputIterator result);
+    
+template<class ExecutionPolicy, class BidirectionalIterator, class ForwardIterator>
+ForwardIterator reverse_copy(
+    ExecutionPolicy&& exec,
+    BidirectionalIterator first,
+    BidirectionalIterator last,
+    ForwardIterator result);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*first*<br/>
+*まずは*\
 要素の順序を変えるソース範囲内の最初の要素の位置を指し示す双方向反復子。
 
-*last*<br/>
+*前の*\
 要素の順序を変えるソース範囲内の、最後の要素の 1 つ後ろの位置を指し示す入力反復子。
 
-*result*<br/>
+*結果*\
 要素のコピー先ターゲット範囲内の最初の要素の位置を指し示す出力反復子。
 
 ### <a name="return-value"></a>戻り値
@@ -6510,7 +7059,7 @@ int main() {
 }
 ```
 
-## <a name="rotate"></a>  rotate
+## <a name="rotate"></a> 回転
 
 2 つの隣接する範囲の要素を交換します。
 
@@ -6520,17 +7069,24 @@ void rotate(
     ForwardIterator first,
     ForwardIterator middle,
     ForwardIterator last);
+    
+template<class ExecutionPolicy, class ForwardIterator>
+ForwardIterator rotate(
+    ExecutionPolicy&& exec,
+    ForwardIterator first,
+    ForwardIterator middle,
+    ForwardIterator last);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*first*<br/>
+*まずは*\
 回転対象の範囲内の最初の要素の位置を示す前方反復子。
 
-*中間*<br/>
+*中間*\
 範囲の境界を定義する前方反復子。範囲の最初の部分にある要素と交換される要素が含まれる 2 番目の部分の最初の要素の位置を示します。
 
-*Last*<br/>
+*前の*\
 回転対象の範囲内の最後の要素の 1 つ後ろの位置を示す前方反復子。
 
 ### <a name="remarks"></a>Remarks
@@ -6614,7 +7170,7 @@ After the rotation of a single deque element to the back,
 d1 is   ( 0 1 2 3 4 5 ).
 ```
 
-## <a name="rotate_copy"></a>  rotate_copy
+## <a name="rotate_copy"></a> rotate_copy
 
 ソース範囲内の 2 つの隣接する範囲の要素を交換し、結果をターゲット範囲にコピーします。
 
@@ -6625,19 +7181,28 @@ OutputIterator rotate_copy(
     ForwardIterator middle,
     ForwardIterator last,
     OutputIterator result );
+    
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
+ForwardIterator2 rotate_copy(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first, 
+    ForwardIterator1 middle,
+    ForwardIterator1 last, 
+    ForwardIterator2 result);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*first*<br/>
+*まずは*\
 回転対象の範囲内の最初の要素の位置を示す前方反復子。
 
-*中間*<br/>
+*中間*\
 範囲の境界を定義する前方反復子。範囲の最初の部分にある要素と交換される要素が含まれる 2 番目の部分の最初の要素の位置を示します。
 
-_*最後*回転する前方反復子の位置を示す過去の最後の要素範囲内です。
+*前の*\
+回転対象の範囲内の最後の要素の 1 つ後ろの位置を示す前方反復子。
 
-*result*<br/>
+*結果*\
 ターゲット範囲の最初の要素の位置を示す出力反復子。
 
 ### <a name="return-value"></a>戻り値
@@ -6709,7 +7274,17 @@ int main() {
 }
 ```
 
-## <a name="search"></a>  search
+## <a name="sample"></a> サンプル
+
+```cpp
+template<class PopulationIterator, class SampleIterator,
+class Distance, class UniformRandomBitGenerator>
+SampleIterator sample(PopulationIterator first, PopulationIterator last,
+SampleIterator out, Distance n,
+UniformRandomBitGenerator&& g);
+```
+
+## <a name="search"></a> 検索
 
 要素が特定の要素シーケンス内の要素と等しいか、または要素が二項述語で指定される意味において特定のシーケンス内の要素と等価であるシーケンスが、対象範囲内で最初に出現する位置を検索します。
 
@@ -6728,23 +7303,47 @@ ForwardIterator1 search(
     ForwardIterator2 first2,
     ForwardIterator2 last2
     Predicate comp);
+    
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
+ForwardIterator1 search(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2);
+    
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class BinaryPredicate>
+ForwardIterator1 search(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2,
+    BinaryPredicate pred);
+    
+template <class ForwardIterator, class Searcher>
+ForwardIterator search(
+    ForwardIterator first, 
+    ForwardIterator last,
+    const Searcher& searcher);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*first1*<br/>
+*first1*\
 検索範囲内の先頭の要素の位置を示す前方反復子。
 
-*last1*<br/>
+*last1*\
 検索範囲の最後の要素の 1 つ後ろの位置を示す前方反復子。
 
-*first2*<br/>
+*first2*\
 照合範囲内の先頭の要素の位置を示す前方反復子。
 
-*last2*<br/>
+*last2*\
 照合範囲の最後の要素の 1 つ後ろの位置を示す前方反復子。
 
-*comp*<br/>
+*コンポジション*\
 2 つの要素が等価であると見なされた場合に条件が満たされると定義する、ユーザー定義の述語関数オブジェクト。 二項述語は 2 つの引数を受け取り、条件が満たされている場合は **true** 、満たされていない場合は **false** を返します。
 
 ### <a name="return-value"></a>戻り値
@@ -6857,7 +7456,7 @@ to those in v2 under the binary predicate twice
 and the first one begins at position 2.
 ```
 
-## <a name="search_n"></a>  search_n
+## <a name="search_n"></a> search_n
 
 特定の値を持つか、二項述語によって指定される値と関連する、指定された数の要素で構成される範囲内の最初のサブシーケンスを検索します。
 
@@ -6876,23 +7475,40 @@ ForwardIterator1 search_n(
     Diff2 count,
     const Type& val,
     BinaryPredicate comp);
+    
+template<class ExecutionPolicy, class ForwardIterator, class Size, class T>
+ForwardIterator search_n(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last,
+    Size count, const T& value);
+
+template<class ExecutionPolicy, class ForwardIterator, class Size, class T,
+class BinaryPredicate>
+ForwardIterator search_n(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last,
+    Size count, 
+    const T& value,
+    BinaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*first1*<br/>
+*first1*\
 検索範囲内の先頭の要素の位置を示す前方反復子。
 
-*last1*<br/>
+*last1*\
 検索範囲の最後の要素の 1 つ後ろの位置を示す前方反復子。
 
-*count*<br/>
+*カウント*\
 検索対象のサブシーケンスのサイズ。
 
-*val*<br/>
+*val*\
 検索対象のシーケンス内の要素の値。
 
-*comp*<br/>
+*コンポジション*\
 2 つの要素が等価であると見なされた場合に条件が満たされると定義する、ユーザー定義の述語関数オブジェクト。 二項述語は 2 つの引数を受け取り、条件が満たされている場合は **true** 、満たされていない場合は **false** を返します。
 
 ### <a name="return-value"></a>戻り値
@@ -6990,7 +7606,7 @@ There is a match of a sequence ( 5 5 5 ) under the equivalence
 predicate one_half in v1 and the first one begins at position 15.
 ```
 
-## <a name="set_difference"></a>  set_difference
+## <a name="set_difference"></a> set_difference
 
 1 つの並べ替えられたソース範囲内に属するが、2 番目の並べ替えられたソース範囲には属さないすべての要素を単一の並べ替えられたターゲット範囲として結合します。順序の基準は二項述語によって指定できます。
 
@@ -7011,26 +7627,47 @@ OutputIterator set_difference(
     InputIterator2  last2,
     OutputIterator  result,
     BinaryPredicate  comp );
+    
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class ForwardIterator>
+ForwardIterator set_difference(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2,
+    ForwardIterator result);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class ForwardIterator, class Compare>
+ForwardIterator set_difference(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2,
+    ForwardIterator result, 
+    Compare comp);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*first1*<br/>
+*first1*\
 2 つのソース範囲の差を表すために単一の範囲に結合され並べ替えられる 2 つの並べ替え済みソース範囲の、最初の範囲の最初の要素の位置を示す入力反復子。
 
-*last1*<br/>
+*last1*\
 2 つのソース範囲の差を表すために単一の範囲に結合され並べ替えられる 2 つの並べ替え済みソース範囲の、最初の範囲の最後の要素の 1 つ後ろの位置を示す入力反復子。
 
-*first2*<br/>
+*first2*\
 2 つのソース範囲の差を表すために単一の範囲に結合され並べ替えられる 2 つの連続する並べ替え済みソース範囲の、2 番目の範囲の最初の要素の位置を示す入力反復子。
 
-*last2*<br/>
+*last2*\
 2 つのソース範囲の差を表すために単一の範囲に結合され並べ替えられる 2 つの連続する並べ替え済みソース範囲の、2 番目の範囲の最後の要素の 1 つ後ろの位置を示す入力反復子。
 
-*result*<br/>
+*結果*\
 2 つのソース範囲の差を表すために 2 つのソース範囲が単一の並べ替え済みの範囲に結合されるターゲット範囲の、最初の要素の位置を示す出力反復子。
 
-*comp*<br/>
+*コンポジション*\
 1 つの要素が別の要素より大きいという意味を定義するユーザー定義の述語関数オブジェクト。 2 項述語は 2 つの引数を受け取り、最初の要素が 2 番目の要素より小さい場合は **true** 、そうでない場合は **false** を返す必要があります。
 
 ### <a name="return-value"></a>戻り値
@@ -7170,7 +7807,7 @@ int main()
 }
 ```
 
-## <a name="set_intersection"></a>  set_intersection
+## <a name="set_intersection"></a> set_intersection
 
 両方の並べ替えられたソース範囲に属するすべての要素を単一の並べ替えられたターゲット範囲として結合します。順序の基準は二項述語によって指定できます。
 
@@ -7191,25 +7828,46 @@ OutputIterator set_intersection(
     InputIterator2 last2,
     OutputIterator result,
     BinaryPredicate comp );
+    
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class ForwardIterator>
+ForwardIterator set_intersection(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2,
+    ForwardIterator result);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class ForwardIterator, class Compare>
+ForwardIterator set_intersection(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2,
+    ForwardIterator result, 
+    Compare comp);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*first1*<br/>
+*first1*\
 2 つのソース範囲の交差を表すために単一の範囲に結合され並べ替えられる 2 つの並べ替え済みソース範囲の、最初の範囲の最初の要素の位置を示す入力反復子。
 
-*last1*<br/>
+*last1*\
 2 つのソース範囲の交差を表すために単一の範囲に結合され並べ替えられる 2 つの並べ替え済みソース範囲の、最初の範囲の最後の要素の 1 つ後ろの位置を示す入力反復子。
 
-*first2*<br/>
+*first2*\
 2 つのソース範囲の交差を表すために単一の範囲に結合され並べ替えられる 2 つの連続する並べ替え済みソース範囲の、2 番目の範囲の最初の要素の位置を示す入力反復子。
 
-*last2*<br/>
+*last2*\
 2 つのソース範囲の交差を表すために単一の範囲に結合され並べ替えられる 2 つの連続する並べ替え済みソース範囲の、2 番目の範囲の最後の要素の 1 つ後ろの位置を示す入力反復子。
 
 **_** *結果*2 つのソース範囲のターゲット範囲の最初の要素の位置を示す出力反復子が 2 つのソースの交差を表す単一の並べ替えられた範囲に結合範囲です。
 
-*comp*<br/>
+*コンポジション*\
 1 つの要素が別の要素より大きいという意味を定義するユーザー定義の述語関数オブジェクト。 2 項述語は 2 つの引数を受け取り、最初の要素が 2 番目の要素より小さい場合は **true** 、そうでない場合は **false** を返す必要があります。
 
 ### <a name="return-value"></a>戻り値
@@ -7343,7 +8001,7 @@ int main() {
 }
 ```
 
-## <a name="set_symmetric_difference"></a>  set_symmetric_difference
+## <a name="set_symmetric_difference"></a> set_symmetric_difference
 
 並べ替えられたソース範囲の一方には属するが、両方には属さないすべての要素を単一の並べ替えられたターゲット範囲として結合します。順序の基準は二項述語によって指定できます。
 
@@ -7364,20 +8022,41 @@ OutputIterator set_symmetric_difference(
     InputIterator2 last2,
     OutputIterator result,
     BinaryPredicate comp );
+    
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class ForwardIterator>
+ForwardIterator set_symmetric_difference(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2,
+    ForwardIterator result);
+    
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class ForwardIterator, class Compare>
+ForwardIterator set_symmetric_difference(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2,
+    ForwardIterator result, 
+    Compare comp);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*first1*<br/>
+*first1*\
 2 つのソース範囲の対称差を表すために単一の範囲に結合され並べ替えられる 2 つの並べ替え済みソース範囲の、最初の範囲の最初の要素の位置を示す入力反復子。
 
-*last1*<br/>
+*last1*\
 2 つのソース範囲の対称差を表すために単一の範囲に結合され並べ替えられる 2 つの並べ替え済みソース範囲の、最初の範囲の最後の要素の 1 つ後ろの位置を示す入力反復子。
 
-*first2*<br/>
+*first2*\
 2 つのソース範囲の対称差を表すために単一の範囲に結合され並べ替えられる 2 つの連続する並べ替え済みソース範囲の、2 番目の範囲の最初の要素の位置を示す入力反復子。
 
-*last2*<br/>
+*last2*\
 2 つのソース範囲の対称差を表すために単一の範囲に結合され並べ替えられる 2 つの連続する並べ替え済みソース範囲の、2 番目の範囲の最後の要素の 1 つ後ろの位置を示す入力反復子。
 
 **_** *結果*2 つのソース範囲のターゲット範囲の最初の要素の位置を示す出力反復子が 2 つの対称差を表す単一の並べ替えられた範囲に結合ソースの範囲です。
@@ -7522,7 +8201,7 @@ int main()
 }
 ```
 
-## <a name="set_union"></a>  set_union
+## <a name="set_union"></a> set_union
 
 2 つの並べ替えられたソース範囲の少なくとも一方に属するすべての要素を単一の並べ替えられたターゲット範囲として結合します。順序の基準は二項述語によって指定できます。
 
@@ -7543,20 +8222,41 @@ OutputIterator set_union(
     InputIterator2 last2,
     OutputIterator result,
     BinaryPredicate comp );
+    
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class ForwardIterator>
+ForwardIterator set_union(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2,
+    ForwardIterator result);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class ForwardIterator, class Compare>
+ForwardIterator set_union(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2,
+    ForwardIterator result, 
+    Compare comp);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*first1*<br/>
+*first1*\
 2 つのソース範囲の和集合を表すために単一の範囲に結合され並べ替えられる 2 つの並べ替え済みソース範囲の、最初の範囲の最初の要素の位置を示す入力反復子。
 
-*last1*<br/>
+*last1*\
 2 つのソース範囲の和集合を表すために単一の範囲に結合され並べ替えられる 2 つの並べ替え済みソース範囲の、最初の範囲の最後の要素の 1 つ後ろの位置を示す入力反復子。
 
-*first2*<br/>
+*first2*\
 2 つのソース範囲の和集合を表すために単一の範囲に結合され並べ替えられる 2 つの連続する並べ替え済みソース範囲の、2 番目の範囲の最初の要素の位置を示す入力反復子。
 
-*last2*<br/>
+*last2*\
 2 つのソース範囲の和集合を表すために単一の範囲に結合され並べ替えられる 2 つの連続する並べ替え済みソース範囲の、2 番目の範囲の最後の要素の 1 つ後ろの位置を示す入力反復子。
 
 **_** *結果*2 つのソース範囲のターゲット範囲の最初の要素の位置を示す出力反復子が 2 つのソース範囲の和集合を表す単一の並べ替えられた範囲に結合します。
@@ -7701,7 +8401,7 @@ int main()
 }
 ```
 
-## <a name="shuffle"></a>  shuffle
+## <a name="shuffle"></a> シャッフル
 
 乱数ジェネレーターを使用して、指定された範囲の要素をシャッフル (再配置) します。
 
@@ -7714,20 +8414,20 @@ void shuffle(RandomAccessIterator first,
 
 ### <a name="parameters"></a>パラメーター
 
-*first*<br/>
+*まずは*\
 シャッフルされる範囲 (境界を含む) の最初の要素に対する反復子。 `RandomAccessIterator` および `ValueSwappable` の要件を満たしている必要があります。
 
-*last*<br/>
+*前の*\
 シャッフルされる範囲 (境界を含まない) の最後の要素に対する反復子。 `RandomAccessIterator` および `ValueSwappable` の要件を満たしている必要があります。
 
-*gen*<br/>
+*汎用*\
 `shuffle()` 関数が操作で使用する乱数ジェネレーター。 `UniformRandomNumberGenerator` の要件を満たしている必要があります。
 
 ### <a name="remarks"></a>Remarks
 
 `shuffle()` を使用するコード サンプルの詳細については、「[\<random>](../standard-library/random.md)」を参照してください。
 
-## <a name="sort"></a>  sort
+## <a name="sort"></a> 並べ替え
 
 指定された範囲の要素を、降順以外の順序、または二項述語で指定された順序の基準に従って配置します。
 
@@ -7742,17 +8442,30 @@ template<class RandomAccessIterator, class Predicate>
       RandomAccessIterator first,
       RandomAccessIterator last,
       Predicate comp);
+      
+template<class ExecutionPolicy, class RandomAccessIterator>
+void sort(
+    ExecutionPolicy&& exec,
+    RandomAccessIterator first, 
+    RandomAccessIterator last);
+
+template<class ExecutionPolicy, class RandomAccessIterator, class Compare>
+void sort(
+    ExecutionPolicy&& exec,
+    RandomAccessIterator first, 
+    RandomAccessIterator last,
+    Compare comp);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*first*<br/>
+*まずは*\
 並べ替えられる範囲内の最初の要素の位置を示すランダム アクセス反復子。
 
-*last*<br/>
+*前の*\
 並べ替えられる範囲内の最後の要素の 1 つ後ろの位置を示すランダム アクセス反復子。
 
-*comp*<br/>
+*コンポジション*\
 順序内の次の要素によって満たされる比較条件を定義するユーザー定義の述語関数オブジェクト。 この二項述語は 2 つの引数を受け取りし、返します**true**場合は、2 つの引数が順番と**false**それ以外の場合。 この比較子関数は、シーケンスからの要素のペアで厳密弱順序を強制する必要があります。 詳細については、「[アルゴリズム](../standard-library/algorithms.md)」を参照してください。
 
 ### <a name="remarks"></a>Remarks
@@ -7831,7 +8544,7 @@ Resorted (greater) vector v1 = ( 11 10 9 8 7 6 5 4 3 2 1 0 )
 Resorted (UDgreater) vector v1 = ( 11 10 9 8 7 6 5 4 3 2 1 0 )
 ```
 
-## <a name="sort_heap"></a>  sort_heap
+## <a name="sort_heap"></a> sort_heap
 
 ヒープを並べ替えられた範囲に変換します。
 
@@ -7850,13 +8563,13 @@ template<class RandomAccessIterator, class Predicate>
 
 ### <a name="parameters"></a>パラメーター
 
-*first*<br/>
+*まずは*\
 ターゲット ヒープ内の最初の要素の位置を示すランダム アクセス反復子。
 
-*last*<br/>
+*前の*\
 ターゲット ヒープ内の最後の要素の 1 つ後ろの位置を示すランダム アクセス反復子。
 
-*comp*<br/>
+*コンポジション*\
 1 つの要素が別の要素より小さいという意味を定義するユーザー定義の述語関数オブジェクト。 二項述語は 2 つの引数を受け取り、条件が満たされている場合は **true** 、満たされていない場合は **false** を返します。
 
 ### <a name="remarks"></a>Remarks
@@ -7927,7 +8640,7 @@ int main() {
 }
 ```
 
-## <a name="stable_partition"></a>  stable_partition
+## <a name="stable_partition"></a> stable_partition
 
 範囲内の要素を 2 つの分離されたセットに分類し、等価要素の相対順序は維持して、単項述語を満たす要素が単項述語を満たさない要素よりも前に来るように配置します。
 
@@ -7937,17 +8650,24 @@ BidirectionalIterator stable_partition(
     BidirectionalIterator first,
     BidirectionalIterator last,
     Predicate pred );
+    
+template<class ExecutionPolicy, class BidirectionalIterator, class Predicate>
+BidirectionalIterator stable_partition(
+    ExecutionPolicy&& exec,
+    BidirectionalIterator first,
+    BidirectionalIterator last,
+    Predicate pred);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*first*<br/>
+*まずは*\
 パーティション分割される範囲内の最初の要素の位置を示す双方向反復子。
 
-*last*<br/>
+*前の*\
 パーティション分割される範囲内の最後の要素の 1 つ後ろの位置を示す双方向反復子。
 
-*_Pred*<br/>
+*_Pred*\
 要素が分類される場合に満たされる条件を定義するユーザー定義の述語関数オブジェクト。 述語は 1 つの引数を取り、**true** または **false** を返します。
 
 ### <a name="return-value"></a>戻り値
@@ -8005,7 +8725,7 @@ int main() {
 }
 ```
 
-## <a name="stable_sort"></a>  stable_sort
+## <a name="stable_sort"></a> stable_sort
 
 指定された範囲の要素を、降順以外の順序、または二項述語で指定された順序の基準に従って、等価要素の相対順序を維持して配置します。
 
@@ -8018,17 +8738,30 @@ void stable_sort(
     BidirectionalIterator first,
     BidirectionalIterator last,
     BinaryPredicate comp );
+    
+template<class ExecutionPolicy, class RandomAccessIterator>
+void stable_sort(
+    ExecutionPolicy&& exec,
+    RandomAccessIterator first, 
+    RandomAccessIterator last);
+
+template<class ExecutionPolicy, class RandomAccessIterator, class Compare>
+void stable_sort(
+    ExecutionPolicy&& exec,
+    RandomAccessIterator first, 
+    RandomAccessIterator last,
+    Compare comp);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*first*<br/>
+*まずは*\
 並べ替えられる範囲内の最初の要素の位置を示す双方向反復子。
 
-*last*<br/>
+*前の*\
 並べ替えられる範囲内の最後の要素の 1 つ後ろの位置を示す双方向反復子。
 
-*comp*<br/>
+*コンポジション*\
 順序内の次の要素によって満たされる比較条件を定義するユーザー定義の述語関数オブジェクト。 二項述語は 2 つの引数を受け取り、条件が満たされている場合は **true** 、満たされていない場合は **false** を返します。
 
 ### <a name="remarks"></a>Remarks
@@ -8106,7 +8839,7 @@ Resorted (greater) vector v1 = ( 10 10 8 8 6 6 4 4 2 2 0 0 )
 Resorted (UDgreater) vector v1 = ( 10 10 8 8 6 6 4 4 2 2 0 0 )
 ```
 
-## <a name="swap"></a>  swap
+## <a name="swap"></a> スワップ
 
 最初のオーバーライドは 2 つのオブジェクトの値を交換します。 2 番目のオーバーライドは、オブジェクトの 2 つの配列間で値を交換します。
 
@@ -8123,10 +8856,10 @@ template<class Type, size_t N>
 
 ### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左*\
 最初のオーバーライドでは、最初のオブジェクトがそのコンテンツを交換させます。 2 番目のオーバーライドでは、オブジェクトの最初の配列がそのコンテンツを交換させます。
 
-*right*<br/>
+*そうです*\
 最初のオーバーライドでは、2 番目のオブジェクトがそのコンテンツを交換させます。 2 番目のオーバーライドでは、オブジェクトの 2 番目の配列がそのコンテンツを交換させます。
 
 ### <a name="remarks"></a>Remarks
@@ -8189,7 +8922,7 @@ Vector v1 is ( 5 5 5 5 5 ).
 Vector v2 is ( 0 1 2 3 4 5 6 7 8 9 10 ).
 ```
 
-## <a name="swap_ranges"></a>  swap_ranges
+## <a name="swap_ranges"></a> swap_ranges
 
 1 つの範囲の要素を、同じサイズの別の範囲の要素と交換します。
 
@@ -8199,17 +8932,24 @@ ForwardIterator2 swap_ranges(
    ForwardIterator1 first1,
    ForwardIterator1 last1,
    ForwardIterator2 first2 );
+   
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
+ForwardIterator2 swap_ranges(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*first1*<br/>
+*first1*\
 要素が交換される最初の範囲の最初の位置を指す前方反復子。
 
-*last1*<br/>
+*last1*\
 要素が交換される最初の範囲の最後の位置の 1 つ後ろを指す前方反復子。
 
-*first2*<br/>
+*first2*\
 要素が交換される 2 番目の範囲の最初の位置を指す前方反復子。
 
 ### <a name="return-value"></a>戻り値
@@ -8283,7 +9023,7 @@ After the swap_range, vector v1 is ( 6 6 6 6 6 6 ).
 After the swap_range deque d1 is   ( 0 1 2 3 4 5 ).
 ```
 
-## <a name="transform"></a>  transform
+## <a name="transform"></a> 変換
 
 指定された関数オブジェクトをソース範囲内の各要素、または 2 つのソース範囲内の要素のペアに適用し、関数オブジェクトの戻り値をターゲット範囲にコピーします。
 
@@ -8302,23 +9042,42 @@ OutputIterator transform(
     InputIterator2 first2,
     OutputIterator result,
     BinaryFunction func );
+    
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class UnaryOperation>
+ForwardIterator2 transform(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first, 
+    ForwardIterator1 last,
+    ForwardIterator2 result, 
+    UnaryOperation op);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class ForwardIterator, class BinaryOperation>
+ForwardIterator transform(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator result,
+    BinaryOperation binary_op);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*first1*<br/>
+*first1*\
 操作する最初のソース範囲内の最初の要素の位置を示す入力反復子。
 
-*last1*<br/>
+*last1*\
 操作する最初のソース範囲内の最後の要素の 1 つ後ろの位置を示す入力反復子。
 
-*first2*<br/>
+*first2*\
 操作する 2 番目のソース範囲内の最初の要素の位置を示す入力反復子。
 
-*result*<br/>
+*結果*\
 ターゲット範囲の最初の要素の位置を示す出力反復子。
 
-*_Func*<br/>
+*_Func*\
 最初のソース範囲内の各要素に適用されるアルゴリズムの最初のバージョンで使用されるユーザー定義の単項関数オブジェクト、または順方向順序で 2 つのソース範囲内にペアで適用されるアルゴリズムの 2 番目のバージョンで使用されるユーザー定義 (UD) の二項関数オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -8420,7 +9179,7 @@ Multiplying elements of the vectors v1mod and v2 pairwise gives:
 v3 = ( 320 180 80 20 0 20 80 ).
 ```
 
-## <a name="unique"></a>  unique
+## <a name="unique"></a> 一意
 
 指定された範囲内の互いに隣接する重複要素を削除します。
 
@@ -8435,17 +9194,30 @@ template<class ForwardIterator, class Predicate>
       ForwardIterator first,
       ForwardIterator last,
       Predicate comp);
+      
+template<class ExecutionPolicy, class ForwardIterator>
+ForwardIterator unique(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last);
+
+template<class ExecutionPolicy, class ForwardIterator, class BinaryPredicate>
+ForwardIterator unique(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last,
+    BinaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*first*<br/>
+*まずは*\
 重複削除のスキャン範囲内の先頭の要素の位置を示す前方反復子。
 
-*last*<br/>
+*前の*\
 重複削除のスキャン範囲内の最後の要素の 1 つ後ろの位置を示す前方反復子。
 
-*comp*<br/>
+*コンポジション*\
 2 つの要素が等価であると見なされた場合に条件が満たされると定義する、ユーザー定義の述語関数オブジェクト。 二項述語は 2 つの引数を受け取り、条件が満たされている場合は **true** 、満たされていない場合は **false** を返します。
 
 ### <a name="return-value"></a>戻り値
@@ -8553,7 +9325,7 @@ Removing adjacent elements satisfying the binary
   predicate mod_equal from vector v1 gives ( 5 7 ).
 ```
 
-## <a name="unique_copy"></a>  unique_copy
+## <a name="unique_copy"></a> unique_copy
 
 互いに隣接する重複要素を除き、ソース範囲の要素をターゲット範囲にコピーします。
 
@@ -8568,20 +9340,34 @@ OutputIterator unique_copy( InputIterator first,
     InputIterator last,
     OutputIterator result,
     BinaryPredicate comp );
+    
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
+ForwardIterator2 unique_copy(ExecutionPolicy&& exec,
+    ForwardIterator1 first, 
+    ForwardIterator1 last,
+    ForwardIterator2 result);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class BinaryPredicate>
+ForwardIterator2 unique_copy(ExecutionPolicy&& exec,
+    ForwardIterator1 first, 
+    ForwardIterator1 last,
+    ForwardIterator2 result, 
+    BinaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*first*<br/>
+*まずは*\
 ソース範囲内のコピーする最初の要素の位置を示す前方反復子。
 
-*last*<br/>
+*前の*\
 ソース範囲内のコピーする最後の要素の 1 つ後ろの位置を示す前方反復子。
 
-*result*<br/>
+*結果*\
 連続する重複が削除されたコピーを受け取るターゲット範囲の最初の要素の位置を示す出力反復子。
 
-*comp*<br/>
+*コンポジション*\
 2 つの要素が等価であると見なされた場合に条件が満たされると定義する、ユーザー定義の述語関数オブジェクト。 二項述語は 2 つの引数を受け取り、条件が満たされている場合は **true** 、満たされていない場合は **false** を返します。
 
 ### <a name="return-value"></a>戻り値
@@ -8670,7 +9456,7 @@ int main() {
 }
 ```
 
-## <a name="upper_bound"></a>  upper_bound
+## <a name="upper_bound"></a> upper_bound
 
 順序の基準が二項述語で指定できる場合に、順序付けられた範囲内で、指定した値を超える値を持つ最初の要素の位置を検索します。
 
@@ -8691,16 +9477,16 @@ template<class ForwardIterator, class Type, class Predicate>
 
 ### <a name="parameters"></a>パラメーター
 
-*first*<br/>
+*まずは*\
 検索する要素範囲内の最初の要素の位置。
 
-*last*<br/>
+*前の*\
 検索する要素範囲内の最後の要素の 1 つ後ろの位置。
 
-*value*<br/>
+*value*\
 返された反復子によってアドレス指定される要素の値が超える必要がある、順序付けられた範囲内の値。
 
-*comp*<br/>
+*コンポジション*\
 1 つの要素が別の要素より小さいという意味を定義するユーザー定義の述語関数オブジェクト。 二項述語は 2 つの引数を受け取り、条件が満たされている場合は **true** 、満たされていない場合は **false** を返します。
 
 ### <a name="return-value"></a>戻り値
@@ -8808,7 +9594,3 @@ int main()
         << *Result << "." << endl;
 }
 ```
-
-## <a name="see-also"></a>関連項目
-
-[\<algorithm>](../standard-library/algorithm.md)<br/>

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - const_mem_fun1_t class
 ms.assetid: 250fac30-9663-4133-9051-6303f76ea259
-ms.openlocfilehash: df984d90f8b632f8e3e3b183943343952d45b8be
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8ccd9d7e58b9cadec83b64df5553564db20a5745
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62211976"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244525"
 ---
 # <a name="constmemfun1t-class"></a>const_mem_fun1_t クラス
 
@@ -30,13 +30,13 @@ class const_mem_fun1_t : public binary_function<const Type *, Arg, Result>
 
 ### <a name="parameters"></a>パラメーター
 
-*member_ptr*<br/>
+*member_ptr*\
 関数オブジェクトに変換されるクラス `Type` のメンバー関数へのポインター。
 
-*left*<br/>
+*左*\
 **Const**オブジェクトを*member_ptr*でメンバー関数が呼び出されます。
 
-*right*<br/>
+*そうです*\
 渡される引数*member_ptr*します。
 
 ## <a name="return-value"></a>戻り値
@@ -50,14 +50,3 @@ class const_mem_fun1_t : public binary_function<const Type *, Arg, Result>
 ## <a name="example"></a>例
 
 `const_mem_fun1_t` のコンストラクターが直接使用されることはほとんどありません。 `mem_fn` メンバー関数の調整に使用されます。 参照してください[mem_fn](../standard-library/functional-functions.md#mem_fn)メンバー関数アダプターを使用する方法の例についてはします。
-
-## <a name="requirements"></a>必要条件
-
-**ヘッダー:** \<functional>
-
-**名前空間:** std
-
-## <a name="see-also"></a>関連項目
-
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)<br/>

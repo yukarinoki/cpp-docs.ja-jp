@@ -4,12 +4,12 @@ ms.date: 09/10/2018
 f1_keywords:
 - filesystem/std::experimental::filesystem::filesystem_error
 ms.assetid: c53aac27-c1fa-43e4-8967-48ea8ba1f172
-ms.openlocfilehash: add1e0da43a44c35f39c96e8d65e36aeea0d3afb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c3dbfc080f0a1494950016f42189d932be05b0f1
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405158"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240740"
 ---
 # <a name="filesystemerror-class"></a>filesystem_error クラス
 
@@ -25,15 +25,17 @@ class filesystem_error    : public system_error;
 
 このクラスは、\<filesystem> 関数のエラーを報告するためにスローされる例外すべてに対する基底クラスとして機能します。 型のオブジェクトを格納します`string`という`mymesg`説明の目的でここをクリックします。 型の 2 つのオブジェクトも格納`path`という`mypval1`と`mypval2`します。
 
+## <a name="members"></a>メンバー
+
 ### <a name="constructors"></a>コンストラクター
 
-|コンストラクター|説明|
+|||
 |-|-|
 |[filesystem_error](#filesystem_error)|構築、`filesystem_error`メッセージ。|
 
-### <a name="member-functions"></a>メンバー関数
+### <a name="functions"></a>関数
 
-|メンバー関数|説明|
+|||
 |-|-|
 |[path1](#path1)|`mypval1` を返します。|
 |[path2](#path2)|`mypval2` を返します。|
@@ -45,7 +47,7 @@ class filesystem_error    : public system_error;
 
 **名前空間:** std::experimental::filesystem
 
-## <a name="filesystem_error"></a> filesystem_error::filesystem_error
+## <a name="filesystem_error"></a> filesystem_error
 
 最初のコンス トラクターからメッセージを構築する*what_arg*と*ec*します。 2 番目のコンス トラクターもからメッセージを構築*pval1*に格納している`mypval1`します。 3 番目のコンス トラクターもからメッセージを構築*pval1*に格納している`mypval1`との間*pval2*に格納している`mypval2`します。
 
@@ -65,19 +67,19 @@ filesystem_error(const string& what_arg,
 
 ### <a name="parameters"></a>パラメーター
 
-*what_arg*<br/>
+*what_arg*\
 指定したメッセージ。
 
-*ec*<br/>
+*ec*\
 エラー コードを指定します。
 
-*mypval1*<br/>
+*mypval1*\
 さらに指定したメッセージのパラメーター。
 
-*mypval2*<br/>
+*mypval2*\
 さらに指定したメッセージのパラメーター。
 
-## <a name="path1"></a> filesystem_error::path1
+## <a name="path1"></a> path1
 
 このメンバー関数は、`mypval1` を返します。
 
@@ -85,7 +87,7 @@ filesystem_error(const string& what_arg,
 const path& path1() const noexcept;
 ```
 
-## <a name="path2"></a> filesystem_error::path2
+## <a name="path2"></a> path2
 
 このメンバー関数は、`mypval2` を返します。
 
@@ -93,17 +95,10 @@ const path& path1() const noexcept;
 const path& path2() const noexcept;
 ```
 
-## <a name="what"></a> filesystem_error::what
+## <a name="what"></a> どのような
 
 このメンバー関数へのポインターを返します、`NTBS`から構成可能であれば、 `runtime_error::what()`、 `system_error::what()`、 `mymesg`、 `mypval1.native_string()`、および`mypval2.native_string()`します。
 
 ```cpp
 const char *what() const noexcept;
 ```
-
-## <a name="see-also"></a>関連項目
-
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)<br/>
-[system_error クラス](../standard-library/system-error-class.md)<br/>
-[\<filesystem>](../standard-library/filesystem.md)<br/>
-[\<exception>](../standard-library/exception.md)<br/>

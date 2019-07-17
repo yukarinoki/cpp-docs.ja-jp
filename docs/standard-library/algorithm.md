@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C++ Standard Library, algorithms
 - <algorithm> header
 ms.assetid: 19f97711-7a67-4a65-8fd1-9a2bd3ca327d
-ms.openlocfilehash: 042523cddf640e7cf6fd7f9a1dac9f3adbc360b6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 36dfca8418cbbabd7dcfb30b2cece483406a5667
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411150"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245956"
 ---
 # <a name="ltalgorithmgt"></a>&lt;algorithm&gt;
 
@@ -24,6 +24,9 @@ ms.locfileid: "62411150"
 ```cpp
 (see relevant links below for specific algorithm syntax)
 ```
+
+> [!NOTE]
+> \<アルゴリズム > ライブラリで使用することも、`#include <initializer_list>`ステートメント。
 
 ## <a name="remarks"></a>Remarks
 
@@ -43,12 +46,13 @@ C++ 標準ライブラリ アルゴリズムは、通常、その目的や要件
 
 ### <a name="function-templates"></a>関数テンプレート
 
-|関数テンプレート|説明|
+|||
 |-|-|
 |[adjacent_find](../standard-library/algorithm-functions.md#adjacent_find)|等しいか、または指定された条件を満たす 2 個の隣接する要素を検索します。|
 |[all_of](../standard-library/algorithm-functions.md#all_of)|返します**true**条件が特定の範囲内の各要素に存在する場合。|
 |[any_of](../standard-library/algorithm-functions.md#any_of)|返します**true**条件が指定された要素の範囲に 1 回以上存在する場合。|
 |[binary_search](../standard-library/algorithm-functions.md#binary_search)|並べ替えられた範囲に、指定された値と等しい要素が存在するか、または二項述語で指定された意味で、指定された値と等価の要素が存在するかどうかをテストします。|
+|[clamp](../standard-library/algorithm-functions.md#clamp)||
 |[copy](../standard-library/algorithm-functions.md#copy)|要素のソース シーケンス全体を繰り返し、順方向の新しい位置を割り当てて、ソース範囲内からターゲットの範囲に要素の値を割り当てます。|
 |[copy_backward](../standard-library/algorithm-functions.md#copy_backward)|要素のソース シーケンス全体を繰り返し、逆方向の新しい位置を割り当てて、ソース範囲内からターゲットの範囲に要素の値を割り当てます。|
 |[copy_if](../standard-library/algorithm-functions.md#copy_if)|テストする特定の範囲内のすべての要素をコピー **true**指定の条件|
@@ -65,6 +69,7 @@ C++ 標準ライブラリ アルゴリズムは、通常、その目的や要件
 |[find_if](../standard-library/algorithm-functions.md#find_if)|範囲内で指定された条件を満たす要素が最初に出現する位置を検索します。|
 |[find_if_not](../standard-library/algorithm-functions.md#find_if_not)|指定された範囲内で条件を満たさない最初の要素を返します。|
 |[for_each](../standard-library/algorithm-functions.md#for_each)|範囲内で順方向順序で各要素に対して指定された関数を適用し、関数オブジェクトを返します。|
+|[for_each_n](../standard-library/algorithm-functions.md#for_each_n)||
 |[generate](../standard-library/algorithm-functions.md#generate)|範囲内の各要素に関数オブジェクトによって生成される値を割り当てます。|
 |[generate_n](../standard-library/algorithm-functions.md#generate_n)|範囲内の指定された数の要素に関数オブジェクトによって生成される値を割り当て、最後に割り当てられた値を 1 つ超えた位置を返します。|
 |[includes](../standard-library/algorithm-functions.md#includes)|1 つの並べ替えられた範囲に、別の並べ替えられた範囲内のすべての要素が含まれるかどうかをテストします。要素間の順序または等価の基準は二項述語によって指定できます。|
@@ -82,7 +87,7 @@ C++ 標準ライブラリ アルゴリズムは、通常、その目的や要件
 |[max](../standard-library/algorithm-functions.md#max)|2 つのオブジェクトを比較し、大きい方のオブジェクトを返します。順序の基準は、二項述語によって指定できます。|
 |[max_element](../standard-library/algorithm-functions.md#max_element)|並べ替え基準をバイナリ述語で指定できる、指定された範囲内の最大の要素の最初の出現箇所を検索します。|
 |[merge](../standard-library/algorithm-functions.md#merge)|2 つの並べ替えられたソース範囲のすべての要素を単一の並べ替えられたターゲット範囲として連結します。順序の基準は二項述語によって指定できます。|
-|[分](../standard-library/algorithm-functions.md#min)|2 つのオブジェクトを比較し、小さい方のオブジェクトを返します。順序の基準は、二項述語によって指定できます。|
+|[min](../standard-library/algorithm-functions.md#min)|2 つのオブジェクトを比較し、小さい方のオブジェクトを返します。順序の基準は、二項述語によって指定できます。|
 |[min_element](../standard-library/algorithm-functions.md#min_element)|指定された範囲内の最小の要素の最初の出現箇所を検索します。順序の基準は二項述語によって指定できます。|
 |[minmax](../standard-library/algorithm-functions.md#minmax)|2 つの入力パラメーターを比較し、それらを昇順のペアとして返します。|
 |[minmax_element](../standard-library/algorithm-functions.md#minmax_element)|[min_element](../standard-library/algorithm-functions.md#min_element) と [max_element](../standard-library/algorithm-functions.md#max_element) によって実行される作業を 1 回の呼び出しで実行します。|
@@ -113,6 +118,7 @@ C++ 標準ライブラリ アルゴリズムは、通常、その目的や要件
 |[reverse_copy](../standard-library/algorithm-functions.md#reverse_copy)|ソース範囲内の要素の順序を反転し、結果をターゲット範囲にコピーします。|
 |[rotate](../standard-library/algorithm-functions.md#rotate)|2 つの隣接する範囲の要素を交換します。|
 |[rotate_copy](../standard-library/algorithm-functions.md#rotate_copy)|ソース範囲内の 2 つの隣接する範囲の要素を交換し、結果をターゲット範囲にコピーします。|
+|[sample](../standard-library/algorithm-functions.md#sample)||
 |[search](../standard-library/algorithm-functions.md#search)|要素が特定の要素シーケンス内の要素と等しいか、または要素が二項述語で指定される意味において特定のシーケンス内の要素と等価であるシーケンスが、対象範囲内で最初に出現する位置を検索します。|
 |[search_n](../standard-library/algorithm-functions.md#search_n)|特定の値を持つか、二項述語によって指定される値と関連する、指定された数の要素で構成される範囲内の最初のサブシーケンスを検索します。|
 |[set_difference](../standard-library/algorithm-functions.md#set_difference)|1 つの並べ替えられたソース範囲内に属するが、2 番目の並べ替えられたソース範囲には属さないすべての要素を単一の並べ替えられたターゲット範囲として結合します。順序の基準は二項述語によって指定できます。|

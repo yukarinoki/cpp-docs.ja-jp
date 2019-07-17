@@ -9,12 +9,12 @@ f1_keywords:
 - filesystem/std::experimental::filesystem::directory_iterator
 - <filesystem>
 ms.assetid: 5005753b-46fa-43e1-8d4e-1b38617d3cfd
-ms.openlocfilehash: 0f397d8b0c39769fde20b6aa50412c979237f70a
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: a44fc3c6c6a37c20e1e1c294929ae3cb15cece58
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220374"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240693"
 ---
 # <a name="ltfilesystemgt"></a>&lt;filesystem&gt;
 
@@ -33,7 +33,7 @@ using namespace std::experimental::filesystem::v1;
 
 このヘッダーは、ホスト オペレーティング システムの 2 つの広範なクラスのいずれかのファイル システムをサポートしています。Microsoft Windows と Posix します。
 
-ほとんどの機能が両方のオペレーティング システムに共通していますが、このドキュメントではそれらの相違点について説明します。 例:
+ほとんどの機能が両方のオペレーティング システムに共通していますが、このドキュメントではそれらの相違点について説明します。 例えば:
 
 - Windows は、c: や \\\network_name などの複数のルート名をサポートします。 ファイル システムはツリーのフォレストで構成され、それぞれのツリーが持つ c:\ や \\\network_name\\ などの独自のルート ディレクトリと現在のディレクトリから相対パス名 (絶対パス名ではないもの) が生成されます。
 
@@ -89,10 +89,12 @@ using namespace std::experimental::filesystem::v1;
 
 詳細およびコード例については、「[ファイル システムのナビゲーション (C++)](../standard-library/file-system-navigation.md)」を参照してください。
 
-## <a name="classes"></a>クラス
+## <a name="members"></a>メンバー
 
-|名前|説明|
-|----------|-----------------|
+### <a name="classes"></a>クラス
+
+|||
+|-|-|
 |[directory_entry クラス](../standard-library/directory-entry-class.md)|`directory_iterator` または `recursive_directory_iterator` で返されるオブジェクトを記述します。また、パスが含まれます。|
 |[directory_iterator クラス](../standard-library/directory-iterator-class.md)|ファイル システム ディレクトリのファイル名をシーケンス処理する入力反復子を表します。|
 |[filesystem_error クラス](../standard-library/filesystem-error-class.md)|低レベル システム オーバーフローをレポートするためにスローされる例外のための基底クラス。|
@@ -100,10 +102,10 @@ using namespace std::experimental::filesystem::v1;
 |[recursive_directory_iterator クラス](../standard-library/recursive-directory-iterator-class.md)|ファイル システム ディレクトリのファイル名をシーケンス処理する入力反復子を表します。 反復子はサブディレクトリに下りることもできます。|
 |[file_status クラス](../standard-library/file-status-class.md)|`file_type`をラップします。|
 
-## <a name="structs"></a>構造体
+### <a name="structs"></a>構造体
 
-|名前|説明|
-|----------|-----------------|
+|||
+|-|-|
 |[space_info 構造体](../standard-library/space-info-structure.md)|ボリュームに関する情報を保持します。|
 
 ## <a name="functions"></a>関数
@@ -116,12 +118,13 @@ using namespace std::experimental::filesystem::v1;
 
 ## <a name="enumerations"></a>列挙
 
-|名前|説明|
-|----------|-----------------|
+|||
+|-|-|
 |[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|[copy_file](../standard-library/filesystem-functions.md#copy_file) と共に使用され、コピー先ファイルが既に存在する場合の動作を決定する列挙体です。|
 |[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|[copy_file](../standard-library/filesystem-functions.md#copy_file) と共に使用され、コピー先ファイルが既に存在する場合の動作を決定する列挙体です。|
 |[directory_options](../standard-library/filesystem-enumerations.md#directory_options)|ディレクトリ反復子のオプションを指定する列挙体。|
 |[file_type](../standard-library/filesystem-enumerations.md#file_type)|ファイルの種類の列挙型。|
+|[perm_options](../standard-library/filesystem-enumerations.md#perm_options)||
 |[perms](../standard-library/filesystem-enumerations.md#perms)|アクセス許可とアクセス許可に対するオプションを伝達するために使用されるビットマスク型|
 
 ## <a name="see-also"></a>関連項目

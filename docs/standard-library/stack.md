@@ -7,26 +7,31 @@ helpviewer_keywords:
 - stack, stack header
 - stack header
 ms.assetid: 89d8999e-c773-46f2-86c1-4b3b5aedb1c1
-ms.openlocfilehash: b8f2bb6cf74d0607bd3105196336a515adcade9e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 65f2197a4a9ac37ad5910bfa8dbef457fda5f611
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412463"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244124"
 ---
 # <a name="ltstackgt"></a>&lt;stack&gt;
 
 テンプレート クラスのスタックと 2 つのサポート用テンプレートを定義します。
 
-## <a name="syntax"></a>構文
+## <a name="requirements"></a>必要条件
 
-```cpp
-#include <stack>
-```
+**ヘッダー:** \<stack>
+
+**名前空間:** std
+
+> [!NOTE]
+> \<スタック > ライブラリで使用することも、`#include <initializer_list>`ステートメント。
+
+## <a name="members"></a>メンバー
 
 ### <a name="operators"></a>演算子
 
-|演算子|説明|
+|||
 |-|-|
 |[operator!=](../standard-library/stack-operators.md#op_neq)|演算子の左辺のスタック オブジェクトが右辺のスタック オブジェクトと等しくないかどうかを調べます。|
 |[operator<](../standard-library/stack-operators.md#op_lt)|演算子の左辺のスタック オブジェクトが右辺のスタック オブジェクトより小さいかどうかを調べます。|
@@ -35,9 +40,15 @@ ms.locfileid: "62412463"
 |[operator>](../standard-library/stack-operators.md#op_gt)|演算子の左辺のスタック オブジェクトが右辺のスタック オブジェクトより大きいかどうかを調べます。|
 |[operator>=](../standard-library/stack-operators.md#op_gt_eq)|演算子の左辺のスタック オブジェクトが右辺のスタック オブジェクト以上かどうかを調べます。|
 
+### <a name="functions"></a>関数
+
+|||
+|-|-|
+|[swap]()||
+
 ### <a name="classes"></a>クラス
 
-|クラス|説明|
+|||
 |-|-|
 |[stack クラス](../standard-library/stack-class.md)|基になるコンテナー型に最も新しく追加された要素へのアクセスを制限することにより、機能の制限を提供するテンプレート コンテナーのアダプター クラスです。|
 

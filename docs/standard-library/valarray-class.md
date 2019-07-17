@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::valarray [C++], sum
 - std::valarray [C++], swap
 ms.assetid: 19b862f9-5d09-4003-8844-6ddd02c1a3a7
-ms.openlocfilehash: efb186753de0e04bd01f9cc6e81c487084b88ac2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 60e18ec68ebdd03a97933b222de00e20cd57f20f
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62167518"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246149"
 ---
 # <a name="valarray-class"></a>valarray クラス
 
@@ -55,21 +55,23 @@ ms.locfileid: "62167518"
 
 特に、コピーによる構築と、代入に先行する既定の構築の間に、微妙な違いはありません。 クラスのオブジェクトに対する操作のいずれも`Type`例外をスローする可能性があります。
 
+## <a name="members"></a>メンバー
+
 ### <a name="constructors"></a>コンストラクター
 
-|コンストラクター|説明|
+|||
 |-|-|
 |[valarray](#valarray)|特定のサイズの、または特定の値の要素を持つ `valarray` を構築します。また、他の `valarray` のコピーやサブセットとして `valarray` を構築します。|
 
 ### <a name="typedefs"></a>Typedef
 
-|型名|説明|
+|||
 |-|-|
 |[value_type](#value_type)|`valarray` 内に格納された要素の型を表す型。|
 
-### <a name="member-functions"></a>メンバー関数
+### <a name="functions"></a>関数
 
-|メンバー関数|説明|
+|||
 |-|-|
 |[apply](#apply)|`valarray` 内の各要素に対して指定された関数を適用します。|
 |[cshift](#cshift)|指定された位置数で、`valarray` 内のすべての要素を周期的にシフトします。|
@@ -84,7 +86,7 @@ ms.locfileid: "62167518"
 
 ### <a name="operators"></a>演算子
 
-|演算子|説明|
+|||
 |-|-|
 |[operator!](#op_not)|`valarray` 内の各要素の論理 `NOT` 値を取得する、単項演算子。|
 |[operator%=](#op_mod_eq)|指定された `valarray` または要素型の値で配列の要素を要素ごとに除算した剰余を取得します。|
@@ -103,13 +105,7 @@ ms.locfileid: "62167518"
 |[operator&#124;=](#op_or_eq)|配列内の要素のビットごとの `OR` を、指定された `valarray` 内の対応する要素か要素型の値と共に取得します。|
 |[operator~](#op_dtor)|`valarray` 内の各要素のビットごとの `NOT` 値を取得する単項演算子。|
 
-## <a name="requirements"></a>必要条件
-
-**ヘッダー:** \<valarray>
-
-**名前空間:** std
-
-## <a name="apply"></a>  valarray::apply
+## <a name="apply"></a> 適用します。
 
 valarray 内の各要素に対して、指定された関数を適用します。
 
@@ -121,10 +117,10 @@ valarray<Type> apply(Type _Func(constType&)) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*_Func(Type)*<br/>
+*_Func(Type)* \
 オペランド valarray の各要素に適用する関数オブジェクト。
 
-*_Func(const Type&)*<br/>
+*_Func(const Type&)* \
 オペランド valarray の各要素に適用する const の関数オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -133,7 +129,7 @@ valarray<Type> apply(Type _Func(constType&)) const;
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は、クラスのオブジェクトを返します[valarray](../standard-library/valarray-class.md)**\<型 >**、長さの[サイズ](#size)、その各要素の*は*は`_Func((*this)[I])`します。
+このメンバー関数は、クラスのオブジェクトを返します[valarray](../standard-library/valarray-class.md) **\<型 >** 、長さの[サイズ](#size)、その各要素の*は*は`_Func((*this)[I])`します。
 
 ### <a name="example"></a>例
 
@@ -177,14 +173,15 @@ int main( int argc, char* argv[] )
       cout << " " << vaApplied[i];
    cout << " )" << endl;
 }
-/* Output:
+```
+
+```Output
 The initial Right valarray is: ( 0 0 -2 3 0 -5 6 0 -8 9 )
 The element-by-element result of applying MyApplyFunc to vaR is the
 valarray: (  0 0 -4 6 0 -10 12 0 -16 18 )
-*/
 ```
 
-## <a name="cshift"></a>  valarray::cshift
+## <a name="cshift"></a> cshift
 
 指定された位置数で、valarray 内のすべての要素を循環的にシフトします。
 
@@ -194,7 +191,7 @@ valarray<Type> cshift(int count) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*count*<br/>
+*カウント*\
 要素を前方向へシフトする位置数。
 
 ### <a name="return-value"></a>戻り値
@@ -251,17 +248,18 @@ int main()
         cout << " " << va2[i];
     cout << ")" << endl;
 }
-/* Output:
+```
+
+```Output
 The operand valarray va1 is: ( 0 1 2 3 4 5 6 7 8 9)
 The cyclically shifted valarray va1 is:
 va1.cshift (4) = ( 4 5 6 7 8 9 0 1 2 3)
 The operand valarray va2 is: ( 10 9 8 7 6 5 4 3 2 1)
 The cyclically shifted valarray va2 is:
 va2.shift (-4) = ( 4 3 2 1 10 9 8 7 6 5)
-*/
 ```
 
-## <a name="free"></a>  valarray::free
+## <a name="free"></a> 無料
 
 valarray によって使用されるメモリを解放します。
 
@@ -271,7 +269,7 @@ void free();
 
 ### <a name="remarks"></a>Remarks
 
-この非標準の関数は、空の valarray を割り当てることと同じです。 例:
+この非標準の関数は、空の valarray を割り当てることと同じです。 例えば:
 
 ```cpp
 valarray<T> v;
@@ -280,7 +278,7 @@ v = valarray<T>();
 // equivalent to v.free()
 ```
 
-## <a name="max"></a>  valarray::max
+## <a name="max"></a> 最大
 
 valarray 内の最大要素を検索します。
 
@@ -326,13 +324,14 @@ int main( )
    cout << "The largest element in the valarray is: "
         << MaxValue  << "." << endl;
 }
-/* Output:
-The operand valarray is: ( 0 1 8 3 7 5 6 13 2 9 ).
-The largest element in the valarray is: 13.
-*/
 ```
 
-## <a name="min"></a>  valarray::min
+```Output
+The operand valarray is: ( 0 1 8 3 7 5 6 13 2 9 ).
+The largest element in the valarray is: 13.
+```
+
+## <a name="min"></a> 最小値
 
 valarray 内の最小要素を検索します。
 
@@ -384,7 +383,7 @@ The smallest element in the valarray is: -9.
 */
 ```
 
-## <a name="op_not"></a>  valarray::operator!
+## <a name="op_not"></a> 演算子!
 
 valarray 内の各要素の論理 **NOT** 値を取得する、単項演算子。
 
@@ -435,14 +434,15 @@ int main( )
          cout << vaNOT [ i ] << " ";
    cout << ")." << endl;
 }
-/* Output:
+```
+
+```Output
 The initial valarray is:  ( 0 0 0 2 0 4 0 6 0 8 ).
 The element-by-element result of the logical NOT operator! is the
 valarray: ( 1 1 1 0 1 0 1 0 1 0 ).
-*/
 ```
 
-## <a name="op_mod_eq"></a>  valarray::operator%=
+## <a name="op_mod_eq"></a> operator%=
 
 指定された valarray または要素型の値で配列の要素を要素ごとに除算した剰余を取得します。
 
@@ -454,7 +454,7 @@ valarray<Type>& operator%=(const Type& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*right*<br/>
+*そうです*\
 オペランド valarray を要素ごとに除算する、valarray、またはオペランド valarray と同一の要素型の値。
 
 ### <a name="return-value"></a>戻り値
@@ -500,15 +500,16 @@ int main( )
          cout << vaL [ i ] << " ";
    cout << ")." << endl;
 }
-/* Output:
+```
+
+```Output
 The initial valarray is: ( 53 -67 53 -67 53 -67 ).
 The initial  right valarray is: ( 1 4 7 10 13 16 ).
 The remainders from the element-by-element division is the
 valarray: ( 0 -3 4 -7 1 -3 ).
-*/
 ```
 
-## <a name="op_and_eq"></a>  valarray::operator&amp;=
+## <a name="op_and_eq"></a> 演算子&amp;=
 
 配列内の要素と、指定された valarray の対応する要素か要素型の値のどちらか一方とのビット演算 **AND** を取得します。
 
@@ -520,7 +521,7 @@ valarray<Type>& operator&=(const Type& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*right*<br/>
+*そうです*\
 Valarray または要素型の結合するオペランド valarray と同一で、論理により、要素ごとの値`AND`オペランド valarray とします。
 
 ### <a name="return-value"></a>戻り値
@@ -572,15 +573,16 @@ int main( )
          cout << vaL [ i ] << " ";
    cout << ")." << endl;
 }
-/* Output:
+```
+
+```Output
 The initial valarray is:  ( 0 0 0 2 0 4 0 6 0 8 ).
 The initial Right valarray is: ( 0 1 2 3 4 5 6 7 8 9 ).
 The element-by-element result of the logical AND operator&= is the
 valarray: ( 0 0 0 2 0 4 0 6 0 8 ).
-*/
 ```
 
-## <a name="op_gt_gt_eq"></a>  valarray::operator&gt;&gt;=
+## <a name="op_gt_gt_eq"></a> 演算子&gt;&gt;=
 
 valarray オペランドの各要素のビットを、指定された位置数だけ右にシフトさせるか、2 番目の valarray で指定された要素ごとの量だけ右にシフトさせます。
 
@@ -592,7 +594,7 @@ valarray<Type>& operator>>=(const Type& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*right*<br/>
+*そうです*\
 右シフトの量を示す値か、要素ごとの右シフトの量を示す要素から成る valarray。
 
 ### <a name="return-value"></a>戻り値
@@ -642,15 +644,16 @@ int main( )
          cout << vaL [ i ] << " ";
    cout << ")." << endl;
 }
-/* Output:
+```
+
+```Output
 The initial operand valarray is: ( 64 -64 64 -64 64 -64 64 -64 ).
 The  right valarray is: ( 0 1 2 3 4 5 6 7 ).
 The element-by-element result of the right shift is the
 valarray: ( 64 -32 16 -8 4 -2 1 -1 ).
-*/
 ```
 
-## <a name="op_lt_lt_eq"></a>  valarray::operator&lt;&lt;=
+## <a name="op_lt_lt_eq"></a> 演算子&lt;&lt;=
 
 valarray オペランドの各要素のビットを、指定された位置数だけ左にシフトさせるか、2 番目の valarray で指定された要素ごとの量だけ左にシフトさせます。
 
@@ -662,7 +665,7 @@ valarray<Type>& operator<<=(const Type& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*right*<br/>
+*そうです*\
 左シフトの量を示す値か、要素ごとの左シフトの量を示す要素から成る valarray。
 
 ### <a name="return-value"></a>戻り値
@@ -713,16 +716,17 @@ int main( )
          cout << vaL [ i ] << " ";
    cout << ")." << endl;
 }
-/* Output:
+```
+
+```Output
 The initial operand valarray is: ( 1 -1 1 -1 1 -1 1 -1 ).
 The  right valarray is: ( 0 1 2 3 4 5 6 7 ).
 The element-by-element result of the left shift
 on the operand array is the valarray:
 ( 1 -2 4 -8 16 -32 64 -128 ).
-*/
 ```
 
-## <a name="op_star_eq"></a>  valarray::operator*=
+## <a name="op_star_eq"></a> 演算子 * =
 
 指定された valarray の要素か要素型の値を、要素ごとにオペランド valarray に対して乗算します。
 
@@ -734,7 +738,7 @@ valarray<Type>& operator*=(const Type& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*right*<br/>
+*そうです*\
 オペランド valarray に対して要素ごとに乗算する、valarray、またはオペランド valarray と同一の要素型の値。
 
 ### <a name="return-value"></a>戻り値
@@ -788,7 +792,7 @@ valarray: ( 0 -1 4 -3 8 -5 12 -7 ).
 */
 ```
 
-## <a name="op_add"></a>  valarray::operator+
+## <a name="op_add"></a> operator +
 
 valarray 内の各要素に正符号を適用する単項演算子。
 
@@ -833,14 +837,15 @@ int main( )
          cout << vaPLUS [ i ] << " ";
    cout << ")." << endl;
 }
-/* Output:
+```
+
+```Output
 The initial valarray is:  ( 0 0 -2 2 -4 4 -6 6 -8 8 ).
 The element-by-element result of the operator+ is the
 valarray: ( 0 0 -2 2 -4 4 -6 6 -8 8 ).
-*/
 ```
 
-## <a name="op_add_eq"></a>  valarray::operator+=
+## <a name="op_add_eq"></a> operator + =
 
 指定された valarray の要素か要素型の値を、要素ごとにオペランド valarray に対して加算します。
 
@@ -852,7 +857,7 @@ valarray<Type>& operator+=(const Type& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*right*<br/>
+*そうです*\
 オペランド valarray に対して要素ごとに加算する、valarray、またはオペランド valarray と同一の要素型の値。
 
 ### <a name="return-value"></a>戻り値
@@ -898,15 +903,16 @@ int main( )
          cout << vaL [ i ] << " ";
    cout << ")." << endl;
 }
-/* Output:
+```
+
+```Output
 The initial valarray is: ( 2 -1 2 -1 2 -1 2 -1 ).
 The initial  right valarray is: ( 0 1 2 3 4 5 6 7 ).
 The element-by-element result of the sum is the
 valarray: ( 2 0 4 2 6 4 8 6 ).
-*/
 ```
 
-## <a name="operator-"></a>  valarray::operator-
+## <a name="operator-"></a> 演算子-
 
 valarray 内の各要素に負符号を適用する単項演算子。
 
@@ -951,14 +957,15 @@ int main( )
          cout << vaMINUS [ i ] << " ";
    cout << ")." << endl;
 }
-/* Output:
+```
+
+```Output
 The initial valarray is:  ( 0 0 -2 2 -4 4 -6 6 -8 8 ).
 The element-by-element result of the operator+ is the
 valarray: ( 0 0 2 -2 4 -4 6 -6 8 -8 ).
-*/
 ```
 
-## <a name="operator-_eq"></a>  valarray::operator-=
+## <a name="operator-_eq"></a> -= 演算子
 
 指定された valarray の要素か要素型の値を、要素ごとにオペランド valarray から減算します。
 
@@ -970,7 +977,7 @@ valarray<Type>& operator-=(const Type& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*right*<br/>
+*そうです*\
 オペランド valarray から要素ごとに減算する、valarray、またはオペランド valarray と同一の要素型の値。
 
 ### <a name="return-value"></a>戻り値
@@ -1016,15 +1023,16 @@ int main( )
          cout << vaL [ i ] << " ";
    cout << ")." << endl;
 }
-/* Output:
+```
+
+```Output
 The initial valarray is: ( 10 0 10 0 10 0 10 0 ).
 The initial  right valarray is: ( 0 1 2 3 4 5 6 7 ).
 The element-by-element result of the difference is the
 valarray: ( 10 -1 8 -3 6 -5 4 -7 ).
-*/
 ```
 
-## <a name="op_div_eq"></a>  valarray::operator/=
+## <a name="op_div_eq"></a> operator/=
 
 オペランド valarray を、指定された valarray の要素か要素型の値で要素ごとに除算します。
 
@@ -1036,7 +1044,7 @@ valarray<Type>& operator/=(const Type& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*right*<br/>
+*そうです*\
 オペランド valarray を要素ごとに除算する、valarray、またはオペランド valarray と同一の要素型の値。
 
 ### <a name="return-value"></a>戻り値
@@ -1082,15 +1090,16 @@ int main( )
          cout << vaL [ i ] << " ";
    cout << ")." << endl;
 }
-/* Output:
+```
+
+```Output
 The initial valarray is: ( 100 -100 100 -100 100 -100 ).
 The initial Right valarray is: ( 0 2 4 6 8 10 ).
 The element-by-element result of the quotient is the
 valarray: ( inf -50 25 -16.6667 12.5 -10 ).
-*/
 ```
 
-## <a name="op_eq"></a>  valarray::operator=
+## <a name="op_eq"></a> 演算子 =
 
 valarray に要素を代入します。その値は、直接、または他の valarray の一部として指定することも、slice_array、gslice_array、mask_array、または indirect_array で指定することもできます。
 
@@ -1112,22 +1121,22 @@ valarray<Type>& operator=(const indirect_array<Type>& _Indarray);
 
 ### <a name="parameters"></a>パラメーター
 
-*right*<br/>
+*そうです*\
 オペランド valarray にコピーされる valarray。
 
-*val*<br/>
+*val*\
 オペランド valarray の要素に代入される値。
 
-*_Slicearray*<br/>
+*_Slicearray*\
 オペランド valarray にコピーされる slice_array。
 
-*_Gslicearray*<br/>
+*_Gslicearray*\
 オペランド valarray にコピーされる gslice_array。
 
-*_Maskarray*<br/>
+*_Maskarray*\
 オペランド valarray にコピーされる mask_array。
 
-*_Indarray*<br/>
+*_Indarray*\
 オペランド valarray にコピーされる indirect_array。
 
 ### <a name="return-value"></a>戻り値
@@ -1190,15 +1199,17 @@ int main( )
          cout << " " << va [ i ];
    cout << endl;
 }
-/* Output:
+```
+
+```Output
 The operand valarray va is: 0 1 2 3 4 5 6 7 8 9
 The operand valarray vaR is: 10 9 8 7 6 5 4 3 2 1
 The reassigned valarray va is: 10 9 8 7 6 5 4 3 2 1
 The reassigned valarray va is: 10 10 10 10 10 10 10 10 10 10
-*/
+
 ```
 
-## <a name="op_at"></a>  valarray::operator[]
+## <a name="op_at"></a> operator[]
 
 指定されたインデックスまたは指定されたサブセットにある、要素またはその値への参照を返します。
 
@@ -1226,19 +1237,19 @@ valarray<Type> operator[](const valarray<size_t>& _Indarray) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*_Off*<br/>
+*_Off*\
 値を代入する要素のインデックス。
 
-*_Slicearray*<br/>
+*_Slicearray*\
 選択される、または新しい valarray に返されるサブセットを指定する、valarray の slice_array。
 
-*_Gslicearray*<br/>
+*_Gslicearray*\
 選択される、または新しい valarray に返されるサブセットを指定する、valarray の gslice_array。
 
-*_Boolarray*<br/>
+*_Boolarray*\
 選択される、または新しい valarray に返されるサブセットを指定する、valarray の bool_array。
 
-*_Indarray*<br/>
+*_Indarray*\
 選択される、または新しい valarray に返されるサブセットを指定する、valarray の indirect_array。
 
 ### <a name="return-value"></a>戻り値
@@ -1255,7 +1266,7 @@ valarray<Type> operator[](const valarray<size_t>& _Indarray) const;
 
 演算子の宣言と使用の方法を示す例については、[slice::slice](../standard-library/slice-class.md#slice) と [gslice::gslice](../standard-library/gslice-class.md#gslice) の例を参照してください。
 
-## <a name="op_xor_eq"></a>  valarray::operator^=
+## <a name="op_xor_eq"></a> 演算子 ^ =
 
 配列と、指定された valarray か要素型の値のどちらか一方との間で行われた、要素ごとの排他的論理 OR 演算子 (**XOR**) を取得します。
 
@@ -1267,7 +1278,7 @@ valarray<Type>& operator|=(const Type& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*right*<br/>
+*そうです*\
 オペランド valarray との排他的論理 **XOR** により要素ごとに結合する、valarray、またはオペランド valarray と同一の要素型の値。
 
 ### <a name="return-value"></a>戻り値
@@ -1321,15 +1332,16 @@ int main( )
             cout << vaL [ i ] << " ";
     cout << ")." << endl;
 }
-/* Output:
+```
+
+```Output
 The initial operand valarray is:  ( 1 0 1 0 1 0 1 0 1 0 ).
 The  right valarray is: ( 0 0 1 3 3 4 6 6 7 9 ).
 The element-by-element result of the bitwise XOR operator^= is the
 valarray: ( 1 0 0 3 2 4 7 6 6 9 ).
-*/
 ```
 
-## <a name="op_or_eq"></a>  valarray::operator&#124;=
+## <a name="op_or_eq"></a> 演算子&#124;=
 
 配列内の要素と、指定された valarray の対応する要素か要素型の値のどちらか一方とのビット演算 `OR` を取得します。
 
@@ -1341,7 +1353,7 @@ valarray<Type>& operator|=(const Type& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*right*<br/>
+*そうです*\
 オペランド valarray とのビット演算 `OR` により要素ごとに結合する、valarray、またはオペランド valarray と同一の要素型の値。
 
 ### <a name="return-value"></a>戻り値
@@ -1400,7 +1412,9 @@ int main( )
          cout << vaL [ i ] << " ";
    cout << ")." << endl;
 }
-/* Output:
+```
+
+```Output
 The initial operand valarray is:
 ( 1 0 1 0 1 0 1 0 1 0 ).
 The  right valarray is:
@@ -1408,10 +1422,9 @@ The  right valarray is:
 The element-by-element result of the logical OR
 operator|= is the valarray:
 ( 1 0 1 3 3 4 7 6 7 9 ).
-*/
 ```
 
-## <a name="op_dtor"></a>  valarray::operator~
+## <a name="op_dtor"></a> 演算子 ~
 
 ビット演算を取得する単項演算子`NOT`valarray 内の各要素の値。
 
@@ -1495,8 +1508,9 @@ int main( )
             cout << vaNOT2 [ i ] << " ";
     cout << ")." << endl;
 }
+```
 
-/* Output:
+```Output
 The initial valarray <unsigned short int> is:  ( 0 5 2 15 4 25 6 35 8 45 ).
 The element-by-element result of the bitwise NOT operator~ is the
 valarray: ( 65535 65530 65533 65520 65531 65510 65529 65500 65527 65490 ).
@@ -1507,10 +1521,9 @@ valarray: ( -1 1 -3 5 -5 9 -7 13 -9 17 ).
 The element-by-element result of adding one
 is the negative of the original elements the
 valarray: ( 0 2 -2 6 -4 10 -6 14 -8 18 ).
-*/
 ```
 
-## <a name="resize"></a>  valarray::resize
+## <a name="resize"></a> サイズ変更
 
 valarray 内の要素の数を指定された数に変更します。
 
@@ -1525,10 +1538,10 @@ void resize(
 
 ### <a name="parameters"></a>パラメーター
 
-*_Newsize*<br/>
+*_Newsize*\
 サイズ変更後の valarray 内の要素の数。
 
-*val*<br/>
+*val*\
 サイズ変更後の valarray の要素に与えられる値。
 
 ### <a name="remarks"></a>Remarks
@@ -1586,7 +1599,7 @@ The valarray contains ( 10 10 10 10 10 10 10 10 10 10 10 10 10 10 10 ).
 The number of elements in the resized valarray is: 15.
 ```
 
-## <a name="shift"></a>  valarray::shift
+## <a name="shift"></a> shift キー
 
 valarray 内のすべての要素を指定された位置数だけシフトします。
 
@@ -1596,7 +1609,7 @@ valarray<Type> shift(int count) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*count*<br/>
+*カウント*\
 要素を前方向へシフトする位置数。
 
 ### <a name="return-value"></a>戻り値
@@ -1652,15 +1665,16 @@ int main( )
          cout << va2 [ i ] << " ";
    cout << ")." << endl;
 }
-/* Output:
+```
+
+```Output
 The operand valarray va1(10) is: ( 0 1 2 3 4 5 6 7 8 9 ).
 The shifted valarray va1 is: va1.shift (4) = ( 4 5 6 7 8 9 0 0 0 0 ).
 The operand valarray va2(10) is: ( 10 9 8 7 6 5 4 3 2 1 ).
 The shifted valarray va2 is: va2.shift (-4) = ( 0 0 0 0 10 9 8 7 6 5 ).
-*/
 ```
 
-## <a name="size"></a>  valarray::size
+## <a name="size"></a> サイズ
 
 valarray 内の要素の数を調べます。
 
@@ -1737,7 +1751,7 @@ the operand valarray va2(12) is now: ( 0 1 2 3 4 5 6 7 8 9 10 11 ).
 The number of elements in the valarray va2 is still: 12.
 ```
 
-## <a name="sum"></a>  valarray::sum
+## <a name="sum"></a> 合計
 
 valarray 内にある長さが 0 以外の要素すべての合計を求めます。
 
@@ -1780,13 +1794,14 @@ int main( )
     cout << "The sum of elements in the valarray is: "
         << sumva  << "." <<endl;
 }
-/* Output:
-The operand valarray va (10) is: ( 0 1 2 3 4 5 6 7 8 9 ).
-The sum of elements in the valarray is: 45.
-*/
 ```
 
-## <a name="swap"></a>  valarray::swap
+```Output
+The operand valarray va (10) is: ( 0 1 2 3 4 5 6 7 8 9 ).
+The sum of elements in the valarray is: 45.
+```
+
+## <a name="swap"></a> スワップ
 
 2 つの `valarray` の要素を交換します。
 
@@ -1796,15 +1811,14 @@ void swap(valarray& right);
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|---------------|-----------------|
-|*right*|交換する要素を提供する `valarray`。|
+*そうです*\
+交換する要素を提供する `valarray`。
 
 ### <a name="remarks"></a>Remarks
 
 メンバー関数は、交換の間で被制御シーケンス`*this`と*右*します。 この処理は一定時間に実行されます。例外がスローされることはなく、参照や、ポインター、2 つの被制御シーケンス内の要素を指定する反復子が無効にされることもありません。
 
-## <a name="valarray"></a>  valarray::valarray
+## <a name="valarray"></a> valarray
 
 特定のサイズの valarray や特定の値の要素を持つ valarray を構築します。また、他の valarray のコピーやサブセットとして valarray を構築します。
 
@@ -1846,31 +1860,31 @@ valarray(
 
 ### <a name="parameters"></a>パラメーター
 
-*カウント*<br/>
+*カウント*\
 valarray 内の要素の数。
 
-*val*<br/>
+*val*\
 valarray 内の要素の初期化に使用する値。
 
-*ptr*<br/>
+*ptr*\
 valarray 内の要素の初期化に使用する値へのポインター。
 
-*右*<br/>
+*そうです*\
 新しい valarray を初期化するための既存の valarray。
 
-*SliceArray*<br/>
+*SliceArray*\
 構築する valarray の要素の初期化に使用される要素の値を持つ slice_array。
 
-*GsliceArray*<br/>
+*GsliceArray*\
 構築する valarray の要素の初期化に使用される要素の値を持つ gslice_array。
 
-*MaskArray*<br/>
+*MaskArray*\
 構築する valarray の要素の初期化に使用される要素の値を持つ mask_array。
 
-*IndArray*<br/>
+*IndArray*\
 構築する valarray の要素の初期化に使用される要素の値を持つ indirect_array。
 
-*IList*<br/>
+*IList*\
 コピーする要素を含む initializer_list。
 
 ### <a name="remarks"></a>Remarks
@@ -1940,7 +1954,7 @@ va[slice( 2, 4, 3)] = ( 0 0 0 )
 1 2 3 4
 ```
 
-## <a name="value_type"></a>  valarray::value_type
+## <a name="value_type"></a> value_type
 
 valarray に格納された要素の型を表す型。
 
@@ -1986,11 +2000,12 @@ int main( )
             cout << va [ i ] << " ";
     cout << ")." << endl;
 }
-/* Output:
+```
+
+```Output
 The initial operand valarray is:  ( 0 -1 2 -1 4 -1 6 -1 8 -1 ).
 The decalared value_type Right is: 10
 The resulting valarray is:  ( 0 -10 20 -10 40 -10 60 -10 80 -10 ).
-*/
 ```
 
 ## <a name="see-also"></a>関連項目

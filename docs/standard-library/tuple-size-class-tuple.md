@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - std::tuple_size
 ms.assetid: 73852fc5-eb68-41f1-8379-465cedc2314a
-ms.openlocfilehash: 1a069bcf5385a014438e36983e455ec3761ce727
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1c03c02dde3178a257a83720ff437f7981f5f7ed
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62278944"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68241553"
 ---
 # <a name="tuplesize-class"></a>tuple_size クラス
 
@@ -54,24 +54,28 @@ template <class Tuple>
    struct tuple_size<const volatile Tuple>;
 ```
 
+```cpp
+template <class T> inline constexpr size_t tuple_size_v = tuple_size<T>::value;
+```
+
 ### <a name="parameters"></a>パラメーター
 
-*Tuple*<br/>
+*タプル*\
 タプルの型。
 
-*Elem*<br/>
+*Elem*\
 配列要素の型。
 
-*Size*<br/>
+*サイズ*\
 配列のサイズ。
 
-*T1*<br/>
+*T1*\
 ペアの最初のメンバーの型。
 
-*T2*<br/>
+*T2*\
 ペアの 2 番目のメンバーの型。
 
-*型*<br/>
+*型*\
 タプル要素の型。
 
 ## <a name="remarks"></a>Remarks
@@ -120,9 +124,3 @@ int main()
 **ヘッダー:** \<utility> (ペアの特殊化用)
 
 **名前空間:** std
-
-## <a name="see-also"></a>関連項目
-
-[\<tuple>](../standard-library/tuple.md)<br/>
-[tuple](../standard-library/tuple-class.md)<br/>
-[tuple_element クラス](../standard-library/tuple-element-class-tuple.md)<br/>

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - <mutex>
 ms.assetid: efb60c89-687a-4e38-8fe4-694e11c4e8a3
-ms.openlocfilehash: 4655278e312647f4e69cf48cb772df854260ce57
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 377ec995f4e61c957e8e620749f96523b60fed3e
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62224078"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240596"
 ---
 # <a name="ltmutexgt"></a>&lt;mutex&gt;
 
@@ -18,11 +18,11 @@ ms.locfileid: "62224078"
 > [!WARNING]
 > Visual Studio 2015 以降では、C++ 標準ライブラリ同期型は、は Windows 同期プリミティブに基づいており、(ターゲット プラットフォームが Windows XP の場合を除き、ConcRT を使用できなくします。 \<mutex> で定義されている型は、ConcRT 型または関数には使用しないでください。
 
-## <a name="syntax"></a>構文
+## <a name="requirements"></a>必要条件
 
-```cpp
-#include <mutex>
-```
+**ヘッダー:** \<mutex >
+
+**名前空間:** std
 
 ## <a name="remarks"></a>Remarks
 
@@ -47,28 +47,33 @@ ms.locfileid: "62224078"
 
 mutex 型は *lockable 型*とも呼ばれます。 メンバー関数 `try_lock` が提供されない場合は、*basic lockable 型*になります。 timed mutex 型は *timed lockable 型*とも呼ばれます。
 
+## <a name="members"></a>メンバー
+
 ### <a name="classes"></a>クラス
 
-|名前|説明|
-|----------|-----------------|
+|||
+|-|-|
 |[lock_guard クラス](../standard-library/lock-guard-class.md)|オブジェクトを作成し、そのデストラクタ―が `mutex` のロックを解除するためにインスタンス化できるテンプレートを表します。|
 |[mutex クラス (C++ 標準ライブラリ)](../standard-library/mutex-class-stl.md)|mutex 型を表します。 この型のオブジェクトを使用して、プログラム内で相互排他を適用します。|
 |[recursive_mutex クラス](../standard-library/recursive-mutex-class.md)|mutex 型を表します。 `mutex` クラスとは異なり、既にロックされているオブジェクトのロック メソッドを呼び出す動作は詳細に定義されています。|
 |[recursive_timed_mutex クラス](../standard-library/recursive-timed-mutex-class.md)|timed mutex 型を表します。 この型のオブジェクトを使用して、プログラム内で時間制限ブロックのある相互排他を適用します。 `timed_mutex` 型のオブジェクトとは異なり、`recursive_timed_mutex` オブジェクトにロック メソッドを呼び出すことによる影響は詳細に定義されています。|
+|[scoped_lock クラス](../standard-library/scoped-lock-class.md)||
 |[timed_mutex クラス](../standard-library/timed-mutex-class.md)|timed mutex 型を表します。 この型のオブジェクトを使用して、プログラム内で時間制限ブロックのある相互排他を適用します。|
 |[unique_lock クラス](../standard-library/unique-lock-class.md)|`mutex` のロックとロック解除を管理するオブジェクトを作成するためにインスタンス化できるテンプレートを表します。|
 
 ### <a name="functions"></a>関数
 
-|名前|説明|
-|----------|-----------------|
+|||
+|-|-|
 |[call_once](../standard-library/mutex-functions.md#call_once)|指定された呼び出し可能オブジェクトが、実行中に 1 回だけ呼び出されるメカニズムを提供します。|
 |[lock](../standard-library/mutex-functions.md#lock)|デッドロックなしですべての引数をロックしようとします。|
+|[swap](../standard-library/mutex-functions.md#swap)||
+|[try_lock](../standard-library/mutex-functions.md#try_lock)||
 
 ### <a name="structs"></a>構造体
 
-|名前|説明|
-|----------|-----------------|
+|||
+|-|-|
 |[adopt_lock_t 構造体](../standard-library/adopt-lock-t-structure.md)|`adopt_lock` の定義に使用する型を表します。|
 |[defer_lock_t 構造体](../standard-library/defer-lock-t-structure.md)|`unique_lock` のオーバーロード コンストラクターの 1 つを選択するために使用される、`defer_lock` オブジェクトを定義する型を表します。|
 |[once_flag 構造体](../standard-library/once-flag-structure.md)|表す、**構造体**テンプレート関数で使用されている`call_once`ように初期化するコードは 1 回だけ呼び出す、複数の実行スレッドがある場合でもです。|
@@ -76,8 +81,8 @@ mutex 型は *lockable 型*とも呼ばれます。 メンバー関数 `try_lock
 
 ### <a name="variables"></a>変数
 
-|名前|説明|
-|----------|-----------------|
+|||
+|-|-|
 |[adopt_lock](../standard-library/mutex-functions.md#adopt_lock)|`lock_guard` と `unique_lock` のコンストラクターに渡されるオブジェクを表し、同じコンストラクターに渡されるミューテックス オブジェクトがロックされていることを示します。|
 |[defer_lock](../standard-library/mutex-functions.md#defer_lock)|`unique_lock` のコンストラクターに渡すことのできるオブジェクトを表し、コンストラクターがそれに渡されるミューテックス オブジェクトをロックしないことを示しています。|
 |[try_to_lock](../standard-library/mutex-functions.md#try_to_lock)|`unique_lock` のコンストラクターに渡すことのできるオブジェクトを表し、ブロックされずに渡される `mutex` をコンストラクターがロック解除しようとすることを示します。|

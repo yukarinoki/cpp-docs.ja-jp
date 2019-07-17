@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::stack [C++], size
 - std::stack [C++], top
 ms.assetid: 02151c1e-eab0-41b8-be94-a839ead78ecf
-ms.openlocfilehash: cc18a62db3f39bc85c0a3bb7e84e6a27011c2b5a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 36074f75830f92ba3fb9e5edb4e1507aa5ae1407
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412437"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68241060"
 ---
 # <a name="stack-class"></a>stack クラス
 
@@ -40,11 +40,11 @@ class stack
 
 ### <a name="parameters"></a>パラメーター
 
-*Type*<br/>
+*型*\
 スタックに格納される要素のデータ型。
 
-*コンテナー*<br/>
-スタックを実装するために使用する基になるコンテナーの型。 既定値は、クラス `deque`*\<Type>* です。
+*コンテナー*\
+スタックを実装するために使用する基になるコンテナーの型。 既定値は、クラス `deque` *\<Type>* です。
 
 ## <a name="remarks"></a>Remarks
 
@@ -60,23 +60,25 @@ Stack オブジェクトは、等値比較できる場合、場合にのみを�
 
 - [Priority_queue クラス](../standard-library/priority-queue-class.md)は、最も大きな要素が常に先頭の位置になるように、その要素を並べ替えます。 要素の挿入、および先頭の要素の検査と削除をサポートしています。 思い描くのに助けとなるのは、年齢、身長、またはその他の条件によって整列している人です。
 
+## <a name="members"></a>メンバー
+
 ### <a name="constructors"></a>コンストラクター
 
-|コンストラクター|説明|
+|||
 |-|-|
 |[stack](#stack)|空であるか、基本のコンテナー オブジェクトのコピーである `stack` を構築します。|
 
 ### <a name="typedefs"></a>Typedef
 
-|型名|説明|
+|||
 |-|-|
 |[container_type](#container_type)|`stack` によって適合されるように、基本のコンテナーを提供する型。|
 |[size_type](#size_type)|`stack` 内の要素の数を表すことができる符号なし整数型。|
 |[value_type](#value_type)|`stack` 内に要素として格納されるオブジェクトの種類を表す型。|
 
-### <a name="member-functions"></a>メンバー関数
+### <a name="functions"></a>関数
 
-|メンバー関数|説明|
+|||
 |-|-|
 |[empty](#empty)|`stack` が空かどうかをテストします。|
 |[pop](#pop)|`stack` の先頭から要素を削除します。|
@@ -84,15 +86,9 @@ Stack オブジェクトは、等値比較できる場合、場合にのみを�
 |[size](#size)|`stack` 内の要素数を返します。|
 |[top](#top)|`stack` の先頭にある要素への参照を返します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="container_type"></a> container_type
 
-**ヘッダー:** \<stack>
-
-**名前空間:** std
-
-## <a name="container_type"></a>  stack::container_type
-
-適合されるように、基本のコンテナーを提供する型。
+適合される基本のコンテナーを提供する型。
 
 ```cpp
 typedef Container container_type;
@@ -108,7 +104,7 @@ typedef Container container_type;
 
 `container_type` の宣言方法や使用方法の例については、[stack::stack](#stack) の例を参照してください。
 
-## <a name="empty"></a>  stack::empty
+## <a name="empty"></a> 空
 
 stack が空かどうかをテストします。
 
@@ -153,7 +149,7 @@ The stack s1 is not empty.
 The stack s2 is empty.
 ```
 
-## <a name="pop"></a>  stack::pop
+## <a name="pop"></a> pop
 
 stack の先頭から要素を削除します。
 
@@ -209,7 +205,7 @@ After a pop, the stack length is 2.
 After a pop, the element at the top of the stack is 20.
 ```
 
-## <a name="push"></a>  stack::push
+## <a name="push"></a> プッシュ
 
 スタックの先頭に要素を追加します。
 
@@ -219,7 +215,7 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>パラメーター
 
-*val*<br/>
+*val*\
 スタックの先頭に追加される要素。
 
 ### <a name="remarks"></a>Remarks
@@ -258,7 +254,7 @@ The stack length is 3.
 The element at the top of the stack is 30.
 ```
 
-## <a name="size"></a>  stack::size
+## <a name="size"></a> サイズ
 
 stack 内の要素数を返します。
 
@@ -299,7 +295,7 @@ The stack length is 1.
 The stack length is now 2.
 ```
 
-## <a name="size_type"></a>  stack::size_type
+## <a name="size_type"></a> size_type
 
 stack 内の要素の数を表すことができる符号なし整数型。
 
@@ -313,9 +309,9 @@ typedef typename Container::size_type size_type;
 
 ### <a name="example"></a>例
 
-`size_type` の宣言方法や使用方法の例については、[size](#size) の例を参照してください。
+`size_type` の宣言方法や使用方法の例については、[size](#size) の例をご覧ください。
 
-## <a name="stack"></a>  stack::stack
+## <a name="stack"></a> スタック
 
 空であるか、基本のコンテナー クラスのコピーである stack を構築します。
 
@@ -327,7 +323,7 @@ explicit stack(const container_type& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*right*<br/>
+*そうです*\
 構築される container のコピー元となる container。
 
 ### <a name="example"></a>例
@@ -369,7 +365,7 @@ int main( )
 The element at the top of stack vsi2 is 1.
 ```
 
-## <a name="top"></a>  stack::top
+## <a name="top"></a> ページのトップへ
 
 stack の先頭にある要素への参照を返します。
 
@@ -420,7 +416,7 @@ The top integer of the stack s1 is 2.
 The next integer down is 1.
 ```
 
-## <a name="value_type"></a>  stack::value_type
+## <a name="value_type"></a> value_type
 
 stack 内に要素として格納されるオブジェクトの種類を表す型。
 

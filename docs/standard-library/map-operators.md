@@ -16,21 +16,14 @@ helpviewer_keywords:
 - std::operator&lt; (map)
 - std::operator&lt;= (map)
 - std::operator== (map)
-ms.openlocfilehash: b6d2ac108652e33fdd76abaac9b982840d4fce7f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e05aca75f527e1bc78912ab6b4b5a9de6dcd54c5
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413022"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246420"
 ---
 # <a name="ltmapgt-operators"></a>&lt;map&gt; 演算子
-
-||||
-|-|-|-|
-|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
-|[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|
-|[operator!= (multimap)](#op_neq_multimap)|[演算子&gt;(multimap)](#op_gt_multimap)|[operator&gt;= (multimap)](#op_gt_eq_multimap)|
-|[演算子&lt;(multimap)](#op_lt_multimap)|[operator&lt;= (multimap)](#op_lt_eq_multimap)|[operator== (multimap)](#op_eq_eq_multimap)|
 
 ## <a name="op_neq"></a>  operator!=
 
@@ -44,10 +37,10 @@ bool operator!=(
 
 ### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左*\
 `map` 型のオブジェクト。
 
-*right*<br/>
+*そうです*\
 `map` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -90,13 +83,14 @@ int main( )
    else
       cout << "The maps m1 and m3 are equal." << endl;
 }
-/* Output:
-The maps m1 and m2 are not equal.
-The maps m1 and m3 are equal.
-*/
 ```
 
-## <a name="op_lt"></a>  operator&lt;
+```Output
+The maps m1 and m2 are not equal.
+The maps m1 and m3 are equal.
+```
+
+## <a name="op_lt"></a> 演算子&lt;
 
 演算子の左辺の map オブジェクトが右辺の map オブジェクトより小さいかどうかを調べます。
 
@@ -108,10 +102,10 @@ bool operator<(
 
 ### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左*\
 `map` 型のオブジェクト。
 
-*right*<br/>
+*そうです*\
 `map` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -154,13 +148,14 @@ int main( )
    else
       cout << "The map m1 is not less than the map m3." << endl;
 }
-/* Output:
-The map m1 is less than the map m2.
-The map m1 is not less than the map m3.
-*/
 ```
 
-## <a name="op_lt_eq"></a>  演算子&lt;=
+```Output
+The map m1 is less than the map m2.
+The map m1 is not less than the map m3.
+```
+
+## <a name="op_lt_eq"></a> 演算子&lt;=
 
 演算子の左辺の map オブジェクトが右辺の map オブジェクト以下かどうかを調べます。
 
@@ -172,10 +167,10 @@ bool operator<=(
 
 ### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左*\
 `map` 型のオブジェクト。
 
-*right*<br/>
+*そうです*\
 `map` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -220,14 +215,15 @@ int main( )
    else
       cout << "The map m1 is greater than the map m4." << endl;
 }
-/* Output:
+```
+
+```Output
 The map m1 is less than or equal to the map m2.
 The map m1 is greater than the map m3.
 The map m1 is less than or equal to the map m4.
-*/
 ```
 
-## <a name="op_eq_eq"></a>  operator==
+## <a name="op_eq_eq"></a> 演算子 = =
 
 演算子の左辺の map オブジェクトが右辺の map オブジェクトと等しいかどうかを調べます。
 
@@ -239,10 +235,10 @@ bool operator==(
 
 ### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左*\
 `map` 型のオブジェクト。
 
-*right*<br/>
+*そうです*\
 `map` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -285,13 +281,14 @@ int main( )
    else
       cout << "The maps m1 and m3 are not equal." << endl;
 }
-/* Output:
-The maps m1 and m2 are not equal.
-The maps m1 and m3 are equal.
-*/
 ```
 
-## <a name="op_gt"></a>  operator&gt;
+```Output
+The maps m1 and m2 are not equal.
+The maps m1 and m3 are equal.
+```
+
+## <a name="op_gt"></a> 演算子&gt;
 
 演算子の左辺の map オブジェクトが右辺の map オブジェクトより大きいかどうかを調べます。
 
@@ -303,10 +300,10 @@ bool operator>(
 
 ### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左*\
 `map` 型のオブジェクト。
 
-*right*<br/>
+*そうです*\
 `map` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -367,10 +364,10 @@ bool operator>=(
 
 ### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左*\
 `map` 型のオブジェクト。
 
-*right*<br/>
+*そうです*\
 `map` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -415,14 +412,15 @@ int main( )
    else
       cout << "The map m1 is less than the map m4." << endl;
 }
-/* Output:
+```
+
+```Output
 The map m1 is less than the map m2.
 Map m1 is greater than or equal to map m3.
 Map m1 is greater than or equal to map m4.
-*/
 ```
 
-## <a name="op_neq_multimap"></a>  operator!= (multimap)
+## <a name="op_neq_multimap"></a> 演算子! = (multimap)
 
 演算子の左辺の multimap オブジェクトが右辺の multimap オブジェクトと等しくないかどうかをテストします。
 
@@ -434,10 +432,10 @@ bool operator!=(
 
 ### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左*\
 `multimap` 型のオブジェクト。
 
-*right*<br/>
+*そうです*\
 `multimap` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -480,13 +478,14 @@ int main( )
    else
       cout << "The multimaps m1 and m3 are equal." << endl;
 }
-/* Output:
-The multimaps m1 and m2 are not equal.
-The multimaps m1 and m3 are equal.
-*/
 ```
 
-## <a name="op_lt_multimap"></a>  operator&lt;
+```Output
+The multimaps m1 and m2 are not equal.
+The multimaps m1 and m3 are equal.
+```
+
+## <a name="op_lt_multimap"></a> 演算子&lt;
 
 演算子の左辺の multimap オブジェクトが右辺の multimap オブジェクトより小さいかどうかをテストします。
 
@@ -498,10 +497,10 @@ bool operator<(
 
 ### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左*\
 `multimap` 型のオブジェクト。
 
-*right*<br/>
+*そうです*\
 `multimap` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -544,13 +543,18 @@ int main( )
    else
       cout << "The multimap m1 is not less than the multimap m3." << endl;
 }
-/* Output:
-The multimap m1 is less than the multimap m2.
-The multimap m1 is not less than the multimap m3.
-*/
 ```
 
+```Output
+The multimap m1 is less than the multimap m2.
+The multimap m1 is not less than the multimap m3.
+```
+
+<<<<<<< HEAD
+## <a name="eq_multimap"></a> 演算子&lt;=
+=======
 ## <a name="op_lt_eq_multimap"></a>  演算子&lt;=
+>>>>>>> 009c7ce384664f2a62ffb0bc61d6586b585ed38a
 
 演算子の左辺の multimap オブジェクトが右辺の multimap オブジェクト以下かどうかをテストします。
 
@@ -562,10 +566,10 @@ bool operator<=(
 
 ### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左*\
 `multimap` 型のオブジェクト。
 
-*right*<br/>
+*そうです*\
 `multimap` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -610,14 +614,15 @@ int main( )
    else
       cout << "m1 is greater than m4" << endl;
 }
-/* Output:
+```
+
+```Output
 m1 is less than or equal to m2
 m1 is greater than m3
 m1 is less than or equal to m4
-*/
 ```
 
-## <a name="op_eq_eq_multimap"></a>  operator==
+## <a name="op_eq_eq_multimap"></a> 演算子 = =
 
 演算子の左辺の multimap オブジェクトが右辺の multimap オブジェクトと等しいかどうかをテストします。
 
@@ -629,10 +634,10 @@ bool operator==(
 
 ### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左*\
 `multimap` 型のオブジェクト。
 
-*right*<br/>
+*そうです*\
 `multimap` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -675,13 +680,14 @@ int main( )
    else
       cout << "m1 and m3 are not equal" << endl;
 }
-/* Output:
-m1 and m2 are not equal
-m1 and m3 are equal
-*/
 ```
 
-## <a name="op_gt_multimap"></a>  operator&gt;
+```Output
+m1 and m2 are not equal
+m1 and m3 are equal
+```
+
+## <a name="op_gt_multimap"></a> 演算子&gt;
 
 演算子の左辺の multimap オブジェクトが右辺の multimap オブジェクトより大きいかどうかをテストします。
 
@@ -693,10 +699,10 @@ bool operator>(
 
 ### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左*\
 `multimap` 型のオブジェクト。
 
-*right*<br/>
+*そうです*\
 `multimap` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -739,13 +745,14 @@ int main( )
    else
       cout << "The multimap m1 is not greater than the multimap m3." << endl;
 }
-/* Output:
-Multimap m1 is not greater than multimap m2.
-The multimap m1 is greater than the multimap m3.
-*/
 ```
 
-## <a name="op_gt_eq_multimap"></a>  演算子&gt;=
+```Output
+Multimap m1 is not greater than multimap m2.
+The multimap m1 is greater than the multimap m3.
+```
+
+## <a name="op_gt_eq_multimap"></a> 演算子&gt;=
 
 演算子の左辺の multimap オブジェクトが右辺の multimap オブジェクト以上かどうかをテストします。
 
@@ -757,10 +764,10 @@ bool operator>=(
 
 ### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左*\
 `multimap` 型のオブジェクト。
 
-*right*<br/>
+*そうです*\
 `multimap` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -805,13 +812,10 @@ int main( )
    else
       cout << "The multimap m1 is less than the multimap m4." << endl;
 }
-/* Output:
+```
+
+```Output
 The multimap m1 is less than the multimap m2.
 The multimap m1 is greater than or equal to the multimap m3.
 The multimap m1 is greater than or equal to the multimap m4.
-*/
 ```
-
-## <a name="see-also"></a>関連項目
-
-[\<map>](../standard-library/map.md)<br/>

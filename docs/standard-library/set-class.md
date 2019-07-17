@@ -86,12 +86,12 @@ helpviewer_keywords:
 - std::set [C++], upper_bound
 - std::set [C++], value_comp
 ms.assetid: 8991f9aa-5509-4440-adc1-371512d32018
-ms.openlocfilehash: 8f4ad77c28b4643a979d7c3fb22e44e4aebd43dd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3d24b353d83cf1efc1660755f1cfb66efc01f33a
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62295488"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243619"
 ---
 # <a name="set-class"></a>set クラス
 
@@ -108,15 +108,15 @@ class set
 
 ### <a name="parameters"></a>パラメーター
 
-*Key*<br/>
+*キー*\
 set に格納される要素のデータ型。
 
-*Traits*<br/>
+*特徴*\
 2 つの要素の値を並べ替えキーとして比較して、set 内の要素の相対順序を決定できる関数オブジェクトを提供する型。 この引数は省略可能であり、既定値は二項述語 **less** *\<Key>* です。
 
 C++ 14 では、型パラメーターを使用せずに `std::less<>` 述語または `std::greater<>` 述語を指定することで、異種ルックアップを有効にすることができます。 詳細については、「[連想コンテナーの異種ルックアップ](../standard-library/stl-containers.md#sequence_containers)」をご覧ください。
 
-*アロケーター*<br/>
+*アロケーター*\
 メモリの set の割り当てと解放に関する詳細をカプセル化する、格納されたアロケーター オブジェクトを表す型。 この引数は省略可能であり、既定値は `allocator<Key>` です。
 
 ## <a name="remarks"></a>Remarks
@@ -145,13 +145,13 @@ set クラスに用意されている反復子は双方向反復子ですが、�
 
 ### <a name="constructors"></a>コンストラクター
 
-|コンストラクター|説明|
+|||
 |-|-|
 |[set](#set)|空の set を構築するか、他の set の全体または一部のコピーである set を構築します。|
 
 ### <a name="typedefs"></a>Typedef
 
-|型名|説明|
+|||
 |-|-|
 |[allocator_type](#allocator_type)|set オブジェクトの `allocator` クラスを表す型。|
 |[const_iterator](#const_iterator)|set 内の **const** 要素を読み取ることができる双方向反復子を提供する型。|
@@ -169,9 +169,9 @@ set クラスに用意されている反復子は双方向反復子ですが、�
 |[value_compare](#value_compare)|2 つの要素を比較して、set 内の要素の相対順序を決定できる関数オブジェクトを提供する型。|
 |[value_type](#value_type)|この型は、値としてキャパシティ内で set の要素として格納されるオブジェクトを表します。|
 
-### <a name="member-functions"></a>メンバー関数
+### <a name="functions"></a>関数
 
-|メンバー関数|説明|
+|||
 |-|-|
 |[begin](#begin)|set 内の最初の要素を指す定数反復子を返します。|
 |[cbegin](#cbegin)|set 内の最初の要素を指す定数反復子を返します。|
@@ -201,17 +201,11 @@ set クラスに用意されている反復子は双方向反復子ですが、�
 
 ### <a name="operators"></a>演算子
 
-|演算子|説明|
+|||
 |-|-|
 |[operator=](#op_eq)|別の set のコピーで set の要素を置き換えます。|
 
-## <a name="requirements"></a>必要条件
-
-**ヘッダー:** \<set>
-
-**名前空間:** std
-
-## <a name="allocator_type"></a>  set::allocator_type
+## <a name="allocator_type"></a> allocator_type
 
 set オブジェクトのアロケータ― クラスを表す型です。
 
@@ -231,7 +225,7 @@ multiset が要素の並べ替えに使用する関数オブジェクトであ�
 
 [get_allocator](#get_allocator) を使用する例については、`allocator_type` の例を参照してください。
 
-## <a name="begin"></a>  set::begin
+## <a name="begin"></a> 開始
 
 set 内の最初の要素を指す定数反復子を返します。
 
@@ -288,7 +282,7 @@ The first element of s1 is 1
 The first element of s1 is now 2
 ```
 
-## <a name="cbegin"></a>  set::cbegin
+## <a name="cbegin"></a> cbegin
 
 返します、 **const**範囲の最初の要素を指す反復子。
 
@@ -314,7 +308,7 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator
 ```
 
-## <a name="cend"></a>  set::cend
+## <a name="cend"></a> cend
 
 返します、 **const**範囲の最後の要素の次の位置を指す反復子。
 
@@ -342,7 +336,7 @@ auto i2 = Container.cend();
 
 `cend` によって返された値は逆参照しないでください。
 
-## <a name="clear"></a>  set::clear
+## <a name="clear"></a> オフ
 
 set のすべての要素を消去します。
 
@@ -380,7 +374,7 @@ The size of the set is initially 2.
 The size of the set after clearing is 0.
 ```
 
-## <a name="const_iterator"></a>  set::const_iterator
+## <a name="const_iterator"></a> const_iterator
 
 set 内の **const** 要素を読み取ることができる双方向反復子を提供する型。
 
@@ -396,7 +390,7 @@ typedef implementation-defined const_iterator;
 
 `const_iterator` を使用する例については、[begin](#begin) の例を参照してください。
 
-## <a name="const_pointer"></a>  set::const_pointer
+## <a name="const_pointer"></a> const_pointer
 
 set 内の **const** 要素へのポインターを提供する型。
 
@@ -410,7 +404,7 @@ typedef typename allocator_type::const_pointer const_pointer;
 
 ほとんどの場合、const set オブジェクト内の要素にアクセスするには、[const_iterator](#const_iterator) を使用する必要があります。
 
-## <a name="const_reference"></a>  set::const_reference
+## <a name="const_reference"></a> const_reference
 
 読み取りと **const** 操作の実行のために、set に格納された **const** 要素への参照を提供する型。
 
@@ -451,7 +445,7 @@ int main( )
 The first element in the set is 10.
 ```
 
-## <a name="const_reverse_iterator"></a>  set::const_reverse_iterator
+## <a name="const_reverse_iterator"></a> const_reverse_iterator
 
 set 内の任意の **const** 要素を読み取ることができる双方向反復子を提供する型。
 
@@ -465,9 +459,9 @@ typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 
 ### <a name="example"></a>例
 
-`const_reverse_iterator` の宣言方法や使用方法の例については、[rend](#rend) の例を参照してください。
+`const_reverse_iterator` の宣言方法や使用方法の例については、[rend](#rend) の例をご覧ください。
 
-## <a name="count"></a>  set::count
+## <a name="count"></a> カウント
 
 パラメーター指定したキーに一致するキーを持つ、set 内の要素の数を返します。
 
@@ -477,7 +471,7 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*key*<br/>
+*キー*\
 照合される set の要素のキー。
 
 ### <a name="return-value"></a>戻り値
@@ -525,7 +519,7 @@ The number of elements in s1 with a sort key of 1 is: 1.
 The number of elements in s1 with a sort key of 2 is: 0.
 ```
 
-## <a name="crbegin"></a>  set::crbegin
+## <a name="crbegin"></a> crbegin
 
 反転された set 内の最初の要素を指す定数反復子を返します。
 
@@ -571,7 +565,7 @@ int main( )
 The first element in the reversed set is 30.
 ```
 
-## <a name="crend"></a>  set::crend
+## <a name="crend"></a> crend
 
 反転された set 内の最後の要素の次の位置を指す定数反復子を返します。
 
@@ -615,7 +609,7 @@ int main() {
 }
 ```
 
-## <a name="difference_type"></a>  set::difference_type
+## <a name="difference_type"></a> difference_type
 
 set の要素の数を、反復子が指す要素の範囲に基づいて表すために使用できる符号付き整数型。
 
@@ -625,7 +619,7 @@ typedef typename allocator_type::difference_type difference_type;
 
 ### <a name="remarks"></a>Remarks
 
-`difference_type` は、コンテナーの反復子を減算またはインクリメントするときに返される型です。 通常、`difference_type` は、*[ first,  last)*  の範囲内で、反復子 `first` と `last` の間にある要素の数を表すために使用され、`first` が指す要素と、`last` が指す要素の 1 つ前までの範囲の要素を含みます。
+`difference_type` は、コンテナーの反復子を減算またはインクリメントするときに返される型です。 通常、`difference_type` は、 *[ first,  last)*  の範囲内で、反復子 `first` と `last` の間にある要素の数を表すために使用され、`first` が指す要素と、`last` が指す要素の 1 つ前までの範囲の要素を含みます。
 
 `difference_type` は、入力反復子の要件を満たすすべての反復子 (set などの反転可能なコンテナーによってサポートされる双方向反復子のクラスを含む) に対して使用できますが、反復子間の減算は、vector などのランダム アクセス コンテナーによって提供される、ランダム アクセス反復子によってのみサポートされます。
 
@@ -688,7 +682,7 @@ The number '20' occurs 1 times in set s1.
 The number of elements in the set s1 is: 2.
 ```
 
-## <a name="emplace"></a>  set::emplace
+## <a name="emplace"></a> emplace
 
 インプレースで構築された (コピーまたは移動操作が実行されない) 要素を挿入します。
 
@@ -769,7 +763,7 @@ int main()
 }
 ```
 
-## <a name="emplace_hint"></a>  set::emplace_hint
+## <a name="emplace_hint"></a> emplace_hint
 
 インプレースで構築された (コピーまたは移動操作が実行されない) 要素を、配置ヒントと一緒に挿入します。
 
@@ -782,10 +776,11 @@ iterator emplace_hint(
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|-|-|
-|*引数*|挿入される要素をセットがまだ含んでいない場合、より一般的には、値が同じ順序付けになる要素がセットにまだ含まれていない場合に、セットに挿入される要素を構築するために転送される引数。|
-|*where*|正しい挿入ポイントの検索を開始する場所  (そのポイントの直前に場合*場所*、対数時間ではなく償却定数時間で実行できます)。|
+*引数*\
+挿入される要素をセットがまだ含んでいない場合、より一般的には、値が同じ順序付けになる要素がセットにまだ含まれていない場合に、セットに挿入される要素を構築するために転送される引数。
+
+*どこ*\
+正しい挿入ポイントの検索を開始する場所 (そのポイントの直前に場合*場所*、対数時間ではなく償却定数時間で実行できます)。
 
 ### <a name="return-value"></a>戻り値
 
@@ -843,7 +838,7 @@ int main()
 }
 ```
 
-## <a name="empty"></a>  set::empty
+## <a name="empty"></a> 空
 
 set が空かどうかをテストします。
 
@@ -886,7 +881,7 @@ The set s1 is not empty.
 The set s2 is empty.
 ```
 
-## <a name="end"></a>  set::end
+## <a name="end"></a> 終わり
 
 末尾超え反復子を返します。
 
@@ -908,7 +903,7 @@ iterator end();
 
 コード例については、「[set::find](#find)」を参照してください。
 
-## <a name="equal_range"></a>  set::equal_range
+## <a name="equal_range"></a> equal_range
 
 指定したキー以上のキーを持つ、set 内の最初の要素を指す反復子のペア、およびそのキーより大きいキーを持つ、set 内の最初の要素を指す反復子のペアを返します。
 
@@ -920,7 +915,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>パラメーター
 
-*key*<br/>
+*キー*\
 検索対象の set 内の要素の並べ替えキーと比較される引数キー。
 
 ### <a name="return-value"></a>戻り値
@@ -987,7 +982,7 @@ matching the 2nd element of the pair returned by equal_range( 20 ).
 The set s1 doesn't have an element with a key less than 40.
 ```
 
-## <a name="erase"></a>  set::erase
+## <a name="erase"></a> 消去
 
 セット内の要素または要素の範囲を指定した位置から削除するか、または指定したキーと一致する要素を削除します。
 
@@ -1005,16 +1000,16 @@ size_type erase(
 
 ### <a name="parameters"></a>パラメーター
 
-*Where*<br/>
+*どこ*\
 削除される要素の位置。
 
-*First*<br/>
+*まずは*\
 削除される最初の要素の位置。
 
-*Last*<br/>
+*前の*\
 削除される最後の要素の次の位置。
 
-*Key*<br/>
+*キー*\
 削除される要素のキー値。
 
 ### <a name="return-value"></a>戻り値
@@ -1022,8 +1017,6 @@ size_type erase(
 最初の 2 つのメンバー関数の場合は、削除された要素の後の最初の残存要素、またはセットの最後の要素 (このような要素が存在しない場合) を指定する双方向反復子。
 
 3 番目のメンバー関数の場合は、セットから削除された要素の数を返します。
-
-### <a name="remarks"></a>Remarks
 
 ### <a name="example"></a>例
 
@@ -1103,7 +1096,7 @@ int main()
 }
 ```
 
-## <a name="find"></a>  set::find
+## <a name="find"></a> 検索
 
 指定したキーと等価のキーを持つ、set 内の要素の位置を参照する反復子を返します。
 
@@ -1115,7 +1108,7 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*key*<br/>
+*キー*\
 検索対象の set 内の要素の並べ替えキーと照合するキー値。
 
 ### <a name="return-value"></a>戻り値
@@ -1189,7 +1182,7 @@ int main()
 }
 ```
 
-## <a name="get_allocator"></a>  set::get_allocator
+## <a name="get_allocator"></a> get_allocator
 
 set の構築に使用されるアロケーター オブジェクトのコピーを返します。
 
@@ -1263,7 +1256,7 @@ int main( )
 }
 ```
 
-## <a name="insert"></a>  set::insert
+## <a name="insert"></a> 挿入します。
 
 set に要素または要素範囲を挿入します。
 
@@ -1303,15 +1296,26 @@ IList);
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|-|-|
-|*val*|値が同じ順序付けになる要素が set にまだ含まれていない場合に、set に挿入される要素の値。|
-|*Where*|正しい挿入ポイントの検索を開始する場所  (そのポイントの直前に場合*場所*、対数時間ではなく償却定数時間で実行できます)。|
-|*ValTy*|セットの要素の構築に使用できる引数の型を指定するテンプレート パラメーター [value_type](../standard-library/map-class.md#value_type)、および完全転送*Val*を引数として。|
-|*First*|コピーされる最初の要素の位置。|
-|*Last*|コピーされる最後の要素の次の位置。|
-|*InputIterator*|[入力反復子](../standard-library/input-iterator-tag-struct.md)の要件を満たすテンプレート関数の引数。この反復子は、[value_type](../standard-library/map-class.md#value_type) オブジェクトの構築に使用できる型の要素を指し示します。|
-|*IList*|要素のコピー元の [initializer_list](../standard-library/initializer-list.md)。|
+*val*\
+値が同じ順序付けになる要素が set にまだ含まれていない場合に、set に挿入される要素の値。
+
+*どこ*\
+正しい挿入ポイントの検索を開始する場所 (そのポイントの直前に場合*場所*、対数時間ではなく償却定数時間で実行できます)。
+
+*ValTy*\
+セットの要素の構築に使用できる引数の型を指定するテンプレート パラメーター [value_type](../standard-library/map-class.md#value_type)、および完全転送*Val*を引数として。
+
+*まずは*\
+コピーされる最初の要素の位置。
+
+*前の*\
+コピーされる最後の要素の次の位置。
+
+*InputIterator*\
+[入力反復子](../standard-library/input-iterator-tag-struct.md)の要件を満たすテンプレート関数の引数。この反復子は、[value_type](../standard-library/map-class.md#value_type) オブジェクトの構築に使用できる型の要素を指し示します。
+
+*IList*\
+要素のコピー元の [initializer_list](../standard-library/initializer-list.md)。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1433,7 +1437,7 @@ int main()
 }
 ```
 
-## <a name="iterator"></a>  set::iterator
+## <a name="iterator"></a> 反復子
 
 セット内の任意の要素を読み取れる、定数の[双方向反復子](../standard-library/bidirectional-iterator-tag-struct.md)を提供する型。
 
@@ -1445,7 +1449,7 @@ typedef implementation-defined iterator;
 
 例をご覧ください[開始](#begin)宣言方法や使用方法の例については、`iterator`します。
 
-## <a name="key_comp"></a>  set::key_comp
+## <a name="key_comp"></a> key_comp
 
 set 内のキーを並べ替えるために使用される比較オブジェクトのコピーを取得します。
 
@@ -1463,7 +1467,7 @@ set が要素の並べ替えに使用する関数オブジェクトである、�
 
 格納されているオブジェクトは以下のメンバー関数を定義します。
 
-**bool operator()**( **const Key&**`_xVal`, **const Key&**`_yVal`);
+**bool operator()** (**const Key (& a)** `_xVal`、 **const Key (& a)** `_yVal`)。
 
 これは、並べ替え順で `_xVal` が `_yVal` に先行しかつ等しくない場合に **true** を返します。
 
@@ -1520,7 +1524,7 @@ kc1( 2,3 ) returns value of true, where kc1 is the function object of s1.
 kc2( 2,3 ) returns value of false, where kc2 is the function object of s2.
 ```
 
-## <a name="key_compare"></a>  set::key_compare
+## <a name="key_compare"></a> key_compare
 
 2 つの並べ替えキーを比較して、set 内の 2 つの要素の相対順序を決定できる関数オブジェクトを提供する型。
 
@@ -1538,9 +1542,9 @@ typedef Traits key_compare;
 
 ### <a name="example"></a>例
 
-`key_compare` の宣言方法や使用方法の例については、[key_comp](#key_comp) の例を参照してください。
+`key_compare` の宣言方法や使用方法の例については、[key_comp](#key_comp) の例をご覧ください。
 
-## <a name="key_type"></a>  set::key_type
+## <a name="key_type"></a> key_type
 
 並べ替えキーとしてキャパシティ内に set の要素として格納されるオブジェクトを表す型。
 
@@ -1558,9 +1562,9 @@ typedef Key key_type;
 
 ### <a name="example"></a>例
 
-`key_type` の宣言方法や使用方法の例については、[value_type](#value_type) の例を参照してください。
+`key_type` の宣言方法や使用方法の例については、[value_type](#value_type) の例をご覧ください。
 
-## <a name="lower_bound"></a>  set::lower_bound
+## <a name="lower_bound"></a> lower_bound
 
 指定したキー以上のキーを持つ、set 内の最初の要素を指す反復子を返します。
 
@@ -1572,7 +1576,7 @@ iterator lower_bound(const Key& key);
 
 ### <a name="parameters"></a>パラメーター
 
-*key*<br/>
+*キー*\
 検索対象の set 内の要素の並べ替えキーと比較される引数キー。
 
 ### <a name="return-value"></a>戻り値
@@ -1628,7 +1632,7 @@ The set s1 doesn't have an element with a key of 40.
 The element of s1 with a key matching that of the last element is: 30.
 ```
 
-## <a name="max_size"></a>  set::max_size
+## <a name="max_size"></a> max_size
 
 set の最大長を返します。
 
@@ -1660,7 +1664,7 @@ int main( )
 }
 ```
 
-## <a name="op_eq"></a>  set::operator=
+## <a name="op_eq"></a> 演算子 =
 
 別の `set` の要素を使ってこの `set` の要素を置き換えます。
 
@@ -1672,9 +1676,8 @@ set& operator=(set&& right);
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|-|-|
-|*right*|この `set` に割り当てられる新しい要素を提供する `set`。|
+*そうです*\
+この `set` に割り当てられる新しい要素を提供する `set`。
 
 ### <a name="remarks"></a>Remarks
 
@@ -1721,7 +1724,7 @@ int main( )
    }
 ```
 
-## <a name="pointer"></a>  set::pointer
+## <a name="pointer"></a> ポインター
 
 set 内の要素へのポインターを提供する型。
 
@@ -1735,7 +1738,7 @@ typedef typename allocator_type::pointer pointer;
 
 ほとんどの場合、set オブジェクト内の要素にアクセスするには、[iterator](#iterator) を使用する必要があります。
 
-## <a name="rbegin"></a>  set::rbegin
+## <a name="rbegin"></a> rbegin
 
 反転された set 内の最初の要素を指す反復子を返します。
 
@@ -1811,7 +1814,7 @@ The reversed set is: 30 20 10
 After the erasure, the first element in the reversed set is 20.
 ```
 
-## <a name="reference"></a>  set::reference
+## <a name="reference"></a> 参照
 
 set に格納されている要素への参照を提供する型。
 
@@ -1847,7 +1850,7 @@ int main( )
 The first element in the set is 10.
 ```
 
-## <a name="rend"></a>  set::rend
+## <a name="rend"></a> rend
 
 反転された set 内の最後の要素の次の位置を指す反復子を返します。
 
@@ -1918,7 +1921,7 @@ int main() {
 }
 ```
 
-## <a name="reverse_iterator"></a>  set::reverse_iterator
+## <a name="reverse_iterator"></a> reverse_iterator
 
 反転された set 内の 1 つの要素の読み取りまたは変更ができる双方向反復子を提供する型。
 
@@ -1932,9 +1935,9 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 
 ### <a name="example"></a>例
 
-`reverse_iterator` の反復子の宣言方法や使用方法の例については、[rbegin](#rbegin) の例をご覧ください。
+`reverse_iterator` の宣言方法や使用方法の例については、[rbegin](#rbegin) の例をご覧ください。
 
-## <a name="set"></a>  set::set
+## <a name="set"></a> 設定
 
 空の set を構築するか、他の set の全体または一部のコピーである set を構築します。
 
@@ -1987,14 +1990,23 @@ set(
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|-|-|
-|*Al*|既定値は、このセット オブジェクトに使用するストレージ アロケーター クラス`Allocator`します。|
-|*コンポジション*|set 内の要素の並べ替えに使用される、`const Traits` 型の比較関数。既定では `Compare` です。|
-|*右*|構築される set のコピー元となる set。|
-|*First*|コピーする要素範囲内の最初の要素の位置。|
-|*Last*|コピーする要素範囲を超える最初の要素の位置。|
-|*IList*|要素のコピー元の initializer_list。|
+*Al*\
+既定値は、このセット オブジェクトに使用するストレージ アロケーター クラス`Allocator`します。
+
+*コンポジション*\
+set 内の要素の並べ替えに使用される、`const Traits` 型の比較関数。既定では `Compare` です。
+
+*右*\
+構築される set のコピー元となる set。
+
+*まずは*\
+コピーする要素範囲内の最初の要素の位置。
+
+*前の*\
+コピーする要素範囲を超える最初の要素の位置。
+
+*IList*\
+要素のコピー元の initializer_list。
 
 ### <a name="remarks"></a>Remarks
 
@@ -2126,7 +2138,7 @@ int main()
 s1 = 10 20 30 40s2 = 10 20s3 = 30s4 = 10 20 30 40s5 = 10 20s6 = 10s7 = 10 20s8 = 1 2 3 4s9 = 5 6 7 8s10 = 10 20 30 40
 ```
 
-## <a name="size"></a>  set::size
+## <a name="size"></a> サイズ
 
 セット内の要素数を返します。
 
@@ -2167,7 +2179,7 @@ The set length is 1.
 The set length is now 2.
 ```
 
-## <a name="size_type"></a>  set::size_type
+## <a name="size_type"></a> size_type
 
 set 内の要素の数を表すことができる符号なし整数型。
 
@@ -2177,9 +2189,9 @@ typedef typename allocator_type::size_type size_type;
 
 ### <a name="example"></a>例
 
-`size_type` の宣言方法や使用方法の例については、[size](#size) の例を参照してください。
+`size_type` の宣言方法や使用方法の例については、[size](#size) の例をご覧ください。
 
-## <a name="swap"></a>  set::swap
+## <a name="swap"></a> スワップ
 
 2 つの set の要素を交換します。
 
@@ -2190,7 +2202,7 @@ void swap(
 
 ### <a name="parameters"></a>パラメーター
 
-*right*<br/>
+*そうです*\
 ターゲットの set と交換する要素を提供する引数の set。
 
 ### <a name="remarks"></a>Remarks
@@ -2247,7 +2259,7 @@ After swapping with s2, list s1 is: 100 200.
 After swapping with s3, list s1 is: 300.
 ```
 
-## <a name="upper_bound"></a>  set::upper_bound
+## <a name="upper_bound"></a> upper_bound
 
 指定したキーよりも大きいキーを持つ、set 内の最初の要素を指す反復子を返します。
 
@@ -2259,7 +2271,7 @@ iterator upper_bound(const Key& key);
 
 ### <a name="parameters"></a>パラメーター
 
-*key*<br/>
+*キー*\
 検索対象の set 内の要素の並べ替えキーと比較される引数キー。
 
 ### <a name="return-value"></a>戻り値
@@ -2315,7 +2327,7 @@ The first element of s1 with a key greater than
 that of the initial element of s1 is: 20.
 ```
 
-## <a name="value_comp"></a>  set::value_comp
+## <a name="value_comp"></a> value_comp
 
 set 内の要素の値を並べ替えるために使用される比較オブジェクトのコピーを取得します。
 
@@ -2333,7 +2345,7 @@ set が要素の並べ替えに使用する関数オブジェクトである、�
 
 格納されているオブジェクトは以下のメンバー関数を定義します。
 
-**bool operator**( **const Key&**`_xVal`, **const Key&**`_yVal`);
+**bool 演算子**(**const Key (& a)** `_xVal`、 **const Key (& a)** `_yVal`)。
 
 これは、並べ替え順で `_xVal` が `_yVal` に先行しかつ等しくない場合に **true** を返します。
 
@@ -2390,7 +2402,7 @@ vc1( 2,3 ) returns value of true, where vc1 is the function object of s1.
 vc2( 2,3 ) returns value of false, where vc2 is the function object of s2.
 ```
 
-## <a name="value_compare"></a>  set::value_compare
+## <a name="value_compare"></a> value_compare
 
 2 つの要素の値を比較して、set 内の要素の相対順序を決定できる関数オブジェクトを提供する型。
 
@@ -2410,7 +2422,7 @@ typedef key_compare value_compare;
 
 `value_compare` の宣言方法や使用方法の例については、[value_comp](#value_comp) の例を参照してください。
 
-## <a name="value_type"></a>  set::value_type
+## <a name="value_type"></a> value_type
 
 値として、キャパシティ内で set の要素として格納されるオブジェクトを表す型です。
 
@@ -2460,10 +2472,3 @@ int main( )
 ```Output
 The set has elements: 10 20.
 ```
-
-## <a name="see-also"></a>関連項目
-
-[\<set>](../standard-library/set.md)<br/>
-[コンテナー](../cpp/containers-modern-cpp.md)<br/>
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)<br/>
