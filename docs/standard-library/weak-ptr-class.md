@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::weak_ptr [C++], swap
 - std::weak_ptr [C++], use_count
 ms.assetid: 2db4afb2-c7be-46fc-9c20-34ec2f8cc7c2
-ms.openlocfilehash: e2efb5d534ad43e2492ac4fb0bf76db402dca272
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e491c376f110f48b0b02a30fc39f6c6da1a5ab02
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410860"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240902"
 ---
 # <a name="weakptr-class"></a>weak_ptr クラス
 
@@ -57,17 +57,18 @@ public:
       weak_ptr& operator=(const weak_ptr<Other>&);
    template <class Other>
       weak_ptr& operator=(shared_ptr<Other>&);
+      
    void swap(weak_ptr&);
    void reset();
    long use_count() const;
    bool expired() const;
    shared_ptr<Ty> lock() const;
-   };
+};
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*Ty*<br/>
+*Ty*\
 ウィーク ポインターによって制御される型。
 
 ## <a name="remarks"></a>Remarks
@@ -84,7 +85,7 @@ public:
 
 ### <a name="constructors"></a>コンストラクター
 
-|コンストラクター|説明|
+|||
 |-|-|
 |[weak_ptr](#weak_ptr)|`weak_ptr` を構築します。|
 
@@ -102,17 +103,11 @@ public:
 
 ### <a name="operators"></a>演算子
 
-|演算子|説明|
+|||
 |-|-|
 |[operator=](#op_eq)|所有されたリソースを置換します。|
 
-## <a name="requirements"></a>必要条件
-
-**ヘッダー:** \<memory>
-
-**名前空間:** std
-
-## <a name="element_type"></a>  element_type
+### <a name="element_type"></a> element_type
 
 要素の型。
 
@@ -120,11 +115,11 @@ public:
 typedef Ty element_type;
 ```
 
-### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>Remarks
 
 この型は、テンプレート パラメーター `Ty` のシノニムです。
 
-### <a name="example"></a>例
+#### <a name="example"></a>例
 
 ```cpp
 // std__memory__weak_ptr_element_type.cpp
@@ -148,7 +143,7 @@ int main()
 *wp0.lock() == 5
 ```
 
-## <a name="expired"></a>  expired
+### <a name="expired"></a> 有効期限が切れました
 
 所有権の有効期限が切れているかどうかをテストします。
 
@@ -156,11 +151,11 @@ int main()
 bool expired() const;
 ```
 
-### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>Remarks
 
 メンバー関数を返します**true**場合`*this`有効期限が切れた、それ以外の場合**false**します。
 
-### <a name="example"></a>例
+#### <a name="example"></a>例
 
 ```cpp
 // std__memory__weak_ptr_expired.cpp
@@ -205,7 +200,7 @@ wp.expired() == true
 (bool)wp.lock() == false
 ```
 
-## <a name="lock"></a>  lock
+### <a name="lock"></a> ロック
 
 リソースの排他的所有権を取得します。
 
@@ -213,11 +208,11 @@ wp.expired() == true
 shared_ptr<Ty> lock() const;
 ```
 
-### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>Remarks
 
 場合、このメンバー関数は、空の shared_ptr オブジェクトを返します`*this`切れて; を返しますそれ以外の場合、 [shared_ptr クラス](../standard-library/shared-ptr-class.md)\<Ty > リソースを所有するオブジェクト`*this`を指します。
 
-### <a name="example"></a>例
+#### <a name="example"></a>例
 
 ```cpp
 // std__memory__weak_ptr_lock.cpp
@@ -262,7 +257,7 @@ wp.expired() == true
 (bool)wp.lock() == false
 ```
 
-## <a name="op_eq"></a>  operator=
+### <a name="op_eq"></a> 演算子 =
 
 所有されたリソースを置換します。
 
@@ -270,28 +265,28 @@ wp.expired() == true
 weak_ptr& operator=(const weak_ptr& wp);
 
 template <class Other>
-weak_ptr& operator=(const weak_ptr<Other>& wp);
+    weak_ptr& operator=(const weak_ptr<Other>& wp);
 
 template <class Other>
-weak_ptr& operator=(const shared_ptr<Other>& sp);
+    weak_ptr& operator=(const shared_ptr<Other>& sp);
 ```
 
-### <a name="parameters"></a>パラメーター
+#### <a name="parameters"></a>パラメーター
 
-*その他*<br/>
+*その他*\
 引数の共有ポインターまたはウィーク ポインターによって制御される型。
 
-*wp*<br/>
+*wp*\
 コピーするウィーク ポインター。
 
-*sp*<br/>
+*sp*\
 コピーする共有ポインター。
 
-### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>Remarks
 
 すべての演算子は、現在 `*this` によって指し示されているリソースを解放し、オペランド シーケンスで指定されたリソースの所有権を `*this` に割り当てます。 演算子が失敗した場合、`*this` は変更されません。
 
-### <a name="example"></a>例
+#### <a name="example"></a>例
 
 ```cpp
 // std__memory__weak_ptr_operator_as.cpp
@@ -323,28 +318,28 @@ int main()
 *wp1.lock() == 10
 ```
 
-## <a name="owner_before"></a>  owner_before
+### <a name="owner_before"></a> owner_before
 
 返します**true**場合は、この`weak_ptr`前に順序付けは (またはより小さい)、指定されたポインター。
 
 ```cpp
 template <class Other>
-bool owner_before(const shared_ptr<Other>& ptr);
+    bool owner_before(const shared_ptr<Other>& ptr);
 
 template <class Other>
-bool owner_before(const weak_ptr<Other>& ptr);
+    bool owner_before(const weak_ptr<Other>& ptr);
 ```
 
-### <a name="parameters"></a>パラメーター
+#### <a name="parameters"></a>パラメーター
 
-*ptr*<br/>
+*ptr*\
 `shared_ptr` または `weak_ptr` への `lvalue` 参照。
 
-### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>Remarks
 
 テンプレート メンバー関数を返します**true**場合`*this`は`ordered before``ptr`します。
 
-## <a name="reset"></a>  reset
+### <a name="reset"></a> リセット
 
 所有されたリソースを解放します。
 
@@ -352,11 +347,11 @@ bool owner_before(const weak_ptr<Other>& ptr);
 void reset();
 ```
 
-### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>Remarks
 
 このメンバー関数は `*this` によって指し示されるリソースを解放し、`*this` を空の weak_ptr オブジェクトに変換します。
 
-### <a name="example"></a>例
+#### <a name="example"></a>例
 
 ```cpp
 // std__memory__weak_ptr_reset.cpp
@@ -386,7 +381,7 @@ wp.expired() == false
 wp.expired() == true
 ```
 
-## <a name="swap"></a>  swap
+### <a name="swap"></a> スワップ
 
 2 つの `weak_ptr` オブジェクトを交換します。
 
@@ -394,16 +389,23 @@ wp.expired() == true
 void swap(weak_ptr& wp);
 ```
 
-### <a name="parameters"></a>パラメーター
+また、特殊化も含まれています。
 
-*wp*<br/>
+```cpp
+template<class T>
+    void swap(weak_ptr<T>& a, weak_ptr<T>& b) noexcept;
+```
+
+#### <a name="parameters"></a>パラメーター
+
+*wp*\
 交換するウィーク ポインター。
 
-### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>Remarks
 
 メンバー関数が指していたリソースを残します`*this`によってが指し示しその後*wp*、およびリソースが指していた*wp* によってが指し示しその後`*this`. この関数はこれら 2 つのリソースの参照数を変更せず、例外をスローしません。
 
-### <a name="example"></a>例
+#### <a name="example"></a>例
 
 ```cpp
 // std__memory__weak_ptr_swap.cpp
@@ -456,7 +458,7 @@ int main()
 *wp1 == 5
 ```
 
-## <a name="use_count"></a>  use_count
+### <a name="use_count"></a> use_count
 
 指定された `shared_ptr` オブジェクトの数をカウントします。
 
@@ -464,11 +466,11 @@ int main()
 long use_count() const;
 ```
 
-### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>Remarks
 
 このメンバー関数は、`*this` が指し示すリソースを所有する `shared_ptr` オブジェクトの数を返します。
 
-### <a name="example"></a>例
+#### <a name="example"></a>例
 
 ```cpp
 // std__memory__weak_ptr_use_count.cpp
@@ -496,9 +498,9 @@ wp.use_count() == 1
 wp.use_count() == 2
 ```
 
-## <a name="weak_ptr"></a>  weak_ptr
+### <a name="weak_ptr"></a> weak_ptr
 
-`weak_ptr` を構築します。
+`weak_ptr` を構築します。 また、デストラクターが含まれます。
 
 ```cpp
 weak_ptr();
@@ -506,28 +508,30 @@ weak_ptr();
 weak_ptr(const weak_ptr& wp);
 
 template <class Other>
-weak_ptr(const weak_ptr<Other>& wp);
+    weak_ptr(const weak_ptr<Other>& wp);
 
 template <class Other>
-weak_ptr(const shared_ptr<Other>& sp);
+    weak_ptr(const shared_ptr<Other>& sp);
+
+~weak_ptr();
 ```
 
-### <a name="parameters"></a>パラメーター
+#### <a name="parameters"></a>パラメーター
 
-*その他*<br/>
+*その他*\
 引数の共有ポインターまたはウィーク ポインターによって制御される型。
 
-*wp*<br/>
+*wp*\
 コピーするウィーク ポインター。
 
-*sp*<br/>
+*sp*\
 コピーする共有ポインター。
 
-### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>Remarks
 
 コンストラクターはそれぞれ、オペランド シーケンスで指定されたリソースを指し示すオブジェクトを構築します。
 
-### <a name="example"></a>例
+#### <a name="example"></a>例
 
 ```cpp
 // std__memory__weak_ptr_construct.cpp
@@ -559,7 +563,3 @@ wp0.expired() == true
 *wp1.lock() == 5
 *wp2.lock() == 5
 ```
-
-## <a name="see-also"></a>関連項目
-
-[shared_ptr クラス](../standard-library/shared-ptr-class.md)<br/>

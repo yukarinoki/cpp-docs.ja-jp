@@ -1,27 +1,27 @@
 ---
-title: '&lt;数値&gt;'
+title: '&lt;numeric&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - <numeric>
 helpviewer_keywords:
 - <numeric> header
 ms.assetid: 6d6ccb94-48cc-479b-b4a9-bd9c78d4896a
-ms.openlocfilehash: ee93d254dcf49b38cb817ba460060fa72b81e01f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ce195742605c3dd2e127c84ac2f4e1e696c75bd0
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62371456"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246696"
 ---
-# <a name="ltnumericgt"></a>&lt;数値&gt;
+# <a name="ltnumericgt"></a>&lt;numeric&gt;
 
 数値処理のアルゴリズムを実行するコンテナーのテンプレート関数を定義します。
 
-## <a name="syntax"></a>構文
+## <a name="requirements"></a>必要条件
 
-```cpp
-#include <numeric>
-```
+**ヘッダー**:\<数値 >
+
+**名前空間:** std
 
 ## <a name="remarks"></a>Remarks
 
@@ -29,15 +29,25 @@ ms.locfileid: "62371456"
 
 アルゴリズムでは、各 C++ 標準ライブラリ コンテナーの操作およびメンバー関数でサポートされている操作を拡張し、異なる型のコンテナー オブジェクトを同時に操作できるようにします。
 
+## <a name="members"></a>メンバー
+
 ### <a name="functions"></a>関数
 
-|関数|説明|
+|||
 |-|-|
 |[accumulate](../standard-library/numeric-functions.md#accumulate)|連続する部分和を計算することで、初期値を含め、指定された範囲のすべての要素の合計を計算します。または、合計演算の代わりに、指定された二項演算を使用して取得された連続する部分的な結果を計算します。|
 |[adjacent_difference](../standard-library/numeric-functions.md#adjacent_difference)|入力範囲内の各要素とその先行要素との連続する差分を計算し、結果をターゲット範囲に出力するか、または差分演算が指定された別の二項演算に置き換えられた汎用化されたプロシージャの結果を計算します。|
+|[exclusive_scan](../standard-library/numeric-functions.md#exclusive_scan)||
+|[gcd](../standard-library/numeric-functions.md#gcd)||
+|[inclusive_scan](../standard-library/numeric-functions.md#inclusive_scan)||
 |[inner_product](../standard-library/numeric-functions.md#inner_product)|2 つの範囲の要素ごとの積の合計を計算し、それを指定された初期値に加算するか、または和や積の演算が指定された別の二項演算に置き換えられた汎用化されたプロシージャの結果を計算します。|
 |[iota](../standard-library/numeric-functions.md#iota)|開始値を格納し、最初の要素から始めて、一連の値のインクリメント (`value++`) を `[first, last)` の間隔で各要素に入力します。|
+|[lcm](../standard-library/numeric-functions.md#lcm)||
 |[partial_sum](../standard-library/numeric-functions.md#partial_sum)|入力範囲の最初の要素から *i* 番目の要素までの一連の合計を計算し、各合計の結果をターゲット範囲の *i* 番目の要素に格納するか、または合計演算が指定された別の二項演算に置き換えられた汎用化されたプロシージャの結果を計算します。|
+|[削減](../standard-library/numeric-functions.md#reduce)||
+|[transform_exclusive_scan](../standard-library/numeric-functions.md#transform_exclusive_scan)||
+|[transform_inclusive_scan](../standard-library/numeric-functions.md#transform_inclusive_scan)||
+|[transform_reduce](../standard-library/numeric-functions.md#transform_reduce)||
 
 ## <a name="see-also"></a>関連項目
 

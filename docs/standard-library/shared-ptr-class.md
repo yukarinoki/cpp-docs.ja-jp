@@ -31,12 +31,12 @@ helpviewer_keywords:
 - std::shared_ptr [C++], unique
 - std::shared_ptr [C++], use_count
 ms.assetid: 1469fc51-c658-43f1-886c-f4530dd84860
-ms.openlocfilehash: 791a18461b3a0ee8237dec47c87f9d441221141d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ca427bd364a5ab66112f23e0a920598ad8ba190b
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412554"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246369"
 ---
 # <a name="sharedptr-class"></a>shared_ptr クラス
 
@@ -46,7 +46,7 @@ ms.locfileid: "62412554"
 
 ```cpp
 template <class T>
-class shared_ptr;
+    class shared_ptr;
 ```
 
 ## <a name="remarks"></a>Remarks
@@ -57,7 +57,7 @@ shared_ptr クラスは、参照カウントを使ってリソースを管理す
 
 テンプレートの引数 `T` は、特定のメンバー関数について注記がある場合を除き、不完全な型になる場合があります。
 
-`shared_ptr<T>` オブジェクトを `G*` 型のリソース ポインターまたは `shared_ptr<G>` から構築する場合、ポインターの型 `G*` は `T*` に変換可能であることが必要です。 この条件が満たされていない場合、コードはコンパイルされません。 例:
+`shared_ptr<T>` オブジェクトを `G*` 型のリソース ポインターまたは `shared_ptr<G>` から構築する場合、ポインターの型 `G*` は `T*` に変換可能であることが必要です。 この条件が満たされていない場合、コードはコンパイルされません。 例えば:
 
 ```cpp
 #include <memory>
@@ -129,44 +129,67 @@ null ポインターを使用して初期化される `shared_ptr` オブジェ�
 
 ### <a name="constructors"></a>コンストラクター
 
-|コンストラクター|説明|
+|||
 |-|-|
 |[shared_ptr](#shared_ptr)|`shared_ptr` を構築します。|
-|[shared_ptr::~shared_ptr](#dtorshared_ptr)|`shared_ptr` を破棄します。|
+|[~ shared_ptr](#dtorshared_ptr)|`shared_ptr` を破棄します。|
 
-### <a name="types"></a>型
+### <a name="typedefs"></a>Typedef
 
-|型名|説明|
+|||
 |-|-|
 |[element_type](#element_type)|要素の型。|
 
 ### <a name="functions"></a>関数
 
-|関数|説明|
+|||
 |-|-|
+|[allocate_shared](#allocate_shared)||
+|[const_pointer_cast](#const_pointer_cast)||
+|[dynamic_pointer_cast](#dynamic_pointer_cast)||
 |[get](#get)|所有されているリソースのアドレスを取得します。|
+|[get_deleter](#get_deleter)||
+|[make_shared](#make_shared)||
 |[owner_before](#owner_before)|この `shared_ptr` が、指定されたポインターの前に順序付けされている (またはそれよりも少ない) 場合は true を返します。|
+|[reinterpret_pointer_cast](#reinterpret_pointer_cast)||
 |[reset](#reset)|所有されたリソースを置き換えます。|
+|[static_pointer_cast](#static_pointer_cast)||
 |[swap](#swap)|2 つの `shared_ptr` オブジェクトを交換します。|
 |[unique](#unique)|所有されたリソースが一意であるかどうかをテストします。|
 |[use_count](#use_count)|リソース所有者の数をカウントします。|
 
 ### <a name="operators"></a>演算子
 
-|演算子|説明|
+|||
 |-|-|
-|[shared_ptr::operator bool](#op_bool)|所有されたリソースが存在するかどうかをテストします。|
-|[shared_ptr::operator*](#op_star)|指定された値を取得します。|
-|[shared_ptr::operator=](#op_eq)|所有されたリソースを置き換えます。|
-|[shared_ptr::operator-&gt;](#op_arrow)|指定された値へのポインターを取得します。|
+|[operator bool](#op_bool)|所有されたリソースが存在するかどうかをテストします。|
+|[operator*](#op_star)|指定された値を取得します。|
+|[operator=](#op_eq)|所有されたリソースを置き換えます。|
+|[演算子-&gt;](#op_arrow)|指定された値へのポインターを取得します。|
+|[operator&lt;&lt;](#op_arrowarrow)||
 
-## <a name="requirements"></a>必要条件
+### <a name="allocate_shared"></a> allocate_shared
 
-**ヘッダー:** \<memory>
+```cpp
+template<class T, class A, class... Args>
+    shared_ptr<T> allocate_shared(const A& a, Args&&... args);
+```
 
-**名前空間:** std
+### <a name="const_pointer_cast"></a> const_pointer_cast
 
-## <a name="element_type"></a>  shared_ptr::element_type
+```cpp
+template<class T, class U>
+    shared_ptr<T> const_pointer_cast(const shared_ptr<U>& r) noexcept;
+```
+
+### <a name="dynamic_pointer_cast"></a> dynamic_pointer_cast
+
+```cpp
+template<class T, class U>
+    shared_ptr<T> dynamic_pointer_cast(const shared_ptr<U>& r) noexcept;
+```
+
+### <a name="element_type"></a> element_type
 
 要素の型。
 
@@ -174,11 +197,11 @@ null ポインターを使用して初期化される `shared_ptr` オブジェ�
 typedef T element_type;
 ```
 
-### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>Remarks
 
 この型は、テンプレート パラメーター `T` のシノニムです。
 
-### <a name="example"></a>例
+#### <a name="example"></a>例
 
 ```cpp
 // std__memory__shared_ptr_element_type.cpp
@@ -201,7 +224,7 @@ int main()
 *sp0 == 5
 ```
 
-## <a name="get"></a>  shared_ptr::get
+### <a name="get"></a> 取得
 
 所有されているリソースのアドレスを取得します。
 
@@ -209,11 +232,11 @@ int main()
 T *get() const;
 ```
 
-### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>Remarks
 
 メンバー関数は、所有されたリソースのアドレスを返します。 オブジェクトがリソースを所有していない場合は、0 を返します。
 
-### <a name="example"></a>例
+#### <a name="example"></a>例
 
 ```cpp
 // std__memory__shared_ptr_get.cpp
@@ -239,7 +262,21 @@ sp0.get() == 0 == true
 *sp1.get() == 5
 ```
 
-## <a name="op_bool"></a>  shared_ptr::operator bool
+### <a name="get_deleter"></a> get_deleter
+
+```cpp
+template<class D, class T>
+    D* get_deleter(const shared_ptr<T>& p) noexcept;
+```
+
+### <a name="make_shared"></a> make_shared
+
+```cpp
+template<class T, class... Args>
+    shared_ptr<T> make_shared(Args&&... args);
+```
+
+### <a name="op_bool"></a> operator bool
 
 所有されたリソースが存在するかどうかをテストします。
 
@@ -247,11 +284,11 @@ sp0.get() == 0 == true
 explicit operator bool() const noexcept;
 ```
 
-### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>Remarks
 
 演算子の値を返します**true**とき`get() != nullptr`それ以外の場合、 **false**。
 
-### <a name="example"></a>例
+#### <a name="example"></a>例
 
 ```cpp
 // std__memory__shared_ptr_operator_bool.cpp
@@ -278,7 +315,7 @@ int main()
 (bool)sp1 == true
 ```
 
-## <a name="op_star"></a>  shared_ptr::operator*
+### <a name="op_star"></a> 演算子 *
 
 指定された値を取得します。
 
@@ -286,11 +323,11 @@ int main()
 T& operator*() const;
 ```
 
-### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>Remarks
 
 間接演算子は `*get()` を返します。 つまり、格納されたポインターは、null にすることはできません。
 
-### <a name="example"></a>例
+#### <a name="example"></a>例
 
 ```cpp
 // std__memory__shared_ptr_operator_st.cpp
@@ -312,7 +349,7 @@ int main()
 *sp0 == 5
 ```
 
-## <a name="op_eq"></a>  shared_ptr::operator=
+### <a name="op_eq"></a> 演算子 =
 
 所有されたリソースを置き換えます。
 
@@ -320,34 +357,34 @@ int main()
 shared_ptr& operator=(const shared_ptr& sp);
 
 template <class Other>
-shared_ptr& operator=(const shared_ptr<Other>& sp);
+    shared_ptr& operator=(const shared_ptr<Other>& sp);
 
 template <class Other>
-shared_ptr& operator=(auto_ptr<Other>& ap);
+    shared_ptr& operator=(auto_ptr<Other>& ap);
 
 template <class Other>
-shared_ptr& operator=(auto_ptr<Other>& ap);
+    shared_ptr& operator=(auto_ptr<Other>& ap);
 
 template <class Other>
-shared_ptr& operator=(auto_ptr<Other>&& ap);
+    shared_ptr& operator=(auto_ptr<Other>&& ap);
 
 template <class Other, class Deletor>
-shared_ptr& operator=(unique_ptr<Other, Deletor>&& ap);
+    shared_ptr& operator=(unique_ptr<Other, Deletor>&& ap);
 ```
 
-### <a name="parameters"></a>パラメーター
+#### <a name="parameters"></a>パラメーター
 
-*sp*<br/>
+*sp*\
 コピーする共有ポインター。
 
-*アジア太平洋*<br/>
+*アジア太平洋*\
 コピーする自動ポインター。
 
-### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>Remarks
 
 すべての演算子は、現在 `*this` によって所有されているリソースの参照数をデクリメントし、オペランド シーケンスで指定されたリソースの所有権を `*this` に割り当てます。 参照数がゼロになる場合は、リソースが解放されます。 演算子が失敗した場合、`*this` は変更されません。
 
-### <a name="example"></a>例
+#### <a name="example"></a>例
 
 ```cpp
 // std__memory__shared_ptr_operator_as.cpp
@@ -376,7 +413,7 @@ int main()
 *sp0 == 10
 ```
 
-## <a name="op_arrow"></a>  shared_ptr::operator-&gt;
+### <a name="op_arrow"></a> 演算子-&gt;
 
 指定された値へのポインターを取得します。
 
@@ -384,11 +421,11 @@ int main()
 T * operator->() const;
 ```
 
-### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>Remarks
 
 `sp` がクラス `shared_ptr<T>` のオブジェクトである場合に式 `sp->member` が `(sp.get())->member` と同様に動作するよう、選択演算子は `get()` を返します。 そのため、格納されているポインターを null にすることはできず、`T` はメンバー `member` を持つクラス、構造体、または共用体型にする必要があります。
 
-### <a name="example"></a>例
+#### <a name="example"></a>例
 
 ```cpp
 // std__memory__shared_ptr_operator_ar.cpp
@@ -413,28 +450,42 @@ sp0->first == 1
 sp0->second == 2
 ```
 
-## <a name="owner_before"></a>  shared_ptr::owner_before
+### <a name="op_arrowarrow"></a> 演算子&lt;&lt;
+
+```cpp
+template<class E, class T, class Y>
+    basic_ostream<E, T>& operator<< (basic_ostream<E, T>& os, const shared_ptr<Y>& p);
+```
+
+### <a name="owner_before"></a> owner_before
 
 この `shared_ptr` が、指定されたポインターの前に順序付けされている (またはそれよりも少ない) 場合は true を返します。
 
 ```cpp
 template <class Other>
-bool owner_before(const shared_ptr<Other>& ptr);
+    bool owner_before(const shared_ptr<Other>& ptr);
 
 template <class Other>
-bool owner_before(const weak_ptr<Other>& ptr);
+    bool owner_before(const weak_ptr<Other>& ptr);
 ```
 
-### <a name="parameters"></a>パラメーター
+#### <a name="parameters"></a>パラメーター
 
-*ptr*<br/>
+*ptr*\
 `shared_ptr` または `weak_ptr` への `lvalue` 参照。
 
-### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>Remarks
 
 テンプレート メンバー関数は、場合に true を返します`*this`は`ordered before``ptr`します。
 
-## <a name="reset"></a>  shared_ptr::reset
+### <a name="reinterpret_pointer_cast"></a> reinterpret_pointer_cast
+
+```cpp
+template<class T, class U>
+    shared_ptr<T> reinterpret_pointer_cast(const shared_ptr<U>& r) noexcept;
+```
+
+### <a name="reset"></a> リセット
 
 所有されたリソースを置き換えます。
 
@@ -442,40 +493,40 @@ bool owner_before(const weak_ptr<Other>& ptr);
 void reset();
 
 template <class Other>
-void reset(Other *ptr;);
+    void reset(Other *ptr;);
 
 template <class Other, class D>
-void reset(Other *ptr, D dtor);
+    void reset(Other *ptr, D dtor);
 
 template <class Other, class D, class A>
-void reset(Other *ptr, D dtor, A alloc);
+    void reset(Other *ptr, D dtor, A alloc);
 ```
 
-### <a name="parameters"></a>パラメーター
+#### <a name="parameters"></a>パラメーター
 
-*その他*<br/>
+*その他*\
 引数ポインターによって制御される型。
 
-*D*<br/>
+*D*\
 削除子の型。
 
-*ptr*<br/>
+*ptr*\
 コピーするポインター。
 
-*dtor*<br/>
+*dtor*\
 コピーする削除子。
 
-*A*<br/>
+*A*\
 アロケーターの型。
 
-*alloc*<br/>
+*Alloc*\
 コピーするアロケーター。
 
-### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>Remarks
 
 すべての演算子は、現在 `*this` によって所有されているリソースの参照数をデクリメントし、オペランド シーケンスで指定されたリソースの所有権を `*this` に割り当てます。 参照数がゼロになる場合は、リソースが解放されます。 演算子が失敗した場合、`*this` は変更されません。
 
-### <a name="example"></a>例
+#### <a name="example"></a>例
 
 ```cpp
 // std__memory__shared_ptr_reset.cpp
@@ -521,7 +572,7 @@ int main()
 *sp == 15
 ```
 
-## <a name="shared_ptr"></a>  shared_ptr::shared_ptr
+### <a name="shared_ptr"></a> shared_ptr
 
 `shared_ptr` を構築します。
 
@@ -535,76 +586,76 @@ shared_ptr(const shared_ptr& sp);
 shared_ptr(shared_ptr&& sp);
 
 template <class Other>
-explicit shared_ptr(Other* ptr);
+    explicit shared_ptr(Other* ptr);
 
 template <class Other, class D>
-shared_ptr(Other* ptr, D dtor);
+    shared_ptr(Other* ptr, D dtor);
 
 template <class D>
-shared_ptr(nullptr_t ptr, D dtor);
+    shared_ptr(nullptr_t ptr, D dtor);
 
 template <class Other, class D, class A>
-shared_ptr(Other* ptr, D dtor, A  alloc);
+    shared_ptr(Other* ptr, D dtor, A  alloc);
 
 template <class D, class A>
-shared_ptr(nullptr_t ptr, D dtor, A alloc);
+    shared_ptr(nullptr_t ptr, D dtor, A alloc);
 
 template <class Other>
-shared_ptr(const shared_ptr<Other>& sp);
+    shared_ptr(const shared_ptr<Other>& sp);
 
 template <class Other>
-shared_ptr(const weak_ptr<Other>& wp);
+    shared_ptr(const weak_ptr<Other>& wp);
 
 template <class &>
-shared_ptr(std::auto_ptr<Other>& ap);
+    shared_ptr(std::auto_ptr<Other>& ap);
 
 template <class &>
-shared_ptr(std::auto_ptr<Other>&& ap);
+    shared_ptr(std::auto_ptr<Other>&& ap);
 
 template <class Other, class D>
-shared_ptr(unique_ptr<Other, D>&& up);
+    shared_ptr(unique_ptr<Other, D>&& up);
 
 template <class Other>
-shared_ptr(const shared_ptr<Other>& sp, T* ptr);
+    shared_ptr(const shared_ptr<Other>& sp, T* ptr);
 
 template <class Other, class D>
-shared_ptr(const unique_ptr<Other, D>& up) = delete;
+    shared_ptr(const unique_ptr<Other, D>& up) = delete;
 ```
 
-### <a name="parameters"></a>パラメーター
+#### <a name="parameters"></a>パラメーター
 
-*その他*<br/>
+*その他*\
 引数ポインターによって制御される型。
 
-*ptr*<br/>
+*ptr*\
 コピーするポインター。
 
-*D*<br/>
+*D*\
 削除子の型。
 
-*A*<br/>
+*A*\
 アロケーターの型。
 
-*dtor*<br/>
+*dtor*\
 削除子。
 
-*ator*<br/>
+*ator*\
 アロケーター。
 
-*sp*<br/>
+*sp*\
 コピーするスマート ポインター。
 
-*wp*<br/>
+*wp*\
 ウィーク ポインター。
 
-*アジア太平洋*<br/>
+*アジア太平洋*\
 コピーする自動ポインター。
 
-### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>Remarks
 
 それぞれのコンストラクターは、オペランド シーケンスで指定されたリソースを所有するオブジェクトを構築します。 コンストラクター `shared_ptr(const weak_ptr<Other>& wp)` は、`wp.expired()` の場合に型 [bad_weak_ptr クラス](../standard-library/bad-weak-ptr-class.md)の例外オブジェクトをスローします。
 
-### <a name="example"></a>例
+#### <a name="example"></a>例
 
 ```cpp
 // std__memory__shared_ptr_construct.cpp
@@ -656,7 +707,7 @@ int main()
 *sp5 == 15
 ```
 
-## <a name="dtorshared_ptr"></a>  shared_ptr::~shared_ptr
+### <a name="dtorshared_ptr"></a> ~ shared_ptr
 
 `shared_ptr` を破棄します。
 
@@ -664,11 +715,11 @@ int main()
 ~shared_ptr();
 ```
 
-### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>Remarks
 
 デストラクターは、現在 `*this` によって所有されるリソースの参照数をデクリメントします。 参照数がゼロになる場合は、リソースが解放されます。
 
-### <a name="example"></a>例
+#### <a name="example"></a>例
 
 ```cpp
 // std__memory__shared_ptr_destroy.cpp
@@ -711,7 +762,14 @@ use count == 2
 use count == 1
 ```
 
-## <a name="swap"></a>  shared_ptr::swap
+### <a name="static_pointer_cast"></a> static_pointer_cast
+
+```cpp
+template<class T, class U>
+shared_ptr<T> static_pointer_cast(const shared_ptr<U>& r) noexcept;
+```
+
+### <a name="swap"></a> スワップ
 
 2 つの `shared_ptr` オブジェクトを交換します。
 
@@ -719,16 +777,16 @@ use count == 1
 void swap(shared_ptr& sp);
 ```
 
-### <a name="parameters"></a>パラメーター
+#### <a name="parameters"></a>パラメーター
 
-*sp*<br/>
+*sp*\
 交換先の共有ポインター。
 
-### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>Remarks
 
 メンバー関数は、最初に所有してリソースを残します`*this`によって所有される*sp*、およびリソースを最初に所有して*sp*によって所有される`*this`します。 この関数はこれら 2 つのリソースの参照数を変更せず、例外をスローしません。
 
-### <a name="example"></a>例
+#### <a name="example"></a>例
 
 ```cpp
 // std__memory__shared_ptr_swap.cpp
@@ -781,7 +839,7 @@ int main()
 *wp1 == 5
 ```
 
-## <a name="unique"></a>  shared_ptr::unique
+### <a name="unique"></a> 一意
 
 所有されたリソースが一意であるかどうかをテストします。
 
@@ -789,11 +847,11 @@ int main()
 bool unique() const;
 ```
 
-### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>Remarks
 
 メンバー関数を返します**true**が他にない場合`shared_ptr`オブジェクトによって所有されているリソースを所有して`*this`それ以外の場合、 **false**します。
 
-### <a name="example"></a>例
+#### <a name="example"></a>例
 
 ```cpp
 // std__memory__shared_ptr_unique.cpp
@@ -828,7 +886,7 @@ sp1.unique() == true
 sp1.unique() == false
 ```
 
-## <a name="use_count"></a>  shared_ptr::use_count
+### <a name="use_count"></a> use_count
 
 リソース所有者の数をカウントします。
 
@@ -836,11 +894,11 @@ sp1.unique() == false
 long use_count() const;
 ```
 
-### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>Remarks
 
 メンバー関数は、`*this` が所有するリソースを所有する `shared_ptr` オブジェクトの数を返します。
 
-### <a name="example"></a>例
+#### <a name="example"></a>例
 
 ```cpp
 // std__memory__shared_ptr_use_count.cpp
@@ -866,8 +924,3 @@ int main()
 sp1.use_count() == 1
 sp1.use_count() == 2
 ```
-
-## <a name="see-also"></a>関連項目
-
-[weak_ptr クラス](../standard-library/weak-ptr-class.md)<br/>
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

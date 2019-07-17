@@ -1,41 +1,38 @@
 ---
-title: '&lt;new&gt; 演算子'
+title: '&lt;新しい&gt;演算子と列挙型'
 ms.date: 11/04/2016
 f1_keywords:
 - new/std::operator delete
 - new/std::operator new
 ms.assetid: d1af4b56-9a95-4c65-ab01-bf43e982c7bd
-ms.openlocfilehash: 87f7b6cfd6a06ab03b27ebe6aa4dd41b0b900673
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a3fd5b825fe1eaf3a07d9d001f03b9d0c64ffa31
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223689"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243681"
 ---
-# <a name="ltnewgt-operators"></a>&lt;new&gt; 演算子
+# <a name="ltnewgt-operators-and-enums"></a>&lt;新しい&gt;演算子と列挙型
 
-||||
-|-|-|-|
-|[operator delete](#op_delete)|[operator delete[]](#op_delete_arr)|[operator new](#op_new)|
-|[operator new[]](#op_new_arr)|
+## <a name="op_align_val_t"></a> enum align_val_t
 
-## <a name="op_delete"></a>  operator delete
+```cpp
+enum class align_val_t : size_t {};
+```
 
-個々のオブジェクトに対するストレージの割り当てを解除する削除式によって呼び出される関数。
+## <a name="op_delete"></a> delete 演算子
+
+個々 のオブジェクト ストレージの割り当てを解除する削除式によって呼び出される関数。
 
 ```cpp
 void operator delete(void* ptr) throw();
-
-void operator delete(void *,
-    void*) throw();
-
-void operator delete(void* ptr,
-    const std::nothrow_t&) throw();
+void operator delete(void *, void*) throw();
+void operator delete(void* ptr, const std::nothrow_t&) throw();
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*ptr*<br/>
+*ptr*\
 削除によって値が無効になるポインター。
 
 ### <a name="remarks"></a>Remarks
@@ -52,23 +49,19 @@ Null 値の既定の動作*ptr*は何もしないようにします。 その他
 
 参照してください[演算子 new](../standard-library/new-operators.md#op_new)を使用する例については**delete 演算子**します。
 
-## <a name="op_delete_arr"></a>  operator delete[]
+## <a name="op_delete_arr"></a> 演算子 delete
 
 オブジェクトの配列に対するストレージの割り当てを解除する削除式によって呼び出される関数。
 
 ```cpp
 void operator delete[](void* ptr) throw();
-
-void operator delete[](void *,
-    void*) throw();
-
-void operator delete[](void* ptr,
-    const std::nothrow_t&) throw();
+void operator delete[](void *, void*) throw();
+void operator delete[](void* ptr, const std::nothrow_t&) throw();
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*ptr*<br/>
+*ptr*\
 削除によって値が無効になるポインター。
 
 ### <a name="remarks"></a>Remarks
@@ -83,26 +76,22 @@ void operator delete[](void* ptr,
 
 `operator delete[]` の使用例については、「[operator new&#91;&#93;](../standard-library/new-operators.md#op_new_arr)」を参照してください。
 
-## <a name="op_new"></a>  operator new
+## <a name="op_new"></a> new 演算子
 
 new 式によって個々のオブジェクトにストレージを割り当てるために呼び出される関数。
 
 ```cpp
 void* operator new(std::size_t count) throw(bad_alloc);
-
-void* operator new(std::size_t count,
-    const std::nothrow_t&) throw();
-
-void* operator new(std::size_t count,
-    void* ptr) throw();
+void* operator new(std::size_t count, const std::nothrow_t&) throw();
+void* operator new(std::size_t count, void* ptr) throw();
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*count*<br/>
+*カウント*\
 割り当てられるストレージのバイト数。
 
-*ptr*<br/>
+*ptr*\
 返されるポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -137,7 +126,7 @@ new ハンドラーに必要な動作は、次の操作のいずれかを実行�
 
 によって割り当てられたストレージを解放する**演算子 new**、呼び出す[delete 演算子](../standard-library/new-operators.md#op_delete)します。
 
-スローする場合またはスローしない場合の動作については、「[new および delete 演算子](../cpp/new-and-delete-operators.md)」を参照してください。
+スローすることについてや、新しい参照の動作をスローしない[新しい演算子と delete 演算子](../cpp/new-and-delete-operators.md)します。
 
 ### <a name="example"></a>例
 
@@ -182,26 +171,22 @@ int main( )
 }
 ```
 
-## <a name="op_new_arr"></a>  operator new[]
+## <a name="op_new_arr"></a> new[] 演算子
 
 new 式によってオブジェクトの配列にストレージを割り当てるために呼び出される割り当て関数。
 
 ```cpp
 void* operator new[](std::size_t count) throw(std::bad_alloc);
-
-void* operator new[](std::size_t count,
-    const std::nothrow_t&) throw();
-
-void* operator new[](std::size_t count,
-    void* ptr) throw();
+void* operator new[](std::size_t count, const std::nothrow_t&) throw();
+void* operator new[](std::size_t count, void* ptr) throw();
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*count*<br/>
+*カウント*\
 配列オブジェクトに割り当てられるストレージのバイト数。
 
-*ptr*<br/>
+*ptr*\
 返されるポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -260,7 +245,3 @@ int main() {
    delete[ ] fPtr3;
 }
 ```
-
-## <a name="see-also"></a>関連項目
-
-[\<new>](../standard-library/new.md)<br/>

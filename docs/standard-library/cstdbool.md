@@ -2,22 +2,25 @@
 title: '&lt;cstdbool&gt;'
 ms.date: 11/04/2016
 ms.assetid: 44ccb8b2-d808-4715-8097-58ba09ab33ed
-ms.openlocfilehash: 8d9b0ec81e0364b409b4518beb291a56648a6ab1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0bc21753b108dbdbfee86ea1319223e49753b8dc
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394274"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244496"
 ---
 # <a name="ltcstdboolgt"></a>&lt;cstdbool&gt;
 
 標準 C ライブラリ ヘッダー \<stdbool.h> をインクルードし、関連する名前を `std` 名前空間に追加します。
 
-## <a name="syntax"></a>構文
+> [!NOTE]
+> このヘッダーが非推奨とされましたC++17。
 
-```cpp
-#include <cstdbool>
-```
+## <a name="requirements"></a>必要条件
+
+**ヘッダー:** \<cstdbool >
+
+**名前空間:** std
 
 ## <a name="remarks"></a>Remarks
 

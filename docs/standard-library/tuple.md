@@ -6,49 +6,64 @@ f1_keywords:
 helpviewer_keywords:
 - tuple header
 ms.assetid: e4ef5c2d-318b-44f6-8bce-fce4ecd796a3
-ms.openlocfilehash: 2e46b3997096c6e61f7dd6140131e3f10223b8e7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ce6e005990d05676fb20752b5808d32ec88dd7b3
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399422"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68241535"
 ---
 # <a name="lttuplegt"></a>&lt;tuple&gt;
 
 さまざまな型のオブジェクトを保持するインスタンスを持つテンプレート `tuple` を定義します。
 
-## <a name="syntax"></a>構文
+## <a name="requirements"></a>必要条件
 
-```cpp
-#include <tuple>
-```
+**ヘッダー:** \<tuple>
 
-### <a name="classes"></a>クラス
+**名前空間:** std
 
-|クラス|説明|
+## <a name="members"></a>メンバー
+
+### <a name="classes-and-structs"></a>クラスと構造体
+
+|||
 |-|-|
-|[tuple](../standard-library/tuple-class.md)|要素の固定長シーケンスをラップします。|
+|[tuple クラス](../standard-library/tuple-class.md)|要素の固定長シーケンスをラップします。|
 |[tuple_element クラス](../standard-library/tuple-element-class-tuple.md)|`tuple` 要素の型をラップします。|
 |[tuple_size クラス](../standard-library/tuple-size-class-tuple.md)|`tuple` の要素数をラップします。|
+|[uses_allocator](../standard-library/uses-allocator-structure.md)||
+
+### <a name="objects"></a>オブジェクト
+
+|||
+|-|-|
+|[tuple_element_t](../standard-library/tuple-functions.md#tuple_element_t)||
+|[tuple_size_v](../standard-library/tuple-functions.md#tuple_size_v)||
 
 ### <a name="operators"></a>演算子
 
-|演算子|説明|
+|||
 |-|-|
-|[operator==](../standard-library/tuple-operators.md#op_eq_eq)|`tuple` オブジェクトどうしが等しいかどうかの比較|
-|[operator!=](../standard-library/tuple-operators.md#op_neq)|`tuple` オブジェクトどうしが等しくないかどうかの比較|
-|[operator<](../standard-library/tuple-operators.md#op_lt)|`tuple` オブジェクトどうしの大小関係の比較 (未満)|
-|[operator<=](../standard-library/tuple-operators.md#op_lt_eq)|`tuple` オブジェクトどうしの大小関係の比較 (以下)|
-|[operator>](../standard-library/tuple-operators.md#op_gt)|`tuple` オブジェクトどうしの大小関係の比較 (より大きい)|
-|[operator>=](../standard-library/tuple-operators.md#op_gt_eq)|`tuple` オブジェクトどうしの大小関係の比較 (以上)|
+|[operator==](../standard-library/tuple-operators.md#op_eq_eq)|比較`tuple`と等しいオブジェクト。|
+|[operator!=](../standard-library/tuple-operators.md#op_neq)|比較`tuple`オブジェクトが等しくします。|
+|[operator<](../standard-library/tuple-operators.md#op_lt)|比較`tuple`オブジェクトより小さい。|
+|[operator<=](../standard-library/tuple-operators.md#op_lt_eq)|比較の`tuple`以下のオブジェクトします。|
+|[operator>](../standard-library/tuple-operators.md#op_gt)|比較の`tuple`より大きいオブジェクト。|
+|[operator>=](../standard-library/tuple-operators.md#op_gt_eq)|比較の`tuple`以上のオブジェクト。|
 
 ### <a name="functions"></a>関数
 
-|関数|説明|
+|||
 |-|-|
+|[apply](../standard-library/tuple-functions.md#apply)|タプルで関数を呼び出します。|
+|[forward_as_tuple](../standard-library/tuple-functions.md#forward)|参照の組を生成します。|
 |[get](../standard-library/tuple-functions.md#get)|`tuple` オブジェクトから要素を取得します。|
+|[make_from_tuple](../standard-library/tuple-functions.md#make_from_tuple)|短縮形にする、`tuple`します。|
 |[make_tuple](../standard-library/tuple-functions.md#make_tuple)|要素値から `tuple` を作成します。|
+|[swap](../standard-library/tuple-functions.md#swap)||
 |[tie](../standard-library/tuple-functions.md#tie)|要素参照から `tuple` を作成します。|
+|[tuple_cat](../standard-library/tuple-functions.md#tuple_cat)|型の要素の範囲を持つタプル オブジェクトを構築します。|
 
 ## <a name="see-also"></a>関連項目
 

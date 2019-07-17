@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - binder1st class
 ms.assetid: 6b8ee343-c82f-48f8-867d-06f9d1d324c0
-ms.openlocfilehash: f70a1a4a0903b66edf5f42e59788b9a2d97fc967
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 384a870a10c9f806684443d8c67647e924b6b2aa
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388216"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243386"
 ---
 # <a name="binder1st-class"></a>binder1st クラス
 
@@ -43,13 +43,13 @@ protected:
 
 ### <a name="parameters"></a>パラメーター
 
-*binary_fn*<br/>
+*binary_fn*\
 単項関数オブジェクトに変換する二項関数オブジェクト。
 
-*left*<br/>
+*左*\
 二項関数オブジェクトの最初の引数がバインドされている値。
 
-*right*<br/>
+*そうです*\
 調整後の二項オブジェクトが 2 つ目の引数の固定値と比較する引数の値。
 
 ## <a name="return-value"></a>戻り値
@@ -58,9 +58,9 @@ protected:
 
 ## <a name="remarks"></a>Remarks
 
-テンプレート クラスは、二項関数オブジェクトのコピーを格納する*binary_fn*で`op`のコピーと*左*で`value`します。 そのメンバー関数`operator()`返すよう`op( value, right )`します。
+テンプレート クラスは、二項関数オブジェクトのコピーを格納する*binary_fn*で`op`のコピーと*左*で`value`します。 そのメンバー関数`operator()`返すよう`op(value, right)`します。
 
-場合*binary_fn*型のオブジェクトは、`Operation`と`c`が定数の場合、`bind1st( binary_fn, c )`より便利な相当するは`binder1st<Operation>( binary_fn, c )`します。 詳細については、次を参照してください。 [bind1st](../standard-library/functional-functions.md#bind1st)します。
+場合*binary_fn*型のオブジェクトは、`Operation`と`c`が定数の場合、`bind1st(binary_fn, c)`より便利な相当するは`binder1st<Operation>(binary_fn, c)`します。 詳細については、次を参照してください。 [bind1st](../standard-library/functional-functions.md#bind1st)します。
 
 ## <a name="example"></a>例
 
@@ -105,20 +105,10 @@ int main()
     cout << "The number of elements in v1 less than 10 is: "
          << result2 << "." << endl;
 }
-/* Output:
+```
+
+```Output
 The vector v1 = ( 0 5 10 15 20 25 )
 The number of elements in v1 greater than 10 is: 3.
 The number of elements in v1 less than 10 is: 2.
-*/
 ```
-
-## <a name="requirements"></a>必要条件
-
-**ヘッダー:** \<functional>
-
-**名前空間:** std
-
-## <a name="see-also"></a>関連項目
-
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)<br/>

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - equal_to function
 - equal_to struct
 ms.assetid: 8e4f2b50-b2db-48e3-b4cc-6cc03362c2a6
-ms.openlocfilehash: 9dc388c5e4248b6d0cd6ad4842be7252601dec13
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ac7c5a3ed8d85e6ea3ad46ec61c7968bc19cd15e
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413737"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245835"
 ---
 # <a name="equalto-struct"></a>equal_to 構造体
 
@@ -39,12 +39,13 @@ struct equal_to<void>
 
 ### <a name="parameters"></a>パラメーター
 
-*型*、 *T*、 *U*をサポートする任意の型、`operator==`指定または推論された型のオペランドを受け取る。
+*型*、 *T*、 *U*\
+指定または推論された型のオペランドを受け取る `operator==` をサポートする任意の型。
 
-*左*<br/>
+*左*\
 等値演算の左オペランド。 特化されていないテンプレートは、型の左辺値参照引数を受け取る*型*します。 特殊化されたテンプレートはの完全転送を左辺値と右辺値参照引数の型を推論する*T*します。
 
-*右*<br/>
+*そうです*\
 等値演算の右オペランド。 特化されていないテンプレートは、型の左辺値参照引数を受け取る*型*します。 特殊化されたテンプレートはの完全転送を左辺値と右辺値参照引数の型を推論する*U*します。
 
 ## <a name="return-value"></a>戻り値

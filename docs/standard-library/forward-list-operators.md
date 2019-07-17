@@ -16,21 +16,16 @@ helpviewer_keywords:
 - std::operatoroperator&gt=; (forward_list)
 - std::operatoroperator&lt; (forward_list)
 - std::operatoroperator&lt;= (forward_list)
-ms.openlocfilehash: 4126b81f61bd37a7a12e0621c323ec832c5b2ab7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 64a49273cafd72158f176ee34ec271557ebee097
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159432"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240658"
 ---
 # <a name="ltforwardlistgt-operators"></a>&lt;forward_list&gt; 演算子
 
-||||
-|-|-|-|
-|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
-|[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|
-
-## <a name="op_eq_eq"></a>  operator==
+## <a name="op_eq_eq"></a> 演算子 = =
 
 演算子の左辺の前方リスト オブジェクトが右辺の前方リスト オブジェクトと等しいかどうかを調べます。
 
@@ -42,16 +37,17 @@ bool operator==(
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|---------------|-----------------|
-|*left*|`forward_list` 型のオブジェクト。|
-|*right*|`forward_list` 型のオブジェクト。|
+*左*\
+`forward_list` 型のオブジェクト。
+
+*そうです*\
+`forward_list` 型のオブジェクト。
 
 ### <a name="remarks"></a>Remarks
 
 このテンプレート関数は、テンプレート クラス `forward_list` の 2 つのオブジェクトを比較する `operator==` をオーバーロードします。 `distance(left.begin(), end()) == distance(right.begin(),right.end()) && equal(left. begin(),left. end(),right.begin())` が返されます。
 
-## <a name="op_neq"></a>  operator!=
+## <a name="op_neq"></a> operator!=
 
 演算子の左辺の前方リスト オブジェクトが右辺の前方リスト オブジェクトと等しくないかどうかを調べます。
 
@@ -63,10 +59,11 @@ bool operator!=(
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|---------------|-----------------|
-|*left*|`forward_list` 型のオブジェクト。|
-|*right*|`forward_list` 型のオブジェクト。|
+*左*\
+`forward_list` 型のオブジェクト。
+
+*そうです*\
+`forward_list` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -76,7 +73,7 @@ bool operator!=(
 
 このテンプレート関数は `!(left == right)` を返します。
 
-## <a name="op_lt"></a>  operator&lt;
+## <a name="op_lt"></a> 演算子&lt;
 
 演算子の左辺の前方リスト オブジェクトが右辺の前方リスト オブジェクトより小さいかどうかを調べます。
 
@@ -88,10 +85,11 @@ bool operator<(
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|---------------|-----------------|
-|*left*|`forward_list` 型のオブジェクト。|
-|*right*|`forward_list` 型のオブジェクト。|
+*左*\
+`forward_list` 型のオブジェクト。
+
+*そうです*\
+`forward_list` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -101,7 +99,7 @@ bool operator<(
 
 このテンプレート関数は、テンプレート クラス `forward_list` の 2 つのオブジェクトを比較する `operator<` をオーバーロードします。 `lexicographical_compare(lhs. begin(), lhs. end(), rhs.begin(), rhs.end())` が返されます。
 
-## <a name="op_lt_eq"></a>  演算子&lt;=
+## <a name="op_lt_eq"></a> 演算子&lt;=
 
 演算子の左辺の前方リスト オブジェクトが右辺の前方リスト オブジェクト以下であるかどうかを調べます。
 
@@ -113,10 +111,11 @@ bool operator<=(
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|---------------|-----------------|
-|*left*|`forward_list` 型のオブジェクト。|
-|*right*|`forward_list` 型のオブジェクト。|
+*左*\
+`forward_list` 型のオブジェクト。
+
+*そうです*\
+`forward_list` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -126,7 +125,7 @@ bool operator<=(
 
 このテンプレート関数は `!(right < left)` を返します。
 
-## <a name="op_gt"></a>  operator&gt;
+## <a name="op_gt"></a> 演算子&gt;
 
 演算子の左辺の前方リスト オブジェクトが右辺の前方リスト オブジェクトより大きいかどうかを調べます。
 
@@ -138,10 +137,11 @@ bool operator>(
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|---------------|-----------------|
-|*left*|`forward_list` 型のオブジェクト。|
-|*right*|`forward_list` 型のオブジェクト。|
+*左*\
+`forward_list` 型のオブジェクト。
+
+*そうです*\
+`forward_list` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -151,7 +151,7 @@ bool operator>(
 
 このテンプレート関数は `right < left` を返します。
 
-## <a name="op_gt_eq"></a>  演算子&gt;=
+## <a name="op_gt_eq"></a> 演算子&gt;=
 
 演算子の左辺の前方リスト オブジェクトが右辺の前方リスト オブジェクト以上であるかどうかを調べます。
 
@@ -163,10 +163,11 @@ bool operator>=(
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|---------------|-----------------|
-|*left*|`forward_list` 型のオブジェクト。|
-|*right*|`forward_list` 型のオブジェクト。|
+*左*\
+`forward_list` 型のオブジェクト。
+
+*そうです*\
+`forward_list` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -175,7 +176,3 @@ bool operator>=(
 ### <a name="remarks"></a>Remarks
 
 このテンプレート関数は `!(left < right)` を返します。
-
-## <a name="see-also"></a>関連項目
-
-[<forward_list>](../standard-library/forward-list.md)<br/>

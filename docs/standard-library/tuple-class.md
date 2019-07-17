@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - tuple class
 ms.assetid: c38749be-ae4d-41f3-98ea-6aa3250de9a3
-ms.openlocfilehash: 7e85ad445743cc02ba078eb3c09342f69915c09c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aca5cc90566fb1fa602b96568d4cda9dd5ab26b9
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62279057"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68241820"
 ---
 # <a name="tuple-class"></a>タプル クラス
 
@@ -22,7 +22,6 @@ ms.locfileid: "62279057"
 
 ```
 class tuple {
-public:
    tuple();
    explicit tuple(P1, P2, ..., PN); // 0 < N
    tuple(const tuple&);
@@ -37,12 +36,12 @@ public:
       tuple& operator=(const tuple<U1, U2, ..., UN>&);
    template <class U1, class U2>
       tuple& operator=(const pair<U1, U2>&); // N == 2
-   };
+};
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*TN*<br/>
+*TN*\
 N 番目の tuple 要素の型。
 
 ## <a name="remarks"></a>Remarks
@@ -117,13 +116,7 @@ The tuples in the vector are
 ( 3, 0.033, three ).
 ```
 
-## <a name="requirements"></a>必要条件
-
-**ヘッダー:** \<tuple>
-
-**名前空間:** std
-
-## <a name="op_eq"></a>  tuple::operator=
+## <a name="op_eq"></a> 演算子 =
 
 `tuple` オブジェクトを割り当てます。
 
@@ -144,10 +137,10 @@ template <class U1, class U2>
 
 ### <a name="parameters"></a>パラメーター
 
-*解除*<br/>
+*解除*\
 N 番目のコピーされたタプル要素の型。
 
-*right*<br/>
+*そうです*\
 コピー元のタプル。
 
 ### <a name="remarks"></a>Remarks
@@ -196,7 +189,7 @@ int main()
     std::cout << std::endl;
 
     return (0);
-    }
+}
 ```
 
 ```Output
@@ -205,7 +198,7 @@ int main()
 x 4
 ```
 
-## <a name="tuple_swap"></a>  tuple:swap
+## <a name="tuple_swap"></a> スワップ
 
 2 つのタプルの要素を交換します。
 
@@ -216,16 +209,17 @@ template <class... Types>
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|---------------|-----------------|
-|*left*|要素がタプルのものと交換されるタプル*右*します。|
-|*right*|要素がタプルのものと交換されるタプル*左*します。|
+*左*\
+要素がタプルのものと交換されるタプル*右*します。
+
+*そうです*\
+要素がタプルのものと交換されるタプル*左*します。
 
 ### <a name="remarks"></a>Remarks
 
 この関数は、`left.swap(right)` を実行します。
 
-## <a name="tuple"></a>  tuple::tuple
+## <a name="tuple"></a> タプル
 
 `tuple` オブジェクトを構築します。
 
@@ -252,17 +246,17 @@ template <class U1, class U2>
 
 ### <a name="parameters"></a>パラメーター
 
-*解除*<br/>
+*解除*\
 N 番目のコピーされたタプル要素の型。
 
-*right*<br/>
+*そうです*\
 コピー元のタプル。
 
 ### <a name="remarks"></a>Remarks
 
 1 つ目のコンストラクターは、要素が既定で構築されるオブジェクトを構築します。
 
-2 番目のコンス トラクターは、引数 `P1`、`P2`...`PN` に基づいて構築されるコピーを要素とするオブジェクトを構築します。これらの `Pi` は、インデックス `i - 1` で要素を初期化します。
+2 番目のコンストラクターは、引数 `P1`、`P2`...`PN` に基づいて構築されるコピーを要素とするオブジェクトを構築します。これらの `Pi` は、インデックス `i - 1` で要素を初期化します。
 
 3 番目と 4 番目のコンス トラクターは要素がコピーの対応する要素から構築されたオブジェクトを構築*右*します。
 
@@ -338,8 +332,3 @@ x 4
 0 1 2 3
 4 5 6 7
 ```
-
-## <a name="see-also"></a>関連項目
-
-[\<tuple>](../standard-library/tuple.md)<br/>
-[make_tuple](../standard-library/tuple-functions.md#make_tuple)<br/>

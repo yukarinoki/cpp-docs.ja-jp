@@ -7,12 +7,12 @@ helpviewer_keywords:
 - less struct
 - less function
 ms.assetid: 39349da3-11cd-4774-b2cc-b46af5aae5d7
-ms.openlocfilehash: e24c7fb238c9c05d91cbdba7fab277878e6f5e24
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 13aef35856066f9c1897c3d8855c5ff537aa3567
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62224052"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245349"
 ---
 # <a name="less-struct"></a>less 構造体
 
@@ -39,12 +39,13 @@ struct less<void>
 
 ### <a name="parameters"></a>パラメーター
 
-*型*、 *T*、 *U*をサポートする任意の型、`operator<`指定または推論された型のオペランドを受け取る。
+*型*、 *T*、 *U*\
+指定または推論された型のオペランドを受け取る `operator<` をサポートする任意の型。
 
-*左*<br/>
+*左*\
 より小さい演算の左オペランド。 特化されていないテンプレートは、型の左辺値参照引数を受け取る*型*します。 特殊化されたテンプレートはの完全転送を左辺値と右辺値参照引数の型を推論する*T*します。
 
-*右*<br/>
+*そうです*\
 より小さい演算の右オペランド。 特化されていないテンプレートは、型の左辺値参照引数を受け取る*型*します。 特殊化されたテンプレートはの完全転送を左辺値と右辺値参照引数の型を推論する*U*します。
 
 ## <a name="return-value"></a>戻り値
@@ -53,7 +54,7 @@ struct less<void>
 
 ## <a name="remarks"></a>Remarks
 
-二項述語`less` <  `Type`> 厳密弱順序を一連の型の要素の値を提供します*型*等しいかどうかのクラスにこの型は数学的な標準を満たす場合にのみ。そのために順序付けられる要件です。 任意のポインター型に対する特殊化によって、要素の完全な順序付けが生成されます。この場合、一意の値を持つすべての要素が、相互の値に基づいて並べ替えられます。
+二項述語`less` < `Type`> 厳密弱順序を一連の型の要素の値を提供します*型*等しいかどうかのクラスにこの型は数学的な標準を満たす場合にのみ。そのために順序付けられる要件です。 任意のポインター型に対する特殊化によって、要素の完全な順序付けが生成されます。この場合、一意の値を持つすべての要素が、相互の値に基づいて並べ替えられます。
 
 ## <a name="example"></a>例
 
@@ -100,19 +101,7 @@ cout << Iter1->m_i << " ";
 }
 ```
 
-## <a name="output"></a>出力
-
 ```Output
 Original vector v1 = (41 18467 6334 26500 19169 15724 11478)
 Sorted vector v1 = (41 6334 11478 15724 18467 19169 26500)
 ```
-
-## <a name="requirements"></a>必要条件
-
-**ヘッダー:** \<functional>
-
-**名前空間:** std
-
-## <a name="see-also"></a>関連項目
-
-[C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)<br/>
