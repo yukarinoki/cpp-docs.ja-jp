@@ -414,6 +414,8 @@
                   href: build/reference/general-property-page-project.md
                 - name: '[全般] プロパティ ページ'
                   href: build/reference/general-property-page-file.md
+                - name: '[詳細] プロパティ ページ'
+                  href: build/reference/advanced-property-page.md
                 - name: '[VC++ ディレクトリ] プロパティ ページ'
                   href: build/reference/vcpp-directories-property-page.md
                 - name: '[コマンド ライン] プロパティ ページ'
