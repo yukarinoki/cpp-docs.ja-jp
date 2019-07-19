@@ -1,20 +1,25 @@
 ---
 title: '&lt;cstdbool&gt;'
-ms.date: 11/04/2016
+ms.date: 07/11/2019
+f1_keywords:
+- <cstdbool>
+- cstdbool
+helpviewer_keywords:
+- cstdbool header
 ms.assetid: 44ccb8b2-d808-4715-8097-58ba09ab33ed
-ms.openlocfilehash: 0bc21753b108dbdbfee86ea1319223e49753b8dc
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: ed780e059a5e456731fd6a4f651639e282016f5e
+ms.sourcegitcommit: 0867d648e0955ebad7260b5fbebfd6cd4d58f3c7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244496"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68341104"
 ---
 # <a name="ltcstdboolgt"></a>&lt;cstdbool&gt;
 
-標準 C ライブラリ ヘッダー \<stdbool.h> をインクルードし、関連する名前を `std` 名前空間に追加します。
+C 標準ライブラリヘッダー \<stdbool. > をインクルードし、関連`std`する名前を名前空間に追加します。
 
 > [!NOTE]
-> このヘッダーが非推奨とされましたC++17。
+> > Stdbool. ヘッダーでは、のキーワードでC++あるマクロが定義されているため、これを含めても効果はありません。 \< Stdbool. \<> ヘッダーは、でC++は非推奨とされます。 \<Cstdbool > ヘッダーは c++ 17 では非推奨とされており、draft c++ 20 standard では削除されています。
 
 ## <a name="requirements"></a>必要条件
 
@@ -24,10 +29,10 @@ ms.locfileid: "68244496"
 
 ## <a name="remarks"></a>Remarks
 
-このヘッダーをインクルードすると、標準 C ライブラリ ヘッダーの外部リンケージで宣言された名前が、`std` 名前空間でも宣言されます。
+このヘッダーをインクルードすると、C 標準ライブラリヘッダーの外部リンケージを使用して宣言され`std`た名前が、名前空間で宣言されます。
 
 ## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)<br/>
-[C++ 標準ライブラリの概要](../standard-library/cpp-standard-library-overview.md)<br/>
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[ヘッダーファイルのリファレンス](cpp-standard-library-header-files.md)\
+[C++標準ライブラリの概要](cpp-standard-library-overview.md)\
+[C++標準ライブラリのスレッドセーフ](thread-safety-in-the-cpp-standard-library.md)

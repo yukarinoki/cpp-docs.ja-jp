@@ -1,20 +1,21 @@
 ---
 title: '&lt;cuchar&gt;'
-ms.date: 04/04/2019
+ms.date: 07/17/2019
 f1_keywords:
 - <cuchar>
+- cuchar
 helpviewer_keywords:
 - cuchar header
-ms.openlocfilehash: 9fe161d5079aa2fe82dfaef0a483c3a3e600408b
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 004ca23ea86134fb7cd6149015ac31cc51b5a403
+ms.sourcegitcommit: 0867d648e0955ebad7260b5fbebfd6cd4d58f3c7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68268574"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68341060"
 ---
-# <a name="ltcwchargt"></a>&lt;cwchar&gt;
+# <a name="ltcuchargt"></a>&lt;cuchar&gt;
 
-標準 C ライブラリ ヘッダーが含まれています\<uchar.h > を関連する名前を追加し、`std`名前空間。
+C 標準ライブラリヘッダー \<uchar .h > をインクルードし、関連`std`する名前を名前空間に追加します。
 
 ## <a name="requirements"></a>必要条件
 
@@ -22,21 +23,12 @@ ms.locfileid: "68268574"
 
 **名前空間:** std
 
-## <a name="member-functions"></a>メンバー関数
-
-|||
-|-|-|
-|[c16rtomb](../standard-library/cuchar-functions.md#c16rtomb)|説明はありません。|
-|[c32rtomb](../standard-library/cuchar-functions.md#c32rtomb)|説明はありません。|
-|[mbrtoc16](../standard-library/cuchar-functions.md#mbrtoc16)|説明はありません。|
-|[mbrtoc32](../standard-library/cuchar-functions.md#mbrtoc32)|説明はありません。|
-
 ## <a name="remarks"></a>Remarks
 
-このヘッダーをインクルードすると、標準 C ライブラリ ヘッダーの外部リンケージで宣言された名前が、`std` 名前空間でも宣言されます。
+このヘッダーは、C 標準ライブラリ型`mbstate_t`および`size_t` `std`関数[c16rtomb](../c-runtime-library/reference/c16rtomb-c32rtomb1.md)、 [c32rtomb](../c-runtime-library/reference/c16rtomb-c32rtomb1.md)、 [mbrtoc16](../c-runtime-library/reference/mbrtoc16-mbrtoc323.md)、および[mbrtoc32](../c-runtime-library/reference/mbrtoc16-mbrtoc323.md)を名前空間に追加します。
 
 ## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)<br/>
-[C++ 標準ライブラリの概要](../standard-library/cpp-standard-library-overview.md)<br/>
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[ヘッダーファイルのリファレンス](cpp-standard-library-header-files.md)\
+[C++標準ライブラリの概要](cpp-standard-library-overview.md)\
+[C++標準ライブラリのスレッドセーフ](thread-safety-in-the-cpp-standard-library.md)
