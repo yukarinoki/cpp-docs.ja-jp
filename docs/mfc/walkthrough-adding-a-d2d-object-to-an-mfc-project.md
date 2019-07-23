@@ -14,7 +14,7 @@ ms.locfileid: "64558174"
 ---
 # <a name="walkthrough-adding-a-d2d-object-to-an-mfc-project"></a>チュートリアル: MFC プロジェクトへの D2D オブジェクトの追加
 
-このチュートリアルは、基本的な Direct2D を追加する方法を説明します (D2D) Visual c、Microsoft Foundation Class ライブラリ (MFC) プロジェクトでは、オブジェクトし、を出力するアプリケーションにプロジェクトをビルドし、「こんにちは, world」のグラデーションの背景。
+このチュートリアルは、基本的な Direct2D を追加する方法を説明します (D2D) Visual c、Microsoft Foundation Class ライブラリ (MFC) プロジェクトでは、オブジェクトし、を出力するアプリケーションにプロジェクトをビルドし、"Hello, World!"のグラデーションの背景。
 
 このチュートリアルでは、これらのタスクを実行する方法を示します。
 
