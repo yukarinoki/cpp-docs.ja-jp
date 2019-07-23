@@ -3,12 +3,12 @@ title: Visual Studio で C++ の Linux ワークロードをインストール�
 description: Visual Studio で C++ の Linux ワークロードをダウンロード、インストール、セットアップする方法について説明します。
 ms.date: 06/11/2019
 ms.assetid: e11b40b2-f3a4-4f06-b788-73334d58dfd9
-ms.openlocfilehash: d5c099794f781fa9e6217f3796d24d1a63fd7b53
-ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
+ms.openlocfilehash: 5df7b323d202f398059e92abaeeeedbf73439fa4
+ms.sourcegitcommit: 7f5b29e24e1be9b5985044a030977485fea0b50c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67042751"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68299791"
 ---
 # <a name="download-install-and-set-up-the-linux-workload"></a>Linux ワークロードのダウンロード、インストール、セットアップ
 
@@ -31,8 +31,6 @@ Visual Studio プロジェクトに変換しなくても、CMake や他の任意
 ::: moniker range="vs-2019"
 
 Visual Studio 2019 では、ビルドとデバッグに別のターゲットを指定できます。 WSL を対象とする場合、リモート接続を追加したり、SSH を構成する必要はありません。
-
-Visual Studio for Linux のプロジェクトでは、[AddressSanitizer (ASan)](https://github.com/google/sanitizers/wiki/AddressSanitizer) のサポートが統合されています。
 
 ::: moniker-end
 
