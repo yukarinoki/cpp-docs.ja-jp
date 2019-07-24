@@ -3,12 +3,12 @@ title: Visual Studio でターゲットの Linux システムに接続する
 description: Visual Studio の C++ プロジェクト内からリモートの Linux マシンまたは WSL に接続する方法です。
 ms.date: 06/19/2019
 ms.assetid: 5eeaa683-4e63-4c46-99ef-2d5f294040d4
-ms.openlocfilehash: 00d7facca2857efb0b8b43b5aaf38edce348a511
-ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
+ms.openlocfilehash: cd107f096e4395f93775ee80b889cc0efd627166
+ms.sourcegitcommit: 610751254a01cba6ad15fb1e1764ecb2e71f66bf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67861144"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68313433"
 ---
 # <a name="connect-to-your-target-linux-system-in-visual-studio"></a>Visual Studio でターゲットの Linux システムに接続する
 
@@ -20,11 +20,11 @@ Linux サポートは Visual Studio 2017 以降で使用できます。
 
 ::: moniker range=">=vs-2017"
 
-リモート マシンまたは Windows Subsystem for Linux (WSL) をターゲットにするように、Linux プロジェクトを構成できます。 リモート マシンおよび Visual Studio 2017 上の WSL の場合は、接続を設定する必要があります。 
+Linux プロジェクトのターゲットは、リモート マシンとなるように構成することも、Windows Subsystem for Linux (WSL) とすることもできます。 リモート マシンの場合と、Visual Studio 2017 上の WSL の場合は、リモート接続を設定する必要があります。 
 
 ## <a name="connect-to-a-remote-linux-computer"></a>リモートの Linux コンピューターに接続する
 
-リモートの Linux システム (VM または物理マシン) 用に C++ の Linux プロジェクトをビルドする場合、Linux コードはリモートの Linux コンピューターにコピーされ、Visual Studio の設定に基づいてコンパイルされます。
+C++ の Linux プロジェクトをリモートの Linux システム (VM または物理マシン) 用にビルドするときは、Linux のソース コードがリモートの Linux コンピューターにコピーされ、Visual Studio の設定に基づいてコンパイルされます。
 
 このリモート接続をセットアップするには、次のようにします。
 
@@ -92,15 +92,15 @@ Visual Studio 2017 では、この記事で前に説明したリモート Linux 
 
 ::: moniker range="vs-2019"
 
-Visual Studio 2019 バージョン 16.1 では、WSL をターゲットにするときに、リモート接続を追加したり、SSH を構成したりする必要はありません。 Linux システムで必要なものは、gcc、gdb、make、rsync、zip だけです。 Visual Studio では、IntelliSense でヘッダー ファイルを初めて使うときに、WSL インスタンスから Windows ファイル システムに抽出するためだけに、rsync と zip が必要です。 Visual Studio 2019 バージョン 16.1 では、WSL のサポートは Windows バージョン 1809 に基づきます。 それより後のバージョンの Windows を実行できますが、Visual Studio では新しい WSL の機能はまだ利用されません。
+Visual Studio 2019 バージョン 16.1 では、C++ を [Windows Subsystem for Linux (WSL)](https://docs.microsoft.com/windows/wsl/about) とともに使用するためのネイティブ サポートが追加されています。  これは、ローカルの WSL インストールでビルドおよびデバッグするために、リモート接続を追加したり、SSH を構成したりする必要がなくなったことを意味します。 詳細については、こちらの [WSL をインストールする方法](https://docs.microsoft.com/windows/wsl/install-win10)の説明をご覧ください。
 
-お使いのディストリビューションで apt がサポートされている場合、このコマンドで必要なパッケージをインストールできます。
+Visual Studio と連携するように WSL インストールを構成するには、gcc、gdb、make、rsync、zip の各ツールがインストールされている必要があります。 apt を使用するディストリビューションでは、次のコマンドを使用してこれらのツールをインストールできます。 
 
 ```bash
 sudo apt install g++ gdb make rsync zip
 ```
 
-WSL 用にプロジェクトを構成するには、プロジェクトの種類に応じて、「[Linux プロジェクトを構成する](configure-a-linux-project.md)」または「[Linux CMake プロジェクトを構成する](cmake-linux-project.md)」をご覧ください。
+WSL 用にプロジェクトを構成するには、プロジェクトの種類に応じて、「[Linux プロジェクトを構成する](configure-a-linux-project.md)」または「[Linux CMake プロジェクトを構成する](cmake-linux-project.md)」をご覧ください。 WSL を使用するシンプルなコンソール アプリケーションを作成するための詳細な手順については、入門のブログ記事「[C++ with Visual Studio 2019 and the Windows Subsystem for Linux (WSL)](https://devblogs.microsoft.com/cppblog/c-with-visual-studio-2019-and-windows-subsystem-for-linux-wsl/)」 (C++ と Visual Studio 2019 および Windows Subsystem for Linux (WSL)) をご覧ください。
 
 ::: moniker-end
 
