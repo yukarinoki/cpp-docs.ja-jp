@@ -24,12 +24,12 @@ helpviewer_keywords:
 - data [C++], reading from input stream
 - streams [C++], reading data from
 ms.assetid: 9a3c1538-93dd-455e-ae48-77c1e23c53f0
-ms.openlocfilehash: 7248eb08409b50d855dbb70c7638a856302b345b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: da3828142a06ed89a6447ccaef4a0d8ff0063cca
+ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287877"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68376178"
 ---
 # <a name="fread"></a>fread
 
@@ -57,22 +57,22 @@ size_t fread(
 *count*<br/>
 読み取る項目の最大数。
 
-*stream*<br/>
+*一連*<br/>
 **FILE** 構造体へのポインター。
 
 ## <a name="return-value"></a>戻り値
 
-**fread**可能性のあるすべてのアイテムの数が実際に読み取られた返しますより小さい*カウント*エラーが発生した場合、またはファイルの末尾が到達する前に発生した場合*カウント*します。 使用して、 **feof**または**ferror**ファイルの終わり条件からの読み取りエラーを区別するために関数。 場合*サイズ*または*カウント*は 0 です。 **fread**返します 0 と、バッファーの内容は変更されません。 場合*ストリーム*または*バッファー* null ポインターの場合は、 **fread**で説明されているように、無効なパラメーター ハンドラーを呼び出します[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合に、この関数が設定**errno**に**EINVAL**は 0 を返します。
+**fread**は、実際に読み取られた完全な項目の数を返します。エラーが発生した場合、またはファイルの末尾が*カウント*に到達する前に検出された場合は、 *count*よりも小さくなることがあります。 Read エラーをファイルの終端の条件と区別するには、 **feof**関数または**ferror**関数を使用します。 *Size*または*count*が0の場合、 **fread**は0を返し、バッファーの内容は変更されません。 *ストリーム*または*バッファー*が null ポインターの場合、 **fread**は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、この関数は**errno**を**EINVAL**に設定し、0を返します。
 
-参照してください[ \_doserrno、errno、 \_sys\_errlist、および\_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)これらのエラー コードの詳細についてはします。
+これらのエラーコードの詳細については[ \_、「doserrno、errno、 \_sys\_errlist、 \_および sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 」を参照してください。
 
 ## <a name="remarks"></a>Remarks
 
-**Fread**関数は、最大読み取ります*カウント*の項目*サイズ*入力からのバイト*ストリーム*に保存*バッファー*. 関連付けられたファイル ポインター*ストリーム*(1 つである) 場合は実際に読み取られたバイト数でインクリメントします。 指定したストリームが開いている場合[テキスト モード](../../c-runtime-library/text-and-binary-mode-file-i-o.md)、Windows スタイルの改行が Unix 形式の改行に変換されます。 つまり、復帰と改行 (CRLF) のペアが 1 つのラインフィード (LF) 文字に置き換えられます。 この置き換えは、ファイル ポインターまたは戻り値には影響しません。 エラーが発生した場合、ファイル ポインターの位置は不確定になります。 部分的に読み取られた項目の値を特定できません。
+**Fread**関数は、入力*ストリーム*から*サイズ*バイトの項目*数*を読み取り、*バッファー*に格納します。 *ストリーム*に関連付けられているファイルポインター (存在する場合) は、実際に読み取られたバイト数によって増加します。 指定されたストリームが[テキストモード](../../c-runtime-library/text-and-binary-mode-file-i-o.md)で開かれている場合、Windows スタイルの改行は Unix スタイルの改行に変換されます。 つまり、キャリッジリターンラインフィード (CRLF) のペアは、単一行フィード (LF) 文字に置き換えられます。 この置き換えは、ファイル ポインターまたは戻り値には影響しません。 エラーが発生した場合、ファイル ポインターの位置は不確定になります。 部分的に読み取られた項目の値を特定できません。
 
-データの量が要求された場合、テキスト モードのストリームで使用する場合 (つまり、*サイズ* \* *カウント*) 内部以上**ファイル** \*バッファー サイズ (既定では 4096 (バイト単位) を使用して構成可能な[setvbuf](../../c-runtime-library/reference/setvbuf.md)) をユーザー指定のバッファーに直接ストリームのデータをコピーし、そのバッファーで改行の変換が行われる、します。 変換後のデータは過去のデータのバッファーにコピーされたストリーム データよりも短い場合があるため*バッファー*\[*return_value* \* *サイズ*] (場所*return_value*からの戻り値は、 **fread**) ファイルから変換されていないデータを含めることができます。 このため、お勧めする null で終了で文字データ*バッファー*\[*return_value* \* *サイズ*]、バッファーの目的がある場合C スタイル文字列として機能します。 参照してください[fopen](fopen-wfopen.md)テキスト モードとバイナリ モードの影響の詳細について。
+テキストモードストリームで使用される場合、要求されたデータの量 (つまり、*サイズ* \*の*カウント*) が内部**ファイル** \*のバッファーサイズ以上である (既定では、これは4096バイトで、を使用[して構成できます)。setvbuf](../../c-runtime-library/reference/setvbuf.md))、ストリームデータはユーザー指定のバッファーに直接コピーされ、そのバッファーで改行変換が行われます。 変換されたデータはバッファーにコピーされたストリームデータよりも短い場合\[があるため、data*return_value* \* *size*] ( *return_value*は**fread**からの戻り値) である可能性があります。ファイルからの未変換データを格納します。 このため、バッファーの目的が C スタイルの文字列として機能する場合は、*バッファー*\[*return_value* \* *size*で null 値を終了することをお勧めします。 テキストモードとバイナリモードの効果の詳細については、「 [fopen](fopen-wfopen.md) 」を参照してください。
 
-この関数は他のスレッドをロックします。 ロックしないバージョンが必要な場合を使用して、 **_fread_nolock**します。
+この関数は他のスレッドをロックします。 ロックしないバージョンが必要な場合は、 **_fread_nolock**を使用します。
 
 ## <a name="requirements"></a>必要条件
 
@@ -135,7 +135,7 @@ Contents of buffer = zyxwvutsrqponmlkjihgfedcb
 ## <a name="see-also"></a>関連項目
 
 [ストリーム入出力](../../c-runtime-library/stream-i-o.md)<br/>
-[テキスト モードとバイナリ ファイル入出力](../../c-runtime-library/text-and-binary-mode-file-i-o.md)<br/>
+[テキストファイルとバイナリファイル i/o](../../c-runtime-library/text-and-binary-mode-file-i-o.md)<br/>
 [fopen](fopen-wfopen.md)<br/>
 [fwrite](fwrite.md)<br/>
 [_read](read.md)<br/>
