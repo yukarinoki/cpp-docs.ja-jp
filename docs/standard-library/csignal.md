@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - csignal header
 ms.assetid: d18bcf82-a89a-476c-a6bf-726af956f7c0
-ms.openlocfilehash: 298aa14c4e41f1473cac72fc79aa3e180dfe183f
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 2e82877a54c433b9db638b908be290535b1cc857
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243560"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452330"
 ---
 # <a name="ltcsignalgt"></a>&lt;csignal&gt;
 
-標準 C ライブラリ ヘッダーが含まれています\<signal.h > を関連する名前を追加し、`std`名前空間。 このヘッダーをインクルードすると、標準 C ライブラリ ヘッダーの外部リンケージで宣言された名前が、`std` 名前空間でも宣言されます。
+C 標準ライブラリのヘッダー \<シグナル > をインクルードし、関連`std`する名前を名前空間に追加します。 このヘッダーをインクルードすると、標準 C ライブラリ ヘッダーの外部リンケージで宣言された名前が、`std` 名前空間でも宣言されます。
 
 
 ## <a name="syntax"></a>構文
@@ -24,7 +24,7 @@ ms.locfileid: "68243560"
 #include <csignal>
 ```
 
-## <a name="namespace-and-macros"></a>Namespace とマクロ
+## <a name="namespace-and-macros"></a>名前空間とマクロ
 
 ```cpp
 namespace std {
@@ -53,6 +53,6 @@ int raise(int sig);
 
 ## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)<br/>
-[C++ 標準ライブラリの概要](../standard-library/cpp-standard-library-overview.md)<br/>
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)\
+[C++ 標準ライブラリの概要](../standard-library/cpp-standard-library-overview.md)\
+[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

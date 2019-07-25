@@ -1,52 +1,69 @@
 ---
 title: リンカー ツールの警告 LNK4217
-ms.date: 04/15/2019
+ms.date: 07/23/2019
 f1_keywords:
 - LNK4217
 helpviewer_keywords:
 - LNK4217
 ms.assetid: 280dc03e-5933-4e8d-bb8c-891fbe788738
-ms.openlocfilehash: f1ea3cd0a8770571ae5c55d29a901c134311550f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1301dd53f71c616d7b7af346923a54c42903c9fd
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410227"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450854"
 ---
 # <a name="linker-tools-warning-lnk4217"></a>リンカー ツールの警告 LNK4217
 
-> シンボル '*シンボル*'で定義されている'*filename_1.obj*'によってインポートされる'*filename_2.obj*'function' で*関数*'
+> '*filename_1*' で定義されたシンボル '*symbol*' は、関数 '*function*' の '*filename_2*' によってインポートされています
 
-[_declspec](../../cpp/dllexport-dllimport.md)記号が同じイメージのオブジェクト ファイルで定義されている場合でも、シンボルが指定されました。 削除、`__declspec(dllimport)`修飾子をこの警告を解決します。
+シンボルが同じイメージ内のオブジェクトファイルで定義されているにもかかわらず、シンボルに[__declspec (dllimport)](../../cpp/dllexport-dllimport.md)が指定されました。 この警告`__declspec(dllimport)`を解決するには、修飾子を削除します。
 
 ## <a name="remarks"></a>Remarks
 
-*シンボル*は、イメージ内で定義されているシンボルの名前です。 *関数*関数では、シンボルをインポートしています。
+*symbol*は、イメージ内で定義されているシンボル名です。 *関数*は、シンボルをインポートする関数です。
 
-使用してコンパイルするときに、この警告は表示されない、 [/clr](../../build/reference/clr-common-language-runtime-compilation.md)オプション。
+この警告は、 [/clr](../../build/reference/clr-common-language-runtime-compilation.md)オプションを使用してコンパイルした場合には表示されません。
 
-LNK4217 は、最初のモジュールのインポート ライブラリと 2 番目のモジュールをコンパイルする代わりと同時に、2 つのモジュールをリンクしようとした場合にも発生します。
+LNK4217 は、2つのモジュールをリンクしようとした場合にも発生する可能性があります。代わりに、最初のモジュールのインポートライブラリを使用して2番目のモジュールをコンパイルする必要があります。
 
 ```cpp
-// LNK4217.cpp
-// compile with: /LD
-#include "windows.h"
-__declspec(dllexport) void func(unsigned short*) {}
+// main.cpp
+__declspec(dllimport) void func();
+
+int main()
+{
+    func();
+    return 0;
+}
+
 ```
 
 この場合、次のようになります。
 
 ```cpp
-// LNK4217b.cpp
+// tt.cpp
 // compile with: /c
-#include "windows.h"
-__declspec(dllexport) void func(unsigned short*) {}
+void func() {}
 ```
 
-これら 2 つのモジュールをリンクしようとすると LNK4217 が発生します。 解決するのには、最初のサンプルのインポート ライブラリと 2 番目のサンプルをコンパイルします。
+次に示すように、これら2つのモジュールをコンパイルしようとすると、LNK4217 が発生します。
+
+```cmd
+cl.exe /c main.cpp tt.cpp
+link.exe main.obj tt.obj
+```
+
+このエラーを解決するには、2つのファイルをコンパイルした後、.tt に .tt を渡して .lib ファイルを作成し、次に示すように、.tt を使用して .obj をリンクします。
+
+```cmd
+cl.exe /c main.cpp tt.cpp
+lib.exe tt.obj /export:func /def
+link.exe main.obj tt.lib
+```
 
 ## <a name="see-also"></a>関連項目
 
-[リンカー ツールの警告 LNK4049](linker-tools-warning-lnk4049.md) \
-[リンカー ツールの警告 LNK4286](linker-tools-warning-lnk4286.md) \
+[リンカーツールの警告 LNK4049](linker-tools-warning-lnk4049.md) \
+[リンカーツールの警告 LNK4286](linker-tools-warning-lnk4286.md) \
 [dllexport、dllimport](../../cpp/dllexport-dllimport.md)

@@ -5,20 +5,20 @@ f1_keywords:
 - <any>
 helpviewer_keywords:
 - <any>
-ms.openlocfilehash: 169e44880c98248dc1941ccc8c9adfe05f76f358
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 19e30b1ab0a9b0f30c1a4f3d4b614643cb8b50ac
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68268654"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456286"
 ---
 # <a name="ltanygt"></a>&lt;any&gt;
 
-クラスし、関数、およびいくつかサポートしているクラスを定義します。
+クラス、およびいくつかのサポート関数とクラスを定義します。
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<任意 >
+**ヘッダー:** \<任意の >
 
 **名前空間:** std
 
@@ -28,17 +28,17 @@ ms.locfileid: "68268654"
 
 |||
 |-|-|
-|[any_cast](../standard-library/any-functions.md#any_cast)|オブジェクトをするには、いずれかになります。|
-|[make_any](../standard-library/any-functions.md#make_any)|値を受け取り、オブジェクトを作成します。|
-|[swap](../standard-library/any-functions.md#swap)|任意の 2 つのオブジェクトの要素を交換します。|
+|[any_cast](../standard-library/any-functions.md#any_cast)|オブジェクトを任意のに作成します。|
+|[make_any](../standard-library/any-functions.md#make_any)|値を受け取り、任意のオブジェクトを作成します。|
+|[swap](../standard-library/any-functions.md#swap)|2つのオブジェクトの要素を交換します。|
 
 ### <a name="classes"></a>クラス
 
 |||
 |-|-|
-|[any](../standard-library/any-class.md)|コンス トラクターの要件を満たすまたは値を持たない任意の型を格納します。|
-|[bad_any_cast](../standard-library/bad-any-cast-class.md)|オブジェクトが、失敗したによってスローされた`any_cast`します。|
+|[any](../standard-library/any-class.md)|コンストラクターの要件を満たす任意の型を格納します。または、値を保持しません。|
+|[bad_any_cast](../standard-library/bad-any-cast-class.md)|によってスローさ`any_cast`れたオブジェクトが失敗しました。|
 
 ## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)<br/>
+[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - streambuf header
 ms.assetid: 4365b25c-5831-488b-b9c2-867bfe961b89
-ms.openlocfilehash: 15bfa86a3c697442b66a5f77aa6ea7a9aba5643c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 87fb74f62abffdd62b8c0179b13f53d96439d6c6
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412372"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449575"
 ---
 # <a name="ltstreambufgt"></a>&lt;streambuf&gt;
 
@@ -27,8 +27,8 @@ ms.locfileid: "62412372"
 
 |型名|説明|
 |-|-|
-|[streambuf](../standard-library/streambuf-typedefs.md#streambuf)|特殊化`basic_streambuf`を使用して**char**テンプレート パラメーターとして。|
-|[wstreambuf](../standard-library/streambuf-typedefs.md#wstreambuf)|特殊化`basic_streambuf`を使用して**wchar_t**テンプレート パラメーターとして。|
+|[streambuf](../standard-library/streambuf-typedefs.md#streambuf)|テンプレートパラメーターと`basic_streambuf`して**char**を使用するの特殊化。|
+|[wstreambuf](../standard-library/streambuf-typedefs.md#wstreambuf)|テンプレートパラメーターと`basic_streambuf`して**wchar_t**を使用するの特殊化。|
 
 ### <a name="classes"></a>クラス
 
@@ -38,7 +38,7 @@ ms.locfileid: "62412372"
 
 ## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)<br/>
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[iostream プログラミング](../standard-library/iostream-programming.md)<br/>
-[iostreams の規則](../standard-library/iostreams-conventions.md)<br/>
+[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)\
+[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[iostream プログラミング](../standard-library/iostream-programming.md)\
+[iostreams の規則](../standard-library/iostreams-conventions.md)
