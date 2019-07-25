@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - linear_congruential_engine class
 ms.assetid: 30e00ca6-1933-4701-9561-54f3e810a5a1
-ms.openlocfilehash: 41ce5590476a8327c9449ece5e3173146a04760f
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: f5b448fbf158cf9e9cfb8331c6ec7a228859fffc
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66449897"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447583"
 ---
 # <a name="linearcongruentialengine-class"></a>linear_congruential_engine クラス
 
@@ -45,17 +45,17 @@ class linear_congruential_engine{
 
 ### <a name="parameters"></a>パラメーター
 
-*UIntType*<br/>
+*UIntType*\
 結果を表す符号なし整数型。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
 
-*A*<br/>
-**乗数**します。 **Precondition**:「解説」セクションをご覧ください。
+*ある*\
+**乗数**。 **前提条件**:「解説」を参照してください。
 
-*C*<br/>
-**インクリメント**します。 **Precondition**:「解説」セクションをご覧ください。
+*40U-C*\
+**Increment**。 **前提条件**:「解説」を参照してください。
 
-*M*<br/>
-**剰余**します。 **Precondition**:「解説」を参照してください。
+*M*\
+**剰余**。 **前提条件**:「解説」を参照してください。
 
 ## <a name="members"></a>メンバー
 
@@ -74,9 +74,9 @@ class linear_congruential_engine{
 
 このエンジンは、漸化式 ( *周期*) `x(i) = (A * x(i-1) + C) mod M` を使用して、ユーザー指定の符号なし整数型の値を生成します。
 
-場合*M* 0 の場合は、この剰余演算に使用される値は`numeric_limits<result_type>::max() + 1`します。 エンジンの状態は、最後に返された値か、または `operator()` に対して呼び出しが行われなかった場合はシード値になります。
+*M*が0の場合、この剰余演算に使用される`numeric_limits<result_type>::max() + 1`値はです。 エンジンの状態は、最後に返された値か、または `operator()` に対して呼び出しが行われなかった場合はシード値になります。
 
-場合*M* 、テンプレート引数の値に 0 以外は*A*と*C*必要がありますより小さい*M*します。
+*M*が0以外の場合、テンプレート引数*A*と*C*の値は*m*より小さくなければなりません。
 
 このエンジンから直接ジェネレーターを構築できますが、定義済みの typedef のいずれかを使用することもできます。
 
@@ -102,4 +102,4 @@ typedef linear_congruential_engine<unsigned int, 48271, 0, 2147483647> minstd_ra
 
 ## <a name="see-also"></a>関連項目
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - codecvt header
 ms.assetid: d44ee229-00d5-4761-9b48-0c702122789d
-ms.openlocfilehash: 56cd4263d3dcddd23246a05466275b8b7d370b95
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fc711b14a2d30041b4585a9515a95e42280f5306
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405210"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458612"
 ---
 # <a name="ltcodecvtgt"></a>&lt;codecvt&gt;
 
-テンプレート クラス [codecvt](../standard-library/codecvt-class.md) に基づいてオブジェクトを記述するいくつかのテンプレート クラスを定義します。 これらのオブジェクトとして使用できる[ロケール ファセット](../standard-library/locale-class.md#facet_class)型の値のシーケンス間の変換を制御する`Elem`と型の値のシーケンス**char**します。
+テンプレート クラス [codecvt](../standard-library/codecvt-class.md) に基づいてオブジェクトを記述するいくつかのテンプレート クラスを定義します。 これらのオブジェクトは、型`Elem`の値のシーケンスと**char**型の値のシーケンスとの間の変換を制御する[ロケールファセット](../standard-library/locale-class.md#facet_class)として使用できます。
 
 ## <a name="syntax"></a>構文
 
@@ -32,9 +32,9 @@ ms.locfileid: "62405210"
 
 - UCS-2 は、16 ビットの整数で表される、プログラムにおける Unicode のエンコード形式です。
 
-- UTF-16 は、1 つまたは 2 つの 16 ビットの整数で表される、プログラムにおける Unicode のエンコード形式です  (これは、標準 C または標準 C++ の有効なワイド文字エンコードの要件をすべて満たしているわけではないことに注意してください。 しかし、これ自体は広く利用されています)。
+- UTF-16 は、1 つまたは 2 つの 16 ビットの整数で表される、プログラムにおける Unicode のエンコード形式です (これは、標準 C または標準 C++ の有効なワイド文字エンコードの要件をすべて満たしているわけではないことに注意してください。 しかし、これ自体は広く利用されています)。
 
-バイト ストリーム (ファイルに格納されている、バイト シーケンスとして送信またはの配列で、プログラム内に格納された**char**)。
+バイトストリームの場合 (ファイルに格納されている、バイトシーケンスとして送信される、または**char**の配列にプログラム内で格納されている場合):
 
 - UTF-8 は、バイト順が確定されている 1 つ以上の 8 ビット バイトで表される、バイト ストリームにおける Unicode のエンコード形式です。
 
@@ -64,4 +64,4 @@ ms.locfileid: "62405210"
 
 ## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)<br/>
+[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)

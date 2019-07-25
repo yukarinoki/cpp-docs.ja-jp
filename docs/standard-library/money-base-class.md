@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - money_base class
 ms.assetid: 1a303c15-9272-4f26-ae16-dcf43a0fd38a
-ms.openlocfilehash: b0c77b523dbe31bc5b07ae3d736441880fe04546
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5b19635cf4d2cce58ec50226c463a075cfac5b0f
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383569"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455560"
 ---
 # <a name="moneybase-class"></a>money_base クラス
 
@@ -28,17 +28,17 @@ struct pattern
 
 ## <a name="remarks"></a>Remarks
 
-列挙体`part`構造パターンの配列フィールドの要素で指定できる値について説明します。 値`part`は。
+列挙`part`体は、構造パターンの配列フィールドの要素で使用可能な値を示します。 の`part`値は次のとおりです。
 
-- `none` 一致する 0 個以上の空白文字か何も生成しません。
+- `none`0個以上の空白に一致するか、何も生成しない場合は。
 
-- `sign` 一致するか、正または負の記号を生成します。
+- `sign`正または負の符号を一致または生成する場合は。
 
-- `space` 0 個以上の空白文字と一致するか、空白を生成します。
+- `space`0個以上の空白に一致するか、スペースを生成する場合は。
 
-- `symbol` 一致するか、通貨記号を生成します。
+- `symbol`通貨記号を一致または生成する場合は。
 
-- `value` 一致するか、通貨値を生成します。
+- `value`通貨値を一致または生成する場合は。
 
 ## <a name="requirements"></a>必要条件
 
@@ -48,4 +48,4 @@ struct pattern
 
 ## <a name="see-also"></a>関連項目
 
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

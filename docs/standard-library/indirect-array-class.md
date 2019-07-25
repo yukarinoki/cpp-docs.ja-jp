@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - indirect_array class
 ms.assetid: 10e1eaea-ba5a-405c-a25e-7bdd3eee7fc7
-ms.openlocfilehash: 43c54bf3dae02eb117b15cae0dd7de9bb4a9db51
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5db5f2ce60038267b70ae8e77d9dd929d972af6a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404992"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456338"
 ---
 # <a name="indirectarray-class"></a>indirect_array クラス
 
@@ -21,11 +21,11 @@ ms.locfileid: "62404992"
 
 ## <a name="remarks"></a>Remarks
 
-クラスは、オブジェクトへの参照を格納するオブジェクトを表します`va`クラスの[valarray](../standard-library/valarray-class.md)**\<型 >**、オブジェクトと共に`xa`クラスの`valarray<size_t>`、選択する要素のシーケンスを説明する、`valarray<Type>`オブジェクト。
+クラス`va`は、クラス[valarray](../standard-library/valarray-class.md) **\<> 型**のオブジェクトへの参照と、クラス`valarray<size_t>`のオブジェクト`xa`への参照を格納するオブジェクトを記述します。このオブジェクトは、選択する要素のシーケンスを記述します。`valarray<Type>`オブジェクト。
 
-構築する、`indirect_array<Type>`オブジェクト形式の式を記述するだけ`va[xa]`です。 クラス indirect_array のメンバー関数に対して定義された対応する関数のシグネチャのように動作します`valarray<Type>`選択した要素のシーケンスだけが影響を受けることを除いて、します。
+オブジェクトを`indirect_array<Type>`構築するには、フォーム`va[xa]`の式を記述する必要があります。 クラス indirect_array のメンバー関数は、に対し`valarray<Type>`て定義されている対応する関数シグネチャのように動作します。ただし、選択した要素のシーケンスのみが影響を受けます。
 
-シーケンスから成る**xa** 。[サイズ](../standard-library/valarray-class.md#size)要素、場所要素`I`インデックスになります**xa**[ `I`] 内で`va`します。
+シーケンスは xa で構成さ**れます。** 要素の[サイズ](../standard-library/valarray-class.md#size)を変更`I`します。要素は`I`内`va`のインデックス**xa**[] になります。
 
 ## <a name="example"></a>例:
 
@@ -66,7 +66,7 @@ int main( )
 }
 ```
 
-### <a name="output"></a>出力
+### <a name="output"></a>Output
 
 ```cpp
 The initial operand valarray is:  (0 -1 2 -1 4 -1 6 -1 8 -1).
@@ -81,4 +81,4 @@ The modified operand valarray is:  (0 -1 10 -1 10 -1 10 -1 8 -1).
 
 ## <a name="see-also"></a>関連項目
 
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

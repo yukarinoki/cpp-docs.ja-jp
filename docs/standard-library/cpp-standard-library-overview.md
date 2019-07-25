@@ -7,16 +7,16 @@ helpviewer_keywords:
 - libraries, Standard C++
 - C++ Standard Library, headers
 ms.assetid: 7acb83a4-da73-4ad3-bc30-a71289db7f60
-ms.openlocfilehash: 57abafbcbd899d3eca7369205afba4ca262ad2c4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7b1e5226db751605d5352b1c5195759c34d080f5
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210802"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452451"
 ---
 # <a name="c-standard-library-overview"></a>C++ 標準ライブラリの概要
 
-すべての C++ ライブラリのエンティティは 1 つ以上の標準ヘッダーで宣言または定義されます。 この実装には、2 つの追加のヘッダーが含まれています。 \<hash_map > と\<hash_set >、する必要のない、C++標準。 この実装がサポートするヘッダーの完全な一覧については、「[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)」をご覧ください。
+すべての C++ ライブラリのエンティティは 1 つ以上の標準ヘッダーで宣言または定義されます。 この実装には、 \< C++標準では必要ない\<2 つの追加ヘッダー hash_map > と hash_set > が含まれています。 この実装がサポートするヘッダーの完全な一覧については、「[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)」をご覧ください。
 
 C++ ライブラリのフリースタンディング実装では、これらのヘッダーの一部のみが提供されます。
 
@@ -60,4 +60,4 @@ Visual C++ ランタイム ライブラリの詳細については、「[CRT ラ
 
 ## <a name="see-also"></a>関連項目
 
-[.NET 標準ライブラリ](../standard-library/cpp-standard-library-reference.md)<br/>
+[.NET 標準ライブラリ](../standard-library/cpp-standard-library-reference.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - tuple header
 ms.assetid: e4ef5c2d-318b-44f6-8bce-fce4ecd796a3
-ms.openlocfilehash: ce6e005990d05676fb20752b5808d32ec88dd7b3
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: a391a77ea65a203a7eddde12046c5df89a77194a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68241535"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447163"
 ---
 # <a name="lttuplegt"></a>&lt;tuple&gt;
 
@@ -45,26 +45,26 @@ ms.locfileid: "68241535"
 
 |||
 |-|-|
-|[operator==](../standard-library/tuple-operators.md#op_eq_eq)|比較`tuple`と等しいオブジェクト。|
-|[operator!=](../standard-library/tuple-operators.md#op_neq)|比較`tuple`オブジェクトが等しくします。|
-|[operator<](../standard-library/tuple-operators.md#op_lt)|比較`tuple`オブジェクトより小さい。|
-|[operator<=](../standard-library/tuple-operators.md#op_lt_eq)|比較の`tuple`以下のオブジェクトします。|
-|[operator>](../standard-library/tuple-operators.md#op_gt)|比較の`tuple`より大きいオブジェクト。|
-|[operator>=](../standard-library/tuple-operators.md#op_gt_eq)|比較の`tuple`以上のオブジェクト。|
+|[operator==](../standard-library/tuple-operators.md#op_eq_eq)|オブジェクトの`tuple`比較 (等しい)。|
+|[operator!=](../standard-library/tuple-operators.md#op_neq)|オブジェクトの`tuple`比較 (等しくない)。|
+|[operator<](../standard-library/tuple-operators.md#op_lt)|オブジェクトの`tuple`比較 (より小さい)。|
+|[operator<=](../standard-library/tuple-operators.md#op_lt_eq)|オブジェクトの`tuple`比較 (以下)。|
+|[operator>](../standard-library/tuple-operators.md#op_gt)|オブジェクトの`tuple`比較 (より大きい)。|
+|[operator>=](../standard-library/tuple-operators.md#op_gt_eq)|オブジェクトの`tuple`比較 (以上)。|
 
 ### <a name="functions"></a>関数
 
 |||
 |-|-|
-|[apply](../standard-library/tuple-functions.md#apply)|タプルで関数を呼び出します。|
-|[forward_as_tuple](../standard-library/tuple-functions.md#forward)|参照の組を生成します。|
+|[apply](../standard-library/tuple-functions.md#apply)|タプルを使用して関数を呼び出します。|
+|[forward_as_tuple](../standard-library/tuple-functions.md#forward)|参照のタプルを構築します。|
 |[get](../standard-library/tuple-functions.md#get)|`tuple` オブジェクトから要素を取得します。|
-|[make_from_tuple](../standard-library/tuple-functions.md#make_from_tuple)|短縮形にする、`tuple`します。|
+|[make_from_tuple](../standard-library/tuple-functions.md#make_from_tuple)|を作成するため`tuple`の短縮形。|
 |[make_tuple](../standard-library/tuple-functions.md#make_tuple)|要素値から `tuple` を作成します。|
 |[swap](../standard-library/tuple-functions.md#swap)||
 |[tie](../standard-library/tuple-functions.md#tie)|要素参照から `tuple` を作成します。|
-|[tuple_cat](../standard-library/tuple-functions.md#tuple_cat)|型の要素の範囲を持つタプル オブジェクトを構築します。|
+|[tuple_cat](../standard-library/tuple-functions.md#tuple_cat)|型要素の範囲を持つ組オブジェクトを構築します。|
 
 ## <a name="see-also"></a>関連項目
 
-[\<array>](../standard-library/array.md)<br/>
+[\<array>](../standard-library/array.md)

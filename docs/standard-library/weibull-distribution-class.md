@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::weibull_distribution [C++], param_type
 - std::weibull_distribution [C++], param_type
 ms.assetid: f20b49d3-1b9a-41af-8db4-baf800eaa02b
-ms.openlocfilehash: bbcfa23ae84d0a035d4b00d1c154da4b4281be32
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f3c5a2a3d8e4b5f2c8a13ef7525b29683b94acc4
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410838"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459625"
 ---
 # <a name="weibulldistribution-class"></a>weibull_distribution クラス
 
@@ -70,12 +70,12 @@ class weibull_distribution
 
 ### <a name="parameters"></a>パラメーター
 
-*RealType*<br/>
-浮動小数点の結果の型の既定値**二重**します。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
+*RealType*\
+浮動小数点演算の結果の型。既定値は**double**です。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
 
 ## <a name="remarks"></a>Remarks
 
-テンプレート クラスは、ユーザー指定の浮動小数点の値を生成する分布を表します。 型、または型**二重**何も指定されない場合がワイブル分布に従って分布。 次の表は、個々のメンバーに関する記事にリンクしています。
+このテンプレートクラスは、ワイブル分布に従って分布した、ユーザー指定の浮動小数点型の値、または none を指定した場合は**double**型の値を生成する分布を表します。 次の表は、個々のメンバーに関する記事にリンクしています。
 
 ||||
 |-|-|-|
@@ -155,7 +155,7 @@ int main()
 }
 ```
 
-## <a name="output"></a>出力
+## <a name="output"></a>Output
 
 最初の実行:
 
@@ -222,13 +222,13 @@ explicit weibull_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>パラメーター
 
-*a*<br/>
+*ある*\
 `a` 分布パラメーター。
 
-*b*<br/>
+*b*\
 `b` 分布パラメーター。
 
-*parm*<br/>
+*parm*\
 分布の作成に使用される `param_type` の構造体。
 
 ### <a name="remarks"></a>Remarks
@@ -257,13 +257,13 @@ struct param_type {
 
 ### <a name="parameters"></a>パラメーター
 
-*a*<br/>
+*ある*\
 `a` 分布パラメーター。
 
-*b*<br/>
+*b*\
 `b` 分布パラメーター。
 
-*right*<br/>
+*そうです*\
 このオブジェクトと比較する `param_type` オブジェクト。
 
 ### <a name="remarks"></a>Remarks
@@ -274,4 +274,4 @@ struct param_type {
 
 ## <a name="see-also"></a>関連項目
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

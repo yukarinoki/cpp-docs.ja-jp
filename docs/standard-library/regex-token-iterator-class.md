@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::regex_token_iterator [C++], pointer
 - std::regex_token_iterator [C++], reference
 ms.assetid: a213ba48-8e4e-4b6b-871a-2637acf05f15
-ms.openlocfilehash: 2cb66ce4cbee0936211e5e991b18f3ae4b8a7fe5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 78d01ed8606e65e55af7e0c8dc24c02b51c53a39
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62369424"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451555"
 ---
 # <a name="regextokeniterator-class"></a>regex_token_iterator クラス
 
@@ -45,13 +45,13 @@ class regex_token_iterator
 
 ## <a name="parameters"></a>パラメーター
 
-*BidIt*<br/>
-サブマッチの反復子の型。
+*BidIt*\
+サブマッチ用の反復子の型。
 
-*Elem*<br/>
+*Elem*\
 一致させる要素の型。
 
-*RXtraits*<br/>
+*RXtraits*\
 要素の特徴 (traits) クラス。
 
 ## <a name="remarks"></a>Remarks
@@ -231,7 +231,7 @@ bool operator!=(const regex_token_iterator& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*right*<br/>
+*そうです*\
 比較する反復子。
 
 ### <a name="remarks"></a>Remarks
@@ -276,7 +276,7 @@ bool operator==(const regex_token_iterator& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*right*<br/>
+*そうです*\
 比較する反復子。
 
 ### <a name="remarks"></a>Remarks
@@ -342,16 +342,16 @@ regex_token_iterator(BidIt first, BidIt last,
 
 ### <a name="parameters"></a>パラメーター
 
-*first*<br/>
+*まずは*\
 一致させるシーケンスの先頭。
 
-*last*<br/>
+*前の*\
 一致させるシーケンスの末尾。
 
-*re*<br/>
+*書き直し*\
 照合する正規表現。
 
-*f*<br/>
+*f*\
 一致のフラグ。
 
 ### <a name="remarks"></a>Remarks
@@ -390,11 +390,11 @@ typedef sub_match<BidIt> value_type;
 
 ## <a name="see-also"></a>関連項目
 
-[\<regex>](../standard-library/regex.md)<br/>
-[regex_constants クラス](../standard-library/regex-constants-class.md)<br/>
-[regex_error クラス](../standard-library/regex-error-class.md)<br/>
-[\<regex> 系関数](../standard-library/regex-functions.md)<br/>
-[regex_iterator クラス](../standard-library/regex-iterator-class.md)<br/>
-[\<regex> 系演算子](../standard-library/regex-operators.md)<br/>
-[regex_traits クラス](../standard-library/regex-traits-class.md)<br/>
-[\<regex> typedefs](../standard-library/regex-typedefs.md)<br/>
+[\<regex>](../standard-library/regex.md)\
+[regex_constants クラス](../standard-library/regex-constants-class.md)\
+[regex_error クラス](../standard-library/regex-error-class.md)\
+[\<regex > 関数](../standard-library/regex-functions.md)\
+[regex_iterator クラス](../standard-library/regex-iterator-class.md)\
+[\<regex > 演算子](../standard-library/regex-operators.md)\
+[regex_traits クラス](../standard-library/regex-traits-class.md)\
+[\<regex> typedefs](../standard-library/regex-typedefs.md)

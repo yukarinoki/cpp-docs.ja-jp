@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - underlying_type
 ms.assetid: 691ddce3-2677-4480-bd35-d933fab85d3e
-ms.openlocfilehash: 23e5e9bc5406265f49fca2ed220c597cb32e2a9a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 465383357e6c0306c24fe8325327327c3a3b64c1
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399363"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454983"
 ---
 # <a name="underlyingtype-class"></a>underlying_type クラス
 
@@ -26,12 +26,12 @@ struct underlying_type;
 
 ### <a name="parameters"></a>パラメーター
 
-*T*<br/>
+*\T*\
 変更する型。
 
 ## <a name="remarks"></a>Remarks
 
-`type`テンプレート クラスのメンバー typedef 名の基になる整数型*T*、 *T*列挙型は、それ以外の場合はメンバー typedef `type`。
+テンプレート`type`クラスのメンバー typedef は、 *t*が列挙型である場合に、基になる整数型*t*に名前を指定します`type`。それ以外の場合は、メンバー typedef は存在しません。
 
 ## <a name="requirements"></a>必要条件
 
@@ -41,4 +41,4 @@ struct underlying_type;
 
 ## <a name="see-also"></a>関連項目
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - <condition_variable>
 ms.assetid: 8567f7cc-20bd-42a7-9137-87c46f878009
-ms.openlocfilehash: ed98966f651df76078fa47b05f5a2d8ae1b71d05
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: e63dc5a494f471997c28be8b2cd237aba45a6fd6
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244574"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457380"
 ---
 # <a name="ltconditionvariablegt"></a>&lt;condition_variable&gt;
 
@@ -24,7 +24,7 @@ ms.locfileid: "68244574"
 **名前空間:** std
 
 > [!NOTE]
-> 使用してコンパイルされたコードで **/clr**、このヘッダーはブロックされます。
+> **/Clr**を使用してコンパイルされたコードでは、このヘッダーはブロックされます。
 
 ### <a name="remarks"></a>Remarks
 
@@ -49,9 +49,9 @@ while (condition is false)
 
 - `wait_for` は指定された `time interval` の間待機します。
 
-これらのメソッドにはそれぞれ 2 つのオーバーロード バージョンがあります。 1 つは待機するだけで、誤ってウェークアップする可能性があります。 もう 1 つは、述語を定義する追加のテンプレート引数を受け取ります。 述語になるまでは、メソッドが返されません**true**します。
+これらのメソッドにはそれぞれ 2 つのオーバーロード バージョンがあります。 1 つは待機するだけで、誤ってウェークアップする可能性があります。 もう 1 つは、述語を定義する追加のテンプレート引数を受け取ります。 述語が**true**になるまで、メソッドはを返しません。
 
-各クラスの状態にある条件変数を通知に使用される 2 つのメソッドもあります**true**します。
+各クラスには、条件が**true**であることを条件変数に通知するために使用される2つのメソッドもあります。
 
 - `notify_one` は、条件変数を待機しているスレッドの 1 つをウェイクアップします。
 
@@ -67,6 +67,6 @@ enum class cv_status { no_timeout, timeout };
 
 ## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)<br/>
-[condition_variable クラス](../standard-library/condition-variable-class.md)<br/>
-[condition_variable_any クラス](../standard-library/condition-variable-any-class.md)<br/>
+[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)\
+[condition_variable クラス](../standard-library/condition-variable-class.md)\
+[condition_variable_any クラス](../standard-library/condition-variable-any-class.md)

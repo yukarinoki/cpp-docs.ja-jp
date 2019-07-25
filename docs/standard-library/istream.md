@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - istream header
 ms.assetid: efcf24e4-05d1-4719-ab0b-9e7ebe845d89
-ms.openlocfilehash: 2e39c0de5b11c9aa0a4c69f0142841469ef798c7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0ad27bf849e8d4b9188868b9a29bf423b4cafafa
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413282"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458741"
 ---
 # <a name="ltistreamgt"></a>&lt;istream&gt;
 
@@ -29,8 +29,8 @@ iostream の抽出を仲介するテンプレート クラス basic_istream と�
 
 |型名|説明|
 |-|-|
-|[iostream](../standard-library/istream-typedefs.md#iostream)|型`basic_iostream`に特殊化された**char**します。|
-|[istream](../standard-library/istream-typedefs.md#istream)|型`basic_istream`に特殊化された**char**します。|
+|[iostream](../standard-library/istream-typedefs.md#iostream)|Char に`basic_iostream`特化した型。|
+|[istream](../standard-library/istream-typedefs.md#istream)|Char に`basic_istream`特化した型。|
 |[wiostream](../standard-library/istream-typedefs.md#wiostream)|**wchar** に特殊化された型 `basic_iostream`。|
 |[wistream](../standard-library/istream-typedefs.md#wistream)|**wchar** に特殊化された型 `basic_istream`。|
 
@@ -52,10 +52,10 @@ iostream の抽出を仲介するテンプレート クラス basic_istream と�
 |クラス|説明|
 |-|-|
 |[basic_iostream](../standard-library/basic-iostream-class.md)|入力と出力の両方を行うことができるストリーム クラス。|
-|[basic_istream](../standard-library/basic-istream-class.md)|テンプレート クラスは、型の要素を含むストリーム バッファーからエンコードされたオブジェクトと要素の抽出を制御するオブジェクトについて説明します`Elem`とも呼ばれる、 [char_type](../standard-library/basic-ios-class.md#char_type)、その文字特性はクラスによって決まります。`Tr`とも呼ばれる、 [traits_type](../standard-library/basic-ios-class.md#traits_type)します。|
+|[basic_istream](../standard-library/basic-istream-class.md)|このテンプレートクラスは、型`Elem`の要素を含むストリームバッファーからの要素とエンコードされたオブジェクトの抽出を制御するオブジェクトを表します。これは、 [char_type](../standard-library/basic-ios-class.md#char_type)と`Tr`も呼ばれ、その文字特性はクラスによって決定されます。[traits_type](../standard-library/basic-ios-class.md#traits_type)として知られています。|
 
 ## <a name="see-also"></a>関連項目
 
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[iostream プログラミング](../standard-library/iostream-programming.md)<br/>
-[iostreams の規則](../standard-library/iostreams-conventions.md)<br/>
+[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[iostream プログラミング](../standard-library/iostream-programming.md)\
+[iostreams の規則](../standard-library/iostreams-conventions.md)

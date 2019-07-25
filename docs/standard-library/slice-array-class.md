@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - slice_array class
 ms.assetid: a182d5f7-f35c-4e76-86f2-b5ac64ddc846
-ms.openlocfilehash: 9577447b2201c1c9e53192b99abad1979f45d15f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cf33c5f627a88698c84947f9b803edaebccf5566
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412541"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450402"
 ---
 # <a name="slicearray-class"></a>slice_array クラス
 
@@ -42,13 +42,13 @@ public:
 
 ## <a name="remarks"></a>Remarks
 
-このクラスは、**valarray\<Type>** オブジェクトから選択する要素のシーケンスを説明するクラス [slice](../standard-library/slice-class.md) のオブジェクトとともに、クラス [valarray](../standard-library/valarray-class.md)**\<Type>** のオブジェクトへの参照を格納するオブジェクトを表します。
+このクラスは、**valarray\<Type>** オブジェクトから選択する要素のシーケンスを説明するクラス [slice](../standard-library/slice-class.md) のオブジェクトとともに、クラス [valarray](../standard-library/valarray-class.md) **\<Type>** のオブジェクトへの参照を格納するオブジェクトを表します。
 
 テンプレート クラスは、特定の valarray 操作によって間接的に作成されており、プログラムで直接使用することはできません。 スライスの添字演算子によって使用される、内部の補助テンプレート クラス。
 
 `slice_array`\< **Type**> `valarray`< **Type**:: `operator[]` ( `slice`)
 
-構築する、`slice_array<Type>`オブジェクト形式の式を記述するだけ[va&#91;sl&#93;](../standard-library/valarray-class.md#op_at)、スライスの`sl`valarray の`va`します。 クラス slice_array のメンバー関数に対して定義された対応する関数のシグネチャのように動作します`valarray<Type>`選択した要素のシーケンスだけが影響を受けることを除いて、します。 slice_array によって制御されるシーケンスは、スライスのコンストラクターの 3 つのパラメーター (スライス内の最初の要素のインデックス、要素の数、要素間の距離) によって定義されます。 Valarray から切り取られた slice_array`va`によって宣言された**va**[ `slice`(2, 5, 3)] 2、5、8、11、および 14 からのインデックスを持つ要素を選択します`va`します。 プロシージャが有効であるためには、これらのインデックスが有効である必要があります。
+オブジェクトを`slice_array<Type>`構築するには、valarray `va`のスライス`sl`に対して、 [va&#91;sl&#93;](../standard-library/valarray-class.md#op_at)という形式の式を記述する必要があります。 クラス slice_array のメンバー関数は、に対し`valarray<Type>`て定義されている対応する関数シグネチャのように動作します。ただし、選択した要素のシーケンスのみが影響を受けます。 slice_array によって制御されるシーケンスは、スライスのコンストラクターの 3 つのパラメーター (スライス内の最初の要素のインデックス、要素の数、要素間の距離) によって定義されます。 `va` **Va**[ `va`(2, 5, 3)] によって宣言された valarray からの slice_array cut は、インデックス2、5、8、11、および14の要素をから選択します。 `slice` プロシージャが有効であるためには、これらのインデックスが有効である必要があります。
 
 ## <a name="example"></a>例
 
@@ -62,4 +62,4 @@ slice_array の宣言方法や使用方法の例については、[slice::slice]
 
 ## <a name="see-also"></a>関連項目
 
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

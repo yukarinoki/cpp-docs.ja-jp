@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::gamma_distribution [C++], param_type
 - std::gamma_distribution [C++], param_type
 ms.assetid: 2a6798ac-6152-41d7-8ef6-d684d92f1572
-ms.openlocfilehash: 06a7cbc8b054075f881474dbf49ad3bd42f0a9dc
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: ac6a82cc7f342f6a96b5f79f36b23d23a1d27097
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450686"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453935"
 ---
 # <a name="gammadistribution-class"></a>gamma_distribution クラス
 
@@ -70,15 +70,15 @@ public:
 
 ### <a name="parameters"></a>パラメーター
 
-*RealType*<br/>
-浮動小数点の結果の型の既定値**二重**します。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
+*RealType*\
+浮動小数点演算の結果の型。既定値は**double**です。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
 
-*URNG*<br/>
-Uniform random number generator エンジン。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
+*URNG*\
+均一乱数ジェネレーターエンジン。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
 
 ## <a name="remarks"></a>Remarks
 
-テンプレート クラスは、ユーザー指定の浮動小数点の値を生成する分布を表します。 型、または型**二重**がない場合は、ガンマ分布に従って分散します。 次の表は、個々のメンバーに関する記事にリンクしています。
+このテンプレートクラスは、ガンマ分布に従って分布した、ユーザー指定の浮動小数点型の値、または none を指定した場合は**double**型の値を生成する分布を表します。 次の表は、個々のメンバーに関する記事にリンクしています。
 
 ||||
 |-|-|-|
@@ -199,13 +199,13 @@ explicit gamma_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>パラメーター
 
-*alpha*<br/>
+*英数*\
 `alpha` 分布パラメーター。
 
-*beta*<br/>
+*Beta*\
 `beta` 分布パラメーター。
 
-*parm*<br/>
+*parm*\
 分布の作成に使用されるパラメーターの構造体。
 
 ### <a name="remarks"></a>Remarks
@@ -234,13 +234,13 @@ struct param_type {
 
 ### <a name="parameters"></a>パラメーター
 
-*alpha*<br/>
+*英数*\
 `alpha` 分布パラメーター。
 
-*beta*<br/>
+*Beta*\
 `beta` 分布パラメーター。
 
-*right*<br/>
+*そうです*\
 これと比較する `param_type` インスタンス。
 
 ### <a name="remarks"></a>Remarks
@@ -251,4 +251,4 @@ struct param_type {
 
 ## <a name="see-also"></a>関連項目
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

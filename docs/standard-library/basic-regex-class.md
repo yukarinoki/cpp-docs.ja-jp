@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - basic_regex class
 ms.assetid: 8a18c6b4-f22a-4cfd-bc16-b4267867ebc3
-ms.openlocfilehash: e3a38dc186a52c8431442d58bb10e56837396b07
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8df9e927c430f3b94f5857bf18f575e79d6b922a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62414153"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453432"
 ---
 # <a name="basicregex-class"></a>basic_regex クラス
 
@@ -26,21 +26,21 @@ class basic_regex
 
 ## <a name="parameters"></a>パラメーター
 
-*Elem*<br/>
+*Elem*\
 一致させる要素の型。
 
-*RXtraits*<br/>
+*RXtraits*\
 要素の特徴 (traits) クラス。
 
 ## <a name="remarks"></a>Remarks
 
-このテンプレート クラスは、正規表現を保持するオブジェクトを表します。 このテンプレート クラスのオブジェクトは、テンプレート関数に渡すことができます[regex_match](../standard-library/regex-functions.md#regex_match)、 [regex_search](../standard-library/regex-functions.md#regex_search)、および[regex_replace](../standard-library/regex-functions.md#regex_replace)、適切な文字列引数と共に正規表現に一致するテキストを検索します。 型定義は、このテンプレート クラスの 2 つの特殊化がある[regex](../standard-library/regex-typedefs.md#regex)型の要素に対して**char**と[wregex](../standard-library/regex-typedefs.md#wregex)型の要素に対して**wchar_t**します。
+このテンプレート クラスは、正規表現を保持するオブジェクトを表します。 このテンプレートクラスのオブジェクトは、正規表現に一致するテキストを検索するために、適切なテキスト文字列引数と共にテンプレート関数[regex_match](../standard-library/regex-functions.md#regex_match)、 [regex_search](../standard-library/regex-functions.md#regex_search)、および[regex_replace](../standard-library/regex-functions.md#regex_replace)に渡すことができます。 このテンプレートクラスには、 **char**型の要素の型定義[regex](../standard-library/regex-typedefs.md#regex)と**wchar_t**型の要素の[wregex](../standard-library/regex-typedefs.md#wregex)という2つの特殊化があります。
 
-テンプレート引数*RXtraits*テンプレート クラスをサポートする正規表現の構文のさまざまな重要なプロパティについて説明します。 こうした正規表現の特性を指定するクラスは、テンプレート クラス [regex_traits クラス](../standard-library/regex-traits-class.md)のオブジェクトと同じ外部インターフェイスを持っている必要があります。
+テンプレート引数*RXtraits*は、テンプレートクラスがサポートする正規表現の構文のさまざまな重要なプロパティについて説明します。 こうした正規表現の特性を指定するクラスは、テンプレート クラス [regex_traits クラス](../standard-library/regex-traits-class.md)のオブジェクトと同じ外部インターフェイスを持っている必要があります。
 
 一部の関数は、正規表現を定義するオペランド シーケンスを受け取ります。 その場合、オペランド シーケンスは次のような方法で指定できます。
 
-`ptr` -null 終端シーケンスが (C 文字列などの*Elem*型の**char**) から始まる`ptr`(する必要がありますできません null ポインター)、終端の要素が値は`value_type()`オペランド シーケンスに含まれていません
+`ptr`: `ptr` (null ポインターではない) から始まる、null で終わるシーケンス ( **char**型の*Elem*の場合は C 文字列など)。終端の要素は値`value_type()`であり、オペランドシーケンスの一部ではありません
 
 `ptr`、`count` : `count` (null ポインター以外) で始まる `ptr` 個の要素のシーケンスとして。
 
@@ -50,23 +50,23 @@ class basic_regex
 
 `right` : `basic_regex` オブジェクト `right` として。
 
-これらのメンバー関数を引数として受け取ります`flags`で説明されているものに加えて正規表現の解釈のさまざまなオプションを指定する、 *RXtraits*型。
+これらのメンバー関数は、 `flags` *RXtraits*型で記述されているものに加えて、正規表現の解釈に関するさまざまなオプションを指定する引数も受け取ります。
 
 ### <a name="members"></a>メンバー
 
 |メンバー|既定値|
 |-|-|
-|パブリックの静的 const flag_type icase|regex_constants::icase|
-|パブリックの静的 const flag_type nosubs|regex_constants::nosubs|
-|パブリックの静的 const flag_type を最適化します。|regex_constants::optimize|
-|パブリックの静的 const flag_type collate します。|regex_constants::collate|
-|パブリック static const flag_type ECMAScript|regex_constants::ECMAScript|
-|パブリック static const flag_type 基本|regex_constants::basic|
-|パブリック static const flag_type 拡張|regex_constants::extended|
-|パブリックの静的 const flag_type awk|regex_constants::awk|
-|public static const flag_type grep|regex_constants::grep|
-|public static const flag_type egrep|regex_constants::egrep|
-|プライベート RXtraits 特徴||
+|public static const flag_type icase|regex_constants:: icase|
+|public static const flag_type nosubs|regex_constants:: nosubs|
+|public static const flag_type optimize|regex_constants:: optimize|
+|public static const flag_type collate|regex_constants:: collate|
+|public static const flag_type ECMAScript|regex_constants:: ECMAScript|
+|public static const flag_type basic|regex_constants:: basic|
+|public static const flag_type extended|regex_constants:: extended|
+|public static const flag_type awk|regex_constants:: awk|
+|public static const flag_type grep|regex_constants:: grep|
+|public static const flag_type egrep|regex_constants:: egrep|
+|プライベート RXtraits の特徴||
 
 ### <a name="constructors"></a>コンストラクター
 
@@ -230,37 +230,37 @@ basic_regex& assign(
 
 ### <a name="parameters"></a>パラメーター
 
-*STtraits*<br/>
+*STtraits*\
 文字列ソースの特徴 (traits) クラス。
 
-*STalloc*<br/>
+*STalloc*\
 文字列ソースのアロケーター クラス。
 
-*InIt*<br/>
+*初期化*\
 範囲ソースの入力反復子の型。
 
-*right*<br/>
+*そうです*\
 コピーする Regex ソース。
 
-*ptr*<br/>
+*ポインター*\
 コピーするシーケンスの先頭を指すポインター。
 
-*flags*<br/>
+*示す*\
 コピー中に追加する構文オプション フラグ。
 
-*len/TD>*<br/>
+*len/TD >* \
 コピーするシーケンスの長さ。
 
-*str*<br/>
+*引数*\
 コピーする文字列。
 
-*first*<br/>
+*まずは*\
 コピーするシーケンスの最初。
 
-*last*<br/>
+*前の*\
 コピーするシーケンスの最後。
 
-*IList*<br/>
+*IList*\
 コピーする initializer_list。
 
 ### <a name="remarks"></a>Remarks
@@ -304,37 +304,37 @@ explicit basic_regex(
 
 ### <a name="parameters"></a>パラメーター
 
-*STtraits*<br/>
+*STtraits*\
 文字列ソースの特徴 (traits) クラス。
 
-*STalloc*<br/>
+*STalloc*\
 文字列ソースのアロケーター クラス。
 
-*InIt*<br/>
+*初期化*\
 範囲ソースの入力反復子の型。
 
-*right*<br/>
+*そうです*\
 コピーする Regex ソース。
 
-*ptr*<br/>
+*ポインター*\
 コピーするシーケンスの先頭を指すポインター。
 
-*flags*<br/>
+*示す*\
 コピー中に追加する構文オプション フラグ。
 
-*len/TD>*<br/>
+*len/TD >* \
 コピーするシーケンスの長さ。
 
-*str*<br/>
+*引数*\
 コピーする文字列。
 
-*first*<br/>
+*まずは*\
 コピーするシーケンスの最初。
 
-*last*<br/>
+*前の*\
 コピーするシーケンスの最後。
 
-*IList*<br/>
+*IList*\
 コピーする initializer_list。
 
 ### <a name="remarks"></a>Remarks
@@ -343,7 +343,7 @@ explicit basic_regex(
 
 1 つ目のコンストラクターは、空の `basic_regex` オブジェクトを構築します。 それ以外のコンストラクターは、オペランド シーケンスで記述された正規表現を保持する `basic_regex` オブジェクトを構築します。
 
-空`basic_regex`オブジェクトがどの文字シーケンスに渡されると一致しない[regex_match](../standard-library/regex-functions.md#regex_match)、 [regex_search](../standard-library/regex-functions.md#regex_search)、または[regex_replace](../standard-library/regex-functions.md#regex_replace)します。
+空`basic_regex`のオブジェクトは、 [regex_match](../standard-library/regex-functions.md#regex_match)、 [regex_search](../standard-library/regex-functions.md#regex_search)、または[regex_replace](../standard-library/regex-functions.md#regex_replace)に渡されると、どの文字シーケンスとも一致しません。
 
 ## <a name="flag_type"></a>  basic_regex::flag_type
 
@@ -391,7 +391,7 @@ locale_type imbue(locale_type loc);
 
 ### <a name="parameters"></a>パラメーター
 
-*loc*<br/>
+*loc*\
 格納するロケール オブジェクト。
 
 ### <a name="remarks"></a>Remarks
@@ -437,16 +437,16 @@ basic_regex& operator=(const basic_string<Elem, STtraits, STalloc>& str);
 
 ### <a name="parameters"></a>パラメーター
 
-*STtraits*<br/>
+*STtraits*\
 文字列ソースの特徴 (traits) クラス。
 
-*STalloc*<br/>
+*STalloc*\
 文字列ソースのアロケーター クラス。
 
-*right*<br/>
+*そうです*\
 コピーする Regex ソース。
 
-*str*<br/>
+*引数*\
 コピーする文字列。
 
 ### <a name="remarks"></a>Remarks
@@ -463,12 +463,12 @@ void swap(basic_regex& right) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*right*<br/>
+*そうです*\
 交換する正規表現オブジェクト。
 
 ### <a name="remarks"></a>Remarks
 
-メンバー関数は、交換の間では、正規表現`*this`と*右*します。 一定時間に実行し、例外をスローしません。
+このメンバー関数は *、との*間`*this`で正規表現を交換します。 一定時間に実行し、例外をスローしません。
 
 ## <a name="value_type"></a>  basic_regex::value_type
 
@@ -480,14 +480,14 @@ typedef Elem value_type;
 
 ### <a name="remarks"></a>Remarks
 
-型はテンプレート パラメーターのシノニム*Elem*します。
+この型は、テンプレートパラメーター *Elem*のシノニムです。
 
 ## <a name="see-also"></a>関連項目
 
-[\<regex>](../standard-library/regex.md)<br/>
-[regex_match](../standard-library/regex-functions.md#regex_match)<br/>
-[regex_search](../standard-library/regex-functions.md#regex_search)<br/>
-[regex_replace](../standard-library/regex-functions.md#regex_replace)<br/>
-[regex](../standard-library/regex-typedefs.md#regex)<br/>
-[wregex](../standard-library/regex-typedefs.md#wregex)<br/>
-[regex_traits クラス](../standard-library/regex-traits-class.md)<br/>
+[\<regex>](../standard-library/regex.md)\
+[regex_match](../standard-library/regex-functions.md#regex_match)\
+[regex_search](../standard-library/regex-functions.md#regex_search)\
+[regex_replace](../standard-library/regex-functions.md#regex_replace)\
+[regex](../standard-library/regex-typedefs.md#regex)\
+[wregex](../standard-library/regex-typedefs.md#wregex)\
+[regex_traits クラス](../standard-library/regex-traits-class.md)

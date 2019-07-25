@@ -9,12 +9,12 @@ f1_keywords:
 - filesystem/std::experimental::filesystem::directory_iterator
 - <filesystem>
 ms.assetid: 5005753b-46fa-43e1-8d4e-1b38617d3cfd
-ms.openlocfilehash: a44fc3c6c6a37c20e1e1c294929ae3cb15cece58
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 6f97ad75dcf3f01406f305b713b9d14cbe527c52
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240693"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457024"
 ---
 # <a name="ltfilesystemgt"></a>&lt;filesystem&gt;
 
@@ -29,9 +29,9 @@ using namespace std::experimental::filesystem::v1;
 ```
 
 > [!IMPORTANT]
-> Visual Studio 2017 のリリース以降、 \<filesystem > ヘッダーが、まだ C++ 標準。 C++Visual Studio 2017 (MSVC v141) の実装で、最終ドラフト標準はで見つかった[ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf)します。
+> Visual Studio 2017 のリリース時点で\<は、ファイルシステム > ヘッダーはまだ標準でC++はありませんでした。 C++Visual Studio 2017 (MSVC v141) では、 [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf)に含まれる最終的なドラフト標準が実装されています。
 
-このヘッダーは、ホスト オペレーティング システムの 2 つの広範なクラスのいずれかのファイル システムをサポートしています。Microsoft Windows と Posix します。
+このヘッダーは、次の2つの広範なホストオペレーティングシステムのいずれかのファイルシステムをサポートします。Microsoft Windows および Posix。
 
 ほとんどの機能が両方のオペレーティング システムに共通していますが、このドキュメントではそれらの相違点について説明します。 例えば:
 
@@ -129,4 +129,4 @@ using namespace std::experimental::filesystem::v1;
 
 ## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)<br/>
+[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)

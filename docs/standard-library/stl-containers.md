@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C++ Standard Library, template class containers
 - containers, C++ Standard Library
 ms.assetid: 8e915ca1-19ba-4f0d-93c8-e2c3bfd638eb
-ms.openlocfilehash: a6f4da35468143e6d7c3dda684ed93f33e29b21d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6077ff76e04e6f078946eed0856723e2a9998f58
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412411"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449596"
 ---
 # <a name="c-standard-library-containers"></a>C++ 標準ライブラリのコンテナー
 
@@ -166,11 +166,11 @@ map、multimap、set、multiset 内の次のメンバー関数は、異種ルッ
 
 ### <a name="comparing-dissimilar-containers-c14"></a>異なるコンテナーの比較 (C++ 14)
 
-異なるコンテナー型や要素型を比較のいずれかを使用して c++ 14 以降では、 `std::equal`、 `std::mismatch`、または`std::is_permutation`関数オーバー ロードを 2 つの完全な範囲です。 これらのオーバーロードを使用すると、長さが異なるコンテナーを比較できます。 これらのオーバーロードは、ユーザー エラーの影響を受けにくく、長さが異なるコンテナーを比較しているときに一定の時間で false を返すように最適化されています。 そのため、(1) 使用しない明確な理由があるか (2) [std::list](../standard-library/list-class.md) コンテナーを使用している (2 つの範囲の最適化を行うメリットがありません) のでない限り、これらのオーバーロードを使用することをお勧めします。
+C++ 14 以降では、2つの完全な範囲を受け取る`std::equal`、 `std::mismatch`、 `std::is_permutation`のいずれかの関数オーバーロードを使用して、異なるコンテナーや要素の種類を比較できます。 これらのオーバーロードを使用すると、長さが異なるコンテナーを比較できます。 これらのオーバーロードは、ユーザー エラーの影響を受けにくく、長さが異なるコンテナーを比較しているときに一定の時間で false を返すように最適化されています。 そのため、(1) 使用しない明確な理由があるか (2) [std::list](../standard-library/list-class.md) コンテナーを使用している (2 つの範囲の最適化を行うメリットがありません) のでない限り、これらのオーバーロードを使用することをお勧めします。
 
 ## <a name="see-also"></a>関連項目
 
-[コンテナー](../cpp/containers-modern-cpp.md)<br/>
-[C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)<br/>
-[\<sample container>](../standard-library/sample-container.md)<br/>
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[コンテナー](../cpp/containers-modern-cpp.md)\
+[C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)\
+[\<sample container>](../standard-library/sample-container.md)\
+[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

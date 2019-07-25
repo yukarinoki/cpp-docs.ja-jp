@@ -14,12 +14,12 @@ helpviewer_keywords:
 - build macro
 - user-defined macros
 ms.assetid: 13ffe3ea-1bc3-4bee-be5e-053a8a99cce4
-ms.openlocfilehash: 164a8e8aff5428be36c5d921bc8078ab352f51c0
-ms.sourcegitcommit: 7f5b29e24e1be9b5985044a030977485fea0b50c
+ms.openlocfilehash: 9f0dbe31325ec894add3d2577eb977a0c6dd7c41
+ms.sourcegitcommit: ce3393846c86e7905ff0c86e4cd6610476809585
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68299738"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68492133"
 ---
 # <a name="c-project-property-page-reference"></a>C++プロジェクトプロパティページのリファレンス
 
@@ -47,21 +47,7 @@ Linux プロジェクトのプロパティページについては、「 [linux 
 
 [[全般] プロパティ ページ (ファイル)](general-property-page-file.md)
 
-
-
-
-
 [[HLSL] プロパティ ページ](hlsl-property-pages.md)
-
-[[HLSL] プロパティ ページ: 詳細](hlsl-property-pages-advanced.md)
-
-[[HLSL] プロパティ ページ: 全般](hlsl-property-pages-general.md)
-
-[[HLSL] プロパティ ページ: 出力ファイル](hlsl-property-pages-output-files.md)
-
-
-
-
 
 [[リンカー] プロパティ ページ](linker-property-pages.md)
 
@@ -71,17 +57,9 @@ Linux プロジェクトのプロパティページについては、「 [linux 
 
 [[MIDL] プロパティ ページ](midl-property-pages.md)
 
-[[MIDL] プロパティ ページ: 詳細](midl-property-pages-advanced.md)
-
-[[MIDL] プロパティ ページ: 全般](midl-property-pages-general.md)
-
-[[MIDL] プロパティ ページ: 出力](midl-property-pages-output.md)
-
 [NMake プロパティ ページ](nmake-property-page.md)
 
 [[リソース] プロパティ ページ](resources-property-pages.md)
-
-
 
 [[Web 参照] プロパティ ページ](web-references-property-page.md)
 

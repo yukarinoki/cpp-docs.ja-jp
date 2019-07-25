@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::normal_distribution [C++], param_type
 - std::normal_distribution [C++], param_type
 ms.assetid: bf92cdbd-bc72-4d4a-b588-173d748f0d7d
-ms.openlocfilehash: df30ddb910cf2fa266a603a3ab285379ea45ec7c
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: daf9ab6b91eb4af19fdd563937b626515c4bc99b
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66449858"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457658"
 ---
 # <a name="normaldistribution-class"></a>normal_distribution クラス
 
@@ -71,19 +71,19 @@ public:
 
 ### <a name="parameters"></a>パラメーター
 
-*RealType*<br/>
-浮動小数点の結果の型の既定値**二重**します。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
+*RealType*\
+浮動小数点演算の結果の型。既定値は**double**です。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
 
 ## <a name="remarks"></a>Remarks
 
-このテンプレート クラスは、ユーザー指定の整数値を生成する分布を表します型、または型**二重**がない場合は、正規分布に従って分布します。 次の表は、個々のメンバーに関する記事にリンクしています。
+このテンプレートクラスは、正規分布に従って分布した、ユーザー指定の整数型の値、または none を指定した場合は**double**型の値を生成する分布を表します。 次の表は、個々のメンバーに関する記事にリンクしています。
 
 ||||
 |-|-|-|
 |[normal_distribution](#normal_distribution)|`normal_distribution::mean`|`normal_distribution::param`|
 |`normal_distribution::operator()`|`normal_distribution::stddev`|[param_type](#param_type)|
 
-プロパティ関数`mean()`と`stddev()`格納されている分布パラメーターの値を返す*意味*と*stddev*それぞれします。
+プロパティ関数`mean()`および`stddev()`は、格納されている分布パラメーターの*平均*と*stddev*の値をそれぞれ返します。
 
 プロパティ メンバー関数 `param()` は、格納されている分布パラメーター パッケージ `param_type` を設定または返します。
 
@@ -198,13 +198,13 @@ explicit normal_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>パラメーター
 
-*mean*<br/>
+*?* \
 `mean` 分布パラメーター。
 
-*stddev*<br/>
+*stddev*\
 `stddev` 分布パラメーター。
 
-*parm*<br/>
+*parm*\
 分布の作成に使用されるパラメーターの構造体。
 
 ### <a name="remarks"></a>Remarks
@@ -233,13 +233,13 @@ struct param_type {
 
 ### <a name="parameters"></a>パラメーター
 
-*mean*<br/>
+*?* \
 `mean` 分布パラメーター。
 
-*stddev*<br/>
+*stddev*\
 `stddev` 分布パラメーター。
 
-*right*<br/>
+*そうです*\
 比較に使用される `param_type` 構造体。
 
 ### <a name="remarks"></a>Remarks
@@ -250,4 +250,4 @@ struct param_type {
 
 ## <a name="see-also"></a>関連項目
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

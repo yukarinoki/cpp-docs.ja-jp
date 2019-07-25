@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: 18be1e52-57b9-489a-8a9b-f58894f0aaad
 helpviewer_keywords:
 - std::chrono [C++], time_point
-ms.openlocfilehash: 99477f57dc44d63f663a6db38250cc0620151ec9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4511c7b2d8629f1a052137c7997daf5913c976ab
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411995"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459987"
 ---
 # <a name="timepoint-class"></a>time_point クラス
 
@@ -101,7 +101,7 @@ time_point& operator+=(const duration& Dur);
 
 ### <a name="parameters"></a>パラメーター
 
-*期間*<br/>
+*期間*\
 `duration` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -118,7 +118,7 @@ time_point& operator-=(const duration& Dur);
 
 ### <a name="parameters"></a>パラメーター
 
-*期間*<br/>
+*期間*\
 `duration` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -140,17 +140,17 @@ constexpr time_point(const time_point<clock, Duration2>& Tp);
 
 ### <a name="parameters"></a>パラメーター
 
-*期間*<br/>
+*期間*\
 [duration](../standard-library/duration-class.md) オブジェクト。
 
-*Tp*<br/>
+*シン*\
 `time_point` オブジェクト。
 
 ### <a name="remarks"></a>Remarks
 
 最初のコンストラクターは、格納されている `duration` 値が [duration::zero](../standard-library/duration-class.md#zero) と等しいオブジェクトを構築します。
 
-2 番目のコンス トラクターは、格納された期間の値と等しいオブジェクトを構築します。*期間*します。 しない限り、`is_convertible<Duration2, duration>`は true を保持、2 番目のコンス トラクターはオーバー ロードの解決に関与しません。 詳細については、「[<type_traits>](../standard-library/type-traits.md)」を参照してください。
+2番目のコンストラクターは、格納された duration 値が*期間*に等しいオブジェクトを構築します。 が`is_convertible<Duration2, duration>` true を保持しない限り、2番目のコンストラクターはオーバーロードの解決に関与しません。 詳細については、「[<type_traits>](../standard-library/type-traits.md)」を参照してください。
 
 3 番目のコンストラクターは、`duration` を使用してその `Tp.time_since_epoch()` 値を初期化します。
 
@@ -164,5 +164,5 @@ constexpr duration time_since_epoch() const;
 
 ## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<chrono>](../standard-library/chrono.md)<br/>
+[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)\
+[\<chrono>](../standard-library/chrono.md)

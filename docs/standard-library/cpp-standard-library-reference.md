@@ -7,12 +7,12 @@ helpviewer_keywords:
 - template libraries
 - libraries, Standard C++
 ms.assetid: a37d3ba3-58af-47c7-9ee2-441ccd7b77ee
-ms.openlocfilehash: ea8bae08def17093a2e663bb21dfe617ae851651
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 60bfed322985b1345f4b3842a21f836953813657
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210750"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452430"
 ---
 # <a name="c-standard-library-reference"></a>C++ 標準ライブラリ リファレンス
 
@@ -22,11 +22,11 @@ Visual C++ ランタイム ライブラリの詳細については、「[CRT ラ
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-[C++ 標準ライブラリの概要](../standard-library/cpp-standard-library-overview.md)<br/>
+[C++ 標準ライブラリの概要](../standard-library/cpp-standard-library-overview.md)\
 C++ 標準ライブラリの Microsoft の実装の概要を説明します。
 
-[iostream プログラミング](../standard-library/iostream-programming.md)<br/>
+[iostream プログラミング](../standard-library/iostream-programming.md)\
 iostream プログラミングの概要を説明します。
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)<br/>
+[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)\
 C++ 標準ライブラリのヘッダー ファイルに関するリファレンス トピックへのリンクを示します (コード例を含む)。

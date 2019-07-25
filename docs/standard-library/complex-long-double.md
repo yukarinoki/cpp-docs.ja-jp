@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - complex<long double> function
 ms.assetid: 37591991-b385-46e9-b727-d534dbc10432
-ms.openlocfilehash: 19d4569523879911209bf0c05e762eba2c9852a1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 280fb4c15219b11d2325ff37a296e133810bf2b5
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389178"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449476"
 ---
 # <a name="complexltlong-doublegt"></a>complex&lt;long double&gt;
 
-この明示的に特殊化されたテンプレート クラスは、両方の種類のオブジェクトの順序付きペアを格納するオブジェクトをについて説明します**long double**、最初の複素数の値と、2 つ目の実数部を表す虚数部を表します。
+この明示的に特殊化されたテンプレートクラスは、順序付けされたオブジェクトのペアを格納するオブジェクトを記述します。 **long double**型の場合は、最初のオブジェクトが複素数の実数部、2番目のオブジェクトが虚数部を表します。
 
 ## <a name="syntax"></a>構文
 
@@ -38,26 +38,26 @@ complex(
 
 ### <a name="parameters"></a>パラメーター
 
-*_RealVal*<br/>
+*Realval (_d)* \
 構築される複素数の実数部の **long double** 型の値。
 
-*_ImagVal*<br/>
-型の値**long double**構築される複素数の虚数部。
+*Imagval (_c)* \
+構築される複素数の虚数部の**long double**型の値。
 
-*complexNum*<br/>
-型の複素数**二重**または型の**float**が実数部と虚数部の部分は、型の複素数の初期化に使用される**long double**構築されます。
+*complexNum*\
+**Double**型または**float**型の複素数。実数部と虚数部が、構築される**long double**型の複素数を初期化するために使用されます。
 
 ## <a name="return-value"></a>戻り値
 
-型の複素数**long double**します。
+**Long double**型の複素数。
 
 ## <a name="remarks"></a>Remarks
 
-テンプレート クラスの明示的な特殊化`complex`型の complex クラスに対する**long double**定義コンス トラクターでのみ、テンプレート クラスとは異なります。 変換**long double**に**float**は暗黙的に許可されてからの変換が、**二重**に**long double**が必要ですある**明示的な**します。 **explicit** を使用すると、割り当て構文を使用した型変換による開始は禁止されます。
+テンプレートクラス`complex`を**long double**型の複合クラスに明示的に特殊化することは、テンプレートクラスが定義するコンストラクター内でのみ、テンプレートクラスとは異なります。 **Long double**から**float**への変換は暗黙的に行うことができますが、 **double**から**long double**への変換は**明示的**に行う必要があります。 **explicit** を使用すると、割り当て構文を使用した型変換による開始は禁止されます。
 
-テンプレート クラスの詳細については`complex`、そのメンバーを参照してくださいと[complex クラス](../standard-library/complex-class.md)します。
+テンプレートクラス`complex`とそのメンバーの詳細については、「[複合クラス](../standard-library/complex-class.md)」を参照してください。
 
-**Microsoft 固有の仕様**:**Long double**と**二重**型は、同じの表現が、別の型。 詳細については、次を参照してください。[基本的な型](../cpp/fundamental-types-cpp.md)します。
+**Microsoft 固有の仕様**:**Long double**型と**double**型の表現は同じですが、個別の型です。 詳細については、「[基本型](../cpp/fundamental-types-cpp.md)」を参照してください。
 
 ## <a name="example"></a>例
 
@@ -123,5 +123,5 @@ arg( c3 ) = 0.927295 radians, which is 53.1301 degrees.
 
 ## <a name="see-also"></a>関連項目
 
-[complex クラス](../standard-library/complex-class.md)<br/>
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[complex クラス](../standard-library/complex-class.md)\
+[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

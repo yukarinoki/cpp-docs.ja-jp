@@ -8,16 +8,16 @@ helpviewer_keywords:
 - Safe Libraries, C++ Standard Library
 - Safe C++ Standard Library
 ms.assetid: 3993340f-1f29-4d81-b3f5-52a52bc8e148
-ms.openlocfilehash: 0c8f2de77255015254eabe018399f913b4582b7c
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 782a3610909de01e1a1991dee3a74aee9a131da3
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220467"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454557"
 ---
 # <a name="safe-libraries-c-standard-library"></a>安全なライブラリ:C++ 標準ライブラリ
 
-Microsoft に付属しているライブラリにいくつかの機能強化が加えC++など、C++よりセキュリティの設定の標準ライブラリ。
+Microsoft C++に付属しているライブラリ ( C++標準ライブラリを含む) には、セキュリティを強化するために、いくつかの機能強化が行われています。
 
 C++ 標準ライブラリに含まれる一部のメソッドは、バッファー オーバーランが発生する可能性のあるものや、コードに欠陥があることによる潜在的な危険性が確認されています。 こうしたメソッドの使用はお勧めできません。また、それらに置き換わる、新しい安全性の高いメソッドが作成されています。 これに該当する新しいメソッドのすべてには、末尾に `_s`が付いています。
 
@@ -46,4 +46,4 @@ C++ 標準ライブラリに含まれる一部のメソッドは、バッファ�
 
 ## <a name="see-also"></a>関連項目
 
-[C++ 標準ライブラリの概要](../standard-library/cpp-standard-library-overview.md)<br/>
+[C++ 標準ライブラリの概要](../standard-library/cpp-standard-library-overview.md)

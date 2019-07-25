@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::poisson_distribution [C++], param_type
 - std::poisson_distribution [C++], param_type
 ms.assetid: 09614281-349a-45f7-8e95-c0196be0a937
-ms.openlocfilehash: 2653af7b0582995f8a2643486585fca6a5edc395
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 19fab66c3ffca428114e4586c4ad6d6de3fdbf83
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450161"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458462"
 ---
 # <a name="poissondistribution-class"></a>poisson_distribution クラス
 
@@ -67,8 +67,8 @@ public:
 
 ### <a name="parameters"></a>パラメーター
 
-*IntType*<br/>
-整数の結果の型の既定値**int**します。使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
+*IntType*\
+整数の結果型、既定値は**int**です。使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
 
 ## <a name="remarks"></a>Remarks
 
@@ -207,10 +207,10 @@ explicit binomial_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>パラメーター
 
-*mean*<br/>
+*?* \
 `mean` 分布パラメーター。
 
-*parm*<br/>
+*parm*\
 分布の作成に使用されるパラメーターの構造体。
 
 ### <a name="remarks"></a>Remarks
@@ -248,4 +248,4 @@ struct param_type {
 
 ## <a name="see-also"></a>関連項目
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

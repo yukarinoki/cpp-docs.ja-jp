@@ -11,12 +11,12 @@ f1_keywords:
 - filesystem/std::filesystem::perms
 - filesystem/std::experimental::filesystem::perms
 ms.assetid: 0096c046-d101-464c-8259-b878a48280b0
-ms.openlocfilehash: 9bf5f0231fbc5b694c1f4ae507feb82b0d19d600
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: dfbcf65462f0bb7bc6ca44f43507efa7b753e7bc
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240757"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457705"
 ---
 # <a name="ltfilesystemgt-enumerations"></a>&lt;filesystem&gt; 列挙体
 
@@ -86,7 +86,7 @@ enum class directory_options {
 
 ## <a name="file_type"></a>  file_type
 
-ファイルの種類の列挙型。 Regular、directory、not_found、および不明な値を指定できます。
+ファイルの種類の列挙型。 サポートされる値は、regular、directory、not_found、および unknown です。
 
 ### <a name="syntax"></a>構文
 
@@ -120,9 +120,9 @@ enum class file_type {
 |`socket`|7|UNIX ベースのシステム上のソケットを表します (サポートされていません)。|
 |`unknown`|8|状態が確認できないファイルを表します。|
 
-## <a name="perm_options"></a>  perm_options
+## <a name="perm_options"></a>perm_options
 
-値が含まれる`replace`、 `add`、 `remove`、および`nofollow`します。
+には`replace`、 `add`、 `remove`、および`nofollow`の値が含まれます。
 
 ```cpp
 enum class perm_options;
@@ -163,5 +163,5 @@ enum class perms {// names for permissions
 
 ## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<filesystem>](../standard-library/filesystem.md)<br/>
+[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)\
+[\<filesystem>](../standard-library/filesystem.md)

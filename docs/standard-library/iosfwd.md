@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - iosfwd header
 ms.assetid: 964442eb-17f1-43ef-a0e0-c5bb77f9c187
-ms.openlocfilehash: 7b21e6e92c1fa1d01826ad8f6805d9a52b0fde42
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e66c3e869f01775512419c877cd52c7f0e0fa2c4
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385181"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449085"
 ---
 # <a name="ltiosfwdgt"></a>&lt;iosfwd&gt;
 
@@ -128,7 +128,7 @@ class basic_fstream;
 
 ## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)<br/>
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[iostream プログラミング](../standard-library/iostream-programming.md)<br/>
-[iostreams の規則](../standard-library/iostreams-conventions.md)<br/>
+[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)\
+[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[iostream プログラミング](../standard-library/iostream-programming.md)\
+[iostreams の規則](../standard-library/iostreams-conventions.md)

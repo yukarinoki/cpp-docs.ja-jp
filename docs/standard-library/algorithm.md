@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C++ Standard Library, algorithms
 - <algorithm> header
 ms.assetid: 19f97711-7a67-4a65-8fd1-9a2bd3ca327d
-ms.openlocfilehash: 36dfca8418cbbabd7dcfb30b2cece483406a5667
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 0b9b259d49808002442492ce2912b4f9aa96d2b8
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245956"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456503"
 ---
 # <a name="ltalgorithmgt"></a>&lt;algorithm&gt;
 
@@ -26,7 +26,7 @@ ms.locfileid: "68245956"
 ```
 
 > [!NOTE]
-> \<アルゴリズム > ライブラリで使用することも、`#include <initializer_list>`ステートメント。
+> アルゴリズム\<> ライブラリは、 `#include <initializer_list>`ステートメントも使用します。
 
 ## <a name="remarks"></a>Remarks
 
@@ -40,7 +40,7 @@ C++ 標準ライブラリ アルゴリズムでは、各 C++ 標準ライブラ�
 
 - _copy サフィックスは、アルゴリズムが要素の値を操作するだけではなく、変更された値をターゲット範囲にコピーすることを示します。 `reverse` アルゴリズムは、範囲内の要素の順序を反転し、`reverse_copy` アルゴリズムは、さらに結果をターゲット範囲にコピーします。
 
-C++ 標準ライブラリ アルゴリズムは、通常、その目的や要件に関する事項を示すグループに分類されます。 これには、要素の値を変更する変更アルゴリズムと、要素の値を変更しない非変更アルゴリズムが含まれます。 変換アルゴリズムは、要素の順序を変更しますが、要素の値は変更しません。 削除アルゴリズムは、範囲または範囲のコピーから要素を除去できます。 並べ替えアルゴリズムでは、さまざまな方法で範囲内の要素の順序を変更し、並べ替えられた範囲アルゴリズムは、特定の方法で並べ替えられた要素の範囲に対してのみ機能します。
+C++ 標準ライブラリ アルゴリズムは、通常、その目的や要件に関する事項を示すグループに分類されます。 これには、要素の値を変更する変更アルゴリズムと、要素の値を変更しない非変更アルゴリズムが含まれます。 変換アルゴリズムは、要素の順序を変更しますが、要素の値は変更しません。 削除アルゴリズムは、範囲または範囲のコピーから要素を除去できます。 並べ替えアルゴリズムは、さまざまな方法で範囲内の要素の順序を変更し、並べ替えられた範囲アルゴリズムは、特定の方法で要素が並べ替えられた範囲に対してのみ機能します。
 
 数値処理のために提供される C++ 標準ライブラリ数値アルゴリズムには独自のヘッダー ファイル [\<numeric>](../standard-library/numeric.md) があり、関数オブジェクトとアダプターはヘッダー [\<functional>](../standard-library/functional.md) で定義されます。ブール値を返す関数オブジェクトは述語と呼ばれます。 既定の二項述語は比較 `operator<` です。 通常、順序を並べ替える要素は、小なり比較だけを実行できる必要があります。これにより、2 つの要素が指定されたときに、それらの要素が等しいか (どちらか一方が小さくはない)、または一方が他方より小さいかを判断できます。 この結果、等価でない複数の要素間で順序が付けられます。
 
@@ -49,13 +49,13 @@ C++ 標準ライブラリ アルゴリズムは、通常、その目的や要件
 |||
 |-|-|
 |[adjacent_find](../standard-library/algorithm-functions.md#adjacent_find)|等しいか、または指定された条件を満たす 2 個の隣接する要素を検索します。|
-|[all_of](../standard-library/algorithm-functions.md#all_of)|返します**true**条件が特定の範囲内の各要素に存在する場合。|
-|[any_of](../standard-library/algorithm-functions.md#any_of)|返します**true**条件が指定された要素の範囲に 1 回以上存在する場合。|
+|[all_of](../standard-library/algorithm-functions.md#all_of)|指定された範囲内の各要素に条件が存在する場合に**true**を返します。|
+|[any_of](../standard-library/algorithm-functions.md#any_of)|指定された要素の範囲内に条件が1回以上存在する場合に**true**を返します。|
 |[binary_search](../standard-library/algorithm-functions.md#binary_search)|並べ替えられた範囲に、指定された値と等しい要素が存在するか、または二項述語で指定された意味で、指定された値と等価の要素が存在するかどうかをテストします。|
 |[clamp](../standard-library/algorithm-functions.md#clamp)||
 |[copy](../standard-library/algorithm-functions.md#copy)|要素のソース シーケンス全体を繰り返し、順方向の新しい位置を割り当てて、ソース範囲内からターゲットの範囲に要素の値を割り当てます。|
 |[copy_backward](../standard-library/algorithm-functions.md#copy_backward)|要素のソース シーケンス全体を繰り返し、逆方向の新しい位置を割り当てて、ソース範囲内からターゲットの範囲に要素の値を割り当てます。|
-|[copy_if](../standard-library/algorithm-functions.md#copy_if)|テストする特定の範囲内のすべての要素をコピー **true**指定の条件|
+|[copy_if](../standard-library/algorithm-functions.md#copy_if)|指定した範囲のすべての要素をコピーします。指定された条件を**満たす場合は true**をテストします。|
 |[copy_n](../standard-library/algorithm-functions.md#copy_n)|指定された数の要素をコピーします。|
 |[count](../standard-library/algorithm-functions.md#count)|範囲内で値が指定された値と一致する要素の数を返します。|
 |[count_if](../standard-library/algorithm-functions.md#count_if)|範囲内で値が指定された条件と一致する要素の数を返します。|
@@ -74,12 +74,12 @@ C++ 標準ライブラリ アルゴリズムは、通常、その目的や要件
 |[generate_n](../standard-library/algorithm-functions.md#generate_n)|範囲内の指定された数の要素に関数オブジェクトによって生成される値を割り当て、最後に割り当てられた値を 1 つ超えた位置を返します。|
 |[includes](../standard-library/algorithm-functions.md#includes)|1 つの並べ替えられた範囲に、別の並べ替えられた範囲内のすべての要素が含まれるかどうかをテストします。要素間の順序または等価の基準は二項述語によって指定できます。|
 |[inplace_merge](../standard-library/algorithm-functions.md#inplace_merge)|2 つの連続する並べ替えられた範囲の要素を単一の並べ替えられた範囲として連結します。順序の基準は二項述語によって指定できます。|
-|[is_heap](../standard-library/algorithm-functions.md#is_heap)|返します**true**場合は、指定された範囲内の要素がヒープを形成します。|
-|[is_heap_until](../standard-library/algorithm-functions.md#is_heap_until)|返します**true**場合は、指定された範囲の最後の要素までがヒープを形成します。|
-|[is_partitioned](../standard-library/algorithm-functions.md#is_partitioned)|返します**true**かどうかは特定の範囲内のすべての要素をテスト**true**の条件がテストする任意の要素の前に**false**します。|
+|[is_heap](../standard-library/algorithm-functions.md#is_heap)|指定された範囲の要素がヒープを形成する場合に**true**を返します。|
+|[is_heap_until](../standard-library/algorithm-functions.md#is_heap_until)|指定された範囲が最後の要素までヒープを形成する場合に**true**を返します。|
+|[is_partitioned](../standard-library/algorithm-functions.md#is_partitioned)|条件の**true**をテストする特定の範囲のすべての要素が、 **false**をテストする要素の前にある場合に**true**を返します。|
 |[is_permutation](../standard-library/algorithm-functions.md#is_permutation)|特定の範囲の要素が有効な順列を形成するかどうかを決定します。|
-|[is_sorted](../standard-library/algorithm-functions.md#is_sorted)|返します**true**並べ替えられた順序での指定した範囲内の要素がある場合。|
-|[is_sorted_until](../standard-library/algorithm-functions.md#is_sorted_until)|返します**true**並べ替えられた順序での指定した範囲内の要素がある場合。|
+|[is_sorted](../standard-library/algorithm-functions.md#is_sorted)|指定された範囲の要素が並べ替えられた順序である場合に**true**を返します。|
+|[is_sorted_until](../standard-library/algorithm-functions.md#is_sorted_until)|指定された範囲の要素が並べ替えられた順序である場合に**true**を返します。|
 |[iter_swap](../standard-library/algorithm-functions.md#iter_swap)|指定された反復子のペアで参照される 2 個の値を交換します。|
 |[lexicographical_compare](../standard-library/algorithm-functions.md#lexicographical_compare)|2 つのシーケンスを要素ごとに比較して、2 つのうちどちらが小さいかを判断します。|
 |[lower_bound](../standard-library/algorithm-functions.md#lower_bound)|順序の基準が二項述語で指定できる場合に、順序付けられた範囲内で、指定した値と等価以上の値を持つ最初の要素の位置を検索します。|
@@ -95,12 +95,12 @@ C++ 標準ライブラリ アルゴリズムは、通常、その目的や要件
 |[&lt;alg&gt; move](../standard-library/algorithm-functions.md#alg_move)|指定された範囲に関連付けられている要素を移動します。|
 |[move_backward](../standard-library/algorithm-functions.md#move_backward)|ある反復子の要素を別の反復子に移動します。 移動は、指定した範囲の最後の要素から開始され、その範囲内の先頭の要素で終了します。|
 |[next_permutation](../standard-library/algorithm-functions.md#next_permutation)|範囲内の要素の順序を変更し、元の順序を辞書式に次に大きい順列 (存在する場合) に置き換えます。next の意味は二項述語によって指定できます。|
-|[none_of](../standard-library/algorithm-functions.md#none_of)|返します**true**条件場合要素間で指定された範囲内に存在することはありません。|
+|[none_of](../standard-library/algorithm-functions.md#none_of)|指定された範囲内の要素間に条件が存在しない場合に**true**を返します。|
 |[nth_element](../standard-library/algorithm-functions.md#nth_element)|範囲内のシーケンスの *n* 番目の要素を正しく検索し、その要素の前にあるすべての要素がその要素以下、シーケンス内でその要素に続くすべての要素がその要素以上になるようにして、要素の範囲を分割します。|
 |[partial_sort](../standard-library/algorithm-functions.md#partial_sort)|範囲内で指定された数の、より小さい要素を、降順以外の順序、または二項述語で指定された順序の基準に従って配置します。|
 |[partial_sort_copy](../standard-library/algorithm-functions.md#partial_sort_copy)|ソース範囲からターゲット範囲に要素をコピーします。ソース要素は小なりまたは指定された別の二項述語によって並べ替えられます。|
 |[partition](../standard-library/algorithm-functions.md#partition)|範囲内の要素を 2 つの分離されたセットに分類し、単項述語を満たす要素が単項述語を満たさない要素よりも前に来るように配置します。|
-|[partition_copy](../standard-library/algorithm-functions.md#partition_copy)|条件の要素をコピー **true** 、条件が、1 つの宛先に**false**間。 要素は指定された範囲に含まれている必要があります。|
+|[partition_copy](../standard-library/algorithm-functions.md#partition_copy)|条件が**true**である要素を1つの変換先にコピーし、条件を**false**にします。 要素は指定された範囲に含まれている必要があります。|
 |[partition_point](../standard-library/algorithm-functions.md#partition_point)|特定の範囲内で条件を満たさない最初の要素を返します。 要素は、条件を満たす要素が条件を満たさない要素の前に来るように並べ替えられます。|
 |[pop_heap](../standard-library/algorithm-functions.md#pop_heap)|ヒープの先頭と範囲内の最後から 2 番目の位置との間で最大の要素を削除し、残りの要素から新しいヒープを形成します。|
 |[prev_permutation](../standard-library/algorithm-functions.md#prev_permutation)|範囲内の要素の順序を変更し、元の順序を辞書式に次に大きい順列 (存在する場合) に置き換えます。next の意味は二項述語によって指定できます。|
@@ -139,6 +139,6 @@ C++ 標準ライブラリ アルゴリズムは、通常、その目的や要件
 
 ## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)<br/>
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)<br/>
+[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)\
+[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - deque header
 ms.assetid: 4521fe92-5a91-4853-9e9f-59600bf9e46f
-ms.openlocfilehash: 167bdc324a67d8b1379f279e8fcc363ee6b0fca2
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 145ce22091ea1a42619ad7b1fd25507c6315a9ec
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246735"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454485"
 ---
 # <a name="ltdequegt"></a>&lt;deque&gt;
 
@@ -22,7 +22,7 @@ ms.locfileid: "68246735"
 **ヘッダー**: \<deque>
 
 > [!NOTE]
-> \<Deque > ライブラリで使用することも、`#include <initializer_list>`ステートメント。
+> Deque \<> ライブラリは、 `#include <initializer_list>`ステートメントも使用します。
 
 ## <a name="members"></a>メンバー
 
@@ -51,6 +51,6 @@ ms.locfileid: "68246735"
 
 ## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)<br/>
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)<br/>
+[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)\
+[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)

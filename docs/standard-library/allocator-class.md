@@ -34,16 +34,16 @@ helpviewer_keywords:
 - std::allocator [C++], max_size
 - std::allocator [C++], rebind
 ms.assetid: 3fd58076-56cc-43bb-ad58-b4b7c9c6b410
-ms.openlocfilehash: 1a0c8a04dda6c396b4f56d0939838fb6cb8e7455
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 09c30eb58655113ef3daa8338829ad43b37bc415
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245928"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456409"
 ---
 # <a name="allocator-class"></a>allocator クラス
 
-このテンプレート クラスは、記憶域の割り当てと型のオブジェクトの配列の解放を管理するオブジェクトを表します`Type`します。 クラスのオブジェクト`allocator`は C++ 標準ライブラリのいくつかのコンテナー テンプレート クラスのコンス トラクターで指定された既定のアロケーター オブジェクト。
+このテンプレートクラスは、型`Type`のオブジェクトの配列に対して、ストレージの割り当てと解放を管理するオブジェクトを表します。 クラス`allocator`のオブジェクトは、 C++標準ライブラリのいくつかのコンテナーテンプレートクラスのコンストラクターで指定された既定のアロケーターオブジェクトです。
 
 ## <a name="syntax"></a>構文
 
@@ -54,30 +54,30 @@ class allocator
 
 ### <a name="parameters"></a>パラメーター
 
-*Type*<br/>
+*各種*\
 ストレージが割り当てまたは割り当て解除されるオブジェクトの型。
 
 ## <a name="remarks"></a>Remarks
 
-すべての C++ 標準ライブラリ コンテナーは、その既定値はテンプレート パラメーターを持ちます`allocator`します。 カスタム アロケーターを持つコンテナーを作成すると、そのコンテナーの要素の割り当てと解放を制御できます。
+すべてのC++標準ライブラリコンテナーには、既定でに`allocator`設定されるテンプレートパラメーターがあります。 カスタム アロケーターを持つコンテナーを作成すると、そのコンテナーの要素の割り当てと解放を制御できます。
 
 たとえば、アロケーター オブジェクトは、プライベート ヒープまたは共有メモリ内でストレージを割り当てたり、小さなまたは大きなオブジェクトのサイズ用に最適化したりできます。 さらに、種類の型定義を介して、共有メモリを管理する特殊なアクセサー オブジェクトを経由で要素にアクセスすること、または自動ガベージ コレクションを実行することを指定できます。 そのため、アロケーター オブジェクトを使用してストレージを割り当てるクラスでは、C++ 標準ライブラリのコンテナーと同様に、これらの型を使用してポインターおよび参照オブジェクトを宣言する必要があります。
 
-<strong>(C++ 98/03 のみ)</strong> Allocator クラスから派生するときに指定する必要が、[再バインド](#rebind)構造体が`_Other`typedef で新しく派生するクラスを参照します。
+<strong>(C++ 98/03 のみ)</strong>アロケータークラスから派生する場合は、再[バインド](#rebind)構造体を指定する必要`_Other`があります。この場合、typedef は、新しく派生したクラスを参照します。
 
 したがって、アロケーターは、次の型を定義します。
 
-- [ポインター](#pointer)へのポインターのように動作`Type`します。
+- [ポインター](#pointer)は、へのポインター `Type`のように動作します。
 
-- [const_pointer](#const_pointer)への const ポインターのように動作`Type`します。
+- [const_pointer](#const_pointer)は、への const ポインター `Type`のように動作します。
 
-- [参照](#reference)への参照のように動作`Type`します。
+- [reference](#reference)はへの参照の`Type`ように動作します。
 
-- [const_reference](#const_reference)への const 参照のように動作`Type`します。
+- [const_reference](#const_reference)は、への定数参照`Type`のように動作します。
 
-これら`Type`は割り当てられる要素に対してポインターと参照を行う必要のある形式を指定します。 ( [allocator::pointer](#pointer)が必ずしも同じ`Type*`のすべてのアロケーター オブジェクトがあるにもかかわらず、クラスの明確な定義`allocator`)。
+これら`Type`のは、割り当てられた要素に対してポインターと参照が行う必要がある形式を指定します。 ([アロケーター::p](#pointer)は、クラス`allocator`の明確な定義が`Type*`ある場合でも、すべてのアロケーターオブジェクトと必ずしも同じであるとは限りません。)
 
-**C++ 11 以降。** アロケーターでの移動操作を有効にする、最小アロケーター インターフェイスを使用し、コピー コンス トラクターを実装、= =、! = 演算子、および割り当て解除します。 詳細および例については、「[アロケーター](../standard-library/allocators.md)」を参照してください。
+**C++ 11 以降:** アロケーターでの移動操作を有効にするには、最小限のアロケーターインターフェイスを使用し、コピーコンストラクター、= =、! = 演算子、割り当てと割り当て解除を実装します。 詳細および例については、「[アロケーター](../standard-library/allocators.md)」を参照してください。
 
 ## <a name="members"></a>メンバー
 
@@ -117,7 +117,7 @@ class allocator
 |-|-|
 |[operator=](#op_eq)|`allocator` オブジェクトを別の `allocator` オブジェクトに割り当てます。|
 
-### <a name="address"></a> アドレス
+### <a name="address"></a>先
 
 値が指定されたオブジェクトのアドレスを検索します。
 
@@ -137,7 +137,7 @@ const_pointer address(const_reference val) const;
 
 #### <a name="remarks"></a>Remarks
 
-メンバー関数のアドレスを返す*val*で、ポインターのために必要なフォームに割り当てられた要素。
+このメンバー関数は、割り当てられた要素に対してポインターが受け取る必要のある形式で、 *val*のアドレスを返します。
 
 #### <a name="example"></a>例
 
@@ -183,7 +183,7 @@ The original vector v1 is:
 The integer addressed by v1Ptr has a value of: *v1Ptr = 8.
 ```
 
-### <a name="allocate"></a> 割り当てる
+### <a name="allocate"></a>割当て
 
 指定された要素数だけは格納できるメモリのブロックを割り当てます。
 
@@ -193,10 +193,10 @@ pointer allocate(size_type count, const void* _Hint);
 
 #### <a name="parameters"></a>パラメーター
 
-*カウント*\
+*数*\
 十分な記憶域を割り当てる要素の数。
 
-*_Hint*\
+*ヒント (_c)* \
 アロケーター オブジェクトを支援できる const ポインターは、記憶域への要求を、要求の前に割り当てられたオブジェクトのアドレスを見つけることで満たします。
 
 #### <a name="return-value"></a>戻り値
@@ -205,7 +205,7 @@ pointer allocate(size_type count, const void* _Hint);
 
 #### <a name="remarks"></a>Remarks
 
-メンバー関数は、のストレージ型の count 要素の配列を割り当てます`Type`、新しい演算子の呼び出しによって (*カウント*)。 この関数は、割り当てられたオブジェクトへのポインターを返します。 hint 引数は、参照の局所性を向上することにおいて、一部のアロケーターに役立ちます。有効な選択肢は、同じアロケーターによって以前に割り当てられ、まだ割り当て解除されていないオブジェクトのアドレスです。 hint を指定しない場合は、代わりに Null ポインター引数を使用します。
+このメンバー関数は、operator new (*count*) を呼び出す`Type`ことによって、型の count 要素の配列にストレージを割り当てます。 この関数は、割り当てられたオブジェクトへのポインターを返します。 hint 引数は、参照の局所性を向上することにおいて、一部のアロケーターに役立ちます。有効な選択肢は、同じアロケーターによって以前に割り当てられ、まだ割り当て解除されていないオブジェクトのアドレスです。 hint を指定しない場合は、代わりに Null ポインター引数を使用します。
 
 #### <a name="example"></a>例
 
@@ -243,7 +243,7 @@ int main( )
 0 1 2 3 4 5 6 7 8 9
 ```
 
-### <a name="allocator"></a> アロケーター
+### <a name="allocator"></a>アロケーター
 
 オブジェクトを割り当てるために使用するコンストラクター。
 
@@ -326,7 +326,7 @@ The allocator objects cv1Alloc & v1Alloc are equal.
 The allocator objects cAlloc & Alloc are equal.
 ```
 
-### <a name="const_pointer"></a> const_pointer
+### <a name="const_pointer"></a>const_pointer
 
 アロケーターによって管理されるオブジェクトの型に対する定数ポインターを提供する型。
 
@@ -336,7 +336,7 @@ typedef const value_type *const_pointer;
 
 #### <a name="remarks"></a>Remarks
 
-ポインター型オブジェクトを表します`ptr`により、式を指定できる`*ptr`、テンプレート クラス アロケーターのオブジェクトを割り当てることができる任意の const オブジェクト。
+ポインター型は、式`ptr` `*ptr`を使用して、テンプレートクラスアロケーターのオブジェクトが割り当てることができる任意の const オブジェクトを指定できるオブジェクトを表します。
 
 #### <a name="example"></a>例
 
@@ -381,7 +381,7 @@ The original vector v1 is:
 The integer's address found has a value of: 10.
 ```
 
-### <a name="const_reference"></a> const_reference
+### <a name="const_reference"></a>const_reference
 
 アロケーターによって管理されるオブジェクトの型に対する定数参照を提供する型。
 
@@ -447,7 +447,7 @@ The value of the element referred to by vcref,
 after nofication through its nonconst iterator, is: 175.
 ```
 
-### <a name="construct"></a> コンス トラクター
+### <a name="construct"></a>構築
 
 指定された値で初期化され、指定されたアドレスに配置される、指定された型のオブジェクトを構築します。
 
@@ -460,7 +460,7 @@ template <class _Other>
 
 #### <a name="parameters"></a>パラメーター
 
-*ptr*\
+*ポインター*\
 オブジェクトが構築される場所へのポインター。
 
 *val*\
@@ -468,7 +468,7 @@ template <class _Other>
 
 #### <a name="remarks"></a>Remarks
 
-最初のメンバー関数は等しく**新しい**((`void` \*) `ptr`)**型**(`val`)。
+最初のメンバー関数は、 **new** (`void` ( \*) `ptr`)**型**(`val`) に相当します。
 
 #### <a name="example"></a>例
 
@@ -519,7 +519,7 @@ The modified vector v1 is:
 ( 3 7 9 12 15 18 21 ).
 ```
 
-### <a name="deallocate"></a> 割り当てを解除します。
+### <a name="deallocate"></a>配置
 
 指定した位置で始まるストレージから、指定された数のオブジェクトを解放します。
 
@@ -529,21 +529,21 @@ void deallocate(pointer ptr, size_type count);
 
 #### <a name="parameters"></a>パラメーター
 
-*ptr*\
+*ポインター*\
 記憶域から割り当てを解除される最初のオブジェクトへのポインター。
 
-*カウント*\
+*数*\
 記憶域から割り当てを解除されるオブジェクトの数。
 
 #### <a name="remarks"></a>Remarks
 
-メンバー関数は、型の count 個のオブジェクトの配列の記憶域を解放する`Type`から始まる*ptr*、呼び出して`operator delete(ptr)`します。 ポインター *ptr*が返されている前の呼び出しによって[割り当てる](#allocate)等しくを比較するアロケーター オブジェクトに **\*これ** 配列を割り当てる同じサイズと型のオブジェクトです。 `deallocate` は例外をスローしません。
+このメンバー関数は、を呼び出す`Type` `operator delete(ptr)`ことによって、 *ptr*で始まる型の count オブジェクトの配列のストレージを解放します。 ポインター *ptr*が返されている前の呼び出しによって[割り当てる](#allocate)等しくを比較するアロケーター オブジェクトに **\*これ** 配列を割り当てる同じサイズと型のオブジェクトです。 `deallocate` は例外をスローしません。
 
 #### <a name="example"></a>例
 
 メンバー関数の使用例については、「[allocator::allocate](#allocate)」を参照してください。
 
-### <a name="destroy"></a> 破棄
+### <a name="destroy"></a>倒す
 
 オブジェクトが格納されたメモリの割り当てを解除せずに、オブジェクトのデストラクターを呼び出します。
 
@@ -553,12 +553,12 @@ void destroy(pointer ptr);
 
 #### <a name="parameters"></a>パラメーター
 
-*ptr*\
+*ポインター*\
 破棄するオブジェクトのアドレスを指定するポインター。
 
 #### <a name="remarks"></a>Remarks
 
-メンバー関数で指定されたオブジェクトの破棄*ptr*、デストラクターを呼び出すことによって`ptr->`**型**:: **~ 型**します。
+このメンバー関数は、デストラクター `ptr->` **type**:: **~ Type**を呼び出すことによって、 *ptr*によって指定されたオブジェクトを破棄します。
 
 #### <a name="example"></a>例
 
@@ -609,7 +609,7 @@ The modified vector v1 is:
 ( 2 4 6 8 10 -99 14 ).
 ```
 
-### <a name="difference_type"></a> difference_type
+### <a name="difference_type"></a>difference_type
 
 アロケーターによって管理されるオブジェクトの型に対するポインターの値の差を表すことができる符号付き整数型。
 
@@ -739,7 +739,7 @@ int main( )
 }
 ```
 
-### <a name="op_eq"></a> 演算子 =
+### <a name="op_eq"></a>operator =
 
 1 つのアロケーター オブジェクトを別のアロケーター オブジェクトに割り当てます。
 
@@ -802,7 +802,7 @@ int main( )
 }
 ```
 
-### <a name="pointer"></a> ポインター
+### <a name="pointer"></a>pointer
 
 アロケーターによって管理されるオブジェクトの型に対するポインターを提供する型。
 
@@ -812,7 +812,7 @@ typedef value_type *pointer;
 
 #### <a name="remarks"></a>Remarks
 
-ポインター型オブジェクトを表します`ptr`により、式を指定できる **\*ptr**、任意のオブジェクトをテンプレート クラス アロケーターのオブジェクトを割り当てることができます。
+ポインター型は、式`ptr`  **\*ptr**を通じて、テンプレートクラスアロケーターのオブジェクトが割り当てることができる任意のオブジェクトを指定できるオブジェクトを表します。
 
 #### <a name="example"></a>例
 
@@ -857,7 +857,7 @@ The original vector v1 is:
 The integer addressed by v1Ptr has a value of: *v1Ptr = 12.
 ```
 
-### <a name="rebind"></a> 再バインドします。
+### <a name="rebind"></a>再バインド
 
 1 つの型のオブジェクトのアロケーターを使用して別の型のオブジェクトのストレージの割り当てを可能にする構造体。
 
@@ -867,7 +867,7 @@ struct rebind { typedef allocator<_Other> other; };
 
 #### <a name="parameters"></a>パラメーター
 
-*その他*\
+*他の*\
 メモリが割り当てられる要素の型。
 
 #### <a name="remarks"></a>Remarks
@@ -876,7 +876,7 @@ struct rebind { typedef allocator<_Other> other; };
 
 メンバー テンプレート クラスは、型 other を定義します。 その唯一の目的は、所定の型名 **allocator**\< **Type**> で、型名 **allocator**\<_ **Other**> を提供することです。
 
-たとえば、アロケーター オブジェクトは、指定された`al`型の`A`、型のオブジェクトを割り当てることができます`_Other`式を使用します。
+たとえば、型`al` `A`のアロケーターオブジェクトを指定した場合、次の式を使用`_Other`して型のオブジェクトを割り当てることができます。
 
 ```cpp
 A::rebind<Other>::other(al).allocate(1, (Other *)0)
@@ -913,7 +913,7 @@ int main( )
 }
 ```
 
-### <a name="reference"></a> 参照
+### <a name="reference"></a>「
 
 アロケーターによって管理されるオブジェクトの型に対する参照を提供する型。
 
@@ -973,7 +973,7 @@ the first element in the vector.
 The element referred to by vref after being modified is: 150.
 ```
 
-### <a name="size_type"></a> size_type
+### <a name="size_type"></a>size_type
 
 テンプレート クラス アロケーターのオブジェクトが割り当てることができる、シーケンスの長さを表すことのできる符号なし整数型。
 
@@ -1079,16 +1079,16 @@ The modified vector v is:
 ( 150 200 300 400 500 600 700 ).
 ```
 
-## <a name="helpers"></a>ヘルパー
+## <a name="helpers"></a>支援
 
-### <a name="allocator_arg_t"></a> allocator_arg_t
+### <a name="allocator_arg_t"></a>allocator_arg_t
 
 ```cpp
 struct allocator_arg_t { explicit allocator_arg_t() = default; };
 inline constexpr allocator_arg_t allocator_arg{};
 ```
 
-### <a name="uses_allocator"></a> uses_allocator
+### <a name="uses_allocator"></a>uses_allocator
 
 ```cpp
 template <class T, class Alloc> struct uses_allocator;
