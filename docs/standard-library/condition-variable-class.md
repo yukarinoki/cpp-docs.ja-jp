@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::condition_variable::wait
 - std::condition_variable::wait_for
 - std::condition_variable::wait_until
-ms.openlocfilehash: 69f356301ce5b546c8bebe9429ca64fa61eff404
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 999e236433ec4f3f2f52abb06855004a89169fa6
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244622"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449461"
 ---
 # <a name="conditionvariable-class"></a>condition_variable クラス
 
@@ -56,7 +56,7 @@ class condition_variable;
 |[wait_for](#wait_for)|スレッドをブロックし、スレッドがブロック解除されるまでの時間間隔を設定します。|
 |[wait_until](#wait_until)|スレッドをブロックし、スレッドがブロック解除される最大の時刻を設定します。|
 
-## <a name="condition_variable"></a> condition_variable
+## <a name="condition_variable"></a>condition_variable
 
 `condition_variable` オブジェクトを構築します。
 
@@ -68,7 +68,7 @@ condition_variable();
 
 十分なメモリが使用できない場合、コンストラクターは `not_enough_memory` エラー コードがある [system_error](../standard-library/system-error-class.md) オブジェクトをスローします。 他のリソースをいくつか使用できないためにオブジェクトが構築できない場合、コンストラクターは `system_error` エラー コードがある `resource_unavailable_try_again` オブジェクトをスローします。
 
-## <a name="native_handle"></a> native_handle
+## <a name="native_handle"></a>native_handle
 
 condition_variable ハンドルを表す実装固有の型を返します。
 
@@ -80,7 +80,7 @@ native_handle_type native_handle();
 
 `native_handle_type` は、コンカレンシー ランタイムの内部データ構造へのポインターとして定義されます。
 
-## <a name="notify_all"></a> notify_all
+## <a name="notify_all"></a>notify_all
 
 `condition_variable` オブジェクトを待機しているすべてのスレッドのブロックを解除します。
 
@@ -88,7 +88,7 @@ native_handle_type native_handle();
 void notify_all() noexcept;
 ```
 
-## <a name="notify_one"></a> notify_one
+## <a name="notify_one"></a>notify_one
 
 `condition_variable` オブジェクトを待機しているスレッドの 1 つのブロックを解除します。
 
@@ -96,7 +96,7 @@ void notify_all() noexcept;
 void notify_one() noexcept;
 ```
 
-## <a name="wait"></a> 待機
+## <a name="wait"></a>待機
 
 スレッドをブロックします。
 
@@ -113,7 +113,7 @@ void wait(unique_lock<mutex>& Lck, Predicate Pred);
 [unique_lock\<mutex>](../standard-library/unique-lock-class.md) オブジェクト。
 
 *Pred*\
-任意の式を返す**true**または**false**します。
+**True**または**false**を返す任意の式。
 
 ### <a name="remarks"></a>Remarks
 
@@ -126,7 +126,7 @@ while(!Pred())
     wait(Lck);
 ```
 
-## <a name="wait_for"></a> wait_for
+## <a name="wait_for"></a>wait_for
 
 スレッドをブロックし、スレッドがブロック解除されるまでの時間間隔を設定します。
 
@@ -152,17 +152,17 @@ bool wait_for(
 スレッドが開始するまでの時間の長さを指定する `chrono::duration` オブジェクト。
 
 *Pred*\
-任意の式を返す**true**または**false**します。
+**True**または**false**を返す任意の式。
 
 ### <a name="return-value"></a>戻り値
 
-最初のメソッドを返します`cv_status::timeout`待機が終了したときに場合*Rel_time*が経過しました。 それ以外の場合、メソッドは `cv_status::no_timeout` を返します。
+Rel_time が経過し`cv_status::timeout`たときに待機が終了した場合、最初のメソッドはを返します。 それ以外の場合、メソッドは `cv_status::no_timeout` を返します。
 
-2 番目のメソッドの値を返します*Pred*します。
+2番目のメソッドは、 *Pred*の値を返します。
 
 ### <a name="remarks"></a>Remarks
 
-最初のメソッドがブロックされるまで、`condition_variable`への呼び出しによってオブジェクトがシグナル状態[notify_one](#notify_one)または[notify_all](#notify_all)または時間間隔まで*Rel_time*が経過しました。 また、擬似的に開始することもできます。
+最初の`condition_variable`メソッドは、オブジェクトが[notify_one](#notify_one)または[notify_all](#notify_all)の呼び出しによって通知されるまで、または時間間隔*Rel_time*が経過するまでブロックします。 また、擬似的に開始することもできます。
 
 実際には、2 つ目のメソッドは次のコードを実行します。
 
@@ -210,13 +210,13 @@ bool wait_until(
 [chrono::time_point](../standard-library/time-point-class.md) オブジェクト。
 
 *Pred*\
-任意の式を返す**true**または**false**します。
+**True**または**false**を返す任意の式。
 
 ### <a name="return-value"></a>戻り値
 
-返すメソッドを`cv_status`戻り値を入力`cv_status::timeout`待機が終了したときに場合*Abs_time*が経過するとします。 それ以外の場合、メソッドは `cv_status::no_timeout` を返します。
+Abs_time が経過し`cv_status`たときに待機が終了した場合、型を返すメソッドはを返し`cv_status::timeout`ます。 それ以外の場合、メソッドは `cv_status::no_timeout` を返します。
 
-返すメソッドを**bool**の値を返す*Pred*します。
+**ブール**値を返すメソッドは、 *Pred*の値を返します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -236,5 +236,5 @@ return true;
 
 ## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)<br/>
-[<condition_variable>](../standard-library/condition-variable.md)<br/>
+[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)\
+[<condition_variable>](../standard-library/condition-variable.md)

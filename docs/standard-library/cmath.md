@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - cmath header
 ms.assetid: 80df1dba-60ca-4918-9c2e-fbf446eaa7d6
-ms.openlocfilehash: 1b581e19d53be6faddb983f12d739f2a199b2e9c
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: d01b02d8fa169aa7fddbc3e51d75e5328b400d2b
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244745"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459274"
 ---
 # <a name="ltcmathgt"></a>&lt;cmath&gt;
 
@@ -217,7 +217,7 @@ float hypotf(float x, float y);
 long double hypotl(long double x, long double y);
 ```
 
-## <a name="three-dimensional-hypotenuse"></a>3 次元斜辺
+## <a name="three-dimensional-hypotenuse"></a>3次元の斜辺
 
 ```cpp
 float hypot(float x, float y, float z);
@@ -409,7 +409,7 @@ float assoc_laguerref(unsigned n, unsigned m, float x);
 long double assoc_laguerrel(unsigned n, unsigned m, long double x);
 ```
 
-### <a name="associated-legendre-functions"></a>関連付けられたルジェンドル関数
+### <a name="associated-legendre-functions"></a>関連付けられている Legendre 関数
 
 ```cpp
 double assoc_legendre(unsigned l, unsigned m, double x);
@@ -425,7 +425,7 @@ float betaf(float x, float y);
 long double betal(long double x, long double y);
 ```
 
-### <a name="complete-elliptic-integral-of-the-first-kind"></a>最初の種類の完全な楕円積分
+### <a name="complete-elliptic-integral-of-the-first-kind"></a>最初の種類の楕円積分を完了します。
 
 ```cpp
 double comp_ellint_1(double k);
@@ -433,7 +433,7 @@ float comp_ellint_1f(float k);
 long double comp_ellint_1l(long double k);
 ```
 
-### <a name="complete-elliptic-integral-of-the-second-kind"></a>2 つ目の種類の完全な楕円積分
+### <a name="complete-elliptic-integral-of-the-second-kind"></a>2番目の種類の楕円積分を完了します。
 
 ```cpp
 double comp_ellint_2(double k);
@@ -441,7 +441,7 @@ float comp_ellint_2f(float k);
 long double comp_ellint_2l(long double k);
 ```
 
-### <a name="complete-elliptic-integral-of-the-third-kind"></a>3 つ目の種類の完全な楕円積分
+### <a name="complete-elliptic-integral-of-the-third-kind"></a>3番目の種類の楕円積分を完了します。
 
 ```cpp
 double comp_ellint_3(double k, double nu);
@@ -449,7 +449,7 @@ float comp_ellint_3f(float k, float nu);
 long double comp_ellint_3l(long double k, long double nu);
 ```
 
-### <a name="regular-modified-cylindrical-bessel-functions"></a>通常は、円柱の bessel 系関数を変更
+### <a name="regular-modified-cylindrical-bessel-functions"></a>通常変更された円柱ベッセル関数
 
 ```cpp
 double cyl_bessel_i(double nu, double x);
@@ -457,7 +457,7 @@ float cyl_bessel_if(float nu, float x);
 long double cyl_bessel_il(long double nu, long double x);
 ```
 
-### <a name="cylindrical-bessel-functions-of-the-first-kind"></a>1 つの円柱の bessel 系関数
+### <a name="cylindrical-bessel-functions-of-the-first-kind"></a>最初の種類の円筒型のベッセル関数
 
 ```cpp
 double cyl_bessel_j(double nu, double x);
@@ -465,7 +465,7 @@ float cyl_bessel_jf(float nu, float x);
 long double cyl_bessel_jl(long double nu, long double x);
 ```
 
-### <a name="irregular-modified-cylindrical-bessel-functions"></a>不規則な変更の円柱の bessel 系関数
+### <a name="irregular-modified-cylindrical-bessel-functions"></a>不規則に変更された円柱ベッセル関数
 
 ```cpp
 double cyl_bessel_k(double nu, double x);
@@ -473,7 +473,7 @@ float cyl_bessel_kf(float nu, float x);
 long double cyl_bessel_kl(long double nu, long double x);
 ```
 
-### <a name="cylindrical-neumann-functions"></a>円柱の型関数
+### <a name="cylindrical-neumann-functions"></a>円柱ノイマン関数
 
 ```cpp
 double cyl_neumann(double nu, double x);
@@ -481,7 +481,7 @@ float cyl_neumannf(float nu, float x);
 long double cyl_neumannl(long double nu, long double x);
 ```
 
-### <a name="incomplete-elliptic-integral-of-the-first-kind"></a>最初の種類の不完全な楕円積分
+### <a name="incomplete-elliptic-integral-of-the-first-kind"></a>最初の種類の不完全な楕円整数
 
 ```cpp
 double ellint_1(double k, double phi);
@@ -489,7 +489,7 @@ float ellint_1f(float k, float phi);
 long double ellint_1l(long double k, long double phi);
 ```
 
-### <a name="incomplete-elliptic-integral-of-the-second-kind"></a>2 つ目の種類の不完全な楕円積分
+### <a name="incomplete-elliptic-integral-of-the-second-kind"></a>2番目の種類の不完全な楕円整数
 
 ```cpp
 double ellint_2(double k, double phi);
@@ -497,7 +497,7 @@ float ellint_2f(float k, float phi);
 long double ellint_2l(long double k, long double phi);
 ```
 
-### <a name="incomplete-elliptic-integral-of-the-third-kind"></a>3 つ目の種類の不完全な楕円積分
+### <a name="incomplete-elliptic-integral-of-the-third-kind"></a>3番目の種類の不完全な楕円整数
 
 ```cpp
 double ellint_3(double k, double nu, double phi);
@@ -505,7 +505,7 @@ float ellint_3f(float k, float nu, float phi);
 long double ellint_3l(long double k, long double nu, long double phi);
 ```
 
-### <a name="exponential-integral"></a>指数の整数
+### <a name="exponential-integral"></a>指数整数
 
 ```cpp
 double expint(double x);
@@ -513,7 +513,7 @@ float expintf(float x);
 long double expintl(long double x);
 ```
 
-### <a name="hermite-polynomials"></a>エルミート polynomials
+### <a name="hermite-polynomials"></a>Hermite polynomials
 
 ```cpp
 double hermite(unsigned n, double x);
@@ -529,7 +529,7 @@ float laguerref(unsigned n, float x);
 long double laguerrel(unsigned n, long double x);
 ```
 
-### <a name="legendre-polynomials"></a>ルジェンドル polynomials
+### <a name="legendre-polynomials"></a>Legendre polynomials
 
 ```cpp
 double legendre(unsigned l, double x);
@@ -537,7 +537,7 @@ float legendref(unsigned l, float x);
 long double legendrel(unsigned l, long double x);
 ```
 
-### <a name="riemann-zeta-function"></a>リーマン zeta 関数
+### <a name="riemann-zeta-function"></a>リーマンゼータ関数
 
 ```cpp
 double riemann_zeta(double x);
@@ -545,7 +545,7 @@ float riemann_zetaf(float x);
 long double riemann_zetal(long double x);
 ```
 
-### <a name="spherical-bessel-functions-of-the-first-kind"></a>最初の種類の球の bessel 系関数
+### <a name="spherical-bessel-functions-of-the-first-kind"></a>最初の種類の球ベッセル関数
 
 ```cpp
 double sph_bessel(unsigned n, double x);
@@ -553,7 +553,7 @@ float sph_besself(unsigned n, float x);
 long double sph_bessell(unsigned n, long double x);
 ```
 
-### <a name="spherical-associated-legendre-functions"></a>球に関連付けられたルジェンドル関数
+### <a name="spherical-associated-legendre-functions"></a>球面に関連付けられた Legendre 関数
 
 ```cpp
 double sph_legendre(unsigned l, unsigned m, double theta);
@@ -561,7 +561,7 @@ float sph_legendref(unsigned l, unsigned m, float theta);
 long double sph_legendrel(unsigned l, unsigned m, long double theta);
 ```
 
-### <a name="spherical-neumann-functions"></a>球の型関数
+### <a name="spherical-neumann-functions"></a>球面ノイマン関数
 
 ```cpp
 double sph_neumann(unsigned n, double x);
@@ -575,6 +575,6 @@ long double sph_neumannl(unsigned n, long double x);
 
 ## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)<br/>
-[C++ 標準ライブラリの概要](../standard-library/cpp-standard-library-overview.md)<br/>
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)\
+[C++ 標準ライブラリの概要](../standard-library/cpp-standard-library-overview.md)\
+[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

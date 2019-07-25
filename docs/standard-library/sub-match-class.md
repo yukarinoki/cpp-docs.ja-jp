@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::sub_match [C++], iterator
 - std::sub_match [C++], value_type
 ms.assetid: 804e2b9e-d16a-4c4c-ac60-024e0b2dd0e8
-ms.openlocfilehash: e0edfbc69d6cba6ee352a34406860e4c999dc3a7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 07ec6f0dc9daaec19fa97a6220da4d4ea93b254b
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412216"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447429"
 ---
 # <a name="submatch-class"></a>sub_match クラス
 
@@ -41,8 +41,8 @@ class sub_match
 
 ## <a name="parameters"></a>パラメーター
 
-*BidIt*<br/>
-サブマッチの反復子の型。
+*BidIt*\
+サブマッチ用の反復子の型。
 
 ## <a name="remarks"></a>Remarks
 
@@ -50,7 +50,7 @@ class sub_match
 
 キャプチャ グループがオブジェクトのデータ メンバーと一致しなかった場合は、 `matched` が false を保持し、2 つの反復子の `first` と `second` (ベース `std::pair`から継承) が等しくなります。 キャプチャ グループが一致した場合は、 `matched` が true を保持し、反復子 `first` がキャプチャ グループと一致したターゲット シーケンスの最初の文字を指し、反復子 `second` がキャプチャ グループと一致したターゲット シーケンスの最後の文字の 1 つ先の位置を指します。 長さ 0 の一致の場合は、メンバー `matched` が true を保持し、2 つの反復子が等しくなり、両方が一致した位置を指します。
 
-長さ 0 の一致は、キャプチャ グループが 1 つのアサーションのみまたは 0 回の繰り返しが許可される 1 つの繰り返しのみで構成されている場合に発生します。 例:
+長さ 0 の一致は、キャプチャ グループが 1 つのアサーションのみまたは 0 回の繰り返しが許可される 1 つの繰り返しのみで構成されている場合に発生します。 例えば:
 
 "^" は、ターゲット シーケンス "a" と一致します。キャプチャ グループ 0 に対応する `sub_match` オブジェクトは、両方がシーケンスの最初の文字を指す反復子を保持します。
 
@@ -70,7 +70,7 @@ class sub_match
 |-|-|
 |[compare](#compare)|サブマッチをシーケンスと比較します。|
 |[length](#length)|サブマッチの長さを返します。|
-|[一致します。](#matched)|一致が成功したかどうかを示します。|
+|[付ける](#matched)|一致が成功したかどうかを示します。|
 |[str](#str)|サブマッチを文字列に変換します。|
 
 ### <a name="operators"></a>演算子
@@ -149,13 +149,13 @@ int compare(const value_type *ptr) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*right*<br/>
+*そうです*\
 比較するサブマッチ。
 
-*str*<br/>
+*引数*\
 比較対象の文字列。
 
-*ptr*<br/>
+*ポインター*\
 null で終わる比較対象のシーケンス。
 
 ### <a name="remarks"></a>Remarks
@@ -216,7 +216,7 @@ bool matched;
 
 ### <a name="remarks"></a>Remarks
 
-メンバーを保持**true**キャプチャ グループに関連付けられている場合にのみ`*this`正規表現の一致の一部であった。
+メンバーは、 に`*this`関連付けられたキャプチャグループが正規表現に一致する場合にのみ、true を保持します。
 
 ## <a name="op_basic_string_lt_value_type_gt"></a>  sub_match::operator basic_string&lt;value_type&gt;
 
@@ -256,5 +256,5 @@ typedef は、`iterator_traits<BidIt>::value_type` の同意語です。
 
 ## <a name="see-also"></a>関連項目
 
-[\<regex>](../standard-library/regex.md)<br/>
-[sub_match](../standard-library/sub-match-class.md)<br/>
+[\<regex>](../standard-library/regex.md)\
+[sub_match](../standard-library/sub-match-class.md)

@@ -45,18 +45,18 @@ f1_keywords:
 - shared_mutex/std::shared_timed_mutex::try_lock_shared_until
 - shared_mutex/std::shared_timed_mutex::unlock_shared
 ms.assetid: 0b37a97d-ee5d-4050-b29f-09db9f76beb3
-ms.openlocfilehash: 97d77399357030feaa90228a1b0cdeb80d48034c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7dd72550bc8658158b399e88573526269202f8f4
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412567"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450436"
 ---
 # <a name="ltsharedmutex"></a>&lt;shared_mutex>
 
-&lt;Shared_mutex > ヘッダーは、複数のスレッドによってアクセスできる共有のデータの保護の同期プリミティブを提供します。 ミューテックス クラスで提供される排他アクセス制御だけでなく、共有ミューテックス クラスによって非排他的なアクセス用の複数のスレッドによる共有所有権も可能になります。 共有ミューテックスを使用して、競合状態を発生させず複数のスレッドで読み取ることができるリソースを制御できますが、共有ミューテックスは 1 つのスレッドによって排他的に書き込まれる必要があります。
+Shared_mutex &lt;> ヘッダーには、複数のスレッドからアクセスできる共有データを保護する同期プリミティブが用意されています。 ミューテックス クラスで提供される排他アクセス制御だけでなく、共有ミューテックス クラスによって非排他的なアクセス用の複数のスレッドによる共有所有権も可能になります。 共有ミューテックスを使用して、競合状態を発生させず複数のスレッドで読み取ることができるリソースを制御できますが、共有ミューテックスは 1 つのスレッドによって排他的に書き込まれる必要があります。
 
-ヘッダー &lt;shared_mutex > クラスを定義`shared_mutex`と`shared_timed_mutex`、テンプレート クラスは、 `shared_lock`、テンプレート関数と`swap`共有ミュー テックスのサポート。
+ヘッダー &lt;shared_mutex > は、共有ミューテックス`shared_mutex`サポート`shared_timed_mutex`のクラス、テンプレート`shared_lock`クラス、およびテンプレート関数`swap`を定義します。
 
 |クラス|説明|
 |-------------|-----------------|
@@ -91,20 +91,20 @@ void swap(shared_lock<Mutex>& x, shared_lock<Mutex>& y) noexcept;
 
 - `unlock_shared` メソッドは、スレッドの呼び出しによって保持されるミューテックスの共有所有権を解放します。
 
-- `try_lock_shared` メソッドは、ミューテックスをブロックせずに共有所有権を取得しようとします。 戻り値の型に変換できる**bool**は**true**メソッドは、所有権を取得しますが、それ以外の場合は、場合**false**します。
+- `try_lock_shared` メソッドは、ミューテックスをブロックせずに共有所有権を取得しようとします。 戻り値の型は**ブール**型に変換でき、メソッドが所有権を取得した場合は**true**になりますが、それ以外の場合は**false**になります。
 
 クラス `shared_timed_mutex` は、*共有 timed mutex 型*、つまり、共有 mutex 型と timed mutex 型の両方の要件を満たす型です。
 
 共有 timed mutex 型は、追加のメソッド `try_lock_shared_for` および `try_lock_shared_until` をサポートします。
 
-- `try_lock_shared_for` メソッドは、パラメーターで指定した期間が経過するまで、ミューテックスの共有所有権を取得しようとします。 この期間が正ではない場合、このメソッドは `try_lock_shared` と等しくなります。 このメソッドは、共有所有権を取得しない限り、指定した期間内では返しません。 戻り値は**true**メソッドは、所有権を取得しますが、それ以外の場合は、場合**false**します。
+- `try_lock_shared_for` メソッドは、パラメーターで指定した期間が経過するまで、ミューテックスの共有所有権を取得しようとします。 この期間が正ではない場合、このメソッドは `try_lock_shared` と等しくなります。 このメソッドは、共有所有権を取得しない限り、指定した期間内では返しません。 メソッドが所有権を取得した場合、その戻り値は**true**になりますが、それ以外の場合は**false**になります。
 
-- `try_lock_shared_until` メソッドは、指定された絶対時間が経過するまで、ミューテックスの共有所有権を取得しようとします。 指定した時間が既に経過している場合、このメソッドは `try_lock_shared` と等しくなります。 このメソッドは、共有所有権を取得しない限り、指定した時間の前に返しません。 戻り値は**true**メソッドは、所有権を取得しますが、それ以外の場合は、場合**false**します。
+- `try_lock_shared_until` メソッドは、指定された絶対時間が経過するまで、ミューテックスの共有所有権を取得しようとします。 指定した時間が既に経過している場合、このメソッドは `try_lock_shared` と等しくなります。 このメソッドは、共有所有権を取得しない限り、指定した時間の前に返しません。 メソッドが所有権を取得した場合、その戻り値は**true**になりますが、それ以外の場合は**false**になります。
 
 `shared_lock` テンプレート クラスは時間指定のロックのサポートおよび共有ミューテックスへの所有権の転送のサポートを拡張します。 ミューテックスの所有権は構築時または構築後に取得でき、別の `shared_lock` オブジェクトに転送できます。 `shared_lock` 型のオブジェクトは移動できますが、コピーできません。
 
 > [!WARNING]
-> Visual Studio 2015 以降では、C++ 標準ライブラリ同期型は、は Windows 同期プリミティブに基づいており、(ターゲット プラットフォームが Windows XP の場合を除き、ConcRT を使用できなくします。 定義された型&lt;shared_mutex >、ConcRT 型または関数は使えません。
+> Visual Studio 2015 以降では、 C++標準ライブラリの同期の種類は windows 同期プリミティブに基づいており、concrt を使用しなくなりました (ターゲットプラットフォームが windows XP の場合を除く)。 Shared_mutex > で&lt;定義されている型は、concrt 型または関数では使用できません。
 
 ## <a name="classes"></a>クラス
 
@@ -215,7 +215,7 @@ private:
 
 ## <a name="functions"></a>関数
 
-###  <a name="function_swap"></a> スワップ
+###  <a name="function_swap"></a>フォト
 
 `shared_lock` オブジェクトを交換します。
 
@@ -234,5 +234,5 @@ void swap(shared_lock<Mutex>& x, shared_lock<Mutex>& y) noexcept;
 
 ## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)<br/>
+[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)\
 [&lt;mutex>](../standard-library/mutex.md)

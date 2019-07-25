@@ -12,12 +12,12 @@ helpviewer_keywords:
 - stdext::rts_alloc [C++], deallocate
 - stdext::rts_alloc [C++], equals
 ms.assetid: ab41bffa-83d1-4a1c-87b9-5707d516931f
-ms.openlocfilehash: 2c77f93a2311dbf21959b0d2a7830c20ba6dce96
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 065c0eaf936a438f48dbb8aa28704e0f53926a03
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409747"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451134"
 ---
 # <a name="rtsalloc-class"></a>rts_alloc クラス
 
@@ -74,7 +74,7 @@ void *allocate(std::size_t count);
 
 ### <a name="remarks"></a>Remarks
 
-メンバー関数を返します`caches[_IDX].allocate(count)`ここで、インデックス`_IDX`は要求されたブロックのサイズによって決まります*カウント*、または、*数*は返しますが大きすぎて、`operator new(count)`します。 キャッシュ オブジェクトを表す `cache`。
+このメンバー関数は`caches[_IDX].allocate(count)`、要求され`_IDX`たブロックサイズの*カウント*によってインデックスが決定されるを返します。また、 `operator new(count)` *count*が大きすぎる場合は、を返します。 キャッシュ オブジェクトを表す `cache`。
 
 ## <a name="deallocate"></a>  rts_alloc::deallocate
 
@@ -93,7 +93,7 @@ void deallocate(void* ptr, std::size_t count);
 
 ### <a name="remarks"></a>Remarks
 
-メンバー関数の呼び出し`caches[_IDX].deallocate(ptr, count)`ここで、インデックス`_IDX`は要求されたブロックのサイズによって決まります*カウント*、または、*数*は返しますが大きすぎて、`operator delete(ptr)`します。
+このメンバー関数は`caches[_IDX].deallocate(ptr, count)`、要求され`_IDX`たブロックサイズの*カウント*によってインデックスが決定されるを呼び出します。 *count*が`operator delete(ptr)`大きすぎる場合は、を返します。
 
 ## <a name="equals"></a>  rts_alloc::equals
 
@@ -108,13 +108,13 @@ bool equals(const sync<_Cache>& _Other) const;
 |パラメーター|説明|
 |---------------|-----------------|
 |*_Cache*|フィルターに関連付けられているキャッシュ オブジェクト。|
-|*_Other*|等しいかどうかを比較するキャッシュ オブジェクト。|
+|*その他 (_d)*|等しいかどうかを比較するキャッシュ オブジェクト。|
 
 ### <a name="remarks"></a>Remarks
 
-**true**場合の結果`caches[0].equals(other.caches[0])`、それ以外の**false**します。 `caches` はキャッシュ オブジェクトの配列を表します。
+の結果がの`caches[0].equals(other.caches[0])`場合は true、それ以外の場合は**false**。 `caches` はキャッシュ オブジェクトの配列を表します。
 
 ## <a name="see-also"></a>関連項目
 
-[ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl)<br/>
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl)\
+[\<allocators>](../standard-library/allocators-header.md)
