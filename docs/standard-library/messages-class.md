@@ -22,12 +22,12 @@ helpviewer_keywords:
 - std::messages [C++], get
 - std::messages [C++], open
 ms.assetid: c4c71f40-4f24-48ab-9f7c-daccd8d5bd83
-ms.openlocfilehash: 7a024a8cad8c536b25127d033468874de5ebd8af
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f417c33d5502f8e5bd247936c8a0f93007239924
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383582"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449940"
 ---
 # <a name="messages-class"></a>messages クラス
 
@@ -44,7 +44,7 @@ class messages : public messages_base;
 
 ### <a name="parameters"></a>パラメーター
 
-*CharType*<br/>
+*CharType*\
 ロケールの文字をエンコードするためにプログラム内で使用される型。
 
 ## <a name="remarks"></a>Remarks
@@ -105,7 +105,7 @@ void close(catalog _Catval) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*_Catval*<br/>
+*Catval*\
 終了するカタログ。
 
 ### <a name="remarks"></a>Remarks
@@ -122,12 +122,12 @@ virtual void do_close(catalog _Catval) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*_Catval*<br/>
+*Catval*\
 終了するカタログ。
 
 ### <a name="remarks"></a>Remarks
 
-プロテクト メンバー関数は、メッセージ カタログを閉じます *_Catval*、する必要がありますが開かれているを以前の呼び出しによって[do_open](#do_open)します。
+プロテクトメンバー関数は、 [do_open](#do_open)への以前の呼び出しによって開かれている必要がある*メッセージカタログを*閉じます。
 
 *_Catval* は、以前に開かれ、まだ閉じていないカタログから取得する必要があります。
 
@@ -149,25 +149,25 @@ virtual string_type do_get(
 
 ### <a name="parameters"></a>パラメーター
 
-*_Catval*<br/>
+*Catval*\
 検索されるメッセージ カタログを示す識別値。
 
-*_Set*<br/>
+*_ _* \
 メッセージ カタログ内のメッセージの検索に使用される最初の識別値。
 
-*_Message*<br/>
+*メッセージ (_d)* \
 メッセージ カタログ内のメッセージの検索に使用される 2 番目の識別値。
 
-*_Dfault*<br/>
+*エラー (_d)* \
 失敗した場合に返される文字列。
 
 ### <a name="return-value"></a>戻り値
 
-コピーを返します *_Dfault*失敗します。 それ以外の場合は、指定したメッセージ シーケンスのコピーを返します。
+失敗した場合は、エラーのコピーを返します。 *(_d)* それ以外の場合は、指定したメッセージ シーケンスのコピーを返します。
 
 ### <a name="remarks"></a>Remarks
 
-プロテクト メンバー関数が、メッセージのカタログからのメッセージ シーケンスを取得しようとしています。 *_Catval*します。 可能性がありますの使用*設定 (_s)*、*メッセージ (_m)*、および *_Dfault*きました。
+プロテクトメンバー関数は、*メッセージカタログから*メッセージシーケンスを取得しようとします。 この操作では、 *_l*、 *Message*、および*dfault*が使用される場合があります。
 
 ### <a name="example"></a>例
 
@@ -185,10 +185,10 @@ virtual catalog do_open(
 
 ### <a name="parameters"></a>パラメーター
 
-*_Catname*<br/>
+*Catname (_c)* \
 検索されるカタログの名前。
 
-*_Loc*<br/>
+*場所 (_d)* \
 カタログ内で検索されるロケール。
 
 ### <a name="return-value"></a>戻り値
@@ -197,7 +197,7 @@ virtual catalog do_open(
 
 ### <a name="remarks"></a>Remarks
 
-プロテクト メンバー関数は、名前を持つメッセージ カタログを開こうとした *_Catname*します。 可能性があります、ロケールを使用して、 *_Loc*きました
+プロテクトメンバー関数は、名前がであるメッセージカタログを開こうとし*ます。* *ロケールの*場所を使用する場合があります。
 
 後で [close](#close) を呼び出すときに、この戻り値を引数として使用する必要があります。
 
@@ -219,21 +219,21 @@ string_type get(
 
 ### <a name="parameters"></a>パラメーター
 
-*_Catval*<br/>
+*Catval*\
 検索されるメッセージ カタログを示す識別値。
 
-*_Set*<br/>
+*_ _* \
 メッセージ カタログ内のメッセージの検索に使用される最初の識別値。
 
-*_Message*<br/>
+*メッセージ (_d)* \
 メッセージ カタログ内のメッセージの検索に使用される 2 番目の識別値。
 
-*_Dfault*<br/>
+*エラー (_d)* \
 失敗した場合に返される文字列。
 
 ### <a name="return-value"></a>戻り値
 
-コピーを返します *_Dfault*失敗します。 それ以外の場合は、指定したメッセージ シーケンスのコピーを返します。
+失敗した場合は、エラーのコピーを返します。 *(_d)* それ以外の場合は、指定したメッセージ シーケンスのコピーを返します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -254,25 +254,25 @@ protected: messages(
 
 ### <a name="parameters"></a>パラメーター
 
-*_Refs*<br/>
+*参照 (_c)* \
 オブジェクトのメモリ管理の種類を指定するために使用する整数値。
 
-*_Locname*<br/>
+*名前 (_d)* \
 ロケールの名前。
 
 ### <a name="remarks"></a>Remarks
 
-使用可能な値を *_Refs*パラメーターとその重要性は。
+*Refs*パラメーターに指定できる値とその意味は、次のとおりです。
 
-- 0:オブジェクトの有効期間は、それが含まれるロケールによって管理されます。
+- 0オブジェクトの有効期間は、オブジェクトが含まれているロケールによって管理されます。
 
 - 1:オブジェクトの有効期間は、手動で管理する必要があります。
 
-- \> 1:これらの値が定義されていません。
+- \>1:これらの値は定義されていません。
 
 デストラクターが保護されているため、利用できる直接的な例はありません。
 
-コンストラクターは、**locale::**[facet](../standard-library/locale-class.md#facet_class)( `_Refs`) を使用して、その基本オブジェクトを初期化します。
+コンストラクターは、**locale::** [facet](../standard-library/locale-class.md#facet_class)( `_Refs`) を使用して、その基本オブジェクトを初期化します。
 
 ## <a name="open"></a>  messages::open
 
@@ -286,10 +286,10 @@ catalog open(
 
 ### <a name="parameters"></a>パラメーター
 
-*_Catname*<br/>
+*Catname (_c)* \
 検索されるカタログの名前。
 
-*_Loc*<br/>
+*場所 (_d)* \
 カタログ内で検索されるロケール。
 
 ### <a name="return-value"></a>戻り値
@@ -314,6 +314,6 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
 
 ## <a name="see-also"></a>関連項目
 
-[\<locale>](../standard-library/locale.md)<br/>
-[messages_base クラス](../standard-library/messages-base-class.md)<br/>
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[\<locale>](../standard-library/locale.md)\
+[messages_base クラス](../standard-library/messages-base-class.md)\
+[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

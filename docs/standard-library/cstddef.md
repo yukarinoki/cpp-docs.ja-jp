@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - cstddef header
 ms.assetid: be8d1e39-5974-41ee-b41d-eafa6c82ffce
-ms.openlocfilehash: 15d13a3af35cb41950df8aeba0c86d779e701ddb
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 87d268977ee46112fedce517e66a9e68071863db
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244445"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457570"
 ---
 # <a name="ltcstddefgt"></a>&lt;cstddef&gt;
 
-C 標準ライブラリ ヘッダーをインクルード\<stddef.h > に関連する名前を追加し、`std`名前空間。 外部リンケージを使用して、C 標準ライブラリ ヘッダーで宣言された名前を宣言することにより、このヘッダーを含む、`std`名前空間。
+C 標準ライブラリヘッダー \<stddef.h > をインクルードし、関連`std`する名前を名前空間に追加します。 このヘッダーをインクルードすると、C 標準ライブラリヘッダーの外部リンケージを使用して宣言され`std`た名前が、名前空間で宣言されます。
 
 > [!NOTE]
-> \<cstddef > 型が含まれて**バイト**型が含まれていないと**wchar_t**します。
+> \<cstddef > には**byte**型が含まれており、 **wchar_t**型は含まれません。
 
 ## <a name="syntax"></a>構文
 
@@ -26,7 +26,7 @@ C 標準ライブラリ ヘッダーをインクルード\<stddef.h > に関連�
 #include <cstddef>
 ```
 
-## <a name="namespace-and-macros"></a>Namespace とマクロ
+## <a name="namespace-and-macros"></a>名前空間とマクロ
 
 ```cpp
 namespace std {
@@ -43,18 +43,18 @@ namespace std {
 ### <a name="parameters"></a>パラメーター
 
 *ptrdiff_t*\
-実装で定義する符号付き配列オブジェクトに添字が 2 つの違いを保持できる整数型。
+配列オブジェクトの2つの添字の差を保持できる、実装定義の符号付き整数型。
 
 *size_t*\
-任意のオブジェクトのバイト単位のサイズを格納するのに十分な大きさである符号なし整数の実装で定義された型。
+任意のオブジェクトのサイズ (バイト単位) を格納するのに十分な大きさの実装定義の符号なし整数型。
 
 *max_align_t*\
-POD 型のアラインメント要件は、少なくとも、すべてのスカラー型の場合と同程度に優れたとのアラインメント要件がすべてのコンテキストでサポートされています。
+すべてのスカラー型のアラインメント要件が少なくとも優れており、すべてのコンテキストでアラインメント要件がサポートされている POD 型。
 
 *nullptr_t*\
-型のシノニム、 **nullptr**式。 ただし、 **nullptr**アドレスは取得できません、別のアドレス*nullptr_t*を左辺値であるオブジェクトを取得できます。
+**Nullptr**式の型のシノニム。 **Nullptr**アドレスは取得できませんが、左辺値である別の*nullptr_t*オブジェクトのアドレスを取得できます。
 
-## <a name="byte-class"></a>バイト クラス
+## <a name="byte-class"></a>byte クラス
 
 ```cpp
 enum class byte : unsigned char {};
@@ -79,6 +79,6 @@ template <class IntType>
 
 ## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)<br/>
-[C++ 標準ライブラリの概要](../standard-library/cpp-standard-library-overview.md)<br/>
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)\
+[C++ 標準ライブラリの概要](../standard-library/cpp-standard-library-overview.md)\
+[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

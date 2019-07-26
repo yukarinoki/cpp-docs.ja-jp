@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - <forward_list>
 ms.assetid: 8b4ab09e-1475-434a-b4e0-fdbc07a08b5b
-ms.openlocfilehash: d20c5b83e0ce00c7634d32e6b63c92242c24d1b2
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: a8b343fbe5e175828b4b8470da486a6dea9f3455
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240652"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457006"
 ---
 # <a name="ltforwardlistgt"></a>&lt;forward_list&gt;
 
@@ -24,7 +24,7 @@ ms.locfileid: "68240652"
 **名前空間:** std
 
 > [!NOTE]
-> \<Forward_list > ライブラリで使用することも、`#include <initializer_list>`ステートメント。
+> Forward_list \<> ライブラリは、 `#include <initializer_list>`ステートメントも使用します。
 
 ## <a name="members"></a>メンバー
 
@@ -53,4 +53,4 @@ ms.locfileid: "68240652"
 
 ## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)<br/>
+[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)

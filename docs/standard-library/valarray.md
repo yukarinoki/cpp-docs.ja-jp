@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - valarray header
 ms.assetid: 30835415-21c1-4801-8f24-6bbef7dd8ecd
-ms.openlocfilehash: 9154f15500863d815f56438090662416b9b6fe7f
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: c18b72017e4999e377bf8575f624f8fdda5b0caf
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246653"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448335"
 ---
 # <a name="ltvalarraygt"></a>&lt;valarray&gt;
 
@@ -24,11 +24,11 @@ ms.locfileid: "68246653"
 **名前空間:** std
 
 > [!NOTE]
-> \<Valarray > ライブラリを使用して、' #include < initializer_list > include' ステートメント。
+> Valarray > ライブラリは\<、' #include < initializer_list > ' ステートメントを使用します。
 
 ## <a name="remarks"></a>Remarks
 
-これらのテンプレート クラスと関数には、パフォーマンス向上を目的として特別な許容度が認められています。 型を返す関数は具体的には、すべて`valarray<T1>`いくつかその他の T2 型のオブジェクトを返す可能性があります。 その場合は、型の 1 つまたは複数の引数を受け取る関数すべて`valarray<T2>`を任意の組み合わせの T2 型の引数にそれぞれ置き換えられます。 これらの引数を受け取るオーバー ロードがあります。
+これらのテンプレート クラスと関数には、パフォーマンス向上を目的として特別な許容度が認められています。 具体的には、型`valarray<T1>`を返す関数は、他の型 T2 のオブジェクトを返す場合があります。 この場合、型`valarray<T2>`の1つ以上の引数を受け取る関数は、これらの引数の任意の組み合わせを受け入れるオーバーロードを持つ必要があります。これらの引数はそれぞれ、T2 型の引数で置き換えられます。
 
 ## <a name="members"></a>メンバー
 
@@ -89,15 +89,15 @@ ms.locfileid: "68246653"
 |[mask_array Class](../standard-library/mask-array-class.md)|サブセット配列間の演算を提供することにより、ブール式で指定された親 valarray のサブセットとして機能するオブジェクトをサポートする、内部の補助テンプレート クラス。|
 |[slice Class](../standard-library/slice-class.md)|valarray のベクター的 1 次元サブセットを定義するのに使用する valarray のユーティリティ クラス。|
 |[slice_array Class](../standard-library/slice-array-class.md)|valarray のスライスで定義されるサブセット配列間の演算を提供することによりスライス オブジェクトをサポートする、内部の補助テンプレート クラス。|
-|[valarray クラス](../standard-library/valarray-class.md)|このテンプレート クラスは、型の要素のシーケンスを制御するオブジェクトを表します`Type`を配列として格納され、計算パフォーマンス用に最適化された高速の数学的演算を実行するために設計されています。|
+|[valarray クラス](../standard-library/valarray-class.md)|このテンプレートクラスは、配列として格納され、高速`Type`な数学的演算を実行するように設計され、計算パフォーマンスに最適化された、型の要素のシーケンスを制御するオブジェクトを表します。|
 
 ### <a name="specializations"></a>特殊化
 
 |||
 |-|-|
-|[valarray\<bool> クラス](../standard-library/valarray-bool-class.md)|テンプレート クラス valarray に特化したバージョン\<**型**> 型の要素を**bool**します。|
+|[valarray\<bool> クラス](../standard-library/valarray-bool-class.md)|テンプレートクラス valarray\<**型**の特殊化されたバージョンは、 **bool**型の要素に > ます。|
 
 ## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)<br/>
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)\
+[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

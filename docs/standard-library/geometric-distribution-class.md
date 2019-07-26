@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::geometric_distribution [C++], param_type
 - std::geometric_distribution [C++], param_type
 ms.assetid: 38f933af-3b49-492e-9d26-b6b272a60013
-ms.openlocfilehash: 115d1c6f3298ea08b7c97061d37d4e27829247ea
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: ead6382e61066a72f97eacea91bba5b38aa00677
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450672"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453934"
 ---
 # <a name="geometricdistribution-class"></a>geometric_distribution クラス
 
@@ -66,11 +66,11 @@ public:
 
 ### <a name="parameters"></a>パラメーター
 
-*IntType*<br/>
-整数の結果の型の既定値**int**します。使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
+*IntType*\
+整数の結果型、既定値は**int**です。使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
 
-*URNG*<br/>
-Uniform random number generator エンジン。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
+*URNG*\
+均一乱数ジェネレーターエンジン。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
 
 ## <a name="remarks"></a>Remarks
 
@@ -220,10 +220,10 @@ explicit geometric_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>パラメーター
 
-*P*<br/>
+*irtran-p*\
 `p` 分布パラメーター。
 
-*parm*<br/>
+*parm*\
 分布の作成に使用されるパラメーターの構造体。
 
 ### <a name="remarks"></a>Remarks
@@ -251,10 +251,10 @@ struct param_type {
 
 ### <a name="parameters"></a>パラメーター
 
-*P*<br/>
+*irtran-p*\
 `p` 分布パラメーター。
 
-*right*<br/>
+*そうです*\
 これと比較する `param_type` インスタンス。
 
 ### <a name="remarks"></a>Remarks
@@ -265,4 +265,4 @@ struct param_type {
 
 ## <a name="see-also"></a>関連項目
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

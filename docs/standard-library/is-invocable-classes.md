@@ -15,16 +15,16 @@ helpviewer_keywords:
 - is_nothrow_invocable
 - is_nothrow_invocable_r class
 - is_nothrow_invocable_r
-ms.openlocfilehash: bb5e75a897029ded2e00e491d93d2df41a3e115b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 20fec55fc3ad1924ee85db3b2f78812e4847f447
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62336232"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456228"
 ---
 # <a name="isinvocable-isinvocabler-isnothrowinvocable-isnothrowinvocabler-classes"></a>is_invocable、is_invocable_r、is_nothrow_invocable、is_nothrow_invocable_r クラス
 
-これらのテンプレートは、指定した引数型と型を呼び出すことができるかどうかを決定します。 `is_invocable_r` `is_nothrow_invocable_r`も呼び出しの結果が特定の型に変換できるかを判断します。 `is_nothrow_invocable` `is_nothrow_invocable_r`呼び出しが例外をスローしていない既知のかどうかを決定することもできます。 C++ 17 で追加されます。
+これらのテンプレートは、指定された引数の型を使用して型を呼び出すことができるかどうかを判断します。 `is_invocable_r``is_nothrow_invocable_r`また、呼び出しの結果が特定の型に変換可能かどうかを判断します。 `is_nothrow_invocable`また`is_nothrow_invocable_r` 、呼び出しが例外をスローしないことがわかっているかどうかを判断します。 C++ 17 で追加されました。
 
 ## <a name="syntax"></a>構文
 
@@ -61,26 +61,26 @@ inline constexpr bool is_nothrow_invocable_r_v =
 
 ### <a name="parameters"></a>パラメーター
 
-*呼び出し可能*<br/>
+*呼び出し可能*\
 照会する呼び出し可能型。
 
-*Args*<br/>
-クエリを実行する引数の型。
+*Value*\
+照会する引数の型。
 
-*変換可能*<br/>
-結果の種類の*Callable*に変換できる必要があります。
+*コンバーチブル*\
+*呼び出し*可能の結果を変換できる型である必要があります。
 
 ## <a name="remarks"></a>Remarks
 
-`is_invocable`場合型の述語は true を保持呼び出し可能型*Callable*引数を使用して呼び出すことができます*Args*未評価のコンテキストでします。
+型`is_invocable`の述語は、未評価の*コンテキストで引数*引数を使用して呼び出し可能*な型を*呼び出すことができる場合に true を保持します。
 
-`is_invocable_r`場合型の述語は true を保持呼び出し可能型*Callable*引数を使用して呼び出すことができます*Args*を結果に変換できる型を生成するために、評価されないコンテキストで*変換できる*します。
+型`is_invocable_r`述語は、未評価の*コンテキストで引数*引数を使用して呼び出し可能な型を呼び*出すことが*できる場合に true を保持し、*変換*可能に変換可能な結果型を生成します。
 
-`is_nothrow_invocable`場合型の述語は true を保持呼び出し可能型*Callable*引数を使用して呼び出すことができます*Args*未評価のコンテキストでは、このような呼び出しは例外をスローしないとする呼ばれます。
+型`is_nothrow_invocable`の述語は、評価されないコンテキスト*で引数引数*を使用して呼び出し可能な型を呼び出すこと*ができ、* そのような呼び出しが例外をスローしないことがわかっている場合に、true を保持します。
 
-`is_nothrow_invocable_r`場合型の述語は true を保持呼び出し可能型*Callable*引数を使用して呼び出すことができます*Args*を結果に変換できる型を生成するために、評価されないコンテキストで*変換できる*、このような呼び出しが例外をスローしていない既知であるとします。
+型`is_nothrow_invocable_r`の述語は、未評価のコンテキストで引数*Args*を使用して呼び出し可能な型を呼び*出すことが*できる場合に true を保持し、*変換*可能に変換可能な結果型を生成し、そのような呼び出しがスローされないことを知らせます。例外。
 
-各種類*コンバーチブル*、 *Callable*、パラメーター パック内の型と*Args*は完全な型、不明なバインドは、の配列または cv で修飾された可能性があるにする必要があります**void**します。 それ以外の場合、述語の動作は定義されません。
+型*変換*可能、*呼び出し*可能、およびパラメーターパック*引数*の型はそれぞれ、完全な型、不明な型の配列、または cv で修飾された**void**型である必要があります。 それ以外の場合、述語の動作は未定義です。
 
 ## <a name="example"></a>例
 
@@ -122,5 +122,5 @@ int main()
 
 ## <a name="see-also"></a>関連項目
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[invoke](functional-functions.md#invoke)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[スタンド](functional-functions.md#invoke)

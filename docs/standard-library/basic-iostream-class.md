@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - basic_iostream class
 ms.assetid: 294b680b-eb49-4066-8db2-6d52dac9d6e3
-ms.openlocfilehash: 80aad69f05b7473b508447d6f69f1d92edbeeca3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 052271e2e2cc929875489e27abde2147bc5c070a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400644"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68460095"
 ---
 # <a name="basiciostream-class"></a>basic_iostream クラス
 
@@ -75,17 +75,17 @@ basic_iostream();
 
 ### <a name="parameters"></a>パラメーター
 
-*strbuf*<br/>
+*strbuf*\
 既存の `basic_streambuf` オブジェクト。
 
-*right*<br/>
+*そうです*\
 新しい `basic_iostream` の構築に使用される既存の `basic_iostream` オブジェクト
 
 ### <a name="remarks"></a>Remarks
 
 最初のコンストラクターが `basic_istream(strbuf)` および `basic_ostream(strbuf)` を使用してベース オブジェクトを初期化します。
 
-2 番目のコンス トラクターを呼び出してベース オブジェクトを初期化します`move(right)`します。
+2番目のコンストラクターは、を呼び`move(right)`出すことによって、ベースオブジェクトを初期化します。
 
 ## <a name="op_eq"></a>  basic_iostream::operator=
 
@@ -97,12 +97,12 @@ basic_iostream& operator=(basic_iostream&& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*right*<br/>
+*そうです*\
 割り当て元の `basic_iostream` オブジェクトへの `rvalue` 参照。
 
 ### <a name="remarks"></a>Remarks
 
-メンバーの演算子呼び出し`swap(right)`します。
+このメンバー演算子は`swap(right)`、を呼び出します。
 
 ## <a name="swap"></a>  basic_iostream::swap
 
@@ -114,15 +114,15 @@ void swap(basic_iostream& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*right*<br/>
+*そうです*\
 交換する `basic_iostream` オブジェクト。
 
 ### <a name="remarks"></a>Remarks
 
-メンバー関数の呼び出し`swap(right)`します。
+このメンバー関数は`swap(right)`を呼び出します。
 
 ## <a name="see-also"></a>関連項目
 
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[iostream プログラミング](../standard-library/iostream-programming.md)<br/>
-[iostreams の規則](../standard-library/iostreams-conventions.md)<br/>
+[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[iostream プログラミング](../standard-library/iostream-programming.md)\
+[iostreams の規則](../standard-library/iostreams-conventions.md)

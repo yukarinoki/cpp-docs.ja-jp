@@ -11,12 +11,12 @@ helpviewer_keywords:
 - std::fpos [C++], seekpos
 - std::fpos [C++], state
 ms.assetid: ffd0827c-fa34-47f4-b10e-5cb707fcde47
-ms.openlocfilehash: 78b136d72067fa5fff58e8a7acc044fb4e1a409e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 60d7d00e6b9426df9b3086d9b82deaf1fdd1463c
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159458"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454154"
 ---
 # <a name="fpos-class"></a>fpos クラス
 
@@ -24,7 +24,7 @@ ms.locfileid: "62159458"
 
 - [streamoff](../standard-library/ios-typedefs.md#streamoff) 型のバイト オフセット。
 
-- Basic_filebuf クラスのオブジェクトによって使用される型の変換状態`St`、通常`mbstate_t`します。
+- 型`St`の basic_filebuf クラスのオブジェクトによって使用される変換状態 (通常は`mbstate_t`)。
 
 [basic_filebuf](../standard-library/basic-filebuf-class.md) クラスのオブジェクトで使用するために、`fpos_t` 型の任意のファイル位置も格納できます。 ただし、ファイル サイズが制限された環境では、`streamoff` と `fpos_t` が区別されずに使用される場合があります。 状態依存のエンコードを使用したストリームがない環境では、実際に `mbstate_t` が使用されていない場合があります。 したがって、格納されるメンバー オブジェクトの数が異なる場合があります。
 
@@ -37,7 +37,7 @@ class fpos
 
 ### <a name="parameters"></a>パラメーター
 
-*Statetype*<br/>
+*Statetype*\
 状態情報。
 
 ### <a name="constructors"></a>コンストラクター
@@ -83,20 +83,20 @@ fpos(Statetype _State, fpos_t _Filepos);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Off*<br/>
+*オフ (_r)* \
 ストリームへのオフセット。
 
-*_State*<br/>
+*状態 (_c)* \
 `fpos` オブジェクトの開始状態。
 
-*_Filepos*<br/>
+*ファイル (_f)* \
 ストリームへのオフセット。
 
 ### <a name="remarks"></a>Remarks
 
-最初のコンス トラクターのオフセットを格納する *_Off*(必要に応じて) の場合、初期の変換状態にあるファイルの先頭からの相対します。 場合 *_Off* -1 で、結果のオブジェクトが、無効なストリームの位置を表します。
+1つ目のコンストラクターは、ファイルの先頭と初期の変換状態 (それが重要な場合) に相対的に、オフセットを*オフ*にします。 *Off*が-1 の場合、結果として得られるオブジェクトは無効なストリームの位置を表します。
 
-2 番目のコンス トラクターがゼロのオフセットとオブジェクトを格納 *_State*します。
+2番目のコンストラクターは、0オフセットとオブジェクトの*状態*を格納します。
 
 ## <a name="op_neq"></a>  fpos::operator!=
 
@@ -108,7 +108,7 @@ bool operator!=(const fpos<Statetype>& right) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*right*<br/>
+*そうです*\
 比較するファイル位置インジケーター。
 
 ### <a name="return-value"></a>戻り値
@@ -181,7 +181,7 @@ fpos<Statetype> operator+(streamoff _Off) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*_Off*<br/>
+*オフ (_r)* \
 ファイル位置インジケーターをインクリメントするオフセット。
 
 ### <a name="return-value"></a>戻り値
@@ -206,7 +206,7 @@ fpos<Statetype>& operator+=(streamoff _Off);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Off*<br/>
+*オフ (_r)* \
 ファイル位置インジケーターをインクリメントするオフセット。
 
 ### <a name="return-value"></a>戻り値
@@ -233,10 +233,10 @@ fpos<Statetype> operator-(streamoff _Off) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*right*<br/>
+*そうです*\
 ファイルの位置。
 
-*_Off*<br/>
+*オフ (_r)* \
 ストリームのオフセット。
 
 ### <a name="return-value"></a>戻り値
@@ -257,7 +257,7 @@ fpos<Statetype>& operator-=(streamoff _Off);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Off*<br/>
+*オフ (_r)* \
 ストリームのオフセット。
 
 ### <a name="return-value"></a>戻り値
@@ -282,7 +282,7 @@ bool operator==(const fpos<Statetype>& right) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*right*<br/>
+*そうです*\
 比較するファイル位置インジケーター。
 
 ### <a name="return-value"></a>戻り値
@@ -356,7 +356,7 @@ void state(Statetype _State);
 
 ### <a name="parameters"></a>パラメーター
 
-*_State*<br/>
+*状態 (_c)* \
 新しい変換状態。
 
 ### <a name="return-value"></a>戻り値
@@ -365,7 +365,7 @@ void state(Statetype _State);
 
 ### <a name="remarks"></a>Remarks
 
-最初のメンバー関数に格納されている値を返します、`St`メンバー オブジェクトです。 2 番目のメンバー関数は *_State*で、`St`メンバー オブジェクトです。
+1つ目のメンバー関数は、 `St`メンバーオブジェクトに格納されている値を返します。 2番目のメンバー 関数は、 `St`メンバーオブジェクトに状態を格納します。
 
 ### <a name="example"></a>例
 
@@ -394,6 +394,6 @@ int main() {
 
 ## <a name="see-also"></a>関連項目
 
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[iostream プログラミング](../standard-library/iostream-programming.md)<br/>
-[iostreams の規則](../standard-library/iostreams-conventions.md)<br/>
+[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[iostream プログラミング](../standard-library/iostream-programming.md)\
+[iostreams の規則](../standard-library/iostreams-conventions.md)

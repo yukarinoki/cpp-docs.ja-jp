@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - new header
 ms.assetid: 218e2a15-34e8-4ef3-9122-1e90eccf8559
-ms.openlocfilehash: bc873f278461fcdc6dbb42e7c968c691e3dc7f73
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 6155a89c9cbba67ce27253aa64ff70ca7871e748
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243551"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457683"
 ---
 # <a name="ltnewgt"></a>&lt;new&gt;
 
@@ -33,7 +33,7 @@ ms.locfileid: "68243551"
 
 |||
 |-|-|
-|[nothrow](../standard-library/new-functions.md#nothrow)|引数として使用するオブジェクトを提供します、 **nothrow**のバージョンの**新しい**と**削除**します。|
+|[nothrow](../standard-library/new-functions.md#nothrow)|**Nothrow**バージョンの**new**および**delete**の引数として使用されるオブジェクトを提供します。|
 
 ### <a name="typedefs"></a>Typedef
 
@@ -76,5 +76,5 @@ ms.locfileid: "68243551"
 
 ## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)<br/>
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)\
+[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

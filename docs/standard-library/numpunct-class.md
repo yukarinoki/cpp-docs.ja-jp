@@ -30,12 +30,12 @@ helpviewer_keywords:
 - std::numpunct [C++], thousands_sep
 - std::numpunct [C++], truename
 ms.assetid: 73fb93cc-ac11-4c98-987c-bfa6267df596
-ms.openlocfilehash: 6084392c5cae151f6c7111fbe9fe7a45e103b74d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c23f23172894ce0b5adcbff1d2db58c78caf7a03
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62371478"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454193"
 ---
 # <a name="numpunct-class"></a>numpunct クラス
 
@@ -50,7 +50,7 @@ class numpunct : public locale::facet;
 
 ### <a name="parameters"></a>パラメーター
 
-*CharType*<br/>
+*CharType*\
 ロケールの文字をエンコードするためにプログラム内で使用される型。
 
 ## <a name="remarks"></a>Remarks
@@ -76,7 +76,7 @@ class numpunct : public locale::facet;
 |-|-|
 |[decimal_point](#decimal_point)|小数点として使用するロケール固有の要素を返します。|
 |[do_decimal_point](#do_decimal_point)|小数点として使用するロケール固有の要素を返すために呼び出されるプロテクト仮想メンバー関数。|
-|[do_falsename](#do_falsename)|プロテクト仮想メンバー関数の値のテキスト表現として使用する文字列を返すために呼び出される**false**します。|
+|[do_falsename](#do_falsename)|値**false**のテキスト表現として使用する文字列を返すために呼び出されるプロテクト仮想メンバー関数。|
 |[do_grouping](#do_grouping)|小数点の左側の数字をグループ化する方法を決定するロケール固有の規則を返すために呼び出されるプロテクト仮想メンバー関数。|
 |[do_thousands_sep](#do_thousands_sep)|桁区切り記号として使用するロケール固有の要素を返すために呼び出されるプロテクト仮想メンバー関数。|
 |[do_truename](#do_truename)|**true** 値のテキスト表現として使用する文字列を返すために呼び出されるプロテクト仮想メンバー関数。|
@@ -200,7 +200,7 @@ virtual string do_grouping() const;
 
 ### <a name="example"></a>例
 
-例をご覧ください[グループ化](#grouping)で仮想メンバー関数が呼び出される、`grouping`します。
+[グループ化](#grouping)の例を参照してください。ここで、仮想`grouping`メンバー関数はによって呼び出されます。
 
 ## <a name="do_thousands_sep"></a>  numpunct::do_thousands_sep
 
@@ -216,7 +216,7 @@ virtual CharType do_thousands_sep() const;
 
 ### <a name="remarks"></a>Remarks
 
-プロテクト仮想メンバー関数は、型のロケール固有の要素を返します`CharType`小数点の左側に桁区切り記号として使用します。
+プロテクト仮想メンバー関数は、小数点の左側にある`CharType`桁区切り記号として使用する型のロケール固有の要素を返します。
 
 ### <a name="example"></a>例
 
@@ -250,7 +250,7 @@ string_type falsename() const;
 
 ### <a name="return-value"></a>戻り値
 
-文字列のシーケンスを含む`CharType`値のテキスト表現として使用する**false**します。
+値 false のテキスト表現と`CharType`して使用するのシーケンスを格納している文字列。
 
 ### <a name="remarks"></a>Remarks
 
@@ -345,22 +345,22 @@ explicit numpunct(size_t _Refs = 0);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Refs*<br/>
+*参照 (_c)* \
 オブジェクトのメモリ管理の種類を指定するために使用する整数値。
 
 ### <a name="remarks"></a>Remarks
 
-使用可能な値を *_Refs*パラメーターとその重要性は。
+*Refs*パラメーターに指定できる値とその意味は、次のとおりです。
 
-- 0:オブジェクトの有効期間は、それが含まれるロケールによって管理されます。
+- 0オブジェクトの有効期間は、オブジェクトが含まれているロケールによって管理されます。
 
 - 1:オブジェクトの有効期間は、手動で管理する必要があります。
 
-- \> 1:これらの値が定義されていません。
+- \>1:これらの値は定義されていません。
 
 デストラクターが保護されているため、利用できる直接的な例はありません。
 
-コンス トラクターを使用してその基本オブジェクトを初期化します**ロケール::**[ファセット](../standard-library/locale-class.md#facet_class)(`_Refs`)。
+コンストラクターは、 **locale::** [facet](../standard-library/locale-class.md#facet_class)(`_Refs`) を使用して、その基本オブジェクトを初期化します。
 
 ## <a name="string_type"></a>  numpunct::string_type
 
@@ -468,6 +468,6 @@ French_France.1252 falsename false
 
 ## <a name="see-also"></a>関連項目
 
-[\<locale>](../standard-library/locale.md)<br/>
-[facet クラス](../standard-library/locale-class.md#facet_class)<br/>
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[\<locale>](../standard-library/locale.md)\
+[facet クラス](../standard-library/locale-class.md#facet_class)\
+[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

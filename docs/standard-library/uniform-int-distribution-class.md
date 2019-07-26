@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::uniform_int_distribution [C++], param_type
 - std::uniform_int_distribution [C++], param_type
 ms.assetid: a1867dcd-3bd9-4787-afe3-4b62692c1d04
-ms.openlocfilehash: 5e37f21e19be730d3437507e83f2417fa2dc020a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1307f64fb5f92b59337665d108d950b28c6ff63e
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348173"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454953"
 ---
 # <a name="uniformintdistribution-class"></a>uniform_int_distribution クラス
 
@@ -71,8 +71,8 @@ public:
 
 ### <a name="parameters"></a>パラメーター
 
-*IntType*<br/>
-整数の結果の型の既定値**int**します。使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
+*IntType*\
+整数の結果型、既定値は**int**です。使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
 
 ## <a name="remarks"></a>Remarks
 
@@ -191,20 +191,20 @@ explicit uniform_int_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>パラメーター
 
-*a*<br/>
+*ある*\
 乱数値の下限 (包含的)。
 
-*b*<br/>
+*b*\
 乱数値の上限 (包含的)。
 
-*parm*<br/>
+*parm*\
 分布の作成に使用される `param_type` の構造体。
 
 ### <a name="remarks"></a>Remarks
 
 **前提条件:** `a ≤ b`
 
-最初のコンス トラクターは、オブジェクトを構築します。 がストアド *、* 値を保持 *、* し、そのストアド*b*値を保持*b*します。
+1つ目のコンストラクターは、値*を*保持し、格納さ*れて*いる*b*値が値*b*を保持するオブジェクトを構築します。
 
 2 つ目のコンストラクターは、格納されているパラメーターが *parm* から初期化されるオブジェクトを作成します。 `param()` メンバー関数を呼び出すと、既存の分布の現在のパラメーターを取得および設定できます。
 
@@ -227,13 +227,13 @@ struct param_type {
 
 ### <a name="parameters"></a>パラメーター
 
-*a*<br/>
+*ある*\
 乱数値の下限 (包含的)。
 
-*b*<br/>
+*b*\
 乱数値の上限 (包含的)。
 
-*right*<br/>
+*そうです*\
 このオブジェクトと比較する `param_type` オブジェクト。
 
 ### <a name="remarks"></a>Remarks
@@ -244,4 +244,4 @@ struct param_type {
 
 ## <a name="see-also"></a>関連項目
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

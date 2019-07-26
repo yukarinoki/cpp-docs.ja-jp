@@ -31,12 +31,12 @@ f1_keywords:
 - ratio/std::deci
 - ratio/std::deca
 ms.assetid: 8543e912-2d84-45ea-b3c0-bd7bfacee405
-ms.openlocfilehash: 4279aa75bf4e9b8a0c7a86f102f70164bbb620e0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f84bea2e3f4a01bb9428eddde3efbf53b73bc2f3
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62369634"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458166"
 ---
 # <a name="ltratiogt"></a>&lt;ratio&gt;
 
@@ -48,7 +48,7 @@ ms.locfileid: "62369634"
 #include <ratio>
 ```
 
-### <a name="ratio-template"></a>テンプレートの比率
+### <a name="ratio-template"></a>比率テンプレート
 
 ```cpp
 template<std::intmax_t Numerator, std::intmax_t Denominator = 1>
@@ -60,7 +60,7 @@ struct ratio // holds the ratio of Numerator to Denominator
 }
 ```
 
-テンプレート`ratio`、静的な定数を定義します。`num`と`den`ように`num`  /  `den`分子を = =/分母と`num`と`den`の一般的な要因があるありません。 `num` / `den` テンプレート クラスによって表される値です。 そのため、`type`をインスタンス化を指定`ratio<num, den>`します。
+`den`この`ratio` テンプレートは`num` 、 ==`num`分子/分母とであり、`den`共通の要因を持たない静的定数を定義します。 `den` `num`  /  `num` / `den`は、テンプレートクラスによって表される値です。 したがって`type` 、はインスタンス`ratio<num, den>`化を指定します。
 
 ### <a name="specializations"></a>特殊化
 
@@ -85,7 +85,7 @@ struct ratio // holds the ratio of Numerator to Denominator
 
 ### <a name="typedefs"></a>typedef
 
-便宜上は、ヘッダーは、標準の SI プレフィックスの比率を定義します。
+便宜上、ヘッダーは標準の SI プレフィックスの比率を定義します。
 
 ```cpp
 typedef ratio<1, 1000000000000000000> atto;
@@ -108,4 +108,4 @@ typedef ratio<1000000000000000000, 1> exa;
 
 ## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)<br/>
+[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)

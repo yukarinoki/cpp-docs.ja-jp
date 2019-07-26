@@ -7,12 +7,12 @@ helpviewer_keywords:
 - alignment_of class
 - alignment_of
 ms.assetid: 4141c59a-f94e-41c4-93fd-9ea578b27387
-ms.openlocfilehash: 2633749a72ceeea197579dca4300b58250f60d73
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5222e70965db69d33ec62039bf9013a52d145705
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411085"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456444"
 ---
 # <a name="alignmentof-class"></a>alignment_of クラス
 
@@ -27,12 +27,12 @@ struct alignment_of;
 
 ### <a name="parameters"></a>パラメーター
 
-*Ty*<br/>
+*~* \
 照会する型。
 
 ## <a name="remarks"></a>Remarks
 
-型のクエリは、型の配置の値を保持*Ty*します。
+型クエリは、型*Ty*のアラインメントの値を保持します。
 
 ## <a name="requirements"></a>必要条件
 
@@ -42,5 +42,5 @@ struct alignment_of;
 
 ## <a name="see-also"></a>関連項目
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[aligned_storage クラス](../standard-library/aligned-storage-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[aligned_storage クラス](../standard-library/aligned-storage-class.md)

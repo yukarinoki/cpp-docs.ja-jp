@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::exponential_distribution [C++], param_type
 - std::exponential_distribution [C++], param_type
 ms.assetid: d54f3126-a09b-45f9-a30b-0d94d03bcdc9
-ms.openlocfilehash: a8dd8168075a0fff3b61154098c0bee100961f98
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 8fd47b6acd4d991741f7ae45332d6cacc1903977
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66451248"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457879"
 ---
 # <a name="exponentialdistribution-class"></a>exponential_distribution クラス
 
@@ -67,15 +67,15 @@ public:
 
 ### <a name="parameters"></a>パラメーター
 
-*RealType*<br/>
-浮動小数点の結果の型の既定値**二重**します。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
+*RealType*\
+浮動小数点演算の結果の型。既定値は**double**です。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
 
-*URNG*<br/>
-Random number generator エンジン。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
+*URNG*\
+乱数ジェネレーターエンジン。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
 
 ## <a name="remarks"></a>Remarks
 
-このテンプレート クラスは、ユーザー指定の整数値を生成する分布を表します型、または型**二重**がない場合は指数分布に従って分布します。 次の表は、個々のメンバーに関する記事にリンクしています。
+このテンプレートクラスは、指数分布に従って分布した、ユーザー指定の整数型の値、または指定されていない場合は**double**型の値を生成する分布を表します。 次の表は、個々のメンバーに関する記事にリンクしています。
 
 ||||
 |-|-|-|
@@ -182,10 +182,10 @@ explicit exponential_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>パラメーター
 
-*lambda*<br/>
+*ラムダ*\
 `lambda` 分布パラメーター。
 
-*parm*<br/>
+*parm*\
 分布の作成に使用されるパラメーター パッケージ。
 
 ### <a name="remarks"></a>Remarks
@@ -213,10 +213,10 @@ struct param_type {
 
 ### <a name="parameters"></a>パラメーター
 
-*lambda*<br/>
+*ラムダ*\
 `lambda` 分布パラメーター。
 
-*right*<br/>
+*そうです*\
 このオブジェクトと比較する `param_type` オブジェクト。
 
 ### <a name="remarks"></a>Remarks
@@ -227,4 +227,4 @@ struct param_type {
 
 ## <a name="see-also"></a>関連項目
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

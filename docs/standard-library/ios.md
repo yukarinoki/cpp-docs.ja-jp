@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - ios header
 ms.assetid: d3d4c161-2f37-4f04-93cc-0a2a89984a9c
-ms.openlocfilehash: 013888a1ae11042645ef48c4fae15cbe6c2d939f
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 96e8588e72e864d5324e406859e5a39053a46ccf
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245236"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449134"
 ---
 # <a name="ltiosgt"></a>&lt;ios&gt;
 
@@ -25,11 +25,11 @@ iostream 操作の基礎となる型と関数を定義します。 このヘッ�
 **名前空間:** std
 
 > [!NOTE]
-> \<Ios > ライブラリを使用して、`#include <iosfwd>`ステートメント。
+> Ios > ライブラリでは、 `#include <iosfwd>`ステートメントを使用します。 \<
 
 ## <a name="remarks"></a>Remarks
 
-マニピュレーターとは、多種類の関数のグループです。 \<ios> 内で宣言されたマニピュレーターは、[ios_base](../standard-library/ios-base-class.md) クラスの引数オブジェクトに格納された値を変更します。 その他のマニピュレーターは、[basic_istream](../standard-library/basic-istream-class.md) と [basic_ostream](../standard-library/basic-ostream-class.md) のいずれかのテンプレート クラスの特殊化など、ios_base クラスから派生した型のオブジェクトによって制御されるストリームに対して操作を実行します。 たとえば、 [noskipws](../standard-library/ios-functions.md#noskipws)(**str**) 形式フラグをクリアします`ios_base::skipws`オブジェクトで`str`、これらの型のいずれかのこともあります。
+マニピュレーターとは、多種類の関数のグループです。 \<ios> 内で宣言されたマニピュレーターは、[ios_base](../standard-library/ios-base-class.md) クラスの引数オブジェクトに格納された値を変更します。 その他のマニピュレーターは、[basic_istream](../standard-library/basic-istream-class.md) と [basic_ostream](../standard-library/basic-ostream-class.md) のいずれかのテンプレート クラスの特殊化など、ios_base クラスから派生した型のオブジェクトによって制御されるストリームに対して操作を実行します。 たとえば、 [noskipws](../standard-library/ios-functions.md#noskipws)(**str**) は、オブジェクト`ios_base::skipws` `str`の format フラグをクリアします。これは、次のいずれかの型になります。
 
 マニピュレーターは、出力ストリームに挿入したり、入力ストリームから抽出したりすることでも呼び出すことができます。これは、`ios_base` から派生したクラスに特殊な挿入演算子と抽出演算子が指定されるためです。 例えば:
 
@@ -101,7 +101,7 @@ istr>> noskipws;
 
 ## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)<br/>
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[iostream プログラミング](../standard-library/iostream-programming.md)<br/>
-[iostreams の規則](../standard-library/iostreams-conventions.md)<br/>
+[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)\
+[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[iostream プログラミング](../standard-library/iostream-programming.md)\
+[iostreams の規則](../standard-library/iostreams-conventions.md)

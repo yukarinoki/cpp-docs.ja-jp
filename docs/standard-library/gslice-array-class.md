@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - gslice_array class
 ms.assetid: ad1b4514-b14a-4baf-a293-d5a8e8674c75
-ms.openlocfilehash: 1485b68f29651c0c42048fea02a8320ced8748aa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 37c54d09fdfe920c832c4baa7984fee4e090d04a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159557"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448926"
 ---
 # <a name="gslicearray-class"></a>gslice_array クラス
 
@@ -54,15 +54,15 @@ public:
 
 ## <a name="remarks"></a>Remarks
 
-クラスは、オブジェクトへの参照を格納するオブジェクトを表します`va`クラスの[valarray](../standard-library/valarray-class.md)**\<型 >**、オブジェクトと共に`gs`クラスの[gslice](../standard-library/gslice-class.md)から選択する要素のシーケンスを説明する、`valarray<Type>`オブジェクト。
+クラスは、> クラス`va` [valarray](../standard-library/valarray-class.md) **\<型**のオブジェクトへの参照、および選択する要素のシーケンスを記述する`gs`クラス[gslice](../standard-library/gslice-class.md)のオブジェクトへの参照を格納するオブジェクトを表します。`valarray<Type>`オブジェクト。
 
-構築する、`gslice_array<Type>`オブジェクト形式の式を記述するだけ[va&#91;gs&#93;](../standard-library/valarray-class.md#op_at)します。 クラス gslice_array のメンバー関数に対して定義された対応する関数のシグネチャのように動作します`valarray<Type>`選択した要素のシーケンスだけが影響を受けることを除いて、します。
+オブジェクトを`gslice_array<Type>`構築するには、 [va&#91;g&#93;](../standard-library/valarray-class.md#op_at)の形式の式を記述する必要があります。 クラス gslice_array のメンバー関数は、に対し`valarray<Type>`て定義されている対応する関数シグネチャのように動作します。ただし、選択した要素のシーケンスのみが影響を受けます。
 
 テンプレート クラスは、特定の valarray 操作によって間接的に作成されており、プログラムで直接使用することはできません。 代わりに、スライスの添字演算子によって、内部の補助テンプレート クラスが使用されます。
 
-`gslice_array`\< **Type**> `valarray`\< **Type**>:: `operator[]` ( **constgslice&**)
+`gslice_array`\< **Type**> `valarray`\< **Type**>:: `operator[]` ( **constgslice&** )
 
-構築する、`gslice_array<Type>`オブジェクト形式の式を記述するだけ`va[gsl]`、スライスの`gsl`valarray の`va`します。 クラス gslice_array のメンバー関数に対して定義された対応する関数のシグネチャのように動作します`valarray<Type>`選択した要素のシーケンスだけが影響を受けることを除いて、します。 gslice_array によって制御されるシーケンスは、スライスのコンストラクターの 3 つのパラメーター (最初のスライス内の最初の要素のインデックス、各スライス内の要素の数、各スライス内の要素間の距離) によって定義されます。
+オブジェクトを`gslice_array<Type>`構築するには、valarray `va`のスライス`gsl`に`va[gsl]`対してフォームの式を記述する必要があります。 クラス gslice_array のメンバー関数は、に対し`valarray<Type>`て定義されている対応する関数シグネチャのように動作します。ただし、選択した要素のシーケンスのみが影響を受けます。 gslice_array によって制御されるシーケンスは、スライスのコンストラクターの 3 つのパラメーター (最初のスライス内の最初の要素のインデックス、各スライス内の要素の数、各スライス内の要素間の距離) によって定義されます。
 
 次に例を示します。
 
@@ -89,4 +89,4 @@ slice_array の宣言方法や使用例については、[gslice::gslice](../sta
 
 ## <a name="see-also"></a>関連項目
 
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

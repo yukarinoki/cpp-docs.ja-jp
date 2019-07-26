@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - codecvt_base class
 ms.assetid: 7e95c083-91b4-4b3f-8918-0d4ea244a040
-ms.openlocfilehash: 6f957c39f9c78fd182b7ba2a14bdab7f27db56ac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1a32ba5e583fdb20118a3397f1ddb326302f2de1
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405301"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459389"
 ---
 # <a name="codecvtbase-class"></a>codecvt_base クラス
 
-列挙型を定義するために使用される codecvt クラスの基本クラスとして参照`result`変換の結果を示すためにファセットのメンバー関数の戻り値の型として使用されます。
+と`result`呼ばれる列挙型を定義するために使用される codecvt クラスの基本クラスです。これは、変換の結果を示すためにファセットメンバー関数の戻り値の型として使用されます。
 
 ## <a name="syntax"></a>構文
 
@@ -40,11 +40,11 @@ protected:
 
 このクラスは、テンプレート クラス [codecvt](../standard-library/codecvt-class.md) のすべての特殊化に共通する列挙型を表します。 列挙の結果には、次のような [do_in](../standard-library/codecvt-class.md#do_in) または [do_out](../standard-library/codecvt-class.md#do_out) からの可能な戻り値が示されます。
 
-- `ok` 内部および外部の文字エン コードの間の変換が成功するとします。
+- `ok`内部と外部の文字エンコーディングの変換が成功した場合。
 
-- `partial` 場合は、変換先が変換を正常に十分な大きさではありません。
+- `partial`変換先が、変換を成功させるのに十分な大きさでない場合は。
 
-- `error` ソース シーケンスが無効である場合は、次の形式。
+- `error`ソースシーケンスの形式が正しくない場合は。
 
 - 関数で変換が行われない場合は、`noconv`。
 
@@ -56,4 +56,4 @@ protected:
 
 ## <a name="see-also"></a>関連項目
 
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

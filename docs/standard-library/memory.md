@@ -7,12 +7,12 @@ f1_keywords:
 - std::<memory>
 helpviewer_keywords:
 - memory header
-ms.openlocfilehash: d2776e658b511208d9a295cd84a961d7691d29e0
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 7c30a44de70675af69648fdba79325a173ab62fc
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246809"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451888"
 ---
 # <a name="ltmemorygt"></a>&lt;memory&gt;
 
@@ -48,9 +48,9 @@ ms.locfileid: "68246809"
 |[declare_no_pointers](../standard-library/memory-functions.md#declare_no_pointers)|指定されたアドレスを先頭とする指定されたブロック サイズの範囲内にある文字が、追跡可能なポインターを含まないことをガベージ コレクターに通知します。|
 |[declare_reachable](../standard-library/memory-functions.md#declare_reachable)|指定されたアドレスが、割り当てられたストレージのアドレスであり、そのストレージに到達可能であることをガベージ コレクションに通知します。|
 |[default_delete](../standard-library/memory-functions.md#default_delete)|`operator new` を使用して割り当てられたオブジェクトを削除します。 `unique_ptr` での使用に適しています。|
-|[destroy_at](../standard-library/memory-functions.md#destroy_at)|短縮形`destroy`メソッド。|
-|[destroy](../standard-library/memory-functions.md#destroy)|短縮形`destroy`メソッド。|
-|[destroy_n](../standard-library/memory-functions.md#destroy_n)|短縮形`destroy`メソッド。|
+|[destroy_at](../standard-library/memory-functions.md#destroy_at)|省略`destroy`形のメソッド。|
+|[destroy](../standard-library/memory-functions.md#destroy)|省略`destroy`形のメソッド。|
+|[destroy_n](../standard-library/memory-functions.md#destroy_n)|省略`destroy`形のメソッド。|
 |[dynamic_pointer_cast](../standard-library/memory-functions.md#dynamic_pointer_cast)|`shared_ptr` への動的キャストを行います。|
 |[get_deleter](../standard-library/memory-functions.md#get_deleter)|`shared_ptr` から削除子を取得します。|
 |[get_pointer_safety](../standard-library/memory-functions.md#get_pointer_safety)|ガベージ コレクターが想定するポインターの安全性の種類を返します。|
@@ -65,14 +65,14 @@ ms.locfileid: "68246809"
 |[undeclare_reachable](../standard-library/memory-functions.md#undeclare_reachable)|指定されたメモリ位置に到達できないことを `garbage_collector` に通知します。|
 |[uninitialized_copy](../standard-library/memory-functions.md#uninitialized_copy)|指定された入力範囲にあるオブジェクトを、初期化されていないコピー先の範囲にコピーします。|
 |[uninitialized_copy_n](../standard-library/memory-functions.md#uninitialized_copy_n)|入力反復子から、指定した数の要素のコピーを作成します。 コピーは前方反復子に格納されます。|
-|[uninitialized_default_construct](../standard-library/memory-functions.md#uninitialized_default_construct)|短縮形`uninitialized_default_construct`メソッド。|
-|[uninitialized_default_construct_n](../standard-library/memory-functions.md#uninitialized_default_construct_n)|短縮形`uninitialized_construct`メソッド。|
+|[uninitialized_default_construct](../standard-library/memory-functions.md#uninitialized_default_construct)|省略`uninitialized_default_construct`形のメソッド。|
+|[uninitialized_default_construct_n](../standard-library/memory-functions.md#uninitialized_default_construct_n)|省略`uninitialized_construct`形のメソッド。|
 |[uninitialized_fill](../standard-library/memory-functions.md#uninitialized_fill)|指定された値のオブジェクトを、初期化されていないコピー先の範囲にコピーします。|
 |[uninitialized_fill_n](../standard-library/memory-functions.md#uninitialized_fill_n)|指定された値のオブジェクトを、初期化されていないコピー先の範囲にある指定された数の要素にコピーします。|
-|[uninitialized_move](../standard-library/memory-functions.md#uninitialized_move)|短縮形`uninitialized_move`メソッド。|
-|[uninitialized_move_n](../standard-library/memory-functions.md#uninitialized_move_n)|短縮形`uninitialized_move`メソッド。|
-|[uninitialized_value_construct](../standard-library/memory-functions.md#uninitialized_value_construct)|短縮形`uninitialized_value_construct`メソッド。|
-|[uninitialized_value_construct_n](../standard-library/memory-functions.md#uninitialized_value_construct_n)|短縮形`uninitialized_value_construct`メソッド。|
+|[uninitialized_move](../standard-library/memory-functions.md#uninitialized_move)|省略`uninitialized_move`形のメソッド。|
+|[uninitialized_move_n](../standard-library/memory-functions.md#uninitialized_move_n)|省略`uninitialized_move`形のメソッド。|
+|[uninitialized_value_construct](../standard-library/memory-functions.md#uninitialized_value_construct)|省略`uninitialized_value_construct`形のメソッド。|
+|[uninitialized_value_construct_n](../standard-library/memory-functions.md#uninitialized_value_construct_n)|省略`uninitialized_value_construct`形のメソッド。|
 |[uses_allocator_v](../standard-library/memory-functions.md#uses_allocator_v)||
 
 ### <a name="operators"></a>演算子
@@ -93,7 +93,7 @@ ms.locfileid: "68246809"
 |-|-|
 |[allocator](../standard-library/allocator-class.md)|このテンプレート クラスは、**Type** 型のオブジェクトの配列に対し、ストレージの割り当てと解放を管理するオブジェクトを記述します。|
 |[allocator_traits](../standard-library/allocator-traits-class.md)|アロケーター対応のコンテナーが必要とするすべての情報を指定したオブジェクトを記述します。|
-|[auto_ptr](../standard-library/auto-ptr-class.md)|このテンプレート クラスは、割り当てられた型のオブジェクトへのポインターを格納するオブジェクトを表します**型** <strong>\*</strong>確実に、囲んでいる auto_ptr を取得するポイントが削除された取得オブジェクト破棄されます。|
+|[auto_ptr](../standard-library/auto-ptr-class.md)|このテンプレートクラスは **、型** <strong>\*</strong>の割り当てられたオブジェクトへのポインターを格納するオブジェクトを表します。このオブジェクトは、それを囲む auto_ptr が破棄されるときに、そのオブジェクトが確実に削除されるようにします。|
 |[bad_weak_ptr](../standard-library/bad-weak-ptr-class.md)|weak_ptr が無効であることを示す例外を報告します。|
 |[enabled_shared_from_this](../standard-library/enable-shared-from-this-class.md)|`shared_ptr` の生成を支援します。|
 |[pointer_traits](../standard-library/pointer-traits-struct.md)|`allocator_traits` テンプレート クラスのオブジェクトが、ポインター型 `Ptr` を持つアロケーターを記述するために必要とする情報を提供します。|
@@ -120,5 +120,5 @@ ms.locfileid: "68246809"
 
 ## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)<br/>
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)\
+[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

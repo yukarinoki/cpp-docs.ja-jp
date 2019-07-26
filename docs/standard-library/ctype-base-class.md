@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - ctype_base class
 ms.assetid: ccffe891-d7ab-4d22-baf8-8eb6d438a96d
-ms.openlocfilehash: 83ef35f9fac438cfa217decf222abd365ff84269
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f23b9528cf9a921e1d005756aa82751f3fdb745e
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394183"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449359"
 ---
 # <a name="ctypebase-class"></a>ctype_base クラス
 
@@ -69,7 +69,7 @@ struct ctype_base : public locale::facet
 
 - **graph** (関数 [isgraph](../standard-library/locale-functions.md#isgraph))
 
-これらの定数を OR 演算することで、分類の組み合わせを特徴付けることができます。 具体的には、常に true には**alnum** = = (**アルファ** &#124; **桁**\)と**グラフ** \=\= \( **alnum** &#124; **punct**)。
+これらの定数を OR 演算することで、分類の組み合わせを特徴付けることができます。 特に、 **alnum** = = ( **alpha** &#124; **digit** \) and **graph** \= \= \(  alnum &#124; **punct**) は常に true です。
 
 ## <a name="requirements"></a>必要条件
 
@@ -79,4 +79,4 @@ struct ctype_base : public locale::facet
 
 ## <a name="see-also"></a>関連項目
 
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

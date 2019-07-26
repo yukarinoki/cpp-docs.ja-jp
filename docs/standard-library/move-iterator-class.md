@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::move_iterator [C++], reference
 - std::move_iterator [C++], base
 ms.assetid: a5e5cdd8-a264-4c6b-9f9c-68b0e8edaab7
-ms.openlocfilehash: 3e2e62946325c082e761b6997ae584419175f8fe
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 4a173ea022f21c454d8edd66f94d2d9b14faa4e1
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346195"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68460224"
 ---
 # <a name="moveiterator-class"></a>move_iterator クラス
 
@@ -54,9 +54,9 @@ class move_iterator;
 |型名|説明|
 |-|-|
 |[iterator_type](#iterator_type)|テンプレート パラメーター `RandomIterator` のシノニム。|
-|[iterator_category](#iterator_category)|長いのシノニム**typename** 、同じ名前の式`iterator_category`反復子の汎用機能を識別します。|
-|[value_type](#value_type)|長いのシノニム**typename** 、同じ名前の式`value_type`は反復子要素の型を表します。|
-|[difference_type](#difference_type)|長いのシノニム**typename** 、同じ名前の式`difference_type`差分値を表す要素の間に必要な整数の型について説明します。|
+|[iterator_category](#iterator_category)|同じ名前の長い**typename**式のシノニムは、 `iterator_category`反復子の一般的な機能を識別します。|
+|[value_type](#value_type)|同じ名前の長い**typename**式のシノニムは、反復子`value_type`要素の型を表します。|
+|[difference_type](#difference_type)|同じ名前の長い**typename**式のシノニムは、 `difference_type`要素間の差の値を表現するために必要な整数型を表します。|
 |[pointer](#pointer)|テンプレート パラメーター `RandomIterator` のシノニム。|
 |[reference](#reference)|`rvalue` 参照 `value_type&&` のシノニム。|
 
@@ -147,7 +147,7 @@ move_iterator(const move_iterator<Type>& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*right*<br/>
+*そうです*\
 格納されている反復子として使用する反復子。
 
 ### <a name="remarks"></a>Remarks
@@ -164,7 +164,7 @@ move_iterator& operator+=(difference_type _Off);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Off*<br/>
+*オフ (_r)* \
 新しい現在位置を決定するために現在位置に追加するオフセット。
 
 ### <a name="return-value"></a>戻り値
@@ -173,7 +173,7 @@ move_iterator& operator+=(difference_type _Off);
 
 ### <a name="remarks"></a>Remarks
 
-演算子は、追加 *_Off*に格納された反復子。 その後、`*this` を返します。
+演算子は、格納されている反復子にを追加します *(_s)* 。 その後、`*this` を返します。
 
 ## <a name="operator-_eq"></a>  move_iterator::operator-=
 
@@ -291,7 +291,7 @@ pointer operator->() const;
 
 ## <a name="pointer"></a>  move_iterator::pointer
 
-型`pointer`は、 **typedef**ランダム反復子に基づく`RandomIterator`の`move_iterator`、同意語として使用できます。
+この型`pointer`は、  `RandomIterator` の`move_iterator`ランダム反復子に基づく typedef であり、同義に使用できます。
 
 ```cpp
 typedef RandomIterator  pointer;
@@ -303,7 +303,7 @@ typedef RandomIterator  pointer;
 
 ## <a name="reference"></a>  move_iterator::reference
 
-型`reference`は、 **typedef**に基づいて`value_type&&`の`move_iterator`とで同じ意味で使用できる`value_type&&`します。
+`reference`型は、の`value_type&&` `value_type&&`  に基づくtypedefであり、と同じ意味で使用できます。`move_iterator`
 
 ```cpp
 typedef value_type&& reference;
@@ -327,7 +327,7 @@ typedef typename iterator_traits<RandomIterator>::value_type   value_type;
 
 ## <a name="see-also"></a>関連項目
 
-[\<iterator>](../standard-library/iterator.md)<br/>
-[左辺値と右辺値](../cpp/lvalues-and-rvalues-visual-cpp.md)<br/>
-[移動コンストラクターと移動代入演算子 (C++)](../cpp/move-constructors-and-move-assignment-operators-cpp.md)<br/>
-[C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)<br/>
+[\<iterator>](../standard-library/iterator.md)\
+[左辺値と右辺値](../cpp/lvalues-and-rvalues-visual-cpp.md)\
+[移動コンストラクターと移動代入演算子 (C++)](../cpp/move-constructors-and-move-assignment-operators-cpp.md)\
+[C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)

@@ -8,22 +8,22 @@ helpviewer_keywords:
 - _SCL_SECURE_NO_DEPRECATE
 - _SCL_SECURE_NO_WARNINGS
 ms.assetid: ef0ddea9-7c62-4b53-8b64-5f4fd369776f
-ms.openlocfilehash: 77c60aed511fc3dbbea2d74e83e36dae735dcb0e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d19d47fe7120301740e1431765fc6edbeaa48c60
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348309"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448193"
 ---
 # <a name="sclsecurenowarnings"></a>_SCL_SECURE_NO_WARNINGS
 
-C++ 標準ライブラリで安全でないメソッドのいずれかの呼び出しの結果[コンパイラの警告 (レベル 3) C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)します。 この警告を無効にするには、コードでマクロ _SCL_SECURE_NO_WARNINGS を定義します。
+C++標準ライブラリ内の安全でない可能性のあるメソッドを呼び出すと、[コンパイラの警告 (レベル 3) C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)が発生します。 この警告を無効にするには、コードでマクロ _SCL_SECURE_NO_WARNINGS を定義します。
 
 ```cpp
 #define _SCL_SECURE_NO_WARNINGS
 ```
 
-プリコンパイル済みヘッダーを使用する場合は、任意の C ランタイム ライブラリまたは標準ライブラリ ヘッダーをインクルードする前に、このディレクティブをプリコンパイル済みヘッダー ファイル内に配置します。 配置した場合に、個々 のソース コード ファイルでプリコンパイル済みヘッダー ファイルをインクルードする前に、コンパイラによって無視されます。
+プリコンパイル済みヘッダーを使用する場合は、C ランタイムライブラリまたは標準ライブラリヘッダーを含める前に、このディレクティブをプリコンパイル済みヘッダーファイルに配置します。 プリコンパイル済みヘッダーファイルをインクルードする前に個々のソースコードファイルに配置すると、コンパイラによって無視されます。
 
 ## <a name="remarks"></a>Remarks
 
@@ -43,7 +43,7 @@ C++ 標準ライブラリで安全でないメソッドのいずれかの呼び�
    #pragma warning(disable:4996)
    ```
 
-また、**/w\<l>\<n>** コンパイラ オプションを使用して、警告 C4996 のレベルを手動で変更できます。 たとえば、警告 C4996 をレベル 4 に設定します。
+また、 **/w\<l>\<n>** コンパイラ オプションを使用して、警告 C4996 のレベルを手動で変更できます。 たとえば、警告 C4996 をレベル 4 に設定します。
 
 > cl /w44996 [other compiler options] myfile.cpp
 
@@ -51,4 +51,4 @@ C++ 標準ライブラリで安全でないメソッドのいずれかの呼び�
 
 ## <a name="see-also"></a>関連項目
 
-[安全なライブラリ: C++ 標準ライブラリ](../standard-library/safe-libraries-cpp-standard-library.md)<br/>
+[安全なライブラリ: C++ 標準ライブラリ](../standard-library/safe-libraries-cpp-standard-library.md)

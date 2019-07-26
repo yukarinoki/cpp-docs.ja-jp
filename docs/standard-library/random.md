@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - random header
 ms.assetid: 60afc25c-b162-4811-97c1-1b65398d4c57
-ms.openlocfilehash: 1448ad2b703aa6dcf26fad2e4adcbeb2aec2c956
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 5738a1ea5ab950466f347090649e72471edf5608
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240414"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458295"
 ---
 # <a name="ltrandomgt"></a>&lt;random&gt;
 
@@ -19,12 +19,12 @@ ms.locfileid: "68240414"
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー**:\<ランダム >
+**ヘッダー**: \<ランダム >
 
 **名前空間:** std
 
 > [!NOTE]
-> \<ランダム > ライブラリを使用して、' #include < initializer_list > include' ステートメント。
+> \<ランダム > ライブラリでは、' #include < initializer_list > ' ステートメントが使用されます。
 
 ## <a name="summary"></a>まとめ
 
@@ -42,7 +42,7 @@ ms.locfileid: "68240414"
 
 ### <a name="quick-tips"></a>簡単なヒント
 
-いくつかのヒントを使用する場合に留意する\<ランダム >:
+ランダム > を使用\<する場合に留意すべきヒントを次に示します。
 
 - ほとんどの場合、URNG は分布で成形される必要がある生のビットを生成します (主な例外は、[std::shuffle()](../standard-library/algorithm-functions.md#shuffle) で、理由は URNG を直接使用するからです)。
 
@@ -52,7 +52,7 @@ ms.locfileid: "68240414"
 
 - 大部分のアプリケーションに対して最も役立つ組み合わせは、`mt19937` エンジンと `uniform_int_distribution` の組み合わせです (この記事の後の方にある[コード例](#code)に示されています)。
 
-多くのオプションがある、 \<random > ヘッダー、およびこれらのいずれかが期限切れの C ランタイム関数のことをお勧め`rand()`します。 スクリプトに問題がについて`rand()`とどのように\<ランダム > これらの欠点を補いを参照してください[このビデオ](https://go.microsoft.com/fwlink/p/?linkid=397615)。
+\<ランダム > ヘッダーから選択できるオプションは多数あります。これらのオプションのいずれかは、古い C ランタイム関数`rand()`よりも適しています。 の問題`rand()`と、それらの欠陥に対する\<ランダム > の対処方法については、こちらの[ビデオ](https://go.microsoft.com/fwlink/p/?linkid=397615)を参照してください。
 
 ## <a name="code"></a> 例
 
@@ -211,17 +211,17 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 
 ## <a name="listing"></a> 分類別一覧
 
-###  <a name="urngs"></a> Uniform Random Number Generator
+###  <a name="urngs"></a>Uniform Random Number ジェネレーター
 
 URNG は、次の特性においてよく説明されます。
 
-1. **期間の長さ**:繰り返し回数を生成された数値のシーケンスを繰り返すかかります。 長いほど良いです。
+1. **期間の長さ**:生成された数のシーケンスを繰り返すために必要な反復回数。 長いほど良いです。
 
-2. **パフォーマンス**:メモリのサイズと数を生成できる時間かかります。 値が小さいほど良いです。
+2. **パフォーマンス**:数値を生成する速度と、必要なメモリの量。 値が小さいほど良いです。
 
-3. **品質**:生成されたシーケンスが真の乱数に近い方法。 これは通常 "*ランダム性*" と呼ばれます。
+3. **品質**:生成されたシーケンスの真の乱数に近い。 これは通常 "*ランダム性*" と呼ばれます。
 
-次のセクションでは、一覧の uniform random number generator (Urng) で提供される、 \<random > ヘッダー。
+次のセクションでは、 \<ランダム > ヘッダーで提供される uniform random number ジェネレーター (urng) について説明します。
 
 ####  <a name="rd"></a> 非確定的なジェネレーター
 
@@ -329,7 +329,7 @@ URNG は、次の特性においてよく説明されます。
 
 ###  <a name="distributions"></a> 乱数分布
 
-次のセクションでは、一覧で提供されている分布、 \<random > ヘッダー。 分布は後処理メカニズムであり、通常は入力として URNG 出力を使用し、定義された統計的確率密度関数によって出力を分布させます。 詳細については、「[エンジンと分布](#engdist)」をご覧ください。
+次のセクションでは、 \<ランダム > ヘッダーで提供されるディストリビューションについて説明します。 分布は後処理メカニズムであり、通常は入力として URNG 出力を使用し、定義された統計的確率密度関数によって出力を分布させます。 詳細については、「[エンジンと分布](#engdist)」をご覧ください。
 
 #### <a name="uniform-distributions"></a>一様分布
 
@@ -345,7 +345,7 @@ URNG は、次の特性においてよく説明されます。
 
 |||
 |-|-|
-|[bernoulli_distribution クラス](../standard-library/bernoulli-distribution-class.md)|ベルヌイ分布を作成**bool**値。|
+|[bernoulli_distribution クラス](../standard-library/bernoulli-distribution-class.md)|**Bool**値のベルヌーイ分布を生成します。|
 |[binomial_distribution クラス](../standard-library/binomial-distribution-class.md)|整数値の二項分布を作成します。|
 |[geometric_distribution クラス](../standard-library/geometric-distribution-class.md)|整数値の幾何分布を作成します。|
 |[negative_binomial_distribution クラス](../standard-library/negative-binomial-distribution-class.md)|整数値の負の二項分布を作成します。|
@@ -358,7 +358,7 @@ URNG は、次の特性においてよく説明されます。
 |-|-|
 |[cauchy_distribution クラス](../standard-library/cauchy-distribution-class.md)|実数 (浮動小数点) 値のコーシー分布を作成します。|
 |[chi_squared_distribution クラス](../standard-library/chi-squared-distribution-class.md)|実数 (浮動小数点) 値のカイ 2 乗分布を作成します。|
-|[fisher_f_distribution クラス](../standard-library/fisher-f-distribution-class.md)|フィッシャー分布 (スネデカーのフィッシャー分布またはフィッシャー-スネデカー分布とも呼ばれます) の実数 (浮動小数点) 値を生成します。|
+|[fisher_f_distribution クラス](../standard-library/fisher-f-distribution-class.md)|実数 (浮動小数点) 値の F 分布 (スネデカー分布の F 分布またはスネデカー分布分布とも呼ばれます) を生成します。|
 |[lognormal_distribution クラス](../standard-library/lognormal-distribution-class.md)|実数 (浮動小数点) 値の対数正規分布を作成します。|
 |[normal_distribution クラス](../standard-library/normal-distribution-class.md)|実数 (浮動小数点) 値の正規 (ガウス) 分布を作成します。|
 |[student_t_distribution クラス](../standard-library/student-t-distribution-class.md)|実数 (浮動小数点) 値のスチューデントの *t* 分布を作成します。|
@@ -389,7 +389,7 @@ URNG は、次の特性においてよく説明されます。
 
 ### <a name="utility-functions"></a>ユーティリティ関数
 
-このセクションで提供される一般的なユーティリティ関数を一覧表示、 \<random > ヘッダー。
+このセクションでは、 \<ランダム > ヘッダーで提供される一般的なユーティリティ関数の一覧を示します。
 
 |||
 |-|-|
@@ -397,7 +397,7 @@ URNG は、次の特性においてよく説明されます。
 
 ### <a name="operators"></a>演算子
 
-このセクションで提供される演算子の一覧を\<random > ヘッダー。
+このセクションでは、 \<ランダム > ヘッダーで提供される演算子の一覧を示します。
 
 |||
 |-|-|
@@ -408,13 +408,13 @@ URNG は、次の特性においてよく説明されます。
 
 ## <a name="engdist"></a> エンジンと分布
 
-定義されているこれらのテンプレート クラス カテゴリのそれぞれについては、次のセクションを参照してください\<ランダム >。 これらのテンプレート クラス カテゴリではいずれも引数として型を受け取り、共有のテンプレート パラメーター名を使って、実引数の型として許可されている、次の型のプロパティを表します。
+ランダム > で\<定義されているこれらのテンプレートクラスカテゴリのそれぞれについては、次のセクションを参照してください。 これらのテンプレート クラス カテゴリではいずれも引数として型を受け取り、共有のテンプレート パラメーター名を使って、実引数の型として許可されている、次の型のプロパティを表します。
 
-- `IntType` 示す、**短い**、 **int**、**長い**、 **long**、 **unsigned short**、 **符号なし int**、 **unsigned long**、または**unsigned long long 型**します。
+- `IntType`**short**、 **int**、 **long**、 **long long**、 **unsigned short**、 **unsigned int**、 **unsigned long**、または**unsigned long long**を示します。
 
-- `UIntType` 示します**unsigned short**、**符号なし int**、 **unsigned long**、または**unsigned long long 型**します。
+- `UIntType`**unsigned short**、 **unsigned int**、 **unsigned long**、または**unsigned long long**を示します。
 
-- `RealType` 示す、 **float**、**二重**、または**long double**します。
+- `RealType`**float**、 **double**、または**long double**を示します。
 
 ### <a name="engines"></a>エンジン
 
@@ -509,4 +509,4 @@ ISO C++ 標準では `random_device` が暗号的に安全であることは要�
 
 ## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)<br/>
+[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)

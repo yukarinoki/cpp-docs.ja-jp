@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - exception header
 ms.assetid: 28900768-5dd7-4834-b907-5e37ab3407db
-ms.openlocfilehash: 5036f2efc782c3b2f385960cd9cbf6935212f720
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 681baee5ac5d19e8b3ffdf37c37599c9cb68f253
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240767"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457900"
 ---
 # <a name="ltexceptiongt"></a>&lt;exception&gt;
 
@@ -42,11 +42,11 @@ ms.locfileid: "68240767"
 |[get_unexpected](../standard-library/exception-functions.md#get_unexpected)|現在の `unexpected_handler` 関数を取得します。|
 |[make_exception_ptr](../standard-library/exception-functions.md#make_exception_ptr)|例外のコピーを保持する `exception_ptr` オブジェクトを作成します。|
 |[rethrow_exception](../standard-library/exception-functions.md#rethrow_exception)|パラメーターとして渡された例外をスローします。|
-|[rethrow_if_nested](../standard-library/exception-functions.md#rethrow_if_nested)|キャストし、入れ子になった例外をスローします。|
+|[rethrow_if_nested](../standard-library/exception-functions.md#rethrow_if_nested)|入れ子になっている場合は、をキャストし、例外をスローします。|
 |[set_terminate](../standard-library/exception-functions.md#set_terminate)|プログラムの終了時に呼び出される新しい `terminate_handler` を設定します。|
 |[set_unexpected](../standard-library/exception-functions.md#set_unexpected)|予期しない例外が発生したときに新しい `unexpected_handler` が存在するように設定します。|
 |[terminate](../standard-library/exception-functions.md#terminate)|終了ハンドラーを呼び出します。|
-|[throw_with_nested](../standard-library/exception-functions.md#throw_with_nested)|入れ子になった場合は、例外をスローします。|
+|[throw_with_nested](../standard-library/exception-functions.md#throw_with_nested)|入れ子になっている場合は例外をスローします。|
 |[uncaught_exception](../standard-library/exception-functions.md#uncaught_exception)|スローされた例外が現在処理されている場合にのみ **true** を返します。|
 |[unexpected](../standard-library/exception-functions.md#unexpected)|予期しないハンドラーを呼び出します。|
 
@@ -56,9 +56,9 @@ ms.locfileid: "68240767"
 |-|-|
 |[bad_exception クラス](../standard-library/bad-exception-class.md)|このクラスは、`unexpected_handler` からスローされる例外を記述します。|
 |[exception クラス](../standard-library/exception-class.md)|このクラスは、特定の式と C++ 標準ライブラリによってスローされたすべての例外の基底クラスとして機能します。|
-|[nested_exception クラス](../standard-library/nested-exception-class.md)|クラスは、キャプチャおよび格納されているは、後で使用できる例外を表します。|
+|[nested_exception クラス](../standard-library/nested-exception-class.md)|クラスは、後で使用するためにキャプチャして格納できる例外を記述します。|
 
 ## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)<br/>
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)\
+[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

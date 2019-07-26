@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - bad_exception class
 ms.assetid: 5ae2c4ef-c7ad-4469-8a9e-a773e86bb000
-ms.openlocfilehash: a568a8d9a3817883656406d63c3dd948539bb385
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 5741b3aa255f915500f5fe79ab5374c8c86f8814
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68268524"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68460184"
 ---
 # <a name="nestedexception-class"></a>nested_exception クラス
 
-このクラスは、多重継承で使用するため、例外を表します。 現在処理されている例外をキャプチャし、後で使用するため保存します。
+クラスは、多重継承で使用する例外を記述します。 現在処理されている例外をキャプチャし、後で使用できるように格納します。
 
 ## <a name="syntax"></a>構文
 
@@ -43,13 +43,13 @@ class nested_exception {
 |[rethrow_nested](#rethrow_nested)|格納されている例外をスローします。|
 |[nested_ptr](#nested_ptr)|格納されている例外を返します。|
 
-### <a name="op_as"></a> 演算子 =
+### <a name="op_as"></a>operator =
 
 ```cpp
 nested_exception& operator=(const nested_exception&) = default;
 ```
 
-### <a name="nested_ptr"></a> nested_ptr
+### <a name="nested_ptr"></a>nested_ptr
 
 ```cpp
 exception_ptr nested_ptr() const;
@@ -57,9 +57,9 @@ exception_ptr nested_ptr() const;
 
 #### <a name="return-value"></a>戻り値
 
-これによってキャプチャされた、格納されている例外`nested_exception`オブジェクト。
+この`nested_exception`オブジェクトによってキャプチャされた格納された例外。
 
-### <a name="rethrow_nested"></a> rethrow_nested
+### <a name="rethrow_nested"></a>rethrow_nested
 
 ```cpp
 [[noreturn]] void rethrow_nested() const;
@@ -67,7 +67,7 @@ exception_ptr nested_ptr() const;
 
 #### <a name="remarks"></a>Remarks
 
-場合`nested_ptr()`、関数は null ポインターを返します`std::terminate()`します。 によってキャプチャされた、格納されている例外をスローしますそれ以外の場合、`*this`します。
+が`nested_ptr()` null ポインターを返す場合、関数は`std::terminate()`を呼び出します。 それ以外の場合は、によって`*this`キャプチャされた格納済みの例外をスローします。
 
 ## <a name="requirements"></a>必要条件
 
@@ -77,5 +77,5 @@ exception_ptr nested_ptr() const;
 
 ## <a name="see-also"></a>関連項目
 
-[exception クラス](../standard-library/exception-class.md)<br/>
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[exception クラス](../standard-library/exception-class.md)\
+[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

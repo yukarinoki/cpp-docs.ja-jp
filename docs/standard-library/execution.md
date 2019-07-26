@@ -1,21 +1,21 @@
 ---
-title: '&lt;実行&gt;'
+title: '&lt;例外&gt;'
 ms.date: 04/18/2019
 f1_keywords:
 - <execution>
 - std::<execution>
 helpviewer_keywords:
 - execution header
-ms.openlocfilehash: 3bce34019f9ed4880d72a9d16c3c8b78dde0e0e3
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 3b0ccd540c56500c2f265aa6192a12fc2d5078b0
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68268424"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457970"
 ---
-# <a name="ltexecutiongt"></a>&lt;実行&gt;
+# <a name="ltexecutiongt"></a>&lt;例外&gt;
 
-並列アルゴリズムの実行ポリシーをについて説明します。
+並列アルゴリズムの実行ポリシーについて説明します。
 
 ## <a name="syntax"></a>構文
 
@@ -33,10 +33,10 @@ namespace std::execution {
 
 |||
 |-|-|
-|[is_execution_policy 構造体](is-execution-policy-struct.md)|関数のシグネチャをそれ以外の場合にあいまいなオーバー ロードの解決方法への参加から除外するために実行ポリシーを検出します。|
-|[parallel_policy クラス](parallel-policy-class.md)|並列アルゴリズムのオーバー ロードあいまいさを解消し、並列アルゴリズムの実行を並列化することがあることを示す一意の型として使用されます。|
-|[parallel_unsequenced_policy クラス](parallel-unsequenced-policy-class.md)|並列アルゴリズムの実行の並列化されベクター化ことを示し、並列アルゴリズムのオーバー ロードを明確に一意の型として使用されます。|
-|[sequenced_policy クラス](sequenced-policy-class.md)|並列アルゴリズムのオーバー ロードを区別する、並列アルゴリズムの実行を並列いない可能性がありますを必要とする一意の型として使用されます。|
+|[is_execution_policy 構造体](is-execution-policy-struct.md)|は、あいまいなオーバーロードの解決への参加から、関数シグネチャを除外するための実行ポリシーを検出します。|
+|[parallel_policy クラス](parallel-policy-class.md)|並列アルゴリズムのオーバーロードを明確にするための一意の型として使用され、並列アルゴリズムの実行が並列化される可能性があることを示します。|
+|[parallel_unsequenced_policy クラス](parallel-unsequenced-policy-class.md)|並列アルゴリズムのオーバーロードを明確にするための一意の型として使用され、並列アルゴリズムの実行が並列化され、ベクター化される可能性があることを示します。|
+|[sequenced_policy クラス](sequenced-policy-class.md)|並列アルゴリズムのオーバーロードを明確にするために一意の型として使用され、並列アルゴリズムの実行を並列化できないようにする必要があります。|
 
 ## <a name="requirements"></a>必要条件
 
@@ -46,6 +46,6 @@ namespace std::execution {
 
 ## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](cpp-standard-library-header-files.md)<br/>
-[C++ 標準ライブラリ内のスレッド セーフ](thread-safety-in-the-cpp-standard-library.md)<br/>
+[ヘッダー ファイル リファレンス](cpp-standard-library-header-files.md)\
+[C++ 標準ライブラリ内のスレッド セーフ](thread-safety-in-the-cpp-standard-library.md)\
 [C++ 標準ライブラリ リファレンス](cpp-standard-library-reference.md)

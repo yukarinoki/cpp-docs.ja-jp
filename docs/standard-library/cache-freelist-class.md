@@ -10,12 +10,12 @@ helpviewer_keywords:
 - stdext::cache_freelist [C++], allocate
 - stdext::cache_freelist [C++], deallocate
 ms.assetid: 840694de-36ba-470f-8dae-2b723d5a8cd9
-ms.openlocfilehash: 56fdfb191f9208a5ffa692e1d599545ddeaeb36c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 05260d6800597b64908ff0aeffac47b09fed9a0e
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62352113"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449689"
 ---
 # <a name="cachefreelist-class"></a>cache_freelist クラス
 
@@ -32,14 +32,14 @@ class cache_freelist
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*sz*|割り当てられる配列内の要素の数。|
+|*Sz*|割り当てられる配列内の要素の数。|
 |*Max*|フリー リストの最大サイズを表す max クラスです。 [max_fixed_size](../standard-library/max-fixed-size-class.md)、[max_none](../standard-library/max-none-class.md)、[max_unbounded](../standard-library/max-unbounded-class.md)、[max_variable_size](../standard-library/max-variable-size-class.md) のいずれかにすることができます。|
 
 ## <a name="remarks"></a>Remarks
 
-Cache_freelist テンプレート クラスは、メモリ ブロックのサイズのフリー リストを保持する*Sz*します。 使用して、フリー リストがいっぱいになったとき**delete 演算子**メモリの割り当てを解除するブロックします。 使用して、フリー リストが空の場合**演算子 new**新しいメモリ ブロックを割り当てる。 フリー リストの最大サイズは、クラスに渡される最大クラスによって決まります、*最大*パラメーター。
+Cache_freelist テンプレートクラスは、サイズ*Sz*のメモリブロックの空きリストを保持します。 フリーリストがいっぱいの場合は、 **operator delete**を使用してメモリブロックの割り当てを解除します。 フリーリストが空の場合は、 **operator new**を使用して新しいメモリブロックを割り当てます。 フリーリストの最大サイズは、 *max*パラメーターで渡されるクラス max クラスによって決まります。
 
-各メモリ ブロックを保持*Sz*使用可能なメモリと、データのバイトを**演算子 new**と**delete 演算子**が必要です。
+各メモリブロックは、使用可能なメモリの*Sz*バイトと、 **operator new**および**operator delete**に必要なデータを保持します。
 
 ### <a name="constructors"></a>コンストラクター
 
@@ -109,4 +109,4 @@ void deallocate(void* ptr, std::size_t count);
 
 ## <a name="see-also"></a>関連項目
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)
