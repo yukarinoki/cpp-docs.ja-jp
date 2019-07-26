@@ -10,18 +10,18 @@ f1_keywords:
 - chrono/std::chrono::milliseconds
 - chrono/std::chrono::microseconds
 ms.assetid: 844de749-f306-482e-89bc-6f53c99c8324
-ms.openlocfilehash: 72d16b068f337fe935d07e1eb2d0e2b74de6268f
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: f01b00a1469cdf82590a1bdfc742312ec96912c9
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244864"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459447"
 ---
 # <a name="ltchronogt"></a>&lt;chrono&gt;
 
 期間と時点を表し、操作するクラスと関数を定義するために、標準ヘッダー \<chrono> を含めます。
 
-Visual Studio 2015 での実装を開始`steady_clock`がされと単調性の C++ 標準の要件を満たすために変更します。 現在、`steady_clock` は QueryPerformanceCounter() に基づき、`high_resolution_clock` は `steady_clock` の typedef です。 Microsoft でこの結果、C++コンパイラ`steady_clock::time_point`の typedef は、今すぐ`chrono::time_point<steady_clock>`。 ただし、この規則のその他の実装は必ずしも。
+Visual Studio 2015 以降では、安定性と`steady_clock`単調性のC++標準要件を満たすようにの実装が変更されています。 現在、`steady_clock` は QueryPerformanceCounter() に基づき、`high_resolution_clock` は `steady_clock` の typedef です。 その結果、Microsoft C++コンパイラ`steady_clock::time_point`では、の`chrono::time_point<steady_clock>`typedef になりました。ただし、この規則は、必ずしも他の実装の場合と同じではありません。
 
 ## <a name="requirements"></a>必要条件
 
@@ -76,26 +76,26 @@ Visual Studio 2015 での実装を開始`steady_clock`がされと単調性の C
 
 次の typedef で使用される比率の種類の詳細については、「[\<<ratio>](../standard-library/ratio.md)」を参照してください。
 
-|||||||`typedef duration<long long, nano> nanoseconds;`|シノニム、 `duration` 1 ナノ秒のティックの間隔を持つ型 | |`typedef duration<long long, micro> microseconds;`|。シノニム、 `duration` 1 マイクロ秒のティックの間隔を持つ型 | |`typedef duration<long long, milli> milliseconds;`|。シノニム、`duration`を 1 ミリ秒のティックの間隔を持つ型 | |`typedef duration<long long> seconds;`|。シノニム、`duration`を 1 秒間のティックの間隔を持つ型 | |`typedef duration<int, ratio<60> > minutes;`|。シノニム、`duration`を 1 分のティックの間隔を持つ型 | |`typedef duration<int, ratio<3600> > hours;`|。シノニム、`duration`を 1 時間のティックの間隔を持つ型 |。
+|||||||`typedef duration<long long, nano> nanoseconds;`|ティック間隔が`duration` 1 ナノ秒の型のシノニム。 | | |`typedef duration<long long, micro> microseconds;`ティック間隔が`duration` 1 マイクロ秒の型のシノニム。 | | |`typedef duration<long long, milli> milliseconds;`ティック間隔が`duration` 1 ミリ秒の型のシノニム。 | | |`typedef duration<long long> seconds;`ティック間隔が`duration` 1 秒の型のシノニム。 | | |`typedef duration<int, ratio<60> > minutes;`ティック間隔が`duration` 1 分の型のシノニム。 | | |`typedef duration<int, ratio<3600> > hours;`ティック間隔が`duration` 1 時間の型のシノニム |。
 
 ### <a name="literals"></a>リテラル
 
-**(C++ 11)** 、 \<Chrono > ヘッダーは、次を定義します。[ユーザー定義リテラル](../cpp/user-defined-literals-cpp.md)大きい利便性やタイプ セーフ コードの保守容易性を使用することできます。 これらのリテラルは `literals::chrono_literals` インライン名前空間で定義されており、std::chrono がスコープに含まれている場合にスコープに含まれます。
+**(C++ 11)** Chrono \<> ヘッダーは、コードの利便性、タイプセーフ、および保守性を向上させるために使用できる、次の[ユーザー定義リテラル](../cpp/user-defined-literals-cpp.md)を定義します。 これらのリテラルは `literals::chrono_literals` インライン名前空間で定義されており、std::chrono がスコープに含まれている場合にスコープに含まれます。
 
 |||
 |-|-|
-|時間演算子""h (符号なし long Val)|時間を整数値として指定します。|
-|期間\<二重、比率\<3600 >> 演算子""h (long double Val)|時間を浮動小数点値として指定します。|
-|分 (演算子""min) (符号なし long Val)|分を整数値として指定します。|
-|期間\<二重、比率\<60 >> (演算子""min) (Val と long double 型)|分を浮動小数点値として指定します。|
-|秒演算子""s (符号なし long Val)|分を整数値として指定します。|
-|期間\<double > 演算子""(long double Val) s|秒を浮動小数点値として指定します。|
-|ミリ秒単位の演算子""ms (符号なし long Val)|ミリ秒を整数値として指定します。|
-|期間\<二重、milli > 演算子""ms (long double Val)|ミリ秒を浮動小数点値として指定します。|
-|(マイクロ秒) 演算子""私たち (符号なし long Val)|マイクロ秒を整数値として指定します。|
-|期間\<二重、micro > 演算子""(long double Val) 米国|マイクロ秒を浮動小数点値として指定します。|
-|ナノ秒演算子""ns (符号なし long Val)|ナノ秒を整数値として指定します。|
-|期間\<二重、nano > 演算子""ns (long double Val)|ナノ秒を浮動小数点値として指定します。|
+|hours 演算子 "" h (unsigned long long Val)|時間を整数値として指定します。|
+|duration\<double、比率\<3600 > > operator "" h (long double Val)|時間を浮動小数点値として指定します。|
+|分 (演算子 "" min) (unsigned long long Val)|分を整数値として指定します。|
+|duration\<double、比率\<60 > > (operator "" min) (long double Val)|分を浮動小数点値として指定します。|
+|秒演算子 "" s (unsigned long long Val)|分を整数値として指定します。|
+|duration\<double > 演算子 "" s (long double Val)|秒を浮動小数点値として指定します。|
+|ミリ秒演算子 "" ミリ秒 (unsigned long long Val)|ミリ秒を整数値として指定します。|
+|duration\<double、ミリ > operator "" ミリ秒 (long double Val)|ミリ秒を浮動小数点値として指定します。|
+|マイクロ秒演算子 "" us (unsigned long long Val)|マイクロ秒を整数値として指定します。|
+|duration\<double、micro > operator "" us (long double Val)|マイクロ秒を浮動小数点値として指定します。|
+|ナノ秒演算子 "" ns (unsigned long long Val)|ナノ秒を整数値として指定します。|
+|duration\<double、nano > operator "" ns (long double Val)|ナノ秒を浮動小数点値として指定します。|
 
 chrono リテラルを使用する方法の例を次に示します。
 
@@ -107,4 +107,4 @@ constexpr auto my_duration_unit = 108ms;
 
 ## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)<br/>
+[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)
