@@ -8,19 +8,19 @@ f1_keywords:
 helpviewer_keywords:
 - swap function
 ms.assetid: d8dd6436-fb97-46ed-bec5-052cfd710462
-ms.openlocfilehash: 48238e4a67fb656eac714a8732ee071e26847768
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 8d89a59e90c3e4258c8ca7bf9e981536f3779d4b
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220296"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450334"
 ---
 # <a name="swap-ltsample-containergt"></a>swap (&lt;sample container&gt;)
 
 > [!NOTE]
-> このトピックでは、Microsoft では、C++ドキュメントで使用されるコンテナーの機能の例として、C++標準ライブラリ。 詳細については、「[C++ Standard Library Containers (C++ 標準ライブラリ コンテナ―)](../standard-library/stl-containers.md)」をご覧ください。
+> このトピックは、 C++ C++標準ライブラリで使用されているコンテナーの非機能例として、Microsoft ドキュメントに記載されています。 詳細については、「[C++ Standard Library Containers (C++ 標準ライブラリ コンテナ―)](../standard-library/stl-containers.md)」をご覧ください。
 
-実行`left.`[スワップ](../standard-library/container-class-swap.md)`(right)`します。
+Swap `left.`を`(right)`実行します。 [](../standard-library/container-class-swap.md)
 
 ## <a name="syntax"></a>構文
 
@@ -33,4 +33,4 @@ void swap(
 
 ## <a name="see-also"></a>関連項目
 
-[\<sample container>](../standard-library/sample-container.md)<br/>
+[\<sample container>](../standard-library/sample-container.md)

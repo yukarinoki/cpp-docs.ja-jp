@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::operator&lt; (string)
 - std::operator&lt;&lt; (string)
 - std::operator&lt;= (string), std::operator== (string)
-ms.openlocfilehash: a3ca469058ba65f83b0df60a93c63895e34f916e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bb66e7c0120da9f140ce33da7ecc61299a4d2867
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412359"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459253"
 ---
 # <a name="ltstringgt-operators"></a>&lt;string&gt; 演算子
 
@@ -103,10 +103,10 @@ basic_string<CharType, Traits, Allocator>&& operator+(
 
 ### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左側*\
 連結する C スタイルの文字列または型 `basic_string` のオブジェクト。
 
-*right*<br/>
+*そうです*\
 連結する C スタイルの文字列または型 `basic_string` のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -115,7 +115,7 @@ basic_string<CharType, Traits, Allocator>&& operator+(
 
 ### <a name="remarks"></a>Remarks
 
-関数はそれぞれ `operator+` をオーバーロードして、テンプレート クラス [basic_string クラス](../standard-library/basic-string-class.md)の 2 つのオブジェクトを連結します。 すべては実質的に戻り`basic_string< CharType, Traits, Allocator>(Left).append(right)`します。 詳細については、次を参照してください。[追加](../standard-library/basic-string-class.md#append)します。
+関数はそれぞれ `operator+` をオーバーロードして、テンプレート クラス [basic_string クラス](../standard-library/basic-string-class.md)の 2 つのオブジェクトを連結します。 すべては実質`basic_string< CharType, Traits, Allocator>(Left).append(right)`的にを返します。 詳細については、「 [append](../standard-library/basic-string-class.md#append)」を参照してください。
 
 ### <a name="example"></a>例
 
@@ -192,10 +192,10 @@ bool operator!=(
 
 ### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左側*\
 比較する C スタイルの文字列または `basic_string` 型のオブジェクト。
 
-*right*<br/>
+*そうです*\
 比較する C スタイルの文字列または `basic_string` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -283,10 +283,10 @@ bool operator==(
 
 ### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左側*\
 比較する C スタイルの文字列または `basic_string` 型のオブジェクト。
 
-*right*<br/>
+*そうです*\
 比較する C スタイルの文字列または `basic_string` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -374,10 +374,10 @@ bool operator<(
 
 ### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左側*\
 比較する C スタイルの文字列または `basic_string` 型のオブジェクト。
 
-*right*<br/>
+*そうです*\
 比較する C スタイルの文字列または `basic_string` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -470,10 +470,10 @@ bool operator<=(
 
 ### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左側*\
 比較する C スタイルの文字列または `basic_string` 型のオブジェクト。
 
-*right*<br/>
+*そうです*\
 比較する C スタイルの文字列または `basic_string` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -563,19 +563,19 @@ basic_ostream<CharType, Traits>& operator<<(
 
 ### <a name="parameters"></a>パラメーター
 
-*_Ostr*<br/>
+*_Ostr*\
 書き込み先の出力ストリーム。
 
-*str*<br/>
+*引数*\
 出力ストリームに入力される文字列。
 
 ### <a name="return-value"></a>戻り値
 
-指定した文字列の値を出力ストリームに書き込みます *_Ostr*します。
+指定した文字列の値を出力ストリーム *_Ostr*に書き込みます。
 
 ### <a name="remarks"></a>Remarks
 
-テンプレート関数のオーバー ロード**演算子 <<** オブジェクトを挿入する*str*テンプレート クラスの[basic_string](../standard-library/basic-string-class.md)ストリームに *\_Ostr*します。 関数は効果的に返します`_Ostr.write( str.c_str, str.size )`します。
+テンプレート関数 overloads **operator < <** 、テンプレートクラス[basic_string](../standard-library/basic-string-class.md)のオブジェクト*str*を stream  *\_ostr*に挿入します。 関数は、を`_Ostr.write( str.c_str, str.size )`実質的に返します。
 
 ## <a name="op_gt"></a>  operator&gt;
 
@@ -600,10 +600,10 @@ bool operator>(
 
 ### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左側*\
 比較する C スタイルの文字列または `basic_string` 型のオブジェクト。
 
-*right*<br/>
+*そうです*\
 比較する C スタイルの文字列または `basic_string` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -703,10 +703,10 @@ bool operator>=(
 
 ### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左側*\
 比較する C スタイルの文字列または `basic_string` 型のオブジェクト。
 
-*right*<br/>
+*そうです*\
 比較する C スタイルの文字列または `basic_string` 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -796,21 +796,21 @@ basic_istream<CharType, Traits>& operator>>(
 
 ### <a name="parameters"></a>パラメーター
 
-*_Istr*<br/>
+*_Istr*\
 シーケンスを抽出するために使用する入力ストリーム
 
-*right*<br/>
+*そうです*\
 入力ストリームから抽出される文字列。
 
 ### <a name="return-value"></a>戻り値
 
-指定した文字列の値を読み取ります *_Istr*にそれを返しますと*右*します。
+指定した文字列の値を *_Istr*から読み取り、それを*right*に返します。
 
 ### <a name="remarks"></a>Remarks
 
 `skipws` フラグが設定されていない場合、演算子は先頭の余白をスキップします。 次の文字が余白か、ファイルの終わりに到達するまでは、次のすべての文字を読み取ります。
 
-テンプレート関数のオーバー ロード**演算子 >>** によって制御されるシーケンスを置き換える*右*ストリームから抽出された要素のシーケンスを持つ *_Istr*します。 抽出は、次で停止します。
+テンプレート関数 overloads 演算子は、 *right*によって制御されるシーケンスを、 *_Istr*ストリームから抽出された要素のシーケンスに置き換えるために **> >** します。 抽出は、次で停止します。
 
 - ファイルの終わり。
 
@@ -820,7 +820,7 @@ basic_istream<CharType, Traits>& operator>>(
 
 - 関数が [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype**\< **CharType**> >( `getloc`) の要素 *ch* を抽出した後。 **is**( **ctype**\< **CharType**>:: **space**, *ch*) が true の場合、文字が戻されます。
 
-呼び出す関数が要素を抽出しなかった場合[setstate](../standard-library/basic-ios-class.md#setstate)(`ios_base::failbit`)。 いずれの場合も、 **istr**します。 **幅**(0) を返します\***この**します。
+関数が要素を抽出しなかった場合[](../standard-library/basic-ios-class.md#setstate)は、`ios_base::failbit`setstate () を呼び出します。 どのような場合でも、 **istr**を呼び出します。 **幅**(0) \* **を返します**。
 
 ### <a name="example"></a>例
 
@@ -843,4 +843,4 @@ int main( )
 
 ## <a name="see-also"></a>関連項目
 
-[\<string>](../standard-library/string.md)<br/>
+[\<string>](../standard-library/string.md)

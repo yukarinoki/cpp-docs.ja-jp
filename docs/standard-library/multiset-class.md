@@ -86,12 +86,12 @@ helpviewer_keywords:
 - std::multiset [C++], upper_bound
 - std::multiset [C++], value_comp
 ms.assetid: 630e8c10-0ce9-4ad9-8d79-9e91a600713f
-ms.openlocfilehash: 3b059db877d24f5e4414745ba6c2f9ee4f6591e7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2adfd79a62a89bcfb786e9a1a09b959c45c7af80
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62205087"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448466"
 ---
 # <a name="multiset-class"></a>multiset クラス
 
@@ -106,15 +106,15 @@ class multiset
 
 ### <a name="parameters"></a>パラメーター
 
-*Key*<br/>
+*レジストリ*\
 multiset に格納される要素のデータ型。
 
-*Compare*<br/>
+*対照*\
 2 つの要素の値を並べ替えキーとして比較して、multiset 内の要素の相対順序を決定できる関数オブジェクトを提供する型。 二項述語 **less**\<Key> が既定値です。
 
 C++ 14 では、型パラメーターを使用せずに `std::less<>` 述語または `std::greater<>` 述語を指定することで、異種ルックアップを有効にすることができます。 詳細については、「[連想コンテナーの異種ルックアップ](../standard-library/stl-containers.md#sequence_containers)」をご覧ください。
 
-*アロケーター*<br/>
+*アロケーター*\
 メモリの multiset の割り当てと解放に関する詳細をカプセル化する、格納されたアロケーター オブジェクトを表す型。 既定値は `allocator<Key>` です。
 
 ## <a name="remarks"></a>Remarks
@@ -139,7 +139,7 @@ multiset クラスに用意されている反復子は双方向反復子です�
 
 値とキーを関連付ける条件をアプリケーションが満たしている場合、multiset は最適な連想コンテナーとなっている必要があります。 multiset の要素は複数の場合があり、それ自体の並べ替えキーとして機能する場合があるため、キーは一意ではありません。 この種類の構造体のモデルは、単語が複数回出現する可能性がある単語の順序付きのリストです。 単語が複数回出現することが許可されてない場合は、set が適切なコンテナー構造体となります。 一意の定義が値として一意のキーワードのリストにアタッチされている場合は、map がこのデータを格納するのに適切な構造体です。 定義が一意でない場合は、multimap が最適なコンテナーです。
 
-Multiset が型の格納されている関数オブジェクトを呼び出すことによって、制御するシーケンスを並べ替えます*比較*します。 この格納されているオブジェクトは比較関数であり、メンバー関数 [key_comp](#key_comp) を呼び出すことによってアクセスできます。 通常、要素は、この順序を確立するために小なり比較だけを実行できる必要があります。これにより、2 つの要素が指定されたときに、それらの要素が等しいか (どちらか一方が小さくはない)、または一方が他方より小さいかを判断できます。 この結果、等価でない複数の要素間で順序が付けられます。 テクニカル ノートでは、比較関数は、数学上の標準的な意味で厳密弱順序を発生させる二項述語であると示されています。 二項述語 *f*( *x*, *y*) は、2 つの引数オブジェクト *x* および *y* と戻り値 (**true** または **false**) を持つ関数オブジェクトです。 set に適用される順序付けは、二項述語が非再帰、反対称、推移的であり、等価性が推移的である (2 つのオブジェクト x と y が、*f*( *x,y*) と *f*( *y,x*) の両方が false の場合に等価になるように定義されている) 場合、厳密弱順序になります。 2 つのキーの等値に関する条件が等価性の条件よりも厳しく、優先される場合、順序付けは完全な順序付け (すべての要素が相互の値に基づいて並べ替えられる) となり、一致するそれぞれのキーを識別するのが難しくなります。
+マルチセットは、 *Compare*型の格納された関数オブジェクトを呼び出すことによって、制御するシーケンスを並べ替えます。 この格納されているオブジェクトは比較関数であり、メンバー関数 [key_comp](#key_comp) を呼び出すことによってアクセスできます。 通常、要素は、この順序を確立するために小なり比較だけを実行できる必要があります。これにより、2 つの要素が指定されたときに、それらの要素が等しいか (どちらか一方が小さくはない)、または一方が他方より小さいかを判断できます。 この結果、等価でない複数の要素間で順序が付けられます。 テクニカル ノートでは、比較関数は、数学上の標準的な意味で厳密弱順序を発生させる二項述語であると示されています。 二項述語 *f*( *x*, *y*) は、2 つの引数オブジェクト *x* および *y* と戻り値 (**true** または **false**) を持つ関数オブジェクトです。 set に適用される順序付けは、二項述語が非再帰、反対称、推移的であり、等価性が推移的である (2 つのオブジェクト x と y が、*f*( *x,y*) と *f*( *y,x*) の両方が false の場合に等価になるように定義されている) 場合、厳密弱順序になります。 2 つのキーの等値に関する条件が等価性の条件よりも厳しく、優先される場合、順序付けは完全な順序付け (すべての要素が相互の値に基づいて並べ替えられる) となり、一致するそれぞれのキーを識別するのが難しくなります。
 
 C++ 14 では、型パラメーターを使用せずに `std::less<>` 述語または `std::greater<>` 述語を指定することで、異種ルックアップを有効にすることができます。 詳細については、「[連想コンテナーの異種ルックアップ](../standard-library/stl-containers.md#sequence_containers)」をご覧ください。
 
@@ -154,10 +154,10 @@ C++ 14 では、型パラメーターを使用せずに `std::less<>` 述語ま�
 |型名|説明|
 |-|-|
 |[allocator_type](#allocator_type)|`allocator` オブジェクトの `multiset` クラスの typedef。|
-|[const_iterator](#const_iterator)|読み取ることができる双方向反復子の typedef、 **const**内の要素、`multiset`します。|
-|[const_pointer](#const_pointer)|ポインターの typedef、 **const**内の要素を`multiset`します。|
-|[const_reference](#const_reference)|参照の typedef、 **const**に要素が格納されている、`multiset`読み取りと実行の**const**操作。|
-|[const_reverse_iterator](#const_reverse_iterator)|いずれかを読み取ることができる双方向反復子の typedef **const**内の要素、`multiset`します。|
+|[const_iterator](#const_iterator)|内の`multiset` **const**要素を読み取ることができる双方向反復子の typedef。|
+|[const_pointer](#const_pointer)|内の`multiset` **const**要素へのポインターの typedef。|
+|[const_reference](#const_reference)|読み取りと**const**操作の実行のために、 `multiset`に格納されている const 要素への参照の typedef。|
+|[const_reverse_iterator](#const_reverse_iterator)|内の`multiset`任意の**const**要素を読み取ることができる双方向反復子の typedef。|
 |[difference_type](#difference_type)|反復子が指す要素の範囲内にある `multiset` の要素の数に対する符号付き整数の typedef。|
 |[Iterator](#iterator)|`multiset` 内の任意の要素の読み取りまたは変更ができる双方向反復子の typedef。|
 |[key_compare](#key_compare)|2 つのキーを比較して、`multiset` 内の 2 つの要素の相対順序を決定できる関数オブジェクトの typedef。|
@@ -284,7 +284,7 @@ The first element of ms1 is now 2
 
 ## <a name="cbegin"></a>  multiset::cbegin
 
-返します、 **const**範囲の最初の要素を指す反復子。
+範囲内の最初の要素を指す**定数**反復子を返します。
 
 ```cpp
 const_iterator cbegin() const;
@@ -292,13 +292,13 @@ const_iterator cbegin() const;
 
 ### <a name="return-value"></a>戻り値
 
-A **const**最初の要素の範囲、または空の範囲の末尾の次の場所を指す双方向アクセス反復子 (空の範囲、 `cbegin() == cend()`)。
+範囲の最初の要素、または空の範囲の末尾の次の位置 (空の範囲`cbegin() == cend()`の場合は) を指す、const 双方向アクセス反復子。
 
 ### <a name="remarks"></a>Remarks
 
 `cbegin` の戻り値で範囲内の要素を変更することはできません。
 
-`begin()` メンバー関数の代わりにこのメンバー関数を使用して、戻り値が `const_iterator` になることを保証できます。 通常は、次の例に示すように [auto](../cpp/auto-cpp.md) 型推論キーワードと共に使用します。 例では、検討してください。`Container`に変更可能な (非**const**) をサポートする任意の種類のコンテナー`begin()`と`cbegin()`します。
+`begin()` メンバー関数の代わりにこのメンバー関数を使用して、戻り値が `const_iterator` になることを保証できます。 通常は、次の例に示すように [auto](../cpp/auto-cpp.md) 型推論キーワードと共に使用します。 この例では、 `Container`とをサポート`begin()`する任意の種類の変更可能な (非**定数**) コンテナー `cbegin()`であると見なします。
 
 ```cpp
 auto i1 = Container.begin();
@@ -310,7 +310,7 @@ auto i2 = Container.cbegin();
 
 ## <a name="cend"></a>  multiset::cend
 
-返します、 **const**範囲の最後の要素の次の位置を指す反復子。
+範囲内の最後の要素の次の位置を指す**定数**反復子を返します。
 
 ```cpp
 const_iterator cend() const;
@@ -318,13 +318,13 @@ const_iterator cend() const;
 
 ### <a name="return-value"></a>戻り値
 
-A **const**範囲の終了位置を指す双方向アクセス反復子。
+範囲の末尾の次の位置を指し示す**const**双方向アクセス反復子。
 
 ### <a name="remarks"></a>Remarks
 
 `cend` は、反復子が範囲の末尾を超えたかどうかをテストするために使用されます。
 
-`end()` メンバー関数の代わりにこのメンバー関数を使用して、戻り値が `const_iterator` になることを保証できます。 通常は、次の例に示すように [auto](../cpp/auto-cpp.md) 型推論キーワードと共に使用します。 例では、検討してください。`Container`に変更可能な (非**const**) をサポートする任意の種類のコンテナー`end()`と`cend()`します。
+`end()` メンバー関数の代わりにこのメンバー関数を使用して、戻り値が `const_iterator` になることを保証できます。 通常は、次の例に示すように [auto](../cpp/auto-cpp.md) 型推論キーワードと共に使用します。 この例では、 `Container`とをサポート`end()`する任意の種類の変更可能な (非**定数**) コンテナー `cend()`であると見なします。
 
 ```cpp
 auto i1 = Container.end();
@@ -471,7 +471,7 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*key*<br/>
+*レジストリ*\
 照合される multiset の要素のキー。
 
 ### <a name="return-value"></a>戻り値
@@ -482,7 +482,7 @@ size_type count(const Key& key) const;
 
 メンバー関数は、次の範囲内の要素 *x* の数を返します。
 
-\[ lower_bound(*key*), upper_bound(*key*) )
+\[lower_bound (*キー*)、upper_bound (*キー*))
 
 ### <a name="example"></a>例
 
@@ -705,7 +705,7 @@ iterator emplace(Args&&... args);
 
 |パラメーター|説明|
 |-|-|
-|*引数*|multiset に挿入される要素を構築するために転送される引数。|
+|*value*|multiset に挿入される要素を構築するために転送される引数。|
 
 ### <a name="return-value"></a>戻り値
 
@@ -773,8 +773,8 @@ iterator emplace_hint(
 
 |パラメーター|説明|
 |-|-|
-|*引数*|multiset に挿入される要素を構築するために転送される引数。|
-|*where*|正しい挿入ポイントの検索を開始する場所  (そのポイントの直前に場合*場所*、対数時間ではなく償却定数時間で実行できます)。|
+|*value*|multiset に挿入される要素を構築するために転送される引数。|
+|*where*|正しい挿入ポイントの検索を開始する場所 (その位置がの直前にある*場合、挿入*は、対数時間ではなく償却定数時間で実行できます)。|
 
 ### <a name="return-value"></a>戻り値
 
@@ -865,14 +865,14 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>パラメーター
 
-*key*<br/>
+*レジストリ*\
 検索対象の multiset 内の要素の並べ替えキーと比較される引数キー。
 
 ### <a name="return-value"></a>戻り値
 
 1 番目がそのキーの [lower_bound](#lower_bound)、2 番目がそのキーの [upper_bound](#upper_bound) である、反復子のペア。
 
-ペアの最初の反復子にアクセスする`pr`を使用して、メンバー関数によって返される、`pr`します。 **最初**、下限の反復子を逆参照するには使用と\*(`pr`します。 **まず**)。 ペアの 2 つ目の反復子にアクセスする`pr`を使用して、メンバー関数によって返される、`pr`します。 **2 番目**、上限の反復子を逆参照するには使用と\*(`pr`します。 **2 つ目**)。
+メンバー関数によって返された`pr`ペアの最初の反復子に`pr`アクセスするには、を使用します。 **最初**に、下限の反復子を逆参照する\*に`pr`は、(を使用します。 **最初**)。 メンバー関数によって返された`pr`ペアの2番目の反復`pr`子にアクセスするには、を使用します。 **次**に、上限の反復子を逆参照する\*に`pr`は、(を使用します。 **2 番目**)。
 
 ### <a name="example"></a>例
 
@@ -950,16 +950,16 @@ size_type erase(
 
 ### <a name="parameters"></a>パラメーター
 
-*Where*<br/>
+*どこ*\
 削除される要素の位置。
 
-*First*<br/>
+*まずは*\
 削除される最初の要素の位置。
 
-*Last*<br/>
+*前の*\
 削除される最後の要素の次の位置。
 
-*Key*<br/>
+*レジストリ*\
 削除される要素のキー値。
 
 ### <a name="return-value"></a>戻り値
@@ -984,7 +984,7 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*key*<br/>
+*レジストリ*\
 検索対象の multiset 内の要素の並べ替えキーと照合するキー値。
 
 ### <a name="return-value"></a>戻り値
@@ -993,9 +993,9 @@ const_iterator find(const Key& key) const;
 
 ### <a name="remarks"></a>Remarks
 
-メンバー関数は、multiset のキーを持つ要素を参照する反復子は、引数を返します。*キー*二項述語に即して小なり比較関係に基づいて順序付けします。
+このメンバー関数は、小なり比較関係に基づいて順序を誘発する二項述語の下で、キーが引数*キー*と等価であるマルチセット内の要素を参照する反復子を返します。
 
-場合の戻り値`find`に割り当てられている、 `const_iterator`、multiset オブジェクトは変更できません。 場合の戻り値`find`に割り当てられている、 `iterator`、multiset オブジェクトを変更できます
+の`find`戻り値が`const_iterator`に割り当てられている場合、マルチセットオブジェクトを変更することはできません。 の`find`戻り値が`iterator`に割り当てられている場合は、マルチセットオブジェクトを変更できます。
 
 ### <a name="example"></a>例
 
@@ -1168,9 +1168,9 @@ IList);
 
 |パラメーター|説明|
 |-|-|
-|*val*|multiset に挿入する要素の値。|
-|*Where*|正しい挿入ポイントの検索を開始する場所  (そのポイントの直前に場合*場所*、対数時間ではなく償却定数時間で実行できます)。|
-|*ValTy*|Multiset の要素の構築に使用できる引数の型を指定するテンプレート パラメーター [value_type](../standard-library/map-class.md#value_type)、および完全転送*Val*を引数として。|
+|*Val*|multiset に挿入する要素の値。|
+|*Where*|正しい挿入ポイントの検索を開始する場所 (その位置がの直前にある*場合、挿入*は、対数時間ではなく償却定数時間で実行できます)。|
+|*ValTy*|[Value_type](../standard-library/map-class.md#value_type)の要素を構築するためにマルチセットが使用できる引数の型を指定し、引数として*Val*を完全に転送するテンプレートパラメーター。|
 |*First*|コピーされる最初の要素の位置。|
 |*Last*|コピーされる最後の要素の次の位置。|
 |*InputIterator*|[入力反復子](../standard-library/input-iterator-tag-struct.md)の要件を満たすテンプレート関数の引数。この反復子は、[value_type](../standard-library/map-class.md#value_type) オブジェクトの構築に使用できる型の要素を指し示します。|
@@ -1296,7 +1296,7 @@ typedef implementation-defined iterator;
 
 ### <a name="example"></a>例
 
-例をご覧ください[開始](#begin)宣言方法や使用方法の例については、`iterator`します。
+の宣言方法や[](#begin)使用`iterator`方法の例については、begin の例を参照してください。
 
 ## <a name="key_comp"></a>  multiset::key_comp
 
@@ -1421,12 +1421,12 @@ iterator lower_bound(const Key& key);
 
 ### <a name="parameters"></a>パラメーター
 
-*key*<br/>
+*レジストリ*\
 検索対象の multiset 内の要素の並べ替えキーと比較される引数キー。
 
 ### <a name="return-value"></a>戻り値
 
-`iterator`または`const_iterator`ことアドレスことと一致しない場合、multiset 内の最後の要素を指す場所を指す、またはされる引数キー以上のキーを持つ multiset 内の要素の位置は、キーの検出します。
+引数キー `const_iterator`以上のキーを持つマルチセット内の要素の位置を指すまたは。キーの一致が検出されない場合は、マルチセット内の最後の要素の次の位置を指すまたは。`iterator`
 
 ### <a name="example"></a>例
 
@@ -1564,8 +1564,8 @@ multiset (
 
 |パラメーター|説明|
 |-|-|
-|*Al*|この multiset オブジェクトに使用するストレージ アロケーター クラス。既定では、`Allocator` です。|
-|*コンポジション*|multiset 内の要素の並べ替えに使用される、`const Compare` 型の比較関数。既定では `Compare` です。|
+|*ウムアルクラ*|この multiset オブジェクトに使用するストレージ アロケーター クラス。既定では、`Allocator` です。|
+|*コンペティション*|multiset 内の要素の並べ替えに使用される、`const Compare` 型の比較関数。既定では `Compare` です。|
 |*右*|構築される multiset のコピー元となる multiset。|
 |*First*|コピーする要素範囲内の最初の要素の位置。|
 |*Last*|コピーする要素範囲を超える最初の要素の位置。|
@@ -1579,11 +1579,11 @@ multiset (
 
 すべてのコンストラクターは、Compare 型の関数オブジェクトを格納します。このオブジェクトは multiset のキーの順序を確立するために使用され、後で [key_comp](#key_comp) を呼び出して取得することができます。
 
-最初の 3 つのコンス トラクターを指定する空の初期 multiset、2 つ目の比較関数の種類を指定する (*Comp*) 明示的に要素と 3 番目の順序を確立する際に使用するアロケーターを指定する入力(*Al*) を使用します。 キーワード **explicit** は、特定の種類の自動型変換が実行されないようにします。
+最初の3つのコンストラクターは、空の初期マルチセットを指定します。2番目のコンストラクターは要素の順序を確立するために使用する比較関数の型 (*Comp*) を指定し、3番目のコンストラクターはアロケーターの型 (*Al*) を明示的に指定します。用い. キーワード **explicit** は、特定の種類の自動型変換が実行されないようにします。
 
-4 番目のコンス トラクターが multiset のコピーを指定します*右*します。
+4番目のコンストラクターは、マルチセットの*右側*のコピーを指定します。
 
-5 番目のコンス トラクターを移動して、multiset のコピーを指定します*右*します。
+5番目のコンストラクターは、*右*に移動することにより、マルチセットのコピーを指定します。
 
 6 番目、7 番目、および 8 番目のコンストラクターは、要素のコピー元の initializer_list を指定します。
 
@@ -1708,7 +1708,7 @@ multiset& operator=(multiset&& right);
 
 ### <a name="remarks"></a>Remarks
 
-`operator=` 要素を移動またはコピーされる*右*この`multiset`使用される参照型 (lvalue または rvalue) に応じて。 `operator=` が実行される前にこの `multiset` に存在する要素は、破棄されます。
+`operator=`使用される参照型 ( 左辺値また`multiset`は右辺値) に応じて、要素を右にコピーまたは移動します。 `operator=` が実行される前にこの `multiset` に存在する要素は、破棄されます。
 
 ### <a name="example"></a>例
 
@@ -2027,7 +2027,7 @@ void swap(
 
 ### <a name="parameters"></a>パラメーター
 
-*right*<br/>
+*そうです*\
 ターゲットの multiset と交換する要素を提供する引数の multiset。
 
 ### <a name="remarks"></a>Remarks
@@ -2096,7 +2096,7 @@ iterator upper_bound(const Key& key);
 
 ### <a name="parameters"></a>パラメーター
 
-*key*<br/>
+*レジストリ*\
 検索対象の multiset 内の要素の並べ替えキーと比較される引数キー。
 
 ### <a name="return-value"></a>戻り値
@@ -2170,7 +2170,7 @@ multiset が要素の並べ替えに使用する関数オブジェクトを返�
 
 格納されているオブジェクトは以下のメンバー関数を定義します。
 
-**bool operator**( **const Key&**`_xVal`, **const Key&**`_yVal`);
+**bool operator**( **const Key&** `_xVal`, **const Key&** `_yVal`);
 
 これは、並べ替え順で `_xVal` が `_yVal` に先行しかつ等しくない場合に true を返します。
 
@@ -2239,7 +2239,7 @@ typedef key_compare value_compare;
 
 `value_compare` はテンプレート パラメーター `Compare` のシノニムです。
 
-なお両方[key_compare](#key_compare)と`value_compare`テンプレート パラメーターのシノニムで`Compare`します。 どちらもクラス set および multiset で使用でき、そこでは同一ですが、クラス map および multimap では異なるものなので互換性を保つようになっています。
+[Key_compare](#key_compare)と`value_compare`の両方が、テンプレートパラメーター `Compare`のシノニムであることに注意してください。 どちらもクラス set および multiset で使用でき、そこでは同一ですが、クラス map および multimap では異なるものなので互換性を保つようになっています。
 
 `Compare` の詳細については、[multiset クラス](../standard-library/multiset-class.md)のトピックのコメントのセクションをご覧ください。
 
@@ -2259,7 +2259,7 @@ typedef Key value_type;
 
 `value_type` はテンプレート パラメーター `Key` のシノニムです。
 
-なお両方[key_type](#key_type)と`value_type`テンプレート パラメーターのシノニムで`Key`します。 どちらもクラス set および multiset で使用でき、そこでは同一ですが、クラス map および multimap では異なるものなので互換性を保つようになっています。
+[Key_type](#key_type)と`value_type`の両方が、テンプレートパラメーター `Key`のシノニムであることに注意してください。 どちらもクラス set および multiset で使用でき、そこでは同一ですが、クラス map および multimap では異なるものなので互換性を保つようになっています。
 
 `Key` の詳細については、このトピックのコメントのセクションをご覧ください。
 
@@ -2300,6 +2300,6 @@ The multiset has elements: 10 20.
 
 ## <a name="see-also"></a>関連項目
 
-[コンテナー](../cpp/containers-modern-cpp.md)<br/>
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)<br/>
+[コンテナー](../cpp/containers-modern-cpp.md)\
+[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)

@@ -22,12 +22,12 @@ helpviewer_keywords:
 - std::collate [C++], hash
 - std::collate [C++], transform
 ms.assetid: 92168798-9628-4a2e-be6e-fa62dcd4d6a6
-ms.openlocfilehash: 21d5825f8d9ea00359f2aa1c87291b831d1f330f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c506a6a2e1e2c0610f8a6129d2bfb42f762e998a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405171"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458603"
 ---
 # <a name="collate-class"></a>collate クラス
 
@@ -42,7 +42,7 @@ class collate : public locale::facet;
 
 ### <a name="parameters"></a>パラメーター
 
-*CharType*<br/>
+*CharType*\
 文字をエンコードするためにプログラム内で使用される型。
 
 ## <a name="remarks"></a>Remarks
@@ -108,23 +108,23 @@ const char* _Locname,
 
 ### <a name="parameters"></a>パラメーター
 
-*_Refs*<br/>
+*参照 (_c)* \
 オブジェクトのメモリ管理の種類を指定するために使用する整数値。
 
-*_Locname*<br/>
+*名前 (_d)* \
 ロケールの名前。
 
 ### <a name="remarks"></a>Remarks
 
-使用可能な値を *_Refs*パラメーターとその重要性は。
+*Refs*パラメーターに指定できる値とその意味は、次のとおりです。
 
-- 0:オブジェクトの有効期間は、それが含まれるロケールによって管理されます。
+- 0オブジェクトの有効期間は、オブジェクトが含まれているロケールによって管理されます。
 
 - 1:オブジェクトの有効期間は、手動で管理する必要があります。
 
-- \> 1:これらの値が定義されていません。
+- \>1:これらの値は定義されていません。
 
-コンス トラクターを使用してその基本オブジェクトを初期化します**ロケール::**[ファセット](../standard-library/locale-class.md#facet_class)(`_Refs`)。
+コンストラクターは、 **locale::** [facet](../standard-library/locale-class.md#facet_class)(`_Refs`) を使用して、その基本オブジェクトを初期化します。
 
 ## <a name="compare"></a>  collate::compare
 
@@ -139,16 +139,16 @@ int compare(const CharType* first1,
 
 ### <a name="parameters"></a>パラメーター
 
-*first1*<br/>
+*first1*\
 比較する最初のシーケンスの最初の要素へのポインター。
 
-*last1*<br/>
+*last1*\
 比較する最初のシーケンスの最後の要素へのポインター。
 
-*first2*<br/>
+*first2*\
 比較する 2 番目のシーケンスの最初の要素へのポインター。
 
-*last2*<br/>
+*last2*\
 比較する 2 番目のシーケンスの最後の要素へのポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -205,16 +205,16 @@ virtual int do_compare(const CharType* first1,
 
 ### <a name="parameters"></a>パラメーター
 
-*first1*<br/>
+*first1*\
 比較する最初のシーケンスの最初の要素へのポインター。
 
-*last1*<br/>
+*last1*\
 比較する最初のシーケンスの最後の要素へのポインター。
 
-*first2*<br/>
+*first2*\
 比較する 2 番目のシーケンスの最初の要素へのポインター。
 
-*last2*<br/>
+*last2*\
 比較する 2 番目のシーケンスの最後の要素へのポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -229,7 +229,7 @@ virtual int do_compare(const CharType* first1,
 
 ### <a name="remarks"></a>Remarks
 
-プロテクト仮想メンバー関数は、あるシーケンスを比較します。 [* first1, Last1) * をでシーケンス *[first2, last2*)。 適用することで値を比較`operator<`型の対応する要素のペア間`CharType`します。 シーケンスの最も早い等しくないペアにより小さい要素がある場合、または等しくないペアは存在しないが、最初のシーケンスの方が短い場合は、最初のシーケンスが小さいと見なされます。
+プロテクト仮想メンバー関数は、[* first1, Last1) * のシーケンスを、 *[first2, last2*) のシーケンスと比較します。 `operator<` 型`CharType`の対応する要素のペアの間にを適用することで、値を比較します。 シーケンスの最も早い等しくないペアにより小さい要素がある場合、または等しくないペアは存在しないが、最初のシーケンスの方が短い場合は、最初のシーケンスが小さいと見なされます。
 
 ### <a name="example"></a>例
 
@@ -245,10 +245,10 @@ virtual long do_hash(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*first*<br/>
+*まずは*\
 値を決定するシーケンスの最初の文字へのポインター。
 
-*last*<br/>
+*前の*\
 値を決定するシーケンスの最後の文字へのポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -273,10 +273,10 @@ virtual string_type do_transform(const CharType* first, const CharType* last) co
 
 ### <a name="parameters"></a>パラメーター
 
-*first*<br/>
+*まずは*\
 変換対象となるシーケンスの最初の文字へのポインター。
 
-*last*<br/>
+*前の*\
 変換対象となるシーケンスの最後の文字へのポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -301,10 +301,10 @@ long hash(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*first*<br/>
+*まずは*\
 値を決定するシーケンスの最初の文字へのポインター。
 
-*last*<br/>
+*前の*\
 値を決定するシーケンスの最後の文字へのポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -371,10 +371,10 @@ string_type transform(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*first*<br/>
+*まずは*\
 変換対象となるシーケンスの最初の文字へのポインター。
 
-*last*<br/>
+*前の*\
 変換対象となるシーケンスの最後の文字へのポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -383,7 +383,7 @@ string_type transform(const CharType* first, const CharType* last) const;
 
 ### <a name="remarks"></a>Remarks
 
-メンバー関数を返します[do_transform](#do_transform)(`first`、 `last`)。
+このメンバー関数は[](#do_transform)、do_transform`first`( `last`,) を返します。
 
 ### <a name="example"></a>例
 
@@ -429,5 +429,5 @@ int main( )
 
 ## <a name="see-also"></a>関連項目
 
-[\<locale>](../standard-library/locale.md)<br/>
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[\<locale>](../standard-library/locale.md)\
+[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)
