@@ -429,18 +429,7 @@
                 - name: NMake プロパティ ページ
                   href: build/reference/nmake-property-page.md
                 - name: マニフェスト ツールのプロパティ ページ
-                  expanded: false
-                  items:
-                    - name: マニフェスト ツールのプロパティ ページ
-                      href: build/reference/manifest-tool-property-pages.md
-                    - name: '[全般] ([<Projectname> プロパティ ページ] ダイアログ ボックス - [構成プロパティ] - [マニフェスト ツール])'
-                      href: build/reference/general-manifest-tool-configuration-properties.md
-                    - name: '[入力と出力] ([<Projectname> プロパティ ページ] ダイアログ ボックス - [構成プロパティ] - [マニフェスト ツール])'
-                      href: build/reference/input-and-output-manifest-tool.md
-                    - name: '[分離された COM] ([<Projectname> プロパティ ページ] ダイアログ ボックス - [構成プロパティ] - [マニフェスト ツール])'
-                      href: build/reference/isolated-com-manifest-tool.md
-                    - name: '[詳細] ([<Projectname> プロパティ ページ] ダイアログ ボックス - [構成プロパティ] - [マニフェスト ツール])'
-                      href: build/reference/advanced-manifest-tool.md
+                  href: build/reference/manifest-tool-property-pages.md
                 - name: '[リソース] プロパティ ページ'
                   href: build/reference/resources-property-pages.md
                 - name: '[マネージド リソース] プロパティ ページ'
@@ -456,16 +445,7 @@
                 - name: '[カスタム ビルド ステップ] プロパティ ページ:全般'
                   href: build/reference/custom-build-step-property-page-general.md
                 - name: '[HLSL] プロパティ ページ'
-                  expanded: false
-                  items:
-                    - name: '[HLSL] プロパティ ページ'
-                      href: build/reference/hlsl-property-pages.md
-                    - name: '[HLSL] プロパティ ページ:全般'
-                      href: build/reference/hlsl-property-pages-general.md
-                    - name: '[HLSL] プロパティ ページ:詳細設定'
-                      href: build/reference/hlsl-property-pages-advanced.md
-                    - name: '[HLSL] プロパティ ページ:出力ファイル'
-                      href: build/reference/hlsl-property-pages-output-files.md
+                  href: build/reference/hlsl-property-pages.md
         - name: MSVC コンパイラ リファレンス
           expanded: false
           items:
@@ -1607,10 +1587,10 @@
 - name: Windows デスクトップ開発
   expanded: false
   items:
-    - name: デスクトップ アプリケーション (C++)
-      href: windows/desktop-applications-visual-cpp.md
     - name: Windows での C++ でのプログラミングの概要
       href: windows/overview-of-windows-programming-in-cpp.md
+    - name: デスクトップ アプリケーション (C++)
+      href: windows/desktop-applications-visual-cpp.md
     - name: 'チュートリアル: 標準 C++ プログラムの作成'
       href: windows/walkthrough-creating-a-standard-cpp-program-cpp.md
     - name: 'チュートリアル: Windows デスクトップ アプリケーションの作成'
