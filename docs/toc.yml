@@ -405,7 +405,7 @@
                   href: build/reference/vcxproj-file-structure.md
                 - name: プロジェクト ファイルの例
                   href: build/reference/project-files.md
-            - name: C++ プロジェクトのプロパティのリファレンス
+            - name: C++ プロジェクト プロパティ ページ
               expanded: false
               items:
                 - name: C++ プロジェクトのプロパティのリファレンス
@@ -416,6 +416,8 @@
                   href: build/reference/general-property-page-file.md
                 - name: '[詳細] プロパティ ページ'
                   href: build/reference/advanced-property-page.md
+                - name: プロパティ ページのデバッグ
+                  href: build/reference/debugging-prop-pages.md
                 - name: '[VC++ ディレクトリ] プロパティ ページ'
                   href: build/reference/vcpp-directories-property-page.md
                 - name: C/C++ プロパティ ページ
@@ -4351,6 +4353,13 @@
                   href: cpp/assertion-and-user-supplied-messages-cpp.md
                 - name: static_assert
                   href: cpp/static-assert.md
+            - name: モジュール
+              expanded: false
+              items:
+                - name: C++ のモジュールの概要
+                  href: cpp/modules-cpp.md
+                - name: モジュール、インポート、エクスポート
+                  href: cpp/import-export-module.md
             - name: テンプレート
               expanded: false
               items:
