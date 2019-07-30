@@ -72,7 +72,7 @@ long double cargl(
 
 ## <a name="remarks"></a>Remarks
 
-C++では、オーバー ロードのオーバー ロードを呼び出すことができます**carg**を受け取る **_Fcomplex**または **_Lcomplex**値、および戻り値**float**または**長い****二重**値。 C プログラムで**carg**は常に、 **_Dcomplex**値を返します、**二重**値。
+C++では、オーバー ロードのオーバー ロードを呼び出すことができます**carg**を受け取る **_Fcomplex**または **_Lcomplex**値、および戻り値**float**または**長い** **二重**値。 C プログラムで**carg**は常に、 **_Dcomplex**値を返します、**二重**値。
 
 ## <a name="requirements"></a>必要条件
 
