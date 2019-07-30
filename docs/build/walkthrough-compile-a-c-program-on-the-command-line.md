@@ -19,7 +19,8 @@ ms.locfileid: "64877198"
 
 Visual C には、完全な Windows デスクトップ アプリケーション、モバイル アプリは、基本的なコンソール プログラムから作成するすべてのものを使用できる C コンパイラが含まれています。
 
-このチュートリアルは、basic、「こんにちは, World」を作成する方法を示します-エディターでテキストを使用して C プログラムをスタイル設定し、それをコマンドラインでコンパイルします。 場合は、コマンドラインで C で作業する場合ではなくを参照してください。[チュートリアル。コマンド ラインでのネイティブ C++ プログラムのコンパイル](walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)」を参照してください。 コマンドラインを使用する代わりに、Visual Studio IDE を再試行してくださいを参照してくださいしたい場合[チュートリアル。プロジェクトとソリューション (C++)](../ide/walkthrough-working-with-projects-and-solutions-cpp.md)または[C++ デスクトップ開発用 Visual Studio IDE を使用して](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)します。
+このチュートリアルでは、テキストエディタを使用して基本的な "Hello、World"スタイルのCプログラムを作成し、それをコマンドラインでコンパイルする方法を説明します。C++ をコマンドラインで作業する場合は、 [チュートリアル: コマンド ラインでのネイティブ C++ プログラムのコンパイル](walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)」を参照してください。 コマンドラインを使用する代わりに、Visual Studio IDE で作業する場合は、[チュートリアル: プロジェクトとソリューション (C++)](../ide/walkthrough-working-with-projects-and-solutions-cpp.md)または[Visual Studio IDE を使用したC++ デスクトップ開発](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md) を参照してください。
+
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
@@ -161,7 +162,7 @@ usage: cl [ option... ] filename... [ /link linkoption... ]
 
 ## <a name="next-steps"></a>次の手順
 
-この「こんにちは, World」の例は、単純な C プログラムを取得できます。 実際のプログラムがあるヘッダー ファイルと複数のソース ファイルは、ライブラリでは、リンクし、有益な処理を実行します。
+この "Hello, world" の例は、 C プログラムと同じくらい簡単です。 実際のプログラムではヘッダー ファイルとより多くのソース ファイルがあり、ライブラリにリンクし、有益な処理を実行します。
 
 このチュートリアルで示したサンプル コードを入力する代わりに C# コードをビルドするのに手順を使用できます。 別の場所に表示されている多くの C コード サンプル プログラムを構築することもできます。 追加のソース コード ファイルのあるプログラムをコンパイルするには、コマンドラインですべてのようにそれらを入力します。
 
