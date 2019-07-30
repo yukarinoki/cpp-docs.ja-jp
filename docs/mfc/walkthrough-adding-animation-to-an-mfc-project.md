@@ -74,7 +74,7 @@ ms.locfileid: "64558193"
 
 1. **プロジェクト** メニューのをクリックして**クラス ウィザード**します。
 
-1. **MFC クラス ウィザード****クラス名**、 **CMFCAnimationWalkthroughView**。
+1. **MFC クラス ウィザード**  **クラス名**、 **CMFCAnimationWalkthroughView**。
 
 1. **コマンド** タブで、**オブジェクト Id**ボックスで、 **ID_ANIMATION_STARTFORWARD**、し、**メッセージ**ボックスで、の選択**コマンド**します。 クリックして**ハンドラーを追加**します。
 
@@ -270,7 +270,7 @@ ms.locfileid: "64558193"
 
 1. **プロジェクト** メニューのをクリックして**クラス ウィザード**します。
 
-1. **MFC クラス ウィザード****クラス名**、 **CMFCAnimationWalkthroughView**。
+1. **MFC クラス ウィザード**  **クラス名**、 **CMFCAnimationWalkthroughView**。
 
 1. **メッセージ** タブで、**メッセージ**ボックスで、 **WM_ERASEBKGND**、 をクリックして**ハンドラーの追加**、 をクリックし、 **ok**.
 
@@ -321,7 +321,7 @@ ms.locfileid: "64558193"
 
 1. **プロジェクト** メニューのをクリックして**クラス ウィザード**します。
 
-1. **MFC クラス ウィザード****クラス名**、 **CMFCAnimationWalkthroughView**。
+1. **MFC クラス ウィザード**  **クラス名**、 **CMFCAnimationWalkthroughView**。
 
 1. **メッセージ** タブで、**メッセージ**ボックスで、 **WM_SIZE**、 をクリックして**ハンドラーの追加**、 をクリックし、 **ok**.
 
