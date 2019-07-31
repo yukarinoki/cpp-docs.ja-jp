@@ -3,14 +3,12 @@ title: C/C++プロジェクトのプロパティ (Visual Studio)
 ms.date: 7/18/2019
 ms.topic: article
 ms.assetid: 16375038-4917-4bd0-9a2a-26343c1708b7
-author: mikeblome
-ms.author: mblome
-ms.openlocfilehash: bf457366f1818593e937d4c9e95651f48db64528
-ms.sourcegitcommit: 0867d648e0955ebad7260b5fbebfd6cd4d58f3c7
-ms.translationtype: HT
+ms.openlocfilehash: 91edf30ef0e5f38088727c0280d2edf07cdebfa5
+ms.sourcegitcommit: 7b039b5f32f6c59be6c6bb1cffafd69c3bfadd35
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68342263"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68537563"
 ---
 # <a name="cc-property-pages"></a>C/C++プロパティページ
 
@@ -79,7 +77,7 @@ Windows ランタイム言語拡張機能を使用します。 [/ZW](zw-windows-
 
 ### <a name="warning-version"></a>警告バージョン
 
-コンパイラの特定のバージョンより後に導入された警告を非表示にします。 [/Wv\[:\[.yy [.zzzzzを設定\]します。\]](wx-treat-linker-warnings-as-errors.md)
+コンパイラの特定のバージョンより後に導入された警告を非表示にします。 [/Wv\[:.yy \[.zzzzzを設定\]\]](wx-treat-linker-warnings-as-errors.md)します。
 
 ### <a name="diagnostics-format"></a>診断形式
 
@@ -436,7 +434,7 @@ ASM リスティングファイルの相対パスと名前のどちらかまた�
 **いずれ**
 
 - **__cdecl** -メンバー関数および __stdcall または __fastcall とマークC++されている関数を除くすべての関数の __cdecl 呼び出し規約を指定します。
-- **__fastcall** -メンバー関数と __cdecl または __stdcall とC++マークされた関数を除くすべての関数に対する __fastcall 呼び出し規約を指定します。 すべての __fastcall 関数にはプロトタイプが必要です。
+- **__fastcall** -メンバー関数および __cdecl または __stdcall とマークC++された関数を除くすべての関数に対する __fastcall 呼び出し規約を指定します。 すべての __fastcall 関数にはプロトタイプが必要です。
 - **__stdcall** -メンバー関数および __cdecl または __fastcall とマークC++された関数を除くすべての関数に対する __stdcall 呼び出し規約を指定します。 すべての __stdcall 関数にはプロトタイプが必要です。
 - **__vectorcall** -メンバー関数と __cdecl、__fastcall、またはC++ __stdcall とマークされた関数を除くすべての関数の __vectorcall 呼び出し規約を指定します。 すべての __vectorcall 関数にはプロトタイプが必要です。
 
@@ -482,7 +480,7 @@ ASM リスティングファイルの相対パスと名前のどちらかまた�
 
 - **レポートを送信**しない: 内部コンパイラエラーに関するレポートは、収集されず、マイクロソフトに送信されません。
 - **プロンプトがすぐに**表示されます-内部コンパイルエラーが発生したときにレポートを送信するように求めるメッセージが表示されます。
-- **[次のログインのキュー** ]-エラーレポートをキューにします。 管理者特権でログインすると、ポップアップウィンドウが表示され、最後にログインした後に発生したエラーを報告することができます (エラーの報告を3日ごとに複数回送信するように求めるメッセージは表示されません)。 queue は、コマンドラインでアプリケーションをコンパイルするときの既定の設定です。
+- **[次のログインのキュー** ]-エラーレポートをキューにします。 管理者特権でサインインすると、ポップアップウィンドウが表示され、最後にログインした後に発生したエラーを報告することができます (エラーの報告を3日ごとに複数回送信するように求めるメッセージは表示されません)。 queue は、コマンドラインでアプリケーションをコンパイルするときの既定の設定です。
 - **自動的に送信**-内部コンパイラエラーのレポートを Microsoft に自動的に送信します。 このオプションを有効にするには、最初に Microsoft% 27s データ収集ポリシーに同意する必要があります。 コンピューターで/errorReport: send を初めて指定すると、コンパイラメッセージによって、Microsoft% 27s データ収集ポリシーを含む web サイトが参照されます。
 
 ### <a name="treat-specific-warnings-as-errors"></a>特定の警告をエラーとして扱う
