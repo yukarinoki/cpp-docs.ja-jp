@@ -1,39 +1,39 @@
 ---
 title: OpenMP ライブラリ リファレンス
-ms.date: 03/20/2019
+ms.date: 07/30/2019
 ms.assetid: a25188c6-edde-43d0-84b5-780e797b08fc
-ms.openlocfilehash: 6f4bbeca54bff1fc44a3576362edca9c30926d5a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c78c2677741714ab48d49a4443ad753369ec4500
+ms.sourcegitcommit: 725e86dabe2901175ecc63261c3bf05802dddff4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362518"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68682593"
 ---
 # <a name="openmp-library-reference"></a>OpenMP ライブラリ リファレンス
 
-OpenMP API で使用される構成要素へのリンクを提供します。
+OpenMP API で使用される構成要素へのリンクを示します。
 
-OpenMP の標準の Visual C の実装には、次の構成要素が含まれています。
+OpenMP 標準C++のビジュアル実装には、次の構造体が含まれています。
 
 |構成体|説明|
 |---------------|-----------------|
-|[ディレクティブ](openmp-directives.md)|OpenMP API で使用するディレクティブへのリンクを提供します。|
-|[句](openmp-directives.md)|OpenMP API で使用される句へのリンクを提供します。|
-|[関数](openmp-functions.md)|OpenMP API で使用される関数へのリンクを提供します。|
-|[環境変数](openmp-environment-variables.md)|OpenMP API で使用される環境変数へのリンクを提供します。|
+|[ディレクティブ](openmp-directives.md)|OpenMP API で使用されるディレクティブへのリンクを提供します。|
+|[句](openmp-clauses.md)|OpenMP API で使用される句へのリンクを提供します。|
+|[関数](openmp-functions.md)|OpenMP API で使用される関数へのリンクを示します。|
+|[環境変数](openmp-environment-variables.md)|OpenMP API で使用される環境変数へのリンクを示します。|
 
-ビジュアルC++OpenMP ランタイム ライブラリ関数は、次のライブラリに含まれています。
+Visual C++ OpenMP ランタイムライブラリ関数は、次のライブラリに含まれています。
 
-|OpenMP ライブラリ|特性|
+|OpenMP ランタイムライブラリ|特性|
 |------------------------------|---------------------|
-|VCOMP します。LIB|マルチ スレッド、動的リンク (VCOMP 用インポート ライブラリ。LIB)。|
-|VCOMPD します。LIB|マルチ スレッド、動的リンク (VCOMPD 用インポート ライブラリ。カバー) (デバッグ)|
+|VCOMP。変数|マルチスレッド、動的リンク (VCOMP 用インポートライブラリ)。LIB)。|
+|VCOMPD。変数|マルチスレッド、動的リンク (VCOMPD 用インポートライブラリ)。LID) (デバッグ)|
 
-_DEBUG がコンパイル時に定義されている場合、 `#include omp.h` VCOMPD、ソース コードでは、します。LIB 既定 lib、それ以外の場合、VCOMP になります。LIB が使用されます。
+_Debug がコンパイル`#include omp.h`で定義されていて、がソースコード内にある場合は。LIB が既定の lib になります。それ以外の場合は、VCOMP です。LIB が使用されます。
 
-使用することができます[/NODEFAULTLIB (ライブラリの無視)](../../../build/reference/nodefaultlib-ignore-libraries.md)を既定のライブラリを削除し、任意のライブラリで明示的にリンクします。
+[/NODEFAULTLIB (ライブラリを無視する)](../../../build/reference/nodefaultlib-ignore-libraries.md)を使用して、既定の lib を削除し、選択した lib と明示的にリンクすることができます。
 
-OpenMP Dll は、Visual C 再頒布可能パッケージ ディレクトリには、OpenMP を使用するアプリケーションで配布する必要があります。
+OpenMP Dll は、視覚的C++に再頒布可能なディレクトリにあり、openmp を使用するアプリケーションと共に配布する必要があります。
 
 ## <a name="see-also"></a>関連項目
 
