@@ -1,6 +1,6 @@
 ---
 title: task クラス (コンカレンシー ランタイム)
-ms.date: 11/04/2016
+ms.date: 07/30/2019
 f1_keywords:
 - task
 - PPLTASKS/concurrency::task
@@ -14,37 +14,31 @@ f1_keywords:
 helpviewer_keywords:
 - task class
 ms.assetid: cdc3a8c0-5cbe-45a0-b5d5-e9f81d94df1a
-ms.openlocfilehash: 99676ac0fff9584cd8453562f8918f6cadd66666
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e0f876b3c0971e70763f36622fb72a3dea671461
+ms.sourcegitcommit: 725e86dabe2901175ecc63261c3bf05802dddff4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385207"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68682518"
 ---
 # <a name="task-class-concurrency-runtime"></a>task クラス (コンカレンシー ランタイム)
 
-並列パターン ライブラリ (PPL) `task` クラス。 `task` オブジェクトは、非同期的に、他のタスクと同時に実行できる処理、および同時実行ランタイムの並列アルゴリズムによって生成される並列処理を表します。 正常に終了した場合は、型 `_ResultType` の結果が生成されます。 型 `task<void>` のタスクでは結果が作成されません。 タスクは、他のタスクと関係なく待機および取り消しできます。 他のタスクの継続を使用して構成することもできます ( `then`)、および結合 ( `when_all`) と選択の幅 ( `when_any`) パターン。
+並列パターン ライブラリ (PPL) `task` クラス。 オブジェクト`task`は、他のタスクと同時に実行できる作業、および同時実行ランタイムの並列アルゴリズムによって生成される並列処理を表します。 正常に終了した場合は、型 `_ResultType` の結果が生成されます。 型 `task<void>` のタスクでは結果が作成されません。 タスクは、他のタスクと関係なく待機および取り消しできます。 また、継続 ( `then`)、join ( `when_all`)、choice ( `when_any`) の各パターンを使用して、他のタスクで構成することもできます。 タスクオブジェクトが新しい変数に割り当てられると、の動作はになり`std::shared_ptr`ます。つまり、両方のオブジェクトが同じ基になるタスクを表します。
 
 ## <a name="syntax"></a>構文
 
 ```
-template <typename T>
-class task;
-
 template <>
 class task<void>;
 
-template<typename _ReturnType>
+template<typename _ResultType>
 class task;
 ```
 
 #### <a name="parameters"></a>パラメーター
 
-*T*<br/>
-タスク オブジェクトの種類。
-
-*_ReturnType*<br/>
-このタスクの結果の型。
+*ResultType (_l)*<br/>
+タスクによって生成される結果の型。 
 
 ## <a name="members"></a>メンバー
 
@@ -81,7 +75,7 @@ class task;
 
 ## <a name="remarks"></a>Remarks
 
-詳細については、次を参照してください。[タスクの並列化](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)します。
+詳細については、「[タスクの並列](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)化」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -93,12 +87,12 @@ class task;
 
 **名前空間:** concurrency
 
-##  <a name="get"></a> 取得
+##  <a name="get"></a>取得
 
 このタスクによって生成された結果を返します。 タスクが終了状態にない場合、`get` への呼び出しは、そのタスクが完了するまで待機します。 このメソッドは、`result_type` が `void` に指定されたタスクで呼び出された場合は値を返しません。
 
 ```
-_ReturnType get() const;
+_ResultType get() const;
 
 void get() const;
 ```
@@ -109,10 +103,10 @@ void get() const;
 
 ### <a name="remarks"></a>Remarks
 
-タスクが取り消された場合に呼び出し`get`がスローされます、 [task_canceled](task-canceled-class.md)例外。 タスクで別の例外が発生したり、継続元タスクからこのタスクに例外が反映された場合、`get` の呼び出しは、その例外をスローします。
+タスクが取り消された場合、を`get`呼び出すと、 [task_canceled](task-canceled-class.md)例外がスローされます。 タスクで別の例外が発生したり、継続元タスクからこのタスクに例外が反映された場合、`get` の呼び出しは、その例外をスローします。
 
 > [!IMPORTANT]
->  ユニバーサル Windows プラットフォーム (UWP) アプリで呼び出さないでください[::wait](#wait)または`get`(`wait`呼び出し`get`) で、ユーザー インターフェイス スレッドで実行されるコード。 それ以外の場合、ランタイム[concurrency::invalid_operation](invalid-operation-class.md)これらのメソッドは、現在のスレッドをブロックし、アプリが応答しなくなる可能性があるためです。 ただし、結果は直ちに使用できるため、タスク ベースの継続で継続元タスクの結果を受け取るために `get` メソッドを呼び出すことができます。
+>  ユニバーサル Windows プラットフォーム (UWP) アプリでは、ユーザーインターフェイススレッドで実行されるコードで[concurrency:: task:: wait](#wait)または`get` ( `wait` calls `get`) を呼び出さないでください。 それ以外の場合、ランタイムは[concurrency:: invalid_operation](invalid-operation-class.md)をスローします。これらのメソッドは、現在のスレッドをブロックし、アプリが応答しなくなる可能性があるためです。 ただし、結果は直ちに使用できるため、タスク ベースの継続で継続元タスクの結果を受け取るために `get` メソッドを呼び出すことができます。
 
 ##  <a name="is_apartment_aware"></a> is_apartment_aware
 
@@ -124,9 +118,9 @@ bool is_apartment_aware() const;
 
 ### <a name="return-value"></a>戻り値
 
-**true**タスクのラップを解除する場合、`IAsyncInfo`インターフェイスまたはからこのようなタスクは、子孫が**false**それ以外の場合。
+タスクがインターフェイスを`IAsyncInfo`ラップ解除するか、このようなタスクからの子孫である場合は true、それ以外の場合は**false** 。
 
-##  <a name="is_done"></a>  task::is_done メソッド (同時実行ランタイム)
+##  <a name="is_done"></a>task:: is_done メソッド (同時実行ランタイム)
 
 タスクが完了したかどうかを決定します。
 
@@ -147,7 +141,7 @@ bool is_done() const;
 2 つの `task` オブジェクトが異なる内部タスクを表すかどうかを決定します。
 
 ```
-bool operator!= (const task<_ReturnType>& _Rhs) const;
+bool operator!= (const task<_ResultType>& _Rhs) const;
 
 bool operator!= (const task<void>& _Rhs) const;
 ```
@@ -159,9 +153,9 @@ bool operator!= (const task<void>& _Rhs) const;
 
 ### <a name="return-value"></a>戻り値
 
-**true**オブジェクトが、基になる別のタスク を参照している場合と**false**それ以外の場合。
+オブジェクトが別の基になるタスクを参照している場合は**true** 、それ以外の場合は**false** 。
 
-##  <a name="operator_eq"></a> 演算子 =
+##  <a name="operator_eq"></a>operator =
 
 ある `task` オブジェクトの内容を別のオブジェクトの内容で置き換えます。
 
@@ -173,7 +167,7 @@ task& operator= (task&& _Other);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Other*<br/>
+*その他 (_d)*<br/>
 ソース `task` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -182,12 +176,12 @@ task& operator= (task&& _Other);
 
 `task` がスマート ポインターのように動作すると、コピーの代入の後では、この `task` オブジェクトは `_Other` が実行する実際のタスクと同じタスクを表します。
 
-##  <a name="operator_eq_eq"></a> 演算子 = =
+##  <a name="operator_eq_eq"></a>operator = =
 
 2 つの `task` オブジェクトが同じ内部タスクを表すかどうかを決定します。
 
 ```
-bool operator== (const task<_ReturnType>& _Rhs) const;
+bool operator== (const task<_ResultType>& _Rhs) const;
 
 bool operator== (const task<void>& _Rhs) const;
 ```
@@ -199,9 +193,9 @@ bool operator== (const task<void>& _Rhs) const;
 
 ### <a name="return-value"></a>戻り値
 
-**true**オブジェクトは、同じ基になるタスクを参照している場合と**false**それ以外の場合。
+オブジェクトが同じ基になるタスクを参照している場合は**true** 、それ以外の場合は**false** 。
 
-##  <a name="scheduler"></a>  task::scheduler メソッド (同時実行ランタイム)
+##  <a name="scheduler"></a>task:: scheduler メソッド (同時実行ランタイム)
 
 このタスクのスケジューラを返します
 
@@ -213,7 +207,7 @@ scheduler_ptr scheduler() const;
 
 スケジューラへのポインター
 
-##  <a name="ctor"></a> タスク
+##  <a name="ctor"></a>タスク
 
 `task` オブジェクトを構築します。
 
@@ -240,18 +234,18 @@ task(
 *T*<br/>
 パラメーターの型。これに基づいてタスクが構築されます。
 
-*_Param*<br/>
-パラメーター。これに基づいてタスクが構築されます。 これは、ラムダ、関数オブジェクト、`task_completion_event<result_type>`オブジェクト、または Windows ランタイム アプリでタスクを使用している場合、:iasyncinfo します。 ラムダまたは関数オブジェクトを型に相当する必要があります`std::function<X(void)>`X が型の変数を指定できます、 `result_type`、 `task<result_type>`、または Windows ランタイム アプリでの:iasyncinfo します。
+*パラメーター (_c)*<br/>
+パラメーター。これに基づいてタスクが構築されます。 Windows ランタイムアプリでタスクを使用している場合は`task_completion_event<result_type>` 、ラムダ、関数オブジェクト、オブジェクト、または Windows:: Foundation:: iasyncinfo のいずれかになります。 ラムダまたは関数オブジェクトは、に相当する`std::function<X(void)>`型である必要があります。ここで、X は、型、 `task<result_type>`型`result_type`、または Windows ランタイムアプリの Windows:: Foundation:: iasyncinfo の変数になります。
 
-*_TaskOptions*<br/>
+*Taskoptions (_s)*<br/>
 タスク オプションには、キャンセル トークン、スケジューラなどがあります。
 
-*_Other*<br/>
+*その他 (_d)*<br/>
 ソース `task` オブジェクト。
 
 ### <a name="remarks"></a>Remarks
 
-`task` の既定のコンストラクターは、タスクをコンテナー内で使用できるようにすることのみを目的としています。 構築された既定のタスクは、有効なタスクを割り当てるまで使用できません。 などのメソッド`get`、`wait`または`then`がスローされます、 [invalid_argument](../../../standard-library/invalid-argument-class.md)例外構築された既定のタスクで呼び出されるとします。
+`task` の既定のコンストラクターは、タスクをコンテナー内で使用できるようにすることのみを目的としています。 構築された既定のタスクは、有効なタスクを割り当てるまで使用できません。 、、などの`wait`メソッドは、構築 された既定のタスクで呼び出されると、[invalid_argument](../../../standard-library/invalid-argument-class.md)例外をスローし`then`ます。 `get`
 
 `task_completion_event` から作成されたタスクは、タスクの完了イベントが設定されたときに完了します (その後で継続がスケジュールされます)。
 
@@ -261,11 +255,11 @@ task(
 
 `task` は、スマート ポインターのように動作し、安全に値渡しされます。 この task には、複数のスレッドからアクセスできます。ロックする必要はありません。
 
-:Iasyncinfo インターフェイスまたはそのようなインターフェイスを返すラムダを取るコンス トラクター オーバー ロードでは、Windows ランタイム アプリで使用できるのみです。
+Windows:: Foundation:: IAsyncInfo インターフェイスを受け取るコンストラクターオーバーロード、またはこのようなインターフェイスを返すラムダは、Windows ランタイムアプリでのみ使用できます。
 
-詳細については、次を参照してください。[タスクの並列化](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)します。
+詳細については、「[タスクの並列](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)化」を参照してください。
 
-##  <a name="then"></a> そうしたら
+##  <a name="then"></a>そうしたら
 
 継続タスクをこのタスクに追加します。
 
@@ -273,20 +267,20 @@ task(
 template<typename _Function>
 __declspec(
     noinline) auto then(const _Function& _Func) const -> typename details::_ContinuationTypeTraits<_Function,
-    _ReturnType>::_TaskOfType;
+    _ResultType>::_TaskOfType;
 
 template<typename _Function>
 __declspec(
     noinline) auto then(const _Function& _Func,
     const task_options& _TaskOptions) const -> typename details::_ContinuationTypeTraits<_Function,
-    _ReturnType>::_TaskOfType;
+    _ResultType>::_TaskOfType;
 
 template<typename _Function>
 __declspec(
     noinline) auto then(const _Function& _Func,
     cancellation_token _CancellationToken,
     task_continuation_context _ContinuationContext) const -> typename details::_ContinuationTypeTraits<_Function,
-    _ReturnType>::_TaskOfType;
+    _ResultType>::_TaskOfType;
 
 template<typename _Function>
 __declspec(
@@ -304,20 +298,20 @@ __declspec(
 
 ### <a name="parameters"></a>パラメーター
 
-*_Function*<br/>
+*関数 (_d)*<br/>
 このタスクによって呼び出される関数オブジェクトの型。
 
-*_Func*<br/>
+*Func (_c)*<br/>
 このタスクが完了したときに実行される継続関数。 この継続関数では、`result_type` または `task<result_type>` の変数を入力として使用する必要があります。`result_type` は、このタスクによって生成される結果の型です。
 
-*_TaskOptions*<br/>
+*Taskoptions (_s)*<br/>
 タスク オプションには、キャンセル トークン、スケジューラ、および継続コンテキストなどがあります。 既定では、これら 3 つのオプションは継続元タスクから継承されます。
 
 *_CancellationToken*<br/>
 継続タスクに関連付けるキャンセル トークン。 キャンセル トークンなしで作成された継続タスクは、その継続元タスクのトークンを継承します。
 
 *_ContinuationContext*<br/>
-継続を実行する状況を指定する変数。 この変数は、UWP アプリで使用すると便利のみです。 詳細については、次を参照してください[task_continuation_context。](task-continuation-context-class.md)
+継続を実行する状況を指定する変数。 この変数は、UWP アプリで使用される場合にのみ役立ちます。 詳細については、「 [task_continuation_context](task-continuation-context-class.md) 」を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
@@ -325,11 +319,11 @@ __declspec(
 
 ### <a name="remarks"></a>Remarks
 
-オーバー ロード`then`ラムダまたはファンクタを:iasyncinfo インターフェイスを返すは Windows ランタイム アプリで使用できるのみです。
+Windows:: `then` Foundation:: iasyncinfo インターフェイスを返すラムダまたはファンクタを受け取るのオーバーロードは、Windows ランタイムアプリでのみ使用できます。
 
-タスクの継続を使用して非同期操作を構成する方法の詳細については、次を参照してください。[タスクの並列化](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)します。
+タスクの継続を使用して非同期作業を構成する方法の詳細については、「[タスクの並列](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)化」を参照してください。
 
-##  <a name="wait"></a> 待機
+##  <a name="wait"></a>待機
 
 このタスクが終了状態になるまで待機します。 タスクの依存関係すべてが満たされ、バックグラウンド ワーカーによって実行用にまだ検出されていない場合、`wait` はタスクをインラインで実行できます。
 
@@ -344,7 +338,7 @@ task_status wait() const;
 ### <a name="remarks"></a>Remarks
 
 > [!IMPORTANT]
->  ユニバーサル Windows プラットフォーム (UWP) アプリで呼び出さないでください`wait`ユーザー インターフェイス スレッドで実行されるコードでします。 そうしないと、このメソッドが現在のスレッドをブロックして、アプリケーションが応答しなくなる場合があるため、ランタイムは [concurrency::invalid_operation](invalid-operation-class.md) をスローします。 ただし、タスク ベースの継続で継続元タスクの結果を受け取るために [concurrency::task::get](#get) のメソッドを呼び出すことができます。
+>  ユニバーサル Windows プラットフォーム (UWP) アプリでは、ユーザーインターフェイススレッド`wait`で実行されるコードでを呼び出さないでください。 そうしないと、このメソッドが現在のスレッドをブロックして、アプリケーションが応答しなくなる場合があるため、ランタイムは [concurrency::invalid_operation](invalid-operation-class.md) をスローします。 ただし、タスク ベースの継続で継続元タスクの結果を受け取るために [concurrency::task::get](#get) のメソッドを呼び出すことができます。
 
 ## <a name="see-also"></a>関連項目
 
