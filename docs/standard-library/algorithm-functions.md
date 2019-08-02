@@ -200,12 +200,12 @@ helpviewer_keywords:
 - std::count_if [C++]
 - std::partition_copy [C++]
 - std::swap [C++]
-ms.openlocfilehash: cf6c1267b1dea86c2cad62708192a4c0a1970ed8
-ms.sourcegitcommit: 610751254a01cba6ad15fb1e1764ecb2e71f66bf
+ms.openlocfilehash: f389d38cf84f8f72d12242e798010d53a26f81a8
+ms.sourcegitcommit: 20a1356193fbe0ddd1002e798b952917eafc3439
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68313396"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68661541"
 ---
 # <a name="ltalgorithmgt-functions"></a>&lt;algorithm&gt; 関数
 
@@ -442,7 +442,7 @@ bool any_of(
 
 ### <a name="remarks"></a>Remarks
 
-このテンプレート関数は 、範囲`N`内の for がの場合にのみ true を返します。
+このテンプレート関数は、範囲`N`内の for がの場合にのみ **true** を返します。
 
 `[0, last - first)`,、述語`pred(*(first + N))`は true です。
 
@@ -611,6 +611,14 @@ int main()
 }
 ```
 
+```Output
+List1 = ( 5 10 20 25 30 50 )
+There is an element in list List1 with a value equal to 10.
+There is an element in list List1 with a value greater than 10 under greater than.
+Ordered using mod_lesser, vector v1 = ( 0 -1 1 -2 2 3 4 )
+There is an element with a value equivalent to -3 under mod_lesser.
+```
+
 ## <a name="clamp"></a>クリップ
 
 値を上限および下限と比較し、値が境界の間にある場合はその値への参照を返します。値が上または下にある場合は下限または下限を返します。
@@ -646,7 +654,7 @@ constexpr const Type& clamp(
 
 ### <a name="return-value"></a>戻り値
 
-If `upper < value`  `value < lower`の下位への参照、または*upper* if の参照を返します。 それ以外の場合は、 *value*への参照を返します。
+If `upper < value` `value < lower`の下位への参照、または*upper* if の参照を返します。 それ以外の場合は、 *value*への参照を返します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -845,6 +853,13 @@ int main() {
 }
 ```
 
+```Output
+v1 = ( 0 10 20 30 40 50 )
+v2 = ( 0 3 6 9 12 15 18 21 24 27 30 )
+v2 with v1 insert = ( 0 3 6 9 0 10 20 21 24 27 30 )
+v2 with shifted insert = ( 0 3 6 9 0 10 0 10 20 27 30 )
+```
+
 ## <a name="copy_if"></a>copy_if
 
 要素の範囲内で、指定した条件に**該当**する要素をコピーします。
@@ -894,6 +909,61 @@ ForwardIterator2 copy_if(
 `if (pred(*first + N)) * dest++ = *(first + N))`
 
 を `[0, last - first)` の範囲で、各 `N` に対して 1 回評価し、`N` の値を最低値から厳密に 1 ずつ増やします。 *Dest*と*最初*にストレージの領域を指定する場合は、 *dest*を範囲`[ first, last )`外にする必要があります。
+
+### <a name="example"></a>例
+
+```cpp
+// alg_copy_if.cpp
+// compile with: /EHsc
+#include <list>
+#include <algorithm>
+#include <iostream>
+
+void listlist(std::list<int> l)
+{
+    std::cout << "( ";
+    for (auto const& el : l)
+        std::cout << el << " ";
+    std::cout << ")" << std::endl;
+}
+
+int main()
+{
+    using namespace std;
+    list<int> li{ 46, 59, 88, 72, 79, 71, 60, 5, 40, 84 };
+    list<int> le(li.size()); // le = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+    list<int> lo(li.size()); // lo = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+
+    cout << "li = ";
+    listlist(li);
+
+    // is_even checks if the element is even.
+    auto is_even = [](int const elem) { return !(elem % 2); };
+    // use copy_if to select only even elements from li 
+    // and copy them to le, starting from le's begin position
+    auto ec = copy_if(li.begin(),li.end(), le.begin(), is_even);
+    le.resize(std::distance(le.begin(), ec));  // shrink le to new size
+
+    cout << "Even numbers are le = ";
+    listlist(le);
+
+    // is_odd checks if the element is odd.
+    auto is_odd = [](int const elem) { return (elem % 2); };
+    // use copy_if to select only odd elements from li
+    // and copy them to lo, starting from lo's begin position
+    auto oc = copy_if(li.begin(), li.end(), lo.begin(), is_odd);
+    lo.resize(std::distance(lo.begin(), oc));  // shrink lo to new size
+
+    cout << "Odd numbers are lo = ";
+    listlist(lo);
+}
+```
+
+```Output
+li = ( 46 59 88 72 79 71 60 5 40 84 )
+Even numbers are le = ( 46 88 72 60 40 84 )
+Odd numbers are lo = ( 59 79 71 5 )
+```
 
 ## <a name="copy_n"></a>copy_n
 
@@ -5344,7 +5414,7 @@ void nth_element(
 
 参照されている範囲が有効であり、すべてのポインターが逆参照可能であって、かつシーケンス内で先頭位置からのインクリメントにより最後の位置に到達可能である必要があります。
 
-アルゴリズムでは、n 番目の要素の両側の要素が並べ替えられることは保証されません。  `nth_element` そのため、一定の選択した要素を下回る範囲内の要素を並べ替える `partial_sort` よりも保証は少なくなり、下の範囲の要素を並べ替えが不要な場合に `partial_sort` のより高速な代替として使用することができます。
+アルゴリズムでは、n 番目の要素の両側の要素が並べ替えられることは保証されません。 `nth_element` そのため、一定の選択した要素を下回る範囲内の要素を並べ替える `partial_sort` よりも保証は少なくなり、下の範囲の要素を並べ替えが不要な場合に `partial_sort` のより高速な代替として使用することができます。
 
 どちらの要素も他方より小さくない場合、要素は同等ですが、必ずしも等しいわけではありません。
 
