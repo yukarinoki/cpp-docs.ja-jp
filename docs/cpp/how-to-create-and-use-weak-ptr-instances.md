@@ -1,21 +1,21 @@
 ---
-title: '方法: 作成して、weak_ptr インスタンスを使用'
+title: '方法: Weak_ptr インスタンスを作成して使用する'
 ms.custom: how-to
 ms.date: 07/12/2018
 ms.topic: conceptual
 ms.assetid: 8dd6909b-b070-4afa-9696-f2fc94579c65
-ms.openlocfilehash: 1a0e2880e97a77a0c9975553631a6024072745f0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 63eed40117d1a79c69bd05e5bd1503d4222f556d
+ms.sourcegitcommit: af4ab63866ed09b5988ed53f1bb6996a54f02484
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62184702"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68787089"
 ---
-# <a name="how-to-create-and-use-weakptr-instances"></a>方法: 作成して、weak_ptr インスタンスを使用
+# <a name="how-to-create-and-use-weak_ptr-instances"></a>方法: Weak_ptr インスタンスを作成して使用する
 
 オブジェクトには、参照カウントをインクリメントせずに `shared_ptr` の基になるオブジェクトにアクセスする方法を格納する必要が生じることがあります。 通常、この状況は `shared_ptr` インスタンス間に循環参照がある場合に発生します。
 
-最適なデザインとして、可能な場合は必ずポインターの共有所有権を避けてください。 ただし、`shared_ptr` インスタンスの共有所有権が必要な場合、それらのインスタンス間の循環参照が発生しないようにします。 循環参照を回避できない場合や、何らかの場合で循環参照が必要とされる場合でも、`weak_ptr` を使用して 1 人以上の所有者に別の `shared_ptr` への弱い参照を与えてください。 `weak_ptr` を使用すると、関連するインスタンスの既存のセットに結合される `shared_ptr` を作成できますが、基になるメモリ リソースがまだ有効な場合のみです。 `weak_ptr` 自体は、参照カウントに参加しないため、参照カウントが 0 になるのを防止することはできません。 ただし、`weak_ptr` を使用して、初期化に使用された `shared_ptr` の新しいコピーの取得を試みることはできます。 メモリが既に削除された場合、`bad_weak_ptr`例外がスローされます。 メモリがまだ有効である場合は、新しい共有ポインターが参照カウントをインクリメントし、`shared_ptr` の変数がスコープ内に入っている限りメモリが有効であることを保証します。
+最適なデザインとして、可能な場合は必ずポインターの共有所有権を避けてください。 ただし、`shared_ptr` インスタンスの共有所有権が必要な場合、それらのインスタンス間の循環参照が発生しないようにします。 循環参照を回避できない場合や、何らかの場合で循環参照が必要とされる場合でも、`weak_ptr` を使用して 1 人以上の所有者に別の `shared_ptr` への弱い参照を与えてください。 `weak_ptr` を使用すると、関連するインスタンスの既存のセットに結合される `shared_ptr` を作成できますが、基になるメモリ リソースがまだ有効な場合のみです。 `weak_ptr` 自体は、参照カウントに参加しないため、参照カウントが 0 になるのを防止することはできません。 ただし、`weak_ptr` を使用して、初期化に使用された `shared_ptr` の新しいコピーの取得を試みることはできます。 メモリが既に削除`bad_weak_ptr`されている場合は、例外がスローされます。 メモリがまだ有効である場合は、新しい共有ポインターが参照カウントをインクリメントし、`shared_ptr` の変数がスコープ内に入っている限りメモリが有効であることを保証します。
 
 ## <a name="example"></a>例
 
@@ -65,8 +65,8 @@ Status of 1 = On
 Status of 3 = On
 Status of 4 = On
 use_count = 1
-Status of 0 = O
-nStatus of 1 = On
+Status of 0 = On
+Status of 1 = On
 Status of 2 = On
 Status of 4 = On
 use_count = 1
