@@ -85,7 +85,7 @@ m_strFilter = "StudentID = 100";   // incorrect for some drivers
 上記の引用符、ODBC 仕様に準拠していますが、一部の Dbms が他の引用符文字を必要があります。 詳細については、次を参照してください[SQL:。レコード セットの SQL ステートメント (ODBC) のカスタマイズ](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)します。
 
 > [!NOTE]
->  独自の SQL 文字列を渡すことによって、レコード セットの既定の SQL 文字列を上書きする場合`Open`、カスタム文字列がある場合にフィルターを設定しないでください、**場所**句。 既定の SQL をオーバーライドする方法についての詳細については、次を参照してください[SQL:。レコード セットの SQL ステートメント (ODBC) のカスタマイズ](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)します。
+>  独自の SQL 文字列を渡すことによって、レコード セットの既定の SQL 文字列を上書きする場合`Open`、カスタム文字列がある場合にフィルターを設定しないでください、**WHERE**句。 既定の SQL をオーバーライドする方法についての詳細については、次を参照してください[SQL:。レコード セットの SQL ステートメント (ODBC) のカスタマイズ](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)します。
 
 ## <a name="see-also"></a>関連項目
 
