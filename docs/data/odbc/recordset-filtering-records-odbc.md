@@ -29,7 +29,7 @@ ms.locfileid: "62397862"
 
 1. オブジェクトの値を設定[か](../../mfc/reference/crecordset-class.md#m_strfilter)データ メンバー。
 
-   フィルターは、SQL の内容を含む null で終わる文字列**場所**句がキーワードではなく**場所**します。 たとえば、次のように使用します。
+   フィルターは、SQL の**WHERE**句の内容を含み、キーワードの**WHERE**を含まない、NULL で終わる文字列です。 たとえば、次のように使用します。
 
     ```
     m_pSet->m_strFilter = "CourseID = 'MATH101'";
