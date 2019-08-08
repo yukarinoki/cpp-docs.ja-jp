@@ -25,7 +25,7 @@ Microsoft Store から展開の既存のデスクトップ アプリケーショ
 |-|-|
 |[Visual C++ の言語リファレンス (C++/CX)](visual-c-language-reference-c-cx.md)|C++ を Windows ランタイム API の使用を簡略化し、例外に基づいているエラー処理を有効にする拡張機能のセットについて説明します。|
 |[アプリケーションとライブラリのビルド (C++/CX)](building-apps-and-libraries-c-cx.md)|C++/CX アプリケーションまたはコンポーネントからアクセスできるスタティック ライブラリと DLL を作成する方法について説明します。|
-|[チュートリアル: UWP を作成する「こんにちは, World」のアプリを C++/CX](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp)|C++ /CX での UWP アプリ開発の基本概念を紹介するチュートリアル。 |
+|[チュートリアル: C++/CXで "Hello world" UWP アプリを作成する](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp)|C++ /CX での UWP アプリ開発の基本概念を紹介するチュートリアル。 |
 |[Windows ランタイム コンポーネントを作成する C++/CX](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)|その他の UWP アプリとコンポーネントが使用できる Dll を作成する方法について説明します。|
 |[UWP ゲーム プログラミング](/windows/uwp/gaming/)|DirectX と C++/CX を使ってゲームを作成する方法を説明します。|
 
