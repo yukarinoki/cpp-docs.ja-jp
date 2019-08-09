@@ -5,24 +5,24 @@ helpviewer_keywords:
 - cl.exe compiler, COM support
 - COM, compiler support
 ms.assetid: 76a78442-f2a4-4985-9967-67e20773f847
-ms.openlocfilehash: e13874bad44610821bed9c588af6bd9124162116
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 421930088dcbf9762d50b5af37d994b9008890eb
+ms.sourcegitcommit: 720b74dddb1cdf4e570d55103158304ee1df81f8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222213"
+ms.lasthandoff: 07/29/2019
+ms.locfileid: "68606381"
 ---
 # <a name="compiler-com-support"></a>コンパイラの COM サポート
 
 ## <a name="microsoft-specific"></a>Microsoft 固有の仕様
 
-MicrosoftC++コンパイラ直接を読み取り、コンポーネント オブジェクト モデル (COM) タイプ ライブラリにコンテンツを翻訳C++ソース コードをコンパイルに含めることができます。 言語拡張機能はクライアント側の COM プログラミングを簡単にします。
+Microsoft C++コンパイラは、コンポーネントオブジェクトモデル (COM) タイプライブラリを直接読み取り、その内容をC++コンパイルに含めることができるソースコードに変換できます。 言語拡張機能を使用して、デスクトップアプリのクライアント側で COM プログラミングを容易にすることができます。
 
-使用して、 [#import プリプロセッサ ディレクティブ](../preprocessor/hash-import-directive-cpp.md)クラスのインターフェイスとして COM を記述する C++ ヘッダー ファイルに変換や、コンパイラは、タイプ ライブラリを読み取ることができます。 一連の `#import` 属性は、結果の種類のライブラリのヘッダー ファイルのコンテンツのユーザー コントロールで使用できます。
+[#Import プリプロセッサディレクティブ](../preprocessor/hash-import-directive-cpp.md)を使用すると、コンパイラは、タイプライブラリを読み取り、COM インターフェイスC++をクラスとして記述するヘッダーファイルに変換できます。 一連の `#import` 属性は、結果の種類のライブラリのヘッダー ファイルのコンテンツのユーザー コントロールで使用できます。
 
-使用することができます、 [_ _declspec](../cpp/declspec.md)拡張属性[uuid](../cpp/uuid-cpp.md)を COM オブジェクトへのグローバル一意識別子 (GUID) を割り当てます。 キーワード[_ _uuidof](../cpp/uuidof-operator.md) COM オブジェクトに関連付けられた GUID を抽出するために使用できます。 もう 1 つ **_ _declspec**属性、[プロパティ](../cpp/property-cpp.md)を指定するために使用できる、`get`と`set`COM オブジェクトのデータ メンバーのメソッド。
+[__Declspec](../cpp/declspec.md)拡張属性[uuid](../cpp/uuid-cpp.md)を使用して、グローバル一意識別子 (GUID) を COM オブジェクトに割り当てることができます。 キーワード[__uuidof](../cpp/uuidof-operator.md)は、COM オブジェクトに関連付けられている GUID を抽出するために使用できます。 別の **__declspec**属性である[プロパティ](../cpp/property-cpp.md)を使用して、 `get` COM `set`オブジェクトのデータメンバーに対してメソッドおよびメソッドを指定できます。
 
-サポートする一連の COM サポート グローバル関数とクラスが提供される、`VARIANT`と`BSTR`型、スマート ポインターを実装およびによってスローされたエラー オブジェクトをカプセル化`_com_raise_error`:
+`VARIANT`および`_com_raise_error`型をサポートし、スマートポインターを実装し、によってスローされたエラーオブジェクトをカプセル化するために、一連の COM サポートグローバル関数とクラスが用意されています。 `BSTR`
 
 - [コンパイラ COM のグローバル関数](../cpp/compiler-com-global-functions.md)
 

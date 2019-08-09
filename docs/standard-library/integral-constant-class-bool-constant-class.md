@@ -10,12 +10,12 @@ helpviewer_keywords:
 - std::integral_constant [C++]
 - std::bool_constant [C++]
 ms.assetid: 11c002c6-4d31-4042-9341-f2543f43e108
-ms.openlocfilehash: f7b9217560bc94c536a7c819276266fd16fa4b07
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c85da1f3be7821f8d82cd2b19dab2a5864426a5a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404872"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452042"
 ---
 # <a name="integralconstant-class-boolconstant-class"></a>integral_constant クラス、bool_constant クラス
 
@@ -36,17 +36,17 @@ struct integral_constant {
 
 ### <a name="parameters"></a>パラメーター
 
-*T*<br/>
+*\T*\
 定数の型。
 
-*v*<br/>
+*画像*\
 定数の値。
 
 ## <a name="remarks"></a>Remarks
 
 `integral_constant` テンプレート クラスは、整数型 *T* とその型の値 *v* で特殊化されると、指定された値の整数型の定数を保持するオブジェクトを表します。 `type` という名前のメンバーは、生成済みテンプレートの特殊化型のエイリアスです。`value` メンバーは、特殊化を作成するために使用された値 *v* を保持します。
 
-`bool_constant`テンプレート クラスの明示的な部分的特殊化は、`integral_constant`を使用して**bool**として、 *T*引数。
+このテンプレートクラスは、 **bool**を*T*引数`integral_constant`として使用する、の明示的な部分的特殊化です。 `bool_constant`
 
 ## <a name="example"></a>例
 
@@ -80,6 +80,6 @@ integral_constant<bool, false> == false
 
 ## <a name="see-also"></a>関連項目
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[false_type](../standard-library/type-traits-typedefs.md#false_type)<br/>
-[true_type](../standard-library/type-traits-typedefs.md#true_type)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[false_type](../standard-library/type-traits-typedefs.md#false_type)\
+[true_type](../standard-library/type-traits-typedefs.md#true_type)

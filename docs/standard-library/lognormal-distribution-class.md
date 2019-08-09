@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::lognormal_distribution [C++], param_type
 - std::lognormal_distribution [C++], param_type
 ms.assetid: f2d6a431-6c3a-4370-b12e-4adb4ddf6cc4
-ms.openlocfilehash: eb92844ae1af36b9f4f7146e378fed1832c0b4f9
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 20967204d1df40d2b8dbb21c499e45404f44a4ae
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66449793"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453803"
 ---
 # <a name="lognormaldistribution-class"></a>lognormal_distribution クラス
 
@@ -68,12 +68,12 @@ public:
 
 ### <a name="parameters"></a>パラメーター
 
-*RealType*<br/>
-浮動小数点の結果の型の既定値**二重**します。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
+*RealType*\
+浮動小数点演算の結果の型。既定値は**double**です。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
 
 ## <a name="remarks"></a>Remarks
 
-このテンプレート クラスは、ユーザー指定の整数値を生成する分布を表します型、または型**二重**がない場合は、対数正規分布に従ってを分散します。 次の表は、個々のメンバーに関する記事にリンクしています。
+このテンプレートクラスは、対数正規分布に従って分布した、ユーザー指定の整数型の値、または指定されていない場合は**double**型の値を生成する分布を表します。 次の表は、個々のメンバーに関する記事にリンクしています。
 
 ||||
 |-|-|-|
@@ -195,13 +195,13 @@ explicit lognormal_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>パラメーター
 
-*m*<br/>
+*m*\
 `m` 分布パラメーター。
 
-*s*<br/>
+*2$s*\
 `s` 分布パラメーター。
 
-*parm*<br/>
+*parm*\
 分布の作成に使用される `param_type` の構造体。
 
 ### <a name="remarks"></a>Remarks
@@ -230,13 +230,13 @@ struct param_type {
 
 ### <a name="parameters"></a>パラメーター
 
-*m*<br/>
+*m*\
 `m` 分布パラメーター。
 
-*s*<br/>
+*2$s*\
 `s` 分布パラメーター。
 
-*right*<br/>
+*そうです*\
 比較に使用される `param_type` 構造体。
 
 ### <a name="remarks"></a>Remarks
@@ -247,4 +247,4 @@ struct param_type {
 
 ## <a name="see-also"></a>関連項目
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

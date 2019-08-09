@@ -11,12 +11,12 @@ f1_keywords:
 - filesystem/std::filesystem::perms
 - filesystem/std::experimental::filesystem::perms
 ms.assetid: 0096c046-d101-464c-8259-b878a48280b0
-ms.openlocfilehash: 9c4efa145455240c4420a51c4a01662a30dc0761
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dfbcf65462f0bb7bc6ca44f43507efa7b753e7bc
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405132"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457705"
 ---
 # <a name="ltfilesystemgt-enumerations"></a>&lt;filesystem&gt; 列挙体
 
@@ -86,7 +86,7 @@ enum class directory_options {
 
 ## <a name="file_type"></a>  file_type
 
-ファイルの種類の列挙型。 Regular、directory、not_found、および不明な値を指定できます。
+ファイルの種類の列挙型。 サポートされる値は、regular、directory、not_found、および unknown です。
 
 ### <a name="syntax"></a>構文
 
@@ -110,15 +110,23 @@ enum class file_type {
 |名前|値|説明|
 |----------|-----------|-----------------|
 |`not_found`|-1|存在しないファイルを表します。|
-|`none`|0|type 属性を持たないファイルを表します  (サポートされていません)。|
+|`none`|0|type 属性を持たないファイルを表します (サポートされていません)。|
 |`regular`|1|従来のディスク ファイルを表します。|
 |`directory`|2|ディレクトリを表します。|
-|`symlink`|3|シンボリック リンクを表します  (サポートされていません)。|
-|`block`|4|UNIX ベースのシステム上のブロック型特殊ファイルを表します  (サポートされていません)。|
-|`character`|5|UNIX ベースのシステム上の文字型特殊ファイルを表します  (サポートされていません)。|
-|`fifo`|6|UNIX ベースのシステム上の FIFO ファイルを表します  (サポートされていません)。|
-|`socket`|7|UNIX ベースのシステム上のソケットを表します  (サポートされていません)。|
+|`symlink`|3|シンボリック リンクを表します (サポートされていません)。|
+|`block`|4|UNIX ベースのシステム上のブロック型特殊ファイルを表します (サポートされていません)。|
+|`character`|5|UNIX ベースのシステム上の文字型特殊ファイルを表します (サポートされていません)。|
+|`fifo`|6|UNIX ベースのシステム上の FIFO ファイルを表します (サポートされていません)。|
+|`socket`|7|UNIX ベースのシステム上のソケットを表します (サポートされていません)。|
 |`unknown`|8|状態が確認できないファイルを表します。|
+
+## <a name="perm_options"></a>perm_options
+
+には`replace`、 `add`、 `remove`、および`nofollow`の値が含まれます。
+
+```cpp
+enum class perm_options;
+```
 
 ## <a name="perms"></a>  perms
 
@@ -155,5 +163,5 @@ enum class perms {// names for permissions
 
 ## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<filesystem>](../standard-library/filesystem.md)<br/>
+[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)\
+[\<filesystem>](../standard-library/filesystem.md)

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::ostreambuf_iterator [C++], traits_type
 - std::ostreambuf_iterator [C++], failed
 ms.assetid: dad1e624-2f45-4e94-8887-a885e95f9071
-ms.openlocfilehash: 5114a658cfde965556f4663d2ba92c9ba4d1eaeb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 815647deb7c11f4d7be5650e0ec2e635338551ad
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62370952"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448185"
 ---
 # <a name="ostreambufiterator-class"></a>ostreambuf_iterator Class
 
@@ -35,10 +35,10 @@ template <class CharType = char class Traits = char_traits <CharType>>
 
 ### <a name="parameters"></a>パラメーター
 
-*CharType*<br/>
-ostreambuf_iterator の文字型を表す型。 この引数は省略可能、既定値は**char**します。
+*CharType*\
+ostreambuf_iterator の文字型を表す型。 この引数は省略可能であり、既定値は**char**です。
 
-*Traits*<br/>
+*名札*\
 ostreambuf_iterator の文字型を表す型。 この引数は省略可能であり、既定値は `char_traits`\< *CharType>* です。
 
 ## <a name="remarks"></a>Remarks
@@ -70,7 +70,7 @@ ostreambuf_iterator クラスは出力反復子の要件を満たす必要があ
 
 |演算子|説明|
 |-|-|
-|[operator*](#op_star)|出力反復子の式を実装するために使用される逆参照演算子\* `i`  = `x`します。|
+|[operator*](#op_star)|\*出力反復子式`i`  = を実装するために使用される逆参照演算子。`x`|
 |[operator++](#op_add_add)|操作が呼び出される前に示したものと同じオブジェクトに `ostreambuf_iterator` を返す、実質的な機能を持たないインクリメント演算子。|
 |[operator=](#op_eq)|この演算子は、関連付けられているストリーム バッファーに文字を挿入します。|
 
@@ -195,7 +195,7 @@ ostreambuf 反復子オブジェクト。
 
 ### <a name="remarks"></a>Remarks
 
-この演算子は、出力反復子式 \* *i* = *x* 内でのみ機能して、ストリーム バッファーに文字を出力します。 ostreambuf 反復子に適用されて、反復子を返します。**\*iter** は **iter** を返します。
+この演算子は、出力反復子式 \* *i* = *x* 内でのみ機能して、ストリーム バッファーに文字を出力します。 ostreambuf 反復子に適用されて、反復子を返します。 **\*iter** は **iter** を返します。
 
 ### <a name="example"></a>例
 
@@ -286,7 +286,7 @@ ostreambuf_iterator<CharType, Traits>& operator=(CharType _Char);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Char*<br/>
+*文字 (_c)* \
 ストリーム バッファーに挿入する文字。
 
 ### <a name="return-value"></a>戻り値
@@ -339,15 +339,15 @@ ostreambuf_iterator(ostream_type& Ostr) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*strbuf*<br/>
+*strbuf*\
 出力ストリームバッファー ポインターを初期化するために使用される出力 streambuf オブジェクト。
 
-*Ostr*<br/>
+*Ostr*\
 出力ストリームバッファー ポインターを初期化するために使用される出力ストリーム オブジェクト。
 
 ### <a name="remarks"></a>Remarks
 
-最初のコンス トラクターによって初期化、出力ストリームバッファー ポインターを*strbuf*します。
+最初のコンストラクターは、 *strbuf*を使用して出力ストリームバッファーポインターを初期化します。
 
 2 番目のコンストラクターは、出力ストリームバッファー ポインターを `Ostr`. `rdbuf` で初期化します。 格納されたポインターは null ポインターでない必要があります。
 
@@ -410,7 +410,7 @@ typedef basic_streambuf<CharType, Traits> streambuf_type;
 
 ### <a name="remarks"></a>Remarks
 
-型のシノニムは、 `basic_streambuf` \< **CharType**、 **Traits**> になる I/O バッファーのストリーム クラス`streambuf`文字型に特殊化される**char**します。
+この型は、文字型`basic_streambuf` **char**に特化し`streambuf`たときに使用される i/o バッファーのストリームクラスである**chartype**、特徴 > の\<シノニムです。
 
 ### <a name="example"></a>例
 
@@ -468,6 +468,6 @@ by charOutBuf are: OUT.
 
 ## <a name="see-also"></a>関連項目
 
-[\<iterator>](../standard-library/iterator.md)<br/>
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)<br/>
+[\<iterator>](../standard-library/iterator.md)\
+[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)

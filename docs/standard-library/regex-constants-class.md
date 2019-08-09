@@ -82,12 +82,12 @@ helpviewer_keywords:
 - std::regex_constants [C++], optimize
 - std::regex_constants [C++], collate
 ms.assetid: 4a69c0ba-c46d-46e4-bd29-6f4efb805f26
-ms.openlocfilehash: b657dbc5ae537e15f6638ffbd3594cd52b644f3b
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
+ms.openlocfilehash: c8abca8109db9c781d63721b795feb01161fdb40
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400776"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451662"
 ---
 # <a name="regexconstants-namespace"></a>regex_constants 名前空間
 
@@ -290,11 +290,11 @@ enum syntax_option_type
 
 ## <a name="see-also"></a>関連項目
 
-[\<regex>](../standard-library/regex.md)<br/>
-[regex_error クラス](../standard-library/regex-error-class.md)<br/>
-[\<regex> 系関数](../standard-library/regex-functions.md)<br/>
-[regex_iterator クラス](../standard-library/regex-iterator-class.md)<br/>
-[\<regex> 系演算子](../standard-library/regex-operators.md)<br/>
-[regex_token_iterator クラス](../standard-library/regex-token-iterator-class.md)<br/>
-[regex_traits クラス](../standard-library/regex-traits-class.md)<br/>
-[\<regex> typedefs](../standard-library/regex-typedefs.md)<br/>
+[\<regex>](../standard-library/regex.md)\
+[regex_error クラス](../standard-library/regex-error-class.md)\
+[\<regex > 関数](../standard-library/regex-functions.md)\
+[regex_iterator クラス](../standard-library/regex-iterator-class.md)\
+[\<regex > 演算子](../standard-library/regex-operators.md)\
+[regex_token_iterator クラス](../standard-library/regex-token-iterator-class.md)\
+[regex_traits クラス](../standard-library/regex-traits-class.md)\
+[\<regex> typedefs](../standard-library/regex-typedefs.md)

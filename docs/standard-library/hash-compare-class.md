@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - hash_compare class
 ms.assetid: d502bb59-de57-4585-beb9-00e3a998c0af
-ms.openlocfilehash: f535122b67f854b8b204664b829ce9da5fe3c6a6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 399b412c41128f513cf01d1e034bad2bbc5ef79f
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159822"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448805"
 ---
 # <a name="hashcompare-class"></a>hash_compare クラス
 
@@ -23,15 +23,15 @@ class hash_compare { Traits comp; public: const size_t bucket_size = 4; const si
 
 ## <a name="remarks"></a>Remarks
 
-各ハッシュ連想コンテナーの種類のハッシュ特性オブジェクトを格納する`Traits`(テンプレート パラメーター)。 特定の関数とオブジェクトを選択的にオーバーライドするために hash_compare を特殊化してクラスを派生させるか、特定の最小要件を満たしているこのクラスの独自のバージョンを使用することができます。 具体的には、型のオブジェクト hash_comp についての`hash_compare<Key, Traits>`、上記のコンテナーで、次の動作が必要です。
+各ハッシュ連想コンテナーは、型`Traits`のハッシュ特性オブジェクト (テンプレートパラメーター) を格納します。 特定の関数とオブジェクトを選択的にオーバーライドするために hash_compare を特殊化してクラスを派生させるか、特定の最小要件を満たしているこのクラスの独自のバージョンを使用することができます。 具体的には、型`hash_compare<Key, Traits>`のオブジェクト hash_comp の場合、上記のコンテナーには次の動作が必要です。
 
-- すべての値の`key`型の`Key`、呼び出し**hash_comp**(`key`) 型の値の分布を生成、ハッシュ関数として機能`size_t`します。 hash_compare によって提供される関数は `key` を返します。
+- `key`型`key` `size_t` のすべての値について、call hash_comp () はハッシュ関数として機能します。これにより、型の値の分布が生成されます。 `Key` hash_compare によって提供される関数は `key` を返します。
 
-- 任意の値の`key1`型の`Key`前になる`key2`シーケンスと同じハッシュ値 (ハッシュ関数によって返される値) **hash_comp**(`key2`、 `key1`) は false。 関数は、型の値で順序付けの合計を課す必要があります`Key`します。 Hash_compare によって提供される関数を返します*comp*(`key2`、 `key1`)`,`場所*comp*型の格納されているオブジェクトは、`Traits`ときに指定できることをオブジェクト hash_comp を構築します。 既定の`Traits`パラメーターの型`less<Key>`、並べ替えキーの値で減少することはありません。
+- シーケンスの前`key1` `key2` `key1` `Key` に`key2`あり、同じハッシュ値 (ハッシュ関数によって返される値) を持つ型の値の場合、 **hash_comp**(,) は false になります。 関数は、型`Key`の値に対して合計の順序付けを強制する必要があります。 Hash_compare によって提供される関数`key2`は`key1`comp `,` (  ,) を返します。ここ`Traits`で、comp は、オブジェクト hash_comp を構築するときに指定できる型の格納されたオブジェクトです。 既定`Traits`のパラメーター型`less<Key>`では、並べ替えキーの値が減少することはありません。
 
-- 整数の定数`bucket_size`を超えないようにしてください、コンテナーを「バケット」(ハッシュ テーブルのエントリ) ごとの要素の平均数を指定します。 0 より大きくなければなりません。 hash_compare によって提供される値は 4 です。
+- 整数定数`bucket_size`は、コンテナーが超えないようにする必要がある "バケット" (ハッシュテーブルエントリ) あたりの要素の平均数を指定します。 0 より大きくなければなりません。 hash_compare によって提供される値は 4 です。
 
-- 整数の定数`min_buckets`ハッシュ テーブルに保持するバケットの最小数を指定します。 2 の累乗で、0 より大きくなければなりません。 hash_compare によって提供される値は 8 です。
+- 整数定数`min_buckets`は、ハッシュテーブルで保持するバケットの最小数を指定します。 2 の累乗で、0 より大きくなければなりません。 hash_compare によって提供される値は 8 です。
 
 ## <a name="example"></a>例
 
@@ -45,5 +45,5 @@ hash_compare の宣言方法や使用方法の例については、[hash_map::ha
 
 ## <a name="see-also"></a>関連項目
 
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)<br/>
+[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - time_put_byname class
 ms.assetid: e08c2348-64d2-4ace-98b1-1496e14c7b1a
-ms.openlocfilehash: ffe7aa276e9380b6544a78c1c1735ab57765507a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2da2bf4ea1c709b820c1a82dc20e288634139a83
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411969"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68460004"
 ---
 # <a name="timeputbyname-class"></a>time_put_byname クラス
 
@@ -40,15 +40,15 @@ protected:
 
 ### <a name="parameters"></a>パラメーター
 
-*_Locname*<br/>
+*名前 (_d)* \
 ロケール名。
 
-*_Refs*<br/>
+*参照 (_c)* \
 最初の参照数。
 
 ## <a name="remarks"></a>Remarks
 
-その動作によって決定されます、[という](../standard-library/locale-class.md#name)ロケール *_Locname*します。 各コンス トラクターを使用してその基本オブジェクトを初期化します[time_put](../standard-library/time-put-class.md#time_put)\<CharType, OutputIterator > (`_Refs`)。
+その動作は、[名前付き](../standard-library/locale-class.md#name)ロケール*名*によって決まります。 各コンストラクターは、 [time_put](../standard-library/time-put-class.md#time_put)\<chartype, OutputIterator > (`_Refs`) を使用して、その基本オブジェクトを初期化します。
 
 ## <a name="requirements"></a>必要条件
 
@@ -58,4 +58,4 @@ protected:
 
 ## <a name="see-also"></a>関連項目
 
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

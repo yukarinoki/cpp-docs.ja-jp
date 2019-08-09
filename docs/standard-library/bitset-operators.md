@@ -12,21 +12,16 @@ helpviewer_keywords:
 - std::operator&amp; (bitset)
 - std::operator&gt;&gt; (bitset)
 - std::operator&lt;&lt; (bitset)
-ms.openlocfilehash: 1c4c1b6f6c023514a1d3ae46f6670247e4bf99d4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 30367e003d2dad95e870854098e7fcae34f50efa
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380196"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243334"
 ---
 # <a name="ltbitsetgt-operators"></a>&lt;bitset&gt; 演算子
 
-||||
-|-|-|-|
-|[operator&amp;](#op_amp)|[operator&gt;&gt;](#op_gt_gt)|[operator&lt;&lt;](#op_lt_lt)|
-|[operator^](#op_xor)|[operator&#124;](#op_or)| |
-
-## <a name="op_amp"></a>  operator&amp;
+## <a name="op_amp"></a> 演算子&amp;
 
 2 つのビットセット間でビットごとの `AND` を実行します。
 
@@ -40,10 +35,10 @@ operator&(
 
 ### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左*\
 それぞれの要素が `AND` でビットごとに結合される 2 つのビットセットのうちの最初。
 
-*right*<br/>
+*そうです*\
 それぞれの要素が `AND` でビットごとに結合される 2 つの valarray のうちの 2 つ目。
 
 ### <a name="return-value"></a>戻り値
@@ -78,7 +73,7 @@ bitset 2: 0011
 bitset 3: 0001
 ```
 
-## <a name="op_lt_lt"></a>  演算子&lt;&lt;
+## <a name="op_lt_lt"></a> 演算子&lt;&lt;
 
 ビット シーケンスのテキスト表現を出力ストリームに挿入します。
 
@@ -91,7 +86,7 @@ basic_ostream<CharType, Traits>& operator<<(
 
 ### <a name="parameters"></a>パラメーター
 
-*right*<br/>
+*そうです*\
 文字列として出力ストリームに挿入する型 **bitset\<N>** のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -102,7 +97,7 @@ basic_ostream<CharType, Traits>& operator<<(
 
 テンプレート関数のオーバー ロード`operator<<`、ビットセットを文字列に変換せずに書き出されます。 このテンプレート関数は、実質的に次の内容を実行します。
 
-**ostr** << _ *Right*. [to_string](bitset-class.md) < **CharType**, **Traits**, **allocator**\< **CharType**> > ( )
+**ostr** << _*右*します。 [to_string](bitset-class.md) <**CharType**、 **Traits**、**アロケーター**\<**CharType**>>)
 
 ### <a name="example"></a>例
 
@@ -135,7 +130,7 @@ int main( )
 }
 ```
 
-## <a name="op_gt_gt"></a>  演算子&gt;&gt;
+## <a name="op_gt_gt"></a> 演算子&gt;&gt;
 
 ビット文字の文字列をビットセットに読み込みます。
 
@@ -150,10 +145,10 @@ _Istr,
 
 ### <a name="parameters"></a>パラメーター
 
-*_Istr*<br/>
+*_Istr*\
 ビットセットに挿入する入力ストリームに入力される文字列。
 
-*right*<br/>
+*そうです*\
 入力ストリームからビットを受け取るビットセット。
 
 ### <a name="return-value"></a>戻り値
@@ -221,7 +216,7 @@ int main()
 }
 ```
 
-## <a name="op_xor"></a>  operator^
+## <a name="op_xor"></a> 演算子 ^
 
 2 つのビットセット間でビットごとの `EXCLUSIVE-OR` を実行します。
 
@@ -235,10 +230,10 @@ operator^(
 
 ### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左*\
 それぞれの要素が `EXCLUSIVE-OR` でビットごとに結合される 2 つのビットセットのうちの最初。
 
-*right*<br/>
+*そうです*\
 それぞれの要素が `EXCLUSIVE-OR` でビットごとに結合される 2 つの valarray のうちの 2 つ目。
 
 ### <a name="return-value"></a>戻り値
@@ -273,7 +268,7 @@ bitset 2: 0011
 bitset 3: 0110
 ```
 
-## <a name="op_or"></a>  operator&#124;
+## <a name="op_or"></a> 演算子&#124;
 
 2 つのビットセット間でビットごとの `OR` を実行します。
 
@@ -287,10 +282,10 @@ operator|(
 
 ### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左*\
 それぞれの要素が `OR` でビットごとに結合される 2 つのビットセットのうちの最初。
 
-*right*<br/>
+*そうです*\
 それぞれの要素が `OR` でビットごとに結合される 2 つの valarray のうちの 2 つ目。
 
 ### <a name="return-value"></a>戻り値
@@ -324,7 +319,3 @@ bitset 1: 0101
 bitset 2: 0011
 bitset 3: 0111
 ```
-
-## <a name="see-also"></a>関連項目
-
-[\<bitset>](../standard-library/bitset.md)<br/>

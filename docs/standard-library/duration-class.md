@@ -11,12 +11,12 @@ f1_keywords:
 ms.assetid: 06b863b3-65be-4ded-a72e-6e1eb1531077
 helpviewer_keywords:
 - std::chrono [C++], duration
-ms.openlocfilehash: 49c68b1650ced36ebcf949ae2594508480e15136
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4c537b7dfdd23ba641438e0caf6306cf5549b2d7
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413802"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454307"
 ---
 # <a name="duration-class"></a>duration クラス
 
@@ -109,29 +109,29 @@ constexpr duration(const duration<Rep2, Period2>& Dur);
 
 ### <a name="parameters"></a>パラメーター
 
-*Rep2*<br/>
+*Rep2*\
 ティック数を表す演算型。
 
-*Period2*<br/>
+*Period2*\
 秒単位でティック期間を表すための `std::ratio` テンプレートの特殊化。
 
-*R*<br/>
+*R*\
 既定の期間のティック数。
 
-*期間*<br/>
-によって指定された期間のタイマー刻み数*Period2*します。
+*期間*\
+*Period2*によって指定された期間のタイマー刻みの数。
 
 ### <a name="remarks"></a>Remarks
 
 既定のコンストラクターは、初期化されていないオブジェクトを作成します。 空のかっこを使う値の初期化は、ゼロ クロック ティックの時間間隔を表すオブジェクトを初期化します。
 
-時間間隔を表す秒、コンス トラクターは、オブジェクトを構築します。 1 つのテンプレート引数*R*クロック ティックの既定の期間を使用して`std::ratio<1>`します。 表現型から duration オブジェクトを構築するとエラーが丸めティック カウントを避けるため、 *Rep2* 、浮動小数点数として扱うことができますをときに、型`duration::rep`浮動小数点型として扱うことはできません。
+2つ目のテンプレート引数コンストラクターは、既定の`std::ratio<1>`期間を使用して、 *R*クロックティックの時間間隔を表すオブジェクトを構築します。 ティックカウントが丸められないようにするには、が浮動小数点型として処理できない場合`duration::rep`に、浮動小数点型として扱うことができる表現型 Rep2 から duration オブジェクトを構築するとエラーになります。
 
-3 番目、2 つのテンプレート引数コンス トラクターは、時間間隔の長さがで指定された時間間隔を表すオブジェクトを構築します。*期間*します。 ティック カウントが切り捨てられないようにするため、対象の型と*通約可能*な型を持つ duration オブジェクトから duration オブジェクトを作成するとエラーになります。
+3番目の2つのテンプレート引数コンストラクターは、長さが*期間*によって指定された時間間隔である時間間隔を表すオブジェクトを構築します。 ティック カウントが切り捨てられないようにするため、対象の型と*通約可能*な型を持つ duration オブジェクトから duration オブジェクトを作成するとエラーになります。
 
 `D2` を浮動小数点型として処理できず、[ratio_divide\<D1::period, D2::period>::type::den](../standard-library/ratio.md) が 1 ではない場合、duration 型の `D1` は、別の duration 型の `D2` と*通約可能*になります。
 
-しない限り、 *Rep2*暗黙的に変換できる`rep`、 `treat_as_floating_point<rep>` *true を保持*または`treat_as_floating_point<Rep2>` *false を保持*、2 番目のコンス トラクターオーバー ロードの解決に関与しません。 詳細については、「[<type_traits>](../standard-library/type-traits.md)」を参照してください。
+*Rep2*が暗黙的に`rep`に変換可能であり、true `treat_as_floating_point<Rep2>`を*保持*して`treat_as_floating_point<rep>`いるか false を*保持*している場合を除き、2番目のコンストラクターはオーバーロードの解決に関与しません。 詳細については、「[<type_traits>](../standard-library/type-traits.md)」を参照してください。
 
 変換でオーバーフローが発生して `treat_as_floating_point<rep>` が *true を保持*していない場合、または両方の `ratio_divide<Period2, period>::den` が 1 ではなく `treat_as_floating_point<Rep2>` が *false を保持*していない場合、3 番目のコンストラクターはオーバーロードの解決に関与しません。 詳しくは、「[<type_traits>](../standard-library/type-traits.md)」をご覧ください。
 
@@ -195,8 +195,8 @@ duration& operator%=(const duration& Div);
 
 ### <a name="parameters"></a>パラメーター
 
-*Div*<br/>
-最初の方法では、 *Div*ティック数を表します。 2 番目のメソッドでは、 *Div*は、`duration`ティック カウントを格納しているオブジェクト。
+*Div*\
+最初のメソッドでは、 *Div*はティックカウントを表します。 2番目のメソッドの*Div*は`duration` 、ティックカウントを含むオブジェクトです。
 
 ### <a name="return-value"></a>戻り値
 
@@ -212,7 +212,7 @@ duration& operator*=(const rep& Mult);
 
 ### <a name="parameters"></a>パラメーター
 
-*Mult*<br/>
+*Mult*\
 `duration::rep` によって指定される型の値。
 
 ### <a name="return-value"></a>戻り値
@@ -229,7 +229,7 @@ duration& operator/=(const rep& Div);
 
 ### <a name="parameters"></a>パラメーター
 
-*Div*<br/>
+*Div*\
 `duration::rep` によって指定される型の値。
 
 ### <a name="return-value"></a>戻り値
@@ -270,7 +270,7 @@ duration& operator+=(const duration& Dur);
 
 ### <a name="parameters"></a>パラメーター
 
-*期間*<br/>
+*期間*\
 `duration` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -287,7 +287,7 @@ duration& operator-=(const duration& Dur);
 
 ### <a name="parameters"></a>パラメーター
 
-*期間*<br/>
+*期間*\
 `duration` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -312,7 +312,7 @@ duration& operator%=(const rep& Div);duration& operator%=(const duration& Div);
 
 ### <a name="parameters"></a>パラメーター
 
-*Div*<br/>
+*Div*\
 除数。duration オブジェクトまたはティック カウントを表す値のいずれかです。
 
 ### <a name="remarks"></a>Remarks
@@ -321,6 +321,6 @@ duration& operator%=(const rep& Div);duration& operator%=(const duration& Div);
 
 ## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<chrono>](../standard-library/chrono.md)<br/>
-[duration_values 構造体](../standard-library/duration-values-structure.md)<br/>
+[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)\
+[\<chrono>](../standard-library/chrono.md)\
+[duration_values 構造体](../standard-library/duration-values-structure.md)

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::function [C++], target
 - std::function [C++], target_type
 ms.assetid: 7b5ca76b-9ca3-4d89-8fcf-cad70a4aeae6
-ms.openlocfilehash: 44c7691cc967b13b4fa94a7c51da57b7bf4d511f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d775af68b8238093c794a0f78d7e24f2a515ee56
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159718"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243790"
 ---
 # <a name="function-class"></a>function クラス
 
@@ -79,10 +79,10 @@ public:
 
 ### <a name="parameters"></a>パラメーター
 
-*Fty*<br/>
+*Fty*\
 ラップする関数の型。
 
-*Ax*<br/>
+*Ax*\
 アロケーター関数。
 
 ## <a name="remarks"></a>Remarks
@@ -103,21 +103,23 @@ public:
 
 空の `function` オブジェクトは、呼び出し可能オブジェクトまたは呼び出し可能オブジェクトへの参照を保持しません。
 
+## <a name="members"></a>メンバー
+
 ### <a name="constructors"></a>コンストラクター
 
-|コンストラクター|説明|
+|||
 |-|-|
 |[function](#function)|空のラッパーまたは固定のシグネチャを持つ任意の型の呼び出し可能オブジェクトを格納するラッパーを作成します。|
 
 ### <a name="typedefs"></a>Typedef
 
-|型名|説明|
+|||
 |-|-|
 |[result_type](#result_type)|格納された呼び出し可能オブジェクトの戻り値の型。|
 
-### <a name="member-functions"></a>メンバー関数
+### <a name="functions"></a>関数
 
-|メンバー関数|説明|
+|||
 |-|-|
 |[assign](#assign)|呼び出し可能オブジェクトをこの関数オブジェクトに割り当てます。|
 |[swap](#swap)|2 つの呼び出し可能オブジェクトを入れ替えます。|
@@ -126,19 +128,13 @@ public:
 
 ### <a name="operators"></a>演算子
 
-|演算子|説明|
+|||
 |-|-|
-|[function::operator unspecified](#op_unspecified)|格納されている呼び出し可能オブジェクトが存在するかどうかをテストします。|
-|[function::operator()](#op_call)|呼び出し可能オブジェクトを呼び出します。|
-|[function::operator=](#op_eq)|格納されている呼び出し可能オブジェクトを置き換えます。|
+|[演算子が指定されていません。](#op_unspecified)|格納されている呼び出し可能オブジェクトが存在するかどうかをテストします。|
+|[演算子 ()](#op_call)|呼び出し可能オブジェクトを呼び出します。|
+|[operator=](#op_eq)|格納されている呼び出し可能オブジェクトを置き換えます。|
 
-## <a name="requirements"></a>必要条件
-
-**ヘッダー:** \<functional>
-
-**名前空間:** std
-
-## <a name="assign"></a>  function::assign
+## <a name="assign"></a> 割り当てる
 
 呼び出し可能オブジェクトをこの関数オブジェクトに割り当てます。
 
@@ -156,20 +152,20 @@ template <class Fx, class Alloc>
 
 ### <a name="parameters"></a>パラメーター
 
-*_Func*<br/>
+*_Func*\
 呼び出し可能オブジェクト。
 
-*_Fnref*<br/>
+*_Fnref*\
 呼び出し可能オブジェクトを含む参照ラッパー。
 
-*Ax*<br/>
+*Ax*\
 アロケーター オブジェクト。
 
 ### <a name="remarks"></a>Remarks
 
 各メンバー関数は、`*this` によって保持されている `callable object` を `operand` として渡される呼び出し可能オブジェクトに置き換えます。 アロケーター オブジェクトが、記憶域を割り当てる両方*Ax*します。
 
-## <a name="function"></a>  function::function
+## <a name="function"></a> 関数
 
 空のラッパーまたは固定のシグネチャを持つ任意の型の呼び出し可能オブジェクトを格納するラッパーを作成します。
 
@@ -194,27 +190,27 @@ template <class Fx, class Alloc>
 
 ### <a name="parameters"></a>パラメーター
 
-*right*<br/>
+*そうです*\
 コピーする関数オブジェクト。
 
-*[Fx]*<br/>
+*[Fx]* \
 呼び出し可能オブジェクトの型。
 
-*_Func*<br/>
+*_Func*\
 ラップする呼び出し可能オブジェクト。
 
-*Alloc*<br/>
+*Alloc*\
 アロケーター型。
 
-*Ax*<br/>
+*Ax*\
 アロケーター。
 
-*_Fnref*<br/>
+*_Fnref*\
 ラップする呼び出し可能オブジェクトの参照。
 
 ### <a name="remarks"></a>Remarks
 
-最初の 2 つのコンストラクターは、空の `function` オブジェクトを構築します。 次の 3 つのコンストラクターは、オペランドとして渡される呼び出し可能オブジェクトを保持する `function` オブジェクトを構築します。 最後の 2 つのコンス トラクターは、アロケーター オブジェクト Ax を使用してストレージを割り当てます。
+最初の 2 つのコンストラクターは、空の `function` オブジェクトを構築します。 次の 3 つのコンストラクターは、オペランドとして渡される呼び出し可能オブジェクトを保持する `function` オブジェクトを構築します。 最後の 2 つのコンストラクターは、アロケーター オブジェクト Ax を使用してストレージを割り当てます。
 
 ### <a name="example"></a>例
 
@@ -286,7 +282,7 @@ f is non-empty (correct).
 g is empty (correct).
 ```
 
-## <a name="op_unspecified"></a>  function::operator unspecified
+## <a name="op_unspecified"></a> 演算子が指定されていません。
 
 格納されている呼び出し可能オブジェクトが存在するかどうかをテストします。
 
@@ -328,7 +324,7 @@ not empty == false
 not empty == true
 ```
 
-## <a name="op_call"></a>  function::operator()
+## <a name="op_call"></a> operator()
 
 呼び出し可能オブジェクトを呼び出します。
 
@@ -341,10 +337,10 @@ result_type operator()(
 
 ### <a name="parameters"></a>パラメーター
 
-*TN*<br/>
+*TN*\
 N 番目の引数の型。
 
-*tN*<br/>
+*TN*\
 N 番目の呼び出しの引数。
 
 ### <a name="remarks"></a>Remarks
@@ -379,7 +375,7 @@ empty == false
 val == -3
 ```
 
-## <a name="op_eq"></a>  function::operator=
+## <a name="op_eq"></a> 演算子 =
 
 格納されている呼び出し可能オブジェクトを置き換えます。
 
@@ -394,16 +390,16 @@ template <class Fty>
 
 ### <a name="parameters"></a>パラメーター
 
-*npc*<br/>
+*npc*\
 null ポインターの定数。
 
-*right*<br/>
+*そうです*\
 コピーする関数オブジェクト。
 
-*fn*<br/>
+*fn*\
 ラップする呼び出し可能オブジェクト。
 
-*fnref*<br/>
+*fnref*\
 ラップする呼び出し可能オブジェクトの参照。
 
 ### <a name="remarks"></a>Remarks
@@ -461,7 +457,7 @@ empty == false
 val == -3
 ```
 
-## <a name="result_type"></a>  function::result_type
+## <a name="result_type"></a> result_type
 
 格納された呼び出し可能オブジェクトの戻り値の型。
 
@@ -503,7 +499,7 @@ empty == false
 val == -3
 ```
 
-## <a name="swap"></a>  function::swap
+## <a name="swap"></a> スワップ
 
 2 つの呼び出し可能オブジェクトを入れ替えます。
 
@@ -513,7 +509,7 @@ void swap(function& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*right*<br/>
+*そうです*\
 入れ替える関数オブジェクト。
 
 ### <a name="remarks"></a>Remarks
@@ -562,7 +558,7 @@ empty == false
 val == -3
 ```
 
-## <a name="target"></a>  function::target
+## <a name="target"></a> ターゲット
 
 格納されている呼び出し可能オブジェクトが指定されたとおりに呼び出し可能かどうかをテストします。
 
@@ -575,7 +571,7 @@ template <class Fty2>
 
 ### <a name="parameters"></a>パラメーター
 
-*Fty2*<br/>
+*Fty2*\
 テスト対象の呼び出し可能オブジェクトの型。
 
 ### <a name="remarks"></a>Remarks
@@ -623,7 +619,7 @@ empty == true
 no target == true
 ```
 
-## <a name="target_type"></a>  function::target_type
+## <a name="target_type"></a> target_type
 
 呼び出し可能オブジェクトの型情報を取得します。
 
@@ -668,8 +664,3 @@ type == int (__cdecl*)(int)
 empty == true
 type == void
 ```
-
-## <a name="see-also"></a>関連項目
-
-[mem_fn](../standard-library/functional-functions.md#mem_fn)<br/>
-[reference_wrapper クラス](../standard-library/reference-wrapper-class.md)<br/>

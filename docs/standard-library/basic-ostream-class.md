@@ -20,16 +20,16 @@ helpviewer_keywords:
 - std::basic_ostream [C++], tellp
 - std::basic_ostream [C++], write
 ms.assetid: 5baadc65-b662-4fab-8c9f-94457c58cda1
-ms.openlocfilehash: 64a32513e9dc151e64fccdb0ef678a75588f0a41
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8715ae4816be9c8f1453b243d1c8d3574d8c97cf
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62371659"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457868"
 ---
 # <a name="basicostream-class"></a>basic_ostream クラス
 
-このテンプレート クラスは、型の要素を含むストリーム バッファーにエンコードされたオブジェクトと要素の挿入を制御するオブジェクトを説明します`Elem`とも呼ばれる、 [char_type](../standard-library/basic-ios-class.md#char_type)、その文字特性はクラスによって決まります。`Tr`とも呼ばれる、 [traits_type](../standard-library/basic-ios-class.md#traits_type)します。
+このテンプレートクラスは、要素とエンコードされたオブジェクトを、 `Elem` [char_type](../standard-library/basic-ios-class.md#char_type)とも呼ばれる型の要素を使用してストリームバッファーに挿入する操作を制御するオブジェクト`Tr`を表します。このオブジェクトは、文字の特徴がクラスによって決定されます。[traits_type](../standard-library/basic-ios-class.md#traits_type)として知られています。
 
 ## <a name="syntax"></a>構文
 
@@ -40,10 +40,10 @@ class basic_ostream : virtual public basic_ios<Elem, Tr>
 
 ### <a name="parameters"></a>パラメーター
 
-*Elem*<br/>
+*Elem*\
 `char_type`。
 
-*Tr*<br/>
+*Tr*\
 文字 `traits_type`。
 
 ## <a name="remarks"></a>Remarks
@@ -100,9 +100,9 @@ setstate(state);
 return (*this);
 ```
 
-関数呼び出しの両方のグループ[setstate](../standard-library/basic-ios-class.md#setstate)(**badbit**) 要素を挿入中にエラーが発生した場合。
+要素の挿入中にエラーが発生した場合、どちらの関数グループも[setstate](../standard-library/basic-ios-class.md#setstate)(**badbit**) を呼び出します。
 
-basic_istream\< **Elem**, **Tr**> クラスのオブジェクトは、[basic_ios](../standard-library/basic-ios-class.md)**\<Elem**, **Tr>** クラスの仮想パブリック ベース オブジェクトのみを格納します。
+basic_istream\< **Elem**, **Tr**> クラスのオブジェクトは、[basic_ios](../standard-library/basic-ios-class.md) **\<Elem**, **Tr>** クラスの仮想パブリック ベース オブジェクトのみを格納します。
 
 ## <a name="example"></a>例
 
@@ -153,13 +153,13 @@ basic_ostream(basic_ostream&& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*strbuf*<br/>
+*strbuf*\
 [basic_streambuf](../standard-library/basic-streambuf-class.md) 型のオブジェクト。
 
-*_Isstd*<br/>
-**true**場合、これは、標準的なストリームです。 それ以外の場合、 **false**します。
+*_Isstd*\
+これが標準ストリームの場合は**true** 。それ以外の場合は**false**。
 
-*right*<br/>
+*そうです*\
 `basic_ostream` 型のオブジェクトへの右辺値参照。
 
 ### <a name="remarks"></a>Remarks
@@ -184,7 +184,7 @@ basic_ostream オブジェクトへの参照。
 
 ### <a name="remarks"></a>Remarks
 
-[rdbuf](../standard-library/basic-ios-class.md#rdbuf) が Null ポインターではない場合、関数は **rdbuf->**[pubsync](../standard-library/basic-streambuf-class.md#pubsync) を呼び出します。 -1 を返す場合、関数は [setstate](../standard-library/basic-ios-class.md#setstate)(**badbit**) を呼び出します。 **\*this** を返します。
+[rdbuf](../standard-library/basic-ios-class.md#rdbuf) が Null ポインターではない場合、関数は **rdbuf->** [pubsync](../standard-library/basic-streambuf-class.md#pubsync) を呼び出します。 -1 を返す場合、関数は [setstate](../standard-library/basic-ios-class.md#setstate)(**badbit**) を呼び出します。 **\*this** を返します。
 
 ### <a name="example"></a>例
 
@@ -237,13 +237,13 @@ basic_ostream<Elem, Tr>& operator<<(const void* val);
 
 ### <a name="parameters"></a>パラメーター
 
-*pfn*<br/>
+*Pfn*\
 関数ポインター。
 
-*strbuf*<br/>
+*strbuf*\
 `stream_buf` オブジェクトへのポインター。
 
-*val*<br/>
+*val*\
 ストリームに書き込む要素。
 
 ### <a name="return-value"></a>戻り値
@@ -252,9 +252,9 @@ basic_ostream オブジェクトへの参照。
 
 ### <a name="remarks"></a>Remarks
 
-\<Ostream > ヘッダーでは、いくつかのグローバル挿入演算子も定義します。 詳細については、次を参照してください。[演算子 <<](../standard-library/ostream-operators.md#op_lt_lt)します。
+Ostream > ヘッダーでは、いくつかのグローバル挿入演算子も定義されて\<います。 詳細については、「 [operator < <](../standard-library/ostream-operators.md#op_lt_lt)」を参照してください。
 
-最初のメンバー関数により、式形式の`ostr << endl`呼び出し[endl](../standard-library/ostream-functions.md#endl)**(ostr)**、し、返します**\*この**します。 2 番目と 3 番目の関数は、[hex](../standard-library/ios-functions.md#hex) などの他のマニピュレーターが同じように動作することを保証します。 残りの関数はすべて書式付き出力関数です。
+最初のメンバー `ostr << endl`関数は、フォームの式が[endl](../standard-library/ostream-functions.md#endl) **(ostr)** を呼び出し、  **\*これ**を返すことを保証します。 2 番目と 3 番目の関数は、[hex](../standard-library/ios-functions.md#hex) などの他のマニピュレーターが同じように動作することを保証します。 残りの関数はすべて書式付き出力関数です。
 
 関数
 
@@ -262,7 +262,7 @@ basic_ostream オブジェクトへの参照。
 basic_ostream<Elem, Tr>& operator<<(basic_streambuf<Elem, Tr>* strbuf);
 ```
 
-要素を抽出*strbuf*場合は、 *strbuf*が null ポインターの場合、それらを挿入します。 抽出は、ファイルの終わりで、または抽出が (再スローされた) 例外をスローする場合に停止します。 また、挿入が失敗した場合は、対象の要素を抽出せずに停止します。 関数が要素を挿入しない場合、または抽出が例外をスローする場合、関数は [setstate](../standard-library/basic-ios-class.md#setstate)(**failbit**) を呼び出します。 いずれの場合も関数は **\*this** を返します。
+strbuf が null ポインターではない場合、 *strbuf*から要素を抽出して挿入します。 抽出は、ファイルの終わりで、または抽出が (再スローされた) 例外をスローする場合に停止します。 また、挿入が失敗した場合は、対象の要素を抽出せずに停止します。 関数が要素を挿入しない場合、または抽出が例外をスローする場合、関数は [setstate](../standard-library/basic-ios-class.md#setstate)(**failbit**) を呼び出します。 いずれの場合も関数は **\*this** を返します。
 
 関数
 
@@ -270,7 +270,7 @@ basic_ostream<Elem, Tr>& operator<<(basic_streambuf<Elem, Tr>* strbuf);
 basic_ostream<Elem, Tr>& operator<<(bool val);
 ```
 
-変換`_Val`ブール値をフィールドし、呼び出すことによって挿入[use_facet](../standard-library/basic-filebuf-class.md#open)**< num_put\<Elem, OutIt >**`(`[getloc](../standard-library/ios-base-class.md#getloc))。 [put](#put)(**OutIt**([rdbuf](../standard-library/basic-ios-class.md#rdbuf)), **\*this**, `getloc`, **val**) を呼び出します。 ここでは、`OutIt`として定義されます[ostreambuf_iterator](../standard-library/ostreambuf-iterator-class.md)**\<Elem, Tr >** します。 関数は **\*this** を返します。
+ブール`_Val`値フィールドに変換し、 [use_facet](../standard-library/basic-filebuf-class.md#open) **< num_put\<Elem, OutIt >** `(`[getloc](../standard-library/ios-base-class.md#getloc)) を呼び出すことによって挿入します。 [put](#put)(**OutIt**([rdbuf](../standard-library/basic-ios-class.md#rdbuf)), **\*this**, `getloc`, **val**) を呼び出します。 ここで`OutIt` 、は[ostreambuf_iterator](../standard-library/ostreambuf-iterator-class.md) **\<Elem, Tr >** として定義されています。 関数は **\*this** を返します。
 
 関数
 
@@ -286,7 +286,7 @@ basic_ostream<Elem, Tr>& operator<<(unsigned long long val);
 basic_ostream<Elem, Tr>& operator<<(const void* val);
 ```
 
-各変換*val*に数値フィールドし、それを呼び出すことによって挿入**use_facet < num_put\<Elem, OutIt >**(`getloc`)。 **put**(**OutIt**(`rdbuf`), **\*this**, `getloc`, **val**) を呼び出します。 ここで、**OutIt** は **ostreambuf_iterator\<Elem, Tr>** として定義されます。 関数は **\*this** を返します。
+各は、 *val*を数値フィールドに変換し、 **use_facet < num_put\<Elem, OutIt >** (`getloc`) を呼び出すことによって挿入します。 **put**(**OutIt**(`rdbuf`), **\*this**, `getloc`, **val**) を呼び出します。 ここで、**OutIt** は **ostreambuf_iterator\<Elem, Tr>** として定義されます。 関数は **\*this** を返します。
 
 関数
 
@@ -296,7 +296,7 @@ basic_ostream<Elem, Tr>& operator<<(double val);
 basic_ostream<Elem, Tr>& operator<<(long double val);
 ```
 
-各変換*val*に数値フィールドし、それを呼び出すことによって挿入**use_facet < num_put\<Elem, OutIt >**(`getloc`)**. 配置**(**OutIt**(`rdbuf`)、 **\*この**、 `getloc`、 **val**)。 ここで、**OutIt** は **ostreambuf_iterator\<Elem, Tr>** として定義されます。 関数は **\*this** を返します。
+それぞれが*val*を数値フィールドに変換し、 **use_facet\<< num_put Elem, OutIt >** (`getloc`). put (**OutIt**(`rdbuf`),  **\*this**を `getloc`呼び出して挿入します。、 **val**)。 ここで、**OutIt** は **ostreambuf_iterator\<Elem, Tr>** として定義されます。 関数は **\*this** を返します。
 
 ### <a name="example"></a>例
 
@@ -358,7 +358,7 @@ basic_ostream& operator=(basic_ostream&& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*right*<br/>
+*そうです*\
 `basic_ostream` オブジェクトへの `rvalue` 参照。
 
 ### <a name="remarks"></a>Remarks
@@ -375,7 +375,7 @@ basic_ostream<Elem, Tr>& put(char_type _Ch);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Ch*<br/>
+*Ch (_p)* \
 単一の文字。
 
 ### <a name="return-value"></a>戻り値
@@ -384,7 +384,7 @@ basic_ostream オブジェクトへの参照。
 
 ### <a name="remarks"></a>Remarks
 
-書式設定されていない出力関数は、要素を挿入 *_Ch*します。 **\*this** を返します。
+書式設定され*ていない*出力関数は、要素を挿入します。 **\*this** を返します。
 
 ### <a name="example"></a>例
 
@@ -419,13 +419,13 @@ basic_ostream<Elem, Tr>& seekp(off_type _Off, ios_base::seekdir _Way);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Pos*<br/>
+*Pos (_d)* \
 ストリーム内の位置。
 
-*_Off*<br/>
-相対オフセット *_Way*します。
+*オフ (_r)* \
+*方向*を基準としたオフセット。
 
-*_Way*<br/>
+*方法 (_c)* \
 [ios_base::seekdir](../standard-library/ios-base-class.md#seekdir) 列挙体のうちの 1 つ。
 
 ### <a name="return-value"></a>戻り値
@@ -434,7 +434,7 @@ basic_ostream オブジェクトへの参照。
 
 ### <a name="remarks"></a>Remarks
 
-場合[失敗](../standard-library/basic-ios-class.md#fail)は**false**、最初のメンバー関数の呼び出し**newpos =** [rdbuf](../standard-library/basic-ios-class.md#rdbuf) **->**[pubseekpos](../standard-library/basic-streambuf-class.md#pubseekpos)(*_Pos*)、一部の`pos_type`一時オブジェクト`newpos`します。 場合`fail`が false の場合、2 番目の関数は**newpos = rdbuf->** [pubseekoff](../standard-library/basic-streambuf-class.md#pubseekoff)(*_Off, _Way*)。 いずれの場合も、(`off_type`)**newpos ==** (`off_type`)(-1) (位置指定操作が失敗) の場合、関数は **istr.**[setstate](../standard-library/basic-ios-class.md#setstate)(**failbit**) を呼び出します。 どちらの関数も **\*this** を返します。
+[Fail](../standard-library/basic-ios-class.md#fail)が**false**の場合、1つ目のメンバー関数は、一部`pos_type`の一時`newpos`オブジェクトに対して**newpos =** [rdbuf](../standard-library/basic-ios-class.md#rdbuf) **->** [pubseekpos](../standard-library/basic-streambuf-class.md#pubseekpos)( *_d*) を呼び出します。 が`fail` false の場合、2番目の関数は**newpos = rdbuf->** [pubseekoff](../standard-library/basic-streambuf-class.md#pubseekoff)((*オフ*)) を呼び出します。 いずれの場合も、(`off_type`)**newpos ==** (`off_type`)(-1) (位置指定操作が失敗) の場合、関数は **istr.** [setstate](../standard-library/basic-ios-class.md#setstate)(**failbit**) を呼び出します。 どちらの関数も **\*this** を返します。
 
 ### <a name="example"></a>例
 
@@ -474,7 +474,7 @@ class sentry { public: explicit sentry(basic_ostream\<Elem, Tr>& _Ostr); operato
 
 ### <a name="remarks"></a>Remarks
 
-この入れ子になったクラスは、宣言によって書式設定された出力関数と書式設定されていない出力関数を構成するオブジェクトを記述します。 **ostr.**[good](../standard-library/basic-ios-class.md#good) が **true** で、**ostr.**[tie](../standard-library/basic-ios-class.md#tie) が Null ポインターではない場合、コンストラクターは **ostr.tie->**[flush](#flush) を呼び出します。 コンス トラクターによって返される値を格納し、`ostr.good`で`status`します。 以降の呼び出し`operator bool`この格納されている値を提供します。
+この入れ子になったクラスは、宣言によって書式設定された出力関数と書式設定されていない出力関数を構成するオブジェクトを記述します。 **ostr.** [good](../standard-library/basic-ios-class.md#good) が **true** で、**ostr.** [tie](../standard-library/basic-ios-class.md#tie) が Null ポインターではない場合、コンストラクターは **ostr.tie->** [flush](#flush) を呼び出します。 次に、コンストラクターは、によっ`ostr.good`て`status`返された値をに格納します。 後でを呼び`operator bool`出すと、この格納された値が配信されます。
 
 `uncaught_exception` が **false** を返し、[flags](../standard-library/ios-base-class.md#flags) **&** [unitbuf](../standard-library/ios-functions.md#unitbuf) が 0 以外の場合、デストラクターは [flush](#flush) を呼び出します。
 
@@ -488,12 +488,12 @@ void swap(basic_ostream& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*right*<br/>
+*そうです*\
 `basic_ostream` オブジェクトへの参照。
 
 ### <a name="remarks"></a>Remarks
 
-メンバー関数の呼び出し[basic_ios::swap](../standard-library/basic-ios-class.md#swap) `(right)`の内容をこのオブジェクトの内容を交換する*右*します。
+このメンバー関数は、 [basic_ios:: swap](../standard-library/basic-ios-class.md#swap) `(right)`を呼び出して、このオブジェクトの内容を*右*の内容と交換します。
 
 ## <a name="tellp"></a>  basic_ostream::tellp
 
@@ -509,7 +509,7 @@ pos_type tellp();
 
 ### <a name="remarks"></a>Remarks
 
-[fail](../standard-library/basic-ios-class.md#fail) が **false** の場合、メンバー関数は [rdbuf](../standard-library/basic-ios-class.md#rdbuf)**->** [pubseekoff](../standard-library/basic-streambuf-class.md#pubseekoff)(0, `cur`, **in**) を返します。 それ以外の場合は、`pos_type`(-1) を返します。
+[fail](../standard-library/basic-ios-class.md#fail) が **false** の場合、メンバー関数は [rdbuf](../standard-library/basic-ios-class.md#rdbuf) **->** [pubseekoff](../standard-library/basic-streambuf-class.md#pubseekoff)(0, `cur`, **in**) を返します。 それ以外の場合は、`pos_type`(-1) を返します。
 
 ### <a name="example"></a>例
 
@@ -525,10 +525,10 @@ basic_ostream<Elem, Tr>& write(const char_type* str, streamsize count);
 
 ### <a name="parameters"></a>パラメーター
 
-*count*<br/>
+*数*\
 ストリームに渡す文字の数。
 
-*str*<br/>
+*引数*\
 ストリームに渡す文字。
 
 ### <a name="return-value"></a>戻り値
@@ -537,7 +537,7 @@ basic_ostream オブジェクトへの参照。
 
 ### <a name="remarks"></a>Remarks
 
-[書式設定されていない出力関数](../standard-library/basic-ostream-class.md)のシーケンスを挿入*カウント*以降要素*str*します。
+書式設定されていない[出力関数](../standard-library/basic-ostream-class.md)は、 *str*から始まる*カウント*要素のシーケンスを挿入します。
 
 ### <a name="example"></a>例
 
@@ -545,6 +545,6 @@ basic_ostream オブジェクトへの参照。
 
 ## <a name="see-also"></a>関連項目
 
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[iostream プログラミング](../standard-library/iostream-programming.md)<br/>
-[iostreams の規則](../standard-library/iostreams-conventions.md)<br/>
+[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[iostream プログラミング](../standard-library/iostream-programming.md)\
+[iostreams の規則](../standard-library/iostreams-conventions.md)

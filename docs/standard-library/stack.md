@@ -7,26 +7,31 @@ helpviewer_keywords:
 - stack, stack header
 - stack header
 ms.assetid: 89d8999e-c773-46f2-86c1-4b3b5aedb1c1
-ms.openlocfilehash: b8f2bb6cf74d0607bd3105196336a515adcade9e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8a31ccd553638b9b548db89a191da40bc513a05f
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412463"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453770"
 ---
 # <a name="ltstackgt"></a>&lt;stack&gt;
 
 テンプレート クラスのスタックと 2 つのサポート用テンプレートを定義します。
 
-## <a name="syntax"></a>構文
+## <a name="requirements"></a>必要条件
 
-```cpp
-#include <stack>
-```
+**ヘッダー:** \<stack>
+
+**名前空間:** std
+
+> [!NOTE]
+> Stack \<> ライブラリは、 `#include <initializer_list>`ステートメントも使用します。
+
+## <a name="members"></a>メンバー
 
 ### <a name="operators"></a>演算子
 
-|演算子|説明|
+|||
 |-|-|
 |[operator!=](../standard-library/stack-operators.md#op_neq)|演算子の左辺のスタック オブジェクトが右辺のスタック オブジェクトと等しくないかどうかを調べます。|
 |[operator<](../standard-library/stack-operators.md#op_lt)|演算子の左辺のスタック オブジェクトが右辺のスタック オブジェクトより小さいかどうかを調べます。|
@@ -35,14 +40,20 @@ ms.locfileid: "62412463"
 |[operator>](../standard-library/stack-operators.md#op_gt)|演算子の左辺のスタック オブジェクトが右辺のスタック オブジェクトより大きいかどうかを調べます。|
 |[operator>=](../standard-library/stack-operators.md#op_gt_eq)|演算子の左辺のスタック オブジェクトが右辺のスタック オブジェクト以上かどうかを調べます。|
 
+### <a name="functions"></a>関数
+
+|||
+|-|-|
+|[swap]()||
+
 ### <a name="classes"></a>クラス
 
-|クラス|説明|
+|||
 |-|-|
 |[stack クラス](../standard-library/stack-class.md)|基になるコンテナー型に最も新しく追加された要素へのアクセスを制限することにより、機能の制限を提供するテンプレート コンテナーのアダプター クラスです。|
 
 ## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)<br/>
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)<br/>
+[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)\
+[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)

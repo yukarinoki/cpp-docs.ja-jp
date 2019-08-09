@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - time_base class
 ms.assetid: 9ae37f0b-9a42-496e-9870-3d9b71bab8fb
-ms.openlocfilehash: e790237e506aa32bafdb39938d841307bbc4d9c3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 85565dc0c0ec904551eb8dd981cfacc9a2e1f256
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412021"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68460039"
 ---
 # <a name="timebase-class"></a>time_base クラス
 
-クラスは、time_get テンプレート クラスの列挙型だけを定義するファセットの基底クラスとして機能`dateorder`とこの型の複数の定数。
+クラスは、テンプレートクラス time_get のファセットの基底クラスとして機能し、列挙`dateorder`型とこの型のいくつかの定数だけを定義します。
 
 ## <a name="syntax"></a>構文
 
@@ -38,15 +38,15 @@ public:
 
 各定数は、日付部分を順序付けるための異なる方法を特徴付けます。 定数は次のとおりです。
 
-- `no_order` 特定の順序は指定されません。
+- `no_order`特定の順序を指定しません。
 
-- `dmy` 注文日、月、年、2 December 1979 のように指定します。
+- `dmy`1979年12月2日のように、日付、月、年を指定します。
 
-- `mdy` 注文月、日、その後、December 2, 1979年のように、年を指定します。
+- `mdy`1979年12月2日のように、月、日、年を指定します。
 
-- `ymd` 注文年、月、日、1979/12/2 のように指定します。
+- `ymd`1979/12/2 のように、年、月、日の順に指定します。
 
-- `ydm` 注文年、日、月、1979年のように指定します。2 年 12 月。
+- `ydm`1979のように、年、日、月の順序を指定します。2 Dec。
 
 ## <a name="requirements"></a>必要条件
 
@@ -56,4 +56,4 @@ public:
 
 ## <a name="see-also"></a>関連項目
 
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

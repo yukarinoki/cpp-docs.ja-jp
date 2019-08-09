@@ -6,18 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - vector header
 ms.assetid: c1431ad8-c0b6-4dbb-89c4-5f651e432d7f
-ms.openlocfilehash: 348b5c53ecd3fb7900d03fed7c1209a2c94eeb4c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5992e368031b59c9b892167b135fa30a870c73f9
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410858"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448068"
 ---
 # <a name="ltvectorgt"></a>&lt;vector&gt;
 
 コンテナー テンプレート クラス vector と、いくつかのサポート テンプレートを定義します。
 
 `vector` 指定された型の要素を直線上のシーケンスに編成するコンテナーです。 このシーケンスでは、任意の要素を高速にランダム アクセスしたり、動的に追加および削除したりできます。 `vector` は、ランダム アクセスのパフォーマンスを重視するシーケンスに適したコンテナーです。
+
+> [!NOTE]
+> Vector \<> ライブラリは、 `#include <initializer_list>`ステートメントも使用します。
 
 クラス `vector` の詳細については、「[vector クラス](../standard-library/vector-class.md)」をご覧ください。 特殊化 `vector<bool>` の詳細については、「[vector\<bool> クラス](../standard-library/vector-bool-class.md)」をご覧ください。
 
@@ -74,21 +77,23 @@ void swap (
 
 ### <a name="parameters"></a>パラメーター
 
-*Type*<br/>
+*各種*\
 ベクター内に格納されるデータ型に対するテンプレート パラメーター。
 
-*アロケーター*<br/>
+*アロケーター*\
 メモリの割り当てと解放を担当する格納されたアロケーター オブジェクトのテンプレート パラメーター。
 
-*left*<br/>
+*左側*\
 比較演算の最初の (左辺の) ベクター
 
-*right*<br/>
+*そうです*\
 比較演算の 2 つ目の (右辺の) ベクター。
+
+## <a name="members"></a>メンバー
 
 ### <a name="operators"></a>演算子
 
-|演算子|説明|
+|||
 |-|-|
 |[operator! =](../standard-library/vector-operators.md#op_neq)|演算子の左辺のベクター オブジェクトが右辺のベクター オブジェクトと等しくないかどうかを調べます。|
 |[operator<](../standard-library/vector-operators.md#op_lt)|演算子の左辺のベクター オブジェクトが右辺のベクター オブジェクトより小さいかどうかを調べます。|
@@ -99,7 +104,7 @@ void swap (
 
 ### <a name="classes"></a>クラス
 
-|クラス|説明|
+|||
 |-|-|
 |[vector クラス](../standard-library/vector-class.md)|指定された型の要素を直線上に配置し、任意の要素に対する高速なランダム アクセスを可能にするシーケンス コンテナーのテンプレート クラスです。|
 
@@ -107,6 +112,7 @@ void swap (
 
 |||
 |-|-|
+|[hash]()||
 |[vector\<bool> クラス](../standard-library/vector-bool-class.md)|テンプレート クラス vector を型 `bool` の要素に対して完全に特殊化したもので、基になる型のアロケーターを特殊化で使用します。|
 
 ## <a name="requirements"></a>必要条件
@@ -117,6 +123,6 @@ void swap (
 
 ## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)<br/>
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)<br/>
+[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)\
+[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)

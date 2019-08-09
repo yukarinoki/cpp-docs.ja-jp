@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::operator&lt;&lt; (thread)
 - std::operator&lt;= (thread)
 - std::operator== (thread)
-ms.openlocfilehash: 5a2fd845598ac9f9c983bf53cbd7665ef66ffb70
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c0593b8016cf45abe64114958ccda84eb3704844
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412047"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458436"
 ---
 # <a name="ltthreadgt-operators"></a>&lt;thread&gt; 演算子
 
@@ -45,10 +45,10 @@ bool operator>= (
 
 ### <a name="parameters"></a>パラメーター
 
-*左*<br/>
+*左側*\
 左側の `thread::id` オブジェクト。
 
-*右*<br/>
+*そうです*\
 右側の `thread::id` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -71,10 +71,10 @@ bool operator> (
 
 ### <a name="parameters"></a>パラメーター
 
-*左*<br/>
+*左側*\
 左側の `thread::id` オブジェクト。
 
-*右*<br/>
+*そうです*\
 右側の `thread::id` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -97,10 +97,10 @@ bool operator<= (
 
 ### <a name="parameters"></a>パラメーター
 
-*左*<br/>
+*左側*\
 左側の `thread::id` オブジェクト。
 
-*右*<br/>
+*そうです*\
 右側の `thread::id` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -123,15 +123,15 @@ bool operator<(
 
 ### <a name="parameters"></a>パラメーター
 
-*左*<br/>
+*左側*\
 左側の `thread::id` オブジェクト。
 
-*右*<br/>
+*そうです*\
 右側の `thread::id` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-**true**場合*左*前*右*合計順序のそれ以外の場合、 **false**します。
+*左*の順序で*右*に先行する場合は**true** 。それ以外の場合は**false**。
 
 ### <a name="remarks"></a>Remarks
 
@@ -151,10 +151,10 @@ bool operator!= (
 
 ### <a name="parameters"></a>パラメーター
 
-*左*<br/>
+*左側*\
 左側の `thread::id` オブジェクト。
 
-*右*<br/>
+*そうです*\
 右側の `thread::id` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -177,15 +177,15 @@ bool operator== (
 
 ### <a name="parameters"></a>パラメーター
 
-*左*<br/>
+*左側*\
 左側の `thread::id` オブジェクト。
 
-*右*<br/>
+*そうです*\
 右側の `thread::id` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-**true** 2 つのオブジェクトが同じスレッドの実行を表す場合、またはどちらのオブジェクトは、実行のスレッドを表す場合それ以外の場合、 **false**します。
+2つのオブジェクトが同じ実行スレッドを表している場合、またはどちらのオブジェクトも実行スレッドを表している場合は**true** 。それ以外の場合は**false**。
 
 ### <a name="remarks"></a>Remarks
 
@@ -203,22 +203,22 @@ basic_ostream<Elem, Tr>& operator<<(
 
 ### <a name="parameters"></a>パラメーター
 
-*Ostr*<br/>
+*Ostr*\
 [basic_ostream](../standard-library/basic-ostream-class.md) オブジェクト。
 
-*ID*<br/>
+*番号*\
 `thread::id` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-*Ostr*します。
+*Ostr*。
 
 ### <a name="remarks"></a>Remarks
 
-この関数は、挿入*Id*に*Ostr*します。
+この関数は、 *Ostr*に*Id*を挿入します。
 
 2 つの `thread::id` オブジェクトが等しい場合、これらのオブジェクトの挿入されたテキスト表現は同じです。
 
 ## <a name="see-also"></a>関連項目
 
-[\<thread>](../standard-library/thread.md)<br/>
+[\<thread>](../standard-library/thread.md)

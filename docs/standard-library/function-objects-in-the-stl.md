@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C++ Standard Library, function objects
 - function objects
 ms.assetid: 85f8a735-2c7b-4f10-9c4d-95c666ec4192
-ms.openlocfilehash: 310d846285612ad94ec9d66672fcb996557b07e2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4df8096603b53d05e050750a860c76528a44b28c
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159367"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454077"
 ---
 # <a name="function-objects-in-the-c-standard-library"></a>C++ 標準ライブラリの関数オブジェクト
 
@@ -43,7 +43,7 @@ int main()
 }
 ```
 
-`main` 関数の最後の行は関数オブジェクトを呼び出す方法を示しています。 この呼び出しは、関数の場合がの実際に呼び出し元の operator() は Functor 型への呼び出しのようになります。 関数オブジェクト呼び出しと関数の呼び出しが類似しているため、関数オブジェクトという用語が生じました。
+`main` 関数の最後の行は関数オブジェクトを呼び出す方法を示しています。 この呼び出しは関数の呼び出しのように見えますが、実際には、ファンクタ型の operator () を呼び出しています。 関数オブジェクト呼び出しと関数の呼び出しが類似しているため、関数オブジェクトという用語が生じました。
 
 ## <a name="function-objects-and-containers"></a>関数オブジェクトとコンテナー
 
@@ -56,7 +56,7 @@ template <class Key,
 class set
 ```
 
-2 番目のテンプレート引数は、関数オブジェクト `less`です。 この関数オブジェクトを返します**true**最初のパラメーターが小さい場合、2 番目のパラメーターよりもします。 一部のコンテナーは、その要素を並べ替えるために、コンテナーには、2 つの要素を比較する方法が必要があります。 比較は、関数オブジェクトを使用して行われます。 関数オブジェクトを作成し、それをコンテナーのテンプレート リストに指定すると、独自の並べ替え条件を定義できます。
+2 番目のテンプレート引数は、関数オブジェクト `less`です。 この関数オブジェクトは、最初のパラメーターが2番目のパラメーターより小さい場合に**true**を返します。 一部のコンテナーは要素を並べ替えるため、コンテナーには2つの要素を比較する方法が必要です。 この比較は、関数オブジェクトを使用して行われます。 関数オブジェクトを作成し、それをコンテナーのテンプレート リストに指定すると、独自の並べ替え条件を定義できます。
 
 ## <a name="function-objects-and-algorithms"></a>関数オブジェクトとアルゴリズム
 
@@ -70,8 +70,8 @@ ForwardIterator remove_if(
     Predicate pred);
 ```
 
-`remove_if` への最後の引数は、ブール値 ( *述語*) を返す関数オブジェクトです。 関数オブジェクトの結果は場合**true**、反復子がアクセスされているコンテナーから要素を削除し、`first`と`last`します。 引数 `pred` には、[\<functional>](../standard-library/functional.md) ヘッダー内で宣言したいずれかの関数オブジェクトを使用するか、独自の関数オブジェクトを作成できます。
+`remove_if` への最後の引数は、ブール値 ( *述語*) を返す関数オブジェクトです。 関数オブジェクトの結果が**true**の場合、反復子`first`と`last`によってアクセスされているコンテナーから要素が削除されます。 引数 `pred` には、[\<functional>](../standard-library/functional.md) ヘッダー内で宣言したいずれかの関数オブジェクトを使用するか、独自の関数オブジェクトを作成できます。
 
 ## <a name="see-also"></a>関連項目
 
-[C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)<br/>
+[C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)

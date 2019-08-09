@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - const_mem_fun_t class
 ms.assetid: f169d381-019b-4a0e-a9a3-54da6d948270
-ms.openlocfilehash: 10a39d4b7871e08a5bf3ec56f6d11df5ad8b646c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0bdfdbac7a23a4b0e3b830b05990bf028c7bb316
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62212028"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244547"
 ---
 # <a name="constmemfunt-class"></a>const_mem_fun_t クラス
 
@@ -30,10 +30,10 @@ class const_mem_fun_t : public unary_function <Type *, Result>
 
 ### <a name="parameters"></a>パラメーター
 
-*Pm*<br/>
+*Pm*\
 関数オブジェクトに変換されるクラス `Type` のメンバー関数へのポインター。
 
-*Pleft*<br/>
+*Pleft*\
 オブジェクトを*Pm*でメンバー関数が呼び出されます。
 
 ## <a name="return-value"></a>戻り値
@@ -42,19 +42,8 @@ class const_mem_fun_t : public unary_function <Type *, Result>
 
 ## <a name="remarks"></a>Remarks
 
-テンプレート クラスのコピーを格納する*Pm*、クラスのメンバー関数へのポインターでなければならない`Type`、プライベート メンバー オブジェクトにします。 そのメンバー関数 `operator()` は、(`Pleft`->\* `Pm`)() **const** を返すように定義されています。
+テンプレート クラスのコピーを格納する*Pm*、クラスのメンバー関数へのポインターでなければならない`Type`、プライベート メンバー オブジェクトにします。 そのメンバー関数`operator()`返すよう (`Pleft` -> \* `Pm`) () **const**します。
 
 ## <a name="example"></a>例
 
 `const_mem_fun_t` のコンストラクターは通常は直接使用されません。ヘルパー関数 `mem_fun` を使用してメンバー関数を適合させます。 メンバー関数アダプターの使用例については、「[mem_fun](../standard-library/functional-functions.md#mem_fun)」を参照してください。
-
-## <a name="requirements"></a>必要条件
-
-**ヘッダー:** \<functional>
-
-**名前空間:** std
-
-## <a name="see-also"></a>関連項目
-
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)<br/>

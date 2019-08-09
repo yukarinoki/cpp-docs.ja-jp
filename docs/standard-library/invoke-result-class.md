@@ -9,16 +9,16 @@ helpviewer_keywords:
 - std::invoke_result
 - std::invoke_result_t
 - std::invoke_result::type
-ms.openlocfilehash: 7c03240d3ee666fcda30562279a8dbda2ca8dc7b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2b2051b0c854151cff9b439f5ec0a951c25a6387
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404852"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447637"
 ---
 # <a name="invokeresult-class"></a>invoke_result クラス
 
-コンパイル時に指定した引数型を受け取る呼び出し可能型の戻り値の型を決定します。 C++ 17 で追加されます。
+コンパイル時に指定された引数の型を受け取る呼び出し可能な型の戻り値の型を決定します。 C++ 17 で追加されました。
 
 ## <a name="syntax"></a>構文
 
@@ -33,15 +33,15 @@ template<lass Callable, class... Args>
 
 ### <a name="parameters"></a>パラメーター
 
-*呼び出し可能*<br/>
+*呼び出し可能*\
 照会する呼び出し可能型。
 
-*Args*<br/>
+*Value*\
 照会する呼び出し可能型の引数リストの種類。
 
 ## <a name="remarks"></a>Remarks
 
-結果型を判断するこのテンプレートを使用して*Callable*(*Args*...)、コンパイル時に、 *Callable*とすべての型*Args*完全な型、配列の不明なバインドは、または、おそらく cv で修飾された`void`します。 `type`の戻り値の型のテンプレート クラスのメンバー名*Callable*引数を使用して呼び出されたときに*Args*.`type`場合にのみ、メンバーが定義*Callable*引数を使用して呼び出されたときに呼び出すことができます*Args*.未評価のコンテキスト。 テンプレート クラスは、メンバーがない場合は、`type`コンパイル時に特定の引数の型のセット上でのテスト SFINAE ことができます。
+このテンプレートを使用して、コンパイル時に*呼び出し*可能な (*args*...) の結果の種類を決定します。*呼び出し*可能なすべての型と*Args*のすべての型は、完全な`void`型、不明な配列、または cv で修飾されたものです。 テンプレート`type`クラスのメンバーは、引数*Args*... を使用して呼び出されたときに、*呼び出し*元の戻り値の型に名前を指定します。メンバーは、引数*Args*を使用して呼び出されたときに呼び出し可能な場合にのみ定義されます...  `type`未評価のコンテキスト。 それ以外の場合、テンプレートクラスに`type`はメンバーがないため、コンパイル時に特定の引数の型に対して sfinae テストを行うことができます。
 
 ## <a name="requirements"></a>必要条件
 
@@ -51,5 +51,5 @@ template<lass Callable, class... Args>
 
 ## <a name="see-also"></a>関連項目
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[invoke](functional-functions.md#invoke)
+[<type_traits>](../standard-library/type-traits.md)\
+[スタンド](functional-functions.md#invoke)

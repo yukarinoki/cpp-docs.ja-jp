@@ -9,12 +9,12 @@ f1_keywords:
 - filesystem/std::experimental::filesystem::directory_iterator
 - <filesystem>
 ms.assetid: 5005753b-46fa-43e1-8d4e-1b38617d3cfd
-ms.openlocfilehash: 0f397d8b0c39769fde20b6aa50412c979237f70a
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 6f97ad75dcf3f01406f305b713b9d14cbe527c52
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220374"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457024"
 ---
 # <a name="ltfilesystemgt"></a>&lt;filesystem&gt;
 
@@ -29,11 +29,11 @@ using namespace std::experimental::filesystem::v1;
 ```
 
 > [!IMPORTANT]
-> Visual Studio 2017 のリリース以降、 \<filesystem > ヘッダーが、まだ C++ 標準。 C++Visual Studio 2017 (MSVC v141) の実装で、最終ドラフト標準はで見つかった[ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf)します。
+> Visual Studio 2017 のリリース時点で\<は、ファイルシステム > ヘッダーはまだ標準でC++はありませんでした。 C++Visual Studio 2017 (MSVC v141) では、 [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf)に含まれる最終的なドラフト標準が実装されています。
 
-このヘッダーは、ホスト オペレーティング システムの 2 つの広範なクラスのいずれかのファイル システムをサポートしています。Microsoft Windows と Posix します。
+このヘッダーは、次の2つの広範なホストオペレーティングシステムのいずれかのファイルシステムをサポートします。Microsoft Windows および Posix。
 
-ほとんどの機能が両方のオペレーティング システムに共通していますが、このドキュメントではそれらの相違点について説明します。 例:
+ほとんどの機能が両方のオペレーティング システムに共通していますが、このドキュメントではそれらの相違点について説明します。 例えば:
 
 - Windows は、c: や \\\network_name などの複数のルート名をサポートします。 ファイル システムはツリーのフォレストで構成され、それぞれのツリーが持つ c:\ や \\\network_name\\ などの独自のルート ディレクトリと現在のディレクトリから相対パス名 (絶対パス名ではないもの) が生成されます。
 
@@ -89,10 +89,12 @@ using namespace std::experimental::filesystem::v1;
 
 詳細およびコード例については、「[ファイル システムのナビゲーション (C++)](../standard-library/file-system-navigation.md)」を参照してください。
 
-## <a name="classes"></a>クラス
+## <a name="members"></a>メンバー
 
-|名前|説明|
-|----------|-----------------|
+### <a name="classes"></a>クラス
+
+|||
+|-|-|
 |[directory_entry クラス](../standard-library/directory-entry-class.md)|`directory_iterator` または `recursive_directory_iterator` で返されるオブジェクトを記述します。また、パスが含まれます。|
 |[directory_iterator クラス](../standard-library/directory-iterator-class.md)|ファイル システム ディレクトリのファイル名をシーケンス処理する入力反復子を表します。|
 |[filesystem_error クラス](../standard-library/filesystem-error-class.md)|低レベル システム オーバーフローをレポートするためにスローされる例外のための基底クラス。|
@@ -100,10 +102,10 @@ using namespace std::experimental::filesystem::v1;
 |[recursive_directory_iterator クラス](../standard-library/recursive-directory-iterator-class.md)|ファイル システム ディレクトリのファイル名をシーケンス処理する入力反復子を表します。 反復子はサブディレクトリに下りることもできます。|
 |[file_status クラス](../standard-library/file-status-class.md)|`file_type`をラップします。|
 
-## <a name="structs"></a>構造体
+### <a name="structs"></a>構造体
 
-|名前|説明|
-|----------|-----------------|
+|||
+|-|-|
 |[space_info 構造体](../standard-library/space-info-structure.md)|ボリュームに関する情報を保持します。|
 
 ## <a name="functions"></a>関数
@@ -116,14 +118,15 @@ using namespace std::experimental::filesystem::v1;
 
 ## <a name="enumerations"></a>列挙
 
-|名前|説明|
-|----------|-----------------|
+|||
+|-|-|
 |[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|[copy_file](../standard-library/filesystem-functions.md#copy_file) と共に使用され、コピー先ファイルが既に存在する場合の動作を決定する列挙体です。|
 |[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|[copy_file](../standard-library/filesystem-functions.md#copy_file) と共に使用され、コピー先ファイルが既に存在する場合の動作を決定する列挙体です。|
 |[directory_options](../standard-library/filesystem-enumerations.md#directory_options)|ディレクトリ反復子のオプションを指定する列挙体。|
 |[file_type](../standard-library/filesystem-enumerations.md#file_type)|ファイルの種類の列挙型。|
+|[perm_options](../standard-library/filesystem-enumerations.md#perm_options)||
 |[perms](../standard-library/filesystem-enumerations.md#perms)|アクセス許可とアクセス許可に対するオプションを伝達するために使用されるビットマスク型|
 
 ## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)<br/>
+[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)

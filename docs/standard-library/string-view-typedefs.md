@@ -6,12 +6,12 @@ f1_keywords:
 - xstring/std::u16string_view
 - xstring/std::u32string_view
 - xstring/std::wstring_view
-ms.openlocfilehash: 16d7ba49facf24dcffb7df444e445d83d92255e0
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: c3367afe1353ac70abb74a59658a255614ac8470
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346970"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459178"
 ---
 # <a name="ltstringviewgt-typedefs"></a>&lt;string_view&gt; typedef
 
@@ -20,9 +20,9 @@ ms.locfileid: "64346970"
 |[string_view](#string_view)|[u16string_view](#u16string_view)|[u32string_view](#u32string_view)|
 |[wstring_view](#wstring_view)|
 
-## <a name="string_view"></a> string_view
+## <a name="string_view"></a>string_view
 
-クラス テンプレートの特殊化を表す型[basic_string_view](../standard-library/basic-string-view-class.md)型の要素を含む**char**します。
+**Char**型の要素を使用して、クラステンプレート[basic_string_view](../standard-library/basic-string-view-class.md)の特殊化を記述する型。
 
 ```cpp
 typedef basic_string_view<char, char_traits<char>> string_view;
@@ -40,9 +40,9 @@ basic_string_view<char> str("Hello");
 
 文字列コンストラクターの一覧については、「[basic_string::basic_string](../standard-library/basic-string-class.md#basic_string)」をご覧ください。
 
-## <a name="u16string_view"></a> u16string_view
+## <a name="u16string_view"></a>u16string_view
 
-クラス テンプレートの特殊化を表す型[basic_string_view](../standard-library/basic-string-view-class.md)型の要素を含む`char16_t`します。
+型`char16_t`の要素を持つクラステンプレート[basic_string_view](../standard-library/basic-string-view-class.md)の特殊化を記述する型。
 
 ```cpp
 typedef basic_string_view<char16_t, char_traits<char16_t>> u16string_view;
@@ -52,9 +52,9 @@ typedef basic_string_view<char16_t, char_traits<char16_t>> u16string_view;
 
 文字列コンストラクターの一覧については、「[basic_string::basic_string](../standard-library/basic-string-class.md#basic_string)」をご覧ください。
 
-## <a name="u32string_view"></a> u32string_view
+## <a name="u32string_view"></a>u32string_view
 
-クラス テンプレートの特殊化を表す型[basic_string_view](../standard-library/basic-string-view-class.md)型の要素を含む`char32_t`します。
+型`char32_t`の要素を持つクラステンプレート[basic_string_view](../standard-library/basic-string-view-class.md)の特殊化を記述する型。
 
 ```cpp
 typedef basic_string_view<char32_t, char_traits<char32_t>> u32string_view;
@@ -66,7 +66,7 @@ typedef basic_string_view<char32_t, char_traits<char32_t>> u32string_view;
 
 ## <a name="wstring_view"></a>  wstring_view
 
-クラス テンプレートの特殊化を表す型[basic_string_view](../standard-library/basic-string-view-class.md)型の要素を含む**wchar_t**します。
+**Wchar_t**型の要素を使用して、クラステンプレート[basic_string_view](../standard-library/basic-string-view-class.md)の特殊化を記述する型。
 
 ```cpp
 typedef basic_string_view<wchar_t, char_traits<wchar_t>> wstring_view;
@@ -85,8 +85,8 @@ basic_string_view<wchar_t> wstr(L"Hello");
 文字列コンストラクターの一覧については、「[basic_string::basic_string](../standard-library/basic-string-class.md#basic_string)」をご覧ください。
 
 > [!NOTE]
-> サイズ**wchar_t** Windows 上の 2 つのバイトが、必ずしもにはこれがすべてのプラットフォームの場合になることはありません。 String_view のワイド文字型が必要な場合、すべてのプラットフォームで同一に維持することが保証される幅を使用して[u16string_view](../standard-library/string-view-typedefs.md#u16string_view)または[u32string_view](../standard-library/string-view-typedefs.md#u32string_view)します。
+> **Wchar_t**のサイズは Windows では2バイトですが、必ずしもすべてのプラットフォームに当てはまります。 すべてのプラットフォームで同じままであることが保証されている幅を持つ string_view ワイド文字型が必要な場合は、 [u16string_view](../standard-library/string-view-typedefs.md#u16string_view)または[u32string_view](../standard-library/string-view-typedefs.md#u32string_view)を使用します。
 
 ## <a name="see-also"></a>関連項目
 
-[\<string_view>](../standard-library/string-view.md)<br/>
+[\<string_view>](../standard-library/string-view.md)

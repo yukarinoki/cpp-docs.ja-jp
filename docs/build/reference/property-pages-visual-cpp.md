@@ -1,8 +1,6 @@
 ---
-title: C++ プロジェクト プロパティ ページ リファレンス - Visual Studio
-ms.date: 05/06/2019
-f1_keywords:
-- VC.Project.NotAProp.Edit
+title: C++プロジェクトプロパティページリファレンス-Visual Studio
+ms.date: 07/24/2019
 helpviewer_keywords:
 - project-file macro
 - project properties [C++], default values
@@ -14,74 +12,40 @@ helpviewer_keywords:
 - build macro
 - user-defined macros
 ms.assetid: 13ffe3ea-1bc3-4bee-be5e-053a8a99cce4
-ms.openlocfilehash: 7b10e3c7eef846d72220545b89a217da7a4bb9a1
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: d425cc6c5c6a2a8934c026174f396cb01bc3a9b7
+ms.sourcegitcommit: 720b74dddb1cdf4e570d55103158304ee1df81f8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65217786"
+ms.lasthandoff: 07/29/2019
+ms.locfileid: "68606393"
 ---
-# <a name="c-project-property-page-reference"></a>C++ プロジェクト プロパティ ページの参照
+# <a name="c-project-property-page-reference"></a>C++プロジェクトプロパティページのリファレンス
 
-プロパティ ページを使用することで、Visual Studio プロジェクトの設定を指定できます。 Visual Studio プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開くには、**[プロジェクト]** メニューで **[プロパティ]** を選びます。 プロジェクトのプロパティの詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+Visual Studio では、プロジェクトのプロパティページを使用して、コンパイラオプション、リンカーオプション、ファイルパス、およびその他のビルド設定を指定します。 **プロパティページ**を開くには、メインメニューから [**プロジェクト** > の**プロパティ**] を選択するか、**ソリューションエクスプローラー**でプロジェクトノードを右クリックして **[プロパティ]** を選択します。 プロジェクトのプロパティの詳細については、「 [Visual Studio でのコンパイラとビルドのプロパティの設定C++ ](../working-with-project-properties.md)」を参照してください。
 
-Windows 以外のプロジェクトのプロパティ ページを参照してください。 [Linux c プロパティ ページ リファレンス](../../linux/prop-pages-linux.md)します。
+Linux プロジェクトのプロパティページについては、「 [linux C++プロパティページリファレンス](../../linux/prop-pages-linux.md)」を参照してください。
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-[[詳細] ([\<プロジェクト名> プロパティ ページ] ダイアログ ボックス - [構成プロパティ] - [マニフェスト ツール])](advanced-manifest-tool.md)
-
-[[コマンド ライン] プロパティ ページ](command-line-property-pages.md)
-
-[[カスタム ビルド ステップ] プロパティ ページ: 全般](custom-build-step-property-page-general.md)
-
-[参照の追加](../adding-references-in-visual-cpp-projects.md)
-
-[[全般] プロパティ ページ (ファイル)](general-property-page-file.md)
-
-[[全般] プロパティ ページ (プロジェクト)](general-property-page-project.md)
-
-[[全般] ([\<プロジェクト名> プロパティ ページ] ダイアログ ボックス - [構成プロパティ] - [マニフェスト ツール])](general-manifest-tool-configuration-properties.md)
-
-[[HLSL] プロパティ ページ](hlsl-property-pages.md)
-
-[[HLSL] プロパティ ページ: 詳細](hlsl-property-pages-advanced.md)
-
-[[HLSL] プロパティ ページ: 全般](hlsl-property-pages-general.md)
-
-[[HLSL] プロパティ ページ: 出力ファイル](hlsl-property-pages-output-files.md)
-
-[[入力と出力] ([\<プロジェクト名> プロパティ ページ] ダイアログ ボックス - [構成プロパティ] - [マニフェスト ツール])](input-and-output-manifest-tool.md)
-
-[[分離された COM] ([\<プロジェクト名> プロパティ ページ] ダイアログ ボックス - [構成プロパティ] - [マニフェスト ツール])](isolated-com-manifest-tool.md)
-
-[[リンカー] プロパティ ページ](linker-property-pages.md)
-
-[[マネージド リソース] プロパティ ページ](managed-resources-property-page.md)
-
-[[マニフェスト ツール] プロパティ ページ](manifest-tool-property-pages.md)
-
-[[MIDL] プロパティ ページ](midl-property-pages.md)
-
-[[MIDL] プロパティ ページ: 詳細](midl-property-pages-advanced.md)
-
-[[MIDL] プロパティ ページ: 全般](midl-property-pages-general.md)
-
-[[MIDL] プロパティ ページ: 出力](midl-property-pages-output.md)
-
-[NMake プロパティ ページ](nmake-property-page.md)
-
-[[リソース] プロパティ ページ](resources-property-pages.md)
-
-[[VC++ ディレクトリ] プロパティ ページ](vcpp-directories-property-page.md)
-
-[[Web 参照] プロパティ ページ](web-references-property-page.md)
-
-[[XML データ ジェネレーター ツール] プロパティ ページ](xml-data-generator-tool-property-page.md)
-
-[[XML ドキュメント ジェネレーター] プロパティ ページ](xml-document-generator-tool-property-pages.md)
+- [[全般] プロパティ ページ (プロジェクト)](general-property-page-project.md)
+- [[全般] プロパティ ページ (ファイル)](general-property-page-file.md)
+- [[詳細設定] プロパティページ](advanced-property-page.md)
+- [[VC++ ディレクトリ] プロパティ ページ](vcpp-directories-property-page.md)
+- [[リンカー] プロパティ ページ](linker-property-pages.md)
+- [[マニフェスト ツール] プロパティ ページ](manifest-tool-property-pages.md)
+- [[HLSL] プロパティ ページ](hlsl-property-pages.md)
+- [[コマンド ライン] プロパティ ページ](command-line-property-pages.md)
+- [[カスタム ビルド ステップ] プロパティ ページ: 全般](custom-build-step-property-page-general.md)
+- [参照の追加](../adding-references-in-visual-cpp-projects.md)
+- [[マネージド リソース] プロパティ ページ](managed-resources-property-page.md)
+- [[MIDL] プロパティ ページ](midl-property-pages.md)
+- [NMake プロパティ ページ](nmake-property-page.md)
+- [[リソース] プロパティ ページ](resources-property-pages.md)
+- [[Web 参照] プロパティ ページ](web-references-property-page.md)
+- [[XML データ ジェネレーター ツール] プロパティ ページ](xml-data-generator-tool-property-page.md)
+- [[XML ドキュメント ジェネレーター] プロパティ ページ](xml-document-generator-tool-property-pages.md)
 
 ## <a name="see-also"></a>関連項目
 
-[方法: プロジェクトの依存関係を作成および削除する](/visualstudio/ide/how-to-create-and-remove-project-dependencies)<br>
+[方法: プロジェクトの依存関係を作成および削除する](/visualstudio/ide/how-to-create-and-remove-project-dependencies)<br/>
 [方法: 構成を作成および編集する](/visualstudio/ide/how-to-create-and-edit-configurations)

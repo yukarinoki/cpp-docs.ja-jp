@@ -38,12 +38,12 @@ helpviewer_keywords:
 - stdext::allocator_base [C++], destroy
 - stdext::allocator_base [C++], max_size
 ms.assetid: f920b45f-2a88-4bb0-8ead-b6126b426ed4
-ms.openlocfilehash: 59d5834b941791a659815ff0a03f1c68c8ce68bd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 115f5ad4461b98f24e3aa6756e501b91ae3a1566
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411072"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456439"
 ---
 # <a name="allocatorbase-class"></a>allocator_base クラス
 
@@ -85,8 +85,8 @@ class allocator_base
 
 |メンバー関数|説明|
 |-|-|
-|[_Charalloc](#charalloc)|ストレージ型の配列を割り当てます**char**します。|
-|[_Chardealloc](#chardealloc)|ストレージの種類の要素を含む配列を解放**char**します。|
+|[_Charalloc](#charalloc)|**Char**型の配列のストレージを割り当てます。|
+|[_Chardealloc](#chardealloc)|**Char**型の要素を含む配列のストレージを解放します。|
 |[address](#address)|値が指定されたオブジェクトのアドレスを検索します。|
 |[allocate](#allocate)|指定された要素数だけは格納できるメモリのブロックを割り当てます。|
 |[construct](#construct)|指定された値で初期化され、指定されたアドレスに配置される、指定された型のオブジェクトを構築します。|
@@ -102,7 +102,7 @@ class allocator_base
 
 ## <a name="charalloc"></a>  allocator_base::_Charalloc
 
-ストレージ型の配列を割り当てます**char**します。
+**Char**型の配列のストレージを割り当てます。
 
 ```cpp
 char *_Charalloc(size_type count);
@@ -124,7 +124,7 @@ char *_Charalloc(size_type count);
 
 ## <a name="chardealloc"></a>  allocator_base::_Chardealloc
 
-ストレージの種類の要素を含む配列を解放**char**します。
+**Char**型の要素を含む配列のストレージを解放します。
 
 ```cpp
 void _Chardealloc(void* ptr, size_type count);
@@ -153,7 +153,7 @@ const_pointer address(const_reference val);
 
 ### <a name="parameters"></a>パラメーター
 
-*val*<br/>
+*val*\
 アドレスが検索対象となっているオブジェクトの const 値または nonconst 値。
 
 ### <a name="return-value"></a>戻り値
@@ -179,7 +179,7 @@ pointer allocate(size_type _Nx);
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*_Nx*|割り当てられる配列内の要素の数。|
+|*Nx (_s)*|割り当てられる配列内の要素の数。|
 |*_Hint*|このパラメーターは無視されます。|
 
 ### <a name="return-value"></a>戻り値
@@ -259,7 +259,7 @@ void deallocate(pointer ptr, size_type _Nx);
 |パラメーター|説明|
 |---------------|-----------------|
 |*ptr*|記憶域から割り当てを解除される最初のオブジェクトへのポインター。|
-|*_Nx*|記憶域から割り当てを解除されるオブジェクトの数。|
+|*Nx (_s)*|記憶域から割り当てを解除されるオブジェクトの数。|
 
 ### <a name="remarks"></a>Remarks
 
@@ -341,4 +341,4 @@ typedef Type value_type;
 
 ## <a name="see-also"></a>関連項目
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)

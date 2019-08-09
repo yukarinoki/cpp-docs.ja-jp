@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - unordered_map header
 ms.assetid: eb90ecb2-250a-4be1-83d2-f66b2917edde
-ms.openlocfilehash: 6ccb2c0c54f8094110d37e6dfd2c504fa8173641
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1ac1bf2772e7eb6b2f61aa7b4f79de21fb675afe
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62167596"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454761"
 ---
 # <a name="ltunorderedmapgt"></a>&lt;unordered_map&gt;
 
@@ -22,6 +22,9 @@ ms.locfileid: "62167596"
 ```cpp
 #include <unordered_map>
 ```
+
+> [!NOTE]
+> Unordered_map \<> ライブラリは、 `#include <initializer_list>`ステートメントも使用します。
 
 ### <a name="classes"></a>クラス
 
@@ -43,5 +46,5 @@ ms.locfileid: "62167596"
 
 ## <a name="see-also"></a>関連項目
 
-[unordered_multiset クラス](../standard-library/unordered-multiset-class.md)<br/>
-[unordered_set クラス](../standard-library/unordered-set-class.md)<br/>
+[unordered_multiset クラス](../standard-library/unordered-multiset-class.md)\
+[unordered_set クラス](../standard-library/unordered-set-class.md)

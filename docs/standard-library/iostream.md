@@ -14,16 +14,16 @@ f1_keywords:
 helpviewer_keywords:
 - iostream header
 ms.assetid: de5d39e1-7e77-4b55-bcd1-7c77b41515c8
-ms.openlocfilehash: 18d6a8517d71cfa9c7e17a45c97f77977ec778f0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 471b149eba32d163e6e3e54e1c2820bbe0b94133
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385142"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449038"
 ---
 # <a name="ltiostreamgt"></a>&lt;iostream&gt;
 
-標準ストリームに対する読み取りと書き込みを制御するオブジェクトを宣言します。 これは、多くの場合、C++ プログラムから入力と出力を実行するために含める必要がある唯一のヘッダーです。
+標準ストリームに対する読み取りと書き込みを制御するオブジェクトを宣言します。 多くの場合、このインクルードは、 C++プログラムから入力と出力を行うために必要な唯一のヘッダーです。
 
 ## <a name="syntax"></a>構文
 
@@ -31,19 +31,22 @@ ms.locfileid: "62385142"
 #include <iostream>
 ```
 
+> [!NOTE]
+> Iostream \<> ライブラリは、 `#include <ios>` `#include <streambuf>` `#include <ostream>` 、、、およびの各ステートメントを使用します。 `#include <istream>`
+
 ## <a name="remarks"></a>Remarks
 
 このオブジェクトは、次の 2 つのグループに分類されます。
 
-- [cin](#cin)、[cout](#cout)、[cerr](#cerr)、および [clog](#clog) はバイト指向で、従来のバイト単位の転送を実行します。
+- [cin](#cin)、 [cout](#cout)、 [cerr](#cerr) [、および](#clog)はバイト指向で、従来のバイト単位の転送を実行します。
 
 - [wcin](#wcin)、[wcout](#wcout)、[wcerr](#wcerr)、および [wclog](#wclog) はワイド指向で、プログラムが内部で操作するワイド文字に翻訳したり、ワイド文字から翻訳したりします。
 
-標準入力など、ストリームで特定の操作を実行すると、同じストリームで別の指向の操作を実行できません。 そのため、[cin](#cin) と [wcin](#wcin) など、両者に対するプログラムの操作に互換性はありません。
+標準入力など、ストリームに対して特定の操作を実行すると、同じストリームで別の向きの操作を行うことはできません。 そのため、 [cin](#cin)と[wcin](#wcin)の両方で、プログラムを同じように操作することはできません。
 
-このヘッダーで宣言されたすべてのオブジェクトは、特有のプロパティを共有します。\<iostream> を含む翻訳単位では、定義するすべての静的なオブジェクトの前に、これらのオブジェクトが構築されていると仮定できます。 同様に、このような定義するすべての静的オブジェクトのデストラクターの前に、これらのオブジェクトが破棄されないと仮定できます。 (ただし、出力ストリームはプログラムの終了時にフラッシュされます)。そのため、プログラムの開始前とプログラムの終了後に、標準ストリームに対する安全な読み取りまたは書き込みを行うことができます。
+このヘッダーで宣言されたすべてのオブジェクトは、特別なプロパティを共有します。これは、定義するすべての静的なオブジェクト\<の前に、iostream > を含む翻訳単位で構築されていることを前提としています。 同様に、定義した静的オブジェクトのデストラクターの前に、これらのオブジェクトが破棄されないと見なすことができます。 (ただし、出力ストリームはプログラムの終了時にフラッシュされます)。そのため、プログラムの開始前とプログラムの終了後に、標準ストリームに対する安全な読み取りまたは書き込みを行うことができます。
 
-ただし、この保証は汎用的ではありません。 静的コンストラクターは、別の翻訳単位で、関数を呼び出す場合があります。 静的な構築に含まれる翻訳単位の順序が不明な場合、呼び出された関数では、このヘッダーで宣言されたオブジェクトが構築済みであるとは仮定できません。 このようなコンテキストでこれらのオブジェクトを使用するには、最初に [ios_base::Init](../standard-library/ios-base-class.md#init) クラスのオブジェクトを構築します。
+ただし、この保証は一般的ではありません。 静的コンストラクターは、別の翻訳単位で、関数を呼び出す場合があります。 呼び出された関数は、このヘッダーで宣言されたオブジェクトが構築されていると想定できません。これは、静的な構築に含まれる翻訳単位の順序が不明であることを前提としています。 このようなコンテキストでこれらのオブジェクトを使用するには、最初に [ios_base::Init](../standard-library/ios-base-class.md#init) クラスのオブジェクトを構築します。
 
 ### <a name="global-stream-objects"></a>グローバル ストリーム オブジェクト
 
@@ -58,7 +61,7 @@ ms.locfileid: "62385142"
 |[wclog](#wclog)|`wclog` グローバル ストリームを指定します。|
 |[wcout](#wcout)|`wcout` グローバル ストリームを指定します。|
 
-###  <a name="cerr"></a> cerr
+###  <a name="cerr"></a>cerr
 
 オブジェクト `cerr` は、\<cstdio> で宣言されたオブジェクト `stderr` に関連付けられているストリーム バッファーへの出力を制御します。
 
@@ -104,7 +107,7 @@ int main( )
 }
 ```
 
-###  <a name="cin"></a>  cin
+###  <a name="cin"></a>cin
 
 `cin` グローバル ストリームを指定します。
 
@@ -122,7 +125,7 @@ extern istream cin;
 
 #### <a name="example"></a>例
 
-これは、`cin` が数字以外の文字を検出したときに、ストリームに失敗ビットを設定する例です。 プログラムでは、失敗ビットをクリアし、ストリームから無効な文字を除去して続行します。
+この例では`cin` 、は、数値以外の文字が含まれている場合に、ストリームの fail ビットを設定します。 プログラムは、fail ビットをクリアし、ストリームから無効な文字を除去して続行します。
 
 ```cpp
 // iostream_cin.cpp
@@ -152,11 +155,10 @@ int main()
 ```
 
 ```Output
-
 2
 ```
 
-###  <a name="clog"></a>  clog
+###  <a name="clog"></a>clog
 
 `clog` グローバル ストリームを指定します。
 
@@ -176,7 +178,7 @@ extern ostream clog;
 
 `clog` の使用例については、「[cerr](#cerr)」をご覧ください。
 
-###  <a name="cout"></a>  cout
+###  <a name="cout"></a>cout
 
 `cout` グローバル ストリームを指定します。
 
@@ -196,7 +198,7 @@ extern ostream cout;
 
 `cout` の使用例については、「[cerr](#cerr)」をご覧ください。
 
-###  <a name="wcerr"></a>  wcerr
+### <a name="wcerr"></a>wcerr
 
 `wcerr` グローバル ストリームを指定します。
 
@@ -216,7 +218,7 @@ extern wostream wcerr;
 
 `wcerr` の使用例については、「[cerr](#cerr)」をご覧ください。
 
-###  <a name="wcin"></a>  wcin
+### <a name="wcin"></a>wcin
 
 `wcin` グローバル ストリームを指定します。
 
@@ -236,7 +238,7 @@ extern wistream wcin;
 
 `wcin` の使用例については、「[cerr](#cerr)」をご覧ください。
 
-###  <a name="wclog"></a>  wclog
+### <a name="wclog"></a>wclog
 
 `wclog` グローバル ストリームを指定します。
 
@@ -256,7 +258,7 @@ extern wostream wclog;
 
 `wclog` の使用例については、「[cerr](#cerr)」をご覧ください。
 
-###  <a name="wcout"></a>  wcout
+### <a name="wcout"></a>wcout
 
 `wcout` グローバル ストリームを指定します。
 
@@ -279,17 +281,16 @@ extern wostream wcout;
 `wcout` ステートメントの `CString` インスタンスは、次の例に示されているように `const wchar_t*` にキャストする必要があります。
 
 ```
+CString cs("meow");
 
-    CString cs("meow");
-
-    wcout <<(const wchar_t*) cs <<endl;
+wcout <<(const wchar_t*) cs <<endl;
 ```
 
 詳細については、「[CString の基本操作](../atl-mfc-shared/basic-cstring-operations.md)」をご覧ください。
 
 ## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)<br/>
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[iostream プログラミング](../standard-library/iostream-programming.md)<br/>
-[iostreams の規則](../standard-library/iostreams-conventions.md)<br/>
+[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)\
+[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[iostream プログラミング](../standard-library/iostream-programming.md)\
+[iostreams の規則](../standard-library/iostreams-conventions.md)

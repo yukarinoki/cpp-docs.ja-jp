@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - mem_fun_ref_t class
 ms.assetid: 7dadcac3-8d33-4e4b-a792-81bd53d3df39
-ms.openlocfilehash: 0eb7d20037598e1fa03fa7bf8e1d6b79a788ae1e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0879736863a9b8052d19cc86dc5636ba14bcf993
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412905"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240605"
 ---
 # <a name="memfunreft-class"></a>mem_fun_ref_t クラス
 
@@ -26,16 +26,15 @@ class mem_fun_ref_t : public unary_function<Type, Result> {
     Result (Type::* _Pm)());
 
     Result operator()(Type& left) const;
-
 };
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*_Pm*<br/>
+*_Pm*\
 関数オブジェクトに変換されるクラス `Type` のメンバー関数へのポインター。
 
-*left*<br/>
+*左*\
 オブジェクトを *_Pm*でメンバー関数が呼び出されます。
 
 ## <a name="return-value"></a>戻り値
@@ -44,19 +43,8 @@ class mem_fun_ref_t : public unary_function<Type, Result> {
 
 ## <a name="remarks"></a>Remarks
 
-テンプレート クラスのコピーを格納する *_Pm*、クラスのメンバー関数へのポインターでなければならない`Type`、プライベート メンバー オブジェクトにします。 そのメンバー関数 `operator()` は ( **left**.* `_Pm`)( ) を返すように定義されています。
+テンプレート クラスのコピーを格納する *_Pm*、クラスのメンバー関数へのポインターでなければならない`Type`、プライベート メンバー オブジェクトにします。 そのメンバー関数`operator()`返すよう (**左**. * `_Pm`) ()。
 
 ## <a name="example"></a>例
 
 `mem_fun_ref_t` のコンストラクターは通常は直接使用されません。ヘルパー関数 `mem_fun_ref` を使用してメンバー関数を適合させます。 メンバー関数アダプターの使用例については、「[mem_fun_ref](../standard-library/functional-functions.md#mem_fun_ref)」を参照してください。
-
-## <a name="requirements"></a>必要条件
-
-**ヘッダー:** \<functional>
-
-**名前空間:** std
-
-## <a name="see-also"></a>関連項目
-
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)<br/>

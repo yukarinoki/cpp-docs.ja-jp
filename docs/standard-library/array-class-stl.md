@@ -96,12 +96,12 @@ helpviewer_keywords:
 - std::array [C++], size
 - std::array [C++], swap
 ms.assetid: fdfd43a5-b2b5-4b9e-991f-93bf10fb4293
-ms.openlocfilehash: fdc3705980ac8f763e0438f19920148437e7ed27
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aba7026fa60045720c893478c1ea637dbaa037c1
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62377505"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456913"
 ---
 # <a name="array-class-c-standard-library"></a>array クラス (C++ 標準ライブラリ)
 
@@ -162,7 +162,7 @@ class array;
 |演算子|説明|
 |-|-|
 |[array::operator=](#op_eq)|被制御シーケンスを置き換えます。|
-|[array::operator\[\]](#op_at)|指定した位置にある要素にアクセスします。|
+|[array:: operator\[\]](#op_at)|指定した位置にある要素にアクセスします。|
 
 ## <a name="remarks"></a>Remarks
 
@@ -192,7 +192,7 @@ array(const array& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*right*<br/>
+*そうです*\
 挿入するオブジェクトまたは範囲。
 
 ### <a name="remarks"></a>Remarks
@@ -247,12 +247,12 @@ void assign(const Ty& val);
 
 ### <a name="parameters"></a>パラメーター
 
-*val*<br/>
+*val*\
 代入する値。
 
 ### <a name="remarks"></a>Remarks
 
-メンバー関数は、によって制御されるシーケンス`*this`の繰り返しで`N`値の要素*val*します。
+このメンバー関数は、によって`*this`制御されるシーケンス`N`を、値*val*の要素の繰り返しで置き換えます。
 
 ### <a name="example"></a>例
 
@@ -303,12 +303,12 @@ constexpr const_reference at(size_type off) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*オフ*<br/>
+*オート*\
 アクセスする要素の位置。
 
 ### <a name="remarks"></a>Remarks
 
-メンバー関数は、位置にある、被制御シーケンスの要素への参照を返す*オフ*します。 その位置が無効の場合、関数はクラス `out_of_range` のオブジェクトをスローします。
+このメンバー関数は、制御されたシーケンスの要素への参照を*off*の位置に返します。 その位置が無効の場合、関数はクラス `out_of_range` のオブジェクトをスローします。
 
 ### <a name="example"></a>例
 
@@ -432,7 +432,7 @@ int main()
 
 ## <a name="cbegin"></a>  array::cbegin
 
-返します、 **const**範囲の最初の要素を指す反復子。
+範囲内の最初の要素を指す**定数**反復子を返します。
 
 ```cpp
 const_iterator cbegin() const noexcept;
@@ -440,13 +440,13 @@ const_iterator cbegin() const noexcept;
 
 ### <a name="return-value"></a>戻り値
 
-A **const**最初の要素の範囲、または空の範囲の末尾の次の場所を指すランダム アクセス反復子 (空の範囲、 `cbegin() == cend()`)。
+範囲の最初の要素、または空の範囲の末尾の次の位置 (空の範囲`cbegin() == cend()`の場合は) を指す、const ランダムアクセス反復子。
 
 ### <a name="remarks"></a>Remarks
 
 `cbegin` の戻り値で範囲内の要素を変更することはできません。
 
-`begin()` メンバー関数の代わりにこのメンバー関数を使用して、戻り値が `const_iterator` になることを保証できます。 通常は、次の例に示すように [auto](../cpp/auto-cpp.md) 型推論キーワードと共に使用します。 例では、検討してください。`Container`に変更可能な (非**const**) をサポートする任意の種類のコンテナー`begin()`と`cbegin()`します。
+`begin()` メンバー関数の代わりにこのメンバー関数を使用して、戻り値が `const_iterator` になることを保証できます。 通常は、次の例に示すように [auto](../cpp/auto-cpp.md) 型推論キーワードと共に使用します。 この例では、 `Container`とをサポート`begin()`する任意の種類の変更可能な (非**定数**) コンテナー `cbegin()`であると見なします。
 
 ```cpp
 auto i1 = Container.begin();
@@ -458,7 +458,7 @@ auto i2 = Container.cbegin();
 
 ## <a name="cend"></a>  array::cend
 
-返します、 **const**範囲の最後の要素の次の位置を指す反復子。
+範囲内の最後の要素の次の位置を指す**定数**反復子を返します。
 
 ```cpp
 const_iterator cend() const noexcept;
@@ -472,7 +472,7 @@ const_iterator cend() const noexcept;
 
 `cend` は、反復子が範囲の末尾を超えたかどうかをテストするために使用されます。
 
-`end()` メンバー関数の代わりにこのメンバー関数を使用して、戻り値が `const_iterator` になることを保証できます。 通常は、次の例に示すように [auto](../cpp/auto-cpp.md) 型推論キーワードと共に使用します。 例では、検討してください。`Container`に変更可能な (非**const**) をサポートする任意の種類のコンテナー`end()`と`cend()`します。
+`end()` メンバー関数の代わりにこのメンバー関数を使用して、戻り値が `const_iterator` になることを保証できます。 通常は、次の例に示すように [auto](../cpp/auto-cpp.md) 型推論キーワードと共に使用します。 この例では、 `Container`とをサポート`end()`する任意の種類の変更可能な (非**定数**) コンテナー `cend()`であると見なします。
 
 ```cpp
 auto i1 = Container.end();
@@ -1149,14 +1149,14 @@ constexpr const_reference operator[](size_type off) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*オフ*<br/>
+*オート*\
 アクセスする要素の位置。
 
 ### <a name="remarks"></a>Remarks
 
-メンバー関数は、位置にある、被制御シーケンスの要素への参照を返す*オフ*します。 その位置が無効な場合、動作は定義されません。
+このメンバー関数は、制御されたシーケンスの要素への参照を*off*の位置に返します。 その位置が無効な場合、動作は定義されません。
 
-メンバー以外はも[取得](array-functions.md#get)関数の要素への参照を取得できる、**配列**。
+また、**配列**の要素への参照を取得するために使用できる非メンバーの[get](array-functions.md#get)関数もあります。
 
 ### <a name="example"></a>例
 
@@ -1201,12 +1201,12 @@ array<Value> operator=(array<Value> right);
 
 ### <a name="parameters"></a>パラメーター
 
-*right*<br/>
+*そうです*\
 コピーするコンテナー。
 
 ### <a name="remarks"></a>Remarks
 
-メンバー演算子はの各要素に代入*右*を被制御シーケンスの対応する要素を返します`*this`します。 使用して、被制御シーケンス内のコピーを持つ、被制御シーケンスを置換する*右*します。
+メンバー演算子は、制御されたシーケンスの対応する要素に*right*の各要素を`*this`代入し、を返します。 このメソッドを使用して、被制御シーケンスを*右側*の被制御シーケンスのコピーで置き換えます。
 
 ### <a name="example"></a>例
 
@@ -1571,14 +1571,14 @@ void swap(array& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*right*<br/>
+*そうです*\
 コンテンツを交換する配列。
 
 ### <a name="remarks"></a>Remarks
 
-メンバー関数は、交換の間で被制御シーケンス`*this`と*右*します。 さまざまな要素の割り当てを実行し、`N` に比例してコンストラクターを呼び出します。
+このメンバー関数は *、との*間`*this`で被制御シーケンスを交換します。 さまざまな要素の割り当てを実行し、`N` に比例してコンストラクターを呼び出します。
 
-メンバー以外はも[スワップ](array-functions.md#swap)関数の 2 つのスワップを使用できる**配列**インスタンス。
+2つの**配列**インスタンスをスワップするために使用できる非メンバー[スワップ](array-functions.md#swap)関数もあります。
 
 ### <a name="example"></a>例
 
@@ -1677,4 +1677,4 @@ int main()
 
 ## <a name="see-also"></a>関連項目
 
-[\<array>](../standard-library/array.md)<br/>
+[\<array>](../standard-library/array.md)

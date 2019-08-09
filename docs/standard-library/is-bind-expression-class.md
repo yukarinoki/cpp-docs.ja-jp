@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_bind_expression class
 ms.assetid: 0715f9e9-2239-4778-a1cf-2c21f49dfd47
-ms.openlocfilehash: f547b6f74a86612174cb0f510870171158678f7a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6cd6d45788ec36f6827d1403ce3f7e5057004433
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383660"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245198"
 ---
 # <a name="isbindexpression-class"></a>is_bind_expression クラス
 
@@ -19,7 +19,12 @@ ms.locfileid: "62383660"
 
 ## <a name="syntax"></a>構文
 
-template<class Ty> struct is_bind_expression { static const bool value; };
+```
+template<class Ty>
+struct is_bind_expression {
+   static const bool value;
+};
+```
 
 ## <a name="remarks"></a>Remarks
 
@@ -57,13 +62,3 @@ int main()
 0
 1
 ```
-
-## <a name="requirements"></a>必要条件
-
-**ヘッダー:** \<functional>
-
-**名前空間:** std
-
-## <a name="see-also"></a>関連項目
-
-[bind](../standard-library/functional-functions.md#bind)<br/>

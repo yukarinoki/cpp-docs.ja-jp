@@ -11,12 +11,12 @@ helpviewer_keywords:
 - incompatible iterators
 - debug iterator support
 ms.assetid: f3f5bd15-4be8-4d64-a4d0-8bc0761c68b6
-ms.openlocfilehash: 9042093bb073807e9bb1476ab514c82010aeab70
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3ccb618c9a3c6b21d6ffe3fbbce7b6c1140e0564
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394060"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450586"
 ---
 # <a name="debug-iterator-support"></a>Debug Iterator Support
 
@@ -54,7 +54,7 @@ int main() {
 }
 ```
 
-## <a name="using-iteratordebuglevel"></a>_ITERATOR_DEBUG_LEVEL を使用します。
+## <a name="using-iteratordebuglevel"></a>デバッグレベルの使用 (_c)
 
 プリプロセッサ マクロ [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) を使って、デバッグ ビルドで反復子デバッグ機能を無効にできます。 このプログラムはアサートしませんが、それでも未定義の動作をトリガーします。
 
@@ -87,7 +87,7 @@ int main() {
 -572662307
 ```
 
-## <a name="unitialized-iterators"></a>反復子が初期化されていません。
+## <a name="unitialized-iterators"></a>Unitialized 反復子
 
 次の例に示すように、初期化する前に反復子を使おうとした場合も、アサートが発生します。
 
@@ -128,9 +128,9 @@ int main()
 
 この例では、ファンクターの代わりにラムダ式 `[] (int& elem) { elem *= 2; }` が使われていることに注意してください。 このようにしてもアサート失敗に影響はありませんが (似たファンクターが同じエラーの原因になります)、ラムダはコンパクトな関数オブジェクト タスクを実行する非常に便利な方法です。 ラムダ式について詳しくは、「[ラムダ式](../cpp/lambda-expressions-in-cpp.md)」をご覧ください。
 
-## <a name="iterators-going-out-of-scope"></a>反復子のスコープ外に出ると
+## <a name="iterators-going-out-of-scope"></a>スコープ外に出る反復子
 
-デバッグ反復子のチェックで宣言されている反復子変数が発生することも、**の**ループ外になりますき、**の**ループにスコープが終了します。
+また、デバッグ反復子チェックでは、for ループ**スコープが終了**したときに**for**ループで宣言されている反復子変数がスコープ外になります。
 
 ```cpp
 // iterator_debugging_4.cpp
@@ -148,7 +148,7 @@ int main() {
 
 ## <a name="destructors-for-debug-iterators"></a>デバッグ反復子のデストラクター
 
-反復子のデバッグには重要なデストラクターがあります。 デストラクターが実行されない場合は、オブジェクトのメモリを解放アクセス違反とデータの破損が発生する可能性があります。 次の例について考えます。
+反復子のデバッグには重要なデストラクターがあります。 デストラクターが実行されず、オブジェクトのメモリが解放されると、アクセス違反とデータ破損が発生する可能性があります。 次の例について考えます。
 
 ```cpp
 // iterator_debugging_5.cpp
@@ -175,4 +175,4 @@ struct derived : base {
 
 ## <a name="see-also"></a>関連項目
 
-[C++ 標準ライブラリの概要](../standard-library/cpp-standard-library-overview.md)<br/>
+[C++ 標準ライブラリの概要](../standard-library/cpp-standard-library-overview.md)

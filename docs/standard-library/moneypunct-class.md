@@ -46,16 +46,16 @@ helpviewer_keywords:
 - std::moneypunct [C++], positive_sign
 - std::moneypunct [C++], thousands_sep
 ms.assetid: cf2650da-3e6f-491c-95d5-23e57f582ee6
-ms.openlocfilehash: 750b61100f7e3fe15851fffbedeb5b60d4d7034f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b6cd2524f8ae010e81d06a30d9a001398a106622
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349122"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68460190"
 ---
 # <a name="moneypunct-class"></a>moneypunct クラス
 
-このテンプレート クラスは、型のシーケンスを表すためにロケール ファセットとして使用できるオブジェクトを表します*CharType*通貨入力フィールドまたは通貨出力フィールドを表すために使用します。 場合、テンプレート パラメーター *Intl*は*true*、国際対応の規則が確認されます。
+このテンプレートクラスは、通貨入力フィールドまたは通貨出力フィールドを表すために使用される*chartype*型のシーケンスを表すロケールファセットとして使用できるオブジェクトを表します。 テンプレート*パラメーターの*[international] が*true*の場合、国際的な規則が確認されます。
 
 ## <a name="syntax"></a>構文
 
@@ -66,10 +66,10 @@ class moneypunct;
 
 ### <a name="parameters"></a>パラメーター
 
-*CharType*<br/>
+*CharType*\
 文字をエンコードするためにプログラム内で使用される型。
 
-*Intl*<br/>
+*Intl*\
 国際的な規則を確認するかどうかを指定するフラグ。
 
 ## <a name="remarks"></a>Remarks
@@ -277,7 +277,7 @@ virtual string do_grouping() const;
 
 ### <a name="example"></a>例
 
-例をご覧ください[グループ化](#grouping)で仮想メンバー関数が呼び出される、`grouping`します。
+[グループ化](#grouping)の例を参照してください。ここで、仮想`grouping`メンバー関数はによって呼び出されます。
 
 ## <a name="do_neg_format"></a>  moneypunct::do_neg_format
 
@@ -289,19 +289,19 @@ virtual pattern do_neg_format() const;
 
 ### <a name="return-value"></a>戻り値
 
-このプロテクト仮想メンバー関数は、負の値の通貨出力フィールドを生成する方法を決定する、ロケール固有の規則を返します。 4 つの要素の各`pattern::field`値を持つことができます。
+このプロテクト仮想メンバー関数は、負の値の通貨出力フィールドを生成する方法を決定する、ロケール固有の規則を返します。 の`pattern::field` 4 つの要素はそれぞれ、次の値を持つことができます。
 
-- `none` 一致する 0 個以上の空白文字か何も生成しません。
+- `none`0個以上の空白に一致するか、何も生成しない場合は。
 
-- `sign` 一致するか、正または負の記号を生成します。
+- `sign`正または負の符号を一致または生成する場合は。
 
-- `space` 0 個以上の空白文字と一致するか、空白を生成します。
+- `space`0個以上の空白に一致するか、スペースを生成する場合は。
 
-- `symbol` 一致するか、通貨記号を生成します。
+- `symbol`通貨記号を一致または生成する場合は。
 
-- `value` 一致するか、通貨値を生成します。
+- `value`通貨値を一致または生成する場合は。
 
-通貨出力フィールドのコンポーネントが生成され、通貨入力フィールドのコンポーネントがこれらの要素に表示される順序で一致する`pattern::field`します。 各値`sign`、 `symbol`、 `value`、いずれかと`none`または`space`1 回のみ出現する必要があります。 値`none`最初いない必要があります。 値 space を最初または最後に出現させることは**できません**。 場合`Intl`が true の場合、順序は`symbol`、 `sign`、 `none`、し`value`します。
+通貨出力フィールドのコンポーネントが生成され、通貨入力フィールドのコンポーネントが、これらの要素がに`pattern::field`出現する順序で照合されます。 、、 `value`、および`sign`の`symbol`いずれか`none`の値は`space` 、1回だけ出現する必要があります。 最初に`none`値を指定することはできません。 値 space を最初または最後に出現させることは**できません**。 が`Intl` true の場合、 `symbol`順序は、 `sign` `none`、、の`value`順になります。
 
 `moneypunct` のテンプレート バージョン \< **CharType**, **Intl**> は、`{`**money_base::symbol**、**money_base::sign**、**money_base::value**、**money_base::none**`}` を返します。
 
@@ -523,18 +523,18 @@ explicit moneypunct(size_t _Refs = 0);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Refs*<br/>
+*参照 (_c)* \
 オブジェクトのメモリ管理の種類を指定するために使用する整数値。
 
 ### <a name="remarks"></a>Remarks
 
-使用可能な値を *_Refs*パラメーターとその重要性は。
+*Refs*パラメーターに指定できる値とその意味は、次のとおりです。
 
-- 0:オブジェクトの有効期間は、それが含まれるロケールによって管理されます。
+- 0オブジェクトの有効期間は、オブジェクトが含まれているロケールによって管理されます。
 
 - 1:オブジェクトの有効期間は、手動で管理する必要があります。
 
-- \> 1:これらの値が定義されていません。
+- \>1:これらの値は定義されていません。
 
 デストラクターが保護されているため、利用できる直接的な例はありません。
 
@@ -835,5 +835,5 @@ English_Canada.1252 domestic thousands separator: ,
 
 ## <a name="see-also"></a>関連項目
 
-[\<locale>](../standard-library/locale.md)<br/>
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[\<locale>](../standard-library/locale.md)\
+[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

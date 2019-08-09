@@ -21,12 +21,12 @@ f1_keywords:
 - regex/std::wsregex_token_iterator
 - regex/std::wssub_match
 ms.assetid: e6a69067-106c-4a24-9e08-7c867a3a2260
-ms.openlocfilehash: 33217388ff7e0826efcee413b39adaeba569399a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 82067819d144cbbdd2790e92aa6de5a1e7c0386a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62369138"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451460"
 ---
 # <a name="ltregexgt-typedefs"></a>&lt;regex&gt; typedefs
 
@@ -97,7 +97,7 @@ typedef basic_regex<char> regex;
 
 ### <a name="remarks"></a>Remarks
 
-この型はテンプレート クラスの特殊化を表します[basic_regex クラス](../standard-library/basic-regex-class.md)型の要素に対して**char**します。
+この型は、 **char**型の要素に対して特殊化されたテンプレートクラス[basic_regex クラス](../standard-library/basic-regex-class.md)を表します。
 
 > [!NOTE]
 > ハイビット文字は、`regex` を使用すると予測できない結果を起こします。 0 から 127 の範囲を外れる値を使用すると未定義の動作をすることがあります。
@@ -208,7 +208,7 @@ typedef basic_regex<wchar_t> wregex;
 
 ### <a name="remarks"></a>Remarks
 
-この型はテンプレート クラスの特殊化を表します[basic_regex クラス](../standard-library/basic-regex-class.md)型の要素に対して**wchar_t**します。
+この型は、 **wchar_t**型の要素に対して特殊化されたテンプレートクラス[basic_regex クラス](../standard-library/basic-regex-class.md)を表します。
 
 ## <a name="wsmatch"></a>  wsmatch Typedef
 
@@ -260,11 +260,11 @@ typedef sub_match<wstring::const_iterator> wssub_match;
 
 ## <a name="see-also"></a>関連項目
 
-[\<regex>](../standard-library/regex.md)<br/>
-[regex_constants クラス](../standard-library/regex-constants-class.md)<br/>
-[regex_error クラス](../standard-library/regex-error-class.md)<br/>
-[\<regex> 系関数](../standard-library/regex-functions.md)<br/>
-[regex_iterator クラス](../standard-library/regex-iterator-class.md)<br/>
-[\<regex> 系演算子](../standard-library/regex-operators.md)<br/>
-[regex_token_iterator クラス](../standard-library/regex-token-iterator-class.md)<br/>
-[regex_traits クラス](../standard-library/regex-traits-class.md)<br/>
+[\<regex>](../standard-library/regex.md)\
+[regex_constants クラス](../standard-library/regex-constants-class.md)\
+[regex_error クラス](../standard-library/regex-error-class.md)\
+[\<regex > 関数](../standard-library/regex-functions.md)\
+[regex_iterator クラス](../standard-library/regex-iterator-class.md)\
+[\<regex > 演算子](../standard-library/regex-operators.md)\
+[regex_token_iterator クラス](../standard-library/regex-token-iterator-class.md)\
+[regex_traits クラス](../standard-library/regex-traits-class.md)

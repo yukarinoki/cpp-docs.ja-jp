@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - independent_bits_engine class
 ms.assetid: 889e9a82-f457-49a7-9d2e-26e0fc3cd907
-ms.openlocfilehash: 8f420ca054d20cd222b8eda9a4a35a383a8e535a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a90e4be4ff6e92734f6b2e6804f8059be78e66b9
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159224"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456340"
 ---
 # <a name="independentbitsengine-class"></a>independent_bits_engine クラス
 
@@ -26,13 +26,13 @@ class independent_bits_engine;
 
 ### <a name="parameters"></a>パラメーター
 
-*エンジン*<br/>
+*双発*\
 ベースのエンジンの型。
 
-*W*<br/>
+*リダイレクト*\
 **ワード サイズ**。 生成される各数値のサイズ (ビット数)。 **前提条件**: `0 < W ≤ numeric_limits<UIntType>::digits`
 
-*UIntType*<br/>
+*UIntType*\
 結果を表す符号なし整数型。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
 
 ## <a name="members"></a>メンバー
@@ -46,7 +46,7 @@ class independent_bits_engine;
 
 ## <a name="remarks"></a>Remarks
 
-このテンプレート クラスについて説明します、*エンジン アダプター*結果として、ベースのエンジンによって返される値のビットを再パックすることで値を生成する*W*-ビット値。
+このテンプレートクラスは、ベースのエンジンによって返される値からビットを再パックことによって値を生成する*エンジンアダプター*を表します。これにより、 *W*ビットの値が生成されます。
 
 ## <a name="requirements"></a>必要条件
 
@@ -56,4 +56,4 @@ class independent_bits_engine;
 
 ## <a name="see-also"></a>関連項目
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

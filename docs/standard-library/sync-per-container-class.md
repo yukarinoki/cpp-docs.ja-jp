@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - sync_per_container class
 ms.assetid: 0b4b2904-b668-4d94-a422-d4f919cbffab
-ms.openlocfilehash: 641595f663c382129a40ce503ebdb789f8042cf0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 378451ac2643d62271fd9e7fa44706a84ee8bb83
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412164"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450286"
 ---
 # <a name="syncpercontainer-class"></a>sync_per_container クラス
 
@@ -61,10 +61,10 @@ bool equals(const sync_per_container<Cache>& Other) const;
 
 ### <a name="return-value"></a>戻り値
 
-メンバー関数は常に返します**false**します。
+このメンバー関数は常に**false**を返します。
 
 ### <a name="remarks"></a>Remarks
 
 ## <a name="see-also"></a>関連項目
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::regex_iterator::operator->
 - std::regex_iterator::operator++
 ms.assetid: 0cfd8fd0-5a95-4f3c-bf8e-6ef028c423d3
-ms.openlocfilehash: 937c217cdef6895aaa3adb1499f1fde8f67fd513
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ccf806a7918100c58e04ab403f3a8b895e8dc256
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62369494"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451560"
 ---
 # <a name="regexiterator-class"></a>regex_iterator クラス
 
@@ -38,13 +38,13 @@ class regex_iterator
 
 ## <a name="parameters"></a>パラメーター
 
-*BidIt*<br/>
-サブマッチの反復子の型。
+*BidIt*\
+サブマッチ用の反復子の型。
 
-*Elem*<br/>
+*Elem*\
 一致させる要素の型。
 
-*RXtraits*<br/>
+*RXtraits*\
 要素の特徴 (traits) クラス。
 
 ## <a name="remarks"></a>Remarks
@@ -171,7 +171,7 @@ bool operator!=(const regex_iterator& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*right*<br/>
+*そうです*\
 比較する反復子。
 
 ### <a name="remarks"></a>Remarks
@@ -215,12 +215,12 @@ bool operator==(const regex_iterator& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*right*<br/>
+*そうです*\
 比較する反復子。
 
 ### <a name="remarks"></a>Remarks
 
-場合、メンバー関数は true を返します`*this`と*右*シーケンス末尾の反復子またはかどうかは、シーケンス末尾の反復子がないと`begin == right.begin`、 `end == right.end`、`pregex == right.pregex`と`flags == right.flags`します。 それ以外の場合は、false を返します。
+メンバー関数は、と*right*が両方ともシーケンス末尾の反復子で`begin == right.begin`ある場合`*this` 、またはどちらもシーケンス末尾の`pregex == right.pregex`反復子 ( `end == right.end`、、、 `flags == right.flags`) ではない場合に true を返します。 それ以外の場合は、false を返します。
 
 ## <a name="op_arrow"></a>  regex_iterator::operator-&gt;
 
@@ -273,21 +273,21 @@ regex_iterator(BidIt first,
 
 ### <a name="parameters"></a>パラメーター
 
-*first*<br/>
+*まずは*\
 一致させるシーケンスの先頭。
 
-*last*<br/>
+*前の*\
 一致させるシーケンスの末尾。
 
-*re*<br/>
+*書き直し*\
 照合する正規表現。
 
-*f*<br/>
+*f*\
 一致のフラグ。
 
 ### <a name="remarks"></a>Remarks
 
-1 つ目のコンストラクターは、シーケンス末尾の反復子を構築します。 2 番目のコンス トラクターは、格納されている値を初期化します`begin`で*最初*、値が格納されている`end`で*最後*、値が格納されている`pregex`で`&re`、および値が格納されている`flags`で*f*します。 次に、 `regex_search(begin, end, match, *pregex, flags)`を呼び出します。 検索に失敗すると、コンストラクターがオブジェクトをシーケンス末尾の反復子に設定します。
+1 つ目のコンストラクターは、シーケンス末尾の反復子を構築します。 2番目のコンストラクターは、 `begin`格納された値を`end` *最初*に、格納され`pregex`た`&re`値を*最後*に、格納された値をで、格納されている値`flags`を*f*で初期化します。 次に、 `regex_search(begin, end, match, *pregex, flags)`を呼び出します。 検索に失敗すると、コンストラクターがオブジェクトをシーケンス末尾の反復子に設定します。
 
 ## <a name="regex_type"></a>  regex_iterator::regex_type
 
@@ -315,12 +315,12 @@ typedef match_results<BidIt> value_type;
 
 ## <a name="see-also"></a>関連項目
 
-[\<regex>](../standard-library/regex.md)<br/>
-[regex_constants クラス](../standard-library/regex-constants-class.md)<br/>
-[regex_error クラス](../standard-library/regex-error-class.md)<br/>
-[\<regex> 系関数](../standard-library/regex-functions.md)<br/>
-[regex_iterator クラス](../standard-library/regex-iterator-class.md)<br/>
-[\<regex> 系演算子](../standard-library/regex-operators.md)<br/>
-[regex_token_iterator クラス](../standard-library/regex-token-iterator-class.md)<br/>
-[regex_traits クラス](../standard-library/regex-traits-class.md)<br/>
-[\<regex> typedefs](../standard-library/regex-typedefs.md)<br/>
+[\<regex>](../standard-library/regex.md)\
+[regex_constants クラス](../standard-library/regex-constants-class.md)\
+[regex_error クラス](../standard-library/regex-error-class.md)\
+[\<regex > 関数](../standard-library/regex-functions.md)\
+[regex_iterator クラス](../standard-library/regex-iterator-class.md)\
+[\<regex > 演算子](../standard-library/regex-operators.md)\
+[regex_token_iterator クラス](../standard-library/regex-token-iterator-class.md)\
+[regex_traits クラス](../standard-library/regex-traits-class.md)\
+[\<regex> typedefs](../standard-library/regex-typedefs.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - sstream header
 ms.assetid: 56f55bc5-549d-4e7f-aaad-99e0ffa49c9e
-ms.openlocfilehash: cc08fb426df289b3478ad9d29b03f9a6dd5d3978
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8284e56e8afb1e5518cbcbb772079b4f19d57b18
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412476"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451728"
 ---
 # <a name="ltsstreamgt"></a>&lt;sstream&gt;
 
@@ -77,20 +77,20 @@ void swap (
 
 ## <a name="remarks"></a>Remarks
 
-`char *` 型のオブジェクトでは、ストリーミングに [\<strstream >](../standard-library/strstream.md) の機能を使用することができます。 ただし、 \<strstream > は非推奨の使用と\<sstream > ことお勧めします。
+`char *` 型のオブジェクトでは、ストリーミングに [\<strstream >](../standard-library/strstream.md) の機能を使用することができます。 ただし、 \<strstream > は非推奨とされ\<ており、sstream > を使用することをお勧めします。
 
 ### <a name="typedefs"></a>Typedef
 
 |型名|説明|
 |-|-|
-|[istringstream](../standard-library/sstream-typedefs.md#istringstream)|型を作成します`basic_istringstream`に特殊化された、 **char**テンプレート パラメーター。|
-|[ostringstream](../standard-library/sstream-typedefs.md#ostringstream)|型を作成します`basic_ostringstream`に特殊化された、 **char**テンプレート パラメーター。|
-|[stringbuf](../standard-library/sstream-typedefs.md#stringbuf)|型を作成します`basic_stringbuf`に特殊化された、 **char**テンプレート パラメーター。|
-|[stringstream](../standard-library/sstream-typedefs.md#stringstream)|型を作成します`basic_stringstream`に特殊化された、 **char**テンプレート パラメーター。|
-|[wistringstream](../standard-library/sstream-typedefs.md#wistringstream)|型を作成します`basic_istringstream`に特殊化された、 **wchar_t**テンプレート パラメーター。|
-|[wostringstream](../standard-library/sstream-typedefs.md#wostringstream)|型を作成します`basic_ostringstream`に特殊化された、 **wchar_t**テンプレート パラメーター。|
-|[wstringbuf](../standard-library/sstream-typedefs.md#wstringbuf)|型を作成します`basic_stringbuf`に特殊化された、 **wchar_t**テンプレート パラメーター。|
-|[wstringstream](../standard-library/sstream-typedefs.md#wstringstream)|型を作成します`basic_stringstream`に特殊化された、 **wchar_t**テンプレート パラメーター。|
+|[istringstream](../standard-library/sstream-typedefs.md#istringstream)|Char テンプレートパラメーター `basic_istringstream`に特殊化された型を作成します。|
+|[ostringstream](../standard-library/sstream-typedefs.md#ostringstream)|Char テンプレートパラメーター `basic_ostringstream`に特殊化された型を作成します。|
+|[stringbuf](../standard-library/sstream-typedefs.md#stringbuf)|Char テンプレートパラメーター `basic_stringbuf`に特殊化された型を作成します。|
+|[stringstream](../standard-library/sstream-typedefs.md#stringstream)|Char テンプレートパラメーター `basic_stringstream`に特殊化された型を作成します。|
+|[wistringstream](../standard-library/sstream-typedefs.md#wistringstream)|Wchar_t テンプレートパラメーター `basic_istringstream`に特殊化された型を作成します。|
+|[wostringstream](../standard-library/sstream-typedefs.md#wostringstream)|Wchar_t テンプレートパラメーター `basic_ostringstream`に特殊化された型を作成します。|
+|[wstringbuf](../standard-library/sstream-typedefs.md#wstringbuf)|Wchar_t テンプレートパラメーター `basic_stringbuf`に特殊化された型を作成します。|
+|[wstringstream](../standard-library/sstream-typedefs.md#wstringstream)|Wchar_t テンプレートパラメーター `basic_stringstream`に特殊化された型を作成します。|
 
 ### <a name="manipulators"></a>マニピュレーター
 
@@ -103,9 +103,9 @@ void swap (
 |クラス|説明|
 |-|-|
 |[basic_stringbuf](../standard-library/basic-stringbuf-class.md)|文字の特徴がクラス `Tr` によって決まる型 `Elem` の要素の、配列オブジェクトに格納されている要素のシーケンスとの間での転送を制御するストリーム バッファーについて説明します。|
-|[basic_istringstream](../standard-library/basic-istringstream-class.md)|クラスのストリーム バッファーからエンコードされたオブジェクトと要素の抽出を制御するオブジェクトについて説明します[basic_stringbuf](../standard-library/basic-stringbuf-class.md)<**Elem**、 **Tr**、 `Alloc`>、型の要素を含む`Elem`、その文字特性はクラスによって決まります`Tr`、要素は、クラスのアロケーターによって割り当てられていると`Alloc`します。|
-|[basic_ostringstream](../standard-library/basic-ostringstream-class.md)|クラスのストリーム バッファーにエンコードされたオブジェクトと要素の挿入を制御するオブジェクトを記述します[basic_stringbuf](../standard-library/basic-stringbuf-class.md)<**Elem**、 **Tr**、 `Alloc`>、型の要素を含む`Elem`、その文字特性はクラスによって決まります`Tr`、要素は、クラスのアロケーターによって割り当てられていると`Alloc`します。|
-|[basic_stringstream](../standard-library/basic-stringstream-class.md)|要素の挿入と抽出を制御するオブジェクトとクラスのストリーム バッファーを使用してエンコードされたオブジェクトについて説明します[basic_stringbuf](../standard-library/basic-stringbuf-class.md)<**Elem**、 **Tr**、 `Alloc`>、型の要素を含む`Elem`、その文字特性はクラスによって決まります`Tr`、要素は、クラスのアロケーターによって割り当てられていると`Alloc`します。|
+|[basic_istringstream](../standard-library/basic-istringstream-class.md)|要素とエンコードされたオブジェクトの抽出を制御するオブジェクトを記述します[](../standard-library/basic-stringbuf-class.md)<。これは、basic_stringbuf `Alloc`**Elem**, Tr, > クラス`Elem`のストリームバッファーから、文字を持つ型の要素を使用して、特徴はクラス`Tr`によって決定され、その要素はクラス`Alloc`のアロケーターによって割り当てられます。|
+|[basic_ostringstream](../standard-library/basic-ostringstream-class.md)|要素とエンコードされたオブジェクトの挿入を制御するオブジェクトを記述します。これは、文字`Alloc`の特徴を持つ型`Elem`の要素を使用して、 [basic_stringbuf](../standard-library/basic-stringbuf-class.md)<**Elem**, **Tr**, > クラスのストリームバッファーへの挿入を制御します。はクラス`Tr`によって決定され、その要素はクラス`Alloc`のアロケーターによって割り当てられます。|
+|[basic_stringstream](../standard-library/basic-stringstream-class.md)|要素とエンコードされたオブジェクトの挿入と抽出を制御するオブジェクトを記述します。これは、 `Elem`型`Alloc`の要素を使用して、 [basic_stringbuf](../standard-library/basic-stringbuf-class.md)<**Elem**, **Tr**, > クラスのストリームバッファーを使用します。文字の特徴はクラス`Tr`によって決定され、その要素はクラス`Alloc`のアロケーターによって割り当てられます。|
 
 ## <a name="requirements"></a>必要条件
 
@@ -115,7 +115,7 @@ void swap (
 
 ## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)<br/>
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[iostream プログラミング](../standard-library/iostream-programming.md)<br/>
-[iostreams の規則](../standard-library/iostreams-conventions.md)<br/>
+[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)\
+[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[iostream プログラミング](../standard-library/iostream-programming.md)\
+[iostreams の規則](../standard-library/iostreams-conventions.md)

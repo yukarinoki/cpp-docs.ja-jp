@@ -6,29 +6,32 @@ f1_keywords:
 helpviewer_keywords:
 - set header
 ms.assetid: 43cb1ab2-6383-48cf-8bdc-2b96d7203596
-ms.openlocfilehash: 633571f00cfe761b687e9b76624029f57ab6043e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b947d9ba268c9b4028415216e4ad0813f2d71947
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412580"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450524"
 ---
 # <a name="ltsetgt"></a>&lt;set&gt;
 
 コンテナー テンプレート クラスの set と multiset、およびそのサポート用テンプレートを定義します。
 
-## <a name="syntax"></a>構文
+## <a name="requirements"></a>必要条件
 
-```cpp
-#include <set>
-```
+**ヘッダー:** \<set>
+
+**名前空間:** std
+
+> [!NOTE]
+> Set > library では、 `#include <initializer_list>`ステートメントも使用されます。 \<
 
 ## <a name="members"></a>メンバー
 
 ### <a name="operators"></a>演算子
 
 |set のバージョン|multiset のバージョン|説明|
-|-----------------|----------------------|-----------------|
+|-|-|-|
 |[operator!= (set)](../standard-library/set-operators.md#op_neq)|[operator!= (multiset)](../standard-library/set-operators.md#op_neq)|演算子の左側の set または multiset のオブジェクトが、右側の set または multiset のオブジェクトと等しくないかどうかをテストします。|
 |[operator< (set)](../standard-library/set-operators.md#op_lt)|[operator< (multiset)](../standard-library/set-operators.md#op_lt_multiset)|演算子の左側の set または multiset のオブジェクトが、右側の set または multiset のオブジェクト未満かどうかをテストします。|
 |[operator<= (set)](../standard-library/set-operators.md#op_lt_eq)|[operator\<= (multiset)](../standard-library/set-operators.md#op_lt_eq_multiset)|演算子の左側の set または multiset のオブジェクトが、右側の set または multiset のオブジェクト以下かどうかをテストします。|
@@ -39,18 +42,18 @@ ms.locfileid: "62412580"
 ### <a name="specialized-template-functions"></a>特殊テンプレート関数
 
 |set のバージョン|multiset のバージョン|説明|
-|-----------------|----------------------|-----------------|
+|-|-|-|
 |[swap](../standard-library/set-functions.md#swap)|[swap (multiset)](../standard-library/set-functions.md#swap_multiset)|2 つの set または multiset の要素を交換します。|
 
 ### <a name="classes"></a>クラス
 
-|クラス|説明|
+|||
 |-|-|
 |[set クラス](../standard-library/set-class.md)|コレクションのデータを格納および取得するために使用されます。このコレクションに含まれる要素の値は一意です。この値はキー値として使用され、これに基づいてデータが自動的に順序付けられます。|
 |[multiset クラス](../standard-library/multiset-class.md)|コレクションのデータを格納および取得するために使用されます。このコレクションに含まれる要素の値は一意とは限りません。この値はキー値として使用され、これに基づいてデータが自動的に順序付けられます。|
 
 ## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)<br/>
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)<br/>
+[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)\
+[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)

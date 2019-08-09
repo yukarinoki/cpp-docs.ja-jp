@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::student_t_distribution [C++], max
 - std::student_t_distribution [C++], param_type
 ms.assetid: 87b48127-9311-4d07-95df-833ed46bf0b1
-ms.openlocfilehash: 4c63f37c07a56144fdd18531af5e8f9fbdac656a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 42e7337a2a0803af51e7dd11f53c482dbfc2aa0f
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412255"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459003"
 ---
 # <a name="studenttdistribution-class"></a>student_t_distribution クラス
 
@@ -64,12 +64,12 @@ public:
 
 ### <a name="parameters"></a>パラメーター
 
-*RealType*<br/>
-浮動小数点の結果の型の既定値**二重**します。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
+*RealType*\
+浮動小数点演算の結果の型。既定値は**double**です。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
 
 ## <a name="remarks"></a>Remarks
 
-このテンプレート クラスは、ユーザー指定の整数値を生成する分布を表します型、または型**二重**何も指定されない場合は、スチューデントに従って分布*t*-配布します。 次の表は、個々のメンバーに関する記事にリンクしています。
+このテンプレートクラスは、スチューデントの*t*分布に従って分布した、ユーザー指定の整数型の値、または指定されていない場合は**double**型の値を生成する分布を表します。 次の表は、個々のメンバーに関する記事にリンクしています。
 
 ||||
 |-|-|-|
@@ -174,10 +174,10 @@ explicit student_t_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>パラメーター
 
-*n*<br/>
+*n*\
 `n` 分布パラメーター。
 
-*parm*<br/>
+*parm*\
 分布の作成に使用されるパラメーター パッケージ。
 
 ### <a name="remarks"></a>Remarks
@@ -205,10 +205,10 @@ struct param_type {
 
 ### <a name="parameters"></a>パラメーター
 
-*n*<br/>
+*n*\
 `n` 分布パラメーター。
 
-*right*<br/>
+*そうです*\
 このオブジェクトと比較する `param_type` オブジェクト。
 
 ### <a name="remarks"></a>Remarks
@@ -219,4 +219,4 @@ struct param_type {
 
 ## <a name="see-also"></a>関連項目
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

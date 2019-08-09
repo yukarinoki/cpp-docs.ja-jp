@@ -102,12 +102,12 @@ helpviewer_keywords:
 - CListBox [MFC], SetTopIndex
 - CListBox [MFC], VKeyToItem
 ms.assetid: 7ba3c699-c286-4cd9-9066-532c41ec05d1
-ms.openlocfilehash: b448f725bac68c2b67dc44d660c664c075aa86da
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f7b62ecf64c70c554fe14883c45d6b7936c668d7
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62225270"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243579"
 ---
 # <a name="clistbox-class"></a>CListBox クラス
 
@@ -139,14 +139,14 @@ class CListBox : public CWnd
 |[CListBox::DeleteString](#deletestring)|リスト ボックスから文字列を削除します。|
 |[CListBox::Dir](#dir)|リスト ボックスに、ファイル名、ドライブ、またはその両方、現在のディレクトリからを追加します。|
 |[CListBox::DrawItem](#drawitem)|ビジュアルな部分のオーナー描画リスト ボックスが変更されたときにフレームワークによって呼び出されます。|
-|[CListBox::FindString](#findstring)|リスト ボックス内の文字列を検索します。|
+|[Clistbox::findstring](#findstring)|リスト ボックス内の文字列を検索します。|
 |[CListBox::FindStringExact](#findstringexact)|指定した文字列と一致する最初のボックスの一覧で文字列を検索します。|
 |[CListBox::GetAnchorIndex](#getanchorindex)|リスト ボックスの現在のアンカー項目の 0 から始まるインデックスを取得します。|
 |[CListBox::GetCaretIndex](#getcaretindex)|複数選択のリスト ボックスにフォーカス四角形を持つ項目のインデックスを調べます。|
 |[CListBox::GetCount](#getcount)|リスト ボックスで、文字列の数を返します。|
 |[CListBox::GetCurSel](#getcursel)|リスト ボックスで現在選択されている文字列の 0 から始まるインデックスを返します。|
 |[CListBox::GetHorizontalExtent](#gethorizontalextent)|リスト ボックスが水平方向にスクロールできることをピクセル単位の幅を返します。|
-|[CListBox::GetItemData](#getitemdata)|リスト ボックス項目に関連付けられている 32 ビット値を返します。|
+|[CListBox::GetItemData](#getitemdata)|リスト ボックス項目に関連付けられた値を返します。|
 |[CListBox::GetItemDataPtr](#getitemdataptr)|リスト ボックス項目へのポインターを返します。|
 |[CListBox::GetItemHeight](#getitemheight)|リスト ボックス内の項目の高さを決定します。|
 |[CListBox::GetItemRect](#getitemrect)|現在表示されている、リスト ボックス項目の外接する四角形を返します。|
@@ -170,7 +170,7 @@ class CListBox : public CWnd
 |[CListBox::SetColumnWidth](#setcolumnwidth)|複数列のリスト ボックスの列の幅を設定します。|
 |[CListBox::SetCurSel](#setcursel)|リスト ボックスの文字列を選択します。|
 |[CListBox::SetHorizontalExtent](#sethorizontalextent)|リスト ボックスが水平方向にスクロールできることをピクセル単位の幅を設定します。|
-|[CListBox::SetItemData](#setitemdata)|リスト ボックス項目に関連付けられている 32 ビット値を設定します。|
+|[CListBox::SetItemData](#setitemdata)|リスト ボックス項目に関連付けられた値を設定します。|
 |[CListBox::SetItemDataPtr](#setitemdataptr)|リスト ボックス項目へのポインターを設定します。|
 |[CListBox::SetItemHeight](#setitemheight)|リスト ボックス内の項目の高さを設定します。|
 |[CListBox::SetLocale](#setlocale)|リスト ボックスのロケール識別子を設定します。|
@@ -525,7 +525,7 @@ Long ポインター、 [DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser
 
 [!code-cpp[NVC_MFC_CListBox#9](../../mfc/codesnippet/cpp/clistbox-class_9.cpp)]
 
-##  <a name="findstring"></a>  CListBox::FindString
+##  <a name="findstring"></a>  Clistbox::findstring
 
 ボックスの一覧で選択を変更することがなく、指定したプレフィックスを含むリスト ボックス内の最初の文字列を検索します。
 
@@ -570,7 +570,7 @@ int FindStringExact(
 *nIndexStart*<br/>
 最初の項目を検索する前にある項目の 0 から始まるインデックスを指定します。 指定された項目に、リスト ボックスの上部から続行、検索では、リスト ボックスの下部に達すると、 *nIndexStart*します。 場合*nIndexStart* -1 で、最初からリスト ボックス全体が検索されます。
 
-*lpszFind*<br/>
+*中から*<br/>
 検索する null で終わる文字列へのポインター。 この文字列は、拡張子を含む、完全なファイル名を含めることができます。 検索は大文字小文字が区別はないため、文字列は、任意の大文字と小文字を含めることができます。
 
 ### <a name="return-value"></a>戻り値
@@ -702,7 +702,7 @@ DWORD_PTR GetItemData(int nIndex) const;
 
 ### <a name="return-value"></a>戻り値
 
-32 ビット値は、エラーが発生した場合に関連付けられた項目、または返します。
+エラーが発生した場合は、項目、または返しますに関連付けられている値。
 
 ### <a name="remarks"></a>Remarks
 
@@ -1288,7 +1288,7 @@ void SetHorizontalExtent(int cxExtent);
 
 ##  <a name="setitemdata"></a>  CListBox::SetItemData
 
-リスト ボックスで指定した項目に関連付けられている 32 ビット値を設定します。
+リスト ボックスで指定した項目に関連付けられている値を設定します。
 
 ```
 int SetItemData(

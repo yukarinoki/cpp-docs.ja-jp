@@ -7,52 +7,52 @@ f1_keywords:
 helpviewer_keywords:
 - complex header
 ms.assetid: 5e728995-3059-496a-9ce9-61d1bfbe4f2b
-ms.openlocfilehash: afcdb1246d9c02f83dbc8708326d10e802ad2779
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 585f970f1a3482412ff225454b7acce9060e2d7c
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62212093"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449434"
 ---
 # <a name="ltcomplexgt"></a>&lt;complex&gt;
 
-コンテナーのテンプレート クラスを定義します。`complex`とそのサポート用テンプレート。
+コンテナーテンプレートクラス`complex`とそのサポートテンプレートを定義します。
 
-## <a name="syntax"></a>構文
+## <a name="requirements"></a>必要条件
 
-```cpp
-#include <complex>
-```
+**ヘッダー**: \<complex>
+
+**名前空間:** std
 
 ## <a name="remarks"></a>Remarks
 
 複素数は、順序付けされた実数のペアです。 純粋に幾何学的な見地からすれば、複素平面は実数からなる 2 次元平面です。 複素平面には代数構造が加えられているため、実数平面とは異なる特殊な性質を持ちます。 この代数構造には次の 2 つの基本的な演算が含まれます。
 
-- として定義されている追加 (*、*、 *b*) + (*c*、 *d*) = (*、* + *c*、 *b* + *d*)
+- (*A*, *b*) + (*c*, *d*) = (*a* + *c*, *b* + *d*) として定義された追加
 
-- 定義される乗算 (*、*、 *b*) \* (*c*、 *d*) = (*ac*  -  *bd*、 *ad* + *bc*)
+- (*A*, *b*) \* (*c*, *d*) = (*ac* - *bd*, *ad* + *bc*) として定義された乗算
 
 複素数の加算や乗算を伴う複素数の集合は、標準の代数学的な意味での体 (field) です。
 
 - 実数の体 (field) における実数の加算や乗算と全く同様、加算や乗算の演算には交換法則や結合法則が成り立ち、加法に対する乗法の分配法則も成り立ちます。
 
-- 複素数の値 (0, 0) が加法と (1, 0) は、乗算の id です。
+- 複素数 (0, 0) は加法 id、(1, 0) は乗算 id です。
 
-- 複素数の加法逆元 (*、*、 *b*) は、(-*、*、-*b*)、このようなすべての複素数の乗法逆除く (0, 0) は、
+- 複素数 (*a*, *b*) の加法逆関数は (-*a*,-*b*) で、(0, 0) 以外のすべての複素数の乗算逆はです。
 
-   (*、*/(*、*<sup>2</sup> + *b*<sup>2</sup>)、-*b*/(*、*<sup>2</sup> + *b*<sup>2</sup>))
+   (*a*/(*a*<sup>2</sup> + *b*<sup>2</sup>),-*b*/(*a*<sup>2</sup> + *b*<sup>2</sup>))
 
-複素数を表す*z* = (*、*、 *b*) 形式で*z* = *、*  + *双*ここで、*は*<sup>2</sup> =-1 の場合、規則の複素数のセットとその要素の実際の数値のセットの代数を適用できます。 例:
+" *Z* *a bi*" と<sup></sup>  いう + 形式の複素数 z = (a, b) を表すことにより、i 2 =-1 の場合、実数のセットの代数に関するルールを = 複合数値とそのコンポーネントのセット。 例えば:
 
    (1 + 2*i*) \* (2 + 3*i*) = 1 \* (2 + 3*i*) + 2*i* \* (2 + 3*i*) = (2 + 3*i*) + (4*i* + 6*i*<sup>2</sup>) = (2 - 6) + (3 + 4)*i* = -4 + 7*i*
 
-複素数系は体 (field) ですが、順序体 (ordered field) ではありません。 実際の数値およびそのサブセットでは、フィールドが実数には、複素数に不等式を適用できませんので、複素数の順序がありません。
+複素数系は体 (field) ですが、順序体 (ordered field) ではありません。 実際の数値とそのサブセットのフィールドについては、複素数の順序が指定されていないため、不等ずを実数のように複素数に適用することはできません。
 
 複素数 *z* を表す形式としては、次の 3 つが一般的です。
 
-- デカルト形式: *z* = *、* + *bi*
+- デカルト: *z* = a*bi*  + 
 
-- 極形式: *z* = *r* (cos *p* + *は*sin *p*)
+- 極座標: *z* = *r* (cos *p* + *i* sin *p*)
 
 - 指数: *z* = *r* \* *e*<sup>*ip*</sup>
 
@@ -62,18 +62,26 @@ ms.locfileid: "62212093"
 
 - デカルト形式の虚数要素、または虚数部 *b*。
 
-- 剰余または複素数の絶対値*r*します。
+- 複素数*r*の剰余または絶対値。
 
-- 偏角または位相角*p* (ラジアン単位)。
+- 引数またはフェーズアングル*p* (ラジアン)。
 
-複数の値を返すことができる関数は - π より大きく、その引数の主値を返すときに必要でない限りよりも等しい + π のまたはそれらを単一値のままにします。 すべての角度をラジアン単位で表す必要がありますが、円で囲んだ 2 π ラジアン (360 度) がある場合。
+特に指定しない限り、複数の値を返すことができる関数は、-πより大きく + π以下の引数のプリンシパル値を返して単一の値を保持する必要があります。 すべての角度はラジアンで表現する必要があります。ここで、円には2πラジアン (360 °) があります。
+
+## <a name="members"></a>メンバー
 
 ### <a name="functions"></a>関数
 
-|関数|説明|
+|||
 |-|-|
 |[abs](../standard-library/complex-functions.md#abs)|複素数の係数を計算します。|
+|[acos](../standard-library/complex-functions.md#acos)||
+|[acosh](../standard-library/complex-functions.md#acosh)||
 |[arg](../standard-library/complex-functions.md#arg)|複素数から偏角を抽出します。|
+|[asin](../standard-library/complex-functions.md#asin)||
+|[asinh](../standard-library/complex-functions.md#asinh)||
+|[atan](../standard-library/complex-functions.md#atan)||
+|[atanh](../standard-library/complex-functions.md#atanh)||
 |[conj](../standard-library/complex-functions.md#conj)|複素数の複素共役を返します。|
 |[cos](../standard-library/complex-functions.md#cos)|複素数のコサインを返します。|
 |[cosh](../standard-library/complex-functions.md#cosh)|複素数のハイパーボリック コサインを返します。|
@@ -84,6 +92,7 @@ ms.locfileid: "62212093"
 |[norm](../standard-library/complex-functions.md#norm)|複素数のノルムを抽出します。|
 |[polar](../standard-library/complex-functions.md#polar)|デカルト形式で、指定した係数と偏角に対応する複素数を返します。|
 |[pow](../standard-library/complex-functions.md#pow)|複素数の底を、別の複素数で累乗することによって得られる複素数を評価します。|
+|[proj](../standard-library/complex-functions.md#proj)||
 |[real](../standard-library/complex-functions.md#real)|複素数の実数部を抽出します。|
 |[sin](../standard-library/complex-functions.md#sin)|複素数のサインを返します。|
 |[sinh](../standard-library/complex-functions.md#sinh)|複素数のハイパーボリック サインを返します。|
@@ -93,7 +102,7 @@ ms.locfileid: "62212093"
 
 ### <a name="operators"></a>演算子
 
-|演算子|説明|
+|||
 |-|-|
 |[operator!=](../standard-library/complex-operators.md#op_neq)|2 つの複素数の間の非同等性をテストします。その一方または両方が実数部と虚数部の型のサブセットに属している場合があります。|
 |[operator*](../standard-library/complex-operators.md#op_star)|2 つの複素数を乗算します。その一方または両方が実数部と虚数部の型のサブセットに属している場合があります。|
@@ -106,11 +115,11 @@ ms.locfileid: "62212093"
 
 ### <a name="classes"></a>クラス
 
-|クラス|説明|
+|||
 |-|-|
-|[complex\<double>](../standard-library/complex-double.md)|明示的に特殊化されたテンプレート クラスは、両方の種類のオブジェクトの順序付きペアを格納するオブジェクトをについて説明します**二重**複素数の実数部を表し、2 つ目は虚数部を表します。|
-|[complex\<float>](../standard-library/complex-float.md)|明示的に特殊化されたテンプレート クラスは、両方の種類のオブジェクトの順序付きペアを格納するオブジェクトをについて説明します**float**複素数の実数部を表し、2 つ目は虚数部を表します。|
-|[complex\<long double>](../standard-library/complex-long-double.md)|明示的に特殊化されたテンプレート クラスは、両方の種類のオブジェクトの順序付きペアを格納するオブジェクトをについて説明します**long double**複素数の実数部を表し、2 つ目は虚数部を表します。|
+|[complex\<double>](../standard-library/complex-double.md)|明示的に特殊化されたテンプレートクラスは、順序付けされたオブジェクトのペア ( **double**型) を格納するオブジェクトを記述します。最初のオブジェクトは複素数の実数部を表し、2番目のオブジェクトは虚数部を表します。|
+|[complex\<float>](../standard-library/complex-float.md)|明示的に特殊化されたテンプレートクラスは、順序付けされたオブジェクトのペア ( **float**型) を格納するオブジェクトを記述します。最初のオブジェクトは複素数の実数部を表し、2番目のオブジェクトは虚数部を表します。|
+|[complex\<long double>](../standard-library/complex-long-double.md)|明示的に特殊化されたテンプレートクラスは、順序付けされたオブジェクトのペア ( **long double**型の両方) を格納するオブジェクトを記述します。1つ目は複素数の実数部を表し、2番目のオブジェクトは虚数部を表します。|
 |[complex](../standard-library/complex-class.md)|このテンプレート クラスは、複素数の算術演算に使用する複素数系を表すオブジェクトを記述します。|
 
 ### <a name="literals"></a>リテラル
@@ -119,11 +128,11 @@ ms.locfileid: "62212093"
 
 |||
 |-|-|
-|`constexpr complex<long double> operator""il(long double d)`<br /><br /> `constexpr complex<long double> operator""il(unsigned long long d)`|返します。 `complex<long double>{0.0L, static_cast<long double>(d)}`|
-|`constexpr complex<double> operator""i(long double d)`<br /><br /> `constexpr complex<double> operator""i(unsigned long long d)`|`complex<double>{0.0, static_cast<double>(d)}` を返します。|
-|`constexpr complex<float> operator""if(long double d)`<br /><br /> `constexpr complex<float> operator""if(unsigned long long d)`|`complex<float>{0.0f, static_cast<float>(d)}` を返します。|
+|`constexpr complex<long double> operator""il(long double d)`<br />`constexpr complex<long double> operator""il(unsigned long long d)`|型`complex<long double>{0.0L, static_cast<long double>(d)}`|
+|`constexpr complex<double> operator""i(long double d)`<br />`constexpr complex<double> operator""i(unsigned long long d)`|`complex<double>{0.0, static_cast<double>(d)}` を返します。|
+|`constexpr complex<float> operator""if(long double d)`<br />`constexpr complex<float> operator""if(unsigned long long d)`|`complex<float>{0.0f, static_cast<float>(d)}` を返します。|
 
 ## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)<br/>
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)\
+[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

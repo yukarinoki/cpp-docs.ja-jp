@@ -13,17 +13,17 @@ helpviewer_keywords:
 - operator==, containers
 - == operator, with specific standard C++ objects
 ms.assetid: d3d8754e-5157-4b8b-bf9c-da41856f5eed
-ms.openlocfilehash: 9313df5d75efa043f2fb9df6090c125de75a2636
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 168785abb09ca198435c301040d7628a6dd12b26
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220261"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68460156"
 ---
 # <a name="operator-ltsample-containergt"></a>operator== (&lt;sample container&gt;)
 
 > [!NOTE]
-> このトピックでは、Microsoft では、C++ドキュメントで使用されるコンテナーの機能の例として、C++標準ライブラリ。 詳細については、「[C++ Standard Library Containers (C++ 標準ライブラリ コンテナ―)](../standard-library/stl-containers.md)」をご覧ください。
+> このトピックは、 C++ C++標準ライブラリで使用されているコンテナーの非機能例として、Microsoft ドキュメントに記載されています。 詳細については、「[C++ Standard Library Containers (C++ 標準ライブラリ コンテナ―)](../standard-library/stl-containers.md)」をご覧ください。
 
 `operator==` をオーバーロードしてテンプレート クラス [Container](../standard-library/sample-container-class.md) の 2 つのオブジェクトを比較します。
 
@@ -38,8 +38,8 @@ bool operator==(
 
 ## <a name="return-value"></a>戻り値
 
-返します`left.`[サイズ](../standard-library/container-class-size.md) ` == right.size && equal(left.`[開始](../standard-library/container-class-begin.md)`, left.`[エンド](../standard-library/container-class-end.md)`, right.begin)`します。
+`left.`[サイズ](../standard-library/container-class-size.md)の開始`, left.` [](../standard-library/container-class-begin.md)[位置](../standard-library/container-class-end.md)を返します。`, right.begin)` ` == right.size && equal(left.`
 
 ## <a name="see-also"></a>関連項目
 
-[\<sample container>](../standard-library/sample-container.md)<br/>
+[\<sample container>](../standard-library/sample-container.md)

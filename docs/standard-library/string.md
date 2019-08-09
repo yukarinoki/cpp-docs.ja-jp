@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - string header
 ms.assetid: a2fb9d00-d7ae-4170-bfea-2dc337aa37cf
-ms.openlocfilehash: 3d84f4707af33f44a930f7f67b7f751e2ead627c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fda00cd5a8f8768688c8e10f25a0d1f2370a256f
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412307"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459198"
 ---
 # <a name="ltstringgt"></a>&lt;string&gt;
 
@@ -32,14 +32,14 @@ C++ 言語および C++ 標準ライブラリでは、2 種類の文字列がサ
 
 - よく C 文字列と呼ばれる、null で終わる文字の配列。
 
-- テンプレート クラス オブジェクトの型の`basic_string`、すべてを処理する**char**-などのテンプレート引数。
+- Char のようなすべての`basic_string`テンプレート引数を処理する、型のテンプレートクラスオブジェクト。
 
 ### <a name="typedefs"></a>Typedef
 
 |型名|説明|
 |-|-|
-|[string](../standard-library/string-typedefs.md#string)|テンプレート クラスの特殊化を表す型`basic_string`型の要素を含む**char**として、`string`します。|
-|[wstring](../standard-library/string-typedefs.md#wstring)|テンプレート クラスの特殊化を表す型`basic_string`型の要素を含む**wchar_t**として、`wstring`します。|
+|[string](../standard-library/string-typedefs.md#string)|Char 型の要素をとして特殊化し`basic_string`たテンプレートクラスを記述する型。  `string`|
+|[wstring](../standard-library/string-typedefs.md#wstring)|Wchar_t 型の要素をとして特殊化し`basic_string`たテンプレートクラスを記述する型。  `wstring`|
 |[u16string](../standard-library/string-typedefs.md#u16string)|`basic_string` 型の要素に基づいて特殊化したテンプレート クラス `char16_t` を記述する型。|
 |[u32string](../standard-library/string-typedefs.md#u32string)|`basic_string` 型の要素に基づいて特殊化したテンプレート クラス `char32_t` を記述する型。|
 
@@ -61,14 +61,15 @@ C++ 言語および C++ 標準ライブラリでは、2 種類の文字列がサ
 
 |||
 |-|-|
+|[hash]()||
 |[swap](../standard-library/string-functions.md#swap)|2 つの文字列の、文字の配列を交換します。|
-|[stod](../standard-library/string-functions.md#stod)|文字シーケンスに変換する**二重**します。|
-|[stof](../standard-library/string-functions.md#stof)|文字シーケンスに変換する**float**します。|
+|[stod](../standard-library/string-functions.md#stod)|文字シーケンスを**倍精度浮動小数点**型に変換します。|
+|[stof](../standard-library/string-functions.md#stof)|文字シーケンスを**float**に変換します。|
 |[stoi](../standard-library/string-functions.md#stoi)|文字シーケンスを integer に変換します。|
-|[stold](../standard-library/string-functions.md#stold)|文字シーケンスに変換する**long double**します。|
-|[stoll](../standard-library/string-functions.md#stoll)|文字シーケンスに変換する**long**。|
-|[stoul](../standard-library/string-functions.md#stoul)|文字シーケンスに変換、 **unsigned long**します。|
-|[stoull](../standard-library/string-functions.md#stoull)|文字シーケンスに変換する**unsigned long long 型**します。|
+|[stold](../standard-library/string-functions.md#stold)|文字シーケンスを**long double**に変換します。|
+|[stoll](../standard-library/string-functions.md#stoll)|文字シーケンスを**long 型**に変換します。|
+|[stoul](../standard-library/string-functions.md#stoul)|文字シーケンスを**unsigned long**に変換します。|
+|[stoull](../standard-library/string-functions.md#stoull)|文字シーケンスを**unsigned long long 型**に変換します。|
 |[to_string](../standard-library/string-functions.md#to_string)|値を `string` に変換します。|
 |[to_wstring](../standard-library/string-functions.md#to_wstring)|値をワイド `string` に変換します。|
 
@@ -102,5 +103,5 @@ C++ 言語および C++ 標準ライブラリでは、2 種類の文字列がサ
 
 ## <a name="see-also"></a>関連項目
 
-[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)<br/>
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)\
+[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

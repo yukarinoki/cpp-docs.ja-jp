@@ -7,12 +7,12 @@ helpviewer_keywords:
 - logical_and class
 - logical_and struct
 ms.assetid: 1a375cc2-0592-4d57-a553-78009c7ad610
-ms.openlocfilehash: 0a8d8c0fba8b1ad621e80fb96336eefe2aec5dd8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 86b780c71a0b0265cbd0c8829fb5aea70f0fa42e
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413113"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243270"
 ---
 # <a name="logicaland-struct"></a>logical_and 構造体
 
@@ -39,12 +39,13 @@ struct logical_and<void>
 
 ### <a name="parameters"></a>パラメーター
 
-*型*、 *T*、 *U*をサポートする任意の型、`operator&&`指定または推論された型のオペランドを受け取る。
+*型*、 *T*、 *U*\
+指定または推論された型のオペランドを受け取る `operator&&` をサポートする任意の型。
 
-*左*<br/>
+*左*\
 論理積演算の左オペランド。 特化されていないテンプレートは、型の左辺値参照引数を受け取る*型*します。 特殊化されたテンプレートはの完全転送を左辺値と右辺値参照引数の型を推論する*T*します。
 
-*右*<br/>
+*そうです*\
 論理積演算の右オペランド。 特化されていないテンプレートは、型の左辺値参照引数を受け取る*型*します。 特殊化されたテンプレートはの完全転送を左辺値と右辺値参照引数の型を推論する*U*します。
 
 ## <a name="return-value"></a>戻り値
@@ -116,24 +117,13 @@ int main( )
       cout << *iter3 << " ";
    cout << ")" << endl;
 }
+```
 
-/* Output:
+```Output
 Original deque:
 d1 = ( true true true true true false false )
 Original deque:
 d2 = ( true false true true false true false )
 The deque which is the conjuction of d1 & d2 is:
 d3 = ( true false true true false false false )
-*/
 ```
-
-## <a name="requirements"></a>必要条件
-
-**ヘッダー:** \<functional>
-
-**名前空間:** std
-
-## <a name="see-also"></a>関連項目
-
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)<br/>

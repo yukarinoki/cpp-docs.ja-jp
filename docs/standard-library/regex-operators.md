@@ -10,12 +10,12 @@ f1_keywords:
 - regex/std::operator==
 - regex/std::operator<<
 ms.assetid: ec623e65-c186-491f-aa18-6b12b47e1127
-ms.openlocfilehash: ee0d9ba820cff55a9cfbb130c8f90ca02fbee84a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 829b4cf50b02db0a88d61a8801c1e21ddb470344
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62369554"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68460131"
 ---
 # <a name="ltregexgt-operators"></a>&lt;regex&gt; 演算子
 
@@ -66,19 +66,19 @@ bool operator!=(const match_results<BidIt, Alloc>& left,
 
 ### <a name="parameters"></a>パラメーター
 
-*BidIt*<br/>
+*BidIt*\
 反復子の型。
 
-*IOtraits*<br/>
+*IOtraits*\
 文字列の特徴 (traits) クラス。
 
-*Alloc*<br/>
+*割り当て*\
 アロケーター クラス。
 
-*left*<br/>
+*左側*\
 比較する左のオブジェクト。
 
-*right*<br/>
+*そうです*\
 比較する右のオブジェクト。
 
 ### <a name="remarks"></a>Remarks
@@ -181,24 +181,24 @@ bool operator<(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>パラメーター
 
-*BidIt*<br/>
+*BidIt*\
 反復子の型。
 
-*IOtraits*<br/>
+*IOtraits*\
 文字列の特徴 (traits) クラス。
 
-*Alloc*<br/>
+*割り当て*\
 アロケーター クラス。
 
-*left*<br/>
+*左側*\
 比較する左のオブジェクト。
 
-*right*<br/>
+*そうです*\
 比較する右のオブジェクト。
 
 ### <a name="remarks"></a>Remarks
 
-各テンプレート演算子は、その引数を文字列型に変換し、場合にのみ true を返しますの変換後の値*左*の変換後の値よりも小さい*右*します。
+各テンプレート演算子は引数を文字列型に変換し、 *left*の変換後の値が*right*の変換された値より小さい場合にのみ true を返します。
 
 ### <a name="example"></a>例
 
@@ -266,22 +266,22 @@ basic_ostream<Elem, IOtraits>& operator<<(basic_ostream<Elem, IOtraits>& os,
 
 ### <a name="parameters"></a>パラメーター
 
-*Elem*<br/>
+*Elem*\
 要素型。
 
-*IOtraits*<br/>
+*IOtraits*\
 文字列の特徴 (traits) クラス。
 
-*Alloc*<br/>
+*割り当て*\
 アロケーター クラス。
 
-*BidIt*<br/>
+*BidIt*\
 反復子の型。
 
-*os*<br/>
+*os*\
 出力ストリーム。
 
-*right*<br/>
+*そうです*\
 挿入するオブジェクト。
 
 ### <a name="remarks"></a>Remarks
@@ -351,19 +351,19 @@ bool operator<=(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>パラメーター
 
-*BidIt*<br/>
+*BidIt*\
 反復子の型。
 
-*IOtraits*<br/>
+*IOtraits*\
 文字列の特徴 (traits) クラス。
 
-*Alloc*<br/>
+*割り当て*\
 アロケーター クラス。
 
-*left*<br/>
+*左側*\
 比較する左のオブジェクト。
 
-*right*<br/>
+*そうです*\
 比較する右のオブジェクト。
 
 ### <a name="remarks"></a>Remarks
@@ -465,19 +465,19 @@ bool operator==(const match_results<BidIt, Alloc>& left,
 
 ### <a name="parameters"></a>パラメーター
 
-*BidIt*<br/>
+*BidIt*\
 反復子の型。
 
-*IOtraits*<br/>
+*IOtraits*\
 文字列の特徴 (traits) クラス。
 
-*Alloc*<br/>
+*割り当て*\
 アロケーター クラス。
 
-*left*<br/>
+*左側*\
 比較する左のオブジェクト。
 
-*right*<br/>
+*そうです*\
 比較する右のオブジェクト。
 
 ### <a name="remarks"></a>Remarks
@@ -486,11 +486,11 @@ bool operator==(const match_results<BidIt, Alloc>& left,
 
 テンプレート演算子は、その引数を文字列型に変換するとき、次の変換のうち最初に当てはまるものを使用します。
 
-- テンプレート クラス `match_results` または `sub_match` の特殊化である型の引数が、`str` メンバー関数の呼び出しにより変換される
+\- テンプレート クラス `match_results` または `sub_match` の特殊化である型の引数が、`str` メンバー関数の呼び出しにより変換される
 
-- テンプレート クラス `basic_string` の特殊化である型の引数が、変更されない
+\- テンプレート クラス `basic_string` の特殊化である型の引数が、変更されない
 
-- その他のすべての引数の型が、テンプレート クラス `basic_string` の適切な特殊化のコンストラクターに引数の値を渡すことによって変換される
+\- その他のすべての引数の型が、テンプレート クラス `basic_string` の適切な特殊化のコンストラクターに引数の値を渡すことによって変換される
 
 ### <a name="example"></a>例
 
@@ -588,19 +588,19 @@ bool operator>(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>パラメーター
 
-*BidIt*<br/>
+*BidIt*\
 反復子の型。
 
-*IOtraits*<br/>
+*IOtraits*\
 文字列の特徴 (traits) クラス。
 
-*Alloc*<br/>
+*割り当て*\
 アロケーター クラス。
 
-*left*<br/>
+*左側*\
 比較する左のオブジェクト。
 
-*right*<br/>
+*そうです*\
 比較する右のオブジェクト。
 
 ### <a name="remarks"></a>Remarks
@@ -698,19 +698,19 @@ bool operator>=(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>パラメーター
 
-*BidIt*<br/>
+*BidIt*\
 反復子の型。
 
-*IOtraits*<br/>
+*IOtraits*\
 文字列の特徴 (traits) クラス。
 
-*Alloc*<br/>
+*割り当て*\
 アロケーター クラス。
 
-*left*<br/>
+*左側*\
 比較する左のオブジェクト。
 
-*right*<br/>
+*そうです*\
 比較する右のオブジェクト。
 
 ### <a name="remarks"></a>Remarks
@@ -773,11 +773,11 @@ sub >= 'a' == true
 
 ## <a name="see-also"></a>関連項目
 
-[\<regex>](../standard-library/regex.md)<br/>
-[regex_constants クラス](../standard-library/regex-constants-class.md)<br/>
-[regex_error クラス](../standard-library/regex-error-class.md)<br/>
-[\<regex> 系関数](../standard-library/regex-functions.md)<br/>
-[regex_iterator クラス](../standard-library/regex-iterator-class.md)<br/>
-[regex_token_iterator クラス](../standard-library/regex-token-iterator-class.md)<br/>
-[regex_traits クラス](../standard-library/regex-traits-class.md)<br/>
-[\<regex> typedefs](../standard-library/regex-typedefs.md)<br/>
+[\<regex>](../standard-library/regex.md)\
+[regex_constants クラス](../standard-library/regex-constants-class.md)\
+[regex_error クラス](../standard-library/regex-error-class.md)\
+[\<regex > 関数](../standard-library/regex-functions.md)\
+[regex_iterator クラス](../standard-library/regex-iterator-class.md)\
+[regex_token_iterator クラス](../standard-library/regex-token-iterator-class.md)\
+[regex_traits クラス](../standard-library/regex-traits-class.md)\
+[\<regex> typedefs](../standard-library/regex-typedefs.md)
