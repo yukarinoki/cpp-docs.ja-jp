@@ -1,4 +1,4 @@
----
+﻿---
 title: 'チュートリアル: コマンドラインでの C プログラムをコンパイルします。'
 ms.custom: conceptual
 ms.date: 04/25/2019
@@ -10,7 +10,7 @@ helpviewer_keywords:
 ms.assetid: 7e74cc2d-54b1-49de-b7ad-d3ae6b39ab8d
 ms.openlocfilehash: 03876ba47270252caa21d7e2994a4f8321a6d59e
 ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/29/2019
 ms.locfileid: "64877198"

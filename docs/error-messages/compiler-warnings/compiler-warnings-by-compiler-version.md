@@ -1,21 +1,21 @@
 ---
-title: コンパイラのバージョンによるコンパイラの警告
+title: コンパイラのバージョン別のコンパイラの警告
 ms.date: 04/22/2019
 helpviewer_keywords:
 - warnings, by compiler version
 - cl.exe compiler, setting warning options
-ms.openlocfilehash: e417de57292e4b21d81e8d6643ba77d8b169af07
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 07c2e8e9ff061e20f9a3bceaa3d12d051e975e1e
+ms.sourcegitcommit: c3bf94210bdb73be80527166264d49e33784152c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448178"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68821093"
 ---
-# <a name="compiler-warnings-by-compiler-version"></a>コンパイラのバージョンによるコンパイラの警告
+# <a name="compiler-warnings-by-compiler-version"></a>コンパイラのバージョン別のコンパイラの警告
 
-コンパイラは、使用して指定するバージョンの後に導入された警告を抑制することができます、 [/Wv](../../build/reference/compiler-option-warning-level.md)コンパイラ オプション。 このオプションは、新しいツールセットのバージョンを導入し、新しい警告を一時的に非表示にするときに、ビルド プロセスを管理するために便利です。 このオプションは、警告、エラー メッセージがない新しいのみされなくなります。 すべての新しい警告を表示する完全に! 最上位の通常の警告レベルを常にコンパイルすることをお勧めします。 `/W4`、および削除、`/Wv`をビルドにできるだけ早くオプション。
+コンパイラは、 [/Wv](../../build/reference/compiler-option-warning-level.md)コンパイラオプションを使用して、指定したバージョンより後に導入された警告を非表示にすることができます。 このオプションは、新しいツールセットのバージョンを導入するときに、新しい警告を一時的に抑制するときにビルドプロセスを管理する場合に便利です。 このオプションでは、新しいエラーメッセージではなく、警告のみが抑制されます。 すべての新しい警告を完全に抑制しないでください。 常に最高の通常の警告レベル`/W4`でコンパイルし、ビルドの`/Wv`オプションをできるだけ早く削除することをお勧めします。
 
-これらのバージョンのコンパイラでは、新しい警告が導入されています。
+これらのバージョンのコンパイラでは、新しい警告が導入されました。
 
 | 製品 | コンパイラのバージョン番号 |
 |-|-|
@@ -36,18 +36,18 @@ ms.locfileid: "65448178"
 | Visual Studio 2017 バージョン 15.6 | 19.13.26128.0 |
 | Visual Studio 2017 バージョン 15.7 | 19.14.26428.0 |
 | Visual Studio 2017 バージョン 15.8 | 19.15.26726.0 |
-| Visual Studio 2017 バージョン 15.9 | 19.16.26926.0 |
+| Visual Studio 2017 バージョン15.9 | 19.16.26926.0 |
 | Visual Studio 2019 RTM | 19.20.27004.0 |
 
-メジャー番号のみ、メジャーおよびマイナー番号、またはメジャー、マイナーを指定し、ためにビルド番号、`/Wv`オプション。 コンパイラは、指定した数値で始まるバージョンに一致するすべての警告を報告し、指定した数よりも大きいバージョンのすべての警告を抑制します。 たとえば、`/Wv:17`中または任意のバージョンの Visual Studio 2012 では前に、導入された警告を報告し、Visual Studio 2013 (バージョン 18) から、またはそれ以降の任意のコンパイラで導入された警告を抑制します。 Visual Studio 2015 で導入された警告の update 2 を抑制して、使用することができます`/Wv:19.00.23506`します。 使用`/Wv:19.11`Visual Studio 2017 バージョン 15.5 では、前に Visual Studio の任意のバージョンで導入された警告を報告しますが、Visual Studio 2017 バージョン 15.5 以降で導入された警告を非表示にします。
+`/Wv`オプションには、メジャー番号、メジャー番号、マイナー番号、メジャー番号、マイナー番号、およびビルド番号のみを指定できます。 コンパイラは、指定された数で始まるバージョンに一致するすべての警告を報告し、指定された数よりも大きいバージョンのすべての警告を抑制します。 たとえば、は`/Wv:17` 、Visual Studio 2012 のいずれかのバージョン以前に発生した警告を報告し、Visual Studio 2013 (バージョン 18) 以降のコンパイラによって導入された警告を抑制します。 Visual Studio 2015 update 2 以降で導入された警告を非表示に`/Wv:19.00.23506`するには、を使用します。 Visual `/Wv:19.11` studio 2017 バージョン15.5 より前のバージョンの visual studio で導入された警告をレポートするために使用します。ただし、visual studio 2017 バージョン15.5 以降で導入された警告は表示されません。
 
-次のセクションでは、ビジュアルの各バージョンで導入された警告を一覧表示C++を使用して抑制することができます、`/Wv`コンパイラ オプション。 `/Wv`オプションが示されていない、以前指定したバージョンのコンパイラ警告を抑制することはできません。
+次のセクションでは、 C++ `/Wv`コンパイラオプションを使用して非表示にできる、各バージョンのビジュアルで導入された警告について説明します。 オプション`/Wv`では、一覧に表示されていない警告を抑制することはできません。これは、指定したバージョンのコンパイラを中します。
 
 ::: moniker range=">= vs-2019"
 
-## <a name="warnings-introduced-in-visual-studio-2019-rtw-compiler-version-1920270040"></a>Visual Studio 2019 RTW (コンパイラ バージョン 19.20.27004.0) で導入された警告
+## <a name="warnings-introduced-in-visual-studio-2019-rtw-compiler-version-1920270040"></a>Visual Studio 2019 RTW で導入された警告 (コンパイラバージョン 19.20.27004.0)
 
-コンパイラ オプションを使用してこれらの警告と以降のバージョンですべての警告を抑制`/Wv:19.15`します。
+これらの警告と、それ以降のバージョンのすべての警告は、 `/Wv:19.15`コンパイラオプションを使用して抑制されます。
 
 |||
 |-|-|
@@ -57,9 +57,9 @@ ms.locfileid: "65448178"
 ::: moniker range=">= vs-2017"
 
 
-## <a name="warnings-introduced-in-visual-studio-2017-version-158-compiler-version-1915267260"></a>Visual Studio 2017 バージョン 15.8 (コンパイラ バージョン 19.15.26726.0) で導入された警告
+## <a name="warnings-introduced-in-visual-studio-2017-version-158-compiler-version-1915267260"></a>Visual Studio 2017 バージョン15.8 で導入された警告 (コンパイラバージョン 19.15.26726.0)
 
-コンパイラ オプションを使用してこれらの警告と以降のバージョンですべての警告を抑制`/Wv:19.14`します。
+これらの警告と、それ以降のバージョンのすべての警告は、 `/Wv:19.14`コンパイラオプションを使用して抑制されます。
 
 |||
 |-|-|
@@ -83,26 +83,26 @@ ms.locfileid: "65448178"
 | C5106 | `macro redefined with different parameter names` |
 | C5107 | `missing terminating 'char' character` |
 
-## <a name="warnings-introduced-in-visual-studio-2017-version-157-compiler-version-1914264280"></a>Visual Studio 2017 バージョン 15.7 (コンパイラ バージョン 19.14.26428.0) で導入された警告
+## <a name="warnings-introduced-in-visual-studio-2017-version-157-compiler-version-1914264280"></a>Visual Studio 2017 バージョン15.7 で導入された警告 (コンパイラバージョン 19.14.26428.0)
 
-コンパイラ オプションを使用してこれらの警告と以降のバージョンですべての警告を抑制`/Wv:19.13`します。
+これらの警告と、それ以降のバージョンのすべての警告は、 `/Wv:19.13`コンパイラオプションを使用して抑制されます。
 
 |||
 |-|-|
 | C4642 | `'issue': could not import the constraints for generic parameter 'parameter'` |
 | C5045 | `Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified` |
 
-## <a name="warnings-introduced-in-visual-studio-2017-version-156-compiler-version-1913261280"></a>Visual Studio 2017 バージョン 15.6 (コンパイラ バージョン 19.13.26128.0) で導入された警告
+## <a name="warnings-introduced-in-visual-studio-2017-version-156-compiler-version-1913261280"></a>Visual Studio 2017 バージョン15.6 で導入された警告 (コンパイラバージョン 19.13.26128.0)
 
-コンパイラ オプションを使用してこれらの警告と以降のバージョンですべての警告を抑制`/Wv:19.12`します。
+これらの警告と、それ以降のバージョンのすべての警告は、 `/Wv:19.12`コンパイラオプションを使用して抑制されます。
 
 |||
 |-|-|
 | C5044 | `An argument to command-line option option points to a path 'path' that does not exist` |
 
-## <a name="warnings-introduced-in-visual-studio-2017-version-155-compiler-version-1912258300"></a>Visual Studio 2017 バージョン 15.5 (コンパイラ バージョン 19.12.25830.0) で導入された警告
+## <a name="warnings-introduced-in-visual-studio-2017-version-155-compiler-version-1912258300"></a>Visual Studio 2017 バージョン15.5 で導入された警告 (コンパイラバージョン 19.12.25830.0)
 
-コンパイラ オプションを使用してこれらの警告と以降のバージョンですべての警告を抑制`/Wv:19.11`します。
+これらの警告と、それ以降のバージョンのすべての警告は、 `/Wv:19.11`コンパイラオプションを使用して抑制されます。
 
 |||
 |-|-|
@@ -114,9 +114,9 @@ ms.locfileid: "65448178"
 | C5042 | `'declaration': function declarations at block scope cannot be specified 'inline' in standard C++; remove 'inline' specifier` |
 | C5043 | `'specification': exception specification does not match previous declaration` |
 
-## <a name="warnings-introduced-in-visual-studio-2017-version-153-compiler-version-1911255060"></a>Visual Studio 2017 バージョン 15.3 (コンパイラ バージョン 19.11.25506.0) で導入された警告
+## <a name="warnings-introduced-in-visual-studio-2017-version-153-compiler-version-1911255060"></a>Visual Studio 2017 バージョン15.3 で導入された警告 (コンパイラバージョン 19.11.25506.0)
 
-コンパイラ オプションを使用してこれらの警告と以降のバージョンですべての警告を抑制`/Wv:19.10`します。
+これらの警告と、それ以降のバージョンのすべての警告は、 `/Wv:19.10`コンパイラオプションを使用して抑制されます。
 
 |||
 |-|-|
@@ -135,9 +135,9 @@ ms.locfileid: "65448178"
 | C5037 | `'*member-function*': an out-of-line definition of a member of a class template cannot have default arguments` |
 | C5038 | `data member 'member1' will be initialized after data member 'member2'` |
 
-## <a name="warnings-introduced-in-visual-studio-2017-rtm-compiler-version-1910250170"></a>Visual Studio 2017 RTM (コンパイラ バージョン 19.10.25017.0) で導入された警告
+## <a name="warnings-introduced-in-visual-studio-2017-rtm-compiler-version-1910250170"></a>Visual Studio 2017 RTM で導入された警告 (コンパイラバージョン 19.10.25017.0)
 
-コンパイラ オプションを使用してこれらの警告と以降のバージョンですべての警告を抑制`/Wv:19.00`します。
+これらの警告と、それ以降のバージョンのすべての警告は、 `/Wv:19.00`コンパイラオプションを使用して抑制されます。
 
 |||
 |-|-|
@@ -148,9 +148,9 @@ ms.locfileid: "65448178"
 
 ::: moniker-end
 
-## <a name="warnings-introduced-in-visual-studio-2015-update-3-compiler-version-1900242151"></a>Visual Studio 2015 Update 3 (コンパイラ バージョン 19.00.24215.1) で導入された警告
+## <a name="warnings-introduced-in-visual-studio-2015-update-3-compiler-version-1900242151"></a>Visual Studio 2015 Update 3 で導入された警告 (コンパイラバージョン 19.00.24215.1)
 
-コンパイラ オプションを使用してこれらの警告と以降のバージョンですべての警告を抑制`/Wv:19.00.23918`します。
+これらの警告と、それ以降のバージョンのすべての警告は、 `/Wv:19.00.23918`コンパイラオプションを使用して抑制されます。
 
 |||
 |-|-|
@@ -159,9 +159,9 @@ ms.locfileid: "65448178"
 | C4598 | `'#include <header>': header number number in the source does not match source at that position` |
 | C4599 | `'argument': source argument number number does not match source` |
 
-## <a name="warnings-introduced-in-visual-studio-2015-update-2-compiler-version-1900239180"></a>Visual Studio 2015 Update 2 (コンパイラ バージョン 19.00.23918.0) で導入された警告
+## <a name="warnings-introduced-in-visual-studio-2015-update-2-compiler-version-1900239180"></a>Visual Studio 2015 Update 2 で導入された警告 (コンパイラバージョン 19.00.23918.0)
 
-コンパイラ オプションを使用してこれらの警告と以降のバージョンですべての警告を抑制`/Wv:19.00.23506`します。
+これらの警告と、それ以降のバージョンのすべての警告は、 `/Wv:19.00.23506`コンパイラオプションを使用して抑制されます。
 
 |||
 |-|-|
@@ -170,9 +170,9 @@ ms.locfileid: "65448178"
 | C4828 | `The file contains a character starting at offset 0xvalue that is illegal in the current source character set (codepage number).` |
 | C4868 | `compiler may not enforce left-to-right evaluation order in braced initializer list` |
 
-## <a name="warnings-introduced-in-visual-studio-2015-update-1-compiler-version-1900235060"></a>Visual Studio 2015 Update 1 (コンパイラ バージョン 19.00.23506.0) で導入された警告
+## <a name="warnings-introduced-in-visual-studio-2015-update-1-compiler-version-1900235060"></a>Visual Studio 2015 Update 1 で導入された警告 (コンパイラバージョン 19.00.23506.0)
 
-コンパイラ オプションを使用してこれらの警告と以降のバージョンですべての警告を抑制`/Wv:19.00.23026`します。
+これらの警告と、それ以降のバージョンのすべての警告は、 `/Wv:19.00.23026`コンパイラオプションを使用して抑制されます。
 
 |||
 |-|-|
@@ -181,9 +181,9 @@ ms.locfileid: "65448178"
 | C5031 | `#pragma warning(pop): likely mismatch, popping warning state pushed in different file` |
 | C5032 | `detected #pragma warning(push) with no corresponding #pragma warning(pop)` |
 
-## <a name="warnings-introduced-in-visual-studio-2015-rtm-compiler-version-1900230260"></a>Visual Studio 2015 RTM (コンパイラ バージョン 19.00.23026.0) で導入された警告
+## <a name="warnings-introduced-in-visual-studio-2015-rtm-compiler-version-1900230260"></a>Visual Studio 2015 RTM で導入された警告 (コンパイラバージョン 19.00.23026.0)
 
-コンパイラ オプションを使用してこれらの警告と以降のバージョンですべての警告を抑制`/Wv:18`します。
+これらの警告と、それ以降のバージョンのすべての警告は、 `/Wv:18`コンパイラオプションを使用して抑制されます。
 
 |||
 |-|-|
@@ -240,9 +240,9 @@ ms.locfileid: "65448178"
 | C5029 | `nonstandard extension used: alignment attributes in C++ apply to variables, data members and tag types only` |
 | C5030 | `attribute 'attribute' is not recognized` |
 
-## <a name="warnings-introduced-in-visual-studio-2013-compiler-version-1800210051"></a>Visual Studio 2013 (コンパイラ バージョン 18.00.21005.1) で導入された警告
+## <a name="warnings-introduced-in-visual-studio-2013-compiler-version-1800210051"></a>Visual Studio 2013 で導入された警告 (コンパイラバージョン 18.00.21005.1)
 
-コンパイラ オプションを使用してこれらの警告と以降のバージョンですべての警告を抑制`/Wv:17`します。
+これらの警告と、それ以降のバージョンのすべての警告は、 `/Wv:17`コンパイラオプションを使用して抑制されます。
 
 |||
 |-|-|
@@ -269,9 +269,9 @@ ms.locfileid: "65448178"
 | C4991 | `Warbird: function 'declaration' marked as __forceinline not inlined because protection level of inlinee is greater than the parent` |
 | C4992 | `Warbird: function 'declaration' marked as __forceinline not inlined because it contains inline assembly which cannot be protected` |
 
-## <a name="warnings-introduced-in-visual-studio-2012-compiler-version-1700511061"></a>Visual Studio 2012 (コンパイラ バージョン 17.00.51106.1 である) で導入された警告
+## <a name="warnings-introduced-in-visual-studio-2012-compiler-version-1700511061"></a>Visual Studio 2012 で導入された警告 (コンパイラバージョン 17.00.51106.1)
 
-コンパイラ オプションを使用してこれらの警告と以降のバージョンですべての警告を抑制`/Wv:16`します。
+これらの警告と、それ以降のバージョンのすべての警告は、 `/Wv:16`コンパイラオプションを使用して抑制されます。
 
 |||
 |-|-|
@@ -304,7 +304,7 @@ ms.locfileid: "65448178"
 | C4703 | `potentially uninitialized local pointer variable 'name' used` |
 | C4728 | `/Yl- option ignored because PCH reference is required` |
 | C4745 | `volatile access of 'name' cannot be honored due to its size` |
-| C4746|'name' の揮発性アクセスは/volatile: < iso | ms > 設定です。_iso_volatile_load/store 組み込み関数の使用を検討してください。 |
+| C4746|' name ' の揮発性アクセスは/volatile: < iso に従います | ms > 設定;__iso_volatile_load/store 組み込み関数の使用を検討する |
 | C4872 | `floating point division by zero detected when compiling the call graph for the concurrency::parallel_for_each at: 'description'` |
 | C4880 | `casting from 'type' to 'type': casting away constness from a pointer or reference may result in undefined behavior in an amp restricted function` |
 | C4881 | `the constructor and/or the destructor will not be invoked for tile_static variable 'type'` |
@@ -312,9 +312,9 @@ ms.locfileid: "65448178"
 | C4988 | `'type': variable declared outside class/function scope` |
 | C4989 | `'description': type has conflicting definitions.` |
 
-## <a name="warnings-introduced-in-visual-studio-2010-compiler-version-16004021901"></a>Visual Studio 2010 (コンパイラ バージョン 16.00.40219.01) で導入された警告
+## <a name="warnings-introduced-in-visual-studio-2010-compiler-version-16004021901"></a>Visual Studio 2010 で導入された警告 (コンパイラバージョン 16.00.40219.01)
 
-コンパイラ オプションを使用してこれらの警告と以降のバージョンですべての警告を抑制`/Wv:15`します。
+これらの警告と、それ以降のバージョンのすべての警告は、 `/Wv:15`コンパイラオプションを使用して抑制されます。
 
 |||
 |-|-|
@@ -328,9 +328,9 @@ ms.locfileid: "65448178"
 | C4986 | `'declaration': exception specification does not match previous declaration` |
 | C4987 | `nonstandard extension used: 'throw (...)'` |
 
-## <a name="warnings-introduced-in-visual-studio-2008-compiler-version-15002102208"></a>Visual Studio 2008 (コンパイラ バージョン 15.00.21022.08) で導入された警告
+## <a name="warnings-introduced-in-visual-studio-2008-compiler-version-15002102208"></a>Visual Studio 2008 で導入された警告 (コンパイラバージョン 15.00.21022.08)
 
-コンパイラ オプションを使用してこれらの警告と以降のバージョンですべての警告を抑制`/Wv:14`します。
+これらの警告と、それ以降のバージョンのすべての警告は、 `/Wv:14`コンパイラオプションを使用して抑制されます。
 
 |||
 |-|-|
@@ -343,9 +343,9 @@ ms.locfileid: "65448178"
 | C4910 | `'type': '__declspec(dllexport)' and 'extern' are incompatible on an explicit instantiation` |
 | C4985 | `'declaration': attributes not present on previous declaration.` |
 
-## <a name="warnings-introduced-in-visual-studio-2005-compiler-version-140050727762"></a>Visual Studio 2005 (コンパイラ バージョン 14.00.50727.762) で導入された警告
+## <a name="warnings-introduced-in-visual-studio-2005-compiler-version-140050727762"></a>Visual Studio 2005 で導入された警告 (コンパイラバージョン 14.00.50727.762)
 
-コンパイラ オプションを使用してこれらの警告と以降のバージョンですべての警告を抑制`/Wv:13`します。
+これらの警告と、それ以降のバージョンのすべての警告は、 `/Wv:13`コンパイラオプションを使用して抑制されます。
 
 |||
 |-|-|
@@ -486,9 +486,9 @@ ms.locfileid: "65448178"
 | C4971 | `Argument order: <target object>, <target function> for delegate constructor is deprecated, use <target function>, <target object>` |
 | C4972 | `Directly modifying or treating the result of an unbox operation as an lvalue is unverifiable` |
 
-## <a name="warnings-introduced-in-visual-studio-2003-compiler-version-13103077"></a>Visual Studio 2003 (コンパイラ バージョン 13.10.3077) で導入された警告
+## <a name="warnings-introduced-in-visual-studio-2003-compiler-version-13103077"></a>Visual Studio 2003 で導入された警告 (コンパイラバージョン 13.10.3077)
 
-コンパイラ オプションを使用してこれらの警告と以降のバージョンですべての警告を抑制`/Wv:13.00.9466`します。
+これらの警告と、それ以降のバージョンのすべての警告は、 `/Wv:13.00.9466`コンパイラオプションを使用して抑制されます。
 
 |||
 |-|-|
@@ -522,9 +522,9 @@ ms.locfileid: "65448178"
 | C4953 | `Inlinee 'description' has been edited since profile data was collected, profile data not used` |
 | C4954 | `'description': not profiled (contains __int64 switch expression)` |
 
-## <a name="warnings-introduced-in-visual-studio-2002-compiler-version-13009466"></a>Visual Studio 2002 (コンパイラ バージョン 13.00.9466) で導入された警告
+## <a name="warnings-introduced-in-visual-studio-2002-compiler-version-13009466"></a>Visual Studio 2002 で導入された警告 (コンパイラバージョン 13.00.9466)
 
-コンパイラ オプションを使用してこれらの警告と以降のバージョンですべての警告を抑制`/Wv:12`します。
+これらの警告と、それ以降のバージョンのすべての警告は、 `/Wv:12`コンパイラオプションを使用して抑制されます。
 
 |||
 |-|-|
@@ -667,14 +667,14 @@ ms.locfileid: "65448178"
 | C4945 | `'name': cannot import symbol from 'source': as 'declaration' has already been imported from another assembly 'source'` |
 | C4946 | `reinterpret_cast used between related classes: 'declaration' and 'declaration'` |
 | C4995 | `'name': name was marked as #pragma deprecated` |
-| C4996 | `'issue': description` |
+| C4996 | `'deprecated declaration': deprecation message (or "was declared deprecated")` |
 | C4997 | `'type': coclass does not implement a COM interface or pseudo-interface` |
 | C4998 | `EXPECTATION FAILED: description(number)` |
 
 ## <a name="see-also"></a>関連項目
 
-[C/C++コンパイラとビルド ツールのエラーと警告](../compiler-errors-1/c-cpp-build-errors.md) \
-[コンパイラの警告 C4000 - C5999](compiler-warnings-c4000-c5999.md) \
-[/Wv コンパイラ オプション](../../build/reference/compiler-option-warning-level.md) \
-[既定で無効になっているコンパイラの警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md) \
+[C/C++コンパイラおよびビルドツールのエラーと警告](../compiler-errors-1/c-cpp-build-errors.md) \
+[コンパイラの警告 C4000-C5999](compiler-warnings-c4000-c5999.md) \
+[/Wv コンパイラオプション](../../build/reference/compiler-option-warning-level.md) \
+[既定でオフになっているコンパイラの警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md) \
 [warning](../../preprocessor/warning.md)
