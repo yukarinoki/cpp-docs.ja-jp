@@ -4,14 +4,14 @@ ms.custom: how-to
 ms.date: 05/22/2019
 ms.topic: conceptual
 ms.assetid: 7d6ebb73-fa0d-4b0b-a528-bf05de96518e
-ms.openlocfilehash: ac6db74122383ef8adb0f208860a6f6fba02dcc7
-ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
+ms.openlocfilehash: d0ee1a5e8c5d26e8e0bec060ffe3d5fea30ce0fa
+ms.sourcegitcommit: bd7ddc044f9083246614b602ef6a758775313214
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66821686"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68866149"
 ---
-# <a name="how-to-create-and-use-sharedptr-instances"></a>方法: shared_ptr インスタンスを作成して使用する
+# <a name="how-to-create-and-use-shared_ptr-instances"></a>方法: shared_ptr インスタンスを作成して使用する
 
 `shared_ptr` 型は、C++ 標準ライブラリ内のスマート ポインターであり、複数の所有者がメモリ内のオブジェクトの有効期間を管理する必要が生じる可能性があるシナリオを想定して設計されたものです。 `shared_ptr` を初期化した後、そのポインターをコピーすること、関数の引数内の値として渡すこと、および他の `shared_ptr` インスタンスに割り当てることができます。 すべてのインスタンスは同じオブジェクトを指し、1 つの "コントロール ブロック" へのアクセスを共有します。このコントロール ブロックは、新しい `shared_ptr` が追加されるとき、スコープ外になるとき、またはリセットされるときに必ず参照カウントをインクリメントおよびデクリメントします。 参照カウントが 0 に達したときに、コントロール ブロックはメモリ リソースと自らを削除します。
 
@@ -84,7 +84,7 @@ int main()
 
 ## <a name="example-3"></a>例 3
 
-`shared_ptr` は、要素をコピーするアルゴリズムを使用しているときに、C++ の標準ライブラリ コンテナー内でも役立ちます。 基になるメモリが、必要とされている間は有効であり、必要なくなった後は無効になることを理解している場合は、要素を `shared_ptr` 内でラップし、他のコンテナーにコピーすることができます。 次の例では、ベクター内の `replace_copy_if` インスタンスに対して `shared_ptr` アルゴリズムを使用する方法を示します。
+`shared_ptr` は、要素をコピーするアルゴリズムを使用しているときに、C++ の標準ライブラリ コンテナー内でも役立ちます。 基になるメモリが、必要とされている間は有効であり、必要なくなった後は無効になることを理解している場合は、要素を `shared_ptr` 内でラップし、他のコンテナーにコピーすることができます。 次の例では、ベクター内の `remove_copy_if` インスタンスに対して `shared_ptr` アルゴリズムを使用する方法を示します。
 
 [!code-cpp[stl_smart_pointers#4](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_3.cpp)]
 

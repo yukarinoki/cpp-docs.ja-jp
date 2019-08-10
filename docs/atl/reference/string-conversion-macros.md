@@ -11,24 +11,24 @@ f1_keywords:
 - atlconv/ATL::DEVMODEW2A
 - atlconv/ATL::TEXTMETRICW2A
 ms.assetid: 2ff7c0b6-2bde-45fe-897f-6128e18e0c27
-ms.openlocfilehash: 889f8459e81418197420bc2efd410225d4f220bc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6a84424de81eba2e6ab1e1baf60f567ebf2739ee
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62197256"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68915509"
 ---
 # <a name="string-conversion-macros"></a>文字列変換マクロ
 
-これらのマクロは、文字列の変換機能を提供します。
+これらのマクロは、文字列変換機能を提供します。
 
-##  <a name="atl_and_mfc_string_conversion_macros"></a>  ATL と MFC 文字列変換マクロ
+##  <a name="atl_and_mfc_string_conversion_macros"></a>ATL および MFC 文字列変換マクロ
 
-ここで説明する文字列変換マクロは、ATL と MFC の両方に対して有効です。 MFC 文字列変換の詳細については、次を参照してください[TN059:。MFC の MBCS または Unicode 変換マクロを使用して](../../mfc/tn059-using-mfc-mbcs-unicode-conversion-macros.md)と[MFC マクロとグローバル](../../mfc/reference/mfc-macros-and-globals.md)します。
+ここで説明する文字列変換マクロは、ATL と MFC の両方に対して有効です。 MFC 文字列変換の詳細については[、「テクニカルノート 59:Mfc の MBCS/Unicode 変換マクロ](../../mfc/tn059-using-mfc-mbcs-unicode-conversion-macros.md)と[mfc マクロおよび mfc](../../mfc/reference/mfc-macros-and-globals.md)を使用します。
 
-##  <a name="devmode_and_textmetric_string_conversion_macros"></a>  DEVMODE と受け取る文字列変換マクロ
+##  <a name="devmode_and_textmetric_string_conversion_macros"></a>DEVMODE および TEXTMETRIC 文字列変換マクロ
 
-これらのマクロのコピーを作成する、 [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea)または[受け取る](/windows/desktop/api/wingdi/ns-wingdi-tagtextmetrica)構造体であり、新しい構造内の文字列を新しい文字列型に変換します。 マクロは、新しい構造のスタックにメモリを割り当てるし、新しい構造体へのポインターを返します。
+これらのマクロは、 [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea)または[textmetric](/windows/desktop/api/wingdi/ns-wingdi-tagtextmetrica)構造体のコピーを作成し、新しい構造体内の文字列を新しい文字列型に変換します。 マクロは、新しい構造体のスタックにメモリを割り当て、新しい構造体へのポインターを返します。
 
 ```cpp
 MACRONAME( address_of_structure )
@@ -36,7 +36,7 @@ MACRONAME( address_of_structure )
 
 ### <a name="remarks"></a>Remarks
 
-例:
+例えば:
 
 [!code-cpp[NVC_ATL_Utilities#128](../../atl/codesnippet/cpp/string-conversion-macros_1.cpp)]
 
@@ -44,24 +44,24 @@ MACRONAME( address_of_structure )
 
 [!code-cpp[NVC_ATL_Utilities#129](../../atl/codesnippet/cpp/string-conversion-macros_2.cpp)]
 
-マクロ名、ソース構造体で文字列型が左側 (など**A**) 右側の送信先構造で、文字列型であり (たとえば、 **W**)。 **A** LPSTR、略**OLE** LPOLESTR、略**T** LPTSTR、略と**W** LPWSTR を意味します。
+マクロ名では、ソース構造内の文字列型が左 (たとえば) であり、変換先構造体の文字列型が右側にあります (たとえば、 **W**)。 **は**LPSTR を表し、 **OLE**は LPOLESTR、 **T**は LPTSTR を表し、 **W**は LPWSTR を表します。
 
-DEVMODEA2W がそのため、コピー、 `DEVMODE` LPSTR を含む構造体の文字列に、 `DEVMODE` LPWSTR 文字列、TEXTMETRICOLE2T コピーによる構造体、 `TEXTMETRIC` LPOLESTR を含む構造体の文字列に、 `TEXTMETRIC` LPTSTR の文字列による構造体であり。
+したがって、DEVMODEA2W は`DEVMODE` 、LPSTR 文字列を含む構造`DEVMODE`体を LPWSTR `TEXTMETRIC`文字列を含む構造体にコピーします。 TEXTMETRICOLE2T `TEXTMETRIC`は、LPOLESTR 文字列を含む構造体を、LPTSTR 文字列を含む構造体にコピーします。
 
-2 つの文字列に変換、`DEVMODE`構造体は、デバイス名 (`dmDeviceName`) と形式名 (`dmFormName`)。 `DEVMODE`文字列変換マクロも構造体のサイズを更新 (`dmSize`)。
+`DEVMODE`構造体で変換される2つの文字列は、`dmDeviceName`デバイス名 () とフォーム`dmFormName`名 () です。 文字列`DEVMODE`変換マクロでは、構造体のサイズ`dmSize`() も更新されます。
 
-4 つの文字列に変換、`TEXTMETRIC`構造体は、最初の文字 (`tmFirstChar`)、最後の文字 (`tmLastChar`)、既定の文字 (`tmDefaultChar`)、および改行文字 (`tmBreakChar`)。
+`TEXTMETRIC`構造体で変換された4つの文字列は`tmFirstChar`、最初の文字 ()`tmLastChar`、最後の文字 ()`tmDefaultChar`、既定の文字 ()、`tmBreakChar`および改行文字 () です。
 
-動作、`DEVMODE`と`TEXTMETRIC`文字列変換マクロは、存在する場合、コンパイラ ディレクティブを有効になってに依存します。 ソースの型とターゲットの型が同じである場合、変換は実行されません。 コンパイラ ディレクティブ**T**と**OLE**次のようにします。
+`DEVMODE` および`TEXTMETRIC`文字列変換マクロの動作は、有効なコンパイラディレクティブ (存在する場合) によって異なります。 ソースの型とターゲットの型が同じである場合、変換は実行されません。 コンパイラディレクティブは、次のように**T**と**OLE**を変更します。
 
 |有効なコンパイラ ディレクティブ|T の変更後|OLE の変更後|
 |----------------------------------|---------------|-----------------|
 |none|**A**|**W**|
-|**\_UNICODE**|**W**|**W**|
+|**\_対応**|**W**|**W**|
 |**OLE2ANSI**|**A**|**A**|
-|**\_UNICODE**と**は、OLE2ANSI**|**W**|**A**|
+|UNICODE と**OLE2ANSI**  **\_**|**W**|**A**|
 
-次の表、`DEVMODE`と`TEXTMETRIC`文字列変換マクロ。
+次の表に、 `DEVMODE`および`TEXTMETRIC`文字列変換マクロの一覧を示します。
 
 |||
 |-|-|

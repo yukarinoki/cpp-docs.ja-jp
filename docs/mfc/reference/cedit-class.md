@@ -94,12 +94,12 @@ helpviewer_keywords:
 - CEdit [MFC], ShowBalloonTip
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
-ms.openlocfilehash: a66597f7a43e0730ae8b32369235ac860f51a0f1
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
+ms.openlocfilehash: ccf7445100977e1205bbcffe230e1919ac33adea
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68375856"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68916138"
 ---
 # <a name="cedit-class"></a>CEdit Class
 
@@ -1205,7 +1205,7 @@ void SetPasswordChar(TCHAR ch);
 
 このメンバー関数は、複数行のエディットコントロールには影響しません。
 
-メンバー関数が呼び出されると、 `CEdit`は、ch によって指定された文字を使用して、表示されるすべての文字を再描画します。  `SetPasswordChar`
+メンバー関数が呼び出されると、 `CEdit`は、ch によって指定された文字を使用して、表示されるすべての文字を再描画します。 `SetPasswordChar`
 
 エディットコントロールが[ES_PASSWORD](styles-used-by-mfc.md#edit-styles)スタイルで作成されている場合、既定のパスワード文字はアスタリスク ( <strong>\*</strong>) に設定されます。 Ch を0に設定`SetPasswordChar`してを呼び出すと、このスタイルは削除されます。
 
@@ -1400,10 +1400,10 @@ BOOL ShowBalloonTip(
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*pEditBalloonTip*|からバルーンヒントを記述する[EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-_tageditballoontip)構造体へのポインター。|
+|*pEditBalloonTip*|からバルーンヒントを記述する[EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-editballoontip)構造体へのポインター。|
 |*lpszTitle*|からバルーンヒントのタイトルを含む Unicode 文字列へのポインター。|
 |*lpszText*|からバルーンヒントテキストを含む Unicode 文字列へのポインター。|
-|*ttiIcon*|からバルーンヒントに関連付けるアイコンの種類を指定する**INT** 。 既定値は TTI_NONE です。 詳細については、 `ttiIcon` [EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-_tageditballoontip)構造体のメンバーを参照してください。|
+|*ttiIcon*|からバルーンヒントに関連付けるアイコンの種類を指定する**INT** 。 既定値は TTI_NONE です。 詳細については、 `ttiIcon` [EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-editballoontip)構造体のメンバーを参照してください。|
 
 ### <a name="return-value"></a>戻り値
 

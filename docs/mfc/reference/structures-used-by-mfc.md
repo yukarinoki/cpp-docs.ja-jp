@@ -5,21 +5,21 @@ helpviewer_keywords:
 - structures
 - structures, MFC
 ms.assetid: 2168fcc6-e800-4814-aabf-0bca86ff790d
-ms.openlocfilehash: cb888c1f3efe3ae0ecf35bc0f14ac0cda66112f9
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: 3370736ebea81bdd19350f6236d2716cb9e54844
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65611698"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68917010"
 ---
 # <a name="structures-used-by-mfc"></a>MFC が使用する構造体
 
-次の表では、さまざまなメンバー関数から呼び出される構造体を示します。 個別の構造体の使用状況の詳細については、クラスとメンバー関数の各構造体の参照リストに記載されているを参照してください。
+次の表に、さまざまなメンバー関数から呼び出される構造体の一覧を示します。 個々の構造体の使用方法の詳細については、各構造体の「関連項目」の一覧に記載されているクラスとメンバー関数を参照してください。
 
 |||
 |-|-|
-|[ABC 構造体](/windows/desktop/api/wingdi/ns-wingdi-_abc)|[HSE_VERSION_INFO 構造体](../../mfc/reference/hse-version-info-structure.md)|
-|[ABCFLOAT 構造体](/windows/desktop/api/wingdi/ns-wingdi-_abcfloat)|[LINGER 構造体](/windows/desktop/api/winsock/ns-winsock-linger)|
+|[ABC 構造体](/windows/desktop/api/wingdi/ns-wingdi-abc)|[HSE_VERSION_INFO 構造体](../../mfc/reference/hse-version-info-structure.md)|
+|[ABCFLOAT 構造体](/windows/desktop/api/wingdi/ns-wingdi-abcfloat)|[LINGER 構造体](/windows/desktop/api/winsock/ns-winsock-linger)|
 |[AFX_EXTENSION_MODULE 構造体](../../mfc/reference/afx-extension-module-structure.md)|[LOGBRUSH 構造体](/windows/desktop/api/wingdi/ns-wingdi-taglogbrush)|
 |[BITMAP 構造体](/windows/desktop/api/wingdi/ns-wingdi-tagbitmap)|[LOGPEN 構造体](/windows/desktop/api/Wingdi/ns-wingdi-taglogpen)|
 |[BITMAPINFO 構造体](/windows/desktop/api/wingdi/ns-wingdi-tagbitmapinfo)|[MEASUREITEMSTRUCT 構造体](/windows/desktop/api/winuser/ns-winuser-tagmeasureitemstruct)|
@@ -29,7 +29,7 @@ ms.locfileid: "65611698"
 |[CDaoIndexFieldInfo 構造体](../../mfc/reference/cdaoindexfieldinfo-structure.md)|[PAINTSTRUCT 構造体](/windows/desktop/api/winuser/ns-winuser-tagpaintstruct)|
 |[CDaoIndexInfo 構造体](../../mfc/reference/cdaoindexinfo-structure.md)|[POINT 構造体](/windows/desktop/api/windef/ns-windef-tagpoint)|
 |[CDaoParameterInfo 構造体](../../mfc/reference/cdaoparameterinfo-structure.md)|[RECT 構造体](/windows/desktop/api/windef/ns-windef-tagrect)|
-|[CDaoQueryDefInfo 構造体](../../mfc/reference/cdaoquerydefinfo-structure.md)|[RGNDATA 構造体](/windows/desktop/api/wingdi/ns-wingdi-_rgndata)|
+|[CDaoQueryDefInfo 構造体](../../mfc/reference/cdaoquerydefinfo-structure.md)|[RGNDATA 構造体](/windows/desktop/api/wingdi/ns-wingdi-rgndata)|
 |[CDaoRelationFieldInfo 構造体](../../mfc/reference/cdaorelationfieldinfo-structure.md)|[SOCKADDR 構造体](/windows/desktop/winsock/sockaddr-2)|
 |[CDaoRelationInfo 構造体](../../mfc/reference/cdaorelationinfo-structure.md)|[SOCKADDR_IN 構造体](/windows/desktop/winsock/sockaddr-2)|
 |[CDaoTableDefInfo 構造体](../../mfc/reference/cdaotabledefinfo-structure.md)|[SYSTEMTIME 構造体](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)

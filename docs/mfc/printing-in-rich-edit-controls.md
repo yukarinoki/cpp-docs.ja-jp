@@ -6,22 +6,22 @@ helpviewer_keywords:
 - rich edit controls [MFC], printing
 - CRichEditCtrl class [MFC], printing
 ms.assetid: dbda0e40-018f-424e-b5d8-7b489aaf27af
-ms.openlocfilehash: 2ddc52e43da2e409117ccc5169442002ac27a315
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6ae7212eaa8eed1088a507973c80311f169c7751
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62238396"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68916268"
 ---
 # <a name="printing-in-rich-edit-controls"></a>リッチ エディット コントロールでの印刷
 
-リッチ エディット コントロールがわかります ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) プリンターなどの指定されたデバイスには、その出力をレンダリングします。 リッチ エディット コントロールを対象の出力デバイスがそのテキストを書式設定を指定することもできます。
+リッチエディットコントロール ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) に対して、プリンターなど、指定されたデバイスの出力を表示するように指示できます。 リッチエディットコントロールがテキストを書式設定する出力デバイスを指定することもできます。
 
-使用することができます、特定のデバイスのリッチ エディット コントロールの内容の一部を書式設定、 [FormatRange](../mfc/reference/cricheditctrl-class.md#formatrange)メンバー関数。 [FORMATRANGE](/windows/desktop/api/richedit/ns-richedit-_formatrange)この関数で使用される構造体は、対象デバイスのデバイス コンテキスト (DC) の書式設定テキストの範囲を指定します。
+特定のデバイスのリッチエディットコントロールの内容の一部を書式設定するには、 [Formatrange](../mfc/reference/cricheditctrl-class.md#formatrange)メンバー関数を使用します。 この関数で使用される[formatrange](/windows/desktop/api/richedit/ns-richedit-formatrange)構造体は、フォーマットするテキストの範囲と、ターゲットデバイスのデバイスコンテキスト (DC) を指定します。
 
-出力デバイス用のテキストを書式設定後に送信できます、出力デバイスを使用して、[続いて](../mfc/reference/cricheditctrl-class.md#displayband)メンバー関数。 繰り返しを使用して`FormatRange`と`DisplayBand`、縞模様、リッチ エディット コントロールの内容を出力するアプリケーションで実装できます。 バンド処理とは出力の小さな部分に印刷用です。)
+出力デバイスのテキストの書式を設定した後、 [Displayband](../mfc/reference/cricheditctrl-class.md#displayband)メンバー関数を使用して、出力をデバイスに送信できます。 とを繰り返し`FormatRange`使用`DisplayBand`すると、リッチエディットコントロールの内容を出力するアプリケーションでは、縞模様を実装できます。 (縞模様は出力を小さな部分に分割して印刷するために使用します)。
 
-使用することができます、 [SetTargetDevice](../mfc/reference/cricheditctrl-class.md#settargetdevice)リッチ エディット コントロールを対象のターゲット デバイスを指定するメンバー関数は、そのテキストを書式設定します。 この関数は、WYSIWYG 場合に便利です (表示) の書式設定、アプリケーションが画面のではなく、既定のプリンターのフォント メトリックを使用してテキストを配置します。
+[Settargetdevice](../mfc/reference/cricheditctrl-class.md#settargetdevice)メンバー関数を使用すると、リッチエディットコントロールがテキストを書式設定する対象デバイスを指定できます。 この関数は、WYSIWYG (表示される内容) の書式設定に役立ちます。これは、アプリケーションが画面のではなく、既定のプリンターのフォントメトリックを使用してテキストを配置します。
 
 ## <a name="see-also"></a>関連項目
 
