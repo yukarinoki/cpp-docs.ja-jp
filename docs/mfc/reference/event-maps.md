@@ -4,54 +4,54 @@ ms.date: 06/20/2018
 helpviewer_keywords:
 - event maps [MFC]
 ms.assetid: 1ed53aee-bc53-43cd-834a-6fb935c0d29b
-ms.openlocfilehash: 98614aa41d3131d28c9e0c7584e5a88c2249ef97
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: ef730574b26a4c3619df886b72770ce7e035a40e
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65612235"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68916463"
 ---
 # <a name="event-maps"></a>イベント マップ
 
-コントロールが (キーストローク、マウスのクリックやコントロールの状態の変更) (コントロールの開発者によって決定) 何らかのアクションが発生したコンテナーに通知する必要があるたびに、イベント発生関数を呼び出します。 この関数は、コントロール コンテナー、関連するイベントを発生させることによっていくつかの重要なアクションが発生したことを通知します。
+コントロールが、コントロールの開発者によって決定された何らかのアクションが発生したこと (キーストローク、マウスクリック、コントロールの状態の変更など) が発生したことをコンテナーに通知する場合は常に、イベントを発生させる関数を呼び出します。 この関数は、関連するイベントを発生させて、いくつかの重要なアクションが発生したことをコントロールコンテナーに通知します。
 
-Microsoft Foundation Class ライブラリには、イベントを発生させるために最適化されたプログラミング モデルが用意されています。 このモデルで「イベント マップ」を使用する関数が特定のコントロールのイベントを発生させるかを指定します。 イベント マップには、イベントごとに 1 つのマクロが含まれます。 たとえば、イベント マップを発生させるストックの Click イベントを次に示します。
+Microsoft Foundation Class ライブラリには、イベントを発生させるために最適化されたプログラミングモデルが用意されています。 このモデルでは、"イベントマップ" を使用して、特定のコントロールのイベントを発生させる関数を指定します。 イベントマップには、イベントごとに1つのマクロが含まれます。 たとえば、ストック Click イベントを発生させるイベントマップは次のようになります。
 
 [!code-cpp[NVC_MFCAxCtl#16](../../mfc/reference/codesnippet/cpp/event-maps_1.cpp)]
 
-`EVENT_STOCK_CLICK`マクロでは、コントロールが在庫マウスが検出されるたびにイベントをクリックを起動することを示します。 その他のストック イベントのより詳細な一覧は、記事を参照してください。 [ActiveX コントロール。イベント](../../mfc/mfc-activex-controls-events.md)します。 マクロは、カスタム イベントを示すために使用できます。
+マクロ`EVENT_STOCK_CLICK`は、マウスクリックが検出されるたびに、コントロールがストッククリックイベントを起動することを示します。 その他のストックイベントの詳細な一覧については[、ActiveX コントロールに関する記事をご覧ください。イベント](../../mfc/mfc-activex-controls-events.md)。 カスタムイベントを示すマクロを使用することもできます。
 
-イベント マップ マクロは重要ですが、一般に挿入しないに直接します。 これは、ため、[プロパティ] ウィンドウがイベント発生関数を関連付けるイベントを使用すると、ソース ファイルでイベント マップ エントリが自動的に作成されます。 編集したり、イベント マップ エントリを追加するとき、[プロパティ] ウィンドウを使用することができます。
+イベントマップマクロは重要ですが、通常は直接挿入されません。 これは、イベントをイベントに関連付けるために、ソースファイルを使用するときに、ソースファイルにイベントマップエントリが自動的に作成されるためです。これは、プロパティウィンドウによってイベントが発生します。 イベントマップエントリを編集または追加する場合はいつでも、プロパティウィンドウを使用できます。
 
-イベント マップをサポートするためには、MFC には、次のマクロが用意されています。
+MFC には、イベントマップをサポートするために次のマクロが用意されています。
 
-## <a name="event-map-macros"></a>イベント マップ マクロ
+## <a name="event-map-macros"></a>イベントマップマクロ
 
-### <a name="event-map-declaration-and-demarcation"></a>イベント マップの宣言と定義
-
-|||
-|-|-|
-|[DECLARE_EVENT_MAP](#declare_event_map)|イベント マップがクラスでイベントを (クラス宣言で使用する必要があります)、イベント発生関数にマップに使用されることを宣言します。|
-|[BEGIN_EVENT_MAP](#begin_event_map)|イベント マップ (クラスの実装で使用する必要があります) の定義を開始します。|
-|[END_EVENT_MAP](#end_event_map)|イベント マップ (クラスの実装で使用する必要があります) の定義を終了します。|
-
-### <a name="event-mapping-macros"></a>イベント マップ マクロ
+### <a name="event-map-declaration-and-demarcation"></a>イベントマップの宣言と境界
 
 |||
 |-|-|
-|[EVENT_CUSTOM](#event_custom)|指定したイベントを発生させるどのイベント発生関数を示します。|
-|[EVENT_CUSTOM_ID](#event_custom_id)|イベント発生関数が指定したディスパッチ ID を持つ、指定したイベントを発生させることを示します。|
+|[DECLARE_EVENT_MAP](#declare_event_map)|イベントをイベント発生関数にマップするために、クラスでイベントマップが使用されることを宣言します (クラス宣言で使用する必要があります)。|
+|[BEGIN_EVENT_MAP](#begin_event_map)|イベントマップの定義を開始します (クラスの実装で使用する必要があります)。|
+|[END_EVENT_MAP](#end_event_map)|イベントマップの定義を終了します (クラスの実装で使用する必要があります)。|
 
-### <a name="message-mapping-macros"></a>メッセージ マップ マクロ
+### <a name="event-mapping-macros"></a>イベントマッピングマクロ
+
+|||
+|-|-|
+|[EVENT_CUSTOM](#event_custom)|指定されたイベントを発生させるイベント発生関数を示します。|
+|[EVENT_CUSTOM_ID](#event_custom_id)|指定されたディスパッチ ID を使用して、指定されたイベントを発生させるイベント発生関数を示します。|
+
+### <a name="message-mapping-macros"></a>メッセージマッピングマクロ
 
 |||
 |-|-|
 |[ON_OLEVERB](#on_oleverb)|OLE コントロールによって処理されるカスタム動詞を示します。|
-|[ON_STDOLEVERB](#on_stdoleverb)|OLE コントロールの標準の動詞のマッピングをオーバーライドします。|
+|[ON_STDOLEVERB](#on_stdoleverb)|OLE コントロールの標準動詞マッピングをオーバーライドします。|
 
-##  <a name="declare_event_map"></a>  DECLARE_EVENT_MAP
+##  <a name="declare_event_map"></a>DECLARE_EVENT_MAP
 
-各`COleControl`-プログラム内の派生クラスは、コントロールは発生させるイベントを指定するイベント マップを提供できます。
+プログラム`COleControl`内の各派生クラスは、イベントマップを提供して、コントロールが起動するイベントを指定できます。
 
 ```cpp
 DECLARE_EVENT_MAP()
@@ -59,17 +59,17 @@ DECLARE_EVENT_MAP()
 
 ### <a name="remarks"></a>Remarks
 
-クラスの宣言の最後に DECLARE_EVENT_MAP マクロを使用します。 次に、クラスのメンバー関数を定義する .cpp ファイルでを使用して、BEGIN_EVENT_MAP マクロ、マクロのエントリの各コントロールのイベント、および END_EVENT_MAP マクロのイベント リストの末尾を宣言します。
+クラス宣言の最後に DECLARE_EVENT_MAP マクロを使用します。 次に、クラスのメンバー関数を定義する .cpp ファイルで、BEGIN_EVENT_MAP マクロ、各コントロールのイベントのマクロエントリ、および END_EVENT_MAP マクロを使用して、イベント一覧の末尾を宣言します。
 
-イベント マップの詳細については、記事を参照してください。 [ActiveX コントロール。イベント](../../mfc/mfc-activex-controls-events.md)します。
+イベントマップの詳細については、ActiveX [コントロールに関する記事を参照してください。イベント](../../mfc/mfc-activex-controls-events.md)。
 
 ### <a name="requirements"></a>必要条件
 
 **ヘッダー** afxctl.h
 
-## <a name="begin_event_map"></a>  BEGIN_EVENT_MAP
+## <a name="begin_event_map"></a>BEGIN_EVENT_MAP
 
-イベント マップの定義を開始します。
+イベントマップの定義を開始します。
 
 ```cpp
 BEGIN_EVENT_MAP(theClass,  baseClass)
@@ -78,24 +78,24 @@ BEGIN_EVENT_MAP(theClass,  baseClass)
 ### <a name="parameters"></a>パラメーター
 
 *クラス*<br/>
-イベントを持つマップ コントロール クラスの名前を指定します。
+イベントマップが存在するコントロールクラスの名前を指定します。
 
 *baseClass*<br/>
-基本クラスの名前を示す*クラス*します。
+*クラス*の基底クラスの名前を指定します。
 
 ### <a name="remarks"></a>Remarks
 
-クラスのメンバー関数を定義する実装 (.cpp) ファイル、BEGIN_EVENT_MAP マクロでは、イベントのマップを開始し、イベントの各マクロのエントリを追加 END_EVENT_MAP マクロを持つイベントのマップを完了します。
+クラスのメンバー関数を定義する実装 (.cpp) ファイルで、BEGIN_EVENT_MAP マクロを使用してイベントマップを開始し、各イベントにマクロエントリを追加して、END_EVENT_MAP マクロを使用してイベントマップを完成させます。
 
-イベント マップと BEGIN_EVENT_MAP マクロの詳細については、この記事を参照してください。 [ActiveX コントロール。イベント](../../mfc/mfc-activex-controls-events.md)します。
+イベントマップと BEGIN_EVENT_MAP マクロの詳細については、ActiveX コントロール[に関する記事を参照してください。イベント](../../mfc/mfc-activex-controls-events.md)。
 
 ### <a name="requirements"></a>必要条件
 
 **ヘッダー** afxctl.h
 
-##  <a name="end_event_map"></a>  END_EVENT_MAP
+##  <a name="end_event_map"></a>END_EVENT_MAP
 
-イベント マップの定義を終了するのにには、END_EVENT_MAP マクロを使用します。
+END_EVENT_MAP マクロを使用して、イベントマップの定義を終了します。
 
 ```cpp
 END_EVENT_MAP()
@@ -105,9 +105,9 @@ END_EVENT_MAP()
 
 **ヘッダー** afxctl.h
 
-## <a name="event_custom"></a>  EVENT_CUSTOM
+## <a name="event_custom"></a>EVENT_CUSTOM
 
-カスタム イベントのイベント マップ エントリを定義します。
+カスタムイベントのイベントマップエントリを定義します。
 
 ```cpp
 EVENT_CUSTOM(pszName, pfnFire,  vtsParams)
@@ -121,18 +121,18 @@ EVENT_CUSTOM(pszName, pfnFire,  vtsParams)
 *pfnFire*<br/>
 イベント発生関数の名前。
 
-*vtsParams*<br/>
-関数のパラメーター リストを指定する 1 つまたは複数の定数のスペースで区切られたリスト。
+*Vtsparc*<br/>
+関数のパラメーターリストを指定する1つ以上の定数のスペース区切りのリスト。
 
 ### <a name="remarks"></a>Remarks
 
-*VtsParams*パラメーターが空白で区切られた一覧から値の`VTS_`定数。 1 つ以上のスペース (コンマではない) で区切られたこれらの値は、関数のパラメーター リストを指定します。 例えば:
+*Vtsparc ams*パラメーターは、定数の`VTS_`値をスペースで区切ったリストです。 これらの値のうち1つ以上 (コンマではない) で区切られた関数のパラメーターリストを指定します。 例えば:
 
 [!code-cpp[NVC_MFCActiveXControl#13](../../mfc/codesnippet/cpp/event-maps_2.cpp)]
 
-RGB を表す 32 ビット整数を含むリストを指すポインターによりその後に、値の色を指定します、 `IFontDisp` OLE フォント オブジェクトのインターフェイス。
+RGB カラー値を表す32ビット整数を含むリストを指定し、その後に OLE フォントオブジェクト`IFontDisp`のインターフェイスへのポインターを指定します。
 
-`VTS_`定数とその意味は次のようには。
+`VTS_`定数とその意味は次のとおりです。
 
 |シンボル|パラメーターの型|
 |------------|--------------------|
@@ -141,9 +141,9 @@ RGB を表す 32 ビット整数を含むリストを指すポインターによ
 |VTS_R4|**float**|
 |VTS_R8|**double**|
 |VTS_COLOR|OLE_COLOR|
-|VTS_CY|通貨|
+|VTS_CY|貨|
 |VTS_DATE|DATE|
-|VTS_BSTR|**const** __char\*__|
+|VTS_BSTR|**const** __|
 |VTS_DISPATCH|LPDISPATCH|
 |VTS_FONT|`IFontDispatch*`|
 |VTS_HANDLE|HANDLE|
@@ -165,22 +165,22 @@ RGB を表す 32 ビット整数を含むリストを指すポインターによ
 |VTS_YSIZE_HIMETRIC|OLE_YSIZE_HIMETRIC|
 
 > [!NOTE]
-> 追加のバリアント型定数は、すべてのバリアント型を除く VTS_FONT と VTS_PICTURE、variant データ定数へのポインターを提供する定義されています。 使用してこれらの定数の名前は、`VTS_Pconstantname`規則。 たとえば、VTS_PCOLOR、VTS_COLOR 定数ポインターです。
+> Variant データ定数へのポインターを提供する VTS_FONT および VTS_PICTURE を除き、すべての variant 型に対して追加のバリアント定数が定義されています。 これらの定数は、 `VTS_Pconstantname`規約を使用して名前が付けられます。 たとえば、VTS_PCOLOR は VTS_COLOR 定数へのポインターです。
 
 ### <a name="requirements"></a>必要条件
 
 **ヘッダー** afxctl.h
 
-## <a name="event_custom_id"></a>  EVENT_CUSTOM_ID
+## <a name="event_custom_id"></a>EVENT_CUSTOM_ID
 
-関数で指定したディスパッチ ID に属するカスタム イベントを発生させるイベントを定義*dispid*します。
+*Dispid*によって指定されたディスパッチ ID に属するカスタムイベントのイベント発生関数を定義します。
 
 ```cpp
 EVENT_CUSTOM_ID(
-  pszName,
-  dispid,
-  pfnFire,
-  vtsParams)
+    pszName,
+    dispid,
+    pfnFire,
+    vtsParams)
 ```
 
 ### <a name="parameters"></a>パラメーター
@@ -189,31 +189,31 @@ EVENT_CUSTOM_ID(
 イベントの名前です。
 
 *dispid*<br/>
-イベントを発生させるときに、コントロールによって使用されるディスパッチ ID。
+イベントの発生時にコントロールによって使用されるディスパッチ ID。
 
 *pfnFire*<br/>
 イベント発生関数の名前。
 
-*vtsParams*<br/>
-パラメーターの変数の一覧は、イベントが発生したときに、コントロール コンテナーに渡されます。
+*Vtsparc*<br/>
+イベントが発生したときにコントロールコンテナーに渡されるパラメーターの変数リスト。
 
 ### <a name="remarks"></a>Remarks
 
-*VtsParams*引数は、スペースで区切られたリストから値の`VTS_`定数。 スペース、いないのコンマで区切られたこれらの値の 1 つ以上の関数のパラメーター リストを指定します。 例:
+*Vtsparc ams*引数は、定数の`VTS_`値をスペースで区切ったリストです。 これらの値のうち1つ以上がコンマではなくスペースで区切られている場合は、関数のパラメーターリストを指定します。 例えば:
 
 [!code-cpp[NVC_MFCActiveXControl#13](../../mfc/codesnippet/cpp/event-maps_2.cpp)]
 
-RGB を表す 32 ビット整数を含むリストを指すポインターによりその後に、値の色を指定します、 `IFontDisp` OLE フォント オブジェクトのインターフェイス。
+RGB カラー値を表す32ビット整数を含むリストを指定し、その後に OLE フォントオブジェクト`IFontDisp`のインターフェイスへのポインターを指定します。
 
-一覧については、`VTS_`定数を参照してください[EVENT_CUSTOM](#event_custom)します。
+`VTS_`定数の一覧については、「 [EVENT_CUSTOM](#event_custom)」を参照してください。
 
 ### <a name="requirements"></a>必要条件
 
 **ヘッダー** afxctl.h
 
-## <a name="on_oleverb"></a>  ON_OLEVERB
+## <a name="on_oleverb"></a>ON_OLEVERB
 
-このマクロは、カスタム動詞をコントロールの特定のメンバー関数にマップするメッセージ マップ エントリを定義します。
+このマクロは、カスタム動詞をコントロールの特定のメンバー関数にマップするメッセージマップエントリを定義します。
 
 ```cpp
 ON_OLEVERB(idsVerbName,  memberFxn)
@@ -225,13 +225,13 @@ ON_OLEVERB(idsVerbName,  memberFxn)
 動詞の名前の文字列リソース ID。
 
 *memberFxn*<br/>
-動詞が呼び出されたときに、フレームワークによって呼び出される関数。
+動詞が呼び出されたときにフレームワークによって呼び出される関数。
 
 ### <a name="remarks"></a>Remarks
 
-文字列テーブルに追加されるカスタム動詞名を作成するリソース エディターを使用できます。
+リソースエディターを使用して、文字列テーブルに追加されるカスタム動詞名を作成できます。
 
-関数のプロトタイプ*memberFxn*は。
+*MemberFxn*の関数プロトタイプは次のとおりです。
 
 ```cpp
 BOOL memberFxn(
@@ -240,15 +240,15 @@ BOOL memberFxn(
    LPCRECT  lpRect);
 ```
 
-値、 *lpMsg*、 *hWndParent*、および*lpRect*パラメーターの対応するパラメーターから取得されますが、`IOleObject::DoVerb`メンバー関数。
+*Lpmsg*、 *hWndParent*、および*lpRect*パラメーターの値は、 `IOleObject::DoVerb`メンバー関数の対応するパラメーターから取得されます。
 
 ### <a name="requirements"></a>必要条件
 
-**ヘッダー** afxole.h
+**ヘッダー** afxole
 
-## <a name="on_stdoleverb"></a>  ON_STDOLEVERB
+## <a name="on_stdoleverb"></a>ON_STDOLEVERB
 
-標準の動詞の既定の動作をオーバーライドするのにには、このマクロを使用します。
+標準動詞の既定の動作をオーバーライドするには、このマクロを使用します。
 
 ```cpp
 ON_STDOLEVERB(iVerb, memberFxn)
@@ -257,20 +257,20 @@ ON_STDOLEVERB(iVerb, memberFxn)
 ### <a name="parameters"></a>パラメーター
 
 *iVerb*<br/>
-無効にされている動詞の標準の動詞のインデックス。
+オーバーライドされる動詞の標準動詞インデックス。
 
 *memberFxn*<br/>
-動詞が呼び出されたときに、フレームワークによって呼び出される関数。
+動詞が呼び出されたときにフレームワークによって呼び出される関数。
 
 ### <a name="remarks"></a>Remarks
 
-形式は、標準の動詞のインデックス`OLEIVERB_`、その後に操作します。 OLEIVERB_HIDE、および OLEIVERB_UIACTIVATE は、標準的な動詞の例を示します。
+標準の動詞インデックスは、の形式`OLEIVERB_`で、その後にアクションが続きます。 標準動詞の例として、OLEIVERB_SHOW、OLEIVERB_HIDE、および OLEIVERB_UIACTIVATE があります。
 
-参照してください[ON_OLEVERB](#on_oleverb)として使用する関数プロトタイプの説明については、 *memberFxn*パラメーター。
+*MemberFxn*パラメーターとして使用する関数プロトタイプの説明については、「 [ON_OLEVERB](#on_oleverb) 」を参照してください。
 
 ### <a name="requirements"></a>必要条件
 
-**ヘッダー** afxole.h
+**ヘッダー** afxole
 
 ## <a name="see-also"></a>関連項目
 

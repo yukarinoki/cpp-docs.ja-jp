@@ -6,22 +6,22 @@ helpviewer_keywords:
 - rich edit controls [MFC], bottomless
 - CRichEditCtrl class [MFC], bottomless
 ms.assetid: 2877dd32-1e9a-4fd1-98c0-66dcbbeef1de
-ms.openlocfilehash: 6f078680777dcf80a4349ea34e4520cb56031f44
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d5650d34ffc350444061aa6147c38af016458811
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400748"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68915265"
 ---
 # <a name="bottomless-rich-edit-controls"></a>自動的にサイズ調整されるリッチ エディット コントロール
 
-リッチ エディット コントロールのサイズを変更できるアプリケーション ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) の内容と同じサイズでは常に必要な場合。 リッチ エディット コントロールがいわゆる「制限のない」機能をサポートする親ウィンドウに送信することによって、 [EN_REQUESTRESIZE](/windows/desktop/Controls/en-requestresize)通知メッセージの内容のサイズが変更されるたびにします。
+アプリケーションでは、必要に応じてリッチエディットコントロール ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) のサイズを変更して、常にコンテンツと同じサイズにすることができます。 リッチエディットコントロールは、そのコンテンツのサイズが変更されるたびに親ウィンドウに[EN_REQUESTRESIZE](/windows/desktop/Controls/en-requestresize)通知メッセージを送信することで、このいわゆる "制限カラム" 機能をサポートしています。
 
-処理するときに、 **EN_REQUESTRESIZE**通知メッセージ、アプリケーションは、指定したディメンションにコントロールをサイズ変更する必要があります[REQRESIZE](/windows/desktop/api/richedit/ns-richedit-_reqresize)構造体。 アプリケーションでは、コントロールの高さの変更に合わせてコントロールの近くのすべての情報は移動も可能性があります。 コントロールのサイズを変更するには、使用することができます、`CWnd`関数[SetWindowPos](../mfc/reference/cwnd-class.md#setwindowpos)します。
+**EN_REQUESTRESIZE**通知メッセージを処理する場合、アプリケーションは、指定された[REQRESIZE](/windows/desktop/api/richedit/ns-richedit-reqresize)構造内のディメンションにコントロールのサイズを変更する必要があります。 アプリケーションでは、コントロールの高さの変化に合わせて、コントロールの近くにあるすべての情報を移動することもできます。 コントロールのサイズを変更するには、 `CWnd`関数[SetWindowPos](../mfc/reference/cwnd-class.md#setwindowpos)を使用します。
 
-送信制限のないリッチ エディット コントロールを強制することができます、 **EN_REQUESTRESIZE**通知メッセージを使用して、 [RequestResize](../mfc/reference/cricheditctrl-class.md#requestresize)メンバー関数。 このメッセージはで役に立ちます、 [OnSize](../mfc/reference/cwnd-class.md#onsize)ハンドラー。
+[REQUESTRESIZE](../mfc/reference/cricheditctrl-class.md#requestresize)メンバー関数を使用して、制限カラム rich edit コントロールに**EN_REQUESTRESIZE**通知メッセージを送信させることができます。 このメッセージは、 [OnSize](../mfc/reference/cwnd-class.md#onsize)ハンドラーで役に立ちます。
 
-受信する**EN_REQUESTRESIZE** 、通知メッセージを使用して、通知を有効にする必要があります、`SetEventMask`メンバー関数。
+**EN_REQUESTRESIZE**通知メッセージを受信するには、 `SetEventMask`メンバー関数を使用して通知を有効にする必要があります。
 
 ## <a name="see-also"></a>関連項目
 

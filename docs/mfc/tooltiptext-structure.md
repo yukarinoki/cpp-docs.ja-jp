@@ -7,16 +7,16 @@ helpviewer_keywords:
 - TOOLTIPTEXT structure [MFC]
 - tool tips [MFC], notifications
 ms.assetid: 547591bf-80f5-400e-a2a7-0708cfffbb5d
-ms.openlocfilehash: 7d77ca7dc55273e6084e919323ed71e55fa68a2c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2eb899e66acbadbe45aae2c8adbb356bf4730191
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62181848"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68915251"
 ---
 # <a name="tooltiptext-structure"></a>TOOLTIPTEXT 構造体
 
-書き込みで、[ツール ヒントの通知ハンドラー](../mfc/handling-ttn-needtext-notification-for-tool-tips.md)を使用する必要がある、 **TOOLTIPTEXT**構造体。 メンバー、 **TOOLTIPTEXT**構造体には。
+[ツールヒントの通知ハンドラー](../mfc/handling-ttn-needtext-notification-for-tool-tips.md)を記述するときは、 **TOOLTIPTEXT**構造体を使用する必要があります。 **TOOLTIPTEXT**構造体のメンバーは次のとおりです。
 
 ```cpp
 typedef struct {
@@ -31,24 +31,24 @@ typedef struct {
 ```
 
 *hdr*<br/>
-テキストを必要とするツールを識別します。 必要に応じてこの構造体の唯一のメンバーは、コントロールのコマンド id です。 コントロールのコマンド ID になります、 *idFrom*のメンバー、 **NMHDR**構造体、構文を使用してアクセス`hdr.idFrom`します。 参照してください[NMHDR](/windows/desktop/api/richedit/ns-richedit-_nmhdr)のメンバーの詳細については、 **NMHDR**構造体。
+テキストが必要なツールを識別します。 この構造体に必要な唯一のメンバーは、コントロールのコマンド ID です。 コントロールのコマンド ID は、構文`hdr.idFrom`でアクセスされる、 **NMHDR**構造体の*idfrom*メンバーに含まれます。 **Nmhdr**構造体のメンバーの説明については、「 [nmhdr](/windows/desktop/api/richedit/ns-richedit-nmhdr) 」を参照してください。
 
 *lpszText*<br/>
-ツールは、テキストを受け取る文字列のアドレス。
+ツールのテキストを受信する文字列のアドレス。
 
 *szText*<br/>
-ツール ヒントのテキストを受け取るバッファー。 アプリケーションは、文字列のアドレスを指定する代わりに、このバッファーにテキストをコピーできます。
+ツールヒントテキストを受け取るバッファー。 アプリケーションでは、文字列アドレスを指定する代わりに、このバッファーにテキストをコピーできます。
 
 *hinst*<br/>
-ツール ヒントのテキストとして使用する文字列を含むインスタンスのハンドル。 場合*lpszText*アドレスは、ツール ヒントのテキストのこのメンバーには NULL です。
+ツールヒントのテキストとして使用される文字列を含むインスタンスのハンドル。 *LpszText*がツールヒントテキストのアドレスの場合、このメンバーは NULL になります。
 
-処理するとき、`TTN_NEEDTEXT`通知メッセージで、次の方法のいずれかで表示される文字列を指定します。
+`TTN_NEEDTEXT`通知メッセージを処理するときは、次のいずれかの方法で表示される文字列を指定します。
 
-- 指定されたバッファーにテキストをコピー、 *szText*メンバー。
+- *Sztext*メンバーによって指定されたバッファーにテキストをコピーします。
 
-- テキストを含むバッファーのアドレスをコピー、 *lpszText*メンバー。
+- テキストが格納されているバッファーのアドレスを*lpszText*メンバーにコピーします。
 
-- 文字列リソースの識別子をコピー、 *lpszText*メンバー、およびコピーするリソースを含むインスタンスのハンドル、 *hinst*メンバー。
+- 文字列リソースの識別子を*lpszText*メンバーにコピーし、リソースが格納されているインスタンスのハンドルを*hinst*メンバーにコピーします。
 
 ## <a name="see-also"></a>関連項目
 
