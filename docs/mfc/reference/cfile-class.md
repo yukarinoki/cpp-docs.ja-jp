@@ -290,7 +290,7 @@ virtual void Close();
 
 [Cfile::cfile](#cfile)の例を参照してください。
 
-##  <a name="duplicate"></a>CFile::D u
+##  <a name="duplicate"></a>CFile::Duplicate
 
 指定され`CFile`たファイルの重複するオブジェクトを構築します。
 
