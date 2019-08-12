@@ -24,10 +24,10 @@ ms.locfileid: "65221948"
 
 ## <a name="grammar"></a>文法
 
-*try-ステートメントを除く*:<br/>
+*try-except ステートメント*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**__try** *compound-statement* **__except** **(** *expression* **)** *compound-statement*
 
-*try-最後に、ステートメント*:<br/>
+*try-finally ステートメント*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**__try** *compound-statement* **__finally** *compound-statement*
 
 ## <a name="remarks"></a>Remarks
