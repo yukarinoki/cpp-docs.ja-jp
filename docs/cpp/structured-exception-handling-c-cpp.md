@@ -1,4 +1,4 @@
----
+﻿---
 title: Structured Exception Handling (C/C++)
 ms.date: 08/14/2018
 helpviewer_keywords:

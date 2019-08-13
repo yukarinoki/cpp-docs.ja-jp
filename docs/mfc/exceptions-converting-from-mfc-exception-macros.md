@@ -1,4 +1,4 @@
----
+﻿---
 title: 例外:MFC 例外マクロからの変換
 ms.date: 08/27/2018
 helpviewer_keywords:
@@ -99,7 +99,7 @@ ms.locfileid: "62394508"
 
    [!code-cpp[NVC_MFCExceptions#7](../mfc/codesnippet/cpp/exceptions-converting-from-mfc-exception-macros_2.cpp)]
 
-4. 必要に応じて、例外オブジェクトを削除するために、catch ブロックで、コードを変更します。 詳細については、この記事を参照してください。[例外。キャッチと削除例外](../mfc/exceptions-catching-and-deleting-exceptions.md)します。
+4. 必要に応じて、例外オブジェクトを削除するために、catch ブロックで、コードを変更します。 詳細については、[例外:キャッチと削除例外](../mfc/exceptions-catching-and-deleting-exceptions.md) を参照してください。
 
 MFC 例外マクロを使用して例外処理コードの例を次に示します。 次の例のコードは、マクロ、例外を使用しているため`e`自動的に削除されます。
 
@@ -109,7 +109,7 @@ MFC 例外マクロを使用して例外処理コードの例を次に示しま�
 
 [!code-cpp[NVC_MFCExceptions#9](../mfc/codesnippet/cpp/exceptions-converting-from-mfc-exception-macros_4.cpp)]
 
-詳細については、次を参照してください。[例外。MFC マクロと C++ 例外を使用して](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md)します。
+詳細については、[例外:MFC マクロと C++ 例外の使用](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md) を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

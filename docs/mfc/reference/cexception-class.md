@@ -1,4 +1,4 @@
----
+﻿---
 title: CException クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -66,7 +66,7 @@ class AFX_NOVTABLE CException : public CObject
 |[CDaoException](../../mfc/reference/cdaoexception-class.md)|データ アクセス オブジェクトの例外 (つまり、DAO クラスの例外条件)|
 |[CInternetException](../../mfc/reference/cinternetexception-class.md)|インターネットの例外 (つまり、インターネット クラスの発生した例外条件)。|
 
-これらの例外を使用するものでは、[スロー](exception-processing.md#throw)、 [THROW_LAST](exception-processing.md#throw_last)、[お試しください](exception-processing.md#try)、[キャッチ](exception-processing.md#catch)、 [and_catch](exception-processing.md#and_catch)、および[end_catch](exception-processing.md#end_catch)マクロ。 例外の詳細については、次を参照してください。[例外の処理](exception-processing.md)、」または「[例外処理 (MFC)](../exception-handling-in-mfc.md)します。
+これらの例外を使用するものでは、[THROW](exception-processing.md#throw)、 [THROW_LAST](exception-processing.md#throw_last)、[try](exception-processing.md#try)、[catch](exception-processing.md#catch)、 [and_catch](exception-processing.md#and_catch)、および[end_catch](exception-processing.md#end_catch)マクロ。 例外の詳細については、[例外の処理](exception-processing.md)」または「[例外処理 (MFC)](../exception-handling-in-mfc.md)を参照してください。
 
 特定の例外をキャッチするには、適切な派生クラスを使用します。 すべての種類の例外を使用して`CException`、しを使用して[使うため](cobject-class.md#iskindof)を区別する`CException`-クラスを派生します。 なお`CObject::IsKindOf`で宣言されたクラスに対してのみ機能、 [IMPLEMENT_DYNAMIC](run-time-object-model-services.md#implement_dynamic)マクロは、動的な型チェックを活用するためにします。 すべて`CException`-作成する派生クラスを使用する必要があります、`IMPLEMENT_DYNAMIC`マクロ、すぎます。
 
