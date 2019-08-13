@@ -1,4 +1,4 @@
----
+﻿---
 title: 例外:MFC 例外マクロからの変換
 ms.date: 08/27/2018
 helpviewer_keywords:
@@ -25,7 +25,7 @@ ms.locfileid: "62394508"
 
 これは、高度なトピックです。
 
-この記事は、Microsoft Foundation Class のマクロで記述された既存のコードに変換する方法を説明します:**TRY**、**CATCH,**、**THROW**など -C++ 例外処理を使用するにはキーワード**try**、**catch**、および**throw**します。 ここでは、次の内容について説明します。
+この記事は、Microsoft Foundation Class のマクロで記述された既存のコードに変換する方法を説明します:**TRY**、**CATCH,** 、**THROW**など -C++ 例外処理を使用するにはキーワード**try**、**catch**、および**throw**します。 ここでは、次の内容について説明します。
 
 - [変換の利点](#_core_advantages_of_converting)
 

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - aggregates [C++], initializing
 ms.assetid: a8f8ed75-39db-4592-93b9-d3920d915810
 ms.openlocfilehash: f6816a6f63de262b927a3c5aeed8774ba29c2eaa
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151495"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "62326080"
 ---
 # <a name="initializing-aggregate-types"></a>集約型の初期化
 
@@ -22,8 +22,8 @@ ms.locfileid: "56151495"
 ## <a name="syntax"></a>構文
 
 *initializer*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**{**  *initializer-list*  **}** /* 集計初期化用 \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**{**  *initializer-list*  **, }**
+&nbsp;&nbsp;&nbsp;&nbsp; **{**  *initializer-list*  **}** /* 集計初期化用 \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **{**  *initializer-list*  **, }**
 
 *initializer-list*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*initializer*<br/>
@@ -35,7 +35,7 @@ ms.locfileid: "56151495"
 
 *初期化子リスト*の値の数が集約型より少ない場合、集約型の残りのメンバーまたは要素は 0 に初期化されます。 明示的に初期化されない自動識別子の初期値は定義されません。 *初期化子リスト*に集約型よりも多くの値がある場合、エラーが発生します。 これらの規則は、埋め込まれた各初期化子リストと、集約全体に適用されます。
 
-構造体の初期化子は、同じ型の式、または中かっこ (**{ }**) で囲まれているメンバーの初期化子のリストです。 名前のないビット フィールド メンバーは初期化されません。
+構造体の初期化子は、同じ型の式、または中かっこ ( **{ }** ) で囲まれているメンバーの初期化子のリストです。 名前のないビット フィールド メンバーは初期化されません。
 
 共用体が初期化される場合、*初期化子リスト*は単一の定数式である必要があります。 定数式の値は共用体の最初のメンバーに割り当てられます。
 

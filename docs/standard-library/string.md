@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - string header
 ms.assetid: a2fb9d00-d7ae-4170-bfea-2dc337aa37cf
-ms.openlocfilehash: fda00cd5a8f8768688c8e10f25a0d1f2370a256f
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 80d5d297cc28cfb019dae99e9e9736e4b2eb654f
+ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459198"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68957131"
 ---
 # <a name="ltstringgt"></a>&lt;string&gt;
 
@@ -38,8 +38,8 @@ C++ 言語および C++ 標準ライブラリでは、2 種類の文字列がサ
 
 |型名|説明|
 |-|-|
-|[string](../standard-library/string-typedefs.md#string)|Char 型の要素をとして特殊化し`basic_string`たテンプレートクラスを記述する型。  `string`|
-|[wstring](../standard-library/string-typedefs.md#wstring)|Wchar_t 型の要素をとして特殊化し`basic_string`たテンプレートクラスを記述する型。  `wstring`|
+|[string](../standard-library/string-typedefs.md#string)|Char 型の要素をとして特殊化し`basic_string`たテンプレートクラスを記述する型。 `string`|
+|[wstring](../standard-library/string-typedefs.md#wstring)|Wchar_t 型の要素をとして特殊化し`basic_string`たテンプレートクラスを記述する型。 `wstring`|
 |[u16string](../standard-library/string-typedefs.md#u16string)|`basic_string` 型の要素に基づいて特殊化したテンプレート クラス `char16_t` を記述する型。|
 |[u32string](../standard-library/string-typedefs.md#u32string)|`basic_string` 型の要素に基づいて特殊化したテンプレート クラス `char32_t` を記述する型。|
 
@@ -61,7 +61,7 @@ C++ 言語および C++ 標準ライブラリでは、2 種類の文字列がサ
 
 |||
 |-|-|
-|[hash]()||
+|hash|文字列のハッシュを生成します。|
 |[swap](../standard-library/string-functions.md#swap)|2 つの文字列の、文字の配列を交換します。|
 |[stod](../standard-library/string-functions.md#stod)|文字シーケンスを**倍精度浮動小数点**型に変換します。|
 |[stof](../standard-library/string-functions.md#stof)|文字シーケンスを**float**に変換します。|

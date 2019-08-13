@@ -1,4 +1,4 @@
----
+﻿---
 title: 例外:キャッチと削除例外
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -18,7 +18,7 @@ ms.locfileid: "62173294"
 ---
 # <a name="exceptions-catching-and-deleting-exceptions"></a>例外:キャッチと削除例外
 
-次の手順と例についてをキャッチし、例外を削除する方法を表示します。 詳細については、**try**、**catch**、および**throw*キーワードを参照してください[C++ 例外処理](../cpp/cpp-exception-handling.md)します。
+次の手順と例についてをキャッチし、例外を削除する方法を表示します。 詳細については、**try**、**catch**、および***throw**キーワードを参照してください[C++ 例外処理](../cpp/cpp-exception-handling.md)します。
 
 そのコードが例外をキャッチするたびに、例外を削除する障害により、メモリ リークが発生しているため、例外ハンドラーは処理した例外オブジェクトを削除する必要があります。
 

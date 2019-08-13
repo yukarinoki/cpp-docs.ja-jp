@@ -1,25 +1,33 @@
 ---
 title: bad_optional_access クラス
-ms.date: 11/04/2016
+ms.date: 08/06/2019
 f1_keywords:
 - optional/std::bad_optional_access
-ms.assetid: 89a3b805-ab60-4858-b772-5855130c11b1
-ms.openlocfilehash: f898d1e30dd173339192bdb3b75581d12b62fca7
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 043b0360c7e0be48267c8f406dbfea50eeb5a8e3
+ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68269144"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68957100"
 ---
-# <a name="badoptionalaccess-class"></a>bad_optional_access クラス
+# <a name="bad_optional_access-class"></a>bad_optional_access クラス
 
-値にアクセスする試みが行われる場所のような状況を報告する例外としてスローするオブジェクトの種類を定義する`optional`値が含まれていないオブジェクト。
+値を含まない`optional`オブジェクトの値にアクセスしようとした状況を報告するために、例外としてスローされるオブジェクトの型を定義します。
 
 ## <a name="syntax"></a>構文
 
 ```cpp
 class bad_optional_access : public exception
 {
-    public: bad_optional_access();
+public:
+    bad_optional_access() noexcept;
+    bad_optional_access(const bad_optional_access&) noexcept;
+    bad_optional_access& operator=(const bad_optional_access&) noexcept;
+    const char* what() const noexcept override;
 };
 ```
+
+## <a name="see-also"></a>関連項目
+
+[\<オプション >](optional.md)\
+[省略可能なクラス](optional-class.md)

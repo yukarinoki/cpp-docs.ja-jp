@@ -1,4 +1,4 @@
----
+﻿---
 title: Structured Exception Handling (C/C++)
 ms.date: 08/14/2018
 helpviewer_keywords:
@@ -11,7 +11,7 @@ helpviewer_keywords:
 ms.assetid: dd3b647d-c269-43a8-aab9-ad1458712976
 ms.openlocfilehash: e948d941afa1459623619e385aa67b1c60490245
 ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2019
 ms.locfileid: "65221948"
@@ -25,10 +25,10 @@ ms.locfileid: "65221948"
 ## <a name="grammar"></a>文法
 
 *try-except ステートメント*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__try** *compound-statement* **__except** **(** *expression* **)** *compound-statement*
+&nbsp;&nbsp;&nbsp;&nbsp; **__try** *compound-statement* **__except** **(** *expression* **)** *compound-statement*
 
 *try-finally ステートメント*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__try** *compound-statement* **__finally** *compound-statement*
+&nbsp;&nbsp;&nbsp;&nbsp; **__try** *compound-statement* **__finally** *compound-statement*
 
 ## <a name="remarks"></a>Remarks
 
