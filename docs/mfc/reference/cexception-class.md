@@ -72,7 +72,7 @@ class AFX_NOVTABLE CException : public CObject
 
 呼び出すことによって、ユーザーに例外に関する詳細をレポートできます[GetErrorMessage](cfileexception-class.md#geterrormessage)または[ReportError](#reporterror)、2 つのメンバー関数のいずれかで使用できる`CException`のクラスを派生します。
 
-マクロのいずれかで例外がキャッチされた場合、`CException`オブジェクトが自動的に削除されます。 削除しないでください、自分でします。 使用して、例外がキャッチされた場合、**キャッチ**キーワードは自動的に削除されません。 記事をご覧ください[例外処理 (MFC)](../exception-handling-in-mfc.md)例外オブジェクトを削除するタイミングの詳細についてはします。
+マクロのいずれかで例外がキャッチされた場合、`CException`オブジェクトが自動的に削除されます。 削除しないでください、自分でします。 使用して、例外がキャッチされた場合、**catch**キーワードは自動的に削除されません。 記事をご覧ください[例外処理 (MFC)](../exception-handling-in-mfc.md)例外オブジェクトを削除するタイミングの詳細についてはします。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -103,7 +103,7 @@ explicit CException(BOOL bAutoDelete);
 
 ##  <a name="delete"></a>  CException::Delete
 
-この関数をかどうかを確認します、 `CException` 、ヒープのオブジェクトが作成され、呼び出す場合は、**削除**演算子をオブジェクトにします。
+この関数をかどうかを確認します、 `CException` 、ヒープのオブジェクトが作成され、呼び出す場合は、**delete**演算子をオブジェクトにします。
 
 ```
 void Delete();
@@ -111,11 +111,11 @@ void Delete();
 
 ### <a name="remarks"></a>Remarks
 
-削除するときに、`CException`オブジェクトを使用して、`Delete`例外を削除するメンバー関数。 使用しないでください、**削除**演算子を直接ため、`CException`オブジェクトのグローバル オブジェクトがありますまたはスタック上に作成されています。
+削除するときに、`CException`オブジェクトを使用して、`Delete`例外を削除するメンバー関数。 使用しないでください、**delete**演算子を直接ため、`CException`オブジェクトのグローバル オブジェクトがありますまたはスタック上に作成されています。
 
 オブジェクトが作成されるときに、オブジェクトを削除するかどうかを指定することができます。 詳細については、次を参照してください。 [CException::CException](#cexception)します。
 
-のみを呼び出す必要があります`Delete`、C++ を使用している場合**お試しください**- **キャッチ**メカニズム。 MFC マクロを使用している場合**お試しください**と**キャッチ**、これらのマクロはこの関数を自動的に呼び出します。
+のみを呼び出す必要があります`Delete`、C++ を使用している場合**try**- **catch**メカニズム。 MFC マクロを使用している場合**TRY**と**CATCH**、これらのマクロはこの関数を自動的に呼び出します。
 
 ### <a name="example"></a>例
 

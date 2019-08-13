@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::operator&lt; (map)
 - std::operator&lt;= (map)
 - std::operator== (map)
-ms.openlocfilehash: e05aca75f527e1bc78912ab6b4b5a9de6dcd54c5
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: deb442d0ba1fbd180fdb41b66de73df92bee7fc9
+ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246420"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68956957"
 ---
 # <a name="ltmapgt-operators"></a>&lt;map&gt; 演算子
 
@@ -37,7 +37,7 @@ bool operator!=(
 
 ### <a name="parameters"></a>パラメーター
 
-*左*\
+*左側*\
 `map` 型のオブジェクト。
 
 *そうです*\
@@ -102,7 +102,7 @@ bool operator<(
 
 ### <a name="parameters"></a>パラメーター
 
-*左*\
+*左側*\
 `map` 型のオブジェクト。
 
 *そうです*\
@@ -155,7 +155,7 @@ The map m1 is less than the map m2.
 The map m1 is not less than the map m3.
 ```
 
-## <a name="op_lt_eq"></a> 演算子&lt;=
+## <a name="op_lt_eq"></a>operator&lt;=
 
 演算子の左辺の map オブジェクトが右辺の map オブジェクト以下かどうかを調べます。
 
@@ -167,7 +167,7 @@ bool operator<=(
 
 ### <a name="parameters"></a>パラメーター
 
-*左*\
+*左側*\
 `map` 型のオブジェクト。
 
 *そうです*\
@@ -223,7 +223,7 @@ The map m1 is greater than the map m3.
 The map m1 is less than or equal to the map m4.
 ```
 
-## <a name="op_eq_eq"></a> 演算子 = =
+## <a name="op_eq_eq"></a>operator = =
 
 演算子の左辺の map オブジェクトが右辺の map オブジェクトと等しいかどうかを調べます。
 
@@ -235,7 +235,7 @@ bool operator==(
 
 ### <a name="parameters"></a>パラメーター
 
-*左*\
+*左側*\
 `map` 型のオブジェクト。
 
 *そうです*\
@@ -300,7 +300,7 @@ bool operator>(
 
 ### <a name="parameters"></a>パラメーター
 
-*左*\
+*左側*\
 `map` 型のオブジェクト。
 
 *そうです*\
@@ -364,7 +364,7 @@ bool operator>=(
 
 ### <a name="parameters"></a>パラメーター
 
-*左*\
+*左側*\
 `map` 型のオブジェクト。
 
 *そうです*\
@@ -420,7 +420,7 @@ Map m1 is greater than or equal to map m3.
 Map m1 is greater than or equal to map m4.
 ```
 
-## <a name="op_neq_multimap"></a> 演算子! = (multimap)
+## <a name="op_neq_multimap"></a>operator! = (multimap)
 
 演算子の左辺の multimap オブジェクトが右辺の multimap オブジェクトと等しくないかどうかをテストします。
 
@@ -432,7 +432,7 @@ bool operator!=(
 
 ### <a name="parameters"></a>パラメーター
 
-*左*\
+*左側*\
 `multimap` 型のオブジェクト。
 
 *そうです*\
@@ -497,7 +497,7 @@ bool operator<(
 
 ### <a name="parameters"></a>パラメーター
 
-*左*\
+*左側*\
 `multimap` 型のオブジェクト。
 
 *そうです*\
@@ -550,11 +550,7 @@ The multimap m1 is less than the multimap m2.
 The multimap m1 is not less than the multimap m3.
 ```
 
-<<<<<<< HEAD
-## <a name="eq_multimap"></a> 演算子&lt;=
-=======
 ## <a name="op_lt_eq_multimap"></a>  演算子&lt;=
->>>>>>> 009c7ce384664f2a62ffb0bc61d6586b585ed38a
 
 演算子の左辺の multimap オブジェクトが右辺の multimap オブジェクト以下かどうかをテストします。
 
@@ -566,7 +562,7 @@ bool operator<=(
 
 ### <a name="parameters"></a>パラメーター
 
-*左*\
+*左側*\
 `multimap` 型のオブジェクト。
 
 *そうです*\
@@ -622,7 +618,7 @@ m1 is greater than m3
 m1 is less than or equal to m4
 ```
 
-## <a name="op_eq_eq_multimap"></a> 演算子 = =
+## <a name="op_eq_eq_multimap"></a>operator = =
 
 演算子の左辺の multimap オブジェクトが右辺の multimap オブジェクトと等しいかどうかをテストします。
 
@@ -634,7 +630,7 @@ bool operator==(
 
 ### <a name="parameters"></a>パラメーター
 
-*左*\
+*左側*\
 `multimap` 型のオブジェクト。
 
 *そうです*\
@@ -699,7 +695,7 @@ bool operator>(
 
 ### <a name="parameters"></a>パラメーター
 
-*左*\
+*左側*\
 `multimap` 型のオブジェクト。
 
 *そうです*\
@@ -752,7 +748,7 @@ Multimap m1 is not greater than multimap m2.
 The multimap m1 is greater than the multimap m3.
 ```
 
-## <a name="op_gt_eq_multimap"></a> 演算子&gt;=
+## <a name="op_gt_eq_multimap"></a>operator&gt;=
 
 演算子の左辺の multimap オブジェクトが右辺の multimap オブジェクト以上かどうかをテストします。
 
@@ -764,7 +760,7 @@ bool operator>=(
 
 ### <a name="parameters"></a>パラメーター
 
-*左*\
+*左側*\
 `multimap` 型のオブジェクト。
 
 *そうです*\

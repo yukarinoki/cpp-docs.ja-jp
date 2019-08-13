@@ -12,7 +12,7 @@ helpviewer_keywords:
 ms.assetid: 40ce8931-1ecc-491a-815f-733b23fcba35
 ms.openlocfilehash: e2aed98d9131b3d7b96cdc3e3297823d69d0ad38
 ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62393793"
@@ -68,9 +68,9 @@ void GlobalFunction() {
 }
 ```
 
-##  <a name="vcconbasicconceptsinusingmanagedexceptionsanchor2"></a> CLR の拡張機能の Try/catch ブロック
+##  <a name="vcconbasicconceptsinusingmanagedexceptionsanchor2"></a> CLR の拡張機能の Try/Catch ブロック
 
-同じ**お試しください**/**キャッチ**CLR とネイティブの例外の両方をキャッチするためのブロック構造を使用できます。
+同じ**try**/**catch**ブロック構造を使用して、CLR とネイティブの両方の例外をキャッチできます。
 
 ```
 // clr_exception_handling_3.cpp

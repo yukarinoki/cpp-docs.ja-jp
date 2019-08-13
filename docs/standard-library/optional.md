@@ -1,21 +1,20 @@
 ---
 title: '&lt;optional&gt;'
-ms.date: 11/04/2016
+ms.date: 08/06/2019
 f1_keywords:
 - <optional>
 helpviewer_keywords:
 - <optional>
-ms.assetid: 8b4ab09e-1475-434a-b4e0-fdbc07a08b5b
-ms.openlocfilehash: 83a0ad52735f92d731dafb32ad1be5a8278776b4
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: f3b4896a3cb4774e46b36480dd9769fa131fc287
+ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447180"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68957173"
 ---
 # <a name="ltoptionalgt"></a>&lt;optional&gt;
 
-コンテナーテンプレートクラスオプションと複数のサポートテンプレートを定義します。
+コンテナーのテンプレート クラス `optional` と複数のサポート用テンプレートを定義します。
 
 ## <a name="requirements"></a>必要条件
 
@@ -29,12 +28,12 @@ ms.locfileid: "68447180"
 
 |||
 |-|-|
-|[operator==](../standard-library/optional-operators.md#op_eq_eq)|演算子の左側の `optional` オブジェクトが右側の `optional` オブジェクトと等しいかどうかを調べます。|
-|[operator!=](../standard-library/optional-operators.md#op_neq)|演算子の左側の `optional` オブジェクトが右側の `optional` オブジェクトと等しくないかどうかを調べます。|
-|[operator<](../standard-library/optional-operators.md#op_lt)|演算子の左側の `optional` オブジェクトが右側の `optional` オブジェクトより小さいかどうかを調べます。|
-|[operator<=](../standard-library/optional-operators.md#op_lt_eq)|演算子の左側の `optional` オブジェクトが右側の  `optional` オブジェクト以下かどうかを調べます。|
-|[operator>](../standard-library/optional-operators.md#op_gt)|演算子の左側の `optional` オブジェクトが右側の `optional` オブジェクトより大きいかどうかを調べます。|
-|[operator>=](../standard-library/optional-operators.md#op_lt_eq)|演算子の左側の `optional` オブジェクトが右側の `optional` オブジェクト以上であるかどうかを調べます。|
+|[operator==](../standard-library/optional-operators.md#op_eq_eq)|オブジェクトが別のオブジェクトと等しいかどうかをテストします。|
+|[operator!=](../standard-library/optional-operators.md#op_neq)|オブジェクトが別のオブジェクトと等しくないかどうかをテストします。|
+|[operator<](../standard-library/optional-operators.md#op_lt)|左側のオブジェクトが右側のオブジェクトより小さいかどうかをテストします。|
+|[operator<=](../standard-library/optional-operators.md#op_lt_eq)|左側のオブジェクトが右側のオブジェクト以下かどうかをテストします。|
+|[operator>](../standard-library/optional-operators.md#op_gt)|左側のオブジェクトが右側のオブジェクトより大きいかどうかをテストします。|
+|[operator>=](../standard-library/optional-operators.md#op_lt_eq)|左側のオブジェクトが右側のオブジェクト以上かどうかをテストします。|
 
 > [!NOTE]
 > 関係比較に加えて、 \<オプションの > 演算子は**nullopt**と`T`の比較もサポートします。
@@ -44,13 +43,13 @@ ms.locfileid: "68447180"
 |||
 |-|-|
 |[make_optional](../standard-library/optional-functions.md#make_optional)|オブジェクトを省略可能にします。|
-|[swap](../standard-library/optional-functions.md#swap)||
+|[swap](../standard-library/optional-functions.md#swap)|2つ`optional`のオブジェクトの格納されている値を交換します。|
 
 ### <a name="classes-and-structs"></a>クラスと構造体
 
 |||
 |-|-|
-|[hash]()||
+|hash|含まれているオブジェクトのハッシュを返します。|
 |[省略可能なクラス](../standard-library/optional-class.md)|値を保持できるか、または保持できないオブジェクトを表します。|
 |[nullopt_t 構造体](../standard-library/nullopt-t-structure.md)|値を保持しないオブジェクトを記述します。|
 |[bad_optional_access クラス](../standard-library/bad-optional-access-class.md)|存在しない値にアクセスしようとしたことを報告する例外としてスローされるオブジェクトを表します。|
@@ -59,7 +58,7 @@ ms.locfileid: "68447180"
 
 |||
 |-|-|
-|[nullopt](../standard-library/optional-functions.md#nullopt)||
+|[nullopt](../standard-library/optional-functions.md#nullopt)|比較のため`nullopt_t`ののインスタンス。|
 
 ## <a name="see-also"></a>関連項目
 

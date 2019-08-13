@@ -1,18 +1,17 @@
 ---
 title: Visual Studio で C++ メイクファイル プロジェクトを作成する
-ms.date: 05/16/2019
+ms.date: 08/05/2019
 f1_keywords:
 - vc.appwiz.makefile.project
 helpviewer_keywords:
-- Makefile projects, creating
-- project files [C++], Makefile projects
+- Makefile projects [C++]
 ms.assetid: dd077af3-97a8-48fb-baaa-cf7e07ddef61
-ms.openlocfilehash: b460b16b3a64818501187b00e503ad0179d26443
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: 861cd88440a697ce5a3abc83109526227ae42f8e
+ms.sourcegitcommit: bd7ddc044f9083246614b602ef6a758775313214
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837389"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68866130"
 ---
 # <a name="create-a-c-makefile-project"></a>C++ メイクファイル プロジェクトを作成する
 
@@ -25,7 +24,7 @@ ms.locfileid: "65837389"
 - **Visual Studio 2017 以降**: **[フォルダーを開く]** 機能を使用して、MSBuild システムを介すことなく、メイクファイル プロジェクトをそのまま編集およびビルドします。 詳細については、「[Open Folder projects for C++](../open-folder-projects-cpp.md)」 (C++ の [フォルダーを開く] プロジェクト) をご覧ください。
 - **Visual Studio 2019 以降**: Linux 用の UNIX メイクファイル プロジェクトを作成します。
 
-## <a name="a-namecreateamakefileproject-to-create-a-makefile-project-with-the-makefile-project-template"></a><a name="create_a_makefile_project"> メイクファイル プロジェクト テンプレートでメイクファイル プロジェクトを作成するには
+## <a name="a-namecreate_a_makefile_project-to-create-a-makefile-project-with-the-makefile-project-template"></a><a name="create_a_makefile_project"> メイクファイル プロジェクト テンプレートでメイクファイル プロジェクトを作成するには
 
 Visual Studio 2017 以降では、メイクファイル プロジェクト テンプレートは、C++ デスクトップ開発ワークロードがインストールされているときに利用できます。
 
@@ -51,7 +50,7 @@ Visual Studio 2017 以降では、メイクファイル プロジェクト テ�
 
 ### <a name="to-create-a-makefile-project-in-visual-studio-2015-or-visual-studio-2017"></a>Visual Studio 2015 または Visual Studio 2017 でメイクファイル プロジェクトを作成するには
 
-1. Visual Studio のスタート ページで、 **[新しいプロジェクト]** 検索ボックスに「makefile」と入力します。 あるいは、 **[新しいプロジェクト]** ダイアログ ボックスで **[Visual C++]** 、 **[全般]** (Visual Studio 2015) または **[その他]** (Visual Studio 2017) の順に展開し、[テンプレート] ウィンドウの **[メイクファイル プロジェクト]** を選択してプロジェクト ウィザードを開きます。
+1. Visual Studio のスタート ページで、 **[新しいプロジェクト]** 検索ボックスに「makefile」と入力します。 あるいは、 **[新しいプロジェクト]** ダイアログ ボックスで **[Visual C++]**  >  **[全般]** (Visual Studio 2015) または **[その他]** (Visual Studio 2017) の順に展開し、[テンプレート] ウィンドウの **[メイクファイル プロジェクト]** を選択してプロジェクト ウィザードを開きます。
 
 1. **[アプリケーションの設定]** ページで、デバッグと製品ビルドに対してコマンド、出力、クリーンアップ、およびリビルドに関する情報を指定します。
 
