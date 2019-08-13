@@ -165,7 +165,7 @@ CATCH_ALL(exception_object_pointer_name)
 
 ### <a name="example"></a>例
 
-[CFile:: Abort](../../mfc/reference/cfile-class.md#abort)の例を参照してください。
+[CFile::Abort](../../mfc/reference/cfile-class.md#abort) の例を参照してください。
 
 ### <a name="requirements"></a>必要条件
 
@@ -296,7 +296,7 @@ THROW_LAST()
 
 ### <a name="example"></a>例
 
-[CFile:: Abort](../../mfc/reference/cfile-class.md#abort)の例を参照してください。
+[CFile::Abort](../../mfc/reference/cfile-class.md#abort) の例を参照してください。
 
 ### <a name="requirements"></a>必要条件
 
@@ -336,7 +336,7 @@ void AfxThrowFileException(
 ### <a name="parameters"></a>パラメーター
 
 *cause*<br/>
-例外の理由を示す整数を指定します。 使用可能な値の一覧については、「 [CFileException:: m_cause](../../mfc/reference/cfileexception-class.md#m_cause)」を参照してください。
+例外の原因を示す整数を指定します。 使用可能な値については、[CFileException::m_cause](../../mfc/reference/cfileexception-class.md#m_cause)を参照してください。
 
 *lOsError*<br/>
 例外の原因を示すオペレーティングシステムエラー番号 (使用可能な場合) が含まれます。 エラーコードの一覧については、オペレーティングシステムのマニュアルを参照してください。

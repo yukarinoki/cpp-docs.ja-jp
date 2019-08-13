@@ -68,7 +68,7 @@ void GlobalFunction() {
 }
 ```
 
-##  <a name="vcconbasicconceptsinusingmanagedexceptionsanchor2"></a> CLR の拡張機能の Try/catch ブロック
+##  <a name="vcconbasicconceptsinusingmanagedexceptionsanchor2"></a> CLR の拡張機能の Try/Catch ブロック
 
 同じ**try**/**catch**ブロック構造を使用して、CLR とネイティブの両方の例外をキャッチできます。
 
