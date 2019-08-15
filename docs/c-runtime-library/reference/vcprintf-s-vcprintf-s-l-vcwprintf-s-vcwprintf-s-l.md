@@ -43,14 +43,14 @@ helpviewer_keywords:
 - vtcprintf_s function
 - formatted text [C++]
 ms.assetid: 5a46d45a-30db-45df-9850-455cbdac5636
-ms.openlocfilehash: e27018d02c8fb77b0e2a1c02164d3b6d112448ab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ccd346141db9f4974ee5f9300792260bf2a8ec72
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62365352"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499325"
 ---
-# <a name="vcprintfs-vcprintfsl-vcwprintfs-vcwprintfsl"></a>_vcprintf_s、_vcprintf_s_l、_vcwprintf_s、_vcwprintf_s_l
+# <a name="_vcprintf_s-_vcprintf_s_l-_vcwprintf_s-_vcwprintf_s_l"></a>_vcprintf_s、_vcprintf_s_l、_vcwprintf_s、_vcwprintf_s_l
 
 引数リストへのポインターを使用して、書式付き出力をコンソールに書き込みます。 これらのバージョンの [_vcprintf、_vcprintf_l、_vcwprintf、_vcwprintf_l](vcprintf-vcprintf-l-vcwprintf-vcwprintf-l.md) は、「[CRT のセキュリティ機能](../../c-runtime-library/security-features-in-the-crt.md)」にあるとおり、セキュリティが強化されています。
 
@@ -97,16 +97,16 @@ int _vcwprintf_s_l(
 
 書き込まれた文字数。出力エラーが発生した場合は負の値を返します。
 
-などの場合、これらの関数のセキュリティが低いバージョン*形式*null ポインターの場合で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 これらの関数のセキュリティが低いバージョンとは異なり、また場合*形式*有効な形式を指定しない無効なパラメーター例外が生成されます。 実行が続行すると、これらの関数の戻り値はエラー コードとセットを許可された場合**errno**にそのエラー コード。 既定のエラー コードは**EINVAL**より特定の値が適用されない場合。
+これらの関数のセキュリティが低いバージョンと同様に、 *format*が null ポインターの場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 また、これらの関数のセキュリティが低いバージョンとは異なり、 *format*で有効な形式が指定されていない場合は、無効なパラメーターの例外が生成されます。 実行の継続が許可された場合、これらの関数はエラーコードを返し、 **errno**をそのエラーコードに設定します。 より具体的な値が適用されない場合、既定のエラーコードは**EINVAL**です。
 
 ## <a name="remarks"></a>Remarks
 
-これらの各関数は、引数リストへのポインターを使用して、指定されたデータを書式化してコンソールに書き込みます。 **_vcwprintf_s**のワイド文字バージョンは、 **_vcprintf_s**します。 引数としてワイド文字列を使用します。
+これらの各関数は、引数リストへのポインターを使用して、指定されたデータを書式化してコンソールに書き込みます。 **vcwprintf_s**は、 **(vcprintf_s)** のワイド文字バージョンです。 引数としてワイド文字列を使用します。
 
-これらの関数がのバージョン、 **_l**現在のロケールの代わりに渡されるロケール パラメーターを使用することを除き、サフィックスは同じです。
+**_L**サフィックスが付いているこれらの関数のバージョンは、現在のロケールの代わりに渡されたロケールパラメーターを使用する点を除いて同じです。
 
 > [!IMPORTANT]
-> *format* にユーザー定義の文字列を指定しないでください。 詳しくは、「 [バッファー オーバーランの回避](/windows/desktop/SecBP/avoiding-buffer-overruns)」をご覧ください。
+> *format* にユーザー定義の文字列を指定しないでください。 詳しくは、「 [バッファー オーバーランの回避](/windows/win32/SecBP/avoiding-buffer-overruns)」をご覧ください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -119,8 +119,8 @@ int _vcwprintf_s_l(
 
 |ルーチンによって返される値|必須ヘッダー|省略可能なヘッダー|
 |-------------|---------------------|----------------------|
-|**_vcprintf_s**、 **_vcprintf_s_l**|\<conio.h> および \<stdarg.h>|\<varargs.h>*|
-|**_vcwprintf_s**、 **_vcwprintf_s_l**|\<conio.h> または \<wchar.h>、および \<stdarg.h>|\<varargs.h>*|
+|**vcprintf_s**、 **_vcprintf_s_l**|\<conio.h> および \<stdarg.h>|\<varargs.h>*|
+|**vcwprintf_s**、 **_vcwprintf_s_l**|\<conio.h> または \<wchar.h>、および \<stdarg.h>|\<varargs.h>*|
 
 \* UNIX V との互換性用。
 

@@ -9,20 +9,20 @@ helpviewer_keywords:
 - side-by-side applications [C++]
 - builds [C++], side-by-side assemblies
 ms.assetid: 9465904e-76f7-48bd-bb3f-c55d8f1699b6
-ms.openlocfilehash: 8164ede1379e573b08f699cd55c199f6fa228823
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: b7deb68a441d392464dad8763f80bd4d9cdfcb17
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220977"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493359"
 ---
 # <a name="building-cc-isolated-applications-and-side-by-side-assemblies"></a>C/C++ 分離アプリケーションおよび side-by-side アセンブリのビルド
 
-Visual Studio の概念に基づく Windows クライアント アプリケーションのデプロイ モデルをサポートしている[分離アプリケーション](/windows/desktop/SbsCs/isolated-applications)と[サイド バイ サイド アセンブリ](/windows/desktop/SbsCs/about-side-by-side-assemblies-)します。 既定では、Visual Studio でビルドすべてネイティブ C/C++アプリケーションを使用する分離アプリケーションとして[マニフェスト](/windows/desktop/sbscs/manifests)Visual で依存関係を記述するC++ライブラリ。
+Visual Studio では、[分離アプリケーション](/windows/win32/SbsCs/isolated-applications)と[side-by-side アセンブリ](/windows/win32/SbsCs/about-side-by-side-assemblies-)の概念に基づいて、Windows クライアントアプリケーションの配置モデルがサポートされています。 既定では、visual Studio は、VisualC++ C++ライブラリへの依存関係を記述するために[マニフェスト](/windows/win32/sbscs/manifests)を使用する分離アプリケーションとして、すべてのネイティブ C/アプリケーションをビルドします。
 
-C/C++ プログラムを分離アプリケーションとしてビルドすることには、さまざまな利点があります。 たとえば、分離アプリケーションは、他の C/C++ アプリケーションによって Visual C++ ライブラリがインストールまたはアンインストールされる場合に影響を受けません。 分離アプリケーションで使用される Visual C++ ライブラリは、アプリケーションのローカル フォルダーに、またはネイティブ アセンブリ キャッシュ (WinSxS) へのインストールによって、再配布される場合もあります。ただし、 [発行者構成ファイル](/windows/desktop/SbsCs/publisher-configuration)を使用することによって、既に配置されているアプリケーションの Visual C++ ライブラリのサービス提供を簡略化できます。 分離アプリケーションの配置モデルにより、特定のコンピューターで実行されている C/C++ アプリケーションで最新バージョンの Visual C++ ライブラリが使用されるようにすることが簡単になります。一方で、アプリケーションが依存する DLL に対する明示的なバージョン バインディングは、引き続きシステム管理者およびアプリケーション作成者が制御できます。
+C/C++ プログラムを分離アプリケーションとしてビルドすることには、さまざまな利点があります。 たとえば、分離アプリケーションは、他の C/C++ アプリケーションによって Visual C++ ライブラリがインストールまたはアンインストールされる場合に影響を受けません。 分離アプリケーションで使用される Visual C++ ライブラリは、アプリケーションのローカル フォルダーに、またはネイティブ アセンブリ キャッシュ (WinSxS) へのインストールによって、再配布される場合もあります。ただし、 [発行者構成ファイル](/windows/win32/SbsCs/publisher-configuration)を使用することによって、既に配置されているアプリケーションの Visual C++ ライブラリのサービス提供を簡略化できます。 分離アプリケーションの配置モデルにより、特定のコンピューターで実行されている C/C++ アプリケーションで最新バージョンの Visual C++ ライブラリが使用されるようにすることが簡単になります。一方で、アプリケーションが依存する DLL に対する明示的なバージョン バインディングは、引き続きシステム管理者およびアプリケーション作成者が制御できます。
 
-このセクションでは、C/C++ アプリケーションを分離アプリケーションとしてビルドし、マニフェストを使用して Visual C++ ライブラリにバインドされるようにする方法について説明します。 このセクションの情報は主にネイティブ、または、非管理対象に適用されますC++アプリケーション。 ネイティブの展開についてはC++、Visual Studio でビルドされたアプリケーションを参照してください[Visual の再配布C++ファイル](../windows/redistributing-visual-cpp-files.md)します。
+このセクションでは、C/C++ アプリケーションを分離アプリケーションとしてビルドし、マニフェストを使用して Visual C++ ライブラリにバインドされるようにする方法について説明します。 このセクションの情報は、主にネイティブC++アプリケーションまたはアンマネージアプリケーションに適用されます。 Visual Studio でビルドさC++れたネイティブアプリケーションの配置の詳細については、「 [visual C++ Files](../windows/redistributing-visual-cpp-files.md)の再配布」を参照してください。
 
 ## <a name="in-this-section"></a>このセクションの内容
 
@@ -42,6 +42,6 @@ C/C++ プログラムを分離アプリケーションとしてビルドする�
 
 ## <a name="related-sections"></a>関連項目
 
-[分離アプリケーションと side-by-side アセンブリ](/windows/desktop/SbsCs/isolated-applications-and-side-by-side-assemblies-portal)
+[分離アプリケーションと side-by-side アセンブリ](/windows/win32/SbsCs/isolated-applications-and-side-by-side-assemblies-portal)
 
 [デスクトップ アプリケーションの配置](../windows/deploying-native-desktop-applications-visual-cpp.md)

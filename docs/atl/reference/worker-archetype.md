@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Worker archetype
 ms.assetid: 834145cd-09d3-4149-bc99-620e1871cbfb
-ms.openlocfilehash: 3efd77c38508df8302fa4e1dd5c9b51f66cd5e43
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 7f28b9e64c88a5be440417dd9d22f129ee7d6edf
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915459"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495270"
 ---
 # <a name="worker-archetype"></a>ワーカーの原型クラス
 
@@ -74,7 +74,7 @@ void Execute(
 ワーカークラスによって認識されるカスタムパラメーター。 また、と`WorkerArchetype::Initialize` `Terminate`にも渡されます。
 
 *pOverlapped*<br/>
-作業項目がキューに格納されたキューを作成するために使用される、[オーバーラップ](/windows/desktop/api/minwinbase/ns-minwinbase-overlapped)された構造体へのポインター。
+作業項目がキューに格納されたキューを作成するために使用される、[オーバーラップ](/windows/win32/api/minwinbase/ns-minwinbase-overlapped)された構造体へのポインター。
 
 ## <a name="initialize"></a>WorkerArchetype:: Initialize
 

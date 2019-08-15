@@ -33,14 +33,14 @@ helpviewer_keywords:
 - wpopen function
 - _wpopen function
 ms.assetid: eb718ff2-c87d-4bd4-bd2e-ba317c3d6973
-ms.openlocfilehash: 5284685f56a73c4c7e48fce981745220651399a1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 03eb36573abe8e26c47e6dd38c009e5819e60f8f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156162"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499596"
 ---
-# <a name="popen-wpopen"></a>_popen、_wpopen
+# <a name="_popen-_wpopen"></a>_popen、_wpopen
 
 パイプを作成し、コマンドを実行します。
 
@@ -70,13 +70,13 @@ FILE *_wpopen(
 
 ## <a name="return-value"></a>戻り値
 
-作成されたパイプの一方の端に関連付けられているストリームを返します。 パイプのもう一方の端は、開始されたコマンドの標準入力または標準出力に関連付けられます。 エラー発生時には、関数は **NULL** を返します。 エラー場合など、無効なパラメーターである場合*コマンド*または*モード*null ポインター、または*モード*有効なモードでない**errno**に設定されています。**EINVAL**します。 有効なモードについては、「解説」を参照してください。
+作成されたパイプの一方の端に関連付けられているストリームを返します。 パイプのもう一方の端は、開始されたコマンドの標準入力または標準出力に関連付けられます。 エラー発生時には、関数は **NULL** を返します。 *コマンド*または*モード*が null ポインターの場合や、*モード*が有効なモードでない場合など、エラーが無効なパラメーターである場合、 **errno**は**EINVAL**に設定されます。 有効なモードについては、「解説」を参照してください。
 
 エラー コードの詳細については、「[_doserrno、errno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
 ## <a name="remarks"></a>Remarks
 
-**_Popen**関数は、パイプを作成し、指定した文字列でコマンド プロセッサの開始されたコピーを非同期に実行*コマンド*します。 *mode* 文字列では、次のように、要求するアクセスの種類を指定します。
+**_Popen**関数は、パイプを作成し、指定した文字列*コマンド*を使用して、コマンドプロセッサの生成されたコピーを非同期に実行します。 *mode* 文字列では、次のように、要求するアクセスの種類を指定します。
 
 |アクセス モード|説明|
 |-|-|
@@ -86,9 +86,9 @@ FILE *_wpopen(
 |**"t"**|テキスト モードで開きます。|
 
 > [!NOTE]
-> Windows のプログラムで使用されている場合、 **_popen**関数は、プログラムが無期限に応答を停止する原因となる無効なファイル ポインターを返します。 **_popen**コンソール アプリケーションで正常に動作します。 入力と出力をリダイレクトする Windows アプリケーションを作成するを参照してください。[リダイレクトされた入出力を持つ子プロセスを作成する](/windows/desktop/ProcThread/creating-a-child-process-with-redirected-input-and-output)Windows SDK に含まれています。
+> Windows プログラムで使用した場合、 **_popen**関数は無効なファイルポインターを返し、プログラムは無期限に応答を停止します。 **_popen**は、コンソールアプリケーションで正常に動作します。 入力と出力をリダイレクトする Windows アプリケーションを作成するには、「Windows SDK にリダイレクトされた[入力と出力を持つ子プロセスの作成](/windows/win32/ProcThread/creating-a-child-process-with-redirected-input-and-output)」を参照してください。
 
-**_wpopen**のワイド文字バージョンです **_popen**、*パス*引数 **_wpopen**はワイド文字列です。 **_wpopen**と **_popen**動作は同じです。
+**_wpopen**は、 **_popen**のワイド文字バージョンです。 **_wpopen**への*パス*引数は、ワイド文字列です。 それ以外では、 **_wpopen**と **_popen**は同じように動作します。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 

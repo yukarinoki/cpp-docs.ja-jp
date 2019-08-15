@@ -5,20 +5,20 @@ helpviewer_keywords:
 - connection points [C++], examples
 - examples [ATL]
 ms.assetid: a49721b7-f308-43de-8868-f662a94bc81a
-ms.openlocfilehash: 3113637a3f777a56bc0b0994203ce709fbc189d5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f33364cee65031c358fb546312f3fe2b7ae854d3
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223343"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69491792"
 ---
 # <a name="atl-connection-point-example"></a>ATL 接続ポイントの例
 
-この例は、サポートするオブジェクトを示しています。 [IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink)アウトゴーイング インターフェイスとして。
+次の例は、送信インターフェイスとして[IPropertyNotifySink](/windows/win32/api/ocidl/nn-ocidl-ipropertynotifysink)をサポートするオブジェクトを示しています。
 
 [!code-cpp[NVC_ATL_Windowing#84](../atl/codesnippet/cpp/atl-connection-point-example_1.h)]
 
-指定するときに`IPropertyNotifySink`クラスを使用する送信インターフェイスとして[IPropertyNotifySinkCP](../atl/reference/ipropertynotifysinkcp-class.md)の代わりに`IConnectionPointImpl`します。 例:
+を送信`IPropertyNotifySink`インターフェイスとして指定する場合は、の`IConnectionPointImpl`代わりに[IPropertyNotifySinkCP](../atl/reference/ipropertynotifysinkcp-class.md)クラスを使用できます。 例えば:
 
 [!code-cpp[NVC_ATL_Windowing#85](../atl/codesnippet/cpp/atl-connection-point-example_2.h)]
 
