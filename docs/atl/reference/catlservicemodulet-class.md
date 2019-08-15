@@ -35,12 +35,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlServiceModuleT class
 ms.assetid: 8fc753ce-4a50-402b-9b4a-0a4ce5dd496c
-ms.openlocfilehash: 095d909fefe0053b742368f260cf61937c2f5426
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 2854d0902700b268383eca094bed35843ea73272
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915863"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497738"
 ---
 # <a name="catlservicemodulet-class"></a>CAtlServiceModuleT クラス
 
@@ -244,7 +244,7 @@ void __cdecl LogEvent(LPCTSTR pszFormat, ...) throw();
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、関数[Reportevent](/windows/desktop/api/winbase/nf-winbase-reporteventa)を使用して、詳細情報をイベントログに書き込みます。 サービスが実行されていない場合は、文字列がコンソールに送信されます。
+このメソッドは、関数[Reportevent](/windows/win32/api/winbase/nf-winbase-reporteventw)を使用して、詳細情報をイベントログに書き込みます。 サービスが実行されていない場合は、文字列がコンソールに送信されます。
 
 ##  <a name="m_bservice"></a>  CAtlServiceModuleT::m_bService
 
@@ -280,7 +280,7 @@ SERVICE_STATUS_HANDLE m_hServiceStatus;
 
 ### <a name="remarks"></a>Remarks
 
-[SERVICE_STATUS](/windows/desktop/api/winsvc/ns-winsvc-service_status)構造体には、サービスに関する情報が含まれています。
+[SERVICE_STATUS](/windows/win32/api/winsvc/ns-winsvc-service_status)構造体には、サービスに関する情報が含まれています。
 
 ##  <a name="m_status"></a>CAtlServiceModuleT:: m_status
 
@@ -292,7 +292,7 @@ SERVICE_STATUS m_status;
 
 ### <a name="remarks"></a>Remarks
 
-[SERVICE_STATUS](/windows/desktop/api/winsvc/ns-winsvc-service_status)構造体には、サービスに関する情報が含まれています。
+[SERVICE_STATUS](/windows/win32/api/winsvc/ns-winsvc-service_status)構造体には、サービスに関する情報が含まれています。
 
 ##  <a name="m_szservicename"></a>  CAtlServiceModuleT::m_szServiceName
 
@@ -432,7 +432,7 @@ HRESULT Run(int nShowCmd = SW_HIDE) throw();
 ### <a name="parameters"></a>パラメーター
 
 *nShowCmd*<br/>
-ウィンドウの表示方法を指定します。 このパラメーターには、 [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain)セクションで説明されている値のいずれかを指定できます。 既定値は SW_HIDE です。
+ウィンドウの表示方法を指定します。 このパラメーターには、 [WinMain](/windows/win32/api/winbase/nf-winbase-winmain)セクションで説明されている値のいずれかを指定できます。 既定値は SW_HIDE です。
 
 ### <a name="return-value"></a>戻り値
 
@@ -475,7 +475,7 @@ void SetServiceStatus(DWORD dwState) throw();
 ### <a name="parameters"></a>パラメーター
 
 *dwState*<br/>
-新しい状態。 使用可能な値については、 [SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus)を参照してください。
+新しい状態。 使用可能な値については、 [SetServiceStatus](/windows/win32/api/winsvc/nf-winsvc-setservicestatus)を参照してください。
 
 ### <a name="remarks"></a>Remarks
 
@@ -492,7 +492,7 @@ HRESULT Start(int nShowCmd) throw();
 ### <a name="parameters"></a>パラメーター
 
 *nShowCmd*<br/>
-ウィンドウの表示方法を指定します。 このパラメーターには、 [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain)セクションで説明されている値のいずれかを指定できます。
+ウィンドウの表示方法を指定します。 このパラメーターには、 [WinMain](/windows/win32/api/winbase/nf-winbase-winmain)セクションで説明されている値のいずれかを指定できます。
 
 ### <a name="return-value"></a>戻り値
 
@@ -553,7 +553,7 @@ int WinMain(int nShowCmd) throw();
 ### <a name="parameters"></a>パラメーター
 
 *nShowCmd*<br/>
-ウィンドウの表示方法を指定します。 このパラメーターには、 [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain)セクションで説明されている値のいずれかを指定できます。
+ウィンドウの表示方法を指定します。 このパラメーターには、 [WinMain](/windows/win32/api/winbase/nf-winbase-winmain)セクションで説明されている値のいずれかを指定できます。
 
 ### <a name="return-value"></a>戻り値
 

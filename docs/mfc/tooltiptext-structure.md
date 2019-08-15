@@ -7,12 +7,12 @@ helpviewer_keywords:
 - TOOLTIPTEXT structure [MFC]
 - tool tips [MFC], notifications
 ms.assetid: 547591bf-80f5-400e-a2a7-0708cfffbb5d
-ms.openlocfilehash: 2eb899e66acbadbe45aae2c8adbb356bf4730191
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 80b95225a277a7985c30e5ea453597b06e501753
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915251"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513307"
 ---
 # <a name="tooltiptext-structure"></a>TOOLTIPTEXT 構造体
 
@@ -31,7 +31,7 @@ typedef struct {
 ```
 
 *hdr*<br/>
-テキストが必要なツールを識別します。 この構造体に必要な唯一のメンバーは、コントロールのコマンド ID です。 コントロールのコマンド ID は、構文`hdr.idFrom`でアクセスされる、 **NMHDR**構造体の*idfrom*メンバーに含まれます。 **Nmhdr**構造体のメンバーの説明については、「 [nmhdr](/windows/desktop/api/richedit/ns-richedit-nmhdr) 」を参照してください。
+テキストが必要なツールを識別します。 この構造体に必要な唯一のメンバーは、コントロールのコマンド ID です。 コントロールのコマンド ID は、構文`hdr.idFrom`でアクセスされる、 **NMHDR**構造体の*idfrom*メンバーに含まれます。 **Nmhdr**構造体のメンバーの説明については、「 [nmhdr](/windows/win32/api/richedit/ns-richedit-nmhdr) 」を参照してください。
 
 *lpszText*<br/>
 ツールのテキストを受信する文字列のアドレス。

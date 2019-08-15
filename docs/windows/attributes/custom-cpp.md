@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - custom attributes, defining
 ms.assetid: 3abac928-4d55-4ea6-8cf6-8427a4ad79f1
-ms.openlocfilehash: 227e67696e679452a9c6c0e18c04e3d918f7a93f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 19f28963a18abf42c6f629ac0f6491628387aa6d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148179"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69490999"
 ---
 # <a name="custom-c"></a>custom (C++)
 
-タイプ ライブラリ内のオブジェクトのメタデータを定義します。
+タイプライブラリ内のオブジェクトのメタデータを定義します。
 
 ## <a name="syntax"></a>構文
 
@@ -32,13 +32,13 @@ ms.locfileid: "62148179"
 一意の ID。
 
 *value*<br/>
-バリアントを入れる値。
+バリアントに含めることができる値。
 
 ## <a name="remarks"></a>Remarks
 
-**カスタム**情報をタイプ ライブラリに格納すると、C++ 属性。 ツールをタイプ ライブラリからカスタムの値を読み取る必要があります。
+**カスタム** C++属性によって、情報がタイプライブラリに配置されます。 タイプライブラリからカスタム値を読み取るツールが必要です。
 
-**カスタム**属性と同じ機能を持つ、[カスタム](/windows/desktop/Midl/custom)MIDL 属性。
+**カスタム**属性には、[カスタム](/windows/win32/Midl/custom)MIDL 属性と同じ機能があります。
 
 ## <a name="requirements"></a>必要条件
 
@@ -46,9 +46,9 @@ ms.locfileid: "62148179"
 
 |||
 |-|-|
-|**対象**|非 COM**インターフェイス**、**クラス**、**列挙**s、`idl_module`メソッド、インターフェイスのメンバー、インターフェイスのパラメーター、 **typedef**、s**共用体**s、**構造体**s|
+|**対象**|非 COM**インターフェイス**、**クラス**、**列挙型**、 `idl_module`メソッド、インターフェイスメンバー、インターフェイスパラメーター、 **typedef**s、**共用**体 s、**構造体**|
 |**反復可能**|はい|
-|**必要な属性**|**コクラス**(クラスで使用) 場合|
+|**必要な属性**|**コクラス**(クラスで使用される場合)|
 |**無効な属性**|なし|
 
 属性コンテキストの詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
