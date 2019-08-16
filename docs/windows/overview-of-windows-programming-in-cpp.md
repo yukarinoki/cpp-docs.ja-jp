@@ -2,12 +2,12 @@
 title: C++ でプログラミングする Windows の概要
 ms.date: 07/28/2019
 ms.assetid: efc691d7-21f3-47ae-ae56-cab999ccf59d
-ms.openlocfilehash: f72e6320493027728a85741ba6d87025454c3b9e
-ms.sourcegitcommit: 720b74dddb1cdf4e570d55103158304ee1df81f8
-ms.translationtype: HT
+ms.openlocfilehash: 10ef9698e27099d5856c1ed5f8ed2f21cea72c24
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68607522"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514797"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>C++ でプログラミングする Windows の概要
 
@@ -21,9 +21,9 @@ C++コンソールアプリケーションは、コンソールウィンドウ�
 
 ## <a name="native-desktop-client-applications"></a>ネイティブデスクトップクライアントアプリケーション
 
-*ネイティブデスクトップクライアントアプリケーション*は、元のネイティブC++ [Windows C Api またはコンポーネントオブジェクトモデル (COM) api](/windows/desktop/apiindex/windows-api-list)を使用してオペレーティングシステムにアクセスする、C またはウィンドウアプリケーションです。 これらの Api 自体は、主に C で記述されています。ネイティブデスクトップアプリを作成する方法は複数あります。オペレーティングシステムイベントを処理する C スタイルのメッセージループを使用して、Win32 Api を直接使用してプログラミングすることができます。 または、Win32 をラップする軽いオブジェクト指向C++ライブラリである Microsoft Foundation Classes (MFC) を使用してプログラミングすることもできます。 どちらの方法も、ユニバーサル Windows プラットフォーム (UWP) と比較して "現代" とは見なされませんが、どちらも完全にサポートされており、今日の世界で何百万ものコードが実行されています。 ウィンドウで実行される Win32 アプリケーションでは、開発者が Windows プロシージャ関数内で Windows メッセージを明示的に操作する必要があります。 名前にかかわらず、Win32 アプリケーションは、32ビット (x86) または64ビット (x64) のバイナリとしてコンパイルできます。 Visual Studio IDE では、x86 と Win32 という用語は同義です。
+*ネイティブデスクトップクライアントアプリケーション*は、元のネイティブC++ [Windows C Api またはコンポーネントオブジェクトモデル (COM) api](/windows/win32/apiindex/windows-api-list)を使用してオペレーティングシステムにアクセスする、C またはウィンドウアプリケーションです。 これらの Api 自体は、主に C で記述されています。ネイティブデスクトップアプリを作成する方法は複数あります。オペレーティングシステムイベントを処理する C スタイルのメッセージループを使用して、Win32 Api を直接使用してプログラミングすることができます。 または、Win32 をラップする軽いオブジェクト指向C++ライブラリである Microsoft Foundation Classes (MFC) を使用してプログラミングすることもできます。 どちらの方法も、ユニバーサル Windows プラットフォーム (UWP) と比較して "現代" とは見なされませんが、どちらも完全にサポートされており、今日の世界で何百万ものコードが実行されています。 ウィンドウで実行される Win32 アプリケーションでは、開発者が Windows プロシージャ関数内で Windows メッセージを明示的に操作する必要があります。 名前にかかわらず、Win32 アプリケーションは、32ビット (x86) または64ビット (x64) のバイナリとしてコンパイルできます。 Visual Studio IDE では、x86 と Win32 という用語は同義です。
 
-従来の Windows C++プログラミングの概要については、「 [Win32 およびC++の概要](/windows/desktop/LearnWin32/learn-to-program-for-windows)」を参照してください。 Win32 について理解を深めた後は、 [MFC デスクトップアプリケーション](../mfc/mfc-desktop-applications.md)について簡単に学習できます。 洗練されたグラフィックスをC++使用する従来のデスクトップアプリケーションの例[については、「hilo:C++ Windows](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx)用アプリケーションの開発。
+従来の Windows C++プログラミングの概要については、「 [Win32 およびC++の概要](/windows/win32/LearnWin32/learn-to-program-for-windows)」を参照してください。 Win32 について理解を深めた後は、 [MFC デスクトップアプリケーション](../mfc/mfc-desktop-applications.md)について簡単に学習できます。 洗練されたグラフィックスをC++使用する従来のデスクトップアプリケーションの例[については、「hilo:C++ Windows](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx)用アプリケーションの開発。
 
 ### <a name="c-or-net"></a>C++または .NET?
 
@@ -39,7 +39,7 @@ C++コンソールアプリケーションは、コンソールウィンドウ�
 
 ## <a name="com-components"></a>COM コンポーネント
 
-[コンポーネントオブジェクトモデル (COM)](/windows/desktop/com/the-component-object-model)は、さまざまな言語で記述されたプログラムが相互に通信できるようにするための仕様です。 多くの Windows コンポーネントは COM オブジェクトとして実装され、オブジェクトの作成、インターフェイスの検出、およびオブジェクトの破棄に関する標準的な COM 規則に従います。  デスクトップアプリケーションからC++ com オブジェクトを使用するのは比較的簡単ですが、独自の com オブジェクトを作成する方がより高度です。 [Active Template Library (ATL)](../atl/atl-com-desktop-components.md)には、COM 開発を簡略化するマクロとヘルパー関数が用意されています。 詳細については、「 [ATL COM デスクトップコンポーネント](../atl/atl-com-desktop-components.md)」を参照してください。
+[コンポーネントオブジェクトモデル (COM)](/windows/win32/com/the-component-object-model)は、さまざまな言語で記述されたプログラムが相互に通信できるようにするための仕様です。 多くの Windows コンポーネントは COM オブジェクトとして実装され、オブジェクトの作成、インターフェイスの検出、およびオブジェクトの破棄に関する標準的な COM 規則に従います。  デスクトップアプリケーションからC++ com オブジェクトを使用するのは比較的簡単ですが、独自の com オブジェクトを作成する方がより高度です。 [Active Template Library (ATL)](../atl/atl-com-desktop-components.md)には、COM 開発を簡略化するマクロとヘルパー関数が用意されています。 詳細については、「 [ATL COM デスクトップコンポーネント](../atl/atl-com-desktop-components.md)」を参照してください。
 
 ## <a name="universal-windows-platform-apps"></a>ユニバーサル Windows プラットフォーム アプリ
 
@@ -55,7 +55,7 @@ Visual Studio 2017 バージョン15.4 以降では、Windows アプリケーシ
 
 ## <a name="games"></a>ゲーム
 
-DirectX ゲームは、PC または Xbox で実行できます。 詳細については、「 [DirectX のグラフィックスとゲーム](/windows/desktop/directx)」を参照してください。
+DirectX ゲームは、PC または Xbox で実行できます。 詳細については、「 [DirectX のグラフィックスとゲーム](/windows/win32/directx)」を参照してください。
 
 ## <a name="sql-server-database-clients"></a>SQL Server データベースクライアント
 
@@ -67,7 +67,7 @@ DirectX ゲームは、PC または Xbox で実行できます。 詳細につ�
 
 ## <a name="windows-services"></a>Windows サービス
 
-Windows*サービス*は、ユーザーの操作をほとんどまたはまったく行わずにバックグラウンドで実行できるプログラムです。 これらのプログラムは、UNIX システムでは*デーモン*と呼ばれています。 詳細については、「[サービス](/windows/desktop/services/services)」を参照してください。
+Windows*サービス*は、ユーザーの操作をほとんどまたはまったく行わずにバックグラウンドで実行できるプログラムです。 これらのプログラムは、UNIX システムでは*デーモン*と呼ばれています。 詳細については、「[サービス](/windows/win32/services/services)」を参照してください。
 
 ## <a name="sdks-libraries-and-header-files"></a>Sdk、ライブラリ、およびヘッダーファイル
 
