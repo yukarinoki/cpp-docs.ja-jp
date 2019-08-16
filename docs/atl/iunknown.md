@@ -6,18 +6,18 @@ helpviewer_keywords:
 - COM interfaces, base interface
 - IUnknown interface
 ms.assetid: e6b85472-e54b-4b8c-b19f-4454d6c05a8f
-ms.openlocfilehash: 17561092c6cccbad264bb82d68dbef9c0e078f76
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9c9faa4cffcdc8e6840dfbbe141cb63f51155ded
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62250295"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492073"
 ---
 # <a name="iunknown"></a>IUnknown
 
-[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)は他のすべての COM インターフェイスの基本インターフェイスです。  このインターフェイスは、3 つのメソッドを定義します。[QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))、 [AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref)、および[リリース](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release)します。 [QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))インターフェイス ユーザーに対して、別のインターフェイスへのポインター オブジェクトを要求できます。 [AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref)と[リリース](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release)インターフェイスの参照カウントを実装します。
+[IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)は、他のすべての COM インターフェイスの基本インターフェイスです。  このインターフェイスは、次の3つのメソッドを定義します。[QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))、 [AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref)、および[Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release)。 [QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))を使用すると、インターフェイスユーザーは、インターフェイスの別のインターフェイスへのポインターをオブジェクトに要求できます。 [AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref)と[Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release)は、インターフェイスの参照カウントを実装します。
 
 ## <a name="see-also"></a>関連項目
 
 [COM の概要](../atl/introduction-to-com.md)<br/>
-[IUnknown とインターフェイスの継承](/windows/desktop/com/iunknown-and-interface-inheritance)
+[IUnknown とインターフェイスの継承](/windows/win32/com/iunknown-and-interface-inheritance)

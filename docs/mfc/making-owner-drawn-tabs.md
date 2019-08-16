@@ -7,16 +7,16 @@ helpviewer_keywords:
 - CTabCtrl class [MFC], owner-drawn tabs
 - drawing [MFC], tabs
 ms.assetid: 11af2926-41d7-47e3-9eec-c595283f6371
-ms.openlocfilehash: 8c52bb325764f0edfff315edf21128f117c1a67b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ade5cd6b7d9bcb3dc398993c1758c7849fdc1f20
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391401"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508296"
 ---
 # <a name="making-owner-drawn-tabs"></a>オーナー描画タブの作成
 
-タブ コントロールの個々 の項目を定義することができます ([CTabCtrl](../mfc/reference/ctabctrl-class.md)) オーナー描画項目にします。 詳細については、次を参照してください。[オーナー描画タブ](/windows/desktop/Controls/tab-controls)Windows SDK に含まれています。
+タブコントロール ([CTabCtrl](../mfc/reference/ctabctrl-class.md)) の個々の項目を定義して、オーナー描画項目にすることができます。 詳細については、「Windows SDK の[オーナー描画タブ](/windows/win32/Controls/tab-controls)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

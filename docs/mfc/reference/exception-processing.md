@@ -11,12 +11,12 @@ helpviewer_keywords:
 - MFC, exceptions
 - exceptions [MFC], MFC throwing functions
 ms.assetid: 26d4457c-8350-48f5-916e-78f919787c30
-ms.openlocfilehash: 337fe03ab09a6ed3da283f45dd4eb58aaaad5bc5
-ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
+ms.openlocfilehash: d33da7a9bc81f9733df840a87fbbbeca1e02cc04
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68957502"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502553"
 ---
 # <a name="exception-processing"></a>例外処理
 
@@ -313,7 +313,7 @@ void  AfxThrowArchiveException(int cause, LPCTSTR lpszArchiveName);
 ### <a name="parameters"></a>パラメーター
 
 *cause*<br/>
-例外の理由を示す整数を指定します。 使用可能な値の一覧については、「 [Cアーカイブ例外:: m_cause](../../mfc/reference/carchiveexception-class.md#m_cause)」を参照してください。
+例外の原因を示す整数を指定します。 使用可能な値の一覧については、「 [Cアーカイブ例外:: m_cause](../../mfc/reference/carchiveexception-class.md#m_cause)」を参照してください。
 
 *lpszArchiveName*<br/>
 例外の原因となった`CArchive`オブジェクトの名前を含む文字列を指します (使用可能な場合)。
@@ -380,7 +380,7 @@ void AfxThrowMemoryException();
 
 ### <a name="remarks"></a>Remarks
 
-基になるシステムメモリアロケーター ( **malloc**や[GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc) Windows 関数など) への呼び出しが失敗した場合に、この関数を呼び出します。 新しいを呼び出す必要はありません。これは、メモリ割り当てが失敗した場合に、**新しい**がメモリ例外を自動的にスローするためです。
+基になるシステムメモリアロケーター ( **malloc**や[GlobalAlloc](/windows/win32/api/winbase/nf-winbase-globalalloc) Windows 関数など) への呼び出しが失敗した場合に、この関数を呼び出します。 新しいを呼び出す必要はありません。これは、メモリ割り当てが失敗した場合に、**新しい**がメモリ例外を自動的にスローするためです。
 
 ### <a name="requirements"></a>必要条件
 
@@ -491,7 +491,7 @@ void AFXAPI AfxThrowOleException(HRESULT hr);
 
 ### <a name="remarks"></a>Remarks
 
-引数として HRESULT を受け取るバージョンは、その結果コードを対応する SCODE に変換します。 HRESULT と SCODE の詳細については、「Windows SDK の[COM エラーコードの構造](/windows/desktop/com/structure-of-com-error-codes)」を参照してください。
+引数として HRESULT を受け取るバージョンは、その結果コードを対応する SCODE に変換します。 HRESULT と SCODE の詳細については、「Windows SDK の[COM エラーコードの構造](/windows/win32/com/structure-of-com-error-codes)」を参照してください。
 
 ### <a name="requirements"></a>必要条件
 

@@ -26,14 +26,14 @@ helpviewer_keywords:
 - mbstowcs_s function
 - mbstowcs_s_l function
 ms.assetid: 2fbda953-6918-498f-b440-3e7b21ed65a4
-ms.openlocfilehash: 18af20b5722364ea306daebdcb77f5771d8ea2b5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7a1c29118c48bbbb5358e7d7ea57296f7ec908a8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331158"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499769"
 ---
-# <a name="mbstowcss-mbstowcssl"></a>mbstowcs_s、_mbstowcs_s_l
+# <a name="mbstowcs_s-_mbstowcs_s_l"></a>mbstowcs_s、_mbstowcs_s_l
 
 マルチバイト文字のシーケンスを、対応するワイド文字のシーケンスに変換します。 「[Security Features in the CRT](../../c-runtime-library/security-features-in-the-crt.md)」 (CRT のセキュリティ機能) で説明されているように、セキュリティが強化されたバージョンの [mbstowcs、_mbstowcs_l](mbstowcs-mbstowcs-l.md) です。
 
@@ -81,13 +81,13 @@ errno_t _mbstowcs_s_l(
 結果として変換されたワイド文字の文字列のバッファーのアドレス。
 
 *sizeInWords*<br/>
-サイズ、 *wcstr*単語内のバッファー。
+*Wcstr*バッファーのサイズ (単語単位)。
 
 *mbstr*<br/>
 null で終了するマルチバイト文字のシーケンスのアドレス。
 
 *count*<br/>
-格納するワイド文字の最大数、 *wcstr*バッファー、終端の null は含まないまたは[_TRUNCATE](../../c-runtime-library/truncate.md)します。
+*Wcstr*バッファーに格納するワイド文字の最大数。終端の Null や[TRUNCATE](../../c-runtime-library/truncate.md)は含まれません。
 
 *locale*<br/>
 使用するロケール。
@@ -96,39 +96,39 @@ null で終了するマルチバイト文字のシーケンスのアドレス。
 
 正常終了した場合は 0 を返します。失敗した場合はエラー コードを返します。
 
-|エラー条件|戻り値および**errno**|
+|エラー状況|戻り値と**errno**|
 |---------------------|------------------------------|
-|*wcstr*は**NULL**と*sizeInWords* > 0|**EINVAL**|
-|*mbstr*は**NULL**|**EINVAL**|
-|コピー先のバッファーが小さすぎて変換後の文字列を含む (しない限り、*カウント*は **_TRUNCATE**; 以下の「解説」を参照してください)|**ERANGE**|
-|*wcstr*ない**NULL**と*sizeInWords* 0 を = =|**EINVAL**|
+|*wcstr*が**NULL**で、 *sizeinwords* > 0|**EINVAL**|
+|*mbstr*が**NULL**です|**EINVAL**|
+|コピー先のバッファーが小さすぎて、変換された文字列を含めることができません ( *count*が**TRUNCATE**の場合を除きます。次の「解説」を参照してください)。|**ERANGE**|
+|*wcstr*が**NULL**ではなく、 *sizeinwords* = = 0|**EINVAL**|
 
-これらのいずれかの条件が発生すると、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーター例外が呼び出されます。 実行の継続が許可された場合、関数はエラー コードを返します設定と**errno**表に記載されています。
+これらのいずれかの条件が発生すると、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーター例外が呼び出されます。 実行の継続が許可された場合、関数はエラーコードを返し、表に示されているように**errno**を設定します。
 
 ## <a name="remarks"></a>Remarks
 
-**Mbstowcs_s**関数が指すマルチバイト文字の文字列に変換します*mbstr*が指すバッファーに格納されているワイド文字に*wcstr*します。 これらの条件のいずれかが満たされるまで、各文字に対して変換が続きます。
+**Mbstowcs_s**関数は、 *mbstr*が指すマルチバイト文字の文字列を、 *wcstr*が指すバッファーに格納されているワイド文字に変換します。 これらの条件のいずれかが満たされるまで、各文字に対して変換が続きます。
 
 - マルチバイトの null 文字が検出されました。
 
 - 無効なマルチバイト文字が検出されました。
 
-- 格納されるワイド文字の数、 *wcstr* equals をバッファー*カウント*します。
+- *Wcstr* buffer に格納されているワイド文字の数は*count*と等しくなります。
 
 変換後の文字列は、常に null で終わります (エラーの場合も同様)。
 
-場合*カウント*特殊な値は、 [_TRUNCATE](../../c-runtime-library/truncate.md)、し**mbstowcs_s**コピー先のバッファーは null の空きを残して収まる限りの文字列の多くに変換されますターミネータ。
+*Count*が特別な値の[切り捨て](../../c-runtime-library/truncate.md)である場合、 **mbstowcs_s**は、null 終端文字用の空きを残したまま、コピー先のバッファーに収まる限りの文字列を変換します。
 
-場合**mbstowcs_s** 、元の文字列を正常に変換に null の終端文字を含む変換された文字列のワイド文字のサイズが置かれる *&#42;pReturnValue* (提供*pReturnValue*ない**NULL**)。 これが発生した場合でも、 *wcstr*引数が**NULL**し、必要なバッファー サイズを決定する方法を提供します。 場合*wcstr*は**NULL**、*カウント*は無視されますと*sizeInWords* 0 にする必要があります。
+**Mbstowcs_s**がソース文字列を正常に変換した場合は、null 終端文字を含む、変換された文字列のサイズが、preturnvalue (指定された*preturnvalue* **値が null**ではない) に *&#42;* 格納されます。 これは、 *wcstr*引数が**NULL**の場合にも発生し、必要なバッファーサイズを決定する手段を提供します。 *Wcstr*が**NULL**の場合、 *count*は無視され、 *sizeinwords*は0である必要があることに注意してください。
 
-場合**mbstowcs_s**検出すると、無効なマルチバイト文字に 0 を入れ *&#42;pReturnValue*、空の文字列をコピー先のバッファーを設定、設定**errno** に**EILSEQ**、し、返します**EILSEQ**します。
+**Mbstowcs_s**で無効なマルチバイト文字が検出された場合は、  *&#42;preturnvalue*値に0を格納し、コピー先のバッファーを空の文字列に設定し、 **errno**を**EILSEQ**に設定して、 **EILSEQ**を返します。
 
-によって、シーケンスを指している場合*mbstr*と*wcstr*の動作が重なる**mbstowcs_s**が定義されていません。
+*Mbstr*と*wcstr*が指すシーケンスが重なり合う場合、 **mbstowcs_s**の動作は未定義になります。
 
 > [!IMPORTANT]
-> いることを確認*wcstr*と*mbstr*重複しないと*数*変換するマルチバイト文字の数を正確に反映します。
+> *Wcstr*と*mbstr*が重複しないようにし、その*カウント*に変換するマルチバイト文字数が正しく反映されていることを確認します。
 
-**mbstowcs_s**ロケールに依存する動作に現在のロケールを使用 **_mbstowcs_s_l**代わりに渡されたロケールを使用すると同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+**mbstowcs_s**は、ロケールに依存する動作に現在のロケールを使用します。 **_mbstowcs_s_l**は、渡されたロケールを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
 C++ では、これらの関数の使用はテンプレートのオーバーロードによって簡素化されます。オーバーロードでは、バッファー長を自動的に推論できる (サイズの引数を指定する必要がなくなる) だけでなく、古くてセキュリティが万全ではない関数を新しく安全な関数に自動的に置き換えることができます。 詳細については、「 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
@@ -145,7 +145,7 @@ C++ では、これらの関数の使用はテンプレートのオーバーロ�
 
 [データ変換](../../c-runtime-library/data-conversion.md)<br/>
 [ロケール](../../c-runtime-library/locale.md)<br/>
-[MultiByteToWideChar](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar)<br/>
+[MultiByteToWideChar](/windows/win32/api/stringapiset/nf-stringapiset-multibytetowidechar)<br/>
 [マルチバイト文字のシーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbclen、mblen、_mblen_l](mbclen-mblen-mblen-l.md)<br/>
 [mbtowc、_mbtowc_l](mbtowc-mbtowc-l.md)<br/>

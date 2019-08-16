@@ -9,26 +9,26 @@ helpviewer_keywords:
 - COFF files
 - OBJ files as linker input
 - .obj files as linker input
-ms.openlocfilehash: 36f41077fcba6b093865625d426b8009f6185e7b
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 3e02ccc09ae8c9c2f3df88bc1767ff0188baa1f4
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450581"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492937"
 ---
 # <a name="obj-files-as-linker-input"></a>リンカー入力としての .obj ファイル
 
-リンカー ツール (リンク。EXE) では、一般的なオブジェクト ファイル形式 (COFF) での .obj ファイルを受け入れます。
+リンカーツール (LINK.EXE) は、COFF (Common Object File Format) 形式の .obj ファイルを受け入れます。
 
 ## <a name="remarks"></a>Remarks
 
-Microsoft では、一般的なオブジェクト ファイル形式の完全な説明を提供します。 詳細については、次を参照してください。 [PE 形式](/windows/desktop/Debug/pe-format)します。
+Microsoft では、Common Object File Format について完全に説明しています。 詳細については、「 [PE 形式](/windows/win32/Debug/pe-format)」を参照してください。
 
 ## <a name="unicode-support"></a>Unicode のサポート
 
-Visual Studio 2005 以降では、Microsoft の MSVC コンパイラは、ISO/IEC C および C++ 標準で定義されている識別子に Unicode 文字をサポートします。 以前のバージョンのコンパイラでは、識別子で ASCII 文字のみがサポートされています。 関数、クラス、および静的変数の名前で Unicode をサポートするために、コンパイラとリンカーは、COFF シンボル .obj ファイル内の Unicode utf-8 エンコードを使用して。 Utf-8 エンコーディングは、Visual Studio の以前のバージョンで使用される ASCII エンコーディングと互換性のある上方は。
+Visual Studio 2005 以降では、Microsoft MSVC compiler は、ISO/IEC C とC++標準で定義されているように、識別子で Unicode 文字をサポートしています。 以前のバージョンのコンパイラでは、識別子で ASCII 文字のみがサポートされていました。 関数、クラス、および静的変数の名前で Unicode をサポートするために、コンパイラとリンカーは、.obj ファイル内の COFF シンボルに Unicode UTF-8 エンコードを使用します。 UTF-8 エンコードは、以前のバージョンの Visual Studio で使用されている ASCII エンコードと upwardly 互換性があります。
 
-コンパイラとリンカーの詳細については、次を参照してください。[コンパイラおよびリンカーで Unicode のサポート](unicode-support-in-the-compiler-and-linker.md)します。 Unicode 規格の詳細については、次を参照してください。、 [Unicode](https://www.unicode.org/)組織。
+コンパイラとリンカーの詳細については、「[コンパイラとリンカーでの Unicode のサポート](unicode-support-in-the-compiler-and-linker.md)」を参照してください。 Unicode 標準の詳細については、「 [unicode](https://www.unicode.org/)組織」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
@@ -37,4 +37,4 @@ Visual Studio 2005 以降では、Microsoft の MSVC コンパイラは、ISO/IE
 [Unicode のサポート](../../text/support-for-unicode.md)<br/>
 [コンパイラおよびリンカーでの Unicode のサポート](unicode-support-in-the-compiler-and-linker.md)<br/>
 [Unicode 標準](https://www.unicode.org/)<br/>
-[PE 形式](/windows/desktop/Debug/pe-format)
+[PE 形式](/windows/win32/Debug/pe-format)

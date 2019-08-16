@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CBitmap [MFC], SetBitmapBits
 - CBitmap [MFC], SetBitmapDimension
 ms.assetid: 3980616a-c59d-495a-86e6-62bd3889c84c
-ms.openlocfilehash: 3cd194d0b6303c6d337d7157a521c825f77fc312
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 7161a4cf4484b6cc9e76e6955de558ca6e9121ca
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916232"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69507453"
 ---
 # <a name="cbitmap-class"></a>CBitmap クラス
 
@@ -155,7 +155,7 @@ BOOL CreateBitmap(
 
 `CBitmap` 関数によって作成された `CreateBitmap` オブジェクトでの作業終了後、デバイス コンテキスト外のビットマップを最初に選択し、次に `CBitmap` オブジェクトを削除します。
 
-詳細については、 `bmBits` `BITMAP`構造体のフィールドの説明を参照してください。 [BITMAP](/windows/desktop/api/wingdi/ns-wingdi-tagbitmap) 構造体については、 [CBitmap::CreateBitmapIndirect](#createbitmapindirect) メンバー関数の下で説明されています。
+詳細については、 `bmBits` `BITMAP`構造体のフィールドの説明を参照してください。 [BITMAP](/windows/win32/api/wingdi/ns-wingdi-bitmap) 構造体については、 [CBitmap::CreateBitmapIndirect](#createbitmapindirect) メンバー関数の下で説明されています。
 
 ##  <a name="createbitmapindirect"></a>CBitmap:: CreateBitmapIndirect
 
@@ -168,7 +168,7 @@ BOOL CreateBitmapIndirect(LPBITMAP lpBitmap);
 ### <a name="parameters"></a>パラメーター
 
 *lpBitmap*<br/>
-ビットマップに関する情報を格納している[ビットマップ](/windows/desktop/api/wingdi/ns-wingdi-tagbitmap)構造体を指します。
+ビットマップに関する情報を格納している[ビットマップ](/windows/win32/api/wingdi/ns-wingdi-bitmap)構造体を指します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -178,7 +178,7 @@ BOOL CreateBitmapIndirect(LPBITMAP lpBitmap);
 
 表示デバイス用のビットマップを直接選択することはできませんが、 [cdc:: SelectObject](../../mfc/reference/cdc-class.md#selectobject)を使用してメモリデバイスコンテキストの現在のビットマップとして選択し、 [Cdc:: BitBlt](../../mfc/reference/cdc-class.md#bitblt)または[cdc:: を使用して互換性のある任意のデバイスコンテキストにコピーできます。StretchBlt](../../mfc/reference/cdc-class.md#stretchblt)関数。 ( [CDC::P atBlt](../../mfc/reference/cdc-class.md#patblt)関数は、現在のブラシのビットマップを、ディスプレイデバイスコンテキストに直接コピーできます)。
 
-*Lpbitmap*パラメーターによって示される`GetObject` `BITMAP`構造体が関数を使用して入力されている場合、ビットマップのビットは指定されず、ビットマップは初期化されません。 ビットマップを初期化するには、アプリケーションで[CDC:: BitBlt](../../mfc/reference/cdc-class.md#bitblt)や[setdibits](/windows/desktop/api/wingdi/nf-wingdi-setdibits)などの関数を使用して、の最初の`CGdiObject::GetObject`パラメーターで識別されるビットマップのビットを、によって`CreateBitmapIndirect`作成されたビットマップにコピーします。
+*Lpbitmap*パラメーターによって示される`GetObject` `BITMAP`構造体が関数を使用して入力されている場合、ビットマップのビットは指定されず、ビットマップは初期化されません。 ビットマップを初期化するには、アプリケーションで[CDC:: BitBlt](../../mfc/reference/cdc-class.md#bitblt)や[setdibits](/windows/win32/api/wingdi/nf-wingdi-setdibits)などの関数を使用して、の最初の`CGdiObject::GetObject`パラメーターで識別されるビットマップのビットを、によって`CreateBitmapIndirect`作成されたビットマップにコピーします。
 
 関数で`CBitmap` `CreateBitmapIndirect`作成されたオブジェクトを終了したら、まずデバイス`CBitmap`コンテキストからビットマップを選択し、次にオブジェクトを削除します。
 
@@ -286,7 +286,7 @@ int GetBitmap(BITMAP* pBitMap);
 ### <a name="parameters"></a>パラメーター
 
 *pBitMap*<br/>
-イメージのプロパティを受け取る[ビットマップ](/windows/desktop/api/wingdi/ns-wingdi-tagbitmap)構造体へのポインター。 このパラメーターを NULL にすることはできません。
+イメージのプロパティを受け取る[ビットマップ](/windows/win32/api/wingdi/ns-wingdi-bitmap)構造体へのポインター。 このパラメーターを NULL にすることはできません。
 
 ### <a name="return-value"></a>戻り値
 
@@ -408,7 +408,7 @@ BOOL LoadMappedBitmap(
 
 既定では`LoadMappedBitmap` 、ボタンのグリフでよく使用される色がによってマップされます。
 
-マップされたビットマップの作成の詳細については、Windows SDK の「Windows 関数[CreateMappedBitmap](https://go.microsoft.com/fwlink/p/?linkid=230562) 」と「[カラーマップ](/windows/desktop/api/commctrl/ns-commctrl-colormap)の構造」を参照してください。
+マップされたビットマップの作成の詳細については、Windows SDK の「Windows 関数[CreateMappedBitmap](https://go.microsoft.com/fwlink/p/?linkid=230562) 」と「[カラーマップ](/windows/win32/api/commctrl/ns-commctrl-colormap)の構造」を参照してください。
 
 ##  <a name="loadoembitmap"></a>  CBitmap::LoadOEMBitmap
 
@@ -469,7 +469,7 @@ operator HBITMAP() const;
 
 この演算子は、 `HBITMAP`オブジェクトの直接使用をサポートするキャスト演算子です。
 
-グラフィックオブジェクトの使用方法の詳細については、「Windows SDK の[グラフィックオブジェクト](/windows/desktop/gdi/graphic-objects)」を参照してください。
+グラフィックオブジェクトの使用方法の詳細については、「Windows SDK の[グラフィックオブジェクト](/windows/win32/gdi/graphic-objects)」を参照してください。
 
 ##  <a name="setbitmapbits"></a>CBitmap:: SetBitmapBits
 

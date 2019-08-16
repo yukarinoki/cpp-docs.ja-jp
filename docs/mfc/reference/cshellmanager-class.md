@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CShellManager [MFC], GetParentItem
 - CShellManager [MFC], ItemFromPath
 ms.assetid: f15c4c1a-6fae-487d-9913-9b7369b33da0
-ms.openlocfilehash: 14e8da573621f712ae9e27647122d305be54b7b0
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 8151550dafdd1bdf8593d555008af387cf548bc8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916682"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502624"
 ---
 # <a name="cshellmanager-class"></a>CShellManager クラス
 
@@ -113,7 +113,7 @@ BOOL BrowseForFolder(
 からダイアログボックスのタイトル。
 
 *ulFlags*<br/>
-からダイアログボックスのオプションを指定するフラグ。 詳細については、「 [BROWSEINFO](/windows/desktop/api/shlobj_core/ns-shlobj_core-browseinfoa) 」を参照してください。
+からダイアログボックスのオプションを指定するフラグ。 詳細については、「 [BROWSEINFO](/windows/win32/api/shlobj_core/ns-shlobj_core-browseinfow) 」を参照してください。
 
 *piFolderImage*<br/>
 入出力メソッドが、選択したフォルダーのイメージインデックスを書き込む整数値へのポインター。
@@ -156,7 +156,7 @@ LPITEMIDLIST ConcatenateItem(
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、 *pidl1*と*pidl2*の両方を格納するのに十分な大きさの新しい[itemidlist](/windows/desktop/api/shtypes/ns-shtypes-itemidlist)を作成します。 次に、 *pidl1*と*pidl2*を新しいリストにコピーします。
+このメソッドは、 *pidl1*と*pidl2*の両方を格納するのに十分な大きさの新しい[itemidlist](/windows/win32/api/shtypes/ns-shtypes-itemidlist)を作成します。 次に、 *pidl1*と*pidl2*を新しいリストにコピーします。
 
 ##  <a name="copyitem"></a>  CShellManager::CopyItem
 

@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAcl class
 ms.assetid: 20bcb9af-dc1c-4737-b923-3864776680d6
-ms.openlocfilehash: ba791ddc46fd59a470943bb30f415da01966dc61
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 5d03154597f800042846e82d0a0cf5e7c46b613f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915888"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497886"
 ---
 # <a name="cacl-class"></a>CAcl クラス
 
@@ -84,7 +84,7 @@ class CAcl
 
 ## <a name="remarks"></a>Remarks
 
-`ACL`構造体は、ACL (アクセス制御リスト) のヘッダーです。 ACL には、0個以上の[ace](/windows/desktop/SecAuthZ/access-control-entries) (アクセス制御エントリ) の連続したリストが含まれます。 ACL 内の個々の Ace には、0 ~ *n-1*の番号が付けられます。ここで、 *n*は acl の ace の数です。 ACL を編集する場合、アプリケーションは、そのインデックスによって ACL 内のアクセス制御エントリ (ACE) を参照します。
+`ACL`構造体は、ACL (アクセス制御リスト) のヘッダーです。 ACL には、0個以上の[ace](/windows/win32/SecAuthZ/access-control-entries) (アクセス制御エントリ) の連続したリストが含まれます。 ACL 内の個々の Ace には、0 ~ *n-1*の番号が付けられます。ここで、 *n*は acl の ace の数です。 ACL を編集する場合、アプリケーションは、そのインデックスによって ACL 内のアクセス制御エントリ (ACE) を参照します。
 
 次の2つの ACL の種類があります。
 
@@ -96,9 +96,9 @@ class CAcl
 
 また、オブジェクトには、システム管理者によって制御されるシステム ACL の形式で、システムレベルのセキュリティ情報を関連付けることもできます。 システム ACL を使用すると、システム管理者は、オブジェクトへのアクセスの試行を監査できます。
 
-詳細については、Windows SDK の[ACL](/windows/desktop/SecAuthZ/access-control-lists)の説明を参照してください。
+詳細については、Windows SDK の[ACL](/windows/win32/SecAuthZ/access-control-lists)の説明を参照してください。
 
-Windows のアクセス制御モデルの概要については、Windows SDK の「 [Access Control](/windows/desktop/SecAuthZ/access-control) 」を参照してください。
+Windows のアクセス制御モデルの概要については、Windows SDK の「 [Access Control](/windows/win32/SecAuthZ/access-control) 」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
@@ -126,7 +126,7 @@ typedef CAtlArray<BYTE> CAceFlagArray;
 
 ### <a name="remarks"></a>Remarks
 
-この typedef は、アクセス制御エントリ (ACE: access control entry) の型固有のコントロールフラグを定義するために使用される配列型を指定します。 使用可能なフラグの完全な一覧については、 [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-ace_header)の定義を参照してください。
+この typedef は、アクセス制御エントリ (ACE: access control entry) の型固有のコントロールフラグを定義するために使用される配列型を指定します。 使用可能なフラグの完全な一覧については、 [ACE_HEADER](/windows/win32/api/winnt/ns-winnt-ace_header)の定義を参照してください。
 
 ##  <a name="cacetypearray"></a>  CAcl::CAceTypeArray
 
@@ -138,7 +138,7 @@ typedef CAtlArray<BYTE> CAceTypeArray;
 
 ### <a name="remarks"></a>Remarks
 
-この typedef は、ACCESS_ALLOWED_ACE_TYPE や ACCESS_DENIED_ACE_TYPE などのアクセス制御エントリ (ACE) オブジェクトの性質を定義するために使用される配列型を指定します。 使用可能な型の完全な一覧については、 [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-ace_header)の定義を参照してください。
+この typedef は、ACCESS_ALLOWED_ACE_TYPE や ACCESS_DENIED_ACE_TYPE などのアクセス制御エントリ (ACE) オブジェクトの性質を定義するために使用される配列型を指定します。 使用可能な型の完全な一覧については、 [ACE_HEADER](/windows/win32/api/winnt/ns-winnt-ace_header)の定義を参照してください。
 
 ##  <a name="cacl"></a>CAcl:: CAcl
 
@@ -214,7 +214,7 @@ ACE フラグ。
 
 各配列の内容は互いに対応しています。つまり、配列の`CAccessMaskArray`最初の要素は`CSidArray`配列の最初の要素に対応します。
 
-ACE の種類とフラグの詳細については、「 [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-ace_header) 」を参照してください。
+ACE の種類とフラグの詳細については、「 [ACE_HEADER](/windows/win32/api/winnt/ns-winnt-ace_header) 」を参照してください。
 
 ##  <a name="getaclentry"></a>  CAcl::GetAclEntry
 
@@ -258,7 +258,7 @@ ACE フラグ。
 
 このメソッドは、個々の ACE に関するすべての情報を取得します。この情報は、 [「CAcl:: GetAclEntries](#getaclentries) 」を参照してください。
 
-ACE の種類とフラグの詳細については、「 [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-ace_header) 」を参照してください。
+ACE の種類とフラグの詳細については、「 [ACE_HEADER](/windows/win32/api/winnt/ns-winnt-ace_header) 」を参照してください。
 
 ##  <a name="getlength"></a>  CAcl::GetLength
 

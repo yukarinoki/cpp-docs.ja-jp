@@ -25,12 +25,12 @@ helpviewer_keywords:
 - wmemmove function
 - memmove function
 ms.assetid: 3a906114-9cf3-40d7-bd99-ee452004f218
-ms.openlocfilehash: 988af1c2678e20ea40ce4dfe331a3b6c49db0547
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 27811f56f1956bcaaea4ec589f7e6c71afaca380
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156565"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499628"
 ---
 # <a name="memmove-wmemmove"></a>memmove、wmemmove
 
@@ -60,19 +60,19 @@ wchar_t *wmemmove(
 コピー元のオブジェクト。
 
 *count*<br/>
-バイト数 (**memmove**) または文字 (**wmemmove**) にコピーします。
+コピーするバイト数 (**memmove**) または文字 (**wmemmove**)。
 
 ## <a name="return-value"></a>戻り値
 
-値*dest*します。
+*Dest*の値。
 
 ## <a name="remarks"></a>Remarks
 
-コピー*カウント*バイト (**memmove**) または文字 (**wmemmove**) から*src*に*dest*します。 コピー元とコピー先の領域の一部が重なり合っている場合、どちらの関数も、重なり合っている領域のコピー元のバイトをコピーした後で上書きします。
+*カウント*バイト (**memmove**) または文字 (**wmemmove**) を*src*から*dest*にコピーします。 コピー元とコピー先の領域の一部が重なり合っている場合、どちらの関数も、重なり合っている領域のコピー元のバイトをコピーした後で上書きします。
 
-**セキュリティに関するメモ** コピー先のバッファーのサイズがソース バッファー以上であることをご確認ください。 詳しくは、「 [バッファー オーバーランの回避](/windows/desktop/SecBP/avoiding-buffer-overruns)」をご覧ください。
+**セキュリティに関するメモ** コピー先のバッファーのサイズがソース バッファー以上であることをご確認ください。 詳しくは、「 [バッファー オーバーランの回避](/windows/win32/SecBP/avoiding-buffer-overruns)」をご覧ください。
 
-**Memmove**と**wmemmove**場合、関数は廃止のみ定数 **_CRT_SECURE_DEPRECATE_MEMORY**の順序でインクルード ステートメントの前に定義されます次の例に示すように、非推奨にする関数。
+**Memmove**関数と**wmemmove**関数は、次の例のように、関数を非推奨にするために、include ステートメントの前に定数 **_CRT_SECURE_DEPRECATE_MEMORY**が定義されている場合にのみ非推奨となります。
 
 ```C
 #define _CRT_SECURE_DEPRECATE_MEMORY

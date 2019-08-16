@@ -1,4 +1,4 @@
----
+﻿---
 title: try-except ステートメント
 ms.date: 10/09/2018
 f1_keywords:
@@ -83,7 +83,7 @@ ms.locfileid: "67400547"
 
 以前のバージョンとの互換性のため **_try**、 **_except**、および **_leave**のシノニムで **__try**、 **__except**と **__leave**しない限り、コンパイラ オプション[/Za\(言語拡張機能を無効にする)](../build/reference/za-ze-disable-language-extensions.md)を指定します。
 
-### <a name="the-leave-keyword"></a>__leave キーワード
+### <a name="the-__leave-keyword"></a>__leave キーワード
 
 **__Leave**キーワードの保護されたセクション内でのみ有効ですが、**try-except**ステートメントとその効果は、保護されたセクションの末尾に移動します。 実行は、例外ハンドラーの後の最初のステートメントから続行されます。
 
@@ -91,7 +91,7 @@ A **goto**ステートメントは、保護されたセクションからも進�
 
 ### <a name="structured-exception-handling-intrinsic-functions"></a>構造化例外処理の組み込み関数
 
-構造化例外処理で使用できるは 2 つの組み込み関数を提供する、**try-except*ステートメント:`GetExceptionCode`と`GetExceptionInformation`します。
+構造化例外処理で使用できるは 2 つの組み込み関数を提供する、***try-except**ステートメント:`GetExceptionCode`と`GetExceptionInformation`します。
 
 `GetExceptionCode` 例外のコード (32 ビット整数) を返します。
 

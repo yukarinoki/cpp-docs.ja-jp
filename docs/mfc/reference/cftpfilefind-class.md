@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CFtpFileFind [MFC], FindNextFile
 - CFtpFileFind [MFC], GetFileURL
 ms.assetid: 9667cf01-657f-4b11-b9db-f11e5a7b4e4c
-ms.openlocfilehash: 9afe2bf563ffa80a3238548d75efa69178fa1f64
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 2f4a394e29be135cac95edf6f504d8b066f53414
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916065"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69506246"
 ---
 # <a name="cftpfilefind-class"></a>CFtpFileFind クラス
 
@@ -121,7 +121,7 @@ virtual BOOL FindFile(
 
 - INTERNET_FLAG_DONT_CACHE は、ローカルまたはどのゲートウェイにもデータをキャッシュしません。
 
-- INTERNET_FLAG_RAW_DATA RAW データ (FTP の[WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa)構造体) を返すように既定値をオーバーライドします。
+- INTERNET_FLAG_RAW_DATA RAW データ (FTP の[WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw)構造体) を返すように既定値をオーバーライドします。
 
 - INTERNET_FLAG_SECURE は、Secure Sockets Layer または PCT でネットワーク上のトランザクションをセキュリティで保護します。 このフラグは、HTTP 要求にのみ適用されます。
 
@@ -129,7 +129,7 @@ virtual BOOL FindFile(
 
 ### <a name="return-value"></a>戻り値
 
-正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 拡張されたエラー情報を取得するには、Win32 関数[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)を呼び出します。
+正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 拡張されたエラー情報を取得するには、Win32 関数[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)を呼び出します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -149,13 +149,13 @@ virtual BOOL FindNextFile();
 
 ### <a name="return-value"></a>戻り値
 
-他のファイルがある場合は0以外。見つかったファイルがディレクトリ内の最後のファイルであるか、エラーが発生した場合は0。 拡張されたエラー情報を取得するには、Win32 関数[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)を呼び出します。 見つかったファイルがディレクトリ内の最後のファイルである場合、または一致するファイルが見つからない`GetLastError`場合、関数は ERROR_NO_MORE_FILES を返します。
+他のファイルがある場合は0以外。見つかったファイルがディレクトリ内の最後のファイルであるか、エラーが発生した場合は0。 拡張されたエラー情報を取得するには、Win32 関数[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)を呼び出します。 見つかったファイルがディレクトリ内の最後のファイルである場合、または一致するファイルが見つからない`GetLastError`場合、関数は ERROR_NO_MORE_FILES を返します。
 
 ### <a name="remarks"></a>Remarks
 
 属性関数を呼び出す前に、この関数を少なくとも1回呼び出す必要があります (「 [CFileFind:: FindNextFile](../../mfc/reference/cfilefind-class.md#findnextfile)」を参照してください)。
 
-`FindNextFile`Win32 関数[FindNextFile](/windows/desktop/api/fileapi/nf-fileapi-findnextfilea)をラップします。
+`FindNextFile`Win32 関数[FindNextFile](/windows/win32/api/fileapi/nf-fileapi-findnextfilew)をラップします。
 
 ### <a name="example"></a>例
 

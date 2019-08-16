@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CToolTipCtrl [MFC], Update
 - CToolTipCtrl [MFC], UpdateTipText
 ms.assetid: 8973f70c-b73a-46c7-908d-758f364b9a97
-ms.openlocfilehash: bbd369d282df1cac59e6966a2d832e23b8ff6da0
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 046c8a3f99e8b505ee6a6e8b534318263090e07d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916740"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502254"
 ---
 # <a name="ctooltipctrl-class"></a>CToolTipCtrl Class
 
@@ -261,7 +261,7 @@ TRUE の場合、 *lprc*はテキスト表示の四角形を指定するため�
 
 このメンバー関数は、ウィンドウの四角形からツールヒントコントロールのテキスト表示の四角形を計算します。または、指定したテキスト表示の四角形を表示するために必要なツールヒントウィンドウの四角形を計算します。
 
-このメンバー関数は、Windows SDK で説明されているように、Win32 message [TTM_ADJUSTRECT](/windows/desktop/Controls/ttm-adjustrect)の動作を実装します。
+このメンバー関数は、Windows SDK で説明されているように、Win32 message [TTM_ADJUSTRECT](/windows/win32/Controls/ttm-adjustrect)の動作を実装します。
 
 ##  <a name="create"></a>  CToolTipCtrl::Create
 
@@ -322,7 +322,7 @@ virtual BOOL CreateEx(
 ツールヒントコントロールのスタイルを指定します。 詳細については、「[作成](#create)」の「**解説**」を参照してください。
 
 *Dwスタイル Ex*<br/>
-作成するコントロールの拡張スタイルを指定します。 拡張 Windows スタイルの一覧については、Windows SDK の[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa)の*dwexstyle*パラメーターを参照してください。
+作成するコントロールの拡張スタイルを指定します。 拡張 Windows スタイルの一覧については、Windows SDK の[CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)の*dwexstyle*パラメーターを参照してください。
 
 ### <a name="return-value"></a>戻り値
 
@@ -377,7 +377,7 @@ CSize GetBubbleSize(LPTOOLINFO lpToolInfo) const;
 ### <a name="parameters"></a>パラメーター
 
 *lpToolInfo*<br/>
-ツールヒントの[TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa)構造体へのポインター。
+ツールヒントの[TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-toolinfow)構造体へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -385,7 +385,7 @@ CSize GetBubbleSize(LPTOOLINFO lpToolInfo) const;
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は、Windows SDK で説明されているように、Win32 message [TTM_GETBUBBLESIZE](/windows/desktop/Controls/ttm-getbubblesize)の動作を実装します。
+このメンバー関数は、Windows SDK で説明されているように、Win32 message [TTM_GETBUBBLESIZE](/windows/win32/Controls/ttm-getbubblesize)の動作を実装します。
 
 ##  <a name="getcurrenttool"></a>  CToolTipCtrl::GetCurrentTool
 
@@ -399,7 +399,7 @@ BOOL GetCurrentTool(LPTOOLINFO lpToolInfo) const;
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*lpToolInfo*|入出力現在のツールヒントウィンドウに関する情報を受け取る[TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa)構造体へのポインター。|
+|*lpToolInfo*|入出力現在のツールヒントウィンドウに関する情報を受け取る[TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-toolinfow)構造体へのポインター。|
 
 ### <a name="return-value"></a>戻り値
 
@@ -407,7 +407,7 @@ BOOL GetCurrentTool(LPTOOLINFO lpToolInfo) const;
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、Windows SDK で説明されている[TTM_GETCURRENTTOOL](/windows/desktop/Controls/ttm-getcurrenttool)メッセージを送信します。
+このメソッドは、Windows SDK で説明されている[TTM_GETCURRENTTOOL](/windows/win32/Controls/ttm-getcurrenttool)メッセージを送信します。
 
 ### <a name="example"></a>例
 
@@ -440,7 +440,7 @@ int GetDelayTime(DWORD dwDuration) const;
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は、Windows SDK で説明されているように、Win32 message [TTM_GETDELAYTIME](/windows/desktop/Controls/ttm-getdelaytime)の動作を実装します。
+このメンバー関数は、Windows SDK で説明されているように、Win32 message [TTM_GETDELAYTIME](/windows/win32/Controls/ttm-getdelaytime)の動作を実装します。
 
 ##  <a name="getmargin"></a>CToolTipCtrl:: GetMargin
 
@@ -464,7 +464,7 @@ void GetMargin(LPRECT lprc) const;
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は、Windows SDK で説明されているように、Win32 message [TTM_GETMARGIN](/windows/desktop/Controls/ttm-getmargin)の動作を実装します。
+このメンバー関数は、Windows SDK で説明されているように、Win32 message [TTM_GETMARGIN](/windows/win32/Controls/ttm-getmargin)の動作を実装します。
 
 ##  <a name="getmaxtipwidth"></a>  CToolTipCtrl::GetMaxTipWidth
 
@@ -480,7 +480,7 @@ int GetMaxTipWidth() const;
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は、Windows SDK で説明されているように、Win32 message [TTM_GETMAXTIPWIDTH](/windows/desktop/Controls/ttm-getmaxtipwidth)の動作を実装します。
+このメンバー関数は、Windows SDK で説明されているように、Win32 message [TTM_GETMAXTIPWIDTH](/windows/win32/Controls/ttm-getmaxtipwidth)の動作を実装します。
 
 ##  <a name="gettext"></a>CToolTipCtrl:: GetText
 
@@ -518,11 +518,11 @@ COLORREF GetTipBkColor() const;
 
 ### <a name="return-value"></a>戻り値
 
-背景色を表す[COLORREF](/windows/desktop/gdi/colorref)値。
+背景色を表す[COLORREF](/windows/win32/gdi/colorref)値。
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は、Windows SDK で説明されているように、Win32 message [TTM_GETTIPBKCOLOR](/windows/desktop/Controls/ttm-gettipbkcolor)の動作を実装します。
+このメンバー関数は、Windows SDK で説明されているように、Win32 message [TTM_GETTIPBKCOLOR](/windows/win32/Controls/ttm-gettipbkcolor)の動作を実装します。
 
 ##  <a name="gettiptextcolor"></a>  CToolTipCtrl::GetTipTextColor
 
@@ -534,11 +534,11 @@ COLORREF GetTipTextColor() const;
 
 ### <a name="return-value"></a>戻り値
 
-テキストの色を表す[COLORREF](/windows/desktop/gdi/colorref)値。
+テキストの色を表す[COLORREF](/windows/win32/gdi/colorref)値。
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は、Windows SDK で説明されているように、Win32 message [TTM_GETTIPTEXTCOLOR](/windows/desktop/Controls/ttm-gettiptextcolor)の動作を実装します。
+このメンバー関数は、Windows SDK で説明されているように、Win32 message [TTM_GETTIPTEXTCOLOR](/windows/win32/Controls/ttm-gettiptextcolor)の動作を実装します。
 
 ##  <a name="gettitle"></a>  CToolTipCtrl::GetTitle
 
@@ -552,11 +552,11 @@ void GetTitle(PTTGETTITLE pttgt) const;
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*pttgt*|入出力ツールヒントコントロールに関する情報を格納している[TTGETTITLE](/windows/desktop/api/commctrl/ns-commctrl-ttgettitle)構造体へのポインター。 このメソッドから制御が戻るときに、 [TTGETTITLE](/windows/desktop/api/commctrl/ns-commctrl-ttgettitle)構造体の*psztitle*メンバーはタイトルのテキストを指します。|
+|*pttgt*|入出力ツールヒントコントロールに関する情報を格納している[TTGETTITLE](/windows/win32/api/commctrl/ns-commctrl-ttgettitle)構造体へのポインター。 このメソッドから制御が戻るときに、 [TTGETTITLE](/windows/win32/api/commctrl/ns-commctrl-ttgettitle)構造体の*psztitle*メンバーはタイトルのテキストを指します。|
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、Windows SDK で説明されている[TTM_GETTITLE](/windows/desktop/Controls/ttm-gettitle)メッセージを送信します。
+このメソッドは、Windows SDK で説明されている[TTM_GETTITLE](/windows/win32/Controls/ttm-gettitle)メッセージを送信します。
 
 ##  <a name="gettoolcount"></a>  CToolTipCtrl::GetToolCount
 
@@ -598,7 +598,7 @@ BOOL GetToolInfo(
 
 ### <a name="remarks"></a>Remarks
 
-CToolInfo `hwnd`に`uId`よって参照される[TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa)構造体のおよびメンバーは、ツールを識別します。 以前のの呼び出し`AddTool`によってツールヒントコントロールにツールが登録されている場合`TOOLINFO` 、構造体にはツールに関する情報が格納されます。
+CToolInfo `hwnd`に`uId`よって参照される[TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-toolinfow)構造体のおよびメンバーは、ツールを識別します。 以前のの呼び出し`AddTool`によってツールヒントコントロールにツールが登録されている場合`TOOLINFO` 、構造体にはツールに関する情報が格納されます。
 
 ##  <a name="hittest"></a>  CToolTipCtrl::HitTest
 
@@ -620,7 +620,7 @@ BOOL HitTest(
 テストする点`CPoint`の座標を格納しているオブジェクトへのポインター。
 
 *lpToolInfo*<br/>
-ツールに関する情報を格納している[TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa)構造体へのポインター。
+ツールに関する情報を格納している[TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-toolinfow)構造体へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -662,7 +662,7 @@ void Pop();
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は、Windows SDK で説明されているように、Win32 message [TTM_POP](/windows/desktop/Controls/ttm-pop)の動作を実装します。
+このメンバー関数は、Windows SDK で説明されているように、Win32 message [TTM_POP](/windows/win32/Controls/ttm-pop)の動作を実装します。
 
 ##  <a name="popup"></a>  CToolTipCtrl::Popup
 
@@ -674,7 +674,7 @@ void Popup();
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、Windows SDK で説明されている[TTM_POPUP](/windows/desktop/Controls/ttm-popup)メッセージを送信します。
+このメソッドは、Windows SDK で説明されている[TTM_POPUP](/windows/win32/Controls/ttm-popup)メッセージを送信します。
 
 ### <a name="example"></a>例
 
@@ -693,7 +693,7 @@ void RelayEvent(LPMSG lpMsg);
 ### <a name="parameters"></a>パラメーター
 
 *lpMsg*<br/>
-リレーするメッセージが格納されている[MSG](/windows/desktop/api/winuser/ns-winuser-msg)構造体へのポインター。
+リレーするメッセージが格納されている[MSG](/windows/win32/api/winuser/ns-winuser-msg)構造体へのポインター。
 
 ### <a name="remarks"></a>Remarks
 
@@ -751,7 +751,7 @@ void SetMargin(LPRECT lprc);
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は、Windows SDK で説明されているように、Win32 message [TTM_SETMARGIN](/windows/desktop/Controls/ttm-setmargin)の動作を実装します。
+このメンバー関数は、Windows SDK で説明されているように、Win32 message [TTM_SETMARGIN](/windows/win32/Controls/ttm-setmargin)の動作を実装します。
 
 ##  <a name="setmaxtipwidth"></a>CToolTipCtrl:: SetMaxTipWidth
 
@@ -772,7 +772,7 @@ int SetMaxTipWidth(int iWidth);
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は、Windows SDK で説明されているように、Win32 message [TTM_SETMAXTIPWIDTH](/windows/desktop/Controls/ttm-setmaxtipwidth)の動作を実装します。
+このメンバー関数は、Windows SDK で説明されているように、Win32 message [TTM_SETMAXTIPWIDTH](/windows/win32/Controls/ttm-setmaxtipwidth)の動作を実装します。
 
 ##  <a name="settipbkcolor"></a>CToolTipCtrl:: SetTipBkColor
 
@@ -789,7 +789,7 @@ void SetTipBkColor(COLORREF clr);
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は、Windows SDK で説明されているように、Win32 message [TTM_SETTIPBKCOLOR](/windows/desktop/Controls/ttm-settipbkcolor)の動作を実装します。
+このメンバー関数は、Windows SDK で説明されているように、Win32 message [TTM_SETTIPBKCOLOR](/windows/win32/Controls/ttm-settipbkcolor)の動作を実装します。
 
 ##  <a name="settiptextcolor"></a>  CToolTipCtrl::SetTipTextColor
 
@@ -806,7 +806,7 @@ void SetTipTextColor(COLORREF clr);
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は、Windows SDK で説明されているように、Win32 message [TTM_SETTIPTEXTCOLOR](/windows/desktop/Controls/ttm-settiptextcolor)の動作を実装します。
+このメンバー関数は、Windows SDK で説明されているように、Win32 message [TTM_SETTIPTEXTCOLOR](/windows/win32/Controls/ttm-settiptextcolor)の動作を実装します。
 
 ##  <a name="settitle"></a>  CToolTipCtrl::SetTitle
 
@@ -821,7 +821,7 @@ BOOL SetTitle(
 ### <a name="parameters"></a>パラメーター
 
 *uIcon*<br/>
-Windows SDK の「 [TTM_SETTITLE](/windows/desktop/Controls/ttm-settitle)の*アイコン*」を参照してください。
+Windows SDK の「 [TTM_SETTITLE](/windows/win32/Controls/ttm-settitle)の*アイコン*」を参照してください。
 
 *lpstrTitle*<br/>
 タイトル文字列へのポインター。
@@ -832,7 +832,7 @@ Windows SDK の「 [TTM_SETTITLE](/windows/desktop/Controls/ttm-settitle)の*ア
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は、Windows SDK で説明されているように、Win32 message [TTM_SETTITLE](/windows/desktop/Controls/ttm-settitle)の動作を実装します。
+このメンバー関数は、Windows SDK で説明されているように、Win32 message [TTM_SETTITLE](/windows/win32/Controls/ttm-settitle)の動作を実装します。
 
 ##  <a name="settoolinfo"></a>  CToolTipCtrl::SetToolInfo
 
@@ -845,7 +845,7 @@ void SetToolInfo(LPTOOLINFO lpToolInfo);
 ### <a name="parameters"></a>パラメーター
 
 *lpToolInfo*<br/>
-設定する情報を指定する[TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa)構造体へのポインター。
+設定する情報を指定する[TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-toolinfow)構造体へのポインター。
 
 ##  <a name="settoolrect"></a>  CToolTipCtrl::SetToolRect
 
@@ -888,7 +888,7 @@ HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は、Windows SDK で説明されているように、 [TTM_SETWINDOWTHEME](/windows/desktop/Controls/ttm-setwindowtheme)メッセージの機能をエミュレートします。
+このメンバー関数は、Windows SDK で説明されているように、 [TTM_SETWINDOWTHEME](/windows/win32/Controls/ttm-setwindowtheme)メッセージの機能をエミュレートします。
 
 ##  <a name="update"></a>CToolTipCtrl:: Update
 

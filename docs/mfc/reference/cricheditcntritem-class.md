@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CRichEditCntrItem [MFC], CRichEditCntrItem
 - CRichEditCntrItem [MFC], SyncToRichEditObject
 ms.assetid: 6c0b4efe-0fb8-4621-b5e1-fdcb8ec48c3b
-ms.openlocfilehash: b333cbbe33b42709614376cf98be01111be967a2
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 8e242504c8ab0f59f6dec0602d4a5352a2d84867
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916822"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502725"
 ---
 # <a name="cricheditcntritem-class"></a>CRichEditCntrItem クラス
 
@@ -80,7 +80,7 @@ CRichEditCntrItem(
 ### <a name="parameters"></a>パラメーター
 
 *preo*<br/>
-OLE 項目を記述する[Reobject](/windows/desktop/api/richole/ns-richole-reobject)構造体へのポインター。 新しい`CRichEditCntrItem`オブジェクトは、この OLE 項目を中心に構築されます。 *Preo*が NULL の場合、クライアントアイテムは空になります。
+OLE 項目を記述する[Reobject](/windows/win32/api/richole/ns-richole-reobject)構造体へのポインター。 新しい`CRichEditCntrItem`オブジェクトは、この OLE 項目を中心に構築されます。 *Preo*が NULL の場合、クライアントアイテムは空になります。
 
 *pContainer*<br/>
 この項目を格納するコンテナードキュメントへのポインター。 *Pcontainer*が NULL の場合、このクライアント項目をドキュメントに追加するには、 [COleDocument:: AddItem](../../mfc/reference/coledocument-class.md#additem)を明示的に呼び出す必要があります。
@@ -89,11 +89,11 @@ OLE 項目を記述する[Reobject](/windows/desktop/api/richole/ns-richole-reob
 
 この関数では、OLE の初期化は実行されません。
 
-詳細については、Windows SDK の「 [Reobject](/windows/desktop/api/richole/ns-richole-reobject)構造体」を参照してください。
+詳細については、Windows SDK の「 [Reobject](/windows/win32/api/richole/ns-richole-reobject)構造体」を参照してください。
 
 ##  <a name="synctoricheditobject"></a>CRichEditCntrItem:: SyncToRichEditObject
 
-この関数を呼び出して、デバイスの`CRichEditCntrltem`縦横比 ( [dvaspect](/windows/desktop/api/wtypes/ne-wtypes-tagdvaspect)) を、 *reo*で指定されたものに同期します。
+この関数を呼び出して、デバイスの`CRichEditCntrltem`縦横比 ( [dvaspect](/windows/win32/api/wtypes/ne-wtypes-dvaspect)) を、 *reo*で指定されたものに同期します。
 
 ```
 void SyncToRichEditObject(REOBJECT& reo);
@@ -102,11 +102,11 @@ void SyncToRichEditObject(REOBJECT& reo);
 ### <a name="parameters"></a>パラメーター
 
 *reo*<br/>
-OLE 項目を記述する[Reobject](/windows/desktop/api/richole/ns-richole-reobject)構造体への参照。
+OLE 項目を記述する[Reobject](/windows/win32/api/richole/ns-richole-reobject)構造体への参照。
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、Windows SDK の[Dvaspect](/windows/desktop/api/wtypes/ne-wtypes-tagdvaspect)に関する説明を参照してください。
+詳細については、Windows SDK の[Dvaspect](/windows/win32/api/wtypes/ne-wtypes-dvaspect)に関する説明を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

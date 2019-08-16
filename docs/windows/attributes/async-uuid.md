@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - async_uuid attribute
 ms.assetid: 235cb0d7-be58-4dd9-983c-e2a21bbc42c6
-ms.openlocfilehash: 4c2bca9165d8b23f8cfa4f0f5523c882fd2f52bf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 70e73a6286a4b6adaba20b5a35dc16d8389b1948
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62364975"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501861"
 ---
-# <a name="asyncuuid"></a>async_uuid
+# <a name="async_uuid"></a>async_uuid
 
-同期および非同期の両方のバージョンの COM インターフェイスを定義する、MIDL コンパイラに指示する UUID を指定します。
+COM インターフェイスの同期バージョンと非同期バージョンの両方を定義するように MIDL コンパイラに指示する UUID を指定します。
 
 ## <a name="syntax"></a>構文
 
@@ -26,11 +26,11 @@ ms.locfileid: "62364975"
 ### <a name="parameters"></a>パラメーター
 
 *uuid*<br/>
-インターフェイスのバージョンを識別するための UUID。
+インターフェイスのバージョンを識別する UUID。
 
 ## <a name="remarks"></a>Remarks
 
-**Async_uuid** C++属性と同じ機能を持つ、 [async_uuid](/windows/desktop/Midl/async-uuid) MIDL 属性。
+**Async_uuid** C++属性には、 [async_uuid](/windows/win32/Midl/async-uuid) MIDL 属性と同じ機能があります。
 
 ## <a name="example"></a>例
 
@@ -55,7 +55,7 @@ __interface ICustom {
 |**対象**|`interface`|
 |**反復可能**|いいえ|
 |**必要な属性**|なし|
-|**無効な属性**|**デュアル**、**ディスパッチ インターフェイス**|
+|**無効な属性**|**デュアル**、**ディスパッチインターフェイス**|
 
 属性コンテキストの詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 

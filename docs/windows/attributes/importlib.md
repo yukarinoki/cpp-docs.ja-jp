@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - importlib attribute
 ms.assetid: f129e459-b8d3-4aca-a0bc-ee53e18b62ed
-ms.openlocfilehash: 29c7df8fbedbd107a9bb0b05466addc4672fc555
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 92cf335e5c4754595f2c7af2e1aef30d309d2f5f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409391"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514611"
 ---
 # <a name="importlib"></a>importlib
 
@@ -30,11 +30,11 @@ ms.locfileid: "62409391"
 
 ## <a name="remarks"></a>Remarks
 
-**Importlib** C++ 属性によって、`importlib`ステートメントが生成された .idl ファイルのライブラリ ブロックに配置されます。 **Importlib**属性と同じ機能を持つ、 [importlib](/windows/desktop/Midl/importlib) MIDL 属性。
+**Importlib** C++属性により、 `importlib`生成された .idl ファイルのライブラリブロックにステートメントが配置されます。 **Importlib**属性には、 [importlib](/windows/win32/Midl/importlib) MIDL 属性と同じ機能があります。
 
 ## <a name="example"></a>例
 
-次のコードを使用する方法の例を示します**importlib**:
+次のコードは、 **importlib**の使用方法の例を示しています。
 
 ```cpp
 // cpp_attr_ref_importlib.cpp

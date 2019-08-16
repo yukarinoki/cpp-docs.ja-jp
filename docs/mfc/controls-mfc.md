@@ -6,12 +6,12 @@ helpviewer_keywords:
 - common controls [MFC]
 - controls [MFC]
 ms.assetid: b2842884-6435-4b8f-933b-21671bf8af95
-ms.openlocfilehash: c0738128d20839046e0885e7489b494d84349e4d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3155889f2fd4002286340ccec7f4a35d1a6a9c20
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62297269"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508798"
 ---
 # <a name="controls-mfc"></a>コントロール (MFC)
 
@@ -49,7 +49,7 @@ ActiveX コントロールは、以前は OLE コントロールと呼ばれて�
 
 ### <a name="_core_windows_common_controls_and_mfc_classes"></a>  Windows コモン コントロールと MFC クラス
 
-|コントロール|MFC クラス|説明|Windows 95 の新機能|
+|コントロール|MFC クラス|説明|Windows 95 の新方法|
 |-------------|---------------|-----------------|------------------------|
 |[アニメーション](../mfc/using-canimatectrl.md)|[CAnimateCtrl](../mfc/reference/canimatectrl-class.md)|AVI ビデオ クリップのフレームを連続的に表示します。|[はい]|
 |ボタン|[CButton](../mfc/reference/cbutton-class.md)|アクションを発生させるプッシュ ボタン。チェック ボックス、オプション ボタン、およびグループ ボックスにも使用します。|いいえ|
@@ -76,7 +76,7 @@ ActiveX コントロールは、以前は OLE コントロールと呼ばれて�
 |[ツール ヒント](../mfc/using-ctooltipctrl.md)|[CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md)|ツール バー ボタンなどのツールの用途の説明を表示する小さなポップアップ ウィンドウです。|[はい]|
 |[ツリー](../mfc/using-ctreectrl.md)|[CTreeCtrl](../mfc/reference/ctreectrl-class.md)|項目を階層化されたリストとして表示するウィンドウです。|[はい]|
 
-### <a name="what-do-you-want-to-know-more-about"></a>方法については、するして操作を行います
+### <a name="what-do-you-want-to-know-more-about"></a>詳細については、次を参照してください。
 
 - 各コントロールへのリンクについては、上記の「 [Windows コモン コントロールと MFC クラス](#_core_windows_common_controls_and_mfc_classes) 」を参照してください。
 
@@ -102,9 +102,9 @@ ActiveX コントロールは、以前は OLE コントロールと呼ばれて�
 
 - [サンプル](../mfc/common-control-sample-list.md)
 
-Windows SDK の Windows コモン コントロールについては、次を参照してください。[コモン コントロール](/windows/desktop/Controls/common-controls-intro)します。
+Windows SDK の Windows コモンコントロールの詳細については、「[コモンコントロール](/windows/win32/Controls/common-controls-intro)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[ユーザー インターフェイス要素](../mfc/user-interface-elements-mfc.md)<br/>
+[ユーザーインターフェイス要素](../mfc/user-interface-elements-mfc.md)<br/>
 [ダイアログ エディター](../windows/dialog-editor.md)

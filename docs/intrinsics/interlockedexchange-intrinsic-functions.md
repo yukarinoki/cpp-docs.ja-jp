@@ -44,14 +44,14 @@ helpviewer_keywords:
 - _InterlockedExchange intrinsic
 - _InterlockedExchange8_nf
 ms.assetid: be2f232a-6301-462a-a92b-fcdeb8b0f209
-ms.openlocfilehash: 3945b8a7516962531050e999e96bdef31b179bbb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c96ce57854bfb3eea0e1b8bc6283984c7fce50f9
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396744"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509395"
 ---
-# <a name="interlockedexchange-intrinsic-functions"></a>_InterlockedExchange の組み込み関数
+# <a name="_interlockedexchange-intrinsic-functions"></a>_InterlockedExchange の組み込み関数
 
 **Microsoft 固有の仕様**
 
@@ -144,11 +144,11 @@ __int64 _InterlockedExchange64_rel(
 
 #### <a name="parameters"></a>パラメーター
 
-*Target*<br/>
+*移行先*<br/>
 [入力、出力]交換する値へのポインター。 この関数は、この変数を `Value` に設定し、変数の前の値を返します。
 
 *[値]*<br/>
-[in]によって示される値と交換される値`Target`します。
+からが指す`Target`値と交換される値。
 
 ## <a name="return-value"></a>戻り値
 
@@ -164,7 +164,7 @@ __int64 _InterlockedExchange64_rel(
 
 ## <a name="remarks"></a>Remarks
 
-`_InterlockedExchange` Win32 Windows SDK のコンパイラ組み込みサポートを提供します。 [InterlockedExchange](/windows/desktop/api/winnt/nf-winnt-interlockedexchange)関数。
+`_InterlockedExchange`Win32 Windows SDK [InterlockedExchange](/windows/win32/api/winnt/nf-winnt-interlockedexchange)関数のコンパイラ組み込みサポートを提供します。
 
 `_InterlockedExchange` には、格納するデータ型、およびプロセッサ固有の取得または解放のセマンティクスを使用するかどうかに基づき、異なるいくつかの種類があります。
 
@@ -178,7 +178,7 @@ Hardware Lock Elision (HLE) 命令をサポートする Intel プラットフォ
 
 ## <a name="example"></a>例
 
-使用する方法の例については`_InterlockedExchange`を参照してください[_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md)します。
+の使用`_InterlockedExchange`例については、「 [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md)」を参照してください。
 
 **Microsoft 固有の仕様はここまで**
 

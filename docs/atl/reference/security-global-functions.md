@@ -16,12 +16,12 @@ helpviewer_keywords:
 - ACL object global functions
 - security IDs [C++]
 ms.assetid: 6a584bfe-16b7-47f4-8439-9c789c41567a
-ms.openlocfilehash: 435ab4756808a530749e110302b73d16a31c38c6
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 5f3c0464b239f4500d416b80ae4fdf06c2dc386f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915524"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495171"
 ---
 # <a name="security-global-functions"></a>セキュリティグローバル関数
 
@@ -66,7 +66,7 @@ inline bool AtlGetDacl(
 セキュリティ情報を取得する対象のオブジェクトを処理します。
 
 *ObjectType*<br/>
-*Hobject*パラメーターによって識別されるオブジェクトの型を示す[SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-se_object_type)列挙からの値を指定します。
+*Hobject*パラメーターによって識別されるオブジェクトの型を示す[SE_OBJECT_TYPE](/windows/win32/api/accctrl/ne-accctrl-se_object_type)列挙からの値を指定します。
 
 *pDacl*<br/>
 取得したセキュリティ情報を格納する DACL オブジェクトへのポインター。
@@ -100,7 +100,7 @@ inline bool AtlSetDacl(
 セキュリティ情報を設定するオブジェクトへのハンドル。
 
 *ObjectType*<br/>
-*Hobject*パラメーターによって識別されるオブジェクトの型を示す[SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-se_object_type)列挙からの値を指定します。
+*Hobject*パラメーターによって識別されるオブジェクトの型を示す[SE_OBJECT_TYPE](/windows/win32/api/accctrl/ne-accctrl-se_object_type)列挙からの値を指定します。
 
 *rDacl*<br/>
 新しいセキュリティ情報を含む DACL。
@@ -139,7 +139,7 @@ inline bool AtlGetGroupSid(
 セキュリティ情報の取得元となるオブジェクトへのハンドル。
 
 *ObjectType*<br/>
-*Hobject*パラメーターによって識別されるオブジェクトの型を示す[SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-se_object_type)列挙からの値を指定します。
+*Hobject*パラメーターによって識別されるオブジェクトの型を示す[SE_OBJECT_TYPE](/windows/win32/api/accctrl/ne-accctrl-se_object_type)列挙からの値を指定します。
 
 *pSid*<br/>
 新しいセキュリティ情報`CSid`を格納するオブジェクトへのポインター。
@@ -172,7 +172,7 @@ inline bool AtlSetGroupSid(
 セキュリティ情報を設定するオブジェクトへのハンドル。
 
 *ObjectType*<br/>
-*Hobject*パラメーターによって識別されるオブジェクトの型を示す[SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-se_object_type)列挙からの値を指定します。
+*Hobject*パラメーターによって識別されるオブジェクトの型を示す[SE_OBJECT_TYPE](/windows/win32/api/accctrl/ne-accctrl-se_object_type)列挙からの値を指定します。
 
 *rSid*<br/>
 新しいセキュリティ情報を格納しているオブジェクト。`CSid`
@@ -205,7 +205,7 @@ inline bool AtlGetOwnerSid(
 セキュリティ情報の取得元となるオブジェクトへのハンドル。
 
 *ObjectType*<br/>
-*Hobject*パラメーターによって識別されるオブジェクトの型を示す[SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-se_object_type)列挙からの値を指定します。
+*Hobject*パラメーターによって識別されるオブジェクトの型を示す[SE_OBJECT_TYPE](/windows/win32/api/accctrl/ne-accctrl-se_object_type)列挙からの値を指定します。
 
 *pSid*<br/>
 新しいセキュリティ情報`CSid`を格納するオブジェクトへのポインター。
@@ -238,7 +238,7 @@ inline bool AtlSetOwnerSid(
 セキュリティ情報を設定するオブジェクトへのハンドル。
 
 *ObjectType*<br/>
-*Hobject*パラメーターによって識別されるオブジェクトの型を示す[SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-se_object_type)列挙からの値を指定します。
+*Hobject*パラメーターによって識別されるオブジェクトの型を示す[SE_OBJECT_TYPE](/windows/win32/api/accctrl/ne-accctrl-se_object_type)列挙からの値を指定します。
 
 *rSid*<br/>
 新しいセキュリティ情報を格納しているオブジェクト。`CSid`
@@ -272,7 +272,7 @@ inline bool AtlGetSacl(
 セキュリティ情報の取得元となるオブジェクトへのハンドル。
 
 *ObjectType*<br/>
-*Hobject*パラメーターによって識別されるオブジェクトの型を示す[SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-se_object_type)列挙からの値を指定します。
+*Hobject*パラメーターによって識別されるオブジェクトの型を示す[SE_OBJECT_TYPE](/windows/win32/api/accctrl/ne-accctrl-se_object_type)列挙からの値を指定します。
 
 *pSacl*<br/>
 取得したセキュリティ情報を格納する SACL オブジェクトへのポインター。
@@ -314,7 +314,7 @@ inline bool AtlSetSacl(
 セキュリティ情報を設定するオブジェクトへのハンドル。
 
 *ObjectType*<br/>
-*Hobject*パラメーターによって識別されるオブジェクトの型を示す[SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-se_object_type)列挙からの値を指定します。
+*Hobject*パラメーターによって識別されるオブジェクトの型を示す[SE_OBJECT_TYPE](/windows/win32/api/accctrl/ne-accctrl-se_object_type)列挙からの値を指定します。
 
 *rSacl*<br/>
 新しいセキュリティ情報を含む SACL。
@@ -363,13 +363,13 @@ bool bRequestNeededPrivileges = true) throw(...);
 セキュリティ情報の取得元となるオブジェクトの名前を指定する、null で終わる文字列へのポインター。
 
 *ObjectType*<br/>
-[SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-se_object_type)列挙から、 *pszobjectname*パラメーターで識別されるオブジェクトの型を示す値を指定します。
+[SE_OBJECT_TYPE](/windows/win32/api/accctrl/ne-accctrl-se_object_type)列挙から、 *pszobjectname*パラメーターで識別されるオブジェクトの型を示す値を指定します。
 
 *pSecurityDescriptor*<br/>
 要求されたセキュリティ記述子を受け取るオブジェクト。
 
 *requestedInfo*<br/>
-取得するセキュリティ情報の種類を示す一連の[SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information)ビットフラグ。 このパラメーターは、次の値の組み合わせにすることができます。
+取得するセキュリティ情報の種類を示す一連の[SECURITY_INFORMATION](/windows/win32/SecAuthZ/security-information)ビットフラグ。 このパラメーターは、次の値の組み合わせにすることができます。
 
 *bRequestNeededPrivileges*<br/>
 True の場合、関数は SE_SECURITY_NAME 特権を有効にし、完了時に復元しようとします。

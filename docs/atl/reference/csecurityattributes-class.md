@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSecurityAttributes class
 ms.assetid: a094880c-52e1-4a28-97ff-752d5869908e
-ms.openlocfilehash: 2139c25cb6d941d9debe0655ba91ba458b1f8c09
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: ebffbea120101a77450a5e8da3cdb6e34723e7be
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915724"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496502"
 ---
 # <a name="csecurityattributes-class"></a>CSecurityAttributes クラス
 
@@ -45,9 +45,9 @@ class CSecurityAttributes : public SECURITY_ATTRIBUTES
 
 ## <a name="remarks"></a>Remarks
 
-構造`SECURITY_ATTRIBUTES`体には、オブジェクトの作成に使用される[セキュリティ記述子](/windows/desktop/api/winnt/ns-winnt-security_descriptor)が含まれ、この構造体を指定して取得されたハンドルが継承可能かどうかを指定します。
+構造`SECURITY_ATTRIBUTES`体には、オブジェクトの作成に使用される[セキュリティ記述子](/windows/win32/api/winnt/ns-winnt-security_descriptor)が含まれ、この構造体を指定して取得されたハンドルが継承可能かどうかを指定します。
 
-Windows のアクセス制御モデルの概要については、Windows SDK の「 [Access Control](/windows/desktop/SecAuthZ/access-control) 」を参照してください。
+Windows のアクセス制御モデルの概要については、Windows SDK の「 [Access Control](/windows/win32/SecAuthZ/access-control) 」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -100,6 +100,6 @@ void Set(const CSecurityDesc& rSecurityDescriptor, bool bInheritHandle = false) 
 
 [セキュリティのサンプル](../../overview/visual-cpp-samples.md)<br/>
 [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\))<br/>
-[セキュリティ記述子](/windows/desktop/api/winnt/ns-winnt-security_descriptor)<br/>
+[セキュリティ記述子](/windows/win32/api/winnt/ns-winnt-security_descriptor)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)<br/>
 [セキュリティに関するグローバル関数](../../atl/reference/security-global-functions.md)

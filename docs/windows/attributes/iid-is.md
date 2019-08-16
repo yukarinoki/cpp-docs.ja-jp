@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - iid_is attribute
 ms.assetid: 2f9b42a9-7130-4b08-9b1e-0d5d360e10ff
-ms.openlocfilehash: b91fb7937bb0e20f2500eace9695bc0ddba21b26
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8bfa20f55afd85019795fdd40548158c2f49e126
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409526"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514658"
 ---
-# <a name="iidis"></a>iid_is
+# <a name="iid_is"></a>iid_is
 
-インターフェイス ポインターによって示される COM インターフェイスの IID を指定します。
+インターフェイスポインターが指す COM インターフェイスの IID を指定します。
 
 ## <a name="syntax"></a>構文
 
@@ -26,15 +26,15 @@ ms.locfileid: "62409526"
 ### <a name="parameters"></a>パラメーター
 
 *式 (expression)*<br/>
-インターフェイス ポインターが指す COM インターフェイスの IID を指定する C 言語の式。
+インターフェイスポインターが指す COM インターフェイスの IID を指定する C 言語式。
 
 ## <a name="remarks"></a>Remarks
 
-**Iid_is** C++属性と同じ機能を持つ、 [iid_is](/windows/desktop/Midl/iid-is) MIDL 属性。
+**Iid_is** C++属性には、 [iid_is](/windows/win32/Midl/iid-is) MIDL 属性と同じ機能があります。
 
 ## <a name="example"></a>例
 
-次のコードを使用する示します**iid_is**:
+次のコードは、 **iid_is**の使用方法を示しています。
 
 ```cpp
 // cpp_attr_ref_iid_is.cpp
@@ -57,7 +57,7 @@ __interface IFireTabCtrl : IDispatch
 
 |||
 |-|-|
-|**対象**|インターフェイスのパラメーター、データ メンバー|
+|**対象**|インターフェイスパラメーター、データメンバー|
 |**反復可能**|いいえ|
 |**必要な属性**|なし|
 |**無効な属性**|なし|

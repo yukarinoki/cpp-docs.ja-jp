@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CPrivateObjectSecurityDesc class
 ms.assetid: 2c4bbb13-bf99-4833-912a-197f6815bb5d
-ms.openlocfilehash: c1ac15d4d8254107a66e577321edb3c40578f240
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 97ea2b8411b404caf9f833ad85f226d18aea1e73
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915807"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496582"
 ---
 # <a name="cprivateobjectsecuritydesc-class"></a>CPrivateObjectSecurityDesc クラス
 
@@ -57,7 +57,7 @@ class CPrivateObjectSecurityDesc : public CSecurityDesc
 
 [Csecuritydesc](../../atl/reference/csecuritydesc-class.md)から派生したこのクラスは、プライベートオブジェクトのセキュリティ記述子を作成および管理するためのメソッドを提供します。
 
-Windows のアクセス制御モデルの概要については、Windows SDK の「 [Access Control](/windows/desktop/SecAuthZ/access-control) 」を参照してください。
+Windows のアクセス制御モデルの概要については、Windows SDK の「 [Access Control](/windows/win32/SecAuthZ/access-control) 」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -93,7 +93,7 @@ bool ConvertToAutoInherit(
 新しいオブジェクトに他のオブジェクトを含めることができるかどうかを指定します。 値が true の場合は、新しいオブジェクトがコンテナーであることを示します。 値が false の場合は、新しいオブジェクトがコンテナーではないことを示します。
 
 *GenericMapping*<br/>
-各汎用権限からオブジェクトの特定の権限へのマッピングを指定する[GENERIC_MAPPING](/windows/desktop/api/winnt/ns-winnt-generic_mapping)構造体へのポインター。
+各汎用権限からオブジェクトの特定の権限へのマッピングを指定する[GENERIC_MAPPING](/windows/win32/api/winnt/ns-winnt-generic_mapping)構造体へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -101,7 +101,7 @@ bool ConvertToAutoInherit(
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、現在のセキュリティ記述子の随意アクセス制御リスト (DACL) とシステムアクセス制御リスト (SACL) の Ace が親セキュリティ記述子から継承されているかどうかを判断しようとします。 [Converttoautoinheritprivateobjectsecurity](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-converttoautoinheritprivateobjectsecurity)関数を呼び出します。
+このメソッドは、現在のセキュリティ記述子の随意アクセス制御リスト (DACL) とシステムアクセス制御リスト (SACL) の Ace が親セキュリティ記述子から継承されているかどうかを判断しようとします。 [Converttoautoinheritprivateobjectsecurity](/windows/win32/api/securitybaseapi/nf-securitybaseapi-converttoautoinheritprivateobjectsecurity)関数を呼び出します。
 
 ##  <a name="cprivateobjectsecuritydesc"></a>CPrivateObjectSecurityDesc:: CPrivateObjectSecurityDesc
 
@@ -164,7 +164,7 @@ bool Create(
 オブジェクトの代理となるクライアントプロセスの[CAccessToken](../../atl/reference/caccesstoken-class.md)オブジェクトへの参照。
 
 *GenericMapping*<br/>
-各汎用権限からオブジェクトの特定の権限へのマッピングを指定する[GENERIC_MAPPING](/windows/desktop/api/winnt/ns-winnt-generic_mapping)構造体へのポインター。
+各汎用権限からオブジェクトの特定の権限へのマッピングを指定する[GENERIC_MAPPING](/windows/win32/api/winnt/ns-winnt-generic_mapping)構造体へのポインター。
 
 *ObjectType*<br/>
 現在のオブジェクト`GUID`に関連付けられているオブジェクトの型を識別する構造体へのポインター。 オブジェクトに GUID がない場合は、 *ObjectType*を NULL に設定します。
@@ -173,7 +173,7 @@ bool Create(
 新しいオブジェクトに他のオブジェクトを含めることができるかどうかを指定します。 値が true の場合は、新しいオブジェクトがコンテナーであることを示します。 値が false の場合は、新しいオブジェクトがコンテナーではないことを示します。
 
 *AutoInheritFlags*<br/>
-アクセス制御エントリ (Ace: access control entries) を*Pparent*から継承する方法を制御する一連のビットフラグ。 詳細については、「 [Createprivateobjectsecurityex](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex) 」を参照してください。
+アクセス制御エントリ (Ace: access control entries) を*Pparent*から継承する方法を制御する一連のビットフラグ。 詳細については、「 [Createprivateobjectsecurityex](/windows/win32/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex) 」を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
@@ -181,7 +181,7 @@ bool Create(
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、 [Createprivateobjectsercursecurityex](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurity)または[Createprivateobjectsecurityex](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex)を呼び出します。
+このメソッドは、 [Createprivateobjectsercursecurityex](/windows/win32/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurity)または[Createprivateobjectsecurityex](/windows/win32/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex)を呼び出します。
 
 2番目の方法では、新しいオブジェクトのオブジェクトの種類の GUID を指定したり、Ace の継承方法を制御したりできます。
 
@@ -201,7 +201,7 @@ bool Get(
 ### <a name="parameters"></a>パラメーター
 
 *si*<br/>
-取得するセキュリティ記述子の部分を示すビットフラグのセット。 この値は、 [SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information)ビットフラグの組み合わせにすることができます。
+取得するセキュリティ記述子の部分を示すビットフラグのセット。 この値は、 [SECURITY_INFORMATION](/windows/win32/SecAuthZ/security-information)ビットフラグの組み合わせにすることができます。
 
 *pResult*<br/>
 指定されたセキュリティ記述子から要求された情報のコピーを受け取る[Csecuritydesc](../../atl/reference/csecuritydesc-class.md)オブジェクトへのポインター。
@@ -253,19 +253,19 @@ bool Set(
 ### <a name="parameters"></a>パラメーター
 
 *si*<br/>
-設定するセキュリティ記述子の部分を示すビットフラグのセット。 この値は、 [SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information)ビットフラグの組み合わせにすることができます。
+設定するセキュリティ記述子の部分を示すビットフラグのセット。 この値は、 [SECURITY_INFORMATION](/windows/win32/SecAuthZ/security-information)ビットフラグの組み合わせにすることができます。
 
 *変更*<br/>
 [Csecuritydesc](../../atl/reference/csecuritydesc-class.md)オブジェクトへのポインター。 *Si*パラメーターによって示されるこのセキュリティ記述子の部分は、オブジェクトのセキュリティ記述子に適用されます。
 
 *GenericMapping*<br/>
-各汎用権限からオブジェクトの特定の権限へのマッピングを指定する[GENERIC_MAPPING](/windows/desktop/api/winnt/ns-winnt-generic_mapping)構造体へのポインター。
+各汎用権限からオブジェクトの特定の権限へのマッピングを指定する[GENERIC_MAPPING](/windows/win32/api/winnt/ns-winnt-generic_mapping)構造体へのポインター。
 
 *Token*<br/>
 オブジェクトの代理となるクライアントプロセスの[CAccessToken](../../atl/reference/caccesstoken-class.md)オブジェクトへの参照。
 
 *AutoInheritFlags*<br/>
-アクセス制御エントリ (Ace: access control entries) を*Pparent*から継承する方法を制御する一連のビットフラグ。 詳細については、「 [Createprivateobjectsecurityex](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex) 」を参照してください。
+アクセス制御エントリ (Ace: access control entries) を*Pparent*から継承する方法を制御する一連のビットフラグ。 詳細については、「 [Createprivateobjectsecurityex](/windows/win32/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex) 」を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
@@ -277,7 +277,7 @@ bool Set(
 
 ## <a name="see-also"></a>関連項目
 
-[SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-security_descriptor)<br/>
+[SECURITY_DESCRIPTOR](/windows/win32/api/winnt/ns-winnt-security_descriptor)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)<br/>
 [セキュリティに関するグローバル関数](../../atl/reference/security-global-functions.md)<br/>
 [CSecurityDesc クラス](../../atl/reference/csecuritydesc-class.md)

@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CPropertyPage [MFC], SetModified
 - CPropertyPage [MFC], m_psp
 ms.assetid: d9000a21-aa81-4530-85d9-f43432afb4dc
-ms.openlocfilehash: f9116306fd2bd6145096b055025bd4dd2075b0c1
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 6a6223708c83f7a5b3e6532a2016660d558f8270
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916886"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502801"
 ---
 # <a name="cpropertypage-class"></a>CPropertyPage クラス
 
@@ -71,7 +71,7 @@ class CPropertyPage : public CDialog
 |----------|-----------------|
 |[CPropertyPage:: CancelToClose](#canceltoclose)|モーダルプロパティシートのページで回復不可能な変更が発生した後、[OK] ボタンを [閉じる] に変更し、[キャンセル] ボタンを無効にします。|
 |[CPropertyPage:: Construct](#construct)|`CPropertyPage` オブジェクトを構築します。 実行`Construct`時にパラメーターを指定する場合、または配列を使用する場合は、を使用します。|
-|[CPropertyPage::GetPSP](#getpsp)|`CPropertyPage`オブジェクトに関連付けられた Windows [propsheet ページ](/windows/desktop/api/prsht/ns-prsht-propsheetpagea_v2)構造体を取得します。|
+|[CPropertyPage::GetPSP](#getpsp)|`CPropertyPage`オブジェクトに関連付けられた Windows [propsheet ページ](/windows/win32/api/prsht/ns-prsht-propsheetpagea_v2)構造体を取得します。|
 |[CPropertyPage:: OnApply](#onapply)|[今すぐ適用] ボタンがクリックされたときにフレームワークによって呼び出されます。|
 |[CPropertyPage:: OnCancel](#oncancel)|[キャンセル] ボタンがクリックされたときにフレームワークによって呼び出されます。|
 |[CPropertyPage:: OnKillActive](#onkillactive)|現在のページがアクティブページでなくなったときにフレームワークによって呼び出されます。 ここでデータの検証を実行します。|
@@ -89,7 +89,7 @@ class CPropertyPage : public CDialog
 
 |名前|説明|
 |----------|-----------------|
-|[CPropertyPage:: m_psp](#m_psp)|Windows [Propsheet ページ](/windows/desktop/api/prsht/ns-prsht-propsheetpagea_v2)の構造体。 基本的なプロパティページパラメーターへのアクセスを提供します。|
+|[CPropertyPage:: m_psp](#m_psp)|Windows [Propsheet ページ](/windows/win32/api/prsht/ns-prsht-propsheetpagea_v2)の構造体。 基本的なプロパティページパラメーターへのアクセスを提供します。|
 
 ## <a name="remarks"></a>Remarks
 
@@ -261,7 +261,7 @@ CPropertyPage(
 
 ##  <a name="getpsp"></a>  CPropertyPage::GetPSP
 
-`CPropertyPage`オブジェクトに関連付けられた Windows [propsheet ページ](/windows/desktop/api/prsht/ns-prsht-propsheetpagea_v2)構造体を取得します。
+`CPropertyPage`オブジェクトに関連付けられた Windows [propsheet ページ](/windows/win32/api/prsht/ns-prsht-propsheetpagea_v2)構造体を取得します。
 
 ```
 const PROPSHEETPAGE& GetPSP() const;
@@ -275,7 +275,7 @@ PROPSHEETPAGE& GetPSP();
 
 ##  <a name="m_psp"></a>CPropertyPage:: m_psp
 
-`m_psp`は、メンバーが[Propsheet ページ](/windows/desktop/api/prsht/ns-prsht-propsheetpagea_v2)の特性を格納する構造体です。
+`m_psp`は、メンバーが[Propsheet ページ](/windows/win32/api/prsht/ns-prsht-propsheetpagea_v2)の特性を格納する構造体です。
 
 ```
 PROPSHEETPAGE m_psp;
@@ -311,7 +311,7 @@ virtual BOOL OnApply();
 
 の既定の`OnApply`実装で`OnOK`は、が呼び出されます。
 
-ユーザーがプロパティシートで [今すぐ適用] または [OK] をクリックしたときに送信される通知メッセージの詳細については、Windows SDK の「 [PSN_APPLY](/windows/desktop/Controls/psn-apply) 」を参照してください。
+ユーザーがプロパティシートで [今すぐ適用] または [OK] をクリックしたときに送信される通知メッセージの詳細については、Windows SDK の「 [PSN_APPLY](/windows/win32/Controls/psn-apply) 」を参照してください。
 
 ### <a name="example"></a>例
 
@@ -367,7 +367,7 @@ virtual void OnOK();
 
 ### <a name="remarks"></a>Remarks
 
-フレームワークが受信 OK または [適用] ボタンを選択すると、 [PSN_APPLY](/windows/desktop/Controls/psn-apply)プロパティ ページからの通知です。 `OnOK` [CPropertySheet::P ressbutton](../../mfc/reference/cpropertysheet-class.md#pressbutton)を呼び出すと、の呼び出しは行われません。この場合、プロパティページは通知を送信しません。
+フレームワークが受信 OK または [適用] ボタンを選択すると、 [PSN_APPLY](/windows/win32/Controls/psn-apply)プロパティ ページからの通知です。 `OnOK` [CPropertySheet::P ressbutton](../../mfc/reference/cpropertysheet-class.md#pressbutton)を呼び出すと、の呼び出しは行われません。この場合、プロパティページは通知を送信しません。
 
 ユーザーがプロパティシート全体を閉じるときに、現在アクティブなページに固有の追加の動作を実装するには、このメンバー関数をオーバーライドします。
 
@@ -481,7 +481,7 @@ virtual BOOL OnWizardFinish();
 
 このメンバー関数をオーバーライドすると、[完了] ボタンが押されたときにユーザーが実行する必要のあるアクションを指定できます。 この関数をオーバーライドする場合は、プロパティシートが破棄されないように FALSE を返します。
 
-ユーザーがウィザードのプロパティシートの [完了] ボタンをクリックしたときに送信される通知メッセージの詳細については、Windows SDK の「 [PSN_WIZFINISH](/windows/desktop/Controls/psn-wizfinish) 」を参照してください。
+ユーザーがウィザードのプロパティシートの [完了] ボタンをクリックしたときに送信される通知メッセージの詳細については、Windows SDK の「 [PSN_WIZFINISH](/windows/win32/Controls/psn-wizfinish) 」を参照してください。
 
 ウィザードタイプのプロパティシートを作成する方法の詳細については、「 [CPropertySheet:: SetWizardMode](../../mfc/reference/cpropertysheet-class.md#setwizardmode)」を参照してください。
 

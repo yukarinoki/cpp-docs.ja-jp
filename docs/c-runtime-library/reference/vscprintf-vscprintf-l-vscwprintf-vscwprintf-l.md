@@ -42,14 +42,14 @@ helpviewer_keywords:
 - vscprintf function
 - vscprintf_l function
 ms.assetid: 1bc67d3d-21d5-49c9-ac8d-69e26b16a3c3
-ms.openlocfilehash: 18b177114fe0e2984fee518b06a72bea72905ed1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 543b8d1024a355bbe92bf63684a7933ca177e3bb
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383478"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499104"
 ---
-# <a name="vscprintf-vscprintfl-vscwprintf-vscwprintfl"></a>_vscprintf、_vscprintf_l、_vscwprintf、_vscwprintf_l
+# <a name="_vscprintf-_vscprintf_l-_vscwprintf-_vscwprintf_l"></a>_vscprintf、_vscprintf_l、_vscwprintf、_vscwprintf_l
 
 引数リストへのポインターを使用して、書式設定された文字列内の文字数を返します。
 
@@ -91,18 +91,18 @@ int _vscwprintf_l(
 
 ## <a name="return-value"></a>戻り値
 
-**_vscprintf**コードは、指定した書式設定を使用してバッファーまたはファイルに送信される引数の一覧で、文字列の指す場合に生成は文字数を返します。 戻り値には、終端の NULL 文字は含まれません。 **_vscwprintf**ワイド文字に対して同じ機能を実行します。
+**_vscprintf**は、指定された書式設定コードを使用して、引数リストが指す文字列が出力されたか、ファイルまたはバッファーに送信された場合に生成される文字数を返します。 戻り値には、終端の NULL 文字は含まれません。 **_vscwprintf**は、ワイド文字に対して同じ関数を実行します。
 
-これらの関数のバージョン、 **_l**現在のスレッド ロケールの代わりに渡されたロケール パラメーターを使用する点を除いて、サフィックスは同じです。
+**_L**サフィックスを持つこれらの関数のバージョンは、現在のスレッドロケールの代わりに渡されたロケールパラメーターを使用する点を除いて同じです。
 
-場合*形式*null ポインターの場合で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合、関数は-1 を返し設定と**errno**に**EINVAL**します。
+*Format*が null ポインターの場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は-1 を返し、 **errno**を**EINVAL**に設定します。
 
 ## <a name="remarks"></a>Remarks
 
-各*引数*(ある場合) に対応する書式指定に応じて変換が*形式*します。 形式は、通常の文字と同じ形式し、機能、*形式*引数[printf](printf-printf-l-wprintf-wprintf-l.md)します。
+各*引数*(存在する場合) は、*形式*で対応する書式指定に従って変換されます。 形式は通常の文字で構成され、 [printf](printf-printf-l-wprintf-wprintf-l.md)の*format*引数と同じ形式と機能を持ちます。
 
 > [!IMPORTANT]
-> 場合に*形式*ユーザー定義の文字列は、null 終端であり、正しい数と型のパラメーターがあります。 詳しくは、「 [バッファー オーバーランの回避](/windows/desktop/SecBP/avoiding-buffer-overruns)」をご覧ください。
+> *Format*がユーザー定義の文字列である場合は、null で終了し、正しい数と種類のパラメーターを持つことを確認します。 詳しくは、「 [バッファー オーバーランの回避](/windows/win32/SecBP/avoiding-buffer-overruns)」をご覧ください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 

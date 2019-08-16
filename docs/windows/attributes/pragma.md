@@ -1,21 +1,21 @@
 ---
-title: プラグマ (C++ COM 属性)
+title: pragma (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.pragma
 helpviewer_keywords:
 - pragma attribute
 ms.assetid: 3f90d023-b8b5-4007-8311-008bb72cbea1
-ms.openlocfilehash: 159e1570c2bde07bb4df8fa904a519e8e0018a6a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5c3ee0d3f99bd27ca41d68b11c11522e92c8d40a
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407459"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514280"
 ---
 # <a name="pragma"></a>pragma
 
-引用符を使用せず、生成された .idl ファイルには、指定した文字列を出力します。
+指定された文字列を、引用符を使用せずに、生成された .idl ファイルに出力します。
 
 ## <a name="syntax"></a>構文
 
@@ -26,11 +26,11 @@ ms.locfileid: "62407459"
 ### <a name="parameters"></a>パラメーター
 
 *pragma_statement*<br/>
-このプラグマは、生成された .idl ファイルにアクセスしたいです。
+生成された .idl ファイルに含めるプラグマ。
 
 ## <a name="remarks"></a>Remarks
 
-**プラグマ**C++ 属性と同じ機能を持つ、[プラグマ](/windows/desktop/Midl/pragma)MIDL 属性。
+**プラグマ** C++属性には、 [pragma](/windows/win32/Midl/pragma) MIDL 属性と同じ機能があります。
 
 ## <a name="example"></a>例
 

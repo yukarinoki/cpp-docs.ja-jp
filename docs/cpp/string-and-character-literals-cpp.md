@@ -14,12 +14,12 @@ helpviewer_keywords:
 - literal strings [C++]
 - string literals [C++]
 ms.assetid: 61de8f6f-2714-4e7b-86b6-a3f885d3b9df
-ms.openlocfilehash: df690bea81b9799b30ae91313ce7157400ef8413
-ms.sourcegitcommit: bd7ddc044f9083246614b602ef6a758775313214
+ms.openlocfilehash: e7f0d4291aeb2e3d8dc1eac4dd08ef3e961468ff
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68866094"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498527"
 ---
 # <a name="string-and-character-literals-c"></a>文字列リテラルと文字リテラルC++()
 
@@ -216,7 +216,7 @@ char u5 = '\U00000041'; // \U UCN 'A'
 
 ユニバーサル文字名は、サロゲートコードポイント範囲 D800 内の値をエンコードできません-DFFF。 Unicode サロゲート ペアの場合は、 `\UNNNNNNNN`を使用してユニバーサル文字名を指定します。ここで、NNNNNNNN は文字用の 8 桁のコード ポイントです。 必要に応じて、コンパイラによってサロゲートペアが生成されます。
 
-C++03 では、ユニバーサル文字名で表現できたのは文字のサブセットに過ぎず、許可されていた一部のユニバーサル文字名は実際には正しい Unicode 文字を表していませんでした。 この誤りは、C++ 11 標準で修正されました。 C++11 では、文字リテラルと文字列リテラルの両方と識別子でユニバーサル文字名を使用できます。  ユニバーサル文字名について詳しくは、「 [Character Sets](../cpp/character-sets.md)」をご覧ください。 Unicode について詳しくは、「 [Unicode](https://msdn.microsoft.com/library/dd374081)」をご覧ください。 サロゲート ペアについて詳しくは、「 [サロゲート ペアと補助文字](/windows/desktop/Intl/surrogates-and-supplementary-characters)」をご覧ください。
+C++03 では、ユニバーサル文字名で表現できたのは文字のサブセットに過ぎず、許可されていた一部のユニバーサル文字名は実際には正しい Unicode 文字を表していませんでした。 この誤りは、C++ 11 標準で修正されました。 C++11 では、文字リテラルと文字列リテラルの両方と識別子でユニバーサル文字名を使用できます。  ユニバーサル文字名について詳しくは、「 [Character Sets](../cpp/character-sets.md)」をご覧ください。 Unicode について詳しくは、「 [Unicode](/windows/win32/intl/unicode)」をご覧ください。 サロゲート ペアについて詳しくは、「 [サロゲート ペアと補助文字](/windows/win32/Intl/surrogates-and-supplementary-characters)」をご覧ください。
 
 ## <a name="string-literals"></a>文字列リテラル
 

@@ -8,41 +8,41 @@ helpviewer_keywords:
 - Clipboard, programming
 - transferring data
 ms.assetid: a71b2824-1f14-4914-8816-54578d73ad4e
-ms.openlocfilehash: 5814b2fdfc7fbcaca00037cc64dd71aa27d65cc3
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: d405a7bbe15d2658380e19c1c908e57f2e40a574
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66504613"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508933"
 ---
 # <a name="clipboard"></a>クリップボードのトピック
 
-この一連のトピックでは、MFC アプリケーションで Windows クリップボードのサポートを実装する方法について説明します。 Windows クリップボードは、2 つの方法で使用されます。
+この一連の記事では、MFC アプリケーションで Windows クリップボードのサポートを実装する方法について説明します。 Windows クリップボードは、次の2つの方法で使用されます。
 
-- 切り取り、コピー、貼り付けなどの標準の編集 メニューのコマンドを実装します。
+- 切り取り、コピー、貼り付けなどの標準の編集メニューコマンドを実装する。
 
-- 統一されたデータを実装すると、ドラッグの転送し、ドロップ (OLE)。
+- ドラッグアンドドロップ (OLE) を使用した uniform data transfer の実装。
 
-クリップボードには、ソースとターゲット間でデータを転送する標準の Windows 方法です。 OLE 操作で非常に便利なことができます。 OLE の登場によって、Windows で 2 つのクリップボード機構ですがあります。 標準の Windows クリップボード API は、引き続き使用できますが、OLE のデータ転送メカニズムにより補完されたされています。 OLE の汎用データ転送 (UDT) は、切り取り、コピー、およびクリップボードでの貼り付けをサポートしているとドラッグ アンド ドロップします。
+クリップボードは、変換元と変換先の間でデータを転送するための標準の Windows メソッドです。 また、OLE 操作では非常に便利です。 OLE の登場により、Windows には2つのクリップボードメカニズムがあります。 標準の Windows クリップボード API は引き続き使用できますが、OLE データ転送メカニズムによって補完されています。 OLE uniform data transfer (UDT) では、クリップボードとドラッグアンドドロップによる切り取り、コピー、貼り付けがサポートされています。
 
-クリップボードとは、ハンドルまたは独自のクラスがないため、Windows セッション全体で共有システム サービスです。 クラスのメンバー関数を使用して、クリップボードを管理する[CWnd](../mfc/reference/cwnd-class.md)します。
+クリップボードは、Windows セッション全体で共有されるシステムサービスであるため、独自のハンドルやクラスを持ちません。 [CWnd](../mfc/reference/cwnd-class.md)クラスのメンバー関数を使用してクリップボードを管理します。
 
-## <a name="what-do-you-want-to-know-more-about"></a>方法については、するして操作を行います
+## <a name="what-do-you-want-to-know-more-about"></a>詳細については、次を参照してください。
 
-- [クリップボード機構を使用する場合](../mfc/clipboard-when-to-use-each-clipboard-mechanism.md)
+- [各クリップボードメカニズムを使用する場合](../mfc/clipboard-when-to-use-each-clipboard-mechanism.md)
 
-- [従来の Windows クリップボード API を使用します。](../mfc/clipboard-using-the-windows-clipboard.md)
+- [従来の Windows クリップボード API の使用](../mfc/clipboard-using-the-windows-clipboard.md)
 
 - [OLE クリップボード機構の使用](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)
 
-- [コピーと貼り付けデータ](../mfc/clipboard-copying-and-pasting-data.md)
+- [データのコピーと貼り付け](../mfc/clipboard-copying-and-pasting-data.md)
 
-- [その他のデータ形式の追加](../mfc/clipboard-adding-other-formats.md)
+- [その他の形式の追加](../mfc/clipboard-adding-other-formats.md)
 
-- [Windows クリップボード](/windows/desktop/dataxchg/clipboard)
+- [Windows クリップボード](/windows/win32/dataxchg/clipboard)
 
-- [ドラッグ アンド ドロップ (OLE) を実装します。](../mfc/drag-and-drop-ole.md)
+- [ドラッグアンドドロップの実装 (OLE)](../mfc/drag-and-drop-ole.md)
 
 ## <a name="see-also"></a>関連項目
 
-[ユーザー インターフェイス要素](../mfc/user-interface-elements-mfc.md)
+[ユーザーインターフェイス要素](../mfc/user-interface-elements-mfc.md)

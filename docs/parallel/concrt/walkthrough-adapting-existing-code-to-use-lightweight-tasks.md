@@ -1,32 +1,32 @@
 ---
-title: 'チュートリアル: 軽量タスクを使用する既存のコードを適合させる'
+title: 'チュートリアル: 軽量タスクを使用するための既存のコードの適合'
 ms.date: 04/25/2019
 helpviewer_keywords:
 - using lightweight tasks [Concurrency Runtime]
 - lightweight tasks, using [Concurrency Runtime]
 ms.assetid: 1edfe818-d274-46de-bdd3-e92967c9bbe0
-ms.openlocfilehash: 658cc82442bf362b7f50e787169ce75373275d9c
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: 406d4d24d0042c7bded4f94dcef1e7731ab3947f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64857024"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69512154"
 ---
-# <a name="walkthrough-adapting-existing-code-to-use-lightweight-tasks"></a>チュートリアル: 軽量タスクを使用する既存のコードを適合させる
+# <a name="walkthrough-adapting-existing-code-to-use-lightweight-tasks"></a>チュートリアル: 軽量タスクを使用するための既存のコードの適合
 
 ここでは、Windows API を使用する既存のコードを改変して、軽量タスクを使用するスレッドを作成および実行する方法について説明します。
 
-A*軽量タスク*から直接スケジュールするタスクを[concurrency::scheduler](../../parallel/concrt/reference/scheduler-class.md)または[concurrency::schedulegroup](../../parallel/concrt/reference/schedulegroup-class.md)オブジェクト。 軽量タスクは、既存のコードを改変してコンカレンシー ランタイムのスケジュール機能を使用する場合に有用です。
+*軽量タスク*は、 [Concurrency:: Scheduler](../../parallel/concrt/reference/scheduler-class.md)オブジェクトまたは[concurrency:: schedulegroup](../../parallel/concrt/reference/schedulegroup-class.md)オブジェクトから直接スケジュールするタスクです。 軽量タスクは、既存のコードを改変してコンカレンシー ランタイムのスケジュール機能を使用する場合に有用です。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-このチュートリアルを開始する前にトピックを読んで、[タスク スケジューラ](../../parallel/concrt/task-scheduler-concurrency-runtime.md)します。
+このチュートリアルを開始する前に、「[タスクスケジューラ](../../parallel/concrt/task-scheduler-concurrency-runtime.md)」を参照してください。
 
 ## <a name="example"></a>例
 
 ### <a name="description"></a>説明
 
-Windows API を使用してスレッドを作成および実行する一般的な方法を次の例に示します。 この例では、 [CreateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createthread)関数を呼び出す、`MyThreadFunction`別のスレッドでします。
+Windows API を使用してスレッドを作成および実行する一般的な方法を次の例に示します。 この例では、 [CreateThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread)関数を使用`MyThreadFunction`して、別のスレッドでを呼び出します。
 
 ### <a name="code"></a>コード
 
@@ -56,15 +56,15 @@ Parameters = 50, 100
 
 [!code-cpp[concrt-migration-lwt#4](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_4.cpp)]
 
-1. 変更、`MyData`構造に含まれる、 [concurrency::event](../../parallel/concrt/reference/event-class.md)タスクが完了したことをメイン アプリケーションに通知するオブジェクト。
+1. タスクが完了したことをメインアプリケーションに通知する[concurrency:: event](../../parallel/concrt/reference/event-class.md)オブジェクトを含めるように構造体を変更します。`MyData`
 
 [!code-cpp[concrt-migration-lwt#5](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_5.cpp)]
 
-1. 呼び出しに置き換えます`CreateThread`を呼び出して、 [concurrency::CurrentScheduler::ScheduleTask](reference/currentscheduler-class.md#scheduletask)メソッド。
+1. の呼び出し`CreateThread`を[concurrency:: currentscheduler:: scheduletask](reference/currentscheduler-class.md#scheduletask)メソッドの呼び出しに置き換えます。
 
 [!code-cpp[concrt-migration-lwt#6](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_6.cpp)]
 
-1. 呼び出しに置き換えます`WaitForSingleObject`を呼び出して、 [concurrency::event::wait](reference/event-class.md#wait)メソッドがタスクの完了を待機します。
+1. の呼び出し`WaitForSingleObject`を[concurrency:: event:: wait](reference/event-class.md#wait)メソッドの呼び出しに置き換えて、タスクが終了するのを待ちます。
 
 [!code-cpp[concrt-migration-lwt#7](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_7.cpp)]
 
@@ -74,7 +74,7 @@ Parameters = 50, 100
 
 [!code-cpp[concrt-migration-lwt#8](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_8.cpp)]
 
-9. 最後に、`MyThreadFunction`関数を呼び出し、 [concurrency::event::set](reference/event-class.md#set)タスクが完了したことをメイン アプリケーションに通知するメソッド。
+9. `MyThreadFunction`関数の最後で、 [concurrency:: event:: set](reference/event-class.md#set)メソッドを呼び出して、タスクが終了したことをメインアプリケーションに通知します。
 
 [!code-cpp[concrt-migration-lwt#9](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_9.cpp)]
 

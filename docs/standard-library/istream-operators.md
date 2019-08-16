@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - istream/std::operator&gt;&gt;
 ms.assetid: 7174da41-f301-4a34-b631-0ab918b188d2
-ms.openlocfilehash: c10692194c80051b10ecbe776c7d23a03860d508
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: f5da7c6805d10e919255ce301dae5618ef58e76d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447785"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501925"
 ---
 # <a name="ltistreamgt-operators"></a>&lt;istream&gt; 演算子
 
@@ -86,7 +86,7 @@ basic_istream<Elem, Tr>& operator>>(
 
 最大で *N* - 1 の要素を抽出し、_ *Str* から始まる配列にこれらを格納します。 `Istr`. [width](../standard-library/ios-base-class.md#width) が 0 より大きい場合、*N* は `Istr`. **width**;それ以外の場合は、宣言できるの`Elem`最大配列のサイズです。 関数は、格納する抽出`Elem()`された要素の後に常に値を格納します。 抽出は、ファイルの最後の早い段階で、値 **Elem**(0) (これは抽出されません) を持つ文字、または [ws](../standard-library/istream-functions.md#ws) によって破棄される任意の要素 (これは抽出されません) で停止します。 関数が要素を抽出しなかった場合、`Istr`. [setstate](../standard-library/basic-ios-class.md#setstate)(**failbit**)。 いずれの場合も、`Istr`. **幅**(0) とは*Istr*を返します。
 
-**セキュリティ**に関する注意入力ストリームから抽出される null で終わる文字列は、コピー先のバッファー *str*のサイズを超えないようにする必要があります。 詳しくは、「 [バッファー オーバーランの回避](/windows/desktop/SecBP/avoiding-buffer-overruns)」をご覧ください。
+**セキュリティ**に関する注意入力ストリームから抽出される null で終わる文字列は、コピー先のバッファー *str*のサイズを超えないようにする必要があります。 詳しくは、「 [バッファー オーバーランの回避](/windows/win32/SecBP/avoiding-buffer-overruns)」をご覧ください。
 
 下記のテンプレート関数は
 

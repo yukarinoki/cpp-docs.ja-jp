@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - first_is attribute
 ms.assetid: 89acbf56-3b38-4d44-83e8-1ce2f6f74ffd
-ms.openlocfilehash: 79ddcb3a3ca256af4c7c30536d65c820dcef2afe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9d06435caaeb53beb76bd145c92c470446cae3a7
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409604"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501558"
 ---
-# <a name="firstis"></a>first_is
+# <a name="first_is"></a>first_is
 
-転送する最初の配列要素のインデックスを指定します。
+転送される最初の配列要素のインデックスを指定します。
 
 ## <a name="syntax"></a>構文
 
@@ -26,15 +26,15 @@ ms.locfileid: "62409604"
 ### <a name="parameters"></a>パラメーター
 
 *式 (expression)*<br/>
-1 つ以上の C 言語の式。 空の引数スロットが許可されます。
+1つ以上の C 言語式。 空の引数スロットが許可されます。
 
 ## <a name="remarks"></a>Remarks
 
-**First_is** C++属性と同じ機能を持つ、 [first_is](/windows/desktop/Midl/first-is) MIDL 属性。
+**First_is** C++属性には、 [first_is](/windows/win32/Midl/first-is) MIDL 属性と同じ機能があります。
 
 ## <a name="example"></a>例
 
-次のコードは、配列のセクションを指定するさまざまな方法を示しています。
+次のコードは、配列内のセクションを指定するさまざまな方法を示しています。
 
 ```cpp
 // cpp_attr_ref_first_is.cpp
@@ -62,7 +62,7 @@ requestedit] HRESULT get_I([out, retval]long *i);
 
 |||
 |-|-|
-|**対象**|フィールドに**構造体**または**共用体**パラメーターをインターフェイス、インターフェイス メソッド|
+|**対象**|**構造体**または**共用体**のフィールド、インターフェイスパラメーター、インターフェイスメソッド|
 |**反復可能**|いいえ|
 |**必要な属性**|なし|
 |**無効な属性**|なし|

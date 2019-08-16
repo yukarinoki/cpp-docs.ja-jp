@@ -44,18 +44,18 @@ helpviewer_keywords:
 - _InterlockedDecrement64_nf intrinsic
 - InterlockedDecrement_rel intrinsic
 ms.assetid: 5268fce3-86b5-4b2b-b96c-2e531a3fb9b5
-ms.openlocfilehash: 525c40f4260d59f370f0580d2cb7d9e8f184ee4c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 43bf7a9b788c176490ec3fe08e370708eaf000ce
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396757"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509409"
 ---
-# <a name="interlockeddecrement-intrinsic-functions"></a>_InterlockedDecrement の組み込み関数
+# <a name="_interlockeddecrement-intrinsic-functions"></a>_InterlockedDecrement の組み込み関数
 
 **Microsoft 固有の仕様**
 
-Win32 Windows SDK のコンパイラ組み込みサポートを提供します。 [InterlockedDecrement](/windows/desktop/api/winnt/nf-winnt-interlockeddecrement)関数。
+Win32 Windows SDK [InterlockedDecrement](/windows/win32/api/winnt/nf-winnt-interlockeddecrement)関数のコンパイラ組み込みサポートを提供します。
 
 ## <a name="syntax"></a>構文
 
@@ -114,7 +114,7 @@ __int64 _InterlockedDecrement64_nf(
 |`_InterlockedDecrement`、 `_InterlockedDecrement16`、 `_InterlockedDecrement64`|x86、ARM、x64|
 |`_InterlockedDecrement_acq`, `_InterlockedDecrement_rel`, `_InterlockedDecrement_nf`, `_InterlockedDecrement16_acq`, `_InterlockedDecrement16_rel`, `_InterlockedDecrement16_nf`, `_InterlockedDecrement64_acq`, `_InterlockedDecrement64_rel`, `_InterlockedDecrement64_nf`,|ARM|
 
-**ヘッダー ファイル** \<intrin.h >
+**ヘッダーファイル**\<>
 
 ## <a name="remarks"></a>Remarks
 
@@ -124,7 +124,7 @@ __int64 _InterlockedDecrement64_nf(
 
 ARM プラットフォームでは、クリティカル セクションの最初と最後などで取得と解放のセマンティクスを必要とする場合は、`_acq` および `_rel` サフィックスの付いた組み込みを使用します。 `_nf` ("フェンスなし") サフィックスの付いた組み込みはメモリ バリアとしては機能しません。
 
-`lpAddend` パラメーターが指す変数は 32 ビットの境界に合わせて調整する必要があります。そのようにしない場合、この関数はマルチプロセッサの x86 システムおよび x 86 システム以外のシステムで失敗します。 詳細については、次を参照してください。 [align](../cpp/align-cpp.md)します。
+`lpAddend` パラメーターが指す変数は 32 ビットの境界に合わせて調整する必要があります。そのようにしない場合、この関数はマルチプロセッサの x86 システムおよび x 86 システム以外のシステムで失敗します。 詳細については、「 [align](../cpp/align-cpp.md)」を参照してください。
 
 これらのルーチンは、組み込みとしてのみ使用できます。
 
