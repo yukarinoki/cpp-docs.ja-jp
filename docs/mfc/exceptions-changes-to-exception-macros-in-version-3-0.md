@@ -58,7 +58,7 @@ Catch ブロックでは、その例外はキャッチ例外ポインターと�
 
 使用して**THROW** catch ブロックが、ポインター`e`外側の catch のサイトは無効なポインターを受け取れるように、削除します。 使用**THROW_LAST**再スローする`e`します。
 
-詳細については、次を参照してください。[例外。キャッチと削除例外](../mfc/exceptions-catching-and-deleting-exceptions.md)します。
+詳細については、次を参照してください。[例外:キャッチと削除例外](../mfc/exceptions-catching-and-deleting-exceptions.md)します。
 
 ## <a name="see-also"></a>関連項目
 

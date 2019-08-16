@@ -320,7 +320,7 @@ MSVC には、これらの追加の定義済みマクロがサポートされて
 
   - 値の範囲の場合は 40 ~ 49`/arch:VFPv4`設定されました。
 
-  - 詳細については、次を参照してください。 [/arch (ARM)](../build/reference/arch-arm.md)します。
+  - 詳細については、[/arch (ARM)](../build/reference/arch-arm.md)を参照してください。
 
 - **&#95;M&#95;ARM64** が 64 ビット ARM プロセッサをターゲットのコンパイルの場合は 1 として定義されています。 それ以外の場合、定義されていません。
 
@@ -328,19 +328,19 @@ MSVC には、これらの追加の定義済みマクロがサポートされて
 
 - **&#95;M&#95;CEE&#95;PURE** 以降 Visual Studio 2015 で非推奨とされます。 場合は 001 として定義されている、 [/clr:pure](../build/reference/clr-common-language-runtime-compilation.md)コンパイラ オプションを設定します。 それ以外の場合、定義されていません。
 
-- **&#95;M&#95;CEE&#95;セーフ**以降 Visual Studio 2015 で非推奨とされます。 場合は 001 として定義されている、 [/clr:safe](../build/reference/clr-common-language-runtime-compilation.md)コンパイラ オプションを設定します。 それ以外の場合、定義されていません。
+- **&#95;M&#95;CEE&#95;SAFE** 以降 Visual Studio 2015 で非推奨とされます。 場合は 001 として定義されている、 [/clr:safe](../build/reference/clr-common-language-runtime-compilation.md)コンパイラ オプションを設定します。 それ以外の場合、定義されていません。
 
-- **&#95;M&#95;FP&#95;EXCEPT**場合は 1 として定義されている、 [/fp: 除く](../build/reference/fp-specify-floating-point-behavior.md)または[/fp: 厳密な](../build/reference/fp-specify-floating-point-behavior.md)コンパイラ オプションを設定します。 それ以外の場合、定義されていません。
+- **&#95;M&#95;FP&#95;EXCEPT** 場合は 1 として定義されている、 [/fp: 除く](../build/reference/fp-specify-floating-point-behavior.md)または[/fp: 厳密な](../build/reference/fp-specify-floating-point-behavior.md)コンパイラ オプションを設定します。 それ以外の場合、定義されていません。
 
-- **&#95;M&#95;FP&#95;高速**場合は 1 として定義されている、 [/fp:fast](../build/reference/fp-specify-floating-point-behavior.md)コンパイラ オプションを設定します。 それ以外の場合、定義されていません。
+- **&#95;M&#95;FP&#95;FAST** 場合は 1 として定義されている、 [/fp:fast](../build/reference/fp-specify-floating-point-behavior.md)コンパイラ オプションを設定します。 それ以外の場合、定義されていません。
 
-- **&#95;M&#95;FP&#95;精度**場合は 1 として定義されている、 [/fp: 正確な](../build/reference/fp-specify-floating-point-behavior.md)コンパイラ オプションを設定します。 それ以外の場合、定義されていません。
+- **&#95;M&#95;FP&#95;PRECISE** 場合は 1 として定義されている、 [/fp: 正確な](../build/reference/fp-specify-floating-point-behavior.md)コンパイラ オプションを設定します。 それ以外の場合、定義されていません。
 
-- **&#95;M&#95;FP&#95;STRICT**場合は 1 として定義されている、 [/fp: 厳密な](../build/reference/fp-specify-floating-point-behavior.md)コンパイラ オプションを設定します。 それ以外の場合、定義されていません。
+- **&#95;M&#95;FP&#95;STRICT** 場合は 1 として定義されている、 [/fp: 厳密な](../build/reference/fp-specify-floating-point-behavior.md)コンパイラ オプションを設定します。 それ以外の場合、定義されていません。
 
-- **&#95;M&#95;IX86**値 600 のコンパイルの場合そのターゲット x86 プロセッサは、整数リテラルとして定義します。 このマクロは、x64、または ARM コンパイル ターゲット定義されていません。
+- **&#95;M&#95;IX86** 値 600 のコンパイルの場合そのターゲット x86 プロセッサは、整数リテラルとして定義します。 このマクロは、x64、または ARM コンパイル ターゲット定義されていません。
 
-- **&#95;M&#95;IX86&#95;FP**を示す整数リテラル値として定義されている、 [/arch](../build/reference/arch-arm.md)セット、または既定値がコンパイラ オプション。 コンパイル ターゲットが x86 の場合このマクロが常に定義されているプロセッサ。 それ以外の場合、定義されていません。 定義されているときに、値には。
+- **&#95;M&#95;IX86&#95;FP** を示す整数リテラル値として定義されている、 [/arch](../build/reference/arch-arm.md)セット、または既定値がコンパイラ オプション。 コンパイル ターゲットが x86 の場合このマクロが常に定義されているプロセッサ。 それ以外の場合、定義されていません。 定義されているときに、値には。
 
   - 0 の場合、`/arch:IA32`コンパイラ オプションを設定します。
 
@@ -350,17 +350,17 @@ MSVC には、これらの追加の定義済みマクロがサポートされて
 
   - 詳細については、「[/arch (x86)](../build/reference/arch-x86.md)」を参照してください。
 
-- **&#95;M&#95;X64**値のコンパイルの場合 100 x64 を対象とするプロセッサは、整数リテラルとして定義します。 それ以外の場合、定義されていません。
+- **&#95;M&#95;X64** 値のコンパイルの場合 100 x64 を対象とするプロセッサは、整数リテラルとして定義します。 それ以外の場合、定義されていません。
 
-- **&#95;マネージ**1 として定義されている、 [/clr](../build/reference/clr-common-language-runtime-compilation.md)コンパイラ オプションを設定します。 それ以外の場合、定義されていません。
+- **&#95;MANAGED** 1 として定義されている、 [/clr](../build/reference/clr-common-language-runtime-compilation.md)コンパイラ オプションを設定します。 それ以外の場合、定義されていません。
 
-- **&#95;MSC&#95;ビルド**コンパイラのバージョン番号のリビジョン番号要素を格納する整数リテラルとして定義されています。 リビジョン番号は、ピリオド区切りのバージョン番号の 4 番目の要素です。 たとえば、Microsoft C と C++ コンパイラのバージョン番号が 15.00.20706.01 ある場合、  **&#95;MSC&#95;ビルド**マクロが 1 に評価されます。 このマクロは常に定義します。
+- **&#95;MSC&#95;BUILD** コンパイラのバージョン番号のリビジョン番号要素を格納する整数リテラルとして定義されています。 リビジョン番号は、ピリオド区切りのバージョン番号の 4 番目の要素です。 たとえば、Microsoft C と C++ コンパイラのバージョン番号が 15.00.20706.01 ある場合、  **&#95;MSC&#95;BUILD**マクロが 1 に評価されます。 このマクロは常に定義します。
 
-- **&#95;MSC&#95;拡張**、既定でオンの場合は 1 として定義されている[/Ze (言語拡張を有効にする)](../build/reference/za-ze-disable-language-extensions.md)コンパイラ オプションを設定します。 それ以外の場合、定義されていません。
+- **&#95;MSC&#95;EXTENSIONS** 既定でオンの場合は 1 として定義されている[/Ze (言語拡張を有効にする)](../build/reference/za-ze-disable-language-extensions.md)コンパイラ オプションを設定します。 それ以外の場合、定義されていません。
 
-- **&#95;MSC&#95;完全&#95;VER**メジャーをエンコードする整数リテラルとして定義されている、マイナー、およびコンパイラのバージョン番号の数の要素を構築します。 メジャー番号はピリオド区切りのバージョン番号の最初の要素、マイナー番号が 2 番目の要素、およびビルド番号が 3 番目の要素。 たとえば、Microsoft C と C++ コンパイラのバージョン番号が 15.00.20706.01 ある場合、  **&#95;MSC&#95;完全&#95;VER**マクロは 150020706 に評価されます。 入力`cl /?`コンパイラのバージョン番号を表示するのには、コマンドラインでします。 このマクロは常に定義します。
+- **&#95;MSC&#95;FULL&#95;VER** メジャーをエンコードする整数リテラルとして定義されている、マイナー、およびコンパイラのバージョン番号の数の要素を構築します。 メジャー番号はピリオド区切りのバージョン番号の最初の要素、マイナー番号が 2 番目の要素、およびビルド番号が 3 番目の要素。 たとえば、Microsoft C と C++ コンパイラのバージョン番号が 15.00.20706.01 ある場合、  **&#95;MSC&#95;FULL&#95;VER**マクロは 150020706 に評価されます。 入力`cl /?`コンパイラのバージョン番号を表示するのには、コマンドラインでします。 このマクロは常に定義します。
 
-- **&#95;MSC&#95;VER**コンパイラのバージョン番号のメジャーおよびマイナー番号要素をエンコードする整数リテラルとして定義されています。 メジャー番号はピリオド区切りのバージョン番号の最初の要素と、マイナー番号は 2 番目の要素。 たとえば、Microsoft C と C++ コンパイラのバージョン番号が 17.00.51106.1 である、  **&#95;MSC&#95;VER**マクロは 1700 に評価されます。 入力`cl /?`コンパイラのバージョン番号を表示するのには、コマンドラインでします。 このマクロは常に定義します。
+- **&#95;MSC&#95;VER** コンパイラのバージョン番号のメジャーおよびマイナー番号要素をエンコードする整数リテラルとして定義されています。 メジャー番号はピリオド区切りのバージョン番号の最初の要素と、マイナー番号は 2 番目の要素。 たとえば、Microsoft C と C++ コンパイラのバージョン番号が 17.00.51106.1 である、  **&#95;MSC&#95;VER**マクロは 1700 に評価されます。 入力`cl /?`コンパイラのバージョン番号を表示するのには、コマンドラインでします。 このマクロは常に定義します。
 
    |Visual Studio のバージョン|**&#95;MSC&#95;VER**|
    |-|-|
@@ -399,15 +399,15 @@ MSVC には、これらの追加の定義済みマクロがサポートされて
 
    詳細については、次を参照してください。 [Visual c コンパイラ バージョン](https://devblogs.microsoft.com/cppblog/visual-c-compiler-version/)マイクロソフト C++ チームのブログにします。
 
-- **&#95;MSVC&#95;LANG**対象となる、コンパイラは C++ 言語標準を指定する整数リテラルとして定義されています。 C++ としてコンパイルされたコードでのみ設定されます。 マクロは、整数リテラル 201402 L を既定では、値とき、または、 [/std:c + + + 14](../build/reference/std-specify-language-standard-version.md)コンパイラ オプションを指定します。 場合 201703 L にマクロが設定されて、 [/std:c + + 17](../build/reference/std-specify-language-standard-version.md)コンパイラ オプションを指定します。 高い、指定されていない値に設定されているときに、 [/std:c + + + 最新](../build/reference/std-specify-language-standard-version.md)オプションを指定します。 それ以外の場合、マクロは定義されません。 **&#95;MSVC&#95;LANG**マクロと[/std (言語標準バージョンの指定)](../build/reference/std-specify-language-standard-version.md)コンパイラ オプションで、Visual Studio 2015 Update 3 以降を使用できます。
+- **&#95;MSVC&#95;LANG** 対象となる、コンパイラは C++ 言語標準を指定する整数リテラルとして定義されています。 C++ としてコンパイルされたコードでのみ設定されます。 マクロは、整数リテラル 201402 L を既定では、値とき、または、 [/std:c + + + 14](../build/reference/std-specify-language-standard-version.md)コンパイラ オプションを指定します。 場合 201703 L にマクロが設定されて、 [/std:c + + 17](../build/reference/std-specify-language-standard-version.md)コンパイラ オプションを指定します。 高い、指定されていない値に設定されているときに、 [/std:c + + + 最新](../build/reference/std-specify-language-standard-version.md)オプションを指定します。 それ以外の場合、マクロは定義されません。 **&#95;MSVC&#95;LANG**マクロと[/std (言語標準バージョンの指定)](../build/reference/std-specify-language-standard-version.md)コンパイラ オプションで、Visual Studio 2015 Update 3 以降を使用できます。
 
-- **&#95;&#95;MSVC&#95;RUNTIME&#95;CHECKS**1 と 1 つとして定義されているの[/RTC](../build/reference/rtc-run-time-error-checks.md)コンパイラ オプションを設定します。 それ以外の場合、定義されていません。
+- **&#95;&#95;MSVC&#95;RUNTIME&#95;CHECKS** 1 と 1 つとして定義されているの[/RTC](../build/reference/rtc-run-time-error-checks.md)コンパイラ オプションを設定します。 それ以外の場合、定義されていません。
 
 - **&#95;MT** 1 として定義されている[/MD または/MDd](../build/reference/md-mt-ld-use-run-time-library.md) (マルチ スレッド DLL) または[/MT または/MTd](../build/reference/md-mt-ld-use-run-time-library.md) (マルチ スレッド) を指定します。 それ以外の場合、定義されていません。
 
-- **&#95;ネイティブ&#95;WCHAR&#95;T&#95;定義**1 として定義されている、 [/Zc:wchar_t](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)コンパイラ オプションを設定します。 それ以外の場合、定義されていません。
+- **&#95;ネイティブ&#95;WCHAR&#95;T&#95;定義** 1 として定義されている、 [/Zc:wchar_t](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)コンパイラ オプションを設定します。 それ以外の場合、定義されていません。
 
-- **&#95;OPENMP**場合は、整数リテラルの 200203 として定義されている、 [/openmp (OpenMP 2.0 サポートの有効化)](../build/reference/openmp-enable-openmp-2-0-support.md)コンパイラ オプションを設定します。 この値は、MSVC によって実装される OpenMP 仕様の日付を表します。 それ以外の場合、定義されていません。
+- **&#95;OPENMP** 場合は、整数リテラルの 200203 として定義されている、 [/openmp (OpenMP 2.0 サポートの有効化)](../build/reference/openmp-enable-openmp-2-0-support.md)コンパイラ オプションを設定します。 この値は、MSVC によって実装される OpenMP 仕様の日付を表します。 それ以外の場合、定義されていません。
 
    ```cpp
    // _OPENMP_dir.cpp
@@ -424,19 +424,19 @@ MSVC には、これらの追加の定義済みマクロがサポートされて
 
 - **&#95;VC&#95;NODEFAULTLIB** 1 として定義されている、 [/Zl (Omit Default Library Name)](../build/reference/zl-omit-default-library-name.md)コンパイラ オプションを設定します。 それ以外の場合、定義されていません。
 
-- **&#95;WCHAR&#95;T&#95;定義**1 として定義されている既定の[/Zc:wchar_t](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)コンパイラ オプションを設定します。 **&#95;WCHAR&#95;T&#95;定義**マクロが定義されていますが、値が存在しない場合、`/Zc:wchar_t-`コンパイラ オプションを設定すると、および**wchar_t**に含まれるシステム ヘッダー ファイルで定義されているが、プロジェクトです。 それ以外の場合、定義されていません。
+- **&#95;WCHAR&#95;T&#95;DEFINED** 1 として定義されている既定の[/Zc:wchar_t](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)コンパイラ オプションを設定します。 **&#95;WCHAR&#95;T&#95;定義**マクロが定義されていますが、値が存在しない場合、`/Zc:wchar_t-`コンパイラ オプションを設定すると、および**wchar_t**に含まれるシステム ヘッダー ファイルで定義されているが、プロジェクトです。 それ以外の場合、定義されていません。
 
 - **&#95;WIN32** x 64 またはコンパイル ターゲットが 32 ビット ARM、64 ビット ARM、x86、1 として定義します。 それ以外の場合、定義されていません。
 
-- **&#95;WIN64**コンパイル ターゲットが 64 ビット ARM または x64 の場合は、1 として定義します。 それ以外の場合、定義されていません。
+- **&#95;WIN64** コンパイル ターゲットが 64 ビット ARM または x64 の場合は、1 として定義します。 それ以外の場合、定義されていません。
 
-- **&#95;WINRT&#95;DLL**定義すると 1 としては、C++、およびその両方としてコンパイル[/ZW (Windows ランタイムのコンパイル)](../build/reference/zw-windows-runtime-compilation.md)と[/LD または/LDd](../build/reference/md-mt-ld-use-run-time-library.md)コンパイラ オプションを設定します。 それ以外の場合、定義されていません。
+- **&#95;WINRT&#95;DLL** 定義すると 1 としては、C++、およびその両方としてコンパイル[/ZW (Windows ランタイムのコンパイル)](../build/reference/zw-windows-runtime-compilation.md)と[/LD または/LDd](../build/reference/md-mt-ld-use-run-time-library.md)コンパイラ オプションを設定します。 それ以外の場合、定義されていません。
 
 コンパイラによって定義済み ATL または MFC ライブラリのバージョンを識別するプリプロセッサ マクロはありません。 ATL と MFC ライブラリのヘッダーは、内部的にこれらのバージョンのマクロを定義します。 必須のヘッダーが含まれる前に行われたプリプロセッサ ディレクティブで、未定義のしています。
 
-- **&#95;ATL&#95;VER**で定義されている\<atldef.h > ATL バージョン番号をエンコードする整数リテラルとして。
+- **&#95;ATL&#95;VER** で定義されている\<atldef.h > ATL バージョン番号をエンコードする整数リテラルとして。
 
-- **&#95;MFC&#95;VER**で定義されている\<afxver_.h > MFC のバージョン番号をエンコードする整数リテラルとして。
+- **&#95;MFC&#95;VER** で定義されている\<afxver_.h > MFC のバージョン番号をエンコードする整数リテラルとして。
 
 ## <a name="see-also"></a>関連項目
 

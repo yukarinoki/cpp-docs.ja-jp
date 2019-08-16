@@ -149,7 +149,7 @@ caught an SEH Exception
 
 ##  <a name="vcconexceptionfiltersandexception_continue_execution"></a> 例外フィルターと EXCEPTION_CONTINUE_EXECUTION
 
-フィルターを返す場合`EXCEPTION_CONTINUE_EXECUTION`、マネージ アプリケーションでは扱われます、フィルターを返す場合、`EXCEPTION_CONTINUE_SEARCH`します。 これらの定数の詳細については、次を参照してください。[を再試行してください-ステートメントを除く](../cpp/try-except-statement.md)します。
+フィルターを返す場合`EXCEPTION_CONTINUE_EXECUTION`、マネージ アプリケーションでは扱われます、フィルターを返す場合、`EXCEPTION_CONTINUE_SEARCH`します。 これらの定数の詳細については、[try-except ステートメント](../cpp/try-except-statement.md)を参照してください。
 
 次の例では、この違いを示しています。
 
