@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CSplitButton [MFC], SetDropDownMenu
 - CSplitButton [MFC], OnDropDown
 ms.assetid: 6844d0a9-6408-4e44-9b5f-57628ed8bad6
-ms.openlocfilehash: d493a2d4d1c531250abc1cd60d1d3d5b79dea1b7
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
-ms.translationtype: HT
+ms.openlocfilehash: a552334adb4963f45388a798eb0723e61c09ec85
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916771"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502848"
 ---
 # <a name="csplitbutton-class"></a>CSplitButton クラス
 
@@ -54,7 +54,7 @@ class CSplitButton : public CButton
 
 ## <a name="remarks"></a>Remarks
 
-`CSplitButton` クラスは、[CButton](../../mfc/reference/cbutton-class.md) クラスから派生します。 分割ボタンコントロールは、スタイルが BS_SPLITBUTTON のボタンコントロールです。 ユーザーがドロップダウン矢印をクリックすると、カスタムメニューが表示されます。 詳細については、「BS_SPLITBUTTON and BS_DEFSPLITBUTTON styles in the [Button styles](/windows/desktop/Controls/button-styles)」を参照してください。
+`CSplitButton` クラスは、[CButton](../../mfc/reference/cbutton-class.md) クラスから派生します。 分割ボタンコントロールは、スタイルが BS_SPLITBUTTON のボタンコントロールです。 ユーザーがドロップダウン矢印をクリックすると、カスタムメニューが表示されます。 詳細については、「BS_SPLITBUTTON and BS_DEFSPLITBUTTON styles in the [Button styles](/windows/win32/Controls/button-styles)」を参照してください。
 
 次の図は、ページャーコントロールと (1) 分割ボタンコントロールを含むダイアログボックスを示しています。 (2) ドロップダウン矢印が既にクリックされており、(3) サブメニューが表示されています。
 
@@ -144,8 +144,8 @@ afx_msg void OnDropDown(
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*pNMHDR*|から[BCN_DROPDOWN](/windows/desktop/Controls/bcn-dropdown)通知に関する情報を格納している[NMHDR](/windows/desktop/api/richedit/ns-richedit-nmhdr)構造体へのポインター。|
-|*pResult*|入出力(使用されません。値は返されません)。[BCN_DROPDOWN](/windows/desktop/Controls/bcn-dropdown)通知の戻り値。|
+|*pNMHDR*|から[BCN_DROPDOWN](/windows/win32/Controls/bcn-dropdown)通知に関する情報を格納している[NMHDR](/windows/win32/api/richedit/ns-richedit-nmhdr)構造体へのポインター。|
+|*pResult*|入出力(使用されません。値は返されません)。[BCN_DROPDOWN](/windows/win32/Controls/bcn-dropdown)通知の戻り値。|
 
 ### <a name="remarks"></a>Remarks
 

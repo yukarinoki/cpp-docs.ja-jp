@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CHttpFile [MFC], SendRequest
 - CHttpFile [MFC], SendRequestEx
 ms.assetid: 399e7c68-bbce-4374-8c55-206e9c7baac6
-ms.openlocfilehash: ff050a89a10c68c639c141891dd51b1b2d58e105
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
-ms.translationtype: HT
+ms.openlocfilehash: 0c8c401b43361a5e1472e3470f5ea452c91b957f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915999"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505962"
 ---
 # <a name="chttpfile-class"></a>CHttpFile クラス
 
@@ -126,7 +126,7 @@ BOOL AddRequestHeaders(
 
 ### <a name="return-value"></a>戻り値
 
-正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 呼び出しが失敗した場合は、Win32 関数[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)を呼び出してエラーの原因を特定することができます。
+正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 呼び出しが失敗した場合は、Win32 関数[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)を呼び出してエラーの原因を特定することができます。
 
 ### <a name="remarks"></a>Remarks
 
@@ -198,10 +198,10 @@ BOOL EndRequest(
 ### <a name="parameters"></a>パラメーター
 
 *dwFlags*<br/>
-操作を記述するフラグ。 適切なフラグの一覧については、Windows SDK の「 [HttpEndRequest](/windows/desktop/api/wininet/nf-wininet-httpendrequesta) 」を参照してください。
+操作を記述するフラグ。 適切なフラグの一覧については、Windows SDK の「 [HttpEndRequest](/windows/win32/api/wininet/nf-wininet-httpendrequestw) 」を参照してください。
 
 *lpBuffIn*<br/>
-操作に使用する入力バッファーを記述する、初期化された[INTERNET_BUFFERS](/windows/desktop/api/wininet/ns-wininet-internet_buffersa)へのポインター。
+操作に使用する入力バッファーを記述する、初期化された[INTERNET_BUFFERS](/windows/win32/api/wininet/ns-wininet-internet_buffersw)へのポインター。
 
 *dwContext*<br/>
 `CHttpFile` 操作のコンテキスト識別子。 このパラメーターの詳細については、「解説」を参照してください。
@@ -293,7 +293,7 @@ BOOL QueryInfo(
 
 - HTTP_QUERY_FLAG_REQUEST_HEADERS 通常、アプリケーションは応答ヘッダーを照会しますが、アプリケーションはこのフラグを使用して要求ヘッダーを照会することもできます。
 
-- HTTP_QUERY_FLAG_SYSTEMTIME の値が日付/時刻文字列 ("最終更新時刻" など) であるヘッダーの場合、このフラグは、アプリケーションがデータを解析する必要がない標準の Win32 [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)構造体としてヘッダー値を返します。 このフラグを使用する場合は、関数の`SYSTEMTIME`オーバーライドを使用することをお勧めします。
+- HTTP_QUERY_FLAG_SYSTEMTIME の値が日付/時刻文字列 ("最終更新時刻" など) であるヘッダーの場合、このフラグは、アプリケーションがデータを解析する必要がない標準の Win32 [SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime)構造体としてヘッダー値を返します。 このフラグを使用する場合は、関数の`SYSTEMTIME`オーバーライドを使用することをお勧めします。
 
 - HTTP_QUERY_FLAG_NUMBER 状態コードなど、値が数値であるヘッダーの場合、このフラグはデータを32ビットの数値として返します。
 
@@ -315,11 +315,11 @@ BOOL QueryInfo(
 インデックス値。 「 *LpdwIndex*」を参照してください。
 
 *pSysTime*<br/>
-Win32 [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)構造体へのポインター。
+Win32 [SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime)構造体へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 呼び出しが失敗した場合は、Win32 関数[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)を呼び出してエラーの原因を特定することができます。
+正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 呼び出しが失敗した場合は、Win32 関数[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)を呼び出してエラーの原因を特定することができます。
 
 ### <a name="remarks"></a>Remarks
 
@@ -398,7 +398,7 @@ BOOL QueryInfoStatusCode(DWORD& dwStatusCode) const;
 
 ### <a name="return-value"></a>戻り値
 
-正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 呼び出しが失敗した場合は、Win32 関数[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)を呼び出してエラーの原因を特定することができます。
+正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 呼び出しが失敗した場合は、Win32 関数[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)を呼び出してエラーの原因を特定することができます。
 
 ### <a name="remarks"></a>Remarks
 
@@ -485,13 +485,13 @@ BOOL SendRequestEx(
 要求で送信されるバイト数。
 
 *dwFlags*<br/>
-操作を記述するフラグ。 適切なフラグの一覧については、Windows SDK の「 [HttpSendRequestEx](/windows/desktop/api/wininet/nf-wininet-httpsendrequestexa) 」を参照してください。
+操作を記述するフラグ。 適切なフラグの一覧については、Windows SDK の「 [HttpSendRequestEx](/windows/win32/api/wininet/nf-wininet-httpsendrequestexw) 」を参照してください。
 
 *dwContext*<br/>
 `CHttpFile` 操作のコンテキスト識別子。 このパラメーターの詳細については、「解説」を参照してください。
 
 *lpBuffIn*<br/>
-操作に使用する入力バッファーを記述する、初期化された[INTERNET_BUFFERS](/windows/desktop/api/wininet/ns-wininet-internet_buffersa)へのポインター。
+操作に使用する入力バッファーを記述する、初期化された[INTERNET_BUFFERS](/windows/win32/api/wininet/ns-wininet-internet_buffersw)へのポインター。
 
 *lpBuffOut*<br/>
 操作に使用される出力バッファーを記述する、初期化された INTERNET_BUFFERS へのポインター。

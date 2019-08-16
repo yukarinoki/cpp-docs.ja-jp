@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CPrintDialogEx [MFC], PrintSelection
 - CPrintDialogEx [MFC], m_pdex
 ms.assetid: 1d506703-ee1c-44cc-b4ce-4e778fec26b8
-ms.openlocfilehash: ebef892e174525c0b907818c02b7d34b1b41f850
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
-ms.translationtype: HT
+ms.openlocfilehash: 2334fb0a420e14aa4fa8b8b570671fb9a611de32
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916894"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502882"
 ---
 # <a name="cprintdialogex-class"></a>CPrintDialogEx クラス
 
@@ -94,7 +94,7 @@ class CPrintDialogEx : public CCommonDialog
 
 アプリケーションで、フレームワークの関与なしに印刷を処理する場合は、提供され`CPrintDialogEx`たコンストラクターを使用して "そのまま" クラスを使用するか、から`CPrintDialogEx`独自のダイアログクラスを派生させ、必要に応じてコンストラクターを記述することができます。 どちらの場合も、これらのダイアログボックスはクラス`CCommonDialog`から派生しているので、標準の MFC ダイアログボックスのように動作します。
 
-`CPrintDialogEx`オブジェクトを使用するには、最初に`CPrintDialogEx`コンストラクターを使用してオブジェクトを作成します。 ダイアログボックスが構築されたら、 [m_pdex](#m_pdex)構造体の任意の値を設定または変更して、ダイアログボックスのコントロールの値を初期化できます。 構造体の型は[printdlgex です。](/windows/desktop/api/commdlg/ns-commdlg-tagpdexa) `m_pdex` この構造の詳細については、Windows SDK を参照してください。
+`CPrintDialogEx`オブジェクトを使用するには、最初に`CPrintDialogEx`コンストラクターを使用してオブジェクトを作成します。 ダイアログボックスが構築されたら、 [m_pdex](#m_pdex)構造体の任意の値を設定または変更して、ダイアログボックスのコントロールの値を初期化できます。 構造体の型は[printdlgex です。](/windows/win32/api/commdlg/ns-commdlg-pdexw) `m_pdex` この構造の詳細については、Windows SDK を参照してください。
 
 メンバー `m_pdex` `hDevMode`と`GlobalFree`メンバーに対して独自のハンドルを指定しない場合は、ダイアログボックスが終了したときに、これらのハンドルに対して Windows の関数を呼び出す必要があります。 `hDevNames`
 
@@ -143,7 +143,7 @@ CPrintDialogEx(
 ### <a name="parameters"></a>パラメーター
 
 *dwFlags*<br/>
-ダイアログボックスの設定をカスタマイズするために使用できる1つ以上のフラグ。ビットごとの OR 演算子を使用して結合します。 たとえば、PD_ALLPAGES フラグは、既定の印刷範囲をドキュメントのすべてのページに設定します。 これらのフラグの詳細については、Windows SDK の[Printdlgex](/windows/desktop/api/commdlg/ns-commdlg-tagpdexa)構造体を参照してください。
+ダイアログボックスの設定をカスタマイズするために使用できる1つ以上のフラグ。ビットごとの OR 演算子を使用して結合します。 たとえば、PD_ALLPAGES フラグは、既定の印刷範囲をドキュメントのすべてのページに設定します。 これらのフラグの詳細については、Windows SDK の[Printdlgex](/windows/win32/api/commdlg/ns-commdlg-pdexw)構造体を参照してください。
 
 *pParentWnd*<br/>
 ダイアログボックスの親またはオーナーウィンドウへのポインター。
@@ -154,7 +154,7 @@ CPrintDialogEx(
 
 ##  <a name="createprinterdc"></a>  CPrintDialogEx::CreatePrinterDC
 
-[DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea)および[DEVNAMES](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames)構造体からプリンターデバイスコンテキスト (DC) を作成します。
+[DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea)および[DEVNAMES](/windows/win32/api/commdlg/ns-commdlg-devnames)構造体からプリンターデバイスコンテキスト (DC) を作成します。
 
 ```
 HDC CreatePrinterDC();
@@ -188,7 +188,7 @@ INT_PTR 戻り値は実際には HRESULT です。 Windows SDK の「 [Printdlge
 
 を呼び出し`DoModal`た後、他のメンバー関数を呼び出して、ユーザーがダイアログボックスに入力した設定または情報を取得できます。
 
-を呼び出す`DoModal`ときに PD_RETURNDC フラグが使用されている場合は、 [m_pdex](#m_pdex)の`hDC`メンバーにプリンター DC が返されます。 この DC は、の呼び出し元によって[DeleteDC](/windows/desktop/api/wingdi/nf-wingdi-deletedc)への`CPrintDialogEx`呼び出しを使用して解放する必要があります。
+を呼び出す`DoModal`ときに PD_RETURNDC フラグが使用されている場合は、 [m_pdex](#m_pdex)の`hDC`メンバーにプリンター DC が返されます。 この DC は、の呼び出し元によって[DeleteDC](/windows/win32/api/wingdi/nf-wingdi-deletedc)への`CPrintDialogEx`呼び出しを使用して解放する必要があります。
 
 ##  <a name="getcopies"></a>  CPrintDialogEx::GetCopies
 
@@ -216,11 +216,11 @@ BOOL GetDefaults();
 
 ### <a name="remarks"></a>Remarks
 
-[DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea)および[DEVNAMES](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames)構造体からプリンターデバイスコンテキスト (DC) を作成します。
+[DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea)および[DEVNAMES](/windows/win32/api/commdlg/ns-commdlg-devnames)構造体からプリンターデバイスコンテキスト (DC) を作成します。
 
-`GetDefaults`[印刷] プロパティシートは表示されません。 代わりに、[m_pdex](#m_pdex) のメンバーの `hDevNames` と `hDevMode` メンバーを、システムの既定のプリンター用に初期化された [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) および [DEVNAMES](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames) 構造体にハンドルするように設定します。 `GetDefaults`と`hDevNames` はどちらもNULLであるか、`hDevMode`失敗します。
+`GetDefaults`[印刷] プロパティシートは表示されません。 代わりに、[m_pdex](#m_pdex) のメンバーの `hDevNames` と `hDevMode` メンバーを、システムの既定のプリンター用に初期化された [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) および [DEVNAMES](/windows/win32/api/commdlg/ns-commdlg-devnames) 構造体にハンドルするように設定します。 `GetDefaults`と`hDevNames` はどちらもNULLであるか、`hDevMode`失敗します。
 
-PD_RETURNDC フラグが設定されている場合、この関数は`hDevNames` `hDevMode` (および`m_pdex.hDevMode`に`m_pdex.hDevNames`あります) を呼び出し元に返すだけではなく、で`m_pdex.hDC`もプリンター DC を返します。 `CPrintDialogEx`オブジェクトの操作が完了したら、プリンター DC を削除して、ハンドルに対して Windows [GlobalFree](/windows/desktop/api/winbase/nf-winbase-globalfree)関数を呼び出す必要があります。
+PD_RETURNDC フラグが設定されている場合、この関数は`hDevNames` `hDevMode` (および`m_pdex.hDevMode`に`m_pdex.hDevNames`あります) を呼び出し元に返すだけではなく、で`m_pdex.hDC`もプリンター DC を返します。 `CPrintDialogEx`オブジェクトの操作が完了したら、プリンター DC を削除して、ハンドルに対して Windows [GlobalFree](/windows/win32/api/winbase/nf-winbase-globalfree)関数を呼び出す必要があります。
 
 ##  <a name="getdevicename"></a>  CPrintDialogEx::GetDeviceName
 
@@ -248,7 +248,7 @@ LPDEVMODE GetDevMode() const;
 
 ### <a name="return-value"></a>戻り値
 
-[DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea)データ構造体。これには、印刷ドライバーのデバイスの初期化と環境に関する情報が含まれます。 この構造体によって取得されるメモリは、Windows [globalunlock](/windows/desktop/api/winbase/nf-winbase-globalunlock)関数を使用してロック解除する必要があります。これについては、Windows SDK を参照してください。
+[DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea)データ構造体。これには、印刷ドライバーのデバイスの初期化と環境に関する情報が含まれます。 この構造体によって取得されるメモリは、Windows [globalunlock](/windows/win32/api/winbase/nf-winbase-globalunlock)関数を使用してロック解除する必要があります。これについては、Windows SDK を参照してください。
 
 ##  <a name="getdrivername"></a>  CPrintDialogEx::GetDriverName
 
@@ -292,7 +292,7 @@ HDC GetPrinterDC() const;
 
 ### <a name="remarks"></a>Remarks
 
-使用が完了したら、Windows [DeleteDC](/windows/desktop/api/wingdi/nf-wingdi-deletedc)関数を呼び出して、デバイスコンテキストを削除する必要があります。
+使用が完了したら、Windows [DeleteDC](/windows/win32/api/wingdi/nf-wingdi-deletedc)関数を呼び出して、デバイスコンテキストを削除する必要があります。
 
 ##  <a name="m_pdex"></a>  CPrintDialogEx::m_pdex
 
@@ -304,7 +304,7 @@ PRINTDLGEX m_pdex;
 
 ### <a name="remarks"></a>Remarks
 
-`CPrintDialogEx`オブジェクトを構築した後、を`m_pdex`使用して、ダイアログボックスのさまざまな側面を設定してから、 [DoModal](#domodal)メンバー関数を呼び出すことができます。 `m_pdex`構造の詳細については、Windows SDK の「 [printdlgex](/windows/desktop/api/commdlg/ns-commdlg-tagpdexa) 」を参照してください。
+`CPrintDialogEx`オブジェクトを構築した後、を`m_pdex`使用して、ダイアログボックスのさまざまな側面を設定してから、 [DoModal](#domodal)メンバー関数を呼び出すことができます。 `m_pdex`構造の詳細については、Windows SDK の「 [printdlgex](/windows/win32/api/commdlg/ns-commdlg-pdexw) 」を参照してください。
 
 `m_pdex`データメンバーを直接変更すると、すべての既定の動作がオーバーライドされます。
 
@@ -358,7 +358,7 @@ BOOL PrintRange() const;
 
 ### <a name="remarks"></a>Remarks
 
-指定されたページ範囲は[m_pdex](#m_pdex)から判別でき`nPageRanges`ます`nMaxPageRanges`(Windows SDK `lpPageRanges`の[printdlgex](/windows/desktop/api/commdlg/ns-commdlg-tagpdexa)構造体で、、およびを参照してください)。
+指定されたページ範囲は[m_pdex](#m_pdex)から判別でき`nPageRanges`ます`nMaxPageRanges`(Windows SDK `lpPageRanges`の[printdlgex](/windows/win32/api/commdlg/ns-commdlg-pdexw)構造体で、、およびを参照してください)。
 
 ##  <a name="printselection"></a>CPrintDialogEx::P rintSelection
 
