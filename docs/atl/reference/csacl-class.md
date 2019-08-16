@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSacl class
 ms.assetid: 8624889b-aebc-4183-9d29-a20f07837f05
-ms.openlocfilehash: b75dc4110b785f0ab1f55ba5c31df7d3fc6fbd37
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: c4bbdfccb2d6d8b167c537b7ae4df57c89438479
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915753"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496512"
 ---
 # <a name="csacl-class"></a>CSacl クラス
 
@@ -64,7 +64,7 @@ SACL には、ドメインコントローラーのセキュリティイベント
 
 提供されているクラスメソッドを使用して、オブジェクトの`SACL` ace を追加、削除、作成、および削除します。 [Atlgetsacl](security-global-functions.md#atlgetsacl)および[atlgetsacl](security-global-functions.md#atlsetsacl)も参照してください。
 
-Windows のアクセス制御モデルの概要については、Windows SDK の「 [Access Control](/windows/desktop/SecAuthZ/access-control) 」を参照してください。
+Windows のアクセス制御モデルの概要については、Windows SDK の「 [Access Control](/windows/win32/SecAuthZ/access-control) 」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -129,7 +129,7 @@ ACE が`CSacl`オブジェクトに追加された場合は TRUE、失敗した�
 
 オブジェクト`CSacl`には、セキュリティイベントログに監査レコードを生成するアクセス試行の種類を指定するアクセス制御エントリ (ace) が含まれています。 このメソッドは、 `CSacl`このような ACE をオブジェクトに追加します。
 
-*AceFlags*パラメーターで設定できるさまざまなフラグの詳細については、「 [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-ace_header) 」を参照してください。
+*AceFlags*パラメーターで設定できるさまざまなフラグの詳細については、「 [ACE_HEADER](/windows/win32/api/winnt/ns-winnt-ace_header) 」を参照してください。
 
 ##  <a name="csacl"></a>CSacl:: CSacl
 
@@ -222,7 +222,7 @@ void RemoveAllAces() throw();
 ## <a name="see-also"></a>関連項目
 
 [CAcl クラス](../../atl/reference/cacl-class.md)<br/>
-[Acl](/windows/desktop/SecAuthZ/access-control-lists)<br/>
-[Ace](/windows/desktop/SecAuthZ/access-control-entries)<br/>
+[Acl](/windows/win32/SecAuthZ/access-control-lists)<br/>
+[Ace](/windows/win32/SecAuthZ/access-control-entries)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)<br/>
 [セキュリティに関するグローバル関数](../../atl/reference/security-global-functions.md)

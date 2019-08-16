@@ -24,14 +24,14 @@ helpviewer_keywords:
 - _InterlockedCompareExchangePointer_nf intrinsic
 - _InterlockedCompareExchangePointer_np intrinsic
 ms.assetid: 97fde59d-2bf9-42aa-a0fe-a5b6befdd44b
-ms.openlocfilehash: 2db18c73f7765454d29e2dfdbd9408f62c51d32a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7b8ba4fe6224292d0160f859aeb630fc17c2d992
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348732"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509429"
 ---
-# <a name="interlockedcompareexchangepointer-intrinsic-functions"></a>_InterlockedCompareExchangePointer の組み込み関数
+# <a name="_interlockedcompareexchangepointer-intrinsic-functions"></a>_InterlockedCompareExchangePointer の組み込み関数
 
 **Microsoft 固有の仕様**
 
@@ -80,13 +80,13 @@ long _InterlockedCompareExchangePointer_rel (
 #### <a name="parameters"></a>パラメーター
 
 *Destination (公開先)*<br/>
-[入力、出力]宛先値へのポインターへのポインター。 符号は無視されます。
+[入力、出力]対象の値へのポインターへのポインター。 符号は無視されます。
 
 *Exchange*<br/>
-[in]Exchange へのポインター。 符号は無視されます。
+から交換ポインター。 符号は無視されます。
 
 *比較対照値*<br/>
-[in]対象と比較するポインター。 符号は無視されます。
+からDestination と比較するポインター。 符号は無視されます。
 
 ## <a name="return-value"></a>戻り値
 
@@ -104,9 +104,9 @@ long _InterlockedCompareExchangePointer_rel (
 
 `_InterlockedCompareExchangePointer` は `Destination` アドレスと `Comparand` アドレスのアトミックな比較を実行します。 `Destination` のアドレスが `Comparand` のアドレスと等しい場合、`Exchange` のアドレスは `Destination` で指定したアドレスに格納されます。 それ以外の場合は演算が実行されません。
 
-`_InterlockedCompareExchangePointer` Win32 Windows SDK のコンパイラ組み込みサポートを提供します。 [_InterlockedCompareExchangePointer](https://msdn.microsoft.com/library/ff547863.aspx)関数。
+`_InterlockedCompareExchangePointer`Win32 Windows SDK [InterlockedCompareExchangePointer](/windows-hardware/drivers/ddi/content/wdm/nf-wdm-interlockedcompareexchangepointer)関数のコンパイラ組み込みサポートを提供します。
 
-使用する方法の例については`_InterlockedCompareExchangePointer`を参照してください[_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md)します。
+の使用`_InterlockedCompareExchangePointer`例については、「 [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md)」を参照してください。
 
 ARM プラットフォームでは、クリティカル セクションの最初と最後などで取得と解放のセマンティクスを必要とする場合は、`_acq` および `_rel` サフィックスの付いた組み込みを使用します。 `_nf` ("フェンスなし") サフィックスの付いた ARM 組み込みはメモリ バリアとしては機能しません。
 

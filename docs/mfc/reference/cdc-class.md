@@ -402,12 +402,12 @@ helpviewer_keywords:
 - CDC [MFC], m_hAttribDC
 - CDC [MFC], m_hDC
 ms.assetid: 715b3334-cb2b-4c9c-8067-02eb7c66c8b2
-ms.openlocfilehash: 4f9f08ae751ba2482967c1eee4268c6d5f6d4a76
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: bae2f9a5a4f39c4eeffe68cc33e744e44c6800c8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916246"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69507012"
 ---
 # <a name="cdc-class"></a>CDC クラス
 
@@ -810,7 +810,7 @@ BOOL AlphaBlend(
 コピー元の四角形の高さ (論理単位) を指定します。
 
 *blend*<br/>
-[Blendfunction](/windows/desktop/api/wingdi/ns-wingdi-blendfunction)構造体を指定します。
+[Blendfunction](/windows/win32/api/wingdi/ns-wingdi-blendfunction)構造体を指定します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -818,7 +818,7 @@ BOOL AlphaBlend(
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、Windows SDK の「 [AlphaBlend](/windows/desktop/api/wingdi/nf-wingdi-alphablend) 」を参照してください。
+詳細については、Windows SDK の「 [AlphaBlend](/windows/win32/api/wingdi/nf-wingdi-alphablend) 」を参照してください。
 
 ##  <a name="anglearc"></a>  CDC::AngleArc
 
@@ -913,7 +913,7 @@ BOOL Arc(
 外接する四角形を指定します (論理単位)。 このパラメーターには、LPRECT または[CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトを渡すことができます。
 
 *ptStart*<br/>
-円弧の開始点 (論理単位) を定義する点の x 座標と y 座標を指定します。 この点は、円弧上に正確に配置する必要はありません。このパラメーターには、 [POINT](/windows/desktop/api/windef/ns-windef-tagpoint)構造体または[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)オブジェクトのいずれかを渡すことができます。
+円弧の開始点 (論理単位) を定義する点の x 座標と y 座標を指定します。 この点は、円弧上に正確に配置する必要はありません。このパラメーターには、 [POINT](/windows/win32/api/windef/ns-windef-point)構造体または[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)オブジェクトのいずれかを渡すことができます。
 
 *ptEnd*<br/>
 円弧の終了点 (論理単位) を定義する点の x 座標と y 座標を指定します。 この点は、円弧上に正確に配置する必要はありません。このパラメーターに`CPoint`は、 `POINT`構造体またはオブジェクトのいずれかを渡すことができます。
@@ -980,10 +980,10 @@ BOOL ArcTo(
 円弧のエンドポイント (論理単位) を定義する点の y 座標を指定します。 この点は、円弧上に正確に配置する必要はありません。
 
 *lpRect*<br/>
-外接する四角形を指定します (論理単位)。 このパラメーターには、 [RECT](/windows/desktop/api/windef/ns-windef-tagrect)データ構造体または[CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトへのポインターを渡すことができます。
+外接する四角形を指定します (論理単位)。 このパラメーターには、 [RECT](/windows/win32/api/windef/ns-windef-rect)データ構造体または[CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトへのポインターを渡すことができます。
 
 *ptStart*<br/>
-円弧の開始点 (論理単位) を定義する点の x 座標と y 座標を指定します。 この点は、円弧上に正確に配置する必要はありません。このパラメーターには、[ポイント](/windows/desktop/api/windef/ns-windef-tagpoint)データ構造体または[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)オブジェクトを渡すことができます。
+円弧の開始点 (論理単位) を定義する点の x 座標と y 座標を指定します。 この点は、円弧上に正確に配置する必要はありません。このパラメーターには、[ポイント](/windows/win32/api/windef/ns-windef-point)データ構造体または[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)オブジェクトを渡すことができます。
 
 *ptEnd*<br/>
 円弧の終了点 (論理単位) を定義する点の x 座標と y 座標を指定します。 この点は、円弧上に正確に配置する必要はありません。このパラメーターに`CPoint`は、 `POINT`データ構造またはオブジェクトのいずれかを渡すことができます。
@@ -1035,7 +1035,7 @@ BOOL BeginPath();
 
 パスの角かっこが開いた後、アプリケーションは GDI 描画関数の呼び出しを開始して、パス内に存在する点を定義できます。 アプリケーションでは、メンバー関数を呼び出すことに`EndPath`よって、開いているパスの角かっこを閉じることができます。 アプリケーションがを呼び`BeginPath`出すと、以前のパスはすべて破棄されます。
 
-パス内の点を定義する描画関数の一覧については、「Windows SDK の[Beginpath](/windows/desktop/api/wingdi/nf-wingdi-beginpath) 」を参照してください。
+パス内の点を定義する描画関数の一覧については、「Windows SDK の[Beginpath](/windows/win32/api/wingdi/nf-wingdi-beginpath) 」を参照してください。
 
 ### <a name="example"></a>例
 
@@ -1081,9 +1081,9 @@ BOOL BitBlt(
 ソースビットマップの左上隅の論理 y 座標を指定します。
 
 *dwRop*<br/>
-実行するラスター オペレーションを指定します。 ラスター操作コードでは、現在のブラシ、可能なソースビットマップ、およびコピー先のビットマップを含む出力操作の色を GDI がどのように組み合わせるかを定義します。 *DwRop*とその説明のラスター操作コードの一覧については、Windows SDK の「 [BitBlt](/windows/desktop/api/wingdi/nf-wingdi-bitblt) 」を参照してください。
+実行するラスター オペレーションを指定します。 ラスター操作コードでは、現在のブラシ、可能なソースビットマップ、およびコピー先のビットマップを含む出力操作の色を GDI がどのように組み合わせるかを定義します。 *DwRop*とその説明のラスター操作コードの一覧については、Windows SDK の「 [BitBlt](/windows/win32/api/wingdi/nf-wingdi-bitblt) 」を参照してください。
 
-ラスター操作コードの完全な一覧については、「Windows SDK の[ラスター操作コードについ](/windows/desktop/gdi/raster-operation-codes)て」を参照してください。
+ラスター操作コードの完全な一覧については、「Windows SDK の[ラスター操作コードについ](/windows/win32/gdi/raster-operation-codes)て」を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1169,7 +1169,7 @@ BOOL Chord(
 弦の開始点 (論理単位) を定義する点の x 座標と y 座標を指定します。 この点は、コードに正確に含まれている必要はありません。 このパラメーターに`CPoint`は、 `POINT`構造体またはオブジェクトのいずれかを渡すことができます。
 
 *ptEnd*<br/>
-弦の終了点 (論理単位) を定義する点の x 座標と y 座標を指定します。 この点は、コードに正確に含まれている必要はありません。 このパラメーターには、 [POINT](/windows/desktop/api/windef/ns-windef-tagpoint)構造体または[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)オブジェクトのいずれかを渡すことができます。
+弦の終了点 (論理単位) を定義する点の x 座標と y 座標を指定します。 この点は、コードに正確に含まれている必要はありません。 このパラメーターには、 [POINT](/windows/win32/api/windef/ns-windef-point)構造体または[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)オブジェクトのいずれかを渡すことができます。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1361,7 +1361,7 @@ void DPtoHIMETRIC(LPSIZE lpSize) const;
 ### <a name="parameters"></a>パラメーター
 
 *lpSize*<br/>
-[サイズ](/windows/desktop/api/windef/ns-windef-tagsize)構造体または[CSize](../../atl-mfc-shared/reference/csize-class.md)オブジェクトを指します。
+[サイズ](/windows/win32/api/windef/ns-windef-size)構造体または[CSize](../../atl-mfc-shared/reference/csize-class.md)オブジェクトを指します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -1383,16 +1383,16 @@ void DPtoLP(LPSIZE lpSize) const;
 ### <a name="parameters"></a>パラメーター
 
 *lpPoints*<br/>
-[ポイント](/windows/desktop/api/windef/ns-windef-tagpoint)構造体または[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)オブジェクトの配列を指します。
+[ポイント](/windows/win32/api/windef/ns-windef-point)構造体または[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)オブジェクトの配列を指します。
 
 *nCount*<br/>
 配列内の点の数。
 
 *lpRect*<br/>
-[RECT](/windows/desktop/api/windef/ns-windef-tagrect)構造体または[CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトを指します。 このパラメーターは、1つの四角形をデバイスポイントから論理ポイントに変換する単純なケースに使用されます。
+[RECT](/windows/win32/api/windef/ns-windef-rect)構造体または[CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトを指します。 このパラメーターは、1つの四角形をデバイスポイントから論理ポイントに変換する単純なケースに使用されます。
 
 *lpSize*<br/>
-[サイズ](/windows/desktop/api/windef/ns-windef-tagsize)構造体または[CSize](../../atl-mfc-shared/reference/csize-class.md)オブジェクトを指します。
+[サイズ](/windows/win32/api/windef/ns-windef-size)構造体または[CSize](../../atl-mfc-shared/reference/csize-class.md)オブジェクトを指します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -1420,7 +1420,7 @@ void Draw3dRect(
 ### <a name="parameters"></a>パラメーター
 
 *lpRect*<br/>
-外接する四角形を指定します (論理単位)。 このパラメーターには、 [RECT](/windows/desktop/api/windef/ns-windef-tagrect)構造体または[CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトへのポインターを渡すことができます。
+外接する四角形を指定します (論理単位)。 このパラメーターには、 [RECT](/windows/win32/api/windef/ns-windef-rect)構造体または[CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトへのポインターを渡すことができます。
 
 *clrTopLeft*<br/>
 3次元四角形の上辺と左端の色を指定します。
@@ -1465,13 +1465,13 @@ void DrawDragRect(
 ### <a name="parameters"></a>パラメーター
 
 *lpRect*<br/>
-四角形の論理座標 (この場合は、再描画される四角形の終了位置) を指定する[RECT](/windows/desktop/api/windef/ns-windef-tagrect)構造体または[CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトをポイントします。
+四角形の論理座標 (この場合は、再描画される四角形の終了位置) を指定する[RECT](/windows/win32/api/windef/ns-windef-rect)構造体または[CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトをポイントします。
 
 *size*<br/>
 外側の境界線の左上隅から、四角形の内側の境界線の左上隅 (境界線の太さ) までの移動を指定します。
 
 *lpRectLast*<br/>
-四角形の位置の論理座標 (この場合は、再描画される四角形の元の位置) を指定する[RECT](/windows/desktop/api/windef/ns-windef-tagrect)構造体または[CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトをポイントします。
+四角形の位置の論理座標 (この場合は、再描画される四角形の元の位置) を指定する[RECT](/windows/win32/api/windef/ns-windef-rect)構造体または[CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトをポイントします。
 
 *sizeLast*<br/>
 外側の境界線の左上隅から、再描画される元の四角形の内側の境界線の左上隅 (境界線の太さ) までの移動を指定します。
@@ -1505,7 +1505,7 @@ BOOL DrawEdge(
 四角形の論理座標`RECT`を格納している構造体へのポインター。
 
 *nEdge*<br/>
-描画する内側と外側のエッジの種類を指定します。 このパラメーターは、1つの内側の境界線のフラグと1つの外側の境界線のフラグの組み合わせである必要があります。 パラメーターの型の表については、Windows SDK の「 [DrawEdge](/windows/desktop/api/winuser/nf-winuser-drawedge) 」を参照してください。
+描画する内側と外側のエッジの種類を指定します。 このパラメーターは、1つの内側の境界線のフラグと1つの外側の境界線のフラグの組み合わせである必要があります。 パラメーターの型の表については、Windows SDK の「 [DrawEdge](/windows/win32/api/winuser/nf-winuser-drawedge) 」を参照してください。
 
 *nFlags*<br/>
 描画する境界線の種類を指定するフラグ。 パラメーター `DrawEdge`の値のテーブルについては、Windows SDK の「」を参照してください。 斜線の場合、BF_RECT フラグは、四角形のパラメーターによって制限されたベクトルの終点を指定します。
@@ -1555,7 +1555,7 @@ void DrawFocusRect(LPCRECT lpRect);
 ### <a name="parameters"></a>パラメーター
 
 *lpRect*<br/>
-描画する四角形の論理座標を指定する[RECT](/windows/desktop/api/windef/ns-windef-tagrect)構造体または[CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトをポイントします。
+描画する四角形の論理座標を指定する[RECT](/windows/win32/api/windef/ns-windef-rect)構造体または[CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトをポイントします。
 
 ### <a name="remarks"></a>Remarks
 
@@ -1581,7 +1581,7 @@ BOOL DrawFrameControl(
 四角形の論理座標`RECT`を格納している構造体へのポインター。
 
 *nType*<br/>
-描画するフレームコントロールの種類を指定します。 このパラメーターの有効な値の一覧については、Windows SDK の[Drawframecontrol](/windows/desktop/api/winuser/nf-winuser-drawframecontrol)の*utype*パラメーターを参照してください。
+描画するフレームコントロールの種類を指定します。 このパラメーターの有効な値の一覧については、Windows SDK の[Drawframecontrol](/windows/win32/api/winuser/nf-winuser-drawframecontrol)の*utype*パラメーターを参照してください。
 
 *nState*<br/>
 フレームコントロールの初期状態を指定します。 には、Windows SDK のの`DrawFrameControl` *ustate*パラメーターについて説明されている1つ以上の値を指定できます。 *NState*値 DFCS_ADJUSTRECT を使用して、外接する四角形を調整し、プッシュボタンの周囲の端を除外します。
@@ -1675,7 +1675,7 @@ BOOL DrawIcon(
 描画するアイコンのハンドルを識別します。
 
 *視点*<br/>
-アイコンの左上隅の論理 x 座標と y 座標を指定します。 このパラメーターには、 [POINT](/windows/desktop/api/windef/ns-windef-tagpoint)構造体または[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)オブジェクトを渡すことができます。
+アイコンの左上隅の論理 x 座標と y 座標を指定します。 このパラメーターには、 [POINT](/windows/win32/api/windef/ns-windef-point)構造体または[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)オブジェクトを渡すことができます。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1774,7 +1774,7 @@ BOOL DrawState(
 ビットマップを処理するハンドル。
 
 *nFlags*<br/>
-イメージの種類と状態を指定するフラグ。 使用可能な*nFlags*の型と状態については、Windows SDK の[drawstate](/windows/desktop/api/winuser/nf-winuser-drawstatea)を参照してください。
+イメージの種類と状態を指定するフラグ。 使用可能な*nFlags*の型と状態については、Windows SDK の[drawstate](/windows/win32/api/winuser/nf-winuser-drawstatew)を参照してください。
 
 *hBrush*<br/>
 ブラシを処理するハンドル。
@@ -1798,7 +1798,7 @@ CBrush オブジェクトへのポインター。
 *LpszText*が指すテキスト文字列の長さ。 *Ntextlen*が0の場合、文字列は null で終わると見なされます。
 
 *lpDrawProc*<br/>
-イメージのレンダリングに使用されるコールバック関数へのポインター。 *NFlags*のイメージの種類が DST_COMPLEX の場合、このパラメーターは必須です。 これは省略可能であり、画像の種類が DST_TEXT の場合は NULL にすることができます。 その他のすべての種類のイメージでは、このパラメーターは無視されます。 コールバック関数の詳細については、Windows SDK の「 [Drawstateproc](/windows/desktop/api/winuser/nc-winuser-drawstateproc)関数」を参照してください。
+イメージのレンダリングに使用されるコールバック関数へのポインター。 *NFlags*のイメージの種類が DST_COMPLEX の場合、このパラメーターは必須です。 これは省略可能であり、画像の種類が DST_TEXT の場合は NULL にすることができます。 その他のすべての種類のイメージでは、このパラメーターは無視されます。 コールバック関数の詳細については、Windows SDK の「 [Drawstateproc](/windows/win32/api/winuser/nc-winuser-drawstateproc)関数」を参照してください。
 
 *lData*<br/>
 イメージに関する情報を指定します。 このパラメーターの意味は、イメージの種類によって異なります。
@@ -1833,13 +1833,13 @@ int DrawText(
 文字列内の文字数を指定します。 *NCount*が-1 の場合、 *lpszstring*は、null で終わる文字列への長いポインターと`DrawText`見なされ、文字数が自動的に計算されます。
 
 *lpRect*<br/>
-テキストが書式設定される四角形 (論理座標) を格納する[RECT](/windows/desktop/api/windef/ns-windef-tagrect)構造体または[CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトを指します。
+テキストが書式設定される四角形 (論理座標) を格納する[RECT](/windows/win32/api/windef/ns-windef-rect)構造体または[CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトを指します。
 
 *str*<br/>
 描画する指定された文字を格納している[CString](../../atl-mfc-shared/reference/cstringt-class.md)オブジェクト。
 
 *nFormat*<br/>
-テキストを書式設定する方法を指定します。 Windows SDK 内の[DrawText](/windows/desktop/api/winuser/nf-winuser-drawtext)の*uformat*パラメーターに記述されている値の任意の組み合わせにすることができます。 (ビットごとの OR 演算子を使用して結合します)。
+テキストを書式設定する方法を指定します。 Windows SDK 内の[DrawText](/windows/win32/api/winuser/nf-winuser-drawtext)の*uformat*パラメーターに記述されている値の任意の組み合わせにすることができます。 (ビットごとの OR 演算子を使用して結合します)。
 
 > [!NOTE]
 >  *Uformat*フラグの組み合わせによっては、渡された文字列が変更されることがあります。 DT_END_ELLIPSIS または DT_PATH_ELLIPSIS を指定して DT_MODIFYSTRING を使用すると、文字列が変更され、 `CString`オーバーライドでアサーションが発生する可能性があります。 値 DT_CALCRECT、DT_EXTERNALLEADING、DT_INTERNAL、DT_NOCLIP、および DT_NOPREFIX は、DT_TABSTOP 値と共に使用することはできません。
@@ -1890,23 +1890,23 @@ int DrawTextEx(
 文字列内の文字数を指定します。 *NCount*が-1 の場合、 *lpszstring*は、null で終わる文字列への長いポインターと`DrawText`見なされ、文字数が自動的に計算されます。
 
 *lpRect*<br/>
-テキストが書式設定される四角形 (論理座標) を格納する[RECT](/windows/desktop/api/windef/ns-windef-tagrect)構造体または[CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトを指します。
+テキストが書式設定される四角形 (論理座標) を格納する[RECT](/windows/win32/api/windef/ns-windef-rect)構造体または[CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトを指します。
 
 *str*<br/>
 描画する指定された文字を格納している[CString](../../atl-mfc-shared/reference/cstringt-class.md)オブジェクト。
 
 *nFormat*<br/>
-テキストを書式設定する方法を指定します。 Windows SDK 内の[DrawText](/windows/desktop/api/winuser/nf-winuser-drawtext)の*uformat*パラメーターに記述されている値の任意の組み合わせにすることができます。 (ビットごとの**or**演算子を使用して結合します)。
+テキストを書式設定する方法を指定します。 Windows SDK 内の[DrawText](/windows/win32/api/winuser/nf-winuser-drawtext)の*uformat*パラメーターに記述されている値の任意の組み合わせにすることができます。 (ビットごとの**or**演算子を使用して結合します)。
 
 > [!NOTE]
 >  *Uformat*フラグの組み合わせによっては、渡された文字列が変更されることがあります。 DT_END_ELLIPSIS または DT_PATH_ELLIPSIS を指定して DT_MODIFYSTRING を使用すると、文字列が変更され、 `CString`オーバーライドでアサーションが発生する可能性があります。 値 DT_CALCRECT、DT_EXTERNALLEADING、DT_INTERNAL、DT_NOCLIP、および DT_NOPREFIX は、DT_TABSTOP 値と共に使用することはできません。
 
 *lpDTParams*<br/>
-追加の書式設定オプションを指定する[Drawtextparams](/windows/desktop/api/winuser/ns-winuser-tagdrawtextparams)構造体へのポインター。 このパラメーターには NULL を指定できます。
+追加の書式設定オプションを指定する[Drawtextparams](/windows/win32/api/winuser/ns-winuser-drawtextparams)構造体へのポインター。 このパラメーターには NULL を指定できます。
 
 ### <a name="remarks"></a>Remarks
 
-タブを適切なスペースに展開することによってテキストの書式を設定し、指定された四角形の左、右、または中央にテキストを配置し、指定された四角形内に収まるようにテキストを分割します。 書式設定の種類は、 *Nformat*と*lpDTParams*によって指定されます。 詳細については、Windows SDK の「 [CDC::D rawText](#drawtext) 」と「 [drawtextex](/windows/desktop/api/winuser/nf-winuser-drawtextexa) 」を参照してください。
+タブを適切なスペースに展開することによってテキストの書式を設定し、指定された四角形の左、右、または中央にテキストを配置し、指定された四角形内に収まるようにテキストを分割します。 書式設定の種類は、 *Nformat*と*lpDTParams*によって指定されます。 詳細については、Windows SDK の「 [CDC::D rawText](#drawtext) 」と「 [drawtextex](/windows/win32/api/winuser/nf-winuser-drawtextexw) 」を参照してください。
 
 テキストの色は、 [CDC:: SetTextColor](#settextcolor)によって設定できます。
 
@@ -2087,7 +2087,7 @@ int Escape(
 *nEscape*<br/>
 実行するエスケープ関数を指定します。
 
-エスケープ関数の完全な一覧については、「Windows SDK での[エスケープ](/windows/desktop/api/wingdi/nf-wingdi-escape)」を参照してください。
+エスケープ関数の完全な一覧については、「Windows SDK での[エスケープ](/windows/win32/api/wingdi/nf-wingdi-escape)」を参照してください。
 
 *nCount*<br/>
 *Lpszindata*が指すデータのバイト数を指定します。
@@ -2140,11 +2140,11 @@ Win32 プログラミングでは`CDC` 、は、対応するプリンターの�
 
 - [CDC::StartPage](#startpage)
 
-さらに、 [CDC:: GetDeviceCaps](#getdevicecaps)は、他のプリンターのエスケープを置き換える Win32 インデックスをサポートしています。 詳細については、Windows SDK の「 [GetDeviceCaps](/windows/desktop/api/wingdi/nf-wingdi-getdevicecaps) 」を参照してください。
+さらに、 [CDC:: GetDeviceCaps](#getdevicecaps)は、他のプリンターのエスケープを置き換える Win32 インデックスをサポートしています。 詳細については、Windows SDK の「 [GetDeviceCaps](/windows/win32/api/wingdi/nf-wingdi-getdevicecaps) 」を参照してください。
 
 このメンバー関数を使用すると、GDI を介して直接使用できない特定のデバイスの機能にアプリケーションがアクセスできるようになります。
 
-アプリケーションで定義済みのエスケープ値が使用されている場合は、最初のバージョンを使用します。 アプリケーションでプライベートエスケープ値が定義されている場合は、2番目のバージョンを使用します。 2番目のバージョンの詳細については、Windows SDK の「 [Extescape](/windows/desktop/api/wingdi/nf-wingdi-extescape) 」を参照してください。
+アプリケーションで定義済みのエスケープ値が使用されている場合は、最初のバージョンを使用します。 アプリケーションでプライベートエスケープ値が定義されている場合は、2番目のバージョンを使用します。 2番目のバージョンの詳細については、Windows SDK の「 [Extescape](/windows/win32/api/wingdi/nf-wingdi-extescape) 」を参照してください。
 
 ##  <a name="excludecliprect"></a>  CDC::ExcludeClipRect
 
@@ -2301,7 +2301,7 @@ BOOL ExtTextOut(
 - ETO_OPAQUE は、現在の背景色が四角形を塗りつぶすことを指定します。 ( [SetBkColor](#setbkcolor)および[GetBkColor](#getbkcolor)メンバー関数を使用して、現在の背景色を設定したりクエリを実行したりできます。)
 
 *lpRect*<br/>
-四角形の大きさを決定する[RECT](/windows/desktop/api/windef/ns-windef-tagrect)構造体をポイントします。 このパラメーターには NULL を指定できます。 このパラメーターには、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトを渡すこともできます。
+四角形の大きさを決定する[RECT](/windows/win32/api/windef/ns-windef-rect)構造体をポイントします。 このパラメーターには NULL を指定できます。 このパラメーターには、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトを渡すこともできます。
 
 *lpszString*<br/>
 描画する指定された文字列を指します。 このパラメーターには、 [CString](../../atl-mfc-shared/reference/cstringt-class.md)オブジェクトを渡すこともできます。
@@ -2354,7 +2354,7 @@ void FillRect(
 ### <a name="parameters"></a>パラメーター
 
 *lpRect*<br/>
-塗りつぶす四角形の論理座標を格納している[RECT](/windows/desktop/api/windef/ns-windef-tagrect)構造体を指します。 このパラメーターには、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトを渡すこともできます。
+塗りつぶす四角形の論理座標を格納している[RECT](/windows/win32/api/windef/ns-windef-rect)構造体を指します。 このパラメーターには、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトを渡すこともできます。
 
 *pBrush*<br/>
 四角形の塗りつぶしに使用するブラシを識別します。
@@ -2419,7 +2419,7 @@ void FillSolidRect(
 ### <a name="parameters"></a>パラメーター
 
 *lpRect*<br/>
-外接する四角形を指定します (論理単位)。 このパラメーターには、 [RECT](/windows/desktop/api/windef/ns-windef-tagrect)データ構造体または`CRect`オブジェクトへのポインターを渡すことができます。
+外接する四角形を指定します (論理単位)。 このパラメーターには、 [RECT](/windows/win32/api/windef/ns-windef-rect)データ構造体または`CRect`オブジェクトへのポインターを渡すことができます。
 
 *clr*四角形の塗りつぶしに使用する色を指定します。
 
@@ -2501,7 +2501,7 @@ void FrameRect(
 ### <a name="parameters"></a>パラメーター
 
 *lpRect*<br/>
-四角形の左上隅と右下隅の論理座標を格納している[RECT](/windows/desktop/api/windef/ns-windef-tagrect)構造体または[CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトをポイントします。 このパラメーターのオブジェクトを`CRect`渡すこともできます。
+四角形の左上隅と右下隅の論理座標を格納している[RECT](/windows/win32/api/windef/ns-windef-rect)構造体または[CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトをポイントします。 このパラメーターのオブジェクトを`CRect`渡すこともできます。
 
 *pBrush*<br/>
 四角形をフレーム化するために使用するブラシを識別します。
@@ -2718,16 +2718,16 @@ DWORD GetCharacterPlacement(
 処理する文字列へのポインター。
 
 *nCount*<br/>
-文字列の長さを指定します。 ANSI バージョンの場合は BYTE カウント、Unicode 関数の場合は WORD カウントです。 詳細については、「Get文字の[配置](/windows/desktop/api/wingdi/nf-wingdi-getcharacterplacementa)」を参照してください。
+文字列の長さを指定します。 ANSI バージョンの場合は BYTE カウント、Unicode 関数の場合は WORD カウントです。 詳細については、「Get文字の[配置](/windows/win32/api/wingdi/nf-wingdi-getcharacterplacementw)」を参照してください。
 
 *nMaxExtent*<br/>
 処理する文字列の最大エクステントを論理単位で指定します。 このエクステントを超えて処理された文字列は無視されます。 並べ替えやグリフの配列に必要な演算は、範囲に含まれている文字だけに適用されます。 このパラメーターは、GCP_MAXEXTENT 値が*dwFlags*パラメーターに指定されている場合にのみ使用されます。 入力文字列を処理するときは、エクステントの合計が最大値を超えない限り、各文字と文字のエクステントが出力、エクステント、および他の配列に追加されます。 制限に達すると、処理は停止します。
 
 *lpResults*<br/>
-関数の結果を受け取る[GCP_Results](/windows/desktop/api/wingdi/ns-wingdi-taggcp_resultsa)構造体へのポインター。
+関数の結果を受け取る[GCP_Results](/windows/win32/api/wingdi/ns-wingdi-gcp_resultsw)構造体へのポインター。
 
 *dwFlags*<br/>
-必要な配列に挿入される文字列の処理方法を指定します。 このパラメーターには、 [Get文字配置](/windows/desktop/api/wingdi/nf-wingdi-getcharacterplacementa)トピックの*dwFlags*セクションに記載されている1つ以上の値を指定できます。
+必要な配列に挿入される文字列の処理方法を指定します。 このパラメーターには、 [Get文字配置](/windows/win32/api/wingdi/nf-wingdi-getcharacterplacementw)トピックの*dwFlags*セクションに記載されている1つ以上の値を指定できます。
 
 *str*<br/>
 処理する[CString](../../atl-mfc-shared/reference/cstringt-class.md)オブジェクトへのポインター。
@@ -2740,7 +2740,7 @@ DWORD GetCharacterPlacement(
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は、Windows SDK で説明されているように、関数[Get文字配置](/windows/desktop/api/wingdi/nf-wingdi-getcharacterplacementa)の機能をエミュレートします。
+このメンバー関数は、Windows SDK で説明されているように、関数[Get文字配置](/windows/win32/api/wingdi/nf-wingdi-getcharacterplacementw)の機能をエミュレートします。
 
 ##  <a name="getcharabcwidths"></a>  CDC::GetCharABCWidths
 
@@ -2767,10 +2767,10 @@ BOOL GetCharABCWidths(
 文字幅が返される、現在のフォントの文字の範囲の最後の文字を指定します。
 
 *lpabc*<br/>
-関数から制御が戻ったときに文字幅を受け取る、 [ABC](/windows/desktop/api/wingdi/ns-wingdi-abc)構造体の配列を指します。 この配列には、 `ABC` *nfirstchar*および*nfirstchar*パラメーターで指定された範囲内の文字と同じ数の構造体が含まれている必要があります。
+関数から制御が戻ったときに文字幅を受け取る、 [ABC](/windows/win32/api/wingdi/ns-wingdi-abc)構造体の配列を指します。 この配列には、 `ABC` *nfirstchar*および*nfirstchar*パラメーターで指定された範囲内の文字と同じ数の構造体が含まれている必要があります。
 
 *lpABCF*<br/>
-関数が戻るときに文字幅を受け取る[ABCFLOAT](/windows/desktop/api/wingdi/ns-wingdi-abcfloat)構造体の配列を含む、アプリケーションが提供するバッファーを指します。 この関数によって返される幅は、IEEE 浮動小数点形式です。
+関数が戻るときに文字幅を受け取る[ABCFLOAT](/windows/win32/api/wingdi/ns-wingdi-abcfloat)構造体の配列を含む、アプリケーションが提供するバッファーを指します。 この関数によって返される幅は、IEEE 浮動小数点形式です。
 
 ### <a name="return-value"></a>戻り値
 
@@ -2784,11 +2784,11 @@ TrueType ラスタライザーでは、特定のポイントサイズが選択�
 
 `GetCharABCWidths`メンバー関数が文字の負の "A" または "C" の幅を取得した場合、その文字には、過小ハングまたは overhangs が含まれます。
 
-ABC 幅をフォントデザイン単位に変換するには、アプリケーションで`lfHeight` 、 [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)構造体のメンバーに指定されている高さが`ntmSizeEM` [newtextmetric](/windows/desktop/api/wingdi/ns-wingdi-tagnewtextmetrica)のメンバーに格納されている値と等しいフォントを作成する必要があります。データ. ( `ntmSizeEM`メンバーの値は、 [enumfontfamilies](/windows/desktop/api/wingdi/nf-wingdi-enumfontfamiliesa) Windows 関数を呼び出すことによって取得できます)。
+ABC 幅をフォントデザイン単位に変換するには、アプリケーションで`lfHeight` 、 [LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw)構造体のメンバーに指定されている高さが`ntmSizeEM` [newtextmetric](/windows/win32/api/wingdi/ns-wingdi-newtextmetricw)のメンバーに格納されている値と等しいフォントを作成する必要があります。データ. ( `ntmSizeEM`メンバーの値は、 [enumfontfamilies](/windows/win32/api/wingdi/nf-wingdi-enumfontfamiliesw) Windows 関数を呼び出すことによって取得できます)。
 
 既定の文字の ABC 幅は、現在選択されているフォントの範囲外の文字に使用されます。
 
-TrueType 以外のフォントの文字幅を取得するには、アプリケーションで[Getcharwidth](/windows/desktop/api/wingdi/nf-wingdi-getcharwidtha) Windows 関数を使用する必要があります。
+TrueType 以外のフォントの文字幅を取得するには、アプリケーションで[Getcharwidth](/windows/win32/api/wingdi/nf-wingdi-getcharwidthw) Windows 関数を使用する必要があります。
 
 ##  <a name="getcharabcwidthsi"></a>  CDC::GetCharABCWidthsI
 
@@ -2814,7 +2814,7 @@ BOOL GetCharABCWidthsI(
 グリフインデックスを格納している配列へのポインター。 値が NULL の場合は、代わりに*Gifirst*パラメーターが使用されます。 *Cgi*パラメーターは、この配列内のグリフインデックスの数を指定します。
 
 *lpabc*<br/>
-文字幅を受け取る[ABC](/windows/desktop/api/wingdi/ns-wingdi-abc)構造体の配列へのポインター。 この配列には、 *cgi*パラメーターに`ABC`よって指定されたグリフインデックスの数以上の構造体が含まれている必要があります。
+文字幅を受け取る[ABC](/windows/win32/api/wingdi/ns-wingdi-abc)構造体の配列へのポインター。 この配列には、 *cgi*パラメーターに`ABC`よって指定されたグリフインデックスの数以上の構造体が含まれている必要があります。
 
 ### <a name="return-value"></a>戻り値
 
@@ -2822,7 +2822,7 @@ BOOL GetCharABCWidthsI(
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は、Windows SDK で説明されているように、関数[GetCharABCWidthsI](/windows/desktop/api/wingdi/nf-wingdi-getcharabcwidthsi)の機能をエミュレートします。
+このメンバー関数は、Windows SDK で説明されているように、関数[GetCharABCWidthsI](/windows/win32/api/wingdi/nf-wingdi-getcharabcwidthsi)の機能をエミュレートします。
 
 ##  <a name="getcharwidth"></a>  CDC::GetCharWidth
 
@@ -2898,7 +2898,7 @@ BOOL GetCharWidthI(
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は、Windows SDK で説明されているように、 [Getchar幅 i](/windows/desktop/api/wingdi/nf-wingdi-getcharwidthi)関数の機能をエミュレートします。
+このメンバー関数は、Windows SDK で説明されているように、 [Getchar幅 i](/windows/win32/api/wingdi/nf-wingdi-getcharwidthi)関数の機能をエミュレートします。
 
 ##  <a name="getclipbox"></a>  CDC::GetClipBox
 
@@ -2911,7 +2911,7 @@ virtual int GetClipBox(LPRECT lpRect) const;
 ### <a name="parameters"></a>パラメーター
 
 *lpRect*<br/>
-四角形の寸法を受け取る[RECT](/windows/desktop/api/windef/ns-windef-tagrect)構造体または[CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトを指します。
+四角形の寸法を受け取る[RECT](/windows/win32/api/windef/ns-windef-rect)構造体または[CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトを指します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -2940,7 +2940,7 @@ BOOL GetColorAdjustment(LPCOLORADJUSTMENT lpColorAdjust) const;
 ### <a name="parameters"></a>パラメーター
 
 *lpColorAdjust*<br/>
-カラー調整値を受け取る[coloradjustment](/windows/desktop/api/wingdi/ns-wingdi-tagcoloradjustment)データ構造体をポイントします。
+カラー調整値を受け取る[coloradjustment](/windows/win32/api/wingdi/ns-wingdi-coloradjustment)データ構造体をポイントします。
 
 ### <a name="return-value"></a>戻り値
 
@@ -3052,13 +3052,13 @@ COLORREF GetDCBrushColor() const;
 
 ### <a name="return-value"></a>戻り値
 
-関数が成功した場合、戻り値は現在のブラシの色の[COLORREF](/windows/desktop/gdi/colorref)値になります。
+関数が成功した場合、戻り値は現在のブラシの色の[COLORREF](/windows/win32/gdi/colorref)値になります。
 
 関数が失敗した場合、戻り値は CLR_INVALID になります。
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は、Windows SDK で説明されているように、関数[いる getdcbrushcolor](/windows/desktop/api/wingdi/nf-wingdi-getdcbrushcolor)の機能をエミュレートします。
+このメンバー関数は、Windows SDK で説明されているように、関数[いる getdcbrushcolor](/windows/win32/api/wingdi/nf-wingdi-getdcbrushcolor)の機能をエミュレートします。
 
 ##  <a name="getdcpencolor"></a>  CDC::GetDCPenColor
 
@@ -3070,13 +3070,13 @@ COLORREF GetDCPenColor() const;
 
 ### <a name="return-value"></a>戻り値
 
-関数が成功した場合、戻り値は現在のペンの色の[COLORREF](/windows/desktop/gdi/colorref)値になります。
+関数が成功した場合、戻り値は現在のペンの色の[COLORREF](/windows/win32/gdi/colorref)値になります。
 
 関数が失敗した場合、戻り値は CLR_INVALID になります。
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は、Windows SDK で説明されているように、Win32 関数[Getdcpencolor](/windows/desktop/api/wingdi/nf-wingdi-getdcpencolor)を利用します。
+このメンバー関数は、Windows SDK で説明されているように、Win32 関数[Getdcpencolor](/windows/win32/api/wingdi/nf-wingdi-getdcpencolor)を利用します。
 
 ##  <a name="getdevicecaps"></a>  CDC::GetDeviceCaps
 
@@ -3089,7 +3089,7 @@ int GetDeviceCaps(int nIndex) const;
 ### <a name="parameters"></a>パラメーター
 
 *nIndex*<br/>
-返される情報の種類を指定します。 値の一覧については、Windows SDK の「 [GetDeviceCaps](/windows/desktop/api/wingdi/nf-wingdi-getdevicecaps) 」を参照してください。
+返される情報の種類を指定します。 値の一覧については、Windows SDK の「 [GetDeviceCaps](/windows/win32/api/wingdi/nf-wingdi-getdevicecaps) 」を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
@@ -3135,7 +3135,7 @@ DWORD GetFontData(
 
 アプリケーションでは、 `GetFontData`メンバー関数を使用して、TrueType フォントをドキュメントと共に保存することがあります。 これを行うために、アプリケーションはフォントを埋め込むことができるかどうかを判断し、フォントファイル全体を取得します。この場合、 *Dwtable*、 *dwtable*、および*cbdata*パラメーターに0を指定します。
 
-アプリケーションでは、 `otmfsType` [OUTLINETEXTMETRIC](/windows/desktop/api/wingdi/ns-wingdi-outlinetextmetrica)構造体のメンバーをチェックすることによって、フォントを埋め込むことができるかどうかを判断できます。 の`otmfsType`ビット1が設定されている場合、フォントに埋め込みは許可されません。 ビット1がクリアされている場合は、フォントを埋め込むことができます。 ビット2が設定されている場合、埋め込みは読み取り専用です。
+アプリケーションでは、 `otmfsType` [OUTLINETEXTMETRIC](/windows/win32/api/wingdi/ns-wingdi-outlinetextmetricw)構造体のメンバーをチェックすることによって、フォントを埋め込むことができるかどうかを判断できます。 の`otmfsType`ビット1が設定されている場合、フォントに埋め込みは許可されません。 ビット1がクリアされている場合は、フォントを埋め込むことができます。 ビット2が設定されている場合、埋め込みは読み取り専用です。
 
 アプリケーションがこの関数を使用して TrueType 以外のフォントの情報を取得しようと`GetFontData`すると、メンバー関数は-1 を返します。
 
@@ -3149,11 +3149,11 @@ DWORD GetFontLanguageInfo() const;
 
 ### <a name="return-value"></a>戻り値
 
-戻り値は、現在選択されているフォントの特性を識別します。 使用可能な値の完全な一覧については、「 [GetFontLanguageInfo](/windows/desktop/api/wingdi/nf-wingdi-getfontlanguageinfo)」を参照してください。
+戻り値は、現在選択されているフォントの特性を識別します。 使用可能な値の完全な一覧については、「 [GetFontLanguageInfo](/windows/win32/api/wingdi/nf-wingdi-getfontlanguageinfo)」を参照してください。
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は、Windows SDK で説明されているように、関数[GetFontLanguageInfo](/windows/desktop/api/wingdi/nf-wingdi-getfontlanguageinfo)の機能をエミュレートします。
+このメンバー関数は、Windows SDK で説明されているように、関数[GetFontLanguageInfo](/windows/win32/api/wingdi/nf-wingdi-getfontlanguageinfo)の機能をエミュレートします。
 
 ##  <a name="getglyphoutline"></a>  CDC::GetGlyphOutline
 
@@ -3182,7 +3182,7 @@ DWORD GetGlyphOutline(
 |GGO_BITMAP|グリフのビットマップを返します。 関数から制御が戻ると、 *Lpbuffer*によってポイントされているバッファーには、その行がダブルワードの境界で始まる1ビット/ピクセルのビットマップが含まれます。|
 |GGO_NATIVE|デバイス単位を使用して、ラスタライザーのネイティブ形式の曲線データポイントを返します。 この値を指定すると、 *lpmat2*で指定された変換はすべて無視されます。|
 
-*Nformat*の値が0の場合、関数は[GLYPHMETRICS](/windows/desktop/api/wingdi/ns-wingdi-glyphmetrics)構造体を入力しますが、グリフアウトラインデータは返しません。
+*Nformat*の値が0の場合、関数は[GLYPHMETRICS](/windows/win32/api/wingdi/ns-wingdi-glyphmetrics)構造体を入力しますが、グリフアウトラインデータは返しません。
 
 *lpgm*<br/>
 文字セル内のグリフの配置を記述する GLYPHMETRICS 構造体を指します。
@@ -3194,7 +3194,7 @@ DWORD GetGlyphOutline(
 関数がアウトライン文字に関する情報をコピーするバッファーを指します。 *Nformat*で GGO_NATIVE 値が指定されている場合、情報は TTPOLYGONHEADER および TTPOLYCURVE 構造体の形式でコピーされます。 この値が NULL で、 *Nformat*が GGO_BITMAP または GGO_NATIVE のいずれかの値の場合、関数はバッファーに必要なサイズを返します。
 
 *lpmat2*<br/>
-文字の変換行列を格納している[MAT2](/windows/desktop/api/wingdi/ns-wingdi-mat2)構造体を指します。 *Nformat*に GGO_NATIVE 値が指定されている場合でも、このパラメーターを NULL にすることはできません。
+文字の変換行列を格納している[MAT2](/windows/win32/api/wingdi/ns-wingdi-mat2)構造体を指します。 *Nformat*に GGO_NATIVE 値が指定されている場合でも、このパラメーターを NULL にすることはできません。
 
 ### <a name="return-value"></a>戻り値
 
@@ -3204,7 +3204,7 @@ DWORD GetGlyphOutline(
 
 アプリケーションでは、 *lpmat2*によって示される構造体に2つずつの変換行列を指定することにより、ビットマップ形式で取得された文字をローテーションできます。
 
-グリフの輪郭は、一連の輪郭として返されます。 各配分は、 [TTPOLYGONHEADER](/windows/desktop/api/wingdi/ns-wingdi-tagttpolygonheader)構造体の後に、それ`TTPOLYCURVE`を記述するために必要な数の構造体で定義されます。 すべてのポイントは[Pointfx](/windows/desktop/api/wingdi/ns-wingdi-tagpointfx)構造体として返され、相対移動ではなく絶対位置を表します。 `pfxStart` [TTPOLYGONHEADER](/windows/desktop/api/wingdi/ns-wingdi-tagttpolygonheader)構造体のメンバーによって指定される開始点は、輪郭の輪郭を開始する位置です。 次に続く[TTPOLYCURVE](/windows/desktop/api/wingdi/ns-wingdi-tagttpolycurve)構造は、ポリラインレコードまたはスプラインレコードのいずれかになります。 ポリラインレコードは一連のポイントです。点の間に描画される線は、文字の輪郭を表します。 スプラインレコードは、TrueType (つまり、2次 b スプライン) によって使用される2次曲線を表します。
+グリフの輪郭は、一連の輪郭として返されます。 各配分は、 [TTPOLYGONHEADER](/windows/win32/api/wingdi/ns-wingdi-ttpolygonheader)構造体の後に、それ`TTPOLYCURVE`を記述するために必要な数の構造体で定義されます。 すべてのポイントは[Pointfx](/windows/win32/api/wingdi/ns-wingdi-pointfx)構造体として返され、相対移動ではなく絶対位置を表します。 `pfxStart` [TTPOLYGONHEADER](/windows/win32/api/wingdi/ns-wingdi-ttpolygonheader)構造体のメンバーによって指定される開始点は、輪郭の輪郭を開始する位置です。 次に続く[TTPOLYCURVE](/windows/win32/api/wingdi/ns-wingdi-ttpolycurve)構造は、ポリラインレコードまたはスプラインレコードのいずれかになります。 ポリラインレコードは一連のポイントです。点の間に描画される線は、文字の輪郭を表します。 スプラインレコードは、TrueType (つまり、2次 b スプライン) によって使用される2次曲線を表します。
 
 ##  <a name="getgraphicsmode"></a>  CDC::GetGraphicsMode
 
@@ -3216,15 +3216,15 @@ int GetGraphicsMode() const;
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合、現在のグラフィックスモードを返します。 このメソッドが返すことができる値の一覧については、「 [GetGraphicsMode](/windows/desktop/api/wingdi/nf-wingdi-getgraphicsmode)」を参照してください。
+成功した場合、現在のグラフィックスモードを返します。 このメソッドが返すことができる値の一覧については、「 [GetGraphicsMode](/windows/win32/api/wingdi/nf-wingdi-getgraphicsmode)」を参照してください。
 
 失敗した場合は0を返します。
 
-エラーの詳細情報を取得するには、 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)を呼び出します。
+エラーの詳細情報を取得するには、 [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)を呼び出します。
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、Windows GDI 関数[GetGraphicsMode](/windows/desktop/api/wingdi/nf-wingdi-getgraphicsmode)をラップします。
+このメソッドは、Windows GDI 関数[GetGraphicsMode](/windows/win32/api/wingdi/nf-wingdi-getgraphicsmode)をラップします。
 
 ##  <a name="gethalftonebrush"></a>  CDC::GetHalftoneBrush
 
@@ -3257,7 +3257,7 @@ int GetKerningPairs(
 ### <a name="parameters"></a>パラメーター
 
 *nPairs*<br/>
-*Lpkrnpair*によってポイントされる[KERNINGPAIR](/windows/desktop/api/wingdi/ns-wingdi-tagkerningpair)構造体の数を指定します。 関数は、 *Npairs*で指定されたよりも多くのカーニングペアをコピーしません。
+*Lpkrnpair*によってポイントされる[KERNINGPAIR](/windows/win32/api/wingdi/ns-wingdi-kerningpair)構造体の数を指定します。 関数は、 *Npairs*で指定されたよりも多くのカーニングペアをコピーしません。
 
 *lpkrnpair*<br/>
 関数がを返した`KERNINGPAIR`ときに、カーニングペアを受け取る構造体の配列を指します。 この配列には、 *Npairs*で指定されている数以上の構造体が含まれている必要があります。 このパラメーターが NULL の場合、関数はフォントのカーニングペアの合計数を返します。
@@ -3276,7 +3276,7 @@ DWORD GetLayout() const;
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は、現在のデバイスコンテキストのレイアウトフラグ。 それ以外の場合は、GDI_ERROR です。 拡張エラー情報については、 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)を呼び出してください。 レイアウトフラグの一覧については、「 [CDC:: SetLayout](#setlayout)」を参照してください。
+成功した場合は、現在のデバイスコンテキストのレイアウトフラグ。 それ以外の場合は、GDI_ERROR です。 拡張エラー情報については、 [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)を呼び出してください。 レイアウトフラグの一覧については、「 [CDC:: SetLayout](#setlayout)」を参照してください。
 
 ### <a name="remarks"></a>Remarks
 
@@ -3351,7 +3351,7 @@ UINT GetOutlineTextMetrics(
 ### <a name="parameters"></a>パラメーター
 
 *lpotm*<br/>
-[OUTLINETEXTMETRIC](/windows/desktop/api/wingdi/ns-wingdi-outlinetextmetrica)構造体の配列を指します。 このパラメーターが NULL の場合、関数は取得されたメトリックデータに必要なバッファーのサイズを返します。
+[OUTLINETEXTMETRIC](/windows/win32/api/wingdi/ns-wingdi-outlinetextmetricw)構造体の配列を指します。 このパラメーターが NULL の場合、関数は取得されたメトリックデータに必要なバッファーのサイズを返します。
 
 *cbData*<br/>
 情報が返されるバッファーのサイズ (バイト単位) を指定します。
@@ -3365,7 +3365,7 @@ UINT GetOutlineTextMetrics(
 
 ### <a name="remarks"></a>Remarks
 
-[OUTLINETEXTMETRIC](/windows/desktop/api/wingdi/ns-wingdi-outlinetextmetrica)構造体には、 [textmetric](/windows/desktop/api/wingdi/ns-wingdi-tagtextmetrica)構造体など、TrueType 形式で提供されるフォントメトリック情報の大部分が含まれています。 `OUTLINETEXTMETRIC`構造体の最後の4つのメンバーは、文字列へのポインターです。 アプリケーションでは、他のメンバーに必要な領域に加えて、これらの文字列用に領域を割り当てる必要があります。 文字列のサイズにはシステムによる制限がないため、メモリを割り当てる最も簡単な方法は、関数の`GetOutlineTextMetrics`最初の呼び出しで*lpotm*に NULL を指定することによって、必要なサイズを取得することです。
+[OUTLINETEXTMETRIC](/windows/win32/api/wingdi/ns-wingdi-outlinetextmetricw)構造体には、 [textmetric](/windows/win32/api/wingdi/ns-wingdi-textmetricw)構造体など、TrueType 形式で提供されるフォントメトリック情報の大部分が含まれています。 `OUTLINETEXTMETRIC`構造体の最後の4つのメンバーは、文字列へのポインターです。 アプリケーションでは、他のメンバーに必要な領域に加えて、これらの文字列用に領域を割り当てる必要があります。 文字列のサイズにはシステムによる制限がないため、メモリを割り当てる最も簡単な方法は、関数の`GetOutlineTextMetrics`最初の呼び出しで*lpotm*に NULL を指定することによって、必要なサイズを取得することです。
 
 ##  <a name="getoutputcharwidth"></a>  CDC::GetOutputCharWidth
 
@@ -3424,7 +3424,7 @@ CSize GetOutputTabbedTextExtent(
 測定する文字列をポイントします。 このパラメーターには、 [CString](../../atl-mfc-shared/reference/cstringt-class.md)オブジェクトを渡すこともできます。
 
 *nCount*<br/>
-*Lpszstring*が指す[文字列の長さ](/windows/desktop/gdi/specifying-length-of-text-output-string)を指定します。
+*Lpszstring*が指す[文字列の長さ](/windows/win32/gdi/specifying-length-of-text-output-string)を指定します。
 
 *nTabPositions*<br/>
 *Lpntabstoppositions*によってポイントされる配列内のタブストップ位置の数を指定します。
@@ -3467,7 +3467,7 @@ CSize GetOutputTextExtent(const CString& str) const;
 文字の文字列を指します。 このパラメーターには、 [CString](../../atl-mfc-shared/reference/cstringt-class.md)オブジェクトを渡すこともできます。
 
 *nCount*<br/>
-*Lpszstring*が指す[文字列の長さ](/windows/desktop/gdi/specifying-length-of-text-output-string)を指定します。
+*Lpszstring*が指す[文字列の長さ](/windows/win32/gdi/specifying-length-of-text-output-string)を指定します。
 
 *str*<br/>
 測定する指定された文字を格納しているオブジェクト。`CString`
@@ -3493,7 +3493,7 @@ BOOL GetOutputTextMetrics(LPTEXTMETRIC lpMetrics) const;
 ### <a name="parameters"></a>パラメーター
 
 *lpMetrics*<br/>
-メトリックを受け取る[textmetric](/windows/desktop/api/wingdi/ns-wingdi-tagtextmetrica)構造体を指します。
+メトリックを受け取る[textmetric](/windows/win32/api/wingdi/ns-wingdi-textmetricw)構造体を指します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -3513,7 +3513,7 @@ int GetPath(
 ### <a name="parameters"></a>パラメーター
 
 *lpPoints*<br/>
-[ポイント](/windows/desktop/api/windef/ns-windef-tagpoint)データ構造体または`CPoint`直線エンドポイントと曲線制御点が配置されているオブジェクトの配列を指します。
+[ポイント](/windows/win32/api/windef/ns-windef-point)データ構造体または`CPoint`直線エンドポイントと曲線制御点が配置されているオブジェクトの配列を指します。
 
 *lpTypes*<br/>
 は、頂点型が配置されるバイト配列を指します。 値は次のいずれかになります。
@@ -3531,7 +3531,7 @@ PT_BEZIERTO 型は、常に3セットで発生します。 その直前のパス
 - PT_CLOSEFIGURE は、対応する線または曲線が描画された後に、図形が自動的に閉じられることを指定します。 直線または曲線のエンドポイントから最後の PT_MOVETO に対応する点までの線を描画して、図形を閉じます。
 
 *nCount*<br/>
-*LpPoints*配列に配置できる[ポイント](/windows/desktop/api/windef/ns-windef-tagpoint)データ構造体の合計数を指定します。 この値は、 *Lptypes*配列に配置できるバイト数と同じである必要があります。
+*LpPoints*配列に配置できる[ポイント](/windows/win32/api/windef/ns-windef-point)データ構造体の合計数を指定します。 この値は、 *Lptypes*配列に配置できるバイト数と同じである必要があります。
 
 ### <a name="return-value"></a>戻り値
 
@@ -3578,7 +3578,7 @@ COLORREF GetPixel(POINT point) const;
 
 一部のデバイスでは、`GetPixel` 関数がサポートされていません。 詳細については、 [GetDeviceCaps](#getdevicecaps)メンバー関数の RC_BITBLT ラスター機能に関する説明を参照してください。
 
-この`GetPixel`メンバー関数には、2つの形式があります。 最初のは2つの座標値を取ります。2番目の要素は、[ポイント](/windows/desktop/api/windef/ns-windef-tagpoint)構造体または[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)オブジェクトを受け取ります。
+この`GetPixel`メンバー関数には、2つの形式があります。 最初のは2つの座標値を取ります。2番目の要素は、[ポイント](/windows/win32/api/windef/ns-windef-point)構造体または[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)オブジェクトを受け取ります。
 
 ##  <a name="getpolyfillmode"></a>  CDC::GetPolyFillMode
 
@@ -3669,7 +3669,7 @@ CSize GetTabbedTextExtent(
 は文字列を指します。 このパラメーターには、 [CString](../../atl-mfc-shared/reference/cstringt-class.md)オブジェクトを渡すこともできます。
 
 *nCount*<br/>
-*Lpszstring*が指す[文字列の長さ](/windows/desktop/gdi/specifying-length-of-text-output-string)を指定します。
+*Lpszstring*が指す[文字列の長さ](/windows/win32/gdi/specifying-length-of-text-output-string)を指定します。
 
 *nTabPositions*<br/>
 *Lpntabstoppositions*によってポイントされる配列内のタブストップ位置の数を指定します。
@@ -3841,7 +3841,7 @@ BOOL GetTextExtentExPointI(
 部分的なグリフエクステントを受け取る整数の配列へのポインター。 配列内の各要素は、グリフインデックス配列の先頭と*Nmaxextent*で指定された領域に収まるグリフの1つの間の距離 (論理単位) を示します。 この配列には、少なくとも*cgi*によって指定されたグリフインデックスと同じ数の要素が必要ですが、関数は、 *lpnfit*によって指定された数のグリフインデックスに対してのみ、配列にエクステントを格納します。 *Lpndx*が NULL の場合、関数は部分文字列の幅を計算しません。
 
 *lpSize*<br/>
-グリフインデックス配列の大きさを論理単位で受け取る[サイズ](/windows/desktop/api/windef/ns-windef-tagsize)構造体へのポインター。 この値を NULL にすることはできません。
+グリフインデックス配列の大きさを論理単位で受け取る[サイズ](/windows/win32/api/windef/ns-windef-size)構造体へのポインター。 この値を NULL にすることはできません。
 
 ### <a name="return-value"></a>戻り値
 
@@ -3849,7 +3849,7 @@ BOOL GetTextExtentExPointI(
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は、Windows SDK で説明されているように、関数[GetTextExtentExPointI](/windows/desktop/api/wingdi/nf-wingdi-gettextextentexpointi)の機能をエミュレートします。
+このメンバー関数は、Windows SDK で説明されているように、関数[GetTextExtentExPointI](/windows/win32/api/wingdi/nf-wingdi-gettextextentexpointi)の機能をエミュレートします。
 
 ##  <a name="gettextextentpointi"></a>  CDC::GetTextExtentPointI
 
@@ -3871,7 +3871,7 @@ BOOL GetTextExtentPointI(
 *に*よってポイントされる配列内のグリフの数を指定します。
 
 *lpSize*<br/>
-グリフインデックス配列の大きさを論理単位で受け取る[サイズ](/windows/desktop/api/windef/ns-windef-tagsize)構造体へのポインター。 この値を NULL にすることはできません。
+グリフインデックス配列の大きさを論理単位で受け取る[サイズ](/windows/win32/api/windef/ns-windef-size)構造体へのポインター。 この値を NULL にすることはできません。
 
 ### <a name="return-value"></a>戻り値
 
@@ -3879,7 +3879,7 @@ BOOL GetTextExtentPointI(
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は、Windows SDK で説明されているように、関数[GetTextExtentPointI](/windows/desktop/api/wingdi/nf-wingdi-gettextextentpointi)の機能をエミュレートします。
+このメンバー関数は、Windows SDK で説明されているように、関数[GetTextExtentPointI](/windows/win32/api/wingdi/nf-wingdi-gettextextentpointi)の機能をエミュレートします。
 
 ##  <a name="gettextface"></a>  CDC::GetTextFace
 
@@ -3923,7 +3923,7 @@ BOOL GetTextMetrics(LPTEXTMETRIC lpMetrics) const;
 ### <a name="parameters"></a>パラメーター
 
 *lpMetrics*<br/>
-メトリックを受け取る[textmetric](/windows/desktop/api/wingdi/ns-wingdi-tagtextmetrica)構造体を指します。
+メトリックを受け取る[textmetric](/windows/win32/api/wingdi/ns-wingdi-textmetricw)構造体を指します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -4004,7 +4004,7 @@ BOOL GetWorldTransform(XFORM& rXform) const;
 ### <a name="parameters"></a>パラメーター
 
 *rXform*<br/>
-現在のワールド空間からページスペースへの変換を受け取る、 [XFORM](/windows/desktop/api/wingdi/ns-wingdi-tagxform)構造体への参照。
+現在のワールド空間からページスペースへの変換を受け取る、 [XFORM](/windows/win32/api/wingdi/ns-wingdi-xform)構造体への参照。
 
 ### <a name="return-value"></a>戻り値
 
@@ -4012,11 +4012,11 @@ BOOL GetWorldTransform(XFORM& rXform) const;
 
 失敗した場合は0を返します。
 
-エラーの詳細情報を取得するには、 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)を呼び出します。
+エラーの詳細情報を取得するには、 [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)を呼び出します。
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、Windows GDI 関数[GetWorldTransform](/windows/desktop/api/wingdi/nf-wingdi-getworldtransform)をラップします。
+このメソッドは、Windows GDI 関数[GetWorldTransform](/windows/win32/api/wingdi/nf-wingdi-getworldtransform)をラップします。
 
 ##  <a name="gradientfill"></a>  CDC::GradientFill
 
@@ -4034,19 +4034,19 @@ BOOL GradientFill(
 ### <a name="parameters"></a>パラメーター
 
 *pVertices*<br/>
-それぞれが三角形の頂点を定義する[trivertex](/windows/desktop/api/wingdi/ns-wingdi-trivertex)構造体の配列へのポインター。
+それぞれが三角形の頂点を定義する[trivertex](/windows/win32/api/wingdi/ns-wingdi-trivertex)構造体の配列へのポインター。
 
 *nVertices*<br/>
 頂点の数。
 
 *pMesh*<br/>
-三角形モードの[GRADIENT_TRIANGLE](/windows/desktop/api/wingdi/ns-wingdi-gradient_triangle)構造体の配列、または四角形モードの[GRADIENT_RECT](/windows/desktop/api/wingdi/ns-wingdi-gradient_rect)構造体の配列。
+三角形モードの[GRADIENT_TRIANGLE](/windows/win32/api/wingdi/ns-wingdi-gradient_triangle)構造体の配列、または四角形モードの[GRADIENT_RECT](/windows/win32/api/wingdi/ns-wingdi-gradient_rect)構造体の配列。
 
 *nMeshElements*<br/>
 *Pmesh*内の要素 (三角形または四角形) の数。
 
 *dwMode*<br/>
-グラデーションの塗りつぶしモードを指定します。 使用可能な値の一覧については、Windows SDK の「 [GradientFill](/windows/desktop/api/wingdi/nf-wingdi-gradientfill) 」を参照してください。
+グラデーションの塗りつぶしモードを指定します。 使用可能な値の一覧については、Windows SDK の「 [GradientFill](/windows/win32/api/wingdi/nf-wingdi-gradientfill) 」を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
@@ -4111,7 +4111,7 @@ virtual BOOL GrayString(
 
 アプリケーションでは、メンバー関数を`GrayString`呼び出さずに、純色の灰色をサポートするデバイス上で淡色 (灰色) の文字列を描画できます。 システムカラー COLOR_GRAYTEXT は、無効なテキストの描画に使用される純色のシステムカラーです。 アプリケーションは、 `GetSysColor` Windows の関数を呼び出して、COLOR_GRAYTEXT の色の値を取得できます。 色が 0 (黒) 以外の場合、アプリケーションは`SetTextColor`メンバー関数を呼び出して、テキストの色を色の値に設定してから、文字列を直接描画できます。 取得した色が黒の場合、アプリケーションは`GrayString`を呼び出してテキストを dim (灰色) する必要があります。
 
-*LpfnOutput*が NULL の場合、GDI は Windows の[TextOut](/windows/desktop/api/wingdi/nf-wingdi-textouta)関数を使用し、 *lpData*は出力する文字への far ポインターと見なされます。 出力する文字を`TextOut`メンバー関数で処理できない場合 (たとえば、文字列がビットマップとして格納されている場合)、アプリケーションは独自の出力関数を提供する必要があります。
+*LpfnOutput*が NULL の場合、GDI は Windows の[TextOut](/windows/win32/api/wingdi/nf-wingdi-textoutw)関数を使用し、 *lpData*は出力する文字への far ポインターと見なされます。 出力する文字を`TextOut`メンバー関数で処理できない場合 (たとえば、文字列がビットマップとして格納されている場合)、アプリケーションは独自の出力関数を提供する必要があります。
 
 また、コールバックの境界を越えて例外をスローすることはできないため、すべてのコールバック関数は、Windows に戻る前に Microsoft Foundation 例外をトラップする必要があることに注意してください。 例外の詳細については、「[例外](../../mfc/exception-handling-in-mfc.md)」を参照してください。
 
@@ -4130,7 +4130,7 @@ void HIMETRICtoDP(LPSIZE lpSize) const;
 ### <a name="parameters"></a>パラメーター
 
 *lpSize*<br/>
-[サイズ](/windows/desktop/api/windef/ns-windef-tagsize)構造体または[CSize](../../atl-mfc-shared/reference/csize-class.md)オブジェクトを指します。
+[サイズ](/windows/win32/api/windef/ns-windef-size)構造体または[CSize](../../atl-mfc-shared/reference/csize-class.md)オブジェクトを指します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -4147,7 +4147,7 @@ void HIMETRICtoLP(LPSIZE lpSize) const;
 ### <a name="parameters"></a>パラメーター
 
 *lpSize*<br/>
-[サイズ](/windows/desktop/api/windef/ns-windef-tagsize)構造体または[CSize](../../atl-mfc-shared/reference/csize-class.md)オブジェクトを指します。
+[サイズ](/windows/win32/api/windef/ns-windef-size)構造体または[CSize](../../atl-mfc-shared/reference/csize-class.md)オブジェクトを指します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -4309,16 +4309,16 @@ void LPtoDP(LPSIZE lpSize) const;
 ### <a name="parameters"></a>パラメーター
 
 *lpPoints*<br/>
-ポイントの配列を指します。 配列内の各点は、[ポイント](/windows/desktop/api/windef/ns-windef-tagpoint)構造体または[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)オブジェクトです。
+ポイントの配列を指します。 配列内の各点は、[ポイント](/windows/win32/api/windef/ns-windef-point)構造体または[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)オブジェクトです。
 
 *nCount*<br/>
 配列内の点の数。
 
 *lpRect*<br/>
-[RECT](/windows/desktop/api/windef/ns-windef-tagrect)構造体または[CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトを指します。 このパラメーターは、四角形を論理単位からデバイス単位にマップする一般的なケースに使用されます。
+[RECT](/windows/win32/api/windef/ns-windef-rect)構造体または[CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトを指します。 このパラメーターは、四角形を論理単位からデバイス単位にマップする一般的なケースに使用されます。
 
 *lpSize*<br/>
-[サイズ](/windows/desktop/api/windef/ns-windef-tagsize)構造体または[CSize](../../atl-mfc-shared/reference/csize-class.md)オブジェクトを指します。
+[サイズ](/windows/win32/api/windef/ns-windef-size)構造体または[CSize](../../atl-mfc-shared/reference/csize-class.md)オブジェクトを指します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -4448,10 +4448,10 @@ BOOL ModifyWorldTransform(
 ### <a name="parameters"></a>パラメーター
 
 *rXform*<br/>
-指定されたデバイスコンテキストのワールド変換を変更するために使用される、 [XFORM](/windows/desktop/api/wingdi/ns-wingdi-tagxform)構造体への参照。
+指定されたデバイスコンテキストのワールド変換を変更するために使用される、 [XFORM](/windows/win32/api/wingdi/ns-wingdi-xform)構造体への参照。
 
 *iMode*<br/>
-変換データが現在のワールド変換を変更する方法を指定します。 このパラメーターに指定できる値の一覧については、「 [ModifyWorldTransform](/windows/desktop/api/wingdi/nf-wingdi-modifyworldtransform)」を参照してください。
+変換データが現在のワールド変換を変更する方法を指定します。 このパラメーターに指定できる値の一覧については、「 [ModifyWorldTransform](/windows/win32/api/wingdi/nf-wingdi-modifyworldtransform)」を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
@@ -4459,11 +4459,11 @@ BOOL ModifyWorldTransform(
 
 失敗した場合は0を返します。
 
-エラーの詳細情報を取得するには、 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)を呼び出します。
+エラーの詳細情報を取得するには、 [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)を呼び出します。
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、Windows GDI 関数[ModifyWorldTransform](/windows/desktop/api/wingdi/nf-wingdi-modifyworldtransform)をラップします。
+このメソッドは、Windows GDI 関数[ModifyWorldTransform](/windows/win32/api/wingdi/nf-wingdi-modifyworldtransform)をラップします。
 
 ##  <a name="moveto"></a>  CDC::MoveTo
 
@@ -4713,7 +4713,7 @@ BOOL Pie(
 外接する四角形を指定します。 このパラメーターの`RECT`構造体`CRect`には、オブジェクトまたはポインターのいずれかを渡すことができます。
 
 *ptStart*<br/>
-円弧の開始点を指定します。この点は、円弧上に正確に配置する必要はありません。このパラメーターには、 [POINT](/windows/desktop/api/windef/ns-windef-tagpoint)構造体または[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)オブジェクトのいずれかを渡すことができます。
+円弧の開始点を指定します。この点は、円弧上に正確に配置する必要はありません。このパラメーターには、 [POINT](/windows/win32/api/windef/ns-windef-point)構造体または[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)オブジェクトのいずれかを渡すことができます。
 
 *ptEnd*<br/>
 円弧のエンドポイントを指定します。この点は、円弧上に正確に配置する必要はありません。このパラメーターに`CPoint`は、 `POINT`構造体またはオブジェクトのいずれかを渡すことができます。
@@ -4850,7 +4850,7 @@ BOOL PolyBezier(
 ### <a name="parameters"></a>パラメーター
 
 *lpPoints*<br/>
-スプラインのエンドポイントと制御点を格納する[ポイント](/windows/desktop/api/windef/ns-windef-tagpoint)データ構造体の配列を指します。
+スプラインのエンドポイントと制御点を格納する[ポイント](/windows/win32/api/windef/ns-windef-point)データ構造体の配列を指します。
 
 *nCount*<br/>
 *LpPoints*配列内の点の数を指定します。 各ベジエスプラインには2つの制御点とエンドポイントが必要であり、最初のスプラインには追加の開始点が必要であるため、この値は、描画するスプラインの数の3倍以上である必要があります。
@@ -4878,7 +4878,7 @@ BOOL PolyBezierTo(
 ### <a name="parameters"></a>パラメーター
 
 *lpPoints*<br/>
-エンドポイントとコントロールポイントを含む[ポイント](/windows/desktop/api/windef/ns-windef-tagpoint)データ構造体の配列を指します。
+エンドポイントとコントロールポイントを含む[ポイント](/windows/win32/api/windef/ns-windef-point)データ構造体の配列を指します。
 
 *nCount*<br/>
 *LpPoints*配列内の点の数を指定します。 各ベジエスプラインには2つの制御点と終点が必要であるため、この値は、描画するスプラインの数の3倍である必要があります。
@@ -4909,7 +4909,7 @@ BOOL PolyDraw(
 ### <a name="parameters"></a>パラメーター
 
 *lpPoints*<br/>
-各直線セグメントのエンドポイント、および各ベジエスプラインのエンドポイントと制御点を格納する[ポイント](/windows/desktop/api/windef/ns-windef-tagpoint)データ構造体の配列を指します。
+各直線セグメントのエンドポイント、および各ベジエスプラインのエンドポイントと制御点を格納する[ポイント](/windows/win32/api/windef/ns-windef-point)データ構造体の配列を指します。
 
 *lpTypes*<br/>
 は、 *lpPoints*配列内の各点の使用方法を指定する配列を指します。 値には、次のいずれかを指定できます。
@@ -5001,7 +5001,7 @@ BOOL Polyline(
 
 線は、現在のペンを使用して、最初の点から後続の点まで描画されます。 メンバー関数とは異なり、 `Polyline`関数は、現在の位置を使用したり更新したりすることはありません。 `LineTo`
 
-詳細については、Windows SDK の「[ポリライン](/windows/desktop/api/wingdi/nf-wingdi-polyline)」を参照してください。
+詳細については、Windows SDK の「[ポリライン](/windows/win32/api/wingdi/nf-wingdi-polyline)」を参照してください。
 
 ##  <a name="polylineto"></a>  CDC::PolylineTo
 
@@ -5016,7 +5016,7 @@ BOOL PolylineTo(
 ### <a name="parameters"></a>パラメーター
 
 *lpPoints*<br/>
-は、直線の頂点を格納する[ポイント](/windows/desktop/api/windef/ns-windef-tagpoint)データ構造体の配列を指します。
+は、直線の頂点を格納する[ポイント](/windows/win32/api/windef/ns-windef-point)データ構造体の配列を指します。
 
 *nCount*<br/>
 配列内の点の数を指定します。
@@ -5932,7 +5932,7 @@ BOOL SetColorAdjustment(const COLORADJUSTMENT* lpColorAdjust);
 ### <a name="parameters"></a>パラメーター
 
 *lpColorAdjust*<br/>
-カラー調整値を含む[coloradjustment](/windows/desktop/api/wingdi/ns-wingdi-tagcoloradjustment)データ構造体を指します。
+カラー調整値を含む[coloradjustment](/windows/win32/api/wingdi/ns-wingdi-coloradjustment)データ構造体を指します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -5963,7 +5963,7 @@ COLORREF SetDCBrushColor(COLORREF crColor);
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、Windows SDK で説明されているように、関数[SetDCBrushColor](/windows/desktop/api/wingdi/nf-wingdi-setdcbrushcolor)の機能をエミュレートします。
+このメソッドは、Windows SDK で説明されているように、関数[SetDCBrushColor](/windows/win32/api/wingdi/nf-wingdi-setdcbrushcolor)の機能をエミュレートします。
 
 ##  <a name="setdcpencolor"></a>  CDC::SetDCPenColor
 
@@ -5984,7 +5984,7 @@ COLORREF SetDCPenColor(COLORREF crColor);
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は、Windows SDK で説明されているように、Win32 関数[Setdcpencolor](/windows/desktop/api/wingdi/nf-wingdi-setdcpencolor)を利用します。
+このメンバー関数は、Windows SDK で説明されているように、Win32 関数[Setdcpencolor](/windows/win32/api/wingdi/nf-wingdi-setdcpencolor)を利用します。
 
 ##  <a name="setgraphicsmode"></a>  CDC::SetGraphicsMode
 
@@ -5997,17 +5997,17 @@ int SetGraphicsMode(int iMode);
 ### <a name="parameters"></a>パラメーター
 
 *iMode*<br/>
-グラフィックスモードを指定します。 このパラメーターに指定できる値の一覧については、「 [SetGraphicsMode](/windows/desktop/api/wingdi/nf-wingdi-setgraphicsmode)」を参照してください。
+グラフィックスモードを指定します。 このパラメーターに指定できる値の一覧については、「 [SetGraphicsMode](/windows/win32/api/wingdi/nf-wingdi-setgraphicsmode)」を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
 成功した場合、古いグラフィックスモードを返します。
 
-失敗した場合は0を返します。 エラーの詳細情報を取得するには、 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)を呼び出します。
+失敗した場合は0を返します。 エラーの詳細情報を取得するには、 [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)を呼び出します。
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、Windows GDI 関数[SetGraphicsMode](/windows/desktop/api/wingdi/nf-wingdi-setgraphicsmode)をラップします。
+このメソッドは、Windows GDI 関数[SetGraphicsMode](/windows/win32/api/wingdi/nf-wingdi-setgraphicsmode)をラップします。
 
 ##  <a name="setlayout"></a>  CDC::SetLayout
 
@@ -6032,7 +6032,7 @@ DWORD SetLayout(DWORD dwLayout);
 
 成功した場合は、デバイスコンテキストの前のレイアウト。
 
-失敗した場合は、GDI_ERROR です。 エラーの詳細情報を取得するには、 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)を呼び出します。
+失敗した場合は、GDI_ERROR です。 エラーの詳細情報を取得するには、 [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)を呼び出します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -6042,7 +6042,7 @@ DWORD SetLayout(DWORD dwLayout);
 
 多くのビットマップがあるなど、場合によっては、左から右へのレイアウトを保持する必要があります。 このような場合は、または`BitBlt` `StretchBlt`を呼び出してイメージをレンダリングした後、 *dwlayout*の bitmap コントロールフラグを LAYOUT_BITMAPORIENTATIONPRESERVED に設定します。
 
-LAYOUT_RTL フラグを使用してレイアウトを変更すると、通常は右または左を指定するフラグが逆になります。 混乱を避けるために、標準フラグの代替名を定義することもできます。 推奨される代替フラグ名の一覧については、Windows SDK の「 [SetLayout](/windows/desktop/api/wingdi/nf-wingdi-setlayout) 」を参照してください。
+LAYOUT_RTL フラグを使用してレイアウトを変更すると、通常は右または左を指定するフラグが逆になります。 混乱を避けるために、標準フラグの代替名を定義することもできます。 推奨される代替フラグ名の一覧については、Windows SDK の「 [SetLayout](/windows/win32/api/wingdi/nf-wingdi-setlayout) 」を参照してください。
 
 ##  <a name="setmapmode"></a>  CDC::SetMapMode
 
@@ -6177,7 +6177,7 @@ COLORREF SetPixel(
 設定する点の論理 y 座標を指定します。
 
 *crColor*<br/>
-ポイントの描画に使用する色を指定する COLORREF RGB 値。 この値の説明については、Windows SDK の「 [COLORREF](/windows/desktop/gdi/colorref) 」を参照してください。
+ポイントの描画に使用する色を指定する COLORREF RGB 値。 この値の説明については、Windows SDK の「 [COLORREF](/windows/win32/gdi/colorref) 」を参照してください。
 
 *視点*<br/>
 設定する点の論理 x 座標と y 座標を指定します。 このパラメーターに`CPoint`は、 `POINT`構造体またはオブジェクトのいずれかを渡すことができます。
@@ -6219,7 +6219,7 @@ BOOL SetPixelV(
 ポイントの描画に使用する色を指定します。
 
 *視点*<br/>
-設定する点の論理 x 座標と y 座標を指定します。 このパラメーターには、[ポイント](/windows/desktop/api/windef/ns-windef-tagpoint)データ構造体または[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)オブジェクトを渡すことができます。
+設定する点の論理 x 座標と y 座標を指定します。 このパラメーターには、[ポイント](/windows/win32/api/windef/ns-windef-point)データ構造体または[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)オブジェクトを渡すことができます。
 
 ### <a name="return-value"></a>戻り値
 
@@ -6327,7 +6327,7 @@ int SetStretchBltMode(int nStretchMode);
 |BLACKONWHITE|削除されたピクセルと既存のピクセルの色の値を使用して、ブール値と演算を実行します。 ビットマップがモノクロビットマップである場合、このモードでは白いピクセルを犠牲にして黒いピクセルが保持されます。|
 |COLORONCOLOR|ピクセルを削除します。 このモードでは、消去されたピクセルのすべての行が削除されますが、情報を保持しません。|
 |スクリーン|コピー元の四角形のピクセルを、変換先の四角形のピクセルのブロックにマップします。 移動先のピクセルの平均色は、ソースピクセルの色に似ています。|
-||ハーフトーン伸縮モードを設定した後、アプリケーションは Win32 関数[SetBrushOrgEx](/windows/desktop/api/wingdi/nf-wingdi-setbrushorgex)を呼び出して、ブラシの原点を設定する必要があります。 失敗した場合、ブラシのミスアライメントが発生します。|
+||ハーフトーン伸縮モードを設定した後、アプリケーションは Win32 関数[SetBrushOrgEx](/windows/win32/api/wingdi/nf-wingdi-setbrushorgex)を呼び出して、ブラシの原点を設定する必要があります。 失敗した場合、ブラシのミスアライメントが発生します。|
 |STRETCH_ANDSCANS|**Windows 95/98**:BLACKONWHITE と同じ|
 |STRETCH_DELETESCANS|**Windows 95/98**:COLORONCOLOR と同じ|
 |STRETCH_HALFTONE|**Windows 95/98**:ハーフトーンと同じです。|
@@ -6649,7 +6649,7 @@ BOOL SetWorldTransform(const XFORM& rXform);
 ### <a name="parameters"></a>パラメーター
 
 *rXform*<br/>
-変換データを格納している[XFORM](/windows/desktop/api/wingdi/ns-wingdi-tagxform)構造体への参照。
+変換データを格納している[XFORM](/windows/win32/api/wingdi/ns-wingdi-xform)構造体への参照。
 
 ### <a name="return-value"></a>戻り値
 
@@ -6657,11 +6657,11 @@ BOOL SetWorldTransform(const XFORM& rXform);
 
 失敗した場合は0を返します。
 
-エラーの詳細情報を取得するには、 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)を呼び出します。
+エラーの詳細情報を取得するには、 [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)を呼び出します。
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、Windows GDI 関数[SetWorldTransform](/windows/desktop/api/wingdi/nf-wingdi-setworldtransform)をラップします。
+このメソッドは、Windows GDI 関数[SetWorldTransform](/windows/win32/api/wingdi/nf-wingdi-setworldtransform)をラップします。
 
 ##  <a name="startdoc"></a>  CDC::StartDoc
 
@@ -6675,7 +6675,7 @@ int StartDoc(LPCTSTR lpszDocName);
 ### <a name="parameters"></a>パラメーター
 
 *lpDocInfo*<br/>
-ドキュメントファイルの名前と出力ファイルの名前を含む[Docinfo](/windows/desktop/api/wingdi/ns-wingdi-docinfoa)構造体を指します。
+ドキュメントファイルの名前と出力ファイルの名前を含む[Docinfo](/windows/win32/api/wingdi/ns-wingdi-docinfow)構造体を指します。
 
 *lpszDocName*<br/>
 ドキュメントファイルの名前を格納している文字列へのポインター。
@@ -6891,7 +6891,7 @@ CSize TabbedTextOut(
 描画する文字列をポイントします。 このパラメーターには、文字配列または[CString](../../atl-mfc-shared/reference/cstringt-class.md)オブジェクトへのポインターを渡すことができます。
 
 *nCount*<br/>
-*Lpszstring*が指す[文字列の長さ](/windows/desktop/gdi/specifying-length-of-text-output-string)を指定します。
+*Lpszstring*が指す[文字列の長さ](/windows/win32/gdi/specifying-length-of-text-output-string)を指定します。
 
 *nTabPositions*<br/>
 タブストップ位置の配列内の値の数を指定します。
@@ -7023,7 +7023,7 @@ BOOL TransparentBlt(
 
 `TransparentBlt`透過性を許可します。つまり、 *Clrtransparent*によって示される RGB 色は、転送用に透明に表示されます。
 
-詳細については、Windows SDK の「 [TransparentBlt](/windows/desktop/api/wingdi/nf-wingdi-transparentblt) 」を参照してください。
+詳細については、Windows SDK の「 [TransparentBlt](/windows/win32/api/wingdi/nf-wingdi-transparentblt) 」を参照してください。
 
 ##  <a name="updatecolors"></a>  CDC::UpdateColors
 
@@ -7037,7 +7037,7 @@ void UpdateColors();
 
 認識された論理パレットを持つ非アクティブ`UpdateColors`ウィンドウは、システムパレットが変更されたときにクライアント領域を再描画する代わりに、を呼び出すことができます。
 
-カラーパレットの使用の詳細については、Windows SDK の「 [UpdateColors](/windows/desktop/api/wingdi/nf-wingdi-updatecolors) 」を参照してください。
+カラーパレットの使用の詳細については、Windows SDK の「 [UpdateColors](/windows/win32/api/wingdi/nf-wingdi-updatecolors) 」を参照してください。
 
 この`UpdateColors`メンバー関数は、通常、領域を再描画するよりも高速にクライアント領域を更新します。 ただし、関数は、システムパレットが変更される前に各ピクセルの色に基づいて色の変換を実行するため、この関数を呼び出すたびに、一部の色の精度が失われます。
 

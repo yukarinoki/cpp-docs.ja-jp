@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::COMException Class
 ms.assetid: 44fda4e5-574f-4d12-ab5f-4ff3f277448d
-ms.openlocfilehash: 5a74184a8cbc4126988da2ba0be61d9f5b2bb71c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eb6f3e0e4860687d0d47294e11b7741294abac20
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383348"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500544"
 ---
 # <a name="platformcomexception-class"></a>Platform::COMException クラス
 
@@ -73,15 +73,15 @@ COMException クラスには、次のプロパティがあります。
 
 ### <a name="requirements"></a>必要条件
 
-**最小値には、クライアントがサポートされています。** Windows 8
+**サポートされている最低限のクライアント:** Windows 8
 
-**最小値には、サーバーがサポートされています。** Windows Server 2012
+**サポートされる最小サーバー:** Windows Server 2012
 
 **名前空間:** プラットフォーム
 
 **メタデータ:** platform.winmd
 
-## <a name="ctor"></a> Comexception::comexception コンス トラクター
+## <a name="ctor"></a>COMException:: COMException コンストラクター
 
 COMException クラスの新しいインスタンスを初期化します。
 
@@ -96,7 +96,7 @@ COMException( int hresult )
 *hresult*<br/>
 例外で表されるエラー HRESULT。
 
-## <a name="hresult"></a> Comexception::hresult プロパティ
+## <a name="hresult"></a>COMException:: HResult プロパティ
 
 例外に対応する HRESULT。
 
@@ -113,9 +113,9 @@ public:
 
 ### <a name="remarks"></a>Remarks
 
-HRESULT 値を解釈する方法の詳細については、次を参照してください。 [COM エラー コードの構造](/windows/desktop/com/structure-of-com-error-codes)します。
+HRESULT 値を解釈する方法の詳細については、「 [COM エラーコードの構造](/windows/win32/com/structure-of-com-error-codes)」を参照してください。
 
-## <a name="message"></a> Comexception::message プロパティ
+## <a name="message"></a>COMException:: Message プロパティ
 
 例外を説明するメッセージ。
 

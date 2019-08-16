@@ -1,36 +1,36 @@
 ---
-title: '方法: Windows 10 を使用して、Windows デスクトップ アプリケーションで SDK'
+title: '方法: Windows デスクトップアプリケーションでの Windows 10 SDK の使用'
 ms.custom: get-started-article
 ms.date: 07/12/2018
 ms.assetid: eed6421e-9355-44a6-9582-3f1d453a6d44
-ms.openlocfilehash: f3f6897dfa0f180f629a2ca169ff74c5e5588365
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8dbf18d24c0369507743c3c1da624838f9ab4703
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351015"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513828"
 ---
-# <a name="how-to-use-the-windows-10-sdk-in-a-windows-desktop-application"></a>方法: Windows 10 を使用して、Windows デスクトップ アプリケーションで SDK
+# <a name="how-to-use-the-windows-10-sdk-in-a-windows-desktop-application"></a>方法: Windows デスクトップアプリケーションでの Windows 10 SDK の使用
 
-Visual Studio 2017 でクラシック Windows デスクトップ プロジェクトを作成するときは、C++ デスクトップ ワークロードがインストールまたは最後に更新されたときにインストールされた Windows 10 SDK のバージョンでビルドする既定で設定には。 このバージョンの Windows SDK は、Windows 7 以降のバージョンと互換性が。 参照してください[Windows ヘッダーを使用して](/windows/desktop/WinProg/using-the-windows-headers)詳細については、特定のバージョンの Windows を対象とします。
+Visual Studio 2017 でクラシック Windows デスクトッププロジェクトを作成すると、既定では、デスクトップワークロードのC++インストール時または最終更新時にインストールされたバージョンの WINDOWS 10 SDK を使用してビルドするように設定されます。 このバージョンの Windows SDK は、Windows 7 以降と互換性があります。 特定のバージョンの Windows を対象とする方法の詳細について[は、「Windows ヘッダーの使用](/windows/win32/WinProg/using-the-windows-headers)」を参照してください。
 
-SDK の以前のバージョンを対象とする場合は、開く**プロジェクト |プロパティ**し、Windows SDK のバージョンのドロップダウン リストで使用可能なその他の SDK バージョンを選択します。
+以前のバージョンの SDK を対象とする場合は、Project | を開くことができます。 **[プロパティ**] をクリックし、[Windows SDK のバージョン] ボックスの一覧で使用可能な他の SDK のバージョンを選択します。
 
-Visual Studio 2015 と Windows 10 SDK 以降、CRT ライブラリは、1 つ (ucrtbase) ユニバーサル Windows アプリで使用可能である関数を含む、他のすべて (vcruntime140) が含まれている 2 つの部分に分離されました。 Windows 10 SDK には、多数の C99 関数をはじめとする新しい関数が含まれているため、これらの関数を使用するために、次の手順に従う必要があります。 「 [CRT Library Features](../c-runtime-library/crt-library-features.md)」を参照してください。
+Visual Studio 2015 と Windows 10 SDK 以降では、CRT ライブラリは2つの部分に分けられていました。1つはユニバーサル Windows アプリで使用可能な関数を含む 1 (ucrtbase) で、もう1つは他のすべてを含む (vcruntime140) です。 Windows 10 SDK には、多数の C99 関数をはじめとする新しい関数が含まれているため、これらの関数を使用するために、次の手順に従う必要があります。 「 [CRT Library Features](../c-runtime-library/crt-library-features.md)」を参照してください。
 
 ### <a name="to-target-the-windows-10-sdk"></a>Windows 10 SDK をターゲットとするには
 
-1. Windows 10 SDK がインストールされていることを確認します。 一部として、Windows 10 SDK がインストールされている、 **C++ によるデスクトップ開発**ワークロード。 スタンドアロン バージョンは、「[のダウンロードと Windows 10 用ツール](https://developer.microsoft.com/windows/downloads)します。
+1. Windows 10 SDK がインストールされていることを確認します。 Windows 10 SDK は、ワークロード**を使用C++したデスクトップ開発**の一部としてインストールされます。 スタンドアロンバージョンについては、「 [Windows 10 用のダウンロードとツール](https://developer.microsoft.com/windows/downloads)」を参照してください。
 
 2. プロジェクト ノードのショートカット メニューを開き、 **[Retarget SDK Version] (SDK バージョンの再ターゲット)** をクリックします。
 
-   ![SDK のバージョンを再ターゲット](../windows/media/retargetingwindowssdk1.PNG "RetargetingWindowsSDK1")
+   ![SDK バージョン]の再ターゲット(../windows/media/retargetingwindowssdk1.PNG "RetargetingWindowsSDK1")
 
    **[ソリューション操作の再ターゲット]** ダイアログが表示されます。
 
-   ![ソリューションのアクションを確認して](../windows/media/retargetingwindowssdk2.PNG "RetargetingWindowsSDK2")
+   ![ソリューションアクションの確認](../windows/media/retargetingwindowssdk2.PNG "RetargetingWindowsSDK2")
 
-3. **ターゲット プラットフォーム バージョン**ドロップダウン リストで、対象とする Windows 10 SDK のバージョンを選択します。 [OK] ボタンを選択して変更を適用します。
+3. **[ターゲットプラットフォームのバージョン]** ドロップダウンリストで、対象とする WINDOWS 10 SDK のバージョンを選択します。 [OK] ボタンを選択して変更を適用します。
 
    このコンテキストでは、8.1 が、Windows 8、Windows Server 2012、Windows 7、Windows Server 2008、および Windows Vista との下位互換性も備えた Windows SDK バージョンを参照することに注意してください。
 
@@ -40,13 +40,13 @@ Visual Studio 2015 と Windows 10 SDK 以降、CRT ライブラリは、1 つ (u
 
 4. プロジェクト プロパティを開いて **[構成プロパティ]、[全般]** セクションで、 **[Windows Target Platform Version] (Windows ターゲット プラットフォームのバージョン)** の値を確認します。 ここで値を変更することは、この手順を実行するのと同じ効果があります。 「 [General Property Page (Project)](../build/reference/general-property-page-project.md)」を参照してください。
 
-   ![ターゲット プラットフォーム バージョン](../windows/media/retargetingwindowssdk3.PNG "RetargetingWindowsSDK3")
+   ![ターゲットプラットフォームのバージョン](../windows/media/retargetingwindowssdk3.PNG "RetargetingWindowsSDK3")
 
-   この操作は、ヘッダー ファイルとライブラリ ファイルへのパスを含むプロジェクトのマクロの値を変更します。 どのような変更を表示する、 **Visual C ディレクトリ**のセクション、**プロジェクトのプロパティ**ダイアログ ボックスなどのプロパティのいずれかの選択、**のインクルード ディレクトリ**を選択ドロップダウン リストを開き、選択\<編集 >。 **[インクルード ディレクトリ]** ダイアログが表示されます。
+   この操作は、ヘッダー ファイルとライブラリ ファイルへのパスを含むプロジェクトのマクロの値を変更します。 変更内容を確認するには、 **[プロジェクトのプロパティ]** ダイアログボックスの **[ビジュアルC++ディレクトリ]** セクションで、 **[インクルードディレクトリ]** などのプロパティの1つを選択し\<、ドロップダウンリストを開き、[> の編集] を選択します。 **[インクルード ディレクトリ]** ダイアログが表示されます。
 
-   ![ディレクトリ ダイアログ ボックスを含める](../windows/media/retargetingwindowssdk4.PNG "RetargetingWindowsSDK4")
+   ![[ディレクトリを含める] ダイアログボックス](../windows/media/retargetingwindowssdk4.PNG "RetargetingWindowsSDK4")
 
-   選択、**マクロ >>** ボタン、およびすべての新しい値を表示する Windows SDK マクロのマクロの一覧の下にスクロールします。
+   **[マクロ > >]** ボタンをクリックし、マクロの一覧を Windows SDK マクロにスクロールして、すべての新しい値を表示します。
 
    ![Windows SDK マクロ](../windows/media/retargetingwindowssdk5.PNG "RetargetingWindowsSDK5")
 
@@ -56,8 +56,8 @@ Visual Studio 2015 と Windows 10 SDK 以降、CRT ライブラリは、1 つ (u
 
 1. プロジェクト ノードのショートカット メニューを開き、 **[Retarget SDK Version] (SDK バージョンの再ターゲット)** をクリックします。
 
-2. **ターゲット プラットフォーム バージョン**ドロップダウン リストで、選択**8.1**します。
+2. **[ターゲットプラットフォームバージョン]** ドロップダウンリストで、 **[8.1]** を選択します。
 
 ## <a name="see-also"></a>関連項目
 
-[Windows デスクトップ アプリケーション (Visual C)](../windows/how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)
+[Windows デスクトップアプリケーション (ビジュアルC++)](../windows/how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)

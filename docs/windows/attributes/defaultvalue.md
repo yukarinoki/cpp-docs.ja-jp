@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - defaultvalue attribute
 ms.assetid: efa5d050-b2cc-4d9e-9b8e-79954f218d3a
-ms.openlocfilehash: ff6924db6f4805bb5f2dbab69076a86020b2a075
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b2057658b5881efd0c3ff095d51e5ee88c9c533e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62147965"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69490930"
 ---
 # <a name="defaultvalue"></a>defaultvalue
 
-型指定された省略可能なパラメーターの既定値を指定をできます。
+型指定された省略可能なパラメーターの既定値を指定できます。
 
 ## <a name="syntax"></a>構文
 
@@ -30,11 +30,11 @@ ms.locfileid: "62147965"
 
 ## <a name="remarks"></a>Remarks
 
-**Defaultvalue** C++ 属性と同じ機能を持つ、 [defaultvalue](/windows/desktop/Midl/defaultvalue) MIDL 属性。
+**Defaultvalue** C++属性には、 [defaultvalue](/windows/win32/Midl/defaultvalue) MIDL 属性と同じ機能があります。
 
 ## <a name="example"></a>例
 
-次のコードは、インターフェイス メソッドを使用して、 **defaultvalue**属性。
+次のコードは、 **defaultvalue**属性を使用したインターフェイスメソッドを示しています。
 
 ```cpp
 // cpp_attr_ref_defaultvalue.cpp

@@ -4,29 +4,29 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - lightweight tasks
 ms.assetid: b6dcfc7a-9fa9-4144-96a6-2845ea272017
-ms.openlocfilehash: 19918cf73c2b5b03db895c4751b22b1666ce01de
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 7b798312c9660e51338d51a97a052ad4e5bdca6b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346350"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69512183"
 ---
 # <a name="lightweight-tasks"></a>軽量タスク
 
-このドキュメントでは、軽量タスク、同時実行ランタイムでの役割について説明します。 A*軽量タスク*から直接スケジュールするタスクを`concurrency::Scheduler`または`concurrency::ScheduleGroup`オブジェクト。 軽量タスクが、Windows API に提供する関数に似ています[CreateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createthread)関数。 したがって、軽量タスクは、同時実行ランタイムのスケジューリング機能を使用する既存のコードを採用する場合に便利です。 同時実行ランタイム自体では、軽量タスクを使用して、非同期エージェントをスケジュールおよび非同期メッセージ ブロックの間でメッセージを送信します。
+このドキュメントでは、同時実行ランタイムの軽量タスクの役割について説明します。 *軽量タスク*は、オブジェクト`concurrency::Scheduler`または`concurrency::ScheduleGroup`オブジェクトから直接スケジュールするタスクです。 軽量タスクは、Windows API [CreateThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread)関数に提供する関数に似ています。 そのため、同時実行ランタイムのスケジュール機能を使用するように既存のコードを調整する場合は、軽量のタスクが役立ちます。 同時実行ランタイム自体は、軽量タスクを使用して非同期エージェントをスケジュールし、非同期メッセージブロック間でメッセージを送信します。
 
 > [!TIP]
->  コンカレンシー ランタイムには既定のスケジューラが用意されているため、アプリケーションにスケジューラを作成する必要はありません。 開始するので、タスク スケジューラを使用してアプリケーションのパフォーマンスを微調整する、推奨、[並列パターン ライブラリ (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)または[Asynchronous Agents Library](../../parallel/concrt/asynchronous-agents-library.md)場合新しい同時実行ランタイムにします。
+>  コンカレンシー ランタイムには既定のスケジューラが用意されているため、アプリケーションにスケジューラを作成する必要はありません。 タスクスケジューラはアプリケーションのパフォーマンスを微調整するのに役立ちます。そのため、同時実行ランタイムを初めて使用する場合は、[並列パターンライブラリ (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)または[非同期エージェントライブラリ](../../parallel/concrt/asynchronous-agents-library.md)から始めることをお勧めします。
 
-軽量タスクでは、非同期エージェントとタスク グループよりもオーバーヘッドが少ないを実行します。 たとえば、ランタイムは通知されず、軽量タスクが終了したとき。 さらに、ランタイムはキャッチまたは処理しない軽量タスクからスローされる例外。 例外処理と軽量タスクの詳細については、次を参照してください。[例外処理](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)します。
+軽量タスクは、非同期エージェントやタスクグループよりもオーバーヘッドが少なくなります。 たとえば、ランタイムは、軽量タスクが終了したときに通知しません。 また、ランタイムは、軽量タスクからスローされた例外をキャッチまたは処理しません。 例外処理と軽量タスクの詳細については、「[例外処理](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)」を参照してください。
 
-ほとんどのタスク、タスク グループなどのより堅牢な機能を使用して、並列アルゴリズムをより簡単にできるために複雑なタスクに分割より基本的なものをお勧めします。 タスク グループの詳細については、次を参照してください。[タスクの並列化](../../parallel/concrt/task-parallelism-concurrency-runtime.md)します。 並列アルゴリズムの詳細については、次を参照してください。[並列アルゴリズム](../../parallel/concrt/parallel-algorithms.md)します。
+ほとんどのタスクでは、複雑なタスクをより基本的なタスクに簡単に分割できるため、タスクグループや並列アルゴリズムなどのより堅牢な機能を使用することをお勧めします。 タスクグループの詳細については、「[タスクの並列](../../parallel/concrt/task-parallelism-concurrency-runtime.md)化」を参照してください。 並列アルゴリズムの詳細については、「[並列アルゴリズム](../../parallel/concrt/parallel-algorithms.md)」を参照してください。
 
-軽量タスクを作成するには、 [concurrency::ScheduleGroup::ScheduleTask](reference/schedulegroup-class.md#scheduletask)、 [concurrency::CurrentScheduler::ScheduleTask](reference/currentscheduler-class.md#scheduletask)、または[concurrency::Scheduler::ScheduleTask](reference/scheduler-class.md#scheduletask)メソッド。 軽量タスクが終了するまで待つ、シャット ダウンまたは同期メカニズムを使用して親スケジューラの待機を[concurrency::event](../../parallel/concrt/reference/event-class.md)オブジェクト。
+軽量タスクを作成するには、 [concurrency:: ScheduleGroup:: schedulegroup](reference/schedulegroup-class.md#scheduletask)、 [Concurrency:: currentscheduler:](reference/currentscheduler-class.md#scheduletask): schedulegroup、または[concurrency:: Scheduler:: schedulegroup](reference/scheduler-class.md#scheduletask)メソッドを呼び出します。 軽量タスクが終了するまで待機するには、親スケジューラがシャットダウンするまで待つか、 [concurrency:: event](../../parallel/concrt/reference/event-class.md)オブジェクトなどの同期機構を使用します。
 
 ## <a name="example"></a>例
 
-例については、軽量タスクを使用する既存のコードを改変する方法については、次を参照してください。[チュートリアル。軽量タスクを使用する既存のコードを適合させる](../../parallel/concrt/walkthrough-adapting-existing-code-to-use-lightweight-tasks.md)します。
+軽量タスクを使用するために既存のコードを調整する方法を示す例[については、「チュートリアル:軽量タスク](../../parallel/concrt/walkthrough-adapting-existing-code-to-use-lightweight-tasks.md)を使用するように既存のコードを適合させる。
 
 ## <a name="see-also"></a>関連項目
 
