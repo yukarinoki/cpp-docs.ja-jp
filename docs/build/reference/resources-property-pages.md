@@ -11,21 +11,21 @@ f1_keywords:
 helpviewer_keywords:
 - Resources property pages
 ms.assetid: dade2f6b-c51f-4c33-9023-41956ae4b5f6
-ms.openlocfilehash: 40852170d7b73016659af28a4667811ba8ef0a83
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 29d34faa83947dd5456a86df37794d115e9f0037
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62318785"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498199"
 ---
 # <a name="resources-property-pages"></a>リソース プロパティ ページ
 
-リソース コンパイラの使用の詳細については、「[Using RC (The RC Command Line)](/windows/desktop/menurc/using-rc-the-rc-command-line-)」 (RC の使用 (RC コマンド ライン)) を参照してください。
+リソース コンパイラの使用の詳細については、「[Using RC (The RC Command Line)](/windows/win32/menurc/using-rc-the-rc-command-line-)」 (RC の使用 (RC コマンド ライン)) を参照してください。
 
-アクセスする方法については、**リソース**プロパティのページを参照してください[Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+**リソース**プロパティページにアクセスする方法の詳細については、「 [Visual Studio でのコンパイラとビルドプロパティの設定C++ ](../working-with-project-properties.md)」を参照してください。
 
 プログラムを使用してこれらのプロパティにアクセスする方法については、「<xref:Microsoft.VisualStudio.VCProjectEngine.VCResourceCompilerTool>」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[C++ プロジェクト プロパティ ページの参照](property-pages-visual-cpp.md)
+[C++プロジェクトプロパティページのリファレンス](property-pages-visual-cpp.md)

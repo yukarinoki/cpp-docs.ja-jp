@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CMFCReBar [MFC], OnUpdateCmdUI
 - CMFCReBar [MFC], SetPaneAlignment
 ms.assetid: 02a60e29-6224-49c1-9e74-e0a7d9f8d023
-ms.openlocfilehash: ccd500547bdcf65e922f7b5e5ca8d30e0423933d
-ms.sourcegitcommit: bd7ddc044f9083246614b602ef6a758775313214
+ms.openlocfilehash: d348cf7aac57ce213e4d3f602501d12cee8e20d8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68866187"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505442"
 ---
 # <a name="cmfcrebar-class"></a>CMFCReBar クラス
 
@@ -120,7 +120,7 @@ BOOL AddBar(
 [入力、出力]Rebar の背景に表示されるビットマップを指定します。
 
 *dwStyle*<br/>
-からバンドに適用するスタイルを格納します。 バンドスタイルの完全な一覧については、Windows SDK `fStyle`のドキュメントの[REBARBANDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagrebarbandinfoa)構造にあるの説明を参照してください。
+からバンドに適用するスタイルを格納します。 バンドスタイルの完全な一覧については、Windows SDK `fStyle`のドキュメントの[REBARBANDINFO](/windows/win32/api/commctrl/ns-commctrl-rebarbandinfow)構造にあるの説明を参照してください。
 
 *clrFore*<br/>
 からRebar の前景色を表します。
@@ -150,7 +150,7 @@ BOOL Create(
 [入力、出力]この rebar コントロールの親ウィンドウへのポインター。
 
 *dwCtrlStyle*<br/>
-からRebar コントロールのスタイルを指定します。 既定のスタイル値は**RBS_BANDBORDERS**で、rebar コントロールの隣接するバンドを分離するための細い線を表示します。 有効なスタイルの一覧については、Windows SDK ドキュメントの「 [Rebar コントロールスタイル](/windows/desktop/Controls/rebar-control-styles)」を参照してください。
+からRebar コントロールのスタイルを指定します。 既定のスタイル値は**RBS_BANDBORDERS**で、rebar コントロールの隣接するバンドを分離するための細い線を表示します。 有効なスタイルの一覧については、Windows SDK ドキュメントの「 [Rebar コントロールスタイル](/windows/win32/Controls/rebar-control-styles)」を参照してください。
 
 *dwStyle*<br/>
 からRebar コントロールのウィンドウスタイル。 有効なスタイルの一覧については、「[ウィンドウスタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)」を参照してください。

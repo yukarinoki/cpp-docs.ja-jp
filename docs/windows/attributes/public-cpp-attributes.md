@@ -1,21 +1,21 @@
 ---
-title: public (C++ 属性) (C++ COM 属性)
+title: public (C++ Attributes) (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.public
 helpviewer_keywords:
 - public attribute
 ms.assetid: c42e1fd5-6cb1-48fe-8a03-95f2a2e0137c
-ms.openlocfilehash: a12ab0905064a72057dffac03340b667f07b3ae5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 274af011f2d61521885e93d4ce1eddad149748ad
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407550"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514166"
 ---
 # <a name="public-c-attributes"></a>public (C++ 属性)
 
-.Idl ファイル内から参照されていない場合でも、typedef がタイプ ライブラリに送られるようにします。
+は、.idl ファイル内から参照されていない場合でも、typedef がタイプライブラリに入ることを保証します。
 
 ## <a name="syntax"></a>構文
 
@@ -25,11 +25,11 @@ ms.locfileid: "62407550"
 
 ## <a name="remarks"></a>Remarks
 
-**パブリック**C++ 属性と同じ機能を持つ、[パブリック](/windows/desktop/Midl/public)MIDL 属性。
+**Public** C++属性には、 [public](/windows/win32/Midl/public) MIDL 属性と同じ機能があります。
 
 ## <a name="example"></a>例
 
-次のコードを使用する方法を示しています、**パブリック**属性。
+次のコードは、 **public**属性の使用方法を示しています。
 
 ```cpp
 // cpp_attr_ref_public.cpp

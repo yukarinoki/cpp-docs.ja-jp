@@ -44,18 +44,18 @@ helpviewer_keywords:
 - _InterlockedIncrement_acq intrinsic
 - InterlockedIncrement intrinsic
 ms.assetid: 37700615-f372-438b-bcef-d76e11839482
-ms.openlocfilehash: b41ce5c744bde7cd89cabed6c829cfb06da75129
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 58c71c577e3d87ca72836134a4f895f32170fe7f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62350089"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509358"
 ---
-# <a name="interlockedincrement-intrinsic-functions"></a>_InterlockedIncrement の組み込み関数
+# <a name="_interlockedincrement-intrinsic-functions"></a>_InterlockedIncrement の組み込み関数
 
 **Microsoft 固有の仕様**
 
-Win32 Windows SDK のコンパイラ組み込みサポートを提供[InterlockedIncrement](/windows/desktop/api/winnt/nf-winnt-interlockedincrement)関数。
+Win32 Windows SDK [InterlockedIncrement](/windows/win32/api/winnt/nf-winnt-interlockedincrement)関数のコンパイラ組み込みサポートを提供します。
 
 ## <a name="syntax"></a>構文
 
@@ -101,7 +101,7 @@ __int64 _InterlockedIncrement64_nf(
 #### <a name="parameters"></a>パラメーター
 
 *lpAddend*<br/>
-[入力、出力]インクリメントされる変数へのポインター。
+[入力、出力]インクリメントする変数へのポインター。
 
 ## <a name="return-value"></a>戻り値
 
@@ -122,7 +122,7 @@ __int64 _InterlockedIncrement64_nf(
 
 ARM プラットフォームでは、クリティカル セクションの最初と最後などで取得と解放のセマンティクスを必要とする場合は、`_acq` および `_rel` サフィックスの付いた組み込みを使用します。 `_nf` ("フェンスなし") サフィックスの付いた組み込みはメモリ バリアとしては機能しません。
 
-`lpAddend` パラメーターが指す変数は 32 ビットの境界に合わせて調整する必要があります。そのようにしない場合、この関数はマルチプロセッサの x86 システムおよび x 86 システム以外のシステムで失敗します。 詳細については、次を参照してください。 [align](../cpp/align-cpp.md)します。
+`lpAddend` パラメーターが指す変数は 32 ビットの境界に合わせて調整する必要があります。そのようにしない場合、この関数はマルチプロセッサの x86 システムおよび x 86 システム以外のシステムで失敗します。 詳細については、「 [align](../cpp/align-cpp.md)」を参照してください。
 
 Win32 関数は `Wdm.h` または `Ntddk.h` で宣言されています。
 
@@ -130,7 +130,7 @@ Win32 関数は `Wdm.h` または `Ntddk.h` で宣言されています。
 
 ## <a name="example"></a>例
 
-使用する方法の例については`_InterlockedIncrement`を参照してください[_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md)します。
+の使用`_InterlockedIncrement`例については、「 [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md)」を参照してください。
 
 **Microsoft 固有の仕様はここまで**
 

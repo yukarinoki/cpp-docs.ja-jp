@@ -7,7 +7,7 @@ helpviewer_keywords:
 ms.assetid: 2e7e8daf-d019-44b0-a51c-62d7aaa89104
 ms.openlocfilehash: ae745cfb96f4efe1ede7e3fc762842f9e4d63323
 ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62400579"
@@ -18,7 +18,7 @@ ms.locfileid: "62400579"
 
 ##  <a name="vcconjumpingoutofafinallyblock"></a> ジャンプ、Finally ブロック
 
-ネイティブ C で/C++ 、_ _ からジャンプ コード**最後に**警告が生成されますが、構造化例外処理 (SEH) を使用してブロックが許可されます。  [/Clr](../build/reference/clr-common-language-runtime-compilation.md)の移動、**最後に**ブロックが発生したエラー。
+ネイティブ C で/C++コードでは、警告を生成しますが、構造化例外処理（SEH）を使用して__finallyブロックからジャンプできます。  [/Clr](../build/reference/clr-common-language-runtime-compilation.md)の移動、**finallyに**ブロックが発生したエラー。
 
 ```cpp
 // clr_exception_handling_4.cpp

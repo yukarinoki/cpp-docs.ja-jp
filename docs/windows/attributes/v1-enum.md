@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - v1_enum attribute
 ms.assetid: 2fe92d92-81b9-4a1c-b6ce-437d0eb770ca
-ms.openlocfilehash: 08654eed7ad467dc22d2cbbf811c9169e5292f16
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c67f6303e73da42db5efd006bd6cdf3ded5bb8cf
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407147"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513860"
 ---
-# <a name="v1enum"></a>v1_enum
+# <a name="v1_enum"></a>v1_enum
 
-指定した列挙型を 16 ビットの既定ではなく、32 ビットのエンティティとして転送されることを指示します。
+指定された列挙型を16ビットの既定値ではなく、32ビットのエンティティとして送信するように指示します。
 
 ## <a name="syntax"></a>構文
 
@@ -25,11 +25,11 @@ ms.locfileid: "62407147"
 
 ## <a name="remarks"></a>Remarks
 
-**V1_enum** C++属性と同じ機能を持つ、 [v1_enum](/windows/desktop/Midl/v1-enum) MIDL 属性。
+**V1_enum** C++属性には、 [v1_enum](/windows/win32/Midl/v1-enum) MIDL 属性と同じ機能があります。
 
 ## <a name="example"></a>例
 
-次のコードは、の使い方を示しています**v1_enum**:。
+次のコードは、 **v1_enum**の使用方法を示しています。
 
 ```cpp
 // cpp_attr_ref_v1_enum.cpp

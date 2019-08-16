@@ -10,19 +10,19 @@ helpviewer_keywords:
 - ISupportErrorInfoImpl class
 - error information, ATL
 ms.assetid: e33a4b11-a123-41cf-bcea-7b19743902af
-ms.openlocfilehash: 650d90c9ec98754e11586f63e0871b70ebbe34f3
-ms.sourcegitcommit: e79188287189b76b34eb7e8fb1bfe646bdb586bc
+ms.openlocfilehash: d5e7f087f6646940777ae8b2d2a4ea888fdd3593
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67141703"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495375"
 ---
 # <a name="isupporterrorinfoimpl-class"></a>ISupportErrorInfoImpl クラス
 
-このクラスの既定の実装を提供する、 [ISupportErrorInfo インターフェイス](/windows/desktop/api/oaidl/nn-oaidl-isupporterrorinfo)1 つのインターフェイスのみがオブジェクトのエラーを生成するときに使用できます。
+このクラスは、 [ISupportErrorInfo インターフェイス](/windows/win32/api/oaidl/nn-oaidl-isupporterrorinfo)の既定の実装を提供し、1つのインターフェイスだけがオブジェクトに対してエラーを生成する場合に使用できます。
 
 > [!IMPORTANT]
-> このクラスとそのメンバーは、Windows ランタイムで実行するアプリケーションでは使用できません。
+> このクラスとそのメンバーは、Windows ランタイムで実行されるアプリケーションでは使用できません。
 
 ## <a name="syntax"></a>構文
 
@@ -35,7 +35,7 @@ class ATL_NO_VTABLE ISupportErrorInfoImpl
 ### <a name="parameters"></a>パラメーター
 
 *piid*<br/>
-サポートするインターフェイスの IID へのポインター [IErrorInfo](/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo)します。
+[IErrorInfo](/windows/win32/api/oaidl/nn-oaidl-ierrorinfo)をサポートするインターフェイスの IID へのポインター。
 
 ## <a name="members"></a>メンバー
 
@@ -43,13 +43,13 @@ class ATL_NO_VTABLE ISupportErrorInfoImpl
 
 |名前|説明|
 |----------|-----------------|
-|[ISupportErrorInfoImpl::InterfaceSupportsErrorInfo](#interfacesupportserrorinfo)|インターフェイスがで識別されるかどうかを示す`riid`サポート、 [IErrorInfo](/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo)インターフェイス。|
+|[ISupportErrorInfoImpl::InterfaceSupportsErrorInfo](#interfacesupportserrorinfo)|によって`riid`識別されるインターフェイスが[IErrorInfo](/windows/win32/api/oaidl/nn-oaidl-ierrorinfo)インターフェイスをサポートするかどうかを示します。|
 
 ## <a name="remarks"></a>Remarks
 
-[ISupportErrorInfo インターフェイス](/windows/desktop/api/oaidl/nn-oaidl-isupporterrorinfo)により、クライアントにエラー情報を返されることができます。 使用するオブジェクト`IErrorInfo`実装する必要があります`ISupportErrorInfo`します。
+[ISupportErrorInfo インターフェイス](/windows/win32/api/oaidl/nn-oaidl-isupporterrorinfo)により、エラー情報をクライアントに返すことができます。 を使用`IErrorInfo`するオブジェクトは`ISupportErrorInfo`、を実装する必要があります。
 
-クラス`ISupportErrorInfoImpl`の既定の実装を提供します。 `ISupportErrorInfo` 、1 つのインターフェイスのみがオブジェクトのエラーを生成するときに使用できます。 例:
+クラス`ISupportErrorInfoImpl`は、の既定の`ISupportErrorInfo`実装を提供し、1つのインターフェイスだけがオブジェクトに対してエラーを生成する場合に使用できます。 例えば:
 
 [!code-cpp[NVC_ATL_COM#48](../../atl/codesnippet/cpp/isupporterrorinfoimpl-class_1.h)]
 
@@ -61,11 +61,11 @@ class ATL_NO_VTABLE ISupportErrorInfoImpl
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlcom.h
+**ヘッダー:** atlcom. h
 
 ##  <a name="interfacesupportserrorinfo"></a>  ISupportErrorInfoImpl::InterfaceSupportsErrorInfo
 
-インターフェイスがで識別されるかどうかを示す`riid`サポート、 [IErrorInfo](/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo)インターフェイス。
+によって`riid`識別されるインターフェイスが[IErrorInfo](/windows/win32/api/oaidl/nn-oaidl-ierrorinfo)インターフェイスをサポートするかどうかを示します。
 
 ```cpp
 STDMETHOD(InterfaceSupportsErrorInfo)(REFIID riid);
@@ -73,7 +73,7 @@ STDMETHOD(InterfaceSupportsErrorInfo)(REFIID riid);
 
 ### <a name="remarks"></a>Remarks
 
-参照してください[ISupportErrorInfo::InterfaceSupportsErrorInfo](/windows/desktop/api/oaidl/nf-oaidl-isupporterrorinfo-interfacesupportserrorinfo) Windows SDK にします。
+Windows SDK の「 [ISupportErrorInfo:: InterfaceSupportsErrorInfo](/windows/win32/api/oaidl/nf-oaidl-isupporterrorinfo-interfacesupportserrorinfo) 」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

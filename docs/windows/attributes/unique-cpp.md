@@ -1,17 +1,17 @@
 ---
-title: 一意の (C++ COM 属性)
+title: unique (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.unique
 helpviewer_keywords:
 - unique attribute
 ms.assetid: abd7ed14-5ae7-44a8-8333-0058e9c92b2f
-ms.openlocfilehash: c5d7a2d60dc295a4390f777a9ff3718f41321ddd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 91e563ed121ba09e0c2ca2660f30c75956232ea0
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407108"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514906"
 ---
 # <a name="unique-c"></a>unique (C++)
 
@@ -25,11 +25,11 @@ ms.locfileid: "62407108"
 
 ## <a name="remarks"></a>Remarks
 
-**一意**C++ 属性と同じ機能を持つ、[一意](/windows/desktop/Midl/unique)MIDL 属性。
+**Unique** C++属性には、[固有](/windows/win32/Midl/unique)の MIDL 属性と同じ機能があります。
 
 ## <a name="example"></a>例
 
-参照してください、 [ref](ref-cpp.md)の使用サンプルの例を**一意**します。
+**Unique**の使用例については、「 [ref](ref-cpp.md)の例」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
@@ -37,7 +37,7 @@ ms.locfileid: "62407108"
 
 |||
 |-|-|
-|**対象**|**typedef**、**構造体**、**共用体**パラメーターをインターフェイス、インターフェイス メソッド|
+|**対象**|**typedef**、 **struct**、 **union**、interface パラメーター、interface メソッド|
 |**反復可能**|いいえ|
 |**必要な属性**|なし|
 |**無効な属性**|なし|

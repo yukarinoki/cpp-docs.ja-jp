@@ -7,12 +7,12 @@ helpviewer_keywords:
 - image lists [MFC], drawing images from
 - images [MFC], drawing
 ms.assetid: 2f6063fb-1c28-45f8-a333-008c064db11c
-ms.openlocfilehash: e4e60f0e6e4ee22712e4bbce344fd6437cf3db7e
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: fb307d5557c0e136c1c44c29f08af6062bb1c19d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916411"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508612"
 ---
 # <a name="drawing-images-from-an-image-list"></a>イメージ リストのイメージの描画
 
@@ -28,7 +28,7 @@ ms.locfileid: "68916411"
 
 Nonmasked イメージは、 `SRCCOPY`ラスター操作を使用して、コピー先のデバイスコンテキストにコピーされます。 イメージ内の色は、デバイスコンテキストの背景色に関係なく同じように表示されます。 で`Draw`指定された描画スタイルも、nonmasked イメージの外観には影響しません。
 
-描画メンバー関数に加えて、別の関数[DrawIndirect](../mfc/reference/cimagelist-class.md#drawindirect)は、イメージをレンダリングする機能を拡張します。 `DrawIndirect`は、パラメーターとして、 [Imagelistdrawparams](/windows/desktop/api/commctrl/ns-commctrl-imagelistdrawparams)構造体を受け取ります。 この構造体は、ラスター操作 (ROP) コードの使用など、現在のイメージのレンダリングをカスタマイズするために使用できます。 ROP コードの詳細については、Windows SDK の「[ラスター操作コード](/windows/desktop/gdi/raster-operation-codes)と[ブラシとしてのビットマップ](/windows/desktop/gdi/bitmaps-as-brushes)」を参照してください。
+描画メンバー関数に加えて、別の関数[DrawIndirect](../mfc/reference/cimagelist-class.md#drawindirect)は、イメージをレンダリングする機能を拡張します。 `DrawIndirect`は、パラメーターとして、 [Imagelistdrawparams](/windows/win32/api/commctrl/ns-commctrl-imagelistdrawparams)構造体を受け取ります。 この構造体は、ラスター操作 (ROP) コードの使用など、現在のイメージのレンダリングをカスタマイズするために使用できます。 ROP コードの詳細については、Windows SDK の「[ラスター操作コード](/windows/win32/gdi/raster-operation-codes)と[ブラシとしてのビットマップ](/windows/win32/gdi/bitmaps-as-brushes)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

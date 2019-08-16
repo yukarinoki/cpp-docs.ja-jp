@@ -1,21 +1,21 @@
 ---
-title: nonbrowsable (C++ COM 属性)
+title: 非ブラウズ (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.nonbrowsable
 helpviewer_keywords:
 - nonbrowsable attribute
 ms.assetid: e71a98e7-4b65-454a-9829-342b9f2a84be
-ms.openlocfilehash: 0a5e01c0fde49c7debb7749f5a1d148acb9cca6f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8b1849aa75e61ea5e369a277cab0b1327f48a28a
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409123"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514384"
 ---
 # <a name="nonbrowsable"></a>nonbrowsable
 
-インターフェイス メンバーをプロパティ ブラウザーに表示されないことを示します。
+インターフェイスメンバーをプロパティブラウザーに表示しないことを示します。
 
 ## <a name="syntax"></a>構文
 
@@ -25,7 +25,7 @@ ms.locfileid: "62409123"
 
 ## <a name="remarks"></a>Remarks
 
-**Nonbrowsable** C++ 属性と同じ機能を持つ、 [nonbrowsable](/windows/desktop/Midl/nonbrowsable) MIDL 属性。
+**非ブラウズ** C++属性には、[非](/windows/win32/Midl/nonbrowsable)参照可能な MIDL 属性と同じ機能があります。
 
 ## <a name="example"></a>例
 

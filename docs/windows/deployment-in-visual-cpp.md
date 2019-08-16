@@ -5,12 +5,12 @@ helpviewer_keywords:
 - deploying applications [C++]
 - application deployment [C++]
 ms.assetid: d4b4ffc0-d2bd-4e4a-84a6-62f1c26f6a09
-ms.openlocfilehash: 8dccf581cff88dc2e8c4a889bed8b47fc140eb7c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 67d5c7b0772eda55d1b653bd73f95ac93e31e644
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62345371"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514807"
 ---
 # <a name="deployment-in-visual-c"></a>Visual C++ での配置
 
@@ -48,7 +48,7 @@ Visual C++ ライブラリを集中配置する場合、インストールする
 
 ## <a name="troubleshooting-deployment-issues"></a>配置に関する問題のトラブルシューティング
 
-Visual C++ ライブラリの読み込み順序はシステムに依存します。 ローダーの問題を診断するには、depends.exe または where.exe を使用します。 詳細については、[ダイナミック リンク ライブラリの検索順序 (Windows)](/windows/desktop/Dlls/dynamic-link-library-search-order) に関するページを参照してください。
+Visual C++ ライブラリの読み込み順序はシステムに依存します。 ローダーの問題を診断するには、depends.exe または where.exe を使用します。 詳細については、[ダイナミック リンク ライブラリの検索順序 (Windows)](/windows/win32/Dlls/dynamic-link-library-search-order) に関するページを参照してください。
 
 ## <a name="see-also"></a>関連項目
 

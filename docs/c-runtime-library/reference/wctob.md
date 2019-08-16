@@ -23,12 +23,12 @@ helpviewer_keywords:
 - wctob function
 - characters, converting
 ms.assetid: 46aec98b-c2f2-4e9d-9d89-7db99ba8a9a6
-ms.openlocfilehash: 1d9dca16ca905afbc94d912a8083017ba9cc84e6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9c977bc204f4c9428a4aae09300269b1ed82d53e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188533"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498960"
 ---
 # <a name="wctob"></a>wctob
 
@@ -49,13 +49,13 @@ int wctob(
 
 ## <a name="return-value"></a>戻り値
 
-場合**wctob**ワイド文字の場合を正常に変換するマルチバイト文字が 1 バイト長である場合にのみ、マルチバイト文字の表現を返します。 場合**wctob**検出すると、マルチバイト文字またはマルチバイト文字に変換できないワイド文字は、完全に 1 バイト長で、-1 を返します。
+**Wctob**がワイド文字を正常に変換した場合、マルチバイト文字が1バイト長の場合にのみ、マルチバイト文字表現が返されます。 **Wctob**がマルチバイト文字に変換できないワイド文字を検出した場合、またはマルチバイト文字が1バイト長ではない場合は、-1 を返します。
 
 ## <a name="remarks"></a>Remarks
 
-**Wctob**関数に含まれているワイド文字に変換*wchar*を戻り値によって渡される、対応するマルチバイト文字**int**値の場合、マルチバイト文字は、1 バイト長です。
+**Wctob**関数は、マルチバイト文字が1バイト長の場合に、 *wchar*に含まれるワイド文字を、戻り値**int**値で渡される対応するマルチバイト文字に変換します。
 
-場合**wctob**が失敗して、対応するマルチバイト文字が見つからなかった関数設定**errno**に**EILSEQ** -1 を返します。
+**Wctob**が失敗し、対応するマルチバイト文字が検出されなかった場合、関数は**errno**を**EILSEQ**に設定し、-1 を返します。
 
 ## <a name="requirements"></a>必要条件
 
@@ -67,7 +67,7 @@ int wctob(
 
 ## <a name="example"></a>例
 
-このプログラムの動作を示しています、 **wcstombs**関数。
+このプログラムは、 **wcstombs**関数の動作を示しています。
 
 ```C
 // crt_wctob.c
@@ -107,4 +107,4 @@ Determined the corresponding multibyte character to be "A".
 [mbstowcs、_mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc、_mbtowc_l](mbtowc-mbtowc-l.md)<br/>
 [wctomb、_wctomb_l](wctomb-wctomb-l.md)<br/>
-[WideCharToMultiByte](/windows/desktop/api/stringapiset/nf-stringapiset-widechartomultibyte)<br/>
+[WideCharToMultiByte](/windows/win32/api/stringapiset/nf-stringapiset-widechartomultibyte)<br/>

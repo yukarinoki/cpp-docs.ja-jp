@@ -47,19 +47,19 @@ helpviewer_keywords:
 - tcsrev function
 - _tcsrev function
 ms.assetid: 87863e89-4fa0-421c-af48-25d8516fe72f
-ms.openlocfilehash: a8794177f4f92a1928ffeaaa1d7e183aa67cf886
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 36cbf78c4645c22209892be77f3bf77e7c93c76b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62366655"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499412"
 ---
-# <a name="strrev-wcsrev-mbsrev-mbsrevl"></a>_strrev、_wcsrev、_mbsrev、_mbsrev_l
+# <a name="_strrev-_wcsrev-_mbsrev-_mbsrev_l"></a>_strrev、_wcsrev、_mbsrev、_mbsrev_l
 
 文字列の文字を反転させます。
 
 > [!IMPORTANT]
-> **_mbsrev**と **_mbsrev_l** Windows ランタイムで実行するアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
+> **_mbsrev**と **_mbsrev_l**は、Windows ランタイムで実行されるアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -93,14 +93,14 @@ NULL で終わる反転対象の文字列。
 
 ## <a name="remarks"></a>Remarks
 
-**_Strrev**関数内の文字の順序を反転する*str*します。 終端の NULL 文字はそのまま保持されます。 **_wcsrev**と **_mbsrev**のワイド文字とマルチバイト文字バージョン **_strrev**します。 引数と戻り値の **_wcsrev**はワイド文字列 **_mbsrev**はマルチバイト文字の文字列。 **_Mbsrev**の各マルチバイト文字のバイトの順序*str*は変更されません。 それ以外では、これらの関数の動作は同じです。
+**_Strrev**関数は、 *str*の文字の順序を逆にします。 終端の NULL 文字はそのまま保持されます。 **_wcsrev**と **_mbsrev**は、 **_strrev**のワイド文字バージョンとマルチバイト文字バージョンです。 **_Wcsrev**の引数と戻り値はワイド文字列です。これらの **_mbsrev**はマルチバイト文字列です。 **_Mbsrev**の場合、 *str*の各マルチバイト文字のバイトの順序は変更されません。 それ以外では、これらの関数の動作は同じです。
 
-**_mbsrev**パラメーターを検証します。 いずれか*string1*または*string2* null ポインターの場合で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、実行が許可された場合 **_mbsrev**返します**NULL**設定と**errno**に**EINVAL**します。 **_strrev**と **_wcsrev**パラメーターを検証できません。
+**_mbsrev**は、そのパラメーターを検証します。 *String1*または*string2*が null ポインターの場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、 **_mbsrev**は**NULL**を返し、 **errno**を**EINVAL**に設定します。 **_strrev**と **_wcsrev**では、パラメーターは検証されません。
 
-出力値の設定に影響は、 **LC_CTYPE**ロケールのカテゴリの設定; を参照してください[setlocale、_wsetlocale](setlocale-wsetlocale.md)詳細についてはします。 いないことを除いて、これらの関数のバージョンは同じですが、 **_l**サフィックスを使用して、現在のロケールが付いている、 **_l**サフィックスは、ロケール パラメーターを代わりに使用します。渡されます。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+出力値は、ロケールの**LC_CTYPE**カテゴリの設定に影響されます。詳細については[、「setlocale、_wsetlocale](setlocale-wsetlocale.md) 」を参照してください。 これらの関数のバージョンは同じですが、 **_l**サフィックスが付いていないバージョンが現在のロケールを使用し、 **_l**サフィックスが付いているものが渡されたロケールパラメーターを代わりに使用する点が異なります。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
 > [!IMPORTANT]
-> これらの関数は、バッファー オーバーランの脅威に対して脆弱な場合があります。 バッファー オーバーランは、認められていない特権の昇格の原因となるため、システムの攻撃に使用される可能性があります。 詳しくは、「 [バッファー オーバーランの回避](/windows/desktop/SecBP/avoiding-buffer-overruns)」をご覧ください。
+> これらの関数は、バッファー オーバーランの脅威に対して脆弱な場合があります。 バッファー オーバーランは、認められていない特権の昇格の原因となるため、システムの攻撃に使用される可能性があります。 詳しくは、「 [バッファー オーバーランの回避](/windows/win32/SecBP/avoiding-buffer-overruns)」をご覧ください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 

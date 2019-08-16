@@ -7,18 +7,18 @@ helpviewer_keywords:
 - controls [MFC], animation
 - animation controls [MFC], notifications
 ms.assetid: 584f5824-446b-4a1a-85f7-ef61842c8186
-ms.openlocfilehash: 2a736e4315091b1b26daceb4fe0ce9672ab33ff6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 68ede3bc55669a29eef192d38b29b8c1ab433e4b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62238310"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508025"
 ---
 # <a name="notifications-sent-by-animation-controls"></a>アニメーション コントロールによる通知の送信
 
-アニメーション コントロール ([CAnimateCtrl](../mfc/reference/canimatectrl-class.md)) 2 つのさまざまな種類の通知メッセージを送信します。 形式で、通知が送信[WM_COMMAND](/windows/desktop/menurc/wm-command)メッセージ。
+アニメーションコントロール ([CAnimateCtrl](../mfc/reference/canimatectrl-class.md)) は、2つの異なる種類の通知メッセージを送信します。 通知は、 [WM_COMMAND](/windows/win32/menurc/wm-command)メッセージの形式で送信されます。
 
-[ACN_START](/windows/desktop/Controls/acn-start)アニメーション コントロールのクリップの再生が開始されたときにメッセージを送信します。 [ACN_STOP](/windows/desktop/Controls/acn-stop)アニメーション コントロールが完了またはクリップの再生を停止したときにメッセージが送信されます。
+[ACN_START](/windows/win32/Controls/acn-start)メッセージは、アニメーションコントロールがクリップの再生を開始したときに送信されます。 [ACN_STOP](/windows/win32/Controls/acn-stop)メッセージは、アニメーションコントロールがクリップの再生を完了または停止したときに送信されます。
 
 ## <a name="see-also"></a>関連項目
 

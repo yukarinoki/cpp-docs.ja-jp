@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - CDacl class
 ms.assetid: 2dc76616-6362-4967-b6cf-e2d39ca37ddd
-ms.openlocfilehash: 2bc962407bac947f475368b43f5039bca3c1da1e
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: a37ef47a4ea89d9ec24fac417e5b715bd2602fd7
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915815"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496930"
 ---
 # <a name="cdacl-class"></a>CDacl クラス
 
@@ -66,7 +66,7 @@ class CDacl : public CAcl
 
 提供されているクラスメソッドを使用して、オブジェクトの`CDacl` ace を作成、追加、削除、および削除します。 [Atlgetdacl](security-global-functions.md#atlgetdacl)および[atlgetdacl](security-global-functions.md#atlsetdacl)も参照してください。
 
-Windows のアクセス制御モデルの概要については、Windows SDK の「 [Access Control](/windows/desktop/SecAuthZ/access-control) 」を参照してください。
+Windows のアクセス制御モデルの概要については、Windows SDK の「 [Access Control](/windows/win32/SecAuthZ/access-control) 」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -121,7 +121,7 @@ ACE が`CDacl`オブジェクトに追加された場合は TRUE、失敗した�
 
 オブジェクト`CDacl`には、オブジェクトにアクセスできるユーザーおよびグループを識別する、0個以上の ace (アクセス制御エントリ) が含まれています。 このメソッドは、オブジェクトへの`CDacl`アクセスを許可する ACE を追加します。
 
-`AceFlags`パラメーターで設定できるさまざまなフラグの詳細については、「 [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-ace_header) 」を参照してください。
+`AceFlags`パラメーターで設定できるさまざまなフラグの詳細については、「 [ACE_HEADER](/windows/win32/api/winnt/ns-winnt-ace_header) 」を参照してください。
 
 ##  <a name="adddeniedace"></a>  CDacl::AddDeniedAce
 
@@ -166,7 +166,7 @@ ACE が`CDacl`オブジェクトに追加された場合は TRUE、失敗した�
 
 オブジェクト`CDacl`には、オブジェクトにアクセスできるユーザーおよびグループを識別する、0個以上の ace (アクセス制御エントリ) が含まれています。 このメソッドは、オブジェクトへの`CDacl`アクセスを拒否する ACE を追加します。
 
-`AceFlags`パラメーターで設定できるさまざまなフラグの詳細については、「 [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-ace_header) 」を参照してください。
+`AceFlags`パラメーターで設定できるさまざまなフラグの詳細については、「 [ACE_HEADER](/windows/win32/api/winnt/ns-winnt-ace_header) 」を参照してください。
 
 ##  <a name="cdacl"></a>CDacl::CDacl
 
@@ -264,7 +264,7 @@ void RemoveAllAces() throw();
 
 [セキュリティのサンプル](../../overview/visual-cpp-samples.md)<br/>
 [CAcl クラス](../../atl/reference/cacl-class.md)<br/>
-[Acl](/windows/desktop/SecAuthZ/access-control-lists)<br/>
-[Ace](/windows/desktop/SecAuthZ/access-control-entries)<br/>
+[Acl](/windows/win32/SecAuthZ/access-control-lists)<br/>
+[Ace](/windows/win32/SecAuthZ/access-control-entries)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)<br/>
 [セキュリティに関するグローバル関数](../../atl/reference/security-global-functions.md)

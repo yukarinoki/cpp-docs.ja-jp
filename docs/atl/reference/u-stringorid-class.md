@@ -9,19 +9,19 @@ helpviewer_keywords:
 - _U_STRINGorID class
 - U_STRINGorID class
 ms.assetid: 443cdc00-d265-4b27-8ef3-2feb95f3e5e3
-ms.openlocfilehash: 4e6c086f9d2ff4061c6404444a3b4c61dd91fe1c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 57363dbe2a1e7166b8da401900c3a7f913e63a9d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62197117"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495113"
 ---
-# <a name="ustringorid-class"></a>_U_STRINGorID クラス
+# <a name="_u_stringorid-class"></a>_U_STRINGorID クラス
 
-この引数のアダプター クラスは、リソース名 (LPCTSTRs) またはリソース Id、ID を持つときはマクロを使用して文字列に変換する、呼び出し元を必要とせず、関数に渡される (ついて) のいずれかを使用できます。
+この引数アダプタークラスを使用すると、リソース名 (LPCTSTRs) またはリソース Id (UINTs) を関数に渡すことができます。呼び出し元は、MAKEINTRESOURCE マクロを使用して、ID を文字列に変換する必要はありません。
 
 > [!IMPORTANT]
->  このクラスとそのメンバーは、Windows ランタイムで実行するアプリケーションでは使用できません。
+>  このクラスとそのメンバーは、Windows ランタイムで実行されるアプリケーションでは使用できません。
 
 ## <a name="syntax"></a>構文
 
@@ -41,29 +41,29 @@ class _U_STRINGorID
 
 |名前|説明|
 |----------|-----------------|
-|[_U_STRINGorID::m_lpstr](#_u_stringorid__m_lpstr)|リソースの識別子です。|
+|[_U_STRINGorID::m_lpstr](#_u_stringorid__m_lpstr)|リソース識別子。|
 
 ## <a name="remarks"></a>Remarks
 
-このクラスがなどには、Windows リソース管理 API のラッパーを実装するために設計された、 [FindResource](/windows/desktop/api/winbase/nf-winbase-findresourcea)、 [LoadIcon](/windows/desktop/api/winuser/nf-winuser-loadicona)、および[LoadMenu](/windows/desktop/api/winuser/nf-winuser-loadmenua)関数で、そのまま使用いずれかのリソースの名前または ID 可能性のある LPCTSTR 引数
+このクラスは、 [Findresource](/windows/win32/api/winbase/nf-winbase-findresourcew)、 [Loadicon](/windows/win32/api/winuser/nf-winuser-loadiconw)、 [loadicon](/windows/win32/api/winuser/nf-winuser-loadmenuw)などの Windows リソース管理 API にラッパーを実装するように設計されています。これらの関数は、リソースの名前または ID のいずれかである可能性がある LPCTSTR 引数を受け取ります。
 
-クラスは、2 つのコンス トラクター オーバー ロードを定義します: LPCTSTR 引数を受け取るいずれかと UINT 引数を受け取る他。 UINT 引数を持つときはマクロと、クラスの 1 つのデータのメンバーに保存された結果を使用して Windows リソース管理機能と互換性のあるリソースの種類に変換[m_lpstr](#_u_stringorid__m_lpstr)します。 LPCTSTR コンス トラクターの引数は、変換せずに直接格納されます。
+クラスは、2つのコンストラクターオーバーロードを定義します。1つは LPCTSTR 引数を受け取り、もう1つは UINT 引数を受け取ります。 UINT 引数は、MAKEINTRESOURCE マクロと、クラスの単一のデータメンバー [m_lpstr](#_u_stringorid__m_lpstr)に格納された結果を使用して、Windows リソース管理関数と互換性のあるリソースの種類に変換されます。 LPCTSTR コンストラクターの引数は、変換せずに直接格納されます。
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlwin.h
+**ヘッダー:** atlwin. h
 
 ##  <a name="_u_stringorid__m_lpstr"></a>  _U_STRINGorID::m_lpstr
 
-クラスは、パブリック LPCTSTR データ メンバーとしてそのコンス トラクターのいずれかに渡される値を保持します。
+クラスは、コンストラクターのいずれかに渡された値をパブリック LPCTSTR データメンバーとして保持します。
 
 ```
 LPCTSTR m_lpstr;
 ```
 
-##  <a name="_u_stringorid___u_stringorid"></a>  _U_STRINGorID::_U_STRINGorID
+##  <a name="_u_stringorid___u_stringorid"></a>_U_STRINGorID::_U_STRINGorID
 
-UINT コンス トラクターの引数を持つときはマクロを使用して Windows リソース管理機能と互換性のあるリソースの種類に変換し、クラスの 1 つのデータ メンバーに、結果が格納されている[m_lpstr](#_u_stringorid__m_lpstr)します。
+UINT コンストラクターは、MAKEINTRESOURCE マクロを使用して、引数を Windows リソース管理関数と互換性のあるリソースの種類に変換します。結果は、クラスの単一のデータメンバーである[m_lpstr](#_u_stringorid__m_lpstr)に格納されます。
 
 ```
 _U_STRINGorID(UINT nID);
@@ -73,14 +73,14 @@ _U_STRINGorID(LPCTSTR lpString);
 ### <a name="parameters"></a>パラメーター
 
 *nID*<br/>
-リソース id です。
+リソース ID。
 
 *lpString*<br/>
-リソースの名前。
+リソース名。
 
 ### <a name="remarks"></a>Remarks
 
-LPCTSTR コンス トラクターの引数は、変換せずに直接格納されます。
+LPCTSTR コンストラクターの引数は、変換せずに直接格納されます。
 
 ## <a name="see-also"></a>関連項目
 

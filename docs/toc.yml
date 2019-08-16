@@ -1124,16 +1124,7 @@
                 - name: Visual Studio の NMAKE プロジェクト
                   href: build/reference/creating-a-makefile-project.md
                 - name: NMAKE の実行
-                  expanded: false
-                  items:
-                    - name: NMAKE の実行
-                      href: build/reference/running-nmake.md
-                    - name: NMAKE のオプション
-                      href: build/reference/nmake-options.md
-                    - name: Tools.ini と NMAKE
-                      href: build/reference/tools-ini-and-nmake.md
-                    - name: NMAKE で返される終了コード
-                      href: build/reference/exit-codes-from-nmake.md
+                  href: build/reference/running-nmake.md
                 - name: メイクファイルの内容
                   expanded: false
                   items:
@@ -1596,7 +1587,7 @@
     - name: 'チュートリアル: Windows デスクトップ アプリケーションの作成'
       href: windows/walkthrough-creating-windows-desktop-applications-cpp.md
     - name: Windows デスクトップ ウィザード
-      href: windows/win32-application-wizard.md
+      href: windows/windows-desktop-wizard.md
     - name: Active Template Library (ATL)
       href: atl/
     - name: Microsoft Foundation Classes (MFC)
@@ -1616,10 +1607,6 @@
               items:
                 - name: 日付と時刻の概要
                   href: atl-mfc-shared/date-and-time.md
-                - name: '日付と時刻: オートメーション サポート'
-                  href: atl-mfc-shared/date-and-time-automation-support.md
-                - name: '日付と時刻: データベース サポート'
-                  href: atl-mfc-shared/date-and-time-database-support.md
                 - name: DATE 型
                   href: atl-mfc-shared/date-type.md
             - name: 文字列 (ATL-MFC)
@@ -2897,6 +2884,8 @@
 - name: 関連項目
   expanded: false
   items:
+    - name: C/C++ 言語および標準ライブラリ
+      href: cpp/c-cpp-language-and-standard-libraries.md
     - name: 言語リファレンス
       expanded: false
       items:
