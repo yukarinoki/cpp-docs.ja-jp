@@ -200,12 +200,12 @@ helpviewer_keywords:
 - std::count_if [C++]
 - std::partition_copy [C++]
 - std::swap [C++]
-ms.openlocfilehash: f389d38cf84f8f72d12242e798010d53a26f81a8
-ms.sourcegitcommit: 20a1356193fbe0ddd1002e798b952917eafc3439
+ms.openlocfilehash: b08d45ac065fe63f6f51e3b63a49e8714a486988
+ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68661541"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68956974"
 ---
 # <a name="ltalgorithmgt-functions"></a>&lt;algorithm&gt; 関数
 
@@ -442,7 +442,7 @@ bool any_of(
 
 ### <a name="remarks"></a>Remarks
 
-このテンプレート関数は、範囲`N`内の for がの場合にのみ **true** を返します。
+このテンプレート関数は 、範囲`N`内の for がの場合にのみ true を返します。
 
 `[0, last - first)`,、述語`pred(*(first + N))`は true です。
 
@@ -7646,7 +7646,7 @@ ForwardIterator search(
 2 つの要素が等価であると見なされた場合に条件が満たされると定義する、ユーザー定義の述語関数オブジェクト。 二項述語は 2 つの引数を受け取り、条件が満たされている場合は **true** 、満たされていない場合は **false** を返します。
 
 *サーチャー*\
-検索するパターンと使用する検索アルゴリズムをカプセル化するサーチャー。
+検索するパターンと使用する検索アルゴリズムをカプセル化するサーチャー。 Searchers の詳細については、「 [default_searcher クラス](default-searcher-class.md)」、「 [boyer_moore_horspool_searcher クラス](boyer-moore-horspool-searcher-class.md)」、および「 [boyer_moore_searcher クラス](boyer-moore-searcher-class.md)」を参照してください。
 
 ### <a name="return-value"></a>戻り値
 

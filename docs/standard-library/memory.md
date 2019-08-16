@@ -1,18 +1,18 @@
 ---
 title: '&lt;memory&gt;'
-ms.date: 04/04/2019
+ms.date: 08/04/2019
 f1_keywords:
 - memory/std::<memory>
 - <memory>
 - std::<memory>
 helpviewer_keywords:
 - memory header
-ms.openlocfilehash: 7c30a44de70675af69648fdba79325a173ab62fc
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 869a7590d880beba7ccc1d324fd1ba227eeac4e0
+ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451888"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68957090"
 ---
 # <a name="ltmemorygt"></a>&lt;memory&gt;
 
@@ -93,7 +93,7 @@ ms.locfileid: "68451888"
 |-|-|
 |[allocator](../standard-library/allocator-class.md)|このテンプレート クラスは、**Type** 型のオブジェクトの配列に対し、ストレージの割り当てと解放を管理するオブジェクトを記述します。|
 |[allocator_traits](../standard-library/allocator-traits-class.md)|アロケーター対応のコンテナーが必要とするすべての情報を指定したオブジェクトを記述します。|
-|[auto_ptr](../standard-library/auto-ptr-class.md)|このテンプレートクラスは **、型** <strong>\*</strong>の割り当てられたオブジェクトへのポインターを格納するオブジェクトを表します。このオブジェクトは、それを囲む auto_ptr が破棄されるときに、そのオブジェクトが確実に削除されるようにします。|
+|[auto_ptr](../standard-library/auto-ptr-class.md)|このテンプレートクラスは、型 <strong>\*</strong>の割り当てられたオブジェクトへのポインターを格納するオブジェクトを表します。このオブジェクトは、それを囲む auto_ptr が破棄されるときに、そのオブジェクトが確実に削除されるようにします。|
 |[bad_weak_ptr](../standard-library/bad-weak-ptr-class.md)|weak_ptr が無効であることを示す例外を報告します。|
 |[enabled_shared_from_this](../standard-library/enable-shared-from-this-class.md)|`shared_ptr` の生成を支援します。|
 |[pointer_traits](../standard-library/pointer-traits-struct.md)|`allocator_traits` テンプレート クラスのオブジェクトが、ポインター型 `Ptr` を持つアロケーターを記述するために必要とする情報を提供します。|
@@ -108,7 +108,7 @@ ms.locfileid: "68451888"
 |-|-|
 |[allocator_arg_t](../standard-library/allocator-class.md#allocator_arg_t)||
 |[default_delete](../standard-library/default-delete-struct.md)||
-|[hash]()||
+|hash|`unique_ptr` および`shared_ptr`に特化したオーバーロードを提供します。|
 |[owner_less](../standard-library/memory-functions.md#owner_less)|共有ポインターとウィーク ポインターの所有権ベースの混合型比較を実行します。|
 |[uses_allocator](../standard-library/allocator-class.md#uses_allocator)||
 
@@ -116,7 +116,7 @@ ms.locfileid: "68451888"
 
 |||
 |-|-|
-|[allocator\<void>](../standard-library/allocator-void-class.md)|void 型へのテンプレート クラスのアロケーターを特殊化し、この特殊なコンテキストで意味を持つメンバー型のみを定義します。|
+|[allocator\<void>](../standard-library/allocator-void-class.md)|テンプレートクラスアロケーターを**void**型に特殊化し、この特殊なコンテキストで意味を持つメンバー型のみを定義します。|
 
 ## <a name="see-also"></a>関連項目
 

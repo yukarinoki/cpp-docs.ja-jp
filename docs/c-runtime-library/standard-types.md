@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CRT_REPORT_HOOK type
 - _finddata_t type
 ms.assetid: 23312dd2-4a6a-4d70-9b48-2a5d0d8c9f28
-ms.openlocfilehash: 85ebe9052d9e8bd18dfc9b3b123871e2e5acda4e
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: d2b209e29b0690ec2003031e160ce9fd1f749b13
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740472"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68915312"
 ---
 # <a name="standard-types"></a>基本データ型
 
@@ -202,7 +202,7 @@ Microsoft ランタイム ライブラリには、次の基本データ型およ
 |`div_t`、`ldiv_t`、および `lldiv_t` の各構造体|それぞれ [div](../c-runtime-library/reference/div.md)、[ldiv](../c-runtime-library/reference/ldiv-lldiv.md)、および [lldiv](../c-runtime-library/reference/ldiv-lldiv.md) によって返される値を格納します。|STDLIB.H|
 |`errno_t` 整数|`errno` のエラー コードを処理する関数の戻り値の型またはパラメーターに使用されます。|STDDEF.H、<br /><br /> CRTDEFS.H|
 |`_exception` 構造体|[_matherr](../c-runtime-library/reference/matherr.md) のエラー情報を格納します。|MATH.H|
-|`_EXCEPTION_POINTERS`|例外レコードを格納します。 詳細については、[EXCEPTION_POINTERS](/windows/desktop/api/winnt/ns-winnt-_exception_pointers) に関するページをご覧ください。|FPIEEE.H|
+|`_EXCEPTION_POINTERS`|例外レコードを格納します。 詳細については、[EXCEPTION_POINTERS](/windows/desktop/api/winnt/ns-winnt-exception_pointers) に関するページをご覧ください。|FPIEEE.H|
 |`FILE` 構造体|ストリームの現在の状態に関する情報を格納します。すべてのストリーム I/O 操作で使用します。|STDIO.H|
 |`_finddata_t`、`_wfinddata_t`、`_finddata32_t`、`_wfinddata32_t`、`_finddatai64_t`、`_wfinddatai64_t`、`__finddata64_t`、`__wfinddata64_t`、`__finddata32i64_t`、`__wfinddata32i64_t`、`__finddata64i32_t`、`__wfinddata64i32_t` の各構造体|[_findfirst、_wfindfirst および関連する関数](../c-runtime-library/reference/findfirst-functions.md)、[_findnext、_wfindnext および関連する関数](../c-runtime-library/reference/findnext-functions.md)によって返されるファイル属性情報を格納します。 構造体のメンバーについては、「[ファイル名検索関数](../c-runtime-library/filename-search-functions.md)」をご覧ください。|IO.H、WCHAR.H|
 |`_FPIEEE_RECORD` 構造体|[_fpieee_flt](../c-runtime-library/reference/fpieee-flt.md) によってユーザー定義トラップに渡される、IEEE 浮動小数点例外に関する情報を格納します。|FPIEEE.H|

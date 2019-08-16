@@ -1124,16 +1124,7 @@
                 - name: Visual Studio の NMAKE プロジェクト
                   href: build/reference/creating-a-makefile-project.md
                 - name: NMAKE の実行
-                  expanded: false
-                  items:
-                    - name: NMAKE の実行
-                      href: build/reference/running-nmake.md
-                    - name: NMAKE のオプション
-                      href: build/reference/nmake-options.md
-                    - name: Tools.ini と NMAKE
-                      href: build/reference/tools-ini-and-nmake.md
-                    - name: NMAKE で返される終了コード
-                      href: build/reference/exit-codes-from-nmake.md
+                  href: build/reference/running-nmake.md
                 - name: メイクファイルの内容
                   expanded: false
                   items:
@@ -10529,22 +10520,8 @@
                   items:
                     - name: C と Win32 を使用するマルチスレッド
                       href: parallel/multithreading-with-c-and-win32.md
-                    - name: マルチスレッド プログラム
-                      href: parallel/multithread-programs.md
-                    - name: ライブラリのマルチスレッド サポート
-                      href: parallel/library-support-for-multithreading.md
-                    - name: マルチスレッドのためのインクルード ファイル
-                      href: parallel/include-files-for-multithreading.md
-                    - name: スレッド コントロールのための C ランタイム ライブラリ関数
-                      href: parallel/c-run-time-library-functions-for-thread-control.md
                     - name: マルチスレッドの C サンプル プログラム
                       href: parallel/sample-multithread-c-program.md
-                    - name: マルチスレッド Win32 プログラムの作成
-                      href: parallel/writing-a-multithreaded-win32-program.md
-                    - name: マルチスレッド プログラムのコンパイルとリンク
-                      href: parallel/compiling-and-linking-multithread-programs.md
-                    - name: マルチスレッド プログラムの問題を回避する方法
-                      href: parallel/avoiding-problem-areas-with-multithread-programs.md
                     - name: スレッド ローカル ストレージ (TLS)
                       href: parallel/thread-local-storage-tls.md
                 - name: C++ と MFC を使用するマルチスレッド
