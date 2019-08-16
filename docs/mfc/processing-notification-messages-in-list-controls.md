@@ -5,20 +5,20 @@ helpviewer_keywords:
 - processing notifications [MFC]
 - CListCtrl class [MFC], processing notifications
 ms.assetid: 1f0e296e-d2a3-48fc-ae38-51d7fb096f51
-ms.openlocfilehash: 2a7899c74bfcddcdc8d54f7d9eb894553115ad66
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e93e91a3219f81bf4027549fc84f1c85c8defb5b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160186"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69507868"
 ---
 # <a name="processing-notification-messages-in-list-controls"></a>リスト コントロールでの通知メッセージの処理
 
-ユーザーは、列ヘッダーをクリック、アイコンをドラッグして、ラベルというように、リスト コントロールの編集 ([CListCtrl](../mfc/reference/clistctrl-class.md))、親ウィンドウに通知メッセージを送信します。 応答として何らかの操作を行う場合は、これらのメッセージを処理します。 たとえば、ユーザーは、列ヘッダーをクリックすると、Microsoft Outlook のように、クリックされた列の内容に基づいて項目の並べ替えにする可能性があります。
+ユーザーが列見出しをクリックしたり、アイコンをドラッグしたり、ラベルを編集したりすると、リストコントロール ([CListCtrl](../mfc/reference/clistctrl-class.md)) によって通知メッセージが親ウィンドウに送信されます。 応答として何らかの操作を行う場合は、これらのメッセージを処理します。 たとえば、ユーザーが列ヘッダーをクリックしたときに、Microsoft Outlook のように、クリックされた列の内容に基づいて項目を並べ替えることができます。
 
-ビューまたはダイアログ クラスのリスト コントロールから WM_NOTIFY メッセージの処理。 [プロパティ] ウィンドウを使用して作成する、 [OnChildNotify](../mfc/reference/cwnd-class.md#onchildnotify)ハンドラー関数を switch ステートメントが通知メッセージの処理に基づきます。
+ビューまたはダイアログクラスのリストコントロールから、WM_NOTIFY メッセージを処理します。 プロパティウィンドウを使用して、処理されている通知メッセージに基づいて switch ステートメントを含む[OnChildNotify](../mfc/reference/cwnd-class.md#onchildnotify) handler 関数を作成します。
 
-リスト コントロールが親ウィンドウに送信できる通知の一覧は、次を参照してください。[リスト ビュー コントロールのリファレンス](/windows/desktop/Controls/list-view-control-reference)Windows SDK に含まれています。
+リストコントロールが親ウィンドウに送信できる通知の一覧については、「Windows SDK の[リストビューコントロールリファレンス](/windows/win32/Controls/list-view-control-reference)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

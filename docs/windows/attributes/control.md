@@ -1,21 +1,21 @@
 ---
-title: コントロール (C++ COM 属性)
+title: control (C++ COM 属性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.control
 helpviewer_keywords:
 - Control attribute
 ms.assetid: 3d046bb2-4afe-4cb8-a762-233b296e1975
-ms.openlocfilehash: 223acf774d1cc90d84aed2d0d0c8cb59fc778fa1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 12cf98b49b43b7a67834ea5401994ecdc749aa3b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148277"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501776"
 ---
 # <a name="control"></a>control
 
-コントロールに、ユーザー定義型を指定します。
+ユーザー定義型がコントロールであることを指定します。
 
 ## <a name="syntax"></a>構文
 
@@ -25,7 +25,7 @@ ms.locfileid: "62148277"
 
 ## <a name="remarks"></a>Remarks
 
-**コントロール**属性の意味、[コクラス](coclass.md)属性。 **コントロール**C++ 属性と同じ機能を持つ、[コントロール](/windows/desktop/Midl/control)MIDL 属性。
+**Control**属性は、 [coclass](coclass.md)属性を意味します。 **Control** C++属性には、[コントロール](/windows/win32/Midl/control)の MIDL 属性と同じ機能があります。
 
 ## <a name="example"></a>例
 

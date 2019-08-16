@@ -5,40 +5,40 @@ helpviewer_keywords:
 - CHeaderCtrl class [MFC], creating
 - header controls [MFC], creating
 ms.assetid: 7864d9d2-4a2c-4622-b58b-7b110a1e28d2
-ms.openlocfilehash: 669b13cf566f24bfcd5a29ae41af1cdb90513f73
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 99269214666c324214422ad989dbbd8bff6fc345
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62242316"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508808"
 ---
 # <a name="creating-the-header-control"></a>ヘッダー コントロールの作成
 
-ヘッダー コントロールは、ダイアログ エディターで直接利用はありません (ただし、ヘッダー コントロールを含む、リスト コントロールを追加することができます)。
+ヘッダーコントロールは、ダイアログエディターで直接使用することはできません (ただし、ヘッダーコントロールを含むリストコントロールを追加することはできます)。
 
-### <a name="to-put-a-header-control-in-a-dialog-box"></a>ダイアログ ボックスで、ヘッダー コントロールを配置するには
+### <a name="to-put-a-header-control-in-a-dialog-box"></a>ヘッダーコントロールをダイアログボックスに配置するには
 
-1. 型のメンバー変数を手動で埋め込む[CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)ダイアログ クラスにします。
+1. ダイアログクラスに[CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)型のメンバー変数を手動で埋め込みます。
 
-1. [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog)、作成し、スタイルを設定、 `CHeaderCtrl`、配置、および、それを表示します。
+1. [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog)で、のスタイル`CHeaderCtrl`を作成して設定し、配置して表示します。
 
-1. ヘッダー コントロールに項目を追加します。
+1. ヘッダーコントロールに項目を追加します。
 
-1. 使用ダイアログ クラスのハンドラー関数をマップする任意のヘッダー コントロール通知メッセージの [プロパティ] ウィンドウを処理する必要があります (を参照してください[関数へのメッセージの割り当て](../mfc/reference/mapping-messages-to-functions.md))。
+1. プロパティウィンドウを使用すると、処理する必要のあるヘッダーコントロールの通知メッセージのダイアログクラスのハンドラー関数をマップできます (「[関数へのメッセージのマッピング](../mfc/reference/mapping-messages-to-functions.md)」を参照してください)。
 
-### <a name="to-put-a-header-control-in-a-view-not-a-clistview"></a>ヘッダー コントロールを表示 (CListView されません) に配置するには
+### <a name="to-put-a-header-control-in-a-view-not-a-clistview"></a>(CListView ではなく) ビューにヘッダーコントロールを配置するには
 
-1. 埋め込みを[CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)ビュー クラスのオブジェクト。
+1. [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)オブジェクトをビュークラスに埋め込みます。
 
-1. スタイル、位置、およびビューのヘッダー コントロールのウィンドウを表示[OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate)メンバー関数。
+1. ビューの[OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate)メンバー関数で、ヘッダーコントロールウィンドウのスタイル、位置、および表示を行います。
 
-1. ヘッダー コントロールに項目を追加します。
+1. ヘッダーコントロールに項目を追加します。
 
-1. 使用にビュー クラスのハンドラー関数をマップする任意のヘッダー コントロール通知メッセージのプロパティ ウィンドウを処理する必要があります (を参照してください[関数へのメッセージの割り当て](../mfc/reference/mapping-messages-to-functions.md))。
+1. プロパティウィンドウを使用すると、処理する必要のあるヘッダーコントロールの通知メッセージのビュークラスのハンドラー関数をマップできます (「[関数へのメッセージのマッピング](../mfc/reference/mapping-messages-to-functions.md)」を参照してください)。
 
-どちらの場合は、ビューまたはダイアログのオブジェクトが作成されたときに埋め込まれたコントロール オブジェクトが作成されます。 呼び出す必要がありますし、 [CHeaderCtrl::Create](../mfc/reference/cheaderctrl-class.md#create)コントロール ウィンドウを作成します。 コントロールを配置するには、呼び出す[わけ](../mfc/reference/cheaderctrl-class.md#layout)コントロールの初期サイズと位置を決定して[SetWindowPos](../mfc/reference/cwnd-class.md#setwindowpos)目的の位置を設定します。 」の説明に従って項目を追加[ヘッダー コントロールへの項目の追加](../mfc/adding-items-to-the-header-control.md)します。
+どちらの場合も、埋め込みコントロールオブジェクトは、ビューまたはダイアログオブジェクトの作成時に作成されます。 次に、 [CHeaderCtrl:: create](../mfc/reference/cheaderctrl-class.md#create)を呼び出して、コントロールウィンドウを作成する必要があります。 コントロールを配置するには、 [CHeaderCtrl:: Layout](../mfc/reference/cheaderctrl-class.md#layout)を呼び出して、コントロールの初期サイズと位置を決定し、 [SetWindowPos](../mfc/reference/cwnd-class.md#setwindowpos)を使用して必要な位置を設定します。 次に[、「ヘッダーコントロールへの項目の追加](../mfc/adding-items-to-the-header-control.md)」の説明に従って項目を追加します。
 
-詳細については、次を参照してください。[ヘッダー コントロールを作成する](/windows/desktop/Controls/header-controls)Windows SDK に含まれています。
+詳細については、「Windows SDK での[ヘッダーコントロールの作成](/windows/win32/Controls/header-controls)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - helpstringcontext attribute [C++]
 ms.assetid: d4cd135e-d91c-4aa3-9353-8aeb096f52cf
-ms.openlocfilehash: a6df5b63291fbc54d6c12a116fccd8372e8ced9a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ae48c6216b1f1d987b33eff50acf9d82dc551400
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409578"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501491"
 ---
 # <a name="helpstringcontext"></a>helpstringcontext
 
-.Hlp または .chm ファイルをヘルプ トピックの ID を指定します。
+.Hlp または .chm ファイルのヘルプトピックの ID を指定します。
 
 ## <a name="syntax"></a>構文
 
@@ -26,11 +26,11 @@ ms.locfileid: "62409578"
 ### <a name="parameters"></a>パラメーター
 
 *contextID*<br/>
-32 ビットのヘルプ コンテキスト識別子、**ヘルプ**ファイル。
+**ヘルプ**ファイル内の32ビットのヘルプコンテキスト識別子。
 
 ## <a name="remarks"></a>Remarks
 
-**Helpstringcontext** C++ 属性と同じ機能を持つ、 [helpstringcontext](/windows/desktop/Midl/helpstringcontext) ODL 属性。
+**Helpstringcontext** C++属性には、 [helpstringcontext](/windows/win32/Midl/helpstringcontext) ODL 属性と同じ機能があります。
 
 ## <a name="example"></a>例
 
@@ -54,7 +54,7 @@ __interface IMyI
 
 |||
 |-|-|
-|**対象**|**クラス**、**インターフェイス**、インターフェイス メソッド|
+|**対象**|**クラス**、**インターフェイス**、インターフェイスメソッド|
 |**反復可能**|いいえ|
 |**必要な属性**|なし|
 |**無効な属性**|なし|
