@@ -192,12 +192,12 @@ helpviewer_keywords:
 - CWinApp [MFC], m_nAutosaveInterval
 - CWinApp [MFC], m_pDataRecoveryHandler
 ms.assetid: e426a3cd-0d15-40d6-bd55-beaa5feb2343
-ms.openlocfilehash: 066494f4ba0119f4576e0c8e3c06d87ff736aea3
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
-ms.translationtype: HT
+ms.openlocfilehash: 732bdf980240b1f496c1aca56c8a89b6a7f52d27
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916730"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502182"
 ---
 # <a name="cwinapp-class"></a>CWinApp クラス
 
@@ -260,7 +260,7 @@ class CWinApp : public CWinThread
 |[CWinApp::OnIdle](#onidle)|をオーバーライドして、アプリケーション固有のアイドル時処理を実行します。|
 |[CWinApp::OpenDocumentFile](#opendocumentfile)|ファイルからドキュメントを開くためにフレームワークによって呼び出されます。|
 |[CWinApp::ParseCommandLine](#parsecommandline)|コマンドラインの個々のパラメーターとフラグを解析します。|
-|[CWinApp::PreTranslateMessage](#pretranslatemessage)|Windows 関数[TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)および[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage)にディスパッチされる前に、メッセージをフィルター処理します。|
+|[CWinApp::PreTranslateMessage](#pretranslatemessage)|Windows 関数[TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage)および[DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage)にディスパッチされる前に、メッセージをフィルター処理します。|
 |[CWinApp::ProcessMessageFilter](#processmessagefilter)|アプリケーションに到着する前に、特定のメッセージをインターセプトします。|
 |[CWinApp::ProcessShellCommand](#processshellcommand)|コマンドラインの引数とフラグを処理します。|
 |[CWinApp::ProcessWndProcException](#processwndprocexception)|アプリケーションのメッセージおよびコマンドハンドラーによってスローされた未処理の例外をすべてインターセプトします。|
@@ -850,7 +850,7 @@ BOOL GetPrinterDeviceDefaults(struct tagPDA* pPrintDlg);
 ### <a name="parameters"></a>パラメーター
 
 *pPrintDlg*<br/>
-[PRINTDLG](/windows/desktop/api/commdlg/ns-commdlg-tagpda)構造体へのポインター。
+[PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-pdw)構造体へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -902,7 +902,7 @@ BOOL GetProfileBinary(
 > `GetProfileBinary`バッファーを割り当て、そのアドレスを\* *ppdata*に返します。 呼び出し元は、 **delete []** を使用してバッファーを解放します。
 
 > [!IMPORTANT]
-> この関数が返すデータは、NULL で終わるデータとは限らないため、呼び出し元で検証を行う必要があります。 詳しくは、「 [バッファー オーバーランの回避](/windows/desktop/SecBP/avoiding-buffer-overruns)」をご覧ください。
+> この関数が返すデータは、NULL で終わるデータとは限らないため、呼び出し元で検証を行う必要があります。 詳しくは、「 [バッファー オーバーランの回避](/windows/win32/SecBP/avoiding-buffer-overruns)」をご覧ください。
 
 ### <a name="example"></a>例
 
@@ -943,7 +943,7 @@ UINT GetProfileInt(
 このメンバー関数は大文字と小文字が区別されないので、場合によっては、 *Lpszsection*および*lpszEntry*パラメーター内の文字列が異なる場合があります。
 
 > [!IMPORTANT]
-> この関数が返すデータは、NULL で終わるデータとは限らないため、呼び出し元で検証を行う必要があります。 詳しくは、「 [バッファー オーバーランの回避](/windows/desktop/SecBP/avoiding-buffer-overruns)」をご覧ください。
+> この関数が返すデータは、NULL で終わるデータとは限らないため、呼び出し元で検証を行う必要があります。 詳しくは、「 [バッファー オーバーランの回避](/windows/win32/SecBP/avoiding-buffer-overruns)」をご覧ください。
 
 ### <a name="example"></a>例
 
@@ -980,7 +980,7 @@ CString GetProfileString(
 ### <a name="remarks"></a>Remarks
 
 > [!IMPORTANT]
-> この関数が返すデータは、NULL で終わるデータとは限らないため、呼び出し元で検証を行う必要があります。 詳しくは、「 [バッファー オーバーランの回避](/windows/desktop/SecBP/avoiding-buffer-overruns)」をご覧ください。
+> この関数が返すデータは、NULL で終わるデータとは限らないため、呼び出し元で検証を行う必要があります。 詳しくは、「 [バッファー オーバーランの回避](/windows/win32/SecBP/avoiding-buffer-overruns)」をご覧ください。
 
 ### <a name="example"></a>例
 
@@ -1036,7 +1036,7 @@ virtual void HtmlHelp(
 追加データを指定します。 使用される値は、 *Ncmd*パラメーターの値によって異なります。 既定値`0x000F`は[HH_HELP_CONTEXT](/previous-versions/windows/desktop/htmlhelp/hh-help-context-command)を意味します。
 
 *nCmd*<br/>
-要求されるヘルプの種類を指定します。 使用可能な値の一覧と*Dwdata*パラメーターへの影響については、Windows SDK の[htmlhelpw](/windows/desktop/api/htmlhelp/nf-htmlhelp-htmlhelpw)または[htmlhelpw](/windows/desktop/api/htmlhelp/nf-htmlhelp-htmlhelpa) API 関数に記述されている*ucommand*パラメーターを参照してください。  
+要求されるヘルプの種類を指定します。 使用可能な値の一覧と*Dwdata*パラメーターへの影響については、Windows SDK の[htmlhelpw](/windows/win32/api/htmlhelp/nf-htmlhelp-htmlhelpw)または[htmlhelpw](/windows/win32/api/htmlhelp/nf-htmlhelp-htmlhelpa) API 関数に記述されている*ucommand*パラメーターを参照してください。  
 
 ### <a name="remarks"></a>Remarks
 
@@ -1063,7 +1063,7 @@ virtual BOOL InitInstance();
 を`InitInstance`オーバーライドして、Windows で実行されているアプリケーションの新しい各インスタンスを初期化します。 通常は、を`InitInstance`オーバーライドしてメインウィンドウオブジェクトを構築し`CWinThread::m_pMainWnd` 、そのウィンドウを指すようにデータメンバーを設定します。 このメンバー関数をオーバーライドする方法の詳細に[ついては、「CWinApp:アプリケーションクラス](../../mfc/cwinapp-the-application-class.md)。
 
 > [!NOTE]
-> MFC アプリケーションは、シングルスレッド アパートメント (STA) として初期化する必要があります。 `InitInstance`オーバーライドで[CoInitializeEx](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex)を呼び出した場合は、COINIT_APARTMENTTHREADED (COINIT_MULTITHREADED ではなく) を指定します。
+> MFC アプリケーションは、シングルスレッド アパートメント (STA) として初期化する必要があります。 `InitInstance`オーバーライドで[CoInitializeEx](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex)を呼び出した場合は、COINIT_APARTMENTTHREADED (COINIT_MULTITHREADED ではなく) を指定します。
 
 ### <a name="example"></a>例
 
@@ -1099,7 +1099,7 @@ HCURSOR LoadCursor(LPCTSTR lpszResourceName) const;  HCURSOR LoadCursor(UINT nID
 カーソルリソースの名前を含む null で終わる文字列を指します。 この引数には`CString` 、を使用できます。
 
 *nIDResource*<br/>
-カーソルリソースの ID。 リソースの一覧については、Windows SDK の「 [Loadcursor](/windows/desktop/api/winuser/nf-winuser-loadcursora) 」を参照してください。
+カーソルリソースの ID。 リソースの一覧については、Windows SDK の「 [Loadcursor](/windows/win32/api/winuser/nf-winuser-loadcursorw) 」を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1142,7 +1142,7 @@ HICON LoadIcon(LPCTSTR lpszResourceName) const;  HICON LoadIcon(UINT nIDResource
 定義済みの Windows アイコンにアクセスするには、 [LoadStandardIcon](#loadstandardicon)または[loadoemicon](#loadoemicon)メンバー関数を使用します。
 
 > [!NOTE]
-> このメンバー関数は Win32 API 関数[Loadicon](/windows/desktop/api/winuser/nf-winuser-loadicona)を呼び出します。このアイコンは、SM_CXICON および SM_CYICON システムメトリック値に対応するサイズのアイコンのみを読み込むことができます。
+> このメンバー関数は Win32 API 関数[Loadicon](/windows/win32/api/winuser/nf-winuser-loadiconw)を呼び出します。このアイコンは、SM_CXICON および SM_CYICON システムメトリック値に対応するサイズのアイコンのみを読み込むことができます。
 
 ##  <a name="loadoemcursor"></a>  CWinApp::LoadOEMCursor
 
@@ -1252,7 +1252,7 @@ HICON LoadStandardIcon(LPCTSTR lpszIconName) const;
 ### <a name="parameters"></a>パラメーター
 
 *lpszIconName*<br/>
-定義済みの Windows アイコンを指定するマニフェスト定数識別子。 これらの識別子は WINDOWS で定義されています。始め. 定義可能な定義済みの値とその説明の一覧については、Windows SDK の[Loadicon](/windows/desktop/api/winuser/nf-winuser-loadicona)の*Lsee onname*パラメーターを参照してください。
+定義済みの Windows アイコンを指定するマニフェスト定数識別子。 これらの識別子は WINDOWS で定義されています。始め. 定義可能な定義済みの値とその説明の一覧については、Windows SDK の[Loadicon](/windows/win32/api/winuser/nf-winuser-loadiconw)の*Lsee onname*パラメーターを参照してください。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1784,7 +1784,7 @@ void ParseCommandLine(CCommandLineInfo& rCmdInfo);
 
 ##  <a name="pretranslatemessage"></a>  CWinApp::PreTranslateMessage
 
-Windows 関数[TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)および[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage)にディスパッチされる前にウィンドウメッセージをフィルター処理するには、この関数をオーバーライドします。既定の実装では、アクセラレータキー変換が実行されるため`CWinApp::PreTranslateMessage`、オーバーライドされたバージョンのメンバー関数。
+Windows 関数[TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage)および[DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage)にディスパッチされる前にウィンドウメッセージをフィルター処理するには、この関数をオーバーライドします。既定の実装では、アクセラレータキー変換が実行されるため`CWinApp::PreTranslateMessage`、オーバーライドされたバージョンのメンバー関数。
 
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -1793,7 +1793,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ### <a name="parameters"></a>パラメーター
 
 *pMsg*<br/>
-処理するメッセージを含む[MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg)構造体へのポインター。
+処理するメッセージを含む[MSG](/windows/win32/api/winuser/ns-winuser-tagmsg)構造体へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1815,7 +1815,7 @@ virtual BOOL ProcessMessageFilter(
 フックコードを指定します。 このメンバー関数は、コードを使用して、 *Lpmsg*の処理方法を決定します。
 
 *lpMsg*<br/>
-Windows[メッセージ](/windows/desktop/api/winuser/ns-winuser-tagmsg)構造へのポインター。
+Windows[メッセージ](/windows/win32/api/winuser/ns-winuser-msg)structure へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1886,7 +1886,7 @@ virtual LRESULT ProcessWndProcException(
 キャッチされていない例外へのポインター。
 
 *pMsg*<br/>
-フレームワークが例外をスローする原因となった windows メッセージに関する情報を格納する[MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg)構造体。
+フレームワークが例外をスローする原因となった windows メッセージに関する情報を含む[MSG](/windows/win32/api/winuser/ns-winuser-msg)structure。
 
 ### <a name="return-value"></a>戻り値
 
@@ -2118,7 +2118,7 @@ void SelectPrinter(
 ### <a name="parameters"></a>パラメーター
 
 *hDevNames*<br/>
-特定のプリンターのドライバー、デバイス、および出力ポート名を識別する[DEVNAMES](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames)構造体を識別するハンドル。
+特定のプリンターのドライバー、デバイス、および出力ポート名を識別する[DEVNAMES](/windows/win32/api/commdlg/ns-commdlg-devnames)structure へのハンドル。
 
 *hDevMode*<br/>
 プリンターのデバイスの初期化と環境に関する情報を指定する[DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea)構造体を示すハンドル。
@@ -2260,7 +2260,7 @@ virtual void WinHelp(
 追加データを指定します。 使用される値は、 *Ncmd*パラメーターの値によって異なります。
 
 *nCmd*<br/>
-要求されるヘルプの種類を指定します。 使用可能な値の一覧と*Dwdata*パラメーターへの影響については、「 [WinHelp](/windows/desktop/api/winuser/nf-winuser-winhelpa) Windows 関数」を参照してください。
+要求されるヘルプの種類を指定します。 使用可能な値の一覧と*Dwdata*パラメーターへの影響については、「 [WinHelp](/windows/win32/api/winuser/nf-winuser-winhelpw) Windows 関数」を参照してください。
 
 ### <a name="remarks"></a>Remarks
 

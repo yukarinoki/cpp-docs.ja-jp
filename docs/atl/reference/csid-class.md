@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSid class
 ms.assetid: be58b7ca-5958-49c3-a833-ca341aaaf753
-ms.openlocfilehash: fb496e3bd58d0fe134c37b240eb2698302c6aa64
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
-ms.translationtype: HT
+ms.openlocfilehash: ed19ed3cdeb77612e20d826480ab73b9361366e9
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915697"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496451"
 ---
 # <a name="csid-class"></a>CSid クラス
 
@@ -97,7 +97,7 @@ class CSid
 
 アプリケーションは`SID`構造を直接変更しないでください。代わりに、このラッパークラスに用意されているメソッドを使用してください。 「 [AtlGetOwnerSid](security-global-functions.md#atlgetownersid)、 [atlsetgroupsid](security-global-functions.md#atlsetgroupsid)、 [atlsetgroupsid](security-global-functions.md#atlgetgroupsid)、および[AtlSetOwnerSid](security-global-functions.md#atlsetownersid)」も参照してください。
 
-Windows のアクセス制御モデルの概要については、Windows SDK の「 [Access Control](/windows/desktop/SecAuthZ/access-control) 」を参照してください。
+Windows のアクセス制御モデルの概要については、Windows SDK の「 [Access Control](/windows/win32/SecAuthZ/access-control) 」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
@@ -117,7 +117,7 @@ LPCTSTR AccountName() const throw(...);
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、指定さ`SID`れた (セキュリティ識別子) の名前の検索を試みます。 詳細については、「 [lookupaccountsid 関数](/windows/desktop/api/winbase/nf-winbase-lookupaccountsida)」を参照してください。
+このメソッドは、指定さ`SID`れた (セキュリティ識別子) の名前の検索を試みます。 詳細については、「 [lookupaccountsid 関数](/windows/win32/api/winbase/nf-winbase-lookupaccountsidw)」を参照してください。
 
 のアカウント名`SID`が見つからない場合、 `AccountName`は空の文字列を返します。 これは、ネットワークのタイムアウトによって、このメソッドによって名前が検索されない場合に発生する可能性があります。 また、サインインセッションを識別`SID`するなど、対応するアカウント名のないセキュリティ識別子に対しても発生します。
 
@@ -208,7 +208,7 @@ LPCTSTR Domain() const throw(...);
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、指定さ`SID`れた (セキュリティ識別子) の名前の検索を試みます。 詳細については、「 [lookupaccountsid 関数](/windows/desktop/api/winbase/nf-winbase-lookupaccountsida)」を参照してください。
+このメソッドは、指定さ`SID`れた (セキュリティ識別子) の名前の検索を試みます。 詳細については、「 [lookupaccountsid 関数](/windows/win32/api/winbase/nf-winbase-lookupaccountsidw)」を参照してください。
 
 のアカウント名`SID`が見つからない場合は、 `Domain`ドメインを空の文字列として返します。 これは、ネットワークのタイムアウトによって、このメソッドによって名前が検索されない場合に発生する可能性があります。 また、サインインセッションを識別`SID`するなど、対応するアカウント名のないセキュリティ識別子に対しても発生します。
 
@@ -232,7 +232,7 @@ bool EqualPrefix(const CSid& rhs) const throw();
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、Windows SDK の「 [EqualPrefixSid](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-equalprefixsid) 」を参照してください。
+詳細については、Windows SDK の「 [EqualPrefixSid](/windows/win32/api/securitybaseapi/nf-securitybaseapi-equalprefixsid) 」を参照してください。
 
 ##  <a name="getlength"></a>  CSid::GetLength
 
@@ -360,7 +360,7 @@ bool LoadAccount(
 システム名。 この文字列には、リモート コンピューターの名前を使用できます。 この文字列が NULL の場合は、代わりにローカル システムが使用されます。
 
 *pSid*<br/>
-[SID](/windows/desktop/api/winnt/ns-winnt-sid)構造体へのポインター。
+[SID](/windows/win32/api/winnt/ns-winnt-sid)構造体へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -368,7 +368,7 @@ bool LoadAccount(
 
 ### <a name="remarks"></a>Remarks
 
-`LoadAccount` は、指定された名前でセキュリティ識別子の検索を試行します。 詳細については、「 [lookupaccountsid 関数](/windows/desktop/api/winbase/nf-winbase-lookupaccountsida)」を参照してください。
+`LoadAccount` は、指定された名前でセキュリティ識別子の検索を試行します。 詳細については、「 [lookupaccountsid 関数](/windows/win32/api/winbase/nf-winbase-lookupaccountsidw)」を参照してください。
 
 ##  <a name="operator_eq"></a>  CSid::operator =
 
@@ -542,7 +542,7 @@ LPCTSTR Sid() const throw(...);
 
 ### <a name="return-value"></a>戻り値
 
-表示、保存、または転送に適した形式の文字列として構造体を返します。`SID` [Convertsidtostringsid](/windows/desktop/api/sddl/nf-sddl-convertsidtostringsida)に相当します。
+表示、保存、または転送に適した形式の文字列として構造体を返します。`SID` [Convertsidtostringsid](/windows/win32/api/sddl/nf-sddl-convertsidtostringsidw)に相当します。
 
 ##  <a name="sidnameuse"></a>  CSid::SidNameUse
 

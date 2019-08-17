@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CPageSetupDialog [MFC], PreDrawPage
 - CPageSetupDialog [MFC], m_psd
 ms.assetid: 049c0ac8-f254-4854-9414-7a8271d1447a
-ms.openlocfilehash: a9009c4ea08771949cea2c44e4f6265783ced35a
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
-ms.translationtype: HT
+ms.openlocfilehash: 18b17d0f40aaab6ba2a018a568950549eda23016
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916935"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69503010"
 ---
 # <a name="cpagesetupdialog-class"></a>CPageSetupDialog クラス
 
@@ -142,7 +142,7 @@ CPageSetupDialog(
 
 - PSD_DISABLEORIENTATION ページの向きのダイアログコントロールを無効にします。
 
-- PSD_RETURNDEFAULT は、`CPageSetupDialog` がダイアログボックスを表示せず に、システムの既定のプリンター用に初期化された [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) および [DEVNAMES](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames) 構造体を返すようにします。 との両方`hDevNames`が NULL で`hDevMode`あることを前提としています。それ以外の場合、関数はエラーを返します。 システムの既定のプリンターが古いプリンタードライバー (Windows バージョン3.0 より前) でサポートされて`hDevNames`いる場合は、のみが返されます。`hDevMode`が NULL です。
+- PSD_RETURNDEFAULT は、`CPageSetupDialog` がダイアログボックスを表示せず に、システムの既定のプリンター用に初期化された [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea) および [DEVNAMES](/windows/win32/api/commdlg/ns-commdlg-devnames) 構造体を返すようにします。 との両方`hDevNames`が NULL で`hDevMode`あることを前提としています。それ以外の場合、関数はエラーを返します。 システムの既定のプリンターが古いプリンタードライバー (Windows バージョン3.0 より前) でサポートされて`hDevNames`いる場合は、のみが返されます。`hDevMode`が NULL です。
 
 - PSD_DISABLEPAPER は、用紙選択コントロールを無効にします。
 
@@ -171,7 +171,7 @@ CPageSetupDialog(
 
 ##  <a name="createprinterdc"></a>  CPageSetupDialog::CreatePrinterDC
 
-[DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea)および[DEVNAMES](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames)構造体からプリンターデバイスコンテキストを作成します。
+[DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea)および[DEVNAMES](/windows/win32/api/commdlg/ns-commdlg-devnames)構造体からプリンターデバイスコンテキストを作成します。
 
 ```
 HDC CreatePrinterDC();
@@ -191,7 +191,7 @@ virtual INT_PTR DoModal();
 
 ### <a name="return-value"></a>戻り値
 
-IDOK または IDCANCEL。 IDCANCEL が返された場合は、Windows の[Commdlgextendederror](/windows/desktop/api/commdlg/nf-commdlg-commdlgextendederror)関数を呼び出して、エラーが発生したかどうかを確認します。
+IDOK または IDCANCEL。 IDCANCEL が返された場合は、Windows の[Commdlgextendederror](/windows/win32/api/commdlg/nf-commdlg-commdlgextendederror)関数を呼び出して、エラーが発生したかどうかを確認します。
 
 IDOK と IDCANCEL は、ユーザーが [OK] または [キャンセル] ボタンを選択したかどうかを示す定数です。
 
@@ -231,7 +231,7 @@ LPDEVMODE GetDevMode() const;
 
 ### <a name="return-value"></a>戻り値
 
-[DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea)データ構造体。これには、印刷ドライバーのデバイスの初期化と環境に関する情報が含まれます。 この構造体によって取得されるメモリは、Windows [globalunlock](/windows/desktop/api/winbase/nf-winbase-globalunlock)関数を使用してロック解除する必要があります。これについては、Windows SDK を参照してください。
+[DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea)データ構造体。これには、印刷ドライバーのデバイスの初期化と環境に関する情報が含まれます。 この構造体によって取得されるメモリは、Windows [globalunlock](/windows/win32/api/winbase/nf-winbase-globalunlock)関数を使用してロック解除する必要があります。これについては、Windows SDK を参照してください。
 
 ##  <a name="getdrivername"></a>  CPageSetupDialog::GetDriverName
 
@@ -262,7 +262,7 @@ void GetMargins(
 ### <a name="parameters"></a>パラメーター
 
 *lpRectMargins*<br/>
-現在選択されているプリンターの印刷余白を (1/1000 インチまたは 1/100 mm で) 記述する[RECT](/windows/desktop/api/windef/ns-windef-tagrect)構造体または[CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトへのポインター。 この四角形に関心がない場合は、このパラメーターに NULL を渡します。
+現在選択されているプリンターの印刷余白を (1/1000 インチまたは 1/100 mm で) 記述する[RECT](/windows/win32/api/windef/ns-windef-rect)構造体または[CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトへのポインター。 この四角形に関心がない場合は、このパラメーターに NULL を渡します。
 
 *lpRectMinMargins*<br/>
 現在選択さ`RECT`れて`CRect`いるプリンターの最小印刷余白を (1/1000 インチまたは 1/100 mm で) 記述する構造体またはオブジェクトへのポインター。 この四角形に関心がない場合は、このパラメーターに NULL を渡します。
@@ -305,7 +305,7 @@ PAGESETUPDLG m_psd;
 
 `m_psd`データメンバーを直接変更すると、すべての既定の動作がオーバーライドされます。
 
-[Pagesetupdlg](/windows/desktop/api/commdlg/ns-commdlg-tagpsda)構造体の詳細については、Windows SDK を参照してください。
+[Pagesetupdlg](/windows/win32/api/commdlg/ns-commdlg-psdw)構造体の詳細については、Windows SDK を参照してください。
 
 [CPageSetupDialog:: CPageSetupDialog](#cpagesetupdialog)の例を参照してください。
 
@@ -341,7 +341,7 @@ virtual UINT OnDrawPage(
 - リターンアドレス表現の WM_PSD_YAFULLPAGERECT 領域。 この領域は、サンプルページ領域の端まで拡張されます。
 
 *lpRect*<br/>
-描画領域の座標を格納している、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT](/windows/desktop/api/windef/ns-windef-tagrect)オブジェクトへのポインター。
+描画領域の座標を格納している、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT](/windows/win32/api/windef/ns-windef-rect)オブジェクトへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -393,7 +393,7 @@ virtual UINT PreDrawPage(
 - 横モードの0x01f 封筒 (ドットマトリックス)
 
 *pPSD*<br/>
-`PAGESETUPDLG` 構造体へのポインター。 [Pagesetupdlg](/windows/desktop/api/commdlg/ns-commdlg-tagpsda)の詳細については、Windows SDK を参照してください。
+`PAGESETUPDLG` 構造体へのポインター。 [Pagesetupdlg](/windows/win32/api/commdlg/ns-commdlg-psdw)の詳細については、Windows SDK を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
