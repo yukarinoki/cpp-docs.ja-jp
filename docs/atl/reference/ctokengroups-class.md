@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - CTokenGroups class
 ms.assetid: 2ab08076-4b08-4487-bc70-ec6dee304190
-ms.openlocfilehash: 4e5d06ca01201bf415afedbe6f6e5bca096f68fa
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
-ms.translationtype: HT
+ms.openlocfilehash: 88096747f45d4a81c873837cdd4975da9d8c24e2
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915575"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496293"
 ---
 # <a name="ctokengroups-class"></a>CTokenGroups クラス
 
@@ -67,11 +67,11 @@ class CTokenGroups
 
 ## <a name="remarks"></a>Remarks
 
-[アクセストークン](/windows/desktop/SecAuthZ/access-tokens)は、プロセスまたはスレッドのセキュリティコンテキストを記述するオブジェクトで、Windows システムにログオンした各ユーザーに割り当てられます。
+[アクセストークン](/windows/win32/SecAuthZ/access-tokens)は、プロセスまたはスレッドのセキュリティコンテキストを記述するオブジェクトで、Windows システムにログオンした各ユーザーに割り当てられます。
 
-`CTokenGroups` クラスは、[TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-token_groups) 構造体のラッパーであり、アクセストークンのグループセキュリティ識別子 (sid) に関する情報が含まれています。
+`CTokenGroups` クラスは、[TOKEN_GROUPS](/windows/win32/api/winnt/ns-winnt-token_groups) 構造体のラッパーであり、アクセストークンのグループセキュリティ識別子 (sid) に関する情報が含まれています。
 
-Windows のアクセス制御モデルの概要については、Windows SDK の「 [Access Control](/windows/desktop/SecAuthZ/access-control) 」を参照してください。
+Windows のアクセス制御モデルの概要については、Windows SDK の「 [Access Control](/windows/win32/SecAuthZ/access-control) 」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
@@ -95,7 +95,7 @@ void Add(const TOKEN_GROUPS& rTokenGroups) throw(...);
 `CSid`オブジェクトに関連付ける属性。
 
 *rTokenGroups*<br/>
-[TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-token_groups)構造体。
+[TOKEN_GROUPS](/windows/win32/api/winnt/ns-winnt-token_groups)構造体。
 
 ### <a name="remarks"></a>Remarks
 
@@ -114,7 +114,7 @@ CTokenGroups(const TOKEN_GROUPS& rhs) throw(...);
 ### <a name="parameters"></a>パラメーター
 
 *rhs*<br/>
-`CTokenGroups` オブジェクトの構築に使用する `CTokenGroups` オブジェクトまたは [TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-token_groups) 構造体。
+`CTokenGroups` オブジェクトの構築に使用する `CTokenGroups` オブジェクトまたは [TOKEN_GROUPS](/windows/win32/api/winnt/ns-winnt-token_groups) 構造体。
 
 ### <a name="remarks"></a>Remarks
 
@@ -191,7 +191,7 @@ const TOKEN_GROUPS* GetPTOKEN_GROUPS() const throw(...);
 
 ### <a name="return-value"></a>戻り値
 
-`CTokenGroups`アクセストークンオブジェクトに属する[TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-token_groups)構造体へのポインターを取得します。
+`CTokenGroups`アクセストークンオブジェクトに属する[TOKEN_GROUPS](/windows/win32/api/winnt/ns-winnt-token_groups)構造体へのポインターを取得します。
 
 ##  <a name="getsidsandattributes"></a>  CTokenGroups::GetSidsAndAttributes
 
@@ -253,7 +253,7 @@ CTokenGroups& operator= (const CTokenGroups& rhs) throw(...);
 ### <a name="parameters"></a>パラメーター
 
 *rhs*<br/>
-`CTokenGroups` オブジェクトに割り当てる `CTokenGroups` オブジェクトまたは [TOKEN_GROUPS ](/windows/desktop/api/winnt/ns-winnt-token_groups)構造体。
+`CTokenGroups` オブジェクトに割り当てる `CTokenGroups` オブジェクトまたは [TOKEN_GROUPS ](/windows/win32/api/winnt/ns-winnt-token_groups)構造体。
 
 ### <a name="return-value"></a>戻り値
 
@@ -269,7 +269,7 @@ operator const TOKEN_GROUPS *() const throw(...);
 
 ### <a name="remarks"></a>Remarks
 
-値を[TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-token_groups)構造体へのポインターにキャストします。
+値を[TOKEN_GROUPS](/windows/win32/api/winnt/ns-winnt-token_groups)構造体へのポインターにキャストします。
 
 ## <a name="see-also"></a>関連項目
 

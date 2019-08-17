@@ -22,12 +22,12 @@ helpviewer_keywords:
 - COlePropertiesDialog [MFC], m_psh
 - COlePropertiesDialog [MFC], m_vp
 ms.assetid: a54dbc89-1447-4329-bd01-00e98ec9e935
-ms.openlocfilehash: bdae64ff4a7bcfef761eaf3dd70a85a54efc28b7
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
-ms.translationtype: HT
+ms.openlocfilehash: b819bc430868717a2df01a086b482dfe6d56cc0f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916956"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69504164"
 ---
 # <a name="colepropertiesdialog-class"></a>COlePropertiesDialog クラス
 
@@ -152,11 +152,11 @@ virtual INT_PTR DoModal();
 
 IDOK または IDCANCEL 成功した場合は、それ以外の場合は0です。 IDOK と IDCANCEL は、ユーザーが [OK] または [キャンセル] ボタンを選択したかどうかを示す定数です。
 
-IDCANCEL が返された場合は、Windows の[Commdlgextendederror](/windows/desktop/api/commdlg/nf-commdlg-commdlgextendederror)関数を呼び出して、エラーが発生したかどうかを判断できます。
+IDCANCEL が返された場合は、Windows の[Commdlgextendederror](/windows/win32/api/commdlg/nf-commdlg-commdlgextendederror)関数を呼び出して、エラーが発生したかどうかを判断できます。
 
 ##  <a name="m_gp"></a>  COlePropertiesDialog::m_gp
 
-型の構造体[OLEUIGNRLPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuignrlpropsa)OLE オブジェクトのプロパティ ダイアログ ボックスの [全般] ページを初期化するために使用される、します。
+型の構造体[OLEUIGNRLPROPS](/windows/win32/api/oledlg/ns-oledlg-oleuignrlpropsw)OLE オブジェクトのプロパティ ダイアログ ボックスの [全般] ページを初期化するために使用される、します。
 
 ```
 OLEUIGNRLPROPS m_gp;
@@ -170,7 +170,7 @@ OLEUIGNRLPROPS m_gp;
 
 ##  <a name="m_lp"></a>  COlePropertiesDialog::m_lp
 
-型の構造体[OLEUILINKPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuilinkpropsa)OLE オブジェクトのプロパティ ダイアログ ボックスの [リンク] ページを初期化するために使用される、します。
+型の構造体[OLEUILINKPROPS](/windows/win32/api/oledlg/ns-oledlg-oleuilinkpropsw)OLE オブジェクトのプロパティ ダイアログ ボックスの [リンク] ページを初期化するために使用される、します。
 
 ```
 OLEUILINKPROPS m_lp;
@@ -184,7 +184,7 @@ OLEUILINKPROPS m_lp;
 
 ##  <a name="m_op"></a>COlePropertiesDialog::m_op
 
-型の構造体[OLEUIOBJECTPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuiobjectpropsa)、共通の OLE オブジェクトのプロパティ ダイアログ ボックスを初期化するために使用します。
+型の構造体[OLEUIOBJECTPROPS](/windows/win32/api/oledlg/ns-oledlg-oleuiobjectpropsw)、共通の OLE オブジェクトのプロパティ ダイアログ ボックスを初期化するために使用します。
 
 ```
 OLEUIOBJECTPROPS m_op;
@@ -194,11 +194,11 @@ OLEUIOBJECTPROPS m_op;
 
 この構造体には、全般、リンク、および表示ページの初期化に使用されるメンバーが含まれています。
 
-詳細については、Windows SDK の OLEUIOBJECTPROPS および[OLEUILINKPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuilinkpropsa)構造体を参照してください。
+詳細については、Windows SDK の OLEUIOBJECTPROPS および[OLEUILINKPROPS](/windows/win32/api/oledlg/ns-oledlg-oleuilinkpropsw)構造体を参照してください。
 
 ##  <a name="m_psh"></a>  COlePropertiesDialog::m_psh
 
-[PROPSHEETHEADER](/windows/desktop/api/prsht/ns-prsht-propsheetheadera_v2)型の構造体。メンバーは、ダイアログオブジェクトの特性を格納します。
+[PROPSHEETHEADER](/windows/win32/api/prsht/ns-prsht-propsheetheadera_v2)型の構造体。メンバーは、ダイアログオブジェクトの特性を格納します。
 
 ```
 PROPSHEETHEADER m_psh;
@@ -214,7 +214,7 @@ PROPSHEETHEADER m_psh;
 
 ##  <a name="m_vp"></a>  COlePropertiesDialog::m_vp
 
-型の構造体[OLEUIVIEWPROPS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuiviewpropsa)OLE オブジェクトのプロパティ ダイアログ ボックスの [表示] ページを初期化するために使用される、します。
+型の構造体[OLEUIVIEWPROPS](/windows/win32/api/oledlg/ns-oledlg-oleuiviewpropsw)OLE オブジェクトのプロパティ ダイアログ ボックスの [表示] ページを初期化するために使用される、します。
 
 ```
 OLEUIVIEWPROPS m_vp;

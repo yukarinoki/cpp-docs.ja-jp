@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CPropertySheet [MFC], SetWizardMode
 - CPropertySheet [MFC], m_psh
 ms.assetid: 8461ccff-d14f-46e0-a746-42ad642ef94e
-ms.openlocfilehash: edae0e3d4751461bc8a5eb6644f5fdc62b0a5e8a
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
-ms.translationtype: HT
+ms.openlocfilehash: 23d17aee2aacbc1484c0f3e181bc824546ab49a2
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916854"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502826"
 ---
 # <a name="cpropertysheet-class"></a>CPropertySheet クラス
 
@@ -107,13 +107,13 @@ class CPropertySheet : public CWnd
 
 |名前|説明|
 |----------|-----------------|
-|[CPropertySheet:: m_psh](#m_psh)|Windows の[PROPSHEETHEADER](/windows/desktop/api/prsht/ns-prsht-propsheetheadera_v2)構造体。 基本的なプロパティシートパラメーターへのアクセスを提供します。|
+|[CPropertySheet:: m_psh](#m_psh)|Windows の[PROPSHEETHEADER](/windows/win32/api/prsht/ns-prsht-propsheetheadera_v2)構造体。 基本的なプロパティシートパラメーターへのアクセスを提供します。|
 
 ## <a name="remarks"></a>Remarks
 
 プロパティシートは、1つ`CPropertySheet`のオブジェクトと1つ以上の[CPropertyPage](../../mfc/reference/cpropertypage-class.md)オブジェクトで構成されます。 フレームワークは、タブインデックスのセットと、現在選択されているページを含む領域をウィンドウとして表示します。 ユーザーは、適切なタブを使用して特定のページに移動します。
 
-`CPropertySheet`Windows 98 および Windows NT 2000 で導入された拡張[PROPSHEETHEADER](/windows/desktop/api/prsht/ns-prsht-propsheetheadera_v2)構造体をサポートします。 構造体には、"ウォーターマーク" 背景ビットマップの使用をサポートする追加のフラグとメンバーが含まれています。
+`CPropertySheet`Windows 98 および Windows NT 2000 で導入された拡張[PROPSHEETHEADER](/windows/win32/api/prsht/ns-prsht-propsheetheadera_v2)構造体をサポートします。 構造体には、"ウォーターマーク" 背景ビットマップの使用をサポートする追加のフラグとメンバーが含まれています。
 
 これらの新しいイメージをプロパティシートオブジェクトに自動的に表示するには、 [CPropertySheet:: Construct](#construct)または[CPropertySheet:: CPropertySheet](#cpropertysheet)の呼び出しで、ビットマップおよびパレットのイメージに有効な値を渡します。
 
@@ -584,7 +584,7 @@ CTabCtrl* GetTabControl() const;
 
 ##  <a name="m_psh"></a>  CPropertySheet::m_psh
 
-[PROPSHEETHEADER](/windows/desktop/api/prsht/ns-prsht-propsheetheadera_v2)の特性を格納するメンバーを持つ構造体。
+[PROPSHEETHEADER](/windows/win32/api/prsht/ns-prsht-propsheetheadera_v2)の特性を格納するメンバーを持つ構造体。
 
 ### <a name="remarks"></a>Remarks
 
@@ -613,7 +613,7 @@ void MapDialogRect(LPRECT lpRect) const;
 
 ダイアログボックスの単位は、ダイアログボックスのテキストに使用されるフォントの平均の幅と高さから派生した、現在のダイアログボックスの基本単位に関して示されています。 1つの水平方向の単位はダイアログボックスの基本幅の単位の1番目で、1つの垂直方向の単位はダイアログボックスの基本高さの単位の8分の1です。
 
-[GetDS_SETFONT Baseunits](/windows/desktop/api/winuser/nf-winuser-getdialogbaseunits) Windows 関数はシステムフォントのサイズ情報を返しますが、リソース定義ファイルでスタイルを使用する場合は、各プロパティシートに別のフォントを指定できます。 Windows SDK で説明されている[Mapの rect](/windows/desktop/api/winuser/nf-winuser-mapdialogrect)ウィンドウ関数は、このダイアログボックスに適したフォントを使用します。
+[GetDS_SETFONT Baseunits](/windows/win32/api/winuser/nf-winuser-getdialogbaseunits) Windows 関数はシステムフォントのサイズ情報を返しますが、リソース定義ファイルでスタイルを使用する場合は、各プロパティシートに別のフォントを指定できます。 Windows SDK で説明されている[Mapの rect](/windows/win32/api/winuser/nf-winuser-mapdialogrect)ウィンドウ関数は、このダイアログボックスに適したフォントを使用します。
 
 この`MapDialogRect`メンバー関数は、 *lpRect*内のダイアログボックス単位を画面単位 (ピクセル) で置き換えます。これにより、四角形を使用してダイアログボックスを作成したり、ボックス内にコントロールを配置したりすることができます。
 
@@ -666,9 +666,9 @@ nButton:押されたボタンを識別します。 このパラメーターに�
 
 ### <a name="remarks"></a>Remarks
 
-Windows SDK Pressbutton メッセージの詳細については、「 [PSM_PRESSBUTTON](/windows/desktop/Controls/psm-pressbutton) 」を参照してください。
+Windows SDK Pressbutton メッセージの詳細については、「 [PSM_PRESSBUTTON](/windows/win32/Controls/psm-pressbutton) 」を参照してください。
 
-を`PressButton`呼び出すと、プロパティページからフレームワークに[PSN_APPLY](/windows/desktop/Controls/psn-apply)通知が送信されません。 この通知を送信するには、 [CPropertyPage:: OnOK](../../mfc/reference/cpropertypage-class.md#onok)を呼び出します。
+を`PressButton`呼び出すと、プロパティページからフレームワークに[PSN_APPLY](/windows/win32/Controls/psn-apply)通知が送信されません。 この通知を送信するには、 [CPropertyPage:: OnOK](../../mfc/reference/cpropertypage-class.md#onok)を呼び出します。
 
 ### <a name="example"></a>例
 
