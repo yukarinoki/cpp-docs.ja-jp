@@ -62,7 +62,7 @@ helpviewer_keywords:
 ms.assetid: b2eb5757-d499-4e67-b044-dd7d1abaa0f8
 ms.openlocfilehash: a258773633f503dc0638d76509953b3410dafbd8
 ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 07/22/2019
 ms.locfileid: "68375762"
@@ -613,7 +613,7 @@ CAtlTransactionManager オブジェクトへのポインター。
 
 ##  <a name="operator_handle"></a>CFile::operator HANDLE
 
-この演算子を使用し`CFile`て、オブジェクトへのハンドルを、を[](/windows/desktop/api/fileapi/nf-fileapi-readfileex) `HANDLE`想定する ReadFileEx や[getfiletime](/windows/desktop/api/fileapi/nf-fileapi-getfiletime)などの関数に渡します。
+この演算子を使用して、`CFile` オブジェクトへのハンドルを、`HANDLE` を想定する [ReadFileEx](/windows/desktop/api/fileapi/nf-fileapi-readfileex) や[getfiletime](/windows/desktop/api/fileapi/nf-fileapi-getfiletime)などの関数に渡します。
 
 ```
 operator HANDLE() const;
