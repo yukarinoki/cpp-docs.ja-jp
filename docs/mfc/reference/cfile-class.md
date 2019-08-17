@@ -62,7 +62,7 @@ helpviewer_keywords:
 ms.assetid: b2eb5757-d499-4e67-b044-dd7d1abaa0f8
 ms.openlocfilehash: a258773633f503dc0638d76509953b3410dafbd8
 ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 07/22/2019
 ms.locfileid: "68375762"
@@ -90,41 +90,41 @@ class CFile : public CObject
 |名前|説明|
 |----------|-----------------|
 |[CFile::Abort](#abort)|すべての警告とエラーを無視してファイルを閉じます。|
-|[CFile:: Close](#close)|ファイルを閉じて、オブジェクトを削除します。|
-|[CFile::D u](#duplicate)|このファイルに基づいて、重複するオブジェクトを構築します。|
-|[CFile:: Flush](#flush)|書き込まれていないデータをフラッシュします。|
+|[CFile::Close](#close)|ファイルを閉じて、オブジェクトを削除します。|
+|[CFile::Duplicate](#duplicate)|このファイルに基づいて、重複するオブジェクトを構築します。|
+|[CFile::Flush](#flush)|書き込まれていないデータをフラッシュします。|
 |[CFile::GetFileName](#getfilename)|選択されたファイルのファイル名を取得します。|
 |[CFile::GetFilePath](#getfilepath)|選択したファイルの完全なファイルパスを取得します。|
 |[CFile::GetFileTitle](#getfiletitle)|選択したファイルのタイトルを取得します。|
 |[CFile::GetLength](#getlength)|ファイルの長さを取得します。|
 |[CFile::GetPosition](#getposition)|現在のファイルポインターを取得します。|
-|[CFile:: GetStatus](#getstatus)|開いているファイルの状態を取得します。または、静的なバージョンの場合は、指定されたファイル (静的、仮想関数) の状態を取得します。|
+|[CFile::GetStatus](#getstatus)|開いているファイルの状態を取得します。または、静的なバージョンの場合は、指定されたファイル (静的、仮想関数) の状態を取得します。|
 |[CFile::LockRange](#lockrange)|ファイル内のバイトの範囲をロックします。|
-|[CFile:: Open](#open)|エラーテストオプションを使用してファイルを安全に開きます。|
+|[CFile::Open](#open)|エラーテストオプションを使用してファイルを安全に開きます。|
 |[CFile::Read](#read)|現在のファイル位置にあるファイルからデータを読み取り (バッファリングされない)。|
 |[CFile::Remove](#remove)|指定されたファイル (静的関数) を削除します。|
 |[CFile::Rename](#rename)|指定されたファイルの名前を変更します (静的関数)。|
-|[CFile:: Seek](#seek)|現在のファイルポインターを配置します。|
-|[CFile:: SeekToBegin](#seektobegin)|ファイルの先頭に現在のファイルポインターを移動します。|
-|[CFile:: SeekToEnd](#seektoend)|ファイルの末尾に現在のファイルポインターを移動します。|
-|[CFile:: SetFilePath](#setfilepath)|選択したファイルの完全なファイルパスを設定します。|
+|[CFile::Seek](#seek)|現在のファイルポインターを配置します。|
+|[CFile::SeekToBegin](#seektobegin)|ファイルの先頭に現在のファイルポインターを移動します。|
+|[CFile::SeekToEnd](#seektoend)|ファイルの末尾に現在のファイルポインターを移動します。|
+|[CFile::SetFilePath](#setfilepath)|選択したファイルの完全なファイルパスを設定します。|
 |[CFile::SetLength](#setlength)|ファイルの長さを変更します。|
-|[CFile:: SetStatus](#setstatus)|指定されたファイルの状態 (静的、仮想関数) を設定します。|
+|[CFile::SetStatus](#setstatus)|指定されたファイルの状態 (静的、仮想関数) を設定します。|
 |[CFile::UnlockRange](#unlockrange)|ファイル内のバイトの範囲をロック解除します。|
-|[CFile:: 書き込み](#write)|ファイル内のデータを現在のファイル位置に書き込みます。|
+|[CFile::Write](#write)|ファイル内のデータを現在のファイル位置に書き込みます。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
 |名前|説明|
 |----------|-----------------|
-|[CFile:: operator ハンドル](#operator_handle)|`CFile`オブジェクトへのハンドル。|
+|[CFile::operator HANDLE](#operator_handle)|`CFile`オブジェクトへのハンドル。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
 |名前|説明|
 |----------|-----------------|
-|[CFile:: hFileNull](#hfilenull)|オブジェクトが有効`CFile`なハンドルを持っているかどうかを判断します。|
-|[CFile:: m_hFile](#m_hfile)|通常、にはオペレーティングシステムのファイルハンドルが含まれます。|
+|[CFile::hFileNull](#hfilenull)|オブジェクトが有効`CFile`なハンドルを持っているかどうかを判断します。|
+|[CFile::m_hFile](#m_hfile)|通常、にはオペレーティングシステムのファイルハンドルが含まれます。|
 
 ### <a name="protected-data-members"></a>プロテクト データ メンバー
 
@@ -288,7 +288,7 @@ virtual void Close();
 
 ### <a name="example"></a>例
 
-[Cfile:: cfile](#cfile)の例を参照してください。
+[Cfile::cfile](#cfile)の例を参照してください。
 
 ##  <a name="duplicate"></a>CFile::D u
 
@@ -320,7 +320,7 @@ virtual void Flush();
 
 ### <a name="example"></a>例
 
-[CFile:: SetFilePath](#setfilepath)の例を参照してください。
+[CFile::SetFilePath](#setfilepath)の例を参照してください。
 
 ##  <a name="getfilename"></a>  CFile::GetFileName
 
@@ -613,7 +613,7 @@ CAtlTransactionManager オブジェクトへのポインター。
 
 ##  <a name="operator_handle"></a>CFile:: operator ハンドル
 
-この演算子を使用し`CFile`て、オブジェクトへのハンドルを、を[](/windows/desktop/api/fileapi/nf-fileapi-readfileex) `HANDLE`想定する ReadFileEx や[getfiletime](/windows/desktop/api/fileapi/nf-fileapi-getfiletime)などの関数に渡します。
+この演算子を使用して、`CFile` オブジェクトへのハンドルを、`HANDLE` を想定する [ReadFileEx](/windows/desktop/api/fileapi/nf-fileapi-readfileex) や[getfiletime](/windows/desktop/api/fileapi/nf-fileapi-getfiletime)などの関数に渡します。
 
 ```
 operator HANDLE() const;
@@ -645,7 +645,7 @@ virtual UINT Read(
 
 [!code-cpp[NVC_MFCFiles#15](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_11.cpp)]
 
-別の例については、「 [CFile:: Open](#open)」を参照してください。
+別の例については、「 [CFile::Open](#open)」を参照してください。
 
 ##  <a name="remove"></a>  CFile::Remove
 
@@ -705,7 +705,7 @@ CAtlTransactionManager オブジェクトへのポインター。
 
 [!code-cpp[NVC_MFCFiles#18](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_13.cpp)]
 
-##  <a name="seek"></a>CFile:: Seek
+##  <a name="seek"></a>CFile::Seek
 
 開いているファイル内のファイルポインターを移動します。
 
@@ -747,7 +747,7 @@ UINT nFrom);
 
 [!code-cpp[NVC_MFCFiles#9](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_14.cpp)]
 
-##  <a name="seektobegin"></a>CFile:: SeekToBegin
+##  <a name="seektobegin"></a>CFile::SeekToBegin
 
 ファイルポインターの値をファイルの先頭に設定します。
 
@@ -763,7 +763,7 @@ void SeekToBegin();
 
 [!code-cpp[NVC_MFCFiles#19](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_15.cpp)]
 
-##  <a name="seektoend"></a>CFile:: SeekToEnd
+##  <a name="seektoend"></a>CFile::SeekToEnd
 
 ファイルポインターの値をファイルの論理上の末尾に設定します。
 
@@ -827,7 +827,7 @@ virtual void SetLength(ULONGLONG dwNewLen);
 
 [!code-cpp[NVC_MFCFiles#11](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_17.cpp)]
 
-##  <a name="setstatus"></a>CFile:: SetStatus
+##  <a name="setstatus"></a>CFile::SetStatus
 
 このファイルの場所に関連付けられているファイルの状態を設定します。
 
@@ -888,7 +888,7 @@ virtual void UnlockRange(
 
 [!code-cpp[NVC_MFCFiles#12](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_8.cpp)]
 
-##  <a name="write"></a>CFile:: 書き込み
+##  <a name="write"></a>CFile::Write
 
 バッファーから`CFile`オブジェクトに関連付けられたファイルにデータを書き込みます。
 
@@ -914,7 +914,7 @@ virtual void Write(
 
 [!code-cpp[NVC_MFCFiles#16](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_19.cpp)]
 
-また、 [cfile:: cfile](#cfile)と[Cfile:: Open](#open)の例も参照してください。
+また、 [cfile::cfile](#cfile)と[Cfile::Open](#open)の例も参照してください。
 
 ## <a name="see-also"></a>関連項目
 
