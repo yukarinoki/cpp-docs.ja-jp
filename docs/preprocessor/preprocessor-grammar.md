@@ -27,7 +27,7 @@ ms.locfileid: "62179881"
 
 *constant-expression*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**defined(** *identifier* **)**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**定義されている** *識別子*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**defined** *識別子*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;その他の任意の定数式
 
 *条件付き*:<br/>
