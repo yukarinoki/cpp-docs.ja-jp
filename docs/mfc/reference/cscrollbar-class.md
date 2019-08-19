@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CScrollBar [MFC], SetScrollRange
 - CScrollBar [MFC], ShowScrollBar
 ms.assetid: f3735ca5-73ea-46dc-918b-4d824c9fe47f
-ms.openlocfilehash: 5bc9c0190ea200b25b8ea3b20311c98c1c131838
-ms.sourcegitcommit: c3bf94210bdb73be80527166264d49e33784152c
+ms.openlocfilehash: cd0c1ed85969d50548cf6b2be1d5677ed62110bc
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68821270"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502565"
 ---
 # <a name="cscrollbar-class"></a>CScrollBar クラス
 
@@ -79,7 +79,7 @@ class CScrollBar : public CWnd
 
 ウィンドウ内に`CScrollBar`オブジェクトを作成する場合は、そのオブジェクトを破棄することも必要になることがあります。
 
-スタックに`CScrollBar`オブジェクトを作成すると、そのオブジェクトは自動的に破棄されます。 **新**しい関数を使用`CScrollBar`してヒープにオブジェクトを作成する場合は、ユーザーが Windows スクロールバーを終了したときにオブジェクトを破棄するために、オブジェクトに対して**delete**を呼び出す必要があります。
+スタックに`CScrollBar`オブジェクトを作成すると、そのオブジェクトは自動的に破棄されます。 新しい関数を使用`CScrollBar`してヒープにオブジェクトを作成する場合は、ユーザーが Windows スクロールバーを終了したときにオブジェクトを破棄するために、オブジェクトに対して**delete**を呼び出す必要があります。
 
 `CScrollBar`オブジェクトにメモリを割り当てる場合は、 `CScrollBar`デストラクターをオーバーライドして割り当てを破棄します。
 
@@ -194,7 +194,7 @@ BOOL EnableScrollBar(UINT nArrowFlags = ESB_ENABLE_BOTH);
 
 ##  <a name="getscrollbarinfo"></a>CScrollBar:: GetScrollBarInfo
 
-  `SCROLLBARINFO` 構造体がスクロール バーについて保持している情報を取得します。
+ `SCROLLBARINFO` 構造体がスクロール バーについて保持している情報を取得します。
 
 ```
 BOOL GetScrollBarInfo(PSCROLLBARINFO pScrollInfo) const;
@@ -203,7 +203,7 @@ BOOL GetScrollBarInfo(PSCROLLBARINFO pScrollInfo) const;
 ### <a name="parameters"></a>パラメーター
 
 *pScrollInfo*<br/>
-[SCROLLBARINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollbarinfo)構造体へのポインター。
+[SCROLLBARINFO](/windows/win32/api/winuser/ns-winuser-scrollbarinfo)構造体へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -211,11 +211,11 @@ BOOL GetScrollBarInfo(PSCROLLBARINFO pScrollInfo) const;
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は、Windows SDK で説明されているように、 [SBM_SCROLLBARINFO](/windows/desktop/Controls/sbm-getscrollbarinfo)メッセージの機能をエミュレートします。
+このメンバー関数は、Windows SDK で説明されているように、 [SBM_SCROLLBARINFO](/windows/win32/Controls/sbm-getscrollbarinfo)メッセージの機能をエミュレートします。
 
 ##  <a name="getscrollinfo"></a>  CScrollBar::GetScrollInfo
 
-  `SCROLLINFO` 構造体がスクロール バーについて保持している情報を取得します。
+ `SCROLLINFO` 構造体がスクロール バーについて保持している情報を取得します。
 
 ```
 BOOL GetScrollInfo(

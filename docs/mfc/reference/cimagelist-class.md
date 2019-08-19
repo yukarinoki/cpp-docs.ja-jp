@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CImageList [MFC], Write
 - CImageList [MFC], m_hImageList
 ms.assetid: b6d1a704-1c82-4548-8a8f-77972adc98a5
-ms.openlocfilehash: 6c419081a649fddd65120270decb0cb57ee743fa
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
-ms.translationtype: HT
+ms.openlocfilehash: 1555209ce0f1c2caacbfb4b01107775db948d230
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916207"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505954"
 ---
 # <a name="cimagelist-class"></a>CImageList クラス
 
@@ -269,7 +269,7 @@ CImageList();
 
 ##  <a name="copy"></a>  CImageList::Copy
 
-このメンバー関数は、Windows SDK で説明されているように、Win32 関数[ImageList_Copy](/windows/desktop/api/commctrl/nf-commctrl-imagelist_copy)の動作を実装します。
+このメンバー関数は、Windows SDK で説明されているように、Win32 関数[ImageList_Copy](/windows/win32/api/commctrl/nf-commctrl-imagelist_copy)の動作を実装します。
 
 ```
 BOOL Copy(
@@ -634,16 +634,16 @@ BOOL DrawEx(
 指定したデバイスコンテキスト内で描画する位置。
 
 *sz*<br/>
-イメージの左上隅を基準として描画するイメージの部分のサイズ。 Windows SDK の「 *dx* and *dy* in [ImageList_DrawEx](/windows/desktop/api/commctrl/nf-commctrl-imagelist_drawex) 」を参照してください。
+イメージの左上隅を基準として描画するイメージの部分のサイズ。 Windows SDK の「 *dx* and *dy* in [ImageList_DrawEx](/windows/win32/api/commctrl/nf-commctrl-imagelist_drawex) 」を参照してください。
 
 *clrBk*<br/>
-画像の背景色。 Windows SDK の[ImageList_DrawEx](/windows/desktop/api/commctrl/nf-commctrl-imagelist_drawex)の*rgbBk*を参照してください。
+画像の背景色。 Windows SDK の[ImageList_DrawEx](/windows/win32/api/commctrl/nf-commctrl-imagelist_drawex)の*rgbBk*を参照してください。
 
 *clrFg*<br/>
-イメージの前景色。 Windows SDK の[ImageList_DrawEx](/windows/desktop/api/commctrl/nf-commctrl-imagelist_drawex)の*rgbFg*を参照してください。
+イメージの前景色。 Windows SDK の[ImageList_DrawEx](/windows/win32/api/commctrl/nf-commctrl-imagelist_drawex)の*rgbFg*を参照してください。
 
 *nStyle*<br/>
-描画スタイルを指定するフラグ。 Windows SDK の「 *Fstyle* in [ImageList_DrawEx](/windows/desktop/api/commctrl/nf-commctrl-imagelist_drawex) 」を参照してください。
+描画スタイルを指定するフラグ。 Windows SDK の「 *Fstyle* in [ImageList_DrawEx](/windows/win32/api/commctrl/nf-commctrl-imagelist_drawex) 」を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
@@ -682,7 +682,7 @@ BOOL DrawIndirect(
 ### <a name="parameters"></a>パラメーター
 
 *pimldp*<br/>
-描画操作に関する情報を格納している[Imagelistdrawparams](/windows/desktop/api/commctrl/ns-commctrl-imagelistdrawparams)構造体へのポインター。
+描画操作に関する情報を格納している[Imagelistdrawparams](/windows/win32/api/commctrl/ns-commctrl-imagelistdrawparams)構造体へのポインター。
 
 *pDC*<br/>
 宛先デバイスコンテキストへのポインター。 作業が終わったら、この[CDC](../../mfc/reference/cdc-class.md)オブジェクトを削除する必要があります。
@@ -694,7 +694,7 @@ BOOL DrawIndirect(
 イメージが描画される x 座標と y 座標を格納している[ポイント](/previous-versions/dd162805\(v=vs.85\))構造体。
 
 *sz*<br/>
-描画するイメージのサイズを示す[サイズ](/windows/desktop/api/windef/ns-windef-tagsize)構造体。
+描画するイメージのサイズを示す[サイズ](/windows/win32/api/windef/ns-windef-size)構造体。
 
 *ptOrigin*<br/>
 イメージ自体に対する描画操作の左上隅を指定する x 座標と y 座標を格納している[ポイント](/previous-versions/dd162805\(v=vs.85\))構造体。 X 座標と y 座標の左上にあるイメージのピクセルは描画されません。
@@ -702,12 +702,12 @@ BOOL DrawIndirect(
 *fStyle*<br/>
 描画スタイルと、必要に応じてオーバーレイイメージを指定するフラグです。 オーバーレイイメージの詳細については、「解説」を参照してください。 MFC の既定の実装である ILD_NORMAL は、イメージリストの背景色を使用してイメージを描画します。 背景色が CLR_NONE 値の場合、画像はマスクを使用して透過的に描画されます。
 
-その他の使用可能なスタイルについては、 [Imagelistdrawparams](/windows/desktop/api/commctrl/ns-commctrl-imagelistdrawparams)構造体の*fstyle*メンバーで説明されています。
+その他の使用可能なスタイルについては、 [Imagelistdrawparams](/windows/win32/api/commctrl/ns-commctrl-imagelistdrawparams)構造体の*fstyle*メンバーで説明されています。
 
 *dwRop*<br/>
 ラスター操作コードを指定する値。 これらのコードは、コピー元の四角形の色データを変換先の四角形の色データと結合して最終的な色を実現する方法を定義します。 MFC の既定の実装である SRCCOPY は、コピー元の四角形をコピー先の四角形に直接コピーします。 *Fstyle*パラメーターに ILD_ROP フラグが含まれていない場合、このパラメーターは無視されます。
 
-その他の有効な値については、 [Imagelistdrawparams](/windows/desktop/api/commctrl/ns-commctrl-imagelistdrawparams)構造体の*dwRop*メンバーに記載されています。
+その他の有効な値については、 [Imagelistdrawparams](/windows/win32/api/commctrl/ns-commctrl-imagelistdrawparams)構造体の*dwRop*メンバーに記載されています。
 
 *rgbBack*<br/>
 イメージの背景色 (既定では CLR_DEFAULT)。 このパラメーターには、アプリケーション定義の RGB 値または次の値のいずれかを指定できます。
@@ -738,7 +738,7 @@ ILS_SATURATE と共に使用する場合、このメンバーは、アイコン�
 ILS_APLHA と共に使用する場合、このメンバーはアルファチャネルの値を保持します。 この値には 0 ~ 255 の値を指定できます。0は完全に透明で、255は完全に不透明です。
 
 *crEffect*<br/>
-光彩および影効果に使用される[COLORREF](/windows/desktop/gdi/colorref)値。
+光彩および影効果に使用される[COLORREF](/windows/win32/gdi/colorref)値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -748,7 +748,7 @@ ILS_APLHA と共に使用する場合、このメンバーはアルファチャ�
 
 Win32 構造体を自分で入力する場合は、最初のバージョンを使用します。 1つ以上の MFC の既定の引数を利用する場合、または構造の管理を避ける場合は、2番目のバージョンを使用します。
 
-オーバーレイイメージは、このメンバー関数で*nimage*パラメーターによって指定されたプライマリイメージの上に描画されるイメージです。 [INDEXTOOVERLAYMASK](/windows/desktop/api/commctrl/nf-commctrl-indextooverlaymask)マクロを使用して指定されたオーバーレイマスクの1から始まるインデックスを持つ[描画](#draw)メンバー関数を使用して、オーバーレイマスクを描画します。
+オーバーレイイメージは、このメンバー関数で*nimage*パラメーターによって指定されたプライマリイメージの上に描画されるイメージです。 [INDEXTOOVERLAYMASK](/windows/win32/api/commctrl/nf-commctrl-indextooverlaymask)マクロを使用して指定されたオーバーレイマスクの1から始まるインデックスを持つ[描画](#draw)メンバー関数を使用して、オーバーレイマスクを描画します。
 
 ### <a name="example"></a>例
 
@@ -789,7 +789,7 @@ HICON ExtractIcon(int nImage);
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、アイコンを作成するための[ImageList_ExtractIcon](/windows/desktop/api/commctrl/nf-commctrl-imagelist_extracticon)マクロの動作に依存します。 アイコンの作成とクリーンアップの詳細については、 [ImageList_ExtractIcon](/windows/desktop/api/commctrl/nf-commctrl-imagelist_extracticon)マクロを参照してください。
+このメソッドは、アイコンを作成するための[ImageList_ExtractIcon](/windows/win32/api/commctrl/nf-commctrl-imagelist_extracticon)マクロの動作に依存します。 アイコンの作成とクリーンアップの詳細については、 [ImageList_ExtractIcon](/windows/win32/api/commctrl/nf-commctrl-imagelist_extracticon)マクロを参照してください。
 
 ### <a name="example"></a>例
 
@@ -915,7 +915,7 @@ BOOL GetImageInfo(
 イメージの0から始まるインデックス。
 
 *pImageInfo*<br/>
-イメージに関する情報を受け取る[IMAGEINFO](/windows/desktop/api/commctrl/ns-commctrl-imageinfo)構造体へのポインター。 この構造体の情報は、イメージのビットマップを直接操作するために使用できます。
+イメージに関する情報を受け取る[IMAGEINFO](/windows/win32/api/commctrl/ns-commctrl-imageinfo)構造体へのポインター。 この構造体の情報は、イメージのビットマップを直接操作するために使用できます。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1109,7 +1109,7 @@ BOOL SetDragCursorImage(
 
 ### <a name="remarks"></a>Remarks
 
-ドラッグ関数ではドラッグ操作中に新しいイメージが使用されるため、`CImageList::SetDragCursorImage` を呼び出した後、Windows の [ShowCursor](/windows/desktop/api/winuser/nf-winuser-showcursor) 関数を使用して、実際のマウスカーソルを非表示にする必要があります。 それ以外の場合、ドラッグ操作の間、システムには2つのマウスカーソルが表示されることがあります。
+ドラッグ関数ではドラッグ操作中に新しいイメージが使用されるため、`CImageList::SetDragCursorImage` を呼び出した後、Windows の [ShowCursor](/windows/win32/api/winuser/nf-winuser-showcursor) 関数を使用して、実際のマウスカーソルを非表示にする必要があります。 それ以外の場合、ドラッグ操作の間、システムには2つのマウスカーソルが表示されることがあります。
 
 ##  <a name="setimagecount"></a>CImageList:: SetImageCount
 
