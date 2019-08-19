@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: 91acc8255cd5f22092790f9dcf45558012caf7dc
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
-ms.translationtype: HT
+ms.openlocfilehash: 5e7a0b0d7f5c41c60fc10784518c4c075c13f778
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916793"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502142"
 ---
 # <a name="cwnd-class"></a>CWnd クラス
 
@@ -1021,7 +1021,7 @@ class CWnd : public CCmdTarget
 |[CWnd::OnHelpIndex](#onhelpindex)|ID_HELP_INDEX コマンドを処理し、既定のヘルプトピックを提供します。|
 |[CWnd::OnHelpUsing](#onhelpusing)|ID_HELP_USING コマンドを処理します。|
 |[CWnd::OnToolHitTest](#ontoolhittest)|点が指定されたツールの外接する四角形内にあるかどうかを判断し、そのツールに関する情報を取得します。|
-|[CWnd::OpenClipboard](#openclipboard)|クリップボードを開きます。 Windows [CloseClipboard](/windows/desktop/api/winuser/nf-winuser-closeclipboard)関数が呼び出されるまで、他のアプリケーションはクリップボードを変更できません。|
+|[CWnd::OpenClipboard](#openclipboard)|クリップボードを開きます。 Windows [CloseClipboard](/windows/win32/api/winuser/nf-winuser-closeclipboard)関数が呼び出されるまで、他のアプリケーションはクリップボードを変更できません。|
 |[CWnd::PaintWindowlessControls](#paintwindowlesscontrols)|コントロール コンテナーのウィンドウなしのコントロールを描画します。|
 |[CWnd::PostMessage](#postmessage)|メッセージをアプリケーション キューに配置し、ウィンドウがメッセージを処理するのを待たずに制御を返します。|
 |[CWnd::PreCreateWindow](#precreatewindow)|  `CWnd` オブジェクトに関連付けられている Windows のウィンドウが作成される前に呼び出されます。|
@@ -1122,7 +1122,7 @@ class CWnd : public CCmdTarget
 |[CWnd::OnDeadChar](#ondeadchar)|キーストロークが非システムのデッド文字 (アクセント記号付き文字など) に変換されるときに呼び出されます。|
 |[CWnd::OnDeleteItem](#ondeleteitem)|オーナー描画の子リスト ボックスやコンボ ボックスが破棄されるとき、または項目がコントロールから削除されるときに呼び出されます。|
 |[CWnd::OnDestroy](#ondestroy)|  `CWnd` が破棄されているときに呼び出されます。|
-|[CWnd::OnDestroyClipboard](#ondestroyclipboard)|Windows の[emptyclipboard](/windows/desktop/api/winuser/nf-winuser-emptyclipboard)関数の呼び出しによってクリップボードが空になったときに呼び出されます。|
+|[CWnd::OnDestroyClipboard](#ondestroyclipboard)|Windows の[emptyclipboard](/windows/win32/api/winuser/nf-winuser-emptyclipboard)関数の呼び出しによってクリップボードが空になったときに呼び出されます。|
 |[CWnd::OnDeviceChange](#ondevicechange)|デバイスやコンピューターのハードウェア構成が変更されたときに、アプリケーションまたはデバイス ドライバーに通知します。|
 |[CWnd::OnDevModeChange](#ondevmodechange)|ユーザーがデバイス モードの設定を変更したときに、すべてのトップ レベルのウィンドウに対して呼び出されます。|
 |[CWnd::OnDrawClipboard](#ondrawclipboard)|クリップボードの内容が変更されるときに呼び出されます。|
@@ -1166,9 +1166,9 @@ class CWnd : public CCmdTarget
 |[CWnd::OnMenuRButtonUp](#onmenurbuttonup)|カーソルがメニュー項目にあるときに、マウスの右ボタンを離すと呼び出されます。|
 |[CWnd::OnMenuSelect](#onmenuselect)|ユーザーがメニュー項目を選択するときに呼び出されます。|
 |[CWnd::OnMouseActivate](#onmouseactivate)|カーソルが非アクティブ ウィンドウにあるときに、マウス ボタンを押すと呼び出されます。|
-|[CWnd::OnMouseHover](#onmousehover)|[TrackMouseEvent](/windows/desktop/api/winuser/nf-winuser-trackmouseevent)の前の呼び出しで指定された期間にわたって、ウィンドウのクライアント領域上にカーソルが置かれると呼び出されます。|
+|[CWnd::OnMouseHover](#onmousehover)|[TrackMouseEvent](/windows/win32/api/winuser/nf-winuser-trackmouseevent)の前の呼び出しで指定された期間にわたって、ウィンドウのクライアント領域上にカーソルが置かれると呼び出されます。|
 |[CWnd::OnMouseHWheel](#onmousehwheel)|現在のウィンドウが Desktop Window Manager (DWM) によって構成され、そのウィンドウが最大化されるときに呼び出されます。|
-|[CWnd::OnMouseLeave](#onmouseleave)|[TrackMouseEvent](/windows/desktop/api/winuser/nf-winuser-trackmouseevent)の前の呼び出しで指定されたウィンドウのクライアント領域からカーソルが出たときに呼び出されます。|
+|[CWnd::OnMouseLeave](#onmouseleave)|[TrackMouseEvent](/windows/win32/api/winuser/nf-winuser-trackmouseevent)の前の呼び出しで指定されたウィンドウのクライアント領域からカーソルが出たときに呼び出されます。|
 |[CWnd::OnMouseMove](#onmousemove)|マウスのカーソルの移動時に呼び出されます。|
 |[CWnd::OnMouseWheel](#onmousewheel)|マウス ホイールの回転時に呼び出されます。 Windows NT 4.0 メッセージ処理を使用します。|
 |[CWnd::OnMove](#onmove)|  `CWnd` の位置が変更されると、呼び出されます。|
@@ -1184,8 +1184,8 @@ class CWnd : public CCmdTarget
 |[CWnd::OnNcMButtonDblClk](#onncmbuttondblclk)|カーソルが `CWnd` の非クライアント領域内にあるときに、マウスの中央ボタンをダブルクリックすると呼び出されます。|
 |[CWnd::OnNcMButtonDown](#onncmbuttondown)|カーソルが `CWnd` の非クライアント領域内にあるときに、マウスの中央ボタンを押すと呼び出されます。|
 |[CWnd::OnNcMButtonUp](#onncmbuttonup)|カーソルが `CWnd` の非クライアント領域内にあるときに、マウスの中央ボタンを離すと呼び出されます。|
-|[CWnd::OnNcMouseHover](#onncmousehover)|[TrackMouseEvent](/windows/desktop/api/winuser/nf-winuser-trackmouseevent)の前の呼び出しで指定された期間にわたって、ウィンドウの非クライアント領域上にカーソルが置かれたときに呼び出されます。|
-|[CWnd::OnNcMouseLeave](#onncmouseleave)|このメンバー関数は、 [TrackMouseEvent](/windows/desktop/api/winuser/nf-winuser-trackmouseevent)の前の呼び出しで指定されたウィンドウの非クライアント領域からカーソルが離れるときに呼び出されます。|
+|[CWnd::OnNcMouseHover](#onncmousehover)|[TrackMouseEvent](/windows/win32/api/winuser/nf-winuser-trackmouseevent)の前の呼び出しで指定された期間にわたって、ウィンドウの非クライアント領域上にカーソルが置かれたときに呼び出されます。|
+|[CWnd::OnNcMouseLeave](#onncmouseleave)|このメンバー関数は、 [TrackMouseEvent](/windows/win32/api/winuser/nf-winuser-trackmouseevent)の前の呼び出しで指定されたウィンドウの非クライアント領域からカーソルが離れるときに呼び出されます。|
 |[CWnd::OnNcMouseMove](#onncmousemove)|  `CWnd` の非クライアント領域内でカーソルが移動するときに呼び出されます。|
 |[CWnd::OnNcPaint](#onncpaint)|非クライアント領域を描画する必要があるときに呼び出されます。|
 |[CWnd::OnNcRButtonDblClk](#onncrbuttondblclk)|カーソルが `CWnd` の非クライアント領域内にあるときに、マウスの右ボタンをダブルクリックすると呼び出されます。|
@@ -1224,8 +1224,8 @@ class CWnd : public CCmdTarget
 |[CWnd::OnSizeClipboard](#onsizeclipboard)|クリップボード ビューアー ウィンドウのクライアント領域のサイズが変更されたときに呼び出されます。|
 |[CWnd::OnSizing](#onsizing)|四角形のサイズを変更中であることを示します。|
 |[CWnd::OnSpoolerStatus](#onspoolerstatus)|プリント マネージャーのキューでジョブが追加または削除されるたびに、プリント マネージャーから呼び出されます。|
-|[CWnd::OnStyleChanged](#onstylechanged)|[SetWindowLong](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) Windows 関数が1つ以上のウィンドウのスタイルを変更したことを示します。|
-|[CWnd::OnStyleChanging](#onstylechanging)|[SetWindowLong](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) Windows 関数が1つまたは複数のウィンドウのスタイルを変更しようとしていることを示します。|
+|[CWnd::OnStyleChanged](#onstylechanged)|[SetWindowLong](/windows/win32/api/winuser/nf-winuser-setwindowlongw) Windows 関数が1つ以上のウィンドウのスタイルを変更したことを示します。|
+|[CWnd::OnStyleChanging](#onstylechanging)|[SetWindowLong](/windows/win32/api/winuser/nf-winuser-setwindowlongw) Windows 関数が1つまたは複数のウィンドウのスタイルを変更しようとしていることを示します。|
 |[CWnd::OnSysChar](#onsyschar)|キーストロークがシステム文字に変換されるときに呼び出されます。|
 |[CWnd::OnSysColorChange](#onsyscolorchange)|システム カラーの設定が変更されたときに、すべてのトップ レベル ウィンドウで呼び出されます。|
 |[CWnd::OnSysCommand](#onsyscommand)|ユーザーがコントロール メニューからコマンドを選択するとき、または最大化ボタンまたは最小化ボタンを選択するときに呼び出されます。|
@@ -1237,7 +1237,7 @@ class CWnd : public CCmdTarget
 |[CWnd::OnTimer](#ontimer)|[SetTimer](#settimer)で指定された各間隔の後に呼び出されます。|
 |[CWnd::OnTouchInput](#ontouchinput)|Windows タッチからの 1 つの入力を処理します。|
 |[CWnd::OnTouchInputs](#ontouchinputs)|Windows タッチからの複数の入力を処理します。|
-|[CWnd::OnUniChar](#onunichar)|キーが押されるときに呼び出されます。 つまり、現在のウィンドウにはキーボードフォーカスがあり、 [WM_KEYDOWN](/windows/desktop/inputdev/wm-keydown)メッセージは[TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)関数によって変換されます。|
+|[CWnd::OnUniChar](#onunichar)|キーが押されるときに呼び出されます。 つまり、現在のウィンドウにはキーボードフォーカスがあり、 [WM_KEYDOWN](/windows/win32/inputdev/wm-keydown)メッセージは[TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage)関数によって変換されます。|
 |[CWnd::OnUnInitMenuPopup](#onuninitmenupopup)|ドロップダウン メニューやサブメニューが破棄されたときに呼び出されます。|
 |[CWnd::OnUpdateUIState](#onupdateuistate)|指定したウィンドウとすべての子ウィンドウのユーザー インターフェイス (UI) 状態を変更するときに呼び出されます。|
 |[CWnd::OnUserChanged](#onuserchanged)|ユーザーがログオンまたはログオフした後に呼び出されます。|
@@ -1314,13 +1314,13 @@ virtual HRESULT accDoDefaultAction(VARIANT varChild);
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合は COM エラーコードを返します。 Windows SDK の「 [IAccessible:: accDoDefaultAction](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-accdodefaultaction)の**戻り値**」を参照してください。
+成功した場合は S_OK、失敗した場合は COM エラーコードを返します。 Windows SDK の「 [IAccessible:: accDoDefaultAction](/windows/win32/api/oleacc/nf-oleacc-iaccessible-accdodefaultaction)の**戻り値**」を参照してください。
 
 ### <a name="remarks"></a>Remarks
 
-この関数は、MFC の[Active Accessibility](/windows/desktop/WinAuto/microsoft-active-accessibility)サポートの一部です。
+この関数は、MFC の[Active Accessibility](/windows/win32/WinAuto/microsoft-active-accessibility)サポートの一部です。
 
-派生クラスのこの関数`CWnd`をオーバーライドして、オブジェクトの既定のアクションを実行します。 詳細については、Windows SDK の「 [IAccessible:: accDoDefaultAction](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-accdodefaultaction) 」を参照してください。
+派生クラスのこの関数`CWnd`をオーバーライドして、オブジェクトの既定のアクションを実行します。 詳細については、Windows SDK の「 [IAccessible:: accDoDefaultAction](/windows/win32/api/oleacc/nf-oleacc-iaccessible-accdodefaultaction) 」を参照してください。
 
 ##  <a name="acchittest"></a>CWnd:: accHitTest
 
@@ -1342,7 +1342,7 @@ virtual HRESULT accHitTest(
 ヒットテストする点の Y 座標 (画面単位)。
 
 *pvarChild*<br/>
-*Xleft*および*ytop*によって指定された位置にあるオブジェクトを識別する情報を受け取ります。 Windows SDK の「 *pvarID* in [IAccessible:: accHitTest](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-acchittest) 」を参照してください。
+*Xleft*および*ytop*によって指定された位置にあるオブジェクトを識別する情報を受け取ります。 Windows SDK の「 *pvarID* in [IAccessible:: accHitTest](/windows/win32/api/oleacc/nf-oleacc-iaccessible-acchittest) 」を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1350,11 +1350,11 @@ virtual HRESULT accHitTest(
 
 ### <a name="remarks"></a>Remarks
 
-この関数は、MFC の[Active Accessibility](/windows/desktop/WinAuto/microsoft-active-accessibility)サポートの一部です。
+この関数は、MFC の[Active Accessibility](/windows/win32/WinAuto/microsoft-active-accessibility)サポートの一部です。
 
 Nonwindowed ユーザーインターフェイス要素 ( `CWnd`MFC で処理されるウィンドウなしの ActiveX コントロール以外) がある場合は、派生クラスでこの関数をオーバーライドします。
 
-詳細については、Windows SDK の「 [IAccessible:: accHitTest](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-acchittest) 」を参照してください。
+詳細については、Windows SDK の「 [IAccessible:: accHitTest](/windows/win32/api/oleacc/nf-oleacc-iaccessible-acchittest) 」を参照してください。
 
 ##  <a name="acclocation"></a>CWnd:: 保存場所
 
@@ -1410,7 +1410,7 @@ virtual HRESULT accNavigate(
 ### <a name="parameters"></a>パラメーター
 
 *ナビゲーションディレクトリ*<br/>
-移動する方向を指定します。 Windows SDK の「 [IAccessible::](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-accnavigate)の*ナビゲーションディレクトリ*」を参照してください。
+移動する方向を指定します。 Windows SDK の「 [IAccessible::](/windows/win32/api/oleacc/nf-oleacc-iaccessible-accnavigate)の*ナビゲーションディレクトリ*」を参照してください。
 
 *varStart*<br/>
 開始オブジェクトを指定します。 Windows SDK の「 *varstart* 」を`IAccessible::accNavigate`参照してください。
@@ -1424,11 +1424,11 @@ virtual HRESULT accNavigate(
 
 ### <a name="remarks"></a>Remarks
 
-この関数は、MFC の[Active Accessibility](/windows/desktop/WinAuto/microsoft-active-accessibility)サポートの一部です。
+この関数は、MFC の[Active Accessibility](/windows/win32/WinAuto/microsoft-active-accessibility)サポートの一部です。
 
 Nonwindowed ユーザーインターフェイス要素 ( `CWnd`MFC で処理されるウィンドウなしの ActiveX コントロール以外) がある場合は、派生クラスでこの関数をオーバーライドします。
 
-詳細については、Windows SDK の「 [IAccessible::](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-accnavigate) 」を参照してください。
+詳細については、Windows SDK の「 [IAccessible::](/windows/win32/api/oleacc/nf-oleacc-iaccessible-accnavigate) 」を参照してください。
 
 ##  <a name="accselect"></a>CWnd:: 他の選択
 
@@ -1443,7 +1443,7 @@ virtual HRESULT accSelect(
 ### <a name="parameters"></a>パラメーター
 
 *flagsSelect 場合*<br/>
-現在の選択またはフォーカスを変更する方法を指定します。 Windows SDK の「 [IAccessible::](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-accselect)での*フラグ*の選択」を参照してください。
+現在の選択またはフォーカスを変更する方法を指定します。 Windows SDK の「 [IAccessible::](/windows/win32/api/oleacc/nf-oleacc-iaccessible-accselect)での*フラグ*の選択」を参照してください。
 
 *varChild*<br/>
 選択するオブジェクトを指定します。 このパラメーターには、(オブジェクト自体を選択する) CHILDID_SELF か、子 ID (オブジェクトの子のいずれかを選択するため) を指定できます。
@@ -1454,11 +1454,11 @@ virtual HRESULT accSelect(
 
 ### <a name="remarks"></a>Remarks
 
-この関数は、MFC の[Active Accessibility](/windows/desktop/WinAuto/microsoft-active-accessibility)サポートの一部です。
+この関数は、MFC の[Active Accessibility](/windows/win32/WinAuto/microsoft-active-accessibility)サポートの一部です。
 
 Nonwindowed ユーザーインターフェイス要素 ( `CWnd`MFC で処理されるウィンドウなしの ActiveX コントロール以外) がある場合は、派生クラスでこの関数をオーバーライドします。
 
-詳細については、Windows SDK の「 [IAccessible::](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-accselect) 」を参照してください。
+詳細については、Windows SDK の「 [IAccessible::](/windows/win32/api/oleacc/nf-oleacc-iaccessible-accselect) 」を参照してください。
 
 ##  <a name="animatewindow"></a>  CWnd::AnimateWindow
 
@@ -1476,7 +1476,7 @@ BOOL AnimateWindow(
 アニメーションの再生にかかる時間をミリ秒単位で指定します。 通常、アニメーションの再生には200ミリ秒かかります。
 
 *dwFlags*<br/>
-アニメーションの種類を指定します。 使用可能な値の完全な一覧については、「 [AnimateWindow](/windows/desktop/api/winuser/nf-winuser-animatewindow)」を参照してください。
+アニメーションの種類を指定します。 使用可能な値の完全な一覧については、「 [AnimateWindow](/windows/win32/api/winuser/nf-winuser-animatewindow)」を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1484,7 +1484,7 @@ BOOL AnimateWindow(
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は、Windows SDK で説明されているように、関数[AnimateWindow](/windows/desktop/api/winuser/nf-winuser-animatewindow)の機能をエミュレートします。
+このメンバー関数は、Windows SDK で説明されているように、関数[AnimateWindow](/windows/win32/api/winuser/nf-winuser-animatewindow)の機能をエミュレートします。
 
 ##  <a name="arrangeiconicwindows"></a>  CWnd::ArrangeIconicWindows
 
@@ -1554,7 +1554,7 @@ CDC* BeginPaint(LPPAINTSTRUCT lpPaint);
 ### <a name="parameters"></a>パラメーター
 
 *lpPaint*<br/>
-描画情報を受け取る[PAINTSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagpaintstruct)構造体を指します。
+描画情報を受け取る[PAINTSTRUCT](/windows/win32/api/winuser/ns-winuser-paintstruct)構造体を指します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1648,7 +1648,7 @@ void BringWindowToTop();
 
 また、`BringWindowToTop` により、ポップアップ ウィンドウ、トップレベル ウィンドウ、および MDI 子ウィンドウがアクティブになります。   `BringWindowToTop` メンバー関数は、重なったウィンドウによって部分的または完全に隠されているウィンドウを表示する場合に使用します。
 
-この関数は、Win32 [Bringwindowtotop](/windows/desktop/api/winuser/nf-winuser-bringwindowtotop)関数を呼び出すだけです。 Z オーダーでウィンドウの位置を変更するには、 [SetWindowPos](#setwindowpos)関数を呼び出します。   `BringWindowToTop` 関数では、ウィンドウ スタイルが変更され、そのウィンドウがトップレベル ウィンドウになることはありません。 詳細については、「 [HWND_TOP と HWND_TOPMOST の違い](https://devblogs.microsoft.com/oldnewthing/?p=33263)」を参照してください。
+この関数は、Win32 [Bringwindowtotop](/windows/win32/api/winuser/nf-winuser-bringwindowtotop)関数を呼び出すだけです。 Z オーダーでウィンドウの位置を変更するには、 [SetWindowPos](#setwindowpos)関数を呼び出します。   `BringWindowToTop` 関数では、ウィンドウ スタイルが変更され、そのウィンドウがトップレベル ウィンドウになることはありません。 詳細については、「 [HWND_TOP と HWND_TOPMOST の違い](https://devblogs.microsoft.com/oldnewthing/?p=33263)」を参照してください。
 
 ### <a name="example"></a>例
 
@@ -1676,7 +1676,7 @@ virtual void CalcWindowRect(
 
 計算されるウィンドウの四角形のサイズには、メニューバーの領域は含まれません。
 
-使用制限の詳細については、「 [AdjustWindowRectEx](/windows/desktop/api/winuser/nf-winuser-adjustwindowrectex)」を参照してください。
+使用制限の詳細については、「 [AdjustWindowRectEx](/windows/win32/api/winuser/nf-winuser-adjustwindowrectex)」を参照してください。
 
 ### <a name="example"></a>例
 
@@ -1762,7 +1762,7 @@ void CheckDlgButton(
 
 ### <a name="remarks"></a>Remarks
 
-関数`CheckDlgButton`は、指定されたボタンに[BM_SETCHECK](/windows/desktop/Controls/bm-setcheck)メッセージを送信します。
+関数`CheckDlgButton`は、指定されたボタンに[BM_SETCHECK](/windows/win32/Controls/bm-setcheck)メッセージを送信します。
 
 ### <a name="example"></a>例
 
@@ -1792,7 +1792,7 @@ void CheckRadioButton(
 
 ### <a name="remarks"></a>Remarks
 
-関数`CheckRadioButton`は、指定されたオプションボタンに[BM_SETCHECK](/windows/desktop/Controls/bm-setcheck)メッセージを送信します。
+関数`CheckRadioButton`は、指定されたオプションボタンに[BM_SETCHECK](/windows/win32/Controls/bm-setcheck)メッセージを送信します。
 
 ### <a name="example"></a>例
 
@@ -1850,10 +1850,10 @@ void ClientToScreen(LPPOINT lpPoint) const;  void ClientToScreen(LPRECT lpRect) 
 ### <a name="parameters"></a>パラメーター
 
 *lpPoint*<br/>
-変換するクライアント座標を格納`CPoint`している[ポイント構造](/windows/desktop/api/windef/ns-windef-tagpoint)またはオブジェクトをポイントします。
+変換するクライアント座標を格納`CPoint`している[ポイント構造](/windows/win32/api/windef/ns-windef-point)またはオブジェクトをポイントします。
 
 *lpRect*<br/>
-変換するクライアント座標を格納`CRect`している[RECT 構造体](/windows/desktop/api/windef/ns-windef-tagrect)またはオブジェクトを指します。
+変換するクライアント座標を格納`CRect`している[RECT 構造体](/windows/win32/api/windef/ns-windef-rect)またはオブジェクトを指します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -1875,7 +1875,7 @@ void CloseWindow();
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は、Windows SDK で説明されているように、関数[Closewindow](/windows/desktop/api/winuser/nf-winuser-closewindow)の機能をエミュレートします。
+このメンバー関数は、Windows SDK で説明されているように、関数[Closewindow](/windows/win32/api/winuser/nf-winuser-closewindow)の機能をエミュレートします。
 
 ##  <a name="continuemodal"></a>  CWnd::ContinueModal
 
@@ -1995,7 +1995,7 @@ void CreateCaret(CBitmap* pBitmap);
 
 ### <a name="remarks"></a>Remarks
 
-ビットマップは、 [CBitmap:: CreateBitmap](../../mfc/reference/cbitmap-class.md#createbitmap)メンバー関数、 [createdibitmap](/windows/desktop/api/wingdi/nf-wingdi-createdibitmap) Windows 関数、または[CBitmap:: loadbitmap](../../mfc/reference/cbitmap-class.md#loadbitmap)メンバー関数によって既に作成されている必要があります。
+ビットマップは、 [CBitmap:: CreateBitmap](../../mfc/reference/cbitmap-class.md#createbitmap)メンバー関数、 [createdibitmap](/windows/win32/api/wingdi/nf-wingdi-createdibitmap) Windows 関数、または[CBitmap:: loadbitmap](../../mfc/reference/cbitmap-class.md#loadbitmap)メンバー関数によって既に作成されている必要があります。
 
 `CreateCaret`カーソルを所有しているウィンドウに関係なく、前のキャレット図形がある場合は、それを自動的に破棄します。 作成されると、カレットは最初は非表示になります。 キャレットを表示するには、 [Showcaret](#showcaret)メンバー関数を呼び出す必要があります。
 
@@ -2057,13 +2057,13 @@ BOOL CreateControl(
 Windows スタイル。 使用可能なスタイルについては、「解説」を参照してください。
 
 *rect*<br/>
-コントロールのサイズと位置を指定します。 これは、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT 構造体](/windows/desktop/api/windef/ns-windef-tagrect)のいずれかになります。
+コントロールのサイズと位置を指定します。 これは、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT 構造体](/windows/win32/api/windef/ns-windef-rect)のいずれかになります。
 
 *ppt*<br/>
-コントロールの左上隅を含む`CPoint` [ポイント構造](/windows/desktop/api/windef/ns-windef-tagpoint)またはオブジェクトを指します。
+コントロールの左上隅を含む`CPoint` [ポイント構造](/windows/win32/api/windef/ns-windef-point)またはオブジェクトを指します。
 
 *pSize*<br/>
-コントロールのサイズを格納している[サイズ](/windows/desktop/api/windef/ns-windef-tagsize)構造体または `CSize` オブジェクトをポイントします。
+コントロールのサイズを格納している[サイズ](/windows/win32/api/windef/ns-windef-size)構造体または `CSize` オブジェクトをポイントします。
 
 *pParentWnd*<br/>
 コントロールの親ウィンドウを指定します。 NULL にすることはできません。
@@ -2227,7 +2227,7 @@ void CreateGrayCaret(
 
 パラメーター *nWidth*と*nHeight*は、キャレットの幅と高さ (論理単位) を指定します。正確な幅と高さ (ピクセル単位) は、マッピングモードによって異なります。
 
-システムのウィンドウの境界線の幅または高さは、 [GetSystemMetrics](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics) Windows 関数の SM_CXBORDER インデックスと SM_CYBORDER インデックスを使用して取得できます。 ウィンドウの境界線の幅または高さを使用すると、キャレットが高解像度のディスプレイで表示されるようになります。
+システムのウィンドウの境界線の幅または高さは、 [GetSystemMetrics](/windows/win32/api/winuser/nf-winuser-getsystemmetrics) Windows 関数の SM_CXBORDER インデックスと SM_CYBORDER インデックスを使用して取得できます。 ウィンドウの境界線の幅または高さを使用すると、キャレットが高解像度のディスプレイで表示されるようになります。
 
 この`CreateGrayCaret`メンバー関数は、どのウィンドウがカレットを所有しているかに関係なく、前のカレット図形があれば自動的に破棄します。 作成されると、カレットは最初は非表示になります。 キャレットを表示するには、 [Showcaret](#showcaret)メンバー関数を呼び出す必要があります。
 
@@ -2261,7 +2261,7 @@ void CreateSolidCaret(
 
 パラメーター *nWidth*と*nHeight*は、キャレットの幅と高さ (論理単位) を指定します。正確な幅と高さ (ピクセル単位) は、マッピングモードによって異なります。
 
-システムのウィンドウの境界線の幅または高さは、 [GetSystemMetrics](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics) Windows 関数の SM_CXBORDER インデックスと SM_CYBORDER インデックスを使用して取得できます。 ウィンドウの境界線の幅または高さを使用すると、キャレットが高解像度のディスプレイで表示されるようになります。
+システムのウィンドウの境界線の幅または高さは、 [GetSystemMetrics](/windows/win32/api/winuser/nf-winuser-getsystemmetrics) Windows 関数の SM_CXBORDER インデックスと SM_CYBORDER インデックスを使用して取得できます。 ウィンドウの境界線の幅または高さを使用すると、キャレットが高解像度のディスプレイで表示されるようになります。
 
 この`CreateSolidCaret`メンバー関数は、どのウィンドウがカレットを所有しているかに関係なく、前のカレット図形があれば自動的に破棄します。 作成されると、カレットは最初は非表示になります。 キャレットを表示するには、 [Showcaret](#showcaret)メンバー関数を呼び出す必要があります。
 
@@ -2445,7 +2445,7 @@ int DlgDirList(
 
 ### <a name="remarks"></a>Remarks
 
-`DlgDirList`[LB_RESETCONTENT](/windows/desktop/Controls/lb-resetcontent)メッセージと[LB_DIR](/windows/desktop/Controls/lb-dir)メッセージをリストボックスに送信します。 *NIDListBox*で指定されたリストボックスに、 *lpPathSpec*によって指定されたパスに一致するすべてのファイルの名前を入力します。
+`DlgDirList`[LB_RESETCONTENT](/windows/win32/Controls/lb-resetcontent)メッセージと[LB_DIR](/windows/win32/Controls/lb-dir)メッセージをリストボックスに送信します。 *NIDListBox*で指定されたリストボックスに、 *lpPathSpec*によって指定されたパスに一致するすべてのファイルの名前を入力します。
 
 *LpPathSpec*パラメーターの形式は次のとおりです。
 
@@ -2513,7 +2513,7 @@ int DlgDirListComboBox(
 
 ### <a name="remarks"></a>Remarks
 
-`DlgDirListComboBox`[CB_RESETCONTENT](/windows/desktop/Controls/cb-resetcontent)メッセージと[CB_DIR](/windows/desktop/Controls/cb-dir)メッセージをコンボボックスに送信します。 *NIDComboBox*で指定されたコンボボックスのリストボックスに、 *lpPathSpec*によって指定されたパスに一致するすべてのファイルの名前を入力します。
+`DlgDirListComboBox`[CB_RESETCONTENT](/windows/win32/Controls/cb-resetcontent)メッセージと[CB_DIR](/windows/win32/Controls/cb-dir)メッセージをコンボボックスに送信します。 *NIDComboBox*で指定されたコンボボックスのリストボックスに、 *lpPathSpec*によって指定されたパスに一致するすべてのファイルの名前を入力します。
 
 *LpPathSpec*パラメーターの形式は次のとおりです。
 
@@ -2559,7 +2559,7 @@ BOOL DlgDirSelect(
 
 この`DlgDirSelect`メンバー関数は、 *lpstring*によって指定されたバッファーに選択項目をコピーします。 選択されていない場合、 *Lpstring*は変更されません。
 
-`DlgDirSelect`[LB_GETCURSEL](/windows/desktop/Controls/lb-getcursel)メッセージと[LB_GETTEXT](/windows/desktop/Controls/lb-gettext)メッセージをリストボックスに送信します。
+`DlgDirSelect`[LB_GETCURSEL](/windows/win32/Controls/lb-getcursel)メッセージと[LB_GETTEXT](/windows/win32/Controls/lb-gettext)メッセージをリストボックスに送信します。
 
 リストボックスから複数のファイル名を返すことはできません。 リストボックスを複数選択リストボックスにすることはできません。
 
@@ -2591,7 +2591,7 @@ BOOL DlgDirSelectComboBox(
 
 この`DlgDirSelectComboBox`メンバー関数は、指定されたバッファーに選択範囲をコピーします。 選択されていない場合、バッファーの内容は変更されません。
 
-`DlgDirSelectComboBox`[CB_GETCURSEL](/windows/desktop/Controls/cb-getcursel)メッセージと[CB_GETLBTEXT](/windows/desktop/Controls/cb-getlbtext)メッセージをコンボボックスに送信します。
+`DlgDirSelectComboBox`[CB_GETCURSEL](/windows/win32/Controls/cb-getcursel)メッセージと[CB_GETLBTEXT](/windows/win32/Controls/cb-getlbtext)メッセージをコンボボックスに送信します。
 
 コンボボックスから複数のファイル名を返すことはできません。
 
@@ -2662,7 +2662,7 @@ BOOL DragDetect(POINT pt) const;
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は、Windows SDK で説明されているように、 [Dragdetect](/windows/desktop/api/winuser/nf-winuser-dragdetect)関数の機能をエミュレートします。
+このメンバー関数は、Windows SDK で説明されているように、 [Dragdetect](/windows/win32/api/winuser/nf-winuser-dragdetect)関数の機能をエミュレートします。
 
 ##  <a name="drawanimatedrects"></a>  CWnd::DrawAnimatedRects
 
@@ -2692,7 +2692,7 @@ BOOL DrawAnimatedRects(
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は、Windows SDK で説明されているように、関数[DrawAnimatedRects](/windows/desktop/api/winuser/nf-winuser-drawanimatedrects)の機能をエミュレートします。
+このメンバー関数は、Windows SDK で説明されているように、関数[DrawAnimatedRects](/windows/win32/api/winuser/nf-winuser-drawanimatedrects)の機能をエミュレートします。
 
 ##  <a name="drawcaption"></a>CWnd::D rawCaption
 
@@ -2714,7 +2714,7 @@ BOOL DrawCaption(
 ウィンドウキャプションの外接する四角形を指定する RECT 構造体へのポインター。
 
 *uFlags*<br/>
-描画オプションを指定します。 値の完全な一覧については、「 [Drawcaption](/windows/desktop/api/winuser/nf-winuser-drawcaption)」を参照してください。
+描画オプションを指定します。 値の完全な一覧については、「 [Drawcaption](/windows/win32/api/winuser/nf-winuser-drawcaption)」を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
@@ -2722,7 +2722,7 @@ BOOL DrawCaption(
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は、Windows SDK で説明されているように、関数[Drawcaption](/windows/desktop/api/winuser/nf-winuser-drawcaption)の機能をエミュレートします。
+このメンバー関数は、Windows SDK で説明されているように、関数[Drawcaption](/windows/win32/api/winuser/nf-winuser-drawcaption)の機能をエミュレートします。
 
 ##  <a name="drawmenubar"></a>CWnd::D rawMenuBar
 
@@ -2750,7 +2750,7 @@ void EnableActiveAccessibility();
 
 ### <a name="remarks"></a>Remarks
 
-MFC の既定の Active Accessibility サポートでは、ActiveX コントロールを含む標準のウィンドウとコントロールに対して十分です。ただし、派生クラス`CWnd`に nonwindowed ユーザーインターフェイス要素が含まれている場合、MFC にはそのことを知る方法がありません。 その場合は、クラスの適切な[Active Accessibility メンバー関数](/windows/desktop/winauto/sdk-components)をオーバーライドする必要があり、クラスの`EnableActiveAccessibility`コンストラクターでを呼び出す必要があります。
+MFC の既定の Active Accessibility サポートでは、ActiveX コントロールを含む標準のウィンドウとコントロールに対して十分です。ただし、派生クラス`CWnd`に nonwindowed ユーザーインターフェイス要素が含まれている場合、MFC にはそのことを知る方法がありません。 その場合は、クラスの適切な[Active Accessibility メンバー関数](/windows/win32/winauto/sdk-components)をオーバーライドする必要があり、クラスの`EnableActiveAccessibility`コンストラクターでを呼び出す必要があります。
 
 ##  <a name="enabledynamiclayout"></a>  CWnd::EnableDynamicLayout
 
@@ -2864,12 +2864,12 @@ BOOL EnableToolTips(BOOL bEnable = TRUE);
 
 ### <a name="remarks"></a>Remarks
 
-[OnToolHitTest](#ontoolhittest)をオーバーライドして、ウィンドウの構造体または構造体を[TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa)に指定します。
+[OnToolHitTest](#ontoolhittest)をオーバーライドして、ウィンドウの構造体または構造体を[TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-toolinfow)に指定します。
 
 > [!NOTE]
 > [CToolBar](../../mfc/reference/ctoolbar-class.md)などの一部のウィンドウには、 [OnToolHitTest](#ontoolhittest)の組み込み実装が用意されています。
 
-この構造の詳細については、Windows SDK の「 [TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa) 」を参照してください。
+この構造の詳細については、Windows SDK の「 [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-toolinfow) 」を参照してください。
 
 親ウィンドウ`EnableToolTips`がから`CFrameWnd`派生している場合を除き、を呼び出して、子コントロールのツールヒントを表示するだけでは不十分です。 これは、 `CFrameWnd`によって、TTN_NEEDTEXT 通知の既定のハンドラーが提供されるためです。 親ウィンドウがから`CFrameWnd`派生していない場合、つまり、ダイアログボックスまたはフォームビューである場合、TTN_NEEDTEXT ツールヒントの通知のハンドラーを指定しない限り、子コントロールのツールヒントは正しく表示されません。 「[ツールヒント](../../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)」を参照してください。
 
@@ -2973,7 +2973,7 @@ void EndPaint(LPPAINTSTRUCT lpPaint);
 ### <a name="parameters"></a>パラメーター
 
 *lpPaint*<br/>
-[Beginpaint](#beginpaint)メンバー関数によって取得された描画情報を格納する[PAINTSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagpaintstruct)構造体を指します。
+[Beginpaint](#beginpaint)メンバー関数によって取得された描画情報を格納する[PAINTSTRUCT](/windows/win32/api/winuser/ns-winuser-paintstruct)構造体を指します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -3082,7 +3082,7 @@ static CWnd* FindWindowEx(
 子ウィンドウへのハンドル。 検索は、Z オーダーで次の子ウィンドウから開始します。 子ウィンドウは、子孫ウィンドウだけでなく、 *hwndParent*の直接の子ウィンドウである必要があります。
 
 *lpszClass*<br/>
-[RegisterClass](/windows/desktop/api/winuser/nf-winuser-registerclassa)または[RegisterClassEx](/windows/desktop/api/winuser/nf-winuser-registerclassexa)の以前の呼び出しによって作成されたクラス名またはクラス atom を指定する、null で終わる文字列へのポインター。
+[RegisterClass](/windows/win32/api/winuser/nf-winuser-registerclassw)または[RegisterClassEx](/windows/win32/api/winuser/nf-winuser-registerclassexw)の以前の呼び出しによって作成されたクラス名またはクラス atom を指定する、null で終わる文字列へのポインター。
 
 *lpszWindow*<br/>
 ウィンドウ名 (ウィンドウのタイトル) を指定する null で終わる文字列へのポインター。 このパラメーターが NULL の場合、すべてのウィンドウ名が一致します。
@@ -3093,7 +3093,7 @@ static CWnd* FindWindowEx(
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は、Windows SDK で説明されているように、関数[FindWindowEx](/windows/desktop/api/winuser/nf-winuser-findwindowexa)の機能をエミュレートします。
+このメンバー関数は、Windows SDK で説明されているように、関数[FindWindowEx](/windows/win32/api/winuser/nf-winuser-findwindowexw)の機能をエミュレートします。
 
 ##  <a name="flashwindow"></a>  CWnd::FlashWindow
 
@@ -3140,7 +3140,7 @@ BOOL FlashWindowEx(
 ### <a name="parameters"></a>パラメーター
 
 *dwFlags*<br/>
-Flash の状態を指定します。 値の完全な一覧については、「 [FLASHWINFO](/windows/desktop/api/winuser/ns-winuser-flashwinfo)構造体」を参照してください。
+Flash の状態を指定します。 値の完全な一覧については、「 [FLASHWINFO](/windows/win32/api/winuser/ns-winuser-flashwinfo)構造体」を参照してください。
 
 *uCount*<br/>
 ウィンドウをフラッシュする回数を指定します。
@@ -3154,7 +3154,7 @@ Flash の状態を指定します。 値の完全な一覧については、「 
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、Windows SDK で説明されているように、関数[FlashWindowEx](/windows/desktop/api/winuser/nf-winuser-flashwindowex)の機能をエミュレートします。
+このメソッドは、Windows SDK で説明されているように、関数[FlashWindowEx](/windows/win32/api/winuser/nf-winuser-flashwindowex)の機能をエミュレートします。
 
 ##  <a name="fromhandle"></a>  CWnd::FromHandle
 
@@ -3218,15 +3218,15 @@ virtual HRESULT get_accChild(
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合は COM エラーコードを返します。 Windows SDK の「 [IAccessible:: get_accChild](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_accchild)の**戻り値**」を参照してください。
+成功した場合は S_OK、失敗した場合は COM エラーコードを返します。 Windows SDK の「 [IAccessible:: get_accChild](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accchild)の**戻り値**」を参照してください。
 
 ### <a name="remarks"></a>Remarks
 
-この関数は、MFC の[Active Accessibility](/windows/desktop/WinAuto/microsoft-active-accessibility)サポートの一部です。
+この関数は、MFC の[Active Accessibility](/windows/win32/WinAuto/microsoft-active-accessibility)サポートの一部です。
 
 Nonwindowed ユーザーインターフェイス要素 ( `CWnd`MFC で処理されるウィンドウなしの ActiveX コントロール以外) がある場合は、派生クラスでこの関数をオーバーライドします。
 
-詳細については、Windows SDK の「 [IAccessible:: get_accChild](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_accchild) 」を参照してください。
+詳細については、Windows SDK の「 [IAccessible:: get_accChild](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accchild) 」を参照してください。
 
 ##  <a name="get_accchildcount"></a>  CWnd::get_accChildCount
 
@@ -3243,15 +3243,15 @@ virtual HRESULT get_accChildCount(long* pcountChildren);
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合は COM エラーコードを返します。 Windows SDK の「 [IAccessible:: get_accChildCount](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_accchildcount)の**戻り値**」を参照してください。
+成功した場合は S_OK、失敗した場合は COM エラーコードを返します。 Windows SDK の「 [IAccessible:: get_accChildCount](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accchildcount)の**戻り値**」を参照してください。
 
 ### <a name="remarks"></a>Remarks
 
-この関数は、MFC の[Active Accessibility](/windows/desktop/WinAuto/microsoft-active-accessibility)サポートの一部です。
+この関数は、MFC の[Active Accessibility](/windows/win32/WinAuto/microsoft-active-accessibility)サポートの一部です。
 
 Nonwindowed ユーザーインターフェイス要素 ( `CWnd`MFC で処理されるウィンドウなしの ActiveX コントロール以外) がある場合は、派生クラスでこの関数をオーバーライドします。 基底クラスのバージョンを呼び出し、nonwindowed 子要素を追加します。
 
-詳細については、Windows SDK の「 [IAccessible:: get_accChildCount](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_accchildcount) 」を参照してください。
+詳細については、Windows SDK の「 [IAccessible:: get_accChildCount](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accchildcount) 」を参照してください。
 
 ##  <a name="get_accdefaultaction"></a>  CWnd::get_accDefaultAction
 
@@ -3273,15 +3273,15 @@ virtual HRESULT get_accDefaultAction(
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合は COM エラーコードを返します。 Windows SDK の「 [IAccessible:: get_accDefaultAction](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_accdefaultaction)の**戻り値**」を参照してください。
+成功した場合は S_OK、失敗した場合は COM エラーコードを返します。 Windows SDK の「 [IAccessible:: get_accDefaultAction](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accdefaultaction)の**戻り値**」を参照してください。
 
 ### <a name="remarks"></a>Remarks
 
-この関数は、MFC の[Active Accessibility](/windows/desktop/WinAuto/microsoft-active-accessibility)サポートの一部です。
+この関数は、MFC の[Active Accessibility](/windows/win32/WinAuto/microsoft-active-accessibility)サポートの一部です。
 
 派生クラスの`CWnd`この関数をオーバーライドして、オブジェクトの既定のアクションを記述します。
 
-詳細については、Windows SDK の「 [IAccessible:: get_accDefaultAction](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_accdefaultaction) 」を参照してください。
+詳細については、Windows SDK の「 [IAccessible:: get_accDefaultAction](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accdefaultaction) 」を参照してください。
 
 ##  <a name="get_accdescription"></a>  CWnd::get_accDescription
 
@@ -3303,15 +3303,15 @@ virtual HRESULT get_accDescription(
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合は COM エラーコードを返します。 Windows SDK の「 [IAccessible:: get_accDescription](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_accdescription)の**戻り値**」を参照してください。
+成功した場合は S_OK、失敗した場合は COM エラーコードを返します。 Windows SDK の「 [IAccessible:: get_accDescription](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accdescription)の**戻り値**」を参照してください。
 
 ### <a name="remarks"></a>Remarks
 
-この関数は、MFC の[Active Accessibility](/windows/desktop/WinAuto/microsoft-active-accessibility)サポートの一部です。
+この関数は、MFC の[Active Accessibility](/windows/win32/WinAuto/microsoft-active-accessibility)サポートの一部です。
 
 オブジェクトを記述するに`CWnd`は、派生クラスのこの関数をオーバーライドします。 基本クラスのバージョンを呼び出し、説明を追加します。
 
-詳細については、Windows SDK の「 [IAccessible:: get_accDescription](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_accdescription) 」を参照してください。
+詳細については、Windows SDK の「 [IAccessible:: get_accDescription](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accdescription) 」を参照してください。
 
 ##  <a name="get_accfocus"></a>  CWnd::get_accFocus
 
@@ -3324,7 +3324,7 @@ virtual HRESULT get_accFocus(VARIANT* pvarChild);
 ### <a name="parameters"></a>パラメーター
 
 *pvarChild*<br/>
-フォーカスのあるオブジェクトに関する情報を受け取ります。 Windows SDK の「 *pvarID* in [IAccessible:: get_accFocus](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_accfocus) 」を参照してください。
+フォーカスのあるオブジェクトに関する情報を受け取ります。 Windows SDK の「 *pvarID* in [IAccessible:: get_accFocus](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accfocus) 」を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
@@ -3332,11 +3332,11 @@ virtual HRESULT get_accFocus(VARIANT* pvarChild);
 
 ### <a name="remarks"></a>Remarks
 
-この関数は、MFC の[Active Accessibility](/windows/desktop/WinAuto/microsoft-active-accessibility)サポートの一部です。
+この関数は、MFC の[Active Accessibility](/windows/win32/WinAuto/microsoft-active-accessibility)サポートの一部です。
 
 Nonwindowed ユーザーインターフェイス要素 ( `CWnd`MFC で処理されるウィンドウなしの ActiveX コントロール以外) がある場合は、派生クラスでこの関数をオーバーライドします。
 
-詳細については、Windows SDK の「 [IAccessible:: get_accFocus](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_accfocus) 」を参照してください。
+詳細については、Windows SDK の「 [IAccessible:: get_accFocus](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accfocus) 」を参照してください。
 
 ##  <a name="get_acchelp"></a>CWnd:: get_accHelp
 
@@ -3358,15 +3358,15 @@ virtual HRESULT get_accHelp(
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合は COM エラーコードを返します。 Windows SDK の「 [IAccessible:: get_accHelp](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_acchelp)の**戻り値**」を参照してください。
+成功した場合は S_OK、失敗した場合は COM エラーコードを返します。 Windows SDK の「 [IAccessible:: get_accHelp](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_acchelp)の**戻り値**」を参照してください。
 
 ### <a name="remarks"></a>Remarks
 
-この関数は、MFC の[Active Accessibility](/windows/desktop/WinAuto/microsoft-active-accessibility)サポートの一部です。
+この関数は、MFC の[Active Accessibility](/windows/win32/WinAuto/microsoft-active-accessibility)サポートの一部です。
 
 派生クラスの`CWnd`この関数をオーバーライドして、オブジェクトのヘルプテキストを提供します。
 
-詳細については、Windows SDK の「 [IAccessible:: get_accHelp](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_acchelp) 」を参照してください。
+詳細については、Windows SDK の「 [IAccessible:: get_accHelp](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_acchelp) 」を参照してください。
 
 ##  <a name="get_acchelptopic"></a>CWnd:: get_accHelpTopic
 
@@ -3388,7 +3388,7 @@ virtual HRESULT get_accHelpTopic(
 取得するヘルプトピックがオブジェクトまたはオブジェクトの子要素のいずれかであるかどうかを指定します。 このパラメーターには、CHILDID_SELF (オブジェクトのヘルプトピックを取得するため) または子 ID (オブジェクトの子要素のいずれかのヘルプトピックを取得するため) を指定できます。
 
 *pidTopic*<br/>
-指定したオブジェクトに関連付けられているヘルプファイルのトピックを識別します。 Windows SDK の「 *pidTopic* in [IAccessible:: get_accHelpTopic](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_acchelptopic) 」を参照してください。
+指定したオブジェクトに関連付けられているヘルプファイルのトピックを識別します。 Windows SDK の「 *pidTopic* in [IAccessible:: get_accHelpTopic](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_acchelptopic) 」を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
@@ -3396,11 +3396,11 @@ virtual HRESULT get_accHelpTopic(
 
 ### <a name="remarks"></a>Remarks
 
-この関数は、MFC の[Active Accessibility](/windows/desktop/WinAuto/microsoft-active-accessibility)サポートの一部です。
+この関数は、MFC の[Active Accessibility](/windows/win32/WinAuto/microsoft-active-accessibility)サポートの一部です。
 
 派生クラスの`CWnd`この関数をオーバーライドして、オブジェクトに関するヘルプ情報を提供します。
 
-詳細については、Windows SDK の「 [IAccessible:: get_accHelpTopic](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_acchelptopic) 」を参照してください。
+詳細については、Windows SDK の「 [IAccessible:: get_accHelpTopic](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_acchelptopic) 」を参照してください。
 
 ##  <a name="get_acckeyboardshortcut"></a>  CWnd::get_accKeyboardShortcut
 
@@ -3422,15 +3422,15 @@ virtual HRESULT get_accKeyboardShortcut(
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合は COM エラーコードを返します。 Windows SDK の「 [IAccessible:: get_accKeyboardShortcut](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_acckeyboardshortcut)の**戻り値**」を参照してください。
+成功した場合は S_OK、失敗した場合は COM エラーコードを返します。 Windows SDK の「 [IAccessible:: get_accKeyboardShortcut](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_acckeyboardshortcut)の**戻り値**」を参照してください。
 
 ### <a name="remarks"></a>Remarks
 
-この関数は、MFC の[Active Accessibility](/windows/desktop/WinAuto/microsoft-active-accessibility)サポートの一部です。
+この関数は、MFC の[Active Accessibility](/windows/win32/WinAuto/microsoft-active-accessibility)サポートの一部です。
 
 派生クラスの`CWnd`この関数をオーバーライドして、オブジェクトのキーボードショートカットを識別します。
 
-詳細については、Windows SDK の「 [IAccessible:: get_accKeyboardShortcut](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_acckeyboardshortcut) 」を参照してください。
+詳細については、Windows SDK の「 [IAccessible:: get_accKeyboardShortcut](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_acckeyboardshortcut) 」を参照してください。
 
 ##  <a name="get_accname"></a>  CWnd::get_accName
 
@@ -3452,15 +3452,15 @@ virtual HRESULT get_accName(
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合は COM エラーコードを返します。 Windows SDK の「 [IAccessible:: get_accName](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_accname)の**戻り値**」を参照してください。
+成功した場合は S_OK、失敗した場合は COM エラーコードを返します。 Windows SDK の「 [IAccessible:: get_accName](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accname)の**戻り値**」を参照してください。
 
 ### <a name="remarks"></a>Remarks
 
-この関数は、MFC の[Active Accessibility](/windows/desktop/WinAuto/microsoft-active-accessibility)サポートの一部です。
+この関数は、MFC の[Active Accessibility](/windows/win32/WinAuto/microsoft-active-accessibility)サポートの一部です。
 
 派生クラスのこの関数`CWnd`をオーバーライドして、オブジェクトの名前を返します。
 
-詳細については、Windows SDK の「 [IAccessible:: get_accName](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_accname) 」を参照してください。
+詳細については、Windows SDK の「 [IAccessible:: get_accName](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accname) 」を参照してください。
 
 ##  <a name="get_accparent"></a>  CWnd::get_accParent
 
@@ -3477,15 +3477,15 @@ virtual HRESULT get_accParent(IDispatch** ppdispParent);
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合は COM エラーコードを返します。 Windows SDK の「 [IAccessible:: get_accParent](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_accparent)の**戻り値**」を参照してください。
+成功した場合は S_OK、失敗した場合は COM エラーコードを返します。 Windows SDK の「 [IAccessible:: get_accParent](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accparent)の**戻り値**」を参照してください。
 
 ### <a name="remarks"></a>Remarks
 
-この関数は、MFC の[Active Accessibility](/windows/desktop/WinAuto/microsoft-active-accessibility)サポートの一部です。
+この関数は、MFC の[Active Accessibility](/windows/win32/WinAuto/microsoft-active-accessibility)サポートの一部です。
 
 ほとんどの場合、この関数をオーバーライドする必要はありません。
 
-詳細については、Windows SDK の「 [IAccessible:: get_accParent](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_accparent) 」を参照してください。
+詳細については、Windows SDK の「 [IAccessible:: get_accParent](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accparent) 」を参照してください。
 
 ##  <a name="get_accrole"></a>  CWnd::get_accRole
 
@@ -3503,7 +3503,7 @@ virtual HRESULT get_accRole(
 取得するロール情報がオブジェクトまたはオブジェクトの子要素のいずれかであるかどうかを指定します。 このパラメーターには、CHILDID_SELF (オブジェクトに関する情報を取得するため) または子 ID (オブジェクトの子要素に関する情報を取得する場合) のいずれかを指定できます。
 
 *pvarRole*<br/>
-ロール情報を受け取ります。 Windows SDK の「 *pvarRole* in [IAccessible:: get_accRole](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_accrole) 」を参照してください。
+ロール情報を受け取ります。 Windows SDK の「 *pvarRole* in [IAccessible:: get_accRole](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accrole) 」を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
@@ -3511,11 +3511,11 @@ virtual HRESULT get_accRole(
 
 ### <a name="remarks"></a>Remarks
 
-この関数は、MFC の[Active Accessibility](/windows/desktop/WinAuto/microsoft-active-accessibility)サポートの一部です。
+この関数は、MFC の[Active Accessibility](/windows/win32/WinAuto/microsoft-active-accessibility)サポートの一部です。
 
 Nonwindowed ユーザーインターフェイス要素 ( `CWnd`MFC で処理されるウィンドウなしの ActiveX コントロール以外) がある場合は、派生クラスでこの関数をオーバーライドします。
 
-詳細については、Windows SDK の「 [IAccessible:: get_accRole](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_accrole) 」を参照してください。
+詳細については、Windows SDK の「 [IAccessible:: get_accRole](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accrole) 」を参照してください。
 
 ##  <a name="get_accselection"></a>  CWnd::get_accSelection
 
@@ -3528,7 +3528,7 @@ virtual HRESULT get_accSelection(VARIANT* pvarChildren);
 ### <a name="parameters"></a>パラメーター
 
 *pvarChildren*<br/>
-選択されている子に関する情報を受け取ります。 Windows SDK の「 *pvarChildren* in [IAccessible:: get_accSelection](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_accselection) 」を参照してください。
+選択されている子に関する情報を受け取ります。 Windows SDK の「 *pvarChildren* in [IAccessible:: get_accSelection](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accselection) 」を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
@@ -3536,11 +3536,11 @@ virtual HRESULT get_accSelection(VARIANT* pvarChildren);
 
 ### <a name="remarks"></a>Remarks
 
-この関数は、MFC の[Active Accessibility](/windows/desktop/WinAuto/microsoft-active-accessibility)サポートの一部です。
+この関数は、MFC の[Active Accessibility](/windows/win32/WinAuto/microsoft-active-accessibility)サポートの一部です。
 
 Nonwindowed ユーザーインターフェイス要素 ( `CWnd`MFC で処理されるウィンドウなしの ActiveX コントロール以外) がある場合は、派生クラスでこの関数をオーバーライドします。
 
-詳細については、Windows SDK の「 [IAccessible:: get_accSelection](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_accselection) 」を参照してください。
+詳細については、Windows SDK の「 [IAccessible:: get_accSelection](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accselection) 」を参照してください。
 
 ##  <a name="get_accstate"></a>  CWnd::get_accState
 
@@ -3558,7 +3558,7 @@ virtual HRESULT get_accState(
 取得する状態情報がオブジェクトまたはオブジェクトの子要素のいずれかであるかどうかを指定します。 このパラメーターには、CHILDID_SELF (オブジェクトに関する情報を取得するため) または子 ID (オブジェクトの子要素に関する情報を取得する場合) のいずれかを指定できます。
 
 *pvarState*<br/>
-オブジェクトの状態に関する情報を受け取ります。 Windows SDK の「 *pvarState* in [IAccessible:: get_accState](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_accstate) 」を参照してください。
+オブジェクトの状態に関する情報を受け取ります。 Windows SDK の「 *pvarState* in [IAccessible:: get_accState](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accstate) 」を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
@@ -3566,11 +3566,11 @@ virtual HRESULT get_accState(
 
 ### <a name="remarks"></a>Remarks
 
-この関数は、MFC の[Active Accessibility](/windows/desktop/WinAuto/microsoft-active-accessibility)サポートの一部です。
+この関数は、MFC の[Active Accessibility](/windows/win32/WinAuto/microsoft-active-accessibility)サポートの一部です。
 
 Nonwindowed ユーザーインターフェイス要素 ( `CWnd`MFC で処理されるウィンドウなしの ActiveX コントロール以外) がある場合は、派生クラスでこの関数をオーバーライドします。
 
-詳細については、Windows SDK の「 [IAccessible:: get_accState](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_accstate) 」を参照してください。
+詳細については、Windows SDK の「 [IAccessible:: get_accState](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accstate) 」を参照してください。
 
 ##  <a name="get_accvalue"></a>  CWnd::get_accValue
 
@@ -3592,15 +3592,15 @@ virtual HRESULT get_accValue(
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合は COM エラーコードを返します。 Windows SDK の「 [IAccessible:: get_accValue](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_accvalue)の**戻り値**」を参照してください。
+成功した場合は S_OK、失敗した場合は COM エラーコードを返します。 Windows SDK の「 [IAccessible:: get_accValue](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accvalue)の**戻り値**」を参照してください。
 
 ### <a name="remarks"></a>Remarks
 
-この関数は、MFC の[Active Accessibility](/windows/desktop/WinAuto/microsoft-active-accessibility)サポートの一部です。
+この関数は、MFC の[Active Accessibility](/windows/win32/WinAuto/microsoft-active-accessibility)サポートの一部です。
 
 Nonwindowed ユーザーインターフェイス要素 ( `CWnd`MFC で処理されるウィンドウなしの ActiveX コントロール以外) がある場合は、派生クラスでこの関数をオーバーライドします。
 
-詳細については、Windows SDK の「 [IAccessible:: get_accValue](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_accvalue) 」を参照してください。
+詳細については、Windows SDK の「 [IAccessible:: get_accValue](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accvalue) 」を参照してください。
 
 ##  <a name="getactivewindow"></a>  CWnd::GetActiveWindow
 
@@ -3629,7 +3629,7 @@ CWnd* GetAncestor(UINT gaFlags) const;
 ### <a name="parameters"></a>パラメーター
 
 *gaFlags*<br/>
-取得する先祖を指定します。 使用可能な値の完全な一覧については、「 [Getancestor](/windows/desktop/api/winuser/nf-winuser-getancestor)」を参照してください。
+取得する先祖を指定します。 使用可能な値の完全な一覧については、「 [Getancestor](/windows/win32/api/winuser/nf-winuser-getancestor)」を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
@@ -3637,7 +3637,7 @@ CWnd* GetAncestor(UINT gaFlags) const;
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は、Windows SDK で説明されているように、 [Getancestor](/windows/desktop/api/winuser/nf-winuser-getancestor)関数の機能をエミュレートします。
+このメンバー関数は、Windows SDK で説明されているように、 [Getancestor](/windows/win32/api/winuser/nf-winuser-getancestor)関数の機能をエミュレートします。
 
 ##  <a name="getcapture"></a>  CWnd::GetCapture
 
@@ -3706,7 +3706,7 @@ void GetClientRect(LPRECT lpRect) const;
 ### <a name="parameters"></a>パラメーター
 
 *lpRect*<br/>
-クライアント座標を受け取る[RECT 構造体](/windows/desktop/api/windef/ns-windef-tagrect)また`CRect`はオブジェクトをポイントします。 メンバー `left` と`top`メンバーは0になります。 メンバー `right` と`bottom`メンバーには、ウィンドウの幅と高さが含まれます。
+クライアント座標を受け取る[RECT 構造体](/windows/win32/api/windef/ns-windef-rect)また`CRect`はオブジェクトをポイントします。 メンバー `left` と`top`メンバーは0になります。 メンバー `right` と`bottom`メンバーには、ウィンドウの幅と高さが含まれます。
 
 ### <a name="remarks"></a>Remarks
 
@@ -3758,13 +3758,13 @@ LPUNKNOWN GetControlUnknown();
 
 ### <a name="return-value"></a>戻り値
 
-この`CWnd`オブジェクトによって表される OLE コントロールの[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)インターフェイスへのポインター。 このオブジェクトが OLE コントロールを表していない場合、戻り値は NULL になります。
+この`CWnd`オブジェクトによって表される OLE コントロールの[IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)インターフェイスへのポインター。 このオブジェクトが OLE コントロールを表していない場合、戻り値は NULL になります。
 
 ### <a name="remarks"></a>Remarks
 
 この`IUnknown`ポインターは解放しないでください。 通常は、を使用して、コントロールの特定のインターフェイスを取得します。
 
-によって`GetControlUnknown`返されたインターフェイスポインターは参照カウントされていません。 以前に[iunknown:: AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref)を呼び出した場合を除き、ポインターに対して[Iunknown:: Release](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release)を呼び出さないでください。
+によって`GetControlUnknown`返されたインターフェイスポインターは参照カウントされていません。 以前に[iunknown:: AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref)を呼び出した場合を除き、ポインターに対して[Iunknown:: Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release)を呼び出さないでください。
 
 ### <a name="example"></a>例
 
@@ -3780,7 +3780,7 @@ static const MSG* PASCAL GetCurrentMessage();
 
 ### <a name="return-value"></a>戻り値
 
-ウィンドウが現在処理しているメッセージを含む[MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg)構造体へのポインターを返します。 は、 **On**<em>メッセージ</em>ハンドラーでのみ呼び出す必要があります。
+ウィンドウが現在処理しているメッセージを含む[MSG](/windows/win32/api/winuser/ns-winuser-msg)構造体へのポインターを返します。 は、 **On**<em>メッセージ</em>ハンドラーでのみ呼び出す必要があります。
 
 ### <a name="example"></a>例
 
@@ -3848,13 +3848,13 @@ CDC* GetDCEx(
 
 デバイスコンテキストは、その後の GDI 関数でクライアント領域に描画するために使用できます。
 
-この関数は、 [GetDC](/windows/desktop/api/winuser/nf-winuser-getdc)関数の拡張であり、アプリケーションはウィンドウのデバイスコンテキストをクリップする方法と方法をより細かく制御できます。
+この関数は、 [GetDC](/windows/win32/api/winuser/nf-winuser-getdc)関数の拡張であり、アプリケーションはウィンドウのデバイスコンテキストをクリップする方法と方法をより細かく制御できます。
 
-デバイスコンテキストがウィンドウクラスに属していない限り、描画後にコンテキストを解放するには、 [ReleaseDC](/windows/desktop/api/winuser/nf-winuser-releasedc)関数を呼び出す必要があります。 特定の時点で使用できる共通のデバイスコンテキストは5つだけであるため、デバイスコンテキストを解放しないと、他のアプリケーションがデバイスコンテキストにアクセスできなくなる可能性があります。
+デバイスコンテキストがウィンドウクラスに属していない限り、描画後にコンテキストを解放するには、 [ReleaseDC](/windows/win32/api/winuser/nf-winuser-releasedc)関数を呼び出す必要があります。 特定の時点で使用できる共通のデバイスコンテキストは5つだけであるため、デバイスコンテキストを解放しないと、他のアプリケーションがデバイスコンテキストにアクセスできなくなる可能性があります。
 
-キャッシュされたデバイスコンテキストを取得するには、アプリケーションで[DCX_CACHE](/windows/desktop/api/winuser/nf-winuser-getdcex)を指定する必要があります。 DCX_CACHE が指定されておらず、ウィンドウが CS_OWNDC でも[CS_CLASSDC](/windows/desktop/api/winuser/ns-winuser-tagwndclassa)でもない場合、この関数は NULL を返します。
+キャッシュされたデバイスコンテキストを取得するには、アプリケーションで[DCX_CACHE](/windows/win32/api/winuser/nf-winuser-getdcex)を指定する必要があります。 DCX_CACHE が指定されておらず、ウィンドウが CS_OWNDC でも[CS_CLASSDC](/windows/win32/api/winuser/ns-winuser-wndclassw)でもない場合、この関数は NULL を返します。
 
-クラスが登録されたときに CS_CLASSDC、 [CS_OWNDC](/windows/desktop/api/winuser/ns-winuser-tagwndclassa)、または[CS_PARENTDC](/windows/desktop/api/winuser/ns-winuser-tagwndclassa)スタイルが[WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa)構造体で指定されている場合、特別な特性を持つデバイスコンテキストが[GetDCEx](/windows/desktop/api/winuser/nf-winuser-getdcex)関数によって返されます。
+クラスが登録されたときに CS_CLASSDC、 [CS_OWNDC](/windows/win32/api/winuser/ns-winuser-wndclassw)、または[CS_PARENTDC](/windows/win32/api/winuser/ns-winuser-wndclassw)スタイルが[WNDCLASS](/windows/win32/api/winuser/ns-winuser-wndclassw)構造体で指定されている場合、特別な特性を持つデバイスコンテキストが[GetDCEx](/windows/win32/api/winuser/nf-winuser-getdcex)関数によって返されます。
 
 これらの特性の詳細については、Windows SDK の`WNDCLASS`構造体の説明を参照してください。
 
@@ -4004,7 +4004,7 @@ UINT GetDlgItemInt(
 
 *Bsigned*が TRUE の場合`GetDlgItemInt` 、はテキストの先頭にマイナス記号 (-) があるかどうかを確認し、テキストを符号付き数値に変換します。 それ以外の場合は、符号なしの値を作成します。
 
-[WM_GETTEXT](/windows/desktop/winmsg/wm-gettext)メッセージをコントロールに送信します。
+[WM_GETTEXT](/windows/win32/winmsg/wm-gettext)メッセージをコントロールに送信します。
 
 ##  <a name="getdlgitemtext"></a>  CWnd::GetDlgItemText
 
@@ -4198,7 +4198,7 @@ BOOL GetLayeredWindowAttributes(
 レイヤードウィンドウの不透明度を表すために使用されるアルファ値を受け取るバイトへのポインター。 *PbAlpha*によって参照される変数が0の場合、ウィンドウは完全に透明です。 *PbAlpha*によって参照される変数が255の場合、ウィンドウは不透明になります。 引数が不要な場合は NULL を指定できます。
 
 *pdwFlags*<br/>
-レイヤーフラグを受け取る DWORD へのポインター。 引数が不要な場合は NULL を指定できます。 使用可能な値の完全な一覧については、「 [Getレイヤー Edwindowattributes](/windows/desktop/api/winuser/nf-winuser-getlayeredwindowattributes)」を参照してください。
+レイヤーフラグを受け取る DWORD へのポインター。 引数が不要な場合は NULL を指定できます。 使用可能な値の完全な一覧については、「 [Getレイヤー Edwindowattributes](/windows/win32/api/winuser/nf-winuser-getlayeredwindowattributes)」を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
@@ -4206,7 +4206,7 @@ BOOL GetLayeredWindowAttributes(
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は、Windows SDK で説明されているように、 [Getレイヤー Edwindowattributes](/windows/desktop/api/winuser/nf-winuser-getlayeredwindowattributes)関数の機能をエミュレートします。
+このメンバー関数は、Windows SDK で説明されているように、 [Getレイヤー Edwindowattributes](/windows/win32/api/winuser/nf-winuser-getlayeredwindowattributes)関数の機能をエミュレートします。
 
 ##  <a name="getmenu"></a>CWnd:: GetMenu
 
@@ -4244,13 +4244,13 @@ BOOL GetMenuBarInfo(
 ### <a name="parameters"></a>パラメーター
 
 *idObject*<br/>
-メニュー オブジェクトを指定します。 使用可能な値の一覧については、「 [Getmenubarinfo](/windows/desktop/api/winuser/nf-winuser-getmenubarinfo)」を参照してください。
+メニュー オブジェクトを指定します。 使用可能な値の一覧については、「 [Getmenubarinfo](/windows/win32/api/winuser/nf-winuser-getmenubarinfo)」を参照してください。
 
 *idItem*<br/>
 情報を取得する項目を指定します。 このパラメーターが0の場合、関数はメニュー自体に関する情報を取得します。 このパラメーターが1の場合、関数はメニューの最初の項目に関する情報を取得します。
 
 *pmbi*<br/>
-情報を受け取る[Menubarinfo](/windows/desktop/api/winuser/ns-winuser-tagmenubarinfo)構造体へのポインター。
+情報を受け取る[Menubarinfo](/windows/win32/api/winuser/ns-winuser-menubarinfo)構造体へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -4258,7 +4258,7 @@ BOOL GetMenuBarInfo(
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は、Windows SDK で説明されているように、 [Getmenubarinfo](/windows/desktop/api/winuser/nf-winuser-getmenubarinfo)関数の機能をエミュレートします。
+このメンバー関数は、Windows SDK で説明されているように、 [Getmenubarinfo](/windows/win32/api/winuser/nf-winuser-getmenubarinfo)関数の機能をエミュレートします。
 
 ##  <a name="getnextdlggroupitem"></a>  CWnd::GetNextDlgGroupItem
 
@@ -4404,7 +4404,7 @@ CWnd* GetOwner() const;
 
 ウィンドウに所有者がいない場合は、親ウィンドウオブジェクトへのポインターが既定で返されます。 いくつかの重要な側面では、所有者と所有者の関係が親子の側面と異なることに注意してください。 たとえば、親を持つウィンドウは、親ウィンドウのクライアント領域に限定されます。 所有しているウィンドウは、デスクトップ上の任意の場所に描画できます。
 
-この関数の所有権の概念は、 [Getwindow](/windows/desktop/api/winuser/nf-winuser-getwindow)の所有権の概念とは異なります。
+この関数の所有権の概念は、 [Getwindow](/windows/win32/api/winuser/nf-winuser-getwindow)の所有権の概念とは異なります。
 
 ##  <a name="getparent"></a>  CWnd::GetParent
 
@@ -4416,7 +4416,7 @@ CWnd* GetParent() const;
 
 ### <a name="return-value"></a>戻り値
 
-Windows SDK の「 [GetParent](/windows/desktop/api/winuser/nf-winuser-getparent) 」の「戻り値」セクションを参照してください。
+Windows SDK の「 [GetParent](/windows/win32/api/winuser/nf-winuser-getparent) 」の「戻り値」セクションを参照してください。
 
 ### <a name="remarks"></a>Remarks
 
@@ -4582,10 +4582,10 @@ BOOL GetScrollBarInfo(
 ### <a name="parameters"></a>パラメーター
 
 *idObject*<br/>
-メニュー オブジェクトを指定します。 使用可能な値の一覧については、「 [GetScrollBarInfo](/windows/desktop/api/winuser/nf-winuser-getscrollbarinfo)」を参照してください。
+メニュー オブジェクトを指定します。 使用可能な値の一覧については、「 [GetScrollBarInfo](/windows/win32/api/winuser/nf-winuser-getscrollbarinfo)」を参照してください。
 
 *psbi*<br/>
-情報を受け取る[SCROLLBARINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollbarinfo)構造体へのポインター。
+情報を受け取る[SCROLLBARINFO](/windows/win32/api/winuser/ns-winuser-scrollbarinfo)構造体へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -4593,7 +4593,7 @@ BOOL GetScrollBarInfo(
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は、Windows SDK で説明されているように、関数[GetScrollBarInfo](/windows/desktop/api/winuser/nf-winuser-getscrollbarinfo)の機能をエミュレートします。
+このメンバー関数は、Windows SDK で説明されているように、関数[GetScrollBarInfo](/windows/win32/api/winuser/nf-winuser-getscrollbarinfo)の機能をエミュレートします。
 
 ##  <a name="getscrollinfo"></a>  CWnd::GetScrollInfo
 
@@ -4769,11 +4769,11 @@ BOOL GetTitleBarInfo(PTITLEBARINFO pti) const;
 ### <a name="parameters"></a>パラメーター
 
 *pti*<br/>
-情報を受け取る[タイトルバー情報](/windows/desktop/api/winuser/ns-winuser-tagtitlebarinfo)構造体へのポインター。
+情報を受け取る[タイトルバー情報](/windows/win32/api/winuser/ns-winuser-titlebarinfo)構造体へのポインター。
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は、Windows SDK で説明されているように、関数[Getタイトルバー情報](/windows/desktop/api/winuser/nf-winuser-gettitlebarinfo)の機能をエミュレートします。
+このメンバー関数は、Windows SDK で説明されているように、関数[Getタイトルバー情報](/windows/win32/api/winuser/nf-winuser-gettitlebarinfo)の機能をエミュレートします。
 
 ##  <a name="gettoplevelframe"></a>  CWnd::GetTopLevelFrame
 
@@ -4858,7 +4858,7 @@ BOOL GetUpdateRect(
 ### <a name="parameters"></a>パラメーター
 
 *lpRect*<br/>
-更新領域を`CRect`囲む更新プログラムのクライアント座標を受け取るオブジェクトまたは[RECT 構造体](/windows/desktop/api/windef/ns-windef-tagrect)を指します。
+更新領域を`CRect`囲む更新プログラムのクライアント座標を受け取るオブジェクトまたは[RECT 構造体](/windows/win32/api/windef/ns-windef-rect)を指します。
 
 更新領域が内に存在するかどうかを判断するに`CWnd`は、このパラメーターを NULL に設定します。 *LpRect*が NULL の場合、 `GetUpdateRect`メンバー関数は、更新領域が存在する場合は0以外の値を返し、それ以外の場合は0を返します。 これにより、WM_PAINT メッセージの結果が無効な領域であるかどうかを確認することができます。 Windows バージョン3.0 以前では、このパラメーターを NULL に設定しないでください。
 
@@ -4992,7 +4992,7 @@ CDC* GetWindowDC();
 
 `GetWindowDC`は、 `CWnd`非クライアント領域内の特殊な描画効果に使用されることを意図しています。 任意のウィンドウの非クライアント領域での描画は推奨されません。
 
-[GetSystemMetrics](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics) Windows 関数を使用すると、キャプションバー、メニュー、スクロールバーなど、非クライアント領域のさまざまな部分の寸法を取得できます。
+[GetSystemMetrics](/windows/win32/api/winuser/nf-winuser-getsystemmetrics) Windows 関数を使用すると、キャプションバー、メニュー、スクロールバーなど、非クライアント領域のさまざまな部分の寸法を取得できます。
 
 描画が完了したら、 [ReleaseDC](#releasedc)メンバー関数を呼び出して、表示コンテキストを解放する必要があります。 表示コンテキストの解放に失敗すると、同時に開くことができるデバイスコンテキストの数に制限があるため、アプリケーションによって要求された描画に重大な影響を与えます。
 
@@ -5007,11 +5007,11 @@ BOOL GetWindowInfo(PWINDOWINFO pwi) const;
 ### <a name="parameters"></a>パラメーター
 
 *pwi*<br/>
-[WINDOWINFO](/windows/desktop/api/winuser/ns-winuser-tagwindowinfo)構造体へのポインター。
+[WINDOWINFO](/windows/win32/api/winuser/ns-winuser-windowinfo)構造体へのポインター。
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は、Windows SDK で説明されているように、関数[GetWindowInfo](/windows/desktop/api/winuser/nf-winuser-getwindowinfo)の機能をエミュレートします。
+このメンバー関数は、Windows SDK で説明されているように、関数[GetWindowInfo](/windows/win32/api/winuser/nf-winuser-getwindowinfo)の機能をエミュレートします。
 
 ##  <a name="getwindowlesschildcount"></a>  CWnd::GetWindowlessChildCount
 
@@ -5044,7 +5044,7 @@ BOOL GetWindowPlacement(WINDOWPLACEMENT* lpwndpl) const;
 
 ### <a name="remarks"></a>Remarks
 
-この関数によって取得される[windowplacement](/windows/desktop/api/winuser/ns-winuser-tagwindowplacement)構造体のメンバーは常に0です。`flags` が`CWnd`最大化され`showCmd`ている`WINDOWPLACEMENT`場合、のメンバーは SW_SHOWMAXIMIZED です。 ウィンドウが最小化されている場合は、SW_SHOWMINIMIZED になります。 それ以外の場合は、SW_SHOWNORMAL になります。
+この関数によって取得される[windowplacement](/windows/win32/api/winuser/ns-winuser-windowplacement)構造体のメンバーは常に0です。`flags` が`CWnd`最大化され`showCmd`ている`WINDOWPLACEMENT`場合、のメンバーは SW_SHOWMAXIMIZED です。 ウィンドウが最小化されている場合は、SW_SHOWMINIMIZED になります。 それ以外の場合は、SW_SHOWNORMAL になります。
 
 ##  <a name="getwindowrect"></a>  CWnd::GetWindowRect
 
@@ -5057,7 +5057,7 @@ void GetWindowRect(LPRECT lpRect) const;
 ### <a name="parameters"></a>パラメーター
 
 *lpRect*<br/>
-左上隅と`CRect`右下隅の画面座標を受け取るオブジェクトまたは[RECT 構造体](/windows/desktop/api/windef/ns-windef-tagrect)を指します。
+左上隅と`CRect`右下隅の画面座標を受け取るオブジェクトまたは[RECT 構造体](/windows/win32/api/windef/ns-windef-rect)を指します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -5128,7 +5128,7 @@ void GetWindowText(
 
 オブジェクトがコントロールの場合、メンバー関数`GetWindowText`は、キャプションをコピーするのではなく、コントロール内のテキストをコピーします。 `CWnd`
 
-このメンバー関数により、[WM_GETTEXT](/windows/desktop/winmsg/wm-gettext) メッセージが `CWnd` オブジェクトに送信されます。
+このメンバー関数により、[WM_GETTEXT](/windows/win32/winmsg/wm-gettext) メッセージが `CWnd` オブジェクトに送信されます。
 
 ### <a name="example"></a>例
 
@@ -5150,7 +5150,7 @@ int GetWindowTextLength() const;
 
 が`CWnd`コントロールの場合、メンバー `GetWindowTextLength`関数は、キャプションではなく、コントロール内のテキストの長さを返します。
 
-このメンバー関数により、[WM_GETTEXTLENGTH](/windows/desktop/winmsg/wm-gettextlength) メッセージが `CWnd` オブジェクトに送信されます。
+このメンバー関数により、[WM_GETTEXTLENGTH](/windows/win32/winmsg/wm-gettextlength) メッセージが `CWnd` オブジェクトに送信されます。
 
 ### <a name="example"></a>例
 
@@ -5280,7 +5280,7 @@ void InvalidateRect(
 ### <a name="parameters"></a>パラメーター
 
 *lpRect*<br/>
-更新領域に`CRect`追加する四角形 (クライアント座標) を格納するオブジェクトまたは[RECT 構造体](/windows/desktop/api/windef/ns-windef-tagrect)を指します。 *LpRect*が NULL の場合、クライアント領域全体が領域に追加されます。
+更新領域に`CRect`追加する四角形 (クライアント座標) を格納するオブジェクトまたは[RECT 構造体](/windows/win32/api/windef/ns-windef-rect)を指します。 *LpRect*が NULL の場合、クライアント領域全体が領域に追加されます。
 
 *bErase*<br/>
 更新領域内の背景を消去するかどうかを指定します。
@@ -5410,7 +5410,7 @@ BOOL IsDialogMessage(LPMSG lpMsg);
 ### <a name="parameters"></a>パラメーター
 
 *lpMsg*<br/>
-確認するメッセージを含む[MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg)構造体を指します。
+確認するメッセージを含む[MSG](/windows/win32/api/winuser/ns-winuser-msg)構造体を指します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -5422,7 +5422,7 @@ BOOL IsDialogMessage(LPMSG lpMsg);
 
 関数は`IsDialogMessage` 、メッセージを処理するときに、キーボードメッセージを確認し、対応するダイアログボックスの選択コマンドに変換します。 たとえば、TAB キーは次のコントロールまたはコントロールグループを選択し、下方向キーはグループ内の次のコントロールを選択します。
 
-によって`IsDialogMessage`処理されたメッセージを[TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)または[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage)の Windows 関数に渡すことはできません。
+によって`IsDialogMessage`処理されたメッセージを[TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage)または[DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage)の Windows 関数に渡すことはできません。
 
 ##  <a name="isdlgbuttonchecked"></a>  CWnd::IsDlgButtonChecked
 
@@ -5601,9 +5601,9 @@ BOOL LockWindowUpdate();
 
 ロックされたウィンドウは移動できません。 一度にロックできるウィンドウは1つだけです。 でロックされている`LockWindowUpdate`ウィンドウのロックを解除するには、 [UnlockWindowUpdate](#unlockwindowupdate)を呼び出します。
 
-ウィンドウがロックされているアプリケーション (またはロックされている子ウィンドウ) が[GetDC、](/windows/desktop/api/winuser/nf-winuser-getdc) [GetDCEx、](/windows/desktop/api/winuser/nf-winuser-getdcex)または[beginpaint](/windows/desktop/api/winuser/nf-winuser-beginpaint)の windows 関数を呼び出す場合、呼び出された関数は、表示領域が空であるデバイスコンテキストを返します。 これは、アプリケーションが`UnlockWindowUpdate`メンバー関数を呼び出すことによってウィンドウのロックを解除するまで発生します。
+ウィンドウがロックされているアプリケーション (またはロックされている子ウィンドウ) が[GetDC、](/windows/win32/api/winuser/nf-winuser-getdc) [GetDCEx、](/windows/win32/api/winuser/nf-winuser-getdcex)または[beginpaint](/windows/win32/api/winuser/nf-winuser-beginpaint)の windows 関数を呼び出す場合、呼び出された関数は、表示領域が空であるデバイスコンテキストを返します。 これは、アプリケーションが`UnlockWindowUpdate`メンバー関数を呼び出すことによってウィンドウのロックを解除するまで発生します。
 
-ウィンドウの更新がロックされている間、システムは、ロックされたウィンドウに関連付けられているデバイスコンテキストに対して、描画操作の外接する四角形を追跡します。 描画を再び有効にすると、ロックされたウィンドウとその子ウィンドウでは、この外接する四角形は無効になり、最終的な[WM_PAINT](/windows/desktop/gdi/wm-paint)メッセージが強制的に画面を更新します。 ウィンドウの更新がロックされている間に描画が行われなかった場合、領域は無効になります。
+ウィンドウの更新がロックされている間、システムは、ロックされたウィンドウに関連付けられているデバイスコンテキストに対して、描画操作の外接する四角形を追跡します。 描画を再び有効にすると、ロックされたウィンドウとその子ウィンドウでは、この外接する四角形は無効になり、最終的な[WM_PAINT](/windows/win32/gdi/wm-paint)メッセージが強制的に画面を更新します。 ウィンドウの更新がロックされている間に描画が行われなかった場合、領域は無効になります。
 
 この `LockWindowUpdate` メンバー関数は、指定されたウィンドウを非表示にしたり、[WS_VISIBLE](styles-used-by-mfc.md#window-styles) スタイルのビットをクリアしたりしません。
 
@@ -5643,7 +5643,7 @@ void MapWindowPoints(
 ポイントを変換する四角形を指定します。 この関数の最初のバージョンは、Windows 3.1 以降でのみ使用できます。
 
 *lpPoint*<br/>
-変換する点のセットを格納している[ポイント構造体](/windows/desktop/api/windef/ns-windef-tagpoint)の配列へのポインター。
+変換する点のセットを格納している[ポイント構造体](/windows/win32/api/windef/ns-windef-point)の配列へのポインター。
 
 *nCount*<br/>
 *Lppoint*が指す`POINT`配列内の構造体の数を指定します。
@@ -5672,7 +5672,7 @@ int MessageBox(
 
 ### <a name="return-value"></a>戻り値
 
-このメソッドは、Windows SDK で定義されているように[MessageBox](/windows/desktop/api/winuser/nf-winuser-messagebox)関数を利用します。 このメソッドは、この関数を呼び出した結果を返します。
+このメソッドは、Windows SDK で定義されているように[MessageBox](/windows/win32/api/winuser/nf-winuser-messagebox)関数を利用します。 このメソッドは、この関数を呼び出した結果を返します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -5719,9 +5719,9 @@ BOOL ModifyStyle(
 
 ### <a name="remarks"></a>Remarks
 
-追加または削除するスタイルは、ビットごとの OR (&#124;) 演算子を使用して組み合わせることができます。 使用可能なウィンドウスタイルの詳細については、Windows SDK のトピック「[ウィンドウのスタイル](/windows/desktop/winmsg/window-styles)と[CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) 」を参照してください。
+追加または削除するスタイルは、ビットごとの OR (&#124;) 演算子を使用して組み合わせることができます。 使用可能なウィンドウスタイルの詳細については、Windows SDK のトピック「[ウィンドウのスタイル](/windows/win32/winmsg/window-styles)と[CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww) 」を参照してください。
 
-*Nflags*が0以外の`ModifyStyle`場合、は Windows API 関数[SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos)を呼び出し、 *nflags*と次の4つのプリセットフラグを組み合わせてウィンドウを再描画します。
+*Nflags*が0以外の`ModifyStyle`場合、は Windows API 関数[SetWindowPos](/windows/win32/api/winuser/nf-winuser-setwindowpos)を呼び出し、 *nflags*と次の4つのプリセットフラグを組み合わせてウィンドウを再描画します。
 
 - SWP_NOSIZE は現在のサイズを保持します。
 
@@ -5768,9 +5768,9 @@ BOOL ModifyStyleEx(
 
 ### <a name="remarks"></a>Remarks
 
-追加または削除するスタイルは、ビットごとの OR (&#124;) 演算子を使用して組み合わせることができます。 使用可能な拡張スタイルの詳細については、このブックの「[拡張ウィンドウスタイル](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)」および「Windows SDK [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) 」を参照してください。
+追加または削除するスタイルは、ビットごとの OR (&#124;) 演算子を使用して組み合わせることができます。 使用可能な拡張スタイルの詳細については、このブックの「[拡張ウィンドウスタイル](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)」および「Windows SDK [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw) 」を参照してください。
 
-*Nflags*が0以外の`ModifyStyleEx`場合、は Windows API 関数[SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos)を呼び出し、 *nflags*と次の4つのプリセットフラグを組み合わせてウィンドウを再描画します。
+*Nflags*が0以外の`ModifyStyleEx`場合、は Windows API 関数[SetWindowPos](/windows/win32/api/winuser/nf-winuser-setwindowpos)を呼び出し、 *nflags*と次の4つのプリセットフラグを組み合わせてウィンドウを再描画します。
 
 - SWP_NOSIZE は現在のサイズを保持します。
 
@@ -5818,10 +5818,10 @@ void MoveWindow(
 の新しい高さを指定し`CWnd`ます。
 
 *塗装*<br/>
-を再`CWnd`描画するかどうかを指定します。 TRUE の場合`CWnd` 、は、通常どおり、 [OnPaint](#onpaint)メッセージハンドラーで[WM_PAINT](/windows/desktop/gdi/wm-paint)メッセージを受信します。 このパラメーターが FALSE の場合、どのような種類の再描画も行われません。 これは、クライアント領域、非クライアント領域 (タイトルとスクロールバーを含む)、およびの移動の`CWnd`結果としてカバーされていない親ウィンドウの任意の部分に適用されます。 このパラメーターが FALSE の場合、アプリケーションは、再描画する必要がある`CWnd`および親ウィンドウの部分を明示的に無効にするか、再描画する必要があります。
+を再`CWnd`描画するかどうかを指定します。 TRUE の場合`CWnd` 、は、通常どおり、 [OnPaint](#onpaint)メッセージハンドラーで[WM_PAINT](/windows/win32/gdi/wm-paint)メッセージを受信します。 このパラメーターが FALSE の場合、どのような種類の再描画も行われません。 これは、クライアント領域、非クライアント領域 (タイトルとスクロールバーを含む)、およびの移動の`CWnd`結果としてカバーされていない親ウィンドウの任意の部分に適用されます。 このパラメーターが FALSE の場合、アプリケーションは、再描画する必要がある`CWnd`および親ウィンドウの部分を明示的に無効にするか、再描画する必要があります。
 
 *lpRect*<br/>
-新しいサイズと位置を指定する[CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT 構造体](/windows/desktop/api/windef/ns-windef-tagrect)。
+新しいサイズと位置を指定する[CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT 構造体](/windows/win32/api/windef/ns-windef-rect)。
 
 ### <a name="remarks"></a>Remarks
 
@@ -5847,17 +5847,17 @@ void NotifyWinEvent(
 ### <a name="parameters"></a>パラメーター
 
 *event*<br/>
-発生したイベントを指定します。 この値は、[イベント定数](/windows/desktop/WinAuto/event-constants)のいずれかである必要があります。
+発生したイベントを指定します。 この値は、[イベント定数](/windows/win32/WinAuto/event-constants)のいずれかである必要があります。
 
 *idObjectType*<br/>
-イベントを生成したオブジェクトの種類を識別します。 この値は、定義済みの[オブジェクト識別子](/windows/desktop/WinAuto/object-identifiers)またはカスタムオブジェクト ID 値のいずれかです。
+イベントを生成したオブジェクトの種類を識別します。 この値は、定義済みの[オブジェクト識別子](/windows/win32/WinAuto/object-identifiers)またはカスタムオブジェクト ID 値のいずれかです。
 
 *idObject*<br/>
 オブジェクトまたはオブジェクトの子要素によってイベントが生成されたかどうかを識別します。 この値が CHILDID_SELF の場合、イベントはオブジェクト自体によって生成されたものです。 それ以外の場合、この値は、イベントを生成した要素の子 ID になります。
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は、Windows SDK で説明されているように、関数[Notifywinevent](/windows/desktop/api/winuser/nf-winuser-notifywinevent)の機能をエミュレートします。
+このメンバー関数は、Windows SDK で説明されているように、関数[Notifywinevent](/windows/win32/api/winuser/nf-winuser-notifywinevent)の機能をエミュレートします。
 
 ##  <a name="onactivate"></a>  CWnd::OnActivate
 
@@ -5966,13 +5966,13 @@ afx_msg void OnAppCommand(
 |パラメーター|説明|
 |---------------|-----------------|
 |*pWnd*|からユーザーがコマンド`CWnd`ボタンをクリックしたとき、またはコマンドキーを押したウィンドウを表すオブジェクトへのポインター。 このウィンドウは、メッセージを受信するウィンドウの子ウィンドウにすることができます。|
-|*nCmd*|からアプリケーションコマンドを示します。 使用可能な値の一覧については、 [WM_APPCOMMAND](/windows/desktop/inputdev/wm-appcommand)の*lParam*パラメーターの*cmd*セクションにあるコマンドを参照してください。|
-|*nDevice*|から入力イベントを生成した入力デバイス。 使用可能な値の一覧については、 [WM_APPCOMMAND](/windows/desktop/inputdev/wm-appcommand)の*LParam*パラメーターの*udevice*セクションにあるデバイスを参照してください。|
-|*nKey*|からCTRL キーやマウスの左ボタンなど、停止している任意の仮想キーを示します。 使用可能な値の一覧については、 [WM_APPCOMMAND](/windows/desktop/inputdev/wm-appcommand)の*LParam*パラメーターの*dwkeys*セクションのキーを参照してください。 詳細については、「[マウス入力について](/windows/desktop/inputdev/about-mouse-input)」の「メッセージパラメーター」小見出しを参照してください。|
+|*nCmd*|からアプリケーションコマンドを示します。 使用可能な値の一覧については、 [WM_APPCOMMAND](/windows/win32/inputdev/wm-appcommand)の*lParam*パラメーターの*cmd*セクションにあるコマンドを参照してください。|
+|*nDevice*|から入力イベントを生成した入力デバイス。 使用可能な値の一覧については、 [WM_APPCOMMAND](/windows/win32/inputdev/wm-appcommand)の*LParam*パラメーターの*udevice*セクションにあるデバイスを参照してください。|
+|*nKey*|からCTRL キーやマウスの左ボタンなど、停止している任意の仮想キーを示します。 使用可能な値の一覧については、 [WM_APPCOMMAND](/windows/win32/inputdev/wm-appcommand)の*LParam*パラメーターの*dwkeys*セクションのキーを参照してください。 詳細については、「[マウス入力について](/windows/win32/inputdev/about-mouse-input)」の「メッセージパラメーター」小見出しを参照してください。|
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、Windows SDK で説明されている[WM_APPCOMMAND](/windows/desktop/inputdev/wm-appcommand)通知を受け取ります。
+このメソッドは、Windows SDK で説明されている[WM_APPCOMMAND](/windows/win32/inputdev/wm-appcommand)通知を受け取ります。
 
 > [!NOTE]
 > このメンバー関数は、アプリケーションで Windows メッセージを処理できるようにするためにフレームワークによって呼び出されます。 関数に渡されるパラメーターは、メッセージを受信したときにフレームワークが受信したパラメーターを反映します。 この関数の基底クラス実装を呼び出す場合、その実装は、関数に指定したパラメーターではなく、メッセージと共に渡されたパラメーターを使用します。
@@ -6016,7 +6016,7 @@ afx_msg void OnCancelMode();
 
 オブジェクトにフォーカスがある場合は、 `OnCancelMode`ダイアログボックスまたはメッセージボックスが表示されたときに、そのメンバー関数が呼び出されます。 `CWnd` これにより`CWnd` 、マウスキャプチャなどのモードをキャンセルすることができます。
 
-既定の実装は、 [ReleaseCapture](/windows/desktop/api/winuser/nf-winuser-releasecapture) Windows 関数を呼び出すことによって応答します。 他のモードを処理するには、派生クラスでこのメンバー関数をオーバーライドします。
+既定の実装は、 [ReleaseCapture](/windows/win32/api/winuser/nf-winuser-releasecapture) Windows 関数を呼び出すことによって応答します。 他のモードを処理するには、派生クラスでこのメンバー関数をオーバーライドします。
 
 ##  <a name="oncapturechanged"></a>  CWnd::OnCaptureChanged
 
@@ -6033,7 +6033,7 @@ afx_msg void OnCaptureChanged(CWnd* pWnd);
 
 ### <a name="remarks"></a>Remarks
 
-[ReleaseCapture](/windows/desktop/api/winuser/nf-winuser-releasecapture)自体を呼び出す場合でも、ウィンドウはこのメッセージを受信します。 アプリケーションは、このメッセージに応答してマウスキャプチャを設定しようとしてはいけません。 このメッセージを受信すると、新しいマウスキャプチャの状態を反映するために、必要に応じてウィンドウが再描画されます。
+[ReleaseCapture](/windows/win32/api/winuser/nf-winuser-releasecapture)自体を呼び出す場合でも、ウィンドウはこのメッセージを受信します。 アプリケーションは、このメッセージに応答してマウスキャプチャを設定しようとしてはいけません。 このメッセージを受信すると、新しいマウスキャプチャの状態を反映するために、必要に応じてウィンドウが再描画されます。
 
 `ReleaseCapture` Windows 関数の詳細については、Windows SDK を参照してください。
 
@@ -6060,7 +6060,7 @@ afx_msg void OnChangeCbChain(
 
 ### <a name="remarks"></a>Remarks
 
-呼び出し`OnChangeCbChain`を受け取る各`CWnd`オブジェクトは、 [SendMessage](/windows/desktop/api/winuser/nf-winuser-sendmessage) Windows 関数を使用して、 [WM_CHANGECBCHAIN](/windows/desktop/dataxchg/wm-changecbchain)メッセージをクリップボードビューアーチェーン (から`SetClipboardViewer`返されたハンドル) の次のウィンドウに送信する必要があります。 *HWndRemove*がチェーン内の次のウィンドウである場合、 *hWndAfter*によって指定されたウィンドウが次のウィンドウになり、クリップボードのメッセージがそのウィンドウに渡されます。
+呼び出し`OnChangeCbChain`を受け取る各`CWnd`オブジェクトは、 [SendMessage](/windows/win32/api/winuser/nf-winuser-sendmessage) Windows 関数を使用して、 [WM_CHANGECBCHAIN](/windows/win32/dataxchg/wm-changecbchain)メッセージをクリップボードビューアーチェーン (から`SetClipboardViewer`返されたハンドル) の次のウィンドウに送信する必要があります。 *HWndRemove*がチェーン内の次のウィンドウである場合、 *hWndAfter*によって指定されたウィンドウが次のウィンドウになり、クリップボードのメッセージがそのウィンドウに渡されます。
 
 > [!NOTE]
 > このメンバー関数は、アプリケーションで Windows メッセージを処理できるようにするためにフレームワークによって呼び出されます。 関数に渡されるパラメーターは、メッセージを受信したときにフレームワークが受信したパラメーターを反映します。 この関数の基底クラス実装を呼び出す場合、その実装は、関数に指定したパラメーターではなく、メッセージと共に渡されたパラメーターを使用します。
@@ -6082,7 +6082,7 @@ afx_msg void OnChangeUIState(
 
 - UIS_CLEAR ( *Nuielement*によって指定された) UI 状態要素を非表示にする必要があります。
 
-- UIS_INITIALIZE ( *Nuielement*によって指定された) UI 状態要素は、最後の入力イベントに基づいて変更する必要があります。 詳細については、「 [WM_CHANGEUISTATE](/windows/desktop/menurc/wm-changeuistate)」の「**解説**」を参照してください。
+- UIS_INITIALIZE ( *Nuielement*によって指定された) UI 状態要素は、最後の入力イベントに基づいて変更する必要があります。 詳細については、「 [WM_CHANGEUISTATE](/windows/win32/menurc/wm-changeuistate)」の「**解説**」を参照してください。
 
 - UIS_SET ( *Nuielement*によって指定された) UI 状態要素を表示する必要があります。
 
@@ -6097,7 +6097,7 @@ afx_msg void OnChangeUIState(
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は、Windows SDK で説明されているように、 [WM_CHANGEUISTATE](/windows/desktop/menurc/wm-changeuistate)メッセージの機能をエミュレートします。
+このメンバー関数は、Windows SDK で説明されているように、 [WM_CHANGEUISTATE](/windows/win32/menurc/wm-changeuistate)メッセージの機能をエミュレートします。
 
 ##  <a name="onchar"></a>  CWnd::OnChar
 
@@ -6144,7 +6144,7 @@ IBM Enhanced 101-と102キーのキーボードでは、拡張キーは、キー
 
 ##  <a name="onchartoitem"></a>  CWnd::OnCharToItem
 
-[LBS_WANTKEYBOARDINPUT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)スタイルのリストボックスが[WM_CHAR](#onchar)メッセージへの応答として[WM_CHARTOITEM](/windows/desktop/Controls/wm-chartoitem)メッセージを所有者に送信するときに呼び出されます。
+[LBS_WANTKEYBOARDINPUT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)スタイルのリストボックスが[WM_CHAR](#onchar)メッセージへの応答として[WM_CHARTOITEM](/windows/win32/Controls/wm-chartoitem)メッセージを所有者に送信するときに呼び出されます。
 
 ```
 afx_msg int OnCharToItem(
@@ -6258,7 +6258,7 @@ afx_msg void OnColorizationColorChanged(
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、Windows SDK で説明されている[WM_DWMNCRENDERINGCHANGED](/windows/desktop/dwm/wm-dwmcolorizationcolorchanged)通知メッセージを受信します。
+このメソッドは、Windows SDK で説明されている[WM_DWMNCRENDERINGCHANGED](/windows/win32/dwm/wm-dwmcolorizationcolorchanged)通知メッセージを受信します。
 
 > [!NOTE]
 > このメンバー関数は、アプリケーションで Windows メッセージを処理できるようにするためにフレームワークによって呼び出されます。 関数に渡されるパラメーターは、メッセージを受信したときにフレームワークが受信したパラメーターを反映します。 この関数の基底クラス実装を呼び出す場合、その実装は、関数に指定したパラメーターではなく、メッセージと共に渡されたパラメーターを使用します。
@@ -6289,7 +6289,7 @@ virtual BOOL OnCommand(
 
 `OnCommand`コントロール通知と ON_COMMAND エントリのメッセージマップを処理し、適切なメンバー関数を呼び出します。
 
-このメンバー関数を派生クラスでオーバーライドして、 [WM_COMMAND](/windows/desktop/menurc/wm-command)メッセージを処理します。 基底クラス`OnCommand`が呼び出されない限り、オーバーライドはメッセージマップを処理しません。
+このメンバー関数を派生クラスでオーバーライドして、 [WM_COMMAND](/windows/win32/menurc/wm-command)メッセージを処理します。 基底クラス`OnCommand`が呼び出されない限り、オーバーライドはメッセージマップを処理しません。
 
 > [!NOTE]
 > このメンバー関数は、アプリケーションで Windows メッセージを処理できるようにするためにフレームワークによって呼び出されます。 関数に渡されるパラメーターは、メッセージを受信したときにフレームワークが受信したパラメーターを反映します。 この関数の基底クラス実装を呼び出す場合、その実装は、関数に指定したパラメーターではなく、メッセージと共に渡されたパラメーターを使用します。
@@ -6332,7 +6332,7 @@ afx_msg int OnCompareItem(
 WM_COMPAREITEM メッセージを送信したコントロールの識別子。
 
 *lpCompareItemStruct*<br/>
-コンボボックスまたはリストボックス内の2つの項目について、識別子とアプリケーションから提供されるデータを格納する[COMPAREITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcompareitemstruct)データ構造体への long ポインターを格納します。
+コンボボックスまたはリストボックス内の2つの項目について、識別子とアプリケーションから提供されるデータを格納する[COMPAREITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-compareitemstruct)データ構造体への long ポインターを格納します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -6365,7 +6365,7 @@ afx_msg void OnCompositionChanged();
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、Windows SDK で説明されている[WM_DWMCOMPOSITIONCHANGED](/windows/desktop/dwm/wm-dwmcompositionchanged)通知を受け取ります。
+このメソッドは、Windows SDK で説明されている[WM_DWMCOMPOSITIONCHANGED](/windows/win32/dwm/wm-dwmcompositionchanged)通知を受け取ります。
 
 > [!NOTE]
 > このメンバー関数は、アプリケーションで Windows メッセージを処理できるようにするためにフレームワークによって呼び出されます。 関数に渡されるパラメーターは、メッセージを受信したときにフレームワークが受信したパラメーターを反映します。 この関数の基底クラス実装を呼び出す場合、その実装は、関数に指定したパラメーターではなく、メッセージと共に渡されたパラメーターを使用します。
@@ -6410,7 +6410,7 @@ afx_msg BOOL OnCopyData(
 データを送信し`CWnd`ているオブジェクトへのポインター。
 
 *pCopyDataStruct*<br/>
-送信されるデータを格納する[Copydatastruct](/windows/desktop/api/winuser/ns-winuser-tagcopydatastruct)構造体へのポインター。
+送信されるデータを格納する[Copydatastruct](/windows/win32/api/winuser/ns-winuser-copydatastruct)構造体へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -6440,7 +6440,7 @@ afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
 ### <a name="parameters"></a>パラメーター
 
 *lpCreateStruct*<br/>
-作成される `CWnd` オブジェクトに関する情報を格納している [CREATESTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcreatestructa) 構造体を指します。
+作成される `CWnd` オブジェクトに関する情報を格納している [CREATESTRUCT](/windows/win32/api/winuser/ns-winuser-createstructw) 構造体を指します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -6575,7 +6575,7 @@ afx_msg void OnDeleteItem(
 WM_DELETEITEM メッセージを送信したコントロールの識別子。
 
 *lpDeleteItemStruct*<br/>
-削除されたリストボックス項目に関する情報を格納している[DELETEITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdeleteitemstruct)データ構造体への long ポインターを指定します。
+削除されたリストボックス項目に関する情報を格納している[DELETEITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-deleteitemstruct)データ構造体への long ポインターを指定します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -6602,7 +6602,7 @@ afx_msg void OnDestroy();
 
 ##  <a name="ondestroyclipboard"></a>  CWnd::OnDestroyClipboard
 
-このメンバー関数は、 [emptyclipboard](/windows/desktop/api/winuser/nf-winuser-emptyclipboard)ウィンドウ関数の呼び出しによってクリップボードが空になったときに、クリップボードの所有者に対して呼び出されます。
+このメンバー関数は、 [emptyclipboard](/windows/win32/api/winuser/nf-winuser-emptyclipboard)ウィンドウ関数の呼び出しによってクリップボードが空になったときに、クリップボードの所有者に対して呼び出されます。
 
 ```
 afx_msg void OnDestroyClipboard();
@@ -6634,19 +6634,19 @@ afx_msg BOOL OnDeviceChange(
 
 *Nevent*パラメーターには、次のいずれかの値を指定できます。
 
-- [DBT_DEVICEARRIVAL](/windows/desktop/DevIO/dbt-devicearrival)デバイスが挿入され、使用できるようになりました。
+- [DBT_DEVICEARRIVAL](/windows/win32/DevIO/dbt-devicearrival)デバイスが挿入され、使用できるようになりました。
 
-- [DBT_DEVICEQUERYREMOVE](/windows/desktop/DevIO/dbt-devicequeryremove)デバイスを削除するためのアクセス許可が要求されました。 すべてのアプリケーションでこの要求を拒否し、削除を取り消すことができます。
+- [DBT_DEVICEQUERYREMOVE](/windows/win32/DevIO/dbt-devicequeryremove)デバイスを削除するためのアクセス許可が要求されました。 すべてのアプリケーションでこの要求を拒否し、削除を取り消すことができます。
 
-- [DBT_DEVICEQUERYREMOVEFAILED](/windows/desktop/DevIO/dbt-devicequeryremovefailed)デバイスの削除要求が取り消されました。
+- [DBT_DEVICEQUERYREMOVEFAILED](/windows/win32/DevIO/dbt-devicequeryremovefailed)デバイスの削除要求が取り消されました。
 
-- [DBT_DEVICEREMOVEPENDING](/windows/desktop/DevIO/dbt-deviceremovepending)デバイスを削除しようとしています。 を拒否することはできません。
+- [DBT_DEVICEREMOVEPENDING](/windows/win32/DevIO/dbt-deviceremovepending)デバイスを削除しようとしています。 を拒否することはできません。
 
-- [DBT_DEVICEREMOVECOMPLETE](/windows/desktop/DevIO/dbt-deviceremovecomplete)デバイスは削除されています。
+- [DBT_DEVICEREMOVECOMPLETE](/windows/win32/DevIO/dbt-deviceremovecomplete)デバイスは削除されています。
 
-- [DBT_DEVICETYPESPECIFIC](/windows/desktop/DevIO/dbt-devicetypespecific)デバイス固有のイベント。
+- [DBT_DEVICETYPESPECIFIC](/windows/win32/DevIO/dbt-devicetypespecific)デバイス固有のイベント。
 
-- [DBT_CONFIGCHANGED](/windows/desktop/DevIO/dbt-configchanged)現在の構成が変更されました。
+- [DBT_CONFIGCHANGED](/windows/win32/DevIO/dbt-configchanged)現在の構成が変更されました。
 
 - DBT_DEVNODES_CHANGED デバイスノードが変更されました。
 
@@ -6687,7 +6687,7 @@ afx_msg void OnDrawClipboard();
 
 この呼び出しに応答する必要があるのは、 [Setclipboard ビューアー](#setclipboardviewer)のメンバー関数を呼び出すことによって、クリップボードビューアーチェーンに結合されたアプリケーションだけです。
 
-`OnDrawClipboard`呼び出しを受信する各ウィンドウは、 [SendMessage](/windows/desktop/api/winuser/nf-winuser-sendmessage) Windows 関数を呼び出して、 [WM_DRAWCLIPBOARD](/windows/desktop/dataxchg/wm-drawclipboard)メッセージをクリップボードビューアーチェーンの次のウィンドウに渡す必要があります。 次のウィンドウのハンドルは、 [Setクリップボードビューアー](#setclipboardviewer)のメンバー関数によって返されます。[Onchangecbchain](#onchangecbchain)メンバー関数呼び出しに応答して変更される可能性があります。
+`OnDrawClipboard`呼び出しを受信する各ウィンドウは、 [SendMessage](/windows/win32/api/winuser/nf-winuser-sendmessage) Windows 関数を呼び出して、 [WM_DRAWCLIPBOARD](/windows/win32/dataxchg/wm-drawclipboard)メッセージをクリップボードビューアーチェーンの次のウィンドウに渡す必要があります。 次のウィンドウのハンドルは、 [Setクリップボードビューアー](#setclipboardviewer)のメンバー関数によって返されます。[Onchangecbchain](#onchangecbchain)メンバー関数呼び出しに応答して変更される可能性があります。
 
 ##  <a name="ondrawiconicthumbnailorlivepreview"></a>  CWnd::OnDrawIconicThumbnailOrLivePreview
 
@@ -6743,7 +6743,7 @@ WM_DRAWITEM メッセージを送信したコントロールの識別子を格�
 
 ### <a name="remarks"></a>Remarks
 
-[DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct) 構造体の `itemAction` メンバーは、実行する描画操作を定義します。 このメンバーのデータを使用すると、コントロールの所有者は、必要な描画アクションを決定できます。
+[DRAWITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-drawitemstruct) 構造体の `itemAction` メンバーは、実行する描画操作を定義します。 このメンバーのデータを使用すると、コントロールの所有者は、必要な描画アクションを決定できます。
 
 アプリケーションでは、このメッセージの処理から戻る前に、 `DRAWITEMSTRUCT`構造体の*hDC*メンバーによって識別されるデバイスコンテキストが既定の状態に復元されるようにする必要があります。
 
@@ -6811,7 +6811,7 @@ afx_msg void OnEndSession(BOOL bEnding);
 
 *曲げ*が TRUE の場合、すべてのアプリケーションからこの呼び出しの処理が返された後、いつでも Windows を終了できます。 そのため、アプリケーションで、内`OnEndSession`の終了に必要なすべてのタスクを実行します。
 
-セッションの終了時には、 [DestroyWindow](#destroywindow)メンバー関数または[PostQuitMessage](/windows/desktop/api/winuser/nf-winuser-postquitmessage) Windows 関数を呼び出す必要はありません。
+セッションの終了時には、 [DestroyWindow](#destroywindow)メンバー関数または[PostQuitMessage](/windows/win32/api/winuser/nf-winuser-postquitmessage) Windows 関数を呼び出す必要はありません。
 
 > [!NOTE]
 > このメンバー関数は、アプリケーションで Windows メッセージを処理できるようにするためにフレームワークによって呼び出されます。 関数に渡されるパラメーターは、メッセージを受信したときにフレームワークが受信したパラメーターを反映します。 この関数の基底クラス実装を呼び出す場合、その実装は、関数に指定したパラメーターではなく、メッセージと共に渡されたパラメーターを使用します。
@@ -6873,9 +6873,9 @@ afx_msg void OnEnterSizeMove();
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、Windows SDK で説明されている[WM_ENTERSIZEMOVE](/windows/desktop/winmsg/wm-entersizemove)通知を受け取ります。
+このメソッドは、Windows SDK で説明されている[WM_ENTERSIZEMOVE](/windows/win32/winmsg/wm-entersizemove)通知を受け取ります。
 
-ウィンドウは、ユーザーがウィンドウのタイトルバーまたはサイズ変更境界線をクリックしたとき、またはウィンドウが[WM_SYSCOMMAND](/windows/desktop/menurc/wm-syscommand)メッセージを[CWnd::D efwindowproc](#defwindowproc)関数およびそのメッセージの*wParam*パラメーターに渡したときに、移動またはサイズ変更のモーダルループに入ります。SC_MOVE または SC_SIZE を指定します。
+ウィンドウは、ユーザーがウィンドウのタイトルバーまたはサイズ変更境界線をクリックしたとき、またはウィンドウが[WM_SYSCOMMAND](/windows/win32/menurc/wm-syscommand)メッセージを[CWnd::D efwindowproc](#defwindowproc)関数およびそのメッセージの*wParam*パラメーターに渡したときに、移動またはサイズ変更のモーダルループに入ります。SC_MOVE または SC_SIZE を指定します。
 
 > [!NOTE]
 > このメンバー関数は、アプリケーションで Windows メッセージを処理できるようにするためにフレームワークによって呼び出されます。 関数に渡されるパラメーターは、メッセージを受信したときにフレームワークが受信したパラメーターを反映します。 この関数の基底クラス実装を呼び出す場合、その実装は、関数に指定したパラメーターではなく、メッセージと共に渡されたパラメーターを使用します。
@@ -6903,7 +6903,7 @@ afx_msg BOOL OnEraseBkgnd(CDC* pDC);
 
 既定の実装は、ウィンドウクラス構造体の`hbrBackground`メンバーによって指定されたウィンドウクラスの背景ブラシを使用して、背景を消去します。
 
-メンバーが NULL の場合、オーバーライドされた`OnEraseBkgnd`のバージョンによって背景色が消去されます。 `hbrBackground` また、このバージョンでは、最初にブラシの[UnrealizeObject](/windows/desktop/api/wingdi/nf-wingdi-unrealizeobject)を`CWnd`呼び出し、次にブラシを選択することによって、目的のブラシの原点を座標で揃える必要があります。
+メンバーが NULL の場合、オーバーライドされた`OnEraseBkgnd`のバージョンによって背景色が消去されます。 `hbrBackground` また、このバージョンでは、最初にブラシの[UnrealizeObject](/windows/win32/api/wingdi/nf-wingdi-unrealizeobject)を`CWnd`呼び出し、次にブラシを選択することによって、目的のブラシの原点を座標で揃える必要があります。
 
 メッセージを`OnEraseBkgnd`処理し、背景を消去する場合、オーバーライドされたは WM_ERASEBKGND に応答して0以外の値を返します。これは、これ以上消去する必要がないことを示します。 0を返した場合、ウィンドウは消去する必要があるとマークされたままになります。 (通常、これは、 `fErase` `PAINTSTRUCT`構造体のメンバーが TRUE になることを意味します)。
 
@@ -6940,9 +6940,9 @@ afx_msg void OnExitSizeMove();
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、Windows SDK で説明されている[WM_EXITSIZEMOVE](/windows/desktop/winmsg/wm-exitsizemove)通知を受け取ります。
+このメソッドは、Windows SDK で説明されている[WM_EXITSIZEMOVE](/windows/win32/winmsg/wm-exitsizemove)通知を受け取ります。
 
-ウィンドウは、ユーザーがウィンドウのタイトルバーまたはサイズ変更境界線をクリックしたとき、またはウィンドウが[WM_SYSCOMMAND](/windows/desktop/menurc/wm-syscommand)メッセージを[CWnd::D efwindowproc](#defwindowproc)関数およびそのメッセージの*wParam*パラメーターに渡したときに、移動またはサイズ変更のモーダルループに入ります。SC_MOVE または SC_SIZE を指定します。
+ウィンドウは、ユーザーがウィンドウのタイトルバーまたはサイズ変更境界線をクリックしたとき、またはウィンドウが[WM_SYSCOMMAND](/windows/win32/menurc/wm-syscommand)メッセージを[CWnd::D efwindowproc](#defwindowproc)関数およびそのメッセージの*wParam*パラメーターに渡したときに、移動またはサイズ変更のモーダルループに入ります。SC_MOVE または SC_SIZE を指定します。
 
 > [!NOTE]
 > このメンバー関数は、アプリケーションで Windows メッセージを処理できるようにするためにフレームワークによって呼び出されます。 関数に渡されるパラメーターは、メッセージを受信したときにフレームワークが受信したパラメーターを反映します。 この関数の基底クラス実装を呼び出す場合、その実装は、関数に指定したパラメーターではなく、メッセージと共に渡されたパラメーターを使用します。
@@ -6957,9 +6957,9 @@ afx_msg void OnFontChange();
 
 ### <a name="remarks"></a>Remarks
 
-システムのフォントを追加または削除するアプリケーション (たとえば、 [Addfontresource](/windows/desktop/api/wingdi/nf-wingdi-addfontresourcea)や[removefontresource](/windows/desktop/api/wingdi/nf-wingdi-removefontresourcea) Windows 関数を使用) は、すべてのトップレベルウィンドウに[WM_FONTCHANGE](/windows/desktop/gdi/wm-fontchange)メッセージを送信する必要があります。
+システムのフォントを追加または削除するアプリケーション (たとえば、 [Addfontresource](/windows/win32/api/wingdi/nf-wingdi-addfontresourcew)や[removefontresource](/windows/win32/api/wingdi/nf-wingdi-removefontresourcew) Windows 関数を使用) は、すべてのトップレベルウィンドウに[WM_FONTCHANGE](/windows/win32/gdi/wm-fontchange)メッセージを送信する必要があります。
 
-このメッセージを送信するには、HWND_BROADCAST に設定された*hWnd*パラメーターを指定して[SendMessage](/windows/desktop/api/winuser/nf-winuser-sendmessage) Windows 関数を使用します。
+このメッセージを送信するには、HWND_BROADCAST に設定された*hWnd*パラメーターを指定して[SendMessage](/windows/win32/api/winuser/nf-winuser-sendmessage) Windows 関数を使用します。
 
 ##  <a name="ongetdlgcode"></a>  CWnd::OnGetDlgCode
 
@@ -7012,7 +7012,7 @@ afx_msg void OnGetMinMaxInfo(MINMAXINFO* lpMMI);
 ### <a name="parameters"></a>パラメーター
 
 *lpMMI*<br/>
-ウィンドウの最大`MINMAXINFO`サイズと位置、および最小および最大の追跡サイズに関する情報を格納する構造体を指します。 この構造の詳細については、 [MINMAXINFO](/windows/desktop/api/winuser/ns-winuser-tagminmaxinfo)構造体を参照してください。
+ウィンドウの最大`MINMAXINFO`サイズと位置、および最小および最大の追跡サイズに関する情報を格納する構造体を指します。 この構造の詳細については、 [MINMAXINFO](/windows/win32/api/winuser/ns-winuser-minmaxinfo)構造体を参照してください。
 
 ### <a name="remarks"></a>Remarks
 
@@ -7070,7 +7070,7 @@ afx_msg BOOL OnHelpInfo(HELPINFO* lpHelpInfo);
 ### <a name="parameters"></a>パラメーター
 
 *lpHelpInfo*<br/>
-ヘルプが要求されたメニュー項目、コントロール、ダイアログボックス、またはウィンドウに関する情報を格納している[HELPINFO](/windows/desktop/api/winuser/ns-winuser-taghelpinfo)構造体へのポインター。
+ヘルプが要求されたメニュー項目、コントロール、ダイアログボックス、またはウィンドウに関する情報を格納している[HELPINFO](/windows/win32/api/winuser/ns-winuser-helpinfo)構造体へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -7113,7 +7113,7 @@ afx_msg void OnHotKey(
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、Windows SDK で説明されている[WM_HOTKEY](/windows/desktop/inputdev/wm-hotkey)通知を受け取ります。 このメッセージは、ホットキーを登録したスレッドに関連付けられているメッセージキューの先頭に配置されます。 [Registerhotkey](/windows/desktop/api/winuser/nf-winuser-registerhotkey) 関数を使用して、システム全体のホットキーを登録します。
+このメソッドは、Windows SDK で説明されている[WM_HOTKEY](/windows/win32/inputdev/wm-hotkey)通知を受け取ります。 このメッセージは、ホットキーを登録したスレッドに関連付けられているメッセージキューの先頭に配置されます。 [Registerhotkey](/windows/win32/api/winuser/nf-winuser-registerhotkey) 関数を使用して、システム全体のホットキーを登録します。
 
 > [!NOTE]
 > このメンバー関数は、アプリケーションで Windows メッセージを処理できるようにするためにフレームワークによって呼び出されます。 関数に渡されるパラメーターは、メッセージを受信したときにフレームワークが受信したパラメーターを反映します。 この関数の基底クラス実装を呼び出す場合、その実装は、関数に指定したパラメーターではなく、メッセージと共に渡されたパラメーターを使用します。
@@ -7305,7 +7305,7 @@ afx_msg void OnInputDeviceChange(unsigned short uFlag);
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、Windows SDK で説明されている[WM_INPUT_DEVICE_CHANGE](/windows/desktop/inputdev/wm-input-device-change)通知を受け取ります。 は、一般的な入力デバイスメッセージです。
+このメソッドは、Windows SDK で説明されている[WM_INPUT_DEVICE_CHANGE](/windows/win32/inputdev/wm-input-device-change)通知を受け取ります。 は、一般的な入力デバイスメッセージです。
 
 > [!NOTE]
 > このメンバー関数は、アプリケーションで Windows メッセージを処理できるようにするためにフレームワークによって呼び出されます。 関数に渡されるパラメーターは、メッセージを受信したときにフレームワークが受信したパラメーターを反映します。 この関数の基底クラス実装を呼び出す場合、その実装は、関数に指定したパラメーターではなく、メッセージと共に渡されたパラメーターを使用します。
@@ -7324,12 +7324,12 @@ afx_msg void OnInputLangChange(
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*nCharSet*|から新しいロケールの文字セット。 詳細については、 [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)構造体の*lfCharSet*パラメーターを参照してください。|
-|*nLocaleId*|から入力ロケール識別子。 詳細については、「[言語識別子の定数と文字列](/windows/desktop/Intl/language-identifier-constants-and-strings)」を参照してください。|
+|*nCharSet*|から新しいロケールの文字セット。 詳細については、 [LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw)構造体の*lfCharSet*パラメーターを参照してください。|
+|*nLocaleId*|から入力ロケール識別子。 詳細については、「[言語識別子の定数と文字列](/windows/win32/Intl/language-identifier-constants-and-strings)」を参照してください。|
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、Windows SDK で説明されている[WM_INPUTLANGCHANGE](/windows/desktop/winmsg/wm-inputlangchange)通知メッセージを受信します。
+このメソッドは、Windows SDK で説明されている[WM_INPUTLANGCHANGE](/windows/win32/winmsg/wm-inputlangchange)通知メッセージを受信します。
 
 > [!NOTE]
 > このメンバー関数は、アプリケーションで Windows メッセージを処理できるようにするためにフレームワークによって呼び出されます。 関数に渡されるパラメーターは、メッセージを受信したときにフレームワークが受信したパラメーターを反映します。 この関数の基底クラス実装を呼び出す場合、その実装は、関数に指定したパラメーターではなく、メッセージと共に渡されたパラメーターを使用します。
@@ -7349,11 +7349,11 @@ afx_msg void OnInputLangChangeRequest(
 |パラメーター|説明|
 |---------------|-----------------|
 |*nFlags*|からインストールされているロケールの一覧で、前または次のロケールから新しいロケールが選択されたことを示すフラグのビットごとの (または) 組み合わせ。または、新しい入力ロケールのキーボードレイアウトをシステム文字セットと共に使用できます。<br /><br /> 指定できる値は、INPUTLANGCHANGE_BACKWARD、INPUTLANGCHANGE_FORWARD、および INPUTLANGCHANGE_SYSCHARSET です。|
-|*nLocaleId*|から入力ロケール識別子。 詳細については、「[言語識別子の定数と文字列](/windows/desktop/Intl/language-identifier-constants-and-strings)」を参照してください。|
+|*nLocaleId*|から入力ロケール識別子。 詳細については、「[言語識別子の定数と文字列](/windows/win32/Intl/language-identifier-constants-and-strings)」を参照してください。|
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、Windows SDK で説明されている[WM_INPUTLANGCHANGEREQUEST](/windows/desktop/winmsg/wm-inputlangchangerequest)通知メッセージを受信します。 このメッセージは、ユーザーが新しい入力言語を選択したときに、キーボードのコントロールパネルアプリケーションで指定されたホットキーか、システムタスクバーのインジケーターから表示されます。
+このメソッドは、Windows SDK で説明されている[WM_INPUTLANGCHANGEREQUEST](/windows/win32/winmsg/wm-inputlangchangerequest)通知メッセージを受信します。 このメッセージは、ユーザーが新しい入力言語を選択したときに、キーボードのコントロールパネルアプリケーションで指定されたホットキーか、システムタスクバーのインジケーターから表示されます。
 
 > [!NOTE]
 > このメンバー関数は、アプリケーションで Windows メッセージを処理できるようにするためにフレームワークによって呼び出されます。 関数に渡されるパラメーターは、メッセージを受信したときにフレームワークが受信したパラメーターを反映します。 この関数の基底クラス実装を呼び出す場合、その実装は、関数に指定したパラメーターではなく、メッセージと共に渡されたパラメーターを使用します。
@@ -7496,7 +7496,7 @@ afx_msg void OnLButtonDblClk(
 
 ### <a name="remarks"></a>Remarks
 
-CS_DBLCLKS [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa)スタイルを持つ windows だけが呼び出しを`OnLButtonDblClk`受け取ります。 これは、Microsoft Foundation Class windows の既定の設定です。 ユーザーが`OnLButtonDblClk`システムのダブルクリックの時間制限内でマウスの左ボタンをもう一度押すと、Windows はを呼び出します。 マウスの左ボタンをダブルクリックすると、次の4つのイベントが生成されます。ボタンが離されたときの[WM_LBUTTONDOWN](#onlbuttondown)、 [WM_LBUTTONUP](#onlbuttonup)メッセージ、WM_LBUTTONDBLCLK 呼び出し、および別の WM_LBUTTONUP メッセージ。
+CS_DBLCLKS [WNDCLASS](/windows/win32/api/winuser/ns-winuser-wndclassw)スタイルを持つ windows だけが呼び出しを`OnLButtonDblClk`受け取ります。 これは、Microsoft Foundation Class windows の既定の設定です。 ユーザーが`OnLButtonDblClk`システムのダブルクリックの時間制限内でマウスの左ボタンをもう一度押すと、Windows はを呼び出します。 マウスの左ボタンをダブルクリックすると、次の4つのイベントが生成されます。ボタンが離されたときの[WM_LBUTTONDOWN](#onlbuttondown)、 [WM_LBUTTONUP](#onlbuttonup)メッセージ、WM_LBUTTONDBLCLK 呼び出し、および別の WM_LBUTTONUP メッセージ。
 
 > [!NOTE]
 > このメンバー関数は、アプリケーションで Windows メッセージを処理できるようにするためにフレームワークによって呼び出されます。 関数に渡されるパラメーターは、メッセージを受信したときにフレームワークが受信したパラメーターを反映します。 この関数の基底クラス実装を呼び出す場合、その実装は、関数に指定したパラメーターではなく、メッセージと共に渡されたパラメーターを使用します。
@@ -7595,7 +7595,7 @@ afx_msg void OnMButtonDblClk(
 
 ### <a name="remarks"></a>Remarks
 
-CS_DBLCLKS [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa)スタイルを持つ windows だけが呼び出しを`OnMButtonDblClk`受け取ります。 これは、すべての Microsoft Foundation Class ウィンドウの既定値です。 Windows では`OnMButtonDblClk` 、ユーザーがシステムのダブルクリック時の制限内でマウスの中央ボタンをもう一度押してから離したときに、呼び出しが生成されます。 マウスの中央ボタンをダブルクリックすると、実際に4つのイベントが生成されます。[WM_MBUTTONDOWN](#onmbuttondown)と[WM_MBUTTONUP](#onmbuttonup)のメッセージ、WM_MBUTTONDBLCLK 呼び出し、および別の WM_MBUTTONUP メッセージ。
+CS_DBLCLKS [WNDCLASS](/windows/win32/api/winuser/ns-winuser-wndclassw)スタイルを持つ windows だけが呼び出しを`OnMButtonDblClk`受け取ります。 これは、すべての Microsoft Foundation Class ウィンドウの既定値です。 Windows では`OnMButtonDblClk` 、ユーザーがシステムのダブルクリック時の制限内でマウスの中央ボタンをもう一度押してから離したときに、呼び出しが生成されます。 マウスの中央ボタンをダブルクリックすると、実際に4つのイベントが生成されます。[WM_MBUTTONDOWN](#onmbuttondown)と[WM_MBUTTONUP](#onmbuttonup)のメッセージ、WM_MBUTTONDBLCLK 呼び出し、および別の WM_MBUTTONUP メッセージ。
 
 > [!NOTE]
 > このメンバー関数は、アプリケーションで Windows メッセージを処理できるようにするためにフレームワークによって呼び出されます。 関数に渡されるパラメーターは、メッセージを受信したときにフレームワークが受信したパラメーターを反映します。 この関数の基底クラス実装を呼び出す場合、その実装は、関数に指定したパラメーターではなく、メッセージと共に渡されたパラメーターを使用します。
@@ -7708,7 +7708,7 @@ afx_msg void OnMeasureItem(
 コントロールの ID。
 
 *lpMeasureItemStruct*<br/>
-オーナー描画コントロールの大きさを格納している[MEASUREITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagmeasureitemstruct)データ構造体を指します。
+オーナー描画コントロールの大きさを格納している[MEASUREITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-measureitemstruct)データ構造体を指します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -7716,11 +7716,11 @@ afx_msg void OnMeasureItem(
 
 リストボックスまたはコンボボックスが[LBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)または[CBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)スタイルで作成されている場合、フレームワークはコントロール内の各項目の所有者に対してこの関数を呼び出します。それ以外の場合、この関数は1回呼び出されます。
 
-[WM_INITDIALOG](/windows/desktop/dlgbox/wm-initdialog) メッセージを送信する前に、ownerdrawfixed スタイルを使用して作成されたコンボボックスおよびリストボックスの所有者に対して、`OnMeasureItem` への呼び出しが開始されます。 その結果、所有者がこの呼び出しを受け取ると、コントロールで使用されているフォントの高さと幅がまだ決定されていません。これらの値を必要とする関数呼び出しと計算は、アプリケーションまたはライブラリの main 関数で発生する必要があります。
+[WM_INITDIALOG](/windows/win32/dlgbox/wm-initdialog) メッセージを送信する前に、ownerdrawfixed スタイルを使用して作成されたコンボボックスおよびリストボックスの所有者に対して、`OnMeasureItem` への呼び出しが開始されます。 その結果、所有者がこの呼び出しを受け取ると、コントロールで使用されているフォントの高さと幅がまだ決定されていません。これらの値を必要とする関数呼び出しと計算は、アプリケーションまたはライブラリの main 関数で発生する必要があります。
 
 測定対象`CMenu`の項目が、、 `CListBox` `MeasureItem`または`CComboBox`オブジェクトである場合は、適切なクラスの仮想関数が呼び出されます。 適切なコントロールのクラスのメンバー関数をオーバーライドして、各項目のサイズを計算して設定します。`MeasureItem`
 
-`OnMeasureItem`は、コントロールのクラスが実行時に作成された場合、または LBS_OWNERDRAWVARIABLE または CBS_OWNERDRAWVARIABLE スタイルで作成された場合にのみ呼び出されます。 コントロールがダイアログエディターによって作成され`OnMeasureItem`た場合、は呼び出されません。 これは、 [WM_MEASUREITEM](/windows/desktop/Controls/wm-measureitem)メッセージが、コントロールの作成プロセスの早い段階で送信されるためです。 、 `DDX_Control` `SubclassWindow`、またはを使用してサブクラスを作成した場合、サブクラスは通常、作成プロセスの後に発生します。 `SubclassDlgItem` したがって、コントロールの`OnChildNotify`関数で[WM_MEASUREITEM](/windows/desktop/Controls/wm-measureitem)メッセージを処理する方法はありません。これは、MFC が ON_WM_MEASUREITEM_REFLECT を実装するときに使用するメカニズムです。
+`OnMeasureItem`は、コントロールのクラスが実行時に作成された場合、または LBS_OWNERDRAWVARIABLE または CBS_OWNERDRAWVARIABLE スタイルで作成された場合にのみ呼び出されます。 コントロールがダイアログエディターによって作成され`OnMeasureItem`た場合、は呼び出されません。 これは、 [WM_MEASUREITEM](/windows/win32/Controls/wm-measureitem)メッセージが、コントロールの作成プロセスの早い段階で送信されるためです。 、 `DDX_Control` `SubclassWindow`、またはを使用してサブクラスを作成した場合、サブクラスは通常、作成プロセスの後に発生します。 `SubclassDlgItem` したがって、コントロールの`OnChildNotify`関数で[WM_MEASUREITEM](/windows/win32/Controls/wm-measureitem)メッセージを処理する方法はありません。これは、MFC が ON_WM_MEASUREITEM_REFLECT を実装するときに使用するメカニズムです。
 
 > [!NOTE]
 > このメンバー関数は、アプリケーションで Windows メッセージを処理できるようにするためにフレームワークによって呼び出されます。 関数に渡されるパラメーターは、メッセージを受信したときにフレームワークが受信したパラメーターを反映します。 この関数の基底クラス実装を呼び出す場合、その実装は、関数に指定したパラメーターではなく、メッセージと共に渡されたパラメーターを使用します。
@@ -7792,7 +7792,7 @@ afx_msg UINT OnMenuDrag(
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、Windows SDK で説明されている[WM_MENUDRAG](/windows/desktop/menurc/wm-menudrag)通知を受け取ります。
+このメソッドは、Windows SDK で説明されている[WM_MENUDRAG](/windows/win32/menurc/wm-menudrag)通知を受け取ります。
 
 > [!NOTE]
 > このメンバー関数は、アプリケーションで Windows メッセージを処理できるようにするためにフレームワークによって呼び出されます。 関数に渡されるパラメーターは、メッセージを受信したときにフレームワークが受信したパラメーターを反映します。 この関数の基底クラス実装を呼び出す場合、その実装は、関数に指定したパラメーターではなく、メッセージと共に渡されたパラメーターを使用します。
@@ -7809,18 +7809,18 @@ afx_msg UINT OnMenuGetObject(MENUGETOBJECTINFO* pMenuGetObjectInfo);
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*pMenu*|からマウスカーソルがあるドラッグアンドドロップメニューに関する情報を含む[Menugetobjectinfo](/windows/desktop/api/winuser/ns-winuser-tagmenugetobjectinfo)構造体へのポインター。|
+|*pMenu*|からマウスカーソルがあるドラッグアンドドロップメニューに関する情報を含む[Menugetobjectinfo](/windows/win32/api/winuser/ns-winuser-menugetobjectinfo)構造体へのポインター。|
 
 ### <a name="return-value"></a>戻り値
 
 |戻り値|説明|
 |------------------|-------------|
-|MNGO_NOERROR|ドロップアンドドラッグ操作をサポートするインターフェイスポインターが、 `pvObj` [menugetobjectinfo](/windows/desktop/api/winuser/ns-winuser-tagmenugetobjectinfo)構造体のメンバーに返されます。 現時点では、 [IDropTarget](/windows/desktop/api/oleidl/nn-oleidl-idroptarget)インターフェイスのみがサポートされています。|
+|MNGO_NOERROR|ドロップアンドドラッグ操作をサポートするインターフェイスポインターが、 `pvObj` [menugetobjectinfo](/windows/win32/api/winuser/ns-winuser-menugetobjectinfo)構造体のメンバーに返されます。 現時点では、 [IDropTarget](/windows/win32/api/oleidl/nn-oleidl-idroptarget)インターフェイスのみがサポートされています。|
 |MNGO_NOINTERFACE|ドロップアンドドラッグインターフェイスはサポートされていません。|
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、Windows SDK で説明されている[WM_MENUGETOBJECT](/windows/desktop/menurc/wm-menugetobject)通知を受け取ります。
+このメソッドは、Windows SDK で説明されている[WM_MENUGETOBJECT](/windows/win32/menurc/wm-menugetobject)通知を受け取ります。
 
 > [!NOTE]
 > このメンバー関数は、アプリケーションで Windows メッセージを処理できるようにするためにフレームワークによって呼び出されます。 関数に渡されるパラメーターは、メッセージを受信したときにフレームワークが受信したパラメーターを反映します。 この関数の基底クラス実装を呼び出す場合、その実装は、関数に指定したパラメーターではなく、メッセージと共に渡されたパラメーターを使用します。
@@ -7844,7 +7844,7 @@ afx_msg void OnMenuRButtonUp(
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、Windows SDK で説明されている[WM_MENURBUTTONUP](/windows/desktop/menurc/wm-menurbuttonup)通知を受け取ります。 [WM_MENURBUTTONUP](/windows/desktop/menurc/wm-menurbuttonup)メッセージを使用すると、アプリケーションは、メッセージで指定されたメニュー項目に対して状況依存のメニューを提供できます。
+このメソッドは、Windows SDK で説明されている[WM_MENURBUTTONUP](/windows/win32/menurc/wm-menurbuttonup)通知を受け取ります。 [WM_MENURBUTTONUP](/windows/win32/menurc/wm-menurbuttonup)メッセージを使用すると、アプリケーションは、メッセージで指定されたメニュー項目に対して状況依存のメニューを提供できます。
 
 > [!NOTE]
 > このメンバー関数は、アプリケーションで Windows メッセージを処理できるようにするためにフレームワークによって呼び出されます。 関数に渡されるパラメーターは、メッセージを受信したときにフレームワークが受信したパラメーターを反映します。 この関数の基底クラス実装を呼び出す場合、その実装は、関数に指定したパラメーターではなく、メッセージと共に渡されたパラメーターを使用します。
@@ -7945,7 +7945,7 @@ afx_msg int OnMouseActivate(
 
 ##  <a name="onmousehover"></a>  CWnd::OnMouseHover
 
-このメンバー関数は、 [TrackMouseEvent](/windows/desktop/api/winuser/nf-winuser-trackmouseevent)の前の呼び出しで指定された期間の間、カーソルがウィンドウのクライアント領域上に置かれたときに呼び出されます。
+このメンバー関数は、 [TrackMouseEvent](/windows/win32/api/winuser/nf-winuser-trackmouseevent)の前の呼び出しで指定された期間の間、カーソルがウィンドウのクライアント領域上に置かれたときに呼び出されます。
 
 ```
 afx_msg void OnMouseHover(
@@ -7962,9 +7962,9 @@ afx_msg void OnMouseHover(
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、Windows SDK で説明されている[WM_MOUSEHOVER](/windows/desktop/inputdev/wm-mousehover)通知を受け取ります。
+このメソッドは、Windows SDK で説明されている[WM_MOUSEHOVER](/windows/win32/inputdev/wm-mousehover)通知を受け取ります。
 
-*NFlags*パラメーターには、次の表に示す修飾子キーの組み合わせを指定できます。 詳細については、「[マウス入力につい](/windows/desktop/inputdev/about-mouse-input)て」を参照してください。
+*NFlags*パラメーターには、次の表に示す修飾子キーの組み合わせを指定できます。 詳細については、「[マウス入力につい](/windows/win32/inputdev/about-mouse-input)て」を参照してください。
 
 |修飾子キー|説明|
 |------------------|-----------------|
@@ -7994,20 +7994,20 @@ afx_msg void OnMouseHWheel(
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*nFlags*|からどの修飾子キーが押されたかを示すフラグのビットごとの組み合わせ (or)。 たとえば、MK_CONTROL フラグは、CTRL キーが押されたことを示します。<br /><br /> フラグの一覧については、「[マウス入力について](/windows/desktop/inputdev/about-mouse-input)」の「メッセージパラメーター」小見出しを参照してください。|
+|*nFlags*|からどの修飾子キーが押されたかを示すフラグのビットごとの組み合わせ (or)。 たとえば、MK_CONTROL フラグは、CTRL キーが押されたことを示します。<br /><br /> フラグの一覧については、「[マウス入力について](/windows/win32/inputdev/about-mouse-input)」の「メッセージパラメーター」小見出しを参照してください。|
 |*zDelta*|からWHEEL_DELTA の倍数または除算 (120) で表される、ホイールの回転距離を示します。 正の値は、ホイールが右に回転したことを示します。負の値は、ホイールが左に回転したことを示します。|
 |*未満*|からクライアント領域の左上隅を基準とする、カーソルの*x*座標と*y*座標を指定する[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)オブジェクト。|
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、Windows SDK で説明されている[WM_MOUSEHWHEEL](/windows/desktop/inputdev/wm-mousehwheel)通知メッセージを受信します。 このメッセージは、マウスの水平スクロールのホイールが傾いたり回転したりしたときにフォーカスがあるウィンドウに送信されます。
+このメソッドは、Windows SDK で説明されている[WM_MOUSEHWHEEL](/windows/win32/inputdev/wm-mousehwheel)通知メッセージを受信します。 このメッセージは、マウスの水平スクロールのホイールが傾いたり回転したりしたときにフォーカスがあるウィンドウに送信されます。
 
 > [!NOTE]
 > このメンバー関数は、アプリケーションで Windows メッセージを処理できるようにするためにフレームワークによって呼び出されます。 関数に渡されるパラメーターは、メッセージを受信したときにフレームワークが受信したパラメーターを反映します。 この関数の基底クラス実装を呼び出す場合、その実装は、関数に指定したパラメーターではなく、メッセージと共に渡されたパラメーターを使用します。
 
 ##  <a name="onmouseleave"></a>  CWnd::OnMouseLeave
 
-このメンバー関数は、 [TrackMouseEvent](/windows/desktop/api/winuser/nf-winuser-trackmouseevent)の前の呼び出しで指定されたウィンドウのクライアント領域からカーソルが出たときに呼び出されます。
+このメンバー関数は、 [TrackMouseEvent](/windows/win32/api/winuser/nf-winuser-trackmouseevent)の前の呼び出しで指定されたウィンドウのクライアント領域からカーソルが出たときに呼び出されます。
 
 ```
 afx_msg void OnMouseLeave();
@@ -8015,7 +8015,7 @@ afx_msg void OnMouseLeave();
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、Windows SDK で説明されている[WM_MOUSELEAVE](/windows/desktop/inputdev/wm-mouseleave)通知を受け取ります。
+このメソッドは、Windows SDK で説明されている[WM_MOUSELEAVE](/windows/win32/inputdev/wm-mouseleave)通知を受け取ります。
 
 > [!NOTE]
 > このメンバー関数は、アプリケーションで Windows メッセージを処理できるようにするためにフレームワークによって呼び出されます。 関数に渡されるパラメーターは、メッセージを受信したときにフレームワークが受信したパラメーターを反映します。 この関数の基底クラス実装を呼び出す場合、その実装は、関数に指定したパラメーターではなく、メッセージと共に渡されたパラメーターを使用します。
@@ -8093,7 +8093,7 @@ afx_msg BOOL OnMouseWheel(
 
 ### <a name="remarks"></a>Remarks
 
-オーバーライドしない`OnMouseWheel`限り、は既定の[WM_MOUSEWHEEL](/windows/desktop/inputdev/wm-mousewheel)を呼び出します。 Windows は、フォーカスのあるコントロールまたは子ウィンドウにメッセージを自動的にルーティングします。 Win32 関数[DefWindowProc](/windows/desktop/api/winuser/nf-winuser-defwindowproca)は、親チェーンを処理するウィンドウにメッセージを伝達します。
+オーバーライドしない`OnMouseWheel`限り、は既定の[WM_MOUSEWHEEL](/windows/win32/inputdev/wm-mousewheel)を呼び出します。 Windows は、フォーカスのあるコントロールまたは子ウィンドウにメッセージを自動的にルーティングします。 Win32 関数[DefWindowProc](/windows/win32/api/winuser/nf-winuser-defwindowprocw)は、親チェーンを処理するウィンドウにメッセージを伝達します。
 
 *Zdelta*パラメーターは、120で設定されている WHEEL_DELTA の倍数です。 この値は、実行されるアクションのしきい値です。このような操作の1つ (たとえば、1つ前の目盛りのスクロール) は、各デルタに対して発生します。
 
@@ -8143,7 +8143,7 @@ afx_msg void OnMoving(
 移動するウィンドウの端。
 
 *lpRect*<br/>
-項目の座標を格納する、 [CRect](../../atl-mfc-shared/reference/crect-class.md)または[RECT 構造体](/windows/desktop/api/windef/ns-windef-tagrect)のアドレス。
+項目の座標を格納する、 [CRect](../../atl-mfc-shared/reference/crect-class.md)または[RECT 構造体](/windows/win32/api/windef/ns-windef-rect)のアドレス。
 
 ### <a name="remarks"></a>Remarks
 
@@ -8190,7 +8190,7 @@ afx_msg void OnNcCalcSize(
 クライアント領域のどの部分に有効な情報が含まれるかをアプリケーションで指定するかどうかを指定します。 Windows は、新しいクライアント領域内の指定された領域に有効な情報をコピーします。 このパラメーターが TRUE の場合、アプリケーションでは、クライアント領域のどの部分が有効であるかを指定する必要があります。
 
 *lpncsp*<br/>
-アプリケーションが`CWnd`四角形の新しいサイズと位置 (クライアント領域、境界線、キャプション、スクロールバーなど) を計算するために使用できる情報を格納している[NCCALCSIZE_PARAMS](/windows/desktop/api/winuser/ns-winuser-tagnccalcsize_params)データ構造体を指します。
+アプリケーションが`CWnd`四角形の新しいサイズと位置 (クライアント領域、境界線、キャプション、スクロールバーなど) を計算するために使用できる情報を格納している[NCCALCSIZE_PARAMS](/windows/win32/api/winuser/ns-winuser-nccalcsize_params)データ構造体を指します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -8216,7 +8216,7 @@ afx_msg BOOL OnNcCreate(LPCREATESTRUCT lpCreateStruct);
 ### <a name="parameters"></a>パラメーター
 
 *lpCreateStruct*<br/>
-の`CWnd` [CREATESTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcreatestructa)データ構造体を指します。
+の`CWnd` [CREATESTRUCT](/windows/win32/api/winuser/ns-winuser-createstructw)データ構造体を指します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -8256,7 +8256,7 @@ afx_msg LRESULT OnNcHitTest(CPoint point);
 
 ### <a name="return-value"></a>戻り値
 
-マウスヒットテストの列挙値のいずれか。 値の一覧については、「 [WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest) 」を参照してください。
+マウスヒットテストの列挙値のいずれか。 値の一覧については、「 [WM_NCHITTEST](/windows/win32/inputdev/wm-nchittest) 」を参照してください。
 
 ### <a name="remarks"></a>Remarks
 
@@ -8276,7 +8276,7 @@ afx_msg void OnNcLButtonDblClk(
 ### <a name="parameters"></a>パラメーター
 
 *nHitTest*<br/>
-[ヒットテストコード](#onnchittest)を指定します。 ヒットテストは、カーソルの位置を決定するテストです。 値の一覧については、「 [WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest) 」を参照してください。
+[ヒットテストコード](#onnchittest)を指定します。 ヒットテストは、カーソルの位置を決定するテストです。 値の一覧については、「 [WM_NCHITTEST](/windows/win32/inputdev/wm-nchittest) 」を参照してください。
 
 *視点*<br/>
 カーソル位置`CPoint`の x および y 画面座標を格納しているオブジェクトを指定します。 これらの座標は、常に画面の左上隅に対して相対的です。
@@ -8301,7 +8301,7 @@ afx_msg void OnNcLButtonDown(
 ### <a name="parameters"></a>パラメーター
 
 *nHitTest*<br/>
-[ヒットテストコード](#onnchittest)を指定します。 ヒットテストは、カーソルの位置を決定するテストです。 値の一覧については、「 [WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest) 」を参照してください。
+[ヒットテストコード](#onnchittest)を指定します。 ヒットテストは、カーソルの位置を決定するテストです。 値の一覧については、「 [WM_NCHITTEST](/windows/win32/inputdev/wm-nchittest) 」を参照してください。
 
 *視点*<br/>
 カーソル位置`CPoint`の x および y 画面座標を格納しているオブジェクトを指定します。 これらの座標は、常に画面の左上隅に対して相対的です。
@@ -8326,7 +8326,7 @@ afx_msg void OnNcLButtonUp(
 ### <a name="parameters"></a>パラメーター
 
 *nHitTest*<br/>
-[ヒットテストコード](#onnchittest)を指定します。 ヒットテストは、カーソルの位置を決定するテストです。 値の一覧については、「 [WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest) 」を参照してください。
+[ヒットテストコード](#onnchittest)を指定します。 ヒットテストは、カーソルの位置を決定するテストです。 値の一覧については、「 [WM_NCHITTEST](/windows/win32/inputdev/wm-nchittest) 」を参照してください。
 
 *視点*<br/>
 カーソル位置`CPoint`の x および y 画面座標を格納しているオブジェクトを指定します。 これらの座標は、常に画面の左上隅に対して相対的です。
@@ -8409,7 +8409,7 @@ afx_msg void OnNcMButtonUp(
 
 ##  <a name="onncmousehover"></a>  CWnd::OnNcMouseHover
 
-このメンバー関数は、 [TrackMouseEvent](/windows/desktop/api/winuser/nf-winuser-trackmouseevent)の前の呼び出しで指定された期間、カーソルがウィンドウの非クライアント領域上に置かれたときに呼び出されます。
+このメンバー関数は、 [TrackMouseEvent](/windows/win32/api/winuser/nf-winuser-trackmouseevent)の前の呼び出しで指定された期間、カーソルがウィンドウの非クライアント領域上に置かれたときに呼び出されます。
 
 ```
 afx_msg void OnNcMouseHover(
@@ -8421,19 +8421,19 @@ afx_msg void OnNcMouseHover(
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*nHitTest*|から[WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest)メッセージを処理した結果として[CWnd::D efwindowproc](#defwindowproc)関数によって返されたヒットテストの値。|
+|*nHitTest*|から[WM_NCHITTEST](/windows/win32/inputdev/wm-nchittest)メッセージを処理した結果として[CWnd::D efwindowproc](#defwindowproc)関数によって返されたヒットテストの値。|
 |*視点*|から画面の左上隅を基準とするカーソルの*x*座標と*y*座標を指定する[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)オブジェクト。|
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、Windows SDK で説明されている[WM_NCMOUSEHOVER](/windows/desktop/inputdev/wm-ncmousehover)通知を受け取ります。
+このメソッドは、Windows SDK で説明されている[WM_NCMOUSEHOVER](/windows/win32/inputdev/wm-ncmousehover)通知を受け取ります。
 
 > [!NOTE]
 > このメンバー関数は、アプリケーションで Windows メッセージを処理できるようにするためにフレームワークによって呼び出されます。 関数に渡されるパラメーターは、メッセージを受信したときにフレームワークが受信したパラメーターを反映します。 この関数の基底クラス実装を呼び出す場合、その実装は、関数に指定したパラメーターではなく、メッセージと共に渡されたパラメーターを使用します。
 
 ##  <a name="onncmouseleave"></a>  CWnd::OnNcMouseLeave
 
-このメンバー関数は、 [TrackMouseEvent](/windows/desktop/api/winuser/nf-winuser-trackmouseevent)の前の呼び出しで指定されたウィンドウの非クライアント領域からカーソルが出たときに呼び出されます。
+このメンバー関数は、 [TrackMouseEvent](/windows/win32/api/winuser/nf-winuser-trackmouseevent)の前の呼び出しで指定されたウィンドウの非クライアント領域からカーソルが出たときに呼び出されます。
 
 ```
 afx_msg void OnNcMouseLeave();
@@ -8441,7 +8441,7 @@ afx_msg void OnNcMouseLeave();
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、Windows SDK で説明されている[WM_NCMOUSELEAVE](/windows/desktop/inputdev/wm-ncmouseleave)通知を受け取ります。
+このメソッドは、Windows SDK で説明されている[WM_NCMOUSELEAVE](/windows/win32/inputdev/wm-ncmouseleave)通知を受け取ります。
 
 > [!NOTE]
 > このメンバー関数は、アプリケーションで Windows メッセージを処理できるようにするためにフレームワークによって呼び出されます。 関数に渡されるパラメーターは、メッセージを受信したときにフレームワークが受信したパラメーターを反映します。 この関数の基底クラス実装を呼び出す場合、その実装は、関数に指定したパラメーターではなく、メッセージと共に渡されたパラメーターを使用します。
@@ -8570,7 +8570,7 @@ afx_msg void OnNcRenderingChanged(BOOL bIsRendering);
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、Windows SDK で説明されている[WM_DWMNCRENDERINGCHANGED](/windows/desktop/dwm/wm-dwmncrenderingchanged)通知を受け取ります。
+このメソッドは、Windows SDK で説明されている[WM_DWMNCRENDERINGCHANGED](/windows/win32/dwm/wm-dwmncrenderingchanged)通知を受け取ります。
 
 > [!NOTE]
 > このメンバー関数は、アプリケーションで Windows メッセージを処理できるようにするためにフレームワークによって呼び出されます。 関数に渡されるパラメーターは、メッセージを受信したときにフレームワークが受信したパラメーターを反映します。 この関数の基底クラス実装を呼び出す場合、その実装は、関数に指定したパラメーターではなく、メッセージと共に渡されたパラメーターを使用します。
@@ -8590,13 +8590,13 @@ void OnNcXButtonDblClk(
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*nHitTest*|から[WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest)メッセージを処理した結果として[CWnd::D efwindowproc](#defwindowproc)関数によって返されたヒットテストの値。|
+|*nHitTest*|から[WM_NCHITTEST](/windows/win32/inputdev/wm-nchittest)メッセージを処理した結果として[CWnd::D efwindowproc](#defwindowproc)関数によって返されたヒットテストの値。|
 |*nButton*|から最初の Microsoft Intellimouse X ボタンがダブルクリックされた場合は XBUTTON1、2番目の X ボタンがダブルクリックされた場合は XBUTTON2 になります。|
 |*視点*|からクライアント領域の左上隅を基準とする、カーソルの*x*座標と*y*座標を指定する[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)オブジェクト。|
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、Windows SDK で説明されている[WM_XBUTTONDBLCLK](/windows/desktop/inputdev/wm-xbuttondblclk)通知を受け取ります。 このメッセージは、カーソルを含むウィンドウにポストされます。 ウィンドウがマウスをキャプチャした場合、このメッセージはポストされません。
+このメソッドは、Windows SDK で説明されている[WM_XBUTTONDBLCLK](/windows/win32/inputdev/wm-xbuttondblclk)通知を受け取ります。 このメッセージは、カーソルを含むウィンドウにポストされます。 ウィンドウがマウスをキャプチャした場合、このメッセージはポストされません。
 
 > [!NOTE]
 > このメンバー関数は、アプリケーションで Windows メッセージを処理できるようにするためにフレームワークによって呼び出されます。 関数に渡されるパラメーターは、メッセージを受信したときにフレームワークが受信したパラメーターを反映します。 この関数の基底クラス実装を呼び出す場合、その実装は、関数に指定したパラメーターではなく、メッセージと共に渡されたパラメーターを使用します。
@@ -8616,13 +8616,13 @@ afx_msg void OnNcXButtonDown(
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*nHitTest*|から[WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest)メッセージを処理した結果として[CWnd::D efwindowproc](#defwindowproc)関数によって返されたヒットテストの値。|
+|*nHitTest*|から[WM_NCHITTEST](/windows/win32/inputdev/wm-nchittest)メッセージを処理した結果として[CWnd::D efwindowproc](#defwindowproc)関数によって返されたヒットテストの値。|
 |*nButton*|から最初のマウスの X ボタンが押された場合は XBUTTON1、2番目の X ボタンが押された場合は XBUTTON2 になります。|
 |*視点*|から画面の左上隅を基準とするカーソルの*x*座標と*y*座標を指定する[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)オブジェクト。|
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、Windows SDK で説明されている[WM_NCXBUTTONDOWN](/windows/desktop/inputdev/wm-ncxbuttondown)通知を受け取ります。 このメッセージは、カーソルを含むウィンドウにポストされます。 ウィンドウがマウスをキャプチャした場合、このメッセージはポストされません。
+このメソッドは、Windows SDK で説明されている[WM_NCXBUTTONDOWN](/windows/win32/inputdev/wm-ncxbuttondown)通知を受け取ります。 このメッセージは、カーソルを含むウィンドウにポストされます。 ウィンドウがマウスをキャプチャした場合、このメッセージはポストされません。
 
 > [!NOTE]
 > このメンバー関数は、アプリケーションで Windows メッセージを処理できるようにするためにフレームワークによって呼び出されます。 関数に渡されるパラメーターは、メッセージを受信したときにフレームワークが受信したパラメーターを反映します。 この関数の基底クラス実装を呼び出す場合、その実装は、関数に指定したパラメーターではなく、メッセージと共に渡されたパラメーターを使用します。
@@ -8642,13 +8642,13 @@ afx_msg void OnNcXButtonUp(
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*nHitTest*|から[WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest)メッセージを処理した結果として[CWnd::D efwindowproc](#defwindowproc)関数によって返されたヒットテストの値。|
+|*nHitTest*|から[WM_NCHITTEST](/windows/win32/inputdev/wm-nchittest)メッセージを処理した結果として[CWnd::D efwindowproc](#defwindowproc)関数によって返されたヒットテストの値。|
 |*nButton*|から最初のマウスの X ボタンが離された場合は XBUTTON1、2番目の X ボタンが離された場合は XBUTTON2 になります。|
 |*視点*|から画面の左上隅を基準とするカーソルの*x*座標と*y*座標を指定する[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)オブジェクト。|
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、Windows SDK で説明されている[WM_NCXBUTTONUP](/windows/desktop/inputdev/wm-ncxbuttonup)通知を受け取ります。 このメッセージは、カーソルを含むウィンドウにポストされます。 ウィンドウがマウスをキャプチャした場合、このメッセージはポストされません。
+このメソッドは、Windows SDK で説明されている[WM_NCXBUTTONUP](/windows/win32/inputdev/wm-ncxbuttonup)通知を受け取ります。 このメッセージは、カーソルを含むウィンドウにポストされます。 ウィンドウがマウスをキャプチャした場合、このメッセージはポストされません。
 
 > [!NOTE]
 > このメンバー関数は、アプリケーションで Windows メッセージを処理できるようにするためにフレームワークによって呼び出されます。 関数に渡されるパラメーターは、メッセージを受信したときにフレームワークが受信したパラメーターを反映します。 この関数の基底クラス実装を呼び出す場合、その実装は、関数に指定したパラメーターではなく、メッセージと共に渡されたパラメーターを使用します。
@@ -8667,12 +8667,12 @@ afx_msg void OnNextMenu(
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*nKey*|からどの修飾子キーが押されたかを示すフラグのビットごとの組み合わせ (or)。 たとえば、MK_CONTROL フラグは、CTRL キーが押されたことを示します。<br /><br /> フラグの一覧については、「[マウス入力について](/windows/desktop/inputdev/about-mouse-input)」の「メッセージパラメーター」小見出しを参照してください。|
-|*lpMdiNextMenu*|からアクティブにするメニューに関する情報を格納している[Mdinextmenu](/windows/desktop/api/winuser/ns-winuser-tagmdinextmenu)構造体へのポインター。|
+|*nKey*|からどの修飾子キーが押されたかを示すフラグのビットごとの組み合わせ (or)。 たとえば、MK_CONTROL フラグは、CTRL キーが押されたことを示します。<br /><br /> フラグの一覧については、「[マウス入力について](/windows/win32/inputdev/about-mouse-input)」の「メッセージパラメーター」小見出しを参照してください。|
+|*lpMdiNextMenu*|からアクティブにするメニューに関する情報を格納している[Mdinextmenu](/windows/win32/api/winuser/ns-winuser-mdinextmenu)構造体へのポインター。|
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、Windows SDK で説明されている[WM_UNINITMENUPOPUP](/windows/desktop/menurc/wm-uninitmenupopup)通知を受け取ります。 このメッセージに応答して、アプリケーションで[mdinextmenu](/windows/desktop/api/winuser/ns-winuser-tagmdinextmenu)構造体の`hwndNext` `hmenuNext`メンバーを設定して、切り替えるメニューを指定し、メンバーを使用してメニュー通知メッセージを受信するウィンドウを指定できます。
+このメソッドは、Windows SDK で説明されている[WM_UNINITMENUPOPUP](/windows/win32/menurc/wm-uninitmenupopup)通知を受け取ります。 このメッセージに応答して、アプリケーションで[mdinextmenu](/windows/win32/api/winuser/ns-winuser-mdinextmenu)構造体の`hwndNext` `hmenuNext`メンバーを設定して、切り替えるメニューを指定し、メンバーを使用してメニュー通知メッセージを受信するウィンドウを指定できます。
 
 > [!NOTE]
 > このメンバー関数は、アプリケーションで Windows メッセージを処理できるようにするためにフレームワークによって呼び出されます。 関数に渡されるパラメーターは、メッセージを受信したときにフレームワークが受信したパラメーターを反映します。 この関数の基底クラス実装を呼び出す場合、その実装は、関数に指定したパラメーターではなく、メッセージと共に渡されたパラメーターを使用します。
@@ -8725,7 +8725,7 @@ afx_msg UINT OnNotifyFormat(
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*pWnd*|から [WM_NOTIFY](/windows/desktop/controls/wm-notify) メッセージを送信するウィンドウを表す `CWnd` オブジェクトへのポインター。<br /><br /> このパラメーターは、 *n コマンド*パラメーターが NF_QUERY の場合はコントロールへのポインター、 *n コマンド*が NF_REQUERY の場合はコントロールの親ウィンドウへのポインターです。|
+|*pWnd*|から [WM_NOTIFY](/windows/win32/controls/wm-notify) メッセージを送信するウィンドウを表す `CWnd` オブジェクトへのポインター。<br /><br /> このパラメーターは、 *n コマンド*パラメーターが NF_QUERY の場合はコントロールへのポインター、 *n コマンド*が NF_REQUERY の場合はコントロールの親ウィンドウへのポインターです。|
 |*N コマンド*|からWM_NOTIFY メッセージを特殊化するコマンド値。 次の値を指定できます。<br /><br /> - NF_QUERY -<br />     メッセージは、Unicode または Unicode の構造を WM_NOTIFY メッセージで使用する必要があるかどうかを判断するためのクエリです。 このメッセージは、コントロールの作成時、およびこのメッセージの NF_REQUERY 形式への応答として、コントロールから親ウィンドウに送信されます。<br />- NF_REQUERY -<br />     メッセージは、このメッセージの NF_QUERY 形式を親ウィンドウに送信するためのコントロールの要求です。 この要求は親ウィンドウから送信され、WM_NOTIFY メッセージで使用する構造体の型について、親を再クエリするようにコントロールに要求します。 *N コマンド*パラメーターが NF_REQUERY の場合、戻り値は REQUERY 操作の結果になります。|
 
 ### <a name="return-value"></a>戻り値
@@ -8738,7 +8738,7 @@ afx_msg UINT OnNotifyFormat(
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、Windows SDK で説明されている[WM_NOTIFYFORMAT](/windows/desktop/Controls/wm-notifyformat)通知を受け取ります。 WM_NOTIFY メッセージは、コモンコントロールから親ウィンドウに送信され、親ウィンドウからコモンコントロールに送られます。
+このメソッドは、Windows SDK で説明されている[WM_NOTIFYFORMAT](/windows/win32/Controls/wm-notifyformat)通知を受け取ります。 WM_NOTIFY メッセージは、コモンコントロールから親ウィンドウに送信され、親ウィンドウからコモンコントロールに送られます。
 
 > [!NOTE]
 > このメンバー関数は、アプリケーションで Windows メッセージを処理できるようにするためにフレームワークによって呼び出されます。 関数に渡されるパラメーターは、メッセージを受信したときにフレームワークが受信したパラメーターを反映します。 この関数の基底クラス実装を呼び出す場合、その実装は、関数に指定したパラメーターではなく、メッセージと共に渡されたパラメーターを使用します。
@@ -8753,7 +8753,7 @@ afx_msg void OnPaint();
 
 ### <a name="remarks"></a>Remarks
 
-[WM_PAINT](/windows/desktop/gdi/the-wm-paint-message) message は、 [Updatewindow](#updatewindow)または[redrawwindow](#redrawwindow)メンバー関数が呼び出されたときに送信されます。
+[WM_PAINT](/windows/win32/gdi/the-wm-paint-message) message は、 [Updatewindow](#updatewindow)または[redrawwindow](#redrawwindow)メンバー関数が呼び出されたときに送信されます。
 
 RDW_INTERNALPAINT フラグが設定された`RedrawWindow`メンバー関数を呼び出した結果として、ウィンドウが内部描画メッセージを受信する場合があります。 この場合、ウィンドウに更新領域がない可能性があります。 アプリケーションは、ウィンドウに更新領域があるかどうかを判断するために、 [GetUpdateRect](#getupdaterect)メンバー関数を呼び出す必要があります。 が`GetUpdateRect` 0 を返した場合、アプリケーションは[beginpaint](#beginpaint)および[endpaint](#endpaint)メンバー関数を呼び出さないでください。
 
@@ -8765,9 +8765,9 @@ Wm_paint メッセージは、無効な領域との`RedrawWindow`呼び出しの
 
 の使用`WM_Paint`方法の詳細については、Windows SDK の次のトピックを参照してください。
 
-- [WM_PAINT メッセージ](/windows/desktop/gdi/the-wm-paint-message)
+- [WM_PAINT メッセージ](/windows/win32/gdi/the-wm-paint-message)
 
-- [WM_PAINT メッセージの使用](/windows/desktop/gdi/using-the-wm-paint-message)
+- [WM_PAINT メッセージの使用](/windows/win32/gdi/using-the-wm-paint-message)
 
 ##  <a name="onpaintclipboard"></a>  CWnd::OnPaintClipboard
 
@@ -8785,13 +8785,13 @@ afx_msg void OnPaintClipboard(
 クリップボード アプリケーション ウィンドウへのポインターを指定します。 ポインターは一時的である可能性があり、後で使用するために格納しないでください。
 
 *hPaintStruct*<br/>
-クライアント領域のどの部分を描画するかを定義する [PAINTSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagpaintstruct) データ構造を識別します。
+クライアント領域のどの部分を描画するかを定義する [PAINTSTRUCT](/windows/win32/api/winuser/ns-winuser-paintstruct) データ構造を識別します。
 
 ### <a name="remarks"></a>Remarks
 
 クライアント領域全体またはその一部のみを再描画する必要があるかどうかを判断するには、クリップボードの所有者が`rcpaint` 、 `PAINTSTRUCT`構造体のメンバーに指定された描画領域の寸法を、最新[のOnSizeClipboard](#onsizeclipboard)メンバー関数の呼び出しです。
 
-`OnPaintClipboard`では、 [globallock](/windows/desktop/api/winbase/nf-winbase-globallock) windows 関数を使用して`PAINTSTRUCT`データ構造体を含むメモリをロックし、そのメモリを[globallock](/windows/desktop/api/winbase/nf-winbase-globalunlock) windows 関数で終了する前にロック解除する必要があります。
+`OnPaintClipboard`では、 [globallock](/windows/win32/api/winbase/nf-winbase-globallock) windows 関数を使用して`PAINTSTRUCT`データ構造体を含むメモリをロックし、そのメモリを[globallock](/windows/win32/api/winbase/nf-winbase-globalunlock) windows 関数で終了する前にロック解除する必要があります。
 
 > [!NOTE]
 > このメンバー関数は、アプリケーションで Windows メッセージを処理できるようにするためにフレームワークによって呼び出されます。 関数に渡されるパラメーターは、メッセージを受信したときにフレームワークが受信したパラメーターを反映します。 この関数の基底クラス実装を呼び出す場合、その実装は、関数に指定したパラメーターではなく、メッセージと共に渡されたパラメーターを使用します。
@@ -8899,9 +8899,9 @@ afx_msg UINT OnPowerBroadcast(
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、Windows SDK で説明されている[WM_POWERBROADCAST](/windows/desktop/Power/wm-powerbroadcast)メッセージを受信します。
+このメソッドは、Windows SDK で説明されている[WM_POWERBROADCAST](/windows/win32/Power/wm-powerbroadcast)メッセージを受信します。
 
-*Npowerevent*パラメーターでは、バッテリ電源が切れている、電源状態が変化した、操作を中断するアクセス許可が要求または拒否された、操作がイベントの後に自動的に再開される、システムが操作を中断している、などのイベントを指定します。操作は、中断後に再開されます。 通常、 *nEventData*パラメーターは使用されません。 詳細については、 [WM_POWERBROADCAST](/windows/desktop/Power/wm-powerbroadcast)メッセージの*wParam*および*lParam*パラメーターを参照してください。
+*Npowerevent*パラメーターでは、バッテリ電源が切れている、電源状態が変化した、操作を中断するアクセス許可が要求または拒否された、操作がイベントの後に自動的に再開される、システムが操作を中断している、などのイベントを指定します。操作は、中断後に再開されます。 通常、 *nEventData*パラメーターは使用されません。 詳細については、 [WM_POWERBROADCAST](/windows/win32/Power/wm-powerbroadcast)メッセージの*wParam*および*lParam*パラメーターを参照してください。
 
 > [!NOTE]
 > このメンバー関数は、アプリケーションで Windows メッセージを処理できるようにするためにフレームワークによって呼び出されます。 関数に渡されるパラメーターは、メッセージを受信したときにフレームワークが受信したパラメーターを反映します。 この関数の基底クラス実装を呼び出す場合、その実装は、関数に指定したパラメーターではなく、メッセージと共に渡されたパラメーターを使用します。
@@ -8924,7 +8924,7 @@ afx_msg HCURSOR OnQueryDragIcon();
 
 ##  <a name="onqueryendsession"></a>  CWnd::OnQueryEndSession
 
-フレームワークは、ユーザーが Windows セッションを終了することを選択したとき、またはアプリケーションが[exitwindows](/windows/desktop/api/winuser/nf-winuser-exitwindows) Windows 関数を呼び出すと、このメンバー関数を呼び出します。
+フレームワークは、ユーザーが Windows セッションを終了することを選択したとき、またはアプリケーションが[exitwindows](/windows/win32/api/winuser/nf-winuser-exitwindows) Windows 関数を呼び出すと、このメンバー関数を呼び出します。
 
 ```
 afx_msg BOOL OnQueryEndSession();
@@ -8986,7 +8986,7 @@ afx_msg UINT OnQueryUIState();
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は、Windows SDK で説明されているように、 [WM_QUERYUISTATE](/windows/desktop/menurc/wm-queryuistate)メッセージの機能をエミュレートします。
+このメンバー関数は、Windows SDK で説明されているように、 [WM_QUERYUISTATE](/windows/win32/menurc/wm-queryuistate)メッセージの機能をエミュレートします。
 
 ##  <a name="onrawinput"></a>  CWnd::OnRawInput
 
@@ -9003,11 +9003,11 @@ afx_msg void OnRawInput(
 |パラメーター|説明|
 |---------------|-----------------|
 |*nInputCode*|からアプリケーションがフォアグラウンドにあるときに入力が発生したかどうかを示す入力コード。 どちらの場合も、アプリケーションは[CWnd::D efwindowproc](#defwindowproc)を呼び出して、システムがクリーンアップを実行できるようにする必要があります。<br /><br /> このパラメーターには、次のいずれかの値を指定できます。<br /><br /> -RIM_INPUT-アプリケーションがフォアグラウンドで実行されている間に入力が発生しました。<br />-RIM_INPUTSINK-アプリケーションがフォアグラウンドにない間に入力が発生しました。|
-|*hRawInput*|からデバイスからの未加工の入力を含む[Rawinput](/windows/desktop/api/winuser/ns-winuser-tagrawinput)構造体を処理します。|
+|*hRawInput*|からデバイスからの未加工の入力を含む[Rawinput](/windows/win32/api/winuser/ns-winuser-rawinput)構造体を処理します。|
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、Windows SDK で説明されている[WM_INPUT](/windows/desktop/inputdev/wm-appcommand)通知を受け取ります。
+このメソッドは、Windows SDK で説明されている[WM_INPUT](/windows/win32/inputdev/wm-appcommand)通知を受け取ります。
 
 > [!NOTE]
 > このメンバー関数は、アプリケーションで Windows メッセージを処理できるようにするためにフレームワークによって呼び出されます。 関数に渡されるパラメーターは、メッセージを受信したときにフレームワークが受信したパラメーターを反映します。 この関数の基底クラス実装を呼び出す場合、その実装は、関数に指定したパラメーターではなく、メッセージと共に渡されたパラメーターを使用します。
@@ -9042,7 +9042,7 @@ afx_msg void OnRButtonDblClk(
 
 ### <a name="remarks"></a>Remarks
 
-CS_DBLCLKS [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa)スタイルを持つ windows だけが呼び出しを`OnRButtonDblClk`受け取ることができます。 これは、Microsoft Foundation Class ライブラリ内の windows の既定の設定です。 Windows は`OnRButtonDblClk` 、ユーザーがを押したときにを呼び出し、システムのダブルクリックの制限時間内にマウスの右ボタンを再度押したときに、を呼び出します。 マウスの右ボタンをダブルクリックすると、次の4つのイベントが生成されます。[WM_RBUTTONDOWN](#onrbuttondown)と[WM_RBUTTONUP](#onrbuttonup)の`OnRButtonDblClk`メッセージ、呼び出し、およびボタンが離されたときの別の WM_RBUTTONUP メッセージ。
+CS_DBLCLKS [WNDCLASS](/windows/win32/api/winuser/ns-winuser-wndclassw)スタイルを持つ windows だけが呼び出しを`OnRButtonDblClk`受け取ることができます。 これは、Microsoft Foundation Class ライブラリ内の windows の既定の設定です。 Windows は`OnRButtonDblClk` 、ユーザーがを押したときにを呼び出し、システムのダブルクリックの制限時間内にマウスの右ボタンを再度押したときに、を呼び出します。 マウスの右ボタンをダブルクリックすると、次の4つのイベントが生成されます。[WM_RBUTTONDOWN](#onrbuttondown)と[WM_RBUTTONUP](#onrbuttonup)の`OnRButtonDblClk`メッセージ、呼び出し、およびボタンが離されたときの別の WM_RBUTTONUP メッセージ。
 
 > [!NOTE]
 > このメンバー関数は、アプリケーションで Windows メッセージを処理できるようにするためにフレームワークによって呼び出されます。 関数に渡されるパラメーターは、メッセージを受信したときにフレームワークが受信したパラメーターを反映します。 この関数の基底クラス実装を呼び出す場合、その実装は、関数に指定したパラメーターではなく、メッセージと共に渡されたパラメーターを使用します。
@@ -9133,7 +9133,7 @@ afx_msg LRESULT OnRegisteredMouseWheel(
 
 ### <a name="remarks"></a>Remarks
 
-オーバーライドしない`OnRegisteredMouseWheel`限り、はメッセージを適切なウィンドウ (フォーカスのある親ウィンドウ) にルーティングし、そのウィンドウの[WM_MOUSEWHEEL](/windows/desktop/inputdev/wm-mousewheel)ハンドラーを呼び出します。
+オーバーライドしない`OnRegisteredMouseWheel`限り、はメッセージを適切なウィンドウ (フォーカスのある親ウィンドウ) にルーティングし、そのウィンドウの[WM_MOUSEWHEEL](/windows/win32/inputdev/wm-mousewheel)ハンドラーを呼び出します。
 
 独自のメッセージのルーティングを提供したり、マウスホイールのスクロール動作を変更したりするには、このメンバー関数をオーバーライドします。
 
@@ -9150,7 +9150,7 @@ afx_msg void OnRenderAllFormats();
 
 ### <a name="remarks"></a>Remarks
 
-クリップボードの所有者は、生成可能なすべての形式でデータを表示し、 [SetClipboardData](/windows/desktop/api/winuser/nf-winuser-setclipboarddata) Windows 関数を呼び出すことによって、各形式のデータハンドルをクリップボードに渡す必要があります。 これにより、データをレンダリングしたアプリケーションが破棄されても、クリップボードに有効なデータが格納されるようになります。 アプリケーションは、 [SetClipboardData](/windows/desktop/api/winuser/nf-winuser-setclipboarddata) windows 関数を呼び出す前に[openclipboard](#openclipboard)メンバー関数を呼び出し、後で[CloseClipboard](/windows/desktop/api/winuser/nf-winuser-closeclipboard) windows 関数を呼び出す必要があります。
+クリップボードの所有者は、生成可能なすべての形式でデータを表示し、 [SetClipboardData](/windows/win32/api/winuser/nf-winuser-setclipboarddata) Windows 関数を呼び出すことによって、各形式のデータハンドルをクリップボードに渡す必要があります。 これにより、データをレンダリングしたアプリケーションが破棄されても、クリップボードに有効なデータが格納されるようになります。 アプリケーションは、 [SetClipboardData](/windows/win32/api/winuser/nf-winuser-setclipboarddata) windows 関数を呼び出す前に[openclipboard](#openclipboard)メンバー関数を呼び出し、後で[CloseClipboard](/windows/win32/api/winuser/nf-winuser-closeclipboard) windows 関数を呼び出す必要があります。
 
 ##  <a name="onrenderformat"></a>  CWnd::OnRenderFormat
 
@@ -9167,7 +9167,7 @@ afx_msg void OnRenderFormat(UINT nFormat);
 
 ### <a name="remarks"></a>Remarks
 
-受信側は、その形式でデータを表示し、 [SetClipboardData](/windows/desktop/api/winuser/nf-winuser-setclipboarddata) Windows 関数を呼び出してクリップボードに渡す必要があります。
+受信側は、その形式でデータを表示し、 [SetClipboardData](/windows/win32/api/winuser/nf-winuser-setclipboarddata) Windows 関数を呼び出してクリップボードに渡す必要があります。
 
 メンバー関数`OpenClipboard` `CloseClipboard`または Windows 関数は、内`OnRenderFormat`から呼び出さないでください。
 
@@ -9193,9 +9193,9 @@ afx_msg void OnSessionChange(
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、Windows SDK で説明されている[WM_WTSSESSION_CHANGE](/windows/desktop/TermServ/wm-wtssession-change)通知を受け取ります。
+このメソッドは、Windows SDK で説明されている[WM_WTSSESSION_CHANGE](/windows/win32/TermServ/wm-wtssession-change)通知を受け取ります。
 
-*NSessionState*パラメーターは、セッションがコンソールまたはリモートターミナルとの間で接続または切断されているか、ユーザーがログオンまたはログオフしているか、セッションがロックまたはロック解除されているか、セッションがリモート制御状態に変更されたことを指定します。 詳細については、 [WM_WTSSESSION_CHANGE](/windows/desktop/TermServ/wm-wtssession-change)メッセージの*wParam*パラメーターを参照してください。
+*NSessionState*パラメーターは、セッションがコンソールまたはリモートターミナルとの間で接続または切断されているか、ユーザーがログオンまたはログオフしているか、セッションがロックまたはロック解除されているか、セッションがリモート制御状態に変更されたことを指定します。 詳細については、 [WM_WTSSESSION_CHANGE](/windows/win32/TermServ/wm-wtssession-change)メッセージの*wParam*パラメーターを参照してください。
 
 > [!NOTE]
 > このメンバー関数は、アプリケーションで Windows メッセージを処理できるようにするためにフレームワークによって呼び出されます。 関数に渡されるパラメーターは、メッセージを受信したときにフレームワークが受信したパラメーターを反映します。 この関数の基底クラス実装を呼び出す場合、その実装は、関数に指定したパラメーターではなく、メッセージと共に渡されたパラメーターを使用します。
@@ -9272,7 +9272,7 @@ afx_msg void OnSettingChange(
 ### <a name="parameters"></a>パラメーター
 
 *uFlags*<br/>
-システムが`SystemParametersInfo`呼び出しの結果としてメッセージを送信すると、このパラメーターは変更されたシステムパラメーターを示すフラグになります。 値の一覧については、Windows SDK の「 [SystemParametersInfo](/windows/desktop/api/winuser/nf-winuser-systemparametersinfoa) 」を参照してください。 アプリケーションがメッセージを送信する場合、このパラメーターは0である必要があります。
+システムが`SystemParametersInfo`呼び出しの結果としてメッセージを送信すると、このパラメーターは変更されたシステムパラメーターを示すフラグになります。 値の一覧については、Windows SDK の「 [SystemParametersInfo](/windows/win32/api/winuser/nf-winuser-systemparametersinfow) 」を参照してください。 アプリケーションがメッセージを送信する場合、このパラメーターは0である必要があります。
 
 *lpszSection*<br/>
 変更されたセクションの名前を指定する文字列を指します。 (文字列には、セクション名を囲む角かっこは含まれません)。
@@ -9383,7 +9383,7 @@ afx_msg void OnSizeClipboard(
 
 この`OnSizeClipboard`メンバー関数は、クリップボードアプリケーションが破棄または最小化されようとしているときに、新しいサイズとして null の四角形 (0、0、0、0) で呼び出されます。 これにより、クリップボードの所有者は、表示リソースを解放できます。
 
-内`OnSizeClipboard`では、アプリケーションは[globallock](/windows/desktop/api/winbase/nf-winbase-globallock) Windows 関数を使用して、RECT データ構造体を含むメモリをロックする必要があります。 アプリケーションで、 [globalunlock](/windows/desktop/api/winbase/nf-winbase-globalunlock) Windows 関数を使用してそのメモリのロックを解除してから、コントロールを生成または制御します。
+内`OnSizeClipboard`では、アプリケーションは[globallock](/windows/win32/api/winbase/nf-winbase-globallock) Windows 関数を使用して、RECT データ構造体を含むメモリをロックする必要があります。 アプリケーションで、 [globalunlock](/windows/win32/api/winbase/nf-winbase-globalunlock) Windows 関数を使用してそのメモリのロックを解除してから、コントロールを生成または制御します。
 
 > [!NOTE]
 > このメンバー関数は、アプリケーションで Windows メッセージを処理できるようにするためにフレームワークによって呼び出されます。 関数に渡されるパラメーターは、メッセージを受信したときにフレームワークが受信したパラメーターを反映します。 この関数の基底クラス実装を呼び出す場合、その実装は、関数に指定したパラメーターではなく、メッセージと共に渡されたパラメーターを使用します。
@@ -9404,7 +9404,7 @@ afx_msg void OnSizing(
 移動するウィンドウの端。
 
 *lpRect*<br/>
-項目の座標を格納する、 [CRect](../../atl-mfc-shared/reference/crect-class.md)または[RECT 構造体](/windows/desktop/api/windef/ns-windef-tagrect)のアドレス。
+項目の座標を格納する、 [CRect](../../atl-mfc-shared/reference/crect-class.md)または[RECT 構造体](/windows/win32/api/windef/ns-windef-rect)のアドレス。
 
 ### <a name="remarks"></a>Remarks
 
@@ -9444,7 +9444,7 @@ SP_JOBSTATUS フラグを指定します。
 
 ##  <a name="onstylechanged"></a>  CWnd::OnStyleChanged
 
-フレームワークは、 [SetWindowLong](/windows/desktop/api/winuser/nf-winuser-setwindowlonga)関数が1つ以上のウィンドウのスタイルを変更した後にこのメンバー関数を呼び出します。
+フレームワークは、 [SetWindowLong](/windows/win32/api/winuser/nf-winuser-setwindowlongw)関数が1つ以上のウィンドウのスタイルを変更した後にこのメンバー関数を呼び出します。
 
 ```
 afx_msg void OnStyleChanged(
@@ -9462,7 +9462,7 @@ afx_msg void OnStyleChanged(
 - GWL_STYLE ウィンドウの非拡張スタイルが変更されました。
 
 *Lpスタイル構造体*<br/>
-ウィンドウの新しいスタイルを格納しているスタイル[構造](/windows/desktop/api/winuser/ns-winuser-stylestruct)体を指します。 アプリケーションではスタイルを調べることができますが、変更することはできません。
+ウィンドウの新しいスタイルを格納しているスタイル[構造](/windows/win32/api/winuser/ns-winuser-stylestruct)体を指します。 アプリケーションではスタイルを調べることができますが、変更することはできません。
 
 ### <a name="remarks"></a>Remarks
 
@@ -9471,7 +9471,7 @@ afx_msg void OnStyleChanged(
 
 ##  <a name="onstylechanging"></a>  CWnd::OnStyleChanging
 
-フレームワークは、 [SetWindowLong](/windows/desktop/api/winuser/nf-winuser-setwindowlonga)関数が1つ以上のウィンドウのスタイルを変更しようとしているときに、このメンバー関数を呼び出します。
+フレームワークは、 [SetWindowLong](/windows/win32/api/winuser/nf-winuser-setwindowlongw)関数が1つ以上のウィンドウのスタイルを変更しようとしているときに、このメンバー関数を呼び出します。
 
 ```
 afx_msg void OnStyleChanging(
@@ -9489,7 +9489,7 @@ afx_msg void OnStyleChanging(
 - GWL_STYLE ウィンドウの非拡張スタイルが変更されました。
 
 *Lpスタイル構造体*<br/>
-ウィンドウの新しいスタイルを格納しているスタイル[構造](/windows/desktop/api/winuser/ns-winuser-stylestruct)体を指します。 アプリケーションでは、スタイルを確認して変更することができます。
+ウィンドウの新しいスタイルを格納しているスタイル[構造](/windows/win32/api/winuser/ns-winuser-stylestruct)体を指します。 アプリケーションでは、スタイルを確認して変更することができます。
 
 ### <a name="remarks"></a>Remarks
 
@@ -9532,7 +9532,7 @@ afx_msg void OnSysChar(
 
 これは、コントロールメニューキーの仮想キーコードを指定します。 (標準の仮想キーコードの一覧については、「Winuser. h」を参照してください)。
 
-コンテキストコードが0の場合、WM_SYSCHAR は[WM_SYSCHAR](/windows/desktop/menurc/wm-syschar)メッセージを[TranslateAccelerator](/windows/desktop/api/winuser/nf-winuser-translateacceleratora) Windows 関数に渡すことができます。これにより、システム文字キーではなく通常のキーメッセージと同じように処理されます。 これにより、アクティブウィンドウに入力フォーカスがない場合でも、アクティブウィンドウでアクセラレータキーを使用できるようになります。
+コンテキストコードが0の場合、WM_SYSCHAR は[WM_SYSCHAR](/windows/win32/menurc/wm-syschar)メッセージを[TranslateAccelerator](/windows/win32/api/winuser/nf-winuser-translateacceleratorw) Windows 関数に渡すことができます。これにより、システム文字キーではなく通常のキーメッセージと同じように処理されます。 これにより、アクティブウィンドウに入力フォーカスがない場合でも、アクティブウィンドウでアクセラレータキーを使用できるようになります。
 
 IBM Enhanced 101-と102キーのキーボードでは、拡張キーは、キーボードのメインセクションの右 ALT キーと右 CTRL キーです。テンキーの左側にあるクラスター内の INS、DEL、HOME、END、PAGE UP、PAGEDOWN、↓の各キーとスラッシュ (/) を入力し、テンキーでキーを入力します。 他のいくつかのキーボードは、 *nFlags*で拡張キービットをサポートしている場合があります。
 
@@ -9697,7 +9697,7 @@ afx_msg void OnSysKeyDown(
 
 現在入力フォーカスがあるウィンドウがない場合は、アクティブな`OnSysKeyDown`ウィンドウのメンバー関数が呼び出されます。 メッセージ`CWnd`を受け取るオブジェクトは、の`nFlags`コンテキストコードをチェックすることによって、これら2つのコンテキストを区別できます。
 
-コンテキストコードが0の場合、によって受信さ`OnSysKeyDown`れた WM_SYSKEYDOWN メッセージを[TranslateAccelerator](/windows/desktop/api/winuser/nf-winuser-translateacceleratora) Windows 関数に渡すことができます。これにより、システムキーメッセージではなく通常のキーメッセージと同様に処理が行われます。 これにより、アクティブウィンドウに入力フォーカスがない場合でも、アクティブウィンドウでアクセラレータキーを使用できるようになります。
+コンテキストコードが0の場合、によって受信さ`OnSysKeyDown`れた WM_SYSKEYDOWN メッセージを[TranslateAccelerator](/windows/win32/api/winuser/nf-winuser-translateacceleratorw) Windows 関数に渡すことができます。これにより、システムキーメッセージではなく通常のキーメッセージと同様に処理が行われます。 これにより、アクティブウィンドウに入力フォーカスがない場合でも、アクティブウィンドウでアクセラレータキーを使用できるようになります。
 
 自動繰り返しのため、 [WM_SYSKEYUP](#onsyskeyup)メッセージを受信`OnSysKeyDown`する前に複数の呼び出しが発生する可能性があります。 前のキーの状態 (ビット 14) を使用すると、呼び出し`OnSysKeyDown`によって最初のダウン遷移が示されるか、または繰り返し実行されるかを判断できます。
 
@@ -9744,7 +9744,7 @@ afx_msg void OnSysKeyUp(
 
 現在入力フォーカスがあるウィンドウがない場合は、アクティブな`OnSysKeyUp`ウィンドウのメンバー関数が呼び出されます。 呼び出しを受け取るオブジェクトは、nFlagsのコンテキストコードをチェックすることによって、これら2つのコンテキストを区別でき`CWnd`ます。
 
-コンテキストコードが0の場合、によって受信さ`OnSysKeyUp`れた WM_SYSKEYUP メッセージを[TranslateAccelerator](/windows/desktop/api/winuser/nf-winuser-translateacceleratora) Windows 関数に渡すことができます。これにより、システムキーメッセージではなく通常のキーメッセージと同様に処理が行われます。 これにより、アクティブウィンドウに入力フォーカスがない場合でも、アクティブウィンドウでアクセラレータ (ショートカット) キーを使用できるようになります。
+コンテキストコードが0の場合、によって受信さ`OnSysKeyUp`れた WM_SYSKEYUP メッセージを[TranslateAccelerator](/windows/win32/api/winuser/nf-winuser-translateacceleratorw) Windows 関数に渡すことができます。これにより、システムキーメッセージではなく通常のキーメッセージと同様に処理が行われます。 これにより、アクティブウィンドウに入力フォーカスがない場合でも、アクティブウィンドウでアクセラレータ (ショートカット) キーを使用できるようになります。
 
 IBM Enhanced 101-と102キーのキーボードでは、拡張キーは、キーボードのメインセクションの右 ALT キーと右 CTRL キーです。テンキーの左側にあるクラスター内の INS、DEL、HOME、END、PAGE UP、PAGEDOWN、↓の各キーとスラッシュ (/) を入力し、テンキーでキーを入力します。 他のいくつかのキーボードは、 *nFlags*で拡張キービットをサポートしている場合があります。
 
@@ -9755,7 +9755,7 @@ U 以外の場合。強化された 102-キーキーボード。右 ALT キー�
 |1.|[WM_KEYDOWN](#onkeydown)|VK_CONTROL|
 |2.|[WM_KEYDOWN](#onkeydown)|VK_MENU|
 |3.|[WM_KEYUP](#onkeyup)|VK_CONTROL|
-|4.|[WM_SYSKEYUP](/windows/desktop/inputdev/wm-syskeyup)|VK_MENU|
+|4.|[WM_SYSKEYUP](/windows/win32/inputdev/wm-syskeyup)|VK_MENU|
 
 > [!NOTE]
 > このメンバー関数は、アプリケーションで Windows メッセージを処理できるようにするためにフレームワークによって呼び出されます。 関数に渡されるパラメーターは、メッセージを受信したときにフレームワークが受信したパラメーターを反映します。 この関数の基底クラス実装を呼び出す場合、その実装は、関数に指定したパラメーターではなく、メッセージと共に渡されたパラメーターを使用します。
@@ -9816,7 +9816,7 @@ afx_msg void OnTimeChange();
 
 ### <a name="remarks"></a>Remarks
 
-システム時刻を変更するアプリケーションがある場合は、すべてのトップレベルウィンドウにこのメッセージを送信します。 WM_TIMECHANGE メッセージをすべてのトップレベルウィンドウに送信するために、アプリケーションは、その*hwnd*パラメーターを HWND_BROADCAST に設定して、 [SendMessage](/windows/desktop/api/winuser/nf-winuser-sendmessage) windows 関数を使用できます。
+システム時刻を変更するアプリケーションがある場合は、すべてのトップレベルウィンドウにこのメッセージを送信します。 WM_TIMECHANGE メッセージをすべてのトップレベルウィンドウに送信するために、アプリケーションは、その*hwnd*パラメーターを HWND_BROADCAST に設定して、 [SendMessage](/windows/win32/api/winuser/nf-winuser-sendmessage) windows 関数を使用できます。
 
 ##  <a name="ontimer"></a>  CWnd::OnTimer
 
@@ -9833,7 +9833,7 @@ afx_msg void OnTimer(UINT_PTR nIDEvent);
 
 ### <a name="remarks"></a>Remarks
 
-[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows 関数は、アプリケーションのメッセージキューに他のメッセージが含まれていない場合に、 [WM_TIMER](/windows/desktop/winmsg/wm-timer)メッセージを送信します。
+[DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) Windows 関数は、アプリケーションのメッセージキューに他のメッセージが含まれていない場合に、 [WM_TIMER](/windows/win32/winmsg/wm-timer)メッセージを送信します。
 
 > [!NOTE]
 > このメンバー関数は、アプリケーションで Windows メッセージを処理できるようにするためにフレームワークによって呼び出されます。 関数に渡されるパラメーターは、メッセージを受信したときにフレームワークが受信したパラメーターを反映します。 この関数の基底クラス実装を呼び出す場合、その実装は、関数に指定したパラメーターではなく、メッセージと共に渡されたパラメーターを使用します。
@@ -9858,7 +9858,7 @@ virtual INT_PTR OnToolHitTest(
 カーソルの x 座標と y 座標を指定します。 これらの座標は、常にウィンドウの左上隅を基準としています。
 
 *pTI*<br/>
-[TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa)構造体へのポインター。 既定では、次の構造値が設定されます。
+[TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-toolinfow)構造体へのポインター。 既定では、次の構造値が設定されます。
 
 -  = ウィンドウへの hwnd`m_hWnd`ハンドル
 
@@ -9880,7 +9880,7 @@ virtual INT_PTR OnToolHitTest(
 
 既定`OnToolHitTest`とは異なる情報を提供するようにをオーバーライドします。
 
-構造の詳細については、Windows SDK の「 [TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa)」を参照してください。
+構造の詳細については、Windows SDK の「 [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-toolinfow)」を参照してください。
 
 ##  <a name="ontouchinput"></a>  CWnd::OnTouchInput
 
@@ -9940,7 +9940,7 @@ TOUCHINPUT の配列。
 
 ##  <a name="onunichar"></a>  CWnd::OnUniChar
 
-フレームワークは、キーが押されたときにこのメンバー関数を呼び出します。 つまり、現在のウィンドウにはキーボードフォーカスがあり、 [WM_KEYDOWN](/windows/desktop/inputdev/wm-keydown)メッセージは[TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)関数によって変換されます。
+フレームワークは、キーが押されたときにこのメンバー関数を呼び出します。 つまり、現在のウィンドウにはキーボードフォーカスがあり、 [WM_KEYDOWN](/windows/win32/inputdev/wm-keydown)メッセージは[TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage)関数によって変換されます。
 
 ```
 afx_msg void OnUniChar(
@@ -9959,7 +9959,7 @@ afx_msg void OnUniChar(
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、Windows SDK で説明されている[WM_UNICHAR](/windows/desktop/inputdev/wm-unichar)通知を受け取ります。 [WM_UNICHAR](/windows/desktop/inputdev/wm-unichar)メッセージは、Unicode 文字を ANSI windows に送信または投稿するように設計されています。 これは、 [wm_char](/windows/desktop/inputdev/wm-char)メッセージに相当しますが、Unicode 変換形式-32 エンコード (32 utf-8) を使用します。一方、 [wm_char](/windows/desktop/inputdev/wm-char)メッセージでは utf-16 が使用されます。
+このメソッドは、Windows SDK で説明されている[WM_UNICHAR](/windows/win32/inputdev/wm-unichar)通知を受け取ります。 [WM_UNICHAR](/windows/win32/inputdev/wm-unichar)メッセージは、Unicode 文字を ANSI windows に送信または投稿するように設計されています。 これは、 [wm_char](/windows/win32/inputdev/wm-char)メッセージに相当しますが、Unicode 変換形式-32 エンコード (32 utf-8) を使用します。一方、 [wm_char](/windows/win32/inputdev/wm-char)メッセージでは utf-16 が使用されます。
 
 > [!NOTE]
 > このメンバー関数は、アプリケーションで Windows メッセージを処理できるようにするためにフレームワークによって呼び出されます。 関数に渡されるパラメーターは、メッセージを受信したときにフレームワークが受信したパラメーターを反映します。 この関数の基底クラス実装を呼び出す場合、その実装は、関数に指定したパラメーターではなく、メッセージと共に渡されたパラメーターを使用します。
@@ -9983,7 +9983,7 @@ afx_msg void OnUnInitMenuPopup(
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、Windows SDK で説明されている[WM_UNINITMENUPOPUP](/windows/desktop/menurc/wm-uninitmenupopup)通知を受け取ります。
+このメソッドは、Windows SDK で説明されている[WM_UNINITMENUPOPUP](/windows/win32/menurc/wm-uninitmenupopup)通知を受け取ります。
 
 > [!NOTE]
 > このメンバー関数は、アプリケーションで Windows メッセージを処理できるようにするためにフレームワークによって呼び出されます。 関数に渡されるパラメーターは、メッセージを受信したときにフレームワークが受信したパラメーターを反映します。 この関数の基底クラス実装を呼び出す場合、その実装は、関数に指定したパラメーターではなく、メッセージと共に渡されたパラメーターを使用します。
@@ -10005,7 +10005,7 @@ afx_msg void OnUpdateUIState(
 
 - UIS_CLEAR ( *Nuielement*によって指定された) UI 状態要素を非表示にする必要があります。
 
-- UIS_INITIALIZE ( *Nuielement*によって指定された) UI 状態要素は、最後の入力イベントに基づいて変更する必要があります。 詳細については、「 [WM_UPDATEISTATE](/windows/desktop/menurc/wm-updateuistate)」の「**解説**」を参照してください。
+- UIS_INITIALIZE ( *Nuielement*によって指定された) UI 状態要素は、最後の入力イベントに基づいて変更する必要があります。 詳細については、「 [WM_UPDATEISTATE](/windows/win32/menurc/wm-updateuistate)」の「**解説**」を参照してください。
 
 - UIS_SET ( *Nuielement*によって指定された) UI 状態要素を表示する必要があります。
 
@@ -10020,7 +10020,7 @@ afx_msg void OnUpdateUIState(
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は、Windows SDK で説明されているように、 [WM_UPDATEUISTATE](/windows/desktop/menurc/wm-updateuistate)メッセージの機能をエミュレートします。
+このメンバー関数は、Windows SDK で説明されているように、 [WM_UPDATEUISTATE](/windows/win32/menurc/wm-updateuistate)メッセージの機能をエミュレートします。
 
 ##  <a name="onuserchanged"></a>  CWnd::OnUserChanged
 
@@ -10032,7 +10032,7 @@ afx_msg void OnUserChanged();
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、Windows SDK で説明されている[WM_USERCHANGED](/windows/desktop/winmsg/wm-userchanged)通知メッセージを受信します。 ユーザーがログオンまたはログオフすると、オペレーティングシステムによってユーザー固有の設定が更新されます。 設定を更新した直後に、システムからこのメッセージが送信されます。
+このメソッドは、Windows SDK で説明されている[WM_USERCHANGED](/windows/win32/winmsg/wm-userchanged)通知メッセージを受信します。 ユーザーがログオンまたはログオフすると、オペレーティングシステムによってユーザー固有の設定が更新されます。 設定を更新した直後に、システムからこのメッセージが送信されます。
 
 > [!NOTE]
 > このメンバー関数は、アプリケーションで Windows メッセージを処理できるようにするためにフレームワークによって呼び出されます。 関数に渡されるパラメーターは、メッセージを受信したときにフレームワークが受信したパラメーターを反映します。 この関数の基底クラス実装を呼び出す場合、その実装は、関数に指定したパラメーターではなく、メッセージと共に渡されたパラメーターを使用します。
@@ -10180,14 +10180,14 @@ afx_msg void OnWindowMaximizedChanged(BOOL bIsMaximized);
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、Windows SDK で説明されている[WM_DWMWINDOWMAXIMIZEDCHANGE](/windows/desktop/dwm/wm-dwmwindowmaximizedchange)通知メッセージを受信します。
+このメソッドは、Windows SDK で説明されている[WM_DWMWINDOWMAXIMIZEDCHANGE](/windows/win32/dwm/wm-dwmwindowmaximizedchange)通知メッセージを受信します。
 
 > [!NOTE]
 > このメンバー関数は、アプリケーションで Windows メッセージを処理できるようにするためにフレームワークによって呼び出されます。 関数に渡されるパラメーターは、メッセージを受信したときにフレームワークが受信したパラメーターを反映します。 この関数の基底クラス実装を呼び出す場合、その実装は、関数に指定したパラメーターではなく、メッセージと共に渡されたパラメーターを使用します。
 
 ##  <a name="onwindowposchanged"></a>  CWnd::OnWindowPosChanged
 
-[SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos)メンバー関数または別のウィンドウ管理関数を呼び出した結果、サイズ、位置、または Z オーダーが変更された場合、フレームワークはこのメンバー関数を呼び出します。
+[SetWindowPos](/windows/win32/api/winuser/nf-winuser-setwindowpos)メンバー関数または別のウィンドウ管理関数を呼び出した結果、サイズ、位置、または Z オーダーが変更された場合、フレームワークはこのメンバー関数を呼び出します。
 
 ```
 afx_msg void OnWindowPosChanged(WINDOWPOS* lpwndpos);
@@ -10196,18 +10196,18 @@ afx_msg void OnWindowPosChanged(WINDOWPOS* lpwndpos);
 ### <a name="parameters"></a>パラメーター
 
 *lpwndpos*<br/>
-ウィンドウの新しいサイズと位置に関する情報を格納している[WINDOWPOS](/windows/desktop/api/winuser/ns-winuser-tagwindowpos)データ構造体を指します。
+ウィンドウの新しいサイズと位置に関する情報を格納している[WINDOWPOS](/windows/win32/api/winuser/ns-winuser-windowpos)データ構造体を指します。
 
 ### <a name="remarks"></a>Remarks
 
-既定の実装は、 [WM_SIZE](/windows/desktop/winmsg/wm-size)メッセージと[WM_MOVE](/windows/desktop/winmsg/wm-move)メッセージをウィンドウに送信します。 アプリケーションが基本クラスを呼び出さずに呼び出し`OnWindowPosChanged`を処理する場合、これらのメッセージは送信されません。 の呼び出し中に、基本クラスを呼び出さずに`OnWindowPosChanged` 、移動またはサイズ変更の処理を実行する方が効率的です。
+既定の実装は、 [WM_SIZE](/windows/win32/winmsg/wm-size)メッセージと[WM_MOVE](/windows/win32/winmsg/wm-move)メッセージをウィンドウに送信します。 アプリケーションが基本クラスを呼び出さずに呼び出し`OnWindowPosChanged`を処理する場合、これらのメッセージは送信されません。 の呼び出し中に、基本クラスを呼び出さずに`OnWindowPosChanged` 、移動またはサイズ変更の処理を実行する方が効率的です。
 
 > [!NOTE]
 > このメンバー関数は、アプリケーションで Windows メッセージを処理できるようにするためにフレームワークによって呼び出されます。 関数に渡されるパラメーターは、メッセージを受信したときにフレームワークが受信したパラメーターを反映します。 この関数の基底クラス実装を呼び出す場合、その実装は、関数に指定したパラメーターではなく、メッセージと共に渡されたパラメーターを使用します。
 
 ##  <a name="onwindowposchanging"></a>  CWnd::OnWindowPosChanging
 
-このメンバー関数は、 [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos)メンバー関数または別のウィンドウ管理関数の呼び出しの結果として、サイズ、位置、または Z オーダーが変更されるときに、フレームワークによって呼び出されます。
+このメンバー関数は、 [SetWindowPos](/windows/win32/api/winuser/nf-winuser-setwindowpos)メンバー関数または別のウィンドウ管理関数の呼び出しの結果として、サイズ、位置、または Z オーダーが変更されるときに、フレームワークによって呼び出されます。
 
 ```
 afx_msg void OnWindowPosChanging(WINDOWPOS* lpwndpos);
@@ -10220,9 +10220,9 @@ afx_msg void OnWindowPosChanging(WINDOWPOS* lpwndpos);
 
 ### <a name="remarks"></a>Remarks
 
-アプリケーションでは、 [WINDOWPOS](/windows/desktop/api/winuser/ns-winuser-tagwindowpos)構造体の**flags**メンバーで適切なビットを設定またはクリアすることによって、ウィンドウへの変更を防ぐことができます。
+アプリケーションでは、 [WINDOWPOS](/windows/win32/api/winuser/ns-winuser-windowpos)構造体の**flags**メンバーで適切なビットを設定またはクリアすることによって、ウィンドウへの変更を防ぐことができます。
 
-[WS_OVERLAPPED](styles-used-by-mfc.md#window-styles)スタイルまたは[WS_THICKFRAME](styles-used-by-mfc.md#window-styles)スタイルのウィンドウの場合、既定の実装では、 [WM_GETMINMAXINFO](/windows/desktop/winmsg/wm-getminmaxinfo)メッセージがウィンドウに送信されます。 これは、ウィンドウの新しいサイズと位置を検証し、CS_BYTEALIGNCLIENT および CS_BYTEALIGN クライアントスタイルを適用するために行われます。 アプリケーションは、基本クラスを呼び出さずに、この機能をオーバーライドできます。
+[WS_OVERLAPPED](styles-used-by-mfc.md#window-styles)スタイルまたは[WS_THICKFRAME](styles-used-by-mfc.md#window-styles)スタイルのウィンドウの場合、既定の実装では、 [WM_GETMINMAXINFO](/windows/win32/winmsg/wm-getminmaxinfo)メッセージがウィンドウに送信されます。 これは、ウィンドウの新しいサイズと位置を検証し、CS_BYTEALIGNCLIENT および CS_BYTEALIGN クライアントスタイルを適用するために行われます。 アプリケーションは、基本クラスを呼び出さずに、この機能をオーバーライドできます。
 
 > [!NOTE]
 > このメンバー関数は、アプリケーションで Windows メッセージを処理できるようにするためにフレームワークによって呼び出されます。 関数に渡されるパラメーターは、メッセージを受信したときにフレームワークが受信したパラメーターを反映します。 この関数の基底クラス実装を呼び出す場合、その実装は、関数に指定したパラメーターではなく、メッセージと共に渡されたパラメーターを使用します。
@@ -10242,9 +10242,9 @@ afx_msg void OnWinIniChange(LPCTSTR lpszSection);
 
 ### <a name="remarks"></a>Remarks
 
-[SystemParametersInfo](/windows/desktop/api/winuser/nf-winuser-systemparametersinfoa) Windows 関数は、 `OnWinIniChange`アプリケーションが関数を使用して WIN の設定を変更した後に、を呼び出します。INI ファイル。
+[SystemParametersInfo](/windows/win32/api/winuser/nf-winuser-systemparametersinfow) Windows 関数は、 `OnWinIniChange`アプリケーションが関数を使用して WIN の設定を変更した後に、を呼び出します。INI ファイル。
 
-WM_WININICHANGE メッセージをすべてのトップレベルウィンドウに送信するために、アプリケーションは、その*hwnd*パラメーターを HWND_BROADCAST に設定して、 [SendMessage](/windows/desktop/api/winuser/nf-winuser-sendmessage) windows 関数を使用できます。
+WM_WININICHANGE メッセージをすべてのトップレベルウィンドウに送信するために、アプリケーションは、その*hwnd*パラメーターを HWND_BROADCAST に設定して、 [SendMessage](/windows/win32/api/winuser/nf-winuser-sendmessage) windows 関数を使用できます。
 
 アプリケーションが WIN のさまざまなセクションを変更する場合。同時に、アプリケーションは、 *Lpszsection*が NULL に設定された1つの WM_WININICHANGE メッセージを送信する必要があります。 それ以外の場合、アプリケーションは、WIN に変更を加えるたびに WM_WININICHANGE を送信する必要があります.INI.
 
@@ -10310,9 +10310,9 @@ afx_msg void OnXButtonDblClk(
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、Windows SDK で説明されている[WM_XBUTTONDBLCLK](/windows/desktop/inputdev/wm-xbuttondblclk)通知を受け取ります。 マウスがキャプチャされていない場合は、カーソルの下のウィンドウにメッセージがポストされます。 それ以外の場合は、マウスをキャプチャしたウィンドウにメッセージがポストされます。
+このメソッドは、Windows SDK で説明されている[WM_XBUTTONDBLCLK](/windows/win32/inputdev/wm-xbuttondblclk)通知を受け取ります。 マウスがキャプチャされていない場合は、カーソルの下のウィンドウにメッセージがポストされます。 それ以外の場合は、マウスをキャプチャしたウィンドウにメッセージがポストされます。
 
-*NFlags*パラメーターには、次の表に示す修飾子キーの組み合わせを指定できます。 詳細については、「[マウス入力につい](/windows/desktop/inputdev/about-mouse-input)て」を参照してください。
+*NFlags*パラメーターには、次の表に示す修飾子キーの組み合わせを指定できます。 詳細については、「[マウス入力につい](/windows/win32/inputdev/about-mouse-input)て」を参照してください。
 
 |修飾子キー|説明|
 |------------------|-----------------|
@@ -10348,9 +10348,9 @@ afx_msg void OnXButtonDown(
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、Windows SDK で説明されている[WM_XBUTTONDOWN](/windows/desktop/inputdev/wm-xbuttondown)通知を受け取ります。 マウスがキャプチャされていない場合は、カーソルの下のウィンドウにメッセージがポストされます。 それ以外の場合は、マウスをキャプチャしたウィンドウにメッセージがポストされます。
+このメソッドは、Windows SDK で説明されている[WM_XBUTTONDOWN](/windows/win32/inputdev/wm-xbuttondown)通知を受け取ります。 マウスがキャプチャされていない場合は、カーソルの下のウィンドウにメッセージがポストされます。 それ以外の場合は、マウスをキャプチャしたウィンドウにメッセージがポストされます。
 
-*NFlags*パラメーターには、次の表に示す修飾子キーの組み合わせを指定できます。 詳細については、「[マウス入力につい](/windows/desktop/inputdev/about-mouse-input)て」を参照してください。
+*NFlags*パラメーターには、次の表に示す修飾子キーの組み合わせを指定できます。 詳細については、「[マウス入力につい](/windows/win32/inputdev/about-mouse-input)て」を参照してください。
 
 |修飾子キー|説明|
 |------------------|-----------------|
@@ -10386,9 +10386,9 @@ afx_msg void OnXButtonUp(
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、Windows SDK で説明されている[WM_XBUTTONUP](/windows/desktop/inputdev/wm-xbuttonup)通知を受け取ります。 マウスがキャプチャされていない場合は、カーソルの下のウィンドウにメッセージがポストされます。 それ以外の場合は、マウスをキャプチャしたウィンドウにメッセージがポストされます。
+このメソッドは、Windows SDK で説明されている[WM_XBUTTONUP](/windows/win32/inputdev/wm-xbuttonup)通知を受け取ります。 マウスがキャプチャされていない場合は、カーソルの下のウィンドウにメッセージがポストされます。 それ以外の場合は、マウスをキャプチャしたウィンドウにメッセージがポストされます。
 
-*NFlags*パラメーターには、次の表に示す修飾子キーの組み合わせを指定できます。 詳細については、「[マウス入力につい](/windows/desktop/inputdev/about-mouse-input)て」を参照してください。
+*NFlags*パラメーターには、次の表に示す修飾子キーの組み合わせを指定できます。 詳細については、「[マウス入力につい](/windows/win32/inputdev/about-mouse-input)て」を参照してください。
 
 |修飾子キー|説明|
 |------------------|-----------------|
@@ -10417,9 +10417,9 @@ BOOL OpenClipboard();
 
 ### <a name="remarks"></a>Remarks
 
-[CloseClipboard](/windows/desktop/api/winuser/nf-winuser-closeclipboard) Windows 関数が呼び出されるまで、他のアプリケーションはクリップボードを変更できません。
+[CloseClipboard](/windows/win32/api/winuser/nf-winuser-closeclipboard) Windows 関数が呼び出されるまで、他のアプリケーションはクリップボードを変更できません。
 
-現在`CWnd`のオブジェクトは、 [emptyclipboard](/windows/desktop/api/winuser/nf-winuser-emptyclipboard) Windows 関数が呼び出されるまでクリップボードの所有者になりません。
+現在`CWnd`のオブジェクトは、 [emptyclipboard](/windows/win32/api/winuser/nf-winuser-emptyclipboard) Windows 関数が呼び出されるまでクリップボードの所有者になりません。
 
 ### <a name="example"></a>例
 
@@ -10512,9 +10512,9 @@ BOOL PostMessage(
 
 ### <a name="remarks"></a>Remarks
 
-メッセージキュー内のメッセージは、 [GetMessage](/windows/desktop/api/winuser/nf-winuser-getmessage)または[PeekMessage](/windows/desktop/api/winuser/nf-winuser-peekmessagea) Windows 関数の呼び出しによって取得されます。
+メッセージキュー内のメッセージは、 [GetMessage](/windows/win32/api/winuser/nf-winuser-getmessage)または[PeekMessage](/windows/win32/api/winuser/nf-winuser-peekmessagew) Windows 関数の呼び出しによって取得されます。
 
-Windows の[PostMessage](/windows/desktop/api/winuser/nf-winuser-postmessagea)関数を使用すると、別のアプリケーションにアクセスできます。
+Windows の[PostMessage](/windows/win32/api/winuser/nf-winuser-postmessagew)関数を使用すると、別のアプリケーションにアクセスできます。
 
 ### <a name="example"></a>例
 
@@ -10543,7 +10543,7 @@ virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
 ### <a name="parameters"></a>パラメーター
 
 *cs*<br/>
-[CREATESTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcreatestructa)構造体。
+[CREATESTRUCT](/windows/win32/api/winuser/ns-winuser-createstructw)構造体。
 
 ### <a name="return-value"></a>戻り値
 
@@ -10582,7 +10582,7 @@ virtual void PreSubclassWindow();
 
 ##  <a name="pretranslatemessage"></a>  CWnd::PreTranslateMessage
 
-[TranslateMessage](../../mfc/reference/cwinapp-class.md) および [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) の各 Windows 関数にディスパッチされる前に、ウィンドウ メッセージを変換するためにクラス [CWinApp](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) で使用されます。
+[TranslateMessage](../../mfc/reference/cwinapp-class.md) および [DispatchMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) の各 Windows 関数にディスパッチされる前に、ウィンドウ メッセージを変換するためにクラス [CWinApp](/windows/win32/api/winuser/nf-winuser-dispatchmessage) で使用されます。
 
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -10591,7 +10591,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ### <a name="parameters"></a>パラメーター
 
 *pMsg*<br/>
-処理するメッセージを含む[MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg)構造体を指します。
+処理するメッセージを含む[MSG](/windows/win32/api/winuser/ns-winuser-msg)構造体を指します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -10635,11 +10635,11 @@ void Print(
 
 - PRF_NONCLIENT が指定されている場合は、指定されたデバイスコンテキストで非クライアント領域を描画します。
 
-- PRF_ERASEBKGND が指定されている場合は、 [WM_ERASEBKGND](/windows/desktop/winmsg/wm-erasebkgnd)メッセージをウィンドウに送信します。
+- PRF_ERASEBKGND が指定されている場合は、 [WM_ERASEBKGND](/windows/win32/winmsg/wm-erasebkgnd)メッセージをウィンドウに送信します。
 
-- PRF_CLIENT が指定されている場合は、 [WM_PRINTCLIENT](/windows/desktop/gdi/wm-printclient)メッセージをウィンドウに送信します。
+- PRF_CLIENT が指定されている場合は、 [WM_PRINTCLIENT](/windows/win32/gdi/wm-printclient)メッセージをウィンドウに送信します。
 
-- PRF_CHILDREN が設定されている場合は、表示されている各子ウィンドウに[WM_PRINT](/windows/desktop/gdi/wm-print)メッセージを送信します。
+- PRF_CHILDREN が設定されている場合は、表示されている各子ウィンドウに[WM_PRINT](/windows/win32/gdi/wm-print)メッセージを送信します。
 
 - PRF_OWNED が設定されている場合は、表示されている所有ウィンドウごとに WM_PRINT メッセージを送信します。
 
@@ -10689,7 +10689,7 @@ BOOL PrintWindow(
 出力先のデバイスコンテキストへのポインター。
 
 *nFlags*<br/>
-描画オプションを指定します。 使用可能な値の一覧については、「 [Printwindow](/windows/desktop/api/winuser/nf-winuser-printwindow)」を参照してください。
+描画オプションを指定します。 使用可能な値の一覧については、「 [Printwindow](/windows/win32/api/winuser/nf-winuser-printwindow)」を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
@@ -10697,7 +10697,7 @@ BOOL PrintWindow(
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は、Windows SDK で説明されているように、関数[Printwindow](/windows/desktop/api/winuser/nf-winuser-printwindow)の機能をエミュレートします。
+このメンバー関数は、Windows SDK で説明されているように、関数[Printwindow](/windows/win32/api/winuser/nf-winuser-printwindow)の機能をエミュレートします。
 
 ##  <a name="redrawwindow"></a>  CWnd::RedrawWindow
 
@@ -10713,7 +10713,7 @@ BOOL RedrawWindow(
 ### <a name="parameters"></a>パラメーター
 
 *lpRectUpdate*<br/>
-更新用の四角形の座標を格納している[RECT 構造体](/windows/desktop/api/windef/ns-windef-tagrect)を指します。 *Prgnupdate*に有効な地域ハンドルが含まれている場合、このパラメーターは無視されます。
+更新用の四角形の座標を格納している[RECT 構造体](/windows/win32/api/windef/ns-windef-rect)を指します。 *Prgnupdate*に有効な地域ハンドルが含まれている場合、このパラメーターは無視されます。
 
 *prgnUpdate*<br/>
 更新リージョンを識別します。 *Prgnupdate*と*lpRectUpdate*の両方が NULL の場合、クライアント領域全体が更新領域に追加されます。
@@ -10721,11 +10721,11 @@ BOOL RedrawWindow(
 *flags*<br/>
 次のフラグは、ウィンドウを無効にするために使用されます。
 
-- RDW_ERASE は、ウィンドウが再描画されるときに、ウィンドウが[WM_ERASEBKGND](/windows/desktop/winmsg/wm-erasebkgnd)メッセージを受け取るようにします。 RDW_INVALIDATE フラグも指定する必要があります。それ以外の場合、RDW_ERASE は無効です。
+- RDW_ERASE は、ウィンドウが再描画されるときに、ウィンドウが[WM_ERASEBKGND](/windows/win32/winmsg/wm-erasebkgnd)メッセージを受け取るようにします。 RDW_INVALIDATE フラグも指定する必要があります。それ以外の場合、RDW_ERASE は無効です。
 
-- RDW_FRAME により、更新領域と交差する、ウィンドウの非クライアント領域の任意の部分が[WM_NCPAINT](/windows/desktop/gdi/wm-ncpaint)メッセージを受信します。 RDW_INVALIDATE フラグも指定する必要があります。それ以外の場合、RDW_FRAME は無効です。
+- RDW_FRAME により、更新領域と交差する、ウィンドウの非クライアント領域の任意の部分が[WM_NCPAINT](/windows/win32/gdi/wm-ncpaint)メッセージを受信します。 RDW_INVALIDATE フラグも指定する必要があります。それ以外の場合、RDW_FRAME は無効です。
 
-- RDW_INTERNALPAINT を使用すると、ウィンドウに無効な領域が含まれているかどうかに関係なく、 [WM_PAINT](/windows/desktop/gdi/wm-paint)メッセージがウィンドウにポストされます。
+- RDW_INTERNALPAINT を使用すると、ウィンドウに無効な領域が含まれているかどうかに関係なく、 [WM_PAINT](/windows/win32/gdi/wm-paint)メッセージがウィンドウにポストされます。
 
 - RDW_INVALIDATE は*lpRectUpdate*または*prgnupdate*を無効にします (1 つだけ NULL 以外にすることができます)。 両方が NULL の場合、ウィンドウ全体が無効になります。
 
@@ -10757,7 +10757,7 @@ BOOL RedrawWindow(
 
 ### <a name="remarks"></a>Remarks
 
-`RedrawWindow` メンバー関数を使用してデスクトップウィンドウの一部を無効にすると、そのウィンドウは [WM_PAINT](/windows/desktop/gdi/wm-paint) メッセージを受信しません。 デスクトップを再描画するには、アプリケーションで[cwnd:: ValidateRgn](#validatergn)、 [Cwnd:: InvalidateRgn](#invalidatergn)、 [cwnd:: Updatewindow](#updatewindow)、または[redrawwindow](/windows/desktop/api/winuser/nf-winuser-redrawwindow)を使用する必要があります。
+`RedrawWindow` メンバー関数を使用してデスクトップウィンドウの一部を無効にすると、そのウィンドウは [WM_PAINT](/windows/win32/gdi/wm-paint) メッセージを受信しません。 デスクトップを再描画するには、アプリケーションで[cwnd:: ValidateRgn](#validatergn)、 [Cwnd:: InvalidateRgn](#invalidatergn)、 [cwnd:: Updatewindow](#updatewindow)、または[redrawwindow](/windows/win32/api/winuser/nf-winuser-redrawwindow)を使用する必要があります。
 
 ##  <a name="reflectchildnotify"></a>  CWnd::ReflectChildNotify
 
@@ -10883,10 +10883,10 @@ void RepositionBars(UINT nIDFirst,
 - `CWnd::reposExtra`*LpRectParam*の値を*nIDLast*のクライアント領域に追加し、レイアウトも実行します。
 
 *lpRectParam*<br/>
-は、 [RECT 構造体](/windows/desktop/api/windef/ns-windef-tagrect)を指します。の使用方法は、 *Nflag*の値によって異なります。
+は、 [RECT 構造体](/windows/win32/api/windef/ns-windef-rect)を指します。の使用方法は、 *Nflag*の値によって異なります。
 
 *lpRectClient*<br/>
-使用可能なクライアント領域を含む[RECT 構造体](/windows/desktop/api/windef/ns-windef-tagrect)を指します。 NULL の場合、ウィンドウのクライアント領域が使用されます。
+使用可能なクライアント領域を含む[RECT 構造体](/windows/win32/api/windef/ns-windef-rect)を指します。 NULL の場合、ウィンドウのクライアント領域が使用されます。
 
 *bStretch*<br/>
 バーをフレームのサイズに拡大する必要があるかどうかを示します。
@@ -10908,7 +10908,7 @@ int RunModalLoop(DWORD dwFlags = 0);
 *dwFlags*<br/>
 送信する Windows メッセージを指定します。 次のいずれかの値になります。
 
-- MLF_NOIDLEMSG は、 [WM_ENTERIDLE](/windows/desktop/dlgbox/wm-enteridle)メッセージを親に送信しません。
+- MLF_NOIDLEMSG は、 [WM_ENTERIDLE](/windows/win32/dlgbox/wm-enteridle)メッセージを親に送信しません。
 
 - MLF_NOKICKIDLE は、WM_KICKIDLE メッセージをウィンドウに送信しません。
 
@@ -10933,10 +10933,10 @@ void ScreenToClient(LPPOINT lpPoint) const;  void ScreenToClient(LPRECT lpRect) 
 ### <a name="parameters"></a>パラメーター
 
 *lpPoint*<br/>
-変換する画面座標を格納している[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)オブジェクトまたは[ポイント構造体](/windows/desktop/api/windef/ns-windef-tagpoint)を指します。
+変換する画面座標を格納している[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)オブジェクトまたは[ポイント構造体](/windows/win32/api/windef/ns-windef-point)を指します。
 
 *lpRect*<br/>
-変換する画面座標を含む[CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT 構造体](/windows/desktop/api/windef/ns-windef-tagrect)を指します。
+変換する画面座標を含む[CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT 構造体](/windows/win32/api/windef/ns-windef-rect)を指します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -10967,7 +10967,7 @@ void ScrollWindow(
 垂直スクロールの量をデバイス単位で指定します。 このパラメーターは、上にスクロールするには負の値にする必要があります。
 
 *lpRect*<br/>
-スクロールするクライアント領域の部分を指定する、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT 構造体](/windows/desktop/api/windef/ns-windef-tagrect)を指します。 *LpRect*が NULL の場合、クライアント領域全体がスクロールされます。 カーソルの四角形がスクロール用の四角形と交差する場合、キャレットは再配置されます。
+スクロールするクライアント領域の部分を指定する、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT 構造体](/windows/win32/api/windef/ns-windef-rect)を指します。 *LpRect*が NULL の場合、クライアント領域全体がスクロールされます。 カーソルの四角形がスクロール用の四角形と交差する場合、キャレットは再配置されます。
 
 *lpClipRect*<br/>
 スクロールするクリッピング`CRect`四角形を`RECT`指定するオブジェクトまたは構造体を指します。 この四角形内のビットのみがスクロールされます。 この四角形の外側のビットは、 *lpRect*四角形内にある場合でも影響を受けません。 *Lpcliprect*が NULL の場合、スクロール用の四角形でクリッピングは実行されません。
@@ -10976,7 +10976,7 @@ void ScrollWindow(
 
 キャレットがスクロール`CWnd`中の内にある場合`ScrollWindow` 、はそのキャレットが消去されないように自動的に非表示にし、スクロールが終了した後にカレットを復元します。 カーソル位置は、それに応じて調整されます。
 
-`ScrollWindow`メンバー関数によってカバーされていない領域は再描画さ`CWnd`れませんが、現在のオブジェクトの更新領域に結合されます。 アプリケーションは、領域を再描画する必要があることを通知する[WM_PAINT](/windows/desktop/gdi/wm-paint)メッセージを最終的に受け取ります。 スクロールの完了時にカバーされていない領域を再描画するには、を呼び出し`ScrollWindow`た直後に[updatewindow](#updatewindow)メンバー関数を呼び出します。
+`ScrollWindow`メンバー関数によってカバーされていない領域は再描画さ`CWnd`れませんが、現在のオブジェクトの更新領域に結合されます。 アプリケーションは、領域を再描画する必要があることを通知する[WM_PAINT](/windows/win32/gdi/wm-paint)メッセージを最終的に受け取ります。 スクロールの完了時にカバーされていない領域を再描画するには、を呼び出し`ScrollWindow`た直後に[updatewindow](#updatewindow)メンバー関数を呼び出します。
 
 *LpRect*が NULL の場合、ウィンドウ内の子ウィンドウの位置は、 *xamount*と*yamount*によって指定された量だけオフセットされ、内`CWnd`の無効な (非塗装) 領域もオフセットされます。 `ScrollWindow`*lpRect*が NULL の場合、高速になります。
 
@@ -11006,7 +11006,7 @@ int ScrollWindowEx(
 垂直スクロールの量をデバイス単位で指定します。 このパラメーターには、上にスクロールするには負の値を指定する必要があります。
 
 *lpRectScroll*<br/>
-スクロールするクライアント領域の部分を指定する[RECT 構造体](/windows/desktop/api/windef/ns-windef-tagrect)をポイントします。 このパラメーターが NULL の場合、クライアント領域全体がスクロールされます。
+スクロールするクライアント領域の部分を指定する[RECT 構造体](/windows/win32/api/windef/ns-windef-rect)をポイントします。 このパラメーターが NULL の場合、クライアント領域全体がスクロールされます。
 
 *lpRectClip*<br/>
 スクロールするクリッピング`RECT`四角形を指定する構造体を指します。 この構造体は、 *lpRectScroll*が指す四角形よりも優先されます。 この四角形内のビットのみがスクロールされます。 この四角形の外側のビットは、 *lpRectScroll*四角形内にある場合でも影響を受けません。 このパラメーターが NULL の場合、スクロール四角形でクリッピングは実行されません。
@@ -11020,11 +11020,11 @@ int ScrollWindowEx(
 *flags*<br/>
 には、次のいずれかの値を指定できます。
 
-- SW_ERASE SW_INVALIDATE で指定した場合、 [WM_ERASEBKGND](/windows/desktop/winmsg/wm-erasebkgnd)メッセージをウィンドウに送信することで、新しく無効化された領域を消去します。
+- SW_ERASE SW_INVALIDATE で指定した場合、 [WM_ERASEBKGND](/windows/win32/winmsg/wm-erasebkgnd)メッセージをウィンドウに送信することで、新しく無効化された領域を消去します。
 
 - SW_INVALIDATE は、スクロール後に*Prgnupdate*によって識別された領域を無効にします。
 
-- SW_SCROLLCHILDREN は、 *lpRectScroll*が指す四角形と交差するすべての子ウィンドウを、 *dx*および*dy*で指定されたピクセル数だけスクロールします。 Windows は、移動されていない場合でも、 *lpRectScroll*と交差するすべての子ウィンドウに[WM_MOVE](/windows/desktop/winmsg/wm-move)メッセージを送信します。 カーソルの位置は、子ウィンドウがスクロールされ、カーソルの四角形がスクロール用の四角形と交差するときに再配置されます。
+- SW_SCROLLCHILDREN は、 *lpRectScroll*が指す四角形と交差するすべての子ウィンドウを、 *dx*および*dy*で指定されたピクセル数だけスクロールします。 Windows は、移動されていない場合でも、 *lpRectScroll*と交差するすべての子ウィンドウに[WM_MOVE](/windows/win32/winmsg/wm-move)メッセージを送信します。 カーソルの位置は、子ウィンドウがスクロールされ、カーソルの四角形がスクロール用の四角形と交差するときに再配置されます。
 
 ### <a name="return-value"></a>戻り値
 
@@ -11032,15 +11032,15 @@ int ScrollWindowEx(
 
 ### <a name="remarks"></a>Remarks
 
-この関数は[ScrollWindow](/windows/desktop/api/winuser/nf-winuser-scrollwindow)関数に似ていますが、いくつかの追加機能があります。
+この関数は[ScrollWindow](/windows/win32/api/winuser/nf-winuser-scrollwindow)関数に似ていますが、いくつかの追加機能があります。
 
-[SW_INVALIDATE](/windows/desktop/api/winuser/nf-winuser-scrollwindowex)と[SW_ERASE](/windows/desktop/api/winuser/nf-winuser-scrollwindowex)が`ScrollWindowEx`指定されていない場合、メンバー関数はスクロールされた領域を無効にしません。 これらのフラグのいずれかが設定`ScrollWindowEx`されている場合、はこの領域を無効にします。 この領域は、アプリケーションが[Updatewindow](/windows/desktop/api/winuser/nf-winuser-updatewindow)メンバー関数を呼び出すか、 [redrawwindow](/windows/desktop/api/winuser/nf-winuser-redrawwindow)メンバー関数 ( [RDW_UPDATENOW](/windows/desktop/api/winuser/nf-winuser-redrawwindow)または[RDW_ERASENOW](/windows/desktop/api/winuser/nf-winuser-redrawwindow)を指定) を呼び出すか、またはから[WM_PAINT](/windows/desktop/gdi/wm-paint)メッセージを取得するまで更新されません。アプリケーションキュー。
+[SW_INVALIDATE](/windows/win32/api/winuser/nf-winuser-scrollwindowex)と[SW_ERASE](/windows/win32/api/winuser/nf-winuser-scrollwindowex)が`ScrollWindowEx`指定されていない場合、メンバー関数はスクロールされた領域を無効にしません。 これらのフラグのいずれかが設定`ScrollWindowEx`されている場合、はこの領域を無効にします。 この領域は、アプリケーションが[Updatewindow](/windows/win32/api/winuser/nf-winuser-updatewindow)メンバー関数を呼び出すか、 [redrawwindow](/windows/win32/api/winuser/nf-winuser-redrawwindow)メンバー関数 ( [RDW_UPDATENOW](/windows/win32/api/winuser/nf-winuser-redrawwindow)または[RDW_ERASENOW](/windows/win32/api/winuser/nf-winuser-redrawwindow)を指定) を呼び出すか、またはから[WM_PAINT](/windows/win32/gdi/wm-paint)メッセージを取得するまで更新されません。アプリケーションキュー。
 
-ウィンドウに[WS_CLIPCHILDREN](/windows/desktop/api/winuser/nf-winuser-createwindowa)スタイルが設定されている場合、 *prgnupdate*と*lpRectUpdate*によって指定された領域は、更新が必要な子ウィンドウ内の領域を含め、更新する必要があるスクロールされたウィンドウの合計領域を表します。
+ウィンドウに[WS_CLIPCHILDREN](/windows/win32/api/winuser/nf-winuser-createwindoww)スタイルが設定されている場合、 *prgnupdate*と*lpRectUpdate*によって指定された領域は、更新が必要な子ウィンドウ内の領域を含め、更新する必要があるスクロールされたウィンドウの合計領域を表します。
 
-[SW_SCROLLCHILDREN](/windows/desktop/api/winuser/nf-winuser-scrollwindowex)フラグが指定されている場合、子ウィンドウの一部がスクロールされても、Windows は画面を正しく更新しません。 移動元の四角形の外側にある、スクロールした子ウィンドウの部分は消去されず、新しい変換先では適切に再描画されません。 [DeferWindowPos](/windows/desktop/api/winuser/nf-winuser-deferwindowpos) windows 関数を使用して、 *lpRectScroll*四角形内に完全にはない子ウィンドウを移動します。 SW_SCROLLCHILDREN フラグが設定され、カレット四角形がスクロール用の四角形と交差している場合は、カーソルの位置が移動します。
+[SW_SCROLLCHILDREN](/windows/win32/api/winuser/nf-winuser-scrollwindowex)フラグが指定されている場合、子ウィンドウの一部がスクロールされても、Windows は画面を正しく更新しません。 移動元の四角形の外側にある、スクロールした子ウィンドウの部分は消去されず、新しい変換先では適切に再描画されません。 [DeferWindowPos](/windows/win32/api/winuser/nf-winuser-deferwindowpos) windows 関数を使用して、 *lpRectScroll*四角形内に完全にはない子ウィンドウを移動します。 SW_SCROLLCHILDREN フラグが設定され、カレット四角形がスクロール用の四角形と交差している場合は、カーソルの位置が移動します。
 
-ウィンドウに CS_OWNDC または CS_CLASSDC クラススタイルがあるかどうかに関係なく、すべての入力および出力座標 ( *lpRectScroll*、 *lpRectClip*、 *LpRectUpdate*、および*prgnupdate*の場合) は、クライアント座標であると見なされます。 必要に応じて、[Lptodp](/windows/desktop/api/wingdi/nf-wingdi-lptodp) およびの [DPtoLP](/windows/desktop/api/wingdi/nf-wingdi-dptolp) Windows 関数を使用して論理座標との間で変換を行います。
+ウィンドウに CS_OWNDC または CS_CLASSDC クラススタイルがあるかどうかに関係なく、すべての入力および出力座標 ( *lpRectScroll*、 *lpRectClip*、 *LpRectUpdate*、および*prgnupdate*の場合) は、クライアント座標であると見なされます。 必要に応じて、[Lptodp](/windows/win32/api/wingdi/nf-wingdi-lptodp) およびの [DPtoLP](/windows/win32/api/wingdi/nf-wingdi-dptolp) Windows 関数を使用して論理座標との間で変換を行います。
 
 ##  <a name="sendchildnotifylastmsg"></a>  CWnd::SendChildNotifyLastMsg
 
@@ -11241,7 +11241,7 @@ CWnd* SetCapture();
 
 ### <a name="remarks"></a>Remarks
 
-すべて`CWnd`のマウス入力が不要になった場合は、他のウィンドウがマウス入力を受け取ることができるように、アプリケーションは[ReleaseCapture](/windows/desktop/api/winuser/nf-winuser-releasecapture)関数を呼び出す必要があります。
+すべて`CWnd`のマウス入力が不要になった場合は、他のウィンドウがマウス入力を受け取ることができるように、アプリケーションは[ReleaseCapture](/windows/win32/api/winuser/nf-winuser-releasecapture)関数を呼び出す必要があります。
 
 マウス入力がキャプチャされている間、WM_NCHITTEST または WM_SETCURSOR メッセージはアクティブウィンドウに送信されません。
 
@@ -11333,7 +11333,7 @@ void SetDlgItemInt(
 
 ### <a name="remarks"></a>Remarks
 
-`SetDlgItemInt`指定されたコントロールに[WM_SETTEXT](/windows/desktop/winmsg/wm-settext)メッセージを送信します。
+`SetDlgItemInt`指定されたコントロールに[WM_SETTEXT](/windows/win32/winmsg/wm-settext)メッセージを送信します。
 
 ### <a name="example"></a>例
 
@@ -11359,7 +11359,7 @@ void SetDlgItemText(
 
 ### <a name="remarks"></a>Remarks
 
-`SetDlgItemText`指定されたコントロールに[WM_SETTEXT](/windows/desktop/winmsg/wm-settext)メッセージを送信します。
+`SetDlgItemText`指定されたコントロールに[WM_SETTEXT](/windows/win32/winmsg/wm-settext)メッセージを送信します。
 
 ### <a name="example"></a>例
 
@@ -11401,7 +11401,7 @@ CWnd* SetFocus();
 
 入力フォーカスは、後続のすべてのキーボード入力をこのウィンドウに送信します。 以前に入力フォーカスがあったすべてのウィンドウが失われます。
 
-この`SetFocus`メンバー関数は、入力フォーカスを失うウィンドウに[WM_KILLFOCUS](/windows/desktop/inputdev/wm-killfocus)メッセージを送信し、入力フォーカスを受け取るウィンドウに[WM_SETFOCUS](/windows/desktop/inputdev/wm-setfocus)メッセージを送信します。 また、ウィンドウまたはその親のいずれかをアクティブ化します。
+この`SetFocus`メンバー関数は、入力フォーカスを失うウィンドウに[WM_KILLFOCUS](/windows/win32/inputdev/wm-killfocus)メッセージを送信し、入力フォーカスを受け取るウィンドウに[WM_SETFOCUS](/windows/win32/inputdev/wm-setfocus)メッセージを送信します。 また、ウィンドウまたはその親のいずれかをアクティブ化します。
 
 現在のウィンドウがアクティブであってもフォーカスがない場合 (つまり、ウィンドウにフォーカスがない場合)、押されたキーを押すと、 [WM_SYSCHAR](#onsyschar)、 [WM_SYSKEYDOWN](#onsyskeydown)、または[WM_SYSKEYUP](#onsyskeyup)というメッセージが生成されます。
 
@@ -11474,10 +11474,10 @@ BOOL SetLayeredWindowAttributes(
 レイヤードウィンドウを作成するときに使用する透明度の色キーを指定する COLORREF 値へのポインター。 この色のウィンドウで描画されたすべてのピクセルは透明になります。 COLORREF を生成するには、RGB マクロを使用します。
 
 *bAlpha*<br/>
-レイヤードウィンドウの不透明度を表すために使用するアルファ値。 詳細については、 `SourceConstantAlpha` [blendfunction](/windows/desktop/api/wingdi/ns-wingdi-blendfunction)構造体のメンバーを参照してください。 *BAlpha*が0の場合、ウィンドウは完全に透明です。 *BAlpha*が255の場合、ウィンドウは不透明になります。
+レイヤードウィンドウの不透明度を表すために使用するアルファ値。 詳細については、 `SourceConstantAlpha` [blendfunction](/windows/win32/api/wingdi/ns-wingdi-blendfunction)構造体のメンバーを参照してください。 *BAlpha*が0の場合、ウィンドウは完全に透明です。 *BAlpha*が255の場合、ウィンドウは不透明になります。
 
 *dwFlags*<br/>
-実行するアクションを指定します。 このパラメーターには、次の値を1つ以上指定できます。 使用可能な値の一覧については、「 [Setレイヤー Edwindowattributes](/windows/desktop/api/winuser/nf-winuser-setlayeredwindowattributes)」を参照してください。
+実行するアクションを指定します。 このパラメーターには、次の値を1つ以上指定できます。 使用可能な値の一覧については、「 [Setレイヤー Edwindowattributes](/windows/win32/api/winuser/nf-winuser-setlayeredwindowattributes)」を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
@@ -11485,7 +11485,7 @@ BOOL SetLayeredWindowAttributes(
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は、Windows SDK で説明されているように、 [Setレイヤー Edwindowattributes](/windows/desktop/api/winuser/nf-winuser-setlayeredwindowattributes)関数の機能をエミュレートします。
+このメンバー関数は、Windows SDK で説明されているように、 [Setレイヤー Edwindowattributes](/windows/win32/api/winuser/nf-winuser-setlayeredwindowattributes)関数の機能をエミュレートします。
 
 ##  <a name="setmenu"></a>CWnd:: SetMenu
 
@@ -11533,7 +11533,7 @@ void SetOwner(CWnd* pOwnerWnd);
 
 多くの場合、ウィンドウ階層に関連付けられていないウィンドウオブジェクト間の接続を確立すると便利です。 たとえば、 [CToolBar](../../mfc/reference/ctoolbar-class.md)は、その親ではなく所有者に通知を送信します。 これにより、別のウィンドウ (埋め込み先フレームウィンドウなど) に通知を送信するときに、ツールバーを1つのウィンドウ (OLE コンテナーアプリケーションウィンドウなど) の子にすることができます。 さらに、サーバーウィンドウが埋め込み先編集中に非アクティブになったり、アクティブ化されたりすると、フレームウィンドウが所有するすべてのウィンドウが非表示になり、表示されなくなります。 この所有権は、の呼び出し`SetOwner`によって明示的に設定されます。
 
-この関数の所有権の概念は、 [Getwindow](/windows/desktop/api/winuser/nf-winuser-getwindow)の所有権の概念とは異なります。
+この関数の所有権の概念は、 [Getwindow](/windows/win32/api/winuser/nf-winuser-getwindow)の所有権の概念とは異なります。
 
 ##  <a name="setparent"></a>  CWnd::SetParent
 
@@ -11743,7 +11743,7 @@ UINT_PTR SetTimer(
 タイムアウト値 (間隔) をミリ秒単位で指定します。
 
 *lpfnTimer*<br/>
-[WM_TIMER](/windows/desktop/winmsg/wm-timer) メッセージを処理する、アプリケーションによって提供される `TimerProc` コールバック関数のアドレスを指定します。 このパラメーターが NULL の場合、WM_TIMER メッセージはアプリケーションのメッセージキューに配置され、 `CWnd`オブジェクトによって処理されます。
+[WM_TIMER](/windows/win32/winmsg/wm-timer) メッセージを処理する、アプリケーションによって提供される `TimerProc` コールバック関数のアドレスを指定します。 このパラメーターが NULL の場合、WM_TIMER メッセージはアプリケーションのメッセージキューに配置され、 `CWnd`オブジェクトによって処理されます。
 
 ### <a name="return-value"></a>戻り値
 
@@ -11805,7 +11805,7 @@ BOOL SetWindowPlacement(const WINDOWPLACEMENT* lpwndpl);
 ### <a name="parameters"></a>パラメーター
 
 *lpwndpl*<br/>
-新しい表示状態と位置を指定する[Windowplacement](/windows/desktop/api/winuser/ns-winuser-tagwindowplacement)構造体を指します。
+新しい表示状態と位置を指定する[Windowplacement](/windows/win32/api/winuser/ns-winuser-windowplacement)構造体を指します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -11962,7 +11962,7 @@ void SetWindowText(LPCTSTR lpszString);
 
 ウィンドウがコントロールの場合は、コントロール内のテキストが設定されます。
 
-この関数を使用すると、 [WM_SETTEXT](/windows/desktop/winmsg/wm-settext)メッセージがこのウィンドウに送信されます。
+この関数を使用すると、 [WM_SETTEXT](/windows/win32/winmsg/wm-settext)メッセージがこのウィンドウに送信されます。
 
 ### <a name="example"></a>例
 
@@ -12152,7 +12152,7 @@ void UnlockWindowUpdate();
 
 ### <a name="remarks"></a>Remarks
 
-を使用して`LockWindowUpdate`ロックできるのは、一度に1つのウィンドウだけです。 ウィンドウのロックの詳細については、「 [CWnd:: lockwindowupdate](#lockwindowupdate) 」または「Win32 関数[lockwindowupdate](/windows/desktop/api/winuser/nf-winuser-lockwindowupdate) 」を参照してください。
+を使用して`LockWindowUpdate`ロックできるのは、一度に1つのウィンドウだけです。 ウィンドウのロックの詳細については、「 [CWnd:: lockwindowupdate](#lockwindowupdate) 」または「Win32 関数[lockwindowupdate](/windows/win32/api/winuser/nf-winuser-lockwindowupdate) 」を参照してください。
 
 ##  <a name="unsubclasswindow"></a>CWnd:: UnsubclassWindow
 
@@ -12258,10 +12258,10 @@ BOOL UpdateLayeredWindow(
 レイヤードウィンドウを作成するときに使用する透明度の色キーを指定する COLORREF 値へのポインター。 この色のウィンドウで描画されたすべてのピクセルは透明になります。 COLORREF を生成するには、RGB マクロを使用します。
 
 *pblend*<br/>
-レイヤードウィンドウを作成するときに使用される透明度の値を指定する[Blendfunction](/windows/desktop/api/wingdi/ns-wingdi-blendfunction)構造体へのポインター。
+レイヤードウィンドウを作成するときに使用される透明度の値を指定する[Blendfunction](/windows/win32/api/wingdi/ns-wingdi-blendfunction)構造体へのポインター。
 
 *dwFlags*<br/>
-実行するアクションを指定します。 このパラメーターには、次の値を1つ以上指定できます。 使用可能な値の一覧については、「 [Updatelayeredwindow](/windows/desktop/api/winuser/nf-winuser-updatelayeredwindow)」を参照してください。
+実行するアクションを指定します。 このパラメーターには、次の値を1つ以上指定できます。 使用可能な値の一覧については、「 [Updatelayeredwindow](/windows/win32/api/winuser/nf-winuser-updatelayeredwindow)」を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
@@ -12269,11 +12269,11 @@ BOOL UpdateLayeredWindow(
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は、Windows SDK で説明されているように、関数[Updatelayeredwindow](/windows/desktop/api/winuser/nf-winuser-updatelayeredwindow)の機能をエミュレートします。
+このメンバー関数は、Windows SDK で説明されているように、関数[Updatelayeredwindow](/windows/win32/api/winuser/nf-winuser-updatelayeredwindow)の機能をエミュレートします。
 
 ##  <a name="updatewindow"></a>CWnd:: UpdateWindow
 
-更新領域が空でない場合に、 [WM_PAINT](/windows/desktop/gdi/wm-paint)メッセージを送信することによってクライアント領域を更新します。
+更新領域が空でない場合に、 [WM_PAINT](/windows/win32/gdi/wm-paint)メッセージを送信することによってクライアント領域を更新します。
 
 ```
 void UpdateWindow();
@@ -12298,11 +12298,11 @@ void ValidateRect(LPCRECT lpRect);
 ### <a name="parameters"></a>パラメーター
 
 *lpRect*<br/>
-更新領域から削除される四角形のクライアント座標を格納する、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT 構造体](/windows/desktop/api/windef/ns-windef-tagrect)を指します。 *LpRect*が NULL の場合、ウィンドウ全体が検証されます。
+更新領域から削除される四角形のクライアント座標を格納する、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT 構造体](/windows/win32/api/windef/ns-windef-rect)を指します。 *LpRect*が NULL の場合、ウィンドウ全体が検証されます。
 
 ### <a name="remarks"></a>Remarks
 
-[Beginpaint](#beginpaint)メンバー関数は、クライアント領域全体を自動的に検証します。 [WM_PAINT](/windows/desktop/gdi/wm-paint) 更新領域の一部を次に生成する前に検証する必要がある場合は、`ValidateRect` または [ValidateRgn](#validatergn) メンバー関数を呼び出す必要はありません。
+[Beginpaint](#beginpaint)メンバー関数は、クライアント領域全体を自動的に検証します。 [WM_PAINT](/windows/win32/gdi/wm-paint) 更新領域の一部を次に生成する前に検証する必要がある場合は、`ValidateRect` または [ValidateRgn](#validatergn) メンバー関数を呼び出す必要はありません。
 
 現在の更新領域が検証されるまで、Windows は WM_PAINT メッセージを生成し続けます。
 
@@ -12323,7 +12323,7 @@ void ValidateRgn(CRgn* pRgn);
 
 指定された領域は、以前に region 関数によって作成されている必要があります。 領域座標は、クライアント座標と見なされます。
 
-[Beginpaint](#beginpaint)メンバー関数は、クライアント領域全体を自動的に検証します。 次の[WM_PAINT](/windows/desktop/gdi/wm-paint)メッセージが`ValidateRgn`生成される前に更新領域の一部を検証する必要がある場合は、 [ValidateRect](#validaterect)もメンバー関数も呼び出さないでください。
+[Beginpaint](#beginpaint)メンバー関数は、クライアント領域全体を自動的に検証します。 次の[WM_PAINT](/windows/win32/gdi/wm-paint)メッセージが`ValidateRgn`生成される前に更新領域の一部を検証する必要がある場合は、 [ValidateRect](#validaterect)もメンバー関数も呼び出さないでください。
 
 ##  <a name="windowfrompoint"></a>  CWnd::WindowFromPoint
 
@@ -12336,7 +12336,7 @@ static CWnd* PASCAL WindowFromPoint(POINT point);
 ### <a name="parameters"></a>パラメーター
 
 *視点*<br/>
-検査するポイントを定義する、 [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)オブジェクトまたは[ポイント](/windows/desktop/api/windef/ns-windef-tagpoint)データ構造体を指定します。
+検査するポイントを定義する、 [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)オブジェクトまたは[ポイント](/windows/win32/api/windef/ns-windef-point)データ構造体を指定します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -12392,7 +12392,7 @@ virtual void WinHelp(
 追加データを指定します。 使用される値は、 *Ncmd*パラメーターの値によって異なります。
 
 *nCmd*<br/>
-要求されるヘルプの種類を指定します。 使用可能な値の一覧と*Dwdata*パラメーターへの影響については、Windows SDK の「 [WinHelp](/windows/desktop/api/winuser/nf-winuser-winhelpa) Windows 関数」を参照してください。
+要求されるヘルプの種類を指定します。 使用可能な値の一覧と*Dwdata*パラメーターへの影響については、Windows SDK の「 [WinHelp](/windows/win32/api/winuser/nf-winuser-winhelpw) Windows 関数」を参照してください。
 
 ### <a name="remarks"></a>Remarks
 
