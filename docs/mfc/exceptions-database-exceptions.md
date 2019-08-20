@@ -54,7 +54,7 @@ DAO エラー、DAO エラー オブジェクトの種類、および DAO Errors
 
 ##  <a name="_core_a_database_exception.2d.handling_example"></a> データベース例外処理の例
 
-次の例が、構築しようとしています。、 [CRecordset](../mfc/reference/crecordset-class.md)-派生でヒープのオブジェクト、**新しい**演算子、および (ODBC データ ソース) のレコード セットを開きます。 DAO クラスの同様の例は、「DAO 例外次の例」を参照してください。
+次の例が、構築しようとしています。、 [CRecordset](../mfc/reference/crecordset-class.md)-派生でヒープのオブジェクト、**new** 演算子、および (ODBC データ ソース) のレコード セットを開きます。 DAO クラスの同様の例は、「DAO 例外次の例」を参照してください。
 
 ### <a name="odbc-exception-example"></a>ODBC 例外の例
 
