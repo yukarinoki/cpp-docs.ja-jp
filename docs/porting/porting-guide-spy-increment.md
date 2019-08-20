@@ -2,12 +2,12 @@
 title: '移植のガイド: Spy++'
 ms.date: 11/19/2018
 ms.assetid: e558f759-3017-48a7-95a9-b5b779d5e51d
-ms.openlocfilehash: bca5e912d28124e8d5d6e56cc234ef7bf9bceb89
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 206698d35239f416d2f13891044aa54fe502500a
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66451124"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69511658"
 ---
 # <a name="porting-guide-spy"></a>移植のガイド: Spy++
 
@@ -65,7 +65,7 @@ C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\include\afxv_w32.h
 
 Windows XP は Microsoft によってサポートされなくなったので、Visual Studio で対象にすることが許可されていても、アプリケーションでのサポートを段階的に停止し、新しいバージョンの Windows を採用するようユーザーに推奨してください。
 
-エラーを解消するには、 **[プロジェクトのプロパティ]** の設定を、現在対象にしている Windows の最小バージョンに更新します。 さまざまな Windows リリースの値を示した表については、[ここ](/windows/desktop/WinProg/using-the-windows-headers)を参照してください。
+エラーを解消するには、 **[プロジェクトのプロパティ]** の設定を、現在対象にしている Windows の最小バージョンに更新します。 さまざまな Windows リリースの値を示した表については、[ここ](/windows/win32/WinProg/using-the-windows-headers)を参照してください。
 
 stdafx.h ファイルには、これらのマクロ定義のいくつかが含まれていました。
 
@@ -404,7 +404,7 @@ DWORD dwWindowsVersion = GetVersion();
 
 この後に、dwWindowsVersion の値を検証して、Windows 95 で動作するかどうか、どのバージョンの Windows NT なのかを判断する大量のコードが続きます。 これはすべて古いものであるため、コードを削除してそれらの変数への参照を処理します。
 
-記事「[Windows 8.1 と Windows Server 2012 R2 のオペレーティング システムのバージョンの変更](https://msdn.microsoft.com/library/windows/desktop/dn302074.aspx)」で、この状況について説明しています。
+記事「[Windows 8.1 と Windows Server 2012 R2 のオペレーティング システムのバージョンの変更](/windows/win32/w8cookbook/operating-system-version-changes-in-windows-8-1)」で、この状況について説明しています。
 
 `CSpyApp` クラスには、オペレーティング システムのバージョンのクエリを実行する `IsWindows9x`、`IsWindows4x`、および `IsWindows5x` のメソッドがあります。 適切な開始点は、この古いアプリケーションで使用されるテクノロジを考慮すると、サポートしようとする Windows のバージョン (Windows 7 以降) は、すべて Windows NT 5 に近いと想定することです。 これらのメソッドは、古いオペレーティング システムの制限に対処する場合に使用します。 このため、これらのメソッドを、`IsWindows5x` では TRUE を返し、他は FALSE を返すよう変更しました。
 
@@ -520,7 +520,7 @@ msvcrtd.lib;msvcirtd.lib;kernel32.lib;user32.lib;gdi32.lib;advapi32.lib;Debug\Sp
 
 UTF-16 Unicode への移植では、引き続き MBCS にコンパイルするオプションも必要かどうかを決定しなければなりません。  MBCS をサポートするためのオプションが必要な場合は、\_MBCS または \_UNICODE のどちらがコンパイル下で定義されるかに応じて、**char** または **wchar_t** のいずれかに解決される文字型として、TCHAR マクロを使用する必要があります。 **wchar_t** とそれに関連する API の代わりに、TCHAR と様々な API の TCHAR バージョンに切り替えることは、\_MBCS マクロを \_UNICODE の代わりに定義するだけで、MBCS バージョンのコードに戻せることを意味します。 TCHAR に加えて、幅広く使用される typedef、マクロ、関数など、様々なバージョンの TCHAR が存在します。 たとえば、LPCSTR の代わりに LPCTSTR を使用するなどです。 [プロジェクトのプロパティ] ダイアログの **[構成プロパティ]** の **[全般]** セクションで、 **[文字セット]** プロパティを **[MBCS 文字セットを使用する]** から **[Unicode 文字セットを使用する]** に変更します。 この設定は、コンパイル時にどのマクロが事前に定義されるかに影響します。 UNICODE マクロと \_UNICODE マクロの両方が存在します。 プロジェクト プロパティは一貫して両方に影響します。 MFC などの Visual C++ ヘッダーが \_UNICODE を使用する場所で Windows ヘッダーは UNICODE を使用しますが、一方が定義されると、他方も常に定義されます。
 
-TCHAR を使用して MBCS から UTF-16 Unicode に移植するための適切なガイドについては、[こちら](https://msdn.microsoft.com/library/cc194801.aspx)をご利用ください。 私たちはこのルートを選択します。 最初に、 **[文字セット]** プロパティを **[Unicode 文字セットを使用する]** に変更してプロジェクトをリビルドします。
+TCHAR を使用して MBCS から UTF-16 Unicode に移植するための適切なガイドについては、[こちら](/previous-versions/cc194801(v=msdn.10))をご利用ください。 私たちはこのルートを選択します。 最初に、 **[文字セット]** プロパティを **[Unicode 文字セットを使用する]** に変更してプロジェクトをリビルドします。
 
 コードの一部は既に TCHAR を使用していて、最終的に Unicode をサポートしようとしていたことが明らかです。 コードの一部はそうではありませんでした。 **char** の **typedef** である CHAR のインスタンスを検索し、それらのほとんどを TCHAR で置き換えました。 また、`sizeof(CHAR)` も検索しました。 CHAR から TCHAR に変更するたびに、通常 `sizeof(TCHAR)` に変更しなければなりませんでした。というのも、これはよく文字列の文字数を判断するのに使用されていたからです。 ここで間違った型を使用しても、コンパイラ エラーが生成されないため、このケースでは少し慎重になります。
 
@@ -544,7 +544,7 @@ wsprintf(szTmp, _T("%d.%2.2d.%4.4d"), rmj, rmm, rup);
 
 \_T マクロでは、MBCS または UNICODE の設定に応じて、**char** 文字列または **wchar_t** 文字列として文字列リテラルをコンパイルするという効果があります。 Visual Studio ですべての文字列を \_T に置き換えるには、最初に **[クイック置換]** (キーボード: **Ctrl**+**F**) ボックスまたは **[フォルダーを指定して置換]** (キーボード: **Ctrl**+**Shift**+**H**) を開いてから、 **[正規表現の使用]** チェック ボックスを選択します。 `((\".*?\")|('.+?'))` を検索文字列として入力し、`_T($1)` を置換テキストとして入力します。 \_T マクロが既に一部の文字列の周囲にある場合は、この手順でもう一度追加され、`#include` を使用しているときなど、\_T が必要ないケースもあるため、 **[すべて置換]** ではなく、 **[次を置換]** を使用してください。
 
-この特定の関数 [wsprintf](/windows/desktop/api/winuser/nf-winuser-wsprintfa) は、実際に Windows のヘッダーで定義されていて、これに関するドキュメントでは、バッファー オーバーランの可能性があるため、使用しないことが推奨されています。 `szTmp` バッファーに対してサイズが指定されていないため、書き込まれるすべてのデータをバッファーが保持できるか関数でチェックする方法はありません。 Secure CRT への移植については、次のセクションを参照してください。次のセクションでは他の同様の問題も修正します。 最後に [_stprintf_s](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md) に置換して終了します。
+この特定の関数 [wsprintf](/windows/win32/api/winuser/nf-winuser-wsprintfw) は、実際に Windows のヘッダーで定義されていて、これに関するドキュメントでは、バッファー オーバーランの可能性があるため、使用しないことが推奨されています。 `szTmp` バッファーに対してサイズが指定されていないため、書き込まれるすべてのデータをバッファーが保持できるか関数でチェックする方法はありません。 Secure CRT への移植については、次のセクションを参照してください。次のセクションでは他の同様の問題も修正します。 最後に [_stprintf_s](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md) に置換して終了します。
 
 Unicode への変換でよく発生する別の一般的なエラーは、次のとおりです。
 

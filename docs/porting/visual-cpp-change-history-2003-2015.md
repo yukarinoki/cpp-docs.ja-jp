@@ -4,12 +4,12 @@ ms.date: 08/30/2017
 helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-ms.openlocfilehash: f05656612e464395117e77c82fb9dc9eb2290e0e
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 9597f04781c9009cf6f8f284348f0831c347201d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66451275"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69510361"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Visual C++ 2003 ～ 2015 の変更履歴
 
@@ -277,7 +277,7 @@ COM インターフェイスまたは POD オブジェクトではないオブ�
 
 - **clock**
 
-   以前のバージョンでは、Windows API [GetSystemTimeAsFileTime](/windows/desktop/api/sysinfoapi/nf-sysinfoapi-getsystemtimeasfiletime) を使用して [clock](../c-runtime-library/reference/clock.md) 関数が実装されていました。 この実装により、clock 関数はシステム時刻の影響を受け、単調になることがありませんでした。 現在は、 [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904.aspx) によって clock 関数が再実装されたため、単調になっています。
+   以前のバージョンでは、Windows API [GetSystemTimeAsFileTime](/windows/win32/api/sysinfoapi/nf-sysinfoapi-getsystemtimeasfiletime) を使用して [clock](../c-runtime-library/reference/clock.md) 関数が実装されていました。 この実装により、clock 関数はシステム時刻の影響を受け、単調になることがありませんでした。 現在は、 [QueryPerformanceCounter](/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter) によって clock 関数が再実装されたため、単調になっています。
 
 - **fstat および _utime**
 
@@ -313,7 +313,7 @@ COM インターフェイスまたは POD オブジェクトではないオブ�
 
 - **steady_clock**
 
-   [steady_clock](../standard-library/steady-clock-struct.md) の \<chrono> 実装が変更され、安定性と単調性のための C++ 標準の要件を満たすようになりました。 現在、`steady_clock` は [QueryPerformanceCounter()](https://msdn.microsoft.com/library/windows/desktop/ms644904.aspx) に基づき、`high_resolution_clock` は `steady_clock` の typedef です。 結果として、Visual Studio では現在、`steady_clock::time_point` は `chrono::time_point<steady_clock>` の typedef です。ただし、他の実装では異なる場合があります。
+   [steady_clock](../standard-library/steady-clock-struct.md) の \<chrono> 実装が変更され、安定性と単調性のための C++ 標準の要件を満たすようになりました。 現在、`steady_clock` は [QueryPerformanceCounter()](/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter) に基づき、`high_resolution_clock` は `steady_clock` の typedef です。 結果として、Visual Studio では現在、`steady_clock::time_point` は `chrono::time_point<steady_clock>` の typedef です。ただし、他の実装では異なる場合があります。
 
 - **アロケーターおよび const**
 
@@ -2541,7 +2541,7 @@ Visual Studio 2015 では、コンパイラの準拠に関する継続的な強�
 
 - **属性が指定された ATL コードのサポートの非推奨化** (デフォルトでレベル 1 (`/W1`))
 
-   以前のバージョンのコンパイラは、属性が指定された ATL コードをサポートしていました。 [Visual Studio 2008 から始まった](https://msdn.microsoft.com/library/bb384632)、属性が指定された ATL コードのサポートを停止する次のフェーズとして、属性が指定された ATL コードは非推奨になりました。 コンパイラは、非推奨になったこの種類のコードを特定するために、コンパイラの警告 C4467 を発行するようになりました。
+   以前のバージョンのコンパイラは、属性が指定された ATL コードをサポートしていました。 [Visual Studio 2008 から始まった](../porting/visual-cpp-what-s-new-2003-through-2015.md#whats-new-for-c-in-visual-studio-2008)、属性が指定された ATL コードのサポートを停止する次のフェーズとして、属性が指定された ATL コードは非推奨になりました。 コンパイラは、非推奨になったこの種類のコードを特定するために、コンパイラの警告 C4467 を発行するようになりました。
 
     ```Output
     warning C4467: Usage of ATL attributes is deprecated
@@ -3238,7 +3238,7 @@ Visual Studio 2013 の C++ コンパイラは、Visual Studio 2010 で実装さ�
 
 - 新しいラムダ表記をサポートすると、IDL uuid 属性の引用符なしの GUID のコーディングはサポートされなくなります。
 
-- .NET Framework 4 では、破損状態例外という概念を導入しました。これは、プロセスが回復不能な破損状態のままになる例外です。 既定では、他のすべての例外をキャッチする /EHa コンパイラ オプションを使用しても、破損状態例外をキャッチできません。                 破損状態例外を明示的にキャッチするには、__try-\__except ステートメントを使用します。 または、[HandledProcessCorruptedStateExceptions] 属性を適用して、破損状態例外をキャッチする関数を有効にします。  この変更は、主に、破損状態例外をキャッチする必要があるシステム プログラマに影響があります。 8 つの例外として、STATUS_ACCESS_VIOLATION、STATUS_STACK_OVERFLOW、EXCEPTION_ILLEGAL_INSTRUCTION、EXCEPTION_IN_PAGE_ERROR、EXCEPTION_INVALID_DISPOSITION、EXCEPTION_NONCONTINUABLE_EXCEPTION、EXCEPTION_PRIV_INSTRUCTION、STATUS_UNWIND_CONSOLIDATE があります。                 これらの例外の詳細については、[GetExceptionCode](/windows/desktop/Debug/getexceptioncode) マクロを参照してください。
+- .NET Framework 4 では、破損状態例外という概念を導入しました。これは、プロセスが回復不能な破損状態のままになる例外です。 既定では、他のすべての例外をキャッチする /EHa コンパイラ オプションを使用しても、破損状態例外をキャッチできません。                 破損状態例外を明示的にキャッチするには、__try-\__except ステートメントを使用します。 または、[HandledProcessCorruptedStateExceptions] 属性を適用して、破損状態例外をキャッチする関数を有効にします。  この変更は、主に、破損状態例外をキャッチする必要があるシステム プログラマに影響があります。 8 つの例外として、STATUS_ACCESS_VIOLATION、STATUS_STACK_OVERFLOW、EXCEPTION_ILLEGAL_INSTRUCTION、EXCEPTION_IN_PAGE_ERROR、EXCEPTION_INVALID_DISPOSITION、EXCEPTION_NONCONTINUABLE_EXCEPTION、EXCEPTION_PRIV_INSTRUCTION、STATUS_UNWIND_CONSOLIDATE があります。                 これらの例外の詳細については、[GetExceptionCode](/windows/win32/Debug/getexceptioncode) マクロを参照してください。
 
 - `/GS` コンパイラ オプションは改善され、以前のバージョンよりも包括的にバッファー オーバーランを防ぐことができるようになりました。 このバージョンでは、スタックに追加のセキュリティ チェックが挿入され、パフォーマンスが低下する可能性があります。 特定の関数についてセキュリティ チェックを挿入しないようにコンパイラに指示するには、新しい `__declspec(safebuffers)` キーワードを使用します。
 
