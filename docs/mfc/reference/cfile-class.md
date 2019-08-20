@@ -83,7 +83,7 @@ class CFile : public CObject
 
 |名前|説明|
 |----------|-----------------|
-|[CFile:: CFile](#cfile)|パスまた`CFile`はファイルハンドルからオブジェクトを構築します。|
+|[CFile::CFile](#cfile)|パスまた`CFile`はファイルハンドルからオブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
@@ -258,7 +258,7 @@ CAtlTransactionManager オブジェクトへのポインター。
 |-----------|-----------------|
 |`CFile::modeNoInherit`|子プロセスがファイル ハンドルを使用できないようにします。|
 
-既定のコンストラクターはメンバーを初期化しますが、 `CFile`オブジェクトにはファイルをアタッチしません。 このコンストラクターを使用した後、 [CFile:: open](#open)メソッドを使用してファイルを開き、 `CFile`オブジェクトにアタッチします。
+既定のコンストラクターはメンバーを初期化しますが、 `CFile`オブジェクトにはファイルをアタッチしません。 このコンストラクターを使用した後、 [CFile::open](#open)メソッドを使用してファイルを開き、 `CFile`オブジェクトにアタッチします。
 
 1 つのパラメーターを持つコンストラクターでは、メンバーは初期化され、既存のファイルが `CFile` オブジェクトにアタッチされます。
 
@@ -316,7 +316,7 @@ virtual void Flush();
 
 ### <a name="remarks"></a>Remarks
 
-を使用`Flush`すると、バッファーの`CArchive`フラッシュは保証されません。 アーカイブを使用している場合は、最初に[CArchive:: Flush](../../mfc/reference/carchive-class.md#flush)を呼び出します。
+を使用`Flush`すると、バッファーの`CArchive`フラッシュは保証されません。 アーカイブを使用している場合は、最初に[CArchive::Flush](../../mfc/reference/carchive-class.md#flush)を呼び出します。
 
 ### <a name="example"></a>例
 
