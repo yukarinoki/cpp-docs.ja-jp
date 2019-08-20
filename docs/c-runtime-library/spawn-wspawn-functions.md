@@ -45,14 +45,14 @@ helpviewer_keywords:
 - tspawnlpe function
 - _tspawnle function
 ms.assetid: bb47c703-5216-4e09-8023-8cf25bbf2cf9
-ms.openlocfilehash: 044aaee376be02d0d3734ea8982a8c4db47f7d39
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 8ab368378775102b708635b551c046a326adfecb
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57748048"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498910"
 ---
-# <a name="spawn-wspawn-functions"></a>_spawn 系関数と _wspawn 系関数
+# <a name="_spawn-_wspawn-functions"></a>_spawn 系関数と _wspawn 系関数
 
 各 `_spawn` 関数は、新しいプロセスを作成して実行します。
 
@@ -117,7 +117,7 @@ ms.locfileid: "57748048"
 >  文字列に空白が含まれる場合、予期しない動作になることがあります。たとえば、`_spawn` を `"hi there"` という文字列に渡すと、新しいプロセスは `"hi"` と `"there"` という 2 つの引数を使用する結果になります。 新しいプロセスでは "hi there" というファイルを開こうとするため、プロセスは失敗します。 この問題を回避するには、`"\"hi there\""` のように文字列を引用符で囲みます。
 
 > [!IMPORTANT]
->  ユーザー入力のコンテンツを明示的にチェックしないまま `_spawn` に渡さないでください。 `_spawn` によって [CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa) が呼び出されます。そのため、パス名が修飾されていない場合、セキュリティ上の脆弱性につながる可能性があります。
+>  ユーザー入力のコンテンツを明示的にチェックしないまま `_spawn` に渡さないでください。 `_spawn` によって [CreateProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessw) が呼び出されます。そのため、パス名が修飾されていない場合、セキュリティ上の脆弱性につながる可能性があります。
 
 `_spawnl`、`_spawnle`、`_spawnlp`、`_spawnlpe` では引数へのポインターが個別の引数として渡され、`_spawnv`、`_spawnve`、`_spawnvp`、`_spawnvpe` ではポインターの配列として渡されます。 少なくとも 1 つの引数 (`arg0` または `argv`[0]) を生成されたプロセスに渡す必要があります。 規則上、この引数は、コマンド ラインの場合に入力するはずのプログラムの名前です。 ただし、別の値を使用しても、エラーは発生しません。
 
@@ -139,7 +139,7 @@ ms.locfileid: "57748048"
 
 `_spawn` を DLL または GUI アプリケーションから呼び出して、出力をパイプにリダイレクトするには、次の 2 つのオプションがあります。
 
-- Win32 API を使用してパイプを作成し、[AllocConsole](/windows/console/allocconsole) を呼び出し、ハンドル値をスタートアップ構造体に設定し、[CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa) を呼び出します。
+- Win32 API を使用してパイプを作成し、[AllocConsole](/windows/console/allocconsole) を呼び出し、ハンドル値をスタートアップ構造体に設定し、[CreateProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessw) を呼び出します。
 
 - [_popen、_wpopen](../c-runtime-library/reference/popen-wpopen.md) を呼び出してパイプを作成し、**cmd.exe /c** (または **command.exe /c**) を使用してアプリを呼び出します。
 

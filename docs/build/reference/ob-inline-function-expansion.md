@@ -58,7 +58,7 @@ ms.locfileid: "68915480"
 [Inline](../../cpp/inline-functions-cpp.md)、 [__ inline](../../cpp/inline-functions-cpp.md)、または[__forceinline](../../cpp/inline-functions-cpp.md)とマークされた関数、またはC++クラス宣言で定義されているメンバー関数の拡張のみを許可します。
 
 **3**\
-[/O1](o1-o2-minimize-size-maximize-speed.md)と[/O2](o1-o2-minimize-size-maximize-speed.md)の既定値。 インライン展開しないように明示的にマークされていない関数をコンパイラで拡張できるようにします。
+[/O1](o1-o2-minimize-size-maximize-speed.md)と[/O2](o1-o2-minimize-size-maximize-speed.md)の既定値。 明示的にインライン禁止とマークされていない関数をコンパイラで拡張できるようにします。
 
 ::: moniker range=">=vs-2019"
 

@@ -2,12 +2,12 @@
 title: '方法: ユニバーサル Windows プラットフォーム アプリで既存の C++ コードを使用する'
 ms.date: 04/08/2019
 ms.assetid: 87e5818c-3081-42f3-a30d-3dca2cf0645c
-ms.openlocfilehash: b46cbdc088908f59d6cbdc0ecd7cd6475da370d8
-ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
+ms.openlocfilehash: e587ae88fe8d38a22b351d87ae585efe82acf091
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67861129"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69510376"
 ---
 # <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>方法: ユニバーサル Windows プラットフォーム アプリで既存の C++ コードを使用する
 
@@ -19,13 +19,13 @@ UWP アプリは保護された環境で実行されるため、プラットフ�
 
 ソース コードがライブラリに使用できるなら、禁止されている API 呼び出しを除去できる場合があります。 許可または禁止されている API の一覧を含む詳細については、「[Win32 and COM APIs for UWP apps](/uwp/win32-and-com/win32-and-com-for-uwp-apps)」 (UWP 用の Win32 API と COM API) と「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」をご覧ください。 [UWP アプリでの Windows API の代替](/uwp/win32-and-com/alternatives-to-windows-apis-uwp)に関するページで、いくつかの代替を確認できます。
 
-ユニバーサル Windows プロジェクトから従来のデスクトップ ライブラリへの参照を追加しようとすると、ライブラリに互換性がないことを示すエラー メッセージを受け取ります。 スタティック ライブラリの場合、従来の Win32 アプリケーションの場合と同様、ライブラリ (.lib ファイル) をリンカー入力に追加するだけでライブラリにリンクできます。 バイナリのみが使用可能なライブラリの場合は、これが唯一の選択肢です。 スタティック ライブラリはアプリの実行可能ファイルにリンクされますが、UWP アプリで使用する Win32 DLL は、プロジェクトに含め、"Content" としてマークすることによって、アプリにパッケージする必要があります。 UWP アプリで Win32 DLL を読み込むには、`LoadLibrary` や `LoadLibraryEx` ではなく、[LoadPackagedLibrary](/windows/desktop/api/winbase/nf-winbase-loadpackagedlibrary) を呼び出す必要もあります。
+ユニバーサル Windows プロジェクトから従来のデスクトップ ライブラリへの参照を追加しようとすると、ライブラリに互換性がないことを示すエラー メッセージを受け取ります。 スタティック ライブラリの場合、従来の Win32 アプリケーションの場合と同様、ライブラリ (.lib ファイル) をリンカー入力に追加するだけでライブラリにリンクできます。 バイナリのみが使用可能なライブラリの場合は、これが唯一の選択肢です。 スタティック ライブラリはアプリの実行可能ファイルにリンクされますが、UWP アプリで使用する Win32 DLL は、プロジェクトに含め、"Content" としてマークすることによって、アプリにパッケージする必要があります。 UWP アプリで Win32 DLL を読み込むには、`LoadLibrary` や `LoadLibraryEx` ではなく、[LoadPackagedLibrary](/windows/win32/api/winbase/nf-winbase-loadpackagedlibrary) を呼び出す必要もあります。
 
 DLL ライブラリかスタティック ライブラリのソース コードがある場合は、`/ZW` を使用して UWP プロジェクトとして再コンパイルできます。 こうするなら、**ソリューション エクスプローラー**を使用して参照を追加し、その参照を C++ UWP アプリで使用することができます。 DLL の場合は、エクスポート ライブラリでリンクさせます。
 
 他の言語の呼び出し元に機能を公開するために、ライブラリを Windows ランタイム コンポーネントに変換することができます。 Windows ランタイム コンポーネントは通常の DLL とは異なります。Windows ランタイム コンポーネントでは、コンテンツを説明するメタデータが .winmd ファイル形式になっています。これは、.NET および JavaScript のコンシューマーが必要とする形式です。 他の言語に API 要素を公開するには、ref クラスのような C++/CX コンストラクトを追加して公開するか、[Windows ランタイム C++ テンプレート ライブラリ (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)使用できます。  Windows 10 以降では、C++/CX の代わりに [C++/WinRT ライブラリ](https://github.com/microsoft/cppwinrt)を使うことができます。
 
-これまでの説明は、COM コンポーネントには当てはまりません。COM コンポーネントは、異なる仕方で扱う必要があります。 EXE または DLL で COM サーバーを使っている場合、[登録を必要としない COM コンポーネント](/windows/desktop/sbscs/creating-registration-free-com-objects)としてパッケージ化し、コンテンツ ファイルとしてプロジェクトに追加して、[CoCreateInstanceFromApp](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstancefromapp) を使ってインスタンス化するのであれば、COM サーバーをユニバーサル Windows プロジェクトで使うことができます。 詳細については、「[Using Free-COM DLL in Windows Store C++ Project](https://blogs.msdn.microsoft.com/win8devsupport/2013/05/19/using-free-com-dll-in-windows-store-c-project/)」 (Windows ストア C++ プロジェクトでの Free-COM DLL の使用) をご覧ください。
+これまでの説明は、COM コンポーネントには当てはまりません。COM コンポーネントは、異なる仕方で扱う必要があります。 EXE または DLL で COM サーバーを使っている場合、[登録を必要としない COM コンポーネント](/windows/win32/sbscs/creating-registration-free-com-objects)としてパッケージ化し、コンテンツ ファイルとしてプロジェクトに追加して、[CoCreateInstanceFromApp](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstancefromapp) を使ってインスタンス化するのであれば、COM サーバーをユニバーサル Windows プロジェクトで使うことができます。 詳細については、「[Using Free-COM DLL in Windows Store C++ Project](https://blogs.msdn.microsoft.com/win8devsupport/2013/05/19/using-free-com-dll-in-windows-store-c-project/)」 (Windows ストア C++ プロジェクトでの Free-COM DLL の使用) をご覧ください。
 
 UWP に移植したい既存の COM ライブラリがある場合、[Windows ランタイム C++ テンプレート ライブラリ (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md) を使うことで、Windows ランタイム コンポーネントに変換できます。 WRL は ATL と OLE のすべての機能をサポートしているわけではありません。そのため、移植が可能かどうかは、コンポーネントに COM、ATL、および OLE のどの機能が必要で、使用する COM コードがそれにどの程度依存しているかによって決まります。
 

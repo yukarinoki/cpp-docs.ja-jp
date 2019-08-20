@@ -1,4 +1,4 @@
----
+﻿---
 title: C++ で構造化例外を処理します。
 ms.date: 08/14/2018
 helpviewer_keywords:

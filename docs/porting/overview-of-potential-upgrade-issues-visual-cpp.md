@@ -2,12 +2,12 @@
 title: アップグレード時の潜在的な問題の概要 (Visual C++)
 ms.date: 05/03/2019
 ms.assetid: 2c99a8cb-098f-4a9d-bf2c-b80fd06ace43
-ms.openlocfilehash: 27cfe90f33f71d82af90cf4fa62186c1c0a189ce
-ms.sourcegitcommit: bde3279f70432f819018df74923a8bb895636f81
+ms.openlocfilehash: 10c2de547611cf7b1b47de2b1ec05dcf419c6225
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66182942"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69511546"
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>アップグレード時の潜在的な問題の概要 (Visual C++)
 
@@ -86,7 +86,7 @@ CRT については、mixing-and-matching はサポートされていません�
 dumpbin.exe /LINKERMEMBER somelibrary.lib
 ```
 
-### <a name="zcwchart-wchart-is-native-type"></a>/Zc:wchar_t (wchar_t をネイティブ型として認識)
+### <a name="zcwchar_t-wchar_t-is-native-type"></a>/Zc:wchar_t (wchar_t をネイティブ型として認識)
 
 (Microsoft Visual C++ 6.0 以前では、**wchar_t** は、組み込み型として実装されていたのではなく、符号なし Short の typedef として wchar.h で宣言されていました)。C++ 標準では **wchar_t** は組み込み型とする必要があります。 typedef バージョンを使用すると、移植性の問題が発生することがあります。 以前のバージョンの Visual Studio からアップグレードしているとき、コードが **wchar_t** を符号なし **short** に暗黙的に変換しようとしたために C2664 コンパイル エラーが発生した場合は、`/Zc:wchar_t-` を設定するのではなく、コードを変更してエラーを修正することをお勧めします。 「[/Zc:wchar_t (wchar_t をネイティブ型として認識)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)」を参照してください。
 
@@ -168,7 +168,7 @@ Windows API を直接または間接的に使用するプログラムをアッ�
 
 ATL および MFC は比較的安定した API ですが、変更が行われる場合があります。 詳細については、「[Visual C++ 2003 から 2015 の変更履歴](visual-cpp-change-history-2003-2015.md)」、[Visual Studio での Visual C++ の新機能](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)に関するページ、[Visual Studio の C++ 準拠の強化](../overview/cpp-conformance-improvements.md)に関するページを参照してください。
 
-### <a name="lnk-2005-dllmain12-already-defined-in-msvcrtdlib"></a>MSVCRTD.lib で定義済みの LNK 2005 _DllMain@12
+### <a name="lnk-2005-_dllmain12-already-defined-in-msvcrtdlib"></a>MSVCRTD.lib で定義済みの LNK 2005 _DllMain@12
 
 このエラーは MFC アプリケーションで発生することがあります。 CRT ライブラリと MFC ライブラリの間での順序付けの問題を示します。 最初に MFC をリンクして、new および delete 演算子が提供されるようにする必要があります。 エラーを修復するには、`/NODEFAULTLIB` スイッチを使用して、次の既定のライブラリを無視します:MSVCRTD.lib と mfcs140d.lib。 次に、これらの lib を追加の依存関係として追加します。
 
@@ -176,7 +176,7 @@ ATL および MFC は比較的安定した API ですが、変更が行われる
 
 元のコードを 32 ビット システム用にコンパイルする場合は、新しい 32 ビット アプリの代わりに、または新しい 32 ビット アプリに加えて、64 ビット バージョンを作成することができます。 一般には、まずプログラムを 32 ビット モードでコンパイルしてから、64 ビット モードでのコンパイルを試みてください。 64 ビットのコンパイルは単純ですが、場合によって、32 ビットのビルドで隠れていたバグが明らかになることがあります。
 
-また、ポインターのサイズ、時間、およびサイズ値、さらに printf 関数と scanf 関数での書式指定子に関連して発生する可能性のあるコンパイル時およびランタイムの問題にも注意する必要があります。 詳細については、「[64 ビット、x64 ターゲット用の Visual C++ の構成](../build/configuring-programs-for-64-bit-visual-cpp.md)」と「[Visual C++ の 64 ビットへの移行に関する一般的な問題](../build/common-visual-cpp-64-bit-migration-issues.md)」を参照してください。 移行に関する追加のヒントは、「[64 ビット Windows プログラミング ガイド](/windows/desktop/WinProg64/programming-guide-for-64-bit-windows)」を参照してください。
+また、ポインターのサイズ、時間、およびサイズ値、さらに printf 関数と scanf 関数での書式指定子に関連して発生する可能性のあるコンパイル時およびランタイムの問題にも注意する必要があります。 詳細については、「[64 ビット、x64 ターゲット用の Visual C++ の構成](../build/configuring-programs-for-64-bit-visual-cpp.md)」と「[Visual C++ の 64 ビットへの移行に関する一般的な問題](../build/common-visual-cpp-64-bit-migration-issues.md)」を参照してください。 移行に関する追加のヒントは、「[64 ビット Windows プログラミング ガイド](/windows/win32/WinProg64/programming-guide-for-64-bit-windows)」を参照してください。
 
 ## <a name="unicode-vs-mbcsascii"></a>Unicode と MBCS/ASCII
 

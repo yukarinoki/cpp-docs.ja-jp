@@ -2,12 +2,12 @@
 title: Visual C++  移植とアップグレードのガイド
 ms.date: 09/18/2018
 ms.assetid: f5fbcc3d-aa72-41a6-ad9a-a706af2166fb
-ms.openlocfilehash: 5659ca362204c62ab8fb21a74dccf8e29f33912c
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: cd74168419006388b8469086560452a8a99e05e2
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450378"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69511490"
 ---
 # <a name="visual-c-porting-and-upgrading-guide"></a>Visual C++  移植とアップグレードのガイド
 
@@ -67,7 +67,7 @@ Visual Studio のビルド システムを使用していない場合は、MSBui
 
 ユーザー インターフェイスはどうでしょうか。 MFC を使用している場合は、UI を更新することができます。 Feature Pack として 2008 年に導入された、新しい MFC 機能のいずれかを使用していますか。 アプリ全体を作成し直さずに、アプリに新しいルック アンド フィールを提供する場合は、MFC のリボン API を使用するか、MFC の新機能の一部を使用することを検討できます。
 
-プログラムに XAML ユーザー インターフェイスを設定するが、UWP アプリは作成しない場合は、C# と WPF を使用して UI レイヤーを作成し、標準の C++ ロジックを DLL にリファクターすることができます。 C++/CLI に互換性レイヤーを作成して、ネイティブ コードで C# に接続します。 または、[C++/CX](https://msdn.microsoft.com/library/windows/apps/xaml/hh699871.aspx) または [C++/WinRT](https://github.com/microsoft/cppwinrt) を使用して UWP アプリを作成する方法もあります。 Windows 10 では、[Desktop App Converter](https://msdn.microsoft.com/windows/uwp/porting/desktop-to-uwp-run-desktop-app-converter) を使用すると、コードを変更せずに既存のデスクトップ アプリケーションを UWP アプリとしてパッケージ化できます。
+プログラムに XAML ユーザー インターフェイスを設定するが、UWP アプリは作成しない場合は、C# と WPF を使用して UI レイヤーを作成し、標準の C++ ロジックを DLL にリファクターすることができます。 C++/CLI に互換性レイヤーを作成して、ネイティブ コードで C# に接続します。 または、[C++/CX](../cppcx/visual-c-language-reference-c-cx.md) または [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/) を使用して UWP アプリを作成する方法もあります。 Windows 10 では、[Desktop App Converter](/windows/msix/desktop/desktop-to-uwp-run-desktop-app-converter) を使用すると、コードを変更せずに既存のデスクトップ アプリケーションを UWP アプリとしてパッケージ化できます。
 
 また、新しい要件があったり、Windows Phone、Android デバイスなどの Windows デスクトップ以外のプラットフォームを対象とする必要が予測されるかもしれません。 クロスプラット フォームの UI ライブラリに、ユーザー インターフェイスのコードを移植することができます。 これらの UI フレームワークを使用して、複数のデバイスを対象にしながら、開発環境として Visual Studio や Visual Studio デバッガーを使用できます。
 

@@ -5,14 +5,14 @@ helpviewer_keywords:
 - WINVER in an upgraded Visual Studio C++ project
 - _WIN32_WINNT in an upgraded Visual Studio C++ project
 ms.assetid: 6a1f1d66-ae0e-48a7-81c3-524d8e8f3447
-ms.openlocfilehash: a624118bdd192c5ec677be81f0b410d2392e62e9
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: a83e92444e7010e4d3b65153b2e60e1c5d952cef
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65449075"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69511605"
 ---
-# <a name="modifying-winver-and-win32winnt"></a>WINVER および _WIN32_WINNT の変更
+# <a name="modifying-winver-and-_win32_winnt"></a>WINVER および _WIN32_WINNT の変更
 
 Visual C++ では、Windows 95、Windows 98、Windows ME、Windows NT、および Windows 2000 がサポート対象外になりました。 **WINVER** マクロまたは **_WIN32_WINNT** マクロをこれらのいずれかのバージョンの Windows に割り当てている場合は、そのマクロを修正する必要があります。 Visual C++ の以前のバージョンを使用して作成したプロジェクトをアップグレードすると、 **WINVER** マクロまたは **_WIN32_WINNT** マクロがサポート対象外になった Windows のバージョンに割り当てられている場合には、そのマクロに関連するコンパイル エラーが発生することがあります。
 
@@ -53,7 +53,7 @@ Visual C++ では、Windows 95、Windows 98、Windows ME、Windows NT、およ�
 
 `/D` コンパイラ オプションを使用して、このマクロを定義することもできます。 詳細については、「 [/D (Preprocessor Definitions)](../build/reference/d-preprocessor-definitions.md)」を参照してください。
 
-これらのマクロの意味について詳しくは、「 [Windows ヘッダーの使用](/windows/desktop/WinProg/using-the-windows-headers)」をご覧ください。
+これらのマクロの意味について詳しくは、「 [Windows ヘッダーの使用](/windows/win32/WinProg/using-the-windows-headers)」をご覧ください。
 
 ## <a name="see-also"></a>関連項目
 
