@@ -60,12 +60,12 @@ helpviewer_keywords:
 - CFile [MFC], m_hFile
 - CFile [MFC], m_pTM
 ms.assetid: b2eb5757-d499-4e67-b044-dd7d1abaa0f8
-ms.openlocfilehash: a258773633f503dc0638d76509953b3410dafbd8
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
+ms.openlocfilehash: a9161764f6c8646766a73add01c25cce5619ad19
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68375762"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69506579"
 ---
 # <a name="cfile-class"></a>CFile クラス
 
@@ -382,7 +382,7 @@ virtual CString GetFileTitle() const;
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、 [GetFileTitle](/windows/desktop/api/commdlg/nf-commdlg-getfiletitlea)を呼び出して、ファイルのタイトルを取得します。 成功した場合、メソッドは、ユーザーにファイル名を表示するためにシステムが使用する文字列を返します。 それ以外の場合、メソッドは[Pathfindfilename](/windows/desktop/api/shlwapi/nf-shlwapi-pathfindfilenamea)を呼び出して、基になるファイルのファイル名 (ファイル拡張子を含む) を取得します。 つまり、返されたファイルのタイトル文字列にファイル拡張子が必ず含まれているわけではありません。 詳細については、Windows SDK の「 [GetFileTitle](/windows/desktop/api/commdlg/nf-commdlg-getfiletitlea)と[pathfindfilename](/windows/desktop/api/shlwapi/nf-shlwapi-pathfindfilenamea) 」を参照してください。
+このメソッドは、 [GetFileTitle](/windows/win32/api/commdlg/nf-commdlg-getfiletitlew)を呼び出して、ファイルのタイトルを取得します。 成功した場合、メソッドは、ユーザーにファイル名を表示するためにシステムが使用する文字列を返します。 それ以外の場合、メソッドは[Pathfindfilename](/windows/win32/api/shlwapi/nf-shlwapi-pathfindfilenamew)を呼び出して、基になるファイルのファイル名 (ファイル拡張子を含む) を取得します。 つまり、返されたファイルのタイトル文字列にファイル拡張子が必ず含まれているわけではありません。 詳細については、Windows SDK の「 [GetFileTitle](/windows/win32/api/commdlg/nf-commdlg-getfiletitlew)と[pathfindfilename](/windows/win32/api/shlwapi/nf-shlwapi-pathfindfilenamew) 」を参照してください。
 
 名前を含むファイルのパス全体を取得するには、 [Getfilepath](#getfilepath)を呼び出します。 ファイル名のみを返すには、 [Getfilename](#getfilename)を呼び出します。
 
@@ -588,13 +588,13 @@ CAtlTransactionManager オブジェクトへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-開いたが成功した場合は0以外の。それ以外の場合は0です。 この*パラメーターは*、0が返された場合にのみ意味があります。
+開いたが成功した場合は0以外の。それ以外の場合は0です。 このパラメーターは、0が返された場合にのみ意味があります。
 
 ### <a name="remarks"></a>Remarks
 
 2つ`Open`の関数は、ファイルを開くための "安全な" メソッドであり、エラーが通常の予期される条件になります。
 
-コンストラクターは`CFile`エラー条件で例外をスローしますが`Open` 、エラー状態の場合は FALSE を返します。 `Open`でも、エラーを説明するために[CFileException](../../mfc/reference/cfileexception-class.md)オブジェクトを初期化することはできます。 *パラメーターを*指定しない場合、またはの*場合に NULL*を渡すと`Open` 、は FALSE を返し、 `CFileException`をスローしません。 `CFileException`既存`Open`のにポインターを渡し、エラーが発生した場合、関数はそのエラーを説明する情報を入力します。 `Open`どちらの場合も、例外はスローされません。
+コンストラクターは`CFile`エラー条件で例外をスローしますが`Open` 、エラー状態の場合は FALSE を返します。 `Open`でも、エラーを説明するために[CFileException](../../mfc/reference/cfileexception-class.md)オブジェクトを初期化することはできます。 パラメーターを指定しない場合、またはの場合に NULL を渡すと`Open` 、は FALSE を返し、 `CFileException`をスローしません。 `CFileException`既存`Open`のにポインターを渡し、エラーが発生した場合、関数はそのエラーを説明する情報を入力します。 `Open`どちらの場合も、例外はスローされません。
 
 次の表では、の`Open`考えられる結果について説明します。
 
@@ -613,7 +613,7 @@ CAtlTransactionManager オブジェクトへのポインター。
 
 ##  <a name="operator_handle"></a>CFile::operator HANDLE
 
-この演算子を使用し`CFile`て、オブジェクトへのハンドルを、を[](/windows/desktop/api/fileapi/nf-fileapi-readfileex) `HANDLE`想定する ReadFileEx や[getfiletime](/windows/desktop/api/fileapi/nf-fileapi-getfiletime)などの関数に渡します。
+この演算子を使用して、`CFile` オブジェクトへのハンドルを、`HANDLE` を想定する [ReadFileEx](/windows/win32/api/fileapi/nf-fileapi-readfileex) や[getfiletime](/windows/win32/api/fileapi/nf-fileapi-getfiletime)などの関数に渡します。
 
 ```
 operator HANDLE() const;

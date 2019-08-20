@@ -15,12 +15,12 @@ helpviewer_keywords:
 - vprintf function
 - formatted text [C++]
 ms.assetid: 02ac7c51-eab1-4bf0-bf4c-77065e3fa744
-ms.openlocfilehash: c45197c9008c2d0b6a0519d947ca75f55a7960fd
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: eb8a2829540876936f6c57745fb56e7d19f16394
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57747847"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498884"
 ---
 # <a name="vprintf-functions"></a>vprintf 系関数
 
@@ -81,7 +81,7 @@ ms.locfileid: "57747847"
 **vsprintf**、`vswprintf`、`_vsnprintf`、および `_vsnwprintf` については、重なり合う文字列間でコピーした場合の動作は未定義です。
 
 > [!IMPORTANT]
->  *format* にユーザー定義の文字列を指定しないでください。 詳しくは、「 [バッファー オーバーランの回避](/windows/desktop/SecBP/avoiding-buffer-overruns)」をご覧ください。 これらの関数 (サフィックス **_s** または **_p** のどちらか) のセキュリティが強化されたバージョンを使用する場合、ユーザー指定の書式設定文字列は、ユーザー指定文字列に無効な書式設定文字が含まれている場合に無効なパラメーター例外をトリガーします。
+>  *format* にユーザー定義の文字列を指定しないでください。 詳しくは、「 [バッファー オーバーランの回避](/windows/win32/SecBP/avoiding-buffer-overruns)」をご覧ください。 これらの関数 (サフィックス **_s** または **_p** のどちらか) のセキュリティが強化されたバージョンを使用する場合、ユーザー指定の書式設定文字列は、ユーザー指定文字列に無効な書式設定文字が含まれている場合に無効なパラメーター例外をトリガーします。
 
 ## <a name="see-also"></a>関連項目
 

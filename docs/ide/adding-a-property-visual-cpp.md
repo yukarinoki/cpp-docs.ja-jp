@@ -12,12 +12,12 @@ helpviewer_keywords:
 - stock properties, about stock properties
 - stock properties
 ms.assetid: 37bd4db7-efd3-4faa-87ad-64902ed16a36
-ms.openlocfilehash: 79938cb5c762292c5e1802832477c3a568ae2fdb
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 5c472b74fee690c0cf33f78eca9e2e8462930eb8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66504468"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509533"
 ---
 # <a name="add-a-property"></a>プロパティを追加する
 
@@ -149,15 +149,15 @@ ms.locfileid: "66504468"
 
 - `id`
 
-  プロパティを識別する数値 ID を設定します。 このオプションは、カスタム インターフェイスのプロパティでは使用できません。 *MIDL リファレンス*の [id](/windows/desktop/Midl/id) に関するページを参照してください。
+  プロパティを識別する数値 ID を設定します。 このオプションは、カスタム インターフェイスのプロパティでは使用できません。 *MIDL リファレンス*の [id](/windows/win32/Midl/id) に関するページを参照してください。
 
 - `helpcontext`
 
-  コンテキスト ID を指定します。ユーザーはヘルプ ファイルでこのプロパティに関する情報を参照できます。 *MIDL リファレンス*の [helpcontext](/windows/desktop/Midl/helpcontext) に関するページを参照してください。
+  コンテキスト ID を指定します。ユーザーはヘルプ ファイルでこのプロパティに関する情報を参照できます。 *MIDL リファレンス*の [helpcontext](/windows/win32/Midl/helpcontext) に関するページを参照してください。
 
 - `helpstring`
 
-  適用先となる要素を記述するために使用される文字列を指定します。 既定では、`property`&nbsp;*Property&nbsp;name* に設定されます。 *MIDL リファレンス*の [helpstring](/windows/desktop/Midl/helpstring) に関するページを参照してください。
+  適用先となる要素を記述するために使用される文字列を指定します。 既定では、`property`&nbsp;*Property&nbsp;name* に設定されます。 *MIDL リファレンス*の [helpstring](/windows/win32/Midl/helpstring) に関するページを参照してください。
 
 ### <a name="other-options"></a>その他のオプション
 
@@ -165,17 +165,17 @@ ms.locfileid: "66504468"
 
 |オプション|説明|
 |------------|-----------------|
-|`bindable`|プロパティがデータ バインディングをサポートすることを示します。 *MIDL リファレンス*の [bindable](/windows/desktop/Midl/bindable) に関するページを参照してください。 プロパティのストック実装では、このオプションは既定で設定され、変更できません。|
-|`defaultbind`|これがオブジェクトを最もよく表す 1 つのバインド可能なプロパティであることを示します。 *MIDL リファレンス*の [defaultbind](/windows/desktop/Midl/defaultbind) に関するページを参照してください。|
-|`displaybind`|このプロパティをユーザーにバインド可能として表示する必要があることを示します。 *MIDL リファレンス*の [displaybind](/windows/desktop/Midl/displaybind) に関するページを参照してください。|
-|`immediatebind`|データ バインディング オブジェクトのこのプロパティに対するすべての変更が、すぐにデータベースに通知されることを示します。 *MIDL リファレンス*の [immediatebind](/windows/desktop/Midl/immediatebind) に関するページを参照してください。|
-|`defaultcollelem`|プロパティが既定コレクションの要素に対するアクセサー関数であることを示します。 *MIDL リファレンス*の [defaultcollelem](/windows/desktop/Midl/defaultcollelem) に関するページを参照してください。|
-|`nonbrowsable`|プロパティ ブラウザーに表示してはならない interface または dispinterface メンバーにタグを付けます。 *MIDL リファレンス*の [nonbrowsable](/windows/desktop/Midl/nonbrowsable) に関するページを参照してください。|
-|`requestedit`|`OnRequestEdit` 通知がプロパティでサポートされることを示します。 "*MIDL リファレンス*" の [requestedit](/windows/desktop/Midl/requestedit) に関するページを参照してください。 プロパティのストック実装では、このオプションは既定で設定され、変更できません。|
-|`source`|プロパティのメンバーがイベントのソースであることを示します。 *MIDL リファレンス* の [source](/windows/desktop/Midl/source) に関するページを参照してください。|
-|`hidden`|プロパティは存在しますが、ユーザー指向ブラウザーでは表示されないことを示します。 *MIDL リファレンス*の [hidden](/windows/desktop/Midl/hidden) に関するページを参照してください。|
-|`restricted`|プロパティを任意に呼び出せないことを指定します。 *MIDL リファレンス* の [restricted](/windows/desktop/Midl/restricted) に関するページを参照してください。|
-|`local`|プロパティがリモートでないことを MIDL コンパイラに対して指定します。 *MIDL リファレンス* の [local](/windows/desktop/Midl/local) に関するページを参照してください。|
+|`bindable`|プロパティがデータ バインディングをサポートすることを示します。 *MIDL リファレンス*の [bindable](/windows/win32/Midl/bindable) に関するページを参照してください。 プロパティのストック実装では、このオプションは既定で設定され、変更できません。|
+|`defaultbind`|これがオブジェクトを最もよく表す 1 つのバインド可能なプロパティであることを示します。 *MIDL リファレンス*の [defaultbind](/windows/win32/Midl/defaultbind) に関するページを参照してください。|
+|`displaybind`|このプロパティをユーザーにバインド可能として表示する必要があることを示します。 *MIDL リファレンス*の [displaybind](/windows/win32/Midl/displaybind) に関するページを参照してください。|
+|`immediatebind`|データ バインディング オブジェクトのこのプロパティに対するすべての変更が、すぐにデータベースに通知されることを示します。 *MIDL リファレンス*の [immediatebind](/windows/win32/Midl/immediatebind) に関するページを参照してください。|
+|`defaultcollelem`|プロパティが既定コレクションの要素に対するアクセサー関数であることを示します。 *MIDL リファレンス*の [defaultcollelem](/windows/win32/Midl/defaultcollelem) に関するページを参照してください。|
+|`nonbrowsable`|プロパティ ブラウザーに表示してはならない interface または dispinterface メンバーにタグを付けます。 *MIDL リファレンス*の [nonbrowsable](/windows/win32/Midl/nonbrowsable) に関するページを参照してください。|
+|`requestedit`|`OnRequestEdit` 通知がプロパティでサポートされることを示します。 "*MIDL リファレンス*" の [requestedit](/windows/win32/Midl/requestedit) に関するページを参照してください。 プロパティのストック実装では、このオプションは既定で設定され、変更できません。|
+|`source`|プロパティのメンバーがイベントのソースであることを示します。 *MIDL リファレンス* の [source](/windows/win32/Midl/source) に関するページを参照してください。|
+|`hidden`|プロパティは存在しますが、ユーザー指向ブラウザーでは表示されないことを示します。 *MIDL リファレンス*の [hidden](/windows/win32/Midl/hidden) に関するページを参照してください。|
+|`restricted`|プロパティを任意に呼び出せないことを指定します。 *MIDL リファレンス* の [restricted](/windows/win32/Midl/restricted) に関するページを参照してください。|
+|`local`|プロパティがリモートでないことを MIDL コンパイラに対して指定します。 *MIDL リファレンス* の [local](/windows/win32/Midl/local) に関するページを参照してください。|
 
 ## <a name="stock-properties"></a>ストック プロパティ
 
