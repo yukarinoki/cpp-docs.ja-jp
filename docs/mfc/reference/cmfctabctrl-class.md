@@ -422,7 +422,7 @@ void EnableTabDocumentsMenu(BOOL bEnable=TRUE);
 
 ユーザーがタブラベルをクリックすると、対応するタブ付きウィンドウが表示されます。 タブラベルが表示されている場合、タブ付きウィンドウはその位置を変更せずに開かれます。 ユーザーがポップアップメニューからドキュメントを選択し、対応するタブ付きウィンドウが [オフ] になっている場合は、タブ付きウィンドウが最初のタブになります。
 
-##  <a name="ensurevisible"></a>CMFCTabCtrl:: Ensurevisible\
+##  <a name="ensurevisible"></a>CMFCTabCtrl:: Ensurevisible
 
 タブが確実に表示されるようにします。
 

@@ -27,7 +27,7 @@ Visual Studio には C++ コンパイラ、リンカー、その他のツール�
 
  Windows 10 でこれらのコマンド プロンプトにアクセスするには、 **[スタート]** メニューでお使いのバージョンの Visual Studio (**Visual Studio 2019** など) のフォルダーを開き、x64 のネイティブ ツールまたはクロス ツールの開発者コマンド プロンプトを選択します。 
 
-![x64 Native Tools コマンドプロンプト][(media/x64-native-tools-command-prompt.png "スタート] メニューの X64 ネイティブツール")
+![x64 Native Tools コマンドプロンプト](media/x64-native-tools-command-prompt.png "スタート メニューの X64 ネイティブツール")
 
 Windows 8 でこれらのコマンド プロンプトにアクセスするには、 **[スタート]** 画面で **[すべてのアプリ]** を開きます。 インストールされているバージョンの Visual Studio の見出しで、 **[Visual Studio]** フォルダーを開きます (古いバージョンの Visual Studio では、 **[Visual Studio Tools]** という名前になっている場合があります)。 さらに前のバージョンの Windows では、 **[スタート]** を選択し、 **[すべてのプログラム]** を展開して、お使いのバージョンの **[Visual Studio]** フォルダーを開きます (古いバージョンの Visual Studio では **[Visual Studio Tools]** )。 詳細については、[開発者コマンド プロンプトのショートカット](building-on-the-command-line.md#developer_command_prompt_shortcuts)に関するトピックを参照してください。
 
