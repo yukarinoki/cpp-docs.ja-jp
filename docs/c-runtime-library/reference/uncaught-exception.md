@@ -29,7 +29,7 @@ ms.locfileid: "62268898"
 ---
 # <a name="uncaughtexception"></a>__uncaught_exception
 
-1 つまたは複数の例外がスローされたが、対応するによってまだ処理されていないかどうかを示します**キャッチ**のブロックを[try catch](../../cpp/try-throw-and-catch-statements-cpp.md)ステートメント。
+1 以上の例外がスローされたかどうかを示しますが、[try-catch](../../cpp/try-throw-and-catch-statements-cpp.md)ステートメントの対応する**catch**ブロックによってまだ処理されていません。
 
 ## <a name="syntax"></a>構文
 
@@ -40,7 +40,7 @@ bool __uncaught_exception(
 
 ## <a name="return-value"></a>戻り値
 
-**true**から例外がスローされます、**お試しください**一致するまでブロック**キャッチ**ブロックが初期化された以外の場合、 **false**します。
+**try**で例外がスローされてから、一致する**catch**ブロックが初期化されるまでは**true**。 それ以外の場合は**false**。
 
 ## <a name="remarks"></a>Remarks
 
