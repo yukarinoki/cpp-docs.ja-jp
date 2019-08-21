@@ -11,22 +11,7 @@
         - name: MFC の一般的なトピック
           href: general-mfc-topics.md
         - name: MFC ソース ファイルの利用
-          expanded: false
-          items:
-            - name: MFC ソース ファイルの利用
-              href: using-the-mfc-source-files.md
-            - name: コメントの例
-              href: an-example-of-the-comments.md
-            - name: '-- Implementation コメント'
-              href: decrement-implementation-comment.md
-            - name: '-- Constructors コメント'
-              href: decrement-constructors-comment.md
-            - name: '-- Attributes コメント'
-              href: decrement-attributes-comment.md
-            - name: '-- Operations コメント'
-              href: decrement-operations-comment.md
-            - name: '-- Overridables コメント'
-              href: decrement-overridables-comment.md
+          href: using-the-mfc-source-files.md
         - name: MFC ライブラリのバージョン
           expanded: false
           items:

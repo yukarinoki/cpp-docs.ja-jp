@@ -6,28 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - C4687
 ms.assetid: 2f28e0b1-7358-4c88-bd70-aad8f0aa004c
-ms.openlocfilehash: 1978e1a35ba5b5d59b5961a21378d8af6921d145
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 83f5c535f9cf252783110838c181c88c8b0096ee
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62311330"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69631602"
 ---
 # <a name="compiler-warning-c4687"></a>コンパイラの警告 C4687
 
-'class': シールドされた抽象クラスはインターフェイス 'interface' を実装できません
+> '*class*': シールドされた抽象クラスはインターフェイス '*interface*' を実装できません
 
-シールされた抽象型は、通常は静的メンバー関数を保持する便利なのみできます。
+## <a name="remarks"></a>Remarks
 
-詳細については、次を参照してください。[抽象](../../extensions/abstract-cpp-component-extensions.md)と[シール](../../extensions/sealed-cpp-component-extensions.md)します。
+シールドされた抽象型は、通常、静的メンバー関数を保持する場合にのみ役立ちます。
 
-C4687 をエラーとして既定で発行されます。 C4687 を抑制することができます、[警告](../../preprocessor/warning.md)プラグマ。 シールされた抽象型にインターフェイスを実装する場合は、C4687 を抑制することができます。
+詳細については、「 [abstract](../../extensions/abstract-cpp-component-extensions.md) and [sealed](../../extensions/sealed-cpp-component-extensions.md)」を参照してください。
+
+C4687 は、既定ではエラーとして発行されます。 C4687 は、 [warning](../../preprocessor/warning.md)プラグマを使用して抑制できます。 シールされた抽象型にインターフェイスを実装することがわかっている場合は、C4687 を抑制することができます。
 
 ## <a name="example"></a>例
 
 次の例では、C4687 が生成されます。
 
-```
+```cpp
 // C4687.cpp
 // compile with: /clr /c
 interface class A {};
