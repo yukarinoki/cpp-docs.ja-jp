@@ -1,18 +1,18 @@
 ---
-title: 'チュートリアル: エージェント ベースのアプリケーションを作成します。'
+title: 'チュートリアル: エージェントベースのアプリケーションの作成'
 ms.date: 04/25/2019
 helpviewer_keywords:
 - asynchronous agents, creating
 - agent class, example
 ms.assetid: 730f42ce-6d58-4753-b948-fd9c9ef2ce6c
-ms.openlocfilehash: c249bc8138a3617cce3eae836751575b2626f4aa
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: 4a2fabd9ab4f358d40b17e662fb64ab70d01c58e
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64857312"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69631663"
 ---
-# <a name="walkthrough-creating-an-agent-based-application"></a>チュートリアル: エージェント ベースのアプリケーションを作成します。
+# <a name="walkthrough-creating-an-agent-based-application"></a>チュートリアル: エージェントベースのアプリケーションの作成
 
 ここでは、基本的なエージェント ベースのアプリケーションの作成方法について説明します。 このチュートリアルでは、テキスト ファイルから非同期的にデータを読み取るエージェントを作成できます。 このアプリケーションでは、Adler-32 チェックサム アルゴリズムを使用して、そのファイルの内容のチェックサムを計算します。
 
@@ -36,57 +36,57 @@ ms.locfileid: "64857312"
 
 - [File_reader クラスの作成](#createagentclass)
 
-- [アプリケーションで file_reader クラスの使用](#useagentclass)
+- [アプリケーションでの file_reader クラスの使用](#useagentclass)
 
-##  <a name="createapplication"></a> コンソール アプリケーションを作成します。
+##  <a name="createapplication"></a>コンソールアプリケーションの作成
 
-このセクションでは、作成する方法を示します、C++コンソール アプリケーション、プログラムで使用されるヘッダー ファイルを参照します。 最初の手順は、使用して Visual Studio のバージョンによって異なります。 このページの左上のバージョン セレクターが正しく設定することを確認します。
+このセクションでは、プログラムでC++使用するヘッダーファイルを参照するコンソールアプリケーションを作成する方法について説明します。 最初の手順は、使用している Visual Studio のバージョンによって異なります。 このページの左上にあるバージョンセレクターが正しく設定されていることを確認します。
 
 ::: moniker range="vs-2019"
 
-### <a name="to-create-a-c-console-application-in-visual-studio-2019"></a>作成する、C++コンソール アプリケーションを Visual Studio 2019
+### <a name="to-create-a-c-console-application-in-visual-studio-2019"></a>Visual Studio 2019 C++でコンソールアプリケーションを作成するには
 
-1. メイン メニューで、次のように選択します**ファイル** > **新規** > **プロジェクト**を開く、**新しいプロジェクトを作成**ダイアログ。ボックス。
+1. メイン メニューで、 **[ファイル]** > **[新規作成]** > **[プロジェクト]** の順に選択して、 **[新しいプロジェクトの作成]** ダイアログ ボックスを開きます。
 
-1. ダイアログ ボックスの上部にある次のように設定します**言語**に **C++** 設定**プラットフォーム**に**Windows**、設定と**プロジェクトの種類。** に**コンソール**します。 
+1. ダイアログの上部で、 **[言語]** を **[C++]** に、 **[プラットフォーム]** を **[Windows]** に、 **[プロジェクト タイプ]** を **[コンソール]** に設定します。 
 
-1. プロジェクトの種類の結果の一覧から選択**コンソール アプリ**選択 **[次へ]** します。 次のページで次のように入力します。 `BasicAgent` 、プロジェクトの名前としてし、必要な場合は、プロジェクトの場所を指定します。
+1. フィルター処理されたプロジェクト タイプの一覧から、 **[コンソール アプリ]** を選択して、 **[次へ]** を選択します。 次のページで、プロジェクト`BasicAgent`の名前として「」と入力し、必要に応じてプロジェクトの場所を指定します。
 
-1. 選択、**作成**プロジェクトを作成するボタンをクリックします。
+1. **[作成]** ボタンをクリックしてプロジェクトを作成します。
 
-1. プロジェクト ノードを右クリックして**ソリューション エクスプ ローラー**、選択**プロパティ**します。 **構成プロパティ** > **C/C++** > **プリコンパイル済みヘッダー** > **プリコンパイル済みヘッダー**選択**作成**です。
+1. **ソリューションエクスプローラー**でプロジェクトノードを右クリックし、 **[プロパティ]** を選択します。 [**構成プロパティ** > ] [**C/C++**  > **プリコンパイル済みヘッダー** > ] [**プリコンパイル済み**ヘッダー] の順に選択します。
 
 ::: moniker-end
 
 ::: moniker range="<=vs-2017"
 
-### <a name="to-create-a-c-console-application-in-visual-studio-2017-and-earlier"></a>作成する、C++コンソール アプリケーションを Visual Studio 2017 以降
+### <a name="to-create-a-c-console-application-in-visual-studio-2017-and-earlier"></a>Visual Studio 2017 C++以前でコンソールアプリケーションを作成するには
 
-1. **ファイル** メニューのをクリックして**新規**、 をクリックし、**プロジェクト**を表示する、**新しいプロジェクト** ダイアログ ボックス。
+1. **[ファイル]** メニューの **[新規作成]** をクリックし、 **[プロジェクト]** をクリックして **[新しいプロジェクト]** ダイアログボックスを表示します。
 
-1. **新しいプロジェクト**ダイアログ ボックスで、 **Visual C**内のノード、**プロジェクトの種類**クリックしてウィンドウ**Win32 コンソール アプリケーション** **テンプレート**ウィンドウ。 たとえば、プロジェクトの名前を入力`BasicAgent`、順にクリックします **[ok]** を表示する、 **Win32 コンソール アプリケーション ウィザード**します。
+1. **新しいプロジェクト**ダイアログ ボックスで、 **Visual C**内のノード、**プロジェクトの種類**クリックしてウィンドウ**Win32 コンソール アプリケーション** **テンプレート**ウィンドウ。 プロジェクトの名前 (たとえば`BasicAgent`、) を入力し、 **[OK]** をクリックして、 **Win32 コンソールアプリケーションウィザード**を表示します。
 
-1. **Win32 コンソール アプリケーション ウィザード**ダイアログ ボックスで、をクリックして**完了**します。
+1. **[Win32 コンソールアプリケーションウィザード]** ダイアログボックスで、 **[完了]** をクリックします。
 
 ::: moniker-end
 
-1. Stdafx.h (または、Visual Studio のバージョンによって pch.h) では、次のコードを追加します。
+1. *.Pch* (Visual Studio 2017 以前の*stdafx.h* ) で、次のコードを追加します。
 
 [!code-cpp[concrt-basic-agent#1](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_1.h)]
 
-   Agents.h ヘッダー ファイルの機能が含まれています、 [concurrency::agent](../../parallel/concrt/reference/agent-class.md)クラス。
+   ヘッダーファイル agents. h には、 [concurrency:: agent](../../parallel/concrt/reference/agent-class.md)クラスの機能が含まれています。
 
-1. アプリケーションをビルドして実行することにより、アプリケーションが正常に作成されたことを確認します。 アプリケーションを構築する、**ビルド** メニューのをクリックして**ソリューションのビルド**します。 アプリケーションが正常にビルドする場合をクリックしてアプリケーションを実行**デバッグの開始**上、**デバッグ**メニュー。
+1. アプリケーションをビルドして実行することにより、アプリケーションが正常に作成されたことを確認します。 アプリケーションをビルドするには、 **[ビルド]** メニューの **[ソリューションのビルド]** をクリックします。 アプリケーションが正常にビルドされた場合は、 **[デバッグ]** メニューの **[デバッグ開始]** をクリックしてアプリケーションを実行します。
 
 [[トップ](#top)]
 
-##  <a name="createagentclass"></a> File_reader クラスの作成
+##  <a name="createagentclass"></a>File_reader クラスの作成
 
 ここでは、`file_reader` クラスの作成方法について説明します。 ランタイムは、各エージェントがそれぞれのコンテキストで処理を実行するようにスケジュールを設定します。 そのため、処理を同期的に実行する一方で、他のコンポーネントとは非同期的に通信するエージェントを作成できます。 `file_reader` クラスでは、指定された入力ファイルからデータを読み取り、そのファイルのデータを指定されたターゲット コンポーネントに送信します。
 
-#### <a name="to-create-the-filereader-class"></a>file_reader クラスを作成するには
+#### <a name="to-create-the-file_reader-class"></a>file_reader クラスを作成するには
 
-1. 新しい C++ ヘッダー ファイルをプロジェクトに追加します。 これを行うを右クリックし、**ヘッダー ファイル**ノード**ソリューション エクスプ ローラー**、 をクリックして**追加**、順にクリックします**新しい項目の**します。 **テンプレート**ペインで、**ヘッダー ファイル (.h)** します。 **新しい項目の追加**ダイアログ ボックスに「`file_reader.h`で、**名前**ボックスをクリックして**追加**します。
+1. 新しい C++ ヘッダー ファイルをプロジェクトに追加します。 これを行うには、**ソリューションエクスプローラー**で **[ヘッダーファイル]** ノードを右クリックし、 **[追加]** をクリックして、 **[新しい項目]** をクリックします。 **[テンプレート]** ペインで、 **[ヘッダーファイル (.h)]** を選択します。 **[新しい項目の追加]** ダイアログボックスで`file_reader.h` 、 **[名前]** ボックスに「」と入力し、 **[追加]** をクリックします。
 
 1. file_reader.h に、次のコードを追加します。
 
@@ -100,7 +100,7 @@ ms.locfileid: "64857312"
 
 [!code-cpp[concrt-basic-agent#3](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_4.h)]
 
-   `_file_name` メンバーは、エージェントが読み取る対象のファイル名です。 `_target`メンバーは、 [concurrency::itarget](../../parallel/concrt/reference/itarget-class.md)オブジェクト、エージェントが、ファイルの内容を書き込みます。 `_error` メンバーでは、エージェントの有効期間中に発生したエラーを保持します。
+   `_file_name` メンバーは、エージェントが読み取る対象のファイル名です。 メンバーは、エージェントがファイルの内容を書き込む[concurrency:: ITarget](../../parallel/concrt/reference/itarget-class.md)オブジェクトです。 `_target` `_error` メンバーでは、エージェントの有効期間中に発生したエラーを保持します。
 
 1. `file_reader` クラスの `public` セクションに `file_reader` コンストラクターの次のコードを追加します。
 
@@ -114,13 +114,13 @@ ms.locfileid: "64857312"
 
    `get_error` メソッドにより、エージェントの有効期間中に発生したエラーを取得します。
 
-1. 実装、 [concurrency::agent::run](reference/agent-class.md#run)メソッドで、`protected`クラスのセクション。
+1. クラスの`protected`セクションで、 [concurrency:: agent:: run](reference/agent-class.md#run)メソッドを実装します。
 
 [!code-cpp[concrt-basic-agent#6](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_7.h)]
 
 `run` メソッドによりファイルを開き、そこからデータを読み取ります。 `run` メソッドでは、例外処理を使用して、ファイルの処理中に発生したエラーをキャプチャします。
 
-   このメソッドは、ファイルからデータを読み取るたびに呼び出す、 [concurrency::asend](reference/concurrency-namespace-functions.md#asend)ターゲット バッファーにデータを送信します。 処理の終了を示す際には、空の文字列をターゲット バッファーに送信します。
+   このメソッドは、ファイルからデータを読み取るたびに、 [concurrency:: asend](reference/concurrency-namespace-functions.md#asend)関数を呼び出して、そのデータをターゲットバッファーに送信します。 処理の終了を示す際には、空の文字列をターゲット バッファーに送信します。
 
 file_reader.h の内容全体の例を次に示します。
 
@@ -128,11 +128,11 @@ file_reader.h の内容全体の例を次に示します。
 
 [[トップ](#top)]
 
-##  <a name="useagentclass"></a> アプリケーションで file_reader クラスの使用
+##  <a name="useagentclass"></a>アプリケーションでの file_reader クラスの使用
 
-ここでは、`file_reader` クラスを使用して、テキスト ファイルの内容を読み取る方法について説明します。 作成する方法も示します、 [concurrency::call](../../parallel/concrt/reference/call-class.md)オブジェクトをこのファイル データを受け取り、その adler-32 チェックサムを計算します。
+ここでは、`file_reader` クラスを使用して、テキスト ファイルの内容を読み取る方法について説明します。 また、このファイルデータを受け取り、その Adler-32 チェックサムを計算する[concurrency:: call](../../parallel/concrt/reference/call-class.md)オブジェクトを作成する方法についても説明します。
 
-#### <a name="to-use-the-filereader-class-in-your-application"></a>アプリケーションで file_reader クラスを使用するには
+#### <a name="to-use-the-file_reader-class-in-your-application"></a>アプリケーションで file_reader クラスを使用するには
 
 1. BasicAgent.cpp に、次の `#include` ステートメントを追加します。
 
@@ -142,7 +142,7 @@ file_reader.h の内容全体の例を次に示します。
 
 [!code-cpp[concrt-basic-agent#9](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_10.cpp)]
 
-1. `_tmain`関数を作成、 [concurrency::event](../../parallel/concrt/reference/event-class.md)処理の終端を表すオブジェクト。
+1. 関数で、処理の終了を通知する[concurrency:: event](../../parallel/concrt/reference/event-class.md)オブジェクトを作成します。 `_tmain`
 
 [!code-cpp[concrt-basic-agent#10](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_11.cpp)]
 
@@ -196,11 +196,11 @@ Adler-32 sum is fefb0d75
 
 データ メンバーへの同時アクセスを回避するために、クラスの `protected` セクションまたは `private` セクションに、処理を実行するメソッドを追加することをお勧めします。 クラスの `public` セクションには、メッセージをエージェントに送信するメソッドまたはメッセージをエージェントから受信するメソッドのみを追加してください。
 
-常に呼び出し、 [concurrency::agent:: 完了](reference/agent-class.md#done)完了状態に、エージェントを移動するメソッド。 通常、このメソッドは、`run` メソッドから制御が戻る前に呼び出します。
+常に[concurrency:: agent::d 1 つ](reference/agent-class.md#done)のメソッドを呼び出して、エージェントを完了状態に移行します。 通常、このメソッドは、`run` メソッドから制御が戻る前に呼び出します。
 
 ## <a name="next-steps"></a>次の手順
 
-エージェント ベースのアプリケーションの別の例を参照してください。[チュートリアル。Join デッドロックの防止を使用した](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md)します。
+エージェントベースのアプリケーションの別の例について[は、「チュートリアル:Join を使用して](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md)デッドロックを防止します。
 
 ## <a name="see-also"></a>関連項目
 

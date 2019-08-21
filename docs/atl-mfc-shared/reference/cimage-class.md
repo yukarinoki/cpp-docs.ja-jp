@@ -1,6 +1,6 @@
 ---
 title: CImage クラス
-ms.date: 02/01/2018
+ms.date: 08/19/2019
 f1_keywords:
 - CImage
 - ATLIMAGE/ATL::CImage
@@ -54,12 +54,12 @@ helpviewer_keywords:
 - CImage class
 - transparent color
 ms.assetid: 52861e3d-bf7e-481f-a240-90e88f76c490
-ms.openlocfilehash: 6c651f160fdab582b769cf1764add2cc482745bf
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 3b278f37bbcbe2ee879d9c3d2837267fe31e57e2
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69491327"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630713"
 ---
 # <a name="cimage-class"></a>CImage クラス
 
@@ -193,9 +193,9 @@ void CMyDlg::OnRButtonDown(UINT nFlags, CPoint point)
 は、MFC `CImage`または ATL から使用できます。
 
 > [!NOTE]
-> を使用して`CImage`プロジェクトを作成する場合は、を含める`atlimage.h`前にを定義`CString`する必要があります。 プロジェクトで MFC を使用せずに ATL `atlstr.h`を使用する`atlimage.h`場合は、を含める前にを含めます。 プロジェクトで mfc を使用している場合 (または、mfc がサポートされて`afxstr.h`いる ATL プロジェクト`atlimage.h`の場合) は、を含める前にを含めてください。<br/>
+> を使用して`CImage`プロジェクトを作成する場合は、 *atlimage*を含める前にを定義`CString`する必要があります。 プロジェクトで MFC を使用せずに ATL を使用する場合は、 *atlimage*を含める前に*atlstr. h*を含めます。 プロジェクトで MFC を使用している場合 (または、MFC がサポートされている ATL プロジェクトの場合) は、 *atlimage*を含める前に*afxstr*を含めてください。<br/>
 > <br/>
-> 同様に、を含める`atlimage.h` `atlimpl.cpp`前にを含める必要があります。 これを簡単に行うに`atlimage.h`は、 `stdafx.h`にを含めます。
+> 同様に、 *atlimpl .cpp*を含める前に*atlimage*を含める必要があります。 これを簡単に行うには、atlimage (Visual Studio 2017 以前の*stdafx.h* ) にを含めます。
 
 ## <a name="requirements"></a>必要条件
 

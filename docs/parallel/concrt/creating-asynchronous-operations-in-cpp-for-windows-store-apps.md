@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows 8.x apps, creating C++ async operations
 - Creating C++ async operations
 ms.assetid: a57cecf4-394a-4391-a957-1d52ed2e5494
-ms.openlocfilehash: d6a36da79f24d98d162c4ffffff17b4471b2b063
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: e3a5b634eb22a6860fe8af5b3b737a8e649e03c2
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69512251"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69631731"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>UWP アプリ用のC++での非同期操作の作成
 
@@ -70,10 +70,10 @@ Windows ランタイムを使用すると、さまざまなプログラミング
 
 `create_async` の戻り値の型は、引数の型によって決まります。 たとえば、作業関数が値を返さず、進行状況を報告しない場合、 `create_async` は `IAsyncAction`を返します。 作業関数が値を返さず、進行状況を報告する場合、 `create_async` は `IAsyncActionWithProgress`を返します。 進行状況を報告するには、作業関数のパラメーターとして [concurrency::progress_reporter](../../parallel/concrt/reference/progress-reporter-class.md) オブジェクトを提供します。 進行状況を報告する機能により、実行された作業量と残りの作業量を報告できます (たとえば、パーセントにより)。 結果が使用できるようになったらそれを報告することができます。
 
-`IAsyncAction`、 `IAsyncActionWithProgress<TProgress>`、 `IAsyncOperation<TResult>`、および `IAsyncActionOperationWithProgress<TProgress, TProgress>` インターフェイスはそれぞれ、非同期操作を取り消すことができるように `Cancel` メソッドを提供しています。 `task` クラスは、キャンセル トークンを使用します。 作業を取り消すためにキャンセル トークンを使用すると、ランタイムはそのトークンをサブスクライブする新しい作業を開始しません。 既にアクティブである作業はそのキャンセル トークンを監視でき、可能な場合には停止できます。 この機構については、ドキュメント「 [Cancellation in the PPL](cancellation-in-the-ppl.md)」で詳しく説明します。 Windows ランタイム`Cancel`メソッドを使用してタスクのキャンセルを接続するには、次の2つの方法があります。 最初に、`create_async` に渡す処理関数が [concurrency::cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md) オブジェクトとなるように定義できます。 `Cancel` メソッドが呼び出されると、このキャンセル トークンは取り消され、 `task` 呼び出しをサポートする、基になる `create_async` オブジェクトに、正常な取り消しの規則が適用されます。 `cancellation_token` オブジェクトを指定しない場合、基になる `task` オブジェクトが暗黙的に定義します。 処理関数の取り消しに協調的に応答する必要がある場合は `cancellation_token` オブジェクトを定義します。 セクション[の例を次に示します。および xaml C++ ](#example-app)を使用した Windows ランタイムアプリでの実行の制御」では、カスタム Windows ランタイムC++コンポーネントを使用するおよび xaml C#を使用するユニバーサル Windows プラットフォーム (UWP) アプリでキャンセルを実行する方法の例を示します。
+`IAsyncAction`、 `IAsyncActionWithProgress<TProgress>`、 `IAsyncOperation<TResult>`、および `IAsyncActionOperationWithProgress<TProgress, TProgress>` インターフェイスはそれぞれ、非同期操作を取り消すことができるように `Cancel` メソッドを提供しています。 `task` クラスは、キャンセル トークンを使用します。 作業を取り消すためにキャンセル トークンを使用すると、ランタイムはそのトークンをサブスクライブする新しい作業を開始しません。 既にアクティブである作業はそのキャンセル トークンを監視でき、可能な場合には停止できます。 この機構については、ドキュメント「 [Cancellation in the PPL](cancellation-in-the-ppl.md)」で詳しく説明します。 Windows ランタイム`Cancel`メソッドを使用してタスクのキャンセルを接続するには、次の2つの方法があります。 最初に、`create_async` に渡す処理関数が [concurrency::cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md) オブジェクトとなるように定義できます。 メソッドが呼び出されると、このキャンセルトークンは取り消され、通常のキャンセル規則は`create_async`呼び出しを`task`サポートする基になるオブジェクトに適用されます。 `Cancel` `cancellation_token` オブジェクトを指定しない場合、基になる `task` オブジェクトが暗黙的に定義します。 処理関数の取り消しに協調的に応答する必要がある場合は `cancellation_token` オブジェクトを定義します。 セクション[の例を次に示します。および xaml C++ ](#example-app)を使用した Windows ランタイムアプリでの実行の制御」では、カスタム Windows ランタイムC++コンポーネントを使用するおよび xaml C#を使用するユニバーサル Windows プラットフォーム (UWP) アプリでキャンセルを実行する方法の例を示します。
 
 > [!WARNING]
->  タスクの継続のチェーンでは、キャンセル トークンが取り消された場合に、常に状態をクリーンアップしてから、[concurrency::cancel_current_task](reference/concurrency-namespace-functions.md#cancel_current_task) を呼び出します。 `cancel_current_task`を呼び出す代わりにすぐに制御を返す場合は、操作は、取り消された状態でなく、完了の状態に遷移します。
+>  タスクの継続のチェーンでは、キャンセルトークンが取り消されたときに、常に状態をクリーンアップし、 [concurrency:: cancel_current_task](reference/concurrency-namespace-functions.md#cancel_current_task)を呼び出します。 `cancel_current_task`を呼び出す代わりにすぐに制御を返す場合は、操作は、取り消された状態でなく、完了の状態に遷移します。
 
 次の表では、アプリケーションの非同期操作を定義するために使用できる組み合わせを示します。
 
@@ -161,7 +161,7 @@ UI があるアプリケーションでは、ASTA (アプリケーション STA)
 
 [!code-xml[concrt-windowsstore-commonwords#1](../../parallel/concrt/codesnippet/xaml/creating-asynchronous-operations-in-cpp-for-windows-store-apps_6.xaml)]
 
-次の `#include` ステートメントを pch.h に追加します。
+次`#include`のステートメントを *.pch*に追加します。
 
 [!code-cpp[concrt-windowsstore-commonwords#2](../../parallel/concrt/codesnippet/cpp/creating-asynchronous-operations-in-cpp-for-windows-store-apps_7.h)]
 
