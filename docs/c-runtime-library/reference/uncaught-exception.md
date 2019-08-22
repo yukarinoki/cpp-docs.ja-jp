@@ -40,7 +40,7 @@ bool __uncaught_exception(
 
 ## <a name="return-value"></a>戻り値
 
-**true**から例外がスローされます、**お試しください**一致するまでブロック**キャッチ**ブロックが初期化された以外の場合、 **false**します。
+**try** で例外がスローされてから、一致する **catch** ブロックが初期化されるまでは **true** です。 それ以外の場合は **false** です。
 
 ## <a name="remarks"></a>Remarks
 
