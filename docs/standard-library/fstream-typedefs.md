@@ -38,7 +38,7 @@ typedef basic_filebuf<char, char_traits<char>> filebuf;
 
 この型はテンプレートクラス[basic_filebuf](../standard-library/basic-filebuf-class.md)のシノニムで、既定の文字の特性を持つ**char**型の要素に対して特殊化されています。
 
-## <a name="fstream">fstream</a>
+## <a name="fstream"></a>  fstream
 
 Char テンプレート`basic_fstream`パラメーターに特殊化された型。
 
