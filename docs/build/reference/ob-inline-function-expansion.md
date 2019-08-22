@@ -1,6 +1,6 @@
 ---
 title: /Ob (関数のインライン展開)
-ms.date: 08/08/2019
+ms.date: 08/22/2019
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.InlineFunctionExpansion
 - VC.Project.VCCLCompilerTool.InlineFunctionExpansion
