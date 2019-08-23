@@ -10,12 +10,12 @@ f1_keywords:
 - chrono/std::chrono::milliseconds
 - chrono/std::chrono::microseconds
 ms.assetid: 844de749-f306-482e-89bc-6f53c99c8324
-ms.openlocfilehash: f01b00a1469cdf82590a1bdfc742312ec96912c9
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: b3352110c2074b325ac345c05dbf899c0bdbd0ab
+ms.sourcegitcommit: ace42fa67e704d56d03c03745b0b17d2a5afeba4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459447"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69975907"
 ---
 # <a name="ltchronogt"></a>&lt;chrono&gt;
 
@@ -76,7 +76,14 @@ Visual Studio 2015 以降では、安定性と`steady_clock`単調性のC++標�
 
 次の typedef で使用される比率の種類の詳細については、「[\<<ratio>](../standard-library/ratio.md)」を参照してください。
 
-|||||||`typedef duration<long long, nano> nanoseconds;`|ティック間隔が`duration` 1 ナノ秒の型のシノニム。 | | |`typedef duration<long long, micro> microseconds;`ティック間隔が`duration` 1 マイクロ秒の型のシノニム。 | | |`typedef duration<long long, milli> milliseconds;`ティック間隔が`duration` 1 ミリ秒の型のシノニム。 | | |`typedef duration<long long> seconds;`ティック間隔が`duration` 1 秒の型のシノニム。 | | |`typedef duration<int, ratio<60> > minutes;`ティック間隔が`duration` 1 分の型のシノニム。 | | |`typedef duration<int, ratio<3600> > hours;`ティック間隔が`duration` 1 時間の型のシノニム |。
+|||
+|-|-|
+|`typedef duration<long long, nano> nanoseconds;`|ティック間隔が`duration` 1 ナノ秒の型のシノニム。|
+|`typedef duration<long long, micro> microseconds;`|ティック間隔が`duration` 1 マイクロ秒の型のシノニム。|
+|`typedef duration<long long, milli> milliseconds;`|ティック間隔が`duration` 1 ミリ秒の型のシノニム。|
+|`typedef duration<long long> seconds;`|ティック間隔が`duration` 1 秒の型のシノニム。|
+|`typedef duration<int, ratio<60> > minutes;`|ティック間隔が`duration` 1 分の型のシノニムです。|
+|`typedef duration<int, ratio<3600> > hours;`|ティック間隔が`duration` 1 時間の型のシノニム。|
 
 ### <a name="literals"></a>リテラル
 
