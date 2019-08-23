@@ -55,15 +55,15 @@ ms.locfileid: "68915480"
 [/Od](od-disable-debug.md)の既定値。 インライン展開を無効にします。
 
 **1**\
-[Inline](../../cpp/inline-functions-cpp.md)、 [__ inline](../../cpp/inline-functions-cpp.md)、または[__forceinline](../../cpp/inline-functions-cpp.md)とマークされた関数、またはC++クラス宣言で定義されているメンバー関数の拡張のみを許可します。
+[inline](../../cpp/inline-functions-cpp.md)、 [__inline](../../cpp/inline-functions-cpp.md)、または[__forceinline](../../cpp/inline-functions-cpp.md)とマークされた関数、またはC++クラス宣言で定義されているメンバー関数の展開のみを許可します。
 
 **3**\
-[/O1](o1-o2-minimize-size-maximize-speed.md)と[/O2](o1-o2-minimize-size-maximize-speed.md)の既定値。 明示的にインライン禁止とマークされていない関数をコンパイラで拡張できるようにします。
+[/O1](o1-o2-minimize-size-maximize-speed.md)と[/O2](o1-o2-minimize-size-maximize-speed.md)の既定値。 明示的にインライン禁止とマークされていない関数をコンパイラで展開できるようにします。
 
 ::: moniker range=">=vs-2019"
 
 **3**\
-このオプションは、 **/ob2**よりも積極的なインライン展開を指定しますが、同じ制限があります。 **/Ob3**オプションは、Visual Studio 2019 以降で使用できます。
+このオプションは、 **/Ob2** よりも積極的なインライン展開を指定しますが、同じ制限があります。 **/Ob3** オプションは、Visual Studio 2019 以降で使用できます。
 
 ::: moniker-end
 
@@ -71,10 +71,10 @@ ms.locfileid: "68915480"
 
 インライン展開に関するオプションとキーワードは、インライン展開の対象となる候補をコンパイラに示すだけです。 関数がインラインで展開される保証はありません。 インライン展開を無効にすることはできますが、 `__forceinline`キーワードを使用している場合でも、特定の関数のインライン化をコンパイラに強制することはできません。
 
-インライン展開の候補として関数を除外するには、 [__declspec (noinline)](../../cpp/noinline.md)、または[#pragma auto_inline (off)](../../preprocessor/auto-inline.md)ディレクティブと[#pragma auto_inline (on)](../../preprocessor/auto-inline.md)ディレクティブでマークされた領域を使用できます。 コンパイラにインライン展開ヒントを提供する別の方法については、「 [#pragma 組み込み](../../preprocessor/intrinsic.md)ディレクティブ」を参照してください。
+インライン展開の候補として関数を除外するには、 [__declspec (noinline)](../../cpp/noinline.md)、または [#pragma auto_inline (off)](../../preprocessor/auto-inline.md) ディレクティブと [#pragma auto_inline (on)](../../preprocessor/auto-inline.md) ディレクティブでマークされた領域を使用できます。 コンパイラにインライン展開ヒントを提供する別の方法については、「 [#pragma intrinsic](../../preprocessor/intrinsic.md) ディレクティブ」を参照してください。
 
 > [!NOTE]
-> プロファイリングテストの実行から収集された情報は、 **/Ob**、 **/Os**、または **/Ot** を指定したために適用される最適化よりも優先されます。 詳細については、[ガイド付き最適化のプロファイル](../profile-guided-optimizations.md) を参照してください。
+> プロファイリングテストの実行から収集された情報は、 **/Ob**、 **/os**、または **/ot**を指定したために適用される最適化よりも優先されます。 詳細については、「[ガイド付き最適化のプロファイル](../profile-guided-optimizations.md)」を参照してください。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
