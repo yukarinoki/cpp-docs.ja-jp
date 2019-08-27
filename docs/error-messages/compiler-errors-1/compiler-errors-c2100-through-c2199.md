@@ -124,7 +124,7 @@ ms.locfileid: "64857397"
 |[コンパイラ エラー C2181](compiler-error-c2181.md)|else 文が if と一致しません。|
 |[コンパイラ エラー C2182](compiler-error-c2182.md)|'*識別子*': 'void' 型の不正な使用|
 |[コンパイラ エラー C2183](compiler-error-c2183.md)|構文エラー: 翻訳単位が空です|
-|[コンパイラ エラー C2184](compiler-error-c2184.md)|'*型*': _ _except 式に対する無効な型|
+|[コンパイラ エラー C2184](compiler-error-c2184.md)|'*型*': __except 式に対する無効な型|
 |[コンパイラ エラー C2185](compiler-error-c2185.md)|'*識別子*': 無効です based の割り当て。|
 |[コンパイラ エラー C2186](compiler-error-c2186.md)|'*演算子*': 'void' 型の無効なオペランド|
 |コンパイラ エラー C2187|構文エラー: '*トークン*' が予期しないここ|
