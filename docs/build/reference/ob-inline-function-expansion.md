@@ -39,13 +39,13 @@ ms.locfileid: "68915480"
 
 ::: moniker range=">=vs-2019"
 
-> **/Ob**{**0**|12|**3**}|
+> **/Ob**{**0**|**1**|**2**|**3**}
 
 ::: moniker-end
 
 ::: moniker range="<=vs-2017"
 
-> **/Ob**{**0**|12|}
+> **/Ob**{**0**|**1**|**2**}
 
 ::: moniker-end
 
@@ -57,7 +57,7 @@ ms.locfileid: "68915480"
 **1**\
 [inline](../../cpp/inline-functions-cpp.md)、 [__inline](../../cpp/inline-functions-cpp.md)、または[__forceinline](../../cpp/inline-functions-cpp.md)とマークされた関数、またはC++クラス宣言で定義されているメンバー関数の展開のみを許可します。
 
-**3**\
+**2**\
 [/O1](o1-o2-minimize-size-maximize-speed.md)と[/O2](o1-o2-minimize-size-maximize-speed.md)の既定値。 明示的にインライン禁止とマークされていない関数をコンパイラで展開できるようにします。
 
 ::: moniker range=">=vs-2019"
