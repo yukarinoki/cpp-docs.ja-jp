@@ -5,12 +5,12 @@ ms.technology: cpp-language
 ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 15226d41991d5a09d104d2edbfb3dbf2f7432b65
-ms.sourcegitcommit: db1ed91fa7451ade91c3fb76bc7a2b857f8a5eef
+ms.openlocfilehash: 17ed76551102653e2f05e9731834f4787198db49
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68980526"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69631645"
 ---
 # <a name="microsoft-c-language-conformance-table"></a>Microsoft C++ 言語の準拠表
 
@@ -348,7 +348,7 @@ __VS 2019 16.1__ は、Visual Studio 2019 バージョン 16.1 でサポート�
 
 <a name="note_C"></a>__C__ Visual Studio 2017 では、C99 プリプロセッサ ルールはコンパイラで完全にサポートされていません。 可変個引数マクロがサポートされますが、プリプロセッサの動作にたくさんのバグがあります。 プリプロセッサは刷新中で、近々にそれらの変更を [/permissive-](../build/reference/permissive-standards-conformance.md) モード下で実験的に出荷する予定です。
 
-<a name="note_D"></a>__D__ [/std:c++14](../build/reference/std-specify-language-standard-version.md) で、非表示にできる警告 C4984 と共にサポートされています。
+<a name="note_D"></a>__D__ [/std:c++14](../build/reference/std-specify-language-standard-version.md) で、非表示にできる警告 [C4984](../error-messages/compiler-warnings/compiler-warning-c4984.md) と共にサポートされています。
 
 <a name="note_E"></a>__E__ これは、完全に新しい実装であり、以前の `std::experimental` バージョンとは対応していません。これは、symlink サポート、バグ修正、標準で要求される動作への変更で必要です。 現在、\<filesystem> を含めると、新しい `std::filesystem` と以前の `std::experimental::filesystem` が提供され、\<experimental/filesystem> を含めると、古い実験的な実装のみが提供されます。 この実験的な実装は、ライブラリの次の ABI の重大なリリースで削除されます。
 
