@@ -174,7 +174,7 @@ virtual void Abort();
 
 [!code-cpp[NVC_MFCFiles#5](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_1.cpp)]
 
-##  <a name="cfile"></a>CFile:: CFile
+##  <a name="cfile"></a>CFile::CFile
 
 `CFile` オブジェクトを構築して初期化します。
 
@@ -272,7 +272,7 @@ CAtlTransactionManager オブジェクトへのポインター。
 
 [!code-cpp[NVC_MFCFiles#4](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_2.cpp)]
 
-##  <a name="close"></a>CFile:: Close
+##  <a name="close"></a>CFile::Close
 
 このオブジェクトに関連付けられているファイルを閉じて、読み取りまたは書き込みのためにファイルを使用できないようにします。
 
@@ -611,7 +611,7 @@ CAtlTransactionManager オブジェクトへのポインター。
 
 [!code-cpp[NVC_MFCFiles#14](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_10.cpp)]
 
-##  <a name="operator_handle"></a>CFile:: operator ハンドル
+##  <a name="operator_handle"></a>CFile::operator HANDLE
 
 この演算子を使用して、`CFile` オブジェクトへのハンドルを、`HANDLE` を想定する [ReadFileEx](/windows/win32/api/fileapi/nf-fileapi-readfileex) や[getfiletime](/windows/win32/api/fileapi/nf-fileapi-getfiletime)などの関数に渡します。
 
