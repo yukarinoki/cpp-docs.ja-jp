@@ -306,7 +306,7 @@ virtual CFile* Duplicate() const;
 
 この関数は、C ランタイム関数`_dup`に相当します。
 
-##  <a name="flush"></a>CFile:: Flush
+##  <a name="flush"></a>CFile::Flush
 
 ファイルバッファー内の残りのデータを強制的にファイルに書き込みます。
 
@@ -422,7 +422,7 @@ virtual ULONGLONG GetPosition() const;
 
 [!code-cpp[NVC_MFCFiles#8](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_5.cpp)]
 
-##  <a name="getstatus"></a>CFile:: GetStatus
+##  <a name="getstatus"></a>CFile::GetStatus
 
 このメソッドは、指定さ`CFile`れたオブジェクトインスタンスまたは指定されたファイルパスに関連するステータス情報を取得します。
 
