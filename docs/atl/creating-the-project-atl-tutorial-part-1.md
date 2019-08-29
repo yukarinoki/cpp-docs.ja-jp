@@ -3,19 +3,16 @@ title: プロジェクトの作成 (ATL チュートリアル、パート 1)
 ms.custom: get-started-article
 ms.date: 08/19/2019
 ms.assetid: f6b727d1-390a-4b27-b82f-daadcd9fc059
-ms.openlocfilehash: 9f7f62ec94d5ac6d6076763853aa19297cf310e6
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: 5bb4c6edffd13e13a451b203feea9a03461a9318
+ms.sourcegitcommit: bf1940a39029dbbd861f95480f55e5e8bd25cda0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69630691"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70108381"
 ---
 # <a name="creating-the-project-atl-tutorial-part-1"></a>プロジェクトの作成 (ATL チュートリアル、パート 1)
 
-このチュートリアルでは、多角形を表示する ActiveX オブジェクトを作成する、属性なしの ATL プロジェクトについて段階的に説明します。 オブジェクトには、多角形を構成する辺の数をユーザーが変更できるようにするためのオプション、および表示を更新するためのコードが含まれています。
-
-> [!NOTE]
-> ATL および MFC は、Visual Studio の Express edition では一般にサポートされていません。
+このチュートリアルでは、多角形を表示する ActiveX オブジェクトを作成する、属性のない ATL プロジェクトのステップバイステップの手順について説明します。 オブジェクトには、多角形を構成する辺の数をユーザーが変更できるようにするためのオプション、および表示を更新するためのコードが含まれています。
 
 > [!NOTE]
 > このチュートリアルでは、Polygon サンプルと同じソースコードを作成します。 ソースコードが手動で入力されないようにする場合は、 [Polygon sample abstract](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/Controls/Polygon)からダウンロードできます。 その後、チュートリアルで作業するときに Polygon ソースコードを参照するか、またはそれを使用して独自のプロジェクトでエラーをチェックすることができます。
