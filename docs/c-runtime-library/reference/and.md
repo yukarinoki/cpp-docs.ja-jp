@@ -1,5 +1,5 @@
 ---
-title: と、呼び出し
+title: and
 ms.date: 11/04/2016
 apilocation:
 - msvcrt.dll
@@ -27,7 +27,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62335570"
 ---
-# <a name="and"></a>と、呼び出し
+# <a name="and"></a>and
 
 && 演算子の代替手段。
 

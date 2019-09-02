@@ -1,6 +1,6 @@
 ---
 title: Dll と Visual C++ランタイムライブラリの動作
-ms.date: 05/06/2019
+ms.date: 08/19/2019
 f1_keywords:
 - _DllMainCRTStartup
 - CRT_INIT
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - run-time [C++], DLL startup sequence
 - DLLs [C++], startup sequence
 ms.assetid: e06f24ab-6ca5-44ef-9857-aed0c6f049f2
-ms.openlocfilehash: d44f3bf7a8b06f567b1af221e17085d589e56aca
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 572a0ba70c1ba2d46d2d9fd6d8ac543a77bbbc01
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69492619"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630365"
 ---
 # <a name="dlls-and-visual-c-run-time-library-behavior"></a>Dll と Visual C++ランタイムライブラリの動作
 
@@ -30,7 +30,7 @@ Visual Studio を使用してダイナミックリンクライブラリ (DLL) �
 
 Windows では、すべての dll にオプションのエントリポイント関数 (通常は`DllMain`と呼ばれます) を含めることができます。これは初期化と終了の両方に対して呼び出されます。 これによって、追加のリソースを必要に応じて、割り当て/解放する機会が与えられます。 Windows には、エントリ ポイント関数が呼び出される 4 つの状況 (プロセスのアタッチ、プロセス デタッチ、スレッド アタッチ、スレッド デタッチ) があります。 DLL がプロセスアドレス空間に読み込まれると、その DLL を使用するアプリケーションが読み込まれたとき、またはアプリケーションが実行時に DLL を要求したときに、オペレーティングシステムによって DLL データのコピーが個別に作成されます。 これを*プロセスアタッチ*と呼びます。 *スレッドのアタッチ*は、DLL が読み込まれるプロセスによって新しいスレッドが作成されるときに発生します。 スレッドの*デタッチ*は、スレッドが終了したときに発生し、*プロセスデタッチ*は、DLL が不要になり、アプリケーションによって解放されたときに発生します。 オペレーティングシステムは、これらの各イベントに対して DLL エントリポイントを個別に呼び出し、各イベントの種類に*reason*引数を渡します。 たとえば、OS は、signal `DLL_PROCESS_ATTACH` process attach に*reason*引数としてを送信します。
 
-Vcruntime ライブラリには、既定の初期化および終了`_DllMainCRTStartup`操作を処理するために呼び出されるエントリポイント関数が用意されています。 プロセスのアタッチ時に`_DllMainCRTStartup` 、関数は、バッファーセキュリティチェックの設定、CRT とその他のライブラリの初期化、ランタイム型情報の初期化、静的およびローカルでないデータのコンストラクターの初期化と呼び出し、スレッドローカルストレージの初期化を行います。は、アタッチごとに内部静的カウンターをインクリメントし、ユーザーまたはライブラリが提供`DllMain`するを呼び出します。 プロセスのデタッチでは、関数はこれらの手順を逆に実行します。 このメソッド`DllMain`は、を呼び出し、内部カウンターをデクリメントし、デストラクターを呼び出し、 `atexit` CRT 終了関数と登録された関数を呼び出し、他のすべてのライブラリが終了したことを通知します。 Attachment カウンターが0になると、この関数は`FALSE`を返し、DLL をアンロードできることを Windows に示します。 関数`_DllMainCRTStartup`は、スレッドのアタッチとスレッドのデタッチ中にも呼び出されます。 このような場合、vcruntime コードは追加の初期化も終了もせず、を呼び出し`DllMain`てメッセージを渡すだけで済みます。 が`DllMain`プロセス`FALSE`のアタッチからを返した場合、 `DllMain`シグナルが失敗`DLL_PROCESS_DETACH`した場合は、 `_DllMainCRTStartup`を再度呼び出し、 *reason*引数としてを渡して、残りの終了プロセスを実行します。
+Vcruntime ライブラリには、既定の初期化および終了`_DllMainCRTStartup`操作を処理するために呼び出されるエントリポイント関数が用意されています。 プロセスのアタッチ時に`_DllMainCRTStartup` 、関数は、バッファーセキュリティチェックの設定、CRT とその他のライブラリの初期化、ランタイム型情報の初期化、静的およびローカルでないデータのコンストラクターの初期化と呼び出し、スレッドローカルストレージの初期化を行います。は、アタッチごとに内部静的カウンターをインクリメントし、ユーザーまたはライブラリが提供`DllMain`するを呼び出します。 プロセスのデタッチでは、関数はこれらの手順を逆に実行します。 このメソッド`DllMain`は、を呼び出し、内部カウンターをデクリメントし、デストラクターを呼び出し、 `atexit` CRT 終了関数と登録された関数を呼び出し、他のすべてのライブラリが終了したことを通知します。 Attachment カウンターが0になると、この関数は`FALSE`を返し、DLL をアンロードできることを Windows に示します。 関数`_DllMainCRTStartup`は、スレッドのアタッチとスレッドのデタッチ中にも呼び出されます。 このような場合、vcruntime コードは追加の初期化も終了もせず、を呼び出し`DllMain`てメッセージを渡すだけで済みます。 が`DllMain`プロセス`FALSE`のアタッチからを返し、シグナル`_DllMainCRTStartup`が失敗した`DLL_PROCESS_DETACH`場合、を再度呼び出し`DllMain`て*reason*引数として渡した後、残りの終了処理を実行します。
 
 Visual Studio で dll をビルドする場合、vcruntime `_DllMainCRTStartup`によって提供される既定のエントリポイントは自動的にリンクされます。 [/Entry (エントリポイントシンボル)](reference/entry-entry-point-symbol.md)リンカーオプションを使用して、DLL のエントリポイント関数を指定する必要はありません。
 
@@ -125,7 +125,7 @@ Mfc 拡張 dll には、(通常`CWinApp`の mfc dll と同様に) 派生オブ�
 ウィザードには、MFC 拡張 Dll 用の次のコードが用意されています。 コードでは、 `PROJNAME`はプロジェクトの名前のプレースホルダーです。
 
 ```cpp
-#include "stdafx.h"
+#include "pch.h" // For Visual Studio 2017 and earlier, use "stdafx.h"
 #include <afxdllx.h>
 
 #ifdef _DEBUG
@@ -174,7 +174,7 @@ MFC 拡張 dll に明示的にリンクするアプリケーション`AfxTermExt
 ヘッダーファイル Afxdllx には、および`AFX_EXTENSION_MODULE` `CDynLinkLibrary`の定義など、MFC 拡張 dll で使用される構造体の特別な定義が含まれていることに注意してください。 このヘッダーファイルは、MFC 拡張 DLL に含める必要があります。
 
 > [!NOTE]
->  Stdafx.h のマクロを定義したり、 `_AFX_NO_XXX`未定義にしたりすることはできません。 これらのマクロは、特定のターゲットプラットフォームでその機能がサポートされているかどうかを確認するためだけに存在します。 これらのマクロをチェックするようにプログラムを記述できます`#ifndef _AFX_NO_OLE_SUPPORT`(たとえば、)。ただし、プログラムでこれらのマクロを定義または未定義にすることはできません。
+>  *Pch* (Visual Studio 2017 以前では*stdafx.h* ) でマクロ`_AFX_NO_XXX`を定義したり、未定義にしたりすることはできません。 これらのマクロは、特定のターゲットプラットフォームでその機能がサポートされているかどうかを確認するためだけに存在します。 これらのマクロをチェックするようにプログラムを記述できます`#ifndef _AFX_NO_OLE_SUPPORT`(たとえば、)。ただし、プログラムでこれらのマクロを定義または未定義にすることはできません。
 
 マルチスレッド処理を行うサンプル初期化関数は、Windows SDK の[ダイナミックリンクライブラリにあるスレッドローカルストレージを使用](/windows/win32/Dlls/using-thread-local-storage-in-a-dynamic-link-library)する場合に含まれます。 このサンプルにはという`LibMain`エントリポイント関数が含まれていますが、MFC および C ランタイムライブラリで動作するように、この関数`DllMain`に名前を付けてください。
 

@@ -1,6 +1,6 @@
 ---
 title: CStdioFile クラス
-ms.date: 11/04/2016
+ms.date: 08/29/2019
 f1_keywords:
 - CStdioFile
 - AFX/CStdioFile
@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CStdioFile [MFC], WriteString
 - CStdioFile [MFC], m_pStream
 ms.assetid: 88c2274c-4f0e-4327-882a-557ba4b3ae15
-ms.openlocfilehash: 068e59fdc19821487bc78141d10743363221518e
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
+ms.openlocfilehash: 4b667f4121d92863335befda3a7beef74f29ad1a
+ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68375837"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70177483"
 ---
 # <a name="cstdiofile-class"></a>CStdioFile クラス
 
@@ -84,12 +84,12 @@ class CStdioFile : public CFile
 
 ##  <a name="cstdiofile"></a>CStdioFile::CStdioFile
 
-  `CStdioFile` オブジェクトを構築して初期化します。
+`CStdioFile` オブジェクトを構築して初期化します。
 
 ```
 CStdioFile();
 CStdioFile(CAtlTransactionManager* pTM);
-  CStdioFile(FILE* pOpenStream);
+CStdioFile(FILE* pOpenStream);
 
 CStdioFile(
     LPCTSTR lpszFileName,
@@ -107,7 +107,7 @@ CStdioFile(
 C ランタイム関数[fopen](../../c-runtime-library/reference/fopen-wfopen.md)への呼び出しによって返されるファイルポインターを指定します。
 
 *lpszFileName*<br/>
-目的のファイルへのパスを表す文字列を指定します。 相対パスまたは絶対パスを指定できます。
+目的のファイルへのパスを表す文字列を指定します。 相対パスと絶対パスのどちらでも構いません。
 
 *Noペンフラグ*<br/>
 ファイルの作成、ファイル共有、およびファイルアクセスモードのオプションを指定します。 複数のオプションを指定するには、ビットごと **|** の or () 演算子を使用します。
@@ -165,7 +165,7 @@ virtual BOOL Open(
 ### <a name="parameters"></a>パラメーター
 
 *lpszFileName*<br/>
-目的のファイルへのパスを表す文字列。 相対パスまたは絶対パスを指定できます。
+目的のファイルへのパスを表す文字列。 相対パスと絶対パスのどちらでも構いません。
 
 *Noペンフラグ*<br/>
 共有とアクセスモード。 ファイルを開くときに実行するアクションを指定します。 ビットごとの OR (&#124;) 演算子を使用して、オプションを組み合わせることができます。 1つのアクセス許可と1つの共有オプションが必要です。modeCreate モードと modeNoInherit モードは省略可能です。
@@ -283,7 +283,7 @@ Null で終わる文字列を含むバッファーへのポインターを指定
 
 Null で終了しないデータをファイルに書き込む場合は、または`CStdioFile::Write` [CFile:: write](../../mfc/reference/cfile-class.md#write)を使用します。
 
-Lpsz パラメーターに NULL `CInvalidArgException*`を指定した場合、 このメソッドはをスローします。
+Lpsz パラメーターに NULL `CInvalidArgException*`を指定した場合、このメソッドはをスローします。
 
 このメソッドは、 `CFileException*`ファイルシステムエラーに応答してをスローします。
 
@@ -296,7 +296,7 @@ Lpsz パラメーターに NULL `CInvalidArgException*`を指定した場合、 
 [CFile クラス](../../mfc/reference/cfile-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)<br/>
 [CFile クラス](../../mfc/reference/cfile-class.md)<br/>
-[CFile::D u](../../mfc/reference/cfile-class.md#duplicate)<br/>
+[CFile::Duplicate](../../mfc/reference/cfile-class.md#duplicate)<br/>
 [CFile::LockRange](../../mfc/reference/cfile-class.md#lockrange)<br/>
 [CFile::UnlockRange](../../mfc/reference/cfile-class.md#unlockrange)<br/>
 [CNotSupportedException クラス](../../mfc/reference/cnotsupportedexception-class.md)

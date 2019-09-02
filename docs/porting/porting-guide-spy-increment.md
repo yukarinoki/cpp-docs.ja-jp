@@ -2,12 +2,12 @@
 title: '移植のガイド: Spy++'
 ms.date: 11/19/2018
 ms.assetid: e558f759-3017-48a7-95a9-b5b779d5e51d
-ms.openlocfilehash: 206698d35239f416d2f13891044aa54fe502500a
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 175f3fbba7e18f625dc3425c236162737689f068
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69511658"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630449"
 ---
 # <a name="porting-guide-spy"></a>移植のガイド: Spy++
 
@@ -67,7 +67,7 @@ Windows XP は Microsoft によってサポートされなくなったので、V
 
 エラーを解消するには、 **[プロジェクトのプロパティ]** の設定を、現在対象にしている Windows の最小バージョンに更新します。 さまざまな Windows リリースの値を示した表については、[ここ](/windows/win32/WinProg/using-the-windows-headers)を参照してください。
 
-stdafx.h ファイルには、これらのマクロ定義のいくつかが含まれていました。
+*stdafx.h* ファイルには、これらのマクロ定義のいくつかが含まれていました。
 
 ```cpp
 #define WINVER       0x0500  // these defines are set so that we get the
@@ -502,7 +502,7 @@ warning C4211: nonstandard extension used: redefined extern to static
 
 ##  <a name="porting_to_unicode"></a> 手順 11. MBCS から Unicode に移植する
 
-Windows では、Unicode という場合は、通常 UTF-16 を意味することに注意してください。 Linux などの他のオペレーティング システムは UTF-8 を使用しますが、Windows では通常は使用しません。 MFC の MBCS バージョンは、Visual Studio 2013 および 2015 では非推奨でしたが、Visual Studio 2017 においては非推奨ではなくなりました。 Visual Studio 2013 または 2015 を使っている場合、MBCS コードを UTF-16 Unicode に実際に移植する手順を実行する前に、他の作業を実行するためや、都合のよいときに移植を延期するために、MBCS が非推奨であることを示す警告を一時的に削除します。 現在のコードは MBCS を使用しており、続行するには、MFC の ANSI/MBCS バージョンをインストールする必要があります。 比較的大きい MFC ライブラリは Visual Studio の既定の **C++ によるデスクトップ開発**インストールの一部ではないので、インストーラーのオプション コンポーネントから選ぶ必要があります。 「[MFC MBCS DLL アドオン](../mfc/mfc-mbcs-dll-add-on.md)」を参照してください。 これをダウンロードして Visual Studio を再起動すると、MFC の MBCS バージョンを使用してコンパイルしてリンクできますが、Visual Studio 2013 または 2015 を使っている場合に MBCS に関する警告を取り除くには、NO_WARN_MBCS_MFC_DEPRECATION を [プロジェクトのプロパティ] の **[プリプロセッサ]** セクションにある事前定義されたマクロの一覧に追加するか、stdafx.h ヘッダー ファイルやその他の一般的なヘッダー ファイルの先頭に追加する必要があります。
+Windows では、Unicode という場合は、通常 UTF-16 を意味することに注意してください。 Linux などの他のオペレーティング システムは UTF-8 を使用しますが、Windows では通常は使用しません。 MFC の MBCS バージョンは、Visual Studio 2013 および 2015 では非推奨でしたが、Visual Studio 2017 においては非推奨ではなくなりました。 Visual Studio 2013 または 2015 を使っている場合、MBCS コードを UTF-16 Unicode に実際に移植する手順を実行する前に、他の作業を実行するためや、都合のよいときに移植を延期するために、MBCS が非推奨であることを示す警告を一時的に削除します。 現在のコードは MBCS を使用しており、続行するには、MFC の ANSI/MBCS バージョンをインストールする必要があります。 比較的大きい MFC ライブラリは Visual Studio の既定の **C++ によるデスクトップ開発**インストールの一部ではないので、インストーラーのオプション コンポーネントから選ぶ必要があります。 「[MFC MBCS DLL アドオン](../mfc/mfc-mbcs-dll-add-on.md)」を参照してください。 これをダウンロードして Visual Studio を再起動すると、MBCS バージョンの MFC を使ってコンパイルおよびリンクできます。ただし、Visual Studio 2013 または 2015 を使っている場合に MBCS に関する警告を取り除くには、NO_WARN_MBCS_MFC_DEPRECATION を、[プロジェクトのプロパティ] の **[プリプロセッサ]** セクションにある定義済みマクロの一覧か、*stdafx.h* ヘッダー ファイルやその他の一般的なヘッダー ファイルの先頭に追加する必要もあります。
 
 ここで、いくつかのリンカー エラーが表示されます。
 

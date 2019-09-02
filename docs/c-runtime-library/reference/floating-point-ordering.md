@@ -1,5 +1,5 @@
 ---
-title: isgreater、isgreaterequal、小さければ、islessequal、islessgreater、isunordered
+title: isgreater、isgreaterequal、isless、islessequal、islessgreater、isunordered
 ms.date: 01/31/2019
 f1_keywords:
 - isgreater
@@ -28,7 +28,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62333704"
 ---
-# <a name="isgreater-isgreaterequal-isless-islessequal-islessgreater-isunordered"></a>isgreater、isgreaterequal、小さければ、islessequal、islessgreater、isunordered
+# <a name="isgreater-isgreaterequal-isless-islessequal-islessgreater-isunordered"></a>isgreater、isgreaterequal、isless、islessequal、islessgreater、isunordered
 
 2 つの浮動小数点値の順序付けの関係を決定します。
 

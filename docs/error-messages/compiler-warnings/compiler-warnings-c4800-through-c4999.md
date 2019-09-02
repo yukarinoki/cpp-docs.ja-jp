@@ -153,12 +153,12 @@ helpviewer_keywords:
 - C5105
 - C5106
 - C5107
-ms.openlocfilehash: 518efdd74a90198818538c1548adb2b7ff37290c
-ms.sourcegitcommit: c3bf94210bdb73be80527166264d49e33784152c
+ms.openlocfilehash: ae73d4ba503dfbbc27f91040c31beb91da3b7e54
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68821129"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69631536"
 ---
 # <a name="compiler-warnings-c4800-through-c5999"></a>コンパイラ警告 (C4800 - C5999)
 
@@ -266,7 +266,8 @@ ms.locfileid: "68821129"
 |コンパイラの警告 (レベル 1) C4973|'*symbol*': 非推奨としてマークされています|
 |コンパイラの警告 (レベル 1) C4974|'*symbol*': 非推奨としてマークされています|
 |コンパイラの警告 (レベル 3) C4981|Warbird では: 関数 '*function*' は例外のセマンティクスを含んでいるため、インライン化されていない __forceinline としてマークされています|
-|コンパイラの警告 (レベル 3) C4985|シンボル名 ': 前の宣言に属性が存在しません。|
+|[コンパイラの警告 C4984](compiler-warning-c4984.md)|' if constexpr ' は C++ 17 言語拡張です|
+|コンパイラの警告 (レベル 3) C4985|'*symbol_name*': 前の宣言に属性が存在しません。|
 |[コンパイラの警告 C4986](compiler-warning-c4986.md)|'*宣言*': 例外指定が前の宣言と一致しません|
 |コンパイラの警告 (レベル 4) C4987|非標準の拡張機能が使用されています: 'throw (...)' です。|
 |コンパイラの警告 (レベル 4) C4988|'*variable*': 変数がクラス/関数スコープの外部で宣言されています。|
