@@ -62,7 +62,7 @@ ms.locfileid: "62406068"
 
 例外をスローする関数を呼び出す場合 **try/catch**ブロックを使用して、例外をキャッチして、作成した任意のオブジェクトを破棄する可能性があります。 具体的には、MFC 関数の多くが例外をスローすることもあります。
 
-詳細については、次を参照してください。[例外。キャッチと削除例外](../mfc/exceptions-catching-and-deleting-exceptions.md)します。
+詳細については、[例外: キャッチと削除例外](../mfc/exceptions-catching-and-deleting-exceptions.md) を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

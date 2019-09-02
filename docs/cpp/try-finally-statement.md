@@ -33,7 +33,7 @@ ms.locfileid: "69498603"
 
 次の構文では、 **try finally**ステートメントについて説明します。
 
-> **\_\_やり直し**<br/>
+> **\_\_try**<br/>
 > {<br/>
 > &nbsp;&nbsp;&nbsp;&nbsp;保護されたコード<br/>
 > }<br/>

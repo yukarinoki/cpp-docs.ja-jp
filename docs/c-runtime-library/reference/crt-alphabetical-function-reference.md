@@ -1215,7 +1215,7 @@ ms.locfileid: "62340340"
 
 [_isleadbyte_l](isleadbyte-isleadbyte-l.md)
 
-[小さければ](floating-point-ordering.md)
+[isless](floating-point-ordering.md)
 
 [islessequal](floating-point-ordering.md)
 
