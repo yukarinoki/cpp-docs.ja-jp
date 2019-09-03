@@ -6,20 +6,20 @@ helpviewer_keywords:
 - intrinsics, alphabetical list
 - intrinsics
 ms.assetid: 178f88a2-7e8e-43ac-b55e-ef3298bef895
-ms.openlocfilehash: 67206e63d163b489c5087e6bc6759cde30a3d6c4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ff6957436ecfb86ae44388e55488981f528f2c73
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62264316"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220083"
 ---
 # <a name="alphabetical-listing-of-intrinsic-functions"></a>組み込み関数のアルファベット順の一覧
 
-次のセクションでは、一部またはすべてのアーキテクチャで使用可能な Microsoft 固有の組み込み関数について説明します。 サポートされているその他の組み込みについては、プロセッサの製造元により、ヘッダー ファイルまたは各社の Web サイトで文書化されています。 参照してください、 [ARM 組み込み](../intrinsics/arm-intrinsics.md)、 [x86 組み込み](../intrinsics/x86-intrinsics-list.md)、および[x64 組み込み](../intrinsics/x64-amd64-intrinsics-list.md)製造元のドキュメントへのリンクについてのセクションでします。 組み込みに実装されている C ランタイム ライブラリ (CRT) 関数がここに記載されていません。これらの関数が記載されて、 [C ランタイム ライブラリ リファレンス](../c-runtime-library/c-run-time-library-reference.md)します。
+次のセクションでは、一部またはすべてのアーキテクチャで使用可能な Microsoft 固有の組み込み関数について説明します。 サポートされているその他の組み込みについては、プロセッサの製造元により、ヘッダー ファイルまたは各社の Web サイトで文書化されています。 製造元のドキュメントへのリンクについては、 [ARM 組み込み](../intrinsics/arm-intrinsics.md)、 [x86 組み込み](../intrinsics/x86-intrinsics-list.md)、および[x64 組み込み](../intrinsics/x64-amd64-intrinsics-list.md)に関するセクションを参照してください。 組み込みが実装されている C ランタイムライブラリ (CRT) 関数については、ここでは説明しません。これらの関数については、「 [C ランタイムライブラリリファレンス](../c-runtime-library/c-run-time-library-reference.md)」で説明されています。
 
 [__addfsbyte, \__addfsword, \__addfsdword](../intrinsics/addfsbyte-addfsword-addfsdword.md)
 
-[__addgsbyte, \__addgsword, \__addgsdword, \__addgsqword](../intrinsics/addgsbyte-addgsword-addgsdword-addgsqword.md)
+[__ addgsbyte、 \_addgソード、 \_addgsdword、 \_addgsqword](../intrinsics/addgsbyte-addgsword-addgsdword-addgsqword.md)
 
 [_AddressOfReturnAddress](../intrinsics/addressofreturnaddress.md)
 
@@ -37,13 +37,13 @@ ms.locfileid: "62264316"
 
 [_bittestandset、_bittestandset64](../intrinsics/bittestandset-bittestandset64.md)
 
-[_ _cpuid、 \__cpuidex](../intrinsics/cpuid-cpuidex.md)
+[__ cpuid、 \_cpu プール x](../intrinsics/cpuid-cpuidex.md)
 
 [__debugbreak](../intrinsics/debugbreak.md)
 
 [_disable](../intrinsics/disable.md)
 
-[_ _emul、 \__emulu](../intrinsics/emul-emulu.md)
+[__ emul、 \__emulu](../intrinsics/emul-emulu.md)
 
 [_enable](../intrinsics/enable.md)
 
@@ -59,9 +59,9 @@ ms.locfileid: "62264316"
 
 [__inbytestring](../intrinsics/inbytestring.md)
 
-[_ _incfsbyte、 \__incfsword、 \__incfsdword](../intrinsics/incfsbyte-incfsword-incfsdword.md)
+[__ インシデント fsbyte、 \_visual word、 \_visual word](../intrinsics/incfsbyte-incfsword-incfsdword.md)
 
-[__incgsbyte, \__incgsword, \__incgsdword, \__incgsqword](../intrinsics/incgsbyte-incgsword-incgsdword-incgsqword.md)
+[__ インシデント gsbyte \_、visual ソード、 \_ \_または visual sqword (_t)](../intrinsics/incgsbyte-incgsword-incgsdword-incgsqword.md)
 
 [__indword](../intrinsics/indword.md)
 
@@ -69,35 +69,35 @@ ms.locfileid: "62264316"
 
 [__int2c](../intrinsics/int2c.md)
 
-[_InterlockedAdd の組み込み関数](../intrinsics/interlockedadd-intrinsic-functions.md)
+[_InterlockedAdd 組み込み関数](../intrinsics/interlockedadd-intrinsic-functions.md)
 
 [_InterlockedAddLargeStatistic](../intrinsics/interlockedaddlargestatistic.md)
 
-[_InterlockedAnd の組み込み関数](../intrinsics/interlockedand-intrinsic-functions.md)
+[_InterlockedAnd 組み込み関数](../intrinsics/interlockedand-intrinsic-functions.md)
 
-[_interlockedbittestandreset の組み込み関数](../intrinsics/interlockedbittestandreset-intrinsic-functions.md)
+[_interlockedbittestandreset 組み込み関数](../intrinsics/interlockedbittestandreset-intrinsic-functions.md)
 
-[_interlockedbittestandset の組み込み関数](../intrinsics/interlockedbittestandset-intrinsic-functions.md)
+[_interlockedbittestandset 組み込み関数](../intrinsics/interlockedbittestandset-intrinsic-functions.md)
 
-[_InterlockedCompareExchange の組み込み関数](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)
+[_InterlockedCompareExchange 組み込み関数](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)
 
 [_InterlockedCompareExchange128](../intrinsics/interlockedcompareexchange128.md)
 
-[_InterlockedCompareExchangePointer の組み込み関数](../intrinsics/interlockedcompareexchangepointer-intrinsic-functions.md)
+[_InterlockedCompareExchangePointer 組み込み関数](../intrinsics/interlockedcompareexchangepointer-intrinsic-functions.md)
 
-[_InterlockedDecrement の組み込み関数](../intrinsics/interlockeddecrement-intrinsic-functions.md)
+[_InterlockedDecrement 組み込み関数](../intrinsics/interlockeddecrement-intrinsic-functions.md)
 
-[_InterlockedExchange の組み込み関数](../intrinsics/interlockedexchange-intrinsic-functions.md)
+[_InterlockedExchange 組み込み関数](../intrinsics/interlockedexchange-intrinsic-functions.md)
 
-[_InterlockedExchangeAdd の組み込み関数](../intrinsics/interlockedexchangeadd-intrinsic-functions.md)
+[_InterlockedExchangeAdd 組み込み関数](../intrinsics/interlockedexchangeadd-intrinsic-functions.md)
 
-[_InterlockedExchangePointer の組み込み関数](../intrinsics/interlockedexchangepointer-intrinsic-functions.md)
+[_InterlockedExchangePointer 組み込み関数](../intrinsics/interlockedexchangepointer-intrinsic-functions.md)
 
-[_InterlockedIncrement の組み込み関数](../intrinsics/interlockedincrement-intrinsic-functions.md)
+[_InterlockedIncrement 組み込み関数](../intrinsics/interlockedincrement-intrinsic-functions.md)
 
-[_InterlockedOr の組み込み関数](../intrinsics/interlockedor-intrinsic-functions.md)
+[_InterlockedOr 組み込み関数](../intrinsics/interlockedor-intrinsic-functions.md)
 
-[_InterlockedXor の組み込み関数](../intrinsics/interlockedxor-intrinsic-functions.md)
+[_InterlockedXor 組み込み関数](../intrinsics/interlockedxor-intrinsic-functions.md)
 
 [__invlpg](../intrinsics/invlpg.md)
 
@@ -111,7 +111,7 @@ ms.locfileid: "62264316"
 
 [__ll_rshift](../intrinsics/ll-rshift.md)
 
-[__lzcnt16, \__lzcnt, \__lzcnt64](../intrinsics/lzcnt16-lzcnt-lzcnt64.md)
+[__lzcnt16、 \__lzcnt、 \__lzcnt64](../intrinsics/lzcnt16-lzcnt-lzcnt64.md)
 
 [_mm_cvtsi64x_ss](../intrinsics/mm-cvtsi64x-ss.md)
 
@@ -157,7 +157,7 @@ ms.locfileid: "62264316"
 
 [__outwordstring](../intrinsics/outwordstring.md)
 
-[_ _popcnt16、 \__popcnt、 \__popcnt64](../intrinsics/popcnt16-popcnt-popcnt64.md)
+[__ の cnt16、 \_popcnt、 \__t cnt64](../intrinsics/popcnt16-popcnt-popcnt64.md)
 
 [__rdtsc](../intrinsics/rdtsc.md)
 
@@ -179,9 +179,9 @@ ms.locfileid: "62264316"
 
 [__readeflags](../intrinsics/readeflags.md)
 
-[__readfsbyte, \__readfsdword, \__readfsqword, \__readfsword](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)
+[__ readfsbyte、 \_"readfsdword \_"、"readfsqword \_"、"readfsword"](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)
 
-[__readgsbyte, \__readgsdword, \__readgsqword, \__readgsword](../intrinsics/readgsbyte-readgsdword-readgsqword-readgsword.md)
+[__ readgsbyte、 \_( \_readgsdword)、readgsqword、 \_readgソード](../intrinsics/readgsbyte-readgsdword-readgsqword-readgsword.md)
 
 [__readmsr](../intrinsics/readmsr.md)
 
@@ -267,9 +267,9 @@ ms.locfileid: "62264316"
 
 [__writeeflags](../intrinsics/writeeflags.md)
 
-[__writefsbyte, \__writefsdword, \__writefsqword, \__writefsword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)
+[__ writefsbyte、 \_ \_writefsdword、writefsqword、 \_writefソード](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)
 
-[__writegsbyte, \__writegsdword, \__writegsqword, \__writegsword](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)
+[__ writ/sbyte、 \_/writ、 \_sqword、/writ/sqword \_](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)
 
 [__writemsr](../intrinsics/writemsr.md)
 

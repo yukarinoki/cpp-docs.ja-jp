@@ -1,34 +1,31 @@
 ---
-title: no_search_namespace
-ms.date: 11/04/2016
+title: no_search_namespace import 属性
+ms.date: 08/29/2019
 f1_keywords:
 - no_search_namespace
 helpviewer_keywords:
 - no_search_namespace attribute
 ms.assetid: 482dc4a7-5acf-456a-a995-ef4ddd5f6018
-ms.openlocfilehash: 8e19600e35c87990c455c6793a4e0ea521213bb7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d5710e790ca94b49b9577b3107a4fb6e5070fcac
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411306"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220712"
 ---
-# <a name="nosearchnamespace"></a>no_search_namespace
-**C++ 固有の仕様**
+# <a name="no_search_namespace-import-attribute"></a>no_search_namespace import 属性
 
-同じ機能を持つ、 [no_namespace](../preprocessor/no-namespace.md)属性しますが、使用するタイプ ライブラリで使用されて、`#import`ディレクティブ、 [auto_search](../preprocessor/auto-search.md)属性。
+**C++のみ**
+
+には[no_namespace](../preprocessor/no-namespace.md)属性と同じ機能がありますが、 `#import`ディレクティブを[auto_search](../preprocessor/auto-search.md)属性と共に使用するタイプライブラリで使用されます。
 
 ## <a name="syntax"></a>構文
 
-```
-no_search_namespace
-```
+> **#import***タイプライブラリ***no_search_namespace**
 
-## <a name="remarks"></a>Remarks
-
-**END C 固有の仕様**
+**特定C++の終了**
 
 ## <a name="see-also"></a>関連項目
 
-[#import の属性](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[#import 属性](../preprocessor/hash-import-attributes-cpp.md)\
 [#import ディレクティブ](../preprocessor/hash-import-directive-cpp.md)
