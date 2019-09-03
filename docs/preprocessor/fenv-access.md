@@ -1,6 +1,6 @@
 ---
-title: fenv_access
-ms.date: 03/12/2018
+title: fenv_access プラグマ
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.fenv_access
 - fenv_access_CPP
@@ -8,15 +8,16 @@ helpviewer_keywords:
 - pragmas, fenv_access
 - fenv_access pragma
 ms.assetid: 2ccea292-0ae4-42ce-9c67-cc189299857b
-ms.openlocfilehash: 507e78dd9f9571cc9ce44d7fd91e78b1c955ba73
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c8e66881bde12df28bf24e18230471cb4caca792
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389256"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218597"
 ---
-# <a name="fenvaccess"></a>fenv_access
-無効にします (**で**) または有効 (**オフ**) 浮動小数点環境に影響する最適化フラグ テストとモードの変更。
+# <a name="fenv_access-pragma"></a>fenv_access プラグマ
+
+浮動小数点環境フラグのテストおよびモードの変更を変更できる最適化を無効 (**on**) または有効 (**オフ**) にします。
 
 ## <a name="syntax"></a>構文
 
@@ -24,11 +25,11 @@ ms.locfileid: "62389256"
 
 ## <a name="remarks"></a>Remarks
 
-既定では、 **fenv_access**は**オフ**します。 コンパイラが想定する場合は、コードはアクセスしないか、または浮動小数点の環境を操作し、さまざまな浮動小数点コードの最適化を実行できます。 設定**fenv_access**に**で**コードが例外状態フラグをテストする、またはコントロール モード フラグを設定するのには、浮動小数点環境にアクセスすることをコンパイラに通知します。 コンパイラは、コードでは、浮動小数点環境を一貫してアクセスできるように、これらの最適化を無効にします。
+既定では、 **fenv_access**は**オフ**になっています。 コードが浮動小数点環境にアクセスしたり操作したりしないことをコンパイラが想定できる場合は、多くの浮動小数点コードの最適化を実行できます。 **Fenv_access**を**on**に設定すると、コードが浮動小数点環境にアクセスして状態フラグや例外をテストしたり、制御モードフラグを設定したりすることをコンパイラに通知します。 コンパイラは、コードが常に浮動小数点環境にアクセスできるように、これらの最適化を無効にします。
 
-浮動小数点の動作の詳細については、次を参照してください。 [/fp (浮動小数点の動作の指定)](../build/reference/fp-specify-floating-point-behavior.md)します。
+浮動小数点の動作の詳細については、「 [/fp (浮動小数点の動作の指定)](../build/reference/fp-specify-floating-point-behavior.md)」を参照してください。
 
-適用される最適化の種類**fenv_access**は。
+**Fenv_access**の対象となる最適化の種類は次のとおりです。
 
 - グローバルの共通部分式の削除
 
@@ -44,11 +45,11 @@ ms.locfileid: "62389256"
 
 ## <a name="examples"></a>使用例
 
-この例では設定**fenv_access**に**で**24 ビット精度浮動小数点のコントロールに登録を設定します。
+この例では、 **fenv_access**を**on**に設定して、24ビット精度の浮動小数点制御レジスタを設定します。
 
 ```cpp
 // pragma_directive_fenv_access_x86.cpp
-// compile with: /O2
+// compile with: /O2 /arch:IA32
 // processor: x86
 #include <stdio.h>
 #include <float.h>
@@ -71,14 +72,14 @@ int main() {
 ```
 
 ```Output
-out=9.999999776482582e-003
+out=9.999999776482582e-03
 ```
 
-コメント アウトする場合`#pragma fenv_access (on)`前のサンプルでは、コンパイラがコンパイル時の評価は、コントロールのモードを使用しないので、出力が異なることに注意してください。
+前のサンプルから`#pragma fenv_access (on)`コメントアウトした場合は、コンパイラがコンパイル時の評価を行い、制御モードを使用しないため、出力が異なることに注意してください。
 
 ```cpp
 // pragma_directive_fenv_access_2.cpp
-// compile with: /O2
+// compile with: /O2 /arch:IA32
 #include <stdio.h>
 #include <float.h>
 
@@ -98,9 +99,9 @@ int main() {
 ```
 
 ```Output
-out=1.000000000000000e-002
+out=1.000000000000000e-02
 ```
 
 ## <a name="see-also"></a>関連項目
 
-[プラグマ ディレクティブと __Pragma キーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[プラグマディレクティブと __ プラグマキーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

@@ -1,16 +1,16 @@
 ---
 title: 既定で無効になっているコンパイラ警告
-ms.date: 05/30/2018
+ms.date: 08/29/2019
 helpviewer_keywords:
 - warnings, compiler
 - cl.exe compiler, setting options
 ms.assetid: 69809cfb-a38a-4035-b154-283a61938df8
-ms.openlocfilehash: 1a95153f3cefd2bcfcae6ebb297a7c6b52944f82
-ms.sourcegitcommit: d3829ae0c3db909f96057755a80665f5ea4896ea
+ms.openlocfilehash: a8b203c94d4a5af28837627fda1b8e1631dfb0c0
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69550473"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220488"
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>既定で無効になっているコンパイラ警告
 
@@ -150,15 +150,13 @@ Visual Studio 2015 以降のバージョンでは、次の警告が既定で無�
 |C5042 (レベル 3)|'*function*': ブロックスコープの関数宣言を標準C++で ' inline ' に指定することはできません。' inline ' 指定子<sup>15.5</sup>の削除|
 |[C5045](../error-messages/compiler-warnings/c5045.md)|/Qspectre スイッチが指定されている場合、コンパイラはメモリ負荷の Spectre 軽減策を挿入します。 <sup>15.7</sup>|
 
-<sup>14.1</sup> Visual Studio 2015 Update 1 以降では、この警告を利用できます。<br/>
-<sup>14.3</sup> Visual Studio 2015 Update 3 以降では、この警告を利用できます。<br/>
-<sup>15.3</sup>この警告は、Visual Studio 2017 バージョン15.3 以降で使用できます。<br/>
-<sup>15.5</sup>この警告は、Visual Studio 2017 バージョン15.5 以降で使用できます。<br/>
-<sup>15.7</sup>この警告は、Visual Studio 2017 バージョン15.7 以降で使用できます。<br/>
-<sup>15.8</sup>この警告は、Visual Studio 2017 バージョン15.8 以降で使用できます。<br/>
-::: moniker range=">= vs-2019"
-<sup>16.0</sup>この警告は、Visual STUDIO 2019 RTM 以降で使用できます。<br/>
-::: moniker-end
+<sup>14.1</sup> Visual Studio 2015 Update 1 以降では、この警告を利用できます。
+<sup>14.3</sup> Visual Studio 2015 Update 3 以降では、この警告を利用できます。
+<sup>15.3</sup> Visual Studio 2017 バージョン15.3 以降では、この警告は使用できます。
+<sup>15.5</sup> Visual Studio 2017 バージョン15.5 以降では、この警告は使用できます。
+<sup>15.7</sup> Visual Studio 2017 バージョン15.7 以降では、この警告は使用できます。
+<sup>15.8</sup> Visual Studio 2017 バージョン15.8 以降では、この警告は使用できます。
+<sup>16.0</sup>この警告は、Visual STUDIO 2019 RTM 以降で使用できます。
 <sup>Perm</sup>この警告は、 [/permissive-](../build/reference/permissive-standards-conformance.md)コンパイラオプションが設定されていない場合にオフになります。
 
 ## <a name="warnings-off-by-default-in-earlier-versions"></a>以前のバージョンでは、既定で警告がオフになっています
