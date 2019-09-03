@@ -36,6 +36,7 @@ int main() {
 ```
 
 C2494 は、**/clr** を使用しているときも発生します。
+
 ```
 // C2494b.cpp
 // compile with: /clr
