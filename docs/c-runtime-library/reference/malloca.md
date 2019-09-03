@@ -55,13 +55,13 @@ void *_malloca(
 
 ## <a name="remarks"></a>Remarks
 
-**_malloca**割り当てます*サイズ*プログラム スタックまたはヒープの場合は、要求で指定されたバイト数で特定のサイズを超えていますからバイト **_ALLOCA_S_THRESHOLD**します。 間の差 **_malloca**と **_alloca**される **_alloca**サイズに関係なく、スタックで常に割り当てます。 異なり **_alloca**、する必要がありますまたはへの呼び出しを許可しません**無料**、メモリを解放する **_malloca**の使用を要求[_freea](freea.md)メモリを解放します。 デバッグ モードで **_malloca**常に、ヒープからメモリを割り当てます。
+**_malloca**割り当てます*サイズ*プログラム スタックまたはヒープの場合は、要求で指定されたバイト数で特定のサイズを超えていますからバイト **_ALLOCA_S_THRESHOLD**します。 間の差 **_malloca**と **_alloca**される **_alloca**サイズに関係なく、スタックで常に割り当てます。 異なり **_alloca**、する必要がありますまたはへの呼び出しを許可しません**free**、メモリを解放する **_malloca**の使用を要求[_freea](freea.md)メモリを解放します。 デバッグ モードで **_malloca**常に、ヒープからメモリを割り当てます。
 
 明示的に呼び出すには制限 **_malloca**例外ハンドラー (EH)。 X86 クラスのプロセッサ上で実行される EH ルーチンは、独自のメモリ フレームで動作します。外側の関数のスタック ポインターの現在の場所には基づいていないメモリ領域でタスクを実行します。 最も一般的な実装には、Windows NT 構造化例外処理 (SEH) や C++ catch 句の式などがあります。 そのため、明示的に呼び出す **_malloca**呼び出した EH ルーチンへの復帰時にプログラム エラー シナリオ結果は次のいずれかで。
 
-- Windows NT SEH 例外フィルター式: **_ _except** (`_malloca ()` )
+- Windows NT SEH 例外フィルター式: **__except** (`_malloca ()` )
 
-- Windows NT SEH 最終例外ハンドラー: **_ _finally** {`_malloca ()` }
+- Windows NT SEH 最終例外ハンドラー: **__finally** {`_malloca ()` }
 
 - C++ EH catch 句の式
 
@@ -70,7 +70,7 @@ void *_malloca(
 > [!IMPORTANT]
 > Windows XP で場合 **_malloca**が呼び出されます、try/catch ブロック内で呼び出す必要がある[_resetstkoflw](resetstkoflw.md)の catch ブロックでします。
 
-使用する場合、上記の制限だけでなく、 [/clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)オプション、 **_malloca**では使用できません **_ _except**ブロックします。 詳細については、「 [/clr Restrictions](../../build/reference/clr-restrictions.md)」を参照してください。
+使用する場合、上記の制限だけでなく、 [/clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)オプション、 **_malloca**では使用できません **__except**ブロックします。 詳細については、「 [/clr Restrictions](../../build/reference/clr-restrictions.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
