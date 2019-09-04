@@ -43,7 +43,7 @@ ms.locfileid: "62271802"
 
 ## <a name="remarks"></a>Remarks
 
-**/EHa** コンパイラ オプションは、ネイティブ C++ `catch(...)` 句で非同期構造化例外処理 (SEH) をサポートするために使用されます。 指定せずに SEH を実装する **/EHa**、使用することが、 **_ _try**、 **_ _except**、および **_ _finally**構文。 Windows および Visual C++ は SEH をサポートしていますが、ISO 標準の C++ 例外処理 ( **/EHs** または **/EHsc**) の方がコードの移植性と柔軟性に優れているため、こちらの例外処理を使用することを強くお勧めします。 ただし、既存のコードで、または特定の種類のプログラムの — など、共通言語ランタイムをサポートするためにコンパイルされたコードで ([/clr (共通言語ランタイムのコンパイル)](clr-common-language-runtime-compilation.md))-SEH を使用する必要があります。 詳細については、「 [Structured Exception Handling (C/C++)](../../cpp/structured-exception-handling-c-cpp.md)」を参照してください。
+**/EHa** コンパイラ オプションは、ネイティブ C++ `catch(...)` 句で非同期構造化例外処理 (SEH) をサポートするために使用されます。 指定せずに SEH を実装する **/EHa**、使用することが、 **__try**、 **__except**、および **__finally**構文。 Windows および Visual C++ は SEH をサポートしていますが、ISO 標準の C++ 例外処理 ( **/EHs** または **/EHsc**) の方がコードの移植性と柔軟性に優れているため、こちらの例外処理を使用することを強くお勧めします。 ただし、既存のコードで、または特定の種類のプログラムの — など、共通言語ランタイムをサポートするためにコンパイルされたコードで ([/clr (共通言語ランタイムのコンパイル)](clr-common-language-runtime-compilation.md))-SEH を使用する必要があります。 詳細については、「 [Structured Exception Handling (C/C++)](../../cpp/structured-exception-handling-c-cpp.md)」を参照してください。
 
 **/EHa** を指定し、 `catch(...)` を使用してすべての例外を処理しようとするのは危険です。 非同期例外のほとんどが回復不能で、致命的であると見なされます。 こうした例外をキャッチして操作を続行すると、プロセスが破損し、検出して修正するのが難しいバグが発生する可能性があります。
 
