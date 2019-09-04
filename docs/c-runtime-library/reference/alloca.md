@@ -70,7 +70,7 @@ void *_alloca(
 > [!IMPORTANT]
 > Windows XP で場合 **_alloca**が呼び出されます、try/catch ブロック内で呼び出す必要がある[_resetstkoflw](resetstkoflw.md)の catch ブロックでします。
 
-使用する場合、上記の制限だけでなく、[/clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)オプション、 **_alloca**では使用できません **_ _except**ブロックします。 詳細については、「 [/clr Restrictions](../../build/reference/clr-restrictions.md)」を参照してください。
+使用する場合、上記の制限だけでなく、[/clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)オプション、 **_alloca**では使用できません **__except**ブロックします。 詳細については、「 [/clr Restrictions](../../build/reference/clr-restrictions.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
