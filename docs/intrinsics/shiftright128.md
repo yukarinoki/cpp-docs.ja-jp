@@ -1,19 +1,19 @@
 ---
 title: __shiftright128
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __shiftright128
 helpviewer_keywords:
 - __shiftright128 intrinsic
 ms.assetid: 5419a6c4-0de1-43fb-b314-4faa5b2d051f
-ms.openlocfilehash: b721abc9be22709fdc221951e2012300d6b96762
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a18a9958a51f291e4997c23e87ee48f739562416
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390335"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220019"
 ---
-# <a name="shiftright128"></a>__shiftright128
+# <a name="__shiftright128"></a>__shiftright128
 
 **Microsoft 固有の仕様**
 
@@ -21,7 +21,7 @@ ms.locfileid: "62390335"
 
 ## <a name="syntax"></a>構文
 
-```
+```C
 unsigned __int64 __shiftright128(
    unsigned __int64 LowPart,
    unsigned __int64 HighPart,
@@ -29,16 +29,16 @@ unsigned __int64 __shiftright128(
 );
 ```
 
-#### <a name="parameters"></a>パラメーター
+### <a name="parameters"></a>パラメーター
 
-*下位*<br/>
-[in]シフトする 128 ビット数の下位 64 ビット。
+*LowPart*\
+からシフトする128ビット数量の下位64ビット。
 
-*HighPart*<br/>
-[in]シフトする 128 ビット数の上位 64 ビット。
+*Largeint.highpart*\
+からシフトする128ビット数量の上位64ビット。
 
-*Shift*<br/>
-[in]シフトするビット数。
+*転換*\
+からシフトするビット数。
 
 ## <a name="return-value"></a>戻り値
 
@@ -50,7 +50,7 @@ unsigned __int64 __shiftright128(
 |---------------|------------------|
 |`__shiftright128`|X64|
 
-**ヘッダー ファイル** \<intrin.h >
+**ヘッダーファイル**\<>
 
 ## <a name="remarks"></a>Remarks
 
@@ -58,11 +58,11 @@ unsigned __int64 __shiftright128(
 
 ## <a name="example"></a>例
 
-例については、次を参照してください。 [_ _shiftleft128](../intrinsics/shiftleft128.md)します。
+例については、「 [__shiftleft128](../intrinsics/shiftleft128.md)」を参照してください。
 
 **Microsoft 固有の仕様はここまで**
 
 ## <a name="see-also"></a>関連項目
 
-[__shiftleft128](../intrinsics/shiftleft128.md)<br/>
+[__shiftleft128](../intrinsics/shiftleft128.md)\
 [コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)

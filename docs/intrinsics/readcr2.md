@@ -1,27 +1,27 @@
 ---
 title: __readcr2
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __readcr2
 helpviewer_keywords:
 - __readcr2 intrinsic
 ms.assetid: d02c97d8-1953-46e7-a79e-a781e2c5bf27
-ms.openlocfilehash: e26ccbb3db1dfc113f84210314379b06dae93542
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 482f4548a692d6aa3b65fbc42caabda29bb393c1
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396555"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217111"
 ---
-# <a name="readcr2"></a>__readcr2
+# <a name="__readcr2"></a>__readcr2
 
 **Microsoft 固有の仕様**
 
-CR2 レジスタを読み取り、その値を返します。
+CR2 register を読み取り、その値を返します。
 
 ## <a name="syntax"></a>構文
 
-```
+```C
 unsigned __int64 __readcr2(void);
 ```
 
@@ -35,11 +35,11 @@ CR2 レジスタの値。
 |---------------|------------------|
 |`__readcr2`|x86、x64|
 
-**ヘッダー ファイル** \<intrin.h >
+**ヘッダーファイル**\<>
 
 ## <a name="remarks"></a>Remarks
 
-この組み込みはカーネル モードのみで使用でき、そのルーチンは組み込みとしてのみ使用できます。
+組み込みはカーネルモードでのみ使用でき、ルーチンは組み込みとしてのみ使用できます。
 
 **Microsoft 固有の仕様はここまで**
 

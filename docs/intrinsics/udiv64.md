@@ -1,20 +1,20 @@
 ---
 title: _udiv64
-ms.date: 04/17/2019
+ms.date: 09/02/2019
 f1_keywords:
 - _udiv64
 helpviewer_keywords:
 - _udiv64 intrinsic
-ms.openlocfilehash: 73a29b180eeda49a9a25e9e568d25c7563234fad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6dabbc94260ef578eb1a58a1b289b4a4654decdd
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390153"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219680"
 ---
-# <a name="udiv64"></a>_udiv64
+# <a name="_udiv64"></a>_udiv64
 
-`_udiv64`組み込みに 32 ビット符号なし整数が 64 ビット符号なし整数を除算します。 戻り値の商を保持して、組み込みのポインター パラメーターを通じて剰余を返します。 `_udiv64` **Microsoft 固有の仕様**します。
+組み込み`_udiv64`は、64ビット符号なし整数を32ビット符号なし整数で除算します。 戻り値は商を保持し、組み込みはポインターパラメーターを使用して剰余を返します。 `_udiv64`は**Microsoft 固有**のものです。
 
 ## <a name="syntax"></a>構文
 
@@ -28,24 +28,24 @@ unsigned int _udiv64(
 
 ### <a name="parameters"></a>パラメーター
 
-*被除数*<br/>
-[in]分割する 64 ビット符号なし整数。
+*被除数*\
+から除算する64ビット符号なし整数。
 
-*除数*<br/>
-[in]除算する 32 ビット符号なし整数。
+*公約数*\
+からによって除算される32ビット符号なし整数。
 
-*remainder*<br/>
-[out]32 ビット符号なし整数の剰余。
+*後述*\
+入出力32ビット符号なし整数の剰余。
 
 ## <a name="return-value"></a>戻り値
 
-商の 32 ビットです。
+商の32ビット。
 
 ## <a name="remarks"></a>Remarks
 
-`_udiv64`組み込み除算*被除数*によって*除数*します。 残りの部分が指す 32 ビット符号なし整数に格納*剰余*、し、商の 32 ビットを返します。
+組み込み`_udiv64`は*被除数*を*除数*で除算します。 剰余が*剰余*によって示された32ビット符号なし整数に格納し、商の32ビットを返します。
 
-`_udiv64`組み込みは、Visual Studio 2019 RTM 以降で利用可能です。
+組み込み`_udiv64`は、Visual Studio 2019 RTM 以降で使用できます。
 
 ## <a name="requirements"></a>必要条件
 

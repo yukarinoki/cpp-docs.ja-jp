@@ -1,6 +1,6 @@
 ---
 title: __movsb
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __movsb
 helpviewer_keywords:
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - rep movsb instruction
 - __movsb intrinsic
 ms.assetid: ba5469f6-f797-4cd2-bee8-74c7666c26d4
-ms.openlocfilehash: 42124743c27b297c723780c1bc19038fb54e638d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ca06fc9114f6e824a690cc4e612c21d705a485cd
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263816"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217281"
 ---
-# <a name="movsb"></a>__movsb
+# <a name="__movsb"></a>__movsb
 
 **Microsoft 固有の仕様**
 
-移動の文字列が生成されます (`rep movsb`) 命令。
+Move String (`rep movsb`) 命令を生成します。
 
 ## <a name="syntax"></a>構文
 
-```
+```C
 void __movsb(
    unsigned char* Destination,
    unsigned const char* Source,
@@ -31,16 +31,16 @@ void __movsb(
 );
 ```
 
-#### <a name="parameters"></a>パラメーター
+### <a name="parameters"></a>パラメーター
 
-*Destination (公開先)*<br/>
-[out]コピー先へのポインター。
+*インストール*\
+入出力コピー先へのポインター。
 
-*ソース*<br/>
-[in]コピーのソースへのポインター。
+*Source*\
+からコピー元へのポインター。
 
-*カウント*<br/>
-[in]コピーするバイト数。
+*数*\
+からコピーするバイト数。
 
 ## <a name="requirements"></a>必要条件
 
@@ -48,17 +48,17 @@ void __movsb(
 |---------------|------------------|
 |`__movsb`|x86、x64|
 
-**ヘッダー ファイル** \<intrin.h >
+**ヘッダーファイル**\<>
 
 ## <a name="remarks"></a>Remarks
 
-その結果、最初の`Count`によって示されるバイト`Source`にコピーされます、`Destination`文字列。
+結果として`Count` `Source` 、が指す最初のバイトが`Destination`文字列にコピーされます。
 
 このルーチンは、組み込みとしてのみ使用できます。
 
 ## <a name="example"></a>例
 
-```
+```cpp
 // movsb.cpp
 // processor: x86, x64
 #include <stdio.h>

@@ -1,40 +1,40 @@
 ---
 title: __writedr
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __writedr
 helpviewer_keywords:
 - __writedr intrinsic
 ms.assetid: ac55c1ee-df2f-41d4-a429-6f369d2a934d
-ms.openlocfilehash: c495e8c80029680512358198ca8fb0ce6e65414d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 715ef7432d506c2758c9c3da913e9c0ebb24e13f
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389867"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219225"
 ---
-# <a name="writedr"></a>__writedr
+# <a name="__writedr"></a>__writedr
 
-指定されたデバッグ登録するには、指定した値を書き込みます。
+指定された値を指定されたデバッグレジスタに書き込みます。
 
 ## <a name="syntax"></a>構文
 
+```C
+void __writedr(unsigned DebugRegister, unsigned DebugValue); /* x86 */
+void __writedr(unsigned DebugRegister, unsigned __int64 DebugValue); /* x64 */
 ```
-void __writedr(unsigned DebugRegister, unsigned DebugValue);
-void __writedr(unsigned DebugRegister, unsigned __int64 DebugValue);
-```
 
-#### <a name="parameters"></a>パラメーター
+### <a name="parameters"></a>パラメーター
 
-*DebugRegister*<br/>
-[in]デバッグを識別する 0 ~ 7 の数値を登録します。
+*DebugRegister*\
+からデバッグレジスタを識別する 0 ~ 7 の数値。
 
-*DebugValue*<br/>
-[in]デバッグ用に記述する値を登録します。
+*DebugValue*\
+からデバッグレジスタに書き込む値。
 
 ## <a name="remarks"></a>Remarks
 
-これらの組み込みはカーネル モードでのみ使用できますし、ルーチンは組み込みとしてのみ使用できます。
+これらの組み込みはカーネルモードでのみ使用でき、ルーチンは組み込みとしてのみ使用できます。
 
 ## <a name="requirements"></a>必要条件
 
@@ -42,11 +42,11 @@ void __writedr(unsigned DebugRegister, unsigned __int64 DebugValue);
 |---------------|------------------|
 |`__writedr`|x86、x64|
 
-**ヘッダー ファイル** \<intrin.h >
+**ヘッダーファイル**\<>
 
 **Microsoft 固有の仕様はここまで**
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)<br/>
+[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)\
 [__readdr](../intrinsics/readdr.md)

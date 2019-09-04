@@ -1,6 +1,6 @@
 ---
-title: float_control
-ms.date: 11/04/2016
+title: float_control プラグマ
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.float_control
 - float_control_CPP
@@ -8,39 +8,41 @@ helpviewer_keywords:
 - float_control pragma
 - pragmas, float_control
 ms.assetid: 4f4ba5cf-3707-413e-927d-5ecdbc0a9a43
-ms.openlocfilehash: 8a7829252cebb726363c67c990a94d08b0d6467a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aa8cdc07953405175c1753791ab53214d73ba516
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389217"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218582"
 ---
-# <a name="floatcontrol"></a>float_control
+# <a name="float_control-pragma"></a>float_control プラグマ
 
 関数の浮動小数点動作を指定します。
 
 ## <a name="syntax"></a>構文
 
-> **#pragma float_control** [ **(** [ *value* **,** *setting* **[, push]** | [ **push** | **pop** ] **)** ]
+> **#pragma float_control**\
+> **#pragma float_control (** {**厳密** | な**strict** | **except** } **、** { **on** | **off** } **[、push]** **)** \
+> **#pragma float_control (** { **push** | **pop** } **)**
 
 ## <a name="options"></a>オプション
 
-*value*, *setting* [, **push**]<br/>
-浮動小数点の動作を指定します。 *値*できる**正確な**、 **strict**、または**を除く**します。 詳細については、「[/fp (浮動小数点の動作の指定)](../build/reference/fp-specify-floating-point-behavior.md)」を参照してください。 *設定*できます**で**または**オフ**します。
+**厳密に**は**except**、 **on** off、push |  |  | \
+**精度**、**厳密**、または**except**の浮動小数点動作を指定します。 詳細については、「[/fp (浮動小数点の動作の指定)](../build/reference/fp-specify-floating-point-behavior.md)」を参照してください。 設定は、オンまたは**オフ** **に**することができます。
 
-場合*値*は**strict**、両方の設定**strict**と**を除く**で指定された*設定*. **除く**にしか設定できません**で**とき**正確な**または**厳密な**にも設定されている**で**します。
+**Strict**の場合、 **strict**と**except**の両方の設定は、 **on**または**off**の設定によって指定されます。 **except**は on にも設定されている場合にのみ、onに設定できます。
 
-場合、省略可能な**プッシュ**トークンは追加、現在の設定*値*内部コンパイラ スタックにプッシュされます。
+省略可能な**プッシュ**トークンを追加すると、 **float_control**の現在の設定が内部コンパイラスタックにプッシュされます。
 
-**push**<br/>
-現在のプッシュ**float_control**内部コンパイラ スタックに設定
+**押し付け**\
+現在の**float_control**設定を内部コンパイラスタックにプッシュします。
 
-**pop**<br/>
-削除、 **float_control**内部コンパイラ スタックの一番上から設定し、それは新しい**float_control**設定。
+**ショート**\
+内部コンパイラスタックの一番上から**float_control**設定を削除し、新しい**float_control**設定を行います。
 
 ## <a name="remarks"></a>Remarks
 
-使用することはできません**float_control**に**正確な**オフのときに**を除く**にします。 同様に、**正確な**ときにオフにすることはできません[fenv_access](../preprocessor/fenv-access.md)にします。 使用して高速モデルに厳格なモデルから移動する、 **float_control**プラグマを使用して、次のコード。
+**Except**が on の場合、 **float_control**を使用して**正確**にオフにすることはできません。 同様に、 [fenv_access](../preprocessor/fenv-access.md)が on のときは、**正確**に無効にすることはできません。 **Float_control**プラグマを使用して厳密なモデルから高速モデルに移行するには、次のコードを使用します。
 
 ```cpp
 #pragma float_control(except, off)
@@ -48,7 +50,7 @@ ms.locfileid: "62389217"
 #pragma float_control(precise, off)
 ```
 
-高速モデルから厳格なモデルに移行する、 **float_control**プラグマを使用して、次のコード。
+**Float_control**プラグマを使用して高速モデルから厳密なモデルに移行するには、次のコードを使用します。
 
 ```cpp
 #pragma float_control(precise, on)
@@ -56,7 +58,7 @@ ms.locfileid: "62389217"
 #pragma float_control(except, on)
 ```
 
-オプションが指定されていない場合**float_control**も何も起こりません。
+オプションが指定されていない場合、 **float_control**は無効です。
 
 その他の浮動小数点プラグマには以下があります。
 
@@ -66,7 +68,7 @@ ms.locfileid: "62389217"
 
 ## <a name="example"></a>例
 
-次の例は、プラグマを使用してオーバーフロー浮動小数点例外をキャッチする方法を示しています。 **float_control**します。
+次の例は、プラグマ**float_control**を使用してオーバーフロー浮動小数点例外をキャッチする方法を示しています。
 
 ```cpp
 // pragma_directive_float_control.cpp
@@ -108,4 +110,4 @@ Pass
 
 ## <a name="see-also"></a>関連項目
 
-[プラグマ ディレクティブと __Pragma キーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[プラグマディレクティブと __ プラグマキーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

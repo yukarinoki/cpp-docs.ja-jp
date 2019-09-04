@@ -1,36 +1,36 @@
 ---
 title: __readeflags
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __readeflags
 helpviewer_keywords:
 - __readeflags intrinsic
 ms.assetid: f9d2f4d8-c428-491f-b8de-04d0566b2b6b
-ms.openlocfilehash: 9913fb4287e673faf79b2c352bb42eda7f590fdd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fe2365c2837b6c583810bb9fc908fe98486a2d38
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396484"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221232"
 ---
-# <a name="readeflags"></a>__readeflags
+# <a name="__readeflags"></a>__readeflags
 
-プログラムのステータスと制御 (空文) の登録を読み取ります。
+プログラムの状態と制御 (EFLAGS) レジスタを読み取ります。
 
 ## <a name="syntax"></a>構文
 
-```
-unsigned     int __readeflags(void);
-unsigned __int64 __readeflags(void);
+```C
+unsigned     int __readeflags(void); /* x86 */
+unsigned __int64 __readeflags(void); /* x64 */
 ```
 
 ## <a name="return-value"></a>戻り値
 
-立てるレジスタの値。 戻り値は 32 ビット、32 ビット プラットフォームでは長と 64 ビット、64 ビット プラットフォームでは長。
+EFLAGS レジスタの値。 戻り値は、32ビットプラットフォームでは32ビット長、64ビットプラットフォームでは64ビット長です。
 
 ## <a name="remarks"></a>Remarks
 
-これらのルーチンは組み込みとしてのみ使用できます。
+これらのルーチンは、組み込みとしてのみ使用できます。
 
 ## <a name="requirements"></a>必要条件
 
@@ -38,11 +38,11 @@ unsigned __int64 __readeflags(void);
 |---------------|------------------|
 |`__readeflags`|x86、x64|
 
-**ヘッダー ファイル** \<intrin.h >
+**ヘッダーファイル**\<>
 
 **Microsoft 固有の仕様はここまで**
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)<br/>
+[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)\
 [__writeeflags](../intrinsics/writeeflags.md)

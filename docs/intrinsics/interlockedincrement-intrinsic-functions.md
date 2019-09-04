@@ -1,6 +1,6 @@
 ---
-title: _InterlockedIncrement の組み込み関数
-ms.date: 12/17/2018
+title: _InterlockedIncrement 組み込み関数
+ms.date: 09/02/2019
 f1_keywords:
 - _InterlockedIncrement_acq
 - _InterlockedIncrement16_rel_cpp
@@ -44,14 +44,14 @@ helpviewer_keywords:
 - _InterlockedIncrement_acq intrinsic
 - InterlockedIncrement intrinsic
 ms.assetid: 37700615-f372-438b-bcef-d76e11839482
-ms.openlocfilehash: 58c71c577e3d87ca72836134a4f895f32170fe7f
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 4dd9ae9ba5454b0afefa332689d94fa3619a07a6
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69509358"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221990"
 ---
-# <a name="_interlockedincrement-intrinsic-functions"></a>_InterlockedIncrement の組み込み関数
+# <a name="_interlockedincrement-intrinsic-functions"></a>_InterlockedIncrement 組み込み関数
 
 **Microsoft 固有の仕様**
 
@@ -59,7 +59,7 @@ Win32 Windows SDK [InterlockedIncrement](/windows/win32/api/winnt/nf-winnt-inter
 
 ## <a name="syntax"></a>構文
 
-```
+```C
 long _InterlockedIncrement(
    long * lpAddend
 );
@@ -98,9 +98,9 @@ __int64 _InterlockedIncrement64_nf(
 );
 ```
 
-#### <a name="parameters"></a>パラメーター
+### <a name="parameters"></a>パラメーター
 
-*lpAddend*<br/>
+*lpAddend*\
 [入力、出力]インクリメントする変数へのポインター。
 
 ## <a name="return-value"></a>戻り値
@@ -111,8 +111,9 @@ __int64 _InterlockedIncrement64_nf(
 
 |組み込み|アーキテクチャ|Header|
 |---------------|------------------|------------|
-|`_InterlockedIncrement`、 `_InterlockedIncrement16`、 `_InterlockedIncrement64`|x86、ARM、x64|\<intrin.h>|
-|`_InterlockedIncrement_acq`, `_InterlockedIncrement_rel`, `_InterlockedIncrement_nf`, `_InterlockedIncrement16_acq`, `_InterlockedIncrement16_rel`, `_InterlockedIncrement16_nf`, `_InterlockedIncrement64_acq`, `_InterlockedIncrement64_rel`, `_InterlockedIncrement64_nf`|ARM|\<intrin.h>|
+|`_InterlockedIncrement`, `_InterlockedIncrement16`|x86、ARM、x64、ARM64|\<intrin.h>|
+|`_InterlockedIncrement64`|ARM、x64、ARM64|\<intrin.h>|
+|`_InterlockedIncrement_acq`, `_InterlockedIncrement_rel`, `_InterlockedIncrement_nf`, `_InterlockedIncrement16_acq`, `_InterlockedIncrement16_rel`, `_InterlockedIncrement16_nf`, `_InterlockedIncrement64_acq`, `_InterlockedIncrement64_rel`, `_InterlockedIncrement64_nf`|ARM、ARM64|\<intrin.h>|
 
 ## <a name="remarks"></a>Remarks
 
@@ -120,7 +121,7 @@ __int64 _InterlockedIncrement64_nf(
 
 `_InterlockedIncrement` 関数は 32 ビット整数値で動作しますが、`_InterlockedIncrement16` は 16 ビット整数値および `_InterlockedIncrement64` は 64 ビット整数値で動作します。
 
-ARM プラットフォームでは、クリティカル セクションの最初と最後などで取得と解放のセマンティクスを必要とする場合は、`_acq` および `_rel` サフィックスの付いた組み込みを使用します。 `_nf` ("フェンスなし") サフィックスの付いた組み込みはメモリ バリアとしては機能しません。
+ARM プラットフォームでは、クリティカル セクションの最初と最後などで取得と解放のセマンティクスを必要とする場合は、`_acq` および `_rel` サフィックスの付いた組み込みを使用します。 `_nf` ("フェンスなし") サフィックスの付いた組み込みは、メモリバリアとしては機能しません。
 
 `lpAddend` パラメーターが指す変数は 32 ビットの境界に合わせて調整する必要があります。そのようにしない場合、この関数はマルチプロセッサの x86 システムおよび x 86 システム以外のシステムで失敗します。 詳細については、「 [align](../cpp/align-cpp.md)」を参照してください。
 
@@ -136,6 +137,6 @@ Win32 関数は `Wdm.h` または `Ntddk.h` で宣言されています。
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)<br/>
-[キーワード](../cpp/keywords-cpp.md)<br/>
+[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)\
+[キーワード](../cpp/keywords-cpp.md)\
 [x86 コンパイラとの競合](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

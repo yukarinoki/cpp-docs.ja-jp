@@ -1,91 +1,91 @@
----
+﻿---
 title: プリプロセッサの文法
-ms.date: 09/04/2018
+ms.date: 08/29/2019
 helpviewer_keywords:
 - preprocessor
 - grammar, preprocessor
 - preprocessor, grammar
 ms.assetid: 6cd33fad-0b08-4592-9be8-7359c43e24e9
-ms.openlocfilehash: 6177cf5fddba549e410842ef3f270edcc13d4782
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f0916e3cc9bbdb398db693286dacc4517df03557
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179881"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222262"
 ---
 # <a name="preprocessor-grammar"></a>プリプロセッサの文法
 
-*コントロール行*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **#define** *identifier* *token-string*<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **#define** <em>identifier</em> **(** *identifier*<sub>opt</sub> **,** ... **,** *identifier*<sub>opt</sub> **)** *token-string*<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **#include** **"** *path-spec* **"**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **#include** **\<** *path-spec* **>**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **#line** *digit-sequence*  **"** *filename* **"** <sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **#undef** *identifier*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **#error** *token-string*<br/>
+*制御線*: \
+&nbsp;&nbsp;&nbsp;&nbsp; **#define***識別子* *トークン-文字列*<sub>選択</sub>\
+&nbsp;&nbsp;&nbsp;&nbsp; **#define***識別子* **(** &#x2800;識別子&#x200B;<sub></sub> **の**選択... **,** *識別子*&#x200B; <sub></sub>opt&#x2800; **)** *トークン文字列の*<sub>選択</sub>\
+&nbsp;&nbsp;&nbsp;&nbsp; **#include** **"** _パス-仕様_ **"** \
+&nbsp;&nbsp;&nbsp;&nbsp; **#include**_パス-仕様_ **\<** **>** \
+&nbsp;&nbsp;&nbsp;&nbsp; **#line***数字-シーケンス* **"** _ファイル名_ **"** &#x200B;<sub>選択</sub>  \
+&nbsp;&nbsp;&nbsp;&nbsp; **#undef***識別子*\
+&nbsp;&nbsp;&nbsp;&nbsp; **#error***トークン-文字列*\
 &nbsp;&nbsp;&nbsp;&nbsp; **#pragma** *token-string*
 
-*constant-expression*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**defined(** *identifier* **)**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**defined** *識別子*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;その他の任意の定数式
+*定数式*: \
+&nbsp;&nbsp;&nbsp;&nbsp;**定義済み (** &#x2800;*識別子*&#x2800; **)** \
+&nbsp;&nbsp;&nbsp;&nbsp;**定義済み***識別子*\
+&nbsp;&nbsp;&nbsp;&nbsp;その他の定数式
 
-*条件付き*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*if 部分* *elif パーツ*<sub>opt</sub> *else 部分*<sub>opt</sub> *endif 行*
+*条件*: \
+&nbsp;&nbsp;&nbsp;&nbsp;*if-部分* *elif-部分*<sub>選択</sub>*else-パート*<sub>選択</sub>*endif-行*
 
-*if 部分*:<br/>
+*if-part*: \
 &nbsp;&nbsp;&nbsp;&nbsp;*if 行* *テキスト*
 
-*if 行*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **#if** *constant-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **#ifdef** *identifier*<br/>
+*改行*: \
+&nbsp;&nbsp;&nbsp;&nbsp; **#if***定数式*\
+&nbsp;&nbsp;&nbsp;&nbsp; **#ifdef***識別子*\
 &nbsp;&nbsp;&nbsp;&nbsp; **#ifndef** *identifier*
 
-*elif パーツ*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*elif 行* *テキスト*<br/>
+*elif-parts*: \
+&nbsp;&nbsp;&nbsp;&nbsp;*elif 行* *テキスト*\
 &nbsp;&nbsp;&nbsp;&nbsp;*elif パーツ* *elif 行* *テキスト*
 
-*elif 行*:<br/>
+*elif 行*: \
 &nbsp;&nbsp;&nbsp;&nbsp; **#elif** *constant-expression*
 
-*他の部分から成る*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*else-line* *text*
+*else-パート*: \
+&nbsp;&nbsp;&nbsp;&nbsp;*他の行* *テキスト*
 
-*他の行*:<br/>
+*他の行*: \
 &nbsp;&nbsp;&nbsp;&nbsp; **#else**
 
-*endif 行*:<br/>
+*endif-行*: \
 &nbsp;&nbsp;&nbsp;&nbsp; **#endif**
 
-*数字シーケンス*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*digit*<br/>
+*数字-シーケンス*: \
+&nbsp;&nbsp;&nbsp;&nbsp;*数値*\
 &nbsp;&nbsp;&nbsp;&nbsp;*digit-sequence* *digit*
 
-*数字*: のいずれか<br/>
+*digit*: 次のいずれか \
 &nbsp;&nbsp;&nbsp;&nbsp;**0 1 2 3 4 5 6 7 8 9**
 
-*トークン文字列*:<br/>
+*トークン文字列*: \
 &nbsp;&nbsp;&nbsp;&nbsp;トークンの文字列
 
-*トークン*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*keyword*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*identifier*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*constant*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*operator*<br/>
+*トークン*: \
+&nbsp;&nbsp;&nbsp;&nbsp;*キーワード*\
+&nbsp;&nbsp;&nbsp;&nbsp;*識別子*\
+&nbsp;&nbsp;&nbsp;&nbsp;*定率*\
+&nbsp;&nbsp;&nbsp;&nbsp;*operator*\
 &nbsp;&nbsp;&nbsp;&nbsp;*punctuator*
 
-*ファイル名*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;有効なオペレーティング システムのファイル名
+*ファイル名*: \
+&nbsp;&nbsp;&nbsp;&nbsp;有効なオペレーティングシステムファイル名
 
-*パス仕様*:<br/>
+*パスの仕様*: \
 &nbsp;&nbsp;&nbsp;&nbsp;有効なファイル パス
 
-*テキスト*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;テキストの任意のシーケンス
+*テキスト*: \
+&nbsp;&nbsp;&nbsp;&nbsp;任意のテキストのシーケンス
 
 > [!NOTE]
-> 展開する次の非終端要素、[構文規則](../cpp/lexical-conventions.md)のセクション、 *C++ 言語リファレンス*:*定数*、*定数式*、*識別子*、*キーワード*、*演算子*、および*などの区切り記号*します。
+> 次の非終端要素は、  *C++言語リファレンス*の[構文規則](../cpp/lexical-conventions.md)(*定数*、*定数式*、*識別子*、*キーワード*、*演算子*、および *) で拡張されています。など*。
 
 ## <a name="see-also"></a>関連項目
 
-[文法の概要 (C/C++)](../preprocessor/grammar-summary-c-cpp.md)
+[文法の概要 (CC++/)](../preprocessor/grammar-summary-c-cpp.md)

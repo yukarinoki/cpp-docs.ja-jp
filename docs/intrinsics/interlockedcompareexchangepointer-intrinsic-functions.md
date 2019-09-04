@@ -1,6 +1,6 @@
 ---
-title: _InterlockedCompareExchangePointer の組み込み関数
-ms.date: 11/04/2016
+title: _InterlockedCompareExchangePointer 組み込み関数
+ms.date: 09/02/2019
 f1_keywords:
 - _InterlockedCompareExchangePointer_HLERelease
 - _InterlockedCompareExchangePointer_rel
@@ -24,14 +24,14 @@ helpviewer_keywords:
 - _InterlockedCompareExchangePointer_nf intrinsic
 - _InterlockedCompareExchangePointer_np intrinsic
 ms.assetid: 97fde59d-2bf9-42aa-a0fe-a5b6befdd44b
-ms.openlocfilehash: 7b8ba4fe6224292d0160f859aeb630fc17c2d992
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: c0a0083c19df51d2d2eccb7a7bbf6521303c1f85
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69509429"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222037"
 ---
-# <a name="_interlockedcompareexchangepointer-intrinsic-functions"></a>_InterlockedCompareExchangePointer の組み込み関数
+# <a name="_interlockedcompareexchangepointer-intrinsic-functions"></a>_InterlockedCompareExchangePointer 組み込み関数
 
 **Microsoft 固有の仕様**
 
@@ -39,7 +39,7 @@ ms.locfileid: "69509429"
 
 ## <a name="syntax"></a>構文
 
-```
+```C
 void * _InterlockedCompareExchangePointer (
    void * volatile * Destination,
    void * Exchange,
@@ -77,15 +77,15 @@ long _InterlockedCompareExchangePointer_rel (
 );
 ```
 
-#### <a name="parameters"></a>パラメーター
+### <a name="parameters"></a>パラメーター
 
-*Destination (公開先)*<br/>
+*インストール*\
 [入力、出力]対象の値へのポインターへのポインター。 符号は無視されます。
 
-*Exchange*<br/>
+*エクスチェンジ*\
 から交換ポインター。 符号は無視されます。
 
-*比較対照値*<br/>
+*比較対照値*\
 からDestination と比較するポインター。 符号は無視されます。
 
 ## <a name="return-value"></a>戻り値
@@ -96,8 +96,8 @@ long _InterlockedCompareExchangePointer_rel (
 
 |組み込み|アーキテクチャ|Header|
 |---------------|------------------|------------|
-|`_InterlockedCompareExchangePointer`|x86、ARM、x64|\<intrin.h>|
-|`_InterlockedCompareExchangePointer_acq`、 `_InterlockedCompareExchangePointer_nf`、 `_InterlockedCompareExchangePointer_rel`|ARM|\<iiintrin.h>|
+|`_InterlockedCompareExchangePointer`|x86、ARM、x64、ARM64|\<intrin.h>|
+|`_InterlockedCompareExchangePointer_acq`、 `_InterlockedCompareExchangePointer_nf`、 `_InterlockedCompareExchangePointer_rel`|ARM、ARM64|\<iiintrin.h>|
 |`_InterlockedCompareExchangePointer_HLEAcquire`, `_InterlockedCompareExchangePointer_HLERelease`|x86、x64|\<immintrin.h>|
 
 ## <a name="remarks"></a>Remarks
@@ -108,11 +108,11 @@ long _InterlockedCompareExchangePointer_rel (
 
 の使用`_InterlockedCompareExchangePointer`例については、「 [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md)」を参照してください。
 
-ARM プラットフォームでは、クリティカル セクションの最初と最後などで取得と解放のセマンティクスを必要とする場合は、`_acq` および `_rel` サフィックスの付いた組み込みを使用します。 `_nf` ("フェンスなし") サフィックスの付いた ARM 組み込みはメモリ バリアとしては機能しません。
+ARM プラットフォームでは、クリティカル セクションの最初と最後などで取得と解放のセマンティクスを必要とする場合は、`_acq` および `_rel` サフィックスの付いた組み込みを使用します。 ("フェンスなし`_nf` ") サフィックスを持つ ARM 組み込みは、メモリバリアとしては機能しません。
 
 組み込みに `_np` ("プリフェッチなし") サフィックスが付いていると、コンパイラによってプリフェッチ操作が挿入される可能性がなくなります。
 
-Hardware Lock Elision (HLE) 命令をサポートする Intel プラットフォームでは、`_HLEAcquire` および `_HLERelease` サフィックスの付いた組み込みにプロセッサへのヒントが含まれています。このヒントによりハードウェアでのロック書き込み手順を省くことで、パフォーマンスを向上させることができます。 HLE をサポートしていないプラットフォームでこれらの組み込みが呼び出された場合、ヒントは無視されます。
+Hardware Lock Elision (HLE) 命令をサポートする Intel プラットフォームでは、`_HLEAcquire` および `_HLERelease` サフィックスの付いた組み込みにプロセッサへのヒントが含まれています。このヒントによりハードウェアでのロック書き込み手順を省くことで、パフォーマンスを向上させることができます。 これらの組み込みが HLE をサポートしていないプラットフォームで呼び出された場合、ヒントは無視されます。
 
 これらのルーチンは、組み込みとしてのみ使用できます。
 
@@ -120,5 +120,5 @@ Hardware Lock Elision (HLE) 命令をサポートする Intel プラットフォ
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)<br/>
+[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)\
 [キーワード](../cpp/keywords-cpp.md)
