@@ -10,16 +10,16 @@ helpviewer_keywords:
 - modules [C++], import
 - modules [C++], export
 description: 指定されたモジュールで定義されている型および関数にアクセスするには、import ステートメントを使用します。
-ms.openlocfilehash: fbb9c45ec816c859edb4df38ad67dc7778247e87
-ms.sourcegitcommit: 7b039b5f32f6c59be6c6bb1cffafd69c3bfadd35
+ms.openlocfilehash: ee1d50a76a3304359c0771aa0174968439f5faa4
+ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68537788"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70273622"
 ---
 # <a name="module-import-export"></a>モジュール、インポート、エクスポート
 
-**Module**、 **import**、および**export**キーワードは`/experimental:modules` c++ 20 で使用でき、と共に`/std:c++latest`コンパイラスイッチが必要です。 詳細については、「」の「 [ C++モジュールの概要](modules-cpp.md)」を参照してください。
+**Module**、 **import**、および**export**キーワードは c++ 20 で使用でき、/[実験的: モジュール](../build/reference/experimental-module.md)コンパイラスイッチと共に、 [/std: C + + latest](../build/reference/std-specify-language-standard-version.md)が必要です。 詳細については、「」の「 [ C++モジュールの概要](modules-cpp.md)」を参照してください。
 
 ## <a name="module"></a>name
 
@@ -87,4 +87,5 @@ class Baz
 ```
 
 ## <a name="see-also"></a>関連項目
+
 [のモジュールの概要C++](modules-cpp.md)
