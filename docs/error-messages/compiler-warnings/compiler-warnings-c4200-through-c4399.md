@@ -120,11 +120,11 @@ ms.locfileid: "64857550"
 |[コンパイラの警告 (レベル 4) C4295](../../error-messages/compiler-warnings/compiler-warning-level-4-c4295.md)|'*配列*': 配列が小さすぎる、終端の null 文字を含める|
 |[コンパイラの警告 (レベル 4) C4296](../../error-messages/compiler-warnings/compiler-warning-level-4-c4296.md)|'*演算子*': 式は常に'*boolean_value*'|
 |[コンパイラの警告 (レベル 1) C4297](../../error-messages/compiler-warnings/compiler-warning-level-1-c4297.md)|'*関数*': 関数が例外をスローしないはず|
-|コンパイラの警告 (レベル 4) C4298|'*識別子*': タイプ ライブラリ内の識別子'*ライブラリ*'は既にマクロ; の名前に変更'*_ _identifier*'|
-|コンパイラの警告 (レベル 4) C4299|'*識別子*': タイプ ライブラリ内の識別子'*ライブラリ*'キーワード; の名前に変更'*_ _identifier*'|
+|コンパイラの警告 (レベル 4) C4298|'*識別子*': タイプ ライブラリ内の識別子'*ライブラリ*'は既にマクロ; の名前に変更'*__identifier*'|
+|コンパイラの警告 (レベル 4) C4299|'*識別子*': タイプ ライブラリ内の識別子'*ライブラリ*'キーワード; の名前に変更'*__identifier*'|
 |コンパイラの警告 c4301 エラー|'*derived_class*::*関数*': 仮想関数をオーバーライドするとだけ'*base_class*::*関数*' const または volatile で修飾子|
 |[コンパイラの警告 (レベル 2) C4302](../../error-messages/compiler-warnings/compiler-warning-level-2-c4302.md)|'*変換*': から切り捨て'*type1*'to'*type2*'|
-|コンパイラの警告 C4303|C スタイル キャスト '*type1*'to'*type2*' が静的なを使用して、非推奨と\_キャスト、 \_\_お試しください\_キャストまたは動的な\_キャスト|
+|コンパイラの警告 C4303|C スタイル キャスト '*type1*'to'*type2*' が静的なを使用して、static\_cast、 \_\_try\_cast またはdynamic\_cast|
 |[コンパイラの警告 (レベル 1) C4305](../../error-messages/compiler-warnings/compiler-warning-level-1-c4305.md)|'*変換*': から切り捨て'*type1*'to'*type2*'|
 |[コンパイラの警告 (レベル 3) C4306](../../error-messages/compiler-warnings/compiler-warning-level-3-c4306.md)|'*変換*': から変換'*type1*'to'*type2*' より大きいサイズの|
 |[コンパイラの警告 (レベル 2) C4307](../../error-messages/compiler-warnings/compiler-warning-level-2-c4307.md)|'*演算子*': 定数整数のオーバーフロー|
@@ -165,7 +165,7 @@ ms.locfileid: "64857550"
 |[コンパイラの警告 (レベル 1) C4348](../../error-messages/compiler-warnings/compiler-warning-level-1-c4348.md)|'*型*': 既定のパラメーターの再定義: パラメーター'*parameter_number*'|
 |[コンパイラの警告 (レベル 1) C4350](../../error-messages/compiler-warnings/compiler-warning-level-1-c4350.md)|動作変更: '*member1*'の代わりに呼び出す'*member2*'|
 |コンパイラの警告 (レベル 1) C4352|'*識別子*': 既に定義されている組み込み関数|
-|[コンパイラの警告 (レベル 1) C4353](../../error-messages/compiler-warnings/compiler-warning-level-1-c4353.md)|標準の拡張機能を使用します。 関数式として定数 0。  組み込みの '_ _noop' 関数を使用してください。|
+|[コンパイラの警告 (レベル 1) C4353](../../error-messages/compiler-warnings/compiler-warning-level-1-c4353.md)|標準の拡張機能を使用します。 関数式として定数 0。  組み込みの '__noop' 関数を使用してください。|
 |[コンパイラの警告 C4355](../../error-messages/compiler-warnings/compiler-warning-c4355.md)(レベル 1 およびレベル 4) コンパイラの警告 C4355|'this': ベース メンバー初期化子リストで使用されます。|
 |[コンパイラの警告 (レベル 2) C4356](../../error-messages/compiler-warnings/compiler-warning-level-2-c4356.md)|'*メンバー*': 静的データ メンバーは派生クラスを使って初期化できません|
 |[コンパイラの警告 (レベル 3) C4357](../../error-messages/compiler-warnings/compiler-warning-level-3-c4357.md)|デリゲートに対する仮引数リストで param 配列引数が見つかった '*委任*'を生成するときに無視されます'*関数*'|
@@ -189,7 +189,7 @@ ms.locfileid: "64857550"
 |[コンパイラの警告 (レベル 1) C4379](../../error-messages/compiler-warnings/compiler-warning-level-1-c4379.md)|バージョン '*version_number*' の共通言語ランタイムでサポートされていないこのコンパイラ。 このバージョンを使用して予期しない結果が発生する可能性があります。|
 |コンパイラの警告 (レベル 1、エラー) C4380|'*クラス*'。既定のコンス トラクターは非推奨にできません。|
 |[コンパイラの警告 (レベル 1) C4381](../../error-messages/compiler-warnings/compiler-warning-level-1-c4381.md)|'*function1*': インターフェイス メソッドは、非パブリック メソッドでは実装されません'*function2*'|
-|[コンパイラの警告 (レベル 1) C4382](../../error-messages/compiler-warnings/compiler-warning-level-1-c4382.md)|スロー '*型*': _ _clrcall デストラクターまたはコピー コンス トラクターを持つ型のみを/clr でキャッチできます純粋なモジュール。|
+|[コンパイラの警告 (レベル 1) C4382](../../error-messages/compiler-warnings/compiler-warning-level-1-c4382.md)|スロー '*型*': __clrcall デストラクターまたはコピー コンス トラクターを持つ型のみを/clr でキャッチできます純粋なモジュール。|
 |[コンパイラの警告 (レベル 1) C4383](../../error-messages/compiler-warnings/compiler-warning-level-1-c4383.md)|'*instance_dereference_operator*': ユーザー定義時に、ハンドルの逆参照の意味を変更できます'*instance_dereference_operator*' 演算子が存在する、静的と演算子です。オペランドに対して明示的に指定する関数|
 |[コンパイラの警告 (レベル 1) C4384](../../error-messages/compiler-warnings/compiler-warning-level-1-c4384.md)|#pragma 'make_public' は、グローバル スコープでのみ使用する必要があります。|
 |コンパイラの警告 (レベル 3) C4387|'*代替*': と見なされていました|
