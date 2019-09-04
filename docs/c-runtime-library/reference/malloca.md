@@ -30,7 +30,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62156877"
 ---
-# <a name="malloca"></a>_malloca
+# <a name="_malloca"></a>_malloca
 
 スタックにメモリを割り当てます。 これは、「[CRT のセキュリティ機能](../../c-runtime-library/security-features-in-the-crt.md)」の説明にあるとおり、セキュリティが強化されたバージョンの [_alloca](alloca.md) です。
 
@@ -59,9 +59,9 @@ void *_malloca(
 
 明示的に呼び出すには制限 **_malloca**例外ハンドラー (EH)。 X86 クラスのプロセッサ上で実行される EH ルーチンは、独自のメモリ フレームで動作します。外側の関数のスタック ポインターの現在の場所には基づいていないメモリ領域でタスクを実行します。 最も一般的な実装には、Windows NT 構造化例外処理 (SEH) や C++ catch 句の式などがあります。 そのため、明示的に呼び出す **_malloca**呼び出した EH ルーチンへの復帰時にプログラム エラー シナリオ結果は次のいずれかで。
 
-- Windows NT SEH 例外フィルター式: **_ _except** (`_malloca ()` )
+- Windows NT SEH 例外フィルター式: **__except** (`_malloca ()` )
 
-- Windows NT SEH 最終例外ハンドラー: **_ _finally** {`_malloca ()` }
+- Windows NT SEH 最終例外ハンドラー: **__finally** {`_malloca ()` }
 
 - C++ EH catch 句の式
 

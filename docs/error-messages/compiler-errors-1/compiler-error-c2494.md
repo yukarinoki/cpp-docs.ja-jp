@@ -15,11 +15,11 @@ ms.locfileid: "62361647"
 ---
 # <a name="compiler-error-c2494"></a>コンパイラ エラー C2494
 
-'keyword' は、フィルター式内から呼び出すことはできませんまたは _ _finally/finally にブロック
+'keyword' は、フィルタ式または __finally/finally ブロック内から呼び出せません
 
-使用することはできません`keyword`で、`__finally`または finally ブロックします。
+`__finally`ブロックまたは finally ブロックの内部で、`keyword` は使用できません。
 
-次の例では、C2494 が生成されます。
+次の例では、C2494 エラーが生成されます。
 
 ```
 // C2494.cpp

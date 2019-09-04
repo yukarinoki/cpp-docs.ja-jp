@@ -1,19 +1,19 @@
 ---
 title: _umul128
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __umul128
 helpviewer_keywords:
 - __umul128 intrinsic
 ms.assetid: 13684df3-3ac7-467c-b258-a0e93bc490b5
-ms.openlocfilehash: afca1e62127ac2dbcfc407982dbe191d379b4acb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 205f0f7f9046ede624bb09e18d8ede32fadbc3de
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390101"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219695"
 ---
-# <a name="umul128"></a>_umul128
+# <a name="_umul128"></a>_umul128
 
 **Microsoft 固有の仕様**
 
@@ -21,7 +21,7 @@ ms.locfileid: "62390101"
 
 ## <a name="syntax"></a>構文
 
-```
+```C
 unsigned __int64 _umul128(
    unsigned __int64 Multiplier,
    unsigned __int64 Multiplicand,
@@ -29,16 +29,16 @@ unsigned __int64 _umul128(
 );
 ```
 
-#### <a name="parameters"></a>パラメーター
+### <a name="parameters"></a>パラメーター
 
-*乗数*<br/>
-[in]乗算する最初の 64 ビット整数。
+*×*\
+から乗算する最初の64ビット整数。
 
-*Multiplicand*<br/>
-[in]乗算する 2 つ目の 64 ビット整数。
+*被乗数*\
+から乗算する2番目の64ビット整数。
 
-*HighProduct*<br/>
-[out]製品の上位 64 ビット。
+*HighProduct*\
+入出力製品の上位64ビット。
 
 ## <a name="return-value"></a>戻り値
 
@@ -48,11 +48,11 @@ unsigned __int64 _umul128(
 
 |組み込み|アーキテクチャ|Header|
 |---------------|------------------|------------|
-|`_umul128`|X64|\<intrin.h>|
+|`_umul128`|x64|\<intrin.h>|
 
 ## <a name="example"></a>例
 
-```
+```C
 // umul128.c
 // processor: x64
 

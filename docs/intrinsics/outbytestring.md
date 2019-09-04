@@ -1,6 +1,6 @@
 ---
 title: __outbytestring
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __outbytestring
 helpviewer_keywords:
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - __outbytestring intrinsic
 - outsb instruction
 ms.assetid: c9150661-9c18-427f-bae8-710bba6ed78c
-ms.openlocfilehash: 41064dda6a1a0b9ad4c15f98c3f3081f08ef8db6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 31caf17db5d56efccd6b30200994b1080356b4c1
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396614"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217172"
 ---
-# <a name="outbytestring"></a>__outbytestring
+# <a name="__outbytestring"></a>__outbytestring
 
 **Microsoft 固有の仕様**
 
-生成、`rep outsb`命令で、1 つ目の送信`Count`によって示されるデータのバイト`Buffer`で指定されたポートに`Port`します。
+が指すデータ`Count` `Port`の最初のバイトをで指定されたポート`rep outsb` に送信する命令を`Buffer`生成します。
 
 ## <a name="syntax"></a>構文
 
-```
+```C
 void __outbytestring(
    unsigned short Port,
    unsigned char* Buffer,
@@ -31,16 +31,16 @@ void __outbytestring(
 );
 ```
 
-#### <a name="parameters"></a>パラメーター
+### <a name="parameters"></a>パラメーター
 
-*ポート*<br/>
-[in]データを送信するポート。
+*ポート*\
+からデータの送信先のポート。
 
-*Buffer*<br/>
-[in]指定したポートを送信するデータ。
+*格納*\
+から指定されたポートから送信されるデータ。
 
-*カウント*<br/>
-[in]送信するデータのバイト数。
+*数*\
+から送信されるデータのバイト数。
 
 ## <a name="requirements"></a>必要条件
 
@@ -48,7 +48,7 @@ void __outbytestring(
 |---------------|------------------|
 |`__outbytestring`|x86、x64|
 
-**ヘッダー ファイル** \<intrin.h >
+**ヘッダーファイル**\<>
 
 ## <a name="remarks"></a>Remarks
 

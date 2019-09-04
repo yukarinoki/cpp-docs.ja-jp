@@ -1,41 +1,41 @@
 ---
 title: __outbyte
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __outbyte
 helpviewer_keywords:
 - out instruction
 - __outbyte intrinsic
 ms.assetid: c4cd1a34-8a02-4e37-993d-3201bc17901a
-ms.openlocfilehash: 234892369572a2ee315687f5d70533a0c8cf4b59
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 18792010c45ffb648e9555ccb73f8614c3e3e6ea
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262971"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217201"
 ---
-# <a name="outbyte"></a>__outbyte
+# <a name="__outbyte"></a>__outbyte
 
 **Microsoft 固有の仕様**
 
-生成、`out`で指定された 1 バイトを送信するには、命令`Data`で指定した I/O ポートから`Port`。
+によっ`Data` `out` て指定されたi/oポートを使用して、指定された1バイトを`Port`送信する命令を生成します。
 
 ## <a name="syntax"></a>構文
 
-```
+```C
 void __outbyte(
    unsigned short Port,
    unsigned char Data
 );
 ```
 
-#### <a name="parameters"></a>パラメーター
+### <a name="parameters"></a>パラメーター
 
-*ポート*<br/>
-[in]データを送信するポート。
+*ポート*\
+からデータの送信先のポート。
 
-*データ*<br/>
-[in]指定したポートを送信するバイト。
+*データ*\
+から指定したポートを送信するバイト。
 
 ## <a name="requirements"></a>必要条件
 
@@ -43,7 +43,7 @@ void __outbyte(
 |---------------|------------------|
 |`__outbyte`|x86、x64|
 
-**ヘッダー ファイル** \<intrin.h >
+**ヘッダーファイル**\<>
 
 ## <a name="remarks"></a>Remarks
 

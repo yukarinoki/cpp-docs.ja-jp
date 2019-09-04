@@ -1,6 +1,6 @@
 ---
 title: __outwordstring
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __outwordstring
 helpviewer_keywords:
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - __outwordstring intrinsic
 - outsw instruction
 ms.assetid: b470c7a0-1de9-4370-886a-b2c3a1f842f4
-ms.openlocfilehash: d7141dd7f9f1f81e905952959e392a23d141f4e4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3cc5b0ae2101c86e3dc899b7924ec2524f0ea6e7
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396601"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217122"
 ---
-# <a name="outwordstring"></a>__outwordstring
+# <a name="__outwordstring"></a>__outwordstring
 
 **Microsoft 固有の仕様**
 
-生成、`rep outsw`命令で、送信`Count`文字で始まる単語`Buffer`で指定した I/O ポートから`Port`。
+ポートによって指定された i/o ポートを*バッファー*から開始して*カウント*ワードを送信する命令を生成します。`rep outsw`
 
 ## <a name="syntax"></a>構文
 
-```
+```C
 void __outwordstring(
    unsigned short Port,
    unsigned short* Buffer,
@@ -31,16 +31,16 @@ void __outwordstring(
 );
 ```
 
-#### <a name="parameters"></a>パラメーター
+### <a name="parameters"></a>パラメーター
 
-*ポート*<br/>
-[in]データを送信するポート。
+*ポート*\
+からデータの送信先のポート。
 
-*Buffer*<br/>
-[in]指定したポートを送信するデータへのポインター。
+*格納*\
+から指定されたポートから送信されるデータへのポインター。
 
-*カウント*<br/>
-[in]送信する文字数です。
+*数*\
+から送信する単語数。
 
 ## <a name="requirements"></a>必要条件
 
@@ -48,7 +48,7 @@ void __outwordstring(
 |---------------|------------------|
 |`__outwordstring`|x86、x64|
 
-**ヘッダー ファイル** \<intrin.h >
+**ヘッダーファイル**\<>
 
 ## <a name="remarks"></a>Remarks
 
