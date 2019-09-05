@@ -122,4 +122,4 @@ basic 保証は、3 つのうちで最も弱い保証です。 ただし、stron
 ## <a name="see-also"></a>関連項目
 
 [エラーと例外の処理 (Modern C++)](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
-[方法: 例外的なコードと非例外的なコードをインターフェイスで連結する](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)
+[方法: 例外的なコードと非例外的なコード間のインターフェイス](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)
