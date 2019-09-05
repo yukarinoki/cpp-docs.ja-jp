@@ -58,6 +58,8 @@
               href: build/project-property-inheritance.md
             - name: プロジェクト ファイルを変更しないでプロパティとターゲットを変更する
               href: build/modify-project-properties-without-changing-project-file.md
+        - name: Visual Studio プロジェクトの Clang/LLVM (MSBuild)
+          href: build/clang-support-msbuild.md
         - name: ビルド時にライブラリとコンポーネントを参照する
           href: build/adding-references-in-visual-cpp-projects.md
         - name: プロジェクト出力ファイルを編成する
@@ -4794,7 +4796,7 @@
                       href: preprocessor/null-directive.md
                     - name: '#undef ディレクティブ (C/C++)'
                       href: preprocessor/hash-undef-directive-c-cpp.md
-                    - name: '#using ディレクティブ (C++)'
+                    - name: '#using ディレクティブ (C++/CLI)'
                       href: preprocessor/hash-using-directive-cpp.md
                 - name: プリプロセッサ演算子
                   expanded: false
@@ -4829,10 +4831,10 @@
                   href: preprocessor/conventions.md
                 - name: プリプロセッサの文法
                   href: preprocessor/preprocessor-grammar.md
-            - name: プラグマ ディレクティブと __Pragma キーワード
+            - name: プラグマ ディレクティブと __pragma キーワード
               expanded: false
               items:
-                - name: プラグマ ディレクティブと __Pragma キーワード
+                - name: プラグマ ディレクティブと __pragma キーワード
                   href: preprocessor/pragma-directives-and-the-pragma-keyword.md
                 - name: alloc_text プラグマ
                   href: preprocessor/alloc-text.md
