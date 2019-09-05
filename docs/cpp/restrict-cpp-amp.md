@@ -49,7 +49,7 @@ ms.locfileid: "62403387"
 
    - 再帰
 
-   - 宣言された変数、[揮発性](../cpp/volatile-cpp.md)キーワード。
+   - [volatile](../cpp/volatile-cpp.md)キーワードで宣言された変数。
 
    - 仮想関数
 
@@ -69,7 +69,7 @@ ms.locfileid: "62403387"
 
    - グローバル変数
 
-   - 静的変数 使用[tile_static キーワード](../cpp/tile-static-keyword.md)代わりにします。
+   - 静的変数 [tile_static キーワード](../cpp/tile-static-keyword.md)代わりに使用します。
 
    - **dynamic_cast**キャスト
 

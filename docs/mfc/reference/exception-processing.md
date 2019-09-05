@@ -32,7 +32,7 @@ Microsoft Foundation Class ライブラリに含まれるいくつかのマク�
 
 - 終了関数。これにより、プログラムが終了します。
 
-例と詳細については、「[例外](../../mfc/exception-handling-in-mfc.md)」を参照してください。
+例と詳細については、[例外処理](../../mfc/exception-handling-in-mfc.md) を参照してください。
 
 ### <a name="exception-macros"></a>例外マクロ
 
@@ -86,7 +86,7 @@ MFC には、次の終了関数が用意されています。
 |-|-|
 |[AfxAbort](#afxabort)|致命的なエラーが発生したときにアプリケーションを終了するために呼び出されます。|
 
-##  <a name="try"></a>やり直し
+##  <a name="try"></a>  TRY
 
 設定、**TRY**ブロックします。
 
@@ -98,7 +98,7 @@ TRY
 
 **TRY**ブロックが例外をスローするコードのブロックを識別します。 これらの例外は、次に**CATCH**と**AND_CATCH**ブロックします。 再帰が許可されている: 例外が外部に渡される**TRY**を無視するか、THROW_LAST マクロを使用して、ブロック。 終了、**TRY**END_CATCH または END_CATCH_ALL マクロを使用してブロックします。
 
-詳細については、「[例外](../../mfc/exception-handling-in-mfc.md)」を参照してください。
+詳細については、[例外処理](../../mfc/exception-handling-in-mfc.md)を参照してください。
 
 ### <a name="example"></a>例
 
@@ -161,7 +161,7 @@ CATCH_ALL(exception_object_pointer_name)
 > [!NOTE]
 >  **CATCH_ALL**ブロックは、中かっこでC++囲まれたスコープとして定義されます。 このスコープで変数を宣言すると、そのスコープ内でのみアクセスできます。
 
-例外の詳細については、「[例外](../../mfc/exception-handling-in-mfc.md)」を参照してください。
+例外の詳細については、[例外処理](../../mfc/exception-handling-in-mfc.md)」を参照してください。
 
 ### <a name="example"></a>例
 
@@ -274,7 +274,7 @@ THROW(exception_object_pointer)
 
 プログラム内の関連する**CATCH**ブロックに制御を渡すことにより、プログラムの実行を中断します。 **CATCH**ブロックを指定していない場合は、エラーメッセージを出力して終了する Microsoft Foundation Class ライブラリモジュールに制御が渡されます。
 
-詳細については、「[例外](../../mfc/exception-handling-in-mfc.md)」を参照してください。
+詳細については、[例外処理](../../mfc/exception-handling-in-mfc.md)を参照してください。
 
 ### <a name="requirements"></a>必要条件
 
@@ -292,7 +292,7 @@ THROW_LAST()
 
 このマクロを使用すると、ローカルで作成された例外をスローできます。 キャッチした例外をスローしようとすると、通常はスコープ外になり、削除されます。 **THROW_LAST**を使用すると、例外は次の**CATCH**ハンドラーに正しく渡されます。
 
-詳細については、「[例外](../../mfc/exception-handling-in-mfc.md)」を参照してください。
+詳細については、[例外処理](../../mfc/exception-handling-in-mfc.md)を参照してください。
 
 ### <a name="example"></a>例
 
