@@ -18,7 +18,7 @@ ms.locfileid: "62400579"
 
 ##  <a name="vcconjumpingoutofafinallyblock"></a> ジャンプ、Finally ブロック
 
-ネイティブ C で/C++コードでは、警告を生成しますが、構造化例外処理（SEH）を使用して__finallyブロックからジャンプできます。  [/Clr](../build/reference/clr-common-language-runtime-compilation.md)の移動、**finallyに**ブロックが発生したエラー。
+ネイティブ C で/C++コードでは、警告を生成しますが、構造化例外処理（SEH）を使用して__**finally**ブロックからジャンプできます。  [/clr](../build/reference/clr-common-language-runtime-compilation.md)の移動、**finallyに**ブロックが発生したエラー。
 
 ```cpp
 // clr_exception_handling_4.cpp
@@ -149,7 +149,7 @@ caught an SEH Exception
 
 ##  <a name="vcconexceptionfiltersandexception_continue_execution"></a> 例外フィルターと EXCEPTION_CONTINUE_EXECUTION
 
-フィルターを返す場合`EXCEPTION_CONTINUE_EXECUTION`、マネージ アプリケーションでは扱われます、フィルターを返す場合、`EXCEPTION_CONTINUE_SEARCH`します。 これらの定数の詳細については、次を参照してください。[を再試行してください-ステートメントを除く](../cpp/try-except-statement.md)します。
+フィルターを返す場合`EXCEPTION_CONTINUE_EXECUTION`、マネージ アプリケーションでは扱われます、フィルターを返す場合、`EXCEPTION_CONTINUE_SEARCH`します。 これらの定数の詳細については、[try-except ステートメント](../cpp/try-except-statement.md)を参照してください。
 
 次の例では、この違いを示しています。
 
