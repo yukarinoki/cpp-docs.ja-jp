@@ -124,7 +124,7 @@ ms.locfileid: "64857550"
 |コンパイラの警告 (レベル 4) C4299|'*識別子*': タイプ ライブラリ内の識別子'*ライブラリ*'キーワード; の名前に変更' *__identifier*'|
 |コンパイラの警告 c4301 エラー|'*derived_class*::*関数*': 仮想関数をオーバーライドするとだけ'*base_class*::*関数*' const または volatile で修飾子|
 |[コンパイラの警告 (レベル 2) C4302](../../error-messages/compiler-warnings/compiler-warning-level-2-c4302.md)|'*変換*': から切り捨て'*type1*'to'*type2*'|
-|コンパイラの警告 C4303|C スタイル キャスト '*type1*'to'*type2*' が静的なを使用して、非推奨と\_キャスト、 \_\_お試しください\_キャストまたは動的な\_キャスト|
+|コンパイラの警告 C4303|C スタイル キャスト '*type1*'to'*type2*' が静的なを使用して、static\_cast、 \_\_try\_cast またはdynamic\_cast|
 |[コンパイラの警告 (レベル 1) C4305](../../error-messages/compiler-warnings/compiler-warning-level-1-c4305.md)|'*変換*': から切り捨て'*type1*'to'*type2*'|
 |[コンパイラの警告 (レベル 3) C4306](../../error-messages/compiler-warnings/compiler-warning-level-3-c4306.md)|'*変換*': から変換'*type1*'to'*type2*' より大きいサイズの|
 |[コンパイラの警告 (レベル 2) C4307](../../error-messages/compiler-warnings/compiler-warning-level-2-c4307.md)|'*演算子*': 定数整数のオーバーフロー|
