@@ -68,7 +68,7 @@ class COccManager : public CNoTrackObject
 
 ## <a name="remarks"></a>Remarks
 
-基本クラス`CNoTrackObject`は、ドキュメントに記載されていない基本クラス (AFXTLS にあります) です。H)。 MFC フレームワークによって使用されるように設計さ`CNoTrackObject`れたクラスでは、クラスから派生したクラスはメモリリーク検出から除外されます。 から`CNoTrackObject`直接派生させることはお勧めしません。
+基本クラス`CNoTrackObject`は、ドキュメントに記載されていない基本クラス (AFXTLS.H にあります)。 MFC フレームワークによって使用されるように設計さ`CNoTrackObject`れたクラスでは、クラスから派生したクラスはメモリリーク検出から除外されます。 から`CNoTrackObject`直接派生させることはお勧めしません。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
