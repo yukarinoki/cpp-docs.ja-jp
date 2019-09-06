@@ -53,18 +53,18 @@ class COccManager : public CNoTrackObject
 
 |名前|説明|
 |----------|-----------------|
-|[COccManager:: CreateContainer](#createcontainer)|`COleContainer` オブジェクトを作成します。|
-|[COccManager:: CreateDlgControls](#createdlgcontrols)|関連付けられた`COleContainer`オブジェクトによってホストされる ActiveX コントロールを作成します。|
-|[COccManager:: CreateSite](#createsite)|`COleClientSite` オブジェクトを作成します。|
-|[COccManager:: GetDefBtnCode](#getdefbtncode)|既定のボタンのコードを取得します。|
+|[COccManager::CreateContainer](#createcontainer)|`COleContainer` オブジェクトを作成します。|
+|[COccManager::CreateDlgControls](#createdlgcontrols)|関連付けられた`COleContainer`オブジェクトによってホストされる ActiveX コントロールを作成します。|
+|[COccManager::CreateSite](#createsite)|`COleClientSite` オブジェクトを作成します。|
+|[COccManager::GetDefBtnCode](#getdefbtncode)|既定のボタンのコードを取得します。|
 |[COccManager::IsDialogMessage](#isdialogmessage)|ダイアログメッセージの対象を決定します。|
 |[COccManager::IsLabelControl](#islabelcontrol)|指定したコントロールがラベルコントロールであるかどうかを判断します。|
 |[COccManager::IsMatchingMnemonic](#ismatchingmnemonic)|現在のニーモニックが、指定されたコントロールのニーモニックと一致するかどうかを判断します。|
-|[COccManager:: OnEvent](#onevent)|指定されたイベントの処理を試みます。|
+|[COccManager::OnEvent](#onevent)|指定されたイベントの処理を試みます。|
 |[COccManager::PostCreateDialog](#postcreatedialog)|ダイアログの作成時に割り当てられたリソースを解放します。|
-|[COccManager::P reCreateDialog](#precreatedialog)|ActiveX コントロールのダイアログテンプレートを処理します。|
-|[COccManager:: SetDefaultButton](#setdefaultbutton)|指定したコントロールの既定の状態を切り替えます。|
-|[COccManager:: Splitのテンプレート](#splitdialogtemplate)|指定されたダイアログテンプレートのコモンコントロールから、既存の ActiveX コントロールを分離します。|
+|[COccManager::PreCreateDialog](#precreatedialog)|ActiveX コントロールのダイアログテンプレートを処理します。|
+|[COccManager::SetDefaultButton](#setdefaultbutton)|指定したコントロールの既定の状態を切り替えます。|
+|[COccManager::SplitDialogTemplate](#splitdialogtemplate)|指定されたダイアログテンプレートのコモンコントロールから、既存の ActiveX コントロールを分離します。|
 
 ## <a name="remarks"></a>Remarks
 
