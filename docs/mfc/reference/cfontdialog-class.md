@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CFontDialog [MFC], IsUnderline
 - CFontDialog [MFC], m_cf
 ms.assetid: 6228d500-ed0f-4156-81e5-ab0d57d1dcf4
-ms.openlocfilehash: b538acd564402459a05cc96303b63a35a99ba243
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: c0d0c37d055d9b337f7b709b4ee3d299daae7658
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69506469"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741551"
 ---
 # <a name="cfontdialog-class"></a>CFontDialog クラス
 
@@ -146,7 +146,7 @@ CFontDialog(
 フォントの特性の一部を設定できる[LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw)データ構造体へのポインター。
 
 *charFormat*<br/>
-リッチエディットコントロールでフォントの特性を設定できるようにする[CHARFORMAT](/windows/win32/api/richedit/ns-richedit-_charformat)データ構造体へのポインター。
+リッチエディットコントロールでフォントの特性を設定できるようにする[CHARFORMAT](/windows/win32/api/richedit/ns-richedit-charformata)データ構造体へのポインター。
 
 *dwFlags*<br/>
 1 つ以上のフォント選択フラグを指定します。 ビットごとの OR 演算子を使用して、1 つ以上の事前設定値を組み合わせることができます。 `m_cf.Flag`s 構造体メンバーを変更する場合は、変更内容でビットごとの OR 演算子を使用して、既定の動作をそのままにします。 これらの各フラグの詳細については、Windows SDK での [[フォント](/windows/win32/api/commdlg/ns-commdlg-choosefontw)の構成] の説明を参照してください。
@@ -203,7 +203,7 @@ void GetCharFormat(CHARFORMAT& cf) const;
 ### <a name="parameters"></a>パラメーター
 
 *cf*<br/>
-選択されたフォントの文字書式に関する情報を格納している[CHARFORMAT](/windows/win32/api/richedit/ns-richedit-_charformat)構造体。
+選択されたフォントの文字書式に関する情報を格納している[CHARFORMAT](/windows/win32/api/richedit/ns-richedit-charformata)構造体。
 
 ##  <a name="getcolor"></a>  CFontDialog::GetColor
 

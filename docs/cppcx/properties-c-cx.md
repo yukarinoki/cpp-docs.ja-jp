@@ -2,16 +2,16 @@
 title: プロパティ (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 64c7bc56-3191-4cd5-bdf4-476d07d285d5
-ms.openlocfilehash: 8303952beefbbac13db14e148c6441c29a46b3d0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fdff2bf5abd3177eda962b7cc55ace1078522f32
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375224"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741094"
 ---
 # <a name="properties-ccx"></a>プロパティ (C++/CX)
 
-Windows ランタイム型では、パブリック データをプロパティとして公開します。 クライアント コードは、パブリック データ メンバーのようにプロパティにアクセスします。 内部的には、プロパティは get アクセサー メソッドと set アクセサー メソッド、またはその両方を含むブロックとして実装されます。 アクセサー メソッドを使用すると、値を取得する前または後に追加操作を実行できます。たとえば、イベントを発生させたり、検証チェックを実行したりすることができます。
+Windows ランタイム型は、パブリックデータをプロパティとして公開します。 クライアント コードは、パブリック データ メンバーのようにプロパティにアクセスします。 内部的には、プロパティは get アクセサー メソッドと set アクセサー メソッド、またはその両方を含むブロックとして実装されます。 アクセサー メソッドを使用すると、値を取得する前または後に追加操作を実行できます。たとえば、イベントを発生させたり、検証チェックを実行したりすることができます。
 
 ### <a name="remarks"></a>Remarks
 
@@ -38,5 +38,5 @@ C++/CX ref クラスをインスタンス化する場合、コンストラクタ
 ## <a name="see-also"></a>関連項目
 
 [型システム](../cppcx/type-system-c-cx.md)<br/>
-[Visual C 言語リファレンス](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[C++/CX 言語リファレンス](../cppcx/visual-c-language-reference-c-cx.md)<br/>
 [名前空間参照](../cppcx/namespaces-reference-c-cx.md)

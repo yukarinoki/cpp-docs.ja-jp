@@ -152,12 +152,12 @@ helpviewer_keywords:
 - CRichEditCtrl [MFC], StreamOut
 - CRichEditCtrl [MFC], Undo
 ms.assetid: 2be52788-822c-4c27-aafd-2471231e74eb
-ms.openlocfilehash: fc2b4c08b5a999f0369199e0dd65a09a7cdf8dff
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b3c02c8c2754ce7edb40cff5e44efb74a16353fc
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69503151"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741542"
 ---
 # <a name="cricheditctrl-class"></a>CRichEditCtrl クラス
 
@@ -1051,7 +1051,7 @@ DWORD GetSelectionCharFormat(CHARFORMAT& cf) const;  DWORD GetSelectionCharForma
 ### <a name="parameters"></a>パラメーター
 
 *cf*<br/>
-最初のバージョンでは、現在の選択範囲の文字書式属性を受け取る[CHARFORMAT](/windows/win32/api/richedit/ns-richedit-_charformat)構造体へのポインター。
+最初のバージョンでは、現在の選択範囲の文字書式属性を受け取る[CHARFORMAT](/windows/win32/api/richedit/ns-richedit-charformata)構造体へのポインター。
 
 2番目のバージョンでは、 [CHARFORMAT2](/windows/win32/api/richedit/ns-richedit-charformat2w)構造体へのポインター。これは、現在の選択`CHARFORMAT`範囲の文字書式属性を受け取るための、構造体のリッチエディット2.0 拡張機能です。
 
@@ -1618,7 +1618,7 @@ BOOL SetDefaultCharFormat(CHARFORMAT2& cf);
 ### <a name="parameters"></a>パラメーター
 
 *cf*<br/>
-最初のバージョンでは、新しい既定の文字書式属性を含む[CHARFORMAT](/windows/win32/api/richedit/ns-richedit-_charformat)構造体へのポインター。
+最初のバージョンでは、新しい既定の文字書式属性を含む[CHARFORMAT](/windows/win32/api/richedit/ns-richedit-charformata)構造体へのポインター。
 
 2番目のバージョンでは、 [CHARFORMAT2](/windows/win32/api/richedit/ns-richedit-charformat2w)構造体へのポインター。これは、 `CHARFORMAT`構造体に対するリッチエディット2.0 拡張機能であり、既定の文字書式属性が含まれています。
 
@@ -1730,7 +1730,7 @@ void SetOptions(
 
 - ECOOP_AND は、 *dwFlags*でも指定されている現在のオプションのみを保持します。
 
-- ECOOP_XOR で指定されたオプションを使用して、論理的に排他的または現在のオプションを指定します。
+- ECOOP_XOR で指定されたオプションを使用して、論理的に排他的または現在のオプションを指定*します。*
 
 *dwFlags*<br/>
 リッチエディットオプション。 フラグの値については、「解説」を参照してください。
@@ -1920,7 +1920,7 @@ BOOL SetSelectionCharFormat(CHARFORMAT2& cf);
 ### <a name="parameters"></a>パラメーター
 
 *cf*<br/>
-最初のバージョンでは、現在の選択範囲の新しい文字書式属性を含む[CHARFORMAT](/windows/win32/api/richedit/ns-richedit-_charformat)構造体へのポインター。
+最初のバージョンでは、現在の選択範囲の新しい文字書式属性を含む[CHARFORMAT](/windows/win32/api/richedit/ns-richedit-charformata)構造体へのポインター。
 
 2番目のバージョンでは、 [CHARFORMAT2](/windows/win32/api/richedit/ns-richedit-charformat2w)構造体へのポインター。これは、現在の選択`CHARFORMAT`範囲の新しい文字書式属性を格納する、構造体のリッチエディット2.0 拡張機能です。
 
@@ -2033,7 +2033,7 @@ BOOL SetWordCharFormat(CHARFORMAT2& cf);
 ### <a name="parameters"></a>パラメーター
 
 *cf*<br/>
-最初のバージョンでは、現在選択されている単語の新しい文字書式属性を含む[CHARFORMAT](/windows/win32/api/richedit/ns-richedit-_charformat)構造体へのポインター。
+最初のバージョンでは、現在選択されている単語の新しい文字書式属性を含む[CHARFORMAT](/windows/win32/api/richedit/ns-richedit-charformata)構造体へのポインター。
 
 2番目のバージョンでは、 [CHARFORMAT2](/windows/win32/api/richedit/ns-richedit-charformat2w)構造体へのポインター。これは、現在選択さ`CHARFORMAT`れている単語の新しい文字書式属性を格納している、構造体のリッチエディット2.0 拡張機能です。
 

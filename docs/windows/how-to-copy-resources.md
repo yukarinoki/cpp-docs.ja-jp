@@ -30,12 +30,12 @@ helpviewer_keywords:
 - cursors [C++], importing and exporting
 - images [C++], exporting
 ms.assetid: 65f523e8-017f-4fc6-82d1-083c56d9131f
-ms.openlocfilehash: 56cff04d64f2f0a64fc216fbd418954b4c11b0f2
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 718de310bc4fb0cb0072065bc4e7b7adadb182aa
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514748"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740662"
 ---
 # <a name="how-to-manage-resources-c"></a>方法: リソースの管理C++()
 
@@ -76,7 +76,7 @@ ms.locfileid: "69514748"
 
 リソースのコピー時に、リソースの言語プロパティ、条件プロパティ、またはその両方を変更できます。
 
-- リソースの言語では、検索対象のリソースを識別するために[Findresource](/windows/win32/api/winbase/nf-winbase-findresourcew)によって使用される言語を指定します。 リソースには、テキストに関連付けられていない言語ごとに異なるものを含めることができます。たとえば、日本語キーボードでのみ動作するアクセラレータや、中国語のローカライズされたビルドにのみ適したビットマップなどです。
+- リソースの言語では、検索対象のリソースを識別するために[Findresource](/windows/win32/api/winbase/nf-winbase-findresourcea)によって使用される言語を指定します。 リソースには、テキストに関連付けられていない言語ごとに異なるものを含めることができます。たとえば、日本語キーボードでのみ動作するアクセラレータや、中国語のローカライズされたビルドにのみ適したビットマップなどです。
 
 - リソースの条件とは、リソースの特定のコピーが使用される条件を識別する定義済みのシンボルです。
 

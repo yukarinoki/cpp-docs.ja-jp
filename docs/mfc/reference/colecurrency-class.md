@@ -22,12 +22,12 @@ helpviewer_keywords:
 - COleCurrency [MFC], m_cur
 - COleCurrency [MFC], m_status
 ms.assetid: 3a36e345-303f-46fb-a57c-858274378a8d
-ms.openlocfilehash: a23bc489fce00d9ba0be6a3aa71468b469bf54c8
-ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
+ms.openlocfilehash: fc7c64ada1100b0fc0a51670de3e8ec04b141b04
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70177403"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741642"
 ---
 # <a name="colecurrency-class"></a>COleCurrency クラス
 
@@ -128,7 +128,7 @@ COleCurrency(
 
 - COleCurrency () は、 `COleCurrency` 0 (ゼロ) に初期化されたオブジェクトを構築します。
 
-- COleCurrency (`cySrc`) は、 `COleCurrency` [通貨](/windows/win32/api/wtypes/ns-wtypes-cy)値からオブジェクトを構築します。
+- COleCurrency (`cySrc`) は、 `COleCurrency` [通貨](/windows/win32/api/wtypes/ns-wtypes-cy~r1)値からオブジェクトを構築します。
 
 - COleCurrency (`curSrc`) は、 `COleCurrency`既存`COleCurrency`のオブジェクトからオブジェクトを構築します。 新しいオブジェクトは、ソースオブジェクトと同じ状態になります。
 
@@ -136,7 +136,7 @@ COleCurrency(
 
 - `COleCurrency(`指定さ`, `れ`) Constructs a `た数値コンポーネントからの nunits nFractionalUnits COleCurrency ' オブジェクト。 小数部分の絶対値が1万を超える場合は、その単位に適切な調整が行われます。 単位と小数部は、符号付き長の値によって指定されることに注意してください。
 
-詳細については、Windows SDK の「 [CURRENCY](/windows/win32/api/wtypes/ns-wtypes-cy) 」と「 [VARIANT](/windows/win32/api/oaidl/ns-oaidl-variant) 」のエントリを参照してください。
+詳細については、Windows SDK の「 [CURRENCY](/windows/win32/api/wtypes/ns-wtypes-cy~r1) 」と「 [VARIANT](/windows/win32/api/oaidl/ns-oaidl-variant) 」のエントリを参照してください。
 
 ### <a name="example"></a>例
 
@@ -236,14 +236,14 @@ enum CurrencyStatus {
 
 ##  <a name="m_cur"></a>COleCurrency:: m_cur
 
-この`COleCurrency`オブジェクトの基になる[通貨](/windows/win32/api/wtypes/ns-wtypes-cy)構造。
+この`COleCurrency`オブジェクトの基になる[通貨](/windows/win32/api/wtypes/ns-wtypes-cy~r1)構造。
 
 ### <a name="remarks"></a>Remarks
 
 > [!CAUTION]
 >  この関数によって`CURRENCY`返されるポインターによってアクセスされる構造体の値を変更`COleCurrency`すると、このオブジェクトの値が変更されます。 この`COleCurrency`オブジェクトの状態は変更されません。
 
-詳細については、Windows SDK の「 [CURRENCY](/windows/win32/api/wtypes/ns-wtypes-cy) 」エントリを参照してください。
+詳細については、Windows SDK の「 [CURRENCY](/windows/win32/api/wtypes/ns-wtypes-cy~r1) 」エントリを参照してください。
 
 ##  <a name="m_status"></a>COleCurrency:: m_status
 
@@ -314,7 +314,7 @@ const COleCurrency& operator=(const VARIANT& varSrc);
 
 - **operator = (** *varsrc* **)** `VARIANT`値 (または[COleVariant](../../mfc/reference/colevariant-class.md)オブジェクト) から currency ( `VT_CY`) への変換が成功すると、変換後の値がこの`COleCurrency`オブジェクトにコピーされ、その状態が有効に設定されます。 変換が成功しなかった場合、 `COleCurrency`オブジェクトの値は0に設定され、その状態は無効になります。
 
-詳細については、Windows SDK の「 [CURRENCY](/windows/win32/api/wtypes/ns-wtypes-cy) 」と「 [VARIANT](/windows/win32/api/oaidl/ns-oaidl-variant) 」のエントリを参照してください。
+詳細については、Windows SDK の「 [CURRENCY](/windows/win32/api/wtypes/ns-wtypes-cy~r1) 」と「 [VARIANT](/windows/win32/api/oaidl/ns-oaidl-variant) 」のエントリを参照してください。
 
 ### <a name="example"></a>例
 

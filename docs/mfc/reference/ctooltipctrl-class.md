@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CToolTipCtrl [MFC], Update
 - CToolTipCtrl [MFC], UpdateTipText
 ms.assetid: 8973f70c-b73a-46c7-908d-758f364b9a97
-ms.openlocfilehash: 046c8a3f99e8b505ee6a6e8b534318263090e07d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: bf32671eb3535de1bf072e24bc642145e87c84ee
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69502254"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741416"
 ---
 # <a name="ctooltipctrl-class"></a>CToolTipCtrl Class
 
@@ -377,7 +377,7 @@ CSize GetBubbleSize(LPTOOLINFO lpToolInfo) const;
 ### <a name="parameters"></a>パラメーター
 
 *lpToolInfo*<br/>
-ツールヒントの[TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-toolinfow)構造体へのポインター。
+ツールヒントの[TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa)構造体へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -399,7 +399,7 @@ BOOL GetCurrentTool(LPTOOLINFO lpToolInfo) const;
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*lpToolInfo*|入出力現在のツールヒントウィンドウに関する情報を受け取る[TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-toolinfow)構造体へのポインター。|
+|*lpToolInfo*|入出力現在のツールヒントウィンドウに関する情報を受け取る[TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa)構造体へのポインター。|
 
 ### <a name="return-value"></a>戻り値
 
@@ -598,7 +598,7 @@ BOOL GetToolInfo(
 
 ### <a name="remarks"></a>Remarks
 
-CToolInfo `hwnd`に`uId`よって参照される[TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-toolinfow)構造体のおよびメンバーは、ツールを識別します。 以前のの呼び出し`AddTool`によってツールヒントコントロールにツールが登録されている場合`TOOLINFO` 、構造体にはツールに関する情報が格納されます。
+CToolInfo `hwnd`に`uId`よって参照される[TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa)構造体のおよびメンバーは、ツールを識別します。 以前のの呼び出し`AddTool`によってツールヒントコントロールにツールが登録されている場合`TOOLINFO` 、構造体にはツールに関する情報が格納されます。
 
 ##  <a name="hittest"></a>  CToolTipCtrl::HitTest
 
@@ -620,7 +620,7 @@ BOOL HitTest(
 テストする点`CPoint`の座標を格納しているオブジェクトへのポインター。
 
 *lpToolInfo*<br/>
-ツールに関する情報を格納している[TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-toolinfow)構造体へのポインター。
+ツールに関する情報を格納している[TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa)構造体へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -845,7 +845,7 @@ void SetToolInfo(LPTOOLINFO lpToolInfo);
 ### <a name="parameters"></a>パラメーター
 
 *lpToolInfo*<br/>
-設定する情報を指定する[TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-toolinfow)構造体へのポインター。
+設定する情報を指定する[TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa)構造体へのポインター。
 
 ##  <a name="settoolrect"></a>  CToolTipCtrl::SetToolRect
 
