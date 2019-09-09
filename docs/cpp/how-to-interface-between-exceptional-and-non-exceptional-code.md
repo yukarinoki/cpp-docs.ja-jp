@@ -1,5 +1,5 @@
 ---
-title: '方法: 例外と非例外的なコードの間のインターフェイスします。'
+title: "方法: 例外的なコードと非例外的なコード間のインターフェイス'"
 ms.custom: how-to
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -11,7 +11,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62183701"
 ---
-# <a name="how-to-interface-between-exceptional-and-non-exceptional-code"></a>方法: 例外と非例外的なコードの間のインターフェイスします。
+# <a name="how-to-interface-between-exceptional-and-non-exceptional-code"></a>方法: 例外的なコードと非例外的なコード間のインターフェイス'
 
 ここでは、C++ モジュールで一貫した例外処理を実装する方法と、例外の境界でエラー コードとの間でそれらの例外を変換する方法を説明します。
 

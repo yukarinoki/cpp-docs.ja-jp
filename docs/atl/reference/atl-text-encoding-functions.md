@@ -53,7 +53,7 @@ ms.locfileid: "68375895"
 |[IsExtendedChar](#isextendedchar)|この関数を呼び出して、特定の文字が拡張文字 (32 未満、126より大きい、タブ、ラインフィード、またはキャリッジリターンではない) であるかどうかを確認します。|
 |[QEncode](#qencode)|"Q" エンコーディングを使用して一部のデータを変換します。  |
 |[QEncodeGetRequiredLength](#qencodegetrequiredlength)|指定したサイズのデータからエンコードされた文字列を格納できるバッファーのサイズを、文字数で取得します。|
-|[QPDecode](#qpdecode)|前回の Qの呼び出しによってなど、引用符で囲まれた印刷可能な形式でエンコード[](#qpencode)されたデータの文字列をデコードします。|
+|[QPDecode](#qpdecode)|前回の[qの](#qpencode)呼び出しによってなど、引用符で囲まれた印刷可能な形式でエンコードされたデータの文字列をデコードします。|
 |[QPDecodeGetRequiredLength](#qpdecodegetrequiredlength)|quoted-printable にエンコードされた指定長の文字列からデコードされたデータを格納できるバッファーのサイズを、バイト単位で取得します。|
 |[Qのコード](#qpencode)|一部のデータを quoted-printable 形式にエンコードします。|
 |[QPEncodeGetRequiredLength](#qpencodegetrequiredlength)|指定したサイズのデータからエンコードされた文字列を格納できるバッファーのサイズを、文字数で取得します。|
@@ -362,7 +362,7 @@ inline int EscapeXML(
 
 次の表に、この関数によって実行される可能性のある変換を示します。
 
-|Source|保存先|
+|Source|[Destination]|
 |------------|-----------------|
 |\<|&lt;|
 |>|&gt;|
@@ -475,7 +475,7 @@ inline int QEncodeGetRequiredLength(int nSrcLen, int nCharsetLen) throw();
 
 ## <a name="qpdecode"></a>QPDecode
 
-前回の Qの呼び出しによってなど、引用符で囲まれた印刷可能な形式でエンコード[](#qpencode)されたデータの文字列をデコードします。
+前回の[qの](#qpencode)呼び出しによってなど、引用符で囲まれた印刷可能な形式でエンコードされたデータの文字列をデコードします。
 
 ```
 inline BOOL QPDecode(
