@@ -60,8 +60,8 @@ class AFX_NOVTABLE CObject
 
 |名前|説明|
 |----------|-----------------|
-|[CObject::operator delete](#operator_delete)|特別な**削除**演算子。|
-|[新しい CObject::operator](#operator_new)|特別な**新しい**演算子。|
+|[CObject::operator delete](#operator_delete)|特別な **delete** 演算子。|
+|[CObject::operator new](#operator_new)|特別な **new** 演算子。|
 
 ## <a name="remarks"></a>Remarks
 
@@ -83,7 +83,7 @@ class AFX_NOVTABLE CObject
 
 2 番目のレベルのマクロ[DECLARE_SERIAL](run-time-object-model-services.md#declare_serial)と[IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial)第 1 レベルのマクロのすべての機能を追加し、"シリアル化されるオブジェクト"と「アーカイブ」です有効にする。
 
-一般に、Microsoft Foundation classes と C++ のクラスを派生と使用についての`CObject`を参照してください[を使用して CObject](../../mfc/using-cobject.md)と[シリアル化](../../mfc/serialization-in-mfc.md)します。
+一般に、Microsoft Foundation classes と C++ のクラスを派生し、`CObject`を使用する方法については、[CObject の使い方](../../mfc/using-cobject.md)と[シリアル化](../../mfc/serialization-in-mfc.md)を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -364,7 +364,7 @@ A`CArchive`またはからにシリアル化するオブジェクト。
 
 使用[場合](../../mfc/reference/carchive-class.md#isloading)または[用](../../mfc/reference/carchive-class.md#isstoring)アーカイブの読み込みまたは保存するかどうかを判断します。
 
-`Serialize` によって呼び出される[CArchive::ReadObject](../../mfc/reference/carchive-class.md#readobject)と[CArchive::WriteObject](../../mfc/reference/carchive-class.md#writeobject)します。 これらの関数が関連付けられている、`CArchive`挿入演算子 ( **< \<**) と抽出演算子 ( **>>**)。
+`Serialize` によって呼び出される[CArchive::ReadObject](../../mfc/reference/carchive-class.md#readobject)と[CArchive::WriteObject](../../mfc/reference/carchive-class.md#writeobject)します。 これらの関数が関連付けられている、`CArchive`挿入演算子 ( **< \<** ) と抽出演算子 ( **>>** )。
 
 シリアル化の例は、記事を参照してください。[シリアル化します。オブジェクトのシリアル化](../../mfc/serialization-serializing-an-object.md)します。
 
