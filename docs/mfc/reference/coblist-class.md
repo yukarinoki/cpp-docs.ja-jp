@@ -166,7 +166,7 @@ void AddHead(CObList* pNewList);
 
 ### <a name="example"></a>例
 
-  `CAge`クラスのリストについては、[CObList::CObList](#coblist)を参照してください。
+  `CAge`クラスのリストについては、[CObList::CObList](#coblist) を参照してください。
 
 [!code-cpp[NVC_MFCCollections#89](../../mfc/codesnippet/cpp/coblist-class_1.cpp)]
 
@@ -212,7 +212,7 @@ void AddTail(CObList* pNewList);
 
 ### <a name="example"></a>例
 
-  `CAge`クラスのリストについては[CObList::CObList](#coblist)を参照してください。
+  `CAge`クラスのリストについては [CObList::CObList](#coblist) を参照してください。
 
 [!code-cpp[NVC_MFCCollections#90](../../mfc/codesnippet/cpp/coblist-class_2.cpp)]
 
@@ -293,7 +293,7 @@ POSITION Find(
 
 ### <a name="example"></a>例
 
-`CAge`クラスのリストについては[CObList::CObList](#coblist)を参照してください。
+`CAge`クラスのリストについては [CObList::CObList](#coblist) を参照してください。
 
 [!code-cpp[NVC_MFCCollections#93](../../mfc/codesnippet/cpp/coblist-class_5.cpp)]
 
@@ -327,7 +327,7 @@ POSITION FindIndex(INT_PTR nIndex) const;
 
 ### <a name="example"></a>例
 
-`CAge`クラスのリストについては[CObList::CObList](#coblist)参照してください。
+`CAge`クラスのリストについては [CObList::CObList](#coblist) を参照してください。
 
 [!code-cpp[NVC_MFCCollections#94](../../mfc/codesnippet/cpp/coblist-class_6.cpp)]
 
@@ -387,7 +387,7 @@ INT_PTR GetCount() const;
 
 ### <a name="example"></a>例
 
-`CAge`クラスのリストについては[CObList::CObList](#coblist)を参照してください。
+`CAge`クラスのリストについては [CObList::CObList](#coblist) を参照してください。
 
 [!code-cpp[NVC_MFCCollections#95](../../mfc/codesnippet/cpp/coblist-class_7.cpp)]
 
@@ -419,7 +419,7 @@ const CObject*& GetHead() const;
 
 ### <a name="example"></a>例
 
-`CAge`クラスのリストについては[CObList::CObList](#coblist)を参照してください。
+`CAge`クラスのリストについては [CObList::CObList](#coblist) を参照してください。
 
 使用例を次に示します`GetHead`代入ステートメントの左側にあります。
 
@@ -446,7 +446,7 @@ POSITION GetHeadPosition() const;
 
 ### <a name="example"></a>例
 
-`CAge`クラスのリストについては[CObList::CObList](#coblist)を参照してください。
+`CAge`クラスのリストについては [CObList::CObList](#coblist) を参照してください。
 
 [!code-cpp[NVC_MFCCollections#97](../../mfc/codesnippet/cpp/coblist-class_9.cpp)]
 
@@ -490,7 +490,7 @@ const CObject* GetNext(POSITION& rPosition) const;
 
 ### <a name="example"></a>例
 
-  `CAge`クラスのリストについては[CObList::CObList](#coblist)を参照してください。
+  `CAge`クラスのリストについては [CObList::CObList](#coblist) を参照してください。
 
 [!code-cpp[NVC_MFCCollections#98](../../mfc/codesnippet/cpp/coblist-class_10.cpp)]
 
@@ -539,7 +539,7 @@ const CObject* GetPrev(POSITION& rPosition) const;
 
 ### <a name="example"></a>例
 
-  `CAge`クラスのリストについては[CObList::CObList](#coblist)を参照してください。
+  `CAge`クラスのリストについては [CObList::CObList](#coblist) を参照してください。
 
 [!code-cpp[NVC_MFCCollections#99](../../mfc/codesnippet/cpp/coblist-class_11.cpp)]
 
@@ -575,7 +575,7 @@ INT_PTR GetSize() const;
 
 ### <a name="example"></a>例
 
-`CAge`クラスのリストについては[CObList::CObList](#coblist)を参照してください。
+`CAge`クラスのリストについては [CObList::CObList](#coblist) を参照してください。
 
 [!code-cpp[NVC_MFCCollections#100](../../mfc/codesnippet/cpp/coblist-class_12.cpp)]
 
@@ -605,7 +605,7 @@ const CObject*& GetTail() const;
 
 ### <a name="example"></a>例
 
-`CAge`クラスのリストについては[CObList::CObList](#coblist)を参照してください。
+`CAge`クラスのリストについては [CObList::CObList](#coblist) を参照してください。
 
 [!code-cpp[NVC_MFCCollections#101](../../mfc/codesnippet/cpp/coblist-class_13.cpp)]
 
@@ -630,7 +630,7 @@ POSITION GetTailPosition() const;
 
 ### <a name="example"></a>例
 
-`CAge`クラスのリストについては[CObList::CObList](#coblist)を参照してください。
+`CAge`クラスのリストについては [CObList::CObList](#coblist) を参照してください。
 
 [!code-cpp[NVC_MFCCollections#102](../../mfc/codesnippet/cpp/coblist-class_14.cpp)]
 
@@ -661,11 +661,11 @@ POSITION InsertAfter(
 
 ### <a name="return-value"></a>戻り値
 
-これは、同じ位置の値として、*position*パラメーター。
+これは、*position* パラメーターと同じ POSITION 値です。
 
 ### <a name="example"></a>例
 
-  `CAge`クラスのリストについては[CObList::CObList](#coblist)を参照してください。
+  `CAge`クラスのリストについては [CObList::CObList](#coblist) を参照してください。
 
 [!code-cpp[NVC_MFCCollections#103](../../mfc/codesnippet/cpp/coblist-class_15.cpp)]
 
