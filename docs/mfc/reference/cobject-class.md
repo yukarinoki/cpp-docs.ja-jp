@@ -273,7 +273,7 @@ BOOL IsSerializable() const;
 
 ##  <a name="operator_delete"></a>  CObject::operator delete
 
-ライブラリのリリース バージョンの演算子**削除**演算子によって割り当てられたメモリを解放**新しい**します。
+ライブラリのリリース バージョンの場合、**delete** 演算子は **new** 演算子によって割り当てられたメモリを解放します。
 
 ```
 void PASCAL operator delete(void* p);
@@ -290,7 +290,7 @@ void PASCAL operator delete(
 
 ### <a name="remarks"></a>Remarks
 
-デバッグ バージョンでは、演算子**削除**メモリ リークを検出するように設計割り当て監視の構成に参加します。
+デバッグ バージョンでは、**delete** 演算子メモリ リークを検出するために設計された割り当て監視スキームに参加します。
 
 コード行を使用する場合
 
