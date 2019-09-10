@@ -113,7 +113,7 @@ virtual void AssertValid() const;
 
 ### <a name="example"></a>例
 
-参照してください[使われて](../../mfc/reference/coblist-class.md#coblist)の一覧については、`CAge`すべてで使用されるクラス`CObject`例。
+すべての`CObject`の例で使用されている`CAge`クラスのリストについては、[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)を参照してください。
 
 [!code-cpp[NVC_MFCCObjectSample#7](../../mfc/codesnippet/cpp/cobject-class_1.cpp)]
 
@@ -137,13 +137,13 @@ CObject(const CObject& objectSrc);
 
 既定のバージョンは、派生クラスのコンス トラクターによって自動的に呼び出されます。
 
-クラスがシリアル化可能な場合 (が組み込まれて IMPLEMENT_SERIAL マクロ)、クラス宣言で既定のコンス トラクター (引数なしのコンス トラクター) があります。 既定のコンス トラクターを必要がない場合、private を宣言または「空」のコンス トラクターを保護します。 詳細については、次を参照してください。[を使用して CObject](../../mfc/using-cobject.md)します。
+クラスがシリアル化可能な場合 (IMPLEMENT_SERIAL マクロが組み込まれている場合)、クラス宣言に既定のコンス トラクター (引数なしのコンス トラクター) が必要です。 既定のコンス トラクターが必要ない場合、private を宣言または「空」のコンス トラクターを宣言します。 詳細については、[CObject の使い方](../../mfc/using-cobject.md) を参照してください。
 
 標準 C++ 既定クラスのコピー コンス トラクターは、メンバー間でコピーします。 プライベートのプレゼンス`CObject`コピー コンス トラクターで、クラスのコピー コンス トラクターが必要なは利用できない場合、コンパイラ エラー メッセージが保証されます。 クラスには、この機能が必要な場合にそのため、コピー コンス トラクターを提供する必要があります。
 
 ### <a name="example"></a>例
 
-参照してください[使われて](../../mfc/reference/coblist-class.md#coblist)の一覧については、`CAge`で使用されるクラス、`CObject`例。
+すべての`CObject`の例で使用されている`CAge`クラスのリストについては、[CObList::CObList](../../mfc/reference/coblist-class.md#coblist) を参照してください。
 
 [!code-cpp[NVC_MFCCObjectSample#8](../../mfc/codesnippet/cpp/cobject-class_2.cpp)]
 
@@ -177,7 +177,7 @@ virtual void Dump(CDumpContext& dc) const;
 
 ### <a name="example"></a>例
 
-参照してください[使われて](../../mfc/reference/coblist-class.md#coblist)の一覧については、`CAge`すべてで使用されるクラス`CObject`例。
+すべての`CAge`の例で使用されている`CObject`クラスのリストについては、[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)を参照してください。
 
 [!code-cpp[NVC_MFCCObjectSample#9](../../mfc/codesnippet/cpp/cobject-class_3.cpp)]
 
@@ -213,7 +213,7 @@ virtual CRuntimeClass* GetRuntimeClass() const;
 
 ### <a name="example"></a>例
 
-参照してください[使われて](../../mfc/reference/coblist-class.md#coblist)の一覧については、`CAge`すべてで使用されるクラス`CObject`例。
+すべての`CAge`の例で使用されている`CObject`クラスのリストについては、[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)を参照してください。
 
 [!code-cpp[NVC_MFCCObjectSample#10](../../mfc/codesnippet/cpp/cobject-class_4.cpp)]
 
@@ -242,7 +242,7 @@ C++ ポリモーフィズムの機能を損なうことためには、広範囲�
 
 ### <a name="example"></a>例
 
-参照してください[使われて](../../mfc/reference/coblist-class.md#coblist)の一覧については、`CAge`すべてで使用されるクラス`CObject`例。
+すべての`CAge`の例で使用されている`CObject`クラスのリストについては、[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)を参照してください。
 
 [!code-cpp[NVC_MFCCObjectSample#11](../../mfc/codesnippet/cpp/cobject-class_5.cpp)]
 
@@ -267,7 +267,7 @@ BOOL IsSerializable() const;
 
 ### <a name="example"></a>例
 
-参照してください[使われて](../../mfc/reference/coblist-class.md#coblist)の一覧については、`CAge`すべてで使用されるクラス`CObject`例。
+すべての`CAge`の例で使用されている`CObject`クラスのリストについては、[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)を参照してください。
 
 [!code-cpp[NVC_MFCCObjectSample#12](../../mfc/codesnippet/cpp/cobject-class_6.cpp)]
 
@@ -304,7 +304,7 @@ void PASCAL operator delete(
 
 ### <a name="example"></a>例
 
-参照してください[使われて](../../mfc/reference/coblist-class.md#coblist)の一覧については、`CAge`で使用されるクラス、`CObject`例。
+すべての`CAge`の例で使用されている`CObject`クラスのリストについては、[CObList::CObList](../../mfc/reference/coblist-class.md#coblist) を参照してください。
 
 [!code-cpp[NVC_MFCCObjectSample#15](../../mfc/codesnippet/cpp/cobject-class_8.cpp)]
 
@@ -339,7 +339,7 @@ void* PASCAL operator new(
 
 ### <a name="example"></a>例
 
-参照してください[使われて](../../mfc/reference/coblist-class.md#coblist)の一覧については、`CAge`で使用されるクラス、`CObject`例。
+すべての`CAge`の例で使用されている`CObject`クラスのリストについては、[CObList::CObList](../../mfc/reference/coblist-class.md#coblist) を参照してください。
 
 [!code-cpp[NVC_MFCCObjectSample#16](../../mfc/codesnippet/cpp/cobject-class_9.h)]
 
@@ -370,7 +370,7 @@ A`CArchive`またはからにシリアル化するオブジェクト。
 
 ### <a name="example"></a>例
 
-参照してください[使われて](../../mfc/reference/coblist-class.md#coblist)の一覧については、`CAge`すべてで使用されるクラス`CObject`例。
+すべての`CAge`の例で使用されている`CObject`クラスのリストについては、[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)を参照してください。
 
 [!code-cpp[NVC_MFCCObjectSample#13](../../mfc/codesnippet/cpp/cobject-class_10.cpp)]
 

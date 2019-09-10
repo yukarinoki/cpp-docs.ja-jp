@@ -1,14 +1,14 @@
 ---
 title: Visual Studio でターゲットの Linux システムに接続する
 description: Visual Studio の C++ プロジェクト内からリモートの Linux マシンまたは WSL に接続する方法です。
-ms.date: 06/19/2019
+ms.date: 09/04/2019
 ms.assetid: 5eeaa683-4e63-4c46-99ef-2d5f294040d4
-ms.openlocfilehash: cd107f096e4395f93775ee80b889cc0efd627166
-ms.sourcegitcommit: 610751254a01cba6ad15fb1e1764ecb2e71f66bf
+ms.openlocfilehash: 75d8b3db64d9b1f3562d6730685b7c29fe4982f4
+ms.sourcegitcommit: a42d3b0408f02138dcd6fabcb98d50b0cb159191
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68313433"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70383402"
 ---
 # <a name="connect-to-your-target-linux-system-in-visual-studio"></a>Visual Studio でターゲットの Linux システムに接続する
 
@@ -109,7 +109,4 @@ WSL 用にプロジェクトを構成するには、プロジェクトの種類�
 [Linux プロジェクトを構成する](configure-a-linux-project.md)<br />
 [Linux CMake プロジェクトを構成する](cmake-linux-project.md)<br />
 [Linux プロジェクトの配置、実行、デバッグ](deploy-run-and-debug-your-linux-project.md)<br />
-
-
-
-
+[CMake デバッグ セッションを構成する](../build/configure-cmake-debugging-sessions.md)
