@@ -60,8 +60,8 @@ class AFX_NOVTABLE CObject
 
 |名前|説明|
 |----------|-----------------|
-|[CObject::operator delete](#operator_delete)|特別な**delete**演算子。|
-|[CObject::operator new](#operator_new)|特別な**new**演算子。|
+|[CObject::operator delete](#operator_delete)|特別な **delete** 演算子。|
+|[CObject::operator new](#operator_new)|特別な **new** 演算子。|
 
 ## <a name="remarks"></a>Remarks
 
@@ -137,13 +137,13 @@ CObject(const CObject& objectSrc);
 
 既定のバージョンは、派生クラスのコンス トラクターによって自動的に呼び出されます。
 
-クラスがシリアル化可能な場合 (が組み込まれて IMPLEMENT_SERIAL マクロ)、クラス宣言で既定のコンス トラクター (引数なしのコンス トラクター) があります。 既定のコンス トラクターを必要がない場合、private を宣言または「空」のコンス トラクターを保護します。 詳細については、[CObject の使い方](../../mfc/using-cobject.md)を参照してください。
+クラスがシリアル化可能な場合 (IMPLEMENT_SERIAL マクロが組み込まれている場合)、クラス宣言に既定のコンス トラクター (引数なしのコンス トラクター) が必要です。 既定のコンス トラクターが必要ない場合、private を宣言または「空」のコンス トラクターを宣言します。 詳細については、[CObject の使い方](../../mfc/using-cobject.md) を参照してください。
 
 標準 C++ 既定クラスのコピー コンス トラクターは、メンバー間でコピーします。 プライベートのプレゼンス`CObject`コピー コンス トラクターで、クラスのコピー コンス トラクターが必要なは利用できない場合、コンパイラ エラー メッセージが保証されます。 クラスには、この機能が必要な場合にそのため、コピー コンス トラクターを提供する必要があります。
 
 ### <a name="example"></a>例
 
-すべての`CObject`の例で使用されている`CAge`クラスのリストについては、[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)を参照してください。
+すべての`CObject`の例で使用されている`CAge`クラスのリストについては、[CObList::CObList](../../mfc/reference/coblist-class.md#coblist) を参照してください。
 
 [!code-cpp[NVC_MFCCObjectSample#8](../../mfc/codesnippet/cpp/cobject-class_2.cpp)]
 
@@ -177,7 +177,7 @@ virtual void Dump(CDumpContext& dc) const;
 
 ### <a name="example"></a>例
 
-すべての`CObject`の例で使用されている`CAge`クラスのリストについては、[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)を参照してください。
+すべての`CObject`の例で使用されている`CAge`クラスのリストについては、[CObList::CObList](../../mfc/reference/coblist-class.md#coblist) を参照してください。
 
 [!code-cpp[NVC_MFCCObjectSample#9](../../mfc/codesnippet/cpp/cobject-class_3.cpp)]
 
@@ -267,13 +267,13 @@ BOOL IsSerializable() const;
 
 ### <a name="example"></a>例
 
-すべての`CObject`の例で使用されている`CAge`クラスのリストについては、[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)を参照してください。
+すべての`CObject`の例で使用されている`CAge`クラスのリストについては、[CObList::CObList](../../mfc/reference/coblist-class.md#coblist) を参照してください。
 
 [!code-cpp[NVC_MFCCObjectSample#12](../../mfc/codesnippet/cpp/cobject-class_6.cpp)]
 
 ##  <a name="operator_delete"></a>  CObject::operator delete
 
-ライブラリのリリース バージョンの演算子**delete**演算子によって割り当てられたメモリを解放**new**します。
+ライブラリのリリース バージョンの場合、**delete** 演算子は **new** 演算子によって割り当てられたメモリを解放します。
 
 ```
 void PASCAL operator delete(void* p);
@@ -290,27 +290,27 @@ void PASCAL operator delete(
 
 ### <a name="remarks"></a>Remarks
 
-デバッグ バージョンでは、**delete** 演算子メモリ リークを検出するように設計割り当て監視の構成に参加します。
+デバッグ バージョンでは、**delete** 演算子メモリ リークを検出するために設計された割り当て監視スキームに参加します。
 
 コード行を使用する場合
 
 [!code-cpp[NVC_MFCCObjectSample#14](../../mfc/codesnippet/cpp/cobject-class_7.cpp)]
 
-実装の前に、します。CPP ファイルを次の 3 番目のバージョン**delete**使用される、割り当て済みのブロックを後でレポートをファイル名と行の数を格納します。 は追加のパラメーターを指定してについて心配する必要はありませんマクロが対処するのです。
+CPP ファイル実装の前に、**delete** の 3 番目のバージョンが使用され、後でレポートするために割り当て済みのブロックにファイル名と行の数を格納します。 追加のパラメーターを指定する必要はありません。マクロがそれを対処します。
 
 リークの検出をそれでもデバッグ モードで DEBUG_NEW を使用しない場合でも上記で説明したソース ファイルの行番号のレポート作成しなくてもします。
 
-演算子をオーバーライドする場合は**new**と**delete**、この診断機能が多少低下します。
+**new** と **delete** 演算子をオーバーライドすると、この診断機能が多少低下します。
 
 ### <a name="example"></a>例
 
-すべての`CObject`の例で使用されている`CAge`クラスのリストについては、[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)を参照してください。
+すべての`CObject`の例で使用されている`CAge`クラスのリストについては、[CObList::CObList](../../mfc/reference/coblist-class.md#coblist) を参照してください。
 
 [!code-cpp[NVC_MFCCObjectSample#15](../../mfc/codesnippet/cpp/cobject-class_8.cpp)]
 
 ##  <a name="operator_new"></a>  CObject::operator new
 
-ライブラリのリリース バージョンの演算子**new**と同様の方法で最適なメモリ割り当てを実行します。`malloc`します。
+ライブラリのリリース バージョンでは、**new** 演算子は`malloc`と同様の方法で最適なメモリ割り当てを実行します。
 
 ```
 void* PASCAL operator new(size_t nSize);
@@ -324,18 +324,18 @@ void* PASCAL operator new(
 
 ### <a name="remarks"></a>Remarks
 
-デバッグ バージョンでは、**new** 演算子メモリ リークを検出するように設計割り当て監視の構成に参加します。
+デバッグ バージョンでは、**new** 演算子メモリ リークを検出するように設計された割り当て監視スキームに参加します。
 
 コード行を使用する場合
 
 [!code-cpp[NVC_MFCCObjectSample#14](../../mfc/codesnippet/cpp/cobject-class_7.cpp)]
 
-実装の前に、します。CPP ファイルを次の 2 番目のバージョン**new**使用される、割り当て済みのブロックを後でレポートをファイル名と行の数を格納します。 は追加のパラメーターを指定してについて心配する必要はありませんマクロが対処するのです。
+CPP ファイルの実装の前に、 2 番目のバージョンの **new** が使用され、後で割り当て済みのブロックにでファイル名と行の数を格納します。追加のパラメーターを指定する必要はありません。マクロがそれを対処します。
 
 リークの検出をそれでもデバッグ モードで DEBUG_NEW を使用しない場合でも上記で説明したソース ファイルの行番号のレポート作成しなくてもします。
 
 > [!NOTE]
->  オーバーライドする必要がある場合、この演算子をオーバーライドすると、**delete**します。 標準ライブラリを使用しないでください`_new_handler`関数。
+> 演算子をオーバーライドする場合は、**delete** もオーバーライドする必要があります。標準ライブラリの`_new_handler`関数を使用しないでください。
 
 ### <a name="example"></a>例
 
@@ -362,11 +362,11 @@ A`CArchive`またはからにシリアル化するオブジェクト。
 
 使用することも必要があります、 [DECLARE_SERIAL](run-time-object-model-services.md#declare_serial)クラスの宣言でマクロを使用する必要があります、 [IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial)実装ではマクロです。
 
-[CArchive::IsLoading](../../mfc/reference/carchive-class.md#isloading)または[CArchive::IsStoring](../../mfc/reference/carchive-class.md#isstoring)を使用して、アーカイブがロード中か保存中かを判断します。
+[CArchive::IsLoading](../../mfc/reference/carchive-class.md#isloading) または [CArchive::IsStoring](../../mfc/reference/carchive-class.md#isstoring) を使用して、アーカイブがロード中か保存中かを判断します。
 
 `Serialize` によって呼び出される[CArchive::ReadObject](../../mfc/reference/carchive-class.md#readobject)と[CArchive::WriteObject](../../mfc/reference/carchive-class.md#writeobject)します。 これらの関数が関連付けられている、`CArchive`挿入演算子 ( **< \<**) と抽出演算子 ( **>>**)。
 
-シリアル化の例は、[シリアル化:オブジェクトのシリアル化](../../mfc/serialization-serializing-an-object.md)を参照してください。
+シリアル化の例は、[シリアル化: オブジェクトのシリアル化](../../mfc/serialization-serializing-an-object.md) を参照してください。
 
 ### <a name="example"></a>例
 
