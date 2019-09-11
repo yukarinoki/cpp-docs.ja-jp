@@ -296,7 +296,7 @@ void PASCAL operator delete(
 
 [!code-cpp[NVC_MFCCObjectSample#14](../../mfc/codesnippet/cpp/cobject-class_7.cpp)]
 
-実装の前に、します。CPP ファイルを次の 3 番目のバージョン**削除**使用される、割り当て済みのブロックを後でレポートをファイル名と行の数を格納します。 は追加のパラメーターを指定してについて心配する必要はありませんマクロが対処するのです。
+実装の前に、します。CPP ファイルを次の 3 番目のバージョン**削除**使用される、割り当て済みのブロックを後でレポートをファイル名と行の数を格納します。 追加のパラメーターを指定する必要はありません。マクロがそれを対処します。
 
 リークの検出をそれでもデバッグ モードで DEBUG_NEW を使用しない場合でも上記で説明したソース ファイルの行番号のレポート作成しなくてもします。
 
@@ -330,12 +330,12 @@ void* PASCAL operator new(
 
 [!code-cpp[NVC_MFCCObjectSample#14](../../mfc/codesnippet/cpp/cobject-class_7.cpp)]
 
-実装の前に、します。CPP ファイルを次の 2 番目のバージョン**新しい**使用される、割り当て済みのブロックを後でレポートをファイル名と行の数を格納します。 は追加のパラメーターを指定してについて心配する必要はありませんマクロが対処するのです。
+CPP ファイルの実装の前に、 2 番目のバージョンの **new** が使用され、後で割り当て済みのブロックにでファイル名と行の数を格納します。 追加のパラメーターを指定する必要はありません。マクロがそれを対処します。
 
 リークの検出をそれでもデバッグ モードで DEBUG_NEW を使用しない場合でも上記で説明したソース ファイルの行番号のレポート作成しなくてもします。
 
 > [!NOTE]
->  オーバーライドする必要がある場合、この演算子をオーバーライドすると、**削除**します。 標準ライブラリを使用しないでください`_new_handler`関数。
+>  演算子をオーバーライドする場合は、**delete** もオーバーライドする必要があります。 標準ライブラリの`_new_handler`関数を使用しないでください。
 
 ### <a name="example"></a>例
 
@@ -362,11 +362,11 @@ A`CArchive`またはからにシリアル化するオブジェクト。
 
 使用することも必要があります、 [DECLARE_SERIAL](run-time-object-model-services.md#declare_serial)クラスの宣言でマクロを使用する必要があります、 [IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial)実装ではマクロです。
 
-使用[場合](../../mfc/reference/carchive-class.md#isloading)または[用](../../mfc/reference/carchive-class.md#isstoring)アーカイブの読み込みまたは保存するかどうかを判断します。
+[CArchive::IsLoading](../../mfc/reference/carchive-class.md#isloading) または [CArchive::IsStoring](../../mfc/reference/carchive-class.md#isstoring) を使用して、アーカイブがロード中か保存中かを判断します。
 
 `Serialize` によって呼び出される[CArchive::ReadObject](../../mfc/reference/carchive-class.md#readobject)と[CArchive::WriteObject](../../mfc/reference/carchive-class.md#writeobject)します。 これらの関数が関連付けられている、`CArchive`挿入演算子 ( **< \<** ) と抽出演算子 ( **>>** )。
 
-シリアル化の例は、記事を参照してください。[シリアル化します。オブジェクトのシリアル化](../../mfc/serialization-serializing-an-object.md)します。
+シリアル化の例は、[シリアル化:オブジェクトのシリアル化](../../mfc/serialization-serializing-an-object.md) を参照してください。
 
 ### <a name="example"></a>例
 
