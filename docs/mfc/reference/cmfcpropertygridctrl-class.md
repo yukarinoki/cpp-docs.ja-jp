@@ -606,7 +606,7 @@ virtual BOOL EndEditItem(BOOL bUpdateData=TRUE);
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="ensurevisible"></a>CMFCPropertyGridCtrl:: Ensurevisible\
+##  <a name="ensurevisible"></a>CMFCPropertyGridCtrl:: Ensurevisible
 
 プロパティグリッドコントロールをスクロールし、指定されたプロパティが表示されるまでプロパティ項目を展開します。
 
