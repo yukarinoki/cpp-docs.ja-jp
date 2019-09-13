@@ -1,4 +1,4 @@
----
+﻿---
 title: CObList クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -158,7 +158,7 @@ void AddHead(CObList* pNewList);
 |クラス|メンバー関数|
 |-----------|---------------------|
 |[CPtrList](../../mfc/reference/cptrlist-class.md)|**POSITION AddHead( void** <strong>\*</strong> `newElement` **);**<br /><br /> **void AddHead( CPtrList** <strong>\*</strong> `pNewList` **);**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**位置 AddHead (const CString &** `newElement` **)。**<br /><br /> **POSITION AddHead(LPCTSTR** `newElement` **);**<br /><br /> **void AddHead(CStringList** <strong>\*</strong> `pNewList` **);**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**POSITION AddHead (const CString &** `newElement` **)。**<br /><br /> **POSITION AddHead(LPCTSTR** `newElement` **);**<br /><br /> **void AddHead(CStringList** <strong>\*</strong> `pNewList` **);**|
 
 ### <a name="remarks"></a>Remarks
 
@@ -288,7 +288,7 @@ POSITION Find(
 
 |クラス|メンバー関数|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**位置検索 (void** <strong>\*</strong> `searchValue` **、位置** `startAfter` **= NULL) const です。**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**POSITION Find (void** <strong>\*</strong> `searchValue` , **POSITION** `startAfter` **= NULL) const**|
 |[CStringList](../../mfc/reference/cstringlist-class.md)|**POSITION Find( LPCTSTR** `searchValue` **, POSITION** `startAfter` **= NULL ) const;**|
 
 ### <a name="example"></a>例
@@ -322,8 +322,8 @@ POSITION FindIndex(INT_PTR nIndex) const;
 
 |クラス|メンバー関数|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**位置 FindIndex (INT_PTR** `nIndex` **) const です。**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**位置 FindIndex (INT_PTR** `nIndex` **) const です。**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**POSITION FindIndex (INT_PTR** `nIndex` **) const**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**POSITION FindIndex (INT_PTR** `nIndex` **) const**|
 
 ### <a name="example"></a>例
 
@@ -657,7 +657,7 @@ POSITION InsertAfter(
 |クラス|メンバー関数|
 |-----------|---------------------|
 |[CPtrList](../../mfc/reference/cptrlist-class.md)|**POSITION InsertAfter( POSITION** *position* **, void** <strong>\*</strong> `newElement` **);**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**位置 InsertAfter (位置** *位置* **、const の CString &** `newElement` **)。**<br /><br /> **POSITION InsertAfter( POSITION** *position* **, LPCTSTR** `newElement` **);**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**POSITION InsertAfter (POSITION** *position* **, const CString&** `newElement` **);**<br /><br /> **POSITION InsertAfter( POSITION** *position* **, LPCTSTR** `newElement` **);**|
 
 ### <a name="return-value"></a>戻り値
 
@@ -705,7 +705,7 @@ POSITION InsertBefore(
 |クラス|メンバー関数|
 |-----------|---------------------|
 |[CPtrList](../../mfc/reference/cptrlist-class.md)|**POSITION InsertBefore( POSITION** *position* **, void** <strong>\*</strong> `newElement` **);**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**位置 InsertBefore (位置** *位置* **、const の CString &** `newElement` **)。**<br /><br /> **POSITION InsertBefore( POSITION** *position* **, LPCTSTR** `newElement` **);**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**POSITION InsertBefore (POSITION** *POSITION* **, const CString&** `newElement` **);**<br /><br /> **POSITION InsertBefore( POSITION** *position* **, LPCTSTR** `newElement` **);**|
 
 ### <a name="example"></a>例
 
