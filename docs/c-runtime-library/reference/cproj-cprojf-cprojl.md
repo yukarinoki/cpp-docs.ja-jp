@@ -31,11 +31,11 @@ helpviewer_keywords:
 - cprojl function
 ms.assetid: 32b49623-13bf-4cae-802e-7912d75030fe
 ms.openlocfilehash: f1054172a7b5afde134ce9fa735a7eeda3bddafb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445670"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739850"
 ---
 # <a name="cproj-cprojf-cprojl"></a>cproj、cprojf、cprojl
 
@@ -68,15 +68,15 @@ _Lcomplex cprojl(
 
 ## <a name="return-value"></a>戻り値
 
-投影*z*リーマン球面上。
+Reimann 球の*z*の投影。
 
 ## <a name="remarks"></a>Remarks
 
-オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **cproj**を受け取って返す **_Fcomplex**と **_Lcomplex**値。 C プログラムで**cproj**は、 **_Dcomplex**値。
+でC++はオーバーロードが可能であるため、 **_Fcomplex**と **_Lcomplex**の値を受け取って返す**cproj**のオーバーロードを呼び出すことができます。 C プログラムでは、 **cproj** **は常に値を**取得して返します。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|C ヘッダー|C++ ヘッダー|
+|ルーチン|C ヘッダー|C++ ヘッダー|
 |-------------|--------------|------------------|
 |**cproj**、 **cprojf**、 **cprojl**|\<complex.h>|\<ccomplex>|
 

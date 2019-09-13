@@ -44,13 +44,13 @@ helpviewer_keywords:
 - cwprintf_s_l function
 ms.assetid: c28504fe-0d20-4f06-8f97-ee33225922ad
 ms.openlocfilehash: 3652587c9622c2eb9fe316782d1b1c7c9644dc8f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50606520"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739828"
 ---
-# <a name="cprintfs-cprintfsl-cwprintfs-cwprintfsl"></a>_cprintf_s、_cprintf_s_l、_cwprintf_s、_cwprintf_s_l
+# <a name="_cprintf_s-_cprintf_s_l-_cwprintf_s-_cwprintf_s_l"></a>_cprintf_s、_cprintf_s_l、_cwprintf_s、_cwprintf_s_l
 
 書式化してコンソールに出力します。 これらのバージョンの [_cprintf、_cprintf_l、_cwprintf、_cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md) は、「[CRT のセキュリティ機能](../../c-runtime-library/security-features-in-the-crt.md)」にあるとおり、セキュリティが強化されています。
 
@@ -97,16 +97,16 @@ int _cwprintf_s_l(
 
 ## <a name="remarks"></a>Remarks
 
-これらの関数の書式を設定し、一連の文字や、コンソールへの直接値を使用して、 **_putch**関数 (**_putwch**の **_cwprintf_s**) を出力文字。 各*引数*(ある場合) は変換されに対応する書式指定に応じて*形式*します。 形式が同じ形式し、機能、*形式*のパラメーター、 [printf_s](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)関数。 異なり、 **fprintf_s**、 **printf_s**、および**sprintf_s**関数も、 **_cprintf_s**も **_cwprintf_s**ライン フィード文字をキャリッジ リターンとライン フィード (CR-LF) の組み合わせに変換するときに出力します。
+これらの関数は、一連の文字と値を書式設定してコンソールに直接出力します。 **_putch**関数 ( **_cwprintf_s**の場合は **_putwch** ) を使用して文字を出力します。 各*引数*(存在する場合) は、対応する書式指定に従って変換および出力さ*れます。* 形式は、 [printf_s](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)関数の*format*パラメーターと同じ形式と機能を持ちます。 **Fprintf_s**、 **printf_s**、および**sprintf_s**関数とは異なり、出力時に、 **_cprintf_s**と **_cwprintf_s**はどちらもラインフィード文字をキャリッジリターンラインフィード (cr-lf) の組み合わせに変換しません。
 
-重要な違いは **_cwprintf_s** Windows NT で使用すると、Unicode 文字が表示されます。 異なり **_cprintf_s**、 **_cwprintf_s**コンソールの現在のロケールを使用します。
+重要な違いは、 **_cwprintf_s**では、Windows NT で使用されている場合に Unicode 文字が表示されることです。 **_Cprintf_s**とは異なり、 **_cwprintf_s**は現在のコンソールのロケールを使用します。
 
-これらの関数のバージョン、 **_l**現在のロケールの代わりに渡されたロケール パラメーターを使用する点を除いて、サフィックスは同じです。
+**_L**サフィックスを持つこれらの関数のバージョンは、現在のロケールの代わりに渡されたロケールパラメーターを使用する点を除いて同じです。
 
 > [!IMPORTANT]
 > *format* にユーザー定義の文字列を指定しないでください。
 
-保護されていないバージョンと同様 (を参照してください[_cprintf、_cprintf_l、_cwprintf、_cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md))、これらの関数は、パラメーターを検証し、で説明されているように、無効なパラメーター ハンドラーを呼び出します[パラメーターの検証](../../c-runtime-library/parameter-validation.md)場合は、*形式*null ポインターです。 これらの関数は、書式指定文字列自体の検証も行う点で、セキュリティが万全ではないバージョンと異なります。 未知の書式指定子や不適切な形式の書式指定子がある場合、これらの関数は無効なパラメーター ハンドラーを呼び出します。 すべてのケースで続けるには、実行が許可された場合、関数は-1 を返し設定と**errno**に**EINVAL**します。
+セキュリティで保護されていないバージョン (「 [_cprintf、_cprintf_l、_cwprintf、_cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md)」を参照) と同様に、これらの関数は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、パラメーターを検証し、無効なパラメーターハンドラーを呼び出します ( *format*が null の場合)。pointer. これらの関数は、書式指定文字列自体の検証も行う点で、セキュリティが万全ではないバージョンと異なります。 未知の書式指定子や不適切な形式の書式指定子がある場合、これらの関数は無効なパラメーター ハンドラーを呼び出します。 どのような場合でも、実行の継続が許可された場合、関数は-1 を返し、 **errno**を**EINVAL**に設定します。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 

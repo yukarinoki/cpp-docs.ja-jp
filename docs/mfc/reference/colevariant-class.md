@@ -20,12 +20,12 @@ helpviewer_keywords:
 - COleVariant [MFC], GetByteArrayFromVariantArray
 - COleVariant [MFC], SetString
 ms.assetid: e1b5cd4a-b066-4b9b-b48b-6215ed52d998
-ms.openlocfilehash: 0676f4896401ab777570666236c4639ad94c3a05
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 49cd4a8d3db436d5e3c4d29efbb4d80b4741a270
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69503048"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739791"
 ---
 # <a name="colevariant-class"></a>COleVariant クラス
 
@@ -68,14 +68,14 @@ class COleVariant : public tagVARIANT
 
 ## <a name="remarks"></a>Remarks
 
-このデータ型は、OLE オートメーションで使用されます。 具体的には、 [Dispparams](/windows/win32/api/oaidl/ns-oaidl-tagdispparams)構造体には、VARIANT 構造体の配列へのポインターが含まれています。 構造`DISPPARAMS`体は、パラメーターを[IDispatch:: Invoke](/windows/win32/api/oaidl/nf-oaidl-idispatch-invoke)に渡すために使用されます。
+このデータ型は、OLE オートメーションで使用されます。 具体的には、 [Dispparams](/windows/win32/api/oaidl/ns-oaidl-dispparams)構造体には、VARIANT 構造体の配列へのポインターが含まれています。 構造`DISPPARAMS`体は、パラメーターを[IDispatch:: Invoke](/windows/win32/api/oaidl/nf-oaidl-idispatch-invoke)に渡すために使用されます。
 
 > [!NOTE]
 > このクラスは、 `VARIANT`構造体から派生します。 これ`COleVariant`は、を呼び出す`VARIANT`パラメーターでを渡すことができ、 `VARIANT`構造体のデータメンバーがの`COleVariant`アクセス可能なデータメンバーであることを意味します。
 
 2つの関連する MFC クラス[COleCurrency](../../mfc/reference/colecurrency-class.md)および[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)は、variant データ型`VT_CY`CURRENCY () と`VT_DATE`DATE () をカプセル化します。 `COleVariant` クラスは、DAO クラスで広く使用されています。このクラスの一般的な使用方法については、[CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md) や [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) などのクラスを参照してください。
 
-詳細については、Windows SDK の「 [VARIANT](/windows/win32/api/oaidl/ns-oaidl-variant)」、「 [CURRENCY](/windows/win32/api/wtypes/ns-wtypes-cy)」、「 [Dispparams](/windows/win32/api/oaidl/ns-oaidl-tagdispparams)」、および「 [IDispatch:: Invoke](/windows/win32/api/oaidl/nf-oaidl-idispatch-invoke)エントリ」を参照してください。
+詳細については、Windows SDK の「 [VARIANT](/windows/win32/api/oaidl/ns-oaidl-variant)」、「 [CURRENCY](/windows/win32/api/wtypes/ns-wtypes-cy~r1)」、「 [Dispparams](/windows/win32/api/oaidl/ns-oaidl-dispparams)」、および「 [IDispatch:: Invoke](/windows/win32/api/oaidl/nf-oaidl-idispatch-invoke)エントリ」を参照してください。
 
 クラスの`COleVariant`詳細および ole オートメーションでの使用方法については、記事「[オートメーション](../../mfc/automation.md)」の「ole オートメーションでのパラメーターの引き渡し」を参照してください。
 

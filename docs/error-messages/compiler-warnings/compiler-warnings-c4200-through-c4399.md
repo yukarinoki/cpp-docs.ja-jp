@@ -1,4 +1,4 @@
----
+﻿---
 title: コンパイラ警告 (C4200 - C4399)
 ms.date: 04/21/2019
 f1_keywords:
@@ -120,8 +120,8 @@ ms.locfileid: "64857550"
 |[コンパイラの警告 (レベル 4) C4295](../../error-messages/compiler-warnings/compiler-warning-level-4-c4295.md)|'*配列*': 配列が小さすぎる、終端の null 文字を含める|
 |[コンパイラの警告 (レベル 4) C4296](../../error-messages/compiler-warnings/compiler-warning-level-4-c4296.md)|'*演算子*': 式は常に'*boolean_value*'|
 |[コンパイラの警告 (レベル 1) C4297](../../error-messages/compiler-warnings/compiler-warning-level-1-c4297.md)|'*関数*': 関数が例外をスローしないはず|
-|コンパイラの警告 (レベル 4) C4298|'*識別子*': タイプ ライブラリ内の識別子'*ライブラリ*'は既にマクロ; の名前に変更'*__identifier*'|
-|コンパイラの警告 (レベル 4) C4299|'*識別子*': タイプ ライブラリ内の識別子'*ライブラリ*'キーワード; の名前に変更'*__identifier*'|
+|コンパイラの警告 (レベル 4) C4298|'*識別子*': タイプ ライブラリ内の識別子'*ライブラリ*'は既にマクロ; の名前に変更' *__identifier*'|
+|コンパイラの警告 (レベル 4) C4299|'*識別子*': タイプ ライブラリ内の識別子'*ライブラリ*'キーワード; の名前に変更' *__identifier*'|
 |コンパイラの警告 c4301 エラー|'*derived_class*::*関数*': 仮想関数をオーバーライドするとだけ'*base_class*::*関数*' const または volatile で修飾子|
 |[コンパイラの警告 (レベル 2) C4302](../../error-messages/compiler-warnings/compiler-warning-level-2-c4302.md)|'*変換*': から切り捨て'*type1*'to'*type2*'|
 |コンパイラの警告 C4303|C スタイル キャスト '*type1*'to'*type2*' が静的なを使用して、static\_cast、 \_\_try\_cast またはdynamic\_cast|

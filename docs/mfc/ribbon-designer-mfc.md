@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Ribbon Designer (MFC)
 - MFC Ribbon Designer
 ms.assetid: 0806dfd6-7d11-471a-99e1-4072852231f9
-ms.openlocfilehash: 1634eee30063a48041d60fc1b7116ca9543c9de2
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: a39a3a69b43eb06d67fc806e2d4fa9aec323b650
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69511463"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907816"
 ---
 # <a name="ribbon-designer-mfc"></a>リボン デザイナー (MFC)
 
@@ -77,7 +77,7 @@ MFC アプリケーションでリボンリソースを使用するには、 [CM
 
 - **デザイナー画面:** リボンリソースの視覚的な表現を格納します。
 
-- **プロパティウィンドウ:** デザイナー画面で選択されている項目の属性を一覧表示します。
+- **[クラスウィザード](reference/mfc-class-wizard.md):** デザイナー画面で選択されている項目の属性を一覧表示します。
 
 - **リソースビューウィンドウ:** プロジェクトのリボンリソースを含むリソースが表示されます。
 

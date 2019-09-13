@@ -1,4 +1,4 @@
----
+﻿---
 title: restrict (C++ AMP)
 ms.date: 11/04/2016
 f1_keywords:
@@ -49,7 +49,7 @@ ms.locfileid: "62403387"
 
    - 再帰
 
-   - [volatile](../cpp/volatile-cpp.md)キーワードで宣言された変数。。
+   - [volatile](../cpp/volatile-cpp.md)キーワードで宣言された変数。
 
    - 仮想関数
 

@@ -58,6 +58,8 @@
               href: build/project-property-inheritance.md
             - name: プロジェクト ファイルを変更しないでプロパティとターゲットを変更する
               href: build/modify-project-properties-without-changing-project-file.md
+        - name: Visual Studio プロジェクトの Clang/LLVM (MSBuild)
+          href: build/clang-support-msbuild.md
         - name: ビルド時にライブラリとコンポーネントを参照する
           href: build/adding-references-in-visual-cpp-projects.md
         - name: プロジェクト出力ファイルを編成する
@@ -534,6 +536,10 @@
                       href: build/reference/errorreport-report-internal-compiler-errors.md
                     - name: /execution/charset (実行文字セットの設定)
                       href: build/reference/execution-charset-set-execution-character-set.md
+                    - name: '/experimental:module'
+                      href: build/reference/experimental-module.md
+                    - name: '/experimental:preprocessor'
+                      href: build/reference/experimental-preprocessor.md
                     - name: /F (スタック サイズの設定)
                       href: build/reference/f-set-stack-size.md
                     - name: 出力ファイル (/F) オプション
@@ -2883,7 +2889,7 @@
       href: security/how-user-account-control-uac-affects-your-application.md
     - name: 予測実行のサイド チャネルの C++ 開発者向けガイダンス
       href: security/developer-guidance-speculative-execution.md
-- name: 関連項目
+- name: 参照
   expanded: false
   items:
     - name: C/C++ 言語および標準ライブラリ
@@ -4794,7 +4800,7 @@
                       href: preprocessor/null-directive.md
                     - name: '#undef ディレクティブ (C/C++)'
                       href: preprocessor/hash-undef-directive-c-cpp.md
-                    - name: '#using ディレクティブ (C++)'
+                    - name: '#using ディレクティブ (C++/CLI)'
                       href: preprocessor/hash-using-directive-cpp.md
                 - name: プリプロセッサ演算子
                   expanded: false
@@ -4829,10 +4835,10 @@
                   href: preprocessor/conventions.md
                 - name: プリプロセッサの文法
                   href: preprocessor/preprocessor-grammar.md
-            - name: プラグマ ディレクティブと __Pragma キーワード
+            - name: プラグマ ディレクティブと __pragma キーワード
               expanded: false
               items:
-                - name: プラグマ ディレクティブと __Pragma キーワード
+                - name: プラグマ ディレクティブと __pragma キーワード
                   href: preprocessor/pragma-directives-and-the-pragma-keyword.md
                 - name: alloc_text プラグマ
                   href: preprocessor/alloc-text.md
@@ -6389,8 +6395,6 @@
                   expanded: false
                   items:
                     - name: ファイルとストリーム
-                      href: c-runtime-library/files-and-streams.md
-                    - name: テキスト ストリームとバイナリ ストリーム
                       href: c-runtime-library/text-and-binary-streams.md
                     - name: バイト ストリームとワイド ストリーム
                       href: c-runtime-library/byte-and-wide-streams.md

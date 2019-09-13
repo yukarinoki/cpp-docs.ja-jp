@@ -7,17 +7,17 @@ helpviewer_keywords:
 - C4673
 ms.assetid: 95626ec6-f05b-43c7-8b9a-a60a6f98dd30
 ms.openlocfilehash: ceaa5cd647dfb527713613b9ce3b5cd81a780fd7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50657731"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741394"
 ---
 # <a name="compiler-warning-level-4-c4673"></a>コンパイラの警告 (レベル 4) C4673
 
-'identifier' に、次の種類をスローすることは考慮されません catch サイト
+' identifier ' をスローすると、次の型はキャッチサイトでは考慮されません
 
-Throw オブジェクトで処理することはできません、**キャッチ**ブロックします。 各型を処理することはできませんが、この警告が含まれる行の直後のエラー出力に表示されます。 ハンドルされていない各種では、独自の警告があります。 詳細については、各型の警告を確認します。
+Throw オブジェクトを**catch**ブロックで処理することはできません。 処理できない型は、この警告を含む行のすぐ後にあるエラー出力に一覧表示されます。 未処理の型ごとに独自の警告があります。 詳細については、特定の種類ごとの警告を参照してください。
 
 次の例では、C4673 が生成されます。
 

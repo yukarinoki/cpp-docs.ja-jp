@@ -708,7 +708,7 @@ void EnableTabSwap(BOOL bEnable);
 
 タブのスワップが有効になっている場合、ユーザーはタブをドラッグして、タブコントロール内の相対位置を変更できます。
 
-##  <a name="ensurevisible"></a>CMFCBaseTabCtrl:: Ensurevisible\
+##  <a name="ensurevisible"></a>CMFCBaseTabCtrl:: Ensurevisible
 
 指定したタブが表示されるまでタブをスクロールします。
 

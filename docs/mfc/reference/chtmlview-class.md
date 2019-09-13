@@ -194,12 +194,12 @@ helpviewer_keywords:
 - CHtmlView [MFC], SetWidth
 - CHtmlView [MFC], Stop
 ms.assetid: 904976af-73de-4aba-84ac-cfae8e2be09a
-ms.openlocfilehash: 2d00a7216778f4a9a40b9d503bce7d26982669e0
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 9643379136398de7ce4d98aaa9ab5f22fa488c0e
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69506065"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927936"
 ---
 # <a name="chtmlview-class"></a>CHtmlView クラス
 
@@ -1194,7 +1194,7 @@ virtual void OnDocumentComplete(LPCTSTR lpszURL);
 
 すべてのフレームでこのイベントが発生するわけではありませんが、 [ondownloadbegin](#ondownloadbegin)イベントを`OnDocumentComplete`発生させる各フレームは、対応するイベントを発生させます。
 
-*Lpszurl*によって示される url は、ブラウザーが移動先として指定された url とは異なる場合があります。この url は正規化された url であるためです。 たとえば、 [Navigate](#navigate)または[Navigate2](#navigate2)の呼び出しで、アプリケーションで url "www.microsoft.com" が指定されている場合、に`OnNavigateComplete2`よって渡さ<http://www.microsoft.com/>れる url は "" になります。 また、サーバーがブラウザーを別の URL にリダイレクトしている場合は、リダイレクトされた URL がここに反映されます。
+*Lpszurl*によって示される url は、ブラウザーが移動先として指定された url とは異なる場合があります。この url は正規化された url であるためです。 たとえば、アプリケーションで[Navigate](#navigate)または[Navigate2](#navigate2)の呼び出し`"www.microsoft.com"`での url を指定した場合、によって`OnNavigateComplete2`渡され`"<https://www.microsoft.com/>"`た url はになります。 また、サーバーがブラウザーを別の URL にリダイレクトしている場合は、リダイレクトされた URL がここに反映されます。
 
 ##  <a name="ondocwindowactivate"></a>  CHtmlView::OnDocWindowActivate
 
@@ -1458,7 +1458,7 @@ virtual void OnNavigateComplete2(LPCTSTR strURL);
 
 Url パラメーターは、URL 表現がないシェル名前空間エンティティの場合、PIDL にすることができます。
 
-*StrURL*に含まれる url は、ブラウザーが移動先として指定された url とは異なる場合があります。この url は正規化された url であるためです。 たとえば、 [Navigate](#navigate)または[Navigate2](#navigate2)の呼び出しで、アプリケーションで url "www.microsoft.com" が指定されている場合、に`OnNavigateComplete2`よって渡さ<http://www.microsoft.com/>れる url は "" になります。 また、サーバーがブラウザーを別の URL にリダイレクトしている場合は、リダイレクトされた URL がここに反映されます。
+*StrURL*に含まれる url は、ブラウザーが移動先として指定された url とは異なる場合があります。この url は正規化された url であるためです。 たとえば、アプリケーションで[Navigate](#navigate)または[Navigate2](#navigate2)の呼び出し`"www.microsoft.com"`での url を指定した場合、によって`OnNavigateComplete2`渡され`"<https://www.microsoft.com/>"`た url はになります。 また、サーバーがブラウザーを別の URL にリダイレクトしている場合は、リダイレクトされた URL がここに反映されます。
 
 ##  <a name="onnavigateerror"></a>CHtmlView:: OnNavigateError
 

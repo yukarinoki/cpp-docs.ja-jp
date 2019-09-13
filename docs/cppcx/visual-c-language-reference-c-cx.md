@@ -1,15 +1,15 @@
 ---
-title: Visual C++ の言語リファレンス (C++/CX)
+title: C++/CX 言語リファレンス
 ms.date: 09/15/2017
 ms.assetid: 3f6abf92-4e5e-4ed8-8e11-f9252380d30a
-ms.openlocfilehash: 0b2d344f9889d5669164cd917ba569b5f35d83a5
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: ed8e2374daf862e99517fb113e869504b7c7aabc
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498425"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740861"
 ---
-# <a name="visual-c-language-reference-ccx"></a>Visual C++ の言語リファレンス (C++/CX)
+# <a name="ccx-language-reference"></a>C++/CX 言語リファレンス
 
 C++/CX は言語のC++一連の拡張機能であり、最新C++のものにできるだけ近い表現形式で Windows アプリと Windows ランタイムコンポーネントを作成できます。 /Cx C++を使用して、Windows アプリとコンポーネントをネイティブコードで記述しC#ます。このコードは、Visual、Visual Basic、JavaScript など、Windows ランタイムをサポートするその他の言語と簡単にやり取りできます。 生の COM インターフェイスまたは非例外的コードへの直接アクセスを必要とするまれなケースでは、 [Windows ランタイムC++テンプレートライブラリ (wrl)](../windows/windows-runtime-cpp-template-library-wrl.md)を使用できます。
 
@@ -38,4 +38,4 @@ C++/CX は言語のC++一連の拡張機能であり、最新C++のものにで�
 |[名前空間参照](../cppcx/namespaces-reference-c-cx.md)|既定の名前空間、Platform 名前空間、Platform::Collections、および関連する名前空間の参照ドキュメント。|
 |[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)|Windows ランタイム アプリでは使用できない CRT 関数の一覧を示します。|
 |[Windows 10 アプリを使ってみる](/windows/uwp/get-started/)|Windows 10 アプリについての全般的な概要と、詳細情報へのリンクがあります。|
-|[C++/Cx パート 0/ \[n\]:概要](https://blogs.msdn.microsoft.com/vcblog/2012/08/29/ccx-part-0-of-n-an-introduction/)<br /><br />[C++/Cx パート 1/ \[n\]:単純なクラス](https://blogs.msdn.microsoft.com/vcblog/2012/09/05/ccx-part-1-of-n-a-simple-class/)<br /><br />[C++/Cx パート 2/ \[n\]:磨耗のある種類](https://blogs.msdn.microsoft.com/vcblog/2012/09/17/ccx-part-2-of-n-types-that-wear-hats/)<br /><br />[C++/Cx パート 3 ( \[n\]):構築中](https://blogs.msdn.microsoft.com/vcblog/2012/10/05/ccx-part-3-of-n-under-construction/)<br /><br />[C++/Cx パート 4/ \[n\]:静的メンバー関数](https://blogs.msdn.microsoft.com/vcblog/2012/10/19/ccx-part-4-of-n-static-member-functions/)|/CxのC++入門用のC++ビジュアルブログシリーズです。|
+|[C++/Cx パート 0/ \[n\]:概要](https://blogs.msdn.microsoft.com/vcblog/2012/08/29/ccx-part-0-of-n-an-introduction/)<br /><br />[C++/Cx パート 1/ \[n\]:単純なクラス](https://blogs.msdn.microsoft.com/vcblog/2012/09/05/ccx-part-1-of-n-a-simple-class/)<br /><br />[C++/Cx パート 2/ \[n\]:磨耗のある種類](https://blogs.msdn.microsoft.com/vcblog/2012/09/17/ccx-part-2-of-n-types-that-wear-hats/)<br /><br />[C++/Cx パート 3 ( \[n\]):構築中](https://blogs.msdn.microsoft.com/vcblog/2012/10/05/ccx-part-3-of-n-under-construction/)<br /><br />[C++/Cx パート 4/ \[n\]:静的メンバー関数](https://blogs.msdn.microsoft.com/vcblog/2012/10/19/ccx-part-4-of-n-static-member-functions/)|/CxのC++入門ブログシリーズです。|

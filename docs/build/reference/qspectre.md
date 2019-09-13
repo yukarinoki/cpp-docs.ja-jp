@@ -1,16 +1,16 @@
 ---
 title: /Qspectre
-ms.date: 10/12/2018
+ms.date: 09/06/2019
 f1_keywords:
 - VC.Project.VCCLCompilerTool.SpectreMitigation
 helpviewer_keywords:
 - /Qspectre
-ms.openlocfilehash: 2b784e464f98ae6a1f9285f799d903ae689bf6d5
-ms.sourcegitcommit: 0867d648e0955ebad7260b5fbebfd6cd4d58f3c7
+ms.openlocfilehash: e8d03075a980a9b9c345ce351413e39a3c3444cb
+ms.sourcegitcommit: 7babce70714242cf498ca811eec3695fad3abd03
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68340995"
+ms.lasthandoff: 09/09/2019
+ms.locfileid: "70808834"
 ---
 # <a name="qspectre"></a>/Qspectre
 
@@ -31,6 +31,9 @@ ms.locfileid: "68340995"
 スペクターの軽減策を含むバージョンの Microsoft Visual C++ ライブラリもリリースされています。 Visual Studio 2017 以降用のスペクター軽減済みライブラリは、Visual Studio インストーラーでダウンロードできます。 これらは、 **[コンパイラ、ビルドツール、およびランタイム]** の **[個々のコンポーネント]** タブにあり、名前に "lib for Spectre" があります。 軽減策が有効な DLL および静的ランタイム ライブラリのいずれも、次の Visual C++ ランタイムのサブセットに使用できます。VC++ のスタートアップ コード、vcruntime140、msvcp140、concrt140、および vcamp140。 Dll は、アプリケーションローカル配置でのみサポートされています。 再頒布可能な Visual C++ 2017 以降のランタイムライブラリの内容は変更されていません。
 
 また、MFC および ATL 用の Spectre 軽減ライブラリをインストールすることもできます。 **Sdk、ライブラリ、およびフレームワーク**の **[個々のコンポーネント]** タブにあります。
+
+> [!NOTE]
+> ユニバーサル Windows (UWP) アプリまたはコンポーネント用の Spectre ライブラリのバージョンはありません。 このようなライブラリのアプリローカル展開はできません。
 
 ### <a name="applicability"></a>適用条件
 
@@ -68,11 +71,25 @@ ms.locfileid: "68340995"
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
+::: moniker range="vs-2019"
+
 1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
 
-1. **[構成プロパティ]**  >  **[C/C++]**  >  **[コマンド ライン]** プロパティ ページを選択します。
+1. [**構成プロパティ** > ] [ **CC++ /** > **コード生成**] プロパティページを選択します。
+
+1. **Spectre 軽減**プロパティの新しい値を選択します。 **[OK]** を選択して変更を適用します。
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
+
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
+
+1. **構成プロパティ** > **C/C++** > **コマンドライン** プロパティページを選択します。
 
 1. **[追加のオプション]** ボックスに **/Qspectre** コンパイラ オプションを入力します。 **[OK]** を選択して変更を適用します。
+
+::: moniker-end
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには
 

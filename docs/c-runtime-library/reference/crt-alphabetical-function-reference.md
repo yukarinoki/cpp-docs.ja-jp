@@ -77,7 +77,7 @@ ms.locfileid: "62340340"
 
 [_amsg_exit](amsg-exit.md)
 
-[and](and.md)
+[および](and.md)
 
 [and_eq](and-eq.md)
 

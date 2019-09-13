@@ -2,12 +2,12 @@
 title: ボックス化 (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: edfb12fa-2a9b-42f6-bdac-d4d76cb8274e
-ms.openlocfilehash: 3c281229b509ef72d37400b2088a6663be1afe42
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 90c5af31efc6523683227dbf54c85390bc98510a
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62257966"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740667"
 ---
 # <a name="boxing-ccx"></a>ボックス化 (C++/CX)
 
@@ -19,9 +19,9 @@ ms.locfileid: "62257966"
 
 [!code-cpp[cx_boxing#01](../cppcx/codesnippet/CPP/cx_boxing/class1.cpp#01)]
 
-### <a name="using-platformiboxt-to-support-nullable-value-types"></a>Platform::ibox を使用して\<T > を null 許容値型のサポート
+### <a name="using-platformiboxt-to-support-nullable-value-types"></a>Platform:: ibox\<T > を使用した null 許容値型のサポート
 
-C# および Visual Basic では、null 許容値型の概念をサポートしています。 C++/cli 使用することができます、CX、 `Platform::IBox<T>` null 許容値型パラメーターをサポートするパブリック メソッドを公開する型。 次の例は c++/cli CX のパブリック メソッドを c# 呼び出し元が null の引数を渡すと null を返します。
+C# および Visual Basic では、null 許容値型の概念をサポートしています。 /Cx C++では、型を使用`Platform::IBox<T>`して、null 許容値型パラメーターをサポートするパブリックメソッドを公開できます。 次の例は、 C++呼び出し元がC#引数の1つに null を渡すときに null を返す/cx パブリックメソッドを示しています。
 
 [!code-cpp[cx_boxing#02](../cppcx/codesnippet/CPP/cx_boxing/class1.h#02)]
 
@@ -40,5 +40,5 @@ C# XAML クライアントでは、これを次のように利用できます。
 
 [型システム (C++/CX)](../cppcx/type-system-c-cx.md)<br/>
 [キャスト (C++/CX)](../cppcx/casting-c-cx.md)<br/>
-[Visual C 言語リファレンス](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[C++/CX 言語リファレンス](../cppcx/visual-c-language-reference-c-cx.md)<br/>
 [名前空間参照](../cppcx/namespaces-reference-c-cx.md)

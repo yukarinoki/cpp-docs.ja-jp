@@ -1,4 +1,4 @@
----
+﻿---
 title: 例外:例外オブジェクトの解放
 ms.date: 11/04/2016
 helpviewer_keywords:

@@ -1,20 +1,20 @@
 ---
 title: __ud2
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __ud2
 helpviewer_keywords:
 - UD2 instruction
 - __ud2 intrinsic
 ms.assetid: 0831cd5a-8b65-402e-bb57-11e1d5d7ffd2
-ms.openlocfilehash: a36ab5c25ac9138b2a4d6810cc2a339e534f1695
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b5aa20804099af4d75dcc62a5e62ccc0d4a09566
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390179"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219762"
 ---
-# <a name="ud2"></a>__ud2
+# <a name="__ud2"></a>__ud2
 
 **Microsoft 固有の仕様**
 
@@ -22,15 +22,15 @@ ms.locfileid: "62390179"
 
 ## <a name="syntax"></a>構文
 
-```
+```C
 void __ud2();
 ```
 
 ## <a name="remarks"></a>Remarks
 
-プロセッサでは、未定義の命令を実行する場合に無効な opcode 例外が発生します。
+定義されていない命令を実行すると、プロセッサは無効なオペコード例外を発生させます。
 
-`__ud2`関数は、`UD2`マシン語命令、およびカーネル モードでのみ使用できます。 詳細については、ドキュメントの検索"Intel アーキテクチャ ソフトウェア デベロッパーズ マニュアル、ボリューム 2。命令の参照を設定、"で、 [Intel Corporation](https://software.intel.com/articles/intel-sdm)サイト。
+関数は`UD2`コンピューター命令と同じであり、カーネルモードでのみ使用できます。 `__ud2` 詳細については、「Intel Architecture Software Developer's Manual, Volume 2:命令セットリファレンス、「 [」を参照してください](https://software.intel.com/articles/intel-sdm)。
 
 ## <a name="requirements"></a>必要条件
 
@@ -38,15 +38,15 @@ void __ud2();
 |---------------|------------------|
 |`__ud2`|x86、x64|
 
-**ヘッダー ファイル** \<intrin.h >
+**ヘッダーファイル**\<>
 
 **Microsoft 固有の仕様はここまで**
 
 ## <a name="example"></a>例
 
-次の例では、例外を発生させます。 未定義の命令を実行します。 例外ハンドラーは、0 から 1 つに次のリターン コードを変更します。
+次の例では、未定義の命令を実行して、例外を発生させます。 次に、例外ハンドラーは、リターンコードを0から1に変更します。
 
-```
+```cpp
 // __ud2_intrinsic.cpp
 #include <stdio.h>
 #include <intrin.h>

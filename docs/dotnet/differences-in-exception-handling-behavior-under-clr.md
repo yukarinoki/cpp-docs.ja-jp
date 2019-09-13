@@ -18,7 +18,7 @@ ms.locfileid: "62400579"
 
 ##  <a name="vcconjumpingoutofafinallyblock"></a> ジャンプ、Finally ブロック
 
-ネイティブ C で/C++コードでは、警告を生成しますが、構造化例外処理（SEH）を使用して__finallyブロックからジャンプできます。  [/Clr](../build/reference/clr-common-language-runtime-compilation.md)の移動、**finallyに**ブロックが発生したエラー。
+ネイティブ C で/C++コードでは、警告を生成しますが、構造化例外処理（SEH）を使用して__**finally**ブロックからジャンプできます。  [/clr](../build/reference/clr-common-language-runtime-compilation.md)の移動、**finallyに**ブロックが発生したエラー。
 
 ```cpp
 // clr_exception_handling_4.cpp

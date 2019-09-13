@@ -30,7 +30,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62341601"
 ---
-# <a name="alloca"></a>_alloca
+# <a name="_alloca"></a>_alloca
 
 スタックにメモリを割り当てます。 安全なバージョンがあるため、この関数は非推奨します。参照してください[_malloca](malloca.md)します。
 

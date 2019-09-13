@@ -2,12 +2,12 @@
 title: 部分クラス (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: 69d93575-636c-4564-8cca-6dfba0c7e328
-ms.openlocfilehash: 71df19e98192a7704d4528fe730ce79977383a9b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 703f12498e0f2c68448e2b3896d3d5f906aba779
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384999"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740473"
 ---
 # <a name="partial-classes-ccx"></a>部分クラス (C++/CX)
 
@@ -98,5 +98,5 @@ ms.locfileid: "62384999"
 ## <a name="see-also"></a>関連項目
 
 [型システム](../cppcx/type-system-c-cx.md)<br/>
-[Visual C 言語リファレンス](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[C++/CX 言語リファレンス](../cppcx/visual-c-language-reference-c-cx.md)<br/>
 [名前空間参照](../cppcx/namespaces-reference-c-cx.md)

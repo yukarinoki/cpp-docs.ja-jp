@@ -9,12 +9,12 @@ helpviewer_keywords:
 - _U_STRINGorID class
 - U_STRINGorID class
 ms.assetid: 443cdc00-d265-4b27-8ef3-2feb95f3e5e3
-ms.openlocfilehash: 57363dbe2a1e7166b8da401900c3a7f913e63a9d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: c57d983e9680ce6d2cab375e427b80f4d3b6c2d6
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69495113"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739576"
 ---
 # <a name="_u_stringorid-class"></a>_U_STRINGorID クラス
 
@@ -45,7 +45,7 @@ class _U_STRINGorID
 
 ## <a name="remarks"></a>Remarks
 
-このクラスは、 [Findresource](/windows/win32/api/winbase/nf-winbase-findresourcew)、 [Loadicon](/windows/win32/api/winuser/nf-winuser-loadiconw)、 [loadicon](/windows/win32/api/winuser/nf-winuser-loadmenuw)などの Windows リソース管理 API にラッパーを実装するように設計されています。これらの関数は、リソースの名前または ID のいずれかである可能性がある LPCTSTR 引数を受け取ります。
+このクラスは、 [Findresource](/windows/win32/api/winbase/nf-winbase-findresourcea)、 [Loadicon](/windows/win32/api/winuser/nf-winuser-loadiconw)、 [loadicon](/windows/win32/api/winuser/nf-winuser-loadmenuw)などの Windows リソース管理 API にラッパーを実装するように設計されています。これらの関数は、リソースの名前または ID のいずれかである可能性がある LPCTSTR 引数を受け取ります。
 
 クラスは、2つのコンストラクターオーバーロードを定義します。1つは LPCTSTR 引数を受け取り、もう1つは UINT 引数を受け取ります。 UINT 引数は、MAKEINTRESOURCE マクロと、クラスの単一のデータメンバー [m_lpstr](#_u_stringorid__m_lpstr)に格納された結果を使用して、Windows リソース管理関数と互換性のあるリソースの種類に変換されます。 LPCTSTR コンストラクターの引数は、変換せずに直接格納されます。
 
