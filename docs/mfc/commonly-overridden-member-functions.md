@@ -1,6 +1,6 @@
 ---
 title: 通常オーバーライドされるメンバー関数
-ms.date: 11/04/2016
+ms.date: 09/06/2019
 helpviewer_keywords:
 - CDialog class [MFC], members
 - OnInitDialog function
@@ -10,34 +10,34 @@ helpviewer_keywords:
 - OnOK function
 - MFC dialog boxes [MFC], overriding member functions
 ms.assetid: 78eb566c-e361-4c86-8db5-c7e2791b249a
-ms.openlocfilehash: 26a1527dbdac4b2a9deb57fb13481f8d2f9cb5b7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f63dd6079b96181305f3207d4a1ef823df8d8ba4
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62152032"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907687"
 ---
 # <a name="commonly-overridden-member-functions"></a>通常オーバーライドされるメンバー関数
 
-最も一般的にオーバーライドするメンバー関数を一覧表示、次の表、 `CDialog`-クラスを派生します。
+次の表に、 `CDialog`の派生クラスでオーバーライドされる可能性の高いメンバー関数を示します。
 
-### <a name="commonly-overridden-member-functions-of-class-cdialog"></a>通常オーバーライドされる CDialog のクラスのメンバー関数
+### <a name="commonly-overridden-member-functions-of-class-cdialog"></a>クラス CDialog の通常オーバーライドされるメンバー関数
 
-|メンバー関数|メッセージに応答するには|オーバーライドの目的|
+|メンバー関数|応答メッセージ|上書きの目的|
 |---------------------|----------------------------|-----------------------------|
-|`OnInitDialog`|**WM_INITDIALOG**|ダイアログ ボックスのコントロールを初期化します。|
-|`OnOK`|**BN_CLICKED**ボタンの**IDOK**|ユーザーが [ok] ボタンをクリックしたときに応答します。|
-|`OnCancel`|**BN_CLICKED**ボタンの**IDCANCEL**|ユーザーが [キャンセル] ボタンをクリックしたときに応答します。|
+|`OnInitDialog`|**WM_INITDIALOG**|ダイアログボックスのコントロールを初期化します。|
+|`OnOK`|ボタン**IDOK**の場合は**BN_CLICKED**|ユーザーが [OK] ボタンをクリックしたときに応答します。|
+|`OnCancel`|ボタン**IDCANCEL**の**BN_CLICKED**|ユーザーが [キャンセル] ボタンをクリックしたときに応答します。|
 
-`OnInitDialog`、 `OnOK`、および`OnCancel`は仮想関数。 これらをオーバーライドする派生ダイアログ クラスを使用してオーバーライドする関数を宣言する、[プロパティ ウィンドウ](/visualstudio/ide/reference/properties-window)します。
+`OnInitDialog`、 `OnOK`、および`OnCancel`は仮想関数です。 これらをオーバーライドするには、 [MFC クラスウィザード](reference/mfc-class-wizard.md)を使用して、派生ダイアログクラスでオーバーライドする関数を宣言します。
 
-`OnInitDialog` ダイアログ ボックスが表示される直前に呼び出されます。 既定値を呼び出す必要があります`OnInitDialog`ハンドラー、オーバーライドから、通常は、ハンドラーの最初のアクションとして。 既定では、`OnInitDialog`返します**TRUE**  ダイアログ ボックスで、最初のコントロールにフォーカスを設定する必要があることを示します。
+`OnInitDialog`は、ダイアログボックスが表示される直前に呼び出されます。 オーバーライドから既定`OnInitDialog`のハンドラーを呼び出す必要があります。通常は、ハンドラーの最初のアクションです。 既定では`OnInitDialog` 、は、ダイアログボックスの最初のコントロールにフォーカスを設定する必要があることを示すために**TRUE**を返します。
 
-`OnOK` 通常、モードレスがないモーダル ダイアログ ボックスのオーバーライドされます。 モーダル ダイアログ ボックスのこのハンドラーをオーバーライドする場合は、オーバーライドから基底クラスのバージョンを呼び出す — ことを確認する`EndDialog`が呼び出されます: 呼び出したり`EndDialog`自分でします。
+`OnOK`は通常、モードレスではオーバーライドされますが、モーダルダイアログボックスには上書きされません。 モーダルダイアログボックスに対してこのハンドラーをオーバーライドする場合は、オーバーライドから基本クラスバージョンを呼び出して、 `EndDialog`が呼び出されるように`EndDialog`するか、自分で呼び出す必要があります。
 
-`OnCancel` モードレス ダイアログ ボックスに、通常はオーバーライドされます。
+`OnCancel`は通常、モードレスダイアログボックスでオーバーライドされます。
 
-これらのメンバー関数の詳細については、クラスを参照してください。 [CDialog](../mfc/reference/cdialog-class.md)で、 *MFC リファレンス*についての説明と[ ダイアログ ボックスのライフ サイクル](../mfc/life-cycle-of-a-dialog-box.md)します。
+これらのメンバー関数の詳細については、 *MFC リファレンス*のクラス[CDialog](../mfc/reference/cdialog-class.md)に関する記事と、[ダイアログボックスのライフサイクル](../mfc/life-cycle-of-a-dialog-box.md)に関する説明を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

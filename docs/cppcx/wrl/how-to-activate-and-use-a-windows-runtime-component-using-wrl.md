@@ -3,12 +3,12 @@ title: '方法: WRL を使用して Windows ランタイムコンポーネント
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 54828f02-6af3-45d1-b965-d0104442f8d5
-ms.openlocfilehash: 9e15886e9045f15adb929678ba45023ce80fb084
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 59a031968933ab151dc97a8089aff629026f5ea5
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498402"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926061"
 ---
 # <a name="how-to-activate-and-use-a-windows-runtime-component-using-wrl"></a>方法: WRL を使用して Windows ランタイムコンポーネントをアクティブ化して使用する
 
@@ -48,7 +48,7 @@ Windows ランタイムの使用を簡単にするためにC++ 、Windows ラン
 
    Windows ランタイムは、完全修飾名を使用して型を識別します。 `RuntimeClass_Windows_Foundation_Uri`パラメーターは、Windows ランタイムによって提供される文字列であり、必要なランタイムクラス名が含まれています。
 
-4. URI`"http://www.microsoft.com"`を表す[Microsoft:: Wrl:: Wrapper:: hstring](hstring-class.md)変数を初期化します。
+4. URI`"https://www.microsoft.com"`を表す[Microsoft:: Wrl:: Wrapper:: hstring](hstring-class.md)変数を初期化します。
 
    [!code-cpp[wrl-consume-component#6](../codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_4.cpp)]
 

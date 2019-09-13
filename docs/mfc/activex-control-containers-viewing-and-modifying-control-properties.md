@@ -1,5 +1,5 @@
 ---
-title: ActiveX コントロール コンテナー:コントロールのプロパティ表示および変更
+title: ActiveX コントロールコンテナー:コントロールのプロパティの表示と変更
 ms.date: 11/04/2016
 helpviewer_keywords:
 - properties [MFC], viewing and modifying
@@ -8,36 +8,36 @@ helpviewer_keywords:
 - ActiveX controls [MFC], properties
 - controls [MFC], properties
 ms.assetid: 14ce5152-742b-4e0d-a9ab-c7b456e32918
-ms.openlocfilehash: 0a03acfd880bcf63017eec9796315b98e5d5f4d9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1d42820efd06c2ae52f5d1b22b0bdfb6335c4a89
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394885"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907803"
 ---
-# <a name="activex-control-containers-viewing-and-modifying-control-properties"></a>ActiveX コントロール コンテナー:コントロールのプロパティ表示および変更
+# <a name="activex-control-containers-viewing-and-modifying-control-properties"></a>ActiveX コントロールコンテナー:コントロールのプロパティの表示と変更
 
-プロジェクトに ActiveX コントロールを挿入するときは、表示したり、ActiveX コントロールでサポートされるプロパティを変更すると便利です。 この記事では、これを行う Visual C リソース エディターを使用する方法について説明します。
+ActiveX コントロールをプロジェクトに挿入する場合は、ActiveX コントロールでサポートされているプロパティを表示および変更すると便利です。 この記事では、ビジュアルC++リソースエディターを使用してこれを行う方法について説明します。
 
-ActiveX コントロール コンテナー アプリケーションでは、埋め込まれたコントロールを使用する場合は、表示し、リソース エディターで、コントロールのプロパティを変更します。 デザイン時にプロパティ値を設定するのにリソース エディターを使用することもできます。 リソース エディターは、プロジェクトのリソース ファイルで、これらの値を自動的に保存されます。 コントロールの任意のインスタンスはこれらの値に初期化され、そのプロパティになります。
+ActiveX コントロールコンテナーアプリケーションで埋め込みコントロールを使用している場合は、リソースエディターでコントロールのプロパティを表示および変更できます。 また、リソースエディターを使用して、デザイン時にプロパティ値を設定することもできます。 リソースエディターは、これらの値をプロジェクトのリソースファイルに自動的に保存します。 その後、コントロールのすべてのインスタンスのプロパティが、これらの値に初期化されます。
 
-この手順をプロジェクトにコントロールを挿入することを前提としています。 詳しくは、次を参照してください。 [ActiveX コントロール コンテナー。コントロール コンテナー アプリケーションにコントロールを挿入する](../mfc/inserting-a-control-into-a-control-container-application.md)します。
+この手順では、プロジェクトにコントロールが挿入されていることを前提としています。 詳細について[は、「ActiveX コントロールコンテナー:コントロールコンテナーアプリケーション](../mfc/inserting-a-control-into-a-control-container-application.md)にコントロールを挿入します。
 
-コントロールのプロパティを表示するのには、最初の手順では、プロジェクトのダイアログ テンプレートに、コントロールのインスタンスを追加します。
+コントロールのプロパティを表示するための最初の手順は、コントロールのインスタンスをプロジェクトのダイアログテンプレートに追加することです。
 
 ### <a name="to-view-the-properties-of-a-control"></a>コントロールのプロパティを表示するには
 
-1. リソース ビューで、開く、**ダイアログ**フォルダー。
+1. リソースビューで、**ダイアログ**フォルダーを開きます。
 
-1. [メイン] ダイアログ ボックスのテンプレートを開きます。
+1. メインダイアログボックステンプレートを開きます。
 
-1. ActiveX コントロールを使用して、挿入、 **ActiveX コントロールの挿入** ダイアログ ボックス。 詳細については、次を参照してください。[表示およびダイアログ ボックスに ActiveX コントロールを追加](../windows/viewing-and-adding-activex-controls-to-a-dialog-box.md)します。
+1. **[Activex コントロールの挿入]** ダイアログボックスを使用して activex コントロールを挿入します。 詳細については、「[ダイアログボックスへの ActiveX コントロールの表示と追加](../windows/viewing-and-adding-activex-controls-to-a-dialog-box.md)」を参照してください。
 
-1. ダイアログ ボックスでは、ActiveX コントロールを選択します。
+1. ダイアログボックスで ActiveX コントロールを選択します。
 
-1. [プロパティ] ウィンドウからをクリックして、**プロパティ**ボタンをクリックします。
+1. **[プロパティ]** ウィンドウで、 **[プロパティ]** ボタンをクリックします。
 
-使用して、**プロパティ** ダイアログ ボックスを変更してすぐに新しいプロパティをテストします。
+**[プロパティ]** ダイアログボックスを使用すると、新しいプロパティをすぐに変更およびテストできます。
 
 ## <a name="see-also"></a>関連項目
 

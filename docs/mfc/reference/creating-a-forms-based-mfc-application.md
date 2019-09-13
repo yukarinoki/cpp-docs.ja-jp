@@ -1,18 +1,18 @@
 ---
 title: フォーム ベースの MFC アプリケーションの作成
-ms.date: 08/19/2019
+ms.date: 09/09/2019
 f1_keywords:
 - vc.appwiz.mfcforms.project
 helpviewer_keywords:
 - applications [MFC], forms-based
 - forms-based applications [MFC]
 ms.assetid: 048d2f7d-b60d-4386-ad8e-71d49af9c05e
-ms.openlocfilehash: 95c7f6061933245b2eb2b796e7a678e1e6b010a6
-ms.sourcegitcommit: bf1940a39029dbbd861f95480f55e5e8bd25cda0
+ms.openlocfilehash: 1dbbc5c29f85ced846cb3e07a02a5d6a55c94b20
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70108468"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70908049"
 ---
 # <a name="creating-a-forms-based-mfc-application"></a>フォーム ベースの MFC アプリケーションの作成
 
@@ -30,7 +30,7 @@ SDI、MDI、およびマルチ トップレベル ドキュメント アプリ�
 
 フォームベースのアプリケーションの基本クラスは、 [CFormView](cformview-class.md)です。 アプリケーションでデータベースをサポートする場合は、`CFormView` の任意の派生クラスも選択できます。 フォームとは、`CFormView` から派生するウィンドウ、または `CFormView` から継承されたクラスから派生するウィンドウです。
 
-[CView](cview-class.md)などの基本クラスを使用している場合でも、から`CFormView`派生した[mfc クラスを追加](adding-an-mfc-class.md)し、 [mfc クラスウィザード](document-template-strings-mfc-add-class-wizard.md)の **[DocTemplate リソースの生成]** チェックボックスをオンにすることで、アプリケーションをフォームベースで作成できます。
+[CView](cview-class.md)などの基本クラスを使用している場合でも、から`CFormView`派生した[MFC クラスを追加](adding-an-mfc-class.md)することによって、アプリケーションをフォームベースで作成できます。
 
 ウィザードを終了するとプロジェクトが開きます。基底クラスとして `CFormView` (または `CFormView` から継承されたクラス) を選択した場合、あるいはダイアログ ベースのアプリケーションを作成した場合は、Visual C++ によってダイアログ エディターが開かれます。 これで最初のフォームをデザインする準備が整いました。
 
