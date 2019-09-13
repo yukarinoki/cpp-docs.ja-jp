@@ -5,12 +5,12 @@ helpviewer_keywords:
 - CHeaderCtrl class [MFC], creating
 - header controls [MFC], creating
 ms.assetid: 7864d9d2-4a2c-4622-b58b-7b110a1e28d2
-ms.openlocfilehash: 99269214666c324214422ad989dbbd8bff6fc345
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 22739e5671fb0300011de84d976eff0ce26eaedb
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69508808"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907583"
 ---
 # <a name="creating-the-header-control"></a>ヘッダー コントロールの作成
 
@@ -24,7 +24,7 @@ ms.locfileid: "69508808"
 
 1. ヘッダーコントロールに項目を追加します。
 
-1. プロパティウィンドウを使用すると、処理する必要のあるヘッダーコントロールの通知メッセージのダイアログクラスのハンドラー関数をマップできます (「[関数へのメッセージのマッピング](../mfc/reference/mapping-messages-to-functions.md)」を参照してください)。
+1. [クラスウィザード](reference/mfc-class-wizard.md)を使用すると、処理する必要があるヘッダーコントロールの通知メッセージのダイアログクラスのハンドラー関数をマップできます (「[関数へのメッセージのマッピング](../mfc/reference/mapping-messages-to-functions.md)」を参照してください)。
 
 ### <a name="to-put-a-header-control-in-a-view-not-a-clistview"></a>(CListView ではなく) ビューにヘッダーコントロールを配置するには
 
@@ -34,7 +34,7 @@ ms.locfileid: "69508808"
 
 1. ヘッダーコントロールに項目を追加します。
 
-1. プロパティウィンドウを使用すると、処理する必要のあるヘッダーコントロールの通知メッセージのビュークラスのハンドラー関数をマップできます (「[関数へのメッセージのマッピング](../mfc/reference/mapping-messages-to-functions.md)」を参照してください)。
+1. [クラスウィザード](reference/mfc-class-wizard.md)を使用すると、処理する必要があるヘッダーコントロールの通知メッセージのビュークラスのハンドラー関数をマップできます (「[関数へのメッセージのマッピング](../mfc/reference/mapping-messages-to-functions.md)」を参照してください)。
 
 どちらの場合も、埋め込みコントロールオブジェクトは、ビューまたはダイアログオブジェクトの作成時に作成されます。 次に、 [CHeaderCtrl:: create](../mfc/reference/cheaderctrl-class.md#create)を呼び出して、コントロールウィンドウを作成する必要があります。 コントロールを配置するには、 [CHeaderCtrl:: Layout](../mfc/reference/cheaderctrl-class.md#layout)を呼び出して、コントロールの初期サイズと位置を決定し、 [SetWindowPos](../mfc/reference/cwnd-class.md#setwindowpos)を使用して必要な位置を設定します。 次に[、「ヘッダーコントロールへの項目の追加](../mfc/adding-items-to-the-header-control.md)」の説明に従って項目を追加します。
 

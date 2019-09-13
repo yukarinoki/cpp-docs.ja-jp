@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlFileMappingBase class
 ms.assetid: be555723-2790-4f57-a8fb-be4d68460775
-ms.openlocfilehash: 3d9627c7a19cccc0cd3aec46d71b23c8a84711bf
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: a20a8f6c00f9404aa819b87a6a69ad2c08fb4561
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497780"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739546"
 ---
 # <a name="catlfilemappingbase-class"></a>CAtlFileMappingBase クラス
 
@@ -190,7 +190,7 @@ HRESULT MapFile(
 マッピングを開始するファイルオフセット。 オフセット値は、システムのメモリ割り当ての粒度の倍数である必要があります。
 
 *dwMappingProtection*<br/>
-ファイルがマップされるときにファイルビューに必要な保護。 Windows SDK の「 *Flprotect* in [createfilemapping に](/windows/win32/api/winbase/nf-winbase-createfilemappingw)」を参照してください。
+ファイルがマップされるときにファイルビューに必要な保護。 Windows SDK の「 *Flprotect* in [createfilemapping に](/windows/win32/api/winbase/nf-winbase-createfilemappinga)」を参照してください。
 
 *dwViewDesiredAccess*<br/>
 ファイルビューへのアクセスの種類を指定します。したがって、ファイルによってマップされたページの保護が使用されます。 Windows SDK の[mapviewoffileex に](/windows/win32/api/memoryapi/nf-memoryapi-mapviewoffileex)の*dwDesiredAccess*を参照してください。
@@ -201,7 +201,7 @@ HRESULT MapFile(
 
 ### <a name="remarks"></a>Remarks
 
-ファイルマッピングオブジェクトが作成された後、ファイルのサイズがファイルマッピングオブジェクトのサイズを超えることはできません。その場合、すべてのファイルの内容を共有できるわけではありません。 詳細については、Windows SDK の「 [createfilemapping に](/windows/win32/api/winbase/nf-winbase-createfilemappingw)and [mapviewoffileex に](/windows/win32/api/memoryapi/nf-memoryapi-mapviewoffileex)」を参照してください。
+ファイルマッピングオブジェクトが作成された後、ファイルのサイズがファイルマッピングオブジェクトのサイズを超えることはできません。その場合、すべてのファイルの内容を共有できるわけではありません。 詳細については、Windows SDK の「 [createfilemapping に](/windows/win32/api/winbase/nf-winbase-createfilemappinga)and [mapviewoffileex に](/windows/win32/api/memoryapi/nf-memoryapi-mapviewoffileex)」を参照してください。
 
 ### <a name="example"></a>例
 
@@ -233,7 +233,7 @@ HRESULT MapSharedMem(
 マッピングオブジェクトが既に存在する場合は、TRUE に設定されているブール値を指します。
 
 *lpsa*<br/>
-返されたハンドル`SECURITY_ATTRIBUTES`を子プロセスが継承できるかどうかを決定する構造体へのポインター。 Windows SDK の「 [createfilemapping に](/windows/win32/api/winbase/nf-winbase-createfilemappingw)の*lpattributes* 」を参照してください。
+返されたハンドル`SECURITY_ATTRIBUTES`を子プロセスが継承できるかどうかを決定する構造体へのポインター。 Windows SDK の「 [createfilemapping に](/windows/win32/api/winbase/nf-winbase-createfilemappinga)の*lpattributes* 」を参照してください。
 
 *dwMappingProtection*<br/>
 ファイルがマップされるときに、ファイルビューに必要な保護。 Windows SDK の「 *flprotect* `CreateFileMapping` 」を参照してください。
@@ -247,7 +247,7 @@ HRESULT MapSharedMem(
 
 ### <a name="remarks"></a>Remarks
 
-`MapShareMem`[createfilemapping に](/windows/win32/api/winbase/nf-winbase-createfilemappingw)によって作成された既存のファイルマッピングオブジェクトをプロセス間で共有できるようにします。
+`MapShareMem`[createfilemapping に](/windows/win32/api/winbase/nf-winbase-createfilemappinga)によって作成された既存のファイルマッピングオブジェクトをプロセス間で共有できるようにします。
 
 ##  <a name="openmapping"></a>  CAtlFileMappingBase::OpenMapping
 

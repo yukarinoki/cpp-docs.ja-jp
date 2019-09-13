@@ -20,12 +20,12 @@ helpviewer_keywords:
 - IDataObjectImpl class
 - IDataObject, ATL implementation
 ms.assetid: b680f0f7-7795-40a1-a0f6-f48768201c89
-ms.openlocfilehash: 8e3369edd0731ede0892a405ef3de4e7b4cfdef1
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 80b5dfacd5f0c8b0deb8455a59d3f71b73a35ba0
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69495943"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739568"
 ---
 # <a name="idataobjectimpl-class"></a>IDataObjectImpl クラス
 
@@ -65,7 +65,7 @@ class IDataObjectImpl
 
 ## <a name="remarks"></a>Remarks
 
-[IDataObject](/windows/win32/api/objidl/nn-objidl-idataobject)インターフェイスには、Uniform Data Transfer をサポートするメソッドが用意されています。 `IDataObject`では、 [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)および[STGMEDIUM](/windows/win32/api/objidl/ns-objidl-stgmedium)という標準の形式の構造を使用してデータを取得し、格納します。
+[IDataObject](/windows/win32/api/objidl/nn-objidl-idataobject)インターフェイスには、Uniform Data Transfer をサポートするメソッドが用意されています。 `IDataObject`では、 [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)および[STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1)という標準の形式の構造を使用してデータを取得し、格納します。
 
 `IDataObject`では、データ変更通知を処理するための接続も管理します。 クライアントがデータオブジェクトからデータ変更通知を受信するためには、クライアントはアドバイズシンクと呼ばれるオブジェクトに[IAdviseSink](/windows/win32/api/objidl/nn-objidl-iadvisesink)インターフェイスを実装する必要があります。 次にクライアントがを`IDataObject::DAdvise`呼び出すと、データオブジェクトとアドバイズシンクの間に接続が確立されます。
 

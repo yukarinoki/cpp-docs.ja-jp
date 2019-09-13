@@ -1,14 +1,14 @@
 ---
 title: MFC の概念
-ms.date: 1/09/2018
+ms.date: 01/09/2018
 f1_keywords:
 - Concepts
-ms.openlocfilehash: 8d021350125acda52bb4ecf3919282cb7bbe52b1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5617051dc700bb1dd594a13627c9e3d01ef9caa9
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62239026"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927902"
 ---
 # <a name="mfc-concepts"></a>MFC の概念
 
@@ -52,7 +52,7 @@ MFC に用意されている例外処理機構について説明します。
 インターネットのサポートをアプリケーションに追加する方法を説明します。
 
 [Unicode とマルチバイト文字セット (MBCS: Multibyte Character Set) のサポート](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md)<br/>
-Unicode とマルチバイト文字セットを MFC と ATL のサポートを使用する方法について説明します。
+Unicode およびマルチバイト文字セットに対して MFC と ATL のサポートを使用する方法について説明します。
 
 [MFC COM](../mfc/mfc-com.md)<br/>
 COM をサポートするようにデザインされている MFC のサブセットについて説明します。ATL (Active Template Library) の大部分は COM プログラミング用にデザインされています。
@@ -63,7 +63,7 @@ COM をサポートするようにデザインされている MFC のサブセ�
 [MFC における Windows ソケット](../mfc/windows-sockets.md)<br/>
 Windows ソケットの MFC 実装について説明します。
 
-[MFC のリファレンス](../mfc/mfc-desktop-applications.md)<br/>
+[MFC リファレンス](../mfc/mfc-desktop-applications.md)<br/>
 MFC ライブラリのリファレンスが用意されています。このライブラリ内のクラスのセットは、Windows API に対して作成されたアプリケーションのフレームワークであるアプリケーション フレームワークを構成します。
 
 [MFC のサンプル](../overview/visual-cpp-samples.md)<br/>

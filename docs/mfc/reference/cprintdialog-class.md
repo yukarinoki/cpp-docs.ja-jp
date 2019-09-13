@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CPrintDialog [MFC], PrintSelection
 - CPrintDialog [MFC], m_pd
 ms.assetid: 5bdb2424-adf8-433d-a97c-df11a83bc4e4
-ms.openlocfilehash: 1f4a4dbec9a1c79ac1e0cec925156ae7db4c293e
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: ccc673d665d6d5beb92f398b21e6ffd313a58fc9
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69502899"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741360"
 ---
 # <a name="cprintdialog-class"></a>CPrintDialog クラス
 
@@ -104,7 +104,7 @@ class CPrintDialog : public CCommonDialog
 
 アプリケーションで、フレームワークの関与なしに印刷を処理する場合は、提供され`CPrintDialog`たコンストラクターを使用して "そのまま" クラスを使用するか、から`CPrintDialog`独自のダイアログクラスを派生させ、必要に応じてコンストラクターを記述することができます。 どちらの場合も、これらのダイアログボックスはクラス`CCommonDialog`から派生しているので、標準の MFC ダイアログボックスのように動作します。
 
-`CPrintDialog`オブジェクトを使用するには、最初に`CPrintDialog`コンストラクターを使用してオブジェクトを作成します。 ダイアログボックスが構築されたら、 [m_pd](#m_pd)構造体の任意の値を設定または変更して、ダイアログボックスのコントロールの値を初期化できます。 構造体の型は[PRINTDLG です。](/windows/win32/api/commdlg/ns-commdlg-pdw) `m_pd` この構造の詳細については、Windows SDK を参照してください。
+`CPrintDialog`オブジェクトを使用するには、最初に`CPrintDialog`コンストラクターを使用してオブジェクトを作成します。 ダイアログボックスが構築されたら、 [m_pd](#m_pd)構造体の任意の値を設定または変更して、ダイアログボックスのコントロールの値を初期化できます。 構造体の型は[PRINTDLG です。](/windows/win32/api/commdlg/ns-commdlg-printdlga) `m_pd` この構造の詳細については、Windows SDK を参照してください。
 
 メンバー `m_pd` `hDevMode`と`GlobalFree`メンバーに対して独自のハンドルを指定しない場合は、ダイアログボックスが終了したときに、これらのハンドルに対して Windows の関数を呼び出す必要があります。 `hDevNames` に`CWinApp::OnFilePrintSetup`用意されているフレームワークの印刷設定の実装を使用する場合、これらのハンドルを解放する必要はありません。 ハンドルはによって`CWinApp`保持され、 `CWinApp`のデストラクターで解放されます。 スタンドアロンを使用`CPrintDialog`する場合にのみ、これらのハンドルを解放する必要があります。
 
@@ -159,7 +159,7 @@ CPrintDialog(
 標準の Windows 印刷ダイアログボックスまたは印刷設定のダイアログボックスを表示するかどうかを指定します。 標準の Windows 印刷設定ダイアログボックスを表示するには、このパラメーターを TRUE に設定します。 Windows の [印刷] ダイアログボックスを表示するには、FALSE に設定します。 *Bprintsetuponly*が FALSE の場合でも、[印刷] ダイアログボックスに [印刷の設定] オプションボタンが表示されます。
 
 *dwFlags*<br/>
-ダイアログボックスの設定をカスタマイズするために使用できる1つ以上のフラグ。ビットごとの OR 演算子を使用して結合します。 たとえば、PD_ALLPAGES フラグは、既定の印刷範囲をドキュメントのすべてのページに設定します。 これらのフラグの詳細については、Windows SDK の[PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-pdw)構造体を参照してください。
+ダイアログボックスの設定をカスタマイズするために使用できる1つ以上のフラグ。ビットごとの OR 演算子を使用して結合します。 たとえば、PD_ALLPAGES フラグは、既定の印刷範囲をドキュメントのすべてのページに設定します。 これらのフラグの詳細については、Windows SDK の[PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-printdlga)構造体を参照してください。
 
 *pParentWnd*<br/>
 ダイアログボックスの親またはオーナーウィンドウへのポインター。
@@ -418,7 +418,7 @@ PRINTDLG& m_pd;
 
 ### <a name="remarks"></a>Remarks
 
-`CPrintDialog`オブジェクトを構築した後、を`m_pd`使用して、ダイアログボックスのさまざまな側面を設定してから、 [DoModal](#domodal)メンバー関数を呼び出すことができます。 `m_pd`構造の詳細については、Windows SDK の「 [PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-pdw) 」を参照してください。
+`CPrintDialog`オブジェクトを構築した後、を`m_pd`使用して、ダイアログボックスのさまざまな側面を設定してから、 [DoModal](#domodal)メンバー関数を呼び出すことができます。 `m_pd`構造の詳細については、Windows SDK の「 [PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-printdlga) 」を参照してください。
 
 `m_pd`データメンバーを直接変更すると、すべての既定の動作がオーバーライドされます。
 

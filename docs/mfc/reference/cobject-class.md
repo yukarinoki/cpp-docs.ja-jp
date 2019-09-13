@@ -1,4 +1,4 @@
----
+﻿---
 title: CObject クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -177,7 +177,7 @@ virtual void Dump(CDumpContext& dc) const;
 
 ### <a name="example"></a>例
 
-すべての`CObject`の例で使用されている`CAge`クラスのリストについては、[CObList::CObList](../../mfc/reference/coblist-class.md#coblist) を参照してください。
+すべての`CAge`の例で使用されている`CObject`クラスのリストについては、[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)を参照してください。
 
 [!code-cpp[NVC_MFCCObjectSample#9](../../mfc/codesnippet/cpp/cobject-class_3.cpp)]
 
@@ -213,7 +213,7 @@ virtual CRuntimeClass* GetRuntimeClass() const;
 
 ### <a name="example"></a>例
 
-参照してください[使われて](../../mfc/reference/coblist-class.md#coblist)の一覧については、`CAge`すべてで使用されるクラス`CObject`例。
+すべての`CAge`の例で使用されている`CObject`クラスのリストについては、[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)を参照してください。
 
 [!code-cpp[NVC_MFCCObjectSample#10](../../mfc/codesnippet/cpp/cobject-class_4.cpp)]
 
@@ -242,7 +242,7 @@ C++ ポリモーフィズムの機能を損なうことためには、広範囲�
 
 ### <a name="example"></a>例
 
-参照してください[使われて](../../mfc/reference/coblist-class.md#coblist)の一覧については、`CAge`すべてで使用されるクラス`CObject`例。
+すべての`CAge`の例で使用されている`CObject`クラスのリストについては、[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)を参照してください。
 
 [!code-cpp[NVC_MFCCObjectSample#11](../../mfc/codesnippet/cpp/cobject-class_5.cpp)]
 
@@ -267,7 +267,7 @@ BOOL IsSerializable() const;
 
 ### <a name="example"></a>例
 
-すべての`CObject`の例で使用されている`CAge`クラスのリストについては、[CObList::CObList](../../mfc/reference/coblist-class.md#coblist) を参照してください。
+すべての`CAge`の例で使用されている`CObject`クラスのリストについては、[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)を参照してください。
 
 [!code-cpp[NVC_MFCCObjectSample#12](../../mfc/codesnippet/cpp/cobject-class_6.cpp)]
 
@@ -296,7 +296,7 @@ void PASCAL operator delete(
 
 [!code-cpp[NVC_MFCCObjectSample#14](../../mfc/codesnippet/cpp/cobject-class_7.cpp)]
 
-CPP ファイル実装の前に、**delete** の 3 番目のバージョンが使用され、後でレポートするために割り当て済みのブロックにファイル名と行の数を格納します。 追加のパラメーターを指定する必要はありません。マクロがそれを対処します。
+実装の前に、します。CPP ファイルを次の 3 番目のバージョン**削除**使用される、割り当て済みのブロックを後でレポートをファイル名と行の数を格納します。 追加のパラメーターを指定する必要はありません。マクロがそれを対処します。
 
 リークの検出をそれでもデバッグ モードで DEBUG_NEW を使用しない場合でも上記で説明したソース ファイルの行番号のレポート作成しなくてもします。
 
@@ -304,7 +304,7 @@ CPP ファイル実装の前に、**delete** の 3 番目のバージョンが�
 
 ### <a name="example"></a>例
 
-すべての`CObject`の例で使用されている`CAge`クラスのリストについては、[CObList::CObList](../../mfc/reference/coblist-class.md#coblist) を参照してください。
+すべての`CAge`の例で使用されている`CObject`クラスのリストについては、[CObList::CObList](../../mfc/reference/coblist-class.md#coblist) を参照してください。
 
 [!code-cpp[NVC_MFCCObjectSample#15](../../mfc/codesnippet/cpp/cobject-class_8.cpp)]
 
@@ -324,22 +324,22 @@ void* PASCAL operator new(
 
 ### <a name="remarks"></a>Remarks
 
-デバッグ バージョンでは、**new** 演算子メモリ リークを検出するように設計された割り当て監視スキームに参加します。
+デバッグ バージョンでは、**new**  演算子メモリ リークを検出するように設計された割り当て監視スキームに参加します。
 
 コード行を使用する場合
 
 [!code-cpp[NVC_MFCCObjectSample#14](../../mfc/codesnippet/cpp/cobject-class_7.cpp)]
 
-CPP ファイルの実装の前に、 2 番目のバージョンの **new** が使用され、後で割り当て済みのブロックにでファイル名と行の数を格納します。追加のパラメーターを指定する必要はありません。マクロがそれを対処します。
+CPP ファイルの実装の前に、 2 番目のバージョンの **new** が使用され、後で割り当て済みのブロックにでファイル名と行の数を格納します。 追加のパラメーターを指定する必要はありません。マクロがそれを対処します。
 
 リークの検出をそれでもデバッグ モードで DEBUG_NEW を使用しない場合でも上記で説明したソース ファイルの行番号のレポート作成しなくてもします。
 
 > [!NOTE]
-> 演算子をオーバーライドする場合は、**delete** もオーバーライドする必要があります。標準ライブラリの`_new_handler`関数を使用しないでください。
+>  演算子をオーバーライドする場合は、**delete** もオーバーライドする必要があります。 標準ライブラリの`_new_handler`関数を使用しないでください。
 
 ### <a name="example"></a>例
 
-参照してください[使われて](../../mfc/reference/coblist-class.md#coblist)の一覧については、`CAge`で使用されるクラス、`CObject`例。
+すべての`CAge`の例で使用されている`CObject`クラスのリストについては、[CObList::CObList](../../mfc/reference/coblist-class.md#coblist) を参照してください。
 
 [!code-cpp[NVC_MFCCObjectSample#16](../../mfc/codesnippet/cpp/cobject-class_9.h)]
 
@@ -364,13 +364,13 @@ A`CArchive`またはからにシリアル化するオブジェクト。
 
 [CArchive::IsLoading](../../mfc/reference/carchive-class.md#isloading) または [CArchive::IsStoring](../../mfc/reference/carchive-class.md#isstoring) を使用して、アーカイブがロード中か保存中かを判断します。
 
-`Serialize` によって呼び出される[CArchive::ReadObject](../../mfc/reference/carchive-class.md#readobject)と[CArchive::WriteObject](../../mfc/reference/carchive-class.md#writeobject)します。 これらの関数が関連付けられている、`CArchive`挿入演算子 ( **< \<**) と抽出演算子 ( **>>**)。
+`Serialize` によって呼び出される[CArchive::ReadObject](../../mfc/reference/carchive-class.md#readobject)と[CArchive::WriteObject](../../mfc/reference/carchive-class.md#writeobject)します。 これらの関数が関連付けられている、`CArchive`挿入演算子 ( **< \<** ) と抽出演算子 ( **>>** )。
 
-シリアル化の例は、[シリアル化: オブジェクトのシリアル化](../../mfc/serialization-serializing-an-object.md) を参照してください。
+シリアル化の例は、[シリアル化:オブジェクトのシリアル化](../../mfc/serialization-serializing-an-object.md) を参照してください。
 
 ### <a name="example"></a>例
 
-参照してください[使われて](../../mfc/reference/coblist-class.md#coblist)の一覧については、`CAge`すべてで使用されるクラス`CObject`例。
+すべての`CAge`の例で使用されている`CObject`クラスのリストについては、[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)を参照してください。
 
 [!code-cpp[NVC_MFCCObjectSample#13](../../mfc/codesnippet/cpp/cobject-class_10.cpp)]
 

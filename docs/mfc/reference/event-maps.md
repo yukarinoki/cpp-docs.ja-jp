@@ -1,15 +1,15 @@
 ---
 title: イベント マップ
-ms.date: 06/20/2018
+ms.date: 09/07/2019
 helpviewer_keywords:
 - event maps [MFC]
 ms.assetid: 1ed53aee-bc53-43cd-834a-6fb935c0d29b
-ms.openlocfilehash: ef730574b26a4c3619df886b72770ce7e035a40e
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 34741dc05efe77c0932343739540370f54db6008
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916463"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907893"
 ---
 # <a name="event-maps"></a>イベント マップ
 
@@ -21,7 +21,7 @@ Microsoft Foundation Class ライブラリには、イベントを発生させ�
 
 マクロ`EVENT_STOCK_CLICK`は、マウスクリックが検出されるたびに、コントロールがストッククリックイベントを起動することを示します。 その他のストックイベントの詳細な一覧については[、ActiveX コントロールに関する記事をご覧ください。イベント](../../mfc/mfc-activex-controls-events.md)。 カスタムイベントを示すマクロを使用することもできます。
 
-イベントマップマクロは重要ですが、通常は直接挿入されません。 これは、イベントをイベントに関連付けるために、ソースファイルを使用するときに、ソースファイルにイベントマップエントリが自動的に作成されるためです。これは、プロパティウィンドウによってイベントが発生します。 イベントマップエントリを編集または追加する場合はいつでも、プロパティウィンドウを使用できます。
+イベントマップマクロは重要ですが、通常は直接挿入されません。 これは、 **[プロパティ]** ウィンドウ (**クラスビュー**) では、イベント発生関数をイベントに関連付ける際に、ソースファイルにイベントマップエントリが自動的に作成されるためです。 イベントマップエントリを編集または追加する場合はいつでも、 **[プロパティ]** ウィンドウを使用できます。
 
 MFC には、イベントマップをサポートするために次のマクロが用意されています。
 
@@ -143,7 +143,7 @@ RGB カラー値を表す32ビット整数を含むリストを指定し、そ�
 |VTS_COLOR|OLE_COLOR|
 |VTS_CY|貨|
 |VTS_DATE|DATE|
-|VTS_BSTR|**const** __|
+|VTS_BSTR|**const**__char\*__|
 |VTS_DISPATCH|LPDISPATCH|
 |VTS_FONT|`IFontDispatch*`|
 |VTS_HANDLE|HANDLE|

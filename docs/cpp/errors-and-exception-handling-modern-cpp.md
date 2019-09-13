@@ -1,4 +1,4 @@
----
+﻿---
 title: エラーと例外の処理 (Modern C++)
 ms.date: 05/07/2019
 ms.topic: conceptual

@@ -1,6 +1,6 @@
 ---
 title: __halt
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __halt
 - __halt_cpp
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - __halt intrinsic
 - HLT instruction
 ms.assetid: a074f44a-101c-45a5-8a5e-cfd223c34002
-ms.openlocfilehash: dd68c88a13035ca25f89304bcd84267a73978420
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 66f5e05e7673523966ef35ac743fc585930b511c
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344437"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222151"
 ---
-# <a name="halt"></a>__halt
+# <a name="__halt"></a>__halt
 
 **Microsoft 固有の仕様**
 
-有効な割り込み、マスク不可能割り込み (NMI)、またはリセットが発生するまでのマイクロプロセッサを停止します。
+有効な割り込み、nonmaskable interrupt (NMI)、またはリセットが発生するまで、マイクロプロセッサを停止します。
 
 ## <a name="syntax"></a>構文
 
-```
+```C
 void __halt( void );
 ```
 
@@ -33,11 +33,11 @@ void __halt( void );
 |---------------|------------------|
 |`__halt`|x86、x64|
 
-**ヘッダー ファイル** \<intrin.h >
+**ヘッダーファイル**\<>
 
 ## <a name="remarks"></a>Remarks
 
-`__halt`関数は、`HLT`マシン語命令、およびカーネル モードでのみ使用できます。 詳細については、ドキュメントの検索"Intel アーキテクチャ ソフトウェア デベロッパーズ マニュアル、ボリューム 2。命令の参照を設定、"で、 [Intel Corporation](https://software.intel.com/articles/intel-sdm)サイト。
+関数は`HLT`コンピューター命令と同じであり、カーネルモードでのみ使用できます。 `__halt` 詳細については、「Intel Architecture Software Developer's Manual, Volume 2:命令セットリファレンス、「 [」を参照してください](https://software.intel.com/articles/intel-sdm)。
 
 **Microsoft 固有の仕様はここまで**
 

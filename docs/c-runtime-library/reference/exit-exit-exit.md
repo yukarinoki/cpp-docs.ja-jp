@@ -1,6 +1,6 @@
 ---
 title: exit、_Exit、_exit
-ms.date: 1/02/2018
+ms.date: 01/02/2018
 apiname:
 - _exit
 - exit
@@ -30,19 +30,19 @@ helpviewer_keywords:
 - processes, terminating
 - function calls, terminating
 - process termination, calling
-ms.openlocfilehash: 7b2a22649d779f382bb4055b1e44c14312627ccd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: c16f306d745b96d8bc7c223213378140fdae14bb
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62339352"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927395"
 ---
-# <a name="exit-exit-exit"></a>exit、_Exit、_exit
+# <a name="exit-_exit-_exit"></a>exit、_Exit、_exit
 
-呼び出しプロセスを終了します。 **exit**はクリーンアップ後に、関数が終了されます。**\_exit**と **\_Exit**は直ちに終了します。
+呼び出しプロセスを終了します。 **exit**はクリーンアップ後に、関数が終了されます。 **\_exit**と **\_Exit**は直ちに終了します。
 
 > [!NOTE]
-> テスト シナリオまたはデバッグ シナリオを除く、ユニバーサル Windows プラットフォーム (UWP) アプリをシャット ダウンは、このメソッドを使用しないでください。 ストア アプリを終了するプログラムや UI の方法はに従って許可されていません、 [Microsoft Store ポリシー](/legal/windows/agreements/store-policies)します。 詳細については、次を参照してください。 [UWP アプリのライフ サイクル](/windows/uwp/launch-resume/app-lifecycle)します。 Windows 10 アプリについて詳しくは、「 [Windows 10 アプリの使用方法のガイド](https://developer.microsoft.com/windows/apps)」をご覧ください。
+> テストシナリオまたはデバッグシナリオを除き、このメソッドを使用してユニバーサル Windows プラットフォーム (UWP) アプリをシャットダウンしないでください。 プログラムまたは UI がストアアプリを閉じる方法は、 [Microsoft Store ポリシー](/legal/windows/agreements/store-policies)によっては許可されていません。 詳細については、「 [UWP アプリのライフサイクル](/windows/uwp/launch-resume/app-lifecycle)」を参照してください。 Windows 10 アプリについて詳しくは、「 [Windows 10 アプリの使用方法のガイド](https://developer.microsoft.com/windows/apps)」をご覧ください。
 
 ## <a name="syntax"></a>構文
 
@@ -67,7 +67,7 @@ void _exit(
 
 **exit**、 **\_Exit**と **\_exit**関数が呼び出し元のプロセスを終了します。 **exit**関数がデストラクターを呼び出します、スレッド ローカル オブジェクトの呼び出し、— 後入れ先出し (LIFO) の順序で — によって登録されている関数**atexit**と **\_onexit**をプロセスが終了する前にすべてのファイル バッファーをフラッシュします。 **\_Exit**と **\_exit**関数は、スレッド ローカル オブジェクトの破棄または処理せず、プロセスを終了**atexit**または **\_onexit**関数、ストリーム バッファーのフラッシュもしないでします。
 
-ですが、 **exit**、 **\_Exit** と **\_exit** 呼び出しは、値の値を返しません *状態* ホスト環境を使用可能にまたは、プロセスの終了後、存在する場合、呼び出し元のプロセスを待機しています。 呼び出し元のセットでは、通常、 *状態* 値を通常の終了を示す 0 またはその他の値はエラーを示します。 *状態*値は、オペレーティング システムのバッチ コマンドを使用可能な**ERRORLEVEL**は 2 つの定数のいずれかで表されます。**EXIT_SUCCESS**、0 の値を表すまたは**EXIT_FAILURE**1 の値を表します。
+ですが、 **exit**、 **\_Exit** と **\_exit** 呼び出しは、値の値を返しません *状態* ホスト環境を使用可能にまたは、プロセスの終了後、存在する場合、呼び出し元のプロセスを待機しています。 呼び出し元のセットでは、通常、 *状態* 値を通常の終了を示す 0 またはその他の値はエラーを示します。 *Status*値は、オペレーティングシステムのバッチコマンド**ERRORLEVEL**で使用でき、次の2つの定数のいずれかによって表されます。**EXIT_SUCCESS**は、値0、または値1を表す**EXIT_FAILURE**を表します。
 
 **exit**、 **\_Exit**、 **\_exit**、 **quick\_exit**、 **\_cexit**、および **\_c\_exit**関数の動作は次のようにします。
 
@@ -91,7 +91,7 @@ void last_fn() {}
 }
 ```
 
-使用しない**DLL_PROCESS_ATTACH**を呼び出す**exit**から**DllMain**します。 終了する、 **DLLMain**関数を返す**FALSE**から**DLL_PROCESS_ATTACH**します。
+使用しない**DLL_PROCESS_ATTACH**を呼び出す**exit**から**DllMain**します。 **DLLMain**関数を終了するには、 **DLL_PROCESS_ATTACH**から**FALSE**を返します。
 
 ## <a name="requirements"></a>必要条件
 

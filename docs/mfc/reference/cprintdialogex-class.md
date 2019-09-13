@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CPrintDialogEx [MFC], PrintSelection
 - CPrintDialogEx [MFC], m_pdex
 ms.assetid: 1d506703-ee1c-44cc-b4ce-4e778fec26b8
-ms.openlocfilehash: 2334fb0a420e14aa4fa8b8b570671fb9a611de32
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 76c3968b20a66e9653fd769339e23ede2a756bbd
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69502882"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741329"
 ---
 # <a name="cprintdialogex-class"></a>CPrintDialogEx クラス
 
@@ -94,7 +94,7 @@ class CPrintDialogEx : public CCommonDialog
 
 アプリケーションで、フレームワークの関与なしに印刷を処理する場合は、提供され`CPrintDialogEx`たコンストラクターを使用して "そのまま" クラスを使用するか、から`CPrintDialogEx`独自のダイアログクラスを派生させ、必要に応じてコンストラクターを記述することができます。 どちらの場合も、これらのダイアログボックスはクラス`CCommonDialog`から派生しているので、標準の MFC ダイアログボックスのように動作します。
 
-`CPrintDialogEx`オブジェクトを使用するには、最初に`CPrintDialogEx`コンストラクターを使用してオブジェクトを作成します。 ダイアログボックスが構築されたら、 [m_pdex](#m_pdex)構造体の任意の値を設定または変更して、ダイアログボックスのコントロールの値を初期化できます。 構造体の型は[printdlgex です。](/windows/win32/api/commdlg/ns-commdlg-pdexw) `m_pdex` この構造の詳細については、Windows SDK を参照してください。
+`CPrintDialogEx`オブジェクトを使用するには、最初に`CPrintDialogEx`コンストラクターを使用してオブジェクトを作成します。 ダイアログボックスが構築されたら、 [m_pdex](#m_pdex)構造体の任意の値を設定または変更して、ダイアログボックスのコントロールの値を初期化できます。 構造体の型は[printdlgex です。](/windows/win32/api/commdlg/ns-commdlg-printdlgexw) `m_pdex` この構造の詳細については、Windows SDK を参照してください。
 
 メンバー `m_pdex` `hDevMode`と`GlobalFree`メンバーに対して独自のハンドルを指定しない場合は、ダイアログボックスが終了したときに、これらのハンドルに対して Windows の関数を呼び出す必要があります。 `hDevNames`
 
@@ -143,7 +143,7 @@ CPrintDialogEx(
 ### <a name="parameters"></a>パラメーター
 
 *dwFlags*<br/>
-ダイアログボックスの設定をカスタマイズするために使用できる1つ以上のフラグ。ビットごとの OR 演算子を使用して結合します。 たとえば、PD_ALLPAGES フラグは、既定の印刷範囲をドキュメントのすべてのページに設定します。 これらのフラグの詳細については、Windows SDK の[Printdlgex](/windows/win32/api/commdlg/ns-commdlg-pdexw)構造体を参照してください。
+ダイアログボックスの設定をカスタマイズするために使用できる1つ以上のフラグ。ビットごとの OR 演算子を使用して結合します。 たとえば、PD_ALLPAGES フラグは、既定の印刷範囲をドキュメントのすべてのページに設定します。 これらのフラグの詳細については、Windows SDK の[Printdlgex](/windows/win32/api/commdlg/ns-commdlg-printdlgexw)構造体を参照してください。
 
 *pParentWnd*<br/>
 ダイアログボックスの親またはオーナーウィンドウへのポインター。
@@ -304,7 +304,7 @@ PRINTDLGEX m_pdex;
 
 ### <a name="remarks"></a>Remarks
 
-`CPrintDialogEx`オブジェクトを構築した後、を`m_pdex`使用して、ダイアログボックスのさまざまな側面を設定してから、 [DoModal](#domodal)メンバー関数を呼び出すことができます。 `m_pdex`構造の詳細については、Windows SDK の「 [printdlgex](/windows/win32/api/commdlg/ns-commdlg-pdexw) 」を参照してください。
+`CPrintDialogEx`オブジェクトを構築した後、を`m_pdex`使用して、ダイアログボックスのさまざまな側面を設定してから、 [DoModal](#domodal)メンバー関数を呼び出すことができます。 `m_pdex`構造の詳細については、Windows SDK の「 [printdlgex](/windows/win32/api/commdlg/ns-commdlg-printdlgexw) 」を参照してください。
 
 `m_pdex`データメンバーを直接変更すると、すべての既定の動作がオーバーライドされます。
 
@@ -358,7 +358,7 @@ BOOL PrintRange() const;
 
 ### <a name="remarks"></a>Remarks
 
-指定されたページ範囲は[m_pdex](#m_pdex)から判別でき`nPageRanges`ます`nMaxPageRanges`(Windows SDK `lpPageRanges`の[printdlgex](/windows/win32/api/commdlg/ns-commdlg-pdexw)構造体で、、およびを参照してください)。
+指定されたページ範囲は[m_pdex](#m_pdex)から判別でき`nPageRanges`ます`nMaxPageRanges`(Windows SDK `lpPageRanges`の[printdlgex](/windows/win32/api/commdlg/ns-commdlg-printdlgexw)構造体で、、およびを参照してください)。
 
 ##  <a name="printselection"></a>CPrintDialogEx::P rintSelection
 

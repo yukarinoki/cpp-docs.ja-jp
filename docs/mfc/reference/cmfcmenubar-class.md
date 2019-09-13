@@ -106,12 +106,12 @@ helpviewer_keywords:
 - CMFCMenuBar [MFC], SetRecentlyUsedMenus
 - CMFCMenuBar [MFC], SetShowAllCommands
 ms.assetid: 8a3ce4c7-b012-4dc0-b4f8-53c10b4b86b8
-ms.openlocfilehash: 61a5f83e31b4793ca6467287c99f3b9708659402
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 278feca6b64915d0cf789e8f68af3c3fdf9b3129
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69505231"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739473"
 ---
 # <a name="cmfcmenubar-class"></a>CMFCMenuBar クラス
 
@@ -1037,7 +1037,7 @@ static BOOL SetMenuFont(
 ### <a name="parameters"></a>パラメーター
 
 *lpLogFont*<br/>
-から設定するフォントを定義する[LOGFONT](/windows/win32/api/dimm/ns-dimm-__midl___midl_itf_dimm_0000_0000_0003)構造体へのポインター。
+から設定するフォントを定義する[LOGFONT](/windows/win32/api/dimm/ns-dimm-logfonta)構造体へのポインター。
 
 *bHorz*<br/>
 から*LpLogFont*パラメーターを縦書きフォントに使用する場合は TRUE、水平フォントに使用する場合は FALSE です。

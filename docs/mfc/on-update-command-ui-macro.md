@@ -1,6 +1,6 @@
 ---
 title: ON_UPDATE_COMMAND_UI マクロ
-ms.date: 11/04/2016
+ms.date: 09/06/2019
 f1_keywords:
 - ON_UPDATE_COMMAND_UI
 helpviewer_keywords:
@@ -9,22 +9,22 @@ helpviewer_keywords:
 - command-handler macros
 - updating user-interface objects [MFC]
 ms.assetid: 3e72b50f-4119-4c82-81cf-6e09b132de05
-ms.openlocfilehash: 986bc4f12223048a20f88da5d164b24dc1c08ace
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 467e130f3e6518cc4ec554f6574fb9fcbabaf1f3
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385353"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907954"
 ---
-# <a name="onupdatecommandui-macro"></a>ON_UPDATE_COMMAND_UI マクロ
+# <a name="on_update_command_ui-macro"></a>ON_UPDATE_COMMAND_UI マクロ
 
-使用して、**プロパティ**ウィンドウにユーザー インターフェイス オブジェクトをコマンド ターゲット オブジェクトにコマンド更新ハンドラーに接続します。 ON_UPDATE_COMMAND_UI マクロにユーザー インターフェイス オブジェクトの ID を接続、ハンドラーを作成、更新プログラムを処理するオブジェクトに自動的にされます。 参照してください[関数へのメッセージの割り当て](../mfc/reference/mapping-messages-to-functions.md)詳細についてはします。
+コマンドターゲットオブジェクトのコマンド更新ハンドラーにユーザーインターフェイスオブジェクトを接続するには、**クラスビュー**を開き、ハンドラーを追加するクラスを右クリックして、 **[クラスウィザード]** を選択します。 左側の一覧でユーザーインターフェイスオブジェクトの ID を探し、右側のウィンドウで **[UPDATE_COMMAND_UI]** を選択し、 **[ハンドラーの追加]** をクリックします。 これにより、クラスにハンドラー関数が作成され、メッセージマップに適切なエントリが追加されます。 詳細については、「[関数へのメッセージのマッピング](../mfc/reference/mapping-messages-to-functions.md)」を参照してください。 **メッセージ**ウィンドウで、処理する追加のメッセージを指定できます。 
 
-たとえば、プログラムの編集] メニューで [すべてクリア コマンドを更新するには、次のように使用します、**プロパティ**コマンド更新ハンドラーの関数宣言を、選択したクラスのメッセージ マップ エントリを追加するウィンドウと呼ばれる`OnUpdateEditClearAll`クラス。宣言、およびクラスの実装ファイルには空の関数テンプレートです。 関数プロトタイプのようになります。
+たとえば、プログラムの [編集] メニューの [すべてクリア] コマンドを更新するには、**クラスウィザード**を使用して、選択したクラスのメッセージマップエントリ、クラス宣言で呼び出され`OnUpdateEditClearAll`たコマンド更新ハンドラーの関数宣言、および空のを追加します。クラスの実装ファイルの関数テンプレート。 関数プロトタイプは次のようになります。
 
 [!code-cpp[NVC_MFCDocView#2](../mfc/codesnippet/cpp/on-update-command-ui-macro_1.h)]
 
-すべてのハンドラーは、関数に示すように、 **afx_msg**キーワード。 1 つの引数へのポインターにかかるすべての更新ハンドラーと同様に、`CCmdUI`オブジェクト。
+すべてのハンドラーと同様に、関数宣言は**afx_msg**キーワードを示しています。 すべての更新ハンドラーと同様に、 `CCmdUI`オブジェクトへのポインターである1つの引数を受け取ります。
 
 ## <a name="see-also"></a>関連項目
 

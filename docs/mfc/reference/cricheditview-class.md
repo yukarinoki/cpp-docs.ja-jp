@@ -100,12 +100,12 @@ helpviewer_keywords:
 - CRichEditView [MFC], m_nBulletIndent
 - CRichEditView [MFC], m_nWordWrap
 ms.assetid: bd576b10-4cc0-4050-8f76-e1a0548411e4
-ms.openlocfilehash: c8eba16779b837b33912006a2ff3b7cdfa73f1e6
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b32578cc3c9ad4f7a89b8ee76449259c0fa0b43b
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69502632"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741509"
 ---
 # <a name="cricheditview-class"></a>CRichEditView クラス
 
@@ -763,7 +763,7 @@ void OnCharEffect(
 
 この関数を呼び出すたびに、現在の選択範囲に対して指定された書式設定効果が切り替わります。
 
-*DwMask*および*dwEffect*パラメーターとその可能性のある値の詳細については、Windows SDK の[CHARFORMAT](/windows/win32/api/richedit/ns-richedit-_charformat)の対応するデータメンバーを参照してください。
+*DwMask*および*dwEffect*パラメーターとその可能性のある値の詳細については、Windows SDK の[CHARFORMAT](/windows/win32/api/richedit/ns-richedit-charformata)の対応するデータメンバーを参照してください。
 
 ### <a name="example"></a>例
 
@@ -997,7 +997,7 @@ void OnUpdateCharEffect(
 
 マスク*dwMask*は、どの文字書式属性を確認するかを指定します。 Flags *dwEffect*は、設定/クリアする文字書式属性を一覧表示します。
 
-*DwMask*および*dwEffect*パラメーターとその可能性のある値の詳細については、Windows SDK の[CHARFORMAT](/windows/win32/api/richedit/ns-richedit-_charformat)の対応するデータメンバーを参照してください。
+*DwMask*および*dwEffect*パラメーターとその可能性のある値の詳細については、Windows SDK の[CHARFORMAT](/windows/win32/api/richedit/ns-richedit-charformata)の対応するデータメンバーを参照してください。
 
 ### <a name="example"></a>例
 

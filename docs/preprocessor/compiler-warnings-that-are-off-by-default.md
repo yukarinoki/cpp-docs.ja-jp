@@ -6,10 +6,10 @@ helpviewer_keywords:
 - cl.exe compiler, setting options
 ms.assetid: 69809cfb-a38a-4035-b154-283a61938df8
 ms.openlocfilehash: a8b203c94d4a5af28837627fda1b8e1631dfb0c0
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.sourcegitcommit: 7babce70714242cf498ca811eec3695fad3abd03
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2019
+ms.lasthandoff: 09/11/2019
 ms.locfileid: "70220488"
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>既定で無効になっているコンパイラ警告
@@ -46,8 +46,8 @@ Visual Studio 2015 以降のバージョンでは、次の警告が既定で無�
 |[C4062](../error-messages/compiler-warnings/compiler-warning-level-4-c4062.md)(レベル 4)|列挙型 '*enumeration*' のスイッチ内の列挙子 '*identifier*' は処理されません|
 | [C4165](../error-messages/compiler-warnings/compiler-warning-level-1-c4165.md)(レベル 1) | ' HRESULT ' は ' bool ' に変換されています。これは必要なものですか? |
 | [C4191](../error-messages/compiler-warnings/compiler-warning-level-3-c4191.md)(レベル 3)|'*operator*': '*type_of_expression*' から '*type_required*' への安全でない変換です。|
-|[C4242](../error-messages/compiler-warnings/compiler-warning-level-4-c4242.md)(レベル 4)|'*identifier*': ' type1 ' から '*type1*'への変換です。データが失われる可能性があります。|
-|[C4254](../error-messages/compiler-warnings/compiler-warning-level-4-c4254.md)(レベル 4)|'*operator*': ' type1 ' から '*type1*'への変換です。データが失われる可能性があります。|
+|[C4242](../error-messages/compiler-warnings/compiler-warning-level-4-c4242.md)(レベル 4)|'*identifier*': ' type1 *' から '* *type1*' への変換です。データが失われる可能性があります。|
+|[C4254](../error-messages/compiler-warnings/compiler-warning-level-4-c4254.md)(レベル 4)|'*operator*': ' type1 *' から '* *type1*' への変換です。データが失われる可能性があります。|
 |[C4255](../error-messages/compiler-warnings/compiler-warning-level-4-c4255.md)(レベル 4)|'*function*': 関数プロトタイプが指定されていません: ' () ' を ' (void) ' に変換しています|
 |[C4263](../error-messages/compiler-warnings/compiler-warning-level-4-c4263.md)(レベル 4)|'*function*': メンバー関数は、基底クラスの仮想メンバー関数をオーバーライドしません|
 |[C4264](../error-messages/compiler-warnings/compiler-warning-level-1-c4264.md)(レベル 1)|'*virtual_function*': 基底*クラス ' class*' からの仮想メンバー関数に使用できるオーバーライドはありません。関数は非表示です|
@@ -92,7 +92,7 @@ Visual Studio 2015 以降のバージョンでは、次の警告が既定で無�
 |C4598 (レベル1およびレベル 3)|' #include "*header*" ': プリコンパイル済みヘッダーのヘッダー番号*番号*が、その位置<sup>14.3</sup>の現在のコンパイルと一致しません|
 |C4599 (レベル 3)|'*オプション* *パス*': コマンドライン引数の数*数*プリコンパイル済みヘッダーと一致しません<sup>14.3</sup>|
 |C4605 (レベル 1)|現在のコマンドラインで '/d*macro*' が指定されましたが、プリコンパイル済みヘッダーがビルドされたときに指定されませんでした|
-|[C4608](../error-messages/compiler-warnings/compiler-warning-level-3-c4608.md)(レベル 3)|'*union_member*' は、初期化子リスト '*union_member*' の別の共用体メンバーによっ<sup></sup>て既に初期化されています。|
+|[C4608](../error-messages/compiler-warnings/compiler-warning-level-3-c4608.md)(レベル 3)|'*union_member*' は、初期化子リスト '*union_member* <sup>' の</sup>別の共用体メンバーによって既に初期化されています。|
 |[C4619](../error-messages/compiler-warnings/compiler-warning-level-3-c4619.md)(レベル 3)|#pragma 警告: 警告番号 '*number*' がありません|
 |[C4623](../error-messages/compiler-warnings/compiler-warning-level-4-c4623.md)(レベル 4)|'derived class': 基底クラスの既定コンストラクターにアクセスできないため、既定のコンストラクターは生成できませんでした。|
 |[C4625](../error-messages/compiler-warnings/compiler-warning-level-4-c4625.md)(レベル 4)|'derived class': 基底クラスのコピー コンストラクターにアクセスできないため、コピー コンストラクターは生成できませんでした。|
@@ -113,12 +113,12 @@ Visual Studio 2015 以降のバージョンでは、次の警告が既定で無�
 |C4767 (レベル 4)|セクション名 '*symbol*' が8文字を超えているため、リンカーによって切り捨てられます|
 |C4768 (レベル 3)|リンケージ指定の前の __declspec 属性は無視されます|
 |C4774 (レベル 4)|'*string*': 引数*番号*に必要な書式文字列が文字列リテラルではありません|
-|C4777 (レベル 4)|'*function*': 書式文字列 '*string*' には型 ' type1 ' の引数が必要ですが、可変個引数引数の*数値*には型 '*type1*' が含まれています|
+|C4777 (レベル 4)|'*function*': 書式文字列 '*string*' には型 ' type1 ' の引数が必要ですが、可変個引数引数の*数値*には*型 '* *type1*' が含まれています|
 |C4786 (レベル 3)|'*symbol*': オブジェクト名がデバッグ情報の '*number*' 文字に切り詰められました|
 | [C4800](../error-messages/compiler-warnings/compiler-warning-level-3-c4800.md)(レベル 4) | '*Type*' から bool への暗黙的な変換です。 考えられる情報損失<sup>16.0</sup> |
 |[C4820](../error-messages/compiler-warnings/compiler-warning-level-4-c4820.md)(レベル 4)|コンストラクト '*member_name*' の後に '*bytes*' バイトのパディングが追加されました|
 | [C4822](../error-messages/compiler-warnings/compiler-warning-level-1-c4822.md)(レベル 1) | '*member*': ローカルクラスのメンバー関数に本体がありません。 |
-|C4826 (レベル 2)|' Type1 ' から '*type1*'への変換は、符号拡張されています。 これにより、予期しないランタイム動作が発生する可能性があります。|
+|C4826 (レベル 2)|' Type1 *' から '* *type1*' への変換は、符号拡張されています。 これにより、予期しないランタイム動作が発生する可能性があります。|
 |C4837 (レベル 4)|検出されたトライグラフ: '??*文字*' は '*character*' に置き換えられました|
 |C4841 (レベル 4)|非標準の拡張機能が使用されています: 複合メンバー指定子が offsetof で使用されています|
 |C4842 (レベル 4)|複数の継承を使用して型に適用された ' offsetof ' の結果は、コンパイラリリース間で一貫性が保証されていません|
@@ -144,7 +144,7 @@ Visual Studio 2015 以降のバージョンでは、次の警告が既定で無�
 |C5032 (レベル 4)|検出された #pragma 警告 (プッシュ) に対応する #pragma 警告 (pop) <sup>14.1</sup>がありません|
 |C5034|組み込みの '*組み込み*' を使用すると、関数*関数*がゲストコード<sup>15.3</sup>としてコンパイルされます|
 |C5035|機能 '*feature*' を使用すると、関数*関数*がゲストコード<sup>15.3</sup>としてコンパイルされます|
-|C5036 (レベル 1)|/hybrid: x86arm64 ' type1 ' から '*type1*' <sup>15.3</sup>を使用してコンパイルするときの varargs 関数ポインター変換|
+|C5036 (レベル 1)|/hybrid: x86arm64 ' type1 *' から '* *type1*' <sup>15.3</sup>を使用してコンパイルするときの varargs 関数ポインター変換|
 |[C5038](../error-messages/compiler-warnings/c5038.md)(レベル 4)|データメンバー '*member1*' はデータメンバー '*member2*' <sup>15.3</sup>の後に初期化されます|
 |C5039 (レベル 4)|'*function*':-ehc で extern c 関数に渡される可能性のあるスロー関数へのポインターまたは参照です。 この関数が例外をスローした場合、未定義の動作が発生する可能性があります。 <sup>15.5</sup>|
 |C5042 (レベル 3)|'*function*': ブロックスコープの関数宣言を標準C++で ' inline ' に指定することはできません。' inline ' 指定子<sup>15.5</sup>の削除|
@@ -165,10 +165,10 @@ Visual Studio 2015 以降のバージョンでは、次の警告が既定で無�
 
 |||
 |-|-|
-|[C4302](../error-messages/compiler-warnings/compiler-warning-level-2-c4302.md)(レベル 2)|'*conversion*': ' type1 ' から '*type1*'への切り捨て|
+|[C4302](../error-messages/compiler-warnings/compiler-warning-level-2-c4302.md)(レベル 2)|'*conversion*': ' type1 *' から '* *type1*' への切り捨て|
 |[C4311](../error-messages/compiler-warnings/compiler-warning-level-1-c4311.md)(レベル 1)|'*variable*': ポインターが '*type*' から '*type*' に切り捨てられる|
-|[C4312](../error-messages/compiler-warnings/compiler-warning-level-1-c4312.md)(レベル 1)|'*operation*': ' type1 ' からより大きいサイズの '*type1*' への変換です。|
-|[C4319](../error-messages/compiler-warnings/compiler-warning-level-1-c4319.md)(レベル 1)|'*operator*': ' type1 ' をより大きいサイズの '*type1*' に拡張することはできません。|
+|[C4312](../error-messages/compiler-warnings/compiler-warning-level-1-c4312.md)(レベル 1)|'*operation*': ' type1 ' からより大きいサイズ*の '* *type1*' への変換です。|
+|[C4319](../error-messages/compiler-warnings/compiler-warning-level-1-c4319.md)(レベル 1)|'*operator*': ' type1 ' をより大きいサイズ*の '* *type1*' に拡張することはできません。|
 
 この警告は、Visual Studio 2012 より前のバージョンのコンパイラでは既定で無効になっていました。
 

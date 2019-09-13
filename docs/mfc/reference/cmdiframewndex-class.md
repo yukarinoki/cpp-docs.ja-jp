@@ -156,12 +156,12 @@ helpviewer_keywords:
 - CMDIFrameWndEx [MFC], m_bCanCovertControlBarToMDIChild
 - CMDIFrameWndEx [MFC], m_bDisableSetRedraw
 ms.assetid: dbcafcb3-9a7a-4f11-9dfe-ba57565c81d0
-ms.openlocfilehash: 7973cf89eaa2090a8f1548f38a728f1100d5cbec
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 42e630c1280eb366f9007511ac5d74ac19455a56
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69505529"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741592"
 ---
 # <a name="cmdiframewndex-class"></a>CMDIFrameWndEx クラス
 
@@ -533,7 +533,7 @@ BOOL DockPaneLeftOf(
 
 ### <a name="remarks"></a>Remarks
 
-複数のペインオブジェクトを事前に定義された順序でドッキングするには、このメソッドを呼び出します。 このメソッドは、 *Pbar*によって指定されたペインを、によって指定されたペインの左側にドッキングします。
+複数のペインオブジェクトを事前に定義された順序でドッキングするには、このメソッドを呼び出します。 このメソッドは、 *Pbar* *によって*指定されたペインを、によって指定されたペインの左側にドッキングします。
 
 ### <a name="example"></a>例
 
@@ -1502,7 +1502,7 @@ virtual BOOL OnMenuButtonToolHitTest(
 からツールバーボタン。
 
 *pTI*<br/>
-入出力[TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-toolinfow)構造体へのポインター。
+入出力[TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa)構造体へのポインター。
 
 ### <a name="return-value"></a>戻り値
 

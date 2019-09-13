@@ -2,16 +2,16 @@
 title: アプリケーションとライブラリのビルド (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: ec2821a5-3479-4e64-9c2d-c777049f2cdc
-ms.openlocfilehash: d31b917a4f082d9c9eee41c23a79ce5ed1aa9f4e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b12b294d4d881df5ce4c4cbea2f3f76476e80090
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62257932"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740368"
 ---
 # <a name="building-apps-and-libraries-ccx"></a>アプリケーションとライブラリのビルド (C++/CX)
 
-このセクションのトピックでは、ビルド システムを使用して、ユニバーサル Windows プラットフォーム アプリまたは Windows ランタイム コンポーネントを生成する方法のいくつかの詳細を提供します。
+このセクションのトピックでは、ビルドシステムを使用してユニバーサル Windows プラットフォームアプリまたは Windows ランタイムコンポーネントを生成する方法について詳しく説明します。
 
 ## <a name="in-this-section"></a>このセクションの内容
 
@@ -21,4 +21,5 @@ ms.locfileid: "62257932"
 
 - [DLL](../cppcx/dlls-c-cx.md)
 
-メモ:VisualC++は、ユニバーサル Windows プラットフォームの最適化のガイド付きプロファイルをサポートしていません。 IDE でこれらのオプション セットを使用してプロジェクトのビルドを試みると、結果としてビルド エラーが発生します。 また、コンソール アプリケーションもサポートされません。
+>[!NOTE]
+>Visual Studio では、ユニバーサル Windows プラットフォームのガイド付き最適化のプロファイルはサポートされていません。 IDE でこれらのオプション セットを使用してプロジェクトのビルドを試みると、結果としてビルド エラーが発生します。 また、コンソール アプリケーションもサポートされません。

@@ -1,4 +1,4 @@
----
+﻿---
 title: CObList クラス
 ms.date: 11/04/2016
 f1_keywords:
@@ -212,7 +212,7 @@ void AddTail(CObList* pNewList);
 
 ### <a name="example"></a>例
 
-  `CAge`クラスのリストについては [CObList::CObList](#coblist) を参照してください。
+  `CAge`クラスのリストについては、[CObList::CObList](#coblist) を参照してください。
 
 [!code-cpp[NVC_MFCCollections#90](../../mfc/codesnippet/cpp/coblist-class_2.cpp)]
 
@@ -293,7 +293,7 @@ POSITION Find(
 
 ### <a name="example"></a>例
 
-`CAge`クラスのリストについては [CObList::CObList](#coblist) を参照してください。
+`CAge`クラスのリストについては、[CObList::CObList](#coblist) を参照してください。
 
 [!code-cpp[NVC_MFCCollections#93](../../mfc/codesnippet/cpp/coblist-class_5.cpp)]
 
@@ -327,7 +327,7 @@ POSITION FindIndex(INT_PTR nIndex) const;
 
 ### <a name="example"></a>例
 
-`CAge`クラスのリストについては [CObList::CObList](#coblist) を参照してください。
+`CAge`クラスのリストについては、[CObList::CObList](#coblist) を参照してください。
 
 [!code-cpp[NVC_MFCCollections#94](../../mfc/codesnippet/cpp/coblist-class_6.cpp)]
 
@@ -387,7 +387,7 @@ INT_PTR GetCount() const;
 
 ### <a name="example"></a>例
 
-`CAge`クラスのリストについては [CObList::CObList](#coblist) を参照してください。
+`CAge`クラスのリストについては、[CObList::CObList](#coblist) を参照してください。
 
 [!code-cpp[NVC_MFCCollections#95](../../mfc/codesnippet/cpp/coblist-class_7.cpp)]
 
@@ -419,7 +419,7 @@ const CObject*& GetHead() const;
 
 ### <a name="example"></a>例
 
-`CAge`クラスのリストについては [CObList::CObList](#coblist) を参照してください。
+`CAge`クラスのリストについては、[CObList::CObList](#coblist) を参照してください。
 
 使用例を次に示します`GetHead`代入ステートメントの左側にあります。
 
@@ -446,7 +446,7 @@ POSITION GetHeadPosition() const;
 
 ### <a name="example"></a>例
 
-`CAge`クラスのリストについては [CObList::CObList](#coblist) を参照してください。
+`CAge`クラスのリストについては、[CObList::CObList](#coblist) を参照してください。
 
 [!code-cpp[NVC_MFCCollections#97](../../mfc/codesnippet/cpp/coblist-class_9.cpp)]
 
@@ -490,7 +490,7 @@ const CObject* GetNext(POSITION& rPosition) const;
 
 ### <a name="example"></a>例
 
-  `CAge`クラスのリストについては [CObList::CObList](#coblist) を参照してください。
+  `CAge`クラスのリストについては、[CObList::CObList](#coblist) を参照してください。
 
 [!code-cpp[NVC_MFCCollections#98](../../mfc/codesnippet/cpp/coblist-class_10.cpp)]
 
@@ -539,7 +539,7 @@ const CObject* GetPrev(POSITION& rPosition) const;
 
 ### <a name="example"></a>例
 
-  `CAge`クラスのリストについては [CObList::CObList](#coblist) を参照してください。
+  `CAge`クラスのリストについては、[CObList::CObList](#coblist) を参照してください。
 
 [!code-cpp[NVC_MFCCollections#99](../../mfc/codesnippet/cpp/coblist-class_11.cpp)]
 
@@ -575,7 +575,7 @@ INT_PTR GetSize() const;
 
 ### <a name="example"></a>例
 
-`CAge`クラスのリストについては [CObList::CObList](#coblist) を参照してください。
+`CAge`クラスのリストについては、[CObList::CObList](#coblist) を参照してください。
 
 [!code-cpp[NVC_MFCCollections#100](../../mfc/codesnippet/cpp/coblist-class_12.cpp)]
 
@@ -605,7 +605,7 @@ const CObject*& GetTail() const;
 
 ### <a name="example"></a>例
 
-`CAge`クラスのリストについては [CObList::CObList](#coblist) を参照してください。
+`CAge`クラスのリストについては、[CObList::CObList](#coblist) を参照してください。
 
 [!code-cpp[NVC_MFCCollections#101](../../mfc/codesnippet/cpp/coblist-class_13.cpp)]
 
@@ -630,7 +630,7 @@ POSITION GetTailPosition() const;
 
 ### <a name="example"></a>例
 
-`CAge`クラスのリストについては [CObList::CObList](#coblist) を参照してください。
+`CAge`クラスのリストについては、[CObList::CObList](#coblist) を参照してください。
 
 [!code-cpp[NVC_MFCCollections#102](../../mfc/codesnippet/cpp/coblist-class_14.cpp)]
 
@@ -665,7 +665,7 @@ POSITION InsertAfter(
 
 ### <a name="example"></a>例
 
-  `CAge`クラスのリストについては [CObList::CObList](#coblist) を参照してください。
+  `CAge`クラスのリストについては、[CObList::CObList](#coblist) を参照してください。
 
 [!code-cpp[NVC_MFCCollections#103](../../mfc/codesnippet/cpp/coblist-class_15.cpp)]
 
@@ -709,7 +709,7 @@ POSITION InsertBefore(
 
 ### <a name="example"></a>例
 
-  `CAge`クラスのリストについては[CObList::CObList](#coblist)を参照してください。
+  `CAge`クラスのリストについては、[CObList::CObList](#coblist) を参照してください。
 
 [!code-cpp[NVC_MFCCollections#104](../../mfc/codesnippet/cpp/coblist-class_16.cpp)]
 
@@ -768,7 +768,7 @@ void RemoveAll();
 
 ### <a name="example"></a>例
 
-`CAge`クラスのリストについては[CObList::CObList](#coblist)を参照してください。
+`CAge`クラスのリストについては、[CObList::CObList](#coblist) を参照してください。
 
 [!code-cpp[NVC_MFCCollections#105](../../mfc/codesnippet/cpp/coblist-class_17.cpp)]
 
@@ -800,9 +800,9 @@ void RemoveAt(POSITION position);
 
 ### <a name="example"></a>例
 
-  リストの反復処理中に要素を削除するときに注意します。 次の例は、有効なことを保証する削除手法**POSITION**値[GetNext](#getnext)します。
+  リストの反復処理中に要素を削除するときは注意してください。 次の例は、[GetNext](#getnext) の有効な **POSITION** 値を保証する削除手法です。
 
-`CAge`クラスのリストについては[CObList::CObList](#coblist)を参照してください。
+`CAge`クラスのリストについては、[CObList::CObList](#coblist) を参照してください。
 
 [!code-cpp[NVC_MFCCollections#106](../../mfc/codesnippet/cpp/coblist-class_18.cpp)]
 
@@ -839,7 +839,7 @@ CObject* RemoveHead();
 
 ### <a name="example"></a>例
 
-`CAge`クラスのリストについては[CObList::CObList](#coblist)を参照してください。
+`CAge`クラスのリストについては、[CObList::CObList](#coblist) を参照してください。
 
 [!code-cpp[NVC_MFCCollections#107](../../mfc/codesnippet/cpp/coblist-class_19.cpp)]
 
@@ -868,7 +868,7 @@ CObject* RemoveTail();
 
 ### <a name="example"></a>例
 
-`CAge`クラスのリストについては[CObList::CObList](#coblist)を参照してください。
+`CAge`クラスのリストについては、[CObList::CObList](#coblist) を参照してください。
 
 [!code-cpp[NVC_MFCCollections#108](../../mfc/codesnippet/cpp/coblist-class_20.cpp)]
 
@@ -905,7 +905,7 @@ void SetAt(
 
 ### <a name="example"></a>例
 
-  `CAge`クラスのリストについては[CObList::CObList](#coblist)を参照してください。
+  `CAge`クラスのリストについては、[CObList::CObList](#coblist) を参照してください。
 
 [!code-cpp[NVC_MFCCollections#109](../../mfc/codesnippet/cpp/coblist-class_21.cpp)]
 

@@ -32,7 +32,7 @@ Microsoft Foundation Class ライブラリに含まれるいくつかのマク�
 
 - 終了関数。これにより、プログラムが終了します。
 
-例と詳細については、「[例外](../../mfc/exception-handling-in-mfc.md)」を参照してください。
+例と詳細については、[例外処理](../../mfc/exception-handling-in-mfc.md) を参照してください。
 
 ### <a name="exception-macros"></a>例外マクロ
 
@@ -86,7 +86,7 @@ MFC には、次の終了関数が用意されています。
 |-|-|
 |[AfxAbort](#afxabort)|致命的なエラーが発生したときにアプリケーションを終了するために呼び出されます。|
 
-##  <a name="try"></a>やり直し
+##  <a name="try"></a>  TRY
 
 設定、**TRY**ブロックします。
 
@@ -98,7 +98,7 @@ TRY
 
 **TRY**ブロックが例外をスローするコードのブロックを識別します。 これらの例外は、次に**CATCH**と**AND_CATCH**ブロックします。 再帰が許可されている: 例外が外部に渡される**TRY**を無視するか、THROW_LAST マクロを使用して、ブロック。 終了、**TRY**END_CATCH または END_CATCH_ALL マクロを使用してブロックします。
 
-詳細については、「[例外](../../mfc/exception-handling-in-mfc.md)」を参照してください。
+詳細については、[例外処理](../../mfc/exception-handling-in-mfc.md)を参照してください。
 
 ### <a name="example"></a>例
 
@@ -135,7 +135,7 @@ CATCH(exception_class, exception_object_pointer_name)
 > [!NOTE]
 >  **CATCH**ブロックは、中かっこで囲まれたC ++スコープとして定義されます。 このスコープで変数を宣言すると、そのスコープ内でのみアクセスできます。 これにも当てはまります*exception_object_pointer_name*にも適用されます。
 
-例外と CATCH マクロの詳細については、「[例外](../../mfc/exception-handling-in-mfc.md)」を参照してください。
+例外とキャッチのマクロの詳細については、[例外処理](../../mfc/exception-handling-in-mfc.md)を参照してください。
 
 ### <a name="example"></a>例
 
@@ -161,7 +161,7 @@ CATCH_ALL(exception_object_pointer_name)
 > [!NOTE]
 >  **CATCH_ALL**ブロックは、中かっこでC++囲まれたスコープとして定義されます。 このスコープで変数を宣言すると、そのスコープ内でのみアクセスできます。
 
-例外の詳細については、「[例外](../../mfc/exception-handling-in-mfc.md)」を参照してください。
+例外の詳細については、[例外処理](../../mfc/exception-handling-in-mfc.md)」を参照してください。
 
 ### <a name="example"></a>例
 
@@ -173,7 +173,7 @@ CATCH_ALL(exception_object_pointer_name)
 
 ##  <a name="and_catch"></a>AND_CATCH
 
-前の**TRY**ブロックでスローされた追加の例外の種類をキャッチするためのコードブロックを定義します。
+直前に追加の例外の種類をキャッチするためのコードのブロックを定義します**TRY**ブロックします。
 
 ```
 AND_CATCH(exception_class, exception_object_pointer_name)
@@ -189,12 +189,12 @@ AND_CATCH(exception_class, exception_object_pointer_name)
 
 ### <a name="remarks"></a>Remarks
 
-CATCH マクロを使用して1つの例外の種類をキャッチした後、AND_CATCH マクロを使用して、後続の各型をキャッチします。 終了、**TRY**END_CATCH マクロを使用してブロックします。
+CATCH マクロの 1 つの例外タイプをキャッチする AND_CATCH マクロを使用します。 終了、**TRY**END_CATCH マクロを使用してブロックします。
 
-例外処理コードは、必要に応じて例外オブジェクトを問い合わせて、例外の特定の原因に関する詳細情報を取得することができます。 **AND_CATCH**ブロック内で THROW_LAST マクロを呼び出して、処理を次の外側の例外フレームにシフトします。 **AND_CATCH**は、前の**CATCH**または**AND_CATCH**ブロックの末尾をマークします。
+例外処理コードは、必要に応じて、例外の原因を特定に関する詳細を取得する場合、例外オブジェクトを問い合わせることができます。 内で THROW_LAST マクロを呼び出し、 **AND_CATCH** shift キーを押し、次のフレームの外側の例外を処理するブロックします。 **AND_CATCH** 、上記の終了をマーク**CATCH**または**AND_CATCH**ブロックします。
 
 > [!NOTE]
->  **AND_CATCH**ブロックは、(中かっこC++で囲まれた) スコープとして定義されます。 このスコープで変数を宣言する場合は、そのスコープ内でのみアクセス可能であることに注意してください。 これは、 *exception_object_pointer_name*変数にも適用されます。
+>  **AND_CATCH**ブロックは、C++として定義されます（中かっこで区切られます）。 このスコープで変数を宣言する場合、そのスコープ内でのみアクセス可能であることに注意してください。 これは*exception_object_pointer_name*変数にも適用されます。
 
 ### <a name="example"></a>例
 
@@ -205,7 +205,7 @@ CATCH マクロを使用して1つの例外の種類をキャッチした後、A
   **ヘッダー** afx
 ##  <a name="and_catch_all"></a>AND_CATCH_ALL
 
-前の**TRY**ブロックでスローされた追加の例外の種類をキャッチするためのコードブロックを定義します。
+直前に追加の例外の種類をキャッチするためのコードのブロックを定義します**TRY**ブロックします。
 
 ```
 AND_CATCH_ALL(exception_object_pointer_name)
@@ -218,12 +218,12 @@ AND_CATCH_ALL(exception_object_pointer_name)
 
 ### <a name="remarks"></a>Remarks
 
-**Catch**マクロを使用して1つの例外の種類をキャッチし、AND_CATCH_ALL マクロを使用してその他のすべての型をキャッチします。 AND_CATCH_ALL を使用する場合は、END_CATCH_ALL マクロを使用し**て TRY**ブロックを終了します。
+使用して、**CATCH**マクロを 1 つの例外の種類をキャッチし、AND_CATCH_ALL マクロの他のすべての後続の種類をキャッチします。 AND_CATCH_ALL を使用する場合は、終了、**TRY** END_CATCH_ALL マクロを使用してブロックします。
 
-例外処理コードは、必要に応じて例外オブジェクトを問い合わせて、例外の特定の原因に関する詳細情報を取得することができます。 **AND_CATCH_ALL**ブロック内で THROW_LAST マクロを呼び出して、処理を次の外側の例外フレームにシフトします。 **AND_CATCH_ALL**は、前の**CATCH**または**AND_CATCH_ALL**ブロックの末尾をマークします。
+例外処理コードは、必要に応じて、例外の原因を特定に関する詳細を取得する場合、例外オブジェクトを問い合わせることができます。 内で THROW_LAST マクロを呼び出し、 **AND_CATCH_ALL** shift キーを押し、次のフレームの外側の例外を処理するブロックします。 **AND_CATCH_ALL** 、上記の終了をマーク**CATCH**または**AND_CATCH_ALL**ブロックします。
 
 > [!NOTE]
->  **AND_CATCH_ALL**ブロックは、(中かっこC++で囲まれた) スコープとして定義されます。 このスコープで変数を宣言する場合は、そのスコープ内でのみアクセス可能であることに注意してください。
+>  **AND_CATCH_ALL**ブロックは、C++スコープとして定義されます（中かっこで囲まれています）。 このスコープで変数を宣言する場合、そのスコープ内でのみアクセス可能であることに注意してください。
 
 ### <a name="requirements"></a>必要条件
 
@@ -231,7 +231,7 @@ AND_CATCH_ALL(exception_object_pointer_name)
 
 ##  <a name="end_catch"></a>END_CATCH
 
-最後の**CATCH**または**AND_CATCH**ブロックの末尾をマークします。
+最後の終了をマーク**CATCH**または**AND_CATCH**ブロックします
 
 ```
 END_CATCH
@@ -239,7 +239,7 @@ END_CATCH
 
 ### <a name="remarks"></a>Remarks
 
-END_CATCH マクロの詳細については、「[例外](../../mfc/exception-handling-in-mfc.md)」を参照してください。
+END_CATCH マクロの詳細については、[例外処理](../../mfc/exception-handling-in-mfc.md) を参照してください。
 
 ### <a name="requirements"></a>必要条件
 
@@ -247,7 +247,7 @@ END_CATCH マクロの詳細については、「[例外](../../mfc/exception-ha
 
 ##  <a name="end_catch_all"></a>END_CATCH_ALL
 
-最後の**CATCH_ALL88**または**AND_CATCH_ALL**ブロックの末尾をマークします。
+最後の終了をマーク**CATCH_ALL88** または **AND_CATCH_ALL**ブロックします。
 
 ```
 END_CATCH_ALL
@@ -272,9 +272,9 @@ THROW(exception_object_pointer)
 
 ### <a name="remarks"></a>Remarks
 
-プログラム内の関連する**CATCH**ブロックに制御を渡すことにより、プログラムの実行を中断します。 **CATCH**ブロックを指定していない場合は、エラーメッセージを出力して終了する Microsoft Foundation Class ライブラリモジュールに制御が渡されます。
+**スロー**プログラムに関連付けられているコントロールを渡して、実行に割り込みます**CATCH**でプログラムをブロックします。 提供されていない場合、**CATCH**ブロック、エラーが出力メッセージを終了する Microsoft Foundation Class ライブラリ モジュールに制御が渡されます。
 
-詳細については、「[例外](../../mfc/exception-handling-in-mfc.md)」を参照してください。
+詳細については、[例外処理](../../mfc/exception-handling-in-mfc.md)を参照してください。
 
 ### <a name="requirements"></a>必要条件
 
@@ -282,7 +282,7 @@ THROW(exception_object_pointer)
 
 ##  <a name="throw_last"></a>THROW_LAST
 
-次の外側の**CATCH**ブロックに例外をスローします。
+次に戻り、例外をスロー外部**CATCH**ブロックします。
 
 ```
 THROW_LAST()
@@ -290,9 +290,9 @@ THROW_LAST()
 
 ### <a name="remarks"></a>Remarks
 
-このマクロを使用すると、ローカルで作成された例外をスローできます。 キャッチした例外をスローしようとすると、通常はスコープ外になり、削除されます。 **THROW_LAST**を使用すると、例外は次の**CATCH**ハンドラーに正しく渡されます。
+このマクロを使用すると、ローカルで作成された例外をスローすることができます。 キャッチした例外をスローしようとする場合は、通常はスコープ外に移動され、削除されます。 **THROW_LAST**、[次へ] を正常に渡された例外**CATCH**ハンドラー。
 
-詳細については、「[例外](../../mfc/exception-handling-in-mfc.md)」を参照してください。
+詳細については、[例外処理](../../mfc/exception-handling-in-mfc.md)を参照してください。
 
 ### <a name="example"></a>例
 

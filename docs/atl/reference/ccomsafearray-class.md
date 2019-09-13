@@ -28,12 +28,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComSafeArray class
 ms.assetid: ee349aef-33db-4c85-bd08-5d86a3c9d53a
-ms.openlocfilehash: 36750990dc62d5b24cf1107ac8a2724df787a47d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 79b1dc844f53f739dc48eb6177e57810ff0c8412
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69496994"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739591"
 ---
 # <a name="ccomsafearray-class"></a>CComSafeArray クラス
 
@@ -100,7 +100,7 @@ class CComSafeArray
 
 ## <a name="remarks"></a>Remarks
 
-`CComSafeArray` は、 [SAFEARRAY Data Type](/windows/win32/api/oaidl/ns-oaidl-tagsafearray) クラスのラッパーを提供して、ほぼすべてのバリアント サポート型の 1 次元配列と多次元配列を簡単に作成および管理できるようにします。
+`CComSafeArray` は、 [SAFEARRAY Data Type](/windows/win32/api/oaidl/ns-oaidl-safearray) クラスのラッパーを提供して、ほぼすべてのバリアント サポート型の 1 次元配列と多次元配列を簡単に作成および管理できるようにします。
 
 `CComSafeArray` によりプロセス間での配列の受け渡しが単純化され、配列インデックスの値を上限と下限に照合することでセキュリティがさらに向上します。
 
@@ -211,7 +211,7 @@ CComSafeArray(const SAFEARRAY* psaSrc);
 ### <a name="parameters"></a>パラメーター
 
 *バインディング*<br/>
-  `SAFEARRAYBOUND` 構造。
+`SAFEARRAYBOUND` 構造。
 
 *ulCount*<br/>
 配列の要素数。
@@ -662,7 +662,7 @@ HRESULT SetAt(LONG lIndex, const T& t, BOOL bCopy = TRUE);
 
 ## <a name="see-also"></a>関連項目
 
-[SAFEARRAY データ型](/windows/win32/api/oaidl/ns-oaidl-tagsafearray)<br/>
+[SAFEARRAY データ型](/windows/win32/api/oaidl/ns-oaidl-safearray)<br/>
 [オブジェクトは、](#create)<br/>
 [CComSafeArray::Destroy](#destroy)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)
