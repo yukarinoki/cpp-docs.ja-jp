@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - composite controls, global functions
 ms.assetid: 536884cd-e863-4c7a-ab0a-604dc60a0bbe
-ms.openlocfilehash: 58c7fed2d6e95967101e98589a13c114fe2e9a8a
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 525fc01247053a1e2bc993398978cb332262a1a5
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69496649"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927769"
 ---
 # <a name="composite-control-global-functions"></a>複合コントロールのグローバル関数
 
@@ -156,18 +156,18 @@ ATLAPI AtlAxCreateControl(
 *lpszName*<br/>
 コントロールに渡される文字列へのポインター。 次のいずれかの方法で書式設定する必要があります。
 
-- "MSCAL" のような ProgID。Calendar. 7 "
+- などの ProgID。`"MSCAL.Calendar.7"`
 
-- "{8E27C92B-1264-101C-8A2F-040224009C02}" のような CLSID
+- などの CLSID`"{8E27C92B-1264-101C-8A2F-040224009C02}"`
 
-- "<http://www.microsoft.com>" のような URL
+- のような URL`"<https://www.microsoft.com>"`
 
-- "File://\\\Documents\MyDoc.doc" などのアクティブなドキュメントへの参照
+- などのアクティブなドキュメントへの参照`"file://\\\Documents\MyDoc.doc"`
 
-- "\<MSHTML: html >\<本文 > のような html のフラグメントは、テキスト\</本文 >\</HTML >" になります。
+- HTML のフラグメント (など)`"MSHTML:\<HTML>\<BODY>This is a line of text\</BODY>\</HTML>"`
 
    > [!NOTE]
-   > "MSHTML:" は、MSHTML ストリームとして指定されるように、HTML フラグメントの前に記述する必要があります。
+   > `"MSHTML:"`は、MSHTML ストリームとして指定されるように、HTML フラグメントの前に配置する必要があります。
 
 *hWnd*<br/>
 からコントロールがアタッチされるウィンドウへのハンドル。
@@ -208,18 +208,18 @@ ATLAPI AtlAxCreateControlEx(
 *lpszName*<br/>
 コントロールに渡される文字列へのポインター。 次のいずれかの方法で書式設定する必要があります。
 
-- "MSCAL" のような ProgID。Calendar. 7 "
+- などの ProgID。`"MSCAL.Calendar.7"`
 
-- "{8E27C92B-1264-101C-8A2F-040224009C02}" のような CLSID
+- などの CLSID`"{8E27C92B-1264-101C-8A2F-040224009C02}"`
 
-- "<http://www.microsoft.com>" のような URL
+- のような URL`"<https://www.microsoft.com>"`
 
-- "File://\\\Documents\MyDoc.doc" などのアクティブなドキュメントへの参照
+- などのアクティブなドキュメントへの参照`"file://\\\Documents\MyDoc.doc"`
 
-- "\<MSHTML: html >\<本文 > のような html のフラグメントは、テキスト\</本文 >\</HTML >" になります。
+- HTML のフラグメント (など)`"MSHTML:\<HTML>\<BODY>This is a line of text\</BODY>\</HTML>"`
 
    > [!NOTE]
-   > "MSHTML:" は、MSHTML ストリームとして指定されるように、HTML フラグメントの前に記述する必要があります。
+   > `"MSHTML:"`は、MSHTML ストリームとして指定されるように、HTML フラグメントの前に配置する必要があります。
 
 *hWnd*<br/>
 からコントロールがアタッチされるウィンドウへのハンドル。
@@ -267,18 +267,18 @@ ATLAPI AtlAxCreateControlLic(
 *lpszName*<br/>
 コントロールに渡される文字列へのポインター。 次のいずれかの方法で書式設定する必要があります。
 
-- "MSCAL" のような ProgID。Calendar. 7 "
+- などの ProgID。`"MSCAL.Calendar.7"`
 
-- "{8E27C92B-1264-101C-8A2F-040224009C02}" のような CLSID
+- などの CLSID`"{8E27C92B-1264-101C-8A2F-040224009C02}"`
 
-- "<http://www.microsoft.com>" のような URL
+- のような URL`"<https://www.microsoft.com>"`
 
-- "File://\\\Documents\MyDoc.doc" などのアクティブなドキュメントへの参照
+- などのアクティブなドキュメントへの参照`"file://\\\Documents\MyDoc.doc"`
 
-- "\<MSHTML: html >\<本文 > のような html のフラグメントは、テキスト\</本文 >\</HTML >" になります。
+- HTML のフラグメント (など)`"MSHTML:\<HTML>\<BODY>This is a line of text\</BODY>\</HTML>"`
 
    > [!NOTE]
-   > "MSHTML:" は、MSHTML ストリームとして指定されるように、HTML フラグメントの前に記述する必要があります。
+   > `"MSHTML:"`は、MSHTML ストリームとして指定されるように、HTML フラグメントの前に配置する必要があります。
 
 *hWnd*<br/>
 コントロールがアタッチされるウィンドウへのハンドル。
@@ -321,18 +321,18 @@ ATLAPI AtlAxCreateControlLicEx(
 *lpszName*<br/>
 コントロールに渡される文字列へのポインター。 次のいずれかの方法で書式設定する必要があります。
 
-- "MSCAL" のような ProgID。Calendar. 7 "
+- などの ProgID。`"MSCAL.Calendar.7"`
 
-- "{8E27C92B-1264-101C-8A2F-040224009C02}" のような CLSID
+- などの CLSID`"{8E27C92B-1264-101C-8A2F-040224009C02}"`
 
-- "<http://www.microsoft.com>" のような URL
+- のような URL`"<https://www.microsoft.com>"`
 
-- "File://\\\Documents\MyDoc.doc" などのアクティブなドキュメントへの参照
+- などのアクティブなドキュメントへの参照`"file://\\\Documents\MyDoc.doc"`
 
-- "\<MSHTML: html >\<本文 > のような html のフラグメントは、テキスト\</本文 >\</HTML >" になります。
+- HTML のフラグメント (など)`"MSHTML:\<HTML>\<BODY>This is a line of text\</BODY>\</HTML>"`
 
    > [!NOTE]
-   > "MSHTML:" は、MSHTML ストリームとして指定されるように、HTML フラグメントの前に記述する必要があります。
+   > `"MSHTML:"`は、MSHTML ストリームとして指定されるように、HTML フラグメントの前に配置する必要があります。
 
 *hWnd*<br/>
 コントロールがアタッチされるウィンドウへのハンドル。
