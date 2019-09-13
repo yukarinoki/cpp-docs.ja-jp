@@ -6395,8 +6395,6 @@
                   expanded: false
                   items:
                     - name: ファイルとストリーム
-                      href: c-runtime-library/files-and-streams.md
-                    - name: テキスト ストリームとバイナリ ストリーム
                       href: c-runtime-library/text-and-binary-streams.md
                     - name: バイト ストリームとワイド ストリーム
                       href: c-runtime-library/byte-and-wide-streams.md
