@@ -1,11 +1,11 @@
 ---
 title: nan、nanf、nanl
 ms.date: 01/31/2019
-apiname:
+api_name:
 - nanf
 - nan
 - nanl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - nan
 - nanl
@@ -27,12 +30,12 @@ helpviewer_keywords:
 - nanf function
 - nanl function
 ms.assetid: 790e9158-80ab-43e0-8f5a-096198553fd9
-ms.openlocfilehash: df3985a28bc351bdf196c0a1561bd3e25b661c87
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9574eb0382f3bb7fc3c51d504aba9e29d0692c09
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156267"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951418"
 ---
 # <a name="nan-nanf-nanl"></a>nan、nanf、nanl
 
@@ -53,11 +56,11 @@ long double nanl( const char* input );
 
 ## <a name="return-value"></a>戻り値
 
-**Nan**関数は、簡易な NaN 値を返します。
+**Nan**関数は、簡易な nan 値を返します。
 
 ## <a name="remarks"></a>Remarks
 
-**Nan**関数が非表示 (非シグナル) NaN に対応する浮動小数点値を返します。 *入力*値は無視されます。 出力で NaN が表現される方法の詳細については、「[printf、_printf_l、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)」をご覧ください。
+**Nan**関数は、非表示の (非シグナル) nan に対応する浮動小数点値を返します。 *入力*値は無視されます。 出力で NaN が表現される方法の詳細については、「[printf、_printf_l、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)」をご覧ください。
 
 ## <a name="requirements"></a>必要条件
 
