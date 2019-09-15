@@ -1,10 +1,10 @@
 ---
 title: _mbsnbcat、_mbsnbcat_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbsnbcat_l
 - _mbsnbcat
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - mbsnbcat
 - mbsnbcat_l
@@ -32,12 +35,12 @@ helpviewer_keywords:
 - _mbsnbcat function
 - tcsncat function
 ms.assetid: aa0f1d30-0ddd-48d1-88eb-c6884b20fd91
-ms.openlocfilehash: 476909858a8537fb96d56d3230fd48719d5564ed
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 117171ec75ec0dddc3d7447f4110556165343258
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499837"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952344"
 ---
 # <a name="_mbsnbcat-_mbsnbcat_l"></a>_mbsnbcat、_mbsnbcat_l
 
@@ -95,7 +98,7 @@ NULL で終わるマルチバイト文字のコピー元文字列。
 
 ## <a name="remarks"></a>Remarks
 
-**_Mbsnbcat**関数は、 *src*から*dest*への最初の最大バイト数を追加します。 *Dest*の null 文字の直前にあるバイトが先頭バイトの場合、 *src*の最初のバイトはこの先行バイトを上書きします。 それ以外の場合、 *src*の初期バイトは*dest*の終端の null 文字を上書きします。 *Count* bytes を追加する前に*src*に null バイトが含まれている場合、 **_mbsnbcat**は*src*から null 文字までのすべてのバイトを追加します。 *Count*が*src*の長さよりも大きい場合、 *src*の長さは*count*の代わりに使用されます。 結果の文字列は null 文字で終了します。 重なり合う文字列間でコピーした場合の動作は未定義です。
+**_Mbsnbcat**関数は、 *src*から*dest*への最初*の最大バイト数を*追加します。 *Dest*の null 文字の直前にあるバイトが先頭バイトの場合、 *src*の最初のバイトはこの先行バイトを上書きします。 それ以外の場合、 *src*の初期バイトは*dest*の終端の null 文字を上書きします。 *Count* bytes を追加する前に*src*に null バイトが含まれている場合、 **_mbsnbcat**は*src*から null 文字までのすべてのバイトを追加します。 *Count*が*src*の長さよりも大きい場合、 *src*の長さは*count*の代わりに使用されます。 結果の文字列は null 文字で終了します。 重なり合う文字列間でコピーした場合の動作は未定義です。
 
 出力値は、ロケールの **LC_CTYPE** カテゴリの設定に影響されます。詳細については、「[setlocale](setlocale-wsetlocale.md)」を参照してください。 関数の **_mbsnbcat**バージョンは、このロケールに依存する動作に現在のロケールを使用します。 **_mbsnbcat_l**バージョンは、渡されたロケールパラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 

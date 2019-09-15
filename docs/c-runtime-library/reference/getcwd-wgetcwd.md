@@ -1,10 +1,10 @@
 ---
 title: _getcwd、_wgetcwd
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wgetcwd
 - _getcwd
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-environment-l1-1-0.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _getcwd
 - wgetcwd
@@ -33,14 +36,14 @@ helpviewer_keywords:
 - wgetcwd function
 - directories [C++], current working
 ms.assetid: 888dc8c6-5595-4071-be55-816b38e3e739
-ms.openlocfilehash: 4c533f0e716cb9a13c152b9be3c46f60291118d9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 78b02871aafca85db50df2eea74a2210c578c204
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331793"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955240"
 ---
-# <a name="getcwd-wgetcwd"></a>_getcwd、_wgetcwd
+# <a name="_getcwd-_wgetcwd"></a>_getcwd、_wgetcwd
 
 現在の作業ディレクトリを取得します。
 
@@ -63,23 +66,23 @@ wchar_t *_wgetcwd(
 パスの格納場所。
 
 *maxlen*<br/>
-パスの最大長: **char**の **_getcwd**と**wchar_t**の **_wgetcwd**します。
+文字数でのパスの最大長: **_getcwd**の場合は**char** 、 **_wgetcwd**の場合は**wchar_t**です。
 
 ## <a name="return-value"></a>戻り値
 
-ポインターを返します*バッファー*します。 A **NULL**戻り、エラー値と**errno**設定されて**ENOMEM**、割り当てるメモリが不足していることを示す*maxlen*バイト数 (ときに、 **NULL**として引数が指定されて*バッファー*)、または**ERANGE**、パスがより長いことを示す*maxlen*文字。 場合*maxlen*と同じかそれよりも少ない」の説明に従って、0 にこの関数が、無効なパラメーター ハンドラーを呼び出します[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。
+*バッファー*へのポインターを返します。 **Null**の戻り値はエラーを示し、 **errno**は**ENOMEM**に設定されます。これは、 *maxlen*バイトを割り当てるためのメモリが不足していることを示します ( **NULL**引数が*バッファー*として指定されている場合)。または**ERANGE**。パスが*maxlen*文字を超えていることを示します。 *Maxlen*が0以下の場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、この関数は無効なパラメーターハンドラーを呼び出します。
 
 リターン コードの詳細については、「 [_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
 ## <a name="remarks"></a>Remarks
 
-**_Getcwd**関数は、既定のドライブの現在の作業ディレクトリの完全なパスを取得しに格納*バッファー*します。 整数の引数*maxlen*パスの最大長を指定します。 (終端の null 文字を含む) のパスの長さを超えた場合にエラーが発生した*maxlen*します。 *バッファー*引数を指定できます**NULL**; バッファーのサイズ以上*maxlen* (必要な場合にのみ詳細) が自動的に割り当てられたを使用して**malloc**パスを格納するため、します。 このバッファーは、呼び出すことによって後で解放できます**無料**を渡して、 **_getcwd** (割り当てられたバッファーへのポインター) の値を返します。
+**_Getcwd**関数は、既定のドライブの現在の作業ディレクトリの完全なパスを取得し、*バッファー*に格納します。 Integer 引数*maxlen*は、パスの最大長を指定します。 パスの長さ (終端の null 文字を含む) が*maxlen*を超えると、エラーが発生します。 *Buffer*引数には**NULL**を指定できます。パスを格納するために、少なくともサイズが*maxlen* (必要な場合にのみ) のバッファーが**malloc**を使用して自動的に割り当てられます。 このバッファーは、後で**free**を呼び出して、 **_getcwd**の戻り値 (割り当てられたバッファーへのポインター) を渡すことによって解放できます。
 
-**_getcwd**の現在の作業ディレクトリのパスを表す文字列を返します。 現在の作業ディレクトリがルートの場合、文字列が、円記号で終わる ( **\\** )。 現在の作業ディレクトリがルート以外のディレクトリの場合、文字列は、円記号ではなく、ディレクトリの名前で終わります。
+**_getcwd**は、現在の作業ディレクトリのパスを表す文字列を返します。 現在の作業ディレクトリがルートの場合、文字列は円記号 ( **\\** ) で終わります。 現在の作業ディレクトリがルート以外のディレクトリの場合、文字列は、円記号ではなく、ディレクトリの名前で終わります。
 
-**_wgetcwd**のワイド文字バージョンは、 **_getcwd**、*バッファー*引数と戻り値 **_wgetcwd**はワイド文字列です。 **_wgetcwd**と **_getcwd**動作は同じです。
+**_wgetcwd**は、 **_getcwd**のワイド文字バージョンです。 **_wgetcwd**の*バッファー*引数と戻り値はワイド文字列です。 それ以外では、 **_wgetcwd**と **_getcwd**は同じように動作します。
 
-ときに **_DEBUG**と **_CRTDBG_MAP_ALLOC**への呼び出しで定義されている **_getcwd**と **_wgetcwd**呼び出しに置き換え **_getcwd_dbg**と **_wgetcwd_dbg**デバッグのメモリ割り当てを許可します。 詳細については、「 [_getcwd_dbg, _wgetcwd_dbg](getcwd-dbg-wgetcwd-dbg.md)」を参照してください。
+**_Debug**と **_CRTDBG_MAP_ALLOC**が定義されている場合、 **_getcwd**と **_wgetcwd**の呼び出しは **_getcwd_dbg**および **_wgetcwd_dbg**の呼び出しに置き換えられ、メモリ割り当てをデバッグできるようになります。 詳細については、「 [_getcwd_dbg, _wgetcwd_dbg](getcwd-dbg-wgetcwd-dbg.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 

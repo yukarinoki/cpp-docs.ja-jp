@@ -1,9 +1,9 @@
 ---
 title: fread
 ms.date: 11/28/2018
-apiname:
+api_name:
 - fread
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fread
 helpviewer_keywords:
@@ -24,12 +27,12 @@ helpviewer_keywords:
 - data [C++], reading from input stream
 - streams [C++], reading data from
 ms.assetid: 9a3c1538-93dd-455e-ae48-77c1e23c53f0
-ms.openlocfilehash: da3828142a06ed89a6447ccaef4a0d8ff0063cca
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
+ms.openlocfilehash: 7cf4542a656798f7e2431b2f939df1b5d6396144
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68376178"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956816"
 ---
 # <a name="fread"></a>fread
 
@@ -70,7 +73,7 @@ size_t fread(
 
 **Fread**関数は、入力*ストリーム*から*サイズ*バイトの項目*数*を読み取り、*バッファー*に格納します。 *ストリーム*に関連付けられているファイルポインター (存在する場合) は、実際に読み取られたバイト数によって増加します。 指定されたストリームが[テキストモード](../../c-runtime-library/text-and-binary-mode-file-i-o.md)で開かれている場合、Windows スタイルの改行は Unix スタイルの改行に変換されます。 つまり、キャリッジリターンラインフィード (CRLF) のペアは、単一行フィード (LF) 文字に置き換えられます。 この置き換えは、ファイル ポインターまたは戻り値には影響しません。 エラーが発生した場合、ファイル ポインターの位置は不確定になります。 部分的に読み取られた項目の値を特定できません。
 
-テキストモードストリームで使用される場合、要求されたデータの量 (つまり、*サイズ* \*の*カウント*) が内部**ファイル** \*のバッファーサイズ以上である (既定では、これは4096バイトで、を使用[して構成できます)。setvbuf](../../c-runtime-library/reference/setvbuf.md))、ストリームデータはユーザー指定のバッファーに直接コピーされ、そのバッファーで改行変換が行われます。 変換されたデータはバッファーにコピーされたストリームデータよりも短い場合\[があるため、data*return_value* \* *size*] ( *return_value*は**fread**からの戻り値) である可能性があります。ファイルからの未変換データを格納します。 このため、バッファーの目的が C スタイルの文字列として機能する場合は、*バッファー*\[*return_value* \* *size*で null 値を終了することをお勧めします。 テキストモードとバイナリモードの効果の詳細については、「 [fopen](fopen-wfopen.md) 」を参照してください。
+テキストモードストリームで使用される場合、要求されたデータの量 (つまり、*サイズ* \*の*カウント*) が内部**ファイル** \*のバッファーサイズ以上である (既定では、これは4096バイトで、を使用[して構成できます)。setvbuf](../../c-runtime-library/reference/setvbuf.md))、ストリームデータはユーザー指定のバッファーに直接コピーされ、そのバッファーで改行変換が行われます。 変換されたデータ*はバッファーに*\[コピーされたストリームデータよりも短い場合があるため、data*return_value* \* *size*] ( *return_value*は**fread**からの戻り値) である可能性があります。ファイルからの未変換データを格納します。 このため、バッファーの目的が C スタイルの文字列として機能する場合は、*バッファー*\[*return_value* \* *size*で null 値を終了することをお勧めします。 テキストモードとバイナリモードの効果の詳細については、「 [fopen](fopen-wfopen.md) 」を参照してください。
 
 この関数は他のスレッドをロックします。 ロックしないバージョンが必要な場合は、 **_fread_nolock**を使用します。
 

@@ -1,10 +1,10 @@
 ---
 title: _strtime_s、_wstrtime_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wstrtime_s
 - _strtime_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wstrtime_s
 - strtime_s
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - time, copying
 - _strtime_s function
 ms.assetid: 42acf013-c334-485d-b610-84c0af8a46ec
-ms.openlocfilehash: 579c4a99b52c66bd14cea947eaa1f301cc1127e1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 855c88f22e00cad398f6357b8e35931598041aeb
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375328"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946577"
 ---
-# <a name="strtimes-wstrtimes"></a>_strtime_s、_wstrtime_s
+# <a name="_strtime_s-_wstrtime_s"></a>_strtime_s、_wstrtime_s
 
 現在の時刻をバッファーにコピーします。 これらは、「[Security Features in the CRT](../../c-runtime-library/security-features-in-the-crt.md)」 (CRT のセキュリティ機能) の説明にあるとおり、セキュリティが強化されたバージョンの [_strtime、_wstrtime](strtime-wstrtime.md) です。
 
@@ -78,24 +81,24 @@ errno_t _wstrtime_s(
 
 ### <a name="error-conditions"></a>エラー条件
 
-|*バッファー*|*numberOfElements*|Return|内容*バッファー*|
+|*バッファー*|*numberOfElements*|Return|*バッファー*の内容|
 |--------------|------------------------|------------|--------------------------|
 |**NULL**|(任意)|**EINVAL**|変更されない|
-|いない**NULL** (有効なバッファーを指す)|0|**EINVAL**|変更されない|
-|いない**NULL** (有効なバッファーを指す)|0 < サイズ < 9|**EINVAL**|空の文字列|
-|いない**NULL** (有効なバッファーを指す)|サイズ > 9|0|コメントで指定されている書式設定の、現在の時刻|
+|Not **NULL** (有効なバッファーを指す)|0|**EINVAL**|変更されない|
+|Not **NULL** (有効なバッファーを指す)|0 < サイズ < 9|**EINVAL**|空の文字列|
+|Not **NULL** (有効なバッファーを指す)|サイズ > 9|0|コメントで指定されている書式設定の、現在の時刻|
 
 ## <a name="security-issues"></a>セキュリティ上の問題
 
-無効なを渡す以外**NULL**値の場合、バッファーが、アクセス違反になるが、 *numberOfElements*パラメーターが 9 よりも大きい。
+無効な**NULL**以外の値をバッファーに渡すと、 *numberofelements*パラメーターが9よりも大きい場合、アクセス違反が発生します。
 
-値を渡す*numberOfElements*バッファー オーバーランが発生、バッファーの実際のサイズより大きい。
+*Numberofelements*の値をバッファーの実際のサイズより大きい値に渡すと、バッファーオーバーランが発生します。
 
 ## <a name="remarks"></a>Remarks
 
-これらの関数のセキュリティを強化バージョンの提供[_strtime](strtime-wstrtime.md)と[_wstrtime](strtime-wstrtime.md)します。 **_Strtime_s**関数が指すバッファーに現在の現地時刻をコピー*で*します。 時間として書式設定**hh:mm:ss**場所**hh** 24 時間表記で時間を表す 2 桁の数字は、 **mm** 、時間、分を表す2桁の数字は、**ss**秒を表す 2 桁の数字です。 たとえば、文字列**18時 23分: 44** 23 分 44 秒午後 6 時を表します バッファーは少なくとも 9 バイト長である必要があります。実際のサイズは、2 番目のパラメーターによって指定されます。
+これらの関数は、より安全なバージョンの[_strtime](strtime-wstrtime.md)と[_wstrtime](strtime-wstrtime.md)を提供します。 **_Strtime_s**関数は、 *timestr*が指すバッファーに現在の現地時刻をコピーします。 時刻は**hh: mm: ss**として書式設定されます。ここで、 **hh**は24時間表記の時間を表す2桁の数字、 **mm**は2桁の数字を表し、 **ss**は秒を表す2桁の数字です。 たとえば、文字列**18:23:44**は、午後6時24分と44秒を表します。 バッファーは少なくとも 9 バイト長である必要があります。実際のサイズは、2 番目のパラメーターによって指定されます。
 
-**_wstrtime**のワイド文字バージョンは、 **_strtime**; の引数と戻り値 **_wstrtime**はワイド文字列です。 それ以外では、これらの関数の動作は同じです。
+**_wstrtime**は、 **_strtime**のワイド文字バージョンです。 **_wstrtime**の引数と戻り値はワイド文字列です。 それ以外では、これらの関数の動作は同じです。
 
 C++ では、これらの関数の使用はテンプレートのオーバーロードによって簡素化されます。オーバーロードでは、バッファー長を自動的に推論できる (サイズの引数を指定する必要がなくなる) だけでなく、古くてセキュリティが万全ではない関数を新しく安全な関数に自動的に置き換えることができます。 詳細については、「 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
