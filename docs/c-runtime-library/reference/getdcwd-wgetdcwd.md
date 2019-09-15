@@ -1,10 +1,10 @@
 ---
 title: _getdcwd、_wgetdcwd
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _getdcwd
 - _wgetdcwd
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
 - api-ms-win-crt-environment-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wgetdcwd
 - getdcwd
@@ -34,12 +37,12 @@ helpviewer_keywords:
 - current working directory
 - directories [C++], current working
 ms.assetid: 184152f5-c7b0-495b-918d-f9a6adc178bd
-ms.openlocfilehash: 9f6ae99ae74bb21c9462abcb37e466d63b86f8af
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 3b67e04e914baf85545fcde63cf27c86bc15fac1
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501023"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956025"
 ---
 # <a name="_getdcwd-_wgetdcwd"></a>_getdcwd、_wgetdcwd
 
@@ -91,7 +94,7 @@ wchar_t *_wgetdcwd(
 
 この関数は、スレッドセーフではない **GetFullPathName**に依存しますが、スレッドセーフです。 ただし、マルチスレッド アプリケーションでこの関数と [GetFullPathName](/windows/win32/api/fileapi/nf-fileapi-getfullpathnamew)を両方とも呼び出した場合、スレッド セーフを侵害する可能性があります。
 
-この関数のバージョンが、スレッドセーフではなく、他のスレッドによる干渉から保護されていない点を除いて、この関数と同じように動作します。 詳細については、「 [_getdcwd_nolock, _wgetdcwd_nolock](getdcwd-nolock-wgetdcwd-nolock.md)」を参照してください。
+この関数のバージョン**が、スレッド**セーフではなく、他のスレッドによる干渉から保護されていない点を除いて、この関数と同じように動作します。 詳細については、「 [_getdcwd_nolock, _wgetdcwd_nolock](getdcwd-nolock-wgetdcwd-nolock.md)」を参照してください。
 
 **_Debug**と **_CRTDBG_MAP_ALLOC**が定義されている場合、 **_getdcwd**と **_wgetdcwd**の呼び出しは **_getdcwd_dbg**と **_wgetdcwd_dbg**の呼び出しに置き換えられるため、メモリの割り当てをデバッグできます。 詳しくは[_getdcwd_dbg, _wgetdcwd_dbg](getdcwd-dbg-wgetdcwd-dbg.md)をご覧ください。
 
