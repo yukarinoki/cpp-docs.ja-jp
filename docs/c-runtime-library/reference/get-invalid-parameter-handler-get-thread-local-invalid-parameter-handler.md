@@ -1,10 +1,10 @@
 ---
 title: _get_invalid_parameter_handler、_get_thread_local_invalid_parameter_handler
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _get_invalid_parameter_handler
 - _get_thread_local_invalid_parameter_handler
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _get_invalid_parameter_handler
 - stdlib/_get_invalid_parameter_handler
@@ -26,14 +29,14 @@ helpviewer_keywords:
 - _get_thread_local_invalid_parameter_handler function
 - _get_invalid_parameter_handler function
 ms.assetid: a176da0e-38ca-4d99-92bb-b0e2b8072f53
-ms.openlocfilehash: 7d1a87f9ade0845994918d5a4d59dc56e190d2b6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 534590fed77fe06149db892d98ba0e555297ac7c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287483"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955833"
 ---
-# <a name="getinvalidparameterhandler-getthreadlocalinvalidparameterhandler"></a>_get_invalid_parameter_handler、_get_thread_local_invalid_parameter_handler
+# <a name="_get_invalid_parameter_handler-_get_thread_local_invalid_parameter_handler"></a>_get_invalid_parameter_handler、_get_thread_local_invalid_parameter_handler
 
 CRT が無効な引数を検出したときに呼び出される関数を取得します。
 
@@ -50,7 +53,7 @@ _invalid_parameter_handler _get_thread_local_invalid_parameter_handler(void);
 
 ## <a name="remarks"></a>Remarks
 
-**_Get_invalid_parameter_handler**関数は、現在設定されている取得グローバルの無効なパラメーター ハンドラー。 無効なグローバル パラメーター ハンドラーが設定されていない場合は、Null ポインターを返します。 同様に、 **_get_thread_local_invalid_parameter_handler**ハンドラーが設定されていない場合、呼び出されたスレッドまたは null ポインターの現在のスレッド ローカルの無効なパラメーター ハンドラーを取得します。 グローバルとスレッド ローカルの無効なパラメーター ハンドラーを設定する方法については、「[_set_invalid_parameter_handler、_set_thread_local_invalid_parameter_handler](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md)」を参照してください。
+**_Get_invalid_parameter_handler**関数は、現在設定されているグローバルの無効なパラメーターハンドラーを取得します。 無効なグローバル パラメーター ハンドラーが設定されていない場合は、Null ポインターを返します。 同様に、 **_get_thread_local_invalid_parameter_handler**は、呼び出されたスレッドの現在のスレッドローカルの無効なパラメーターハンドラーを取得します。ハンドラーが設定されていない場合は、null ポインターを取得します。 グローバルとスレッド ローカルの無効なパラメーター ハンドラーを設定する方法については、「[_set_invalid_parameter_handler、_set_thread_local_invalid_parameter_handler](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md)」を参照してください。
 
 返される無効なパラメーター ハンドラー関数ポインターには、次の型があります。
 
@@ -72,7 +75,7 @@ typedef void (__cdecl* _invalid_parameter_handler)(
 |-------------|---------------------|
 |**_get_invalid_parameter_handler**、 **_get_thread_local_invalid_parameter_handler**|C: \<stdlib.h><br /><br /> C++: \<cstdlib> または \<stdlib.h>|
 
-**_Get_invalid_parameter_handler**と **_get_thread_local_invalid_parameter_handler**関数は、Microsoft 固有の仕様。 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+**_Get_invalid_parameter_handler**関数と **_get_thread_local_invalid_parameter_handler**関数は、Microsoft 固有の関数です。 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
