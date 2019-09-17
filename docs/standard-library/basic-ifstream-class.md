@@ -23,7 +23,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68455513"
 ---
-# <a name="basicifstream-class"></a>basic_ifstream クラス
+# <a name="basic_ifstream-class"></a>basic_ifstream クラス
 
 `Elem` 型の要素を含む [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`> クラスのストリーム バッファーからの要素とエンコードされたオブジェクトの抽出を制御するオブジェクトを記述します。この型の特性は、`Tr` クラスによって決定されます。
 
@@ -71,7 +71,7 @@ int main(int argc, char **argv)
 }
 ```
 
-## <a name="input-basicifstreamclasstxt"></a>入力: basic_ifstream_class.txt
+## <a name="input-basic_ifstream_classtxt"></a>入力: basic_ifstream_class.txt
 
 ```cpp
 This is the contents of basic_ifstream_class.txt.
@@ -248,7 +248,7 @@ void open(
 
 ### <a name="remarks"></a>Remarks
 
-メンバー関数は、[rdbuf](#rdbuf) **->** [open](../standard-library/basic-filebuf-class.md#open)(_ *Filename*, `_Mode` &#124; **ios_base::in**) を呼び出します。 Open が失敗した場合、 [](../standard-library/basic-ios-class.md#setstate)関数は`failbit`setstate () を呼び出します。これにより、ios_base:: failure 例外がスローされる可能性があります。
+メンバー関数は、[rdbuf](#rdbuf) **->** [open](../standard-library/basic-filebuf-class.md#open)(_ *Filename*, `_Mode` &#124; **ios_base::in**) を呼び出します。 Open が失敗した場合、関数は`failbit`[setstate](../standard-library/basic-ios-class.md#setstate) () を呼び出します。これにより、ios_base:: failure 例外がスローされる可能性があります。
 
 ### <a name="example"></a>例
 

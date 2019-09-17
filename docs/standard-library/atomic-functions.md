@@ -386,7 +386,7 @@ T* atomic_fetch_add_explicit(
 
 ### <a name="remarks"></a>Remarks
 
-関数`atomic_fetch_add_explicit`は、に`read-modify-write`よって  [](../standard-library/atomic-enums.md#memory_order_enum) 指定されたmemory_order制約内で、Atomの格納されている値に値をアトミックに追加する`Order`操作を実行します。
+関数`atomic_fetch_add_explicit`は、に`read-modify-write`よって 指定された[memory_order](../standard-library/atomic-enums.md#memory_order_enum)制約内で、Atomの格納されている値に値をアトミックに追加する`Order`操作を実行します。
 
 アトミック型が `atomic_address` の場合、`Value` に `ptrdiff_t` 型があり、操作は `char *` として格納されているポインターを処理します。
 
@@ -429,7 +429,7 @@ inline T atomic_fetch_and(volatile atomic<T>* Atom, T Value) noexcept;
 
 ### <a name="remarks"></a>Remarks
 
-関数`atomic_fetch_and`は、memory_order を使用し`memory_order_seq_cst`て、 *atom*の格納された`and`値を値のビットごとの*値*と*atom*に格納されている現在の値に置換する操作を`read-modify-write`実行します。 [](../standard-library/atomic-enums.md#memory_order_enum)制約。
+関数`atomic_fetch_and`は、`memory_order_seq_cst`[memory_order](../standard-library/atomic-enums.md#memory_order_enum) 制約を使用して、 *atom*の格納された`and`値を値のビットごとの*値*と*atom*に格納されている現在の値に置換する操作を`read-modify-write`実行します。
 
 ## <a name="atomic_fetch_and_explicit"></a>  atomic_fetch_and_explicit
 
@@ -493,7 +493,7 @@ inline T atomic_fetch_or (volatile atomic<T>* Atom, T Value) noexcept;
 
 ### <a name="remarks"></a>Remarks
 
-関数`atomic_fetch_or`は、memory_order を使用し`memory_order_seq_cst`て、 *atom*の格納された`or`値を値のビットごとの*値*と*atom*に格納されている現在の値に置換する操作を`read-modify-write`実行します。 [](../standard-library/atomic-enums.md#memory_order_enum).
+関数`atomic_fetch_or`は、`memory_order_seq_cst`[memory_order](../standard-library/atomic-enums.md#memory_order_enum) を使用して、 *atom*の格納された`or`値を値のビットごとの*値*と*atom*に格納されている現在の値に置換する操作を`read-modify-write`実行します。
 
 ## <a name="atomic_fetch_or_explicit"></a>  atomic_fetch_or_explicit
 
@@ -604,7 +604,7 @@ T* atomic_fetch_sub_explicit(
 
 ### <a name="remarks"></a>Remarks
 
-関数`atomic_fetch_sub_explicit`は、に`read-modify-write`よって  [](../standard-library/atomic-enums.md#memory_order_enum) 指定されたmemory_order制約内で、Atomの格納されている値から値をアトミックに減算するために、`Order`操作を実行します。
+関数`atomic_fetch_sub_explicit`は、に`read-modify-write`よって 指定された[memory_order](../standard-library/atomic-enums.md#memory_order_enum)制約内で、Atomの格納されている値から値をアトミックに減算するために、`Order`操作を実行します。
 
 アトミック型が`atomic_address`の場合、 *Value*には`ptrdiff_t`型があり、 `char *`操作はとして格納されているポインターを処理します。
 
@@ -648,7 +648,7 @@ inline T atomic_fetch_xor(volatile atomic<T>* Atom, T Value) noexcept;
 
 ### <a name="remarks"></a>Remarks
 
-関数`atomic_fetch_xor`は、memory_order を使用し`memory_order_seq_cst`て、 *atom*の格納された`exclusive or`値を値のビットごとの*値*と*atom*に格納されている現在の値に置換する操作を`read-modify-write`実行します。 [](../standard-library/atomic-enums.md#memory_order_enum).
+関数`atomic_fetch_xor`は、[memory_order](../standard-library/atomic-enums.md#memory_order_enum) を使用し`memory_order_seq_cst`て、 *atom*の格納された`exclusive or`値を値のビットごとの*値*と*atom*に格納されている現在の値に置換する操作を`read-modify-write`実行します。
 
 ## <a name="atomic_fetch_xor_explicit"></a>  atomic_fetch_xor_explicit
 

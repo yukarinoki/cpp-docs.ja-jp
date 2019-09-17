@@ -112,7 +112,7 @@ messages<wchar_t>
 
 これらの定義済みのファセットの一部は、数値とテキスト シーケンスとの変換を制御するために、iostreams クラスによって使用されます。
 
-クラス ロケールのオブジェクトは、ロケール名を [string](../standard-library/string-typedefs.md#string) クラスのオブジェクトとして格納します。 無効なロケール名を使用してロケールのファセットまたはロケール オブジェクトを構築すると、[runtime_error](../standard-library/runtime-error-class.md) クラスのオブジェクトがスローされます。 ロケール オブジェクトで、C スタイルのロケールがオブジェクトによって表されるロケールに正確に対応するかどうかを確認できない場合、格納されるロケール名は `"*"` です。 それ以外の場合`Loc`は、(LC_ALL `setlocale` `,` `Loc`を呼び出すことにより、ロケールオブジェクトの標準 C ライブラリ内で一致するロケールを設定できます。 [](#name)名前`().c_str()`)。
+クラス ロケールのオブジェクトは、ロケール名を [string](../standard-library/string-typedefs.md#string) クラスのオブジェクトとして格納します。 無効なロケール名を使用してロケールのファセットまたはロケール オブジェクトを構築すると、[runtime_error](../standard-library/runtime-error-class.md) クラスのオブジェクトがスローされます。 ロケール オブジェクトで、C スタイルのロケールがオブジェクトによって表されるロケールに正確に対応するかどうかを確認できない場合、格納されるロケール名は `"*"` です。 それ以外の場合`Loc`は、(LC_ALL `setlocale` `,` `Loc`を呼び出すことにより、ロケールオブジェクトの標準 C ライブラリ内で一致するロケールを設定できます。 [名前](#name)`().c_str()`)。
 
 この実装では、次の静的メンバー関数を呼び出すことによって、
 
@@ -468,7 +468,7 @@ c & `locale(Locname, _All)` *Cat*が0以外のカテゴリ c に対応するフ�
 
 `template<class Facet> locale(const locale& Loc, Facet* Fac);`
 
-*fac.* が null ポインターではない場合は、ファセットの in (またはを*追加) を*ファセット*fac.* に置き換えます。
+*fac.* が null ポインターではない場合は、ファ*セットの in* (またはを追加) をファセット*fac.* に置き換えます。
 
 ロケール名*locname*が null ポインターの場合、または無効な場合、関数は[runtime_error](../standard-library/runtime-error-class.md)をスローします。
 

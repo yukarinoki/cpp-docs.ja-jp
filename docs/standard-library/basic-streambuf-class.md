@@ -101,7 +101,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68453358"
 ---
-# <a name="basicstreambuf-class"></a>basic_streambuf クラス
+# <a name="basic_streambuf-class"></a>basic_streambuf クラス
 
 ストリームの特定の表現との相互間での要素の伝送を制御する、ストリーム バッファーを派生させるための抽象基底クラスについて説明します。
 
@@ -991,7 +991,7 @@ int_type sputbackc(char_type _Ch);
 
 ### <a name="remarks"></a>Remarks
 
-戻り位置が使用可能であり、その位置に格納されている文字と等しいかどうか*を比較する*場合、メンバー関数は、入力バッファーの次のポインターを`_Ch`デクリメントし、 **traits_type::** [to_int_type](../standard-library/char-traits-struct.md#to_int_type)() を返します。 それ以外の場合は、[pbackfail](#pbackfail)( `_Ch`) を返します。
+戻り位置が使用可能であり、その位置に格納さ*れている*文字と等しいかどうかを比較する場合、メンバー関数は、入力バッファーの次のポインターを`_Ch`デクリメントし、 **traits_type::** [to_int_type](../standard-library/char-traits-struct.md#to_int_type)() を返します。 それ以外の場合は、[pbackfail](#pbackfail)( `_Ch`) を返します。
 
 ### <a name="example"></a>例
 
@@ -1039,7 +1039,7 @@ int_type sputc(char_type _Ch);
 
 ### <a name="remarks"></a>Remarks
 
-[](../standard-library/char-traits-struct.md#to_int_type) `_Ch` が使用可能な場合、メンバー関数は、書き込み位置に "Ch" を格納し、出力バッファーの次のポインターをインクリメントして、traits_type:: to_int_type () を返します。 `write position` それ以外の場合は、[overflow](#overflow)( `_Ch`) を返します。
+`_Ch`が使用可能な場合、メンバー関数は、書き込み位置に "Ch" を格納し、出力バッファーの次のポインターをインクリメントして、traits_type:: [to_int_type](../standard-library/char-traits-struct.md#to_int_type) () を返します。`write position` それ以外の場合は、[overflow](#overflow)( `_Ch`) を返します。
 
 ### <a name="example"></a>例
 

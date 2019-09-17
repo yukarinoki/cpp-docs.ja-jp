@@ -1296,7 +1296,7 @@ typedef implementation-defined iterator;
 
 ### <a name="example"></a>例
 
-の宣言方法や[](#begin)使用`iterator`方法の例については、begin の例を参照してください。
+の宣言方法や使用`iterator`方法の例については、[begin](#begin) の例を参照してください。
 
 ## <a name="key_comp"></a>  multiset::key_comp
 
@@ -1708,7 +1708,7 @@ multiset& operator=(multiset&& right);
 
 ### <a name="remarks"></a>Remarks
 
-`operator=`使用される参照型 ( 左辺値また`multiset`は右辺値) に応じて、要素を右にコピーまたは移動します。 `operator=` が実行される前にこの `multiset` に存在する要素は、破棄されます。
+`operator=`使用される参照型 (左辺値また`multiset`は右辺値) に応じて、要素を右にコピーまたは移動します。 `operator=` が実行される前にこの `multiset` に存在する要素は、破棄されます。
 
 ### <a name="example"></a>例
 

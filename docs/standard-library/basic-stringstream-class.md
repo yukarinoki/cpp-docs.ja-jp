@@ -19,7 +19,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68447805"
 ---
-# <a name="basicstringstream-class"></a>basic_stringstream クラス
+# <a name="basic_stringstream-class"></a>basic_stringstream クラス
 
 クラス [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, **Tr**, `Alloc`> のストリーム バッファーを使用して、要素とエンコードされたオブジェクトの挿入と抽出を制御するオブジェクトを表します。
 
@@ -43,7 +43,7 @@ class basic_stringstream : public basic_iostream<Elem, Tr>
 
 ## <a name="remarks"></a>Remarks
 
-このテンプレートクラスは、型`Alloc`<  [](../standard-library/basic-stringbuf-class.md) の要素を使用して、basic_stringbufElem,Tr,>クラスのストリームバッファーを使用して、要素とエンコードされたオブジェクトの挿入と抽出を制御するオブジェクトを表します。`Elem`。文字の特徴はクラス`Tr`によって決定され、その要素はクラス`Alloc`のアロケーターによって割り当てられます。 このオブジェクトは、クラス basic_stringbuf< **Elem**, **Tr**, `Alloc`> のオブジェクトを格納します。
+このテンプレートクラスは、型`Alloc`< の要素を使用して、[basic_stringbuf](../standard-library/basic-stringbuf-class.md)Elem,Tr,>クラスのストリームバッファーを使用して、要素とエンコードされたオブジェクトの挿入と抽出を制御するオブジェクトを表します。`Elem`。文字の特徴はクラス`Tr`によって決定され、その要素はクラス`Alloc`のアロケーターによって割り当てられます。 このオブジェクトは、クラス basic_stringbuf< **Elem**, **Tr**, `Alloc`> のオブジェクトを格納します。
 
 ### <a name="constructors"></a>コンストラクター
 

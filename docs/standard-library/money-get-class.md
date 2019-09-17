@@ -23,7 +23,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68455551"
 ---
-# <a name="moneyget-class"></a>money_get クラス
+# <a name="money_get-class"></a>money_get クラス
 
 このテンプレート クラスは、`CharType` 型のシーケンスから通貨値への変換を制御するためにロケール ファセットとして使用できるオブジェクトを表します。
 
@@ -133,7 +133,7 @@ virtual iter_type do_get(iter_type first,
 
 2番目のプロテクト仮想メンバー関数は、最初と同じように動作します。ただし、成功した場合は、必要に応じて符号付き数字シーケンスを**long double**型の値に変換し、その値を*val*に格納します。
 
-通貨入力フィールドの形式は、有効な呼び出し[use_facet](../standard-library/locale-functions.md#use_facet) < [moneypunct](../standard-library/moneypunct-class.md) \< **chartype**、 **> >** (iosbase. flags) によっ**て返される**[ロケールファセット](../standard-library/locale-class.md#facet_class)によって決定されます。 . [getloc](../standard-library/ios-base-class.md#getloc))。
+通貨入力フィールドの形式**は、有効**な呼び出し[use_facet](../standard-library/locale-functions.md#use_facet) < [moneypunct](../standard-library/moneypunct-class.md) \< **chartype**、> > (iosbase. flags) によって返される[ロケールファセット](../standard-library/locale-class.md#facet_class)によって決定**されます**。 [getloc](../standard-library/ios-base-class.md#getloc))。
 
 具体的には、次のように使用します。
 
@@ -159,7 +159,7 @@ virtual iter_type do_get(iter_type first,
 
 **Fac.** のインスタンスが存在しない場合。 `thousands_sep`通貨入力フィールドの値の部分 ( **money_base:: value**と等しい要素が書式パターンで表示される) で発生します。グループ化の制約は適用されません。 それ以外の場合は、 **fac.** によって課せられるグループ化の制約です。 **グループ化**が適用されます。 結果の数字のシーケンスは、下位**fac.** を持つ整数を表すことに注意してください。 `frac_digits`小数点以下の桁数は、小数点の右側と見なされます。
 
-任意の余白は、書式パターンの末尾以外に出現する場合、**money_base::space** と等しい要素が書式パターンに出現しているときに一致します。 それ以外の場合、内部の余白は一致しません。 [Use_facet](../standard-library/locale-functions.md#use_facet)[](../standard-library/ctype-class.md)    ctype < chartype>>(iosbase.flagsの場合、要素chは空白と見なされます。\< [getloc](../standard-library/ios-base-class.md#getloc))。 [は](../standard-library/ctype-class.md#is)( **ctype_base::space**、 *ch*) は**true**します。
+任意の余白は、書式パターンの末尾以外に出現する場合、**money_base::space** と等しい要素が書式パターンに出現しているときに一致します。 それ以外の場合、内部の余白は一致しません。 [Use_facet](../standard-library/locale-functions.md#use_facet) [ctype](../standard-library/ctype-class.md) < chartype>>(iosbase.flagsの場合、要素chは空白と見なされます。\< [getloc](../standard-library/ios-base-class.md#getloc))。 [は](../standard-library/ctype-class.md#is)( **ctype_base::space**、 *ch*) は**true**します。
 
 ### <a name="example"></a>例
 

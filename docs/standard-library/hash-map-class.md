@@ -95,7 +95,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68448789"
 ---
-# <a name="hashmap-class"></a>hash_map クラス
+# <a name="hash_map-class"></a>hash_map クラス
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_map クラス](../standard-library/unordered-map-class.md)を使用してください。
@@ -1612,7 +1612,7 @@ iterator insert(
 
 要素の [value_type](../standard-library/map-class.md#value_type) はペアです。最初のコンポーネントがキー値と等しく、2 番目のコンポーネントが要素のデータ値と等しくなるよう、要素の値が順序付けされたペアになります。
 
-挿入ポイントが位置の直後にある場合は、挿入ポイントが対数時間ではなく insert のヒントバージョンに対して、償却定数時間で挿入されることがあり*ます。*
+挿入ポイント*が位置の*直後にある場合は、挿入ポイントが対数時間ではなく insert のヒントバージョンに対して、償却定数時間で挿入されることがあります。
 
 3 番目のメンバー関数は、指定したセットの範囲 *[First, Last)* の反復子が指す各要素に対応する hash_map に要素値のシーケンスを挿入します。
 
@@ -1747,7 +1747,7 @@ Multimap 内の要素を指す**反復子**`Iter`を逆参照するには、演�
 
 ### <a name="example"></a>例
 
-の宣言方法[](#begin)や使用方法の例については、 `iterator`begin の例を参照してください。
+の宣言方法や使用方法の例については、 `iterator`[begin](#begin) の例を参照してください。
 
 ## <a name="key_comp"></a>  hash_map::key_comp
 
@@ -2677,7 +2677,7 @@ hash_map が要素の並べ替えに使用する比較関数オブジェクト�
 
 ### <a name="remarks"></a>Remarks
 
-Hash_map *m*の場合、2つの*要素 e1* (*k1*, *d1*) と*e2* (*k2*, *d2*) が[value_type](#value_type)型のオブジェクトである場合、 *k1*と*k2*は[key_type](#key_type)と d1 型のキーです。 および*d2*は`m.key_comp()(k1, k2)` [mapped_type 型](#mapped_type)のデータで、はと同じです。`m.value_comp()(e1, e2)` 格納されているオブジェクトは以下のメンバー関数を定義します。
+Hash_map *m*の場合、2つの*要素 e1* (*k1*, *d1*) と*e2* (*k2*, *d2*) が[value_type](#value_type)型のオブジェクトである場合、 *k1*と*k2*は[key_type](#key_type)と d1 型のキーです。および*d2*は`m.key_comp()(k1, k2)` [mapped_type 型](#mapped_type)のデータで、はと同じです。`m.value_comp()(e1, e2)` 格納されているオブジェクトは以下のメンバー関数を定義します。
 
 `bool operator(value_type& left, value_type& right);`
 

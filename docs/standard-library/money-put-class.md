@@ -23,7 +23,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68460234"
 ---
-# <a name="moneyput-class"></a>money_put クラス
+# <a name="money_put-class"></a>money_put クラス
 
 このテンプレート クラスは、通貨値から `CharType` 型のシーケンスへの変換を制御するためにロケール ファセットとして使用できるオブジェクトを表します。
 
@@ -133,7 +133,7 @@ virtual iter_type do_put(
 
 2番目のプロテクト仮想メンバー関数は、最初のオーバーロードと同じように動作しますが、最初に*val*が10進数のシーケンスに変換され、必要に応じてマイナス記号 (-) の前にあるように変換されます。
 
-通貨出力フィールドの形式は、(有効な) call [use_facet](../standard-library/locale-functions.md#use_facet) < moneypunct **chartype**、[](../standard-library/moneypunct-class.md) \< **> >** ( **iosbase. flags**) によって返される[ロケールファセット](../standard-library/locale-class.md#facet_class)によって決定されます。 [getloc](../standard-library/ios-base-class.md#getloc))。
+通貨出力フィールドの形式は、(有効な) call [use_facet](../standard-library/locale-functions.md#use_facet) < [moneypunct](../standard-library/moneypunct-class.md) **chartype**、\< **> >** ( **iosbase. flags**) によって返される[ロケールファセット](../standard-library/locale-class.md#facet_class)によって決定されます。 [getloc](../standard-library/ios-base-class.md#getloc))。
 
 具体的には、次のように使用します。
 

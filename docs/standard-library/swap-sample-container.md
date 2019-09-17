@@ -20,7 +20,7 @@ ms.locfileid: "68450334"
 > [!NOTE]
 > このトピックは、 C++ C++標準ライブラリで使用されているコンテナーの非機能例として、Microsoft ドキュメントに記載されています。 詳細については、「[C++ Standard Library Containers (C++ 標準ライブラリ コンテナ―)](../standard-library/stl-containers.md)」をご覧ください。
 
-Swap `left.`を`(right)`実行します。 [](../standard-library/container-class-swap.md)
+`left.`[swap](../standard-library/container-class-swap.md)`(right)` を実行します。
 
 ## <a name="syntax"></a>構文
 

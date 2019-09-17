@@ -41,7 +41,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68452548"
 ---
-# <a name="basicistream-class"></a>basic_istream クラス
+# <a name="basic_istream-class"></a>basic_istream クラス
 
 `Elem` 型の要素を含むストリーム バッファーからの要素とエンコードされたオブジェクトの抽出を制御するオブジェクトを表します。この型は [char_type](../standard-library/basic-ios-class.md#char_type) とも呼ばれ、その文字特性は、[traits_type](../standard-library/basic-ios-class.md#traits_type) とも呼ばれるクラス *Tr* によって決定されます。
 
@@ -119,7 +119,7 @@ if (ok)
 setstate(state);
 ```
 
-要素の抽出中に[](../standard-library/basic-ios-class.md#setstate)ファイルの`eofbit`終わりに到達した場合、どちらの関数グループも setstate () を呼び出します。
+要素の抽出中にファイルの`eofbit`終わりに到達した場合、どちらの関数グループも [setstate](../standard-library/basic-ios-class.md#setstate) () を呼び出します。
 
 クラス `basic_istream`< `Elem`, *Tr*> のオブジェクトは次のものを格納します。
 
@@ -287,7 +287,7 @@ get のパラメーターなしの形式は、整数またはファイルの終�
 
 ### <a name="remarks"></a>Remarks
 
-これらの書式設定されていない 1 番目の入力関数は、可能であれば、`rdbuf`-> `sbumpc` を返す場合と同じように、要素を抽出します。 それ以外の場合は、**traits_type::** [eof](../standard-library/char-traits-struct.md#eof) を返します。 関数が要素を抽出しなかった場合[](../standard-library/basic-ios-class.md#setstate)は、`failbit`setstate () を呼び出します。
+これらの書式設定されていない 1 番目の入力関数は、可能であれば、`rdbuf`-> `sbumpc` を返す場合と同じように、要素を抽出します。 それ以外の場合は、**traits_type::** [eof](../standard-library/char-traits-struct.md#eof) を返します。 関数が要素を抽出しなかった場合は、`failbit`[setstate](../standard-library/basic-ios-class.md#setstate) () を呼び出します。
 
 2 番目の関数は、同じ方法で [int_type](../standard-library/basic-ios-class.md#int_type) 要素 `meta` を抽出します。 `meta` が **traits_type::eof** と等しい場合、関数は `setstate`( **failbit**) を呼び出します。 それ以外の場合は、**traits_type::** [to_char_type](../standard-library/char-traits-struct.md#to_char_type)( `meta`) を `Ch` に格納します。 関数は **\*this** を返します。
 
@@ -497,7 +497,7 @@ basic_istream& operator>>(
     basic_streambuf<Elem, Tr>* strbuf);
 ```
 
-_ *Strbuf*が null ポインターではない場合に要素を抽出し、 *Strbuf*に挿入します。 抽出は、ファイルの終わりで停止します。 また、挿入が失敗した場合または (キャッチされるが再スローされない) 例外をスローする場合は、対象の要素を抽出せずに停止します。 関数が要素を抽出しなかった場合[](../standard-library/basic-ios-class.md#setstate)は、`failbit`setstate () を呼び出します。 いずれの場合も関数は **\*this** を返します。
+_ *Strbuf*が null ポインターではない場合に要素を抽出し、 *Strbuf*に挿入します。 抽出は、ファイルの終わりで停止します。 また、挿入が失敗した場合または (キャッチされるが再スローされない) 例外をスローする場合は、対象の要素を抽出せずに停止します。 関数が要素を抽出しなかった場合は、`failbit`[setstate](../standard-library/basic-ios-class.md#setstate) () を呼び出します。 いずれの場合も関数は **\*this** を返します。
 
 関数:
 
@@ -712,7 +712,7 @@ basic_istream<Elem, Tr>& read(
 
 ### <a name="remarks"></a>Remarks
 
-書式設定されていない入力関数は、最大*数*の要素を抽出し`Str`、それらを _ で始まる配列に格納します。 抽出は、ファイルの終わりの早い段階で停止します。 [](../standard-library/basic-ios-class.md#setstate)この場合`failbit`、関数は setstate () を呼び出します。 いずれの場合も、`*this` を返します。
+書式設定されていない入力関数は、最大*数*の要素を抽出し`Str`、それらを _ で始まる配列に格納します。 抽出は、ファイルの終わりの早い段階で停止します。この場合`failbit`、関数は [setstate](../standard-library/basic-ios-class.md#setstate) () を呼び出します。 いずれの場合も、`*this` を返します。
 
 ### <a name="example"></a>例
 
@@ -822,7 +822,7 @@ basic_istream<Elem, Tr>& seekg(off_type off, ios_base::seekdir way);
 読み取りポインターの移動先の絶対位置。
 
 *オート*\
-読み取りポインターを相対的に移動する*オフセット。*
+読み取り*ポインターを相対的*に移動するオフセット。
 
 *まで*\
 [ios_base::seekdir](../standard-library/ios-base-class.md#seekdir) 列挙体のうちの 1 つ。
@@ -906,7 +906,7 @@ int sync();
 
 ### <a name="return-value"></a>戻り値
 
-[rdbuf](../standard-library/basic-ios-class.md#rdbuf) が Null ポインターの場合、この関数は -1 を返します。 そうでない場合は、`rdbuf` -> [pubsync](../standard-library/basic-streambuf-class.md#pubsync) を呼び出します。 それが-1 を返す場合、関数[](../standard-library/basic-ios-class.md#setstate)は setstate`badbit`() を呼び出し、-1 を返します。 それ以外の場合、関数は 0 を返します。
+[rdbuf](../standard-library/basic-ios-class.md#rdbuf) が Null ポインターの場合、この関数は -1 を返します。 そうでない場合は、`rdbuf` -> [pubsync](../standard-library/basic-streambuf-class.md#pubsync) を呼び出します。 それが-1 を返す場合、関数は [setstate](../standard-library/basic-ios-class.md#setstate)`badbit`() を呼び出し、-1 を返します。 それ以外の場合、関数は 0 を返します。
 
 ## <a name="tellg"></a>  basic_istream::tellg
 

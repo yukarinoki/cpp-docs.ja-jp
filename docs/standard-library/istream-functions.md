@@ -61,7 +61,7 @@ template class<Elem, Tr> basic_istream<Elem, Tr>& ws(basic_istream<Elem, Tr>& _I
 
 ### <a name="remarks"></a>Remarks
 
-`ch`マニピュレーターは、 [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype**  [](../standard-library/ios-base-class.md#getloc)Elem > > (getloc) のすべての要素を抽出して破棄します。\< **is**( **ctype**\< **Elem**>::**領域**、 **ch**) は true。
+`ch`マニピュレーターは、 [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype** Elem > > ([getloc](../standard-library/ios-base-class.md#getloc)) のすべての要素を抽出して破棄します。\< **is**( **ctype**\< **Elem**>::**領域**、 **ch**) は true。
 
 この関数は、要素の抽出中にファイルの終わりに達した場合 [setstate](../standard-library/basic-ios-class.md#setstate)( **eofbit**) を呼び出します。 *_Istr*が返されます。
 

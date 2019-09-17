@@ -45,7 +45,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68460008"
 ---
-# <a name="timeget-class"></a>time_get クラス
+# <a name="time_get-class"></a>time_get クラス
 
 このテンプレート クラスは、`CharType` 型のシーケンスから時刻値への変換を制御するためにロケール ファセットとして使用できるオブジェクトを表します。
 
@@ -631,7 +631,7 @@ iter_type get_date(iter_type first,
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は[](#do_get_date)、do_get_date`first`( `last` `iosbase` `state`,,,, )を返します。`ptm`
+このメンバー関数は、[do_get_date](#do_get_date)`first`( `last` `iosbase` `state`,,,, )を返します。`ptm`
 
 月のカウントが 0 から 11 であることに注意してください。
 
@@ -725,7 +725,7 @@ iter_type get_monthname(iter_type first,
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は[](#do_get_monthname)、do_get_monthname`first`( `last` `iosbase` `state`,,,, )を返します。`ptm`
+このメンバー関数は、[do_get_monthname](#do_get_monthname)`first`( `last` `iosbase` `state`,,,, )を返します。`ptm`
 
 ### <a name="example"></a>例
 
@@ -817,7 +817,7 @@ iter_type get_time(iter_type first,
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は[](#do_get_time)、do_get_time`first`( `last` `iosbase` `state`,,,, )を返します。`ptm`
+このメンバー関数は、[do_get_time](#do_get_time)`first`( `last` `iosbase` `state`,,,, )を返します。`ptm`
 
 ### <a name="example"></a>例
 
@@ -898,7 +898,7 @@ iter_type get_weekday(iter_type first,
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は[](#do_get_weekday)、do_get_weekday`first`( `last` `iosbase` `state`,,,, )を返します。`ptm`
+このメンバー関数は、[do_get_weekday](#do_get_weekday)`first`( `last` `iosbase` `state`,,,, )を返します。`ptm`
 
 ### <a name="example"></a>例
 
@@ -975,7 +975,7 @@ iter_type get_year(iter_type first,
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は[](#do_get_year)、do_get_year`first`( `last` `iosbase` `state`,,,, )を返します。`ptm`
+このメンバー関数は、[do_get_year](#do_get_year)`first`( `last` `iosbase` `state`,,,, )を返します。`ptm`
 
 ### <a name="example"></a>例
 

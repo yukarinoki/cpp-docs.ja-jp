@@ -1,42 +1,42 @@
 ---
-title: '方法: WRL を使用した従来の COM コンポーネントを作成します。'
+title: '方法: WRL を使用して従来の COM コンポーネントを作成する'
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 5efe7690-90d5-4c3c-9e53-11a14cefcb19
-ms.openlocfilehash: bb38f36cdd481e61d049f82159fdc24c3726f646
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ec762b07caa30ce9aa6f4c67f84bb66ae884a7cf
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398330"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498389"
 ---
-# <a name="how-to-create-a-classic-com-component-using-wrl"></a>方法: WRL を使用した従来の COM コンポーネントを作成します。
+# <a name="how-to-create-a-classic-com-component-using-wrl"></a>方法: WRL を使用して従来の COM コンポーネントを作成する
 
-Windows ランタイム C++ テンプレート ライブラリ (WRL) を使用して、ユニバーサル Windows プラットフォーム (UWP) アプリを使用することだけでなく、デスクトップ アプリで使用するための基本的な従来の COM コンポーネントを作成することができます。 Windows ランタイム C++ テンプレート ライブラリの COM コンポーネントの作成、ATL よりも少ないコードを必要があります。 Windows ランタイム C++ テンプレート ライブラリをサポートする COM のサブセットの詳細については、次を参照してください。 [Windows ランタイム C++ テンプレート ライブラリ (WRL)](windows-runtime-cpp-template-library-wrl.md)します。
+Windows ランタイムC++テンプレートライブラリ (wrl) を使用して、ユニバーサル WINDOWS プラットフォーム (UWP) アプリに使用するだけでなく、デスクトップアプリで使用する基本的なクラシック COM コンポーネントを作成することができます。 COM コンポーネントを作成する場合、Windows ランタイムC++テンプレートライブラリでは ATL よりも少ないコードが必要になることがあります。 Windows ランタイムC++テンプレートライブラリでサポートされている COM のサブセットの詳細については、「 [Windows ランタイムC++テンプレートライブラリ (wrl)](windows-runtime-cpp-template-library-wrl.md)」を参照してください。
 
-このドキュメントでは、Windows ランタイム C++ テンプレート ライブラリを使用して基本的な COM コンポーネントを作成する方法を示します。 ニーズに最適な配置メカニズムを使用できますが、このドキュメントでは、デスクトップ アプリから COM コンポーネントを登録して使用する基本的な方法についても説明します。
+このドキュメントでは、Windows ランタイムC++テンプレートライブラリを使用して基本的な COM コンポーネントを作成する方法について説明します。 ニーズに最適な配置メカニズムを使用できますが、このドキュメントでは、デスクトップ アプリから COM コンポーネントを登録して使用する基本的な方法についても説明します。
 
-### <a name="to-use-the-windows-runtime-c-template-library-to-create-a-basic-classic-com-component"></a>Windows ランタイム C++ テンプレート ライブラリを使用して基本的な従来の COM コンポーネントを作成するには
+### <a name="to-use-the-windows-runtime-c-template-library-to-create-a-basic-classic-com-component"></a>Windows ランタイムC++テンプレートライブラリを使用して基本的なクラシック COM コンポーネントを作成するには
 
-1. Visual Studio で、作成、**空のソリューション**プロジェクト。 など、プロジェクトの名前`WRLClassicCOM`します。
+1. Visual Studio で、空の**ソリューション**プロジェクトを作成します。 プロジェクトにという名前を指定`WRLClassicCOM`します。たとえば、のように指定します。
 
-2. 追加、 **Win32 プロジェクト**をソリューションにします。 など、プロジェクトの名前`CalculatorComponent`します。 **アプリケーション設定**] タブで [ **DLL**します。
+2. ソリューションに**Win32 プロジェクト**を追加します。 プロジェクトにという名前を指定`CalculatorComponent`します。たとえば、のように指定します。 **[アプリケーションの設定]** タブで、 **[DLL]** を選択します。
 
-3. 追加、 **Midl ファイル (.idl)** ファイルをプロジェクトにします。 など、ファイルの名前`CalculatorComponent.idl`します。
+3. **Midl ファイル (.idl)** ファイルをプロジェクトに追加します。 ファイルにという名前を指定`CalculatorComponent.idl`します。たとえば、のように指定します。
 
 4. CalculatorComponent.idl に次のコードを追加します。
 
    [!code-cpp[wrl-classic-com-component#1](../codesnippet/CPP/how-to-create-a-classic-com-component-using-wrl_1.idl)]
 
-5. CalculatorComponent.cpp で、`CalculatorComponent` クラスを定義します。 `CalculatorComponent`クラスから継承[:runtimeclass](runtimeclass-class.md)します。 [Microsoft::WRL::RuntimeClassFlags\<ClassicCom >](runtimeclassflags-structure.md)クラスの派生元を指定します。 [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)なく[IInspectable](/windows/desktop/api/inspectable/nn-inspectable-iinspectable)します。 (`IInspectable`は Windows ランタイム アプリのコンポーネントでのみ使用できます)。`CoCreatableClass`などの関数で使用できるクラスのファクトリを作成[CoCreateInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance)します。
+5. CalculatorComponent.cpp で、`CalculatorComponent` クラスを定義します。 クラス`CalculatorComponent`は、 [Microsoft:: wrl:: RuntimeClass](runtimeclass-class.md)から継承されます。 [Microsoft:: wrl:: RuntimeClassFlags\<classiccom >](runtimeclassflags-structure.md)は、クラスが[IInspectable](/windows/win32/api/inspectable/nn-inspectable-iinspectable)ではなく[IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)から派生することを指定します。 (`IInspectable`はアプリコンポーネントを Windows ランタイムする場合にのみ使用できます)。[CoCreateInstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance) などの関数で使用できるクラスのファクトリを作成します。`CoCreatableClass`
 
    [!code-cpp[wrl-classic-com-component#2](../codesnippet/CPP/how-to-create-a-classic-com-component-using-wrl_2.cpp)]
 
-6. 次のコードを使用して、コードに置き換えます`dllmain.cpp`します。 このファイルで DLL のエクスポート関数が定義されます。 これらの関数を使用して、 [Microsoft::WRL::Module](module-class.md)モジュールのクラス ファクトリを管理するクラス。
+6. の`dllmain.cpp`コードを置き換えるには、次のコードを使用します。 このファイルで DLL のエクスポート関数が定義されます。 これらの関数は、 [Microsoft:: WRL:: module](module-class.md)クラスを使用して、モジュールのクラスファクトリを管理します。
 
    [!code-cpp[wrl-classic-com-component#3](../codesnippet/CPP/how-to-create-a-classic-com-component-using-wrl_3.cpp)]
 
-7. 追加、**モジュール定義ファイル (.def)** ファイルをプロジェクトにします。 など、ファイルの名前`CalculatorComponent.def`します。 このファイルによって、エクスポートされる関数の名前がリンカーに設定されます。
+7. **モジュール定義ファイル (.def)** ファイルをプロジェクトに追加します。 ファイルにという名前を指定`CalculatorComponent.def`します。たとえば、のように指定します。 このファイルによって、エクスポートされる関数の名前がリンカーに設定されます。
 
 8. CalculatorComponent.def に次のコードを追加します。
 
@@ -49,11 +49,11 @@ Windows ランタイム C++ テンプレート ライブラリ (WRL) を使用�
         DllCanUnloadNow         PRIVATE
     ```
 
-9. リンカー行に runtimeobject.lib を追加します。 学習する方法についてを参照してください[します。Lib ファイルをリンカー入力として](../../build/reference/dot-lib-files-as-linker-input.md)します。
+9. リンカー行に runtimeobject.lib を追加します。 詳細については、「」を参照してください[。リンカー入力としての Lib ファイル](../../build/reference/dot-lib-files-as-linker-input.md)。
 
 ### <a name="to-consume-the-com-component-from-a-desktop-app"></a>デスクトップ アプリから COM コンポーネントを使用するには
 
-1. Windows レジストリを使用して COM コンポーネントを登録します。 これを行うには、登録エントリ ファイルを作成、名前を付けます`RegScript.reg`、次のテキストを追加します。 置換 *\<dll パス >* 、DLL のパスを使用 — たとえば、 `C:\temp\WRLClassicCOM\Debug\CalculatorComponent.dll`。
+1. Windows レジストリを使用して COM コンポーネントを登録します。 これを行うには、登録エントリファイルを作成し`RegScript.reg`、という名前を入力して、次のテキストを追加します。 *\<Dll パス >* を dll のパスに置き換え`C:\temp\WRLClassicCOM\Debug\CalculatorComponent.dll`ます (例:)。
 
     ```
     Windows Registry Editor Version 5.00
@@ -74,17 +74,17 @@ Windows ランタイム C++ テンプレート ライブラリ (WRL) を使用�
     @="1.0"
     ```
 
-2. RegScript.reg を実行するかをプロジェクトの追加**ビルド後イベント**します。 詳細については、次を参照してください。[ビルド前のビルド後コマンド ライン ダイアログ ボックス](/visualstudio/ide/reference/pre-build-event-post-build-event-command-line-dialog-box)します。
+2. RegScript .reg を実行するか、プロジェクトの**ビルド後イベント**に追加します。 詳細については、「[ビルド前のイベント/ビルド後のコマンドラインダイアログボックス](/visualstudio/ide/reference/pre-build-event-post-build-event-command-line-dialog-box)」を参照してください。
 
-3. 追加、 **Win32 コンソール アプリケーション**プロジェクトがソリューションにします。 など、プロジェクトの名前`Calculator`します。
+3. **Win32 コンソールアプリケーション**プロジェクトをソリューションに追加します。 プロジェクトにという名前を指定`Calculator`します。たとえば、のように指定します。
 
-4. このコードの内容を使用して`Calculator.cpp`:
+4. 次のコードを使用して、 `Calculator.cpp`の内容を置き換えます。
 
    [!code-cpp[wrl-classic-com-component#6](../codesnippet/CPP/how-to-create-a-classic-com-component-using-wrl_6.cpp)]
 
 ## <a name="robust-programming"></a>信頼性の高いプログラミング
 
-このドキュメントでは、標準の COM 関数を使用して、COM コンポーネントを作成して、任意の COM 対応テクノロジで使用できるようにする Windows ランタイム C++ テンプレート ライブラリを使用できることを示します。 など、Windows ランタイム C++ テンプレート ライブラリの型を使用することもできます。 [Microsoft::WRL::ComPtr](comptr-class.md) COM およびその他のオブジェクトの有効期間を管理、デスクトップ アプリでします。 次のコードの有効期間を管理する Windows ランタイム C++ テンプレート ライブラリを使用して、`ICalculatorComponent`ポインター。 `CoInitializeWrapper` クラスは RAII ラッパーでの 1 つで、COM ライブラリが解放されることと、COM ライブラリの有効期間が `ComPtr` スマート ポインター オブジェクトよりも長く続くことを保証します。
+このドキュメントでは、標準の COM 関数を使用して、 C++ Windows ランタイムテンプレートライブラリを使用して com コンポーネントを作成し、任意の com 対応テクノロジで使用できるようにする方法を示します。 また、デスクトップアプリでC++ [Microsoft:: Wrl:: comptr](comptr-class.md)などの Windows ランタイムテンプレートライブラリの種類を使用して、COM とその他のオブジェクトの有効期間を管理することもできます。 次のコードでは、 C++ Windows ランタイムテンプレートライブラリを使用して、 `ICalculatorComponent`ポインターの有効期間を管理します。 `CoInitializeWrapper` クラスは RAII ラッパーでの 1 つで、COM ライブラリが解放されることと、COM ライブラリの有効期間が `ComPtr` スマート ポインター オブジェクトよりも長く続くことを保証します。
 
 [!code-cpp[wrl-classic-com-component#7](../codesnippet/CPP/how-to-create-a-classic-com-component-using-wrl_7.cpp)]
 
