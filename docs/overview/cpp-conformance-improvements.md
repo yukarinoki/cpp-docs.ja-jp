@@ -5,12 +5,12 @@ description: Visual Studio の Microsoft C++ は、C++20 言語標準との完�
 ms.technology: cpp-language
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: aeaaab704706bee575e3ae44726522cd04c17433
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 8eae104d21de271f11c727262939121c20050092
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70222317"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927946"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Visual Studio の C++ 準拠の強化
 
@@ -268,7 +268,7 @@ int main() {
 
 ### <a name="binary-expressions-with-different-enum-types"></a>異なる列挙型を持つバイナリ式
 
-一方が列挙型であり、もう一方が異なる列挙型または浮動小数点型のオペランドに対して通常の算術変換を適用する機能は、C++20 ([P1120R0](http://wg21.link/p1120r0)) では非推奨です。 Visual Studio 2019 バージョン 16.2 以降では、[/std:c++latest](../build/reference/std-specify-language-standard-version.md) コンパイラ オプションが有効になっていると、次のコードでレベル 4 の警告が生成されます。
+一方が列挙型であり、もう一方が異なる列挙型または浮動小数点型のオペランドに対して通常の算術変換を適用する機能は、C++20 ([P1120R0](https://wg21.link/p1120r0)) では非推奨です。 Visual Studio 2019 バージョン 16.2 以降では、[/std:c++latest](../build/reference/std-specify-language-standard-version.md) コンパイラ オプションが有効になっていると、次のコードでレベル 4 の警告が生成されます。
 
 ```cpp
 enum E1 { a };
@@ -290,7 +290,7 @@ int main() {
 
 ### <a name="binary-expressions-with-enumeration-and-floating-point-types"></a>列挙型と浮動小数点型を含むバイナリ式
 
-一方が列挙型であり、もう一方が異なる列挙型または浮動小数点型のオペランドに対して通常の算術変換を適用する機能は、C++20 ([P1120R0](http://wg21.link/p1120r0)) では非推奨です。 言い換えると、列挙型と浮動小数点型の間で二項演算を使用すると、[/std:c++latest](../build/reference/std-specify-language-standard-version.md) コンパイラ オプションが有効になっているときに警告が発生するようになりました。
+一方が列挙型であり、もう一方が異なる列挙型または浮動小数点型のオペランドに対して通常の算術変換を適用する機能は、C++20 ([P1120R0](https://wg21.link/p1120r0)) では非推奨です。 言い換えると、列挙型と浮動小数点型の間で二項演算を使用すると、[/std:c++latest](../build/reference/std-specify-language-standard-version.md) コンパイラ オプションが有効になっているときに警告が発生するようになりました。
 
 ```cpp
 enum E1 { a };
@@ -310,7 +310,7 @@ int main() {
 
 ### <a name="equality-and-relational-comparisons-of-arrays"></a>配列の等価比較と関係比較
 
-C++20 ([P1120R0](http://wg21.link/p1120r0)) では、配列型の 2 つのオペランドの等価比較と関係比較は非推奨とされます。 言い換えると、2 つの配列間の比較演算は (ランクと範囲の類似性に関係なく) 警告となります。 Visual Studio 2019 バージョン 16.2 以降では、[/std:c++latest](../build/reference/std-specify-language-standard-version.md) コンパイラ オプションが有効になっている場合、次のコードで *C5056: operator '==': deprecated for array types* が生成されます。
+C++20 ([P1120R0](https://wg21.link/p1120r0)) では、配列型の 2 つのオペランドの等価比較と関係比較は非推奨とされます。 言い換えると、2 つの配列間の比較演算は (ランクと範囲の類似性に関係なく) 警告となります。 Visual Studio 2019 バージョン 16.2 以降では、[/std:c++latest](../build/reference/std-specify-language-standard-version.md) コンパイラ オプションが有効になっている場合、次のコードで *C5056: operator '==': deprecated for array types* が生成されます。
 
 ```cpp
 int main() {

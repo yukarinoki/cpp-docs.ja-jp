@@ -1,14 +1,17 @@
 ---
 title: to 系関数
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcr120.dll
 - msvcr90.dll
 - msvcr110.dll
 - msvcr110_clr0400.dll
 - msvcr80.dll
 - msvcr100.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - To
 helpviewer_keywords:
@@ -20,12 +23,12 @@ helpviewer_keywords:
 - case, converting
 - characters, converting
 ms.assetid: f636a4c6-8c9f-4be2-baac-064f9dbae300
-ms.openlocfilehash: 17d80507462b3eb0fdfb5d9e41da6162947bd3de
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: f7a898d70e506ed4707ea718faa0ed618682c2c7
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57742535"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944821"
 ---
 # <a name="to-functions"></a>to 系関数
 
@@ -64,7 +67,7 @@ ms.locfileid: "57742535"
 
 - ロケールに依存しない、高速バージョンの `tolower` および **toupper** です。
 
-- **isascii(**`c`**)** と、**isupper(**`c`**)** または **islower(**`c`**)** のいずれかがゼロ以外の場合にのみ使用できます。
+- **isascii(** `c` **)** と、**isupper(** `c` **)** または **islower(** `c` **)** のいずれかがゼロ以外の場合にのみ使用できます。
 
 - `c` が変換可能な適切な大文字または小文字の ASCII 文字でない場合、結果は未定義です。
 

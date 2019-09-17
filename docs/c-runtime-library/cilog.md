@@ -1,9 +1,9 @@
 ---
 title: _CIlog
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _CIlog
-apilocation:
+api_location:
 - msvcr90.dll
 - msvcr120.dll
 - msvcr80.dll
@@ -12,7 +12,10 @@ apilocation:
 - msvcr100.dll
 - msvcrt.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _CIlog
 - CIlog
@@ -20,14 +23,14 @@ helpviewer_keywords:
 - _CIlog intrinsic
 - CIlog intrinsic
 ms.assetid: 23503854-ddaa-4fe0-a4a3-7fbb3a43bdec
-ms.openlocfilehash: 29b35e5807ca3bd1fbb994118314952a9a1760c4
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: edc096680522da50910eb42a95a481b83be8791d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57737721"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944810"
 ---
-# <a name="cilog"></a>_CIlog
+# <a name="_cilog"></a>_CIlog
 
 スタックのトップ値の自然対数を計算します。
 
@@ -43,7 +46,7 @@ void __cdecl _CIlog();
 
 結果の値は、スタックのトップにプッシュされます。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **プラットフォーム:** x86
 
