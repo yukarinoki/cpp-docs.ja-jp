@@ -300,7 +300,7 @@ void PASCAL operator delete(
 
 リークの検出をそれでもデバッグ モードで DEBUG_NEW を使用しない場合でも上記で説明したソース ファイルの行番号のレポート作成しなくてもします。
 
-演算子をオーバーライドする場合は**新しい**と**削除**、この診断機能が多少低下します。
+**new** と **delete** 演算子をオーバーライドすると、この診断機能が多少低下します。
 
 ### <a name="example"></a>例
 
@@ -308,9 +308,9 @@ void PASCAL operator delete(
 
 [!code-cpp[NVC_MFCCObjectSample#15](../../mfc/codesnippet/cpp/cobject-class_8.cpp)]
 
-##  <a name="operator_new"></a>  新しい CObject::operator
+##  <a name="operator_new"></a> CObject::operator new
 
-ライブラリのリリース バージョンの演算子**新しい**と同様の方法で最適なメモリ割り当てを実行します。`malloc`します。
+ライブラリのリリース バージョンでは、**new** 演算子は`malloc`と同様の方法で最適なメモリ割り当てを実行します。
 
 ```
 void* PASCAL operator new(size_t nSize);
