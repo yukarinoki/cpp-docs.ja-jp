@@ -198,7 +198,7 @@ class CDaoRecordset : public CObject
 |[CDaoRecordset::AddNew](#addnew)|新しいレコードを追加する準備をします。 呼び出す[Update](#update)追加を完了します。|
 |[CDaoRecordset::CanAppend](#canappend)|使用してレコード セットに新しいレコードを追加する場合は 0 以外を返します、 [AddNew](#addnew)メンバー関数。|
 |[CDaoRecordset::CanBookmark](#canbookmark)|レコード セットは、ブックマークをサポートしている場合、0 以外の値を返します。|
-|[CDaoRecordset::CancelUpdate](#cancelupdate)|ために、保留中の更新をキャンセル、[編集](#edit)または[AddNew](#addnew)操作。|
+|[CDaoRecordset::CancelUpdate](#cancelupdate)|ために、保留中の更新をキャンセル、[Edit](#edit)または[AddNew](#addnew)操作。|
 |[CDaoRecordset::CanRestart](#canrestart)|場合は 0 以外の値を返します[Requery](#requery)レコード セットのクエリを再実行を呼び出すことができます。|
 |[CDaoRecordset::CanScroll](#canscroll)|レコードをスクロールする場合は 0 以外を返します。|
 |[CDaoRecordset::CanTransact](#cantransact)|データ ソースは、トランザクションをサポートしている場合、0 以外の値を返します。|
@@ -277,7 +277,7 @@ class CDaoRecordset : public CObject
 |[CDaoRecordset::m_nParams](#m_nparams)|レコード セット クラスでパラメーターのデータ メンバーの数が含まれています — レコード セットのクエリで渡されるパラメーターの数|
 |[CDaoRecordset::m_pDAORecordset](#m_pdaorecordset)|レコード セット オブジェクトを基になる DAO インターフェイスへのポインター。|
 |[CDaoRecordset::m_pDatabase](#m_pdatabase)|この結果セットのソース データベースです。 ポインターが含まれています、 [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)オブジェクト。|
-|[CDaoRecordset::m_strFilter](#m_strfilter)|SQL の構築に使用される文字列を含む**場所**ステートメント。|
+|[CDaoRecordset::m_strFilter](#m_strfilter)|SQL の構築に使用される文字列を含む**WHERE**ステートメント。|
 |[CDaoRecordset::m_strSort](#m_strsort)|SQL の構築に使用される文字列を含む**ORDER BY**ステートメント。|
 
 ## <a name="remarks"></a>Remarks
@@ -405,7 +405,7 @@ Microsoft Jet データベース エンジンのテーブルに完全に基づ�
 
 ##  <a name="cancelupdate"></a>  CDaoRecordset::CancelUpdate
 
-`CancelUpdate`メンバー関数は、ために、保留中の更新をキャンセル、[編集](#edit)または[AddNew](#addnew)操作。
+`CancelUpdate`メンバー関数は、ために、保留中の更新をキャンセル、[Edit](#edit)または[AddNew](#addnew)操作。
 
 ```
 virtual void CancelUpdate();
@@ -413,7 +413,7 @@ virtual void CancelUpdate();
 
 ### <a name="remarks"></a>Remarks
 
-たとえば、アプリケーションを呼び出す、`Edit`または`AddNew`メンバー関数が呼び出されていないと[更新](#update)、`CancelUpdate`後に加えられた変更を取り消します`Edit`または`AddNew`が呼び出されました。
+たとえば、アプリケーションを呼び出す、`Edit`または`AddNew`メンバー関数が呼び出されていないと[Update](#update)、`CancelUpdate`後に加えられた変更を取り消します`Edit`または`AddNew`が呼び出されました。
 
 > [!NOTE]
 >  レコードは、ダブル バッファリングを行う場合 (つまり、フィールドの自動チェックが有効)、呼び出す`CancelUpdate`メンバー変数を前の値に復元されます`AddNew`または`Edit`が呼び出されました。
@@ -438,7 +438,7 @@ BOOL CanRestart();
 
 テーブル型のレコード セットをサポートしていない`Requery`します。
 
-場合`Requery`は呼び出しがサポートされていない[閉じる](#close)し[オープン](#open)データを更新します。 呼び出すことができます`Requery`オブジェクトを更新するレコード セットの基になるパラメーターのクエリ パラメーターの値が変更された後です。
+場合`Requery`は呼び出しがサポートされていない[Close](#close)し[Open](#open)データを更新します。 呼び出すことができます`Requery`オブジェクトを更新するレコード セットの基になるパラメーターのクエリ パラメーターの値が変更された後です。
 
 関連情報については、「再起動可能なプロパティ」DAO ヘルプのトピックを参照してください。
 
@@ -544,7 +544,7 @@ virtual void Delete();
 
 ### <a name="remarks"></a>Remarks
 
-削除が成功した後、レコード セットのフィールド データ メンバーは、Null 値に設定され、レコード セットのナビゲーションのメンバー関数のいずれかを明示的に呼び出す必要があります ([移動](#move)、[シーク](#seek)、 [SetBookmark](#setbookmark)など)、削除されたレコードから移動するためにします。 レコード セットからレコードを削除するときに必要があります、現在のレコード、レコード セットを呼び出す前に`Delete`、それ以外の例外がスローされます。
+削除が成功した後、レコード セットのフィールド データ メンバーは、Null 値に設定され、レコード セットのナビゲーションのメンバー関数のいずれかを明示的に呼び出す必要があります ([Move](#move)、[Seek](#seek)、 [SetBookmark](#setbookmark)など)、削除されたレコードから移動するためにします。 レコード セットからレコードを削除するときに必要があります、現在のレコード、レコード セットを呼び出す前に`Delete`、それ以外の例外がスローされます。
 
 `Delete` 現在のレコードを削除し、アクセスできなくなります。 編集または削除されたレコードを使用することはできません、現在は残ります。 別のレコードに移動するとすることはできません、削除したレコード現在もう一度です。
 
@@ -678,7 +678,7 @@ virtual BOOL Find(
 - AFX_DAO_LAST では、一致する文字列の最後の場所を検索します。
 
 *lpszFilter*<br/>
-文字列式 (など、**場所**語を除く SQL ステートメントの句**場所**) レコードを検索するために使用します。 例:
+文字列式 (など、**WHERE**語を除く SQL ステートメントの句**WHERE**) レコードを検索するために使用します。 例:
 
 [!code-cpp[NVC_MFCDatabase#3](../../mfc/codesnippet/cpp/cdaorecordset-class_3.cpp)]
 
@@ -690,7 +690,7 @@ virtual BOOL Find(
 
 最初に、[次へ] を検索する文字列の前、または最後のインスタンス。 `Find` 仮想関数をこのメソッドをオーバーライドし、独自の実装を追加できます。 `FindFirst`、 `FindLast`、 `FindNext`、および`FindPrev`メンバー関数の呼び出し、`Find`メンバー関数を使用できるように`Find`すべての検索操作の動作を制御します。
 
-テーブル型のレコード セットのレコードを検索、呼び出し、[シーク](#seek)メンバー関数。
+テーブル型のレコード セットのレコードを検索、呼び出し、[Seek](#seek)メンバー関数。
 
 > [!TIP]
 >  レコードがある場合より効果的な一連の小さな`Find`になります。 一般に、および ODBC のデータでは特に、目的のレコードだけを取得する新しいクエリを作成することをお勧めします。
@@ -708,7 +708,7 @@ BOOL FindFirst(LPCTSTR lpszFilter);
 ### <a name="parameters"></a>パラメーター
 
 *lpszFilter*<br/>
-文字列式 (など、**場所**語を除く SQL ステートメントの句**場所**) レコードを検索するために使用します。
+文字列式 (など、**WHERE**語を除く SQL ステートメントの句**WHERE**) レコードを検索するために使用します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -747,7 +747,7 @@ BOOL FindFirst(LPCTSTR lpszFilter);
 
 - 米国の日付形式 (1 か月-日-年) を使用する必要があります Microsoft Jet データベース エンジンの米国版を使用していない場合でも、日付を含むフィールドを検索するときそれ以外の場合、一致するレコードが見つからない可能性があります。
 
-- ODBC データベースで大きなダイナセットを使用する場合は、検索操作が遅いこと、大きなレコード セットを使用する場合に特に検出可能性があります。 SQL クエリを使用してパフォーマンスを向上させることができますとカスタマイズ**ORDERBY**または**場所**句、パラメーター クエリ、または`CDaoQuerydef`インデックス付きの特定のレコードを取得するオブジェクト。
+- ODBC データベースで大きなダイナセットを使用する場合は、検索操作が遅いこと、大きなレコード セットを使用する場合に特に検出可能性があります。 SQL クエリを使用してパフォーマンスを向上させることができますとカスタマイズ**ORDERBY**または**WHERE**句、パラメーター クエリ、または`CDaoQuerydef`インデックス付きの特定のレコードを取得するオブジェクト。
 
 関連情報についてを参照してください"FindFirst、FindLast、FindNext、FindPrevious メソッド"DAO のヘルプします。
 
@@ -762,7 +762,7 @@ BOOL FindLast(LPCTSTR lpszFilter);
 ### <a name="parameters"></a>パラメーター
 
 *lpszFilter*<br/>
-文字列式 (など、**場所**語を除く SQL ステートメントの句**場所**) レコードを検索するために使用します。
+文字列式 (など、**WHERE**語を除く SQL ステートメントの句**WHERE**) レコードを検索するために使用します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -789,7 +789,7 @@ BOOL FindLast(LPCTSTR lpszFilter);
 
 - 米国の日付形式 (1 か月-日-年) を使用する必要があります Microsoft Jet データベース エンジンの米国版を使用していない場合でも、日付を含むフィールドを検索するときそれ以外の場合、一致するレコードが見つからない可能性があります。
 
-- ODBC データベースで大きなダイナセットを使用する場合は、検索操作が遅いこと、大きなレコード セットを使用する場合に特に検出可能性があります。 SQL クエリを使用してパフォーマンスを向上させることができますとカスタマイズ**ORDERBY**または**場所**句、パラメーター クエリ、または`CDaoQuerydef`インデックス付きの特定のレコードを取得するオブジェクト。
+- ODBC データベースで大きなダイナセットを使用する場合は、検索操作が遅いこと、大きなレコード セットを使用する場合に特に検出可能性があります。 SQL クエリを使用してパフォーマンスを向上させることができますとカスタマイズ**ORDERBY**または**WHERE**句、パラメーター クエリ、または`CDaoQuerydef`インデックス付きの特定のレコードを取得するオブジェクト。
 
 関連情報についてを参照してください"FindFirst、FindLast、FindNext、FindPrevious メソッド"DAO のヘルプします。
 
@@ -804,7 +804,7 @@ BOOL FindNext(LPCTSTR lpszFilter);
 ### <a name="parameters"></a>パラメーター
 
 *lpszFilter*<br/>
-文字列式 (など、**場所**語を除く SQL ステートメントの句**場所**) レコードを検索するために使用します。
+文字列式 (など、**WHERE**語を除く SQL ステートメントの句**WHERE**) レコードを検索するために使用します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -831,7 +831,7 @@ BOOL FindNext(LPCTSTR lpszFilter);
 
 - 米国の日付形式 (1 か月-日-年) を使用する必要があります Microsoft Jet データベース エンジンの米国版を使用していない場合でも、日付を含むフィールドを検索するときそれ以外の場合、一致するレコードが見つからない可能性があります。
 
-- ODBC データベースで大きなダイナセットを使用する場合は、検索操作が遅いこと、大きなレコード セットを使用する場合に特に検出可能性があります。 SQL クエリを使用してパフォーマンスを向上させることができますとカスタマイズ**ORDERBY**または**場所**句、パラメーター クエリ、または`CDaoQuerydef`インデックス付きの特定のレコードを取得するオブジェクト。
+- ODBC データベースで大きなダイナセットを使用する場合は、検索操作が遅いこと、大きなレコード セットを使用する場合に特に検出可能性があります。 SQL クエリを使用してパフォーマンスを向上させることができますとカスタマイズ**ORDERBY**または**WHERE**句、パラメーター クエリ、または`CDaoQuerydef`インデックス付きの特定のレコードを取得するオブジェクト。
 
 関連情報についてを参照してください"FindFirst、FindLast、FindNext、FindPrevious メソッド"DAO のヘルプします。
 
@@ -846,7 +846,7 @@ BOOL FindPrev(LPCTSTR lpszFilter);
 ### <a name="parameters"></a>パラメーター
 
 *lpszFilter*<br/>
-文字列式 (など、**場所**語を除く SQL ステートメントの句**場所**) レコードを検索するために使用します。
+文字列式 (など、**WHERE**語を除く SQL ステートメントの句**WHERE**) レコードを検索するために使用します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -873,7 +873,7 @@ BOOL FindPrev(LPCTSTR lpszFilter);
 
 - 米国の日付形式 (1 か月-日-年) を使用する必要があります Microsoft Jet データベース エンジンの米国版を使用していない場合でも、日付を含むフィールドを検索するときそれ以外の場合、一致するレコードが見つからない可能性があります。
 
-- ODBC データベースで大きなダイナセットを使用する場合は、検索操作が遅いこと、大きなレコード セットを使用する場合に特に検出可能性があります。 SQL クエリを使用してパフォーマンスを向上させることができますとカスタマイズ**ORDERBY**または**場所**句、パラメーター クエリ、または`CDaoQuerydef`インデックス付きの特定のレコードを取得するオブジェクト。
+- ODBC データベースで大きなダイナセットを使用する場合は、検索操作が遅いこと、大きなレコード セットを使用する場合に特に検出可能性があります。 SQL クエリを使用してパフォーマンスを向上させることができますとカスタマイズ**ORDERBY**または**WHERE**句、パラメーター クエリ、または`CDaoQuerydef`インデックス付きの特定のレコードを取得するオブジェクト。
 
 関連情報についてを参照してください"FindFirst、FindLast、FindNext、FindPrevious メソッド"DAO のヘルプします。
 
@@ -1742,11 +1742,11 @@ DAO インターフェイスに直接アクセスする必要がある場合は�
 
 ##  <a name="m_strfilter"></a>  CDaoRecordset::m_strFilter
 
-構築するために使用する文字列を含む、**場所**SQL ステートメントの句。
+構築するために使用する文字列を含む、**WHERE**SQL ステートメントの句。
 
 ### <a name="remarks"></a>Remarks
 
-予約語を含まない**場所**をレコード セットをフィルター処理します。 このデータ メンバーの使用では、テーブル型のレコード セットに適用されません。 使用`m_strFilter`を使用して、レコード セットを開くときに影響を与えませんを`CDaoQueryDef`ポインター。
+予約語を含まない**WHERE**をレコード セットをフィルター処理します。 このデータ メンバーの使用では、テーブル型のレコード セットに適用されません。 使用`m_strFilter`を使用して、レコード セットを開くときに影響を与えませんを`CDaoQueryDef`ポインター。
 
 米国の日付形式 (1 か月-日-年) を使用して、Microsoft Jet データベース エンジンの米国版を使用していない場合でも、日付を含むフィールドをフィルター処理する場合それ以外の場合、データがフィルター処理されません想像のとおりです。
 
@@ -1947,7 +1947,7 @@ virtual void Open(
 
 - テーブル定義やクエリ定義の (コンマ区切り) の 1 つまたは複数の名前。
 
-- SQL**選択**ステートメント (SQL オプションで**場所**または**ORDERBY**句)。
+- SQL**SSELECT**ステートメント (SQL オプションで**WHERE**または**ORDERBY**句)。
 
 - パススルー クエリです。
 
@@ -2014,7 +2014,7 @@ virtual void Open(
 
 通常のプロシージャでは NULL を`Open`。 その場合、`Open`呼び出し`GetDefaultSQL`、ClassWizard 生成の作成時にオーバーライド可能なメンバー関数、 `CDaoRecordset`-クラスを派生します。 この値は、ClassWizard で指定したテーブルやクエリ定義の名前を示します。 代わりにその他の情報を指定することができます、 *lpszSQL*パラメーター。
 
-渡したもの`Open`クエリの最終的な SQL 文字列を構築します (SQL も**場所**と**ORDERBY**句が追加された、 *lpszSQL*文字列渡されたする) し、クエリを実行します。 呼び出すことによって作成された文字列を調べることができます`GetSQL`呼び出した後`Open`します。
+渡したもの`Open`クエリの最終的な SQL 文字列を構築します (SQL も**WHERE**と**ORDERBY**句が追加された、 *lpszSQL*文字列渡されたする) し、クエリを実行します。 呼び出すことによって作成された文字列を調べることができます`GetSQL`呼び出した後`Open`します。
 
 レコードセット クラスのフィールド データ メンバーは、選択したデータの列に結び付けられています。 いくつかのレコードが返された場合、最初のレコードが現在のレコードになります。
 
@@ -2111,7 +2111,7 @@ Variant の配列へのポインター。 配列のサイズは、インデッ�
 
 `Seek` 高パフォーマンスのインデックスがテーブル タイプのレコード セットの検索を有効にします。 呼び出すことによって、現在のインデックスを設定する必要があります`SetCurrentIndex`呼び出す前に`Seek`します。 インデックスが一意のキー フィールドまたはフィールドを指定する場合`Seek`に条件を満たす最初のレコードを見つけます。 インデックスを設定しないと、例外がスローされます。
 
-UNICODE のレコード セットを作成していない場合、`COleVariant`オブジェクトに明示的に宣言される ANSI です。 これを使用して行うことができます、 [COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** *lpszSrc* **、** *vtSrc* **)** 形式を持つコンス トラクターの*vtSrc*設定`VT_BSTRT`(ANSI) またはを使用して、`COleVariant`関数[SetString](../../mfc/reference/colevariant-class.md#setstring)**(** *lpszSrc* **、** *vtSrc* **)** で*vtSrc*設定`VT_BSTRT`します。
+UNICODE のレコード セットを作成していない場合、`COleVariant`オブジェクトに明示的に宣言される ANSI です。 これを使用して行うことができます、 [COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant) **(** *lpszSrc* **、** *vtSrc* **)** 形式を持つコンス トラクターの*vtSrc*設定`VT_BSTRT`(ANSI) またはを使用して、`COleVariant`関数[SetString](../../mfc/reference/colevariant-class.md#setstring) **(** *lpszSrc* **、** *vtSrc* **)** で*vtSrc*設定`VT_BSTRT`します。
 
 呼び出すと`Seek`、渡す 1 つまたは複数のキー値と比較演算子 ("<「、」\<="、「=」、"> ="、または">")。 `Seek` 指定されたキー フィールドを検索しで指定された条件を満たす最初のレコードを見つけます*lpszComparison*と*pKey1*します。 見つかると、 `Seek` 、0 以外を返すし、そのレコードは現在、します。 場合`Seek`一致を見つけが失敗した`Seek`0 が返されます、および現在のレコードが定義されていません。 DAO の直接を使用する場合は、NoMatch プロパティを明示的にチェックする必要があります。
 
@@ -2174,7 +2174,7 @@ A [COleVariant](../../mfc/reference/colevariant-class.md)特定のレコード�
 > [!NOTE]
 >  呼び出す[Requery](#requery) DAO のブックマークを変更します。
 
-UNICODE のレコード セットを作成していない場合、`COleVariant`オブジェクトに明示的に宣言される ANSI です。 これを使用して行うことができます、 [COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** *lpszSrc* **、** *vtSrc* **)** 形式を持つコンス トラクターの*vtSrc*設定`VT_BSTRT`(ANSI) またはを使用して、`COleVariant`関数[SetString](../../mfc/reference/colevariant-class.md#setstring)**(** *lpszSrc* **、** *vtSrc* **)** で*vtSrc*設定`VT_BSTRT`します。
+UNICODE のレコード セットを作成していない場合、`COleVariant`オブジェクトに明示的に宣言される ANSI です。 これを使用して行うことができます、 [COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant) **(** *lpszSrc* **、** *vtSrc* **)** 形式を持つコンス トラクターの*vtSrc*設定`VT_BSTRT`(ANSI) またはを使用して、`COleVariant`関数[SetString](../../mfc/reference/colevariant-class.md#setstring) **(** *lpszSrc* **、** *vtSrc* **)** で*vtSrc*設定`VT_BSTRT`します。
 
 関連情報については、トピックを参照して、「Bookmark プロパティ」とブックマークを設定のプロパティ"DAO のヘルプ。
 
@@ -2222,7 +2222,7 @@ Microsoft Jet データベース エンジンが、キャッシュからキャ�
 
 キャッシュされたすべてのデータの更新プログラムを強制的に渡す、 *lSize*パラメーターの`SetCacheSize`0 として呼び出す`SetCacheSize`もう一度、キャッシュのサイズを最初に要求を呼び出して、`FillCache`メンバー関数。
 
-UNICODE のレコード セットを作成していない場合、`COleVariant`オブジェクトに明示的に宣言される ANSI です。 これを使用して行うことができます、 [COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** *lpszSrc* **、** *vtSrc* **)** 形式を持つコンス トラクターの*vtSrc*設定`VT_BSTRT`(ANSI) またはを使用して、`COleVariant`関数[SetString](../../mfc/reference/colevariant-class.md#setstring)**(** *lpszSrc* **、** *vtSrc* **)** で*vtSrc*設定`VT_BSTRT`します。
+UNICODE のレコード セットを作成していない場合、`COleVariant`オブジェクトに明示的に宣言される ANSI です。 これを使用して行うことができます、 [COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant) **(** *lpszSrc* **、** *vtSrc* **)** 形式を持つコンス トラクターの*vtSrc*設定`VT_BSTRT`(ANSI) またはを使用して、`COleVariant`関数[SetString](../../mfc/reference/colevariant-class.md#setstring) **(** *lpszSrc* **、** *vtSrc* **)** で*vtSrc*設定`VT_BSTRT`します。
 
 関連情報についてを参照してください、CacheSize CacheStart プロパティ"DAO のヘルプします。
 
@@ -2371,7 +2371,7 @@ void SetFieldValue(
 
 使用`SetFieldValue`と[GetFieldValue](#getfieldvalue)実行時ではなく静的を使用してバインド列にフィールドに動的にバインドする、 [DoFieldExchange](#dofieldexchange)メカニズム。
 
-UNICODE のレコード セットを作成していないいずれかの形式を使用する必要がありますに注意してください。`SetFieldValue`を格納していない、`COleVariant`パラメーター、または`COleVariant`オブジェクトに明示的に宣言される ANSI です。 これを使用して行うことができます、 [COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** *lpszSrc* **、** *vtSrc* **)** 形式を持つコンス トラクターの*vtSrc*設定`VT_BSTRT`(ANSI) またはを使用して、`COleVariant`関数[SetString](../../mfc/reference/colevariant-class.md#setstring)**(** *lpszSrc* **、** *vtSrc* **)** で*vtSrc*設定`VT_BSTRT`します。
+UNICODE のレコード セットを作成していないいずれかの形式を使用する必要がありますに注意してください。`SetFieldValue`を格納していない、`COleVariant`パラメーター、または`COleVariant`オブジェクトに明示的に宣言される ANSI です。 これを使用して行うことができます、 [COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant) **(** *lpszSrc* **、** *vtSrc* **)** 形式を持つコンス トラクターの*vtSrc*設定`VT_BSTRT`(ANSI) またはを使用して、`COleVariant`関数[SetString](../../mfc/reference/colevariant-class.md#setstring) **(** *lpszSrc* **、** *vtSrc* **)** で*vtSrc*設定`VT_BSTRT`します。
 
 関連情報については、「フィールド オブジェクト」と「値プロパティ」DAO ヘルプのトピックを参照してください。
 
@@ -2452,7 +2452,7 @@ virtual void SetParamValue(
 
 パラメーターは、レコード セットの SQL 文字列の一部として確立するが既に必要があります。 パラメーター名、またはコレクションのインデックス位置を使用してアクセスできます。
 
-として設定する値を指定する`COleVariant`オブジェクト。 目的の値と型の設定については、`COleVariant`オブジェクト、クラスを参照してください。 [COleVariant](../../mfc/reference/colevariant-class.md)します。 UNICODE のレコード セットを作成していない場合、`COleVariant`オブジェクトに明示的に宣言される ANSI です。 これを使用して行うことができます、 [COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** *lpszSrc* **、** *vtSrc* **)** 形式を持つコンス トラクターの*vtSrc*設定`VT_BSTRT`(ANSI) またはを使用して、`COleVariant`関数[SetString](../../mfc/reference/colevariant-class.md#setstring)**(** *lpszSrc* **、** *vtSrc* **)** で*vtSrc*設定`VT_BSTRT`します。
+として設定する値を指定する`COleVariant`オブジェクト。 目的の値と型の設定については、`COleVariant`オブジェクト、クラスを参照してください。 [COleVariant](../../mfc/reference/colevariant-class.md)します。 UNICODE のレコード セットを作成していない場合、`COleVariant`オブジェクトに明示的に宣言される ANSI です。 これを使用して行うことができます、 [COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant) **(** *lpszSrc* **、** *vtSrc* **)** 形式を持つコンス トラクターの*vtSrc*設定`VT_BSTRT`(ANSI) またはを使用して、`COleVariant`関数[SetString](../../mfc/reference/colevariant-class.md#setstring) **(** *lpszSrc* **、** *vtSrc* **)** で*vtSrc*設定`VT_BSTRT`します。
 
 ##  <a name="setparamvaluenull"></a>  CDaoRecordset::SetParamValueNull
 
