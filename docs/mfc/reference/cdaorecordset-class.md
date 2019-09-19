@@ -2010,7 +2010,7 @@ virtual void Open(
 |--------------------------------------|----------------------------------------|-------------|
 |NULL|`GetDefaultSQL` の返す文字列。||
 |1 つまたは複数のテーブル定義やクエリ定義名のコンマ区切りの一覧。|表されるすべての列、`DoFieldExchange`します。|`"Customer"`|
-|**選択**列リスト**FROM**テーブル リスト|指定されたテーブルまたはクエリ定義から指定された列です。|`"SELECT CustId, CustName`<br /><br /> `FROM Customer"`|
+|**SELECT** 列リスト **FROM** テーブル リスト|指定されたテーブルまたはクエリ定義から指定された列です。|`"SELECT CustId, CustName`<br /><br /> `FROM Customer"`|
 
 通常のプロシージャでは NULL を`Open`。 その場合、`Open`呼び出し`GetDefaultSQL`、ClassWizard 生成の作成時にオーバーライド可能なメンバー関数、 `CDaoRecordset`-クラスを派生します。 この値は、ClassWizard で指定したテーブルやクエリ定義の名前を示します。 代わりにその他の情報を指定することができます、 *lpszSQL*パラメーター。
 
