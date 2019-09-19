@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - message handling [MFC], adding handlers
 ms.assetid: 4251cfce-76ca-443d-bd2f-6303afa6d942
-ms.openlocfilehash: cf46c4f388c4607dbb8fb0e7f439603e5964ea03
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.openlocfilehash: 1287c8166e02c3aa7696a3a0d79ecc1a240e3032
+ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70907658"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71095874"
 ---
 # <a name="adding-an-mfc-message-handler"></a>MFC メッセージ ハンドラーの追加
 
-クラス[ウィザード](mfc-class-wizard.md)または**クラスビュー**の **[プロパティ]** ウィンドウを使用すると、メッセージハンドラー (windows メッセージを処理するメンバー関数) をクラスに追加し、windows メッセージをメッセージハンドラーにマップできます。 また、[ダイアログボックスコントロールのイベントハンドラー](../../windows/adding-event-handlers-for-dialog-box-controls.md)を追加することもできます。 
+クラス[ウィザード](mfc-class-wizard.md)または**クラスビュー**の **[プロパティ]** ウィンドウを使用すると、メッセージハンドラー (windows メッセージを処理するメンバー関数) をクラスに追加し、windows メッセージをメッセージハンドラーにマップできます。 また、[ダイアログボックスコントロールのイベントハンドラー](../../windows/adding-event-handlers-for-dialog-box-controls.md)を追加することもできます。
 
 **クラスウィザード**または **[プロパティ]** ウィンドウ (**クラスビュー**) を使用してメッセージおよびイベント処理関数を定義すると、メッセージディスパッチテーブル (またはメッセージマップ) とクラスヘッダーファイルを自動的に更新できます。
 

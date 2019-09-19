@@ -1,22 +1,24 @@
 ---
 title: CDaoIndexFieldInfo 構造体
-ms.date: 11/04/2016
+ms.date: 09/17/2019
 f1_keywords:
 - CDaoIndexFieldInfo
 helpviewer_keywords:
 - CDaoIndexFieldInfo structure [MFC]
 - DAO (Data Access Objects), Index Fields collection
 ms.assetid: 097ee8a6-83b1-4db7-8f05-d62a2deefe19
-ms.openlocfilehash: d03a6f6eadd4cf6ccb5279edf18675605d0b1485
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a8b0ff991b8cc4988192b89d7f70309af9b9112a
+ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399760"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71096089"
 ---
 # <a name="cdaoindexfieldinfo-structure"></a>CDaoIndexFieldInfo 構造体
 
-`CDaoIndexFieldInfo`構造体には、データ アクセス オブジェクト (DAO) に対して定義されているインデックス フィールド オブジェクトに関する情報が含まれています。
+構造`CDaoIndexFieldInfo`体には、データアクセスオブジェクト (DAO) 用に定義されたインデックスフィールドオブジェクトに関する情報が含まれています。
+
+DAO は Office 2013 でサポートされています。 DAO 3.6 は最終バージョンであり、互換性のために残されているものと見なされます。
 
 ## <a name="syntax"></a>構文
 
@@ -31,22 +33,22 @@ struct CDaoIndexFieldInfo
 #### <a name="parameters"></a>パラメーター
 
 *m_strName*<br/>
-インデックスのフィールド オブジェクトの一意名します。 詳細については、「Name プロパティ」DAO ヘルプのトピックを参照してください。
+インデックスフィールドオブジェクトに一意の名前を付けます。 詳細については、DAO ヘルプの「Name プロパティ」を参照してください。
 
 *m_bDescending*<br/>
-Index オブジェクトによって定義されているインデックスの順序を示します。 降順の場合は TRUE。
+Index オブジェクトによって定義されたインデックスの順序を示します。 順序が降順の場合は TRUE。
 
 ## <a name="remarks"></a>Remarks
 
-Index オブジェクトには、多数のフィールド、フィールドにインデックスがテーブル定義 (またはテーブルに基づくレコード セット) を示すことができます。 上記のプライマリへの参照での情報を返す方法を示します、`m_pFieldInfos`のメンバー、 [CDaoIndexInfo](../../mfc/reference/cdaoindexinfo-structure.md)オブジェクトを呼び出すことによって取得、`GetIndexInfo`クラスのメンバー関数[CDaoTableDef](../../mfc/reference/cdaotabledef-class.md#getindexinfo)または[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md#getindexinfo)します。
+インデックスオブジェクトには、複数のフィールドを含めることができます。これは、テーブル (またはテーブルに基づくレコードセット) がインデックス化されているフィールドを示します。 上のプライマリへの参照は、 [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md#getindexinfo)または[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md#getindexinfo)クラス`m_pFieldInfos`の`GetIndexInfo`メンバー関数を呼び出すことによって取得される[CDaoIndexInfo](../../mfc/reference/cdaoindexinfo-structure.md)オブジェクトのメンバーで情報がどのように返されるかを示します。
 
-インデックスおよびインデックスのフィールド オブジェクトは、MFC クラスでは表されません。 DAO オブジェクトを基になる MFC オブジェクト クラスの代わりに、 [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md)または[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)インデックス コレクションと呼ばれるインデックス オブジェクトのコレクションを含めることができます。 インデックスの各オブジェクトには、さらに、フィールド オブジェクトのコレクションが含まれています。 これらのクラス メンバー関数のインデックスについては、個々 のアイテムへのアクセスを提供するか、それらを一度にすべてにアクセスできます、`CDaoIndexInfo`オブジェクトを呼び出すことによって、`GetIndexInfo`親オブジェクトのメンバー関数。 `CDaoIndexInfo`オブジェクトを持つデータ メンバー、`m_pFieldInfos`の配列を指す`CDaoIndexFieldInfo`オブジェクト。
+インデックスオブジェクトとインデックスフィールドオブジェクトは、MFC クラスでは表されません。 代わりに、 [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md)クラスまたは[CDAORECORDSET](../../mfc/reference/cdaorecordset-class.md)クラスの MFC オブジェクトの基になる DAO オブジェクトには、Indexes コレクションと呼ばれるインデックスオブジェクトのコレクションが含まれています。 各インデックスオブジェクトには、フィールドオブジェクトのコレクションが含まれています。 これらのクラスは、インデックス情報の個々の項目にアクセスするためのメンバー関数を提供します。 `CDaoIndexInfo`また、親オブジェクト`GetIndexInfo`のメンバー関数を呼び出すことによって、オブジェクトを使用して一度にすべてのオブジェクトにアクセスすることもできます。 オブジェクトには、オブジェクトの`CDaoIndexFieldInfo`配列を指すデータ`m_pFieldInfos`メンバーがあります。 `CDaoIndexInfo`
 
-呼び出す、`GetIndexInfo`でインデックスがコレクションは、親テーブルまたはレコード セット オブジェクトのメンバー関数は、興味のあるインデックス オブジェクトを格納します。 アクセスし、`m_pFieldInfos`のメンバー、 [CDaoIndexInfo](../../mfc/reference/cdaoindexinfo-structure.md)オブジェクト。 長さ、`m_pFieldInfos`に配列が格納されている`m_nFields`します。 `CDaoIndexFieldInfo` 定義、`Dump`デバッグでのメンバー関数を作成します。 使用することができます`Dump`の内容をダンプする`CDaoIndexFieldInfo`オブジェクト。
+対象となるインデックスオブジェクトが格納されているインデックスのコレクションが格納されているテーブルテーブルまたはレコードセットオブジェクトのメンバー関数を呼び出します。`GetIndexInfo` 次に、 `m_pFieldInfos` [CDaoIndexInfo](../../mfc/reference/cdaoindexinfo-structure.md)オブジェクトのメンバーにアクセスします。 `m_pFieldInfos`配列の長さは、に`m_nFields`格納されます。 `CDaoIndexFieldInfo`は、 `Dump`デバッグビルドでメンバー関数も定義します。 を使用`Dump`すると、 `CDaoIndexFieldInfo`オブジェクトの内容をダンプできます。
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** afxdao.h
+**ヘッダー:** afxdao
 
 ## <a name="see-also"></a>関連項目
 
