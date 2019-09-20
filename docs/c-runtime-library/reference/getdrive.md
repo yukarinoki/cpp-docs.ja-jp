@@ -1,6 +1,6 @@
 ---
 title: _getdrive
-ms.date: 11/04/2016
+ms.date: 09/19/2019
 api_name:
 - _getdrive
 api_location:
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - disk drives
 - _getdrive function
 ms.assetid: e40631a0-8f1a-4897-90ac-e1037ff30bca
-ms.openlocfilehash: eb79d18c4ad177d7dc4da140e047ff3071ea3542
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 94d6c15270827cf61ec6086de8fa11251b435e2c
+ms.sourcegitcommit: f907b15f50a6b945d0b87c03af0050946157d701
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955092"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71158758"
 ---
 # <a name="_getdrive"></a>_getdrive
 
@@ -50,9 +50,9 @@ int _getdrive( void );
 
 ## <a name="return-value"></a>戻り値
 
-現在の (既定の) ドライブ (1=A、2=B など) を返します。 エラーの戻り値はありません。
+現在の (既定の) ドライブ (1=A、2=B など) を返します。 戻り値が0の場合は、現在のパスの先頭が文字のドライブ名ではないことを意味します (UNC パスなど)。 または、内部バッファーの割り当てに失敗したことを意味します。 内部割り当てが失敗した`errno`場合、は ENOMEM に設定されます。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
