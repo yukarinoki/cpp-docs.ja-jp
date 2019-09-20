@@ -49,7 +49,7 @@ int _query_new_mode(
 
 ## <a name="remarks"></a>Remarks
 
-C++ **_Query_new_mode**によって設定された新しいハンドラー モードを示す整数を返す、 C++ [_set_new_mode](set-new-mode.md)機能[malloc](malloc.md)します。 新しいハンドラー モードを示す、メモリの割り当てに失敗したときか**malloc**によって設定された新しいハンドラー ルーチンを呼び出すには、 [_set_new_handler](set-new-handler.md)します。 既定では、 **malloc**失敗によって新しいハンドラー ルーチンを呼び出しません。 使用することができます **_set_new_mode**この動作をオーバーライドする障害で**malloc**に同じ新しいハンドラー ルーチンを呼び出す方法、**新しい**演算子に失敗した場合メモリを割り当てます。 詳細については、C++ 言語リファレンスの「[new および delete 演算子](../../cpp/new-and-delete-operators.md)」の説明をご覧ください。
+C++ **_query_new_mode**によって設定された新しいハンドラー モードを示す整数を返す、 C++ [_set_new_mode](set-new-mode.md)機能[malloc](malloc.md)します。 新しいハンドラー モードを示す、メモリの割り当てに失敗したときか**malloc**によって設定された新しいハンドラー ルーチンを呼び出すには、 [_set_new_handler](set-new-handler.md)します。 既定では、 **malloc**失敗によって新しいハンドラー ルーチンを呼び出しません。 使用することができます **_set_new_mode**この動作をオーバーライドする障害で**malloc**に同じ新しいハンドラー ルーチンを呼び出す方法、**new**演算子に失敗した場合メモリを割り当てます。 詳細については、C++ 言語リファレンスの「[new および delete 演算子](../../cpp/new-and-delete-operators.md)」の説明をご覧ください。
 
 ## <a name="requirements"></a>必要条件
 
