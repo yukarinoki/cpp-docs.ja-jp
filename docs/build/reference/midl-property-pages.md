@@ -1,6 +1,6 @@
 ---
 title: MIDL コンパイラプロパティページ
-ms.date: 7/24/2019
+ms.date: 07/24/2019
 ms.topic: article
 ms.assetid: 57498a01-fccc-4a0e-a036-6ff702f83126
 f1_keywords:
@@ -47,12 +47,12 @@ f1_keywords:
 - VC.Project.VCMidlTool.RedirectOutputAndErrors
 - VC.Project.VCMidlTool.MinimumTargetSystem
 - vc.project.AdditionalOptionsPage
-ms.openlocfilehash: 8174f6382ea2dab4ef2a49f5d30a6e27e8af3f5b
-ms.sourcegitcommit: ce3393846c86e7905ff0c86e4cd6610476809585
+ms.openlocfilehash: e9c9cb75d326642c86405992a4bf9d7da9e578df
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68492160"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927688"
 ---
 # <a name="midl-property-pages"></a>[MIDL] プロパティ ページ
 
@@ -129,15 +129,15 @@ MIDL ですべての警告をエラーとして扱う ([/wx](/windows/win32/midl
 
 ### <a name="generate-stubless-proxies"></a>スタブレスプロキシの生成
 
-オブジェクトインターフェイス ([/Oicf](/windows/win32/midl/-Oicf)、 [/Oif](/windows/win32/midl/-Oif) ) の拡張機能とスタブレスプロキシを使用して、完全に解釈されたスタブを生成します。
+オブジェクトインターフェイス ([/Oicf](/windows/win32/midl/-oi)、 [/Oif](/windows/win32/midl/-oi) ) の拡張機能とスタブレスプロキシを使用して、完全に解釈されたスタブを生成します。
 
 ### <a name="suppress-compiler-warnings"></a>コンパイラ警告の非表示
 
-コンパイラの警告メッセージ ([/no_warn](/windows/win32/midl/-no_warn)) を非表示にします。
+コンパイラの警告メッセージ ([/no_warn](/windows/win32/midl/-no-warn)) を非表示にします。
 
 ### <a name="application-configuration-mode"></a>アプリケーション構成モード
 
-IDL ファイル ([/appconfig](/windows/win32/midl/-app_config)) で選択した acf 属性を許可します。
+IDL ファイル ([/appconfig](/windows/win32/midl/-app-config)) で選択した acf 属性を許可します。
 
 ### <a name="locale-id"></a>ロケール ID
 
@@ -220,7 +220,7 @@ DLLDATA ファイル ([/dlldata](/windows/win32/midl/-dlldata)ファイル名) �
 
 ### <a name="c-preprocess-options"></a>C 前処理オプション
 
-C コンパイラプリプロセッサ ([/cppopt](/windows/win32/midl/-cpp_opt)スイッチ) に渡すスイッチを指定します。
+C コンパイラプリプロセッサ ([/cppopt](/windows/win32/midl/-cpp-opt)スイッチ) に渡すスイッチを指定します。
 
 ### <a name="undefine-preprocessor-definitions"></a>指定したプリプロセッサ定義の無効化
 
@@ -258,15 +258,15 @@ MIDL マクロ ([/u](/windows/win32/midl/-U) [マクロ]) を含め、1つ以上
 
 ### <a name="prepend-with-abi-namespace"></a>' ABI ' 名前空間を先頭に付ける
 
-' ABI ' 名前空間をすべての型に先頭に付加します。  ([nsプレフィックス](/windows/win32/midl/-ns_prefix))。
+' ABI ' 名前空間をすべての型に先頭に付加します。  ([nsプレフィックス](/windows/win32/midl/-ns-prefix))。
 
 ### <a name="validate-parameters"></a>パラメーターの検証
 
-パラメーターを検証するための追加情報を生成します ([/堅牢](/windows/win32/midl/-robust) | [/堅牢](/windows/win32/midl/-no_robust))。
+パラメーターを検証するための追加情報を生成します ([/robust](/windows/win32/midl/-robust) | [/no_robust](/windows/win32/midl/-no-robust))。
 
 ### <a name="struct-member-alignment"></a>構造体メンバーのアラインメント
 
-ターゲットシステム ([/ZpN](/windows/win32/midl/-zpn)) 内の構造体のパッキングレベルを指定します。
+ターゲットシステム (/ZpN) 内の構造体のパッキングレベルを指定します。
 
 **いずれ**
 

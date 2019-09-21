@@ -26,12 +26,12 @@ helpviewer_keywords:
 - wmemset function
 - memset function
 ms.assetid: e7ceb01b-df69-49c2-b294-a39358ad4699
-ms.openlocfilehash: d517c5565ef07a834d7ef864e495a4bb33351007
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7d7b57292f582491a7750b4e12a8072112eac4dd
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285151"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501010"
 ---
 # <a name="memset-wmemset"></a>memset、wmemset
 
@@ -65,13 +65,13 @@ wchar_t *wmemset(
 
 ## <a name="return-value"></a>戻り値
 
-値*dest*します。
+*Dest*の値。
 
 ## <a name="remarks"></a>Remarks
 
-最初の設定*カウント*の文字*dest*文字*c*します。
+*Dest*の最初の*カウント*文字を*c*文字に設定します。
 
-**セキュリティに関する注意**コピー先のバッファーが以上に十分な空き領域を持っているかどうかを確認*カウント*文字。 詳しくは、「 [バッファー オーバーランの回避](/windows/desktop/SecBP/avoiding-buffer-overruns)」をご覧ください。
+**セキュリティ**に関する注意コピー先のバッファーには、少なくとも*カウント*文字のための十分な空き領域があることを確認してください。 詳しくは、「 [バッファー オーバーランの回避](/windows/win32/SecBP/avoiding-buffer-overruns)」をご覧ください。
 
 ## <a name="requirements"></a>必要条件
 
@@ -107,7 +107,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>出力
+### <a name="output"></a>Output
 
 ```Output
 Before: This is a test of the memset function
@@ -135,7 +135,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>出力
+### <a name="output"></a>Output
 
 ```Output
 Before: This is a test of the wmemset function

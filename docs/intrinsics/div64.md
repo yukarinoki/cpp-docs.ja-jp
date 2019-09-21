@@ -1,20 +1,20 @@
 ---
 title: _div64
-ms.date: 04/17/2019
+ms.date: 09/02/2019
 f1_keywords:
 - _div64
 helpviewer_keywords:
 - _div64 intrinsic
-ms.openlocfilehash: a221cc7cf0655a41873c6777aecd8a9b27131b74
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1d05c5d6e25540a5de1b2f8231697c9a738759ce
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62264115"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216764"
 ---
-# <a name="div64"></a>_div64
+# <a name="_div64"></a>_div64
 
-`_div64`組み込みに 32 ビット整数で 64 ビット整数を除算します。 戻り値の商を保持して、組み込みのポインター パラメーターを通じて剰余を返します。 `_div64` **Microsoft 固有の仕様**します。
+組み込み`_div64`は、64ビット整数を32ビット整数で除算します。 戻り値は商を保持し、組み込みはポインターパラメーターを使用して剰余を返します。 `_div64`は**Microsoft 固有**のものです。
 
 ## <a name="syntax"></a>構文
 
@@ -29,23 +29,23 @@ int _div64(
 ### <a name="parameters"></a>パラメーター
 
 *被除数* \
-[in]分割する 64 ビット整数。
+から除算する64ビット整数。
 
-*除数* \
-[in]除算する 32 ビット整数。
+*公約数* \
+から除算する32ビット整数。
 
-*remainder* \
-[out]残りの部分の 32 ビット整数のビットです。
+*後述* \
+入出力剰余の32ビット整数ビット。
 
 ## <a name="return-value"></a>戻り値
 
-商の 32 ビットです。
+商の32ビット。
 
 ## <a name="remarks"></a>Remarks
 
-`_div64`組み込み除算*被除数*によって*除数*します。 残りの部分が指す 32 ビット整数に格納*剰余*、し、商の 32 ビットを返します。
+組み込み`_div64`は*被除数*を*除数*で除算します。 剰余は*剰余*によって示された32ビット整数に格納され、商の32ビットを返します。
 
-`_div64`組み込みは、Visual Studio 2019 RTM 以降で利用可能です。
+組み込み`_div64`は、Visual Studio 2019 RTM 以降で使用できます。
 
 ## <a name="requirements"></a>必要条件
 

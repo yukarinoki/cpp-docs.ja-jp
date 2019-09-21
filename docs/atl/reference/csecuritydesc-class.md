@@ -34,12 +34,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSecurityDesc class
 ms.assetid: 3767a327-378f-4690-ba40-4d9f6a1f5ee4
-ms.openlocfilehash: a9e0eb01608edf29f99209dffc932630ad08807a
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 90f8cfd66fbab88bfa29c39ff27189f02447a7c7
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915711"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496486"
 ---
 # <a name="csecuritydesc-class"></a>CSecurityDesc クラス
 
@@ -107,7 +107,7 @@ class CSecurityDesc
 
 アプリケーションでは`SECURITY_DESCRIPTOR`構造を直接変更しないでください。代わりに、提供されているクラスメソッドを使用する必要があります。
 
-Windows のアクセス制御モデルの概要については、Windows SDK の「 [Access Control](/windows/desktop/SecAuthZ/access-control) 」を参照してください。
+Windows のアクセス制御モデルの概要については、Windows SDK の「 [Access Control](/windows/win32/SecAuthZ/access-control) 」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
@@ -155,7 +155,7 @@ bool FromString(LPCTSTR pstr) throw(...);
 ### <a name="parameters"></a>パラメーター
 
 *pstr*<br/>
-変換する[文字列形式のセキュリティ記述子](/windows/desktop/SecAuthZ/security-descriptor-string-format)を含む、null で終わる文字列へのポインター。
+変換する[文字列形式のセキュリティ記述子](/windows/win32/SecAuthZ/security-descriptor-string-format)を含む、null で終わる文字列へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -165,7 +165,7 @@ bool FromString(LPCTSTR pstr) throw(...);
 
 この文字列は、 [Csecuritydesc:: ToString](#tostring)を使用して作成できます。 セキュリティ記述子を文字列に変換すると、格納と送信が容易になります。
 
-このメソッドは、 [convertstringsecuritydescriptortosecuritydescriptor がエラー](/windows/desktop/api/sddl/nf-sddl-convertstringsecuritydescriptortosecuritydescriptora)を呼び出します。
+このメソッドは、 [convertstringsecuritydescriptortosecuritydescriptor がエラー](/windows/win32/api/sddl/nf-sddl-convertstringsecuritydescriptortosecuritydescriptorw)を呼び出します。
 
 ##  <a name="getcontrol"></a>  CSecurityDesc::GetControl
 
@@ -186,7 +186,7 @@ bool GetControl(SECURITY_DESCRIPTOR_CONTROL* psdc) const throw();
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、 [Getsecurity記述子コントロール](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-getsecuritydescriptorcontrol)を呼び出します。
+このメソッドは、 [Getsecurity記述子コントロール](/windows/win32/api/securitybaseapi/nf-securitybaseapi-getsecuritydescriptorcontrol)を呼び出します。
 
 ##  <a name="getdacl"></a>  CSecurityDesc::GetDacl
 
@@ -268,7 +268,7 @@ const SECURITY_DESCRIPTOR* GetPSECURITY_DESCRIPTOR() const throw();
 
 ### <a name="return-value"></a>戻り値
 
-[SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-security_descriptor)構造体へのポインターを返します。
+[SECURITY_DESCRIPTOR](/windows/win32/api/winnt/ns-winnt-security_descriptor)構造体へのポインターを返します。
 
 ##  <a name="getsacl"></a>  CSecurityDesc::GetSacl
 
@@ -480,7 +480,7 @@ bool IsSelfRelative() const throw();
 
 ### <a name="return-value"></a>戻り値
 
-セキュリティ記述子が、連続するメモリブロック内のすべてのセキュリティ情報と共に自己相対形式である場合は true を返します。 セキュリティ記述子が絶対形式の場合は false を返します。 詳細については、「[絶対セキュリティ記述子と自己相対セキュリティ記述子](/windows/desktop/SecAuthZ/absolute-and-self-relative-security-descriptors)」を参照してください。
+セキュリティ記述子が、連続するメモリブロック内のすべてのセキュリティ情報と共に自己相対形式である場合は true を返します。 セキュリティ記述子が絶対形式の場合は false を返します。 詳細については、「[絶対セキュリティ記述子と自己相対セキュリティ記述子](/windows/win32/SecAuthZ/absolute-and-self-relative-security-descriptors)」を参照してください。
 
 ##  <a name="makeabsolute"></a>  CSecurityDesc::MakeAbsolute
 
@@ -496,7 +496,7 @@ bool MakeAbsolute() throw(...);
 
 ### <a name="remarks"></a>Remarks
 
-絶対形式のセキュリティ記述子には、情報自体ではなく、含まれている情報へのポインターが含まれています。 自己相対形式のセキュリティ記述子には、連続したメモリブロック内の情報が含まれています。 自己相対セキュリティ記述子では、構造体`SECURITY_DESCRIPTOR`は常に情報を開始しますが、セキュリティ記述子のその他のコンポーネントは、任意の順序で構造に従うことができます。 メモリアドレスを使用する代わりに、自己相対セキュリティ記述子のコンポーネントは、セキュリティ記述子の先頭からのオフセットによって識別されます。 この形式は、セキュリティ記述子をディスクに保存するか、通信プロトコルを使用して送信する必要がある場合に便利です。 詳細については、「[絶対セキュリティ記述子と自己相対セキュリティ記述子](/windows/desktop/SecAuthZ/absolute-and-self-relative-security-descriptors)」を参照してください。
+絶対形式のセキュリティ記述子には、情報自体ではなく、含まれている情報へのポインターが含まれています。 自己相対形式のセキュリティ記述子には、連続したメモリブロック内の情報が含まれています。 自己相対セキュリティ記述子では、構造体`SECURITY_DESCRIPTOR`は常に情報を開始しますが、セキュリティ記述子のその他のコンポーネントは、任意の順序で構造に従うことができます。 メモリアドレスを使用する代わりに、自己相対セキュリティ記述子のコンポーネントは、セキュリティ記述子の先頭からのオフセットによって識別されます。 この形式は、セキュリティ記述子をディスクに保存するか、通信プロトコルを使用して送信する必要がある場合に便利です。 詳細については、「[絶対セキュリティ記述子と自己相対セキュリティ記述子](/windows/win32/SecAuthZ/absolute-and-self-relative-security-descriptors)」を参照してください。
 
 ##  <a name="makeselfrelative"></a>  CSecurityDesc::MakeSelfRelative
 
@@ -512,7 +512,7 @@ bool MakeSelfRelative() throw(...);
 
 ### <a name="remarks"></a>Remarks
 
-絶対形式のセキュリティ記述子には、情報自体を格納するのではなく、それに含まれる情報へのポインターが含まれています。 自己相対形式のセキュリティ記述子には、連続したメモリブロック内の情報が含まれています。 自己相対セキュリティ記述子では、構造体`SECURITY_DESCRIPTOR`は常に情報を開始しますが、セキュリティ記述子のその他のコンポーネントは、任意の順序で構造に従うことができます。 メモリアドレスを使用する代わりに、セキュリティ記述子のコンポーネントは、セキュリティ記述子の先頭からのオフセットによって識別されます。 この形式は、セキュリティ記述子をディスクに保存するか、通信プロトコルを使用して送信する必要がある場合に便利です。 詳細については、「[絶対セキュリティ記述子と自己相対セキュリティ記述子](/windows/desktop/SecAuthZ/absolute-and-self-relative-security-descriptors)」を参照してください。
+絶対形式のセキュリティ記述子には、情報自体を格納するのではなく、それに含まれる情報へのポインターが含まれています。 自己相対形式のセキュリティ記述子には、連続したメモリブロック内の情報が含まれています。 自己相対セキュリティ記述子では、構造体`SECURITY_DESCRIPTOR`は常に情報を開始しますが、セキュリティ記述子のその他のコンポーネントは、任意の順序で構造に従うことができます。 メモリアドレスを使用する代わりに、セキュリティ記述子のコンポーネントは、セキュリティ記述子の先頭からのオフセットによって識別されます。 この形式は、セキュリティ記述子をディスクに保存するか、通信プロトコルを使用して送信する必要がある場合に便利です。 詳細については、「[絶対セキュリティ記述子と自己相対セキュリティ記述子](/windows/win32/SecAuthZ/absolute-and-self-relative-security-descriptors)」を参照してください。
 
 ##  <a name="operator_eq"></a>  CSecurityDesc::operator =
 
@@ -553,7 +553,7 @@ bool SetControl(
 ### <a name="parameters"></a>パラメーター
 
 *ControlBitsOfInterest*<br/>
-設定する制御ビットを示す SECURITY_DESCRIPTOR_CONTROL mask。 設定できるフラグの一覧については、「 [Setsecurity記述子コントロール](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-setsecuritydescriptorcontrol)」を参照してください。
+設定する制御ビットを示す SECURITY_DESCRIPTOR_CONTROL mask。 設定できるフラグの一覧については、「 [Setsecurity記述子コントロール](/windows/win32/api/securitybaseapi/nf-securitybaseapi-setsecuritydescriptorcontrol)」を参照してください。
 
 *ControlBitsToSet*<br/>
 *ControlBitsOfInterest* mask によって指定されたコントロールビットの新しい値を示す SECURITY_DESCRIPTOR_CONTROL mask。 このパラメーターには、 *ControlBitsOfInterest*パラメーターに指定されているフラグの組み合わせを使用できます。
@@ -564,7 +564,7 @@ bool SetControl(
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、 [Setsecurity記述子コントロール](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-setsecuritydescriptorcontrol)を呼び出します。
+このメソッドは、 [Setsecurity記述子コントロール](/windows/win32/api/securitybaseapi/nf-securitybaseapi-setsecuritydescriptorcontrol)を呼び出します。
 
 ##  <a name="setdacl"></a>  CSecurityDesc::SetDacl
 
@@ -673,7 +673,7 @@ bool ToString(
 ### <a name="parameters"></a>パラメーター
 
 *pstr*<br/>
-[文字列形式のセキュリティ記述子](/windows/desktop/SecAuthZ/security-descriptor-string-format)を受け取る null で終わる文字列へのポインター。
+[文字列形式のセキュリティ記述子](/windows/win32/SecAuthZ/security-descriptor-string-format)を受け取る null で終わる文字列へのポインター。
 
 *si*<br/>
 出力文字列に含めるセキュリティ記述子のコンポーネントを示す、SECURITY_INFORMATION ビットフラグの組み合わせを指定します。
@@ -697,13 +697,13 @@ bool ToString(
 
 DACL が NULL で、入力セキュリティ記述子に SE_DACL_PRESENT 制御ビットが設定されている場合、メソッドは失敗します。
 
-DACL が NULL で、入力セキュリティ記述子で SE_DACL_PRESENT 制御ビットが設定されていない場合、結果として得られるセキュリティ記述子の文字列には D: コンポーネントがありません。 詳細については、「[セキュリティ記述子文字列の形式](/windows/desktop/SecAuthZ/security-descriptor-string-format)」を参照してください。
+DACL が NULL で、入力セキュリティ記述子で SE_DACL_PRESENT 制御ビットが設定されていない場合、結果として得られるセキュリティ記述子の文字列には D: コンポーネントがありません。 詳細については、「[セキュリティ記述子文字列の形式](/windows/win32/SecAuthZ/security-descriptor-string-format)」を参照してください。
 
-このメソッドは、 [convertstringsecuritydescriptortosecuritydescriptor がエラー](/windows/desktop/api/sddl/nf-sddl-convertstringsecuritydescriptortosecuritydescriptora)を呼び出します。
+このメソッドは、 [convertstringsecuritydescriptortosecuritydescriptor がエラー](/windows/win32/api/sddl/nf-sddl-convertstringsecuritydescriptortosecuritydescriptorw)を呼び出します。
 
 ## <a name="see-also"></a>関連項目
 
 [セキュリティのサンプル](../../overview/visual-cpp-samples.md)<br/>
-[SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-security_descriptor)<br/>
+[SECURITY_DESCRIPTOR](/windows/win32/api/winnt/ns-winnt-security_descriptor)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)<br/>
 [セキュリティに関するグローバル関数](../../atl/reference/security-global-functions.md)

@@ -11,22 +11,7 @@
         - name: MFC の一般的なトピック
           href: general-mfc-topics.md
         - name: MFC ソース ファイルの利用
-          expanded: false
-          items:
-            - name: MFC ソース ファイルの利用
-              href: using-the-mfc-source-files.md
-            - name: コメントの例
-              href: an-example-of-the-comments.md
-            - name: '-- Implementation コメント'
-              href: decrement-implementation-comment.md
-            - name: '-- Constructors コメント'
-              href: decrement-constructors-comment.md
-            - name: '-- Attributes コメント'
-              href: decrement-attributes-comment.md
-            - name: '-- Operations コメント'
-              href: decrement-operations-comment.md
-            - name: '-- Overridables コメント'
-              href: decrement-overridables-comment.md
+          href: using-the-mfc-source-files.md
         - name: MFC ライブラリのバージョン
           expanded: false
           items:
@@ -2856,8 +2841,6 @@
               href: reference/application-type-mfc-application-wizard.md
             - name: '[複合ドキュメント サポート] (MFC アプリケーション ウィザード)'
               href: reference/compound-document-support-mfc-application-wizard.md
-            - name: '[ドキュメント テンプレート文字列] (MFC アプリケーション ウィザード)'
-              href: reference/document-template-strings-mfc-application-wizard.md
             - name: '[データベース サポート] (MFC アプリケーション ウィザード)'
               href: reference/database-support-mfc-application-wizard.md
             - name: '[ユーザー インターフェイスの機能] (MFC アプリケーション ウィザード)'
@@ -2900,8 +2883,6 @@
           items:
             - name: MFC クラス追加ウィザード
               href: reference/mfc-add-class-wizard.md
-            - name: '[ドキュメント テンプレート文字列] (MFC クラス追加ウィザード)'
-              href: reference/document-template-strings-mfc-add-class-wizard.md
     - name: タイプ ライブラリからの MFC クラスの追加
       expanded: false
       items:

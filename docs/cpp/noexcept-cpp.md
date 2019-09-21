@@ -4,12 +4,12 @@ ms.date: 01/12/2018
 f1_keywords:
 - noexcept_cpp
 ms.assetid: df24edb9-c6a6-4e37-9914-fd5c0c3716a8
-ms.openlocfilehash: c314b554abb6c10e62b143f554777af50267e4e0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cf53aca918e36d18ab7f8aa14b01caaf0e55627c
+ms.sourcegitcommit: ace42fa67e704d56d03c03745b0b17d2a5afeba4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245362"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69975901"
 ---
 # <a name="noexcept-c"></a>noexcept (C++)
 
@@ -22,17 +22,17 @@ ms.locfileid: "62245362"
 ### <a name="parameters"></a>パラメーター
 
 *constant-expression*<br/>
-型の定数式**bool**潜在的な例外の種類のセットが空かどうかを表します。 無条件のバージョンは等価`noexcept(true)`します。
+潜在的な例外の種類のセットが空かどうかを表す**ブール**型の定数式。 無条件バージョンは、と同じ`noexcept(true)`です。
 
 ## <a name="remarks"></a>Remarks
 
-A *noexcept 式*は一種の*例外仕様*関数の宣言に存在するすべての例外の例外ハンドラーによって照合される可能性がありますの種類のセットを表すためのサフィックスを関数。 単項条件演算子`noexcept(` *constant_expression* `)`場所*constant_expression* yeilds **true**、およびその無条件のシノニム**noexcept**関数を終了できる潜在的な例外の種類のセットが空であるかを指定します。 関数は例外をスローしませんし、そのスコープ外に伝達する例外を許可しません。 演算子`noexcept(` *constant_expression* `)`場所*constant_expression* yeilds **false**例外の指定の有無(以外の場合、デストラクター、または割り当て解除関数の) は、関数を終了できる潜在的な例外のセットが一連のすべての種類であることを示します。
+*Noexcept 式*は、例外*指定*の一種であり、関数を終了する例外の例外ハンドラーによって照合される可能性のある型のセットを表す関数宣言のサフィックスです。 `noexcept(` *Constant_expression*が**true**、無条件シノニム**noexcept**の単項条件演算子*constant_expression* `)`は、一連の潜在的な例外の種類を指定します。関数を終了できますが空です。 つまり、関数は例外をスローしないため、例外をスコープ外に反映することはできません。 演算子`noexcept(` *constant_expression* where constant_expression は false を生成します。または、(デストラクターまたは解放関数以外の) 例外の指定がない場合は、`)`関数を終了できる可能性のある例外のセットは、すべての型のセットです。
 
-関数としてマーク**noexcept**も、直接または間接的に、呼び出されるすべての関数の場合にのみ**noexcept**または**const**します。 コンパイラが必ずしもすべてのコード パスの最大のバブルが例外をチェックする**noexcept**関数。 例外でマークされた関数の外側のスコープは終了かどうか`noexcept`、 [std::terminate](../standard-library/exception-functions.md#terminate)がすぐに、呼び出されると、任意のスコープ内のオブジェクトのデストラクターが呼び出される保証はありません。 使用**noexcept**動的例外指定子ではなく`throw()`、するは、標準で推奨されなくなりました。 適用することをお勧めします。`noexcept`コール スタックに伝播する例外を許可しないすべての関数。 関数が宣言されている場合**noexcept**、複数の異なるコンテキストでより効率的なコードを生成するコンパイラが有効にします。 詳細については、次を参照してください。[例外仕様](exception-specifications-throw-cpp.md)します。
+関数を**noexcept**としてマークします。この関数は、直接または間接的に呼び出したすべての関数が**noexcept**または**const**でもある場合に限ります。 コンパイラは、 **noexcept**関数にバブルアップする可能性のある例外のすべてのコードパスを必ずチェックするわけではありません。 例外によってマーク`noexcept`された関数の外側のスコープが終了した場合、 [std:: terminate](../standard-library/exception-functions.md#terminate)がすぐに呼び出され、スコープ内のオブジェクトのデストラクターが呼び出される保証はありません。 動的例外指定子`throw()`ではなく、 **noexcept**を使用します。これは標準で非推奨とされます。 例外がコールスタック`noexcept`の上位に伝達されることを許可しないすべての関数に適用することをお勧めします。 関数が**noexcept**として宣言されている場合、コンパイラは複数の異なるコンテキストでより効率的なコードを生成できます。 詳細については、「[例外の指定](exception-specifications-throw-cpp.md)」を参照してください。
 
 ## <a name="example"></a>例
 
-引数をコピーするテンプレート関数を宣言することがあります**noexcept**ことを条件にコピーされるオブジェクトは、プレーンな古いデータ型 (POD)。 このような関数は、次のように宣言することができます。
+引数をコピーするテンプレート関数は、コピーされるオブジェクトが plain old data type (POD) であるという条件に対して、 **noexcept**として宣言される場合があります。 このような関数は、次のように宣言することができます。
 
 ```cpp
 #include <type_traits>
@@ -47,4 +47,4 @@ T copy_object(const T& obj) noexcept(std::is_pod<T>)
 ## <a name="see-also"></a>関連項目
 
 [C++ 例外処理](cpp-exception-handling.md)<br/>
-[例外の仕様 (スロー、noexcept)](exception-specifications-throw-cpp.md)
+[例外の指定 (throw、noexcept)](exception-specifications-throw-cpp.md)

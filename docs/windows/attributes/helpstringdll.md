@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - helpstringdll attribute [C++]
 ms.assetid: 121271fa-f061-492b-b87f-bbfcf4b02e7b
-ms.openlocfilehash: 72f5926018e3ac7ec4770f83d7a2c3438b67d861
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8d6dddef666f074a57f54b8c9447847ff56d26fd
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409539"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501475"
 ---
 # <a name="helpstringdll"></a>typelib
 
-使用してドキュメントの文字列の検索 (ローカライズ) を実行する DLL の名前を指定します。
+ドキュメント文字列参照 (ローカライズ) を実行するために使用する DLL の名前を指定します。
 
 ## <a name="syntax"></a>構文
 
@@ -26,11 +26,11 @@ ms.locfileid: "62409539"
 ### <a name="parameters"></a>パラメーター
 
 *string*<br/>
-使用してドキュメントの文字列の検索を実行する DLL です。
+ドキュメント文字列検索を実行するために使用する DLL。
 
 ## <a name="remarks"></a>Remarks
 
-**Helpstringdll** C++ 属性と同じ機能を持つ、 [helpstringdll](/windows/desktop/Midl/helpstringdll) MIDL 属性。
+**Helpstringdll** C++属性には、 [helpstringdll](/windows/win32/Midl/helpstringdll) MIDL 属性と同じ機能があります。
 
 ## <a name="example"></a>例
 
@@ -53,7 +53,7 @@ __interface IMyI
 
 |||
 |-|-|
-|**対象**|**クラス**、**インターフェイス**、インターフェイス メソッド|
+|**対象**|**クラス**、**インターフェイス**、インターフェイスメソッド|
 |**反復可能**|いいえ|
 |**必要な属性**|なし|
 |**無効な属性**|なし|

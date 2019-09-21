@@ -240,7 +240,7 @@
             - name: レジストラー スクリプトの作成
               href: creating-registrar-scripts.md
             - name: Backus-Naur form (BNF) 構文を理解する
-              href: understanding-backus-nauer-form-bnf-syntax.md
+              href: understanding-backus-naur-form-bnf-syntax.md
             - name: パース ツリーを理解する
               href: understanding-parse-trees.md
             - name: レジストリ スクリプトの例

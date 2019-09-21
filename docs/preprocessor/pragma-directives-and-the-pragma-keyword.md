@@ -1,6 +1,6 @@
----
-title: プラグマ ディレクティブと __Pragma キーワード
-ms.date: 11/04/2016
+﻿---
+title: プラグマディレクティブと __ プラグマキーワード
+ms.date: 08/29/2019
 f1_keywords:
 - '#pragma'
 helpviewer_keywords:
@@ -13,33 +13,31 @@ helpviewer_keywords:
 - preprocessor, pragmas
 - pragma directives (#pragma)
 ms.assetid: 9867b438-ac64-4e10-973f-c3955209873f
-ms.openlocfilehash: b6c2ff579c6fafa78cbfd0a2879a71fca2bfaa01
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2cf075e4ff8049593a1e77c5d2c1c259b224877b
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179959"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222299"
 ---
-# <a name="pragma-directives-and-the-pragma-keyword"></a>プラグマ ディレクティブと __Pragma キーワード
+# <a name="pragma-directives-and-the-__pragma-keyword"></a>プラグマディレクティブと __ プラグマキーワード
 
-プラグマ ディレクティブは、コンピューター固有またはオペレーティング システム固有のコンパイラ機能を指定します。 **_ _Pragma**マクロ定義内のプラグマ ディレクティブをコードには、Microsoft コンパイラに固有で、キーワードを使用します。
+プラグマディレクティブは、コンピューターまたはオペレーティングシステム固有のコンパイラ機能を指定します。 Microsoft コンパイラに固有の **__ プラグマ**キーワードを使用すると、マクロ定義内でプラグマディレクティブをコーディングできます。
 
 ## <a name="syntax"></a>構文
 
-```
-#pragma token-string
-__pragma(token-string)
-```
+> **#pragma***トークン-文字列*\
+> **__ プラグマ (** *トークン文字列* **)**
 
 ## <a name="remarks"></a>Remarks
 
-C および C++ の各実装は、そのホスト コンピューターまたはオペレーティング システムに固有の機能をいくつかサポートしています。 たとえば、一部のプログラムは、データが格納されているメモリ領域、または特定の関数がパラメーターを受け取る方法を正確に制御する必要があります。 **#Pragma**ディレクティブは、各コンパイラが C および C++ 言語の全体的な互換性を維持しながらマシンとオペレーティング システムに固有の機能を提供するための手段を提供します。
+C および C++ の各実装は、そのホスト コンピューターまたはオペレーティング システムに固有の機能をいくつかサポートしています。 たとえば、一部のプログラムでは、メモリ内のデータの場所を正確に制御したり、特定の関数がパラメーターを受け取る方法を制御したりする必要があります。 **#Pragma**ディレクティブは、C とC++言語の全体的な互換性を維持しながら、各コンパイラがコンピューターおよびオペレーティングシステム固有の機能を提供する手段を提供します。
 
-プラグマは、コンピューター固有つまりオペレーティング システム固有であり、通常はコンパイラごとに異なります。 プラグマは、新しいプリプロセッサ機能を提供するために、または実装定義の情報をコンパイラに提供するために、条件付きステートメントで使用できます。
+プラグマは、コンピューターまたはオペレーティングシステムによって定義によって固有であり、通常、コンパイラごとに異なります。 プラグマは、新しいプリプロセッサ機能を提供するために、またはコンパイラに実装定義情報を提供するために、条件付きディレクティブで使用できます。
 
-`token-string` は、特定のコンパイラ命令と引数 (ある場合) を渡す一連の文字です。 シャープ記号 (**#**) 最初の空白以外の文字にする必要があります、プラグマを格納している行には空白文字がシャープ記号と単語「pragma」に分離できます。 次の **#pragma**、翻訳者は、プリプロセス トークンとして解析できる任意のテキストを記述します。 引数に **#pragma**マクロの展開される可能性があります。
+*トークン文字列*は、特定のコンパイラ命令と引数 (存在する場合) を与える一連の文字です。 シャープ記号 ( **#** ) は、プラグマを含む行の最初の空白以外の文字である必要があります。 空白文字は、シャープ記号と "pragma" という単語を区切ることができます。 次の **#pragma**に、変換プログラムがプリプロセストークンとして解析できるテキストを記述します。 **#Pragma**する引数は、マクロの展開の対象となります。
 
-コンパイラで認識されないプラグマが検出されると、警告が表示され、コンパイルは続行されます。
+コンパイラは、認識できないプラグマを検出してコンパイルを続行すると、警告を発行します。
 
 Microsoft C および C++ コンパイラは、次のプラグマを認識します。
 
@@ -53,38 +51,39 @@ Microsoft C および C++ コンパイラは、次のプラグマを認識しま
 |[function](../preprocessor/function-c-cpp.md)|[hdrstop](../preprocessor/hdrstop.md)|[include_alias](../preprocessor/include-alias.md)|
 |[init_seg](../preprocessor/init-seg.md) <sup>1</sup>|[inline_depth](../preprocessor/inline-depth.md)|[inline_recursion](../preprocessor/inline-recursion.md)|
 |[intrinsic](../preprocessor/intrinsic.md)|[loop](../preprocessor/loop.md) <sup>1</sup>|[make_public](../preprocessor/make-public.md)|
-|[managed](../preprocessor/managed-unmanaged.md)|[message](../preprocessor/message.md)||
-|[omp](../preprocessor/omp.md)|[once](../preprocessor/once.md)||
-|[optimize](../preprocessor/optimize.md)|[pack](../preprocessor/pack.md)|[pointers_to_members](../preprocessor/pointers-to-members.md) <sup>1</sup>|
-|[pop_macro](../preprocessor/pop-macro.md)|[push_macro](../preprocessor/push-macro.md)|[region、endregion](../preprocessor/region-endregion.md)|
-|[runtime_checks](../preprocessor/runtime-checks.md)|[section](../preprocessor/section.md)|[setlocale](../preprocessor/setlocale.md)|
-|[strict_gs_check](../preprocessor/strict-gs-check.md)|[unmanaged](../preprocessor/managed-unmanaged.md)|[vtordisp](../preprocessor/vtordisp.md) <sup>1</sup>|
-|[warning](../preprocessor/warning.md)|||
+|[managed](../preprocessor/managed-unmanaged.md)|[message](../preprocessor/message.md)|[omp](../preprocessor/omp.md)|
+|[once](../preprocessor/once.md)|[optimize](../preprocessor/optimize.md)|[pack](../preprocessor/pack.md)|
+|[pointers_to_members](../preprocessor/pointers-to-members.md) <sup>1</sup>|[pop_macro](../preprocessor/pop-macro.md)|[push_macro](../preprocessor/push-macro.md)|
+|[region、endregion](../preprocessor/region-endregion.md)|[runtime_checks](../preprocessor/runtime-checks.md)|[section](../preprocessor/section.md)|
+|[setlocale](../preprocessor/setlocale.md)|[strict_gs_check](../preprocessor/strict-gs-check.md)|[unmanaged](../preprocessor/managed-unmanaged.md)|
+|[vtordisp](../preprocessor/vtordisp.md) <sup>1</sup>|[warning](../preprocessor/warning.md)||
 
-<sup>1</sup> C++ コンパイラでのみサポートされています。
+<sup>1</sup> C++コンパイラでのみサポートされます。
 
-## <a name="pragmas-and-compiler-options"></a>プラグマとコンパイラのオプション
+## <a name="pragmas-and-compiler-options"></a>プラグマとコンパイラオプション
 
-一部のプラグマの機能はコンパイラ オプションのものと同じです。 ソース コード内のプラグマは、コンパイラ オプションで指定された動作をオーバーライドします。 たとえば、指定した[、/zp8 です](../build/reference/zp-struct-member-alignment.md)を使用してコードの特定のセクションのコンパイラ設定をオーバーライドできます[パック](../preprocessor/pack.md):
+一部のプラグマの機能はコンパイラ オプションのものと同じです。 ソース コード内のプラグマは、コンパイラ オプションで指定された動作をオーバーライドします。 たとえば、 [/Zp8](../build/reference/zp-struct-member-alignment.md)を指定した場合、次のコードの特定のセクションについて、このコンパイラ設定を[pack](../preprocessor/pack.md)でオーバーライドできます。
 
+```cmd
+cl /Zp8 some_file.cpp
 ```
-cl /Zp8 ...
 
-<file> - packing is 8
+```cpp
+// some_file.cpp - packing is 8
 // ...
 #pragma pack(push, 1) - packing is now 1
 // ...
-#pragma pack(pop) - packing is 8
-</file>
+#pragma pack(pop) - packing is 8 again
+// ...
 ```
 
-## <a name="the-pragma-keyword"></a>__pragma() キーワード
+## <a name="the-__pragma-keyword"></a>__ プラグマ () キーワード
 
 **Microsoft 固有の仕様**
 
-コンパイラもサポートしています、 **_ _pragma**キーワードは、同じ機能として、 **#pragma**ディレクティブ、インライン マクロ定義で使用できますが、します。 **#Pragma**ディレクティブ、コンパイラ ディレクティブのシャープ記号 ('#') の解釈されるので、マクロ定義では使用できません、[文字列化演算子 (#)](../preprocessor/stringizing-operator-hash.md)します。
+コンパイラは、 **#pragma**ディレクティブと同じ機能を持つ、 **__ プラグマ**キーワードもサポートしています。 違いは、 **__ プラグマ**キーワードはマクロ定義でインラインで使用できることです。 **#Pragma**ディレクティブはマクロ定義では使用できません。コンパイラは、ディレクティブのシャープ記号文字 (' # ') を文字列化[演算子 (#)](../preprocessor/stringizing-operator-hash.md)として解釈するためです。
 
-コード例を次に示しますが、どのように **_ _pragma**マクロでキーワードを使用できます。 このコードは、「コンパイラ COM サポートのサンプル」の ACDUAL サンプルの mfcdual.h ヘッダーからの抜粋です。
+次のコード例は、マクロで **__ プラグマ**キーワードを使用する方法を示しています。 このコードは、「コンパイラ COM サポートのサンプル」の ACDUAL サンプルの mfcdual.h ヘッダーからの抜粋です。
 
 ```cpp
 #define CATCH_ALL_DUAL \
@@ -108,6 +107,6 @@ return _hr; \
 
 ## <a name="see-also"></a>関連項目
 
-[C/C++ プリプロセッサ リファレンス](../preprocessor/c-cpp-preprocessor-reference.md)<br/>
-[C プラグマ](../c-language/c-pragmas.md)<br/>
+[C/C++プリプロセッサリファレンス](../preprocessor/c-cpp-preprocessor-reference.md)\
+[C プラグマ](../c-language/c-pragmas.md)\
 [キーワード](../cpp/keywords-cpp.md)

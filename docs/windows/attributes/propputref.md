@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - propputref attribute
 ms.assetid: 9b0aed74-fdc7-4e59-9117-949bea4f86dd
-ms.openlocfilehash: e471e467c55e0b8a17be96fd1bcb3cd24cfafe06
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9dc21494886f80890bcfde7f29bb3d6c86b4a51b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407472"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514185"
 ---
 # <a name="propputref"></a>propputref
 
-値の代わりに参照を使用するプロパティ設定関数を指定します。
+値ではなく参照を使用するプロパティ設定関数を指定します。
 
 ## <a name="syntax"></a>構文
 
@@ -25,11 +25,11 @@ ms.locfileid: "62407472"
 
 ## <a name="remarks"></a>Remarks
 
-**Propputref** C++ 属性と同じ機能を持つ、 [propputref](/windows/desktop/Midl/propputref) MIDL 属性。
+**Propputref** C++属性には、 [propputref](/windows/win32/Midl/propputref) MIDL 属性と同じ機能があります。
 
 ## <a name="example"></a>例
 
-例をご覧ください[バインド可能な](bindable.md)の使用サンプル**propputref**します。
+**Propputref**の使用例については、[バインド](bindable.md)可能なの例を参照してください。
 
 ## <a name="requirements"></a>必要条件
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - helpstring attribute [C++]
 ms.assetid: 0401e905-a63e-4fad-98d0-d1efea111966
-ms.openlocfilehash: 623b2c7fb4ce7c3e5de87d21f012d008720fdee2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 47a07ee94ad774bde46dce00ea46612fae3a4eca
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409591"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69490870"
 ---
 # <a name="helpstring"></a>helpstring
 
@@ -30,11 +30,11 @@ ms.locfileid: "62409591"
 
 ## <a name="remarks"></a>Remarks
 
-**Helpstring** C++ 属性と同じ機能を持つ、 [helpstring](/windows/desktop/Midl/helpstring) MIDL 属性。
+**Helpstring** C++属性には、 [helpstring](/windows/win32/Midl/helpstring) MIDL 属性と同じ機能があります。
 
 ## <a name="example"></a>例
 
-例をご覧ください[defaultvalue](defaultvalue.md)を使用する方法の例については**helpstring**します。
+**Helpstring**の使用例については、 [defaultvalue](defaultvalue.md)の例を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
@@ -42,7 +42,7 @@ ms.locfileid: "62409591"
 
 |||
 |-|-|
-|**対象**|**インターフェイス**、 **typedef**、**クラス**メソッド、プロパティ|
+|**対象**|**interface**、 **typedef**、 **class**、method、property|
 |**反復可能**|いいえ|
 |**必要な属性**|なし|
 |**無効な属性**|なし|

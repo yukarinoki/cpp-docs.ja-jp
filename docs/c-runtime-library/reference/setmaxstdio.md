@@ -1,9 +1,9 @@
 ---
 title: _setmaxstdio
 ms.date: 05/21/2019
-apiname:
+api_name:
 - _setmaxstdio
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - setmaxstdio
 - _setmaxstdio
@@ -25,14 +28,14 @@ helpviewer_keywords:
 - setmaxstdio function
 - open files, maximum
 ms.assetid: 9e966875-9ff5-47c4-9b5f-e79e83b70249
-ms.openlocfilehash: 94b768d920ffd86a5bd762f8994244dda67fb15f
-ms.sourcegitcommit: bde3279f70432f819018df74923a8bb895636f81
+ms.openlocfilehash: 620213b4df9ea555189a1403b3c9e83b55cad6c6
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66174826"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948218"
 ---
-# <a name="setmaxstdio"></a>_setmaxstdio
+# <a name="_setmaxstdio"></a>_setmaxstdio
 
 ストリーム入出力のレベルで同時に開かれるファイルの数の最大値を設定します。
 
@@ -57,7 +60,7 @@ int _setmaxstdio(
 
 エラー コードの詳細については、「[_doserrno、errno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
 
 **_setmaxstdio** 関数は、ストリーム入出力のレベルで同時に開かれるファイル数の最大値を変更します。
 
@@ -68,7 +71,7 @@ C ランタイム入出力では現在、[低入出力レベル](../../c-runtime
 > [!NOTE]
 > この上限は、特定の Win32 プラットフォームと構成でサポートされる上限を超える可能性があります。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|

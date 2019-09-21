@@ -1,6 +1,6 @@
 ---
 title: __movsw
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __movsw
 helpviewer_keywords:
@@ -8,39 +8,39 @@ helpviewer_keywords:
 - rep movsw instruction
 - __movsw intrinsic
 ms.assetid: db402ad5-7f0e-449a-b0b0-eea9928d6435
-ms.openlocfilehash: 3d584300b514ec3e79c44a2943b3fb8a79495df4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 67eef7fe0a5b9803650f345740a8c40262cd2014
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263205"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221727"
 ---
-# <a name="movsw"></a>__movsw
+# <a name="__movsw"></a>__movsw
 
 **Microsoft 固有の仕様**
 
-移動の文字列が生成されます (`rep movsw`) 命令。
+Move String (`rep movsw`) 命令を生成します。
 
 ## <a name="syntax"></a>構文
 
-```
+```C
 void __movsw(
-   unsigned short* Dest,
+   unsigned short* Destination,
    unsigned short* Source,
    size_t Count
 );
 ```
 
-#### <a name="parameters"></a>パラメーター
+### <a name="parameters"></a>パラメーター
 
-*追加先*<br/>
-[out]操作の転送先。
+*インストール*\
+入出力操作の転送先。
 
-*ソース*<br/>
-[in]操作のソース。
+*Source*\
+から操作のソース。
 
-*カウント*<br/>
-[in]コピーする文字数です。
+*数*\
+からコピーする単語数。
 
 ## <a name="requirements"></a>必要条件
 
@@ -48,17 +48,17 @@ void __movsw(
 |---------------|------------------|
 |`__movsw`|x86、x64|
 
-**ヘッダー ファイル** \<intrin.h >
+**ヘッダーファイル**\<>
 
 ## <a name="remarks"></a>Remarks
 
-その結果、最初の`Count`によって示される単語`Source`にコピーされます、`Dest`文字列。
+結果として、*ソース*によって参照されている最初の*カウント*単語が、コピー*先*の文字列にコピーされます。
 
 このルーチンは、組み込みとしてのみ使用できます。
 
 ## <a name="example"></a>例
 
-```
+```cpp
 // movsw.cpp
 // processor: x86, x64
 #include <stdio.h>

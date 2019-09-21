@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CSpinButtonCtrl [MFC], SetPos
 - CSpinButtonCtrl [MFC], SetRange
 ms.assetid: 509bfd76-1c5a-4af6-973f-e133c0b87734
-ms.openlocfilehash: da247524dae77627bbf041b83bc1534a75c3b073
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: c167745eed45b7081e62a2c3be225a33e7ee0520
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916697"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502444"
 ---
 # <a name="cspinbuttonctrl-class"></a>CSpinButtonCtrl クラス
 
@@ -117,7 +117,7 @@ virtual BOOL Create(
 ### <a name="parameters"></a>パラメーター
 
 *dwStyle*<br/>
-スピンボタンコントロールのスタイルを指定します。 スピンボタンコントロールスタイルの任意の組み合わせをコントロールに適用します。 これらのスタイルは、Windows SDK の[アップダウンコントロールスタイル](/windows/desktop/Controls/up-down-control-styles)で説明されています。
+スピンボタンコントロールのスタイルを指定します。 スピンボタンコントロールスタイルの任意の組み合わせをコントロールに適用します。 これらのスタイルは、Windows SDK の[アップダウンコントロールスタイル](/windows/win32/Controls/up-down-control-styles)で説明されています。
 
 *rect*<br/>
 スピンボタンコントロールのサイズと位置を指定します。 これは、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT](/previous-versions/dd162897\(v=vs.85\))構造体のいずれかになります。
@@ -154,10 +154,10 @@ virtual BOOL CreateEx(
 ### <a name="parameters"></a>パラメーター
 
 *dwExStyle*<br/>
-作成するコントロールの拡張スタイルを指定します。 拡張 windows スタイルの一覧については、Windows SDK の[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa)の*dwexstyle*パラメーターを参照してください。
+作成するコントロールの拡張スタイルを指定します。 拡張 windows スタイルの一覧については、Windows SDK の[CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)の*dwexstyle*パラメーターを参照してください。
 
 *dwStyle*<br/>
-スピンボタンコントロールのスタイルを指定します。 スピンボタンコントロールスタイルの任意の組み合わせをコントロールに適用します。 これらのスタイルは、Windows SDK の[アップダウンコントロールスタイル](/windows/desktop/Controls/up-down-control-styles)で説明されています。
+スピンボタンコントロールのスタイルを指定します。 スピンボタンコントロールスタイルの任意の組み合わせをコントロールに適用します。 これらのスタイルは、Windows SDK の[アップダウンコントロールスタイル](/windows/win32/Controls/up-down-control-styles)で説明されています。
 
 *rect*<br/>
 *PParentWnd*のクライアント座標で、作成されるウィンドウのサイズと位置を記述する[RECT](/previous-versions/dd162897\(v=vs.85\))構造体への参照。
@@ -200,7 +200,7 @@ UINT GetAccel(
 *PAccel*によって指定された配列内の要素の数。
 
 *pAccel*<br/>
-アクセラレーション情報を受け取る[UDACCEL](/windows/desktop/api/commctrl/ns-commctrl-udaccel)構造体の配列へのポインター。
+アクセラレーション情報を受け取る[UDACCEL](/windows/win32/api/commctrl/ns-commctrl-udaccel)構造体の配列へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -298,7 +298,7 @@ BOOL SetAccel(
 ### <a name="parameters"></a>パラメーター
 
 *nAccel*<br/>
-*PAccel*によって指定された[UDACCEL](/windows/desktop/api/commctrl/ns-commctrl-udaccel)構造体の数。
+*PAccel*によって指定された[UDACCEL](/windows/win32/api/commctrl/ns-commctrl-udaccel)構造体の数。
 
 *pAccel*<br/>
 アクセラレーション情報を格納している UDACCEL 構造体の配列へのポインター。 要素は、 `nSec`メンバーに基づいて昇順に並べ替える必要があります。

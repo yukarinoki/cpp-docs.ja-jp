@@ -1,6 +1,6 @@
 ---
 title: '[マネージド リソース] プロパティ ページ'
-ms.date: 11/04/2016
+ms.date: 08/28/2019
 f1_keywords:
 - VC.Project.VCManagedResourceCompilerTool.ResourceFileName
 - VC.Project.VCManagedResourceCompilerTool.OutputFileName
@@ -8,18 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - Managed Resources property page
 ms.assetid: 80b80384-ee55-494d-9f0e-907bb98cfc19
-ms.openlocfilehash: 394aac779fceb4d9d5918e4a5ad36eee8be896ea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 14802996e63392bfb5fcc22096ef5f3d9db197c2
+ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62321463"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70177527"
 ---
 # <a name="managed-resources-property-page"></a>[マネージド リソース] プロパティ ページ
 
-リソース コンパイラの設定を有効にします。
-
-**[マネージド リソース]** プロパティ ページには、以下のプロパティが含まれます。
+**[マネージリソース]** プロパティページでは、/cli プログラムでC++.net リソースを使用するときに、マネージリソースコンパイラ[resgen.exe](/dotnet/framework/tools/resgen-exe-resource-file-generator)の次のプロパティが公開されます。
 
 - **リソース論理名**
 
@@ -33,10 +31,10 @@ ms.locfileid: "62321463"
 
    特定の .resx ファイルが既定のリソースまたはサテライト .dll に変更を与えるかどうかを指定します。
 
-アクセスする方法については、**マネージ リソース**プロパティ ページを参照してください[Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+**[マネージリソース]** プロパティページにアクセスする方法の詳細については、「 [Visual Studio でのコンパイラおよびビルドプロパティの設定C++ ](../working-with-project-properties.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[RC の使用 (RC コマンドライン)](/windows/desktop/menurc/using-rc-the-rc-command-line-)<br>
-[C++ プロジェクト プロパティ ページの参照](property-pages-visual-cpp.md)<br>
+[RC の使用 (RC コマンドライン)](/windows/win32/menurc/using-rc-the-rc-command-line-)<br>
+[C++プロジェクトプロパティページのリファレンス](property-pages-visual-cpp.md)<br>
 [/ASSEMBLYRESOURCE (マネージド リソースの埋め込み)](assemblyresource-embed-a-managed-resource.md)

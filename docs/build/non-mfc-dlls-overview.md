@@ -1,38 +1,38 @@
 ---
-title: 非 MFC Dll:概要
+title: 非 MFC DLL:概要
 ms.date: 11/04/2016
 helpviewer_keywords:
 - non-MFC DLLs [C++]
 - DLLs [C++], non-MFC
 ms.assetid: 1ed5d1ee-e20c-47d7-801d-87ea26a73842
-ms.openlocfilehash: 14cbdadd8c66d6fdf282f644102a6d4a783893b5
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 88afb41205e63a837d7bc134133c3c36eccf5dc1
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64341134"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493172"
 ---
-# <a name="non-mfc-dlls-overview"></a>非 MFC Dll:概要
+# <a name="non-mfc-dlls-overview"></a>非 MFC DLL:概要
 
-非 MFC DLL が内部的には、MFC を使わない DLL と、MFC または非 MFC の実行可能ファイル、DLL からエクスポートされた関数を呼び出すことができます。 関数から、非 MFC DLL 標準の C インターフェイスを使用して、通常はエクスポートされます。
+Mfc 以外の DLL は、MFC を内部で使用しない dll であり、DLL 内のエクスポートされた関数は MFC または非 MFC の実行可能ファイルによって呼び出すことができます。 通常、関数は、標準の C インターフェイスを使用して、MFC 以外の DLL からエクスポートされます。
 
-非 MFC Dll の詳細については、次を参照してください。[ダイナミック リンク ライブラリ](/windows/desktop/dlls/dynamic-link-libraries)Windows SDK に含まれています。
+非 MFC Dll の詳細については、「Windows SDK の[ダイナミックリンクライブラリ](/windows/win32/dlls/dynamic-link-libraries)」を参照してください。
 
 ## <a name="what-do-you-want-to-do"></a>実行する操作
 
-- [チュートリアル: 作成して、ダイナミック リンク ライブラリを使用します。](walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)
+- [チュートリアル: ダイナミックリンクライブラリの作成と使用](walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)
 
-- [DLL からのエクスポートします。](exporting-from-a-dll.md)
+- [DLL からのエクスポート](exporting-from-a-dll.md)
 
 - [実行可能ファイルと DLL のリンク](linking-an-executable-to-a-dll.md)
 
-- [DLL を初期化します。](run-time-library-behavior.md#initializing-a-dll)
+- [DLL の初期化](run-time-library-behavior.md#initializing-a-dll)
 
 ## <a name="what-do-you-want-to-know-more-about"></a>さらに詳しくは次のトピックをクリックしてください
 
-- [MFC と静的にリンクされるレギュラー MFC の Dll](regular-dlls-statically-linked-to-mfc.md)
+- [MFC に静的にリンクされるレギュラー MFC Dll](regular-dlls-statically-linked-to-mfc.md)
 
-- [MFC と動的にリンクされるレギュラー MFC の Dll](regular-dlls-dynamically-linked-to-mfc.md)
+- [MFC に動的にリンクされるレギュラー MFC Dll](regular-dlls-dynamically-linked-to-mfc.md)
 
 - [MFC 拡張 DLL:概要](extension-dlls-overview.md)
 

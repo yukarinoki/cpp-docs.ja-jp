@@ -27,7 +27,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62268898"
 ---
-# <a name="uncaughtexception"></a>__uncaught_exception
+# <a name="__uncaught_exception"></a>__uncaught_exception
 
 1 つまたは複数の例外がスローされたが、対応するによってまだ処理されていないかどうかを示します**キャッチ**のブロックを[try catch](../../cpp/try-throw-and-catch-statements-cpp.md)ステートメント。
 
@@ -40,7 +40,7 @@ bool __uncaught_exception(
 
 ## <a name="return-value"></a>戻り値
 
-**true**から例外がスローされます、**お試しください**一致するまでブロック**キャッチ**ブロックが初期化された以外の場合、 **false**します。
+**try** で例外がスローされてから、一致する **catch** ブロックが初期化されるまでは **true** です。 それ以外の場合は **false** です。
 
 ## <a name="remarks"></a>Remarks
 

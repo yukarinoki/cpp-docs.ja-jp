@@ -1,6 +1,6 @@
 ---
 title: __stosw
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __stosw
 helpviewer_keywords:
@@ -8,39 +8,39 @@ helpviewer_keywords:
 - __stosw intrinsic
 - rep stosw instruction
 ms.assetid: 7620fd1d-dba5-40e3-8e07-01aa68895133
-ms.openlocfilehash: c203973a79c2c3b1094ad8a5351db0999a56bf19
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5fd29bbf1aebba115670fc1bc35e0d8cbe29c7ad
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390296"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219933"
 ---
-# <a name="stosw"></a>__stosw
+# <a name="__stosw"></a>__stosw
 
 **Microsoft 固有の仕様**
 
-ストアの文字列の命令が生成されます (`rep stosw`)。
+ストア文字列命令 (`rep stosw`) を生成します。
 
 ## <a name="syntax"></a>構文
 
-```
+```C
 void __stosw(
-   unsigned short* Dest,
+   unsigned short* Destination,
    unsigned short Data,
    size_t Count
 );
 ```
 
-#### <a name="parameters"></a>パラメーター
+### <a name="parameters"></a>パラメーター
 
-*追加先*<br/>
-[out]操作の転送先。
+*インストール*\
+入出力操作の転送先。
 
-*データ*<br/>
-[in]格納するデータ。
+*データ*\
+から格納するデータ。
 
-*カウント*<br/>
-[in]書き込む単語のブロックの長さ。
+*数*\
+から書き込む単語ブロックの長さ。
 
 ## <a name="requirements"></a>必要条件
 
@@ -48,17 +48,17 @@ void __stosw(
 |---------------|------------------|
 |`__stosw`|x86、x64|
 
-**ヘッダー ファイル** \<intrin.h >
+**ヘッダーファイル**\<>
 
 ## <a name="remarks"></a>Remarks
 
-結果は、word`Data`のブロックに書き込まれる`Count`単語、`Dest`文字列。
+結果として、単語の*データ*は、*対象*の文字列内の*カウント*ワードのブロックに書き込まれます。
 
 このルーチンは、組み込みとしてのみ使用できます。
 
 ## <a name="example"></a>例
 
-```
+```C
 // stosw.c
 // processor: x86, x64
 #include <stdio.h>

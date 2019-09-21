@@ -41,14 +41,14 @@ helpviewer_keywords:
 - _vsctprintf_p function
 - vscprintf_p_l function
 ms.assetid: 5da920b3-8652-4ee9-b19e-5aac3ace9d03
-ms.openlocfilehash: 357cc1f28e5495385b67fdb7c1b86bbc15f79950
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 74082f0b5ed15b807c626ce08c283724441fc15c
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386188"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499114"
 ---
-# <a name="vscprintfp-vscprintfpl-vscwprintfp-vscwprintfpl"></a>_vscprintf_p、_vscprintf_p_l、_vscwprintf_p、_vscwprintf_p_l
+# <a name="_vscprintf_p-_vscprintf_p_l-_vscwprintf_p-_vscwprintf_p_l"></a>_vscprintf_p、_vscprintf_p_l、_vscwprintf_p、_vscwprintf_p_l
 
 引数リストへのポインターを使用して、書式設定された文字列内の文字数を返します。その際、引数を使用する順序を指定できます。
 
@@ -90,18 +90,18 @@ int _vscwprintf_p _l(
 
 ## <a name="return-value"></a>戻り値
 
-**_vscprintf_p**コードは、指定した書式設定を使用してバッファーまたはファイルに送信される引数の一覧で、文字列の指す場合に生成は文字数を返します。 戻り値には、終端の NULL 文字は含まれません。 **_vscwprintf_p**ワイド文字に対して同じ機能を実行します。
+**_vscprintf_p**は、指定された書式設定コードを使用して、引数リストが指す文字列が出力されたか、ファイルまたはバッファーに送信された場合に生成される文字数を返します。 戻り値には、終端の NULL 文字は含まれません。 **_vscwprintf_p**は、ワイド文字に対して同じ関数を実行します。
 
 ## <a name="remarks"></a>Remarks
 
-これらの関数は異なる **_vscprintf**と **_vscwprintf**のみをサポートする、引数を使用する順序を指定できます。 詳細については、「[printf_p の位置指定パラメーター](../../c-runtime-library/printf-p-positional-parameters.md)」をご覧ください。
+これらの関数は、引数を使用する順序を指定する機能をサポートしている点でのみ、 **_vscprintf**および **_vscwprintf**と異なります。 詳細については、「[printf_p の位置指定パラメーター](../../c-runtime-library/printf-p-positional-parameters.md)」をご覧ください。
 
-これらの関数のバージョン、 **_l**現在のスレッド ロケールの代わりに渡されたロケール パラメーターを使用する点を除いて、サフィックスは同じです。
+**_L**サフィックスを持つこれらの関数のバージョンは、現在のスレッドロケールの代わりに渡されたロケールパラメーターを使用する点を除いて同じです。
 
-場合*形式*null ポインターの場合で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合、関数は-1 を返し設定と**errno**に**EINVAL**します。
+*Format*が null ポインターの場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は-1 を返し、 **errno**を**EINVAL**に設定します。
 
 > [!IMPORTANT]
-> 場合に*形式*ユーザー定義の文字列は、null 終端であり、正しい数と型のパラメーターがあります。 詳しくは、「 [バッファー オーバーランの回避](/windows/desktop/SecBP/avoiding-buffer-overruns)」をご覧ください。
+> *Format*がユーザー定義の文字列である場合は、null で終了し、正しい数と種類のパラメーターを持つことを確認します。 詳しくは、「 [バッファー オーバーランの回避](/windows/win32/SecBP/avoiding-buffer-overruns)」をご覧ください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 

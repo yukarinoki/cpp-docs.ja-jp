@@ -2,18 +2,19 @@
 title: デスクトップアプリケーション (ビジュアルC++)
 ms.date: 07/28/2019
 ms.assetid: a020b534-293c-44e2-aa48-516c43ddeb8f
-ms.openlocfilehash: a1e302a29e079545f6d12ad544eab4f43e2bd445
-ms.sourcegitcommit: 720b74dddb1cdf4e570d55103158304ee1df81f8
+ms.topic: landing-page
+ms.openlocfilehash: 1d0e725cce42785357232312d21ce37e18d9c73d
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68606512"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217003"
 ---
 # <a name="desktop-applications-visual-c"></a>デスクトップアプリケーション (ビジュアルC++)
 
 C++の*デスクトップアプリケーション*は、Windows api の完全なセットにアクセスできるネイティブアプリケーションであり、ウィンドウまたはシステムコンソールで実行されます。 のC++デスクトップアプリケーションは windows 10 を通じて windows xp で実行できます (ただし、windows xp は正式にはサポートされなくなり、その後に導入された windows api は多数あります)。 
 
-デスクトップアプリケーションは、Windows 10 を実行する Pc 上でも、XBox、Windows Phone、Surface Hub、およびその他のデバイスでも実行できるユニバーサル Windows プラットフォーム (UWP) アプリとは異なります。 デスクトップの詳細については、UWP アプリケーション、「[テクノロジを選択する](/windows/desktop/choose-your-technology)」を参照してください。
+デスクトップアプリケーションは、Windows 10 を実行する Pc 上でも、XBox、Windows Phone、Surface Hub、およびその他のデバイスでも実行できるユニバーサル Windows プラットフォーム (UWP) アプリとは異なります。 デスクトップの詳細については、UWP アプリケーション、「[テクノロジを選択する](/windows/win32/choose-your-technology)」を参照してください。
 
 ### <a name="desktop-bridge"></a>デスクトップブリッジ
 
@@ -23,15 +24,15 @@ Visual Studio 2017 バージョン15.4 以降では、Windows アプリケーシ
 
 ### <a name="terminology"></a>用語
 
-- *Win32*アプリケーションは、の windows デスクトップアプリケーションでC++あり、ネイティブな[Windows C api と COM api、またはその両方、または COM api](/windows/desktop/apiindex/windows-api-list)と標準ライブラリ api、およびサードパーティのライブラリを使用できます。 ウィンドウで実行される Win32 アプリケーションでは、開発者が Windows プロシージャ関数内で Windows メッセージを明示的に操作する必要があります。 名前にかかわらず、Win32 アプリケーションは、32ビット (x86) または64ビット (x64) のバイナリとしてコンパイルできます。 Visual Studio IDE では、x86 と Win32 という用語は同義です。
+- *Win32*アプリケーションは、の windows デスクトップアプリケーションでC++あり、ネイティブな[Windows C api と COM api、またはその両方、または COM api](/windows/win32/apiindex/windows-api-list)と標準ライブラリ api、およびサードパーティのライブラリを使用できます。 ウィンドウで実行される Win32 アプリケーションでは、開発者が Windows プロシージャ関数内で Windows メッセージを明示的に操作する必要があります。 名前にかかわらず、Win32 アプリケーションは、32ビット (x86) または64ビット (x64) のバイナリとしてコンパイルできます。 Visual Studio IDE では、x86 と Win32 という用語は同義です。
 
-- [コンポーネントオブジェクトモデル (COM)](/windows/desktop/com/the-component-object-model)は、さまざまな言語で記述されたプログラムが相互に通信できるようにするための仕様です。 多くの Windows コンポーネントは COM オブジェクトとして実装され、オブジェクトの作成、インターフェイスの検出、およびオブジェクトの破棄に関する標準的な COM 規則に従います。  デスクトップアプリケーションからC++ com オブジェクトを使用するのは比較的簡単ですが、独自の com オブジェクトを作成する方がより高度です。 [Active Template Library (ATL)](../atl/atl-com-desktop-components.md)には、COM 開発を簡略化するマクロとヘルパー関数が用意されています。
+- [コンポーネントオブジェクトモデル (COM)](/windows/win32/com/the-component-object-model)は、さまざまな言語で記述されたプログラムが相互に通信できるようにするための仕様です。 多くの Windows コンポーネントは COM オブジェクトとして実装され、オブジェクトの作成、インターフェイスの検出、およびオブジェクトの破棄に関する標準的な COM 規則に従います。  デスクトップアプリケーションからC++ com オブジェクトを使用するのは比較的簡単ですが、独自の com オブジェクトを作成する方がより高度です。 [Active Template Library (ATL)](../atl/atl-com-desktop-components.md)には、COM 開発を簡略化するマクロとヘルパー関数が用意されています。
 
 - MFC アプリケーションは、ユーザーインターフェイスを作成するために[Microsoft Foundation Classes](../mfc/mfc-desktop-applications.md)を使用する Windows デスクトップアプリケーションです。 MFC アプリケーションでは、CRT および標準ライブラリの Api だけでなく、COM コンポーネントを使用することもできます。 MFC には、 C++ウィンドウメッセージループと Windows api に対するオブジェクト指向のシンラッパーが用意されています。 MFC は、多くのユーザーインターフェイスコントロールまたはカスタムユーザーコントロールを持つアプリケーション (特にエンタープライズ型のアプリケーション) の既定の選択肢です。 MFC には、ウィンドウの管理、シリアル化、テキスト操作、印刷、リボンなどの最新のユーザーインターフェイス要素に便利なヘルパークラスが用意されています。 MFC を効果的に使用するには、Win32 に精通している必要があります。
 
 - /Cli アプリケーションまたはコンポーネントは、( C++標準で許可されてC++いるように) 構文の拡張機能を使用して、.Net とネイティブの C + + コードの間の対話を可能にします。 C++  /Cli C++アプリケーションは、ネイティブで実行されるパーツと、.Net 基底クラスライブラリへのアクセスを持つ .NET Framework で実行される部分を持つことができます。 C++または Visual Basic でC++ C#記述されたコードを操作する必要があるネイティブコードがある場合は、/cli を使用することをお勧めします。 これは、ユーザーインターフェイスコードではなく、.NET Dll で使用することを目的としています。 詳細については、「[C++/CLI による .NET プログラミング (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)」を参照してください。
 
-のデスクトップアプリケーションでC++は、C ランタイム (CRT) と標準ライブラリのクラスと関数、COM オブジェクト、および windows API と総称されるパブリック windows 関数を使用できます。 でのC++Windows デスクトップアプリケーションの概要については、「 [Win32 およびC++](/windows/desktop/LearnWin32/learn-to-program-for-windows)の概要」を参照してください。
+のデスクトップアプリケーションでC++は、C ランタイム (CRT) と標準ライブラリのクラスと関数、COM オブジェクト、および windows API と総称されるパブリック windows 関数を使用できます。 でのC++Windows デスクトップアプリケーションの概要については、「 [Win32 およびC++](/windows/win32/LearnWin32/learn-to-program-for-windows)の概要」を参照してください。
 
 ## <a name="in-this-section"></a>このセクションの内容
 
@@ -50,7 +51,7 @@ Visual Studio 2017 バージョン15.4 以降では、Windows アプリケーシ
 
 |Title|説明|
 |-----------|-----------------|
-|[Windows 開発](/windows/desktop/index)|Windows API と COM に関する情報が含まれています (一部の Windows API とサードパーティ製 DLL は、COM オブジェクトとして実装されています)。|
+|[Windows 開発](/windows/win32/index)|Windows API と COM に関する情報が含まれています (一部の Windows API とサードパーティ製 DLL は、COM オブジェクトとして実装されています)。|
 |[HiloWindows C++ 7 用アプリケーションの開発](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx)|手荷物の受け取り場所に基づくユーザー インターフェイスを作成するために、Windows Animation と Direct2D を使用するリッチ クライアントの Windows デスクトップ アプリケーションを作成する方法について説明します。  このチュートリアルは、Windows 7 以降では更新されていませんが、Win32 プログラミングについて詳しく説明しています。|
 |[C++ でプログラミングする Windows の概要](overview-of-windows-programming-in-cpp.md)|でC++の Windows デスクトッププログラミングの主な機能について説明します。|
 

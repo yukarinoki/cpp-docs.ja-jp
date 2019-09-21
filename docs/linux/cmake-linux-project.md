@@ -3,12 +3,12 @@ title: Visual Studio で Linux CMake プロジェクトを作成および構成�
 description: Visual Studio で Linux CMake プロジェクトを作成、構成、編集、コンパイルする方法
 ms.date: 06/12/2019
 ms.assetid: f8707b32-f90d-494d-ae0b-1d44425fdc25
-ms.openlocfilehash: d70ffe593cc014bca40a447a9cdb1c1c96a40e3f
-ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
+ms.openlocfilehash: 5c3a2b212240217fe6d6053188dd466376010391
+ms.sourcegitcommit: a42d3b0408f02138dcd6fabcb98d50b0cb159191
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67042669"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70383409"
 ---
 # <a name="create-and-configure-a-linux-cmake-project"></a>Linux CMake プロジェクトの作成と構成
 
@@ -112,7 +112,18 @@ Visual Studio は、これらを Linux マシンからローカルの Windows �
 
 指定したデバッグ対象のシステムでコードをデバッグするには、ブレークポイントを設定し、プロジェクト設定の隣にあるツール バー メニューのスタートアップ項目として CMake ターゲットを選び、ツール バーの **[&#x23f5; 実行]** を選択するか、F5 キーを押します。
 
-プログラムのコマンドライン引数をカスタマイズするには、**ソリューション エクスプローラー**の上部にある **[ターゲットの切り替え]** ボタンを押し、 **[ターゲット ビュー]** を選択します。 次に、ターゲットを右クリックし、 **[デバッグ設定と起動設定]** を選択します。 これにより、プログラムに関する情報を含んだ launch.vs.json 構成ファイルが開かれるか、作成されます。 追加の引数を指定するには、`args` JSON 配列に引数を追加します。 詳細については、「[Open Folder projects for C++](../build/open-folder-projects-cpp.md)」 (C++ の [フォルダーを開く] プロジェクト) と [CMake デバッグ セッションの構成](../build/configure-cmake-debugging-sessions.md)に関するページを参照してください。
+プログラムのコマンドライン引数をカスタマイズするには、**ソリューション エクスプローラー**の上部にある **[ターゲットの切り替え]** ボタンを押し、 **[ターゲット ビュー]** を選択します。 次に、ターゲットを右クリックし、 **[デバッグ設定と起動設定]** を選択します。 これにより、プログラムに関する情報を含んだ launch.vs.json 構成ファイルが開かれるか、作成されます。 ソース ファイルの場所を指定するには、次の例に示すように、**sourceFileMap** プロパティをファイルに追加します。
+
+```json
+"MIMode": "gdb",
+"externalConsole": true,
+"sourceFileMap": {
+"c/Users/USER/source/repos/CMAKEPROJECTNAME": "C:\\Users\\USER\\source\\repos\\CMAKEPROJECTNAME"
+},
+"remoteMachineName": "${debugInfo.remoteMachineName}",
+```
+
+追加の引数を指定するには、`args` JSON 配列に引数を追加します。 詳細については、「[Open Folder projects for C++](../build/open-folder-projects-cpp.md)」 (C++ の [フォルダーを開く] プロジェクト) と [CMake デバッグ セッションの構成](../build/configure-cmake-debugging-sessions.md)に関するページを参照してください。
 
 ## <a name="configure_cmake_linux"></a>Linux 用の CMake 設定を構成する
 

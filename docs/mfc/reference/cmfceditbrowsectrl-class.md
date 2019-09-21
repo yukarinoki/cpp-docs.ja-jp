@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CMFCEditBrowseCtrl [MFC], OnIllegalFileName
 - CMFCEditBrowseCtrl [MFC], SetBrowseButtonImage
 ms.assetid: 69cfd886-3d35-4bee-8901-7c88fcf9520f
-ms.openlocfilehash: 31fadc0a960ddfcf216951e1af481983b122ea0f
-ms.sourcegitcommit: c3bf94210bdb73be80527166264d49e33784152c
+ms.openlocfilehash: db99c5e72e84bb359184f4c62594fcddff7d8ff6
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68821305"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505350"
 ---
 # <a name="cmfceditbrowsectrl-class"></a>CMFCEditBrowseCtrl クラス
 
@@ -65,7 +65,7 @@ class CMFCEditBrowseCtrl : public CEdit
 |[CMFCEditBrowseCtrl::OnChangeLayout](#onchangelayout)|現在の編集参照コントロールを再描画します。|
 |[CMFCEditBrowseCtrl:: OnDrawBrowseButton](#ondrawbrowsebutton)|参照ボタンを描画するためにフレームワークによって呼び出されます。|
 |[CMFCEditBrowseCtrl:: OnIllegalFileName](#onillegalfilename)|無効なファイル名が編集コントロールに入力されたときにフレームワークによって呼び出されます。|
-|`CMFCEditBrowseCtrl::PreTranslateMessage`|[TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)および[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage)の Windows 関数にディスパッチされる前に、ウィンドウメッセージを変換します。 構文と詳細については、「 [CWnd::P retranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)」を参照してください。|
+|`CMFCEditBrowseCtrl::PreTranslateMessage`|[TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage)および[DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage)の Windows 関数にディスパッチされる前に、ウィンドウメッセージを変換します。 構文と詳細については、「 [CWnd::P retranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)」を参照してください。|
 |[CMFCEditBrowseCtrl:: SetBrowseButtonImage](#setbrowsebuttonimage)|[参照] ボタンのカスタムイメージを設定します。|
 
 ## <a name="remarks"></a>Remarks

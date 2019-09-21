@@ -1,34 +1,34 @@
 ---
 title: __getcallerseflags
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _getcallerseflags
 - _getcallerseflags_cpp
 helpviewer_keywords:
 - _getcallerseflags intrinsic
 ms.assetid: 2386596f-33aa-4cc7-b026-5a834637270a
-ms.openlocfilehash: a2df7087c605882340da16f56dae2e991c5d7dd1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d6279db10ec38da7482b26e19e31f2d34dd48a07
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62264102"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222169"
 ---
-# <a name="getcallerseflags"></a>__getcallerseflags
+# <a name="__getcallerseflags"></a>__getcallerseflags
 
 **Microsoft 固有の仕様**
 
-呼び出し元のコンテキストから空文値を返します。
+呼び出し元のコンテキストから EFLAGS 値を返します。
 
 ## <a name="syntax"></a>構文
 
-```
+```C
 unsigned int __getcallerseflags(void);
 ```
 
 ## <a name="return-value"></a>戻り値
 
-呼び出し元のコンテキストからの値を立てる。
+呼び出し元のコンテキストからの EFLAGS 値。
 
 ## <a name="requirements"></a>必要条件
 
@@ -36,7 +36,7 @@ unsigned int __getcallerseflags(void);
 |---------------|------------------|
 |`__getcallerseflags`|x86、x64|
 
-**ヘッダー ファイル** \<intrin.h >
+**ヘッダーファイル**\<>
 
 ## <a name="remarks"></a>Remarks
 
@@ -44,7 +44,7 @@ unsigned int __getcallerseflags(void);
 
 ## <a name="example"></a>例
 
-```
+```cpp
 // getcallerseflags.cpp
 // processor: x86, x64
 

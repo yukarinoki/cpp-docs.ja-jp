@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DLLs [C++]
 - DLLs [C++], about DLLs
 ms.assetid: 5216bca4-51e2-466b-b221-0e3e776056f0
-ms.openlocfilehash: 9f5b34fda8a429f8e55631e1e0125ed6f79d5bae
-ms.sourcegitcommit: 0867d648e0955ebad7260b5fbebfd6cd4d58f3c7
+ms.openlocfilehash: 33f002143e306c99b4d17b7a01ddd4a9738e38e7
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68341074"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493280"
 ---
 # <a name="create-cc-dlls-in-visual-studio"></a>Visual Studio でC++の C/dll の作成
 
@@ -88,7 +88,7 @@ Dll の読み込み時に実行する必要がある DLL 初期化コードに�
 [FreeLibrary と AfxFreeLibrary](freelibrary-and-afxfreelibrary.md)<br/>
 **FreeLibrary**の使用方法`AfxFreeLibrary`と、DLL モジュールが不要になった場合について説明します。
 
-[ダイナミックリンクライブラリの検索順序](/windows/desktop/Dlls/dynamic-link-library-search-order)<br/>
+[ダイナミックリンクライブラリの検索順序](/windows/win32/Dlls/dynamic-link-library-search-order)<br/>
 Windows オペレーティング システムがシステム上の DLL を検索するために使用する検索パスについて説明します。
 
 [MFC と動的にリンクされるレギュラー MFC DLL のモジュール状態](module-states-of-a-regular-dll-dynamically-linked-to-mfc.md)<br/>

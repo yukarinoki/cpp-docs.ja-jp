@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - source attribute
 ms.assetid: 1878d05d-7709-4e97-b114-c62f38f5140e
-ms.openlocfilehash: 699ea64de49a4383bc8fb62b2f3b2133d7c496c9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 79614a345e6c07b03df351da93a847fe12e4b110
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407186"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514028"
 ---
 # <a name="source-c"></a>source (C++)
 
-クラスの場合、接続ポイント用の COM オブジェクトのソース インターフェイスを指定します。 プロパティまたはメソッドでは、オブジェクトまたはイベントのソースをバリアントにメンバーを返すことを示します。
+クラスで、COM オブジェクトの接続ポイントのソースインターフェイスを指定します。 プロパティまたはメソッドで、メンバーがイベントのソースであるオブジェクトまたはバリアントを返すことを示します。
 
 ## <a name="syntax"></a>構文
 
@@ -26,13 +26,13 @@ ms.locfileid: "62407186"
 ### <a name="parameters"></a>パラメーター
 
 *interfaces*<br/>
-クラスに属性のソースを適用するときに指定する 1 つまたは複数のインターフェイス。 ソースは、プロパティやメソッドに適用されるときに、このパラメーターは使用されません。
+ソース属性をクラスに適用するときに指定する1つ以上のインターフェイス。 Source がプロパティまたはメソッドに適用される場合、このパラメーターは使用されません。
 
 ## <a name="remarks"></a>Remarks
 
-**ソース**C++ 属性と同じ機能を持つ、[ソース](/windows/desktop/Midl/source)MIDL 属性。
+**Source** C++属性には、 [source](/windows/win32/Midl/source) MIDL 属性と同じ機能があります。
 
-使用することができます、[既定](default-cpp.md)オブジェクトの既定のソース インターフェイスを指定する属性。
+[既定](default-cpp.md)の属性を使用して、オブジェクトの既定のソースインターフェイスを指定できます。
 
 ## <a name="example"></a>例
 
@@ -76,7 +76,7 @@ class NN : public b
 |-|-|
 |**対象**|**クラス**、**構造体**、**インターフェイス**|
 |**反復可能**|いいえ|
-|**必要な属性**|`coclass` (クラスまたは構造体に適用される) と|
+|**必要な属性**|`coclass`(クラスまたは構造体に適用される場合)|
 |**無効な属性**|なし|
 
 属性コンテキストの詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。

@@ -194,12 +194,12 @@ helpviewer_keywords:
 - CHtmlView [MFC], SetWidth
 - CHtmlView [MFC], Stop
 ms.assetid: 904976af-73de-4aba-84ac-cfae8e2be09a
-ms.openlocfilehash: 5c7204f5207b85e4b9ada4b68e9feedaf83deccd
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 9643379136398de7ce4d98aaa9ab5f22fa488c0e
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916213"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927936"
 ---
 # <a name="chtmlview-class"></a>CHtmlView クラス
 
@@ -259,14 +259,14 @@ class CHtmlView : public CFormView
 |[CHtmlView::OnBeforeNavigate2](#onbeforenavigate2)|指定された WebBrowser 内での移動 (ウィンドウかフレームセット要素上で) が起こる前に呼び出されます。|
 |[CHtmlView:: OnCommandStateChange](#oncommandstatechange)|Web ブラウザー コマンドの有効な状態が変更されたことをアプリケーションに通知するために呼び出されます。|
 |[CHtmlView::OnDocumentComplete](#ondocumentcomplete)|ドキュメントが READYSTATE_COMPLETE 状態に達したことをアプリケーションに通知するために呼び出されます。|
-|[CHtmlView::OnDocWindowActivate](#ondocwindowactivate)|コンテナーのドキュメント ウィンドウがアクティブ化または非アクティブ化されたときにアクティブなインプレース オブジェクトに通知する、 [IOleInPlaceActiveObject::OnDocWindowActivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-ondocwindowactivate)の Internet Explorer または MSHTML の実装から呼び出されます。|
+|[CHtmlView::OnDocWindowActivate](#ondocwindowactivate)|コンテナーのドキュメント ウィンドウがアクティブ化または非アクティブ化されたときにアクティブなインプレース オブジェクトに通知する、 [IOleInPlaceActiveObject::OnDocWindowActivate](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceactiveobject-ondocwindowactivate)の Internet Explorer または MSHTML の実装から呼び出されます。|
 |[CHtmlView:: OnDownloadBegin](#ondownloadbegin)|ナビゲーション操作が開始中であることをアプリケーションに通知するために呼び出されます。|
 |[CHtmlView::OnDownloadComplete](#ondownloadcomplete)|ナビゲーション操作が終了したとき、中止したとき、または失敗したときに呼び出されます。|
 |[CHtmlView:: OnEnableModeless](#onenablemodeless)|コンテナーがモーダル ダイアログ ボックスを作成または破棄するときに、モードレス ダイアログ ボックスを有効または無効にするために呼び出されます。|
 |[CHtmlView:: OnFilterDataObject](#onfilterdataobject)|ホストが Internet Explorer または MSHTML のデータ オブジェクトを置き換えできるように Internet Explorer または MSHTML によってホスト上で呼び出されます。|
-|[CHtmlView:: OnFrameWindowActivate](#onframewindowactivate)|コンテナーの最上位レベルのフレーム ウィンドウがアクティブ化または非アクティブ化されたときに、オブジェクトに通知するために [IOleInPlaceActiveObject::OnFrameWindowActivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-onframewindowactivate) から呼び出されます。|
+|[CHtmlView:: OnFrameWindowActivate](#onframewindowactivate)|コンテナーの最上位レベルのフレーム ウィンドウがアクティブ化または非アクティブ化されたときに、オブジェクトに通知するために [IOleInPlaceActiveObject::OnFrameWindowActivate](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceactiveobject-onframewindowactivate) から呼び出されます。|
 |[CHtmlView::OnFullScreen](#onfullscreen)|FullScreen プロパティが変化したときに呼び出されます。|
-|[CHtmlView::OnGetDropTarget](#ongetdroptarget)|ドロップのターゲットとして使用されている Internet Explorer または MSHTML によって呼び出され、ホストが代わりの [IDropTarget](/windows/desktop/api/oleidl/nn-oleidl-idroptarget)を提供できるようにします。|
+|[CHtmlView::OnGetDropTarget](#ongetdroptarget)|ドロップのターゲットとして使用されている Internet Explorer または MSHTML によって呼び出され、ホストが代わりの [IDropTarget](/windows/win32/api/oleidl/nn-oleidl-idroptarget)を提供できるようにします。|
 |[CHtmlView:: OnGetExternal](#ongetexternal)|ホストの `IDispatch` インターフェイスを取得するために Internet Explorer または MSHTML によって呼び出されます。|
 |[CHtmlView::OnGetHostInfo](#ongethostinfo)|Internet Explorer または MSHTML ホストの UI 機能を取得します。|
 |[CHtmlView::OnGetOptionKeyPath](#ongetoptionkeypath)|Internet Explorer または MSHTML がユーザーの設定を格納しているレジストリ キーを返します。|
@@ -278,7 +278,7 @@ class CHtmlView : public CFormView
 |[CHtmlView::OnProgressChange](#onprogresschange)|ダウンロード操作の進行が更新されたことをアプリケーションに通知するために呼び出されます。|
 |[CHtmlView:: OnPropertyChange](#onpropertychange)|[PutProperty](#putproperty) メソッドがプロパティ値を変更したことをアプリケーションに通知するために呼び出されます。|
 |[CHtmlView:: OnQuit](#onquit)|Internet Explorer アプリケーションが終了しそうなときに、アプリケーションに通知するために呼び出されます。 (Internet Explorer のみに適用)|
-|[CHtmlView:: OnResizeBorder](#onresizeborder)|境界領域のサイズを変更する必要があることをオブジェクトに警告する、 [IOleInPlaceActiveObject::ResizeBorder](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-resizeborder)のInternet Explorer または MSHTML の実装から呼び出されます。|
+|[CHtmlView:: OnResizeBorder](#onresizeborder)|境界領域のサイズを変更する必要があることをオブジェクトに警告する、 [IOleInPlaceActiveObject::ResizeBorder](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceactiveobject-resizeborder)のInternet Explorer または MSHTML の実装から呼び出されます。|
 |[CHtmlView:: OnShowContextMenu](#onshowcontextmenu)|コンテキスト メニューを表示しようとしているときに、Internet Explorer または MSHTML から呼び出されます。|
 |[CHtmlView:: OnShowUI](#onshowui)|Internet Explorer または MSHTML がメニューやツール バーを表示する前に呼び出されます。|
 |[CHtmlView:: OnStatusBar](#onstatusbar)|StatusBar プロパティが変化したときに呼び出されます。|
@@ -286,7 +286,7 @@ class CHtmlView : public CFormView
 |[CHtmlView::OnTheaterMode](#ontheatermode)|TheaterMode プロパティが変化したときに呼び出されます。|
 |[CHtmlView:: Onこの Lechange](#ontitlechange)|WebBrowser コントロールのドキュメントのタイトルが使用できるようになるかどうか、また変更するかどうかを、アプリケーションに通知するために呼び出されます。|
 |[CHtmlView:: OnToolBar](#ontoolbar)|ToolBar プロパティが変化したときに呼び出されます。|
-|[CHtmlView:: OnTranslateAccelerator](#ontranslateaccelerator)|[IOleInPlaceActiveObject::TranslateAccelerator](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-translateaccelerator) または [IOleControlSite::TranslateAccelerator](/windows/desktop/api/ocidl/nf-ocidl-iolecontrolsite-translateaccelerator) が呼び出され、コンテナーのメッセージ キューからのメニュー アクセス キーのメッセージを処理するときに、Internet Explorer または MSHTML によって呼び出されます。|
+|[CHtmlView:: OnTranslateAccelerator](#ontranslateaccelerator)|[IOleInPlaceActiveObject::TranslateAccelerator](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceactiveobject-translateaccelerator) または [IOleControlSite::TranslateAccelerator](/windows/win32/api/ocidl/nf-ocidl-iolecontrolsite-translateaccelerator) が呼び出され、コンテナーのメッセージ キューからのメニュー アクセス キーのメッセージを処理するときに、Internet Explorer または MSHTML によって呼び出されます。|
 |[CHtmlView::OnTranslateUrl](#ontranslateurl)|読み込む URL をホストが変更できるようにするため、Internet Explorer または MSHTML によって呼び出されます。|
 |[CHtmlView:: OnUpdateUI](#onupdateui)|コマンドの状態が変化したことをホストに通知します。|
 |[CHtmlView:: OnVisible](#onvisible)|WebBrowser コントロールのウィンドウが表示または隠す状態になるべきときに呼び出されます。|
@@ -459,11 +459,11 @@ HRESULT ExecFormsCommand(
 
 ### <a name="return-value"></a>戻り値
 
-標準の HRESULT 値。 使用可能な値の完全な一覧については、Windows SDK の「 [IOleCommandTarget:: Exec](/windows/desktop/api/docobj/nf-docobj-iolecommandtarget-exec) 」を参照してください。
+標準の HRESULT 値。 使用可能な値の完全な一覧については、Windows SDK の「 [IOleCommandTarget:: Exec](/windows/win32/api/docobj/nf-docobj-iolecommandtarget-exec) 」を参照してください。
 
 ### <a name="remarks"></a>Remarks
 
-`ExecFormsCommand`[IOleCommandTarget:: Exec](/windows/desktop/api/docobj/nf-docobj-iolecommandtarget-exec)メソッドの動作を実装します。
+`ExecFormsCommand`[IOleCommandTarget:: Exec](/windows/win32/api/docobj/nf-docobj-iolecommandtarget-exec)メソッドの動作を実装します。
 
 ##  <a name="execwb"></a>CHtmlView:: ExecWB
 
@@ -1092,7 +1092,7 @@ void Navigate2(
 ### <a name="parameters"></a>パラメーター
 
 *pIDL*<br/>
-[Itemidlist](/windows/desktop/api/shtypes/ns-shtypes-itemidlist)構造体へのポインター。
+[Itemidlist](/windows/win32/api/shtypes/ns-shtypes-itemidlist)構造体へのポインター。
 
 *dwFlags*<br/>
 リソースを履歴リストに追加するかどうか、キャッシュに対して読み取りまたは書き込みを行うかどうか、およびリソースを新しいウィンドウに表示するかどうかを指定する変数のフラグ。 変数は、 [Browserナビゲーション定数](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768360\(v=vs.85\))列挙体で定義された値の組み合わせにすることができます。
@@ -1194,7 +1194,7 @@ virtual void OnDocumentComplete(LPCTSTR lpszURL);
 
 すべてのフレームでこのイベントが発生するわけではありませんが、 [ondownloadbegin](#ondownloadbegin)イベントを`OnDocumentComplete`発生させる各フレームは、対応するイベントを発生させます。
 
-*Lpszurl*によって示される url は、ブラウザーが移動先として指定された url とは異なる場合があります。この url は正規化された url であるためです。 たとえば、 [Navigate](#navigate)または[Navigate2](#navigate2)の呼び出しで、アプリケーションで url "www.microsoft.com" が指定されている場合、に`OnNavigateComplete2`よって渡さ<http://www.microsoft.com/>れる url は "" になります。 また、サーバーがブラウザーを別の URL にリダイレクトしている場合は、リダイレクトされた URL がここに反映されます。
+*Lpszurl*によって示される url は、ブラウザーが移動先として指定された url とは異なる場合があります。この url は正規化された url であるためです。 たとえば、アプリケーションで[Navigate](#navigate)または[Navigate2](#navigate2)の呼び出し`"www.microsoft.com"`での url を指定した場合、によって`OnNavigateComplete2`渡され`"<https://www.microsoft.com/>"`た url はになります。 また、サーバーがブラウザーを別の URL にリダイレクトしている場合は、リダイレクトされた URL がここに反映されます。
 
 ##  <a name="ondocwindowactivate"></a>  CHtmlView::OnDocWindowActivate
 
@@ -1271,7 +1271,7 @@ virtual HRESULT OnFilterDataObject(
 ### <a name="parameters"></a>パラメーター
 
 *pDataObject*<br/>
-Internet Explorer または MSHTML によって提供される[IDataObject](/windows/desktop/api/objidl/nn-objidl-idataobject)インターフェイスのアドレス。
+Internet Explorer または MSHTML によって提供される[IDataObject](/windows/win32/api/objidl/nn-objidl-idataobject)インターフェイスのアドレス。
 
 *ppDataObject*<br/>
 ホストによって`IDataObject`指定されたインターフェイスポインターを受け取るアドレス。 このパラメーターの内容は、メソッドが失敗した場合でも、常に NULL に初期化されます。
@@ -1286,7 +1286,7 @@ Microsoft `OnFilterDataObject` Web ブラウザーコントロールから`Filte
 
 ##  <a name="onframewindowactivate"></a>CHtmlView:: OnFrameWindowActivate
 
-コンテナーの最上位レベルのフレーム ウィンドウがアクティブ化または非アクティブ化されたときに、オブジェクトに通知するために [IOleInPlaceActiveObject::OnFrameWindowActivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-onframewindowactivate) から呼び出されます。
+コンテナーの最上位レベルのフレーム ウィンドウがアクティブ化または非アクティブ化されたときに、オブジェクトに通知するために [IOleInPlaceActiveObject::OnFrameWindowActivate](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceactiveobject-onframewindowactivate) から呼び出されます。
 
 ```
 virtual HRESULT OnFrameWindowActivate(BOOL fActivate);
@@ -1331,7 +1331,7 @@ virtual HRESULT OnGetDropTarget(
 ### <a name="parameters"></a>パラメーター
 
 *pDropTarget*<br/>
-[IDropTarget](/windows/desktop/api/oleidl/nn-oleidl-idroptarget)Internet Explorer または MSHTML が使用することを提案します。
+[IDropTarget](/windows/win32/api/oleidl/nn-oleidl-idroptarget)Internet Explorer または MSHTML が使用することを提案します。
 
 *ppDropTarget*<br/>
 ホストが提供する`IDropTarget`インターフェイスポインターを受け取るのアドレス。 `IDropTarget`
@@ -1399,7 +1399,7 @@ virtual HRESULT OnGetOptionKeyPath(
 ### <a name="parameters"></a>パラメーター
 
 *pchKey*<br/>
-ホストに既定`LPOLESTR`のオプションが格納されているレジストリサブキー文字列を受け取るのアドレス。 このサブキーは、HKEY_CURRENT_USER キーの下に表示されます。 [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc)を使用して、このメモリを割り当てます。 呼び出し元のアプリケーションは、 [CoTaskMemFree](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree)を使用してこのメモリを解放します。 このパラメーターは、メソッドが失敗した場合でも、常に NULL に初期化される必要があります。
+ホストに既定`LPOLESTR`のオプションが格納されているレジストリサブキー文字列を受け取るのアドレス。 このサブキーは、HKEY_CURRENT_USER キーの下に表示されます。 [CoTaskMemAlloc](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemalloc)を使用して、このメモリを割り当てます。 呼び出し元のアプリケーションは、 [CoTaskMemFree](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemfree)を使用してこのメモリを解放します。 このパラメーターは、メソッドが失敗した場合でも、常に NULL に初期化される必要があります。
 
 *dwReserved*<br/>
 将来使用するために予約されています。 現在使用されていません。
@@ -1458,7 +1458,7 @@ virtual void OnNavigateComplete2(LPCTSTR strURL);
 
 Url パラメーターは、URL 表現がないシェル名前空間エンティティの場合、PIDL にすることができます。
 
-*StrURL*に含まれる url は、ブラウザーが移動先として指定された url とは異なる場合があります。この url は正規化された url であるためです。 たとえば、 [Navigate](#navigate)または[Navigate2](#navigate2)の呼び出しで、アプリケーションで url "www.microsoft.com" が指定されている場合、に`OnNavigateComplete2`よって渡さ<http://www.microsoft.com/>れる url は "" になります。 また、サーバーがブラウザーを別の URL にリダイレクトしている場合は、リダイレクトされた URL がここに反映されます。
+*StrURL*に含まれる url は、ブラウザーが移動先として指定された url とは異なる場合があります。この url は正規化された url であるためです。 たとえば、アプリケーションで[Navigate](#navigate)または[Navigate2](#navigate2)の呼び出し`"www.microsoft.com"`での url を指定した場合、によって`OnNavigateComplete2`渡され`"<https://www.microsoft.com/>"`た url はになります。 また、サーバーがブラウザーを別の URL にリダイレクトしている場合は、リダイレクトされた URL がここに反映されます。
 
 ##  <a name="onnavigateerror"></a>CHtmlView:: OnNavigateError
 
@@ -1559,7 +1559,7 @@ virtual void OnQuit();
 
 ##  <a name="onresizeborder"></a>  CHtmlView::OnResizeBorder
 
-境界領域のサイズを変更する必要があることをオブジェクトに警告する、 [IOleInPlaceActiveObject::ResizeBorder](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-resizeborder)のInternet Explorer または MSHTML の実装から呼び出されます。
+境界領域のサイズを変更する必要があることをオブジェクトに警告する、 [IOleInPlaceActiveObject::ResizeBorder](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceactiveobject-resizeborder)のInternet Explorer または MSHTML の実装から呼び出されます。
 
 ```
 virtual HRESULT OnResizeBorder(
@@ -1577,7 +1577,7 @@ virtual HRESULT OnResizeBorder(
 境界が変更されたフレームまたはドキュメントウィンドウオブジェクトのインターフェイスへのポインター。
 
 *fFrameWindow*<br/>
-フレームウィンドウが[IOleInPlaceActiveObject:: ResizeBorder](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-resizeborder)を呼び出している場合は TRUE、それ以外の場合は FALSE。
+フレームウィンドウが[IOleInPlaceActiveObject:: ResizeBorder](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceactiveobject-resizeborder)を呼び出している場合は TRUE、それ以外の場合は FALSE。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1608,7 +1608,7 @@ virtual HRESULT OnShowContextMenu(
 メニューの画面座標。
 
 *pcmdtReserved*<br/>
-コマンドの状態を照会し、このオブジェクトのコマンドを実行するために使用される[IOleCommandTarget](/windows/desktop/api/docobj/nn-docobj-iolecommandtarget)インターフェイスです。
+コマンドの状態を照会し、このオブジェクトのコマンドを実行するために使用される[IOleCommandTarget](/windows/win32/api/docobj/nn-docobj-iolecommandtarget)インターフェイスです。
 
 *予約済みの pdisp*<br/>
 画面座標でのオブジェクトの IDispatch インターフェイス。 これにより、ホストは特定のオブジェクトを区別して、より具体的なコンテキストを提供できます。
@@ -1640,16 +1640,16 @@ virtual HRESULT OnShowUI(
 将来使用するために予約されています。
 
 *pActiveObject*<br/>
-現在アクティブなオブジェクトの[IOleInPlaceActiveObject](/windows/desktop/api/oleidl/nn-oleidl-ioleinplaceactiveobject)インターフェイス。
+現在アクティブなオブジェクトの[IOleInPlaceActiveObject](/windows/win32/api/oleidl/nn-oleidl-ioleinplaceactiveobject)インターフェイス。
 
 *pCommandTarget*<br/>
-オブジェクトの[IOleCommandTarget](/windows/desktop/api/docobj/nn-docobj-iolecommandtarget)インターフェイス。
+オブジェクトの[IOleCommandTarget](/windows/win32/api/docobj/nn-docobj-iolecommandtarget)インターフェイス。
 
 *pFrame*<br/>
-オブジェクトの[IOleInPlaceFrame](/windows/desktop/api/oleidl/nn-oleidl-ioleinplaceframe)インターフェイス。 これは、メニューとツールバーに必要です。
+オブジェクトの[IOleInPlaceFrame](/windows/win32/api/oleidl/nn-oleidl-ioleinplaceframe)インターフェイス。 これは、メニューとツールバーに必要です。
 
 *pDoc*<br/>
-オブジェクトの[IOleInPlaceUIWindow](/windows/desktop/api/oleidl/nn-oleidl-ioleinplaceuiwindow)インターフェイス。 これは、ツールバーに必要です。
+オブジェクトの[IOleInPlaceUIWindow](/windows/win32/api/oleidl/nn-oleidl-ioleinplaceuiwindow)インターフェイス。 これは、ツールバーに必要です。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1730,7 +1730,7 @@ Internet Explorer のツールバーが表示されている場合は0以外の�
 
 ##  <a name="ontranslateaccelerator"></a>  CHtmlView::OnTranslateAccelerator
 
-[IOleInPlaceActiveObject::TranslateAccelerator](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-translateaccelerator) または [IOleControlSite::TranslateAccelerator](/windows/desktop/api/ocidl/nf-ocidl-iolecontrolsite-translateaccelerator) が呼び出され、コンテナーのメッセージ キューからのメニュー アクセス キーのメッセージを処理するときに、Internet Explorer または MSHTML によって呼び出されます。
+[IOleInPlaceActiveObject::TranslateAccelerator](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceactiveobject-translateaccelerator) または [IOleControlSite::TranslateAccelerator](/windows/win32/api/ocidl/nf-ocidl-iolecontrolsite-translateaccelerator) が呼び出され、コンテナーのメッセージ キューからのメニュー アクセス キーのメッセージを処理するときに、Internet Explorer または MSHTML によって呼び出されます。
 
 ```
 virtual HRESULT OnTranslateAccelerator(
@@ -1902,11 +1902,11 @@ HRESULT QueryFormsCommand(
 
 ### <a name="return-value"></a>戻り値
 
-標準の HRESULT 値。 使用可能な値の完全な一覧については、Windows SDK の「 [IOleCommandTarget:: QueryStatus](/windows/desktop/api/docobj/nf-docobj-iolecommandtarget-querystatus) 」を参照してください。
+標準の HRESULT 値。 使用可能な値の完全な一覧については、Windows SDK の「 [IOleCommandTarget:: QueryStatus](/windows/win32/api/docobj/nf-docobj-iolecommandtarget-querystatus) 」を参照してください。
 
 ### <a name="remarks"></a>Remarks
 
-`QueryFormsCommand`[IOleCommandTarget:: QueryStatus](/windows/desktop/api/docobj/nf-docobj-iolecommandtarget-querystatus)メソッドの動作を実装します。
+`QueryFormsCommand`[IOleCommandTarget:: QueryStatus](/windows/win32/api/docobj/nf-docobj-iolecommandtarget-querystatus)メソッドの動作を実装します。
 
 ##  <a name="querystatuswb"></a>  CHtmlView::QueryStatusWB
 
@@ -1919,15 +1919,15 @@ OLECMDF QueryStatusWB(OLECMDID cmdID) const;
 ### <a name="parameters"></a>パラメーター
 
 *cmdID*<br/>
-呼び出し元がステータス情報を必要とするコマンドの[OLECMDID](/windows/desktop/api/docobj/ne-docobj-olecmdid)値。
+呼び出し元がステータス情報を必要とするコマンドの[OLECMDID](/windows/win32/api/docobj/ne-docobj-olecmdid)値。
 
 ### <a name="return-value"></a>戻り値
 
-コマンドの状態を受け取る[OLECMDF](/windows/desktop/api/docobj/ne-docobj-olecmdf)値のアドレス。
+コマンドの状態を受け取る[OLECMDF](/windows/win32/api/docobj/ne-docobj-olecmdf)値のアドレス。
 
 ### <a name="remarks"></a>Remarks
 
-`QueryStatusWB`[IOleCommandTarget:: QueryStatus](/windows/desktop/api/docobj/nf-docobj-iolecommandtarget-querystatus)メソッドの動作を実装します。
+`QueryStatusWB`[IOleCommandTarget:: QueryStatus](/windows/win32/api/docobj/nf-docobj-iolecommandtarget-querystatus)メソッドの動作を実装します。
 
 Internet Explorer と WebBrowser に適用されます。
 
@@ -2236,4 +2236,4 @@ Internet Explorer と WebBrowser に適用されます。
 [MFC サンプル MFCIE](../../overview/visual-cpp-samples.md)<br/>
 [CFormView クラス](../../mfc/reference/cformview-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)<br/>
-[IWebBrowser2](/windows/desktop/api/exdisp/nn-exdisp-iwebbrowser2)
+[IWebBrowser2](/windows/win32/api/exdisp/nn-exdisp-iwebbrowser2)

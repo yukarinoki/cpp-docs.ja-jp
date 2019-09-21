@@ -49,19 +49,19 @@ helpviewer_keywords:
 - strlen function
 - _mbslen function
 ms.assetid: 16462f2a-1e0f-4eb3-be55-bf1c83f374c2
-ms.openlocfilehash: 4a12c87f1cff14582e21fbb7d617100fc2853dab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7736e1e7889642c41a5e3853ac13221ab22f6d03
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362284"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500924"
 ---
-# <a name="strlen-wcslen-mbslen-mbslenl-mbstrlen-mbstrlenl"></a>strlen、wcslen、_mbslen、_mbslen_l、_mbstrlen、_mbstrlen_l
+# <a name="strlen-wcslen-_mbslen-_mbslen_l-_mbstrlen-_mbstrlen_l"></a>strlen、wcslen、_mbslen、_mbslen_l、_mbstrlen、_mbstrlen_l
 
 現在のロケールまたは指定されたロケールを使用し、文字列の長さを取得します。 これらの関数についてセキュリティ保護が強化されたバージョンを使用できます。「[strnlen、strnlen_s、wcsnlen、wcsnlen_s、_mbsnlen、_mbsnlen_l、_mbstrnlen、_mbstrnlen_l](strnlen-strnlen-s.md)」をご覧ください
 
 > [!IMPORTANT]
-> **_mbslen**、 **_mbslen_l**、 **_mbstrlen**、および **_mbstrlen_l** Windows ランタイムで実行するアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
+> **_mbslen**、 **_mbslen_l**、 **_mbstrlen**、および **_mbstrlen_l**は、Windows ランタイムで実行されるアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -98,13 +98,13 @@ NULL で終わる文字列。
 
 ## <a name="return-value"></a>戻り値
 
-これらの各関数の文字数を返します*str*、ターミナルの null を除外します。 除く、エラーを示す戻り値は予約されていません **_mbstrlen**と **_mbstrlen_l**、返す`((size_t)(-1))`文字列に無効なマルチバイト文字が含まれている場合。
+これらの各関数は、端末の null を除く、 *str*内の文字数を返します。 **_Mbstrlen**と **_mbstrlen_l**を除き、エラーを示す戻り値は予約されていませ`((size_t)(-1))`ん。これは、文字列に無効なマルチバイト文字が含まれている場合にを返します。
 
 ## <a name="remarks"></a>Remarks
 
-**strlen**戻り値の文字列には、マルチバイト文字が含まれている場合でも (バイト単位) の数と等しくでは常に 1 バイト文字の文字列として文字列を解釈します。 **wcslen**のワイド文字バージョンは、 **strlen**; の引数**wcslen**ワイド文字の文字列は、全角 (2 バイト) 文字は文字数。 **wcslen**と**strlen**動作は同じです。
+**strlen**は文字列を1バイト文字列として解釈するため、文字列にマルチバイト文字が含まれている場合でも、戻り値は常にバイト数と等しくなります。 **wcslen**は、 **strlen**のワイド文字バージョンです。**wcslen**の引数はワイド文字列で、文字数はワイド (2 バイト) 文字で指定します。 それ以外では、 **wcslen**と**strlen**は同じように動作します。
 
-**セキュリティに関するメモ** これらの関数は、バッファー オーバーランが原因で発生する潜在的な脅威の影響を受けます。 バッファー オーバーランは、システムを攻撃するときによく使用される方法であり、その結果、認められていない権限が昇格されます。 詳しくは、「 [バッファー オーバーランの回避](/windows/desktop/SecBP/avoiding-buffer-overruns)」をご覧ください。
+**セキュリティに関するメモ** これらの関数は、バッファー オーバーランが原因で発生する潜在的な脅威の影響を受けます。 バッファー オーバーランは、システムを攻撃するときによく使用される方法であり、その結果、認められていない権限が昇格されます。 詳しくは、「 [バッファー オーバーランの回避](/windows/win32/SecBP/avoiding-buffer-overruns)」をご覧ください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -114,9 +114,9 @@ NULL で終わる文字列。
 |**_tcsclen**|**strlen**|**_mbslen**|**wcslen**|
 |**_tcsclen_l**|**strlen**|**_mbslen_l**|**wcslen**|
 
-**_mbslen**と **_mbslen_l**マルチバイト文字列のマルチバイト文字の数を返しますが、マルチバイト文字の有効性はテストしません。 **_mbstrlen**と **_mbstrlen_l**マルチバイト文字の有効性をテストし、マルチバイト文字のシーケンスを認識します。 文字列が渡された場合 **_mbstrlen**または **_mbstrlen_l**コード ページは、関数の戻り値-1 とセットの無効なマルチバイト文字が含まれています**errno** に**EILSEQ**します。
+**_mbslen**と **_mbslen_l**は、マルチバイト文字の文字列に含まれるマルチバイト文字の数を返しますが、マルチバイト文字の有効性はテストしません。 **_mbstrlen**と **_mbstrlen_l**は、マルチバイト文字の有効性をテストし、マルチバイト文字のシーケンスを認識します。 **_Mbstrlen**または **_mbstrlen_l**に渡された文字列に、コードページの無効なマルチバイト文字が含まれている場合、この関数は-1 を返し、 **errno**を**EILSEQ**に設定します。
 
-出力値は、ロケールの **LC_CTYPE** カテゴリの設定に影響されます。詳細については、「[setlocale](setlocale-wsetlocale.md)」を参照してください。 **_l** サフィックスが付いていないこれらの関数のバージョンでは、このロケールに依存する動作に現在のロケールを使用します。**_l** サフィックスが付いているバージョンは、渡されたロケール パラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+出力値は、ロケールの **LC_CTYPE** カテゴリの設定に影響されます。詳細については、「[setlocale](setlocale-wsetlocale.md)」を参照してください。 **_l** サフィックスが付いていないこれらの関数のバージョンでは、このロケールに依存する動作に現在のロケールを使用します。 **_l** サフィックスが付いているバージョンは、渡されたロケール パラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 

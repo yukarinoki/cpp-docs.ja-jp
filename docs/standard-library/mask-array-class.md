@@ -13,7 +13,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68460140"
 ---
-# <a name="maskarray-class"></a>mask_array クラス
+# <a name="mask_array-class"></a>mask_array クラス
 
 サブセット配列間の演算を提供することにより、ブール式で指定された親 valarray のサブセットとして機能するオブジェクトをサポートする、内部の補助テンプレート クラス。
 
@@ -21,7 +21,7 @@ ms.locfileid: "68460140"
 
 ## <a name="remarks"></a>Remarks
 
-クラスは、クラス valarray `va` **\<> 型**のオブジェクトへの参照、 [](../standard-library/valarray-class.md)および`ba`クラス[\<valarray bool >](../standard-library/valarray-bool-class.md)のオブジェクトへの参照を格納するオブジェクトを表します。これは、`valarray<Type>`オブジェクトから選択する要素のシーケンス。
+クラスは、 `va` [クラス valarray](../standard-library/valarray-class.md) **\<> 型**のオブジェクトへの参照、および`ba`クラス[\<valarray bool >](../standard-library/valarray-bool-class.md)のオブジェクトへの参照を格納するオブジェクトを表します。これは、`valarray<Type>`オブジェクトから選択する要素のシーケンス。
 
 オブジェクトを`mask_array<Type>`構築するには、 [va&#91;ba&#93;](../standard-library/valarray-class.md#op_at)という形式の式を記述する必要があります。 クラス mask_array のメンバー関数は、に対し`valarray<Type>`て定義されている対応する関数シグネチャのように動作します。ただし、選択した要素のシーケンスのみが影響を受けます。
 

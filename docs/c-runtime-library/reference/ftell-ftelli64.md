@@ -1,10 +1,10 @@
 ---
 title: ftell、_ftelli64
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ftelli64
 - ftell
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ftelli64
 - ftell
@@ -27,14 +30,14 @@ helpviewer_keywords:
 - file pointers [C++], getting current position
 - file pointers [C++]
 ms.assetid: 40149cd8-65f2-42ff-b70c-68e3e918cdd7
-ms.openlocfilehash: f9548d4684bd2df734be2b0b703f98d8c7982884
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
+ms.openlocfilehash: fda309420e6ae241d3c8ed73c3d41c8ae50de662
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68376121"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956451"
 ---
-# <a name="ftell-ftelli64"></a>ftell、_ftelli64
+# <a name="ftell-_ftelli64"></a>ftell、_ftelli64
 
 ファイル ポインターの現在の位置を取得します。
 
@@ -56,7 +59,7 @@ __int64 _ftelli64(
 
 ## <a name="return-value"></a>戻り値
 
-**ftell**と **_ftelli64**は、現在のファイルの位置を返します。 テキストモードでは復帰と改行の変換が行われるため、 **ftell**と **_ftelli64**によって返される値には、テキストモードで開かれたストリームの物理バイトオフセットが反映されない場合があります。 **Ftell** [または](fseek-fseeki64.md) **_ftelli64**を[_fseeki64](fseek-fseeki64.md)と共に使用して、ファイルの場所に適切に戻ります。 エラーが発生した場合、 **ftell**と **_ftelli64**は、「パラメーターの[検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、これらの関数は-1L を返し、errno に指定されている2つの定数のいずれかに errno**を設定し**ます。始め. **EBADF**定数は、*ストリーム*引数が有効なファイルポインター値ではないか、開いているファイルを参照していないことを意味します。 **EINVAL**は、無効な*ストリーム*引数が関数に渡されたことを意味します。 (端末やプリンターなどの) シークが不可能なデバイス、または*ストリーム*が開いているファイルを参照していない場合、戻り値は未定義になります。
+**ftell**と **_ftelli64**は、現在のファイルの位置を返します。 テキストモードでは復帰と改行の変換が行われるため、 **ftell**と **_ftelli64**によって返される値には、テキストモードで開かれたストリームの物理バイトオフセットが反映されない場合があります。 **Ftell**または **_ftelli64**を[_fseeki64](fseek-fseeki64.md)と共に使用して、[ファイルの場所](fseek-fseeki64.md)に適切に戻ります。 エラーが発生した場合、 **ftell**と **_ftelli64**は、「パラメーターの[検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、これらの関数は-1L を返し、errno に指定されている2つの定数のいずれかに errno**を設定し**ます。始め. **EBADF**定数は、*ストリーム*引数が有効なファイルポインター値ではないか、開いているファイルを参照していないことを意味します。 **EINVAL**は、無効な*ストリーム*引数が関数に渡されたことを意味します。 (端末やプリンターなどの) シークが不可能なデバイス、または*ストリーム*が開いているファイルを参照していない場合、戻り値は未定義になります。
 
 リターン コードの詳細については、「[_doserrno、errno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 

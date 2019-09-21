@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - _com_ptr_t method [C++]
 ms.assetid: 0c00620a-28d2-4f60-ae4a-1696be36137e
-ms.openlocfilehash: 779fd1008f6763f4b5ca95938018a5129e89aa1f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5a3923ee488771e807600069855299fc240b3212
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154878"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498711"
 ---
-# <a name="comptrtcomptrt"></a>_com_ptr_t::_com_ptr_t
+# <a name="_com_ptr_t_com_ptr_t"></a>_com_ptr_t::_com_ptr_t
 
 **Microsoft 固有の仕様**
 
-構築、 **_com_ptr_t**オブジェクト。
+**_Com_ptr_t**オブジェクトを構築します。
 
 ## <a name="syntax"></a>構文
 
@@ -139,28 +139,28 @@ explicit _com_ptr_t(
 生のインターフェイス ポインター。
 
 *fAddRef*<br/>
-TRUE の場合、`AddRef`カプセル化されたインターフェイス ポインターの参照カウントをインクリメントすると呼びます。
+TRUE の場合`AddRef` 、カプセル化されたインターフェイスポインターの参照カウントをインクリメントするためにが呼び出されます。
 
 *cp*<br/>
-A **_com_ptr_t**オブジェクト。
+**_Com_ptr_t**オブジェクトです。
 
 *p*<br/>
-このスマート ポインター型と異なる型で生のインターフェイス ポインター **_com_ptr_t**オブジェクト。
+生のインターフェイスポインター。その型は、この **_com_ptr_t**オブジェクトのスマートポインター型とは異なります。
 
 *varSrc*<br/>
 `_variant_t` オブジェクト。
 
 *clsid*<br/>
-`CLSID`コクラスの。
+コク`CLSID`ラスの。
 
 *dwClsContext*<br/>
 実行可能コードを実行するコンテキスト。
 
 *lpcStr*<br/>
-保持するマルチバイト文字列を`CLSID`(以降では"**{**") または`ProgID`します。
+`CLSID` (" **{** `ProgID`" で始まる) またはを保持するマルチバイト文字列。
 
 *pOuter*<br/>
-不明な外部の[集計](/windows/desktop/com/aggregation)します。
+[集計](/windows/win32/com/aggregation)の不明な外部。
 
 ## <a name="see-also"></a>関連項目
 

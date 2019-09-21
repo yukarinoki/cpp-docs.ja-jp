@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - CThreadPool class
 ms.assetid: 06683718-01b9-413c-9481-2dc1734ec70f
-ms.openlocfilehash: 07fd470a6aeab0575f2733d72650bd695b8e2752
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: f0b732efdce5cf04349f468363b8d86621d90204
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915687"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496307"
 ---
 # <a name="cthreadpool-class"></a>CThreadPool クラス
 
@@ -78,7 +78,7 @@ class CThreadPool : public IThreadPoolConfig
 
 スレッドが作成されるとすぐに、その`Initialize`スレッドに関連付けられているオブジェクトで Worker:: が呼び出されます。 スレッドを破棄する直前に、 *Worker*::`Terminate`が呼び出されます。 どちらのメソッドも、 **void** <strong>\*</strong>引数を受け取る必要があります。 この引数の値は、 [CThreadPool:: Initialize](#initialize)の*pvworkerparam*パラメーターを通じてスレッドプールに渡されます。
 
-キューに作業項目があり、ワーカースレッドが作業に使用できる場合、ワーカースレッドはキューから項目を取得し、そのスレッド`Execute`の*ワーカー*オブジェクトのメソッドを呼び出します。 次に、3つの項目がメソッドに渡されます。これは、 `pvWorkerParam`キューからの項目、 `Initialize` *worker*:: および`Terminate` *worker*:: に渡される項目、および IO 完了ポートキューに使用される[重複](/windows/desktop/api/minwinbase/ns-minwinbase-overlapped)した構造体へのポインターです.
+キューに作業項目があり、ワーカースレッドが作業に使用できる場合、ワーカースレッドはキューから項目を取得し、そのスレッド`Execute`の*ワーカー*オブジェクトのメソッドを呼び出します。 次に、3つの項目がメソッドに渡されます。これは、 `pvWorkerParam`キューからの項目、 `Initialize` *worker*:: および`Terminate` *worker*:: に渡される項目、および IO 完了ポートキューに使用される[重複](/windows/win32/api/minwinbase/ns-minwinbase-overlapped)した構造体へのポインターです.
 
 *ワーカー*クラスは、Typedef ( *worker*:: `RequestType`) を指定することによって、スレッドプールでキューに登録される項目の型を宣言します。 この型は、ULONG_PTR との間でキャストできる必要があります。
 
@@ -344,7 +344,7 @@ void Shutdown(DWORD dwMaxWait = 0) throw();
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、プール内のすべてのスレッドにシャットダウン要求をポストします。 タイムアウトが経過すると、このメソッドは終了しなかったすべてのスレッドで[TerminateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-terminatethread)を呼び出します。 このメソッドは、クラスのデストラクターから自動的に呼び出されます。
+このメソッドは、プール内のすべてのスレッドにシャットダウン要求をポストします。 タイムアウトが経過すると、このメソッドは終了しなかったすべてのスレッドで[TerminateThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-terminatethread)を呼び出します。 このメソッドは、クラスのデストラクターから自動的に呼び出されます。
 
 ## <a name="see-also"></a>関連項目
 

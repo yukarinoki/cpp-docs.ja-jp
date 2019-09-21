@@ -1,4 +1,4 @@
----
+﻿---
 title: 例外処理のタイミング:概要
 ms.date: 05/07/2019
 helpviewer_keywords:
@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 5d1da546-73fd-4673-aa1a-7ac0f776c420
 ms.openlocfilehash: 7b52252454e27d622e412f490360a025dfc97838
 ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2019
 ms.locfileid: "65221896"
 ---
 # <a name="timing-of-exception-handling-a-summary"></a>例外処理のタイミング:概要
 
-終了ハンドラーの実行方法に関係なく **_ _try**ステートメント ブロックが終了します。 原因としてからのジャンプ、 **_ _try**ブロック、`longjmp`ステートメント ブロック、および例外処理によるスタックのアンワインドから制御を転送します。
+終了ハンドラーの実行方法に関係なく **__try**ステートメント ブロックが終了します。 原因としてからのジャンプ、 **__try**ブロック、`longjmp`ステートメント ブロック、および例外処理によるスタックのアンワインドから制御を転送します。
 
 > [!NOTE]
 >  MicrosoftC++コンパイラは、2 つの形式をサポートしている、`setjmp`と`longjmp`ステートメント。 高速なバージョンは終了処理をバイパスしますが、より効率的です。 このバージョンを使用するファイルをインクルード\<setjmp.h >。 もう一方のバージョンは、前の段落で説明したような終了処理をサポートします。 このバージョンを使用するファイルをインクルード\<setjmpex.h >。 高速バージョンでパフォーマンスがどの程度向上するかは、ハードウェア構成によって異なります。

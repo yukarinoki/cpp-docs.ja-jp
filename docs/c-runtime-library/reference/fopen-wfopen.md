@@ -32,14 +32,14 @@ helpviewer_keywords:
 - files [C++], opening
 - fopen function
 ms.assetid: e868993f-738c-4920-b5e4-d8f2f41f933d
-ms.openlocfilehash: 0b1dbc72124188d06da48f47e47c11ae6d06e771
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
+ms.openlocfilehash: b57ed2b26428c48efbe544c2b4802e347b915c29
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68376196"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499942"
 ---
-# <a name="fopen-wfopen"></a>fopen、_wfopen
+# <a name="fopen-_wfopen"></a>fopen、_wfopen
 
 ファイルを開きます。 追加のパラメーター検証を実行してエラー コードを返す、セキュリティが強化されたバージョンの機能が使用できます。「[fopen_s、_wfopen_s](fopen-s-wfopen-s.md)」をご覧ください。
 
@@ -72,7 +72,7 @@ FILE *_wfopen(
 
 ## <a name="remarks"></a>Remarks
 
-**Fopen**関数は、 *filename*によって指定されたファイルを開きます。 既定では、ナロー*ファイル名*の文字列は、ANSI コードページ (CP_ACP) を使用して解釈されます。 Windows デスクトップ アプリケーションでは、 [SetFileApisToOEM](/windows/desktop/api/fileapi/nf-fileapi-setfileapistooem) 関数を使用して、これを OEM コード ページ (CP_OEMCP) に変更できます。 [Arefileapisansi](/windows/desktop/api/fileapi/nf-fileapi-arefileapisansi)関数を使用すると、ANSI またはシステムの既定の OEM コードページを使用して*ファイル名*を解釈するかどうかを判断できます。 **_wfopen**は、 **fopen**のワイド文字バージョンです。 **_wfopen**の引数はワイド文字列です。 それ以外の場合、 **_wfopen**と**fopen**は同じように動作します。 **_Wfopen**を使用するだけで、ファイルストリームで使用されるコード化された文字セットには影響しません。
+**Fopen**関数は、 *filename*によって指定されたファイルを開きます。 既定では、ナロー*ファイル名*の文字列は、ANSI コードページ (CP_ACP) を使用して解釈されます。 Windows デスクトップ アプリケーションでは、 [SetFileApisToOEM](/windows/win32/api/fileapi/nf-fileapi-setfileapistooem) 関数を使用して、これを OEM コード ページ (CP_OEMCP) に変更できます。 [Arefileapisansi](/windows/win32/api/fileapi/nf-fileapi-arefileapisansi)関数を使用すると、ANSI またはシステムの既定の OEM コードページを使用して*ファイル名*を解釈するかどうかを判断できます。 **_wfopen**は、 **fopen**のワイド文字バージョンです。 **_wfopen**の引数はワイド文字列です。 それ以外の場合、 **_wfopen**と**fopen**は同じように動作します。 **_Wfopen**を使用するだけで、ファイルストリームで使用されるコード化された文字セットには影響しません。
 
 **fopen**は、実行時にファイルシステムで有効なパスを受け入れます。**fopen**は、コードを実行するシステムが実行時に共有または割り当てられたドライブにアクセスできる限り、マップされたネットワークドライブを含む UNC パスとパスを受け入れます。 **Fopen**のパスを構築するときは、ドライブ、パス、またはネットワーク共有を実行環境で使用できるようにする必要があります。 ディレクトリのパス区切り記号としてスラッシュ (/) または円記号 (\\) のどちらかを使用できます。
 
@@ -160,7 +160,7 @@ Unicode モードで書き込むように開かれたファイルには、自動
 
 **Fopen**と **_fdopen**で使用される*モード*文字列の有効な文字は、次のように、 [_open](open-wopen.md)および[_sopen](sopen-wsopen.md)で使用される*oflag*引数に対応します。
 
-|*Mode*文字列の文字|Open  \_/\_sopen の同等の oflag 値|
+|*Mode*文字列の文字|Open \_/\_sopen の同等の oflag 値|
 |-------------------------------|----------------------------------------------------|
 |**a**|**\_O\_wronly** &#124; **oAPPEND\_(通常は o wronly o による) \_** &#124;  **\_\_** &#124;  **\_\_**  **\_O\_APPEND**)|
 |**+**|**\_O\_RDWR** &#124; &#124; **oappend\_(通常は o RDWR o append \_**  **\_\_** &#124;  **\_\_**  **\_O\_**|
@@ -195,7 +195,7 @@ Unicode モードで書き込むように開かれたファイルには、自動
 
 ## <a name="example-1"></a>例 1
 
-次のプログラムは 2 ファイルを開きます。  この例では、 **fclose**を使用して最初のファイルを閉じ、残りのすべての**ファイルを閉じ**ます。
+次のプログラムは 2 ファイルを開きます。  この例では、 **fclose**を使用して最初のファイルを閉じ、残りのすべてのファイルを閉じます。
 
 ```C
 // crt_fopen.c

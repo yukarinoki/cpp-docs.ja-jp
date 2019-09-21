@@ -10,16 +10,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComAllocator class
 ms.assetid: 0cd706fd-0c7b-42d3-9054-febe2966fc8e
-ms.openlocfilehash: 9f1c005262d25b1ff5e900377c229afe1573e6d3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: de302c7a58bf1b15e63e7cd391621ed9558e5a70
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62259704"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497597"
 ---
 # <a name="ccomallocator-class"></a>CComAllocator クラス
 
-このクラスは、COM メモリのルーチンを使用してメモリを管理するためのメソッドを提供します。
+このクラスには、COM メモリルーチンを使用してメモリを管理するためのメソッドが用意されています。
 
 ## <a name="syntax"></a>構文
 
@@ -33,17 +33,17 @@ class CComAllocator
 
 |名前|説明|
 |----------|-----------------|
-|[CComAllocator::Allocate](#allocate)|メモリの割り当てにこの静的メソッドを呼び出します。|
-|[CComAllocator::Free](#free)|割り当てられたメモリを解放するこの静的メソッドを呼び出します。|
-|[CComAllocator::Reallocate](#reallocate)|メモリを再割り当てにこの静的メソッドを呼び出します。|
+|[CComAllocator:: Allocate](#allocate)|この静的メソッドを呼び出してメモリを割り当てます。|
+|[CComAllocator:: Free](#free)|割り当てられたメモリを解放するには、この静的メソッドを呼び出します。|
+|[CComAllocator:: 再割り当て](#reallocate)|この静的メソッドを呼び出してメモリを再割り当てします。|
 
 ## <a name="remarks"></a>Remarks
 
-このクラスによって使用されます[CComHeapPtr](../../atl/reference/ccomheapptr-class.md) COM メモリ割り当てルーチンを提供します。 対応するクラス、 [CCRTAllocator](../../atl/reference/ccrtallocator-class.md)、CRT ルーチンを使用して同じメソッドを提供します。
+このクラスは、COM メモリ割り当てルーチンを提供するために[CComHeapPtr](../../atl/reference/ccomheapptr-class.md)によって使用されます。 対応するクラス[CCRTAllocator](../../atl/reference/ccrtallocator-class.md)は、CRT ルーチンを使用して同じメソッドを提供します。
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlbase.h
+**ヘッダー:** atlbase. h
 
 ##  <a name="allocate"></a>  CComAllocator::Allocate
 
@@ -64,11 +64,11 @@ static void* Allocate(size_t nBytes) throw();
 
 ### <a name="remarks"></a>Remarks
 
-メモリを割り当てます。 参照してください[CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc)の詳細。
+メモリを割り当てます。 詳細については、「 [CoTaskMemAlloc](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemalloc) 」を参照してください。
 
-##  <a name="free"></a>  CComAllocator::Free
+##  <a name="free"></a>CComAllocator:: Free
 
-割り当てられたメモリを解放するため、この静的関数を呼び出します。
+割り当てられたメモリを解放するには、この静的関数を呼び出します。
 
 ```
 static void Free(void* p) throw();
@@ -81,7 +81,7 @@ static void Free(void* p) throw();
 
 ### <a name="remarks"></a>Remarks
 
-割り当てられたメモリを解放します。 参照してください[CoTaskMemFree](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree)の詳細。
+割り当てられたメモリを解放します。 詳細については、「 [CoTaskMemFree](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemfree) 」を参照してください。
 
 ##  <a name="reallocate"></a>  CComAllocator::Reallocate
 
@@ -101,11 +101,11 @@ static void* Reallocate(void* p, size_t nBytes) throw();
 
 ### <a name="return-value"></a>戻り値
 
-メモリ不足がある場合、割り当てられた領域に void ポインターを返します
+割り当てられた領域への void ポインターを返すか、メモリが不足している場合は NULL を返します。
 
 ### <a name="remarks"></a>Remarks
 
-割り当てられたメモリの量を変更します。 参照してください[CoTaskMemRealloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemrealloc)の詳細。
+割り当てられたメモリの量を変更します。 詳細については、「 [CoTaskMemRealloc](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemrealloc) 」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

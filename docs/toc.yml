@@ -58,6 +58,8 @@
               href: build/project-property-inheritance.md
             - name: プロジェクト ファイルを変更しないでプロパティとターゲットを変更する
               href: build/modify-project-properties-without-changing-project-file.md
+        - name: Visual Studio プロジェクトの Clang/LLVM (MSBuild)
+          href: build/clang-support-msbuild.md
         - name: ビルド時にライブラリとコンポーネントを参照する
           href: build/adding-references-in-visual-cpp-projects.md
         - name: プロジェクト出力ファイルを編成する
@@ -86,6 +88,8 @@
           href: build/cppproperties-schema-reference.md
         - name: Tasks.vs.json スキーマ リファレンス (C++)
           href: build/tasks-vs-json-schema-reference-cpp.md
+        - name: Launch.vs.json スキーマ リファレンス (C++)
+          href: build/launch-vs-schema-reference-cpp.md
     - name: CMake プロジェクト
       expanded: false
       items:
@@ -532,6 +536,10 @@
                       href: build/reference/errorreport-report-internal-compiler-errors.md
                     - name: /execution/charset (実行文字セットの設定)
                       href: build/reference/execution-charset-set-execution-character-set.md
+                    - name: '/experimental:module'
+                      href: build/reference/experimental-module.md
+                    - name: '/experimental:preprocessor'
+                      href: build/reference/experimental-preprocessor.md
                     - name: /F (スタック サイズの設定)
                       href: build/reference/f-set-stack-size.md
                     - name: 出力ファイル (/F) オプション
@@ -1124,16 +1132,7 @@
                 - name: Visual Studio の NMAKE プロジェクト
                   href: build/reference/creating-a-makefile-project.md
                 - name: NMAKE の実行
-                  expanded: false
-                  items:
-                    - name: NMAKE の実行
-                      href: build/reference/running-nmake.md
-                    - name: NMAKE のオプション
-                      href: build/reference/nmake-options.md
-                    - name: Tools.ini と NMAKE
-                      href: build/reference/tools-ini-and-nmake.md
-                    - name: NMAKE で返される終了コード
-                      href: build/reference/exit-codes-from-nmake.md
+                  href: build/reference/running-nmake.md
                 - name: メイクファイルの内容
                   expanded: false
                   items:
@@ -1596,7 +1595,7 @@
     - name: 'チュートリアル: Windows デスクトップ アプリケーションの作成'
       href: windows/walkthrough-creating-windows-desktop-applications-cpp.md
     - name: Windows デスクトップ ウィザード
-      href: windows/win32-application-wizard.md
+      href: windows/windows-desktop-wizard.md
     - name: Active Template Library (ATL)
       href: atl/
     - name: Microsoft Foundation Classes (MFC)
@@ -1616,10 +1615,6 @@
               items:
                 - name: 日付と時刻の概要
                   href: atl-mfc-shared/date-and-time.md
-                - name: '日付と時刻: オートメーション サポート'
-                  href: atl-mfc-shared/date-and-time-automation-support.md
-                - name: '日付と時刻: データベース サポート'
-                  href: atl-mfc-shared/date-and-time-database-support.md
                 - name: DATE 型
                   href: atl-mfc-shared/date-type.md
             - name: 文字列 (ATL-MFC)
@@ -2894,9 +2889,11 @@
       href: security/how-user-account-control-uac-affects-your-application.md
     - name: 予測実行のサイド チャネルの C++ 開発者向けガイダンス
       href: security/developer-guidance-speculative-execution.md
-- name: 関連項目
+- name: 参照
   expanded: false
   items:
+    - name: C/C++ 言語および標準ライブラリ
+      href: cpp/c-cpp-language-and-standard-libraries.md
     - name: 言語リファレンス
       expanded: false
       items:
@@ -4803,7 +4800,7 @@
                       href: preprocessor/null-directive.md
                     - name: '#undef ディレクティブ (C/C++)'
                       href: preprocessor/hash-undef-directive-c-cpp.md
-                    - name: '#using ディレクティブ (C++)'
+                    - name: '#using ディレクティブ (C++/CLI)'
                       href: preprocessor/hash-using-directive-cpp.md
                 - name: プリプロセッサ演算子
                   expanded: false
@@ -4838,10 +4835,10 @@
                   href: preprocessor/conventions.md
                 - name: プリプロセッサの文法
                   href: preprocessor/preprocessor-grammar.md
-            - name: プラグマ ディレクティブと __Pragma キーワード
+            - name: プラグマ ディレクティブと __pragma キーワード
               expanded: false
               items:
-                - name: プラグマ ディレクティブと __Pragma キーワード
+                - name: プラグマ ディレクティブと __pragma キーワード
                   href: preprocessor/pragma-directives-and-the-pragma-keyword.md
                 - name: alloc_text プラグマ
                   href: preprocessor/alloc-text.md
@@ -6398,8 +6395,6 @@
                   expanded: false
                   items:
                     - name: ファイルとストリーム
-                      href: c-runtime-library/files-and-streams.md
-                    - name: テキスト ストリームとバイナリ ストリーム
                       href: c-runtime-library/text-and-binary-streams.md
                     - name: バイト ストリームとワイド ストリーム
                       href: c-runtime-library/byte-and-wide-streams.md
@@ -10529,22 +10524,8 @@
                   items:
                     - name: C と Win32 を使用するマルチスレッド
                       href: parallel/multithreading-with-c-and-win32.md
-                    - name: マルチスレッド プログラム
-                      href: parallel/multithread-programs.md
-                    - name: ライブラリのマルチスレッド サポート
-                      href: parallel/library-support-for-multithreading.md
-                    - name: マルチスレッドのためのインクルード ファイル
-                      href: parallel/include-files-for-multithreading.md
-                    - name: スレッド コントロールのための C ランタイム ライブラリ関数
-                      href: parallel/c-run-time-library-functions-for-thread-control.md
                     - name: マルチスレッドの C サンプル プログラム
                       href: parallel/sample-multithread-c-program.md
-                    - name: マルチスレッド Win32 プログラムの作成
-                      href: parallel/writing-a-multithreaded-win32-program.md
-                    - name: マルチスレッド プログラムのコンパイルとリンク
-                      href: parallel/compiling-and-linking-multithread-programs.md
-                    - name: マルチスレッド プログラムの問題を回避する方法
-                      href: parallel/avoiding-problem-areas-with-multithread-programs.md
                     - name: スレッド ローカル ストレージ (TLS)
                       href: parallel/thread-local-storage-tls.md
                 - name: C++ と MFC を使用するマルチスレッド

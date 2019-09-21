@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - propget attribute
 ms.assetid: c9d4a97f-36dd-4b61-8eb0-b1a217598f14
-ms.openlocfilehash: 8f60e8e8fc98ba3b75acefe80812069bfac78e6c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 044562ba870d6e36ddfcec0c7e84253b111a9eea
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407628"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514211"
 ---
 # <a name="propget"></a>propget
 
-プロパティのアクセサー関数を指定します。
+プロパティアクセサー関数を指定します。
 
 ## <a name="syntax"></a>構文
 
@@ -25,11 +25,11 @@ ms.locfileid: "62407628"
 
 ## <a name="remarks"></a>Remarks
 
-**Propget** C++ 属性と同じ機能を持つ、 [propget](/windows/desktop/Midl/propget) MIDL 属性。
+**Propget** C++属性には、 [propget](/windows/win32/Midl/propget) MIDL 属性と同じ機能があります。
 
 ## <a name="example"></a>例
 
-例をご覧ください[バインド可能な](bindable.md)の使用サンプル**propget**します。
+**Propget**の使用例については、[バインド](bindable.md)可能なの例を参照してください。
 
 ## <a name="requirements"></a>必要条件
 

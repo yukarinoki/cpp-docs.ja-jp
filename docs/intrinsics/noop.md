@@ -1,32 +1,32 @@
 ---
 title: __noop
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __noop_cpp
 - __noop
 helpviewer_keywords:
 - __noop keyword [C++]
 ms.assetid: 81ac6e97-7bf8-496b-b3c4-fd02837573e5
-ms.openlocfilehash: 674b5170dd2bba7038dfe11af906e31540acd993
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 24ba85b1fbbba4491c03d5a81afae345228db3bd
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262984"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217185"
 ---
-# <a name="noop"></a>__noop
+# <a name="__noop"></a>__noop
 
 **Microsoft 固有の仕様**
 
-`__noop`組み込み関数を無視することを指定し、引数リストを解析できませんが、引数のコードを生成できません。 可変個の引数を取るグローバル デバッグ関数で使用するものでは。
+組み込み`__noop`は、関数を無視する必要があることを指定します。 引数リストは解析されますが、引数のコードは生成されません。 これは、可変個の引数を受け取るグローバルデバッグ関数で使用することを目的としています。
 
-コンパイラに変換、`__noop`コンパイル時に 0 に固有です。
+コンパイラは、 `__noop`コンパイル時に組み込みを0に変換します。
 
 ## <a name="example"></a>例
 
-次のコードは、使用する方法を示しています。`__noop`します。
+次のコードは、の使用`__noop`方法を示しています。
 
-```
+```cpp
 // compiler_intrinsics__noop.cpp
 // compile with or without /DDEBUG
 #include <stdio.h>
@@ -44,5 +44,5 @@ int main() {
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)<br/>
+[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)\
 [キーワード](../cpp/keywords-cpp.md)

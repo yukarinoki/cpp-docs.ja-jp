@@ -33,7 +33,7 @@ Uuencode、16進数、UTF8 などの一般的なインターネット標準の�
 |[IsExtendedChar](reference/atl-text-encoding-functions.md#isextendedchar)|この関数を呼び出して、特定の文字が拡張文字 (32 未満、126より大きい、タブ、ラインフィード、またはキャリッジリターンではない) であるかどうかを確認します。|
 |[QEncode](reference/atl-text-encoding-functions.md#qencode)|"Q" エンコーディングを使用して一部のデータを変換します。|
 |[QEncodeGetRequiredLength](reference/atl-text-encoding-functions.md#qencodegetrequiredlength)|指定したサイズのデータからエンコードされた文字列を格納できるバッファーのサイズを、文字数で取得します。|
-|[QPDecode](reference/atl-text-encoding-functions.md#qpdecode)|前回の Qの呼び出しによってなど、引用符で囲まれた印刷可能な形式でエンコード[](reference/atl-text-encoding-functions.md#qpencode)されたデータの文字列をデコードします。|
+|[QPDecode](reference/atl-text-encoding-functions.md#qpdecode)|前回の[qの](reference/atl-text-encoding-functions.md#qpencode)呼び出しによってなど、引用符で囲まれた印刷可能な形式でエンコードされたデータの文字列をデコードします。|
 |[QPDecodeGetRequiredLength](reference/atl-text-encoding-functions.md#qpdecodegetrequiredlength)|quoted-printable にエンコードされた指定長の文字列からデコードされたデータを格納できるバッファーのサイズを、バイト単位で取得します。|
 |[Qのコード](reference/atl-text-encoding-functions.md#qpencode)|一部のデータを quoted-printable 形式にエンコードします。|
 |[QPEncodeGetRequiredLength](reference/atl-text-encoding-functions.md#qpencodegetrequiredlength)|指定したサイズのデータからエンコードされた文字列を格納できるバッファーのサイズを、文字数で取得します。|

@@ -42,12 +42,12 @@ helpviewer_keywords:
 - registry, writing to
 - registry, deleting keys
 ms.assetid: 3afce82b-ba2c-4c1a-8404-dc969e1af74b
-ms.openlocfilehash: bce5a16dd8d6564b6a0d3fa0344fe5cb2303764f
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 3faf446f74577034a3d0676b90ebe7027ef6da06
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915788"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496534"
 ---
 # <a name="cregkey-class"></a>CRegKey クラス
 
@@ -124,10 +124,10 @@ class CRegKey
 
 `CRegKey`特定のコンピューターのシステムレジストリに対するプログラミングインターフェイスを提供します。 たとえば、特定のレジストリキーを開くには、 `CRegKey::Open`を呼び出します。 データ値を取得または変更するに`CRegKey::QueryValue`は`CRegKey::SetValue`、それぞれまたはを呼び出します。 キーを閉じるには、 `CRegKey::Close`を呼び出します。
 
-キーを閉じると、そのレジストリデータがハードディスクに書き込まれます (フラッシュされます)。 このプロセスには数秒かかることがあります。 アプリケーションがレジストリデータをハードディスクに明示的に書き込む必要がある場合は、 [Regflushkey](/windows/desktop/api/winreg/nf-winreg-regflushkey) Win32 関数を呼び出すことができます。 ただし、 `RegFlushKey`は多くのシステムリソースを使用するため、必要な場合にのみ呼び出す必要があります。
+キーを閉じると、そのレジストリデータがハードディスクに書き込まれます (フラッシュされます)。 このプロセスには数秒かかることがあります。 アプリケーションがレジストリデータをハードディスクに明示的に書き込む必要がある場合は、 [Regflushkey](/windows/win32/api/winreg/nf-winreg-regflushkey) Win32 関数を呼び出すことができます。 ただし、 `RegFlushKey`は多くのシステムリソースを使用するため、必要な場合にのみ呼び出す必要があります。
 
 > [!IMPORTANT]
->  呼び出し元がレジストリの場所を指定できるようにするメソッドは、信頼できないデータを読み取る可能性があります。 [Regqueryvalueex が](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa)を使用するメソッドでは、この関数が NULL で終了する文字列を明示的に処理しないことを考慮する必要があります。 呼び出し元のコードで両方の条件を確認する必要があります。
+>  呼び出し元がレジストリの場所を指定できるようにするメソッドは、信頼できないデータを読み取る可能性があります。 [Regqueryvalueex が](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw)を使用するメソッドでは、この関数が NULL で終了する文字列を明示的に処理しないことを考慮する必要があります。 呼び出し元のコードで両方の条件を確認する必要があります。
 
 ## <a name="requirements"></a>必要条件
 
@@ -189,7 +189,7 @@ LONG Create(
 作成または開くキーのクラスを指定します。 既定値は REG_NONE です。
 
 *dwOptions*<br/>
-キーのオプション。 既定値は REG_OPTION_NON_VOLATILE です。 使用可能な値と説明の一覧については、Windows SDK の「 [Regcreatekeyex](/windows/desktop/api/winreg/nf-winreg-regcreatekeyexa) 」を参照してください。
+キーのオプション。 既定値は REG_OPTION_NON_VOLATILE です。 使用可能な値と説明の一覧については、Windows SDK の「 [Regcreatekeyex](/windows/win32/api/winreg/nf-winreg-regcreatekeyexw) 」を参照してください。
 
 *samDesired*<br/>
 キーのセキュリティアクセス。 既定値は KEY_READ &#124; KEY_WRITE です。 使用可能な値と説明の一覧につい`RegCreateKeyEx`ては、「」を参照してください。
@@ -328,7 +328,7 @@ LONG EnumKey(
 
 ### <a name="remarks"></a>Remarks
 
-サブキーを列挙するに`CRegKey::EnumKey`は、インデックス0を使用してを呼び出します。 インデックス値をインクリメントし、メソッドが ERROR_NO_MORE_ITEMS を返すまで繰り返します。 詳細については、Windows SDK の「 [RegEnumKeyEx](/windows/desktop/api/winreg/nf-winreg-regenumkeyexa) 」を参照してください。
+サブキーを列挙するに`CRegKey::EnumKey`は、インデックス0を使用してを呼び出します。 インデックス値をインクリメントし、メソッドが ERROR_NO_MORE_ITEMS を返すまで繰り返します。 詳細については、Windows SDK の「 [RegEnumKeyEx](/windows/win32/api/winreg/nf-winreg-regenumkeyexw) 」を参照してください。
 
 ##  <a name="flush"></a>CRegKey:: Flush
 
@@ -344,7 +344,7 @@ LONG Flush() throw();
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、Windows SDK の「 [RegEnumFlush](/windows/desktop/api/winreg/nf-winreg-regflushkey) 」を参照してください。
+詳細については、Windows SDK の「 [RegEnumFlush](/windows/win32/api/winreg/nf-winreg-regflushkey) 」を参照してください。
 
 ##  <a name="getkeysecurity"></a>  CRegKey::GetKeySecurity
 
@@ -360,7 +360,7 @@ LONG GetKeySecurity(
 ### <a name="parameters"></a>パラメーター
 
 *si*<br/>
-要求されたセキュリティ情報を示す[SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information)値。
+要求されたセキュリティ情報を示す[SECURITY_INFORMATION](/windows/win32/SecAuthZ/security-information)値。
 
 *psd*<br/>
 要求されたセキュリティ記述子のコピーを受け取るバッファーへのポインター。
@@ -374,7 +374,7 @@ LONG GetKeySecurity(
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、「 [Reggetkeysecurity](/windows/desktop/api/winreg/nf-winreg-reggetkeysecurity)」を参照してください。
+詳細については、「 [Reggetkeysecurity](/windows/win32/api/winreg/nf-winreg-reggetkeysecurity)」を参照してください。
 
 ##  <a name="m_hkey"></a>  CRegKey::m_hKey
 
@@ -436,7 +436,7 @@ LONG NotifyChangeKeyValue(
 > [!NOTE]
 >  このメソッドは、指定されたキーが削除された場合に、呼び出し元に通知しません。
 
-詳細とサンプルプログラムについては、「 [Regnotifychangekeyvalue](/windows/desktop/api/winreg/nf-winreg-regnotifychangekeyvalue)」を参照してください。
+詳細とサンプルプログラムについては、「 [Regnotifychangekeyvalue](/windows/win32/api/winreg/nf-winreg-regnotifychangekeyvalue)」を参照してください。
 
 ##  <a name="open"></a>CRegKey:: Open
 
@@ -458,7 +458,7 @@ LONG Open(
 作成または開くキーの名前を指定します。 この名前は、 *hsubkey Arent*のサブキーである必要があります。
 
 *samDesired*<br/>
-キーのセキュリティアクセス。 既定値は KEY_ALL_ACCESS です。 使用可能な値と説明の一覧については、Windows SDK の「 [Regcreatekeyex](/windows/desktop/api/winreg/nf-winreg-regcreatekeyexa) 」を参照してください。
+キーのセキュリティアクセス。 既定値は KEY_ALL_ACCESS です。 使用可能な値と説明の一覧については、Windows SDK の「 [Regcreatekeyex](/windows/win32/api/winreg/nf-winreg-regcreatekeyexw) 」を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
@@ -527,10 +527,10 @@ LONG QueryBinaryValue(
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、を`RegQueryValueEx`使用して、正しい型のデータが返されることを確認します。 詳細については、「 [regqueryvalueex が](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa)」を参照してください。
+このメソッドは、を`RegQueryValueEx`使用して、正しい型のデータが返されることを確認します。 詳細については、「 [regqueryvalueex が](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw)」を参照してください。
 
 > [!IMPORTANT]
->  このメソッドを使用すると、呼び出し元は任意のレジストリの場所を指定でき、信頼できないデータを読み取る可能性があります。 また、このメソッドで使用される[regqueryvalueex が](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa)関数は、NULL で終了する文字列を明示的に処理しません。 呼び出し元のコードで両方の条件を確認する必要があります。
+>  このメソッドを使用すると、呼び出し元は任意のレジストリの場所を指定でき、信頼できないデータを読み取る可能性があります。 また、このメソッドで使用される[regqueryvalueex が](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw)関数は、NULL で終了する文字列を明示的に処理しません。 呼び出し元のコードで両方の条件を確認する必要があります。
 
 ##  <a name="querydwordvalue"></a>  CRegKey::QueryDWORDValue
 
@@ -556,10 +556,10 @@ DWORD を受け取るバッファーへのポインター。
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、を`RegQueryValueEx`使用して、正しい型のデータが返されることを確認します。 詳細については、「 [regqueryvalueex が](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa)」を参照してください。
+このメソッドは、を`RegQueryValueEx`使用して、正しい型のデータが返されることを確認します。 詳細については、「 [regqueryvalueex が](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw)」を参照してください。
 
 > [!IMPORTANT]
->  このメソッドを使用すると、呼び出し元は任意のレジストリの場所を指定でき、信頼できないデータを読み取る可能性があります。 また、このメソッドで使用される[regqueryvalueex が](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa)関数は、NULL で終了する文字列を明示的に処理しません。 呼び出し元のコードで両方の条件を確認する必要があります。
+>  このメソッドを使用すると、呼び出し元は任意のレジストリの場所を指定でき、信頼できないデータを読み取る可能性があります。 また、このメソッドで使用される[regqueryvalueex が](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw)関数は、NULL で終了する文字列を明示的に処理しません。 呼び出し元のコードで両方の条件を確認する必要があります。
 
 ##  <a name="queryguidvalue"></a>  CRegKey::QueryGUIDValue
 
@@ -585,7 +585,7 @@ GUID を受け取る変数へのポインター。
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは`CRegKey::QueryStringValue` 、を使用して、 [CLSIDFromString](/windows/desktop/api/combaseapi/nf-combaseapi-clsidfromstring)を使用して文字列を GUID に変換します。
+このメソッドは`CRegKey::QueryStringValue` 、を使用して、 [CLSIDFromString](/windows/win32/api/combaseapi/nf-combaseapi-clsidfromstring)を使用して文字列を GUID に変換します。
 
 > [!IMPORTANT]
 >  このメソッドを使用すると、呼び出し元は任意のレジストリの場所を指定でき、信頼できないデータを読み取る可能性があります。
@@ -618,10 +618,10 @@ LONG QueryMultiStringValue(
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、を`RegQueryValueEx`使用して、正しい型のデータが返されることを確認します。 詳細については、「 [regqueryvalueex が](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa)」を参照してください。
+このメソッドは、を`RegQueryValueEx`使用して、正しい型のデータが返されることを確認します。 詳細については、「 [regqueryvalueex が](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw)」を参照してください。
 
 > [!IMPORTANT]
->  このメソッドを使用すると、呼び出し元は任意のレジストリの場所を指定でき、信頼できないデータを読み取る可能性があります。 また、このメソッドで使用される[regqueryvalueex が](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa)関数は、NULL で終了する文字列を明示的に処理しません。 呼び出し元のコードで両方の条件を確認する必要があります。
+>  このメソッドを使用すると、呼び出し元は任意のレジストリの場所を指定でき、信頼できないデータを読み取る可能性があります。 また、このメソッドで使用される[regqueryvalueex が](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw)関数は、NULL で終了する文字列を明示的に処理しません。 呼び出し元のコードで両方の条件を確認する必要があります。
 
 ##  <a name="queryqwordvalue"></a>  CRegKey::QueryQWORDValue
 
@@ -647,10 +647,10 @@ QWORD を受け取るバッファーへのポインター。
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、を`RegQueryValueEx`使用して、正しい型のデータが返されることを確認します。 詳細については、「 [regqueryvalueex が](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa)」を参照してください。
+このメソッドは、を`RegQueryValueEx`使用して、正しい型のデータが返されることを確認します。 詳細については、「 [regqueryvalueex が](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw)」を参照してください。
 
 > [!IMPORTANT]
->  このメソッドを使用すると、呼び出し元は任意のレジストリの場所を指定でき、信頼できないデータを読み取る可能性があります。 また、このメソッドで使用される[regqueryvalueex が](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa)関数は、NULL で終了する文字列を明示的に処理しません。 呼び出し元のコードで両方の条件を確認する必要があります。
+>  このメソッドを使用すると、呼び出し元は任意のレジストリの場所を指定でき、信頼できないデータを読み取る可能性があります。 また、このメソッドで使用される[regqueryvalueex が](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw)関数は、NULL で終了する文字列を明示的に処理しません。 呼び出し元のコードで両方の条件を確認する必要があります。
 
 ##  <a name="querystringvalue"></a>  CRegKey::QueryStringValue
 
@@ -680,10 +680,10 @@ LONG QueryStringValue(
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、を`RegQueryValueEx`使用して、正しい型のデータが返されることを確認します。 詳細については、「 [regqueryvalueex が](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa)」を参照してください。
+このメソッドは、を`RegQueryValueEx`使用して、正しい型のデータが返されることを確認します。 詳細については、「 [regqueryvalueex が](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw)」を参照してください。
 
 > [!IMPORTANT]
->  このメソッドを使用すると、呼び出し元は任意のレジストリの場所を指定でき、信頼できないデータを読み取る可能性があります。 また、このメソッドで使用される[regqueryvalueex が](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa)関数は、NULL で終了する文字列を明示的に処理しません。 呼び出し元のコードで両方の条件を確認する必要があります。
+>  このメソッドを使用すると、呼び出し元は任意のレジストリの場所を指定でき、信頼できないデータを読み取る可能性があります。 また、このメソッドで使用される[regqueryvalueex が](/windows/win32/api/winreg/nf-winreg-regqueryvalueexw)関数は、NULL で終了する文字列を明示的に処理しません。 呼び出し元のコードで両方の条件を確認する必要があります。
 
 ##  <a name="queryvalue"></a>  CRegKey::QueryValue
 
@@ -794,7 +794,7 @@ LONG SetBinaryValue(
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、 [RegSetValueEx](/windows/desktop/api/winreg/nf-winreg-regsetvalueexa)を使用してレジストリに値を書き込みます。
+このメソッドは、 [RegSetValueEx](/windows/win32/api/winreg/nf-winreg-regsetvalueexw)を使用してレジストリに値を書き込みます。
 
 ##  <a name="setdwordvalue"></a>CRegKey:: SetDWORDValue
 
@@ -818,7 +818,7 @@ LONG SetDWORDValue(LPCTSTR pszValueName, DWORD dwValue) throw();
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、 [RegSetValueEx](/windows/desktop/api/winreg/nf-winreg-regsetvalueexa)を使用してレジストリに値を書き込みます。
+このメソッドは、 [RegSetValueEx](/windows/win32/api/winreg/nf-winreg-regsetvalueexw)を使用してレジストリに値を書き込みます。
 
 ##  <a name="setguidvalue"></a>CRegKey:: SetGUIDValue
 
@@ -842,7 +842,7 @@ LONG SetGUIDValue(LPCTSTR pszValueName, REFGUID guidValue) throw();
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは`CRegKey::SetStringValue` 、を使用し、 [StringFromGUID2](/windows/desktop/api/combaseapi/nf-combaseapi-stringfromguid2)を使用して GUID を文字列に変換します。
+このメソッドは`CRegKey::SetStringValue` 、を使用し、 [StringFromGUID2](/windows/win32/api/combaseapi/nf-combaseapi-stringfromguid2)を使用して GUID を文字列に変換します。
 
 ##  <a name="setkeyvalue"></a>CRegKey:: SetKeyValue
 
@@ -892,10 +892,10 @@ LONG SetKeySecurity(SECURITY_INFORMATION si, PSECURITY_DESCRIPTOR psd) throw();
 |DACL_SECURITY_INFORMATION|キーの随意アクセス制御リスト (DACL) を設定します。 キーには WRITE_DAC アクセスが必要です。または、呼び出し元のプロセスがオブジェクトの所有者である必要があります。|
 |GROUP_SECURITY_INFORMATION|キーのプライマリグループセキュリティ識別子 (SID) を設定します。 キーには WRITE_OWNER アクセスが必要です。または、呼び出し元のプロセスがオブジェクトの所有者である必要があります。|
 |OWNER_SECURITY_INFORMATION|キーの所有者 SID を設定します。 キーには WRITE_OWNER アクセスが必要です。または、呼び出し元のプロセスがオブジェクトの所有者であるか、または SE_TAKE_OWNERSHIP_NAME 特権が有効になっている必要があります。|
-|SACL_SECURITY_INFORMATION|キーのシステムアクセス制御リスト (SACL: system access control list) を設定します。 キーには ACCESS_SYSTEM_SECURITY アクセスが必要です。 このアクセスを取得する適切な方法は、呼び出し元の現在のアクセストークンで SE_SECURITY_NAME[特権](/windows/desktop/secauthz/privileges)を有効にし、ACCESS_SYSTEM_SECURITY アクセスのハンドルを開いて、特権を無効にすることです。|
+|SACL_SECURITY_INFORMATION|キーのシステムアクセス制御リスト (SACL: system access control list) を設定します。 キーには ACCESS_SYSTEM_SECURITY アクセスが必要です。 このアクセスを取得する適切な方法は、呼び出し元の現在のアクセストークンで SE_SECURITY_NAME[特権](/windows/win32/secauthz/privileges)を有効にし、ACCESS_SYSTEM_SECURITY アクセスのハンドルを開いて、特権を無効にすることです。|
 
 *psd*<br/>
-指定されたキーに設定するセキュリティ属性を指定する[SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-security_descriptor)構造体へのポインター。
+指定されたキーに設定するセキュリティ属性を指定する[SECURITY_DESCRIPTOR](/windows/win32/api/winnt/ns-winnt-security_descriptor)構造体へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -903,7 +903,7 @@ LONG SetKeySecurity(SECURITY_INFORMATION si, PSECURITY_DESCRIPTOR psd) throw();
 
 ### <a name="remarks"></a>Remarks
 
-キーのセキュリティ属性を設定します。 詳細については、「 [RegSetKeySecurity](/windows/desktop/api/winreg/nf-winreg-regsetkeysecurity) 」を参照してください。
+キーのセキュリティ属性を設定します。 詳細については、「 [RegSetKeySecurity](/windows/win32/api/winreg/nf-winreg-regsetkeysecurity) 」を参照してください。
 
 ##  <a name="setmultistringvalue"></a>CRegKey:: SetMultiStringValue
 
@@ -927,7 +927,7 @@ LONG SetMultiStringValue(LPCTSTR pszValueName, LPCTSTR pszValue) throw();
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、 [RegSetValueEx](/windows/desktop/api/winreg/nf-winreg-regsetvalueexa)を使用してレジストリに値を書き込みます。
+このメソッドは、 [RegSetValueEx](/windows/win32/api/winreg/nf-winreg-regsetvalueexw)を使用してレジストリに値を書き込みます。
 
 ##  <a name="setqwordvalue"></a>CRegKey:: SetQWORDValue
 
@@ -951,7 +951,7 @@ LONG SetQWORDValue(LPCTSTR pszValueName, ULONGLONG qwValue) throw();
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、 [RegSetValueEx](/windows/desktop/api/winreg/nf-winreg-regsetvalueexa)を使用してレジストリに値を書き込みます。
+このメソッドは、 [RegSetValueEx](/windows/win32/api/winreg/nf-winreg-regsetvalueexw)を使用してレジストリに値を書き込みます。
 
 ##  <a name="setstringvalue"></a>CRegKey:: SetStringValue
 
@@ -981,7 +981,7 @@ LONG SetStringValue(
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、 [RegSetValueEx](/windows/desktop/api/winreg/nf-winreg-regsetvalueexa)を使用してレジストリに値を書き込みます。
+このメソッドは、 [RegSetValueEx](/windows/win32/api/winreg/nf-winreg-regsetvalueexw)を使用してレジストリに値を書き込みます。
 
 ##  <a name="setvalue"></a>CRegKey:: SetValue
 
@@ -1054,7 +1054,7 @@ False の場合は、文字列が REG_SZ 型であることを示します。 Tr
 
 の元の2つ`SetValue`のバージョンは ATL_DEPRECATED としてマークされているため、使用できなくなりました。 これらの形式が使用されている場合、コンパイラは警告を発行します。
 
-3番目のメソッドは、 [RegSetValueEx](/windows/desktop/api/winreg/nf-winreg-regsetvalueexa)を呼び出します。
+3番目のメソッドは、 [RegSetValueEx](/windows/win32/api/winreg/nf-winreg-regsetvalueexw)を呼び出します。
 
 ## <a name="see-also"></a>関連項目
 

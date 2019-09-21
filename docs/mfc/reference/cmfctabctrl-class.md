@@ -1,6 +1,6 @@
 ---
 title: CMFCTabCtrl Class
-ms.date: 11/04/2016
+ms.date: 08/28/2019
 f1_keywords:
 - CMFCTabCtrl
 - AFXTABCTRL/CMFCTabCtrl
@@ -104,12 +104,12 @@ helpviewer_keywords:
 - CMFCTabCtrl [MFC], SynchronizeScrollBar
 - CMFCTabCtrl [MFC], m_bEnableActivate
 ms.assetid: d441385d-2c72-4203-96fa-deae2273da35
-ms.openlocfilehash: db2dcf7c60d164f9d04eb98f8eaac79ae14e3e73
-ms.sourcegitcommit: c3bf94210bdb73be80527166264d49e33784152c
+ms.openlocfilehash: 74f5c6e0471682a6b96e82cb2f80cc53155866ca
+ms.sourcegitcommit: bf1940a39029dbbd861f95480f55e5e8bd25cda0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68821255"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70108488"
 ---
 # <a name="cmfctabctrl-class"></a>CMFCTabCtrl Class
 
@@ -177,7 +177,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
 |[CMFCTabCtrl:: OnDragEnter](#ondragenter)|カーソルが最初にタブコントロールウィンドウにドラッグされたときに、フレームワークによって呼び出されます。|
 |[CMFCTabCtrl:: OnDragOver](#ondragover)|マウスをドロップ先のウィンドウ上に移動したときに、ドラッグ操作中にフレームワークによって呼び出されます。 ( [CMFCBaseTabCtrl:: OnDragOver](../../mfc/reference/cmfcbasetabctrl-class.md#ondragover)をオーバーライドします。)|
 |[CMFCTabCtrl:: Onshowtabドキュメントメニュー](#onshowtabdocumentsmenu)|タブ付きウィンドウのポップアップメニューを表示し、ユーザーがタブを選択するまで待機し、選択したタブをアクティブなタブにします。|
-|`CMFCTabCtrl::PreTranslateMessage`|[TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)および[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage)の Windows 関数にディスパッチされる前に、ウィンドウメッセージを変換します。 ( [CMFCBaseTabCtrl::P retranslatemessage](../../mfc/reference/cmfcbasetabctrl-class.md#pretranslatemessage)をオーバーライドします。)|
+|`CMFCTabCtrl::PreTranslateMessage`|[TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage)および[DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage)の Windows 関数にディスパッチされる前に、ウィンドウメッセージを変換します。 ( [CMFCBaseTabCtrl::P retranslatemessage](../../mfc/reference/cmfcbasetabctrl-class.md#pretranslatemessage)をオーバーライドします。)|
 |`CMFCTabCtrl::RecalcLayout`|タブコントロールの内部レイアウトを再計算します。 ( [CMFCBaseTabCtrl:: RecalcLayout](../../mfc/reference/cmfcbasetabctrl-class.md#recalclayout)をオーバーライドします。)|
 |[CMFCTabCtrl:: SetActiveInMDITabGroup](#setactiveinmditabgroup)|複数のドキュメントインターフェイスタブグループのアクティブなタブとして、タブコントロールの現在のタブを設定します。|
 |[CMFCTabCtrl:: SetActiveTab](#setactivetab)|タブをアクティブにします。( [CMFCBaseTabCtrl:: SetActiveTab](../../mfc/reference/cmfcbasetabctrl-class.md#setactivetab)をオーバーライドします)。|
@@ -422,7 +422,7 @@ void EnableTabDocumentsMenu(BOOL bEnable=TRUE);
 
 ユーザーがタブラベルをクリックすると、対応するタブ付きウィンドウが表示されます。 タブラベルが表示されている場合、タブ付きウィンドウはその位置を変更せずに開かれます。 ユーザーがポップアップメニューからドキュメントを選択し、対応するタブ付きウィンドウが [オフ] になっている場合は、タブ付きウィンドウが最初のタブになります。
 
-##  <a name="ensurevisible"></a>CMFCTabCtrl:: Ensurevisible\
+##  <a name="ensurevisible"></a>CMFCTabCtrl:: Ensurevisible
 
 タブが確実に表示されるようにします。
 
@@ -874,7 +874,7 @@ virtual DROPEFFECT OnDragEnter(
 からユーザーがドラッグしたデータを格納しているデータオブジェクトを指します。
 
 *dwKeyState*<br/>
-から修飾子キーの状態を格納します。 このパラメーターは、次の値のビットごとの組み合わせ (or) です。MK_CONTROL、MK_SHIFT、MK_ALT、MK_LBUTTON、MK_MBUTTON、および MK_RBUTTON。 詳細については、「[マウス入力について](/windows/desktop/inputdev/about-mouse-input)」の「**メッセージパラメーター** 」セクションを参照してください。
+から修飾子キーの状態を格納します。 このパラメーターは、次の値のビットごとの組み合わせ (or) です。MK_CONTROL、MK_SHIFT、MK_ALT、MK_LBUTTON、MK_MBUTTON、および MK_RBUTTON。 詳細については、「[マウス入力について](/windows/win32/inputdev/about-mouse-input)」の「**メッセージパラメーター** 」セクションを参照してください。
 
 *視点*<br/>
 からクライアント座標におけるカーソルの現在の位置を格納します。
@@ -906,7 +906,7 @@ virtual DROPEFFECT OnDragOver(
 からドロップ先の上にドラッグされている[COleDataObject](../../mfc/reference/coledataobject-class.md)オブジェクトへのポインター。
 
 *dwKeyState*<br/>
-から修飾子キーの状態。これは、MK_CONTROL、MK_SHIFT、MK_ALT、MK_LBUTTON、MK_MBUTTON、および MK_RBUTTON のビットごとの組み合わせ (or) です。 詳細については、「[マウス入力につい](/windows/desktop/inputdev/about-mouse-input)て」の「メッセージパラメーター」を参照してください。
+から修飾子キーの状態。これは、MK_CONTROL、MK_SHIFT、MK_ALT、MK_LBUTTON、MK_MBUTTON、および MK_RBUTTON のビットごとの組み合わせ (or) です。 詳細については、「[マウス入力につい](/windows/win32/inputdev/about-mouse-input)て」の「メッセージパラメーター」を参照してください。
 
 *視点*<br/>
 から現在のマウスの位置。
@@ -970,7 +970,7 @@ virtual BOOL SetActiveTab(int iTab);
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、タブコントロールの親ウィンドウに AFX_WM_CHANGE_ACTIVE_TAB 通知を送信しません。
+これにより`AFX_WM_CHANGE_ACTIVE_TAB` 、親ウィンドウと、タブコントロールの親のフレームに通知が送信されます。
 
 この`SetActiveTab`メソッドは、 [CMFCTabCtrl:: HideActiveWindowHorzScrollBar](#hideactivewindowhorzscrollbar)メソッドを自動的に呼び出して、画面が点滅しないようにします。
 

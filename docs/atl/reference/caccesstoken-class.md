@@ -52,12 +52,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAccessToken class
 ms.assetid: bb5c5945-56a5-4083-b442-76573cee83ab
-ms.openlocfilehash: fa50282f3aa1f4db3ebf6306fa9dc3dab1311d1b
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 33fbaae5dafaccdf7f7e6880eaa42dd68352e840
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915911"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497918"
 ---
 # <a name="caccesstoken-class"></a>CAccessToken クラス
 
@@ -132,9 +132,9 @@ class CAccessToken
 
 ## <a name="remarks"></a>Remarks
 
-[アクセストークン](/windows/desktop/SecAuthZ/access-tokens)は、プロセスまたはスレッドのセキュリティコンテキストを記述するオブジェクトで、Windows システムにログオンした各ユーザーに割り当てられます。
+[アクセストークン](/windows/win32/SecAuthZ/access-tokens)は、プロセスまたはスレッドのセキュリティコンテキストを記述するオブジェクトで、Windows システムにログオンした各ユーザーに割り当てられます。
 
-Windows のアクセス制御モデルの概要については、Windows SDK の「 [Access Control](/windows/desktop/SecAuthZ/access-control) 」を参照してください。
+Windows のアクセス制御モデルの概要については、Windows SDK の「 [Access Control](/windows/win32/SecAuthZ/access-control) 」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
@@ -216,7 +216,7 @@ bool CreateImpersonationToken(
 新しい`CAccessToken`オブジェクトへのポインター。
 
 *sil*<br/>
-新しいトークンの偽装レベルを提供する[SECURITY_IMPERSONATION_LEVEL](/windows/desktop/api/winnt/ne-winnt-security_impersonation_level)列挙型を指定します。
+新しいトークンの偽装レベルを提供する[SECURITY_IMPERSONATION_LEVEL](/windows/win32/api/winnt/ne-winnt-security_impersonation_level)列挙型を指定します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -224,7 +224,7 @@ bool CreateImpersonationToken(
 
 ### <a name="remarks"></a>Remarks
 
-`CreateImpersonationToken`[DuplicateToken](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-duplicatetoken)を呼び出して、新しい権限借用トークンを作成します。
+`CreateImpersonationToken`[DuplicateToken](/windows/win32/api/securitybaseapi/nf-securitybaseapi-duplicatetoken)を呼び出して、新しい権限借用トークンを作成します。
 
 ##  <a name="createprimarytoken"></a>  CAccessToken::CreatePrimaryToken
 
@@ -243,7 +243,7 @@ bool CreatePrimaryToken(
 新しい`CAccessToken`オブジェクトへのポインター。
 
 *dwDesiredAccess*<br/>
-新しいトークンに要求されたアクセス権を指定します。 既定では、MAXIMUM_ALLOWED は、呼び出し元に対して有効なすべてのアクセス権を要求します。 アクセス権の詳細については、「アクセス権[とアクセスマスク](/windows/desktop/SecAuthZ/access-rights-and-access-masks)」を参照してください。
+新しいトークンに要求されたアクセス権を指定します。 既定では、MAXIMUM_ALLOWED は、呼び出し元に対して有効なすべてのアクセス権を要求します。 アクセス権の詳細については、「アクセス権[とアクセスマスク](/windows/win32/SecAuthZ/access-rights-and-access-masks)」を参照してください。
 
 *pTokenAttributes*<br/>
 新しいトークンのセキュリティ記述子を指定し、子プロセスがトークンを継承できるかどうかを決定する[SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\))構造体へのポインター。 *Ptokenattributes*が NULL の場合、トークンは既定のセキュリティ記述子を取得し、ハンドルを継承することはできません。
@@ -254,7 +254,7 @@ bool CreatePrimaryToken(
 
 ### <a name="remarks"></a>Remarks
 
-`CreatePrimaryToken`[DuplicateTokenEx](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-duplicatetokenex)を呼び出して、新しいプライマリトークンを作成します。
+`CreatePrimaryToken`[DuplicateTokenEx](/windows/win32/api/securitybaseapi/nf-securitybaseapi-duplicatetokenex)を呼び出して、新しいプライマリトークンを作成します。
 
 ##  <a name="createprocessasuser"></a>  CAccessToken::CreateProcessAsUser
 
@@ -286,13 +286,13 @@ bool CreateProcessAsUser(
 新しいプロセスに関する識別情報を受け取る[PROCESS_INFORMATION 構造体](/windows/win32/api/processthreadsapi/ns-processthreadsapi-process_information)へのポインター。
 
 *pStartupInfo*<br/>
-新しいプロセスのメインウィンドウをどのように表示するかを指定する[Startupinfo](/windows/desktop/api/processthreadsapi/ns-processthreadsapi-startupinfoa)構造体へのポインター。
+新しいプロセスのメインウィンドウをどのように表示するかを指定する[Startupinfo](/windows/win32/api/processthreadsapi/ns-processthreadsapi-startupinfow)構造体へのポインター。
 
 *Dwのフラグ*<br/>
-優先度クラスとプロセスの作成を制御する追加のフラグを指定します。 フラグの一覧については、「Win32 関数[createprocessasuser が](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessasusera)」を参照してください。
+優先度クラスとプロセスの作成を制御する追加のフラグを指定します。 フラグの一覧については、「Win32 関数[createprocessasuser が](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessasuserw)」を参照してください。
 
 *bLoadProfile*<br/>
-TRUE の場合、ユーザーのプロファイルは[processmodel.loaduserprofile](/windows/desktop/api/userenv/nf-userenv-loaduserprofilea)で読み込まれます。
+TRUE の場合、ユーザーのプロファイルは[processmodel.loaduserprofile](/windows/win32/api/userenv/nf-userenv-loaduserprofilew)で読み込まれます。
 
 *pProcessAttributes*<br/>
 新しいプロセスのセキュリティ記述子を指定し、返されたハンドルを子プロセスが継承できるかどうかを決定する[SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\))構造体へのポインター。 *Pprocessattributes*が NULL の場合、プロセスは既定のセキュリティ記述子を取得し、ハンドルを継承することはできません。
@@ -312,7 +312,7 @@ TRUE の場合、ユーザーのプロファイルは[processmodel.loaduserprofi
 
 ### <a name="remarks"></a>Remarks
 
-`CreateProcessAsUser`Win32 関数を使用し`CAccessToken`て、オブジェクトによって表されるユーザーのセキュリティコンテキストで実行される新しいプロセスを作成します。 `CreateProcessAsUser` 必要なパラメーターの詳細については、 [createprocessasuser が](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessasusera)関数の説明を参照してください。
+`CreateProcessAsUser`Win32 関数を使用し`CAccessToken`て、オブジェクトによって表されるユーザーのセキュリティコンテキストで実行される新しいプロセスを作成します。 `CreateProcessAsUser` 必要なパラメーターの詳細については、 [createprocessasuser が](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessasuserw)関数の説明を参照してください。
 
 このメソッドを成功させるに`CAccessToken`は、オブジェクトが割り当て primarytoken (制限付きトークンの場合を除く) と IncreaseQuota の特権を保持する必要があります。
 
@@ -348,7 +348,7 @@ bool CreateRestrictedToken(
 
 ### <a name="remarks"></a>Remarks
 
-`CreateRestrictedToken`[CreateRestrictedToken](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-createrestrictedtoken) Win32 関数を使用して、制限`CAccessToken`付きの新しいオブジェクトを作成します。
+`CreateRestrictedToken`[CreateRestrictedToken](/windows/win32/api/securitybaseapi/nf-securitybaseapi-createrestrictedtoken) Win32 関数を使用して、制限`CAccessToken`付きの新しいオブジェクトを作成します。
 
 > [!IMPORTANT]
 >  を使用`CreateRestrictedToken`する場合は、既存のトークンが有効であり (ユーザーが入力したものではない)、 *sidstodisable*と*PrivilegesToDelete*の両方が有効である (ユーザーが入力していない) ことを確認します。 メソッドが FALSE を返す場合は、機能を拒否します。
@@ -532,7 +532,7 @@ bool GetImpersonationLevel(
 ### <a name="parameters"></a>パラメーター
 
 *pImpersonationLevel*<br/>
-偽装レベル情報を受け取る[SECURITY_IMPERSONATION_LEVEL](/windows/desktop/api/winnt/ne-winnt-security_impersonation_level)列挙型へのポインター。
+偽装レベル情報を受け取る[SECURITY_IMPERSONATION_LEVEL](/windows/win32/api/winnt/ne-winnt-security_impersonation_level)列挙型へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -549,7 +549,7 @@ bool GetLogonSessionId(LUID* pluid) const throw(...);
 ### <a name="parameters"></a>パラメーター
 
 *pluid*<br/>
-ログオンセッション ID を受け取る[LUID](/windows/desktop/api/winnt/ns-winnt-luid)へのポインター。
+ログオンセッション ID を受け取る[LUID](/windows/win32/api/winnt/ns-winnt-luid)へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -661,7 +661,7 @@ bool GetProcessToken(DWORD dwDesiredAccess, HANDLE hProcess = NULL) throw();
 
 ### <a name="remarks"></a>Remarks
 
-[OpenProcessToken](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-openprocesstoken) Win32 関数を呼び出します。
+[OpenProcessToken](/windows/win32/api/processthreadsapi/nf-processthreadsapi-openprocesstoken) Win32 関数を呼び出します。
 
 ##  <a name="getprofile"></a>  CAccessToken::GetProfile
 
@@ -686,7 +686,7 @@ bool GetSource(TOKEN_SOURCE* pSource) const throw(...);
 ### <a name="parameters"></a>パラメーター
 
 *pSource*<br/>
-[TOKEN_SOURCE](/windows/desktop/api/winnt/ns-winnt-token_source)構造体へのポインター。
+[TOKEN_SOURCE](/windows/win32/api/winnt/ns-winnt-token_source)構造体へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -703,7 +703,7 @@ bool GetStatistics(TOKEN_STATISTICS* pStatistics) const throw(...);
 ### <a name="parameters"></a>パラメーター
 
 *pStatistics*<br/>
-[TOKEN_STATISTICS](/windows/desktop/api/winnt/ns-winnt-token_statistics)構造体へのポインター。
+[TOKEN_STATISTICS](/windows/win32/api/winnt/ns-winnt-token_statistics)構造体へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -765,7 +765,7 @@ bool GetTokenId(LUID* pluid) const throw(...);
 ### <a name="parameters"></a>パラメーター
 
 *pluid*<br/>
-トークン ID を受け取る[LUID](/windows/desktop/api/winnt/ns-winnt-luid)へのポインター。
+トークン ID を受け取る[LUID](/windows/win32/api/winnt/ns-winnt-luid)へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -782,7 +782,7 @@ bool GetType(TOKEN_TYPE* pType) const throw(...);
 ### <a name="parameters"></a>パラメーター
 
 *pType*<br/>
-成功した場合は、トークンの型を受け取る[TOKEN_TYPE](/windows/desktop/api/winnt/ne-winnt-token_type)変数のアドレス。
+成功した場合は、トークンの型を受け取る[TOKEN_TYPE](/windows/win32/api/winnt/ne-winnt-token_type)変数のアドレス。
 
 ### <a name="return-value"></a>戻り値
 
@@ -914,10 +914,10 @@ bool LogonUser(
 *Pszusername*によって指定されたユーザーアカウントのクリアテキストパスワードを指定する、null で終わる文字列へのポインター。
 
 *dwLogonType*<br/>
-実行するログオン操作の種類を指定します。 詳細については、「 [LogonUser](/windows/desktop/api/winbase/nf-winbase-logonusera) 」を参照してください。
+実行するログオン操作の種類を指定します。 詳細については、「 [LogonUser](/windows/win32/api/winbase/nf-winbase-logonuserw) 」を参照してください。
 
 *dwLogonProvider*<br/>
-ログオンプロバイダーを指定します。 詳細については、「 [LogonUser](/windows/desktop/api/winbase/nf-winbase-logonusera) 」を参照してください。
+ログオンプロバイダーを指定します。 詳細については、「 [LogonUser](/windows/win32/api/winbase/nf-winbase-logonuserw) 」を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
@@ -925,7 +925,7 @@ bool LogonUser(
 
 ### <a name="remarks"></a>Remarks
 
-ログオンによって生成されるアクセストークンは、 `CAccessToken`に関連付けられます。 このメソッドを成功させるに`CAccessToken`は、オブジェクトは SE_TCB_NAME 特権を保持し、信頼されたコンピューターベースの一部として所有者を識別する必要があります。 必要な特権に関する詳細については、「 [LogonUser](/windows/desktop/api/winbase/nf-winbase-logonusera) 」を参照してください。
+ログオンによって生成されるアクセストークンは、 `CAccessToken`に関連付けられます。 このメソッドを成功させるに`CAccessToken`は、オブジェクトは SE_TCB_NAME 特権を保持し、信頼されたコンピューターベースの一部として所有者を識別する必要があります。 必要な特権に関する詳細については、「 [LogonUser](/windows/win32/api/winbase/nf-winbase-logonuserw) 」を参照してください。
 
 ##  <a name="opencomclienttoken"></a>  CAccessToken::OpenCOMClientToken
 
@@ -947,7 +947,7 @@ bool OpenCOMClientToken(
 TRUE の場合、この呼び出しが正常に完了した場合、現在のスレッドは呼び出し元の COM クライアントを偽装します。 FALSE の場合、アクセストークンは開かれますが、この呼び出しが完了してもスレッドは偽装トークンを持ちません。
 
 *bOpenAsSelf*<br/>
-[GetThreadToken](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getcurrentthread)メソッドを呼び出すスレッドのセキュリティコンテキスト、または呼び出し元のスレッドのプロセスのセキュリティコンテキストに対してアクセスチェックを実行するかどうかを示します。
+[GetThreadToken](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getcurrentthread)メソッドを呼び出すスレッドのセキュリティコンテキスト、または呼び出し元のスレッドのプロセスのセキュリティコンテキストに対してアクセスチェックを実行するかどうかを示します。
 
 このパラメーターが FALSE の場合は、呼び出し元のスレッドのセキュリティコンテキストを使用してアクセスチェックが実行されます。 スレッドがクライアントを偽装している場合、このセキュリティコンテキストはクライアントプロセスのものである可能性があります。 このパラメーターが TRUE の場合、呼び出し元スレッドのプロセスのセキュリティコンテキストを使用してアクセスチェックが行われます。
 
@@ -983,7 +983,7 @@ bool OpenNamedPipeClientToken(
 TRUE の場合、この呼び出しが正常に完了した場合、現在のスレッドは呼び出し元のパイプクライアントを偽装します。 FALSE の場合、アクセストークンは開かれますが、この呼び出しが完了してもスレッドは偽装トークンを持ちません。
 
 *bOpenAsSelf*<br/>
-[GetThreadToken](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getcurrentthread)メソッドを呼び出すスレッドのセキュリティコンテキスト、または呼び出し元のスレッドのプロセスのセキュリティコンテキストに対してアクセスチェックを実行するかどうかを示します。
+[GetThreadToken](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getcurrentthread)メソッドを呼び出すスレッドのセキュリティコンテキスト、または呼び出し元のスレッドのプロセスのセキュリティコンテキストに対してアクセスチェックを実行するかどうかを示します。
 
 このパラメーターが FALSE の場合は、呼び出し元のスレッドのセキュリティコンテキストを使用してアクセスチェックが実行されます。 スレッドがクライアントを偽装している場合、このセキュリティコンテキストはクライアントプロセスのものである可能性があります。 このパラメーターが TRUE の場合、呼び出し元スレッドのプロセスのセキュリティコンテキストを使用してアクセスチェックが行われます。
 
@@ -1019,7 +1019,7 @@ bool OpenRPCClientToken(
 TRUE の場合、この呼び出しが正常に完了した場合、現在のスレッドは呼び出し元の RPC クライアントを偽装します。 FALSE の場合、アクセストークンは開かれますが、この呼び出しが完了してもスレッドは偽装トークンを持ちません。
 
 *bOpenAsSelf*<br/>
-[GetThreadToken](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getcurrentthread)メソッドを呼び出すスレッドのセキュリティコンテキスト、または呼び出し元のスレッドのプロセスのセキュリティコンテキストに対してアクセスチェックを実行するかどうかを示します。
+[GetThreadToken](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getcurrentthread)メソッドを呼び出すスレッドのセキュリティコンテキスト、または呼び出し元のスレッドのプロセスのセキュリティコンテキストに対してアクセスチェックを実行するかどうかを示します。
 
 このパラメーターが FALSE の場合は、呼び出し元のスレッドのセキュリティコンテキストを使用してアクセスチェックが実行されます。 スレッドがクライアントを偽装している場合、このセキュリティコンテキストはクライアントプロセスのものである可能性があります。 このパラメーターが TRUE の場合、呼び出し元スレッドのプロセスのセキュリティコンテキストを使用してアクセスチェックが行われます。
 
@@ -1052,12 +1052,12 @@ bool OpenThreadToken(
 TRUE の場合、このメソッドが完了すると、スレッドは要求された偽装レベルのままになります。 FALSE の場合、スレッドは元の偽装レベルに戻ります。
 
 *bOpenAsSelf*<br/>
-[GetThreadToken](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getcurrentthread)メソッドを呼び出すスレッドのセキュリティコンテキスト、または呼び出し元のスレッドのプロセスのセキュリティコンテキストに対してアクセスチェックを実行するかどうかを示します。
+[GetThreadToken](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getcurrentthread)メソッドを呼び出すスレッドのセキュリティコンテキスト、または呼び出し元のスレッドのプロセスのセキュリティコンテキストに対してアクセスチェックを実行するかどうかを示します。
 
 このパラメーターが FALSE の場合は、呼び出し元のスレッドのセキュリティコンテキストを使用してアクセスチェックが実行されます。 スレッドがクライアントを偽装している場合、このセキュリティコンテキストはクライアントプロセスのものである可能性があります。 このパラメーターが TRUE の場合、呼び出し元スレッドのプロセスのセキュリティコンテキストを使用してアクセスチェックが行われます。
 
 *sil*<br/>
-トークンの偽装レベルを提供する[SECURITY_IMPERSONATION_LEVEL](/windows/desktop/api/winnt/ne-winnt-security_impersonation_level)列挙型を指定します。
+トークンの偽装レベルを提供する[SECURITY_IMPERSONATION_LEVEL](/windows/win32/api/winnt/ne-winnt-security_impersonation_level)列挙型を指定します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1082,7 +1082,7 @@ bool PrivilegeCheck(
 ### <a name="parameters"></a>パラメーター
 
 *RequiredPrivileges*<br/>
-[PRIVILEGE_SET](/windows/desktop/api/winnt/ns-winnt-privilege_set)構造体へのポインター。
+[PRIVILEGE_SET](/windows/win32/api/winnt/ns-winnt-privilege_set)構造体へのポインター。
 
 *pbResult*<br/>
 指定された特権のいずれかまたはすべてが`CAccessToken`オブジェクトで有効になっているかどうかを示すために、メソッドが設定する値へのポインター。
@@ -1093,7 +1093,7 @@ bool PrivilegeCheck(
 
 ### <a name="remarks"></a>Remarks
 
-が`PrivilegeCheck`を返した`Attributes`場合、対応する特権が有効になっている場合、各[LUID_AND_ATTRIBUTES](/windows/desktop/api/winnt/ns-winnt-luid_and_attributes)構造体のメンバーは SE_PRIVILEGE_USED_FOR_ACCESS に設定されます。 このメソッドは、 [PrivilegeCheck](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-privilegecheck) Win32 関数を呼び出します。
+が`PrivilegeCheck`を返した`Attributes`場合、対応する特権が有効になっている場合、各[LUID_AND_ATTRIBUTES](/windows/win32/api/winnt/ns-winnt-luid_and_attributes)構造体のメンバーは SE_PRIVILEGE_USED_FOR_ACCESS に設定されます。 このメソッドは、 [PrivilegeCheck](/windows/win32/api/securitybaseapi/nf-securitybaseapi-privilegecheck) Win32 関数を呼び出します。
 
 ##  <a name="revert"></a>  CAccessToken::Revert
 
@@ -1182,5 +1182,5 @@ bool SetPrimaryGroup(const CSid& rSid) throw(...);
 ## <a name="see-also"></a>関連項目
 
 [ATLSecurity サンプル](../../overview/visual-cpp-samples.md)<br/>
-[アクセストークン](/windows/desktop/SecAuthZ/access-tokens)<br/>
+[アクセストークン](/windows/win32/SecAuthZ/access-tokens)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

@@ -6,23 +6,23 @@ helpviewer_keywords:
 - application deployment [C++], ClickOnce
 - ClickOnce deployment [C++], C++ applications
 ms.assetid: 9988c546-0936-452c-932f-9c76daa42157
-ms.openlocfilehash: a7b738c2deb909d2a8f222bf7f62dc80cf8eeb8b
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 4408db9d129c03ee5df9b006b03c6586df02afb1
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66504783"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513770"
 ---
 # <a name="clickonce-deployment-for-visual-c-applications"></a>Visual C++ アプリケーションの ClickOnce 配置
 
-Visual Studio では、Windows アプリケーションを配置するための 2 つのテクノロジを提供しています。ClickOnce による配置または [Windows インストーラーによる配置](/windows/desktop/Msi/windows-installer-portal)です。
+Visual Studio では、Windows アプリケーションを配置するための 2 つのテクノロジを提供しています。ClickOnce による配置または [Windows インストーラーによる配置](/windows/win32/Msi/windows-installer-portal)です。
 
 ## <a name="clickonce-deployment-in-c"></a>C++ の ClickOnce 配置
 
-ビジュアルC++開発環境が Visual Studio の展開を直接サポートしていませんC++ツールが、ClickOnce を使用したプロジェクトはそれを使用できます。
+ビジュアルC++開発環境では、ClickOnce を使用した visual C++ Studio プロジェクトの配置は直接サポートされていませんが、ツールを使用することができます。
 
 > [!NOTE]
->  Visual Studio では Visual C# および Visual Basic の開発環境で ClickOnce をサポートします。 場合、Visual StudioC++プロジェクトは、ビジュアルの依存関係C#プロジェクト、(その依存関係を含む)、アプリケーションを発行するビジュアルからの ClickOnce 配置を使用してC#開発環境。
+>  Visual Studio では Visual C# および Visual Basic の開発環境で ClickOnce をサポートします。 Visual Studio C++プロジェクトがビジュアルC#プロジェクトの依存関係である場合は、Visual C#開発環境から ClickOnce 配置を使用して、アプリケーション (依存関係を含む) を発行できます。
 
 ClickOnce を使用して Visual C++ アプリケーションを配置するには、[Mage.exe (マニフェストの生成および編集ツール)](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool) またはそのグラフィカル ユーザー インターフェイス バージョン (詳細については「[MageUI.exe (マニフェスト生成および編集ツールのグラフィカル クライアント)](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client)」を参照) を使用して、最初に [ClickOnce アプリケーション マニフェスト](/visualstudio/deployment/clickonce-application-manifest)および [ClickOnce 配置マニフェスト](/visualstudio/deployment/clickonce-deployment-manifest)を作成する必要があります。
 
@@ -42,7 +42,7 @@ ClickOnce を使用して Visual C++ アプリケーションを配置するに�
 
 [Mage.exe (マニフェストの生成および編集ツール)](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool)<br>
 [MageUI.exe (マニフェスト生成および編集ツールのグラフィカル クライアント)](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client)<br>
-[Makecert.exe (証明書作成ツール)](/windows/desktop/SecCrypto/makecert)<br>
+[Makecert.exe (証明書作成ツール)](/windows/win32/SecCrypto/makecert)<br>
 [デスクトップ アプリケーションの配置](deploying-native-desktop-applications-visual-cpp.md)<br>
 [アプリケーション、サービス、およびコンポーネントの配置](/visualstudio/deployment/deploying-applications-services-and-components)<br>
 [ClickOnce のセキュリティと配置](/visualstudio/deployment/clickonce-security-and-deployment)<br>

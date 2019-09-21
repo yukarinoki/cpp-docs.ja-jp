@@ -1,6 +1,6 @@
 ---
 title: マニフェスト ツールのプロパティ ページ
-ms.date: 7/24/2019
+ms.date: 07/24/2019
 ms.topic: article
 f1_keywords:
 - VC.Project.VCManifestTool.SuppressStartupBanner
@@ -24,16 +24,16 @@ f1_keywords:
 - VC.Project.VCManifestTool.UpdateFileHashesSearchPath
 - vc.project.AdditionalOptionsPage
 ms.assetid: f33499c4-7733-42d9-80e3-8a5018786965
-ms.openlocfilehash: adc821370201eeb83b6c6b4b875e5e62b0fa523f
-ms.sourcegitcommit: 720b74dddb1cdf4e570d55103158304ee1df81f8
+ms.openlocfilehash: d9b074667614da8d83fae7b00b49bf63c9390b69
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68606439"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927679"
 ---
 # <a name="manifest-tool-property-pages"></a>マニフェスト ツールのプロパティ ページ
 
-これらのページを使用して、 [Mt](https://msdn.microsoft.com/library/aa375649)の全般オプションを指定します。 これらのページについては、「**プロジェクト** > **プロパティ** > の**構成プロパティ** > **マニフェストツール**」を参照してください。
+これらのページを使用して、 [Mt](/windows/win32/sbscs/mt-exe)の全般オプションを指定します。 これらのページについては、「**プロジェクト** > **プロパティ** > の**構成プロパティ** > **マニフェストツール**」を参照してください。
 
 ## <a name="general-property-page"></a>[全般] プロパティページ
 
@@ -105,7 +105,7 @@ Id 文字列の例を次に示します。`Microsoft.Windows.Common-Controls, pr
 
 ## <a name="isolated-com-property-page"></a>分離 COM プロパティページ
 
-分離 COM の詳細については、「[分離アプリケーション](/windows/desktop/SbsCs/isolated-applications)」と[「方法:COM コンポーネント](../how-to-build-isolated-applications-to-consume-com-components.md)を使用するための分離アプリケーションをビルドします。
+分離 COM の詳細については、「[分離アプリケーション](/windows/win32/SbsCs/isolated-applications)」と[「方法:COM コンポーネント](../how-to-build-isolated-applications-to-consume-com-components.md)を使用するための分離アプリケーションをビルドします。
 
 ###  <a name="type-library-file"></a>タイプライブラリファイル
 

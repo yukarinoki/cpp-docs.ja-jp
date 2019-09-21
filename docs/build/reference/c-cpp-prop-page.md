@@ -119,8 +119,8 @@ Windows ランタイム言語拡張機能を使用します。 [/ZW](zw-windows-
 
 - **[Default]**
 - **Disabled** -既定でオンになっているインライン展開を無効にします。
-- Inline、__ inline、__forceinline、または __ inline としてマークされている関数、またC++はクラス宣言内で定義されているメンバー関数内の関数のみが、 **__ インライン**展開されます。
-- インラインまたは __ インラインとしてマークされている**適切**な展開関数、およびコンパイラが選択したその他の関数 (拡張は、コンパイラの判断では、多くの場合、自動インライン展開と呼ばれます)。
+- Inline、__ inline、__forceinline、または __ inline としてマークされている関数、またC++はクラス宣言内で定義されているメンバー関数内の関数のみが、 **\_\_インライン** 展開されます。
+- インラインまたは __ インラインとしてマークされている **適切**な展開関数、およびコンパイラが選択したその他の関数 (拡張は、コンパイラの判断では、多くの場合、自動インライン展開と呼ばれます)。
 
 ### <a name="enable-intrinsic-functions"></a>組み込み関数を有効にする
 
@@ -314,7 +314,7 @@ CVE 2017-5753 の Spectre 軽減策。 [/Qspectre](qspectre.md)を設定しま�
 
 準拠モードを有効または非表示にします。 [/Permissive-](permissive-standards-conformance.md)を設定します。
 
-### <a name="treat-wchart-as-built-in-type"></a>WChar_t をビルトイン型として扱う
+### <a name="treat-wchar_t-as-built-in-type"></a>WChar_t をビルトイン型として扱う
 
 指定した場合、wchar_t 型は、short が __int16 にマップされるのと同じ方法で、__ wchar_t にマップされるネイティブ型になります。 [/Zc: wchar_t](zc-wchar-t-wchar-t-is-native-type.md)は既定でオンになっています。
 

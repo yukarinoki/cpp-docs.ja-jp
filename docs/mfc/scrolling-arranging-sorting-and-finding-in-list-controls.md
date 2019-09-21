@@ -11,18 +11,18 @@ helpviewer_keywords:
 - CListCtrl class [MFC], sorting
 - CListCtrl class [MFC], arranging the list
 ms.assetid: dcc51e4c-0ca8-4319-bec5-6994cc8ac9e5
-ms.openlocfilehash: 7826b7d08869f8df01f8dad2c4da3c24c468d1be
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 76cff3e5b972c41d395ccec671f95c921005f1b9
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66504267"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69511269"
 ---
 # <a name="scrolling-arranging-sorting-and-finding-in-list-controls"></a>リスト コントロールのスクロール、整列、並べ替え、検索
 
-リスト コントロール ([CListCtrl](../mfc/reference/clistctrl-class.md)) が既定ではスクロール可能な。 詳細については、次を参照してください。[スクロール位置](/windows/desktop/Controls/using-list-view-controls)Windows sdk、および[スクロール](../mfc/reference/clistctrl-class.md#scroll)メンバー関数。
+既定では、リストコントロール ([CListCtrl](../mfc/reference/clistctrl-class.md)) はスクロール可能です。 詳細については、「Windows SDK の[スクロール位置](/windows/win32/Controls/using-list-view-controls)」および「[スクロール](../mfc/reference/clistctrl-class.md#scroll)メンバー関数」を参照してください。
 
-呼び出すことができます`CListCtrl`コントロールでは、リスト アイテムを配置するためのメンバー関数は、項目を並べ替えるし、特定の項目を検索します。 詳細については、次を参照してください[ListView コントロールを使用した](/windows/desktop/Controls/using-list-view-controls)Windows sdk、および[CListCtrl](../mfc/reference/clistctrl-class.md)メンバー[配置](../mfc/reference/clistctrl-class.md#arrange)、[並べ替える](../mfc/reference/clistctrl-class.md#sortitems)、と。[FindItem](../mfc/reference/clistctrl-class.md#finditem)します。
+メンバー関数を`CListCtrl`呼び出して、コントロール内のリスト項目を配置したり、項目を並べ替えたり、特定の項目を検索したりすることができます。 詳細については、「Windows SDK での[ListView コントロールの使用](/windows/win32/Controls/using-list-view-controls)」および「 [CListCtrl](../mfc/reference/clistctrl-class.md)メンバーの[配置](../mfc/reference/clistctrl-class.md#arrange)、 [SortItems](../mfc/reference/clistctrl-class.md#sortitems)、および[FindItem](../mfc/reference/clistctrl-class.md#finditem)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

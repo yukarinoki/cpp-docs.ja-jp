@@ -1,41 +1,41 @@
 ---
 title: __outword
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __outword
 helpviewer_keywords:
 - __outword intrinsic
 - out instruction
 ms.assetid: 995f8834-0f50-4b4f-a7a2-af0e7c371cda
-ms.openlocfilehash: 067f438d2135f4d61245606ab25af5a6f1ec9568
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 766f6adff5ea0212f48ff8727024ac7a5729c944
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262958"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221393"
 ---
-# <a name="outword"></a>__outword
+# <a name="__outword"></a>__outword
 
 **Microsoft 固有の仕様**
 
-生成、`out`という単語を送信するには、命令`Data`で指定した I/O ポートから`Port`します。
+*ポートに*よって指定された i/o ポートに*データ*を送信する命令を生成します。`out`
 
 ## <a name="syntax"></a>構文
 
-```
+```C
 void __outword(
    unsigned short Port,
    unsigned short Data
 );
 ```
 
-#### <a name="parameters"></a>パラメーター
+### <a name="parameters"></a>パラメーター
 
-*ポート*<br/>
-[in]データを送信するポート。
+*ポート*\
+からデータの送信先のポート。
 
-*データ*<br/>
-[in]送信するデータ。
+*データ*\
+から送信されるデータ。
 
 ## <a name="requirements"></a>必要条件
 
@@ -43,7 +43,7 @@ void __outword(
 |---------------|------------------|
 |`__outword`|x86、x64|
 
-**ヘッダー ファイル** \<intrin.h >
+**ヘッダーファイル**\<>
 
 ## <a name="remarks"></a>Remarks
 

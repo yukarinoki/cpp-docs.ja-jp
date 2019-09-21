@@ -5,22 +5,22 @@ helpviewer_keywords:
 - image-processing networks, creating [Concurrency Runtime]
 - creating image-processing networks [Concurrency Runtime]
 ms.assetid: 78ccadc9-5ce2-46cc-bd62-ce0f99d356b8
-ms.openlocfilehash: ff5e0bcae3d23dc914d93a062ec36ea1435ce1b2
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: 680037e0e14c3ebd9171cacf477520e025eecebe
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64856302"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69512167"
 ---
 # <a name="walkthrough-creating-an-image-processing-network"></a>チュートリアル: イメージ処理ネットワークの作成
 
-このドキュメントでは、イメージ処理を実行する非同期メッセージ ブロックのネットワークを作成する方法を示します。
+このドキュメントでは、イメージ処理を実行する非同期メッセージブロックのネットワークを作成する方法について説明します。
 
-ネットワークでは、その特性に基づいてイメージを実行する操作を決定します。 この例では、*データフロー*モデルをネットワーク経由のルートのイメージ。 このデータフロー モデルでは、プログラム内の独立したコンポーネント同士が、メッセージを送信することによって相互に通信します。 コンポーネントは、メッセージを受信したときに何らかのアクションを実行し、そのアクションの結果を別のコンポーネントに渡すできます。 これを比較、*制御フロー*モデルでは、アプリケーションを使用する制御構造、たとえば、条件付きステートメント、ループ、およびでは、プログラムで操作の順序を制御します。
+ネットワークでは、その特性に基づいてイメージに対して実行する操作を決定します。 この例では、データ*フロー*モデルを使用して、ネットワーク経由でイメージをルーティングします。 このデータフロー モデルでは、プログラム内の独立したコンポーネント同士が、メッセージを送信することによって相互に通信します。 コンポーネントは、メッセージを受信すると、何らかのアクションを実行し、そのアクションの結果を別のコンポーネントに渡すことができます。 これを*制御フロー*モデルと比較します。このモデルでは、アプリケーションが制御構造 (たとえば、条件付きステートメントやループなど) を使用して、プログラムの操作の順序を制御します。
 
-データ フローに基づくネットワークを作成、*パイプライン*のタスク。 パイプラインの各ステージでは、タスク全体の一部が同時に実行します。 これは、自動車製造の組み立てラインに例えることができます。 各車両が組み立てラインを通過フレームを 1 つのステーションにアセンブル、エンジン、およびなど別がインストールされます。 組み立てラインを同時にアセンブルする複数の車両を有効にするには、一度に車両全体を組み立てるよりスループットを向上を提供します。
+データフローに基づくネットワークによって、タスクの*パイプライン*が作成されます。 パイプラインの各ステージは、タスク全体の一部を同時に実行します。 これは、自動車製造の組み立てラインに例えることができます。 各車両が組み立てラインを通過すると、1つのステーションがフレームをアセンブルし、別のステーションがエンジンをインストールします。 複数の車両を同時に組み立てられるようにすることで、アセンブリラインは、一度に1つの完全な車両をアセンブルするよりも高いスループットを実現します。
 
-## <a name="prerequisites"></a>必須コンポーネント
+## <a name="prerequisites"></a>前提条件
 
 このチュートリアルを開始する前に、次のドキュメントを参照してください。
 
@@ -30,87 +30,87 @@ ms.locfileid: "64856302"
 
 - [チュートリアル: データフロー エージェントの作成](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)
 
-また、このチュートリアルを開始する前に、GDI + の基本を理解することをお勧めします。
+また、このチュートリアルを開始する前に、GDI + の基本を理解しておくことをお勧めします。
 
 ##  <a name="top"></a> セクション
 
 このチュートリアルは、次のセクションで構成されています。
 
-- [イメージ処理機能を定義します。](#functionality)
+- [イメージ処理機能の定義](#functionality)
 
-- [イメージ処理ネットワークを作成します。](#network)
+- [イメージ処理ネットワークの作成](#network)
 
 - [コード例全体](#complete)
 
-##  <a name="functionality"></a> イメージ処理機能を定義します。
+##  <a name="functionality"></a>イメージ処理機能の定義
 
-このセクションでは、ディスクから読み取られるイメージを使用する、イメージ処理ネットワークを使用するサポート機能が表示されます。
+このセクションでは、イメージ処理ネットワークがディスクから読み取られたイメージを操作するために使用するサポート機能について説明します。
 
-次の関数では、`GetRGB`と`MakeColor`の抽出、およびそれぞれに特定の色の個々 のコンポーネントを結合します。
+次の関数`GetRGB`と`MakeColor`は、それぞれ、特定の色の個々のコンポーネントを抽出して結合します。
 
 [!code-cpp[concrt-image-processing-filter#2](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_1.cpp)]
 
-次の関数では、`ProcessImage`を呼び出し、指定された[std::function](../../standard-library/function-class.md) GDI + での各ピクセルの色の値を変換するオブジェクト[ビットマップ](/windows/desktop/api/gdiplusheaders/nl-gdiplusheaders-bitmap)オブジェクト。 `ProcessImage`関数は、 [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for)アルゴリズムを並列にビットマップの各行を処理します。
+次の関数`ProcessImage`は、指定された[std:: function](../../standard-library/function-class.md)オブジェクトを呼び出して、gdi +[ビットマップ](/windows/win32/api/gdiplusheaders/nl-gdiplusheaders-bitmap)オブジェクトの各ピクセルの色の値を変換します。 関数`ProcessImage`は、 [concurrency::p arallel_for](reference/concurrency-namespace-functions.md#parallel_for)アルゴリズムを使用して、ビットマップの各行を並行して処理します。
 
 [!code-cpp[concrt-image-processing-filter#3](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_2.cpp)]
 
-次の関数では、 `Grayscale`、 `Sepiatone`、`ColorMask`と`Darken`を呼び出し、`ProcessImage`内の各ピクセルの色の値を変換する関数を`Bitmap`オブジェクト。 これらの各関数は、ラムダ式を使用して、1 ピクセルの色変換を定義します。
+`Grayscale`次の関数`Sepiatone` `Darken` `ProcessImage` 、、、 `Bitmap` 、およびは、関数を呼び出して、オブジェクトの各ピクセルの色の値を変換します。 `ColorMask` これらの各関数は、ラムダ式を使用して、1つのピクセルのカラー変換を定義します。
 
 [!code-cpp[concrt-image-processing-filter#4](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_3.cpp)]
 
-次の関数では、`GetColorDominance`も呼び出して、`ProcessImage`関数。 ただし、それぞれの色の値を変更するには、代わりにこの関数は[concurrency::combinable](../../parallel/concrt/reference/combinable-class.md)赤、緑、または青の色コンポーネントの大部分のイメージであるかどうかを計算するオブジェクト。
+次の関数`GetColorDominance`は、 `ProcessImage`関数も呼び出します。 ただし、この関数は、各色の値を変更するのではなく、 [concurrency:: 組み合わせ](../../parallel/concrt/reference/combinable-class.md)可能オブジェクトを使用して、赤、緑、または青のカラーコンポーネントがイメージを優先するかどうかを計算します。
 
 [!code-cpp[concrt-image-processing-filter#5](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_4.cpp)]
 
-次の関数では、`GetEncoderClsid`エンコーダーの指定された MIME 型のクラス識別子を取得します。 アプリケーションでは、この関数を使用して、ビットマップのエンコーダーを取得します。
+次の関数`GetEncoderClsid`は、エンコーダーの指定された MIME の種類のクラス識別子を取得します。 アプリケーションでは、ビットマップのエンコーダーを取得するために、この関数を使用します。
 
 [!code-cpp[concrt-image-processing-filter#6](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_5.cpp)]
 
 [[トップ](#top)]
 
-##  <a name="network"></a> イメージ処理ネットワークを作成します。
+##  <a name="network"></a>イメージ処理ネットワークの作成
 
-このセクションでは、指定されたディレクトリにすべての JPEG (.jpg) イメージでイメージ処理を実行する非同期メッセージ ブロックのネットワークを作成する方法について説明します。 ネットワークでは、次の画像処理操作を実行します。
+このセクションでは、特定のディレクトリ内のすべての JPEG (.jpg) イメージでイメージ処理を実行する非同期メッセージブロックのネットワークを作成する方法について説明します。 ネットワークは、次の画像処理操作を実行します。
 
-1. Tom は、作成したすべてのイメージをグレースケールに変換します。
+1. Tom によって作成されたイメージの場合は、グレースケールに変換します。
 
-1. ドミナント カラーに赤のある任意のイメージの緑、青のコンポーネントを削除し、それを暗きます。
+1. 最も優先色が赤のイメージの場合は、緑と青のコンポーネントを削除してから暗くします。
 
-1. その他の画像を抑えます。 セピアが適用されます。
+1. その他のイメージの場合は、セピア調を適用します。
 
-ネットワークには、これらの条件のいずれかに一致する最初の画像処理操作のみが適用されます。 たとえば、イメージは、Tom によってが作成されが赤の主調色として場合、イメージはグレースケール変換のみ。
+ネットワークでは、これらの条件のいずれかに一致する最初のイメージ処理操作のみが適用されます。 たとえば、画像が Tom によって作成され、その主要色が赤の場合、イメージはグレースケールにのみ変換されます。
 
-ネットワークが各イメージ処理操作を実行した後、イメージ ディスクとして保存ビットマップ (.bmp) ファイル。
+ネットワークは、各イメージ処理操作を実行した後、イメージをビットマップ (.bmp) ファイルとしてディスクに保存します。
 
-次の手順では、このイメージ処理ネットワークを実装し、そのネットワークを指定したディレクトリ内の各 JPEG 画像に適用する関数を作成する方法を示します。
+次の手順では、このイメージ処理ネットワークを実装する関数を作成し、そのネットワークを特定のディレクトリ内のすべての JPEG イメージに適用する方法を示します。
 
 #### <a name="to-create-the-image-processing-network"></a>イメージ処理ネットワークを作成するには
 
-1. 関数を作成`ProcessImages`ディスク上のディレクトリの名前を受け取る。
+1. ディスク上のディレクトリ`ProcessImages`の名前を取得する関数を作成します。
 
    [!code-cpp[concrt-image-processing-filter#7](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_6.cpp)]
 
-1. `ProcessImages`関数を作成、`countdown_event`変数。 `countdown_event`クラスがこのチュートリアルの後半で示すようにします。
+1. 関数で、変数を`countdown_event`作成します。 `ProcessImages` クラス`countdown_event`は、このチュートリアルで後ほど説明します。
 
    [!code-cpp[concrt-image-processing-filter#8](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_7.cpp)]
 
-1. 作成、 [std::map](../../standard-library/map-class.md)オブジェクトを関連付ける、`Bitmap`元のファイル名を持つオブジェクト。
+1. オブジェクトを`Bitmap`元のファイル名に関連付ける[std:: map](../../standard-library/map-class.md)オブジェクトを作成します。
 
    [!code-cpp[concrt-image-processing-filter#9](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_8.cpp)]
 
-1. イメージ処理ネットワークのメンバーを定義する次のコードを追加します。
+1. 次のコードを追加して、イメージ処理ネットワークのメンバーを定義します。
 
    [!code-cpp[concrt-image-processing-filter#10](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_9.cpp)]
 
-1. 次のコードをネットワーク接続を追加します。
+1. ネットワークに接続するための次のコードを追加します。
 
    [!code-cpp[concrt-image-processing-filter#11](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_10.cpp)]
 
-1. ディレクトリに、ネットワークの先頭に各 JPEG ファイルの完全なパスを送信する次のコードを追加します。
+1. 次のコードを追加して、ディレクトリ内の各 JPEG ファイルの完全なパスをネットワークの先頭に送信します。
 
    [!code-cpp[concrt-image-processing-filter#12](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_11.cpp)]
 
-1. 待つ、 `countdown_event` 0 になる変数です。
+1. 変数が`countdown_event` 0 になるまで待ちます。
 
    [!code-cpp[concrt-image-processing-filter#13](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_12.cpp)]
 
@@ -118,49 +118,49 @@ ms.locfileid: "64856302"
 
 |メンバー|説明|
 |------------|-----------------|
-|`load_bitmap`|A [concurrency::transformer](../../parallel/concrt/reference/transformer-class.md)を読み込むオブジェクトを`Bitmap`ディスクからオブジェクトし、にエントリを追加、`map`にイメージを元のファイル名に関連付けるオブジェクト。|
-|`loaded_bitmaps`|A [concurrency::unbounded_buffer](reference/unbounded-buffer-class.md)画像処理のフィルターに読み込まれるイメージを送信するオブジェクト。|
-|`grayscale`|A`transformer`グレースケール Tom によって作成されたイメージに変換するオブジェクト。 その著者を決定するのにイメージのメタデータを使用します。|
-|`colormask`|A`transformer`主調色として赤が設定されたイメージから、緑、青の色のコンポーネントを削除するオブジェクト。|
-|`darken`|A`transformer`主調色として赤が設定されたイメージを暗くオブジェクト。|
-|`sepiatone`|A `transformer` Tom によって作成されていませんが、主に赤ではないイメージをセピア トーンを適用するオブジェクト。|
-|`save_bitmap`|A`transformer`保存、処理するオブジェクト`image`ビットマップとしてディスクにします。 `save_bitmap` 元のファイル名を取得、`map`オブジェクト、および .bmp をファイル名拡張子を変更します。|
-|`delete_bitmap`|A`transformer`イメージ用のメモリを解放するオブジェクト。|
-|`decrement`|A [concurrency::call](../../parallel/concrt/reference/call-class.md)ネットワーク内のターミナル ノードとして機能するオブジェクト。 これをデクリメント、`countdown_event`オブジェクトからイメージが処理されたことをメイン アプリケーションに通知します。|
+|`load_bitmap`|`Bitmap`オブジェクトをディスクから読み込み、 `map`オブジェクトにエントリを追加して、イメージを元のファイル名に関連付ける[concurrency:: トランスフォーマー](../../parallel/concrt/reference/transformer-class.md)オブジェクト。|
+|`loaded_bitmaps`|読み込まれたイメージをイメージ処理フィルターに送信する[concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md)オブジェクト。|
+|`grayscale`|Tom によって作成されたイメージをグレースケールに変換するオブジェクト。`transformer` イメージのメタデータを使用して、その作成者を決定します。|
+|`colormask`|赤が最も高い色のイメージから緑と青のカラーコンポーネントを削除するオブジェクト。`transformer`|
+|`darken`|赤のイメージを最も重要な色として暗くするオブジェクト。`transformer`|
+|`sepiatone`|Tom によって作成されておらず、主に赤色ではない画像にセピア色を適用するオブジェクト。`transformer`|
+|`save_bitmap`|`transformer` 処理`image`されたをディスクにビットマップとして保存するオブジェクト。 `save_bitmap``map`オブジェクトから元のファイル名を取得し、そのファイル名拡張子を .bmp に変更します。|
+|`delete_bitmap`|イメージのメモリを解放するオブジェクト。`transformer`|
+|`decrement`|ネットワークのターミナルノードとして機能する[concurrency:: call](../../parallel/concrt/reference/call-class.md)オブジェクト。 `countdown_event`オブジェクトをデクリメントして、イメージが処理されたことをメインアプリケーションに通知します。|
 
-`loaded_bitmaps`メッセージ バッファーが重要ですので、として、`unbounded_buffer`オブジェクトを提供`Bitmap`複数の受信者からオブジェクト。 ターゲット ブロックが許可される場合、`Bitmap`オブジェクト、`unbounded_buffer`オブジェクトによって提供されていない`Bitmap`は他のターゲット オブジェクト。 そのためにオブジェクトをリンクする順序、`unbounded_buffer`オブジェクトが重要です。 `grayscale`、 `colormask`、および`sepiatone`メッセージの各ブロックを受け入れるようにフィルターを使用してのみ特定`Bitmap`オブジェクト。 `decrement`メッセージ バッファーが、重要なターゲットの`loaded_bitmaps`すべてを受け入れるために、メッセージ バッファー`Bitmap`他のメッセージ バッファーによって拒否されたオブジェクト。 `unbounded_buffer`の順序でメッセージを伝達するオブジェクトが必要です。 そのため、`unbounded_buffer`オブジェクトは、新しいターゲット ブロックにリンクされてし、現在のターゲット ブロックがメッセージを受け入れるない場合は、メッセージを受け入れるまでをブロックします。
+メッセージバッファーは、 `unbounded_buffer`オブジェクトとして複数の受信側に`Bitmap`オブジェクトを提供するため、重要です。 `loaded_bitmaps` ターゲットブロックがオブジェクト`Bitmap` `unbounded_buffer`を受け入れると、オブジェクトはそのオブジェクトを他`Bitmap`のターゲットに提供しません。 したがって、オブジェクトを`unbounded_buffer`オブジェクトにリンクする順序は重要です。 、 `grayscale` 、`colormask` `Bitmap`およびの各メッセージブロックは、特定のオブジェクトのみを受け入れるフィルターを使用します。`sepiatone` メッセージバッファーは、他のメッセージバッファーに`loaded_bitmaps`よって拒否された`Bitmap`すべてのオブジェクトを受け入れるため、メッセージバッファーの重要なターゲットとなります。 `decrement` メッセージ`unbounded_buffer`を順番に伝達するには、オブジェクトが必要です。 したがって、 `unbounded_buffer`オブジェクトは、新しいターゲットブロックがリンクされるまでブロックし、現在のターゲットブロックがメッセージを受け入れない場合はメッセージを受け入れます。
 
-アプリケーションでは、その複数のメッセージ ブロックの最初にメッセージを受け取り、1 つのメッセージ ブロックだけではなく、メッセージの処理が必要な場合、別のメッセージ ブロックの型をなど、使用できる`overwrite_buffer`します。 `overwrite_buffer`クラスは、一度に 1 つのメッセージを保持するが、各ターゲットには、そのメッセージを伝達します。
+アプリケーションで、メッセージを最初に受け取るメッセージブロックだけではなく、メッセージを処理する必要がある場合は、などの別のメッセージブロックの型`overwrite_buffer`を使用できます。 クラス`overwrite_buffer`は、一度に1つのメッセージを保持しますが、そのメッセージを各ターゲットに伝達します。
 
 次の図は、イメージ処理ネットワークを示しています。
 
-![イメージ処理ネットワーク](../../parallel/concrt/media/concrt_imageproc.png "イメージ処理ネットワーク")
+![画像処理ネットワーク](../../parallel/concrt/media/concrt_imageproc.png "画像処理ネットワーク")
 
-`countdown_event`この例ではオブジェクトがすべてのイメージが処理されたときに、メイン アプリケーションを通知するために、イメージ処理ネットワークを使用できます。 `countdown_event`クラスで使用する[concurrency::event](../../parallel/concrt/reference/event-class.md)オブジェクトからカウンターの値が 0 に達したときに通知します。 メインのアプリケーションは、it がネットワークにファイル名を送信するたびにカウンターをインクリメントします。 ネットワーク デクリメントのターミナル ノードには、カウンターの各イメージの処理が完了します。 メインのアプリケーションでは、指定されたディレクトリを走査後の待機、`countdown_event`オブジェクトからそのカウンターをゼロに達したことを通知します。
+この例のオブジェクトを使用すると、イメージ処理ネットワークは、すべてのイメージが処理されたことをメインアプリケーションに通知できます。 `countdown_event` クラス`countdown_event`は、カウンター値がゼロに達したときに、 [concurrency:: event](../../parallel/concrt/reference/event-class.md)オブジェクトを使用して通知します。 メインアプリケーションは、ファイル名をネットワークに送信するたびにカウンターをインクリメントします。 ネットワークのターミナルノードは、各イメージが処理された後にカウンターをデクリメントします。 メインアプリケーションは、指定されたディレクトリを走査した`countdown_event`後、そのカウンターが0に達したことをオブジェクトが通知するまで待機します。
 
-次の例は、`countdown_event`クラス。
+クラスの`countdown_event`例を次に示します。
 
 [!code-cpp[concrt-image-processing-filter#14](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_13.cpp)]
 
 [[トップ](#top)]
 
-##  <a name="complete"></a> 完全な例
+##  <a name="complete"></a>完全な例
 
-コード例全体を次に示します。 `wmain`関数は、GDI + ライブラリと呼び出しを管理、 `ProcessImages` 、JPEG を処理する関数にファイルを`Sample Pictures`ディレクトリ。
+コード例全体を次に示します。 関数`wmain`は gdi + ライブラリを管理し、 `ProcessImages`関数を呼び出して、 `Sample Pictures`ディレクトリ内の JPEG ファイルを処理します。
 
 [!code-cpp[concrt-image-processing-filter#15](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_14.cpp)]
 
-次の図は、サンプル出力を示します。 各ソース イメージは、その対応する変更後のイメージの上です。
+次の図は、サンプル出力を示しています。 各ソースイメージは、対応する変更されたイメージの上にあります。
 
-![サンプル出力の例では、](../../parallel/concrt/media/concrt_imageout.png "サンプル出力の例では、")
+![例のサンプル出力](../../parallel/concrt/media/concrt_imageout.png "例のサンプル出力")
 
-`Lighthouse` Tom Alphin によってが作成され、そのため、グレースケールに変換されます。 `Chrysanthemum`、 `Desert`、 `Koala`、および`Tulips`主調色として red があるためと青と緑のカラー コンポーネントを削除しているし、暗くなります。 `Hydrangeas`、 `Jellyfish`、および`Penguins`既定条件に一致しているため toned セピアは。
+`Lighthouse`は Tom Alphin によって作成されるため、グレースケールに変換されます。 `Chrysanthemum`、、 `Desert` 、および`Tulips`は、最も重要な色として赤を持ちます。したがって、青と緑のカラーコンポーネントが削除され、暗くなります。 `Koala` `Hydrangeas`、 `Jellyfish`、および`Penguins`は既定の基準に一致するため、セピア toned です。
 
 [[トップ](#top)]
 
 ### <a name="compiling-the-code"></a>コードのコンパイル
 
-コード例をコピーし、Visual Studio プロジェクトに貼り付けるか、という名前のファイルに貼り付ける`image-processing-network.cpp`Visual Studio コマンド プロンプト ウィンドウで、次のコマンドを実行します。
+コード例をコピーし、visual studio プロジェクトに貼り付けるか、という名前`image-processing-network.cpp`のファイルに貼り付けてから、visual studio のコマンドプロンプトウィンドウで次のコマンドを実行します。
 
 **cl.exe /DUNICODE /EHsc image-processing-network.cpp /link gdiplus.lib**
 

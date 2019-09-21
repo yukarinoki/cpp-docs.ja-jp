@@ -11,12 +11,12 @@ f1_keywords:
 - atlconv/ATL::DEVMODEW2A
 - atlconv/ATL::TEXTMETRICW2A
 ms.assetid: 2ff7c0b6-2bde-45fe-897f-6128e18e0c27
-ms.openlocfilehash: 6a84424de81eba2e6ab1e1baf60f567ebf2739ee
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: f7d9548fc5710e8d3d5d668dff230a60e7a291a1
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915509"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495189"
 ---
 # <a name="string-conversion-macros"></a>文字列変換マクロ
 
@@ -28,7 +28,7 @@ ms.locfileid: "68915509"
 
 ##  <a name="devmode_and_textmetric_string_conversion_macros"></a>DEVMODE および TEXTMETRIC 文字列変換マクロ
 
-これらのマクロは、 [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea)または[textmetric](/windows/desktop/api/wingdi/ns-wingdi-tagtextmetrica)構造体のコピーを作成し、新しい構造体内の文字列を新しい文字列型に変換します。 マクロは、新しい構造体のスタックにメモリを割り当て、新しい構造体へのポインターを返します。
+これらのマクロは、 [DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea)または[textmetric](/windows/win32/api/wingdi/ns-wingdi-textmetricw)構造体のコピーを作成し、新しい構造体内の文字列を新しい文字列型に変換します。 マクロは、新しい構造体のスタックにメモリを割り当て、新しい構造体へのポインターを返します。
 
 ```cpp
 MACRONAME( address_of_structure )

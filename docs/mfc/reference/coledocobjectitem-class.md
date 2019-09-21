@@ -24,12 +24,12 @@ helpviewer_keywords:
 - COleDocObjectItem [MFC], QueryCommand
 - COleDocObjectItem [MFC], Release
 ms.assetid: d150d306-8fd3-4831-b06d-afbe71d8fc9b
-ms.openlocfilehash: 454be491fe5875b1b1ac9b2b85fdebe2f1663ebc
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: c6e00bf42cf20b46c949c218efe1820cc7ce0f9b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916978"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69504006"
 ---
 # <a name="coledocobjectitem-class"></a>COleDocObjectItem クラス
 
@@ -142,7 +142,7 @@ HRESULT ExecCommand(
 実行するコマンドの識別子。 *Pguidcmdgroup*によって識別されるグループに存在する必要があります。
 
 *nCmdExecOpt*<br/>
-コマンド実行オプションを指定します。 既定では、ユーザーにプロンプトを表示せずにコマンドを実行するように設定します。 値の一覧については、「 [OLECMDEXECOPT](/windows/desktop/api/docobj/ne-docobj-olecmdexecopt) 」を参照してください。
+コマンド実行オプションを指定します。 既定では、ユーザーにプロンプトを表示せずにコマンドを実行するように設定します。 値の一覧については、「 [OLECMDEXECOPT](/windows/win32/api/docobj/ne-docobj-olecmdexecopt) 」を参照してください。
 
 *pguidCmdGroup*<br/>
 コマンドグループの一意識別子。 既定では、NULL は標準のグループを指定します。 *Ncmdid*で渡されるコマンドは、グループに属している必要があります。
@@ -176,7 +176,7 @@ LPOLEDOCUMENTVIEW GetActiveView() const;
 
 ### <a name="return-value"></a>戻り値
 
-現在アクティブなビューの[IOleDocumentView](/windows/desktop/api/docobj/nn-docobj-ioledocumentview)インターフェイスへのポインター。 現在のビューがない場合は、NULL を返します。
+現在アクティブなビューの[IOleDocumentView](/windows/win32/api/docobj/nn-docobj-ioledocumentview)インターフェイスへのポインター。 現在のビューがない場合は、NULL を返します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -270,21 +270,21 @@ HRESULT QueryCommand(
 クエリ対象のコマンドの識別子。
 
 *pdwStatus*<br/>
-クエリの結果として返されるフラグへのポインター。 使用可能な値の一覧については、「 [OLECMDF](/windows/desktop/api/docobj/ne-docobj-olecmdf)」を参照してください。
+クエリの結果として返されるフラグへのポインター。 使用可能な値の一覧については、「 [OLECMDF](/windows/win32/api/docobj/ne-docobj-olecmdf)」を参照してください。
 
 *pCmdText*<br/>
-1つのコマンドの名前と状態の情報を返す[OLECMDTEXT](/windows/desktop/api/docobj/ns-docobj-olecmdtext)構造体へのポインター。 NULL にすると、呼び出し元がこの情報を必要としないことを示すことができます。
+1つのコマンドの名前と状態の情報を返す[OLECMDTEXT](/windows/win32/api/docobj/ns-docobj-olecmdtext)構造体へのポインター。 NULL にすると、呼び出し元がこの情報を必要としないことを示すことができます。
 
 *pguidCmdGroup*<br/>
 コマンドグループの一意識別子。標準のグループを指定する場合は NULL を指定できます。
 
 ### <a name="return-value"></a>戻り値
 
-戻り値の完全な一覧については、Windows SDK の「 [IOleCommandTarget:: QueryStatus](/windows/desktop/api/docobj/nf-docobj-iolecommandtarget-querystatus) 」を参照してください。
+戻り値の完全な一覧については、Windows SDK の「 [IOleCommandTarget:: QueryStatus](/windows/win32/api/docobj/nf-docobj-iolecommandtarget-querystatus) 」を参照してください。
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は、Windows SDK で説明されているように、 [IOleCommandTarget:: QueryStatus](/windows/desktop/api/docobj/nf-docobj-iolecommandtarget-querystatus)メソッドの機能をエミュレートします。
+このメンバー関数は、Windows SDK で説明されているように、 [IOleCommandTarget:: QueryStatus](/windows/win32/api/docobj/nf-docobj-iolecommandtarget-querystatus)メソッドの機能をエミュレートします。
 
 ##  <a name="release"></a>  COleDocObjectItem::Release
 

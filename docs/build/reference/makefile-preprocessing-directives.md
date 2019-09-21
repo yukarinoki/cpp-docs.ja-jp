@@ -1,6 +1,6 @@
 ---
 title: メイクファイルのプリプロセス ディレクティブ
-ms.date: 06/14/2018
+ms.date: 08/11/2019
 f1_keywords:
 - '!UNDEF'
 - '!INCLUDE'
@@ -39,70 +39,70 @@ helpviewer_keywords:
 - ELSE directive
 - ELSEIFDEF directive
 ms.assetid: bcedeccb-d981-469d-b9e8-ab5d097fd8c2
-ms.openlocfilehash: 0945d0e1c149b7e1ab31b0dbbd5003f8b15a1e4d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4825ca180cb1b419a9ffa5232575ba1a24f8805d
+ms.sourcegitcommit: db1ed91fa7451ade91c3fb76bc7a2b857f8a5eef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62321567"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68980509"
 ---
 # <a name="makefile-preprocessing-directives"></a>メイクファイルのプリプロセス ディレクティブ
 
-プリプロセス ディレクティブは大文字小文字が区別されません。 初期の感嘆符 (!) する必要があります、行の先頭に表示されます。 0 以上のスペースまたはタブは、インデント、感嘆符の後に表示できます。
+プリプロセスディレクティブでは、大文字と小文字は区別されません。 最初の感嘆符 (!) は、行の先頭に置く必要があります。 インデントの場合は、感嘆符の後に0個以上の空白またはタブを表示できます。
 
-- **!CMDSWITCHES** {**+** &#124; **-**}*option* ...
+- `!CMDSWITCHES`{`+` &#124; } オプション... `-`
 
-   それぞれに*オプション*オンまたはオフを一覧表示します。 前にスペースまたはタブを表示する必要があります、+ または - 演算子。演算子間なし に表示できる、[オプション文字](nmake-options.md)します。 文字が小文字は区別されず、スラッシュ (/) なしで指定されます。 一部のオプションおよび他のユーザーを無効には、個別の仕様を使用して、 **!CMDSWITCHES**します。
+   各*オプション*をオンまたはオフにします。 スペースまたはタブは、また`+`は`-`演算子の前に指定する必要があります。演算子と[オプションの文字](running-nmake.md#nmake-options)の間には使用できません。 文字は大文字と小文字が区別されず`/`、スラッシュ () なしで指定されます。 一部のオプションを有効にし、他のオプションを無効に`!CMDSWITCHES`するには、の個別の仕様を使用します。
 
-   のみの/D/メイクファイルでは、/N、および/S を使用できます。 /F、/HELP、/NOLOGO を除くすべてのオプションは許可 tools.ini、/、X と/ですか。 記述ブロックで指定した変更は次の記述ブロックされるまで有効になりません。 このディレクティブを更新**MAKEFLAGS**; 場合、再帰中に変更が継承される**MAKEFLAGS**を指定します。
+   メイクファイルで使用できるのは、/D、/I、/N、および/S だけです。 ツール .ini では、/F、/HELP、/NOLOGO、/X、/? 以外のすべてのオプションを使用できます。 Description ブロックで指定された変更は、次の説明ブロックまで有効になりません。 このディレクティブは、 **Makeflags**を更新します。**Makeflags**が指定されている場合、再帰中に変更が継承されます。
 
-- **!エラー** *テキスト*
+- `!ERROR`*テキスト*
 
-   表示*テキスト*エラー U1050、し、停止 (nmake の)、偶数の場合に/K、/、**します。無視**、 **!CMDSWITCHES**、またはダッシュ (-) のコマンド修飾子を使用します。 スペースまたはタブの前に*テキスト*は無視されます。
+   エラー U1050 に*テキスト*を表示し、/k、/i、 `.IGNORE`、 `!CMDSWITCHES`、またはダッシュ (`-`) のコマンド修飾子が使用されている場合でも、NMAKE を停止します。 *テキスト*の前のスペースまたはタブは無視されます。
 
-- **!メッセージ** *テキスト*
+- `!MESSAGE`*テキスト*
 
-   表示*テキスト*標準出力に出力します。 スペースまたはタブの前に*テキスト*は無視されます。
+   *テキスト*を標準出力に表示します。 *テキスト*の前のスペースまたはタブは無視されます。
 
-- **!INCLUDE** [ **\<** ] *filename* [ **>** ]
+- `!INCLUDE`[ `<` ]*ファイル名*[ `>` ]
 
-   読み取り*filename*メイクファイルをし、続けて現在のメイクファイルを使用します。 (Nmake の) 検索*filename*指定されているか、現在のディレクトリで次のいずれかのディレクトリを再帰的に親メイクファイル、次に場合、 *filename*山かっこで囲まれた (\<>)、によって指定されたディレクトリで、 **INCLUDE**マクロで、最初は、INCLUDE 環境変数に設定します。 渡す便利な**します。サフィックス**設定、**します。貴重な**、および再帰メイクファイルに推論規則。
+   *ファイル名*をメイクファイルとして読み取り、現在のメイクファイルで続行します。 NMAKE は、指定したディレクトリまたは現在のディレクトリで*ファイル名*を検索し、親メイク*ファイル*のディレクトリを再帰的に検索します`< >`。次に、filename が山かっこ ()**で囲まれている場合は、INCLUDE**マクロ。最初は include 環境変数に設定されています。 設定、 `.SUFFIXES` `.PRECIOUS`、および推論規則を再帰的なメイクメイクに渡す場合に便利です。
 
-- **!IF** *constant_expression*
+- `!IF`*constant_expression*
 
-   ステートメントの間での処理 **!IF**と次の **!ELSE**または **!ENDIF**場合*constant_expression* 0 以外の値に評価されます。
+   と`!IF` の間`!ENDIF`のステートメントを処理します。または、constant_expressionが0以外の値に評価される場合はを処理し`!ELSE`ます。
 
-- **!IFDEF** *マクロ名*
+- `!IFDEF`*macroname*
 
-   ステートメントの間での処理 **!IFDEF**と次の **!ELSE**または **!ENDIF**場合*macroname*が定義されています。 Null マクロを定義すると見なされます。
+   `!IFDEF`と次`!ELSE`の間のステートメントを`!ENDIF`処理します。また、 *macroname*が定義されている場合はを処理します。 Null マクロは定義されていると見なされます。
 
-- **!IFNDEF** *マクロ名*
+- `!IFNDEF`*macroname*
 
-   ステートメントの間での処理 **!IFNDEF**と次の **!ELSE**または **!ENDIF**場合*macroname*が定義されていません。
+   と`!IFNDEF` の間`!ENDIF`のステートメントを処理します。また、macronameが定義されていない場合はを処理し`!ELSE`ます。
 
-- **!ELSE** [**IF** *constant_expression* &#124; **IFDEF** *macroname* &#124; **IFNDEF** *macroname*]
+- `!ELSE`[`IF` &#124; *constant_expression* &#124; *macroname*マクロ名] `IFDEF` `IFNDEF`
 
-   ステートメントの間での処理 **!ELSE**と次の **!ENDIF**場合する前に、 **!IF**、 **!IFDEF**、または **!IFNDEF**ステートメントが 0 に評価されます。 省略可能なキーワードの前処理のコントロールをさらに与えます。
+   `!ELSE` `!ENDIF`前の、`!IFDEF`、または`!IFNDEF`ステートメントが0に評価された場合、との間のステートメントを処理します。 `!IF` 省略可能なキーワードを使うと、前処理をさらに制御できます。
 
-- **!ELSEIF**
+- `!ELSEIF`
 
-   シノニム **!ELSE IF**します。
+   `!ELSE IF` と同義。
 
-- **!ELSEIFDEF**
+- `!ELSEIFDEF`
 
-   シノニム **!他の IFDEF**します。
+   `!ELSE IFDEF` と同義。
 
-- **!ELSEIFNDEF**
+- `!ELSEIFNDEF`
 
-   シノニム **!他の IFNDEF**します。
+   `!ELSE IFNDEF` と同義。
 
-- **!ENDIF**
+- `!ENDIF`
 
-   終了をマークする **!IF**、 **!IFDEF**、または **!IFNDEF**ブロックします。 任意のテキストの後 **!ENDIF**同じ行には無視されます。
+   `!IF` 、`!IFDEF`、または`!IFNDEF`ブロックの末尾をマークします。 同じ行の`!ENDIF`後のテキストは無視されます。
 
-- **!UNDEF** *マクロ名*
+- `!UNDEF`*macroname*
 
-   未定義に*macroname*します。
+   *Macroname*を未定義にします。
 
 ## <a name="see-also"></a>関連項目
 

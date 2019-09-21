@@ -6,20 +6,20 @@ helpviewer_keywords:
 - image lists [MFC], image overlays in
 - CImageList class [MFC], image overlays in
 ms.assetid: aaf4e1c4-cd12-42c8-9af4-1bb458889b4e
-ms.openlocfilehash: 8dd0b30ef29a48ebc763564e6fe23632cd300831
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ec795193a28a68d8aee61e9932481a89c4b3e8e0
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407966"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508383"
 ---
 # <a name="image-overlays-in-image-lists"></a>イメージ リストのイメージのオーバーレイ
 
-すべてのイメージ リスト ([CImageList](../mfc/reference/cimagelist-class.md)) オーバーレイ マスクとして使用するイメージの一覧が含まれています。 「オーバーレイ マスク」は、別のイメージの上に透過的に描画されるイメージです。 任意のイメージは、オーバーレイ マスクとして使用できます。 イメージ リストごとに最大 4 つのオーバーレイ マスクを指定することができます。
+すべてのイメージリスト ([CImageList](../mfc/reference/cimagelist-class.md)) には、オーバーレイマスクとして使用するイメージの一覧が含まれています。 "オーバーレイマスク" は、別のイメージに対して透過的に描画されるイメージです。 任意のイメージをオーバーレイマスクとして使用できます。 イメージリストごとに最大4つのオーバーレイマスクを指定できます。
 
-オーバーレイのリストを使用してイメージのインデックスを追加する、 [SetOverlayImage](../mfc/reference/cimagelist-class.md#setoverlayimage)メンバー関数は、イメージのインデックス、およびオーバーレイ マスクのインデックス。 マスクのオーバーレイ インデックスは 1 ベースではなく 0 から始まる、することに注意してください。
+オーバーレイマスクの一覧にイメージのインデックスを追加するには、 [SetOverlayImage](../mfc/reference/cimagelist-class.md#setoverlayimage)メンバー関数、イメージのインデックス、およびオーバーレイマスクのインデックスを使用します。 オーバーレイマスクのインデックスは、0から始まるのではなく、1から始まることに注意してください。
 
-1 回の呼び出しを使用してイメージ上でオーバーレイ マスクを描画した`Draw`します。 パラメーターには、描画するイメージのインデックスとオーバーレイ マスクのインデックスが含まれます。 使用する必要があります、[から](/windows/desktop/api/commctrl/nf-commctrl-indextooverlaymask)マクロ オーバーレイ マスクのインデックスを指定します。 呼び出すときに、オーバーレイのイメージを指定することも、[もう 1 つ](../mfc/reference/cimagelist-class.md#drawindirect)メンバー関数。
+の1回の呼び出し`Draw`を使用して、イメージにオーバーレイマスクを描画します。 パラメーターには、描画するイメージのインデックスとオーバーレイマスクのインデックスが含まれます。 オーバーレイマスクのインデックスを指定するには、 [INDEXTOOVERLAYMASK](/windows/win32/api/commctrl/nf-commctrl-indextooverlaymask)マクロを使用する必要があります。 [DrawIndirect](../mfc/reference/cimagelist-class.md#drawindirect)メンバー関数を呼び出すときに、オーバーレイイメージを指定することもできます。
 
 ## <a name="see-also"></a>関連項目
 

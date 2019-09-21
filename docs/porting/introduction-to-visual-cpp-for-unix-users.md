@@ -4,12 +4,12 @@ ms.date: 09/01/2017
 helpviewer_keywords:
 - UNIX [C++]
 ms.assetid: 36108b31-e7fa-49a8-a1f7-7077fcbec873
-ms.openlocfilehash: 17f8082ac0442f65b9195b37da18b04f795d3d66
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 7f73e51e02eafe46c279a8f828803912d8cd190a
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448956"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69631697"
 ---
 # <a name="introduction-to-visual-c-for-unix-users"></a>Visual C++ の紹介 (UNIX ユーザー向け)
 
@@ -57,7 +57,7 @@ Microsoft C++ コンパイラでは、Windows オペレーティング システ
 
 Microsoft C および C++ コンパイラは、インライン コードを含む、C または C++ コードをプリコンパイルするためのオプションを提供します。 このパフォーマンス機能を使用して、安定したコードの本体をコンパイルし、ファイル内のコードのコンパイル済みの状態を格納します。さらに、後続のコンパイル中に、プリコンパイルされたコードと開発中のコードを結合できます。 安定したコードは再コンパイルする必要がないので、後続のコンパイルが高速化します。
 
-既定では、プリコンパイル済みのすべてのコードは、ファイル stdafx.h と stdafx.cpp で指定されます。 **[プリコンパイル済みヘッダー]** オプションをオフにしない限り、 **[新しいプロジェクト]** ウィザードは自動的にこれらのファイルを作成します。 プリコンパイルされたヘッダーの詳細については、「[プリコンパイル済みヘッダー ファイルの作成](../build/creating-precompiled-header-files.md)」を参照してください。
+既定では、プリコンパイル済みのコードはすべて、ファイル *pch.h* と *pch.cpp* (Visual Studio 2017 以前では *stdafx.h* と *stdafx.cpp*) 内で指定されます。 **[プリコンパイル済みヘッダー]** オプションをオフにしない限り、 **[新しいプロジェクト]** ウィザードは自動的にこれらのファイルを作成します。 プリコンパイルされたヘッダーの詳細については、「[プリコンパイル済みヘッダー ファイルの作成](../build/creating-precompiled-header-files.md)」を参照してください。
 
 ## <a name="related-sections"></a>関連項目
 

@@ -7,19 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - IID_PPV_ARGS_Helper function
 ms.assetid: afee9b23-8df1-4575-903f-e9ba748418f0
-ms.openlocfilehash: 5ef4dd6c9db2d19e0c8a4143c5b4ed3f0ac75f6a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e7733ae6084b64c20dff5a2c35d7a31c614d6e44
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398265"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500505"
 ---
-# <a name="iidppvargshelper-function"></a>IID_PPV_ARGS_Helper 関数
+# <a name="iid_ppv_args_helper-function"></a>IID_PPV_ARGS_Helper 関数
 
-指定された引数の型から派生することを確認、`IUnknown`インターフェイス。
+指定された引数の型が`IUnknown`インターフェイスから派生していることを確認します。
 
 > [!IMPORTANT]
-> このテンプレートの特殊化は WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。 使用[IID_PPV_ARGS](/windows/desktop/api/combaseapi/nf-combaseapi-iid_ppv_args)代わりにします。
+> このテンプレートの特殊化は WRL インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。 代わりに[IID_PPV_ARGS](/windows/win32/api/combaseapi/nf-combaseapi-iid_ppv_args)を使用してください。
 
 ## <a name="syntax"></a>構文
 
@@ -33,18 +33,18 @@ void** IID_PPV_ARGS_Helper(
 ### <a name="parameters"></a>パラメーター
 
 *T*<br/>
-引数の型*pp*します。
+引数*pp*の型。
 
-*pp*<br/>
+*ページ*<br/>
 二重間接ポインター。
 
 ## <a name="return-value"></a>戻り値
 
-引数*pp*ポインターにする-、- へのポインターにキャスト**void**します。
+**Void**へのポインターへのポインターにキャストする引数*pp* 。
 
 ## <a name="remarks"></a>Remarks
 
-コンパイル時エラーが生成テンプレート パラメーター *T*から派生していない`IUnknown`します。
+テンプレートパラメーター *T*がから`IUnknown`派生していない場合、コンパイル時エラーが生成されます。
 
 ## <a name="requirements"></a>必要条件
 

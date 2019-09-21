@@ -4,53 +4,53 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - applications [MFC], managing
 ms.assetid: b72f4154-24db-4e75-bca3-6873e2459c15
-ms.openlocfilehash: b106a8874d1b0243f408a6c6c7311a9ce791e019
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 52e6dbaa07fa8343a07533f071d538d9f76b0f61
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66504495"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741160"
 ---
 # <a name="application-information-and-management"></a>アプリケーションの情報と管理
 
-1 つを作成するアプリケーションを作成するときに[CWinApp](../../mfc/reference/cwinapp-class.md)の派生オブジェクト。 外部からは、このオブジェクトに関する情報を取得する可能性がありますが、 `CWinApp`-派生オブジェクト。 または、他のグローバル「マネージャー」オブジェクトにアクセスする必要があります。
+アプリケーションを作成するときは、1つの[CWinApp](../../mfc/reference/cwinapp-class.md)派生オブジェクトを作成します。 場合によっては、から派生したオブジェクトの`CWinApp`外部から、このオブジェクトに関する情報を取得する必要があります。 または、他のグローバル "mananger" オブジェクトへのアクセスが必要になる場合があります。
 
-Microsoft Foundation Class ライブラリでは、これらのタスクを達成するために、次のグローバル関数を提供します。
+Microsoft Foundation Class ライブラリには、これらのタスクを実行するための次のグローバル関数が用意されています。
 
-### <a name="application-information-and-management-functions"></a>アプリケーションの情報と管理機能
+### <a name="application-information-and-management-functions"></a>アプリケーションの情報と管理の機能
 
 |||
 |-|-|
 |[AfxBeginThread](#afxbeginthread)|新しいスレッドを作成します。|
-|[AfxContextMenuManager](#afxcontextmenumanager)|グローバルへのポインター[コンテキスト メニュー マネージャー](ccontextmenumanager-class.md)します。|
+|[AfxContextMenuManager](#afxcontextmenumanager)|グローバル[コンテキストメニューマネージャー](ccontextmenumanager-class.md)へのポインター。|
 |[AfxEndThread](#afxendthread)|現在のスレッドを終了します。|
-|[AfxFindResourceHandle](#afxfindresourcehandle)|リソース チェーンを説明し、特定のリソースのリソース ID とリソースの種類を見つけます。 |
-|[AfxFreeLibrary](#afxfreelibrary)|ダイナミック リンク ライブラリ (DLL) が読み込まれたモジュールの参照カウントをデクリメント参照カウントがゼロに達すると、モジュールはマップではありません。|
-|[AfxGetApp](#afxgetapp)|アプリケーションへのポインターの 1 つを返します`CWinApp`オブジェクト。|
+|[AfxFindResourceHandle](#afxfindresourcehandle)|リソースチェーンを調べ、リソース ID とリソースの種類を指定して特定のリソースを検索します。 |
+|[AfxFreeLibrary](#afxfreelibrary)|読み込まれたダイナミックリンクライブラリ (DLL) モジュールの参照カウントをデクリメントします。参照カウントが0になると、モジュールはマップ解除されます。|
+|[AfxGetApp](#afxgetapp)|アプリケーションの1つ`CWinApp`のオブジェクトへのポインターを返します。|
 |[AfxGetAppName](#afxgetappname)|アプリケーションの名前を含む文字列を返します。|
 |[AfxGetInstanceHandle](#afxgetinstancehandle)|アプリケーションのこのインスタンスを表す HINSTANCE を返します。|
-|[AfxGetMainWnd](#afxgetmainwnd)|非 OLE アプリケーションの現在の"main"ウィンドウまたはサーバー アプリケーションの埋め込み先フレーム ウィンドウへのポインターを返します。|
-|[AfxGetPerUserRegistration](#afxgetperuserregistration)|この関数を使用して、アプリケーションがレジストリ アクセスにリダイレクトするかどうかを判断する、 **HKEY_CURRENT_USER** ( **HKCU**) ノードです。|
-|[AfxGetResourceHandle](#afxgetresourcehandle)|アプリケーションの既定のリソースのソースに HINSTANCE を返します。 アプリケーションのリソースに直接アクセスするのにには、これを使用します。|
-|[AfxGetThread](#afxgetthread)|現在のポインターを取得[CWinThread](../../mfc/reference/cwinthread-class.md)オブジェクト。|
-|[AfxInitRichEdit](#afxinitrichedit)|1.0 リッチ エディット コントロール、アプリケーションのバージョンを初期化します。|
-|[AfxInitRichEdit2](#afxinitrichedit2)|バージョン 2.0 以降の豊富な編集アプリケーションのコントロールを初期化します。|
+|[AfxGetMainWnd](#afxgetmainwnd)|非 OLE アプリケーションの現在の "main" ウィンドウ、またはサーバーアプリケーションの埋め込み先フレームウィンドウへのポインターを返します。|
+|[AfxGetPerUserRegistration](#afxgetperuserregistration)|アプリケーションが**HKEY_CURRENT_USER** ( **HKCU**) ノードへのレジストリアクセスをリダイレクトするかどうかを判断するには、この関数を使用します。|
+|[AfxGetResourceHandle](#afxgetresourcehandle)|アプリケーションの既定のリソースのソースに HINSTANCE を返します。 アプリケーションのリソースに直接アクセスするには、これを使用します。|
+|[AfxGetThread](#afxgetthread)|現在の[CWinThread](../../mfc/reference/cwinthread-class.md)オブジェクトへのポインターを取得します。|
+|[AfxInitRichEdit](#afxinitrichedit)|アプリケーションのバージョン1.0 リッチエディットコントロールを初期化します。|
+|[AfxInitRichEdit2](#afxinitrichedit2)|アプリケーションのバージョン2.0 以降のリッチエディットコントロールを初期化します。|
 |[AfxIsExtendedFrameClass](#afxisextendedframeclass)|指定されたウィンドウが拡張フレーム オブジェクトかどうかを確認します。|
-|[AfxIsMFCToolBar](#afxismfctoolbar)|指定されたウィンドウがツール バー オブジェクトであるかどうかを判断します。|
-|[AfxKeyboardManager](#afxkeyboardmanager)|グローバルへのポインター[キーボード manager](ckeyboardmanager-class.md)します。|
+|[AfxIsMFCToolBar](#afxismfctoolbar)|指定されたウィンドウがツールバーオブジェクトであるかどうかを判断します。|
+|[AfxKeyboardManager](#afxkeyboardmanager)|グローバル[キーボードマネージャー](ckeyboardmanager-class.md)へのポインター。|
 |[AfxLoadLibrary](#afxloadlibrary)|DLL モジュールをマップし、DLL 関数のアドレスを取得するために使用できるハンドルを返します。|
-|[AfxMenuTearOffManager](#afxmenutearoffmanager)|グローバルへのポインター[ティアオフ メニュー マネージャー](cmenutearoffmanager-class.md)します。|
-|[AfxMouseManager](#afxmousemanager)|グローバルへのポインター[マウス manager](cmousemanager-class.md)します。|
-|[AfxRegisterClass](#afxregisterclass)|MFC を使用する DLL には、ウィンドウ クラスを登録します。|
-|[AfxRegisterWndClass](#afxregisterwndclass)|MFC によって自動的に登録されている設定を補足する Windows のウィンドウ クラスを登録します。|
-|[AfxSetPerUserRegistration](#afxsetperuserregistration)|アプリケーションにレジストリのアクセスをリダイレクトするかどうかを設定、 **HKEY_CURRENT_USER** ( **HKCU**) ノードです。|
+|[AfxMenuTearOffManager](#afxmenutearoffmanager)|グローバル[ティアオフメニューマネージャー](cmenutearoffmanager-class.md)へのポインター。|
+|[AfxMouseManager](#afxmousemanager)|グローバル[マウスマネージャー](cmousemanager-class.md)へのポインター。|
+|[AfxRegisterClass](#afxregisterclass)|MFC を使用する DLL にウィンドウクラスを登録します。|
+|[AfxRegisterWndClass](#afxregisterwndclass)|MFC によって自動的に登録されたものを補うために、Windows のウィンドウクラスを登録します。|
+|[AfxSetPerUserRegistration](#afxsetperuserregistration)|アプリケーションが**HKEY_CURRENT_USER** ( **HKCU**) ノードへのレジストリアクセスをリダイレクトするかどうかを設定します。|
 |[AfxSetResourceHandle](#afxsetresourcehandle)|アプリケーションの既定のリソースが読み込まれる HINSTANCE ハンドルを設定します。|
-|[AfxShellManager](#afxshellmanager)|グローバルへのポインター[シェル マネージャー](cshellmanager-class.md)します。 |
-|[AfxSocketInit](#afxsocketinit)|呼び出される、 `CWinApp::InitInstance` Windows Sockets を初期化するためにオーバーライドします。|
-|[AfxUserToolsManager](#afxusertoolsmanager)|グローバルへのポインター[ユーザー ツール マネージャー](cusertoolsmanager-class.md)します。|
-|[AfxWinInit](#afxwininit)|MFC が指定したメソッドを呼び出して`WinMain`の一部として、関数、 [CWinApp](../../mfc/reference/cwinapp-class.md) MFC を初期化するために、GUI ベースのアプリケーションの初期化。 MFC を使用するコンソール アプリケーションを直接呼び出す必要があります。|
+|[AfxShellManager](#afxshellmanager)|グローバル[シェルマネージャー](cshellmanager-class.md)へのポインター。 |
+|[AfxSocketInit](#afxsocketinit)|Windows ソケットを`CWinApp::InitInstance`初期化するために、オーバーライドで呼び出されます。|
+|[AfxUserToolsManager](#afxusertoolsmanager)|グローバル[ユーザーツールマネージャー](cusertoolsmanager-class.md)へのポインター。|
+|[AfxWinInit](#afxwininit)|Mfc を初期化するために`WinMain` 、GUI ベースのアプリケーションの[CWinApp](../../mfc/reference/cwinapp-class.md)初期化の一部として、mfc が提供する関数によって呼び出されます。 MFC を使用するコンソールアプリケーションでは、を直接呼び出す必要があります。|
 
-##  <a name="afxbeginthread"></a>  AfxBeginThread
+##  <a name="afxbeginthread"></a>AfxBeginThread
 
 この関数を呼び出して、新しいスレッドを作成します。
 
@@ -79,13 +79,13 @@ CWinThread* AfxBeginThread(
 `UINT __cdecl MyControllingFunction( LPVOID pParam );`
 
 *pThreadClass*<br/>
-派生したオブジェクトの RUNTIME_CLASS [CWinThread](../../mfc/reference/cwinthread-class.md)します。
+[CWinThread](../../mfc/reference/cwinthread-class.md)から派生したオブジェクトの RUNTIME_CLASS。
 
 *pParam*<br/>
-内の関数宣言のパラメーターで示すように、制御関数に渡されるパラメーター *pfnThreadProc*します。
+*PfnThreadProc*の関数宣言のパラメーターに示されているように、制御関数に渡されるパラメーター。
 
 *nPriority*<br/>
-スレッドの優先順位。 完全な一覧と使用可能な優先順位の説明では、次を参照してください。 [SetThreadPriority](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-setthreadpriority) Windows SDK に含まれています。
+スレッドの優先順位。 使用可能な優先順位の完全な一覧と説明については、Windows SDK の「 [Setthreadpriority](/windows/win32/api/processthreadsapi/nf-processthreadsapi-setthreadpriority) 」を参照してください。
 
 *nStackSize*<br/>
 新しいスレッドへのスタックのバイト サイズを指定します。 0 である場合、スタック サイズの既定値は、このスレッドを生成するスレッドのスタックと同じサイズです。
@@ -93,38 +93,38 @@ CWinThread* AfxBeginThread(
 *dwCreateFlags*<br/>
 スレッドの作成を制御する追加のフラグを指定します。 このフラグは、2 つの値の 1 つを含めることができます。
 
-- CREATE_SUSPENDED 中断カウントが 1 つのスレッドを開始します。 メンバー データの初期化に使用する場合は、CREATE_SUSPENDED を使用して、`CWinThread`などオブジェクト[m_bAutoDelete](../../mfc/reference/cwinthread-class.md#m_bautodelete)またはスレッドが実行を開始する前に、派生クラスのメンバー。 初期化が完了すると使用[cwinthread::resumethread](../../mfc/reference/cwinthread-class.md#resumethread)を実行しているスレッドを開始します。 `CWinThread::ResumeThread` が呼び出されるまでは、スレッドは実行されません。
+- CREATE_SUSPENDED は、中断回数が1のスレッドを開始します。 スレッドが実行を開始する前に、 [m_bAutoDelete](../../mfc/reference/cwinthread-class.md#m_bautodelete)や派生`CWinThread`クラスのメンバーなど、オブジェクトのメンバーデータを初期化する場合は、CREATE_SUSPENDED を使用します。 初期化が完了したら、 [CWinThread:: ResumeThread](../../mfc/reference/cwinthread-class.md#resumethread)を使用して、実行中のスレッドを開始します。 `CWinThread::ResumeThread` が呼び出されるまでは、スレッドは実行されません。
 
-- **0**作成後すぐにスレッドを開始します。
+- **0**作成直後にスレッドを開始します。
 
 *lpSecurityAttrs*<br/>
-指す、 [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\))スレッドのセキュリティ属性を指定する構造体。 NULL の場合、スレッドの作成と同じセキュリティ属性が使用されます。 この構造体の詳細については、Windows SDK を参照してください。
+スレッドのセキュリティ属性を指定する[SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\))構造体を指します。 NULL の場合は、作成するスレッドと同じセキュリティ属性が使用されます。 この構造の詳細については、Windows SDK を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
-新しく作成されたスレッド オブジェクト、または障害が発生した場合は NULL へのポインター。
+新しく作成されたスレッドオブジェクトへのポインター、またはエラーが発生した場合は NULL。
 
 ### <a name="remarks"></a>Remarks
 
 `AfxBeginThread` の最初のフォームはワーカー スレッドを作成します。 2 番目のフォームは、ユーザー インターフェイス スレッドまたはワーカー スレッドとして機能可能なスレッドを作成します。
 
-`AfxBeginThread` 新たに作成`CWinThread`オブジェクトを呼び出し、 [CreateThread](../../mfc/reference/cwinthread-class.md#createthread)関数のスレッドの実行を開始して、スレッドへのポインターを返します。 なんらかの原因でスレッド生成に失敗すると、スレッド生成処理全体をチェックし、すべてのオブジェクトを確実に解放します。 スレッドを終了するには、呼び出す[AfxEndThread](#afxendthread)からスレッドまたはワーカー スレッドの制御関数からの戻り値内で。
+`AfxBeginThread`新しい`CWinThread`オブジェクトを作成し、その[CreateThread](../../mfc/reference/cwinthread-class.md#createthread)関数を呼び出してスレッドの実行を開始し、そのスレッドへのポインターを返します。 なんらかの原因でスレッド生成に失敗すると、スレッド生成処理全体をチェックし、すべてのオブジェクトを確実に解放します。 スレッドを終了するには、スレッド内から[AfxEndThread](#afxendthread)を呼び出すか、ワーカースレッドの制御関数から制御を戻します。
 
-マルチスレッドは、アプリケーションによって有効化される必要があります。それ以外の場合、この関数は失敗します。 マルチ スレッドの有効化の詳細についてを参照してください[/MD、/MT、/LD (ランタイム ライブラリの使用)](../../build/reference/md-mt-ld-use-run-time-library.md)  *Visual C コンパイラ オプション*します。
+マルチスレッドは、アプリケーションによって有効化される必要があります。それ以外の場合、この関数は失敗します。 マルチスレッドを有効にする方法の詳細については、「 *Visual C++コンパイラオプション*」の「 [/md、/Mt、/Ld (ランタイムライブラリの使用)](../../build/reference/md-mt-ld-use-run-time-library.md) 」を参照してください。
 
-詳細については`AfxBeginThread`、記事を参照して[マルチ スレッド。ワーカー スレッドを作成する](../../parallel/multithreading-creating-worker-threads.md)と[マルチ スレッド。ユーザー インターフェイス スレッドを作成する](../../parallel/multithreading-creating-user-interface-threads.md)します。
+の`AfxBeginThread`詳細については、マルチ[スレッドに関する記事を参照してください。ワーカースレッド](../../parallel/multithreading-creating-worker-threads.md)とマルチ[スレッドの作成:ユーザーインターフェイススレッド](../../parallel/multithreading-creating-user-interface-threads.md)を作成しています。
 
 ### <a name="example"></a>例
 
-例をご覧ください[csocket::attach](../../mfc/reference/csocket-class.md#attach)します。
+「 [CSocket:: Attach](../../mfc/reference/csocket-class.md#attach)」の例を参照してください。
 
 ### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxwin.h
 
-## <a name="afxcontextmenumanager"></a> AfxContextMenuManager
+## <a name="afxcontextmenumanager"></a>AfxContextMenuManager
 
-グローバルへのポインター[コンテキスト メニュー マネージャー](ccontextmenumanager-class.md)します。
+グローバル[コンテキストメニューマネージャー](ccontextmenumanager-class.md)へのポインター。
 
 ### <a name="syntax"></a>構文
 
@@ -134,9 +134,9 @@ CContextMenuManager* afxContextMenuManager;
 
 ### <a name="requirements"></a>必要条件
 
-**ヘッダー:** afxcontextmenumanager.h
+**ヘッダー:** afxcontextmenumanager
 
-##  <a name="afxendthread"></a>  AfxEndThread
+##  <a name="afxendthread"></a>AfxEndThread
 
 現在実行中のスレッドを終了するには、この関数を呼び出します。
 
@@ -152,20 +152,20 @@ void AFXAPI AfxEndThread(
 スレッドの終了コードを指定します。
 
 *bDelete*<br/>
-メモリからスレッド オブジェクトを削除します。
+メモリからスレッドオブジェクトを削除します。
 
 ### <a name="remarks"></a>Remarks
 
-終了するスレッド内からを呼び出す必要があります。
+は、終了するスレッド内から呼び出す必要があります。
 
-詳細については`AfxEndThread`、記事をご覧ください[マルチ スレッド。スレッドの終了](../../parallel/multithreading-terminating-threads.md)します。
+の`AfxEndThread`詳細については、マルチ[スレッドに関する記事を参照してください。スレッド](../../parallel/multithreading-terminating-threads.md)を終了しています。
 
 ### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxwin.h
 
   ## <a name="afxfindresourcehandle"></a>AfxFindResourceHandle
-使用`AfxFindResourceHandle`リソース チェーンをウォークして特定のリソースでリソース ID とリソースの種類を見つけます。
+リソース`AfxFindResourceHandle`チェーンをウォークし、リソース ID とリソースの種類を指定して特定のリソースを検索するには、を使用します。
 
 ### <a name="syntax"></a>構文
 
@@ -176,37 +176,37 @@ HINSTANCE AFXAPI AfxFindResourceHandle( LPCTSTR lpszName,  LPCTSTR lpszType );
 ### <a name="parameters"></a>パラメーター
 
 *lpszName*<br/>
-リソース ID を含む文字列へのポインター
+リソース ID を格納している文字列へのポインター。
 *lpszType*<br/>
-リソースの種類へのポインター。 リソースの種類の一覧は、次を参照してください。 [FindResource](/windows/desktop/api/winbase/nf-winbase-findresourcea) Windows SDK に含まれています。
+リソースの種類へのポインター。 リソースの種類の一覧については、「Windows SDK の[Findresource](/windows/win32/api/winbase/nf-winbase-findresourcea) 」を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
-リソースを含むモジュールへのハンドル。
+リソースを格納しているモジュールへのハンドル。
 
 ### <a name="remarks"></a>Remarks
 
-`AfxFindResourceHandle` 特定のリソースを検索してリソースを格納しているモジュールへのハンドルを返します。 リソースの MFC 拡張 DLL が読み込まれました可能性があります。 `AfxFindResourceHandle` どれがリソースを示します。
+`AfxFindResourceHandle`特定のリソースを検索し、そのリソースを含むモジュールへのハンドルを返します。 リソースは、読み込まれたすべての MFC 拡張 DLL に存在する可能性があります。 `AfxFindResourceHandle`リソースがあるユーザーを示します。
 
-この順序で、モジュールが検索されます。
+モジュールは、次の順序で検索されます。
 
-1. (MFC 拡張 DLL の場合) は、メイン モジュールです。
+1. メインモジュール (MFC 拡張 DLL の場合)。
 
-1. 非システム モジュールです。
+1. 非システムモジュール。
 
 1. 言語固有のモジュール。
 
-1. (システム DLL の場合) は、メイン モジュールです。
+1. メインモジュール (システム DLL の場合)。
 
-1. システム モジュールです。
+1. システムモジュール。
 
 ### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxwin.h
 
-##  <a name="afxfreelibrary"></a>  AfxFreeLibrary
+##  <a name="afxfreelibrary"></a>AfxFreeLibrary
 
-両方`AfxFreeLibrary`と`AfxLoadLibrary`ライブラリが読み込まれたモジュールごとに参照カウントを維持します。
+と`AfxFreeLibrary`は`AfxLoadLibrary`どちらも、読み込まれた各ライブラリモジュールの参照カウントを保持します。
 
 ```
 BOOL AFXAPI AfxFreeLibrary(HINSTANCE hInstLib);
@@ -215,33 +215,33 @@ BOOL AFXAPI AfxFreeLibrary(HINSTANCE hInstLib);
 ### <a name="parameters"></a>パラメーター
 
 *hInstLib*<br/>
-ライブラリが読み込まれたモジュールのハンドル。 [AfxLoadLibrary](#afxloadlibrary)このハンドルを返します。
+読み込まれたライブラリモジュールのハンドル。 [AfxLoadLibrary](#afxloadlibrary)は、このハンドルを返します。
 
 ### <a name="return-value"></a>戻り値
 
-関数が成功した場合は TRUE。それ以外の場合、FALSE です。
+関数が成功した場合は TRUE。それ以外の場合は FALSE。
 
 ### <a name="remarks"></a>Remarks
 
-`AfxFreeLibrary` ダイナミック リンク ライブラリ (DLL) が読み込まれたモジュールの参照カウントをデクリメントします。 参照カウントがゼロに達するし、モジュールは、呼び出し元プロセスのアドレス空間からマップされたが、ハンドルが無効になった。 この参照カウントは毎回`AfxLoadLibrary`が呼び出されます。
+`AfxFreeLibrary`読み込まれたダイナミックリンクライブラリ (DLL) モジュールの参照カウントをデクリメントします。 参照カウントがゼロになると、モジュールは呼び出し元プロセスのアドレス空間からマップ解除され、ハンドルは無効になります。 この参照カウントは、 `AfxLoadLibrary`が呼び出されるたびに増分されます。
 
-ライブラリ モジュールを解除する前に、システムは、これを使用するプロセスからデタッチする DLL を使用できます。 DLL を現在のプロセスに割り当てられたリソースをクリーンアップする機会が与えられますそうです。 エントリ ポイント関数を返した後、ライブラリ モジュールは、現在のプロセスのアドレス空間から削除されます。
+ライブラリモジュールをマップ解除する前に、システムによって、DLL を使用しているプロセスから DLL をデタッチできます。 これにより、DLL は、現在のプロセスの代わりに割り当てられたリソースをクリーンアップすることができます。 エントリポイント関数が戻ると、現在のプロセスのアドレス空間からライブラリモジュールが削除されます。
 
-使用`AfxLoadLibrary`DLL モジュールをマップします。
+DLL `AfxLoadLibrary`モジュールをマップするために使用します。
 
-使用して、必ず`AfxFreeLibrary`と`AfxLoadLibrary`(Win32 関数ではなく`FreeLibrary`と`LoadLibrary`) アプリケーションが複数のスレッドを使用する場合。 使用して`AfxLoadLibrary`と`AfxFreeLibrary`スタートアップとシャット ダウン コード MFC 拡張 DLL が読み込まれ、アンロードが MFC のグローバル状態を破損しないときに実行されることを確認します。
+アプリケーションで複数の`AfxFreeLibrary`スレッド`AfxLoadLibrary`を使用する場合は、 `FreeLibrary` ( `LoadLibrary`Win32 関数およびの代わりに) およびを使用してください。 および`AfxLoadLibrary`を`AfxFreeLibrary`使用すると、mfc 拡張 DLL が読み込まれてアンロードされたときに実行される起動コードとシャットダウンコードが、mfc のグローバル状態を破壊することがなくなります。
 
 ### <a name="example"></a>例
 
-例をご覧ください[AfxLoadLibrary](#afxloadlibrary)します。
+[AfxLoadLibrary](#afxloadlibrary)の例を参照してください。
 
 ### <a name="requirements"></a>必要条件
 
-  **ヘッダー** afxdll_.h
+  **ヘッダー** afxdll_
 
 ##  <a name="afxgetapp"></a>  AfxGetApp
 
-この関数によって返されるポインターを使用して、メッセージのディスパッチのメイン コードや最上位ウィンドウなどのアプリケーションの情報にアクセスすることができます。
+この関数によって返されるポインターは、メインのメッセージディスパッチコードや最上位のウィンドウなどのアプリケーション情報にアクセスするために使用できます。
 
 ```
 CWinApp* AFXAPI AfxGetApp();
@@ -249,11 +249,11 @@ CWinApp* AFXAPI AfxGetApp();
 
 ### <a name="return-value"></a>戻り値
 
-1 つへのポインター`CWinApp`アプリケーションのオブジェクト。
+アプリケーションの単一`CWinApp`のオブジェクトへのポインター。
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、NULL を返す場合、アプリケーションのメイン ウィンドウが完全にまだ初期化されていないことを示す場合します。 また、問題を示す場合もあります。
+このメソッドが NULL を返す場合、アプリケーションのメインウィンドウがまだ完全に初期化されていないことを示している可能性があります。 また、問題がある可能性もあります。
 
 ### <a name="example"></a>例
 
@@ -265,7 +265,7 @@ CWinApp* AFXAPI AfxGetApp();
 
 ##  <a name="afxgetappname"></a>  AfxGetAppName
 
-この関数によって返される文字列は、一時文字列の名前の診断メッセージ、またはルートとして使用できます。
+この関数によって返される文字列は、診断メッセージに使用することも、一時文字列名のルートとして使用することもできます。
 
 ```
 LPCTSTR AFXAPI AfxGetAppName();
@@ -273,7 +273,7 @@ LPCTSTR AFXAPI AfxGetAppName();
 
 ### <a name="return-value"></a>戻り値
 
-アプリケーションの名前を表す、null で終わる文字列。
+アプリケーションの名前を格納している null で終わる文字列。
 
 ### <a name="example"></a>例
 
@@ -285,7 +285,7 @@ LPCTSTR AFXAPI AfxGetAppName();
 
 ##  <a name="afxgetinstancehandle"></a>  AfxGetInstanceHandle
 
-この関数では、現在のアプリケーションのインスタンス ハンドルを取得できます。
+この関数を使用すると、現在のアプリケーションのインスタンスハンドルを取得できます。
 
 ```
 HINSTANCE  AFXAPI AfxGetInstanceHandle();
@@ -293,11 +293,11 @@ HINSTANCE  AFXAPI AfxGetInstanceHandle();
 
 ### <a name="return-value"></a>戻り値
 
-アプリケーションの現在のインスタンスの HINSTANCE。 MFC の USRDLL バージョンとリンクされた DLL 内から呼び出されると、DLL に HINSTANCE が返されます。
+アプリケーションの現在のインスタンスへの HINSTANCE。 USRDLL バージョンの MFC とリンクされている DLL 内から呼び出された場合、DLL の HINSTANCE が返されます。
 
 ### <a name="remarks"></a>Remarks
 
-`AfxGetInstanceHandle` 実行可能ファイルの HINSTANCE を常に返します (します。EXE) DLL が MFC の USRDLL バージョンとリンク内から呼び出された場合を除き、します。 この場合、DLL に HINSTANCE を返します。
+`AfxGetInstanceHandle`常に実行可能ファイルの HINSTANCE () を返します。EXE) を呼び出します。ただし、USRDLL バージョンの MFC にリンクされている DLL 内から呼び出された場合を除きます。 この場合、HINSTANCE が DLL に返されます。
 
 ### <a name="example"></a>例
 
@@ -307,9 +307,9 @@ HINSTANCE  AFXAPI AfxGetInstanceHandle();
 
   **ヘッダー** afxwin.h
 
-##  <a name="afxgetmainwnd"></a>  AfxGetMainWnd
+##  <a name="afxgetmainwnd"></a>AfxGetMainWnd
 
-アプリケーションが OLE サーバーである場合は、直接参照するのではなく、アプリケーションのアクティブなメイン ウィンドウへのポインターを取得するには、この関数を呼び出し、 [m_pMainWnd](../../mfc/reference/cwinthread-class.md#m_pmainwnd)アプリケーション オブジェクトのメンバー。
+アプリケーションが OLE サーバーである場合は、この関数を呼び出して、アプリケーションオブジェクトの[m_pMainWnd](../../mfc/reference/cwinthread-class.md#m_pmainwnd)メンバーを直接参照するのではなく、アプリケーションのアクティブなメインウィンドウへのポインターを取得します。
 
 ```
 CWnd* AFXAPI AfxGetMainWnd();
@@ -319,13 +319,13 @@ CWnd* AFXAPI AfxGetMainWnd();
 
 サーバーが、コンテナー内に埋め込まれているアクティブなオブジェクトを持ち、そのコンテナーがアクティブである場合は、この関数は、埋め込まれているアクティブな文書を含むフレーム ウィンドウ オブジェクトへのポインターを返します。
 
-この関数は単に返します、コンテナー内の場所で有効になっているオブジェクトが存在しないか、アプリケーションが OLE サーバーではない、 *m_pMainWnd*アプリケーション オブジェクト。
+コンテナー内でアクティブなオブジェクトが存在しない場合、またはアプリケーションが OLE サーバーではない場合、この関数は単にアプリケーションオブジェクトの*m_pMainWnd*を返します。
 
 `AfxGetMainWnd` をアプリケーションのプライマリ スレッドから呼び出した場合は、上記の規則に従ってアプリケーションのメイン ウィンドウを返します。 アプリケーションのセカンダリ スレッドからこの関数を呼び出した場合は、関数は呼び出しを行ったスレッドに関連付けられているメイン ウィンドウを返します。
 
 ### <a name="remarks"></a>Remarks
 
-アプリケーションが OLE サーバーではないかどうかは、直接参照するにはこの関数を呼び出す、 *m_pMainWnd*アプリケーション オブジェクトのメンバー。
+アプリケーションが OLE サーバーではない場合、この関数を呼び出すことは、アプリケーションオブジェクトの*m_pMainWnd*メンバーを直接参照することと同じです。
 
 ### <a name="example"></a>例
 
@@ -337,7 +337,7 @@ CWnd* AFXAPI AfxGetMainWnd();
 
 ##  <a name="afxgetperuserregistration"></a>  AfxGetPerUserRegistration
 
-この関数を使用して、アプリケーションがレジストリ アクセスにリダイレクトするかどうかを判断する、 **HKEY_CURRENT_USER** ( **HKCU**) ノードです。
+アプリケーションが**HKEY_CURRENT_USER** ( **HKCU**) ノードへのレジストリアクセスをリダイレクトするかどうかを判断するには、この関数を使用します。
 
 ```
 BOOL AFXAPI AfxGetPerUserRegistration();
@@ -345,21 +345,21 @@ BOOL AFXAPI AfxGetPerUserRegistration();
 
 ### <a name="return-value"></a>戻り値
 
-TRUE は、HKCU ノードにレジストリ情報が送られることを示しますFALSE は、アプリケーションが既定のノードにレジストリ情報を書き出すことを示します。 既定のノードが**HKEY_CLASSES_ROOT** ( **HKCR**)。
+TRUE は、レジストリ情報が HKCU ノードに送られることを示します。FALSE は、アプリケーションがレジストリ情報を既定のノードに書き込むことを示します。 既定のノードは**HKEY_CLASSES_ROOT** ( **HKCR**) です。
 
 ### <a name="remarks"></a>Remarks
 
-レジストリのリダイレクトを有効にすると、フレームワークはからのアクセスをリダイレクト**HKCR**に**する**します。 MFC と ATL のフレームワークは、リダイレクトの影響を受けます。
+レジストリリダイレクトを有効にすると、フレームワークは**HKCR**から**HKEY_CURRENT_USER\Software\Classes**へのアクセスをリダイレクトします。 リダイレクトによって影響を受けるのは、MFC フレームワークと ATL フレームワークだけです。
 
-アプリケーションは、レジストリへのアクセスをリダイレクトするかどうかを変更する[AfxSetPerUserRegistration](#afxsetperuserregistration)します。
+アプリケーションがレジストリアクセスをリダイレクトするかどうかを変更するには、 [AfxSetPerUserRegistration](#afxsetperuserregistration)を使用します。
 
 ### <a name="requirements"></a>必要条件
 
-  **ヘッダー** afxstat_.h
+  **ヘッダー** afxstat_
 
 ##  <a name="afxgetresourcehandle"></a>  AfxGetResourceHandle
 
-Windows の呼び出しで関数の例を使用して、HINSTANCE 処理アプリケーションのリソースに直接アクセスするには、この関数によって返される`FindResource`します。
+この関数によって返される HINSTANCE ハンドルを使用して、Windows の関数`FindResource`の呼び出しなど、アプリケーションのリソースに直接アクセスします。
 
 ```
 extern HINSTANCE  AfxGetResourceHandle();
@@ -379,7 +379,7 @@ extern HINSTANCE  AfxGetResourceHandle();
 
 ##  <a name="afxgetthread"></a>  AfxGetThread
 
-ポインターを取得するには、この関数を呼び出して、 [CWinThread](../../mfc/reference/cwinthread-class.md)現在実行中のスレッドを表すオブジェクト。
+現在実行中のスレッドを表す[CWinThread](../../mfc/reference/cwinthread-class.md)オブジェクトへのポインターを取得するには、この関数を呼び出します。
 
 ```
 CWinThread* AfxGetThread();
@@ -387,14 +387,14 @@ CWinThread* AfxGetThread();
 
 ### <a name="return-value"></a>戻り値
 
-実行中のスレッドへのポインターそれ以外の場合は NULL です。
+現在実行中のスレッドへのポインター。それ以外の場合は NULL。
 
 ### <a name="remarks"></a>Remarks
 
-目的のスレッド内からを呼び出す必要があります。
+は、目的のスレッド内から呼び出す必要があります。
 
 > [!NOTE]
->  MFC プロジェクトの呼び出し元を移植する場合`AfxGetThread`4.2、5.0、または 6.0 では、Visual C バージョンから`AfxGetThread`呼び出し[AfxGetApp](#afxgetapp)スレッドが存在しない場合。 新しいバージョンのコンパイラで`AfxGetThread`スレッドが見つからなかった場合は NULL を返します。 呼び出す必要があるアプリケーションのスレッドを実行する場合に、`AfxGetApp`します。
+>  Visual C++バージョン4.2、5.0、または`AfxGetThread` 6.0 からを呼び出す MFC プロジェクトを移植する場合`AfxGetThread`は、スレッドが見つからない場合は[AfxGetApp](#afxgetapp)を呼び出します。 新しいバージョンのコンパイラでは、 `AfxGetThread`スレッドが見つからなかった場合は NULL を返します。 アプリケーションスレッドが必要な場合は、を呼び`AfxGetApp`出す必要があります。
 
 ### <a name="example"></a>例
 
@@ -406,7 +406,7 @@ CWinThread* AfxGetThread();
 
 ##  <a name="afxinitrichedit"></a>  AfxInitRichEdit
 
-アプリケーションのリッチ エディット コントロール (バージョン 1.0) を初期化するには、この関数を呼び出します。
+この関数を呼び出して、アプリケーションのリッチエディットコントロール (バージョン 1.0) を初期化します。
 
 ```
 BOOL AFXAPI AfxInitRichEdit();
@@ -414,13 +414,13 @@ BOOL AFXAPI AfxInitRichEdit();
 
 ### <a name="remarks"></a>Remarks
 
-この関数は、旧バージョンとの互換性のために提供されます。 新しいアプリケーションを使用する必要があります[AfxInitRichEdit2](#afxinitrichedit2)します。
+この関数は、旧バージョンとの互換性のために用意されています。 新しいアプリケーションでは[AfxInitRichEdit2](#afxinitrichedit2)を使用する必要があります。
 
-`AfxInitRichEdit` RICHED32 を読み込みます。リッチ エディット コントロールのバージョン 1.0 を初期化する DLL です。 バージョン 2.0 と 3.0 のリッチ エディット コントロール、RICHED20 を使用します。DLL を読み込む必要があります。 呼び出しでこれを行う[AfxInitRichEdit2](#afxinitrichedit2)します。
+`AfxInitRichEdit`RICHED32 を読み込みます。リッチエディットコントロールのバージョン1.0 を初期化する DLL。 リッチエディットコントロールのバージョン2.0 および3.0 を使用するには、RICHED20.DLL を使用します。DLL を読み込む必要があります。 これは、 [AfxInitRichEdit2](#afxinitrichedit2)を呼び出すことで実現されます。
 
-既存の Visual C アプリケーションをバージョン 2.0 でリッチ エディット コントロールを更新するを開き、します。RC ファイル、テキストとしてでは、"RichEdit20a"を"RICHEDIT"から各リッチ エディット コントロールのクラス名を変更します。 呼び出しを置き換える`AfxInitRichEdit`で`AfxInitRichEdit2`します。
+既存のビジュアルC++アプリケーションのリッチエディットコントロールをバージョン2.0 に更新するには、を開きます。RC ファイルをテキストとして指定し、各リッチエディットコントロールのクラス名を "RICHEDIT" から "RichEdit20a" に変更します。 次に、の呼び出し`AfxInitRichEdit`を`AfxInitRichEdit2`に置き換えます。
 
-この関数は、ライブラリは、プロセスにまだ初期化されていない場合にも、一般的なコントロール ライブラリを初期化します。 リッチ エディット コントロールを MFC アプリケーションから直接使用する場合は、MFC がリッチ エディット コントロールのランタイムを正しく初期化されるようにするのには、この関数を呼び出す必要があります。 Create メソッドを呼び出す場合[CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md)、 [CRichEditView](../../mfc/reference/cricheditview-class.md)、または[CRichEditDoc](../../mfc/reference/cricheditdoc-class.md)、する通常、この関数を呼び出す必要はありませんが、場合によってはでがありますいる。
+この関数は、ライブラリがまだプロセス用に初期化されていない場合にも、コモンコントロールライブラリを初期化します。 MFC アプリケーションからリッチエディットコントロールを直接使用する場合は、MFC がリッチエディットコントロールランタイムを正しく初期化していることを確認するために、この関数を呼び出す必要があります。 [CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md)、 [CRichEditView](../../mfc/reference/cricheditview-class.md)、または[CRichEditDoc](../../mfc/reference/cricheditdoc-class.md)の Create メソッドを呼び出す場合は、通常、この関数を呼び出す必要はありませんが、場合によっては必要になることがあります。
 
 ### <a name="requirements"></a>必要条件
 
@@ -428,7 +428,7 @@ BOOL AFXAPI AfxInitRichEdit();
 
 ##  <a name="afxinitrichedit2"></a>  AfxInitRichEdit2
 
-アプリケーションのリッチ エディット コントロール (バージョン 2.0 以降) を初期化するには、この関数を呼び出します。
+この関数を呼び出して、アプリケーションのリッチエディットコントロール (バージョン2.0 以降) を初期化します。
 
 ```
 BOOL AFXAPI AfxInitRichEdit2();
@@ -436,13 +436,13 @@ BOOL AFXAPI AfxInitRichEdit2();
 
 ### <a name="remarks"></a>Remarks
 
-RICHED20 を読み込むには、この関数を呼び出します。DLL と初期化バージョン 2.0 の豊富なコントロールを編集します。 Create メソッドを呼び出す場合[CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md)、 [CRichEditView](../../mfc/reference/cricheditview-class.md)、または[CRichEditDoc](../../mfc/reference/cricheditdoc-class.md)、する通常、この関数を呼び出す必要はありませんが、場合によってはでがありますいる。
+RICHED20.DLL を読み込むには、この関数を呼び出します。リッチエディットコントロールのバージョン2.0 を DLL および初期化します。 [CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md)、 [CRichEditView](../../mfc/reference/cricheditview-class.md)、または[CRichEditDoc](../../mfc/reference/cricheditdoc-class.md)の Create メソッドを呼び出す場合は、通常、この関数を呼び出す必要はありませんが、場合によっては必要になることがあります。
 
 ### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxwin.h
 
-  ## <a name="afxisextendedframeclass"></a>  AfxIsExtendedFrameClass
+  ## <a name="afxisextendedframeclass"></a>AfxIsExtendedFrameClass
 指定されたウィンドウが拡張フレーム オブジェクトかどうかを確認します。
 
 ### <a name="syntax"></a>構文
@@ -453,16 +453,16 @@ BOOL AFXAPI AfxIsExtendedFrameClass( CWnd* pWnd );
 
 ### <a name="parameters"></a>パラメーター
 
-*我が物*<br/>
-[in]派生したオブジェクトへのポインター`CWnd`します。
+*pWnd*<br/>
+からから`CWnd`派生したオブジェクトへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-指定されたウィンドウが拡張フレーム オブジェクトは、TRUE を返します。それ以外の場合は FALSE です。
+指定されたウィンドウが拡張フレームオブジェクトである場合は TRUE。それ以外の場合は FALSE。
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、場合に TRUE を返します*我が物*クラスを次のいずれかから派生します。
+このメソッドは、次のいずれかのクラスから*pWnd*が派生している場合に TRUE を返します。
 
 - `CFrameWndEx`
 
@@ -480,9 +480,9 @@ BOOL AFXAPI AfxIsExtendedFrameClass( CWnd* pWnd );
 
 **ヘッダー:** afxpriv.h
 
-## <a name="afxismfctoolbar"></a> AfxIsMFCToolBar
+## <a name="afxismfctoolbar"></a>AfxIsMFCToolBar
 
-指定されたウィンドウがツール バー オブジェクトであるかどうかを判断します。
+指定されたウィンドウがツールバーオブジェクトであるかどうかを判断します。
 
 ### <a name="syntax"></a>構文
 
@@ -492,24 +492,24 @@ BOOL AFXAPI AfxIsMFCToolBar(CWnd* pWnd);
 
 ### <a name="parameters"></a>パラメーター
 
-*我が物*<br/>
-[in]派生したオブジェクトへのポインター`CWnd`します。
+*pWnd*<br/>
+からから`CWnd`派生したオブジェクトへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-指定されたウィンドウは、ツールバーのオブジェクトは、TRUE を返します。それ以外の場合は FALSE です。
+指定されたウィンドウがツールバーオブジェクトである場合は TRUE。それ以外の場合は FALSE。
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドが戻る`TRUE`場合*我が物*から派生した`CMFCToolBar`します。 このメソッドは関数またはメソッドのパラメーターがあることを検証するときに、`CMFCToolBar`オブジェクト。
+このメソッドは`TRUE` 、がから`CMFCToolBar`派生している場合、を返します。 このメソッドは、関数またはメソッドのパラメーターがオブジェクトで`CMFCToolBar`あることを検証する必要がある場合に便利です。
 
 ### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxpriv.h
 
-## <a name="afxkeyboardmanager"></a> AfxKeyboardManager
+## <a name="afxkeyboardmanager"></a>AfxKeyboardManager
 
-グローバルへのポインター[キーボード manager](ckeyboardmanager-class.md)します。
+グローバル[キーボードマネージャー](ckeyboardmanager-class.md)へのポインター。
 
 ### <a name="syntax"></a>構文
 
@@ -519,11 +519,11 @@ CKeyboardManager* afxKeyboardManager;
 
 ### <a name="requirements"></a>必要条件
 
-**ヘッダー:** afxkeyboardmanager.h
+**ヘッダー:** afxkeyboardmanager
 
-##  <a name="afxloadlibrary"></a>  AfxLoadLibrary
+##  <a name="afxloadlibrary"></a>AfxLoadLibrary
 
-使用`AfxLoadLibrary`DLL モジュールをマップします。
+DLL `AfxLoadLibrary`モジュールをマップするために使用します。
 
 ```
 HINSTANCE AFXAPI AfxLoadLibrary(LPCTSTR lpszModuleName);
@@ -532,19 +532,19 @@ HINSTANCE AFXAPI AfxLoadLibrary(LPCTSTR lpszModuleName);
 ### <a name="parameters"></a>パラメーター
 
 *lpszModuleName*<br/>
-モジュールの名前を含む null で終わる文字列の指す (いずれかをします。DLL またはします。EXE ファイルの場合)。 指定した名前は、モジュールのファイル名です。
+モジュールの名前 () を含む null で終わる文字列を指します。DLL または。EXE ファイル) を実行します。 指定された名前は、モジュールのファイル名です。
 
-文字列のパスを指定するファイルが指定されたディレクトリに存在しない場合は、関数は失敗します。
+文字列にパスが指定されていても、指定したディレクトリにファイルが存在しない場合、関数は失敗します。
 
-パスが指定されていないと、ファイル名拡張子を省略した場合、既定の拡張機能。DLL が追加されます。 ただし、ファイル名の文字列では、モジュール名に拡張機能がないことを示す後続のポイント文字 (.) を含めることができます。 パスが指定されていない場合、関数は、次の順序でファイルを検索します。
+パスが指定されておらず、ファイル名拡張子が省略されている場合は、既定の拡張子です。DLL が追加されます。 ただし、ファイル名の文字列には、モジュール名に拡張子が付いていないことを示すために、末尾のポイント文字 (.) を含めることができます。 パスが指定されていない場合、関数は次の順序でファイルを検索します。
 
 - アプリケーションの読み込み元のディレクトリ。
 
 - 現在のフォルダー。
 
-- **Windows 95/98:** Windows システム フォルダー。 **Windows NT:** 32 ビット Windows システム ディレクトリ。 このディレクトリの名前は、SYSTEM32 です。
+- **Windows 95/98:** Windows システム フォルダー。 **Windows NT:** 32ビットの Windows システムディレクトリ。 このディレクトリの名前は SYSTEM32 です。
 
-- **Windows NT でのみ使用します。** 16 ビット Windows システム ディレクトリ。 このディレクトリのパスを取得する Win32 関数はありませんが、これが検索されます。 このディレクトリの名前は、システムです。
+- **Windows NT のみ:** 16ビットの Windows システムディレクトリ。 このディレクトリのパスを取得する Win32 関数はありませんが、検索されます。 このディレクトリの名前は SYSTEM です。
 
 - Windows ディレクトリ。
 
@@ -552,17 +552,17 @@ HINSTANCE AFXAPI AfxLoadLibrary(LPCTSTR lpszModuleName);
 
 ### <a name="return-value"></a>戻り値
 
-関数が成功した場合は、モジュールへのハンドルを返します。 関数が失敗した場合、戻り値は NULL です。
+関数が成功した場合、戻り値はモジュールへのハンドルになります。 関数が失敗した場合、戻り値は NULL になります。
 
 ### <a name="remarks"></a>Remarks
 
-使用できるハンドルを返します[GetProcAddress](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress) DLL 関数のアドレスを取得します。 `AfxLoadLibrary` その他の実行可能モジュールにマップすることも使用できます。
+これは、 [GetProcAddress](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress)で DLL 関数のアドレスを取得するために使用できるハンドルを返します。 `AfxLoadLibrary`は、他の実行可能モジュールをマップするためにも使用できます。
 
-各プロセスは、各ライブラリが読み込まれたモジュールの参照カウントを保持します。 この参照カウントは毎回`AfxLoadLibrary`と呼びます。 毎回デクリメントされる`AfxFreeLibrary`が呼び出されます。 参照カウントがゼロに達するし、モジュールは、呼び出し元プロセスのアドレス空間からマップされたが、ハンドルが無効になった。
+各プロセスは、読み込まれた各ライブラリモジュールの参照カウントを保持します。 が呼び出されるたびに、この`AfxLoadLibrary`参照カウントがインクリメントされ、 `AfxFreeLibrary`が呼び出されるたびにデクリメントされます。 参照カウントがゼロになると、モジュールは呼び出し元プロセスのアドレス空間からマップ解除され、ハンドルは無効になります。
 
-使用して、必ず`AfxLoadLibrary`と`AfxFreeLibrary`(Win32 関数ではなく`LoadLibrary`と`FreeLibrary`) MFC 拡張 DLL を動的に読み込む場合と、アプリケーションが複数のスレッドを使用している場合。 使用して`AfxLoadLibrary`と`AfxFreeLibrary`MFC 拡張 DLL が読み込まれ、アンロードされたときに実行されるスタートアップとシャット ダウン コードが MFC のグローバル状態を破損しないことを保証します。
+アプリケーションで複数の`AfxLoadLibrary`スレッドを使用し、MFC 拡張 DLL `FreeLibrary`を動的に読み込む場合は、(Win32 関数`LoadLibrary`およびの代わりに) と`AfxFreeLibrary`を必ず使用してください。 および`AfxLoadLibrary`を`AfxFreeLibrary`使用すると、mfc 拡張 DLL が読み込まれてアンロードされるときに実行される起動コードとシャットダウンコードが、mfc のグローバル状態を破壊しないことが保証されます。
 
-使用して`AfxLoadLibrary`アプリケーションでは MFC の DLL バージョンに動的にリンクすることが必要です。 のヘッダー ファイル`AfxLoadLibrary`、Afxdll_.h、は、MFC が DLL としてのアプリケーションにリンクされている場合に含まれます。 これは、使用または MFC 拡張 Dll を作成する MFC の DLL バージョンにリンクする必要があるため、設計します。
+アプリケーション`AfxLoadLibrary`でを使用するには、mfc の dll バージョンに動的にリンクする必要があり`AfxLoadLibrary`ます。 Afxdll_ のヘッダーファイルは、mfc が dll としてアプリケーションにリンクされている場合にのみ含まれます。 これは仕様です。 MFC の拡張 Dll を使用または作成するには、MFC の DLL バージョンにリンクする必要があるためです。
 
 ### <a name="example"></a>例
 
@@ -572,11 +572,11 @@ HINSTANCE AFXAPI AfxLoadLibrary(LPCTSTR lpszModuleName);
 
 ### <a name="requirements"></a>必要条件
 
-  **ヘッダー** afxdll_.h
+  **ヘッダー** afxdll_
 
-## <a name="afxmenutearoffmanager"></a> AfxMenuTearOffManager
+## <a name="afxmenutearoffmanager"></a>AfxMenuTearOffManager
 
-グローバルへのポインター[ティアオフ メニュー マネージャー](cmenutearoffmanager-class.md)します。
+グローバル[ティアオフメニューマネージャー](cmenutearoffmanager-class.md)へのポインター。
 
 ### <a name="syntax"></a>構文
 
@@ -586,11 +586,11 @@ CMenuTearOffManager* g_pTearOffMenuManager;
 
 ### <a name="requirements"></a>必要条件
 
-**ヘッダー:** afxmenutearoffmanager.h
+**ヘッダー:** afxmenutearoffmanager
 
-## <a name="afxmousemanager"></a>  AfxMouseManager
+## <a name="afxmousemanager"></a>AfxMouseManager
 
-グローバルへのポインター[マウス manager](cmousemanager-class.md)します。
+グローバル[マウスマネージャー](cmousemanager-class.md)へのポインター。
 
 ### <a name="syntax"></a>構文
 
@@ -600,11 +600,11 @@ CMouseManager* afxMouseManager;
 
 ### <a name="requirements"></a>必要条件
 
-**ヘッダー:** afxmousemanager.h
+**ヘッダー:** afxmousemanager
 
-##  <a name="afxregisterclass"></a>  AfxRegisterClass
+##  <a name="afxregisterclass"></a>AfxRegisterClass
 
-この関数を使用して、MFC を使用する DLL にウィンドウ クラスを登録します。
+MFC を使用する DLL にウィンドウクラスを登録するには、この関数を使用します。
 
 ```
 BOOL AFXAPI AfxRegisterClass(WNDCLASS* lpWndClass);
@@ -613,17 +613,17 @@ BOOL AFXAPI AfxRegisterClass(WNDCLASS* lpWndClass);
 ### <a name="parameters"></a>パラメーター
 
 *lpWndClass*<br/>
-ポインターを[WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa)登録されるウィンドウ クラスに関する情報を含む構造体。 この構造体の詳細については、Windows SDK を参照してください。
+登録するウィンドウクラスに関する情報を格納している[WNDCLASS](/windows/win32/api/winuser/ns-winuser-wndclassw)構造体へのポインター。 この構造の詳細については、Windows SDK を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
-TRUE の場合、クラスが正常に登録します。それ以外の場合は FALSE です。
+クラスが正常に登録された場合は TRUE。それ以外の場合は FALSE。
 
 ### <a name="remarks"></a>Remarks
 
-この関数を使用する場合、クラスは自動的に登録された DLL がアンロードされるときです。
+この関数を使用すると、DLL がアンロードされるときにクラスが自動的に登録解除されます。
 
-非 DLL のビルドでは、`AfxRegisterClass`識別子が Windows 関数にマップするマクロとして定義されている`RegisterClass`アプリケーションに登録されているクラスは、自動的に登録されているため、します。 使用する場合`AfxRegisterClass`の代わりに`RegisterClass`アプリケーションと DLL の両方を変更せずに、コードを使用できます。
+DLL 以外のビルド`AfxRegisterClass`では、アプリケーションに登録されているクラスが自動的に登録解除されるため、識別子は Windows 関数`RegisterClass`にマップされるマクロとして定義されます。 `AfxRegisterClass` の`RegisterClass`代わりにを使用する場合は、アプリケーションと DLL の両方でコードを変更せずに使用できます。
 
 ### <a name="example"></a>例
 
@@ -633,9 +633,9 @@ TRUE の場合、クラスが正常に登録します。それ以外の場合は
 
   **ヘッダー** afxwin.h
 
-##  <a name="afxregisterwndclass"></a>  AfxRegisterWndClass
+##  <a name="afxregisterwndclass"></a>AfxRegisterWndClass
 
-独自のウィンドウ クラスを登録することができます。
+独自のウィンドウクラスを登録できます。
 
 ```
 LPCTSTR AFXAPI AfxRegisterWndClass(
@@ -648,41 +648,41 @@ LPCTSTR AFXAPI AfxRegisterWndClass(
 ### <a name="parameters"></a>パラメーター
 
 *nClassStyle*<br/>
-Windows クラスのスタイルまたはビットごとの OR を使用して作成されたスタイルの組み合わせを指定します ( **&#124;** ) ウィンドウ クラスの演算子。 クラスのスタイルの一覧は、次を参照してください。、 [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa) Windows SDK の構造体。 NULL の場合、既定値としては、次のように設定されます。
+ウィンドウクラスに対して、ビットごとの OR ( **&#124;** ) 演算子を使用して作成された Windows クラススタイルまたはスタイルの組み合わせを指定します。 クラススタイルの一覧については、Windows SDK の[WNDCLASS](/windows/win32/api/winuser/ns-winuser-wndclassw)構造体を参照してください。 NULL の場合、既定値は次のように設定されます。
 
-- CS_DBLCLKS、送信メッセージをダブルクリックしてウィンドウ プロシージャ、ユーザーがマウスをダブルクリックしたときにマウスのスタイルを設定します。
+- マウスのスタイルを CS_DBLCLKS に設定します。これは、ユーザーがマウスをダブルクリックすると、ダブルクリックメッセージをウィンドウプロシージャに送信します。
 
-- Windows 標準 IDC_ARROW 矢印カーソル スタイルに設定します。
+- 矢印カーソルのスタイルを Windows 標準 IDC_ARROW に設定します。
 
-- ウィンドウはその背景を消去されませんので、NULL に背景ブラシを設定します。
+- 背景ブラシを NULL に設定します。これにより、ウィンドウの背景が消去されません。
 
-- 標準的な手を振るフラグの Windows ロゴのアイコン、アイコンに設定します。
+- アイコンを標準の [フラグが設定された Windows ロゴ] アイコンに設定します。
 
 *hCursor*<br/>
-ウィンドウ クラスから作成された各ウィンドウにインストールする、カーソルのリソースを識別するハンドルを指定します。 既定値を使用する場合**0**、標準の IDC_ARROW カーソルが表示されます。
+ウィンドウクラスから作成された各ウィンドウにインストールされるカーソルリソースへのハンドルを指定します。 既定値の**0**を使用すると、標準の IDC_ARROW カーソルが取得されます。
 
 *hbrBackground*<br/>
-ウィンドウ クラスから作成された各ウィンドウにインストールする、ブラシ リソースを識別するハンドルを指定します。 既定値を使用する場合**0**NULL 背景のブラシを必要があります、ウィンドウは、既定では消去されません、バック グラウンド処理中に、 [WM_ERASEBKGND](/windows/desktop/winmsg/wm-erasebkgnd)します。
+ウィンドウクラスから作成された各ウィンドウにインストールされるブラシリソースへのハンドルを指定します。 既定値の**0**を使用すると、NULL の背景ブラシが作成され、ウィンドウは既定で[WM_ERASEBKGND](/windows/win32/winmsg/wm-erasebkgnd)の処理中にバックグラウンドを消去しません。
 
 *hIcon*<br/>
-ウィンドウ クラスから作成された各ウィンドウにインストールする、アイコン リソースを識別するハンドルを指定します。 既定値を使用する場合**0**、標準的な手を振るフラグの Windows ロゴのアイコンが表示されます。
+ウィンドウクラスから作成された各ウィンドウにインストールされるアイコンリソースへのハンドルを指定します。 既定値の**0**を使用すると、標準のフラグが設定された Windows ロゴアイコンが表示されます。
 
 ### <a name="return-value"></a>戻り値
 
-クラス名を含む null で終わる文字列。 このクラス名を渡すことができます、`Create`メンバー関数で`CWnd`またはその他の**CWnd-** ウィンドウを作成するクラスを派生します。 名前は、Microsoft Foundation Class ライブラリによって生成されます。
+クラス名を格納している null で終わる文字列。 ウィンドウを作成するために、 `Create` `CWnd`または他の**CWnd**の派生クラスのメンバー関数にこのクラス名を渡すことができます。 名前は Microsoft Foundation Class ライブラリによって生成されます。
 
 > [!NOTE]
->  戻り値は、静的バッファーへのポインターです。 この文字列を保存するには、それを割り当てる、`CString`変数。
+>  戻り値は、静的バッファーへのポインターです。 この文字列を保存するには、 `CString`変数に割り当てます。
 
 ### <a name="remarks"></a>Remarks
 
-Microsoft Foundation Class ライブラリでは、いくつかの標準のウィンドウ クラスが自動的に登録します。 独自のウィンドウ クラスを登録する場合は、この関数を呼び出します。
+Microsoft Foundation Class ライブラリによって、いくつかの標準ウィンドウクラスが自動的に登録されます。 独自のウィンドウクラスを登録する場合は、この関数を呼び出します。
 
-クラスの名前が登録されている`AfxRegisterWndClass`パラメーターにのみ依存します。 呼び出す場合`AfxRegisterWndClass`複数回と同じパラメーターを持つことのみクラスを登録する最初の呼び出しで。 後続の呼び出し`AfxRegisterWndClass`と同じパラメーターを持つ登録済みのクラス名を返すだけです。
+によって`AfxRegisterWndClass`クラスに登録された名前は、パラメーターだけに依存します。 同じパラメーターを`AfxRegisterWndClass`使用してを複数回呼び出すと、最初の呼び出しでクラスが登録されるだけです。 同じパラメーター `AfxRegisterWndClass`を持つの後続の呼び出しでは、既に登録されている classname が返されます。
 
-呼び出す場合`AfxRegisterWndClass`クラスごとに別のウィンドウ クラスを取得する代わりに、同じパラメーターを持つ複数の CWnd から派生したクラスの各クラスは、同じウィンドウ クラスを共有します。 これは CS_CLASSDC クラスのスタイルを使用する場合、問題が発生することができます。 複数の CS_CLASSDC ウィンドウ クラスではなく最終的に 1 つの CS_CLASSDC ウィンドウ クラス、およびすべてC++クラスを使用する windows は、同じ DC を共有します。 この問題を回避するには、呼び出す[AfxRegisterClass](#afxregisterclass)クラスを登録します。
+同じパラメーターを`AfxRegisterWndClass`持つ複数の CWnd 派生クラスに対してを呼び出すと、各クラスに対して個別のウィンドウクラスを取得するのではなく、各クラスが同じウィンドウクラスを共有します。 これにより、CS_CLASSDC クラススタイルが使用されている場合に問題が発生する可能性があります。 複数の CS_CLASSDC ウィンドウクラスの代わりに、CS_CLASSDC ウィンドウクラスが1つずつ作成さC++れ、そのクラスを使用するすべてのウィンドウが同じ DC を共有します。 この問題を回避するには、 [AfxRegisterClass](#afxregisterclass)を呼び出してクラスを登録します。
 
-テクニカル ノートを参照してください[TN001:ウィンドウ クラスの登録](../../mfc/tn001-window-class-registration.md)ウィンドウ クラスの登録の詳細については、`AfxRegisterWndClass`関数。
+テクニカルノート[テクニカルノート1を参照してください。ウィンドウクラスの](../../mfc/tn001-window-class-registration.md)登録`AfxRegisterWndClass`と関数の詳細については、ウィンドウクラスの登録に関する情報を参照してください。
 
 ### <a name="example"></a>例
 
@@ -692,9 +692,9 @@ Microsoft Foundation Class ライブラリでは、いくつかの標準のウ�
 
   **ヘッダー** afxwin.h
 
-##  <a name="afxsetperuserregistration"></a>  AfxSetPerUserRegistration
+##  <a name="afxsetperuserregistration"></a>AfxSetPerUserRegistration
 
-アプリケーションにレジストリのアクセスをリダイレクトするかどうかを設定、 **HKEY_CURRENT_USER** ( **HKCU**) ノードです。
+アプリケーションが**HKEY_CURRENT_USER** ( **HKCU**) ノードへのレジストリアクセスをリダイレクトするかどうかを設定します。
 
 ```
 void AFXAPI AfxSetPerUserRegistration(BOOL bEnable);
@@ -703,25 +703,25 @@ void AFXAPI AfxSetPerUserRegistration(BOOL bEnable);
 ### <a name="parameters"></a>パラメーター
 
 *bEnable*<br/>
-[in]TRUE は、HKCU ノードにレジストリ情報が送られることを示しますFALSE は、アプリケーションが既定のノードにレジストリ情報を書き出すことを示します。 既定のノードが**HKEY_CLASSES_ROOT** ( **HKCR**)。
+からTRUE は、レジストリ情報が HKCU ノードに送られることを示します。FALSE は、アプリケーションがレジストリ情報を既定のノードに書き込むことを示します。 既定のノードは**HKEY_CLASSES_ROOT** ( **HKCR**) です。
 
 ### <a name="remarks"></a>Remarks
 
-Windows Vista では、通常使用されるレジストリにアクセスするアプリケーションの前に、 **HKEY_CLASSES_ROOT**ノード。 ただし、Windows Vista またはそれ以降のオペレーティング システムでは、HKCR への書き込みに管理者特権モードでアプリケーションを実行する必要があります。
+Windows Vista より前では、レジストリにアクセスしたアプリケーションでは通常、 **HKEY_CLASSES_ROOT**ノードが使用されていました。 ただし、Windows Vista 以降のオペレーティングシステムでは、HKCR に書き込むには、管理者特権モードでアプリケーションを実行する必要があります。
 
-このメソッドは、読み取りし、書き込みを HKCU、HKCR からレジストリ アクセスをリダイレクトすることにより、管理者特権モードで実行することがなく、レジストリにアプリケーションを使用します。 詳細については、「 [Linker Property Pages](../../build/reference/linker-property-pages.md)」を参照してください。
+このメソッドを使用すると、レジストリアクセスを HKCR から HKCU にリダイレクトすることにより、アプリケーションでレジストリへの読み取りと書き込みを管理者特権モードで実行できます。 詳細については、「 [Linker Property Pages](../../build/reference/linker-property-pages.md)」を参照してください。
 
-フレームワークが HKCR へのアクセスをリダイレクトするレジストリのリダイレクトを有効にした場合**する**します。 MFC と ATL のフレームワークは、リダイレクトの影響を受けます。
+レジストリリダイレクトを有効にすると、フレームワークは HKCR から**HKEY_CURRENT_USER\Software\Classes**へのアクセスをリダイレクトします。 リダイレクトによって影響を受けるのは、MFC フレームワークと ATL フレームワークだけです。
 
 既定の実装では、HKCR の下のレジストリにアクセスします。
 
 ### <a name="requirements"></a>必要条件
 
-  **ヘッダー** afxstat_.h
+  **ヘッダー** afxstat_
 
-##  <a name="afxsetresourcehandle"></a>  AfxSetResourceHandle
+##  <a name="afxsetresourcehandle"></a>AfxSetResourceHandle
 
-この関数を使用すると、アプリケーションの既定のリソースが読み込まれるを決定する HINSTANCE ハンドルを設定できます。
+この関数を使用して、アプリケーションの既定のリソースが読み込まれる場所を決定する HINSTANCE handle を設定します。
 
 ```
 void AFXAPI AfxSetResourceHandle(HINSTANCE hInstResource);
@@ -730,7 +730,7 @@ void AFXAPI AfxSetResourceHandle(HINSTANCE hInstResource);
 ### <a name="parameters"></a>パラメーター
 
 *hInstResource*<br/>
-インスタンスまたはモジュールを識別するハンドルをします。アプリケーションのリソースの読み込み元の EXE または DLL ファイルです。
+のインスタンスまたはモジュールハンドル。アプリケーションのリソースの読み込み元となる EXE または DLL ファイル。
 
 ### <a name="example"></a>例
 
@@ -740,9 +740,9 @@ void AFXAPI AfxSetResourceHandle(HINSTANCE hInstResource);
 
   **ヘッダー** afxwin.h
 
-## <a name="afxshellmanager"></a>  AfxShellManager
+## <a name="afxshellmanager"></a>AfxShellManager
 
-グローバルへのポインター[シェル マネージャー](cshellmanager-class.md)します。
+グローバル[シェルマネージャー](cshellmanager-class.md)へのポインター。
 
 ### <a name="syntax"></a>構文
 
@@ -752,11 +752,11 @@ CShellManager* afxShellManager;
 
 ### <a name="requirements"></a>必要条件
 
-**ヘッダー:** afxshellmanager.h
+**ヘッダー:** afxshellmanager
 
-##  <a name="afxsocketinit"></a>  AfxSocketInit
+##  <a name="afxsocketinit"></a>AfxSocketInit
 
-この関数を呼び出して、 `CWinApp::InitInstance` Windows Sockets を初期化するためにオーバーライドします。
+Windows ソケットを初期化する`CWinApp::InitInstance`には、オーバーライドでこの関数を呼び出します。
 
 ```
 BOOL AfxSocketInit(WSADATA* lpwsaData = NULL);
@@ -765,7 +765,7 @@ BOOL AfxSocketInit(WSADATA* lpwsaData = NULL);
 ### <a name="parameters"></a>パラメーター
 
 *lpwsaData*<br/>
-ポインターを[WSADATA](/windows/desktop/api/winsock2/ns-winsock2-wsadata)構造体。 場合*lpwsaData*が null の場合、次のアドレスと等しく、`WSADATA`構造はへの呼び出しで塗りつぶされます`WSAStartup`します。 この関数も確実に`WSACleanup`アプリケーションが終了する前が呼び出されます。
+[WSADATA](/windows/win32/api/winsock2/ns-winsock2-wsadata)構造体へのポインター。 *LpwsaData*が NULL でない場合は、の呼び出しに`WSADATA` `WSAStartup`よって構造体のアドレスが格納されます。 また、この関数は`WSACleanup` 、アプリケーションが終了する前にが呼び出されるようにします。
 
 ### <a name="return-value"></a>戻り値
 
@@ -773,15 +773,15 @@ BOOL AfxSocketInit(WSADATA* lpwsaData = NULL);
 
 ### <a name="remarks"></a>Remarks
 
-静的にリンクされた MFC アプリケーションでセカンダリ スレッドで MFC ソケットを使用する場合を呼び出す必要があります`AfxSocketInit`ソケット ライブラリを初期化するためにソケットを使用する各スレッドにします。 既定では、`AfxSocketInit`は、プライマリ スレッドでのみ呼び出されます。
+静的にリンクされた mfc アプリケーションでセカンダリスレッドで mfc ソケットを使用`AfxSocketInit`する場合は、ソケットライブラリを初期化するためにソケットを使用する各スレッドでを呼び出す必要があります。 既定では`AfxSocketInit` 、はプライマリスレッドでのみ呼び出されます。
 
 ### <a name="requirements"></a>必要条件
 
-  **ヘッダー** afxsock.h
+  **ヘッダー** afxsock
 
-## <a name="afxusertoolsmanager"></a>  AfxUserToolsManager
+## <a name="afxusertoolsmanager"></a>AfxUserToolsManager
 
-グローバルへのポインター[ユーザー ツール マネージャー](cusertoolsmanager-class.md)します。
+グローバル[ユーザーツールマネージャー](cusertoolsmanager-class.md)へのポインター。
 
 ### <a name="syntax"></a>構文
 
@@ -791,11 +791,11 @@ CUserToolsManager* afxUserToolsManager;
 
 ### <a name="requirements"></a>必要条件
 
-**ヘッダー:** afxusertoolsmanager.h
+**ヘッダー:** afxusertoolsmanager
 
-##  <a name="afxwininit"></a>  AfxWinInit
+##  <a name="afxwininit"></a>AfxWinInit
 
-この関数は MFC 指定によって呼び出されます`WinMain`の一部として、関数、 [CWinApp](../../mfc/reference/cwinapp-class.md) MFC を初期化するために、GUI ベースのアプリケーションの初期化。
+この関数は、GUI ベースのアプリケーションの`WinMain` [CWinApp](../../mfc/reference/cwinapp-class.md)初期化の一部として、mfc が提供する関数によって呼び出され、mfc を初期化します。
 
 ```
 BOOL AFXAPI AfxWinInit(
@@ -811,22 +811,22 @@ BOOL AFXAPI AfxWinInit(
 現在実行中のモジュールのハンドル。
 
 *hPrevInstance*<br/>
-アプリケーションの以前のインスタンスへのハンドル。 Win32 ベースのアプリケーションでは、このパラメーターは常に**NULL**します。
+アプリケーションの前のインスタンスを対象としたハンドル。 Win32 ベースのアプリケーションの場合、このパラメーターは常に**NULL**になります。
 
 *lpCmdLine*<br/>
-アプリケーションのコマンドラインを指定する null で終わる文字列へのポインター。
+は、アプリケーションのコマンドラインを指定する null で終わる文字列を指します。
 
 *nCmdShow*<br/>
-GUI アプリケーションのメイン ウィンドウの表示方法を指定します。
+GUI アプリケーションのメインウィンドウを表示する方法を指定します。
 
 ### <a name="remarks"></a>Remarks
 
-コンソール アプリケーションでは、これを使用しません MFC が指定した`WinMain`関数を呼び出す必要があります`AfxWinInit`MFC を初期化するために直接します。
+Mfc によって提供`WinMain`される関数を使用しないコンソールアプリケーションの場合は、を直接呼び出し`AfxWinInit`て mfc を初期化する必要があります。
 
-呼び出す場合`AfxWinInit`のインスタンスを宣言、自分で、`CWinApp`クラス。 コンソール アプリケーションの場合からクラスを派生が選択した可能性があります`CWinApp`のインスタンスを使用して、代わりに、`CWinApp`直接します。 この手法は、アプリケーションのすべての機能の実装のままにする場合に適切な**メイン**します。
+自分でを`AfxWinInit`呼び出す場合は、 `CWinApp`クラスのインスタンスを宣言する必要があります。 コンソールアプリケーションでは、から`CWinApp`独自のクラスを派生させずに、の`CWinApp`インスタンスを直接使用することもできます。 この手法は、アプリケーションのすべての機能を**main**の実装に残しておく場合に適しています。
 
 > [!NOTE]
->  アセンブリのアクティベーション コンテキストを作成するとき、MFC はユーザー モジュールによって得られるマニフェスト リソースを使用します。 アクティブ化コンテキストが作成された`AfxWinInit`します。 詳細については、次を参照してください。[の MFC モジュール状態でアクティブ化コンテキストのサポート](../../mfc/support-for-activation-contexts-in-the-mfc-module-state.md)します。
+>  アセンブリのアクティベーションコンテキストを作成すると、MFC はユーザーモジュールによって提供されるマニフェストリソースを使用します。 アクティベーションコンテキストは、 `AfxWinInit`で作成されます。 詳細については、「 [MFC モジュール状態でのアクティベーションコンテキストのサポート](../../mfc/support-for-activation-contexts-in-the-mfc-module-state.md)」を参照してください。
 
 ### <a name="example"></a>例
 

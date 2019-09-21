@@ -54,11 +54,11 @@ DAO エラー、DAO エラー オブジェクトの種類、および DAO Errors
 
 ##  <a name="_core_a_database_exception.2d.handling_example"></a> データベース例外処理の例
 
-次の例が、構築しようとしています。、 [CRecordset](../mfc/reference/crecordset-class.md)-派生でヒープのオブジェクト、**新しい**演算子、および (ODBC データ ソース) のレコード セットを開きます。 DAO クラスの同様の例は、「DAO 例外次の例」を参照してください。
+次の例が、構築しようとしています。、 [CRecordset](../mfc/reference/crecordset-class.md)-派生でヒープのオブジェクト、**new** 演算子、および (ODBC データ ソース) のレコード セットを開きます。 DAO クラスの同様の例は、「DAO 例外次の例」を参照してください。
 
 ### <a name="odbc-exception-example"></a>ODBC 例外の例
 
-[オープン](../mfc/reference/crecordset-class.md#open)メンバー関数が例外をスロー (型の[CDBException](../mfc/reference/cdbexception-class.md) ODBC クラス)、そのためこの角かっこをコード、`Open`呼び出しが、**お試しください**ブロック。 それに続く**キャッチ**ブロックがキャッチ、`CDBException`します。 呼ばれる自体には、例外オブジェクトを調べることができます`e`にはここで、レコード セットを作成する試みが失敗したことを知る十分です。 **キャッチ**ブロックがメッセージ ボックスを表示し、レコード セット オブジェクトを削除して、クリーンアップします。
+[オープン](../mfc/reference/crecordset-class.md#open)メンバー関数が例外をスロー (型の[CDBException](../mfc/reference/cdbexception-class.md) ODBC クラス)、そのためこの角かっこをコード、`Open`呼び出しが、**try** ブロック。 それに続く**catch** ブロックがキャッチ、`CDBException`します。 呼ばれる自体には、例外オブジェクトを調べることができます`e`にはここで、レコード セットを作成する試みが失敗したことを知る十分です。 **catch** ブロックがメッセージ ボックスを表示し、レコード セット オブジェクトを削除して、クリーンアップします。
 
 [!code-cpp[NVC_MFCDatabase#36](../mfc/codesnippet/cpp/exceptions-database-exceptions_1.cpp)]
 

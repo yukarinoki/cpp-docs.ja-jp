@@ -1,26 +1,26 @@
 ---
 title: C++ 準拠の強化
-ms.date: 06/14/2019
+ms.date: 08/30/2019
 description: Visual Studio の Microsoft C++ は、C++20 言語標準との完全準拠に向かって進んでいます。
 ms.technology: cpp-language
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 1652c7ab9a48de65b32123b34c3231a0b06a410a
-ms.sourcegitcommit: 0ad35b26e405bbde17dc0bd0141e72f78f0a38fb
+ms.openlocfilehash: aeaaab704706bee575e3ae44726522cd04c17433
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67194785"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222317"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Visual Studio の C++ 準拠の強化
 
 Microsoft C++ では、リリースごとに準拠強化とバグ修正を行っています。 この記事では、機能強化をメジャー リリースごと、バージョンごとに一覧で紹介します。 また、主要なバグ修正もバージョンごとに一覧で紹介します。 特定のバージョンで行われた変更に直接移動するには、**この記事**の一覧を使用します。
 
-::: moniker range=">=vs-2019"
+::: moniker range="vs-2019"
 
-## <a name="improvements_160"></a> Visual Studio 2019 RTW (バージョン 16.0) での機能強化
+## <a name="improvements_160"></a> Visual Studio 2019 RTW (バージョン 16.0) の準拠の強化
 
-Visual Studio 2019 RTW には、Microsoft C++ コンパイラ (MSVC) の次の準拠強化、バグ修正、動作変更が含まれます。
+Visual Studio 2019 RTW には、Microsoft C++ コンパイラ (MSVC) の次の準拠強化、バグ修正、動作変更が含まれます
 
 **注:** C++20 の機能は、コンパイラと IntelliSense の C++20 実装が完了するまで `/std:c++latest` モードで利用できます。 その時点で、`/std:c++20` コンパイラ モードが導入されます。
 
@@ -93,7 +93,7 @@ int main()
 }
 ```
 
-### <a name="reinterpretcast-from-an-overloaded-function"></a>オーバー ロードした関数からの `reinterpret_cast`
+### <a name="reinterpret_cast-from-an-overloaded-function"></a>オーバー ロードした関数からの `reinterpret_cast`
 
 `reinterpret_cast` の引数は、オーバーロードした関数のアドレスが許可されるコンテキストの 1 つではありません。 次のコードは Visual Studio 2017 ではエラーなくコンパイルされますが、Visual Studio 2019 では *C2440: cannot convert from 'overloaded-function' to 'fp'* ('オーバーロードした関数' を 'fp' に変換できません) が発生します。
 
@@ -134,7 +134,7 @@ int main()
 
 エラーを回避するには、`constexpr` 修飾子を削除するか、準拠モードを `/std:c++17` に変更します。
 
-### <a name="stdcreatedirectory-failure-codes"></a>`std::create_directory` エラー コード
+### <a name="stdcreate_directory-failure-codes"></a>`std::create_directory` エラー コード
 
 無条件で C++20 から [P1164](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1164r1.pdf) が実装されました。 これにより、エラー時、ターゲットが既にディレクトリであったかどうかを確認するように `std::create_directory` が変更されます。 以前は、ERROR_ALREADY_EXISTS タイプのエラーはすべて、success-but-directory-not-created コードに変換されました。
 
@@ -150,7 +150,7 @@ int main()
 
 [P0883 "Fixing atomic initialization"](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0883r1.pdf) により、含まれる T を既定初期化せず、値初期化するように `std::atomic` が変更されます。 Clang/LLVM と Microsoft 標準ライブラリが使用されるとき、修正は有効になります。 Microsoft C++ コンパイラでは、`constexpr` 処理のバグに対する回避策としてこれは現在、無効になっています。
 
-### <a name="removecvref-and-removecvreft"></a>`remove_cvref` および `remove_cvref_t`
+### <a name="remove_cvref-and-remove_cvref_t"></a>`remove_cvref` および `remove_cvref_t`
 
 [P0550](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0550r2.pdf) から型の特徴、`remove_cvref` と `remove_cvref_t` を実装しました。 それにより、(`std::decay` や `std::decay_t` とは異なり) 関数や配列をポインターに減衰させることなく、reference-ness と cv 修飾が型から削除されます。
 
@@ -162,9 +162,9 @@ int main()
 
 [C++20 P1008R1 - ユーザー宣言コンストラクターによる集計の禁止](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p1008r1.pdf)は完全です。
 
-## <a name="improvements_161"></a> Visual Studio 2019 バージョン 16.1 の改善
+## <a name="improvements_161"></a> 16.1 の準拠の強化
 
-### <a name="char8t"></a>char8_t
+### <a name="char8_t"></a>char8_t
 
 [P0482r6](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0482r6.html)。 C++20 では、UTF-8 コード単位を表すための新しい文字型が追加されます。 C++20 の `u8` 文字列リテラルには、以前の `const char[N]` に代わり、型 `const char8_t[N]` が与えられます。 [N2231](http://www.open-std.org/jtc1/sc22/wg14/www/docs/n2231.htm) では、C 標準に同様の変更が提案されています。 `char8_t` 下位互換性改善の提案が [P1423r0](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1423r0.html) で与えられています。 **/Zc:char8_t** コンパイラ オプションを指定すると、Microsoft C++ コンパイラでは、Visual Studio 2019 バージョン 16.1 の `char8_t` のサポートが追加されます。 将来的にこれは [/std:c++latest](../build/reference/std-specify-language-standard-version.md) でサポートされます。/std:c++latest は、 **/Zc:char8_t-** 経由で C++17 の動作に戻すことができます。 IntelliSense の動力源となる EDG コンパイラではまだそれがサポートされていません。そのため、誤った IntelliSense のみのエラーが表示されますが、それは実際のコンパイルに影響を与えません。
 
@@ -175,7 +175,7 @@ const char* s = u8"Hello"; // C++17
 const char8_t* s = u8"Hello"; // C++20
 ```
 
-### <a name="stdtypeidentity-metafunction-and-stdidentity-function-object"></a>std::type_identity メタ関数と std::identity 関数オブジェクト
+### <a name="stdtype_identity-metafunction-and-stdidentity-function-object"></a>std::type_identity メタ関数と std::identity 関数オブジェクト
 
 [P0887R1 type_identity](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0887r1.pdf). 非推奨 `std::identity` クラス テンプレート拡張が削除され、C++20 `std::type_identity` メタ関数と `std::identity` 関数オブジェクトに置換されました。 いずれも [/std:c++latest](../build/reference/std-specify-language-standard-version.md) でのみ利用できます。
 
@@ -241,9 +241,156 @@ void f() {
 - `list` と `forward_list` の `remove()`、`remove_if()`、および `unique()` で `size_type` が返されるようになりました。
 - `shift_left()` と `shift_right()` が \<algorithm> に追加されました。
 
-## <a name="bug-fixes-and-behavior-changes-in-visual-studio-2019"></a>Visual Studio 2019 のバグの修正と動作の変更
 
-### <a name="correct-diagnostics-for-basicstring-range-constructor"></a>basic_string 範囲コンストラクターの正しい診断
+## <a name="improvements_162"></a> 16.2 の準拠の強化
+
+### <a name="noexcept-constexpr-functions"></a>noexcept constexpr 関数
+
+constexpr 関数では、定数式で使用される場合、既定では `noexcept` が考慮されなくなりました。 この動作変更は、[CWG 1351](http://www.open-std.org/jtc1/sc22/wg21/docs/cwg_defects.html#1351) の解決に由来し、[/permissive-](../build/reference/permissive-standards-conformance.md) で有効になっています。 次の例は、Visual Studio 2019 バージョン 16.1 以前ではコンパイルされますが、Visual Studio 2019 バージョン 16.2 では C2338 が生成されます。
+
+```cpp
+constexpr int f() { return 0; }
+
+int main() {
+    static_assert(noexcept(f()), "f should be noexcept"); // C2338 in 16.2
+}
+```
+
+このエラーを修正するには、`noexcept` 式を関数宣言に追加します。
+
+```cpp
+constexpr int f() noexcept { return 0; }
+
+int main() {
+    static_assert(noexcept(f()), "f should be noexcept");
+}
+```
+
+### <a name="binary-expressions-with-different-enum-types"></a>異なる列挙型を持つバイナリ式
+
+一方が列挙型であり、もう一方が異なる列挙型または浮動小数点型のオペランドに対して通常の算術変換を適用する機能は、C++20 ([P1120R0](http://wg21.link/p1120r0)) では非推奨です。 Visual Studio 2019 バージョン 16.2 以降では、[/std:c++latest](../build/reference/std-specify-language-standard-version.md) コンパイラ オプションが有効になっていると、次のコードでレベル 4 の警告が生成されます。
+
+```cpp
+enum E1 { a };
+enum E2 { b };
+int main() {
+    int i = a | b; // warning C5054: operator '|': deprecated between enumerations of different types
+}
+```
+
+この警告を回避するには、[static_cast](../cpp/static-cast-operator.md) を使用して 2 番目のオペランドを変換します。
+
+```cpp
+enum E1 { a };
+enum E2 { b };
+int main() {
+  int i = a | static_cast<int>(b);
+}
+```
+
+### <a name="binary-expressions-with-enumeration-and-floating-point-types"></a>列挙型と浮動小数点型を含むバイナリ式
+
+一方が列挙型であり、もう一方が異なる列挙型または浮動小数点型のオペランドに対して通常の算術変換を適用する機能は、C++20 ([P1120R0](http://wg21.link/p1120r0)) では非推奨です。 言い換えると、列挙型と浮動小数点型の間で二項演算を使用すると、[/std:c++latest](../build/reference/std-specify-language-standard-version.md) コンパイラ オプションが有効になっているときに警告が発生するようになりました。
+
+```cpp
+enum E1 { a };
+int main() {
+  double i = a * 1.1;
+}
+```
+
+この警告を回避するには、[static_cast](../cpp/static-cast-operator.md) を使用して 2 番目のオペランドを変換します。
+
+```cpp
+enum E1 { a };
+int main() {
+   double i = static_cast<int>(a) * 1.1;
+}
+```
+
+### <a name="equality-and-relational-comparisons-of-arrays"></a>配列の等価比較と関係比較
+
+C++20 ([P1120R0](http://wg21.link/p1120r0)) では、配列型の 2 つのオペランドの等価比較と関係比較は非推奨とされます。 言い換えると、2 つの配列間の比較演算は (ランクと範囲の類似性に関係なく) 警告となります。 Visual Studio 2019 バージョン 16.2 以降では、[/std:c++latest](../build/reference/std-specify-language-standard-version.md) コンパイラ オプションが有効になっている場合、次のコードで *C5056: operator '==': deprecated for array types* が生成されます。
+
+```cpp
+int main() {
+    int a[] = { 1, 2, 3 };
+    int b[] = { 1, 2, 3 };
+    if (a == b) { return 1; }
+}
+```
+
+この警告を回避するには、最初の要素のアドレスを比較します。
+
+```cpp
+int main() {
+    int a[] = { 1, 2, 3 };
+    int b[] = { 1, 2, 3 };
+    if (&a[0] == &b[0]) { return 1; }
+}
+```
+
+2 つの配列の内容が等しいかどうかを判断するには、[std::equal](../standard-library/algorithm-functions.md#equal) 関数を使用します。
+
+```cpp
+std::equal(std::begin(a), std::end(a), std::begin(b), std::end(b));
+```
+
+### <a name="effect-of-defining-spaceship-operator-on--and-"></a>== と != で宇宙船演算子を定義した場合の効果
+
+宇宙船演算子 ( **<=>** ) のみを定義しても、宇宙船演算子が `= default` ([P1185R2](https://wg21.link/p1185r2)) とマークされていなければ、 **==** または **!=** を伴う式は書き換えられなくなります。 次の例は、Visual Studio 2019 RTW およびバージョン 16.1 ではコンパイルされますが、Visual Studio 2019 バージョン 16.2 では C2678 が生成されます。
+
+```cpp
+#include <compare>
+
+struct S {
+  int a;
+  auto operator<=>(const S& rhs) const {
+    return a <=> rhs.a;
+  }
+};
+bool eq(const S& lhs, const S& rhs) {
+  return lhs == rhs;
+}
+bool neq(const S& lhs, const S& rhs) {
+    return lhs != rhs;
+}
+```
+
+このエラーを回避するには、演算子 == を定義するか、これを既定値として宣言します。
+
+```cpp
+#include <compare>
+
+struct S {
+  int a;
+  auto operator<=>(const S& rhs) const {
+    return a <=> rhs.a;
+  }
+  bool operator==(const S&) const = default;
+};
+bool eq(const S& lhs, const S& rhs) {
+  return lhs == rhs;
+}
+bool neq(const S& lhs, const S& rhs) {
+    return lhs != rhs;
+}
+```
+
+### <a name="standard-library-improvements"></a>標準ライブラリの機能強化
+
+- \<charconv>`to_chars()` (固定/科学的表記)。 (16.4 では一般的表記が計画されています。)
+- [P0020R6](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0020r6.html): atomic\<float>、atomic\<double>、atomic\<long double>
+- [P0463R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0463r1.html): エンディアン
+- [P0482R6](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0482r6.html): char8_t のライブラリ サポート
+- [P0600R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0600r1.pdf): [\[nodiscard]] (STL、Part 1)
+- [P0653R2](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0653r2.html): to_address()
+- [P0754R2](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0754r2.pdf): \<version>
+- [P0771R1](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0771r1.pdf): std::function の移動コンストラクター用の noexcept
+
+## <a name="update_160"></a> Visual Studio 2019 のバグ修正と動作の変更
+
+### <a name="correct-diagnostics-for-basic_string-range-constructor"></a>basic_string 範囲コンストラクターの正しい診断
 
 Visual Studio 2019 では、`basic_string` 範囲コンストラクターで `static_cast` を含むコンパイラ診断が非表示になることがなくなりました。 次のコードは Visual Studio 2017 では、`out` の初期化時、データが失われ、`wchar_t` が `char` になる可能性がありますが、警告なくコンパイルされます。
 
@@ -443,7 +590,7 @@ int main()
 }
 ```
 
-### <a name="iterator-debugging-and-stdmoveiterator"></a>反復子のデバッグと `std::move_iterator`
+### <a name="iterator-debugging-and-stdmove_iterator"></a>反復子のデバッグと `std::move_iterator`
 
 `std::move_iterator` のラッピングを正しく解除する目的で反復子のデバッグ機能が導入されました。 たとえば、`std::copy(std::move_iterator<std::vector<int>::iterator>, std::move_iterator<std::vector<int>::iterator>, int*)` では、`memcpy` 高速パスを作動させることができるようになりました。
 
@@ -475,11 +622,11 @@ C4244 絞り込み警告を間違って非表示にした、標準では呼び�
 
 並列アルゴリズム ライブラリでは、Windows 7 以前のフェイク バージョンを常時使用せず、Windows 8 以降の実際の `WaitOnAddress` ファミリが正しく使用されるようになりました。
 
-### <a name="stdsystemcategorymessage-whitespace"></a>`std::system_category::message()` のスペース
+### <a name="stdsystem_categorymessage-whitespace"></a>`std::system_category::message()` のスペース
 
 `std::system_category::message()` では、返されたメッセージから末尾のスペースが削除されるようになりました。
 
-### <a name="stdlinearcongruentialengine-divide-by-zero"></a>`std::linear_congruential_engine` のゼロ除算
+### <a name="stdlinear_congruential_engine-divide-by-zero"></a>`std::linear_congruential_engine` のゼロ除算
 
 `std::linear_congruential_engine` のゼロ除算を誘発していたいくつかの条件が修正されました。
 
@@ -505,7 +652,7 @@ C++ チームのブログ記事「[STL Features and Fixes in VS 2017 15.8 (VS 20
 
 - [P0083 "Splicing Maps And Sets"](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0083r3.pdf) に基づき右辺値コンテナーを受け取るコンテナーの結合および抽出メンバー関数向けのオーバーロードが追加されました。
 
-### <a name="stdbasicistreamread-processing-of-rn--n"></a>`std::basic_istream::read` での \\r\\n => \\n の処理
+### <a name="stdbasic_istreamread-processing-of-rn--n"></a>`std::basic_istream::read` での \\r\\n => \\n の処理
 
 \\r\\n => \\n 処理の一環として、与えられたバッファーの一部を一時的に書き込まないよう、`std::basic_istream::read` が修正されました。 この変更により、Visual Studio 2017 15.8 において 4K を超える読み込みで得られるパフォーマンス上のいくつかの長所を放棄することになります。 ただし、文字ごとに 3 つの仮想呼び出しを回避することから得られる効率性の改善が残されています。
 
@@ -517,15 +664,65 @@ C++ チームのブログ記事「[STL Features and Fixes in VS 2017 15.8 (VS 20
 
 [LWG 2729 "Missing SFINAE on std::pair::operator=";](https://cplusplus.github.io/LWG/issue2729) の導入時に見つかった `std::pair` の代入演算子の回帰が修正されました。 再び `std::pair` に変換できる型を正しく受け取るようになりました。
 
-### <a name="non-deduced-contexts-for-addconstt"></a>`add_const_t` の非推定コンテキスト
+### <a name="non-deduced-contexts-for-add_const_t"></a>`add_const_t` の非推定コンテキスト
 
 `add_const_t` や関連関数が非推定コンテキストであることが求められる、型の特徴の軽微なバグが修正されました。 言い換えると、`add_const_t` は `const T` ではなく、`typename add_const<T>::type` のエイリアスにする必要があります。
 
+## <a name="update_162"></a> 16.2 のバグ修正と動作の変更
+
+### <a name="const-comparators-for-associative-containers"></a>連想コンテナーの const 比較子
+
+[set](../standard-library/set-class.md)、[map](../standard-library/map-class.md)、[multiset](../standard-library/multiset-class.md)、[multimap](../standard-library/multimap-class.md) の検索と挿入のコードは、コード サイズの削減のためにマージされました。 検索操作で以前に実行されたのと同じように、挿入操作によって `const` 比較ファンクターで小なり比較が呼び出されるようになりました。 次のコードは、Visual Studio 2019 バージョン 16.1 以前ではコンパイルされますが、Visual Studio 2019 バージョン 16.2 では C3848 が生成されます。
+
+```cpp
+#include <iostream>
+#include <map>
+
+using namespace std;
+
+struct K
+{
+   int a;
+   string b = "label";
+};
+
+struct Comparer  {
+   bool operator() (K a, K b) {
+      return a.a < b.a;
+   }
+};
+
+map<K, double, Comparer> m;
+
+K const s1{1};
+K const s2{2};
+K const s3{3};
+
+int main() {
+
+   m.emplace(s1, 1.08);
+   m.emplace(s2, 3.14);
+   m.emplace(s3, 5.21);
+
+}
+```
+
+このエラーを回避するには、次のように比較演算子 `const` を使用します。
+
+```cpp
+struct Comparer  {
+   bool operator() (K a, K b) const {
+      return a.a < b.a;
+   }
+};
+
+```
+
 ::: moniker-end
 
-::: moniker range=">=vs-2017"
+::: moniker range="vs-2017"
 
-## <a name="improvements_150"></a> Visual Studio 2017 RTW (バージョン 15.0) での機能強化
+## <a name="improvements_150"></a> Visual Studio 2017 RTW (バージョン 15.0) の準拠の強化
 
 Visual Studio 2017 の Microsoft C++ コンパイラは、汎用の `constexpr` および集計用の非静的データ メンバーの初期化 (NSDMI) のサポートと共に、C++ 14 標準で追加されたすべての機能に対応するようになりました。 ただし、コンパイラには、C++11 標準および C++98 標準の一部の機能がありません。 コンパイラの現在の状態については、「[Visual C++ Language Conformance (Visual C++ 言語への準拠)](../visual-cpp-language-conformance.md)」の表を参照してください。
 
@@ -541,7 +738,7 @@ Visual Studio 2017 の Microsoft C++ コンパイラは、汎用の `constexpr` 
 
 `constexpr` として宣言された式には、特定の種類の宣言、if および switch ステートメント、loop ステートメント、constexpr 式の評価内で有効期間が開始されたオブジェクトの変異を含めることができます。 さらに、`constexpr` の非静的メンバー関数を暗黙的に `const` しなければならないという要件はなくなりました。 詳細については、「[Relaxing constraints on constexpr functions](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3652.html)」 (constexpr 関数に対する制約の緩和) を参照してください。
 
-### <a name="c17-terse-staticassert"></a>C++17:簡易 `static_assert`
+### <a name="c17-terse-static_assert"></a>C++17:簡易 `static_assert`
 
 `static_assert` のメッセージ パラメーターは省略可能です。 詳細については、「[Extending static_assert, v2](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n3928.pdf)」 (static_assert, v2 の拡張) を参照してください。
 
@@ -553,7 +750,7 @@ Visual Studio 2017 の Microsoft C++ コンパイラは、汎用の `constexpr` 
 
 範囲ベースの for ループでは、`begin()` および `end()` が同じ型のオブジェクトを返す必要はなくなりました。 この変更により、`end()` で [range-v3](https://github.com/ericniebler/range-v3) および completed-but-not-quite-published 範囲の技術仕様で使用される sentinel を返すことができます。 詳細については、「[Generalizing the Range-Based For Loop](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0184r0.html)」 (範囲ベースの for loop の汎用化) を参照してください。
 
-## <a name="improvements_153"></a>Visual Studio 2017 バージョン 15.3 の Git 機能の強化
+## <a name="improvements_153"></a> 15.3 の準拠の強化
 
 ### <a name="constexpr-lambdas"></a>constexpr ラムダ
 
@@ -567,7 +764,7 @@ Visual Studio 2017 の Microsoft C++ コンパイラは、汎用の `constexpr` 
 
 `if` ステートメントには、ステートメント自体のブロック スコープで変数を導入する初期化子を含めることができます。 詳細については、「[if statements with initializer](../cpp/if-else-statement-cpp.md#if_with_init)」(初期化子を含む if 式) をご覧ください。
 
-### <a name="maybeunused-and-nodiscard-attributes"></a>`[[maybe_unused]]` 属性および `[[nodiscard]]` 属性
+### <a name="maybe_unused-and-nodiscard-attributes"></a>`[[maybe_unused]]` 属性および `[[nodiscard]]` 属性
 
 新しい属性 `[[maybe_unused]]` は、エンティティが使用されていない場合に警告を発生させません。 `[[nodiscard]]` 属性は、関数呼び出しの戻り値が破棄された場合に警告を発生させます。 詳しくは、「[Attributes in C++ (C++ における属性)](../cpp/attributes.md)」をご覧ください。
 
@@ -595,7 +792,7 @@ Visual Studio 2017 の Microsoft C++ コンパイラは、汎用の `constexpr` 
 
 `register` キーワードは、以前は非推奨でしたが (コンパイラでは無視される)、言語から削除されました。 詳しくは、「[Remove Deprecated Use of the register Keyword (register キーワードの非推奨の使用の削除)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0001r1.html)」をご覧ください。
 
-## <a name="improvements_155"></a> Visual Studio 2017 バージョン 15.5 での機能強化
+## <a name="improvements_155"></a> 15.5 の準拠の強化
 
 \[14] でマークされた機能は、 **/std:c++14** モードでも無条件で使用できます。
 
@@ -611,7 +808,7 @@ Visual Studio の以前のバージョンでは、変数が `extern` として�
 
 [P0005R4](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0005r4.html) `not_fn` は `not1` と `not2` の置き換えです。
 
-### <a name="rewording-enablesharedfromthis"></a>`enable_shared_from_this` の新しい表現
+### <a name="rewording-enable_shared_from_this"></a>`enable_shared_from_this` の新しい表現
 
 [P0033R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0033r1.html) `enable_shared_from_this` は C++ 11 で追加されました。 C++ 17 標準では、特殊なケースの処理を改善するために仕様を更新します。 [14]
 
@@ -627,19 +824,19 @@ Visual Studio の以前のバージョンでは、変数が `extern` として�
 
 [P0302R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0302r1.html) C++17 の前には、クラス テンプレート `std::function` に、アロケーター引数を取るいくつかのコンストラクターがありました。 ただし、このコンテキストでのアロケーターの使用には問題があり、セマンティクスが不明確でした。 問題のコントラクターは削除されました。
 
-### <a name="fixes-for-notfn"></a>`not_fn()` の修正
+### <a name="fixes-for-not_fn"></a>`not_fn()` の修正
 
 [P0358R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0358r1.html) `std::not_fn` の新しい表現は、ラッパー呼び出し時の値のカテゴリの伝達をサポートします。
 
-### <a name="sharedptrt-sharedptrtn"></a>`shared_ptr<T[]>`、 `shared_ptr<T[N]>`
+### <a name="shared_ptrt-shared_ptrtn"></a>`shared_ptr<T[]>`、 `shared_ptr<T[N]>`
 
 [P0414R2](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0414r2.html) ライブラリ基盤から C++ 17 への `shared_ptr` の変更のマージ。 [14]
 
-### <a name="fixing-sharedptr-for-arrays"></a>配列の `shared_ptr` の修正
+### <a name="fixing-shared_ptr-for-arrays"></a>配列の `shared_ptr` の修正
 
 [P0497R0](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0497r0.html) 配列の shared_ptr のサポートを修正します。 [14]
 
-### <a name="clarifying-insertreturntype"></a>`insert_return_type` の明確化
+### <a name="clarifying-insert_return_type"></a>`insert_return_type` の明確化
 
 [P0508R0](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0508r0.html) 固有のキーを持つ関連するコンテナー、固有ではないキーを持つ順序付けられていないコンテナーには、入れ子になった型 `insert_return_type` を返すメンバー関数 `insert` があります。 戻りの型は、コンテナーの反復子と NodeType でパラメーター化された型の特殊な形式として定義されるようになりました。
 
@@ -659,7 +856,7 @@ C++ 標準の Annex D は、`shared_ptr::unique()`、`<codecvt>`、`namespace st
 
 C++17 コンパイラの変更に応じて、型システムへの `noexcept` の追加や、dynamic-exception-specifications の削除などの標準ライブラリの更新が行われました。
 
-## <a name="improvements_156"></a> Visual Studio 2017 バージョン 15.6 での機能強化
+## <a name="improvements_156"></a> 15.6 の準拠の強化
 
 ### <a name="c17-library-fundamentals-v1"></a>C++17: ライブラリ基礎 V1
 
@@ -669,7 +866,7 @@ C++17 コンパイラの変更に応じて、型システムへの `noexcept` �
 
 [P0739R0](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0739r0.html): `scoped_lock` を一貫して使用できるように、`adopt_lock_t` を `scoped_lock` のパラメーター リストの先頭に移動します。 コピー割り当てを有効にするために、`std::variant` コンストラクターがオーバーロードの解決法に関与することを許可します。
 
-## <a name="improvements_157"></a>Visual Studio 2017 バージョン 15.7 での機能強化
+## <a name="improvements_157"></a> 15.7 の準拠の強化
 
 ### <a name="c17-rewording-inheriting-constructors"></a>C++17:コンストラクター継承の新しい表現
 
@@ -837,11 +1034,11 @@ void sample(A<0> *p)
 
 [P0682R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0682r1.html): 基本文字列変換の新しい関数を P0067R5 から新しいヘッダー \<charconv> に移動します。さらに、`std::error_code` ではなく `std::errc` を使用するようにエラー処理を変更するなど、他の機能強化も行います。
 
-### <a name="c17-constexpr-for-chartraits-partial"></a>C++ 17: `char_traits` の `constexpr` (部分的)
+### <a name="c17-constexpr-for-char_traits-partial"></a>C++ 17: `char_traits` の `constexpr` (部分的)
 
 [P0426R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0426r1.html): `std::string_view` を定数式で使用できるようにするために、`std::traits_type` のメンバー関数である `length`、`compare`、`find` に変更します。 (Visual Studio 2017 バージョン 15.6 では、Clang/LLVM のみがサポートされました。 バージョン 15.7 Preview 2 では、ClXX についてもサポートはほぼ完全です。)
 
-## <a name="improvements_159"></a> Visual Studio 2017 バージョン 15.9 での機能強化
+## <a name="improvements_159"></a> 15.9 の準拠の強化
 
 ### <a name="left-to-right-evaluation-order-for-operators-----and-"></a>演算子 `->*`、`[]`、`>>`、`<<` での左から右の評価順序
 
@@ -1198,7 +1395,7 @@ void f(ClassLibrary1::Class1 ^r1, ClassLibrary1::Class2 ^r2)
 }
 ```
 
-## <a name="update_153"></a>Visual Studio 2017 バージョン 15.3 でのバグ修正
+## <a name="update_153"></a> 15.3 のバグ修正
 
 ### <a name="calls-to-deleted-member-templates"></a>削除されたメンバー テンプレートへの呼び出し
 
@@ -1460,7 +1657,7 @@ C;      // warning C4091 : '' : ignored on left of 'C' when no variable is decla
 
 警告は、 **/Wv:18** では除外され、警告レベル W2 では既定で有効になります。
 
-### <a name="stdisconvertible-for-array-types"></a>配列型の `std::is_convertible`
+### <a name="stdis_convertible-for-array-types"></a>配列型の `std::is_convertible`
 
 以前のバージョンのコンパイラでは、配列型の [std::is_convertible](../standard-library/is-convertible-class.md) で正しい結果が得られませんでした。 そのため、ライブラリの作成者は `std::is_convertible<...>` 型の特徴を使用する場合に、Microsoft C++ コンパイラを特例処理する必要がありました。 次の例では、静的アサートは以前のバージョンの Visual Studio では成功しますが、Visual Studio 2017 バージョン 15.3 では失敗します。
 
@@ -1481,7 +1678,7 @@ static_assert(std::is_convertible<Array, Array&>::value, "");
    To test() { return std::declval<From>(); }
 ```
 
-### <a name="private-destructors-and-stdisconstructible"></a>プライベート デストラクターと `std::is_constructible`
+### <a name="private-destructors-and-stdis_constructible"></a>プライベート デストラクターと `std::is_constructible`
 
 以前のバージョンのコンパイラでは、[std::is_constructible](../standard-library/is-constructible-class.md) の結果の判定時にデストラクターがプライベートかどうかは無視されていました。 ここではこれについて考えます。 次の例では、静的アサートは以前のバージョンの Visual Studio では成功しますが、Visual Studio 2017 バージョン 15.3 では失敗します。
 
@@ -1570,7 +1767,7 @@ struct A
 
 警告は既定ではオフになっており、 **/Wall** でコンパイルされたコードにのみ影響します。
 
-## <a name="update_155"></a> Visual Studio 2017 バージョン 15.5 のバグの修正およびその他の動作の変更
+## <a name="update_155"></a> 15.5 のバグ修正とその他の動作の変更
 
 ### <a name="partial-ordering-change"></a>部分的な順序の変更
 
@@ -1783,7 +1980,7 @@ warning C4619: #pragma warning: there is no warning number '4001'
 /* single line comment */
 ```
 
-### <a name="declspec-attributes-with-extern-c-linkage"></a>`extern "C"` リンケージを持つ `__declspec` 属性
+### <a name="__declspec-attributes-with-extern-c-linkage"></a>`extern "C"` リンケージを持つ `__declspec` 属性
 
 Visual Studio の以前のバージョンでは、`extern "C"` リンケージの指定の前に `__declspec(...)`が適用された場合、コンパイラは `__declspec(...)` を無視しました。 この動作によりユーザーが意図しないコードが生成され、ランタイムに影響する可能性がありました。 Visual Studio バージョン 15.3 で警告が追加されましたが、既定でオフになっていました。 Visual Studio 2017 バージョン 15.5 では、警告は既定で有効になっています。
 
@@ -1848,7 +2045,7 @@ void f() { typeid(S); } //C2027 in 15.5
 error C2027: use of undefined type 'S'
 ```
 
-### <a name="stdisconvertible-target-type"></a>`std::is_convertible` のターゲットの型
+### <a name="stdis_convertible-target-type"></a>`std::is_convertible` のターゲットの型
 
 `std::is_convertible` では、ターゲットの型が有効な戻り値の型になっている必要があります。 Visual Studio の以前のバージョンでは、コンパイラが誤って抽象型を許可し、そのために、正しくないオーバーロードの解決や意図しない実行時の動作につながる可能性がありました。  次のコードは、C2338 を正しく発生させるようになりました。
 
@@ -1921,11 +2118,11 @@ struct X {
 const int X::size; // C5041
 ```
 
-### <a name="extern-c-declspec-warning-c4768-now-on-by-default"></a>`extern "C" __declspec(...)` の警告 C4768 が既定でオンになる
+### <a name="extern-c-__declspec-warning-c4768-now-on-by-default"></a>`extern "C" __declspec(...)` の警告 C4768 が既定でオンになる
 
 Visual Studio 2017 バージョン 15.3 で警告が追加されましたが、既定でオフになっていました。 Visual Studio 2017 バージョン 15.5 では、警告は既定でオンになっています。 詳細については、「[New warning on \_\_declspec attributes (declspec 属性の新しい警告)](#declspec)」を参照してください。
 
-### <a name="defaulted-functions-and-declspecnothrow"></a>既定の関数と `__declspec(nothrow)`
+### <a name="defaulted-functions-and-__declspecnothrow"></a>既定の関数と `__declspec(nothrow)`
 
 コンパイラは以前、対応する base/member 関数で例外が許可されている場合、`__declspec(nothrow)` を使用した既定の関数の宣言を許可していました。 この動作は、C++ 標準に反しており、実行時に未定義の動作が発生することがあります。 標準では、例外の指定の不一致がある場合、そのような関数は削除済みとして定義する必要があります。  **/std:c++17** で、次のコードに対して、C2280 "*削除された関数を参照しようとしています" が発生します。明示的な例外の指定にその暗黙の宣言と互換性がないために、関数は暗黙的に削除されました。*
 
@@ -2029,7 +2226,7 @@ int main()
 }
 ```
 
-## <a name="update_157"></a> Visual Studio 2017 バージョン 15.7 のバグの修正およびその他の動作の変更
+## <a name="update_157"></a> 15.7 のバグ修正とその他の動作の変更
 
 ### <a name="c17-default-argument-in-the-primary-class-template"></a>C++17:プライマリ クラス テンプレートでの既定の引数
 
@@ -2165,7 +2362,7 @@ int main() {
 }
 ```
 
-## <a name="update_158"></a> Visual Studio 2017 バージョン 15.8 のバグの修正および動作の変更
+## <a name="update_158"></a> 15.8 のバグ修正と動作の変更
 
 Visual Studio 2017 バージョン 15.8 のコンパイラの変更は、すべてバグの修正と動作の変更のカテゴリに分類されています。変更点の一覧を次に示します。
 
@@ -2180,7 +2377,7 @@ using  X = typename T;
 
 このエラーを解決するには、2 行目を `using  X = T;` に変更します。
 
-### <a name="declspec-on-right-side-of-alias-template-definitions"></a>エイリアス テンプレート定義の右側の `__declspec()`
+### <a name="__declspec-on-right-side-of-alias-template-definitions"></a>エイリアス テンプレート定義の右側の `__declspec()`
 
 [__declspec](../cpp/declspec.md) はエイリアス テンプレート定義の右側で使用できなくなりました。 これは以前はコンパイラによって受け入れられても完全に無視されていたため、エイリアスが使用されたときに非推奨化の警告が発生することはありませんでした。
 
@@ -2372,7 +2569,7 @@ struct X : Base<T>
 };
 ```
 
-## <a name="update_159"></a> Visual Studio 2017 バージョン 15.9 のバグの修正および動作の変更
+## <a name="update_159"></a> 15.9 のバグ修正と動作の変更
 
 ### <a name="identifiers-in-member-alias-templates"></a>メンバーのエイリアス テンプレート内の識別子
 
@@ -2557,9 +2754,13 @@ note: see usage of 'g'.
 
 ::: moniker-end
 
+::: moniker range="vs-2015"
+
 ## <a name="c-conformance-improvements-in-visual-studio-2015"></a>Visual Studio 2015 の C++ 準拠の強化
 
 Visual Studio 2015 更新プログラム 3 での準拠の機能強化の完全な一覧については、「[Visual C++ What's New 2003 through 2015](/cpp/porting/visual-cpp-what-s-new-2003-through-2015)」(Visual C++ 2003 から 2015 の新機能) を参照してください。
+
+::: moniker-end
 
 ## <a name="see-also"></a>関連項目
 
