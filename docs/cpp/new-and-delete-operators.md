@@ -17,7 +17,7 @@ ms.locfileid: "65222366"
 ---
 # <a name="new-and-delete-operators"></a>new および delete 演算子
 
-C++ は、[new](../cpp/new-operator-cpp.md) と[削除](../cpp/delete-operator-cpp.md) 演算子を使用したオブジェクトの動的な割り当てと解放をサポートしています。 これらの演算子は、フリー ストアと呼ばれるプールからオブジェクトにメモリを割り当てます。 **新しい**演算子は、特殊な関数を呼び出す[演算子 new](../cpp/new-operator-cpp.md)、および**削除**演算子は、特殊な関数を呼び出す[演算子 delete](../cpp/delete-operator-cpp.md).
+C++ は、[new](../cpp/new-operator-cpp.md) と[削除](../cpp/delete-operator-cpp.md) 演算子を使用したオブジェクトの動的な割り当てと解放をサポートしています。 これらの演算子は、フリー ストアと呼ばれるプールからオブジェクトにメモリを割り当てます。 **new** 演算子は、特殊な関数を呼び出す[new 演算子](../cpp/new-operator-cpp.md)、および**delete**演算子は、特殊な関数を呼び出す[delete 演算子](../cpp/delete-operator-cpp.md).
 
 C++標準ライブラリの **new** 関数は、C++標準で指定された動作をサポートします。これは、メモリの割り当てに失敗した場合に、std::bad_alloc 例外をスローします。 でも、スローしないバージョンの **new** が必要な場合、プログラムを nothrownew.obj とリンクしてください。ただし、nothrownew.obj とリンクすると、C++ 標準ライブラリでは既定の **operator new** は機能しなくなります。
 
