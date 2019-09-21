@@ -519,7 +519,7 @@ DAO 拡張エラーコードを表す整数値。 [CDaoException:: m_nAfxDaoErro
 
 フレームワークもを呼び出し`AfxThrowDaoException`ます。 の呼び出しでは、いずれかのパラメーターまたは両方を渡すことができます。 たとえば、 **CDaoException:: nAfxDaoError**で定義されているいずれかのエラーを発生させても、 *scode*パラメーターを気にする必要がない場合は、 *nAfxDaoError*パラメーターに有効なコードを渡し、 *scode*の既定値をそのまま使用します。
 
-MFC DAOクラスに関連する例外の詳細については、この書籍ののクラス`CDaoException`および記事例外[例外:データベース例外](../../mfc/exceptions-database-exceptions.md)を参照してください。
+MFC DAOクラスに関連する例外の詳細については、この書籍のクラス`CDaoException`および記事例外[例外:データベース例外](../../mfc/exceptions-database-exceptions.md)を参照してください。
 
 ### <a name="requirements"></a>必要条件
 
