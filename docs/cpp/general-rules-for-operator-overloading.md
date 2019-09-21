@@ -13,7 +13,7 @@ ms.locfileid: "62153763"
 ---
 # <a name="general-rules-for-operator-overloading"></a>演算子のオーバーロードに関する一般的な規則
 
-次の規則は、オーバーロードした演算子の実装のされ方を抑制します。 ただし、これらには適用されません、[新しい](../cpp/new-operator-cpp.md)と[削除](../cpp/delete-operator-cpp.md)演算子は個別に説明します。
+次の規則は、オーバーロードした演算子の実装のされ方を抑制します。 ただし、これらには適用されません、[new](../cpp/new-operator-cpp.md)と[delete](../cpp/delete-operator-cpp.md)演算子は個別に説明します。
 
 - の新しい演算子を定義することはできません **.** します。
 
