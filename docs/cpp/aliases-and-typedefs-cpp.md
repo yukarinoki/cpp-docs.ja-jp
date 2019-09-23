@@ -1,5 +1,5 @@
 ---
-title: エイリアスと typedef (C++)
+title: エイリアス と typedef (C++)
 ms.date: 11/04/2016
 f1_keywords:
 - typedef_cpp
@@ -11,9 +11,9 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62155291"
 ---
-# <a name="aliases-and-typedefs-c"></a>エイリアスと typedef (C++)
+# <a name="aliases-and-typedefs-c"></a>エイリアス と typedef (C++)
 
-使用することができます、*エイリアス宣言*以前に宣言された型のシノニムとして使用する名前を宣言します。 (このメカニズムは、別名非公式、*型の別名*)。 このメカニズムを使用して作成する、*エイリアス テンプレート*、カスタム アロケーターに特に便利ですがあることができます。
+*エイリアス宣言* を用いて以前に宣言された型の同意語としての名前を宣言することができます。 (このメカニズムは非公式には *型エイリアス* と呼ばれたりします)。このメカニズムを使用して *エイリアステンプレート* を作成する事が出来て、これはカスタムアロケーターの場合には特に有用です。
 
 ## <a name="syntax"></a>構文
 
@@ -27,27 +27,27 @@ using identifier = type;
 エイリアスの名前。
 
 *type*<br/>
-エイリアスを作成する型識別子。
+エイリアスを作成する対象の型識別子。
 
 エイリアスでは新しい型は定義されず、既存の型名の意味を変更することはできません。
 
-エイリアスの最も単純な形式は、 **typedef** c++ 03 のメカニズム。
+エイリアスの最も単純な形式は、C++03 の **typedef** 機能と同等です。
 
 ```cpp
 // C++11
 using counter = long;
 
-// C++03 equivalent:
+// C++03 で同等の:
 // typedef long counter;
 ```
 
-いずれの形式でも "カウンター" 型の変数を作成できます。 次のような `std::ios_base::fmtflags` の型エイリアスが便利な場合があります。
+いずれの形式でも "counter" 型の変数を作成できます。 次のような `std::ios_base::fmtflags` の型エイリアスが便利な場合があります。
 
 ```cpp
 // C++11
 using fmtfl = std::ios_base::fmtflags;
 
-// C++03 equivalent:
+// C++03 で同等の:
 // typedef std::ios_base::fmtflags fmtfl;
 
 fmtfl fl_orig = std::cout.flags();
@@ -56,32 +56,32 @@ fmtfl fl_hex = (fl_orig & ~std::cout.basefield) | std::cout.showbase | std::cout
 std::cout.flags(fl_hex);
 ```
 
-また、エイリアスは、関数ポインターの場合は、操作しますが、同等の typedef よりもずっと読みは。
+エイリアスは関数ポインターとも機能しますが、同等品の typedef より可読性がとても良いものとなります。
 
 ```cpp
 // C++11
 using func = void(*)(int);
 
-// C++03 equivalent:
+// C++03 で同等の:
 // typedef void (*func)(int);
 
-// func can be assigned to a function pointer value
-void actual_function(int arg) { /* some code */ }
+// func は関数ポインタの値に対して割り当てる事が出来ます
+void actual_function(int arg) { /* いくらかのコード */ }
 func fptr = &actual_function;
 ```
 
-制限事項、 **typedef**メカニズムは、テンプレートを使用しないことです。 しかし、C++11 での型エイリアスの構文ではエイリアス テンプレートを作成できます。
+**typedef** 機能の制限としてテンプレートを扱えない事があります。しかし、C++11 の型エイリアスの構文ではエイリアステンプレートを作成する事ができます。
 
 ```cpp
 template<typename T> using ptr = T*;
 
-// the name 'ptr<T>' is now an alias for pointer to T
+// 'ptr<T>' という名前は今や T へのポインタのエイリアスです
 ptr<int> ptr_int;
 ```
 
 ## <a name="example"></a>例
 
-次の例に、エイリアス テンプレートをカスタム アロケーター (この場合は整数ベクター型) で使用する方法を示します。 任意の型を置き換えることができる**int**主要な機能コードのリストを複合型のパラメーターを非表示にする便利なエイリアスを作成します。 コード全体でカスタム アロケーターを使用することで読みやすくして、入力ミスによるバグが発生するリスクを減らすことができます。
+次の例では、カスタムアロケーター (この場合は整数ベクター型) にエイリアステンプレートを使用する方法を示します。 **int** を任意の型に置き換えることができる便利なエイリアスを作成して、main関数のコードから複雑なパラメーターリストを隠蔽する事が出来ます。カスタムアロケーターをあなたのコード全体にわたって使う事で可読性を向上させる事が出来、そして入力ミスによって不具合を引き起こす危険性を減らすことができます。
 
 ```cpp
 #include <stdlib.h>
@@ -139,34 +139,34 @@ int main ()
 1701 1764 1664
 ```
 
-## <a name="typedefs"></a>Typedef
+## <a name="typedefs"></a>typedef
 
-A **typedef**宣言に名前をそのスコープの中で指定した型のシノニムになりますが導入されています、*型宣言*宣言の一部です。
+**typedef** 宣言はそのスコープの中に *型宣言* 部によって指定された型の同義語になる名前を導入します。
 
-typedef 宣言を使用して、既に言語で定義されている型や、宣言した型に対して、より短い、またはわかりやすい名前を作成できます。 Typedef 名を使用して、変更可能な実装の詳細をカプセル化できます。
+typedef 宣言を使用する事で、既に言語で定義されている型やあなたが宣言した型に対して、より短いまたはわかりやすい名前を作成できます。typedef 名は変更されるかもしれない実装の詳細のカプセル化を可能にします。
 
-異なり、**クラス**、**構造体**、**共用体**、および**enum**宣言、 **typedef**宣言は新しい型を導入していません-既存の型の新しい名前を導入します。
+**クラス**、**構造体**、**共用体**、および**列挙対** の宣言と異なり、**typedef** 宣言は新しい型の導入はしません - 既存の型に対する新しい名前を導入します。
 
-使用して宣言された名前**typedef** (ステートメント ラベル) を除くその他の識別子と同じ名前空間を占有します。 したがって、クラス型の宣言以外では、以前に宣言された名前と同じ識別子を使用できません。 次に例を示します。
+**typedef** を使用して宣言された名前はその他の識別子（ステートメントラベルを除く）と同じ名前空間を占有します。したがって、クラス型宣言の中を除いて、以前に宣言された名前と同じ識別子を使用できません。下記の例を見て下さい:
 
 ```cpp
 // typedef_names1.cpp
-// C2377 expected
-typedef unsigned long UL;   // Declare a typedef name, UL.
-int UL;                     // C2377: redefined.
+// C2377 が発生するでしょう
+typedef unsigned long UL;   // typedef 名 UL の宣言
+int UL;                     // C2377: 再定義
 ```
 
-その他の識別子に関連する名前隠蔽規則も使用して宣言された名前の可視性を管理**typedef**します。 したがって、次の例は C++ で有効です。
+その他の識別子に関連している名前の隠蔽規則は **typedef** を使用して宣言された名前の可視性も管理します。したがって、次の例はC++では適格です。
 
 ```cpp
 // typedef_names2.cpp
-typedef unsigned long UL;   // Declare a typedef name, UL
+typedef unsigned long UL;   // typedef 名 UL の宣言
 int main()
 {
-   unsigned int UL;   // Redeclaration hides typedef name
+   unsigned int UL;   // 再宣言は typedef 名を隠します
 }
 
-// typedef UL back in scope
+// typedef 名の UL がスコープに戻ります
 ```
 
 ```cpp
@@ -183,58 +183,58 @@ void myproc( int )
 }
 ```
 
-Typedef と同じ名前でローカル スコープの識別子を宣言するとき、あるいは同じスコープまたは内部スコープで構造体または共用体のメンバーを宣言するときは、型指定子を指定する必要があります。 例えば:
+typedef と同じ名前でローカルスコープの識別子を宣言するとき、あるいは同じスコープまたは内部スコープで構造体または共用体のメンバーを宣言するときは、型指定子を指定する必要があります。 例えば:
 
 ```cpp
 typedef char FlagType;
 const FlagType x;
 ```
 
-識別子、構造体メンバー、または共用体メンバーに対して `FlagType` 名を再利用するには、次のように型を指定する必要があります。
+名前 `FlagType` を識別子、構造体メンバー、または共用体メンバーに対して再利用するには、その型を指定する必要があります。
 
 ```cpp
-const int FlagType;  // Type specifier required
+const int FlagType;  // 型指定子が必要
 ```
 
-次のような記述だけでは不十分です。
+下記の記述だけでは不十分です。
 
 ```cpp
-const FlagType;      // Incomplete specification
+const FlagType;      // 不完全な指定
 ```
 
-`FlagType` は再宣言された識別子ではなく、型の一部であると見なされるためです。 この宣言は、次のような正しくない宣言であると見なされます。
+なぜなら `FlagType` は再宣言された識別子ではなく、型の一部であると見なされるためです。この宣言は、次のような正しくない宣言と見なされました。
 
 ```cpp
-int;  // Illegal declaration
+int;  // 不正な宣言
 ```
 
-ポインター、関数、配列型を含め、あらゆる型を typedef で宣言できます。 構造体型または共用体型を定義する前に、構造体型または共用体型へのポインターの typedef 名を宣言できます。ただし、定義が宣言と同じ可視性である必要があります。
+ポインター、関数、配列型を含め、あらゆる型を typedef で宣言できます。構造体型または共用体型を定義する前に、構造体型または共用体型へのポインターの typedef 名を宣言できます。ただし、定義が宣言と同じ可視性を持つ必要があります。
 
 ### <a name="examples"></a>使用例
 
-用途の 1 つ**typedef**宣言より同型でコンパクトな宣言を作成します。 例えば:
+**typedef** 宣言の用途の1つは、宣言をより統一されたコンパクトなものにする事です。 例えば:
 
 ```cpp
-typedef char CHAR;          // Character type.
-typedef CHAR * PSTR;        // Pointer to a string (char *).
+typedef char CHAR;          // 文字型
+typedef CHAR * PSTR;        // 文字列へのポインタ (char *).
 PSTR strchr( PSTR source, CHAR target );
 typedef unsigned long ulong;
-ulong ul;     // Equivalent to "unsigned long ul;"
+ulong ul;     // "unsigned long ul;" と同等
 ```
 
-使用する**typedef**同じ宣言内には、基本と派生型を指定するにはコンマで宣言子を分離することができます。 例:
+**typedef** を使用して同じ宣言内に基本と派生型を指定するには、カンマを使って宣言を分けることができます。 例:
 
 ```cpp
 typedef char CHAR, *PSTR;
 ```
 
-次の例は、値を返さず、2 つの int 引数を受け取る関数に対する型 `DRAWF` を用意します。
+次のコード例は、返り値無しで2つのint引数を受け取る関数に対する型 `DRAWF` を提供します。
 
 ```cpp
 typedef void DRAWF( int, int );
 ```
 
-上記の後に**typedef**ステートメントでは、宣言
+上記の **typedef** 文の後の、この宣言
 
 ```cpp
 DRAWF box;
@@ -246,7 +246,7 @@ DRAWF box;
 void box( int, int );
 ```
 
-**typedef**多くの場合、組み合わせる**構造体**を宣言し、ユーザー定義型の名前します。
+**typedef** はしばしばユーザー定義型の名前を宣言する為に **struct** と組み合わせられます。
 
 ```cpp
 // typedef_specifier2.cpp
@@ -273,7 +273,7 @@ int main()
 
 ### <a name="re-declaration-of-typedefs"></a>typedef の再宣言
 
-**Typedef**宣言を同じ型を参照する同じ名前を再宣言して使用できます。 例えば:
+**typedef** 宣言は同じ型を参照する同じ名前を再宣言する事に使う事も出来ます。 例えば:
 
 ```cpp
 // FILE1.H
@@ -287,7 +287,7 @@ typedef char CHAR;
 #include "file2.h"   // OK
 ```
 
-プログラム*PROG します。CPP*両方が含まれている 2 つのヘッダー ファイルが含まれます**typedef**名の宣言`CHAR`します。 両方の宣言が同じ型を参照する限り、このような再宣言は許容されます。
+プログラム *PROG.cpp* は 名前 `CHAR` に対する **typedef** 宣言が両方に含まれている2つのヘッダーファイルを include します。両方の宣言が同じ型を参照する限り、このような再宣言は許容されます。
 
 A **typedef**は以前に異なる型として宣言する名前を再定義できません。 そのため場合、 *FILE2 します。H*が含まれています
 
@@ -309,33 +309,33 @@ typedef union REGS      // OK: name REGS redeclared
 } REGS;
 ```
 
-### <a name="typedefs-in-c-vs-c"></a>typedef:  C++ と C
+### <a name="typedefs-in-c-vs-c"></a>typedef:  C++ 対 C
 
-使用、 **typedef**で名前のない構造体を宣言する ANSI C プラクティスのため大きく指定子がクラス型がサポートされている**typedef**宣言します。 たとえば、多くの C プログラマは次のように記述します。
+クラス型と併せた **typedef** 指定子の使用は大きく維持されていますが、それは **typedef** 宣言で無名構造体を宣言するANSI Cの作法の為です。たとえば、多くのCプログラマは次のような記述を使います。
 
 ```cpp
 // typedef_with_class_types1.cpp
-// compile with: /c
-typedef struct {   // Declare an unnamed structure and give it the
-                   // typedef name POINT.
+// /c を付けてコンパイル
+typedef struct {   // 無名構造体を宣言して、それに
+                   // typedef 名 POINT を付加する.
    unsigned x;
    unsigned y;
 } POINT;
 ```
 
-このような宣言の利点は、次のような宣言を使用できることです。
+このような宣言の利点は、次のような宣言を可能にする事にあります。
 
 ```cpp
 POINT ptOrigin;
 ```
 
-次のように記述する必要がありません。
+次のように記述する必要はありません。
 
 ```cpp
 struct point_t ptOrigin;
 ```
 
-C++ では、間の差**typedef**名と実際の型 (で宣言された、**クラス**、**構造体**、**共用体**、および**enum**キーワード) がより明確です。 C の実習で無名の構造体を宣言するを**typedef**ステートメントが機能、その利点はなく表記 C. では、
+C++では、**typedef** 名と実際の型（**class**、**struct**、**union**、そして **enum** キーワードを使って宣言された）との差はより明確です。**typedef**文を使って無名構造体を宣言するCの作法は変わらず機能しますが、Cであったような表記上の利点はもたらしません。
 
 ```cpp
 // typedef_with_class_types2.cpp
@@ -347,10 +347,10 @@ typedef struct {
 } POINT;
 ```
 
-前の例は、という名前のクラスを宣言します。`POINT`名前のないクラスを使用して**typedef**構文。 `POINT` はクラス名として扱われますが、この方法で導入された名前には次の制限が適用されます。
+前の例は、名前無しクラスの **typedef** 構文を使用して`POINT` という名前のクラスを宣言しています。`POINT` はクラス名として扱われますが、この方法で導入された名前には次の制限が適用されます。
 
-- 名前 (シノニム) が後に表示されることはできません、**クラス**、**構造体**、または**共用体**プレフィックス。
+- 名前（同義名）が **class**、**struct**、また **union** 前置詞の後に登場することはできません。
 
 - 名前は、クラス宣言内のコンストラクター名またはデストラクター名として使用できません。
 
-つまり、この構文には、継承、構築、または破棄のための機能はありません。
+つまり、この構文には、継承、コンストラクタ、またはデストラクタのための機能はありません。
