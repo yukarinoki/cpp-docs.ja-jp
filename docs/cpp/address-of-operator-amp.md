@@ -1,5 +1,5 @@
 ---
-title: 'Address-of 演算子: &amp;'
+title: 'アドレス演算子: &amp;'
 ms.date: 11/04/2016
 f1_keywords:
 - '&'
@@ -15,27 +15,27 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62385025"
 ---
-# <a name="address-of-operator-amp"></a>Address-of 演算子: &amp;
+# <a name="address-of-operator-amp"></a>アドレス演算子: &amp;
 
 ## <a name="syntax"></a>構文
 
 ```
-& cast-expression
+& キャスト式
 ```
 
 ## <a name="remarks"></a>Remarks
 
-単項アドレス演算子 (**&**) は、オペランドのアドレスを取得します。 Address-of 演算子のオペランドには、関数指定子またはビット フィールドではないオブジェクトを指定する左辺値のいずれかを指定できます。
+単項アドレス演算子 (**&**) は、オペランドのアドレスを取得します。 アドレス演算子のオペランドには、関数指定子またはビットフィールドではないオブジェクトを指定する左辺値のいずれかを指定できます。
 
-アドレス演算子は、ファイル スコープ レベルで宣言された基本型、構造体型、クラス型、または共用体型を持つ変数、または添字配列参照だけに適用できます。 これらの式では、アドレス演算子を含まない定数式を、アドレス式に加算したりアドレス式から減算できます。
+アドレス演算子は、ファイルスコープレベルで宣言された 基本型、構造体型、クラス型、または共用体型の変数、または添字配列参照だけに適用できます。これらの式では、アドレス演算子を含まない定数式を、アドレス式に加算したりアドレス式から減算できます。
 
-関数または左辺値に適用されたときの式の結果は、オペランドの型から派生したポインター型 (右辺値) です。 たとえば、オペランドの型は**char**へのポインター型の式の結果は、 **char**します。 Address-of 演算子を適用する**const**または**揮発性**オブジェクトの場合に評価されます`const type *`または`volatile type *`ここで、**型**は、元の型です。オブジェクト。
+関数または左辺値に適用されたときの式の結果は、オペランドの型から派生したポインター型 (右辺値) です。 たとえば、オペランドの型が**char**の場合、式の結果は**char**ポインター型になります。**const**または**volatile**オブジェクトにアドレス演算子を適用した場合 `const type *` または `volatile type *` に評価されます（**type** とは元のオブジェクト型）。
 
-結果がかどうかに依存する修飾名に address-of 演算子が適用されると、*修飾名*静的メンバーを指定します。 その場合、結果はメンバーの宣言で指定した型へのポインターです。 メンバーが静的でない場合、結果は、メンバーへのポインターは*名前*で示されたクラスの*修飾クラス名*します。 (を参照してください[一次式](../cpp/primary-expressions.md)の詳細については*修飾クラス名*)。次のコードは、メンバーが静的かどうかによって、どのように結果が違うかを示します。
+アドレス演算子が修飾名に適用された場合、その結果は指定した修飾名が静的メンバーかどうか次第です。もしそうなら、結果はメンバーの宣言で指定した型へのポインターです。メンバーが静的でない場合、その結果は*修飾クラス名*で示されたクラスメンバーの *名前* へのポインターです。 (*修飾クラス名* の詳細については [一次式](../cpp/primary-expressions.md) を参照してください)。次のコード片ではメンバーが静的かどうかによってどのように結果が変わるかを示しています。
 
 ```cpp
 // expre_Address_Of_Operator.cpp
-// C2440 expected
+// C2440 の発生を予期
 class PTM {
 public:
     int iValue;
@@ -43,30 +43,30 @@ public:
 };
 
 int main() {
-   int   PTM::*piValue = &PTM::iValue;  // OK: non-static
-   float PTM::*pfValue = &PTM::fValue;  // C2440 error: static
+   int   PTM::*piValue = &PTM::iValue;  // OK: 静的でない
+   float PTM::*pfValue = &PTM::fValue;  // C2440 error: 静的
    float *spfValue     = &PTM::fValue;  // OK
 }
 ```
 
-この例では、`&PTM::fValue` 式は、`float *` が静的メンバーであるため、`float PTM::*` 型の代わりに `fValue` を生成します。
+この例では、`&PTM::fValue` 式は `fValue` が静的メンバーであるため `float PTM::*` 型の代わりに `float *` 型を生成します。
 
-オーバーロード関数のアドレスは、どのバージョンの関数が参照されているかが明らかな場合にのみ受け取ることができます。 参照してください[関数のオーバー ロード](function-overloading.md)特定のアドレスを取得する方法については、関数をオーバー ロードします。
+多重定義された関数のアドレスは、どのバージョンの関数が参照されているかが明らかな場合にのみ受け取ることができます。 多重定義されたうちの特定の関数のアドレスを取得する方法については [関数のオーバーロード](function-overloading.md) を参照してください。
 
-参照型にアドレス演算子を適用すると、参照がバインドされたオブジェクトに演算子を適用するのと同じ結果を生成します。 例:
+参照型にアドレス演算子を適用すると、参照がバインドされたオブジェクトに演算子を適用するのと同じ結果を生成します。 例として:
 
 ## <a name="example"></a>例
 
 ```cpp
 // expre_Address_Of_Operator2.cpp
-// compile with: /EHsc
+// /EHsc 付きでコンパイル
 #include <iostream>
 using namespace std;
 int main() {
-   double d;        // Define an object of type double.
-   double& rd = d;  // Define a reference to the object.
+   double d;        // double型のオブジェクトを定義
+   double& rd = d;  // そのオブジェクトへの参照を定義
 
-   // Obtain and compare their addresses
+   // それらのアドレスを取得して比較
    if( &d == &rd )
       cout << "&d equals &rd" << endl;
 }
@@ -78,24 +78,24 @@ int main() {
 &d equals &rd
 ```
 
-次の例は、関数へのポインター引数を受け渡すためにアドレス演算子を使用します。
+次の例ではアドレス演算子を使用してポインター引数を関数へ受け渡します。
 
 ```cpp
 // expre_Address_Of_Operator3.cpp
-// compile with: /EHsc
-// Demonstrate address-of operator &
+// /EHsc 付きでコンパイル
+// アドレス演算子を説明する
 
 #include <iostream>
 using namespace std;
 
-// Function argument is pointer to type int
+// 関数の引数はint型へのポインタ
 int square( int *n ) {
    return (*n) * (*n);
 }
 
 int main() {
    int mynum = 5;
-   cout << square( &mynum ) << endl;   // pass address of int
+   cout << square( &mynum ) << endl;   // intのアドレスを渡す
 }
 ```
 
