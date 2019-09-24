@@ -56,7 +56,7 @@ fmtfl fl_hex = (fl_orig & ~std::cout.basefield) | std::cout.showbase | std::cout
 std::cout.flags(fl_hex);
 ```
 
-エイリアスは関数ポインターとも機能しますが、同等品の typedef より可読性がとても良いものとなります。
+エイリアスはまた関数ポインターを取り扱う事も出来ますが、同等品の typedef よりも可読性がずっと良いものになります。
 
 ```cpp
 // C++11
