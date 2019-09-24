@@ -37,7 +37,7 @@ using identifier = type;
 // C++11
 using counter = long;
 
-// C++03 で同等の:
+// C++03 equivalent:
 // typedef long counter;
 ```
 
@@ -47,7 +47,7 @@ using counter = long;
 // C++11
 using fmtfl = std::ios_base::fmtflags;
 
-// C++03 で同等の:
+// C++03 equivalent:
 // typedef std::ios_base::fmtflags fmtfl;
 
 fmtfl fl_orig = std::cout.flags();
@@ -62,11 +62,11 @@ std::cout.flags(fl_hex);
 // C++11
 using func = void(*)(int);
 
-// C++03 で同等の:
+// C++03 equivalent:
 // typedef void (*func)(int);
 
-// func は関数ポインタの値に対して割り当てる事が出来ます
-void actual_function(int arg) { /* いくらかのコード */ }
+// func can be assigned to a function pointer value
+void actual_function(int arg) { /* some code */ }
 func fptr = &actual_function;
 ```
 
@@ -75,7 +75,7 @@ func fptr = &actual_function;
 ```cpp
 template<typename T> using ptr = T*;
 
-// 'ptr<T>' という名前は今や T へのポインタのエイリアスです
+// the name 'ptr<T>' is now an alias for pointer to T
 ptr<int> ptr_int;
 ```
 
@@ -151,22 +151,22 @@ typedef 宣言を使用する事で、既に言語で定義されている型や
 
 ```cpp
 // typedef_names1.cpp
-// C2377 が発生するでしょう
-typedef unsigned long UL;   // typedef 名 UL の宣言
-int UL;                     // C2377: 再定義
+// C2377 expected
+typedef unsigned long UL;   // Declare a typedef name, UL.
+int UL;                     // C2377: redefined.
 ```
 
 その他の識別子に関連している名前の隠蔽規則は **typedef** を使用して宣言された名前の可視性も管理します。したがって、次の例はC++では適格です。
 
 ```cpp
 // typedef_names2.cpp
-typedef unsigned long UL;   // typedef 名 UL の宣言
+typedef unsigned long UL;   // Declare a typedef name, UL
 int main()
 {
-   unsigned int UL;   // 再宣言は typedef 名を隠します
+   unsigned int UL;   // Redeclaration hides typedef name
 }
 
-// typedef 名の UL がスコープに戻ります
+// typedef UL back in scope
 ```
 
 ```cpp
@@ -193,19 +193,19 @@ const FlagType x;
 名前 `FlagType` を識別子、構造体メンバー、または共用体メンバーに対して再利用するには、その型を指定する必要があります。
 
 ```cpp
-const int FlagType;  // 型指定子が必要
+const int FlagType;  // Type specifier required
 ```
 
 下記の記述だけでは不十分です。
 
 ```cpp
-const FlagType;      // 不完全な指定
+const FlagType;      // Incomplete specification
 ```
 
 なぜなら `FlagType` は再宣言された識別子ではなく、型の一部であると見なされるためです。この宣言は、次のような正しくない宣言と見なされました。
 
 ```cpp
-int;  // 不正な宣言
+int;  // Illegal declaration
 ```
 
 ポインター、関数、配列型を含め、あらゆる型を typedef で宣言できます。構造体型または共用体型を定義する前に、構造体型または共用体型へのポインターの typedef 名を宣言できます。ただし、定義が宣言と同じ可視性を持つ必要があります。
@@ -215,11 +215,11 @@ int;  // 不正な宣言
 **typedef** 宣言の用途の1つは、宣言をより統一されたコンパクトなものにする事です。 例えば:
 
 ```cpp
-typedef char CHAR;          // 文字型
-typedef CHAR * PSTR;        // 文字列へのポインタ (char *).
+typedef char CHAR;          // Character type.
+typedef CHAR * PSTR;        // Pointer to a string (char *).
 PSTR strchr( PSTR source, CHAR target );
 typedef unsigned long ulong;
-ulong ul;     // "unsigned long ul;" と同等
+ulong ul;     // Equivalent to "unsigned long ul;"
 ```
 
 **typedef** を使用して同じ宣言内に基本と派生型を指定するには、カンマを使って宣言を分けることができます。 例:
@@ -293,18 +293,18 @@ typedef char CHAR;
 
 ```cpp
 // FILE2.H
-typedef int CHAR;     // エラー
+typedef int CHAR;     // Error
 ```
 
 名前 `CHAR` を以前と異なる型を参照して再宣言しようしたためコンパイラはエラーを発行します。 このことは、次のような構成の場合にも及びます。
 
 ```cpp
 typedef char CHAR;
-typedef CHAR CHAR;      // OK: 同じ型を再宣言
+typedef CHAR CHAR;      // OK: redeclared as same type
 
-typedef union REGS      // OK: 名前 REGS 
-{                       //  が同じ意味のtypedef名を
-    struct wordregs x;  //  用いて再宣言された
+typedef union REGS      // OK: name REGS redeclared
+{                       //  by typedef name with the
+    struct wordregs x;  //  same meaning.
     struct byteregs h;
 } REGS;
 ```
@@ -315,9 +315,9 @@ typedef union REGS      // OK: 名前 REGS
 
 ```cpp
 // typedef_with_class_types1.cpp
-// /c を付けてコンパイル
-typedef struct {   // 無名構造体を宣言して、それに
-                   // typedef 名 POINT を付加する.
+// compile with: /c
+typedef struct {   // Declare an unnamed structure and give it the
+                   // typedef name POINT.
    unsigned x;
    unsigned y;
 } POINT;
