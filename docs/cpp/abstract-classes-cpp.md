@@ -35,7 +35,7 @@ private:
 };
 ```
 
-この宣言と前の宣言の唯一の違いは、`PrintBalance` が純粋指定子 (`= 0`) で宣言されていることです。
+この宣言と前の宣言の唯一の違いは、`PrintBalance` が pure 指定子 (`= 0`) 付きで宣言されていることです。
 
 ## <a name="restrictions-on-abstract-classes"></a>抽象クラスに関する制約
 
