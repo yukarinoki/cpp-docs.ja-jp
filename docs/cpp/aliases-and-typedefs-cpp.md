@@ -289,22 +289,22 @@ typedef char CHAR;
 
 プログラム *PROG.cpp* は 名前 `CHAR` に対する **typedef** 宣言が両方に含まれている2つのヘッダーファイルを include します。両方の宣言が同じ型を参照する限り、このような再宣言は許容されます。
 
-A **typedef**は以前に異なる型として宣言する名前を再定義できません。 そのため場合、 *FILE2 します。H*が含まれています
+**typedef** は以前と異なる型として名前を再定義する事はできません。そのため、もし *FILE2.H* が以下の記述を含んでいたら
 
 ```cpp
 // FILE2.H
-typedef int CHAR;     // Error
+typedef int CHAR;     // エラー
 ```
 
-コンパイラは、名前 `CHAR` を再宣言して異なる型を参照しようとするため、エラーが発生します。 このことは、次のような構造もに及びます。
+名前 `CHAR` を以前と異なる型を参照して再宣言しようしたためコンパイラはエラーを発行します。 このことは、次のような構成の場合にも及びます。
 
 ```cpp
 typedef char CHAR;
-typedef CHAR CHAR;      // OK: redeclared as same type
+typedef CHAR CHAR;      // OK: 同じ型を再宣言
 
-typedef union REGS      // OK: name REGS redeclared
-{                       //  by typedef name with the
-    struct wordregs x;  //  same meaning.
+typedef union REGS      // OK: 名前 REGS 
+{                       //  が同じ意味のtypedef名を
+    struct wordregs x;  //  用いて再宣言された
     struct byteregs h;
 } REGS;
 ```
