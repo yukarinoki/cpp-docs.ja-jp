@@ -24,8 +24,8 @@ ms.locfileid: "62385051"
 ## <a name="syntax"></a>構文
 
 ```
-式 + 式
-式 - 式
+expression + expression
+expression - expression
 ```
 
 ## <a name="remarks"></a>Remarks
@@ -70,7 +70,7 @@ ms.locfileid: "62385051"
 
 ```cpp
 // expre_Additive_Operators.cpp
-// /EHsc を付けてコンパイルする
+// compile with: /EHsc
 #include <iostream>
 #define SIZE 5
 using namespace std;
@@ -80,7 +80,7 @@ int main() {
    cout  << "5 + 10 = " << i + j << endl
          << "5 - 10 = " << i - j << endl;
 
-   // 配列に対してポインタ演算を使用
+   // use pointer arithmetic on array
 
    cout << "n[3] = " << *( n + 3 ) << endl;
 }
@@ -91,7 +91,7 @@ int main() {
 加算演算のオペランドの片方がオブジェクトの配列へのポインターである場合、もう一方のオペランドは整数型である必要があります。結果は、元のポインターと同じ型のポインターで、他の配列要素をポイントします。後述するコードでこの概念を説明します。
 
 ```cpp
-short IntArray[10]; // 2バイトを占有するshort型の配列
+short IntArray[10]; // Objects of type short occupy 2 bytes
 short *pIntArray = IntArray;
 
 for( int i = 0; i < 10; ++i )
