@@ -22,12 +22,12 @@ ms.locfileid: "62315196"
 
 ## <a name="visual-studio-2019-installation"></a>Visual Studio 2019 のインストール
 
-Visual Studio 2019 へようこそ このバージョンでは、必要な機能だけを簡単に選択してインストールできます。 占有領域が最小限まで小さくなっているため、インストールが速く、システムにほとんど影響しません。
+Visual Studio 2019 へようこそ! このバージョンでは、必要な機能だけを簡単に選択してインストールできます。 占有領域が最小限まで小さくなっているため、インストールが速く、システムにほとんど影響しません。
 
 > [!NOTE]
-> このトピックでは、Windows 上の Visual Studio のインストールに適用されます。 [Visual Studio Code](https://code.visualstudio.com/)は Windows、Mac、および Linux システムで実行される軽量のクロスプラット フォーム開発環境です。 Microsoft [for Visual Studio Code には、C/C++](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools)拡張機能は、IntelliSense、デバッグ、コードの書式設定、オート コンプリートをサポートしています。 Visual Studio for Mac では、Microsoft C でサポートされていませんは .NET 言語とクロス プラットフォーム開発をサポートします。 インストール手順については、次を参照してください。 [Visual Studio for Mac をインストール](/visualstudio/mac/installation/)します。
+> このトピックは、Windows 上の Visual Studio のインストールに適用されます。 [Visual Studio Code](https://code.visualstudio.com/)は Windows、Mac、および Linux システムで実行される軽量のクロス プラットフォーム 開発環境です。 Microsoft [C/C++ for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools)拡張機能は、IntelliSense、デバッグ、コードの書式設定、オート コンプリートをサポートしています。 Visual Studio for Mac では、Microsoft C でサポートされていません。が .NET 言語とクロス プラットフォーム開発をサポートします。 インストール手順については、次を参照してください。 [Visual Studio for Mac をインストール](/visualstudio/mac/installation/)します。
 
-このバージョンの他の新機能については、 Visual studio[リリース ノート](/visualstudio/releases/2019/release-notes/)します。
+このバージョンの他の新機能については、 Visual studio[リリース ノート](/visualstudio/releases/2019/release-notes/)を見てください。
 
 インストールの準備ができたら、 各ステップを順に実行していきます。
 
@@ -68,7 +68,7 @@ Visual Studio 2019 と以前のバージョンの Visual Studio を共存させ�
 
 ### <a name="step-4---choose-workloads"></a>手順 4 - ワークロードを選択する
 
-インストーラーがインストールされた後は、インストールを選択してカスタマイズするを使用できます、*ワークロード*の機能セットを使用するか。 ここではその方法を説明します。
+インストーラーがインストールされた後は、*ワークロード*を選択するか、または機能セットを選択するかして、インストールをカスタマイズできます。 ここではその方法を説明します。
 
 1. **[Visual Studio のインストール]** 画面で、必要なワークロードを見つけます。
 
@@ -78,9 +78,9 @@ Visual Studio 2019 と以前のバージョンの Visual Studio を共存させ�
 
    追加のワークロードでは、C++ 開発の他の種類をサポートします。 たとえば、Windows ランタイムを使用して、Microsoft Store のアプリを作成する「ユニバーサル Windows プラットフォーム開発」ワークロードを選択します。 「C++ によるゲーム開発」を選択し、DirectX、Unreal、Cocos2d を使用してゲームを作成します。 IoT 開発を含む、ターゲットの Linux プラットフォームに「C++ による Linux 開発」を選択します。
 
-   **インストールの詳細**ウィンドウには、各ワークロードによってインストールされた付属しており、省略可能なコンポーネントが一覧表示されます。 選択するか、この一覧でオプションのコンポーネントの選択を解除できます。 たとえば、Visual Studio 2017 または 2015年コンパイラ ツールセットを使用して開発をサポートするために、MSVC v141 または MSVC v140 の省略可能なコンポーネントを選択します。 MFC、実験のモジュールの言語拡張機能、IncrediBuild は、その他のサポートを追加することができます。
+   **インストールの詳細**ウィンドウには、各ワークロードによってインストールされた付属コンポーネントが含まれており、省略可能なコンポーネントが一覧表示されます。 選択するか、この一覧でオプションのコンポーネントの選択を解除できます。 たとえば、Visual Studio 2017 または 2015年コンパイラ ツールセットを使用して開発をサポートするために、MSVC v141 または MSVC v140 の省略可能なコンポーネントを選択します。 MFC、実験のモジュールの言語拡張機能、IncrediBuild は、その他のサポートを追加することができます。
 
-1. ワークロードとする省略可能なコンポーネントを選択した後選択**インストール**します。
+1. ワークロードとする省略可能なコンポーネントを選択した後、**インストール**を選択します。
 
     そうすると、ステータス画面が表示され、Visual Studio のインストールの進行状況が示されます。
 
@@ -105,7 +105,7 @@ Visual Studio 2019 と以前のバージョンの Visual Studio を共存させ�
 
 ### <a name="step-7---change-the-installation-location-optional"></a>手順 7 - インストール場所の変更 (省略可能)
 
-システム ドライブ上の Visual Studio のインストール占有領域を小さくすることができます。 ダウンロード キャッシュ、共有コンポーネント、SDK、およびツールを別のドライブに移動して、Visual Studio を最速で実行できるドライブで維持できます。
+システム ドライブ上の Visual Studio のインストール占有領域を小さくすることができます。 ダウンロード キャッシュ、共有コンポーネント、SDK、およびツールを別のドライブに移動して、ドライブ上の Visual Studio を最速で実行できるように維持できます。
 
   ![Visual Studio 2019 - インストール場所を変更する](../get-started/media/vs-installer-installation-locations.png "インストール場所を変更する")
 
