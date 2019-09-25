@@ -134,12 +134,12 @@ helpviewer_keywords:
 - C4594
 - C4595
 ms.assetid: b07850a5-ae89-48ea-bf9a-f0e30939f9b9
-ms.openlocfilehash: 9f7886a88ebd98d5d7ab1848ea7a788967362ad7
-ms.sourcegitcommit: d3829ae0c3db909f96057755a80665f5ea4896ea
+ms.openlocfilehash: d1a4da3d5e721c85879441a53ef4bc00549b587d
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69550444"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71230481"
 ---
 # <a name="compiler-warnings-c4400-through-c4599"></a>コンパイラ警告 (C4400 - C4599)
 
@@ -149,7 +149,7 @@ ms.locfileid: "69550444"
 
 ## <a name="warning-messages"></a>警告メッセージ
 
-|警告|Message|
+|警告|メッセージ|
 |-------------|-------------|
 |[コンパイラの警告 (レベル 1) C4600](compiler-warning-level-1-c4600.md)|#pragma '*macro name*': 有効な空でない文字列が必要です。|
 |[コンパイラの警告 (レベル 4) C4400](../../error-messages/compiler-warnings/compiler-warning-level-4-c4400.md)|'*type*': この型の const/volatile 修飾子はサポートされていません|
@@ -175,7 +175,7 @@ ms.locfileid: "69550444"
 |[コンパイラの警告 (レベル 1) C4420](../../error-messages/compiler-warnings/compiler-warning-level-1-c4420.md)|'*checked_operator*': 演算子は使用できません。代わりに '*operator*' を使用します。実行時チェックが危害を受ける可能性があります|
 |コンパイラの警告 (レベル 3) C4421|'*parameter*': 再開可能な関数の参照パラメーターが安全でない可能性があります|
 |コンパイラの警告 (レベル 3) C4423|' std:: bad_alloc ': 行*番号*のクラス ('*type*') によってキャッチされます|
-|コンパイラの警告 (レベル 3) C4424|行*番号*で ' type1 ' の前に '*type1*' があることをキャッチします。' std:: bad_alloc ' がスローされた場合、予期しない動作が発生する可能性があります|
+|コンパイラの警告 (レベル 3) C4424|行*番号*で ' type1 ' の前*に '* *type1*' があることをキャッチします。' std:: bad_alloc ' がスローされた場合、予期しない動作が発生する可能性があります|
 |コンパイラの警告 (レベル 1) C4425|SAL 注釈を '... ' に適用することはできません|
 |コンパイラの警告 (レベル 1) C4426|ヘッダーを含めた後に最適化フラグが変更されました。 #pragma optimize () が原因である可能性があります。|
 |コンパイラの警告 (レベル 1) C4427|'*operator*': 定数除算でオーバーフローが発生しています。未定義の動作です。|
@@ -196,9 +196,9 @@ ms.locfileid: "69550444"
 |[コンパイラの警告 (レベル 1) C4445](../../error-messages/compiler-warnings/compiler-warning-level-1-c4445.md)|'*function*': ' WinRT&#124;マネージ ' 型では、仮想メソッドをプライベートにすることはできません|
 |コンパイラの警告 (レベル 1) C4446|'*type*': 型名と競合するため、メンバー '*name1*' をこの型にマップできません。 メソッドの名前が '*name2*' に変更されました|
 |コンパイラの警告 (レベル 1) C4447|スレッドモデルのない ' main ' シグネチャが見つかりました。 ' Int main (platform:: Array\<platform:: String ^ > ^ args) ' の使用を検討してください。|
-|コンパイラの警告 C4448|'*type*1 ' には、メタデータで指定された既定のインターフェイスがありません。 ' ':' は実行時に失敗する可能性があるため、選択しています。|
+|コンパイラの警告 C4448|'*type*1 ' には、メタデータで指定された既定のインターフェイスがありません。 *' ': ' は*実行時に失敗する可能性があるため、選択しています。|
 |コンパイラの警告 C4449|'*type*' は、封印されていない型を ' [WebHostHidden] ' としてマークする必要があります|
-|コンパイラの警告 C4450|'*type1*' は ' type1 ' から派生しているため、' type1 'を ' [WebHostHidden] ' としてマークする必要があります|
+|コンパイラの警告 C4450|'*type1*'*は ' type1 ' から*派生しているため、' type1 ' を ' [WebHostHidden] ' としてマークする必要があります|
 |コンパイラの警告 (レベル 4) C4451|' classname1:: member ':このコンテキスト内で ref クラス ' classname2:: member ' を使用すると、コンテキストをまたがるオブジェクトのマーシャリングが無効になる可能性があります|
 |コンパイラの警告 (レベル 1) C4452|'*identifier*': パブリック型をグローバルスコープで指定することはできません。 これは、出力 winmd ファイルの名前の子である名前空間に存在する必要があります。|
 |コンパイラの警告 (レベル 1) C4453|'*type*':' [WebHostHidden] ' 型は、' [WebHostHidden] ' ではないパブリック型の発行されたサーフェスでは使用できません|
@@ -208,7 +208,7 @@ ms.locfileid: "69550444"
 |[コンパイラの警告 (レベル 4) C4457](compiler-warning-level-4-c4457.md)|'*identifier*' を宣言すると、関数パラメーターが非表示になります|
 |[コンパイラの警告 (レベル 4) C4458](compiler-warning-level-4-c4458.md)|'*identifier*' の宣言はクラスメンバーを非表示にします|
 |[コンパイラの警告 (レベル 4) C4459](compiler-warning-level-4-c4459.md)|'*identifier*' を宣言すると、グローバル宣言が非表示になります|
-|[コンパイラの警告 (レベル 4) C4460](../../error-messages/compiler-warnings/compiler-warning-level-4-c4460.md)|' WinRT&#124;マネージ ' 演算子 '*operator*' には参照渡しでパラメーターが渡されています。 ' WinRT&#124;マネージ ' 演算子 'operator ' はC++演算子 '*cpp_operator*' とは異なるセマンティクスを持っています。値渡しで渡すつもりでしたか?|
+|[コンパイラの警告 (レベル 4) C4460](../../error-messages/compiler-warnings/compiler-warning-level-4-c4460.md)|' WinRT&#124;マネージ ' 演算子 '*operator*' には参照渡しでパラメーターが渡されています。 ' WinRT&#124;マネージ '*演算子 ' operator ' は* C++演算子 '*cpp_operator*' とは異なるセマンティクスを持っています。値渡しで渡すつもりでしたか?|
 |[コンパイラの警告 (レベル 1) C4461](../../error-messages/compiler-warnings/compiler-warning-level-1-c4461.md)|'*classname*': このクラスにはファイナライザー '! があります。*ファイナライザー*' ですが、デストラクター ' ~*dtor*' はありません。|
 |[コンパイラの警告 (レベル1、エラー) C4462](../../error-messages/compiler-warnings/compiler-warning-level-1-c4462.md)|'*type*': 型の GUID を特定できません。 プログラムは、実行時に失敗する可能性があります。|
 |[コンパイラの警告 (レベル 4) C4463](compiler-warning-level-4-c4463.md)|超え'*min_value*' から '*max_value*' への値のみを保持できるビットフィールドに '*value*' を代入しています|
@@ -271,7 +271,7 @@ ms.locfileid: "69550444"
 |[コンパイラの警告 (レベル 4) C4536](../../error-messages/compiler-warnings/compiler-warning-level-4-c4536.md)|'*typename*': 型名がメタデータの上限である '*character_limit*' 文字を超えています|
 |[コンパイラの警告 (レベル 1) C4537](../../error-messages/compiler-warnings/compiler-warning-level-1-c4537.md)|'*object*': '. ' は UDT 型以外に適用されています|
 |[コンパイラの警告 (レベル 3) C4538](../../error-messages/compiler-warnings/compiler-warning-level-3-c4538.md)|'*type*': この型の const/volatile 修飾子はサポートされていません|
-|[コンパイラの警告 (レベル 1) C4540](../../error-messages/compiler-warnings/compiler-warning-level-1-c4540.md)|dynamic_cast がアクセス不可能またはあいまいなベースに変換するために使用されています。ランタイムテストが失敗します ('*type1*' から 'type1 ')|
+|[コンパイラの警告 (レベル 1) C4540](../../error-messages/compiler-warnings/compiler-warning-level-1-c4540.md)|dynamic_cast がアクセス不可能またはあいまいなベースに変換するために使用されています。ランタイムテストが失敗します ('*type1* *' から '* type1 ')|
 |[コンパイラの警告 (レベル 1) C4541](../../error-messages/compiler-warnings/compiler-warning-level-1-c4541.md)|'*identifier*' は、ポリモーフィックな型 '*type*' で/gr-; で使用されています予期しない動作が発生する可能性があります|
 |コンパイラの警告 (レベル 1) C4542|マージされた挿入されたテキストファイルの生成をスキップします。 *filetype*ファイルを書き込めません: '*issue*': *message*|
 |[コンパイラの警告 (レベル 3) C4543](../../error-messages/compiler-warnings/compiler-warning-level-3-c4543.md)|属性 ' no\_injected_text ' によって抑制された挿入テキスト|
@@ -305,8 +305,8 @@ ms.locfileid: "69550444"
 |コンパイラの警告 (レベル 4) C4574|'*Identifier*' は ' 0 ' に定義されています: ' #if Identifier ' を使用しますか?|
 |コンパイラの警告 (レベル 1) C4575|' __vectorcall ' は '/clr ' オプションと互換性がありません: ' __stdcall ' に変換しています|
 |コンパイラの警告 (レベル1、エラー) C4576|初期化子リストが続くかっこで囲まれた型は、標準でない明示的な型変換構文です|
-|コンパイラの警告 (レベル1、Off) C4577|例外処理モードが指定されていない ' noexcept ' が使用されています。例外での終了は保証されていません。 /EHsc を指定する|
-|コンパイラの警告 (レベル1、エラー) C4578|' abs ': ' type1 ' から '*type1*'への変換です。データが失われる可能性があります ('*function*' を呼び\<出すか、cmath > を #include しますか?)|
+|[コンパイラの警告 (レベル1、Off) C4577](../../error-messages/compiler-warnings/compiler-warning-level-1-c4577.md)|例外処理モードが指定されていない ' noexcept ' が使用されています。例外での終了は保証されていません。 /EHsc を指定する|
+|コンパイラの警告 (レベル1、エラー) C4578|' abs ': ' type1 *' から '* *type1*' への変換です。データが失われる可能性があります ('*function*' を呼び\<出すか、cmath > を #include しますか?)|
 |[コンパイラの警告 (レベル 3) C4580](../../error-messages/compiler-warnings/compiler-warning-level-3-c4580.md)|[attribute] は非推奨とされます。System::Attribute または Platform::Metadata を基底クラスとして指定してください|
 |[コンパイラの警告 (レベル 1) C4581](../../error-messages/compiler-warnings/compiler-warning-level-1-c4581.md)|非推奨の動作: 属性を処理するために ' "*string*" ' が '*string*' に置き換えられました|
 |コンパイラの警告 (レベル 4) C4582|'*type*': コンストラクターは暗黙的に呼び出されません。|
@@ -316,7 +316,7 @@ ms.locfileid: "69550444"
 |コンパイラの警告 (レベル1、エラー) C4586|'*type*':パブリック型は、' Windows ' という名前のトップレベルの名前空間で宣言することはできません|
 |コンパイラの警告 (レベル 1) C4587|'*anonymous_structure*': 動作変更: コンストラクターは暗黙的に呼び出されなくなりました|
 |コンパイラの警告 (レベル 1) C4588|'*anonymous_structure*': 動作変更: デストラクターは暗黙的に呼び出されなくなりました|
-|コンパイラの警告 (レベル 1) C4591|' constexpr ' 呼び出しの深さの上限を超えています (/\<constexpr: 深さ番号 >)|
+|コンパイラの警告 (レベル 1) C4591|' constexpr '*呼び出しの深さの上限*を超えています (/\<constexpr: 深さ番号 >)|
 |コンパイラの警告 (レベル 3) C4592|'*function*': ' constexpr ' 呼び出し評価に失敗しました。関数は実行時に呼び出されます|
 |コンパイラの警告 (レベル 1) C4593|'*function*': ' constexpr ' 呼び出しの評価ステップの制限 '*limit*' を超えています。制限を増やすには\<、/constexpr: ステップ番号 > を使用します|
 |コンパイラの警告 (レベル 3) C4594|'*type*': 例外がスローされた場合、デストラクターは暗黙的に呼び出されません|
