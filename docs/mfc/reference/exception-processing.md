@@ -39,7 +39,7 @@ Microsoft Foundation Class ライブラリに含まれるいくつかのマク�
 |||
 |-|-|
 |[TRY](#try)|例外処理のコードブロックを指定します。|
-|[CATCH](#catch)|上記からの例外をキャッチするためのコードのブロックを指定**TRY**ブロックします。|
+|[CATCH](#catch)|前の **TRY** ブロックから例外をキャッチするためのコードのブロックを指定します。|
 |[CATCH_ALL](#catch_all)|上記からのすべての例外をキャッチするためのコードのブロックを指定**TRY**ブロックします。|
 |[AND_CATCH](#and_catch)|上記から追加の例外の種類をキャッチするためのコードのブロックを指定**TRY**ブロックします。|
 |[AND_CATCH_ALL](#and_catch_all)|他のすべての直前に追加の例外の種類をキャッチするためのコードのブロックを指定**TRY**ブロックします。|
@@ -549,9 +549,9 @@ void AfxThrowDBException(
 
 ### <a name="remarks"></a>Remarks
 
-フレームワークは、ODBC API関数の呼び出しからODBC RETCODEを受け取ると、`AfxThrowDBException` を呼び出し、RETCODEを予期されるエラーではなく例外条件として解釈します。 たとえば、ディスク読み取りエラーが原因でデータアクセス操作が失敗する場合があります。
+フレームワークは、ODBC API 関数の呼び出しから ODBC RETCODE を受け取ると、`AfxThrowDBException` を呼び出し、RETCODE を予期されるエラーではなく例外条件として解釈します。たとえば、ディスク読み取りエラーが原因でデータ アクセス操作が失敗する場合があります。
 
-ODBCによって定義されたRETCODE値については、『Windows SDK』の Chapter 8「Retrieving Status and Error Information」を参照してください。 これらのコードのMFC拡張機能については、「[CDBException クラス](../../mfc/reference/cdbexception-class.md)」を参照してください。
+ODBC によって定義された RETCODE 値については、『Windows SDK』の第 8 章「Retrieving Status and Error Information」を参照してください。これらのコードの MFC 拡張機能については、「[CDBException クラス](../../mfc/reference/cdbexception-class.md)」を参照してください。
 
 ### <a name="requirements"></a>必要条件
 
