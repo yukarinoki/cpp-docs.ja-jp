@@ -20,22 +20,22 @@ ms.locfileid: "62385025"
 ## <a name="syntax"></a>構文
 
 ```
-& キャスト式
+& cast-expression
 ```
 
 ## <a name="remarks"></a>Remarks
 
 単項アドレス演算子 (**&**) は、オペランドのアドレスを取得します。 アドレス演算子のオペランドには、関数指定子またはビットフィールドではないオブジェクトを指定する左辺値のいずれかを指定できます。
 
-アドレス演算子は、ファイルスコープレベルで宣言された 基本型、構造体型、クラス型、または共用体型の変数、または添字配列参照だけに適用できます。これらの式では、アドレス演算子を含まない定数式を、アドレス式に加算したりアドレス式から減算できます。
+アドレス演算子は、ファイルスコープレベルで宣言された 基本型、構造体型、クラス型、共用体型の変数、または添字配列参照だけに適用できます。これらの式では、アドレス演算子を含まない定数式を、アドレス式に加算したりアドレス式から減算できます。
 
-関数または左辺値に適用されたときの式の結果は、オペランドの型から派生したポインター型 (右辺値) です。 たとえば、オペランドの型が**char**の場合、式の結果は**char**ポインター型になります。**const**または**volatile**オブジェクトにアドレス演算子を適用した場合 `const type *` または `volatile type *` に評価されます（**type** とは元のオブジェクト型）。
+関数または左辺値に適用されたときの式の結果は、オペランドの型から派生したポインター型 (右辺値) です。 たとえば、オペランドの型が **char** の場合、式の結果は **char** ポインター型になります。**const** または **volatile** オブジェクトにアドレス演算子を適用した場合 `const type *` または `volatile type *` に評価されます（**type** とは元のオブジェクト型）。
 
 アドレス演算子が修飾名に適用された場合、その結果は指定した修飾名が静的メンバーかどうか次第です。もしそうなら、結果はメンバーの宣言で指定した型へのポインターです。メンバーが静的でない場合、その結果は*修飾クラス名*で示されたクラスメンバーの *名前* へのポインターです。 (*修飾クラス名* の詳細については [一次式](../cpp/primary-expressions.md) を参照してください)。次のコード片ではメンバーが静的かどうかによってどのように結果が変わるかを示しています。
 
 ```cpp
 // expre_Address_Of_Operator.cpp
-// C2440 の発生を予期
+// C2440 expected
 class PTM {
 public:
     int iValue;
@@ -43,8 +43,8 @@ public:
 };
 
 int main() {
-   int   PTM::*piValue = &PTM::iValue;  // OK: 静的でない
-   float PTM::*pfValue = &PTM::fValue;  // C2440 error: 静的
+   int   PTM::*piValue = &PTM::iValue;  // OK: non-static
+   float PTM::*pfValue = &PTM::fValue;  // C2440 error: static
    float *spfValue     = &PTM::fValue;  // OK
 }
 ```
@@ -59,14 +59,14 @@ int main() {
 
 ```cpp
 // expre_Address_Of_Operator2.cpp
-// /EHsc 付きでコンパイル
+// compile with: /EHsc
 #include <iostream>
 using namespace std;
 int main() {
-   double d;        // double型のオブジェクトを定義
-   double& rd = d;  // そのオブジェクトへの参照を定義
+   double d;        // Define an object of type double.
+   double& rd = d;  // Define a reference to the object.
 
-   // それらのアドレスを取得して比較
+    // Obtain and compare their addresses
    if( &d == &rd )
       cout << "&d equals &rd" << endl;
 }
@@ -82,20 +82,20 @@ int main() {
 
 ```cpp
 // expre_Address_Of_Operator3.cpp
-// /EHsc 付きでコンパイル
-// アドレス演算子を説明する
+// compile with: /EHsc
+// Demonstrate address-of operator &
 
 #include <iostream>
 using namespace std;
 
-// 関数の引数はint型へのポインタ
+// Function argument is pointer to type int
 int square( int *n ) {
    return (*n) * (*n);
 }
 
 int main() {
    int mynum = 5;
-   cout << square( &mynum ) << endl;   // intのアドレスを渡す
+   cout << square( &mynum ) << endl;   // pass address of int
 }
 ```
 
