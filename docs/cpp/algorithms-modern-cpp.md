@@ -1,5 +1,5 @@
 ---
-title: アルゴリズム (現代的なC++)
+title: アルゴリズム (現代的な C++)
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 6f758d3c-a7c7-4a50-92bb-97b2f6d4ab27
@@ -10,9 +10,9 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/24/2019
 ms.locfileid: "64345176"
 ---
-# <a name="algorithms-modern-c"></a>アルゴリズム (現代的なC++)
+# <a name="algorithms-modern-c"></a>アルゴリズム (現代的な C++)
 
-現代的なC++プログラミングでは[C++標準ライブラリ](../standard-library/cpp-standard-library-reference.md)のアルゴリズムを使用することをお勧めします。いくつかの重要な例を示します。
+現代的な C++ プログラミングでは[C++ 標準ライブラリ](../standard-library/cpp-standard-library-reference.md) のアルゴリズムを使用することをお勧めします。いくつかの重要な例を示します。
 
 - **for_each** 既定の走査アルゴリズムです。(また **transform** が入力を出力で上書きしない場合に使えます)。
 
@@ -71,7 +71,7 @@ auto i = find_if( begin(v), end(v),  [=](int i) { return i > x && i < y; } );
 
 ## <a name="random-numbers"></a>乱数
 
-従来のCRTの `rand()` 関数に多くの欠陥があることは広く知られていて、C++コミュニティで延々と話し合われてきました。現代的なC++では、あなたがこれらの欠陥に対処する必要はありませんし、一様分布する乱数発生器を独自に考案する必要もありません、なぜなら迅速かつ簡単にそれらを作成するためのツールがC++標準ライブラリから使用可能なためです（[\<random>](../standard-library/random.md) で示されています）。
+従来の CRTの `rand()` 関数に多くの欠陥があることは広く知られた事実であり、C++コミュニティで長年にわたって議論されてきました。 現代的なC++では、これらの欠陥に対処する必要はありませんし、独自に一様分布する乱数発生器を作成する必要もありません、なぜなら [\<random>](../standard-library/random.md) で示されているように、迅速かつ簡単にそれらを作成するためのツールがC++標準ライブラリから使用可能なためです。
 
 ## <a name="see-also"></a>関連項目
 
