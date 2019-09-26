@@ -66,7 +66,7 @@ int main() {
    double d;        // Define an object of type double.
    double& rd = d;  // Define a reference to the object.
 
-    // Obtain and compare their addresses
+   // Obtain and compare their addresses
    if( &d == &rd )
       cout << "&d equals &rd" << endl;
 }
