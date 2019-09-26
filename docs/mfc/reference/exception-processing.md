@@ -38,8 +38,8 @@ Microsoft Foundation Class ライブラリに含まれるいくつかのマク�
 
 |||
 |-|-|
-|[TRY](#try)|例外の処理のコードのブロックを指定します。|
-|[CATCH](#catch)|上記からの例外をキャッチするためのコードのブロックを指定**TRY**ブロックします。|
+|[TRY](#try)|例外処理のコードブロックを指定します。|
+|[CATCH](#catch)|前の **TRY** ブロックから例外をキャッチするためのコードのブロックを指定します。|
 |[CATCH_ALL](#catch_all)|上記からのすべての例外をキャッチするためのコードのブロックを指定**TRY**ブロックします。|
 |[AND_CATCH](#and_catch)|上記から追加の例外の種類をキャッチするためのコードのブロックを指定**TRY**ブロックします。|
 |[AND_CATCH_ALL](#and_catch_all)|他のすべての直前に追加の例外の種類をキャッチするためのコードのブロックを指定**TRY**ブロックします。|
@@ -108,7 +108,7 @@ TRY
 
 ヘッダー: afx.h
 
-##  <a name="catch"></a>できれ
+##  <a name="catch"></a>CATCH
 
 最初に、上記でスローされた例外の種類をキャッチするコードのブロックを定義します**TRY**ブロックします。
 
@@ -517,9 +517,9 @@ DAO 拡張エラーコードを表す整数値。 [CDaoException:: m_nAfxDaoErro
 
 ### <a name="remarks"></a>Remarks
 
-フレームワークもを呼び出し`AfxThrowDaoException`ます。 の呼び出しでは、いずれかのパラメーターまたは両方を渡すことができます。 たとえば、 **CDaoException:: nAfxDaoError**で定義されているいずれかのエラーを発生させても、 *scode*パラメーターを気にする必要がない場合は、 *nAfxDaoError*パラメーターに有効なコードを渡し、 *scode*の既定値をそのまま使用します。
+フレームワークも `AfxThrowDaoException` を呼び出します。ユーザーからの呼び出しでは、パラメータのどちらか一方または両方を渡します。 たとえば、 **CDaoException:: nAfxDaoError**  で定義されているエラーの 1 つを発生させるときにパラメータ *scode* が必要ない場合は、パラメータ *nAfxDaoError* に有効な値を渡し、 *scode* は既定の値を受け入れます。
 
-MFC DAOクラスに関連する例外の詳細については、この書籍のクラス`CDaoException`および記事例外[例外:データベース例外](../../mfc/exceptions-database-exceptions.md)を参照してください。
+MFC DAO クラスに関連した例外の詳細については、 `CDaoException` クラスを参照してください。さらに、「例外処理 : データベースの例外](../../mfc/exceptions-database-exceptions.md) を参照してください。
 
 ### <a name="requirements"></a>必要条件
 
@@ -539,19 +539,19 @@ void AfxThrowDBException(
 ### <a name="parameters"></a>パラメーター
 
 *nRetCode*<br/>
-例外がスローされる原因となったエラーの種類を定義する RETCODE 型の値。
+例外をスローする原因となったエラーの型を定義した RETCODE 型の値を指定します。
 
 *pdb*<br/>
-例外が関連付けら`CDatabase`れているデータソース接続を表すオブジェクトへのポインター。
+`CDatabase` オブジェクトへのポインタ。このオブジェクトは、例外に関連するデータ ソース接続を表します。
 
 *hstmt*<br/>
-例外が関連付けられているステートメントハンドルを指定する ODBC HSTMT ハンドル。
+ODBC HSTMT ハンドルです。このハンドルは、例外に関連するステートメント ハンドルを指定します。
 
 ### <a name="remarks"></a>Remarks
 
-このフレームワークは`AfxThrowDBException` 、odbc API 関数の呼び出しから odbc RETCODE を受け取ったときにを呼び出し、expectable エラーではなく例外的な条件として RETCODE を解釈します。 たとえば、データアクセス操作がディスク読み取りエラーのために失敗する場合があります。
+フレームワークは、ODBC API 関数の呼び出しから ODBC RETCODE を受け取ると、`AfxThrowDBException` を呼び出し、RETCODE を予期されるエラーではなく例外条件として解釈します。たとえば、ディスク読み取りエラーが原因でデータ アクセス操作が失敗する場合があります。
 
-ODBC で定義されている RETCODE 値の詳細については、「」の「Windows SDK の「状態とエラー情報の取得」を参照してください。 これらのコードに対する MFC の拡張機能の詳細については、「クラス[CDBException](../../mfc/reference/cdbexception-class.md)」を参照してください。
+ODBC によって定義された RETCODE 値については、『Windows SDK』の第 8 章「Retrieving Status and Error Information」を参照してください。これらのコードの MFC 拡張機能については、「[CDBException クラス](../../mfc/reference/cdbexception-class.md)」を参照してください。
 
 ### <a name="requirements"></a>必要条件
 
