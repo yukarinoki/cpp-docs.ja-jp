@@ -7,10 +7,10 @@ helpviewer_keywords:
 - Windows Desktop applications [C++]
 - Windows API [C++]
 ms.openlocfilehash: 8bc2a42c5a9006065e2f0f4ecb70911e0055823e
-ms.sourcegitcommit: bf724dfc639b16d5410fab72183f8e6b781338bc
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "71062065"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>チュートリアル: 従来の Windows デスクトップアプリケーションを作成C++する ()
@@ -271,7 +271,7 @@ Windows API (Win32 API、Windows デスクトップ API、および Windows Clas
    return (int) msg.wParam;
    ```
 
-   構造体とメッセージ ループ内の関数の詳細については、次を参照してください[MSG](/windows/win32/api/winuser/ns-winuser-msg)、 [GetMessage](/windows/win32/api/winuser/nf-winuser-getmessage)、 [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage)、および[DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage)。
+   メッセージ ループ内の構造体と関数の詳細については、「 [MSG](/windows/win32/api/winuser/ns-winuser-msg)」、「 [GetMessage](/windows/win32/api/winuser/nf-winuser-getmessage)」、「 [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage)」、「 [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage)」を参照してください。
 
    この段階では、 `WinMain` 関数のコードは次のようになります。
 
