@@ -3,18 +3,18 @@ title: アルファベット順のコンパイラ オプション
 ms.date: 08/08/2019
 helpviewer_keywords:
 - compiler options, C++
-ms.openlocfilehash: 90c7ee5637a5d1e0f9d48c0f128364ee0df73dab
-ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
+ms.openlocfilehash: 39dd11245ef88d1d59d3eda8cbeaa5fc4494b9a8
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70273633"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685325"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>アルファベット順のコンパイラ オプション
 
 次の表は、コンパイラ オプションをアルファベット順の一覧にしたものです。 カテゴリ別の一覧については、「 [カテゴリ別のコンパイラ オプション](compiler-options-listed-by-category.md)」を参照してください。
 
-|オプション|目的|
+|OPTION|目的|
 |------------|-------------|
 |[@](at-specify-a-compiler-response-file.md)|応答ファイルを指定します。|
 |[/?](help-compiler-command-line-help.md)|コンパイラ オプションのリストを出力します。|
@@ -99,7 +99,7 @@ ms.locfileid: "70273633"
 |[/Od](od-disable-debug.md)|最適化を無効にします。|
 |[/Og](og-global-optimizations.md)|使用しないでください。 グローバル最適化を使用します。|
 |[/Oi](oi-generate-intrinsic-functions.md)|組み込み関数を生成します。|
-|[/openmp](openmp-enable-openmp-2-0-support.md)|ソースコード[`#pragma omp`](../../preprocessor/omp.md)でディレクティブを有効にします。|
+|[/openmp](openmp-enable-openmp-2-0-support.md)|ソースコードで[`#pragma omp`](../../preprocessor/omp.md)ディレクティブを有効にします。|
 |[/Os](os-ot-favor-small-code-favor-fast-code.md)|実行可能ファイルで、サイズの小ささを優先させます。|
 |[/Ot](os-ot-favor-small-code-favor-fast-code.md)|実行可能ファイルで、実行速度を優先させます。|
 |[/Ox](ox-full-optimization.md)|/GF または/gyを含まない/O2 のサブセット。|
@@ -142,7 +142,7 @@ ms.locfileid: "70273633"
 |[/we](compiler-option-warning-level.md)|指定した警告をエラーとして扱います。|
 |[/WL](wl-enable-one-line-diagnostics.md)|コマンド ラインから C++ ソース コードをコンパイルするときに、エラー メッセージと警告メッセージの 1 行診断を有効にします。|
 |[/wo](compiler-option-warning-level.md)|指定した警告を 1 回だけ表示します。|
-|[/Wp64](wp64-detect-64-bit-portability-issues.md)|互換性のために残されています。 64 ビット移植性の問題を検出します。|
+|[/Wp64](wp64-detect-64-bit-portability-issues.md)|使われていません。 64 ビット移植性の問題を検出します。|
 |[/Wv](compiler-option-warning-level.md)|指定したコンパイラ バージョンの後に、導入された警告は表示されません。|
 |[/WX](compiler-option-warning-level.md)|すべての警告をエラーとして扱います。|
 |[/X](x-ignore-standard-include-paths.md)|標準のインクルード ディレクトリを無視します。|
@@ -157,6 +157,7 @@ ms.locfileid: "70273633"
 |[/Ze](za-ze-disable-language-extensions.md)|使用しないでください。 言語拡張機能を有効にします。|
 |[/Zf](zf.md)|並列ビルドでの PDB 生成時間を改善します。|
 |[/Zg](zg-generate-function-prototypes.md)|Visual Studio 2015 で削除されました。 関数プロトタイプを生成します。|
+|[/ZH](zh.md)|デバッグ情報のチェックサムに MD5、SHA-1、または SHA-256 を指定します。|
 |[/ZI](z7-zi-zi-debug-information-format.md)|エディット コンティニュと互換性のあるプログラム データベースにデバッグ情報を含めます。|
 |[/Zi](z7-zi-zi-debug-information-format.md)|詳細なデバッグ情報を生成します。|
 |[/Zl](zl-omit-default-library-name.md)|.obj ファイルから既定のライブラリ名を削除します (x86 のみ)。|

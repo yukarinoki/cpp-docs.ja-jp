@@ -1,6 +1,7 @@
 ---
 title: calloc
-ms.date: 11/04/2016
+description: C ランタイムライブラリ関数 calloc は、ゼロ初期化されたメモリを割り当てます。
+ms.date: 09/27/2019
 api_name:
 - calloc
 api_location:
@@ -25,12 +26,12 @@ helpviewer_keywords:
 - memory allocation, arrays
 - calloc function
 ms.assetid: 17bb79a1-98cf-4096-90cb-1f9365cd6829
-ms.openlocfilehash: ba498b35106f9ff1636bb1bc0764088a434b5b01
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 228ec6d01a6f57ff98a9030f5a6d82e4c57388cd
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939337"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685367"
 ---
 # <a name="calloc"></a>calloc
 
@@ -40,7 +41,7 @@ ms.locfileid: "70939337"
 
 ```C
 void *calloc(
-   size_t num,
+   size_t number,
    size_t size
 );
 ```
@@ -57,27 +58,29 @@ void *calloc(
 
 **calloc**は、割り当てられた領域へのポインターを返します。 戻り値で指し示される記憶域は、どの型のオブジェクトを格納する場合でも適切なアラインメントが保証されます。 **Void**以外の型へのポインターを取得するには、戻り値に型キャストを使用します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
 **Calloc**関数は、長さ*サイズ*のバイトごとに、*数値*要素の配列にストレージ領域を割り当てます。 各要素は 0 に初期化されます。
 
 **calloc**は、メモリ割り当てが失敗した場合、または要求されたメモリの量が **_HEAP_MAXREQ**を超えた場合に、 **errno**を**ENOMEM**に設定します。 その他のエラー コードの詳細については、「[errno、_doserrno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
-**calloc**は**malloc**を呼び出してC++ 、 [_set_new_mode](set-new-mode.md)関数を使用して新しいハンドラーモードを設定します。 新しいハンドラーモードは、エラー発生時に、 **malloc**が、 [_set_new_handler](set-new-handler.md)によって設定された新しいハンドラールーチンを呼び出すかどうかを示します。 既定では、 **malloc**は、メモリの割り当てに失敗したときに新しいハンドラールーチンを呼び出しません。 この既定の動作をオーバーライドして、 **calloc**がメモリの割り当てに失敗したときに、 **new**演算子が同じ理由で失敗したときと同じ方法で新しいハンドラールーチン**を呼び出す**ことができます。 既定の動作をオーバーライドするには、次の関数を呼び出します。
+Microsoft の実装では、 *number*または*size*が0の場合、 **calloc**は0以外のサイズの割り当てられたブロックへのポインターを返します。 返されたポインターに対して読み取りまたは書き込みを行おうとすると、未定義の動作が発生します。
+
+**calloc**は、 C++ [_set_new_mode](set-new-mode.md)関数を使用して*新しいハンドラーモード*を設定します。 新しいハンドラーモードは、エラー発生時に、 **calloc**が[_set_new_handler](set-new-handler.md)によって設定された新しいハンドラールーチンを呼び出すかどうかを示します。 既定では、 **calloc**は、メモリの割り当てに失敗したときに新しいハンドラールーチンを呼び出しません。 この既定の動作をオーバーライドして、 **calloc**がメモリの割り当てに失敗したときに、 **new**演算子が同じ理由で失敗したときと同じ方法で新しいハンドラールーチンを呼び出すようにすることができます。 既定の動作をオーバーライドするには、次の関数を呼び出します。
 
 ```C
 _set_new_mode(1);
 ```
 
-この呼び出しはプログラムの最初の方で指定するか、NEWMODE.OBJ にリンクします (「[リンク オプション](../../c-runtime-library/link-options.md)」を参照してください)。
+プログラムの初期状態で作成するか、Newmode を使用してリンク*します。OBJ* (「[リンクオプション](../../c-runtime-library/link-options.md)」を参照)。
 
 アプリケーションが C ランタイムライブラリのデバッグバージョンにリンクされている場合、 **calloc**は[_calloc_dbg](calloc-dbg.md)に解決されます。 デバッグ プロセス中のヒープの管理方法の詳細については、「[CRT デバッグ ヒープ](/visualstudio/debugger/crt-debug-heap-details)」を参照してください。
 
-**calloc**はと`__declspec(noalias)` `__declspec(restrict)`マークされています。つまり、関数がグローバル変数を変更しないこと、および返されるポインターがエイリアス化されていないことが保証されることを意味します。 詳細については、「[noalias](../../cpp/noalias.md)」、および「[restrict](../../cpp/restrict.md)」を参照してください。
+**calloc**は `__declspec(noalias)` と `__declspec(restrict)` に設定されています。つまり、関数がグローバル変数を変更しないこと、および返されるポインターがエイリアス化されていないことが保証されます。 詳細については、「[noalias](../../cpp/noalias.md)」、および「[restrict](../../cpp/restrict.md)」を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**calloc**|\<stdlib.h> と \<malloc.h>|
 

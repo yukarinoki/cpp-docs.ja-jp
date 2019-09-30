@@ -4,12 +4,12 @@ ms.date: 08/08/2019
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: bfc9bb17100a3ee5c662062963c71ee532487239
-ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
+ms.openlocfilehash: 8c99b2dd60e6c2266d5095a477ee4a5b2e0c8bd0
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70273713"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685199"
 ---
 # <a name="compiler-options-listed-by-category"></a>カテゴリ別のコンパイラ オプション
 
@@ -17,7 +17,7 @@ ms.locfileid: "70273713"
 
 ## <a name="optimization"></a>最適化
 
-|オプション|目的|
+|OPTION|目的|
 |------------|-------------|
 |[/O1](o1-o2-minimize-size-maximize-speed.md)|コードを最小化します。|
 |[/O2](o1-o2-minimize-size-maximize-speed.md)|コードを最速化します。|
@@ -33,7 +33,7 @@ ms.locfileid: "70273713"
 
 ## <a name="code-generation"></a>コード生成
 
-|オプション|目的|
+|OPTION|目的|
 |------------|-------------|
 |[/arch](arch-x86.md)|コード生成で SSE または SSE2 命令を使用します。 (x86 のみ)|
 |[/clr](clr-common-language-runtime-compilation.md)|共通言語ランタイムで実行する出力ファイルを作成します。|
@@ -74,7 +74,7 @@ ms.locfileid: "70273713"
 
 ## <a name="output-files"></a>出力ファイル
 
-|オプション|目的|
+|OPTION|目的|
 |------------|-------------|
 |[/doc](doc-process-documentation-comments-c-cpp.md)|ドキュメント コメントを XML ファイルに出力します。|
 |[/FA](fa-fa-listing-file.md)|アセンブリ リスト ファイルを構成します。|
@@ -89,7 +89,7 @@ ms.locfileid: "70273713"
 
 ## <a name="preprocessor"></a>プリプロセッサ
 
-|オプション|目的|
+|OPTION|目的|
 |------------|-------------|
 |[/AI](ai-specify-metadata-directories.md)|[#using](../../preprocessor/hash-using-directive-cpp.md) ディレクティブに渡されたファイル参照を解決するために検索するディレクトリを指定します。|
 |[/C](c-preserve-comments-during-preprocessing.md)|プリプロセス時にコメントを保持します。|
@@ -107,7 +107,7 @@ ms.locfileid: "70273713"
 
 ## <a name="language"></a>[言語]
 
-|オプション|目的|
+|OPTION|目的|
 |------------|-------------|
 |[/constexpr](constexpr-control-constexpr-evaluation.md)|コンパイル時に constexpr の評価を制御します。|
 |[/openmp](openmp-enable-openmp-2-0-support.md)|ソース コードで [#pragma omp](../../preprocessor/omp.md) を有効にします。|
@@ -122,6 +122,7 @@ ms.locfileid: "70273713"
 |[/Zc](zc-conformance.md)|[/Ze](za-ze-disable-language-extensions.md)の標準動作を指定します。|
 |[/Ze](za-ze-disable-language-extensions.md)|使用しないでください。 C89 言語拡張を有効にします。|
 |[/Zf](zf.md)|並列ビルドでの PDB 生成時間を改善します。|
+|[/ZH](zh.md)|デバッグ情報のチェックサムに MD5、SHA-1、または SHA-256 を指定します。|
 |[/ZI](z7-zi-zi-debug-information-format.md)|エディット コンティニュと互換性のあるプログラム データベースにデバッグ情報を含めます。 (x86 のみ)|
 |[/Zi](z7-zi-zi-debug-information-format.md)|詳細なデバッグ情報を生成します。|
 |[/Zl](zl-omit-default-library-name.md)|.obj ファイルから既定のライブラリ名を削除します。|
@@ -131,7 +132,7 @@ ms.locfileid: "70273713"
 
 ## <a name="linking"></a>リンク
 
-|オプション|目的|
+|OPTION|目的|
 |------------|-------------|
 |[/F](f-set-stack-size.md)|スタック サイズを設定します。|
 |[/LD](md-mt-ld-use-run-time-library.md)|ダイナミック リンク ライブラリを作成します。|
@@ -145,7 +146,7 @@ ms.locfileid: "70273713"
 
 ## <a name="miscellaneous"></a>その他
 
-|オプション|目的|
+|OPTION|目的|
 |------------|-------------|
 |[/?](help-compiler-command-line-help.md)|コンパイラ オプションのリストを出力します。|
 |[@](at-specify-a-compiler-response-file.md)|応答ファイルを指定します。|
@@ -199,14 +200,14 @@ ms.locfileid: "70273713"
 
 試験的なオプションは、コンパイラの特定のバージョンでのみサポートされており、コンパイラのバージョンによって動作が異なる場合があります。 多くの場合、 [ C++ Microsoft チームのブログ](https://devblogs.microsoft.com/cppblog/)には、実験的なオプションについてのドキュメントが最適であるか、唯一のものです。
 
-|オプション|目的|
+|OPTION|目的|
 |------------|-------------|
 |[/実験的: モジュール](experimental-module.md)|実験的なモジュールのサポートを有効にします。|
 |[/実験的: プリプロセッサ](experimental-preprocessor.md)|試験的に準拠するプリプロセッサのサポートを有効にします。|
 
 ## <a name="deprecated-and-removed-compiler-options"></a>非推奨のコンパイラオプションと削除されたコンパイラオプション
 
-|オプション|目的|
+|OPTION|目的|
 |------------|-------------|
 |[/clr:noAssembly](clr-common-language-runtime-compilation.md)|使用しないでください。 代わりに、 [/LN (Create MSIL Module)](ln-create-msil-module.md) を使用してください。|
 |[/Fr](fr-fr-create-dot-sbr-file.md)|使用しないでください。 ローカル変数を含まないブラウザー情報ファイルを作成します。|
@@ -218,7 +219,7 @@ ms.locfileid: "70273713"
 |[/Og](og-global-optimizations.md)|使用しないでください。 グローバル最適化を使用します。|
 |[/QIfist](qifist-suppress-ftol.md)|使用しないでください。 浮動小数点型から整数型に変換する方法を指定するために使われていました。|
 |[/V](v-version-number.md)|使用しないでください。 .obj ファイル バージョン文字列を設定します。|
-|[/Wp64](wp64-detect-64-bit-portability-issues.md)|互換性のために残されています。 64 ビット移植性の問題を検出します。|
+|[/Wp64](wp64-detect-64-bit-portability-issues.md)|使われていません。 64 ビット移植性の問題を検出します。|
 |[/Yd](yd-place-debug-information-in-object-file.md)|使用しないでください。 すべてのオブジェクト ファイルに、詳細なデバッグ情報を取り込みます。 代わりに [/Zi](z7-zi-zi-debug-information-format.md) を使用してください。|
 |[/Zc:forScope-](zc-forscope-force-conformance-in-for-loop-scope.md)|使用しないでください。 for ループ スコープの準拠を無効にします。|
 |[/Ze](za-ze-disable-language-extensions.md)|使用しないでください。 言語拡張機能を有効にします。|
