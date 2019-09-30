@@ -37,11 +37,11 @@ C++ コンソール アプリケーション プロジェクトを作成しコ�
 
    ![プロジェクトの開始](media/vscpp-start-without-debugging.gif "プロジェクトの開始")
 
-   Visual Studio 内でコンソール ウィンドウが開かれ、アプリが実行されます。 コードが実行された後に、「続行するには何かキーを押してください. . .」 . "  と表示されますので、出力の表示を見れる機会があります。
+   Visual Studio 内でコンソール ウィンドウが開かれ、アプリが実行されます。 コードが実行された後に、「続行するには何かキーを押してください. . .」 . " と表示されますので、出力の表示を見れる機会があります。
 
 おめでとうございます! 初めての「Hello, world!」 コンソール アプリが Visual Studio で作成されました。 任意のキーを押せば、コンソール ウィンドウが閉じられ、Visual Studio に戻ります。
 
-[問題が発生しました](#build-and-run-your-code-in-visual-studio-issues)
+[問題が発生した場合](#build-and-run-your-code-in-visual-studio-issues)
 
 ## <a name="run-your-code-in-a-command-window"></a>コマンド ウィンドウで、コードを実行します。
 
@@ -59,11 +59,11 @@ C++ コンソール アプリケーション プロジェクトを作成しコ�
 
 これで、ビルドし、Visual Studio でコンソール アプリを実行しました。
 
-[問題が発生しました](#run-your-code-in-a-command-window-issues)
+[問題が発生した場合](#run-your-code-in-a-command-window-issues)
 
 ## <a name="next-steps"></a>次の手順
 
-オブジェクトを構築し、この簡単なアプリを実行したら後、より複雑なプロジェクトの準備ができました。 Visual Studio でのチュートリアル、Visual C の機能の詳細は次を参照してください[C++ デスクトップ開発用 Visual Studio IDE を使用して](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)。
+この簡単なアプリを構築し実行したら、より複雑なプロジェクトに備えられます。 Visual Studio 内の Visual C++ の機能に関する詳細なチュートリアルについては、「[C++ デスクトップ開発のための Visual Studio IDE の使用](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)」を参照してください。
 
 ## <a name="troubleshooting-guide"></a>トラブルシューティング ガイド
 
@@ -73,7 +73,7 @@ C++ コンソール アプリケーション プロジェクトを作成しコ�
 
 ソース コード エディターで赤い波線が下に表示される場合、ビルドにエラーまたは警告があります。 コードが、スペル、句読点、および大文字小文字の例と一致することを確認してください。
 
-[戻る。](#build-and-run-your-code-in-visual-studio)
+[戻る](#build-and-run-your-code-in-visual-studio)
 
 ### <a name="run-your-code-in-a-command-window-issues"></a>コマンド ウィンドウで、コードを実行の問題
 
@@ -81,6 +81,6 @@ C++ コンソール アプリケーション プロジェクトを作成しコ�
 
 表示されない場合**パスとしてコピー**ショートカット メニューで、メニューを閉じるし、Shift キーを押しながら、もう一度開きます。 これは、利便性。 ファイル エクスプ ローラーの検索バーから、フォルダーにパスをコピーしてに貼り付けることができます、**実行**ダイアログ ボックスで、最後に、実行可能ファイルの名前を入力します。 ほんの少し詳細入力ですが、同じ結果があります。
 
-[戻る。](#run-your-code-in-a-command-window)
+[戻る](#run-your-code-in-a-command-window)
 
 <iframe src="" height="0" width="0" frameborder="0" name="frameTarget" />
