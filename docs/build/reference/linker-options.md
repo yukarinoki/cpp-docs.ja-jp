@@ -10,12 +10,12 @@ helpviewer_keywords:
 - libraries [C++], linking to COFF
 - LINK tool [C++], linker options
 ms.assetid: c1d51b8a-bd23-416d-81e4-900e02b2c129
-ms.openlocfilehash: 23cd1c3ce767cf8046e3439432db795f032dc370
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.openlocfilehash: c7a44be5bb21bf83d621bd57c45713bd01e22cb6
+ms.sourcegitcommit: a361362354f6ce51eda4ffdb016b81c24cd225cb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71685587"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71712703"
 ---
 # <a name="linker-options"></a>リンカー オプション
 
@@ -88,7 +88,7 @@ LINK.exe のオプションの一覧を次の表に示します。 LINK の詳�
 |[/LARGEADDRESSAWARE](largeaddressaware-handle-large-addresses.md)|アプリケーションが 2 GB を超えるアドレスをサポートしていることをコンパイラに指定します。|
 |[/LIBPATH](libpath-additional-libpath.md)|環境ライブラリ パスの前に検索するパスを指定します。|
 |[/LINK再現](linkrepro.md)|リンク再現アーティファクトを生成するパスを指定します。|
-|[/LINKREPROTARGET](linkreprotarget.md)|指定されたターゲットを生成するときにのみ、リンク再現を生成します。|
+|[/LINKREPROTARGET](linkreprotarget.md)|指定されたターゲットを生成するときにのみ、リンク再現を生成します。<sup>16.1</sup>|
 |[/LTCG](ltcg-link-time-code-generation.md)|リンク時のコード生成を指定します。|
 |[/MACHINE](machine-specify-target-platform.md)|ターゲット プラットフォームを指定します。|
 |[/MANIFEST](manifest-create-side-by-side-assembly-manifest.md)|side-by-side マニフェスト ファイルを作成し、バイナリに埋め込むことができるようにします。|
@@ -137,7 +137,7 @@ LINK.exe のオプションの一覧を次の表に示します。 LINK の詳�
 |[/WINMDDELAYSIGN](winmddelaysign-partially-sign-a-winmd.md)|winmd ファイルに公開キーを設定して、Windows のランタイム メタデータ (.winmd) ファイルに部分的に署名します。|
 |[/WX](wx-treat-linker-warnings-as-errors.md)|リンカー警告をエラーとして扱います。|
 
-詳細については、「 [Compiler-Controlled LINK Options](compiler-controlled-link-options.md)」を参照してください。
+<sup>16.1</sup>このオプションは、Visual Studio 2019 バージョン16.1 以降で使用できます。
 
 ## <a name="see-also"></a>関連項目
 

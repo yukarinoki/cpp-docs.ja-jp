@@ -1,5 +1,5 @@
 ---
-title: /Linkreprotarget (リンク再現ファイル名)
+title: /LINKREPROTARGET (リンク再現ファイル名)
 description: リンカーまたはライブラリツールオプションリンクを再現するためのターゲットファイル名を設定します。
 ms.date: 09/24/2019
 f1_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - /LINKREPROTARGET linker option
 - -LINKREPROTARGET linker option
 - linker repro reporting
-ms.openlocfilehash: 4912e8bc64d31e3ecc97ea25783c7329e7d7861c
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.openlocfilehash: d629c4c2665239d03f38569677fa579b6c8d37e0
+ms.sourcegitcommit: a361362354f6ce51eda4ffdb016b81c24cd225cb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71686906"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71712682"
 ---
-# <a name="linkreprotarget-link-repro-file-name"></a>/Linkreprotarget (リンク再現ファイル名)
+# <a name="linkreprotarget-link-repro-file-name"></a>/LINKREPROTARGET (リンク再現ファイル名)
 
 ターゲットに指定されたファイル名がある場合にのみリンク再現を生成するようにリンカーまたはライブラリツールに指示します。
 
@@ -38,6 +38,8 @@ ms.locfileid: "71686906"
 リンク再現の作成方法とタイミングの詳細については、「 [Microsoft C++ツールセットの問題を報告する方法](../../overview/how-to-report-a-problem-with-the-visual-cpp-toolset.md)」の「[リンク](../../overview/how-to-report-a-problem-with-the-visual-cpp-toolset.md#link-repros)の再現」セクションを参照してください。
 
 / **Linkreprotarget**オプションを有効にするには、 **/link再現**オプションと[/out](out-output-file-name.md)オプションを設定する必要があります。
+
+**/Linkreprotarget**は、Visual Studio 2019 バージョン16.1 以降で使用できます。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
