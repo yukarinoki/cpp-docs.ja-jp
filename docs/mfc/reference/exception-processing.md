@@ -519,7 +519,7 @@ DAO 拡張エラーコードを表す整数値。 [CDaoException:: m_nAfxDaoErro
 
 フレームワークも `AfxThrowDaoException` を呼び出します。 ユーザーからの呼び出しでは、パラメータのどちらか一方または両方を渡します。 たとえば、 **CDaoException:: nAfxDaoError**  で定義されているエラーの 1 つを発生させるときにパラメータ *scode* が必要ない場合は、パラメータ *nAfxDaoError* に有効な値を渡し、 *scode* は既定の値を受け入れます。
 
-MFC DAO クラスに関連する例外の詳細については`CDaoException` 、このブックの「クラス[」および「例外:データベースの](../../mfc/exceptions-database-exceptions.md)例外。
+MFC DAO クラスに関連した例外の詳細については、 `CDaoException` クラスを参照してください。さらに、[例外処理 :データベースの例外](../../mfc/exceptions-database-exceptions.md) を参照してください。
 
 ### <a name="requirements"></a>必要条件
 
@@ -542,7 +542,7 @@ void AfxThrowDBException(
 例外をスローする原因となったエラーの型を定義した RETCODE 型の値を指定します。
 
 *pdb*<br/>
-例外が関連付けら`CDatabase`れているデータソース接続を表すオブジェクトへのポインター。
+`CDatabase` オブジェクトへのポインタ。このオブジェクトは、例外に関連するデータ ソース接続を表します。
 
 *hstmt*<br/>
 例外が関連付けられているステートメントハンドルを指定する ODBC HSTMT ハンドル。
