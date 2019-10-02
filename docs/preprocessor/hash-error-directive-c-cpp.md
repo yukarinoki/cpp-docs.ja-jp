@@ -21,7 +21,7 @@ ms.locfileid: "70216123"
 
 ## <a name="syntax"></a>構文
 
-> **#error***トークン-文字列*
+> **#error** *トークン-文字列*
 
 ## <a name="remarks"></a>Remarks
 
