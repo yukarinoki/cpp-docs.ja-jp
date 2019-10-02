@@ -1,6 +1,6 @@
 ---
 title: /analyze (コード分析)
-ms.date: 04/26/2018
+ms.date: 10/01/2019
 f1_keywords:
 - VC.Project.VCCLCompilerTool.EnablePREfast
 - /analyze
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -analyze compiler option [C++]
 - analyze compiler option [C++]
 ms.assetid: 81da536a-e030-4bd4-be18-383927597d08
-ms.openlocfilehash: 63cfd2bd206a361301c75110a684e1d2c642a1f2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d647045d76dc32544f8146424b220547890b0943
+ms.sourcegitcommit: 4517932a67bbf2db16cfb122d3bef57a43696242
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273158"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816330"
 ---
 # <a name="analyze-code-analysis"></a>/analyze (コード分析)
 
@@ -30,25 +30,25 @@ ms.locfileid: "62273158"
 
 ## <a name="arguments"></a>引数
 
-/analyze に既定のモードで分析します。 分析の出力に送ら、**出力**他のエラー メッセージのようなウィンドウ。 使用 **/analyze -** 分析を明示的にオフにします。
+/analyze は、既定のモードで分析をオンにします。 分析出力は、他のエラーメッセージと同様に**出力**ウィンドウに移動します。 分析を明示的にオフにするには **、/analyze e-** を使用します。
 
-/analyze: WX 指定 **/analyze: WX -** を使用してコンパイルするときにコード分析の警告がエラーとして扱われなく **/WX**します。 詳細については、「[/w、/W0、/W1、/W2、/W3、/W4, /w1, /w2, /w3、/w4、/Wall、/wd、/we、/wo、/Wv、/WX (警告レベル)](compiler-option-warning-level.md)」を参照してください。
+/analyze: WX- **/analyze: wx**を指定します。 **/wx**を使用してコンパイルするときに、コード分析の警告がエラーとして扱われないことを意味します。 詳細については、「[/w、/W0、/W1、/W2、/W3、/W4, /w1, /w2, /w3、/w4、/Wall、/wd、/we、/wo、/Wv、/WX (警告レベル)](compiler-option-warning-level.md)」を参照してください。
 
-/analyze: ログ`filename`詳細なアナライザーの結果で指定されているファイルに XML として書き込まれます`filename`します。
+/analyze: log `filename` 詳細なアナライザーの結果は、`filename` によって指定されたファイルに XML として書き込まれます。
 
-/analyze: アナライザーの出力をオフになりますを quiet、**出力**ウィンドウ。
+/analyze: quiet では、アナライザーの出力が**出力**ウィンドウに表示されません。
 
-/analyze:/analyze:stacksize `number` 、`number`このオプションで使用されるパラメーターは、警告のスタック フレームのバイト単位でサイズを指定[C6262](/visualstudio/code-quality/c6262)が生成されます。 このパラメーターが指定されていない場合は、既定の 16 KB がスタック フレーム サイズとして使用されます。
+/analyze: stacksize `number` `number` パラメーターこのオプションと共に使用されるパラメーターは、警告[C6262](/visualstudio/code-quality/c6262)が生成されるスタックフレームのサイズ (バイト単位) を指定します。 0 @no__t 前のスペースは省略可能です。 このパラメーターが指定されていない場合は、既定の 16 KB がスタック フレーム サイズとして使用されます。
 
-/analyze:/analyze:max_paths `number` 、`number`このオプションで使用されるパラメーターを分析するコード パスの最大数を指定します。 このパラメーターが指定されていない場合は、既定の 256 が最大数として使用されます。 値を大きくすると、より細かなチェックが実行されますが、分析に時間がかかることがあります。
+/analyze: max_paths `number` このオプションで使用される `number` パラメーターには、分析するコードパスの最大数を指定します。 このパラメーターが指定されていない場合は、既定の 256 が最大数として使用されます。 値を大きくすると、より細かなチェックが実行されますが、分析に時間がかかることがあります。
 
-/analyze: 通常、コンパイラはコードを生成し、構文チェック、アナライザーを実行した後をさらには専用です。 **/Analyze: のみ**オプションは、このコード生成パスによってオフします。 分析を高速化により、これがコンパイル エラーとコンパイラのコード生成パスによって検出された警告が出力されません。 プログラムにコード生成のエラーがある場合は、分析結果が信頼できないものになる可能性があるため、このオプションを使用するのは、コードが既にコード生成構文チェックをエラーなしで渡している場合だけにすることをお勧めします。
+/analyze: 通常は、コンパイラによってコードが生成され、アナライザーの実行後により多くの構文チェックが行われます。 **/Analyze: only**オプションは、このコード生成パスをオフにします。これにより、分析が高速になりますが、コンパイラのコード生成パスによって検出されたコンパイルエラーと警告は出力されません。 プログラムにコード生成のエラーがある場合は、分析結果が信頼できないものになる可能性があるため、このオプションを使用するのは、コードが既にコード生成構文チェックをエラーなしで渡している場合だけにすることをお勧めします。
 
-/analyze: ruleset`<file_path>.ruleset`などのカスタム規則セットを自分で作成できることを分析するルールのセットを指定することができます。 このスイッチが設定されている場合、指定した規則を実行する前にセットのメンバー以外を除外するため、ルール エンジンが効率的です。 スイッチが設定されていない場合、エンジンはすべてのルールを確認します。
+/analyze: ルールセット `<file_path>.ruleset` を使用すると、自分で作成できるカスタム規則セットを含む、分析する規則セットを指定できます。 このスイッチが設定されている場合、ルールエンジンは、実行前に指定された規則セットの非メンバーを除外するため、より効率的です。 スイッチが設定されていない場合、エンジンはすべての規則を確認します。
 
-Visual Studio に付属する ruleset にあるは **%VSINSTALLDIR%\Team \static 分析 Tools\Rule セット。**
+Visual Studio に付属しているルールセットは、%VSINSTALLDIR%\Team ツールの **静的な分析ツール \ ルールセットの設定**に含まれています。
 
-次のサンプルのカスタム規則セットでは、ルール エンジン C6001 と C26494 を確認するように指示します。 このファイルを配置するには、任意の場所にある限り、`.ruleset`と拡張機能は、引数の完全なパスを指定します。
+次のサンプルカスタムルールセットは、C6001 と C26494 をチェックするようにルールエンジンに指示します。 このファイルは、@no__t 0 の拡張子が付いている限り、任意の場所に配置できます。引数に完全なパスを指定します。
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -60,34 +60,34 @@ Visual Studio に付属する ruleset にあるは **%VSINSTALLDIR%\Team \static
 </RuleSet>
 ```
 
-/analyze: プラグインがコード分析の一部を実行すると、指定された PREfast プラグインをできます。
-LocalEspC.dll は、範囲の C261XX 警告で同時実行関連のコード分析を実装するプラグインを確認します。 たとえば、 [C26100](/visualstudio/code-quality/c26100)、 [C26101](/visualstudio/code-quality/c26101),..., [C26167](/visualstudio/code-quality/c26167)します。
+/analyze: プラグインは、コード分析の実行の一部として、指定された PREfast プラグインを有効にします。
+LocalC261XX は、同時実行に関連するコード分析チェックを実装するプラグインです。 たとえば、 [C26100](/visualstudio/code-quality/c26100)、 [C26101](/visualstudio/code-quality/c26101)、 [C26167](/visualstudio/code-quality/c26167)のようになります。
 
-LocalEspC.dll を実行するには、このコンパイラ オプションを使用: **/analyze: プラグイン LocalEspC.dll**
+Local、c .dll を実行するには、次のコンパイラオプションを使用します。 **/analyze: Plugin Localて c .dll**
 
-CppCoreCheck.dll を実行するには、最初の開発者コマンド プロンプトからこのコマンドを実行します。
+CppCoreCheck を実行するには、まず開発者コマンドプロンプトから次のコマンドを実行します。
 
 ```cmd
 set Esp.Extensions=CppCoreCheck.dll
 ```
 
-このコンパイラ オプションを使用して: **/analyze: プラグイン EspXEngine.dll**します。
+その後、次のコンパイラオプションを使用します。 **/analyze: プラグイン**では、dll を使用します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-詳細については、次を参照してください。 [Code Analysis for C と C++ の概要](/visualstudio/code-quality/code-analysis-for-c-cpp-overview)と[c/c++ の警告のコード分析](/visualstudio/code-quality/code-analysis-for-c-cpp-warnings)します。
+詳細については、「 [c/C++ ](/visualstudio/code-quality/code-analysis-for-c-cpp-overview) c + + のコード分析」と「 [c/C++警告のコード分析](/visualstudio/code-quality/code-analysis-for-c-cpp-warnings)」を参照してください。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
 
 1. **[構成プロパティ]** ノードを展開します。
 
-1. 展開、**コード分析**ノード。
+1. **[コード分析]** ノードを展開します。
 
 1. **[全般]** プロパティ ページをクリックします。
 
-1. 1 つ以上の変更、**コード分析**プロパティ。
+1. 1つ以上の**コード分析**プロパティを変更します。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには
 

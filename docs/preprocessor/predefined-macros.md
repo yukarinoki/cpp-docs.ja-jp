@@ -1,12 +1,17 @@
 ---
 title: 定義済みマクロ
 ms.custom: update_every_version
-ms.date: 04/05/2019
+ms.date: 10/01/2019
 f1_keywords:
 - _ATL_VER
 - __ATOM__
 - __AVX__
 - __AVX2__
+- __AVX512BW__
+- __AVX512CD__
+- __AVX512DQ__
+- __AVX512F__
+- __AVX512VL__
 - _CHAR_UNSIGNED
 - __CLR_VER
 - _CONTROL_FLOW_GUARD
@@ -80,6 +85,11 @@ helpviewer_keywords:
 - __ATOM__ macro
 - __AVX__ macro
 - __AVX2__ macro
+- __AVX512BW__ macro
+- __AVX512CD__ macro
+- __AVX512DQ__ macro
+- __AVX512F__ macro
+- __AVX512VL__ macro
 - _CHAR_UNSIGNED macro
 - __CLR_VER macro
 - _CONTROL_FLOW_GUARD macro
@@ -143,12 +153,12 @@ helpviewer_keywords:
 - _WINRT_DLL macro
 - __func__ identifier
 ms.assetid: 1cc5f70a-a225-469c-aed0-fe766238e23f
-ms.openlocfilehash: 15b70b0292f671d99b320c8d23598e68b47adb0d
-ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
+ms.openlocfilehash: eb75273bc8cbe5ccbf62edc82a1e7deccc605757
+ms.sourcegitcommit: 4517932a67bbf2db16cfb122d3bef57a43696242
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70273817"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816604"
 ---
 # <a name="predefined-macros"></a>定義済みマクロ
 
@@ -194,9 +204,19 @@ MSVC では、これらの追加の定義済みマクロがサポートされま
 
 - **&#95;&#95;ATOM&#95;&#95;** 1 として定義されている、 [/favor:ATOM](../build/reference/favor-optimize-for-architecture-specifics.md)コンパイラ オプションを設定し、コンパイラのターゲットは x86 または x64 です。 それ以外の場合、定義されていません。
 
-- **&#95;&#95;AVX&#95;&#95;** 1 として定義されている、 [/arch:AVX](../build/reference/arch-x86.md)または[/arch:AVX2](../build/reference/arch-x86.md)コンパイラ オプションを設定し、コンパイラのターゲットは x86 または x64 です。 それ以外の場合、定義されていません。
+- **&#95; AVX &#95; &#95;** [/Arch: AVX](../build/reference/arch-x86.md)、 [/arch: AVX2](../build/reference/arch-x86.md) 、または[/arch: AVX512](../build/reference/arch-x86.md)コンパイラオプションが設定され、コンパイラターゲットが x86 または x64 の場合、1として定義されます。 それ以外の場合、定義されていません。
 
-- **&#95;&#95;AVX2&#95;&#95;** 1 として定義されている、 [/arch:AVX2](../build/reference/arch-x86.md)コンパイラ オプションを設定し、コンパイラのターゲットは x86 または x64 です。 それ以外の場合、定義されていません。
+- **&#95; AVX2 &#95; &#95;** [/Arch: AVX2](../build/reference/arch-x86.md)または[/arch: AVX512](../build/reference/arch-x86.md)コンパイラオプションが設定され、コンパイラターゲットが x86 または x64 の場合、1として定義されます。 それ以外の場合、定義されていません。
+
+- **&#95; AVX512BW &#95; &#95;** [/Arch: AVX512](../build/reference/arch-x86.md)コンパイラオプションが設定され、コンパイラターゲットが x86 または x64 の場合、1として定義されます。 それ以外の場合、定義されていません。
+
+- **&#95; AVX512CD &#95; &#95;** [/Arch: AVX512](../build/reference/arch-x86.md)コンパイラオプションが設定され、コンパイラターゲットが x86 または x64 の場合、1として定義されます。 それ以外の場合、定義されていません。
+
+- **&#95; AVX512DQ &#95; &#95;** [/Arch: AVX512](../build/reference/arch-x86.md)コンパイラオプションが設定され、コンパイラターゲットが x86 または x64 の場合、1として定義されます。 それ以外の場合、定義されていません。
+
+- **&#95; AVX512F &#95; &#95;** [/Arch: AVX512](../build/reference/arch-x86.md)コンパイラオプションが設定され、コンパイラターゲットが x86 または x64 の場合、1として定義されます。 それ以外の場合、定義されていません。
+
+- **&#95; AVX512VL &#95; &#95;** [/Arch: AVX512](../build/reference/arch-x86.md)コンパイラオプションが設定され、コンパイラターゲットが x86 または x64 の場合、1として定義されます。 それ以外の場合、定義されていません。
 
 - **&#95;CHAR&#95;UNSIGNED** 既定の場合は 1 として定義されている**char**型が符号なし。 この値が定義されているときに、 [/J (既定の char 型の unsigned)](../build/reference/j-default-char-type-is-unsigned.md)コンパイラ オプションを設定します。 それ以外の場合、定義されていません。
 
@@ -346,7 +366,7 @@ MSVC では、これらの追加の定義済みマクロがサポートされま
 
   - コンパイラオプションが`/arch:SSE`設定されている場合は1。
 
-  - 、 `/arch:SSE2` `/arch:AVX2` 、またはコンパイラオプションが設定されている場合は2。 `/arch:AVX` この値は、 `/arch`コンパイラオプションが指定されていない場合の既定値です。 を`/arch:AVX`指定した場合、  **&#95; &#95;マクロ&#95; AVX**も定義されます。 を`/arch:AVX2`指定した場合 **&#95; &#95;、&#95; AVX**と **&#95; &#95;AVX2&#95;** の両方も定義されます。
+  - `/arch:SSE2`、`/arch:AVX`、`/arch:AVX2`、または `/arch:AVX512` コンパイラオプションが設定されている場合は2。 この値は、 `/arch`コンパイラオプションが指定されていない場合の既定値です。 @No__t-0 が指定されている場合、マクロ **&#95; &#95;AVX&#95;** も定義されます。 @No__t-0 を指定すると、 **&#95; &#95;AVX&#95;** と **&#95; &#95;AVX2&#95;** の両方も定義されます。 @No__t-0 が指定さ **&#95; &#95;&#95;** れている場合、AVX、  **&#95; &#95;&#95;AVX2**、  **&#95; &#95;AVX512BW&#95;** 、  **&#95; &#95;AVX512CD&#95;** 、  **&#95;AVX512DQ&#95;、 &#95;** **AVX512F&#95;および&#95;AVX512VL も定義されています。 &#95;** **&#95; &#95;&#95;**
 
   - 詳細については、「[/arch (x86)](../build/reference/arch-x86.md)」を参照してください。
 
@@ -385,7 +405,7 @@ MSVC では、これらの追加の定義済みマクロがサポートされま
    |Visual Studio 2019 バージョン 16.2|1922|
    |Visual Studio 2019 バージョン16.3|1923|
 
-   特定のバージョンの Visual Studio またはその後に、コンパイラのリリースまたは更新プログラム **>=** をテストするには、演算子を使用します。 これを条件付きディレクティブで使用して、  **&#95;MSC&#95;VER**をその既知のバージョンと比較することができます。 比較対象として相互に排他的な複数のバージョンがある場合は、バージョン番号の降順で比較します。 たとえば、このコードは Visual Studio 2017 以降でリリースされたコンパイラをチェックします。 次に、Visual Studio 2015 以降でリリースされたコンパイラがあるかどうかを確認します。 次に、Visual Studio 2015 より前にリリースされたすべてのコンパイラがあるかどうかを確認します。
+   特定のバージョンの Visual Studio またはその後に、コンパイラのリリースまたは更新プログラムをテストするには、 **>=** 演算子を使用します。 これを条件付きディレクティブで使用して、  **&#95;MSC&#95;VER**をその既知のバージョンと比較することができます。 比較対象として相互に排他的な複数のバージョンがある場合は、バージョン番号の降順で比較します。 たとえば、このコードは Visual Studio 2017 以降でリリースされたコンパイラをチェックします。 次に、Visual Studio 2015 以降でリリースされたコンパイラがあるかどうかを確認します。 次に、Visual Studio 2015 より前にリリースされたすべてのコンパイラがあるかどうかを確認します。
 
    ```cpp
    #if _MSC_VER >= 1910
@@ -430,7 +450,7 @@ MSVC では、これらの追加の定義済みマクロがサポートされま
 
 - **&#95;PREFAST&#95;** [/Analyze](../build/reference/analyze-code-analysis.md)コンパイラオプションが設定されている場合は、1として定義されます。 それ以外の場合、定義されていません。
 
-- **&#95;&#95;タイム&#95;スタンプ**現在のソースファイルが最後に変更された日付と時刻を含む文字列リテラルとして定義されます。これは、CRT [asctime](../c-runtime-library/reference/asctime-wasctime.md)関数によって返される、 `Fri 19 Aug 13:32:58 2016`省略形の定数長形式 (たとえば、) で構成されます。 このマクロは常に定義します。
+- **&#95;&#95;タイム&#95;スタンプ**現在のソースファイルが最後に変更された日時を含む文字列リテラルとして定義されます。これには、CRT [asctime](../c-runtime-library/reference/asctime-wasctime.md)関数によって返される、省略形の定数長 (`Fri 19 Aug 13:32:58 2016` など) が含まれます。 このマクロは常に定義します。
 
 - **&#95;&#95;** [/Zl (既定のライブラリ名の省略)](../build/reference/zl-omit-default-library-name.md)コンパイラオプションが設定されている場合、VC NODEFAULTLIB は1と定義されます。 それ以外の場合、定義されていません。
 
