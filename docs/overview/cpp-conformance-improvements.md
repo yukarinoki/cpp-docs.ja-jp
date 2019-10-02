@@ -1,16 +1,16 @@
 ---
 title: C++ 準拠の強化
-ms.date: 08/30/2019
+ms.date: 09/25/2019
 description: Visual Studio の Microsoft C++ は、C++20 言語標準との完全準拠に向かって進んでいます。
 ms.technology: cpp-language
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 8eae104d21de271f11c727262939121c20050092
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.openlocfilehash: 4825317b07535d98b1b5db4442f935e9b2cfb632
+ms.sourcegitcommit: b4572ffcc71e6bdb0ca23221f9476cfaf4528406
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927946"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71314473"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Visual Studio の C++ 準拠の強化
 
@@ -123,7 +123,7 @@ int main()
 
 ### <a name="lambda-closures"></a>ラムダ クロージャ
 
-C++ 14 では、ラムダ クロージャの型はリテラルではありません。 このルールの最も重要な影響は、ラムダが `constexpr` 変数に割り当てられない可能性があるということです。 次のコードは Visual Studio 2017 ではエラーなくコンパイルされますが、Visual Studio 2019 では *C2127: 'l': illegal initialization of 'constexpr' entity with a non-constant expression (定数以外の式を持つ 'constexpr' エンティティの初期化が正しくありません)* が発生します。
+C++ 14 では、ラムダ クロージャの型はリテラルではありません。 このルールの最も重要な影響は、ラムダが **constexpr** 変数に割り当てられない可能性があるということです。 次のコードは Visual Studio 2017 ではエラーなくコンパイルされますが、Visual Studio 2019 では *C2127: 'l': illegal initialization of 'constexpr' entity with a non-constant expression (定数以外の式を持つ 'constexpr' エンティティの初期化が正しくありません)* が発生します。
 
 ```cpp
 int main()
@@ -132,7 +132,7 @@ int main()
 }
 ```
 
-エラーを回避するには、`constexpr` 修飾子を削除するか、準拠モードを `/std:c++17` に変更します。
+エラーを回避するには、**constexpr** 修飾子を削除するか、準拠モードを `/std:c++17` に変更します。
 
 ### <a name="stdcreate_directory-failure-codes"></a>`std::create_directory` エラー コード
 
@@ -148,7 +148,7 @@ int main()
 
 ### <a name="atomic-initialization"></a>アトミック初期化
 
-[P0883 "Fixing atomic initialization"](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0883r1.pdf) により、含まれる T を既定初期化せず、値初期化するように `std::atomic` が変更されます。 Clang/LLVM と Microsoft 標準ライブラリが使用されるとき、修正は有効になります。 Microsoft C++ コンパイラでは、`constexpr` 処理のバグに対する回避策としてこれは現在、無効になっています。
+[P0883 "Fixing atomic initialization"](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0883r1.pdf) により、含まれる T を既定初期化せず、値初期化するように `std::atomic` が変更されます。 Clang/LLVM と Microsoft 標準ライブラリが使用されるとき、修正は有効になります。 Microsoft C++ コンパイラでは、**constexpr** 処理のバグに対する回避策としてこれは現在、無効になっています。
 
 ### <a name="remove_cvref-and-remove_cvref_t"></a>`remove_cvref` および `remove_cvref_t`
 
@@ -246,7 +246,7 @@ void f() {
 
 ### <a name="noexcept-constexpr-functions"></a>noexcept constexpr 関数
 
-constexpr 関数では、定数式で使用される場合、既定では `noexcept` が考慮されなくなりました。 この動作変更は、[CWG 1351](http://www.open-std.org/jtc1/sc22/wg21/docs/cwg_defects.html#1351) の解決に由来し、[/permissive-](../build/reference/permissive-standards-conformance.md) で有効になっています。 次の例は、Visual Studio 2019 バージョン 16.1 以前ではコンパイルされますが、Visual Studio 2019 バージョン 16.2 では C2338 が生成されます。
+constexpr 関数では、定数式で使用される場合、既定では **noexcept** が考慮されなくなりました。 この動作変更は、[CWG 1351](http://www.open-std.org/jtc1/sc22/wg21/docs/cwg_defects.html#1351) の解決に由来し、[/permissive-](../build/reference/permissive-standards-conformance.md) で有効になっています。 次の例は、Visual Studio 2019 バージョン 16.1 以前ではコンパイルされますが、Visual Studio 2019 バージョン 16.2 では C2338 が生成されます。
 
 ```cpp
 constexpr int f() { return 0; }
@@ -256,7 +256,7 @@ int main() {
 }
 ```
 
-このエラーを修正するには、`noexcept` 式を関数宣言に追加します。
+このエラーを修正するには、**noexcept** 式を関数宣言に追加します。
 
 ```cpp
 constexpr int f() noexcept { return 0; }
@@ -388,11 +388,93 @@ bool neq(const S& lhs, const S& rhs) {
 - [P0754R2](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0754r2.pdf): \<version>
 - [P0771R1](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0771r1.pdf): std::function の移動コンストラクター用の noexcept
 
+## <a name="improvements_163"></a> Visual Studio 2019 バージョン 16.3 の準拠の強化
+
+### <a name="stream-extraction-operators-for-char-removed"></a>char* のストリーム抽出演算子が削除されました
+
+ポインターから文字へのストリーム抽出演算子が削除され、文字配列の抽出演算子に置き換えられました ([P0487R1](http://http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0487r1.html) による)。 WG21 では、削除されたオーバーロードは安全でないと見なされます。 [/std:c++latest](../build/reference/std-specify-language-standard-version.md) モードの場合、次の例では *C2679: binary '>>': no operator found which takes a right-hand operand of type 'char\*' (or there is no acceptable conversion)* ('char*' 型の右側のオペランドを受け取る演算子が見つかりません (または変換できません)) が生成されるようになりました。
+
+```cpp
+   char x[42];
+   char* p = x;
+   std::cin >> std::setw(42);
+   std::cin >> p;
+```
+
+このエラーを回避するには、抽出演算子を char [] 変数と共に使用します。
+
+```cpp
+char x[42];
+std::cin >> x;
+```
+
+### <a name="new-keywords-requires-and-concept"></a>新しいキーワード **requires** と **concept**
+
+Microsoft C++ コンパイラに新しいキーワード **requires** と **concept** が追加されました。 [/std:c++latest](../build/reference/std-specify-language-standard-version.md) モードで識別子としてそのいずれかを使用しようとすると、コンパイラによって *C2059: 構文エラー*が発生します。
+
+### <a name="constructors-as-type-names-disallowed"></a>型名としてのコンストラクターが許可されない
+
+コンストラクター名は、クラス テンプレート特殊化のエイリアスの後に修飾名で表示される場合、挿入されたクラス名とは見なされなくなりました。 これまでは、他のエンティティを宣言するために、コンストラクターを型名として使用することが許可されていました。 次の例では、*C3646:'TotalDuration': unknown override specifier* (不明なオーバーライド指定子) が生成されるようになりました。
+
+```cpp
+#include <chrono>
+
+class Foo {
+   std::chrono::milliseconds::duration TotalDuration{};
+};
+
+```
+
+このエラーを回避するには、次に示すように `TotalDuration` を宣言します。
+
+```cpp
+#include <chrono>
+
+class Foo {
+  std::chrono::milliseconds TotalDuration {};
+};
+```
+
+### <a name="stricter-checking-of-extern-c-functions"></a>extern "C" 関数の厳密なチェック
+
+異なる名前空間で **extern "C"** 関数が宣言されている場合、以前のバージョンの Microsoft C++ コンパイラでは、宣言に互換性があるかどうかがチェックされませんでした。 Visual Studio 2019 バージョン 16.3 では、コンパイラによってこのようなチェックが実行されます。 [/permissive-](../build/reference/permissive-standards-conformance.md) モードの場合、次のコードでは *C2371: redefinition; different basic types* (異なる基本型) と *C2733: you cannot overload a function with C linkage* (C リンケージを使用して関数をオーバーロードすることはできません) が生成されます。
+
+```cpp
+using BOOL = int;
+
+namespace N
+{
+   extern "C" void f(int, int, int, bool);
+}
+
+void g()
+{
+   N::f(0, 1, 2, false);
+}
+
+extern "C" void f(int, int, int, BOOL){}
+```
+
+前の例のエラーを回避するには、`f` の両方の宣言で **BOOL**ではなく **bool** を一貫して使用します。
+
 ## <a name="update_160"></a> Visual Studio 2019 のバグ修正と動作の変更
+
+### <a name="reinterpret_cast-in-a-constexpr-function"></a>constexpr 関数の reinterpret_cast
+
+**constexpr** 関数では **reinterpret_cast** は無効です。 これまでは、Microsoft C++ コンパイラによって **reinterpret_cast** は **constexpr** のコンテキストで使用される場合に限り拒否されていました。 Visual Studio 2019 では、すべての言語標準モードで、コンパイラにより **constexpr** 関数の定義で **reinterpret_cast** が正しく診断されます。 次のコードでは、*C3615: constexpr function 'f' cannot result in a constant expression* (constexpr 関数 'f' の結果が定数式になることはありません) が生成されるようになりました。
+
+```cpp
+long long i = 0;
+constexpr void f() {
+    int* a = reinterpret_cast<int*>(i);
+}
+```
+
+このエラーを回避するには、関数宣言から **constexpr** 修飾子を削除します。
 
 ### <a name="correct-diagnostics-for-basic_string-range-constructor"></a>basic_string 範囲コンストラクターの正しい診断
 
-Visual Studio 2019 では、`basic_string` 範囲コンストラクターで `static_cast` を含むコンパイラ診断が非表示になることがなくなりました。 次のコードは Visual Studio 2017 では、`out` の初期化時、データが失われ、`wchar_t` が `char` になる可能性がありますが、警告なくコンパイルされます。
+Visual Studio 2019 では、`basic_string` 範囲コンストラクターで `static_cast` を含むコンパイラ診断が非表示になることがなくなりました。 次のコードは Visual Studio 2017 では、`out` の初期化時、データが失われ、`wchar_t` が **char** になる可能性がありますが、警告なくコンパイルされます。
 
 ```cpp
 std::wstring ws = /* … */;
@@ -427,7 +509,7 @@ void f(System::String ^s)
 
 ### <a name="initializers-for-inline-static-data-members"></a>インライン静的データ メンバーの初期化子
 
-`inline` 初期化子と `static constexpr` 初期化子内の無効なメンバー アクセスが正しく検出されるようになりました。 次の例は Visual Studio 2017 ではエラーなくコンパイルされますが、`/std:c++17` モードの Visual Studio 2019 では、*error C2248: cannot access private member declared in class 'X'* が発生します。
+**インライン constexpr** 初期化子と**静的 constexpr** 初期化子内の無効なメンバー アクセスが正しく検出されるようになりました。 次の例は Visual Studio 2017 ではエラーなくコンパイルされますが、`/std:c++17` モードの Visual Studio 2019 では、*error C2248: cannot access private member declared in class 'X'* が発生します。
 
 ```cpp
 struct X
@@ -454,7 +536,7 @@ struct X
 
 ### <a name="c4800-reinstated"></a>C4800 の復帰
 
-MSVC には以前、`bool` への暗黙的変換に関するパフォーマンス警告 C4800 がありました。 これが煩わしく、かつ非表示にできないため、Visual Studio 2017 で削除されました。 しかしながら、Visual Studio 2017 が使用されている間、この警告が役に立った事例についてたくさんのフィードバックがありました。 Visual Studio 2019 では、慎重に調整された C4800 とそれに付属する C4165 を復帰させました。 いずれの警告も、明示的な型変換か該当する型の 0 と比較することで、簡単に非表示にできます。 C4800 は既定でオフのレベル 4 警告であり、C4165 は既定でオフのレベル 3 警告です。 いずれも `/Wall` コンパイラ オプションで検出できます。
+MSVC には以前、**bool** への暗黙的変換に関するパフォーマンス警告 C4800 がありました。 これが煩わしく、かつ非表示にできないため、Visual Studio 2017 で削除されました。 しかしながら、Visual Studio 2017 が使用されている間、この警告が役に立った事例についてたくさんのフィードバックがありました。 Visual Studio 2019 では、慎重に調整された C4800 とそれに付属する C4165 を復帰させました。 いずれの警告も、明示的な型変換か該当する型の 0 と比較することで、簡単に非表示にできます。 C4800 は既定でオフのレベル 4 警告であり、C4165 は既定でオフのレベル 3 警告です。 いずれも `/Wall` コンパイラ オプションで検出できます。
 
 次の例では C4800 と C4165 が `/Wall` の下で発生します。
 
@@ -496,7 +578,7 @@ void example()
 
 ### <a name="function-template-bodies-containing-constexpr-if-statements"></a>constexpr if ステートメントを含む関数テンプレートの本体
 
-`if constexpr` ステートメントを含むテンプレート関数の本体では、一部の `/permissive-` 解析関連チェックが有効になっています。 たとえば、Visual Studio 2017 では、*C7510:'Type': use of dependent type name must be prefixed with 'typename'* は `/permissive-` オプションが設定されていない場合にのみ、次のコードで発生します。 Visual Studio 2019 の場合、`/permissive-` オプションが設定されていても、同じコードでエラーが発生します。
+**if constexpr** ステートメントを含むテンプレート関数の本体では、一部の [/permissive-](../build/reference/permissive-standards-conformance.md) 解析関連チェックが有効になっています。 たとえば、Visual Studio 2017 では、*C7510:'Type': use of dependent type name must be prefixed with 'typename'* (依存型名は先頭を 'typename' にする必要があります) は **/permissive-** オプションが設定されていない場合にのみ、次のコードで発生します。 Visual Studio 2019 の場合、 **/permissive-** オプションが設定されていても、同じコードでエラーが発生します。
 
 ```cpp
 template <typename T>
@@ -527,11 +609,11 @@ int main()
 }
 ```
 
-このエラーを回避するには、`typename T::Type a;` のように、`typename` キーワードを `a` の宣言に追加します。
+このエラーを回避するには、`typename T::Type a;` のように、**typename** キーワードを `a` の宣言に追加します。
 
 ### <a name="inline-assembly-code-isnt-supported-in-a-lambda-expression"></a>インライン アセンブリ コードがラムダ式でサポートされない
 
-Visual C++ チームは最近、ラムダ内のインライン アセンブラーが実行時、`ebp` (リターン アドレス レジスタ) の破損につながる可能性があるセキュリティ上の問題を発見しました。 悪意のある攻撃者は、このシナリオを活用できる可能性があります。 問題の性質、インライン アセンブラーが x86 でのみサポートされるという事実、インライン アセンブラーとコンパイラの残りの部分の対話が乏しいことを考慮すると、この問題の最も安全な解決策は、ラムダ式内でインライン アセンブラーを禁止することでした。
+Microsoft C++ チームは最近、ラムダ内のインライン アセンブラーが実行時、`ebp` (リターン アドレス レジスタ) の破損につながる可能性があるセキュリティ上の問題を発見しました。 悪意のある攻撃者は、このシナリオを活用できる可能性があります。 問題の性質、インライン アセンブラーが x86 でのみサポートされるという事実、インライン アセンブラーとコンパイラの残りの部分の対話が乏しいことを考慮すると、この問題の最も安全な解決策は、ラムダ式内でインライン アセンブラーを禁止することでした。
 
 ラムダ式内でのインライン アセンブラーの唯一の使い方として出回っていたのは、リターン アドレスをキャプチャすることを目的としたものでした。 このシナリオでは、コンパイラ固有の `_ReturnAddress()` を使用し、すべてのプラットフォームでリターン アドレスをキャプチャできます。
 
@@ -672,7 +754,7 @@ C++ チームのブログ記事「[STL Features and Fixes in VS 2017 15.8 (VS 20
 
 ### <a name="const-comparators-for-associative-containers"></a>連想コンテナーの const 比較子
 
-[set](../standard-library/set-class.md)、[map](../standard-library/map-class.md)、[multiset](../standard-library/multiset-class.md)、[multimap](../standard-library/multimap-class.md) の検索と挿入のコードは、コード サイズの削減のためにマージされました。 検索操作で以前に実行されたのと同じように、挿入操作によって `const` 比較ファンクターで小なり比較が呼び出されるようになりました。 次のコードは、Visual Studio 2019 バージョン 16.1 以前ではコンパイルされますが、Visual Studio 2019 バージョン 16.2 では C3848 が生成されます。
+[set](../standard-library/set-class.md)、[map](../standard-library/map-class.md)、[multiset](../standard-library/multiset-class.md)、[multimap](../standard-library/multimap-class.md) の検索と挿入のコードは、コード サイズの削減のためにマージされました。 検索操作で以前に実行されたのと同じように、挿入操作によって **const** 比較ファンクターで小なり比較が呼び出されるようになりました。 次のコードは、Visual Studio 2019 バージョン 16.1 以前ではコンパイルされますが、Visual Studio 2019 バージョン 16.2 では C3848 が生成されます。
 
 ```cpp
 #include <iostream>
@@ -707,7 +789,7 @@ int main() {
 }
 ```
 
-このエラーを回避するには、次のように比較演算子 `const` を使用します。
+このエラーを回避するには、次のように比較演算子 **const** を使用します。
 
 ```cpp
 struct Comparer  {
@@ -724,19 +806,19 @@ struct Comparer  {
 
 ## <a name="improvements_150"></a> Visual Studio 2017 RTW (バージョン 15.0) の準拠の強化
 
-Visual Studio 2017 の Microsoft C++ コンパイラは、汎用の `constexpr` および集計用の非静的データ メンバーの初期化 (NSDMI) のサポートと共に、C++ 14 標準で追加されたすべての機能に対応するようになりました。 ただし、コンパイラには、C++11 標準および C++98 標準の一部の機能がありません。 コンパイラの現在の状態については、「[Visual C++ Language Conformance (Visual C++ 言語への準拠)](../visual-cpp-language-conformance.md)」の表を参照してください。
+Visual Studio 2017 の Microsoft C++ コンパイラは、汎用の **constexpr** および集計用の非静的データ メンバーの初期化 (NSDMI) のサポートと共に、C++ 14 標準で追加されたすべての機能に対応するようになりました。 ただし、コンパイラには、C++11 標準および C++98 標準の一部の機能がありません。 コンパイラの現在の状態については、「[Visual C++ Language Conformance (Visual C++ 言語への準拠)](../visual-cpp-language-conformance.md)」の表を参照してください。
 
 ### <a name="c11-expression-sfinae-support-in-more-libraries"></a>C++11:より多くのライブラリでの SFINAE 式のサポート
 
-コンパイラは、SFINAE 式のサポートを継続的に向上させています。これは、`decltype` および `constexpr` 式がテンプレート パラメーターとして使用されるテンプレート引数の推論と代替のために必要です。 詳細については、「[Expression SFINAE improvements in Visual Studio 2017 RC](https://blogs.msdn.microsoft.com/vcblog/2016/06/07/expression-sfinae-improvements-in-vs-2015-update-3)」 (Visual Studio 2017 RC での SFINAE 式の機能拡張) を参照してください。
+Visual C コンパイラは、SFINAE 式のサポートを継続的に向上させています。これは、**decltype** および **constexpr** 式がテンプレート パラメーターとして使用されるテンプレート引数の推論と代替のために必要です。 詳細については、「[Expression SFINAE improvements in Visual Studio 2017 RC](https://blogs.msdn.microsoft.com/vcblog/2016/06/07/expression-sfinae-improvements-in-vs-2015-update-3)」 (Visual Studio 2017 RC での SFINAE 式の機能拡張) を参照してください。
 
 ### <a name="c14-nsdmi-for-aggregates"></a>C++14:集計用の NSDMI
 
 集計は、クラスの配列であり、ユーザー指定のコンストラクターがなく、プライベートまたは保護された非静的データ メンバーを持たず、基底クラスや仮想関数もありません。 C++ 14 以降、集計にメンバーの初期化子を含めることができます。 詳細については、「[Member initializers and aggregates](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3605.html)」 (メンバー初期化子と集計) を参照してください。
 
-### <a name="c14-extended-constexpr"></a>C++14:拡張された `constexpr`
+### <a name="c14-extended-constexpr"></a>C++14:拡張された **constexpr**
 
-`constexpr` として宣言された式には、特定の種類の宣言、if および switch ステートメント、loop ステートメント、constexpr 式の評価内で有効期間が開始されたオブジェクトの変異を含めることができます。 さらに、`constexpr` の非静的メンバー関数を暗黙的に `const` しなければならないという要件はなくなりました。 詳細については、「[Relaxing constraints on constexpr functions](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3652.html)」 (constexpr 関数に対する制約の緩和) を参照してください。
+**constexpr** として宣言された式には、特定の種類の宣言、if および switch ステートメント、loop ステートメント、constexpr 式の評価内で有効期間が開始されたオブジェクトの変異を含めることができます。 さらに、**constexpr** の非静的メンバー関数を暗黙的に**構築する**という要件はなくなりました。 詳細については、「[Relaxing constraints on constexpr functions](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3652.html)」 (constexpr 関数に対する制約の緩和) を参照してください。
 
 ### <a name="c17-terse-static_assert"></a>C++17:簡易 `static_assert`
 
@@ -756,13 +838,13 @@ Visual Studio 2017 の Microsoft C++ コンパイラは、汎用の `constexpr` 
 
 定数式でラムダ式を使用できるようになりました。 詳細については、「[constexpr lambda expressions in C++](../cpp/lambda-expressions-constexpr.md)」(C++ での constexpr ラムダ式) をご覧ください。
 
-### <a name="if-constexpr-in-function-templates"></a>関数テンプレートでの `if constexpr`
+### <a name="if-constexpr-in-function-templates"></a>関数テンプレートでの **if constexpr**
 
-関数テンプレートに、`if constexpr` ステートメントを含めてコンパイル時の分岐を有効にできます。 詳細については、「[if constexpr statements](../cpp/if-else-statement-cpp.md#if_constexpr)」(if constexpr 式) をご覧ください。
+関数テンプレートに、**if constexpr** ステートメントを含めてコンパイル時の分岐を有効にできます。 詳細については、「[if constexpr statements](../cpp/if-else-statement-cpp.md#if_constexpr)」(if constexpr 式) をご覧ください。
 
 ### <a name="selection-statements-with-initializers"></a>初期化子を含む選択ステートメント
 
-`if` ステートメントには、ステートメント自体のブロック スコープで変数を導入する初期化子を含めることができます。 詳細については、「[if statements with initializer](../cpp/if-else-statement-cpp.md#if_with_init)」(初期化子を含む if 式) をご覧ください。
+**if** ステートメントには、ステートメント自体のブロック スコープで変数を導入する初期化子を含めることができます。 詳細については、「[if statements with initializer](../cpp/if-else-statement-cpp.md#if_with_init)」(初期化子を含む if 式) をご覧ください。
 
 ### <a name="maybe_unused-and-nodiscard-attributes"></a>`[[maybe_unused]]` 属性および `[[nodiscard]]` 属性
 
@@ -776,7 +858,7 @@ Visual Studio 2017 の Microsoft C++ コンパイラは、汎用の `constexpr` 
 
 値が、配列、`std::tuple`、`std::pair` のいずれかであるか、すべてのパブリックの非静的データ メンバーを持つときに、1 つの宣言で、そのコンポーネントの個別の名前を持つ値を格納できるようになりました。 詳細については、「[Structured Bindings](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0144r0.pdf)」(構造化バインド) と「[Returning multiple values from a function](../cpp/functions-cpp.md#multi_val)」(関数から複数の値を返す) をご覧ください。
 
-### <a name="construction-rules-for-enum-class-values"></a>`enum class` の値の構築ルール
+### <a name="construction-rules-for-enum-class-values"></a>**列挙型クラス**の値の構築ルール
 
 定義で列挙子を導入せず、ソースがリスト初期化構文を使用している場合に、スコープ列挙の基になる型から列挙型自体への、暗黙的な/非縮小の変換が使用できるようになりました。 詳細については、「[Construction Rules for enum class Values](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0138r2.pdf)」(列挙型クラスの値の構築ルール) と[列挙](../cpp/enumerations-cpp.md#no_enumerators)に関する記事をご覧ください。
 
@@ -784,21 +866,21 @@ Visual Studio 2017 の Microsoft C++ コンパイラは、汎用の `constexpr` 
 
 ラムダ式の `*this` オブジェクトが値でキャプチャできるようになりました。 この変更により、特に新しいコンピューター アーキテクチャで、並列で非同期の操作でラムダが呼び出されるシナリオを実現できます。 詳しくは、「[Lambda Capture of \*this by Value as \[=,\*this\] (*this の [=,*this] としての値によるラムダ キャプチャ)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0018r3.html)」をご覧ください。
 
-### <a name="removing-operator-for-bool"></a>`bool` の `operator++` の削除
+### <a name="removing-operator-for-bool"></a>**bool** の `operator++` の削除
 
-`operator++` は、`bool` 型ではサポートされなくなりました。 詳しくは、「[Remove Deprecated operator++(bool) (非推奨の operator++(bool) の削除)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0002r1.html)」をご覧ください。
+`operator++` は **bool** 型でサポートされなくなりました。 詳しくは、「[Remove Deprecated operator++(bool) (非推奨の operator++(bool) の削除)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0002r1.html)」をご覧ください。
 
-### <a name="removing-deprecated-register-keyword"></a>非推奨の `register` キーワードの削除
+### <a name="removing-deprecated-register-keyword"></a>非推奨の **register** キーワードの削除
 
-`register` キーワードは、以前は非推奨でしたが (コンパイラでは無視される)、言語から削除されました。 詳しくは、「[Remove Deprecated Use of the register Keyword (register キーワードの非推奨の使用の削除)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0001r1.html)」をご覧ください。
+**register** キーワードは、以前は非推奨でしたが (コンパイラでは無視される)、言語から削除されました。 詳しくは、「[Remove Deprecated Use of the register Keyword (register キーワードの非推奨の使用の削除)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0001r1.html)」をご覧ください。
 
 ## <a name="improvements_155"></a> 15.5 の準拠の強化
 
 \[14] でマークされた機能は、 **/std:c++14** モードでも無条件で使用できます。
 
-### <a name="new-compiler-switch-for-extern-constexpr"></a>`extern constexpr` の新しいコンパイラ スイッチ
+### <a name="new-compiler-switch-for-extern-constexpr"></a>**extern constexpr** の新しいコンパイラ スイッチ
 
-Visual Studio の以前のバージョンでは、変数が `extern` としてマークされている場合でも、コンパイラは常に `constexpr` 変数を提供しました。 Visual Studio 2017 バージョン 15.5 では、新しいコンパイラ スイッチ [/Zc:externConstexpr](../build/reference/zc-externconstexpr.md) により、正しい標準準拠の動作が可能になります。 詳細については、[extern constexpr のリンク](#extern_linkage)を参照してください。
+Visual Studio の以前のバージョンでは、変数が **extern** としてマークされている場合でも、コンパイラは常に **constexpr** 変数を提供しました。 Visual Studio 2017 バージョン 15.5 では、新しいコンパイラ スイッチ [/Zc:externConstexpr](../build/reference/zc-externconstexpr.md) により、正しい標準準拠の動作が可能になります。 詳細については、[extern constexpr のリンク](#extern_linkage)を参照してください。
 
 ### <a name="removing-dynamic-exception-specifications"></a>動的例外指定の削除
 
@@ -854,7 +936,7 @@ C++ 標準の Annex D は、`shared_ptr::unique()`、`<codecvt>`、`namespace st
 
 標準ライブラリでは、変数テンプレートを内部で使用するようになりました。
 
-C++17 コンパイラの変更に応じて、型システムへの `noexcept` の追加や、dynamic-exception-specifications の削除などの標準ライブラリの更新が行われました。
+C++17 コンパイラの変更に応じて、型システムへの **noexcept** の追加や、dynamic-exception-specifications の削除などの標準ライブラリの更新が行われました。
 
 ## <a name="improvements_156"></a> 15.6 の準拠の強化
 
@@ -1034,7 +1116,7 @@ void sample(A<0> *p)
 
 [P0682R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0682r1.html): 基本文字列変換の新しい関数を P0067R5 から新しいヘッダー \<charconv> に移動します。さらに、`std::error_code` ではなく `std::errc` を使用するようにエラー処理を変更するなど、他の機能強化も行います。
 
-### <a name="c17-constexpr-for-char_traits-partial"></a>C++ 17: `char_traits` の `constexpr` (部分的)
+### <a name="c17-constexpr-for-char_traits-partial"></a>C++17: `char_traits` の **constexpr** (部分的)
 
 [P0426R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0426r1.html): `std::string_view` を定数式で使用できるようにするために、`std::traits_type` のメンバー関数である `length`、`compare`、`find` に変更します。 (Visual Studio 2017 バージョン 15.6 では、Clang/LLVM のみがサポートされました。 バージョン 15.7 Preview 2 では、ClXX についてもサポートはほぼ完全です。)
 
@@ -1169,7 +1251,7 @@ int main()
 }
 ```
 
-### `constexpr`
+### <a name="constexpr"></a>**constexpr**
 
 Visual Studio 2017 では、条件付きで評価する演算の左のオペランドが constexpr コンテキストで無効である場合、正しくエラーが発生します。 次のコードは、Visual Studio 2015 ではコンパイルされますが、Visual Studio 2017 ではコンパイルされません (C3615 constexpr 関数 'f' の結果が定数式になることはありません)。
 
@@ -1186,7 +1268,7 @@ constexpr bool f(const array<1> &arr)
 }
 ```
 
-エラーを修正するには、`array::size()` 関数を `constexpr` として宣言するか、`f` から `constexpr` 修飾子を削除します。
+エラーを修正するには、`array::size()` 関数を **constexpr** として宣言するか、`f` から **constexpr** 修飾子を削除します。
 
 ### <a name="class-types-passed-to-variadic-functions"></a>可変個引数関数に渡されるクラス型
 
@@ -1255,7 +1337,7 @@ struct S
 int i = (const S)0; // error C2440
 ```
 
-このエラーを解決するには、`operator int()` を `const` として宣言します。
+このエラーを解決するには、`operator int()` を **const** として宣言します。
 
 ### <a name="access-checking-on-qualified-names-in-templates"></a>テンプレートの修飾名のアクセス確認
 
@@ -1292,7 +1374,7 @@ template <class T, ListNodeMember M> class ListHead; // C2955: 'ListNodeMember':
 
 ### <a name="expression-sfinae"></a>SFINAE 式
 
-SFINAE 式をサポートするために、コンパイラは、テンプレートがインスタンス化されるときではなく宣言されるときに、`decltype` 引数を解析するようになりました。 その結果、decltype 引数に非依存の特殊化が見つかった場合、インスタンス化時まで遅延されません。 すぐに処理され、結果として発生したエラーは、その時点で診断されます。
+SFINAE 式をサポートするために、コンパイラでは、テンプレートがインスタンス化されるときではなく宣言されるときに、**decltype** 引数が解析されるようになりました。 その結果、decltype 引数に非依存の特殊化が見つかった場合、インスタンス化時まで遅延されません。 すぐに処理され、結果として発生したエラーは、その時点で診断されます。
 
 次の例は、宣言時に発生するこのようなコンパイラ エラーを示しています。
 
@@ -1341,7 +1423,7 @@ value struct V
 
 ### <a name="default-indexers-ccli"></a>既定のインデクサー (C++/CLI)
 
-Visual Studio 2015 以前では、場合によっては、コンパイラは、既定のプロパティを誤って既定のインデクサーとして識別します。 識別子 `default` を使用してプロパティにアクセスすることで、この問題を回避できました。 C++ 11 で `default` がキーワードとして導入された後は、この回避策自体が問題になりました。 Visual Studio 2017 では、この回避策を必要とするバグが修正され、クラスの既定のプロパティにアクセスするために `default` が使用された場合は、コンパイラがエラーを発生させるようになりました。
+Visual Studio 2015 以前では、場合によっては、コンパイラは、既定のプロパティを誤って既定のインデクサーとして識別します。 識別子 **default** を使用してプロパティにアクセスすることで、この問題を回避できました。 C++11 で **default** がキーワードとして導入された後は、この回避策自体が問題になりました。 Visual Studio 2017 では、この回避策を必要とするバグが修正され、クラスの既定のプロパティにアクセスするために **default** が使用された場合は、コンパイラによってエラーが発生するようになりました。
 
 ```cpp
 //class1.cs
@@ -1413,7 +1495,7 @@ void g()
 }
 ```
 
-このエラーを解決するには、`i` を `int` として宣言します。
+このエラーを解決するには、`i` を **int** として宣言します。
 
 ### <a name="pre-condition-checks-for-type-traits"></a>型の特徴に対する前提条件の確認
 
@@ -1508,9 +1590,9 @@ template <typename T>
 void S::f(T t) {}
 ```
 
-### <a name="attempting-to-take-the-address-of-this-pointer"></a>`this` ポインターのアドレスを取得する試み
+### <a name="attempting-to-take-the-address-of-this-pointer"></a>**this** ポインターのアドレスを取得する試み
 
-C++ では、`this` は X へのポインター型の prvalue です。`this` のアドレスを取得すること、または左辺値参照にバインドすることはできません。 前のバージョンの Visual Studio では、キャストを使用することにより、この制限を回避できました。 Visual Studio 2017 バージョン 15.3 では、コンパイラはエラー C2664 を生成します。
+C++ では、**this** は X へのポインター型の prvalue です。**this** のアドレスを取得すること、または左辺値参照にバインドすることはできません。 前のバージョンの Visual Studio では、キャストを使用することにより、この制限を回避できました。 Visual Studio 2017 バージョン 15.3 では、コンパイラはエラー C2664 を生成します。
 
 ### <a name="conversion-to-an-inaccessible-base-class"></a>アクセスできない基底クラスへの変換
 
@@ -1530,7 +1612,7 @@ void f()
 
 ### <a name="default-arguments-arent-allowed-on-out-of-line-definitions-of-member-functions"></a>メンバー関数のアウトオブライン定義で既定の引数が許可されない
 
-テンプレート クラスのメンバー関数のアウトオブライン定義では、既定の引数が許可されません。 コンパイラは **/permissive** では警告を発し、 **/permissive-** ではハード エラーを発します。
+テンプレート クラスのメンバー関数のアウトオブライン定義では、既定の引数が許可されません。 コンパイラは **/permissive** では警告を発し、[/permissive-](../build/reference/permissive-standards-conformance.md) ではハード エラーを発します。
 
 Visual Studio の以前のバージョンでは、形式が間違っている次のコードでランタイム クラッシュが発生する可能性がありました。 Visual Studio 2017 バージョン 15.3 では次の警告 C5034 が発生します。'A\<T>::f': クラス テンプレートのメンバーのアウトオブライン定義において既定の引数を使用することはできません。
 
@@ -1605,9 +1687,9 @@ extern "C" __declspec(noinline) HRESULT __stdcall
 
 15.3 の既定ではこの警告はオフになっており (15.5 では既定でオン)、 **/Wall** **/WX** を指定してコンパイルされたコードにのみ影響します。
 
-### <a name="decltype-and-calls-to-deleted-destructors"></a>`decltype` と削除されたデストラクターの呼び出し
+### <a name="decltype-and-calls-to-deleted-destructors"></a>**decltype** と削除されたデストラクターの呼び出し
 
-以前のバージョンの Visual Studio では、`decltype` と関連付けられた式での削除されたデストラクターの呼び出しを、コンパイラは検出しませんでした。 Visual Studio 2017 バージョン 15.3 では、次のコードに対して "エラー C2280: 'A\<T>::~A(void)': 削除された関数を参照しようとしています" が発生します。
+以前のバージョンの Visual Studio では、**decltype** と関連付けられた式での削除されたデストラクターの呼び出しが、コンパイラにより検出されませんでした。 Visual Studio 2017 バージョン 15.3 では、次のコードに対して "エラー C2280: 'A\<T>::~A(void)': 削除された関数を参照しようとしています" が発生します。
 
 ```cpp
 template<typename T>
@@ -1630,7 +1712,7 @@ void h()
 
 ### <a name="uninitialized-const-variables"></a>初期化されていない const 変数
 
-Visual Studio 2017 RTW リリースには、`const` 変数が初期化されていないと C++ コンパイラが診断を生成しないという回帰がありました。 この回帰は、Visual Studio 2017 バージョン 15.3 で修正されました。 次のコードに対しては、"警告 C4132: 'Value': const オブジェクトは初期化しなければなりません" が発生するようになりました。
+Visual Studio 2017 RTW リリースには、**const** 変数が初期化されていないと C++ コンパイラにより診断が生成されないという回帰がありました。 この回帰は、Visual Studio 2017 バージョン 15.3 で修正されました。 次のコードに対しては、"警告 C4132: 'Value': const オブジェクトは初期化しなければなりません" が発生するようになりました。
 
 ```cpp
 const int Value; //C4132
@@ -2013,7 +2095,7 @@ extern "C" __declspec(noinline) HRESULT __stdcall
 
 ### <a name="extern_linkage"></a>Extern constexpr リンケージ
 
-Visual Studio の以前のバージョンでは、変数が `extern` としてマークされている場合でも、コンパイラは常に `constexpr` 変数を提供しました。 Visual Studio 2017 バージョン 15.5 では、新しいコンパイラ スイッチ ( **/Zc:externConstexpr**) により、正しい標準準拠の動作が可能になります。 最終的にこの動作は既定値になります。
+Visual Studio の以前のバージョンでは、変数が **extern** としてマークされている場合でも、コンパイラは常に **constexpr** 変数を提供しました。 Visual Studio 2017 バージョン 15.5 では、新しいコンパイラ スイッチ ( **/Zc:externConstexpr**) により、正しい標準準拠の動作が可能になります。 最終的にこの動作は既定値になります。
 
 ```cpp
 extern constexpr int x = 10;
@@ -2023,13 +2105,13 @@ extern constexpr int x = 10;
 error LNK2005: "int const x" already defined
 ```
 
-ヘッダー ファイルには、宣言された変数 `extern constexpr` が含まれている場合、重複する宣言を正しく組み合わせるために、`__declspec(selectany)` のマークを付ける必要があります。
+ヘッダー ファイルには、宣言された変数 **extern constexpr** が含まれている場合、重複する宣言を正しく組み合わせるために、`__declspec(selectany)` のマークを付ける必要があります。
 
 ```cpp
 extern constexpr __declspec(selectany) int x = 10;
 ```
 
-### <a name="typeid-cant-be-used-on-incomplete-class-type"></a>不完全なクラス型で `typeid` を使用できない
+### <a name="typeid-cant-be-used-on-incomplete-class-type"></a>不完全なクラス型で **typeid** を使用することはできません
 
 Visual Studio の以前のバージョンでは、コンパイラ誤って次のコードを許可し、その結果正しくない型情報になる可能性がありました。 Visual Studio 2017 バージョン 15.5 では、コンパイラは正しくエラーを生成します。
 
@@ -2069,11 +2151,11 @@ struct D : public B { virtual ~D(); };
 static_assert(std::is_convertible<D *, B *>::value, "fail");
 ```
 
-### <a name="noexcept_removal"></a>動的例外指定の削除と `noexcept`
+### <a name="noexcept_removal"></a>動的例外指定の削除と **noexcept**
 
-C++ 17 では、`throw()` は `noexcept` のエイリアスで、`throw(<type list>)` と `throw(...)` は削除されているので、特定の型に `noexcept` が含まれる場合があります。 この変更により、C++14 またはそれ以前に準拠したコードのソース互換性の問題が生じる可能性があります。 **/Zc:noexceptTypes-** スイッチを利用すれば、全般的に C++17 モードを使用しながら、C++14 バージョンの `noexcept` に戻すことができます。 これでソース コードを更新し、C++17 に準拠できます。すべての `throw()` コードを同時に書き直す必要がありません。
+C++ 17 では、`throw()` は **noexcept** のエイリアスで、`throw(<type list>)` と `throw(...)` は削除されているので、特定の型に **noexcept** が含まれる場合があります。 この変更により、C++14 またはそれ以前に準拠したコードのソース互換性の問題が生じる可能性があります。 **/Zc:noexceptTypes-** スイッチを利用すれば、全般的に C++17 モードを使用しながら、C++14 バージョンの **noexcept** に戻すことができます。 これでソース コードを更新し、C++17 に準拠できます。すべての `throw()` コードを同時に書き直す必要がありません。
 
-コンパイラは、C++ 17 モードの宣言で、または新しい警告 C5043 と **/permissive-** を使用して、より多くの一致しない例外の指定を診断するようになりました。
+コンパイラは、C++ 17 モードの宣言で、または新しい警告 C5043 と [/permissive-](../build/reference/permissive-standards-conformance.md) を使用して、より多くの一致しない例外の指定を診断するようになりました。
 
 次のコードは、Visual Studio 2017 バージョン 15.5 で **/std:c++17** スイッチを適用するときに、C5043 および C5040 を生成します。
 
@@ -2091,7 +2173,7 @@ struct B : A {
 };
 ```
 
-**/std:c + + 17** の使用中にエラーを削除するには、 **/Zc:noexceptTypes-** スイッチをコマンド ラインに追加するか、次の例のように、`noexcept` を使用するようにコードを更新します。
+**/std:c + + 17** の使用中にエラーを削除するには、 **/Zc:noexceptTypes-** スイッチをコマンド ラインに追加するか、次の例のように、**noexcept** を使用するようにコードを更新します。
 
 ```cpp
 void f() noexcept;
@@ -2164,11 +2246,11 @@ int main()
 }
 ```
 
-### <a name="noexcept-and-partial-specializations"></a>`noexcept` と部分的な特殊化
+### <a name="noexcept-and-partial-specializations"></a>**noexcept** と部分的な特殊化
 
-型システムで `noexcept` を使用すると、特定の "呼び出し可能な" 型と一致させるための部分的な特殊化で、pointers-to-noexcept-functions の部分的な特殊化がないために、コンパイルまたはプライマリ テンプレートの選択に失敗することがあります。
+型システムで **noexcept** を使用すると、特定の "呼び出し可能な" 型と一致させるための部分的な特殊化で、pointers-to-noexcept-functions の部分的な特殊化がないために、コンパイルまたはプライマリ テンプレートの選択に失敗することがあります。
 
-このような場合は、`noexcept` 関数ポインターおよびメンバー関数への `noexcept` ポインターを処理するために、部分的な特殊化を追加する必要があります。 これらのオーバーロードは、 **/std:c++17** モードでのみ有効です。 C++ 14 との下位互換性を維持する必要があるときに、他のユーザーが使用するコードを記述している場合、`#ifdef` ディレクティブ内でこれらの新しいオーバーロードを保護する必要があります。 自己完結型のモジュールを使用している場合、`#ifdef` ガードを使用する代わりに、 **/Zc:noexceptTypes-** スイッチを使用してコンパイルすることができます。
+このような場合は、**noexcept** 関数ポインターおよびメンバー関数への **noexcept** ポインターを処理するために、部分的な特殊化を追加する必要があります。 これらのオーバーロードは、 **/std:c++17** モードでのみ有効です。 C++ 14 との下位互換性を維持する必要があるときに、他のユーザーが使用するコードを記述している場合、`#ifdef` ディレクティブ内でこれらの新しいオーバーロードを保護する必要があります。 自己完結型のモジュールを使用している場合、`#ifdef` ガードを使用する代わりに、 **/Zc:noexceptTypes-** スイッチを使用してコンパイルすることができます。
 
 次のコードは **/std:c++14** ではコンパイルされますが、 **/std:c++17** では、"エラー C2027: 認識できない型 'A\<T>' が使用されています" で失敗します。
 
@@ -2274,7 +2356,7 @@ struct D : B<T*> {
 };
 ```
 
-Visual Studio 2017 バージョン 15.7 の **/std:c++17** モードでは、D の `using` ステートメントにキーワード `typename` が必要です。`typename` がないと、コンパイラで警告 C4346: *'B<T\*>::type': 依存名は型ではありません*、およびエラー C2061: *構文エラー: 識別子 'type'* が発生します。
+Visual Studio 2017 バージョン 15.7 の **/std:c++17** モードでは、D の **using** ステートメントにキーワード **typename** が必要です。**typename** がないと、コンパイラで警告 C4346: *'B<T\*>::type': 依存名は型ではありません*、およびエラー C2061: *構文エラー: 識別子 'type'* が発生します。
 
 ```cpp
 template<typename T>
@@ -2290,7 +2372,7 @@ struct D : B<T*> {
 
 ### <a name="c17-nodiscard-attribute---warning-level-increase"></a>C++ 17 `[[nodiscard]]` 属性 - 警告レベルの引き上げ
 
-**/std:c++17** モードの Visual Studio 2017 バージョン 15.7 では、C4834 (" 'nodiscard' 属性を持つ関数の戻り値が破棄される") の警告レベルが W3 から W1 に引き上げられます。 `void` へのキャストによって、または **/wd:4834** をコンパイラに渡すことにより、警告を無効にすることができます。
+**/std:c++17** モードの Visual Studio 2017 バージョン 15.7 では、C4834 (" 'nodiscard' 属性を持つ関数の戻り値が破棄される") の警告レベルが W3 から W1 に引き上げられます。 **void** へのキャストによって、または **/wd:4834** をコンパイラに渡すことにより、警告を無効にすることができます。
 
 ```cpp
 [[nodiscard]] int f() { return 0; }
@@ -2324,9 +2406,9 @@ D<int> d;
 
 このエラーを解決するには、B() 式を B\<T>() に変更します。
 
-### <a name="constexpr-aggregate-initialization"></a>`constexpr` の集約の初期化
+### <a name="constexpr-aggregate-initialization"></a>**constexpr** の集約の初期化
 
-C++ コンパイラの以前のバージョンでは、`constexpr` の集約の初期化を正しく処理することができませんでした。集約初期化リストの要素が多すぎる無効なコードを受け入れ、不適切な codegen を生成しました。 次にそのようなコードの例を示します。
+C++ コンパイラの以前のバージョンでは、**constexpr** の集約の初期化を正しく処理することができませんでした。集約初期化リストの要素が多すぎる無効なコードが受け入れられ、不適切な codegen が生成されていました。 次にそのようなコードの例を示します。
 
 ```cpp
 #include <array>
@@ -2366,9 +2448,9 @@ int main() {
 
 Visual Studio 2017 バージョン 15.8 のコンパイラの変更は、すべてバグの修正と動作の変更のカテゴリに分類されています。変更点の一覧を次に示します。
 
-### <a name="typename-on-unqualified-identifiers"></a>非限定識別子の `typename`
+###<a name="typename-on-unqualified-identifiers"></a>非限定識別子の **typename**
 
-[/permissive-](../build/reference/permissive-standards-conformance.md) モードでは、エイリアス テンプレート定義の非限定識別子に使用される疑似の `typename` キーワードがコンパイラで受け入れられなくなりました。 次のコードでは C7511 *'T': 'typename' keyword must be followed by a qualified name\('T': 'typename' キーワードの後に修飾名が続く必要があります\)* が生成されます:
+[/permissive-](../build/reference/permissive-standards-conformance.md) モードでは、エイリアス テンプレート定義の非限定識別子に使用される疑似の **typename** キーワードがコンパイラで受け入れられなくなりました。 次のコードでは C7511 *'T': 'typename' keyword must be followed by a qualified name\('T': 'typename' キーワードの後に修飾名が続く必要があります\)* が生成されます:
 
 ```cpp
 template <typename T>
@@ -2401,7 +2483,7 @@ using  X [[deprecated("msg")]] = T;
 
 これにより、マニフェストで依存する基底クラスを参照できるようになります。 以前は、すべての型が解決されている場合、依存する基底クラスで定義されている名前をコンパイラで使用することが許可されていました。これは、そのような名前がインスタンス化のときに参照されるためです。 現在は、そのようなコードはエラーとして扱われます。 このような場合、変数を基底クラス型で修飾するか、`this->` ポインターを使用するなどして依存させることで、インスタンス化のときに変数が参照されるように強制できます。
 
-**/permissive-** モードでは、次のコードによって C3861: *'base_value': 識別子が見つかりませんでした*が発生します。
+[/permissive-](../build/reference/permissive-standards-conformance.md) モードでは、次のコードによって C3861: *'base_value': 識別子が見つかりませんでした*が発生します。
 
 ```cpp
 template <class T>
@@ -2472,7 +2554,7 @@ public:
 
 Visual Studio 2017 バージョン 15.8 では、コードが標準の C++ の動作に準拠するように、これらの `reinterpret_cast` 演算子が既定のモードで表示される領域を制約します。 [/permissive-](../build/reference/permissive-standards-conformance.md) の下では、制約がさらに厳しくなります。 定数式を必要とする場所で `offsetof` の結果を使用すると、警告 C4644 *usage of the macro-based offsetof pattern in constant expressions is non-standard; use offsetof defined in the C++ standard library instead (定数式でマクロに基づく offsetof パターンを使用することは標準ではありません。C++ 標準ライブラリで定義された offsetof を使用してください)* または C2975 *invalid template argument, expected compile-time constant expression (無効なテンプレート引数です。予期されたコンパイル時の定数式です)* を発行するコードが生成される場合があります。
 
-次のコードにより **/default** モードと **/std:c++17** モードで C4644 が、 **/permissive-** モードで C2975 が発生します。
+次のコードにより **/default** モードと **/std:c++17** モードで C4644 が、[/permissive-](../build/reference/permissive-standards-conformance.md) モードで C2975 が発生します。
 
 ```cpp
 struct Data {
@@ -2514,7 +2596,7 @@ int main()
 
 以前のバージョンの Microsoft C++ コンパイラでは、基底クラスがパック拡張の対象でもあった場合、cv 修飾子が含まれることを検出しませんでした。
 
-Visual Studio 2017 バージョン 15.8 の **/permissive-** モードでは次のコードにより C3770 *'const S': is not a valid base class\('const S': 有効な基底クラスではありません\)* が発生します。
+Visual Studio 2017 バージョン 15.8 の [/permissive-](../build/reference/permissive-standards-conformance.md) モードでは次のコードにより C3770 *'const S': is not a valid base class\('const S': 有効な基底クラスではありません\)* が発生します。
 
 ```cpp
 template<typename... T>
@@ -2528,11 +2610,11 @@ int main()
 }
 ```
 
-### <a name="template-keyword-and-nested-name-specifiers"></a>`template` キーワードと nested-name-specifier
+### <a name="template-keyword-and-nested-name-specifiers"></a>**template** キーワードと nested-name-specifier
 
-**/permissive-** モードでは、コンパイラが依存する nested-name-specifier の後にある場合にテンプレート名が優先されるためには、コンパイラで `template` キーワードが必要になりました。
+[/permissive-](../build/reference/permissive-standards-conformance.md) モードでは、コンパイラが依存する nested-name-specifier の後にある場合にテンプレート名が優先されるためには、コンパイラで **template** キーワードが必要になりました。
 
-**/permissive-** モードでは次のコードにより、C7510 *'example': use of dependent template name must be prefixed with 'template'. note: see reference to class template instantiation 'X<T>' being compiled ('example': 依存するテンプレート名を使用する場合は 'template' のプレフィックスが必要です。注: コンパイルされているクラス テンプレートのインスタンス化 ’X<T>’ のリファレンスを参照してください)* が発生します。
+[/permissive-](../build/reference/permissive-standards-conformance.md) モードでは次のコードにより、C7510 *'example': use of dependent template name must be prefixed with 'template'. note: see reference to class template instantiation 'X<T>' being compiled ('example': 依存するテンプレート名を使用する場合は 'template' のプレフィックスが必要です。注: コンパイルされているクラス テンプレートのインスタンス化 ’X<T>’ のリファレンスを参照してください)* が発生します。
 
 ```cpp
 template<typename T> struct Base
@@ -2550,7 +2632,7 @@ struct X : Base<T>
 };
 ```
 
-このエラーを解決するには、次の例で示すように、`template` キーワードを `Base<T>::example<int>();` ステートメントに追加します。
+このエラーを解決するには、次の例で示すように、**template** キーワードを `Base<T>::example<int>();` ステートメントに追加します。
 
 ```cpp
 template<typename T> struct Base
@@ -2593,7 +2675,7 @@ struct A
 A<>::from_template_t<A<int>> a;
 ```
 
-Visual Studio 2017 バージョン 15.9 の **/permissive-** モードでは、コンパイラで C3861: *'from_template': 識別子が見つかりませんでした*が発生します。
+Visual Studio 2017 バージョン 15.9 の [/permissive-](../build/reference/permissive-standards-conformance.md) モードでは、コンパイラで C3861: *'from_template': 識別子が見つかりませんでした*が発生します。
 
 このエラーを解決するには、`from_template_t` の前に `from_template` を宣言します。
 
@@ -2616,7 +2698,7 @@ cl /experimental:module /module:reference m.ifc main.cpp /std:c++14
 
 ### <a name="partial-ordering-involving-aliases-and-non-deduced-contexts"></a>別名と非推定コンテキストが含まれる部分的な順序付け
 
-非推定コンテキストに別名が含まれる部分的な順序付けルールには実装方法に違いがあります。 次の例では、GCC と Microsoft C++ コンパイラ ( **/permissive-** モード) ではエラーが発生しますが、Clang ではコードが受け入れられます。
+非推定コンテキストに別名が含まれる部分的な順序付けルールには実装方法に違いがあります。 次の例では、GCC と Microsoft C++ コンパイラ ([/permissive-](../build/reference/permissive-standards-conformance.md) モード) ではエラーが発生しますが、Clang ではコードが受け入れられます。
 
 ```cpp
 #include <utility>
@@ -2734,7 +2816,7 @@ struct S
 {
     constexpr void f();
 };
-  
+ 
 template<>
 constexpr void S<int>::f()
 {
@@ -2750,7 +2832,7 @@ note: failure was caused by call of undefined function or one not declared 'cons
 note: see usage of 'g'.
 ```
 
-このエラーを回避するには、関数 `f()` の明示的なインスタンス化から `constexpr` 修飾子を削除します。
+このエラーを回避するには、関数 `f()` の明示的なインスタンス化から **constexpr** 修飾子を削除します。
 
 ::: moniker-end
 

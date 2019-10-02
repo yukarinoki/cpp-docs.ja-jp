@@ -545,7 +545,7 @@ void AfxThrowDBException(
 `CDatabase` オブジェクトへのポインタ。このオブジェクトは、例外に関連するデータ ソース接続を表します。
 
 *hstmt*<br/>
-例外が関連付けられているステートメントハンドルを指定する ODBC HSTMT ハンドル。
+ODBC HSTMT ハンドルです。このハンドルは、例外に関連するステートメント ハンドルを指定します。
 
 ### <a name="remarks"></a>Remarks
 
