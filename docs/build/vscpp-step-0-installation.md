@@ -21,12 +21,12 @@ ms.locfileid: "62315196"
 
 ## <a name="visual-studio-2019-installation"></a>Visual Studio 2019 のインストール
 
-Visual Studio 2019 へようこそ このバージョンでは、必要な機能だけを簡単に選択してインストールできます。 占有領域が最小限まで小さくなっているため、インストールが速く、システムにほとんど影響しません。
+Visual Studio 2019 へようこそ! このバージョンでは、必要な機能だけを簡単に選択してインストールできます。 占有領域が最小限まで小さくなっているため、インストールが速く、システムにほとんど影響しません。
 
 > [!NOTE]
-> このトピックでは、Windows 上の Visual Studio のインストールに適用されます。 [Visual Studio Code](https://code.visualstudio.com/)は Windows、Mac、および Linux システムで実行される軽量のクロスプラット フォーム開発環境です。 Microsoft [for Visual Studio Code には、C/C++](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools)拡張機能は、IntelliSense、デバッグ、コードの書式設定、オート コンプリートをサポートしています。 Visual Studio for Mac では、Microsoft C でサポートされていませんは .NET 言語とクロス プラットフォーム開発をサポートします。 インストール手順については、次を参照してください。 [Visual Studio for Mac をインストール](/visualstudio/mac/installation/)します。
+> このトピックは、Windows 上の Visual Studio のインストールに適用されます。 [Visual Studio Code](https://code.visualstudio.com/) は Windows、Mac、および Linux システムで実行される軽量のクロスプラット フォーム開発環境です。 Microsoft [C/C++ for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools) 拡張機能は、IntelliSense、デバッグ、コードの書式設定、オートコンプリートをサポートしています。 Visual Studio for Mac は、Microsoft C をサポートしていませんが、.NET 言語とクロスプラットフォーム開発はサポートしています。 インストール手順については、「[Visual Studio for Mac をインストール](/visualstudio/mac/installation/)」参照してください。
 
-このバージョンの他の新機能については、 Visual studio[リリース ノート](/visualstudio/releases/2019/release-notes/)します。
+このバージョンの他の新機能については、 Visual Studio [リリース ノート](/visualstudio/releases/2019/release-notes/)をご覧ください。
 
 インストールの準備ができたら、 各ステップを順に実行していきます。
 
