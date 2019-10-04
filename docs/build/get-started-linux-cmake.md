@@ -4,14 +4,14 @@ description: このチュートリアルでは、Linux と Windows の両方を�
 author: mikeblome
 ms.topic: tutorial
 ms.date: 03/05/2019
-ms.openlocfilehash: f184cc2ce3eaf3adcc936bd723019956b5b23dc9
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: cd01d5e389bda46fbb05d297ece8e68ef2265725
+ms.sourcegitcommit: c53a3efcc5d51fc55fa57ac83cca796b33ae888f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220859"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71960720"
 ---
-# <a name="tutorial-create-c-cross-platform-projects-in-visual-studio"></a>チュートリアル: Visual Studio で C++ クロスプラットフォーム プロジェクトを作成する 
+# <a name="tutorial-create-c-cross-platform-projects-in-visual-studio"></a>チュートリアル:Visual Studio で C++ クロスプラットフォーム プロジェクトを作成する 
 
 Visual Studio での C と C++ の開発は、Windows だけではなくなっています。 このチュートリアルでは、Visual Studio プロジェクトを作成または生成する必要がない、CMake に基づく C++ のクロスプラットフォーム開発に、Visual Studio を使用する方法を示します。 CMakeLists.txt ファイルが含まれるフォルダーを開くと、Visual Studio によって IntelliSense とビルド設定が自動的に構成されます。 Windows 上のローカル環境でコードを素早く編集、ビルド、デバッグした後、構成を切り替えて Linux 上で同じことを行うという一連の作業をすべて、Visual Studio 内から実行できます。
 
@@ -24,16 +24,16 @@ Visual Studio での C と C++ の開発は、Windows だけではなくなっ�
 > * Linux マシンへの接続を追加する
 > * Linux 上で同じターゲットをビルドしてデバッグする
 
-## <a name="prerequisites"></a>必須コンポーネント
+## <a name="prerequisites"></a>前提条件
 
 - クロスプラットフォームの C++ 開発用に Visual Studio をセットアップする
     - 最初に、[Visual Studio をインストールする](https://visualstudio.microsoft.com/vs/)必要があります。 次に、**C++ によるデスクトップ開発**ワークロードと **C++ による Linux 開発**ワークロードがインストールされていることを確認します。 この最小限のインストールはわずか 3 GB で、ダウンロードの速さにもよりますが、インストールに 10 分以上はかからないはずです。
 - クロスプラットフォームの C++ 開発用に Linux マシンをセットアップする
     - Visual Studio に Linux の特定のディストリビューションは必要ありません。 物理マシン、VM、クラウド、または Windows Subsystem for Linux (WSL) で、OS を実行できます。 ただし、このチュートリアルではグラフィカル環境が必要であるため、主にコマンド ライン操作用の WSL はお勧めできません。
-    - Linux マシン上で Visual Studio に必要なツールは次のとおりです。C++ コンパイラ、GDB、ssh、zip。 Debian ベースのシステムでは、次のようにしてこれらの依存関係をインストールできます。
+    - Linux マシン上で Visual Studio に必要なツールは次のとおりです。C++コンパイラ、GDB、ssh、rsync、zip。 Debian ベースのシステムでは、次のようにしてこれらの依存関係をインストールできます。
     
     ```cmd
-        sudo apt install -y openssh-server build-essential gdb zip
+        sudo apt install -y openssh-server build-essential gdb rsync zip
     ```
     - Visual Studio では、サーバー モードが有効になっている最近のバージョンの CMake (少なくとも 3.8) が Linux マシンに存在する必要があります。 Microsoft が生成した CMake のユニバーサル ビルドを、任意の Linux ディストリビューションにインストールできます。 最新の機能を利用するには、このビルドを使うことをお勧めします。 CMake のバイナリは、GitHub の [CMake リポジトリの Microsoft フォーク](https://github.com/Microsoft/CMake/releases)から入手できます。 そのページに移動し、Linux マシンのシステム アーキテクチャと一致するバージョンをダウンロードして、それを実行可能にします。
     
@@ -41,7 +41,7 @@ Visual Studio での C と C++ の開発は、Windows だけではなくなっ�
         wget <path to binary>
         chmod +x cmake-3.11.18033000-MSVC_2-Linux-x86_64.sh
     ```
-    - スクリプトを実行するためのオプションは、`-–help` で確認できます。 `–prefix` オプションを使用して、**/usr/local** パスへのインストールを指定することをお勧めします。これが、Visual Studio での CMake の既定の参照場所です。 次の例では Linux-x86_64 スクリプトを示します。 別のターゲット プラットフォームを使用している場合は、必要に応じて変更してください。 
+    - スクリプトを実行するためのオプションは、`-–help` で確認できます。 `–prefix` オプションを使用して、 **/usr/local** パスへのインストールを指定することをお勧めします。これが、Visual Studio での CMake の既定の参照場所です。 次の例では Linux-x86_64 スクリプトを示します。 別のターゲット プラットフォームを使用している場合は、必要に応じて変更してください。 
     
     ```cmd
         sudo ./cmake-3.11.18033000-MSVC_2-Linux-x86_64.sh --skip-license --prefix=/usr/local
@@ -69,7 +69,7 @@ git clone https://github.com/bulletphysics/bullet3.git
 
     このビューには、論理的なビューやフィルター処理されたビューではなく、ディスク上にあるものがそのまま表示されます。 既定では、隠しファイルは表示されません。 
 
-2. フォルダー内のすべてのファイルを表示するには、**[すべてのファイルを表示]** ボタンをクリックします。
+2. フォルダー内のすべてのファイルを表示するには、 **[すべてのファイルを表示]** ボタンをクリックします。
 
     ![Visual Studio のソリューション エクスプローラーの [すべてのファイルを表示] ボタン](media/cmake-bullet3-show-all-files.png)
 
@@ -77,7 +77,7 @@ git clone https://github.com/bulletphysics/bullet3.git
 
 CMake を使用しているフォルダーを開くと、Visual Studio で CMake キャッシュが自動的に生成されます。 プロジェクトのサイズによっては、この操作にしばらくかかる場合があります。 
 
-1. **[出力ウィンドウ]** で **[Show output from]\(出力元\)** を選択してから、**[CMake]** を選択して、キャッシュ生成処理の状態を監視します。 操作が完了すると、"ターゲット情報の抽出が完了しました" というメッセージが表示されます。
+1. **[出力ウィンドウ]** で **[Show output from]\(出力元\)** を選択してから、 **[CMake]** を選択して、キャッシュ生成処理の状態を監視します。 操作が完了すると、"ターゲット情報の抽出が完了しました" というメッセージが表示されます。
 
     ![CMake からの出力が表示された Visual Studio の出力ウィンドウ](media/cmake-bullet3-output-window.png)
 
@@ -95,7 +95,21 @@ CMake を使用しているフォルダーを開くと、Visual Studio で CMake
 
 3. CMake ターゲット ビューでノードを展開すると、そのソース コード ファイルが表示されます。それらのファイルがディスク上のどこにあってもかまいません。
 
-## <a name="set-a-breakpoint-build-and-run"></a>ブレークポイントを設定し、ビルドして、実行する
+## <a name="add-an-explicit-windows-x64-debug-configuration"></a>明示的な Windows x64-Debug 構成を追加する
+
+Visual Studio によって、Windows の既定の**X64 デバッグ**構成が作成されます。 構成により、Visual Studio は CMake に使用するプラットフォーム ターゲットを認識します。 既定の構成は、ディスク上では表されません。 構成を明示的に追加すると、Visual Studio で CMakeSettings.json という名前のファイルが作成されて、指定したすべての構成が設定されます。 
+
+1. ツール バーの [構成] ドロップダウンをクリックして **[構成の管理...]** を選択することで、新しい構成を追加します
+
+    ![[構成の管理] ドロップダウン](media/cmake-bullet3-manage-configurations.png)
+
+    これにより、 [Cmake 設定エディター](customize-cmake-settings.md)が開きます。 エディターの左側にある緑色のプラス記号を選択して、新しい構成を追加します。 **[構成を CMakeSettings に追加する]** ダイアログが表示されます。
+
+    ![[構成を CMakeSettings に追加する] ダイアログ](media/cmake-bullet3-add-configuration-x64-debug.png)
+
+    このダイアログには、Visual Studio に含まれるすべての構成と、ユーザーが作成したカスタム構成が表示されます。 **X64 デバッグ**構成を引き続き使用する場合は、最初に追加したものを選択する必要があります。 **x64-Debug** を選択して、 **[選択]** をクリックします。 これにより、 **X64 デバッグ**用の構成で CMakeSettings. json ファイルが作成され、構成がディスクに保存されます。 CMakeSettings.json で名前パラメーター直接変更することで、構成に好きな名前を使用できます。
+
+## <a name="set-a-breakpoint-build-and-run-on-windows"></a>Windows でのブレークポイントの設定、ビルド、および実行 
 
 このステップでは、Bullet Physics ライブラリのデモを行うサンプル プログラムをデバッグします。
   
@@ -104,7 +118,7 @@ CMake を使用しているフォルダーを開くと、Visual Studio で CMake
 1. 実行中のアプリケーションをクリックするとヒットするブレークポイントを設定します。 クリック イベントは、ヘルパー クラスのメソッドで処理されます。 すばやく移動するには:
 
     1. 30 行目あたりの構造体 `BasicExample` が派生している `CommonRigidBodyBase` を選択します。
-    1. 右クリックし、**[定義へ移動]** を選択します。 これで、ヘッダー CommonRigidBodyBase.h 内にいます。 
+    1. 右クリックし、 **[定義へ移動]** を選択します。 これで、ヘッダー CommonRigidBodyBase.h 内にいます。 
     1. 上のブラウザー ビューでは、表示されているソースで `CommonRigidBodyBase` 内にいることがわかります。 右側で、調べるメンバーを選択できます。 ドロップダウンをクリックし、`mouseButtonCallback` を選択して、ヘッダー内でその関数の定義に移動します。
 
         ![Visual Studio のメンバーの一覧ツール バー](media/cmake-bullet3-member-list-toolbar.png)
@@ -121,40 +135,26 @@ CMake を使用しているフォルダーを開くと、Visual Studio で CMake
 
 6. アプリケーション ウィンドウ内にマウスを移動し、ボタンをクリックしてブレークポイントをトリガーします。 これにより、Visual Studio が再び前面に表示され、実行が一時停止している行がエディターで示されます。 アプリケーションの変数、オブジェクト、スレッド、メモリを調べることができます。 対話形式で、コードをステップ実行することができます。 **[続行]** をクリックしてアプリケーションを再開し通常どおりに終了したり、停止ボタンを使用して Visual Studio 内で実行を終了させたりできます。
 
-## <a name="add-an-explicit-windows-x64-debug-configuration"></a>明示的な Windows x64-Debug 構成を追加する
-
-ここまでは、Windows 用の既定の **x64-Debug** 構成を使用してきました。 構成により、Visual Studio は CMake に使用するプラットフォーム ターゲットを認識します。 既定の構成は、ディスク上では表されません。 構成を明示的に追加すると、Visual Studio で CMakeSettings.json という名前のファイルが作成されて、指定したすべての構成が設定されます。 
-
-1. ツール バーの [構成] ドロップダウンをクリックして **[構成の管理...]** を選択することで、新しい構成を追加します
-
-    ![[構成の管理] ドロップダウン](media/cmake-bullet3-manage-configurations.png)
-
-    **[構成を CMakeSettings に追加する]** ダイアログが表示されます。
-
-    ![[構成を CMakeSettings に追加する] ダイアログ](media/cmake-bullet3-add-configuration-x64-debug.png)
-
-    このダイアログには、Visual Studio に含まれるすべての構成と、ユーザーが作成したカスタム構成が表示されます。 既定の **x64-Debug** 構成を引き続き使用したい場合は、それを最初に追加する必要があります。 その構成を追加することにより、Windows と Linux の構成をどちらにでも切り替えることができます。 **x64-Debug** を選択して、**[選択]** をクリックします。 これにより、**x64-Debug** 用の構成を含む CMakeSettings.json ファイルが作成されて、Visual Studio は既定ではなくその構成を使用するように切り替わります。 構成ドロップダウンの名前の一部として [(既定)] と表示されなくなります。 CMakeSettings.json で名前パラメーター直接変更することで、構成に好きな名前を使用できます。
-
 ##  <a name="add-a-linux-configuration-and-connect-to-the-remote-machine"></a>Linux の構成を追加してリモート コンピューターに接続する
 
-1. 次に、Linux の構成を追加します。 **ソリューション エクスプローラー** ビューで CMakeSettings.json ファイルを右クリックし、**[構成の追加]** を選択します。 前と同じ [構成を CMakeSettings に追加する] ダイアログが表示されます。 今度は **Linux-Debug** を選択してから、CMakeSettings.json ファイルを保存します。 
+1. 次に、Linux の構成を追加します。 **ソリューション エクスプローラー** ビューで CMakeSettings.json ファイルを右クリックし、 **[構成の追加]** を選択します。 前と同じ [構成を CMakeSettings に追加する] ダイアログが表示されます。 **[Linux-デバッグ]** を選択し、次に CMakeSettings. json ファイルを保存します (ctrl + s)。 
 2. 構成ドロップダウンで **Linux-Debug** を選択します。
 
     ![X64-Debug オプションと Linux-Debug オプションが含まれる起動構成ドロップダウン](media/cmake-bullet3-linux-configuration-item.png)
 
-    Linux システムに初めて接続する場合は、**[リモート システムへの接続]** ダイアログが表示されます。
+    Linux システムに初めて接続する場合は、 **[リモート システムへの接続]** ダイアログが表示されます。
 
     ![Visual Studio の [リモート システムへの接続] ダイアログ](media/cmake-bullet3-connection-manager.png)
 
-    リモート接続を既に追加している場合は、**[ツール] > [オプション] > [クロス プラットフォーム] > [接続マネージャー]** に移動して、このウィンドウを開くことができます。
+    リモート接続を既に追加している場合は、 **[ツール] > [オプション] > [クロス プラットフォーム] > [接続マネージャー]** に移動して、このウィンドウを開くことができます。
  
-3. Linux マシンへの接続情報を入力し、**[接続]** をクリックします。 **Linux-Debug** に対する既定値として、CMakeSettings.json にそのマシンが追加されます。 また、リモート マシンからヘッダーも取得され、そのマシン固有の IntelliSense が表示されます。 Visual Studio は、リモート マシンにファイルを送信した後、CMake キャッシュを生成し、それが完了すると、リモート Linux マシンと同じソース ベースを使用するように構成されます。 ネットワークの速度とリモート マシンの能力によっては、これらの処理に時間がかかる場合があります。 CMake 出力ウィンドウに "ターゲット情報の抽出が完了しました" というメッセージが表示されると、完了したことがわかります。
+3. 接続情報を Linux マシンに接続する] (computer.md) を入力し、 **[接続]** をクリックします。 Visual Studio は、 **Linux-Debug**の既定の接続として、そのマシンを CMakeSettings. json に追加します。 また、リモートコンピューターからヘッダーを取り出して、[そのリモート接続に固有の IntelliSense](https://docs.microsoft.com/en-us/cpp/linux/configure-a-linux-project?view=vs-2019#remote_intellisense)を取得することもできます。 これで、Visual Studio がリモートコンピューターにファイルを送信し、リモートシステムに CMake キャッシュを生成します。 ネットワークの速度とリモート マシンの能力によっては、これらの処理に時間がかかる場合があります。 CMake 出力ウィンドウに "ターゲット情報の抽出が完了しました" というメッセージが表示されると、完了したことがわかります。
 
 ## <a name="set-a-breakpoint-build-and-run-on-linux"></a>Linux でブレークポイントを設定し、ビルドして、実行する
 
 これはデスクトップ アプリケーションであるため、デバッグ構成に追加の構成情報をいくつか提供する必要があります。 
 
-1. CMake ターゲット ビューで AppBasicExampleGui を右クリックし、**[デバッグ設定と起動設定]** を選択して、非表示の **.vs** サブフォルダーにある launch.vs.json ファイルを開きます。 このファイルは、開発環境に対してローカルに存在します。 チームでファイルをチェックインおよび保存したい場合は、プロジェクトのルートにそれを移動できます。 このファイルには、AppBasicExampleGui の構成が追加されています。 これらの既定の設定はほとんどの場合に機能しますが、これはデスクトップ アプリケーションなので、Linux マシンで表示できる方法でプログラムを起動するには、いくつかの情報を追加する必要があるます。 
+1. CMake ターゲット ビューで AppBasicExampleGui を右クリックし、 **[デバッグ設定と起動設定]** を選択して、非表示の **.vs** サブフォルダーにある launch.vs.json ファイルを開きます。 このファイルは、開発環境に対してローカルに存在します。 チームでファイルをチェックインおよび保存したい場合は、プロジェクトのルートにそれを移動できます。 このファイルには、AppBasicExampleGui の構成が追加されています。 これらの既定の設定はほとんどの場合に機能しますが、これはデスクトップ アプリケーションなので、Linux マシンで表示できる方法でプログラムを起動するには、いくつかの情報を追加する必要があるます。 
 2. Linux マシンでの `DISPLAY` 環境変数の値を知る必要があります。それを取得するには、次のコマンドを実行します。
 
     ```cmd
