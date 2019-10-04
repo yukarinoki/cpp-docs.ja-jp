@@ -4,12 +4,12 @@ ms.date: 10/01/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: 52ca34ef8522ada1881e2f7f5df212167c64c919
-ms.sourcegitcommit: 4517932a67bbf2db16cfb122d3bef57a43696242
+ms.openlocfilehash: 168f5b0aac34757a9c2d73bcebc908a0d58721fe
+ms.sourcegitcommit: b85e1db6b7d4919852ac6843a086ba311ae97d40
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816544"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71925570"
 ---
 # <a name="cmake-projects-in-visual-studio"></a>Visual Studio の CMake プロジェクト
 
@@ -58,12 +58,6 @@ Visual Studio では、 **Cmakesettings. json**という名前のファイルを
 
 > [!NOTE]
 > その他の種類の開いているフォルダープロジェクトでは、次の2つの追加の JSON ファイルが使用されます。**Cppproperties. json**と**tasks. json**。 これらはいずれも CMake プロジェクトには関連していません。
-
-## <a name="import-an-existing-cache"></a>既存のキャッシュをインポートする
-
-ユーザーが既存の CMakeCache.txt ファイルをインポートすると、Visual Studio はカスタマイズされた変数を自動的に抽出し、それを基にして事前設定済みの **CMakeSettings.json** ファイルを作成します。 元のキャッシュには、どのような変更も加えられておらず、コマンド ラインから、またはキャッシュの生成に使われた任意のツールや IDE で、使用することができます。 新しい**Cmakesettings. json**ファイルは、プロジェクトのルートである Cmakesettings と共に配置されます。 Visual Studio は、設定ファイルに基づいて新しいキャッシュを生成します。 自動キャッシュ生成は、 **CMake > 全般ダイアログ > の [ツール] > オプション**で上書きできます。
-
-キャッシュ内のすべてのものがインポートされるわけではありません。 ジェネレーターや、コンパイラの場所などのプロパティは、IDE で問題なく機能することがわかっている既定値に置き換えられます。
 
 ## <a name="open-an-existing-cache"></a>既存のキャッシュを開く
 
