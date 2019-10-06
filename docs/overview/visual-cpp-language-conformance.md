@@ -103,7 +103,7 @@ Visual Studio 2017 または Visual Studio 2019 で加えられた準拠の強�
 |&nbsp;&nbsp;[P0941R2 機能テストのマクロ](https://wg21.link/P0941R2)|VS 2019 16.0 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[P1008R1 ユーザー宣言コンストラクターによる集計の禁止](https://wg21.link/P1008R1)|VS 2019 16.0 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0846R0 ADL と表示されない関数テンプレート](https://wg21.link/P0846R0)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
-|&nbsp;&nbsp;[P0641R2 規定化コピー コンストラクターでの const の不一致](https://wg21.link/P0641R2)|Partial|
+|&nbsp;&nbsp;[P0641R2 規定化コピー コンストラクターでの const の不一致](https://wg21.link/P0641R2)|部分的|
 |&nbsp;&nbsp;[P0306R4 コンマ省略とコンマ削除のための \_\_VA_OPT\_\_ の追加](https://wg21.link/P0306R4)|いいえ|
 |&nbsp;&nbsp;[P0315R4 未評価のコンテキストでのラムダの許可](https://wg21.link/P0315R4)|いいえ|
 |&nbsp;&nbsp;[P0428R2 汎用ラムダの使い慣れたテンプレート構文](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0428r2.pdf)|いいえ|
@@ -325,8 +325,8 @@ Visual Studio 2017 または Visual Studio 2019 で加えられた準拠の強�
 
 ### <a name="supported-values"></a>サポート状況の値
 
-__いいえ__は、未実装という意味です。<br/>
-__一部__は、実装が一部のみであるという意味です。 詳細については、「ノート」セクションを参照してください。<br/>
+__いいえ__ は、未実装という意味です。<br/>
+__部分的__ は、実装が部分的であるという意味です。 詳細については、「ノート」セクションを参照してください。<br/>
 __VS 2010__ は、Visual Studio 2010 でサポートされている機能を示しています。<br/>
 __VS 2013__ は、Visual Studio 2013 でサポートされている機能を示しています。<br/>
 __VS 2015__ は、Visual Studio 2015 RTW でサポートされている機能を示します。<br/>
