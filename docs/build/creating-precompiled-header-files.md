@@ -8,10 +8,10 @@ helpviewer_keywords:
 - .pch files, creating
 ms.assetid: e2cdb404-a517-4189-9771-c869c660cb1b
 ms.openlocfilehash: 273d8cf996c2717339dd20dcbc7512f9c62afa8d
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69630483"
 ---
 # <a name="precompiled-header-files"></a>プリコンパイル済みヘッダー ファイル
@@ -116,7 +116,7 @@ PCH ファイルの作成中に処理されるプラグマは、通常、PCH フ
 
 次の表に、プリコンパイル済みヘッダーを使用するときに不整合の警告が発生する可能性のあるコンパイラオプションを示します。
 
-|オプション|名前|ルール|
+|オプション|name|ルール|
 |------------|----------|----------|
 |/D|定数とマクロを定義する|プリコンパイル済みヘッダーを作成したコンパイルと現在のコンパイルの間で同じである必要があります。 定義された定数の状態はチェックされませんが、ファイルが変更された定数の値に依存している場合は、予測できない結果が発生する可能性があります。|
 |/E または/EP|プリプロセッサ出力を標準出力にコピーする|プリコンパイル済みヘッダーは、/E または/EP オプションでは機能しません。|

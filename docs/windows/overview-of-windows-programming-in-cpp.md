@@ -1,13 +1,13 @@
 ---
 title: C++ でプログラミングする Windows の概要
-ms.date: 07/28/2019
+ms.date: 09/17/2019
 ms.assetid: efc691d7-21f3-47ae-ae56-cab999ccf59d
-ms.openlocfilehash: 10ef9698e27099d5856c1ed5f8ed2f21cea72c24
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 96a03194059f59f57780bfd70cab3065d6a1aff0
+ms.sourcegitcommit: 76cc69b482ada8ebf0837e8cdfd4459661f996dd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514797"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71127195"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>C++ でプログラミングする Windows の概要
 
@@ -17,7 +17,7 @@ ms.locfileid: "69514797"
 
 ## <a name="command-line-console-applications"></a>コマンドライン (コンソール) アプリケーション
 
-C++コンソールアプリケーションは、コンソールウィンドウでコマンドラインから実行され、テキスト出力のみを表示できます。 詳細については、「[コンソールアプリケーション](console-applications-in-visual-cpp.md)」を参照してください。
+C++コンソールアプリケーションは、コンソールウィンドウでコマンドラインから実行され、テキスト出力のみを表示できます。 詳細については、「 [ C++コンソールアプリプロジェクトの作成](../get-started/tutorial-console-cpp.md)」を参照してください。
 
 ## <a name="native-desktop-client-applications"></a>ネイティブデスクトップクライアントアプリケーション
 

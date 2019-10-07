@@ -123,7 +123,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68447972"
 ---
-# <a name="basicstring-class"></a>basic_string クラス
+# <a name="basic_string-class"></a>basic_string クラス
 
 `basic_string` テンプレート クラスのオブジェクトによって制御されるシーケンスは C++ の標準文字列クラスで、通常文字列と呼ばれますが、C++ 標準ライブラリ全体で使用される C スタイルの null で終わる文字列と混同しないようにしてください。 標準 C++ 文字列は、比較と連結演算子、反復子、C++ 標準ライブラリ アルゴリズム、クラスのアロケーターによって管理されるメモリのコピーおよび割り当てなど、通常の型として文字列の使用を有効にするコンテナーです。 標準 C++ 文字列を C スタイルの null で終わる文字列に変換する場合は、[basic_string::c_str](#c_str) メンバーを使用します。
 
@@ -137,7 +137,7 @@ class basic_string;
 ### <a name="parameters"></a>パラメーター
 
 *CharType*\
-文字列に格納される単一文字のデータ型。 C++標準ライブラリでは、このテンプレートクラスの特殊化が提供されています。 **char**型、 [wstring](../standard-library/string-typedefs.md#wstring)型の要素の型定義`char16_t`[文字列](../standard-library/string-typedefs.md#string)、 **wchar_t**、 [u16string、](../standard-library/string-typedefs.md#u16string) [](../standard-library/string-typedefs.md#u32string)の`char32_t`u32string。
+文字列に格納される単一文字のデータ型。 C++標準ライブラリでは、このテンプレートクラスの特殊化が提供されています。 **char**型、 [wstring](../standard-library/string-typedefs.md#wstring)型の要素の型定義`char16_t`[文字列](../standard-library/string-typedefs.md#string)、 **wchar_t**、 [u16string](../standard-library/string-typedefs.md#u16string)、の`char32_t`[u32string](../standard-library/string-typedefs.md#u32string)。
 
 *名札*\
 Basic_string 特殊化の`CharType`要素のさまざまな重要なプロパティは、クラス`Traits`によって記述されます。 既定値は `char_traits`< `CharType`> です。

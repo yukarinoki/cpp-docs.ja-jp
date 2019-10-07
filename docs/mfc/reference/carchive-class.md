@@ -296,7 +296,7 @@ BOOL IsBufferEmpty() const;
 
 この関数は、MFC Windows Sockets クラス`CSocketFile`を使用したプログラミングをサポートするために用意されています。 `CFile`オブジェクトに関連付けられたアーカイブには、このファイルを使用する必要はありません。
 
-を`IsBufferEmpty` オブジェクト`CSocketFile`に関連付けられたアーカイブで使用するのは、アーカイブのバッファーに複数のメッセージまたはレコードが含まれている可能性があるためです。 1つのメッセージを受信した`IsBufferEmpty`後、を使用して、バッファーが空になるまでデータの受信を継続するループを制御する必要があります。 詳細については、 [](../../mfc/reference/casyncsocket-class.md#receive) 「クラス`CAsyncSocket`の Receive メンバー関数」を参照して`IsBufferEmpty`ください。これは、の使用方法を示しています。
+を`IsBufferEmpty` オブジェクト`CSocketFile`に関連付けられたアーカイブで使用するのは、アーカイブのバッファーに複数のメッセージまたはレコードが含まれている可能性があるためです。 1つのメッセージを受信した`IsBufferEmpty`後、を使用して、バッファーが空になるまでデータの受信を継続するループを制御する必要があります。 詳細については、「クラス`CAsyncSocket`の [Receive](../../mfc/reference/casyncsocket-class.md#receive) メンバー関数」を参照して`IsBufferEmpty`ください。これは、の使用方法を示しています。
 
 詳細については[、「Windows Sockets:アーカイブ](../../mfc/windows-sockets-using-sockets-with-archives.md)でのソケットの使用。
 
@@ -603,7 +603,7 @@ CRuntimeClass* ReadClass(
 
 *Pschema*が NULL の場合、格納されているクラスのスキーマは、 [CArchive:: getobjectschema](#getobjectschema); を呼び出すことによって取得できます。それ以外<strong>\*</strong>の場合、 *pschema*には、以前に格納されていたランタイムクラスのスキーマが格納されます。
 
-クラス参照の[](#serializeclass)読み取りと書き込み`ReadClass`の両方を処理するのではなく、SerializeClass を使用できます。
+クラス参照の読み取りと書き込み`ReadClass`の両方を処理するのではなく、[SerializeClass](#serializeclass) を使用できます。
 
 ### <a name="example"></a>例
 
@@ -818,7 +818,7 @@ void WriteClass(const CRuntimeClass* pClassRef);
 
 ランタイムクラスは[DECLARE_SERIAL](../../mfc/reference/run-time-object-model-services.md#declare_serial)と[IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial)を使用する必要があります。それ以外`WriteClass`の場合は、 [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md)をスローします。
 
-クラス参照の[](#serializeclass)読み取りと書き込み`WriteClass`の両方を処理するのではなく、SerializeClass を使用できます。
+クラス参照の読み取りと書き込み`WriteClass`の両方を処理するのではなく、[SerializeClass](#serializeclass) を使用できます。
 
 ### <a name="example"></a>例
 

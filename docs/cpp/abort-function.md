@@ -1,4 +1,4 @@
----
+﻿---
 title: abort 関数
 ms.date: 12/01/2017
 helpviewer_keywords:
@@ -13,7 +13,7 @@ ms.locfileid: "62385103"
 ---
 # <a name="abort-function"></a>abort 関数
 
-**abort** 関数（標準インクルードファイル <stdlib.h> で宣言されている）はC++プログラムを終了させます。 `exit` と **abort** の違いは、`exit` はC++ランタイムの終了処理が行われる事を可能にする(グローバルオブジェクトのデストラクタが呼び出される) のに対して **abort** はプログラムを即座に終了します。詳細については、*C ランタイム ライブラリ (CRT) リファレンス* の [abort](../c-runtime-library/reference/abort.md) を参照してください。
+**abort** 関数（標準インクルードファイル \<stdlib.h> で宣言されている）はC++プログラムを終了させます。 `exit` と **abort** の違いは、`exit` はC++ランタイムの終了処理が行われる事を可能にする(グローバルオブジェクトのデストラクタが呼び出される) のに対して **abort** はプログラムを即座に終了します。 詳細については、*C ランタイム ライブラリ (CRT) リファレンス* の [abort](../c-runtime-library/reference/abort.md) を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

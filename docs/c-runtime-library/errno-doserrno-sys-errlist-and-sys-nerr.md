@@ -1,11 +1,14 @@
 ---
 title: errno、_doserrno、_sys_errlist、および _sys_nerr
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _errno
-apilocation:
+api_location:
 - msvcrt.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _sys_errlist
 - errno
@@ -21,14 +24,14 @@ helpviewer_keywords:
 - _sys_nerr global variable
 - sys_nerr global variable
 ms.assetid: adbec641-6d91-4e19-8398-9a34046bd369
-ms.openlocfilehash: 57d04fe5867c6a969b6aeca40f26b18b5dcd7a61
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 5b10d98dab41151290d4e44e031f659108b0c73c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750781"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944553"
 ---
-# <a name="errno-doserrno-syserrlist-and-sysnerr"></a>errno、_doserrno、_sys_errlist、および _sys_nerr
+# <a name="errno-_doserrno-_sys_errlist-and-_sys_nerr"></a>errno、_doserrno、_sys_errlist、および _sys_nerr
 
 プログラムの実行中に設定されるエラー コードと、エラー コードに相当する表示用の文字列を保持するグローバル マクロ。
 
@@ -102,12 +105,12 @@ ms.locfileid: "57750781"
 |`EILSEQ`|無効なバイト シーケンスです|42|
 |`STRUNCATE`|残りの文字列は切り詰められました|80|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |グローバル マクロ|必須ヘッダー|オプション ヘッダー|
 |------------------|---------------------|---------------------|
 |`errno`|\<errno.h> または \<stdlib.h>、\<cerrno> または \<cstdlib> (C++)||
-|`_doserrno`、 `_sys_errlist`、 `_sys_nerr`|\<stdlib.h>、\<cstdlib> (C++)|\<errno.h>、\<cerrno> (C++)|
+|`_doserrno`、`_sys_errlist`、`_sys_nerr`|\<stdlib.h>、\<cstdlib> (C++)|\<errno.h>、\<cerrno> (C++)|
 
 `_doserrno`、`_sys_errlist`、および `_sys_nerr` マクロは Microsoft 拡張機能です。 互換性の詳細については、「 [互換性](../c-runtime-library/compatibility.md)」を参照してください。
 

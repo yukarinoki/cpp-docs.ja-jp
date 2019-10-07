@@ -25,7 +25,7 @@ ms.locfileid: "70220197"
 
 ## <a name="syntax"></a>構文
 
-> **#using***ファイル* **[as_friend]**
+> **#using** *ファイル* **[as_friend]**
 
 ### <a name="parameters"></a>パラメーター
 

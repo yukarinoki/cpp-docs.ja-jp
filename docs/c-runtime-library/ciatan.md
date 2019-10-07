@@ -1,9 +1,9 @@
 ---
 title: _CIatan
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _CIatan
-apilocation:
+api_location:
 - msvcr120.dll
 - msvcr110.dll
 - msvcrt.dll
@@ -12,7 +12,10 @@ apilocation:
 - msvcr90.dll
 - msvcr110_clr0400.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _CIatan
 - CIatan
@@ -20,14 +23,14 @@ helpviewer_keywords:
 - CIatan intrinsic
 - _CIatan intrinsic
 ms.assetid: 3baa0429-fe46-4bab-8b00-868e2186dc8c
-ms.openlocfilehash: 81448d976a38d45de821fc66ea87dcf431ebd228
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: a932f305f43ecf1d6df978e733f39d7fa91f3e78
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57749981"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940603"
 ---
-# <a name="ciatan"></a>_CIatan
+# <a name="_ciatan"></a>_CIatan
 
 スタックのトップ値のアークタンジェントを計算します。
 
@@ -43,7 +46,7 @@ void __cdecl _CIatan();
 
 結果の値は、スタックのトップにプッシュされます。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **プラットフォーム:** x86
 

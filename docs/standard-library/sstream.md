@@ -103,7 +103,7 @@ void swap (
 |クラス|説明|
 |-|-|
 |[basic_stringbuf](../standard-library/basic-stringbuf-class.md)|文字の特徴がクラス `Tr` によって決まる型 `Elem` の要素の、配列オブジェクトに格納されている要素のシーケンスとの間での転送を制御するストリーム バッファーについて説明します。|
-|[basic_istringstream](../standard-library/basic-istringstream-class.md)|要素とエンコードされたオブジェクトの抽出を制御するオブジェクトを記述します[](../standard-library/basic-stringbuf-class.md)<。これは、basic_stringbuf `Alloc`**Elem**, Tr, > クラス`Elem`のストリームバッファーから、文字を持つ型の要素を使用して、特徴はクラス`Tr`によって決定され、その要素はクラス`Alloc`のアロケーターによって割り当てられます。|
+|[basic_istringstream](../standard-library/basic-istringstream-class.md)|要素とエンコードされたオブジェクトの抽出を制御するオブジェクトを記述します<。これは、[basic_stringbuf](../standard-library/basic-stringbuf-class.md) `Alloc`**Elem**, Tr, > クラス`Elem`のストリームバッファーから、文字を持つ型の要素を使用して、特徴はクラス`Tr`によって決定され、その要素はクラス`Alloc`のアロケーターによって割り当てられます。|
 |[basic_ostringstream](../standard-library/basic-ostringstream-class.md)|要素とエンコードされたオブジェクトの挿入を制御するオブジェクトを記述します。これは、文字`Alloc`の特徴を持つ型`Elem`の要素を使用して、 [basic_stringbuf](../standard-library/basic-stringbuf-class.md)<**Elem**, **Tr**, > クラスのストリームバッファーへの挿入を制御します。はクラス`Tr`によって決定され、その要素はクラス`Alloc`のアロケーターによって割り当てられます。|
 |[basic_stringstream](../standard-library/basic-stringstream-class.md)|要素とエンコードされたオブジェクトの挿入と抽出を制御するオブジェクトを記述します。これは、 `Elem`型`Alloc`の要素を使用して、 [basic_stringbuf](../standard-library/basic-stringbuf-class.md)<**Elem**, **Tr**, > クラスのストリームバッファーを使用します。文字の特徴はクラス`Tr`によって決定され、その要素はクラス`Alloc`のアロケーターによって割り当てられます。|
 

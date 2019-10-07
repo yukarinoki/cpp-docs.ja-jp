@@ -21,7 +21,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68456713"
 ---
-# <a name="autoptr-class"></a>auto_ptr クラス
+# <a name="auto_ptr-class"></a>auto_ptr クラス
 
 コントロールがあるブロックを離れるときに確実にリソースが自動的に破棄されるように、リソースの周囲にスマート ポインターをラップします。
 
@@ -124,7 +124,7 @@ auto _ptr(auto _ptr<Other>& right) throw();
 
 #### <a name="remarks"></a>Remarks
 
-1つ目のコンストラクターは`myptr`、割り当てられたオブジェクトへの格納されたポインターである ptr を格納します。 2番目のコンストラクターは、 *right に格納*されているポインターの所有権を転送し*ます。* [](#release)での`myptr`リリース。
+1つ目のコンストラクターは`myptr`、割り当てられたオブジェクトへの格納されたポインターである ptr を格納します。 2番目のコンストラクターは、 *right に格納*されているポインターの所有権を*転送します。* での`myptr`[リリース](#release)。
 
 3番目のコンストラクターは、を格納`right`する点を除いて、2番目のコンストラクターと同じように動作します。 `ref`。 `release`で`myptr`は`ref` 、はに`right`格納されている参照です。
 
@@ -278,7 +278,7 @@ auto_ptr<Type>& operator=(auto_ptr_ref<Type> right) throw();
 
 #### <a name="remarks"></a>Remarks
 
-代入は式`delete myptr`を評価しますが、代入の結果`myptr`として格納されたポインターが変化する場合に限ります。 次に、 *right に格納*されているポインターの所有権を転送し*ます。* [](#release)での`myptr`リリース。 関数は __\*this__ を返します。
+代入は式`delete myptr`を評価しますが、代入の結果`myptr`として格納されたポインターが変化する場合に限ります。 次*に、right に格納*されているポインターの所有権を*転送します。* での`myptr`[リリース](#release)。 関数は __\*this__ を返します。
 
 #### <a name="example"></a>例
 

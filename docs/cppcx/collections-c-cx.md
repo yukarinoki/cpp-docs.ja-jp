@@ -2,20 +2,20 @@
 title: コレクション (C++/CX)
 ms.date: 11/19/2018
 ms.assetid: 914da30b-aac5-4cd7-9da3-a5ac08cdd72c
-ms.openlocfilehash: 850ac0f4801a13a5407f8fe008740bbfa21cc02c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ff3fb9899355ec05083dc15c16d74c9aa1d3fd8f
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347344"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740318"
 ---
 # <a name="collections-ccx"></a>コレクション (C++/CX)
 
-C +/cli/CX プログラムの場合は、標準テンプレート ライブラリ (STL) コンテナー、または他のユーザー定義コレクション型を自由に使用を行うことができます。 ただし、コレクションを渡す場合、双方向 Windows ランタイム アプリケーション バイナリ インターフェイス (ABI) を越えて — たとえば、XAML コントロールまたは JavaScript クライアント: Windows ランタイムのコレクション型を使用する必要があります。
+C++/Cx プログラムでは、標準テンプレートライブラリ (STL) コンテナーまたはその他のユーザー定義のコレクション型を自由に使用できます。 ただし、XAML コントロールまたは JavaScript クライアントに対して Windows ランタイムアプリケーションバイナリインターフェイス (ABI) 間でコレクションをやり取りする場合は、Windows ランタイムコレクション型を使用する必要があります。
 
-Windows ランタイムは、コレクションと関連する型、および C + 用のインターフェイスを定義します。/cli CX は collection.h ヘッダー ファイルで具象 C++ 実装を提供します。 この図は、コレクション型間のリレーションシップを示しています。
+Windows ランタイムは、コレクションおよび関連する型のインターフェイスを定義C++し、/cx はC++コレクション .h ヘッダーファイル内の具象実装を提供します。 この図は、コレクション型間のリレーションシップを示しています。
 
-![C&#43;&#43;&#47;/CX 継承ツリーのコレクション型](../cppcx/media/cppcxcollectionsinheritancetree.png "C&#43;&#43;&#47;/CX 継承ツリーのコレクション型")
+![コレクション&#43;&#43;&#47;型の c cx 継承ツリー](../cppcx/media/cppcxcollectionsinheritancetree.png "コレクション&#43;&#43;&#47;型の c cx")継承ツリー
 
 - [Platform::Collections::Vector クラス](../cppcx/platform-collections-vector-class.md) は [std::vector クラス](../standard-library/vector-class.md)と似ています。
 
@@ -23,29 +23,29 @@ Windows ランタイムは、コレクションと関連する型、および C 
 
 - [Platform::Collections::VectorView クラス](../cppcx/platform-collections-vectorview-class.md) と[Platform::Collections::MapView クラス](../cppcx/platform-collections-mapview-class.md) は `Vector` と `Map`の読み取り専用のバージョンです。
 
-- 反復子は [Platform::Collections 名前空間](../cppcx/platform-collections-namespace.md)で定義されます。 これらの反復子は、STL 反復子の要件を満たし、任意の [Windows::Foundation::Collections](../standard-library/algorithm-functions.md#find)インターフェイス型や  [Platform::Collections](../standard-library/algorithm-functions.md#count_if)具象型で [std::find](/uwp/api/windows.foundation.collections) 、 [std::count_if](../cppcx/platform-collections-namespace.md) などの STL アルゴリズムを使えるようにします。 たとえば、c# で作成され、STL アルゴリズムを適用する Windows ランタイム コンポーネントのコレクションを反復処理することができますこれを意味します。
+- 反復子は [Platform::Collections 名前空間](../cppcx/platform-collections-namespace.md)で定義されます。 これらの反復子は、STL 反復子の要件を満たし、任意の [Windows::Foundation::Collections](../standard-library/algorithm-functions.md#find)インターフェイス型や  [Platform::Collections](../standard-library/algorithm-functions.md#count_if)具象型で [std::find](/uwp/api/windows.foundation.collections) 、 [std::count_if](../cppcx/platform-collections-namespace.md) などの STL アルゴリズムを使えるようにします。 たとえば、これは、でC#作成された Windows ランタイムコンポーネント内のコレクションを反復処理し、それに STL アルゴリズムを適用できることを意味します。
 
    > [!IMPORTANT]
    > プロキシ反復子 `VectorIterator` と `VectorViewIterator` は、プロキシ オブジェクト `VectoryProxy<T>` と `ArrowProxy<T>` を利用して、STL コンテナーでの使用を有効にします。 詳細については、この記事で後述する「VectorProxy 要素」を参照してください。
 
-- C++/cli CX コレクション型と同じスレッド セーフの保証を STL コンテナーがサポートされます。
+- /Cx C++コレクション型は、STL コンテナーがサポートするのと同じスレッドセーフの保証をサポートしています。
 
 - [Windows::Foundation::Collections::IObservableVector](/uwp/api/Windows.Foundation.Collections.IObservableVector_T_) と [Windows::Foundation::Collections::IObservableMap](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_) は、コレクションがさまざまな方法で変更されるときに発生するイベントを定義します。 これらのインターフェイスを実装すると、  [Platform::Collections::Map](../cppcx/platform-collections-map-class.md) と [Platform::Collections::Vector](../cppcx/platform-collections-vector-class.md) は、XAML コレクションとのデータ バインドをサポートします。 たとえば、 `Vector` にデータ バインドされている `Grid`がある場合、コレクションに項目を追加すると、変更がグリッド UI に反映されます。
 
 ## <a name="vector-usage"></a>ベクターの使用
 
-クラス、シーケンス コンテナーを別の Windows ランタイム コンポーネントに渡すときに使用[:foundation:。IVector\<T >](/uwp/api/Windows.Foundation.Collections.IVector_T_)パラメーターまたは戻り値の型として、 [platform::collections:\<T >](../cppcx/platform-collections-vector-class.md)具象実装として。 パブリックの戻り値またはパラメーターで `Vector` 型を使用しようとすると、コンパイラ エラー C3986 が発生します。 このエラーは、 `Vector` を `IVector`に変更することで解決できます。
+クラスがシーケンスコンテナーを別の Windows ランタイムコンポーネントに渡す必要がある場合[は、Windows:: Foundation:: Collections:: を使用します。Ivector\<t >](/uwp/api/Windows.Foundation.Collections.IVector_T_)パラメーターまたは戻り値の型として、 [Platform:: Collections\<:: Vector t](../cppcx/platform-collections-vector-class.md)が具象実装として > ます。 パブリックの戻り値またはパラメーターで `Vector` 型を使用しようとすると、コンパイラ エラー C3986 が発生します。 このエラーは、 `Vector` を `IVector`に変更することで解決できます。
 
 > [!IMPORTANT]
 > 独自のプログラム内のシーケンスを渡している場合は、 `Vector` か `std::vector` のどちらかを使用します。それらの方が `IVector`より効率的であるためです。 ABI を介してコンテナーを渡す場合にのみ、 `IVector` を使用します。
 >
-> Windows ランタイムの型システムは、ジャグ配列の概念をサポートしていませんし、そのため、IVector を渡すことはできません < platform::array\<T >> を戻り値またはメソッド パラメーターとして。 ABI を通じてジャグ配列またはシーケンスのシーケンスを渡すには、 `IVector<IVector<T>^>`を使用します。
+> Windows ランタイム型システムは、ジャグ配列の概念をサポートしていないため、ivector < Platform:: Array\<T > > を戻り値またはメソッドパラメーターとして渡すことはできません。 ABI を通じてジャグ配列またはシーケンスのシーケンスを渡すには、 `IVector<IVector<T>^>`を使用します。
 
 `Vector<T>` は、コレクションでの項目の追加、削除、およびアクセスに必要なメソッドを提供します。暗黙的に `IVector<T>`に変換可能です。 `Vector<T>`のインスタンスで STL アルゴリズム使用することもできます。 次の例は、基本的な使用法をいくつか示しています。 [begin 関数](../cppcx/begin-function.md) と [end 関数](../cppcx/end-function.md) は `Platform::Collections` 名前空間のもので、 `std` 名前空間のものではありません。
 
 [!code-cpp[cx_collections#01](../cppcx/codesnippet/CPP/collections/class1.cpp#01)]
 
-使用する既存のコードがある場合`std::vector`Windows ランタイム コンポーネントで再利用のいずれかを使用して、`Vector`を受け取るコンス トラクター、`std::vector`または構築する反復子のペアを`Vector`時点を渡すことで、ABI を介してコレクションです。 次の例は、 `Vector` からの効率的な初期化のために `std::vector`移動コンストラクターを使用する方法を示しています。 移動操作の後、元の `vec` 変数は有効でなくなります。
+を使用`std::vector`する既存のコードがあり、それを Windows ランタイムコンポーネントで再利用する場合は、 `std::vector` `Vector`または反復`Vector`子のペアを受け取るコンストラクターの1つを使用して、ABI 全体のコレクション。 次の例は、 `Vector` からの効率的な初期化のために `std::vector`移動コンストラクターを使用する方法を示しています。 移動操作の後、元の `vec` 変数は有効でなくなります。
 
 [!code-cpp[cx_collections#02](../cppcx/codesnippet/CPP/collections/class1.cpp#02)]
 
@@ -57,13 +57,13 @@ Windows ランタイムは、コレクションと関連する型、および C 
 
 ## <a name="vectorproxy-elements"></a>VectorProxy 要素
 
-[Platform::Collections::VectorIterator](../cppcx/platform-collections-vectoriterator-class.md)と[Platform::Collections::VectorViewIterator](../cppcx/platform-collections-vectorviewiterator-class.md)の使用を有効にする`range for`ループとなどのアルゴリズム[std::sort](../standard-library/algorithm-functions.md#sort) で[IVector\<T >](/uwp/api/Windows.Foundation.Collections.IVector_T_)コンテナー。 ただし、C++ ポインターの逆参照を使って `IVector` 要素にアクセスすることはできません。これらの要素には、 [GetAt](/uwp/api/windows.foundation.collections.ivector-1.getat) メソッドと [SetAt](/uwp/api/windows.foundation.collections.ivector-1.setat) メソッドを使ってアクセスすることしかできません。 そのため、これらの反復子を使用して、プロキシ クラス`Platform::Details::VectorProxy<T>`と`Platform::Details::ArrowProxy<T>`を介して個々 の要素へのアクセスを提供する__\*__、 __->__、および__\[]__ 演算子は、標準ライブラリで必要とします。 厳密には、 `IVector<Person^> vec`が指定されている場合、 `*begin(vec)` の型は `VectorProxy<Person^>`になります。 ただし、プロキシ オブジェクトは、ほとんどの場合、コードに対して透過的です。 これらのプロキシ オブジェクトは反復子によって内部でのみ使用されるため文書化されませんが、その機構の動作がわかっていると便利です。
+[Platform:: collections:: VectorIterator](../cppcx/platform-collections-vectoriterator-class.md)と[platform:: collections:: VectorViewIterator](../cppcx/platform-collections-vectorviewiterator-class.md)では、 `range for` [ivector\<T >](/uwp/api/Windows.Foundation.Collections.IVector_T_)コンテナーで[std:: sort](../standard-library/algorithm-functions.md#sort)などのループとアルゴリズムを使用できます。 ただし、C++ ポインターの逆参照を使って `IVector` 要素にアクセスすることはできません。これらの要素には、 [GetAt](/uwp/api/windows.foundation.collections.ivector-1.getat) メソッドと [SetAt](/uwp/api/windows.foundation.collections.ivector-1.setat) メソッドを使ってアクセスすることしかできません。 したがって、これらの反復子は`Platform::Details::VectorProxy<T>` 、 `Platform::Details::ArrowProxy<T>`標準ライブラリの必要に応じて、 __\*__ プロキシ __->__ クラスとを使用して、、  __\[、およびの__各演算子を通じて個々の要素にアクセスできるようにします。 厳密には、 `IVector<Person^> vec`が指定されている場合、 `*begin(vec)` の型は `VectorProxy<Person^>`になります。 ただし、プロキシ オブジェクトは、ほとんどの場合、コードに対して透過的です。 これらのプロキシ オブジェクトは反復子によって内部でのみ使用されるため文書化されませんが、その機構の動作がわかっていると便利です。
 
 `range for` コンテナーに対して `IVector` ループを使用する場合は、 `auto&&` を使用して反復子変数が `VectorProxy` 要素に正しくバインドされるようにします。 `auto` または `auto&`を使用すると、コンパイラ警告 C4239 が発生し、警告テキストに `VectoryProxy` が示されます。
 
-`range for` に対する `IVector<Person^>`ループ処理の例を次に示します。 実行が 64 行のブレークポイントで停止していることに注意してください。 **[クイック ウォッチ]** ウィンドウには、反復子変数 `p` が実際には `VectorProxy<Person^>` メンバー変数と `m_v` メンバー変数を持つ `m_i` であることが示されています。 ただし、この変数で `GetType` を呼び出すと、 `Person` インスタンス `p2`と同一の型が返されます。 `VectorProxy` と `ArrowProxy` が **[クイック ウォッチ]**、デバッガーの一部のコンパイラ エラー、またはその他の場所に表示される場合でも、通常はそれらについて明示的にコーディングする必要はありません。
+`range for` に対する `IVector<Person^>`ループ処理の例を次に示します。 実行が 64 行のブレークポイントで停止していることに注意してください。 **[クイック ウォッチ]** ウィンドウには、反復子変数 `p` が実際には `VectorProxy<Person^>` メンバー変数と `m_v` メンバー変数を持つ `m_i` であることが示されています。 ただし、この変数で `GetType` を呼び出すと、 `Person` インスタンス `p2`と同一の型が返されます。 `VectorProxy` と `ArrowProxy` が **[クイック ウォッチ]** 、デバッガーの一部のコンパイラ エラー、またはその他の場所に表示される場合でも、通常はそれらについて明示的にコーディングする必要はありません。
 
-![範囲内にある VectorProxy&#45;基づく for ループ](../cppcx/media/vectorproxy-1.png "範囲内にある VectorProxy&#45;基づく for ループ")
+![&#45;]範囲ベースの VectorProxy for ループ(../cppcx/media/vectorproxy-1.png "VectorProxy in&#45;ループ")
 
 プロキシ オブジェクトに関してコーディングする必要があるのは、 `dynamic_cast` 要素コレクションで特定の型の XAML オブジェクトを探している場合など、要素で `UIElement` を実行する必要がある場合です。 この場合は、最初に [Platform::Object](../cppcx/platform-object-class.md)^ に要素をキャストし、その後に動的キャストを実行する必要があります。
 
@@ -84,7 +84,7 @@ void FindButton(UIElementCollection^ col)
 
 ## <a name="map-usage"></a>マップの使用
 
-この例は、項目の挿入し、で確認する方法を示します、 [:map](../cppcx/platform-collections-map-class.md)、戻って、`Map`読み取り専用 [Windows::Foundation::Collections::IMapView] として/uwp api/Windows.Foundation.Collections.IMapView_K_V_) の型。
+この例では、 `Map`項目を挿入して[Platform:: Collections:: Map](../cppcx/platform-collections-map-class.md)で参照し、を読み取り専用の [Windows:: Foundation:: Collections:: IMapView]/uwp/api/Windows.Foundation.Collections.IMapView_K_V_ として返す方法を示します。各種.
 
 [!code-cpp[cx_collections#04](../cppcx/codesnippet/CPP/collections/class1.cpp#04)]
 
@@ -96,14 +96,14 @@ void FindButton(UIElementCollection^ col)
 
 ## <a name="collection-types"></a>コレクション型
 
-コレクションは、シーケンス コレクションと関連コレクションそれぞれの変更可能バージョンと読み取り専用バージョンという 4 つのカテゴリに分類されます。 さらに、C +/cli CX はコレクションのアクセスを簡略化する 3 つの反復子クラスを提供することでコレクションを拡張します。
+コレクションは、シーケンス コレクションと関連コレクションそれぞれの変更可能バージョンと読み取り専用バージョンという 4 つのカテゴリに分類されます。 さらに、 C++/cx は、コレクションへのアクセスを簡略化する3つの反復子クラスを提供することで、コレクションを拡張します。
 
-変更可能なコレクションの要素は変更できますが、 *ビュー*と呼ばれる読み取り専用コレクションの要素は読み取りしか実行できません。 要素を[platform::collections:](../cppcx/platform-collections-vector-class.md)または[Platform::Collections::VectorView](../cppcx/platform-collections-vectorview-class.md) 、反復子またはコレクションを使用してコレクションにアクセスできる[vector::getat](../cppcx/platform-collections-vector-class.md#getat)とインデックス。 関連コレクションの要素のコレクションを使用してアクセスできる[map::lookup](../cppcx/platform-collections-map-class.md#lookup)とキー。
+変更可能なコレクションの要素は変更できますが、 *ビュー*と呼ばれる読み取り専用コレクションの要素は読み取りしか実行できません。 [Platform:: collections:: vector](../cppcx/platform-collections-vector-class.md)コレクションまたは[Platform:: Collections:: VectorView](../cppcx/platform-collections-vectorview-class.md) collection の要素には、反復子またはコレクションの[Vector:: GetAt](../cppcx/platform-collections-vector-class.md#getat)とインデックスを使用してアクセスできます。 連想コレクションの要素には、コレクションの[Map:: Lookup](../cppcx/platform-collections-map-class.md#lookup)とキーを使用してアクセスできます。
 
 [Platform::Collections::Map クラス](../cppcx/platform-collections-map-class.md)<br/>
 変更可能な関連コレクション。 マップ要素は、キーと値のペアです。 キーを検索してその関連付けられた値を取得することと、キーと値のペアをすべて繰り返すことの両方がサポートされています。
 
-`Map` と `MapView` は、 `<K, V, C = std::less<K>>`で template 宣言されるので、比較子をカスタマイズできます。  さらに、 `Vector` と `VectorView` は `<T, E = std::equal_to<T>>` で template 宣言されるので、 `IndexOf()`の動作をカスタマイズできます。 これは、値の構造体の `Vector` と `VectorView` について特に重要です。 たとえば、ベクターを作成する\<::datetime > を DateTime オーバー ロードしていないため、カスタム比較子を提供する必要があります、演算子 = =。
+`Map` と `MapView` は、 `<K, V, C = std::less<K>>`で template 宣言されるので、比較子をカスタマイズできます。  さらに、 `Vector` と `VectorView` は `<T, E = std::equal_to<T>>` で template 宣言されるので、 `IndexOf()`の動作をカスタマイズできます。 これは、値の構造体の `Vector` と `VectorView` について特に重要です。 たとえば、Windows:: Foundation:\<:D atetime > ベクターを作成するには、カスタム比較子を指定する必要があります。これは、DateTime が = = 演算子をオーバーロードしないためです。
 
 [Platform::Collections::MapView クラス](../cppcx/platform-collections-mapview-class.md)<br/>
 `Map`の読み取り専用バージョン。
@@ -125,26 +125,26 @@ STL の  `const` ランダム アクセス反復子の要件を満たす STL 反
 
 ### <a name="begin-and-end-functions"></a>begin() および end() 関数
 
-処理する STL の使用を簡略化`Vector`、 `VectorView`、 `Map`、 `MapView`、および任意`Windows::Foundation::Collections`オブジェクト、C +/cli CX のオーバー ロードをサポートしている、 [begin 関数](../cppcx/begin-function.md)と[終了関数](../cppcx/end-function.md)非メンバー関数。
+STL を使用`Vector`してC++ `Windows::Foundation::Collections`、 `Map` `VectorView` `MapView`、、、および任意のオブジェクトを処理することを簡略化するために、/cx は [begin 関数](../cppcx/begin-function.md)と [end 関数](../cppcx/end-function.md)の非メンバーのオーバーロードをサポートしています。関数.
 
 次の表は、使用できる反復子と関数の一覧を示しています。
 
 |Iterators|関数|
 |---------------|---------------|
-|[Platform::Collections::VectorIterator\<T>](../cppcx/platform-collections-vectoriterator-class.md)<br /><br /> (内部に格納[:foundation:。IVector\<T >](/uwp/api/Windows.Foundation.Collections.IVector_T_)と int です)。|[begin](../cppcx/begin-function.md)/ [end](../cppcx/end-function.md)([Windows::Foundation::Collections::IVector\<T >](/uwp/api/Windows.Foundation.Collections.IVector_T_))|
-|[Platform::Collections::VectorViewIterator\<T>](../cppcx/platform-collections-vectorviewiterator-class.md)<br /><br /> (内部に格納[IVectorView\<T >](/uwp/api/Windows.Foundation.Collections.IVectorView_T_)^ と int です)。|[開始](../cppcx/begin-function.md)/ [エンド](../cppcx/end-function.md)([IVectorView\<T >](/uwp/api/Windows.Foundation.Collections.IVectorView_T_)^)|
-|[Platform::Collections::InputIterator\<T>](../cppcx/platform-collections-inputiterator-class.md)<br /><br /> (内部に格納[IIterator\<T >](/uwp/api/Windows.Foundation.Collections.IIterator_T_)^ および T)|[開始](../cppcx/begin-function.md)/ [エンド](../cppcx/end-function.md)([IIterable\<T >](/uwp/api/Windows.Foundation.Collections.IIterable_T_))|
-|[Platform::Collections::InputIterator < IKeyValuePair\<K, V > ^ >](../cppcx/platform-collections-inputiterator-class.md)<br /><br /> (内部に格納[IIterator\<T >](/uwp/api/Windows.Foundation.Collections.IIterator_T_)^ および T)|[開始](../cppcx/begin-function.md)/ [エンド](../cppcx/end-function.md)([IMap\<K, V >](/uwp/api/Windows.Foundation.Collections.IMap_K_V_)します。|
-|[Platform::Collections::InputIterator < IKeyValuePair\<K, V > ^ >](../cppcx/platform-collections-inputiterator-class.md)<br /><br /> (内部に格納[IIterator\<T >](/uwp/api/Windows.Foundation.Collections.IIterator_T_)^ および T)|[begin](../cppcx/begin-function.md)/ [end](../cppcx/end-function.md) ([Windows::Foundation::Collections::IMapView]/uwp/api/Windows.Foundation.Collections.IMapView_K_V_))|
+|[Platform:: Collections:: VectorIterator\<T >](../cppcx/platform-collections-vectoriterator-class.md)<br /><br /> (Windows: [: Foundation:: Collections:: を内部に格納します。Ivector\<T >](/uwp/api/Windows.Foundation.Collections.IVector_T_)と int)|[begin](../cppcx/begin-function.md)/ [end](../cppcx/end-function.md)([Windows::Foundation::Collections::Ivector\<T >](/uwp/api/Windows.Foundation.Collections.IVector_T_))|
+|[Platform:: Collections:: VectorViewIterator\<T >](../cppcx/platform-collections-vectorviewiterator-class.md)<br /><br /> (内部的[に\<IVectorView T >](/uwp/api/Windows.Foundation.Collections.IVectorView_T_)^ および int を格納します)。|[begin](../cppcx/begin-function.md)/ [end](../cppcx/end-function.md) ([IVectorView\<T>](/uwp/api/Windows.Foundation.Collections.IVectorView_T_)^)|
+|[Platform:: Collections:: InputIterator\<T >](../cppcx/platform-collections-inputiterator-class.md)<br /><br /> (内部的には、 [iiterator\<t >](/uwp/api/Windows.Foundation.Collections.IIterator_T_)^ と t を格納します)。|[begin](../cppcx/begin-function.md)/ [end](../cppcx/end-function.md) ([IIterable\<T>](/uwp/api/Windows.Foundation.Collections.IIterable_T_))|
+|[Platform:: Collections:: InputIterator < ikeyvaluepair<k,\<K、V > ^ >](../cppcx/platform-collections-inputiterator-class.md)<br /><br /> (内部的には、 [iiterator\<t >](/uwp/api/Windows.Foundation.Collections.IIterator_T_)^ と t を格納します)。|[begin](../cppcx/begin-function.md)/ [end](../cppcx/end-function.md) ([IMap\<K,V>](/uwp/api/Windows.Foundation.Collections.IMap_K_V_)。|
+|[Platform:: Collections:: InputIterator < ikeyvaluepair<k,\<K、V > ^ >](../cppcx/platform-collections-inputiterator-class.md)<br /><br /> (内部的には、 [iiterator\<t >](/uwp/api/Windows.Foundation.Collections.IIterator_T_)^ と t を格納します)。|[begin](../cppcx/begin-function.md)/ [end](../cppcx/end-function.md) ([Windows::Foundation::Collections::IMapView]/uwp/api/Windows.Foundation.Collections.IMapView_K_V_))|
 
 ### <a name="collection-change-events"></a>コレクション変更イベント
 
 `Vector` と `Map` は、XAML コレクションでのデータ バインドをサポートしていますが、これは、コレクション オブジェクトが変更またはリセットされたとき、またはコレクションのいずれかの要素が挿入、削除、または変更されたときに発生するイベントを実装することで実現されています。 データ バインドをサポートする独自の型を作成できます。ただし、 `Map` と `Vector` から継承することはできません。これらの型はシールされているためです。
 
-[Windows::Foundation::Collections::VectorChangedEventHandler](/uwp/api/windows.foundation.collections.vectorchangedeventhandler) デリゲートと [Windows::Foundation::Collections::MapChangedEventHandler](/uwp/api/windows.foundation.collections.mapchangedeventhandler) デリゲートは、コレクション変更イベントのイベント ハンドラーのシグネチャを指定します。 [Windows::Foundation::Collections::CollectionChange](/uwp/api/windows.foundation.collections.collectionchange) パブリック列挙型クラス、 `Platform::Collection::Details::MapChangedEventArgs` 、 `Platform::Collections::Details::VectorChangedEventArgs` ref クラスは、イベントの原因を特定するためにイベント引数を格納します。 `*EventArgs`で型が定義されている、`Details`名前空間を作成または使用するときに明示的に使用する必要がないため`Map`または`Vector`します。
+[Windows::Foundation::Collections::VectorChangedEventHandler](/uwp/api/windows.foundation.collections.vectorchangedeventhandler) デリゲートと [Windows::Foundation::Collections::MapChangedEventHandler](/uwp/api/windows.foundation.collections.mapchangedeventhandler) デリゲートは、コレクション変更イベントのイベント ハンドラーのシグネチャを指定します。 [Windows::Foundation::Collections::CollectionChange](/uwp/api/windows.foundation.collections.collectionchange) パブリック列挙型クラス、 `Platform::Collection::Details::MapChangedEventArgs` 、 `Platform::Collections::Details::VectorChangedEventArgs` ref クラスは、イベントの原因を特定するためにイベント引数を格納します。 型は、または`Details` `Map` を使用するときに明示的に構築または使用する必要がないため、名前空間で定義されます。`Vector` `*EventArgs`
 
 ## <a name="see-also"></a>関連項目
 
 [型システム](../cppcx/type-system-c-cx.md)<br/>
-[Visual C 言語リファレンス](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[C++/CX 言語リファレンス](../cppcx/visual-c-language-reference-c-cx.md)<br/>
 [名前空間参照](../cppcx/namespaces-reference-c-cx.md)

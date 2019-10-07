@@ -1,9 +1,9 @@
 ---
 title: clock
 ms.date: 11/04/2016
-apiname:
+api_name:
 - clock
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - clock
 helpviewer_keywords:
@@ -25,12 +28,12 @@ helpviewer_keywords:
 - processor time used
 - calculating processor time used
 ms.assetid: 3e1853dd-498f-49ba-b06a-f2315f20904e
-ms.openlocfilehash: 2fabd18fb28cb5ea13dfb156ea21e8743c2afd49
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 836d0c6448adb4c99a251a0e97aa642e30362dcb
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500255"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939127"
 ---
 # <a name="clock"></a>clock
 
@@ -50,7 +53,7 @@ clock_t clock( void );
 
 **Clock**関数は、プロセスの開始時に CRT の初期化が行われてから経過したウォールクロックの時間を示します。 この関数は、厳密には ISO C (正味の CPU 時間を戻り値にすることが規定されている) に準拠していないことに注意してください。 CPU 時間を取得するには、Win32 の [GetProcessTimes](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getprocesstimes) 関数を使用します。 経過時間を秒単位で確認するには、 **clock**関数によって返された値をマクロ**CLOCKS_PER_SEC**で除算します。
 
-十分な時間があれば、 **clock**によって返される値は、 **clock_t**の最大正の値を超える可能性があります。 プロセスの実行時間が長い場合、 **clock**によって返される`(clock_t)(-1)`値は、iso C99 標準 (7.23.2.1) および iso C11 standard (7.27.2.1) で指定されているように、常にになります。 Microsoft は**clock_t**を、符号付き32ビット整数として実装し、 **CLOCKS_PER_SEC**マクロは1000として定義されています。 これにより、最大**クロック**関数の戻り値として2147483.647 秒 (約24.8 日) が返されます。 この時間を超えて実行されたプロセスでは、**クロック**によって返される値に依存しないでください。 64ビット[時刻](time-time32-time64.md)関数または Windows [queryperformancecounter](/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter)関数を使用すると、多数の年のプロセス経過時間を記録できます。
+十分な時間があれば、 **clock**によって返される値は、 **clock_t**の最大正の値を超える可能性があります。 プロセスの実行時間が長い場合、 **clock**によって返される`(clock_t)(-1)`値は、iso C99 標準 (7.23.2.1) および iso C11 standard (7.27.2.1) で指定されているように、常にになります。 Microsoft は**clock_t** **を、符号**付き32ビット整数として実装し、 **CLOCKS_PER_SEC**マクロは1000として定義されています。 これにより、最大**クロック**関数の戻り値として2147483.647 秒 (約24.8 日) が返されます。 この時間を超えて実行されたプロセスでは、**クロック**によって返される値に依存しないでください。 64ビット[時刻](time-time32-time64.md)関数または Windows [queryperformancecounter](/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter)関数を使用すると、多数の年のプロセス経過時間を記録できます。
 
 ## <a name="requirements"></a>必要条件
 

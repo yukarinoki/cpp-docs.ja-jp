@@ -1,4 +1,4 @@
----
+﻿---
 title: 起動と終了 (C++)
 ms.date: 11/04/2016
 ms.assetid: c6568ee6-40ab-4ae8-aa44-c99e232f64ac
@@ -11,7 +11,7 @@ ms.locfileid: "62330819"
 ---
 # <a name="startup-and-termination-c"></a>起動と終了 (C++)
 
-プログラムの起動と終了は次の2つの関数で容易に行えます: [main](../cpp/main-program-startup.md) と [exit](../cpp/program-termination.md)。他の開始と終了コードを実行させることもできます。
+プログラムの起動と終了は次の2つの関数で容易に行えます: [main](../cpp/main-program-startup.md) と [exit](../cpp/program-termination.md)。 他の開始と終了コードを実行させることもできます。
 
 ## <a name="see-also"></a>関連項目
 

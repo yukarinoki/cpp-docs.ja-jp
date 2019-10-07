@@ -5,19 +5,19 @@ helpviewer_keywords:
 - MFC dialog boxes [MFC], closing
 - dialog boxes [MFC], closing
 ms.assetid: 946f5675-c482-46a4-a5dd-34fe138ffae5
-ms.openlocfilehash: 07e4159eccde1fab89d4a5ffadee4e6d11fc20f0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 48ea954552b3ea9aa7193a47fc2a66d731312d77
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62326847"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685381"
 ---
 # <a name="closing-the-dialog-box"></a>ダイアログ ボックスのクローズ
 
-ユーザーが [ok] ボタンまたは [キャンセル] ボタンでは通常、そのボタンのいずれかを選択すると、モーダル ダイアログ ボックスを閉じます。 Windows ダイアログ オブジェクトを送信する、[ok] または [キャンセル] ボタンを選択すると、 **BN_CLICKED**ボタンとコントロール通知メッセージの ID がか**IDOK**または**IDCANCEL**します。 `CDialog` これらのメッセージの既定のハンドラー関数を提供します。`OnOK`と`OnCancel`します。 既定のハンドラーの呼び出し、`EndDialog`メンバー関数は、ダイアログ ウィンドウを閉じます。 呼び出すこともできます`EndDialog`独自のコードから。 詳細については、次を参照してください。、 [EndDialog](../mfc/reference/cdialog-class.md#enddialog)クラスのメンバー関数`CDialog`で、 *MFC リファレンス*します。
+ユーザーがボタンのいずれかを選択すると、モーダルダイアログボックスが閉じます。通常は、[OK] ボタンまたは [キャンセル] ボタンです。 [OK] または [キャンセル] をクリックすると、Windows によってダイアログオブジェクトに、ボタンの ID ( **IDOK**または**IDCANCEL**) を持つ**BN_CLICKED**コントロール通知メッセージが送信されます。 `CDialog` は、これらのメッセージの既定のハンドラー関数を提供します。 `OnOK` と `OnCancel` です。 既定のハンドラーは、`EndDialog` メンバー関数を呼び出してダイアログウィンドウを閉じます。 また、独自のコードから `EndDialog` を呼び出すこともできます。 詳細については、 *MFC リファレンス*のクラス `CDialog` の[EndDialog](../mfc/reference/cdialog-class.md#enddialog)メンバー関数を参照してください。
 
-終了およびモードレス ダイアログ ボックスを削除するための配置にオーバーライド`PostNcDestroy`を呼び出すと、**削除**演算子に対して、**この**ポインター。 [ダイアログ ボックスの破棄](../mfc/destroying-the-dialog-box.md)次の動作について説明します。
+モードレスダイアログボックスの終了と削除を配置するには、@no__t 0 をオーバーライドし、**この**ポインターに対して**delete**演算子を呼び出します。 [ダイアログボックスを破棄すると、](../mfc/destroying-the-dialog-box.md)次の処理が説明されます。
 
 ## <a name="see-also"></a>関連項目
 
-[ダイアログ ボックスの有効期間](../mfc/life-cycle-of-a-dialog-box.md)
+[MFC でのダイアログボックスの操作](../mfc/life-cycle-of-a-dialog-box.md)

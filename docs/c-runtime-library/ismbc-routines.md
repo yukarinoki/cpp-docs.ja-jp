@@ -1,7 +1,7 @@
 ---
 title: _ismbc 系ルーチン
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcr110.dll
 - msvcr110_clr0400.dll
 - msvcr100.dll
@@ -9,21 +9,24 @@ apilocation:
 - msvcr90.dll
 - msvcr120.dll
 - msvcr80.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ismbc
 helpviewer_keywords:
 - ismbc routines
 - _ismbc routines
 ms.assetid: b8995391-7857-4ac3-9a1e-de946eb4464d
-ms.openlocfilehash: dd187be93b5df0160686fe765f65c25e14800b75
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 6dc14f269cafa8ccc343c5403ab0e23d319c71c3
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57748685"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940165"
 ---
-# <a name="ismbc-routines"></a>_ismbc 系ルーチン
+# <a name="_ismbc-routines"></a>_ismbc 系ルーチン
 
 これらの各 **_ismbc** ルーチンは、特定の条件で特定のマルチバイト文字 `c` をテストします。
 
@@ -37,7 +40,7 @@ ms.locfileid: "57748685"
 
 各 **_ismbc** ルーチンのテスト結果は、有効なマルチバイト コード ページによって異なります。 マルチバイトのコード ページには、1 バイトの英字があります。 既定では、マルチバイト コード ページは、プログラムの開始時にオペレーティング システムから取得したシステム既定の ANSI コード ページに設定されます。 [_getmbcp](../c-runtime-library/reference/getmbcp.md)、または [_setmbcp](../c-runtime-library/reference/setmbcp.md) によって、使用中のマルチバイト コード ページをそれぞれ照会または変更できます。
 
-出力値は、ロケールの `LC_CTYPE` カテゴリ設定に影響されます。詳細については、「[setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)」を参照してください。 **_l** サフィックスが付いていないこれらの関数のバージョンでは、このロケールに依存する動作に現在のロケールを使用します。**_l** サフィックスが付いているバージョンは、渡されたロケール パラメーターを代わりに使用する点を除いて同じです。
+出力値は、ロケールの `LC_CTYPE` カテゴリ設定に影響されます。詳細については、「[setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)」を参照してください。 **_l** サフィックスが付いていないこれらの関数のバージョンでは、このロケールに依存する動作に現在のロケールを使用します。 **_l** サフィックスが付いているバージョンは、渡されたロケール パラメーターを代わりに使用する点を除いて同じです。
 
 |ルーチンによって返される値|テスト条件|コード ページ 932 の例|
 |-------------|--------------------|---------------------------|

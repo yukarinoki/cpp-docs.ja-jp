@@ -11,34 +11,34 @@ helpviewer_keywords:
 - dialog classes [MFC], common
 - common dialog boxes [MFC]
 ms.assetid: 5c4f6443-896c-4b05-a7df-8169fdadc71d
-ms.openlocfilehash: 5efd885421d8c73c191e2a5603f37d1df85a5168
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d11d0978763d9599b0471a8e994f15a267f7cb8f
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388528"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685555"
 ---
 # <a name="common-dialog-classes"></a>コモン ダイアログ クラス
 
-クラスに加えて[CDialog](../mfc/reference/cdialog-class.md)、MFC にはいくつかのクラスから派生した`CDialog`に次の表に示すように、一般的に使用されるダイアログ ボックスをカプセル化します。 ダイアログ ボックスをカプセル化された「コモン ダイアログ ボックス」と呼ばれます、Windows コモン ダイアログ ライブラリ (COMMDLG の一部であります。DLL) です。 ダイアログ テンプレート リソースとこれらのクラスのコードは、Windows 3.1 以降のバージョンの一部であるコモン ダイアログ ボックスに、Windows で提供します。
+MFC では、クラス[CDialog](../mfc/reference/cdialog-class.md)に加えて、一般的に使用されるダイアログボックスをカプセル化する `CDialog` から派生した複数のクラスが用意されています。次の表を参照してください。 カプセル化されたダイアログボックスは、"コモンダイアログボックス" と呼ばれ、Windows コモンダイアログライブラリ (COMMDLG) の一部です。DLL)。 これらのクラスのダイアログテンプレートリソースとコードは、Windows バージョン3.1 以降の一部である Windows コモンダイアログボックスに用意されています。
 
 ### <a name="common-dialog-classes"></a>コモン ダイアログ クラス
 
-|派生ダイアログ クラス|目的|
+|派生ダイアログクラス|目的|
 |--------------------------|-------------|
-|[CColorDialog](../mfc/reference/ccolordialog-class.md)|により、ユーザーが色を選択します。|
-|[CFileDialog](../mfc/reference/cfiledialog-class.md)|開くか保存するファイル名を選択できます。|
-|[CFindReplaceDialog](../mfc/reference/cfindreplacedialog-class.md)|ユーザーが検索の開始操作や置換テキスト ファイルで操作できます。|
-|[CFontDialog](../mfc/reference/cfontdialog-class.md)|ユーザーがフォントを指定できます。|
-|[CPrintDialog](../mfc/reference/cprintdialog-class.md)|ユーザーが印刷ジョブの情報を指定できます。|
-|[CPrintDialogEx](../mfc/reference/cprintdialogex-class.md)|Windows 印刷 プロパティ シートです。|
+|[CColorDialog](../mfc/reference/ccolordialog-class.md)|ユーザーが色を選択できるようにします。|
+|[CFileDialog](../mfc/reference/cfiledialog-class.md)|開くファイルまたは保存するファイル名をユーザーが選択できるようにします。|
+|[CFindReplaceDialog](../mfc/reference/cfindreplacedialog-class.md)|ユーザーがテキストファイルで検索または置換操作を開始できるようにします。|
+|[CFontDialog](../mfc/reference/cfontdialog-class.md)|ユーザーがフォントを指定できるようにします。|
+|[CPrintDialog](../mfc/reference/cprintdialog-class.md)|印刷ジョブの情報をユーザーが指定できるようにします。|
+|[CPrintDialogEx](../mfc/reference/cprintdialogex-class.md)|Windows Print プロパティシート。|
 
-コモン ダイアログ クラスの詳細については、各クラス名を参照してください、 *MFC リファレンス*します。 MFC では、多数の OLE の標準的なダイアログ クラスも提供します。 これらのクラスについては、基本クラスを参照してください。 [COleDialog](../mfc/reference/coledialog-class.md)の、 *MFC リファレンス*します。
+コモンダイアログクラスの詳細については、 *MFC リファレンス*の個々のクラス名を参照してください。 MFC には、OLE に使用される標準ダイアログクラスも多数用意されています。 これらのクラスの詳細については、 *MFC リファレンス*の基本クラスである[COleDialog](../mfc/reference/coledialog-class.md)を参照してください。
 
-その他の 3 つの MFC クラスでは、ダイアログのような特性があります。 クラスについて[CFormView](../mfc/reference/cformview-class.md)、 [CRecordView](../mfc/reference/crecordview-class.md)、および[CDaoRecordView](../mfc/reference/cdaorecordview-class.md)、内のクラスを参照してください、 *MFC リファレンス*します。 クラスについて[CDialogBar](../mfc/reference/cdialogbar-class.md)を参照してください[ダイアログ バー](../mfc/dialog-bars.md)します。
+MFC の他の3つのクラスには、ダイアログのような特性があります。 クラス[CFormView](../mfc/reference/cformview-class.md)、 [CRecordView](../mfc/reference/crecordview-class.md)、および[CDaoRecordView](../mfc/reference/cdaorecordview-class.md)の詳細については、 *MFC リファレンス*のクラスを参照してください。 クラス[CDialogBar](../mfc/reference/cdialogbar-class.md)の詳細については、「[ダイアログバー](../mfc/dialog-bars.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
 [ダイアログ ボックス](../mfc/dialog-boxes.md)<br/>
-[ダイアログ ボックスの有効期間](../mfc/life-cycle-of-a-dialog-box.md)<br/>
+[MFC でのダイアログボックスの操作](../mfc/life-cycle-of-a-dialog-box.md)<br/>
 [OLE のダイアログ ボックス](../mfc/dialog-boxes-in-ole.md)

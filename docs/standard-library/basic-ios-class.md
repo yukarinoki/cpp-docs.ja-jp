@@ -62,7 +62,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68460102"
 ---
-# <a name="basicios-class"></a>basic_ios クラス
+# <a name="basic_ios-class"></a>basic_ios クラス
 
 このテンプレート クラスは、テンプレート パラメーターに依存する、入力ストリーム([basic_istream](../standard-library/basic-istream-class.md) テンプレート クラス) と出力ストリーム ([basic_ostream](../standard-library/basic-ostream-class.md) テンプレート クラス) の両方に共通のストレージとメンバー関数を表します。 (クラス [ios_base](../standard-library/ios-base-class.md) は、テンプレート パラメーターに依存しない、共通の要素を記述します。)クラス**basic_ios\<クラス Elem、クラス特徴 >** のオブジェクトは、型の要素を含むストリームを`Elem`制御するのに役立ちます。この型`Traits`の特性はクラスによって決定されます。
 
@@ -542,7 +542,7 @@ void init(basic_streambuf<Elem,Traits>* _Sb, bool _Isstd = false);
 
 - [tie](#tie) が Null ポインターを返す。
 
-- [rdstate](#rdstate)が0以外*の場合*は[goodbit](../standard-library/ios-base-class.md#iostate)を返します。それ以外の場合は、 [badbit](../standard-library/ios-base-class.md#iostate)を返します。
+- [rdstate](#rdstate)が0以外*の場合は* [goodbit](../standard-library/ios-base-class.md#iostate)を返します。それ以外の場合は、 [badbit](../standard-library/ios-base-class.md#iostate)を返します。
 
 - [例外](#exceptions)は`goodbit`を返します。
 
@@ -605,7 +605,7 @@ char narrow(char_type Char, char Default = '\0') const;
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は[](../standard-library/basic-filebuf-class.md#open)\<、use_facet\<ctype E > > ( [getloc](../standard-library/ios-base-class.md#getloc)())`narrow`を返します。( `Char`, `Default`).
+このメンバー関数は\<、[use_facet](../standard-library/basic-filebuf-class.md#open)\<ctype E > > ( [getloc](../standard-library/ios-base-class.md#getloc)())`narrow`を返します。( `Char`, `Default`).
 
 ### <a name="example"></a>例
 

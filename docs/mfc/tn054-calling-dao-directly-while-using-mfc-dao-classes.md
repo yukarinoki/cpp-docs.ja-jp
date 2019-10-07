@@ -1,6 +1,6 @@
 ---
-title: TN054:DAO の MFC DAO クラス使用中に直接呼び出し
-ms.date: 06/28/2018
+title: テクニカル ノート 54:MFC DAO クラスを使用しているときの DAO の直接呼び出し
+ms.date: 09/17/2019
 helpviewer_keywords:
 - MFC, DAO and
 - passwords [MFC], calling DAO
@@ -11,79 +11,75 @@ helpviewer_keywords:
 - TN054
 - DAO (Data Access Objects), and MFC
 ms.assetid: f7de7d85-8d6c-4426-aa05-2e617c0da957
-ms.openlocfilehash: b6aae8929e2840791e8d629378a0ec2261a2cda9
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: cef9852f762a64579e11fe4b0d8606bfc9d36709
+ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65610975"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71095975"
 ---
-# <a name="tn054-calling-dao-directly-while-using-mfc-dao-classes"></a>TN054:DAO の MFC DAO クラス使用中に直接呼び出し
+# <a name="tn054-calling-dao-directly-while-using-mfc-dao-classes"></a>テクニカル ノート 54:MFC DAO クラスを使用しているときの DAO の直接呼び出し
 
 > [!NOTE]
-> Visual C 環境とウィザードは、(DAO クラスが含まれていますし、それらを使用することもできます) が DAO をサポートしています。 使用することをお勧めします。 [OLE DB テンプレート](../data/oledb/ole-db-templates.md)または[ODBC と MFC](../data/odbc/odbc-and-mfc.md)の新しいプロジェクト。 DAO は、既存のアプリケーションを維持するためにのみ使用する必要があります。
+> DAO は Access データベースで使用され、Office 2013 でサポートされています。 3.6 は最終バージョンであり、廃止されたと見なされます。ビジュアルC++環境とウィザードでは、dao はサポートされていません (dao クラスは含まれていますが、引き続き使用できます)。 新しいプロジェクトには、 [OLE DB テンプレート](../data/oledb/ole-db-templates.md)または[ODBC および MFC](../data/odbc/odbc-and-mfc.md)を使用することをお勧めします。 既存のアプリケーションを維持するには、DAO のみを使用する必要があります。
 
-MFC DAO データベース クラスを使用して、DAO の直接使用する必要がある状況である可能性があります。 通常、これは、ケースになりませんが MFC DAO の直接呼び出しと MFC クラスの使用を結合するときに、直接 DAO を呼び出す単純なを容易にいくつかのヘルパー メカニズムを提供しました。 Dao を直接 DAO の MFC マネージ オブジェクトのメソッドの呼び出しは、いくつかの行のコードのみを必要があります。 作成して、DAO オブジェクトを使用する必要があるかどうか*いない*MFC によって管理されている、次のように実際に呼び出すことで、もう少し作業を実行する必要がある`Release`オブジェクト。 このテクニカル ノートでは、DAO の直接呼び出しする場合、MFC のヘルパーを実行できる内容に役立つと DAO OLE インターフェイスを使用する方法について説明します。 最後に、この注は、セキュリティ機能の DAO の直接 DAO を呼び出す方法を示すいくつかのサンプル関数を提供します。
+MFC DAO データベースクラスを使用する場合、DAO を直接使用する必要がある場合があります。 通常、これは当てはまりませんが、mfc クラスの使用と直接の DAO 呼び出しを組み合わせることによって、直接の DAO 呼び出しを容易にするためのヘルパーメカニズムが用意されています。 MFC で管理されている DAO オブジェクトのメソッドに対して直接の DAO 呼び出しを行う場合は、数行のコードを記述するだけで済みます。 MFC で管理されて*いない*DAO オブジェクトを作成して使用する必要がある場合は、実際にオブジェクトに対して`Release`を呼び出して、もう少し作業を行う必要があります。 このテクニカルノートでは、DAO を直接呼び出す方法、MFC ヘルパーが行うことができること、および DAO OLE インターフェイスの使用方法について説明します。 最後に、dao のセキュリティ機能を使用して DAO を直接呼び出す方法を示すサンプル関数について説明します。
 
-## <a name="when-to-make-direct-dao-calls"></a>DAO の直接呼び出しを実行するときに
+## <a name="when-to-make-direct-dao-calls"></a>直接の DAO 呼び出しを行う場合
 
-MFC によってラップされていない機能を実装する場合または DAO を直接呼び出すのための最も一般的な状況がコレクションを更新する必要がある場合に発生します。 MFC では公開されない最も重要な機能にはセキュリティです。 セキュリティ機能を実装する場合は、DAO のユーザーとグループのオブジェクトを直接使用する必要があります。 だけでなく、セキュリティ機能がありますのみ、いくつかその他の DAO MFC でサポートされていません。 DAO に遅延をいくつかの追加だけでなく、レコード セットの複製とデータベースのレプリケーション機能が含まれます。
+直接の DAO 呼び出しを行う最も一般的な状況は、コレクションを更新する必要がある場合や、MFC でラップされていない機能を実装する場合に発生します。 MFC で公開されていない最も重要な機能はセキュリティです。 セキュリティ機能を実装する場合は、DAO ユーザーおよびグループオブジェクトを直接使用する必要があります。 セキュリティとは別に、MFC でサポートされていない DAO 機能が他にもいくつかあります。 これには、レコードセットの複製とデータベースレプリケーションの機能に加え、DAO へのいくつかの遅延追加が含まれます。
 
 ## <a name="a-brief-overview-of-dao-and-mfcs-implementation"></a>DAO と MFC の実装の概要
 
-MFC のラップ DAO はささいなことについて心配する必要はありませんので、多くの詳細を処理することによって DAO をより簡単に使用します。 OLE の作成と DAO オブジェクト (コレクション オブジェクトでは特に)、エラー チェック、および厳密に型指定された、シンプルなインターフェイスの提供の管理の初期化が含まれます (ありません**バリアント**または`BSTR`引数)。 DAO の直接の呼び出しを行うし、これらの機能も利用できます。 呼び出しはすべて、コードが行う必要があります`Release`直接 DAO によって作成されたオブジェクトの呼び出しと*いない*MFC 可能性がありますに内部的に依存しているインターフェイス ポインターのいずれかを変更します。 たとえば、変更しないでください、*開か*の開いているメンバー`CDaoRecordset`オブジェクトの理解していない限り*すべて*内部の影響。 ただし、使用することができます、*開か*フィールド コレクションを取得するには、直接 DAO を呼び出すインターフェイス。 この場合、*開か*メンバーは変更されません。 だけを呼び出す必要が`Release`フィールド コレクションのオブジェクトがオブジェクトを使い終わったときにします。
+MFC が DAO をラップすることにより、多くの詳細を処理することで DAO を簡単に使用できるようになるため、ほとんどのことを心配する必要がありません。 これには、OLE の初期化、DAO オブジェクトの作成と管理 (特にコレクションオブジェクト)、エラーチェック、厳密に型指定された単純なインターフェイス ( **VARIANT**また`BSTR`は引数なし) の提供などが含まれます。 直接の DAO 呼び出しを行うことができますが、これらの機能は引き続き利用できます。 すべてのコードは、直接の`Release` DAO 呼び出しによって作成されたすべてのオブジェクトに対してを呼び出す必要があります。また、MFC が内部で使用するインターフェイスポインターを変更し*ません*。 たとえば、*すべて*の内部的な影響を理解して`CDaoRecordset`いる場合を除き、開いているオブジェクトの*m_pDAORecordset*メンバーは変更しないでください。 ただし、 *m_pDAORecordset*インターフェイスを使用して DAO を直接呼び出して、フィールドコレクションを取得することもできます。 この場合、 *m_pDAORecordset*メンバーは変更されません。 オブジェクトの操作が完了`Release`したら、フィールドコレクションオブジェクトに対してを呼び出す必要があります。
 
-## <a name="description-of-helpers-to-make-dao-calls-easier"></a>呼び出しを簡略化する DAO ヘルパーの説明
+## <a name="description-of-helpers-to-make-dao-calls-easier"></a>DAO 呼び出しを容易にするヘルパーの説明
 
-DAO を簡単に呼び出しを行うために、ヘルパーは、MFC DAO データベース クラスで内部的に使用されるヘルパーと同じです。 これらのヘルパーは、予想されるエラーのチェックと、必要に応じて適切な例外のスロー、デバッグ出力のログ、DAO の直接呼び出しを行うときに、リターン コードを確認に使用されます。 基になる 2 つのヘルパー関数と 2 つのヘルパーはこれらのいずれかにマップされる 4 つのマクロがあります。 コードを読んで理解することをお勧めします。 参照してください**DAO_CHECK**、 **DAO_CHECK_ERROR**、 **DAO_CHECK_MEM**、および**DAO_TRACE** AFXDAO でします。マクロを参照して H **AfxDaoCheck**と**AfxDaoTrace** DAOCORE でします。CPP します。
+DAO の呼び出しを容易にするために用意されているヘルパーは、MFC DAO データベースクラスで内部的に使用されるヘルパーと同じです。 これらのヘルパーは、直接の DAO 呼び出しを行うとき、デバッグ出力をログに記録するとき、予想されるエラーをチェックし、必要に応じて適切な例外をスローするときに、リターンコードを確認するために使用されます。 2つの基になるヘルパー関数と、これら2つのヘルパーのいずれかにマップされる4つのマクロがあります。 最も簡単な説明は、単にコードを読むことです。 「 **DAO_CHECK**、 **DAO_CHECK_ERROR**、 **DAO_CHECK_MEM**、 **DAO_TRACE** in AFXDAO」を参照してください。マクロを表示するには、「 **AfxDaoCheck** and **AfxDaoTrace** in da」を参照してください.CPP.
 
-## <a name="using-the-dao-ole-interfaces"></a>DAO の OLE インターフェイスを使用します。
+## <a name="using-the-dao-ole-interfaces"></a>DAO OLE インターフェイスの使用
 
-DAO オブジェクト階層内の各オブジェクトの OLE インターフェイスは、DBDAOINT ヘッダー ファイルで定義されます。H \Program Files\Microsoft Visual Studio .NET 2003\VC7\include ディレクトリに存在します。 これらのインターフェイスは、DAO、階層全体を操作するためのメソッドを提供します。
+DAO オブジェクト階層内の各オブジェクトの OLE インターフェイスは、ヘッダーファイル DBDAOINT で定義されています。H。これは、Visual Studio .NET 2003 \ VC7\include ディレクトリにあります。 これらのインターフェイスには、DAO 階層全体を操作できるメソッドが用意されています。
 
-DAO インターフェイスのメソッドの多くの場合を操作する必要があります、`BSTR`オブジェクト (固定長の文字列 OLE オートメーションで使用される)。 `BSTR`オブジェクト通常内にカプセル化、**バリアント**データ型。 MFC クラス`COleVariant`自体からは継承、**バリアント**データ型。 ANSI または Unicode ANSI または Unicode のプロジェクトをビルドするかどうかに応じて DAO インターフェイスを返す`BSTR`秒。 V_BSTR と V_BSTRT、2 つのマクロは、DAO のインターフェイスを保証することを取得するのに便利です、`BSTR`想定される型。
+DAO インターフェイスの多くのメソッドでは、オブジェクトを`BSTR`操作する必要があります (OLE オートメーションで使用される長さのプレフィックスが付いた文字列)。 オブジェクトは、通常、バリアントデータ型内にカプセル化されます。 `BSTR` MFC クラス`COleVariant`自体は、 **VARIANT**データ型から継承されます。 Ansi または unicode 用にプロジェクトをビルドするかどうかによって、DAO インターフェイスは`BSTR`ansi または unicode を返します。 V_BSTR と V_BSTRT という2つのマクロは、DAO インターフェイスが予期される`BSTR`型のを取得するために役立ちます。
 
-V_BSTR が抽出されます、 *bstrVal*のメンバー、`COleVariant`します。 このマクロは通常のコンテンツを渡す必要がある場合に使用する`COleVariant`DAO インターフェイスのメソッドにします。 次のコード フラグメントでは、宣言と DAO DAOUser インターフェイス V_BSTR マクロを利用する 2 つの方法の実際の使用の両方を示します。
+V_BSTR は、 `COleVariant`の*bstrval*メンバーを抽出します。 このマクロは、通常、 `COleVariant`のコンテンツを DAO インターフェイスのメソッドに渡す必要がある場合に使用します。 次のコードフラグメントは、V_BSTR マクロを利用する DAO DAOUser インターフェイスの2つのメソッドの宣言と実際の使用方法を示しています。
 
 ```cpp
 COleVariant varOldName;
 COleVariant varNewName(_T("NewUser"), VT_BSTRT);
 
-// Code to assign pUser to a valid value omitted
-DAOUser *pUser = NULL;
+// Code to assign pUser to a valid value omitted DAO 3.6 is the final version and it is considered obsolete.User *pUser = NULL;
 
 // These method declarations were taken from DBDAOINT.H
 // STDMETHOD(get_Name) (THIS_ BSTR FAR* pbstr) PURE;
 // STDMETHOD(put_Name) (THIS_ BSTR bstr) PURE;
-
-DAO_CHECK(pUser->get_Name(&V_BSTR (&varOldName)));
-DAO_CHECK(pUser->put_Name(V_BSTR (&varNewName)));
+DAO 3.6 is the final version and it is considered obsolete._CHECK(pUser->get_Name(&V_BSTR (&varOldName))); DAO 3.6 is the final version and it is considered obsolete._CHECK(pUser->put_Name(V_BSTR (&varNewName)));
 ```
 
-なお、`VT_BSTRT`引数で指定された、`COleVariant`上記のコンス トラクターにより、ANSI がある`BSTR`で、 `COleVariant` 、ANSI バージョンのアプリケーションと、Unicode をビルドするかどうかは`BSTR`の Unicode バージョンのアプリケーション。 これは、DAO が必要です。
+上の`COleVariant`コンストラクター `VT_BSTRT`で指定された引数を使用すると`BSTR` 、アプリケーションの`BSTR` ansi バージョン`COleVariant`をビルドする場合は、に ansi があることが保証されることに注意してください。 unicode バージョンのアプリケーション。 これは、DAO が期待するものです。
 
-ANSI または Unicode のいずれかを抽出は、その他のマクロ、V_BSTRT、 *bstrVal*のメンバー `COleVariant` (ANSI または Unicode) ビルドの種類によって異なります。 次のコードを抽出する方法を示して、`BSTR`から値を`COleVariant`に、 `CString`:
+他のマクロ V_BSTRT は、ビルドの種類 (ansi または unicode) に応じ`COleVariant`て、の ansi または unicode の*bstrval*メンバーを抽出します。 次のコードは、 `BSTR` `COleVariant`から`CString`値を抽出する方法を示しています。
 
 ```cpp
 COleVariant varName(_T("MyName"), VT_BSTRT);
 CString str = V_BSTRT(&varName);
 ```
 
-格納されているその他の種類を開くには、その他の手法と、V_BSTRT マクロ`COleVariant`、DAOVIEW サンプルで説明します。 具体的には、この変換で、`CCrack::strVARIANT`メソッド。 このメソッドは、可能であれば、変換の値を`COleVariant`のインスタンスに`CString`します。
+V_BSTRT マクロは、に`COleVariant`格納されている他の型を開くためのその他の手法と共に、「DAOVIEW サンプル」で説明されています。 具体的には、この変換は`CCrack::strVARIANT`メソッドで実行されます。 このメソッドは、可能であれば、 `COleVariant`の値をの`CString`インスタンスに変換します。
 
 ## <a name="simple-example-of-a-direct-call-to-dao"></a>DAO の直接呼び出しの簡単な例
 
-基になる DAO コレクション オブジェクトを更新する必要がある場合、状況が発生します。 通常、必要に応じてがありますは単純なプロシージャである必要がある場合。 コレクションが更新しなければならない場合がありますの例は、マルチ ユーザー環境で動作している複数のユーザーが新しいテーブルの定義を作成する場合です。 この場合、テーブル定義のコレクションが古くなる可能性があります。 コレクションを更新するには、単に呼び出す必要がある、`Refresh`エラーのチェックと特定のコレクション オブジェクトのメソッド。
+状況によっては、基になる DAO コレクションオブジェクトを更新する必要がある場合に発生することがあります。 通常、この操作は必要ありませんが、必要に応じて簡単な手順です。 コレクションを更新する必要がある場合の例として、複数のユーザーが新しいテーブルテーブルを作成するマルチユーザー環境で動作する場合が挙げられます。 この場合、テーブルのコレクションが古くなる可能性があります。 コレクションを最新の状態に更新するには、 `Refresh`特定のコレクションオブジェクトのメソッドを呼び出し、エラーをチェックするだけです。
 
-```cpp
-DAO_CHECK(pMyDaoDatabase->m_pDAOTableDefs->Refresh());
+```cpp DAO 3.6 is the final version and it is considered obsolete._CHECK(pMyDaoDatabase->m_pDAOTableDefs->Refresh());
 ```
 
-現在 DAO コレクション オブジェクトのすべてのインターフェイスが MFC DAO データベース クラスのドキュメントに未記載の実装の詳細に注意してください。
+現時点では、すべての DAO コレクションオブジェクトインターフェイスは、MFC DAO データベースクラスの実装の詳細には記載されていないことに注意してください。
 
-## <a name="using-dao-directly-for-dao-security-features"></a>セキュリティ機能の DAO の直接 DAO を使用します。
+## <a name="using-dao-directly-for-dao-security-features"></a>Dao のセキュリティ機能に直接 DAO を使用する
 
-MFC DAO データベース クラスでは、DAO のセキュリティ機能をラップしないでください。 一部の DAO のセキュリティ機能を使用して、DAO インターフェイスのメソッドを呼び出す必要があります。 次の関数は、システム データベースを設定し、ユーザーのパスワードを変更します。 この関数は、3 つの関数を後で定義されているを呼び出します。
+MFC DAO データベースクラスは、DAO のセキュリティ機能をラップしません。 Dao のセキュリティ機能を使用するには、DAO インターフェイスのメソッドを呼び出す必要があります。 次の関数は、システムデータベースを設定し、ユーザーのパスワードを変更します。 この関数は、その後定義される3つの他の関数を呼び出します。
 
 ```cpp
 void ChangeUserPassword()
@@ -133,19 +129,19 @@ void ChangeUserPassword()
 }
 ```
 
-次の 4 つの例をする方法。
+次の4つの例では、次の方法を示します。
 
-- システムの DAO データベースの設定 (します。MDW ファイル)。
+- システム DAO データベース () を設定します.MDW ファイル)。
 
 - 既定のユーザーとパスワードを設定します。
 
 - ユーザーのパスワードを変更します。
 
-- パスワードを変更します。MDB ファイルです。
+- のパスワードを変更します。MDB ファイル。
 
-### <a name="setting-the-system-database"></a>システム データベースの設定
+### <a name="setting-the-system-database"></a>システムデータベースの設定
 
-アプリケーションによって使用されるシステム データベースを設定する関数のサンプルを次に示します。 その他の DAO の呼び出しが行われる前に、この関数を呼び出す必要があります。
+次に示すのは、アプリケーションで使用されるシステムデータベースを設定する関数の例です。 他の DAO 呼び出しを行う前に、この関数を呼び出す必要があります。
 
 ```cpp
 // Set the system database that the
@@ -168,7 +164,7 @@ void SetSystemDB(CString& strSystemMDB)
 
 ### <a name="setting-the-default-user-and-password"></a>既定のユーザーとパスワードの設定
 
-既定のユーザーとシステム データベースのパスワードを設定するには、次の関数を使用します。
+システムデータベースの既定のユーザーとパスワードを設定するには、次の関数を使用します。
 
 ```cpp
 void SetDefaultUser(CString& strUserName,
@@ -188,7 +184,7 @@ void SetDefaultUser(CString& strUserName,
 }
 ```
 
-### <a name="changing-a-users-password"></a>ユーザーのパスワードを変更します。
+### <a name="changing-a-users-password"></a>ユーザーのパスワードを変更する
 
 ユーザーのパスワードを変更するには、次の関数を使用します。
 
@@ -254,9 +250,9 @@ void ChangePassword(CString &strUserName,
 }
 ```
 
-### <a name="changing-the-password-of-an-mdb-file"></a>パスワードを変更します。MDB ファイル
+### <a name="changing-the-password-of-an-mdb-file"></a>のパスワードを変更します。MDB ファイル
 
-パスワードを変更します。MDB ファイルで、次の関数を使用します。
+のパスワードを変更します。MDB ファイルで、次の関数を使用します。
 
 ```cpp
 void SetDBPassword(LPCTSTR pDB,

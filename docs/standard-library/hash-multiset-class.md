@@ -93,7 +93,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68448694"
 ---
-# <a name="hashmultiset-class"></a>hash_multiset クラス
+# <a name="hash_multiset-class"></a>hash_multiset クラス
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_multiset クラス](../standard-library/unordered-multiset-class.md)を使用してください。
@@ -848,7 +848,7 @@ iterator insert(
 |パラメーター|説明|
 |-|-|
 |*val*|挿入される要素が `hash_multiset` にまだ含まれていない場合、より一般的には、キーが同じ順序付けになる要素がまだ含まれていない場合に、[hash_multiset](../standard-library/hash-multiset-class.md) に挿入される要素の値。|
-|*場所 (_s)*|正しい挿入ポイントの検索を開始する場所 (挿入ポイントがの直後にある場合は、対数時間ではなく、償却定数時間で挿入できます *)。*|
+|*場所 (_s)*|正しい挿入ポイントの検索を開始する場所 (挿入ポイントがの直後*にある場合*は、対数時間ではなく、償却定数時間で挿入できます)。|
 
 ### <a name="return-value"></a>戻り値
 
@@ -1517,7 +1517,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::iter
 
 ### <a name="example"></a>例
 
-の宣言方法[](#begin)や使用`iterator`方法の例については、begin の例を参照してください。
+の宣言方法や使用`iterator`方法の例については、[begin](#begin) の例を参照してください。
 
 ## <a name="key_comp"></a>  hash_multiset::key_comp
 

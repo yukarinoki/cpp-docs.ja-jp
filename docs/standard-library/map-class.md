@@ -1556,7 +1556,7 @@ Map 内の要素を指す反復子*Iter*を逆参照するには`->` 、演算�
 
 ### <a name="example"></a>例
 
-の宣言方法[](#begin)や使用`iterator`方法の例については、begin の例を参照してください。
+の宣言方法や使用`iterator`方法の例については、[begin](#begin) の例を参照してください。
 
 ## <a name="key_comp"></a>key_comp
 

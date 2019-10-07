@@ -1023,7 +1023,7 @@
             - name: ダイアログ ボックスの有効期間
               expanded: false
               items:
-                - name: ダイアログ ボックスの有効期間
+                - name: MFC でのダイアログ ボックスの操作
                   href: life-cycle-of-a-dialog-box.md
                 - name: ダイアログ ボックスの作成と表示
                   href: creating-and-displaying-dialog-boxes.md

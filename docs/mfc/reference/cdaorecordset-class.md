@@ -2111,7 +2111,7 @@ Variant の配列へのポインター。 配列のサイズは、インデッ�
 
 `Seek` 高パフォーマンスのインデックスがテーブル タイプのレコード セットの検索を有効にします。 呼び出すことによって、現在のインデックスを設定する必要があります`SetCurrentIndex`呼び出す前に`Seek`します。 インデックスが一意のキー フィールドまたはフィールドを指定する場合`Seek`に条件を満たす最初のレコードを見つけます。 インデックスを設定しないと、例外がスローされます。
 
-UNICODE のレコード セットを作成していない場合、`COleVariant`オブジェクトに明示的に宣言される ANSI です。 これを使用して行うことができます、 [COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** *lpszSrc* **、** *vtSrc* **)** 形式を持つコンス トラクターの*vtSrc*設定`VT_BSTRT`(ANSI) またはを使用して、`COleVariant`関数[SetString](../../mfc/reference/colevariant-class.md#setstring)**(** *lpszSrc* **、** *vtSrc* **)** で*vtSrc*設定`VT_BSTRT`します。
+UNICODE のレコード セットを作成していない場合、`COleVariant`オブジェクトに明示的に宣言される ANSI です。 これを使用して行うことができます、 [COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant) **(** *lpszSrc* **、** *vtSrc* **)** 形式を持つコンス トラクターの*vtSrc*設定`VT_BSTRT`(ANSI) またはを使用して、`COleVariant`関数[SetString](../../mfc/reference/colevariant-class.md#setstring) **(** *lpszSrc* **、** *vtSrc* **)** で*vtSrc*設定`VT_BSTRT`します。
 
 呼び出すと`Seek`、渡す 1 つまたは複数のキー値と比較演算子 ("<「、」\<="、「=」、"> ="、または">")。 `Seek` 指定されたキー フィールドを検索しで指定された条件を満たす最初のレコードを見つけます*lpszComparison*と*pKey1*します。 見つかると、 `Seek` 、0 以外を返すし、そのレコードは現在、します。 場合`Seek`一致を見つけが失敗した`Seek`0 が返されます、および現在のレコードが定義されていません。 DAO の直接を使用する場合は、NoMatch プロパティを明示的にチェックする必要があります。
 
@@ -2174,7 +2174,7 @@ A [COleVariant](../../mfc/reference/colevariant-class.md)特定のレコード�
 > [!NOTE]
 >  呼び出す[Requery](#requery) DAO のブックマークを変更します。
 
-UNICODE のレコード セットを作成していない場合、`COleVariant`オブジェクトに明示的に宣言される ANSI です。 これを使用して行うことができます、 [COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** *lpszSrc* **、** *vtSrc* **)** 形式を持つコンス トラクターの*vtSrc*設定`VT_BSTRT`(ANSI) またはを使用して、`COleVariant`関数[SetString](../../mfc/reference/colevariant-class.md#setstring)**(** *lpszSrc* **、** *vtSrc* **)** で*vtSrc*設定`VT_BSTRT`します。
+UNICODE のレコード セットを作成していない場合、`COleVariant`オブジェクトに明示的に宣言される ANSI です。 これを使用して行うことができます、 [COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant) **(** *lpszSrc* **、** *vtSrc* **)** 形式を持つコンス トラクターの*vtSrc*設定`VT_BSTRT`(ANSI) またはを使用して、`COleVariant`関数[SetString](../../mfc/reference/colevariant-class.md#setstring) **(** *lpszSrc* **、** *vtSrc* **)** で*vtSrc*設定`VT_BSTRT`します。
 
 関連情報については、トピックを参照して、「Bookmark プロパティ」とブックマークを設定のプロパティ"DAO のヘルプ。
 
@@ -2222,7 +2222,7 @@ Microsoft Jet データベース エンジンが、キャッシュからキャ�
 
 キャッシュされたすべてのデータの更新プログラムを強制的に渡す、 *lSize*パラメーターの`SetCacheSize`0 として呼び出す`SetCacheSize`もう一度、キャッシュのサイズを最初に要求を呼び出して、`FillCache`メンバー関数。
 
-UNICODE のレコード セットを作成していない場合、`COleVariant`オブジェクトに明示的に宣言される ANSI です。 これを使用して行うことができます、 [COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** *lpszSrc* **、** *vtSrc* **)** 形式を持つコンス トラクターの*vtSrc*設定`VT_BSTRT`(ANSI) またはを使用して、`COleVariant`関数[SetString](../../mfc/reference/colevariant-class.md#setstring)**(** *lpszSrc* **、** *vtSrc* **)** で*vtSrc*設定`VT_BSTRT`します。
+UNICODE のレコード セットを作成していない場合、`COleVariant`オブジェクトに明示的に宣言される ANSI です。 これを使用して行うことができます、 [COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant) **(** *lpszSrc* **、** *vtSrc* **)** 形式を持つコンス トラクターの*vtSrc*設定`VT_BSTRT`(ANSI) またはを使用して、`COleVariant`関数[SetString](../../mfc/reference/colevariant-class.md#setstring) **(** *lpszSrc* **、** *vtSrc* **)** で*vtSrc*設定`VT_BSTRT`します。
 
 関連情報についてを参照してください、CacheSize CacheStart プロパティ"DAO のヘルプします。
 
@@ -2371,7 +2371,7 @@ void SetFieldValue(
 
 使用`SetFieldValue`と[GetFieldValue](#getfieldvalue)実行時ではなく静的を使用してバインド列にフィールドに動的にバインドする、 [DoFieldExchange](#dofieldexchange)メカニズム。
 
-UNICODE のレコード セットを作成していないいずれかの形式を使用する必要がありますに注意してください。`SetFieldValue`を格納していない、`COleVariant`パラメーター、または`COleVariant`オブジェクトに明示的に宣言される ANSI です。 これを使用して行うことができます、 [COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** *lpszSrc* **、** *vtSrc* **)** 形式を持つコンス トラクターの*vtSrc*設定`VT_BSTRT`(ANSI) またはを使用して、`COleVariant`関数[SetString](../../mfc/reference/colevariant-class.md#setstring)**(** *lpszSrc* **、** *vtSrc* **)** で*vtSrc*設定`VT_BSTRT`します。
+UNICODE のレコード セットを作成していないいずれかの形式を使用する必要がありますに注意してください。`SetFieldValue`を格納していない、`COleVariant`パラメーター、または`COleVariant`オブジェクトに明示的に宣言される ANSI です。 これを使用して行うことができます、 [COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant) **(** *lpszSrc* **、** *vtSrc* **)** 形式を持つコンス トラクターの*vtSrc*設定`VT_BSTRT`(ANSI) またはを使用して、`COleVariant`関数[SetString](../../mfc/reference/colevariant-class.md#setstring) **(** *lpszSrc* **、** *vtSrc* **)** で*vtSrc*設定`VT_BSTRT`します。
 
 関連情報については、「フィールド オブジェクト」と「値プロパティ」DAO ヘルプのトピックを参照してください。
 
@@ -2452,7 +2452,7 @@ virtual void SetParamValue(
 
 パラメーターは、レコード セットの SQL 文字列の一部として確立するが既に必要があります。 パラメーター名、またはコレクションのインデックス位置を使用してアクセスできます。
 
-として設定する値を指定する`COleVariant`オブジェクト。 目的の値と型の設定については、`COleVariant`オブジェクト、クラスを参照してください。 [COleVariant](../../mfc/reference/colevariant-class.md)します。 UNICODE のレコード セットを作成していない場合、`COleVariant`オブジェクトに明示的に宣言される ANSI です。 これを使用して行うことができます、 [COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** *lpszSrc* **、** *vtSrc* **)** 形式を持つコンス トラクターの*vtSrc*設定`VT_BSTRT`(ANSI) またはを使用して、`COleVariant`関数[SetString](../../mfc/reference/colevariant-class.md#setstring)**(** *lpszSrc* **、** *vtSrc* **)** で*vtSrc*設定`VT_BSTRT`します。
+として設定する値を指定する`COleVariant`オブジェクト。 目的の値と型の設定については、`COleVariant`オブジェクト、クラスを参照してください。 [COleVariant](../../mfc/reference/colevariant-class.md)します。 UNICODE のレコード セットを作成していない場合、`COleVariant`オブジェクトに明示的に宣言される ANSI です。 これを使用して行うことができます、 [COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant) **(** *lpszSrc* **、** *vtSrc* **)** 形式を持つコンス トラクターの*vtSrc*設定`VT_BSTRT`(ANSI) またはを使用して、`COleVariant`関数[SetString](../../mfc/reference/colevariant-class.md#setstring) **(** *lpszSrc* **、** *vtSrc* **)** で*vtSrc*設定`VT_BSTRT`します。
 
 ##  <a name="setparamvaluenull"></a>  CDaoRecordset::SetParamValueNull
 

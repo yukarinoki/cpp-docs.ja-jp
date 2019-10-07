@@ -38,7 +38,7 @@ bool operator==(
 
 ## <a name="return-value"></a>戻り値
 
-`left.`[サイズ](../standard-library/container-class-size.md)の開始`, left.` [](../standard-library/container-class-begin.md)[位置](../standard-library/container-class-end.md)を返します。`, right.begin)` ` == right.size && equal(left.`
+`left.`[size](../standard-library/container-class-size.md) ` == right.size && equal(left.`[begin](../standard-library/container-class-begin.md)`, left.`[end](../standard-library/container-class-end.md)`, right.begin)` を返します。
 
 ## <a name="see-also"></a>関連項目
 

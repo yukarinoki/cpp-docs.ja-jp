@@ -1,13 +1,16 @@
 ---
 title: _execute_onexit_table、_initialize_onexit_table、_register_onexit_function
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _execute_onexit_table
 - _initialize_onexit_table
 - _register_onexit_function
-apilocation:
+api_location:
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _execute_onexit_table
 - process/_execute_onexit_table
@@ -20,14 +23,14 @@ helpviewer_keywords:
 - _initialize_onexit_table function
 - _register_onexit_function function
 ms.assetid: ad9e4149-d4ad-4fdf-aaaf-cf786fcb4473
-ms.openlocfilehash: 0090d5d1504f4320c122ae1e811e0af88cccdd2e
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: bf8c61e467796c7bfaedff6918bfbf598ada528e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57741629"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944381"
 ---
-# <a name="executeonexittable-initializeonexittable-registeronexitfunction"></a>_execute_onexit_table、_initialize_onexit_table、_register_onexit_function
+# <a name="_execute_onexit_table-_initialize_onexit_table-_register_onexit_function"></a>_execute_onexit_table、_initialize_onexit_table、_register_onexit_function
 
 終了時に呼び出されるルーチンを管理します。
 
@@ -70,7 +73,7 @@ int _execute_onexit_table(
 
 `_execute_onexit_table` 関数は、onexit 関数テーブル内のすべての関数を実行し、テーブルをクリアして、制御を返します。 `_execute_onexit_table` の呼び出しの後、このテーブルは無効な状態になります。再度使用するには `_initialize_onexit_table` を呼び出して事前に再初期化しておく必要があります。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|

@@ -1,6 +1,6 @@
 ---
 title: フレームワーク (MFC)
-ms.date: 11/04/2016
+ms.date: 09/17/2019
 helpviewer_keywords:
 - encapsulation [MFC], Win32 API
 - MFC, application framework
@@ -12,20 +12,20 @@ helpviewer_keywords:
 - Windows API [MFC], encapsulation by MFC
 - encapsulated Win32 API [MFC]
 ms.assetid: 3be0fec8-9843-4119-ae42-ece993ef500b
-ms.openlocfilehash: 933fcf97c24ed0903395e2c718f8c89d42473494
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d93d2d50bab4b63258a3e0fe4cd2f24c2fcde4f3
+ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62219770"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71095796"
 ---
 # <a name="framework-mfc"></a>フレームワーク (MFC)
 
-Microsoft Foundation Class (MFC) ライブラリ、フレームワークを使用する作業は、いくつかの主要なクラスといくつかの Visual C ツールの大部分に基づきます。 いくつかのクラスは、Win32 アプリケーション プログラミング インターフェイス (API) の大部分をカプセル化します。 その他のクラスは、ドキュメント、ビュー、およびアプリケーション自体などのアプリケーションの概念をカプセル化します。 まだ他のユーザー エラーは、OLE の機能とデータ アクセス機能が ODBC と DAO カプセル化します。
+MFC (Microsoft Foundation Class) ライブラリフレームワークでの作業は、主にいくつかの主要なクラスといくつC++かのビジュアルツールに基づいています。 Win32 アプリケーションプログラミングインターフェイス (API) の大部分をカプセル化するクラスもあります。 他のクラスは、ドキュメント、ビュー、アプリケーション自体などのアプリケーションの概念をカプセル化します。 その他のユーザーは、OLE 機能、ODBC および DAO データアクセス機能をカプセル化します。  (DAO は Office 2013 でサポートされています。 DAO 3.6 は最終バージョンであり、互換性のために残されているものと見なされます)。
 
-ウィンドウの Win32 の概念が MFC クラスによってカプセル化など、`CWnd`します。 つまり、C++ のクラスと呼ばれる`CWnd`をカプセル化または「ラップ」、 `HWND` Windows ウィンドウを表すハンドルです。 同様に、クラス`CDialog`Win32 ダイアログ ボックスをカプセル化します。
+たとえば、Win32's というウィンドウの概念は、MFC クラス`CWnd`によってカプセル化されています。 つまり、というC++ `CWnd`クラスは、Windows ウィンドウを表す`HWND`ハンドルをカプセル化または "ラップ" します。 同様に、 `CDialog`クラスは Win32 のダイアログボックスをカプセル化します。
 
-カプセル化することで、C++ クラス`CWnd`、たとえば、型のメンバー変数が含まれます`HWND`、クラスのメンバー関数は、Win32 関数への呼び出しをカプセル化し、`HWND`をパラメーターとして。 通常、クラスのメンバー関数には、カプセル化しており、Win32 関数と同じ名前があります。
+カプセル化とはC++ 、 `CWnd`たとえば、クラスには型`HWND`のメンバー変数が含まれ、クラスのメンバー関数はをパラメーター `HWND`として受け取る Win32 関数への呼び出しをカプセル化することを意味します。 クラスメンバー関数には、通常、カプセル化する Win32 関数と同じ名前が付けられています。
 
 ## <a name="in-this-section"></a>このセクションの内容
 
@@ -33,9 +33,9 @@ Microsoft Foundation Class (MFC) ライブラリ、フレームワークを使�
 
 [ドキュメント、ビュー、フレームワーク](../mfc/documents-views-and-the-framework.md)
 
-[ウィザードおよびリソース エディター](../mfc/wizards-and-the-resource-editors.md)
+[ウィザードとリソースエディター](../mfc/wizards-and-the-resource-editors.md)
 
-## <a name="in-related-sections"></a>関連項目
+## <a name="in-related-sections"></a>関連セクション
 
 [フレームワークを使ったアプリケーションの作成](../mfc/building-on-the-framework.md)
 
@@ -43,7 +43,7 @@ Microsoft Foundation Class (MFC) ライブラリ、フレームワークを使�
 
 [CWinApp: アプリケーション クラス](../mfc/cwinapp-the-application-class.md)
 
-[ドキュメント テンプレートとドキュメント/ビューの作成手順](../mfc/document-templates-and-the-document-view-creation-process.md)
+[ドキュメントテンプレートとドキュメント/ビュー作成プロセス](../mfc/document-templates-and-the-document-view-creation-process.md)
 
 [メッセージの処理とマップ](../mfc/message-handling-and-mapping.md)
 

@@ -35,13 +35,13 @@ int __vmx_vmptrld(
 
 ## <a name="return-value"></a>戻り値
 
-0
+0\
 操作が成功しました。
 
-1
+1\
 現在 VMCS の `VM-instruction error field` で有効な拡張状態が発生したため、操作は失敗しました。
 
-3
+2\
 有効な状態がないため操作は失敗しました。
 
 ## <a name="remarks"></a>Remarks

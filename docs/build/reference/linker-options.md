@@ -1,6 +1,7 @@
 ---
-title: MSVC リンカー オプション
-ms.date: 08/20/2018
+title: MSVC リンカーオプション
+description: Microsoft LINK リンカーでサポートされているオプションの一覧。
+ms.date: 09/24/2019
 f1_keywords:
 - link
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - libraries [C++], linking to COFF
 - LINK tool [C++], linker options
 ms.assetid: c1d51b8a-bd23-416d-81e4-900e02b2c129
-ms.openlocfilehash: 7ff8ecd6a607aac59fca6d32fa2784e7e3e4268f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c7a44be5bb21bf83d621bd57c45713bd01e22cb6
+ms.sourcegitcommit: a361362354f6ce51eda4ffdb016b81c24cd225cb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301761"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71712703"
 ---
 # <a name="linker-options"></a>リンカー オプション
 
@@ -28,13 +29,15 @@ LINK.exe のオプションの一覧を次の表に示します。 LINK の詳�
 
 - [LINK 出力](link-output.md)
 
-- [予約語](reserved-words.md)
+- [予約済みキーワード](reserved-words.md)
 
-コマンドラインでリンカー オプションは; 大文字小文字を区別できません。たとえば、/base と/BASE は同じ意味です。 コマンド ラインまたは Visual Studio で各オプションを指定する方法の詳細については、そのオプションのドキュメントを参照してください。
+コマンドラインでは、リンカーオプションの大文字と小文字は区別されません。たとえば、/base と/BASE は同じことを意味します。 コマンド ラインまたは Visual Studio で各オプションを指定する方法の詳細については、そのオプションのドキュメントを参照してください。
 
 [comment](../../preprocessor/comment-c-cpp.md) プラグマを使用して、一部のリンカー オプションを指定できます。
 
-|オプション|目的|
+## <a name="linker-options-listed-alphabetically"></a>リンカーオプションの一覧 (アルファベット順)
+
+|OPTION|目的|
 |------------|-------------|
 |[@](at-specify-a-linker-response-file.md)|応答ファイルを指定します。|
 |[/ALIGN](align-section-alignment.md)|各セクションのアラインメントを指定します。|
@@ -58,14 +61,14 @@ LINK.exe のオプションの一覧を次の表に示します。 LINK の詳�
 |[/DELAY](delay-delay-load-import-settings.md)|DLL の遅延読み込みを制御します。|
 |[/DELAYLOAD](delayload-delay-load-import.md)|指定した DLL に遅延読み込みを発生させます。|
 |[/DELAYSIGN](delaysign-partially-sign-an-assembly.md)|アセンブリに部分署名します。|
-|[/DEPENDENTLOADFLAG](dependentloadflag.md)|依存 DLL の読み込みには、既定のフラグを設定します。|
+|[/DEPENDENTLOADFLAG](dependentloadflag.md)|依存する DLL 読み込みに既定のフラグを設定します。|
 |[/DLL](dll-build-a-dll.md)|DLL をビルドします。|
 |[/DRIVER](driver-windows-nt-kernel-mode-driver.md)|カーネル モード ドライバーを作成します。|
 |[/DYNAMICBASE](dynamicbase-use-address-space-layout-randomization.md)|ASLR (Address Space Layout Randomization) 機能を使用してロード時にランダムに再ベースできる実行可能イメージを生成するかどうかを指定します。|
 |[/ENTRY](entry-entry-point-symbol.md)|開始アドレスを設定します。|
 |[/errorReport](errorreport-report-internal-linker-errors.md)|内部リンカー エラーを Microsoft に報告します。|
 |[/EXPORT](export-exports-a-function.md)|関数をエクスポートします。|
-|[/FILEALIGN](filealign.md)|指定された値の倍数で出力ファイル内のセクションを配置します。|
+|[/FILEALIGN](filealign.md)|出力ファイル内のセクションを指定した値の倍数に配置します。|
 |[/FIXED](fixed-fixed-base-address.md)|指定のベース アドレスだけに読み込まれるプログラムを作成します。|
 |[/FORCE](force-force-file-output.md)|未解決のシンボルまたは複数定義のシンボルがある場合でも、リンクを強制的に終了します。|
 |[/FUNCTIONPADMIN](functionpadmin-create-hotpatchable-image.md)|ホット パッチ可能なイメージを作成します。|
@@ -84,10 +87,12 @@ LINK.exe のオプションの一覧を次の表に示します。 LINK の詳�
 |[/KEYFILE](keyfile-specify-key-or-key-pair-to-sign-an-assembly.md)|アセンブリに署名するキーまたはキー ペアを指定します。|
 |[/LARGEADDRESSAWARE](largeaddressaware-handle-large-addresses.md)|アプリケーションが 2 GB を超えるアドレスをサポートしていることをコンパイラに指定します。|
 |[/LIBPATH](libpath-additional-libpath.md)|環境ライブラリ パスの前に検索するパスを指定します。|
+|[/LINK再現](linkrepro.md)|リンク再現アーティファクトを生成するパスを指定します。|
+|[/LINKREPROTARGET](linkreprotarget.md)|指定されたターゲットを生成するときにのみ、リンク再現を生成します。<sup>16.1</sup>|
 |[/LTCG](ltcg-link-time-code-generation.md)|リンク時のコード生成を指定します。|
 |[/MACHINE](machine-specify-target-platform.md)|ターゲット プラットフォームを指定します。|
 |[/MANIFEST](manifest-create-side-by-side-assembly-manifest.md)|side-by-side マニフェスト ファイルを作成し、バイナリに埋め込むことができるようにします。|
-|[/MANIFESTDEPENDENCY](manifestdependency-specify-manifest-dependencies.md)|指定します、 \<dependentAssembly > セクションで、マニフェスト ファイル。|
+|[/MANIFESTDEPENDENCY](manifestdependency-specify-manifest-dependencies.md)|マニフェストファイルの @no__t 0dependentAssembly > セクションを指定します。|
 |[/MANIFESTFILE](manifestfile-name-manifest-file.md)|マニフェスト ファイルの既定の名前を変更します。|
 |[/MANIFESTINPUT](manifestinput-specify-manifest-input.md)|リンカーが処理を行い、バイナリに埋め込むための、マニフェスト入力ファイルを指定します。 このオプションを複数回使用して、複数のマニフェストの入力ファイルを指定できます。|
 |[/MANIFESTUAC](manifestuac-embeds-uac-information-in-manifest.md)|ユーザー アカウント制御 (UAC) 情報をプログラム マニフェストに組み込むかどうかを指定します。|
@@ -95,7 +100,7 @@ LINK.exe のオプションの一覧を次の表に示します。 LINK の詳�
 |[/MAPINFO](mapinfo-include-information-in-mapfile.md)|指定した情報をマップ ファイルに格納します。|
 |[/MERGE](merge-combine-sections.md)|セクションを結合します。|
 |[/MIDL](midl-specify-midl-command-line-options.md)|MIDL コマンド ライン オプションを指定します。|
-|[/NATVIS](natvis-add-natvis-to-pdb.md)|PDB に Natvis ファイルからデバッガー ビジュアライザーを追加します。|
+|[/NATVIS](natvis-add-natvis-to-pdb.md)|デバッガービジュアライザーを Natvis ファイルから PDB に追加します。|
 |[/NOASSEMBLY](noassembly-create-a-msil-module.md)|.NET Framework アセンブリを作成しません。|
 |[/NODEFAULTLIB](nodefaultlib-ignore-libraries.md)|外部参照を解決するときに、すべてのまたは指定した既定のライブラリを無視します。|
 |[/NOENTRY](noentry-no-entry-point.md)|リソースだけの DLL を作成します。|
@@ -108,12 +113,12 @@ LINK.exe のオプションの一覧を次の表に示します。 LINK の詳�
 |[/PDBALTPATH](pdbaltpath-use-alternate-pdb-path.md)|別の場所を使用して PDB ファイルを保存します。|
 |[/PDBSTRIPPED](pdbstripped-strip-private-symbols.md)|プログラム データベース (PDB) ファイルの作成時にプライベート シンボルを含めません。|
 |[/PGD](pgd-specify-database-for-profile-guided-optimizations.md)|ガイド付き最適化のプロファイル用の .pgd ファイルを指定します。|
-|[/POGOSAFEMODE](pogosafemode-linker-option.md)|**古い**スレッド セーフのインストルメント化 PGO ビルドを作成します。|
+|[/POGOSAFEMODE](pogosafemode-linker-option.md)|**廃止**スレッドセーフな PGO によってインストルメント化されたビルドを作成します。|
 |[/PROFILE](profile-performance-tools-profiler.md)|パフォーマンス ツール プロファイラーで使用できる出力ファイルを作成します。|
 |[/RELEASE](release-set-the-checksum.md)|.exe ヘッダーにチェックサムを設定します。|
 |[/SAFESEH](safeseh-image-has-safe-exception-handlers.md)|安全な例外ハンドラーのテーブルがイメージに含まれるように指定します。|
 |[/SECTION](section-specify-section-attributes.md)|セクションの属性をオーバーライドします。|
-|[/SOURCELINK](sourcelink.md)|Pdb ファイルに追加する SourceLink ファイルを指定します。|
+|[/SOURCELINK](sourcelink.md)|PDB に追加する SourceLink ファイルを指定します。|
 |[/STACK](stack-stack-allocations.md)|スタック サイズをバイト単位で設定します。|
 |[/STUB](stub-ms-dos-stub-file-name.md)|MS-DOS スタブ プログラムを Win32 プログラムにアタッチします。|
 |[/SUBSYSTEM](subsystem-specify-subsystem.md)|オペレーティング システムに対して、.exe ファイルの実行方法を指定します。|
@@ -121,10 +126,10 @@ LINK.exe のオプションの一覧を次の表に示します。 LINK の詳�
 |[/TLBID](tlbid-specify-resource-id-for-typelib.md)|リンカーによって生成されたタイプ ライブラリのリソース ID を指定します。|
 |[/TLBOUT](tlbout-name-dot-tlb-file.md)|.tlb ファイル名およびその他の MIDL の出力ファイル名を指定します。|
 |[/TSAWARE](tsaware-create-terminal-server-aware-application.md)|ターミナル サーバーでの実行専用のアプリケーションを作成します。|
-|[/USEPROFILE](useprofile.md)|最適化されたイメージを作成するには、最適化トレーニング データをプロファイル ガイド付きの使用。|
+|[/USEPROFILE](useprofile.md)|ガイド付き最適化のプロファイルのトレーニングデータを使用して、最適化されたイメージを作成します。|
 |[/VERBOSE](verbose-print-progress-messages.md)|リンカーの進行状況メッセージを出力します。|
 |[/VERSION](version-version-information.md)|バージョン番号を割り当てます。|
-|[/WHOLEARCHIVE](wholearchive-include-all-library-object-files.md)|指定された静的ライブラリからすべてのオブジェクト ファイルが含まれています。|
+|[/WHOLEARCHIVE](wholearchive-include-all-library-object-files.md)|指定されたスタティックライブラリのすべてのオブジェクトファイルを含みます。|
 |[/WINMD](winmd-generate-windows-metadata.md)|Windows ランタイム メタデータ ファイルの生成を有効にします。|
 |[/WINMDFILE](winmdfile-specify-winmd-file.md)|[/WINMD](winmd-generate-windows-metadata.md) のリンカー オプションによって生成される Windows のランタイム メタデータ (winmd) の出力ファイルの名前を指定します。|
 |[/WINMDKEYFILE](winmdkeyfile-specify-winmd-key-file.md)|Windows ランタイム メタデータに署名するキーまたはキー ペアを指定します。|
@@ -132,9 +137,9 @@ LINK.exe のオプションの一覧を次の表に示します。 LINK の詳�
 |[/WINMDDELAYSIGN](winmddelaysign-partially-sign-a-winmd.md)|winmd ファイルに公開キーを設定して、Windows のランタイム メタデータ (.winmd) ファイルに部分的に署名します。|
 |[/WX](wx-treat-linker-warnings-as-errors.md)|リンカー警告をエラーとして扱います。|
 
-詳細については、「 [Compiler-Controlled LINK Options](compiler-controlled-link-options.md)」を参照してください。
+<sup>16.1</sup>このオプションは、Visual Studio 2019 バージョン16.1 以降で使用できます。
 
 ## <a name="see-also"></a>関連項目
 
-[C/C++ ビルドのリファレンス](c-cpp-building-reference.md)<br/>
+[C/C++ ビルドのリファレンス](c-cpp-building-reference.md)\
 [MSVC リンカーのリファレンス](linking.md)

@@ -1,25 +1,28 @@
 ---
 title: scanf 関数の文字幅指定
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcr100.dll
 - msvcr120.dll
 - msvcr80.dll
 - msvcr110_clr0400.dll
 - msvcr110.dll
 - msvcr90.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - scanf
 helpviewer_keywords:
 - scanf function, width specification
 ms.assetid: 94b4e8fe-c4a2-4799-8b6c-a2cf28ffb09c
-ms.openlocfilehash: 1431002a7e7d0054ac20c05c76b05cabc96177c5
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 3b00996f3a17ab9298b1edba5a8e60826e19fdcc
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743264"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957346"
 ---
 # <a name="scanf-width-specification"></a>scanf 関数の文字幅指定
 
@@ -79,13 +82,13 @@ wscanf_s(L"%hC", &x, 2);    // Read a single-byte character
 
 ## <a name="reading-undelimited-strings"></a>区切られていない文字列の読取り
 
-空白で区切られていない文字列を読み取るには、角かっこ内の文字セット (**[ ]**) を **s** (文字列) 型の文字に代用できます。 角かっこ内の文字のセットは、制御文字列と呼ばれます。 対応する入力フィールドは、制御文字に表示されない最初の文字まで読み取られます。 セット内の最初の文字がキャレット (**^**) の場合、効果は逆になり、入力フィールドは文字セットの残りの部分に表示される最初の文字までが読み取られます。
+空白で区切られていない文字列を読み取るには、角かっこ内の文字セット ( **[ ]** ) を **s** (文字列) 型の文字に代用できます。 角かっこ内の文字のセットは、制御文字列と呼ばれます。 対応する入力フィールドは、制御文字に表示されない最初の文字まで読み取られます。 セット内の最初の文字がキャレット ( **^** ) の場合、効果は逆になり、入力フィールドは文字セットの残りの部分に表示される最初の文字までが読み取られます。
 
 **%[a-z]** と **%[z-a]** は **%[abcde...z]** と同等のものと解釈されます。 これは一般的に使われる `scanf` 関数の拡張機能ですが、ANSI 標準では必要とされません。
 
 ## <a name="reading-unterminated-strings"></a>未終了の文字列の読み取り
 
-終端の null 文字 ('\0') を保存せずに文字列を保存するには、**%**<em>n</em>**c** を指定します。ここでは *n* は 10 進整数です。 この場合、**c** の型文字は引数が文字配列へのポインターであることを示します。 次の *n* 文字が入力ストリームから指定した場所に読み取られ、null 文字 ('\0') は追加されません。 *n* が指定されていない場合、この既定値は 1 です。
+終端の null 文字 ('\0') を保存せずに文字列を保存するには、 **%** <em>n</em>**c** を指定します。ここでは *n* は 10 進整数です。 この場合、**c** の型文字は引数が文字配列へのポインターであることを示します。 次の *n* 文字が入力ストリームから指定した場所に読み取られ、null 文字 ('\0') は追加されません。 *n* が指定されていない場合、この既定値は 1 です。
 
 ## <a name="when-scanf-stops-reading-a-field"></a>scanf がフィールドの読み取りを停止するタイミング
 

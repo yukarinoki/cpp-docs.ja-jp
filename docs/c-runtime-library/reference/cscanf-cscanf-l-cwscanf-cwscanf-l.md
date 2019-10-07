@@ -1,12 +1,12 @@
 ---
 title: _cscanf、_cscanf_l、_cwscanf、_cwscanf_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _cscanf_l
 - _cscanf
 - _cwscanf
 - _cwscanf_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _cwscanf
 - cwscanf_l
@@ -45,14 +48,14 @@ helpviewer_keywords:
 - reading data [C++], from the console
 - _cwscanf_l function
 ms.assetid: dbfe7547-b577-4567-a1cb-893fa640e669
-ms.openlocfilehash: 8cb121166ab0103565260538521824d8999425e2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ee4c380d3e470fa6e3d12066d3bf34918acf1bea
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335258"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70938500"
 ---
-# <a name="cscanf-cscanfl-cwscanf-cwscanfl"></a>_cscanf、_cscanf_l、_cwscanf、_cwscanf_l
+# <a name="_cscanf-_cscanf_l-_cwscanf-_cwscanf_l"></a>_cscanf、_cscanf_l、_cwscanf、_cwscanf_l
 
 コンソールから書式化されたデータを読み出します。 これらの関数のセキュリティを強化したバージョンを使用できます。「[_cscanf_s、_cscanf_s_l、_cwscanf_s、_cwscanf_s_l](cscanf-s-cscanf-s-l-cwscanf-s-cwscanf-s-l.md)」を参照してください。
 
@@ -95,15 +98,15 @@ int _cwscanf_l(
 
 ## <a name="return-value"></a>戻り値
 
-正常に変換され、割り当てられたフィールドの数。 戻り値には、読まれたが割り当てられなかったフィールドは含まれません。 戻り値は**EOF**のファイルの末尾で読み取ろうとします。 これは、キーボード入力がオペレーティング システムのコマンド ラインのレベルでリダイレクトされる場合に発生します。 戻り値が 0 の場合は、代入されたフィールドがなかったことを意味します。
+正常に変換され、割り当てられたフィールドの数。 戻り値には、読まれたが割り当てられなかったフィールドは含まれません。 ファイルの終端で読み取ろうとした場合、戻り値は**EOF**です。 これは、キーボード入力がオペレーティング システムのコマンド ラインのレベルでリダイレクトされる場合に発生します。 戻り値が 0 の場合は、代入されたフィールドがなかったことを意味します。
 
 ## <a name="remarks"></a>Remarks
 
-**_Cscanf**関数で指定した位置に、コンソールから直接データを読み取ります*引数*します。 [_getche](getch-getwch.md) 関数は文字を読み取るために使用されます。 省略可能な各パラメーターに型指定子に対応する型の変数へのポインターをする必要があります*形式*します。 書式設定、入力の解釈のフィールドし、同じ形式し、機能、*形式*のパラメーター、 [scanf](scanf-scanf-l-wscanf-wscanf-l.md)関数。 中に **_cscanf**通常、入力文字をエコーする最後の呼び出しがあった場合、行われない **_ungetch**します。
+**_Cscanf**関数は、*引数*によって指定された場所に、コンソールから直接データを読み取ります。 [_getche](getch-getwch.md) 関数は文字を読み取るために使用されます。 省略可能な各パラメーターは、*形式*の型指定子に対応する型を持つ変数へのポインターである必要があります。 この形式は、入力フィールドの解釈を制御し、 [scanf](scanf-scanf-l-wscanf-wscanf-l.md)関数の*format*パラメーターと同じ形式と機能を持ちます。 **_Cscanf**は通常、入力文字をエコーしますが、最後の呼び出しが **_ungetch**になった場合は無効になります。
 
-この関数は、パラメーターを検証します。 形式が場合**NULL**で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、実行が許可された場合**errno**に設定されている**EINVAL** 、関数を返します**EOF**します。
+この関数は、パラメーターを検証します。 Format が**NULL**の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、 **errno**は**EINVAL**に設定され、関数は**EOF**を返します。
 
-これらの関数のバージョン、 **_l**現在のスレッド ロケールの代わりに渡されたロケール パラメーターを使用する点を除いて、サフィックスは同じです。
+**_L**サフィックスを持つこれらの関数のバージョンは、現在のスレッドロケールの代わりに渡されたロケールパラメーターを使用する点を除いて同じです。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 

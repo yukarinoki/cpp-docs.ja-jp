@@ -1,4 +1,4 @@
----
+﻿---
 title: C++ コンソール アプリ プロジェクトのビルドと実行
 description: Visual C での Hello World コンソール アプリをビルドおよび実行します。
 ms.custom: mvc
@@ -37,7 +37,7 @@ C++ コンソール アプリケーション プロジェクトを作成しコ�
 
    ![プロジェクトの開始](media/vscpp-start-without-debugging.gif "プロジェクトの開始")
 
-   コンソール ウィンドウが開かれ、アプリが実行されます。Visual Studio 内でコンソール アプリを開始すると、コードが実行され、「続行するには、任意のキーを押してください...」と表示されますので、出力の表示を確認できます。
+   Visual Studio 内でコンソール ウィンドウが開かれ、アプリが実行されます。 コードが実行された後に、「続行するには何かキーを押してください. . .」 . " と表示されますので、出力の表示を見れる機会があります。
 
 おめでとうございます! 初めての「Hello, world!」 コンソール アプリが Visual Studio で作成されました。 任意のキーを押せば、コンソール ウィンドウが閉じられ、Visual Studio に戻ります。
 
@@ -63,7 +63,7 @@ C++ コンソール アプリケーション プロジェクトを作成しコ�
 
 ## <a name="next-steps"></a>次の手順
 
-この簡単なアプリを構築し実行したら、より複雑なプロジェクトに備えられます。Visual Studio 内の Visual C++ の機能に関する詳細なチュートリアルについては、「[C++ デスクトップ開発のための Visual Studio IDE の使用](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)」を参照してください。
+この簡単なアプリを構築し実行したら、より複雑なプロジェクトに備えられます。 Visual Studio 内の Visual C++ の機能に関する詳細なチュートリアルについては、「[C++ デスクトップ開発のための Visual Studio IDE の使用](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)」を参照してください。
 
 ## <a name="troubleshooting-guide"></a>トラブルシューティング ガイド
 
