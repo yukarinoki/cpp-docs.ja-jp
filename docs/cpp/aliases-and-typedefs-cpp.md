@@ -1,4 +1,4 @@
----
+﻿---
 title: エイリアスと typedef (C++)
 ms.date: 11/04/2016
 f1_keywords:
@@ -289,14 +289,14 @@ typedef char CHAR;
 
 プログラム *PROG.CPP* には、名前 `CHAR` に対する **typedef** 宣言がどちらにも含まれている 2 つのヘッダー ファイルが含まれます。 両方の宣言が同じ型を参照する限り、このような再宣言は許容されます。
 
-A **typedef**は以前に異なる型として宣言する名前を再定義できません。 そのため場合、 *FILE2 します。H*が含まれています
+**typedef** は以前と異なる型として名前を再定義する事はできません。そのため、もし *FILE2.H* が以下の記述を含んでいたら
 
 ```cpp
 // FILE2.H
 typedef int CHAR;     // Error
 ```
 
-コンパイラは、名前 `CHAR` を再宣言して異なる型を参照しようとするため、エラーが発生します。 このことは、次のような構造もに及びます。
+名前 `CHAR` を以前と異なる型を参照して再宣言しようしたためコンパイラはエラーを発行します。 このことは、次のような構成の場合にも及びます。
 
 ```cpp
 typedef char CHAR;
@@ -309,7 +309,7 @@ typedef union REGS      // OK: name REGS redeclared
 } REGS;
 ```
 
-### <a name="typedefs-in-c-vs-c"></a>typedef:  C++ と C
+### <a name="typedefs-in-c-vs-c"></a>typedef: C++ 対 C
 
 クラス型と共に **typedef** 指定子を使用することは全面的にサポートされていますが、それは **typedef** 宣言で無名構造体を宣言する ANSI C のプラクティスのためです。 たとえば、多くの C プログラマは次のような記述を使います。
 

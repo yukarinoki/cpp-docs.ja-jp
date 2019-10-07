@@ -1,4 +1,4 @@
----
+﻿---
 title: 起動と終了 (C++)
 ms.date: 11/04/2016
 ms.assetid: c6568ee6-40ab-4ae8-aa44-c99e232f64ac

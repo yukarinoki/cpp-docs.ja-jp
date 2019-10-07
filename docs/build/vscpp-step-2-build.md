@@ -1,4 +1,4 @@
----
+﻿---
 title: C++ コンソール アプリ プロジェクトのビルドと実行
 description: Visual C での Hello World コンソール アプリをビルドおよび実行します。
 ms.custom: mvc

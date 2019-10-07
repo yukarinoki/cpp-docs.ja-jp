@@ -1,4 +1,4 @@
----
+﻿---
 title: abort 関数
 ms.date: 12/01/2017
 helpviewer_keywords:

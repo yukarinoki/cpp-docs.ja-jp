@@ -1,4 +1,4 @@
----
+﻿---
 title: 例外処理
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -108,7 +108,7 @@ TRY
 
 ヘッダー: afx.h
 
-##  <a name="catch"></a>できれ
+##  <a name="catch"></a>CATCH
 
 最初に、上記でスローされた例外の種類をキャッチするコードのブロックを定義します**TRY**ブロックします。
 

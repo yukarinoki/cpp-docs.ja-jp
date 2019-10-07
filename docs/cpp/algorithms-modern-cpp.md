@@ -1,4 +1,4 @@
----
+﻿---
 title: アルゴリズム (現代的な C++)
 ms.date: 11/04/2016
 ms.topic: conceptual
