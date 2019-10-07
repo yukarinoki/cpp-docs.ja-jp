@@ -1,11 +1,11 @@
 ---
 title: _mkgmtime、_mkgmtime32、_mkgmtime64
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mkgmtime32
 - _mkgmtime64
 - _mkgmtime
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _mkgmtime64
 - mkgmtime32
@@ -36,16 +39,16 @@ helpviewer_keywords:
 - _mkgmtime32 function
 - time, converting
 ms.assetid: b4ca2b67-e198-4f43-b3e2-e8ad6bd01867
-ms.openlocfilehash: 65d96d79a45e05e4b371315c0612ed086f6ea2a0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fcd1e3fdcca37d7e5bb381c234a6d8555ce2766c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156500"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951666"
 ---
-# <a name="mkgmtime-mkgmtime32-mkgmtime64"></a>_mkgmtime、_mkgmtime32、_mkgmtime64
+# <a name="_mkgmtime-_mkgmtime32-_mkgmtime64"></a>_mkgmtime、_mkgmtime32、_mkgmtime64
 
-によって表される UTC 時刻に変換を**構造体** **tm**によって表される UTC 時刻に、 **time_t**型。
+**構造体** **tm**で表される utc 時刻を、 **time_t**型によって表される utc 時刻に変換します。
 
 ## <a name="syntax"></a>構文
 
@@ -64,19 +67,19 @@ __time64_t _mkgmtime64(
 ### <a name="parameters"></a>パラメーター
 
 *timeptr*<br/>
-としての UTC 時刻へのポインターを**構造体** **tm**に変換します。
+変換する**struct** **tm**としての UTC 時刻へのポインター。
 
 ## <a name="return-value"></a>戻り値
 
-型の数量 **_ _time32_t**または **_ _time64_t**世界協定時刻 (UTC) で 1970 年 1 月 1 日午前 0 時から経過した秒数を表します。 日付が範囲外の場合 (「解説」を参照してください)、または、入力は、有効な時刻として解釈できない場合、戻り値は-1。
+1970年1月1日午前0時からの経過秒数を世界協定時刻 (UTC) で表した、 **__time32_t**型または **__time64_t**型の数量。 日付が範囲外の場合 (「解説」を参照してください)、または入力を有効な時刻として解釈できない場合、戻り値は-1 になります。
 
 ## <a name="remarks"></a>Remarks
 
-**_Mkgmtime32**と **_mkgmtime64**関数に変換する UTC 時刻を **_ _time32_t**または **_ _time64_t**の時刻を表す型UTC です。 ローカル時刻を UTC 時刻に変換するには使用**mktime**、 **_mktime32**、および **_mktime64**代わりにします。
+**_Mkgmtime32**関数と **_mkgmtime64**関数は、utc 時刻を utc 時刻を表す **__time32_t**または **__time64_t**型に変換します。 現地時刻を UTC 時刻に変換するには、代わりに**mktime**、 **_mktime32**、および **_mktime64**を使用します。
 
-**_mkgmtime**に評価されるインライン関数は、 **_mkgmtime64**、および**time_t**と等価 **_ _time64_t**します。 強制的にコンパイラを解釈する必要がある場合**time_t**古い 32 ビットとして**time_t**を定義できます **_USE_32BIT_TIME_T**します。 これは、は、2038 年 1 月 18 日後、アプリケーションが失敗するため、推奨されませんが (32 ビットの最大範囲**time_t**)、64 ビット プラットフォーム上ですべての許可されていないとします。
+**_mkgmtime**は、 **_mkgmtime64**に評価されるインライン関数で、 **time_t**は **__time64_t**に相当します。 以前の32ビットの**time_t**として**time_t**を解釈するようにコンパイラに強制する必要がある場合は、 **_USE_32BIT_TIME_T**を定義できます。 これは推奨されません。2038年1月18日 (32 ビットの最大**範囲) の**後にアプリケーションが失敗する可能性があり、64ビットプラットフォームでは使用できないためです。
 
-構造体が渡された時間は変更次のように、同じ方法で、変更されると、**体**関数: **tm_wday**と**tm_yday**フィールドに新しい設定値の値に基づいて**tm_mday**と**tm_year**します。 指定するときに、 **tm**時間構造体は、設定、 **tm_isdst**にフィールド。
+渡された時間の構造は、 **_mktime**関数で変更されるときと同様に、次のように変更されます。 **tm_wday**と**tm_yday**の各フィールドは、 **tm_mday**と**tm_year**の値に基づいて新しい値に設定されます。 **Tm**構造体時間を指定する場合は、 **tm_isdst**フィールドを次のように設定します。
 
 - 標準時間が有効であることを示す場合はゼロ (0)。
 
@@ -84,11 +87,11 @@ __time64_t _mkgmtime64(
 
 - 標準時間と夏時間のどちらが有効であるかを C ランタイム ライブラリ コードで計算する場合は 0 より小さい値。
 
-C ランタイム ライブラリは、TZ 環境変数を使用して、正しい夏時間を特定します。 TZ が設定されていない場合は、オペレーティング システムに照会して、正しい地域の夏時間の動作を取得します。 **tm_isdst**は必須フィールドです。 設定しないかどうか、その値はない定義からの戻り値および**mktime**は予測できません。
+C ランタイム ライブラリは、TZ 環境変数を使用して、正しい夏時間を特定します。 TZ が設定されていない場合は、オペレーティング システムに照会して、正しい地域の夏時間の動作を取得します。 **tm_isdst**は必須フィールドです。 値が設定されていない場合、その値は未定義で、 **mktime**からの戻り値は予測できません。
 
-範囲、 **_mkgmtime32**関数は 1970 年 1 月 1 日、午前 0 時から 2038 年 1 月 18 日 23時 59分: 59 までの UTC。 範囲 **_mkgmtime64** 3000 年 12 月 31 日 23時 59分: 59 秒に UTC 1970 年 1 月 1 日午前 0 時 UTC からです。 戻り値-1 が範囲外の日付になります。 範囲 **_mkgmtime**かどうかによって異なります **_USE_32BIT_TIME_T**が定義されています。 (既定値) が定義されていない場合、範囲は **_mkgmtime64**。 それ以外の範囲はの 32 ビットの範囲に制限されます **_mkgmtime32**します。
+**_Mkgmtime32**関数の範囲は、1970年1月1日午前0時から、utc から23:59:59 年1月 2038 18 日 (utc) までです。 **_Mkgmtime64**の範囲は、1970年1月1日午前0時から23:59:59 年12月 31 3000 日 (utc) までです。 範囲外の日付の場合、戻り値は-1 になります。 **_Mkgmtime**の範囲は、 **_USE_32BIT_TIME_T**が定義されているかどうかによって異なります。 定義されていない場合 (既定)、範囲は **_mkgmtime64**;それ以外の場合、範囲は **_mkgmtime32**の32ビット範囲に制限されます。
 
-なお**gmtime**と**localtime**変換に 1 つの静的に割り当てられたバッファーを使用します。 このバッファーを指定する場合**mkgmtime**、以前の内容は破棄されます。
+**Gmtime**と**localtime**は、静的に割り当てられた1つのバッファーを変換に使用することに注意してください。 このバッファーを**mkgmtime**に指定すると、以前の内容は破棄されます。
 
 ## <a name="example"></a>例
 
@@ -176,7 +179,7 @@ int main()
 }
 ```
 
-### <a name="output"></a>出力
+### <a name="output"></a>Output
 
 ```Output
 Before calling _mkgmtime, t1 = Sun Feb 12 00:00:00 2003

@@ -1,10 +1,10 @@
 ---
 title: _fpclass、_fpclassf
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _fpclass
 - _fpclassf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fpclass
 - _fpclass
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - _fpclass function
 - _fpclassf function
 ms.assetid: 2774872d-3543-446f-bc72-db85f8b95a6b
-ms.openlocfilehash: 987c87cc7a03f4a24e47654ae52e8a2416a15184
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2e561cff956ca51707834bf869a1c114f0c99a3e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333223"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957040"
 ---
-# <a name="fpclass-fpclassf"></a>_fpclass、_fpclassf
+# <a name="_fpclass-_fpclassf"></a>_fpclass、_fpclassf
 
 引数の浮動小数点の分類を示す値を返します。
 
@@ -60,16 +63,16 @@ int _fpclassf(
 
 ## <a name="return-value"></a>戻り値
 
-**_Fpclass**と **_fpclassf**関数の引数の浮動小数点の分類を示す整数値を返す*x*します。 分類には、\<float.h> で定義された次のいずれかの値が含まれる場合があります。
+**_Fpclass**関数と **_fpclassf**関数は、引数*x*の浮動小数点分類を示す整数値を返します。 分類には、\<float.h> で定義された次のいずれかの値が含まれる場合があります。
 
-|[値]|説明|
+|値|説明|
 |-----------|-----------------|
 |**_FPCLASS_SNAN**|シグナル型 NaN|
 |**_FPCLASS_QNAN**|クワイエット型 NaN|
 |**_FPCLASS_NINF**|負の無限大 (-INF)|
 |**_FPCLASS_NN**|正規化された負の 0 以外の値|
 |**_FPCLASS_ND**|正規化されない負の値|
-|**_FPCLASS_NZ**|負のゼロ (- 0)|
+|**_FPCLASS_NZ**|負のゼロ (-0)|
 |**_FPCLASS_PZ**|正のゼロ (+0)|
 |**_FPCLASS_PD**|正規化された正の値|
 |**_FPCLASS_PN**|正規化された正の 0 以外の値|
@@ -77,7 +80,7 @@ int _fpclassf(
 
 ## <a name="remarks"></a>Remarks
 
-**_Fpclass**と **_fpclassf**関数は、Microsoft 固有の仕様。 [fpclassify](fpclassify.md) によく似ていますが、引数に関するより詳細な情報を返します。 **_Fpclassf**関数は、x64 用にコンパイルされるときに使用できるプラットフォームです。
+**_Fpclass**関数と **_fpclassf**関数は、Microsoft 固有の関数です。 [fpclassify](fpclassify.md) によく似ていますが、引数に関するより詳細な情報を返します。 **_Fpclassf**関数は、x64 プラットフォーム用にコンパイルされた場合にのみ使用できます。
 
 ## <a name="requirements"></a>必要条件
 

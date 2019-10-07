@@ -12,7 +12,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68448592"
 ---
-# <a name="lthashsetgt-functions"></a>&lt;hash_set&gt; 関数
+# <a name="lthash_setgt-functions"></a>&lt;hash_set&gt; 関数
 
 |||
 |-|-|
@@ -41,7 +41,7 @@ void swap(
 
 ### <a name="remarks"></a>Remarks
 
-このテンプレート関数は、コンテナークラス hash_set に特化したアルゴリズムであり、 `left.`メンバー関数`right`swap () を実行します。 [](../standard-library/hash-set-class.md#swap) `swap` これは、コンパイラによる関数テンプレートの部分的な順序付けのインスタンスです。 テンプレートと関数呼び出しの照合が一意にならないようにテンプレート関数がオーバーロードされた場合、コンパイラは、最も特化したバージョンのテンプレート関数を選択します。 テンプレート関数の一般的なバージョン
+このテンプレート関数は、コンテナークラス hash_set に特化したアルゴリズムであり、 `left.`メンバー関数`right`[swap](../standard-library/hash-set-class.md#swap) () を実行します。`swap` これは、コンパイラによる関数テンプレートの部分的な順序付けのインスタンスです。 テンプレートと関数呼び出しの照合が一意にならないようにテンプレート関数がオーバーロードされた場合、コンパイラは、最も特化したバージョンのテンプレート関数を選択します。 テンプレート関数の一般的なバージョン
 
 **template \<class T> void swap(T&, T&),**
 
@@ -72,7 +72,7 @@ void swap(hash_multiset <Key, Traits, Allocator>& left, hash_multiset <Key, Trai
 
 ### <a name="remarks"></a>Remarks
 
-このテンプレート関数は、コンテナークラス hash_multiset に特化したアルゴリズムであり、 `left.`メンバー関数`right`swap () を実行します。 [](../standard-library/hash-multiset-class.md#swap) `swap` これは、コンパイラによる関数テンプレートの部分的な順序付けのインスタンスです。 テンプレートと関数呼び出しの照合が一意にならないようにテンプレート関数がオーバーロードされた場合、コンパイラは、最も特化したバージョンのテンプレート関数を選択します。 テンプレート関数の一般的なバージョン
+このテンプレート関数は、コンテナークラス hash_multiset に特化したアルゴリズムであり、 `left.`メンバー関数`right`[swap](../standard-library/hash-multiset-class.md#swap) () を実行します。`swap` これは、コンパイラによる関数テンプレートの部分的な順序付けのインスタンスです。 テンプレートと関数呼び出しの照合が一意にならないようにテンプレート関数がオーバーロードされた場合、コンパイラは、最も特化したバージョンのテンプレート関数を選択します。 テンプレート関数の一般的なバージョン
 
 **template \<class T> void swap(T&, T&),**
 

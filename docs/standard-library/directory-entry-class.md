@@ -41,7 +41,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68458959"
 ---
-# <a name="directoryentry-class"></a>directory_entry クラス
+# <a name="directory_entry-class"></a>directory_entry クラス
 
 `*X` によって返されるオブジェクトを表します。*X* は、[directory_iterator](../standard-library/directory-iterator-class.md) または [recursive_directory_iterator](../standard-library/recursive-directory-iterator-class.md) です。
 
@@ -67,9 +67,9 @@ class directory_entry;
 
 |メンバー関数|説明|
 |-|-|
-|[assign](#assign)|このメンバー関数は 、pval `mypath`to  、stat `mystat`to、および*symstat*をに`mysymstat`割り当てます。|
+|[assign](#assign)|このメンバー関数は 、pval `mypath`to 、stat `mystat`to、および*symstat*をに`mysymstat`割り当てます。|
 |[path](#path)|このメンバー関数は、`mypath` を返します。|
-|[replace_filename](#replace_filename)|このメンバー関数は`mypath` 、 `mypath.parent_path()`  /  *pval*、  `mysymstat`  stat_arg、および symstat_arg を使用して置き換えます。 `mystat`|
+|[replace_filename](#replace_filename)|このメンバー関数は`mypath` 、 `mypath.parent_path()`  /  *pval*、 `mysymstat` stat_arg、および symstat_arg を使用して置き換えます。 `mystat`|
 |[status](#status)|どちらのメンバー関数`mystat`も、最初に変更された可能性があるものを返します。|
 |[symlink_status](#symlink_status)|どちらのメンバー関数`mysymstat`も、最初に変更された可能性があるものを返します。|
 
@@ -94,7 +94,7 @@ class directory_entry;
 
 ## <a name="assign"></a>割り当てる
 
-このメンバー関数は 、pval `mypath`to  、stat_arg `mystat`to、 および symstat_arg `mysymstat`をに割り当てます。
+このメンバー関数は 、pval `mypath`to 、stat_arg `mystat`to、および symstat_arg `mysymstat`をに割り当てます。
 
 ```cpp
 void assign(const std::experimental::filesystem::path& pval,
@@ -148,7 +148,7 @@ bool operator!=(const directory_entry& right) const noexcept;
 ### <a name="parameters"></a>パラメーター
 
 *そうです*\
-と[](../standard-library/directory-entry-class.md)比較する`directory_entry`directory_entry。
+と比較する`directory_entry`[directory_entry](../standard-library/directory-entry-class.md)。
 
 ## <a name="op_as"></a>operator =
 
@@ -175,7 +175,7 @@ bool operator==(const directory_entry& right) const noexcept;
 ### <a name="parameters"></a>パラメーター
 
 *そうです*\
-と[](../standard-library/directory-entry-class.md)比較する`directory_entry`directory_entry。
+と比較する`directory_entry`[directory_entry](../standard-library/directory-entry-class.md)。
 
 ## <a name="op_lt"></a> 演算子&lt;
 
@@ -188,7 +188,7 @@ bool operator<(const directory_entry& right) const noexcept;
 ### <a name="parameters"></a>パラメーター
 
 *そうです*\
-と[](../standard-library/directory-entry-class.md)比較する`directory_entry`directory_entry。
+と比較する`directory_entry`[directory_entry](../standard-library/directory-entry-class.md)。
 
 ## <a name="op_lteq"></a>operator&lt;=
 
@@ -201,7 +201,7 @@ bool operator&lt;=(const directory_entry& right) const noexcept;
 ### <a name="parameters"></a>パラメーター
 
 *そうです*\
-と[](../standard-library/directory-entry-class.md)比較する`directory_entry`directory_entry。
+と比較する`directory_entry`[directory_entry](../standard-library/directory-entry-class.md)。
 
 ## <a name="op_gt"></a> 演算子&gt;
 
@@ -214,7 +214,7 @@ bool operator&gt;(const directory_entry& right) const noexcept;
 ### <a name="parameters"></a>パラメーター
 
 *そうです*\
-と[](../standard-library/directory-entry-class.md)比較する`directory_entry`directory_entry。
+と比較する`directory_entry`[directory_entry](../standard-library/directory-entry-class.md)。
 
 ## <a name="op_gteq"></a>operator&gt;=
 
@@ -227,7 +227,7 @@ bool operator&gt;=(const directory_entry& right) const noexcept;
 ### <a name="parameters"></a>パラメーター
 
 *そうです*\
-と[](../standard-library/directory-entry-class.md)比較する`directory_entry`directory_entry。
+と比較する`directory_entry`[directory_entry](../standard-library/directory-entry-class.md)。
 
 ## <a name="path_type"></a>operator const path_type &
 
@@ -247,7 +247,7 @@ const std::experimental::filesystem::path& path() const noexcept;
 
 ## <a name="replace_filename"></a>replace_filename
 
-このメンバー関数は`mypath` 、 `mypath.parent_path()`  /  *pval*、  `mysymstat`  stat_arg、および symstat_arg を使用して置き換えます。 `mystat`
+このメンバー関数は`mypath` 、 `mypath.parent_path()`  /  *pval*、 `mysymstat` stat_arg、および symstat_arg を使用して置き換えます。 `mystat`
 
 ```cpp
 void replace_filename(

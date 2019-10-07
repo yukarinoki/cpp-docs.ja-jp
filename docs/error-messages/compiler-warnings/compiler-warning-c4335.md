@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4335
 ms.assetid: e66467ad-a10b-4438-8c7c-e8e8d11d39bb
-ms.openlocfilehash: 43c2f5d9092cdbad14e429349bd7d04e236b75e4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d44a1ae5354e8d22e41694f4d6df42ad22c3986d
+ms.sourcegitcommit: 76cc69b482ada8ebf0837e8cdfd4459661f996dd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62151852"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71127163"
 ---
 # <a name="compiler-warning-c4335"></a>コンパイラの警告 C4335
 
-Mac ファイル形式が検出されました: ソース ファイルを DOS または UNIX のいずれかの形式に変換してください
+Mac ファイル形式が検出されました: ソースファイルを DOS または UNIX 形式に変換してください
 
-ソース ファイルの最初の行の行終端文字は、UNIX ('\n') または DOS (\r\n) ではなく Macintosh スタイル ('\r') です。
+ソースファイルの最初の行の行終了文字は、UNIX (' \n ') または DOS ("\r\n") ではなく、Macintosh スタイル ("\r") です。
 
-この警告はエラーとして常に発行されます。  参照してください[警告](../../preprocessor/warning.md)プラグマについてはこの警告を無効にする方法。  また、この警告がコンパイル単位あたり 1 回発行のみです。 そのため、複数ある場合は`#include`Macintosh 形式でファイルを指定するディレクティブ、C4335 はのみ発行されます。
+この警告は、常にエラーとして表示されます。  この警告を無効にする方法については、「 [warning](../../preprocessor/warning.md)プラグマ」を参照してください。  また、この警告は、コンパイル単位ごとに1回のみ発行されます。 このため、ファイルを Macintosh `#include`形式で指定するディレクティブが複数ある場合、C4335 は1回だけ発行されます。
 
-Macintosh の形式でファイルを生成する方法の 1 つを使用して、 **保存オプションの**(上、**ファイル**メニュー) Visual Studio でします。
+Macintosh 形式でファイルを生成する方法の1つとして、Visual Studio の **[ファイル]** メニューの **[保存オプションの詳細設定]** を使用する方法があります。
 
 ## <a name="example"></a>例
 

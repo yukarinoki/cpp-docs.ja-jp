@@ -24,7 +24,7 @@ ms.locfileid: "68452266"
 ---
 # <a name="vectorltboolgt-class"></a>vector&lt;bool&gt; クラス
 
-クラスは、 **bool**型の要素の vector の部分的特殊化です。 [](../standard-library/vector-class.md) `vector<bool>` これには、特殊化によって使用される基になる型のアロケーターがあり、1ビットあたり1つの**ブール**値を格納することによって領域を最適化します。
+クラスは、 **bool**型の要素の [vector](../standard-library/vector-class.md) の部分的特殊化です。`vector<bool>` これには、特殊化によって使用される基になる型のアロケーターがあり、1ビットあたり1つの**ブール**値を格納することによって領域を最適化します。
 
 ## <a name="syntax"></a>構文
 

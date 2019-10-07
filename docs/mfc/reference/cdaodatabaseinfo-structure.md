@@ -1,22 +1,23 @@
 ---
 title: CDaoDatabaseInfo 構造体
-ms.date: 11/04/2016
+ms.date: 09/17/2019
 f1_keywords:
 - CDaoDatabaseInfo
 helpviewer_keywords:
 - CDaoDatabaseInfo structure [MFC]
 - DAO (Data Access Objects), Databases collection
 ms.assetid: 68e9e0da-8382-4fc6-8115-1b1519392ddb
-ms.openlocfilehash: 920301af6f660aeac010ecbf844b80ea628bbfd7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 46d8056ee4ab478b65f3ef0bd59d88bd3af9b28c
+ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405769"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71096157"
 ---
 # <a name="cdaodatabaseinfo-structure"></a>CDaoDatabaseInfo 構造体
 
-`CDaoDatabaseInfo`構造体には、データ アクセス オブジェクト (DAO) に対して定義されているデータベース オブジェクトに関する情報が含まれています。
+構造`CDaoDatabaseInfo`体には、データアクセスオブジェクト (DAO) 用に定義されたデータベースオブジェクトに関する情報が含まれています。
+DAO 3.6 は最終バージョンであり、互換性のために残されているものと見なされます。
 
 ## <a name="syntax"></a>構文
 
@@ -36,73 +37,73 @@ struct CDaoDatabaseInfo
 #### <a name="parameters"></a>パラメーター
 
 *m_strName*<br/>
-データベース オブジェクトの一意名します。 このプロパティを直接取得するには、する[CDaoDatabase::GetName](../../mfc/reference/cdaodatabase-class.md#getname)します。 詳細については、「Name プロパティ」DAO ヘルプのトピックを参照してください。
+データベースオブジェクトの名前を一意に識別します。 このプロパティを直接取得するには、 [CDaoDatabase:: GetName](../../mfc/reference/cdaodatabase-class.md#getname)を呼び出します。 詳細については、DAO ヘルプの「Name プロパティ」を参照してください。
 
 *m_bUpdatable*<br/>
-変更をデータベースにできるかどうかを示します。 このプロパティを直接取得するには、する[CDaoDatabase::CanUpdate](../../mfc/reference/cdaodatabase-class.md#canupdate)します。 詳細については、「DAO ヘルプの「更新可能なプロパティ」」を参照してください。
+データベースに変更を加えることができるかどうかを示します。 このプロパティを直接取得するには、 [CDaoDatabase:: CanUpdate](../../mfc/reference/cdaodatabase-class.md#canupdate)を呼び出します。 詳細については、DAO ヘルプの「更新可能なプロパティ」を参照してください。
 
 *m_bTransactions*<br/>
-データ ソースがトランザクションをサポートしているかどうかを示します: 一連のロールバックできます。 後で変更の記録 (キャンセル) またはコミット (保存) します。 データベースは、Microsoft Jet データベース エンジンに基づいている場合は、トランザクションのプロパティが 0 以外と、トランザクションを使用することができます。 他のデータベース エンジンはトランザクションをサポートしていません。 このプロパティを直接取得するには、する[CDaoDatabase::CanTransact](../../mfc/reference/cdaodatabase-class.md#cantransact)します。 詳細については、「トランザクションのプロパティ」DAO ヘルプのトピックを参照してください。
+データソースがトランザクションをサポートするかどうかを示します。トランザクションとは、後でロールバック (キャンセル) またはコミット (保存) できる一連の変更の記録です。 データベースが Microsoft Jet データベースエンジンに基づいている場合、トランザクションのプロパティは0以外であり、トランザクションを使用できます。 他のデータベースエンジンはトランザクションをサポートしていない可能性があります。 このプロパティを直接取得するには、 [CDaoDatabase:: CanTransact](../../mfc/reference/cdaodatabase-class.md#cantransact)を呼び出します。 詳細については、DAO ヘルプの「トランザクションのプロパティ」を参照してください。
 
 *m_strVersion*<br/>
-Microsoft Jet データベース エンジンのバージョンを示します。 このプロパティの値を直接取得する呼び出し、データベース オブジェクトの[GetVersion](../../mfc/reference/cdaodatabase-class.md#getversion)メンバー関数。 詳細については、「バージョンのプロパティ」DAO ヘルプのトピックを参照してください。
+Microsoft Jet データベースエンジンのバージョンを示します。 このプロパティの値を直接取得するには、データベースオブジェクトの[GetVersion](../../mfc/reference/cdaodatabase-class.md#getversion)メンバー関数を呼び出します。 詳細については、DAO ヘルプの「バージョンプロパティ」を参照してください。
 
 *m_lCollatingOrder*<br/>
-文字列比較または並べ替え用のテキストの並べ替え順序を指定します。 次のような値となる場合があります。
+文字列比較または並べ替えに使用する、テキスト内の並べ替え順序の順序を指定します。 次のような値となる場合があります。
 
-- `dbSortGeneral` [全般] (英語、フランス語、ドイツ語、ポルトガル語、イタリア語、および最新のスペイン語) の並べ替え順序を使用します。
+- `dbSortGeneral`一般的な (英語、フランス語、ドイツ語、ポルトガル語、イタリア語、および最新のスペイン語) 並べ替え順序を使用します。
 
-- `dbSortArabic` アラビア語の並べ替え順序を使用します。
+- `dbSortArabic`アラビア語の並べ替え順序を使用します。
 
-- `dbSortCyrillic` ロシア語の並べ替え順序を使用します。
+- `dbSortCyrillic`ロシア語の並べ替え順序を使用します。
 
-- `dbSortCzech` チェコ語の並べ替え順序を使用します。
+- `dbSortCzech`チェコ語の並べ替え順序を使用します。
 
-- `dbSortDutch` オランダ語の並べ替え順序を使用します。
+- `dbSortDutch`オランダ語の並べ替え順序を使用します。
 
-- `dbSortGreek` ギリシャ語の並べ替え順序を使用します。
+- `dbSortGreek`ギリシャ語の並べ替え順序を使用します。
 
-- `dbSortHebrew` ヘブライ語の並べ替え順序を使用します。
+- `dbSortHebrew`ヘブライ語の並べ替え順序を使用します。
 
-- `dbSortHungarian` ハンガリー語の並べ替え順序を使用します。
+- `dbSortHungarian`ハンガリー語の並べ替え順序を使用します。
 
-- `dbSortIcelandic` アイスランド語の並べ替え順序を使用します。
+- `dbSortIcelandic`アイスランド語の並べ替え順序を使用します。
 
-- `dbSortNorwdan` ノルウェー語、デンマーク語または並べ替え順序を使用します。
+- `dbSortNorwdan`ノルウェー語またはデンマーク語の並べ替え順序を使用します。
 
-- `dbSortPDXIntl` Paradox International の並べ替え順序を使用します。
+- `dbSortPDXIntl`Paradox International の並べ替え順序を使用します。
 
-- `dbSortPDXNor` Paradox ノルウェー語またはデンマーク語の並べ替え順序を使用します。
+- `dbSortPDXNor`Paradox のノルウェーまたはデンマーク語の並べ替え順序を使用します。
 
-- `dbSortPDXSwe` Paradox スウェーデンまたはフィンランド語の並べ替え順序を使用します。
+- `dbSortPDXSwe`Paradox のスウェーデン語またはフィンランド語の並べ替え順序を使用します。
 
-- `dbSortPolish` ポーランド語の並べ替え順序を使用します。
+- `dbSortPolish`ポーランド語の並べ替え順序を使用します。
 
-- `dbSortSpanish` スペイン語の並べ替え順序を使用します。
+- `dbSortSpanish`スペイン語の並べ替え順序を使用します。
 
-- `dbSortSwedFin` スウェーデン語、フィンランド語または並べ替え順序を使用します。
+- `dbSortSwedFin`スウェーデン語またはフィンランド語の並べ替え順序を使用します。
 
-- `dbSortTurkish` トルコ語の並べ替え順序を使用します。
+- `dbSortTurkish`トルコ語の並べ替え順序を使用します。
 
-- `dbSortUndefined` 並べ替え順序は、未定義または不明です。
+- `dbSortUndefined`並べ替え順序が定義されていないか、不明です。
 
-詳細については、"をカスタマイズする Windows レジストリの設定に Data Access"DAO ヘルプのトピックを参照してください。
+詳細については、DAO ヘルプのトピック「データアクセスのための Windows レジストリ設定のカスタマイズ」を参照してください。
 
 *m_nQueryTimeout*<br/>
-Microsoft Jet データベース エンジンがタイムアウト エラーが発生する前に待機する秒数では、ODBC データベース クエリの実行時に発生します。 既定のタイムアウト値は、60 秒です。 QueryTimeout が 0 に設定されている場合は、タイムアウトは発生しません。これには、プログラムの応答を停止する可能性があります。 このプロパティの値を直接取得する呼び出し、データベース オブジェクトの[GetQueryTimeout](../../mfc/reference/cdaodatabase-class.md#getquerytimeout)メンバー関数。 詳細については、「QueryTimeout プロパティ」DAO ヘルプのトピックを参照してください。
+ODBC データベースでクエリが実行されるときに、Microsoft Jet データベースエンジンがタイムアウトエラーが発生するまでに待機する秒数。 既定のタイムアウト値は60秒です。 [の値] が0に設定されている場合、タイムアウトは発生しません。これにより、プログラムが応答を停止する可能性があります。 このプロパティの値を直接取得するには、データベースオブジェクトの[getquerytimeout](../../mfc/reference/cdaodatabase-class.md#getquerytimeout)メンバー関数を呼び出します。 詳細については、DAO ヘルプの「プロパティ」を参照してください。
 
 *m_strConnect*<br/>
-開いているデータベースのソースに関する情報を提供します。 については、文字列を約接続し、このプロパティの値を直接取得する方法の詳細については、次を参照してください。、 [CDaoDatabase::GetConnect](../../mfc/reference/cdaodatabase-class.md#getconnect)メンバー関数。 詳細については、DAO のヘルプ「プロパティの接続」を参照してください。
+開いているデータベースのソースに関する情報を提供します。 接続文字列について、およびこのプロパティの値を直接取得する方法については、「 [CDaoDatabase:: GetConnect](../../mfc/reference/cdaodatabase-class.md#getconnect)メンバー関数」を参照してください。 詳細については、DAO ヘルプのトピック「Connect プロパティ」を参照してください。
 
 ## <a name="remarks"></a>Remarks
 
-データベースがクラスの MFC オブジェクトを基になる DAO オブジェクト[CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)します。 プライマリ、セカンダリ、および上記のすべてへの参照情報がによって返される方法を示すため、 [CDaoWorkspace::GetDatabaseInfo](../../mfc/reference/cdaoworkspace-class.md#getdatabaseinfo)メンバー関数。
+データベースは、クラス[CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)の MFC オブジェクトの基になる DAO オブジェクトです。 上記の Primary、Secondary、および All への参照は、 [CDaoWorkspace:: GetDatabaseInfo](../../mfc/reference/cdaoworkspace-class.md#getdatabaseinfo)メンバー関数によって情報がどのように返されるかを示しています。
 
-によって取得される情報、 [CDaoWorkspace::GetDatabaseInfo](../../mfc/reference/cdaoworkspace-class.md#getdatabaseinfo)にメンバー関数が格納されている、`CDaoDatabaseInfo`構造体。 呼び出す`GetDatabaseInfo`の`CDaoWorkspace`がデータベース コレクション内のデータベース オブジェクトが格納されているオブジェクト。 `CDaoDatabaseInfo` 定義、`Dump`デバッグでのメンバー関数を作成します。 使用することができます`Dump`の内容をダンプする`CDaoDatabaseInfo`オブジェクト。
+[CDaoWorkspace:: getdatabaseinfo](../../mfc/reference/cdaoworkspace-class.md#getdatabaseinfo)メンバー関数によって取得された情報`CDaoDatabaseInfo`は、構造体に格納されます。 データベース`GetDatabaseInfo`オブジェクトが`CDaoWorkspace`格納されているデータベースコレクションを含むオブジェクトに対してを呼び出します。 `CDaoDatabaseInfo`は、 `Dump`デバッグビルドでメンバー関数も定義します。 を使用`Dump`すると、 `CDaoDatabaseInfo`オブジェクトの内容をダンプできます。
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** afxdao.h
+**ヘッダー:** afxdao
 
 ## <a name="see-also"></a>関連項目
 

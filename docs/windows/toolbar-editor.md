@@ -51,10 +51,10 @@ helpviewer_keywords:
 - Toolbar editor [C++], creating tool tips
 ms.assetid: aa9f0adf-60f6-4f79-ab05-bc330f15ec43
 ms.openlocfilehash: 72c42a06da8276d118c6c204f838ed4b31d142b9
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69514694"
 ---
 # <a name="toolbar-editor-c"></a>ツールバーエディターC++()
@@ -197,7 +197,7 @@ ms.locfileid: "69514694"
 
 **ツールバーエディター**を使用してこの効果を適用する場合は、 `Prints the active document\nPrint`[プロンプト] プロパティをに設定します。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 MFC または ATL
 

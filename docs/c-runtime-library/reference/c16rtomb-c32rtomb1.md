@@ -1,10 +1,10 @@
 ---
 title: c16rtomb、c32rtomb
 ms.date: 01/22/2018
-apiname:
+api_name:
 - c16rtomb
 - c32rtomb
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - c16rtomb
 - c32rtomb
@@ -26,12 +29,12 @@ helpviewer_keywords:
 - c16rtomb function
 - c32rtomb function
 ms.assetid: 7f5743ca-a90e-4e3f-a310-c73e16f4e14d
-ms.openlocfilehash: ad58184c7bab6f95a842bda5f9eb545f09434a3e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a16effe48442ccbb5144b57ead2fb15c908fe898
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341757"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943428"
 ---
 # <a name="c16rtomb-c32rtomb"></a>c16rtomb、c32rtomb
 
@@ -61,19 +64,19 @@ size_t c32rtomb(
 変換するワイド文字。
 
 *state*<br/>
-ポインター、 **mbstate_t**オブジェクト。
+**Mbstate_t**オブジェクトへのポインター。
 
 ## <a name="return-value"></a>戻り値
 
-配列オブジェクトに格納されるバイト数*mbchar*、シフト シーケンスを含むです。 場合*wchar*有効なワイド文字で、値はありません (**size_t**)(-1) が返される**errno**に設定されている**EILSEQ**の値*状態*が指定されていません。
+配列オブジェクト*mbchar*に格納されているバイト数 (シフトシーケンスを含む)。 *Wchar*が有効なワイド文字でない場合、値 (**size_t**) (-1) が返され、 **errno**は**EILSEQ**に設定され、 *state*の値は未指定になります。
 
 ## <a name="remarks"></a>Remarks
 
-**C16rtomb**関数 utf-16 の文字変換*wchar*を現在のロケールで同等のマルチバイトのナロウ文字シーケンス。 場合*mbchar*によって示される配列オブジェクトに変換されたシーケンスの関数は、null ポインターではない*mbchar*します。 最大**MB_CUR_MAX**格納されるバイト*mbchar*と*状態*が結果として得られるマルチバイトのシフト状態に設定します。    場合*wchar* null ワイド文字に必要なシーケンスは、初期のシフト状態が格納されている、必要な場合、復元後に、null 文字と*状態*が初期の変換状態に設定します。 **C32rtomb**関数は同じですが、utf-32 文字に変換します。
+**C16rtomb**関数は、utf-16 文字*wchar*を現在のロケールの同等のマルチバイトナロー文字シーケンスに変換します。 *Mbchar*が null ポインターでない場合、関数は、 *mbchar*が指す配列オブジェクトに変換されたシーケンスを格納します。 最大**MB_CUR_MAX**バイトは*mbchar*に格納され、*状態*は結果のマルチバイトシフト状態に設定されます。    *Wchar*が null ワイド文字の場合、初期シフト状態の復元に必要なシーケンスは、必要に応じて格納され、その後に null 文字が続き、 *state*が初期変換状態に設定されます。 **C32rtomb**関数は同じですが、32文字が変換されます。
 
-場合*mbchar* null ポインターの場合は、動作は同等の内部バッファーを置換する関数への呼び出しに*mbchar*とのワイド null 文字*wchar*します。
+*Mbchar*が null ポインターの場合、この動作は、 *mbchar*の内部バッファーと*wchar*のワイド null 文字を置換する関数の呼び出しと同じです。
 
-*状態*変換状態オブジェクトを使用すると、この関数とマルチバイト出力のシフト状態を維持するその他の再開可能関数への後続の呼び出しを行います。 結果は、再開可能と再開不可能関数の使用を混在させることへの呼び出しの場合、または未定義**setlocale**再開可能な関数呼び出しの間で確立します。
+*状態*変換状態オブジェクトを使用すると、この関数およびマルチバイト出力文字のシフト状態を維持するその他の再開可能な関数への後続の呼び出しを行うことができます。 再開可能な関数と再開できない関数の使用を混在させた場合、または、再起動可能な関数呼び出しの間に**setlocale**の呼び出しが行われた場合、結果は未定義になります。
 
 ## <a name="requirements"></a>必要条件
 

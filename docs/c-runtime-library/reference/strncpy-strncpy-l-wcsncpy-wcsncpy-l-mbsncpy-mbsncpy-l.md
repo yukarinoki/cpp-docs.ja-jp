@@ -1,14 +1,14 @@
 ---
 title: strncpy、_strncpy_l、wcsncpy、_wcsncpy_l、_mbsncpy、_mbsncpy_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - strncpy
 - _strncpy_l
 - _mbsncpy
 - wcsncpy
 - _mbsncpy_l
 - _wcsncpy_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -22,7 +22,10 @@ apilocation:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _fstrncpy
 - strncpy
@@ -62,12 +65,12 @@ helpviewer_keywords:
 - tcsncpy function
 - _strncpy_l function
 ms.assetid: ac4345a1-a129-4f2f-bb8a-373ec58ab8b0
-ms.openlocfilehash: fac7e052c5c1d5525946bdbc599404ac56d47f5a
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 82e88a48752cb96cca5cb636332fa477aef13d50
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499455"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70947206"
 ---
 # <a name="strncpy-_strncpy_l-wcsncpy-_wcsncpy_l-_mbsncpy-_mbsncpy_l"></a>strncpy、_strncpy_l、wcsncpy、_wcsncpy_l、_mbsncpy、_mbsncpy_l
 
@@ -173,7 +176,7 @@ unsigned char *_mbsncpy_l(
 
 ## <a name="remarks"></a>Remarks
 
-**Strncpy**関数は、 *strsource*の最初の*カウント*文字を*Strsource*にコピーし、 *strsource*を返します。 *Count*が*strsource*の長さ以下の場合、コピーされた文字列に null 文字が自動的に追加されることはありません。 *Count*が*strsource*の長さよりも大きい場合は、コピー先の文字列に null 文字が埋め込まれ、長さが最大になります。 ソースとコピー先の文字列が重なり合っている場合、 **strncpy**の動作は未定義です。
+**Strncpy**関数は、 *strsource*の最初の*カウント*文字を*Strsource*にコピーし、 *strsource*を返します。 *Count*が*strsource*の長さ以下の場合、コピーされた文字列に null 文字が自動的に追加されることはありません。 *Count*が*strsource*の長さよりも大きい場合は、コピー先の文字列に null 文字が埋め込ま*れ、* 長さが最大になります。 ソースとコピー先の文字列が重なり合っている場合、 **strncpy**の動作は未定義です。
 
 > [!IMPORTANT]
 > **strncpy**は、 *strdest*に十分な領域があるかどうかを確認しません。これにより、バッファーオーバーランの潜在的な原因になります。 *Count*引数を指定すると、コピーされる文字数が制限されます。*Strdest*のサイズに制限はありません。 次の例を参照してください。 詳しくは、「 [バッファー オーバーランの回避](/windows/win32/SecBP/avoiding-buffer-overruns)」をご覧ください。

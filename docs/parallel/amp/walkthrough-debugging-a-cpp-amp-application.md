@@ -8,10 +8,10 @@ helpviewer_keywords:
 - debugging, C++ AMP
 ms.assetid: 40e92ecc-f6ba-411c-960c-b3047b854fb5
 ms.openlocfilehash: 0c9fb5588cfd44c83d8fe72c7c4aede0fedab672
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69631597"
 ---
 # <a name="walkthrough-debugging-a-c-amp-application"></a>チュートリアル: AMP アプリケーションC++のデバッグ
@@ -82,7 +82,7 @@ ms.locfileid: "69631597"
 
 ::: moniker-end
 
-次に：
+次へ :
 
 8. AMPMapReduce を開き、内容を次のコードに置き換えます。
 
@@ -325,7 +325,7 @@ ms.locfileid: "69631597"
    ![並べ替えられた結果を含む並列ウォッチウィンドウ](../../parallel/amp/media/campf.png "並べ替えられた結果を含む並列ウォッチウィンドウ") <br/>
    並べ替えの結果
 
-   **[並列ウォッチ]** ウィンドウのコンテンツを excel にエクスポートするには、 excel のボタンをクリックし、 **[excel で開く]** を選択します。 開発用コンピューターに Excel がインストールされている場合は、そのコンテンツを含む Excel ワークシートが開きます。
+   **[並列ウォッチ]** ウィンドウのコンテンツを excel にエクスポートするには、 **excel のボタンを**クリックし、 **[excel で開く]** を選択します。 開発用コンピューターに Excel がインストールされている場合は、そのコンテンツを含む Excel ワークシートが開きます。
 
 6. **[並列ウォッチ]** ウィンドウの右上隅にあるフィルターコントロールを使用して、ブール式を使用してコンテンツをフィルター処理できます。 [ `localA[localIdx[0]] > 20000`フィルターコントロール] テキストボックスに「」と入力し、 **enter**キーを押します。
 

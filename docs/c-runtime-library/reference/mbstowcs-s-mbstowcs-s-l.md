@@ -1,10 +1,10 @@
 ---
 title: mbstowcs_s、_mbstowcs_s_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbstowcs_s_l
 - mbstowcs_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _mbstowcs_s_l
 - mbstowcs_s
@@ -26,12 +29,12 @@ helpviewer_keywords:
 - mbstowcs_s function
 - mbstowcs_s_l function
 ms.assetid: 2fbda953-6918-498f-b440-3e7b21ed65a4
-ms.openlocfilehash: 7a1c29118c48bbbb5358e7d7ea57296f7ec908a8
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 0812c3f667f28c5c43d7932d4746052dbaff3a60
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499769"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952026"
 ---
 # <a name="mbstowcs_s-_mbstowcs_s_l"></a>mbstowcs_s、_mbstowcs_s_l
 
@@ -119,7 +122,7 @@ null で終了するマルチバイト文字のシーケンスのアドレス。
 
 *Count*が特別な値の[切り捨て](../../c-runtime-library/truncate.md)である場合、 **mbstowcs_s**は、null 終端文字用の空きを残したまま、コピー先のバッファーに収まる限りの文字列を変換します。
 
-**Mbstowcs_s**がソース文字列を正常に変換した場合は、null 終端文字を含む、変換された文字列のサイズが、preturnvalue (指定された*preturnvalue* **値が null**ではない) に *&#42;* 格納されます。 これは、 *wcstr*引数が**NULL**の場合にも発生し、必要なバッファーサイズを決定する手段を提供します。 *Wcstr*が**NULL**の場合、 *count*は無視され、 *sizeinwords*は0である必要があることに注意してください。
+**Mbstowcs_s**がソース文字列を正常に変換した場合は、null 終端文字を含む、変換された文字列のサイズが、  *&#42;preturnvalue* (指定された*preturnvalue* **値が null**ではない) に格納されます。 これは、 *wcstr*引数が**NULL**の場合にも発生し、必要なバッファーサイズを決定する手段を提供します。 *Wcstr*が**NULL**の場合、 *count*は無視され、 *sizeinwords*は0である必要があることに注意してください。
 
 **Mbstowcs_s**で無効なマルチバイト文字が検出された場合は、  *&#42;preturnvalue*値に0を格納し、コピー先のバッファーを空の文字列に設定し、 **errno**を**EILSEQ**に設定して、 **EILSEQ**を返します。
 

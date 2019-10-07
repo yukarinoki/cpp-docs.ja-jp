@@ -2,16 +2,16 @@
 title: Array と WriteOnlyArray (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: ef7cc5f9-cae6-4636-8220-f789e5b6aea4
-ms.openlocfilehash: fd616487bd3c11544f12e84a7dc64f41e63d501a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2ade7981d391288edd78f622b4753d546c5eaa04
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209417"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740689"
 ---
 # <a name="array-and-writeonlyarray-ccx"></a>Array と WriteOnlyArray (C++/CX)
 
-通常の C スタイル配列を自由に使用できますまたは[std::array](../standard-library/array-class-stl.md)で c++/cli/CX プログラム (が[std::vector](../standard-library/vector-class.md)方が適切では多くの場合)、メタデータでパブリッシュされている任意の api では、C スタイル配列を変換する必要がありますが、ベクトルまたは、 [platform::array](../cppcx/platform-array-class.md)または[platform::writeonlyarray](../cppcx/platform-writeonlyarray-class.md)によってどのように使用されている型。 [Platform::Array](../cppcx/platform-array-class.md) 型は、 [std::vector](../standard-library/vector-class.md)ほどには効率的でも強力でもありません。そのため、一般的なガイドラインとして、配列要素で多くの操作を実行する内部コードでは使用を避ける必要があります。
+/Cx プログラムでは、通常の C スタイル配列または[std:: array](../standard-library/array-class-stl.md)を自由に使用できますが、メタデータに[公開され](../standard-library/vector-class.md)ている API では、C スタイルの配列またはベクターを [Platform:: Array](../cppcx/platform-array-class.md) に変換する必要があります。 C++ または[Platform:: WriteOnlyArray](../cppcx/platform-writeonlyarray-class.md)型がどのように使用されているかによって異なります。 [Platform::Array](../cppcx/platform-array-class.md) 型は、 [std::vector](../standard-library/vector-class.md)ほどには効率的でも強力でもありません。そのため、一般的なガイドラインとして、配列要素で多くの操作を実行する内部コードでは使用を避ける必要があります。
 
 次の配列型は、ABI を介して渡すことができます。
 
@@ -23,17 +23,17 @@ ms.locfileid: "62209417"
 
 1. Platform::Array^ の戻り値
 
-これらの配列型を使用すると、次の 3 つの種類の Windows ランタイムによって定義されている配列パターンを実装します。
+これらの配列型は、Windows ランタイムによって定義される3種類の配列パターンを実装するために使用します。
 
-PassArray は、呼び出し元がメソッドに配列を渡すときに使用されます。 C++ 入力パラメーターの型は`const` [platform::array](../cppcx/platform-array-class.md)\<T >。
+呼び出し元が配列をメソッドに渡すときに使用されるパス配列。 入力C++パラメーターの型は`const` [Platform:: Array](../cppcx/platform-array-class.md)\<T > です。
 
-FillArray は、呼び出し元がメソッドで設定する配列を渡すときに使用されます。 C++ 入力パラメーターの型は[platform::writeonlyarray](../cppcx/platform-writeonlyarray-class.md)\<T >。
+メソッドがいっぱいになるように呼び出し元が配列を渡すときに使用される FillArray。 入力C++パラメーターの型は[Platform:: writeonlyarray](../cppcx/platform-writeonlyarray-class.md)\<T > です。
 
-ReceiveArray は、呼び出し元が、メソッドが割り当てる配列を受け取るときに使用されます。 C++/CX では、配列を Array^ として戻り値で返すことも、型 Array^* として Out パラメーターとして返すこともできます。
+呼び出し元が、メソッドが割り当てる配列を受け取るときに使用される ReceiveArray。 C++/CX では、配列を Array^ として戻り値で返すことも、型 Array^* として Out パラメーターとして返すこともできます。
 
 ## <a name="passarray-pattern"></a>PassArray パターン
 
-クライアント コードが配列を C++ メソッドに渡し、メソッドがその配列を変更しない場合、メソッドはその配列を定数 Array^ として受け入れます。 Windows ランタイムのアプリケーション バイナリ インターフェイス (ABI) レベルでこれは PassArray と呼ばれます。 次の例は、JavaScript に割り当てられた配列を、読み取り側の C++ 関数に渡す方法を示しています。
+クライアント コードが配列を C++ メソッドに渡し、メソッドがその配列を変更しない場合、メソッドはその配列を定数 Array^ として受け入れます。 Windows ランタイムアプリケーションバイナリインターフェイス (ABI) レベルでは、これを "Pass Array" と呼びます。 次の例は、JavaScript に割り当てられた配列を、読み取り側の C++ 関数に渡す方法を示しています。
 
 [!code-javascript[cx_arrays#101](../cppcx/codesnippet/JavaScript/array-and-writeonlyarray-c-_1.js)]
 
@@ -43,7 +43,7 @@ ReceiveArray は、呼び出し元が、メソッドが割り当てる配列を�
 
 ## <a name="receivearray-pattern"></a>ReceiveArray パターン
 
-ReceiveArray パターンでは、クライアント コードは配列を宣言し、それにメモリを割り当てて初期化するメソッドに渡します。 C++ 入力パラメーターの型は、ハットへのポインター:`Array<T>^*`します。 次の例は、JavaScript で配列オブジェクトを宣言し、それを、メモリを割り当て、要素を初期化して JavaScript に返す C++ 関数に渡す方法を示しています。 JavaScript は、割り当てられた配列を戻り値として扱いますが、C++ 関数は出力パラメーターとして扱います。
+ReceiveArray パターンでは、クライアント コードは配列を宣言し、それにメモリを割り当てて初期化するメソッドに渡します。 入力C++パラメーターの型は、hat `Array<T>^*`へのポインターです。 次の例は、JavaScript で配列オブジェクトを宣言し、それを、メモリを割り当て、要素を初期化して JavaScript に返す C++ 関数に渡す方法を示しています。 JavaScript は、割り当てられた配列を戻り値として扱いますが、C++ 関数は出力パラメーターとして扱います。
 
 [!code-javascript[cx_arrays#102](../cppcx/codesnippet/JavaScript/array-and-writeonlyarray-c-_3.js)]
 
@@ -90,5 +90,5 @@ Windows ランタイムの型システムは、ジャグ配列の概念をサポ
 ## <a name="see-also"></a>関連項目
 
 [型システム](../cppcx/type-system-c-cx.md)<br/>
-[Visual C 言語リファレンス](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[C++/CX 言語リファレンス](../cppcx/visual-c-language-reference-c-cx.md)<br/>
 [名前空間参照](../cppcx/namespaces-reference-c-cx.md)

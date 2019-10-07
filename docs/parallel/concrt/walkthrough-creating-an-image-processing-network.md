@@ -6,10 +6,10 @@ helpviewer_keywords:
 - creating image-processing networks [Concurrency Runtime]
 ms.assetid: 78ccadc9-5ce2-46cc-bd62-ce0f99d356b8
 ms.openlocfilehash: 680037e0e14c3ebd9171cacf477520e025eecebe
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69512167"
 ---
 # <a name="walkthrough-creating-an-image-processing-network"></a>チュートリアル: イメージ処理ネットワークの作成
@@ -20,7 +20,7 @@ ms.locfileid: "69512167"
 
 データフローに基づくネットワークによって、タスクの*パイプライン*が作成されます。 パイプラインの各ステージは、タスク全体の一部を同時に実行します。 これは、自動車製造の組み立てラインに例えることができます。 各車両が組み立てラインを通過すると、1つのステーションがフレームをアセンブルし、別のステーションがエンジンをインストールします。 複数の車両を同時に組み立てられるようにすることで、アセンブリラインは、一度に1つの完全な車両をアセンブルするよりも高いスループットを実現します。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須コンポーネント
 
 このチュートリアルを開始する前に、次のドキュメントを参照してください。
 

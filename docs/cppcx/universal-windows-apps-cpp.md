@@ -2,13 +2,13 @@
 title: ユニバーサル Windows アプリ (C++)
 ms.date: 03/30/2018
 ms.assetid: 357121cc-d390-4bae-b34a-39614861a9f4
-ms.topic: landing-page
-ms.openlocfilehash: 68952e93e4f91ac3653a9991802ad42854d9d25a
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.topic: overview
+ms.openlocfilehash: 11a32504dfdd380f621c380994f4f53073547a57
+ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70741031"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274700"
 ---
 # <a name="universal-windows-apps-c"></a>ユニバーサル Windows アプリ (C++)
 
@@ -25,7 +25,7 @@ Desktop Bridge app converter を使用して、既存のデスクトップアプ
 |||
 |-|-|
 |[C++/CX 言語リファレンス](visual-c-language-reference-c-cx.md)|C++ を Windows ランタイム API の使用を簡略化し、例外に基づいているエラー処理を有効にする拡張機能のセットについて説明します。|
-|[アプリケーションとライブラリのビルド (C++/CX)](building-apps-and-libraries-c-cx.md)|C ++/CX アプリケーションまたはコンポーネントからアクセスできるスタティック ライブラリと DLL を作成する方法について説明します。|
+|[アプリケーションとライブラリのビルド (C++/CX)](building-apps-and-libraries-c-cx.md)|C++/CX アプリケーションまたはコンポーネントからアクセスできるスタティック ライブラリと DLL を作成する方法について説明します。|
 |[チュートリアル: C++/CXで "Hello world" UWP アプリを作成する](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp)|C++ /CX での UWP アプリ開発の基本概念を紹介するチュートリアル。 |
 |[Windows ランタイム コンポーネントを作成する C++/CX](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)|他の UWP アプリおよびコンポーネントが使用できる Dll を作成する方法について説明します。|
 |[UWP ゲームのプログラミング](/windows/uwp/gaming/)|DirectX と C++/CX を使ってゲームを作成する方法を説明します。|

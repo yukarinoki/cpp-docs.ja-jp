@@ -10,12 +10,12 @@ helpviewer_keywords:
 - OnOK function
 - MFC dialog boxes [MFC], overriding member functions
 ms.assetid: 78eb566c-e361-4c86-8db5-c7e2791b249a
-ms.openlocfilehash: f63dd6079b96181305f3207d4a1ef823df8d8ba4
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.openlocfilehash: 51a647bb50415af71d6d148d3139f906f503ee2a
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70907687"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685825"
 ---
 # <a name="commonly-overridden-member-functions"></a>通常オーバーライドされるメンバー関数
 
@@ -37,7 +37,7 @@ ms.locfileid: "70907687"
 
 `OnCancel`は通常、モードレスダイアログボックスでオーバーライドされます。
 
-これらのメンバー関数の詳細については、 *MFC リファレンス*のクラス[CDialog](../mfc/reference/cdialog-class.md)に関する記事と、[ダイアログボックスのライフサイクル](../mfc/life-cycle-of-a-dialog-box.md)に関する説明を参照してください。
+これらのメンバー関数の詳細については、 *Mfc リファレンス*のクラス[CDialog](../mfc/reference/cdialog-class.md)に関する記事と、 [mfc でのダイアログボックスの操作](../mfc/life-cycle-of-a-dialog-box.md)に関する説明を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

@@ -15,7 +15,7 @@ ms.locfileid: "62385038"
 ---
 # <a name="additional-termination-considerations"></a>終了に関するその他の考慮事項
 
-使用して、C++ プログラムを終了する`exit`、**返す**、または`abort`します。 `atexit` 関数を使用して終了処理を追加できます。 次の各セクションでは、これらについて説明します。
+`exit`、**return**、または `abort` を使用してC++プログラムを終了する事が出来ます。 `atexit` 関数を使用して終了処理を追加できます。 次の各セクションでは、これらについて説明します。
 
 ## <a name="see-also"></a>関連項目
 

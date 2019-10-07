@@ -115,7 +115,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     const Elem *str);
 ```
 
-str で始まるシーケンスの`traits_type::`長さ N`str`=[長さ](../standard-library/char-traits-struct.md#length)() を決定し、シーケンスを挿入します。 N < `_Ostr.`[width](../standard-library/ios-base-class.md#width) の場合は、関数はまた `_Ostr.width` - N 充填文字の繰り返しを挿入します。 (`_Ostr`の場合、繰り返しはシーケンスの前に置かれます。 [](../standard-library/ios-base-class.md#flags)flags & != [left](../standard-library/ios-functions.md#left)。`adjustfield` それ以外の場合、繰り返しはシーケンスに後続します。 関数は、 *_Ostr*を返します。
+str で始まるシーケンスの`traits_type::`長さ N`str`=[長さ](../standard-library/char-traits-struct.md#length)() を決定し、シーケンスを挿入します。 N < `_Ostr.`[width](../standard-library/ios-base-class.md#width) の場合は、関数はまた `_Ostr.width` - N 充填文字の繰り返しを挿入します。 (`_Ostr`の場合、繰り返しはシーケンスの前に置かれます。 [flags](../standard-library/ios-base-class.md#flags) & != [left](../standard-library/ios-functions.md#left)。`adjustfield` それ以外の場合、繰り返しはシーケンスに後続します。 関数は、 *_Ostr*を返します。
 
 下記のテンプレート関数は
 
@@ -146,7 +146,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     const Elem *str);
 ```
 
-ただし、 *str*で始まるシーケンスの*各要素は*、 [put](../standard-library/basic-ostream-class.md#put)(`_Ostr.`[拡張 (](../standard-library/basic-ios-class.md#widen)`_Ch`)) を呼び`Elem`出す`_Ostr.`ことによって、型のオブジェクトに変換されます。
+ただし、 *str*で始まるシーケンスの*各要素は*、 [put](../standard-library/basic-ostream-class.md#put)`_Ostr.`[(拡張 (](../standard-library/basic-ios-class.md#widen)`_Ch`)) を呼び`Elem`出す`_Ostr.`ことによって、型のオブジェクトに変換されます。
 
 下記のテンプレート関数は
 
@@ -166,7 +166,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     Elem _Ch);
 ```
 
-ただし、  ( `Elem` `_Ostr.put` (`_Ch`)) を呼び出すことによって、Ch が型のオブジェクトに変換される点が異なります。 `_Ostr.widen`
+ただし、 ( `Elem` `_Ostr.put` (`_Ch`)) を呼び出すことによって、Ch が型のオブジェクトに変換される点が異なります。 `_Ostr.widen`
 
 下記のテンプレート関数は
 

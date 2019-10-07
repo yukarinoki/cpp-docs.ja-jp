@@ -17,17 +17,16 @@ ms.locfileid: "62315196"
 
 まだ Visual Studio および Visual C++ ツールをダウンロードおよびインストールしていない場合は、次の方法で作業を開始できます。
 
-
 ::: moniker range="vs-2019"
 
 ## <a name="visual-studio-2019-installation"></a>Visual Studio 2019 のインストール
 
-Visual Studio 2019 へようこそ このバージョンでは、必要な機能だけを簡単に選択してインストールできます。 占有領域が最小限まで小さくなっているため、インストールが速く、システムにほとんど影響しません。
+Visual Studio 2019 へようこそ! このバージョンでは、必要な機能だけを簡単に選択してインストールできます。 占有領域が最小限まで小さくなっているため、インストールが速く、システムにほとんど影響しません。
 
 > [!NOTE]
-> このトピックでは、Windows 上の Visual Studio のインストールに適用されます。 [Visual Studio Code](https://code.visualstudio.com/)は Windows、Mac、および Linux システムで実行される軽量のクロスプラット フォーム開発環境です。 Microsoft [for Visual Studio Code には、C/C++](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools)拡張機能は、IntelliSense、デバッグ、コードの書式設定、オート コンプリートをサポートしています。 Visual Studio for Mac では、Microsoft C でサポートされていませんは .NET 言語とクロス プラットフォーム開発をサポートします。 インストール手順については、次を参照してください。 [Visual Studio for Mac をインストール](/visualstudio/mac/installation/)します。
+> このトピックは、Windows 上の Visual Studio のインストールに適用されます。 [Visual Studio Code](https://code.visualstudio.com/) は Windows、Mac、および Linux システムで実行される軽量のクロスプラット フォーム開発環境です。 Microsoft [C/C++ for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools) 拡張機能は、IntelliSense、デバッグ、コードの書式設定、オートコンプリートをサポートしています。 Visual Studio for Mac は、Microsoft C をサポートしていませんが、.NET 言語とクロスプラットフォーム開発はサポートしています。 インストール手順については、「[Visual Studio for Mac をインストール](/visualstudio/mac/installation/)」参照してください。
 
-このバージョンの他の新機能については、 Visual studio[リリース ノート](/visualstudio/releases/2019/release-notes/)します。
+このバージョンの他の新機能については、 Visual Studio [リリース ノート](/visualstudio/releases/2019/release-notes/)をご覧ください。
 
 インストールの準備ができたら、 各ステップを順に実行していきます。
 
@@ -47,7 +46,7 @@ Visual Studio 2019 と以前のバージョンの Visual Studio を共存させ�
 
 ### <a name="step-2---download-visual-studio"></a>手順 2 - Visual Studio をダウンロードする
 
-次に、Visual Studio ブートストラップ ファイルをダウンロードします。 これを行うには、以下のボタンを選択し、必要な Visual Studio のエディションを選択して、**[保存]**、**[フォルダーを開く]** の順に選択します。
+次に、Visual Studio ブートストラップ ファイルをダウンロードします。 これを行うには、以下のボタンを選択し、必要な Visual Studio のエディションを選択して、 **[保存]** 、 **[フォルダーを開く]** の順に選択します。
 
  > [!div class="button"]
  > [Visual Studio のダウンロード](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2019+rc)
@@ -62,13 +61,13 @@ Visual Studio 2019 と以前のバージョンの Visual Studio を共存させ�
    * Visual Studio Professional の場合は **vs_professional.exe**
    * Visual Studio Enterprise の場合は **vs_enterprise.exe**
 
-   ユーザー アカウント制御の通知を受信する場合、**[はい]** を選択します。
+   ユーザー アカウント制御の通知を受信する場合、 **[はい]** を選択します。
 
 1. Microsoft の[ライセンス条項](https://visualstudio.microsoft.com/license-terms/)と[プライバシーに関する声明](https://privacy.microsoft.com/privacystatement)の確認を求められます。 **[続行]** を選択します。
 
 ### <a name="step-4---choose-workloads"></a>手順 4 - ワークロードを選択する
 
-インストーラーがインストールされた後は、インストールを選択してカスタマイズするを使用できます、*ワークロード*の機能セットを使用するか。 ここではその方法を説明します。
+インストーラーがインストールされた後は、*ワークロード*を選択するか、または機能セットを選択するかして、インストールをカスタマイズできます。 ここではその方法を説明します。
 
 1. **[Visual Studio のインストール]** 画面で、必要なワークロードを見つけます。
 
@@ -78,18 +77,18 @@ Visual Studio 2019 と以前のバージョンの Visual Studio を共存させ�
 
    追加のワークロードでは、C++ 開発の他の種類をサポートします。 たとえば、Windows ランタイムを使用して、Microsoft Store のアプリを作成する「ユニバーサル Windows プラットフォーム開発」ワークロードを選択します。 「C++ によるゲーム開発」を選択し、DirectX、Unreal、Cocos2d を使用してゲームを作成します。 IoT 開発を含む、ターゲットの Linux プラットフォームに「C++ による Linux 開発」を選択します。
 
-   **インストールの詳細**ウィンドウには、各ワークロードによってインストールされた付属しており、省略可能なコンポーネントが一覧表示されます。 選択するか、この一覧でオプションのコンポーネントの選択を解除できます。 たとえば、Visual Studio 2017 または 2015年コンパイラ ツールセットを使用して開発をサポートするために、MSVC v141 または MSVC v140 の省略可能なコンポーネントを選択します。 MFC、実験のモジュールの言語拡張機能、IncrediBuild は、その他のサポートを追加することができます。
+   **インストールの詳細**ウィンドウには、各ワークロードによってインストールされた付属コンポーネントが含まれており、省略可能なコンポーネントが一覧表示されます。 この一覧で省略可能なコンポーネントを選択するか、選択を解除できます。 たとえば、Visual Studio 2017 または 2015 のコンパイラ ツール セットを使用して開発をサポートする場合は、MSVC v141 または MSVC v140 の省略可能なコンポーネントを選択します。 MFC、実験的モジュールの言語拡張機能、IncrediBuild などについては、サポートを追加することができます。
 
-1. ワークロードとする省略可能なコンポーネントを選択した後選択**インストール**します。
+1. ワークロードと必要とする省略可能なコンポーネントを選択した後、 **[インストール]** を選択します。
 
     そうすると、ステータス画面が表示され、Visual Studio のインストールの進行状況が示されます。
 
 > [!TIP]
-> インストール後いつでも、最初にインストールしなかったワークロードまたはコンポーネントをインストールできます。 Visual Studio を開いている場合は、**[ツール]** > **[ツールと機能を取得]** に移動すると、Visual Studio インストーラーが開きます。 または、スタート メニューから **Visual Studio インストーラー**を開きます。 そこから、インストールするワークロードまたはコンポーネントを選択できます。 次に、**[変更]** を選択します。
+> インストール後いつでも、最初にインストールしなかったワークロードまたはコンポーネントをインストールできます。 Visual Studio を開いている場合は、 **[ツール]**  >  **[ツールと機能を取得]** に移動すると、Visual Studio インストーラーが開きます。 または、スタート メニューから **Visual Studio インストーラー**を開きます。 そこから、インストールするワークロードまたはコンポーネントを選択できます。 次に、 **[変更]** を選択します。
 
 ## <a name="step-5---choose-individual-components-optional"></a>手順 5 - 個々のコンポーネントを選択する (省略可能)
 
-ワークロード機能を使用して Visual Studio のインストールをカスタマイズしない場合、またはワークロードのインストール以外のコンポーネントを追加する場合は、**[個別のコンポーネント]** タブから個々のコンポーネントをインストールまたは追加することによって行うことができます。必要なものを選択した後、画面の指示に従います。
+ワークロード機能を使用して Visual Studio のインストールをカスタマイズしない場合、またはワークロードのインストール以外のコンポーネントを追加する場合は、 **[個別のコンポーネント]** タブから個々のコンポーネントをインストールまたは追加することによって行うことができます。必要なものを選択した後、画面の指示に従います。
 
   ![Visual Studio 2019 - 個々のコンポーネントのインストール](../get-started/media/vs-installer-individual-components.png "Visual Studio の個々のコンポーネントのインストール")
 
@@ -105,7 +104,7 @@ Visual Studio 2019 と以前のバージョンの Visual Studio を共存させ�
 
 ### <a name="step-7---change-the-installation-location-optional"></a>手順 7 - インストール場所の変更 (省略可能)
 
-システム ドライブ上の Visual Studio のインストール占有領域を小さくすることができます。 ダウンロード キャッシュ、共有コンポーネント、SDK、およびツールを別のドライブに移動して、Visual Studio を最速で実行できるドライブで維持できます。
+システム ドライブ上の Visual Studio のインストール占有領域を小さくすることができます。 ダウンロード キャッシュ、共有コンポーネント、SDK、およびツールを別のドライブに移動して、Visual Studio を最速で実行するドライブで Visual Studio を維持できます。
 
   ![Visual Studio 2019 - インストール場所を変更する](../get-started/media/vs-installer-installation-locations.png "インストール場所を変更する")
 
@@ -116,7 +115,7 @@ Visual Studio 2019 と以前のバージョンの Visual Studio を共存させ�
 
 1. Visual Studio のインストールが完了したら **[起動]** を選択して、Visual Studio を使用した開発を開始します。
 
-1. スタート ウィンドウで、**[新しいプロジェクトの作成]** を選択します。
+1. スタート ウィンドウで、 **[新しいプロジェクトの作成]** を選択します。
 
 1. 検索ボックスに作成するアプリの種類を入力し、使用可能なテンプレートの一覧を表示します。 テンプレートの一覧は、インストール時に選択したワークロードに依存します。 別のテンプレートを表示するには、異なるワークロードを選択します。
 
@@ -160,16 +159,15 @@ Visual Studio 2017 では、簡単に選択し、必要な機能だけをイン�
 
    ![C++ ワークロードによるデスクトップ開発](media/desktop-development-with-cpp.png "C++ によるデスクトップ開発")
 
-   C++ の場合は、**[C++ ワークロードを使用したデスクトップ開発]** を選択し、それから **[インストール]** を選択してください。
+   C++ の場合は、 **[C++ ワークロードを使用したデスクトップ開発]** を選択し、それから **[インストール]** を選択してください。
 
    ![C++ のワークロードを使用したデスクトップ開発をインストール](media/vscpp-concierge-choose-workload.gif "C++ ワークロードでのデスクトップ開発のインストール")
 
-1. インストールが完了したら、**[起動]** ボタンを選択して Visual Studio を起動します。
+1. インストールが完了したら、 **[起動]** ボタンを選択して Visual Studio を起動します。
 
    初めて Visual Studio を実行する Microsoft アカウントでサインインするか求められます。 アカウントをお持ちでない場合は、新しいアカウントを無料で作成できます。 テーマを選択する必要もあります。 後で変更することもできるので、ご安心ください。
 
    Visual Studio をいくつかでかかる場合がありますを準備する分を使用して、初めて実行します。 どのようになるかを、短いコマ撮りで次に示します。
-
 
    ![Visual Studio 2017 のサインイン](media/vscpp-quickstart-first-run.gif "Visual Studio 2017 のサインイン")
 

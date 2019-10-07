@@ -71,7 +71,7 @@ C++ 標準ライブラリは、このテンプレート クラスの 2 つの明
 
 テンプレートクラス`ctype<CharType>`のその他の特殊化:
 
-- 式  を`(char)ch`使用して、 *chartype*型の値 ch を char 型の値に変換します。
+- 式 を`(char)ch`使用して、 *chartype*型の値 ch を char 型の値に変換します。
 
 - **Char**型の値*byte*を、式`CharType(byte)`を使用して*chartype*型の値に変換します。
 
@@ -603,7 +603,7 @@ const CharType *scan_is(
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は[](#do_scan_is)、do_scan_is`maskVal`( `first`, `last`,) を返します。
+このメンバー関数は、[do_scan_is](#do_scan_is)`maskVal`( `first`, `last`,) を返します。
 
 ### <a name="example"></a>例
 
@@ -659,7 +659,7 @@ const CharType *scan_not(
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は[](#do_scan_not)、do_scan_not`maskVal`( `first`, `last`,) を返します。
+このメンバー関数は、[do_scan_not](#do_scan_not)`maskVal`( `first`, `last`,) を返します。
 
 ### <a name="example"></a>例
 
@@ -716,7 +716,7 @@ const CharType *tolower(CharType* first, const CharType* last) const;
 
 ### <a name="remarks"></a>Remarks
 
-1つ目のメンバー [](#do_tolower)関数は`ch`、do_tolower () を返します。 2番目のメンバー関数は`first`、 `last` [do_tolower](#do_tolower)(,) を返します。
+1つ目のメンバー関数は`ch`、[do_tolower](#do_tolower) () を返します。 2番目のメンバー関数は`first`、 `last` [do_tolower](#do_tolower)(,) を返します。
 
 ### <a name="example"></a>例
 
@@ -771,7 +771,7 @@ const CharType *toupper(CharType* first, const CharType* last) const;
 
 ### <a name="remarks"></a>Remarks
 
-1つ目のメンバー [](#do_toupper)関数は`ch`、do_toupper () を返します。 2 番目のメンバー関数は、[do_toupper](#do_toupper)( `first`, `last`) を返します。
+1つ目のメンバー関数は`ch`、[do_toupper](#do_toupper) () を返します。 2 番目のメンバー関数は、[do_toupper](#do_toupper)( `first`, `last`) を返します。
 
 ### <a name="example"></a>例
 
@@ -829,7 +829,7 @@ const char *widen(const char* first, const char* last, CharType* dest) const;
 
 ### <a name="remarks"></a>Remarks
 
-1つ目のメンバー [](#do_widen)関数は`byte`、do_widen () を返します。 2番目のメンバー関数は`first`、 `last` [do_widen](#do_widen)(,, `dest`) を返します。
+1つ目のメンバー関数は`byte`、[do_widen](#do_widen) () を返します。 2番目のメンバー関数は`first`、 `last` [do_widen](#do_widen)(,, `dest`) を返します。
 
 ### <a name="example"></a>例
 

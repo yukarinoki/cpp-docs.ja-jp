@@ -14,7 +14,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68455313"
 ---
-# <a name="inputiteratortag-struct"></a>input_iterator_tag 構造体
+# <a name="input_iterator_tag-struct"></a>input_iterator_tag 構造体
 
 入力反復子を表す関数の`iterator_category`戻り値の型を提供するクラス。
 
@@ -30,7 +30,7 @@ struct input_iterator_tag {};
 
 ## <a name="example"></a>例
 
-の[](../standard-library/iterator-traits-struct.md)使用`iterator_tag`方法の例については、「iterator_traits or [random_access_iterator_tag](../standard-library/random-access-iterator-tag-struct.md) 」を参照してください。
+の使用`iterator_tag`方法の例については、「[iterator_traits](../standard-library/iterator-traits-struct.md) or [random_access_iterator_tag](../standard-library/random-access-iterator-tag-struct.md) 」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 

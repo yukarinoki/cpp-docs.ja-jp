@@ -1,10 +1,10 @@
 ---
 title: _ismbblead、_ismbblead_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ismbblead_l
 - _ismbblead
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - ismbblead_l
 - istlead
@@ -32,14 +35,14 @@ helpviewer_keywords:
 - ismbblead_l function
 - _istlead function
 ms.assetid: 2abc6f75-ed5c-472e-bfd0-e905a1835ccf
-ms.openlocfilehash: 7bf8e8c88153e2f22cfa08bb35ff8d4ba01a8804
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c0f9ec748a86d5d1413cf4f881234d786c2a2d78
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157212"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954063"
 ---
-# <a name="ismbblead-ismbbleadl"></a>_ismbblead、_ismbblead_l
+# <a name="_ismbblead-_ismbblead_l"></a>_ismbblead、_ismbblead_l
 
 文字をテストして、その文字がマルチバイト文字の先行バイトかどうかを判定します。
 
@@ -65,19 +68,19 @@ int _ismbblead_l(
 
 ## <a name="return-value"></a>戻り値
 
-0 以外の値を返します、整数*c*がマルチバイト文字の最初のバイト。
+は、整数*c*がマルチバイト文字の最初のバイトの場合、0以外の値を返します。
 
 ## <a name="remarks"></a>Remarks
 
-マルチバイト文字は、先行バイトとそれに続く後続バイトで構成されます。 先行バイトは、特定の文字セットの特定の範囲内にあるかどうかで識別されます。 たとえば、コード ページ 932 でのみ、先行バイトの範囲は 0x81-0x9F および 0xE0 - 0 xfc です。
+マルチバイト文字は、先行バイトとそれに続く後続バイトで構成されます。 先行バイトは、特定の文字セットの特定の範囲内にあるかどうかで識別されます。 たとえば、コードページ932でのみ、潜在顧客のバイト範囲は 0x81-0x9F と 0xE0-0xFC です。
 
-**_ismbblead**ロケールに依存する動作に現在のロケールを使用します。 **_ismbblead_l**代わりに渡されたロケールを使用すると同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+**_ismbblead**は、ロケールに依存する動作に現在のロケールを使用します。 **_ismbblead_l**は、渡されたロケールを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
 |Tchar.h のルーチン|_UNICODE および _MBCS が未定義の場合|_MBCS が定義されている場合|_UNICODE が定義されている場合|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_istlead**|常に false を返します|**_ismbblead**|常に false を返します|
+|**istlead (_d)**|常に false を返します|**_ismbblead**|常に false を返します|
 
 ## <a name="requirements"></a>必要条件
 

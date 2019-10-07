@@ -5,16 +5,16 @@ helpviewer_keywords:
 - warnings, compiler
 - cl.exe compiler, setting options
 ms.assetid: 69809cfb-a38a-4035-b154-283a61938df8
-ms.openlocfilehash: a8b203c94d4a5af28837627fda1b8e1631dfb0c0
-ms.sourcegitcommit: 7babce70714242cf498ca811eec3695fad3abd03
+ms.openlocfilehash: f74c413a81a1da6398666a0c15936cb76b5a7144
+ms.sourcegitcommit: a361362354f6ce51eda4ffdb016b81c24cd225cb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70220488"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71712671"
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>既定で無効になっているコンパイラ警告
 
-コンパイラは、既定では無効になっている警告をサポートしています。これは、ほとんどの開発者がそれを見つけることができないためです。 場合によっては、スタイルが選択されたこと、または古いコードの共通表現について警告することがあります。 その他の警告は、言語に対する Microsoft 拡張機能の使用に関するものです。 それ以外のケースでは、プログラマが誤った想定を行うことが多い領域を示しています。これは、予期しない動作や未定義の動作につながる可能性があります。 有効にすると、これらの警告の一部がライブラリヘッダーで何度も表示される場合があります。 C ランタイムライブラリとC++標準ライブラリは、警告レベルの[/W4](../build/reference/compiler-option-warning-level.md)でのみ警告を出力することを目的としています。
+コンパイラは、既定では無効になっている警告をサポートしています。これは、ほとんどの開発者がそれを見つけることができないためです。 場合によっては、スタイルが選択されたこと、または古いコードの共通表現について警告することがあります。 その他の警告は、言語に対する Microsoft 拡張機能の使用に関するものです。 一部の警告は、プログラマが誤った想定を行う可能性がある領域を示しています。これは、予期しない動作や未定義の動作につながる可能性があります。 これらの警告がすべて有効になっている場合は、ライブラリヘッダーに何度も表示されることがあります。 C ランタイムライブラリとC++標準ライブラリは、警告レベルの[/W4](../build/reference/compiler-option-warning-level.md)でのみ警告を出力することを目的としています。
 
 ## <a name="enable-warnings-that-are-off-by-default"></a>既定でオフになっている警告を有効にする
 
@@ -89,7 +89,7 @@ Visual Studio 2015 以降のバージョンでは、次の警告が既定で無�
 |C4587 (レベル 1)|'*anonymous_structure*': 動作変更: コンストラクターは暗黙的に呼び出されなくなりました|
 |C4588 (レベル 1)|'*anonymous_structure*': 動作変更: デストラクターは暗黙的に呼び出されなくなりました|
 |[C4596](../error-messages/compiler-warnings/c4596.md)(レベル 4)|'*identifier*': メンバー宣言<sup>14.3</sup> <sup>Perm</sup>内の修飾名が無効です|
-|C4598 (レベル1およびレベル 3)|' #include "*header*" ': プリコンパイル済みヘッダーのヘッダー番号*番号*が、その位置<sup>14.3</sup>の現在のコンパイルと一致しません|
+|C4598 (レベル1およびレベル 3)|' #include "*header*" ': プリコンパイル済みヘッダーのヘッダー番号*ヘッダー番号*が、その位置<sup>14.3</sup>の現在のコンパイルと一致しません|
 |C4599 (レベル 3)|'*オプション* *パス*': コマンドライン引数の数*数*プリコンパイル済みヘッダーと一致しません<sup>14.3</sup>|
 |C4605 (レベル 1)|現在のコマンドラインで '/d*macro*' が指定されましたが、プリコンパイル済みヘッダーがビルドされたときに指定されませんでした|
 |[C4608](../error-messages/compiler-warnings/compiler-warning-level-3-c4608.md)(レベル 3)|'*union_member*' は、初期化子リスト '*union_member* <sup>' の</sup>別の共用体メンバーによって既に初期化されています。|
@@ -108,7 +108,7 @@ Visual Studio 2015 以降のバージョンでは、次の警告が既定で無�
 |[C4692](../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md)(レベル 1)|'*function*': プライベートでないメンバーのシグネチャには、アセンブリプライベートネイティブ型 '*native_type*' が含まれています|
 |[C4710](../error-messages/compiler-warnings/compiler-warning-level-4-c4710.md)(レベル 4)|'*function*': 関数がインライン化されていません。|
 |[C4738](../error-messages/compiler-warnings/compiler-warning-level-3-c4738.md)(レベル 3)|メモリに 32 ビットの浮動結果を格納します。パフォーマンスが低下する可能性があります|
-|[C4746](../error-messages/compiler-warnings/compiler-warning-c4746.md)|'*expression*' の volatile アクセスは/volatile:\<iso&#124;ms > 設定の対象になります。 __iso_volatile_load/store 組み込み関数を使用することを検討してください|
+|[C4746](../error-messages/compiler-warnings/compiler-warning-c4746.md)|'*expression*' の volatile アクセスは、/volatile: \< iso&#124;ms > 設定; の対象となります。__iso_volatile_load/store 組み込み関数の使用を検討する|
 |C4749 (レベル 4)|条件付きでサポート: offsetof が非標準レイアウト型 '*type*' に適用されました|
 |C4767 (レベル 4)|セクション名 '*symbol*' が8文字を超えているため、リンカーによって切り捨てられます|
 |C4768 (レベル 3)|リンケージ指定の前の __declspec 属性は無視されます|
@@ -142,21 +142,21 @@ Visual Studio 2015 以降のバージョンでは、次の警告が既定で無�
 |C5029 (レベル 4)|非標準のC++拡張機能が使用されています: 変数、データメンバー、タグの種類にのみ適用されるアラインメント属性|
 |C5031 (レベル 4)|#pragma 警告 (pop): 不一致の可能性があります。ポップアップの警告状態が別のファイル<sup>14.1</sup>にプッシュされました|
 |C5032 (レベル 4)|検出された #pragma 警告 (プッシュ) に対応する #pragma 警告 (pop) <sup>14.1</sup>がありません|
-|C5034|組み込みの '*組み込み*' を使用すると、関数*関数*がゲストコード<sup>15.3</sup>としてコンパイルされます|
-|C5035|機能 '*feature*' を使用すると、関数*関数*がゲストコード<sup>15.3</sup>としてコンパイルされます|
+|C5034|組み込みの '*組み込み*' を使用すると、関数の*名前*がゲストコード<sup>15.3</sup>としてコンパイルされます。|
+|C5035|機能 '*feature*' を使用すると *、* 関数の名前がゲストコード<sup>15.3</sup>としてコンパイルされます|
 |C5036 (レベル 1)|/hybrid: x86arm64 ' type1 *' から '* *type1*' <sup>15.3</sup>を使用してコンパイルするときの varargs 関数ポインター変換|
 |[C5038](../error-messages/compiler-warnings/c5038.md)(レベル 4)|データメンバー '*member1*' はデータメンバー '*member2*' <sup>15.3</sup>の後に初期化されます|
 |C5039 (レベル 4)|'*function*':-ehc で extern c 関数に渡される可能性のあるスロー関数へのポインターまたは参照です。 この関数が例外をスローした場合、未定義の動作が発生する可能性があります。 <sup>15.5</sup>|
 |C5042 (レベル 3)|'*function*': ブロックスコープの関数宣言を標準C++で ' inline ' に指定することはできません。' inline ' 指定子<sup>15.5</sup>の削除|
 |[C5045](../error-messages/compiler-warnings/c5045.md)|/Qspectre スイッチが指定されている場合、コンパイラはメモリ負荷の Spectre 軽減策を挿入します。 <sup>15.7</sup>|
 
-<sup>14.1</sup> Visual Studio 2015 Update 1 以降では、この警告を利用できます。
-<sup>14.3</sup> Visual Studio 2015 Update 3 以降では、この警告を利用できます。
-<sup>15.3</sup> Visual Studio 2017 バージョン15.3 以降では、この警告は使用できます。
-<sup>15.5</sup> Visual Studio 2017 バージョン15.5 以降では、この警告は使用できます。
-<sup>15.7</sup> Visual Studio 2017 バージョン15.7 以降では、この警告は使用できます。
-<sup>15.8</sup> Visual Studio 2017 バージョン15.8 以降では、この警告は使用できます。
-<sup>16.0</sup>この警告は、Visual STUDIO 2019 RTM 以降で使用できます。
+<sup>14.1</sup> Visual Studio 2015 Update 1 以降では、この警告を利用できます。\
+<sup>14.3</sup> Visual Studio 2015 Update 3 以降では、この警告を利用できます。\
+<sup>15.3</sup> Visual Studio 2017 バージョン15.3 以降では、この警告は使用できます。\
+<sup>15.5</sup> Visual Studio 2017 バージョン15.5 以降では、この警告は使用できます。\
+<sup>15.7</sup> Visual Studio 2017 バージョン15.7 以降では、この警告は使用できます。\
+<sup>15.8</sup> Visual Studio 2017 バージョン15.8 以降では、この警告は使用できます。\
+<sup>16.0</sup>この警告は、Visual STUDIO 2019 RTM 以降で使用できます。\
 <sup>Perm</sup>この警告は、 [/permissive-](../build/reference/permissive-standards-conformance.md)コンパイラオプションが設定されていない場合にオフになります。
 
 ## <a name="warnings-off-by-default-in-earlier-versions"></a>以前のバージョンでは、既定で警告がオフになっています

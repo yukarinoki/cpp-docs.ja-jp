@@ -1,12 +1,12 @@
 ---
 title: _strdec、_wcsdec、_mbsdec、_mbsdec_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wcsdec
 - _strdec
 - _mbsdec
 - _mbsdec_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _strdec
 - mbsdec_l
@@ -40,12 +43,12 @@ helpviewer_keywords:
 - wcsdec function
 - _mbsdec function
 ms.assetid: ae37c223-800f-48a9-ae8e-38c8d20af2dd
-ms.openlocfilehash: a937f8fcd18dd62bb7c63cf60c250cf7986b69b7
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: ffb2b81f5ce5a251fb931099a1023a441ca4d496
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500907"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70958212"
 ---
 # <a name="_strdec-_wcsdec-_mbsdec-_mbsdec_l"></a>_strdec、_wcsdec、_mbsdec、_mbsdec_l
 
@@ -79,7 +82,7 @@ unsigned char *_mbsdec_l(
 ### <a name="parameters"></a>パラメーター
 
 *start*<br/>
-ソース文字列内の任意の文字 ( **_mbsdec**と **_mbsdec_l**の場合は、マルチバイト文字の最初のバイト) へのポインター。ソース文字列の先頭の前に*開始*する必要があります。
+ソース文字列内の任意の文字 ( **_mbsdec**と **_mbsdec_l**の場合は、マルチバイト文字の最初のバイト) へのポインター。ソース*文字列の先頭の前に* *開始*する必要があります。
 
 *current*<br/>
 ソース文字列内の任意の文字 ( **_mbsdec**と **_mbsdec_l**の場合は、マルチバイト文字の最初のバイト) へのポインター。*現在*の位置は、ソース文字列の*先頭*に続く必要があります。

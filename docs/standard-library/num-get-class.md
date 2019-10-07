@@ -21,7 +21,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68457641"
 ---
-# <a name="numget-class"></a>num_get クラス
+# <a name="num_get-class"></a>num_get クラス
 
 `CharType` 型のシーケンスから数値への変換を制御するためにロケール ファセットとして使用できるオブジェクトを表すテンプレート クラス。
 
@@ -441,7 +441,7 @@ iter_type get(
 
 整数入力フィールドは、ファイルから一連の**char**要素を照合して変換するために、スキャン機能によって使用されるのと同じ規則によって変換されます。 このような**char**要素は、単純な1対1のマッピング`CharType`によって、型の同等の要素にマップされると見なされます。 同等のスキャン変換仕様は次のように決定されます。
 
-- `iosbase` [フラグ](../standard-library/ios-base-class.md#flags) & 10月、[](../standard-library/ios-functions.md#oct)変換仕様は`lo`です。`ios_base::basefield` == `ios_base::`
+- `iosbase` [flags](../standard-library/ios-base-class.md#flags) & `ios_base::basefield` == `ios_base::`[oct](../standard-library/ios-functions.md#oct)、変換仕様は `lo` です。
 
 - **Iosbase. flags** & **ios_base:: basefield** == `ios_base::`[hex](../standard-library/ios-functions.md#hex)の場合、変換仕様は`lx`です。
 
@@ -517,7 +517,7 @@ virtual iter_type do_get(iter_type first,
 
 この関数の動作は 1 番目と同じですが、空でない完全なブール値入力フィールドとの一致を試みる点が異なります。 成功した場合は、ブール型の入力フィールドを**bool**型の値に変換し、その値を*val*に格納します。
 
-ブール値入力フィールドは、次の 2 つの形式のいずれかになります。 **Iosbase. flags**の場合。 **フラグ**   [](../standard-library/ios-functions.md#boolalpha)のブール値は false です。これは整数入力フィールドと同じですが、変換後の値は 0 (false の場合) または 1 (true の場合) のいずれかである必要があります。 & `ios_base::` それ以外の場合、シーケンスはいずれかの**fac.** に一致する必要があります。 [falsename](../standard-library/numpunct-class.md#falsename)( **false**の場合)、または**fac.** です。 [](../standard-library/numpunct-class.md#truename) ○( **true**の場合)。
+ブール値入力フィールドは、次の 2 つの形式のいずれかになります。 **Iosbase. flags**の場合。 **フラグ**の [boolalpha](../standard-library/ios-functions.md#boolalpha) は false です。これは整数入力フィールドと同じですが、変換後の値は 0 (false の場合) または 1 (true の場合) のいずれかである必要があります。 & `ios_base::` それ以外の場合、シーケンスはいずれかの**fac.** に一致する必要があります。 [falsename](../standard-library/numpunct-class.md#falsename)( **false**の場合)、または**fac.** です。 [truename](../standard-library/numpunct-class.md#truename) ( **true**の場合)。
 
 ### <a name="example"></a>例
 

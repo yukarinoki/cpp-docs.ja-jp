@@ -1,9 +1,9 @@
 ---
 title: fegetexceptflag
 ms.date: 04/05/2018
-apiname:
+api_name:
 - fegetexceptflag
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,19 +15,22 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fegetexceptflag
 - fenv/fegetexceptflag
 helpviewer_keywords:
 - fegetexceptflag function
 ms.assetid: 2d28f0ca-70c9-4cff-be8b-3d876eacde71
-ms.openlocfilehash: 43259001bd05bb7df9e2e1636c174018dcdaef3c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3d3bf59b28a464dc163dc027b867e890c3c8797b
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62334425"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941228"
 ---
 # <a name="fegetexceptflag"></a>fegetexceptflag
 
@@ -45,10 +48,10 @@ int fegetexceptflag(
 ### <a name="parameters"></a>パラメーター
 
 *pstatus*<br/>
-ポインターを**fexcept_t**で指定された例外フラグの現在の値を格納するオブジェクト*除く*します。
+*Removed*によって指定された例外フラグの現在の値を格納する**fexcept_t**オブジェクトへのポインター。
 
-*excepts*<br/>
-格納する浮動小数点例外フラグ*pstatus*します。
+*removed*<br/>
+*Pstatus*に格納する浮動小数点例外フラグ。
 
 ## <a name="return-value"></a>戻り値
 
@@ -56,7 +59,7 @@ int fegetexceptflag(
 
 ## <a name="remarks"></a>Remarks
 
-**Fegetexceptflag**関数で指定された浮動小数点例外状態フラグの現在の状態を格納する*除く*で、 **fexcept_t**によって指されるオブジェクト*pstatus*します。  *pstatus*有効 をポイントする必要があります**fexcept_t**オブジェクト、またはその後の動作が定義されていません。 **Fegetexceptflag**関数で定義されている、これらの例外マクロをサポートする\<fenv.h >:
+**Fegetexceptflag**関数は、 *pstatus*が指す**fexcept_t**オブジェクトの*removed*によって指定された浮動小数点例外状態フラグの現在の状態を格納します。  *pstatus*は有効な**fexcept_t**オブジェクトを指している必要があります。それ以降の動作は未定義です。 **Fegetexceptflag**関数は、fenv.h> > で\<定義されている次の例外マクロをサポートしています。
 
 |例外処理マクロ|説明|
 |---------------------|-----------------|
@@ -67,7 +70,7 @@ int fegetexceptflag(
 |FE_UNDERFLOW|前の浮動小数点演算結果は小さすぎて最大有効桁数で表現できませんでした。|
 |FE_ALLEXCEPT|すべてのサポートされる浮動小数点例外のビット演算 OR。|
 
-*除く*引数が、0 にすることがありますまたはマクロの 2 つ以上のサポートされる浮動小数点例外マクロ、またはビットごとの 1 つ。 他の引数値の結果は未定義です。
+*Removed*引数には、0、サポートされている浮動小数点例外マクロの1つ、または2つ以上のマクロのビットごとの or を指定できます。 他の引数値の結果は未定義です。
 
 この関数を使用するには、呼び出しの前に `#pragma fenv_access(on)` ディレクティブを使用してアクセスを妨げる可能性のある浮動小数点の最適化をオフにする必要があります。 詳細については、「 [fenv_access](../../preprocessor/fenv-access.md)」を参照してください。
 

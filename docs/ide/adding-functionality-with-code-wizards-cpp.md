@@ -4,12 +4,12 @@ ms.date: 05/14/2019
 helpviewer_keywords:
 - code wizards [C++]
 ms.assetid: 6afb7ef9-7056-423d-b244-91bb4236d1d7
-ms.openlocfilehash: efced3be3a0bcc7efe16aef1061c4cd9ec1ed21c
-ms.sourcegitcommit: 65ed563a8a1d4d90f872a2a6edcb086f84ec9f77
+ms.openlocfilehash: 360f206ff4dae0b49650e131ccd86ecf9a0ed87d
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66741637"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907487"
 ---
 # <a name="adding-functionality-with-code-wizards-c"></a>コード ウィザードを使用した機能の追加 (C++)
 
@@ -29,13 +29,13 @@ ms.locfileid: "66741637"
 
 
 > [!NOTE]
->  メッセージ ハンドラーを追加して、そこにメッセージを追加し、[プロパティ ウィンドウ](/visualstudio/ide/reference/properties-window)を使用して MFC 仮想関数をオーバーライドできます。
+>  メッセージ ハンドラーを追加して、そこにメッセージを追加し、[MFC クラス ウィザード](../mfc/reference/mfc-class-wizard.md)を使用して MFC 仮想関数をオーバーライドできます。
 
 ## <a name="accessing-c-code-wizards"></a>C++ コード ウィザードにアクセスする
 
 C++ コード ウィザードには、次の 3 つの場所からアクセスできます。
 
-- **[プロジェクト]** メニューの **[新しい項目の追加]** コマンドによって、`Add New Item` ダイアログ ボックスを表示できます。これは、新しいファイルをプロジェクトに追加するのに役立ちます。 **[クラスの追加]** コマンドでは、[[クラスの追加]](../ide/add-class-dialog-box.md) ダイアログ ボックスが表示されます。このダイアログ ボックスでは、プロジェクトに追加できるクラス タイプごとにウィザードが開かれます。 **[リソースの追加]** コマンドでは、[[リソースの追加]](../windows/add-resource-dialog-box.md) ダイアログ ボックスが表示されます。ここから、プロジェクトに追加するリソースを作成または選択することができます。
+- **[プロジェクト]** メニューの **[新しい項目の追加]** コマンドによって、`Add New Item` ダイアログ ボックスを表示できます。これは、新しいファイルをプロジェクトに追加するのに役立ちます。 **[クラスの追加]** コマンドでは、[[クラスの追加]](../ide/add-class-dialog-box.md) ダイアログ ボックスが表示されます。このダイアログ ボックスでは、プロジェクトに追加できるクラス タイプごとにウィザードが開かれます。 MFC クラスには、[MFC クラス ウィザード](../mfc/reference/mfc-class-wizard.md)を使用します。 **[リソースの追加]** コマンドでは、[[リソースの追加]](../windows/add-resource-dialog-box.md) ダイアログ ボックスが表示されます。ここから、プロジェクトに追加するリソースを作成または選択することができます。
 
    クラス ビューでプロジェクト内のクラスまたはインターフェイスを強調表示している場合、 **[プロジェクト]** メニューには次のコマンドも表示されます。
 

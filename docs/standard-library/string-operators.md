@@ -820,7 +820,7 @@ basic_istream<CharType, Traits>& operator>>(
 
 - 関数が [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype**\< **CharType**> >( `getloc`) の要素 *ch* を抽出した後。 **is**( **ctype**\< **CharType**>:: **space**, *ch*) が true の場合、文字が戻されます。
 
-関数が要素を抽出しなかった場合[](../standard-library/basic-ios-class.md#setstate)は、`ios_base::failbit`setstate () を呼び出します。 どのような場合でも、 **istr**を呼び出します。 **幅**(0) \* **を返します**。
+関数が要素を抽出しなかった場合は、`ios_base::failbit`[setstate](../standard-library/basic-ios-class.md#setstate) () を呼び出します。 どのような場合でも、 **istr**を呼び出します。 **幅**(0) \* **を返します**。
 
 ### <a name="example"></a>例
 

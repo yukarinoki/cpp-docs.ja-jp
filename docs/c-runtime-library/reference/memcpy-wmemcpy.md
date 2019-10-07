@@ -1,10 +1,10 @@
 ---
 title: memcpy、wmemcpy
 ms.date: 11/04/2016
-apiname:
+api_name:
 - memcpy
 - wmemcpy
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wmemcpy
 - memcpy
@@ -24,12 +27,12 @@ helpviewer_keywords:
 - wmemcpy function
 - memcpy function
 ms.assetid: 34abb90b-bffb-46dc-a2f3-a5e9940839d6
-ms.openlocfilehash: f687e231060c287e206017dc61fe1d5193d8f0de
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: e9d947dc4e9ecea654e8cb16e957887fe4360161
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499641"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951853"
 ---
 # <a name="memcpy-wmemcpy"></a>memcpy、wmemcpy
 
@@ -77,7 +80,7 @@ wchar_t *wmemcpy(
 >
 > VC + + コンパイラとライブラリによる**memcpy**の使用は慎重に調査されているため、これらの呼び出しは、他の方法で SDL に準拠しているコード内で許可されます。  アプリケーションのソースコードで導入された**memcpy**呼び出しは、その使用がセキュリティの専門家によって確認されている場合にのみ、SDL に準拠しています。
 
-次の例のように、関数を非推奨にするために、_CRT_SECURE_DEPRECATE_MEMORY 関数は、include ステートメントの前に定数が定義されている場合にのみ非推奨となります。
+次の例のように **、関数を**非推奨にするために、_CRT_SECURE_DEPRECATE_MEMORY 関数は、include ステートメントの前に定数が定義されている場合にのみ非**推奨となり**ます。
 
 ```C
 #define _CRT_SECURE_DEPRECATE_MEMORY

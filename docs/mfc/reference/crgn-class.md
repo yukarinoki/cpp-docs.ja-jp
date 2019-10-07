@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CRgn [MFC], RectInRegion
 - CRgn [MFC], SetRectRgn
 ms.assetid: d904da84-76aa-481e-8780-b09485f49e64
-ms.openlocfilehash: 66721f34a8ac2b6dac6addcfa04a88b46a37ee60
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
-ms.translationtype: HT
+ms.openlocfilehash: 97266ac9e4f1885149ce521f554ad2f22daee6e0
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916831"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741501"
 ---
 # <a name="crgn-class"></a>CRgn クラス
 
@@ -78,13 +78,13 @@ class CRgn : public CGdiObject
 |[CRgn::CombineRgn](#combinergn)|指定し`CRgn`た`CRgn` 2 つのオブジェクトの和集合と等価になるようにオブジェクトを設定します。|
 |[CRgn::CopyRgn](#copyrgn)|オブジェクトを`CRgn` 、指定した`CRgn`オブジェクトのコピーであるように設定します。|
 |[CRgn::CreateEllipticRgn](#createellipticrgn)|楕円領域`CRgn`を使用してオブジェクトを初期化します。|
-|[CRgn::CreateEllipticRgnIndirect](#createellipticrgnindirect)|[RECT](/windows/desktop/api/windef/ns-windef-tagrect) 構造体で定義された楕円領域を使用して `CRgn` オブジェクトを初期化します。|
+|[CRgn::CreateEllipticRgnIndirect](#createellipticrgnindirect)|[RECT](/windows/win32/api/windef/ns-windef-rect) 構造体で定義された楕円領域を使用して `CRgn` オブジェクトを初期化します。|
 |[CRgn::CreateFromData](#createfromdata)|指定された領域と変換データから領域を作成します。|
 |[CRgn::CreateFromPath](#createfrompath)|指定されたデバイスコンテキストに選択されているパスから領域を作成します。|
 |[CRgn::CreatePolygonRgn](#createpolygonrgn)|多角形領域`CRgn`を使用してオブジェクトを初期化します。 必要に応じて、最後の頂点から最初の頂点までの線を描画することによって、多角形が自動的に閉じられます。|
 |[CRgn::CreatePolyPolygonRgn](#createpolypolygonrgn)|一連の`CRgn`閉じた多角形で構成される領域を使用してオブジェクトを初期化します。 ポリゴンは、結合されていない場合もあれば、重なっている場合もあります。|
 |[CRgn::CreateRectRgn](#createrectrgn)|四角形の`CRgn`領域を使用してオブジェクトを初期化します。|
-|[CRgn::CreateRectRgnIndirect](#createrectrgnindirect)|[RECT](/windows/desktop/api/windef/ns-windef-tagrect) 構造体で定義された四角形領域を使用して `CRgn` オブジェクトを初期化します。|
+|[CRgn::CreateRectRgnIndirect](#createrectrgnindirect)|[RECT](/windows/win32/api/windef/ns-windef-rect) structure `CRgn`によって定義される四角形領域を使用してオブジェクトを初期化します。|
 |[CRgn::CreateRoundRectRgn](#createroundrectrgn)|角が`CRgn`丸い四角形の領域を使用してオブジェクトを初期化します。|
 |[CRgn::EqualRgn](#equalrgn)|2つ`CRgn`のオブジェクトが等しいかどうかを確認します。|
 |[CRgn:: FromHandle](#fromhandle)|Windows 領域へのハンドル`CRgn`が指定された場合に、オブジェクトへのポインターを返します。|
@@ -297,13 +297,13 @@ BOOL CreateFromData(
 ### <a name="parameters"></a>パラメーター
 
 *lpXForm*<br/>
-領域で実行される変換を定義する[XFORM](/windows/desktop/api/wingdi/ns-wingdi-tagxform)データ構造体を指します。 このポインターが NULL の場合、id 変換が使用されます。
+領域で実行される変換を定義する、 [XFORM](/windows/win32/api/wingdi/ns-wingdi-xform)ata 構造体を指します。 このポインターが NULL の場合、id 変換が使用されます。
 
 *nCount*<br/>
 *Prgndata*が指すバイト数を指定します。
 
 *pRgnData*<br/>
-領域データを格納する[Rgndata](/windows/desktop/api/wingdi/ns-wingdi-rgndata)構造体を指します。
+領域データを格納する[Rgndata](/windows/win32/api/wingdi/ns-wingdi-rgndata)構造体を指します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -631,7 +631,7 @@ int GetRegionData(
 ### <a name="parameters"></a>パラメーター
 
 *lpRgnData*<br/>
-情報を受け取る[Rgndata](/windows/desktop/api/wingdi/ns-wingdi-rgndata)構造体を指します。 このパラメーターが NULL の場合、戻り値には、領域データに必要なバイト数が含まれます。
+情報を受け取る[Rgndata](/windows/win32/api/wingdi/ns-wingdi-rgndata)構造体を指します。 このパラメーターが NULL の場合、戻り値には、領域データに必要なバイト数が含まれます。
 
 *nCount*<br/>
 *LpRgnData*バッファーのサイズ (バイト単位) を指定します。
@@ -746,7 +746,7 @@ operator HRGN() const;
 
 この演算子は、HRGN オブジェクトの直接使用をサポートするキャスト演算子です。
 
-グラフィックオブジェクトの使用方法の詳細については、Windows SDK の「[グラフィックオブジェクト](/windows/desktop/gdi/graphic-objects)」を参照してください。
+グラフィックオブジェクトの使用方法の詳細については、Windows SDK の「[グラフィックオブジェクト](/windows/win32/gdi/graphic-objects)」を参照してください。
 
 ##  <a name="ptinregion"></a>  CRgn::PtInRegion
 

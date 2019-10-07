@@ -383,7 +383,7 @@ string_type transform(const CharType* first, const CharType* last) const;
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は[](#do_transform)、do_transform`first`( `last`,) を返します。
+このメンバー関数は、[do_transform](#do_transform)`first`( `last`,) を返します。
 
 ### <a name="example"></a>例
 

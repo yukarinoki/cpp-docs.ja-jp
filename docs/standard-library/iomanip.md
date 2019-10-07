@@ -26,7 +26,7 @@ ms.locfileid: "68449205"
 
 ## <a name="remarks"></a>Remarks
 
-これらの`T1`各マニピュレーターは、 **Elem**、 **Tr**[](../standard-library/istream-operators.md#op_gt_gt) `T10` \< `basic_istream`演算子>>`::`をオーバーロードするを通じて、指定されていない型を返します。>`basic_ostream` **Elem**、 Tr演算子`::`<[<](../standard-library/ostream-operators.md#op_lt_lt)。 \<>
+これらの`T1`各マニピュレーターは、 **Elem**、 **Tr** `T10` \< `basic_istream`[演算子>>](../standard-library/istream-operators.md#op_gt_gt)`::`をオーバーロードするを通じて、指定されていない型を返します。>`basic_ostream` **Elem**、Tr`::`[演算子<<](../standard-library/ostream-operators.md#op_lt_lt)。\<>
 
 ### <a name="manipulators"></a>マニピュレーター
 

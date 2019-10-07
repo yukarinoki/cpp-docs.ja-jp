@@ -1,14 +1,14 @@
 ---
 title: lrint、lrintf、lrintl、llrint、llrintf、llrintl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - lrint
 - lrintl
 - lrintf
 - llrint
 - llrintf
 - llrintl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - lrint
 - lrintf
@@ -42,12 +45,12 @@ helpviewer_keywords:
 - llrintf function
 - llrintl function
 ms.assetid: 28ccd5b3-5e6f-434f-997d-a21d51b8ce7f
-ms.openlocfilehash: 01680a62e654112475a55bd8eac0cc14d254e2a2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 72870c3548f0fd6972183b0c090708c6eddc591e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285773"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953124"
 ---
 # <a name="lrint-lrintf-lrintl-llrint-llrintf-llrintl"></a>lrint、lrintf、lrintl、llrint、llrintf、llrintl
 
@@ -104,19 +107,19 @@ long long int llrintl(
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合の丸めた整数値を返します*x*します。
+成功した場合は、 *x*の丸められた整数値を返します。
 
-|懸案事項|Return|
+|問題|Return|
 |-----------|------------|
-|*x*戻り値の型の範囲外です<br /><br /> *x* ±∞ を =<br /><br /> *x* = NaN|発生させる**FE_INVALID**をゼロ (0) を返します。|
+|*x*が戻り値の型の範囲外です。<br /><br /> *x* = ±∞<br /><br /> *x* = NaN|**FE_INVALID**を発生させ、ゼロ (0) を返します。|
 
 ## <a name="remarks"></a>Remarks
 
-オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **lrint**と**llrint**を受け取る**float**と**長い** **二重**型。 C プログラムで**lrint**と**llrint**常に、**二重**します。
+でC++はオーバーロードが可能であるため、 **float**型および**long** **double**型を受け取る**lrint**と**llrint**のオーバーロードを呼び出すことができます。 C プログラムでは、 **lrint**と**llrint**は常に**double**を受け取ります。
 
-場合*x*の整数値、これらの関数の生成と等価の浮動小数点を表さない**FE_INEXACT**します。
+*X*が整数値に相当する浮動小数点値を表さない場合、これらの関数は**FE_INEXACT**を発生させます。
 
-**Microsoft 固有の仕様**:結果が戻り値の型の範囲外にある場合、またはパラメーターが NaN または無限大の場合は、定義された実装を返します。 Microsoft コンパイラは0 の値を返します。
+**Microsoft 固有の仕様**:結果が戻り値の型の範囲外にある場合、またはパラメーターが NaN または無限大の場合、戻り値は実装定義になります。 Microsoft コンパイラは0 の値を返します。
 
 ## <a name="requirements"></a>必要条件
 

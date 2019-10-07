@@ -1,10 +1,10 @@
 ---
 title: tmpnam_s、_wtmpnam_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - tmpnam_s
 - _wtmpnam_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - tmpnam_s
 - _wtmpnam_s
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - file names [C++], temporary
 - wtmpnam_s function
 ms.assetid: e70d76dc-49f5-4aee-bfa2-f1baa2bcd29f
-ms.openlocfilehash: 8cdd3feb177ef44c5dad32563d09a0bb8c820b22
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 847df0d2369857d009c39b4dd61adce45094899c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500749"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946038"
 ---
 # <a name="tmpnam_s-_wtmpnam_s"></a>tmpnam_s、_wtmpnam_s
 
@@ -80,7 +83,7 @@ errno_t _wtmpnam_s(
 |-|-|-|-|
 |*str*|*sizeInChars*|**戻り値**|**内容**  *str*|
 |**NULL**|任意|**EINVAL**|変更されない|
-|not **NULL** (有効なメモリを指す)|短すぎる|**ERANGE**|変更されない|
+|Not **NULL** (有効なメモリを指す)|短すぎる|**ERANGE**|変更されない|
 
 *Str*が**NULL**の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は**errno**を**einval**に設定し、 **einval**を返します。
 
@@ -88,7 +91,7 @@ errno_t _wtmpnam_s(
 
 これらの各関数は、現在存在しないファイルの名前を返します。 **tmpnam_s**は、 [GetTempPathW](/windows/win32/api/fileapi/nf-fileapi-gettemppathw)によって返される指定された Windows 一時ディレクトリ内で一意の名前を返します。 ファイル名の前に円記号が付いていてパス情報がない場合 (\fname21 など)、その名前は現在の作業ディレクトリに対して有効なので注意してください。
 
-**Tmpnam_s**では、この生成されたファイル名を*str*に格納できます。 **Tmpnam_s**によって返される文字列の最大長は**L_TMPNAM_S**で、STDIO で定義されています。始め. *Str*が**NULL**の場合、 **tmpnam_s**は、結果を内部の静的バッファーに残します。 したがって後続の呼び出しは、この値を破棄します。 **Tmpnam_s**によって生成される名前は、プログラムによって生成されるファイル名で構成され、 **tmpnam_s**の最初の呼び出しの後に、ベース 32 (. 1- 1vvvvvu) の連続する番号のファイル拡張子 (STDIO の場合) で構成されます。H は**INT_MAX**)。
+**Tmpnam_s**では、この生成されたファイル名を*str*に格納できます。 **Tmpnam_s**によって返される文字列の最大長は**L_TMPNAM_S**で、STDIO で定義されています。始め. *Str*が**NULL**の場合、 **tmpnam_s**は、結果を内部の静的バッファーに残します。 したがって後続の呼び出しは、この値を破棄します。 **Tmpnam_s**によって生成される名前は、プログラムによって生成されるファイル名で構成され、 **tmpnam_s**の最初の呼び出しの後に、ベース 32 (. 1-1vvvvvu) の連続する番号のファイル拡張子 (STDIO**の場合)** で構成されます。H は**INT_MAX**)。
 
 **tmpnam_s**は、オペレーティングシステムから取得した OEM コードページに従ってマルチバイト文字シーケンスを認識し、マルチバイト文字列の引数を適切な方法で自動的に処理します。 **_wtmpnam_s**は、 **tmpnam_s**のワイド文字バージョンです。 **_wtmpnam_s**の引数と戻り値はワイド文字列です。 **_wtmpnam_s**と**tmpnam_s**は、 **_wtmpnam_s**がマルチバイト文字列を処理しない点を除いて、同じように動作します。
 
