@@ -1,6 +1,6 @@
 ---
 title: bad_cast 例外
-ms.date: 11/04/2016
+ms.date: 10/04/2019
 f1_keywords:
 - bad_cast
 - bad_cast_cpp
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - exceptions [C++], bad_cast
 - bad_cast keyword [C++]
 ms.assetid: 31eae1e7-d8d5-40a0-9fef-64a6a4fc9021
-ms.openlocfilehash: b40f64671e7c259b7dc04b31a11d20d0fc76c5c4
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 7384394fb53c6aa4bc009a903ba0ed22bf0ed0d6
+ms.sourcegitcommit: c51b2c665849479fa995bc3323a22ebe79d9d7ce
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68242389"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71998774"
 ---
-# <a name="badcast-exception"></a>bad_cast 例外
+# <a name="bad_cast-exception"></a>bad_cast 例外
 
-**Bad_cast**によって例外がスローされた、 **dynamic_cast**参照型へのキャストが失敗の結果として演算子。
+参照型へのキャストが失敗した結果として、 **bad_cast**例外が**dynamic_cast**演算子によってスローされます。
 
 ## <a name="syntax"></a>構文
 
@@ -26,20 +26,20 @@ catch (bad_cast)
    statement
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-インターフェイスを**bad_cast**は。
+**Bad_cast**のインターフェイスは次のとおりです。
 
 ```cpp
 class bad_cast : public exception
 ```
 
-次のコードは、失敗した例を含む**dynamic_cast**がスローされます、 **bad_cast**例外。
+次のコードには、 **bad_cast**例外をスローする失敗した**dynamic_cast**の例が含まれています。
 
 ```cpp
 // expre_bad_cast_Exception.cpp
 // compile with: /EHsc /GR
-#include <typeinfo.h>
+#include <typeinfo>
 #include <iostream>
 
 class Shape {
@@ -65,14 +65,14 @@ int main() {
 }
 ```
 
-キャストされているオブジェクト (Shape) が、指定したキャスト型 (Circle) から派生していないため、例外がスローされます。 例外を回避するには、`main` に次の宣言を追加します。
+この例外がスローされるのは、キャストされているオブジェクト (図形) が指定されたキャスト型 (Circle) から派生していないためです。 例外を回避するには、`main` に次の宣言を追加します。
 
 ```cpp
 Circle circle_instance;
 Circle& ref_circle = circle_instance;
 ```
 
-キャストの意味を反転し、**お試しください**ようブロックします。
+次に、 **try**ブロック内のキャストの意味を次のように逆にします。
 
 ```cpp
 Shape& ref_shape = dynamic_cast<Shape&>(ref_circle);
@@ -90,15 +90,15 @@ Shape& ref_shape = dynamic_cast<Shape&>(ref_circle);
 
 |関数|説明|
 |-|-|
-|[どのような](#what)|TBD|
+|[結果](#what)|TBD|
 
 ### <a name="operators"></a>演算子
 
 |演算子|説明|
 |-|-|
-|[operator=](#op_eq)|代入演算子を 1 つ割り当てる`bad_cast`を別のオブジェクト。|
+|[operator=](#op_eq)|1つの @no__t 0 オブジェクトを別のオブジェクトに代入する代入演算子。|
 
-## <a name="bad_cast"></a> bad_cast
+## <a name="bad_cast"></a>bad_cast
 
 `bad_cast` 型のオブジェクトのコンストラクター。
 
@@ -107,15 +107,15 @@ bad_cast(const char * _Message = "bad cast");
 bad_cast(const bad_cast &);
 ```
 
-## <a name="op_eq"></a> 演算子 =
+## <a name="op_eq"></a>operator =
 
-代入演算子を 1 つ割り当てる`bad_cast`を別のオブジェクト。
+1つの @no__t 0 オブジェクトを別のオブジェクトに代入する代入演算子。
 
 ```cpp
 bad_cast& operator=(const bad_cast&) noexcept;
 ```
 
-## <a name="what"></a> どのような
+## <a name="what"></a>結果
 
 ```cpp
 const char* what() const noexcept override;
@@ -123,6 +123,6 @@ const char* what() const noexcept override;
 
 ## <a name="see-also"></a>関連項目
 
-[dynamic_cast 演算子](../cpp/dynamic-cast-operator.md)<br/>
-[キーワード](../cpp/keywords-cpp.md)<br/>
+[Dynamic_cast 演算子](../cpp/dynamic-cast-operator.md)\
+[キーワード](../cpp/keywords-cpp.md)\
 [C++ 例外処理](../cpp/cpp-exception-handling.md)
