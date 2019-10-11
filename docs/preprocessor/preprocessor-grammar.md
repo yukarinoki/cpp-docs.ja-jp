@@ -16,13 +16,13 @@ ms.locfileid: "70222262"
 # <a name="preprocessor-grammar"></a>プリプロセッサの文法
 
 *制御線*: \
-&nbsp;&nbsp;&nbsp;&nbsp; **#define***識別子* *トークン-文字列*<sub>選択</sub>\
-&nbsp;&nbsp;&nbsp;&nbsp; **#define***識別子* **(** &#x2800;識別子&#x200B;<sub></sub> **の**選択... **,** *識別子*&#x200B; <sub></sub>opt&#x2800; **)** *トークン文字列の*<sub>選択</sub>\
+&nbsp;&nbsp;&nbsp;&nbsp; **#define** *識別子* *トークン-文字列*<sub>選択</sub>\
+&nbsp;&nbsp;&nbsp;&nbsp; **#define** *識別子* **(** &#x2800;識別子&#x200B;<sub></sub> **の**選択... **,** *識別子*&#x200B; <sub></sub>opt&#x2800; **)** *トークン文字列の*<sub>選択</sub>\
 &nbsp;&nbsp;&nbsp;&nbsp; **#include** **"** _パス-仕様_ **"** \
 &nbsp;&nbsp;&nbsp;&nbsp; **#include**_パス-仕様_ **\<** **>** \
-&nbsp;&nbsp;&nbsp;&nbsp; **#line***数字-シーケンス* **"** _ファイル名_ **"** &#x200B;<sub>選択</sub>  \
-&nbsp;&nbsp;&nbsp;&nbsp; **#undef***識別子*\
-&nbsp;&nbsp;&nbsp;&nbsp; **#error***トークン-文字列*\
+&nbsp;&nbsp;&nbsp;&nbsp; **#line** *数字-シーケンス* **"** _ファイル名_ **"** &#x200B;<sub>選択</sub>  \
+&nbsp;&nbsp;&nbsp;&nbsp; **#undef** *識別子*\
+&nbsp;&nbsp;&nbsp;&nbsp; **#error** *トークン-文字列*\
 &nbsp;&nbsp;&nbsp;&nbsp; **#pragma** *token-string*
 
 *定数式*: \
@@ -37,8 +37,8 @@ ms.locfileid: "70222262"
 &nbsp;&nbsp;&nbsp;&nbsp;*if 行* *テキスト*
 
 *改行*: \
-&nbsp;&nbsp;&nbsp;&nbsp; **#if***定数式*\
-&nbsp;&nbsp;&nbsp;&nbsp; **#ifdef***識別子*\
+&nbsp;&nbsp;&nbsp;&nbsp; **#if** *定数式*\
+&nbsp;&nbsp;&nbsp;&nbsp; **#ifdef** *識別子*\
 &nbsp;&nbsp;&nbsp;&nbsp; **#ifndef** *identifier*
 
 *elif-parts*: \
