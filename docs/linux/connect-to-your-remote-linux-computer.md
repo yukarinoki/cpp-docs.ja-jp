@@ -3,12 +3,12 @@ title: Visual Studio でターゲットの Linux システムに接続する
 description: Visual Studio の C++ プロジェクト内からリモートの Linux マシンまたは WSL に接続する方法です。
 ms.date: 09/04/2019
 ms.assetid: 5eeaa683-4e63-4c46-99ef-2d5f294040d4
-ms.openlocfilehash: 75d8b3db64d9b1f3562d6730685b7c29fe4982f4
-ms.sourcegitcommit: a42d3b0408f02138dcd6fabcb98d50b0cb159191
+ms.openlocfilehash: 2f4e6311493f2b29ba6911ec1b76225b6c7abe6d
+ms.sourcegitcommit: b85e1db6b7d4919852ac6843a086ba311ae97d40
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70383402"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71925556"
 ---
 # <a name="connect-to-your-target-linux-system-in-visual-studio"></a>Visual Studio でターゲットの Linux システムに接続する
 
@@ -94,11 +94,12 @@ Visual Studio 2017 では、この記事で前に説明したリモート Linux 
 
 Visual Studio 2019 バージョン 16.1 では、C++ を [Windows Subsystem for Linux (WSL)](https://docs.microsoft.com/windows/wsl/about) とともに使用するためのネイティブ サポートが追加されています。  これは、ローカルの WSL インストールでビルドおよびデバッグするために、リモート接続を追加したり、SSH を構成したりする必要がなくなったことを意味します。 詳細については、こちらの [WSL をインストールする方法](https://docs.microsoft.com/windows/wsl/install-win10)の説明をご覧ください。
 
-Visual Studio と連携するように WSL インストールを構成するには、gcc、gdb、make、rsync、zip の各ツールがインストールされている必要があります。 apt を使用するディストリビューションでは、次のコマンドを使用してこれらのツールをインストールできます。 
+Visual Studio と連携するように WSL インストールを構成するには、次のツールがインストールされている必要があります: gcc または clang、gdb、make、rsync、および zip。 次のコマンドを使うことで、apt が使われるディストリビューションにこれらをインストールできます。これによって g++ コンパイラもインストールされます。 
 
 ```bash
 sudo apt install g++ gdb make rsync zip
 ```
+詳細については、「[Linux ワークロードのダウンロード、インストール、セットアップ](download-install-and-setup-the-linux-development-workload.md)」をご覧ください。
 
 WSL 用にプロジェクトを構成するには、プロジェクトの種類に応じて、「[Linux プロジェクトを構成する](configure-a-linux-project.md)」または「[Linux CMake プロジェクトを構成する](cmake-linux-project.md)」をご覧ください。 WSL を使用するシンプルなコンソール アプリケーションを作成するための詳細な手順については、入門のブログ記事「[C++ with Visual Studio 2019 and the Windows Subsystem for Linux (WSL)](https://devblogs.microsoft.com/cppblog/c-with-visual-studio-2019-and-windows-subsystem-for-linux-wsl/)」 (C++ と Visual Studio 2019 および Windows Subsystem for Linux (WSL)) をご覧ください。
 

@@ -26,7 +26,7 @@ ms.locfileid: "70222299"
 
 ## <a name="syntax"></a>構文
 
-> **#pragma***トークン-文字列*\
+> **#pragma** *トークン-文字列*\
 > **__ プラグマ (** *トークン文字列* **)**
 
 ## <a name="remarks"></a>Remarks

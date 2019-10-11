@@ -28,7 +28,7 @@ ms.locfileid: "69498494"
 &nbsp;&nbsp;&nbsp;&nbsp; **__try** *compound-statement* **__except** **(** *expression* **)** *compound-statement*
 
 *try-finally ステートメント*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__try***複合ステートメント* **__finally***複合ステートメント*
+&nbsp;&nbsp;&nbsp;&nbsp; **__try** *複合ステートメント* **__finally** *複合ステートメント*
 
 ## <a name="remarks"></a>Remarks
 
