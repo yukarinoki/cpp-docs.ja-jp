@@ -1,9 +1,9 @@
 ---
 title: _get_osfhandle
 ms.date: 05/29/2018
-apiname:
+api_name:
 - _get_osfhandle
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - get_osfhandle
 - _get_osfhandle
@@ -25,14 +28,14 @@ helpviewer_keywords:
 - _get_osfhandle function
 - file handles [C++], operating system
 ms.assetid: 0bdd728a-4fd8-410b-8c9f-01a121135196
-ms.openlocfilehash: cc3b50e3d3f65bee83b8df83aa0adb5c8694e35a
-ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
+ms.openlocfilehash: 65060689e0a7fc72b67da8fc3bf7ce0af75fd645
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66821664"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955781"
 ---
-# <a name="getosfhandle"></a>_get_osfhandle
+# <a name="_get_osfhandle"></a>_get_osfhandle
 
 指定されたファイル記述子に関連付けられている、オペレーティング システム ファイル ハンドルを取得します。
 
@@ -51,16 +54,16 @@ intptr_t _get_osfhandle(
 
 ## <a name="return-value"></a>戻り値
 
-場合は、オペレーティング システム ファイル ハンドルを返します*fd*は有効です。 それ以外の場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」に説明されているように、無効なパラメーター ハンドラーが呼び出されます。 返すかどうかは、引き続き実行が許可された、 **INVALID_HANDLE_VALUE** (-1)。 また、設定**errno**に**EBADF**、無効なファイル ハンドルを示します。 警告を避けるためには、結果を Win32 ファイル ハンドルとして使用する場合、キャストを**処理**型。
+*Fd*が有効な場合は、オペレーティングシステムのファイルハンドルを返します。 それ以外の場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」に説明されているように、無効なパラメーター ハンドラーが呼び出されます。 実行の継続が許可された場合、 **INVALID_HANDLE_VALUE** (-1) が返されます。 また、 **errno**を**EBADF**に設定し、無効なファイルハンドルを示します。 結果が Win32 ファイルハンドルとして使用されたときに警告が発生しないようにするには、それを**ハンドル**型にキャストします。
 
 > [!NOTE]
-> ときに**stdin**、 **stdout**、および**stderr**ないファイル記述子の値 (たとえば、アプリケーションでは、Windows コンソール ウィンドウがない)、ストリームに関連付けられています。これらのストリームがから返された[_fileno](fileno.md)として、特殊な値-2。 同様に、呼び出しの結果ではなく、ファイル記述子のパラメーターとして 0、1、または 2 を使用する場合 **_fileno**、 **_get_osfhandle**ファイル記述子が関連付けられていない場合にも特別な値-2 を返しますストリームを設定しないと**errno**します。 ただし、これは、有効なファイル ハンドルの値ではありません、それを使用しようとする後続の呼び出しは失敗する可能性があります。
+> **Stdin**、 **stdout**、および**stderr**がストリームに関連付けられていない場合 (たとえば、コンソールウィンドウがない Windows アプリケーションで)、これらのストリームのファイル記述子の値は[_fileno](fileno.md)から特別な値-2 として返されます。 同様に、 **_fileno**の呼び出しの結果ではなく、ファイル記述子のパラメーターとして0、1、または2を使用した場合、 **_get_osfhandle**は、ファイル記述子がストリームに関連付けられていない場合にも特殊な値2を返し、 **errno**を設定しません。 ただし、これは有効なファイルハンドル値ではなく、それを使用しようとする呼び出しが失敗する可能性があります。
 
-詳細については**EBADF** 、他のエラー コードを参照してくださいと[_doserrno、errno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)します。
+**EBADF**とその他のエラーコードの詳細については、「 [_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
 ## <a name="remarks"></a>Remarks
 
-オペレーティング システム (OS) のファイル ハンドルが取得したファイルを閉じる **_get_osfhandle**、呼び出す[_close](close.md)ファイル記述子に*fd*。 呼び出さない**CloseHandle**でこの関数の戻り値。 基になる OS ファイル ハンドルを所有、 *fd*ファイル記述子、および閉じられたときに、 [_close](close.md)で呼び出される*fd*します。 ファイル記述子が所有している場合、`FILE *`呼び出してストリーム[fclose](fclose-fcloseall.md)を`FILE *`ストリームは、両方のファイル記述子と基になる OS ファイル ハンドルを閉じます。 この場合、呼び出さない[_close](close.md)ファイル記述子。
+**_Get_osfhandle**によってオペレーティングシステム (os) ファイルハンドルが取得されたファイルを閉じるには、ファイル記述子*fd*で[_close](close.md)を呼び出します。 この関数の戻り値には**CloseHandle**を呼び出さないでください。 基になる OS ファイルハンドルは*fd*ファイル記述子によって所有され、 *fd*で[_close](close.md)が呼び出されると閉じられます。 ファイル記述子が`FILE *`ストリームによって所有されている場合、その`FILE *`ストリームで [fclose](fclose-fcloseall.md) を呼び出すと、ファイル記述子と基になる OS ファイルハンドルの両方が閉じられます。 この場合は、ファイル記述子で[_close](close.md)を呼び出さないでください。
 
 ## <a name="requirements"></a>必要条件
 
