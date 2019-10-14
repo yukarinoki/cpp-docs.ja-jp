@@ -25,15 +25,15 @@ ms.locfileid: "70220083"
 
 [__assume](../intrinsics/assume.md)
 
-[_BitScanForward、_BitScanForward64](../intrinsics/bitscanforward-bitscanforward64.md)
+[_BitScanForward、BitScanForward64](../intrinsics/bitscanforward-bitscanforward64.md)
 
-[_BitScanReverse、_BitScanReverse64](../intrinsics/bitscanreverse-bitscanreverse64.md)
+[_BitScanReverse、BitScanReverse64](../intrinsics/bitscanreverse-bitscanreverse64.md)
 
-[_bittest、_bittest64](../intrinsics/bittest-bittest64.md)
+[_bittest、bittest64](../intrinsics/bittest-bittest64.md)
 
-[_bittestandcomplement、_bittestandcomplement64](../intrinsics/bittestandcomplement-bittestandcomplement64.md)
+[_bittestandcomplement、bittestandcomplement64](../intrinsics/bittestandcomplement-bittestandcomplement64.md)
 
-[_bittestandreset、_bittestandreset64](../intrinsics/bittestandreset-bittestandreset64.md)
+[_bittestandreset、bittestandreset64](../intrinsics/bittestandreset-bittestandreset64.md)
 
 [_bittestandset、_bittestandset64](../intrinsics/bittestandset-bittestandset64.md)
 
@@ -119,9 +119,9 @@ ms.locfileid: "70220083"
 
 [_mm_cvttss_si64x](../intrinsics/mm-cvttss-si64x.md)
 
-[_mm_extract_si64、_mm_extracti_si64](../intrinsics/mm-extract-si64-mm-extracti-si64.md)
+[_mm_extract_si64、mm_extracti_si64](../intrinsics/mm-extract-si64-mm-extracti-si64.md)
 
-[_mm_insert_si64、_mm_inserti_si64](../intrinsics/mm-insert-si64-mm-inserti-si64.md)
+[_mm_insert_si64、mm_inserti_si64](../intrinsics/mm-insert-si64-mm-inserti-si64.md)
 
 [_mm_stream_sd](../intrinsics/mm-stream-sd.md)
 
@@ -191,9 +191,9 @@ ms.locfileid: "70220083"
 
 [_ReturnAddress](../intrinsics/returnaddress.md)
 
-[_rotl8、_rotl16](../intrinsics/rotl8-rotl16.md)
+[_rotl8、rotl16](../intrinsics/rotl8-rotl16.md)
 
-[_rotr8、_rotr16](../intrinsics/rotr8-rotr16.md)
+[_rotr8、rotr16](../intrinsics/rotr8-rotr16.md)
 
 [__segmentlimit](../intrinsics/segmentlimit.md)
 
