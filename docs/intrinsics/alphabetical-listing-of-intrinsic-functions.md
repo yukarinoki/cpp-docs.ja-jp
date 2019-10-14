@@ -17,33 +17,33 @@ ms.locfileid: "70220083"
 
 次のセクションでは、一部またはすべてのアーキテクチャで使用可能な Microsoft 固有の組み込み関数について説明します。 サポートされているその他の組み込みについては、プロセッサの製造元により、ヘッダー ファイルまたは各社の Web サイトで文書化されています。 製造元のドキュメントへのリンクについては、 [ARM 組み込み](../intrinsics/arm-intrinsics.md)、 [x86 組み込み](../intrinsics/x86-intrinsics-list.md)、および[x64 組み込み](../intrinsics/x64-amd64-intrinsics-list.md)に関するセクションを参照してください。 組み込みが実装されている C ランタイムライブラリ (CRT) 関数については、ここでは説明しません。これらの関数については、「 [C ランタイムライブラリリファレンス](../c-runtime-library/c-run-time-library-reference.md)」で説明されています。
 
-[__addfsbyte, \__addfsword, \__addfsdword](../intrinsics/addfsbyte-addfsword-addfsdword.md)
+[__addfsbyte、\__addfsword、\__addfsdword](../intrinsics/addfsbyte-addfsword-addfsdword.md)
 
-[__ addgsbyte、 \_addgソード、 \_addgsdword、 \_addgsqword](../intrinsics/addgsbyte-addgsword-addgsdword-addgsqword.md)
+[__addgsbyte、\__addgsword、\__addgsdword、\__addgsqword](../intrinsics/addgsbyte-addgsword-addgsdword-addgsqword.md)
 
 [_AddressOfReturnAddress](../intrinsics/addressofreturnaddress.md)
 
 [__assume](../intrinsics/assume.md)
 
-[_BitScanForward、_BitScanForward64](../intrinsics/bitscanforward-bitscanforward64.md)
+[_BitScanForward、BitScanForward64](../intrinsics/bitscanforward-bitscanforward64.md)
 
-[_BitScanReverse、_BitScanReverse64](../intrinsics/bitscanreverse-bitscanreverse64.md)
+[_BitScanReverse、BitScanReverse64](../intrinsics/bitscanreverse-bitscanreverse64.md)
 
-[_bittest、_bittest64](../intrinsics/bittest-bittest64.md)
+[_bittest、bittest64](../intrinsics/bittest-bittest64.md)
 
-[_bittestandcomplement、_bittestandcomplement64](../intrinsics/bittestandcomplement-bittestandcomplement64.md)
+[_bittestandcomplement、bittestandcomplement64](../intrinsics/bittestandcomplement-bittestandcomplement64.md)
 
-[_bittestandreset、_bittestandreset64](../intrinsics/bittestandreset-bittestandreset64.md)
+[_bittestandreset、bittestandreset64](../intrinsics/bittestandreset-bittestandreset64.md)
 
 [_bittestandset、_bittestandset64](../intrinsics/bittestandset-bittestandset64.md)
 
-[__ cpuid、 \_cpu プール x](../intrinsics/cpuid-cpuidex.md)
+[__cpuid、\__cpuidex](../intrinsics/cpuid-cpuidex.md)
 
 [__debugbreak](../intrinsics/debugbreak.md)
 
 [_disable](../intrinsics/disable.md)
 
-[__ emul、 \__emulu](../intrinsics/emul-emulu.md)
+[__emul、\__emulu](../intrinsics/emul-emulu.md)
 
 [_enable](../intrinsics/enable.md)
 
@@ -59,9 +59,9 @@ ms.locfileid: "70220083"
 
 [__inbytestring](../intrinsics/inbytestring.md)
 
-[__ インシデント fsbyte、 \_visual word、 \_visual word](../intrinsics/incfsbyte-incfsword-incfsdword.md)
+[__incfsbyte、\__incfsword、\__incfsdword](../intrinsics/incfsbyte-incfsword-incfsdword.md)
 
-[__ インシデント gsbyte \_、visual ソード、 \_ \_または visual sqword (_t)](../intrinsics/incgsbyte-incgsword-incgsdword-incgsqword.md)
+[__incgsbyte、\__incgsword、\__incgsdword、\__incgsqword](../intrinsics/incgsbyte-incgsword-incgsdword-incgsqword.md)
 
 [__indword](../intrinsics/indword.md)
 
@@ -111,7 +111,7 @@ ms.locfileid: "70220083"
 
 [__ll_rshift](../intrinsics/ll-rshift.md)
 
-[__lzcnt16、 \__lzcnt、 \__lzcnt64](../intrinsics/lzcnt16-lzcnt-lzcnt64.md)
+[__lzcnt16、\__lzcnt、\__lzcnt64](../intrinsics/lzcnt16-lzcnt-lzcnt64.md)
 
 [_mm_cvtsi64x_ss](../intrinsics/mm-cvtsi64x-ss.md)
 
@@ -119,9 +119,9 @@ ms.locfileid: "70220083"
 
 [_mm_cvttss_si64x](../intrinsics/mm-cvttss-si64x.md)
 
-[_mm_extract_si64、_mm_extracti_si64](../intrinsics/mm-extract-si64-mm-extracti-si64.md)
+[_mm_extract_si64、mm_extracti_si64](../intrinsics/mm-extract-si64-mm-extracti-si64.md)
 
-[_mm_insert_si64、_mm_inserti_si64](../intrinsics/mm-insert-si64-mm-inserti-si64.md)
+[_mm_insert_si64、mm_inserti_si64](../intrinsics/mm-insert-si64-mm-inserti-si64.md)
 
 [_mm_stream_sd](../intrinsics/mm-stream-sd.md)
 
@@ -157,7 +157,7 @@ ms.locfileid: "70220083"
 
 [__outwordstring](../intrinsics/outwordstring.md)
 
-[__ の cnt16、 \_popcnt、 \__t cnt64](../intrinsics/popcnt16-popcnt-popcnt64.md)
+[__popcnt16、\__popcnt、\__popcnt64](../intrinsics/popcnt16-popcnt-popcnt64.md)
 
 [__rdtsc](../intrinsics/rdtsc.md)
 
@@ -179,9 +179,9 @@ ms.locfileid: "70220083"
 
 [__readeflags](../intrinsics/readeflags.md)
 
-[__ readfsbyte、 \_"readfsdword \_"、"readfsqword \_"、"readfsword"](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)
+[__readfsbyte、\__readfsdword、\__readfsqword、\__readfsword](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)
 
-[__ readgsbyte、 \_( \_readgsdword)、readgsqword、 \_readgソード](../intrinsics/readgsbyte-readgsdword-readgsqword-readgsword.md)
+[__readgsbyte、\__readgsdword、\__readgsqword、\__readgsword](../intrinsics/readgsbyte-readgsdword-readgsqword-readgsword.md)
 
 [__readmsr](../intrinsics/readmsr.md)
 
@@ -191,9 +191,9 @@ ms.locfileid: "70220083"
 
 [_ReturnAddress](../intrinsics/returnaddress.md)
 
-[_rotl8、_rotl16](../intrinsics/rotl8-rotl16.md)
+[_rotl8、rotl16](../intrinsics/rotl8-rotl16.md)
 
-[_rotr8、_rotr16](../intrinsics/rotr8-rotr16.md)
+[_rotr8、rotr16](../intrinsics/rotr8-rotr16.md)
 
 [__segmentlimit](../intrinsics/segmentlimit.md)
 
@@ -267,9 +267,9 @@ ms.locfileid: "70220083"
 
 [__writeeflags](../intrinsics/writeeflags.md)
 
-[__ writefsbyte、 \_ \_writefsdword、writefsqword、 \_writefソード](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)
+[__writefsbyte、\__writefsdword、\__writefsqword、\__writefsword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)
 
-[__ writ/sbyte、 \_/writ、 \_sqword、/writ/sqword \_](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)
+[__writegsbyte、\__writegsdword、\__writegsqword、\__writegsword](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)
 
 [__writemsr](../intrinsics/writemsr.md)
 
