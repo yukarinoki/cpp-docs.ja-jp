@@ -22,7 +22,7 @@ ms.locfileid: "70220250"
 ## <a name="syntax"></a>構文
 
 > **#include**"*パス仕様*" \
-> **#include***パス-仕様* \<>
+> **#include**\<*パス-仕様*>
 
 ## <a name="remarks"></a>Remarks
 
