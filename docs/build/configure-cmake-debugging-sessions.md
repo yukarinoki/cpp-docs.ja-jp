@@ -3,24 +3,28 @@ title: Visual Studio で CMake デバッグ セッションを構成する
 ms.date: 03/21/2019
 helpviewer_keywords:
 - CMake debugging
-ms.openlocfilehash: 9899f99994935ec419fff400670644b7d78a190a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 41f53c0c3ea46a8a1aa11215968aaee6c13c2dea
+ms.sourcegitcommit: e33126222c418daf977533ea9e2819d99e0d7b8d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62195533"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72534106"
 ---
 # <a name="configure-cmake-debugging-sessions"></a>CMake デバッグ セッションを構成する
 
-すべての実行可能な CMake ターゲットが、**[全般]** ツール バーの **[スタートアップ アイテム]** ドロップダウンに表示されます。 デバッグ セッションを開始するには、1 つを選択してデバッガーを起動するだけです。
+すべての実行可能な CMake ターゲットが、 **[全般]** ツール バーの **[スタートアップ アイテム]** ドロップダウンに表示されます。 デバッグ セッションを開始するには、1 つを選択してデバッガーを起動するだけです。
 
-![CMake のスタートアップ アイテム ドロップダウン](media/cmake-startup-item-dropdown.png "CMake のスタートアップ アイテム ドロップダウン")
+![CMake スタートアップ項目のドロップダウン](media/cmake-startup-item-dropdown.png "CMake スタートアップ項目のドロップダウン")
 
-CMake メニューからデバッグ セッションを開始することもできます。
+ソリューションエクスプローラーからデバッグセッションを開始することもできます。 最初に、 **[ソリューションエクスプローラー]** ウィンドウの [ **Cmake ターゲット] ビュー**に切り替えます。
+
+![CMake ターゲットビューのボタン](media/cmake-targets-view.png  "CMake ターゲットビューのメニュー項目")
+
+次に、任意の実行可能ファイルを右クリックし、 **[デバッグ]** または **[デバッグと起動の設定]** を選択します。 **デバッグ**は、アクティブな構成に基づいて、選択したターゲットのデバッグを自動的に開始します。 **デバッグと起動の設定**では、*起動した json*ファイルが開き、選択したターゲットの新しいデバッグ構成が追加されます。
 
 ## <a name="customize-debugger-settings"></a>デバッガー設定をカスタマイズする
 
-プロジェクト内の実行可能な CMake ターゲットのデバッガー設定をカスタマイズするには、特定の CMakeLists.txt ファイルを右クリックして、**[デバッグ設定と起動設定]** を選びます。 (でターゲットを選択または**ターゲット ビュー**で**ソリューション エクスプ ローラー**)。サブメニューで CMake ターゲットを選択すると、ファイルと呼ばれる**launch.vs.json**が作成されます。 このファイルには選んだ CMake ターゲットに関する情報があらかじめ入力されており、プログラムの引数やデバッガーの種類などの他のパラメーターを指定することができます。 任意のキーを参照する、 **CMakeSettings.json**ファイルを付ける必要`cmake.`で**launch.vs.json**します。 次の例は、単純な**launch.vs.json**ファイルを取り込む場合の値を`remoteCopySources`キー、 **CMakeSettings.json**の現在選択されている構成ファイル。
+プロジェクト内の実行可能な CMake ターゲットのデバッガー設定をカスタマイズするには、特定の CMakeLists.txt ファイルを右クリックして、 **[デバッグ設定と起動設定]** を選びます。 (または、**ソリューションエクスプローラー**の [**ターゲット] ビュー**でターゲットを選択します。)サブメニューで CMake ターゲットを選択すると、 **launch**というファイルが作成されます。 このファイルには選んだ CMake ターゲットに関する情報があらかじめ入力されており、プログラムの引数やデバッガーの種類などの他のパラメーターを指定することができます。 **Cmakesettings. json**ファイル内の任意のキーを参照するには、「 **launch. vs. json**」で `cmake.` を先頭に付けます。 次の例は、現在選択されている構成の**Cmakesettings. json**ファイル内の `remoteCopySources` キーの値を取得する単純な**起動と json**ファイルを示しています。
 
 ```json
 {
@@ -38,11 +42,11 @@ CMake メニューからデバッグ セッションを開始することもで�
 }
 ```
 
-保存するとすぐに、 **launch.vs.json**ファイルにエントリが作成、**スタートアップ アイテム**新しい名前を含むドロップダウンします。 編集することによって、 **launch.vs.json**ファイルとして CMake ターゲットの任意の数のような多くのデバッグ構成を作成できます。
+起動ファイルと**json**ファイルを保存するとすぐに、新しい名前の付いた **[スタートアップ項目]** ドロップダウンにエントリが作成されます。 **起動と json**ファイルを編集することで、任意の数の cmake ターゲットに必要な数のデバッグ構成を作成できます。
 
 ## <a name="support-for-cmakesettings-variables"></a>CMakeSettings 変数のサポート
 
- **Launch.vs.json**で宣言されている変数をサポートしている**CMakeSettings.json** (下記参照)、現在選択されている構成に適用されるとします。 という名前のキーも`currentDir`、ローカルのプロジェクトを起動したアプリの現在のディレクトリを設定します。
+ **Launch. json**は、 **cmakesettings. json** (下記参照) で宣言され、現在選択されている構成に適用される変数をサポートします。 また、`currentDir` という名前のキーもあります。これにより、ローカルプロジェクトの起動中のアプリの現在のディレクトリが設定されます。
 
 ```json
 {
@@ -60,7 +64,7 @@ CMake メニューからデバッグ セッションを開始することもで�
 C:\Users\satyan\7f14809a-2626-873e-952e-cdf038211175\
 ```
 
-'Cwd' キーは、プロジェクトのリモート起動のアプリの現在のディレクトリを設定します。 既定値は '${debugInfo.defaultWorkingDirectory}' に評価されます。 
+キー ' cwd ' は、リモートプロジェクトの起動中のアプリの現在のディレクトリを設定します。 既定値は ' $ {debugInfo. System.defaultworkingdirectory} ' で、に評価されます。 
 
 ```cmd
 /var/tmp/src/bfc6f7f4-4f0f-8b35-80d7-9198fa973fb9/Linux-Debug
