@@ -123,7 +123,7 @@ Visual Studio は、これらを Linux マシンからローカルの Windows �
 "remoteMachineName": "${debugInfo.remoteMachineName}",
 ```
 
-追加の引数を指定するには、`args` JSON 配列に引数を追加します。 詳細については、「[Open Folder projects for C++](../build/open-folder-projects-cpp.md)」 (C++ の [フォルダーを開く] プロジェクト) と [CMake デバッグ セッションの構成](../build/configure-cmake-debugging-sessions.md)に関するページを参照してください。
+追加の引数を指定するには、`args` JSON 配列に引数を追加します。 詳細については、[C++ の [フォルダーを開く]](../build/open-folder-projects-cpp.md) プロジェクトに関するページ、および [CMake デバッグ セッションの構成](../build/configure-cmake-debugging-sessions.md)に関するページを参照してください。
 
 ## <a name="configure_cmake_linux"></a>Linux 用の CMake 設定を構成する
 
