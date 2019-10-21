@@ -31,7 +31,7 @@ Visual Studio 2015、2017、および 2019 は、サイド バイ サイドで�
 Visual C++ の新機能を紹介します。
 
 [Visual Studio 2003 から 2015 の C++ の新機能](../porting/visual-cpp-what-s-new-2003-through-2015.md)<br/>
-Visual Studio 2003 から 2015 の各バージョンの、C++ の新機能を紹介します。
+Visual Studio 2003 から 2015 までの C++ の新機能をバージョンごとに紹介します。
 
 [Visual Studio の C++ 準拠の強化](cpp-conformance-improvements.md)<br/>
 Visual Studio の C++ 準拠の強化について説明します。
@@ -62,10 +62,10 @@ Visual Studio 2017 または Visual Studio 2019 をダウンロードして、Vi
 C++11 以降に基づく現代的な C++ プログラミング手法に関する情報。高速で安全なコードを記述し、C スタイルのプログラミングの多くの潜在的な危険を回避できます。
 
 [標準 C++](https://isocpp.org/)<br/>
-C++ について学び、最新の C++ の概要を把握し、書籍、記事、講演、イベントなどへのリンクを探します
+C++ について説明しながら、最新の C++ の概要を示すとともに、書籍、記事、講演、イベントなどへのリンクを提供します。
 
 [Visual C++ に関する詳細情報](../build/vscpp-step-1-create.md)<br/>
-C++ について学び始める。
+C++ について導入的に説明します。
 
 [Visual C++ のサンプル](visual-cpp-samples.md)<br/>
 サンプルに関する情報。
@@ -167,7 +167,7 @@ GPU で実行する膨大な並列アルゴリズム。
 ## <a name="feedback-and-community"></a>フィードバックとコミュニティ
 
 [Visual C++ ツールセットで問題を報告する方法](how-to-report-a-problem-with-the-visual-cpp-toolset.md)<br/>
-Visual C++ ツールセット (コンパイラ、リンカー、その他のツール) に対して効果的なエラー レポートを作成する方法とレポートの提出方法に関す情報。
+Visual C++ ツールセット (コンパイラ、リンカー、その他のツール) に対して効果的なエラー レポートを作成する方法とレポートの提出方法について説明します。
 
 Microsoft [C++ チーム ブログ](https://devblogs.microsoft.com/cppblog/)<br/>
 Visual Studio の C++ ツールの開発者による新機能と最新の情報に関する詳細。

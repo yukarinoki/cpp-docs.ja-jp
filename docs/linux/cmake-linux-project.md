@@ -25,7 +25,7 @@ Visual Studio 2019 で新しい Linux CMake プロジェクトを作成するに
 1. Visual Studio で **[ファイル]、[新しいプロジェクト]** の順に選択するか、**Ctrl + Shift + N** キーを押します。
 1. **[言語]** を **[C++]** に設定し、「CMake」を検索します。 その後、 **[次へ]** をクリックします。 **[名前]** と **[場所]** を入力し、 **[作成]** を選択します。
 
-Visual Studio では、実行可能ファイルの名前と、要求される最小の CMake バージョンのみを使用して、最小限の CMakeLists.txt ファイルが作成されます。 このファイルを手動で自由に編集でき、Visual Studio によって変更が上書きされることはありません。 **ソリューション エクスプローラー**で CMakeLists.txt ファイルを右クリックし、 **[CMake settings for project]\(プロジェクト用の CMake の設定\)** を選択することで、CMake コマンドライン引数と環境変数を指定できます。 デバッグ用のオプションを指定するには、プロジェクト ノードを右クリックし、 **[デバッグ設定と起動設定]** を選択します。
+Visual Studio では、実行可能ファイルの名前と、要求される最小の CMake バージョンのみを使用して、最小限の CMakeLists.txt ファイルが作成されます。 このファイルは手動で自由に編集できます。Visual Studio によって変更が上書きされることはありません。 **ソリューション エクスプローラー**で CMakeLists.txt ファイルを右クリックし、 **[CMake settings for project]\(プロジェクト用の CMake の設定\)** を選択することで、CMake コマンドライン引数と環境変数を指定できます。 デバッグ用のオプションを指定するには、プロジェクト ノードを右クリックし、 **[デバッグ設定と起動設定]** を選択します。
 
 ::: moniker-end
 
@@ -48,7 +48,7 @@ Linux システムに次のものがインストールされていることを�
 
 ::: moniker range="vs-2019"
 
-Linux による CMake プロジェクトのサポートには、ターゲット マシンに CMake の最新バージョンがインストールされていることが必要となります。 ディストリビューションの既定のパッケージ マネージャーが提供するバージョンは、しばしば最新ではなく、Visual Studio で必要なすべての機能をサポートしていません。 Visual Studio 2019 では、Linux システムに CMake の最新バージョンがインストールされているかどうかを検出します。 見つからない場合は、Visual Studio のエディター ウィンドウの上部に、[https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases) からそれをインストールするかどうかを尋ねる情報バーが表示されます。
+Linux による CMake プロジェクトのサポートには、ターゲット マシンに CMake の最新バージョンがインストールされていることが必要となります。 ディストリビューションの既定のパッケージ マネージャーが提供するバージョンは、しばしば最新ではなく、Visual Studio で必要なすべての機能をサポートしていません。 Visual Studio 2019 では、Linux システムに CMake の最新バージョンがインストールされているかどうかを検出します。 見つからない場合は、Visual Studio のエディター ウィンドウの上部に、[https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases) からそれをインストールすることを提案する情報バーが表示されます。
 
 Visual Studio で CMake を利用するには、CMake 3.8 で導入されたサーバー モードに対応する必要があります。 Visual Studio 2019 では、バージョン 3.14 以降をお勧めします。
 
@@ -204,7 +204,7 @@ Visual Studio 2017 の既定の CMake 設定を変更するには、メイン �
 ```
 ::: moniker-end
 
-これらの設定の詳細については、[CMakeSettings.json リファレンス](../build/cmakesettings-reference.md)を参照してください。
+これらの設定の詳細については、[CMakeSettings.json リファレンス](../build/cmakesettings-reference.md)に関するページを参照してください。
 
 
 ## <a name="optional-settings"></a>オプション設定
