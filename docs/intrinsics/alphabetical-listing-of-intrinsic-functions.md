@@ -181,7 +181,7 @@ ms.locfileid: "70220083"
 
 [__ readfsbyte、 \_"readfsdword \_"、"readfsqword \_"、"readfsword"](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)
 
-[__ readgsbyte、 \_( \_readgsdword)、readgsqword、 \_readgソード](../intrinsics/readgsbyte-readgsdword-readgsqword-readgsword.md)
+[__readgsbyte、\_(\_readgsdword、readgsqword、\_readgsword](../intrinsics/readgsbyte-readgsdword-readgsqword-readgsword.md)
 
 [__readmsr](../intrinsics/readmsr.md)
 
@@ -267,9 +267,9 @@ ms.locfileid: "70220083"
 
 [__writeeflags](../intrinsics/writeeflags.md)
 
-[__ writefsbyte、 \_ \_writefsdword、writefsqword、 \_writefソード](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)
+[__writefsbyte、\_\_writefsdword、writefsqword、\_writefsword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)
 
-[__ writ/sbyte、 \_/writ、 \_sqword、/writ/sqword \_](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)
+[__writegsbyte、\__writegsdword、\__writegsqword、\__writegsword](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)
 
 [__writemsr](../intrinsics/writemsr.md)
 
