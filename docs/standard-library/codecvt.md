@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - codecvt header
 ms.assetid: d44ee229-00d5-4761-9b48-0c702122789d
-ms.openlocfilehash: fc711b14a2d30041b4585a9515a95e42280f5306
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 972672e80ce4f82402296317c75e35dcd10c9e93
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458612"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688285"
 ---
 # <a name="ltcodecvtgt"></a>&lt;codecvt&gt;
 
-テンプレート クラス [codecvt](../standard-library/codecvt-class.md) に基づいてオブジェクトを記述するいくつかのテンプレート クラスを定義します。 これらのオブジェクトは、型`Elem`の値のシーケンスと**char**型の値のシーケンスとの間の変換を制御する[ロケールファセット](../standard-library/locale-class.md#facet_class)として使用できます。
+クラステンプレート[codecvt](../standard-library/codecvt-class.md)に基づいてオブジェクトを記述するいくつかのクラステンプレートを定義します。 これらのオブジェクトは、`Elem` 型の値のシーケンスと**char**型の値のシーケンスとの間の変換を制御する[ロケールファセット](../standard-library/locale-class.md#facet_class)として機能することができます。
 
 ## <a name="syntax"></a>構文
 
@@ -42,7 +42,7 @@ ms.locfileid: "68458612"
 
 - UTF-16BE は、16 ビット整数がそれぞれ 2 つの 8 ビット バイト (最初が上位バイト) で表される、UTF-16 と同様のバイト ストリームにおける Unicode のエンコード形式です。
 
-### <a name="enumerations"></a>列挙体
+### <a name="enumerations"></a>列挙
 
 |||
 |-|-|
@@ -50,13 +50,13 @@ ms.locfileid: "68458612"
 
 ### <a name="classes"></a>クラス
 
-|クラス|説明|
+|インスタンス|説明|
 |-|-|
 |[codecvt_utf8](codecvt-utf8-class.md)|UCS-2 または UCS-4 としてエンコードされたワイド文字と、UTF-8 としてエンコードされたバイト ストリームを変換するロケール ファセットを表します。|
 |[codecvt_utf8_utf16](codecvt-utf8-utf16-class.md)|UTF-16 としてエンコードされたワイド文字と、UTF-8 としてエンコードされたバイト ストリームを変換するロケール ファセットを表します。|
 |[codecvt_utf16](codecvt-utf16-class.md)|UCS-2 または UCS-4 としてエンコードされたワイド文字と、UTF-16LE または UTF-16BE としてエンコードされたバイト ストリームを変換するロケール ファセットを表します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 **ヘッダー:** \<codecvt>
 

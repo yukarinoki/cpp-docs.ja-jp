@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - ctype_base class
 ms.assetid: ccffe891-d7ab-4d22-baf8-8eb6d438a96d
-ms.openlocfilehash: f23b9528cf9a921e1d005756aa82751f3fdb745e
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 4fac75d90c4e40a22e8ceae974c3f49c3d50a1d3
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449359"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688192"
 ---
-# <a name="ctypebase-class"></a>ctype_base クラス
+# <a name="ctype_base-class"></a>ctype_base クラス
 
-このクラスは、テンプレート クラス [ctype](../standard-library/ctype-class.md) のファセットの基底クラスとして機能します。 個々の文字または範囲全体の文字を分類またはテストするための列挙型を定義するために使用される ctype クラスの基底クラス。
+クラスは、クラステンプレート[ctype](../standard-library/ctype-class.md)のファセットの基底クラスとして機能します。 個々の文字または範囲全体の文字を分類またはテストするための列挙型を定義するために使用される ctype クラスの基底クラス。
 
 ## <a name="syntax"></a>構文
 
@@ -69,9 +69,9 @@ struct ctype_base : public locale::facet
 
 - **graph** (関数 [isgraph](../standard-library/locale-functions.md#isgraph))
 
-これらの定数を OR 演算することで、分類の組み合わせを特徴付けることができます。 特に、 **alnum** = = ( **alpha** &#124; **digit** \) and **graph** \= \= \(  alnum &#124; **punct**) は常に true です。
+これらの定数を OR 演算することで、分類の組み合わせを特徴付けることができます。 特に、 **alnum** = = (**アルファ** &#124; **数字**\) と**graph** \= \= \( **alnum** &#124; **punct**) は常に true です。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 **ヘッダー:** \<locale>
 

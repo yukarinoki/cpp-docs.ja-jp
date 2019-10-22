@@ -1,4 +1,4 @@
----
+﻿---
 title: 組み込み関数のアルファベット順の一覧
 ms.date: 11/04/2016
 helpviewer_keywords:

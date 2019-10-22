@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - array header
 ms.assetid: 084147c1-e805-478e-8201-76846020f187
-ms.openlocfilehash: 4c35d34c9c51c8ebd6885b1a1cd07c28bcb61d1b
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: bdf9209b18328735f15393687528a40a94198730
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456750"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72690039"
 ---
 # <a name="ltarraygt"></a>&lt;array&gt;
 
-コンテナーテンプレートクラス**配列**といくつかのサポートテンプレートを定義します。
+コンテナークラステンプレート**配列**といくつかのサポートテンプレートを定義します。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 **Header:** \<array>
 
 **名前空間:** std
 
 > [!NOTE]
-> 配列\<> ライブラリは、 `#include <initializer_list>`ステートメントも使用します。
+> @No__t_0array > ライブラリでは、`#include <initializer_list>` ステートメントも使用します。
 
 ## <a name="members"></a>メンバー
 

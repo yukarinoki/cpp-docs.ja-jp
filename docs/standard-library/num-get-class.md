@@ -14,16 +14,16 @@ helpviewer_keywords:
 - std::num_get [C++], do_get
 - std::num_get [C++], get
 ms.assetid: 9933735d-3918-4b17-abad-5fca2adc62d7
-ms.openlocfilehash: 67aef1ce52b6717ce6d6381429982cf660aa5e20
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 5c6fec7002541b519d7cf7d043eed3e5c932bcb9
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457641"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689228"
 ---
 # <a name="num_get-class"></a>num_get クラス
 
-`CharType` 型のシーケンスから数値への変換を制御するためにロケール ファセットとして使用できるオブジェクトを表すテンプレート クラス。
+@No__t_0 型のシーケンスから数値への変換を制御するためにロケールファセットとして使用できるオブジェクトを表すクラステンプレート。
 
 ## <a name="syntax"></a>構文
 
@@ -34,10 +34,10 @@ class num_get : public locale::facet;
 
 ### <a name="parameters"></a>パラメーター
 
-*CharType*\
+*Chartype* \
 ロケールの文字をエンコードするためにプログラム内で使用される型。
 
-*InputIterator*\
+*InputIterator* \
 数値の get 関数が入力を読み取る反復子の型。
 
 ## <a name="remarks"></a>Remarks
@@ -64,7 +64,7 @@ class num_get : public locale::facet;
 |[do_get](#do_get)|文字シーケンスから数値またはブール値を抽出するために呼び出される仮想関数。|
 |[get](#get)|文字シーケンスから数値のまたはブール値を抽出します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 **ヘッダー:** \<locale>
 
@@ -167,19 +167,19 @@ virtual iter_type do_get(
 
 ### <a name="parameters"></a>パラメーター
 
-*まずは*\
+*最初*の \
 数値を読み取る文字の範囲の開始位置。
 
-*前の*\
+*最後*の \
 数値を読み取る文字の範囲の終了位置。
 
-*_Iosbase*\
+*_Iosbase* \
 変換で使用されるフラグが含まれる [Ios_base](../standard-library/ios-base-class.md)。
 
-*状態 (_c)* \
+*状態 \ (_c)*
 失敗した場合に failbit が追加される状態 (「[ios_base::iostate](../standard-library/ios-base-class.md#iostate)」を参照)。
 
-*val*\
+*val* \
 読み取られた値。
 
 ### <a name="return-value"></a>戻り値
@@ -199,9 +199,9 @@ virtual iter_type do_get(
     long& val) const;
 ```
 
-空でない完全な整数入力フィールドを`[first, last)`認識するまで、シーケンスの先頭から始まる連続する要素に一致します。 成功した場合は、このフィールドを**long**型と同等の値に変換し、結果を*val*に格納します。 これは、数値入力フィールドを超える先頭の要素を指す反復子を返します。 それ以外の場合、関数は、 *val*に`ios_base::failbit`何`state`も格納せず、にを設定します。 これは、有効な整数入力フィールドのプレフィックスを超える先頭の要素を指す反復子を返します。 いずれの場合も、戻り値が `last` と等しい場合、関数は `state` に `ios_base::eofbit` を設定します。
+空でない完全な整数入力フィールドを認識するまで、シーケンス `[first, last)` の*先頭*から始まる連続する要素に一致します。 成功した場合は、このフィールドを**long**型と同等の値に変換し、結果を*val*に格納します。 これは、数値入力フィールドを超える先頭の要素を指す反復子を返します。 それ以外の場合、関数は、 *val*に nothing を格納し、`state` で `ios_base::failbit` を設定します。 これは、有効な整数入力フィールドのプレフィックスを超える先頭の要素を指す反復子を返します。 いずれの場合も、戻り値が `last` と等しい場合、関数は `state` に `ios_base::eofbit` を設定します。
 
-整数入力フィールドは、ファイルから一連の**char**要素を照合して変換するために、スキャン機能によって使用されるのと同じ規則によって変換されます。 (このような**char**要素は、単純な一対一のマッピングに`Elem`よって型の同等の要素にマップされると想定されます)。同等のスキャン変換仕様は次のように決定されます。
+整数入力フィールドは、ファイルから一連の**char**要素を照合して変換するために、スキャン機能によって使用されるのと同じ規則によって変換されます。 (このような**char**要素は、単純な一対一のマッピングによって `Elem` 型の同等の要素にマップされると想定されます)。同等のスキャン変換仕様は、次のように決定されます。
 
 `iosbase.`[ios_base::flags](../standard-library/ios-base-class.md#flags)`() & ios_base::basefield == ios_base::`[oct](../standard-library/ios-functions.md#oct) の場合、変換仕様は `lo` です。
 
@@ -414,19 +414,19 @@ iter_type get(
 
 ### <a name="parameters"></a>パラメーター
 
-*まずは*\
+*最初*の \
 数値を読み取る文字の範囲の開始位置。
 
-*前の*\
+*最後*の \
 数値を読み取る文字の範囲の終了位置。
 
-*_Iosbase*\
+*_Iosbase* \
 変換で使用されるフラグが含まれる [Ios_base](../standard-library/ios-base-class.md)。
 
-*状態 (_c)* \
+*状態 \ (_c)*
 失敗した場合に failbit が追加される状態 (「[ios_base::iostate](../standard-library/ios-base-class.md#iostate)」を参照)。
 
-*val*\
+*val* \
 読み取られた値。
 
 ### <a name="return-value"></a>戻り値
@@ -437,25 +437,25 @@ iter_type get(
 
 すべてのメンバー関数が [do_get](#do_get)( `first`, `last`, `_Iosbase`, `_State`, `val`) を返します。
 
-1 番目のプロテクト仮想メンバー関数は、シーケンス [ `first`, `last`) の先頭から始め、空でない完全な整数入力フィールドを認識するまで、連続した要素との一致を試みます。 成功した場合は、このフィールドを**long**型と同等の値に変換し、結果を*val*に格納します。 これは、数値入力フィールドを超える先頭の要素を指す反復子を返します。 それ以外の場合、関数は、 *val*に`ios_base::failbit` nothing を格納し、を _ *State*に設定します。 これは、有効な整数入力フィールドのプレフィックスを超える先頭の要素を指す反復子を返します。 どちらの場合も、戻り値が*last*と等しい場合、関数`ios_base::eofbit`は状態を設定します *(_s)* 。
+1 番目のプロテクト仮想メンバー関数は、シーケンス [ `first`, `last`) の先頭から始め、空でない完全な整数入力フィールドを認識するまで、連続した要素との一致を試みます。 成功した場合は、このフィールドを**long**型と同等の値に変換し、結果を*val*に格納します。 これは、数値入力フィールドを超える先頭の要素を指す反復子を返します。 それ以外の場合、関数は、 *val*に何も格納せず、_ *State*に `ios_base::failbit` を設定します。 これは、有効な整数入力フィールドのプレフィックスを超える先頭の要素を指す反復子を返します。 どちらの場合も、戻り値が*last*と等しい場合、関数は*状態*で `ios_base::eofbit` を設定します。
 
-整数入力フィールドは、ファイルから一連の**char**要素を照合して変換するために、スキャン機能によって使用されるのと同じ規則によって変換されます。 このような**char**要素は、単純な1対1のマッピング`CharType`によって、型の同等の要素にマップされると見なされます。 同等のスキャン変換仕様は次のように決定されます。
+整数入力フィールドは、ファイルから一連の**char**要素を照合して変換するために、スキャン機能によって使用されるのと同じ規則によって変換されます。 このような**char**要素は、単純な一対一のマッピングによって `CharType` 型の同等の要素にマップされると想定されます。 同等のスキャン変換仕様は次のように決定されます。
 
-- `iosbase` [flags](../standard-library/ios-base-class.md#flags) & `ios_base::basefield` == `ios_base::`[oct](../standard-library/ios-functions.md#oct)、変換仕様は `lo` です。
+- `iosbase` [フラグ](../standard-library/ios-base-class.md#flags) &  `ios_base::basefield`  ==  `ios_base::`[10 月](../standard-library/ios-functions.md#oct)の場合、変換仕様は `lo` です。
 
-- **Iosbase. flags** & **ios_base:: basefield** == `ios_base::`[hex](../standard-library/ios-functions.md#hex)の場合、変換仕様は`lx`です。
+- **Iosbase. flags**  & **ios_base:: basefield**  ==  `ios_base::`[hex](../standard-library/ios-functions.md#hex)の場合、変換仕様は `lx` です。
 
 - **iosbase.flags** & **ios_base::basefield** == 0 の場合、変換仕様は `li` です。
 
 - それ以外の場合、変換仕様は `ld` です。
 
-整数入力フィールドの形式は、 [use_facet](../standard-library/locale-functions.md#use_facet) < [numpunct](../standard-library/numpunct-class.md) \< **Elem**> ( **iosbase. flags**) の呼び出しによって返される[ロケールファセット](../standard-library/locale-class.md#facet_class)**fac.** によってさらに決定されます。 [getloc](../standard-library/ios-base-class.md#getloc))。 具体的には、次のように使用します。
+整数入力フィールドの形式は、 [use_facet](../standard-library/locale-functions.md#use_facet)  < [numpunct](../standard-library/numpunct-class.md) \< **Elem**> ( **iosbase. flags**) の呼び出しによって返される[ロケールファセット](../standard-library/locale-class.md#facet_class)によってさらに決定**されます**。 [getloc](../standard-library/ios-base-class.md#getloc))。 具体的には、次のように使用します。
 
 - **fac.** 。 [グループ化](../standard-library/numpunct-class.md#grouping)は、小数点の左側に桁をグループ化する方法を決定します。
 
 - **fac.** 。 [thousands_sep](../standard-library/numpunct-class.md#thousands_sep)は、小数点の左側にある数字のグループを区切るシーケンスを決定します。
 
-**Fac.** のインスタンスが存在しない場合。 `thousands_sep`数値入力フィールドでは、グループ化の制約は適用されません。 それ以外の場合は、 **fac.** によって課せられるグループ化の制約です。 **グループ化**が適用され、スキャン変換が行われる前に区切り記号が削除されます。
+**Fac.** のインスタンスが存在しない場合。 数値入力フィールドに `thousands_sep` 発生した場合、グループ化の制約は適用されません。 それ以外の場合は、 **fac.** によって課せられるグループ化の制約です。 **グループ化**が適用され、スキャン変換が行われる前に区切り記号が削除されます。
 
 2 番目のプロテクト仮想メンバー関数:
 
@@ -491,7 +491,7 @@ virtual iter_type do_get(iter_type first,
     long double& val) const;
 ```
 
-同等のスキャン変換指定子が`Lf`である点を除いて、3番目と同じ動作をします。
+同等のスキャン変換指定子が `Lf` という点を除いて、3番目と同じ動作になります。
 
 5 番目のプロテクト仮想メンバー関数:
 
@@ -517,7 +517,7 @@ virtual iter_type do_get(iter_type first,
 
 この関数の動作は 1 番目と同じですが、空でない完全なブール値入力フィールドとの一致を試みる点が異なります。 成功した場合は、ブール型の入力フィールドを**bool**型の値に変換し、その値を*val*に格納します。
 
-ブール値入力フィールドは、次の 2 つの形式のいずれかになります。 **Iosbase. flags**の場合。 **フラグ**の [boolalpha](../standard-library/ios-functions.md#boolalpha) は false です。これは整数入力フィールドと同じですが、変換後の値は 0 (false の場合) または 1 (true の場合) のいずれかである必要があります。 & `ios_base::` それ以外の場合、シーケンスはいずれかの**fac.** に一致する必要があります。 [falsename](../standard-library/numpunct-class.md#falsename)( **false**の場合)、または**fac.** です。 [truename](../standard-library/numpunct-class.md#truename) ( **true**の場合)。
+ブール値入力フィールドは、次の 2 つの形式のいずれかになります。 **Iosbase. flags**の場合。 **フラグ** &  `ios_base::`[ブール](../standard-library/ios-functions.md#boolalpha)値は**false**です。 false の場合、整数入力フィールドと同じですが、変換後の値は 0 ( **false**の場合) または 1 ( **true**の場合) のいずれかである必要があります。 それ以外の場合、シーケンスはいずれかの**fac.** に一致する必要があります。 [falsename](../standard-library/numpunct-class.md#falsename) ( **false**の場合) または**fac.** 。 [(](../standard-library/numpunct-class.md#truename) **true**の場合)。
 
 ### <a name="example"></a>例
 
@@ -573,18 +573,18 @@ explicit num_get(size_t _Refs = 0);
 
 ### <a name="parameters"></a>パラメーター
 
-*参照 (_c)* \
-オブジェクトのメモリ管理の種類を指定するために使用する整数値。
+*Refs \ (_c)*
+オブジェクトのメモリ管理のタイプを指定するために使用する整数値。
 
 ### <a name="remarks"></a>Remarks
 
 *Refs*パラメーターに指定できる値とその意味は、次のとおりです。
 
-- 0オブジェクトの有効期間は、オブジェクトが含まれているロケールによって管理されます。
+- 0: オブジェクトの有効期間はそれが含まれるロケールによって管理されます。
 
-- 1:オブジェクトの有効期間は、手動で管理する必要があります。
+- 1: オブジェクトの有効期間を手動で管理する必要があります。
 
-- \>1:これらの値は定義されていません。
+- \> 1: これらの値は定義されていません。
 
 デストラクターが保護されているため、利用できる直接的な例はありません。
 

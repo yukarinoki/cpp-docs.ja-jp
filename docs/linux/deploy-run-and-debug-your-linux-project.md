@@ -74,7 +74,7 @@ Linux プロジェクトと対話してデバッグするには、いくつか�
 
    ブレークポイントを設定したコード行に赤い点が表示されます。
 
-1. **F5** を押して (あるいは、 **[デバッグ]、[デバッグの開始]** の順に選択し) デバッグを開始します。
+1. **F5** を押して (または、 **[デバッグ]、[デバッグの開始]** の順に選択して) デバッグを開始します。
 
    デバッグを開始するとき、開始前に、リモート ターゲットでアプリケーションがコンパイルされます。 コンパイル エラーは **[エラー一覧]** ウィンドウに表示されます。
 
@@ -125,7 +125,7 @@ ExePath="C:\temp\ConsoleApplication17\ConsoleApplication17\bin\x64\Debug\Console
 </SupplementalLaunchOptions>
 ```
 
-**AttachOptionsForConnection** には必要な多くの属性があります。 上記の例は、追加の .so ライブラリを検索する場所を指定する方法を示しています。 子要素 **ServerOptions** を使用すると、代わりに gdbserver でリモート プロセスをアタッチできます。 これを実行するには、ローカルの gdb クライアントと (Visual Studio 2017 で出荷されているものは上のとおりです)、バイナリのローカル コピーをシンボルと共に指定する必要があります。 **SetupCommands** 要素を使用すると、コマンドを gdb に直接渡すことができます。 使用可能なすべてのオプションは、GitHub の [LaunchOptions.xsd schema](https://github.com/Microsoft/MIEngine/blob/master/src/MICore/LaunchOptions.xsd) にあります。
+**AttachOptionsForConnection** には、必要となる多くの属性があります。 上記の例は、追加の .so ライブラリを検索する場所を指定する方法を示しています。 子要素 **ServerOptions** を使用すると、代わりに gdbserver でリモート プロセスをアタッチできます。 これを実行するには、ローカルの gdb クライアントと (Visual Studio 2017 で出荷されているものは上のとおりです)、バイナリのローカル コピーをシンボルと共に指定する必要があります。 **SetupCommands** 要素を使用すると、コマンドを gdb に直接渡すことができます。 使用可能なすべてのオプションは、GitHub の [LaunchOptions.xsd schema](https://github.com/Microsoft/MIEngine/blob/master/src/MICore/LaunchOptions.xsd) にあります。
 
 ::: moniker range="vs-2019"
 

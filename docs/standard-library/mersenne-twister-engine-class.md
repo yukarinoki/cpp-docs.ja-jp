@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - mersenne_twister_engine class
 ms.assetid: 7ee968fa-a1cc-450f-890f-7305de062685
-ms.openlocfilehash: ed5380e36e71d7366d2b4b84528bbd35b87cc775
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 79613c76b3ea6dc15643e83a15d5bd6d90b60c6a
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451857"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687696"
 ---
-# <a name="mersennetwisterengine-class"></a>mersenne_twister_engine クラス
+# <a name="mersenne_twister_engine-class"></a>mersenne_twister_engine クラス
 
 メルセンヌ ツイスタ アルゴリズムを基にして、品質の高い整数のランダム シーケンスを生成します。
 
@@ -29,31 +29,31 @@ class mersenne_twister_engine;
 
 ### <a name="parameters"></a>パラメーター
 
-*UIntType*\
-結果を表す符号なし整数型。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
+*Uinttype* \
+結果を表す符号なし整数型。 使用可能な型については、「[\<random>](../standard-library/random.md)」を参照してください。
 
-*リダイレクト*\
+*W* \
 **ワード サイズ**。 状態シーケンスの各ワードのサイズ (ビット数)。 **前提条件**: `2u < W ≤ numeric_limits<UIntType>::digits`
 
-*非該当*\
+*N* \
 **状態のサイズ**。 状態シーケンス内の要素 (値) の数。
 
-*M*\
+*M* \
 **シフト サイズ**。 ひねりを加えるごとにスキップする要素の数。 **前提条件**: `0 < M ≤ N`
 
 *R*\
 **マスク ビット**。 **前提条件**: `R ≤ W`
 
-*ある*\
+*@No__t_1*
 **XOR マスク**。 **前提条件**: `A ≤ (1u<<W) - 1u`
 
-*U*、 *S*、 *T*、 *L*\
+*U*、 *S*、 *T*、 *L* \
 **調律のシフト パラメーター**。 スクランブル (調律) 時のシフト値として使用されます。 前提条件: `U,S,T,L ≤ W`
 
-*D*、 *B*、 *C*\
+*D*、 *B*、 *C* \
 **調律のビット マスク パラメーター**。 スクランブル (調律) 時のビット マスク値として使用されます。 前提条件: `D,B,C ≤ (1u<<W) - 1u`
 
-*F*\
+*F* \
 **初期化乗数**。 シーケンスの初期化を支援するために使用されます。 前提条件: `F ≤ (1u<<W) - 1u`
 
 ## <a name="members"></a>メンバー
@@ -69,7 +69,7 @@ class mersenne_twister_engine;
 
 ## <a name="remarks"></a>Remarks
 
-このテンプレート クラスは、閉区間 [ `0`, `2`<sup>W</sup> - `1`] の値を返す乱数エンジンを表します。 このエンジンは、`W * (N - 1) + R` ビットの大きな整数値を保持します。 この大きな値から一度に1ビット*ずつ抽出し*、すべてのビットを使用した場合は、ビットをシフトして混合することによって大きな値をひねることによって、抽出元となる新しいビットのセットを取得します。 エンジンの状態は、が`N` *N*回以上`M` `N - M` `W` `operator()`呼び出された場合に使用される最後のビット値です。それ以外の場合は、使用されたビット値と最後の値`W`シード.
+このクラステンプレートは、ランダムな数値エンジンを記述し、終了間隔 [`0`、`2`<sup>W</sup>  -  `1`] の値を返します。 このエンジンは、`W * (N - 1) + R` ビットの大きな整数値を保持します。 この大きな値から一度に1ビットずつ抽出し、すべて*のビットを*使用した場合は、ビットをシフトして混合することによって大きな値をひねることによって、抽出元となる新しいビットのセットを取得します。 エンジンの状態は、`operator()` が*N*回以上呼び出された場合に使用される最後の `N` `W` ビット値です。それ以外の場合は、使用された `M` の `W` ビット値およびシードの最後の `N - M` 値です。
 
 ジェネレーターは、シフト値*N*と*M*、ねじれ値*R*、および条件付き XOR マスク*a*によって定義された、ツイスト一般化されたフィードバックシフトレジスタを使用して、保持している大きな値をひねることができます。さらに、生のシフトレジスタのビットは、 *U*、 *D*、 *S*、 *B*、 *T*、 *C*、 *L*の値によって定義されるビットスクランブル行列に従って、スクランブル (調律) されます。
 
@@ -77,7 +77,7 @@ class mersenne_twister_engine;
 
 このエンジンから直接ジェネレーターを構築できますが、次の表にある定義済みの typedef のいずれかを使用することをお勧めします。
 
-`mt19937`:32 ビット メルセンヌ ツイスタ エンジン (松本、西村、1998年)。
+`mt19937`: 32 ビット メルセンヌ ツイスタ エンジン (松本、西村、1998年)。
 
 ```cpp
 typedef mersenne_twister_engine<unsigned int, 32, 624, 397,
@@ -88,7 +88,7 @@ typedef mersenne_twister_engine<unsigned int, 32, 624, 397,
     18, 1812433253> mt19937;
 ```
 
-`mt19937_64`:64 ビット メルセンヌ ツイスタ エンジン (松本、西村、2000年)。
+`mt19937_64`: 64 ビット メルセンヌ ツイスタ エンジン (松本、西村、2000年)。
 
 ```cpp
 typedef mersenne_twister_engine<unsigned long long, 64, 312, 156,
@@ -105,7 +105,7 @@ typedef mersenne_twister_engine<unsigned long long, 64, 312, 156,
 
 コード例については、[\<random>](../standard-library/random.md) をご覧ください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 **ヘッダー:** \<random>
 

@@ -38,14 +38,14 @@ helpviewer_keywords:
 - stdext::allocator_base [C++], destroy
 - stdext::allocator_base [C++], max_size
 ms.assetid: f920b45f-2a88-4bb0-8ead-b6126b426ed4
-ms.openlocfilehash: 115f5ad4461b98f24e3aa6756e501b91ae3a1566
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: cbc1a9eb9432a454ca5dc04205b9d0c7b631a430
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456439"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72690090"
 ---
-# <a name="allocatorbase-class"></a>allocator_base クラス
+# <a name="allocator_base-class"></a>allocator_base クラス
 
 同期フィルターからユーザー定義のアロケーターを作成するために必要な、基底クラスと共通の関数を定義します。
 
@@ -61,7 +61,7 @@ class allocator_base
 |パラメーター|説明|
 |---------------|-----------------|
 |*Type*|アロケーターによって割り当てられた要素の型。|
-|*[同期]*|アロケーターの同期ポリシー。[sync_none クラス](../standard-library/sync-none-class.md)、[sync_per_container クラス](../standard-library/sync-per-container-class.md)、[sync_per_thread クラス](../standard-library/sync-per-thread-class.md)、[sync_shared クラス](../standard-library/sync-shared-class.md)のいずれかです。|
+|*頻度*|アロケーターの同期ポリシー。[sync_none クラス](../standard-library/sync-none-class.md)、[sync_per_container クラス](../standard-library/sync-per-container-class.md)、[sync_per_thread クラス](../standard-library/sync-per-thread-class.md)、[sync_shared クラス](../standard-library/sync-shared-class.md)のいずれかです。|
 
 ### <a name="constructors"></a>コンストラクター
 
@@ -78,7 +78,7 @@ class allocator_base
 |[difference_type](#difference_type)|アロケーターによって管理されるオブジェクトの型に対するポインターの値の差を表すことができる符号付き整数型。|
 |[pointer](#pointer)|アロケーターによって管理されるオブジェクトの型に対するポインターを提供する型。|
 |[reference](#reference)|アロケーターによって管理されるオブジェクトの型に対する参照を提供する型。|
-|[size_type](#size_type)|テンプレート クラス `allocator_base` のオブジェクトが割り当てることができる、シーケンスの長さを表すことのできる符号なし整数型。|
+|[size_type](#size_type)|@No__t_0 型のオブジェクトが割り当てることができる任意のシーケンスの長さを表すことができる符号なし整数型。|
 |[value_type](#value_type)|アロケーターによって管理される型。|
 
 ### <a name="member-functions"></a>メンバー関数
@@ -94,7 +94,7 @@ class allocator_base
 |[destroy](#destroy)|オブジェクトが格納されたメモリの割り当てを解除せずに、オブジェクトのデストラクターを呼び出します。|
 |[max_size](#max_size)|空きメモリがすべて使用される前にクラス アロケーター オブジェクトによって割り当てることのできる、*Type* 型の要素の数を返します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 **ヘッダー:** \<allocators>
 
@@ -153,7 +153,7 @@ const_pointer address(const_reference val);
 
 ### <a name="parameters"></a>パラメーター
 
-*val*\
+*val* \
 アドレスが検索対象となっているオブジェクトの const 値または nonconst 値。
 
 ### <a name="return-value"></a>戻り値
@@ -325,7 +325,7 @@ typedef Type& reference;
 
 ## <a name="size_type"></a>  allocator_base::size_type
 
-テンプレート クラス `allocator_base` のオブジェクトが割り当てることができる、シーケンスの長さを表すことのできる符号なし整数型。
+@No__t_0 型のオブジェクトが割り当てることができる任意のシーケンスの長さを表すことができる符号なし整数型。
 
 ```cpp
 typedef std::size_t size_type;

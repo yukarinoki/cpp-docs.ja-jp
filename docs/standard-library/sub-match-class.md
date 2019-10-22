@@ -20,14 +20,14 @@ helpviewer_keywords:
 - std::sub_match [C++], iterator
 - std::sub_match [C++], value_type
 ms.assetid: 804e2b9e-d16a-4c4c-ac60-024e0b2dd0e8
-ms.openlocfilehash: 07ec6f0dc9daaec19fa97a6220da4d4ea93b254b
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 776dfe67367b932435f76af94880111cad61341d
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447429"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72685843"
 ---
-# <a name="submatch-class"></a>sub_match クラス
+# <a name="sub_match-class"></a>sub_match クラス
 
 サブマッチを記述します。
 
@@ -41,16 +41,16 @@ class sub_match
 
 ## <a name="parameters"></a>パラメーター
 
-*BidIt*\
-サブマッチ用の反復子の型。
+*Bidit* \
+サブマッチの反復子の型。
 
 ## <a name="remarks"></a>Remarks
 
-このテンプレート クラスは、 [regex_match](../standard-library/regex-functions.md#regex_match) または [regex_search](../standard-library/regex-functions.md#regex_search)に対する呼び出しでキャプチャ グループと一致した文字のシーケンスを指定するオブジェクトを表します。 [match_results Class](../standard-library/match-results-class.md) 型のオブジェクトは、検索に使用された正規表現内のキャプチャ グループごとに 1 つずつ、これらのオブジェクトの配列を保持します。
+クラステンプレートは、 [regex_match](../standard-library/regex-functions.md#regex_match)または[regex_search](../standard-library/regex-functions.md#regex_search)への呼び出しでキャプチャグループと一致した文字のシーケンスを指定するオブジェクトを表します。 [match_results Class](../standard-library/match-results-class.md) 型のオブジェクトは、検索に使用された正規表現内のキャプチャ グループごとに 1 つずつ、これらのオブジェクトの配列を保持します。
 
 キャプチャ グループがオブジェクトのデータ メンバーと一致しなかった場合は、 `matched` が false を保持し、2 つの反復子の `first` と `second` (ベース `std::pair`から継承) が等しくなります。 キャプチャ グループが一致した場合は、 `matched` が true を保持し、反復子 `first` がキャプチャ グループと一致したターゲット シーケンスの最初の文字を指し、反復子 `second` がキャプチャ グループと一致したターゲット シーケンスの最後の文字の 1 つ先の位置を指します。 長さ 0 の一致の場合は、メンバー `matched` が true を保持し、2 つの反復子が等しくなり、両方が一致した位置を指します。
 
-長さ 0 の一致は、キャプチャ グループが 1 つのアサーションのみまたは 0 回の繰り返しが許可される 1 つの繰り返しのみで構成されている場合に発生します。 例えば:
+長さ 0 の一致は、キャプチャ グループが 1 つのアサーションのみまたは 0 回の繰り返しが許可される 1 つの繰り返しのみで構成されている場合に発生します。 (例:
 
 "^" は、ターゲット シーケンス "a" と一致します。キャプチャ グループ 0 に対応する `sub_match` オブジェクトは、両方がシーケンスの最初の文字を指す反復子を保持します。
 
@@ -60,7 +60,7 @@ class sub_match
 
 |型名|説明|
 |-|-|
-|[difference_type](#difference_type)|反復子の差の型です。|
+|[difference_type](#difference_type)|反復子の型の相違点。|
 |[Iterator](#iterator)|反復子の型。|
 |[value_type](#value_type)|要素の型。|
 
@@ -131,7 +131,7 @@ compare(string) == 1
 compare(sub) == 0
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 **ヘッダー:** \<regex>
 
@@ -149,13 +149,13 @@ int compare(const value_type *ptr) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*そうです*\
+*右*\
 比較するサブマッチ。
 
-*引数*\
+*str* \
 比較対象の文字列。
 
-*ポインター*\
+*ptr* \
 null で終わる比較対象のシーケンス。
 
 ### <a name="remarks"></a>Remarks
@@ -172,7 +172,7 @@ null で終わる比較対象のシーケンス。
 
 ## <a name="difference_type"></a>  sub_match::difference_type
 
-反復子の差の型です。
+反復子の型の相違点。
 
 ```cpp
 typedef typename iterator_traits<BidIt>::difference_type difference_type;
@@ -180,7 +180,7 @@ typedef typename iterator_traits<BidIt>::difference_type difference_type;
 
 ### <a name="remarks"></a>Remarks
 
-typedef は、`iterator_traits<BidIt>::difference_type` の同意語です。
+typedef は、 `iterator_traits<BidIt>::difference_type`のシノニムです。
 
 ## <a name="iterator"></a>  sub_match::iterator
 
@@ -216,7 +216,7 @@ bool matched;
 
 ### <a name="remarks"></a>Remarks
 
-メンバーは、 に`*this`関連付けられたキャプチャグループが正規表現に一致する場合にのみ、true を保持します。
+メンバーは、`*this` に関連付けられたキャプチャグループが正規表現の一致の一部であった場合にのみ**true**を保持します。
 
 ## <a name="op_basic_string_lt_value_type_gt"></a>  sub_match::operator basic_string&lt;value_type&gt;
 
@@ -228,7 +228,7 @@ operator basic_string<value_type>() const;
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー演算子は、 `str()`を返します。
+このメンバー演算子は、`str()` を返します。
 
 ## <a name="str"></a>  sub_match::str
 
@@ -240,7 +240,7 @@ basic_string<value_type> str() const;
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は、`basic_string<value_type>(first, second)` を返します。
+このメンバー関数は、 `basic_string<value_type>(first, second)`を返します。
 
 ## <a name="value_type"></a>  sub_match::value_type
 
@@ -252,7 +252,7 @@ typedef typename iterator_traits<BidIt>::value_type value_type;
 
 ### <a name="remarks"></a>Remarks
 
-typedef は、`iterator_traits<BidIt>::value_type` の同意語です。
+typedef は、 `iterator_traits<BidIt>::value_type`のシノニムです。
 
 ## <a name="see-also"></a>関連項目
 

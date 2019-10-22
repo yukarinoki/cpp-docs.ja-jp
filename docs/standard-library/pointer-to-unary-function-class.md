@@ -7,16 +7,16 @@ helpviewer_keywords:
 - pointer_to_unary_function function
 - pointer_to_unary_function class
 ms.assetid: 05600207-b916-4759-beca-6b6facd2d6f6
-ms.openlocfilehash: cff84f1f15eea34c60162f702dfe05350d1383d1
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 2b6bf82faa39e22c5af584a9fc3ebf68f5851463
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240465"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689142"
 ---
-# <a name="pointertounaryfunction-class"></a>pointer_to_unary_function クラス
+# <a name="pointer_to_unary_function-class"></a>pointer_to_unary_function クラス
 
-単項関数ポインターを適応性のある単項関数に変換します。 C++ 11、c++ 17 では削除では、非推奨とされます。
+単項関数ポインターを適応性のある単項関数に変換します。 C++ 11 では非推奨となりました。 C++ 17 では削除されています。
 
 ## <a name="syntax"></a>構文
 
@@ -32,7 +32,7 @@ class pointer_to_unary_function
 
 ### <a name="parameters"></a>パラメーター
 
-*pfunc*\
+*pfunc* \
 変換する二項関数。
 
 *左*\
@@ -40,11 +40,11 @@ class pointer_to_unary_function
 
 ## <a name="return-value"></a>戻り値
 
-テンプレート クラスのコピーを格納する`pfunc`します。 そのメンバー関数 `operator()` は (\* **pfunc**)(_ *Left*) を返すように定義されています。
+クラステンプレートには、`pfunc` のコピーが格納されます。 そのメンバー関数 `operator()` は (\* **pfunc**)(_ *Left*) を返すように定義されています。
 
 ## <a name="remarks"></a>Remarks
 
-単項関数ポインターは関数オブジェクトであり、パラメーターとして単項関数を想定する C++ 標準ライブラリの任意のアルゴリズムに渡される場合がありますが、適合性はありません。 値をバインドなど、否定子と共に使用するアダプターを使用して入れ子にされた型で指定する必要があります`argument_type`と`result_type`このような適応を可能にします。 `pointer_to_unary_function` による変換によって、関数アダプターを二項関数ポインターと共に使用できるようになります。
+単項関数ポインターは関数オブジェクトであり、パラメーターとして単項関数を想定する C++ 標準ライブラリの任意のアルゴリズムに渡される場合がありますが、適合性はありません。 これをアダプターで使用するには (値をバインドする、negator と共に使用するなど)、入れ子にされた型 `argument_type` および `result_type` を指定して、そのような適合を可能にする必要があります。 `pointer_to_unary_function` による変換によって、関数アダプターを二項関数ポインターと共に使用できるようになります。
 
 ## <a name="example"></a>例
 

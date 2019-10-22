@@ -22,16 +22,16 @@ helpviewer_keywords:
 - std::messages [C++], get
 - std::messages [C++], open
 ms.assetid: c4c71f40-4f24-48ab-9f7c-daccd8d5bd83
-ms.openlocfilehash: f417c33d5502f8e5bd247936c8a0f93007239924
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 704ee2ce40b4026cc066213181c96cf0f744d152
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449940"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687685"
 ---
 # <a name="messages-class"></a>messages クラス
 
-このテンプレート クラスは、特定のロケールの国際化メッセージのカタログからローカライズされたメッセージを取得するためにロケールのファセットとして使用できるオブジェクトを表します。
+クラステンプレートは、特定のロケールの国際化メッセージのカタログからローカライズされたメッセージを取得するためにロケールファセットとして使用できるオブジェクトを表します。
 
 現在、messages クラスは実装されていますが、メッセージはありません。
 
@@ -44,7 +44,7 @@ class messages : public messages_base;
 
 ### <a name="parameters"></a>パラメーター
 
-*CharType*\
+*Chartype* \
 ロケールの文字をエンコードするためにプログラム内で使用される型。
 
 ## <a name="remarks"></a>Remarks
@@ -77,7 +77,7 @@ class messages : public messages_base;
 |[get](#get)|メッセージ カタログを取得します。|
 |[open](#open)|メッセージ カタログを開きます。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 **ヘッダー:** \<locale>
 
@@ -105,7 +105,7 @@ void close(catalog _Catval) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*Catval*\
+*Catval \ (_d)*
 終了するカタログ。
 
 ### <a name="remarks"></a>Remarks
@@ -122,7 +122,7 @@ virtual void do_close(catalog _Catval) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*Catval*\
+*Catval \ (_d)*
 終了するカタログ。
 
 ### <a name="remarks"></a>Remarks
@@ -149,16 +149,16 @@ virtual string_type do_get(
 
 ### <a name="parameters"></a>パラメーター
 
-*Catval*\
+*Catval \ (_d)*
 検索されるメッセージ カタログを示す識別値。
 
-*_ _* \
+*_* @No__t_1
 メッセージ カタログ内のメッセージの検索に使用される最初の識別値。
 
-*メッセージ (_d)* \
+*メッセージ \ (_d)*
 メッセージ カタログ内のメッセージの検索に使用される 2 番目の識別値。
 
-*エラー (_d)* \
+*Dfault \ (_d)*
 失敗した場合に返される文字列。
 
 ### <a name="return-value"></a>戻り値
@@ -167,7 +167,7 @@ virtual string_type do_get(
 
 ### <a name="remarks"></a>Remarks
 
-プロテクトメンバー関数は、*メッセージカタログから*メッセージシーケンスを取得しようとします。 この操作では、 *_l*、 *Message*、および*dfault*が使用される場合があります。
+プロテクトメンバー関数は、メッセージカタログからメッセージシーケンスを取得しよう*とします*。 この操作*では、_l*、 *Message*、および*dfault*が使用される場合があります。
 
 ### <a name="example"></a>例
 
@@ -185,10 +185,10 @@ virtual catalog do_open(
 
 ### <a name="parameters"></a>パラメーター
 
-*Catname (_c)* \
+@No__t_1 の*名前 (_c)*
 検索されるカタログの名前。
 
-*場所 (_d)* \
+*@No__t_1*
 カタログ内で検索されるロケール。
 
 ### <a name="return-value"></a>戻り値
@@ -197,7 +197,7 @@ virtual catalog do_open(
 
 ### <a name="remarks"></a>Remarks
 
-プロテクトメンバー関数は、名前がであるメッセージカタログを開こうとし*ます。* *ロケールの*場所を使用する場合があります。
+プロテクトメンバー関数は、名前がであるメッセージカタログを開こう*とします。* *ロケールの場所を使用*する場合があります。
 
 後で [close](#close) を呼び出すときに、この戻り値を引数として使用する必要があります。
 
@@ -219,16 +219,16 @@ string_type get(
 
 ### <a name="parameters"></a>パラメーター
 
-*Catval*\
+*Catval \ (_d)*
 検索されるメッセージ カタログを示す識別値。
 
-*_ _* \
+*_* @No__t_1
 メッセージ カタログ内のメッセージの検索に使用される最初の識別値。
 
-*メッセージ (_d)* \
+*メッセージ \ (_d)*
 メッセージ カタログ内のメッセージの検索に使用される 2 番目の識別値。
 
-*エラー (_d)* \
+*Dfault \ (_d)*
 失敗した場合に返される文字列。
 
 ### <a name="return-value"></a>戻り値
@@ -254,21 +254,21 @@ protected: messages(
 
 ### <a name="parameters"></a>パラメーター
 
-*参照 (_c)* \
-オブジェクトのメモリ管理の種類を指定するために使用する整数値。
+*Refs \ (_c)*
+オブジェクトのメモリ管理のタイプを指定するために使用する整数値。
 
-*名前 (_d)* \
+*@No__t_1*
 ロケールの名前。
 
 ### <a name="remarks"></a>Remarks
 
 *Refs*パラメーターに指定できる値とその意味は、次のとおりです。
 
-- 0オブジェクトの有効期間は、オブジェクトが含まれているロケールによって管理されます。
+- 0: オブジェクトの有効期間はそれが含まれるロケールによって管理されます。
 
-- 1:オブジェクトの有効期間は、手動で管理する必要があります。
+- 1: オブジェクトの有効期間を手動で管理する必要があります。
 
-- \>1:これらの値は定義されていません。
+- \> 1: これらの値は定義されていません。
 
 デストラクターが保護されているため、利用できる直接的な例はありません。
 
@@ -286,10 +286,10 @@ catalog open(
 
 ### <a name="parameters"></a>パラメーター
 
-*Catname (_c)* \
+@No__t_1 の*名前 (_c)*
 検索されるカタログの名前。
 
-*場所 (_d)* \
+*@No__t_1*
 カタログ内で検索されるロケール。
 
 ### <a name="return-value"></a>戻り値
@@ -310,7 +310,7 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
 
 ### <a name="remarks"></a>Remarks
 
-この型は、オブジェクトにメッセージ シーケンスのコピーを格納できるテンプレート クラス [basic_string](../standard-library/basic-string-class.md) の特殊化を表します。
+この型は、メッセージシーケンスのコピーを格納できるオブジェクトを持つクラステンプレート[basic_string](../standard-library/basic-string-class.md)の特殊化を表します。
 
 ## <a name="see-also"></a>関連項目
 

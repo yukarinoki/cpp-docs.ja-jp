@@ -5,20 +5,20 @@ f1_keywords:
 - <optional>
 helpviewer_keywords:
 - <optional>
-ms.openlocfilehash: f3b4896a3cb4774e46b36480dd9769fa131fc287
-ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
+ms.openlocfilehash: bce31811c98d351f3c561b3136d41f7ed23d13e0
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68957173"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687258"
 ---
 # <a name="ltoptionalgt"></a>&lt;optional&gt;
 
-コンテナーのテンプレート クラス `optional` と複数のサポート用テンプレートを定義します。
+コンテナークラステンプレート `optional` といくつかのサポートテンプレートを定義します。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
-**ヘッダー:** \<オプション >
+**ヘッダー:** \<optional >
 
 **名前空間:** std
 
@@ -36,14 +36,14 @@ ms.locfileid: "68957173"
 |[operator>=](../standard-library/optional-operators.md#op_lt_eq)|左側のオブジェクトが右側のオブジェクト以上かどうかをテストします。|
 
 > [!NOTE]
-> 関係比較に加えて、 \<オプションの > 演算子は**nullopt**と`T`の比較もサポートします。
+> @No__t_0optional > 演算子は、関係比較に加えて、 **nullopt**および `T` との比較もサポートしています。
 
 ### <a name="functions"></a>関数
 
 |||
 |-|-|
 |[make_optional](../standard-library/optional-functions.md#make_optional)|オブジェクトを省略可能にします。|
-|[swap](../standard-library/optional-functions.md#swap)|2つ`optional`のオブジェクトの格納されている値を交換します。|
+|[swap](../standard-library/optional-functions.md#swap)|2つの `optional` オブジェクトの格納されている値を交換します。|
 
 ### <a name="classes-and-structs"></a>クラスと構造体
 
@@ -58,7 +58,7 @@ ms.locfileid: "68957173"
 
 |||
 |-|-|
-|[nullopt](../standard-library/optional-functions.md#nullopt)|比較のため`nullopt_t`ののインスタンス。|
+|[nullopt](../standard-library/optional-functions.md#nullopt)|比較のための `nullopt_t` のインスタンス。|
 
 ## <a name="see-also"></a>関連項目
 

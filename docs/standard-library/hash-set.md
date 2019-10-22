@@ -7,19 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - hash_set header
 ms.assetid: 6b556967-c808-4869-9b4d-f9e030864435
-ms.openlocfilehash: 559bbff00b8e5204dd4f381abaf9987b4752db48
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 00ca476816213d38b3c50c64e0978e65ac1a5ea1
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452016"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687945"
 ---
-# <a name="lthashsetgt"></a>&lt;hash_set&gt;
+# <a name="lthash_setgt"></a>&lt;hash_set&gt;
 
 > [!NOTE]
 > このヘッダーは廃止され、互換性のために残されています。 代わりに、[<unordered_set>](../standard-library/unordered-set.md) を使用してください。
 
-コンテナー テンプレート クラスの hash_set と hash_multiset、およびそのサポート用テンプレートを定義します。
+コンテナークラステンプレート hash_set と hash_multiset、およびそのサポートテンプレートを定義します。
 
 ## <a name="syntax"></a>構文
 
@@ -44,9 +44,9 @@ ms.locfileid: "68452016"
 
 ### <a name="classes"></a>クラス
 
-|クラス|説明|
+|インスタンス|説明|
 |-|-|
-|[hash_compare クラス](../standard-library/hash-compare-class.md)|ハッシュ連想コンテナー (hash_map、hash_multimap、hash_set、または hash_multiset) のいずれかで使用できるオブジェクトを記述します。この`Traits`オブジェクトには、含まれる要素の順序付けとハッシュを行う既定のパラメーターオブジェクトを指定します。|
+|[hash_compare クラス](../standard-library/hash-compare-class.md)|ハッシュ連想コンテナー (hash_map、hash_multimap、hash_set、または hash_multiset) のいずれかで使用できるオブジェクトを記述します。これは、既定の `Traits` パラメーターオブジェクトとして、含まれる要素の順序付けおよびハッシュを行います。|
 |[hash_set クラス](../standard-library/hash-set-class.md)|コレクションのデータを格納し、迅速に取得するために使用されます。このコレクションに含まれる要素の値は一意で、キー値として機能します。|
 |[hash_multiset クラス](../standard-library/hash-multiset-class.md)|コレクションのデータを格納し、迅速に取得するために使用されます。このコレクションに含まれる要素の値は一意で、キー値として機能します。|
 

@@ -16,16 +16,16 @@ helpviewer_keywords:
 - std::money_put [C++], do_put
 - std::money_put [C++], put
 ms.assetid: f439fd56-c9b1-414c-95e1-66c918c6eee6
-ms.openlocfilehash: b9dff8a871895eee6774b75ca1c83dca6fd42ff3
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: aafa6f9498ee315c25e73833baf3c13d99d36743
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460234"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689310"
 ---
 # <a name="money_put-class"></a>money_put クラス
 
-このテンプレート クラスは、通貨値から `CharType` 型のシーケンスへの変換を制御するためにロケール ファセットとして使用できるオブジェクトを表します。
+クラステンプレートは、通貨値から `CharType` 型のシーケンスへの変換を制御するためにロケールファセットとして使用できるオブジェクトを表します。
 
 ## <a name="syntax"></a>構文
 
@@ -37,10 +37,10 @@ class money_put : public locale::facet;
 
 ### <a name="parameters"></a>パラメーター
 
-*CharType*\
+*Chartype* \
 ロケールの文字をエンコードするためにプログラム内で使用される型。
 
-*OutputIterator*\
+*OutputIterator* \
 通貨の put 関数が出力を書き込む反復子の型。
 
 ## <a name="remarks"></a>Remarks
@@ -68,7 +68,7 @@ class money_put : public locale::facet;
 |[do_put](#do_put)|通貨値を表す文字シーケンスから数値または文字列を抽出するために呼び出される仮想関数。|
 |[put](#put)|数値または文字列を通貨値を表す文字シーケンスに変換します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 **ヘッダー:** \<locale>
 
@@ -108,19 +108,19 @@ virtual iter_type do_put(
 
 ### <a name="parameters"></a>パラメーター
 
-*次に*\
+*次*の \
 挿入された文字列の先頭の要素を示す反復子。
 
-*マイ国際*\
+*国際 \ (_s)*
 シーケンスで期待される通貨記号の種類を示すブール値。国際通貨の場合は **true**、国内通貨の場合は **false**。
 
-*_Iosbase*\
+*_Iosbase* \
 書式設定フラグ。これが設定されている場合、通貨記号は省略可能です。それ以外の場合は必須です
 
-*塗りつぶし (_C)* \
+@No__t_1 の*塗りつぶし (_c)*
 スペースに使用される文字。
 
-*val*\
+*val* \
 変換される文字列オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -133,7 +133,7 @@ virtual iter_type do_put(
 
 2番目のプロテクト仮想メンバー関数は、最初のオーバーロードと同じように動作しますが、最初に*val*が10進数のシーケンスに変換され、必要に応じてマイナス記号 (-) の前にあるように変換されます。
 
-通貨出力フィールドの形式は、(有効な) call [use_facet](../standard-library/locale-functions.md#use_facet) < [moneypunct](../standard-library/moneypunct-class.md) **chartype**、\< **> >** ( **iosbase. flags**) によって返される[ロケールファセット](../standard-library/locale-class.md#facet_class)によって決定されます。 [getloc](../standard-library/ios-base-class.md#getloc))。
+通貨出力フィールドの形式は、(有効な) call [use_facet](../standard-library/locale-functions.md#use_facet)  < [Moneypunct](../standard-library/moneypunct-class.md) \< **chartype**、**国際**> > ( **iosbase. flags**) によって返される[ロケールファセット](../standard-library/locale-class.md#facet_class)fac. によって決定されます。 [getloc](../standard-library/ios-base-class.md#getloc))。
 
 具体的には、次のように使用します。
 
@@ -155,15 +155,15 @@ virtual iter_type do_put(
 
 - **fac.** 。 [frac_digits](../standard-library/moneypunct-class.md#frac_digits)は、小数点の右側にある有効な小数部の桁数を決定します。
 
-符号文字列 ( **fac.** の場合は。 `negative_sign`または**fac.** 。 `positive_sign`) に複数の要素があり、最初の要素のみが生成されます。ここでは、 **money_base:: sign**と等しい要素が、形式パターン ( **fac.** ) に表示されます。 `neg_format`または**fac.** 。 `pos_format`) 残りの要素は、通貨出力フィールドの末尾に生成されます。
+符号文字列 ( **fac.** の場合は。 `negative_sign` または**fac.** 。 `positive_sign`) に複数の要素があります。最初の要素だけが生成されます。 **money_base:: sign**と等しい要素が、形式パターン ( **fac.** ) に表示されます。 `neg_format` または**fac.** 。 `pos_format`) 残りの要素は、通貨出力フィールドの末尾に生成されます。
 
-**Iosbase. flags**の場合。 [flags](../standard-library/ios-base-class.md#flags) & [showbase](../standard-library/ios-functions.md#showbase)は0以外で、文字列**fac.** です。 `curr_symbol`が生成されます。これは、要素が**money_base:: symbol**と等しい場合に、書式パターンで表示されます。 それ以外の場合、通貨記号は生成されません。
+**Iosbase. flags**の場合。 [showbase](../standard-library/ios-functions.md#showbase)  &  の[フラグ](../standard-library/ios-base-class.md#flags)は0以外で、文字列は**fac.** です。 `curr_symbol` が生成されます。この要素は、 **money_base:: symbol**と等しい要素が書式パターンで表示されます。 それ以外の場合、通貨記号は生成されません。
 
-**Fac.** によって適用されるグループ化の制約がない場合。 **グループ化**(最初の要素の値は CHAR_MAX)、 **fac.** のインスタンスはありません。 `thousands_sep`は、通貨出力フィールドの値部分に生成されます (ここで、要素は**money_base:: value**と等しくなります)。 **Fac.** の場合。 `frac_digits`が0の場合、 **fac.** のインスタンスはありません。 `decimal_point`は、10進数字の後に生成されます。 それ以外の場合、結果として得られる通貨の出力フィールドには、下位の**fac.** が配置されます。 `frac_digits`小数点の右側にある10進数。
+**Fac.** によって適用されるグループ化の制約がない場合。 **grouping** (最初の要素の値は CHAR_MAX)、次に**fac.** のインスタンスはありません。 `thousands_sep` は、通貨出力フィールドの値の部分 ( **money_base:: value**と等しい要素が書式パターンで表示されます) に生成されます。 **Fac.** の場合。 `frac_digits` が0の場合、 **fac.** のインスタンスはありません。 10進数の後に `decimal_point` が生成されます。 それ以外の場合、結果として得られる通貨の出力フィールドには、下位の**fac.** が配置されます。 小数点以下の桁数を `frac_digits` します。
 
-埋め込みは、 **iosbase. flags**の場合を除き、任意の数値出力フィールドに対して行われます。  & **iosbase. flags**にフラグをします。 [internal](../standard-library/ios-functions.md#internal)が0以外の場合、内部の埋め込みが生成されます。ここでは、 **money_base:: space**と等しい要素が、表示されている場合は、書式パターンで表示されます。 それ以外の場合、内部の埋め込みは生成されたシーケンスの前に発生します。 埋め込み文字は **fill** です。
+埋め込みは、 **iosbase. flags**の場合を除き、任意の数値出力フィールドに対して行われます。 **iosbase. flags** & **フラグ**。 [internal](../standard-library/ios-functions.md#internal)が0以外の場合、内部の埋め込みが生成されます。ここでは、 **money_base:: space**と等しい要素が、表示されている場合は、書式パターンで表示されます。 それ以外の場合、内部の埋め込みは生成されたシーケンスの前に発生します。 埋め込み文字は **fill** です。
 
-関数は**iosbase. flags**を呼び出します。 **幅**フィールドの幅を0にリセットする場合は (0)。
+関数は**iosbase. flags**を呼び出します。 **width**(0) フィールドの幅を0にリセットします。
 
 ### <a name="example"></a>例
 
@@ -191,8 +191,8 @@ explicit money_put(size_t _Refs = 0);
 
 ### <a name="parameters"></a>パラメーター
 
-*参照 (_c)* \
-オブジェクトのメモリ管理の種類を指定するために使用する整数値。
+*Refs \ (_c)*
+オブジェクトのメモリ管理のタイプを指定するために使用する整数値。
 
 ### <a name="remarks"></a>Remarks
 
@@ -202,7 +202,7 @@ explicit money_put(size_t _Refs = 0);
 
 - 1: オブジェクトの有効期間を手動で管理する必要があります。
 
-- \>1: これらの値は定義されていません。
+- \> 1: これらの値は定義されていません。
 
 デストラクターが保護されているため、利用できる直接的な例はありません。
 
@@ -230,19 +230,19 @@ iter_type put(
 
 ### <a name="parameters"></a>パラメーター
 
-*次に*\
+*次*の \
 挿入された文字列の先頭の要素を示す反復子。
 
-*マイ国際*\
+*国際 \ (_s)*
 シーケンスで期待される通貨記号の種類を示すブール値。国際通貨の場合は **true**、国内通貨の場合は **false**。
 
-*_Iosbase*\
+*_Iosbase* \
 書式設定フラグ。これが設定されている場合、通貨記号は省略可能です。それ以外の場合は必須です
 
-*塗りつぶし (_C)* \
+@No__t_1 の*塗りつぶし (_c)*
 スペースに使用される文字。
 
-*val*\
+*val* \
 変換される文字列オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -291,7 +291,7 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
 
 ### <a name="remarks"></a>Remarks
 
-この型は、オブジェクトにソース シーケンスからの要素のシーケンスを格納できるテンプレート クラス [basic_string](../standard-library/basic-string-class.md) の特殊化を表します。
+この型は、ソースシーケンスから要素のシーケンスを格納できるオブジェクトを持つクラステンプレート[basic_string](../standard-library/basic-string-class.md)の特殊化を表します。
 
 ## <a name="see-also"></a>関連項目
 

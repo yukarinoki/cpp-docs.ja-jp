@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - const_mem_fun1_t class
 ms.assetid: 250fac30-9663-4133-9051-6303f76ea259
-ms.openlocfilehash: 8ccd9d7e58b9cadec83b64df5553564db20a5745
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 1af44635400037c6359b13c4f2925c3ac7f2d9d5
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244525"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689752"
 ---
-# <a name="constmemfun1t-class"></a>const_mem_fun1_t クラス
+# <a name="const_mem_fun1_t-class"></a>const_mem_fun1_t クラス
 
-ポインター引数による初期化を行うときに、1 つの引数を使用する **const** メンバー関数を二項関数オブジェクトとして呼び出せるようにするアダプター クラス。 C++ 11、c++ 17 では削除では、非推奨とされます。
+ポインター引数による初期化を行うときに、1 つの引数を使用する **const** メンバー関数を二項関数オブジェクトとして呼び出せるようにするアダプター クラス。 C++ 11 では非推奨となりました。 C++ 17 では削除されています。
 
 ## <a name="syntax"></a>構文
 
@@ -30,14 +30,14 @@ class const_mem_fun1_t : public binary_function<const Type *, Arg, Result>
 
 ### <a name="parameters"></a>パラメーター
 
-*member_ptr*\
+*member_ptr* \
 関数オブジェクトに変換されるクラス `Type` のメンバー関数へのポインター。
 
 *左*\
-**Const**オブジェクトを*member_ptr*でメンバー関数が呼び出されます。
+*Member_ptr*メンバー関数が呼び出される**const**オブジェクト。
 
-*そうです*\
-渡される引数*member_ptr*します。
+*右*\
+*Member_ptr*に渡される引数。
 
 ## <a name="return-value"></a>戻り値
 
@@ -45,8 +45,8 @@ class const_mem_fun1_t : public binary_function<const Type *, Arg, Result>
 
 ## <a name="remarks"></a>Remarks
 
-テンプレート クラスのコピーを格納する*member_ptr*、クラスのメンバー関数へのポインターでなければならない`Type`、プライベート メンバー オブジェクトにします。 そのメンバー関数`operator()`返すよう`(left->member_ptr)(right) const`します。
+クラステンプレートには、 *member_ptr*のコピーが格納されます。これは、プライベートメンバーオブジェクト内の `Type` クラスのメンバー関数へのポインターである必要があります。 @No__t_1 を返すように、メンバー関数 `operator()` を定義します。
 
 ## <a name="example"></a>例
 
-`const_mem_fun1_t` のコンストラクターが直接使用されることはほとんどありません。 `mem_fn` メンバー関数の調整に使用されます。 参照してください[mem_fn](../standard-library/functional-functions.md#mem_fn)メンバー関数アダプターを使用する方法の例についてはします。
+`const_mem_fun1_t` のコンストラクターが直接使用されることはほとんどありません。 メンバー関数を調整するには、`mem_fn` を使用します。 メンバー関数アダプターの使用例については、「 [mem_fn](../standard-library/functional-functions.md#mem_fn) 」を参照してください。

@@ -138,16 +138,16 @@ helpviewer_keywords:
 - std::unordered_map::size
 - std::unordered_map::swap
 ms.assetid: 7cf7cfa1-16e7-461c-a9b2-3b8d8ec24e0d
-ms.openlocfilehash: 8a2e9958bda96ffbfce407c8e9981a0fab14cde1
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 6b6d907fd0f1f19c829f991a61c9d92e015c6686
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454837"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72684447"
 ---
-# <a name="unorderedmap-class"></a>unordered_map クラス
+# <a name="unordered_map-class"></a>unordered_map クラス
 
-このテンプレート クラスは、`std::pair<const Key, Ty>` 型要素の可変長シーケンスを制御するオブジェクトを表します。 このシーケンスは、ハッシュ関数によって、"バケット" と呼ばれる一列に並んだサブシーケンスに分割され、弱い順序付けがなされます。 各バケット内では、比較関数によって要素間の大小関係が決定されます。 各要素は、並べ替えキーと値という、2 つのオブジェクトを持ちます。 このシーケンスは、すべてのバケットの長さがおおよそ等しければ、シーケンス内の要素数にかかわらず一定の演算回数 (定数時間) で、任意の要素を検索、挿入、削除できるような方法で表現されます。 最悪のケースは、すべての要素が 1 つのバケットに集められたときです。演算の回数は、シーケンス内の要素数に比例して増えることになります (線形時間)。 要素を挿入しても反復子の有効性は失われません。また、要素を削除した場合は、削除された要素を指す反復子だけが無効化されます。
+クラステンプレートは、`std::pair<const Key, Ty>` 型の要素の可変長シーケンスを制御するオブジェクトを表します。 このシーケンスは、ハッシュ関数によって、"バケット" と呼ばれる一列に並んだサブシーケンスに分割され、弱い順序付けがなされます。 各バケット内では、比較関数によって要素間の大小関係が決定されます。 各要素は、並べ替えキーと値という、2 つのオブジェクトを持ちます。 このシーケンスは、すべてのバケットの長さがおおよそ等しければ、シーケンス内の要素数にかかわらず一定の演算回数 (定数時間) で、任意の要素を検索、挿入、削除できるような方法で表現されます。 最悪のケースは、すべての要素が 1 つのバケットに集められたときです。演算の回数は、シーケンス内の要素数に比例して増えることになります (線形時間)。 要素を挿入しても反復子の有効性は失われません。また、要素を削除した場合は、削除された要素を指す反復子だけが無効化されます。
 
 ## <a name="syntax"></a>構文
 
@@ -195,7 +195,7 @@ class unordered_map;
 |-|-|
 |[at](#at)|指定したキーを持つ要素を検索します。|
 |[begin](#begin)|被制御シーケンスの先頭を指定します。|
-|[bucket](#bucket)|キー値のバケット番号を取得します。|
+|[つぶし](#bucket)|キー値のバケット番号を取得します。|
 |[bucket_count](#bucket_count)|バケット数を取得します。|
 |[bucket_size](#bucket_size)|バケットのサイズを取得します。|
 |[cbegin](#cbegin)|被制御シーケンスの先頭を指定します。|
@@ -229,15 +229,15 @@ class unordered_map;
 
 ## <a name="remarks"></a>Remarks
 
-このオブジェクトは、このオブジェクトが制御するシーケンスを、格納されている 2 つのオブジェクト ([unordered_map::key_equal](#key_equal) 型の比較関数オブジェクトと、[unordered_map::hasher](#hasher) 型のハッシュ関数オブジェクト) を呼び出すことによって並べ替えます。 格納されている 1 つ目のオブジェクトには、メンバー関数 [unordered_map::key_eq](#key_eq)`()` を呼び出すことによってアクセスします。格納されている 2 つ目のオブジェクトには、メンバー関数 [unordered_map::hash_function](#hash)`()` を呼び出すことによってアクセスします。 具体的には、`X` 型のすべての値 `Y` と `Key` について、`key_eq()(X, Y)` が呼び出され、2 つの引数値の大小関係が等しい場合は true が返されます。`hash_function()(keyval)` の呼び出しからは、`size_t` 型の値の分布が生成されます。 [unordered_multimap クラス](../standard-library/unordered-multimap-class.md)のテンプレート クラスとは異なり、`unordered_map` テンプレート クラスのオブジェクトでは、被制御シーケンスの任意の 2 つの要素間で `key_eq()(X, Y)` が常に false になることが保証されます。 キーの重複は許されません。
+このオブジェクトは、このオブジェクトが制御するシーケンスを、格納されている 2 つのオブジェクト ([unordered_map::key_equal](#key_equal) 型の比較関数オブジェクトと、[unordered_map::hasher](#hasher) 型のハッシュ関数オブジェクト) を呼び出すことによって並べ替えます。 格納されている 1 つ目のオブジェクトには、メンバー関数 [unordered_map::key_eq](#key_eq)`()` を呼び出すことによってアクセスします。格納されている 2 つ目のオブジェクトには、メンバー関数 [unordered_map::hash_function](#hash)`()` を呼び出すことによってアクセスします。 具体的には、`X` 型のすべての値 `Y` と `Key` について、`key_eq()(X, Y)` が呼び出され、2 つの引数値の大小関係が等しい場合は true が返されます。`hash_function()(keyval)` の呼び出しからは、`size_t` 型の値の分布が生成されます。 クラステンプレート[Unordered_multimap クラス](../standard-library/unordered-multimap-class.md)とは異なり、`unordered_map` 型のオブジェクトでは、被制御シーケンスの任意の2つの要素に対して `key_eq()(X, Y)` が常に false になります。 キーの重複は許されません。
 
 このオブジェクトには、さらに、適切とされるバケットあたりの最大平均要素数を指定する最大テーブル占有率が格納されます。 要素を挿入することによって [unordered_map::load_factor](#load_factor)`()` が最大テーブル占有率を超えるような場合、コンテナーは、バケット数を増やし、必要に応じて、ハッシュ テーブルをリビルドします。
 
 被制御シーケンスにおける要素の実際の順序は、ハッシュ関数、比較関数、挿入の順序、最大テーブル占有率、現在のバケット数などによって異なります。 通常、被制御シーケンス内の要素の順序を予測することはできません。 ただし、被制御シーケンス内で同じ大小関係を持った一連の要素は必ず隣接して存在します。
 
-被制御シーケンスに対するストレージの割り当ておよび解放は、格納されている [unordered_map::allocator_type](#allocator_type) 型のアロケーター オブジェクトを介して行われます。 このアロケーター オブジェクトは、`allocator` テンプレート クラスのオブジェクトと同じ外部インターフェイスを持っている必要があります。 コンテナー オブジェクトを代入しても、格納されているアロケーター オブジェクトはコピーされない点に注意してください。
+被制御シーケンスに対するストレージの割り当ておよび解放は、格納されている [unordered_map::allocator_type](#allocator_type) 型のアロケーター オブジェクトを介して行われます。 このようなアロケーターオブジェクトは、`allocator` 型のオブジェクトと同じ外部インターフェイスを持つ必要があります。 コンテナー オブジェクトを代入しても、格納されているアロケーター オブジェクトはコピーされない点に注意してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 **ヘッダー:** \<unordered_map>
 
@@ -406,7 +406,7 @@ size_type bucket(const Key& keyval) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*keyval*\
+*keyval* \
 マップするキー値。
 
 ### <a name="remarks"></a>Remarks
@@ -548,7 +548,7 @@ size_type bucket_size(size_type nbucket) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*nbucket*\
+*nbucket* \
 バケット番号。
 
 ### <a name="remarks"></a>Remarks
@@ -604,13 +604,13 @@ const_iterator cbegin() const;
 
 ### <a name="return-value"></a>戻り値
 
-範囲の最初の要素、または空の範囲の末尾の次の位置 (空の範囲`cbegin() == cend()`の場合は) を指す、定数前方アクセス反復子。
+範囲の最初の要素、または空の範囲の末尾の次の位置 (空の範囲の場合は `cbegin() == cend()`) を指す、**定数**前方アクセス反復子。
 
 ### <a name="remarks"></a>Remarks
 
 `cbegin` の戻り値で範囲内の要素を変更することはできません。
 
-`begin()` メンバー関数の代わりにこのメンバー関数を使用して、戻り値が `const_iterator` になることを保証できます。 通常は、次の例に示すように [auto](../cpp/auto-cpp.md) 型推論キーワードと共に使用します。 この例では、 `Container`とをサポート`begin()`する任意の種類の変更可能な (非**定数**) コンテナー `cbegin()`であると見なします。
+`begin()` メンバー関数の代わりにこのメンバー関数を使用して、戻り値が `const_iterator` になることを保証できます。 通常は、次の例に示すように [auto](../cpp/auto-cpp.md) 型推論キーワードと共に使用します。 この例では、`begin()` と `cbegin()` をサポートする任意の種類の変更可能な (非**定数**) コンテナーとして `Container` を検討してください。
 
 ```cpp
 auto i1 = Container.begin();
@@ -636,7 +636,7 @@ const_iterator cend() const;
 
 `cend` は、反復子が範囲の末尾を超えたかどうかをテストするために使用されます。
 
-`end()` メンバー関数の代わりにこのメンバー関数を使用して、戻り値が `const_iterator` になることを保証できます。 通常は、次の例に示すように [auto](../cpp/auto-cpp.md) 型推論キーワードと共に使用します。 この例では、 `Container`とをサポート`end()`する任意の種類の変更可能な (非**定数**) コンテナー `cend()`であると見なします。
+`end()` メンバー関数の代わりにこのメンバー関数を使用して、戻り値が `const_iterator` になることを保証できます。 通常は、次の例に示すように [auto](../cpp/auto-cpp.md) 型推論キーワードと共に使用します。 この例では、`end()` と `cend()` をサポートする任意の種類の変更可能な (非**定数**) コンテナーとして `Container` を検討してください。
 
 ```cpp
 auto i1 = Container.end();
@@ -907,7 +907,7 @@ size_type count(const Key& keyval) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*keyval*\
+*keyval* \
 検索対象のキー値。
 
 ### <a name="remarks"></a>Remarks
@@ -1028,9 +1028,9 @@ pair<iterator, bool>  emplace( Args&&... args);
 
 ### <a name="return-value"></a>戻り値
 
-挿入が行われた場合に true を返す**bool**コンポーネントを`unordered_map` 持つ。には、順序の値が同じキーを持つ要素が既に含まれており、その反復子コンポーネントが新しい要素を含むアドレスを返す場合はfalseを返します。`pair`が挿入されました。または、要素が既に配置されています。
+挿入が行われた場合は**bool**コンポーネントが true を返す `pair`。 `unordered_map` に既に順序の値が同じキーを持つ要素が含まれており、その反復子コンポーネントが新しい要素が挿入されたアドレスを返す場合は false です。または要素が既に配置されています。
 
-このメンバー関数によって返されたペア `pr` の反復子コンポーネントにアクセスするには `pr.first` を使用し、この反復子を逆参照するには `*(pr.first)` を使用します。 このメンバー関数によって返され`pr`たペアの bool コンポーネントにアクセス`pr.second`するには、を使用します。
+このメンバー関数によって返されたペア `pr` の反復子コンポーネントにアクセスするには `pr.first` を使用し、この反復子を逆参照するには `*(pr.first)` を使用します。 このメンバー関数によって返されるペア `pr` の**bool**コンポーネントにアクセスするには、`pr.second` を使用します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -1070,7 +1070,7 @@ iterator emplace_hint(const_iterator where, Args&&... args);
 
 要素の [value_type](../standard-library/map-class.md#value_type) はペアです。最初のコンポーネントがキー値と等しく、2 番目のコンポーネントが要素のデータ値と等しくなるよう、要素の値が順序付けされたペアになります。
 
-コード例については、「[map::emplace_hint](../standard-library/map-class.md#emplace_hint)」を参照してください。
+コード例については、「[map::emplace_hint](../standard-library/map-class.md#emplace_hint)」をご覧ください。
 
 ## <a name="empty"></a>  unordered_map::empty
 
@@ -1171,12 +1171,12 @@ std::pair<const_iterator, const_iterator>  equal_range(const Key& keyval) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*keyval*\
+*keyval* \
 検索対象のキー値。
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は、 *keyval*と同等`X`の順序付けを持つ被制御シーケンスの要素だけを区切る反復子のペアを返します。`[X.first, X.second)` そのような要素が存在しない場合は、どちらの反復子も `end()`です。
+@No__t_1 このメンバー関数は、 *keyval*と同等の順序付けを持つ被制御シーケンスの要素だけを区切る反復子のペア `X` を返します。 そのような要素が存在しない場合は、どちらの反復子も `end()`です。
 
 ### <a name="example"></a>例
 
@@ -1240,16 +1240,16 @@ size_type erase(const key_type& Key);
 
 ### <a name="parameters"></a>パラメーター
 
-*どこ*\
+*@No__t_1*
 削除される要素の位置。
 
-*まずは*\
+*最初*の \
 削除される最初の要素の位置。
 
-*前の*\
+*最後*の \
 削除される最後の要素の次の位置。
 
-*レジストリ*\
+*キー* \
 削除される要素のキー値。
 
 ### <a name="return-value"></a>戻り値
@@ -1260,7 +1260,7 @@ size_type erase(const key_type& Key);
 
 ### <a name="remarks"></a>Remarks
 
-コード例については、「[map::erase](../standard-library/map-class.md#erase)」を参照してください。
+コード例については、「[map::erase](../standard-library/map-class.md#erase)」をご覧ください。
 
 ## <a name="find"></a>  unordered_map::find
 
@@ -1272,7 +1272,7 @@ const_iterator find(const Key& keyval) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*keyval*\
+*keyval* \
 検索対象のキー値。
 
 ### <a name="remarks"></a>Remarks
@@ -1475,8 +1475,8 @@ IList);
 |*Val*|キーが同じ順序付けになる要素が unordered_map にまだ含まれていない場合に、unordered_map に挿入される要素の値。|
 |*Where*|正しい挿入ポイントの検索を開始する場所|
 |*ValTy*|Unordered_map が[value_type](../standard-library/map-class.md#value_type)の要素を構築するために使用できる引数の型を指定し、引数として*Val*を完全に転送するテンプレートパラメーター。|
-|*First*|コピーされる最初の要素の位置。|
-|*Last*|コピーされる最後の要素の次の位置。|
+|*まずは*|コピーされる最初の要素の位置。|
+|*前の*|コピーされる最後の要素の次の位置。|
 |*InputIterator*|[入力反復子](../standard-library/input-iterator-tag-struct.md)の要件を満たすテンプレート関数の引数。この反復子は、[value_type](../standard-library/map-class.md#value_type) オブジェクトの構築に使用できる型の要素を指し示します。|
 |*IList*|要素のコピー元の [initializer_list](../standard-library/initializer-list.md)。|
 
@@ -1492,7 +1492,7 @@ IList);
 
 要素を 1 つだけ挿入するとき、例外がスローされたが、コンテナーのハッシュ関数ではエラーが発生しなかった場合、コンテナーの状態は変更されません。 ハッシュ関数で例外がスローされた場合、結果は未定義になります。 複数の要素を挿入するときに例外がスローされた場合、コンテナーの状態は未指定ですが、有効な状態になっています。
 
-単一要素のメンバー関数によって返される `pair` `pr` の反復子コンポーネントにアクセスするには、`pr.first` を使用します。返されるペアに含まれる反復子を逆参照するには、要素を指定して、`*pr.first` を使用します。 **Bool**コンポーネントにアクセスするには`pr.second`、を使用します。 例については、この記事で後ほど説明するサンプル コードを参照してください。
+単一要素のメンバー関数によって返される `pair` `pr` の反復子コンポーネントにアクセスするには、`pr.first` を使用します。返されるペアに含まれる反復子を逆参照するには、要素を指定して、`*pr.first` を使用します。 **Bool**コンポーネントにアクセスするには、`pr.second` を使用します。 例については、この記事で後ほど説明するサンプル コードを参照してください。
 
 コンテナーの [value_type](../standard-library/map-class.md#value_type) はそのコンテナーに属する typedef であり、map の場合、`map<K, V>::value_type` は `pair<const K, V>` になります。 要素の値は順序付けされたペアになり、このペアの最初のコンポーネントはキー値と同じで、2 番目のコンポーネントは要素のデータ値と同じになります。
 
@@ -1969,7 +1969,7 @@ void max_load_factor(float factor);
 
 ### <a name="parameters"></a>パラメーター
 
-*段階*\
+*要因*\
 新しい最大テーブル占有率。
 
 ### <a name="remarks"></a>Remarks
@@ -2109,9 +2109,9 @@ Ty& operator[](Key&& keyval);
 
 引数のキー値が見つからない場合は、データ型の既定値と一緒に挿入されます。
 
-`operator[]`*m*[*key*] = `DataValue`を使用して map *m*に要素を挿入するために使用できます。ここ`mapped_type` `DataValue`で、はキー値が*key*である要素のの値です。
+*m*[*Key*] = `DataValue`; を使用して map *m*に要素を挿入するために `operator[]` を使用できます。ここで `DataValue`*は key の*キー値を持つ要素の `mapped_type` の値です。
 
-`operator[]` を使用して要素を挿入した場合、返される参照では、挿入によって既存の要素が変更される、または新しい要素が作成されるかどうかは指示されません。 メンバー関数 [find](../standard-library/map-class.md#find) および [insert](../standard-library/map-class.md#insert) を使用して、挿入前に指定のキーを持つ要素が既に存在するかどうかを確認できます。
+`operator[]` を使用して要素を挿入した場合、返される参照では、挿入によって既存の要素が変更される、または新しい要素が作成されるかどうかは指示されません。 メンバー関数 [find](../standard-library/map-class.md#find) および [insert](../standard-library/map-class.md#insert) を使用して、挿入前に指定のキーを持つ要素が既に存在するかどうかを確認することができます。
 
 ### <a name="example"></a>例
 
@@ -2170,7 +2170,7 @@ c2["abc"] == 1
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は、[unordered_map::insert](#insert)`(` [unordered_map::value_type](#value_type)`(keyval, Ty())` の戻り値として反復子 `where` を特定します。 そのような要素が存在しない場合は、指定されたキーを持つ要素を挿入します。その後、`(*where).second` への参照を返します。
+このメンバー関数は、[unordered_map::insert](#insert)`(` [unordered_map::value_type](#value_type)`(keyval, Ty())` の戻り値として反復子 `where` を特定します。 (そのような要素が存在しない場合は、指定されたキーを持つ要素を挿入します。)次に、`(*where).second` への参照を返します。
 
 ## <a name="op_eq"></a>  unordered_map::operator=
 
@@ -2335,7 +2335,7 @@ void rehash(size_type nbuckets);
 
 ### <a name="parameters"></a>パラメーター
 
-*nbuckets*\
+*nbuckets* \
 要求されたバケット数。
 
 ### <a name="remarks"></a>Remarks
@@ -2516,12 +2516,12 @@ void swap(unordered_map& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*そうです*\
+*右*\
 交換先のコンテナー。
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は *、との*間`*this`で被制御シーケンスを交換します。 [unordered_map::get_allocator](#get_allocator)`() == right.get_allocator()` の場合は、この処理が一定の時間内に実行されます。例外がスローされるのは、格納されている `Tr` 型の traits オブジェクトをコピーした場合のみで、2 つの被制御シーケンス内の要素を指定する反復子、参照、ポインターは一切無効化されません。 それ以外の場合、2 つの被制御シーケンス内の要素数に比例した回数、要素の割り当てとコンストラクター呼び出しが実行されます。
+このメンバー関数は、`*this` と*right*の間で被制御シーケンスを交換します。 [unordered_map::get_allocator](#get_allocator)`() == right.get_allocator()` の場合は、この処理が一定の時間内に実行されます。例外がスローされるのは、格納されている `Tr` 型の traits オブジェクトをコピーした場合のみで、2 つの被制御シーケンス内の要素を指定する反復子、参照、ポインターは一切無効化されません。 それ以外の場合、2 つの被制御シーケンス内の要素数に比例した回数、要素の割り当てとコンストラクター呼び出しが実行されます。
 
 ### <a name="example"></a>例
 
@@ -2632,8 +2632,8 @@ unordered_map(
 |*ハッシュ*|格納するハッシュ関数オブジェクト。|
 |*Bucket_count*|最小バケット数。|
 |*右*|コピーするコンテナー。|
-|*First*||
-|*Last*||
+|*まずは*||
+|*前の*||
 |*IList*|コピーされる要素を含む initializer_list。|
 
 ### <a name="remarks"></a>Remarks
@@ -2642,13 +2642,13 @@ unordered_map(
 
 さらに、格納された複数の値を初期化する処理が実行されます。この処理は、すべてのコンストラクターに共通です。 コピーコンストラクターの場合、値は*Right*から取得されます。 それ以外の場合:
 
-バケットの最小数は、引数*Bucket_count*(存在する場合) です。それ以外の場合は、実装定義の値`N0`としてここで説明されている既定値になります。
+バケットの最小数は、引数*Bucket_count*(存在する場合) です。それ以外の場合は、実装定義の値 `N0` としてここで説明されている既定値になります。
 
-ハッシュ関数オブジェクトは、引数*ハッシュ*(存在する場合) です。それ以外の`Hash()`場合はです。
+ハッシュ関数オブジェクトは、引数*ハッシュ*(存在する場合) です。それ以外の場合は `Hash()` になります。
 
-比較関数オブジェクトは、引数*Comp*(存在する場合) です。それ以外の`Pred()`場合はです。
+比較関数オブジェクトは、引数*Comp*(存在する場合) です。それ以外の場合は `Pred()` になります。
 
-アロケーターオブジェクトは、引数*Al*(存在する場合) です。それ以外の場合`Alloc()`はです。
+アロケーターオブジェクトは、引数*Al*(存在する場合) です。それ以外の場合は、`Alloc()` ます。
 
 ### <a name="example"></a>例
 

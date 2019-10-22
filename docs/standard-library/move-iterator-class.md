@@ -20,14 +20,14 @@ helpviewer_keywords:
 - std::move_iterator [C++], reference
 - std::move_iterator [C++], base
 ms.assetid: a5e5cdd8-a264-4c6b-9f9c-68b0e8edaab7
-ms.openlocfilehash: 4a173ea022f21c454d8edd66f94d2d9b14faa4e1
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 9e8334db52e05f4a61adb7256e87ed611f0d3ecb
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460224"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689281"
 ---
-# <a name="moveiterator-class"></a>move_iterator クラス
+# <a name="move_iterator-class"></a>move_iterator クラス
 
 クラス テンプレート `move_iterator` は反復子のラッパーです。 move_iterator は、ラップする (格納する) 反復子と同じ動作を提供します。ただし、格納されている反復子の逆参照演算子を右辺値参照に変換して、コピーを移動を切り替えます。 右辺値の詳細については、「[右辺値参照宣言子: &&](../cpp/rvalue-reference-declarator-amp-amp.md)」をご覧ください。
 
@@ -39,7 +39,7 @@ class move_iterator;
 
 ## <a name="remarks"></a>Remarks
 
-このテンプレート クラスは、逆参照時以外は反復子のように動作するオブジェクトを表します。 これは、メンバー関数 `base()` を介してアクセスされる `Iterator` 型のランダム アクセス反復子を格納します。 `move_iterator` に対するすべての操作は、格納されている反復子で直接実行されます。ただし、`operator*` の結果は、`value_type&&` に暗黙的にキャストされ、右辺値参照が作成されます。
+クラステンプレートは、逆参照時以外は反復子のように動作するオブジェクトを表します。 これは、メンバー関数 `base()` を介してアクセスされる `Iterator` 型のランダム アクセス反復子を格納します。 `move_iterator` に対するすべての操作は、格納されている反復子で直接実行されます。ただし、`operator*` の結果は、`value_type&&` に暗黙的にキャストされ、右辺値参照が作成されます。
 
 `move_iterator` は、ラップされた反復子で定義されていない操作が可能である場合があります。 これらの操作は使用しないでください。
 
@@ -54,9 +54,9 @@ class move_iterator;
 |型名|説明|
 |-|-|
 |[iterator_type](#iterator_type)|テンプレート パラメーター `RandomIterator` のシノニム。|
-|[iterator_category](#iterator_category)|同じ名前の長い**typename**式のシノニムは、 `iterator_category`反復子の一般的な機能を識別します。|
-|[value_type](#value_type)|同じ名前の長い**typename**式のシノニムは、反復子`value_type`要素の型を表します。|
-|[difference_type](#difference_type)|同じ名前の長い**typename**式のシノニムは、 `difference_type`要素間の差の値を表現するために必要な整数型を表します。|
+|[iterator_category](#iterator_category)|同じ名前の長い**typename**式のシノニム。 `iterator_category` は、反復子の一般的な機能を識別します。|
+|[value_type](#value_type)|同じ名前の長い**typename**式のシノニム。反復子要素の型について `value_type` 説明します。|
+|[difference_type](#difference_type)|同じ名前の長い**typename**式のシノニム。 `difference_type` は、要素間の差の値を表現するために必要な整数型を表します。|
 |[pointer](#pointer)|テンプレート パラメーター `RandomIterator` のシノニム。|
 |[reference](#reference)|`rvalue` 参照 `value_type&&` のシノニム。|
 
@@ -73,14 +73,14 @@ class move_iterator;
 |[move_iterator::operator*](#op_star)|`(reference)*base().` を返します。|
 |[move_iterator::operator++](#op_add_add)|格納されている反復子をインクリメントします。 実際の動作は、前置インクリメント操作であるか、後置インクリメント操作であるかによって異なります。|
 |[move_iterator::operator--](#operator--)|格納されている反復子をデクリメントします。 実際の動作は、前置インクリメント操作であるか、後置インクリメント操作であるかによって異なります。|
-|[move_iterator::operator-&gt;](#op_arrow)|`&**this` を返します。|
+|[move_iterator::operator-&gt;](#op_arrow)|`&**this`を返します。|
 |[move_iterator::operator-](#operator-)|最初に現在位置から右側の値を減算することによって `move_iterator(*this) -=` を返します。|
-|[move_iterator::operator[]](#op_at)|`(reference)*(*this + off)` を返します。 現在のベースからのオフセットを指定し、その位置の値を取得できます。|
+|[move_iterator::operator[]](#op_at)|`(reference)*(*this + off)`を返します。 現在のベースからのオフセットを指定し、その位置の値を取得できます。|
 |[move_iterator::operator+](#op_add)|`move_iterator(*this) +=` に値を返します。 ベースにオフセットを加算し、その位置の値を取得できます。|
 |[move_iterator::operator+=](#op_add_eq)|右辺値を格納されている反復子に加算し、`*this` を返します。|
 |[move_iterator::operator-=](#operator-_eq)|右辺値を格納されている反復子から減算し、`*this` を返します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 **ヘッダー:** \<iterator>
 
@@ -147,7 +147,7 @@ move_iterator(const move_iterator<Type>& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*そうです*\
+*右*\
 格納されている反復子として使用する反復子。
 
 ### <a name="remarks"></a>Remarks
@@ -164,7 +164,7 @@ move_iterator& operator+=(difference_type _Off);
 
 ### <a name="parameters"></a>パラメーター
 
-*オフ (_r)* \
+*オフ \ (_r)*
 新しい現在位置を決定するために現在位置に追加するオフセット。
 
 ### <a name="return-value"></a>戻り値
@@ -291,7 +291,7 @@ pointer operator->() const;
 
 ## <a name="pointer"></a>  move_iterator::pointer
 
-この型`pointer`は、  `RandomIterator` の`move_iterator`ランダム反復子に基づく typedef であり、同義に使用できます。
+@No__t_0 型は `move_iterator` のランダム反復子 `RandomIterator` に基づく**typedef**であり、同義に使用できます。
 
 ```cpp
 typedef RandomIterator  pointer;
@@ -299,11 +299,11 @@ typedef RandomIterator  pointer;
 
 ### <a name="remarks"></a>Remarks
 
-この型は `RandomIterator` の同意語です。
+この型は `RandomIterator`の同意語です。
 
 ## <a name="reference"></a>  move_iterator::reference
 
-`reference`型は、の`value_type&&` `value_type&&`  に基づくtypedefであり、と同じ意味で使用できます。`move_iterator`
+@No__t_0 型は `move_iterator` の `value_type&&` に基づく**typedef**であり、`value_type&&` と同義に使用できます。
 
 ```cpp
 typedef value_type&& reference;

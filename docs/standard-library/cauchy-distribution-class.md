@@ -26,14 +26,14 @@ helpviewer_keywords:
 - std::cauchy_distribution [C++], param_type
 - std::cauchy_distribution [C++], param_type
 ms.assetid: 21522351-f2f1-46d9-97f0-d358c932356c
-ms.openlocfilehash: 628d79c8026c11c7583448ce021a6aaee4ace6d9
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 6a2bbdc9cc5ef8b633842bca3d94e0d8073c9abb
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449859"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688336"
 ---
-# <a name="cauchydistribution-class"></a>cauchy_distribution クラス
+# <a name="cauchy_distribution-class"></a>cauchy_distribution クラス
 
 コーシー分布を生成します。
 
@@ -70,15 +70,15 @@ public:
 
 ### <a name="parameters"></a>パラメーター
 
-*RealType*\
-浮動小数点演算の結果の型。既定値は**double**です。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
+*Realtype* \
+浮動小数点演算の結果の型。既定値は**double**です。 使用可能な型については、「[\<random>](../standard-library/random.md)」を参照してください。
 
-*URNG*\
-均一乱数ジェネレーターエンジン。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
+*Urng* \
+均一乱数ジェネレーターエンジン。 使用可能な型については、「[\<random>](../standard-library/random.md)」を参照してください。
 
 ## <a name="remarks"></a>Remarks
 
-このテンプレートクラスは、コーシー分布分布に従って分布した、ユーザー指定の浮動小数点型の値、または none を指定した場合は**double**型の値を生成する分布を表します。 次の表は、個々のメンバーに関する記事にリンクしています。
+クラステンプレートは、コーシー分布分布に従って分布した、ユーザー指定の浮動小数点型の値または**double**型の値を生成する分布を表します。 次の表は、個々のメンバーに関する記事にリンクしています。
 
 ||||
 |-|-|-|
@@ -87,7 +87,7 @@ public:
 
 プロパティ関数 `a()` と `b()` はそれぞれ、格納されている分布パラメーター `a` と `b` の値を返します。
 
-プロパティ メンバー関数 `param()` は、格納されている分布パラメーター パッケージ `param_type` を設定または返します。
+プロパティ メンバー `param()` は、格納されている分布パラメーター パッケージ `param_type` を設定または返します。
 
 メンバー関数の `min()` と `max()` はそれぞれ、考えられる結果の最小値と最大値を返します。
 
@@ -95,7 +95,7 @@ public:
 
 `operator()` メンバー関数は、現在のパラメーター パッケージと指定したパラメーター パッケージのいずれかから、URNG エンジンに基づいて次に生成された値を返します。
 
-分布クラスとそのメンバーの詳細については、[\<random>](../standard-library/random.md) をご覧ください。
+分布クラスとそのメンバーについて詳しくは、「[\<random>](../standard-library/random.md)」をご覧ください。
 
 コーシー分布の詳細については、Wolfram MathWorld の記事「[Cauchy Distribution](https://go.microsoft.com/fwlink/p/?linkid=400523)」(コーシー分布) を参照してください。
 
@@ -234,7 +234,7 @@ Distribution for 10 samples:
     10: 35.2531547063
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 **ヘッダー:** \<random>
 
@@ -251,13 +251,13 @@ explicit cauchy_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>パラメーター
 
-*ある*\
+*\*
 `a` 分布パラメーター。
 
-*b*\
+*b* \
 `b` 分布パラメーター。
 
-*parm*\
+*parm* \
 分布の作成に使用される `param_type` の構造体。
 
 ### <a name="remarks"></a>Remarks
@@ -266,7 +266,7 @@ explicit cauchy_distribution(const param_type& parm);
 
 1 つ目のコンストラクターは、格納されている値 `a` と `b` にそれぞれ *a* と *b* の値を保持するオブジェクトを作成します。
 
-2 つ目のコンストラクターは、格納されているパラメーターが *parm* から初期化されるオブジェクトを作成します。 `param()` メンバー関数を呼び出すと、既存の分布の現在のパラメーターを取得および設定できます。
+2 番目のコンストラクターは、格納されているパラメーターが *parm* から初期化されるオブジェクトを作成します。 `param()` メンバー関数を呼び出すと、既存の分布の現在のパラメーターを取得および設定できます。
 
 ## <a name="param_type"></a>  cauchy_distribution::param_type
 
@@ -286,13 +286,13 @@ struct param_type {
 
 ### <a name="parameters"></a>パラメーター
 
-*ある*\
+*\*
 `a` 分布パラメーター。
 
-*b*\
+*b* \
 `b` 分布パラメーター。
 
-*そうです*\
+*右*\
 このオブジェクトと比較する `param_type` オブジェクト。
 
 ### <a name="remarks"></a>Remarks
