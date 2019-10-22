@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - binary_negate class
 ms.assetid: 7b86f02c-af7e-4c7f-9df1-08addae4dd65
-ms.openlocfilehash: d93ead4f301b6c5df918a6f402cea6963a9535e1
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 01396384cbd551cca5682c7ffd1b31d89e6d1dc2
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243368"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688401"
 ---
-# <a name="binarynegate-class"></a>binary_negate クラス
+# <a name="binary_negate-class"></a>binary_negate クラス
 
-指定した二項関数の戻り値を否定するメンバー関数を提供するテンプレート クラス。 C++ 17 の優先で非推奨と[not_fn](functional-functions.md#not_fn)します。
+指定された二項関数の戻り値を否定するメンバー関数を提供するクラステンプレート。 [Not_fn](functional-functions.md#not_fn)を優先する c++ 17 では非推奨となりました。
 
 ## <a name="syntax"></a>構文
 
@@ -33,13 +33,13 @@ class binary_negate
 
 ### <a name="parameters"></a>パラメーター
 
-*Func*\
+*Func* \
 否定する二項関数。
 
 *左*\
 否定する二項関数の左オペランド。
 
-*そうです*\
+*右*\
 否定する二項関数の右オペランド。
 
 ## <a name="return-value"></a>戻り値
@@ -48,7 +48,7 @@ class binary_negate
 
 ## <a name="remarks"></a>Remarks
 
-テンプレート クラスは、二項関数オブジェクトのコピーを格納する*Func*します。 そのメンバー関数`operator()`返すよう`!Func(left, right)`します。
+クラステンプレートは、バイナリ関数オブジェクト*Func*のコピーを格納します。 @No__t_1 を返すように、メンバー関数 `operator()` を定義します。
 
 `binary_negate` のコンストラクターが直接使用されることはほとんどありません。 **binary_negator** アダプター述語を宣言し、使用するとき、通常、ヘルパー関数 [not2](../standard-library/functional-functions.md#not2) が選択されます。
 

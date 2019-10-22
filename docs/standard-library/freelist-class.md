@@ -10,16 +10,16 @@ helpviewer_keywords:
 - stdext::freelist [C++], pop
 - stdext::freelist [C++], push
 ms.assetid: 8ad7e35c-4c80-4479-8ede-1a2497b06d71
-ms.openlocfilehash: 8a504f58f9f64aa8b0d26b17090387c5c2b5de21
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: e37b2371238211033d6a8a0847a41677b4e908a2
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454141"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688054"
 ---
 # <a name="freelist-class"></a>freelist クラス
 
-メモリ ブロックのリストを管理します。
+メモリ ブロックの一覧を管理します。
 
 ## <a name="syntax"></a>構文
 
@@ -37,7 +37,7 @@ class freelist : public Max
 
 ## <a name="remarks"></a>Remarks
 
-このテンプレートクラスは、最大値として渡された最大クラスによって決定されるリストの最大長を持つサイズ*Sz*のメモリブロックのリストを管理し*ます。*
+このクラステンプレートは、size *Sz*のメモリブロックのリストを管理します。このリストの最大長は *、最大で*渡されるクラスによって決定されます。
 
 ### <a name="constructors"></a>コンストラクター
 
@@ -52,7 +52,7 @@ class freelist : public Max
 |[pop](#pop)|フリー リストから最初のメモリ ブロックを削除します。|
 |[push](#push)|メモリ ブロックをリストに追加します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 **ヘッダー:** \<allocators>
 
@@ -100,11 +100,11 @@ bool push(void* ptr);
 
 ### <a name="return-value"></a>戻り値
 
-max クラスの`full`関数が**false**を返す場合は true。それ以外`push`の場合、関数は**false**を返します。
+max クラスの `full` 関数が**false**を返す場合は**true** 。それ以外の場合、`push` 関数は**false**を返します。
 
 ### <a name="remarks"></a>Remarks
 
-Max クラス`full`の関数が**false**を返す場合、このメンバー関数は、 *ptr*が指すメモリブロックをリストの先頭に追加します。
+Max クラスの `full` 関数が**false**を返す場合、このメンバー関数は、 *ptr*が指すメモリブロックをリストの先頭に追加します。
 
 ## <a name="see-also"></a>関連項目
 

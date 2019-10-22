@@ -16,16 +16,16 @@ helpviewer_keywords:
 - std::money_get [C++], do_get
 - std::money_get [C++], get
 ms.assetid: 692d3374-3fe7-4b46-8aeb-f8d91ed66b2e
-ms.openlocfilehash: eb5e1a7b83db561687f83be96c79add8b54589e8
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: d882edd5ce55b15d03512ca9a55a49bc3424ee7a
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455551"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687668"
 ---
 # <a name="money_get-class"></a>money_get クラス
 
-このテンプレート クラスは、`CharType` 型のシーケンスから通貨値への変換を制御するためにロケール ファセットとして使用できるオブジェクトを表します。
+クラステンプレートは、`CharType` 型のシーケンスから通貨値への変換を制御するためにロケールファセットとして使用できるオブジェクトを表します。
 
 ## <a name="syntax"></a>構文
 
@@ -36,10 +36,10 @@ class money_get : public locale::facet;
 
 ### <a name="parameters"></a>パラメーター
 
-*CharType*\
+*Chartype* \
 ロケールの文字をエンコードするためにプログラム内で使用される型。
 
-*InputIterator*\
+*InputIterator* \
 get 関数が入力を読み取る反復子の型。
 
 ## <a name="remarks"></a>Remarks
@@ -67,7 +67,7 @@ get 関数が入力を読み取る反復子の型。
 |[do_get](#do_get)|通貨値を表す文字シーケンスから数値を抽出するために呼び出される仮想関数。|
 |[get](#get)|通貨値を表す文字シーケンスから数値を抽出します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 **ヘッダー:** \<locale>
 
@@ -105,22 +105,22 @@ virtual iter_type do_get(iter_type first,
 
 ### <a name="parameters"></a>パラメーター
 
-*まずは*\
+*最初*の \
 変換されるシーケンスの開始位置を示す入力反復子。
 
-*前の*\
+*最後*の \
 変換されるシーケンスの終了位置を示す入力反復子。
 
-*Intl*\
+*国際*\
 シーケンスで期待される通貨記号の種類を示すブール値。国際通貨の場合は **true**、国内通貨の場合は **false**。
 
-*Iosbase. flags*\
+*Iosbase* \
 書式設定フラグ。これが設定されている場合、通貨記号は省略可能です。それ以外の場合は必須です。
 
 *状態*\
 操作が成功したか失敗したかに基づいて、ストリームの状態に適したビットマスク要素を設定します。
 
-*val*\
+*val* \
 変換後のシーケンスを格納する文字列。
 
 ### <a name="return-value"></a>戻り値
@@ -129,11 +129,11 @@ virtual iter_type do_get(iter_type first,
 
 ### <a name="remarks"></a>Remarks
 
-1 番目のプロテクト仮想メンバー関数は、シーケンス [ `first`, `last`) の先頭から始め、空でない完全な通貨入力フィールドを認識するまで、連続した要素との一致を試みます。 成功した場合は、このフィールドを1つ以上の10進数のシーケンスに変換します。また、 `-`必要に応じてマイナス記号 () を付けることで、その量を表すことができ、結果は[string_type](#string_type)オブジェクト*val*に格納されます。 そして、通貨入力フィールドを超える先頭の要素を指す反復子を返します。 それ以外の場合、関数は空のシーケンスを val `ios_base::failbit`に格納し、*状態*をに設定します。 そして、有効な通貨入力フィールドのプレフィックスを超える先頭の要素を指す反復子を返します。 いずれの場合も、戻り値が `last` と等しい場合、関数は `State` に `ios_base::eofbit` を設定します。
+1 番目のプロテクト仮想メンバー関数は、シーケンス [ `first`, `last`) の先頭から始め、空でない完全な通貨入力フィールドを認識するまで、連続した要素との一致を試みます。 成功した場合は、このフィールドを1つ以上の10進数のシーケンスに変換します。また、必要に応じてマイナス記号 (`-`) を付けて、その結果を[string_type](#string_type)オブジェクト*val*に格納します。 そして、通貨入力フィールドを超える先頭の要素を指す反復子を返します。 それ以外の場合、関数は空のシーケンスを*val*に格納し、*状態*の `ios_base::failbit` を設定します。 そして、有効な通貨入力フィールドのプレフィックスを超える先頭の要素を指す反復子を返します。 いずれの場合も、戻り値が `last` と等しい場合、関数は `State` に `ios_base::eofbit` を設定します。
 
 2番目のプロテクト仮想メンバー関数は、最初と同じように動作します。ただし、成功した場合は、必要に応じて符号付き数字シーケンスを**long double**型の値に変換し、その値を*val*に格納します。
 
-通貨入力フィールドの形式**は、有効**な呼び出し[use_facet](../standard-library/locale-functions.md#use_facet) < [moneypunct](../standard-library/moneypunct-class.md) \< **chartype**、> > (iosbase. flags) によって返される[ロケールファセット](../standard-library/locale-class.md#facet_class)によって決定**されます**。 [getloc](../standard-library/ios-base-class.md#getloc))。
+通貨入力フィールドの形式は、有効な呼び出し[use_facet](../standard-library/locale-functions.md#use_facet)  < [Moneypunct](../standard-library/moneypunct-class.md) \< **chartype**、**国際**> > ( **iosbase. flags**) によって返される[ロケールファセット](../standard-library/locale-class.md#facet_class)**fac.** によって決定されます。 [getloc](../standard-library/ios-base-class.md#getloc))。
 
 具体的には、次のように使用します。
 
@@ -153,13 +153,13 @@ virtual iter_type do_get(iter_type first,
 
 - **fac.** 。 [frac_digits](../standard-library/moneypunct-class.md#frac_digits)は、小数点の右側にある有効な小数部の桁数を決定します。 `frac_digits` によって要求される小数桁数を上回る桁数の値を解析する場合、`do_get` は最大で `frac_digits` 文字を処理した後、解析を停止します。
 
-符号文字列 ( **fac.** の場合は。 `negative_sign`または**fac.** 。 `positive_sign`) に複数の要素があり、最初の要素のみが一致します。この要素は、 **money_base:: sign**に等しい要素が、形式パターン ( **fac.** ) に表示されます。 `neg_format`) 残りの要素は、通貨入力フィールドの末尾で一致します。 いずれの文字列も通貨入力フィールド内の先頭の要素が次の要素と一致していない場合、符号文字列は空と見なされ、符号は正になります。
+符号文字列 ( **fac.** の場合は。 `negative_sign` または**fac.** 。 `positive_sign`) に複数の要素があり、最初の要素のみが一致します。これは、 **money_base:: sign**と等しい要素が、形式パターン ( **fac.** ) に表示されます。 `neg_format`) 残りの要素は、通貨入力フィールドの末尾で一致します。 いずれの文字列も通貨入力フィールド内の先頭の要素が次の要素と一致していない場合、符号文字列は空と見なされ、符号は正になります。
 
-**Iosbase. flags**の場合。 [flags](../standard-library/ios-base-class.md#flags) & [showbase](../standard-library/ios-functions.md#showbase)は0以外で、文字列**fac.** です。 `curr_symbol`は、 **money_base:: symbol**に等しい要素が書式パターンに含まれる場合に一致する必要があります。 このようにしないと、書式パターンの末尾に **money_base::symbol** が出現する場合、および一致せずに残っている符号文字列の要素がない場合に、通貨記号は一致しません。 それ以外の場合は、必要に応じて通貨記号が一致します。
+**Iosbase. flags**の場合。 [showbase](../standard-library/ios-functions.md#showbase)  &  の[フラグ](../standard-library/ios-base-class.md#flags)は0以外で、文字列は**fac.** です。 **money_base:: symbol**と等しい要素が書式パターンに含まれる場合は、`curr_symbol` が一致する必要があります。 このようにしないと、書式パターンの末尾に **money_base::symbol** が出現する場合、および一致せずに残っている符号文字列の要素がない場合に、通貨記号は一致しません。 それ以外の場合は、必要に応じて通貨記号が一致します。
 
-**Fac.** のインスタンスが存在しない場合。 `thousands_sep`通貨入力フィールドの値の部分 ( **money_base:: value**と等しい要素が書式パターンで表示される) で発生します。グループ化の制約は適用されません。 それ以外の場合は、 **fac.** によって課せられるグループ化の制約です。 **グループ化**が適用されます。 結果の数字のシーケンスは、下位**fac.** を持つ整数を表すことに注意してください。 `frac_digits`小数点以下の桁数は、小数点の右側と見なされます。
+**Fac.** のインスタンスが存在しない場合。 `thousands_sep` は、通貨入力フィールドの値の部分 ( **money_base:: value**と等しい要素が書式パターンで表示されます) で発生します。グループ化の制約は適用されません。 それ以外の場合は、 **fac.** によって課せられるグループ化の制約です。 **グループ化**が適用されます。 結果の数字のシーケンスは、下位**fac.** を持つ整数を表すことに注意してください。 `frac_digits` 10 進数は小数点の右側と見なされます。
 
-任意の余白は、書式パターンの末尾以外に出現する場合、**money_base::space** と等しい要素が書式パターンに出現しているときに一致します。 それ以外の場合、内部の余白は一致しません。 [Use_facet](../standard-library/locale-functions.md#use_facet) [ctype](../standard-library/ctype-class.md) < chartype>>(iosbase.flagsの場合、要素chは空白と見なされます。\< [getloc](../standard-library/ios-base-class.md#getloc))。 [は](../standard-library/ctype-class.md#is)( **ctype_base::space**、 *ch*) は**true**します。
+任意の余白は、書式パターンの末尾以外に出現する場合、**money_base::space** と等しい要素が書式パターンに出現しているときに一致します。 それ以外の場合、内部の余白は一致しません。 [Use_facet](../standard-library/locale-functions.md#use_facet)  < [Ctype](../standard-library/ctype-class.md) \< **chartype**> > ( **iosbase. flags**の場合、要素*ch*は空白と見なされます。 [getloc](../standard-library/ios-base-class.md#getloc))。 [is](../standard-library/ctype-class.md#is)( **ctype_base:: space**, *ch*) が**true**である。
 
 ### <a name="example"></a>例
 
@@ -187,22 +187,22 @@ iter_type get(iter_type first,
 
 ### <a name="parameters"></a>パラメーター
 
-*まずは*\
+*最初*の \
 変換されるシーケンスの開始位置を示す入力反復子。
 
-*前の*\
+*最後*の \
 変換されるシーケンスの終了位置を示す入力反復子。
 
-*Intl*\
+*国際*\
 シーケンスで期待される通貨記号の種類を示すブール値。国際通貨の場合は **true**、国内通貨の場合は **false**。
 
-*Iosbase. flags*\
+*Iosbase* \
 書式設定フラグ。これが設定されている場合、通貨記号は省略可能です。それ以外の場合は必須です
 
 *状態*\
 操作が成功したかどうかに基づき、ストリームの状態に適したビットマスク要素を設定します。
 
-*val*\
+*val* \
 変換後のシーケンスを格納する文字列。
 
 ### <a name="return-value"></a>戻り値
@@ -211,7 +211,7 @@ iter_type get(iter_type first,
 
 ### <a name="remarks"></a>Remarks
 
-両方のメンバー関数は、 [do_get](#do_get)`(first, last, Intl, Iosbase, State, val)`を返します。
+両方のメンバー関数は、 [do_get](#do_get) `(first, last, Intl, Iosbase, State, val)` を返します。
 
 ### <a name="example"></a>例
 
@@ -284,18 +284,18 @@ explicit money_get(size_t _Refs = 0);
 
 ### <a name="parameters"></a>パラメーター
 
-*参照 (_c)* \
-オブジェクトのメモリ管理の種類を指定するために使用する整数値。
+*Refs \ (_c)*
+オブジェクトのメモリ管理のタイプを指定するために使用する整数値。
 
 ### <a name="remarks"></a>Remarks
 
 *Refs*パラメーターに指定できる値とその意味は、次のとおりです。
 
-- 0オブジェクトの有効期間は、オブジェクトが含まれているロケールによって管理されます。
+- 0: オブジェクトの有効期間はそれが含まれるロケールによって管理されます。
 
-- 1:オブジェクトの有効期間は、手動で管理する必要があります。
+- 1: オブジェクトの有効期間を手動で管理する必要があります。
 
-- \>1:これらの値は定義されていません。
+- \> 1: これらの値は定義されていません。
 
 デストラクターが保護されているため、利用できる直接的な例はありません。
 
@@ -311,7 +311,7 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
 
 ### <a name="remarks"></a>Remarks
 
-この型は、特殊化したテンプレート クラス [basic_string](../standard-library/basic-string-class.md) を表します。
+この型は、クラステンプレート[basic_string](../standard-library/basic-string-class.md)の特殊化を表します。
 
 ## <a name="see-also"></a>関連項目
 

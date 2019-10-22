@@ -26,14 +26,14 @@ helpviewer_keywords:
 - std::normal_distribution [C++], param_type
 - std::normal_distribution [C++], param_type
 ms.assetid: bf92cdbd-bc72-4d4a-b588-173d748f0d7d
-ms.openlocfilehash: daf9ab6b91eb4af19fdd563937b626515c4bc99b
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 39c5321d5bc22e14ace3335e4a925bf7284d1cb0
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457658"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689246"
 ---
-# <a name="normaldistribution-class"></a>normal_distribution クラス
+# <a name="normal_distribution-class"></a>normal_distribution クラス
 
 正規分布を生成します。
 
@@ -71,21 +71,21 @@ public:
 
 ### <a name="parameters"></a>パラメーター
 
-*RealType*\
-浮動小数点演算の結果の型。既定値は**double**です。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
+*Realtype* \
+浮動小数点演算の結果の型。既定値は**double**です。 使用可能な型については、「[\<random>](../standard-library/random.md)」を参照してください。
 
 ## <a name="remarks"></a>Remarks
 
-このテンプレートクラスは、正規分布に従って分布した、ユーザー指定の整数型の値、または none を指定した場合は**double**型の値を生成する分布を表します。 次の表は、個々のメンバーに関する記事にリンクしています。
+クラステンプレートは、正規分布に従って分布した、ユーザー指定の整数型の値、または指定されていない場合は**double**型の値を生成する分布を表します。 次の表は、個々のメンバーに関する記事にリンクしています。
 
 ||||
 |-|-|-|
 |[normal_distribution](#normal_distribution)|`normal_distribution::mean`|`normal_distribution::param`|
 |`normal_distribution::operator()`|`normal_distribution::stddev`|[param_type](#param_type)|
 
-プロパティ関数`mean()`および`stddev()`は、格納されている分布パラメーターの*平均*と*stddev*の値をそれぞれ返します。
+プロパティ関数 `mean()` および `stddev()` は、格納されている分布パラメーターの*平均*値と*stddev*値をそれぞれ返します。
 
-プロパティ メンバー関数 `param()` は、格納されている分布パラメーター パッケージ `param_type` を設定または返します。
+プロパティ メンバー `param()` は、格納されている分布パラメーター パッケージ `param_type` を設定または返します。
 
 メンバー関数の `min()` と `max()` はそれぞれ、考えられる結果の最小値と最大値を返します。
 
@@ -93,7 +93,7 @@ public:
 
 `operator()` メンバー関数は、現在のパラメーター パッケージと指定したパラメーター パッケージのいずれかから、URNG エンジンに基づいて次に生成された値を返します。
 
-分布クラスとそのメンバーの詳細については、[\<random>](../standard-library/random.md) をご覧ください。
+分布クラスとそのメンバーについて詳しくは、「[\<random>](../standard-library/random.md)」をご覧ください。
 
 正規分布の詳細については、Wolfram MathWorld の記事「[正規分布](https://go.microsoft.com/fwlink/p/?linkid=400924)」をご覧ください。
 
@@ -181,7 +181,7 @@ Distribution for 10 samples:
     10: 2.7821317338
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 **ヘッダー:** \<random>
 
@@ -198,13 +198,13 @@ explicit normal_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>パラメーター
 
-*?* \
+*平均*\
 `mean` 分布パラメーター。
 
-*stddev*\
+*stddev* \
 `stddev` 分布パラメーター。
 
-*parm*\
+*parm* \
 分布の作成に使用されるパラメーターの構造体。
 
 ### <a name="remarks"></a>Remarks
@@ -213,7 +213,7 @@ explicit normal_distribution(const param_type& parm);
 
 1 つ目のコンストラクターは、格納されている値 `mean` と `stddev` にそれぞれ *mean* と *stddev* の値を保持するオブジェクトを作成します。
 
-2 つ目のコンストラクターは、格納されているパラメーターが *parm* から初期化されるオブジェクトを作成します。 `param()` メンバー関数を呼び出すと、既存の分布の現在のパラメーターを取得および設定できます。
+2 番目のコンストラクターは、格納されているパラメーターが *parm* から初期化されるオブジェクトを作成します。 `param()` メンバー関数を呼び出すと、既存の分布の現在のパラメーターを取得および設定できます。
 
 ## <a name="param_type"></a>  normal_distribution::param_type
 
@@ -233,13 +233,13 @@ struct param_type {
 
 ### <a name="parameters"></a>パラメーター
 
-*?* \
+*平均*\
 `mean` 分布パラメーター。
 
-*stddev*\
+*stddev* \
 `stddev` 分布パラメーター。
 
-*そうです*\
+*右*\
 比較に使用される `param_type` 構造体。
 
 ### <a name="remarks"></a>Remarks

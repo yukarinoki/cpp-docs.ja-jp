@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - iosfwd header
 ms.assetid: 964442eb-17f1-43ef-a0e0-c5bb77f9c187
-ms.openlocfilehash: e66c3e869f01775512419c877cd52c7f0e0fa2c4
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 8d257a57100615e592f6ebd62b5c91c6c59df408
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449085"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687868"
 ---
 # <a name="ltiosfwdgt"></a>&lt;iosfwd&gt;
 
-iostreams 全体で使用されるいくつかのテンプレート クラスへの前方参照を宣言します。 このようなすべてのテンプレート クラスは、その他の標準ヘッダーで定義されます。 その定義ではなく、宣言のいずれかが必要なときのみに、このヘッダーを明示的に含めます。
+Iostreams 全体で使用される複数のクラステンプレートへの前方参照を宣言します。 このようなクラステンプレートはすべて、他の標準ヘッダーで定義されています。 その定義ではなく、宣言のいずれかが必要なときのみに、このヘッダーを明示的に含めます。
 
 ## <a name="syntax"></a>構文
 
@@ -62,7 +62,7 @@ typedef basic_fstream<wchar_t, char_traits<wchar_t>> wfstream;
 };
 ```
 
-## <a name="forward-declarationstemplate-classes"></a>前方宣言/テンプレート クラス
+## <a name="forward-declarations-and-class-templates"></a>事前宣言とクラステンプレート
 
 ```cpp
 template <class _Statetype>

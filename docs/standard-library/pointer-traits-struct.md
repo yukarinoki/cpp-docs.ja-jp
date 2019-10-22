@@ -14,16 +14,16 @@ f1_keywords:
 - xmemory0/std::pointer_traits::rebind
 - memory/std::pointer_traits::pointer_to
 ms.assetid: 545aecf1-3561-4859-8b34-603c079fe1b3
-ms.openlocfilehash: 109e51ad9eba54f31b90da9b8b85bec105c7dce6
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 6d89348867982bfb86c0bf2404a017f6a448d1a1
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240415"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687137"
 ---
-# <a name="pointertraits-struct"></a>pointer_traits 構造体
+# <a name="pointer_traits-struct"></a>pointer_traits 構造体
 
-`allocator_traits` テンプレート クラスのオブジェクトが、ポインター型 `Ptr` を持つアロケーターを記述するために必要とする情報を提供します。
+ポインター型 `Ptr` を持つアロケーターを記述するために `allocator_traits` 型のオブジェクトに必要な情報を提供します。
 
 ## <a name="syntax"></a>構文
 
@@ -66,11 +66,11 @@ struct Ptr
 
 ### <a name="methods"></a>メソッド
 
-|名前|説明|
+|名|説明|
 |----------|-----------------|
 |[pointer_to](#pointer_to)|任意の参照をクラス `Ptr` のオブジェクトに変換します。|
 
-### <a name="pointer_to"></a> pointer_to
+### <a name="pointer_to"></a>pointer_to
 
 その関数が存在する場合に `Ptr::pointer_to(obj)` を返す静的メソッド。 それ以外の場合は、任意の参照をクラス `Ptr` のオブジェクトに変換できません。 `Ptr` が生のポインターの場合、このメソッドは `addressof(obj)` を返します。
 

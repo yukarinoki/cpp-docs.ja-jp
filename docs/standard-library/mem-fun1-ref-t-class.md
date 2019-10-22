@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - mem_fun1_ref_t class
 ms.assetid: 7d6742f6-19ba-4523-b3c8-0e5b8f11464f
-ms.openlocfilehash: 88ab2c436b3dd3b5a289124e73b6f1b5d21f96a5
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 238d6147b2afa5ca3e143bc57aa4892e17d2c869
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243866"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687754"
 ---
-# <a name="memfun1reft-class"></a>mem_fun1_ref_t クラス
+# <a name="mem_fun1_ref_t-class"></a>mem_fun1_ref_t クラス
 
-使用するアダプター クラスを`non_const`メンバー関数を 1 つの引数の参照引数による初期化時に、二項関数オブジェクトとして呼び出せるようにします。 C++ 11、c++ 17 では削除では、非推奨とされます。
+参照引数で初期化するときに、1つの引数を使用する `non_const` メンバー関数を二項関数オブジェクトとして呼び出すことができるようにするアダプタークラス。 C++ 11 では非推奨となりました。 C++ 17 では削除されています。
 
 ## <a name="syntax"></a>構文
 
@@ -33,14 +33,14 @@ class mem_fun1_ref_t : public binary_function<Type, Arg, Result> {
 
 ### <a name="parameters"></a>パラメーター
 
-*_Pm*\
+*Pm \ (_r)*
 関数オブジェクトに変換されるクラス `Type` のメンバー関数へのポインター。
 
 *左*\
-オブジェクトを *_Pm*でメンバー関数が呼び出されます。
+*Pm*メンバー関数が呼び出されるオブジェクト。
 
-*そうです*\
-渡される引数 *_Pm*します。
+*右*\
+*Pm*に渡される引数。
 
 ## <a name="return-value"></a>戻り値
 
@@ -48,7 +48,7 @@ class mem_fun1_ref_t : public binary_function<Type, Arg, Result> {
 
 ## <a name="remarks"></a>Remarks
 
-テンプレート クラスのコピーを格納する *_Pm*、クラスのメンバー関数へのポインターでなければならない`Type`、プライベート メンバー オブジェクトにします。 そのメンバー関数`operator()`返すよう (**左**.\*`_Pm`) (**右**)。
+クラステンプレートには、プライベートメンバーオブジェクト内の `Type` クラスのメンバー関数へのポインターである必要がある、 *Pm*のコピーが格納されます。 このメソッドは、(**left**. \* `_Pm`) (**right**) を返すように、そのメンバー関数 `operator()` を定義します。
 
 ## <a name="example"></a>例
 

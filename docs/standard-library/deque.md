@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - deque header
 ms.assetid: 4521fe92-5a91-4853-9e9f-59600bf9e46f
-ms.openlocfilehash: 145ce22091ea1a42619ad7b1fd25507c6315a9ec
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: a5fea8f4a1bc1612a35db71cc515ba4799e95da6
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454485"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689727"
 ---
 # <a name="ltdequegt"></a>&lt;deque&gt;
 
-コンテナーのテンプレート クラス deque および複数のサポート用テンプレートを定義します。
+コンテナークラステンプレート deque といくつかのサポートテンプレートを定義します。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 **ヘッダー**: \<deque>
 
 > [!NOTE]
-> Deque \<> ライブラリは、 `#include <initializer_list>`ステートメントも使用します。
+> @No__t_0deque > ライブラリでは、`#include <initializer_list>` ステートメントも使用します。
 
 ## <a name="members"></a>メンバー
 
@@ -47,7 +47,7 @@ ms.locfileid: "68454485"
 
 |||
 |-|-|
-|[deque クラス](../standard-library/deque-class.md)|特定の型の要素を線形に配列させ、ベクターのように、任意の要素への高速なランダム アクセスや、コンテナーの背後での効率的な挿入と削除を実行できるようにするシーケンス コンテナーのテンプレート クラス。|
+|[deque クラス](../standard-library/deque-class.md)|指定された型の要素を線形の配置に配置し、ベクターと同様に、任意の要素への高速なランダムアクセスを可能にし、コンテナーの後ろでの効率的な挿入と削除を可能にする、シーケンスコンテナーのクラステンプレート。|
 
 ## <a name="see-also"></a>関連項目
 

@@ -22,16 +22,16 @@ helpviewer_keywords:
 - std::wstring_convert [C++], converted
 - std::wstring_convert [C++], state
 ms.assetid: e34f5b65-d572-4bdc-ac69-20778712e376
-ms.openlocfilehash: 35689f79f8987cb55c4578869369f35d8656faec
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: ce03510bec05f3e5e770e930759648c9add0387f
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450900"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72684051"
 ---
-# <a name="wstringconvert-class"></a>wstring_convert クラス
+# <a name="wstring_convert-class"></a>wstring_convert クラス
 
-テンプレート クラス `wstring_convert` は、ワイド文字列とバイト文字列の間の変換を実行します。
+クラステンプレート `wstring_convert` は、ワイド文字列とバイト文字列の間の変換を実行します。
 
 ## <a name="syntax"></a>構文
 
@@ -42,17 +42,17 @@ class wstring_convert
 
 ### <a name="parameters"></a>パラメーター
 
-*Codecvt*\
+*Codecvt* \
 変換オブジェクトを表す[ロケール](../standard-library/locale-class.md) ファセット。
 
-*Elem*\
+*Elem* \
 ワイド文字要素型。
 
 ## <a name="remarks"></a>Remarks
 
-このテンプレート クラスは、クラス `std::basic_string<Elem>` のワイド文字列オブジェクトとクラス `std::basic_string<char>` (`std::string` とも呼ばれます) のバイト文字列オブジェクトの間の変換を制御するオブジェクトを表します。 このテンプレート クラスは、`wide_string` 型と `byte_string` 型をこれら 2 つの型のシノニムとして定義します。 `Elem` 値のシーケンス (`wide_string` オブジェクトに格納) とマルチバイト シーケンス (`byte_string` オブジェクトに格納) の間の変換は、クラス `Codecvt<Elem, char, std::mbstate_t>` のオブジェクトによって実行されます。このことは、標準コード変換ファセット `std::codecvt<Elem, char, std::mbstate_t>` の要件を満たしています。
+クラステンプレートは、クラス `std::basic_string<Elem>` のワイド文字列オブジェクトと、クラス `std::basic_string<char>` (`std::string` とも呼ばれます) のバイト文字列オブジェクトとの間の変換を制御するオブジェクトを記述します。 クラステンプレートでは `wide_string` 型を定義し、これらの2つの型のシノニムとして `byte_string` します。 `Elem` 値のシーケンス (`wide_string` オブジェクトに格納) とマルチバイト シーケンス (`byte_string` オブジェクトに格納) の間の変換は、クラス `Codecvt<Elem, char, std::mbstate_t>` のオブジェクトによって実行されます。このことは、標準コード変換ファセット `std::codecvt<Elem, char, std::mbstate_t>` の要件を満たしています。
 
-このテンプレート クラスのオブジェクトは、以下のものを格納します。
+このクラステンプレートのオブジェクトは、次のものを格納します。
 
 - エラーに表示するバイト文字列
 
@@ -88,7 +88,7 @@ class wstring_convert
 |[converted](#converted)|成功した変換の数を返します。|
 |[state](#state)|変換の状態を表すオブジェクトを返します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 **ヘッダー:** \<locale>
 
@@ -104,7 +104,7 @@ typedef std::basic_string<char> byte_string;
 
 ### <a name="remarks"></a>Remarks
 
-この型は `std::basic_string<char>` の同意語です。
+この型は `std::basic_string<char>`の同意語です。
 
 ## <a name="converted"></a>  wstring_convert::converted
 
@@ -140,8 +140,8 @@ wide_string from_bytes(const char* first, const char* last);
 |*Byte*|変換される単一の要素のバイト シーケンス。|
 |*ptr*|文字が null で終わり、変換の対象となる C スタイルのシーケンス。|
 |*Bstr*|変換される [byte_string](#byte_string)。|
-|*first*|変換の対象となる一定範囲の文字のうち、最初の文字。|
-|*last*|変換の対象となる一定範囲の文字のうち、最後の文字。|
+|*まずは*|変換の対象となる一定範囲の文字のうち、最初の文字。|
+|*前の*|変換の対象となる一定範囲の文字のうち、最後の文字。|
 
 ### <a name="return-value"></a>戻り値
 
@@ -163,7 +163,7 @@ typedef typename wide_string::traits_type::int_type int_type;
 
 ### <a name="remarks"></a>Remarks
 
-この型は `wide_string::traits_type::int_type` の同意語です。
+この型は `wide_string::traits_type::int_type`の同意語です。
 
 ## <a name="state"></a>  wstring_convert::state
 
@@ -189,7 +189,7 @@ typedef typename Codecvt::state_type state_type;
 
 ### <a name="remarks"></a>Remarks
 
-この型は、変換状態を表すことができるオブジェクトを表します。 この型は `Codecvt::state_type` の同意語です。
+この型は、変換状態を表すことができるオブジェクトを表します。 この型は `Codecvt::state_type`の同意語です。
 
 ## <a name="to_bytes"></a>  wstring_convert::to_bytes
 
@@ -209,8 +209,8 @@ byte_string to_bytes(const Elem* first, const Elem* last);
 |*Char*|変換されるワイド文字。|
 |*Wptr*|変換される C スタイル、`wptr` から始まり、null で終わるシーケンス。|
 |*Wstr*|変換される [wide_string](#wide_string)。|
-|*first*|変換される要素範囲の最初の要素。|
-|*last*|変換される要素範囲の最後の要素。|
+|*まずは*|変換される要素範囲の最初の要素。|
+|*前の*|変換される要素範囲の最後の要素。|
 
 ### <a name="remarks"></a>Remarks
 
@@ -228,7 +228,7 @@ typedef std::basic_string<Elem> wide_string;
 
 ### <a name="remarks"></a>Remarks
 
-この型は `std::basic_string<Elem>` の同意語です。
+この型は `std::basic_string<Elem>`の同意語です。
 
 ## <a name="wstring_convert"></a>  wstring_convert::wstring_convert
 

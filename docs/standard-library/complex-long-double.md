@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - complex<long double> function
 ms.assetid: 37591991-b385-46e9-b727-d534dbc10432
-ms.openlocfilehash: 280fb4c15219b11d2325ff37a296e133810bf2b5
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: afd85321ee443359f17850384b06b854dfe89985
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449476"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688232"
 ---
 # <a name="complexltlong-doublegt"></a>complex&lt;long double&gt;
 
-この明示的に特殊化されたテンプレートクラスは、順序付けされたオブジェクトのペアを格納するオブジェクトを記述します。 **long double**型の場合は、最初のオブジェクトが複素数の実数部、2番目のオブジェクトが虚数部を表します。
+この明示的に特殊化されたクラステンプレートは、 **long double**型のオブジェクトの順序付けされたペアを格納するオブジェクトを記述します。これは、最初のオブジェクトが複素数の実数部を表し、2番目のオブジェクトが虚数部を表します。
 
 ## <a name="syntax"></a>構文
 
@@ -32,19 +32,19 @@ public:
 complex(
     constexpr complex<long double>& complexNum);
 
-// rest same as template class complex
+// rest same as class template complex
 };
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*Realval (_d)* \
+*Realval \ (_s)*
 構築される複素数の実数部の **long double** 型の値。
 
-*Imagval (_c)* \
+*Imagval \ (_c)*
 構築される複素数の虚数部の**long double**型の値。
 
-*complexNum*\
+*Complexnum* \
 **Double**型または**float**型の複素数。実数部と虚数部が、構築される**long double**型の複素数を初期化するために使用されます。
 
 ## <a name="return-value"></a>戻り値
@@ -53,11 +53,11 @@ complex(
 
 ## <a name="remarks"></a>Remarks
 
-テンプレートクラス`complex`を**long double**型の複合クラスに明示的に特殊化することは、テンプレートクラスが定義するコンストラクター内でのみ、テンプレートクラスとは異なります。 **Long double**から**float**への変換は暗黙的に行うことができますが、 **double**から**long double**への変換は**明示的**に行う必要があります。 **explicit** を使用すると、割り当て構文を使用した型変換による開始は禁止されます。
+クラステンプレートの明示的な特殊化は、 **long double**型の複合クラスに `complex` ていますが、クラステンプレートは、それが定義するコンストラクター内でのみ異なります。 **Long double**から**float**への変換は暗黙的に行うことができますが、 **double**から**long double**への変換は**明示的**に行う必要があります。 **explicit** を使用すると、割り当て構文を使用した型変換による開始は禁止されます。
 
-テンプレートクラス`complex`とそのメンバーの詳細については、「[複合クラス](../standard-library/complex-class.md)」を参照してください。
+クラステンプレート `complex` とそのメンバーの詳細については、「[複合クラス](../standard-library/complex-class.md)」を参照してください。
 
-**Microsoft 固有の仕様**:**Long double**型と**double**型の表現は同じですが、個別の型です。 詳細については、「[基本型](../cpp/fundamental-types-cpp.md)」を参照してください。
+**Microsoft 固有**: **long double**型と**double**型の表現は同じですが、個別の型です。 詳細については、「[基本型](../cpp/fundamental-types-cpp.md)」を参照してください。
 
 ## <a name="example"></a>例
 
@@ -115,7 +115,7 @@ Argument of c3 is recovered from c3 using:
 arg( c3 ) = 0.927295 radians, which is 53.1301 degrees.
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 **ヘッダー**: \<complex>
 

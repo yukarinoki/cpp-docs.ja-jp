@@ -18,16 +18,16 @@ helpviewer_keywords:
 - std::istreambuf_iterator [C++], traits_type
 - std::istreambuf_iterator [C++], equal
 ms.assetid: 39002da2-61a6-48a5-9d0c-5df8271f6038
-ms.openlocfilehash: 0a2bbc69d4f2d3af0ee6e00a2672436a5f15ab67
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 3b839126b7b5541c3a9dd033fcbbc8221bde7c22
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448124"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689473"
 ---
-# <a name="istreambufiterator-class"></a>istreambuf_iterator クラス
+# <a name="istreambuf_iterator-class"></a>istreambuf_iterator クラス
 
-istreambuf_iterator テンプレート クラスは、入力ストリーム バッファーから文字要素を抽出する入力反復子オブジェクトを表します。これには、`basic_streambuf`\< **CharType**, **Traits**> へのポインター型の、格納されたオブジェクトを介してアクセスします。
+クラステンプレート istreambuf_iterator は、入力ストリームバッファーから文字要素を抽出する入力反復子オブジェクトを記述します。このオブジェクトは、格納されているオブジェクトを介してアクセスします。これには、`basic_streambuf` \< **Chartype**、**特徴**> へのポインター型が使用されます.
 
 ## <a name="syntax"></a>構文
 
@@ -39,10 +39,10 @@ class istreambuf_iterator
 
 ### <a name="parameters"></a>パラメーター
 
-*CharType*\
+*Chartype* \
 istreambuf_iterator の文字型を表す型。
 
-*名札*\
+*特徴*\
 istreambuf_iterator の文字型を表す型。 この引数は省略可能であり、既定値は `char_traits`\< *CharType>* です。
 
 ## <a name="remarks"></a>Remarks
@@ -81,7 +81,7 @@ null 以外の格納されたポインターを使用して istreambuf_iterator 
 |[operator++](#op_add_add)|入力ストリームから次の文字を返すか、オブジェクトをインクリメントする前にオブジェクトをコピーして、そのコピーを返します。|
 |[operator->](#op_arrow)|メンバーの値 (存在する場合) を返します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 **ヘッダー:** \<iterator>
 
@@ -142,7 +142,7 @@ bool equal(const istreambuf_iterator<CharType, Traits>& right) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*そうです*\
+*右*\
 等価性をチェックする反復子。
 
 ### <a name="return-value"></a>戻り値
@@ -151,7 +151,7 @@ bool equal(const istreambuf_iterator<CharType, Traits>& right) const;
 
 ### <a name="remarks"></a>Remarks
 
-範囲は、によって`istreambuf_iterator`現在の位置とストリームの末尾の反復子によって定義されますが、すべての非終端ストリーム反復子が`equal`メンバー関数の下で等価であるため、を使用`istreambuf_iterator`して部分範囲を定義することはできません。 `==` 演算子と `!=` 演算子は同じセマンティクスを持ちます。
+範囲は、現在の位置とストリームの末尾の反復子に対して `istreambuf_iterator` によって定義されます。ただし、すべての非終端ストリーム反復子が `equal` メンバー関数の下で等価であるため、`istreambuf_iterator`s を使用して部分範囲を定義することはできません。 `==` 演算子と `!=` 演算子は同じセマンティクスを持ちます。
 
 ### <a name="example"></a>例
 
@@ -191,7 +191,7 @@ typedef typename traits_type::int_type int_type;
 
 ### <a name="remarks"></a>Remarks
 
-この型は `Traits::int_type` の同意語です。
+この型は `Traits::int_type`の同意語です。
 
 ### <a name="example"></a>例
 
@@ -239,15 +239,15 @@ istreambuf_iterator(istream_type& _Istr) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*strbuf*\
+*strbuf* \
 `istreambuf_iterator` が関連付けられている入力ストリーム バッファー。
 
-*_Istr*\
+*_Istr* \
 `istreambuf_iterator` が関連付けられている入力ストリーム。
 
 ### <a name="remarks"></a>Remarks
 
-最初のコンストラクターは、 *strbuf*で入力ストリームバッファーポインターを初期化します。 2番目のコンストラクターは、 *_Istr*を使用して入力ストリームバッファーポインターを初期化します。 `rdbuf`次に、は、型`CharType`のオブジェクトの抽出と格納を試みます。
+最初のコンストラクターは、 *strbuf*で入力ストリームバッファーポインターを初期化します。 2番目のコンストラクターは、 *_Istr*を使用して入力ストリームバッファーポインターを初期化します。 `rdbuf`、最終的に `CharType` 型のオブジェクトの抽出と格納を試みます。
 
 ### <a name="example"></a>例
 
@@ -336,7 +336,7 @@ istreambuf_iterator<CharType, Traits> operator++(int);
 
 ### <a name="remarks"></a>Remarks
 
-最初の演算子は、最終的に、関連付けられて`CharType`いる入力ストリームから型のオブジェクトの抽出と格納を試みます。 2 つ目の演算子は、オブジェクトのコピーを作成して、オブジェクトをインクリメントしてから、そのコピーを返します。
+最初の演算子は、最終的に、関連付けられている入力ストリームから `CharType` 型のオブジェクトの抽出と格納を試みます。 2 つ目の演算子は、オブジェクトのコピーを作成して、オブジェクトをインクリメントしてから、そのコピーを返します。
 
 ### <a name="example"></a>例
 

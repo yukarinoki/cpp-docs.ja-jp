@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - string header
 ms.assetid: a2fb9d00-d7ae-4170-bfea-2dc337aa37cf
-ms.openlocfilehash: 80d5d297cc28cfb019dae99e9e9736e4b2eb654f
-ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
+ms.openlocfilehash: 0b8ca5744418860cc6b4868dda9174ae2eb68a98
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68957131"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72685892"
 ---
 # <a name="ltstringgt"></a>&lt;string&gt;
 
-コンテナーのテンプレート クラス `basic_string` とさまざまなサポート用テンプレートを定義します。
+コンテナークラステンプレート `basic_string` およびさまざまなサポートテンプレートを定義します。
 
 `basic_string` の詳細については、「[basic_string クラス](../standard-library/basic-string-class.md)」を参照してください。
 
@@ -32,16 +32,16 @@ C++ 言語および C++ 標準ライブラリでは、2 種類の文字列がサ
 
 - よく C 文字列と呼ばれる、null で終わる文字の配列。
 
-- Char のようなすべての`basic_string`テンプレート引数を処理する、型のテンプレートクラスオブジェクト。
+- すべての**文字**のようなテンプレート引数を処理する、`basic_string` 型のクラステンプレートオブジェクト。
 
 ### <a name="typedefs"></a>Typedef
 
 |型名|説明|
 |-|-|
-|[string](../standard-library/string-typedefs.md#string)|Char 型の要素をとして特殊化し`basic_string`たテンプレートクラスを記述する型。 `string`|
-|[wstring](../standard-library/string-typedefs.md#wstring)|Wchar_t 型の要素をとして特殊化し`basic_string`たテンプレートクラスを記述する型。 `wstring`|
-|[u16string](../standard-library/string-typedefs.md#u16string)|`basic_string` 型の要素に基づいて特殊化したテンプレート クラス `char16_t` を記述する型。|
-|[u32string](../standard-library/string-typedefs.md#u32string)|`basic_string` 型の要素に基づいて特殊化したテンプレート クラス `char32_t` を記述する型。|
+|[string](../standard-library/string-typedefs.md#string)|**Char**型の要素を `string` として `basic_string` クラステンプレートの特殊化を記述する型。|
+|[wstring](../standard-library/string-typedefs.md#wstring)|**Wchar_t**型の要素を `wstring` として `basic_string` クラステンプレートの特殊化を記述する型。|
+|[u16string](../standard-library/string-typedefs.md#u16string)|@No__t_1 型の要素に基づいて `basic_string` クラステンプレートの特殊化を記述する型。|
+|[u32string](../standard-library/string-typedefs.md#u32string)|@No__t_1 型の要素に基づいて `basic_string` クラステンプレートの特殊化を記述する型。|
 
 ### <a name="operators"></a>演算子
 
@@ -75,16 +75,16 @@ C++ 言語および C++ 標準ライブラリでは、2 種類の文字列がサ
 
 ### <a name="functions"></a>関数
 
-|関数|説明|
+|機能|説明|
 |-|-|
 |[getline テンプレート](../standard-library/string-functions.md#getline)|入力ストリームから文字列を行単位で抽出します。|
 
 ### <a name="classes"></a>クラス
 
-|クラス|説明|
+|インスタンス|説明|
 |-|-|
-|[basic_string クラス](../standard-library/basic-string-class.md)|文字に類する任意のオブジェクトのシーケンスを格納できるオブジェクトを記述するテンプレート クラス。|
-|[char_traits 構造体](../standard-library/char-traits-struct.md)|CharType 型の文字に関連付けられている属性を記述するテンプレート クラス。|
+|[basic_string クラス](../standard-library/basic-string-class.md)|任意の文字に似たオブジェクトのシーケンスを格納できるオブジェクトを記述するクラステンプレート。|
+|[char_traits 構造体](../standard-library/char-traits-struct.md)|CharType 型の文字に関連付けられている属性を記述するクラステンプレート|
 
 ### <a name="specializations"></a>特殊化
 
@@ -95,7 +95,7 @@ C++ 言語および C++ 標準ライブラリでは、2 種類の文字列がサ
 |[char_traits<char16_t> 構造体](../standard-library/char-traits-char16-t-struct.md)|テンプレート構造体 `char_traits`\<CharType> を `char16_t` 型の要素に特殊化した構造体。|
 |[char_traits<char32_t> 構造体](../standard-library/char-traits-char32-t-struct.md)|テンプレート構造体 `char_traits`\<CharType> を `char32_t` 型の要素に特殊化した構造体。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 - **ヘッダー:** \<string>
 

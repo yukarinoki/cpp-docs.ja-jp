@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - complex<float> function
 ms.assetid: 1178eb1e-39bd-4017-89cd-aea95f813939
-ms.openlocfilehash: bfe0e9dcb0bf8f8b74487404998e06d233097a39
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 7b49e63302ad0c26f393fdfd9dd443c77455a643
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453115"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688241"
 ---
 # <a name="complexltfloatgt"></a>complex&lt;float&gt;
 
@@ -35,19 +35,19 @@ constexpr complex(
 
 constexpr complex(
     const complex<long double>& complexNum);
-// rest same as template class complex
+// rest same as class template complex
 };
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*Realval (_d)* \
+*Realval \ (_s)*
 構築される複素数の実数部の **float** 型の値。
 
-*Imagval (_c)* \
+*Imagval \ (_c)*
 構築される複素数の虚数部の **float** 型の値。
 
-*complexNum*\
+*Complexnum* \
 **Double**型または**long double**型の複素数。実数部と虚数部が、構築される**float**型の複素数を初期化するために使用されます。
 
 ## <a name="return-value"></a>戻り値
@@ -56,9 +56,9 @@ constexpr complex(
 
 ## <a name="remarks"></a>Remarks
 
-テンプレート クラス complex の **float** 型の complex クラスに対する明示的な特殊化と、テンプレート クラスによって定義されるコンストラクター内でのみ使用するテンプレート クラスとは異なります。 **Float**から**double**への変換は暗黙的に行うことができますが、 **float**から**long double**への安全でない変換は**明示的**に行う必要があります。 **explicit** を使用すると、割り当て構文を使用した型変換による開始は禁止されます。
+クラステンプレート complex を**float**型の複合クラスに明示的に特殊化することは、それが定義するコンストラクターでのみクラステンプレートとは異なります。 **Float**から**double**への変換は暗黙的に行うことができますが、 **float**から**long double**への安全でない変換は**明示的**に行う必要があります。 **explicit** を使用すると、割り当て構文を使用した型変換による開始は禁止されます。
 
-テンプレート クラス `complex` の詳細については、「[complex クラス](../standard-library/complex-class.md)」を参照してください。 テンプレート クラス `complex` のメンバー一覧については、以下を参照してください。
+クラステンプレート `complex` の詳細については、「[複合クラス](../standard-library/complex-class.md)」を参照してください。 クラステンプレート `complex` のメンバーの一覧については、「」を参照してください。
 
 ## <a name="example"></a>例
 
@@ -116,7 +116,7 @@ arg ( c3 ) = 0.927295 radians, which is 53.1301 degrees.
 */
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 **ヘッダー**: \<complex>
 

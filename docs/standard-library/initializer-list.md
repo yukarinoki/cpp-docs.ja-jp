@@ -2,16 +2,16 @@
 title: '&lt;initializer_list&gt;'
 ms.date: 11/04/2016
 ms.assetid: 820b6448-fb01-49a4-aeaa-546ad7576ea4
-ms.openlocfilehash: 5d0778fde6b7a7b6182b8e57cd4c663ec77ca85a
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: d04eb7e20a989fe310835250c6e51af754edbaf8
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455336"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687910"
 ---
-# <a name="ltinitializerlistgt"></a>&lt;initializer_list&gt;
+# <a name="ltinitializer_listgt"></a>&lt;initializer_list&gt;
 
-コンテナーのテンプレート クラス `initializer_list` と複数のサポート用テンプレートを定義します。
+コンテナークラステンプレート `initializer_list` といくつかのサポートテンプレートを定義します。
 
 ## <a name="syntax"></a>構文
 
@@ -21,7 +21,7 @@ ms.locfileid: "68455336"
 
 ### <a name="classes"></a>クラス
 
-|クラス|説明|
+|インスタンス|説明|
 |-|-|
 |[initializer_list](../standard-library/initializer-list-class.md)|すべてのメンバーが指定された型である要素の配列にアクセスできます。|
 

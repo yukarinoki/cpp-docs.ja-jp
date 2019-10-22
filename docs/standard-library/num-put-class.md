@@ -14,16 +14,16 @@ helpviewer_keywords:
 - std::num_put [C++], do_put
 - std::num_put [C++], put
 ms.assetid: 36c5bffc-8283-4201-8ed4-78c4d81f8a17
-ms.openlocfilehash: ac034a4b80225bd9674e72ca3255938316c5905a
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 49d76c5d553054934907cd2ddc0b7fd1f8b1e998
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457697"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687638"
 ---
 # <a name="num_put-class"></a>num_put クラス
 
-数値から `CharType` 型のシーケンスへの変換を制御するためにロケール ファセットとして使用できるオブジェクトを表すテンプレート クラス。
+数値から `CharType` 型のシーケンスへの変換を制御するためにロケールファセットとして使用できるオブジェクトを表すクラステンプレート。
 
 ## <a name="syntax"></a>構文
 
@@ -35,10 +35,10 @@ class num_put : public locale::facet;
 
 ### <a name="parameters"></a>パラメーター
 
-*CharType*\
+*Chartype* \
 ロケールの文字をエンコードするためにプログラム内で使用される型。
 
-*OutputIterator*\
+*OutputIterator* \
 数値 put 関数が出力を書き込む反復子の型。
 
 ## <a name="remarks"></a>Remarks
@@ -65,7 +65,7 @@ class num_put : public locale::facet;
 |[do_put](#do_put)|数値を、特定のロケールで書式設定された数値を表す `CharType` のシーケンスに変換するために呼び出される仮想関数。|
 |[put](#put)|数値を、特定のロケールで書式設定された数値を表す `CharType` のシーケンスに変換します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 **ヘッダー:** \<locale>
 
@@ -139,16 +139,16 @@ virtual iter_type do_put(
 
 ### <a name="parameters"></a>パラメーター
 
-*次に*\
+*次*の \
 挿入された文字列の先頭の要素を示す反復子。
 
-*_Iosbase*\
+*_Iosbase* \
 出力に句読点を付けるために使用される numpunct ファセットを持つロケールおよび出力を書式設定するためのフラグを含むストリームを指定します。
 
-*塗りつぶし (_C)* \
+@No__t_1 の*塗りつぶし (_c)*
 スペースに使用される文字。
 
-*val*\
+*val* \
 出力する数値またはブール型。
 
 ### <a name="return-value"></a>戻り値
@@ -159,19 +159,19 @@ virtual iter_type do_put(
 
 最初の仮想プロテクトメンバー関数は、 *val*の値から整数の出力フィールドを生成するために、*次*に始まる連続した要素を生成します。 関数は、生成された出力フィールドを超える、次に要素を挿入する場所を指定する反復子を返します。
 
-整数の出力フィールドは、ファイルに一連の**char**要素を生成するために、印刷関数によって使用されるのと同じ規則によって生成されます。 このような char 要素は、単純な1対1のマッピング`CharType`によって、型の同等の要素にマップされると見なされます。 ただし、print 関数はフィールドにスペースまたは数字0を埋め込みますが`do_put` 、で`fill`はを使用します。 同等の出力変換仕様は次のように決定されます。
+整数の出力フィールドは、ファイルに一連の**char**要素を生成するために、印刷関数によって使用されるのと同じ規則によって生成されます。 このような char 要素は、単純な一対一のマッピングによって `CharType` 型の同等の要素にマップされると想定されます。 ただし、print 関数はフィールドにスペースまたは数字0を埋め込みますが、代わりに `fill` を使用 `do_put` ます。 同等の出力変換仕様は次のように決定されます。
 
-- **Iosbase. flags**の場合。 [flags](../standard-library/ios-base-class.md#flags) & `ios_base::basefield` == `ios_base::`[oct](../standard-library/ios-functions.md#oct)、変換仕様は `lo` です。
+- **Iosbase. flags**の場合。 [フラグ](../standard-library/ios-base-class.md#flags) &  `ios_base::basefield`  ==  `ios_base::`[10 月](../standard-library/ios-functions.md#oct)の場合、変換仕様は `lo` です。
 
-- **Iosbase. flags** & **ios_base:: basefield** == `ios_base::`[hex](../standard-library/ios-functions.md#hex)の場合、変換仕様は`lx`です。
+- **Iosbase. flags**  & **ios_base:: basefield**  ==  `ios_base::`[hex](../standard-library/ios-functions.md#hex)の場合、変換仕様は `lx` です。
 
 - それ以外の場合、変換仕様は `ld` です。
 
-**Iosbase. flags**の場合。 [width](../standard-library/ios-base-class.md#width)が0以外の場合、この値のフィールド幅が前に付加されます。 次に、関数は**iosbase. flags**を呼び出します。 **幅**フィールドの幅を0にリセットする場合は (0)。
+**Iosbase. flags**の場合。 [width](../standard-library/ios-base-class.md#width)が0以外の場合、この値のフィールド幅が前に付加されます。 次に、関数は**iosbase. flags**を呼び出します。 **width**(0) フィールドの幅を0にリセットします。
 
-埋め込みは、出力フィールドを指定するために必要な要素*N*の最小数が**iosbase. flags**より小さい場合にのみ発生します。 [幅](../standard-library/ios-base-class.md#width)。 このような埋め込みは、**塗りつぶし**の*N* - **幅**のコピーのシーケンスで構成されます。 この場合、埋め込みは次のように発生します。
+埋め込みは、出力フィールドを指定するために必要な要素*N*の最小数が**iosbase. flags**より小さい場合にのみ発生します。 [幅](../standard-library/ios-base-class.md#width)。 このような埋め込みは、**塗りつぶし**の*N*  - **幅**のコピーのシーケンスで構成されます。 この場合、埋め込みは次のように発生します。
 
-- **Iosbase. flags**の場合。 **flags** & `ios_base::adjustfield` == `ios_base::`[left](../standard-library/ios-functions.md#left)。フラグ **-** が前に付加されます。 (埋め込みは、生成されたテキストの後に発生します。)
+- **Iosbase. flags**の場合。 **フラグ** &  `ios_base::adjustfield`  == [左](../standard-library/ios-functions.md#left)`ios_base::`、フラグ **-** が前に付加されます。 (埋め込みは、生成されたテキストの後に発生します。)
 
 - **iosbase.flags** & **ios_base::adjustfield** == `ios_base::`[internal](../standard-library/ios-functions.md#internal) の場合、**0** フラグが先頭に付加されます。 (数値出力フィールド場合、埋め込みは、出力関数が 0 で埋め込む状況でのみ発生します。)
 
@@ -179,17 +179,17 @@ virtual iter_type do_put(
 
 最後に次のようになります。
 
-- **Iosbase. flags**の場合。 **フラグ** & `ios_base::`[showpos](../standard-library/ios-functions.md#showpos) 0 以外の場合、フラグ **+** 前は、変換仕様に追加されます。
+- **Iosbase. flags**の場合。 `ios_base::`[showpos](../standard-library/ios-functions.md#showpos)  & **フラグ**が0以外の場合、変換指定の前にフラグ **+** が付加されます。
 
-- **Iosbase. flags**の場合。 **フラグ** & **ios_base::** [showbase](../standard-library/ios-functions.md#showbase) 0 以外の場合、フラグ **#** 前は、変換仕様に追加されます。
+- **Iosbase. flags**の場合。 **ios_base::** [showbase](../standard-library/ios-functions.md#showbase)  & **フラグ**が0以外の場合、変換指定の前にフラグ **#** が付加されます。
 
-整数の出力フィールドの形式は、 [use_facet](../standard-library/locale-functions.md#use_facet) < [numpunct](../standard-library/numpunct-class.md) \< **Elem**> ( **iosbase. flags**) の呼び出しによって返される[ロケールファセット](../standard-library/locale-class.md#facet_class)**fac.** によってさらに決定されます。 [getloc](../standard-library/ios-base-class.md#getloc))。 具体的には、次のように使用します。
+整数の出力フィールドの形式は、 [use_facet](../standard-library/locale-functions.md#use_facet)  < [numpunct](../standard-library/numpunct-class.md) \< **Elem**> ( **iosbase. flags**) の呼び出しによって返される[ロケールファセット](../standard-library/locale-class.md#facet_class)によってさらに決定**されます**。 [getloc](../standard-library/ios-base-class.md#getloc))。 具体的には、次のように使用します。
 
 - **fac.** 。 [グループ化](../standard-library/numpunct-class.md#grouping)によって、小数点の左側に桁をグループ化する方法が決まります。
 
 - **fac.** 。 [thousands_sep](../standard-library/numpunct-class.md#thousands_sep)は、小数点の左側にある数字のグループを区切るシーケンスを決定します。
 
-**Fac.** によって適用されるグループ化の制約がない場合。 **グループ化**(最初の要素の値は CHAR_MAX)、 **fac.** のインスタンスはありません。 `thousands_sep`は、出力フィールドに生成されます。 それ以外の場合、出力変換が発生した後に区切り記号が挿入されます。
+**Fac.** によって適用されるグループ化の制約がない場合。 **grouping** (最初の要素の値は CHAR_MAX)、次に**fac.** のインスタンスはありません。 `thousands_sep` は、出力フィールドに生成されます。 それ以外の場合、出力変換が発生した後に区切り記号が挿入されます。
 
 2 番目のプロテクト仮想メンバー関数:
 
@@ -213,17 +213,17 @@ virtual iter_type do_put(iter_type next,
 
 この関数の動作は 1 番目と同じですが、**val** の値から浮動小数点出力フィールドを生成している点が異なります。 **fac.** 。 [decimal_point](../standard-library/numpunct-class.md#decimal_point)は、小数部の桁を区切るシーケンスを決定します。 同等の出力変換仕様は次のように決定されます。
 
-- **Iosbase. flags**の場合。 **flags** & `ios_base::floatfield` == `ios_base::`[fixed](../standard-library/ios-functions.md#fixed)、変換仕様は `lf` です。
+- **Iosbase. flags**の場合。 **フラグ** &  `ios_base::floatfield`  ==  `ios_base::`[修正](../standard-library/ios-functions.md#fixed)されています。変換仕様は `lf` です。
 
-- **Iosbase. flags**の場合。 **flags** & **ios_base::floatfield** == `ios_base::`[scientific](../standard-library/ios-functions.md#scientific), the conversion specification is `le`. **Iosbase. flags**の場合。  & [大文字](../standard-library/ios-functions.md#uppercase)の`e`フラグ`ios_base::`は0以外で、 `E`はに置き換えられます。
+- **Iosbase. flags**の場合。 **フラグ** & **ios_base:: floatfield**  ==  `ios_base::`[科学的](../standard-library/ios-functions.md#scientific)な場合、変換仕様は `le`。 **Iosbase. flags**の場合。 [大文字](../standard-library/ios-functions.md#uppercase)`ios_base::`  & **フラグ**は0以外の `e` `E` に置き換えられます。
 
-- それ以外の場合、変換仕様は **lg** です。 **Iosbase. flags**の場合。 **flags** `g` `G`ios_base:: 英大文字が0以外の場合、はに置き換えられます。 & 
+- それ以外の場合、変換仕様は **lg** です。 **Iosbase. flags**の場合。 **ios_base::**  &  の**フラグ**が0以外の場合、`g` は `G` に置き換えられます。
 
-**Iosbase. flags**の場合。 flags & **ios_base:: fixed**が0以外であるか、 **iosbase. flags**である場合。 [有効](../standard-library/ios-base-class.md#precision)桁数が0を超えています。値は**iosbase. flags**です。 変換指定の前に、**有効桁数**が付加されます。 埋め込みの動作は整数出力フィールドの場合と同様です。 埋め込み文字は **fill** です。 最後に次のようになります。
+**Iosbase. flags**の場合。 **フラグ** & **ios_base:: fixed**が0以外であるか、 **iosbase. flags**である場合。 [有効](../standard-library/ios-base-class.md#precision)桁数が0を超えています。値は**iosbase. flags**です。 変換指定の前に、**有効桁数**が付加されます。 埋め込みの動作は整数出力フィールドの場合と同様です。 埋め込み文字は **fill** です。 最後に次のようになります。
 
-- **Iosbase. flags**の場合。 **フラグ** & `ios_base::`[showpos](../standard-library/ios-functions.md#showpos) 0 以外の場合、フラグ **+** 前は、変換仕様に追加されます。
+- **Iosbase. flags**の場合。 `ios_base::`[showpos](../standard-library/ios-functions.md#showpos)  & **フラグ**が0以外の場合、変換指定の前にフラグ **+** が付加されます。
 
-- **Iosbase. flags**の場合。 **フラグ** & `ios_base::`[showpoint](../standard-library/ios-functions.md#showpoint) 0 以外の場合、フラグ **#** 前は、変換仕様に追加されます。
+- **Iosbase. flags**の場合。 `ios_base::`[showpoint](../standard-library/ios-functions.md#showpoint)  & **フラグ**が0以外の場合は、変換指定の前にフラグ **#** が付加されます。
 
 4 番目のプロテクト仮想メンバー関数:
 
@@ -234,7 +234,7 @@ virtual iter_type do_put(iter_type next,
     long double val) const;
 ```
 
-は、変換指定の修飾子`l`がで`L`置き換えられる点を除いて、3番目と同じように動作します。
+は3番目と同じように動作しますが、変換指定の修飾子 `l` が `L` に置き換えられる点が異なります。
 
 5 番目のプロテクト仮想メンバー関数:
 
@@ -258,7 +258,7 @@ virtual iter_type do_put(iter_type next,
 
 は、最初と同じように動作しますが、 *val*からブール型の出力フィールドを生成する点が異なります。
 
-ブール値出力フィールドは、次の 2 つの形式のいずれかになります。 `iosbase.flags & ios_base::`[ブール](../standard-library/ios-functions.md#boolalpha)値が**false**の場合、メンバー関数は`do_put(_Next, _Iosbase, _Fill, (long)val)`を返します。これは通常、0 ( **false**の場合) または 1 ( **true**の場合) のいずれかの生成されたシーケンスを生成します。 それ以外の場合、生成されたシーケンスは*fac.* です。[falsename](../standard-library/numpunct-class.md#falsename)( **false**の場合)、または*fac.* です。[truename](../standard-library/numpunct-class.md#truename) ( **true**の場合)。
+ブール値出力フィールドは、次の 2 つの形式のいずれかになります。 [ブール](../standard-library/ios-functions.md#boolalpha)型 `iosbase.flags & ios_base::` が**false**の場合、メンバー関数は `do_put(_Next, _Iosbase, _Fill, (long)val)` を返します。通常は、0 ( **false**の場合) または 1 ( **true**の場合) のいずれかの生成されたシーケンスが生成されます。 それ以外の場合、生成されたシーケンスは*fac.* です。[falsename](../standard-library/numpunct-class.md#falsename) ( **false**の場合) または*fac.* 。[(](../standard-library/numpunct-class.md#truename) **true**の場合)。
 
 7 番目のプロテクト仮想メンバー関数:
 
@@ -308,18 +308,18 @@ explicit num_put(size_t _Refs = 0);
 
 ### <a name="parameters"></a>パラメーター
 
-*参照 (_c)* \
-オブジェクトのメモリ管理の種類を指定するために使用する整数値。
+*Refs \ (_c)*
+オブジェクトのメモリ管理のタイプを指定するために使用する整数値。
 
 ### <a name="remarks"></a>Remarks
 
 *Refs*パラメーターに指定できる値とその意味は、次のとおりです。
 
-- 0オブジェクトの有効期間は、オブジェクトが含まれているロケールによって管理されます。
+- 0: オブジェクトの有効期間はそれが含まれるロケールによって管理されます。
 
-- 1:オブジェクトの有効期間は、手動で管理する必要があります。
+- 1: オブジェクトの有効期間を手動で管理する必要があります。
 
-- \>1:これらの値は定義されていません。
+- \> 1: これらの値は定義されていません。
 
 デストラクターが保護されているため、利用できる直接的な例はありません。
 
@@ -327,7 +327,7 @@ explicit num_put(size_t _Refs = 0);
 
 ## <a name="put"></a>  num_put::put
 
-数値を、特定のロケールで`CharType`書式設定された数値を表すのシーケンスに変換します。
+数値を、特定のロケールで書式設定された数値を表す `CharType`s のシーケンスに変換します。
 
 ```cpp
 iter_type put(
@@ -381,16 +381,16 @@ iter_type put(
 
 ### <a name="parameters"></a>パラメーター
 
-*先*\
+*dest* \
 挿入された文字列の先頭の要素を示す反復子。
 
-*_Iosbase*\
+*_Iosbase* \
 出力に句読点を付けるために使用される numpunct ファセットを持つロケールおよび出力を書式設定するためのフラグを含むストリームを指定します。
 
-*塗りつぶし (_C)* \
+@No__t_1 の*塗りつぶし (_c)*
 スペースに使用される文字。
 
-*val*\
+*val* \
 出力する数値またはブール型。
 
 ### <a name="return-value"></a>戻り値

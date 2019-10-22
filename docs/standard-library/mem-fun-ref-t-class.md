@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - mem_fun_ref_t class
 ms.assetid: 7dadcac3-8d33-4e4b-a792-81bd53d3df39
-ms.openlocfilehash: 0879736863a9b8052d19cc86dc5636ba14bcf993
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: d8f5ef05d1bdeec694cdf22d7e7a163478127dfc
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240605"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687767"
 ---
-# <a name="memfunreft-class"></a>mem_fun_ref_t クラス
+# <a name="mem_fun_ref_t-class"></a>mem_fun_ref_t クラス
 
-使用するアダプター クラスを`non_const`参照引数による初期化時に、単項関数オブジェクトとして呼び出せるようにする引数を受け取らないメンバー関数。 C++ 11、c++ 17 では削除では、非推奨とされます。
+参照引数を使用して初期化するときに、引数を取らない `non_const` メンバー関数を単項関数オブジェクトとして呼び出すことができるようにするアダプタークラス。 C++ 11 では非推奨となりました。 C++ 17 では削除されています。
 
 ## <a name="syntax"></a>構文
 
@@ -31,11 +31,11 @@ class mem_fun_ref_t : public unary_function<Type, Result> {
 
 ### <a name="parameters"></a>パラメーター
 
-*_Pm*\
+*Pm \ (_r)*
 関数オブジェクトに変換されるクラス `Type` のメンバー関数へのポインター。
 
 *左*\
-オブジェクトを *_Pm*でメンバー関数が呼び出されます。
+*Pm*メンバー関数が呼び出されるオブジェクト。
 
 ## <a name="return-value"></a>戻り値
 
@@ -43,7 +43,7 @@ class mem_fun_ref_t : public unary_function<Type, Result> {
 
 ## <a name="remarks"></a>Remarks
 
-テンプレート クラスのコピーを格納する *_Pm*、クラスのメンバー関数へのポインターでなければならない`Type`、プライベート メンバー オブジェクトにします。 そのメンバー関数`operator()`返すよう (**左**. * `_Pm`) ()。
+クラステンプレートには、プライベートメンバーオブジェクト内の `Type` クラスのメンバー関数へのポインターである必要がある、 *Pm*のコピーが格納されます。 そのメンバー `operator()` 関数は (**left**. * `_Pm`) () を返すように定義されています。
 
 ## <a name="example"></a>例
 

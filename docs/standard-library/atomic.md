@@ -48,16 +48,16 @@ f1_keywords:
 - atomic/std::atomic_int64_t
 - atomic/std::atomic_uint_least64_t
 ms.assetid: e79a6b9f-52ff-48da-9554-654c4e1999f6
-ms.openlocfilehash: 4c46eb2b9bea30bf37800b33ce0dcf44c0d807f0
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: b33ec1e7fdc7f93062248a9ad42c78c3b30801fe
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456721"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688449"
 ---
 # <a name="ltatomicgt"></a>&lt;atomic&gt;
 
-アトミック操作をサポートする型を作成するために使用するクラスとテンプレート クラスを定義します。
+アトミック操作をサポートする型を作成するために使用するクラスとクラステンプレートを定義します。
 
 ## <a name="syntax"></a>構文
 
@@ -78,11 +78,11 @@ ms.locfileid: "68456721"
 
 一部のプラットフォームでは、`mutex` を使用しないと、一部の型にアトミック操作を効率的に実装できない場合があります。 その型に対するアトミック操作においてロックが使用される場合、アトミック型は*ロック制御不要*になります。
 
-**C++ 11**:シグナルハンドラーでは、または`obj` `atomic_is_lock_free(x)`が true の場合`obj.is_lock_free()` 、オブジェクトに対してアトミック操作を実行できます。
+**C++11**: 通知ハンドラーでは、`obj.is_lock_free()` または `atomic_is_lock_free(x)` が true の場合、オブジェクト `obj` でのアトミック操作を実行できます。
 
 クラス[atomic_flag](../standard-library/atomic-flag-structure.md)は、 **bool**フラグを保持する最小のアトミック型を提供します。 その操作は常にロック制御不要です。
 
-テンプレート クラス `atomic<T>` はその引数の型 `T` のオブジェクトを格納し、その格納されている値へのアトミック アクセスを提供します。 これは、[memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md) を使用してコピーでき、[memcmp](../c-runtime-library/reference/memcmp-wmemcmp.md) を使用して等価性をテストできる任意の型を使用してインスタンス化することができます。 具体的には、これらの要件を満たすユーザー定義の型と、多くの場合、浮動小数点型で使用できます。
+クラステンプレート `atomic<T>` は、その引数の `T` 型のオブジェクトを格納し、その格納されている値へのアトミックアクセスを提供します。 これは、[memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md) を使用してコピーでき、[memcmp](../c-runtime-library/reference/memcmp-wmemcmp.md) を使用して等価性をテストできる任意の型を使用してインスタンス化することができます。 具体的には、これらの要件を満たすユーザー定義の型と、多くの場合、浮動小数点型で使用できます。
 
 テンプレートには、整数型の一連の特殊化およびポインターの部分的特殊化もあります。 これらの特殊化は、プライマリ テンプレートを通じて提供されていないその他の操作を提供します。
 
@@ -152,14 +152,14 @@ Typedef 名は、ヘッダー \<inttypes.h> で定義されている一部の型
 
 ## <a name="structs"></a>構造体
 
-|名前|説明|
+|名|説明|
 |----------|-----------------|
 |[atomic 構造体](../standard-library/atomic-structure.md)|格納された値に対してアトミック操作を実行するオブジェクトについて記述します。|
 |[atomic_flag 構造体](../standard-library/atomic-flag-structure.md)|**ブール**型のフラグをアトミックに設定およびクリアするオブジェクトを記述します。|
 
 ## <a name="enums"></a>列挙体
 
-|Name|説明|
+|名|説明|
 |----------|-----------------|
 |[memory_order 列挙型](../standard-library/atomic-enums.md#memory_order_enum)|メモリ位置に対する同期操作のシンボル名を提供します。 これらの操作は、1 つのスレッドの割り当てが別のスレッドにおいて表示される方法に影響します。|
 
@@ -167,7 +167,7 @@ Typedef 名は、ヘッダー \<inttypes.h> で定義されている一部の型
 
 次の一覧では、末尾が `_explicit` ではない関数は、`memory_order_seq_cst` の暗黙的な [memory_order](../standard-library/atomic-enums.md#memory_order_enum) 引数を持っている場合を除き、対応する `_explicit` のセマンティクスを持っています。
 
-|名前|説明|
+|名|説明|
 |----------|-----------------|
 |[atomic_compare_exchange_strong](../standard-library/atomic-functions.md#atomic_compare_exchange_strong)|*アトミックの比較および交換*の操作を実行します。|
 |[atomic_compare_exchange_strong_explicit](../standard-library/atomic-functions.md#atomic_compare_exchange_strong_explicit)|*アトミックの比較および交換*の操作を実行します。|
@@ -185,10 +185,10 @@ Typedef 名は、ヘッダー \<inttypes.h> で定義されている一部の型
 |[atomic_fetch_sub_explicit](../standard-library/atomic-functions.md#atomic_fetch_sub_explicit)|指定した値を格納されている既存の値から減算します。|
 |[atomic_fetch_xor](../standard-library/atomic-functions.md#atomic_fetch_xor)|指定されている値と格納されている既存の値でビットごとの `exclusive or` を実行します。|
 |[atomic_fetch_xor_explicit](../standard-library/atomic-functions.md#atomic_fetch_xor_explicit)|指定されている値と格納されている既存の値でビットごとの `exclusive or` を実行します。|
-|[atomic_flag_clear](../standard-library/atomic-functions.md#atomic_flag_clear)|`atomic_flag`オブジェクトのフラグを**false**に設定します。|
-|[atomic_flag_clear_explicit](../standard-library/atomic-functions.md#atomic_flag_clear_explicit)|`atomic_flag`オブジェクトのフラグを**false**に設定します。|
-|[atomic_flag_test_and_set](../standard-library/atomic-functions.md#atomic_flag_test_and_set)|`atomic_flag`オブジェクトのフラグを**true**に設定します。|
-|[atomic_flag_test_and_set_explicit](../standard-library/atomic-functions.md#atomic_flag_test_and_set_explicit)|`atomic_flag`オブジェクトのフラグを**true**に設定します。|
+|[atomic_flag_clear](../standard-library/atomic-functions.md#atomic_flag_clear)|@No__t_0 オブジェクトのフラグを**false**に設定します。|
+|[atomic_flag_clear_explicit](../standard-library/atomic-functions.md#atomic_flag_clear_explicit)|@No__t_0 オブジェクトのフラグを**false**に設定します。|
+|[atomic_flag_test_and_set](../standard-library/atomic-functions.md#atomic_flag_test_and_set)|@No__t_0 オブジェクトのフラグを**true**に設定します。|
+|[atomic_flag_test_and_set_explicit](../standard-library/atomic-functions.md#atomic_flag_test_and_set_explicit)|@No__t_0 オブジェクトのフラグを**true**に設定します。|
 |[atomic_init](../standard-library/atomic-functions.md#atomic_init)|`atomic` オブジェクトに格納されている値を設定します。|
 |[atomic_is_lock_free](../standard-library/atomic-functions.md#atomic_is_lock_free)|指定されたオブジェクトに対するアトミック操作がロック制御不要かどうかを指定します。|
 |[atomic_load](../standard-library/atomic-functions.md#atomic_load)|アトミックに値を取得します。|

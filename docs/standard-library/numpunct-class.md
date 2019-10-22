@@ -30,16 +30,16 @@ helpviewer_keywords:
 - std::numpunct [C++], thousands_sep
 - std::numpunct [C++], truename
 ms.assetid: 73fb93cc-ac11-4c98-987c-bfa6267df596
-ms.openlocfilehash: c23f23172894ce0b5adcbff1d2db58c78caf7a03
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 07285f5c014db1ddf419c372913cac0364538a55
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454193"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689222"
 ---
 # <a name="numpunct-class"></a>numpunct クラス
 
-数値とブール式の書式設定および区切りに関する情報を表すために使用される、`CharType` 型のシーケンスを表すロケール ファセットとして使用できるオブジェクトを表すテンプレート クラス。
+数値とブール式の書式設定および区切りに関する情報を表すために使用 `CharType` 型のシーケンスを記述するローカルファセットとして使用できるオブジェクトを表すクラステンプレート。
 
 ## <a name="syntax"></a>構文
 
@@ -50,7 +50,7 @@ class numpunct : public locale::facet;
 
 ### <a name="parameters"></a>パラメーター
 
-*CharType*\
+*Chartype* \
 ロケールの文字をエンコードするためにプログラム内で使用される型。
 
 ## <a name="remarks"></a>Remarks
@@ -85,7 +85,7 @@ class numpunct : public locale::facet;
 |[thousands_sep](#thousands_sep)|桁区切り記号として使用するロケール固有の要素を返します。|
 |[truename](#truename)|**true** 値のテキスト表現として使用する文字列を返します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 **ヘッダー:** \<locale>
 
@@ -200,7 +200,7 @@ virtual string do_grouping() const;
 
 ### <a name="example"></a>例
 
-[グループ化](#grouping)の例を参照してください。ここで、仮想`grouping`メンバー関数はによって呼び出されます。
+[グループ化](#grouping)の例を参照してください。この例では、仮想メンバー関数が `grouping` によって呼び出されています。
 
 ## <a name="do_thousands_sep"></a>  numpunct::do_thousands_sep
 
@@ -216,7 +216,7 @@ virtual CharType do_thousands_sep() const;
 
 ### <a name="remarks"></a>Remarks
 
-プロテクト仮想メンバー関数は、小数点の左側にある`CharType`桁区切り記号として使用する型のロケール固有の要素を返します。
+プロテクト仮想メンバー関数は、小数点の左側にある桁区切り記号として使用する `CharType` 型のロケール固有の要素を返します。
 
 ### <a name="example"></a>例
 
@@ -250,7 +250,7 @@ string_type falsename() const;
 
 ### <a name="return-value"></a>戻り値
 
-値 false のテキスト表現と`CharType`して使用するのシーケンスを格納している文字列。
+値**false**のテキスト表現として使用する `CharType`s のシーケンスを格納している文字列。
 
 ### <a name="remarks"></a>Remarks
 
@@ -345,18 +345,18 @@ explicit numpunct(size_t _Refs = 0);
 
 ### <a name="parameters"></a>パラメーター
 
-*参照 (_c)* \
-オブジェクトのメモリ管理の種類を指定するために使用する整数値。
+*Refs \ (_c)*
+オブジェクトのメモリ管理のタイプを指定するために使用する整数値。
 
 ### <a name="remarks"></a>Remarks
 
 *Refs*パラメーターに指定できる値とその意味は、次のとおりです。
 
-- 0オブジェクトの有効期間は、オブジェクトが含まれているロケールによって管理されます。
+- 0: オブジェクトの有効期間はそれが含まれるロケールによって管理されます。
 
-- 1:オブジェクトの有効期間は、手動で管理する必要があります。
+- 1: オブジェクトの有効期間を手動で管理する必要があります。
 
-- \>1:これらの値は定義されていません。
+- \> 1: これらの値は定義されていません。
 
 デストラクターが保護されているため、利用できる直接的な例はありません。
 
@@ -372,7 +372,7 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
 
 ### <a name="remarks"></a>Remarks
 
-この型は、オブジェクトに区切り記号シーケンスのコピーを格納できるテンプレート クラス [basic_string](../standard-library/basic-string-class.md) の特殊化を表します。
+この型は、区切り記号のコピーを格納できるオブジェクトを持つクラステンプレート[basic_string](../standard-library/basic-string-class.md)の特殊化を表します。
 
 ## <a name="thousands_sep"></a>  numpunct::thousands_sep
 

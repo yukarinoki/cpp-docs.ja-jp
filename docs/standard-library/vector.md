@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - vector header
 ms.assetid: c1431ad8-c0b6-4dbb-89c4-5f651e432d7f
-ms.openlocfilehash: 59424a9f6a9434b5d7d3f4298cbb0bc03926621c
-ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
+ms.openlocfilehash: 19068de41cfdcb17ae624858c137bf624851479f
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68957065"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72684064"
 ---
 # <a name="ltvectorgt"></a>&lt;vector&gt;
 
-コンテナー テンプレート クラス vector と、いくつかのサポート テンプレートを定義します。
+コンテナークラステンプレートベクターといくつかのサポートテンプレートを定義します。
 
 `vector` 指定された型の要素を直線上のシーケンスに編成するコンテナーです。 このシーケンスでは、任意の要素を高速にランダム アクセスしたり、動的に追加および削除したりできます。 `vector` は、ランダム アクセスのパフォーマンスを重視するシーケンスに適したコンテナーです。
 
 > [!NOTE]
-> Vector \<> ライブラリは、 `#include <initializer_list>`ステートメントも使用します。
+> @No__t_0vector > ライブラリでは、`#include <initializer_list>` ステートメントも使用します。
 
 クラス `vector` の詳細については、「[vector クラス](../standard-library/vector-class.md)」をご覧ください。 特殊化 `vector<bool>` の詳細については、「[vector\<bool> クラス](../standard-library/vector-bool-class.md)」をご覧ください。
 
@@ -77,16 +77,16 @@ void swap (
 
 ### <a name="parameters"></a>パラメーター
 
-*各種*\
+*型*\
 ベクター内に格納されるデータ型に対するテンプレート パラメーター。
 
-*アロケーター*\
+*アロケーター* \
 メモリの割り当てと解放を担当する格納されたアロケーター オブジェクトのテンプレート パラメーター。
 
-*左側*\
+*左*\
 比較演算の最初の (左辺の) ベクター
 
-*そうです*\
+*右*\
 比較演算の 2 つ目の (右辺の) ベクター。
 
 ## <a name="members"></a>メンバー
@@ -106,16 +106,16 @@ void swap (
 
 |||
 |-|-|
-|[vector クラス](../standard-library/vector-class.md)|指定された型の要素を直線上に配置し、任意の要素に対する高速なランダム アクセスを可能にするシーケンス コンテナーのテンプレート クラスです。|
+|[vector クラス](../standard-library/vector-class.md)|指定された型の要素を直線上に配置し、任意の要素に対する高速なランダム アクセスを可能にするシーケンス コンテナーのクラス テンプレートです。|
 
 ### <a name="specializations"></a>特殊化
 
 |||
 |-|-|
 |hash|ベクターのハッシュを返します。|
-|[vector\<bool> クラス](../standard-library/vector-bool-class.md)|テンプレート クラス vector を型 `bool` の要素に対して完全に特殊化したもので、基になる型のアロケーターを特殊化で使用します。|
+|[vector\<bool> クラス](../standard-library/vector-bool-class.md)|特殊化で使用される基になる型のアロケーターを持つ `bool` 型の要素に対するクラステンプレートベクターの完全特殊化。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 **ヘッダー:** \<vector>
 

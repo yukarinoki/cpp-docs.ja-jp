@@ -10,14 +10,14 @@ helpviewer_keywords:
 - stdext::cache_chunklist [C++], allocate
 - stdext::cache_chunklist [C++], deallocate
 ms.assetid: af19eccc-4ae7-4a34-bbb2-81e397424cb9
-ms.openlocfilehash: 73730e0a4a22e7f5e63809cc2c1603cbda1ab596
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 035e5153b4e4c84743a64bcc9cec24920a6a0336
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449659"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688365"
 ---
-# <a name="cachechunklist-class"></a>cache_chunklist クラス
+# <a name="cache_chunklist-class"></a>cache_chunklist クラス
 
 1 つのサイズのメモリ ブロックを割り当ておよび割り当て解除する[ブロック アロケーター](../standard-library/allocators-header.md)を定義します。
 
@@ -36,9 +36,9 @@ class cache_chunklist
 
 ## <a name="remarks"></a>Remarks
 
-このテンプレートクラスは、 **operator new**を使用して生メモリのチャンクを割り当てます。また、必要に応じてメモリブロックにストレージを割り当てるようにブロックを割り当てます。割り当て解除されたメモリブロックをチャンクごとに個別のフリーリストに格納し、 **operator delete**を使用して、メモリブロックが使用されていない場合にチャンクの割り当てを解除します。
+このクラステンプレートは、 **operator new**を使用して生メモリのチャンクを割り当てます。また、必要に応じてメモリブロックにストレージを割り当てるようにブロックを割り当てます。割り当て解除されたメモリブロックをチャンクごとに個別のフリーリストに格納し、 **operator delete**を使用して、メモリブロックが使用されていない場合にチャンクの割り当てを解除します。
 
-各メモリブロックは、使用可能なメモリの*Sz*バイトとそれが属するチャンクへのポインターを保持します。 各チャンクは`Nelts` 、メモリブロック、3つのポインター、int、 **operator new**および**operator delete**に必要なデータを保持します。
+各メモリブロックは、使用可能なメモリの*Sz*バイトとそれが属するチャンクへのポインターを保持します。 各チャンクは `Nelts` メモリブロック、3つのポインター、int、 **operator new**および**operator delete**に必要なデータを保持します。
 
 ### <a name="constructors"></a>コンストラクター
 
@@ -53,7 +53,7 @@ class cache_chunklist
 |[allocate](#allocate)|メモリのブロックを割り当てます。|
 |[deallocate](#deallocate)|指定した位置で始まるストレージから、指定された数のオブジェクトを解放します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 **ヘッダー:** \<allocators>
 

@@ -7,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - complex header
 ms.assetid: 5e728995-3059-496a-9ce9-61d1bfbe4f2b
-ms.openlocfilehash: 585f970f1a3482412ff225454b7acce9060e2d7c
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 071e9369cdd0469d8ddc1c6649a3801732d8e23f
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449434"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688215"
 ---
 # <a name="ltcomplexgt"></a>&lt;complex&gt;
 
-コンテナーテンプレートクラス`complex`とそのサポートテンプレートを定義します。
+コンテナークラステンプレート `complex` とそのサポートテンプレートを定義します。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 **ヘッダー**: \<complex>
 
@@ -28,9 +28,9 @@ ms.locfileid: "68449434"
 
 複素数は、順序付けされた実数のペアです。 純粋に幾何学的な見地からすれば、複素平面は実数からなる 2 次元平面です。 複素平面には代数構造が加えられているため、実数平面とは異なる特殊な性質を持ちます。 この代数構造には次の 2 つの基本的な演算が含まれます。
 
-- (*A*, *b*) + (*c*, *d*) = (*a* + *c*, *b* + *d*) として定義された追加
+- (*A*, *b*) + (*c*, *d*) = (*a*  + *c*, *b*  + *d*) として定義された追加
 
-- (*A*, *b*) \* (*c*, *d*) = (*ac* - *bd*, *ad* + *bc*) として定義された乗算
+- (*A*, *b*) \* (*c*, *d*) = (*ac*  - *bd*, *ad*  + *bc*) として定義された乗算
 
 複素数の加算や乗算を伴う複素数の集合は、標準の代数学的な意味での体 (field) です。
 
@@ -40,21 +40,21 @@ ms.locfileid: "68449434"
 
 - 複素数 (*a*, *b*) の加法逆関数は (-*a*,-*b*) で、(0, 0) 以外のすべての複素数の乗算逆はです。
 
-   (*a*/(*a*<sup>2</sup> + *b*<sup>2</sup>),-*b*/(*a*<sup>2</sup> + *b*<sup>2</sup>))
+   (*a/* (*a*<sup>2</sup>  + *b*<sup>2</sup>)、-*b*/(*a*<sup>2</sup>  + *b*<sup>2</sup>))
 
-" *Z* *a bi*" と<sup></sup>  いう + 形式の複素数 z = (a, b) を表すことにより、i 2 =-1 の場合、実数のセットの代数に関するルールを = 複合数値とそのコンポーネントのセット。 例えば:
+@No__t_6*bi*( *i*<sup>2</sup> =-1)  =  *z*形式で複素数*z* = (*a*, *b* *) を表す*ことにより、実数のセットの代数に関するルールを複合のセットに適用できます。数値とそのコンポーネント。 (例:
 
-   (1 + 2*i*) \* (2 + 3*i*) = 1 \* (2 + 3*i*) + 2*i* \* (2 + 3*i*) = (2 + 3*i*) + (4*i* + 6*i*<sup>2</sup>) = (2 - 6) + (3 + 4)*i* = -4 + 7*i*
+   (1 + 2*i*) \* (2 *+ 3 i) =* 1 \* (2 *+ 3 i) +* 2*i* \* (2 *+ 3 i*) = (2 + 3*i*) + (4*i* + 6*i*<sup>2</sup>) = (2-6) + (3 + 4)*i* =-4 + 7*i*
 
 複素数系は体 (field) ですが、順序体 (ordered field) ではありません。 実際の数値とそのサブセットのフィールドについては、複素数の順序が指定されていないため、不等ずを実数のように複素数に適用することはできません。
 
 複素数 *z* を表す形式としては、次の 3 つが一般的です。
 
-- デカルト: *z* = a*bi*  + 
+- @No__t_3*bi*  =  デカルト : *z*
 
-- 極座標: *z* = *r* (cos *p* + *i* sin *p*)
+- 極座標: *z*  = *r* (cos *p*  + *i* sin *p*)
 
-- 指数: *z* = *r* \* *e*<sup>*ip*</sup>
+- 指数: *z*  = *r* \* *e*<sup>*ip*</sup>
 
 これらの標準的な複素数の表現で使用される用語は、次のように呼ばれます。
 
@@ -117,10 +117,10 @@ ms.locfileid: "68449434"
 
 |||
 |-|-|
-|[complex\<double>](../standard-library/complex-double.md)|明示的に特殊化されたテンプレートクラスは、順序付けされたオブジェクトのペア ( **double**型) を格納するオブジェクトを記述します。最初のオブジェクトは複素数の実数部を表し、2番目のオブジェクトは虚数部を表します。|
-|[complex\<float>](../standard-library/complex-float.md)|明示的に特殊化されたテンプレートクラスは、順序付けされたオブジェクトのペア ( **float**型) を格納するオブジェクトを記述します。最初のオブジェクトは複素数の実数部を表し、2番目のオブジェクトは虚数部を表します。|
-|[complex\<long double>](../standard-library/complex-long-double.md)|明示的に特殊化されたテンプレートクラスは、順序付けされたオブジェクトのペア ( **long double**型の両方) を格納するオブジェクトを記述します。1つ目は複素数の実数部を表し、2番目のオブジェクトは虚数部を表します。|
-|[complex](../standard-library/complex-class.md)|このテンプレート クラスは、複素数の算術演算に使用する複素数系を表すオブジェクトを記述します。|
+|[complex\<double>](../standard-library/complex-double.md)|明示的に特殊化されたクラステンプレートは、順序付けされたオブジェクトのペア ( **double**型) を格納するオブジェクトを記述します。1つ目は複素数の実数部を表し、2番目のオブジェクトは虚数部を表します。|
+|[complex\<float>](../standard-library/complex-float.md)|明示的に特殊化されたクラステンプレートは、順序付けされたオブジェクトのペア ( **float**型) を格納するオブジェクトを記述します。最初のオブジェクトは複素数の実数部を表し、2番目のオブジェクトは虚数部を表します。|
+|[complex\<long double>](../standard-library/complex-long-double.md)|明示的に特殊化されたクラステンプレートは、 **long double**型の順序付けられたオブジェクトのペアを格納するオブジェクトを記述します。1つ目は、複素数の実数部を表し、2番目のオブジェクトが虚数部を表します。|
+|[complex](../standard-library/complex-class.md)|クラステンプレートは、複素数システムを表すために使用されるオブジェクトを表し、複雑な算術演算を実行します。|
 
 ### <a name="literals"></a>リテラル
 
@@ -128,7 +128,7 @@ ms.locfileid: "68449434"
 
 |||
 |-|-|
-|`constexpr complex<long double> operator""il(long double d)`<br />`constexpr complex<long double> operator""il(unsigned long long d)`|型`complex<long double>{0.0L, static_cast<long double>(d)}`|
+|`constexpr complex<long double> operator""il(long double d)`<br />`constexpr complex<long double> operator""il(unsigned long long d)`|戻り値: `complex<long double>{0.0L, static_cast<long double>(d)}`|
 |`constexpr complex<double> operator""i(long double d)`<br />`constexpr complex<double> operator""i(unsigned long long d)`|`complex<double>{0.0, static_cast<double>(d)}` を返します。|
 |`constexpr complex<float> operator""if(long double d)`<br />`constexpr complex<float> operator""if(unsigned long long d)`|`complex<float>{0.0f, static_cast<float>(d)}` を返します。|
 

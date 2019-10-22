@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - ostream header
 ms.assetid: 90c3b6fb-57cd-4ae7-99b8-8512f24a67d2
-ms.openlocfilehash: 8de66718dab10b5c95e8c1ab7fd0bd17e9b4ee5e
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 3838e215ffac42ec6902ab6a9837f638153cf184
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448171"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689166"
 ---
 # <a name="ltostreamgt"></a>&lt;ostream&gt;
 
-テンプレート クラス [basic_ostream](../standard-library/basic-ostream-class.md) を定義します。これは iostreams への挿入を仲介します。 ヘッダーは、関連する複数のマニピュレーターを定義します (通常このヘッダーは、別の iostream ヘッダーに含まれています。 まれに、直接含めなければならないことがあります)。
+Iostreams の挿入を仲介するクラステンプレート[basic_ostream](../standard-library/basic-ostream-class.md)を定義します。 ヘッダーは、関連する複数のマニピュレーターを定義します (通常このヘッダーは、別の iostream ヘッダーに含まれています。 まれに、直接含めなければならないことがあります)。
 
 ## <a name="syntax"></a>構文
 
@@ -29,8 +29,8 @@ ms.locfileid: "68448171"
 
 |型名|説明|
 |-|-|
-|[ostream](../standard-library/ostream-typedefs.md#ostream)|Char**に特**化`basic_ostream`し`char_traits`たから型を作成し、 **char**で特殊化します。|
-|[wostream](../standard-library/ostream-typedefs.md#wostream)|Wchar_t に特化`basic_ostream` `char_traits` **した**から型を作成します。 **wchar_t**で特殊化されています。|
+|[ostream](../standard-library/ostream-typedefs.md#ostream)|**Char で**特殊化された `basic_ostream` から型を作成し、 **char**に特化した `char_traits` します。|
+|[wostream](../standard-library/ostream-typedefs.md#wostream)|**Wchar_t で**特殊化された `basic_ostream` から型を作成し、 **wchar_t**に特化した `char_traits` します。|
 
 ### <a name="manipulators"></a>マニピュレーター
 
@@ -49,9 +49,9 @@ ms.locfileid: "68448171"
 
 ### <a name="classes"></a>クラス
 
-|クラス|説明|
+|インスタンス|説明|
 |-|-|
-|[basic_ostream](../standard-library/basic-ostream-class.md)|このテンプレート クラスは、要素とエンコードされたオブジェクトをストリーム バッファーに挿入する操作を制御するオブジェクトを記述します。|
+|[basic_ostream](../standard-library/basic-ostream-class.md)|クラステンプレートは、要素とエンコードされたオブジェクトのストリームバッファーへの挿入を制御するオブジェクトを表します。|
 
 ## <a name="see-also"></a>関連項目
 
