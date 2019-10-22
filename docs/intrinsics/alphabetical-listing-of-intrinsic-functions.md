@@ -1,4 +1,4 @@
----
+﻿---
 title: 組み込み関数のアルファベット順の一覧
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -19,7 +19,7 @@ ms.locfileid: "70220083"
 
 [__addfsbyte、\__addfsword、\__addfsdword](../intrinsics/addfsbyte-addfsword-addfsdword.md)
 
-[__ addgsbyte、 \_addgsword、 \_addgsdword、 \_addgsqword](../intrinsics/addgsbyte-addgsword-addgsdword-addgsqword.md)
+[__addgsbyte、\__addgsword、\__addgsdword、\__addgsqword](../intrinsics/addgsbyte-addgsword-addgsdword-addgsqword.md)
 
 [_AddressOfReturnAddress](../intrinsics/addressofreturnaddress.md)
 
@@ -37,7 +37,7 @@ ms.locfileid: "70220083"
 
 [_bittestandset、_bittestandset64](../intrinsics/bittestandset-bittestandset64.md)
 
-[__ cpuid、 \_cpuidex](../intrinsics/cpuid-cpuidex.md)
+[__cpuid、\__cpuidex](../intrinsics/cpuid-cpuidex.md)
 
 [__debugbreak](../intrinsics/debugbreak.md)
 
@@ -157,7 +157,7 @@ ms.locfileid: "70220083"
 
 [__outwordstring](../intrinsics/outwordstring.md)
 
-[__popcnt16、\_popcnt、\__popcnt64](../intrinsics/popcnt16-popcnt-popcnt64.md)
+[__popcnt16、\__popcnt、\__popcnt64](../intrinsics/popcnt16-popcnt-popcnt64.md)
 
 [__rdtsc](../intrinsics/rdtsc.md)
 
@@ -181,7 +181,7 @@ ms.locfileid: "70220083"
 
 [__readfsbyte、\__readfsdword、\__readfsqword、\__readfsword](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)
 
-[__readgsbyte、\_(\_readgsdword、readgsqword、\_readgsword](../intrinsics/readgsbyte-readgsdword-readgsqword-readgsword.md)
+[__readgsbyte、\__readgsdword、\__readgsqword、\__readgsword](../intrinsics/readgsbyte-readgsdword-readgsqword-readgsword.md)
 
 [__readmsr](../intrinsics/readmsr.md)
 
@@ -267,7 +267,7 @@ ms.locfileid: "70220083"
 
 [__writeeflags](../intrinsics/writeeflags.md)
 
-[__writefsbyte、\_\_writefsdword、writefsqword、\_writefsword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)
+[__writefsbyte、\__writefsdword、\__writefsqword、\__writefsword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)
 
 [__writegsbyte、\__writegsdword、\__writegsqword、\__writegsword](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)
 
