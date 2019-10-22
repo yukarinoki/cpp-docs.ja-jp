@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - std::tuple_element
 ms.assetid: 4c51a6c1-ce81-462f-8c6c-291d69f2b77c
-ms.openlocfilehash: 0836ed683b398981e95e401a73ded6367c7ab472
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 21efed39fdaabe0f95f83e9dc5cdfcc508a147c5
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68241816"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72684463"
 ---
-# <a name="tupleelement-class"></a>tuple_element クラス
+# <a name="tuple_element-class"></a>tuple_element クラス
 
 `tuple` 要素をラップします。 `array` 要素および `pair` 要素のラップの特殊化。
 
@@ -59,32 +59,32 @@ template <class T1, class T2>
 *インデックス*\
 指定した要素のインデックス。
 
-*タプル*\
+*タプル*の \
 タプルの型。
 
-*Elem*\
+*Elem* \
 配列要素の型。
 
-*サイズ*\
+@No__t_1*サイズ*
 配列のサイズ。
 
-*T1*\
-ペアの最初の要素の型。
+*T1* \
+ペア内の最初の要素の型。
 
-*T2*\
+*T2* \
 ペアの 2 番目の要素の型。
 
 ## <a name="remarks"></a>Remarks
 
-テンプレート クラスは、`tuple_element`が入れ子になった typedef`type`インデックス位置にある型のシノニムである*インデックス*のタプル型の*タプル*します。
+クラステンプレート `tuple_element` には、タプル型の*タプル*のインデックス*インデックス*にある型のシノニムである、入れ子になった typedef `type` が含まれています。
 
 Typedef `tuple_element_t` は `tuple_element<Index, Tuple>::type` の便利なエイリアスです。
 
-配列のテンプレート クラスの特殊化では、同じ型の `Size` 要素のタプルとして `array` にインターフェイスを提供します。 それぞれの特殊化が入れ子になった typedef`type`型のシノニムである、*インデックス*の要素、 `array`、const volatile の制限が保持されます。
+配列のクラステンプレートの特殊化によって、`Size` 要素の組として `array` へのインターフェイスが提供されます。各要素の型は同じです。 それぞれの特殊化には、`array` の*Index*要素の型のシノニムであり、const volatile の制限が保持されている `type` 入れ子になった typedef があります。
 
 `pair` の型のテンプレートの特殊化では、それぞれ 1 つのメンバーの typedef である `type` を提供します。これはペアの指定された位置にある要素の型のシノニムであり、const または volatile の制限が保持されます。 Typedef `tuple_element_t` は `tuple_element<N, pair<T1, T2>>::type` の便利なエイリアスです。
 
-使用して、 [get 関数&lt;ユーティリティ&gt;](../standard-library/utility-functions.md#get)指定の位置にある、または指定した型の要素を返します。
+[Get 関数 &lt;utility &gt;](../standard-library/utility-functions.md#get)を使用して、指定した位置、または指定した型の要素を返します。
 
 ## <a name="example"></a>例
 
@@ -172,12 +172,12 @@ int main() {
 0 1.333
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 **ヘッダー:** \<tuple>
 
 **ヘッダー:** \<array> (配列の特殊化用)
 
-**ヘッダー:** \<ユーティリティ > (ペアの特殊化)
+**ヘッダー:** \<utility > (ペアの特殊化用)
 
 **名前空間:** std

@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 f1_keywords:
 - typeindex/std::hash
 ms.assetid: e5a41202-ef3b-45d0-b3a7-4c2dbdc0487a
-ms.openlocfilehash: b8484c8987534051c79ea02a1f87f0df1cd1f027
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 4f73d1bfe7f3370d76b39b95f740a4d3a759b908
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456362"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687955"
 ---
 # <a name="hash-structure"></a>hash 構造体
 
-テンプレート クラスは `val.hash_code()` を返すようにメソッドを定義します。 メソッドは、ハッシュ関数を定義します。これは [type_index](../standard-library/type-index-class.md) 型の値をインデックス値の分布にマッピングするために使用されます。
+クラステンプレートは `val.hash_code()` を返すようにメソッドを定義します。 メソッドは、ハッシュ関数を定義します。これは [type_index](../standard-library/type-index-class.md) 型の値をインデックス値の分布にマッピングするために使用されます。
 
 ## <a name="syntax"></a>構文
 

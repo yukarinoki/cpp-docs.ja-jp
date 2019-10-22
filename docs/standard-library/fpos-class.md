@@ -11,20 +11,20 @@ helpviewer_keywords:
 - std::fpos [C++], seekpos
 - std::fpos [C++], state
 ms.assetid: ffd0827c-fa34-47f4-b10e-5cb707fcde47
-ms.openlocfilehash: 60d7d00e6b9426df9b3086d9b82deaf1fdd1463c
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: cdca7b961d9aedad841692160c8313f8a306dec2
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454154"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689667"
 ---
 # <a name="fpos-class"></a>fpos クラス
 
-このテンプレート クラスは、システム内の任意のファイル位置インジケーターを復元するために必要なすべての情報を格納できるオブジェクトを表します。 fpos\<**St**> クラスのオブジェクトには、実質的に 2 個以上のメンバー オブジェクトが格納されます。
+クラステンプレートは、任意のストリーム内の任意のファイル位置インジケーターを復元するために必要なすべての情報を格納できるオブジェクトを表します。 fpos\<**St**> クラスのオブジェクトには、実質的に 2 個以上のメンバー オブジェクトが格納されます。
 
 - [streamoff](../standard-library/ios-typedefs.md#streamoff) 型のバイト オフセット。
 
-- 型`St`の basic_filebuf クラスのオブジェクトによって使用される変換状態 (通常は`mbstate_t`)。
+- @No__t_0 型のクラス basic_filebuf のオブジェクトによって使用される変換状態。通常は `mbstate_t` です。
 
 [basic_filebuf](../standard-library/basic-filebuf-class.md) クラスのオブジェクトで使用するために、`fpos_t` 型の任意のファイル位置も格納できます。 ただし、ファイル サイズが制限された環境では、`streamoff` と `fpos_t` が区別されずに使用される場合があります。 状態依存のエンコードを使用したストリームがない環境では、実際に `mbstate_t` が使用されていない場合があります。 したがって、格納されるメンバー オブジェクトの数が異なる場合があります。
 
@@ -37,7 +37,7 @@ class fpos
 
 ### <a name="parameters"></a>パラメーター
 
-*Statetype*\
+*Statetype* \
 状態情報。
 
 ### <a name="constructors"></a>コンストラクター
@@ -65,7 +65,7 @@ class fpos
 |[operator==](#op_eq_eq)|ファイル位置インジケーターが等しいかどうかをテストします。|
 |[operator streamoff](#op_streamoff)|`fpos` 型のオブジェクトを `streamoff` 型のオブジェクトにキャストします。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 **ヘッダー:** \<ios>
 
@@ -83,13 +83,13 @@ fpos(Statetype _State, fpos_t _Filepos);
 
 ### <a name="parameters"></a>パラメーター
 
-*オフ (_r)* \
+*オフ \ (_r)*
 ストリームへのオフセット。
 
-*状態 (_c)* \
+*状態 \ (_c)*
 `fpos` オブジェクトの開始状態。
 
-*ファイル (_f)* \
+*Filepos \ (_s)*
 ストリームへのオフセット。
 
 ### <a name="remarks"></a>Remarks
@@ -108,7 +108,7 @@ bool operator!=(const fpos<Statetype>& right) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*そうです*\
+*右*\
 比較するファイル位置インジケーター。
 
 ### <a name="return-value"></a>戻り値
@@ -117,7 +117,7 @@ bool operator!=(const fpos<Statetype>& right) const;
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は、`!(*this == right)` を返します。
+このメンバー関数は、 `!(*this == right)`を返します。
 
 ### <a name="example"></a>例
 
@@ -181,7 +181,7 @@ fpos<Statetype> operator+(streamoff _Off) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*オフ (_r)* \
+*オフ \ (_r)*
 ファイル位置インジケーターをインクリメントするオフセット。
 
 ### <a name="return-value"></a>戻り値
@@ -206,7 +206,7 @@ fpos<Statetype>& operator+=(streamoff _Off);
 
 ### <a name="parameters"></a>パラメーター
 
-*オフ (_r)* \
+*オフ \ (_r)*
 ファイル位置インジケーターをインクリメントするオフセット。
 
 ### <a name="return-value"></a>戻り値
@@ -215,7 +215,7 @@ fpos<Statetype>& operator+=(streamoff _Off);
 
 ### <a name="remarks"></a>Remarks
 
-メンバー関数は、追加 *_Off* 格納されたオフセット メンバー オブジェクトとし、返します **\*この** します。 ファイル内の位置を特定する場合、結果は一般に状態依存エンコーディングを持たないバイナリ ストリームについてのみ有効です。
+このメンバー関数は、格納されているオフセットメンバーオブジェクトに*を追加してから、* **\*this**を返します。 ファイル内の位置を特定する場合、結果は一般に状態依存エンコーディングを持たないバイナリ ストリームについてのみ有効です。
 
 ### <a name="example"></a>例
 
@@ -233,10 +233,10 @@ fpos<Statetype> operator-(streamoff _Off) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*そうです*\
+*右*\
 ファイルの位置。
 
-*オフ (_r)* \
+*オフ \ (_r)*
 ストリームのオフセット。
 
 ### <a name="return-value"></a>戻り値
@@ -257,12 +257,12 @@ fpos<Statetype>& operator-=(streamoff _Off);
 
 ### <a name="parameters"></a>パラメーター
 
-*オフ (_r)* \
+*オフ \ (_r)*
 ストリームのオフセット。
 
 ### <a name="return-value"></a>戻り値
 
-このメンバー関数は、`fpos(*this) -= _Off` を返します。
+このメンバー関数は、 `fpos(*this) -= _Off`を返します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -282,7 +282,7 @@ bool operator==(const fpos<Statetype>& right) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*そうです*\
+*右*\
 比較するファイル位置インジケーター。
 
 ### <a name="return-value"></a>戻り値
@@ -291,7 +291,7 @@ bool operator==(const fpos<Statetype>& right) const;
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は、`(streamoff)*this == (streamoff)right` を返します。
+このメンバー関数は、 `(streamoff)*this == (streamoff)right`を返します。
 
 ### <a name="example"></a>例
 
@@ -356,7 +356,7 @@ void state(Statetype _State);
 
 ### <a name="parameters"></a>パラメーター
 
-*状態 (_c)* \
+*状態 \ (_c)*
 新しい変換状態。
 
 ### <a name="return-value"></a>戻り値
@@ -365,7 +365,7 @@ void state(Statetype _State);
 
 ### <a name="remarks"></a>Remarks
 
-1つ目のメンバー関数は、 `St`メンバーオブジェクトに格納されている値を返します。 2番目のメンバー 関数は、 `St`メンバーオブジェクトに状態を格納します。
+1つ目のメンバー関数は、`St` メンバーオブジェクトに格納されている値を返します。 2番目のメンバー関数は、*状態*を `St` メンバーオブジェクトに格納します。
 
 ### <a name="example"></a>例
 
