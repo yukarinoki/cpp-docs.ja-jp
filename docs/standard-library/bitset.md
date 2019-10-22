@@ -7,18 +7,18 @@ helpviewer_keywords:
 - <bitset> header
 - bitset header
 ms.assetid: af30a9b9-489e-46e3-9d29-5f3ea07ae6dc
-ms.openlocfilehash: 5de13e66523ee5a5dbcb4c2c54d38037909a4c95
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: e017cad251f57cb477b0bf711cdd6243d7fd9893
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449709"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689925"
 ---
 # <a name="ltbitsetgt"></a>&lt;bitset&gt;
 
-ビットの固定サイズ シーケンスを表して処理するための、テンプレート クラス ビットセットと 2 つのサポート テンプレート関数を定義します。
+クラステンプレートのビットセットと、固定サイズのビットシーケンスを表現および操作するための2つのサポートテンプレート関数を定義します。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 **ヘッダー:** \<bitset>
 
@@ -40,7 +40,7 @@ ms.locfileid: "68449709"
 
 |||
 |-|-|
-|[bitset](../standard-library/bitset-class.md)|このテンプレート クラスは、固定数のビットで構成されるシーケンスを格納するオブジェクト型を記述します。これらのビットによって、一連の項目または条件のフラグを保持するためのコンパクトな方法が提供されます。|
+|[bitset](../standard-library/bitset-class.md)|クラステンプレートは、固定数のビットで構成されるシーケンスを格納するオブジェクトの型を記述します。これにより、一連の項目または条件のフラグを保持するコンパクトな方法が提供されます。|
 
 ## <a name="see-also"></a>関連項目
 

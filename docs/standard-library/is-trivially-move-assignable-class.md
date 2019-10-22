@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - is_trivially_move_assignable
 ms.assetid: 374f7322-0706-4bc1-a1a5-4191d0315e28
-ms.openlocfilehash: 324e4a1f1bd3528f09f21c5e485ac814038b7517
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 4b349d328da995105a6217f4ab597da5d7eafc38
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448378"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689487"
 ---
-# <a name="istriviallymoveassignable-class"></a>is_trivially_move_assignable クラス
+# <a name="is_trivially_move_assignable-class"></a>is_trivially_move_assignable クラス
 
 型が自明なムーブ代入演算子を持つかどうかをテストします。
 
@@ -26,7 +26,7 @@ struct is_trivially_move_assignable;
 
 ### <a name="parameters"></a>パラメーター
 
-*~* \
+*Ty* \
 照会する型。
 
 ## <a name="remarks"></a>Remarks
@@ -35,17 +35,13 @@ struct is_trivially_move_assignable;
 
 クラス*Ty*の移動代入演算子は、次のような場合に自明です。
 
-暗黙的に指定されている
+- 暗黙的に指定されている
+- クラス*Ty*に仮想関数がありません。
+- クラス*Ty*に仮想基底がありません
+- クラス型のすべての非静的データ メンバーのクラスに自明なムーブ代入演算子がある
+- クラスの型配列のすべての非静的データ メンバーのクラスに自明なムーブ代入演算子がある
 
-クラス*Ty*に仮想関数がありません。
-
-クラス*Ty*に仮想基底がありません
-
-クラス型のすべての非静的データ メンバーのクラスに自明なムーブ代入演算子がある
-
-クラスの型配列のすべての非静的データ メンバーのクラスに自明なムーブ代入演算子がある
-
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 **ヘッダー:** \<type_traits>
 

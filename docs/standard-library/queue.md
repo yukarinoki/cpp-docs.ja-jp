@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - queue header
 ms.assetid: 24fcf350-eb0e-48cf-9fef-978be1aeda1f
-ms.openlocfilehash: 506ab5fccd44ad37a08a9f741f44f24d3a85b87d
-ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
+ms.openlocfilehash: ee35f880ddf40561cacb5c4d519f2e6291ad77a8
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68956990"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689109"
 ---
 # <a name="ltqueuegt"></a>&lt;queue&gt;
 
-テンプレート クラスの priority_queue と queue、および複数のサポート テンプレートを定義します。
+クラステンプレート priority_queue と queue、およびいくつかのサポートテンプレートを定義します。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 **ヘッダー:** \<queue>
 
 **名前空間:** std
 
 > [!NOTE]
-> Queue \<> ライブラリは、 `#include <initializer_list>`ステートメントも使用します。
+> @No__t_0queue > ライブラリでは、`#include <initializer_list>` ステートメントも使用します。
 
 ## <a name="members"></a>メンバー
 

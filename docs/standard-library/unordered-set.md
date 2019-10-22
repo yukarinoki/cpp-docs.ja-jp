@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - unordered_set header
 ms.assetid: a3364d54-147d-4796-8728-9e62a2e4c226
-ms.openlocfilehash: e03fc2f1c541caedfa9ac83bb9500e50a4b513b1
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 71acab214d891c6139f21685e9368399b99e1657
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454687"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688786"
 ---
-# <a name="ltunorderedsetgt"></a>&lt;unordered_set&gt;
+# <a name="ltunordered_setgt"></a>&lt;unordered_set&gt;
 
-コンテナー テンプレート クラスの [unordered_multiset](../standard-library/unordered-multiset-class.md) と [unordered_set](../standard-library/unordered-set-class.md) およびそれらのサポート テンプレートを定義します。
+コンテナークラステンプレート[unordered_multiset](../standard-library/unordered-multiset-class.md)と[unordered_set](../standard-library/unordered-set-class.md) 、およびそのサポートテンプレートを定義します。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 **ヘッダー:** \<unordered_set >
 
 **名前空間:** std
 
 > [!NOTE]
-> Unordered_set \<> ライブラリは、 `#include <initializer_list>`ステートメントも使用します。
+> @No__t_0unordered_set > ライブラリでは、`#include <initializer_list>` ステートメントも使用します。
 
 ## <a name="members"></a>メンバー
 

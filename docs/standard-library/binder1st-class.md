@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - binder1st class
 ms.assetid: 6b8ee343-c82f-48f8-867d-06f9d1d324c0
-ms.openlocfilehash: 384a870a10c9f806684443d8c67647e924b6b2aa
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 15b704134d47b7bf7d8857bf380c756b0b03a1b0
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243386"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688384"
 ---
 # <a name="binder1st-class"></a>binder1st クラス
 
-指定した値に二項関数の 1 番目の引数をバインドして二項関数オブジェクトを単項関数オブジェクトに変換するコンストラクターを提供するテンプレート クラス。 優先の c++ 11 で非推奨と[バインド](functional-functions.md#bind)、c++ 17 で削除します。
+二項関数の最初の引数を指定された値にバインドすることによって、二項関数オブジェクトを単項関数オブジェクトに変換するコンストラクターを提供するクラステンプレート。 C++ 11 では、 [bind](functional-functions.md#bind)を優先し、c++ 17 では廃止されました。
 
 ## <a name="syntax"></a>構文
 
@@ -43,24 +43,24 @@ protected:
 
 ### <a name="parameters"></a>パラメーター
 
-*binary_fn*\
+*binary_fn* \
 単項関数オブジェクトに変換する二項関数オブジェクト。
 
 *左*\
 二項関数オブジェクトの最初の引数がバインドされている値。
 
-*そうです*\
+*右*\
 調整後の二項オブジェクトが 2 つ目の引数の固定値と比較する引数の値。
 
 ## <a name="return-value"></a>戻り値
 
-単項関数オブジェクト、値に二項関数オブジェクトの最初の引数をバインドに起因する*左*します。
+二項関数オブジェクトの最初の引数を*左*の値にバインドした結果として生成される単項関数オブジェクト。
 
 ## <a name="remarks"></a>Remarks
 
-テンプレート クラスは、二項関数オブジェクトのコピーを格納する*binary_fn*で`op`のコピーと*左*で`value`します。 そのメンバー関数`operator()`返すよう`op(value, right)`します。
+クラステンプレートには `op` にバイナリ*関数オブジェクトの*コピーが格納され、`value` には*左*のコピーが格納されます。 @No__t_1 を返すように、メンバー関数 `operator()` を定義します。
 
-場合*binary_fn*型のオブジェクトは、`Operation`と`c`が定数の場合、`bind1st(binary_fn, c)`より便利な相当するは`binder1st<Operation>(binary_fn, c)`します。 詳細については、次を参照してください。 [bind1st](../standard-library/functional-functions.md#bind1st)します。
+*Binary_fn*が `Operation` 型のオブジェクトで `c` が定数である場合、`bind1st(binary_fn, c)` は `binder1st<Operation>(binary_fn, c)` と同じくらい便利です。 詳細については、「 [bind1st](../standard-library/functional-functions.md#bind1st)」を参照してください。
 
 ## <a name="example"></a>例
 

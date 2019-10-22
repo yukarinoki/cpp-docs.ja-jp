@@ -40,10 +40,10 @@ helpviewer_keywords:
 - erfc function
 ms.assetid: 144d90d3-e437-41c2-a659-cd57596023b5
 ms.openlocfilehash: df724ed056c02d79b5b51f97ae4aaf8ae267fde5
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.sourcegitcommit: 8178d22701047d24f69f10d01ba37490e3d67241
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
+ms.lasthandoff: 10/18/2019
 ms.locfileid: "70937616"
 ---
 # <a name="erf-erff-erfl-erfc-erfcf-erfcl"></a>erf、erff、erfl、erfc、erfcf、erfcl
@@ -98,19 +98,19 @@ long double erfcl(
 
 誤差**関数は** *x*のガウス誤差 error 関数を計算します。これは次のように定義されています。
 
-![X の error 関数](media/crt_erf_formula.PNG "X の error 関数")
+![X の error 関数](media/crt_erf_formula.PNG "x の誤差関数")
 
 相補的なガウス誤差 error 関数は、1-誤差 (x) として定義されています。 -1.0 ~ 1.0 の範囲の値が**返されます**。 エラーの戻り値はありません。 **Erfc**関数は、0 ~ 2 の範囲の値を返します。 *X*が**erfc**に対して大きすぎる場合、 **errno**変数は**ERANGE**に設定されます。
 
 でC++はオーバーロードが可能であるため、 **float**型および**long** **double**型を受け取って返す**erfc** **のオーバーロード**を呼び出すことができます。 C プログラムでは、 **erfc**は常に**double**を**受け取り、返し**ます。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
-|関数|必須ヘッダー|
+|機能|必須ヘッダー|
 |--------------|---------------------|
 |erfc、 **erff**、 **erff**、、 **erfcf**、 **erff**|\<math.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

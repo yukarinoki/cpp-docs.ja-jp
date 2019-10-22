@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - unordered_map header
 ms.assetid: eb90ecb2-250a-4be1-83d2-f66b2917edde
-ms.openlocfilehash: 1ac1bf2772e7eb6b2f61aa7b4f79de21fb675afe
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: e77fd79375fa7f636f551c1246be4f0d8f309ffd
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454761"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688830"
 ---
-# <a name="ltunorderedmapgt"></a>&lt;unordered_map&gt;
+# <a name="ltunordered_mapgt"></a>&lt;unordered_map&gt;
 
-コンテナーのテンプレート クラス [unordered_map](../standard-library/unordered-map-class.md) と [unordered_multimap](../standard-library/unordered-multimap-class.md) およびそれらのサポート テンプレートを定義します。
+コンテナークラステンプレート[unordered_map](../standard-library/unordered-map-class.md)と[unordered_multimap](../standard-library/unordered-multimap-class.md) 、およびそのサポートテンプレートを定義します。
 
 ## <a name="syntax"></a>構文
 
@@ -24,18 +24,18 @@ ms.locfileid: "68454761"
 ```
 
 > [!NOTE]
-> Unordered_map \<> ライブラリは、 `#include <initializer_list>`ステートメントも使用します。
+> @No__t_0unordered_map > ライブラリでは、`#include <initializer_list>` ステートメントも使用します。
 
 ### <a name="classes"></a>クラス
 
-|クラス|説明|
+|インスタンス|説明|
 |-|-|
 |[unordered_map クラス](../standard-library/unordered-map-class.md)|{key, mapped} のペアのハッシュ テーブルを格納します。|
 |[unordered_multimap クラス](../standard-library/unordered-multimap-class.md)|{key, mapped} のペアのハッシュ テーブルを格納します。|
 
 ### <a name="functions"></a>関数
 
-|関数|説明|
+|機能|説明|
 |-|-|
 |[operator!=](../standard-library/unordered-map-operators.md#op_neq)|演算子の左側の unordered_map オブジェクトが右側の unordered_map オブジェクトと等しくないかどうかをテストします。|
 |[operator==](../standard-library/unordered-map-operators.md#op_eq_eq)|演算子の左側の unordered_map オブジェクトが右側の unordered_map オブジェクトと等しいかどうかをテストします。|

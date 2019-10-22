@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - decay class
 ms.assetid: 96baa2fd-c8e0-49af-be91-ba375ba7f9dc
-ms.openlocfilehash: 73b9e2d8ef9a14830c13ee3f6566137bb51e939d
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 3b22dfecb1162ce67a0d648197465115acb044ba
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450643"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688114"
 ---
 # <a name="decay-class"></a>decay クラス
 
@@ -29,12 +29,12 @@ using decay_t = typename decay<T>::type;
 
 ### <a name="parameters"></a>パラメーター
 
-*\T*\
+*T* \
 変更する型。
 
 ## <a name="remarks"></a>Remarks
 
-型が引数として値で渡されたかのように結果の型を生成するには、decay テンプレートを使います。 テンプレート クラスのメンバー typedef `type` は、次の段階で定義された修飾型を保持します。
+型が引数として値で渡されたかのように結果の型を生成するには、decay テンプレートを使います。 クラステンプレートメンバー typedef `type` は、次の段階で定義されている変更された型を保持します。
 
 - 型 `U` が `remove_reference<T>::type` として定義されます。
 
@@ -44,7 +44,7 @@ using decay_t = typename decay<T>::type;
 
 - それ以外の場合、修飾型 `type` は `remove_cv<U>::type` になります。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 **ヘッダー:** \<type_traits>
 

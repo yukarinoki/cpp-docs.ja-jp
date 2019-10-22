@@ -10,14 +10,14 @@ helpviewer_keywords:
 - stdext::cache_suballoc [C++], allocate
 - stdext::cache_suballoc [C++], deallocate
 ms.assetid: 9ea9c5e9-1dcc-45d0-b3a7-a56a93d88898
-ms.openlocfilehash: aa0ceda69fc169593719c3a4f81d308bb6cde284
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 7a21f0c4f81277200ff069baf751fa013a3c0cea
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449656"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688345"
 ---
-# <a name="cachesuballoc-class"></a>cache_suballoc クラス
+# <a name="cache_suballoc-class"></a>cache_suballoc クラス
 
 1 つのサイズのメモリ ブロックを割り当ておよび割り当て解除する[ブロック アロケーター](../standard-library/allocators-header.md)を定義します。
 
@@ -36,9 +36,9 @@ class cache_suballoc
 
 ## <a name="remarks"></a>Remarks
 
-Cache_suballoc テンプレートクラスは、を使用して`freelist<sizeof(Type), max_unbounded>`、割り当てが解除されたメモリブロックをフリーリストに格納します。また、フリーリストが空の場合は、 **new 演算子**で割り当てられた大きなチャンクからメモリブロックを割り当てます。
+Cache_suballoc クラステンプレートは、割り当てが解除されたメモリブロックを、長さが無制限のフリーリストに格納します。また、`freelist<sizeof(Type), max_unbounded>` を使用し、フリーリストが空の場合に**operator new**で割り当てられた大きなチャンクからメモリブロックを割り当てます。
 
-各チャンクは`Sz * Nelts` 、使用可能なメモリのバイト数と、 **operator new**および**operator delete**に必要なデータを保持します。 割り当てたチャンクが解放されることはありません。
+各チャンクは `Sz * Nelts` バイトの使用可能なメモリと、 **operator new**および**operator delete**に必要なデータを保持します。 割り当てたチャンクが解放されることはありません。
 
 ### <a name="constructors"></a>コンストラクター
 
@@ -53,7 +53,7 @@ Cache_suballoc テンプレートクラスは、を使用して`freelist<sizeof(
 |[allocate](#allocate)|メモリのブロックを割り当てます。|
 |[deallocate](#deallocate)|指定した位置で始まるストレージから、指定された数のオブジェクトを解放します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 **ヘッダー:** \<allocators>
 

@@ -1,16 +1,16 @@
 ---
 title: C++ 準拠の強化
-ms.date: 09/25/2019
+ms.date: 10/04/2019
 description: Visual Studio の Microsoft C++ は、C++20 言語標準との完全準拠に向かって進んでいます。
 ms.technology: cpp-language
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 4825317b07535d98b1b5db4442f935e9b2cfb632
-ms.sourcegitcommit: b4572ffcc71e6bdb0ca23221f9476cfaf4528406
+ms.openlocfilehash: d313a9a1f9f2bc1aa091935658ca1214f929c048
+ms.sourcegitcommit: c51b2c665849479fa995bc3323a22ebe79d9d7ce
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71314473"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71998889"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Visual Studio の C++ 準拠の強化
 
@@ -392,7 +392,7 @@ bool neq(const S& lhs, const S& rhs) {
 
 ### <a name="stream-extraction-operators-for-char-removed"></a>char* のストリーム抽出演算子が削除されました
 
-ポインターから文字へのストリーム抽出演算子が削除され、文字配列の抽出演算子に置き換えられました ([P0487R1](http://http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0487r1.html) による)。 WG21 では、削除されたオーバーロードは安全でないと見なされます。 [/std:c++latest](../build/reference/std-specify-language-standard-version.md) モードの場合、次の例では *C2679: binary '>>': no operator found which takes a right-hand operand of type 'char\*' (or there is no acceptable conversion)* ('char*' 型の右側のオペランドを受け取る演算子が見つかりません (または変換できません)) が生成されるようになりました。
+ポインターから文字へのストリーム抽出演算子が削除され、文字配列の抽出演算子に置き換えられました ([P0487R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0487r1.html) による)。 WG21 では、削除されたオーバーロードは安全でないと見なされます。 [/std:c++latest](../build/reference/std-specify-language-standard-version.md) モードの場合、次の例では *C2679: binary '>>': no operator found which takes a right-hand operand of type 'char\*' (or there is no acceptable conversion)* ('char*' 型の右側のオペランドを受け取る演算子が見つかりません (または変換できません)) が生成されるようになりました。
 
 ```cpp
    char x[42];
@@ -456,6 +456,10 @@ extern "C" void f(int, int, int, BOOL){}
 ```
 
 前の例のエラーを回避するには、`f` の両方の宣言で **BOOL**ではなく **bool** を一貫して使用します。
+
+### <a name="standard-library-improvements"></a>標準ライブラリの機能強化
+
+非標準のヘッダー \<stdexcpt.h> と \<typeinfo.h> が削除されました。 これらが含まれるコードには、代わりに標準ヘッダー \<exception> と \<typeinfo> をそれぞれ含める必要があります。
 
 ## <a name="update_160"></a> Visual Studio 2019 のバグ修正と動作の変更
 
@@ -722,7 +726,7 @@ C++ チームのブログ記事「[STL Features and Fixes in VS 2017 15.8 (VS 20
 
 - 以前は、`condition_variable::wait_for(seconds::max())` など、同時実行ライブラリに渡されていた一部の時間値がオーバーフローしていました。 このようなオーバーフローが解消され、うわべではランダムの 29 日周期で動作が変わりました (基礎となる Win32 API で受け取られる uint32_t ミリ秒がオーバーフローしたとき)。
 
-- <ctime> ヘッダーでは、グローバル名前空間で宣言できることに加え、名前空間 `std` で `timespec` と `timespec_get` を正しく宣言できるようになりました。
+- \<ctime> ヘッダーでは、グローバル名前空間で `timespec` と `timespec_get` を宣言することに加え、名前空間 `std` でそれらを正しく宣言できるようになりました。
 
 ### <a name="various-fixes-for-containers"></a>コンテナーのさまざまな修正
 

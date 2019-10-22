@@ -7,31 +7,31 @@ f1_keywords:
 helpviewer_keywords:
 - ios header
 ms.assetid: d3d4c161-2f37-4f04-93cc-0a2a89984a9c
-ms.openlocfilehash: 96e8588e72e864d5324e406859e5a39053a46ccf
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: a322e517a4adb51879fc2a60f6c08f6561276de9
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449134"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689508"
 ---
 # <a name="ltiosgt"></a>&lt;ios&gt;
 
 iostream 操作の基礎となる型と関数を定義します。 このヘッダーは通常、別の iostream ヘッダーによってインクルードされており、ユーザーが直接インクルードすることはほとんどありません。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 **ヘッダー**: \<ios >
 
 **名前空間:** std
 
 > [!NOTE]
-> Ios > ライブラリでは、 `#include <iosfwd>`ステートメントを使用します。 \<
+> @No__t_0ios > ライブラリは `#include <iosfwd>` ステートメントを使用します。
 
 ## <a name="remarks"></a>Remarks
 
-マニピュレーターとは、多種類の関数のグループです。 \<ios> 内で宣言されたマニピュレーターは、[ios_base](../standard-library/ios-base-class.md) クラスの引数オブジェクトに格納された値を変更します。 その他のマニピュレーターは、[basic_istream](../standard-library/basic-istream-class.md) と [basic_ostream](../standard-library/basic-ostream-class.md) のいずれかのテンプレート クラスの特殊化など、ios_base クラスから派生した型のオブジェクトによって制御されるストリームに対して操作を実行します。 たとえば、 [noskipws](../standard-library/ios-functions.md#noskipws)(**str**) は、オブジェクト`ios_base::skipws` `str`の format フラグをクリアします。これは、次のいずれかの型になります。
+マニピュレーターとは、多種類の関数のグループです。 \<ios> 内で宣言されたマニピュレーターは、[ios_base](../standard-library/ios-base-class.md) クラスの引数オブジェクトに格納された値を変更します。 他のマニピュレーターは、このクラスから派生した型のオブジェクトによって制御されるストリームに対して操作を実行します。たとえば、クラステンプレート[basic_istream](../standard-library/basic-istream-class.md)または[basic_ostream](../standard-library/basic-ostream-class.md)の1つを特殊化しています。 たとえば、 [noskipws](../standard-library/ios-functions.md#noskipws)(**str**) は、オブジェクト `str` 内の `ios_base::skipws` の書式設定フラグをクリアします。これは、次のいずれかの型になります。
 
-マニピュレーターは、出力ストリームに挿入したり、入力ストリームから抽出したりすることでも呼び出すことができます。これは、`ios_base` から派生したクラスに特殊な挿入演算子と抽出演算子が指定されるためです。 例えば:
+マニピュレーターは、出力ストリームに挿入したり、入力ストリームから抽出したりすることでも呼び出すことができます。これは、`ios_base` から派生したクラスに特殊な挿入演算子と抽出演算子が指定されるためです。 (例:
 
 ```cpp
 istr>> noskipws;
@@ -95,8 +95,8 @@ istr>> noskipws;
 
 |||
 |-|-|
-|[basic_ios](../standard-library/basic-ios-class.md)|このテンプレート クラスは、テンプレート パラメーターに依存する、入力ストリーム([basic_istream](../standard-library/basic-istream-class.md) テンプレート クラス) と出力ストリーム ([basic_ostream](../standard-library/basic-ostream-class.md) テンプレート クラス) の両方に共通のストレージとメンバー関数を表します。|
-|[fpos](../standard-library/fpos-class.md)|このテンプレート クラスは、システム内の任意のファイル位置インジケーターを復元するために必要なすべての情報を格納できるオブジェクトを表します。|
+|[basic_ios](../standard-library/basic-ios-class.md)|クラステンプレートは、テンプレートパラメーターに依存する、(クラステンプレート[basic_istream](../standard-library/basic-istream-class.md)の) 入力ストリームと出力ストリーム (クラステンプレート[basic_ostream](../standard-library/basic-ostream-class.md)) の両方に共通するストレージおよびメンバー関数を記述します。|
+|[fpos](../standard-library/fpos-class.md)|クラステンプレートは、任意のストリーム内の任意のファイル位置インジケーターを復元するために必要なすべての情報を格納できるオブジェクトを表します。|
 |[ios_base](../standard-library/ios-base-class.md)|このクラスは、テンプレート パラメーターに依存しない、入力ストリームと出力ストリームの両方に共通のストレージとメンバー関数を表します。|
 
 ## <a name="see-also"></a>関連項目

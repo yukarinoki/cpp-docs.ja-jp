@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - match_results class
 ms.assetid: b504fdca-e5dd-429d-9960-6e27c9167fa6
-ms.openlocfilehash: 72a948c7f8422b36b94a16cdb2c815bca92d20c7
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: c282791fb0ff85c0c8818c6905c51703614f4675
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456384"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689384"
 ---
-# <a name="matchresults-class"></a>match_results クラス
+# <a name="match_results-class"></a>match_results クラス
 
 サブマッチのシーケンスを保持します。
 
@@ -26,15 +26,15 @@ class match_results
 
 ## <a name="parameters"></a>パラメーター
 
-*BidIt*\
-サブマッチ用の反復子の型。
+*Bidit* \
+サブマッチの反復子の型。
 
-*割り当て*\
+*Alloc* \
 ストレージを管理するためのアロケーターの型です。
 
 ## <a name="remarks"></a>Remarks
 
-このテンプレート クラスは、正規表現の検索で生成された `sub_match<BidIt>` 型の要素の変更不可能なシーケンスを制御するオブジェクトを表します。 各要素は、それに対応するキャプチャ グループと一致したサブシーケンスを指します。
+クラステンプレートは、正規表現検索によって生成される `sub_match<BidIt>` 型の要素の変更不可能なシーケンスを制御するオブジェクトを記述します。 各要素は、それに対応するキャプチャ グループと一致したサブシーケンスを指します。
 
 ### <a name="constructors"></a>コンストラクター
 
@@ -50,7 +50,7 @@ class match_results
 |[char_type](#char_type)|要素の型。|
 |[const_iterator](#const_iterator)|サブマッチ用の const 反復子の型。|
 |[const_reference](#const_reference)|要素の定数参照の型。|
-|[difference_type](#difference_type)|反復子の差の型です。|
+|[difference_type](#difference_type)|反復子の型の相違点。|
 |[Iterator](#iterator)|サブマッチの反復子の型。|
 |[reference](#reference)|要素の参照の型。|
 |[size_type](#size_type)|サブマッチ数の型。|
@@ -68,8 +68,8 @@ class match_results
 |[get_allocator](#get_allocator)|格納されているアロケーターを返します。|
 |[length](#length)|サブマッチの長さを返します。|
 |[max_size](#max_size)|サブマッチの最大数を取得します。|
-|[position](#position)|サブグループの開始オフセットを取得します。|
-|[prefix](#prefix)|最初のサブマッチの前のシーケンスを取得します。|
+|[移動](#position)|サブグループの開始オフセットを取得します。|
+|[外線](#prefix)|最初のサブマッチの前のシーケンスを取得します。|
 |[size](#size)|サブマッチの数をカウントします。|
 |[str](#str)|サブマッチが返されます。|
 |[敬称](#suffix)|最後のサブマッチ後に、シーケンスを取得します。|
@@ -82,7 +82,7 @@ class match_results
 |[operator=](#op_eq)|match_results オブジェクトをコピーします。|
 |[operator\[\]](#op_at)|サブオブジェクトにアクセスします。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 **ヘッダー:** \<regex>
 
@@ -250,7 +250,7 @@ typedef const typename Alloc::const_reference const_reference;
 
 ## <a name="difference_type"></a>  match_results::difference_type
 
-反復子の差の型です。
+反復子の型の相違点。
 
 ```cpp
 typedef typename iterator_traits<BidIt>::difference_type difference_type;
@@ -298,21 +298,21 @@ string_type format(const string_type& fmt, match_flag_type flags = format_defaul
 
 ### <a name="parameters"></a>パラメーター
 
-*OutIt*\
+*OutIt* \
 出力反復子の型。
 
 *out*\
 書き込み先の出力ストリーム。
 
-*fmt*\
+*fmt* \
 書式指定文字列。
 
-*示す*\
+*フラグ*\
 書式指定フラグ。
 
 ### <a name="remarks"></a>Remarks
 
-各メンバー関数は、 *fmt*形式のコントロールの下に書式付きテキストを生成します。 1つ目のメンバー関数は、書式設定されたテキストを引数*out*によって定義されたシーケンスに書き込み、*を返します*。2 つ目のメンバー関数は、書式指定されたテキストのコピーを保持する文字列オブジェクトを返します。
+各メンバー関数は、 *fmt*形式のコントロールの下に書式付きテキストを生成します。 1つ目のメンバー関数は、書式設定されたテキストを引数*out*によって定義されたシーケンスに書き込み、*を返します*。2番目のメンバー関数は、書式設定されたテキストのコピーを保持する文字列オブジェクトを返します。
 
 書式指定されたテキストを生成する際、 書式指定文字列内のリテラル テキストは、ターゲット シーケンスにコピーされるのが一般的です。 書式指定文字列内の各エスケープ シーケンスは、それが表すテキストに置き換えられます。 コピーと置換の詳細な動作は、関数に渡された書式指定フラグによって制御されます。
 
@@ -330,7 +330,7 @@ allocator_type get_allocator() const;
 
 ## <a name="iterator"></a>  match_results::iterator
 
-サブマッチ用の反復子の型。
+サブマッチの反復子の型。
 
 ```cpp
 typedef const_iterator iterator;
@@ -355,7 +355,7 @@ difference_type length(size_type sub = 0) const;
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は、`(*this)[sub].length()` を返します。
+このメンバー関数は、 `(*this)[sub].length()`を返します。
 
 ## <a name="match_results"></a>  match_results::match_results
 
@@ -369,15 +369,15 @@ match_results(const match_results& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*割り当て*\
+*alloc* \
 格納するアロケーター オブジェクト。
 
-*そうです*\
+*右*\
 コピーする match_results オブジェクトです。
 
 ### <a name="remarks"></a>Remarks
 
-1 つ目のコンストラクターは、サブマッチを保持しない `match_results` オブジェクトを構築します。 2番目のコンストラクター `match_results`は、 *right*のコピーであるオブジェクトを構築します。
+1 つ目のコンストラクターは、サブマッチを保持しない `match_results` オブジェクトを構築します。 2番目のコンストラクターは、 *right*のコピーである `match_results` オブジェクトを構築します。
 
 ## <a name="max_size"></a>  match_results::max_size
 
@@ -401,12 +401,12 @@ match_results& operator=(const match_results& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*そうです*\
+*右*\
 コピーする match_results オブジェクトです。
 
 ### <a name="remarks"></a>Remarks
 
-メンバー演算子は、によって`*this`制御されるシーケンスを、 *right*で制御されるシーケンスのコピーと置き換えます。
+メンバー演算子は、`*this` によって制御されるシーケンスを、 *right*で制御されるシーケンスのコピーに置き換えます。
 
 ## <a name="op_at"></a>  match_results::operator[]
 
@@ -423,7 +423,7 @@ const_reference operator[](size_type n) const;
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は、被制御シーケンスの要素*n*への参照、また`sub_match` `size() <= n`はキャプチャグループ*n*が一致に含まれていない場合は空のオブジェクトへの参照を返します。
+このメンバー関数は、被制御シーケンスの要素*n*への参照、または `size() <= n` の場合は空の `sub_match` オブジェクトへの参照、またはキャプチャグループ*n*が一致に含まれていなかった場合はを返します。
 
 ## <a name="position"></a>  match_results::position
 
@@ -452,7 +452,7 @@ const_reference prefix() const;
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は、ターゲット シーケンスの先頭から始まって `sub_match<BidIt>` で終わる文字シーケンスを指す、`(*this)[0].first` 型のオブジェクトへの参照を返します。つまり、この参照は一致したサブシーケンスの直前のテキストを指すことになります。
+このメンバー関数は、ターゲット シーケンスの先頭から始まって `sub_match<BidIt>` で終わる文字シーケンスを指す、 `(*this)[0].first`型のオブジェクトへの参照を返します。つまり、この参照は一致したサブシーケンスの直前のテキストを指すことになります。
 
 ## <a name="reference"></a>  match_results::reference
 
@@ -505,7 +505,7 @@ string_type str(size_type sub = 0) const;
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は、`string_type((*this)[sub])` を返します。
+このメンバー関数は、 `string_type((*this)[sub])`を返します。
 
 ## <a name="string_type"></a>  match_results::string_type
 
@@ -541,12 +541,12 @@ void swap(const match_results& right) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*そうです*\
+*右*\
 交換する match_results オブジェクト。
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は *、と*の`*this`内容を一定の時間だけ交換し、例外をスローしません。
+このメンバー関数は、`*this` と*右*の内容を一定の時間だけ交換し、例外をスローしません。
 
 ## <a name="value_type"></a>  match_results::value_type
 
@@ -558,7 +558,7 @@ typedef sub_match<BidIt> value_type;
 
 ### <a name="remarks"></a>Remarks
 
-typedef は、型 `sub_match<BidIt>` の同意語です。
+typedef は、型 `sub_match<BidIt>`の同意語です。
 
 ## <a name="see-also"></a>関連項目
 

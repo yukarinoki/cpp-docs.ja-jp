@@ -7,14 +7,14 @@ helpviewer_keywords:
 - typetrait header
 - type_traits
 ms.assetid: 2260b51f-8160-4c66-a82f-00b534cb60d4
-ms.openlocfilehash: 703038ed435de36d60fcf97aa5100197602e7130
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: a0d7f57d13b4387dd5ba39048adf65d9ec7ca3f5
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455046"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72684422"
 ---
-# <a name="lttypetraitsgt"></a>&lt;type_traits&gt;
+# <a name="lttype_traitsgt"></a>&lt;type_traits&gt;
 
 型引数のプロパティに関する情報を提供するか、変換された型を生成するコンパイル時定数のテンプレートを定義します。
 
@@ -26,22 +26,22 @@ ms.locfileid: "68455046"
 
 ## <a name="remarks"></a>Remarks
 
-Type_traits > の\<クラスとテンプレートは、コンパイル時に型の推定、分類、および変換をサポートするために使用されます。 また、型に関連するエラーを検出し、汎用コードを最適化するためにも使用されます。 単項型の特徴では、型のプロパティ、バイナリ型の特徴によって型の間のリレーションシップ、および変換の特徴によって型のプロパティが変更されます。
+@No__t_0type_traits > のクラスとテンプレートは、コンパイル時に型の推定、分類、および変換をサポートするために使用されます。 また、型に関連するエラーを検出し、汎用コードを最適化するためにも使用されます。 単項型の特徴では、型のプロパティ、バイナリ型の特徴によって型の間のリレーションシップ、および変換の特徴によって型のプロパティが変更されます。
 
-ヘルパークラス`integral_constant`とそのテンプレートは`false_type`特殊化`true_type`され、型述語の基底クラスを形成します。 *型の述語*は、1 つ以上の型引数を受け取るテンプレートです。 型の述語が*true を保持*している場合は、 [true_type](../standard-library/type-traits-typedefs.md#true_type)からパブリックに直接または間接的に派生されます。 型述語が*false を保持*する場合、 [false_type](../standard-library/type-traits-typedefs.md#false_type)からパブリックに直接または間接的に派生されます。
+ヘルパークラス `integral_constant` とそのテンプレートの特殊化 `true_type` と `false_type` 型の述語の基底クラスを形成します。 *型の述語*は、1 つ以上の型引数を受け取るテンプレートです。 型の述語が*true を保持*している場合は、 [true_type](../standard-library/type-traits-typedefs.md#true_type)からパブリックに直接または間接的に派生されます。 型述語が*false を保持*する場合、 [false_type](../standard-library/type-traits-typedefs.md#false_type)からパブリックに直接または間接的に派生されます。
 
 *型修飾子*または*変換の特徴*は、1 つ以上のテンプレート引数を受け取り、変更された型のシノニムである 1 つのメンバー、`type` を持つテンプレートです。
 
 ### <a name="alias-templates"></a>エイリアス テンプレート
 
-型の特徴の式を簡単にする`typename some_trait<T>::type`ために、の[エイリアステンプレート](../cpp/aliases-and-typedefs-cpp.md)が用意されています。ここで、 *some_trait*はテンプレートクラス名です。 たとえば、[add_const](../standard-library/add-const-class.md) には、その型 `add_const_t` のエイリアス テンプレートがあり、次のように定義されています。
+型の特徴の式を簡単にするために、`typename some_trait<T>::type` の[エイリアステンプレート](../cpp/aliases-and-typedefs-cpp.md)が用意されています。ここで、 *some_trait*はクラステンプレート名です。 たとえば、[add_const](../standard-library/add-const-class.md) には、その型 `add_const_t` のエイリアス テンプレートがあり、次のように定義されています。
 
 ```cpp
 template <class T>
 using add_const_t = typename add_const<T>::type;
 ```
 
-これらは、 `type`メンバーの指定されたエイリアスです。
+これらは、`type` メンバーの指定されたエイリアスです。
 
 ||||
 |-|-|-|
@@ -109,7 +109,7 @@ using add_const_t = typename add_const<T>::type;
 |[is_empty](../standard-library/is-empty-class.md)|型が空のクラスであるかどうかをテストします。|
 |[is_polymorphic](../standard-library/is-polymorphic-class.md)|型がポリモーフィックなクラスであるかどうかをテストします。|
 |[is_abstract](../standard-library/is-abstract-class.md)|型が抽象クラスであるかどうかをテストします。|
-|[is_final](../standard-library/is-final-class.md)|型が `final` でマークされたクラス型であるかどうかをテストします。|
+|[is_final](../standard-library/is-final-class.md)|型が `final` とマークされるクラス型であるかどうかをテストします。|
 |[is_aggregate](../standard-library/is-aggregate-class.md)||
 |[is_signed](../standard-library/is-signed-class.md)|型が符号付き整数であるかどうかをテストします。|
 |[is_unsigned](../standard-library/is-unsigned-class.md)|型が符号なし整数であるかどうかをテストします。|
@@ -212,7 +212,7 @@ const/volatile の変更
 |[aligned_union](../standard-library/aligned-union-class.md)|重要なコンストラクターまたはデストラクターを含む整列された共用体の初期化されていないメモリを割り当てます。|
 |[common_type](../standard-library/common-type-class.md)|パラメーター パックのすべての型の共通の型を生成します。|
 |[conditional](../standard-library/conditional-class.md)|条件が true の場合は、最初に指定された型が生成され、それ以外の場合、2 番目に指定された型になります。|
-|[decay](../standard-library/decay-class.md)|値で渡された型を生成します。 非参照、非定数、非揮発の型、または型へのポインターを作成します。|
+|[decay](../standard-library/decay-class.md)|値で渡されように型を生成します。 非参照、非定数、非揮発の型、または型へのポインターを作成します。|
 |[enable_if](../standard-library/enable-if-class.md)|条件が true の場合は、指定された型が生成され、それ以外の場合、型は生成されません。|
 |[invoke_result](invoke-result-class.md)|指定された引数型を受け取る呼び出し可能型の戻り値の型を決定します。 <br/>C++ 17 で追加されました。 |
 |[result_of](../standard-library/result-of-class.md)|指定された引数型を受け取る呼び出し可能型の戻り値の型を決定します。 <br/>C++ 14 では非推奨となりました。 |

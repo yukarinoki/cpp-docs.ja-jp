@@ -10,16 +10,16 @@ helpviewer_keywords:
 - std::complex [C++], imag
 - std::complex [C++], real
 ms.assetid: d6492e1c-5eba-4bc5-835b-2a88001a5868
-ms.openlocfilehash: 44d44d48f66c9bdbf03d4e36e752ea3dee5ff9c9
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 687665d2ad8bf80f4f2db07ce11c4866ff1ee903
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453176"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688263"
 ---
 # <a name="complex-class"></a>complex クラス
 
-このテンプレートクラスは、型`Type`の2つのオブジェクトを格納するオブジェクトを表します。1つは複素数の実数部、もう1つは虚数部を表すオブジェクトです。
+クラステンプレートは、`Type` 型の2つのオブジェクトを格納するオブジェクトを記述します。1つは複素数の実数部、もう1つは虚数部を表すオブジェクトです。
 
 ## <a name="syntax"></a>構文
 
@@ -30,7 +30,7 @@ class complex
 
 ## <a name="remarks"></a>Remarks
 
-クラス`Type`のオブジェクト:
+クラス `Type` のオブジェクト。
 
 - 従来の動作で、パブリックな既定のコンストラクター、デストラクター、コピー コンストラクター、および代入演算子が用意されています。
 
@@ -38,9 +38,9 @@ class complex
 
 - 従来の動作で、必要に応じて浮動小数点型に対して定義される算術演算子と数学関数を定義します。
 
-特に、コピーによる構築と、代入に先行する既定の構築の間に、微妙な違いはありません。 クラス`Type`のオブジェクトに対する操作では、例外がスローされない場合があります。
+特に、コピーによる構築と、代入に先行する既定の構築の間に、微妙な違いはありません。 @No__t_0 クラスのオブジェクトに対する操作では、例外をスローすることはできません。
 
-テンプレート クラス complex の明示的な特殊化は 3 つの浮動小数点型に存在します。 この実装では、他の型`Type`の値は、実際の計算では型キャストになり、 **double**型の結果は型`Type`の格納されたオブジェクトに戻されます。
+クラステンプレート complex の明示的な特殊化は、3つの浮動小数点型に存在します。 この実装では、`Type` の他の型の値は、実際の計算では**double**になり、`Type` 型の格納されたオブジェクトに**double**型の結果が割り当てられます。
 
 ## <a name="members"></a>メンバー
 
@@ -91,18 +91,18 @@ constexpr complex(
 
 ### <a name="parameters"></a>パラメーター
 
-*Realval (_d)* \
+*Realval \ (_s)*
 構築される複素数の初期化に使用される実数部の値。
 
-*Imagval (_c)* \
+*Imagval \ (_c)*
 構築される複素数の初期化に使用される虚数部の値。
 
-*complexNum*\
+*Complexnum* \
 構築される複素数の初期化に、その実数部と虚数部の値が使用される複素数。
 
 ### <a name="remarks"></a>Remarks
 
-最初のコンストラクターは、格納されている実数部を *\_realval*に初期化し、格納された虚数部を *\_imagval*に初期化します。 2番目のコンストラクターは、格納さ`complexNum.real()`れている実数部を`complexNum.imag()`に初期化し、格納された虚数部をに初期化します。
+最初のコンストラクターは、格納されている実数部を *\_RealVal*に初期化し、格納されている虚数部を *\_Imagval*に初期化します。 2番目のコンストラクターは、格納されている実数部を `complexNum.real()` に初期化し、格納されている虚数部を `complexNum.imag()` に初期化します。
 
 この実装では、トランスレーターがメンバー テンプレート関数をサポートしない場合、次のテンプレートは、
 
@@ -171,7 +171,7 @@ T imag(const T& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*そうです*\
+*右*\
 虚数部が抽出される複素数。
 
 ### <a name="return-value"></a>戻り値
@@ -228,7 +228,7 @@ complex<Type>& operator*=(const complex<Type>& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*そうです*\
+*右*\
 複素数、またはターゲットの複素数のパラメーターと同じ型の数値。
 
 ### <a name="return-value"></a>戻り値
@@ -313,7 +313,7 @@ complex<Type>& operator+=(const complex<Type>& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*そうです*\
+*右*\
 複素数、またはターゲットの複素数のパラメーターと同じ型の数値。
 
 ### <a name="return-value"></a>戻り値
@@ -416,10 +416,10 @@ complex<Type>& operator-=(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>パラメーター
 
-*complexNum*\
+*Complexnum* \
 ターゲットの複素数を除算する複素数。
 
-*Realpart (_d)* \
+*Realpart \ (_r)*
 ターゲットの複素数を除算する実数。
 
 ### <a name="return-value"></a>戻り値
@@ -524,10 +524,10 @@ complex<Type>& operator/=(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>パラメーター
 
-*complexNum*\
+*Complexnum* \
 ターゲットの複素数を除算する複素数。
 
-*Realpart (_d)* \
+*Realpart \ (_r)*
 ターゲットの複素数を除算する実数。
 
 ### <a name="return-value"></a>戻り値
@@ -626,7 +626,7 @@ complex<Type>& operator=(const Type& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*そうです*\
+*右*\
 複素数、またはターゲットの複素数のパラメーターと同じ型の数値。
 
 ### <a name="return-value"></a>戻り値
@@ -703,7 +703,7 @@ T real(const T& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*そうです*\
+*右*\
 実数値が抽出される複素数。
 
 ### <a name="return-value"></a>戻り値
@@ -745,7 +745,7 @@ The real part of c1 is c1.real() = 4.
 The imaginary part of c1 is c1.imag() = 3.
 ```
 
-## <a name="value_type"></a> value_type
+## <a name="value_type"></a>value_type
 
 複素数の実数部と虚数部を表すために使用するデータ型を表す型。
 
@@ -755,7 +755,7 @@ typedef Type value_type;
 
 ### <a name="remarks"></a>Remarks
 
-`value_type`は、クラスの複合`Type`テンプレートパラメーターのシノニムです。
+`value_type` は、class complex `Type` template パラメーターのシノニムです。
 
 ### <a name="example"></a>例
 

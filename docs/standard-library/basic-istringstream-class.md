@@ -14,14 +14,14 @@ helpviewer_keywords:
 - std::basic_istringstream [C++], str
 - std::basic_istringstream [C++], swap
 ms.assetid: 1d5bb4b5-793d-4833-98e5-14676c451915
-ms.openlocfilehash: 685195b13960c325076f1a38461394ada374d4b1
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: b88411316ae247499100a044a0a2dfb3c53bc84f
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452531"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689996"
 ---
-# <a name="basicistringstream-class"></a>basic_istringstream クラス
+# <a name="basic_istringstream-class"></a>basic_istringstream クラス
 
 クラス [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, **Tr**, `Alloc`> のストリーム バッファーからの、要素とエンコードされたオブジェクトの抽出を制御するオブジェクトを記述します。
 
@@ -34,18 +34,18 @@ class basic_istringstream : public basic_istream<Elem, Tr>
 
 ### <a name="parameters"></a>パラメーター
 
-*割り当て*\
+*Alloc* \
 アロケーター クラス。
 
-*Elem*\
+*Elem* \
 文字列の基本要素の型。
 
-*Tr*\
+*Tr* \
 文字列の基本要素に特化した文字の特徴。
 
 ## <a name="remarks"></a>Remarks
 
-このテンプレートクラスは、 *elem*型の要素を使用して、 [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, **Tr**, `Alloc`> クラスのストリームバッファーからの要素とエンコードされたオブジェクトの抽出を制御するオブジェクトを表します。文字特性は*Tr*クラスによって決定され、その要素は*Alloc*クラスのアロケーターによって割り当てられます。 このオブジェクトは、クラス basic_stringbuf< **Elem**, **Tr**, `Alloc`> のオブジェクトを格納します。
+クラステンプレートは、要素とエンコードされたオブジェクトの抽出を制御するオブジェクトを記述します。これは、<  [basic_stringbuf](../standard-library/basic-stringbuf-class.md)クラスのストリームバッファーから**elem**、 **Tr**、`Alloc` > の文字を含む*elem*型の要素を使用します。特徴はクラス*Tr*によって決定され、その要素は*Alloc*クラスのアロケーターによって割り当てられます。 このオブジェクトは、クラス basic_stringbuf< **Elem**, **Tr**, `Alloc`> のオブジェクトを格納します。
 
 ### <a name="constructors"></a>コンストラクター
 
@@ -73,7 +73,7 @@ class basic_istringstream : public basic_istream<Elem, Tr>
 |-|-|
 |[operator=](#op_eq)|オブジェクト パラメーターの値をこの `basic_istringstream` オブジェクトに代入します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 **ヘッダー:** \<sstream>
 
@@ -105,18 +105,18 @@ basic_istringstream(
 
 ### <a name="parameters"></a>パラメーター
 
-*_Mode*\
+*_Mode* \
 [ios_base::openmode](../standard-library/ios-base-class.md#openmode) の列挙値のうちの 1 つ。
 
-*引数*\
+*str* \
 `basic_string` 型のオブジェクト。
 
-*そうです*\
+*右*\
 `basic_istringstream` オブジェクトの右辺値参照。
 
 ### <a name="remarks"></a>Remarks
 
-最初のコンストラクターは、 [basic_istream](../standard-library/basic-istream-class.md)(`sb`) を呼び出すことによっ`sb`て基底クラスを初期化します`Tr`。 `Alloc`ここで、は、> [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< `Elem`クラスの格納されているオブジェクトです. また、`basic_stringbuf`< `Elem`, `Tr`, `Alloc`>( `_Mode` &#124; `ios_base::in`) を呼び出すことで `sb` の初期化もします。
+1つ目のコンストラクターは、 [basic_istream](../standard-library/basic-istream-class.md)(`sb`) を呼び出すことによって基底クラスを初期化します。 `sb` は、クラス[basic_stringbuf](../standard-library/basic-stringbuf-class.md) <  `Elem`、`Tr`、`Alloc` > の格納されているオブジェクトです。 また、`basic_stringbuf`< `Elem`, `Tr`, `Alloc`>( `_Mode` &#124; `ios_base::in`) を呼び出すことで `sb` の初期化もします。
 
 2 番目のコンストラクターが `basic_istream(sb)` を呼び出して基底クラスを初期化します。 また、`basic_stringbuf`< `Elem`, `Tr`, `Alloc`>( `str`, `_Mode` &#124; `ios_base::in`) を呼び出すことで `sb` の初期化もします。
 
@@ -132,7 +132,7 @@ basic_istringstream& operator=(basic_istringstream&& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*そうです*\
+*右*\
 `basic_istringstream` オブジェクトへの右辺値参照。
 
 ### <a name="remarks"></a>Remarks
@@ -141,7 +141,7 @@ basic_istringstream& operator=(basic_istringstream&& right);
 
 ## <a name="rdbuf"></a>  basic_istringstream::rdbuf
 
-型`pointer`の格納されたストリームバッファーのアドレスを[basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, **Tr**, `Alloc`> に返します。
+@No__t_0 型の格納されたストリームバッファーの[アドレスを返します。 < ](../standard-library/basic-stringbuf-class.md) **Elem**、 **Tr**、`Alloc` > です。
 
 ```cpp
 basic_stringbuf<Elem, Tr, Alloc> *rdbuf() const;
@@ -149,7 +149,7 @@ basic_stringbuf<Elem, Tr, Alloc> *rdbuf() const;
 
 ### <a name="return-value"></a>戻り値
 
-Basic_stringbuf `pointer` < **Elem**, **Tr**, `Alloc`> 型の格納されているストリームバッファーのアドレス。
+@No__t_0 型の格納されたストリームバッファーのアドレス < **Elem**、 **Tr**、`Alloc` > です。
 
 ### <a name="example"></a>例
 
@@ -168,7 +168,7 @@ void str(
 
 ### <a name="parameters"></a>パラメーター
 
-*Newstr (_d)* \
+*Newstr* \
 新しい文字列。
 
 ### <a name="return-value"></a>戻り値
@@ -181,7 +181,7 @@ void str(
 
 ### <a name="example"></a>例
 
-の使用`str`例については、「 [basic_stringbuf:: str](../standard-library/basic-stringbuf-class.md#str) 」を参照してください。
+@No__t_1 を使用する例については、「 [basic_stringbuf:: str](../standard-library/basic-stringbuf-class.md#str) 」を参照してください。
 
 ## <a name="swap"></a>  basic_istringstream::swap
 

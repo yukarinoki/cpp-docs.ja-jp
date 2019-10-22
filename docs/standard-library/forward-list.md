@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - <forward_list>
 ms.assetid: 8b4ab09e-1475-434a-b4e0-fdbc07a08b5b
-ms.openlocfilehash: a8b343fbe5e175828b4b8470da486a6dea9f3455
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 708e16cb4b8a1640f4978b806bc52beed24decd4
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457006"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688059"
 ---
-# <a name="ltforwardlistgt"></a>&lt;forward_list&gt;
+# <a name="ltforward_listgt"></a>&lt;forward_list&gt;
 
-コンテナーのテンプレート クラス forward_list と複数のサポート用テンプレートを定義します。
+コンテナークラステンプレート forward_list といくつかのサポートテンプレートを定義します。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 **ヘッダー:** \<forward_list>
 
 **名前空間:** std
 
 > [!NOTE]
-> Forward_list \<> ライブラリは、 `#include <initializer_list>`ステートメントも使用します。
+> @No__t_0forward_list > ライブラリでは、`#include <initializer_list>` ステートメントも使用します。
 
 ## <a name="members"></a>メンバー
 

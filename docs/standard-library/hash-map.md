@@ -6,19 +6,19 @@ f1_keywords:
 - std::<hash_map>
 helpviewer_keywords:
 - hash_map header
-ms.openlocfilehash: cca38386892ce4df6bf9863e0cbac3dc16106d35
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: e586a933c2a80b7e611bcd4b4714e300eb21a0ad
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448667"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689570"
 ---
-# <a name="lthashmapgt"></a>&lt;hash_map&gt;
+# <a name="lthash_mapgt"></a>&lt;hash_map&gt;
 
 > [!NOTE]
-> このヘッダーは廃止され、互換性のために残されています。 代替手段は[ \<unordered_map >](unordered-map.md)です。
+> このヘッダーは廃止され、互換性のために残されています。 別の方法として[> \<unordered_map](unordered-map.md)ます。
 
-コンテナーのテンプレート クラス hash_map と hash_multimap、およびそのサポート用テンプレートを定義します。
+コンテナークラステンプレート hash_map と hash_multimap、およびそのサポートテンプレートを定義します。
 
 ## <a name="syntax"></a>構文
 
@@ -41,14 +41,14 @@ ms.locfileid: "68448667"
 
 ### <a name="classes"></a>クラス
 
-|クラス|説明|
+|インスタンス|説明|
 |-|-|
-|[hash_compare クラス](hash-compare-class.md)|ハッシュ連想コンテナー (hash_map、hash_multimap、hash_set、または hash_multiset) のいずれかで使用できるオブジェクトを記述します。この`Traits`オブジェクトには、含まれる要素の順序付けとハッシュを行う既定のパラメーターオブジェクトを指定します。|
+|[hash_compare クラス](hash-compare-class.md)|ハッシュ連想コンテナー (hash_map、hash_multimap、hash_set、または hash_multiset) のいずれかで使用できるオブジェクトを記述します。これは、既定の `Traits` パラメーターオブジェクトとして、含まれる要素の順序付けおよびハッシュを行います。|
 |[value_compare クラス](value-compare-class.md)|要素のキーの値を比較し、要素の hash_map 内の相対順序を決定して、hash_map の要素を比較できる関数オブジェクトを提供します。|
 |[hash_map クラス](hash-map-class.md)|一意の並べ替えキーとそれに関連付けられている値のペアを要素として持つコレクションのデータを格納したり、迅速に取得したりするために使用されます。|
 |[hash_multimap クラス](hash-multimap-class.md)|必ずしも一意ではない並べ替えキーとそれに関連付けられている値のペアを要素として持つコレクションのデータを格納したり、迅速に取得したりするために使用されます。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 **ヘッダー:** \<hash_map>
 

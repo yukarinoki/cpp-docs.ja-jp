@@ -25,8 +25,8 @@ ms.locfileid: "70222384"
 
 ## <a name="syntax"></a>構文
 
-> **#pragma リージョン***名前*\
-> **#pragma endregion***コメント*
+> **#pragma リージョン** *名前*\
+> **#pragma endregion** *コメント*
 
 ### <a name="parameters"></a>パラメーター
 

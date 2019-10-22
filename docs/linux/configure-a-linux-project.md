@@ -2,12 +2,12 @@
 title: Visual Studio で C++ Linux プロジェクトを構成する
 ms.date: 06/11/2019
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: a4e20222cc0b04f496989bf2d51fc12c85f5d162
-ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
+ms.openlocfilehash: 1cfaeb6611a27af498325739271d4dba38581dd6
+ms.sourcegitcommit: c53a3efcc5d51fc55fa57ac83cca796b33ae888f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67042637"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71960657"
 ---
 # <a name="configure-a-linux-project"></a>Linux プロジェクトを構成する
 
@@ -93,12 +93,6 @@ Linux サポートは Visual Studio 2017 以降で使用できます。
 ![ビルド イベント](media/settings_buildevents.png)
 
 ## <a name="remote_intellisense"></a> リモート システムのヘッダーでの IntelliSense
-
-::: moniker range="vs-2019"
-
-このセクションは、WSL を対象とするときには適用されません。
-
-::: moniker-end
 
 **接続マネージャー**で新しい接続を追加すると、Visual Studio によってリモート システム上のコンパイラのインクルード ディレクトリが自動的に検出されます。 Visual Studio によってこれらのファイルが圧縮されて、お使いのローカル Windows コンピューター上のディレクトリにコピーされます。 その後、Visual Studio または CMake プロジェクトでその接続を使用するたびに、IntelliSense を提供するためにこれらのディレクトリ内のヘッダーが使用されます。
 

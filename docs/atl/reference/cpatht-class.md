@@ -50,10 +50,10 @@ helpviewer_keywords:
 - CPathT class
 ms.assetid: eba4137d-1fd2-4b44-a2e1-0944db64df3c
 ms.openlocfilehash: ba1c831d772deef34449d17adc2c8e7a6f90eaef
-ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
+ms.sourcegitcommit: 8178d22701047d24f69f10d01ba37490e3d67241
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/18/2019
 ms.locfileid: "69496618"
 ---
 # <a name="cpatht-class"></a>CPathT クラス
@@ -79,54 +79,54 @@ class CPathT
 
 ### <a name="public-typedefs"></a>パブリック typedef
 
-|名前|説明|
+|名|説明|
 |----------|-----------------|
-|[CPathT::PCXSTR](#pcxstr)|定数文字列型。|
-|[CPathT::PXSTR](#pxstr)|文字列型。|
+|[CPathT::P CXSTR](#pcxstr)|定数文字列型。|
+|[CPathT::P XSTR](#pxstr)|文字列型。|
 |[CPathT:: XCHAR](#xchar)|文字型。|
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|名前|説明|
+|名|説明|
 |----------|-----------------|
 |[CPathT:: CPathT](#cpatht)|パスのコンストラクター。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|名前|説明|
+|名|説明|
 |----------|-----------------|
 |[CPathT:: AddBackslash ラッシュ](#addbackslash)|パスの正しい構文を作成するために、このメソッドを呼び出して、文字列の末尾に円記号を追加します。|
-|[CPathT::AddExtension](#addextension)|ファイル拡張子をパスに追加するには、このメソッドを呼び出します。|
+|[CPathT:: AddExtension](#addextension)|ファイル拡張子をパスに追加するには、このメソッドを呼び出します。|
 |[CPathT:: Append](#append)|現在のパスに文字列を追加するには、このメソッドを呼び出します。|
 |[CPathT:: BuildRoot](#buildroot)|指定したドライブ番号からルートパスを作成するには、このメソッドを呼び出します。|
 |[CPathT:: 正規化](#canonicalize)|パスを正規の形式に変換するには、このメソッドを呼び出します。|
 |[CPathT:: 結合](#combine)|ディレクトリ名を表す文字列と、ファイルパス名を表す文字列を1つのパスに連結するには、このメソッドを呼び出します。|
 |[CPathT:: CommonPrefix](#commonprefix)|指定したパスが現在のパスと共通のプレフィックスを共有するかどうかを確認するには、このメソッドを呼び出します。|
 |[CPathT:: CompactPath](#compactpath)|パスコンポーネントを省略記号に置き換えることにより、このメソッドを呼び出して、指定したピクセル幅に収まるようにファイルパスを切り捨てます。|
-|[CPathT::CompactPathEx](#compactpathex)|パスコンポーネントを省略記号で置き換えることにより、このメソッドを呼び出して、指定された文字数に収まるようにファイルパスを切り捨てます。|
+|[CPathT:: CompactPathEx](#compactpathex)|パスコンポーネントを省略記号で置き換えることにより、このメソッドを呼び出して、指定された文字数に収まるようにファイルパスを切り捨てます。|
 |[CPathT:: FileExists](#fileexists)|このパス名のファイルが存在するかどうかを確認するには、このメソッドを呼び出します。|
 |[CPathT:: FindExtension](#findextension)|パス内のファイル拡張子の位置を検索するには、このメソッドを呼び出します。|
-|[CPathT::FindFileName](#findfilename)|パス内のファイル名の位置を検索するには、このメソッドを呼び出します。|
+|[CPathT:: FindFileName](#findfilename)|パス内のファイル名の位置を検索するには、このメソッドを呼び出します。|
 |[CPathT:: GetDriveNumber](#getdrivenumber)|' A ' ~ ' Z ' の範囲内のドライブ文字のパスを検索し、対応するドライブ番号を返すには、このメソッドを呼び出します。|
 |[CPathT:: GetExtension](#getextension)|パスからファイル拡張子を取得するには、このメソッドを呼び出します。|
 |[CPathT:: IsDirectory](#isdirectory)|パスが有効なディレクトリであるかどうかを確認するには、このメソッドを呼び出します。|
-|[CPathT::IsFileSpec](#isfilespec)|パス区切り文字 (': ' や '\\' など) を検索するには、このメソッドを呼び出します。 パス区切り文字が存在しない場合、パスはファイル仕様パスと見なされます。|
+|[CPathT:: IsFileSpec](#isfilespec)|パス区切り文字 (': '、' \\ ' など) を検索するには、このメソッドを呼び出します。 パス区切り文字が存在しない場合、パスはファイル仕様パスと見なされます。|
 |[CPathT:: IsPrefix](#isprefix)|このメソッドを呼び出して、 *Pszprefix*によって渡された型の有効なプレフィックスがパスに含まれているかどうかを確認します。|
 |[CPathT:: IsRelative](#isrelative)|パスが相対パスかどうかを判断するには、このメソッドを呼び出します。|
 |[CPathT:: IsRoot](#isroot)|パスがディレクトリルートであるかどうかを判断するには、このメソッドを呼び出します。|
-|[CPathT::IsSameRoot](#issameroot)|現在のパスを持つ共通のルートコンポーネントが別のパスにあるかどうかを確認するには、このメソッドを呼び出します。|
+|[CPathT:: IsSameRoot](#issameroot)|現在のパスを持つ共通のルートコンポーネントが別のパスにあるかどうかを確認するには、このメソッドを呼び出します。|
 |[CPathT:: IsUNC](#isunc)|パスがサーバーと共有の有効な UNC (汎用名前付け規則) パスであるかどうかを判断するには、このメソッドを呼び出します。|
 |[CPathT:: Isデストラクタサーバー](#isuncserver)|パスがサーバーの有効な UNC (汎用名前付け規則) パスであるかどうかを確認するには、このメソッドを呼び出します。|
-|[CPathT:: Isデストラクタ Servershare](#isuncservershare)|パスが有効な UNC (汎用名前付け規則\\) 共有パス\ (*サーバー*\ *共有*) であるかどうかを確認するには、このメソッドを呼び出します。|
+|[CPathT:: Isデストラクタ Servershare](#isuncservershare)|パスが有効な UNC (汎用名前付け規則) 共有パスであるかどうかを確認するには、このメソッドを呼び出します。 \ *サーバー* \ *共有*\\ ます。|
 |[CPathT:: MakePretty](#makepretty)|パスをすべて小文字に変換して、パスを一貫した外観にするには、このメソッドを呼び出します。|
 |[CPathT:: MatchSpec](#matchspec)|ワイルドカードの一致の種類を含む文字列のパスを検索するには、このメソッドを呼び出します。|
-|[CPathT::QuoteSpaces](#quotespaces)|スペースが含まれている場合は、このメソッドを呼び出して、パスを引用符で囲みます。|
+|[CPathT:: QuoteSpaces](#quotespaces)|スペースが含まれている場合は、このメソッドを呼び出して、パスを引用符で囲みます。|
 |[CPathT:: RelativePathTo](#relativepathto)|ファイルまたはフォルダー間で相対パスを作成するには、このメソッドを呼び出します。|
-|[CPathT::RemoveArgs](#removeargs)|パスからコマンドライン引数を削除するには、このメソッドを呼び出します。|
-|[CPathT::RemoveBackslash](#removebackslash)|パスから末尾の円記号を削除するには、このメソッドを呼び出します。|
+|[CPathT:: RemoveArgs](#removeargs)|パスからコマンドライン引数を削除するには、このメソッドを呼び出します。|
+|[CPathT:: RemoveBackslash ラッシュ](#removebackslash)|パスから末尾の円記号を削除するには、このメソッドを呼び出します。|
 |[CPathT:: RemoveBlanks](#removeblanks)|パスから先頭と末尾の空白をすべて削除するには、このメソッドを呼び出します。|
-|[CPathT::RemoveExtension](#removeextension)|パスからファイル拡張子を削除するには、このメソッドを呼び出します (存在する場合)。|
-|[CPathT::RemoveFileSpec](#removefilespec)|パスの末尾にあるファイル名と円記号を削除するには、このメソッドを呼び出します。|
+|[CPathT:: RemoveExtension](#removeextension)|パスからファイル拡張子を削除するには、このメソッドを呼び出します (存在する場合)。|
+|[CPathT:: RemoveFileSpec](#removefilespec)|パスの末尾にあるファイル名と円記号を削除するには、このメソッドを呼び出します。|
 |[CPathT:: RenameExtension](#renameextension)|パスのファイル名拡張子を新しい拡張子に置き換えるには、このメソッドを呼び出します。 ファイル名に拡張子が含まれていない場合は、文字列の末尾に拡張子が付けられます。|
 |[CPathT:: SkipRoot](#skiproot)|パスを解析するには、ドライブ文字または UNC サーバー/共有パスの部分を無視して、このメソッドを呼び出します。|
 |[CPathT:: という Ppath](#strippath)|完全修飾パスとファイル名のパス部分を削除するには、このメソッドを呼び出します。|
@@ -135,7 +135,7 @@ class CPathT
 
 ### <a name="public-operators"></a>パブリック演算子
 
-|名前|説明|
+|名|説明|
 |----------|-----------------|
 |[CPathT:: operator const StringType &](#operator_const_stringtype_amp)|この演算子を使用すると、オブジェクトを文字列のように扱うことができます。|
 |[CPathT:: operator CPathT::P CXSTR](#operator_cpatht__pcxstr)|この演算子を使用すると、オブジェクトを文字列のように扱うことができます。|
@@ -144,13 +144,13 @@ class CPathT
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
-|名前|説明|
+|名|説明|
 |----------|-----------------|
 |[CPathT:: m_strPath](#m_strpath)|パス。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-`CPath`、 `CPathA`、および`CPathW`は、次`CPathT`のように定義されたのインスタンス化です。
+`CPath`、`CPathA`、および `CPathW` は、次のように定義された `CPathT` のインスタンス化です。
 
 `typedef CPathT< CString > CPath;`
 
@@ -158,7 +158,7 @@ class CPathT
 
 `typedef CPathT< CStringW > CPathW;`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>［要件］
 
 **ヘッダー:** atlpath .h
 
@@ -170,11 +170,11 @@ class CPathT
 void AddBackslash();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 詳細については、「 [Pathaddbackslash ラッシュ](/windows/win32/api/shlwapi/nf-shlwapi-pathaddbackslashw)」を参照してください。
 
-##  <a name="addextension"></a>  CPathT::AddExtension
+##  <a name="addextension"></a>CPathT:: AddExtension
 
 ファイル拡張子をパスに追加するには、このメソッドを呼び出します。
 
@@ -191,7 +191,7 @@ BOOL AddExtension(PCXSTR pszExtension);
 
 成功した場合は TRUE、失敗した場合は FALSE を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 詳細については、「 [Pathaddextension](/windows/win32/api/shlwapi/nf-shlwapi-pathaddextensionw)」を参照してください。
 
@@ -212,7 +212,7 @@ BOOL Append(PCXSTR pszMore);
 
 成功した場合は TRUE、失敗した場合は FALSE を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 詳細については、「 [Pathappend](/windows/win32/api/shlwapi/nf-shlwapi-pathappendw)」を参照してください。
 
@@ -229,7 +229,7 @@ void BuildRoot(int iDrive);
 *iDrive*<br/>
 ドライブ番号 (0 は A:、1は B: など)。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 詳細については、「 [PathBuildRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathbuildrootw)」を参照してください。
 
@@ -241,7 +241,7 @@ void BuildRoot(int iDrive);
 void Canonicalize();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 詳細については、「 [Pathcanonicalize](/windows/win32/api/shlwapi/nf-shlwapi-pathcanonicalizew)」を参照してください。
 
@@ -261,7 +261,7 @@ void Combine(PCXSTR pszDir, PCXSTR  pszFile);
 *pszFile*<br/>
 ファイルパス。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 詳細については、「 [Pathcombine](/windows/win32/api/shlwapi/nf-shlwapi-pathcombinew)」を参照してください。
 
@@ -282,11 +282,11 @@ CPathT<StringType> CommonPrefix(PCXSTR pszOther);
 
 共通のプレフィックスを返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-プレフィックスは、次のいずれかの型になります。"C:\\\\"、"."、".."、"..\\\\". 詳細については、「 [Pathcommonprefix](/windows/win32/api/shlwapi/nf-shlwapi-pathcommonprefixw)」を参照してください。
+プレフィックスは次のいずれかの型です: "C: \\ \\"、"."、".."、"..\\ \\ "。 詳細については、「 [Pathcommonprefix](/windows/win32/api/shlwapi/nf-shlwapi-pathcommonprefixw)」を参照してください。
 
-##  <a name="compactpath"></a>  CPathT::CompactPath
+##  <a name="compactpath"></a>CPathT:: CompactPath
 
 パスコンポーネントを省略記号に置き換えることにより、このメソッドを呼び出して、指定したピクセル幅に収まるようにファイルパスを切り捨てます。
 
@@ -306,11 +306,11 @@ BOOL CompactPath(HDC hDC, UINT nWidth);
 
 成功した場合は TRUE、失敗した場合は FALSE を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 詳細については、「 [PathCompactPath](/windows/win32/api/shlwapi/nf-shlwapi-pathcompactpathw)」を参照してください。
 
-##  <a name="compactpathex"></a>  CPathT::CompactPathEx
+##  <a name="compactpathex"></a>CPathT:: CompactPathEx
 
 パスコンポーネントを省略記号で置き換えることにより、このメソッドを呼び出して、指定された文字数に収まるようにファイルパスを切り捨てます。
 
@@ -330,7 +330,7 @@ BOOL CompactPathEx(UINT nMaxChars, DWORD dwFlags = 0);
 
 成功した場合は TRUE、失敗した場合は FALSE を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 詳細については、「 [PathCompactPathEx](/windows/win32/api/shlwapi/nf-shlwapi-pathcompactpathexw)」を参照してください。
 
@@ -364,11 +364,11 @@ BOOL FileExists() const;
 
 ファイルが存在する場合は TRUE、それ以外の場合は FALSE を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 詳細については、「 [Pathfileexists](/windows/win32/api/shlwapi/nf-shlwapi-pathfileexistsw)」を参照してください。
 
-##  <a name="findextension"></a>  CPathT::FindExtension
+##  <a name="findextension"></a>CPathT:: FindExtension
 
 パス内のファイル拡張子の位置を検索するには、このメソッドを呼び出します。
 
@@ -380,11 +380,11 @@ int FindExtension() const;
 
 拡張子の前の "." の位置を返します。 拡張機能が見つからない場合は、-1 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 詳細については、「 [Pathfindextension](/windows/win32/api/shlwapi/nf-shlwapi-pathfindextensionw)」を参照してください。
 
-##  <a name="findfilename"></a>  CPathT::FindFileName
+##  <a name="findfilename"></a>CPathT:: FindFileName
 
 パス内のファイル名の位置を検索するには、このメソッドを呼び出します。
 
@@ -396,7 +396,7 @@ int FindFileName() const;
 
 ファイル名の位置を返します。 ファイル名が見つからない場合は、-1 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 詳細については、「 [Pathfindfilename](/windows/win32/api/shlwapi/nf-shlwapi-pathfindfilenamew)」を参照してください。
 
@@ -412,11 +412,11 @@ int GetDriveNumber() const;
 
 ドライブ番号を 0 ~ 25 (' A ' から ' Z ' に対応する) の整数として返します。パスにドライブ文字がある場合は、それ以外の場合は-1 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 詳細については、「 [PathGetDriveNumber](/windows/win32/api/shlwapi/nf-shlwapi-pathgetdrivenumberw)」を参照してください。
 
-##  <a name="getextension"></a>  CPathT::GetExtension
+##  <a name="getextension"></a>CPathT:: GetExtension
 
 パスからファイル拡張子を取得するには、このメソッドを呼び出します。
 
@@ -440,13 +440,13 @@ BOOL IsDirectory() const;
 
 パスがディレクトリである場合は0以外の値 (16) を返します。それ以外の場合は FALSE を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 詳細については、「 [Pathisdirectory](/windows/win32/api/shlwapi/nf-shlwapi-pathisdirectoryw)」を参照してください。
 
-##  <a name="isfilespec"></a>  CPathT::IsFileSpec
+##  <a name="isfilespec"></a>CPathT:: IsFileSpec
 
-パス区切り文字 (': ' や '\\' など) を検索するには、このメソッドを呼び出します。 パス区切り文字が存在しない場合、パスはファイル仕様パスと見なされます。
+パス区切り文字 (': '、' \\ ' など) を検索するには、このメソッドを呼び出します。 パス区切り文字が存在しない場合、パスはファイル仕様パスと見なされます。
 
 ```
 BOOL IsFileSpec() const;
@@ -456,7 +456,7 @@ BOOL IsFileSpec() const;
 
 パス内にパス区切り文字がない場合は TRUE を返します。パス区切り文字がある場合は FALSE を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 詳細については、「 [Pathisfilespec](/windows/win32/api/shlwapi/nf-shlwapi-pathisfilespecw)」を参照してください。
 
@@ -471,13 +471,13 @@ BOOL IsPrefix(PCXSTR pszPrefix) const;
 ### <a name="parameters"></a>パラメーター
 
 *pszPrefix*<br/>
-検索対象のプレフィックス。 プレフィックスは、次のいずれかの型になります。"C:\\\\"、"."、".."、"..\\\\".
+検索対象のプレフィックス。 プレフィックスは次のいずれかの型です: "C: \\ \\"、"."、".."、"..\\ \\ "。
 
 ### <a name="return-value"></a>戻り値
 
 パスにプレフィックスが含まれている場合は TRUE、それ以外の場合は FALSE を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 詳細については、「 [PathIsPrefix](/windows/win32/api/shlwapi/nf-shlwapi-pathisprefixw)」を参照してください。
 
@@ -493,7 +493,7 @@ BOOL IsRelative() const;
 
 相対パスの場合は TRUE、絶対パスの場合は FALSE を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 詳細については、「 [Pathisrelative](/windows/win32/api/shlwapi/nf-shlwapi-pathisrelativew)」を参照してください。
 
@@ -509,11 +509,11 @@ BOOL IsRoot() const;
 
 パスがルートの場合は TRUE、それ以外の場合は FALSE を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 詳細については、「 [PathIsRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathisrootw)」を参照してください。
 
-##  <a name="issameroot"></a>  CPathT::IsSameRoot
+##  <a name="issameroot"></a>CPathT:: IsSameRoot
 
 現在のパスを持つ共通のルートコンポーネントが別のパスにあるかどうかを確認するには、このメソッドを呼び出します。
 
@@ -530,7 +530,7 @@ BOOL IsSameRoot(PCXSTR pszOther) const;
 
 両方の文字列が同じルートコンポーネントを持つ場合は TRUE、それ以外の場合は FALSE を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 詳細については、「 [Pathissameroot](/windows/win32/api/shlwapi/nf-shlwapi-pathissamerootw)」を参照してください。
 
@@ -546,7 +546,7 @@ BOOL IsUNC() const;
 
 パスが有効な UNC パスである場合は TRUE、それ以外の場合は FALSE を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 詳細については、「 [Pathisunc](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncw)」を参照してください。
 
@@ -562,13 +562,13 @@ BOOL IsUNCServer() const;
 
 文字列がサーバーの有効な UNC パスである (共有名がない) 場合は TRUE、それ以外の場合は FALSE を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 詳細については、「 [Pathisを](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncserverw)使用しないサーバー」を参照してください。
 
-##  <a name="isuncservershare"></a>  CPathT::IsUNCServerShare
+##  <a name="isuncservershare"></a>CPathT:: Isデストラクタ Servershare
 
-パスが有効な UNC (汎用名前付け規則\\) 共有パス\ (*サーバー*\ *共有*) であるかどうかを確認するには、このメソッドを呼び出します。
+パスが有効な UNC (汎用名前付け規則) 共有パスであるかどうかを確認するには、このメソッドを呼び出します。 \ *サーバー* \ *共有*\\ ます。
 
 ```
 BOOL IsUNCServerShare() const;
@@ -576,9 +576,9 @@ BOOL IsUNCServerShare() const;
 
 ### <a name="return-value"></a>戻り値
 
-\\パスが*サーバー*共有の形式\ である場合は TRUE、それ以外の場合は FALSE を返します。\ 
+パスが \\ \ *サーバー* \ *共有*の形式である場合は TRUE、それ以外の場合は FALSE を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 詳細については、「 [Pathisのサーバー共有](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncserversharew)」を参照してください。
 
@@ -590,11 +590,11 @@ BOOL IsUNCServerShare() const;
 StringType m_strPath;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-`StringType`は、のテンプレートパラメーター `CPathT`です。
+`StringType` は、`CPathT` するテンプレートパラメーターです。
 
-##  <a name="makepretty"></a>  CPathT::MakePretty
+##  <a name="makepretty"></a>CPathT:: MakePretty
 
 パスをすべて小文字に変換して、パスを一貫した外観にするには、このメソッドを呼び出します。
 
@@ -606,7 +606,7 @@ BOOL MakePretty();
 
 パスが変換されている場合は TRUE、それ以外の場合は FALSE を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 詳細については、「 [Pathmakepretty](/windows/win32/api/shlwapi/nf-shlwapi-pathmakeprettyw)」を参照してください。
 
@@ -627,7 +627,7 @@ BOOL MatchSpec(PCXSTR pszSpec) const;
 
 文字列がと一致する場合は TRUE、それ以外の場合は FALSE を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 詳細については、「 [Pathmatchspec](/windows/win32/api/shlwapi/nf-shlwapi-pathmatchspecw)」を参照してください。
 
@@ -648,7 +648,7 @@ CPathT<StringType>& operator+=(PCXSTR pszMore);
 
 更新されたパスを返します。
 
-##  <a name="operator_const_stringtype_amp"></a>CPathT:: operator const StringType&amp;
+##  <a name="operator_const_stringtype_amp"></a>CPathT:: operator const StringType &amp;
 
 この演算子を使用すると、オブジェクトを文字列のように扱うことができます。
 
@@ -672,7 +672,7 @@ operator PCXSTR() const throw();
 
 このオブジェクトによって管理されている現在のパスを表す文字列を返します。
 
-##  <a name="operator_stringtype_amp"></a>CPathT:: operator StringType&amp;
+##  <a name="operator_stringtype_amp"></a>CPathT:: operator StringType &amp;
 
 この演算子を使用すると、オブジェクトを文字列のように扱うことができます。
 
@@ -684,7 +684,7 @@ operator StringType&() throw();
 
 このオブジェクトによって管理されている現在のパスを表す文字列を返します。
 
-##  <a name="pcxstr"></a>  CPathT::PCXSTR
+##  <a name="pcxstr"></a>CPathT::P CXSTR
 
 定数文字列型。
 
@@ -692,11 +692,11 @@ operator StringType&() throw();
 typedef StringType::PCXSTR PCXSTR;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-`StringType`は、のテンプレートパラメーター `CPathT`です。
+`StringType` は、`CPathT` するテンプレートパラメーターです。
 
-##  <a name="pxstr"></a>  CPathT::PXSTR
+##  <a name="pxstr"></a>CPathT::P XSTR
 
 文字列型。
 
@@ -704,11 +704,11 @@ typedef StringType::PCXSTR PCXSTR;
 typedef StringType::PXSTR PXSTR;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-`StringType`は、のテンプレートパラメーター `CPathT`です。
+`StringType` は、`CPathT` するテンプレートパラメーターです。
 
-##  <a name="quotespaces"></a>  CPathT::QuoteSpaces
+##  <a name="quotespaces"></a>CPathT:: QuoteSpaces
 
 スペースが含まれている場合は、このメソッドを呼び出して、パスを引用符で囲みます。
 
@@ -716,7 +716,7 @@ typedef StringType::PXSTR PXSTR;
 void QuoteSpaces();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 詳細については、「 [PathQuoteSpaces](/windows/win32/api/shlwapi/nf-shlwapi-pathquotespacesw)」を参照してください。
 
@@ -750,11 +750,11 @@ BOOL RelativePathTo(
 
 成功した場合は TRUE、失敗した場合は FALSE を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 詳細については、「 [PathRelativePathTo](/windows/win32/api/shlwapi/nf-shlwapi-pathrelativepathtow)」を参照してください。
 
-##  <a name="removeargs"></a>  CPathT::RemoveArgs
+##  <a name="removeargs"></a>CPathT:: RemoveArgs
 
 パスからコマンドライン引数を削除するには、このメソッドを呼び出します。
 
@@ -762,11 +762,11 @@ BOOL RelativePathTo(
 void RemoveArgs();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 詳細については、「 [Pathremoveargs](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveargsw)」を参照してください。
 
-##  <a name="removebackslash"></a>  CPathT::RemoveBackslash
+##  <a name="removebackslash"></a>CPathT:: RemoveBackslash ラッシュ
 
 パスから末尾の円記号を削除するには、このメソッドを呼び出します。
 
@@ -774,11 +774,11 @@ void RemoveArgs();
 void RemoveBackslash();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 詳細については、「 [Pathremovebackslash ラッシュ](/windows/win32/api/shlwapi/nf-shlwapi-pathremovebackslashw)」を参照してください。
 
-##  <a name="removeblanks"></a>  CPathT::RemoveBlanks
+##  <a name="removeblanks"></a>CPathT:: RemoveBlanks
 
 パスから先頭と末尾の空白をすべて削除するには、このメソッドを呼び出します。
 
@@ -786,11 +786,11 @@ void RemoveBackslash();
 void RemoveBlanks();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 詳細については、「 [Pathremoveblanks](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveblanksw)」を参照してください。
 
-##  <a name="removeextension"></a>  CPathT::RemoveExtension
+##  <a name="removeextension"></a>CPathT:: RemoveExtension
 
 パスからファイル拡張子を削除するには、このメソッドを呼び出します (存在する場合)。
 
@@ -798,11 +798,11 @@ void RemoveBlanks();
 void RemoveExtension();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 詳細については、「 [Pathremoveextension](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveextensionw)」を参照してください。
 
-##  <a name="removefilespec"></a>  CPathT::RemoveFileSpec
+##  <a name="removefilespec"></a>CPathT:: RemoveFileSpec
 
 パスの末尾にあるファイル名と円記号を削除するには、このメソッドを呼び出します。
 
@@ -814,11 +814,11 @@ BOOL RemoveFileSpec();
 
 成功した場合は TRUE、失敗した場合は FALSE を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 詳細については、「 [Pathremovefilespec](/windows/win32/api/shlwapi/nf-shlwapi-pathremovefilespecw)」を参照してください。
 
-##  <a name="renameextension"></a>  CPathT::RenameExtension
+##  <a name="renameextension"></a>CPathT:: RenameExtension
 
 パスのファイル名拡張子を新しい拡張子に置き換えるには、このメソッドを呼び出します。 ファイル名に拡張子が含まれていない場合は、パスの末尾に拡張子が付けられます。
 
@@ -835,7 +835,7 @@ BOOL RenameExtension(PCXSTR pszExtension);
 
 成功した場合は TRUE、失敗した場合は FALSE を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 詳細については、「 [Pathrenameextension](/windows/win32/api/shlwapi/nf-shlwapi-pathrenameextensionw)」を参照してください。
 
@@ -851,7 +851,7 @@ int SkipRoot() const;
 
 ルート (ドライブ文字または UNC サーバー/共有) の後にあるサブパスの先頭の位置を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 詳細については、「 [PathSkipRoot](/windows/win32/api/shlwapi/nf-shlwapi-pathskiprootw)」を参照してください。
 
@@ -863,7 +863,7 @@ int SkipRoot() const;
 void StripPath();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 詳細については、「 [Pathの Ppath](/windows/win32/api/shlwapi/nf-shlwapi-pathstrippathw)」を参照してください。
 
@@ -879,7 +879,7 @@ BOOL StripToRoot();
 
 有効なドライブ文字がパスで見つかった場合は TRUE、それ以外の場合は FALSE を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 詳細については、「 [Pathstriptoroot](/windows/win32/api/shlwapi/nf-shlwapi-pathstriptorootw)」を参照してください。
 
@@ -891,7 +891,7 @@ BOOL StripToRoot();
 void UnquoteSpaces();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 詳細については、「 [PathUnquoteSpaces](/windows/win32/api/shlwapi/nf-shlwapi-pathunquotespacesw)」を参照してください。
 
@@ -903,9 +903,9 @@ void UnquoteSpaces();
 typedef StringType::XCHAR XCHAR;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
-`StringType`は、のテンプレートパラメーター `CPathT`です。
+`StringType` は、`CPathT` するテンプレートパラメーターです。
 
 ## <a name="see-also"></a>関連項目
 
