@@ -3,26 +3,26 @@ title: デスクトップアプリケーション (ビジュアルC++)
 ms.date: 07/28/2019
 ms.assetid: a020b534-293c-44e2-aa48-516c43ddeb8f
 ms.topic: overview
-ms.openlocfilehash: 91fcc596a4c30e3fa74043c846eda6f06b666f2c
-ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
+ms.openlocfilehash: 98909097cf791d55f5971a89643839e07b0c60d1
+ms.sourcegitcommit: ea9d78dbb93bf3f8841dde93dbc12bd66f6f32ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274722"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72778507"
 ---
 # <a name="desktop-applications-visual-c"></a>デスクトップアプリケーション (ビジュアルC++)
 
-C++の*デスクトップアプリケーション*は、Windows api の完全なセットにアクセスできるネイティブアプリケーションであり、ウィンドウまたはシステムコンソールで実行されます。 のC++デスクトップアプリケーションは windows 10 を通じて windows xp で実行できます (ただし、windows xp は正式にはサポートされなくなり、その後に導入された windows api は多数あります)。 
+C++の*デスクトップアプリケーション*は、Windows api の完全なセットにアクセスできるネイティブアプリケーションであり、ウィンドウまたはシステムコンソールで実行されます。 のC++デスクトップアプリケーションは windows 10 を通じて windows xp で実行できます (ただし、windows xp は正式にはサポートされなくなり、その後に導入された windows api は多数あります)。
 
-デスクトップアプリケーションは、Windows 10 を実行する Pc 上でも、XBox、Windows Phone、Surface Hub、およびその他のデバイスでも実行できるユニバーサル Windows プラットフォーム (UWP) アプリとは異なります。 デスクトップの詳細については、UWP アプリケーション、「[テクノロジを選択する](/windows/win32/choose-your-technology)」を参照してください。
+デスクトップアプリケーションは、Windows 10 を実行する Pc 上でも、XBox、Windows Phone、Surface Hub、およびその他のデバイスでも実行できるユニバーサル Windows プラットフォーム (UWP) アプリとは異なります。 デスクトップと UWP アプリケーションの詳細については、「[テクノロジを選択する](/windows/win32/choose-your-technology)」を参照してください。
 
-### <a name="desktop-bridge"></a>デスクトップブリッジ
+## <a name="desktop-bridge"></a>デスクトップブリッジ
 
 Windows 10 では、既存のデスクトップアプリケーションまたは COM オブジェクトを UWP アプリとしてパッケージ化し、タッチなどの UWP 機能を追加したり、最新の Windows API セットから Api を呼び出したりすることができます。 また、UWP アプリを Visual Studio のデスクトップソリューションに追加し、1つのパッケージにまとめてパッケージ化し、Windows Api を使用してそれらの間で通信を行うこともできます。
 
 Visual Studio 2017 バージョン15.4 以降では、Windows アプリケーションパッケージプロジェクトを作成して、既存のデスクトップアプリケーションをパッケージ化する作業を大幅に簡略化できます。 デスクトップアプリケーションで使用するレジストリ呼び出しまたは Api に関していくつかの制限が適用されますが、多くの場合、アプリケーションパッケージで実行中に同様の機能を実現する代替コードパスを作成できます。 詳細については、[デスクトップ ブリッジ](/windows/uwp/porting/desktop-to-uwp-root)に関するページをご覧ください。
 
-### <a name="terminology"></a>用語
+## <a name="terminology"></a>用語
 
 - *Win32*アプリケーションは、の windows デスクトップアプリケーションでC++あり、ネイティブな[Windows C api と COM api、またはその両方、または COM api](/windows/win32/apiindex/windows-api-list)と標準ライブラリ api、およびサードパーティのライブラリを使用できます。 ウィンドウで実行される Win32 アプリケーションでは、開発者が Windows プロシージャ関数内で Windows メッセージを明示的に操作する必要があります。 名前にかかわらず、Win32 アプリケーションは、32ビット (x86) または64ビット (x64) のバイナリとしてコンパイルできます。 Visual Studio IDE では、x86 と Win32 という用語は同義です。
 
@@ -52,7 +52,7 @@ Visual Studio 2017 バージョン15.4 以降では、Windows アプリケーシ
 |Title|説明|
 |-----------|-----------------|
 |[Windows 開発](/windows/win32/index)|Windows API と COM に関する情報が含まれています (一部の Windows API とサードパーティ製 DLL は、COM オブジェクトとして実装されています)。|
-|[HiloWindows C++ 7 用アプリケーションの開発](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx)|手荷物の受け取り場所に基づくユーザー インターフェイスを作成するために、Windows Animation と Direct2D を使用するリッチ クライアントの Windows デスクトップ アプリケーションを作成する方法について説明します。  このチュートリアルは、Windows 7 以降では更新されていませんが、Win32 プログラミングについて詳しく説明しています。|
+|[Hilo: Windows 7 対応 C++ アプリケーションの開発](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx)|手荷物の受け取り場所に基づくユーザー インターフェイスを作成するために、Windows Animation と Direct2D を使用するリッチ クライアントの Windows デスクトップ アプリケーションを作成する方法について説明します。  このチュートリアルは、Windows 7 以降では更新されていませんが、Win32 プログラミングについて詳しく説明しています。|
 |[C++ でプログラミングする Windows の概要](overview-of-windows-programming-in-cpp.md)|でC++の Windows デスクトッププログラミングの主な機能について説明します。|
 
 ## <a name="see-also"></a>関連項目
