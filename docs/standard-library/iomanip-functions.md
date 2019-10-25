@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::setiosflags [C++]
 - std::setprecision [C++]
 - std::setw [C++]
-ms.openlocfilehash: 09bb043c40774b102dee023773349223a2fbb4a9
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 995ad9ae21d7f00a74a912436d599dfead2c9ebb
+ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449227"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72890147"
 ---
 # <a name="ltiomanipgt-functions"></a>&lt;iomanip&gt; 関数
 
@@ -48,20 +48,20 @@ ms.locfileid: "68449227"
 
 ```cpp
 template <class Money>
-T7 get_money(Money& _Amount, bool _Intl);
+T7 get_money(Money& amount, bool use_intl);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*金額 (_c)* \
+\*量*
 抽出した通貨値。
 
-*マイ国際*\
-**True**の場合は、国際対応形式を使用します。 既定値は **false**です。
+*use_intl*\
+**True**の場合は、国際対応形式を使用します。 既定値は **false** です。
 
 ### <a name="remarks"></a>Remarks
 
-マニピュレーターは`str`、ストリームから抽出されたときに、に関連付けら`formatted input function`れ `str`ているロケールファ`get`セット`money_get`のメンバー関数を呼び出すとして動作するオブジェクトを返します。国際対応形式を示します。 成功した場合、この呼び出しは抽出された通貨値の金額で格納されます *(_c)* 。 その後、マニピュレーターが `str` を返します。
+マニピュレーターは、ストリーム `str`から抽出されたときに、 *use_intl*を使用して国際形式を示す、`str`に関連付けられているロケールファ `money_get` セットのメンバー関数 `get` を呼び出す `formatted input function` として動作するオブジェクトを返します. 成功した場合は、抽出された通貨値の*金額*がに格納されます。 その後、マニピュレーターが `str` を返します。
 
 `Money` は `long double` 型であるか、`str` と同じ要素および特徴パラメーターを持つ `basic_string` のインスタンス化である必要があります。
 
@@ -71,15 +71,15 @@ T7 get_money(Money& _Amount, bool _Intl);
 
 ```cpp
 template <class Elem>
-T10 put_time(struct tm *_Tptr, const Elem *_Fmt);
+T10 put_time(struct tm *time_ptr, const Elem *time_format);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*_Tptr*\
+*time_ptr*\
 時間構造体の形式の時刻。
 
-*_Fmt*\
+*time_format*\
 時刻値を取得するために使用する目的の形式。
 
 ### <a name="remarks"></a>Remarks
@@ -92,24 +92,24 @@ T10 put_time(struct tm *_Tptr, const Elem *_Fmt);
 
 ```cpp
 template <class Money>
-T8 put_money(const Money& _Amount, bool _Intl);
+T8 put_money(const Money& amount, bool use_intl);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*金額 (_c)* \
+\*量*
 ストリームに挿入する金額。
 
-*マイ国際*\
+*use_intl*\
 マニピュレーターで国際化形式を使用する必要がある場合は**true**に設定し、そうでない場合は**false**に設定します。
 
 ### <a name="return-value"></a>戻り値
 
-`str` を返します。
+`str`を返します。
 
 ### <a name="remarks"></a>Remarks
 
-マニピュレーターは、ストリーム `str` に挿入されたときに、`str` に関連付けられているロケール ファセット `money_put` のメンバー関数 `put` を呼び出す書式付き出力関数として動作するオブジェクトを返します。 成功した場合、この`amount`呼び出しは、*` to indicate international format and `(*)`, as the fill element. The manipulator then returns `を使用して適切な形式で挿入されます。
+マニピュレーターは、ストリーム `str` に挿入されたときに、`str` に関連付けられているロケール ファセット `money_put` のメンバー関数 `put` を呼び出す書式付き出力関数として動作するオブジェクトを返します。 成功した場合、`amount` 呼び出しは use_intl を使用して適切に書式設定され、を使用して国際形式と `str.fill()`を塗りつぶし要素として示します。 その後、マニピュレーターが `str` を返します。
 
 `Money` は `long double` 型であるか、`str` と同じ要素および特徴パラメーターを持つ `basic_string` のインスタンス化である必要があります。
 
@@ -119,20 +119,20 @@ T8 put_money(const Money& _Amount, bool _Intl);
 
 ```cpp
 template <class Elem>
-T10 put_time(struct tm* _Tptr, const Elem* _Fmt);
+T10 put_time(struct tm* time_ptr, const Elem* time_format);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*_Tptr*\
+*time_ptr*\
 時間構造体で提供される、ストリームに書き込む時刻値。
 
-*_Fmt*\
+*time_format*\
 時刻値を書き込むための目的の形式。
 
 ### <a name="remarks"></a>Remarks
 
-マニピュレーターは、ストリーム `str` に挿入されるときに、`formatted output function` として動作するオブジェクトを返します。 出力関数は、`str` に関連付けられているロケール ファセット `time_put` のメンバー関数 `put` を呼び出します。 Output 関数は、 *_Tptr*を使用して時間構造を示し、 *_Fmt*は null で終わる書式文字列の先頭を示します。 成功した場合、この呼び出しは、書式文字列からのリテラル テキストと時間構造体からの変換された値を挿入します。 その後、マニピュレーターが `str` を返します。
+マニピュレーターは、ストリーム `str` に挿入されるときに、`formatted output function` として動作するオブジェクトを返します。 出力関数は、`str` に関連付けられているロケール ファセット `time_put` のメンバー関数 `put` を呼び出します。 Output 関数は、 *time_ptr*を使用して時間構造を示し、 *time_format*は null で終わる書式文字列の先頭を示します。 成功した場合、この呼び出しは、書式文字列からのリテラル テキストと時間構造体からの変換された値を挿入します。 その後、マニピュレーターが `str` を返します。
 
 ## <a name="quoted"></a>  quoted
 
@@ -147,13 +147,13 @@ quoted(const char* str, char delimiter, char escape) // or wide versions
 
 ### <a name="parameters"></a>パラメーター
 
-*引数*\
-Std:: string、char\*、string リテラル、または未加工の文字列リテラル、またはこれらのいずれかのワイドバージョン (std:: wstring、wchar_t\*など)。
+*str* \
+Std:: string、char\*、文字列リテラル、または未加工の文字列リテラル、またはこれらのいずれかのワイドバージョン (std:: wstring、wchar_t\*など)。
 
 *区切り記号*\
 文字列の先頭と末尾の区切り記号として使用するユーザー指定の文字またはワイド文字。
 
-*付ける*\
+*エスケープ*\
 文字列内のエスケープ シーケンスのエスケープ文字として使用する、ユーザー指定の文字またはワイド文字。
 
 ### <a name="remarks"></a>Remarks
@@ -306,17 +306,17 @@ Press Enter to exit
 指定したフラグをクリアします。
 
 ```cpp
-T1 resetiosflags(ios_base::fmtflags Mask);
+T1 resetiosflags(ios_base::fmtflags mask);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*隠す*\
+*マスク*\
 オフにするフラグ。
 
 ### <a name="return-value"></a>戻り値
 
-マニピュレーターは、ストリーム`str`に抽出または挿入されるときに**str**を呼び出すオブジェクトを返します。 [setf](../standard-library/ios-base-class.md#setf)( `ios_base::` [fmtflags](../standard-library/ios-base-class.md#fmtflags)、_ *Mask*)、を返し`str`ます。
+マニピュレーターは、ストリーム `str`から抽出または挿入されると、`str.`[setf](../standard-library/ios-base-class.md#setf)`(ios_base::`[fmtflags](../standard-library/ios-base-class.md#fmtflags)`, mask)`を呼び出し、`str`を返すオブジェクトを返します。
 
 ### <a name="example"></a>例
 
@@ -327,25 +327,25 @@ T1 resetiosflags(ios_base::fmtflags Mask);
 整数の基数を設定します。
 
 ```cpp
-T3 setbase(int _Base);
+T3 setbase(int base);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*基本 (_c)* \
+*base*\
 基数。
 
 ### <a name="return-value"></a>戻り値
 
-マニピュレーターは、ストリーム`str`に抽出または挿入されるときに**str**を呼び出すオブジェクトを返します。 `setf`( **mask**、 [ios_base:: basefield](../standard-library/ios-base-class.md#fmtflags))、を返し`str`ます。 ここで`mask`は、は次のように決定されます。
+マニピュレーターは、ストリーム `str`から抽出または挿入されるときに、`str.setf(mask, `[ios_base:: basefield](../standard-library/ios-base-class.md#fmtflags)`)`を呼び出し、`str`を返すオブジェクトを返します。 ここでは、`mask` は次のように決定されます。
 
-- _ *Base*が8の場合、 `mask`は`ios_base::` [10 月](../standard-library/ios-functions.md#oct)になります。
+- *Base*が8の場合、`mask` は[10 月](../standard-library/ios-functions.md#oct)`ios_base::`ます。
 
-- _ *Base* が 10 の場合、mask は `ios_base::`[dec](../standard-library/ios-functions.md#dec) になります。
+- *Base*が10の場合、mask は[dec](../standard-library/ios-functions.md#dec)`ios_base::`ます。
 
-- _ *Base*が16の場合、 `mask`は`ios_base::` [16 進数](../standard-library/ios-functions.md#hex)です。
+- *Base*が16の場合、`mask` は[16 進数](../standard-library/ios-functions.md#hex)`ios_base::`ます。
 
-- _ *Base* がその他の値の場合、mask は `ios_base::`[fmtflags](../standard-library/ios-base-class.md#fmtflags)(0) になります。
+- *Base*がその他の値の場合、mask は[fmtflags](../standard-library/ios-base-class.md#fmtflags)`(0)``ios_base::`ます。
 
 ### <a name="example"></a>例
 
@@ -362,12 +362,12 @@ T4 setfill(Elem Ch);
 
 ### <a name="parameters"></a>パラメーター
 
-*ハーフ*\
+*Ch* \
 右揃えの表示でスペースを埋めるために使用する文字。
 
 ### <a name="return-value"></a>戻り値
 
-このテンプレートマニピュレーターは、ストリーム`str`に抽出または挿入されるときに**str**を呼び出すオブジェクトを返します。 [塗りつぶし](../standard-library/basic-ios-class.md#fill)(`Ch`) は、を返し`str`ます。 型`Elem`は、ストリーム`str`の要素型と同じである必要があります。
+テンプレートマニピュレーターは、ストリーム `str`から抽出または挿入されるときに、`str.`[fill](../standard-library/basic-ios-class.md#fill)`(Ch)`を呼び出し、`str`を返すオブジェクトを返します。 `Elem` 型は、ストリーム `str`の要素型と同じである必要があります。
 
 ### <a name="example"></a>例
 
@@ -378,17 +378,17 @@ T4 setfill(Elem Ch);
 指定したフラグを設定します。
 
 ```cpp
-T2 setiosflags(ios_base::fmtflags Mask);
+T2 setiosflags(ios_base::fmtflags mask);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*隠す*\
+*マスク*\
 設定するフラグ。
 
 ### <a name="return-value"></a>戻り値
 
-マニピュレーターは、ストリーム`str`に抽出または挿入されるときに**str**を呼び出すオブジェクトを返します。 [setf](../standard-library/ios-base-class.md#setf)(_ *Mask*)、を返し`str`ます。
+マニピュレーターは、ストリーム `str`から抽出または挿入されるときに、`str.`[setf](../standard-library/ios-base-class.md#setf)`(mask)`を呼び出し、`str`を返すオブジェクトを返します。
 
 ### <a name="example"></a>例
 
@@ -409,7 +409,7 @@ T5 setprecision(streamsize Prec);
 
 ### <a name="return-value"></a>戻り値
 
-マニピュレーターは、ストリーム`str`に抽出または挿入されるときに**str**を呼び出すオブジェクトを返します。 [有効桁数](../standard-library/ios-base-class.md#precision)(`Prec`) は、を返し`str`ます。
+マニピュレーターは、ストリーム `str`から抽出または挿入されるときに `str.`[精度](../standard-library/ios-base-class.md#precision)`(Prec)`を呼び出し、`str`を返すオブジェクトを返します。
 
 ### <a name="example"></a>例
 
@@ -425,12 +425,12 @@ T6 setw(streamsize Wide);
 
 ### <a name="parameters"></a>パラメーター
 
-*変動*\
+*ワイド*\
 表示フィールドの幅です。
 
 ### <a name="return-value"></a>戻り値
 
-マニピュレーターは、ストリーム`str`に抽出または挿入されるときに**str**を呼び出すオブジェクトを返します。 [幅](../standard-library/ios-base-class.md#width)(_ *Wide*)、はを`str`返します。
+マニピュレーターは、ストリーム `str`から抽出または挿入されるときに `str.`[width](../standard-library/ios-base-class.md#width)`(Wide)`を呼び出し、`str`を返すオブジェクトを返します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -653,4 +653,4 @@ l5 = 65536
 
 ## <a name="see-also"></a>関連項目
 
-[\<iomanip>](../standard-library/iomanip.md)
+[\<iomanip >](../standard-library/iomanip.md)

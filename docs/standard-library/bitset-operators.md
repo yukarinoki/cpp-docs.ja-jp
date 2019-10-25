@@ -12,12 +12,12 @@ helpviewer_keywords:
 - std::operator&amp; (bitset)
 - std::operator&gt;&gt; (bitset)
 - std::operator&lt;&lt; (bitset)
-ms.openlocfilehash: 30367e003d2dad95e870854098e7fcae34f50efa
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: cd1dfc035fde06c4be0f90e1bd11b231d64ab811
+ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243334"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72890139"
 ---
 # <a name="ltbitsetgt-operators"></a>&lt;bitset&gt; 演算子
 
@@ -38,12 +38,12 @@ operator&(
 *左*\
 それぞれの要素が `AND` でビットごとに結合される 2 つのビットセットのうちの最初。
 
-*そうです*\
+*右*\
 それぞれの要素が `AND` でビットごとに結合される 2 つの valarray のうちの 2 つ目。
 
 ### <a name="return-value"></a>戻り値
 
-要素が実行した結果、ビットセット、`AND`の対応する要素を操作*左*と*右*します。
+*左右*の対応する要素に対して `AND` 操作を実行した結果*として*得られる要素を持つビットセット。
 
 ### <a name="example"></a>例
 
@@ -73,7 +73,7 @@ bitset 2: 0011
 bitset 3: 0001
 ```
 
-## <a name="op_lt_lt"></a> 演算子&lt;&lt;
+## <a name="op_lt_lt"></a>演算子&lt;&lt;
 
 ビット シーケンスのテキスト表現を出力ストリームに挿入します。
 
@@ -86,18 +86,18 @@ basic_ostream<CharType, Traits>& operator<<(
 
 ### <a name="parameters"></a>パラメーター
 
-*そうです*\
+*右*\
 文字列として出力ストリームに挿入する型 **bitset\<N>** のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-ビット シーケンス内のテキスト表現`ostr`します。
+`ostr`内のビットシーケンスのテキスト表現。
 
 ### <a name="remarks"></a>Remarks
 
-テンプレート関数のオーバー ロード`operator<<`、ビットセットを文字列に変換せずに書き出されます。 このテンプレート関数は、実質的に次の内容を実行します。
+このテンプレート関数は `operator<<`をオーバーロードします。これにより、最初に文字列に変換せずにビットセットを書き出すことができます。 このテンプレート関数は、実質的に次の内容を実行します。
 
-**ostr** << _*右*します。 [to_string](bitset-class.md) <**CharType**、 **Traits**、**アロケーター**\<**CharType**>>)
+`ostr << right.`[to_string](bitset-class.md)`<CharType, Traits, allocator<CharType>>()`
 
 ### <a name="example"></a>例
 
@@ -130,36 +130,34 @@ int main( )
 }
 ```
 
-## <a name="op_gt_gt"></a> 演算子&gt;&gt;
+## <a name="op_gt_gt"></a>演算子&gt;&gt;
 
 ビット文字の文字列をビットセットに読み込みます。
 
 ```
 template <class CharType, class Traits, size_t Bits>
 basic_istream<CharType, Traits>& operator>> (
-    basic_istream<CharType, Traits>&
-_Istr,
-    bitset<N>&
-    right);
+    basic_istream<CharType, Traits>& i_str,
+    bitset<N>& right);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*_Istr*\
+*i_str*\
 ビットセットに挿入する入力ストリームに入力される文字列。
 
-*そうです*\
+*右*\
 入力ストリームからビットを受け取るビットセット。
 
 ### <a name="return-value"></a>戻り値
 
-テンプレート関数は、文字列を返します *_Istr*します。
+このテンプレート関数は、文字列*i_str*を返します。
 
 ### <a name="remarks"></a>Remarks
 
-テンプレート関数のオーバー ロード`operator>>`ビットセット _ に格納する*右*値ビットセット (`str`) ここで、`str`型のオブジェクトは、 [basic_string](basic-string-class.md)  < **CharType**、 **Traits**、**アロケーター** \< **CharType**>>  **&** から抽出された *_Istr*します。
+このテンプレート関数は、*ビットセットに*格納する `operator>>` をオーバーロードします。 `str` は*i_str*から抽出された`< CharType, Traits, allocator< CharType > >&` [basic_string](basic-string-class.md)型のオブジェクト `bitset(str)`ます。
 
-要素を抽出するテンプレート関数は、 *_Istr*までビットセットに挿入するとします。
+このテンプレート関数は、 *i_str*から要素を抽出し、次のようになるまでビットセットに挿入します。
 
 - すべてのビット要素が入力ストリームから抽出され、ビットセットに格納されています。
 
@@ -216,7 +214,7 @@ int main()
 }
 ```
 
-## <a name="op_xor"></a> 演算子 ^
+## <a name="op_xor"></a>^ 演算子
 
 2 つのビットセット間でビットごとの `EXCLUSIVE-OR` を実行します。
 
@@ -233,12 +231,12 @@ operator^(
 *左*\
 それぞれの要素が `EXCLUSIVE-OR` でビットごとに結合される 2 つのビットセットのうちの最初。
 
-*そうです*\
+*右*\
 それぞれの要素が `EXCLUSIVE-OR` でビットごとに結合される 2 つの valarray のうちの 2 つ目。
 
 ### <a name="return-value"></a>戻り値
 
-要素が実行した結果、ビットセット、`EXCLUSIVE-OR`の対応する要素を操作*左*と*右*します。
+*左右*の対応する要素に対して `EXCLUSIVE-OR` 操作を実行した結果*として*得られる要素を持つビットセット。
 
 ### <a name="example"></a>例
 
@@ -268,7 +266,7 @@ bitset 2: 0011
 bitset 3: 0110
 ```
 
-## <a name="op_or"></a> 演算子&#124;
+## <a name="op_or"></a>operator&#124;
 
 2 つのビットセット間でビットごとの `OR` を実行します。
 
@@ -285,12 +283,12 @@ operator|(
 *左*\
 それぞれの要素が `OR` でビットごとに結合される 2 つのビットセットのうちの最初。
 
-*そうです*\
+*右*\
 それぞれの要素が `OR` でビットごとに結合される 2 つの valarray のうちの 2 つ目。
 
 ### <a name="return-value"></a>戻り値
 
-要素が実行した結果、ビットセット、`OR`の対応する要素を操作*左*と*右*します。
+*左右*の対応する要素に対して `OR` 操作を実行した結果*として*得られる要素を持つビットセット。
 
 ### <a name="example"></a>例
 
