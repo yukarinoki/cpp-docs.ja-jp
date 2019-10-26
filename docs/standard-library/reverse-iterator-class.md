@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::reverse_iterator [C++], base
 - std::reverse_iterator [C++], operator_star
 ms.assetid: c0b34d04-ae9a-4999-9aff-28b313897ffa
-ms.openlocfilehash: aadc5cffd6f88de175ff04f50d6572e38ba05533
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 99fe323177c0aff29f5f01e6835bd800616e2e16
+ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72686582"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72889980"
 ---
 # <a name="reverse_iterator-class"></a>reverse_iterator クラス
 
@@ -42,13 +42,13 @@ RandomIterator は、逆方向に動作するように調整される反復子�
 
 ## <a name="remarks"></a>Remarks
 
-既存の C++ 標準ライブラリのコンテナーは、`reverse_iterator` 型および `const_reverse_iterator` 型も定義し、反転反復子を返すメンバー関数 `rbegin` および `rend` を備えています。 これらの反復子には、上書きセマンティクスがあります。 @No__t_0 アダプターは、挿入セマンティクスを提供し、ストリームでも使用できるため、この機能を補完します。
+既存の C++ 標準ライブラリのコンテナーは、`reverse_iterator` 型および `const_reverse_iterator` 型も定義し、反転反復子を返すメンバー関数 `rbegin` および `rend` を備えています。 これらの反復子には、上書きセマンティクスがあります。 `reverse_iterator` アダプターは、挿入セマンティクスを提供し、ストリームでも使用できるため、この機能を補完します。
 
-双方向反復子を必要とする `reverse_iterator` は、ランダムアクセス反復子でのみ使用できるメンバー関数 `operator+=`、`operator+`、`operator-=`、`operator-`、または `operator[]` を呼び出すことはできません。
+双方向反復子を必要とする `reverse_iterator` は、ランダムアクセス反復子でのみ使用できるメンバー関数 `operator+=`、`operator+`、`operator-=`、`operator-`、または `operator[]`を呼び出すことはできません。
 
-反復子の範囲は [*first*, *last*) です。左の角かっこは、*最初*の要素を含むことを示し、右側のかっこは*最後*の要素が含まれているかどうかを示します。 同じ要素が逆順シーケンス [ **rev**  - *first*, **rev**  - *last*) に含まれるため、*最後*の要素がシーケンス内の最後の要素である場合、最初の要素の**リビジョン** - 反転されたシーケンスの最初のは、0 (*last* -1) を指します。 すべての反転反復子を基になる反復子に関連付ける識別子は、次のとおりです。
+反復子の範囲は [*first*, *last*) です。左の角かっこは、*最初*の要素を含むことを示し、右側のかっこは*最後*の要素が含まれているかどうかを示します。 同じ要素が逆順シーケンス [ **rev** - *first*, **rev** - *last*) に含まれるため、*最後*の要素がシーケンス内の最後の要素である場合、最初の要素の**リビジョン** - 反転されたシーケンスの最初のは、\*(*last* -1) を指します。 すべての反転反復子を基になる反復子に関連付ける識別子は、次のとおりです。
 
-& \* ( **reverse_iterator** ( *i* )) = = & \* ( *i* -1)。
+&\*( **reverse_iterator** ( *i* )) = = &\*( *i* -1)。
 
 実際には、反転シーケンスで reverse_iterator は、元のシーケンスで反復子が参照する要素の 1 つ次の (右側にある) 要素を参照することを意味します。 したがって、反復子がシーケンス (2、4、6、8) で要素 6 を指定する場合、`reverse_iterator` は反転シーケンス (8、6、4、2) の 4 要素を指定します。
 
@@ -109,7 +109,7 @@ RandomIterator base() const;
 
 すべての反転反復子を基になる反復子に関連付ける識別子は、次のとおりです。
 
-& \* (`reverse_iterator` ( *i* )) = = & \* ( *i* -1)。
+&\*(`reverse_iterator` ( *i* )) = = &\*( *i* -1)。
 
 実際には、反転シーケンスで `reverse_iterator` は、元のシーケンスで反復子が参照する要素の 1 つ次の (右側にある) 要素を参照することを意味します。 したがって、反復子がシーケンス (2、4、6、8) で要素 6 を指定する場合、`reverse_iterator` は反転シーケンス (8、6、4、2) の 4 要素を指定します。
 
@@ -196,7 +196,7 @@ typedef RandomIterator iterator_type;
 
 `iterator_type` を宣言して使用する方法の例については、[reverse_iterator::base](#base) を参照してください。
 
-## <a name="op_star"></a>reverse_iterator:: operator \*
+## <a name="op_star"></a>reverse_iterator:: operator\*
 
 reverse_iterator が指す要素を返します。
 
@@ -644,7 +644,7 @@ reverse_iterator<RandomIterator>& operator-=(difference_type Off);
 
 このメンバー関数を使用できるのは、`reverse_iterator` がランダムアクセス反復子の要件を満たす場合のみです。
 
-演算子は **current** + _ *Off* を評価します。 その後、 **\* this** を返します。
+演算子は、**現在の** + を評価し*てから、* **\*** を返します。
 
 ### <a name="example"></a>例
 
@@ -945,7 +945,7 @@ typedef typename iterator_traits<RandomIterator>::reference reference;
 
 ### <a name="example"></a>例
 
-@No__t_4 の宣言方法や使用方法の例については、「 [reverse_iterator:: operator&#91; ](#op_at) 」または「 [reverse_iterator:: operator *](#op_star) 」を参照してください。
+`reference`の宣言方法や使用方法の例については、「 [reverse_iterator:: operator&#91; ](#op_at) 」または「 [reverse_iterator:: operator *](#op_star) 」を参照してください。
 
 ## <a name="reverse_iterator"></a>  reverse_iterator::reverse_iterator
 
@@ -972,7 +972,7 @@ reverse_iterator(const reverse_iterator<Type>& right);
 
 すべての反転反復子を基になる反復子に関連付ける識別子は、次のとおりです。
 
-& \* (`reverse_iterator` ( *i* )) = = & \* ( *i* -1)。
+&\*(`reverse_iterator` ( *i* )) = = &\*( *i* -1)。
 
 実際には、反転シーケンスで reverse_iterator は、元のシーケンスで反復子が参照する要素の 1 つ次の (右側にある) 要素を参照することを意味します。 したがって、反復子がシーケンス (2、4、6、8) で要素 6 を指定する場合、`reverse_iterator` は反転シーケンス (8、6、4、2) の 4 要素を指定します。
 
