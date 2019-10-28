@@ -86,12 +86,12 @@ helpviewer_keywords:
 - stdext::hash_multiset::upper_bound
 - stdext::hash_multiset::value_comp
 ms.assetid: 0580397a-a76e-40ad-aea2-5c6f3a9d0a21
-ms.openlocfilehash: 6b3a57d110f2416f5539399ed087e0acbb156991
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 7881b1d6775206fbea40c3ba4b15572a6d4b3580
+ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689585"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72890081"
 ---
 # <a name="hash_multiset-class"></a>hash_multiset クラス
 
@@ -113,7 +113,7 @@ class hash_multiset
 hash_multiset に格納する要素のデータ型。
 
 *特徴*\
-2つの関数オブジェクトを含む型。2つの要素の値を並べ替えキーとして比較してそれらの相対順序を決定できる二項述語と、要素のキー値を符号なしにマップする単項述語であるハッシュ関数の2つの関数オブジェクトが含まれます。`size_t` 型の整数。 この引数は省略可能であり、既定値は `hash_compare<Key, less<Key> >` です。
+2つの関数オブジェクトを含む型。2つの要素の値を並べ替えキーとして比較してそれらの相対順序を決定できる二項述語と、要素のキー値を符号なしにマップする単項述語であるハッシュ関数の2つの関数オブジェクトが含まれます。`size_t`型の整数。 この引数は省略可能であり、既定値は `hash_compare<Key, less<Key> >` です。
 
 *アロケーター* \
 hash_multiset のメモリの割り当てと解放に関する詳細をカプセル化する、格納されたアロケーター オブジェクトを表す型。 この引数は省略可能であり、既定値は `allocator<Key>` です。
@@ -138,7 +138,7 @@ hash_multiset は次のとおりです。
 
 値とキーを関連付ける条件をアプリケーションが満たしている場合、hash_multiset は最適な連想コンテナーとなっている必要があります。 hash_multiset の要素は複数の場合があり、それ自体の並べ替えキーとして機能する場合があるため、キーは一意ではありません。 この種類の構造体のモデルは、単語が複数回出現する可能性がある単語の順序付きのリストです。 単語が複数回出現することが許可されていない場合は、hash_set が適切なコンテナー構造体です。 一意の定義が値として一意のキーワードのリストにアタッチされている場合は、hash_map がこのデータを格納するのに適切な構造体です。 定義が一意でない場合は、hash_multimap が最適なコンテナーです。
 
-hash_multimap は、格納されているハッシュ特徴 (traits) オブジェクト ([value_compare 型](#value_compare)) を呼び出すことによって、制御するシーケンスを並べ替えます。 格納されているこのオブジェクトには、メンバー関数 [key_comp](#key_comp) を呼び出すことによってアクセスできます。 このような関数オブジェクトは、`hash_compare<Key, less<Key> >` クラスのオブジェクトと同じように動作する必要があります。 具体的には、`Key` 型のすべての値の*キー*について、`Trait(Key)` 呼び出しは `size_t` 型の値の分布を生成します。
+hash_multimap は、格納されているハッシュ特徴 (traits) オブジェクト ([value_compare 型](#value_compare)) を呼び出すことによって、制御するシーケンスを並べ替えます。 格納されているこのオブジェクトには、メンバー関数 [key_comp](#key_comp) を呼び出すことによってアクセスできます。 このような関数オブジェクトは、`hash_compare<Key, less<Key> >`クラスのオブジェクトと同じように動作する必要があります。 具体的には、`Key`型のすべての値の*キー*について、`Trait(Key)` 呼び出しは `size_t`型の値の分布を生成します。
 
 通常、要素は、この順序を確立するために小なり比較だけを実行できる必要があります。これにより、2 つの要素が指定されたときに、それらの要素が等しいか (どちらか一方が小さくはない)、または一方が他方より小さいかを判断できます。 この結果、等価でない複数の要素間で順序が付けられます。 テクニカル ノートでは、比較関数は、数学上の標準的な意味で厳密弱順序を発生させる二項述語であると示されています。 二項述語 *f*( *x*, *y*) は、2 つの引数オブジェクト (x および y) と戻り値 (true または false) を持つ関数オブジェクトです。 hash_multiset に適用される順序付けは、二項述語が非再帰、反対称、推移的であり、等価性が推移的である (2 つのオブジェクト (x と y) が、*f*( *x*,*y*) と *f*( *y*, *x*) の両方が false の場合に等価になるように定義されている) 場合、厳密弱順序になります。 2 つのキーの等値に関する条件が等価性の条件よりも厳しく、優先される場合、順序付けは完全な順序付け (すべての要素が相互の値に基づいて並べ替えられる) となり、一致するそれぞれのキーを識別するのが難しくなります。
 
@@ -157,10 +157,10 @@ hash_multiset クラスに用意されている反復子は双方向反復子で
 |型名|説明|
 |-|-|
 |[allocator_type](#allocator_type)|`allocator` オブジェクトの `hash_multiset` クラスを表す型。|
-|[const_iterator](#const_iterator)|@No__t_1 内の**const**要素を読み取ることができる双方向反復子を提供する型。|
-|[const_pointer](#const_pointer)|@No__t_1 内の**const**要素へのポインターを提供する型。|
+|[const_iterator](#const_iterator)|`hash_multiset`内の**const**要素を読み取ることができる双方向反復子を提供する型。|
+|[const_pointer](#const_pointer)|`hash_multiset`内の**const**要素へのポインターを提供する型。|
 |[const_reference](#const_reference)|読み取りと**const**操作の実行のために `hash_multiset` に格納されている**const**要素への参照を提供する型。|
-|[const_reverse_iterator](#const_reverse_iterator)|@No__t_1 内の任意の**const**要素を読み取ることができる双方向反復子を提供する型。|
+|[const_reverse_iterator](#const_reverse_iterator)|`hash_multiset`内の任意の**const**要素を読み取ることができる双方向反復子を提供する型。|
 |[difference_type](#difference_type)|同じ `hash_multiset` 内の要素をアドレス指定する 2 つの反復子の差を提供する符号付き整数型|
 |[Iterator](#iterator)|`hash_multiset` 内の任意の要素を読み取り、または変更できる双方向反復子を提供する型。|
 |[key_compare](#key_compare)|2 つの並べ替えキーを比較して、`hash_multiset` 内の 2 つの要素の相対順序を決定できる関数オブジェクトを提供する型。|
@@ -248,7 +248,7 @@ hash_multiset 内の最初の要素、または空の hash_multiset の次の位
 
 ### <a name="remarks"></a>Remarks
 
-@No__t_0 の戻り値が `const_iterator` に割り当てられている場合、hash_multiset オブジェクト内の要素は変更できません。 @No__t_0 の戻り値が `iterator` に割り当てられている場合は、hash_multiset オブジェクトの要素を変更できます。
+`begin` の戻り値が `const_iterator`に割り当てられている場合、hash_multiset オブジェクト内の要素は変更できません。 `begin` の戻り値が `iterator`に割り当てられている場合は、hash_multiset オブジェクトの要素を変更できます。
 
 ### <a name="example"></a>例
 
@@ -714,7 +714,7 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::di
 
 `difference_type` は、コンテナーの反復子を減算またはインクリメントするときに返される型です。 通常、`difference_type` は、[ `first`, `last`) の範囲内で、反復子 `first` と `last` の間にある要素の数を表すために使用され、`first` が指す要素と、`last` が指す要素の 1 つ前までの範囲の要素を含みます。
 
-@No__t_0 は、入力反復子の要件を満たすすべての反復子に使用できますが、set などの反転可能なコンテナーによってサポートされる双方向反復子のクラスが含まれていることに注意してください。 反復子間の減算は、vector や deque などのランダムアクセスコンテナーによって提供されるランダムアクセス反復子によってのみサポートされます。
+`difference_type` は、入力反復子の要件を満たすすべての反復子に使用できますが、set などの反転可能なコンテナーによってサポートされる双方向反復子のクラスが含まれていることに注意してください。 反復子間の減算は、vector や deque などのランダムアクセスコンテナーによって提供されるランダムアクセス反復子によってのみサポートされます。
 
 ### <a name="example"></a>例
 
@@ -839,16 +839,17 @@ After the emplace insertion, hms3 contains a.
 ```cpp
 template <class ValTy>
 iterator insert(
-    const_iterator _Where,
+    const_iterator where,
     ValTy&& val);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|-|-|
-|*val*|挿入される要素が `hash_multiset` にまだ含まれていない場合、より一般的には、キーが同じ順序付けになる要素がまだ含まれていない場合に、[hash_multiset](../standard-library/hash-multiset-class.md) に挿入される要素の値。|
-|*場所 (_s)*|正しい挿入ポイントの検索を開始する場所 (挿入ポイントがの直後*にある場合*は、対数時間ではなく、償却定数時間で挿入できます)。|
+*val* \
+挿入される要素が `hash_multiset` にまだ含まれていない場合、より一般的には、キーが同じ順序付けになる要素がまだ含まれていない場合に、[hash_multiset](../standard-library/hash-multiset-class.md) に挿入される要素の値。
+
+*\*
+正しい挿入ポイントの検索を開始する場所 (挿入ポイントが*where*の直後にある場合、挿入は、対数時間ではなく償却定数時間で行うことができます)。
 
 ### <a name="return-value"></a>戻り値
 
@@ -856,7 +857,7 @@ iterator insert(
 
 ### <a name="remarks"></a>Remarks
 
-挿入ポイントが *(Where)* の直後にある場合、挿入は対数時間ではなく、償却定数時間で実行できます。
+挿入ポイントが*位置*の直後にある場合、挿入は対数時間ではなく、償却定数時間で実行できます。
 
 ### <a name="example"></a>例
 
@@ -1091,7 +1092,7 @@ The hash_multiset hms1 doesn't have an element with a key less than 40.
 hash_multiset 内の要素または要素範囲を指定した位置から削除するか、指定したキーと一致する要素を削除します。
 
 ```cpp
-iterator erase(iterator _Where);
+iterator erase(iterator where);
 
 iterator erase(iterator first, iterator last);
 
@@ -1100,7 +1101,7 @@ size_type erase(const key_type& key);
 
 ### <a name="parameters"></a>パラメーター
 
-@No__t_1 の*場所 (_c)*
+*\*
 hash_multiset から削除する要素の位置。
 
 *最初*の \
@@ -1232,7 +1233,7 @@ const_iterator find(const Key& key) const;
 
 このメンバー関数は、hash_multiset 内の要素をアドレス指定する反復子を返します。この要素は、並べ替えキーが、小なり比較関係に基づいて順序を誘発する二項述語の下にある引数キーに `equivalent` されます。
 
-@No__t_0 の戻り値が `const_iterator` に割り当てられている場合、hash_multiset オブジェクトを変更することはできません。 @No__t_0 の戻り値が `iterator` に割り当てられている場合は、hash_multiset オブジェクトを変更できます。
+`find` の戻り値が `const_iterator`に割り当てられている場合、hash_multiset オブジェクトを変更することはできません。 `find` の戻り値が `iterator`に割り当てられている場合は、hash_multiset オブジェクトを変更できます。
 
 ### <a name="example"></a>例
 
@@ -1392,33 +1393,42 @@ hash_multiset(
 
 template <class InputIterator>
 hash_multiset(
-    InputIterator First,
-    InputIterator Last);
+    InputIterator first,
+    InputIterator last);
 
 template <class InputIterator>
 hash_multiset(
-    InputIterator First,
-    InputIterator Last,
+    InputIterator first,
+    InputIterator last,
     const Traits& Comp);
 
 template <class InputIterator>
 hash_multiset(
-    InputIterator First,
-    InputIterator Last,
+    InputIterator first,
+    InputIterator last,
     const Traits& Comp,
     const Allocator& Al);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|-|-|
-|*ウムアルクラ*|この `hash_multiset` オブジェクトに使用するストレージ アロケーター クラス。既定では、`Allocator` です。|
-|*コンペティション*|`const Traits` 内の要素の並べ替えに使用される、`hash_multiset` 型の比較関数。既定では `hash_compare` です。|
-|*右*|構築された `hash_multiset` のコピー元となる `hash_multiset`。|
-|*まずは*|コピーする要素範囲内の最初の要素の位置。|
-|*前の*|コピーする要素範囲を超える最初の要素の位置。|
-|*IList*|コピーされる要素を含む initializer_list。|
+*Al* \
+この `hash_multiset` オブジェクトに使用するストレージ アロケーター クラス。既定では、`Allocator` です。
+
+*Comp* \
+`const Traits` 内の要素の並べ替えに使用される、`hash_multiset` 型の比較関数。既定では `hash_compare` です。
+
+*右*\
+構築された `hash_multiset` のコピー元となる `hash_multiset`。
+
+*最初*の \
+コピーする要素範囲内の最初の要素の位置。
+
+*最後*の \
+コピーする要素範囲を超える最初の要素の位置。
+
+*IList* \
+コピーされる要素を含む initializer_list。
 
 ### <a name="remarks"></a>Remarks
 
@@ -1428,13 +1438,13 @@ hash_multiset(
 
 すべてのコンストラクターは、`Traits` 型の関数オブジェクトを格納します。このオブジェクトは `hash_multiset` のキーの順序を確立するために使用され、後で [hash_multiset::key_comp](#key_comp) を呼び出して取得することができます。 `Traits` の詳細については、[hash_multiset クラス](../standard-library/hash-multiset-class.md)のトピックをご覧ください。
 
-最初の3つのコンストラクターは、空の初期 `hash_multiset` を指定し、2番目のコンストラクターは要素の順序を確立するために使用する比較関数の型 (*Comp*) を指定し、3番目のコンストラクターはアロケーターの型 (*Al*) を明示的に指定します。用い. キーワード **explicit** は、特定の種類の自動型変換が実行されないようにします。
+最初の3つのコンストラクターは、空の初期 `hash_multiset`を指定し、2番目のコンストラクターは要素の順序を確立するために使用する比較関数の型 (*Comp*) を指定し、3番目のコンストラクターはアロケーターの型 (*Al*) を明示的に指定します。用い. キーワード **explicit** は、特定の種類の自動型変換が実行されないようにします。
 
-4番目のコンストラクターは、`hash_multiset` `Right` を移動します。
+4番目のコンストラクターは、`hash_multiset` `Right`を移動します。
 
 5 番目、6 番目、7 番目のコンストラクターは initializer_list を使用します。
 
-最後の 3 つのコンストラクターは、`hash_multiset` の範囲 [ `First`, `Last`) をコピーします。下のコンストラクターになるほど、より明確に Compare クラスの比較関数とアロケーターの型が指定されています。
+最後の 3 つのコンストラクターは、`hash_multiset` の範囲 [ `first`, `last`) をコピーします。下のコンストラクターになるほど、より明確に Compare クラスの比較関数とアロケーターの型が指定されています。
 
 ハッシュされた設定コンテナー内にある要素の実際の順序は、ハッシュ関数、順序関数、ハッシュ テーブルの現在のサイズに応じて異なります。通常、順序関数のみによって要素の順序が決定される場合、設定コンテナーでの要素の順序を予測することはできません。
 
@@ -1447,46 +1457,53 @@ hash_multiset に要素や要素範囲を挿入します。
 
 ```cpp
 iterator insert(
-    const Type& Val);
+    const Type& value);
 
 iterator insert(
-    iterator Where,
+    iterator where,
     const Type& Al);
 
 void insert(
     initializer_list<Type> IList);
 
 iterator insert(
-    const Type& Val);
+    const Type& value);
 
 iterator insert(
-    Iterator Where,
-    const Type& Val);
+    Iterator where,
+    const Type& value);
 
 template <class InputIterator>
 void insert(
-    InputIterator First,
-    InputIterator Last);
+    InputIterator first,
+    InputIterator last);
 
 template <class ValTy>
 iterator insert(
-    ValTy&& Val);
+    ValTy&& value);
 
 template <class ValTy>
 iterator insert(
-    const_iterator Where,
-    ValTy&& Val);
+    const_iterator where,
+    ValTy&& value);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|-|-|
-|*Val*|挿入される要素が hash_multiset にまだ含まれていない場合、一般的には、キーが同じ順序付けになる要素が hash_multiset にまだ含まれていない場合に、hash_multiset に挿入される要素の値。|
-|*Where*|正しい挿入ポイントの検索を開始する場所 (挿入ポイントが `_Where` の直後にある場合、挿入処理は対数時間ではなく償却定数時間で実行できます)。|
-|*まずは*|hash_multiset からコピーされる最初の要素の位置。|
-|*前の*|hash_multiset からコピーされる最後の要素の次の位置。|
-|*IList*|コピーする要素を含む initializer_list。|
+*value*\
+挿入される要素が hash_multiset にまだ含まれていない場合、一般的には、キーが同じ順序付けになる要素が hash_multiset にまだ含まれていない場合に、hash_multiset に挿入される要素の値。
+
+*\*
+正しい挿入ポイントの検索を開始する場所 (挿入ポイントが*where*の直後にある場合、挿入は、対数時間ではなく償却定数時間で行うことができます)。
+
+*最初*の \
+hash_multiset からコピーされる最初の要素の位置。
+
+*最後*の \
+hash_multiset からコピーされる最後の要素の次の位置。
+
+*IList* \
+コピーする要素を含む initializer_list。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1494,7 +1511,7 @@ iterator insert(
 
 次の 3 つのメンバー関数は initializer_list を使用します。
 
-3 番目のメンバー関数は、指定した hash_multiset の範囲 (`First`、`Last`) 内の反復子が指す各要素に対応する hash_multiset に要素値のシーケンスを挿入します。
+3 番目のメンバー関数は、指定した hash_multiset の範囲 (`first`、`last`) 内の反復子が指す各要素に対応する hash_multiset に要素値のシーケンスを挿入します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -1513,11 +1530,11 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::iter
 
 ### <a name="remarks"></a>Remarks
 
-@No__t_0 型を使用して、要素の値を変更できます。
+`iterator` 型を使用して、要素の値を変更できます。
 
 ### <a name="example"></a>例
 
-@No__t_1 の宣言方法や使用方法の例については、 [begin](#begin)の例を参照してください。
+`iterator`の宣言方法や使用方法の例については、 [begin](#begin)の例を参照してください。
 
 ## <a name="key_comp"></a>  hash_multiset::key_comp
 
@@ -1540,7 +1557,7 @@ key_compare key_comp() const;
 
 格納されているオブジェクトは以下のメンバー関数を定義します。
 
-**bool operator**( **const Key&** *_xVal,* **const Key&** _ `yVal`);
+`bool operator<(const Key& _xVal, const Key& _yVal);`
 
 これは、並べ替え順で `_xVal` が `_yVal` に先行しかつ等しくない場合に **true** を返します。
 
@@ -1767,7 +1784,7 @@ hash_multiset& operator=(hash_multiset&& right);
 
 ### <a name="remarks"></a>Remarks
 
-@No__t_0 内の既存の要素を消去した後、 *`operator=` の内容*を `hash_multiset` にコピーまたは移動します。
+`hash_multiset`内の既存の要素を消去した後、 *`operator=` の内容*を `hash_multiset`にコピーまたは移動します。
 
 ### <a name="example"></a>例
 
@@ -1820,7 +1837,7 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::po
 
 ### <a name="remarks"></a>Remarks
 
-@No__t_0 型を使用して、要素の値を変更できます。
+`pointer` 型を使用して、要素の値を変更できます。
 
 ほとんどの場合、multiset オブジェクト内の要素にアクセスするには[反復子](#iterator)を使用する必要があります。
 

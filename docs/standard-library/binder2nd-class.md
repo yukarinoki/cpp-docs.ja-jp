@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - binder2nd class
 ms.assetid: b2a9c1d1-dfc4-4ca9-a10e-ae84e195a62d
-ms.openlocfilehash: 46c8bb2ae450b3ef56f2729717fb9b5563a7c139
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 297f91dd9283b9f004247d2d1814b30a17e7ffa2
+ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689936"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72890093"
 ---
 # <a name="binder2nd-class"></a>binder2nd クラス
 
@@ -28,7 +28,7 @@ class binder2nd
     typedef typename Operation::argument_type argument_type;
     typedef typename Operation::result_type result_type;
     binder2nd(
-        const Operation& Func,
+        const Operation& func,
         const typename Operation::second_argument_type& right);
 
     result_type operator()(const argument_type& left) const;
@@ -38,7 +38,7 @@ class binder2nd
 
 ### <a name="parameters"></a>パラメーター
 
-*Func* \
+*func*\
 単項関数オブジェクトに変換する二項関数オブジェクト。
 
 *右*\
@@ -53,9 +53,9 @@ class binder2nd
 
 ## <a name="remarks"></a>Remarks
 
-クラステンプレートは、バイナリ関数オブジェクト _ *Func*のコピーを `op` に格納し、`value` の*右側*のコピーを格納します。 これは**op**(`left`, **value**) を返すようにメンバー関数 `operator()` を定義します。
+クラステンプレートは、バイナリ関数オブジェクト*func*のコピーを `op`に格納し、`value`の*右側*のコピーを格納します。 `op(left, value)`を返すように、メンバー関数 `operator()` を定義します。
 
-@No__t_0 が `Operation` 型のオブジェクトであり、c が定数である場合、 [bind2nd](../standard-library/functional-functions.md#bind2nd) (`Func`, `c`) は `binder2nd` クラスコンストラクター `binder2nd` \<**操作**> (`Func`、0) に相当し、より便利です。
+*Func*が `Operation` 型のオブジェクトで、c が定数である場合、 [bind2nd](../standard-library/functional-functions.md#bind2nd)`(func, c)` は `binder2nd` クラス `binder2nd<Operation>(func, c)`コンストラクターに相当し、より便利です。
 
 ## <a name="example"></a>例
 
