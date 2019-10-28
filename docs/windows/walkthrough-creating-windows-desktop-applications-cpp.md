@@ -1,28 +1,28 @@
 ---
 title: 'チュートリアル: 従来の Windows デスクトップアプリケーションを作成C++する ()'
 ms.custom: get-started-article
-ms.date: 04/23/2019
+ms.date: 10/21/2019
 helpviewer_keywords:
 - Windows applications [C++], Win32
 - Windows Desktop applications [C++]
 - Windows API [C++]
-ms.openlocfilehash: 8bc2a42c5a9006065e2f0f4ecb70911e0055823e
-ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
+ms.openlocfilehash: 080c4cd9612058a0a54f19e5d0f4b8add4a03bce
+ms.sourcegitcommit: ea9d78dbb93bf3f8841dde93dbc12bd66f6f32ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71062065"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72778548"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>チュートリアル: 従来の Windows デスクトップアプリケーションを作成C++する ()
 
 このチュートリアルでは、Visual Studio で従来の Windows デスクトップアプリケーションを作成する方法について説明します。 作成するアプリケーションの例では、Windows API を使用して "Hello, Windows desktop!" と表示します。 。ウィンドウです。 このチュートリアルで開発したコードは、他の Windows デスクトップ アプリケーションを作成するためのパターンとして使用できます。
 
-Windows API (Win32 API、Windows デスクトップ API、および Windows Classic API とも呼ばれます) は、Windows アプリケーションを作成するための C 言語ベースのフレームワークです。 1980年以降、Windows アプリケーションの作成に使用されてきたため、このようなことはありません。 MFC、ATL、.NET framework など、Windows API に加えて、より高度で使いやすいフレームワークが構築されています。 /WinRT でC++記述された UWP およびストアアプリの最新のコードであっても、の下の Windows API を使用します。 Windows API の詳細については、「 [WINDOWS Api Index](/windows/win32/apiindex/windows-api-list)」を参照してください。 Windows アプリケーションを作成する方法は多数ありますが、上記のプロセスは最初のプロセスです。
+Windows API (Win32 API、Windows デスクトップ API、および Windows Classic API とも呼ばれます) は、Windows アプリケーションを作成するための C 言語ベースのフレームワークです。 1980年以降、Windows アプリケーションの作成に使用されてきたため、このようなことはありません。 Windows API に加えて、より高度で使いやすいフレームワークが構築されています。 たとえば、MFC、ATL、.NET framework などです。 /WinRT でC++記述された UWP およびストアアプリの最新の Windows ランタイムコードでも、の下にある Windows API を使用します。 Windows API の詳細については、「 [WINDOWS Api Index](/windows/win32/apiindex/windows-api-list)」を参照してください。 Windows アプリケーションを作成する方法は多数ありますが、上記のプロセスは最初のプロセスです。
 
 > [!IMPORTANT]
 > 簡潔にするために、一部のコードステートメントはテキストで省略されています。 このドキュメントの最後にある「[コードをビルド](#build-the-code)する」セクションは、完全なコードを示しています。
 
-## <a name="prerequisites"></a>必須コンポーネント
+## <a name="prerequisites"></a>必要条件
 
 - Microsoft Windows 7 またはそれ以降のバージョンを稼働しているコンピューター。 最適な開発作業のためには、Windows 10 をお勧めします。
 
@@ -36,7 +36,7 @@ Windows API (Win32 API、Windows デスクトップ API、および Windows Clas
 
 ## <a name="create-a-windows-desktop-project"></a>Windows デスクトッププロジェクトを作成する
 
-次の手順に従って、最初の Windows デスクトッププロジェクトを作成し、動作している Windows デスクトップアプリケーションのコードを入力します。 このページの左上にあるバージョンセレクターが、使用している Visual Studio の正しいバージョンに設定されていることを確認します。
+最初の Windows デスクトッププロジェクトを作成するには、次の手順に従います。 作業中の Windows デスクトップアプリケーションのコードを入力します。 このページの左上にはバージョンセレクターがあります。 使用している Visual Studio のバージョンに設定されていることを確認します。
 
 ::: moniker range="vs-2019"
 
@@ -44,13 +44,13 @@ Windows API (Win32 API、Windows デスクトップ API、および Windows Clas
 
 1. メイン メニューで、 **[ファイル]** > **[新規作成]** > **[プロジェクト]** の順に選択して、 **[新しいプロジェクトの作成]** ダイアログ ボックスを開きます。
 
-1. ダイアログの上部で、 **[言語]** をに**C++** 設定し、 **[プラットフォーム]** を **[Windows]** に設定し、 **[プロジェクトの種類]** を **[デスクトップ]** に設定します。 
+1. ダイアログの上部で、 **[言語]** をに**C++** 設定し、 **[プラットフォーム]** を **[Windows]** に設定し、 **[プロジェクトの種類]** を **[デスクトップ]** に設定します。
 
-1. フィルター処理されたプロジェクトの種類の一覧から **[Windows デスクトップウィザード]** を選択し、 **[次へ]** をクリックします。 次のページで、プロジェクトの名前を入力し、必要に応じてプロジェクトの場所を指定します。
+1. フィルター処理されたプロジェクトの種類の一覧から **[Windows デスクトップウィザード]** を選択し、 **[次へ]** をクリックします。 次のページで、プロジェクトの名前を入力します。たとえば、「 *Desktopapp*」と入力します。
 
 1. **[作成]** ボタンをクリックしてプロジェクトを作成します。
 
-1. **[Windows デスクトッププロジェクト]** ダイアログが表示されるようになりました。 **[アプリケーションの種類]** で、 **[Windows アプリケーション (.exe)]** を選択します。 **[追加のオプション]** の **[空のプロジェクト]** を選択します。 その後、**OK** を選択すると、プロジェクトが作成されます。
+1. **[Windows デスクトッププロジェクト]** ダイアログが表示されるようになりました。 **[アプリケーションの種類]** で、 **[デスクトップアプリケーション (.exe)]** を選択します。 **[追加のオプション]** の **[空のプロジェクト]** を選択します。 **[OK]** を選択して、プロジェクトを作成します。
 
 1. **ソリューションエクスプローラー**で、 **[desktopapp]** プロジェクトを右クリックし、 **[追加]** 、 **[新しい項目]** の順に選択します。
 
@@ -76,7 +76,7 @@ Windows API (Win32 API、Windows デスクトップ API、および Windows Clas
 
    ![DesktopApp プロジェクトに名前を指定する](../build/media/desktop-app-new-project-name-153.png "DesktopApp プロジェクトに名前を指定する")
 
-1. **[Windows デスクトッププロジェクト]** ダイアログボックスの **[アプリケーションの種類]** で、 **[windows アプリケーション (.exe)]** を選択します。 **[追加のオプション]** の **[空のプロジェクト]** を選択します。 その後、**OK** を選択すると、プロジェクトが作成されます。
+1. **[Windows デスクトッププロジェクト]** ダイアログボックスの **[アプリケーションの種類]** で、 **[windows アプリケーション (.exe)]** を選択します。 **[追加のオプション]** の **[空のプロジェクト]** を選択します。 **[OK]** を選択して、プロジェクトを作成します。
 
    ![Windows デスクトッププロジェクトウィザードで DesktopApp を作成する](../build/media/desktop-app-new-project-wizard-153.png "Windows デスクトッププロジェクトウィザードで DesktopApp を作成する")
 
@@ -98,7 +98,7 @@ Windows API (Win32 API、Windows デスクトップ API、および Windows Clas
 
 1. **[ファイル]** メニューの **[新規作成]** を選択し、 **[プロジェクト]** を選択します。
 
-1. **[新しいプロジェクト]** ダイアログボックスの左側のウィンドウで、[**インストールされ** > た**テンプレート** > ] **[ C++ビジュアル]** の順に展開し、 **[Win32]** を選択します。 中央のペインで、 **[Win32 プロジェクト]** を選択します。
+1. **[新しいプロジェクト]** ダイアログボックスの左ペインで、[**インストールされている** > **テンプレート** >  **C++ビジュアル**] を展開し、 **[Win32]** を選択します。 中央のペインで、 **[Win32 プロジェクト]** を選択します。
 
    **[名前]** ボックスに、プロジェクトの名前 (「 *desktopapp*」など) を入力します。 **[OK]** をクリックします。
 
@@ -130,12 +130,12 @@ Windows API (Win32 API、Windows デスクトップ API、および Windows Clas
 
 ### <a name="to-start-a-windows-desktop-application"></a>Windows デスクトップ アプリケーションを開始するには
 
-1. すべての C アプリケーションとC++アプリケーションが開始点と`main`して機能する必要があるのと同様に、すべて`WinMain`の Windows デスクトップアプリケーションには関数が必要です。 `WinMain` の構文は、次のとおりです。
+1. すべての C アプリケーションとC++アプリケーションが開始点として `main` 機能を持つ必要があるのと同様に、すべての Windows デスクトップアプリケーションには `WinMain` の機能が必要です。 `WinMain` の構文は、次のとおりです。
 
    ```cpp
    int CALLBACK WinMain(
       _In_ HINSTANCE hInstance,
-      _In_ HINSTANCE hPrevInstance,
+      _In_opt_ HINSTANCE hPrevInstance,
       _In_ LPSTR     lpCmdLine,
       _In_ int       nCmdShow
    );
@@ -144,16 +144,16 @@ Windows API (Win32 API、Windows デスクトップ API、および Windows Clas
    この関数のパラメーターと戻り値の詳細については、「 [WinMain entry point](/windows/win32/api/winbase/nf-winbase-winmain)」を参照してください。
 
    > [!NOTE]
-   > 、、または`_In_`などの余分な単語は何ですか。 `HINSTANCE` `CALLBACK` 従来の Windows API では、typedef およびプリプロセッサマクロを広範囲にわたって使用して、呼び出し規約、 **__declspec**宣言、コンパイラプラグマなどの型およびプラットフォーム固有のコードの詳細を抽象化しています。 Visual Studio では、IntelliSense の[クイックヒント](/visualstudio/ide/using-intellisense#quick-info)機能を使用して、これらの typedef とマクロで定義されている内容を確認できます。 目的の単語の上にマウスポインターを移動するか、それを選択して**ctrl**+**K**キー、 **ctrl**+**I**キーを押します。定義を含む小さなポップアップウィンドウが表示されます。 詳細については、「[IntelliSense の使用](/visualstudio/ide/using-intellisense)」を参照してください。 多くの場合、パラメーターと戻り値の型は*SAL 注釈*を使用して、プログラミングエラーをキャッチします。 詳細については、[SAL 注釈を使って C/C++ のコード障害を減らす方法](/visualstudio/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects) を参照してください。
+   > @No__t_0、`HINSTANCE`、`_In_` などの余分な単語は何ですか。 従来の Windows API では、typedef およびプリプロセッサマクロを広範囲にわたって使用して、呼び出し規約、 **__declspec**宣言、コンパイラプラグマなどの型およびプラットフォーム固有のコードの詳細を抽象化しています。 Visual Studio では、IntelliSense の[クイックヒント](/visualstudio/ide/using-intellisense#quick-info)機能を使用して、これらの typedef とマクロで定義されている内容を確認できます。 マウスポインターを目的の単語の上に移動するか、 **ctrl** +**K**、 **ctrl** +**I**キーを押して、定義を含む小さなポップアップウィンドウを表示します。 詳細については、「[IntelliSense の使用](/visualstudio/ide/using-intellisense)」を参照してください。 多くの場合、パラメーターと戻り値の型は*SAL 注釈*を使用して、プログラミングエラーをキャッチします。 詳細については、「 [SAL 注釈を使用しC++て C/コードの欠陥を減らす](/visualstudio/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects)」を参照してください。
 
-1. Windows デスクトッププログラムで&lt;は、windows .h > が必要です。 &lt;tchar.h > は、UNICODE シンボル`TCHAR`がプロジェクトで定義されている場合は最終的に**wchar_t**に解決されるマクロを定義します。それ以外の場合は**char**に解決されます。  常に UNICODE が有効な状態でビルドする場合は、TCHAR は必要なく、 **wchar_t**を直接使用することもできます。
+1. Windows デスクトッププログラムには &lt;windows .h > が必要です。 &lt;tchar > は `TCHAR` マクロを定義します。このマクロは、最終的に UNICODE シンボルがプロジェクトで定義されている場合は**wchar_t**に解決され、それ以外の場合は**char**に解決されます。  常に UNICODE が有効な状態でビルドする場合は、TCHAR は必要なく、 **wchar_t**を直接使用することもできます。
 
    ```cpp
    #include <windows.h>
    #include <tchar.h>
    ```
 
-1. `WinMain` 関数のほかに、すべての Windows デスクトップ アプリケーションにはウィンドウ プロシージャ関数が必要です。 通常、この関数は`WndProc`という名前ですが、好きな名前を付けることができます。 `WndProc` の構文は、次のとおりです。
+1. @No__t_0 関数と共に、すべての Windows デスクトップアプリケーションにもウィンドウプロシージャ関数が必要です。 通常、この関数には `WndProc` という名前が付けられますが、好きな名前を付けることができます。 `WndProc` の構文は、次のとおりです。
 
    ```cpp
    LRESULT CALLBACK WndProc(
@@ -164,13 +164,13 @@ Windows API (Win32 API、Windows デスクトップ API、および Windows Clas
    );
    ```
 
-   この関数では、*イベント*が発生したときに、アプリケーションが Windows から受け取る*メッセージ*を処理するコードを記述します。 たとえば、ユーザーがアプリケーションで [OK] ボタンをクリックすると、Windows によってメッセージが送信され、適切な処理`WndProc`を実行する関数内にコードを記述することができます。 これは、イベントの*処理*と呼ばれます。 アプリケーションに関連するイベントのみを処理します。
+   この関数では、*イベント*が発生したときに、アプリケーションが Windows から受け取る*メッセージ*を処理するコードを記述します。 たとえば、ユーザーがアプリケーションで [OK] ボタンをクリックすると、Windows によってメッセージが送信され、`WndProc` 関数内にコードを記述して、適切な処理を実行できます。 これは、イベントの*処理*と呼ばれます。 アプリケーションに関連するイベントのみを処理します。
 
    詳細については、「 [ウィンドウ プロシージャ](/windows/win32/winmsg/window-procedures)」を参照してください。
 
 ### <a name="to-add-functionality-to-the-winmain-function"></a>WinMain 関数に機能を追加するには
 
-1. 関数では、[WNDCLASSEX](/windows/win32/api/winuser/ns-winuser-wndclassexw) 型の構造体を設定します。`WinMain` 構造体には、ウィンドウに関する情報が含まれています。たとえば、アプリケーションアイコン、ウィンドウの背景色、タイトルバーに表示される名前、重要なのはウィンドウプロシージャへの関数ポインターです。 一般的な `WNDCLASSEX` 構造体の例を次に示します。
+1. @No__t_0 関数では、 [WNDCLASSEX](/windows/win32/api/winuser/ns-winuser-wndclassexw)型の構造体を設定します。 構造体には、ウィンドウに関する情報 (アプリケーションアイコン、ウィンドウの背景色、タイトルバーに表示される名前など) が含まれます。 重要なのは、ウィンドウプロシージャへの関数ポインターが含まれていることです。 一般的な `WNDCLASSEX` 構造体の例を次に示します。
 
    ```cpp
    WNDCLASSEX wcex;
@@ -191,7 +191,7 @@ Windows API (Win32 API、Windows デスクトップ API、および Windows Clas
 
    上の構造のフィールドの詳細については、「 [WNDCLASSEX](/windows/win32/api/winuser/ns-winuser-wndclassexw)」を参照してください。
 
-1. ウィンドウと`WNDCLASSEX` 、メッセージを送信する方法を認識できるように、を Windows に登録します。 [RegisterClassEx](/windows/win32/api/winuser/nf-winuser-registerclassexw) 関数を使用して、ウィンドウ クラス構造体を引数として渡します。 型を`TCHAR`使用するため、マクロが使用`_T`されます。
+1. Windows に `WNDCLASSEX` を登録して、ウィンドウとメッセージを送信する方法を認識できるようにします。 [RegisterClassEx](/windows/win32/api/winuser/nf-winuser-registerclassexw) 関数を使用して、ウィンドウ クラス構造体を引数として渡します。 @No__t_1 型を使用しているため、`_T` マクロが使用されます。
 
    ```cpp
    if (!RegisterClassEx(&wcex))
@@ -243,7 +243,7 @@ Windows API (Win32 API、Windows デスクトップ API、および Windows Clas
    }
    ```
 
-   この関数は`HWND`、ウィンドウへのハンドルであるを返します。 ハンドルは、Windows が開いているウィンドウを追跡するために使用するポインターに似ています。 詳細については、「 [Windows のデータ型](/windows/win32/WinProg/windows-data-types)」を参照してください。
+   この関数は、ウィンドウへのハンドルである `HWND` を返します。 ハンドルは、Windows が開いているウィンドウを追跡するために使用するポインターに似ています。 詳細については、「 [Windows のデータ型](/windows/win32/WinProg/windows-data-types)」を参照してください。
 
 1. この時点で、ウィンドウは作成されていますが、表示されるように Windows に指示する必要があります。 このコードでは、次の処理を行います。
 
@@ -256,9 +256,9 @@ Windows API (Win32 API、Windows デスクトップ API、および Windows Clas
    UpdateWindow(hWnd);
    ```
 
-   関数を`WndProc`まだ実装していないため、表示されるウィンドウには多くのコンテンツがありません。 つまり、アプリケーションは、Windows が現在送信しているメッセージをまだ処理していません。
+   @No__t_0 関数をまだ実装していないため、表示されるウィンドウには多くのコンテンツがありません。 つまり、アプリケーションは、Windows が現在送信しているメッセージをまだ処理していません。
 
-1. メッセージを処理するには、まず、Windows が送信するメッセージをリッスンするメッセージループを追加します。 アプリケーションがメッセージを受信すると、このループによっ`WndProc`てメッセージが処理される関数にディスパッチされます。 メッセージ ループのコードは、次のようになります。
+1. メッセージを処理するには、まず、Windows が送信するメッセージをリッスンするメッセージループを追加します。 アプリケーションがメッセージを受信すると、このループは処理されるように `WndProc` 関数にディスパッチします。 メッセージ ループのコードは、次のようになります。
 
    ```cpp
    MSG msg;
@@ -364,7 +364,7 @@ Windows API (Win32 API、Windows デスクトップ API、および Windows Clas
 
 1. `WndProc` 関数を有効にしてアプリケーションが受け取るメッセージを処理するために、switch ステートメントを実装します。
 
-   処理する1つの重要なメッセージは、 [WM_PAINT](/windows/win32/gdi/wm-paint)メッセージです。 アプリケーションは、表示`WM_PAINT`されているウィンドウの一部を更新する必要があるときに、メッセージを受信します。 イベントは、ユーザーがウィンドウの前にウィンドウを移動してからもう一度移動したときに発生する可能性があり、アプリケーションはこれらのイベントがいつ発生するかを認識しません。 Windows のみがを知っているので`WM_PAINT`、で通知されます。 ウィンドウが最初に表示されたら、そのすべてを更新する必要があります。
+   処理する1つの重要なメッセージは、 [WM_PAINT](/windows/win32/gdi/wm-paint)メッセージです。 アプリケーションは、表示されているウィンドウの一部を更新する必要があるときに `WM_PAINT` メッセージを受信します。 イベントは、ユーザーがウィンドウの前にウィンドウを移動したときに発生する可能性があります。 アプリケーションは、これらのイベントがいつ発生したかを認識しません。 Windows だけが知っているので、`WM_PAINT` メッセージをアプリに通知します。 ウィンドウが最初に表示されたら、そのすべてを更新する必要があります。
 
    `WM_PAINT` メッセージを処理するには、まず [BeginPaint](/windows/win32/api/winuser/nf-winuser-beginpaint)を呼び出して、ウィンドウのテキスト、ボタン、その他のコントロールをレイアウトするためのすべてのロジックを処理し、次に [EndPaint](/windows/win32/api/winuser/nf-winuser-endpaint)を呼び出します。 アプリケーションの場合、開始呼び出しと終了呼び出しの間のロジックは、文字列 "Hello, Windows desktop!" を表示します。 ウィンドウです。 次のコードでは、文字列を表示するために [TextOut](/windows/win32/api/wingdi/nf-wingdi-textoutw) 関数が使用されていることに注意してください。
 
@@ -391,9 +391,9 @@ Windows API (Win32 API、Windows デスクトップ API、および Windows Clas
    }
    ```
 
-   `HDC`コードはデバイスコンテキストをハンドルします。これは、アプリケーションがグラフィックスサブシステムと通信できるようにするために Windows が使用するデータ構造体です。 関数`BeginPaint` と`EndPaint`関数を使用すると、アプリケーションは優れた市民のように動作し、必要以上にデバイスコンテキストを使用しません。 これらの関数は、グラフィックスサブシステムを他のアプリケーションで使用できるようにするのに役立ちます。
+   コード内の `HDC` は、デバイスコンテキストをハンドルします。これは、アプリケーションがグラフィックスサブシステムと通信できるようにするために Windows で使用されるデータ構造です。 @No__t_0 関数と `EndPaint` 関数を使用すると、アプリケーションは優れた市民のように動作するため、必要以上にデバイスコンテキストを使用しません。 これらの関数は、グラフィックスサブシステムを他のアプリケーションで使用できるようにするのに役立ちます。
 
-1. 通常、アプリケーションは他の多くのメッセージを処理します。たとえば、ウィンドウが最初に作成されたときは[WM_CREATE](/windows/win32/winmsg/wm-create) 、ウィンドウが閉じている場合は[WM_DESTROY](/windows/win32/winmsg/wm-destroy)になります。 単純でも完成した `WndProc` 関数のコードを次に示します。
+1. 通常、アプリケーションは他の多くのメッセージを処理します。 たとえば、ウィンドウが最初に作成されたときは[WM_CREATE](/windows/win32/winmsg/wm-create) 、ウィンドウが閉じている場合は[WM_DESTROY](/windows/win32/winmsg/wm-destroy)になります。 単純でも完成した `WndProc` 関数のコードを次に示します。
 
    ```cpp
    LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
@@ -461,7 +461,7 @@ Windows API (Win32 API、Windows デスクトップ API、および Windows Clas
 
    int CALLBACK WinMain(
       _In_ HINSTANCE hInstance,
-      _In_ HINSTANCE hPrevInstance,
+      _In_opt_ HINSTANCE hPrevInstance,
       _In_ LPSTR     lpCmdLine,
       _In_ int       nCmdShow
    )

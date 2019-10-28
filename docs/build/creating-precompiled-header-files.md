@@ -1,22 +1,22 @@
 ---
 title: プリコンパイル済みヘッダー ファイル
-ms.date: 08/19/2019
+ms.date: 10/24/2019
 helpviewer_keywords:
 - precompiled header files, creating
 - PCH files, creating
 - cl.exe compiler, precompiling code
 - .pch files, creating
 ms.assetid: e2cdb404-a517-4189-9771-c869c660cb1b
-ms.openlocfilehash: 273d8cf996c2717339dd20dcbc7512f9c62afa8d
-ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
+ms.openlocfilehash: 071839df431071a7d8921d1b445094f886ad38e2
+ms.sourcegitcommit: 33a898bf976c65f998b4e88a84765a0cef4193a8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "69630483"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72920105"
 ---
 # <a name="precompiled-header-files"></a>プリコンパイル済みヘッダー ファイル
 
-Visual Studio で新しいプロジェクトを作成すると、 *pch*という名前の*プリコンパイル済みヘッダーファイル*がプロジェクトに追加されます。 (Visual Studio 2017 以前では、ファイルは*stdafx.h*と呼ばれていました)。ファイルの目的は、ビルドプロセスを高速化することです。 すべての安定したヘッダーファイル (など`<vector>`の標準ライブラリヘッダーなど) は、ここに含めます。 プリコンパイル済みヘッダーは、それが含まれている場合、またはそれに含まれるファイルが変更された場合にのみコンパイルされます。 プロジェクトのソースコードでのみ変更を加えた場合、プリコンパイル済みヘッダーのコンパイルはスキップされます。 
+Visual Studio で新しいプロジェクトを作成すると、 *pch*という名前の*プリコンパイル済みヘッダーファイル*がプロジェクトに追加されます。 (Visual Studio 2017 以前では、ファイルは*stdafx.h*と呼ばれていました)。ファイルの目的は、ビルドプロセスを高速化することです。 `<vector>`などの標準ライブラリヘッダーなど、安定したヘッダーファイルをここに含めます。 プリコンパイル済みヘッダーは、それが含まれている場合、またはそれに含まれるファイルが変更された場合にのみコンパイルされます。 プロジェクトのソースコードでのみ変更を加えた場合、プリコンパイル済みヘッダーのコンパイルはスキップされます。 
 
 プリコンパイル済みヘッダーのコンパイラオプションは、 [/y](reference/y-precompiled-headers.md)です。 プロジェクトのプロパティページでは、オプションは **構成プロパティ の > CC++ /> プリコンパイル済みヘッダー** の下にあります。 プリコンパイル済みヘッダーを使用しないように選択することも、ヘッダーファイル名と出力ファイルの名前とパスを指定することもできます。 
 
@@ -87,7 +87,7 @@ PCH ファイルには、作成時に有効だったインクルードパスに�
 
 ### <a name="pragma-consistency"></a>プラグマの一貫性
 
-PCH ファイルの作成中に処理されるプラグマは、通常、PCH ファイルが使用されるファイルに影響します。 `comment` および`message`プラグマは、コンパイルの残りの部分には影響しません。
+PCH ファイルの作成中に処理されるプラグマは、通常、PCH ファイルが使用されるファイルに影響します。 `comment` と `message` のプラグマは、コンパイルの残りの部分には影響しません。
 
 これらのプラグマは、PCH ファイル内のコードにのみ影響します。これらは、その後 PCH ファイルを使用するコードには影響しません。
 
@@ -116,13 +116,13 @@ PCH ファイルの作成中に処理されるプラグマは、通常、PCH フ
 
 次の表に、プリコンパイル済みヘッダーを使用するときに不整合の警告が発生する可能性のあるコンパイラオプションを示します。
 
-|オプション|name|ルール|
+|オプション|名|規則|
 |------------|----------|----------|
 |/D|定数とマクロを定義する|プリコンパイル済みヘッダーを作成したコンパイルと現在のコンパイルの間で同じである必要があります。 定義された定数の状態はチェックされませんが、ファイルが変更された定数の値に依存している場合は、予測できない結果が発生する可能性があります。|
 |/E または/EP|プリプロセッサ出力を標準出力にコピーする|プリコンパイル済みヘッダーは、/E または/EP オプションでは機能しません。|
 |/Fr または/FR|Microsoft ソースブラウザー情報の生成|/Fr オプションと/FR オプションを/Yu オプションと共に有効にするには、プリコンパイル済みヘッダーが作成されたときにも有効になっている必要があります。 プリコンパイル済みヘッダーを使用する後続のコンパイルでは、ソースブラウザー情報も生成されます。 ブラウザー情報は1つの .sbr ファイルに配置され、CodeView 情報と同じ方法で他のファイルから参照されます。 ソースブラウザー情報の配置を上書きすることはできません。|
 |/GA、/GD、/GE、/Gw、または/GW|Windows プロトコルのオプション|プリコンパイル済みヘッダーを作成したコンパイルと現在のコンパイルの間で同じである必要があります。 これらのオプションが異なる場合、警告メッセージが表示します。|
-|/ZI|完全なデバッグ情報の生成|プリコンパイル済みヘッダーを作成するときにこのオプションを有効にした場合、プリコンパイルを使用する後続のコンパイルでそのデバッグ情報を使用できます。 プリコンパイル済みヘッダーの作成時に/Zi が有効になっていない場合、プリコンパイルおよび/Zi オプションを使用する後続のコンパイルで警告がトリガーされます。 デバッグ情報は現在のオブジェクトファイルに配置されており、プリコンパイル済みヘッダーに定義されているローカルシンボルはデバッガーで使用できません。|
+|/Zi|完全なデバッグ情報の生成|プリコンパイル済みヘッダーを作成するときにこのオプションを有効にした場合、プリコンパイルを使用する後続のコンパイルでそのデバッグ情報を使用できます。 プリコンパイル済みヘッダーの作成時に/Zi が有効になっていない場合、プリコンパイルおよび/Zi オプションを使用する後続のコンパイルで警告がトリガーされます。 デバッグ情報は現在のオブジェクトファイルに配置されており、プリコンパイル済みヘッダーに定義されているローカルシンボルはデバッガーで使用できません。|
 
 > [!NOTE]
 >  プリコンパイル済みヘッダー機能は、C およびC++ソースファイルでのみ使用することを目的としています。
@@ -179,9 +179,9 @@ UNSTABLEHDRS = unstable.h
 CLFLAGS = /c /W3
 # List all linker options common to both debug and final
 # versions of your code here:
-LINKFLAGS = /NOD /ONERROR:NOEXE
+LINKFLAGS = /nologo
 !IF "$(DEBUG)" == "1"
-CLFLAGS   = /D_DEBUG $(CLFLAGS) /Od /Zi /f
+CLFLAGS   = /D_DEBUG $(CLFLAGS) /Od /Zi
 LINKFLAGS = $(LINKFLAGS) /COD
 LIBS      = slibce
 !ELSE
@@ -257,7 +257,7 @@ void savetime( void );
 //
 #ifndef __UNSTABLE_H
 #define __UNSTABLE_H
-#include<iostream.h>
+#include<iostream>
 void notstable( void );
 #endif // __UNSTABLE_H
 ```
@@ -270,6 +270,7 @@ void notstable( void );
 #include"another.h"
 #include"stable.h"
 #include"unstable.h"
+using namespace std;
 // The following code represents code that is deemed stable and
 // not likely to change. The associated interface code is
 // precompiled. In this example, the header files STABLE.H and

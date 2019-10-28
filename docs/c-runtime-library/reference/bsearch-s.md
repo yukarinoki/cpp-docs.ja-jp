@@ -1,6 +1,6 @@
 ---
 title: bsearch_s
-ms.date: 11/04/2016
+ms.date: 10/22/2019
 api_name:
 - bsearch_s
 api_location:
@@ -26,16 +26,16 @@ helpviewer_keywords:
 - arrays [CRT], binary search
 - bsearch_s function
 ms.assetid: d5690d5e-6be3-4f1d-aa0b-5ca6dbded276
-ms.openlocfilehash: 9bcd18add216bb0fc2f203183d82e37ede65dba5
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: fc86576dbbe73f63da6bf0e28e7166ef7c552e55
+ms.sourcegitcommit: 0a5518fdb9d87fcc326a8507ac755936285fcb94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943482"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72811143"
 ---
 # <a name="bsearch_s"></a>bsearch_s
 
-並べ替えられた配列のバイナリ検索を実行します。 これは、「[CRT のセキュリティ機能](../../c-runtime-library/security-features-in-the-crt.md)」の説明にあるとおり、セキュリティが強化されたバージョンの [bsearch](bsearch.md) です。
+並べ替えられた配列のバイナリ検索を実行します。 この関数は、「 [CRT のセキュリティ機能](../../c-runtime-library/security-features-in-the-crt.md)」の説明にあるとおり、セキュリティが強化されたバージョンの[bsearch](bsearch.md)です。
 
 ## <a name="syntax"></a>構文
 
@@ -52,35 +52,35 @@ void *bsearch_s(
 
 ### <a name="parameters"></a>パラメーター
 
-*key*<br/>
-検索するオブジェクト。
+*キー* \
+検索するキーへのポインター。
 
-*base*<br/>
+*base*\
 検索データのベースへのポインター。
 
-*number*<br/>
+*数値*\
 要素の数。
 
-*width*<br/>
+*幅*\
 要素の幅。
 
-*compare*<br/>
+\ の*比較*
 2 つの要素を比較するコールバック関数。 最初の引数は*コンテキスト*ポインターです。 2番目の引数は、検索用の*キー*へのポインターです。 3番目の引数は、*キー*と比較する配列要素へのポインターです。
 
-*context*<br/>
+*コンテキスト*\
 比較関数内でアクセスできるオブジェクトへのポインター。
 
 ## <a name="return-value"></a>戻り値
 
 **bsearch_s**は、 *base*が指す配列内の*キー*の出現箇所へのポインターを返します。 *Key*が見つからない場合、関数は**NULL**を返します。 配列が昇順でないか、同一キーで重複するレコードがある場合、結果は予測不可能になります。
 
-この関数に無効なパラメーターが渡されると、「 [Parameter Validation](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーター ハンドラーが呼び出されます。 実行の継続が許可された場合、 **errno**は**EINVAL**に設定され、関数は**NULL**を返します。 詳細については、「[errno、_doserrno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
+無効なパラメーターが関数に渡されると、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、 **errno**は**EINVAL**に設定され、関数は**NULL**を返します。 詳細については、「[errno、_doserrno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
 ### <a name="error-conditions"></a>エラー条件
 
 |||||||
 |-|-|-|-|-|-|
-|*key*|*base*|*compare*|*number*|*width*|**番号**|
+|*key*|*base*|*compare*|*少数*|*width*|**番号**|
 |**NULL**|任意|任意|任意|任意|**EINVAL**|
 |任意|**NULL**|任意|!= 0|任意|**EINVAL**|
 |任意|任意|任意|任意|= 0|**EINVAL**|
@@ -98,13 +98,13 @@ void *bsearch_s(
 
 *コンテキスト*ポインターは、検索対象のデータ構造体がオブジェクトの一部であり、compare 関数がオブジェクトのメンバーにアクセスする必要がある場合に便利です。 *Compare*関数は、void ポインターを適切なオブジェクト型にキャストし、そのオブジェクトのメンバーにアクセスすることができます。 *Context*パラメーターを追加することにより、 **bsearch_s**のセキュリティが強化されます。これは、*比較*関数でデータを使用できるようにするために静的変数を使用する場合に関連する再入バグを回避するために、コンテキストを追加するためです。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**bsearch_s**|\<stdlib.h> および \<search.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 
@@ -194,7 +194,7 @@ cat found at 002F0F04
 
 ## <a name="see-also"></a>関連項目
 
-[検索と並べ替え](../../c-runtime-library/searching-and-sorting.md)<br/>
-[_lfind](lfind.md)<br/>
-[_lsearch](lsearch.md)<br/>
-[qsort](qsort.md)<br/>
+[検索と並べ替え](../../c-runtime-library/searching-and-sorting.md)\
+[_lfind](lfind.md)\
+[_lsearch](lsearch.md)\
+[qsort](qsort.md)

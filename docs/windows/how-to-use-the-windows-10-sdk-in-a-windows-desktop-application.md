@@ -24,7 +24,7 @@ Visual Studio 2015 と Windows 10 SDK 以降では、CRT ライブラリは2つ�
 
 2. プロジェクト ノードのショートカット メニューを開き、 **[Retarget SDK Version] (SDK バージョンの再ターゲット)** をクリックします。
 
-   ![SDK バージョン]の再ターゲット(../windows/media/retargetingwindowssdk1.PNG "RetargetingWindowsSDK1")
+   ![SDK バージョン の再ターゲット](../windows/media/retargetingwindowssdk1.PNG "RetargetingWindowsSDK1")
 
    **[ソリューション操作の再ターゲット]** ダイアログが表示されます。
 

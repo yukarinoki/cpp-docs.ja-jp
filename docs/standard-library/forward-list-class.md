@@ -79,12 +79,12 @@ helpviewer_keywords:
 - std::forward_list::splice_after
 - std::forward_list::swap
 - std::forward_list::unique
-ms.openlocfilehash: f1015e53e137b9001bd90233c281345d474bc03f
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: e13242aa41cc99cdd01a6f16b607ef568195d659
+ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689696"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72890200"
 ---
 # <a name="forward_list-class"></a>forward_list クラス
 
@@ -108,7 +108,7 @@ forward_list によるメモリの割り当てと解放に関する詳細をカ�
 
 ## <a name="remarks"></a>Remarks
 
-@No__t_0 オブジェクトは、[アロケータークラス](../standard-library/allocator-class.md)(`std::allocator)` と呼ばれる) に基づくクラス*アロケーター*の格納されたオブジェクトによって制御されるシーケンスのストレージを割り当て、解放します。 詳細については、「[アロケーター](../standard-library/allocators.md)」をご覧ください。 アロケーターオブジェクトは、`allocator` 型のオブジェクトと同じ外部インターフェイスを持っている必要があります。
+`forward_list` オブジェクトは、[アロケータークラス](../standard-library/allocator-class.md)(`std::allocator)`と呼ばれる) に基づくクラス*アロケーター*の格納されたオブジェクトによって制御されるシーケンスのストレージを割り当て、解放します。 詳細については、「[アロケーター](../standard-library/allocators.md)」をご覧ください。 アロケーターオブジェクトは、`allocator` 型のオブジェクトと同じ外部インターフェイスを持っている必要があります。
 
 > [!NOTE]
 > コンテナー オブジェクトを代入しても、格納されているアロケーター オブジェクトはコピーされません。
@@ -399,7 +399,7 @@ iterator emplace_after(const_iterator Where, Type&& val);
 
 ### <a name="parameters"></a>パラメーター
 
-*@No__t_1*
+*\*
 新しい要素が構築された、ターゲット前方リスト内の位置。
 
 *val* \
@@ -469,7 +469,7 @@ iterator erase_after(const_iterator first, const_iterator last);
 
 ### <a name="parameters"></a>パラメーター
 
-*@No__t_1*
+*\*
 要素が削除される、ターゲット前方リスト内の位置。
 
 *最初*の \
@@ -592,7 +592,7 @@ template <class InputIterator>
 
 ### <a name="parameters"></a>パラメーター
 
-*@No__t_1*
+*\*
 最初の要素が挿入される、ターゲット前方リスト内の位置。
 
 *カウント*\
@@ -678,7 +678,7 @@ template <class Predicate>
 
 ### <a name="remarks"></a>Remarks
 
-`forward_list::merge` によって `forward_list` `right` から要素が削除され、この `forward_list` に挿入されます。 以下に示すように、両方のシーケンスを同じ述語に基づいて順序付けする必要があります。 結合されたシーケンスも、その比較関数オブジェクトに基づいて順序付けされます。
+`forward_list::merge` によって `forward_list` `right`から要素が削除され、この `forward_list`に挿入されます。 以下に示すように、両方のシーケンスを同じ述語に基づいて順序付けする必要があります。 結合されたシーケンスも、その比較関数オブジェクトに基づいて順序付けされます。
 
 `i` および `j` の位置にある要素を指定する反復子 `Pi` および `Pj` がある場合、最初のメンバー関数は、`i < j` のたびに、順序 `!(*Pj < *Pi)` を設定します。 (要素は `ascending` 順に並べ替えられます)。2番目のメンバー関数は、`i < j` たびに順序を `! comp(*Pj, *Pi)` します。
 
@@ -810,7 +810,7 @@ void resize(size_type _Newsize, const Type& val);
 
 ### <a name="parameters"></a>パラメーター
 
-*Newsize \ (_c)*
+*Newsize\ (_c)*
 サイズ指定された前方リストの要素の数。
 
 *val* \
@@ -892,7 +892,7 @@ void splice_after(
 
 ### <a name="parameters"></a>パラメーター
 
-*@No__t_1*
+*\*
 ターゲットの forward_list 内の挿入位置の直前の位置。
 
 *Source*\
@@ -913,7 +913,7 @@ void splice_after(
 
 メンバー関数の2番目のペアは、*ソース*によって制御されるシーケンス内の*Iter*の直後にある要素を削除し、 *Where*によってポイントされた被制御シーケンス内の要素の直後に挿入します。 (`Where == Iter || Where == ++Iter` の場合は、何も変わりません)。
 
-3番目のメンバー関数 (範囲指定されたスプライス) は、`(First, Last)` によって指定されたサブ範囲を、 *Where*でポイントされた被制御シーケンス内の要素の直後に、*ソース*によって制御されるシーケンスから挿入します。 また、*ソース*によって制御されるシーケンスから元のサブ範囲も削除されます。 (@No__t_0 場合、範囲 `(First, Last)` には、 *Where*でポイントする要素を含めることはできません)。
+3番目のメンバー関数 (範囲指定されたスプライス) は、`(First, Last)` によって指定されたサブ範囲を、 *Where*でポイントされた被制御シーケンス内の要素の直後に、*ソース*によって制御されるシーケンスから挿入します。 また、*ソース*によって制御されるシーケンスから元のサブ範囲も削除されます。 (`&Source == this`場合、範囲 `(First, Last)` には、 *Where*でポイントする要素を含めることはできません)。
 
 範囲指定されたスプライスで `N` 個の要素が挿入され、さらに `&Source != this` の場合、クラス [iterator](#iterator) のオブジェクトは `N` 回インクリメントされます。
 
@@ -1044,4 +1044,4 @@ typedef typename Allocator::value_type value_type;
 
 ### <a name="remarks"></a>Remarks
 
-この型は、テンプレート パラメーター _ `Ty` のシノニムです。
+この型は、テンプレート パラメーター `Type` のシノニムです。

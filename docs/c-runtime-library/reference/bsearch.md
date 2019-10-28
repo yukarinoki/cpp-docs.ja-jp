@@ -1,6 +1,6 @@
 ---
 title: bsearch
-ms.date: 11/04/2016
+ms.date: 10/22/2019
 api_name:
 - bsearch
 api_location:
@@ -26,16 +26,16 @@ helpviewer_keywords:
 - arrays [CRT], binary search
 - bsearch function
 ms.assetid: e0ad2f47-e7dd-49ed-8288-870457a14a2c
-ms.openlocfilehash: 9e44e85d1c6d73a68da2edd099cdeb6156f9759d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 6b476cbdd5e9c072cae03ad1091a96e2d0b7422b
+ms.sourcegitcommit: 0a5518fdb9d87fcc326a8507ac755936285fcb94
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939434"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72811091"
 ---
 # <a name="bsearch"></a>bsearch
 
-並べ替えられた配列のバイナリ検索を実行します。 この関数のセキュリティが強化されたバージョンについては、「[bsearch_s](bsearch-s.md)」を参照してください。
+並べ替えられた配列のバイナリ検索を実行します。 この関数のセキュリティが強化されたバージョンについては、「 [bsearch_s](bsearch-s.md)」を参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -51,20 +51,20 @@ void *bsearch(
 
 ### <a name="parameters"></a>パラメーター
 
-*key*<br/>
-検索するオブジェクト。
+*キー* \
+検索するキーへのポインター。
 
-*base*<br/>
+*base*\
 検索データのベースへのポインター。
 
-*number*<br/>
+*数値*\
 要素の数。
 
-*width*<br/>
+*幅*\
 要素の幅。
 
-*compare*<br/>
-2 つの要素を比較するコールバック関数。 最初のものは検索対象のキーへのポインターで、2 番目はキーと比較する配列要素へのポインターです。
+\ の*比較*
+2 つの要素を比較するコールバック関数。 1つ目は検索対象のキーへのポインターであり、2つ目はキーと比較する配列要素へのポインターです。
 
 ## <a name="return-value"></a>戻り値
 
@@ -72,7 +72,7 @@ void *bsearch(
 
 ## <a name="remarks"></a>Remarks
 
-**Bsearch**関数は、*数値*要素の並べ替えられた配列のバイナリ検索を実行します。これらの要素のサイズは、それぞれ*幅*バイトです。 *ベース*値は、検索対象の配列のベースへのポインターであり、*キー*は検索対象の値です。 *Compare*パラメーターは、ユーザーが指定したルーチンへのポインターであり、要求されたキーを配列要素と比較し、次のいずれかの値を返します。
+**Bsearch**関数は、*数値*要素の並べ替えられた配列のバイナリ検索を実行します。これらの要素のサイズは、それぞれ*幅*バイトです。 *ベース*値は、検索対象の配列のベースへのポインターであり、*キー*は検索対象の値です。 *Compare*パラメーターは、要求されたキーを配列要素と比較するユーザー指定のルーチンへのポインターです。 リレーションシップを指定する次のいずれかの値が返されます。
 
 |*比較*ルーチンによって返される値|説明|
 |-----------------------------------------|-----------------|
@@ -80,15 +80,15 @@ void *bsearch(
 |0|キーは配列要素と等しい。|
 |> 0|キーは配列要素より大きい。|
 
-この関数は、パラメーターを検証します。 *Compare*、 *key* 、または*number*が**null**の場合、または*base*が**null**で*数値*が0以外の場合、または*width*がゼロの場合は、「[パラメーターの検証」で説明されているように、無効なパラメーターハンドラーが呼び出されます](../../c-runtime-library/parameter-validation.md)。 実行の継続が許可された場合、errno `EINVAL`はに設定され、関数は**NULL**を返します。
+この関数は、パラメーターを検証します。 *Compare*、 *key* 、または*number*が**null**の場合、または*base*が**null**で*数値*が0以外の場合、または*width*が0の場合は、「パラメーター」で説明されているように、関数は無効なパラメーターハンドラーを呼び出します。 [検証](../../c-runtime-library/parameter-validation.md)。 実行の継続が許可された場合、 **errno**が `EINVAL` に設定され、関数は**NULL**を返します。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**bsearch**|\<stdlib.h> および \<search.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 
@@ -137,7 +137,7 @@ cat found at 002F0F04
 
 ## <a name="see-also"></a>関連項目
 
-[検索と並べ替え](../../c-runtime-library/searching-and-sorting.md)<br/>
-[_lfind](lfind.md)<br/>
-[_lsearch](lsearch.md)<br/>
-[qsort](qsort.md)<br/>
+[検索と並べ替え](../../c-runtime-library/searching-and-sorting.md)\
+[_lfind](lfind.md)\
+[_lsearch](lsearch.md)\
+[qsort](qsort.md)
