@@ -1,21 +1,23 @@
 ---
 title: DUMPBIN オプション
-ms.date: 11/04/2016
+ms.date: 10/24/2019
 f1_keywords:
 - dumpbin
 helpviewer_keywords:
 - DUMPBIN program, options
 ms.assetid: 563b696e-7599-4480-94b9-014776289ec8
-ms.openlocfilehash: 655087236e3e4644c6215da2adccd9755c767b77
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 81c66f1971294531a2904a0b681819476bcc1eb2
+ms.sourcegitcommit: 6ed1bc5b26dc60a780c1fc5f2f19d57ba1dc47d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272742"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73144559"
 ---
 # <a name="dumpbin-options"></a>DUMPBIN オプション
 
-オプションは、ダッシュ (-) またはフォワード スラッシュ (/) の後に、オプションの名前のいずれかである、オプション指定子で構成されます。 オプション名の省略形は使用できません。 引数を取るオプションの場合は、: (コロン) の後ろに引数を指定します。 1 つのオプションの指定には、スペースやタブは挿入できません。 複数のオプションを指定する場合は、各オプションを 1 つ以上のスペースまたはタブで区切ります。 オプション名、およびその引数として指定するキーワードやファイル名では、大文字と小文字は区別されません。 大半のオプションはバイナリ ファイルにも適用できますが、特定の種類のファイルにしか指定できないオプションもあります。 特に指定されていない限り、DUMPBIN は標準出力に情報を出力します。 使用して、 [/out](out-dumpbin.md)ファイルに出力を送信するオプション。
+オプションは、ダッシュ (`-`) またはスラッシュ (`/`) のいずれかのオプション*指定子*で構成され、その後にオプションの名前が続きます。 オプション名を省略することはできません。 一部のオプションは、コロン (`:`) の後に指定された引数を受け取ります。 1 つのオプションの指定には、スペースやタブは挿入できません。 複数のオプションを指定する場合は、各オプションを 1 つ以上のスペースまたはタブで区切ります。 オプション名とそのキーワードまたはファイル名の引数では、大文字と小文字が区別されません。 ほとんどのオプションはすべてのバイナリファイルに適用されますが、特定の種類のファイルにのみ適用されます。 特に指定されていない限り、DUMPBIN は標準出力に情報を出力します。 [/Out](out-dumpbin.md)オプションを使用して、出力をファイルに送信します。
+
+## <a name="options-list"></a>オプションの一覧
 
 DUMPBIN には、次のオプションがあります。
 
@@ -29,9 +31,9 @@ DUMPBIN には、次のオプションがあります。
 
 - [/DIRECTIVES](directives.md)
 
-- [/DISASM](disasm.md)
+- [/Disasm\[: {BYTES\|NOBYTES}\]](disasm.md)
 
-- [/ERRORREPORT (dumpbin.exe)](errorreport-dumpbin-exe.md)
+- [/ERRORREPORT: {NONE |PROMPT |QUEUE |メッセージ](errorreport-dumpbin-exe.md)
 
 - [/EXPORTS](dash-exports.md)
 
@@ -39,27 +41,29 @@ DUMPBIN には、次のオプションがあります。
 
 - [/HEADERS](headers.md)
 
-- [/IMPORTS](imports-dumpbin.md)
+- [/IMPORTS\[: ファイル名\]](imports-dumpbin.md)
 
 - [/LINENUMBERS](linenumbers.md)
 
-- [/LINKERMEMBER](linkermember.md)
+- [/LINKERMEMBER\[: {1 | 2}\]](linkermember.md)
 
 - [/LOADCONFIG](loadconfig.md)
 
-- [/OUT](out-dumpbin.md)
+- [/NOPDB](nopdb.md)
+
+- [/OUT: ファイル名](out-dumpbin.md)
 
 - [/PDATA](pdata.md)
 
-- [/PDBPATH](pdbpath.md)
+- [/PDBPATH\[: VERBOSE\]](pdbpath.md)
 
-- [/RANGE](range.md)
+- [/Rangee: vaMin\[、vaMax\]](range.md)
 
-- [/RAWDATA](rawdata.md)
+- [/RAWDATA\[: {NONE\|1\|2\|4\|8}\[、#\]\]](rawdata.md)
 
 - [/RELOCATIONS](relocations.md)
 
-- [/SECTION](section-dumpbin.md)
+- [/SECTION: 名前](section-dumpbin.md)
 
 - [/SUMMARY](summary.md)
 
@@ -67,7 +71,10 @@ DUMPBIN には、次のオプションがあります。
 
 - [/TLS](tls.md)
 
+コマンドラインで DUMPBIN でサポートされているオプションを一覧表示するには、/? を使用し**ます。** オプション.
+
 ## <a name="see-also"></a>関連項目
 
-[追加の MSVC ビルド ツール](c-cpp-build-tools.md)<br/>
+[その他の MSVC ビルドツール](c-cpp-build-tools.md)\
+[DUMPBIN コマンドライン](dumpbin-command-line.md)\
 [DUMPBIN リファレンス](dumpbin-reference.md)
