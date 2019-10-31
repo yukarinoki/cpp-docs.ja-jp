@@ -95,7 +95,7 @@
       items:
         - name: CMake プロジェクト
           href: build/cmake-projects-in-visual-studio.md
-        - name: 'チュートリアル:Visual Studio で C++ クロスプラットフォーム プロジェクトを作成する'
+        - name: 'チュートリアル: Visual Studio で C++ クロスプラットフォーム プロジェクトを作成する'
           href: build/get-started-linux-cmake.md
         - name: CMake プロジェクトでの Clang/LLVM
           href: build/clang-support-cmake.md
@@ -118,7 +118,7 @@
       items:
         - name: C++ のリリース ビルド
           href: build/release-builds.md
-        - name: '方法:リリース ビルドを作成する'
+        - name: '方法: リリース ビルドを作成する'
           href: build/how-to-create-a-release-build.md
         - name: リリース ビルド作成時によくある問題
           href: build/common-problems-when-creating-a-release-build.md
@@ -131,7 +131,7 @@
               href: build/using-verify-instead-of-assert.md
             - name: デバッグ ビルドを使用したメモリ上書きのチェック
               href: build/using-the-debug-build-to-check-for-memory-overwrite.md
-            - name: '方法:リリース ビルドをデバッグする'
+            - name: '方法: リリース ビルドをデバッグする'
               href: build/how-to-debug-a-release-build.md
             - name: メモリ上書きのチェック
               href: build/checking-for-memory-overwrites.md
@@ -167,20 +167,20 @@
                   href: build/pgomgr.md
                 - name: pgosweep
                   href: build/pgosweep.md
-                - name: '方法:複数の PGO プロファイルを単一のプロファイルにマージする'
+                - name: '方法: 複数の PGO プロファイルを単一のプロファイルにマージする'
                   href: build/how-to-merge-multiple-pgo-profiles-into-a-single-profile.md
     - name: コマンド ラインから MSVC ツールセットを使用する
       expanded: false
       items:
         - name: コマンド ラインから MSVC ツールセットを使用する
           href: build/building-on-the-command-line.md
-        - name: 'チュートリアル:コマンド ラインでネイティブ C++ プログラムをコンパイルする'
+        - name: 'チュートリアル: コマンド ラインでネイティブ C++ プログラムをコンパイルする'
           href: build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md
-        - name: 'チュートリアル:コマンド ラインでの C プログラムのコンパイル'
+        - name: 'チュートリアル: コマンド ラインでの C プログラムのコンパイル'
           href: build/walkthrough-compile-a-c-program-on-the-command-line.md
-        - name: 'チュートリアル:コマンド ラインでの C++/CLI プログラムのコンパイル'
+        - name: 'チュートリアル: コマンド ラインでの C++/CLI プログラムのコンパイル'
           href: build/walkthrough-compiling-a-cpp-cli-program-on-the-command-line.md
-        - name: 'チュートリアル:コマンド ラインでの C++/CX プログラムのコンパイル'
+        - name: 'チュートリアル: コマンド ラインでの C++/CX プログラムのコンパイル'
           href: build/walkthrough-compiling-a-cpp-cx-program-on-the-command-line.md
         - name: コマンド ライン ビルドのパスと環境変数の設定
           href: build/setting-the-path-and-environment-variables-for-command-line-builds.md
@@ -189,26 +189,26 @@
       items:
         - name: コマンド ラインから MSBuild を使用する
           href: build/msbuild-visual-cpp.md
-        - name: 'チュートリアル:MSBuild を使用した C++ プロジェクトの作成'
+        - name: 'チュートリアル: MSBuild を使用した C++ プロジェクトの作成'
           href: build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md
-        - name: '方法:MSBuild プロジェクトでビルド イベントを使用する'
+        - name: '方法: MSBuild プロジェクトでビルド イベントを使用する'
           href: build/how-to-use-build-events-in-msbuild-projects.md
-        - name: '方法:MSBuild プロジェクトにカスタム ビルド ステップを追加する'
+        - name: '方法: MSBuild プロジェクトにカスタム ビルド ステップを追加する'
           href: build/how-to-add-a-custom-build-step-to-msbuild-projects.md
-        - name: '方法:MSBuild プロジェクトにカスタム ビルド ツールを追加する'
+        - name: '方法: MSBuild プロジェクトにカスタム ビルド ツールを追加する'
           href: build/how-to-add-custom-build-tools-to-msbuild-projects.md
-        - name: '方法:カスタム ツールをプロジェクトのプロパティに統合する'
+        - name: '方法: カスタム ツールをプロジェクトのプロパティに統合する'
           href: build/how-to-integrate-custom-tools-into-the-project-properties.md
-        - name: '方法:ターゲット フレームワークおよびプラットフォームのツールセットを変更する'
+        - name: '方法: ターゲット フレームワークおよびプラットフォームのツールセットを変更する'
           href: build/how-to-modify-the-target-framework-and-platform-toolset.md
-    - name: 'チュートリアル:スタティック ライブラリの作成と使用 (C++)'
+    - name: 'チュートリアル: スタティック ライブラリの作成と使用 (C++)'
       href: build/walkthrough-creating-and-using-a-static-library-cpp.md
     - name: Visual Studio での C++ DLL のビルド
       expanded: false
       items:
         - name: Visual Studio での C++ DLL のビルド
           href: build/dlls-in-visual-cpp.md
-        - name: 'チュートリアル:ダイナミック リンク ライブラリの作成と使用 (C++)'
+        - name: 'チュートリアル: ダイナミック リンク ライブラリの作成と使用 (C++)'
           href: build/walkthrough-creating-and-using-a-dynamic-link-library-cpp.md
         - name: DLL の種類
           expanded: false
@@ -306,9 +306,9 @@
           href: build/building-c-cpp-isolated-applications.md
         - name: C/C++ サイド バイ サイド アセンブリのビルド
           href: build/building-c-cpp-side-by-side-assemblies.md
-        - name: '方法:登録を必要としない COM コンポーネントをビルドする'
+        - name: '方法: 登録を必要としない COM コンポーネントをビルドする'
           href: build/how-to-build-registration-free-com-components.md
-        - name: '方法:COM コンポーネントを使用する分離アプリケーションをビルドする'
+        - name: '方法: COM コンポーネントを使用する分離アプリケーションをビルドする'
           href: build/how-to-build-isolated-applications-to-consume-com-components.md
         - name: C/C++ プログラムのマニフェスト生成についての理解
           expanded: false
@@ -319,7 +319,7 @@
               href: build/manifest-generation-in-visual-studio.md
             - name: コマンド ラインでのマニフェスト生成
               href: build/manifest-generation-at-the-command-line.md
-            - name: '方法:マニフェストを C/C++ アプリケーションに埋め込む'
+            - name: '方法: マニフェストを C/C++ アプリケーションに埋め込む'
               href: build/how-to-embed-a-manifest-inside-a-c-cpp-application.md
         - name: C/C++ 分離アプリケーションおよびサイド バイ サイド アセンブリのトラブルシューティング
           href: build/troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md
@@ -328,9 +328,9 @@
       items:
         - name: 64 ビット、x64 ターゲット用の MSVC を構成する
           href: build/configuring-programs-for-64-bit-visual-cpp.md
-        - name: '方法:64 ビット、x64 プラットフォームをターゲットとする C++ プロジェクトを構成する'
+        - name: '方法: 64 ビット、x64 プラットフォームをターゲットとする C++ プロジェクトを構成する'
           href: build/how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md
-        - name: '方法:コマンド ラインで 64 ビットの MSVC ツールセットを有効にする'
+        - name: '方法: コマンド ラインで 64 ビットの MSVC ツールセットを有効にする'
           href: build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md
         - name: MSVC の 64 ビットへの移行に関する一般的な問題
           href: build/common-visual-cpp-64-bit-migration-issues.md
@@ -1157,34 +1157,7 @@
                     - name: サンプル メイクファイル
                       href: build/reference/sample-makefile.md
                 - name: 記述ブロック
-                  expanded: false
-                  items:
-                    - name: 記述ブロック
-                      href: build/reference/description-blocks.md
-                    - name: ターゲット
-                      expanded: false
-                      items:
-                        - name: ターゲット
-                          href: build/reference/targets.md
-                        - name: 疑似ターゲット
-                          href: build/reference/pseudotargets.md
-                        - name: 複数のターゲット
-                          href: build/reference/multiple-targets.md
-                        - name: 依存関係の追加
-                          href: build/reference/cumulative-dependencies.md
-                        - name: 複数の記述ブロックのターゲット
-                          href: build/reference/targets-in-multiple-description-blocks.md
-                        - name: 依存関係の副作用
-                          href: build/reference/dependency-side-effects.md
-                    - name: 依存ファイル
-                      expanded: false
-                      items:
-                        - name: 依存ファイル
-                          href: build/reference/dependents.md
-                        - name: 推論による依存ファイル
-                          href: build/reference/inferred-dependents.md
-                        - name: 依存ファイルの検索パス
-                          href: build/reference/search-paths-for-dependents.md
+                  href: build/reference/description-blocks.md
                 - name: メイクファイルのコマンド
                   expanded: false
                   items:
@@ -1293,7 +1266,7 @@
                   items:
                     - name: LIB の概要
                       href: build/reference/overview-of-lib.md
-                    - name: '方法:Visual Studio の開発環境で LIB.EXE オプションを設定する'
+                    - name: '方法: Visual Studio の開発環境で LIB.EXE オプションを設定する'
                       href: build/reference/how-to-set-lib-exe-options-in-the-visual-studio-development-environment.md
                     - name: LIB の入力ファイル
                       href: build/reference/lib-input-files.md
@@ -1410,6 +1383,8 @@
                       href: build/reference/linkermember.md
                     - name: /LOADCONFIG
                       href: build/reference/loadconfig.md
+                    - name: /NOPDB
+                      href: build/reference/nopdb.md
                     - name: /OUT (DUMPBIN)
                       href: build/reference/out-dumpbin.md
                     - name: /PDATA
@@ -1552,15 +1527,15 @@
       items:
         - name: C++ デスクトップ開発のための Visual Studio IDE の使用
           href: ide/using-the-visual-studio-ide-for-cpp-desktop-development.md
-        - name: 'チュートリアル:プロジェクトとソリューションの使用 (C++)'
+        - name: 'チュートリアル: プロジェクトとソリューションの使用 (C++)'
           href: ide/walkthrough-working-with-projects-and-solutions-cpp.md
-        - name: 'チュートリアル:プロジェクトの構築 (C++)'
+        - name: 'チュートリアル: プロジェクトの構築 (C++)'
           href: ide/walkthrough-building-a-project-cpp.md
-        - name: 'チュートリアル:プロジェクトのテスト (C++)'
+        - name: 'チュートリアル: プロジェクトのテスト (C++)'
           href: ide/walkthrough-testing-a-project-cpp.md
-        - name: 'チュートリアル:プロジェクトのデバッグ (C++)'
+        - name: 'チュートリアル: プロジェクトのデバッグ (C++)'
           href: ide/walkthrough-debugging-a-project-cpp.md
-        - name: 'チュートリアル:プロジェクトの配置 (C++)'
+        - name: 'チュートリアル: プロジェクトの配置 (C++)'
           href: ide/walkthrough-deploying-your-program-cpp.md
     - name: コード ウィザードを使用した機能の追加
       expanded: false
@@ -1579,7 +1554,7 @@
           href: ide/adding-a-member-variable-visual-cpp.md
         - name: メソッドを追加する
           href: ide/adding-a-method-visual-cpp.md
-        - name: プロパティの追加
+        - name: プロパティを追加する
           href: ide/adding-a-property-visual-cpp.md
         - name: イベントを追加する
           href: ide/adding-an-event-visual-cpp.md
@@ -1600,9 +1575,9 @@
       href: windows/overview-of-windows-programming-in-cpp.md
     - name: デスクトップ アプリケーション (C++)
       href: windows/desktop-applications-visual-cpp.md
-    - name: 'チュートリアル:標準 C++ プログラムの作成'
+    - name: 'チュートリアル: 標準 C++ プログラムの作成'
       href: windows/walkthrough-creating-a-standard-cpp-program-cpp.md
-    - name: 'チュートリアル:Windows デスクトップ アプリケーションの作成'
+    - name: 'チュートリアル: Windows デスクトップ アプリケーションの作成'
       href: windows/walkthrough-creating-windows-desktop-applications-cpp.md
     - name: Windows デスクトップ ウィザード
       href: windows/windows-desktop-wizard.md
@@ -1673,7 +1648,7 @@
                       href: atl-mfc-shared/cstring-argument-passing.md
                     - name: 'Unicode とマルチバイト文字セット (MBCS: Multibyte Character Set) のサポート'
                       href: atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md
-        - name: 関連項目
+        - name: 辞書／辞典／その他
           expanded: false
           items:
             - name: CSize クラス
@@ -1772,11 +1747,11 @@
               href: text/generic-text-mappings-in-tchar-h.md
             - name: _MBCS コードでの TCHAR.H データ型の使用
               href: text/using-tchar-h-data-types-with-mbcs-code.md
-        - name: '方法:さまざまな文字列型間で変換する'
+        - name: '方法: さまざまな文字列型間で変換する'
           href: text/how-to-convert-between-various-string-types.md
     - name: DirectX を使用するゲームを作成するためのリソース
       href: windows/resources-for-creating-a-game-using-directx.md
-    - name: '方法:Windows デスクトップ アプリケーションでの Windows 10 SDK の使用'
+    - name: '方法: Windows デスクトップ アプリケーションでの Windows 10 SDK の使用'
       href: windows/how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md
     - name: リソース ファイルの操作
       expanded: false
@@ -1788,20 +1763,20 @@
           items:
             - name: リソース ファイル
               href: windows/resource-files-visual-studio.md
-            - name: '方法:リソースの作成'
+            - name: '方法: リソースの作成'
               href: windows/how-to-create-a-resource-script-file.md
-            - name: '方法:リソースの管理'
+            - name: '方法: リソースの管理'
               href: windows/how-to-copy-resources.md
-            - name: '方法:コンパイル時にリソースをインクルードする'
+            - name: '方法: コンパイル時にリソースをインクルードする'
               href: windows/how-to-include-resources-at-compile-time.md
         - name: リソース識別子 (シンボル)
           expanded: false
           items:
             - name: リソース識別子 (シンボル)
               href: windows/symbols-resource-identifiers.md
-            - name: '方法:シンボルの作成'
+            - name: '方法: シンボルの作成'
               href: windows/creating-new-symbols.md
-            - name: '方法:シンボルの管理'
+            - name: '方法: シンボルの管理'
               href: windows/changing-a-symbol-or-symbol-name-id.md
             - name: 定義済みのシンボル ID
               expanded: false
@@ -1833,31 +1808,31 @@
               items:
                 - name: ダイアログ エディター
                   href: windows/dialog-editor.md
-                - name: '方法:ダイアログ ボックスを作成する'
+                - name: '方法: ダイアログ ボックスを作成する'
                   href: windows/creating-a-new-dialog-box.md
                 - name: ダイアログ ボックス コントロール
                   expanded: false
                   items:
                     - name: ダイアログ ボックス コントロール
                       href: windows/controls-in-dialog-boxes.md
-                    - name: '方法:コントロールを追加、編集、または削除する'
+                    - name: '方法: コントロールを追加、編集、または削除する'
                       href: windows/adding-editing-or-deleting-controls.md
-                    - name: '方法:レイアウト コントロール'
+                    - name: '方法: レイアウト コントロール'
                       href: windows/arrangement-of-controls-on-dialog-boxes.md
-                    - name: '方法:コントロールのアクセスおよび値を定義する'
+                    - name: '方法: コントロールのアクセスおよび値を定義する'
                       href: windows/defining-mnemonics-access-keys.md
             - name: アイコン用イメージ エディター
               expanded: false
               items:
                 - name: アイコン用イメージ エディター
                   href: windows/image-editor-for-icons.md
-                - name: '方法:アイコンまたはその他の画像を作成する'
+                - name: '方法: アイコンまたはその他の画像を作成する'
                   href: windows/creating-an-icon-or-other-image-image-editor-for-icons.md
-                - name: '方法:画像を編集する'
+                - name: '方法: 画像を編集する'
                   href: windows/selecting-an-area-of-an-image-image-editor-for-icons.md
-                - name: '方法:描画ツールを使用する'
+                - name: '方法: 描画ツールを使用する'
                   href: windows/using-a-drawing-tool-image-editor-for-icons.md
-                - name: '方法:色の調整'
+                - name: '方法: 色の調整'
                   href: windows/working-with-color-image-editor-for-icons.md
                 - name: アクセラレータ キー
                   href: windows/accelerator-keys-image-editor-for-icons.md
@@ -1909,11 +1884,11 @@
           items:
             - name: 配置例
               href: windows/deployment-examples.md
-            - name: 'チュートリアル:セットアップ プロジェクトを使用した Visual C++ アプリケーションの配置'
+            - name: 'チュートリアル: セットアップ プロジェクトを使用した Visual C++ アプリケーションの配置'
               href: windows/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md
-            - name: 'チュートリアル:アプリケーションのローカル フォルダーへの Visual C++ アプリケーションの配置'
+            - name: 'チュートリアル: アプリケーションのローカル フォルダーへの Visual C++ アプリケーションの配置'
               href: windows/walkthrough-deploying-a-visual-cpp-application-to-an-application-local-folder.md
-            - name: 'チュートリアル:Visual C++ 再頒布可能パッケージを使用した Visual C++ アプリケーションの配置'
+            - name: 'チュートリアル: Visual C++ 再頒布可能パッケージを使用した Visual C++ アプリケーションの配置'
               href: windows/deploying-visual-cpp-application-by-using-the-vcpp-redistributable-package.md
             - name: デバッグ実行可能ファイルを実行するテスト用コンピューターの準備
               href: windows/preparing-a-test-machine-to-run-a-debug-executable.md
@@ -1954,7 +1929,7 @@
               href: cppcx/value-classes-and-structs-c-cx.md
             - name: 部分クラス
               href: cppcx/partial-classes-c-cx.md
-            - name: properties
+            - name: プロパティ
               href: cppcx/properties-c-cx.md
             - name: コレクション
               href: cppcx/collections-c-cx.md
@@ -1962,13 +1937,13 @@
               href: cppcx/template-ref-classes-c-cx.md
             - name: インターフェイス
               href: cppcx/interfaces-c-cx.md
-            - name: 列挙型
+            - name: 列挙体
               href: cppcx/enums-c-cx.md
             - name: デリゲート
               href: cppcx/delegates-c-cx.md
             - name: 例外
               href: cppcx/exceptions-c-cx.md
-            - name: events
+            - name: イベント
               href: cppcx/events-c-cx.md
             - name: キャスト
               href: cppcx/casting-c-cx.md
@@ -2202,19 +2177,19 @@
       items:
         - name: Windows ランタイム C++ テンプレート ライブラリ (WRL)
           href: cppcx/wrl/windows-runtime-cpp-template-library-wrl.md
-        - name: '方法:WRL を使用して Windows ランタイム コンポーネントをアクティブ化し使用する'
+        - name: '方法: WRL を使用して Windows ランタイム コンポーネントをアクティブ化し使用する'
           href: cppcx/wrl/how-to-activate-and-use-a-windows-runtime-component-using-wrl.md
-        - name: '方法:WRL を使用して非同期操作を完了する'
+        - name: '方法: WRL を使用して非同期操作を完了する'
           href: cppcx/wrl/how-to-complete-asynchronous-operations-using-wrl.md
-        - name: '方法:WRL を使用してイベントを処理する'
+        - name: '方法: WRL を使用してイベントを処理する'
           href: cppcx/wrl/how-to-handle-events-using-wrl.md
-        - name: 'チュートリアル:WRL および Media Foundation を使用した UWP アプリの作成'
+        - name: 'チュートリアル: WRL および Media Foundation を使用した UWP アプリの作成'
           href: cppcx/wrl/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md
-        - name: '方法:WRL を使用して従来の COM コンポーネントを作成する'
+        - name: '方法: WRL を使用して従来の COM コンポーネントを作成する'
           href: cppcx/wrl/how-to-create-a-classic-com-component-using-wrl.md
-        - name: '方法:WRL コンポーネントを直接インスタンス化する'
+        - name: '方法: WRL コンポーネントを直接インスタンス化する'
           href: cppcx/wrl/how-to-instantiate-wrl-components-directly.md
-        - name: '方法:winmdidl.exe と midlrt.exe を使用して、Windows メタデータから .h ファイルを作成する'
+        - name: '方法: winmdidl.exe と midlrt.exe を使用して、Windows メタデータから .h ファイルを作成する'
           href: cppcx/wrl/use-winmdidl-and-midlrt-to-create-h-files-from-windows-metadata.md
         - name: カテゴリ別の主要な WRL API
           href: cppcx/wrl/key-wrl-apis-by-category.md
@@ -2467,22 +2442,22 @@
   items:
     - name: C++/CLI による .NET プログラミング
       href: dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md
-    - name: 'チュートリアル:CLR をターゲットにした C++/CLI プログラムをコンパイルする'
+    - name: 'チュートリアル: CLR をターゲットにした C++/CLI プログラムをコンパイルする'
       href: dotnet/walkthrough-compiling-a-cpp-program-that-targets-the-clr-in-visual-studio.md
     - name: C++/CLI タスク
       expanded: false
       items:
         - name: C++/CLI タスク
           href: dotnet/cpp-cli-tasks.md
-        - name: '方法:空の CLR プロジェクトを作成する'
+        - name: '方法: 空の CLR プロジェクトを作成する'
           href: dotnet/how-to-create-clr-empty-projects.md
-        - name: '方法:CLR コンソール アプリケーションを作成する'
+        - name: '方法: CLR コンソール アプリケーションを作成する'
           href: dotnet/how-to-create-clr-console-applications-cpp-cli.md
-        - name: '方法:C++/CLI で追跡参照を使用する'
+        - name: '方法: C++/CLI で追跡参照を使用する'
           href: dotnet/how-to-use-tracking-references-in-cpp-cli.md
-        - name: '方法:C++/CLI で配列を使用する'
+        - name: '方法: C++/CLI で配列を使用する'
           href: dotnet/how-to-use-arrays-in-cpp-cli.md
-        - name: '方法:クラスと構造体を定義および使用する'
+        - name: '方法: クラスと構造体を定義および使用する'
           href: dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md
         - name: 参照型の C++ スタック セマンティクス
           href: dotnet/cpp-stack-semantics-for-reference-types.md
@@ -2492,19 +2467,19 @@
           href: dotnet/user-defined-conversions-cpp-cli.md
         - name: initonly
           href: dotnet/initonly-cpp-cli.md
-        - name: '方法:デリゲートを定義および使用する'
+        - name: '方法: デリゲートを定義および使用する'
           href: dotnet/how-to-define-and-use-delegates-cpp-cli.md
-        - name: '方法:C++/CLI で列挙型を定義および使用する'
+        - name: '方法: C++/CLI で列挙型を定義および使用する'
           href: dotnet/how-to-define-and-consume-enums-in-cpp-cli.md
-        - name: '方法:C++/CLI でイベントを使用する'
+        - name: '方法: C++/CLI でイベントを使用する'
           href: dotnet/how-to-use-events-in-cpp-cli.md
-        - name: '方法:インターフェイス静的コンストラクターを定義する'
+        - name: '方法: インターフェイス静的コンストラクターを定義する'
           href: dotnet/how-to-define-an-interface-static-constructor-cpp-cli.md
-        - name: '方法:ネイティブ コンパイルでオーバーライド指定子を宣言する'
+        - name: '方法: ネイティブ コンパイルでオーバーライド指定子を宣言する'
           href: dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md
-        - name: '方法:C++/CLI でプロパティを使用する'
+        - name: '方法: C++/CLI でプロパティを使用する'
           href: dotnet/how-to-use-properties-in-cpp-cli.md
-        - name: '方法:C++/CLI で safe_cast を使用する'
+        - name: '方法: C++/CLI で safe_cast を使用する'
           href: dotnet/how-to-use-safe-cast-in-cpp-cli.md
         - name: 正規表現
           href: dotnet/regular-expressions-cpp-cli.md
@@ -2528,9 +2503,9 @@
           items:
             - name: 混在 (ネイティブおよびマネージド) アセンブリ
               href: dotnet/mixed-native-and-managed-assemblies.md
-            - name: '方法:-clr に移行する'
+            - name: '方法: -clr に移行する'
               href: dotnet/how-to-migrate-to-clr.md
-            - name: '方法:-clr を使用して MFC および ATL コードをコンパイルする'
+            - name: '方法: -clr を使用して MFC および ATL コードをコンパイルする'
               href: dotnet/how-to-compile-mfc-and-atl-code-by-using-clr.md
             - name: 混在アセンブリの初期化
               href: dotnet/initialization-of-mixed-assemblies.md
@@ -2544,7 +2519,7 @@
               href: dotnet/double-thunking-cpp.md
             - name: '-clr で構築された COM オブジェクト使用時における CLR シャットダウンの例外の回避'
               href: dotnet/avoiding-exceptions-on-clr-shutdown-when-consuming-com-objects-built-with-clr.md
-            - name: '方法:CRT ライブラリ DLL との依存関係を削除して部分信頼アプリケーションを作成する'
+            - name: '方法: CRT ライブラリ DLL との依存関係を削除して部分信頼アプリケーションを作成する'
               href: dotnet/create-a-partially-trusted-application.md
         - name: MFC での Windows フォーム ユーザー コントロールの使用
           expanded: false
@@ -2558,22 +2533,22 @@
               items:
                 - name: MFC ダイアログ ボックスでの Windows フォーム ユーザー コントロールのホスト
                   href: dotnet/hosting-a-windows-form-user-control-in-an-mfc-dialog-box.md
-                - name: '方法:ダイアログ ボックスにユーザー コントロールおよびホストを作成する'
+                - name: '方法: ダイアログ ボックスにユーザー コントロールおよびホストを作成する'
                   href: dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md
-                - name: '方法:Windows フォームで DDX-DDV データ バインディングを実行する'
+                - name: '方法: Windows フォームで DDX-DDV データ バインディングを実行する'
                   href: dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md
-                - name: '方法:ネイティブ C++ クラスから Windows フォーム イベントをシンクする'
+                - name: '方法: ネイティブ C++ クラスから Windows フォーム イベントをシンクする'
                   href: dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md
             - name: MFC ビューとしての Windows フォーム ユーザー コントロールのホスト
               expanded: false
               items:
                 - name: MFC ビューとしての Windows フォーム ユーザー コントロールのホスト
                   href: dotnet/hosting-a-windows-forms-user-control-as-an-mfc-view.md
-                - name: '方法:ユーザー コントロールを作成し、MDI ビューをホストする'
+                - name: '方法: ユーザー コントロールを作成し、MDI ビューをホストする'
                   href: dotnet/how-to-create-the-user-control-and-host-mdi-view.md
-                - name: '方法:Windows フォーム コントロールにコマンド ルーティングを追加する'
+                - name: '方法: Windows フォーム コントロールにコマンド ルーティングを追加する'
                   href: dotnet/how-to-add-command-routing-to-the-windows-forms-control.md
-                - name: '方法:Windows フォーム コントロールのプロパティとメソッドを呼び出す'
+                - name: '方法: Windows フォーム コントロールのプロパティとメソッドを呼び出す'
                   href: dotnet/how-to-call-properties-and-methods-of-the-windows-forms-control.md
             - name: MFC ダイアログ ボックスとしての Windows フォーム ユーザー コントロールのホスト
               href: dotnet/hosting-a-windows-form-user-control-as-an-mfc-dialog-box.md
@@ -2587,81 +2562,81 @@
               items:
                 - name: C++ での明示的な PInvoke (DllImport 属性) の使用方法
                   href: dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md
-                - name: '方法:PInvoke を使用してマネージド コードからネイティブ DLL を呼び出す'
+                - name: '方法: PInvoke を使用してマネージド コードからネイティブ DLL を呼び出す'
                   href: dotnet/how-to-call-native-dlls-from-managed-code-using-pinvoke.md
-                - name: '方法:PInvoke を使用して文字列をマーシャリングする'
+                - name: '方法: PInvoke を使用して文字列をマーシャリングする'
                   href: dotnet/how-to-marshal-strings-using-pinvoke.md
-                - name: '方法:PInvoke を使用して構造体をマーシャリングする'
+                - name: '方法: PInvoke を使用して構造体をマーシャリングする'
                   href: dotnet/how-to-marshal-structures-using-pinvoke.md
-                - name: '方法:PInvoke を使用して配列をマーシャリングする'
+                - name: '方法: PInvoke を使用して配列をマーシャリングする'
                   href: dotnet/how-to-marshal-arrays-using-pinvoke.md
-                - name: '方法:PInvoke を使用して関数ポインターをマーシャリングする'
+                - name: '方法: PInvoke を使用して関数ポインターをマーシャリングする'
                   href: dotnet/how-to-marshal-function-pointers-using-pinvoke.md
-                - name: '方法:PInvoke を使用して埋め込みポインターをマーシャリングする'
+                - name: '方法: PInvoke を使用して埋め込みポインターをマーシャリングする'
                   href: dotnet/how-to-marshal-embedded-pointers-using-pinvoke.md
             - name: C++ Interop (暗黙の PInvoke) の使用
               expanded: false
               items:
                 - name: C++ Interop (暗黙の PInvoke) の使用
                   href: dotnet/using-cpp-interop-implicit-pinvoke.md
-                - name: '方法:C++ Interop を使用して ANSI 文字列をマーシャリングする'
+                - name: '方法: C++ Interop を使用して ANSI 文字列をマーシャリングする'
                   href: dotnet/how-to-marshal-ansi-strings-using-cpp-interop.md
-                - name: '方法:C++ Interop を使用して Unicode 文字列をマーシャリングする'
+                - name: '方法: C++ Interop を使用して Unicode 文字列をマーシャリングする'
                   href: dotnet/how-to-marshal-unicode-strings-using-cpp-interop.md
-                - name: '方法:C++ Interop を使用して COM 文字列をマーシャリングする'
+                - name: '方法: C++ Interop を使用して COM 文字列をマーシャリングする'
                   href: dotnet/how-to-marshal-com-strings-using-cpp-interop.md
-                - name: '方法:C++ Interop を使用して構造体をマーシャリングする'
+                - name: '方法: C++ Interop を使用して構造体をマーシャリングする'
                   href: dotnet/how-to-marshal-structures-using-cpp-interop.md
-                - name: '方法:C++ Interop を使用して配列をマーシャリングする'
+                - name: '方法: C++ Interop を使用して配列をマーシャリングする'
                   href: dotnet/how-to-marshal-arrays-using-cpp-interop.md
-                - name: '方法:C++ Interop を使用してコールバックおよびデリゲートをマーシャリングする'
+                - name: '方法: C++ Interop を使用してコールバックおよびデリゲートをマーシャリングする'
                   href: dotnet/how-to-marshal-callbacks-and-delegates-by-using-cpp-interop.md
-                - name: '方法:C++ Interop を使用して埋め込みポインターをマーシャリングする'
+                - name: '方法: C++ Interop を使用して埋め込みポインターをマーシャリングする'
                   href: dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md
-                - name: '方法:マーシャリング ライブラリを拡張する'
+                - name: '方法: マーシャリング ライブラリを拡張する'
                   href: dotnet/how-to-extend-the-marshaling-library.md
-                - name: '方法:System::String の文字にアクセスする'
+                - name: '方法: System::String の文字にアクセスする'
                   href: dotnet/how-to-access-characters-in-a-system-string.md
-                - name: '方法:char * 文字列を System::Byte 配列に変換する'
+                - name: '方法: char * 文字列を System::Byte 配列に変換する'
                   href: dotnet/how-to-convert-char-star-string-to-system-byte-array.md
-                - name: '方法:System::String を wchar_t* または char* に変換する'
+                - name: '方法: System::String を wchar_t* または char* に変換する'
                   href: dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md
-                - name: '方法:System::String を標準文字列に変換する'
+                - name: '方法: System::String を標準文字列に変換する'
                   href: dotnet/how-to-convert-system-string-to-standard-string.md
-                - name: '方法:標準文字列を System::String に変換する'
+                - name: '方法: 標準文字列を System::String に変換する'
                   href: dotnet/how-to-convert-standard-string-to-system-string.md
-                - name: '方法:バイト配列へのポインターを取得する'
+                - name: '方法: バイト配列へのポインターを取得する'
                   href: dotnet/how-to-obtain-a-pointer-to-byte-array.md
-                - name: '方法:アンマネージ リソースをバイト配列に読み込む'
+                - name: '方法: アンマネージ リソースをバイト配列に読み込む'
                   href: dotnet/how-to-load-unmanaged-resources-into-a-byte-array.md
-                - name: '方法:ネイティブ関数の参照クラスを変更する'
+                - name: '方法: ネイティブ関数の参照クラスを変更する'
                   href: dotnet/how-to-modify-reference-class-in-a-native-function.md
-                - name: '方法:イメージがネイティブであるか CLR であるかを確認する'
+                - name: '方法: イメージがネイティブであるか CLR であるかを確認する'
                   href: dotnet/how-to-determine-if-an-image-is-native-or-clr.md
-                - name: '方法:ネイティブ DLL をグローバル アセンブリ キャッシュに追加する'
+                - name: '方法: ネイティブ DLL をグローバル アセンブリ キャッシュに追加する'
                   href: dotnet/how-to-add-native-dll-to-global-assembly-cache.md
-                - name: '方法:値型への参照をネイティブ型で保持する'
+                - name: '方法: 値型への参照をネイティブ型で保持する'
                   href: dotnet/how-to-hold-reference-to-value-type-in-native-type.md
-                - name: '方法:アンマネージ メモリ内にオブジェクト参照を保持する'
+                - name: '方法: アンマネージ メモリ内にオブジェクト参照を保持する'
                   href: dotnet/how-to-hold-object-reference-in-unmanaged-memory.md
-                - name: '方法:-clr コンパイルを検出する'
+                - name: '方法: -clr コンパイルを検出する'
                   href: dotnet/how-to-detect-clr-compilation.md
-                - name: '方法:System::Guid と _GUID の間で変換を行う'
+                - name: '方法: System::Guid と _GUID の間で変換を行う'
                   href: dotnet/how-to-convert-between-system-guid-and-guid.md
-                - name: '方法:out パラメーターを指定する'
+                - name: '方法: out パラメーターを指定する'
                   href: dotnet/how-to-specify-an-out-parameter.md
-                - name: '方法:-clr コンパイルでネイティブ型を使用する'
+                - name: '方法: -clr コンパイルでネイティブ型を使用する'
                   href: dotnet/how-to-use-a-native-type-in-a-clr-compilation.md
-                - name: '方法:ネイティブ型のハンドルを宣言する'
+                - name: '方法: ネイティブ型のハンドルを宣言する'
                   href: dotnet/how-to-declare-handles-in-native-types.md
-                - name: '方法:ネイティブ クラスを C# で使用できるようにラップする'
+                - name: '方法: ネイティブ クラスを C# で使用できるようにラップする'
                   href: dotnet/how-to-wrap-native-class-for-use-by-csharp.md
     - name: 純粋なコードと検証可能なコード
       expanded: false
       items:
         - name: 純粋なコードと検証可能なコード
           href: dotnet/pure-and-verifiable-code-cpp-cli.md
-        - name: '方法:確認可能な C++ プロジェクトを作成する'
+        - name: '方法: 確認可能な C++ プロジェクトを作成する'
           href: dotnet/how-to-create-verifiable-cpp-projects-cpp-cli.md
         - name: SQL Server での確認可能なアセンブリの使用
           href: dotnet/using-verifiable-assemblies-with-sql-server-cpp-cli.md
@@ -2690,11 +2665,11 @@
           href: dotnet/stl-clr-containers.md
         - name: STL/CLR コンテナー要素の要件
           href: dotnet/requirements-for-stl-clr-container-elements.md
-        - name: '方法:.NET コレクションを STL/CLR コンテナーに変換する'
+        - name: '方法: .NET コレクションを STL/CLR コンテナーに変換する'
           href: dotnet/how-to-convert-from-a-dotnet-collection-to-a-stl-clr-container.md
-        - name: '方法:STL/CLR コンテナーを .NET コレクションに変換する'
+        - name: '方法: STL/CLR コンテナーを .NET コレクションに変換する'
           href: dotnet/how-to-convert-from-a-stl-clr-container-to-a-dotnet-collection.md
-        - name: '方法:アセンブリから STL/CLR コンテナーを公開する'
+        - name: '方法: アセンブリから STL/CLR コンテナーを公開する'
           href: dotnet/how-to-expose-an-stl-clr-container-from-an-assembly.md
         - name: for each、in
           href: dotnet/for-each-in.md
@@ -2814,20 +2789,20 @@
           href: dotnet/differences-in-exception-handling-behavior-under-clr.md
         - name: finally
           href: dotnet/finally.md
-        - name: '方法:MSIL からスローされるネイティブ コードの例外をキャッチする'
+        - name: '方法: MSIL からスローされるネイティブ コードの例外をキャッチする'
           href: dotnet/how-to-catch-exceptions-in-native-code-thrown-from-msil.md
-        - name: '方法:グローバル例外ハンドラーを定義およびインストールする'
+        - name: '方法: グローバル例外ハンドラーを定義およびインストールする'
           href: dotnet/how-to-define-and-install-a-global-exception-handler.md
     - name: ボックス化
       expanded: false
       items:
         - name: ボックス化
           href: dotnet/boxing-cpp-cli.md
-        - name: '方法:明示的にボックス化を要求する'
+        - name: '方法: 明示的にボックス化を要求する'
           href: dotnet/how-to-explicitly-request-boxing.md
-        - name: '方法:gcnew を使用して値型を作成し、暗黙的なボックス化を使用する'
+        - name: '方法: gcnew を使用して値型を作成し、暗黙的なボックス化を使用する'
           href: dotnet/how-to-use-gcnew-to-create-value-types-and-use-implicit-boxing.md
-        - name: '方法:ボックス化を解除する'
+        - name: '方法: ボックス化を解除する'
           href: dotnet/how-to-unbox.md
         - name: 標準変換と暗黙のボックス化
           href: dotnet/standard-conversions-and-implicit-boxing.md
@@ -2886,7 +2861,7 @@
       items:
         - name: ユニバーサル Windows プラットフォームへの移植 (C++)
           href: porting/porting-to-the-universal-windows-platform-cpp.md
-        - name: '方法:ユニバーサル Windows プラットフォーム アプリで既存の C++ コードを使用する'
+        - name: '方法: ユニバーサル Windows プラットフォーム アプリで既存の C++ コードを使用する'
           href: porting/how-to-use-existing-cpp-code-in-a-universal-windows-platform-app.md
 - name: C++ のセキュリティのベスト プラクティス
   expanded: false
@@ -2907,7 +2882,7 @@
     - name: 言語リファレンス
       expanded: false
       items:
-        - name: Languages
+        - name: 言語
           href: overview/languages-cpp.md
         - name: 'C# 言語リファレンス'
           expanded: false
@@ -3017,7 +2992,7 @@
                       href: c-language/c-declarations-and-definitions.md
                     - name: 関数の宣言と定義
                       href: c-language/function-declarations-and-definitions.md
-                    - name: Blocks
+                    - name: ブロック
                       href: c-language/blocks.md
                     - name: サンプル プログラム
                       href: c-language/example-program.md
@@ -3143,10 +3118,10 @@
                       href: c-language/c-abstract-declarators.md
                 - name: より複雑な宣言子の解釈
                   href: c-language/interpreting-more-complex-declarators.md
-                - name: 初期化する
+                - name: 初期化
                   expanded: false
                   items:
-                    - name: 初期化する
+                    - name: 初期化
                       href: c-language/initialization.md
                     - name: スカラー型の初期化
                       href: c-language/initializing-scalar-types.md
@@ -3408,7 +3383,7 @@
                       href: c-language/storage-class.md
                     - name: 戻り値の型
                       href: c-language/return-type.md
-                    - name: parameters
+                    - name: パラメーター
                       href: c-language/parameters.md
                     - name: 関数本体
                       href: c-language/function-body.md
@@ -3684,13 +3659,13 @@
                   items:
                     - name: スマート ポインター (Modern C++)
                       href: cpp/smart-pointers-modern-cpp.md
-                    - name: '方法:unique_ptr インスタンスを作成して使用する'
+                    - name: '方法: unique_ptr インスタンスを作成して使用する'
                       href: cpp/how-to-create-and-use-unique-ptr-instances.md
-                    - name: '方法:shared_ptr インスタンスを作成して使用する'
+                    - name: '方法: shared_ptr インスタンスを作成して使用する'
                       href: cpp/how-to-create-and-use-shared-ptr-instances.md
-                    - name: '方法:weak_ptr インスタンスを作成して使用する'
+                    - name: '方法: weak_ptr インスタンスを作成して使用する'
                       href: cpp/how-to-create-and-use-weak-ptr-instances.md
-                    - name: '方法:CComPtr および CComQIPtr インスタンスを作成して使用する'
+                    - name: '方法: CComPtr および CComQIPtr インスタンスを作成して使用する'
                       href: cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md
                 - name: コンパイル時のカプセル化の Pimpl (Modern C++)
                   href: cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md
@@ -3705,9 +3680,9 @@
                   items:
                     - name: エラーと例外の処理 (Modern C++)
                       href: cpp/errors-and-exception-handling-modern-cpp.md
-                    - name: '方法:例外安全性に対応した設計をする'
+                    - name: '方法: 例外安全性に対応した設計をする'
                       href: cpp/how-to-design-for-exception-safety.md
-                    - name: '方法:例外的なコードと非例外的なコード間のインターフェイス'
+                    - name: '方法: 例外的なコードと非例外的なコード間のインターフェイス'
                       href: cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md
                 - name: ABI の境界での移植性 (Modern C++)
                   href: cpp/portability-at-abi-boundaries-modern-cpp.md
@@ -3722,7 +3697,7 @@
                   href: cpp/character-sets.md
                 - name: トークン
                   href: cpp/tokens-cpp.md
-                - name: 説明
+                - name: コメント
                   href: cpp/comments-cpp.md
                 - name: 識別子
                   href: cpp/identifiers-cpp.md
@@ -3777,13 +3752,13 @@
                       href: cpp/constexpr-cpp.md
                     - name: volatile
                       href: cpp/volatile-cpp.md
-                    - name: 自動
+                    - name: auto
                       href: cpp/auto-cpp.md
                     - name: decltype
                       href: cpp/decltype-cpp.md
                     - name: 属性
                       href: cpp/attributes.md
-                - name: Scope (スコープ)
+                - name: スコープ
                   href: cpp/scope-visual-cpp.md
                 - name: ヘッダー ファイル
                   href: cpp/header-files-cpp.md
@@ -4077,14 +4052,14 @@
                       href: cpp/transfers-of-control.md
             - name: 名前空間
               href: cpp/namespaces-cpp.md
-            - name: 列挙型
+            - name: 列挙
               href: cpp/enumerations-cpp.md
             - name: Unions
               href: cpp/unions.md
-            - name: Functions
+            - name: 関数
               expanded: false
               items:
-                - name: Functions
+                - name: 関数
                   href: cpp/functions-cpp.md
                 - name: 可変個の引数リストを取る関数
                   href: cpp/functions-with-variable-argument-lists-cpp.md
@@ -4114,7 +4089,7 @@
                       href: cpp/increment-and-decrement-operator-overloading-cpp.md
                 - name: バイナリ演算子
                   href: cpp/binary-operators.md
-                - name: 割り当て
+                - name: 代入
                   href: cpp/assignment.md
                 - name: 関数呼び出し
                   href: cpp/function-call-cpp.md
@@ -4140,7 +4115,7 @@
                       href: cpp/member-access-control-cpp.md
                     - name: friend
                       href: cpp/friend-cpp.md
-                    - name: プライベート
+                    - name: private
                       href: cpp/private-cpp.md
                     - name: protected
                       href: cpp/protected-cpp.md
@@ -4243,10 +4218,10 @@
                   href: cpp/indirection-on-array-types.md
                 - name: C++ での配列の順序
                   href: cpp/ordering-of-cpp-arrays.md
-            - name: 参照
+            - name: 関連項目
               expanded: false
               items:
-                - name: 参照
+                - name: 関連項目
                   href: cpp/references-cpp.md
                 - name: '左辺値参照宣言子: &'
                   href: cpp/lvalue-reference-declarator-amp.md
@@ -5608,7 +5583,7 @@
                   href: assembler/masm/textequ.md
                 - name: .TFCOND
                   href: assembler/masm/dot-tfcond.md
-                - name: タイトル
+                - name: TITLE
                   href: assembler/masm/title.md
                 - name: TYPEDEF (MASM)
                   href: assembler/masm/typedef-masm.md
@@ -6035,7 +6010,7 @@
                   href: extensions/consuming-generics-cpp-cli.md
                 - name: ジェネリックとテンプレート
                   href: extensions/generics-and-templates-visual-cpp.md
-                - name: '方法:ジェネリックを使用してパフォーマンスを改善する'
+                - name: '方法: ジェネリックを使用してパフォーマンスを改善する'
                   href: extensions/how-to-improve-performance-with-generics-visual-cpp.md
             - name: interface クラス
               href: extensions/interface-class-cpp-component-extensions.md
@@ -6057,7 +6032,7 @@
               href: extensions/property-cpp-component-extensions.md
             - name: safe_cast
               href: extensions/safe-cast-cpp-component-extensions.md
-            - name: string
+            - name: String
               href: extensions/string-cpp-component-extensions.md
             - name: sealed
               href: extensions/sealed-cpp-component-extensions.md
@@ -6086,22 +6061,22 @@
                   items:
                     - name: interior_ptr
                       href: extensions/interior-ptr-cpp-cli.md
-                    - name: '方法:内部ポインターおよびマネージド配列を宣言および使用する'
+                    - name: '方法: 内部ポインターおよびマネージド配列を宣言および使用する'
                       href: extensions/how-to-declare-and-use-interior-pointers-and-managed-arrays-cpp-cli.md
-                    - name: '方法:interior_ptr キーワードを使って値型を宣言する'
+                    - name: '方法: interior_ptr キーワードを使って値型を宣言する'
                       href: extensions/how-to-declare-value-types-with-the-interior-ptr-keyword-cpp-cli.md
-                    - name: '方法:内部ポインターとネイティブ ポインターを使って関数をオーバーロードする'
+                    - name: '方法: 内部ポインターとネイティブ ポインターを使って関数をオーバーロードする'
                       href: extensions/how-to-overload-functions-with-interior-pointers-and-native-pointers-cpp-cli.md
-                    - name: '方法:const キーワードを使って内部ポインターを宣言する'
+                    - name: '方法: const キーワードを使って内部ポインターを宣言する'
                       href: extensions/how-to-declare-interior-pointers-with-the-const-keyword-cpp-cli.md
                 - name: pin_ptr
                   expanded: false
                   items:
                     - name: pin_ptr
                       href: extensions/pin-ptr-cpp-cli.md
-                    - name: '方法:ポインターと配列を固定する'
+                    - name: '方法: ポインターと配列を固定する'
                       href: extensions/how-to-pin-pointers-and-arrays.md
-                    - name: '方法:固定ポインターと値型を宣言する'
+                    - name: '方法: 固定ポインターと値型を宣言する'
                       href: extensions/how-to-declare-pinning-pointers-and-value-types.md
                 - name: 型の転送
                   href: extensions/type-forwarding-cpp-cli.md
@@ -6235,7 +6210,7 @@
                   href: windows/attributes/helpstringdll.md
                 - name: hidden
                   href: windows/attributes/hidden.md
-                - name: id
+                - name: ID
                   href: windows/attributes/id.md
                 - name: idl_module
                   href: windows/attributes/idl-module.md
@@ -6255,7 +6230,7 @@
                   href: windows/attributes/importidl.md
                 - name: importlib
                   href: windows/attributes/importlib.md
-                - name: in
+                - name: の
                   href: windows/attributes/in-cpp.md
                 - name: include
                   href: windows/attributes/include-cpp.md
@@ -6293,7 +6268,7 @@
                   href: windows/attributes/odl.md
                 - name: oleautomation
                   href: windows/attributes/oleautomation.md
-                - name: 省略可能
+                - name: optional
                   href: windows/attributes/optional-cpp.md
                 - name: out
                   href: windows/attributes/out-cpp.md
@@ -6335,7 +6310,7 @@
                   href: windows/attributes/satype.md
                 - name: size_is
                   href: windows/attributes/size-is.md
-                - name: source
+                - name: ソース
                   href: windows/attributes/source-cpp.md
                 - name: string
                   href: windows/attributes/string-cpp.md
@@ -6470,10 +6445,10 @@
                   href: c-runtime-library/file-handling.md
                 - name: 浮動小数点サポート
                   href: c-runtime-library/floating-point-support.md
-                - name: 入力と出力
+                - name: 入出力
                   expanded: false
                   items:
-                    - name: 入力と出力
+                    - name: 入出力
                       href: c-runtime-library/input-and-output.md
                     - name: テキスト モードとバイナリ モードのファイル入出力
                       href: c-runtime-library/text-and-binary-mode-file-i-o.md
@@ -6492,7 +6467,7 @@
                   items:
                     - name: 国際化
                       href: c-runtime-library/internationalization.md
-                    - name: Locale
+                    - name: ロケール
                       href: c-runtime-library/locale.md
                     - name: コード ページ
                       href: c-runtime-library/code-pages.md
@@ -7012,7 +6987,7 @@
                   href: c-runtime-library/reference/clog10-clog10f-clog10l.md
                 - name: _close
                   href: c-runtime-library/reference/close.md
-                - name: close
+                - name: 閉じる
                   href: c-runtime-library/reference/posix-close.md
                 - name: _Cmulcc、_FCmulcc、_LCmulcc
                   href: c-runtime-library/reference/cmulcc-fcmulcc-lcmulcc.md
@@ -7334,7 +7309,7 @@
                   href: c-runtime-library/reference/fread-nolock.md
                 - name: _fread_nolock_s2
                   href: c-runtime-library/reference/fread-nolock-s2.md
-                - name: 制限なし
+                - name: free
                   href: c-runtime-library/reference/free.md
                 - name: _free_dbg
                   href: c-runtime-library/reference/free-dbg.md
@@ -7776,7 +7751,7 @@
                   href: c-runtime-library/reference/offsetof-macro.md
                 - name: _onexit、_onexit_m
                   href: c-runtime-library/reference/onexit-onexit-m.md
-                - name: オープン
+                - name: 開く
                   href: c-runtime-library/reference/open.md
                 - name: _open、_wopen
                   href: c-runtime-library/reference/open-wopen.md
@@ -7846,7 +7821,7 @@
                   href: c-runtime-library/reference/rand.md
                 - name: rand_s
                   href: c-runtime-library/reference/rand-s.md
-                - name: read
+                - name: 読み取り
                   href: c-runtime-library/reference/posix-read.md
                 - name: _read
                   href: c-runtime-library/reference/read.md
@@ -8322,7 +8297,7 @@
                   href: c-runtime-library/reference/wctrans.md
                 - name: wctype
                   href: c-runtime-library/reference/wctype.md
-                - name: write
+                - name: 書き込み
                   href: c-runtime-library/reference/posix-write.md
                 - name: _write
                   href: c-runtime-library/reference/write.md
@@ -9914,9 +9889,9 @@
                   href: parallel/amp/using-tiles.md
                 - name: UWP アプリでの C++ AMP の使用
                   href: parallel/amp/using-cpp-amp-in-windows-store-apps.md
-                - name: 'チュートリアル:行列乗算'
+                - name: 'チュートリアル: 行列乗算'
                   href: parallel/amp/walkthrough-matrix-multiplication.md
-                - name: 'チュートリアル:C++ AMP アプリケーションのデバッグ'
+                - name: 'チュートリアル: C++ AMP アプリケーションのデバッグ'
                   href: parallel/amp/walkthrough-debugging-a-cpp-amp-application.md
                 - name: ラムダ、関数オブジェクト、および制限関数の使用
                   href: parallel/amp/using-lambdas-function-objects-and-restricted-functions.md
@@ -10090,13 +10065,13 @@
                       items:
                         - name: OpenMP からコンカレンシー ランタイムへの移行
                           href: parallel/concrt/migrating-from-openmp-to-the-concurrency-runtime.md
-                        - name: '方法:OpenMP の parallel for ループを変換し、同時実行ランタイムを使用する'
+                        - name: '方法: OpenMP の parallel for ループを変換し、同時実行ランタイムを使用する'
                           href: parallel/concrt/how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime.md
-                        - name: '方法:キャンセル処理を使用する OpenMP ループを変換し、同時実行ランタイムを使用する'
+                        - name: '方法: キャンセル処理を使用する OpenMP ループを変換し、同時実行ランタイムを使用する'
                           href: parallel/concrt/convert-an-openmp-loop-that-uses-cancellation.md
-                        - name: '方法:例外処理を使用する OpenMP ループを変換し、同時実行ランタイムを使用する'
+                        - name: '方法: 例外処理を使用する OpenMP ループを変換し、同時実行ランタイムを使用する'
                           href: parallel/concrt/convert-an-openmp-loop-that-uses-exception-handling.md
-                        - name: '方法:減少変数を使用する OpenMP ループを変換し、同時実行ランタイムを使用する'
+                        - name: '方法: 減少変数を使用する OpenMP ループを変換し、同時実行ランタイムを使用する'
                           href: parallel/concrt/convert-an-openmp-loop-that-uses-a-reduction-variable.md
                 - name: 並列パターン ライブラリ (PPL)
                   expanded: false
@@ -10108,42 +10083,42 @@
                       items:
                         - name: タスクの並列化 (同時実行ランタイム)
                           href: parallel/concrt/task-parallelism-concurrency-runtime.md
-                        - name: '方法:並列呼び出しを使用して並列並べ替えルーチンを記述する'
+                        - name: '方法: 並列呼び出しを使用して並列並べ替えルーチンを記述する'
                           href: parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md
-                        - name: '方法:parallel_invoke を使用して並列操作を実行する'
+                        - name: '方法: parallel_invoke を使用して並列操作を実行する'
                           href: parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md
-                        - name: '方法:遅延後に完了するタスクを作成する'
+                        - name: '方法: 遅延後に完了するタスクを作成する'
                           href: parallel/concrt/how-to-create-a-task-that-completes-after-a-delay.md
                     - name: 並列アルゴリズム
                       expanded: false
                       items:
                         - name: 並列アルゴリズム
                           href: parallel/concrt/parallel-algorithms.md
-                        - name: '方法:parallel_for ループを記述する'
+                        - name: '方法: parallel_for ループを記述する'
                           href: parallel/concrt/how-to-write-a-parallel-for-loop.md
-                        - name: '方法:parallel_for_each ループを記述する'
+                        - name: '方法: parallel_for_each ループを記述する'
                           href: parallel/concrt/how-to-write-a-parallel-for-each-loop.md
-                        - name: '方法:マップ操作と縮小操作を並列実行する'
+                        - name: '方法: マップ操作と縮小操作を並列実行する'
                           href: parallel/concrt/how-to-perform-map-and-reduce-operations-in-parallel.md
                     - name: 並列コンテナーと並列オブジェクト
                       expanded: false
                       items:
                         - name: 並列コンテナーと並列オブジェクト
                           href: parallel/concrt/parallel-containers-and-objects.md
-                        - name: '方法:並列コンテナーを使用して効率を向上させる'
+                        - name: '方法: 並列コンテナーを使用して効率を向上させる'
                           href: parallel/concrt/how-to-use-parallel-containers-to-increase-efficiency.md
-                        - name: '方法:combinable を使用してパフォーマンスを向上させる'
+                        - name: '方法: combinable を使用してパフォーマンスを向上させる'
                           href: parallel/concrt/how-to-use-combinable-to-improve-performance.md
-                        - name: '方法:combinable を使用して集合を結合する'
+                        - name: '方法: combinable を使用して集合を結合する'
                           href: parallel/concrt/how-to-use-combinable-to-combine-sets.md
                     - name: PPL における取り消し処理
                       expanded: false
                       items:
                         - name: PPL における取り消し処理
                           href: parallel/concrt/cancellation-in-the-ppl.md
-                        - name: '方法:キャンセル処理を使用して並列ループを中断する'
+                        - name: '方法: キャンセル処理を使用して並列ループを中断する'
                           href: parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md
-                        - name: '方法:例外処理を使用して並列ループを中断する'
+                        - name: '方法: 例外処理を使用して並列ループを中断する'
                           href: parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md
                 - name: 非同期エージェント ライブラリ
                   expanded: false
@@ -10156,17 +10131,17 @@
                       href: parallel/concrt/asynchronous-message-blocks.md
                     - name: メッセージ パッシング関数
                       href: parallel/concrt/message-passing-functions.md
-                    - name: '方法:さまざまなプロデューサー/コンシューマー パターンを実装する'
+                    - name: '方法: さまざまなプロデューサー/コンシューマー パターンを実装する'
                       href: parallel/concrt/how-to-implement-various-producer-consumer-patterns.md
-                    - name: '方法:call クラスおよび transformer クラスに処理関数を提供する'
+                    - name: '方法: call クラスおよび transformer クラスに処理関数を提供する'
                       href: parallel/concrt/how-to-provide-work-functions-to-the-call-and-transformer-classes.md
-                    - name: '方法:データ パイプラインでトランスフォーマーを使用する'
+                    - name: '方法: データ パイプラインでトランスフォーマーを使用する'
                       href: parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md
-                    - name: '方法:完了したタスクから選択する'
+                    - name: '方法: 完了したタスクから選択する'
                       href: parallel/concrt/how-to-select-among-completed-tasks.md
-                    - name: '方法:メッセージを定期的に送信する'
+                    - name: '方法: メッセージを定期的に送信する'
                       href: parallel/concrt/how-to-send-a-message-at-a-regular-interval.md
-                    - name: '方法:メッセージ ブロック フィルターを使用する'
+                    - name: '方法: メッセージ ブロック フィルターを使用する'
                       href: parallel/concrt/how-to-use-a-message-block-filter.md
                 - name: 同期データ構造
                   expanded: false
@@ -10185,23 +10160,23 @@
                       items:
                         - name: スケジューラ インスタンス
                           href: parallel/concrt/scheduler-instances.md
-                        - name: '方法:スケジューラ インスタンスを管理する'
+                        - name: '方法: スケジューラ インスタンスを管理する'
                           href: parallel/concrt/how-to-manage-a-scheduler-instance.md
                     - name: スケジューラ ポリシー
                       expanded: false
                       items:
                         - name: スケジューラ ポリシー
                           href: parallel/concrt/scheduler-policies.md
-                        - name: '方法:特定のスケジューラ ポリシーを指定する'
+                        - name: '方法: 特定のスケジューラ ポリシーを指定する'
                           href: parallel/concrt/how-to-specify-specific-scheduler-policies.md
-                        - name: '方法:特定のスケジューラ ポリシーを使用するエージェントを作成する'
+                        - name: '方法: 特定のスケジューラ ポリシーを使用するエージェントを作成する'
                           href: parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md
                     - name: スケジュール グループ
                       expanded: false
                       items:
                         - name: スケジュール グループ
                           href: parallel/concrt/schedule-groups.md
-                        - name: '方法:スケジュール グループを使用して実行順序に影響を与える'
+                        - name: '方法: スケジュール グループを使用して実行順序に影響を与える'
                           href: parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md
                     - name: 軽量タスク
                       href: parallel/concrt/lightweight-tasks.md
@@ -10210,41 +10185,41 @@
                       items:
                         - name: コンテキスト
                           href: parallel/concrt/contexts.md
-                        - name: '方法:Context クラスを使用して協調セマフォを実装する'
+                        - name: '方法: Context クラスを使用して協調セマフォを実装する'
                           href: parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md
-                        - name: '方法:オーバーサブスクリプションを使用して待機時間を短縮する'
+                        - name: '方法: オーバーサブスクリプションを使用して待機時間を短縮する'
                           href: parallel/concrt/how-to-use-oversubscription-to-offset-latency.md
                     - name: メモリ管理関数
                       expanded: false
                       items:
                         - name: メモリ管理関数
                           href: parallel/concrt/memory-management-functions.md
-                        - name: '方法:Alloc および Free を使用してメモリ パフォーマンスを改善する'
+                        - name: '方法: Alloc および Free を使用してメモリ パフォーマンスを改善する'
                           href: parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md
                 - name: 同時実行ランタイムのチュートリアル
                   expanded: false
                   items:
                     - name: 同時実行ランタイムのチュートリアル
                       href: parallel/concrt/concurrency-runtime-walkthroughs.md
-                    - name: 'チュートリアル:タスクおよび XML HTTP 要求を使用した接続'
+                    - name: 'チュートリアル: タスクおよび XML HTTP 要求を使用した接続'
                       href: parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md
-                    - name: 'チュートリアル:エージェント ベースのアプリケーションの作成'
+                    - name: 'チュートリアル: エージェント ベースのアプリケーションの作成'
                       href: parallel/concrt/walkthrough-creating-an-agent-based-application.md
-                    - name: 'チュートリアル:データフロー エージェントの作成'
+                    - name: 'チュートリアル: データフロー エージェントの作成'
                       href: parallel/concrt/walkthrough-creating-a-dataflow-agent.md
-                    - name: 'チュートリアル:イメージ処理ネットワークの作成'
+                    - name: 'チュートリアル: イメージ処理ネットワークの作成'
                       href: parallel/concrt/walkthrough-creating-an-image-processing-network.md
-                    - name: 'チュートリアル:フューチャの実装'
+                    - name: 'チュートリアル: フューチャの実装'
                       href: parallel/concrt/walkthrough-implementing-futures.md
-                    - name: 'チュートリアル:join を使用したデッドロックの防止'
+                    - name: 'チュートリアル: join を使用したデッドロックの防止'
                       href: parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md
-                    - name: 'チュートリアル:ユーザー インターフェイス スレッドからの処理の除去'
+                    - name: 'チュートリアル: ユーザー インターフェイス スレッドからの処理の除去'
                       href: parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md
-                    - name: 'チュートリアル:COM 対応アプリケーションでの同時実行ランタイムの使用'
+                    - name: 'チュートリアル: COM 対応アプリケーションでの同時実行ランタイムの使用'
                       href: parallel/concrt/walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application.md
-                    - name: 'チュートリアル:既存のコードを改変して軽量タスクを使用する'
+                    - name: 'チュートリアル: 既存のコードを改変して軽量タスクを使用する'
                       href: parallel/concrt/walkthrough-adapting-existing-code-to-use-lightweight-tasks.md
-                    - name: 'チュートリアル:カスタム メッセージ ブロックの作成'
+                    - name: 'チュートリアル: カスタム メッセージ ブロックの作成'
                       href: parallel/concrt/walkthrough-creating-a-custom-message-block.md
                 - name: 同時実行ランタイムのベスト プラクティス
                   expanded: false
@@ -10257,7 +10232,7 @@
                       href: parallel/concrt/best-practices-in-the-asynchronous-agents-library.md
                     - name: 同時実行ランタイムの一般的なベスト プラクティス
                       href: parallel/concrt/general-best-practices-in-the-concurrency-runtime.md
-                - name: 関連項目
+                - name: 辞書／辞典／その他
                   expanded: false
                   items:
                     - name: 参照 (コンカレンシー ランタイム)
@@ -10499,7 +10474,7 @@
                       href: parallel/openmp/4-environment-variables.md
                     - name: 付録
                       items:
-                        - name: 例
+                        - name: 使用例
                           href: parallel/openmp/a-examples.md
                         - name: ランタイム ライブラリ関数のスタブ
                           href: parallel/openmp/b-stubs-for-run-time-library-functions.md
@@ -10520,7 +10495,7 @@
                       href: parallel/openmp/reference/openmp-directives.md
                     - name: 句
                       href: parallel/openmp/reference/openmp-clauses.md
-                    - name: Functions
+                    - name: 関数
                       href: parallel/openmp/reference/openmp-functions.md
                     - name: 環境変数
                       href: parallel/openmp/reference/openmp-environment-variables.md
