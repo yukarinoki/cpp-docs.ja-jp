@@ -210,7 +210,7 @@ Unicode およびマルチバイトのストリーム入出力におけるテキ
 
 [C ランタイム ライブラリ](../../c-runtime-library/crt-library-features.md)のすべてのバージョン。
 
-**c**、 **n**、および**t** *モード*のオプションは、**fopen_s** と [_fdopen](fdopen-wfdopen.md) のためのMicrosoft 拡張であり、ANSI の移植性が必要な場合は使用しないでください。
+**c**、 **n**、および**t** *モード*のオプションは、**fopen_s** と [_fdopen](fdopen-wfdopen.md) のためのMicrosoft 拡張機能であり、ANSI の移植性が必要な場合は使用しないでください。
 
 ## <a name="example"></a>例
 
