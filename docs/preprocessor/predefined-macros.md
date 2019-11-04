@@ -419,7 +419,7 @@ MSVC では、これらの追加の定義済みマクロがサポートされま
 
    詳細については、Microsoft C++チームブログの「 [Visual C++ Compiler Version](https://devblogs.microsoft.com/cppblog/visual-c-compiler-version/) 」を参照してください。
 
-- **&#95;MSVC&#95;LANG** 対象となる、コンパイラは C++ 言語標準を指定する整数リテラルとして定義されています。 C++ としてコンパイルされたコードでのみ設定されます。 マクロは、整数リテラル 201402 L を既定では、値とき、または、 [/std:c++ + 14](../build/reference/std-specify-language-standard-version.md)コンパイラ オプションを指定します。 場合 201703 L にマクロが設定されて、 [/std:c++ 17](../build/reference/std-specify-language-standard-version.md)コンパイラ オプションを指定します。 高い、指定されていない値に設定されているときに、 [/std:c++ + 最新](../build/reference/std-specify-language-standard-version.md)オプションを指定します。 それ以外の場合、マクロは定義されません。 **&#95;MSVC&#95;LANG**マクロと[/std (言語標準バージョンの指定)](../build/reference/std-specify-language-standard-version.md)コンパイラ オプションで、Visual Studio 2015 Update 3 以降を使用できます。
+- **&#95;MSVC&#95;LANG** 対象となる、コンパイラは C++ 言語標準を指定する整数リテラルとして定義されています。 C++ としてコンパイルされたコードでのみ設定されます。 マクロは、整数リテラル 201402 L を既定では、値とき、または、 [/std:c++14](../build/reference/std-specify-language-standard-version.md)コンパイラ オプションを指定します。 場合 201703 L にマクロが設定されて、 [/std:c++17](../build/reference/std-specify-language-standard-version.md)コンパイラ オプションを指定します。 高い、指定されていない値に設定されているときに、 [/std:c++latest](../build/reference/std-specify-language-standard-version.md)オプションを指定します。 それ以外の場合、マクロは定義されません。 **&#95;MSVC&#95;LANG**マクロと[/std (言語標準バージョンの指定)](../build/reference/std-specify-language-standard-version.md)コンパイラ オプションで、Visual Studio 2015 Update 3 以降を使用できます。
 
 - **&#95;&#95;MSVC&#95;RUNTIME&#95;CHECKS** 1 と 1 つとして定義されているの[/RTC](../build/reference/rtc-run-time-error-checks.md)コンパイラ オプションを設定します。 それ以外の場合、定義されていません。
 

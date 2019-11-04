@@ -340,7 +340,7 @@ OpenMP 2.0 言語拡張を有効にします。 [/Openmp](openmp-enable-openmp-2
 
 ### <a name="c-language-standard"></a>C++ 言語標準
 
-コンパイラにC++よって適用される言語標準を決定します。 可能な場合は、最新バージョンを使用することをお勧めします。 [/Std: c++ 14、/std: c++ 17、/std: c++ latest](std-specify-language-standard-version.md)を設定します。
+コンパイラにC++よって適用される言語標準を決定します。 可能な場合は、最新バージョンを使用することをお勧めします。 [/std:c++14、/std:c++17、/std:c++latest](std-specify-language-standard-version.md)を設定します。
 
 **いずれ**
 

@@ -20,7 +20,7 @@ ms.locfileid: "69632906"
 
 コンパイラは、既定`if constexpr`の c++ 14 標準を使用してコンパイルされたコード内に式を検出しました。 この式は、C++ 17 標準で開始されます。 C++ 11 または C++ 14 の互換性が必要な場合、この式は移植できません。
 
-C4984 は、既定ではエラーとして発行されますが、suppressible です。 C++ 17 としてコードをコンパイルしてこの式を有効にするに[は、/std: c++ 17 または/std: C++ latest](../../build/reference/std-specify-language-standard-version.md)を使用します。 Microsoft 拡張機能`if constexpr`として c++ 14 用にコンパイルされたコードで式を使用するには、エラーメッセージの警告レベルを抑制、無効化、または変更することができます。 [/Wd4984](../../build/reference/compiler-option-warning-level.md)を使用して C4984 を無効にするか、または __/w__*n*__4984__を使用して、エラーではなくレベル*N*の警告として有効にすることができます。 または、ソースファイルの警告を発生させる行の前に[#pragma warning (抑制: 4984)](../../preprocessor/warning.md)を使用します。
+C4984 は、既定ではエラーとして発行されますが、suppressible です。 C++17 としてコードをコンパイルしてこの式を有効にするには、[/std:c++17 または/std:c++latest](../../build/reference/std-specify-language-standard-version.md)を使用します。 Microsoft 拡張機能`if constexpr`として C++14 用にコンパイルされたコードで式を使用するには、エラーメッセージの警告レベルを抑制、無効化、または変更することができます。 [/Wd4984](../../build/reference/compiler-option-warning-level.md)を使用して C4984 を無効にするか、または __/w__*n*__4984__を使用して、エラーではなくレベル*N*の警告として有効にすることができます。 または、ソースファイルの警告を発生させる行の前に[#pragma warning (抑制: 4984)](../../preprocessor/warning.md)を使用します。
 
 この警告は、Visual Studio 2017 バージョン15.3 以降で使用できます。 特定のコンパイラバージョン以降で導入された警告を無効にする方法については、「コンパイラの[バージョン別のコンパイラ警告](compiler-warnings-by-compiler-version.md)」を参照してください。
 

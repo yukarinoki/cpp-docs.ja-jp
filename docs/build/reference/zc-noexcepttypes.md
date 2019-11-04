@@ -25,7 +25,7 @@ ms.locfileid: "62315938"
 
 ## <a name="remarks"></a>Remarks
 
-ときに、 **/zc: noexcepttypes**オプションを指定すると、コンパイラは、標準の c++ 17 に準拠しているし、処理[throw()](../../cpp/exception-specifications-throw-cpp.md)のエイリアスとして[noexcept](../../cpp/noexcept-cpp.md)を削除します`throw(<type list>)`。と`throw(...)`、特定の種類を含めることができ`noexcept`します。 **/Zc: noexcepttypes**場合オプションは使用のみ[/std:c++ 17](std-specify-language-standard-version.md)または[/std:latest](std-specify-language-standard-version.md)を有効にします。 **/Zc: noexcepttypes** ISO C 17 標準に準拠するように既定で有効です。 [/Permissive -](permissive-standards-conformance.md)オプションには影響しません **/zc: noexcepttypes**します。 指定することで、このオプションをオフに **/Zc:noexceptTypes-** の c++ 14 動作に戻す`noexcept`とき **/std::C++ 17**または **/std::latest**が指定されてです。
+ときに、 **/zc: noexcepttypes**オプションを指定すると、コンパイラは、標準の C++17 に準拠しているし、処理[throw()](../../cpp/exception-specifications-throw-cpp.md)のエイリアスとして[noexcept](../../cpp/noexcept-cpp.md)を削除します`throw(<type list>)`。と`throw(...)`、特定の種類を含めることができ`noexcept`します。 **/Zc: noexcepttypes**場合オプションは使用のみ[/std:c++17](std-specify-language-standard-version.md)または[/std:latest](std-specify-language-standard-version.md)を有効にします。 **/Zc: noexcepttypes** ISO C 17 標準に準拠するように既定で有効です。 [/Permissive -](permissive-standards-conformance.md)オプションには影響しません **/zc: noexcepttypes**します。 指定することで、このオプションをオフに **/Zc:noexceptTypes-** の C++14 動作に戻す`noexcept`とき **/std:c++17**または **/std:latest**が指定されてです。
 
 C コンパイラで Visual Studio 2017 バージョン 15.5 以降では、c++ 17 モードでの宣言で複数の一致しない例外の指定を診断または、 [/permissive -](permissive-standards-conformance.md)オプションを指定します。
 

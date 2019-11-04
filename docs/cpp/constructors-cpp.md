@@ -597,7 +597,7 @@ Derived d4 calls: Base()*/
 
 ::: moniker range=">=vs-2017"
 
-**Visual Studio 2017 バージョン15.7 以降**: **/std: c++ 17**モードの using ステートメントは、派生クラスのコンストラクターに対し**て**同じシグネチャを持つものを除き、基本クラスからのすべてのコンストラクターのスコープを設定します。 一般に、派生クラスが新しいデータ メンバーまたはコンストラクターを宣言しない場合は、コンストラクターの継承を使用することをお勧めします。 「 [Visual Studio 2017 バージョン15.7 の機能強化](https://docs.microsoft.com/cpp/overview/cpp-conformance-improvements?view=vs-2017#improvements_157)」も参照してください。
+**Visual Studio 2017 バージョン15.7 以降**: **/std:c++17**モードの using ステートメントは、派生クラスのコンストラクターに対し**て**同じシグネチャを持つものを除き、基本クラスからのすべてのコンストラクターのスコープを設定します。 一般に、派生クラスが新しいデータ メンバーまたはコンストラクターを宣言しない場合は、コンストラクターの継承を使用することをお勧めします。 「 [Visual Studio 2017 バージョン15.7 の機能強化](https://docs.microsoft.com/cpp/overview/cpp-conformance-improvements?view=vs-2017#improvements_157)」も参照してください。
 
 ::: moniker-end
 
