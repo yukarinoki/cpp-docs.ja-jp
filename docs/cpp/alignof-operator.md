@@ -49,7 +49,7 @@ C++ 11 で、 **alignof**演算子を指定した型のバイト単位で、配�
 |**__alignof( double )**|8|
 |**__alignof( char\* )**|4|
 
-**_ _Alignof**値は、の値として同じ`sizeof`の基本型。 ただし、次の例を検討します。
+**_ _alignof**値は、の値として同じ`sizeof`の基本型。 ただし、次の例を検討します。
 
 ```cpp
 typedef struct { int a; double b; } S;

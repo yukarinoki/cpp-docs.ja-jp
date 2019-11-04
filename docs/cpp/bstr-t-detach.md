@@ -31,7 +31,7 @@ BSTR Detach( ) throw;
 
 ## <a name="example"></a>例
 
-参照してください[_bstr_t::assign](../cpp/bstr-t-assign.md)の例を使用して、**デタッチ**します。
+参照してください[_bstr_t::assign](../cpp/bstr-t-assign.md)の例を使用して、**Detach**します。
 
 **Microsoft 固有の仕様はここまで**
 

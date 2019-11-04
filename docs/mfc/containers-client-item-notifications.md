@@ -38,7 +38,7 @@ ms.locfileid: "62153426"
 |----------------------------|---------------------|
 |**OLE_SAVED**または**OLE_CLOSED**|使用されません。|
 |**OLE_CHANGED**|OLE 項目が変更されたことの縦横比を指定します。|
-|**OLE_CHANGED_STATE**|入力されている状態について説明します (*これ*、 *loadedState*、 *openState*、 *activeState*、または*activeUIState*)。|
+|**OLE_CHANGED_STATE**|入力されている状態について説明します (*this*、 *loadedState*、 *openState*、 *activeState*、または*activeUIState*)。|
 
 クライアント アイテムの状態の詳細については、次を参照してください。[コンテナー。クライアント アイテムの状態](../mfc/containers-client-item-states.md)します。
 

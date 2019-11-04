@@ -27,7 +27,7 @@ Visual C には、rebar の一般的なコントロールを活用するため�
 - 使用して、rebar の作成`CReBar`を呼び出して[CReBar::GetReBarCtrl](../mfc/reference/crebar-class.md#getrebarctrl)へのアクセスを取得する、`CReBarCtrl`メンバー関数。
 
     > [!NOTE]
-    >  `CReBar::GetReBarCtrl` キャストするインライン メンバー関数は、**この**rebar オブジェクトのポインター。 つまり、実行時に、関数呼び出しのオーバーヘッドが発生しません。
+    >  `CReBar::GetReBarCtrl` キャストするインライン メンバー関数は、**this**rebar オブジェクトのポインター。 つまり、実行時に、関数呼び出しのオーバーヘッドが発生しません。
 
 - 使用して、rebar の作成[crebarctrl の比較](../mfc/reference/crebarctrl-class.md)のコンス トラクター。
 

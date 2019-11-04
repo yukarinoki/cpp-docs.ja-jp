@@ -72,7 +72,7 @@ long double expm1l(
 
 ## <a name="remarks"></a>Remarks
 
-オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **expm1**を受け取って返す**float**と**長い** **二重**値。 C プログラムでは、 **expm1**は常に**double**を受け取り、返します。
+オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **expm1**を受け取って返す**float**と**long double**値。 C プログラムでは、 **expm1**は常に**double**を受け取り、返します。
 
 ## <a name="requirements"></a>必要条件
 

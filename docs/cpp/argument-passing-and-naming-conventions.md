@@ -45,7 +45,7 @@ x86 プラットフォームでは、すべての引数は渡されたときに 
 |[__clrcall](../cpp/clrcall.md)|N/A|CLR 式スタックに順に (左から右に) パラメーターを読み込む|
 |[__stdcall](../cpp/stdcall.md)|Callee|パラメーターをスタックに逆の順序で (右から左に) プッシュする|
 |[__fastcall](../cpp/fastcall.md)|Callee|レジスタに格納されてから、スタックにプッシュされる|
-|[__thiscall](../cpp/thiscall.md)|Callee|スタックにプッシュされます。**この**ECX に格納されているポインター|
+|[__thiscall](../cpp/thiscall.md)|Callee|スタックにプッシュされます。**this**ECX に格納されているポインター|
 |[__vectorcall](../cpp/vectorcall.md)|Callee|レジスタに格納されてから、スタックに逆の順序で (右から左に) プッシュされる|
 
 関連情報については、次を参照してください。[廃止された呼び出し規則](../cpp/obsolete-calling-conventions.md)します。

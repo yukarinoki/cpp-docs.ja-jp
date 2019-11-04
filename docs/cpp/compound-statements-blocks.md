@@ -27,7 +27,7 @@ ms.locfileid: "62154865"
 
 ## <a name="remarks"></a>Remarks
 
-次の例として複合ステートメントを使用して、*ステートメント*の一部、**場合**ステートメント (を参照してください[if ステートメント](../cpp/if-else-statement-cpp.md)構文の詳細について)。
+次の例として複合ステートメントを使用して、*ステートメント*の一部、**if**文 (を参照してください[if 文](../cpp/if-else-statement-cpp.md)構文の詳細について)。
 
 ```cpp
 if( Amount > 100 )

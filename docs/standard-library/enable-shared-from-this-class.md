@@ -43,7 +43,7 @@ protected:
 
 ## <a name="remarks"></a>Remarks
 
-`enable_shared_from_this` の派生オブジェクトは、メンバー関数の `shared_from_this` メソッドを使って、既存の `shared_ptr` 所有者と所有権を共有するインスタンスの [shared_ptr](../standard-library/shared-ptr-class.md) 所有者を作成できます。 それ以外の場合、新規に作成する場合`shared_ptr`を使用して**この**は既存のものから区別され`shared_ptr`所有者で、参照が無効です。 または複数回削除するオブジェクトが発生する可能性があります。
+`enable_shared_from_this` の派生オブジェクトは、メンバー関数の `shared_from_this` メソッドを使って、既存の `shared_ptr` 所有者と所有権を共有するインスタンスの [shared_ptr](../standard-library/shared-ptr-class.md) 所有者を作成できます。 それ以外の場合、新規に作成する場合`shared_ptr`を使用して**this**は既存のものから区別され`shared_ptr`所有者で、参照が無効です。 または複数回削除するオブジェクトが発生する可能性があります。
 
 コンストラクター、デストラクター、および代入演算子は、偶発的な誤用を防ぐために保護されています。 テンプレート引数の型*Ty*派生クラスの型でなければなりません。
 
@@ -60,7 +60,7 @@ shared_ptr<const T> shared_from_this() const;
 
 ### <a name="remarks"></a>Remarks
 
-基底クラス `enable_shared_from_this` からオブジェクトを派生すると、`shared_from_this` テンプレート メンバー関数は、このインスタンスの所有権を既存の `shared_ptr` 所有者と共有する [shared_ptr クラス](../standard-library/shared-ptr-class.md)のオブジェクトを返します。 それ以外の場合、新規に作成する場合`shared_ptr`から**この**は既存のものから区別され`shared_ptr`所有者で、参照が無効です。 または複数回削除するオブジェクトが発生する可能性があります。 `shared_ptr` オブジェクトによってまだ所有されていないインスタンスで `shared_from_this` を呼び出した場合の動作は未定義です。
+基底クラス `enable_shared_from_this` からオブジェクトを派生すると、`shared_from_this` テンプレート メンバー関数は、このインスタンスの所有権を既存の `shared_ptr` 所有者と共有する [shared_ptr クラス](../standard-library/shared-ptr-class.md)のオブジェクトを返します。 それ以外の場合、新規に作成する場合`shared_ptr`から**this**は既存のものから区別され`shared_ptr`所有者で、参照が無効です。 または複数回削除するオブジェクトが発生する可能性があります。 `shared_ptr` オブジェクトによってまだ所有されていないインスタンスで `shared_from_this` を呼び出した場合の動作は未定義です。
 
 ### <a name="example"></a>例
 

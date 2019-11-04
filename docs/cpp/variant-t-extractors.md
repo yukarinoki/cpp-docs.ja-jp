@@ -89,13 +89,13 @@ operator unsigned __int64() const;
 
 カプセル化されたから生データを抽出`VARIANT`します。 場合、`VARIANT`されませんが、適切な型に既に`VariantChangeType`変換を実行するために使用し、障害発生時にエラーが生成されます。
 
-- **operator short ()** 抽出、**短い**整数値。
+- **operator short ()** 抽出、**short**整数値。
 
-- **operator long ()** 抽出、**長い**整数値。
+- **operator long ()** 抽出、**double**整数値。
 
 - **operator float ()** 抽出、 **float**数値を指定します。
 
-- **operator double ()** 抽出、**二重**整数値。
+- **operator double ()** 抽出、**double**整数値。
 
 - **operator CY ()** 抽出、`CY`オブジェクト。
 

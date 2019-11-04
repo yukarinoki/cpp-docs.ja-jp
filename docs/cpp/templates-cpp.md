@@ -67,7 +67,7 @@ int minimum(const int& lhs, const int& rhs)
 template <typename T, typename U, typename V> class Foo{};
 ```
 
-キーワード**クラス**と等価**typename**このコンテキストでします。 前の例として表すことができます。
+キーワード**class**と等価**typename**このコンテキストでします。 前の例として表すことができます。
 
 ```cpp
 template <class T, class U, class V> class Foo{};

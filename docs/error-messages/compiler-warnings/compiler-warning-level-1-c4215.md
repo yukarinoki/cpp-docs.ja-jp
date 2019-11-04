@@ -17,7 +17,7 @@ ms.locfileid: "62386487"
 
 nonstandard extension used : long float
 
-既定の Microsoft 拡張機能 (/Ze) が扱う**long float**として**二重**します。 ANSI 互換 ([/Za](../../build/reference/za-ze-disable-language-extensions.md)) はありません。 使用**二重**互換性を維持します。
+既定の Microsoft 拡張機能 (/Ze) が扱う**long float**として**double**します。 ANSI 互換 ([/Za](../../build/reference/za-ze-disable-language-extensions.md)) はありません。 使用**double**互換性を維持します。
 
 次の例では、C4215 が生成されます。
 

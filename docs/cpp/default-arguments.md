@@ -38,7 +38,7 @@ int print( double dvalue, int prec=2 );  // Print a double with a
 //  given precision.
 ```
 
-実装、`print`型の 1 つだけこのような関数が存在するという事実を反映するように関数が若干変更**二重**:
+実装、`print`型の 1 つだけこのような関数が存在するという事実を反映するように関数が若干変更**double**:
 
 ```cpp
 // default_arguments.cpp

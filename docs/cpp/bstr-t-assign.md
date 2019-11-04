@@ -34,7 +34,7 @@ void Assign(
 
 ## <a name="remarks"></a>Remarks
 
-**割り当てる**はバイナリ コピーをつまり、全体の長さ、`BSTR`コンテンツに関係なく、コピーされます。
+**Assign**はバイナリ コピーをつまり、全体の長さ、`BSTR`コンテンツに関係なく、コピーされます。
 
 ## <a name="example"></a>例
 

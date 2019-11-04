@@ -51,14 +51,14 @@ int main(int, char*[], char*[]) {}
 |**signed char** |<xref:System.SByte?displayProperty=nameWithType>|
 |**unsigned char**|<xref:System.Byte?displayProperty=nameWithType>|
 |**wchar_t**|<xref:System.Char?displayProperty=nameWithType>|
-|**短い**と**つまり署名**|<xref:System.Int16?displayProperty=nameWithType>|
+|**short**と**signed short**|<xref:System.Int16?displayProperty=nameWithType>|
 |**unsigned short**|<xref:System.UInt16?displayProperty=nameWithType>|
-|**int**、 **int を署名**、**長い**、および**時間の長い署名**|<xref:System.Int32?displayProperty=nameWithType>|
+|**int**、 **signed int**、**long**、および**signed long**|<xref:System.Int32?displayProperty=nameWithType>|
 |**符号なし int**と**unsigned long**|<xref:System.UInt32?displayProperty=nameWithType>|
 |**_ _int64**と **_ _int64 の署名**|<xref:System.Int64?displayProperty=nameWithType>|
 |**unsigned __int64**|<xref:System.UInt64?displayProperty=nameWithType>|
 |**float**|<xref:System.Single?displayProperty=nameWithType>|
-|**二重**と**long double**|<xref:System.Double?displayProperty=nameWithType>|
+|**double**と**long double**|<xref:System.Double?displayProperty=nameWithType>|
 
 既定の符号付きまたは符号なしにするコンパイラ オプションの詳細については**char**を参照してください[/J (既定の char 型は符号付き)](../build/reference/j-default-char-type-is-unsigned.md)します。
 

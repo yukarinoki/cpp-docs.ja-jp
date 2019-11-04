@@ -19,7 +19,7 @@ ms.locfileid: "62393910"
 ---
 # <a name="virtual-c"></a>virtual (C++)
 
-**仮想**キーワードは、仮想関数または仮想基底クラスを宣言します。
+**virtual**キーワードは、仮想関数または仮想基底クラスを宣言します。
 
 ## <a name="syntax"></a>構文
 
@@ -37,7 +37,7 @@ virtual [access-specifier] base-class-name
 メンバー関数を宣言します。
 
 *access-specifier*<br/>
-基底クラスへのアクセスのレベルを定義**パブリック**、**保護**または**プライベート**します。 前に、または後に表示されることができます、**仮想**キーワード。
+基底クラスへのアクセスのレベルを定義**public**、**protected**または**private**します。 前に、または後に表示されることができます、**virtual**キーワード。
 
 *base-class-name*<br/>
 以前に宣言されたクラス型を識別します。

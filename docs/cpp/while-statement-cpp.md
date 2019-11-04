@@ -27,11 +27,11 @@ while ( expression )
 
 ## <a name="remarks"></a>Remarks
 
-テスト*式*ループの各実行前に、の処理を行うのため、**中に**ループは 0 回以上を実行します。 *式*の整数型、ポインター型、または整数への明確な変換を持つクラス型またはポインター型である必要があります。
+テスト*式*ループの各実行前に、の処理を行うのため、**while**ループは 0 回以上を実行します。 *式*の整数型、ポインター型、または整数への明確な変換を持つクラス型またはポインター型である必要があります。
 
-A**中に**ループがときに終了することできますも、 [break](../cpp/break-statement-cpp.md)、 [goto](../cpp/goto-statement-cpp.md)、または[を返す](../cpp/return-statement-cpp.md)ステートメント本体が実行されます。 使用[続行](../cpp/continue-statement-cpp.md)を終了する前に、現在のイテレーションを終了する、**中**ループします。 **引き続き**の次のイテレーションに制御を渡します、**中**ループします。
+**while**ループがときに終了することできますも、 [break](../cpp/break-statement-cpp.md)、 [goto](../cpp/goto-statement-cpp.md)、または[を返す](../cpp/return-statement-cpp.md)ステートメント本体が実行されます。 使用[続行](../cpp/continue-statement-cpp.md)を終了する前に、現在のイテレーションを終了する、**while**ループします。 **continue**の次のイテレーションに制御を渡します、**while**ループします。
 
-次のコードでは、**中**文字列から末尾をトリミングするループがアンダー スコアします。
+次のコードでは、**while**文字列から末尾をトリミングするループがアンダー スコアします。
 
 ```cpp
 // while_statement.cpp

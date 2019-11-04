@@ -15,7 +15,7 @@ C++ 標準は一連の属性を定義し、コンパイラ ベンダー (製造�
 
 場合によっては、標準属性は、コンパイラ固有の declspec パラメーターと重複します。 Visual C で使用することができます、`[[deprecated]]`属性を使用してではなく`declspec(deprecated)`属性が任意に準拠するコンパイラで認識されるとします。 すべての他の declspec パラメーター dllimport と dllexport などにはありませんとしてまだ属性と同じので declspec 構文を使用し続ける必要があります。 属性、型システムには影響しませんし、プログラムの意味を変更しません。 コンパイラは、認識されていない属性値を無視します。
 
-**Visual Studio 2017 バージョン 15.3 以降**(で使用可能な[/std:c + + 17](../build/reference/std-specify-language-standard-version.md))。1 つのすべての名前を名前空間を指定する属性リストのスコープで**を使用して**導入。
+**Visual Studio 2017 バージョン 15.3 以降**(で使用可能な[/std:c + + 17](../build/reference/std-specify-language-standard-version.md))。1 つのすべての名前を名前空間を指定する属性リストのスコープで**using**導入。
 
 ```cpp
 void g() {
