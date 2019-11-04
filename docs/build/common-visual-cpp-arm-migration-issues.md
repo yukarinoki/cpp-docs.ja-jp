@@ -100,4 +100,4 @@ MSVC コンパイラ サポートの 2 つの異なる解釈、`volatile`記憶�
 
 ## <a name="see-also"></a>関連項目
 
-[ARM プロセッサ用の Visual C ++ の構成する](configuring-programs-for-arm-processors-visual-cpp.md)
+[ARM プロセッサ用の Visual C++ の構成する](configuring-programs-for-arm-processors-visual-cpp.md)

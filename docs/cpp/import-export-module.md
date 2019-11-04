@@ -19,7 +19,7 @@ ms.locfileid: "70273622"
 ---
 # <a name="module-import-export"></a>モジュール、インポート、エクスポート
 
-**Module**、 **import**、および**export**キーワードは c++ 20 で使用でき、/[実験的: モジュール](../build/reference/experimental-module.md)コンパイラスイッチと共に、 [/std: C + + latest](../build/reference/std-specify-language-standard-version.md)が必要です。 詳細については、「」の「 [ C++モジュールの概要](modules-cpp.md)」を参照してください。
+**Module**、 **import**、および**export**キーワードは c++ 20 で使用でき、/[実験的: モジュール](../build/reference/experimental-module.md)コンパイラスイッチと共に、 [/std: C++ latest](../build/reference/std-specify-language-standard-version.md)が必要です。 詳細については、「」の「 [ C++モジュールの概要](modules-cpp.md)」を参照してください。
 
 ## <a name="module"></a>name
 

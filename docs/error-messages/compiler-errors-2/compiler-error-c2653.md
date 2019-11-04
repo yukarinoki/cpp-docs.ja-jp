@@ -21,7 +21,7 @@ ms.locfileid: "65447945"
 
 このエラーは、クラス、構造体、共用体、またはスコープ演算子の前に名前空間として宣言されていない名前を使用するときに発生することができます。 この問題を解決するには、名前を宣言またはされる前に、名前を宣言するヘッダーが含まれます。
 
-C2653 を定義しようとする場合も、*複合名前空間*、1 つまたは複数のスコープの入れ子になった名前空間名を含む名前空間。 C++ 17 の前に定義が C++ では許可されません。 名前空間を合成します。 複合の名前空間を指定すると、Visual Studio 2015 Update 3 以降はサポートされて、 [/std:c + + 最新](../../build/reference/std-specify-language-standard-version.md)コンパイラ オプション。 Visual Studio 2017 バージョン 15.5 以降では、コンパイラは複合名前空間の定義をサポートときに、 [/std:c + + + 17](../../build/reference/std-specify-language-standard-version.md)オプションを指定します。
+C2653 を定義しようとする場合も、*複合名前空間*、1 つまたは複数のスコープの入れ子になった名前空間名を含む名前空間。 C++ 17 の前に定義が C++ では許可されません。 名前空間を合成します。 複合の名前空間を指定すると、Visual Studio 2015 Update 3 以降はサポートされて、 [/std:c++ 最新](../../build/reference/std-specify-language-standard-version.md)コンパイラ オプション。 Visual Studio 2017 バージョン 15.5 以降では、コンパイラは複合名前空間の定義をサポートときに、 [/std:c++ + 17](../../build/reference/std-specify-language-standard-version.md)オプションを指定します。
 
 ## <a name="examples"></a>使用例
 
