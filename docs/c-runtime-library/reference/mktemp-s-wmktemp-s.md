@@ -35,12 +35,12 @@ helpviewer_keywords:
 - wmktemp_s function
 - temporary files [C++]
 ms.assetid: 92a7e269-7f3d-4c71-bad6-14bc827a451d
-ms.openlocfilehash: b0db1a50f638c6130e4beb6798431179edec153b
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 464f0dfbdb0b84e1fd29ec650e53f5c2543c4403
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951593"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624212"
 ---
 # <a name="_mktemp_s-_wmktemp_s"></a>_mktemp_s、_wmktemp_s
 
@@ -93,6 +93,8 @@ errno_t _wmktemp_s(
 
 **_Mktemp_s**関数は、 *nametemplate*引数を変更することで一意のファイル名を作成します。これにより、呼び出しの後に、 *nametemplate*ポインターは、新しいファイル名を含む文字列を指します。 **_mktemp_s**は、現在ランタイムシステムによって使用されているマルチバイトコードページに従ってマルチバイト文字シーケンスを認識し、マルチバイト文字列の引数を適切な方法で自動的に処理します。 **_wmktemp_s**は、 **_mktemp_s**のワイド文字バージョンです。 **_wmktemp_s**の引数はワイド文字列です。 **_wmktemp_s**と **_mktemp_s**は、 **_wmktemp_s**がマルチバイト文字列を処理しない点を除いて、同じように動作します。
 
+これらの関数のデバッグライブラリバージョンは、最初にバッファーを0xFE で埋めます。 この動作を無効にするには、[_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md) を使用します。
+
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
 |Tchar.h のルーチン|_UNICODE および _MBCS が未定義の場合|_MBCS が定義されている場合|_UNICODE が定義されている場合|
@@ -119,16 +121,16 @@ FNA12345 が存在しない場合、次に返される名前はもう一度次�
 
 **_mktemp_s**では、 *Base*と*nametemplate*の値の任意の組み合わせに対して一意のファイル名を最大26個作成できます。 したがって、FNZ12345 は、この例で使用される*base*および*nametemplate*の値に対して **_mktemp_s**が作成できる最後の一意のファイル名です。
 
-C++ では、これらの関数の使用はテンプレートのオーバーロードによって簡素化されます。オーバーロードでは、バッファー長を自動的に推論できる (サイズの引数を指定する必要がなくなる) だけでなく、古くてセキュリティが万全ではない関数を新しく安全な関数に自動的に置き換えることができます。 詳細については、「 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
+C++ では、これらの関数の使用はテンプレートのオーバーロードによって簡素化されます。オーバーロードでは、バッファー長を自動的に推論できる (サイズの引数を指定する必要がなくなる) だけでなく、古くてセキュリティが万全ではない関数を新しく安全な関数に自動的に置き換えることができます。 詳細については、「[セキュリティ保護されたテンプレート オーバーロード](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_mktemp_s**|\<io.h>|
 |**_wmktemp_s**|\<io.h> または \<wchar.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 

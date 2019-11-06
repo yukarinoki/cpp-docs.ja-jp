@@ -2,12 +2,12 @@
 title: Universal CRT へのコードのアップグレード
 ms.date: 03/31/2017
 ms.assetid: eaf34c1b-da98-4058-a059-a10db693a5ce
-ms.openlocfilehash: 68edcd57ee03ac861a6d2105456f4dbf699c1210
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: 0554ff713b499f99e7e7508faf687c1635e6d912
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448998"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627174"
 ---
 # <a name="upgrade-your-code-to-the-universal-crt"></a>Universal CRT へのコードのアップグレード
 
@@ -23,7 +23,7 @@ Windows コンポーネントと同じように、UCRT ライブラリのファ�
 
 標準 C ライブラリ ヘッダー ファイルが、Windows SDK に含まれるようになり、SDK バージョン固有のディレクトリのインクルード フォルダーに置かれます。 ヘッダー ファイルの標準的な場所は、Program Files または Program Files (x86) ディレクトリにある Windows Kits\\10\\Include\\_sdk-version_\\ucrt です。ここで _sdk-version_ は、Windows のバージョンまたは更新プログラムに対応します。たとえば、Windows 10 Anniversary Update の場合は 10.0.14393.0 です。
 
-UCRT スタティック ライブラリとダイナミック リンク スタブ ライブラリは、 Windows Kits\\10\\Lib\\_sdk-version_\\ucrt\\_architecture_ の下にある Program Files または Program Files (x86) ディレクトリにあります。ここで、_architecture_ は、ARM、x86、または X64 です。 製品版およびデバッグのスタティック ライブラリは、libucrt.lib と libucrtd.lib であり、UCRT DLL のライブラリは、ucrt.lib と ucrtd.lib です。
+UCRT スタティック ライブラリとダイナミック リンク スタブ ライブラリは、Program Files または Program Files (x86) ディレクトリにある Windows Kits\\10\\Lib\\_sdk-version_\\ucrt\\_architecture_ にあります。ここで、_architecture_ は、ARM、x86、または X64 です。 製品版およびデバッグのスタティック ライブラリは、libucrt.lib と libucrtd.lib であり、UCRT DLL のライブラリは、ucrt.lib と ucrtd.lib です。
 
 製品版およびデバッグの UCRT DLL は、別々の場所にあります。 製品版 DLL は再頒布可能であり、Program Files または Program Files (x86) ディレクトリの Windows Kits\\10\\Redist\\ucrt\\DLLs\\_architecture_\. の下にあります。 デバッグ DLL は再頒布可能ではありません。プログラム ファイルまたはプログラム ファイル (x86) ディレクトリの Windows Kits\\10\\bin\\_architecture_\\ucrt フォルダーの下にあります。
 
@@ -35,7 +35,7 @@ Visual Studio C++ プロジェクトを更新するときに、プロジェク�
 
 UCRT は現在、Microsoft Windows オペレーティング システムのコンポーネントなので、Windows 10 では、オペレーティング システムの一部として含まれており、Windows Vista から Windows 8.1 までの旧バージョンのオペレーティング システムでは、Windows Update を通して入手できます。 再頒布可能パッケージのバージョンは Windows XP で使用できます。 オペレーティング システムのコンポーネントであるため、UCRT の更新プログラムとサービスは、Visual Studio および Microsoft C++ コンパイラのバージョンとは無関係に、Windows Update によって管理されます。 UCRT は、Windows コンポーネントであり、セキュリティおよび更新の容易さ、小さいイメージ サイズなどの理由から、アプリ用の UCRT を集中配置することをお勧めします。
 
-UCRT は、Visual Studio 2015 または Visual Studio 2017 でサポートされている Windows の任意のバージョンで使用できます。 Windows 10 以外のサポートされているバージョンの Windows では、vcredist パッケージを使用して再配布することができます。 vcredist パッケージは、UCRT コンポーネントを含み、既定で、それらのコンポーネントがインストールされていない Windows オペレーティング システムにそれらを自動的にインストールします。 詳細については、「[Visual C++ ファイルの再配布](../windows/redistributing-visual-cpp-files.md)」を参照してください。
+UCRT は、Visual Studio 2015 または Visual Studio 2017 でサポートされている Windows の任意のバージョンで使用できます。 Windows 10 以外のサポートされているバージョンの Windows では、vcredist パッケージを使用して再配布することができます。 vcredist パッケージは、UCRT コンポーネントを含み、既定で、それらのコンポーネントがインストールされていない Windows オペレーティング システムにそれらを自動的にインストールします。 詳細については、「 [Redistributing Visual C++ Files](../windows/redistributing-visual-cpp-files.md)」を参照してください。
 
 UCRT のアプリのローカルの展開がサポートされていますが、パフォーマンスとセキュリティの両方の理由から推奨されません。 アプリのローカル展開用の DLL は、Windows SDK の一部として **redist** サブディレクトリに置かれています。 必要な DLL には、ucrtbase.dll および api-ms-win-_subset_.dll という名前の **APISet forwarder** DLL のセットなどがあります。 必要な DLL のセットはオペレーティング システムごとに異なるので、アプリのローカルの展開を使用するときにはすべての DLL を含めることをお勧めします。 アプリのローカルの展開に関するその他の詳細および注意事項については、「[Deployment in Visual C++](../windows/deployment-in-visual-cpp.md)」 (Visual c での展開) を参照してください。
 
@@ -47,6 +47,6 @@ UCRT では、ISO C99 への準拠を改善し、コードの品質およびセ�
 
 [Visual C++ 移植とアップグレードのガイド](visual-cpp-porting-and-upgrading-guide.md)<br/>
 [アップグレードに関する潜在的な問題 (Visual C++) の概要](overview-of-potential-upgrade-issues-visual-cpp.md)<br/>
-[旧バージョンの Visual C++ からのプロジェクトのアップグレード](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
+[以前のバージョンのビジュアルからのプロジェクトのアップグレードC++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [2003 から 2015 の Visual C++ の履歴の変更](visual-cpp-change-history-2003-2015.md)<br/>
 [Visual Studio の C++ 準拠の強化](../overview/cpp-conformance-improvements.md)

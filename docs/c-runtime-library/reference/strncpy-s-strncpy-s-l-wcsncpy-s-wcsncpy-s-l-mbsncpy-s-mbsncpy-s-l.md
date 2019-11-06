@@ -49,12 +49,12 @@ helpviewer_keywords:
 - _tcsncpy_s function
 - wcsncpy_s_l function
 ms.assetid: a971c800-94d1-4d88-92f3-a2fe236a4546
-ms.openlocfilehash: 196a3aac09db790da6b8137029383cca77c3d2ad
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 2ccfde34d12dadb76bc8b4058a3f9b52c3d1f4bc
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70947279"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626147"
 ---
 # <a name="strncpy_s-_strncpy_s_l-wcsncpy_s-_wcsncpy_s_l-_mbsncpy_s-_mbsncpy_s_l"></a>strncpy_s、_strncpy_s_l、wcsncpy_s、_wcsncpy_s_l、_mbsncpy_s、_mbsncpy_s_l
 
@@ -172,9 +172,9 @@ errno_t _mbsncpy_s_l(
 |*strDest*|*numberOfElements*|*strSource*|戻り値|*Strdest*の内容|
 |---------------|------------------------|-----------------|------------------|---------------------------|
 |**NULL**|任意|任意|**EINVAL**|変更されない|
-|任意|任意|**NULL**|**EINVAL**|*Strdest*[0] を0に設定します|
+|任意|任意|**NULL**|**EINVAL**|*Strdest*[0] を0に設定します。|
 |任意|0|任意|**EINVAL**|変更されない|
-|**NULL**以外|小さすぎる|任意|**ERANGE**|*Strdest*[0] を0に設定します|
+|**NULL**以外|小さすぎる|任意|**ERANGE**|*Strdest*[0] を0に設定します。|
 
 ## <a name="remarks"></a>Remarks
 
@@ -182,7 +182,7 @@ errno_t _mbsncpy_s_l(
 
 これには例外があります。 *Count*が**TRUNCATE**の場合、 *Strsource*に適合する*strsource*の大半がコピーされ、常に追加される終端の null 用の空き領域が残ります。
 
-例えば以下のようにします。
+たとえば、オブジェクトに適用された
 
 ```C
 char dst[5];
@@ -208,9 +208,9 @@ strncpy_s(dst, 5, "a long string", 4);
 
 出力値は、ロケールの **LC_CTYPE** カテゴリの設定に影響されます。詳細については、「[setlocale](setlocale-wsetlocale.md)」を参照してください。 **_l** サフィックスが付いていないこれらの関数のバージョンでは、このロケールに依存する動作に現在のロケールを使用します。 **_l** サフィックスが付いているバージョンは、渡されたロケール パラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-C++ では、これらの関数の使用はテンプレートのオーバーロードによって簡素化されます。オーバーロードでは、バッファー長を自動的に推論できる (サイズの引数を指定する必要がなくなる) だけでなく、古くてセキュリティが万全ではない関数を新しく安全な関数に自動的に置き換えることができます。 詳細については、「 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
+C++ では、これらの関数の使用はテンプレートのオーバーロードによって簡素化されます。オーバーロードでは、バッファー長を自動的に推論できる (サイズの引数を指定する必要がなくなる) だけでなく、古くてセキュリティが万全ではない関数を新しく安全な関数に自動的に置き換えることができます。 詳細については、「[セキュリティ保護されたテンプレート オーバーロード](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
-これらの関数のデバッグ バージョンは、最初にバッファーを 0xFD で埋めます。 この動作を無効にするには、[_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md) を使用します。
+これらの関数のデバッグライブラリバージョンは、最初にバッファーを0xFE で埋めます。 この動作を無効にするには、[_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md) を使用します。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -222,7 +222,7 @@ C++ では、これらの関数の使用はテンプレートのオーバーロ�
 > [!NOTE]
 > **_strncpy_s_l**、 **_wcsncpy_s_l** 、および **_mbsncpy_s_l**は、ロケールに依存せず、 **_tcsncpy_s_l**のためだけに提供されており、直接呼び出すためのものではありません。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
@@ -230,7 +230,7 @@ C++ では、これらの関数の使用はテンプレートのオーバーロ�
 |**wcsncpy_s**、 **_wcsncpy_s_l**|\<string.h> または \<wchar.h>|
 |**_mbsncpy_s**、 **_mbsncpy_s_l**|\<mbstring.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 
