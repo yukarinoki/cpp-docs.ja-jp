@@ -1,13 +1,13 @@
 ---
 title: '移植のガイド: Spy++'
-ms.date: 11/19/2018
+ms.date: 10/23/2019
 ms.assetid: e558f759-3017-48a7-95a9-b5b779d5e51d
-ms.openlocfilehash: 175f3fbba7e18f625dc3425c236162737689f068
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
-ms.translationtype: HT
+ms.openlocfilehash: 5505e0dbf23dd02f4ae5924ff4f2bacff3f11eea
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69630449"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627227"
 ---
 # <a name="porting-guide-spy"></a>移植のガイド: Spy++
 
@@ -15,7 +15,7 @@ ms.locfileid: "69630449"
 
 ## <a name="spy"></a>Spy++
 
-Spy++ は Windows デスクトップで広く使用される GUI 診断ツールであり、Windows デスクトップのユーザー インターフェイス要素に関するあらゆる種類の情報を提供します。 ウィンドウの完全な階層を表示し、各ウィンドウとコントロールについてのメタデータへのアクセスを提供します。 この便利なアプリケーションは、多年にわたって、Visual Studio に付属しています。 最後にコンパイルされたのが Visual C++ 6.0 で、Visual Studio 2015 に移植された古いバージョンも見つかっています。 Visual Studio 2017 のエクスペリエンスをほぼ同じになります。
+Spy++ は Windows デスクトップで広く使用される GUI 診断ツールであり、Windows デスクトップのユーザー インターフェイス要素に関するあらゆる種類の情報を提供します。 ウィンドウの完全な階層を表示し、各ウィンドウとコントロールについてのメタデータへのアクセスを提供します。 この便利なアプリケーションは、多年にわたって、Visual Studio に付属しています。 最後にコンパイルされたのが Visual C++ 6.0 で、Visual Studio 2015 に移植された古いバージョンも見つかっています。 Visual Studio 2017 または Visual Studio 2019 のエクスペリエンスはほぼ同じである必要があります。
 
 私たちは、MFC と Win32 API を使用する Windows デスクトップ アプリケーションの移植で、特に Visual C++ 6.0 以降の Visual C++ のリリースごとに更新されていない古いプロジェクトでは、このようなケースが標準的であると考えました。
 
@@ -25,7 +25,7 @@ Visual C++ 6.0 からの 2 つの古い .dsw ファイルのプロジェクト �
 
 2 つのプロジェクトをアップグレードした後、ソリューションは次のようになります。
 
-![Spy&#43;&#43; ソリューション](../porting/media/spyxxsolution.PNG "Spy&#43;&#43; ソリューション")
+![Spy&#43; &#43;ソリューション](../porting/media/spyxxsolution.PNG "Spy&#43; &#43;ソリューション")
 
 1 つは多数の C++ ファイルを持ち、もう 1 つは C で作成された DLL ファイルを持つ 2 つのプロジェクトがあります。
 
@@ -280,7 +280,7 @@ END_MESSAGE_MAP()
 (static_cast< LRESULT (AFX_MSG_CALL CWnd::*)(CPoint) > (&ThisClass :: OnNcHitTest)) },
 ```
 
-問題は、メンバー関数の型へのポインターの不一致に関係しています。 クラス型としての `CHotLinkCtrl` からクラス型としての `CWnd` への変換が問題ではありません。なぜなら、それは有効な派生から基本への変換であるためです。 問題があるのは、戻り型 UINT と LRESULT です。 LRESULT は、対象となるバイナリ型に応じて、64 ビットのポインターまたは 32 ビットのポインターである LONG_PTR UINT に解決されるため、UINT はこの型に変換されません。 これは、2005 年以前に作成されたコードをアップグレードするときには一般的ではありません。なぜなら、多くのメッセージの戻り値の型が、64 ビットの互換性の変更の一部として、Visual Studio 2005 で UINT から LRESULT に変更されているためです。 次のコードの戻り値の型を UINT から LRESULT に変更します。
+問題は、メンバー関数の型へのポインターの不一致に関係しています。 クラス型としての `CHotLinkCtrl` からクラス型としての `CWnd` への変換が問題ではありません。なぜなら、それは有効な派生から基本への変換であるためです。 この問題は、戻り値の型である UINT と LRESULT です。 LRESULT は、対象となるバイナリ型に応じて、64 ビットのポインターまたは 32 ビットのポインターである LONG_PTR UINT に解決されるため、UINT はこの型に変換されません。 これは、2005 年以前に作成されたコードをアップグレードするときには一般的ではありません。なぜなら、多くのメッセージの戻り値の型が、64 ビットの互換性の変更の一部として、Visual Studio 2005 で UINT から LRESULT に変更されているためです。 次のコードの戻り値の型を UINT から LRESULT に変更します。
 
 ```cpp
 afx_msg UINT OnNcHitTest(CPoint point);
@@ -292,7 +292,7 @@ afx_msg UINT OnNcHitTest(CPoint point);
 afx_msg LRESULT OnNcHitTest(CPoint point);
 ```
 
-この関数はおよそ 10 回使用され、すべて CWnd から派生した異なるクラスに存在するため、 **[定義へ移動]** (キーボード: **F12**) と **[宣言へ移動]** (キーボード: **Ctrl**+**F12**) を使用すると、カーソルがエディターの関数上にあり、 **[シンボルの検索]** ツール ウィンドウからこれらを探して移動する場合に便利です。 **[定義へ移動]** は通常、この 2 つの中ではより便利です。 **[宣言へ移動]** は、フレンド クラスの宣言や前方参照など、定義しているクラス宣言以外の宣言を検索します。
+この関数はおよそ 10 回使用され、すべて CWnd から派生した異なるクラスに存在するため、カーソルがエディターの関数上にあり、 **[シンボルの検索]** ツール ウィンドウからこれらを探して移動する場合は、 **[定義へ移動]** (キーボード: **F12**) と **[宣言へ移動]** (キーボード: **Ctrl**+**F12**) を使用すると便利です。 **[定義へ移動]** は通常、この 2 つの中ではより便利です。 **[宣言へ移動]** は、フレンド クラスの宣言や前方参照など、定義しているクラス宣言以外の宣言を検索します。
 
 ##  <a name="mfc_changes"></a> 手順 9. MFC の変更
 
@@ -466,7 +466,7 @@ class CTreeListBox : public CListBox
   BOOL m_bStdMouse : 1;
 ```
 
-このコードは、組み込みの bool 型が Visual C++ でサポートされる前に作成されました。 このようなコードでは、BOOL は **int** の **typedef** でした。**int** 型は **signed** 型であり、**signed int** のビット表現は、最初のビットを符号ビットとして使用するため、int 型のビットフィールドは、0 または -1 を表すものとして解釈できますが、想定と異なる可能性があります。
+このコードは、組み込みの bool 型が Visual C++ でサポートされる前に作成されました。 このようなコードでは、BOOL は**int**の**typedef**でした。**Int**型は**符号付き**の型であり、**符号付き int**のビット表現は、最初のビットを符号ビットとして使用するため、int 型のビットフィールドは、0または-1 を表すものとして解釈できます。これは意図したものではない可能性があります。
 
 これらがなぜビットフィールドなのかは、コードを見てもわかりません。 オブジェクトのサイズを小さくすることを目的としているのでしょうか。または、オブジェクトのバイナリ形式が使用されている場所があるのでしょうか。 ビットフィールドを使用する理由が見当たらないため、これらを BOOL の通常のメンバーに変更しました。 ビットフィールドを使用して、オブジェクトのサイズを小さく維持することは、動作が保証されていません。 これは、コンパイラが型をレイアウトする方法に依存しています。
 
@@ -673,5 +673,5 @@ int CPerfTextDataBase::NumStrings(LPCTSTR mszStrings) const
 
 ## <a name="see-also"></a>関連項目
 
-[移植とアップグレード: 例とケース スタディ](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
-[前のケース スタディ:COM Spy](../porting/porting-guide-com-spy.md)
+[移植およびアップグレード: 例とケース スタディ](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
+[前のケース スタディ: COM Spy](../porting/porting-guide-com-spy.md)

@@ -54,12 +54,12 @@ helpviewer_keywords:
 - _ctime32_s function
 - _tctime32_s function
 ms.assetid: 36ac419a-8000-4389-9fd8-d78b747a009b
-ms.openlocfilehash: d983ee4219985c7b213812a69f6f83f49dbf389b
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a6329319be5d002c8f0a35ceb0258cb9081923f7
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942005"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624404"
 ---
 # <a name="ctime_s-_ctime32_s-_ctime64_s-_wctime_s-_wctime32_s-_wctime64_s"></a>ctime_s、_ctime32_s、_ctime64_s、_wctime_s、_wctime32_s、_wctime64_s
 
@@ -144,7 +144,7 @@ errno_t _wctime64_s(
 
 ## <a name="return-value"></a>戻り値
 
-正常終了した場合は 0。 無効なパラメーターに起因して障害が発生した場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます。 実行の継続が許可された場合、エラー コードが返されます。 エラー コードは ERRNO.H で定義されます。これらのエラーの一覧については、[errno](../../c-runtime-library/errno-constants.md) を参照してください。 各エラー条件に対してスローされる実際のエラー コードを、次の表に示します。
+正常終了した場合は 0 を返します。 無効なパラメーターに起因して障害が発生した場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます。 実行を継続できる場合は、エラー コードが返されます。 エラー コードは ERRNO.H で定義されます。これらのエラーの一覧については、[errno](../../c-runtime-library/errno-constants.md) を参照してください。 各エラー条件に対してスローされる実際のエラー コードを、次の表に示します。
 
 ## <a name="error-conditions"></a>エラー条件
 
@@ -152,7 +152,7 @@ errno_t _wctime64_s(
 |--------------|------------------------|------------|------------|-----------------------|
 |**NULL**|任意|任意|**EINVAL**|変更されない|
 |Not **NULL** (有効なメモリを指す)|0|任意|**EINVAL**|変更されない|
-|**NULL**以外|0< サイズ < 26|任意|**EINVAL**|空の文字列|
+|**NULL**以外|0< size < 26|任意|**EINVAL**|空の文字列|
 |**NULL**以外|>= 26|NULL|**EINVAL**|空の文字列|
 |**NULL**以外|>= 26|< 0|**EINVAL**|空の文字列|
 
@@ -170,7 +170,9 @@ errno_t _wctime64_s(
 
 **ctime_s**は、 **_ctime64_s**に評価されるインライン関数で、 **time_t**は **__time64_t**に相当します。 以前の32ビットの**time_t**として**time_t**を解釈するようにコンパイラに強制する必要がある場合は、 **_USE_32BIT_TIME_T**を定義できます。 これを行うと、 **ctime_s**が **_ctime32_s**に評価されます。 ただし、この方法は推奨されません。2038 年 1 月 18 日以降にアプリケーションがエラーになる可能性があり、また、64 ビット プラットフォームでは使用できないためです。
 
-C++ では、テンプレートのオーバーロードによってこれらの関数を簡単に使用できます。オーバーロードでは、バッファー長を自動的に推論できるため、サイズ引数を指定する必要がなくなります。 詳細については、「 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
+C++ では、テンプレートのオーバーロードによってこれらの関数を簡単に使用できます。オーバーロードでは、バッファー長を自動的に推論できるため、サイズ引数を指定する必要がなくなります。 詳細については、「[セキュリティ保護されたテンプレート オーバーロード](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
+
+これらの関数のデバッグライブラリバージョンは、最初にバッファーを0xFE で埋めます。 この動作を無効にするには、[_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md) を使用します。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -180,14 +182,14 @@ C++ では、テンプレートのオーバーロードによってこれらの�
 |**_tctime32_s**|**_ctime32_s**|**_ctime32_s**|**_wctime32_s**|
 |**_tctime64_s**|**_ctime64_s**|**_ctime64_s**|**_wctime64_s**|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**ctime_s**、 **_ctime32_s**、 **_ctime64_s**|\<time.h>|
 |**_wctime_s**、 **_wctime32_s**、 **_wctime64_s**|\<time.h> または \<wchar.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="libraries"></a>ライブラリ
 
