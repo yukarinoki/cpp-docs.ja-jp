@@ -74,7 +74,7 @@ Visual Studio の*プロジェクトプロパティ*に慣れていない場合�
 
 - .props ファイルでユーザー マクロを定義します。 詳細については、「[Property page macros](../working-with-project-properties.md)」 (プロパティ ページ マクロ) を参照してください。
 
-詳細については、次のブログ投稿を参照してください。[VC + + ディレクトリ](https://blogs.msdn.com/b/vsproject/archive/2009/07/07/vc-directories.aspx)、継承された[プロパティとプロパティシート](https://blogs.msdn.com/b/vsproject/archive/2009/06/23/inherited-properties-and-property-sheets.aspx)、および[Visual Studio 2010 C++プロジェクトアップグレードガイド](https://devblogs.microsoft.com/cppblog/visual-studio-2010-c-project-upgrade-guide/)。
+詳細については、次のブログ投稿を参照してください。[VC++ ディレクトリ](https://blogs.msdn.com/b/vsproject/archive/2009/07/07/vc-directories.aspx)、継承された[プロパティとプロパティシート](https://blogs.msdn.com/b/vsproject/archive/2009/06/23/inherited-properties-and-property-sheets.aspx)、および[Visual Studio 2010 C++プロジェクトアップグレードガイド](https://devblogs.microsoft.com/cppblog/visual-studio-2010-c-project-upgrade-guide/)。
 
 ## <a name="directory-types"></a>ディレクトリの種類
 
