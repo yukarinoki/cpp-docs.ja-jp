@@ -66,11 +66,11 @@ int maxValue;                // Not recommended! maxValue contains
 |[種類]|サイズ|コメント|
 |----------|----------|-------------|
 |int|4 バイト|整数値の既定のオプション。|
-|二重線|8 バイト|浮動小数点値の既定のオプション。|
+|double|8 バイト|浮動小数点値の既定のオプション。|
 |bool|1 バイト|true または false になる値を表します。|
 |char|1 バイト|以前の C スタイル文字列内の ASCII 文字や、UNICODE に変換する必要がない std::string オブジェクトの ASCII 文字に使用します。|
 |wchar_t|2 バイト|UNICODE 形式でエンコードできるワイド文字を表します (Windows では UTF-16。他のオペレーティング システムでは異なる場合があります)。 これは、型 `std::wstring` の文字列で使用される文字型です。|
-|署名されていない &nbsp;char|1 バイト|C++ には、組み込みの `byte` 型はありません。  バイト値を表すには unsigned char を使用します。|
+|unsigned&nbsp;char|1 バイト|C++ には、組み込みの `byte` 型はありません。  バイト値を表すには unsigned char を使用します。|
 |unsigned int|4 バイト|ビット フラグの既定のオプション。|
 |long long|8 バイト|非常に大きな整数値を表します。|
 
