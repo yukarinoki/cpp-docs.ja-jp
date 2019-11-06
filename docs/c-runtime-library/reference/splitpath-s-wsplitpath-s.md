@@ -34,12 +34,12 @@ helpviewer_keywords:
 - path names
 - wsplitpath_s function
 ms.assetid: 30fff3e2-cd00-4eb6-b5a2-65db79cb688b
-ms.openlocfilehash: f97c07ed01ae629fe3eb61346c6c0fcd8fa803f0
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 8eeb6a0f43827578c5d5ba900c35a3ac30f4ae7c
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958051"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625837"
 ---
 # <a name="_splitpath_s-_wsplitpath_s"></a>_splitpath_s、_wsplitpath_s
 
@@ -91,7 +91,7 @@ errno_t _wsplitpath_s(
 ### <a name="parameters"></a>パラメーター
 
 *path*<br/>
-完全なパス。
+完全パス。
 
 *駆動*<br/>
 ドライブ文字、コロン ( **:** ) の順に並べます。 ドライブ文字が不要な場合は、このパラメーターに**NULL**を渡すことができます。
@@ -100,12 +100,12 @@ errno_t _wsplitpath_s(
 1バイト文字またはワイド文字の*ドライブ*バッファーのサイズ。 *ドライブ*が**NULL**の場合、この値は0にする必要があります。
 
 *エイリアス*<br/>
-末尾のスラッシュを含むディレクトリ パス。 スラッシュ ( **/** )、円記号 ( **\\** )、またはその両方を使用できます。 ディレクトリパスが不要な場合は、このパラメーターに**NULL**を渡すことができます。
+末尾のスラッシュを含む、ディレクトリ パス。 スラッシュ ( **/** )、円記号 ( **\\** )、またはその両方を使用できます。 ディレクトリパスが不要な場合は、このパラメーターに**NULL**を渡すことができます。
 
 *dirNumberOfElements*<br/>
 1バイト文字またはワイド文字の*dir*バッファーのサイズ。 *Dir*が**NULL**の場合、この値は0である必要があります。
 
-*fname*<br/>
+*氏名*<br/>
 拡張子なしの基本ファイル名。 ファイル名が不要な場合は、このパラメーターに**NULL**を渡すことができます。
 
 *nameNumberOfElements*<br/>
@@ -153,7 +153,7 @@ errno_t _wsplitpath_s(
 
 マニフェスト定数の値を次の表に示します。
 
-|Name|値|
+|名|[値]|
 |----------|-----------|
 |_MAX_DRIVE|3|
 |_MAX_DIR|256|
@@ -162,18 +162,18 @@ errno_t _wsplitpath_s(
 
 完全なパスにコンポーネント (たとえばファイル名) が含まれていない場合、 **_splitpath_s**は対応するバッファーに空の文字列を割り当てます。
 
-C++ では、テンプレートのオーバーロードによってこれらの関数を簡単に使用できます。オーバーロードでは、バッファー長を自動的に推論できるため、サイズ引数を指定する必要がなくなります。 詳細については、「 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
+C++ では、テンプレートのオーバーロードによってこれらの関数を簡単に使用できます。オーバーロードでは、バッファー長を自動的に推論できるため、サイズ引数を指定する必要がなくなります。 詳細については、「[セキュリティ保護されたテンプレート オーバーロード](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
-これらの関数のデバッグ バージョンは、最初にバッファーを 0xFD で埋めます。 この動作を無効にするには、[_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).を使用します。
+これらの関数のデバッグライブラリバージョンは、最初にバッファーを0xFE で埋めます。 この動作を無効にするには、[_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md) を使用します。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_splitpath_s**|\<stdlib.h>|
 |**_wsplitpath_s**|\<stdlib.h> または \<wchar.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 

@@ -79,12 +79,12 @@ helpviewer_keywords:
 - _ui64tot_s function
 - _i64toa_s function
 ms.assetid: eb746581-bff3-48b5-a973-bfc0a4478ecf
-ms.openlocfilehash: 204abd65981371a970623879ec94ff77db6728b2
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: df7f3ec970e0205ab999d1a04299a22dcc422d42
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953550"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625076"
 ---
 # <a name="_itoa_s-_ltoa_s-_ultoa_s-_i64toa_s-_ui64toa_s-_itow_s--_ltow_s--_ultow_s-_i64tow_s-_ui64tow_s"></a>_itoa_s、_ltoa_s、_ultoa_s、_i64toa_s、_ui64toa_s、、_ltow_s、_ultow_s、_i64tow_s、_ui64tow_s
 
@@ -168,9 +168,9 @@ errno_t _ultow_s( unsigned long value, wchar_t (&buffer)[size], int radix );
 
 パラメーターと戻り値を除いて、_itoa_s**関数と**関数ファミリの動作は、対応する低セキュリティのバージョン (_t **)** **と同じ**です。
 
-C++ では、これらの関数の使用はテンプレートのオーバーロードによって簡素化されます。オーバーロードでは、バッファー長を自動的に推論できる (サイズの引数を指定する必要がなくなる) だけでなく、古くてセキュリティが万全ではない関数を新しく安全な関数に自動的に置き換えることができます。 詳細については、「 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
+C++ では、これらの関数の使用はテンプレートのオーバーロードによって簡素化されます。オーバーロードでは、バッファー長を自動的に推論できる (サイズの引数を指定する必要がなくなる) だけでなく、古くてセキュリティが万全ではない関数を新しく安全な関数に自動的に置き換えることができます。 詳細については、「[セキュリティ保護されたテンプレート オーバーロード](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
-これらの関数のデバッグライブラリバージョンは、最初にバッファーを0xFD で埋めます。 この動作を無効にするには、[_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).を使用します。
+これらの関数のデバッグライブラリバージョンは、最初にバッファーを0xFE で埋めます。 この動作を無効にするには、[_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md) を使用します。
 
 CRT には、いくつかの一般的な基本クラスについて、null 終端記号と符号文字を含む、各整数型の最大有効値を変換するために必要なバッファーのサイズを定義するための便利なマクロが含まれています。 詳細については、「[最大変換数マクロ](itoa-itow.md#maximum-conversion-count-macros)」を参照してください。
 
@@ -178,20 +178,20 @@ CRT には、いくつかの一般的な基本クラスについて、null 終�
 
 |Tchar.h のルーチン|_UNICODE および _MBCS が未定義の場合|_MBCS が定義されている場合|_UNICODE が定義されている場合|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_itot_s**|**_itoa_s**|**_itoa_s**|**_itow_s**|
+|**場所 (_s)**|**_itoa_s**|**_itoa_s**|**_itow_s**|
 |**_ltot_s**|**_ltoa_s**|**_ltoa_s**|**_ltow_s**|
 |**(_s)**|**_ultoa_s**|**_ultoa_s**|**_ultow_s**|
 |**_i64tot_s**|**_i64toa_s**|**_i64toa_s**|**_i64tow_s**|
 |**ui64_s (_s)**|**_ui64toa_s**|**_ui64toa_s**|**_ui64tow_s**|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_itoa_s**、 **_ltoa_s**、 **_ultoa_s**、 **_i64toa_s**、 **_ui64toa_s**|\<stdlib.h>|
 |_ui64tow_s、 **_ltow_s**、 **_ultow_s**、 **_i64tow_s**、|\<stdlib.h> または \<wchar.h>|
 
-これらの関数は、Microsoft 固有の関数です。 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+これらの関数は、Microsoft 固有の関数です。 互換性について詳しくは、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 

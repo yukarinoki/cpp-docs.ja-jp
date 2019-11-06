@@ -16,14 +16,14 @@ helpviewer_keywords:
 - stdext::max_none [C++], released
 - stdext::max_none [C++], saved
 ms.assetid: 12ab5376-412e-479c-86dc-2c3d6a3559b6
-ms.openlocfilehash: 0d409928de4bf66bcc6d6dda3008131f87e790c3
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: b296c641be68efac7410328a448a4ad2bd0fa88e
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460167"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626823"
 ---
-# <a name="maxnone-class"></a>max_none クラス
+# <a name="max_none-class"></a>max_none クラス
 
 [freelist](../standard-library/freelist-class.md) オブジェクトを最長値ゼロまでに制限する[最大クラス](../standard-library/allocators-header.md) オブジェクトを記述します。
 
@@ -50,7 +50,7 @@ class max_none
 |[released](#released)|フリー リスト上のメモリ ブロックの数を減らします。|
 |[saved](#saved)|フリー リスト上のメモリ ブロックの数を減らします。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 **ヘッダー:** \<allocators>
 
@@ -72,7 +72,7 @@ void allocated(std::size_t _Nx = 1);
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は何も処理を行いません。 これは、operator `cache_freelist::allocate` **new**によるの呼び出しが成功するたびに呼び出されます。 引数 *(_s)* は、 **new**演算子によって割り当てられたチャンク内のメモリブロックの数です。
+このメンバー関数は何も処理を行いません。 これは、operator **new**に `cache_freelist::allocate` ことによって、呼び出しが成功するたびに呼び出されます。 引数 *(_s)* は、 **new**演算子によって割り当てられたチャンク内のメモリブロックの数です。
 
 ## <a name="deallocated"></a>  max_none::deallocated
 
@@ -90,7 +90,7 @@ void deallocated(std::size_t _Nx = 1);
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は何も処理を行いません。 このメンバー関数は、が operator **delete**に`cache_freelist::deallocate`対してを呼び出すたびに呼び出されます。 引数 *(_s)* は、 **delete**演算子によって割り当て解除されたチャンク内のメモリブロックの数です。
+このメンバー関数は何も処理を行いません。 このメンバー関数は、演算子**delete**に `cache_freelist::deallocate` によって呼び出されるたびに呼び出されます。 引数 *(_s)* は、 **delete**演算子によって割り当て解除されたチャンク内のメモリブロックの数です。
 
 ## <a name="full"></a>  max_none::full
 
@@ -106,7 +106,7 @@ bool full();
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は `cache_freelist::deallocate` によって呼び出されます。 呼び出しで**true**が返され`deallocate`た場合、はメモリブロックをフリーリストに格納します。 `deallocate` false が返された場合は、operator **delete**を呼び出してブロックの割り当てを解除します。
+このメンバー関数は `cache_freelist::deallocate` によって呼び出されます。 呼び出しによって**true**が返された場合、`deallocate` はメモリブロックをフリーリストに格納します。**false**が返された場合、`deallocate` は operator **delete**を呼び出して、ブロックの割り当てを解除します。
 
 ## <a name="released"></a>  max_none::released
 

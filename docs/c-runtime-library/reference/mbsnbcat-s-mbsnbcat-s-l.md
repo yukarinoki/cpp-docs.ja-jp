@@ -35,12 +35,12 @@ helpviewer_keywords:
 - mbsnbcat_s_l function
 - tcsncat function
 ms.assetid: 2c9e9be7-d979-4a54-8ada-23428b6648a9
-ms.openlocfilehash: 8a3f66f8fc8d4fd659880e8793fdaae635f9f7ba
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a148f4be503ee793e4e36855233edfc8fa8f165a
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952269"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624337"
 ---
 # <a name="_mbsnbcat_s-_mbsnbcat_s_l"></a>_mbsnbcat_s、_mbsnbcat_s_l
 
@@ -106,20 +106,20 @@ NULL で終わるマルチバイト文字のコピー元文字列。
 |**先**|*sizeInBytes*|*src*|戻り値|
 |------------|-------------------|-----------|------------------|
 |**NULL**|任意|任意|**EINVAL**|
-|任意|<= 0|任意|**EINVAL**|
-|任意|任意|**NULL**|**EINVAL**|
+|どれでも可|<= 0|任意|**EINVAL**|
+|どれでも可|任意|**NULL**|**EINVAL**|
 
 いずれかのエラー条件が発生すると、この関数は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」の説明にあるとおり無効なパラメーター エラーを生成します。 エラーが処理された場合、関数は**einval**を返し、 **errno**を**einval**に設定します。
 
 ## <a name="remarks"></a>Remarks
 
-**_Mbsnbcat_s**関数は、 *src*の*最大バイト数*である*dest*にを追加します。*Dest*の null 文字の直前にあるバイトが先頭バイトの場合、 *src*の初期バイトによって上書きされます。それ以外の場合、 *src*の初期バイトは*dest*の終端の null 文字を上書きします。 *Count* bytes を追加する前に*src*に null バイトが含まれている場合、 **_mbsnbcat_s**は*src*から null 文字までのすべてのバイトを追加します。 *Count*が*src*の長さよりも大きい場合、 *src*の長さは*count*の代わりに使用されます。 結果の文字列は null 文字で終了します。 重なり合う文字列間でコピーした場合の動作は未定義です。
+**_Mbsnbcat_s**関数は、 *src*の*最大バイト数*である*dest*にを追加します。 *Dest*の null 文字の直前にあるバイトが先頭バイトの場合、 *src*の初期バイトによって上書きされます。 それ以外の場合、 *src*の初期バイトは*dest*の終端の null 文字を上書きします。 *Count* bytes を追加する前に*src*に null バイトが含まれている場合、 **_mbsnbcat_s**は*src*から null 文字までのすべてのバイトを追加します。 *Count*が*src*の長さよりも大きい場合、 *src*の長さは*count*の代わりに使用されます。 結果の文字列は null 文字で終了します。 重なり合う文字列間でコピーした場合の動作は未定義です。
 
 出力値は、ロケールの**LC_CTYPE**カテゴリの設定に影響されます。詳細については[、「setlocale、_wsetlocale](setlocale-wsetlocale.md) 」を参照してください。 これらの関数のバージョンは同じですが、 **_l**サフィックスが付いていないバージョンが現在のロケールを使用し、 **_l**サフィックスが付いているものが渡されたロケールパラメーターを代わりに使用する点が異なります。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-C++ では、テンプレートのオーバーロードを利用すると、これらの関数の使用が簡素化されます。オーバーロードでは、バッファー長が自動的に推論されるのでサイズ引数を指定する必要がなくなるだけでなく、古くてセキュリティが万全ではない関数を新しくてセキュリティが強化された関数に自動的に置き換えることができます。 詳細については、「 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
+C++ では、テンプレートのオーバーロードを利用すると、これらの関数の使用が簡素化されます。オーバーロードでは、バッファー長が自動的に推論されるのでサイズ引数を指定する必要がなくなるだけでなく、古くてセキュリティが万全ではない関数を新しくてセキュリティが強化された関数に自動的に置き換えることができます。 詳細については、「[セキュリティ保護されたテンプレート オーバーロード](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
-これらの関数のデバッグ バージョンは、最初にバッファーを 0xFD で埋めます。 この動作を無効にするには、[_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md) を使用します。
+これらの関数のデバッグライブラリバージョンは、最初にバッファーを0xFE で埋めます。 この動作を無効にするには、[_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md) を使用します。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -128,14 +128,14 @@ C++ では、テンプレートのオーバーロードを利用すると、こ�
 |**_tcsncat**|[strncat](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)|**_mbsnbcat_s**|[wcsncat](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)|
 |**_tcsncat_s_l**|**_strncat_s_l**|**_mbsnbcat_s_l**|**_wcsncat_s_l**|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_mbsnbcat_s**|\<mbstring.h>|
 |**_mbsnbcat_s_l**|\<mbstring.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

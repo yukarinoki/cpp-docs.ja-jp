@@ -28,12 +28,12 @@ helpviewer_keywords:
 - numbers, converting
 - converting double numbers
 ms.assetid: d52fb0a6-cb91-423f-80b3-952a8955d914
-ms.openlocfilehash: c50200d16a5e542c247d1c85f8c104381af4a883
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a37508c293ee72934a8580f822878f27031b864b
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70937725"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624383"
 ---
 # <a name="_ecvt_s"></a>_ecvt_s
 
@@ -71,7 +71,7 @@ errno_t _ecvt_s(
 *_Value*<br/>
 変換される数値。
 
-*_Count*<br/>
+*カウント (_l)*<br/>
 格納する桁数。
 
 *Dec (_s)*<br/>
@@ -82,7 +82,7 @@ errno_t _ecvt_s(
 
 ## <a name="return-value"></a>戻り値
 
-正常終了した場合は 0。 障害が発生した場合、戻り値はエラー コードを示します。 エラー コードは、Errno.h で定義されています。 詳細については、「[errno、_doserrno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
+正常終了した場合は 0 を返します。 障害が発生した場合、戻り値はエラー コードを示します。 エラー コードは、Errno.h で定義されています。 詳細については、「[errno、_doserrno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
 パラメーターが次の表の無効な値の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、この関数は無効なパラメーター ハンドラーを呼び出します。 実行の継続が許可された場合、この関数は**errno**を**einval**に設定し、 **einval**を返します。
 
@@ -109,17 +109,17 @@ errno_t _ecvt_s(
 
 このパラメーターの**解釈は、** *Count*パラメーターの解釈に含ま**れてい**ます。 出力文字列の合計桁数として*カウント* **を解釈する (_s** **)。一方、** 小数点の後の桁数として *カウント*を解釈します。
 
-C++ では、テンプレートのオーバーロードによってこの関数を簡単に使用できます。オーバーロードでは、バッファー長を自動的に推論できるため、サイズ引数を指定する必要がなくなります。 詳細については、「 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
+C++ では、テンプレートのオーバーロードによってこの関数を簡単に使用できます。オーバーロードでは、バッファー長を自動的に推論できるため、サイズ引数を指定する必要がなくなります。 詳細については、「[セキュリティ保護されたテンプレート オーバーロード](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
-この関数のデバッグ バージョンは、最初にバッファーを 0xFD で埋めます。 この動作を無効にするには、[_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).を使用します。
+この関数のデバッグバージョンは、最初にバッファーを0xFE で埋めます。 この動作を無効にするには、[_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md) を使用します。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
-|関数|必須ヘッダー|オプション ヘッダー|
+|機能|必須ヘッダー|オプション ヘッダー|
 |--------------|---------------------|---------------------|
 |**_ecvt_s**|\<stdlib.h>|\<errno.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 
