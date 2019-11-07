@@ -1,29 +1,29 @@
 ---
 title: INVOKE
-ms.date: 08/30/2018
+ms.date: 11/05/2019
 f1_keywords:
 - Invoke
 helpviewer_keywords:
 - INVOKE directive
 ms.assetid: 12d9bb40-33b9-411e-b801-45a1d675967e
-ms.openlocfilehash: efa8f710701e15845c3a6a22ba024c9cf1882457
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 853bc9cd22d866357a4cd2d695beccc3efc20acf
+ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62202620"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73703964"
 ---
-# <a name="invoke"></a>INVOKE
+# <a name="invoke-32-bit-masm"></a>INVOKE (32 ビット MASM)
 
-によって指定されたアドレスで、プロシージャが呼び出す*式*、スタックまたは言語タイプの標準的な呼び出し規則に従ってレジスタで引数を渡すことです。
+*式*によって指定されたアドレスでプロシージャを呼び出し、言語の種類の標準の呼び出し規約に従って、スタックまたはレジスタの引数を渡します。 (32 ビット MASM のみ。)
 
 ## <a name="syntax"></a>構文
 
-> INVOKE*式*[、*引数*]
+> INVOKE*式*[[, *arguments*]]
 
 ## <a name="remarks"></a>Remarks
 
-プロシージャに渡された各引数は、式、レジスタのペア、またはアドレス式 (式に続く`ADDR`)。
+プロシージャに渡される各引数には、式、レジスタペア、またはアドレス式 (`ADDR`の前にある式) を指定できます。
 
 ## <a name="see-also"></a>関連項目
 
