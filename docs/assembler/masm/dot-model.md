@@ -1,21 +1,21 @@
 ---
 title: .MODEL
-ms.date: 08/30/2018
+ms.date: 11/05/2019
 f1_keywords:
 - .MODEL
 helpviewer_keywords:
 - .MODEL directive
 ms.assetid: 057f00df-1515-4c55-852a-d936c8a34b53
-ms.openlocfilehash: c409bf10a2f863c380cda6b4822583ffb3787da6
-ms.sourcegitcommit: 61121faf879cc581a4d39e4baccabf7cf1f673a5
-ms.translationtype: HT
+ms.openlocfilehash: b341cfaec35c08f5ac16447890c85570e9c9c0df
+ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65934090"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73703587"
 ---
-# <a name="model"></a>.MODEL
+# <a name="model-32-bit-masm"></a>.モデル (32 ビット MASM)
 
-プログラム メモリ モデルを初期化します。
+プログラム メモリ モデルを初期化します。 (32 ビット MASM のみ。)
 
 ## <a name="syntax"></a>構文
 
@@ -36,7 +36,7 @@ ms.locfileid: "65934090"
 
 `NEARSTACK` を指定すると、スタック セグメントがデータと共に 1 つの物理セグメント (`DGROUP`) にグループ化されます。 スタック セグメント レジスタ (`SS`) では、データ セグメント レジスタ (`DS`) と同じアドレスを保持することが想定されます。 `FARSTACK` は `DGROUP` でスタックをグループ化しないため、`SS` と `DS` は同じではありません。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
 
 .`MODEL` は [x64 用 MASM (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md) では使用されません。
 
@@ -45,7 +45,7 @@ ms.locfileid: "65934090"
 |パラメーター|32 ビットの値|16 ビットの値 (以前の 16 ビット開発のサポート)|
 |---------------|--------------------|----------------------------------------------------------------|
 |*memorymodel*|`FLAT`|`TINY`, `SMALL`, `COMPACT`, `MEDIUM`, `LARGE`, `HUGE`, `FLAT`|
-|*langtype*|`C`、 `STDCALL`|`C`, `BASIC`, `FORTRAN`, `PASCAL`, `SYSCALL`, `STDCALL`|
+|*langtype*|`C`、 `STDCALL`|`C`、 `BASIC`、 `FORTRAN`、 `PASCAL`、 `SYSCALL`、 `STDCALL`|
 |*stackoption*|未使用|`NEARSTACK`、 `FARSTACK`|
 
 ## <a name="code"></a>コード
