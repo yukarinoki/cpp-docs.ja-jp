@@ -75,8 +75,8 @@ class COleDateTimeSpan
 |[演算子 +、-](#operator_add_-)|追加、減算、および署名の変更`COleDateTimeSpan`値。|
 |[operator +=, -=](#operator_add_eq_-_eq)|加算および減算、`COleDateTimeSpan`値からこの`COleDateTimeSpan`値。|
 |[operator=](#operator_eq)|コピーを`COleDateTimeSpan`値。|
-|[演算子 = =、<、< =](#coledatetimespan_relational_operators)|比較する 2 つ`COleDateTimeSpan`値。|
-|[演算子 double](#operator_double)|この変換`COleDateTimeSpan`値を**二重**します。|
+|[operator ==、<、<=](#coledatetimespan_relational_operators)|2 つの`COleDateTimeSpan`の値の比較。|
+|[演算子 double](#operator_double)|この変換`COleDateTimeSpan`値を**double**します。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
@@ -419,7 +419,7 @@ double GetTotalDays() const throw();
 
 ### <a name="remarks"></a>Remarks
 
-3.65e6 と 3.65e6 約 - この関数の範囲からの戻り値。
+3\.65e6 と 3.65e6 約 - この関数の範囲からの戻り値。
 
 その他の関数の値をクエリで、`COleDateTimeSpan`オブジェクト、メンバー関数は、次を参照してください。
 
@@ -455,7 +455,7 @@ double GetTotalHours() const throw();
 
 ### <a name="remarks"></a>Remarks
 
-8.77e7 と 8.77e7 約 - この関数の範囲からの戻り値。
+8\.77e7 と 8.77e7 約 - この関数の範囲からの戻り値。
 
 その他の関数の値をクエリで、`COleDateTimeSpan`オブジェクト、メンバー関数は、次を参照してください。
 
@@ -491,7 +491,7 @@ double GetTotalMinutes() const throw();
 
 ### <a name="remarks"></a>Remarks
 
-5.26e9 と 5.26e9 約 - この関数の範囲からの戻り値。
+5\.26e9 と 5.26e9 約 - この関数の範囲からの戻り値。
 
 その他の関数の値をクエリで、`COleDateTimeSpan`オブジェクト、メンバー関数は、次を参照してください。
 
@@ -664,7 +664,7 @@ COleDateTimeSpan& operator-=(const COleDateTimeSpan dateSpan) throw();
 
 ##  <a name="operator_double"></a>  COleDateTimeSpan::operator double
 
-この変換`COleDateTimeSpan`値を**二重**します。
+この変換`COleDateTimeSpan`値を**double**します。
 
 ```
 operator double() const throw();

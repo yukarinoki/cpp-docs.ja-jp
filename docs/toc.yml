@@ -1659,7 +1659,7 @@
                       href: atl-mfc-shared/cstring-argument-passing.md
                     - name: 'Unicode とマルチバイト文字セット (MBCS: Multibyte Character Set) のサポート'
                       href: atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md
-        - name: 関連項目
+        - name: 辞書／辞典／その他
           expanded: false
           items:
             - name: CSize クラス
@@ -4714,6 +4714,8 @@
               items:
                 - name: プリプロセッサ
                   href: preprocessor/preprocessor.md
+                - name: 試験的なプリプロセッサの概要
+                  href: preprocessor/preprocessor-experimental-overview.md
                 - name: 変換フェーズ
                   href: preprocessor/phases-of-translation.md
                 - name: プリプロセッサ ディレクティブ
