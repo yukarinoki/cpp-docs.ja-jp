@@ -38,12 +38,12 @@ helpviewer_keywords:
 - _mbscat_s_l function
 - appending strings
 ms.assetid: 0f2f9901-c5c5-480b-98bc-f8f690792fc0
-ms.openlocfilehash: 4449ec788b33a541a04a46d972f56f792797a16e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b0f2d1a295908ba2f0c8a89f57e81d6f822f3535
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957991"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625791"
 ---
 # <a name="strcat_s-wcscat_s-_mbscat_s-_mbscat_s_l"></a>strcat_s、wcscat_s、_mbscat_s、_mbscat_s_l
 
@@ -122,8 +122,8 @@ null で終わる元の文字列バッファー。
 |*strDestination*|*numberOfElements*|*strSource*|戻り値|*Strdestination*の内容|
 |----------------------|------------------------|-----------------|------------------|----------------------------------|
 |**NULL**または未終了|任意|任意|**EINVAL**|変更されない|
-|任意|任意|**NULL**|**EINVAL**|*Strdestination*[0] を0に設定します|
-|任意|0 または小さすぎる|任意|**ERANGE**|*Strdestination*[0] を0に設定します|
+|任意|任意|**NULL**|**EINVAL**|*Strdestination*[0] を0に設定します。|
+|任意|0 または小さすぎる|任意|**ERANGE**|*Strdestination*[0] を0に設定します。|
 
 ## <a name="remarks"></a>Remarks
 
@@ -144,9 +144,9 @@ strcat_s(buf, 16 - strlen(buf), " End"); // Incorrect
 
 **_L**サフィックスを持つ関数のバージョンは同じ動作ですが、現在のロケールの代わりに渡されたロケールパラメーターを使用します。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-C++ では、これらの関数の使用はテンプレートのオーバーロードによって簡素化されます。オーバーロードでは、バッファー長を自動的に推論できる (サイズの引数を指定する必要がなくなる) だけでなく、古くてセキュリティが万全ではない関数を新しく安全な関数に自動的に置き換えることができます。 詳細については、「 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
+C++ では、これらの関数の使用はテンプレートのオーバーロードによって簡素化されます。オーバーロードでは、バッファー長を自動的に推論できる (サイズの引数を指定する必要がなくなる) だけでなく、古くてセキュリティが万全ではない関数を新しく安全な関数に自動的に置き換えることができます。 詳細については、「[セキュリティ保護されたテンプレート オーバーロード](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
-これらの関数のデバッグ バージョンは、最初にバッファーを 0xFD で埋めます。 この動作を無効にするには、[_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md) を使用します。
+これらの関数のデバッグライブラリバージョンは、最初にバッファーを0xFE で埋めます。 この動作を無効にするには、[_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md) を使用します。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -154,7 +154,7 @@ C++ では、これらの関数の使用はテンプレートのオーバーロ�
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcscat_s**|**strcat_s**|**_mbscat_s**|**wcscat_s**|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
@@ -162,7 +162,7 @@ C++ では、これらの関数の使用はテンプレートのオーバーロ�
 |**wcscat_s**|\<string.h> または \<wchar.h>|
 |**_mbscat_s**|\<mbstring.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 

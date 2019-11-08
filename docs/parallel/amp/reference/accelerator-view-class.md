@@ -30,7 +30,7 @@ ms.locfileid: "65524826"
 ---
 # <a name="acceleratorview-class"></a>accelerator_view クラス
 
-C ++. AMP のデータ並列アクセラレータでの仮想デバイスの抽象化を表します。
+C++. AMP のデータ並列アクセラレータでの仮想デバイスの抽象化を表します。
 
 ### <a name="syntax"></a>構文
 

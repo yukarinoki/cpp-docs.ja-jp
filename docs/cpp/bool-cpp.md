@@ -19,7 +19,7 @@ ms.locfileid: "62184287"
 
 このキーワードは組み込みの型です。 この型の変数に値を持つことができます[true](../cpp/true-cpp.md)と[false](../cpp/false-cpp.md)します。 条件式の型である**bool**ための型の値を指定**bool**します。 たとえば、`i!=0`の値に応じて、TRUE または FALSE を今すぐが`i`します。
 
-**Visual Studio 2017 バージョン 15.3 以降**(で使用可能な[/std:c + + 17](../build/reference/std-specify-language-standard-version.md))。オペランドの後置または前置インクリメントまたはデクリメント演算子できない可能性があります型の**bool**します。 つまり、変数がある`b`型の**bool**、これらの式はもう行えません。
+**Visual Studio 2017 バージョン 15.3 以降**(で使用可能な[/std:c++ 17](../build/reference/std-specify-language-standard-version.md))。オペランドの後置または前置インクリメントまたはデクリメント演算子できない可能性があります型の**bool**します。 つまり、変数がある`b`型の**bool**、これらの式はもう行えません。
 
 ```cpp
     b++;

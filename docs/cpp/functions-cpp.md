@@ -363,7 +363,7 @@ template<typename F, typename Tuple = tuple<T...>,
     }
     ```
 
-1. **Visual Studio 2017 バージョン 15.3 以降**(で使用可能な[/std:c + + 17](../build/reference/std-specify-language-standard-version.md))。構造化バインドを使用します。 構造化バインドの利点は、戻り値を格納する変数が初期化される、宣言されると同時に大幅に効率も指定できます。 次のステートメントで`auto[x, y, z] = f();`--角かっこを紹介し、関数全体のブロックのスコープ内の名前を初期化します。
+1. **Visual Studio 2017 バージョン 15.3 以降**(で使用可能な[/std:c++17](../build/reference/std-specify-language-standard-version.md))。構造化バインドを使用します。 構造化バインドの利点は、戻り値を格納する変数が初期化される、宣言されると同時に大幅に効率も指定できます。 次のステートメントで`auto[x, y, z] = f();`--角かっこを紹介し、関数全体のブロックのスコープ内の名前を初期化します。
 
     ```cpp
     #include <tuple>

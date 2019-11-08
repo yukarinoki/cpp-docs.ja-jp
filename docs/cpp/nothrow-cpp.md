@@ -28,9 +28,9 @@ A **_ _declspec**関数の宣言で使用できる拡張属性。
 
 すべての新しいコードを使用していることをお勧めします。、 [noexcept](noexcept-cpp.md)演算子なく`__declspec(nothrow)`します。
 
-この属性は、宣言された関数、および、その呼び出す関数が例外をスローしないことをコンパイラに伝えます。 ただし、このディレクティブは適用されません。 しないと、つまり、 [std::terminate](../standard-library/exception-functions.md#terminate)呼び出されるとは異なり`noexcept`、または **/std:c + + 17**モード (Visual Studio 2017 バージョン 15.5 以降)、`throw()`します。
+この属性は、宣言された関数、および、その呼び出す関数が例外をスローしないことをコンパイラに伝えます。 ただし、このディレクティブは適用されません。 しないと、つまり、 [std::terminate](../standard-library/exception-functions.md#terminate)呼び出されるとは異なり`noexcept`、または **/std:c++17**モード (Visual Studio 2017 バージョン 15.5 以降)、`throw()`します。
 
-同期例外処理モデル (現在は既定のモデル) の場合、コンパイラはこのような関数で特定のアンワインド可能オブジェクトの有効期間を追跡する機構を削除して、コード サイズを大幅に小さくできます。 次のプリプロセッサ ディレクティブを指定するには、次の 3 つの関数の宣言が同じ **/std:c + + 14**モード。
+同期例外処理モデル (現在は既定のモデル) の場合、コンパイラはこのような関数で特定のアンワインド可能オブジェクトの有効期間を追跡する機構を削除して、コード サイズを大幅に小さくできます。 次のプリプロセッサ ディレクティブを指定するには、次の 3 つの関数の宣言が同じ **/std:c++14**モード。
 
 ```cpp
 #define WINAPI __declspec(nothrow) __stdcall
@@ -40,7 +40,7 @@ void __declspec(nothrow) __stdcall f2();
 void __stdcall f3() throw();
 ```
 
-**/Std:c + + 17**モード、`throw()`を使用すると、他と等価でない`__declspec(nothrow)`原因になるので`std::terminate`関数から例外がスローされた場合に呼び出されます。
+**/std:c++17**モード、`throw()`を使用すると、他と等価でない`__declspec(nothrow)`原因になるので`std::terminate`関数から例外がスローされた場合に呼び出されます。
 
 `void __stdcall f3() throw();`宣言は、C++ 標準で定義されている構文を使用します。 C++ 17 で、`throw()`キーワードは非推奨とされました。
 

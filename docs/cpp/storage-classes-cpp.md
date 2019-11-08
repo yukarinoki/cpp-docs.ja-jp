@@ -221,7 +221,7 @@ Windows で`thread_local`は機能的に等価[_declspec](../cpp/thread.md)す�
 
 ##  <a name="register"></a>  register
 
-**Visual Studio 2017 バージョン 15.3 以降**(で使用可能な[/std:c + + 17](../build/reference/std-specify-language-standard-version.md))。**register**キーワードがサポートされているストレージ クラスではなくなりました。 キーワードは、将来使用するための標準でまだ予約されています。
+**Visual Studio 2017 バージョン 15.3 以降**(で使用可能な[/std:c++17](../build/reference/std-specify-language-standard-version.md))。**登録**キーワードがサポートされているストレージ クラスではなくなりました。 キーワードは、将来使用するための標準でまだ予約されています。
 
 ```cpp
    register int val; // warning C5033: 'register' is no longer a supported storage class

@@ -6,7 +6,6 @@ f1_keywords:
 - C1036
 - C1041
 - C1048
-- C1049
 - C1063
 - C1069
 - C1101
@@ -31,7 +30,6 @@ helpviewer_keywords:
 - C1036
 - C1041
 - C1048
-- C1049
 - C1063
 - C1069
 - C1101
@@ -52,22 +50,22 @@ helpviewer_keywords:
 - C1505
 - C1901
 ms.assetid: 6c8df109-7594-48ed-987a-97d9fe2b04af
-ms.openlocfilehash: 5ffa1a2633877c8a16eb424f1ddc100bfd6142b8
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: 395d7403ef4fe04b671a84a61d320b27ad8ad1c7
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64857390"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626565"
 ---
 # <a name="compiler-fatal-errors-c999-through-c1999"></a>コンパイラの致命的なエラー (C999 - C1999)
 
-Microsoft C で生成されるエラー メッセージのサブセットを説明するドキュメントのこのセクションの記事/C++コンパイラ。
+ドキュメントのこのセクションの記事では、Microsoft C/C++コンパイラによって生成されるエラーメッセージのサブセットについて説明します。
 
 [!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
 
 ## <a name="error-messages"></a>エラー メッセージ
 
-|Error|メッセージ|
+|Error|[メッセージ]|
 |-----------|-------------|
 |[致命的なエラー C999](../../error-messages/compiler-errors-1/fatal-error-c999.md)|不明なメッセージ: 詳細については、Visual C++ ヘルプ メニューのサポート情報コマンドを選択してください。またはサポート情報ヘルプ ファイルを参照してください。|
 |[致命的なエラー C1001](../../error-messages/compiler-errors-1/fatal-error-c1001.md)|コンパイラで内部エラーが発生しました。<br /> (コンパイラ ファイル '*file*'、行 *number*)<br /> この問題を回避するには、上記の場所付近のプログラムを単純化するか変更してください。 詳細については、Visual C++ ヘルプ メニューのサポート情報コマンドを選択してください。またはサポート情報ヘルプ ファイルを参照してください。|
@@ -78,7 +76,7 @@ Microsoft C で生成されるエラー メッセージのサブセットを説�
 |[致命的なエラー C1007](../../error-messages/compiler-errors-1/fatal-error-c1007.md)|'*string*' (オプション '*option*' 中) は認識できません。|
 |[致命的なエラー C1008](../../error-messages/compiler-errors-1/fatal-error-c1008.md)|入力ファイルが指定されていません。|
 |[致命的なエラー C1009](../../error-messages/compiler-errors-1/fatal-error-c1009.md)|コンパイラの制限: マクロの入れ子のレベルが深すぎます。|
-|[致命的なエラー C1010](../../error-messages/compiler-errors-1/fatal-error-c1010.md)|プリコンパイル ヘッダーを検索中に不明な EOF が見つかりました。 追加を忘れました ' #include \<*ファイル*>'、ソースにでしょうか。|
+|[致命的なエラー C1010](../../error-messages/compiler-errors-1/fatal-error-c1010.md)|プリコンパイル ヘッダーを検索中に不明な EOF が見つかりました。 ソースに ' #include \<*ファイル*> ' を追加してもよろしいですか?|
 |[致命的なエラー C1012](fatal-error-c1012.md)|かっこが一致していません。'*character*' がありません。|
 |[致命的なエラー C1013](fatal-error-c1013.md)|コンパイラの制限: 始めかっこが多すぎます。|
 |[致命的なエラー C1014](fatal-error-c1014.md)|インクルード ファイルが多すぎます: 深さ = *number*|
@@ -102,9 +100,9 @@ Microsoft C で生成されるエラー メッセージのサブセットを説�
 |[致命的なエラー C1046](../../error-messages/compiler-errors-1/fatal-error-c1046.md)|コンパイラの制限: *structure* の入れ子のレベルが深すぎます。|
 |[致命的なエラー C1047](fatal-error-c1047.md)|オブジェクトまたはライブラリ ファイル '*file*' は、他のオブジェクトよりも古いコンパイラで作成されました。古いオブジェクトおよびライブラリをリビルドしてください。|
 |致命的なエラー C1048|指定した '*string*' は '*option*' に対して有効な文字ではありません。|
-|致命的なエラー C1049|数値の引数 '*value*' が無効です。|
+|[致命的なエラー C1049](fatal-error-c1049.md)|数値の引数 '*value*' が無効です。|
 |[致命的なエラー C1051](../../error-messages/compiler-errors-1/fatal-error-c1051.md)|プログラム データベース ファイル '*file*' は旧形式です。このファイルを削除して再コンパイルしてください。|
-|[致命的なエラー C1052](fatal-error-c1052.md)|プログラム データベース ファイルでは、'*filename*'、;/DEBUG:fastlink のリンカーによって生成されたコンパイラできませんこのような PDB ファイルを更新; か削除してください、/Fd を使用して、別の PDB ファイル名を指定するには|
+|[致命的なエラー C1052](fatal-error-c1052.md)|プログラムデータベースファイル '*filename*' は、/debug: fastlink を使用してリンカーによって生成されました。コンパイラは、このような PDB ファイルを更新できません。これを削除するか、または/Fd を使用して別の PDB ファイル名を指定してください|
 |[致命的なエラー C1053](fatal-error-c1053.md)|'*function*': 関数が大きすぎます|
 |[致命的なエラー C1054](../../error-messages/compiler-errors-1/fatal-error-c1054.md)|コンパイラの制限: 初期化子の入れ子のレベルが深すぎます。|
 |[致命的なエラー C1055](../../error-messages/compiler-errors-1/fatal-error-c1055.md)|コンパイラの制限: キーが足りません。|
@@ -114,7 +112,7 @@ Microsoft C で生成されるエラー メッセージのサブセットを説�
 |致命的なエラー C1063|コンパイラの制限: コンパイラ スタックのオーバー フローが発生しました。|
 |[致命的なエラー C1064](../../error-messages/compiler-errors-1/fatal-error-c1064.md)|コンパイラの制限: コンパイラが、識別子の名前用の内部バッファーよりも長い識別子を読み取りました。|
 |[致命的なエラー C1065](../../error-messages/compiler-errors-1/fatal-error-c1065.md)|コンパイラの制限: タグが足りません。|
-|[致命的なエラー C1067](../../error-messages/compiler-errors-1/fatal-error-c1067.md)|コンパイラの制限:型のレコード サイズ 64 K の制限を超えました|
+|[致命的なエラー C1067](../../error-messages/compiler-errors-1/fatal-error-c1067.md)|コンパイラの制限: 型のレコード サイズの制限である 64K を超えました|
 |[致命的なエラー C1068](fatal-error-c1068.md)|ファイル '*file*' を開くことができません。|
 |致命的なエラー C1069|コンパイラのコマンド ラインを読み取れません|
 |[致命的なエラー C1070](fatal-error-c1070.md)|ファイル '*file*' 中で #if と #endif が対応していません。|
@@ -124,7 +122,7 @@ Microsoft C で生成されるエラー メッセージのサブセットを説�
 |[致命的なエラー C1075](../../error-messages/compiler-errors-1/fatal-error-c1075.md)|左側の *token* に対応するものがファイルの最後まで検出されませんでした。|
 |[致命的なエラー C1076](../../error-messages/compiler-errors-1/fatal-error-c1076.md)|コンパイラの制限: 内部ヒープの上限に達しました。上限を変更するには /Zm オプションを使用してください。|
 |[致命的なエラー C1077](fatal-error-c1077.md)|コンパイラの制限: *number* を超えるコマンド ライン オプションは使用できません。|
-|[致命的なエラー C1079](../../error-messages/compiler-errors-1/fatal-error-c1079.md)|コンパイラの制限:PCH ファイル サイズの上限を超えています|
+|[致命的なエラー C1079](../../error-messages/compiler-errors-1/fatal-error-c1079.md)|コンパイラの制限: PCH ファイル サイズの制限を超えています。|
 |[致命的なエラー C1080](../../error-messages/compiler-errors-1/fatal-error-c1080.md)|コンパイラの制限: コマンド ライン オプションが制限の *number* 文字を超えています。|
 |[致命的なエラー C1081](../../error-messages/compiler-errors-1/fatal-error-c1081.md)|'*file*': ファイル名が長すぎます。|
 |[致命的なエラー C1082](fatal-error-c1082.md)|*type* ファイルを閉じることができません: '*file*': *message*|
@@ -155,7 +153,7 @@ Microsoft C で生成されるエラー メッセージのサブセットを説�
 |致命的なエラー C1111|テンプレート パラメーターやジェネリック パラメーターが多すぎます。|
 |致命的なエラー C1112|コンパイラの制限: `'number`' マクロの引数が多すぎます。制限は *number* です。|
 |[致命的なエラー C1113](../../error-messages/compiler-errors-1/fatal-error-c1113.md)|#using が '*file*' で失敗しました。|
-|致命的なエラー C1114|'*ファイル*'。WinRT はサポートしていません # マネージ アセンブリの using|
+|致命的なエラー C1114|'*file*': WinRT はマネージド アセンブリの #using をサポートしていません。|
 |[致命的なエラー C1120](../../error-messages/compiler-errors-1/fatal-error-c1120.md)|'*function*' の GetProcAddress の呼び出しに失敗しました。|
 |[致命的なエラー C1121](../../error-messages/compiler-errors-1/fatal-error-c1121.md)|CryptoAPI への呼び出しに失敗しました|
 |[致命的なエラー C1126](../../error-messages/compiler-errors-1/fatal-error-c1126.md)|自動メモリ割り当てが *size*を超えました。|
@@ -217,4 +215,4 @@ Microsoft C で生成されるエラー メッセージのサブセットを説�
 
 ## <a name="see-also"></a>関連項目
 
-[C/C++コンパイラとビルド ツールのエラーと警告](../compiler-errors-1/c-cpp-build-errors.md)
+[C/C++コンパイラおよびビルドツールのエラーと警告](../compiler-errors-1/c-cpp-build-errors.md)

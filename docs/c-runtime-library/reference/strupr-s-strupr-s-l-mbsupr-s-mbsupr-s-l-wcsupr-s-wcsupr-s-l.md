@@ -63,12 +63,12 @@ helpviewer_keywords:
 - _strupr_s function
 - wcsupr_s function
 ms.assetid: 82d3a273-9f6f-4a26-9560-919d891e4581
-ms.openlocfilehash: 4789116854c8975f58336984d03f1d2897851fdc
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 04ae6fe34d51de8b026cb1c3536f4e3ed6fc5c22
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957587"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625897"
 ---
 # <a name="_strupr_s-_strupr_s_l-_mbsupr_s-_mbsupr_s_l-_wcsupr_s-_wcsupr_s_l"></a>_strupr_s、_strupr_s_l、_mbsupr_s、_mbsupr_s_l、_wcsupr_s、_wcsupr_s_l
 
@@ -159,9 +159,9 @@ errno_t _mbsupr_s_l(
 
 変換は、ロケールの**LC_CTYPE**カテゴリの設定によって決まります。 他の文字は影響を受けません。 **LC_CTYPE**の詳細については、「 [setlocale](setlocale-wsetlocale.md)」を参照してください。 **_L**サフィックスが付いていないこれらの関数のバージョンは、現在のロケールを使用します。 **_l**サフィックスが付いているビジョンは、代わりに渡されたロケールを使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-C++ では、これらの関数の使用はテンプレートのオーバーロードによって簡素化されます。オーバーロードでは、バッファー長を自動的に推論できる (サイズの引数を指定する必要がなくなる) だけでなく、古くてセキュリティが万全ではない関数を新しく安全な関数に自動的に置き換えることができます。 詳細については、「 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
+C++ では、これらの関数の使用はテンプレートのオーバーロードによって簡素化されます。オーバーロードでは、バッファー長を自動的に推論できる (サイズの引数を指定する必要がなくなる) だけでなく、古くてセキュリティが万全ではない関数を新しく安全な関数に自動的に置き換えることができます。 詳細については、「[セキュリティ保護されたテンプレート オーバーロード](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
-これらの関数のデバッグ バージョンは、最初にバッファーを 0xFD で埋めます。 この動作を無効にするには、[_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md) を使用します。
+これらの関数のデバッグライブラリバージョンは、最初にバッファーを0xFE で埋めます。 この動作を無効にするには、[_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md) を使用します。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -170,14 +170,14 @@ C++ では、これらの関数の使用はテンプレートのオーバーロ�
 |**_tcsupr_s**|**_strupr_s**|**_mbsupr_s**|**_wcsupr_s**|
 |**_tcsupr_s_l**|**_strupr_s_l**|**_mbsupr_s_l**|**_wcsupr_s_l**|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_strupr_s**、 **_strupr_s_l**|\<string.h>|
 |**_wcsupr_s**、 **_wcsupr_s_l**、 **_mbsupr_s**、 **_mbsupr_s_l**|\<string.h> または \<wchar.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 

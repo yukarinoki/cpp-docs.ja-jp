@@ -145,7 +145,7 @@ namespace ScopedEnumConversions
 
 ## <a name="no_enumerators"></a> なしの列挙子の列挙型
 
-**Visual Studio 2017 バージョン 15.3 以降**(で使用可能な[/std:c + + 17](../build/reference/std-specify-language-standard-version.md))。(正規表現またはスコープを持つ) 列挙型を定義すると、明示的な基になる型となしの列挙子を有効なを他の型に暗黙的な変換を持たない新しい整数型を導入できます。 この型を使用して、その組み込みの基になる型ではなく、暗黙的な変換を不注意による微妙なエラーが発生する可能性を排除できます。
+**Visual Studio 2017 バージョン 15.3 以降**(で使用可能な[/std:c++17](../build/reference/std-specify-language-standard-version.md))。(正規表現またはスコープを持つ) 列挙型を定義すると、明示的な基になる型となしの列挙子を有効なを他の型に暗黙的な変換を持たない新しい整数型を導入できます。 この型を使用して、その組み込みの基になる型ではなく、暗黙的な変換を不注意による微妙なエラーが発生する可能性を排除できます。
 
 ```cpp
 enum class byte : unsigned char { };

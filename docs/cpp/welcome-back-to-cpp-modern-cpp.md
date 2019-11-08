@@ -3,12 +3,12 @@ title: C++ へようこそ (Modern C++)
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 1cb1b849-ed9c-4721-a972-fd8f3dab42e2
-ms.openlocfilehash: 5b2868d20c047eef7762256ff8c9bf43de7a0de0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1f59395001722244cb407ef07ed8a301f08df85b
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209529"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624760"
 ---
 # <a name="welcome-back-to-c-modern-c"></a>C++ へようこそ (Modern C++)
 
@@ -24,19 +24,19 @@ C++ の最初の要件の 1 つは、C 言語との下位互換性でした。 �
 
 - 生のポインターではなく、スマート ポインター。
 
-- `std::string` `std::wstring`型 (を参照してください[\<文字列 >](../standard-library/string.md)) ではなく生`char[]`配列。
+- `std::string` および `std::wstring` 型 ( [\<文字列 >](../standard-library/string.md)を参照) は、未加工の `char[]` 配列ではなく、を参照してください。
 
-- [C++ 標準ライブラリ](../standard-library/cpp-standard-library-header-files.md)などのコンテナー `vector`、 `list`、および`map`生の配列またはカスタム コンテナーの代わりにします。 参照してください[\<ベクター >](../standard-library/vector.md)、 [\<リスト >](../standard-library/list.md)、および[\<マップ >](../standard-library/map.md)します。
+- 未加工の配列やカスタムコンテナーではなく、`vector`、`list`、`map` などの標準ライブラリコンテナー。 [ C++ ](../standard-library/cpp-standard-library-header-files.md) [\<vector >](../standard-library/vector.md)、 [\<リスト >](../standard-library/list.md)、および[\<マップ >](../standard-library/map.md)を参照してください。
 
-- C++ 標準ライブラリ[アルゴリズム](../standard-library/algorithm.md)で手動ではなくコーディングされました。
+- C++手動でコード化されたものではなく、標準ライブラリの[アルゴリズム](../standard-library/algorithm.md)。
 
 - 例外はエラー状態の報告と処理のためだけに使用される。
 
-- C++ 標準ライブラリを使用して、スレッド間通信のロック制御不要`std::atomic<>`(を参照してください[ \<atomic >](../standard-library/atomic.md)) その他のスレッド間通信メカニズムではなく。
+- 他のスレッド間通信メカニズムではC++なく、標準ライブラリ `std::atomic<>` を使用したロック解放のスレッド間通信 ( [\<アトミック >](../standard-library/atomic.md)を参照)。
 
-- インライン[ラムダ関数](../cpp/lambda-expressions-in-cpp.md)個別に実装される小さい関数ではなく。
+- 小さな関数ではなくインライン[ラムダ関数](../cpp/lambda-expressions-in-cpp.md)が個別に実装されています。
 
-- 範囲ベースの for ループ、フォーム内のコレクションを配列、C++ 標準ライブラリ コンテナー、および Windows ランタイムで動作するより堅牢なループを記述して`for ( for-range-declaration : expression )`します。 これは、コア言語サポートの一部です。 詳細については、次を参照してください。[ステートメント (C++) の範囲に基づく](../cpp/range-based-for-statement-cpp.md)します。
+- 範囲ベースの for ループでは、配列、 C++標準ライブラリコンテナー、Windows ランタイムコレクションを操作するより堅牢なループを `for ( for-range-declaration : expression )`の形式で記述します。 これは、コア言語サポートの一部です。 詳細については、「[範囲ベースの ForC++ステートメント ()](../cpp/range-based-for-statement-cpp.md)」を参照してください。
 
 C++ 言語自体も進化しました。 次の 2 つのコード スニペットを比較してみます。 このスニペットは以前の C++ を使ったものです。
 
@@ -93,43 +93,43 @@ void f()
 
 最新の C++ では、スマート ポインターを使用できるため、new/deleteを使用したり、明示的な例外処理を使用する必要はありません。 使用すると、**auto**型推論と[ラムダ関数](../cpp/lambda-expressions-in-cpp.md)、迅速なコードを記述することができます、厳しくし、理解を向上します。 範囲ベース**for**ループは、使いやすく、間違いを犯しにくい予想外のエラーを C スタイルよりクリーナー**for**ループします。 スケルトン コードを使って、最小限のコードでアプリケーションを記述できます。 さらにそのコードを例外セーフでメモリ セーフにすることができ、割り当て/解放や、エラー コードを取り扱う必要はありません。
 
-最新の C++ では、2 種類のポリモーフィズムが組み込まれています: コンパイル時にテンプレート経由によるもの、および実行時に継承と仮想化によるものです。 2 種類のポリモーフィズムを活用することにより、優れた効果を生じることができます。 C++ 標準ライブラリ テンプレート`shared_ptr`内部仮想メソッドを使用して、一見簡単な型消去を実現します。 ただし、テンプレートが最適な選択である場合には、ポリモーフィズムの仮想化を過度に使用しないでください。 テンプレートは非常に強力です。
+最新の C++ では、2 種類のポリモーフィズムが組み込まれています: コンパイル時にテンプレート経由によるもの、および実行時に継承と仮想化によるものです。 2 種類のポリモーフィズムを活用することにより、優れた効果を生じることができます。 標準C++ライブラリテンプレート `shared_ptr` は、内部の仮想メソッドを使用して、非常に簡単な型の消去を実現します。 ただし、テンプレートが最適な選択である場合には、ポリモーフィズムの仮想化を過度に使用しないでください。 テンプレートは非常に強力です。
 
 他の言語から C++ に移ってきた方、特に型の大部分が参照型であり、値型が非常に少ない、他のマネージド言語から移ってきた方は、C++ のクラスは既定で値型であることに注意してください。 ただし、それらを参照型として指定して、オブジェクト指向プログラミングをサポートするポリモーフィックな動作を可能とすることもできます。 値型はメモリとレイアウト コントロールに関するものであり、参照型はポリモーフィズムをサポートする基底クラスと仮想関数に関するものであることを理解すると、役に立ちます。 既定では、値型はコピー可能で、それぞれにコピー コンストラクターとコピー代入演算子があります。 参照型を指定する場合は、コピー コンストラクターとコピー代入演算子を無効化して、クラスをコピー不可にし、ポリモーフィズムをサポートする仮想デストラクターを使用します。 また値型はコンテンツに関するものであり、コピーされるときに、それぞれ変更可能な 2 つの個別の値を持ちます。 一方、参照型はオブジェクトがどのようなものであるかについての識別に関するものであり、このためポリモーフィックな型として参照される場合もあります。
 
 再びパワーが重要視されてきているため、C++ にとってのルネサンスが訪れています。 プログラマの生産性が重要である場合には Java や C# などの言語が適していますが、パワーとパフォーマンスがより重要である場合には、それらの言語には限界があります。 高い効率性とパワーに関しては、特に制限のあるハードウェアによるデバイスでは、最新の C++ に勝るものはありません。
 
-言語が最新であるだけでなく、開発ツールも最新です。 Visual Studio では堅牢かつ効率的な開発サイクルのすべての部分。 これにはアプリケーション ライフサイクル管理 (ALM) ツール、IntelliSense などの IDE の強化、XAML などのツールに適した方法、ビルド、デバッグ、および他のツールが含まれています。
+言語が最新であるだけでなく、開発ツールも最新です。 Visual Studio を使用すると、開発サイクルのすべての部分が堅牢で効率的になります。 これにはアプリケーション ライフサイクル管理 (ALM) ツール、IntelliSense などの IDE の強化、XAML などのツールに適した方法、ビルド、デバッグ、および他のツールが含まれています。
 
 ドキュメントのこの部分の記事は、最新の C++ プログラムを作成するために、最も重要な機能および技術に関する、高レベルのガイドラインとベスト プラクティスを提供します。
 
-- [C++ 型システム](../cpp/cpp-type-system-modern-cpp.md)
+- [C++型システム](../cpp/cpp-type-system-modern-cpp.md)
 
 - [均一な初期化とコンストラクターのデリゲート](../cpp/uniform-initialization-and-delegating-constructors.md)
 
-- [オブジェクトの有効期間とリソースの管理](../cpp/object-lifetime-and-resource-management-modern-cpp.md)
+- [オブジェクトの有効期間とリソース管理](../cpp/object-lifetime-and-resource-management-modern-cpp.md)
 
 - [リソースを所有するオブジェクト (RAII)](../cpp/objects-own-resources-raii.md)
 
-- [スマート ポインター](../cpp/smart-pointers-modern-cpp.md)
+- [スマートポインター](../cpp/smart-pointers-modern-cpp.md)
 
-- [コンパイル時のカプセル化の Pimpl](../cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md)
+- [コンパイル時のカプセル化の pimpl](../cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md)
 
 - [コンテナー](../cpp/containers-modern-cpp.md)
 
 - [アルゴリズム](../cpp/algorithms-modern-cpp.md)
 
-- [文字列および I/O の書式設定 (Modern C)](../cpp/string-and-i-o-formatting-modern-cpp.md)
+- [文字列および i/o の書式設定 (モダンC++)](../cpp/string-and-i-o-formatting-modern-cpp.md)
 
 - [エラーと例外処理](../cpp/errors-and-exception-handling-modern-cpp.md)
 
 - [ABI の境界での移植性](../cpp/portability-at-abi-boundaries-modern-cpp.md)
 
-詳細については、Stack Overflow の記事を参照してください。[を C++ の表現形式は c++ 11 で非推奨と](https://stackoverflow.com/questions/9299101/which-c-idioms-are-deprecated-in-c11)します。
+詳細については、 [c++ 11 でC++非推奨とされ](https://stackoverflow.com/questions/9299101/which-c-idioms-are-deprecated-in-c11)た Stack Overflow に関する記事を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
 [C++ 言語リファレンス](../cpp/cpp-language-reference.md)<br/>
 [ラムダ式](../cpp/lambda-expressions-in-cpp.md)<br/>
 [.NET 標準ライブラリ](../standard-library/cpp-standard-library-reference.md)<br/>
-[Visual C++ 言語への準拠](../overview/visual-cpp-language-conformance.md)
+[Microsoft C++言語準拠テーブル](../overview/visual-cpp-language-conformance.md)

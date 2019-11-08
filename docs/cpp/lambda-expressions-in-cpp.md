@@ -102,7 +102,7 @@ void f(Args... args) {
 
 クラスのメソッドの本体でラムダ式を使用するには**this**外側のクラスのメソッドとデータ メンバーにアクセスを提供する capture 句へのポインター。
 
-**Visual Studio 2017 バージョン 15.3 以降**(で使用可能な[/std:c + + 17](../build/reference/std-specify-language-standard-version.md))。**this**ポインターを指定することで値によってキャプチャされる可能性があります`*this`capture 句でします。 値でキャプチャすることで全体*クロージャ*、無名関数オブジェクトをその encapulates ラムダ式は、ラムダが呼び出されるすべての呼び出しサイトにコピーされます。 値によってキャプチャは、ラムダは、NUMA などの特定のハードウェア アーキテクチャで特に並列または非同期の操作で実行する場合に便利です。
+**Visual Studio 2017 バージョン 15.3 以降**(で使用可能な[/std:c++17](../build/reference/std-specify-language-standard-version.md))。**この**ポインターを指定することで値によってキャプチャされる可能性があります`*this`capture 句でします。 値でキャプチャすることで全体*クロージャ*、無名関数オブジェクトをその encapulates ラムダ式は、ラムダが呼び出されるすべての呼び出しサイトにコピーされます。 値によってキャプチャは、ラムダは、NUMA などの特定のハードウェア アーキテクチャで特に並列または非同期の操作で実行する場合に便利です。
 
 クラスのメソッドをラムダ式を使用する方法を示す例を参照してください"の例。使用して、メソッドのラムダ式"で[ラムダ式の例](../cpp/examples-of-lambda-expressions.md)します。
 
@@ -324,7 +324,7 @@ vector v after 2nd call to fillVector(): 10 11 12 13 14 15 16 17 18
 
 ## <a name="constexpr-lambda-expressions"></a>constexpr ラムダ式
 
-**Visual Studio 2017 バージョン 15.3 以降**(で使用可能な[/std:c + + 17](../build/reference/std-specify-language-standard-version.md))。ラムダ式として宣言することがあります`constexpr`または定数式の中でキャプチャまたは導入される各データ メンバーの初期化が許可されている場合、定数式で使用します。
+**Visual Studio 2017 バージョン 15.3 以降**(で使用可能な[/std:c++17](../build/reference/std-specify-language-standard-version.md))。ラムダ式として宣言することがあります`constexpr`または定数式の中でキャプチャまたは導入される各データ メンバーの初期化が許可されている場合、定数式で使用します。
 
 ```cpp
     int y = 32;

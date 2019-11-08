@@ -42,12 +42,12 @@ helpviewer_keywords:
 - wcserror_s function
 - error messages, getting
 ms.assetid: 9e5b15a0-efe1-4586-b7e3-e1d7c31a03d6
-ms.openlocfilehash: f8d461566f748ce5af3d4b2aab443b5966c27dd7
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 74caba0398fdb5cdd0f9c80270a42d2903200a5d
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958158"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625809"
 ---
 # <a name="strerror_s-_strerror_s-_wcserror_s-__wcserror_s"></a>strerror_s、_strerror_s、_wcserror_s、__wcserror_s
 
@@ -125,7 +125,7 @@ errno_t __wcserror_s(
 
 ## <a name="remarks"></a>Remarks
 
-**Strerror_s**関数は、 *errnum*をエラーメッセージ文字列にマップし、*バッファー*内の文字列を返します。 **_strerror_s**はエラー番号を受け取りません。**errno**の現在の値を使用して、適切なメッセージを決定します。 **Strerror_s**も **_strerror_s**も、実際にはメッセージを出力しません。そのためには、 [fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md)などの出力関数を呼び出す必要があります。
+**Strerror_s**関数は、 *errnum*をエラーメッセージ文字列にマップし、*バッファー*内の文字列を返します。 **_strerror_s**はエラー番号を受け取りません。**errno**の現在の値を使用して、適切なメッセージを決定します。 **Strerror_s**も **_strerror_s**も実際にはメッセージを出力しません。そのため、 [fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md)のような出力関数を呼び出す必要があります。
 
 ```C
 if (( _access( "datafile",2 )) == -1 )
@@ -147,9 +147,9 @@ if (( _access( "datafile",2 )) == -1 )
 
 **_strerror_s**、 **_wcserror_s**、および **__wcserror_s**は、ANSI 定義の一部ではなく、Microsoft による拡張機能です。 移植性が必要な場合は使用しないでください。ANSI 互換の場合は、代わりに**strerror_s**を使用してください。
 
-C++ では、テンプレートのオーバーロードによってこれらの関数を簡単に使用できます。オーバーロードでは、バッファー長を自動的に推論できるため、サイズ引数を指定する必要がなくなります。 詳細については、「 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
+C++ では、テンプレートのオーバーロードによってこれらの関数を簡単に使用できます。オーバーロードでは、バッファー長を自動的に推論できるため、サイズ引数を指定する必要がなくなります。 詳細については、「[セキュリティ保護されたテンプレート オーバーロード](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
-これらの関数のデバッグ バージョンは、最初にバッファーを 0xFD で埋めます。 この動作を無効にするには、[_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md) を使用します。
+これらの関数のデバッグライブラリバージョンは、最初にバッファーを0xFE で埋めます。 この動作を無効にするには、[_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md) を使用します。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -157,14 +157,14 @@ C++ では、テンプレートのオーバーロードによってこれらの�
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcserror_s**|**strerror_s**|**strerror_s**|**_wcserror_s**|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**strerror_s**、 **_strerror_s**|\<string.h>|
 |**_wcserror_s**、 **__wcserror_s**|\<string.h> または \<wchar.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 

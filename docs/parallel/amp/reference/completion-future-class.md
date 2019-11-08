@@ -22,7 +22,7 @@ ms.locfileid: "62405574"
 ---
 # <a name="completionfuture-class"></a>completion_future クラス
 
-C ++. AMP の非同期操作に対応するフューチャを表します。
+C++. AMP の非同期操作に対応するフューチャを表します。
 
 ### <a name="syntax"></a>構文
 

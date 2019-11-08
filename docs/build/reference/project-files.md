@@ -14,7 +14,7 @@ ms.locfileid: "69630764"
 ---
 # <a name="project-files"></a>プロジェクト ファイル
 
-Visual C++ Studio のプロジェクトファイルは XML ベースのファイルで、.vcxproj というファイル名拡張子を持ち、プロジェクトをC++ビルドするために必要な情報が含まれています。 プロジェクトファイルは、". props" または ".targets" という拡張子を持つさまざまなプロジェクトファイルをインポートすることに注意してください。 これらのファイルには追加のビルド情報が含まれており、それ自体が他の "props" ファイルまたは ".targets" ファイルを参照している場合があります。 ファイルのパス内のマクロ (たとえば `$(VCTargetsPath)`) は、Visual Studio のインストールに依存しています。 これらのマクロと "..." ファイルと ".targets" ファイルの詳細については、「 [VC + + ディレクトリ」プロパティページ](vcpp-directories-property-page.md)を参照してください。 [Visual Studio でコンパイラとビルドプロパティを設定C++ ](../working-with-project-properties.md)する方法と、[ビルドコマンドとプロパティの一般的なマクロ](common-macros-for-build-commands-and-properties.md)に関するページを参照してください。
+Visual C++ Studio のプロジェクトファイルは XML ベースのファイルで、.vcxproj というファイル名拡張子を持ち、プロジェクトをC++ビルドするために必要な情報が含まれています。 プロジェクトファイルは、". props" または ".targets" という拡張子を持つさまざまなプロジェクトファイルをインポートすることに注意してください。 これらのファイルには追加のビルド情報が含まれており、それ自体が他の "props" ファイルまたは ".targets" ファイルを参照している場合があります。 ファイルのパス内のマクロ (たとえば `$(VCTargetsPath)`) は、Visual Studio のインストールに依存しています。 これらのマクロと "..." ファイルと ".targets" ファイルの詳細については、「 [VC++ ディレクトリ」プロパティページ](vcpp-directories-property-page.md)を参照してください。 [Visual Studio でコンパイラとビルドプロパティを設定C++ ](../working-with-project-properties.md)する方法と、[ビルドコマンドとプロパティの一般的なマクロ](common-macros-for-build-commands-and-properties.md)に関するページを参照してください。
 
 ## <a name="example"></a>例
 

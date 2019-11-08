@@ -1,6 +1,6 @@
 ---
 title: Visual Studio のプロジェクト - C++
-ms.date: 12/12/2018
+ms.date: 10/25/2019
 helpviewer_keywords:
 - ATL projects, creating
 - Visual Studio C++ projects, creating
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - Visual Studio C++ projects
 - ATL projects
 ms.assetid: 11003cd8-9046-4630-a189-a32bf3b88047
-ms.openlocfilehash: 30d3b13ba4d392cdc5d1c7c611b61066503647a2
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: d6bfefdaa3dfc67f861cf116718f89c0e9766e47
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837040"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624479"
 ---
 # <a name="visual-studio-projects---c"></a>Visual Studio のプロジェクト - C++
 
-"*Visual Studio のプロジェクト*" は、MSBuild のビルド システムに基づくプロジェクトです。 MSBuild は Visual Studio のネイティブ ビルド システムであり、MFC または ATL ライブラリ、COM コンポーネント、他の Windows 固有プログラムを使用するデスクトップ アプリケーションだけでなく、UWP アプリでの使用にも最適なビルド システムです。 MSBuild は Visual Studio と緊密に統合されていますが、コマンド ラインから使うこともできます。 
+"*Visual Studio のプロジェクト*" は、MSBuild のビルド システムに基づくプロジェクトです。 MSBuild は、Visual Studio のネイティブビルドシステムであり、一般に、Windows 固有のプログラムに使用する最適なビルドシステムです。 MSBuild は Visual Studio と緊密に統合されていますが、コマンド ラインから使うこともできます。 クロスプラットフォームプロジェクト、またはオープンソースライブラリを使用するプロジェクトでは、visual studio 2017 以降の[Visual studio で Cmake プロジェクト](cmake-projects-in-visual-studio.md)を使用することをお勧めします。 以前のバージョンの Visual Studio から MSBuild プロジェクトをアップグレードする方法の詳細については、 [Microsoft C++の移植とアップグレード](../porting/visual-cpp-porting-and-upgrading-guide.md)に関するガイドを参照してください。
 
 ## <a name="create-a-project"></a>プロジェクトを作成する
 
@@ -25,7 +25,7 @@ ms.locfileid: "65837040"
 
 C++ プロジェクトを作成するには、 **[ファイル]**  >  **[新規作成]**  >  **[プロジェクト]** を選択し、 **[言語]** を C++ に設定します。 結果の一覧に表示されるプロジェクト テンプレートのリストは、 **[プラットフォーム]** または **[プロジェクトの種類]** を設定し、検索ボックスにキーワードを入力することで、フィルター処理できます。 
 
-   ![Visual Studio 2019 のプロジェクト テンプレート](../build/media/vs2019-choose-console-app.png "Visual Studio 2019 の新規プロジェクト ダイアログ")
+   ![Visual Studio 2019 プロジェクトテンプレート](../build/media/vs2019-choose-console-app.png "Visual Studio 2019 の [新しいプロジェクト] ダイアログ")
 
 ::: moniker-end
 
@@ -33,11 +33,11 @@ C++ プロジェクトを作成するには、 **[ファイル]**  >  **[新規�
 
 C++ プロジェクトを作成するには、 **[ファイル]**  >  **[新規作成]**  >  **[プロジェクト]** を選択し、左側のウィンドウで Visual C++ を選択します。 中央のウィンドウに、プロジェクト テンプレートの一覧が表示されます。
 
-   ![プロジェクト テンプレート](../overview/media/vs2017-new-project.png "Visual Studio 2017 の [新しいプロジェクト] ダイアログ")
+   ![プロジェクトテンプレート](../overview/media/vs2017-new-project.png "Visual Studio 2017 の [新しいプロジェクト] ダイアログ")
 
 ::: moniker-end
 
-Visual Studio に含まれるすべての既定のプロジェクト テンプレートについて詳しくは、[Visual Studio での C++ プロジェクト テンプレート](reference/visual-cpp-project-types.md) に関する記事をご覧ください。 独自のプロジェクト テンプレートを作成することができます。 詳細については、「[方法 :プロジェクト テンプレートを作成する](/visualstudio/ide/how-to-create-project-templates)」をご覧ください。
+Visual Studio に含まれるすべての既定のプロジェクト テンプレートについて詳しくは、[Visual Studio での C++ プロジェクト テンプレート](reference/visual-cpp-project-types.md) に関する記事をご覧ください。 独自のプロジェクト テンプレートを作成することができます。 詳細については、「[方法: プロジェクトテンプレートを作成](/visualstudio/ide/how-to-create-project-templates)する」を参照してください。
 
 作成したプロジェクトは、[[ソリューション エクスプローラー]](/visualstudio/ide/solutions-and-projects-in-visual-studio) ウィンドウに表示されます。
 
@@ -87,3 +87,4 @@ Visual Studio に含まれるすべての既定のプロジェクト テンプ�
 ## <a name="see-also"></a>関連項目
 
 [プロジェクトおよびビルド システム](projects-and-build-systems-cpp.md)<br>
+[Microsoft C++移植およびアップグレードガイド](../porting/visual-cpp-porting-and-upgrading-guide.md)

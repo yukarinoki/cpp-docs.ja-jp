@@ -78,7 +78,7 @@ int main() {
 
 上の例では、`capa` は `c` が大文字 `A` の場合、インクリメントします。 **break**後のステートメント`capa++`の実行を終了、**switch**をステートメント本体と制御を渡します、**while**ループします。 なし、 **break**ステートメントでは、実行は「フォール スルー」[次へ] のラベル付きステートメントにように`lettera`と`nota`もインクリメントされます。 目的は同じですが、によって処理される、 **break**ステートメント`case 'a'`。 場合`c`が小文字`a`、`lettera`がインクリメントされます、 **break**ステートメントが終了、**switch**ステートメント本体。 場合`c`でない、`a`または`A`、**default**ステートメントが実行されます。
 
-**Visual Studio 2017 以降:** (で使用可能な[/std:c + + + 17](../build/reference/std-specify-language-standard-version.md))、`[[fallthrough]]`標準の c++ 17 で属性を指定します。 使用できます、**switch**ステートメントは、フォールスルー動作を意図 (または、コードを読むすべてのユーザーに) コンパイラにヒントとして。 MicrosoftC++コンパイラ現在は、警告、fallthrough 動作のため、この属性はコンパイラの動作に影響を与えません。 属性をラベル付きステートメント内で空のステートメントに適用されるに注意してください。つまり、セミコロンは必要があります。
+**Visual Studio 2017 以降:** (で使用可能な[/std:c++17](../build/reference/std-specify-language-standard-version.md))、`[[fallthrough]]`標準の c++ 17 で属性を指定します。 使用できます、**切り替える**ステートメントは、フォールスルー動作を意図 (または、コードを読むすべてのユーザーに) コンパイラにヒントとして。 MicrosoftC++コンパイラ現在は、警告、fallthrough 動作のため、この属性はコンパイラの動作に影響を与えません。 属性をラベル付きステートメント内で空のステートメントに適用されるに注意してください。つまり、セミコロンは必要があります。
 
 ```cpp
 int main()
@@ -106,7 +106,7 @@ int main()
 }
 ```
 
-**Visual Studio 2017 バージョン 15.3 以降**(で使用可能な[/std:c + + 17](../build/reference/std-specify-language-standard-version.md))。Switch ステートメントは、紹介し、スコープは、switch ステートメントのブロックに限定する変数を初期化することがあります。
+**Visual Studio 2017 バージョン 15.3 以降**(で使用可能な[/std:c++17](../build/reference/std-specify-language-standard-version.md))。Switch ステートメントは、紹介し、スコープは、switch ステートメントのブロックに限定する変数を初期化することがあります。
 
 ```cpp
     switch (Gadget gadget(args); auto s = gadget.get_status())

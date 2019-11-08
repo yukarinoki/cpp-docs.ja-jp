@@ -23,12 +23,12 @@ f1_keywords:
 - signal
 helpviewer_keywords:
 - signal function
-ms.openlocfilehash: 04869412272725108911f13857585e650ad20ab9
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 232bf7bc518907db8744fbb85e0f3a33c9296006
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948109"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625850"
 ---
 # <a name="signal"></a>signal
 
@@ -109,13 +109,13 @@ Windows では、 **Sigill**信号とシグナルは生成されません。 こ
 
 [_Exec](../../c-runtime-library/exec-wexec-functions.md)関数または[_spawn](../../c-runtime-library/spawn-wspawn-functions.md)関数の呼び出しによって作成されたプロセスでは、シグナル設定が保持されません。 シグナル設定は、新しいプロセスでは既定値にリセットされます。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**signal**|\<signal.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 
@@ -127,7 +127,6 @@ Windows では、 **Sigill**信号とシグナルは生成されません。 こ
 // Use signal to attach a signal handler to the abort routine
 #include <stdlib.h>
 #include <signal.h>
-#include <tchar.h>
 
 void SignalHandler(int signal)
 {
@@ -149,9 +148,16 @@ int main()
 }
 ```
 
+出力は、使用されているランタイムのバージョン、アプリがコンソールまたは Windows アプリであるかどうか、および Windows レジストリ設定によって異なります。 コンソールアプリの場合、次のようなメッセージが stderr に送信される可能性があります。
+
 ```Output
-This application has requested the Runtime to terminate it in an unusual way.
-Please contact the application's support team for more information.
+Debug Error!
+
+Program: c:\Projects\crt_signal\Debug\crt_signal.exe
+
+R6010
+
+- abort() has been called
 ```
 
 ## <a name="see-also"></a>関連項目
