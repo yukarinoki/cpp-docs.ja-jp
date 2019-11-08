@@ -321,7 +321,7 @@ void SetRecentVisibleState(BOOL bState);
 
 ### <a name="parameters"></a>パラメーター
 
-*この*<br/>
+*this*<br/>
 [in]設定する状態。
 
 ### <a name="remarks"></a>Remarks

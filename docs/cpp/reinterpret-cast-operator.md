@@ -31,7 +31,7 @@ reinterpret_cast < type-id > ( expression )
 
 結果、 **reinterpret_cast**元の型にキャストされている以外は安全に使用することはできません。 その他の使用方法は、最高でも非ポータブルです。
 
-**Reinterpret_cast**演算子はキャストできません、 **const**、**揮発性**、または **_ _unaligned**属性。 参照してください[const_cast 演算子](../cpp/const-cast-operator.md)については、これらの属性を削除します。
+**reinterpret_cast**演算子はキャストできません、 **const**、**volatile**、または **_ _unaligned**属性。 参照してください[const_cast 演算子](../cpp/const-cast-operator.md)については、これらの属性を削除します。
 
 **Reinterpret_cast**演算子は、null ポインターの値を変換先の型の null ポインター値に変換します。
 

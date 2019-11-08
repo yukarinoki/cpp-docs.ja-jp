@@ -29,7 +29,7 @@ BSTR copy( bool fCopy = true ) const;
 #### <a name="parameters"></a>パラメーター
 
 *fCopy*<br/>
-TRUE の場合、**コピー**格納されているのコピーを返します`BSTR`それ以外の場合、**コピー**実際の BSTR を返します。
+TRUE の場合、**copy**格納されているのコピーを返します`BSTR`それ以外の場合、**copy**実際の BSTR を返します。
 
 ## <a name="remarks"></a>Remarks
 

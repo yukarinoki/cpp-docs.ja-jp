@@ -125,13 +125,13 @@ _variant_t& operator=(
 
 - **operator = (***var_t_Src***)** 既存`_variant_t`オブジェクトを`_variant_t`オブジェクト。    
 
-- **演算子 = (***sSrc***)** 割り当てます、**短い**整数値を`_variant_t`オブジェクト。
+- **演算子 = (***sSrc***)** 割り当てます、**short**整数値を`_variant_t`オブジェクト。
 
-- **演算子 = (**`lSrc`**)** 割り当てます、**長い**整数値を`_variant_t`オブジェクト。
+- **演算子 = (**`lSrc`**)** 割り当てます、**long**整数値を`_variant_t`オブジェクト。
 
 - **演算子 = (***fltSrc***)** 割り当てます、 **float**数値を`_variant_t`オブジェクト。
 
-- **演算子 = (***dblSrc***)** 割り当てます、**二重**数値を`_variant_t`オブジェクト。
+- **演算子 = (***dblSrc***)** 割り当てます、**double**数値を`_variant_t`オブジェクト。
 
 - **operator = (***cySrc***)** 割り当てます、`CY`オブジェクトを`_variant_t`オブジェクト。
 

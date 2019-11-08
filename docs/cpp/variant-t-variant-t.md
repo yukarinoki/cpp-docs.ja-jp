@@ -188,13 +188,13 @@ A **unsigned long**新しいにコピーされる値`_variant_t`オブジェク�
 **Int**新しいにコピーされる値`_variant_t`オブジェクト。
 
 *uiSrc*<br/>
-**符号なし int**新しいにコピーされる値`_variant_t`オブジェクト。
+**unsigned int**新しいにコピーされる値`_variant_t`オブジェクト。
 
 *i8Src*<br/>
 **_ _Int64**新しいにコピーされる値`_variant_t`オブジェクト。
 
 *ui8Src*<br/>
-**符号なし _ _int64**新しいにコピーされる値`_variant_t`オブジェクト。
+**unsigned _ _int64**新しいにコピーされる値`_variant_t`オブジェクト。
 
 ## <a name="remarks"></a>Remarks
 
@@ -208,13 +208,13 @@ A **unsigned long**新しいにコピーされる値`_variant_t`オブジェク�
 
 - **_variant_t (VARIANT &***varSrc* **、bool**`fCopy`**)** を構築、`_variant_t`既存のオブジェクト`VARIANT`オブジェクト。       場合*fCopy*は**false**、**バリアント**オブジェクトは、コピーを作成せず、新しいオブジェクトにアタッチされています。
 
-- **_variant_t (short***sSrc* **、VARTYPE**`vtSrc`**= VT_I2)** を構築、 `_variant_t` からVT_I2またはVT_BOOLの型のオブジェクト**短い**整数値。       その他の`VARTYPE`E_INVALIDARG エラーが発生します。
+- **_variant_t (short***sSrc* **、VARTYPE**`vtSrc`**= VT_I2)** を構築、 `_variant_t` からVT_I2またはVT_BOOLの型のオブジェクト**short**整数値。       その他の`VARTYPE`E_INVALIDARG エラーが発生します。
 
-- **_variant_t (long** `lSrc` **、VARTYPE**`vtSrc`**= VT_I4)** を構築、 `_variant_t` VT_I4、VT_BOOL、またはから VT_ERROR 型のオブジェクトを**長**整数値。       その他の`VARTYPE`E_INVALIDARG エラーが発生します。
+- **_variant_t (long** `lSrc` **、VARTYPE**`vtSrc`**= VT_I4)** を構築、 `_variant_t` VT_I4、VT_BOOL、またはから VT_ERROR 型のオブジェクトを**long**整数値。       その他の`VARTYPE`E_INVALIDARG エラーが発生します。
 
 - **_variant_t (float**`fltSrc`**)** を構築します、 `_variant_t` VT_R4 からの型のオブジェクトを**float**数値を指定します。    
 
-- **_variant_t (double** `dblSrc` **、VARTYPE**`vtSrc`**= VT_R8)** を構築、 `_variant_t` VT_R8 または VT_DATE から型のオブジェクトを**倍**数値を指定します。       その他の`VARTYPE`E_INVALIDARG エラーが発生します。
+- **_variant_t (double** `dblSrc` **、VARTYPE**`vtSrc`**= VT_R8)** を構築、 `_variant_t` VT_R8 または VT_DATE から型のオブジェクトを**double**数値を指定します。       その他の`VARTYPE`E_INVALIDARG エラーが発生します。
 
 - **_variant_t (CY &**`cySrc`**)** を構築、 `_variant_t` VT_CY からの型のオブジェクトを`CY`オブジェクト。    
 

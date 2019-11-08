@@ -77,10 +77,10 @@ class CDBVariant
 |----------|-----------------|
 |[CDBVariant::m_boolVal](#m_boolval)|型の値を含む**BOOL**します。|
 |[CDBVariant::m_chVal](#m_chval)|型の値を含む**unsigned char**します。|
-|[CDBVariant::m_dblVal](#m_dblval)|型の値を含む**二重**します。|
+|[CDBVariant::m_dblVal](#m_dblval)|型の値を含む**double**します。|
 |[CDBVariant::m_fltVal](#m_fltval)|型の値を含む**float**します。|
-|[CDBVariant::m_iVal](#m_ival)|型の値を含む**短い**します。|
-|[CDBVariant::m_lVal](#m_lval)|型の値を含む**長い**します。|
+|[CDBVariant::m_iVal](#m_ival)|型の値を含む**short**します。|
+|[CDBVariant::m_lVal](#m_lval)|型の値を含む**long**します。|
 |[CDBVariant::m_pbinary](#m_pbinary)|型のオブジェクトへのポインターを含む`CLongBinary`します。|
 |[CDBVariant::m_pdate](#m_pdate)|型のオブジェクトへのポインターを含む**TIMESTAMP_STRUCT**します。|
 |[CDBVariant::m_pstring](#m_pstring)|型のオブジェクトへのポインターを含む`CString`します。|
@@ -147,7 +147,7 @@ BOOL 型の値を格納します。
 
 ##  <a name="m_dblval"></a>  CDBVariant::m_dblVal
 
-型の値を格納**二重**します。
+型の値を格納**double**します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -186,7 +186,7 @@ BOOL 型の値を格納します。
 
 ##  <a name="m_ival"></a>  CDBVariant::m_iVal
 
-型の値を格納**短い**します。
+型の値を格納**short**します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -194,7 +194,7 @@ BOOL 型の値を格納します。
 
 ##  <a name="m_lval"></a>  CDBVariant::m_lVal
 
-型の値を格納**長い**します。
+型の値を格納**long**します。
 
 ### <a name="remarks"></a>Remarks
 

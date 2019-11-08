@@ -32,7 +32,7 @@ ms.locfileid: "62183753"
 Visual Studio 2015 以降では、 **_ _restrict**で使用できるC++参照。
 
 > [!NOTE]
->  持っている変数に対して使用すると、[揮発性](../cpp/volatile-cpp.md)キーワード、**揮発性**が優先されます。
+>  持っている変数に対して使用すると、[volatile](../cpp/volatile-cpp.md)キーワード、**volatile**が優先されます。
 
 ## <a name="example"></a>例
 

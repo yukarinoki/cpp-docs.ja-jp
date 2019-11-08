@@ -88,7 +88,7 @@ class CBitmapButton : public CButton
 
 1. アプリケーションのダイアログ クラスで (から派生した`CDialog`)、追加、`CBitmapButton`メンバー オブジェクトです。
 
-1. `CDialog`オブジェクトの[OnInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog)ルーチンを呼び出し、`CBitmapButton`オブジェクトの[AutoLoad](#autoload)関数は、ボタンのコントロール ID をパラメーターとして使用して、`CDialog`オブジェクト**この**ポインター。
+1. `CDialog`オブジェクトの[OnInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog)ルーチンを呼び出し、`CBitmapButton`オブジェクトの[AutoLoad](#autoload)関数は、ボタンのコントロール ID をパラメーターとして使用して、`CDialog`オブジェクト**this**ポインター。
 
 BN_CLICKED などの Windows 通知メッセージを処理する場合、その親にビットマップ ボタン コントロールから送信 (から派生したクラスは、通常`CDialog`)、追加、 `CDialog`-派生オブジェクトをメッセージ マップ エントリとメッセージ ハンドラー メンバー各メッセージの関数。 によって送信された通知を`CBitmapButton`オブジェクトは、によって送信されたものと同じ、 [CButton](../../mfc/reference/cbutton-class.md)オブジェクト。
 

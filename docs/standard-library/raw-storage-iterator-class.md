@@ -103,7 +103,7 @@ raw_storage_iterator<ForwardIterator, Type>& operator*();
 
 #### <a name="remarks"></a>Remarks
 
-要件、`ForwardIterator`は、生のストレージ反復子の式のみを必要を満たす必要があります\* *ii* = *t*有効であるし、は何も書かれている、**演算子**または`operator=`自体にします。 メンバー演算子は、この実装で返します **\*これ**ように[演算子 =](#op_eq)(**constType**(& a)) を指定する式の実際の格納を実行できますなど\* *ptr* = `val`します。
+要件、`ForwardIterator`は、生のストレージ反復子の式のみを必要を満たす必要があります\* *ii* = *t*有効であるし、は何も書かれている、**operator**または`operator=`自体にします。 メンバー演算子は、この実装で返します **\*this**ように[演算子 =](#op_eq)(**constType**(& a)) を指定する式の実際の格納を実行できますなど\* *ptr* = `val`します。
 
 #### <a name="example"></a>例
 

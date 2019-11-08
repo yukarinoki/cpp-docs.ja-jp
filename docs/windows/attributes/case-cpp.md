@@ -15,7 +15,7 @@ ms.locfileid: "62148446"
 ---
 # <a name="case-c"></a>case (C++)
 
-使用される、 [switch_type](switch-type.md)属性、**共用体**します。
+使用される、 [switch_type](switch-type.md)属性、**union**します。
 
 ## <a name="syntax"></a>構文
 

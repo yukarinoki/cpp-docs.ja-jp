@@ -465,7 +465,7 @@ C++ AMP には、アクセラレータ機能を使用するグラフィックス
 
 - [writeonly_texture_view クラス](../../parallel/amp/reference/writeonly-texture-view-class.md):すべてのテクスチャに書き込み専用のアクセスを提供します。
 
-- Short ベクター ライブラリ:長さが 2、3、および 4 に基づくの short ベクター型のセットを定義**int**、 `uint`、 **float**、**二重**、 [norm](../../parallel/amp/reference/norm-class.md)、または[unorm](../../parallel/amp/reference/unorm-class.md)します。
+- Short ベクター ライブラリ:長さが 2、3、および 4 に基づくの short ベクター型のセットを定義**int**、 `uint`、 **float**、**double**、 [norm](../../parallel/amp/reference/norm-class.md)、または[unorm](../../parallel/amp/reference/unorm-class.md)します。
 
 ## <a name="universal-windows-platform-uwp-apps"></a>ユニバーサル Windows プラットフォーム (UWP) アプリ
 

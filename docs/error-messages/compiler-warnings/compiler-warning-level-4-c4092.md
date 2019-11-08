@@ -17,4 +17,4 @@ ms.locfileid: "62401385"
 
 sizeof 演算子が 'unsigned long'。
 
-オペランド、`sizeof`演算子が非常に多いため、`sizeof`符号なしで返される**長い**します。 Microsoft 拡張機能でこの警告が発生します ([/Ze](../../build/reference/za-ze-disable-language-extensions.md))。 ANSI 互換 (/Za) では、代わりに、結果が切り捨てられます。
+オペランド、`sizeof`演算子が非常に多いため、`sizeof`符号なしで返される**long**します。 Microsoft 拡張機能でこの警告が発生します ([/Ze](../../build/reference/za-ze-disable-language-extensions.md))。 ANSI 互換 (/Za) では、代わりに、結果が切り捨てられます。

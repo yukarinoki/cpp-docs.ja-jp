@@ -961,7 +961,7 @@ class CWnd : public CCmdTarget
 |[CWnd::GetParentOwner](#getparentowner)|子ウィンドウの親ウィンドウへのポインターを返します。|
 |[CWnd::GetProperty](#getproperty)|ActiveX コントロール プロパティを取得します。|
 |[CWnd::GetRenderTarget](#getrendertarget)|このウィンドウに関連付けられているレンダー ターゲットを取得します。|
-|[CWnd::GetSafeHwnd](#getsafehwnd)|を`m_hWnd`返します。**この**ポインターが null の場合は null を返します。|
+|[CWnd::GetSafeHwnd](#getsafehwnd)|を`m_hWnd`返します。**this**ポインターが null の場合は null を返します。|
 |[CWnd::GetSafeOwner](#getsafeowner)|指定されたウィンドウのセーフ オーナーを取得します。|
 |[CWnd::GetScrollBarCtrl](#getscrollbarctrl)|兄弟スクロール バーのコントロールを返します。|
 |[CWnd::GetScrollBarInfo](#getscrollbarinfo)|指定されたスクロール バーの情報を取得します。|
@@ -1938,7 +1938,7 @@ virtual BOOL Create(
 ### <a name="remarks"></a>Remarks
 
 > [!WARNING]
-> `CWnd::PreCreateWindow`は、メニューが NULL で、 `CREATESTRUCT`スタイルに WS_CHILD が含まれている場合に、そのパラメーターの hMenu メンバーを**この**ポインターに割り当てます。 適切な機能を使用するには、ダイアログコントロールの ID が NULL でないことを確認してください。
+> `CWnd::PreCreateWindow`は、メニューが NULL で、 `CREATESTRUCT`スタイルに WS_CHILD が含まれている場合に、そのパラメーターの hMenu メンバーを**this**ポインターに割り当てます。 適切な機能を使用するには、ダイアログコントロールの ID が NULL でないことを確認してください。
 >
 > この変更により、マネージ/ネイティブの相互運用シナリオでのクラッシュが修正されます。 のトレースステートメント`CWnd::Create`は、問題の開発者に警告します。
 
@@ -2187,7 +2187,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>Remarks
 
 > [!WARNING]
-> `CWnd::PreCreateWindow`は、メニューが NULL で、 `CREATESTRUCT`スタイルに WS_CHILD が含まれている場合に、そのパラメーターの hMenu メンバーを**この**ポインターに割り当てます。 適切な機能を使用するには、ダイアログコントロールの ID が NULL でないことを確認してください。
+> `CWnd::PreCreateWindow`は、メニューが NULL で、 `CREATESTRUCT`スタイルに WS_CHILD が含まれている場合に、そのパラメーターの hMenu メンバーを**this**ポインターに割り当てます。 適切な機能を使用するには、ダイアログコントロールの ID が NULL でないことを確認してください。
 >
 > この変更により、マネージ/ネイティブの相互運用シナリオでのクラッシュが修正されます。 `TRACE` の`CWnd::Create`ステートメントは、問題の開発者に通知します。
 
@@ -4501,7 +4501,7 @@ CHwndRenderTarget* GetRenderTarget();
 
 ##  <a name="getsafehwnd"></a>  CWnd::GetSafeHwnd
 
-を`m_hWnd`返します。**この**ポインターが null の場合は null を返します。
+を`m_hWnd`返します。**this**ポインターが null の場合は null を返します。
 
 ```
 HWND GetSafeHwnd() const;
@@ -10552,7 +10552,7 @@ virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
 ### <a name="remarks"></a>Remarks
 
 > [!WARNING]
-> `CWnd::PreCreateWindow`は、メニューが NULL で、スタイルに WS_CHILD が含まれている場合に、**この**ポインターに*cs*の hMenu メンバーを割り当てます。 適切な機能を使用するには、ダイアログコントロールの ID が NULL でないことを確認してください。
+> `CWnd::PreCreateWindow`は、メニューが NULL で、スタイルに WS_CHILD が含まれている場合に、**this**ポインターに*cs*の hMenu メンバーを割り当てます。 適切な機能を使用するには、ダイアログコントロールの ID が NULL でないことを確認してください。
 >
 > この変更により、マネージ/ネイティブの相互運用シナリオでのクラッシュが修正されます。 のトレースステートメント`CWnd::Create`は、問題の開発者に警告します。
 

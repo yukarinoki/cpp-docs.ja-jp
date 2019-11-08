@@ -398,7 +398,7 @@ bool get_supports_double_precision() const;
 
 ##  <a name="get_supports_limited_double_precision"></a> get_supports_limited_double_precision
 
-アクセラレータの倍精度演算のサポートが制限されているかどうかを示すブール値を返します。 アクセラレータがある一部のみがサポート、乗算定着し (FMA) を追加する場合除算、逆数、およびの間でキャスト**int**と**二重**はサポートされていません。
+アクセラレータの倍精度演算のサポートが制限されているかどうかを示すブール値を返します。 アクセラレータがある一部のみがサポート、乗算定着し (FMA) を追加する場合除算、逆数、およびの間でキャスト**int**と**double**はサポートされていません。
 
 ```
 bool get_supports_limited_double_precision() const;

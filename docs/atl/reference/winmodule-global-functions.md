@@ -48,11 +48,11 @@ ATLINLINE ATLAPI_(void) AtlWinModuleAddCreateWndData(
 ポインター、 [_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md)構造体を初期化して、現在のモジュールに追加します。
 
 *pObject*<br/>
-オブジェクトへのポインター**この**ポインター。
+オブジェクトへのポインター**this**ポインター。
 
 ### <a name="remarks"></a>Remarks
 
-初期化します、`_AtlCreateWndData`を格納するために使用する構造体、**この**ポインター クラスのインスタンスを参照するために使用し、モジュールの参照の一覧に追加`_ATL_WIN_MODULE70`構造体。 によって呼び出される[CAtlWinModule::AddCreateWndData](catlwinmodule-class.md#addcreatewnddata)します。
+初期化します、`_AtlCreateWndData`を格納するために使用する構造体、**this**ポインター クラスのインスタンスを参照するために使用し、モジュールの参照の一覧に追加`_ATL_WIN_MODULE70`構造体。 によって呼び出される[CAtlWinModule::AddCreateWndData](catlwinmodule-class.md#addcreatewnddata)します。
 
 ##  <a name="atlwinmoduleextractcreatewnddata"></a>  AtlWinModuleExtractCreateWndData
 

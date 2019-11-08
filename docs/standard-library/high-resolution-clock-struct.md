@@ -37,7 +37,7 @@ class high_resolution_clock
 |----------|-----------------|
 |`duration`|シノニム`nanoseconds`で定義された\<chrono >。|
 |`period`|シノニム`nano`で定義された\<ratio >。|
-|`rep`|シノニム**長い** **長い**に含まれているインスタンス化のクロック ティック数を表すために使用される型`duration`します。|
+|`rep`|シノニム**long long**に含まれているインスタンス化のクロック ティック数を表すために使用される型`duration`します。|
 |`time_point`|`chrono::time_point<high_resolution_clock>` と同義。|
 
 ## <a name="functions"></a>関数
