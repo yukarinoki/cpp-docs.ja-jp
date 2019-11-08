@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: de468979-eab8-4158-90c5-c198932f93b9
 ms.openlocfilehash: 1928f8e479b0533c5a8b2e60de7af9eff93f7eed
 ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2019
 ms.locfileid: "65222268"
@@ -45,7 +45,7 @@ x86 プラットフォームでは、すべての引数は渡されたときに 
 |[__clrcall](../cpp/clrcall.md)|N/A|CLR 式スタックに順に (左から右に) パラメーターを読み込む|
 |[__stdcall](../cpp/stdcall.md)|Callee|パラメーターをスタックに逆の順序で (右から左に) プッシュする|
 |[__fastcall](../cpp/fastcall.md)|Callee|レジスタに格納されてから、スタックにプッシュされる|
-|[__thiscall](../cpp/thiscall.md)|Callee|スタックにプッシュされます。**この**ECX に格納されているポインター|
+|[__thiscall](../cpp/thiscall.md)|Callee|スタックにプッシュされます。**this**ECX に格納されているポインター|
 |[__vectorcall](../cpp/vectorcall.md)|Callee|レジスタに格納されてから、スタックに逆の順序で (右から左に) プッシュされる|
 
 関連情報については、次を参照してください。[廃止された呼び出し規則](../cpp/obsolete-calling-conventions.md)します。
