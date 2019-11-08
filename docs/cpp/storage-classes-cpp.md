@@ -24,7 +24,7 @@ A*ストレージ クラス*C++ のコンテキストでの変数宣言は、オ
 
 1. [変更可能な](../cpp/mutable-data-members-cpp.md)キーワードが、ストレージ クラス指定子として見なされます。 ただし、クラス定義のメンバー一覧でのみ使用できます。
 
-1. **Visual Studio 2010 以降の場合:** **自動**キーワードは C++ ストレージ クラス指定子では不要になったと**登録**キーワードは非推奨とされます。 **Visual Studio 2017 バージョン 15.7 以降:** (で使用可能な[/std:c + + 17](../build/reference/std-specify-language-standard-version.md))。**登録**キーワードは C++ 言語から削除されます。
+1. **Visual Studio 2010 以降の場合:** **auto**キーワードは C++ ストレージ クラス指定子では不要になったと**register**キーワードは非推奨とされます。 **Visual Studio 2017 バージョン 15.7 以降:** (で使用可能な[/std:c + + 17](../build/reference/std-specify-language-standard-version.md))。**登録**キーワードは C++ 言語から削除されます。
 
 ```cpp
    register int val; // warning C5033: 'register' is no longer a supported storage class

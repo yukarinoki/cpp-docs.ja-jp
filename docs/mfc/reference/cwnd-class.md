@@ -1938,7 +1938,7 @@ virtual BOOL Create(
 ### <a name="remarks"></a>Remarks
 
 > [!WARNING]
-> `CWnd::PreCreateWindow`は、メニューが NULL で、 `CREATESTRUCT`スタイルに WS_CHILD が含まれている場合に、そのパラメーターの hMenu メンバーを**この**ポインターに割り当てます。 適切な機能を使用するには、ダイアログコントロールの ID が NULL でないことを確認してください。
+> `CWnd::PreCreateWindow`は、メニューが NULL で、 `CREATESTRUCT`スタイルに WS_CHILD が含まれている場合に、そのパラメーターの hMenu メンバーを**this**ポインターに割り当てます。 適切な機能を使用するには、ダイアログコントロールの ID が NULL でないことを確認してください。
 >
 > この変更により、マネージ/ネイティブの相互運用シナリオでのクラッシュが修正されます。 のトレースステートメント`CWnd::Create`は、問題の開発者に警告します。
 
@@ -2187,7 +2187,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>Remarks
 
 > [!WARNING]
-> `CWnd::PreCreateWindow`は、メニューが NULL で、 `CREATESTRUCT`スタイルに WS_CHILD が含まれている場合に、そのパラメーターの hMenu メンバーを**この**ポインターに割り当てます。 適切な機能を使用するには、ダイアログコントロールの ID が NULL でないことを確認してください。
+> `CWnd::PreCreateWindow`は、メニューが NULL で、 `CREATESTRUCT`スタイルに WS_CHILD が含まれている場合に、そのパラメーターの hMenu メンバーを**this**ポインターに割り当てます。 適切な機能を使用するには、ダイアログコントロールの ID が NULL でないことを確認してください。
 >
 > この変更により、マネージ/ネイティブの相互運用シナリオでのクラッシュが修正されます。 `TRACE` の`CWnd::Create`ステートメントは、問題の開発者に通知します。
 
