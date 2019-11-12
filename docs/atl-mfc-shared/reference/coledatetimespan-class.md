@@ -72,17 +72,17 @@ class COleDateTimeSpan
 
 |||
 |-|-|
-|[演算子 +、-](#operator_add_-)|追加、減算、および署名の変更`COleDateTimeSpan`値。|
+|[operator +、-](#operator_add_-)|`COleDateTimeSpan`の値の加算、減算、および符号の変更。|
 |[operator +=, -=](#operator_add_eq_-_eq)|加算および減算、`COleDateTimeSpan`値からこの`COleDateTimeSpan`値。|
 |[operator=](#operator_eq)|コピーを`COleDateTimeSpan`値。|
-|[operator ==、<、<=](#coledatetimespan_relational_operators)|2 つの`COleDateTimeSpan`の値の比較。|
-|[演算子 double](#operator_double)|この変換`COleDateTimeSpan`値を**double**します。|
+|[演算子 = =、<、< =](#coledatetimespan_relational_operators)|比較する 2 つ`COleDateTimeSpan`値。|
+|[operator double](#operator_double)|この`COleDateTimeSpan`の値を**double**に変換。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
 |名前|説明|
 |----------|-----------------|
-|[COleDateTimeSpan::m_span](#m_span)|基になるが含まれています。**二重**この`COleDateTimeSpan`オブジェクト。|
+|[COleDateTimeSpan::m_span](#m_span)|この`COleDateTimeSpan`オブジェクトの基になる**double**を含んでいます。|
 |[COleDateTimeSpan::m_status](#m_status)|この状態を含む`COleDateTimeSpan`オブジェクト。|
 
 ## <a name="remarks"></a>Remarks
@@ -551,7 +551,7 @@ double GetTotalSeconds() const throw();
 
 ##  <a name="m_span"></a>  COleDateTimeSpan::m_span
 
-基になる**二重**値`COleDateTime`オブジェクト。
+この**オブジェクトの基になる**double**を含んでいます。
 
 ```
 double m_span;
@@ -562,7 +562,7 @@ double m_span;
 この値は日の日付/時間を表します。
 
 > [!CAUTION]
->  値を変更、**二重**データ メンバーはこの値を変更`COleDateTimeSpan`オブジェクト。 この状態は変更されません`COleDateTimeSpan`オブジェクト。
+>  値を変更、**double**データ メンバーはこの値を変更`COleDateTimeSpan`オブジェクト。 この状態は変更されません`COleDateTimeSpan`オブジェクト。
 
 ##  <a name="m_status"></a>  COleDateTimeSpan::m_status
 
@@ -619,7 +619,7 @@ COleDateTimeSpan& operator=(double dblSpanSrc) throw();
 
 ##  <a name="operator_add_-"></a>  COleDateTimeSpan::operator +, -
 
-追加、減算、および署名の変更`COleDateTimeSpan`値。
+`COleDateTimeSpan`の値の加算、減算、および符号の変更。
 
 ```
 COleDateTimeSpan operator+(const COleDateTimeSpan& dateSpan) const throw();
@@ -664,7 +664,7 @@ COleDateTimeSpan& operator-=(const COleDateTimeSpan dateSpan) throw();
 
 ##  <a name="operator_double"></a>  COleDateTimeSpan::operator double
 
-この変換`COleDateTimeSpan`値を**double**します。
+この`COleDateTimeSpan`の値を**double**に変換。
 
 ```
 operator double() const throw();
@@ -745,7 +745,7 @@ enum DateTimeSpanStatus{
 - `COleDateTimeSpan::null` 示しますこの`COleDateTimeSpan`オブジェクトが null の場合は、このオブジェクトの値が指定されていないこと。 (これは"使用しない場合の値、"C++ の NULL ではなくデータベースという意味で"null")。
 
    > [!CAUTION]
-   > この関数は、高度なプログラミングに適しています。 この関数では、このオブジェクトのデータは変更されません。 状態を設定に使用されるほとんどの場合、 **null**または**無効な**します。 なお、代入演算子 ([演算子 =](#operator_eq)) と[SetDateTimeSpan](#setdatetimespan)ソース値に基づいて、オブジェクトの状態を設定しないでください。
+   > この関数は、高度なプログラミングに適しています。 この関数では、このオブジェクトのデータは変更されません。 状態を設定に使用されるほとんどの場合、 **null**または**無効な**します。 なお、代入演算子 ([operator =](#operator_eq)) と[SetDateTimeSpan](#setdatetimespan)ソース値に基づいて、オブジェクトの状態を設定しないでください。
 
 ### <a name="example"></a>例
 

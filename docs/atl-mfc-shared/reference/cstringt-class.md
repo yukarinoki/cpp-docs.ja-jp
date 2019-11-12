@@ -577,7 +577,7 @@ TCHAR (ANSI 文字列と Unicode 文字列の両方)。
 > [!NOTE]
 >  _CSTRING_DISABLE_NARROW_WIDE_CONVERSION マクロを定義して、ANSI 文字列と Unicode 文字列の間の暗黙的な文字列変換をオフにします。 マクロは、変換をサポートするコンパイルコンストラクターから除外されます。
 
-*Strsrc*パラメーターには`CThisSimpleString` 、オブジェクトとオブジェクトの`CStringT`どちらかを指定できます。 の`CStringT`場合は、既定のインスタンス化 (`CString`、 `CStringA`、また`CStringW`は) の`CThisSimpleString`いずれかを使用します。の場合は、**この**ポインターを使用します。 `CThisSimpleString`[CSimpleStringT クラス](../../atl-mfc-shared/reference/csimplestringt-class.md)のインスタンスを宣言します。これは、 `CStringT`クラスよりも機能が少ない、より小さな文字列クラスです。
+*Strsrc*パラメーターには`CThisSimpleString` 、オブジェクトとオブジェクトの`CStringT`どちらかを指定できます。 の`CStringT`場合は、既定のインスタンス化 (`CString`、 `CStringA`、また`CStringW`は) の`CThisSimpleString`いずれかを使用します。の場合は、**this**ポインターを使用します。 `CThisSimpleString`[CSimpleStringT クラス](../../atl-mfc-shared/reference/csimplestringt-class.md)のインスタンスを宣言します。これは、 `CStringT`クラスよりも機能が少ない、より小さな文字列クラスです。
 
 オーバーロード演算子`CSimpleStringT<>&()`は、 `CSimpleStringT`宣言`CStringT`からオブジェクトを構築します。
 
