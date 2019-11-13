@@ -29,7 +29,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62183455"
 ---
-# <a name="int8-int16-int32-int64"></a>__int8、__int16、__int32、__int64
+# <a name="__int8-__int16-__int32-__int64"></a>__int8、__int16、__int32、__int64
 
 **Microsoft 固有の仕様**
 
@@ -44,7 +44,7 @@ __int32 nLarge;     // Declares 32-bit integer
 __int64 nHuge;      // Declares 64-bit integer
 ```
 
-種類 **_ _int8**、 **_ _int16**、および **_ _int32**はシノニム、ANSI 型が同じサイズのいずれかとは、同じように動作する移植可能なコードを記述するために役立ちます複数のプラットフォームです。 **_ _Int8**データ型は型と同義です**char**、 **_ _int16**型と同義です**短い**、および **_ _int32。** 型と同義です**int**します。**_ _Int64**型は型と同義です。 **long**します。
+種類 **_ _int8**、 **_ _int16**、および **_ _int32**はシノニム、ANSI 型が同じサイズのいずれかとは、同じように動作する移植可能なコードを記述するために役立ちます複数のプラットフォームです。 **_ _Int8**データ型は型と同義です**char**、 **_ _int16**型と同義です**short**、および **_ _int32。** 型と同義です**int**します。 **_ _Int64**型は型と同義です。 **long**します。
 
 以前のバージョンとの互換性のため **_int8**、 **_ _int16**、 **_ _int32**、および **_ _int64**のシノニムで **_ _int8**、 **_ _int16**、 **_ _int32**、および **_ _int64**しない限り、コンパイラ オプション[/Za\(言語を無効にします。拡張機能)](../build/reference/za-ze-disable-language-extensions.md)を指定します。
 
