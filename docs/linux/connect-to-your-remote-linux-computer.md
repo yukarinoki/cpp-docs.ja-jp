@@ -3,12 +3,12 @@ title: Visual Studio でターゲットの Linux システムに接続する
 description: Visual Studio の C++ プロジェクト内からリモートの Linux マシンまたは WSL に接続する方法です。
 ms.date: 09/04/2019
 ms.assetid: 5eeaa683-4e63-4c46-99ef-2d5f294040d4
-ms.openlocfilehash: 2f4e6311493f2b29ba6911ec1b76225b6c7abe6d
-ms.sourcegitcommit: b85e1db6b7d4919852ac6843a086ba311ae97d40
+ms.openlocfilehash: 3d91faa7aa83c86e8c2f3544ee61c16f75f8c346
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71925556"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626759"
 ---
 # <a name="connect-to-your-target-linux-system-in-visual-studio"></a>Visual Studio でターゲットの Linux システムに接続する
 
@@ -79,6 +79,20 @@ C++ の Linux プロジェクトをリモートの Linux システム (VM また
    ログには、接続、リモート マシンに送信されたすべてのコマンド (そのテキスト、終了コード、実行時間)、および Visual Studio からシェルへのすべての出力が含まれます。 ログ記録は、Visual Studio でのすべてのクロスプラットフォーム CMake プロジェクトまたは MSBuild ベースの Linux プロジェクトで機能します。
 
    ファイルまたは出力ウィンドウの **[クロス プラットフォームのログ]** ウィンドウに送られるように、出力を構成できます。 MSBuild ベースの Linux プロジェクトの場合、MSBuild によってリモート マシンに発行されたコマンドは、プロセス外で出力されるため、 **[出力ウィンドウ]** にはルーティングされません。 代わりに、"msbuild_" というプレフィックスが付いたファイルに記録されます。
+   
+## <a name="tcp-port-forwarding"></a>TCP ポート フォワーディング
+
+Visual Studio の Linux サポートは、TCP ポート フォワーディングに依存しています。 リモート システムで TCP ポート フォワーディングが無効になっている場合、**Rsync** と **gdbserver** が影響を受けます。 
+
+Rsync は、MSBuild ベースの Linux プロジェクトと CMake プロジェクトの両方で使用され、[IntelliSense に使用するヘッダーをリモート システムから Windows にコピーします](configure-a-linux-project.md#remote_intellisense)。 TCP ポート フォワーディングを有効にできない場合は、[ツール]、[オプション]、[クロス プラットフォーム]、[接続マネージャー]、[リモート ヘッダー IntelliSense マネージャー] の順に選択して、リモート ヘッダーの自動ダウンロードを無効にすることができます。 接続しようとしているリモート システムで TCP ポート フォワーディングが有効になっていない場合、IntelliSense のリモート ヘッダーのダウンロードが開始されると、次のエラーが表示されます。
+
+![ヘッダー エラー](media/port-forwarding-headers-error.png)
+
+Rsync は、ソース ファイルをリモート システムにコピーするために、Visual Studio の CMake サポートでも使用されます。 TCP ポート フォワーディングを有効にできない場合は、リモート コピー ソース メソッドとして sftp を使用できます。 Sftp は通常、rsync よりも低速ですが、TCP ポート フォワーディングとの依存関係がありません。 [CMake 設定エディター](../build/cmakesettings-reference.md#additional-settings-for-cmake-linux-projects)で、remoteCopySourcesMethod プロパティを使用してリモート コピー ソース メソッドを管理できます。 リモート システムで TCP ポート フォワーディングが無効になっている場合は、最初に rsync が呼び出されたときに CMake 出力ウィンドウにエラーが表示されます。
+
+![Rsync エラー](media/port-forwarding-copy-error.png)
+
+Gdbserver は、埋め込みデバイスでのデバッグに使用できます。 TCP ポート フォワーディングを有効にできない場合は、すべてのリモート デバッグ シナリオで gdb を使用する必要があります。 リモート システム上のプロジェクトをデバッグする場合、既定で Gdb が使用されます。 
 
    ::: moniker-end
 

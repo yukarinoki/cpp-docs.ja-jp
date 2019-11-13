@@ -1,18 +1,18 @@
 ---
-title: '方法: ターゲットフレームワークおよびプラットフォームのツールセットを変更する'
+title: '方法: ターゲット フレームワークおよびプラットフォームのツールセットを変更する'
 ms.custom: conceptual
 ms.date: 07/24/2019
 helpviewer_keywords:
 - 'msbuild (c++), howto: modify target framework and platform toolset'
 ms.assetid: 031b1d54-e6e1-4da7-9868-3e75a87d9ffe
-ms.openlocfilehash: 6af7a4eb47c1d3f8b9c52eec39795c9307ca9d8e
-ms.sourcegitcommit: ce3393846c86e7905ff0c86e4cd6610476809585
+ms.openlocfilehash: c5e7172fea06f6b455422fb023a0b6462b5c4103
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68492229"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73964901"
 ---
-# <a name="how-to-modify-the-target-framework-and-platform-toolset"></a>方法: ターゲットフレームワークおよびプラットフォームのツールセットを変更する
+# <a name="how-to-modify-the-target-framework-and-platform-toolset"></a>方法: ターゲット フレームワークおよびプラットフォームのツールセットを変更する
 
 Visual Studio C++プロジェクトファイルを編集して、異なるバージョンのC++プラットフォームツールセット、Windows SDK と .NET Framework (C++/cli プロジェクトのみ) を対象にすることができます。 既定では、プロジェクト システムは、プロジェクトの作成に使用する Visual Studio のバージョンに対応する .NET Framework のバージョンおよびツールセットのバージョンを使用します。 .Vcxproj ファイルでこれらのすべての値を変更して、すべてのコンパイルターゲットで同じコードベースを使用できるようにすることができます。
 
@@ -30,9 +30,9 @@ Visual Studio では、プロジェクトC++のマルチターゲットもサポ
 
 ## <a name="target-framework-ccli-project-only"></a>ターゲットフレームワーク (C++/cli プロジェクトのみ)
 
-ターゲット フレームワークを変更すると、プラットフォーム ツールセットのバージョンもそのターゲット フレームワークをサポートするように変更されます。 たとえば、.NET Framework 4.5 を対象とする場合、Visual Studio 2015 (v140)、Visual Studio 2013 (v120)、Visual Studio 2012 (v110) のような互換性のあるプラットフォーム ツールセットを使用する必要があります。 [Windows 7.1 SDK](https://www.microsoft.com/en-us/download/details.aspx?id=8279)プラットフォームツールセットを使用して、.NET Framework 2.0、3.0、3.5、4、および x86/x64 プラットフォームを対象にすることができます。
+ターゲット フレームワークを変更すると、プラットフォーム ツールセットのバージョンもそのターゲット フレームワークをサポートするように変更されます。 たとえば、.NET Framework 4.5 を対象とする場合、Visual Studio 2015 (v140)、Visual Studio 2013 (v120)、Visual Studio 2012 (v110) のような互換性のあるプラットフォーム ツールセットを使用する必要があります。 [Windows 7.1 SDK](https://www.microsoft.com/download/details.aspx?id=8279)プラットフォームツールセットを使用して、.NET Framework 2.0、3.0、3.5、4、および x86/x64 プラットフォームを対象にすることができます。
 
-カスタム プラットフォーム ツールセットを作成することで、さらにターゲット フレームワークを拡張できます。 詳細については、Visual C++ チーム ブログの [C++ Native Multi-Targeting (C++ ネイティブ マルチ ターゲット)](https://blogs.msdn.microsoft.com/vcblog/2009/12/08/c-native-multi-targeting/) をご覧ください。
+カスタム プラットフォーム ツールセットを作成することで、さらにターゲット フレームワークを拡張できます。 詳細については、Visual C++ チーム ブログの [C++ Native Multi-Targeting (C++ ネイティブ マルチ ターゲット)](https://devblogs.microsoft.com/cppblog/c-native-multi-targeting/) をご覧ください。
 
 ### <a name="to-change-the-target-framework"></a>ターゲット フレームワークを変更するには
 

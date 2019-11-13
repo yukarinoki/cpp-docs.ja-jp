@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C++, home page
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 67bed9a8ce9b5cfbe11a5383d2f67ea6c02d1106
-ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
+ms.openlocfilehash: ea047aca90b03179c0a39cb653e0b9bc08306c64
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67552374"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626209"
 ---
 # <a name="c-in-visual-studio"></a>Visual Studio での C++
 
@@ -36,7 +36,7 @@ Visual Studio 2003 から 2015 までの C++ の新機能をバージョンご�
 [Visual Studio の C++ 準拠の強化](cpp-conformance-improvements.md)<br/>
 Visual Studio の C++ 準拠の強化について説明します。
 
-[Visual C++ 言語への準拠](visual-cpp-language-conformance.md)<br/>
+[Microsoft C++ 言語の準拠表](visual-cpp-language-conformance.md)<br/>
 MSVC C++ コンパイラの各機能の準拠状態を一覧にしています。
 
 [2003 から 2015 の Visual C++ の履歴の変更](../porting/visual-cpp-change-history-2003-2015.md)<br/>

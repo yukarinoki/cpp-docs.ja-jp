@@ -5,12 +5,12 @@ description: Visual Studio の Microsoft C++ は、C++20 言語標準との完�
 ms.technology: cpp-language
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: d313a9a1f9f2bc1aa091935658ca1214f929c048
-ms.sourcegitcommit: c51b2c665849479fa995bc3323a22ebe79d9d7ce
+ms.openlocfilehash: 0bbfc364da217525251df0c5f09544ed1ccfe5b6
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71998889"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627087"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Visual Studio の C++ 準拠の強化
 
@@ -810,7 +810,7 @@ struct Comparer  {
 
 ## <a name="improvements_150"></a> Visual Studio 2017 RTW (バージョン 15.0) の準拠の強化
 
-Visual Studio 2017 の Microsoft C++ コンパイラは、汎用の **constexpr** および集計用の非静的データ メンバーの初期化 (NSDMI) のサポートと共に、C++ 14 標準で追加されたすべての機能に対応するようになりました。 ただし、コンパイラには、C++11 標準および C++98 標準の一部の機能がありません。 コンパイラの現在の状態については、「[Visual C++ Language Conformance (Visual C++ 言語への準拠)](../visual-cpp-language-conformance.md)」の表を参照してください。
+Visual Studio 2017 の Microsoft C++ コンパイラは、汎用の **constexpr** および集計用の非静的データ メンバーの初期化 (NSDMI) のサポートと共に、C++ 14 標準で追加されたすべての機能に対応するようになりました。 ただし、コンパイラには、C++11 標準および C++98 標準の一部の機能がありません。 コンパイラの現在の状態については、「[Microsoft C++ 言語の準拠表](../visual-cpp-language-conformance.md)」を参照してください。
 
 ### <a name="c11-expression-sfinae-support-in-more-libraries"></a>C++11:より多くのライブラリでの SFINAE 式のサポート
 
@@ -2177,7 +2177,7 @@ struct B : A {
 };
 ```
 
-**/std:c++17** の使用中にエラーを削除するには、 **/Zc:noexceptTypes-** スイッチをコマンド ラインに追加するか、次の例のように、**noexcept** を使用するようにコードを更新します。
+**/std:c + + 17** の使用中にエラーを削除するには、 **/Zc:noexceptTypes-** スイッチをコマンド ラインに追加するか、次の例のように、**noexcept** を使用するようにコードを更新します。
 
 ```cpp
 void f() noexcept;
@@ -2850,4 +2850,4 @@ Visual Studio 2015 更新プログラム 3 での準拠の機能強化の完全�
 
 ## <a name="see-also"></a>関連項目
 
-[Visual C++ 言語への準拠](../visual-cpp-language-conformance.md)
+[Microsoft C++ 言語の準拠表](../visual-cpp-language-conformance.md)

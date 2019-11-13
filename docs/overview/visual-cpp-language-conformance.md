@@ -1,16 +1,16 @@
 ---
 title: Microsoft C++ 言語の準拠表
-ms.date: 08/12/2019
+ms.date: 10/31/2019
 ms.technology: cpp-language
 ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 17ed76551102653e2f05e9731834f4787198db49
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: e3e86acb81120af1b663b56681ff0f8c41036b5a
+ms.sourcegitcommit: 2362d15b5eb18d27773c3f7522da3d0eed9e2571
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69631645"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73754064"
 ---
 # <a name="microsoft-c-language-conformance-table"></a>Microsoft C++ 言語の準拠表
 
@@ -346,7 +346,7 @@ __VS 2019 16.1__ は、Visual Studio 2019 バージョン 16.1 でサポート�
 
 <a name="note_B"></a>__B__ Visual Studio 2017 バージョン 15.7 の [/permissive-](../build/reference/permissive-standards-conformance.md) モードでサポートされています。 詳細については、「[Two-phase name lookup support comes to MSVC (2 フェーズの名前参照のサポートを MSVC に導入)](https://blogs.msdn.microsoft.com/vcblog/2017/09/11/two-phase-name-lookup-support-comes-to-msvc/)」を参照してください。
 
-<a name="note_C"></a>__C__ Visual Studio 2017 では、C99 プリプロセッサ ルールはコンパイラで完全にサポートされていません。 可変個引数マクロがサポートされますが、プリプロセッサの動作にたくさんのバグがあります。 プリプロセッサは刷新中で、近々にそれらの変更を [/permissive-](../build/reference/permissive-standards-conformance.md) モード下で実験的に出荷する予定です。
+<a name="note_C"></a>__C__ Visual Studio 2017 では、C99 プリプロセッサ ルールはコンパイラで完全にサポートされていません。 プリプロセッサを徹底的に見直し、Visual Studio 2017 バージョン 15.8 で [/experimental:preprocessor](../build/reference/experimental-preprocessor.md) コンパイラ スイッチを使った変更内容の配布を開始しました。
 
 <a name="note_D"></a>__D__ [/std:c++14](../build/reference/std-specify-language-standard-version.md) で、非表示にできる警告 [C4984](../error-messages/compiler-warnings/compiler-warning-c4984.md) と共にサポートされています。
 
