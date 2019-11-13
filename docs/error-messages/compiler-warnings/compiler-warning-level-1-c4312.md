@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4312
 ms.assetid: 541906ed-4f62-4bcb-947f-cf9ae7411bcb
-ms.openlocfilehash: 1983d7b89688568b8152372328216c2a814f7bc0
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 83f8aa5d03bddde58f9edd4ffc9f19073045da30
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69510087"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966093"
 ---
 # <a name="compiler-warning-level-1-c4312"></a>コンパイラの警告 (レベル 1) C4312
 
@@ -25,7 +25,7 @@ ms.locfileid: "69510087"
 
 次のコード例は、64 ビットのターゲットのコンパイル時に C4312 を生成します。
 
-```
+```cpp
 // C4312.cpp
 // compile by using: cl /W1 /LD C4312.cpp
 void* f(int i) {

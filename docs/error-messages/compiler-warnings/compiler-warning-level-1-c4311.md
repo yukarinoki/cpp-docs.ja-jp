@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4311
 ms.assetid: ddc579d0-d051-47bc-915d-71ffb32323c9
-ms.openlocfilehash: 6e44dafb6675882a1a62fba5144f85120378421d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: adb5c4bf3103cf98fb557a5f54b6a64013356475
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69510062"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966133"
 ---
 # <a name="compiler-warning-level-1-c4311"></a>コンパイラの警告 (レベル 1) C4311
 
@@ -23,7 +23,7 @@ ms.locfileid: "69510062"
 
 次のコード例では、64 ビットをターゲットとしたコンパイル時に警告 C4311 を生成し、修正する方法を示します。
 
-```
+```cpp
 // C4311.cpp
 // compile by using: cl /W1 C4311.cpp
 int main() {

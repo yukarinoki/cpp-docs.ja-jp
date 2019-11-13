@@ -14,19 +14,19 @@ ms.locfileid: "69630764"
 ---
 # <a name="project-files"></a>プロジェクト ファイル
 
-Visual C++ Studio のプロジェクトファイルは XML ベースのファイルで、.vcxproj というファイル名拡張子を持ち、プロジェクトをC++ビルドするために必要な情報が含まれています。 プロジェクトファイルは、". props" または ".targets" という拡張子を持つさまざまなプロジェクトファイルをインポートすることに注意してください。 これらのファイルには追加のビルド情報が含まれており、それ自体が他の "props" ファイルまたは ".targets" ファイルを参照している場合があります。 ファイルのパス内のマクロ (たとえば `$(VCTargetsPath)`) は、Visual Studio のインストールに依存しています。 これらのマクロと "..." ファイルと ".targets" ファイルの詳細については、「 [VC + + ディレクトリ」プロパティページ](vcpp-directories-property-page.md)を参照してください。 [Visual Studio でコンパイラとビルドプロパティを設定C++ ](../working-with-project-properties.md)する方法と、[ビルドコマンドとプロパティの一般的なマクロ](common-macros-for-build-commands-and-properties.md)に関するページを参照してください。
+Visual C++ Studio のプロジェクトファイルは XML ベースのファイルで、.vcxproj というファイル名拡張子を持ち、プロジェクトをC++ビルドするために必要な情報が含まれています。 プロジェクトファイルは、". props" または ".targets" という拡張子を持つさまざまなプロジェクトファイルをインポートすることに注意してください。 これらのファイルには追加のビルド情報が含まれており、それ自体が他の "props" ファイルまたは ".targets" ファイルを参照している場合があります。 ファイルのパス内のマクロ (たとえば `$(VCTargetsPath)`) は、Visual Studio のインストールに依存しています。 これらのマクロと "..." ファイルと ".targets" ファイルの詳細については、「 [VC++ ディレクトリ」プロパティページ](vcpp-directories-property-page.md)を参照してください。 [Visual Studio でコンパイラとビルドプロパティを設定C++ ](../working-with-project-properties.md)する方法と、[ビルドコマンドとプロパティの一般的なマクロ](common-macros-for-build-commands-and-properties.md)に関するページを参照してください。
 
 ## <a name="example"></a>例
 
 ::: moniker range=">=vs-2019"
 
-次のサンプル .vcxproj ファイルは、 **[新しいプロジェクト]** ダイアログボックスの **[Windows デスクトップウィザード]** を選択して生成されたものです。 プロジェクト ファイルを処理するには、コマンド ラインで msbuild.exe ツールを使用するか、IDE で **Build** コマンドを使用します。 (必要なソース ファイルとヘッダー ファイルが指定されていないため、このサンプルを処理することはできません。)プロジェクト ファイルの XML 要素の詳細については、[プロジェクト ファイルのスキーマ参照](/visualstudio/msbuild/msbuild-project-file-schema-reference)に関するページを参照してください。
+次のサンプル .vcxproj ファイルは、[**新しいプロジェクト**] ダイアログボックスの [ **Windows デスクトップウィザード**] を選択して生成されたものです。 プロジェクト ファイルを処理するには、コマンド ラインで msbuild.exe ツールを使用するか、IDE で **Build** コマンドを使用します。 (必要なソース ファイルとヘッダー ファイルが指定されていないため、このサンプルを処理することはできません。)プロジェクト ファイルの XML 要素の詳細については、[プロジェクト ファイルのスキーマ参照](/visualstudio/msbuild/msbuild-project-file-schema-reference)に関するページを参照してください。
 
 ::: moniker-end
 
 ::: moniker range="<=vs-2017"
 
-次のサンプルの .vcxproj ファイルは、 **[新しいプロジェクト]** ダイアログ ボックスで **[Win32 コンソール アプリケーション]** を指定して生成されました。 プロジェクト ファイルを処理するには、コマンド ラインで msbuild.exe ツールを使用するか、IDE で **Build** コマンドを使用します。 (必要なソース ファイルとヘッダー ファイルが指定されていないため、このサンプルを処理することはできません。)プロジェクト ファイルの XML 要素の詳細については、[プロジェクト ファイルのスキーマ参照](/visualstudio/msbuild/msbuild-project-file-schema-reference)に関するページを参照してください。
+次のサンプルの .vcxproj ファイルは、**[新しいプロジェクト]** ダイアログ ボックスで **[Win32 コンソール アプリケーション]** を指定して生成されました。 プロジェクト ファイルを処理するには、コマンド ラインで msbuild.exe ツールを使用するか、IDE で **Build** コマンドを使用します。 (必要なソース ファイルとヘッダー ファイルが指定されていないため、このサンプルを処理することはできません。)プロジェクト ファイルの XML 要素の詳細については、[プロジェクト ファイルのスキーマ参照](/visualstudio/msbuild/msbuild-project-file-schema-reference)に関するページを参照してください。
 
 ::: moniker-end
 

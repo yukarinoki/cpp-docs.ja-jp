@@ -37,7 +37,7 @@ Clang を使用するように Visual Studio プロジェクトを構成する�
 
 Visual Studio にバンドルされている Clang ツールを使用している場合は、追加の手順は必要ありません。 Windows プロジェクトの場合、既定では、Visual Studio は clang [-cl](https://llvm.org/devmtg/2014-04/PDFs/Talks/clang-cl.pdf)モードで clang を呼び出し、標準ライブラリの Microsoft 実装によるリンクを呼び出します。 既定では、 **clang-cl**はに`C:\Program Files (x86)\Microsoft Visual Studio\2019\Common7\IDE\CommonExtensions\Microsoft\Llvm\bin`あります。
 
-カスタム clang インストールを使用している場合は、**プロジェクト** > **プロパティ** > の [**VC + + ディレクトリ** > ]**構成プロパティ** > [**実行可能ファイル] を変更できます。** カスタム clang インストールルートをそこに最初のディレクトリとして追加するか、 `LLVMInstallDir`プロパティの値を変更することによって、ディレクトリを指定します。 詳細について[は、「カスタム LLVM の場所の設定](#custom_llvm_location)」を参照してください。
+カスタム clang インストールを使用している場合は、**プロジェクト** > **プロパティ** > の [**VC++ ディレクトリ** > ]**構成プロパティ** > [**実行可能ファイル] を変更できます。** カスタム clang インストールルートをそこに最初のディレクトリとして追加するか、 `LLVMInstallDir`プロパティの値を変更することによって、ディレクトリを指定します。 詳細について[は、「カスタム LLVM の場所の設定](#custom_llvm_location)」を参照してください。
 
 ## <a name="configure-a-linux-project-to-use-clang-tools"></a>Clang tools を使用するように Linux プロジェクトを構成する
 
@@ -52,7 +52,7 @@ Clang を使用するように Visual Studio Linux プロジェクトを構成�
 
 ![Clang コンポーネントのインストール](media/clang-msbuild-prop-page.png)
 
-Linux では、Visual Studio は既定で PATH 環境プロパティで検出された最初の Clang の場所を使用します。 カスタムの`LLVMInstallDir` clang インストールを使用している場合は、プロパティの値を変更するか、または**プロジェクト** > の**プロパティ** > **VC + + ディレクトリ** >  **の下のパスを置き換える必要があります。構成プロパティ** > の**実行可能なディレクトリ**。 詳細について[は、「カスタム LLVM の場所の設定](#custom_llvm_location)」を参照してください。
+Linux では、Visual Studio は既定で PATH 環境プロパティで検出された最初の Clang の場所を使用します。 カスタムの`LLVMInstallDir` clang インストールを使用している場合は、プロパティの値を変更するか、または**プロジェクト** > の**プロパティ** > **VC++ ディレクトリ** >  **の下のパスを置き換える必要があります。構成プロパティ** > の**実行可能なディレクトリ**。 詳細について[は、「カスタム LLVM の場所の設定](#custom_llvm_location)」を参照してください。
 
 ## <a name="custom_llvm_location"></a>カスタム LLVM の場所を設定する
 
