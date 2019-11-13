@@ -26,7 +26,7 @@ ms.locfileid: "62162136"
 - **-errors** *filename*<br/>
    エラーと警告メッセージをリダイレクト*filename*します。
 
-- **-i** *dir*[**;**<em>dir</em>]<br/>
+- **-i** *dir*[ **;** <em>dir</em>]<br/>
    インクルード検索パスに指定されたディレクトリを追加します。
 
 - **-predefine***ディレクティブ*<br/>

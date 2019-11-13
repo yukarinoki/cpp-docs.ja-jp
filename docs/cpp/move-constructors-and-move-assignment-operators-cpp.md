@@ -121,7 +121,7 @@ private:
     other._length = 0;
     ```
 
-### <a name="to-create-a-move-assignment-operator-for-a-c-class"></a>C ++ クラスの移動代入演算子を作成するには
+### <a name="to-create-a-move-assignment-operator-for-a-c-class"></a>C++ クラスの移動代入演算子を作成するには
 
 1. 次の例に示すように、パラメーターとしてクラス型への右辺値参照を受け取り、クラス型への参照を返す、空の代入演算子を定義します。
 

@@ -25,14 +25,14 @@ ms.locfileid: "62309994"
 |[DDV_MaxChars](#ddv_maxchars)|指定されたコントロール値の文字の数が、指定された最大を超えていないことを確認します。|
 |[DDV_MinMaxByte](#ddv_minmaxbyte)|指定されたコントロール値を超えていないことを確認、指定された**バイト**範囲。|
 |[DDV_MinMaxDateTime](#ddv_minmaxdatetime)|指定されたコントロール値が指定された時間範囲を超えないことを確認します。|
-|[DDV_MinMaxDouble](#ddv_minmaxdouble)|指定されたコントロール値を超えていないことを確認、指定された**二重**範囲。|
+|[DDV_MinMaxDouble](#ddv_minmaxdouble)|指定されたコントロール値を超えていないことを確認、指定された**double**範囲。|
 |[DDV_MinMaxDWord](#ddv_minmaxdword)|指定されたコントロール値を超えていないことを確認、指定された**DWORD**範囲。|
 |[DDV_MinMaxFloat](#ddv_minmaxfloat)|指定されたコントロール値を超えていないことを確認、指定された**float**範囲。|
 |[DDV_MinMaxInt](#ddv_minmaxint)|指定されたコントロール値を超えていないことを確認、指定された**int**範囲。|
-|[DDV_MinMaxLong](#ddv_minmaxlong)|指定されたコントロール値を超えていないことを確認、指定された**長い**範囲。|
+|[DDV_MinMaxLong](#ddv_minmaxlong)|指定されたコントロール値を超えていないことを確認、指定された**long**範囲。|
 |[DDV_MinMaxLongLong](#ddv_minmaxlonglong)|指定されたコントロール値を超えていないことを確認、指定された**LONGLONG**範囲。|
 |[DDV_MinMaxMonth](#ddv_minmaxmonth)|指定されたコントロール値が指定した日付範囲を超えていないことを確認します。|
-|[DDV_MinMaxShort](#ddv_minmaxshort)|指定されたコントロール値を超えていないことを確認、指定された**短い**範囲。|
+|[DDV_MinMaxShort](#ddv_minmaxshort)|指定されたコントロール値を超えていないことを確認、指定された**short**範囲。|
 |[DDV_MinMaxSlider](#ddv_minmaxslider)|特定のスライダー コントロールの値が指定された範囲内にあることを確認します。|
 |[DDV_MinMaxUInt](#ddv_minmaxuint)|指定されたコントロール値を超えていないことを確認、指定された**UINT**範囲。|
 |[DDV_MinMaxUnsigned](#ddv_minmaxuint)|指定されたコントロール値がある 2 つの指定した値を確認します。|
@@ -163,10 +163,10 @@ void AFXAPI DDV_MinMaxDouble(
 ダイアログ ボックス、フォーム ビュー、またはデータを検証するコントロール ビュー オブジェクトのメンバー変数への参照。
 
 *minVal*<br/>
-最小値 (型の**二重**) 許可します。
+最小値 (型の**double**) 許可します。
 
 *maxVal*<br/>
-最大値 (型の**二重**) 許可します。
+最大値 (型の**double**) 許可します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -299,10 +299,10 @@ void AFXAPI DDV_MinMaxLong(
 ダイアログ ボックス、フォーム ビュー、またはデータを検証するコントロール ビュー オブジェクトのメンバー変数への参照。
 
 *minVal*<br/>
-最小値 (型の**長い**) 許可します。
+最小値 (型の**long**) 許可します。
 
 *maxVal*<br/>
-最大値 (型の**長い**) 許可します。
+最大値 (型の**long**) 許可します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -407,10 +407,10 @@ void AFXAPI DDV_MinMaxShort(
 ダイアログ ボックス、フォーム ビュー、またはデータを検証するコントロール ビュー オブジェクトのメンバー変数への参照。
 
 *minVal*<br/>
-最小値 (型の**短い**) 許可します。
+最小値 (型の**short**) 許可します。
 
 *maxVal*<br/>
-最大値 (型の**短い**) 許可します。
+最大値 (型の**short**) 許可します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -522,7 +522,7 @@ DDV の詳細については、次を参照してください。[ダイアログ
 
   **ヘッダー** afxdd_.h
 
-## <a name="ddvminmaxunsigned"></a>DDV_MinMaxUnsigned
+## <a name="ddv_minmaxunsigned"></a>DDV_MinMaxUnsigned
 
 呼び出す`DDV_MinMaxUnsigned`にコントロールの値が関連付けられていることを確認する*値*間*minVal*と*maxVal*します。
 

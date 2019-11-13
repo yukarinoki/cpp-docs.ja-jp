@@ -4,7 +4,7 @@ ms.date: 05/06/2019
 ms.assetid: 0f4c434e-0679-4331-ba0a-cc15dd435a46
 ms.openlocfilehash: 78d87000240acd394edf823a778ae29060c6d09c
 ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2019
 ms.locfileid: "65220885"
@@ -100,4 +100,4 @@ MSVC コンパイラ サポートの 2 つの異なる解釈、`volatile`記憶�
 
 ## <a name="see-also"></a>関連項目
 
-[ARM プロセッサ用の Visual C ++ の構成する](configuring-programs-for-arm-processors-visual-cpp.md)
+[ARM プロセッサ用の Visual C++ の構成する](configuring-programs-for-arm-processors-visual-cpp.md)

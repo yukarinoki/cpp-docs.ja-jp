@@ -25,7 +25,7 @@ C++ AMP にはでいくつかの Api が含まれています、 [concurrency::g
 
 ## <a name="short-vector-library"></a>short ベクター ライブラリ
 
-Short ベクター ライブラリは、いくつかの機能の[ベクター型](https://go.microsoft.com/fwlink/p/?linkid=248500)は HLSL で定義され、テクセルの定義に通常使用します。 short ベクターは同じ型の 1 ～ 4 つの値を保持するデータ構造体です。 サポートされる種類は**二重**、 **float**、 **int**、 `norm`、 `uint`、および`unorm`します。 次の表に型名を示します。 種類ごとにある対応も**typedef**名にアンダー スコアが含まれない。 アンダー スコアを含む型が、 [concurrency::graphics Namespace](../../parallel/amp/reference/concurrency-graphics-namespace.md)します。 アンダー スコアがない型が、 [Concurrency::graphics::direct3d Namespace](../../parallel/amp/reference/concurrency-graphics-direct3d-namespace.md)が明確に区別同様にという名前の基本型からなどように **_ _int8**と **_ _int16**します。
+Short ベクター ライブラリは、いくつかの機能の[ベクター型](https://go.microsoft.com/fwlink/p/?linkid=248500)は HLSL で定義され、テクセルの定義に通常使用します。 short ベクターは同じ型の 1 ～ 4 つの値を保持するデータ構造体です。 サポートされる種類は**double**、 **float**、 **int**、 `norm`、 `uint`、および`unorm`します。 次の表に型名を示します。 種類ごとにある対応も**typedef**名にアンダー スコアが含まれない。 アンダー スコアを含む型が、 [concurrency::graphics Namespace](../../parallel/amp/reference/concurrency-graphics-namespace.md)します。 アンダー スコアがない型が、 [Concurrency::graphics::direct3d Namespace](../../parallel/amp/reference/concurrency-graphics-direct3d-namespace.md)が明確に区別同様にという名前の基本型からなどように **_ _int8**と **_ _int16**します。
 
 ||長さ 2|長さが 3|長さ 4|
 |-|--------------|--------------|--------------|
@@ -63,7 +63,7 @@ short ベクター ライブラリは、short ベクターのコンポーネン�
 
 多くの GPU には、ピクセルとテクセルをフェッチし、イメージとテクスチャを表示するために最適化されたハードウェアとキャッシュがあります。 [テクスチャ\<T, N >](../../parallel/amp/reference/texture-class.md)テクセル オブジェクトのコンテナー クラスである、クラスは、これらの Gpu のテクスチャ機能を公開します。 テクセルは次のようになります。
 
-- **Int**、 `uint`、 **float**、**二重**、 `norm`、または`unorm`スカラー。
+- **Int**、 `uint`、 **float**、**double**、 `norm`、または`unorm`スカラー。
 
 - 2 つまたは 4 つのコンポーネントを持つ short ベクター。 許可されない唯一の例外は `double_4` です。
 
@@ -214,7 +214,7 @@ void UseBitsPerScalarElement() { // Create the image data. // Each unsigned int 
 
 - T にあるのは 1 つのスカラー コンポーネントのみです。 (short ベクターは使用できません。)
 
-- T でない**二重**、 `norm`、または`unorm`します。
+- T でない**double**、 `norm`、または`unorm`します。
 
 - `texture::bits_per_scalar_element` プロパティは 32 です。
 
@@ -273,7 +273,7 @@ C++AMP が導入されています、 [texture_view クラス](../../parallel/am
 
 テクスチャ ビューは、配列のビューに似ていますは得られません。 データの自動管理および移動機能を、 [array_view クラス](../../parallel/amp/reference/array-view-class.md)比べ、 [array クラス](../../parallel/amp/reference/array-class.md)します。 `texture_view` は、基になるテクスチャ データが存在するアクセラレータ ビューにのみアクセスできます。
 
-### <a name="writeonlytextureview-deprecated"></a>使用されない writeonly_texture_view
+### <a name="writeonly_texture_view-deprecated"></a>使用されない writeonly_texture_view
 
 Visual Studio 2013 でC++AMP サンプリングや mipmap でサポートされていませんでしたなどのハードウェア テクスチャ機能に対する優れたサポートが導入されています、 [writeonly_texture_view クラス](../../parallel/amp/reference/writeonly-texture-view-class.md)します。 最近導入された `texture_view` クラスは `writeonly_texture_view` の機能のスーパーセットをサポートしており、その結果、`writeonly_texture_view` は使用されません。
 

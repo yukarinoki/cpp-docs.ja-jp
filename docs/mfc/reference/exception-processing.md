@@ -133,7 +133,7 @@ CATCH(exception_class, exception_object_pointer_name)
 例外オブジェクトのポインターはマクロによって作成されます。 自分で宣言する必要はありません。
 
 > [!NOTE]
->  **CATCH**ブロックは、中かっこで囲まれたC ++スコープとして定義されます。 このスコープで変数を宣言すると、そのスコープ内でのみアクセスできます。 これにも当てはまります*exception_object_pointer_name*にも適用されます。
+>  **CATCH**ブロックは、中かっこで囲まれたC++スコープとして定義されます。 このスコープで変数を宣言すると、そのスコープ内でのみアクセスできます。 これにも当てはまります*exception_object_pointer_name*にも適用されます。
 
 例外とキャッチのマクロの詳細については、[例外処理](../../mfc/exception-handling-in-mfc.md)を参照してください。
 

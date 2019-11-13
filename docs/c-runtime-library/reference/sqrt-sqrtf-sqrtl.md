@@ -72,7 +72,7 @@ long double sqrtl(
 
 ## <a name="remarks"></a>Remarks
 
-オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **sqrt**を受け取る**float**または**長い** **二重**型。 C プログラムでは、 **sqrt**は常にを受け取り、 **double**を返します。
+オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **sqrt**を受け取る**float**または**long** **double**型。 C プログラムでは、 **sqrt**は常にを受け取り、 **double**を返します。
 
 ## <a name="return-value"></a>戻り値
 

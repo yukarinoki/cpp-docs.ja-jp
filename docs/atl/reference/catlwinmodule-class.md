@@ -74,11 +74,11 @@ void AddCreateWndData(_AtlCreateWndData* pData, void* pObject);
 ポインター、`_AtlCreateWndData`構造体を初期化して、現在のモジュールに追加します。
 
 *pObject*<br/>
-オブジェクトへのポインター**この**ポインター。
+オブジェクトへのポインター**this**ポインター。
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドを呼び出す[AtlWinModuleAddCreateWndData](winmodule-global-functions.md#atlwinmoduleaddcreatewnddata)どの初期化、 [_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md)構造体。 この構造体を格納する、**この**ポインターをウィンドウ プロシージャ内のクラスのインスタンスを取得するために使用します。
+このメソッドを呼び出す[AtlWinModuleAddCreateWndData](winmodule-global-functions.md#atlwinmoduleaddcreatewnddata)どの初期化、 [_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md)構造体。 この構造体を格納する、**this**ポインターをウィンドウ プロシージャ内のクラスのインスタンスを取得するために使用します。
 
 ##  <a name="catlwinmodule"></a>  CAtlWinModule::CAtlWinModule
 

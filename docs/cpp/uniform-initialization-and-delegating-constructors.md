@@ -82,7 +82,7 @@ int main()
 }
 ```
 
-かっこ初期化を使用することができますの初期化をどこでも通常実行 — たとえば、関数パラメーターまたは戻り値として、**新しい**キーワード。
+かっこ初期化を使用することができますの初期化をどこでも通常実行 — たとえば、関数パラメーターまたは戻り値として、**new**キーワード。
 
 ```cpp
 class_d* cf = new class_d{4.5};
@@ -90,7 +90,7 @@ kr->add_d({ 4.5 });
 return { 4.5 };
 ```
 
-## <a name="initializerlist-constructors"></a>initializer_list Constructors
+## <a name="initializer_list-constructors"></a>initializer_list Constructors
 
 [Initializer_list クラス](../standard-library/initializer-list-class.md)コンス トラクターと他のコンテキストで使用できる指定された型のオブジェクトの一覧を表します。 かっこ初期化を使用して、initializer_list を構築できます。
 

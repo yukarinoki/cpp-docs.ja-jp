@@ -44,7 +44,7 @@ class PaperbackBook : public Book {};
 
 各クラスが派生される基底クラスは、派生クラスを宣言する前に宣言されています。 基底クラスについて前方参照の宣言を指定するだけでは十分ではありません。完全な宣言である必要があります。
 
-前の例では、アクセス指定子で**パブリック**使用されます。 Public、protected、および private の継承の意味については、「[メンバー アクセス コントロール。](../cpp/member-access-control-cpp.md)
+前の例では、アクセス指定子で**public**使用されます。 public、protected、および private の継承の意味については、「[メンバー アクセス コントロール。](../cpp/member-access-control-cpp.md)
 
 クラスは、次の図に示すように、多くの特定のクラスの基底クラスとして機能します。
 
