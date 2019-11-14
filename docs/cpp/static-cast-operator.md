@@ -13,7 +13,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62267129"
 ---
-# <a name="staticcast-operator"></a>static_cast 演算子
+# <a name="static_cast-operator"></a>static_cast 演算子
 
 変換、*式*の型に*型 id、* 式に存在する型のみに基づいて。
 
@@ -99,9 +99,9 @@ void f() {
 
 **Static_cast**演算子は、null ポインターの値を変換先の型の null ポインター値に変換します。
 
-任意の式は、void 型に明示的に変換できる、 **static_cast**演算子。 変換先の void 型を含めることができます必要に応じて、 **const**、**揮発性**、または **_ _unaligned**属性。
+任意の式は、void 型に明示的に変換できる、 **static_cast**演算子。 変換先の void 型を含めることができます必要に応じて、 **const**、**volatile**、または **_ _unaligned**属性。
 
-**Static_cast**演算子はキャストできません、 **const**、**揮発性**、または **_ _unaligned**属性。 参照してください[const_cast 演算子](../cpp/const-cast-operator.md)については、これらの属性を削除します。
+**static_cast**演算子はキャストできません、 **const**、**volatile**、または **_ _unaligned**属性。 参照してください[const_cast 演算子](../cpp/const-cast-operator.md)については、これらの属性を削除します。
 
 **C +/CLI CLI:** 次のように再配置を行うガベージ コレクターの使用の先頭で unchecked キャストを実行する危険性のため**static_cast**限定すべきパフォーマンス クリティカルなコードで正しく機能することを確認します。 使用する場合**static_cast**リリース モードで置き換える[safe_cast](../extensions/safe-cast-cpp-component-extensions.md)デバッグ ビルドで成功を確実にします。
 

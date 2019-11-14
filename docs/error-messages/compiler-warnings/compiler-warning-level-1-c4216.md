@@ -17,7 +17,7 @@ ms.locfileid: "73627339"
 
 非標準の拡張機能が使用されています: float long
 
-既定の Microsoft 拡張機能 (/Ze) では、**浮動小数点型**は**double**として扱われます。 ANSI 互換 ([/za](../../build/reference/za-ze-disable-language-extensions.md)) ではありません。 互換性を維持するには、 **double**を使用します。 次の例では、C4216 が生成されます。
+既定の Microsoft 拡張機能 (/Ze) では、**float long**は**double**として扱われます。 ANSI 互換 ([/za](../../build/reference/za-ze-disable-language-extensions.md)) ではありません。 互換性を維持するには、 **double**を使用します。 次の例では、C4216 が生成されます。
 
 ```cpp
 // C4216.cpp
