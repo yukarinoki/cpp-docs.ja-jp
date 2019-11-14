@@ -1,6 +1,6 @@
 ---
 title: basic_string クラス
-ms.date: 11/04/2016
+ms.date: 11/12/2019
 f1_keywords:
 - xstring/std::basic_string
 - xstring/std::basic_string::allocator_type
@@ -116,12 +116,12 @@ helpviewer_keywords:
 - std::basic_string [C++], substr
 - std::basic_string [C++], swap
 ms.assetid: a9c3e0a2-39bf-4c8a-b093-9abe30839591
-ms.openlocfilehash: c77c09394bb8997168d8a6756da69e9545dad0a2
-ms.sourcegitcommit: 4a0a108aa6f042576a777feb6dcb310dc0bb9230
+ms.openlocfilehash: 6919f2ece4ed846cd80f791af91797373dea33b2
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73842324"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051502"
 ---
 # <a name="basic_string-class"></a>basic_string クラス
 
@@ -194,9 +194,9 @@ Basic_string 特殊化の `CharType` 要素のさまざまな重要なプロパ�
 |[end](#end)|文字列内の最後の要素の次の場所を指す反復子を返します。|
 |[erase](#erase)|指定した位置から文字列の要素または要素範囲を削除します。|
 |[find](#find)|指定された文字シーケンスに一致する部分文字列の最初の出現を文字列で前方に検索します。|
-|[find_first_not_of](#find_first_not_of)|指定された文字列の要素ではない最初の文字を文字列で検索します。|
+|[find_first_not_of](#find_first_not_of)|指定した文字列の要素ではない最初の文字を文字列で検索します。|
 |[find_first_of](#find_first_of)|指定された文字列の要素と一致する最初の文字を文字列で検索します。|
-|[find_last_not_of](#find_last_not_of)|指定された文字列の要素ではない最後の文字を文字列で検索します。|
+|[find_last_not_of](#find_last_not_of)|指定した文字列の要素ではない最後の文字を文字列で検索します。|
 |[find_last_of](#find_last_of)|指定された文字列の要素である最後の文字を文字列で検索します。|
 |[front](#front)|文字列内の最初の要素への参照を返します。|
 |[get_allocator](#get_allocator)|文字列の構築に使用される `allocator` オブジェクトのコピーを返します。|
@@ -281,7 +281,7 @@ basic_string<CharType, Traits, Allocator>& append(
 
 basic_string<CharType, Traits, Allocator>& append(
     const basic_string<CharType, Traits, Allocator>& str,
-    size_type _Off,
+    size_type offset,
     size_type count);
 
 basic_string<CharType, Traits, Allocator>& append(
@@ -289,7 +289,7 @@ basic_string<CharType, Traits, Allocator>& append(
 
 basic_string<CharType, Traits, Allocator>& append(
     size_type count,
-    value_type _Ch);
+    value_type char_value);
 
 template <class InputIterator>
 basic_string<CharType, Traits, Allocator>& append(
@@ -313,13 +313,13 @@ basic_string<CharType, Traits, Allocator>& append(
 *str* \
 文字が追加される文字列。
 
-*_Off*\
+*オフセット*\
 追加する文字の元の文字列の一部のインデックス。
 
 *カウント*\
 ソース文字列から追加される最大文字数。
 
-*_Ch*\
+*char_value*\
 追加される文字値。
 
 *最初*の \
@@ -450,7 +450,7 @@ basic_string<CharType, Traits, Allocator>& assign(
 
 basic_string<CharType, Traits, Allocator>& assign(
     size_type count,
-    value_type _Ch);
+    value_type char_value);
 
 template <class InIt>
 basic_string<CharType, Traits, Allocator>& assign(
@@ -477,7 +477,7 @@ basic_string<CharType, Traits, Allocator>& assign(
 *str* \
 対象の文字列に割り当てられる文字のソース文字列。
 
-*_Ch*\
+*char_value*\
 割り当てられる文字値。
 
 *最初*の \
@@ -594,14 +594,14 @@ The string str1 assigned a range of string str2f is: World.
 文字列に指定したインデックスのある文字への参照を提供します。
 
 ```cpp
-const_reference at(size_type _Off) const;
+const_reference at(size_type offset) const;
 
-reference at(size_type _Off);
+reference at(size_type offset);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*_Off*\
+*オフセット*\
 参照される要素の位置のインデックス。
 
 ### <a name="return-value"></a>戻り値
@@ -614,7 +614,7 @@ reference at(size_type _Off);
 
 メンバー[演算子&#91; ](#op_at)は、文字列の要素への読み取りおよび書き込みアクセスを提供するために `at` メンバー関数よりも高速です。
 
-メンバー `operator[]` は、パラメーターとして渡されたインデックスが有効であるかどうかを確認しませんが、メンバー関数 `at` は使用されるため、有効性が特定されていない場合に使用する必要があります。 無効なインデックス。これは、メンバー関数に渡される0または文字列のサイズ以上のインデックスであり、 [Out_of_range クラス](../standard-library/out-of-range-class.md)の例外をスロー `at` スローします。 無効なインデックスが `operator[]` に渡されると、未定義の動作が発生しますが、文字列の長さと等しいインデックスは、const 文字列の有効なインデックスで、このインデックスが渡されると演算子は null 文字を返します。
+メンバー `operator[]` は、パラメーターとして渡されたインデックスが有効であるかどうかを確認しませんが、メンバー関数 `at` の場合は、有効でない場合に使用する必要があります。 無効なインデックス。これは、メンバー関数に渡される0または文字列のサイズ以上のインデックスであり、 [Out_of_range クラス](../standard-library/out-of-range-class.md)の例外をスロー `at` スローします。 無効なインデックスが `operator[]` に渡されると、未定義の動作が発生しますが、文字列の長さと等しいインデックスは、const 文字列の有効なインデックスで、このインデックスが渡されると演算子は null 文字を返します。
 
 返された参照は、文字列の再割り当てまたは非 **const** 文字列の変更によって無効化される可能性があります。
 
@@ -681,7 +681,7 @@ reference back();
 basic_string();
 
 explicit basic_string(
-    const allocator_type& _Al);
+    const allocator_type& alloc_type);
 
 basic_string(
     const basic_string& right);
@@ -691,14 +691,14 @@ basic_string(
 
 basic_string(
     const basic_string& right,
-    size_type _Roff,
+    size_type right_offset,
     size_type count = npos);
 
 basic_string(
     const basic_string& right,
-    size_type _Roff,
+    size_type right_offset,
     size_type count,
-    const allocator_type& _Al);
+    const allocator_type& alloc_type);
 
 basic_string(
     const value_type* ptr,
@@ -707,23 +707,23 @@ basic_string(
 basic_string(
     const value_type* ptr,
     size_type count,
-    const allocator_type& _Al);
+    const allocator_type& alloc_type);
 
 basic_string(
     const value_type* ptr);
 
 basic_string(
     const value_type* ptr,
-    const allocator_type& _Al);
+    const allocator_type& alloc_type);
 
 basic_string(
     size_type count,
-    value_type _Ch);
+    value_type char_value);
 
 basic_string(
     size_type count,
-    value_type _Ch,
-    const allocator_type& _Al);
+    value_type char_value,
+    const allocator_type& alloc_type);
 
 template <class InputIterator>
 basic_string(
@@ -734,7 +734,7 @@ template <class InputIterator>
 basic_string(
     InputIterator first,
     InputIterator last,
-    const allocator_type& _Al);
+    const allocator_type& alloc_type);
 
 basic_string(
     const_pointer first,
@@ -750,7 +750,7 @@ basic_string(
 *ptr* \
 作成される `string` の初期化に使用される文字が含まれた C 文字列。 この値を null ポインターにすることはできません。
 
-*_Al*\
+*alloc_type*\
 作成される文字列オブジェクトのストレージ アロケーター クラス。
 
 *カウント*\
@@ -759,10 +759,10 @@ basic_string(
 *右*\
 作成される文字列を初期化するための文字列。
 
-*_Roff*\
+*right_offset*\
 作成される文字列の文字値を初期化するために最初に使用される、文字列内の文字のインデックス。
 
-*_Ch*\
+*char_value*\
 作成される文字列にコピーされる文字値。
 
 *最初*の \
@@ -777,9 +777,9 @@ basic_string(
 
 ### <a name="remarks"></a>Remarks
 
-すべてのコンストラクターは [basic_string::allocator_type](#allocator_type) を格納し、被制御シーケンスを初期化します。 アロケーター オブジェクトは、引数 `al` が指定されていれば、この引数です。 コピー コンストラクターの場合は、`right.`[basic_string::get_allocator](#get_allocator)`()` です。 それ以外の場合は `Alloc()` です。
+すべてのコンストラクターは [basic_string::allocator_type](#allocator_type) を格納し、被制御シーケンスを初期化します。 アロケーター オブジェクトは、引数 `al` が指定されていれば、この引数です。 コピーコンストラクターの場合、 [basic_string:: get_allocator](#get_allocator)`()``right.`ます。 それ以外の場合、アロケーターは `Alloc()`ます。
 
-被制御シーケンスは、残りのオペランドで指定された、オペランド シーケンスのコピーに初期化されます。 オペランド シーケンスを含まないコンストラクターは、空の初期被制御シーケンスを指定します。 `InputIterator` がテンプレート コンストラクターの整数型の場合、オペランド シーケンス _F `irst,  last` は `(size_type) first, (value_type) last` と同じ動作になります。
+被制御シーケンスは、残りのオペランドで指定された、オペランド シーケンスのコピーに初期化されます。 オペランド シーケンスを含まないコンストラクターは、空の初期被制御シーケンスを指定します。 `InputIterator` がテンプレートコンストラクターの整数型である場合、オペランドシーケンス `first,  last` の動作は `(size_type) first, (value_type) last`と同じになります。
 
 ### <a name="example"></a>例
 
@@ -890,13 +890,13 @@ const value_type *c_str() const;
 
 ### <a name="return-value"></a>戻り値
 
-呼び出し文字列の C スタイル バージョンへのポインター。  ポインター値は、オブジェクトの basic_string クラスでデストラクターなどの非 const 関数を呼び出した後に無効になります。
+呼び出し文字列の C スタイル バージョンへのポインター。  ポインター値は、オブジェクトの basic_string クラスで、デストラクターを含む非 const 関数を呼び出した後に有効ではありません。
 
 ### <a name="remarks"></a>Remarks
 
 \<char > basic_string クラステンプレートに属する文字列型のオブジェクトは、必ずしも null で終了しているとは限りません。 null 文字 '\0' は、C 文字列では文字列の末尾をマークするための特殊文字として使用されますが、string 型のオブジェクトでは特別な意味を持たず、他の文字と同様に文字列の一部にすることができます。 **Const char** <strong>\*</strong>から文字列への自動変換はありますが、String クラスは、C スタイルの文字列から、 **char > の型\<basic_string**型のオブジェクトへの自動変換を提供していません。
 
-返された C スタイル文字列は、変更 (文字列へのポインターが無効になる可能性があるため) または削除 (文字列には有効期限があり、クラス文字列によって所有されているため) しないでください。
+返された C スタイルの文字列は、文字列へのポインターが無効になる可能性があるため、または削除される可能性があるため、変更しないでください。文字列の有効期間は限られており、クラス文字列によって所有されています。
 
 ### <a name="example"></a>例
 
@@ -1066,7 +1066,7 @@ auto i2 = Container.cend();
 // i2 is Container<T>::const_iterator
 ```
 
-`cend` によって返された値は逆参照しないでください。
+`cend` によって返された値を逆参照することはできません。
 
 ## <a name="clear"></a>  basic_string::clear
 
@@ -1128,30 +1128,30 @@ int compare(
     const basic_string<CharType, Traits, Allocator>& str) const;
 
 int compare(
-    size_type _Pos1,
-    size_type _Num1,
+    size_type position_1,
+    size_type number_1,
     const basic_string<CharType, Traits, Allocator>& str) const;
 
 int compare(
-    size_type _Pos1,
-    size_type _Num1,
+    size_type position_1,
+    size_type number_1,
     const basic_string<CharType, Traits, Allocator>& str,
-    size_type _Off,
+    size_type offset,
     size_type count) const;
 
 int compare(
     const value_type* ptr) const;
 
 int compare(
-    size_type _Pos1,
-    size_type _Num1,
+    size_type position_1,
+    size_type number_1,
     const value_type* ptr) const;
 
 int compare(
-    size_type _Pos1,
-    size_type _Num1,
+    size_type position_1,
+    size_type number_1,
     const value_type* ptr
-    size_type _Num2) const;
+    size_type number_2) const;
 ```
 
 ### <a name="parameters"></a>パラメーター
@@ -1159,16 +1159,16 @@ int compare(
 *str* \
 オペランド文字列と比較する文字列。
 
-*_Pos1*\
+*position_1*\
 比較の開始位置を示すオペランド文字列のインデックス。
 
-*_Num1*\
+*number_1*\
 比較するオペランド文字列の最大文字数。
 
-*_Num2*\
+*number_2*\
 比較するパラメーター文字列の最大文字数。
 
-*_Off*\
+*オフセット*\
 比較の開始位置を示すパラメーター文字列のインデックス。
 
 *カウント*\
@@ -1408,7 +1408,7 @@ typedef typename allocator_type::const_pointer const_pointer;
 
 この型は `allocator_type::const_pointer`の同意語です。
 
-型 `string` の場合、これは `char*` と同じです。
+型 `string`の場合、これは `char*`と同じです。
 
 const が宣言されているポインターは、宣言時に初期化する必要があります。 const ポインターは常に同じメモリ位置を指しますが、定数データまたは非定数データを指すこともできます。
 
@@ -1448,7 +1448,7 @@ typedef typename allocator_type::const_reference const_reference;
 
 `const_reference` 型で要素の値を変更することはできません。
 
-この型は `allocator_type::const_reference`の同意語です。 文字列 `type` の場合は、const `char&` に相当します。
+この型は `allocator_type::const_reference`の同意語です。 文字列 `type`の場合は、const `char&`に相当します。
 
 ### <a name="example"></a>例
 
@@ -1480,7 +1480,7 @@ typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 size_type copy(
     value_type* ptr,
     size_type count,
-    size_type _Off = 0) const;
+    size_type offset = 0) const;
 ```
 
 ### <a name="parameters"></a>パラメーター
@@ -1488,9 +1488,9 @@ size_type copy(
 *ptr* \
 要素のコピー先のターゲット文字配列。
 
-_*カウント*ソース文字列からコピーされる文字数の最大値。
+*カウント*コピー元の文字列からコピーされる最大文字数。
 
-*_Off*\
+*オフセット*\
 ソース文字列内のコピーの作成開始位置。
 
 ### <a name="return-value"></a>戻り値
@@ -1499,7 +1499,7 @@ _*カウント*ソース文字列からコピーされる文字数の最大値�
 
 ### <a name="remarks"></a>Remarks
 
-null 文字はコピーの末尾には追加されません。
+コピーの末尾に null 文字は追加されません。
 
 ### <a name="example"></a>例
 
@@ -1585,7 +1585,7 @@ size_type _Copy_s(
     value_type* dest,
     size_type dest_size,
     size_type count,
-    size_type _Off = 0) const;
+    size_type offset = 0) const;
 ```
 
 ### <a name="parameters"></a>パラメーター
@@ -1596,9 +1596,9 @@ size_type _Copy_s(
 *dest_size*\
 *Dest*のサイズ。
 
-_*カウント*ソース文字列からコピーされる文字数の最大値。
+*カウント*コピー元の文字列からコピーされる最大文字数。
 
-*_Off*\
+*オフセット*\
 ソース文字列内のコピーの作成開始位置。
 
 ### <a name="return-value"></a>戻り値
@@ -1607,7 +1607,7 @@ _*カウント*ソース文字列からコピーされる文字数の最大値�
 
 ### <a name="remarks"></a>Remarks
 
-null 文字はコピーの末尾には追加されません。
+コピーの末尾に null 文字は追加されません。
 
 ### <a name="example"></a>例
 
@@ -1837,7 +1837,7 @@ iterator end();
 
 ### <a name="remarks"></a>Remarks
 
-`end` は、反復子が文字列の末尾に達したかどうかをテストするためによく使用されます。 `end` によって返された値は逆参照しないでください。
+`end` は、反復子が文字列の末尾に達したかどうかをテストするためによく使用されます。 `end` によって返された値を逆参照することはできません。
 
 `end` の戻り値が `const_iterator` に割り当てられている場合、文字列オブジェクトを変更することはできません。 `end` の戻り値が `iterator`に割り当てられている場合は、文字列オブジェクトを変更できます。
 
@@ -1904,10 +1904,10 @@ iterator erase(
     iterator last);
 
 iterator erase(
-    iterator _It);
+    iterator iter);
 
 basic_string<CharType, Traits, Allocator>& erase(
-    size_type _Pos = 0,
+    size_type offset = 0,
     size_type count = npos);
 ```
 
@@ -1919,14 +1919,14 @@ basic_string<CharType, Traits, Allocator>& erase(
 *最後*の \
 消去範囲内の最後の要素の次の位置を示す反復子。
 
-*_It*\
+*iter*\
 消去される文字列内の要素の位置を示す反復子。
 
-*_Pos*\
+*オフセット*\
 削除される文字列内の最初の文字のインデックス。
 
 *カウント*\
-*_Pos* で始まる文字列の範囲内に同じ数の要素がある場合に削除される要素の数。
+*オフセット*で始まる文字列の範囲内にある場合に削除される要素の数。
 
 ### <a name="return-value"></a>戻り値
 
@@ -2003,29 +2003,29 @@ The modified string object str3m is: Hello .
 
 ```cpp
 size_type find(
-    value_type _Ch,
-    size_type _Off = 0) const;
+    value_type char_value,
+    size_type offset = 0) const;
 
 size_type find(
     const value_type* ptr,
-    size_type _Off = 0) const;
+    size_type offset = 0) const;
 
 size_type find(
     const value_type* ptr,
-    size_type _Off,
+    size_type offset,
     size_type count) const;
 
 size_type find(
     const basic_string<CharType, Traits, Allocator>& str,
-    size_type _Off = 0) const;
+    size_type offset = 0) const;
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*_Ch*\
+*char_value*\
 メンバー関数が検索される文字値。
 
-*_Off*\
+*オフセット*\
 検索を開始する位置のインデックス。
 
 *ptr* \
@@ -2174,33 +2174,33 @@ The index of the 1st element of 'clear' in str4 is: 0
 
 ## <a name="find_first_not_of"></a>  basic_string::find_first_not_of
 
-指定された文字列の要素ではない最初の文字を文字列で検索します。
+指定した文字列の要素ではない最初の文字を文字列で検索します。
 
 ```cpp
 size_type find_first_not_of(
-    value_type _Ch,
-    size_type _Off = 0) const;
+    value_type char_value,
+    size_type offset = 0) const;
 
 size_type find_first_not_of(
     const value_type* ptr,
-    size_type _Off = 0) const;
+    size_type offset = 0) const;
 
 size_type find_first_not_of(
     const value_type* ptr,
-    size_type _Off,
+    size_type offset,
     size_type count) const;
 
 size_type find_first_not_of(
     const basic_string<CharType, Traits, Allocator>& str,
-    size_type _Off = 0) const;
+    size_type offset = 0) const;
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*_Ch*\
+*char_value*\
 メンバー関数が検索される文字値。
 
-*_Off*\
+*オフセット*\
 検索を開始する位置のインデックス。
 
 *ptr* \
@@ -2366,29 +2366,29 @@ the 0th position is: 2
 
 ```cpp
 size_type find_first_of(
-    value_type _Ch,
-    size_type _Off = 0) const;
+    value_type char_value,
+    size_type offset = 0) const;
 
 size_type find_first_of(
     const value_type* ptr,
-    size_type _Off = 0) const;
+    size_type offset = 0) const;
 
 size_type find_first_of(
     const value_type* ptr,
-    size_type _Off,
+    size_type offset,
     size_type count) const;
 
 size_type find_first_of(
     const basic_string<CharType, Traits, Allocator>& str,
-    size_type _Off = 0) const;
+    size_type offset = 0) const;
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*_Ch*\
+*char_value*\
 メンバー関数が検索される文字値。
 
-*_Off*\
+*オフセット*\
 検索を開始する位置のインデックス。
 
 *ptr* \
@@ -2549,33 +2549,33 @@ the 0th position is: 1
 
 ## <a name="find_last_not_of"></a>  basic_string::find_last_not_of
 
-指定された文字列の要素ではない最後の文字を文字列で検索します。
+指定した文字列の要素ではない最後の文字を文字列で検索します。
 
 ```cpp
 size_type find_last_not_of(
-    value_type _Ch,
-    size_type _Off = npos) const;
+    value_type char_value,
+    size_type offset = npos) const;
 
 size_type find_last_not_of(
     const value_type* ptr,
-    size_type _Off = npos) const;
+    size_type offset = npos) const;
 
 size_type find_last_not_of(
     const value_type* ptr,
-    size_type _Off,
+    size_type offset,
     size_type count) const;
 
 size_type find_last_not_of(
     const basic_string<CharType, Traits, Allocator>& str,
-    size_type _Off = npos) const;
+    size_type offset = npos) const;
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*_Ch*\
+*char_value*\
 メンバー関数が検索される文字値。
 
-*_Off*\
+*オフセット*\
 検索を終了する位置のインデックス。
 
 *ptr* \
@@ -2742,29 +2742,29 @@ in str4 before the end position is: 10
 
 ```cpp
 size_type find_last_of(
-    value_type _Ch,
-    size_type _Off = npos) const;
+    value_type char_value,
+    size_type offset = npos) const;
 
 size_type find_last_of(
     const value_type* ptr,
-    size_type _Off = npos) const;
+    size_type offset = npos) const;
 
 size_type find_last_of(
     const value_type* ptr,
-    size_type _Off,
+    size_type offset,
     size_type count) const;
 
 size_type find_last_of(
     const basic_string<CharType, Traits, Allocator>& str,
-    size_type _Off = npos) const;
+    size_type offset = npos) const;
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*_Ch*\
+*char_value*\
 メンバー関数が検索される文字値。
 
-*_Off*\
+*オフセット*\
 検索を終了する位置のインデックス。
 
 *ptr* \
@@ -2975,60 +2975,60 @@ int main( )
 
 ```cpp
 basic_string<CharType, Traits, Allocator>& insert(
-    size_type _P0,
+    size_type position,
     const value_type* ptr);
 
 basic_string<CharType, Traits, Allocator>& insert(
-    size_type _P0,
+    size_type position,
     const value_type* ptr,
     size_type count);
 
 basic_string<CharType, Traits, Allocator>& insert(
-    size_type _P0,
+    size_type position,
     const basic_string<CharType, Traits, Allocator>& str);
 
 basic_string<CharType, Traits, Allocator>& insert(
-    size_type _P0,
+    size_type position,
     const basic_string<CharType, Traits, Allocator>& str,
-    size_type _Off,
+    size_type offset,
     size_type count);
 
 basic_string<CharType, Traits, Allocator>& insert(
-    size_type _P0,
+    size_type position,
     size_type count,
-    value_type _Ch);
+    value_type char_value);
 
 iterator insert(
-    iterator _It);
+    iterator iter);
 
 iterator insert(
-    iterator _It,
-    value_type _Ch)l
+    iterator iter,
+    value_type char_value)l
 template <class InputIterator>
 void insert(
-    iterator _It,
+    iterator iter,
     InputIterator first,
     InputIterator last);
 
 void insert(
-    iterator _It,
+    iterator iter,
     size_type count,
-    value_type _Ch);
+    value_type char_value);
 
 void insert(
-    iterator _It,
+    iterator iter,
     const_pointer first,
     const_pointer last);
 
 void insert(
-    iterator _It,
+    iterator iter,
     const_iterator first,
     const_iterator last);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*_P0*\
+*位置*の\
 新しい文字の挿入ポイントの背後の位置にあるインデックス。
 
 *ptr* \
@@ -3040,13 +3040,13 @@ C 文字列全体または一部がこの文字列に挿入されます。
 *str* \
 文字列全体または一部が対象の文字列に挿入されます。
 
-*_Off*\
+*オフセット*\
 追加する文字の元の文字列の一部のインデックス。
 
-*_Ch*\
+*char_value*\
 挿入する要素の文字の値。
 
-*_It*\
+*iter*\
 文字を挿入する背後の位置を示す反復子。
 
 *最初*の \
@@ -3322,7 +3322,7 @@ static const size_type npos = -1;
 
 ```cpp
 basic_string<CharType, Traits, Allocator>& operator+=(
-    value_type _Ch);
+    value_type char_value);
 
 basic_string<CharType, Traits, Allocator>& operator+=(
     const value_type* ptr);
@@ -3333,7 +3333,7 @@ basic_string<CharType, Traits, Allocator>& operator+=(
 
 ### <a name="parameters"></a>パラメーター
 
-*_Ch*\
+*char_value*\
 追加される文字。
 
 *ptr* \
@@ -3411,7 +3411,7 @@ The doubly appended strig str1 is: Hello Wide World.
 
 ```cpp
 basic_string<CharType, Traits, Allocator>& operator=(
-    value_type _Ch);
+    value_type char_value);
 
 basic_string<CharType, Traits, Allocator>& operator=(
     const value_type* ptr);
@@ -3425,7 +3425,7 @@ basic_string<CharType, Traits, Allocator>& operator=(
 
 ### <a name="parameters"></a>パラメーター
 
-*_Ch*\
+*char_value*\
 割り当てられる文字値。
 
 *ptr* \
@@ -3504,13 +3504,13 @@ The string str1 reassigned with string str3c is: World.
 文字列に指定したインデックスのある文字への参照を提供します。
 
 ```cpp
-const_reference operator[](size_type _Off) const;
-reference operator[](size_type _Off);
+const_reference operator[](size_type offset) const;
+reference operator[](size_type offset);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*_Off*\
+*オフセット*\
 参照される要素の位置のインデックス。
 
 ### <a name="return-value"></a>戻り値
@@ -3523,7 +3523,7 @@ reference operator[](size_type _Off);
 
 `operator[]` はメンバー関数 [at](#at) より高速な文字列の要素への読み取り/書き込みアクセスを提供します。
 
-`operator[]` では、パラメーターとして渡されたインデックスが有効であるかどうかは確認されませんが、メンバー関数 `at` 使用されるため、有効性が特定されません。 メンバー関数に渡された無効なインデックス (0 または文字列のサイズ以上のインデックス) が[Out_of_range クラス](../standard-library/out-of-range-class.md)の例外をスローし `at`。 無効なインデックスが `operator[]` に渡されると、未定義の動作が発生しますが、文字列の長さと等しいインデックスは、const 文字列の有効なインデックスで、このインデックスが渡されると演算子は null 文字を返します。
+`operator[]` では、パラメーターとして渡されたインデックスが有効であるかどうかは確認されませんが、メンバー関数 `at` 有効である必要があります。 メンバー関数に渡された無効なインデックス (0 または文字列のサイズ以上のインデックス) が[Out_of_range クラス](../standard-library/out-of-range-class.md)の例外をスローし `at`。 無効なインデックスが `operator[]` に渡されると、未定義の動作が発生しますが、文字列の長さと等しいインデックスは、const 文字列の有効なインデックスで、このインデックスが渡されると演算子は null 文字を返します。
 
 返された参照は、文字列の再割り当てまたは非 **const** 文字列の変更によって無効化される可能性があります。
 
@@ -3580,7 +3580,7 @@ typedef typename allocator_type::pointer pointer;
 
 この型は `allocator_type::pointer`の同意語です。
 
-型 `string` の場合、これは**char**  <strong>\*</strong>と同じです。
+型 `string`の場合、これは**char** <strong>\*</strong>と同じです。
 
 ### <a name="example"></a>例
 
@@ -3622,17 +3622,17 @@ void pop_back();
 文字列の末尾に要素を追加します。
 
 ```cpp
-void push_back(value_type _Ch);
+void push_back(value_type char_value);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*_Ch*\
+*char_value*\
 文字列の末尾に追加する文字。
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は効果的に [insert](#insert)( [end](#end), _ *Ch* ) を呼び出します。
+このメンバー関数は、実質的に[insert](#insert)( [end](#end), *char_value* ) を呼び出します。
 
 ### <a name="example"></a>例
 
@@ -3762,7 +3762,7 @@ typedef typename allocator_type::reference reference;
 
 この型は `allocator_type::reference`の同意語です。
 
-型 `string` の場合、これは `chr&` と同じです。
+型 `string`の場合、これは `chr&`と同じです。
 
 ### <a name="example"></a>例
 
@@ -3790,7 +3790,7 @@ reverse_iterator rend();
 
 `rend` を使って、逆順反復子が文字列の末尾に達したかどうかをテストできます。
 
-`rend` によって返された値は逆参照しないでください。
+`rend` によって返された値を逆参照することはできません。
 
 ### <a name="example"></a>例
 
@@ -3852,33 +3852,33 @@ The string str2 is empty.
 
 ```cpp
 basic_string<CharType, Traits, Allocator>& replace(
-    size_type _Pos1,
-    size_type _Num1,
+    size_type position_1,
+    size_type number_1,
     const value_type* ptr);
 
 basic_string<CharType, Traits, Allocator>& replace(
-    size_type _Pos1,
-    size_type _Num1,
+    size_type position_1,
+    size_type number_1,
     const basic_string<CharType, Traits, Allocator>& str);
 
 basic_string<CharType, Traits, Allocator>& replace(
-    size_type _Pos1,
-    size_type _Num1,
+    size_type position_1,
+    size_type number_1,
     const value_type* ptr,
-    size_type _Num2);
+    size_type number_2);
 
 basic_string<CharType, Traits, Allocator>& replace(
-    size_type _Pos1,
-    size_type _Num1,
+    size_type position_1,
+    size_type number_1,
     const basic_string<CharType, Traits, Allocator>& str,
-    size_type _Pos2,
-    size_type _Num2);
+    size_type position_2,
+    size_type number_2);
 
 basic_string<CharType, Traits, Allocator>& replace(
-    size_type _Pos1,
-    size_type _Num1,
+    size_type position_1,
+    size_type number_1,
     size_type count,
-    value_type _Ch);
+    value_type char_value);
 
 basic_string<CharType, Traits, Allocator>& replace(
     iterator first0,
@@ -3894,13 +3894,13 @@ basic_string<CharType, Traits, Allocator>& replace(
     iterator first0,
     iterator last0,
     const value_type* ptr,
-    size_type _Num2);
+    size_type number_2);
 
 basic_string<CharType, Traits, Allocator>& replace(
     iterator first0,
     iterator last0,
-    size_type _Num2,
-    value_type _Ch);
+    size_type number_2,
+    value_type char_value);
 
 template <class InputIterator>
 basic_string<CharType, Traits, Allocator>& replace(
@@ -3927,22 +3927,22 @@ basic_string<CharType, Traits, Allocator>& replace(
 *str* \
 オペランド文字列の文字のソースとなる文字列。
 
-*_Pos1*\
+*position_1*\
 置換の開始位置を示すオペランド文字列のインデックス。
 
-*_Num1*\
+*number_1*\
 オペランド文字列内で置換する最大文字数。
 
-*_Pos2*\
+*position_2*\
 コピーの開始位置を示すパラメーター文字列のインデックス。
 
-*_Num2*\
+*number_2*\
 パラメーター C 文字列から使用する最大文字数。
 
 *ptr* \
 オペランド文字列の文字のソースとなる C 文字列。
 
-*_Ch*\
+*char_value*\
 オペランド文字列にコピーする文字。
 
 *first0* \
@@ -3958,7 +3958,7 @@ basic_string<CharType, Traits, Allocator>& replace(
 パラメーター文字列にコピーされる最後の文字を指定する、反復子、const_pointer、または const_iterator。
 
 *カウント*\
-*_Ch*がオペランド文字列にコピーされる回数。
+*Char_value*がオペランド文字列にコピーされる回数。
 
 ### <a name="return-value"></a>戻り値
 
@@ -4243,7 +4243,7 @@ void resize(
 
 void resize(
     size_type count,
-    _Elem _Ch);
+    value_type char_value);
 ```
 
 ### <a name="parameters"></a>パラメーター
@@ -4251,7 +4251,7 @@ void resize(
 *カウント*\
 文字列の新しいサイズ。
 
-*_Ch*\
+*char_value*\
 文字が追加された値は、追加の要素が必要な場合は初期化されます。
 
 ### <a name="remarks"></a>Remarks
@@ -4365,29 +4365,29 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 
 ```cpp
 size_type rfind(
-    value_type _Ch,
-    size_type _Off = npos) const;
+    value_type char_value,
+    size_type offset = npos) const;
 
 size_type rfind(
     const value_type* ptr,
-    size_type _Off = npos) const;
+    size_type offset = npos) const;
 
 size_type rfind(
     const value_type* ptr,
-    size_type _Off,
+    size_type offset,
     size_type count) const;
 
 size_type rfind(
     const basic_string<CharType, Traits, Allocator>& str,
-    size_type _Off = npos) const;
+    size_type offset = npos) const;
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*_Ch*\
+*char_value*\
 メンバー関数が検索される文字値。
 
-*_Off*\
+*オフセット*\
 検索を開始する位置のインデックス。
 
 *ptr* \
@@ -4622,7 +4622,7 @@ typedef typename allocator_type::size_type size_type;
 
 ### <a name="remarks"></a>Remarks
 
-これは `allocator_type::size_type` と同じです。
+これは `allocator_type::size_type`と同じです。
 
 型 `string`の場合、これは `size_t`と同じです。
 
@@ -4661,13 +4661,13 @@ The capacity of string str1 is: 15.
 
 ```cpp
 basic_string<CharType, Traits, Allocator> substr(
-    size_type _Off = 0,
+    size_type offset = 0,
     size_type count = npos) const;
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*_Off*\
+*オフセット*\
 文字列のコピーが作成された位置の要素を特定するインデックス (既定値は 0)。
 
 *カウント*\
