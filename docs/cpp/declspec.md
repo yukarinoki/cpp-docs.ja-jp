@@ -35,7 +35,7 @@ ms.locfileid: "62154504"
 &nbsp;&nbsp;&nbsp;&nbsp;**allocator**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**appdomain**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**code_seg("** *segname* **")**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**非推奨とされます。**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**deprecated**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**dllimport**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**dllexport**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**jitintrinsic**<br/>
@@ -82,7 +82,7 @@ class __declspec(dllimport) X {};
 
 *decl-specifier-seq* *init-declarator-list*;
 
-*宣言-seq 指定子*含める必要があります、特に、基本データ型 (例: **int**、 **float**、 **typedef**、またはクラス名)、ストレージ クラス (例:**静的**、 **extern**)、または **_ _declspec**拡張機能。 *Init 宣言リスト*含める必要があります、その際、ポインター宣言の一部です。 例:
+*宣言-seq 指定子*含める必要があります、特に、基本データ型 (例: **int**、 **float**、 **typedef**、またはクラス名)、ストレージ クラス (例:**static**、 **extern**)、または **_ _declspec**拡張機能。 *Init 宣言リスト*含める必要があります、その際、ポインター宣言の一部です。 例:
 
 ```cpp
 __declspec(selectany) int * pi1 = 0;   //Recommended, selectany & int both part of decl-specifier
