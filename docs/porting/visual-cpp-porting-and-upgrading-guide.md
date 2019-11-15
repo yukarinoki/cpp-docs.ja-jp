@@ -1,15 +1,15 @@
 ---
 title: Microsoft C++移植およびアップグレードガイド
 description: Microsoft C++ code を最新バージョンの Visual Studio にアップグレードします。
-ms.date: 10/29/2019
+ms.date: 11/05/2019
 ms.assetid: f5fbcc3d-aa72-41a6-ad9a-a706af2166fb
 ms.topic: overview
-ms.openlocfilehash: d67c2665574242a46d697f6e9f24321556146958
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 04c3950d637c01031e78d0d95e13232143ceb232
+ms.sourcegitcommit: 4dde7914608508e47c21cae03ac58fe953a0c29b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73625678"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74119488"
 ---
 # <a name="microsoft-c-porting-and-upgrading-guide"></a>Microsoft C++移植およびアップグレードガイド
 
@@ -25,7 +25,7 @@ Visual Studio 2015、Visual Studio 2017、および Visual Studio 2019 のツー
 
 - コンパイラの最適化が向上しているため、同じコードをより高速に実行できます。
 
-- 最新C++の機能とプログラミング手法によって、バグの一般的な原因が多くなくなり、以前の C スタイルの表現を維持することがはるかに簡単になりました。
+- 最新C++の機能とプログラミング手法により、バグの一般的な原因が多くなくなり、以前の C スタイルの表現よりもはるかに簡単に保守できるコードが生成されます。
 
 - コンパイラとリンカーのパフォーマンスが向上するため、ビルド時間が大幅に短縮されます。
 
@@ -48,6 +48,7 @@ Visual Studio 2015、Visual Studio 2017、および Visual Studio 2019 のツー
 |Title|説明|
 |-----------|-----------------|
 |[以前C++のバージョンの Visual Studio からのプロジェクトのアップグレード](upgrading-projects-from-earlier-versions-of-visual-cpp.md)|コードベースを Visual Studio 2019 および v142 のコンパイラにアップグレードする方法について説明します。|
+|[コードをアップグレードC++するための IDE ツール](ide-tools-for-upgrading-code.md)|アップグレードプロセスに役立つ IDE の便利な機能。|
 |[C++2015と2019間のバイナリの互換性](binary-compat-2015-2017.md)|V142 プロジェクトの現状で v140 ライブラリを使用します。|
 |[Visual Studio でネイティブ マルチ ターゲットを利用し、古いプロジェクトを作成する](use-native-multi-targeting.md)|以前のコンパイラとライブラリで Visual Studio 2019 を使用します。|
 |[2003 から 2015 の Visual C++ の履歴の変更](visual-cpp-change-history-2003-2015.md)|Visual Studio 2003 から2015の Microsoft C++ライブラリおよびビルドツールのすべての変更の一覧。コードの変更が必要になる場合があります。|
