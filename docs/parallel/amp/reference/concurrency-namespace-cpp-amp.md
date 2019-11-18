@@ -39,7 +39,7 @@ namespace Concurrency;
 |名前|説明|
 |----------|-----------------|
 |[accelerator クラス](accelerator-class.md)|物理的に DP に最適化されたコンピューティング ノードの抽象化を表します。|
-|[accelerator_view クラス](accelerator-view-class.md)|C ++. AMP のデータ並列アクセラレータでの仮想デバイスの抽象化を表します。|
+|[accelerator_view クラス](accelerator-view-class.md)|C++. AMP のデータ並列アクセラレータでの仮想デバイスの抽象化を表します。|
 |[accelerator_view_removed クラス](accelerator-view-removed-class.md)|基になる DirectX の呼び出しが Windows のタイムアウト検出と回復機構が原因で失敗した場合にスローされる例外。|
 |[array クラス](array-class.md)|グリッド ドメインの `accelerator_view` のデータ集合体。 これは、グリッド ドメインの各要素に対して 1 つずつの変数のコレクションです。 各変数はいずれかの C++ 型に対応する値を保持します。|
 |[array_view クラス](array-view-class.md)|配列内のデータに対するビューを表します\<T, N >。|
