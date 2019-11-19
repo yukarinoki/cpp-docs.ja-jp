@@ -1659,7 +1659,7 @@
                       href: atl-mfc-shared/cstring-argument-passing.md
                     - name: 'Unicode とマルチバイト文字セット (MBCS: Multibyte Character Set) のサポート'
                       href: atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md
-        - name: 辞書／辞典／その他
+        - name: 関連項目
           expanded: false
           items:
             - name: CSize クラス
@@ -2848,6 +2848,8 @@
           href: porting/porting-third-party-libraries.md
         - name: データ アプリケーションを移植する
           href: data/data-access-programming-mfc-atl.md
+    - name: C++ コードをアップグレードするための IDE ツール
+      href: porting/ide-tools-for-upgrading-code.md
     - name: Visual C++ 2003 ～ 2015 の変更履歴
       href: porting/visual-cpp-change-history-2003-2015.md
     - name: Visual Studio 2003 から 2015 の Visual C++ の新機能

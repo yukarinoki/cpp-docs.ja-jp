@@ -4,12 +4,12 @@ ms.date: 09/02/2019
 helpviewer_keywords:
 - cl.exe compiler, intrinsics
 ms.assetid: 1fe3958e-d2fe-4188-8e34-5896738246eb
-ms.openlocfilehash: 93f53bf90bd8defaa4559e52c00cfcd6269edee4
-ms.sourcegitcommit: 499dfcb5622c4cd1b6afaf23b9de5b09b7751579
+ms.openlocfilehash: 0293daacd717b3ae85b993729090fe363f7e0b9b
+ms.sourcegitcommit: e805200eaef4fe7a65a00051bbd305273af94fe7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71012246"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74163469"
 ---
 # <a name="intrinsics-available-on-all-architectures"></a>すべてのアーキテクチャで使用可能な組み込みクラス
 
@@ -104,7 +104,7 @@ X86、AMD64、ARM、および ARM64 の各アーキテクチャでは、次の�
 |[cosl](../c-runtime-library/reference/cos-cosf-cosl.md)|math.h|
 |[exp](../c-runtime-library/reference/exp-expf.md)|math.h|
 |[expf](../c-runtime-library/reference/exp-expf.md)|math.h|
-|[expl](../c-runtime-library/reference/exp-expf.md)|math.h|
+|[損益](../c-runtime-library/reference/exp-expf.md)|math.h|
 |[fabs](../c-runtime-library/reference/fabs-fabsf-fabsl.md)|math.h|
 |[fabsf](../c-runtime-library/reference/fabs-fabsf-fabsl.md)|math.h|
 |[floor](../c-runtime-library/reference/floor-floorf-floorl.md)|math.h|
@@ -162,6 +162,7 @@ X86、AMD64、ARM、および ARM64 の各アーキテクチャでは、次の�
 
 ## <a name="see-also"></a>関連項目
 
-[ARM 組み込み](../intrinsics/arm-intrinsics.md)<br/>
-[x86 組み込み一覧](../intrinsics/x86-intrinsics-list.md)<br/>
-[x64 (amd64) 組み込み一覧](../intrinsics/x64-amd64-intrinsics-list.md)<br/>
+[ARM 組み込み](../intrinsics/arm-intrinsics.md)\
+[ARM64 組み込み](../intrinsics/arm64-intrinsics.md)\
+[x86 組み込みリスト](../intrinsics/x86-intrinsics-list.md)\
+[x64 (amd64) 組み込みリスト](../intrinsics/x64-amd64-intrinsics-list.md)
