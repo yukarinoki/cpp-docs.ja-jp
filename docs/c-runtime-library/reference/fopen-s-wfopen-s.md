@@ -101,7 +101,7 @@ errno_t _wfopen_s(
 
 **fopen_s**は Unicode ファイルストリームをサポートしています。 新規または既存の Unicode ファイルを開くには、目的のエンコードを指定する*ccs*フラグを**fopen_s**に渡します。
 
-**fopen_s (& fp、"newfile"、"rw, ccs =** _encoding_ **");**
+**fopen_s (& fp、"newfile.txt"、"rw, ccs=** _encoding_ **");**
 
 *encoding* に使用できる値は、 **UNICODE**、 **UTF-8**、および**UTF-16LE**です。 *エンコード*に値が指定されていない場合、 **fopen_s**は ANSI エンコーディングを使用します。
 
