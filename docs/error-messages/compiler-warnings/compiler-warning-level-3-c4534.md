@@ -1,29 +1,29 @@
 ---
-title: コンパイラの警告 (レベル 3) C4534
+title: Compiler Warning (level 3) C4534
 ms.date: 11/04/2016
 f1_keywords:
 - c4534
 helpviewer_keywords:
 - C4534
 ms.assetid: ec2adf3b-d7a1-4005-bb0c-5d219df78dc8
-ms.openlocfilehash: 81445ff42aca78a8e40e9c88eff4bb76a41a8669
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2e617b18f2c7ed3b51d25eb44101629bbadcef9d
+ms.sourcegitcommit: 217fac22604639ebd62d366a69e6071ad5b724ac
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401879"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74189090"
 ---
-# <a name="compiler-warning-level-3-c4534"></a>コンパイラの警告 (レベル 3) C4534
+# <a name="compiler-warning-level-3-c4534"></a>Compiler Warning (level 3) C4534
 
-'constructor' には、クラス 'class' が、既定の引数のための既定のコンス トラクターはできません。
+'constructor' will not be a default constructor for class 'class' due to the default argument
 
-非管理対象のクラスは、パラメーターの既定値を持つコンス トラクターを持つことができ、コンパイラはこれを既定のコンス トラクターとして使用されます。 マークされたクラス、`value`キーワードとして使用されませんコンス トラクターを既定値でそのパラメーターの既定のコンス トラクター。
+An unmanaged class can have a constructor with parameters that have default values and the compiler will use this as the default constructor. A class marked with the `value` keyword will not use a constructor with default values for its parameters as a default constructor.
 
-詳細については、次を参照してください。[クラスと構造体](../../extensions/classes-and-structs-cpp-component-extensions.md)します。
+詳細については、「[クラスと構造体](../../extensions/classes-and-structs-cpp-component-extensions.md)」を参照してください。
 
-次の例では、C4534 が生成されます。
+The following sample generates C4534:
 
-```
+```cpp
 // C4534.cpp
 // compile with: /W3 /clr /WX
 value class MyClass {
