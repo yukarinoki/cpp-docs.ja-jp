@@ -1659,7 +1659,7 @@
                       href: atl-mfc-shared/cstring-argument-passing.md
                     - name: 'Unicode とマルチバイト文字セット (MBCS: Multibyte Character Set) のサポート'
                       href: atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md
-        - name: 関連項目
+        - name: 辞書／辞典／その他
           expanded: false
           items:
             - name: CSize クラス
@@ -4215,22 +4215,7 @@
                 - name: constexpr ラムダ式
                   href: cpp/lambda-expressions-constexpr.md
             - name: 配列
-              expanded: false
-              items:
-                - name: 配列
-                  href: cpp/arrays-cpp.md
-                - name: 配列の使用
-                  href: cpp/using-arrays-cpp.md
-                - name: 配列の初期化
-                  href: cpp/initializing-arrays.md
-                - name: 式の配列
-                  href: cpp/arrays-in-expressions.md
-                - name: 添字演算子の解釈
-                  href: cpp/interpretation-of-subscript-operator.md
-                - name: 配列型の間接参照
-                  href: cpp/indirection-on-array-types.md
-                - name: C++ での配列の順序
-                  href: cpp/ordering-of-cpp-arrays.md
+              href: cpp/arrays-cpp.md
             - name: 関連項目
               expanded: false
               items:
