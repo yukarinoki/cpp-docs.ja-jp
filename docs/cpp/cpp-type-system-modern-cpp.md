@@ -1,34 +1,34 @@
 ---
-title: C++ 型システム (Modern C++)
-ms.date: 11/19/2018
+title: C++ type system
+ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
-ms.openlocfilehash: b947bd6955a80e051d1dab81061b4b2bf2ab19c8
-ms.sourcegitcommit: 8178d22701047d24f69f10d01ba37490e3d67241
+ms.openlocfilehash: 1f12f7505438dc995aaf8a045fd903488e9ff092
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "69498629"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246599"
 ---
-# <a name="c-type-system-modern-c"></a>C++ 型システム (Modern C++)
+# <a name="c-type-system"></a>C++ type system
 
-*型*の概念は、でC++は非常に重要です。 変数、関数の引数、関数の戻り値をコンパイルするには、それぞれに型が必要です。 さらに、すべての式 (リテラル値を含む) には、評価前にコンパイラーにより暗黙的に型が指定されます。 型の例としては、整数**値を格納**するための**int** 、浮動小数点値 (*スカラー*データ型とも呼ばれます)、またはテキストを格納する標準ライブラリクラス[std:: basic_string](../standard-library/basic-string-class.md)があります。 **クラス**または**構造体**を定義することで、独自の型を作成できます。 型は、変数 (または式の結果) に割り当てられるメモリの量、その変数に格納される値の種類、それらの値の解釈方法 (ビット パターンとして)、その型で実行可能な操作を指定します。 ここでは、C++ の型システムの主な機能の概要を示します。
+The concept of *type* is very important in C++. 変数、関数の引数、関数の戻り値をコンパイルするには、それぞれに型が必要です。 さらに、すべての式 (リテラル値を含む) には、評価前にコンパイラーにより暗黙的に型が指定されます。 Some examples of types include **int** to store integral values, **double** to store floating-point values (also known as *scalar* data types), or the Standard Library class [std::basic_string](../standard-library/basic-string-class.md) to store text. You can create your own type by defining a **class** or **struct**. 型は、変数 (または式の結果) に割り当てられるメモリの量、その変数に格納される値の種類、それらの値の解釈方法 (ビット パターンとして)、その型で実行可能な操作を指定します。 ここでは、C++ の型システムの主な機能の概要を示します。
 
 ## <a name="terminology"></a>用語
 
-**Variable**: データ量のシンボル名。この名前を使用して、定義されているコードのスコープ全体で参照するデータにアクセスできます。 でC++は、通常、*変数*はスカラーデータ型のインスタンスを参照するために使用されますが、他の型のインスタンスは通常、*オブジェクト*と呼ばれます。
+**Variable**: The symbolic name of a quantity of data so that the name can be used to access the data it refers to throughout the scope of the code where it is defined. In C++, *variable* is generally used to refer to instances of scalar data types, whereas instances of other types are usually called *objects*.
 
-**オブジェクト**: 簡潔さと一貫性を確保するために、この記事では、クラスまたは構造体の任意のインスタンスを参照する用語*オブジェクト*を使用します。また、一般的な意味で使用される場合は、スカラー変数も含めて、すべての型が含まれます。
+**Object**: For simplicity and consistency, this article uses the term *object* to refer to any instance of a class or structure, and when it is used in the general sense includes all types, even scalar variables.
 
-**POD 型**(plain old data): のデータ型のこの非公式カテゴリC++は、スカラー型 (基本的な型のセクションを参照) または*POD クラス*である型を参照します。 POD クラスには、POD でもない静的データ メンバーはなく、ユーザー定義のコンストラクター、ユーザー定義のデストラクター、ユーザー定義の代入演算子もありません。 また、POD クラスに仮想関数、基底クラス、プライベートまたは保護された非静的データ メンバーもありません。 POD 型は、外部データ交換によく使用されます。たとえば、C 言語で記述されたモジュール (POD 型しかありません) との交換などです。
+**POD type** (plain old data): This informal category of data types in C++ refers to types that are scalar (see the Fundamental types section) or are *POD classes*. POD クラスには、POD でもない静的データ メンバーはなく、ユーザー定義のコンストラクター、ユーザー定義のデストラクター、ユーザー定義の代入演算子もありません。 また、POD クラスに仮想関数、基底クラス、プライベートまたは保護された非静的データ メンバーもありません。 POD 型は、外部データ交換によく使用されます。たとえば、C 言語で記述されたモジュール (POD 型しかありません) との交換などです。
 
 ## <a name="specifying-variable-and-function-types"></a>変数と関数の型の指定
 
-C++は*厳密に型指定*された言語であり、*静的に型指定*されます。すべてのオブジェクトには型があり、その型は変更されません (静的データオブジェクトと混同しないでください)。
-コードで**変数を宣言する場合**は、その型を明示的に指定するか、 **auto**キーワードを使用して初期化子から型を推測するようにコンパイラに指示する必要があります。
-コードで**関数を宣言する場合**は、各引数の型とその戻り値を指定する必要があります。関数によって値が返されない場合は、 **void**を指定する必要があります。 例外は、任意の型の引数を使用できる関数テンプレートを使用する場合です。
+C++ is a *strongly typed* language and it is also *statically-typed*; every object has a type and that type never changes (not to be confused with static data objects).
+**When you declare a variable** in your code, you must either specify its type explicitly, or use the **auto** keyword to instruct the compiler to deduce the type from the initializer.
+**When you declare a function** in your code, you must specify the type of each argument and its return value, or **void** if no value is returned by the function. 例外は、任意の型の引数を使用できる関数テンプレートを使用する場合です。
 
-最初に変数を宣言すると、後で型を変更することはできません。 ただし、変数の値または関数の戻り値を異なる型の別の変数にコピーすることはできます。 このような操作は、*型変換*と呼ばれます。これは必要な場合もありますが、データの損失または正確性の原因になる可能性があります。
+最初に変数を宣言すると、後で型を変更することはできません。 ただし、変数の値または関数の戻り値を異なる型の別の変数にコピーすることはできます。 Such operations are called *type conversions*, which are sometimes necessary but are also potential sources of data loss or incorrectness.
 
 POD 型の変数を宣言するときは、初期化する (つまり、初期値を指定する) ことを強くお勧めします。 変数を初期化しないと、以前そのメモリ位置にたまたま存在していたビットで構成される "不要な" 値が含まれたままになります。 これは、特に自動的に初期化が行われる別の言語を使用していた場合は、覚えておくべき C++ の重要な側面です。 非 POD クラス型の変数を宣言した場合、コンストラクターにより初期化が実行されます。
 
@@ -53,13 +53,13 @@ int maxValue;                // Not recommended! maxValue contains
 
 ## <a name="fundamental-built-in-types"></a>基本 (組み込み) 型
 
-一部の言語とは異なり、C++ には他のすべての型の派生元となる汎用基本型はありません。 この言語には、*組み込み型*とも呼ばれる多くの*基本的な型*が含まれています。 これには、 **int**、 **double**、 **long**、 **bool**などの数値型に加え、ASCII および UNICODE 文字の**char**型および**wchar_t**型が含まれます。 ほとんどの基本型 ( **bool**、 **double**、 **wchar_t** 、および関連する型を除く) には符号なしのバージョンがあり、変数に格納できる値の範囲が変更されます。 たとえば、32ビット符号付き整数を格納する**int**は、-2147483648 から2147483647までの値を表すことができます。 32ビットとしても格納されている**unsigned int**は、0 ~ 4294967295 の値を格納できます。 各ケースで格納できる値の合計数は同じです。範囲のみ異なります。
+一部の言語とは異なり、C++ には他のすべての型の派生元となる汎用基本型はありません。 The language includes many *fundamental types*, also known as *built-in types*. This includes numeric types such as **int**, **double**, **long**, **bool**, plus the **char** and **wchar_t** types for ASCII and UNICODE characters, respectively. Most fundamental types (except **bool**, **double**, **wchar_t** and related types) all have unsigned versions, which modify the range of values that the variable can store. For example, an **int**, which stores a 32-bit signed integer, can represent a value from -2,147,483,648 to 2,147,483,647. An **unsigned int**, which is also stored as 32-bits, can store a value from 0 to 4,294,967,295. 各ケースで格納できる値の合計数は同じです。範囲のみ異なります。
 
-基本型は、実行可能な操作や他の基本型に変換する方法を制御する組み込みの規則を持つコンパイラにより認識されます。 組み込み型とそのサイズと数値制限の完全な一覧については、「[基本型](../cpp/fundamental-types-cpp.md)」を参照してください。
+基本型は、実行可能な操作や他の基本型に変換する方法を制御する組み込みの規則を持つコンパイラにより認識されます。 For a complete list of built-in types and their size and numeric limits, see [Fundamental Types](../cpp/fundamental-types-cpp.md).
 
 次の図は、組み込み型の相対サイズを示しています。
 
-![組み込み&#45;型のサイズ (バイト単位)](../cpp/media/built-intypesizes.png "組み込み&#45;型のサイズ (バイト単位)")
+![Size in bytes of built&#45;in types](../cpp/media/built-intypesizes.png "Size in bytes of built&#45;in types")
 
 次の表は、最もよく使用される基本型の一覧です。
 
@@ -70,17 +70,17 @@ int maxValue;                // Not recommended! maxValue contains
 |bool|1 バイト|true または false になる値を表します。|
 |char|1 バイト|以前の C スタイル文字列内の ASCII 文字や、UNICODE に変換する必要がない std::string オブジェクトの ASCII 文字に使用します。|
 |wchar_t|2 バイト|UNICODE 形式でエンコードできるワイド文字を表します (Windows では UTF-16。他のオペレーティング システムでは異なる場合があります)。 これは、型 `std::wstring` の文字列で使用される文字型です。|
-|署名されていない &nbsp;char|1 バイト|C++ には、組み込みの `byte` 型はありません。  バイト値を表すには unsigned char を使用します。|
+|unsigned&nbsp;char|1 バイト|C++ には、組み込みの `byte` 型はありません。  バイト値を表すには unsigned char を使用します。|
 |unsigned int|4 バイト|ビット フラグの既定のオプション。|
 |long long|8 バイト|非常に大きな整数値を表します。|
 
 ## <a name="the-void-type"></a>void 型
 
-**Void**型は特殊な型です。**void**型の変数を宣言することはできませんが、void __\*__ 型の変数 ( **void**へのポインター) を宣言することはできます。これは、未加工の (型指定されていない) メモリを割り当てる場合に必要になることがあります。 ただし、 **void**へのポインターはタイプセーフではなく、一般に、最新C++では使用しないことを強くお勧めします。 関数の宣言では、 **void**の戻り値は、関数が値を返さないことを意味します。これは、 **void**の一般的で許容される使用方法です。 C 言語では、パラメーターリストで**void**を宣言するパラメーターを持たない関数 (`fou(void)` など) が必要ですが、この方法はC++最新では推奨されていないため `fou()` として宣言する必要があります。 詳細については、「[型変換」および「タイプセーフ](../cpp/type-conversions-and-type-safety-modern-cpp.md)」を参照してください。
+The **void** type is a special type; you cannot declare a variable of type **void**, but you can declare a variable of type __void \*__ (pointer to **void**), which is sometimes necessary when allocating raw (un-typed) memory. However, pointers to **void** are not type-safe and generally their use is strongly discouraged in modern C++. In a function declaration, a **void** return value means that the function does not return a value; this is a common and acceptable use of **void**. While the C language required functions that have zero parameters to declare **void** in the parameter list, for example, `fou(void)`, this practice is discouraged in modern C++ and should be declared `fou()`. For more information, see [Type Conversions and Type Safety](../cpp/type-conversions-and-type-safety-modern-cpp.md).
 
 ## <a name="const-type-qualifier"></a>const 型修飾子
 
-組み込み型またはユーザー定義型は、const キーワードで修飾することができます。 また、メンバー関数は、 **const**で修飾されていても、 **const**オーバーロードされている場合もあります。 **Const**型の値は、初期化後に変更することはできません。
+組み込み型またはユーザー定義型は、const キーワードで修飾することができます。 Additionally, member functions may be **const**-qualified and even **const**-overloaded. The value of a **const** type cannot be modified after it is initialized.
 
 ```cpp
 
@@ -88,27 +88,27 @@ const double PI = 3.1415;
 PI = .75 //Error. Cannot modify const variable.
 ```
 
-**Const**修飾子は関数と変数の宣言で広く使用されており、"const 正確性" はC++の重要な概念です。基本的には、 **const**を使用して、コンパイル時に値が誤って変更されないことを保証することを意味します。 詳細については、「 [const](../cpp/const-cpp.md)」を参照してください。
+The **const** qualifier is used extensively in function and variable declarations and "const correctness" is an important concept in C++; essentially it means to use **const** to guarantee, at compile time, that values are not modified unintentionally. For more information, see [const](../cpp/const-cpp.md).
 
-**Const**型は、非 const バージョンとは異なります。たとえば、 **const int**は**int**とは別の型です。変数から const 性C++を削除する必要がある場合は、このようなまれなケースで**const_cast**演算子を使用できます。 詳細については、「[型変換」および「タイプセーフ](../cpp/type-conversions-and-type-safety-modern-cpp.md)」を参照してください。
+A **const** type is distinct from its non-const version; for example, **const int** is a distinct type from **int**. You can use the C++ **const_cast** operator on those rare occasions when you must remove *const-ness* from a variable. For more information, see [Type Conversions and Type Safety](../cpp/type-conversions-and-type-safety-modern-cpp.md).
 
 ## <a name="string-types"></a>文字列型
 
-厳密に言えばC++ 、言語には組み込みの文字列型がありません。**char**および**wchar_t** store の1文字: 文字列を概数にするために、終端の null 値 (ASCII `'\0'` など) を最後の有効な文字の1つ後ろの配列要素に追加する必要があります ( *C スタイルの文字列*)。 C スタイル文字列では、かなり多くのコードを記述するか、外部文字列ユーティリティ ライブラリ関数を使用する必要がありました。 しかし、現代C++では、標準ライブラリ型 `std::string` (8 ビットの**char**型文字列の場合) または `std::wstring` (16 ビットの**wchar_t**型文字列の場合) があります。 これらC++の標準ライブラリコンテナーは、準拠C++しているビルド環境に含まれる標準ライブラリの一部であるため、ネイティブな文字列型と考えることができます。 `#include <string>` ディレクティブを使用するだけで、これらの型をプログラムで使用できるようになります (MFC または ATL を使用している場合は、CString クラスも使用できますが、 C++標準の一部ではありません)。Null で終わる文字配列 (前述した C スタイルの文字列) の使用は、最新C++では推奨されていません。
+Strictly speaking, the C++ language has no built-in string type; **char** and **wchar_t** store single characters - you must declare an array of these types to approximate a string, adding a terminating null value (for example, ASCII `'\0'`) to the array element one past the last valid character (also called a *C-style string*). C スタイル文字列では、かなり多くのコードを記述するか、外部文字列ユーティリティ ライブラリ関数を使用する必要がありました。 But in modern C++, we have the Standard Library types `std::string` (for 8-bit **char**-type character strings) or `std::wstring` (for 16-bit **wchar_t**-type character strings). These C++ Standard Library containers can be thought of as native string types because they are part of the standard libraries that are included in any compliant C++ build environment. `#include <string>` ディレクティブを使用するだけで、これらの型をプログラムで使用できるようになります (If you are using MFC or ATL, the CString class is also available, but is not part of the C++ standard.) The use of null-terminated character arrays (the C-style strings previously mentioned) is strongly discouraged in modern C++.
 
 ## <a name="user-defined-types"></a>ユーザー定義型
 
-**クラス**、**構造体**、**共用体**、または**列挙型**を定義すると、そのコンストラクトは、基本型であるかのように、コードの残りの部分で使用されます。 メモリ内には既知のサイズがあり、コンパイル時のチェックを要求し、実行時にプログラムの有効期間を問い合わせるために使用する方法に関する一定の規則もあります。 基本の組み込み型とユーザー定義型の主な相違点は次のとおりです。
+When you define a **class**, **struct**, **union**, or **enum**, that construct is used in the rest of your code as if it were a fundamental type. メモリ内には既知のサイズがあり、コンパイル時のチェックを要求し、実行時にプログラムの有効期間を問い合わせるために使用する方法に関する一定の規則もあります。 基本の組み込み型とユーザー定義型の主な相違点は次のとおりです。
 
-- コンパイラには、ユーザー定義型に関する組み込みの情報はありません。 コンパイルプロセス中に定義を最初に検出したときに、型を学習します。
+- コンパイラには、ユーザー定義型に関する組み込みの情報はありません。 It learns of the type when it first encounters the definition during the compilation process.
 
-- クラス メンバーまたは非メンバー関数として適切な演算子を定義することで (オーバーロードを通じて)、型で実行可能な操作と他の方に変換する方法を指定します。 詳細については、「[関数のオーバーロード](function-overloading.md)」を参照してください。
+- クラス メンバーまたは非メンバー関数として適切な演算子を定義することで (オーバーロードを通じて)、型で実行可能な操作と他の方に変換する方法を指定します。 For more information, see [Function Overloading](function-overloading.md)
 
 ## <a name="pointer-types"></a>ポインター型
 
-C 言語の初期バージョンからそうであったように、C++ では特別な宣言子 `*` (アスタリスク) を使用して、ポインター型の変数を宣言できます。 ポインター型には、実際のデータ値が格納されているメモリ位置のアドレスが格納されます。 現代C++では、これらは*未加工ポインター*と呼ばれ、特殊な演算子 `*` (アスタリスク) または `->` (より大きいダッシュ) を使用してコード内でアクセスされます。 これは、*逆*参照と呼ばれます。どちらを使用するかは、スカラーへのポインターを逆参照するか、オブジェクトのメンバーへのポインターを逆参照するかによって異なります。 ポインター型の使用は、長い間 C および C++ プログラム開発における最も困難で複雑な側面の 1 つでした。 このセクションでは、必要に応じて生のポインターを使用できるようにするためのC++いくつかのファクトと手法について説明しますが、[スマートポインター](../cpp/smart-pointers-modern-cpp.md)が進化するため、オブジェクトの所有権に生のポインターを使用する (または推奨) ことはなくなりました (詳細については説明します)。」を参照してください)。 現在でも、オブジェクトの観察には生のポインターが役立ち、使用してもかまいませんが、オブジェクトの所有権に使用する必要がある場合は慎重に使用し、生のポインターが所有するオブジェクトを作成および破棄する方法について十分に考慮してください。
+C 言語の初期バージョンからそうであったように、C++ では特別な宣言子 `*` (アスタリスク) を使用して、ポインター型の変数を宣言できます。 ポインター型には、実際のデータ値が格納されているメモリ位置のアドレスが格納されます。 In modern C++, these are referred to as *raw pointers*, and are accessed in your code through special operators `*` (asterisk) or `->` (dash with greater-than). This is called *dereferencing*, and which one that you use depends on whether you are dereferencing a pointer to a scalar or a pointer to a member in an object. ポインター型の使用は、長い間 C および C++ プログラム開発における最も困難で複雑な側面の 1 つでした。 This section outlines some facts and practices to help use raw pointers if you want to, but in modern C++ it’s no longer required (or recommended) to use raw pointers for object ownership at all, due to the evolution of the [smart pointer](../cpp/smart-pointers-modern-cpp.md) (discussed more at the end of this section). 現在でも、オブジェクトの観察には生のポインターが役立ち、使用してもかまいませんが、オブジェクトの所有権に使用する必要がある場合は慎重に使用し、生のポインターが所有するオブジェクトを作成および破棄する方法について十分に考慮してください。
 
-まず知る必要がある点は、生のポインター変数を宣言すると、ポインターが逆参照されるときに参照するメモリ位置のアドレスを格納するのに必要なメモリだけが割り当てられるという点です。 データ値自体 (*バッキングストア*とも呼ばれます) のメモリの割り当ては、まだ割り当てられていません。 言い換えると、生のポインター変数を宣言することで、実際のデータの変数ではなくメモリ アドレスの変数を作成することになります。 バッキング ストアへの有効なアドレスが含まれることを確認する前にポインター変数を逆参照すると、プログラムで定義されていない動作 (通常は重大なエラー) が発生します。 この種のエラーの例を次に示します。
+まず知る必要がある点は、生のポインター変数を宣言すると、ポインターが逆参照されるときに参照するメモリ位置のアドレスを格納するのに必要なメモリだけが割り当てられるという点です。 Allocation of the memory for the data value itself (also called *backing store*) is not yet allocated. 言い換えると、生のポインター変数を宣言することで、実際のデータの変数ではなくメモリ アドレスの変数を作成することになります。 バッキング ストアへの有効なアドレスが含まれることを確認する前にポインター変数を逆参照すると、プログラムで定義されていない動作 (通常は重大なエラー) が発生します。 この種のエラーの例を次に示します。
 
 ```cpp
 int* pNumber;       // Declare a pointer-to-int variable.
@@ -134,9 +134,9 @@ int* pNumber;       // Declare a pointer-to-int variable.
                               // "pNumber".
 ```
 
-修正後のコード例では、ローカル スタック メモリを使用して、`pNumber` がポイントするバッキング ストアを作成します。 ここでは、説明を簡単にするために基本型を使用しています。 実際には、ポインターのバッキングストアは、**新しい**キーワード式 (C スタイルのプログラミングでは、以前の @no_ を使用して、*ヒープ*(または*無料のストア*) と呼ばれるメモリ領域に動的に割り当てられるユーザー定義型です。_t_3 C ランタイムライブラリ関数が使用されました)。 これらの変数は、割り当てられた後、特にクラス定義に基づいている場合は、オブジェクトと呼ばれます。 **New**で割り当てられたメモリは、対応する**delete**ステートメントによって削除される必要があります (または、`malloc()` 関数を使用して割り当てを行った場合、C ランタイム関数 `free()`)。
+修正後のコード例では、ローカル スタック メモリを使用して、`pNumber` がポイントするバッキング ストアを作成します。 ここでは、説明を簡単にするために基本型を使用しています。 In practice, the backing store for pointers are most often user-defined types that are dynamically-allocated in an area of memory called the *heap* (or *free store*) by using a **new** keyword expression (in C-style programming, the older `malloc()` C runtime library function was used). Once allocated, these variables are usually referred to as objects, especially if they are based on a class definition. Memory that is allocated with **new** must be deleted by a corresponding **delete** statement (or, if you used the `malloc()` function to allocate it, the C runtime function `free()`).
 
-ただし、動的に割り当てられたオブジェクト (特に複雑なコードでは、*メモリリーク*と呼ばれるリソースバグ) を削除するのは簡単ではありません。 したがって、最新の C++ では生のポインターを使用しないことを強くお勧めします。 ほとんどの場合、生のポインターを[スマートポインター](../cpp/smart-pointers-modern-cpp.md)にラップすることをお勧めします。これにより、デストラクターが呼び出されたときにメモリが自動的に解放されます (コードがスマートポインターのスコープ外に出る場合)。スマートポインターを使用すると、 C++プログラム内のバグのクラス全体を事実上排除できます。 次の例では、`MyClass` がパブリック メソッド `DoSomeWork();` を持つユーザー定義型であることを前提としています。
+However, it is easy to forget to delete a dynamically-allocated object- especially in complex code, which causes a resource bug called a *memory leak*. したがって、最新の C++ では生のポインターを使用しないことを強くお勧めします。 It is almost always better to wrap a raw pointer in a [smart pointer](../cpp/smart-pointers-modern-cpp.md), which will automatically release the memory when its destructor is invoked (when the code goes out of scope for the smart pointer); by using smart pointers you virtually eliminate a whole class of bugs in your C++ programs. 次の例では、`MyClass` がパブリック メソッド `DoSomeWork();` を持つユーザー定義型であることを前提としています。
 
 ```cpp
 void someFunction() {
@@ -147,15 +147,15 @@ void someFunction() {
   // for the unique_ptr, freeing the resource.
 ```
 
-スマートポインターの詳細については、「[スマートポインター](../cpp/smart-pointers-modern-cpp.md)」を参照してください。
+For more information about smart pointers, see [Smart Pointers](../cpp/smart-pointers-modern-cpp.md).
 
-ポインター変換の詳細については、「[型変換」および「タイプセーフ](../cpp/type-conversions-and-type-safety-modern-cpp.md)」を参照してください。
+For more information about pointer conversions, see [Type Conversions and Type Safety](../cpp/type-conversions-and-type-safety-modern-cpp.md).
 
-一般的なポインターの詳細については、「[ポインター](../cpp/pointers-cpp.md)」を参照してください。
+For more information about pointers in general, see [Pointers](../cpp/pointers-cpp.md).
 
 ## <a name="windows-data-types"></a>Windows のデータ型
 
-C および C++ 向けの従来の Win32 プログラミングでは、ほとんどの関数は Windows 固有の typedef マクロと #define マクロ (`windef.h` で定義) を使用して、パラメーターと戻り値の型を指定します。 これらの Windows データ型は、主に、C/C++組み込み型に与えられた特別な名前 (エイリアス) にすぎません。 これらの typedef とプリプロセッサ定義の完全な一覧については、「 [Windows データ型](/windows/win32/WinProg/windows-data-types)」を参照してください。 HRESULT や LCID など、typedef には便利で内容がわかりやすいものがあります。 INT など、他の typedef には特別な意味がなく、C++ の基本型のエイリアスにすぎません。 他の Windows のデータ型には、C プログラミングおよび 16 ビット プロセッサの時代から残っている名前がありますが、最新のハードウェアやオペレーティング システムでは目的も意味もありません。 また、Windows ランタイムライブラリに関連付けられている特殊なデータ型も[Windows ランタイム基本データ型](/windows/win32/WinRT/base-data-types)として表示されます。 最新の C++ では、値の解釈方法について Windows の型が追加の意味を伝えるのでない限り、一般的なガイドラインとして C++ の基本型が推奨されます。
+C および C++ 向けの従来の Win32 プログラミングでは、ほとんどの関数は Windows 固有の typedef マクロと #define マクロ (`windef.h` で定義) を使用して、パラメーターと戻り値の型を指定します。 These Windows data types are mostly just special names (aliases) given to C/C++ built-in types. For a complete list of these typedefs and preprocessor definitions, see [Windows Data Types](/windows/win32/WinProg/windows-data-types). HRESULT や LCID など、typedef には便利で内容がわかりやすいものがあります。 INT など、他の typedef には特別な意味がなく、C++ の基本型のエイリアスにすぎません。 他の Windows のデータ型には、C プログラミングおよび 16 ビット プロセッサの時代から残っている名前がありますが、最新のハードウェアやオペレーティング システムでは目的も意味もありません。 There are also special data types associated with the Windows Runtime Library, listed as [Windows Runtime base data types](/windows/win32/WinRT/base-data-types). 最新の C++ では、値の解釈方法について Windows の型が追加の意味を伝えるのでない限り、一般的なガイドラインとして C++ の基本型が推奨されます。
 
 ## <a name="more-information"></a>説明
 
@@ -163,11 +163,11 @@ C++ の型システムの詳細については、次のトピックを参照し�
 
 |||
 |-|-|
-|[値型](../cpp/value-types-modern-cpp.md)|*値の型*とその使用に関連する問題について説明します。|
-|[型変換とタイプセーフ](../cpp/type-conversions-and-type-safety-modern-cpp.md)|よくある型変換の問題について説明し、その回避方法を示します。|
+|[値型](../cpp/value-types-modern-cpp.md)|Describes *value types* along with issues relating to their use.|
+|[Type Conversions and Type Safety](../cpp/type-conversions-and-type-safety-modern-cpp.md)|よくある型変換の問題について説明し、その回避方法を示します。|
 
 ## <a name="see-also"></a>関連項目
 
-[C++ へようこそ (Modern C++)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[Welcome back to C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [C++ 言語リファレンス](../cpp/cpp-language-reference.md)<br/>
 [.NET 標準ライブラリ](../standard-library/cpp-standard-library-reference.md)

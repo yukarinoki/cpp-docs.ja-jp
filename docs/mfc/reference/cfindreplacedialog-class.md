@@ -131,7 +131,7 @@ CFindReplaceDialog();
 
 オブジェクトはモードレスダイアログボックスであるため、new 演算子を使用してヒープ上に作成する必要があります。 `CFindReplaceDialog`
 
-破棄中、フレームワークはダイアログボックスへのポインターに対して**この削除**を実行しようとします。 スタックにダイアログボックスを作成した場合、**この**ポインターは存在せず、未定義の動作が発生する可能性があります。
+破棄中、フレームワークはダイアログボックスへのポインターに対して**delete this**を実行しようとします。 スタックにダイアログボックスを作成した場合、**this**ポインターは存在せず、未定義の動作が発生する可能性があります。
 
 オブジェクトの`CFindReplaceDialog`構築の詳細については、「 [CFindReplaceDialog](../../mfc/reference/cfindreplacedialog-class.md)の概要」を参照してください。 ダイアログボックスを表示するには、 [CFindReplaceDialog:: Create](#create) member 関数を使用します。
 

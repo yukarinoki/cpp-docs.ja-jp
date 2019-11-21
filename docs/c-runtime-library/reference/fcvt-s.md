@@ -28,12 +28,12 @@ helpviewer_keywords:
 - floating-point functions, converting number to string
 - _fcvt_s function
 ms.assetid: 48671197-1d29-4c2b-a5d8-d2368f5f68a1
-ms.openlocfilehash: a63b542333717a57097da455fb514eeef80344b4
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a7dcb9b7acc462d9570ee2cb7adb0dbd06df77c9
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941350"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73623831"
 ---
 # <a name="_fcvt_s"></a>_fcvt_s
 
@@ -82,13 +82,13 @@ errno_t _fcvt_s(
 
 ## <a name="return-value"></a>戻り値
 
-正常終了した場合は 0。 障害が発生した場合、戻り値はエラー コードを示します。 エラー コードは、Errno.h で定義されています。 これらのエラーの一覧については、「[errno、_doserrno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
+正常終了した場合は 0 を返します。 障害が発生した場合、戻り値はエラー コードを示します。 エラー コードは、Errno.h で定義されています。 これらのエラーの一覧については、「[errno、_doserrno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
 パラメーターが次の表の無効な値の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、この関数は無効なパラメーター ハンドラーを呼び出します。 実行の継続が許可された場合、この関数は**errno**を**einval**に設定し、 **einval**を返します。
 
 ### <a name="error-conditions"></a>エラー条件
 
-|*バッファー*|*sizeInBytes*|value|count|dec|sign|Return|*バッファー*内の値|
+|*バッファー*|*sizeInBytes*|値|count|dec|sign|Return|*バッファー*内の値|
 |--------------|-------------------|-----------|-----------|---------|----------|------------|-----------------------|
 |**NULL**|任意|任意|任意|任意|任意|**EINVAL**|変更されません。|
 |Not **NULL** (有効なメモリを指す)|<=0|任意|任意|任意|任意|**EINVAL**|変更されません。|
@@ -109,19 +109,19 @@ errno_t _fcvt_s(
 
 このパラメーターの**解釈は、** *count*パラメーターの解釈に**よって異なり**ます。 *カウント*は、出力文字列の合計桁数として解釈されます **。また、** *count*は、小数点の後の桁数とし**て解釈さ**れます。
 
-C++ では、テンプレートのオーバーロードによってこの関数を簡単に使用できます。オーバーロードでは、バッファー長を自動的に推論できるため、サイズ引数を指定する必要がなくなります。 詳細については、「 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
+C++ では、テンプレートのオーバーロードによってこの関数を簡単に使用できます。オーバーロードでは、バッファー長を自動的に推論できるため、サイズ引数を指定する必要がなくなります。 詳細については、「[セキュリティ保護されたテンプレート オーバーロード](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
-この関数のデバッグ バージョンは、最初にバッファーを 0xFD で埋めます。 この動作を無効にするには、[_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).を使用します。
+この関数のデバッグバージョンは、最初にバッファーを0xFE で埋めます。 この動作を無効にするには、[_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md) を使用します。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
-|関数|必須ヘッダー|オプション ヘッダー|
+|機能|必須ヘッダー|オプション ヘッダー|
 |--------------|---------------------|---------------------|
 |**_fcvt_s**|\<stdlib.h>|\<errno.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
-**ライブラリ**すべてのバージョンの[CRT ライブラリ機能](../../c-runtime-library/crt-library-features.md)。
+**ライブラリ:** [CRT ライブラリの機能](../../c-runtime-library/crt-library-features.md)のすべてのバージョンです。
 
 ## <a name="example"></a>例
 

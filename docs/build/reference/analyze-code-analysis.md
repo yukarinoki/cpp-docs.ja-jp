@@ -100,7 +100,7 @@ set Esp.Extensions=CppCoreCheck.dll
 
 ## <a name="remarks"></a>Remarks
 
-詳細については、「 [c/C++ ](/visualstudio/code-quality/code-analysis-for-c-cpp-overview) c + + のコード分析」と「 [c/C++警告のコード分析](/visualstudio/code-quality/code-analysis-for-c-cpp-warnings)」を参照してください。
+詳細については、「 [c/C++ ](/visualstudio/code-quality/code-analysis-for-c-cpp-overview) c++ のコード分析」と「 [c/C++警告のコード分析](/visualstudio/code-quality/code-analysis-for-c-cpp-warnings)」を参照してください。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
 

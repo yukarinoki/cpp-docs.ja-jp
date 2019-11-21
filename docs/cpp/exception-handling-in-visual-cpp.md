@@ -1,42 +1,62 @@
 ---
-title: MSVC の例外処理
-ms.date: 05/07/2019
+title: Exception handling in MSVC
+ms.date: 11/19/2019
 helpviewer_keywords:
 - try-catch keyword [C++], exception handling
 ms.assetid: a6aa08de-669d-4ce8-9ec3-ec20d1354fcf
-ms.openlocfilehash: 47443f1b7021aac7755d77f797a4f7b7410281f8
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 6cf71d6e6d0519951a084ebead65003bd363395f
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222071"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246589"
 ---
-# <a name="exception-handling-in-msvc"></a>MSVC の例外処理
+# <a name="exception-handling-in-msvc"></a>Exception handling in MSVC
 
-例外とは、プログラムが通常の実行パスに沿って進むことを妨げるエラー状態のことであり、プログラムで制御できない可能性があります。 オブジェクトの作成、ファイルの入出力、および他のモジュールから行われる関数呼び出しを含む特定のアクションは、プログラムが正しく実行されている場合でも、すべて例外の潜在的な原因となります。 堅牢なコードは例外を予期し、それを処理します。
+例外とは、プログラムが通常の実行パスに沿って進むことを妨げるエラー状態のことであり、プログラムで制御できない可能性があります。 オブジェクトの作成、ファイルの入出力、および他のモジュールから行われる関数呼び出しを含む特定のアクションは、プログラムが正しく実行されている場合でも、すべて例外の潜在的な原因となります。 堅牢なコードは例外を予期し、それを処理します。 To detect logic errors, use assertions rather than exceptions (see [Using Assertions](/visualstudio/debugger/c-cpp-assertions)).
 
-1 つのプログラムまたはモジュール内のロジック エラーを検出するために、例外ではなくアサーションを使用して (を参照してください[を使用してアサーション](/visualstudio/debugger/c-cpp-assertions))。
+## <a name="kinds-of-exceptions"></a>Kinds of exceptions
 
-MicrosoftC++コンパイラ (MSVC) は、次の 3 つの種類の例外処理をサポートしています。
+The Microsoft C++ compiler (MSVC) supports three kinds of exception handling:
 
-- [C++ 例外処理](../cpp/cpp-exception-handling.md)
+- [C++ exception handling](errors-and-exception-handling-modern-cpp.md)
 
    ほとんどの C++ プログラムでは、タイプ セーフでオブジェクトのデストラクターがスタック アンワインド中に確実に呼び出されるようにする、C++ 例外処理を使用する必要があります。
 
-- [構造化例外処理](../cpp/structured-exception-handling-c-cpp.md)
+- [Structured exception handling](structured-exception-handling-c-cpp.md)
 
-   Windows には、SEH と呼ばれる独自の例外機構が備わっています。 これは C++ または MFC プログラミングには推奨されません。 非 MFC C プログラムでのみ、SEH を使用します。
+   Windows には、SEH と呼ばれる独自の例外機構が備わっています。 これは C++ または MFC プログラミングには推奨されません。 Use SEH only in non-MFC C programs.
 
-- [MFC 例外](../mfc/exception-handling-in-mfc.md)
+- [MFC exceptions](../mfc/exception-handling-in-mfc.md)
 
-   MFC はバージョン 3.0 以降、C++ 例外を使用していますが、フォームの C++ 例外に似た古い例外処理マクロを引き続きサポートします。 これらのマクロは新しいプログラミングで推奨されませんが、下位互換性のために引き続きサポートされます。 既にマクロを使用しているプログラムでは、自由に C++ の例外も使用できます。 前処理中には、例外処理の MSVC の実装で定義されているキーワードに評価されるマクロ、C++時点で、ビジュアル言語C++バージョン 2.0。 C++ 例外処理の使用を開始するときは、既存の例外処理マクロをそのまま維持できます。
+Use the [/EH](../build/reference/eh-exception-handling-model.md) compiler option to specify the type of exception handling to use in a project; C++ exception handling is the default. エラー処理機構を併用しないでください。たとえば、構造化例外処理で C++ 例外を使用しないでください。 C++ 例外処理を使用すると、コードの移植性が高くなり、すべての種類の例外を処理できるようになります。 For more information about the drawbacks of structured exception handling, see [Structured Exception Handling](structured-exception-handling-c-cpp.md). For advice about mixing MFC macros and C++ exceptions, see [Exceptions: Using MFC Macros and C++ Exceptions](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md).
 
-使用して、 [/EH](../build/reference/eh-exception-handling-model.md) ; プロジェクトで使用する例外処理の種類を指定するコンパイラ オプションC++ 例外処理では、既定値です。 エラー処理機構を併用しないでください。たとえば、構造化例外処理で C++ 例外を使用しないでください。 C++ 例外処理を使用すると、コードの移植性が高くなり、すべての種類の例外を処理できるようになります。 構造化例外処理の欠点の詳細については、次を参照してください。[構造化例外処理](../cpp/structured-exception-handling-c-cpp.md)します。 MFC マクロと C++ の例外についてのアドバイスを参照してください。[例外。MFC マクロと C++ 例外を使用して](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md)します。
+## <a name="in-this-section"></a>このセクションの内容
 
-CLR アプリケーションで例外を処理する方法の詳細については、次を参照してください。[例外処理 (C +/cli および C++/cli CX)](../extensions/exception-handling-cpp-component-extensions.md)します。
+- [Modern C++ best practices for exceptions and error handling](errors-and-exception-handling-modern-cpp.md)
 
-X64 の例外処理については、プロセッサを参照してください[x64 例外処理](../build/exception-handling-x64.md)します。
+- [How to design for exception safety](how-to-design-for-exception-safety.md)
+
+- [How to interface between exceptional and non-exceptional code](how-to-interface-between-exceptional-and-non-exceptional-code.md)
+
+- [The try, catch, and throw Statements](try-throw-and-catch-statements-cpp.md)
+
+- [catch ブロックの評価方法](how-catch-blocks-are-evaluated-cpp.md)
+
+- [Exceptions and Stack Unwinding](exceptions-and-stack-unwinding-in-cpp.md)
+
+- [Exception Specifications](exception-specifications-throw-cpp.md)
+
+- [noexcept](noexcept-cpp.md)
+
+- [未処理の C++ 例外](unhandled-cpp-exceptions.md)
+
+- [C (構造化) と C++ の混合例外](mixing-c-structured-and-cpp-exceptions.md)
+
+- [Structured Exception Handling (SEH) (C/C++)](structured-exception-handling-c-cpp.md)
 
 ## <a name="see-also"></a>関連項目
 
-[C++ 言語リファレンス](../cpp/cpp-language-reference.md)
+[C++ 言語リファレンス](cpp-language-reference.md)</br>
+[x64 の例外処理](../build/exception-handling-x64.md)</br>
+[Exception Handling (C++/CLI and C++/CX)](../extensions/exception-handling-cpp-component-extensions.md)

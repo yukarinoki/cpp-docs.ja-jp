@@ -13,7 +13,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62148184"
 ---
-# <a name="dbcolumn"></a>db_column
+# <a name="db_column"></a>db_column
 
 指定された列を行セット内の変数にバインドします。
 
@@ -60,7 +60,7 @@ ms.locfileid: "62148184"
 
 ## <a name="example"></a>例
 
-このサンプルでは、列をバインドするテーブルで、**長い**データ メンバーをステータスや長さのフィールドを指定します。
+このサンプルでは、列をバインドするテーブルで、**long**データ メンバーをステータスや長さのフィールドを指定します。
 
 ```cpp
 // db_column_1.cpp
@@ -80,7 +80,7 @@ class CProducts {
 
 ## <a name="example"></a>例
 
-このサンプルを 4 つの列をバインドする、**長い**、文字の文字列、タイムスタンプ、および`DB_NUMERIC`をこの順序で、整数。
+このサンプルを 4 つの列をバインドする、**long**、文字の文字列、タイムスタンプ、および`DB_NUMERIC`をこの順序で、整数。
 
 ```cpp
 // db_column_2.cpp

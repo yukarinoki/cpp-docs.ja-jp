@@ -16,7 +16,7 @@ winmdidl.exe と midlrt.exe によって、ネイティブ C++ コードと Wind
 
 これらのツールは、次の 2 つの主要シナリオで使用します。
 
-- Windows ランタイム テンプレート ライブラリ (WRL) を使用して作成された C ++ アプリケーションが、カスタム Windows ランタイム コンポーネントを使用できるようにする、カスタム IDL ファイルとヘッダー ファイルの作成。
+- Windows ランタイム テンプレート ライブラリ (WRL) を使用して作成された C++ アプリケーションが、カスタム Windows ランタイム コンポーネントを使用できるようにする、カスタム IDL ファイルとヘッダー ファイルの作成。
 
 - Windows ランタイム コンポーネントでのユーザー定義のイベントの種類用のプロキシおよびスタブ ファイルの生成。 詳細については、「 [Windows ランタイムコンポーネントのカスタムイベントとイベントアクセサー](/windows/uwp/winrt-components/custom-events-and-event-accessors-in-windows-runtime-components)」を参照してください。
 

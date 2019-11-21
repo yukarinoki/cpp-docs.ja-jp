@@ -347,7 +347,12 @@
       },
       {
          "source_path": "docs/build/cumulative-dependencies.md",
-         "redirect_url": "/cpp/build/reference/cumulative-dependencies",
+         "redirect_url": "/cpp/build/reference/description-blocks#cumulative-dependencies",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/build/reference/cumulative-dependencies.md",
+         "redirect_url": "/cpp/build/reference/description-blocks#cumulative-dependencies",
          "redirect_document_id": false
       },
       {
@@ -362,12 +367,17 @@
       },
       {
          "source_path": "docs/build/dependency-side-effects.md",
-         "redirect_url": "/cpp/build/reference/dependency-side-effects",
+         "redirect_url": "/cpp/build/reference/description-blocks#dependency-side-effects",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/build/reference/dependency-side-effects.md",
+         "redirect_url": "/cpp/build/reference/description-blocks#dependency-side-effects",
          "redirect_document_id": false
       },
       {
          "source_path": "docs/build/dependents.md",
-         "redirect_url": "/cpp/build/reference/dependents",
+         "redirect_url": "/cpp/build/reference/description-blocks#dependents",
          "redirect_document_id": false
       },
       {
@@ -427,7 +437,12 @@
       },
       {
          "source_path": "docs/build/inferred-dependents.md",
-         "redirect_url": "/cpp/build/reference/inferred-dependents",
+         "redirect_url": "/cpp/build/reference/description-blocks#inferred-dependents",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/build/reference/inferred-dependents.md",
+         "redirect_url": "/cpp/build/reference/description-blocks#inferred-dependents",
          "redirect_document_id": false
       },
       {
@@ -477,7 +492,12 @@
       },
       {
          "source_path": "docs/build/multiple-targets.md",
-         "redirect_url": "/cpp/build/reference/multiple-targets",
+         "redirect_url": "/cpp/build/reference/description-blocks#multiple-targets",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/build/reference/multiple-targets.md",
+         "redirect_url": "/cpp/build/reference/description-blocks#multiple-targets",
          "redirect_document_id": false
       },
       {
@@ -522,7 +542,12 @@
       },
       {
          "source_path": "docs/build/pseudotargets.md",
-         "redirect_url": "/cpp/build/reference/pseudotargets",
+         "redirect_url": "/cpp/build/reference/description-blocks#pseudotargets",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/build/reference/pseudotargets.md",
+         "redirect_url": "/cpp/build/reference/description-blocks#pseudotargets",
          "redirect_document_id": false
       },
       {
@@ -547,7 +572,12 @@
       },
       {
          "source_path": "docs/build/search-paths-for-dependents.md",
-         "redirect_url": "/cpp/build/reference/search-paths-for-dependents",
+         "redirect_url": "/cpp/build/reference/description-blocks#search-paths-for-dependents",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/build/reference/search-paths-for-dependents.md",
+         "redirect_url": "/cpp/build/reference/description-blocks#search-paths-for-dependents",
          "redirect_document_id": false
       },
       {
@@ -577,12 +607,22 @@
       },
       {
          "source_path": "docs/build/targets-in-multiple-description-blocks.md",
-         "redirect_url": "/cpp/build/reference/targets-in-multiple-description-blocks",
+         "redirect_url": "/cpp/build/reference/description-blocks#targets-in-multiple-description-blocks",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/build/reference/targets-in-multiple-description-blocks.md",
+         "redirect_url": "/cpp/build/reference/description-blocks#targets-in-multiple-description-blocks",
          "redirect_document_id": false
       },
       {
          "source_path": "docs/build/targets.md",
-         "redirect_url": "/cpp/build/reference/multiple-targets",
+         "redirect_url": "/cpp/build/reference/description-blocks#targets",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/build/reference/targets.md",
+         "redirect_url": "/cpp/build/reference/description-blocks#targets",
          "redirect_document_id": false
       },
       {
@@ -636,6 +676,11 @@
          "redirect_document_id": false
       },
       {
+         "source_path": "docs/build-insights/getting-started.md",
+         "redirect_url": "/cpp/build-insights/get-started-with-cpp-build-insights",
+         "redirect_document_id": false
+      },
+      {
          "source_path": "docs/c-language/index.md",
          "redirect_url": "/cpp/c-language/c-language-reference",
          "redirect_document_id": false
@@ -643,6 +688,31 @@
       {
          "source_path": "docs/cloud/index.md",
          "redirect_url": "/cpp/cloud/cloud-and-web-programming-in-visual-cpp",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/cpp/using-arrays-cpp.md",
+         "redirect_url": "/cpp/cpp/arrays-cpp",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/cpp/initializing-arrays.md",
+         "redirect_url": "/cpp/cpp/arrays-cpp",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/cpp/interpretation-of-subscript-operator.md",
+         "redirect_url": "/cpp/cpp/arrays-cpp",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/cpp/indirection-on-array-types.md",
+         "redirect_url": "/cpp/cpp/arrays-cpp",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/cpp/ordering-of-cpp-arrays.md",
+         "redirect_url": "/cpp/cpp/arrays-cpp",
          "redirect_document_id": false
       },
       {
@@ -661,8 +731,18 @@
          "redirect_document_id": false
       },
       {
+         "source_path": "docs/cpp/cpp-exception-handling.md",
+         "redirect_url": "/cpp/cpp/exception-handling-in-visual-cpp",
+         "redirect_document_id": false
+      },
+      {
          "source_path": "docs/cpp/types-of-linkage.md",
          "redirect_url": "/cpp/cpp/program-and-linkage-cpp",
+         "redirect_document_id": false
+      },
+      {
+         "source_path": "docs/cpp/uniform-initialization-and-delegating-constructors.md",
+         "redirect_url": "/cpp/cpp/initializing-classes-and-structs-without-constructors-cpp",
          "redirect_document_id": false
       },
       {

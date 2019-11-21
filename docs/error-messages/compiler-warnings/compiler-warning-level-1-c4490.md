@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C4490
 ms.assetid: f9b03ecf-41a1-4f4d-a74c-2c1e88234ccc
-ms.openlocfilehash: bf51994c210bd751e0d29bec169dfc4366784486
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 41fa124eed365b87b419a4019262c0c673399295
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161096"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966180"
 ---
 # <a name="compiler-warning-level-1-c4490"></a>コンパイラの警告 (レベル 1) C4490
 
-'override': オーバーライド指定子の不適切な使用'function' は、基本 ref クラスのメソッドと一致しません
+' override ': オーバーライド指定子の使い方が正しくありません。' function ' が基本 ref クラスメソッドと一致しません
 
-オーバーライド指定子が正しく使用されていません。 たとえば、インターフェイスの関数をオーバーライドしていない、実装します。
+オーバーライド指定子が正しく使用されませんでした。 たとえば、インターフェイス関数をオーバーライドするのではなく、インターフェイス関数を実装します。
 
-詳細については、次を参照してください。[オーバーライド指定子を](../../extensions/override-specifiers-cpp-component-extensions.md)します。
+詳細については、「[オーバーライド指定子](../../extensions/override-specifiers-cpp-component-extensions.md)」を参照してください。
 
 ## <a name="example"></a>例
 
 次の例では、C4490 が生成されます。
 
-```
+```cpp
 // C4490.cpp
 // compile with: /clr /c /W1
 

@@ -1,13 +1,13 @@
 ---
 title: '移植のガイド: MFC Scribble'
-ms.date: 11/19/2018
+ms.date: 10/23/2019
 ms.assetid: 8ddb517d-89ba-41a1-ab0d-4d2c6d9047e8
-ms.openlocfilehash: e808f67b1479653add27a54ddf91f6578c046734
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
-ms.translationtype: HT
+ms.openlocfilehash: c5e0e8fecd99e4f03077574da7b7fcb3e538762b
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69511534"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627210"
 ---
 # <a name="porting-guide-mfc-scribble"></a>移植のガイド: MFC Scribble
 
@@ -23,15 +23,15 @@ MFC Scribble は、多くの異なるリリースの Visual C++ に含まれて�
 
 次に、ソリューション全体と、その内容をすべてバックアップします。
 
-最後に、特定のアップグレード方式を決定する必要がありました。 長期間アップグレードされていない、さらに複雑なソリューションとプロジェクトについては、一度に 1 つのバージョンの Visual Studio のアップグレードを検討してください。 これにより、Visual Studio のどのバージョンで問題が発生したのか絞り込むことができます。 単純なプロジェクトについては、最新のバージョンの Visual Studio で開こうとすると、ウィザードでプロジェクトを変換することができます。 うまくいかない場合には、適切なバージョンの Visual Studio にアクセスできるなら、一度に 1 つのバージョンをアップグレードすることができます。
+最後に、最新バージョンの Visual Studio でソリューションを開き、ウィザードでプロジェクトを変換できるようにします。 
 
 また、ウィザードを使用してプロジェクトをアップグレードする代わりに、コマンドラインで `/Upgrade` オプションを使用して devenv を実行できることに注意してください。 「[/Upgrade (devenv.exe)](/visualstudio/ide/reference/upgrade-devenv-exe)」を参照してください。 これは、多数のプロジェクトのアップグレード プロセスを自動化するのに役に立ちます。
 
 ### <a name="step-1-converting-the-project-file"></a>手順 1. プロジェクト ファイルを変換する
 
-Visual Studio 2017 で古いプロジェクト ファイルを開くと、Visual Studio がプロジェクト ファイルの最新バージョンへの変換を提示するので、受け入れます。 次のダイアログ ボックスが表示されました。
+Visual Studio で古いプロジェクトファイルを開くと、Visual Studio によってプロジェクトファイルが最新のバージョンに変換されます。 次のダイアログ ボックスが表示されました。
 
-![プロジェクトとソリューションの変更を確認](../porting/media/scribbleprojectupgrade.PNG "プロジェクトとソリューションの変更を確認")
+![プロジェクトとソリューションの変更の確認](../porting/media/scribbleprojectupgrade.PNG "プロジェクトとソリューションの変更をレビュー")
 
 Itanium のターゲットは使用できず、変換されないことを通知するエラーが発生しました。
 
@@ -43,13 +43,13 @@ Platform 'Itanium' is missing from this project. All the configurations and thei
 
 Visual Studio で、古いプロジェクト ファイルのすべての問題を一覧表示する、移行レポートが表示されました。
 
-![レポートのアップグレード](../porting/media/scribblemigrationreport.PNG "レポートのアップグレード")
+![アップグレードレポート](../porting/media/scribblemigrationreport.PNG "レポートのアップグレード")
 
 ここでは、問題がすべて警告であり、Visual Studio がプロジェクト ファイルで適切な変更を行いました。 プロジェクトに関する大きな違いは、ビルド ツールが vcbuild から msbuild に変更されたことです。 この変更は、Visual Studio 2010 で初めて導入されました。 その他の変更点として、プロジェクト ファイル自体にいくつかの要素のシーケンスの再配列が含まれます。 このシンプルなプロジェクトについて、これ以上注意が必要な問題はありません。
 
 ### <a name="step-2-getting-it-to-build"></a>手順 2. ビルドできる状態にする
 
-ビルド前に、プロジェクト システムがどのコンパイラのバージョンを使用しているのかを知るため、プラットフォーム ツールセットを確認します。 [プロジェクトのプロパティ] ダイアログの **[構成プロパティ]** にある **[全般]** カテゴリで、 **[プラットフォーム ツールセット]** プロパティを確認します。 それには、Visual Studio のバージョンとプラットフォームのツールのバージョン番号が含まれ、このケースではツールの Visual Studio 2017 のバージョンは v141 です。 もともと Visual Studio 2010、2012、2013、または 2015 を使用してコンパイルされているプロジェクトを変換する場合、ツールセットは Visual Studio 2017 ツールセットに自動的に更新されません。
+ビルド前に、プロジェクト システムがどのコンパイラのバージョンを使用しているのかを知るため、プラットフォーム ツールセットを確認します。 [プロジェクトのプロパティ] ダイアログの **[構成プロパティ]** にある **[全般]** カテゴリで、 **[プラットフォーム ツールセット]** プロパティを確認します。 それには、Visual Studio のバージョンとプラットフォームのツールのバージョン番号が含まれ、このケースではツールの Visual Studio 2017 のバージョンは v141 です。 最初に Visual Studio 2010、2012、2013、または2015を使用してコンパイルされたプロジェクトを変換する場合、ツールセットは最新のツールセットに自動的に更新されません。
 
 Unicode に切り替えるには、プロジェクトのプロパティを開き、 **[構成プロパティ]** で **[全般]** セクションを選択して、 **[文字セット]** プロパティを探します。 これを **[マルチ バイト文字セットを使用する]** から **[Unicode 文字セットを使用する]** に変更します。 この変更の影響として、_UNICODE と UNICODE のマクロが定義されて、_MBCS が定義されなくなります。このことは、 **[コマンド ライン]** プロパティの **[C/C++]** カテゴリで確認できます。
 
@@ -81,11 +81,11 @@ _WIN32_WINNT not defined. Defaulting to _WIN32_WINNT_MAXVER (see WinSDKVer.h)
 
 Visual Studio 2017 に移行したので、C++ の新機能を活用するためにいくつかの変更を加えます。 現在のバージョンの C++ コンパイラは、以前のバージョンよりも C++ への適合性が向上しているので、コードの安全性を高めるためにコードを変更し、ほかのコンパイラやオペレーティング システムへの移植性を高めたい場合には、幾らかの改良を加えることを検討してください。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 Scribble は小規模で単純な Windows デスクトップ アプリケーションであり、変換は難しくありません。 多くの小規模で単純なアプリケーションは、新しいバージョンに簡単に変換できます。  コードの行数が多く、エンジニアリングの最新の標準になっていない可能性がある古いレガシー コードや、複数のプロジェクトとライブラリ、カスタム ビルド アプリを持つ複雑なアプリケーションや、複雑なスクリプトを作成して自動化されていビルドでは、アップグレードにもう少し時間がかかります。 [次の例](../porting/porting-guide-com-spy.md)の COM Spy と呼ばれる ATL/COM アプリケーションに進みます。
 
 ## <a name="see-also"></a>関連項目
 
-[移植とアップグレード: 例とケース スタディ](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
+[移植およびアップグレード: 例とケース スタディ](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
 [次の例: COM Spy](../porting/porting-guide-com-spy.md)

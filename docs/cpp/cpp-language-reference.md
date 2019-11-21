@@ -7,7 +7,7 @@ helpviewer_keywords:
 ms.assetid: 4be9cacb-c862-4391-894a-3a118c9c93ce
 ms.openlocfilehash: 1790f5d7ecf834c97a9242e8f42d1fb402604ac6
 ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2019
 ms.locfileid: "65222480"
@@ -48,16 +48,16 @@ C++ 言語の演算子。
 式、NULL、複合、選択、イテレーション、ジャンプ、および宣言ステートメント。
 
 [宣言と定義](declarations-and-definitions-cpp.md)<br/>
-ストレージ クラス指定子、関数定義、初期化、列挙型、**クラス**、**構造体**、および**共用体**宣言、および**typedef**宣言します。 また、**インライン**関数、 **const**キーワード、名前空間。
+ストレージ クラス指定子、関数定義、初期化、列挙型、**class**、**struct**、および**union**宣言、および**typedef**宣言します。 また、**inline**関数、 **const**キーワード、名前空間。
 
 [クラス、構造、および共用体](../cpp/classes-and-structs-cpp.md)<br/>
-クラス、構造体、および共用体の概要。 また、メンバー関数、特殊なメンバー関数では、データ メンバー、ビット フィールド、**この**ポインター、入れ子になったクラスです。
+クラス、構造体、および共用体の概要。 また、メンバー関数、特殊なメンバー関数では、データ メンバー、ビット フィールド、**this**ポインター、入れ子になったクラスです。
 
 [派生クラス](../cpp/inheritance-cpp.md)<br/>
-単一および複数の継承、**仮想**関数、複数の基底クラス**抽象**クラス、スコープ規則。 また、 **_ _super**と **_ _interface**キーワード。
+単一および複数の継承、**virtual**関数、複数の基底クラス**抽象**クラス、スコープ規則。 また、 **_ _super**と **_ _interface**キーワード。
 
 [メンバー アクセス コントロール](../cpp/member-access-control-cpp.md)<br/>
-クラス メンバーへのアクセス制御:**パブリック**、**プライベート**、および**保護**キーワード。 friend 関数および friend クラス。
+クラス メンバーへのアクセス制御:**public**、**private**、および**protected**キーワード。 friend 関数および friend クラス。
 
 [オーバー ロード](operator-overloading.md)<br/>
 オーバー ロードされた演算子、演算子のオーバー ロードの規則。
@@ -75,7 +75,7 @@ C++ 言語の演算子。
 イベントとイベント ハンドラーの宣言。
 
 [Microsoft 固有の修飾子](../cpp/microsoft-specific-modifiers.md)<br/>
-Microsoft C++ 固有の修飾子。 メモリをアドレス指定、呼び出し規則、 **naked**関数、拡張ストレージ クラス属性 (**_ _declspec**)、 **_ _w64**します。
+Microsoft C++ 固有の修飾子。 メモリをアドレス指定、呼び出し規則、 **naked**関数、拡張ストレージ クラス属性 ( **_ _declspec**)、 **_ _w64**します。
 
 [インライン アセンブラー](../assembler/inline/inline-assembler.md)<br/>
 アセンブリ言語の使用とC++で **_ _asm**ブロックします。

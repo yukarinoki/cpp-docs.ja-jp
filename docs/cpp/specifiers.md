@@ -42,9 +42,9 @@ ms.locfileid: "62330987"
 |`char *lpszAppName;`|**char**|`*lpszAppName`|
 |`typedef char * LPSTR;`|**char**|`*LPSTR`|
 |`const int func1();`|**const int**|`func1`|
-|`volatile void *pvvObj;`|**揮発性 void**|`*pvvObj`|
+|`volatile void *pvvObj;`|**volatile void**|`*pvvObj`|
 
-**署名**、**符号なし**、**長い**、および**短い**意味すべて**int**、 **typedef**名前を次のメンバーであるこれらのキーワードのいずれかが実行*宣言リスト、* のではありません*子*します。
+**signed**、**unsigned**、**long**、および**short**意味すべて**int**、 **typedef**名前を次のメンバーであるこれらのキーワードのいずれかが実行*宣言リスト、* のではありません*子*します。
 
 > [!NOTE]
 >  名前は再宣言できるため、その解釈は、現在のスコープ内の最新の宣言に従います。 再宣言の名前の解釈方法、コンパイラによって特にに影響する可能性**typedef**名。

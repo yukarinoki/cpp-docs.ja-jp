@@ -58,12 +58,12 @@ helpviewer_keywords:
 - strnset_s function
 - _wcsnset_s function
 ms.assetid: 9cf1b321-b5cb-4469-b285-4c07cfbd8813
-ms.openlocfilehash: 3542d2272282a9c3f6b2aed8cc443bef85dfe883
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: acf84e6f09436f3bd97f9556ab8db9604243b8a8
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946989"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626131"
 ---
 # <a name="_strnset_s-_strnset_s_l-_wcsnset_s-_wcsnset_s_l-_mbsnset_s-_mbsnset_s_l"></a>_strnset_s、_strnset_s_l、_wcsnset_s、_wcsnset_s_l、_mbsnset_s、_mbsnset_s_l
 
@@ -147,7 +147,7 @@ errno_t _mbsnset_s_l(
 
 出力値は、ロケールの **LC_CTYPE** カテゴリの設定に影響されます。詳細については、「[setlocale](setlocale-wsetlocale.md)」を参照してください。 **_l** サフィックスが付いていないこれらの関数のバージョンでは、このロケールに依存する動作に現在のロケールを使用します。 **_l** サフィックスが付いているバージョンは、渡されたロケール パラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-これらの関数のデバッグ バージョンは、最初にバッファーを 0xFD で埋めます。 この動作を無効にするには、[_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md) を使用します。
+これらの関数のデバッグライブラリバージョンは、最初にバッファーを0xFE で埋めます。 この動作を無効にするには、[_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md) を使用します。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -156,7 +156,7 @@ errno_t _mbsnset_s_l(
 |**_tcsnset_s**|**_strnset_s**|**_mbsnbset_s**|**_wcsnset_s**|
 |**_tcsnset_s_l**|**_strnset_s_l**|**_mbsnbset_s_l**|**_wcsnset_s_l**|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
@@ -166,7 +166,7 @@ errno_t _mbsnset_s_l(
 |**_wcsnset_s_l**|\<tchar.h>|
 |**_mbsnset_s**、 **_mbsnset_s_l**|\<mbstring.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 

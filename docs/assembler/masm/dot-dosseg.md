@@ -1,21 +1,21 @@
 ---
 title: .DOSSEG
-ms.date: 08/30/2018
+ms.date: 11/05/2019
 f1_keywords:
 - .DOSSEG
 helpviewer_keywords:
 - .DOSSEG directive
 ms.assetid: 175ad470-0a2b-4e2b-b078-65e224fec040
-ms.openlocfilehash: 28b3e351030ee83693c0fec5568aacf9b4b77c27
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8f0388c3df9804c0cdb105162a962a44fe207345
+ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62204362"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73703316"
 ---
-# <a name="dosseg"></a>.DOSSEG
+# <a name="dosseg-32-bit-masm"></a>..DOSSEG (32 ビット MASM)
 
-MS-DOS セグメントの規則に従ってセグメントを並べ替えます。コードは、最初に、タではなく、セグメントし、タにセグメントします。
+は、CODE first、DGROUP に含まれていないセグメント、および DGROUP 内のセグメントという MS-DOS セグメント規則に従ってセグメントを並べ替えます。 (32 ビット MASM のみ。)
 
 ## <a name="syntax"></a>構文
 
@@ -23,7 +23,7 @@ MS-DOS セグメントの規則に従ってセグメントを並べ替えます�
 
 ## <a name="remarks"></a>Remarks
 
-タ内のセグメントがこの順序に従います: BSS やスタックではなくセグメント、BSS のセグメントと最後にスタック セグメント。 MASM のスタンドアロン プログラムでの CodeView のサポートを確保するため、主に使用します。 同じ[DOSSEG](../../assembler/masm/dosseg.md)します。
+DGROUP 内のセグメントは、BSS または STACK にないセグメント、BSS セグメント、および最後のスタックセグメントの順に続きます。 MASM のスタンドアロンプログラムでは、主に CodeView サポートを確保するために使用されます。 [.Dosseg](../../assembler/masm/dosseg.md)と同じです。
 
 ## <a name="see-also"></a>関連項目
 

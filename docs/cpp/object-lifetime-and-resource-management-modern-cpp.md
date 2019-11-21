@@ -3,30 +3,30 @@ title: オブジェクトの有効期間とリソースの管理 (Modern C++)
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 8aa0e1a1-e04d-46b1-acca-1d548490700f
-ms.openlocfilehash: 5964078960a5b241cb5af369aeddba45a06e48ad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 91229ea1b2d7a85f852138176d8cdb46dfa8c0df
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245024"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246426"
 ---
 # <a name="object-lifetime-and-resource-management-modern-c"></a>オブジェクトの有効期間とリソースの管理 (Modern C++)
 
-管理対象の言語とは異なり、C++ はプログラムを実行すると、いいえ-長い-使用メモリ リソースを自動的に解放するガベージ コレクション (GC) がありません。 C++ では、リソースの管理に直接関連するオブジェクトの有効期間。 このドキュメントでは、C++ では、オブジェクトの有効期間および管理する方法に影響する要因について説明します。
+Unlike managed languages, C++ doesn’t have garbage collection (GC), which automatically releases no-longer-used memory resources as a program runs. In C++, resource management is directly related to object lifetime. This document describes the factors that affect object lifetime in C++ and how to manage it.
 
-C++ で、非メモリ リソースを処理しないため、主に、GC がない場合があります。 のみ C++ のような確定的なデストラクターはメモリと非メモリ リソースを均等に処理できます。 GC はメモリと CPU 使用量、および局所性の高いオーバーヘッドなどの他の問題もあります。 一般性、巧みな最適化によって軽減することはできません、根本的な問題です。
+C++ doesn’t have GC primarily because it doesn't handle non-memory resources. Only deterministic destructors like those in C++ can handle memory and non-memory resources equally. GC also has other problems, like higher overhead in memory and CPU consumption, and locality. But universality is a fundamental problem that can't be mitigated through clever optimizations.
 
 ## <a name="concepts"></a>概念
 
-オブジェクト有効期間の管理で、重要な点は、カプセル化: オブジェクト リソースを所有する、または、それらを削除する方法またはでもかどうか、所有するすべてのリソースすべてを知る必要がありませんすべてのユーザーがオブジェクトを使用しています。 オブジェクトを破棄するだけですがあります。 C++ のコア言語がオブジェクトは、適切なタイミングには、破棄されたことを確認するように設計ブロックが終了して、逆の順序で構築のようにします。 オブジェクトが破棄されると、その基底クラスとメンバーが特定の順序で破棄されます。  言語は、ヒープの割り当てまたは新しい配置のような特別な処理を行う場合を除き、自動的に、オブジェクトを破棄します。  たとえば、[スマート ポインター](../cpp/smart-pointers-modern-cpp.md)など`unique_ptr`と`shared_ptr`などの C++ 標準ライブラリ コンテナーと`vector`、カプセル化**新しい**/ **削除**と`new[]` / `delete[]`オブジェクトのデストラクターであります。 理由がスマート ポインターと C++ 標準ライブラリ コンテナーを使用するために重要です。
+An important thing in object-lifetime management is the encapsulation—whoever's using an object doesn't have to know what resources that object owns, or how to get rid of them, or even whether it owns any resources at all. It just has to destroy the object. The C++ core language is designed to ensure that objects are destroyed at the correct times, that is, as blocks are exited, in reverse order of construction. When an object is destroyed, its bases and members are destroyed in a particular order.  The language automatically destroys objects, unless you do special things like heap allocation or placement new.  For example, [smart pointers](../cpp/smart-pointers-modern-cpp.md) like `unique_ptr` and `shared_ptr`, and C++ Standard Library containers like `vector`, encapsulate **new**/**delete** and `new[]`/`delete[]` in objects, which have destructors. That's why it's so important to use smart pointers and C++ Standard Library containers.
 
-有効期間管理におけるもう 1 つの重要な概念: デストラクター。 デストラクターは、リソースのリリースをカプセル化します。  (一般的に使用されるニーモニックは RRID、リソースのリリースが破棄です)。リソースは、"system"から取得し、後でバックアップを提供する必要があることです。  メモリは、最も一般的なリソースが、ファイル、ソケット、テクスチャ、およびその他の非メモリ リソースもがあります。 リソースを"所有"している必要があることができる場合にも操作を終了したら、リリースを使用することができますを意味します。  オブジェクトが破棄されるときに、デストラクターは、所有するリソースを解放します。
+Another important concept in lifetime management: destructors. Destructors encapsulate resource release.  (The commonly used mnemonic is RRID, Resource Release Is Destruction.)  A resource is something that you get from "the system" and have to give back later.  Memory is the most common resource, but there are also files, sockets, textures, and other non-memory resources. "Owning" a resource means you can use it when you need it but you also have to release it when you're finished with it.  When an object is destroyed, its destructor releases the resources that it owned.
 
-最終的な概念は、DAG (有向非循環有向グラフ) です。  プログラム内の所有権の構造は、DAG を形成します。 オブジェクトを所有できるありません自体などないのみが不可能でも本質的に意味のないです。 ただし、2 つのオブジェクトは、3 番目のオブジェクトの所有権を共有できます。  このような DAG ではいくつかの種類のリンクです。A が B のメンバー (B は、A を所有する、) C ストア、 `vector<D>` (C は、D の各要素を所有する、) E ストア、 `shared_ptr<F>` (E、F の所有権可能性がありますと共有の他のオブジェクト) など。  循環がないと、DAG 内のすべてのリンクは、オブジェクトによって表される限り、(生のポインター、ハンドル、またはその他のメカニズム) 代わりにデストラクターを持つし、言語が原因であるために、リソースのリークにことはできません。 リソースは、必要なくなったら、ガベージ コレクターが実行されていることがなく後すぐに解放されます。 追跡の有効期間は、スタックのスコープ、ベース、メンバー、および関連する場合は、のオーバーヘッドが無料かつ安価`shared_ptr`します。
+The final concept is the DAG (Directed Acyclic Graph).  The structure of ownership in a program forms a DAG. No object can own itself—that's not only impossible but also inherently meaningless. But two objects can share ownership of a third object.  Several kinds of links are possible in a DAG like this: A is a member of B (B owns A), C stores a `vector<D>` (C owns each D element), E stores a `shared_ptr<F>` (E shares ownership of F, possibly with other objects), and so forth.  As long as there are no cycles and every link in the DAG is represented by an object that has a destructor (instead of a raw pointer, handle, or other mechanism), then resource leaks are impossible because the language prevents them. Resources are released immediately after they're no longer needed, without a garbage collector running. The lifetime tracking is overhead-free for stack scope, bases, members, and related cases, and inexpensive for `shared_ptr`.
 
-### <a name="heap-based-lifetime"></a>ヒープ ベースの有効期間
+### <a name="heap-based-lifetime"></a>Heap-based lifetime
 
-ヒープ オブジェクトの有効期間を使用して[スマート ポインター](../cpp/smart-pointers-modern-cpp.md)します。 使用`shared_ptr`と`make_shared`として既定のポインターとアロケーター。 使用`weak_ptr`サイクルを中断、キャッシュを実行に影響を与えるか、有効期間について何もせずにオブジェクトを確認しています。
+For heap object lifetime, use [smart pointers](../cpp/smart-pointers-modern-cpp.md). Use `shared_ptr` and `make_shared` as the default pointer and allocator. Use `weak_ptr` to break cycles, do caching, and observe objects without affecting or assuming anything about their lifetimes.
 
 ```cpp
 void func() {
@@ -38,13 +38,13 @@ p->draw();
 } // no delete required, out-of-scope triggers smart pointer destructor
 ```
 
-使用`unique_ptr`の一意の所有権など、 *pimpl*表現形式です。 (を参照してください[コンパイル時のカプセル化の Pimpl](../cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md))。ように、`unique_ptr`明示的なすべての主なターゲット**新しい**式。
+Use `unique_ptr` for unique ownership, for example, in the *pimpl* idiom. (See [Pimpl For Compile-Time Encapsulation](../cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md).) Make a `unique_ptr` the primary target of all explicit **new** expressions.
 
 ```cpp
 unique_ptr<widget> p(new widget());
 ```
 
-所有権がないと観察の生のポインターを使用できます。 所有している以外のポインターが使われますしますが、リークが発生することはできません。
+You can use raw pointers for non-ownership and observation. A non-owning pointer may dangle, but it can’t leak.
 
 ```cpp
 class node {
@@ -56,11 +56,11 @@ class node {
 node::node() : parent(...) { children.emplace_back(new node(...) ); }
 ```
 
-パフォーマンスの最適化が必要な場合は、使用する必要があります*適切にカプセル化された*ポインターおよび削除する明示的な呼び出しを所有しています。 例では、独自の下位レベルのデータ構造を実装する場合です。
+When performance optimization is required, you might have to use *well-encapsulated* owning pointers and explicit calls to delete. An example is when you implement your own low-level data structure.
 
-### <a name="stack-based-lifetime"></a>スタック ベースの有効期間
+### <a name="stack-based-lifetime"></a>Stack-based lifetime
 
-最新の c++*スタック ベースのスコープ*自動組み合わせるために堅牢なコードを記述する強力な方法は、*スタックの有効期間*と*データ メンバーの有効期間*高効率で。追跡の有効期間はオーバーヘッドの本質的には無料です。 ヒープ オブジェクトの有効期間は、入念な手動による管理を必要とし、生のポインターを使用する場合は特に、リソースのリーク、非効率性のソースを指定できます。 このコードでは、スタック ベースのスコープを示しますを検討してください。
+In modern C++, *stack-based scope* is a powerful way to write robust code because it combines automatic *stack lifetime* and *data member lifetime* with high efficiency—lifetime tracking is essentially free of overhead. Heap object lifetime requires diligent manual management and can be the source of resource leaks and inefficiencies, especially when you are working with raw pointers. Consider this code, which demonstrates stack-based scope:
 
 ```cpp
 class widget {
@@ -81,10 +81,10 @@ void functionUsingWidget () {
   // as if "finally { w.dispose(); w.g.dispose(); }"
 ```
 
-静的な有効期間を多用しない (グローバル静的、関数のローカルの静的な) 問題が発生する可能性があるためです。 グローバル オブジェクトのコンス トラクターが例外をスローすると起こりますか。 通常、デバッグが困難に可能性のある方法でのアプリ エラー。 構築の順序は、静的な有効期間オブジェクトでは問題と、同時実行セーフではありません。 オブジェクトの構築は、問題だけでなく、ポリモーフィズムが必要な場合に特に、破棄の順序が複雑になることができます。 オブジェクトまたは変数は、ポリモーフィックななく複雑なコンストラクション/デストラクションの順序付けがない、場合でも、スレッド セーフな同時実行の問題は引き続き存在します。 マルチ スレッド アプリは、スレッド ローカル ストレージ リソースのロックやその他の特別な予防策をしなくても静的オブジェクトのデータを安全に変更できません。
+Use static lifetime sparingly (global static, function local static) because problems can arise. What happens when the constructor of a global object throws an exception? Typically, the app faults in a way that can be difficult to debug. Construction order is problematic for static lifetime objects, and is not concurrency-safe. Not only is object construction a problem, destruction order can be complex, especially where polymorphism is involved. Even if your object or variable isn’t polymorphic and doesn't have complex construction/destruction ordering, there’s still the issue of thread-safe concurrency. A multithreaded app can’t safely modify the data in static objects without having thread-local storage, resource locks, and other special precautions.
 
 ## <a name="see-also"></a>関連項目
 
-[C++ へようこそ (Modern C++)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[Welcome back to C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [C++ 言語リファレンス](../cpp/cpp-language-reference.md)<br/>
 [.NET 標準ライブラリ](../standard-library/cpp-standard-library-reference.md)

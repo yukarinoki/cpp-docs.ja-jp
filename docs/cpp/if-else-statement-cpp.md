@@ -163,7 +163,7 @@ int main()
 
 `if...else`ステートメントの**else**句は、対応する**else**ステートメントを持たない、同じスコープ内の最も近い**if**ステートメントに関連付けられています。
 
-## <a name="a-nameifconstexpr-if-constexpr-statements"></a><a name="if_constexpr">constexpr ステートメントの場合
+## <a name="a-nameif_constexpr-if-constexpr-statements"></a><a name="if_constexpr">constexpr ステートメントの場合
 
 **Visual Studio 2017 バージョン15.3 以降**( [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)で使用可能):関数テンプレートでは、 **if constexpr**ステートメントを使用して、複数の関数オーバーロードに頼ることなく、コンパイル時の分岐決定を行うことができます。 たとえば、パラメーターのアンパックを処理する1つの関数を記述できます (ゼロパラメーターのオーバーロードは必要ありません)。
 

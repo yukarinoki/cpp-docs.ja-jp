@@ -17,7 +17,7 @@ ms.locfileid: "62155239"
 
 **Microsoft 固有の仕様**
 
-**アロケーター**宣言指定子は、割り当てを使用して Event Tracing for Windows (ETW) 表示するカスタムのメモリ割り当て関数に適用できます。
+**allocator**宣言指定子は、割り当てを使用して Event Tracing for Windows (ETW) 表示するカスタムのメモリ割り当て関数に適用できます。
 
 ## <a name="syntax"></a>構文
 

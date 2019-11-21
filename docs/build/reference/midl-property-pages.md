@@ -110,8 +110,8 @@ MIDL ですべての警告をエラーとして扱う ([/wx](/windows/win32/midl
 
 **いずれ**
 
-- **署名**済み
-- **符号**なし-符号なし
+- **signed** - 符号あり
+- **unsigned** - 符号なし
 - **Ascii** -ascii
 
 ### <a name="target-environment"></a>対象の環境

@@ -14,7 +14,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62393936"
 ---
-# <a name="bstrtcopy"></a>_bstr_t::copy
+# <a name="_bstr_tcopy"></a>_bstr_t::copy
 
 **Microsoft 固有の仕様**
 
@@ -29,7 +29,7 @@ BSTR copy( bool fCopy = true ) const;
 #### <a name="parameters"></a>パラメーター
 
 *fCopy*<br/>
-TRUE の場合、**コピー**格納されているのコピーを返します`BSTR`それ以外の場合、**コピー**実際の BSTR を返します。
+TRUE の場合、**copy**格納されているのコピーを返します`BSTR`それ以外の場合、**copy**実際の BSTR を返します。
 
 ## <a name="remarks"></a>Remarks
 

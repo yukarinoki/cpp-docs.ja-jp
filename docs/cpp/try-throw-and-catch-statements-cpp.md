@@ -19,24 +19,24 @@ helpviewer_keywords:
 - throwing exceptions [C++]
 - throw keyword [C++], throw() vs. throw(...)
 ms.assetid: 15e6a87b-b8a5-4032-a7ef-946c644ba12a
-ms.openlocfilehash: a55c1f2d5c2e73028b337d17b74fe1280f670707
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 31ed5f7a17b9b45dbbecf5ccb29d2b51a7635eaa
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62266785"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74245143"
 ---
 # <a name="try-throw-and-catch-statements-c"></a>try、throw、および catch ステートメント (C++)
 
-C++ の例外処理を実装するには、使用する**お試しください**、**スロー**、および**キャッチ**式。
+To implement exception handling in C++, you use **try**, **throw**, and **catch** expressions.
 
-まず、使用して、**お試しください**例外をスローする 1 つまたは複数のステートメントを囲むブロックします。
+First, use a **try** block to enclose one or more statements that might throw an exception.
 
-A**スロー**ことを通知する例外条件 — 多くの場合、エラー-で発生しました、**お試しください**ブロック。 オペランドとして任意の型のオブジェクトを使用することができます、**スロー**式。 通常、このオブジェクトを使用してエラーに関する情報を通知します。 ほとんどの場合で使用すること勧め、 [std::exception](../standard-library/exception-class.md)クラスまたは標準ライブラリで定義されている派生クラスのいずれか。 これらのいずれのクラスも適さない場合は、`std::exception` から派生させた独自の例外クラスを使用することをお勧めします。
+A **throw** expression signals that an exceptional condition—often, an error—has occurred in a **try** block. You can use an object of any type as the operand of a **throw** expression. 通常、このオブジェクトを使用してエラーに関する情報を通知します。 In most cases, we recommend that you use the [std::exception](../standard-library/exception-class.md) class or one of the derived classes that are defined in the standard library. これらのいずれのクラスも適さない場合は、`std::exception` から派生させた独自の例外クラスを使用することをお勧めします。
 
-スローされる可能性がある例外を処理するには、1 つまたは複数を実装**キャッチ**ブロックの直後、**お試しください**ブロックします。 各**キャッチ**ブロックが処理できる例外の種類を指定します。
+To handle exceptions that may be thrown, implement one or more **catch** blocks immediately following a **try** block. Each **catch** block specifies the type of exception it can handle.
 
-この例では、**お試しください**ブロックとそのハンドラー。 `GetNetworkResource()` では、ネットワーク接続を介してデータを取得するとします。また、2 つの型の例外として `std::exception` から派生させたユーザー定義のクラスを使用するとします。 通知が、例外をキャッチする**const**で参照、**キャッチ**ステートメント。 例外は値でスローし、const 参照でキャッチすることをお勧めします。
+This example shows a **try** block and its handlers. `GetNetworkResource()` では、ネットワーク接続を介してデータを取得するとします。また、2 つの型の例外として `std::exception` から派生させたユーザー定義のクラスを使用するとします。 Notice that the exceptions are caught by **const** reference in the **catch** statement. 例外は値でスローし、const 参照でキャッチすることをお勧めします。
 
 ## <a name="example"></a>例
 
@@ -74,9 +74,9 @@ MyData GetNetworkResource()
 
 ## <a name="remarks"></a>Remarks
 
-後のコード、**お試しください**句は、コードの保護されたセクションです。 **スロー**式*をスローします*-は、発生させる-例外。 コード ブロックの後、**キャッチ**句は、例外ハンドラー。 これは、ハンドラーを*キャッチ*場合にスローされる例外の種類、**スロー**と**キャッチ**式は、互換性のあります。 型の一致を制御する規則の一覧については**キャッチ**ブロックを参照してください[方法 Catch ブロックの評価](../cpp/how-catch-blocks-are-evaluated-cpp.md)します。 場合、**キャッチ**ステートメントを型の代わりに省略記号 (...) を指定します、**キャッチ**ブロックは、すべての種類の例外を処理します。 コンパイルするとき、 [/EHa](../build/reference/eh-exception-handling-model.md)オプション、C 構造化例外とメモリの保護、0 による除算、および浮動小数点の違反など、システムによって生成された、またはアプリケーションによって生成される非同期例外が含まれます. **キャッチ**ブロックの一致する種類を検索するプログラムの順序で処理は、省略記号ボタン ハンドラーが関連付けられている最後のハンドラーにする必要があります、**お試しください**ブロックします。 `catch(...)` は慎重に使用してください。プログラムの実行が継続されるには、キャッチした特定の例外を処理する方法を catch ブロックに記述する必要があります。 `catch(...)` ブロックは通常、プログラムの実行を停止する前に、エラーを記録して特別なクリーンアップを実行するために使用します。
+The code after the **try** clause is the guarded section of code. The **throw** expression *throws*—that is, raises—an exception. The code block after the **catch** clause is the exception handler. This is the handler that *catches* the exception that's thrown if the types in the **throw** and **catch** expressions are compatible. For a list of rules that govern type-matching in **catch** blocks, see [How Catch Blocks are Evaluated](../cpp/how-catch-blocks-are-evaluated-cpp.md). If the **catch** statement specifies an ellipsis (...) instead of a type, the **catch** block handles every type of exception. When you compile with the [/EHa](../build/reference/eh-exception-handling-model.md) option, these can include C structured exceptions and system-generated or application-generated asynchronous exceptions such as memory protection, divide-by-zero, and floating-point violations. Because **catch** blocks are processed in program order to find a matching type, an ellipsis handler must be the last handler for the associated **try** block. `catch(...)` は慎重に使用してください。プログラムの実行が継続されるには、キャッチした特定の例外を処理する方法を catch ブロックに記述する必要があります。 `catch(...)` ブロックは通常、プログラムの実行を停止する前に、エラーを記録して特別なクリーンアップを実行するために使用します。
 
-A**スロー**オペランドを持たない式は、現在処理中の例外を再スローします。 この方法は例外を再スローするときにお勧めします。元の例外のポリモーフィックな型情報が保持されるためです。 このような式でのみ使用する必要があります、**キャッチ**ハンドラーまたはから呼び出される関数を**キャッチ**ハンドラー。 再スローされた例外オブジェクトはコピーではなく元の例外オブジェクトです。
+A **throw** expression that has no operand re-throws the exception currently being handled. この方法は例外を再スローするときにお勧めします。元の例外のポリモーフィックな型情報が保持されるためです。 Such an expression should only be used in a **catch** handler or in a function that's called from a **catch** handler. 再スローされた例外オブジェクトはコピーではなく元の例外オブジェクトです。
 
 ```cpp
 try {
@@ -93,7 +93,7 @@ catch(...) {
 
 ## <a name="see-also"></a>関連項目
 
-[C++ 例外処理](../cpp/cpp-exception-handling.md)<br/>
+[Modern C++ best practices for exceptions and error handling](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
 [キーワード](../cpp/keywords-cpp.md)<br/>
 [未処理の C++ 例外](../cpp/unhandled-cpp-exceptions.md)<br/>
 [__uncaught_exception](../c-runtime-library/reference/uncaught-exception.md)

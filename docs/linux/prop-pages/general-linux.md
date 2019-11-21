@@ -2,12 +2,12 @@
 title: 全般プロパティ (Linux C++ プロジェクト)| Microsoft Docs
 ms.date: 06/07/2019
 ms.assetid: 56c800a9-3df9-4196-87b2-81adb00e4767
-ms.openlocfilehash: ce3683f11d80c253195b751b5eed364fbc04b68a
-ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
+ms.openlocfilehash: c17a5e0214e6365d604a80bd4b3891858f0f9186
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66821285"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626814"
 ---
 # <a name="general-properties-linux-c"></a>全般プロパティ (Linux C++)
 
@@ -35,4 +35,3 @@ Linux サポートは Visual Studio 2017 以降で使用できます。
 STL の使用 | この構成で使用する C++ 標準ライブラリを指定します。 | **共有されている GNU 標準 C++ ライブラリ**<br>**スタティック GNU 標準 C++ ライブラリ (-static)**<br>
 
 ::: moniker-end
-

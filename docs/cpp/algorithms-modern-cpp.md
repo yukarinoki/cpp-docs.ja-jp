@@ -1,26 +1,26 @@
 ﻿---
-title: アルゴリズム (現代的な C++)
+title: アルゴリズム (Modern C++)
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 6f758d3c-a7c7-4a50-92bb-97b2f6d4ab27
-ms.openlocfilehash: b972e575c982ae2523ec560a6237eac76ceaf834
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 9ed3b364f3fab880273c19c99bbbc7425545aec2
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345176"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246654"
 ---
-# <a name="algorithms-modern-c"></a>アルゴリズム (現代的な C++)
+# <a name="algorithms-modern-c"></a>アルゴリズム (Modern C++)
 
-現代的な C++ プログラミングでは[C++ 標準ライブラリ](../standard-library/cpp-standard-library-reference.md) のアルゴリズムを使用することをお勧めします。 いくつかの重要な例を示します。
+For modern C++ programming, we recommend that you use the algorithms in the [C++ Standard Library](../standard-library/cpp-standard-library-reference.md). 次に重要な例を示します。
 
-- **for_each** 既定の走査アルゴリズムです。 (また **transform** が入力を出力で上書きしない場合に使えます)。
+- **for_each**, which is the default traversal algorithm. (Also **transform** for not-in-place semantics.)
 
-- **find_if** 既定の検索アルゴリズムです。
+- **find_if**, which is the default search algorithm.
 
-- **sort**、 **lower_bound**、およびその他の既定の並べ替えと検索アルゴリズム。
+- **sort**, **lower_bound**, and the other default sorting and searching algorithms.
 
-比較子を記述するには、狭義の **<** と *名前付きラムダ* を使用することができます。
+To write a comparator, use strict **<** and use *named lambdas* when you can.
 
 ```cpp
 auto comp = [](const widget& w1, const widget& w2)
@@ -33,9 +33,9 @@ auto i = lower_bound( v.begin(), v.end(), comp );
 
 ## <a name="loops"></a>ループ
 
-可能であれば、手書きのループの代わりに範囲ベースの **for** ループやアルゴリズムの呼び出しを使いましょう。 **copy**、**transform**、 **count_if**、 **remove_if**、などは、処理の意図が明確なために手書きのループよりはるかに優れていて、またバグのないコードを記述しやすくしてくれます。 付け加えて、多くのC++標準ライブラリにはより効率的な実装が最適化されたアルゴリズムがあります。
+When possible, use range-based **for** loops or algorithm calls, or both, instead of hand-written loops. **copy**, **transform**, **count_if**, **remove_if**, and others like them are much better than handwritten loops because their intent is obvious and they make it easier to write bug-free code. Also, many C++ Standard Library algorithms have implementation optimizations that make them more efficient.
 
-次のような従来型のC++の代わりに、
+次のような従来の C++ を使用する代わりに、
 
 ```cpp
 for ( auto i = strings.begin(); i != strings.end(); ++i ) {
@@ -49,7 +49,7 @@ for ( ; i != v.end(); ++i ) {
 }
 ```
 
-次のような現代的なC++を使用してください。
+次のような最新の C++ を使用してください。
 
 ```cpp
 for_each( begin(strings), end(strings), [](string& s) {
@@ -61,20 +61,20 @@ auto i = find_if( begin(v), end(v),  [=](int i) { return i > x && i < y; } );
 
 ### <a name="range-based-for-loops"></a>範囲ベースの for ループ
 
-範囲ベースの **for** ループは、C++11の言語機能で、C++標準ライブラリのアルゴリズムではありません。 しかし、ループに関するこの説明の中で言及するに値します。 範囲ベースの **for** ループは **for** キーワードの拡張で、値の範囲を反復処理するループを記述する便利で効率的な方法を提供します。 C++標準ライブラリのコンテナ、文字列、および配列は範囲ベースの **for** ループに予め対応するように作られています。 この新しい反復処理の構文をユーザー定義型に対して適用可能にするには、次の対応を追加します。
+The range-based **for** loop is a C++11 language feature, not a C++ Standard Library algorithm. しかし、ループに関するこの説明と併せて理解すると便利です。 Range-based **for** loops are an extension of the **for** keyword and provide a convenient and efficient way to write loops that iterate over a range of values. C++ Standard Library containers, strings, and arrays are ready-made for range-based **for** loops. この新しいイテレーション構文をユーザー定義型に対して有効にするには、次のサポートを追加します。
 
 - 反復子を構造体の先頭に返す `begin` メソッドと、反復子を構造体の末尾に返す `end` メソッド。
 
-- これらのメソッドの反復子のサポート: <strong>\*</strong>**演算子**、 **!=演算子**、および **前置++演算子**。
+- Support in the iterator for these methods: **operator**<strong>\*</strong>, **operator!=** , and **operator++** (prefix version).
 
-これらのメソッドは、メンバー関数かスタンドアロン関数のいずれかになれます。
+これらのメソッドは、メンバー関数かスタンドアロン関数のいずれかです。
 
 ## <a name="random-numbers"></a>乱数
 
-従来の CRTの `rand()` 関数に多くの欠陥があることは広く知られた事実であり、C++コミュニティで長年にわたって議論されてきました。 現代的なC++では、これらの欠陥に対処する必要はありませんし、独自に一様分布する乱数発生器を作成する必要もありません、なぜなら [\<random>](../standard-library/random.md) で示されているように、迅速かつ簡単にそれらを作成するためのツールがC++標準ライブラリから使用可能なためです。
+従来の CRT の `rand()` 関数に多くの欠陥があることは広く知られた事実であり、C++ コミュニティで長年にわたって議論されてきました。 In modern C++, you don't have to deal with those shortcomings—nor do you have to invent your own uniformly distributed random number generator—because the tools for quickly and easily creating them are available in the C++ Standard Library, as shown in [\<random>](../standard-library/random.md).
 
 ## <a name="see-also"></a>関連項目
 
-[C++ へようこそ (現代的なC++)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
-[C++言語リファレンス](../cpp/cpp-language-reference.md)<br/>
-[C++標準ライブラリ](../standard-library/cpp-standard-library-reference.md)<br/>
+[Welcome back to C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[C++ 言語リファレンス](../cpp/cpp-language-reference.md)<br/>
+[.NET 標準ライブラリ](../standard-library/cpp-standard-library-reference.md)<br/>

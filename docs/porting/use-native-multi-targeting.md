@@ -1,16 +1,16 @@
 ---
 title: Visual Studio でネイティブ マルチターゲットを利用し、古いプロジェクトを作成する
-ms.date: 11/04/2016
+ms.date: 10/25/2019
 helpviewer_keywords:
 - C++ native multi-targeting
 - upgrading Visual C++ applications, retargeting
 ms.assetid: b115aabe-a9dc-4525-90d3-367d97ea20c9
-ms.openlocfilehash: 35f6ac980a451b375d5005c20853fdd29c78d96d
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: aff21121c181131b04ad22d75f03b7cbb222228a
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448939"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627153"
 ---
 # <a name="use-native-multi-targeting-in-visual-studio-to-build-old-projects"></a>Visual Studio でネイティブ マルチターゲットを利用し、古いプロジェクトを作成する
 
@@ -44,15 +44,18 @@ Visual Studio では、プロジェクトのアップグレードが何度も要
 
 ## <a name="instructions-for-visual-studio-2008"></a>Visual Studio 2008 での手順
 
-Visual Studio 2008 には、**VCBuild** という名前の C++ 専用のビルドシステムがありました。 Visual Studio 2010 以降、**MSBuild** を使用するように Visual Studio C++ プロジェクトが変更されました。 つまり、最新バージョンの Visual Studio で Visual Studio 2008 プロジェクトをビルドするには、更新手順を実行する必要があります。 更新されたプロジェクトでは、Visual Studio 2008 IDE を使用して作成されたバイナリと完全に互換性があるバイナリを引き続き生成します。
+Visual Studio 2008 には、**VCBuild** という名前の C++ 専用のビルドシステムがありました。 Visual Studio 2010 以降、**MSBuild** を使用するように Visual Studio C++ プロジェクトが変更されました。 つまり、完全なアップグレードまたは複数のターゲットをアップグレードする場合、最新バージョンの Visual studio で Visual Studio 2008 プロジェクトをビルドするには、更新手順を実行する必要があります。 更新されたプロジェクトでは、Visual Studio 2008 IDE を使用して作成されたバイナリと完全に互換性があるバイナリを引き続き生成します。
 
 最初に、Visual Studio の現在のバージョンだけでなく、Visual Studio 2008 と同じコンピューターに Visual Studio 2010 をインストールする必要があります。 Visual Studio 2008 プロジェクトを対象とするために必要な **MSBuild** スクリプトをインストールするのは、Visual Studio 2010 のみです。
 
 次に、Visual Studio 2008 のソリューションとプロジェクトを Visual Studio の現在のバージョンに更新する必要があります。 アップグレードの前に、プロジェクトおよびソリューション ファイルのバックアップを作成することをお勧めします。 アップグレード プロセスを開始するには、現在のバージョンの Visual Studio でソリューションを開きます。 アップグレードのプロンプトが表示された場合、表示された情報を確認し、 **[OK]** を選択してアップグレードを開始します。 ソリューションに複数のプロジェクトがある場合、更新する必要があります。既存の .vcproj ファイルに加えて、ウィザードによって新しい .vcxproj プロジェクト ファイルが作成されます。 元の .sln ファイルのコピーを保持する限り、アップグレードによる既存の Visual Studio 2008 プロジェクトへの他の影響はありません。
 
+> [!NOTE]
+> 次の手順は、マルチターゲットシナリオにのみ適用されます。 プロジェクトを後のツールセットに永続的にアップグレードする場合は、次の手順として、プロジェクトを保存し、Visual Studio 2019 で開き、そこに表示されるビルドの問題を解決します。
+
 アップグレードが完了したときに、ログ レポートにいずれかのプロジェクトのエラーまたは警告がある場合は、それらを慎重に確認します。 **VCBuild** から **MSBuild** への変換には、問題が発生する可能性があります。 レポートに表示されるすべてのアクション項目を理解して実装したことを確認してください。 アップグレード ログのレポートおよび **VCBuild** を **MSBuild** に変換するときに発生する可能性のある問題の詳細については、「[C++ Native Multi-Targeting](https://blogs.msdn.microsoft.com/vcblog/2009/12/08/c-native-multi-targeting/)」 (C++ Native Multi-Targeting) ブログの投稿を参照してください。
 
-プロジェクトのアップグレードが完了し、ログ ファイルに記載されたすべての問題を解決したら、ソリューションの実際のターゲットが最新のツールセットになります。 最後の手順として、Visual Studio 2008 のツールセットを使用するようにソリューション内の各プロジェクトのプロパティを変更します。 現在のバージョンの Visual Studio ソリューションでソリューションを読み込んだ状態で、ソリューションのプロジェクトごとに、プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 **[ソリューション エクスプローラー]** でプロジェクトを右クリックし、 **[プロパティ]** を選択します。 **[プロパティ ページ]** ダイアログ ボックスで、 **[構成]** ドロップダウン リストの値を **[すべての構成]** に変更します。 **[構成プロパティ]** で **[全般]** を選択し、 **[プラットフォーム ツールセット]** を **Visual Studio 2008 (v90)** に変更します。
+プロジェクトのアップグレードが完了し、ログ ファイルに記載されたすべての問題を解決したら、ソリューションの実際のターゲットが最新のツールセットになります。 最後の手順として、Visual Studio 2008 のツールセットを使用するようにソリューション内の各プロジェクトのプロパティを変更します。 現在のバージョンの Visual Studio ソリューションでソリューションを読み込んだ状態で、プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 **[ソリューション エクスプローラー]** でプロジェクトを右クリックし、 **[プロパティ]** を選択します。 **[プロパティ ページ]** ダイアログ ボックスで、 **[構成]** ドロップダウン リストの値を **[すべての構成]** に変更します。 **[構成プロパティ]** で **[全般]** を選択し、 **[プラットフォーム ツールセット]** を **Visual Studio 2008 (v90)** に変更します。
 
 この変更後、現在のバージョンの Visual Studio でソリューションをビルドするときに、Visual Studio 2008 のコンパイラとライブラリが使用されます。
 
@@ -66,5 +69,5 @@ Visual Studio 2008 には、**VCBuild** という名前の C++ 専用のビル�
 
 ## <a name="see-also"></a>関連項目
 
-[旧バージョンの Visual C++ からのプロジェクトのアップグレード](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
+[以前のバージョンのビジュアルからのプロジェクトのアップグレードC++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [Visual Studio の C++ 準拠の強化](../overview/cpp-conformance-improvements.md)

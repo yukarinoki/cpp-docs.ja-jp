@@ -9,16 +9,16 @@ helpviewer_keywords:
 ms.assetid: a6a22dd2-0101-4885-b33b-22f6057965df
 ms.openlocfilehash: e51879ae62b2881e0adadbe59859605f6cc58947
 ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2019
 ms.locfileid: "65221914"
 ---
-# <a name="thiscall"></a>__thiscall
+# <a name="__thiscall"></a>__thiscall
 
 **Microsoft 固有の仕様**
 
-**_ _Thiscall**呼び出し規約はメンバー関数で使用し、呼び出し規約を使用して既定値は、C++メンバー関数を可変個の引数を使用しないでください。 **_ _Thiscall**、呼び出し先のことはできませんが、スタックを消去する`vararg`関数。 右から左への引数をスタックにプッシュは、**この**ポインター レジスタ ECX、および、x86 上で、スタックに渡されるアーキテクチャ。
+**_ _Thiscall**呼び出し規約はメンバー関数で使用し、呼び出し規約を使用して既定値は、C++メンバー関数を可変個の引数を使用しないでください。 **_ _Thiscall**、呼び出し先のことはできませんが、スタックを消去する`vararg`関数。 右から左への引数をスタックにプッシュは、**this**ポインター レジスタ ECX、および、x86 上で、スタックに渡されるアーキテクチャ。
 
 使用する理由の 1 つ **_ _thiscall**クラス メンバー関数が使用されて`__clrcall`既定。 使用する場合、 **_ _thiscall**個々 のメンバーの関数をネイティブ コードから呼び出すことにします。
 
@@ -26,7 +26,7 @@ ms.locfileid: "65221914"
 
 Visual Studio 2005 では、以前のリリースで、 **_ _thiscall**呼び出し規約がいない明示的に指定するプログラムでは、ため **_ _thiscall**がキーワードではありません。
 
-`vararg` メンバー関数の使用、 **_ _cdecl**呼び出し規約。 すべての関数の引数はで、スタックにプッシュされます、**この**ポインターはスタックに最後に配置
+`vararg` メンバー関数の使用、 **_ _cdecl**呼び出し規約。 すべての関数の引数はで、スタックにプッシュされます、**this**ポインターはスタックに最後に配置
 
 この呼び出し規則は C++ だけに適用されるため、C の名前の装飾スキームはありません。
 

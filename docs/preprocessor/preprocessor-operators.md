@@ -27,4 +27,4 @@ ms.locfileid: "70222250"
 
 [プリプロセッサディレクティブ](../preprocessor/preprocessor-directives.md)\
 [定義済みマクロ](../preprocessor/predefined-macros.md)\
-[c/c + + プリプロセッサリファレンス](../preprocessor/c-cpp-preprocessor-reference.md)
+[c/c++ プリプロセッサリファレンス](../preprocessor/c-cpp-preprocessor-reference.md)

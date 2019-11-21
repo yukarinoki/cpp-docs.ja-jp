@@ -1,14 +1,14 @@
 ---
 title: Visual Studio で Linux CMake プロジェクトを作成および構成する
 description: Visual Studio で Linux CMake プロジェクトを作成、構成、編集、コンパイルする方法
-ms.date: 06/12/2019
+ms.date: 10/04/2019
 ms.assetid: f8707b32-f90d-494d-ae0b-1d44425fdc25
-ms.openlocfilehash: 5c3a2b212240217fe6d6053188dd466376010391
-ms.sourcegitcommit: a42d3b0408f02138dcd6fabcb98d50b0cb159191
+ms.openlocfilehash: 128b8dac297398ffbfadfaade5b36c843d55e163
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70383409"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625961"
 ---
 # <a name="create-and-configure-a-linux-cmake-project"></a>Linux CMake プロジェクトの作成と構成
 
@@ -25,13 +25,13 @@ Visual Studio 2019 で新しい Linux CMake プロジェクトを作成するに
 1. Visual Studio で **[ファイル]、[新しいプロジェクト]** の順に選択するか、**Ctrl + Shift + N** キーを押します。
 1. **[言語]** を **[C++]** に設定し、「CMake」を検索します。 その後、 **[次へ]** をクリックします。 **[名前]** と **[場所]** を入力し、 **[作成]** を選択します。
 
-Visual Studio では、実行可能ファイルの名前と、要求される最小の CMake バージョンのみを使用して、最小限の CMakeLists.txt ファイルが作成されます。 このファイルは手動で自由に編集できます。Visual Studio によって変更が上書きされることはありません。 **ソリューション エクスプローラー**で CMakeLists.txt ファイルを右クリックし、 **[CMake settings for project]\(プロジェクト用の CMake の設定\)** を選択することで、CMake コマンドライン引数と環境変数を指定できます。 デバッグ用のオプションを指定するには、プロジェクト ノードを右クリックし、 **[デバッグ設定と起動設定]** を選択します。
+Visual Studio では、実行可能ファイルの名前と、要求される最小の CMake バージョンのみを使用して、最小限の CMakeLists.txt ファイルが作成されます。 このファイルは手動で自由に編集できます。Visual Studio によって変更が上書きされることはありません。 **ソリューション エクスプローラー**でルートの CMakeLists.txt ファイルを右クリックし、 **[CMake settings for project]\(プロジェクト用の CMake の設定\)** を選択することで、CMake コマンドライン引数と環境変数を指定できます。 デバッグ用のオプションを指定するには、プロジェクト ノードを右クリックし、 **[デバッグ設定と起動設定]** を選択します。
 
 ::: moniker-end
 
-既存の CMake プロジェクトを含むフォルダーを開くと、Visual Studio では、CMake によって生成される IntelliSense とビルドを構成するためのメタデータが自動的に使用されます。 ローカルの構成およびデバッグ設定は、必要に応じて Visual Studio を使用している他のユーザーと共有できる JSON ファイルに格納されます。 
+既存の CMake プロジェクトを含むフォルダーを開くと、Visual Studio では CMake キャッシュの変数が使用され、IntelliSense とビルドが自動的に構成されます。 ローカルの構成およびデバッグ設定は、必要に応じて Visual Studio を使用している他のユーザーと共有できる JSON ファイルに格納されます。
 
-Visual Studio では CMakeLists.txt ファイルが変更されないため、同じプロジェクトで作業している他のユーザーが、既に使用している任意のツールを使用し続けることができます。 Visual Studio では、CMakeLists.txt (場合によっては CMakeSettings.json) が編集された場合は、キャッシュが再生成されます。 ただし、**既存のキャッシュ**構成が使用されている場合、Visual Studio によるキャッシュの変更は行われません。
+Visual Studio では CMakeLists.txt ファイルが変更されないため、同じプロジェクトで作業している他のユーザーが、既に使用している任意のツールを使用し続けることができます。 Visual Studio では、CMakeLists.txt (場合によっては CMakeSettings.json) の編集が保存されると、キャッシュが再生成されます。 ただし、**既存のキャッシュ**構成が使用されている場合、Visual Studio によるキャッシュの変更は行われません。
 
 Visual Studio での CMake のサポートに関する一般的な情報については、「[Visual Studio の CMake プロジェクト](../build/cmake-projects-in-visual-studio.md)」を参照してください。 まずこちらを読んでから、ここでの作業を進めてください。
 
@@ -104,7 +104,7 @@ Windows Subsystem for Linux をターゲットにするには、メイン ツー
 
 対象を選択したら、CMake は Linux システム上で自動実行され、プロジェクト用の CMake キャッシュを生成します。 
 
-![Linux で CMake キャッシュを生成する](media/cmake-linux-1.png "Linux で CMake キャッシュを生成する")
+![Linux での CMake キャッシュの生成](media/cmake-linux-1.png "Linux で CMake キャッシュを生成する")
 
 Visual Studio は、これらを Linux マシンからローカルの Windows コンピューター上のディレクトリに自動的にコピーして、リモートの Linux システムのヘッダーに IntelliSense のサポートを提供します。 詳細については、[リモート ヘッダーの IntelliSense](configure-a-linux-project.md#remote_intellisense) のセクションを参照してください。
 
@@ -133,7 +133,7 @@ CMake Linux プロジェクト内の CMakeSettings.json ファイルで、[CMake
 
 Visual Studio 2019 の CMake の既定の設定を変更するには、メイン ツールバーから **[構成]** ドロップダウンを開き、 **[構成の管理]** を選択します。 
 
-![CMake 構成の管理](../build/media/vs2019-cmake-manage-configurations.png "CMake 構成ドロップダウン")
+![CMake の [構成の管理]](../build/media/vs2019-cmake-manage-configurations.png "CMake 構成ドロップダウン")
 
 これにより **CMake 設定エディター**が表示されます。これを使用してルート プロジェクト フォルダー内の `CMakeSettings.json` ファイルを編集できます。 エディターの **[JSON の編集]** ボタンをクリックしてファイルを直接開くこともできます。 詳細については、[CMake 設定のカスタマイズ](../build/customize-cmake-settings.md)に関するページを参照してください。
 

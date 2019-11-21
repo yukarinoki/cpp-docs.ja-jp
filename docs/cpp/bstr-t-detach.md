@@ -13,7 +13,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62386175"
 ---
-# <a name="bstrtdetach"></a>_bstr_t::Detach
+# <a name="_bstr_tdetach"></a>_bstr_t::Detach
 
 **Microsoft 固有の仕様**
 
@@ -31,7 +31,7 @@ BSTR Detach( ) throw;
 
 ## <a name="example"></a>例
 
-参照してください[_bstr_t::assign](../cpp/bstr-t-assign.md)の例を使用して、**デタッチ**します。
+参照してください[_bstr_t::assign](../cpp/bstr-t-assign.md)の例を使用して、**Detach**します。
 
 **Microsoft 固有の仕様はここまで**
 

@@ -55,7 +55,7 @@ Windows のスタイル。 完全な一覧についてを参照してくださ�
 
 1. 追加、`WM_CREATE`メッセージ ハンドラー クラスを`CMyView`します。
 
-1. ハンドラー関数で`CMyView::OnCreate`、コントロールの呼び出しを行う`Create`関数を使用して、**この**親ウィンドウとしてのポインター。
+1. ハンドラー関数で`CMyView::OnCreate`、コントロールの呼び出しを行う`Create`関数を使用して、**this**親ウィンドウとしてのポインター。
 
    [!code-cpp[NVC_MFC_AxCont#15](../mfc/codesnippet/cpp/activex-control-containers-using-controls-in-a-non-dialog-container_4.cpp)]
 

@@ -5,12 +5,12 @@ ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: f02c5878f5f741c216499f619bfd1392483bfa86
-ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
+ms.openlocfilehash: bde8b8e17c3186d22493f099a5f7d1b5a2646a67
+ms.sourcegitcommit: 2362d15b5eb18d27773c3f7522da3d0eed9e2571
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67552341"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73754136"
 ---
 # <a name="whats-new-for-c-in-visual-studio"></a>Visual Studio での C++ の新機能
 
@@ -257,6 +257,10 @@ Visual Studio 2017 には、C++ 環境に対する多くの更新プログラム
 
 Visual Studio バージョン 15.7 の MSVC コンパイラ ツールセットが、C++ 標準に準拠となりました。 詳細については、「[Announcing: MSVC Conforms to the C++ Standard (発表: MSVC の C++ への準拠)](https://devblogs.microsoft.com/cppblog/announcing-msvc-conforms-to-the-c-standard/)」および [Microsoft C++ 言語の準拠](../visual-cpp-language-conformance.md)に関するページを参照してください。
 
+##### <a name="visual-studio-2017-version-158"></a>Visual Studio 2017 バージョン 15.8
+
+[/experimental:preprocessor](../build/reference/experimental-preprocessor.md) コンパイラ スイッチにより、適用可能なすべての C および C++ 標準に最終的に準拠する新しい実験的 MSVC プリプロセッサが有効になります。 詳細については、「[MSVC experimental preprocessor overview](../preprocessor/preprocessor-experimental-overview.md)」(MSVC の実験的なプリプロセッサの概要) を参照してください。
+
 ### <a name="new-compiler-options"></a>新しいコンパイラ オプション
 
 - [/permissive -](../build/reference/permissive-standards-conformance.md): すべての厳密な標準準拠コンパイラ オプションを有効にして、ほとんどの Microsoft 固有コンパイラ拡張機能 (ただし、たとえば `__declspec(dllimport)` は除きます) を無効にします。 このオプションは、Visual Studio 2017 バージョン 15.5 では既定でオンになっています。  **/permissive-** 準拠モードは、2 フェーズの名前参照に対応しています。 詳細については、[Visual Studio での C++ 準拠の強化](cpp-conformance-improvements.md)に関するページをご覧ください。
@@ -360,11 +364,11 @@ Visual Studio 2017 RTM での標準ライブラリの改善に関する完全な
 - \<optional\>、\<variant\>、`shared_ptr::weak_type`、および \<cstdalign\> が追加されました。
 - `min(initializer_list)`、`max(initializer_list)`、および `minmax(initializer_list)` で、さらに `min_element()`、`max_element()`、および `minmax_element()` で C++14 `constexpr` が有効になりました。
 
-詳細については、「[Visual C++ 言語への準拠](../visual-cpp-language-conformance.md)」をご覧ください。
+詳細については、「[Microsoft C++ 言語の準拠表](../visual-cpp-language-conformance.md)」を参照してください。
 
 ##### <a name="visual-studio-2017-version-153"></a>Visual Studio 2017 バージョン 15.3
 
-- C++17 の追加機能がいくつか実装されました。 詳細については、「[Visual C++ 言語への準拠](cpp-conformance-improvements.md#improvements_153)」をご覧ください。
+- C++17 の追加機能がいくつか実装されました。 詳細については、「[Microsoft C++ 言語の準拠表](cpp-conformance-improvements.md#improvements_153)」を参照してください。
 - P0602R0 "variant と optional は自明的にコピー/移動を伝達する必要がある" を実装しました。
 - 標準ライブラリでは、[/GR-](../build/reference/gr-enable-run-time-type-information.md) オプションで無効にされた動的 RTTI が正式に許容されるようになりました。 `dynamic_pointer_cast()` と `rethrow_if_nested()` には本質的に `dynamic_cast` が必要なため、標準ライブラリでは **/GR-** の指定時にこれらの関数が `=delete` としてマークされるようになりました。
 - 動的 RTTI が **/GR-** で無効にされた場合でも、`typeid(SomeType)` の形式の "static RTTI" は引き続き使用可能で、標準ライブラリの一部のコンポーネントを強化します。 標準ライブラリでは、 **/D\_HAS\_STATIC\_RTTI=0** でこの機能の無効化もサポートされるようになりました。 このフラグでは、`std::any`、`std::function` の `target()` および `target_type()` メンバー関数、さらに `std::shared_ptr` および `std::weak_ptr` の `get_deleter()` フレンド メンバー関数も無効になることに注意してください。
@@ -422,7 +426,7 @@ Visual Studio 2017 RTM での標準ライブラリの改善に関する完全な
 - `constexpr char_traits`
 - 標準ライブラリの推論ガイド
 
-詳細については、「[Visual C++ 言語への準拠](../visual-cpp-language-conformance.md)」をご覧ください。
+詳細については、「[Microsoft C++ 言語の準拠表](../visual-cpp-language-conformance.md)」を参照してください。
 
 ### <a name="performance-and-throughput-fixes"></a>パフォーマンスやスループットの修正
 
@@ -528,13 +532,13 @@ C++ では、Ctrl を押しながら **[定義へ移動]** をクリックでき
 
 - エラー一覧の IntelliSense エラーに対するフィルター処理とヘルプが追加されました。 エラー列をクリックするとフィルター処理を実行できます。 また、特定のエラーをクリックするか F1 キーを押すと、エラー メッセージのオンライン検索が開始します。
 
-  ![エラー一覧](media/ErrorList1.png "Error List")
+  ![エラー一覧](media/ErrorList1.png "エラー一覧")
 
-  ![フィルター処理されたエラー一覧](media/ErrorList2.png "Error List Filtered")
+  ![フィルター処理されたエラー一覧](media/ErrorList2.png "フィルター処理されたエラー一覧")
 
 - メンバー リストの項目を種類別にフィルターする機能が追加されました。
 
-  ![メンバー リストのフィルター処理](media/mlfiltering.png "Member List Filtering")
+  ![メンバー一覧のフィルター処理](media/mlfiltering.png "メンバー リストのフィルター処理")
 
 - メンバー リストの表示項目のコンテキストに応じたフィルター処理を提供する新しい実験的な予測 IntelliSense 機能が追加されました。 詳しくは、「[C++ IntelliSense Improvements - Predictive IntelliSense & Filtering (C++ IntelliSense の機能改善 - 予測 IntelliSense とフィルター処理)](https://devblogs.microsoft.com/cppblog/c-intellisense-improvements-predictive-intellisense-filtering/)」を参照してください。
 - **[すべての参照の検索]** (Shift + F12) を使って、複雑なコードベースでも簡単に参照できるようになりました。 高度なグループ化、フィルター処理、並べ替え、結果内の検索と色づけ (一部の言語) が提供され、参照を明確に理解できます。 C++ では、新しい UI に、変数から読み取っているのか、または変数に書き込んでいるのかに関する情報が含まれます。
@@ -570,7 +574,7 @@ Visual Studio 2017 では、MSBuild プロジェクト ファイル (.vcxproj) �
 
 - CMakeLists.txt ファイルと同じフォルダーに配置される CMakeSettings.json ファイルにより、追加の構成がサポートされます。
 
-  ![Cmake の [フォルダーを開く]](media/cmake-cpp.png "CMake Open Folder")
+  ![CMake の [フォルダーを開く]](media/cmake-cpp.png "CMake の [フォルダーを開く]")
 
 ##### <a name="visual-studio-2017-version-153"></a>Visual Studio 2017 バージョン 15.3
 
@@ -647,7 +651,7 @@ Visual Studio 2017 に同梱されている Clang/C2 ツールセットが **/bi
 
 [C++ コア ガイドライン](https://github.com/isocpp/CppCoreGuidelines)を適用するための C++ コア チェッカーが Visual Studio で配布されています。 プロジェクトのプロパティ ページの **[Code Analysis Extensions]\(コード分析の拡張機能\)** ダイアログでチェックを有効にするだけで、拡張機能がコード分析の実行時に含まれます。 詳細については、「[Using the C++ Core Guidelines checkers (C++ Core ガイドラインのチェッカーを使用する)](/visualstudio/code-quality/using-the-cpp-core-guidelines-checkers)」をご覧ください。
 
-![CppCoreCheck](media/CppCoreCheck.png "CppCoreCheck properties page")
+![CppCoreCheck](media/CppCoreCheck.png "CppCoreCheck のプロパティ ページ")
 
 ##### <a name="visual-studio-2017-version-153"></a>Visual Studio 2017 バージョン 15.3
 
@@ -695,7 +699,7 @@ Visual Studio のグラフィックス診断は、Direct3D アプリのレンダ
 
 - **オブジェクト テーブルでの検索とフィルター:** 探しているリソースを検索する迅速かつ簡単な手段を提供します。
 
-  ![Search](media/search.png)
+  ![検索](media/search.png)
 
 - **リソース履歴:** この新しいビューは、キャプチャされたフレームのレンダリング時に使われたリソースの全体の変更履歴を表示する簡単な手段を提供します。 リソースの履歴を呼び出すには、リソースのハイパーリンクの横にある時計のアイコンをクリックします。
 

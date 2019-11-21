@@ -13,7 +13,7 @@ ms.locfileid: "62368696"
 ---
 # <a name="constexpr-lambda-expressions-in-c"></a>C++ では constexpr ラムダ式
 
-**Visual Studio 2017 バージョン 15.3 以降**(で使用可能な[/std:c + + 17](../build/reference/std-specify-language-standard-version.md))。ラムダ式として宣言することがあります**constexpr**または定数式の中でキャプチャまたは導入される各データ メンバーの初期化が許可されている場合、定数式で使用します。
+**Visual Studio 2017 バージョン 15.3 以降**(で使用可能な[/std:c++17](../build/reference/std-specify-language-standard-version.md))。ラムダ式として宣言することがあります**constexpr**または定数式の中でキャプチャまたは導入される各データ メンバーの初期化が許可されている場合、定数式で使用します。
 
 ```cpp
     int y = 32;

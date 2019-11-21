@@ -1,37 +1,37 @@
 ---
-title: 型変換とタイプ セーフ (Modern C++)
-ms.date: 05/07/2019
+title: Type conversions and type safety
+ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 629b361a-2ce1-4700-8b5d-ab4f57b245d5
-ms.openlocfilehash: e06ea3f9c3ea427f205764c35988ea3316c3794a
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: dbca9057622ab1a92b74e2958b8dfbe8d810fede
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221865"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246113"
 ---
-# <a name="type-conversions-and-type-safety-modern-c"></a>型変換とタイプ セーフ (Modern C++)
+# <a name="type-conversions-and-type-safety"></a>Type conversions and type safety
 
 このドキュメントでは、共通型の変換に伴う問題を識別し、C++ コードでそれらを回避する方法を説明します。
 
-C ++.のプログラムを作成するときは、そのプログラムがタイプ セーフであることを確認することが重要です。 これは、すべての変数、関数の引数、および関数の戻り値が適切な種類のデータを格納すること、異なる型の値が関係する操作が "意味のある" 処理を行うこと、さらにデータ損失、ビット パターンの誤った解釈、メモリ破損を発生させないことを意味します。 プログラムが、明示的または暗黙的に、ある型の値を他の型に変換しないことが、定義上のタイプ セーフです。 ただし、型の変換、また場合によっては安全でない変換が必須になることもあります。 浮動結果を格納する必要があります、型の変数で操作をポイント**int**、符号なしの値を渡す必要がありますまたは**int**署名を受け取る関数に**int**します。どちらの例も、データ損失や値の再解釈を引き起こす可能性があるため、安全ではない変換を示していると言えます。
+C ++.のプログラムを作成するときは、そのプログラムがタイプ セーフであることを確認することが重要です。 これは、すべての変数、関数の引数、および関数の戻り値が適切な種類のデータを格納すること、異なる型の値が関係する操作が "意味のある" 処理を行うこと、さらにデータ損失、ビット パターンの誤った解釈、メモリ破損を発生させないことを意味します。 プログラムが、明示的または暗黙的に、ある型の値を他の型に変換しないことが、定義上のタイプ セーフです。 ただし、型の変換、また場合によっては安全でない変換が必須になることもあります。 For example, you might have to store the result of a floating point operation in a variable of type **int**, or you might have to pass the value in an unsigned **int** to a function that takes a signed **int**. Both examples illustrate unsafe conversions because they may cause data loss or re-interpretation of a value.
 
 コンパイラが安全ではない変換を検出した場合は、エラーまたは警告を発行します。 エラーが生じた場合はコンパイルが中止されます。警告が生じた場合は、コンパイルは続行されますが、コード内にエラーが存在する可能性が示されます。 ただし、警告なしでプログラムがコンパイルされた場合でも、正しくない結果を生成する暗黙の型変換につながるコードが存在している可能性があります。 型エラーは、コード内の明示的な変換、またはキャストによって発生する可能性があります。
 
 ## <a name="implicit-type-conversions"></a>暗黙的な型変換
 
-コンパイラが組み込みを使用して、式には、別の組み込み型のオペランドが含まれているし、明示的なキャストが存在しない、*標準変換*型が一致するように、オペランドの 1 つを変換します。 コンパイラはいずれかが成功するまで、適切に定義された一連の変換を試みます。 選択した変換が上位変換である場合は、コンパイラは警告を発行しません。 変換が縮小変換である場合は、コンパイラは、データ損失の可能性に関する警告を発行します。 実際のデータ損失が発生するかどうかは、関与する実際の値に依存しますが、この警告をエラーとして扱うことをお勧めします。 ユーザー定義型が関与している場合は、コンパイラは、ユーザーがクラス定義の中で指定した変換を使用しようとします。 受け入れ可能な変換が見つからない場合は、コンパイラはエラーを発行し、プログラムをコンパイルしません。 標準変換を制御するルールの詳細については、次を参照してください。[標準変換](../cpp/standard-conversions.md)します。 ユーザー定義の変換の詳細については、次を参照してください。[ユーザー定義の変換 (C +/cli CLI)](../dotnet/user-defined-conversions-cpp-cli.md)します。
+When an expression contains operands of different built-in types, and no explicit casts are present, the compiler uses built-in *standard conversions* to convert one of the operands so that the types match. コンパイラはいずれかが成功するまで、適切に定義された一連の変換を試みます。 選択した変換が上位変換である場合は、コンパイラは警告を発行しません。 変換が縮小変換である場合は、コンパイラは、データ損失の可能性に関する警告を発行します。 実際のデータ損失が発生するかどうかは、関与する実際の値に依存しますが、この警告をエラーとして扱うことをお勧めします。 ユーザー定義型が関与している場合は、コンパイラは、ユーザーがクラス定義の中で指定した変換を使用しようとします。 受け入れ可能な変換が見つからない場合は、コンパイラはエラーを発行し、プログラムをコンパイルしません。 For more information about the rules that govern the standard conversions, see [Standard Conversions](../cpp/standard-conversions.md). For more information about user-defined conversions, see [User-Defined Conversions (C++/CLI)](../dotnet/user-defined-conversions-cpp-cli.md).
 
 ### <a name="widening-conversions-promotion"></a>拡大変換 (上位変換)
 
 拡大変換では、より小さい変数内の値が、より大きい変数に代入され、データは失われません。 拡大変換は常に安全であるため、コンパイラはこの変換を自動的に実行し、警告を発行しません。 次の変換は、拡大変換です。
 
-|From|終了|
+|変換元|終了|
 |----------|--------|
-|符号付きまたは符号なし整数型を除く**long**または **_ _int64**|**double**|
-|**bool**または**char**|他のすべての組み込み型|
-|**短い**または**wchar_t**|**int**、**長い**、 **long**|
-|**int**、**長**|**long long**|
+|Any signed or unsigned integral type except **long long** or **__int64**|**double**|
+|**bool** or **char**|他のすべての組み込み型|
+|**short** or **wchar_t**|**int**, **long**, **long long**|
+|**int**, **long**|**long long**|
 |**float**|**double**|
 
 ### <a name="narrowing-conversions-coercion"></a>縮小変換 (強制型)
@@ -73,7 +73,7 @@ cout << "unsigned val = " << num << " signed val = " << num2 << endl;
 // Prints: unsigned val = 65535 signed val = -1
 ```
 
-値の再解釈が双方向で発生することに注意してください。 期待される値に対して、符号が反転したように思える奇妙な結果をプログラムが返した場合は、符号付き整数型と符号なし整数型の間で暗黙的な変換が実行された可能性に注目してください。 次の例では、式の結果 (0 - 1) から暗黙的に変換が**int**に**符号なし int**に格納されているときに`num`します。 この結果、ビット パターンの再解釈が発生します。
+値の再解釈が双方向で発生することに注意してください。 期待される値に対して、符号が反転したように思える奇妙な結果をプログラムが返した場合は、符号付き整数型と符号なし整数型の間で暗黙的な変換が実行された可能性に注目してください。 In the following example, the result of the expression ( 0 - 1) is implicitly converted from **int** to **unsigned int** when it's stored in `num`. この結果、ビット パターンの再解釈が発生します。
 
 ```cpp
 unsigned int u3 = 0 - 1;
@@ -84,7 +84,7 @@ cout << u3 << endl; // prints 4294967295
 
 ### <a name="pointer-conversions"></a>ポインター変換
 
-多くの式では、C 形式の配列は、配列内の最初の要素へのポインターに暗黙的に変換され、また定数変換が警告なしで実施される可能性があります。 これは便利ですが、場合によってはエラーが発生しやすくなります。 たとえば、設計が正しくないコード例を次に、無意味なようで、まだコンパイルし、"p"の結果を生成します。 まず、"Help" 文字列定数リテラルは `char*` に変換されます。このポインターは 配列の最初の要素を指し、3 つの要素によってインクリメントされます。その結果、最後の要素 'p' を指すようになります。
+多くの式では、C 形式の配列は、配列内の最初の要素へのポインターに暗黙的に変換され、また定数変換が警告なしで実施される可能性があります。 これは便利ですが、場合によってはエラーが発生しやすくなります。 For example, the following badly designed code example seems nonsensical, and yet it will compile and produces a result of 'p'. まず、"Help" 文字列定数リテラルは `char*` に変換されます。このポインターは 配列の最初の要素を指し、3 つの要素によってインクリメントされます。その結果、最後の要素 'p' を指すようになります。
 
 ```cpp
 char* s = "Help" + 3;
@@ -92,7 +92,7 @@ char* s = "Help" + 3;
 
 ## <a name="explicit-conversions-casts"></a>明示的な変換 (キャスト)
 
-キャスト操作を使用すると、ある型の値を別の型に変換するようにコンパイラに指示できます。 2 つの方が完全に無関係である場合はコンパイラはエラーを生成しますが、操作がタイプ セーフでない場合でもエラーを生成しない状況が存在します。 キャストは控えめに使用してください。ある型から別の型への変換は、プログラム エラーの原因となる可能性があるためです。 ただし、時にはキャストが必須であり、すべてのキャストが等しく危険というわけでもありません。 キャストの 1 つの効率的な使用方法は、コードが縮小変換を実行し、その変換により、プログラムが不適切な結果をもたらさないことがわかっている場合です。 実際には、何を実行するかを開発者が理解していて、その点に関する警告を発行しないようにコンパイラに指示することになります。 別の使用法は、ポインターから派生クラス、およびポインターから基底クラスへのキャストです。 別の用途は、キャストには、 **const**以外を必要とする関数に渡すように変数の性 -**const**引数。 これらのキャスト操作のほとんどには、ある程度のリスクが存在します。
+キャスト操作を使用すると、ある型の値を別の型に変換するようにコンパイラに指示できます。 2 つの方が完全に無関係である場合はコンパイラはエラーを生成しますが、操作がタイプ セーフでない場合でもエラーを生成しない状況が存在します。 キャストは控えめに使用してください。ある型から別の型への変換は、プログラム エラーの原因となる可能性があるためです。 ただし、時にはキャストが必須であり、すべてのキャストが等しく危険というわけでもありません。 キャストの 1 つの効率的な使用方法は、コードが縮小変換を実行し、その変換により、プログラムが不適切な結果をもたらさないことがわかっている場合です。 実際には、何を実行するかを開発者が理解していて、その点に関する警告を発行しないようにコンパイラに指示することになります。 別の使用法は、ポインターから派生クラス、およびポインターから基底クラスへのキャストです。 Another use is to cast away the **const**-ness of a variable to pass it to a function that requires a non-**const** argument. これらのキャスト操作のほとんどには、ある程度のリスクが存在します。
 
 C スタイルのプログラミングでは、同じ C スタイルのキャスト演算子が、あらゆる種類のキャストに使用されます。
 
@@ -101,9 +101,9 @@ C スタイルのプログラミングでは、同じ C スタイルのキャス
 int(x); // old-style cast, functional syntax
 ```
 
-つまり、C スタイルのキャスト演算子は、呼び出し演算子 () と同じものであり、したがって、コードの中で目立たず、簡単に見過ごす可能性があります。 不適切な検索もすぐに認識するが難しいし、眺めたときほどの任意の組み合わせを呼び出すため、両方とも**静的**、 **const**、および**reinterpret_cast**. 古いスタイルのキャストの実際の動作を理解するのは困難で、エラーが発生しやすくなります。 これらすべての理由により、キャストがどうしても必要な場合は、次の C++ スタイルのキャスト操作のいずれかを使用することをお勧めします。特定の状況では、かなりタイプ セーフであり、プログラミングの意図を非常に明確に表現できるからです。
+つまり、C スタイルのキャスト演算子は、呼び出し演算子 () と同じものであり、したがって、コードの中で目立たず、簡単に見過ごす可能性があります。 Both are bad because they're difficult to recognize at a glance or search for, and they're disparate enough to invoke any combination of **static**, **const**, and **reinterpret_cast**. 古いスタイルのキャストの実際の動作を理解するのは困難で、エラーが発生しやすくなります。 これらすべての理由により、キャストがどうしても必要な場合は、次の C++ スタイルのキャスト操作のいずれかを使用することをお勧めします。特定の状況では、かなりタイプ セーフであり、プログラミングの意図を非常に明確に表現できるからです。
 
-- **static_cast**コンパイル時チェックされるキャスト時間のみです。 **static_cast**コンパイラは、完全に互換性のない型の間でキャストしようとしていることが検出された場合はエラーを返します。 これを、基本型へのポインターと、派生形へのポインターの間でのキャストに使用することもできますが、コンパイラはこのような変換が実行時に安全かどうかを必ず判定できるわけではありません。
+- **static_cast**, for casts that are checked at compile time only. **static_cast** returns an error if the compiler detects that you are trying to cast between types that are completely incompatible. これを、基本型へのポインターと、派生形へのポインターの間でのキャストに使用することもできますが、コンパイラはこのような変換が実行時に安全かどうかを必ず判定できるわけではありません。
 
     ```cpp
     double d = 1.58947;
@@ -117,9 +117,9 @@ int(x); // old-style cast, functional syntax
     Derived* d2 = static_cast<Derived*>(b);
     ```
 
-   詳細については、次を参照してください。 [static_cast](../cpp/static-cast-operator.md)します。
+   For more information, see [static_cast](../cpp/static-cast-operator.md).
 
-- **dynamic_cast**のポインターから派生する基本のポインターのキャストの安全なランタイム チェックします。 A **dynamic_cast**よりも安全です、 **static_cast**ダウン キャストが、実行時のチェックで一部のオーバーヘッドが発生します。
+- **dynamic_cast**, for safe, runtime-checked casts of pointer-to-base to pointer-to-derived. A **dynamic_cast** is safer than a **static_cast** for downcasts, but the runtime check incurs some overhead.
 
     ```cpp
     Base* b = new Base();
@@ -142,9 +142,9 @@ int(x); // old-style cast, functional syntax
     //Output: d3 is null;
     ```
 
-   詳細については、次を参照してください。 [dynamic_cast](../cpp/dynamic-cast-operator.md)します。
+   For more information, see [dynamic_cast](../cpp/dynamic-cast-operator.md).
 
-- **const_cast**にキャストして、 **const**の変数、または非変換性 -**const**変数を**const**します。 キャストして**const**-させずに、この演算子を使用して、単にエラーを起こしやすい C スタイルの点を除いて、キャストが使用されている**const キャスト**が誤ってキャストを実行する可能性が低下します。 キャストする必要がある場合があります、 **const**-させずに、たとえば、渡す変数の**const**受け取る以外の関数を変数**const**パラメーター。 その方法を次の例に示します。
+- **const_cast**, for casting away the **const**-ness of a variable, or converting a non-**const** variable to be **const**. Casting away **const**-ness by using this operator is just as error-prone as is using a C-style cast, except that with **const-cast** you are less likely to perform the cast accidentally. Sometimes you have to cast away the **const**-ness of a variable, for example, to pass a **const** variable to a function that takes a non-**const** parameter. その方法を次の例に示します。
 
     ```cpp
     void Func(double& d) { ... }
@@ -155,14 +155,14 @@ int(x); // old-style cast, functional syntax
     }
     ```
 
-   詳細については、次を参照してください。 [const_cast](../cpp/const-cast-operator.md)します。
+   For more information, see [const_cast](../cpp/const-cast-operator.md).
 
-- **reinterpret_cast**間のキャスト関連のない型などの**ポインター**に**int**します。
+- **reinterpret_cast**, for casts between unrelated types such as **pointer** to **int**.
 
     > [!NOTE]
     >  このキャスト演算子は、他のキャスト演算子ほどの頻度では使用されず、他のコンパイラへの移植性も保証されません。
 
-   次の例を示しています。 どの**reinterpret_cast**とは異なります**static_cast**。
+   The following example illustrates how **reinterpret_cast** differs from **static_cast**.
 
     ```cpp
     const char* str = "hello";
@@ -174,11 +174,11 @@ int(x); // old-style cast, functional syntax
                                        // However, it is not 64-bit safe.
     ```
 
-   詳細については、次を参照してください。 [reinterpret_cast Operator](../cpp/reinterpret-cast-operator.md)します。
+   For more information, see [reinterpret_cast Operator](../cpp/reinterpret-cast-operator.md).
 
 ## <a name="see-also"></a>関連項目
 
-[C++ 型システム (Modern C++)](../cpp/cpp-type-system-modern-cpp.md)<br/>
-[C++ へようこそ (Modern C++)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[C++ type system](../cpp/cpp-type-system-modern-cpp.md)<br/>
+[Welcome back to C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [C++ 言語リファレンス](../cpp/cpp-language-reference.md)<br/>
 [.NET 標準ライブラリ](../standard-library/cpp-standard-library-reference.md)

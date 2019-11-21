@@ -658,7 +658,7 @@ virtual CPane* DockPaneStandard(BOOL& bWasDocked);
 
 ### <a name="return-value"></a>戻り値
 
-このメソッドは常に**この**ポインターを返します。
+このメソッドは常に**this**ポインターを返します。
 
 ### <a name="remarks"></a>Remarks
 

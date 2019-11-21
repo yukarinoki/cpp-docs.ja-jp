@@ -1,49 +1,49 @@
 ---
 title: const ポインターと volatile ポインター
-ms.date: 11/04/2016
+ms.date: 11/19/2019
 helpviewer_keywords:
 - volatile keyword [C++], and pointers
 - pointers, and const
 - pointers, and volatile
 - const keyword [C++], volatile pointers
 ms.assetid: 0c92dc6c-400e-4342-b345-63ddfe649d7e
-ms.openlocfilehash: c869adbbdc8a5a17d315e64e5ac15545e0c46e26
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c0aafde9070275abcb270710e2d4a7a8d9806267
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399123"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246629"
 ---
 # <a name="const-and-volatile-pointers"></a>const ポインターと volatile ポインター
 
-[Const](../cpp/const-cpp.md)と[揮発性](../cpp/volatile-cpp.md)キーワードは、ポインターの処理方法を変更します。 **Const**キーワードでは、初期化後に、ポインターを変更できないことを指定します。 ポインターがその後、変更から保護します。
+The [const](const-cpp.md) and [volatile](volatile-cpp.md) keywords change how pointers are treated. The **const** keyword specifies that the pointer cannot be modified after initialization; the pointer is protected from modification thereafter.
 
-**揮発性**キーワードは、ユーザー アプリケーション以外の操作によってに続く名前に関連付けられている値を変更できることを指定します。 そのため、**揮発性**キーワードは複数のプロセスや割り込みサービス ルーチンとの通信に使用するグローバル データ領域からアクセスできる共有メモリでオブジェクトを宣言するのに便利です。
+The **volatile** keyword specifies that the value associated with the name that follows can be modified by actions other than those in the user application. Therefore, the **volatile** keyword is useful for declaring objects in shared memory that can be accessed by multiple processes or global data areas used for communication with interrupt service routines.
 
-名前として宣言されている場合**揮発性**コンパイラがメモリから値をプログラムによりアクセスされるたびに再読み込みします。 これによって、可能な最適化が大幅に減少します。 ただし、オブジェクトの状態が予期せず変わる場合、これが予測可能なプログラムの実行を保証する唯一の方法になります。
+When a name is declared as **volatile**, the compiler reloads the value from memory each time it is accessed by the program. これによって、可能な最適化が大幅に減少します。 ただし、オブジェクトの状態が予期せず変わる場合、これが予測可能なプログラムの実行を保証する唯一の方法になります。
 
-としてポインターが指すオブジェクトを宣言する**const**または**揮発性**形式の宣言を使用します。
+To declare the object pointed to by the pointer as **const** or **volatile**, use a declaration of the form:
 
 ```cpp
 const char *cpch;
 volatile char *vpch;
 ```
 
-ポインターの値を宣言する — ポインターに格納されている実際のアドレスは、-として**const**または**揮発性**形式の宣言を使用します。
+To declare the value of the pointer — that is, the actual address stored in the pointer — as **const** or **volatile**, use a declaration of the form:
 
 ```cpp
 char * const pchc;
 char * volatile pchv;
 ```
 
-C++ 言語は、オブジェクトを変更できるようにするための割り当てを禁止またはとして宣言されたポインター **const**します。 このような代入を実行すると、オブジェクトまたはポインターを宣言したときの情報が削除されるため、元の宣言の意図に反することになります。 次に宣言の例を示します。
+The C++ language prevents assignments that would allow modification of an object or pointer declared as **const**. このような代入を実行すると、オブジェクトまたはポインターを宣言したときの情報が削除されるため、元の宣言の意図に反することになります。 次に宣言の例を示します。
 
 ```cpp
 const char cch = 'A';
 char ch = 'B';
 ```
 
-2 つのオブジェクトの前に宣言した (`cch`、型の**const char**、および`ch`、型の**char)**、次の宣言と初期化が無効です。
+Given the preceding declarations of two objects (`cch`, of type **const char**, and `ch`, of type **char)** , the following declaration/initializations are valid:
 
 ```cpp
 const char *pch1 = &cch;
@@ -61,7 +61,7 @@ char *pch2 = &cch;   // Error
 char *const pch3 = &cch;   // Error
 ```
 
-`pch2` の宣言は、定数オブジェクトを変更する可能性があるポインターを宣言するため、許可されません。 宣言`pch3`、定数のポインターを指定します; オブジェクトではなく、宣言が同じ理由で許可されていない、`pch2`宣言は許可されません。
+`pch2` の宣言は、定数オブジェクトを変更する可能性があるポインターを宣言するため、許可されません。 The declaration of `pch3` specifies that the pointer is constant, not the object; the declaration is disallowed for the same reason the `pch2` declaration is disallowed.
 
 次の 8 つの代入は、ポインターを介した代入と、前に宣言したポインター値の変更を示しています。ここでは、初期化が `pch1` から `pch8` まで正しかったと仮定します。
 
@@ -76,20 +76,20 @@ pch3 = &ch;   // Error: pointer declared const
 pch4 = &ch;   // Error: pointer declared const
 ```
 
-として宣言されたポインター**揮発性**、またはの組み合わせとして**const**と**揮発性**、同じ規則に従います。
+Pointers declared as **volatile**, or as a mixture of **const** and **volatile**, obey the same rules.
 
-ポインター **const**オブジェクトは次のように関数宣言で使用多くの場合。
+Pointers to **const** objects are often used in function declarations as follows:
 
 ```cpp
 errno_t strcpy_s( char *strDestination, size_t numberOfElements, const char *strSource );
 ```
 
-前のステートメントは、関数を宣言[strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md)へのポインター型の 3 つの引数の 2 つが、 **char**します。 引数が参照によって渡されますないため、値によって、関数は両方を変更する無料`strDestination`と`strSource`場合`strSource`として宣言されていない**const**します。 宣言`strSource`として**const**により、呼び出し元`strSource`呼び出された関数では変更できません。
+The preceding statement declares a function, [strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md), where two of the three arguments are of type pointer to **char**. Because the arguments are passed by reference and not by value, the function would be free to modify both `strDestination` and `strSource` if `strSource` were not declared as **const**. The declaration of `strSource` as **const** assures the caller that `strSource` cannot be changed by the called function.
 
 > [!NOTE]
-> 標準変換があるため、 *typename* <strong>\*</strong>に**const** *typename*  <strong>\*</strong>、型の引数を渡すことは`char *`に[strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md)します。 ただし、その逆は正しくありません。削除する暗黙的な変換が存在しない、 **const**オブジェクトまたはポインターからの属性。
+> Because there is a standard conversion from *typename* <strong>\*</strong> to **const** *typename* <strong>\*</strong>, it is legal to pass an argument of type `char *` to [strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md). However, the reverse is not true; no implicit conversion exists to remove the **const** attribute from an object or pointer.
 
-A **const**指定された型のポインターは、同じ型のポインターに割り当てることができます。 ただし、ポインターでない**const**に割り当てることはできません、 **const**ポインター。 次のコードは、正しい代入と正しくない代入を示します。
+A **const** pointer of a given type can be assigned to a pointer of the same type. However, a pointer that is not **const** cannot be assigned to a **const** pointer. 次のコードは、正しい代入と正しくない代入を示します。
 
 ```cpp
 // const_pointer.cpp
@@ -126,4 +126,5 @@ int main() {
 
 ## <a name="see-also"></a>関連項目
 
-[ポインター](../cpp/pointers-cpp.md)
+[Pointers](pointers-cpp.md)
+[Raw pointers](raw-pointers.md)

@@ -6,7 +6,7 @@ helpviewer_keywords:
 ms.assetid: 516dd496-13fb-4f17-845a-e9ca45437873
 ms.openlocfilehash: a37a23296159de2632f6a218eb81315ee2d6a646
 ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2019
 ms.locfileid: "65222512"
@@ -53,7 +53,7 @@ ms.locfileid: "65222512"
 
 |構造体|クラス|Unions|
 |----------------|-------------|------------|
-|クラス キーは**構造体**|クラス キーは**クラス**|クラス キーは**共用体**|
+|クラス キーは**struct**|クラス キーは**class**|クラス キーは**union**|
 |既定のアクセスは public|既定のアクセスは private|既定のアクセスは public|
 |使用制約なし|使用制約なし|同時に複数のメンバーを使用することはできない|
 

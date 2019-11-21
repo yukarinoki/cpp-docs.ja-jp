@@ -35,4 +35,4 @@ ms.locfileid: "70222272"
 
 [プリプロセッサ演算子](../preprocessor/preprocessor-operators.md)\
 [定義済みマクロ](../preprocessor/predefined-macros.md)\
-[c/c + + プリプロセッサリファレンス](../preprocessor/c-cpp-preprocessor-reference.md)
+[c/c++ プリプロセッサリファレンス](../preprocessor/c-cpp-preprocessor-reference.md)

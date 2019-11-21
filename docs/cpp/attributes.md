@@ -4,7 +4,7 @@ ms.date: 05/06/2019
 ms.assetid: 748340d9-8abf-4940-b0a0-91b6156a3ff8
 ms.openlocfilehash: bc92e5f3e279edc6fbea7f99d52c469f9fdf04f8
 ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2019
 ms.locfileid: "65222304"
@@ -15,7 +15,7 @@ C++ 標準は一連の属性を定義し、コンパイラ ベンダー (製造�
 
 場合によっては、標準属性は、コンパイラ固有の declspec パラメーターと重複します。 Visual C で使用することができます、`[[deprecated]]`属性を使用してではなく`declspec(deprecated)`属性が任意に準拠するコンパイラで認識されるとします。 すべての他の declspec パラメーター dllimport と dllexport などにはありませんとしてまだ属性と同じので declspec 構文を使用し続ける必要があります。 属性、型システムには影響しませんし、プログラムの意味を変更しません。 コンパイラは、認識されていない属性値を無視します。
 
-**Visual Studio 2017 バージョン 15.3 以降**(で使用可能な[/std:c + + 17](../build/reference/std-specify-language-standard-version.md))。1 つのすべての名前を名前空間を指定する属性リストのスコープで**を使用して**導入。
+**Visual Studio 2017 バージョン 15.3 以降**(で使用可能な[/std:c++17](../build/reference/std-specify-language-standard-version.md))。1 つのすべての名前を名前空間を指定する属性リストのスコープで**using**導入。
 
 ```cpp
 void g() {
@@ -41,9 +41,9 @@ void Foo(int);
 
 - `[[deprecated]]` **Visual Studio 2015 以降:** 関数を使用するありませんを指定し、将来のバージョンのライブラリ インターフェイスは存在可能性があります。 コンパイラは、これを使用すると、クライアント コードが、関数を呼び出すしようとしたときに、情報メッセージを生成できます。 クラス、typedef 名、変数、非静的データ メンバー、関数、名前空間、列挙体、列挙子、またはテンプレートの特殊化の宣言に適用できます。
 
-- `[[fallthrough]]` **Visual Studio 2017 以降:** (で使用可能な[/std:c + + + 17](../build/reference/std-specify-language-standard-version.md))、`[[fallthrough]]`のコンテキストで属性を使用できる[スイッチ](switch-statement-cpp.md)コンパイラ (または読むすべてのユーザーへのヒントとしてステートメントコード)、fallthrough 動作が想定されています。 MicrosoftC++コンパイラ現在は、警告、fallthrough 動作のため、この属性には、コンパイラの動作の効果はありません。
+- `[[fallthrough]]` **Visual Studio 2017 以降:** (で使用可能な[/std:c++17](../build/reference/std-specify-language-standard-version.md))、`[[fallthrough]]`のコンテキストで属性を使用できる[スイッチ](switch-statement-cpp.md)コンパイラ (または読むすべてのユーザーへのヒントとしてステートメントコード)、fallthrough 動作が想定されています。 MicrosoftC++コンパイラ現在は、警告、fallthrough 動作のため、この属性には、コンパイラの動作の効果はありません。
 
-- `[[nodiscard]]` **Visual Studio 2017 バージョン 15.3 以降:** (で使用可能な[/std:c + + 17](../build/reference/std-specify-language-standard-version.md)) 関数の戻り値が破棄されますを意図しないことを指定します。 この例で示すように、C4834 の警告を発生させます。
+- `[[nodiscard]]` **Visual Studio 2017 バージョン 15.3 以降:** (で使用可能な[/std:c++17](../build/reference/std-specify-language-standard-version.md)) 関数の戻り値が破棄されますを意図しないことを指定します。 この例で示すように、C4834 の警告を発生させます。
 
     ```cpp
     [[nodiscard]]
@@ -56,7 +56,7 @@ void Foo(int);
     }
     ```
 
-- `[[maybe_unused]]` **Visual Studio 2017 バージョン 15.3 以降:** (で使用可能な[/std:c + + 17](../build/reference/std-specify-language-standard-version.md)) 変数、関数、クラス、typedef、非静的データ メンバー、列挙型、またはテンプレートの特殊化が意図的に使用しないことを指定します。 エンティティがマークされている場合、コンパイラは警告されません`[[maybe_unused]]`は使用されません。 属性を持つ、またはその逆の属性がない宣言されているエンティティ後で再宣言することができます。 エンティティは、マークされている最初の宣言を分析すると、および現在の翻訳単位の翻訳の残りの部分がマークされていると見なされます。
+- `[[maybe_unused]]` **Visual Studio 2017 バージョン 15.3 以降:** (で使用可能な[/std:c++ 17](../build/reference/std-specify-language-standard-version.md)) 変数、関数、クラス、typedef、非静的データ メンバー、列挙型、またはテンプレートの特殊化が意図的に使用しないことを指定します。 エンティティがマークされている場合、コンパイラは警告されません`[[maybe_unused]]`は使用されません。 属性を持つ、またはその逆の属性がない宣言されているエンティティ後で再宣言することができます。 エンティティは、マークされている最初の宣言を分析すると、および現在の翻訳単位の翻訳の残りの部分がマークされていると見なされます。
 
 ## <a name="microsoft-specific-attributes"></a>Microsoft 固有の属性
 
