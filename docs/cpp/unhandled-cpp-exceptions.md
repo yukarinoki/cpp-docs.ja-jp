@@ -8,16 +8,16 @@ helpviewer_keywords:
 - C++ exception handling, unhandled exceptions
 - unhandled exceptions [C++]
 ms.assetid: 13f09c53-9254-4407-9db9-14e730e047cc
-ms.openlocfilehash: 85227e0bd0ca33f925e8fe72b6489fa81305d031
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cd5ce722c5159041ba8fb0a4a41b942a1bd4614f
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62312211"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246060"
 ---
 # <a name="unhandled-c-exceptions"></a>未処理の C++ 例外
 
-一致するハンドラーの場合 (または省略記号**catch**ハンドラー) の定義済みの現在の例外は見つかりません`terminate`実行時に呼び出されます。 (または明示的にハンドラーのいずれかで `terminate` を呼び出すことができます)。`terminate` の既定のアクションは、`abort` を呼び出すことです。 `terminate` でアプリケーションを終了する前に他の関数を呼び出すには、呼び出す関数の名前を唯一の引数として `set_terminate` 関数を呼び出します。 `set_terminate` はプログラムの任意の時点で呼び出すことができます。 `terminate`ルーチンが常に引数として渡された最後関数を呼び出します`set_terminate`します。
+If a matching handler (or ellipsis **catch** handler) cannot be found for the current exception, the predefined `terminate` run-time function is called. (You can also explicitly call `terminate` in any of your handlers.) The default action of `terminate` is to call `abort`. `terminate` でアプリケーションを終了する前に他の関数を呼び出すには、呼び出す関数の名前を唯一の引数として `set_terminate` 関数を呼び出します。 `set_terminate` はプログラムの任意の時点で呼び出すことができます。 The `terminate` routine always calls the last function given as an argument to `set_terminate`.
 
 ## <a name="example"></a>例
 
@@ -56,4 +56,4 @@ term_func was called by terminate.
 
 ## <a name="see-also"></a>関連項目
 
-[C++ 例外処理](../cpp/cpp-exception-handling.md)
+[Modern C++ best practices for exceptions and error handling](../cpp/errors-and-exception-handling-modern-cpp.md)

@@ -9,28 +9,28 @@ helpviewer_keywords:
 - exception handling [C++], cleanup code
 - try-catch keyword [C++], termination handlers
 ms.assetid: 65753efe-6a27-4750-b90c-50635775c1b6
-ms.openlocfilehash: 0db21b20b94dc1a3f347bd848c999a961398759b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 225c3ccaf3342f11ad4eb6d6575ad3ac542acfd2
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386123"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246647"
 ---
 # <a name="cleaning-up-resources"></a>リソースの後処理
 
-終了ハンドラーの実行中は、終了ハンドラーが呼び出される前に実際に割り当てられたリソースがわからない場合があります。 できますが、 **__try**ステートメント ブロックは、そのすべてのリソースが開かれたようにすべてのリソースが割り当てられた、前に中断されました。
+終了ハンドラーの実行中は、終了ハンドラーが呼び出される前に実際に割り当てられたリソースがわからない場合があります。 It is possible that the **__try** statement block was interrupted before all resources were allocated, so that not all resources were opened.
 
 したがって、安全のために、終了処理のクリーンアップに進む前に、どのリソースが実際に開いているかをチェックする必要があります。 推奨される手順は、次のとおりです。
 
 1. 各ハンドルを NULL に初期化します。
 
-1. **__try**ステートメント ブロックに、リソースを割り当てます。 各ハンドルは、リソースが割り当てられると、正の値に設定されます。
+1. In the **__try** statement block, allocate resources. 各ハンドルは、リソースが割り当てられると、正の値に設定されます。
 
-1. **__finally**ステートメント ブロック、0 以外の場合は、対応するハンドルまたはフラグ変数を持つ各リソースを解放または not NULL します。
+1. In the **__finally** statement block, release each resource whose corresponding handle or flag variable is nonzero or not NULL.
 
 ## <a name="example"></a>例
 
-次のコードは終了ハンドラーを使用して、3 つのファイルとで割り当てられたメモリ ブロックを閉じるなど、 **__try**ステートメント ブロックです。 コードでは、リソースをクリーンアップする前に、まずリソースが割り当てられているかどうかを確認しています。
+For example, the following code uses a termination handler to close three files and a memory block that were allocated in the **__try** statement block. コードでは、リソースをクリーンアップする前に、まずリソースが割り当てられているかどうかを確認しています。
 
 ```cpp
 // exceptions_Cleaning_up_Resources.cpp
@@ -72,5 +72,5 @@ int main() {
 
 ## <a name="see-also"></a>関連項目
 
-[終了ハンドラーの記述](../cpp/writing-a-termination-handler.md)<br/>
+[Writing a termination handler](../cpp/writing-a-termination-handler.md)<br/>
 [構造化例外処理 (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

@@ -1,15 +1,16 @@
 ---
-title: コンストラクターを持たないクラスと構造体の初期化 (C++)
-ms.date: 10/17/2018
+title: Brace initialization for classes, structs, and unions
+description: Use brace initialization with any C++ class, struct or union
+ms.date: 11/19/2019
 ms.assetid: 3e55c3d6-1c6b-4084-b9e5-221b151402f4
-ms.openlocfilehash: 4f696f4fc8862b953e40a03c96b88d1a0b7f720b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 41ff38bc4bcc9ebca913b5e66b5ac2f395044222
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183415"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246503"
 ---
-# <a name="initializing-classes-and-structs-without-constructors-c"></a>コンストラクターを持たないクラスと構造体の初期化 (C++)
+# <a name="brace-initialization"></a>Brace initialization
 
 クラスのコンストラクターの定義は、コンストラクターが比較的単純な場合は特に、必ずしも必要ではありません。 ユーザーは、次の例に示すように、均一初期化を使用してクラスまたは構造体のオブジェクトを初期化できます。
 
@@ -60,7 +61,110 @@ int main()
 }
 ```
 
-クラスまたは構造体にコンス トラクターがあるないとき、クラスで宣言したメンバーの順序でリスト要素を指定することに注意してください。 クラスにコンス トラクターがある場合は、パラメーターの順序で要素を提供します。
+Note that when a class or struct has no constructor, you provide the list elements in the order that the members are declared in the class. If the class has a constructor, provide the elements in the order of the parameters. 型に既定のコンストラクターがあり、暗黙的または明示的に宣言されている場合、(空のかっこで) 既定のかっこ初期化を使用できます。 たとえば、次のクラスは、既定のかっこ初期化と既定以外のかっこ初期化を使用して初期化できます。
+
+```cpp
+#include <string>
+using namespace std;
+
+class class_a {
+public:
+    class_a() {}
+    class_a(string str) : m_string{ str } {}
+    class_a(string str, double dbl) : m_string{ str }, m_double{ dbl } {}
+double m_double;
+string m_string;
+};
+
+int main()
+{
+    class_a c1{};
+    class_a c1_1;
+
+    class_a c2{ "ww" };
+    class_a c2_1("xx");
+
+    // order of parameters is the same as the constructor
+    class_a c3{ "yy", 4.4 };
+    class_a c3_1("zz", 5.5);
+}
+```
+
+クラスに既定以外のコンストラクターがある場合、クラス メンバーがかっこ初期化に表示される順序は、対応するパラメーターがコンストラクターに表示される順序になります。メンバーが宣言される順序ではありません (前の例の `class_a` と同様)。 それ以外の場合、宣言されたコンストラクターが型にないときは、メンバーがかっこ初期化に表示される順序とメンバーが宣言される順序は同じです。この場合、必要な数だけパブリック メンバーを初期化できますが、メンバーをスキップすることはできません。 次の例は、宣言されたコンストラクターがないときに、かっこ初期化で使用される順序を示しています。
+
+```cpp
+class class_d {
+public:
+    float m_float;
+    string m_string;
+    wchar_t m_char;
+};
+
+int main()
+{
+    class_d d1{};
+    class_d d1{ 4.5 };
+    class_d d2{ 4.5, "string" };
+    class_d d3{ 4.5, "string", 'c' };
+
+    class_d d4{ "string", 'c' }; // compiler error
+    class_d d5("string", 'c', 2.0 }; // compiler error
+}
+```
+
+既定のコンストラクターが明示的に宣言されていても、削除対象としてマークされている場合は、既定のかっこ初期化は使用できません。
+
+```cpp
+class class_f {
+public:
+    class_f() = delete;
+    class_f(string x): m_string { x } {}
+    string m_string;
+};
+int main()
+{
+    class_f cf{ "hello" };
+    class_f cf1{}; // compiler error C2280: attempting to reference a deleted function
+}
+```
+
+You can use brace initialization anywhere you would typically do initialization—for example, as a function parameter or a return value, or with the **new** keyword:
+
+```cpp
+class_d* cf = new class_d{4.5};
+kr->add_d({ 4.5 });
+return { 4.5 };
+```
+
+## <a name="initializer_list-constructors"></a>initializer_list constructors
+
+The [initializer_list Class](../standard-library/initializer-list-class.md) represents a list of objects of a specified type that can be used in a constructor, and in other contexts. かっこ初期化を使用して、initializer_list を構築できます。
+
+```cpp
+initializer_list<int> int_list{5, 6, 7};
+```
+
+> [!IMPORTANT]
+>  To use this class, you must include the [\<initializer_list>](../standard-library/initializer-list.md) header.
+
+`initializer_list` をコピーできます。 この場合、新しいリストのメンバーは、元のリストのメンバーを参照します。
+
+```cpp
+initializer_list<int> ilist1{ 5, 6, 7 };
+initializer_list<int> ilist2( ilist1 );
+if (ilist1.begin() == ilist2.begin())
+    cout << "yes" << endl; // expect "yes"
+```
+
+標準ライブラリのコンテナー クラスと、`string`、`wstring`、および `regex` にも `initializer_list` コンストラクターが含まれます。 次の例は、これらのコンストラクターでかっこ初期化を行う方法を示しています。
+
+```cpp
+vector<int> v1{ 9, 10, 11 };
+map<int, string> m1{ {1, "a"}, {2, "b"} };
+string s{ 'a', 'b', 'c' };
+regex rgx{'x', 'y', 'z'};
+```
+
 
 ## <a name="see-also"></a>関連項目
 

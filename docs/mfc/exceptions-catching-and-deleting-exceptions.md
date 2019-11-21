@@ -1,5 +1,5 @@
 ---
-title: 例外:キャッチと削除例外
+title: '例外処理 : 例外のキャッチと削除'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - exceptions [MFC], deleting
@@ -9,47 +9,47 @@ helpviewer_keywords:
 - catch blocks [MFC], catching and deleting exceptions
 - execution [MFC], returns from within catch block
 ms.assetid: 7c233ff0-89de-4de0-a68a-9e9cdb164311
-ms.openlocfilehash: 511850c3c17a4eb70529202f4b0c2b36132fc8ff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0142ffddfb391ae8da878d9e5fe34629cf16cb52
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62173294"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246692"
 ---
-# <a name="exceptions-catching-and-deleting-exceptions"></a>例外:キャッチと削除例外
+# <a name="exceptions-catching-and-deleting-exceptions"></a>例外処理 : 例外のキャッチと削除
 
-次の手順と例についてをキャッチし、例外を削除する方法を表示します。 詳細については、**try**、**catch**、および***throw**キーワードを参照してください[C++ 例外処理](../cpp/cpp-exception-handling.md)します。
+The following instructions and examples show you how to catch and delete exceptions. For more information on the **try**, **catch**, and **throw** keywords, see [Modern C++ best practices for exceptions and error handling](../cpp/errors-and-exception-handling-modern-cpp.md).
 
-そのコードが例外をキャッチするたびに、例外を削除する障害により、メモリ リークが発生しているため、例外ハンドラーは処理した例外オブジェクトを削除する必要があります。
+Your exception handlers must delete exception objects they handle, because failure to delete the exception causes a memory leak whenever that code catches an exception.
 
-**catch**ブロックが例外を削除する必要があるとき。
+Your **catch** block must delete an exception when:
 
-- **catch**ブロックが新しい例外をスローします。
+- The **catch** block throws a new exception.
 
-   もちろん、もう一度同じ例外をスローする場合、例外を削除できません必要があります。
+   Of course, you must not delete the exception if you throw the same exception again:
 
    [!code-cpp[NVC_MFCExceptions#3](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_1.cpp)]
 
-- 内から実行が、**catch**ブロックします。
+- Execution returns from within the **catch** block.
 
 > [!NOTE]
->  削除するときに、`CException`を使用して、`Delete`例外を削除するメンバー関数。 使用しないでください、**delete**キーワード、ため、例外が、ヒープ上にない場合に失敗します。
+>  When deleting a `CException`, use the `Delete` member function to delete the exception. Do not use the **delete** keyword, because it can fail if the exception is not on the heap.
 
-#### <a name="to-catch-and-delete-exceptions"></a>キャッチし、例外を削除するには
+#### <a name="to-catch-and-delete-exceptions"></a>To catch and delete exceptions
 
-1. **try**ブロックを設定するには、**try**キーワードを使用します。 **try**ブロック内で例外をスローする可能性のあるプログラムステートメントを実行します。
+1. Use the **try** keyword to set up a **try** block. Execute any program statements that might throw an exception within a **try** block.
 
-   **catch**キーワードを使用して、**catch**ブロックを設定します。 **catch**ブロックに例外処理コードを配置します。 **catch**ブロック内のコードは、**try**ブロック内のコードが**catch**ステートメントで指定されたタイプの例外をスローした場合にのみ実行されます。
+   Use the **catch** keyword to set up a **catch** block. Place exception-handling code in a **catch** block. The code in the **catch** block is executed only if the code within the **try** block throws an exception of the type specified in the **catch** statement.
 
-   次のスケルトンは、**try**と**catch**ブロックの通常の配置方法を示しています。
+   The following skeleton shows how **try** and **catch** blocks are normally arranged:
 
    [!code-cpp[NVC_MFCExceptions#4](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_2.cpp)]
 
-   最初に制御が移ります例外がスローされたときに**catch**ブロックの例外宣言、例外の種類に対応します。 シーケンシャルでの例外の種類を選択的に処理できる**catch**次に示すようにブロックします。
+   When an exception is thrown, control passes to the first **catch** block whose exception-declaration matches the type of the exception. You can selectively handle different types of exceptions with sequential **catch** blocks as listed below:
 
    [!code-cpp[NVC_MFCExceptions#5](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_3.cpp)]
 
-詳細については、次を参照してください。[例外。MFC 例外マクロからの変換](../mfc/exceptions-converting-from-mfc-exception-macros.md)します。
+For more information, see [Exceptions: Converting from MFC Exception Macros](../mfc/exceptions-converting-from-mfc-exception-macros.md).
 
 ## <a name="see-also"></a>関連項目
 

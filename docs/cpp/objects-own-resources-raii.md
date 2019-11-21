@@ -3,20 +3,20 @@ title: リソースを所有するオブジェクト (RAII)
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: f86b484e-5a27-4c3b-a92a-dfaa5dd6d93a
-ms.openlocfilehash: 5705fc1996343141b13e37d1267b2e8c981c1eba
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d100d4a9df5d829566e4856594c44dcf4057a329
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245090"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74245591"
 ---
 # <a name="objects-own-resources-raii"></a>リソースを所有するオブジェクト (RAII)
 
-独自のリソース オブジェクトを確認します。 この原則とも呼ばれます"resource acquisition is 初期化"または"RAII"。
+Make sure that objects own resources. This principle is also known as “resource acquisition is initialization” or “RAII.”
 
 ## <a name="example"></a>例
 
-(ほとんどの場合に unique_ptr) それを所有する別の名前付きオブジェクトをコンス トラクター引数としてすべての「新しい」オブジェクトを渡します。
+Pass every “new” object as a constructor argument to another named object that owns it (almost always unique_ptr).
 
 ```cpp
 void f() {
@@ -27,7 +27,7 @@ void f() {
   // automatic exception safety, as if "finally { p->dispose(); x.w.dispose(); }"
 ```
 
-常にすぐに、新しいリソースを所有する別のオブジェクトに渡します。
+Always immediately pass any new resource to another object that owns it.
 
 ```cpp
 void g() {
@@ -39,6 +39,6 @@ void g() {
 
 ## <a name="see-also"></a>関連項目
 
-[C++ へようこそ (Modern C++)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[Welcome back to C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [C++ 言語リファレンス](../cpp/cpp-language-reference.md)<br/>
 [.NET 標準ライブラリ](../standard-library/cpp-standard-library-reference.md)

@@ -1,29 +1,29 @@
 ---
-title: '方法: 例外安全性のための設計'
+title: 'How to: Design for exception safety'
 ms.custom: how-to
-ms.date: 11/04/2016
+ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 19ecc5d4-297d-4c4e-b4f3-4fccab890b3d
-ms.openlocfilehash: 37ebcc646864774b15513c9e1891ba14e0705298
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 48a2f5a94eb2695c0a08a0ae397d02080e7e1261
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183714"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246516"
 ---
-# <a name="how-to-design-for-exception-safety"></a>方法: 例外安全性のための設計
+# <a name="how-to-design-for-exception-safety"></a>How to: Design for exception safety
 
 例外機構の利点の 1 つは、例外をスローするステートメントから例外を処理する最初の catch ステートメントに、例外に関するデータと共に実行が直接ジャンプすることです。 ハンドラーは呼び出し履歴の何レベル上であってもかまいません。 try ステートメントと throw ステートメントの間で呼び出された関数は、スローされる例外に関して何も知る必要がありません。  ただし、例外が下から上に通知される可能性があるどの時点でも、予期せずにスコープから外れることができるように関数が設計されている必要があり、部分的に作成されたオブジェクト、リークしたメモリ、使用不能な状態のデータ構造体などが部分的に残らないようになっている必要があります。
 
-## <a name="basic-techniques"></a>基本技術
+## <a name="basic-techniques"></a>Basic techniques
 
 堅牢な例外処理ポリシーには、熟考が必要であり、デザイン プロセスの一部になっている必要があります。 一般に、ほとんどの例外は、ソフトウェア モジュールの下位層で検出されてスローされますが、一般にこれらの層には、エラーを処理したり、エンド ユーザーにメッセージを通知するための十分なコンテキストがありません。 中間層の関数は、例外オブジェクトを検査する必要があったり、最終的に例外をキャッチする上位層のための有用な追加情報がある場合に、例外をキャッチして再スローできます。 関数が例外をキャッチしてそれを "飲み込む" ことができるのは、例外から完全に回復できる場合のみです。 多くの場合、中間層の正しい動作は、呼び出し履歴の上方向へ例外を伝達することです。 最上位層でも、例外によってプログラムがその正しさを保証できない状態になる場合は、例外を処理せずにプログラムを終了するのが適切な場合があります。
 
 関数が例外を処理する方法にかかわらず、"例外セーフ" であることを保証するには、次の基本的なルールに従って関数が設計されている必要があります。
 
-### <a name="keep-resource-classes-simple"></a>リソース クラスを単純にする
+### <a name="keep-resource-classes-simple"></a>Keep resource classes simple
 
-クラスでの手動によるリソース管理をカプセル化するときに、1 つのリソースの管理以外何も実行しないクラスを使用します。 クラスをシンプルに保つには、リソースのリークを導入するリスクを減らします。 使用[スマート ポインター](../cpp/smart-pointers-modern-cpp.md)可能な場合、次の例に示すようにします。 この例は、`shared_ptr` を使用した場合の相違点を強調するため、意図的に作成し簡略化されています。
+When you encapsulate manual resource management in classes, use a class that does nothing except manage a single resource. By keeping the class simple, you reduce the risk of introducing resource leaks. Use [smart pointers](smart-pointers-modern-cpp.md) when possible, as shown in the following example. この例は、`shared_ptr` を使用した場合の相違点を強調するため、意図的に作成し簡略化されています。
 
 ```cpp
 // old-style new/delete version
@@ -83,29 +83,29 @@ public:
 };
 ```
 
-### <a name="use-the-raii-idiom-to-manage-resources"></a>RAII の表現形式を使用してリソースを管理する
+### <a name="use-the-raii-idiom-to-manage-resources"></a>Use the RAII idiom to manage resources
 
-使用して、割り当てられているオブジェクトを例外セーフにするには、関数を確認する必要があります`malloc`または**new**が破棄され、ファイル ハンドルなどのすべてのリソースが閉じられるか、例外がスローされた場合でもリリースされたとします。 *Resource Acquisition Is Initialization* (RAII) の表現形式の自動変数の有効期間には、このようなリソースの管理に結び付いています。 正常に返るか例外により関数がスコープから外れた場合、すべての完全構築された自動変数のデストラクターが呼び出されます。 スマート ポインターなどの RAII ラッパー オブジェクトは、デストラクターの中で適切な delete または close 関数を呼び出します。 例外セーフなコードでは、なんらかの種類の RAII オブジェクトに各リソースの所有権をすぐに渡すことが非常に重要です。 なお、 `vector`、 `string`、 `make_shared`、 `fstream`、および同様のクラス処理するためのリソースを取得します。  ただし、`unique_ptr`と従来`shared_ptr`構造は、リソースの取得がオブジェクトではなく、ユーザーが実行されるため、特別な; としてカウントするため、*リソース リリースが破棄*されますが、問題のある RAII として。
+To be exception-safe, a function must ensure that objects that it has allocated by using `malloc` or **new** are destroyed, and all resources such as file handles are closed or released even if an exception is thrown. The *Resource Acquisition Is Initialization* (RAII) idiom ties management of such resources to the lifespan of automatic variables. 正常に返るか例外により関数がスコープから外れた場合、すべての完全構築された自動変数のデストラクターが呼び出されます。 スマート ポインターなどの RAII ラッパー オブジェクトは、デストラクターの中で適切な delete または close 関数を呼び出します。 例外セーフなコードでは、なんらかの種類の RAII オブジェクトに各リソースの所有権をすぐに渡すことが非常に重要です。 Note that the `vector`, `string`, `make_shared`, `fstream`, and similar classes handle acquisition of the resource for you.  However, `unique_ptr` and traditional `shared_ptr` constructions are special because resource acquisition is performed by the user instead of the object; therefore, they count as *Resource Release Is Destruction* but are questionable as RAII.
 
-## <a name="the-three-exception-guarantees"></a>3 種類の例外保証
+## <a name="the-three-exception-guarantees"></a>The three exception guarantees
 
-例外安全性が関数を提供する 3 つの例外保証に関して議論は通常、: *no-fail 保証*、 *strong 保証*、および*basic 保証*.
+Typically, exception safety is discussed in terms of the three exception guarantees that a function can provide: the *no-fail guarantee*, the *strong guarantee*, and the *basic guarantee*.
 
-### <a name="no-fail-guarantee"></a>no-fail 保証
+### <a name="no-fail-guarantee"></a>No-fail guarantee
 
 no-fail (または no-throw) 保証は、関数が提供できる最も強力な保証です。 それは、関数が例外をスローしないか、例外の伝達を許可することを示します。 ただし、(a) この関数が呼び出すすべての関数が no-fail であることがわかっているか、(b) スローされるすべての例外がこの関数に達する前にキャッチされることがわかっているか、(c) この関数に達する可能性があるすべての例外をキャッチし正しく処理する方法がわかっている場合を除いて、確実にこのようなことを保証できません。
 
-strong 保証と basic 保証のどちらも、デストラクターが no-fail であることを前提としています。 標準ライブラリのすべてのコンテナーと型は、デストラクターが例外をスローしないことを保証します。 逆の要件です。標準ライブラリは、ユーザー定義型が必要ですに指定されます: たとえば、テンプレート引数として — デストラクターをスローしない必要があります。
+strong 保証と basic 保証のどちらも、デストラクターが no-fail であることを前提としています。 標準ライブラリのすべてのコンテナーと型は、デストラクターが例外をスローしないことを保証します。 また、逆の要件もあります。標準ライブラリでは、テンプレート引数として渡される型など、ユーザー定義型のデストラクターが、例外をスローしないことが必要です。
 
-### <a name="strong-guarantee"></a>strong 保証
+### <a name="strong-guarantee"></a>Strong guarantee
 
 strong 保証は、関数が例外によりスコープから外れる場合、メモリをリークせず、プログラムの状態が変化しないことを示します。 strong 保証を提供する関数は、基本的にコミットまたはロールバック セマンティクスを持つトランザクションです。つまり、完全に成功するか無効かのどちらかになります。
 
-### <a name="basic-guarantee"></a>basic 保証
+### <a name="basic-guarantee"></a>Basic guarantee
 
 basic 保証は、3 つのうちで最も弱い保証です。 ただし、strong 保証がメモリ消費またはパフォーマンスの点で高価すぎる場合に最善の選択肢となる場合があります。 basic 保証は、例外が発生した場合は、データが変更された可能性があるとしても、メモリがリークせず、オブジェクトが引き続き使用可能な状態にあることを示します。
 
-## <a name="exception-safe-classes"></a>例外セーフなクラス
+## <a name="exception-safe-classes"></a>Exception-safe classes
 
 クラスは、安全でない関数で使用される場合であっても、自身が部分的に構築されたり部分的に破棄されるのを防ぐことにより、自身の例外セーフ性を保証するのに役立つことがあります。 クラス コンストラクターが完了前に終了した場合、オブジェクトは作成されず、そのデストラクターは決して呼び出されません。 例外の前に初期化された自動変数のデストラクターは呼び出されますが、動的に割り当てられたメモリや、スマート ポインターなどの自動変数によって管理されていないリソースはリークすることになります。
 
@@ -121,5 +121,5 @@ basic 保証は、3 つのうちで最も弱い保証です。 ただし、stron
 
 ## <a name="see-also"></a>関連項目
 
-[エラーと例外の処理 (Modern C++)](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
-[例外的なコードと非例外的なコード間をインターフェイスで連結する方法](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)
+[Modern C++ best practices for exceptions and error handling](errors-and-exception-handling-modern-cpp.md)<br/>
+[方法: 例外的なコードと非例外的なコードをインターフェイスで連結する](how-to-interface-between-exceptional-and-non-exceptional-code.md)

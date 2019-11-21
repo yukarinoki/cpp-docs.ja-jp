@@ -8,16 +8,16 @@ helpviewer_keywords:
 - bad_typeid exception
 - exceptions [C++], bad_typeid
 ms.assetid: 5963ed58-4ede-4597-957d-f7bbd06299c2
-ms.openlocfilehash: 6410f27342ed40300ff236ee1c47ada740255f84
-ms.sourcegitcommit: c51b2c665849479fa995bc3323a22ebe79d9d7ce
+ms.openlocfilehash: bb56de77ba001b5a511ef3a2695d18109b1ed3ca
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71998806"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74245914"
 ---
 # <a name="bad_typeid-exception"></a>bad_typeid 例外
 
-**Typeid**のオペランドが NULL ポインターの場合、 [typeid 演算子](../cpp/typeid-operator.md)によって**bad_typeid**例外がスローされます。
+The **bad_typeid** exception is thrown by the [typeid operator](../cpp/typeid-operator.md) when the operand for **typeid** is a NULL pointer.
 
 ## <a name="syntax"></a>構文
 
@@ -26,9 +26,9 @@ catch (bad_typeid)
    statement
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**Bad_typeid**のインターフェイスは次のとおりです。
+The interface for **bad_typeid** is:
 
 ```cpp
 class bad_typeid : public exception
@@ -44,7 +44,7 @@ public:
 };
 ```
 
-次の例は、 **bad_typeid**例外をスローする**typeid**演算子を示しています。
+The following example shows the **typeid** operator throwing a **bad_typeid** exception.
 
 ```cpp
 // expre_bad_typeid.cpp
@@ -72,7 +72,7 @@ catch (bad_typeid){
 }
 ```
 
-## <a name="output"></a>[出力]
+## <a name="output"></a>出力
 
 ```Output
 Object is NULL

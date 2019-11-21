@@ -1,5 +1,5 @@
 ---
-title: 例外の仕様 (スロー、noexcept) (C++)
+title: Exception specifications (throw, noexcept) (C++)
 ms.date: 01/18/2018
 helpviewer_keywords:
 - exceptions [C++], exception specifications
@@ -8,55 +8,55 @@ helpviewer_keywords:
 - throw keyword [C++]
 - noexcept keyword [C++]
 ms.assetid: 4d3276df-6f31-4c7f-8cab-b9d2d003a629
-ms.openlocfilehash: a3d4c0446cd8dde83febb1b4269811b5dec3c477
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 8245704de16ba94dbe0479a3c19d2a83fb170989
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222110"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74245879"
 ---
-# <a name="exception-specifications-throw-noexcept-c"></a>例外の仕様 (スロー、noexcept) (C++)
+# <a name="exception-specifications-throw-noexcept-c"></a>Exception specifications (throw, noexcept) (C++)
 
-例外の仕様は、関数で伝えることができる例外の種類についてのプログラマの意図を示す C++ 言語機能です。 関数は可能性がありますかを使用して、例外によって終了可能性がありますを指定できます、*例外仕様*します。 コンパイラは、関数の呼び出しを最適化するためにこの情報を使用することができ、予期しない例外の場合、プログラムを終了する関数をエスケープします。
+Exception specifications are a C++ language feature that indicate the programmer's intent about the exception types that can be propagated by a function. You can specify that a function may or may not exit by an exception by using an *exception specification*. The compiler can use this information to optimize calls to the function, and to terminate the program if an unexpected exception escapes the function.
 
-C++ 17 の前に、例外の指定の 2 種類がありました。 *Noexcept 仕様*c++ 11 で新しく追加されました。 これは、関数をエスケープできる潜在的な例外のセットが空かどうかを指定します。 *動的例外指定*、または`throw(optional_type_list)`仕様が c++ 11 で非推奨し、以外の c++ 17 では削除`throw()`のエイリアスである`noexcept(true)`します。 この例外の指定は、関数からスローできる例外に関する概要情報を提供するよう設計されましたが、実際に問題がある検出されました。 ある程度役に立つことが 1 つの動的例外指定が、無条件`throw()`仕様。 たとえば、関数宣言します。
+Prior to C++17 there were two kinds of exception specification. The *noexcept specification* was new in C++11. It specifies whether the set of potential exceptions that can escape the function is empty. The *dynamic exception specification*, or `throw(optional_type_list)` specification, was deprecated in C++11 and removed in C++17, except for `throw()`, which is an alias for `noexcept(true)`. This exception specification was designed to provide summary information about what exceptions can be thrown out of a function, but in practice it was found to be problematic. The one dynamic exception specification that did prove to be somewhat useful was the unconditional `throw()` specification. For example, the function declaration:
 
 ```cpp
 void MyFunction(int i) throw();
 ```
-このコードでは、コンパイル時に関数が例外をスローしません。 ただし、 **/std:c++14**モードにする可能性が未定義の動作が、関数は例外をスローする場合。 使用して勧めそのため、 [noexcept](../cpp/noexcept-cpp.md)上ではなく演算子。
+このコードでは、コンパイル時に関数が例外をスローしません。 However, in **/std:c++14** mode this could lead to undefined behavior if the function does throw an exception. Therefore we recommend using the [noexcept](../cpp/noexcept-cpp.md) operator instead of the one above:
 
 ```cpp
 void MyFunction(int i) noexcept;
 ```
-次の表は、MicrosoftC++例外の仕様の実装。
+The following table summarizes the Microsoft C++ implementation of exception specifications:
 
 |例外の指定|説明|
 |-----------------------------|-------------|
-|`noexcept`<br/>`noexcept(true)`<br/>`throw()`|関数は例外をスローしません。 [/Std:c + + 14](../build/reference/std-specify-language-standard-version.md)モード (既定)、`noexcept`と`noexcept(true)`は同等です。 宣言されている関数から例外をスローするときに`noexcept`または`noexcept(true)`、 [std::terminate](../standard-library/exception-functions.md#terminate)が呼び出されます。 として宣言されている関数から例外をスローするときに`throw()`で **/std:c + + + 14**モードでは、結果は未定義の動作です。 特定の関数は呼び出されません。 これは、コンパイラを呼び出すを必要とする、標準の c++ 14 からの逸脱[std::unexpected](../standard-library/exception-functions.md#unexpected)します。  <br/> **Visual Studio 2017 バージョン 15.5 以降**: **/Std:c + + 17**モード、 `noexcept`、 `noexcept(true)`、および`throw()`はすべて同等です。 **/Std:c + + 17**モード、`throw()`の別名です`noexcept(true)`します。 **/Std:c + + + 17**モードで、これらの仕様のいずれかで宣言された関数から例外がスローされたときに[std::terminate](../standard-library/exception-functions.md#terminate)が呼び出される標準の c++ 17 で必要とします。|
-|`noexcept(false)`<br/>`throw(...)`<br/>なしの仕様|関数は、任意の型の例外をスローできます。|
-|`throw(type)`| (**C++ 14 以降**)、関数型の例外をスローする`type`します。 コンパイラは、構文を受け入れますが、として解釈`noexcept(false)`します。 **/std:c++17**モード、コンパイラは警告 C5040 を発行します。|
+|`noexcept`<br/>`noexcept(true)`<br/>`throw()`|関数は例外をスローしません。 In [/std:c++14](../build/reference/std-specify-language-standard-version.md) mode (which is the default), `noexcept` and `noexcept(true)` are equivalent. When an exception is thrown from a function that is declared `noexcept` or `noexcept(true)`, [std::terminate](../standard-library/exception-functions.md#terminate) is invoked. When an exception is thrown from a function declared as `throw()` in **/std:c++14** mode, the result is undefined behavior. No specific function is invoked. This is a divergence from the C++14 standard, which required the compiler to invoke [std::unexpected](../standard-library/exception-functions.md#unexpected).  <br/> **Visual Studio 2017 version 15.5 and later**: In **/std:c++17** mode , `noexcept`, `noexcept(true)`, and `throw()` are all equivalent. In **/std:c++17** mode, `throw()` is an alias for `noexcept(true)`. In **/std:c++17** mode, when an exception is thrown from a function declared with any of these specifications, [std::terminate](../standard-library/exception-functions.md#terminate)  is invoked as required by the C++17 standard.|
+|`noexcept(false)`<br/>`throw(...)`<br/>No specification|The function can throw an exception of any type.|
+|`throw(type)`| (**C++14 and earlier**) The function can throw an exception of type `type`. The compiler accepts the syntax, but interprets it as `noexcept(false)`. In **/std:c++17** mode the compiler issues warning C5040.|
 
-例外処理をアプリケーションで使用する場合があります関数関数の外側のスコープを終了する前に、スローされた例外のハンドルがマークされている呼び出し履歴で`noexcept`、 `noexcept(true)`、または`throw()`します。 例外をスローする 1 つと、例外を処理する 1 つとして指定の間で任意の関数が呼び出された場合`noexcept`、 `noexcept(true)` (または`throw()`で **/std:c++17**モード)、プログラムが終了したときに、noexcept 関数には、例外が伝達されます。
+If exception handling is used in an application, there must be a function in the call stack that handles thrown exceptions before they exit the outer scope of a function marked `noexcept`, `noexcept(true)`, or `throw()`. If any functions called between the one that throws an exception and the one that handles the exception are specified as `noexcept`, `noexcept(true)` (or `throw()` in **/std:c++17** mode), the program is terminated when the noexcept function propagates the exception.
 
-関数の例外動作は、次の要因によって異なります。
+The exception behavior of a function depends on the following factors:
 
-- [言語標準のコンパイル モード](../build/reference/std-specify-language-standard-version.md)設定されます。
+- Which [language standard compilation mode](../build/reference/std-specify-language-standard-version.md) is set.
 - C または C++ で関数をコンパイルするかどうか。
 
-- これは、 [/EH](../build/reference/eh-exception-handling-model.md)コンパイラ オプションを使用します。
+- Which [/EH](../build/reference/eh-exception-handling-model.md) compiler option you use.
 
 - 例外の指定を明示的に使用するかどうか。
 
-明示的な例外の指定は C 関数では使用できません。 C 関数が下の例外をスローしていないと見なされます **/EHsc**、構造化例外をスローする可能性が、 **/EHs**、 **/EHa**、または **/EHac**します。
+明示的な例外の指定は C 関数では使用できません。 A C function is assumed not to throw exceptions under **/EHsc**, and may throw structured exceptions under **/EHs**, **/EHa**, or **/EHac**.
 
-次の表は、C++ 関数はさまざまなコンパイラ例外の処理オプションの下でスローすることは可能性がある可能性があるかどうかをまとめたものです。
+The following table summarizes whether a C++ function may potentially throw under various compiler exception handling options:
 
-|関数|/EHsc|/EHs|/EHa|/EHac|
+|機能|/EHsc|/EHs|/EHa|/EHac|
 |--------------|------------|-----------|-----------|------------|
-|例外を指定していない C++ 関数|はい|はい|はい|[はい]|
-|C++ 関数`noexcept`、 `noexcept(true)`、または`throw()`例外の指定|いいえ|×|[はい]|[はい]|
-|C++ 関数`noexcept(false)`、 `throw(...)`、または`throw(type)`例外の指定|はい|はい|はい|[はい]|
+|例外を指定していない C++ 関数|[はい]|[はい]|[はい]|[はい]|
+|C++ function with `noexcept`, `noexcept(true)`, or `throw()` exception specification|Ｘ|Ｘ|[はい]|[はい]|
+|C++ function with `noexcept(false)`, `throw(...)`, or `throw(type)` exception specification|[はい]|[はい]|[はい]|[はい]|
 
 ## <a name="example"></a>例
 
@@ -130,4 +130,4 @@ in handler
 ## <a name="see-also"></a>関連項目
 
 [try、throw、catch ステートメント (C++)](../cpp/try-throw-and-catch-statements-cpp.md)<br/>
-[C++ 例外処理](../cpp/cpp-exception-handling.md)
+[Modern C++ best practices for exceptions and error handling](errors-and-exception-handling-modern-cpp.md)

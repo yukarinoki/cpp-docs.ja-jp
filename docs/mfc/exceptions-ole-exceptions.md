@@ -1,5 +1,5 @@
 ---
-title: 例外:OLE の例外
+title: '例外処理 : OLE の例外'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - OLE, exceptions
@@ -8,38 +8,38 @@ helpviewer_keywords:
 - exception handling [MFC], OLE
 - OLE exceptions [MFC], classes for handling
 ms.assetid: 2f8e0161-b94f-48bb-a5a2-6f644b192527
-ms.openlocfilehash: e404005a88398ec909e3043cfa55c7e8fbe2f594
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1606a0f5a86996345e12024cf6416afdf6bdc82b
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405965"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246705"
 ---
-# <a name="exceptions-ole-exceptions"></a>例外:OLE の例外
+# <a name="exceptions-ole-exceptions"></a>例外処理 : OLE の例外
 
-手法と OLE の例外を処理するための機能は、その他の例外を処理するためのものと同じです。 例外処理の詳細については、記事を参照してください。 [C++ 例外処理](../cpp/cpp-exception-handling.md)します。
+The techniques and facilities for handling exceptions in OLE are the same as those for handling other exceptions. For further information on exception handling, see the article [Modern C++ best practices for exceptions and error handling](../cpp/errors-and-exception-handling-modern-cpp.md).
 
-すべての例外オブジェクトの抽象基本クラスから派生`CException`します。 MFC には、OLE の例外を処理するための 2 つのクラスが用意されています。
+All exception objects are derived from the abstract base class `CException`. MFC provides two classes for handling OLE exceptions:
 
-- [COleException](../mfc/reference/coleexception-class.md)全般 OLE の例外を処理するためです。
+- [COleException](../mfc/reference/coleexception-class.md) For handling general OLE exceptions.
 
-- [COleDispatchException](../mfc/reference/coledispatchexception-class.md)の生成と OLE の処理 (オートメーション) 例外をディスパッチします。
+- [COleDispatchException](../mfc/reference/coledispatchexception-class.md) For generating and handling OLE dispatch (automation) exceptions.
 
-これら 2 つのクラス間の違いは、それらのもたらすし、が使用されている情報の量です。 `COleException` OLE の例外のステータス コードを含むパブリック データ メンバーがあります。 `COleDispatchException` 詳細については、次を指定します。
+The difference between these two classes is the amount of information they provide and where they are used. `COleException` has a public data member that contains the OLE status code for the exception. `COleDispatchException` supplies more information, including the following:
 
-- アプリケーション固有のエラー コード
+- An application-specific error code
 
-- 「ディスクがいっぱいです」など、エラーの説明
+- An error description, such as "Disk full"
 
-- アプリケーションで使用して、ユーザーの追加情報を提供するためのヘルプ コンテキスト
+- A Help context that your application can use to provide additional information for the user
 
-- アプリケーションのヘルプ ファイルの名前
+- The name of your application's Help file
 
-- 例外を生成したアプリケーションの名前
+- The name of the application that generated the exception
 
-`COleDispatchException` 詳しくは、Microsoft Visual Basic などの製品と使用できるように説明します。 メッセージ ボックスまたは他の通知では、口頭でのエラーの説明を使用できます。例外の原因となった状況に対応するユーザーを支援するヘルプ情報を使用できます。
+`COleDispatchException` provides more information so that it can be used with products like Microsoft Visual Basic. The verbal error description can be used in a message box or other notification; the Help information can be used to help the user respond to the conditions that caused the exception.
 
-2 つのグローバル関数は、2 つの OLE 例外クラスに対応します。[AfxThrowOleException](../mfc/reference/exception-processing.md#afxthrowoleexception)と[AfxThrowOleDispatchException](../mfc/reference/exception-processing.md#afxthrowoledispatchexception)します。 それらを使用して、それぞれ一般的な OLE の例外と OLE ディスパッチの例外をスローします。
+Two global functions correspond to the two OLE exception classes: [AfxThrowOleException](../mfc/reference/exception-processing.md#afxthrowoleexception) and [AfxThrowOleDispatchException](../mfc/reference/exception-processing.md#afxthrowoledispatchexception). Use them to throw general OLE exceptions and OLE dispatch exceptions, respectively.
 
 ## <a name="see-also"></a>関連項目
 

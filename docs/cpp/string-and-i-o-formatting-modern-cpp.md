@@ -1,19 +1,19 @@
 ---
 title: 文字列および I/O の書式設定 (Modern C++)
-description: 書式設定された文字列 I/O の使用可能な最新の選択肢C++します。
+description: Choices for formatted string I/O available in modern C++.
 ms.date: 05/30/2019
 ms.topic: conceptual
 ms.assetid: 3954e8de-a59b-4175-89c9-4ee842ab89ed
-ms.openlocfilehash: e22c745798109a2dbef82297c45256593823f806
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: facb0b62cc1e92ed09a9ba729d766e5db7404282
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450499"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74245103"
 ---
 # <a name="string-and-io-formatting-modern-c"></a>文字列および I/O の書式設定 (Modern C++)
 
-C++[ \<iostream >](../standard-library/iostream.md)クラス、関数、および演算子は、I/O の書式設定された文字列をサポートします。 たとえば、次のコードが設定する方法を示します`cout`を 16 進数で出力の整数を書式設定します。 形式の状態が 1 回に渡されるためにその後、リセットするために現在の状態を保存、最初に、 `cout`、変更されるまでのままになります。 1 行のコードにだけは適用されません。
+C++ [\<iostream>](../standard-library/iostream.md) classes, functions, and operators support formatted string I/O. For example, the following code shows how to set `cout` to format an integer to output in hexadecimal. First, it saves the current state to reset it afterwards, because once format state is passed to `cout`, it stays that way until changed. It doesn't just apply to the one line of code.
 
 ```cpp
 #include <iostream>
@@ -39,21 +39,21 @@ int main()
 }
 ```
 
-この方法は、タイプ セーフと拡張性を併せ持つが複雑で冗長ではも。
+This approach is type-safe and extensible, but it's also complex and verbose.
 
-## <a name="alternative-format-options"></a>代替形式のオプション
+## <a name="alternative-format-options"></a>Alternative format options
 
-代わりに、使用することができます`Boost.Format`、Boost からC++が標準でない場合でも、ライブラリ。 任意の Boost ライブラリをダウンロードすることができます、 [Boost](https://www.boost.org/) web サイト。
+As an alternative, you can use `Boost.Format` from the Boost C++ libraries, even though it’s nonstandard. You can download any Boost library from the [Boost](https://www.boost.org/) website.
 
-いくつかの利点の`Boost.Format`は。
+Some advantages of `Boost.Format` are:
 
-- 安全性:タイプ セーフが多すぎるか少なすぎます項目の仕様などのエラー、例外をスローします。
+- Safe: Type-safe, and throws an exception for errors, for example, the specification of too few or too many items.
 
-- 拡張。ストリーム配信できる任意の型に対して機能します。
+- 拡張可能: ストリーム可能なすべての型を処理できます。
 
-- 便利です。標準 Posix と類似の書式指定文字列。
+- 便利: 標準 Posix と類似の書式指定文字列。
 
-`Boost.Format`上に構築されたC++ [ \<iostream >](../standard-library/iostream-programming.md)施設で、安全で拡張可能では、パフォーマンスが最適化されたはありません。 パフォーマンスの最適化を必要とする場合は、C を検討してください[printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)と[sprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)は高速で簡単に使用します。 ただし、これらは、拡張可能なまたは脆弱性から安全はありません。 (セキュリティが強化されたバージョンがありますが、わずかながらパフォーマンスが低下します。 詳細については、次を参照してください。 [printf_s、_printf_s_l、wprintf_s、_wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)と[sprintf_s、_sprintf_s_l、swprintf_s、_swprintf_s_l](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md))。
+Although `Boost.Format` is built on C++ [\<iostream>](../standard-library/iostream-programming.md) facilities, which are safe and extensible, they aren't performance-optimized. When you require performance optimization, consider C [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) and [sprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md), which are fast and easy to use. However, they aren't extensible or safe from vulnerabilities. (セキュリティが強化されたバージョンがありますが、わずかながらパフォーマンスが低下します。 For more information, see [printf_s, _printf_s_l, wprintf_s, _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md) and [sprintf_s, _sprintf_s_l, swprintf_s, _swprintf_s_l](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)).
 
 次のコードは、Boost の書式設定機能のいくつかを示します。
 
@@ -69,9 +69,9 @@ int main()
 
 ## <a name="see-also"></a>関連項目
 
-[C++ へようこそ (Modern C++)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[Welcome back to C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [C++ 言語リファレンス](../cpp/cpp-language-reference.md)<br/>
 [.NET 標準ライブラリ](../standard-library/cpp-standard-library-reference.md)<br/>
 [\<iostream>](../standard-library/iostream.md)<br/>
 [\<limits>](../standard-library/limits.md)<br/>
-[\<iomanip>](../standard-library/iomanip.md)
+[\<iomanip >](../standard-library/iomanip.md)
