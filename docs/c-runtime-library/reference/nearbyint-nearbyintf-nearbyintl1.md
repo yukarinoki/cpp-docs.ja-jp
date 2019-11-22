@@ -1,4 +1,4 @@
----
+﻿---
 title: nearbyint、nearbyintf、nearbyintl
 ms.date: 04/05/2018
 api_name:

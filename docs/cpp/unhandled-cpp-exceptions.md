@@ -1,4 +1,4 @@
----
+﻿---
 title: 未処理の C++ 例外
 ms.date: 11/04/2016
 helpviewer_keywords:

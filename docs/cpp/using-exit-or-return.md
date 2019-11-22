@@ -1,4 +1,4 @@
----
+﻿---
 title: exit または return の使用
 ms.date: 11/04/2016
 f1_keywords:

@@ -1,4 +1,4 @@
----
+﻿---
 title: 'How to: Design for exception safety'
 ms.custom: how-to
 ms.date: 11/19/2019

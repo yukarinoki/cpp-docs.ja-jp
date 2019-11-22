@@ -1,4 +1,4 @@
----
+﻿---
 title: atoll、_atoll_l、_wtoll、_wtoll_l
 ms.date: 11/04/2016
 api_name:

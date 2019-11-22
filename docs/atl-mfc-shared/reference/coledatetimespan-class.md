@@ -1,4 +1,4 @@
----
+﻿---
 title: COleDateTimeSpan クラス
 ms.date: 03/27/2019
 f1_keywords:
@@ -75,7 +75,7 @@ class COleDateTimeSpan
 |[operator +、-](#operator_add_-)|`COleDateTimeSpan`の値の加算、減算、および符号の変更。|
 |[operator +=, -=](#operator_add_eq_-_eq)|加算および減算、`COleDateTimeSpan`値からこの`COleDateTimeSpan`値。|
 |[operator=](#operator_eq)|コピーを`COleDateTimeSpan`値。|
-|[演算子 = =、<、< =](#coledatetimespan_relational_operators)|比較する 2 つ`COleDateTimeSpan`値。|
+|[operator ==、<、<=](#coledatetimespan_relational_operators)|2 つの`COleDateTimeSpan`の値の比較。|
 |[operator double](#operator_double)|この`COleDateTimeSpan`の値を**double**に変換。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
@@ -551,7 +551,7 @@ double GetTotalSeconds() const throw();
 
 ##  <a name="m_span"></a>  COleDateTimeSpan::m_span
 
-この**オブジェクトの基になる**double**を含んでいます。
+この`COleDateTimeSpan`オブジェクトの基になる**double**を含んでいます。
 
 ```
 double m_span;
@@ -664,7 +664,7 @@ COleDateTimeSpan& operator-=(const COleDateTimeSpan dateSpan) throw();
 
 ##  <a name="operator_double"></a>  COleDateTimeSpan::operator double
 
-この`COleDateTimeSpan`の値を**double**に変換。
+この変換`COleDateTimeSpan`値を**double**します。
 
 ```
 operator double() const throw();

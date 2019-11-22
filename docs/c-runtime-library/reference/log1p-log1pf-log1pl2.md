@@ -1,4 +1,4 @@
----
+﻿---
 title: log1p、log1pf、log1pl2
 ms.date: 04/05/2018
 api_name:

@@ -1,4 +1,4 @@
----
+﻿---
 title: C++ type system
 ms.date: 11/19/2019
 ms.topic: conceptual

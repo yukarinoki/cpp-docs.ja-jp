@@ -1,4 +1,4 @@
----
+﻿---
 title: Pointers (C++)
 ms.date: 11/19/2019
 description: About raw pointers and smart pointers in Microsoft C++.

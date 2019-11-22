@@ -1,4 +1,4 @@
----
+﻿---
 title: x64 (amd64) 組み込み一覧
 ms.date: 04/18/2019
 helpviewer_keywords:

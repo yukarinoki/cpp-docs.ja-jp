@@ -1,4 +1,4 @@
----
+﻿---
 title: /permissive- (標準への準拠)
 ms.date: 03/08/2019
 f1_keywords:

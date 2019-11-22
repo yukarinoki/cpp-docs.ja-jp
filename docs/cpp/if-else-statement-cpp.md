@@ -113,7 +113,7 @@ int main()
 
 ## <a name="if_with_init"></a>if ステートメントと初期化子
 
-**Visual Studio 2017 バージョン15.3 以降**( [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)で使用可能):**If**ステートメントには、名前付き変数を宣言して初期化する式を含めることもできます。 変数が if ブロックのスコープ内でのみ必要な場合は、この形式の if ステートメントを使用します。
+**Visual Studio 2017 バージョン15.3 以降**( [/std:c++17](../build/reference/std-specify-language-standard-version.md)で使用可能):**If**ステートメントには、名前付き変数を宣言して初期化する式を含めることもできます。 変数が if ブロックのスコープ内でのみ必要な場合は、この形式の if ステートメントを使用します。
 
 ## <a name="example"></a>例
 
@@ -165,7 +165,7 @@ int main()
 
 ## <a name="a-nameif_constexpr-if-constexpr-statements"></a><a name="if_constexpr">constexpr ステートメントの場合
 
-**Visual Studio 2017 バージョン15.3 以降**( [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)で使用可能):関数テンプレートでは、 **if constexpr**ステートメントを使用して、複数の関数オーバーロードに頼ることなく、コンパイル時の分岐決定を行うことができます。 たとえば、パラメーターのアンパックを処理する1つの関数を記述できます (ゼロパラメーターのオーバーロードは必要ありません)。
+**Visual Studio 2017 バージョン15.3 以降**( [/std:c++17](../build/reference/std-specify-language-standard-version.md)で使用可能):関数テンプレートでは、 **if constexpr**ステートメントを使用して、複数の関数オーバーロードに頼ることなく、コンパイル時の分岐決定を行うことができます。 たとえば、パラメーターのアンパックを処理する1つの関数を記述できます (ゼロパラメーターのオーバーロードは必要ありません)。
 
 ```cpp
 template <class T, class... Rest>

@@ -1,4 +1,4 @@
----
+﻿---
 title: strtold、_strtold_l、wcstold、_wcstold_l
 ms.date: 04/05/2018
 api_name:

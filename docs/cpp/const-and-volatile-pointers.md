@@ -1,4 +1,4 @@
----
+﻿---
 title: const ポインターと volatile ポインター
 ms.date: 11/19/2019
 helpviewer_keywords:

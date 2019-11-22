@@ -1,4 +1,4 @@
----
+﻿---
 title: 一次式
 ms.date: 11/04/2016
 helpviewer_keywords:

@@ -1,4 +1,4 @@
----
+﻿---
 title: C++ ビット フィールド
 ms.date: 11/19/2018
 helpviewer_keywords:

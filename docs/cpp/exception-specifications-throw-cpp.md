@@ -1,4 +1,4 @@
----
+﻿---
 title: Exception specifications (throw, noexcept) (C++)
 ms.date: 01/18/2018
 helpviewer_keywords:

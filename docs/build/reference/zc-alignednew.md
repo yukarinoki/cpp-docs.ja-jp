@@ -1,4 +1,4 @@
----
+﻿---
 title: /Zc:alignedNew (C++17 のオーバーアライン割り当て)
 ms.date: 05/18/2019
 f1_keywords:

@@ -1,4 +1,4 @@
----
+﻿---
 title: 基本型 (C++)
 ms.date: 11/04/2016
 f1_keywords:
@@ -77,7 +77,7 @@ C++ の基本的な型は、整数、浮動小数点、および void の 3 つ�
 ||**long long**|符号なしのよりも大きい**long**します。<br /><br /> 型のオブジェクト**long**として宣言できます**signed long long**または**unsigned long long**します。 **signed long long**のシノニムです**long**します。|
 ||**wchar_t**, **__wchar_t**|型の変数**wchar_t**はワイド文字またはマルチバイト文字型を指定します。 既定では、 **wchar_t**のネイティブな型ですが、使用できる[/Zc:wchar_t-](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)させる**wchar_t**の typedef **unsigned short**します。 **_ _Wchar_t**型は、ネイティブの Microsoft 固有のシノニムです**wchar_t**型。<br /><br /> ワイド文字型を指定するには、文字や文字列リテラルの前に L のプレフィックスを使用します。|
 |浮動小数点数|**float**|型**float**は最小の浮動小数点型。|
-||**double**|型**二重**を超える浮動小数点型または型に等しい**float**がよりも短いか型のサイズに等しい**long double**します。<br /><br /> Microsoft 固有:形式を**long double**と**二重**と同じです。 ただし、 **long double**と**二重**は個別の型。|
+||**double**|型**double**を超える浮動小数点型または型に等しい**float**がよりも短いか型のサイズに等しい**long double**します。<br /><br /> Microsoft 固有:形式を**long double**と**double**と同じです。 ただし、 **long double**と**double**は個別の型。|
 ||**long double**|型**long double**が浮動小数点型よりも大きいですまたは型に等しい**double**します。|
 
 **Microsoft 固有の仕様**
@@ -89,7 +89,7 @@ C++ の基本的な型は、整数、浮動小数点、および void の 3 つ�
 |型|サイズ|
 |----------|----------|
 |**bool**、 **char**、 **unsigned char**、 **signed char**、 **_ _int8**|1 バイト|
-|**__int16**、**short**、**unsigned short**、**wchar_t**、 **__wchar_t**|2 バイト|
+|**_ _int16**、**short*、 **unsigned short**、 **wchar_t**、 **_ _wchar_t**|2 バイト|
 |**float**, **__int32**, **int**, **unsigned int**, **long**, **unsigned long**|4 バイト|
 |**double**、 **_ _int64**、 **long double**、 **long**|8 バイト|
 

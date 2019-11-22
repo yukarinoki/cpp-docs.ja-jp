@@ -1,4 +1,4 @@
----
+﻿---
 title: x86 組み込み一覧
 ms.date: 04/18/2019
 helpviewer_keywords:

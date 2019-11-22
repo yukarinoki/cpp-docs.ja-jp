@@ -1,4 +1,4 @@
----
+﻿---
 title: オブジェクトの有効期間とリソースの管理 (Modern C++)
 ms.date: 11/04/2016
 ms.topic: conceptual

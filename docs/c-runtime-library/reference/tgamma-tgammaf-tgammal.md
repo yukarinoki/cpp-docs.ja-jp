@@ -1,4 +1,4 @@
----
+﻿---
 title: tgamma、tgammaf、tgammal
 ms.date: 04/05/2018
 api_name:

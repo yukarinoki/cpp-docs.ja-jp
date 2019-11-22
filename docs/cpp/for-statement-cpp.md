@@ -128,7 +128,7 @@ for (int i = 0 ; i < 5 ; i++) {
 // i is now out of scope under /Za or /Zc:forScope
 ```
 
-既定では、 [/Ze](../build/reference/za-ze-disable-language-extensions.md)で宣言された変数を**の**までスコープ内にループが残り、**の**ループの外側のスコープが終了します。
+既定では、 [/Ze](../build/reference/za-ze-disable-language-extensions.md)で宣言された変数を**for**までスコープ内にループが残り、**for**ループの外側のスコープが終了します。
 
 [/Zc:forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md)を指定せずに for ループで宣言された変数の標準動作を有効に`/Za`します。
 

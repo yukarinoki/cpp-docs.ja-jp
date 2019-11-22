@@ -1,4 +1,4 @@
----
+﻿---
 title: remainder、remainderf、remainderl
 ms.date: 04/05/2018
 api_name:
