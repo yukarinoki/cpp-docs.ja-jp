@@ -8,21 +8,21 @@ helpviewer_keywords:
 - '! operator'
 - operator !
 ms.assetid: 220bb468-7c88-4a5c-8303-2bd7f966fdeb
-ms.openlocfilehash: cf7346a861e38bdaaf2bcd7e90541b7dfa34e513
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 91f7241943b201b36110cd5a943d36dcea74db72
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176695"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74396744"
 ---
 # <a name="operator--masm"></a>! 演算子 (MASM)
 
-扱います`character`記号や演算子ではなくリテラル文字として。
+Treats *character* as a literal character rather than as an operator or symbol.
 
 ## <a name="syntax"></a>構文
 
-> ! *character*
+> **!** *character*
 
 ## <a name="see-also"></a>関連項目
 
-[演算子リファレンス](../../assembler/masm/operators-reference.md)<br/>
+[Operators reference](operators-reference.md)

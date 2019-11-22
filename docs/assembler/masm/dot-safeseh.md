@@ -8,28 +8,28 @@ helpviewer_keywords:
 - SAFESEH directive
 - .SAFESEH directive
 ms.assetid: 6eaac8c4-c46f-47ae-8a66-f5cfeb267e43
-ms.openlocfilehash: 4577bd5d76949dfb777a359c80d91814f1c45fe2
-ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
+ms.openlocfilehash: df9798800da293e5e0b4f545a8442380b7ff9408
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73703949"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397997"
 ---
-# <a name="safeseh-32-bit-masm"></a>.SAFESEH (32 ビット MASM)
+# <a name="safeseh-32-bit-masm"></a>.SAFESEH (32-bit MASM)
 
-関数を構造化例外ハンドラーとして登録します。 (32 ビット MASM のみ。)
+Registers a function as a structured exception handler. (32-bit MASM only.)
 
 ## <a name="syntax"></a>構文
 
-> .SAFESEH 識別子
+> **.SAFESEH** *identifier*
 
 ## <a name="remarks"></a>Remarks
 
-*識別子*は、ローカルに定義された[Proc](../../assembler/masm/proc.md)または[extrn](../../assembler/masm/extrn.md) proc の id である必要があります。 [ラベル](../../assembler/masm/label-masm.md)は使用できません。 、.SAFESEH ディレクティブには、 [/safeseh](../../assembler/masm/ml-and-ml64-command-line-reference.md) ml .exe コマンドラインオプションが必要です。
+*identifier* must be the ID for a locally defined [PROC](../../assembler/masm/proc.md) or [EXTRN](../../assembler/masm/extrn.md) PROC. A [LABEL](../../assembler/masm/label-masm.md) is not allowed. The .SAFESEH directive requires the [/safeseh](../../assembler/masm/ml-and-ml64-command-line-reference.md) ml.exe command-line option.
 
-構造化例外ハンドラーの詳細については、「 [/safeseh](../../build/reference/safeseh-image-has-safe-exception-handlers.md)」を参照してください。
+For more information about structured exception handlers, see [/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md).
 
-たとえば、安全な例外ハンドラーを登録するには、次のように新しい MASM ファイルを作成し、/safeseh でアセンブルして、リンクオブジェクトに追加します。
+For example, to register a safe exception handler, create a new MASM file (as follows), assemble with /safeseh, and add it to the linked objects.
 
 ```asm
 .386
@@ -41,4 +41,4 @@ end
 
 ## <a name="see-also"></a>関連項目
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
+[Directives reference](directives-reference.md)

@@ -6,47 +6,47 @@ f1_keywords:
 helpviewer_keywords:
 - PROTO directive
 ms.assetid: 0487ee16-9dc7-43d1-9445-cd1601f5a080
-ms.openlocfilehash: 616b6be2a5c191ebc67d61288cb5fa6c183091fa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 24ec2a9abc6c8b76fc81f6d412019296c53160f4
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210522"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74394755"
 ---
 # <a name="proto"></a>PROTO
 
-関数またはプロシージャのプロトタイプ。 関数を呼び出す、プロトタイプ PROTO ディレクティブを使用して、 [INVOKE](invoke.md)ディレクティブ。
+Prototypes a function or procedure. You can call the function prototyped by the PROTO directive by using the [INVOKE](invoke.md) directive.
 
 ## <a name="syntax"></a>構文
 
-> *label* **PROTO** \[*distance*] \[*langtype*] \[__,__ \[*parameter*]__:__*tag*] ...
+> *label* **PROTO** ⟦*distance*⟧ ⟦*language-type*⟧ ⟦ __,__ ⟦*parameter*⟧ __:__ *tag* ...⟧
 
 ### <a name="parameters"></a>パラメーター
 
-*label*<br/>
-プロトタイプ宣言された関数の名前。
+*label*\
+The name of the prototyped function.
 
-*distance*<br/>
-(省略可能)既定値を示す 16 ビットのメモリ モデルで使用される**NEAR**または**FAR**呼び出し。
+*distance*\
+(Optional) Used in 16-bit memory models to override the default and indicate **NEAR** or **FAR** calls.
 
-*langtype*<br/>
-(省略可能)プロシージャとパブリック シンボルの呼び出し元と名前付け規則を設定します。 サポートされている規則は次のとおりです。
+*language-type*\
+(Optional) Sets the calling and naming convention for procedures and public symbols. Supported conventions are:
 
-- 32 ビット**フラット**モデル。**C**、 **STDCALL**
+- 32-bit **FLAT** model: **C**, **STDCALL**
 
-- 16 ビット モデル:**C**, **BASIC**, **FORTRAN**, **PASCAL**, **SYSCALL**, **STDCALL**
+- 16-bit models: **C**, **BASIC**, **FORTRAN**, **PASCAL**, **SYSCALL**, **STDCALL**
 
-*parameter*<br/>
-関数パラメーターのオプション名。
+*parameter*\
+The optional name for a function parameter.
 
-*タグ*<br/>
-関数パラメーターの型。
+*tag*\
+The type of a function parameter.
 
-*パラメーター*と*タグ*パラメーターが渡された引数ごとに複数回を 1 回出現できます。
+The *parameter* and *tag* parameters may appear multiple times, once for each passed argument.
 
 ## <a name="example"></a>例
 
-このサンプルを示しています、 **PROTO**という名前の関数の宣言`addup3`を使用して、 **NEAR**呼び出しを使用してプロシージャの呼び出しの 16 ビットのモデルの既定値を上書きする、 **C**呼び出し規約の stack パラメーターおよび戻り値。 2 つの引数を受け取り、 **WORD**と**VARARG**します。
+This sample shows a **PROTO** declaration for a function named `addup3` that uses a **NEAR** call to override the 16-bit model default for procedure calls, and uses the **C** calling convention for stack parameters and return values. It takes two arguments, a **WORD** and a **VARARG**.
 
 ```MASM
 addup3 PROTO NEAR C, argcount:WORD, arg1:VARARG
@@ -54,5 +54,5 @@ addup3 PROTO NEAR C, argcount:WORD, arg1:VARARG
 
 ## <a name="see-also"></a>関連項目
 
-[ディレクティブ リファレンス](directives-reference.md)<br/>
-[.モデルのリファレンス](dot-model.md)<br/>
+[Directives Reference](directives-reference.md)\
+[.MODEL Reference](dot-model.md)

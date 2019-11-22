@@ -6,41 +6,41 @@ f1_keywords:
 helpviewer_keywords:
 - .FPO directive
 ms.assetid: 35f4cd61-32f9-4262-b657-73f04f775d09
-ms.openlocfilehash: 3938d9194c35d567ea670e0b92a731193ccd2254
-ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
+ms.openlocfilehash: 650c69be17c9271c343360edbb90f093841a1047
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73703792"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398257"
 ---
-# <a name="fpo-32-bit-masm"></a>.FPO (32 ビット MASM)
+# <a name="fpo-32-bit-masm"></a>.FPO (32-bit MASM)
 
-、.FPO ディレクティブは、デバッグレコードの出力を. debug $ F セグメントまたはセクションに制御します。 (32 ビット MASM のみ。)
+The **.FPO** directive controls the emission of debug records to the .debug$F segment or section. (32-bit MASM only.)
 
 ## <a name="syntax"></a>構文
 
-> FPO (*Cdwlocals*、 *cdwlocals*、 *cbprolog*、 *cbRegs*、 *fusebp*、 *cbprolog*)
+> **.FPO** (*cdwLocals*, *cdwParams*, *cbProlog*, *cbRegs*, *fUseBP*, *cbFrame*)
 
 ### <a name="parameters"></a>パラメーター
 
-*cdwLocals*<br/>
-ローカル変数の数 (符号なし32ビット値)。
+*cdwLocals*\
+Number of local variables, an unsigned 32 bit value.
 
-*cdwParams*<br/>
-DWORD のパラメーターのサイズ (符号なし16ビット値)。
+*cdwParams*\
+Size of the parameters in DWORDS, an unsigned 16 bit value.
 
-*cbProlog*<br/>
-関数プロローグコード内のバイト数。符号なし8ビット値。
+*cbProlog*\
+Number of bytes in the function prolog code, an unsigned 8 bit value.
 
-*cbRegs*<br/>
-Number レジスタが保存されました。
+*cbRegs*\
+Number registers saved.
 
-*fUseBP*<br/>
-EBP レジスタが割り当てられているかどうかを示します。 0または1のいずれかです。
+*fUseBP*\
+Indicates whether the EBP register has been allocated. either 0 or 1.
 
-*cbFrame*<br/>
-フレームの種類を示します。  詳細については、「 [FPO_DATA](/windows/win32/api/winnt/ns-winnt-fpo_data) 」を参照してください。
+*cbFrame*\
+Indicates the frame type.  See [FPO_DATA](/windows/win32/api/winnt/ns-winnt-fpo_data) for more information.
 
 ## <a name="see-also"></a>関連項目
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
+[Directives reference](directives-reference.md)

@@ -6,31 +6,31 @@ f1_keywords:
 helpviewer_keywords:
 - IF directive
 ms.assetid: 82e43712-4f0c-4bf6-90ce-0663e81af707
-ms.openlocfilehash: 2b91698640e028bf91d822c12b85ded651a04d8d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ed7b9e63bb19dcc16539dbdaaf1f6a7f16566b3c
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62203065"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397461"
 ---
 # <a name="if-masm"></a>IF (MASM)
 
-アセンブリの*ifstatements*場合*expression1*が true (0 以外の場合) または*elseifstatements*場合*expression1*が false (0) と*expression2*は true。
+Grants assembly of *ifstatements* if *expression1* is true (nonzero) or *elseifstatements* if *expression1* is false (0) and *expression2* is true.
 
 ## <a name="syntax"></a>構文
 
-> IF *expression1*<br/>
-> *ifstatements*<br/>
-> [[ELSEIF *expression2*<br/>
-> *elseifstatements*]<br/>
-> [[ELSE<br/>
-> *elsestatements*]<br/>
-> ENDIF
+> **IF** *expression1*\
+> *if-statements*\
+> ⟦**ELSEIF** *expression2*\
+> *elseif-statements*⟧\
+> ⟦**ELSE**\
+> *else-statements*⟧\
+> **ENDIF**
 
 ## <a name="remarks"></a>Remarks
 
-次のディレクティブを置き換えることがあります[ELSEIF](../../assembler/masm/elseif-masm.md):**ELSEIFB**、 **ELSEIFDEF**、 **ELSEIFDIF**、 **ELSEIFDIFI**、 **ELSEIFE**、 **ELSEIFIDN**、 **ELSEIFIDNI**、 **ELSEIFNB**、および**ELSEIFNDEF**します。 必要に応じて、アセンブル*elsestatements*前の式が false の場合。 アセンブリの時に式が評価されることに注意してください。
+The following directives may be substituted for [ELSEIF](../../assembler/masm/elseif-masm.md): **ELSEIFB**, **ELSEIFDEF**, **ELSEIFDIF**, **ELSEIFDIFI**, **ELSEIFE**, **ELSEIFIDN**, **ELSEIFIDNI**, **ELSEIFNB**, and **ELSEIFNDEF**. Optionally, assembles *else-statements* if the previous expression is false. Note that the expressions are evaluated at assembly time.
 
 ## <a name="see-also"></a>関連項目
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
+[Directives reference](directives-reference.md)

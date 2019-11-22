@@ -8,21 +8,21 @@ helpviewer_keywords:
 - LOWWORD operator
 - operator LOWWORD
 ms.assetid: ceb45c78-474b-4099-b46e-35eb072294ff
-ms.openlocfilehash: b599dfa5c005998666cdcd16db21b8fe9f00fc1a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4a2300f21ae5d19a69885fdb763c9a72df14bdb8
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176734"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74396714"
 ---
 # <a name="operator-lowword"></a>LOWWORD 演算子
 
-下位 16 ビットを返します*式*します。 MASM の式は、64 ビット値です。
+Returns the low 16 bits of *expression*. MASM expressions are 64-bit values.
 
 ## <a name="syntax"></a>構文
 
-> LOWWORD 式
+> **LOWWORD** *expression*
 
 ## <a name="see-also"></a>関連項目
 
-[演算子リファレンス](../../assembler/masm/operators-reference.md)<br/>
+[Operators reference](operators-reference.md)

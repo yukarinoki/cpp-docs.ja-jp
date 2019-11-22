@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - ALIGN directive
 ms.assetid: 1c386b23-439f-4ec3-a6de-74427b25e47f
-ms.openlocfilehash: eb42b1952b3fd59438f0dd4c29d48c91c4d8864d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 22b18f2e238c780377b84fc2be3eb6678686bb73
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166478"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74399284"
 ---
 # <a name="align-masm"></a>ALIGN (MASM)
 
-**ALIGN**ディレクティブは、次のデータ要素またはそのパラメーターの倍数であるアドレスでの命令を配置します。 パラメーターが 2 の累乗にする必要があります (たとえば、1、2、4、およびなど) は以下のセグメントの配置。
+The **ALIGN** directive aligns the next data element or instruction on an address that is a multiple of its parameter. The parameter must be a power of 2 (for example, 1, 2, 4, and so on) that is less than or equal to the segment alignment.
 
 ## <a name="syntax"></a>構文
 
-> ALIGN [[*number*]]
+> **ALIGN** ⟦*number*⟧
 
 ## <a name="remarks"></a>Remarks
 
-**ALIGN**ディレクティブでは、データ要素または命令の開始オフセットを指定できます。 アラインされたデータは、データ要素間に無駄なスペースを犠牲のパフォーマンスを向上させることができます。 大規模なパフォーマンスの向上は、データ アクセス処理されるキャッシュ ライン内に収まる境界上で確認できます。 ネイティブ型のアクセス、自然な境界では、内部ハードウェアの再編成マイクロ コードで費やされた時間を意味します。
+The **ALIGN** directive allows you to specify the beginning offset of a data element or an instruction. Aligned data can improve performance, at the expense of wasted space between data elements. Large performance improvements can be seen when data accesses are on boundaries that fit within cache lines. Accesses on natural boundaries for native types means less time spent in internal hardware realignment microcode.
 
-配置手順の必要性はまれですが、最新のプロセッサを使用するフラットのアドレス指定モデルですが他のアドレス指定モデル用の古いコードにジャンプ先の必要があります。
+The need for aligned instructions is rare on modern processors that use a flat addressing model, but may be required for jump targets in older code for other addressing models.
 
-データを配置したときは、スキップされた領域がゼロで埋められます。 命令を配置すると、スキップされた領域に適切にサイジング NOP 命令が入力されます。
+When data is aligned, the skipped space is padded with zeroes. When instructions are aligned, the skipped space is filled with appropriately-sized NOP instructions.
 
 ## <a name="see-also"></a>関連項目
 
-[EVEN](even.md)<br/>
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
+[EVEN](even.md)\
+[Directives reference](directives-reference.md)
