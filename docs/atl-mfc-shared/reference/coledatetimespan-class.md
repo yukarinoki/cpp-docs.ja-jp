@@ -1,4 +1,4 @@
----
+﻿---
 title: COleDateTimeSpan クラス
 ms.date: 03/27/2019
 f1_keywords:
@@ -419,7 +419,7 @@ double GetTotalDays() const throw();
 
 ### <a name="remarks"></a>Remarks
 
-3.65e6 と 3.65e6 約 - この関数の範囲からの戻り値。
+3\.65e6 と 3.65e6 約 - この関数の範囲からの戻り値。
 
 その他の関数の値をクエリで、`COleDateTimeSpan`オブジェクト、メンバー関数は、次を参照してください。
 
@@ -455,7 +455,7 @@ double GetTotalHours() const throw();
 
 ### <a name="remarks"></a>Remarks
 
-8.77e7 と 8.77e7 約 - この関数の範囲からの戻り値。
+8\.77e7 と 8.77e7 約 - この関数の範囲からの戻り値。
 
 その他の関数の値をクエリで、`COleDateTimeSpan`オブジェクト、メンバー関数は、次を参照してください。
 
@@ -491,7 +491,7 @@ double GetTotalMinutes() const throw();
 
 ### <a name="remarks"></a>Remarks
 
-5.26e9 と 5.26e9 約 - この関数の範囲からの戻り値。
+5\.26e9 と 5.26e9 約 - この関数の範囲からの戻り値。
 
 その他の関数の値をクエリで、`COleDateTimeSpan`オブジェクト、メンバー関数は、次を参照してください。
 
@@ -619,7 +619,7 @@ COleDateTimeSpan& operator=(double dblSpanSrc) throw();
 
 ##  <a name="operator_add_-"></a>  COleDateTimeSpan::operator +, -
 
-追加、減算、および署名の変更`COleDateTimeSpan`値。
+`COleDateTimeSpan`の値の加算、減算、および符号の変更。
 
 ```
 COleDateTimeSpan operator+(const COleDateTimeSpan& dateSpan) const throw();

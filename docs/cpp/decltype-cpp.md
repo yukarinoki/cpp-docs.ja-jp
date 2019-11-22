@@ -1,4 +1,4 @@
----
+﻿---
 title: decltype (C++)
 ms.date: 11/04/2016
 f1_keywords:
@@ -11,7 +11,7 @@ helpviewer_keywords:
 ms.assetid: 6dcf8888-8196-4f13-af50-51e3797255d4
 ms.openlocfilehash: 0a4e9eb015df056dfe2a35da18cfa50875ced432
 ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2019
 ms.locfileid: "65222458"
@@ -81,7 +81,7 @@ UNKNOWN func(T&& t, U&& u){ return t + u; };
 
 次のプロトタイプは代替関数宣言の構文について説明します。 なお、 **const**と**volatile**修飾子、および**throw** [例外の指定](../cpp/exception-specifications-throw-cpp.md)は省略可能です。 *Function_body*プレース ホルダーは、関数の動作を指定する複合ステートメントを表します。 コーディングのプラクティスとして、*式*内のプレース ホルダー、 **decltype**ステートメントがで指定された式に一致する必要があります、**return**文では、に存在する場合、*function_body*します。
 
-**auto** *function_name* **(** *パラメーター*<sub>opt</sub> **)** **const**<sub>opt</sub> **volatile**<sub>opt</sub> **->** **decltype (***式* **)** **throw**<sub>opt</sub> **{** *function_body***};**
+**auto** *function_name* **(** *パラメーター*<sub>opt</sub> **)** **const**<sub>opt</sub> **volatile**<sub>opt</sub> **->** **decltype (** *式* **)** **throw**<sub>opt</sub> **{** *function_body* **};**
 
 次のコード例では、`myFunc` テンプレート関数の遅延指定された戻り値の型は、テンプレート引数 `t` と `u` の型によって決まります。 コーディングのプラクティスとして、このコード例もで右辺値参照と`forward`関数テンプレートは、サポート*完全転送*します。 詳細については、「[右辺値参照宣言子: &&](../cpp/rvalue-reference-declarator-amp-amp.md)」を参照してください。
 

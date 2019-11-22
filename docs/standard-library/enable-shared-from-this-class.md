@@ -14,7 +14,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/16/2019
 ms.locfileid: "68245862"
 ---
-# <a name="enablesharedfromthis-class"></a>enable_shared_from_this クラス
+# <a name="enable_shared_from_this-class"></a>enable_shared_from_this クラス
 
 `shared_ptr` の生成を支援します。
 

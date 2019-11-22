@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - '@Model symbol'
 ms.assetid: a67c04ac-6ba7-458c-8138-0346e5b85eb6
-ms.openlocfilehash: 806c631a18044b98af77ad55ec44a434b2617d34
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 09e5663a8c3bfe0f2ce0a94bcb4006f2dd654cc2
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180298"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74301919"
 ---
-# <a name="model"></a>@Model
+# <a name="model"></a>\@モデル
 
-場合は 1**極小**をモデル化の 2**小さな**をモデル化の 3 **COMPACT**をモデル化の 4 **MEDIUM**モデル、5 を**LARGE**モデル、6**莫大**モデル、および 7 を**フラット**モデル (数値と同等)。
+1小さい**モデルの場合は**1、**小規模**モデルの場合は2、**コンパクト**モデルの場合は3、 **MEDIUM**モデルの場合は4、**大規模**モデルの場合は5、大きな**モデルの場合**は6、**フラット**モデルの場合は 7 (数値の等価)。
 
 ## <a name="syntax"></a>構文
 
-> @Model
+> **\@モデル**
 
 ## <a name="see-also"></a>関連項目
 
-[シンボル リファレンス](../../assembler/masm/symbols-reference.md)<br/>
+[シンボル リファレンス](../../assembler/masm/symbols-reference.md)

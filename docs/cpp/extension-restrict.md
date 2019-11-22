@@ -15,7 +15,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62183753"
 ---
-# <a name="restrict"></a>__restrict
+# <a name="__restrict"></a>__restrict
 
 ように、 **_ _declspec ([制限](../cpp/restrict.md))** 修飾子、 **_ _restrict**キーワードは、シンボルがエイリアス化された現在のスコープ内ではないことを示します。 **_ _Restrict**キーワードとは異なります、`__declspec ( restrict )`修飾子は、次の方法で。
 

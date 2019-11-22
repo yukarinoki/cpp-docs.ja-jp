@@ -522,7 +522,7 @@ DDV の詳細については、次を参照してください。[ダイアログ
 
   **ヘッダー** afxdd_.h
 
-## <a name="ddvminmaxunsigned"></a>DDV_MinMaxUnsigned
+## <a name="ddv_minmaxunsigned"></a>DDV_MinMaxUnsigned
 
 呼び出す`DDV_MinMaxUnsigned`にコントロールの値が関連付けられていることを確認する*値*間*minVal*と*maxVal*します。
 

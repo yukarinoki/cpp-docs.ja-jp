@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - '@SubStr symbol'
 ms.assetid: f4b8fc6e-14a0-46fe-8c27-6b3347a08504
-ms.openlocfilehash: 566a39dff32a87d729efcb462c03fcacf55553e9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3daff591dd1f3030628fe97b15998c6c365c9e92
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62178848"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74301983"
 ---
-# <a name="substr"></a>@SubStr
+# <a name="substr"></a>\@SubStr
 
-始まる部分文字列を返すマクロ関数*位置*します。
+*位置*から始まる部分文字列を返すマクロ関数。
 
 ## <a name="syntax"></a>構文
 
-> @SubStr( string, position [[, length]] )
+> **\@SubStr (** *string* __、__ *position* ⟦ __、__ *length*⟧ **)**
 
 ## <a name="see-also"></a>関連項目
 
-[シンボル リファレンス](../../assembler/masm/symbols-reference.md)<br/>
+[シンボル リファレンス](../../assembler/masm/symbols-reference.md)

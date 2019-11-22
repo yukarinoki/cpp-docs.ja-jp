@@ -22,11 +22,11 @@ ms.locfileid: "62244222"
 
 参照は次の構文を使用して宣言できます。
 
-> \[*storage-class-specifiers*] \[*cv-qualifiers*] *type-specifiers* \[*ms-modifier*] *declarator* \[**=** *expression*]**;**
+> \[*storage-class-specifiers*] \[*cv-qualifiers*] *type-specifiers* \[*ms-modifier*] *declarator* \[ **=** *expression*] **;**
 
 参照を指定する任意の有効な宣言子を使用できます。 参照が関数または配列型への参照でない限り、次の簡略化された構文が適用されます。
 
-> \[*ストレージ クラス指定子*] \[ *cv 修飾子*]*型指定子* \[ **&** または**&&**] \[ *cv 修飾子*]*識別子* \[ **=** *式*]**;**
+> \[*ストレージ クラス指定子*] \[ *cv 修飾子*]*型指定子* \[ **&** または **&&** ] \[ *cv 修飾子*]*識別子* \[ **=** *式*] **;**
 
 参照は次の順序で宣言します。
 
@@ -38,11 +38,11 @@ ms.locfileid: "62244222"
 
    - 型指定子: 型の名前。
 
-1. 宣言子: 
+1. 宣言子:
 
    - オプションの Microsoft 固有の修飾子。 詳細については、次を参照してください。 [Microsoft 固有の修飾子](../cpp/microsoft-specific-modifiers.md)します。
 
-   - **&** 演算子または**&&** 演算子。
+   - **&** 演算子または **&&** 演算子。
 
    - 省略可能な**const**や**volatile**修飾子。
 

@@ -14,7 +14,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62331169"
 ---
-# <a name="char-wchart-char16t-char32t"></a>char、wchar_t、char16_t、char32_t
+# <a name="char-wchar_t-char16_t-char32_t"></a>char、wchar_t、char16_t、char32_t
 
 **char**、 **wchar_t**、 **char16_t** `および **char32_t**型は、英数字以外のグリフや非印字文字を表す組み込み型です。
 

@@ -1,4 +1,4 @@
----
+﻿---
 title: tgamma、tgammaf、tgammal
 ms.date: 04/05/2018
 api_name:
@@ -95,7 +95,7 @@ long double tgammal(
 
 ## <a name="remarks"></a>Remarks
 
-オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **tgamma**を受け取って返す**float**と**long double**型。 C プログラムでは、 **tgamma**は常に**double**を取得し、double を返します。
+オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **tgamma**を受け取って返す**float**と**long** **double**型。 C プログラムでは、 **tgamma**は常に**double**を取得し、double を返します。
 
 x が自然数の場合、この関数は (x-1) の階乗を返します。
 

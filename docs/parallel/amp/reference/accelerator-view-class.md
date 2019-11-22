@@ -28,7 +28,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 05/10/2019
 ms.locfileid: "65524826"
 ---
-# <a name="acceleratorview-class"></a>accelerator_view クラス
+# <a name="accelerator_view-class"></a>accelerator_view クラス
 
 C++. AMP のデータ並列アクセラレータでの仮想デバイスの抽象化を表します。
 

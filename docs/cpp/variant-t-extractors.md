@@ -1,4 +1,4 @@
----
+﻿---
 title: _variant_t 抽出
 ms.date: 11/04/2016
 f1_keywords:
@@ -55,7 +55,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62403335"
 ---
-# <a name="variantt-extractors"></a>_variant_t 抽出
+# <a name="_variant_t-extractors"></a>_variant_t 抽出
 
 **Microsoft 固有の仕様**
 
@@ -91,7 +91,7 @@ operator unsigned __int64() const;
 
 - **operator short ()** 抽出、**short**整数値。
 
-- **operator long ()** 抽出、**double**整数値。
+- **operator long ()** 抽出、**long**整数値。
 
 - **operator float ()** 抽出、 **float**数値を指定します。
 

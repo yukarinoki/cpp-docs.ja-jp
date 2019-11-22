@@ -1,4 +1,4 @@
----
+﻿---
 title: __declspec
 ms.date: 03/21/2019
 f1_keywords:
@@ -14,7 +14,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62154504"
 ---
-# <a name="declspec"></a>__declspec
+# <a name="__declspec"></a>__declspec
 
 **Microsoft 固有の仕様**
 
@@ -23,7 +23,7 @@ ms.locfileid: "62154504"
 ## <a name="grammar"></a>文法
 
 *decl-specifier*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__declspec (**  *extended-decl-modifier-seq*  **)**
+&nbsp;&nbsp;&nbsp;&nbsp; **__declspec (**  *extended-decl-modifier-seq*  **)**
 
 *extended-decl-modifier-seq*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier*<sub>opt</sub><br/>
@@ -46,7 +46,7 @@ ms.locfileid: "62154504"
 &nbsp;&nbsp;&nbsp;&nbsp;**nothrow**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**novtable**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**process**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**property(** { **get=**_get_func_name_ &#124; **,put=**_put_func_name_ } **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**property(** { **get=** _get_func_name_ &#124; **,put=** _put_func_name_ } **)**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**restrict**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**safebuffers**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**selectany**<br/>

@@ -37,7 +37,7 @@ helpviewer_keywords:
 ms.assetid: 3691ceca-05fb-4b82-b1ae-5c4618cda91a
 ms.openlocfilehash: 9eed9b35df6f5a970d05b09a604507df719345db
 ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2019
 ms.locfileid: "65222177"
@@ -79,7 +79,7 @@ Microsoft C++ 32 ビットおよび 64 ビット コンパイラは、この記�
 |**__int64**|8|**long**、 **long long 型の署名**|-9,223,372,036,854,775,808 から 9,223,372,036,854,775,807|
 |**unsigned __int64**|8|**unsigned long long**|0 ～ 18,446,744,073,709,551,615|
 |**bool**|1|none|**false**または**は true。**|
-|**char**|1|none|既定では、128 ~ 127<br /><br />  [/J](../build/reference/j-default-char-type-is-unsigned.md)を使用してコンパイルするときは 0 〜 255|
+|**char**|1|none|既定では、128 ~ 127<br /><br /> [/J](../build/reference/j-default-char-type-is-unsigned.md)を使用してコンパイルするときは 0 〜 255|
 |**signed char**|1|none|-128 ～ 127|
 |**unsigned char**|1|none|0 ～ 255|
 |**short**|2|**short int**、**署名 short int**|-32,768 ～ 32,767|

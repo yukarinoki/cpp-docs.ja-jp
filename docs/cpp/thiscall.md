@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: a6a22dd2-0101-4885-b33b-22f6057965df
 ms.openlocfilehash: e51879ae62b2881e0adadbe59859605f6cc58947
 ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2019
 ms.locfileid: "65221914"
 ---
-# <a name="thiscall"></a>__thiscall
+# <a name="__thiscall"></a>__thiscall
 
 **Microsoft 固有の仕様**
 

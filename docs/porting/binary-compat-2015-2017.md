@@ -1,39 +1,44 @@
 ---
-title: C++Visual Studio 2015 と Visual Studio 2019 間のバイナリの互換性
-ms.date: 10/17/2019
+title: C++ binary compatibility 2015-2019
+description: Describes how binary compatibility works between compiled C++ files in Visual Studio 2015, 2017, and 2019. One Microsoft Visual C++ Redistributable package works for all three versions.
+ms.date: 11/18/2019
 helpviewer_keywords:
 - binary compatibility, Visual C++
 ms.assetid: 591580f6-3181-4bbe-8ac3-f4fbaca949e6
-ms.openlocfilehash: 761f6187a8b30ecb4214821c7f91d1b26e9c647c
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: b729cdcc4a494e60ec58314fe23b02c1816e8412
+ms.sourcegitcommit: 217fac22604639ebd62d366a69e6071ad5b724ac
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73627021"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74188785"
 ---
-# <a name="c-binary-compatibility-between-visual-studio-2015-and-visual-studio-2019"></a>C++Visual Studio 2015 と Visual Studio 2019 間のバイナリの互換性
+# <a name="c-binary-compatibility-between-visual-studio-2015-2017-and-2019"></a>C++ binary compatibility between Visual Studio 2015, 2017, and 2019
 
-Visual Studio 2013 以前では、バージョンの異なるコンパイラ ツールセットやランタイム ライブラリで構築されたオブジェクト ファイル (OBJ)、スタティック ライブラリ (LIB)、ダイナミック ライブラリ (DLL)、実行可能ファイル (EXE) の間のバイナリ互換性が保証されていませんでした。 
+The Microsoft C++ (MSVC) compiler toolsets in Visual Studio 2013 and earlier don't guarantee binary compatibility across versions. You can't link object files, static libraries, dynamic libraries, and executables built by different versions. The ABIs, object formats, and runtime libraries are incompatible.
 
-Visual Studio 2015 以降では、C++ ツールセットのメジャー番号が 14 になります (Visual Studio 2015 は v140、Visual Studio 2017 は v141、Visual Studio 2019 は v142)。 これは、これらのいずれかのバージョンのコンパイラでコンパイルされたランタイムライブラリとアプリケーションの両方がバイナリ互換であるという事実を反映しています。 つまり、Visual Studio 2015 でビルドされたサードパーティのライブラリがある場合、Visual Studio 2017 または Visual Studio 2019 でビルドされたアプリケーションからこのライブラリを使用するために再コンパイルする必要はありません。
+We've changed this behavior in Visual Studio 2015, 2017, and 2019. The runtime libraries and apps compiled by any of these versions of the compiler are binary-compatible. It's reflected in the C++ toolset major number, which is 14 for all three versions. (The toolset version is v140 for Visual Studio 2015, v141 for 2017, and v142 for 2019). Say you have third-party libraries built by Visual Studio 2015. You can still use them in an application built by Visual Studio 2017 or 2019. There's no need to recompile with a matching toolset. The latest version of the Microsoft Visual C++ Redistributable package (the Redistributable) works for all of them.
 
-このルールの唯一の例外として、`/GL` コンパイラ スイッチでコンパイルされたスタティック ライブラリまたはオブジェクト ファイルは、バイナリ互換性がありません。
+There are three important restrictions on binary compatibility:
 
-サポートされているさまざまなバージョンの MSVC ツールセットでビルドされC++たバイナリを混在させた場合、アプリケーションを実行するビジュアル再配布可能ファイルは、アプリのビルドに使用されるツールセットのバージョンまたはそれが使用するライブラリのいずれにも古いものにはなりません。
+- You can mix binaries built by different versions of the toolset. However, you must use a toolset at least as recent as the most recent binary to link your app. Here's an example: you can link an app compiled using the 2017 toolset to a static library compiled using 2019, if they're linked using the 2019 toolset.
 
-## <a name="upgrade-microsoft-visual-c-redistributable-from-visual-studio-2015-or-2017-to-visual-studio-2019"></a>Visual Studio 2015 C++または2017から visual studio 2019 に Microsoft visual 再頒布可能パッケージをアップグレードする
+- The Redistributable your app uses has a similar binary-compatibility restriction. When you mix binaries built by different supported versions of the toolset, the Redistributable version must be at least as new as the latest toolset used by any app component.
 
-バイナリ互換性が維持されており、visual Studio 2015、2017、および2019のビジュアルC++再頒布可能パッケージのメジャーバージョン (14) は同じであるため、visual C++ Studio、、およびの再頒布可能パッケージのバージョンは、いつでもインストールできます。 新しいバージョンでは、インストールされている古いものが上書きされます。 Visual Studio 2015 またはC++ 2017 からの再配布可能なビジュアルがあり、後で2019をインストールした場合、2019バージョンは古いバージョンを上書きします。 最新バージョンには、セキュリティ修正プログラムなど、最新の機能とバグ修正がすべて含まれているため、常に最新バージョンにアップグレードすることをお勧めします。
+- Static libraries or object files compiled using the [/GL (Whole program optimization)](../build/reference/gl-whole-program-optimization.md) compiler switch *aren't* binary-compatible across versions. All object files and libraries compiled using `/GL` must use exactly the same toolset for the compile and the final link.
 
-同様に、新しいバージョンのビジュアルC++再頒布可能パッケージが既に存在するコンピューターにインストールすることはできません。 既に 2019 C++が搭載されているコンピューターに visual Studio 2015 または2017からビジュアル再配布可能パッケージをインストールすると、インストールエラーが発生します。 このエラーは次のようになります。
+## <a name="upgrade-the-microsoft-visual-c-redistributable-from-visual-studio-2015-or-2017-to-visual-studio-2019"></a>Upgrade the Microsoft Visual C++ Redistributable from Visual Studio 2015 or 2017 to Visual Studio 2019
 
+We've kept the Microsoft Visual C++ Redistributable major version number the same for Visual Studio 2015, 2017, and 2019. That means only one instance of the Redistributable can be installed at a time. A newer version overwrites any older version that's already installed. For example, one app may install the Redistributable from Visual Studio 2015. Then, another app installs the Redistributable from Visual Studio 2019. The 2019 version overwrites the older version, but because they're binary-compatible, the earlier app still works fine. We make sure the latest version of the Redistributable has all the newest features, security updates, and bug fixes. That's why we always recommend you upgrade to the latest available version.
+
+Similarly, you can't install an older Redistributable when a newer version is already installed. The installer reports an error if you try. You'll see an error like this if you install the 2015 or 2017 Redistributable on a machine that already has the 2019 version:
+
+```Output
+0x80070666 - Another version of this product is already installed. Installation of this version cannot continue. To configure or remove the existing version of this product, use Add/Remove Programs on the Control Panel.
 ```
-*0x80070666 - Another version of this product is already installed. Installation of this version cannot continue. To configure or remove the existing version of this product, use Add/Remove Programs on the Control Panel.*.
-```
 
-このエラーは仕様によるものです。 最新のものをインストールしておくことをお勧めします。
+This error is by design. We recommend you keep the newest version installed. Make sure your installer can recover from this error silently.
 
 ## <a name="see-also"></a>関連項目
 
-* [Visual C++ の変更履歴](../porting/visual-cpp-change-history-2003-2015.md)
-* [サポートされてC++いる最新の Visual 再頒布可能パッケージのダウンロード](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads) 
+[Visual C++ change history](../porting/visual-cpp-change-history-2003-2015.md)\
+[The latest supported Visual C++ Redistributable downloads](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads)

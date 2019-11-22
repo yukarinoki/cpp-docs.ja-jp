@@ -1,4 +1,4 @@
----
+﻿---
 title: ラムダ式の例
 ms.date: 05/07/2019
 helpviewer_keywords:
@@ -6,7 +6,7 @@ helpviewer_keywords:
 ms.assetid: 52506b15-0771-4190-a966-2f302049ca86
 ms.openlocfilehash: f9f2c3e014e44c9f6a9ce10dd8388a1578ba3987
 ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2019
 ms.locfileid: "65222093"
@@ -271,7 +271,7 @@ int main()
 ### <a name="example"></a>例
 
 関数の本体でラムダ式を使用できます。 ラムダ式は、外側の関数がアクセスできる任意の関数またはデータ メンバーにアクセスできます。 明示的または暗黙的にキャプチャできます、**this**外側のクラスのメンバー関数とデータ メンバーにアクセスできるようにへのポインター。
-**Visual Studio 2017 バージョン 15.3 以降**(で使用可能な[/std:c + + 17](../build/reference/std-specify-language-standard-version.md))。キャプチャ**this**値によって (`[*this]`) ときに、ラムダで使用される非同期または並列操作コードが、元のオブジェクトがスコープ外になった後に実行可能性があります。
+**Visual Studio 2017 バージョン 15.3 以降**(で使用可能な[/std:c++17](../build/reference/std-specify-language-standard-version.md))。キャプチャ**this**値によって (`[*this]`) ときに、ラムダで使用される非同期または並列操作コードが、元のオブジェクトがスコープ外になった後に実行可能性があります。
 
 使用することができます、**this**関数の場合、次に示すように明示的にポインター。
 

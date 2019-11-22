@@ -1,4 +1,4 @@
----
+﻿---
 title: atoll、_atoll_l、_wtoll、_wtoll_l
 ms.date: 11/04/2016
 api_name:
@@ -45,7 +45,7 @@ ms.locfileid: "70939475"
 ---
 # <a name="atoll-_atoll_l-_wtoll-_wtoll_l"></a>atoll、_atoll_l、_wtoll、_wtoll_l
 
-文字列に変換を**long long**整数。
+文字列に変換を**long** **long**整数。
 
 ## <a name="syntax"></a>構文
 
@@ -76,7 +76,7 @@ long long _wtoll_l(
 
 ## <a name="return-value"></a>戻り値
 
-各関数を返します、**long long**入力文字を数字として解釈することによって生成される値。 **Atoll**の戻り値は、入力をその型の値に変換できない場合は0になります。
+各関数を返します、**long** **long**入力文字を数字として解釈することによって生成される値。 **Atoll**の戻り値は、入力をその型の値に変換できない場合は0になります。
 
 大きな正の整数値によるオーバーフローの場合、 **atoll**は**LLONG_MAX**を返し、負の整数値が大きいオーバーフローの場合は**LLONG_MIN**を返します。
 
@@ -84,7 +84,7 @@ long long _wtoll_l(
 
 ## <a name="remarks"></a>Remarks
 
-これらの関数は文字の文字列を変換、**long long**整数値。
+これらの関数は文字の文字列を変換、**long** **long**整数値。
 
 入力文字列は、指定された型の数値として解釈できる文字シーケンスです。 関数は、数値の一部として認識できない文字に最初に遭遇した時点で入力文字列の読み取りを停止します。 この文字は、文字列を終了する null 文字 ('\0' または L'\0') である場合があります。
 

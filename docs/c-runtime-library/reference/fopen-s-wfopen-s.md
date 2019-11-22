@@ -1,4 +1,4 @@
----
+﻿---
 title: fopen_s、_wfopen_s
 ms.date: 11/04/2016
 api_name:

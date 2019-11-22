@@ -13,7 +13,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62267129"
 ---
-# <a name="staticcast-operator"></a>static_cast 演算子
+# <a name="static_cast-operator"></a>static_cast 演算子
 
 変換、*式*の型に*型 id、* 式に存在する型のみに基づいて。
 

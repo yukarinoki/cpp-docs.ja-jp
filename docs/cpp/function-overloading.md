@@ -1,4 +1,4 @@
----
+﻿---
 title: 関数のオーバーロード
 ms.date: 03/27/2019
 helpviewer_keywords:
@@ -268,7 +268,7 @@ volatile Over&
 
    - ポインターへのポインターから**volatile**(`type` <strong>\*</strong>に**volatile** `type` <strong>\*</strong>).
 
-   - 参照への参照から**const** (`type` **&** に**const** `type` **&**).
+   - 参照への参照から**const** (`type` **&** に**const** `type` **&** ).
 
    - 参照への参照から**volatile**(`type` **&** に**volatile** `type` **&**).
 

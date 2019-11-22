@@ -15,7 +15,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62166543"
 ---
-# <a name="using-c-or-c-symbols-in-asm-blocks"></a>__asm ブロックでの C または C++ シンボルの使用
+# <a name="using-c-or-c-symbols-in-__asm-blocks"></a>__asm ブロックでの C または C++ シンボルの使用
 
 **Microsoft 固有の仕様**
 

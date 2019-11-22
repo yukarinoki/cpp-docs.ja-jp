@@ -14,7 +14,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62393936"
 ---
-# <a name="bstrtcopy"></a>_bstr_t::copy
+# <a name="_bstr_tcopy"></a>_bstr_t::copy
 
 **Microsoft 固有の仕様**
 

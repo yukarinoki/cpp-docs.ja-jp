@@ -1,5 +1,5 @@
----
-title: 自動 (C++)
+﻿---
+title: auto (C++)
 ms.date: 11/04/2016
 f1_keywords:
 - auto_CPP
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - auto keyword [C++]
 ms.assetid: e9d495d7-601c-4547-b897-998389a311f4
-ms.openlocfilehash: 3d77a17d490f8d7680f095367c309ce0e4f366b7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8af2aceb2964a5ec3adcbb0b0accab0b051ff48c
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62284761"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303384"
 ---
-# <a name="auto-c"></a>自動 (C++)
+# <a name="auto-c"></a>auto (C++)
 
 宣言された変数の型を、その初期化式から推測します。
 
@@ -28,29 +28,29 @@ auto declarator initializer;
 [](auto param1, auto param2) {};
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
 **auto**キーワードで宣言された変数、またはラムダ式のパラメーターの初期化式を使用して、その型を推測するをコンパイラに指示します。
 
-使用することをお勧めします。、**auto**キーワードほとんどの場合、変換が本当に必要-これらのメリットを提供するため。
+変換が必要な場合を除き、ほとんどの状況には**auto**キーワードを使用することをお勧めします。これには、次のような利点があります。
 
-- **保全性:** 式の型が変更された場合、関数の戻り値の型が変更されたときにこれが含まれています — 問題なく動作します。
+- **保全性:** 式の型が変更されても、関数の戻り値の型が変更された場合も含めて、機能が保たれます。
 
-- **パフォーマンス:** ある変換が保証されません。
+- **パフォーマンス:** 変換が行われないことが保証されます。
 
-- **使いやすさ:** 型名のスペルの難しさや入力ミスを気にする必要はありません。
+- **使いやすさ:** 型名のスペルの問題や誤字を心配する必要はありません。
 
-- **効率性:** コーディングをより効率的なことはできます。
+- **効率性:** コーディングをより効率的にすることができます。
 
 変換の場合、たくないを使用する**auto**:
 
 - 特定の型が必要であり、他の型を使用できない場合。
 
-- 式テンプレート ヘルパー型 — たとえば、`(valarray+valarray)`します。
+- 式テンプレートヘルパー型 (たとえば、`(valarray+valarray)`)。
 
 使用する、**auto**キーワード、変数を宣言する型の代わりに使用して、初期化式を指定します。 さらに、変更、**auto**指定子と宣言子をなどを使用してキーワード**const**、**volatile**、ポインター (`*`)、参照 (`&`)、および右辺値参照 (`&&`)。 コンパイラは初期化式を評価し、その情報を使用して変数の型を推測します。
 
-初期化式は、代入 (等号構文)、直接の初期化 (関数形式の構文)、[演算子 new](new-operator-cpp.md)式、または初期化式を指定できます、 *範囲の宣言の*でパラメーターを[ステートメント (C++) の範囲に基づく](../cpp/range-based-for-statement-cpp.md)ステートメント。 詳細については、次を参照してください。[初期化子](../cpp/initializers.md)およびこのドキュメントの後半のコード例にします。
+初期化式には、代入 (等号の構文)、直接の初期化 (関数形式の構文)、[演算子の新しい](new-operator-cpp.md)式を使用できます。また、初期化式は、[範囲ベースの for ステートメント (C++)](../cpp/range-based-for-statement-cpp.md)ステートメントの*範囲宣言*のパラメーターにすることもできます。 詳細については、「[初期化子](../cpp/initializers.md)」と、このドキュメントの後の方のコード例を参照してください。
 
 **auto**キーワードは、型のプレース ホルダーが自体がない型。 そのため、**auto**キーワードを演算子やキャストでなど、使用することはできません[sizeof](../cpp/sizeof-operator.md)と (c++/cli CLI) [typeid](../extensions/typeid-cpp-component-extensions.md)します。
 
@@ -58,11 +58,11 @@ auto declarator initializer;
 
 **auto**キーワードは、複雑な型を持つ変数を宣言する簡単な方法です。 たとえば、使用することができます**auto**初期化式がテンプレート、関数へのポインターまたはメンバーへのポインターでは変数を宣言します。
 
-使用することも**auto**を宣言してラムダ式に変数を初期化します。 ラムダ式の型を認識できるのはコンパイラのみであるため、プログラマが変数の型を宣言することはできません。 詳細については、次を参照してください。[ラムダ式の例](../cpp/examples-of-lambda-expressions.md)します。
+使用することも**auto**を宣言してラムダ式に変数を初期化します。 ラムダ式の型を認識できるのはコンパイラのみであるため、プログラマが変数の型を宣言することはできません。 詳細については、「[ラムダ式の例](../cpp/examples-of-lambda-expressions.md)」を参照してください。
 
 ## <a name="trailing-return-types"></a>後続の戻り値の型
 
-使用することができます**auto**と共に、 **decltype**テンプレート ライブラリを作成する方法についての指定子を入力します。 使用**auto**と**decltype**テンプレート関数の戻り値を宣言する型は、テンプレート引数の型に依存します。 または、使用して**auto**と**decltype**を別の関数の呼び出しをラップし、その他の関数の戻り値の型が何であれを返しますテンプレート関数を宣言します。 詳細については、次を参照してください。 [decltype](../cpp/decltype-cpp.md)します。
+使用することができます**auto**と共に、 **decltype**テンプレート ライブラリを作成する方法についての指定子を入力します。 使用**auto**と**decltype**テンプレート関数の戻り値を宣言する型は、テンプレート引数の型に依存します。 または、使用して**auto**と**decltype**を別の関数の呼び出しをラップし、その他の関数の戻り値の型が何であれを返しますテンプレート関数を宣言します。 詳細については、「 [decltype](../cpp/decltype-cpp.md)」を参照してください。
 
 ## <a name="references-and-cv-qualifiers"></a>参照と cv 修飾子
 
@@ -90,9 +90,9 @@ int main( )
 
 前の例では、myAuto は int、int を参照しないため、出力は`11 11`ではなく、`11 12`参照修飾子が削除されていない場合、大文字と小文字をなります**auto**します。
 
-## <a name="type-deduction-with-braced-initializers-c14"></a>中かっこで囲んだ初期化子 (c++ 14) を含む型の推論
+## <a name="type-deduction-with-braced-initializers-c14"></a>かっこ付き初期化子を使用した型推論 (C++ 14)
 
-次のコード例では、中かっこを使用して、自動変数を初期化する方法を示します。 B と C A 間および間の違いに注意してくださいと E
+次のコード例は、中かっこを使用して auto 変数を初期化する方法を示しています。 B と C の違いと A と E の違いに注意してください。
 
 ```cpp
 #include <initializer_list>
@@ -123,7 +123,7 @@ int main()
 
 次の表の使用に関する制限事項、**auto**キーワード、およびコンパイラは、生成される対応する診断エラー メッセージ。
 
-|エラー番号|説明|
+|エラー番号|[説明]|
 |------------------|-----------------|
 |[C3530](../error-messages/compiler-errors-2/compiler-error-c3530.md)|**auto**キーワードは、他の型指定子と組み合わせることはできません。|
 |[C3531](../error-messages/compiler-errors-2/compiler-error-c3531.md)|宣言されたシンボル、**auto**キーワードは初期化子である必要があります。|
@@ -132,14 +132,14 @@ int main()
 |[C3535](../error-messages/compiler-errors-2/compiler-error-c3535.md)|メソッドまたはテンプレートのパラメーターを宣言することはできません、**auto**キーワード。|
 |[C3536](../error-messages/compiler-errors-2/compiler-error-c3536.md)|シンボルは初期化前に使用することはできません。 実際には、変数はその変数自体を初期化するために使用できないことを意味します。|
 |[C3537](../error-messages/compiler-errors-2/compiler-error-c3537.md)|宣言された型にキャストすることはできません、**auto**キーワード。|
-|[C3538](../error-messages/compiler-errors-2/compiler-error-c3538.md)|宣言されている宣言子リスト内のすべてのシンボル、**auto**キーワードは、同じ型に解決する必要があります。 詳細については、次を参照してください。[宣言と定義](declarations-and-definitions-cpp.md)します。|
-|[C3540](../error-messages/compiler-errors-2/compiler-error-c3540.md)、 [C3541](../error-messages/compiler-errors-2/compiler-error-c3541.md)|[Sizeof](../cpp/sizeof-operator.md)と[typeid](../extensions/typeid-cpp-component-extensions.md)演算子で宣言されたシンボルに適用することはできません、**auto**キーワード。|
+|[C3538](../error-messages/compiler-errors-2/compiler-error-c3538.md)|宣言されている宣言子リスト内のすべてのシンボル、**auto**キーワードは、同じ型に解決する必要があります。 詳細については、「[宣言と定義](declarations-and-definitions-cpp.md)」を参照してください。|
+|[C3540](../error-messages/compiler-errors-2/compiler-error-c3540.md)、[C3541](../error-messages/compiler-errors-2/compiler-error-c3541.md)|[Sizeof](../cpp/sizeof-operator.md)と[typeid](../extensions/typeid-cpp-component-extensions.md)演算子で宣言されたシンボルに適用することはできません、**auto**キーワード。|
 
 ## <a name="examples"></a>使用例
 
 これらのコード フラグメントがいくつかの方法を示しています、**auto**キーワードを使用できます。
 
-次の宣言は同等です。 変数の最初のステートメントで`j`を宣言する型**int**します。変数の 2 番目のステートメントで`k`型であると推測は**int**初期化式 (0) は整数なので。
+次の宣言は同等です。 最初のステートメントでは、変数 `j` が**int**型として宣言されています。2番目のステートメントでは、初期化式 (0) が整数であるため、変数 `k` は**int**型と推測されます。
 
 ```cpp
 int j = 0;  // Variable j is explicitly type int.
@@ -153,7 +153,7 @@ map<int,list<string>>::iterator i = m.begin();
 auto i = m.begin();
 ```
 
-次のコード フラグメントは、変数の型を宣言します。`iter`と`elem`ときに、**for**と範囲**for**ループが開始します。
+次のコード片では、 **for** **ループと範囲のループ**の開始時に `iter` と `elem` 変数の型を宣言しています。
 
 ```cpp
 // cl /EHsc /nologo /W4
@@ -204,14 +204,14 @@ int v1 = 100, v2 = 200;
 auto x = v1 > v2 ? v1 : v2;
 ```
 
-次のコード フラグメントは、変数を初期化`x`入力**int**変数、`y`型への参照を**const int**、および変数`fp`関数へのポインターを型を返す**int**します。
+次のコードフラグメントでは、変数 `x` を**int**型に、変数 `y` を**const int**型への参照に初期化し、変数 `fp` を**int**型を返す関数へのポインターに初期化します。
 
 ```cpp
 int f(int x) { return x; }
 int main()
 {
     auto x = f(0);
-    const auto & y = f(1);
+    const auto& y = f(1);
     int (*p)(int x);
     p = f;
     auto fp = p;

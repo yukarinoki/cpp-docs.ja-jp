@@ -1,4 +1,4 @@
----
+﻿---
 title: void (C++)
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - functions [C++], void
 - pointers, void
 ms.assetid: d203edba-38e6-4056-8b89-011437351057
-ms.openlocfilehash: cb4be000c3c41862d5b4df766d21ae1cddeb6838
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7d01d5b50cb347736bbd2a42fb76811bdfdb546c
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62243992"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74245201"
 ---
 # <a name="void-c"></a>void (C++)
 
-関数戻り値の型として使用すると、 **void**キーワードは、関数が値を返さないことを指定します。 関数のパラメーター リストで void を使用した場合は、関数がパラメーターを受け取らないことを示します。 ポインターの宣言で void を使用した場合は、ポインターが "汎用" であることを示します。
+When used as a function return type, the **void** keyword specifies that the function does not return a value. When used for a function's parameter list, **void** specifies that the function takes no parameters. When used in the declaration of a pointer, **void** specifies that the pointer is "universal."
 
-ポインターの型がある場合`void *`で宣言されていない任意の変数に、ポインターが指し示すことができます、 **const**または**volatile**キーワード。 void ポインターは別の型にキャストしない限り、逆参照できません。 void ポインターは他の型のデータ ポインターに変換できます。
+If a pointer's type is **void\*** , the pointer can point to any variable that is not declared with the **const** or **volatile** keyword. A **void\*** pointer cannot be dereferenced unless it is cast to another type. A **void\*** pointer can be converted into any other type of data pointer.
 
-void ポインターは、関数を指すことはできますが、C++ のクラス メンバーを指すことはできません。
+A **void** pointer can point to a function, but not to a class member in C++.
 
-void 型の変数を宣言することはできません。
+You cannot declare a variable of type **void**.
 
 ## <a name="example"></a>例
 

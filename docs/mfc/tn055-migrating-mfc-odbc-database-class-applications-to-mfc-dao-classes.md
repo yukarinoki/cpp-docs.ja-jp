@@ -1,5 +1,5 @@
 ---
-title: テクニカル ノート 55:Mfc ODBC データベースクラスアプリケーションの MFC DAO クラスへの移行
+title: 'テクニカル ノート 55: MFC ODBC データベース クラス アプリケーションの MFC DAO クラスへの移行'
 ms.date: 09/17/2019
 helpviewer_keywords:
 - DAO [MFC], migration
@@ -12,17 +12,17 @@ helpviewer_keywords:
 - porting ODBC database applications to DAO
 - migrating database applications [MFC]
 ms.assetid: 0f858bd1-e168-4e2e-bcd1-8debd82856e4
-ms.openlocfilehash: 7107964cc894a0aa45be5de362c9edd166dc0af1
-ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
+ms.openlocfilehash: 744e1c71476ccfbe6ea8f8359dcdb9a29efc995e
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71095957"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74305367"
 ---
-# <a name="tn055-migrating-mfc-odbc-database-class-applications-to-mfc-dao-classes"></a>テクニカル ノート 55:Mfc ODBC データベースクラスアプリケーションの MFC DAO クラスへの移行
+# <a name="tn055-migrating-mfc-odbc-database-class-applications-to-mfc-dao-classes"></a>テクニカル ノート 55: MFC ODBC データベース クラス アプリケーションの MFC DAO クラスへの移行
 
 > [!NOTE]
-> DAO は Access データベースで使用され、Office 2013 でサポートされています。 3.6 は最終バージョンであり、廃止されたと見なされます。 ビジュアルC++環境とウィザードでは、dao はサポートされていません (dao クラスは含まれていますが、引き続き使用できます)。 新しいプロジェクトには、 [OLE DB テンプレート](../data/oledb/ole-db-templates.md)または[ODBC および MFC](../data/odbc/odbc-and-mfc.md)を使用することをお勧めします。 既存のアプリケーションを維持するには、DAO のみを使用する必要があります。
+> DAO は Access データベースで使用され、Office 2013 でサポートされています。 DAO 3.6 は最終バージョンであり、互換性のために残されているものと見なされます。 ビジュアルC++環境とウィザードでは、dao はサポートされていません (dao クラスは含まれていますが、引き続き使用できます)。 新しいプロジェクトには、 [OLE DB テンプレート](../data/oledb/ole-db-templates.md)または[ODBC および MFC](../data/odbc/odbc-and-mfc.md)を使用することをお勧めします。 既存のアプリケーションを維持するには、DAO のみを使用する必要があります。
 
 ## <a name="overview"></a>概要
 
@@ -74,12 +74,12 @@ DAO クラスには、より多くのオブジェクトと豊富なメソッド�
 ||`DFX_Currency`|
 |`RFX_Single`|`DFX_Single`|
 |`RFX_Double`|`DFX_Double`|
-|`RFX_Date`<sup>1</sup>|`DFX_Date`(`COleDateTime`ベース)|
+|`RFX_Date`<sup>1</sup>|`DFX_Date` (`COleDateTime`ベース)|
 |`RFX_Text`|`DFX_Text`|
 |`RFX_Binary`|`DFX_Binary`|
 |`RFX_LongBinary`|`DFX_LongBinary`|
 
-1関数は、および<sup></sup> `TIMESTAMP_STRUCT`に`CTime`基づいています。 `RFX_Date`
+<sup>1</sup> `RFX_Date` 関数は `CTime` と `TIMESTAMP_STRUCT`に基づいています。
 
 アプリケーションに影響を与える可能性があり、単純な名前の変更を必要とする機能の主な変更点を以下に示します。
 
@@ -87,22 +87,22 @@ DAO クラスには、より多くのオブジェクトと豊富なメソッド�
 
    MFC では、マクロまたは列挙型を使用してこれらのオプションを定義する必要があります。
 
-   Dao クラスを使用すると、DAO はこれらのオプションの定義をヘッダーファイル (DBDAOINT) に提供します。H)。 したがって、レコードセットの型はの`CRecordset`列挙メンバーですが、DAO では定数として使用されます。 たとえば、ODBC での `CRecordset`型を指定するときにスナップショットを使用しますが、の`CDaoRecordset`型を指定するときは**DB_OPEN_SNAPSHOT**を使用します。
+   Dao クラスを使用すると、DAO はこれらのオプションの定義をヘッダーファイル (DBDAOINT) に提供します。H)。 したがって、レコードセットの型は `CRecordset`の列挙されたメンバーですが、DAO では定数になります。 たとえば、ODBC で `CRecordset` の種類を指定するときに**スナップショット**を使用しますが、`CDaoRecordset`の種類を指定するときは**DB_OPEN_SNAPSHOT**します。
 
-- の既定のレコードセット`CRecordset`の種類は**snapshot**ですが、の`CDaoRecordset`既定のレコードセットは**ダイナセット**です (ODBC クラスのスナップショットに関するその他の問題については、以下のメモを参照してください)。
+- `CRecordset` の既定のレコードセットの種類は**snapshot**ですが、`CDaoRecordset` の既定のレコードセットの種類は**ダイナセット**です (ODBC クラスのスナップショットに関するその他の問題については、以下の注を参照してください)。
 
-- ODBC `CRecordset`クラスには、順方向専用のレコードセットを作成するオプションがあります。 `CDaoRecordset`クラスでは、順方向専用はレコードセット型ではなく、特定の種類のレコードセットのプロパティ (またはオプション) です。
+- ODBC `CRecordset` クラスには、順方向専用のレコードセットを作成するオプションがあります。 `CDaoRecordset` クラスでは、前方参照専用はレコードセット型ではなく、特定の種類のレコードセットのプロパティ (またはオプション) です。
 
-- オブジェクトを`CRecordset`開くときの追加専用レコードセットでは、レコードセットのデータが読み取られ、追加される可能性があります。 オブジェクト`CDaoRecordset`を使用する場合、追加専用オプションは、レコードセットのデータが追加される (読み取り不可) ことを意味します。
+- `CRecordset` オブジェクトを開くときに追加専用のレコードセットを使用すると、レコードセットのデータが読み取られ、追加される可能性があります。 `CDaoRecordset` オブジェクトの場合、追加専用オプションは、レコードセットのデータを追加 (および読み取り不可) できることを意味します。
 
-- ODBC クラスのトランザクションメンバー関数は、の`CDatabase`メンバーであり、データベースレベルで動作します。 DAO クラスでは、トランザクションメンバー関数は上位レベルのクラス (`CDaoWorkspace`) のメンバーであるため、同じワークスペース (トランザクション領域) を共有する複数`CDaoDatabase`のオブジェクトに影響を与える可能性があります。
+- ODBC クラスのトランザクションメンバー関数は `CDatabase` のメンバーであり、データベースレベルで動作します。 DAO クラスでは、トランザクションメンバー関数は上位レベルのクラス (`CDaoWorkspace`) のメンバーであるため、同じワークスペース (トランザクション領域) を共有する複数の `CDaoDatabase` オブジェクトに影響を与える可能性があります。
 
-- Exception クラスが変更されました。 `CDBExceptions`は、ODBC クラスおよび`CDaoExceptions` DAO クラスでスローされます。
+- Exception クラスが変更されました。 `CDBExceptions` は、DAO クラスの ODBC クラスと `CDaoExceptions` でスローされます。
 
-- `RFX_Date`は`CTime` 、 `TIMESTAMP_STRUCT`の使用`DFX_Date`時にオブジェクトとオブジェクトを使用します。 `COleDateTime` はとほぼ`CTime`同じですが、4バイトの**time_t**ではなく8バイトの OLE 日付に基づいているため、データの範囲を大幅に拡大できます。 `COleDateTime`
+- `RFX_Date` では `CTime` と `TIMESTAMP_STRUCT` オブジェクトを使用し、`DFX_Date` は `COleDateTime`を使用します。 `COleDateTime` は `CTime`とほぼ同じですが、4バイトの**time_t**ではなく、8バイトの OLE**日付**に基づいているため、より大きなデータ範囲を保持できます。
 
    > [!NOTE]
-   > Odbc (`CRecordset`) スナップショットは読み取り専用ですが、odbc () スナップショットは、ドライバーと odbc カーソルライブラリの使用によっては更新可能な場合があります。`CDaoRecordset` カーソルライブラリを使用している場合`CRecordset`は、スナップショットを更新できます。 ODBC カーソルライブラリを使用せずに Desktop Driver Pack 3.0 の Microsoft ドライバーを使用している場合`CRecordset` 、スナップショットは読み取り専用です。 別のドライバーを使用している場合は、ドライバーのドキュメントを参照し`STATIC_CURSORS`て、スナップショット () が読み取り専用かどうかを確認してください。
+   > Odbc (`CDaoRecordset`) スナップショットは読み取り専用ですが、odbc (`CRecordset`) スナップショットは、ドライバーと ODBC カーソルライブラリの使用に応じて更新できます。 カーソルライブラリを使用している場合は、`CRecordset` スナップショットを更新できます。 ODBC カーソルライブラリを使用せずに Desktop Driver Pack 3.0 の Microsoft ドライバーを使用している場合、`CRecordset` スナップショットは読み取り専用です。 別のドライバーを使用している場合は、ドライバーのドキュメントを参照して、スナップショット (`STATIC_CURSORS`) が読み取り専用かどうかを確認してください。
 
 ## <a name="see-also"></a>関連項目
 

@@ -273,7 +273,7 @@ C++AMP が導入されています、 [texture_view クラス](../../parallel/am
 
 テクスチャ ビューは、配列のビューに似ていますは得られません。 データの自動管理および移動機能を、 [array_view クラス](../../parallel/amp/reference/array-view-class.md)比べ、 [array クラス](../../parallel/amp/reference/array-class.md)します。 `texture_view` は、基になるテクスチャ データが存在するアクセラレータ ビューにのみアクセスできます。
 
-### <a name="writeonlytextureview-deprecated"></a>使用されない writeonly_texture_view
+### <a name="writeonly_texture_view-deprecated"></a>使用されない writeonly_texture_view
 
 Visual Studio 2013 でC++AMP サンプリングや mipmap でサポートされていませんでしたなどのハードウェア テクスチャ機能に対する優れたサポートが導入されています、 [writeonly_texture_view クラス](../../parallel/amp/reference/writeonly-texture-view-class.md)します。 最近導入された `texture_view` クラスは `writeonly_texture_view` の機能のスーパーセットをサポートしており、その結果、`writeonly_texture_view` は使用されません。
 

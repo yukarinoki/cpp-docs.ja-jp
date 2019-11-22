@@ -7,17 +7,16 @@ helpviewer_keywords:
 - CDaoDatabaseInfo structure [MFC]
 - DAO (Data Access Objects), Databases collection
 ms.assetid: 68e9e0da-8382-4fc6-8115-1b1519392ddb
-ms.openlocfilehash: 46d8056ee4ab478b65f3ef0bd59d88bd3af9b28c
-ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
+ms.openlocfilehash: 60972aa3ecaef4d38c9a0d0ecc70477796aa37aa
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71096157"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74304258"
 ---
 # <a name="cdaodatabaseinfo-structure"></a>CDaoDatabaseInfo 構造体
 
-構造`CDaoDatabaseInfo`体には、データアクセスオブジェクト (DAO) 用に定義されたデータベースオブジェクトに関する情報が含まれています。
-DAO 3.6 は最終バージョンであり、互換性のために残されているものと見なされます。
+`CDaoDatabaseInfo` 構造体には、データアクセスオブジェクト (DAO) 用に定義されたデータベースオブジェクトに関する情報が含まれています。 DAO 3.6 は最終バージョンであり、互換性のために残されているものと見なされます。
 
 ## <a name="syntax"></a>構文
 
@@ -51,41 +50,41 @@ Microsoft Jet データベースエンジンのバージョンを示します。
 *m_lCollatingOrder*<br/>
 文字列比較または並べ替えに使用する、テキスト内の並べ替え順序の順序を指定します。 次のような値となる場合があります。
 
-- `dbSortGeneral`一般的な (英語、フランス語、ドイツ語、ポルトガル語、イタリア語、および最新のスペイン語) 並べ替え順序を使用します。
+- `dbSortGeneral` は、一般 (英語、フランス語、ドイツ語、ポルトガル語、イタリア語、およびスペイン語) の並べ替え順を使用します。
 
-- `dbSortArabic`アラビア語の並べ替え順序を使用します。
+- `dbSortArabic` アラビア語の並べ替え順序を使用します。
 
-- `dbSortCyrillic`ロシア語の並べ替え順序を使用します。
+- `dbSortCyrillic`、ロシア語の並べ替え順序を使用します。
 
-- `dbSortCzech`チェコ語の並べ替え順序を使用します。
+- `dbSortCzech`、チェコ語の並べ替え順を使用します。
 
-- `dbSortDutch`オランダ語の並べ替え順序を使用します。
+- `dbSortDutch`、オランダ語の並べ替え順を使用します。
 
-- `dbSortGreek`ギリシャ語の並べ替え順序を使用します。
+- `dbSortGreek` ギリシャ語の並べ替え順序を使用します。
 
-- `dbSortHebrew`ヘブライ語の並べ替え順序を使用します。
+- `dbSortHebrew` ヘブライ語の並べ替え順序を使用します。
 
-- `dbSortHungarian`ハンガリー語の並べ替え順序を使用します。
+- `dbSortHungarian` は、ハンガリー語の並べ替え順序を使用します。
 
-- `dbSortIcelandic`アイスランド語の並べ替え順序を使用します。
+- `dbSortIcelandic`、アイスランド語の並べ替え順序を使用します。
 
-- `dbSortNorwdan`ノルウェー語またはデンマーク語の並べ替え順序を使用します。
+- `dbSortNorwdan`、ノルウェー語またはデンマーク語の並べ替え順序を使用します。
 
-- `dbSortPDXIntl`Paradox International の並べ替え順序を使用します。
+- `dbSortPDXIntl` は、Paradox International の並べ替え順序を使用します。
 
-- `dbSortPDXNor`Paradox のノルウェーまたはデンマーク語の並べ替え順序を使用します。
+- `dbSortPDXNor` は、Paradox のノルウェーまたはデンマーク語の並べ替え順序を使用します。
 
-- `dbSortPDXSwe`Paradox のスウェーデン語またはフィンランド語の並べ替え順序を使用します。
+- `dbSortPDXSwe` は、Paradox のスウェーデン語またはフィンランド語の並べ替え順序を使用します。
 
-- `dbSortPolish`ポーランド語の並べ替え順序を使用します。
+- `dbSortPolish` ポーランド語の並べ替え順序を使用します。
 
-- `dbSortSpanish`スペイン語の並べ替え順序を使用します。
+- `dbSortSpanish` スペイン語の並べ替え順序を使用します。
 
-- `dbSortSwedFin`スウェーデン語またはフィンランド語の並べ替え順序を使用します。
+- `dbSortSwedFin` は、スウェーデンまたはフィンランドの並べ替え順序を使用します。
 
-- `dbSortTurkish`トルコ語の並べ替え順序を使用します。
+- `dbSortTurkish` は、トルコ語の並べ替え順序を使用します。
 
-- `dbSortUndefined`並べ替え順序が定義されていないか、不明です。
+- `dbSortUndefined` 並べ替え順序が定義されていないか、不明です。
 
 詳細については、DAO ヘルプのトピック「データアクセスのための Windows レジストリ設定のカスタマイズ」を参照してください。
 
@@ -95,13 +94,13 @@ ODBC データベースでクエリが実行されるときに、Microsoft Jet �
 *m_strConnect*<br/>
 開いているデータベースのソースに関する情報を提供します。 接続文字列について、およびこのプロパティの値を直接取得する方法については、「 [CDaoDatabase:: GetConnect](../../mfc/reference/cdaodatabase-class.md#getconnect)メンバー関数」を参照してください。 詳細については、DAO ヘルプのトピック「Connect プロパティ」を参照してください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
 データベースは、クラス[CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)の MFC オブジェクトの基になる DAO オブジェクトです。 上記の Primary、Secondary、および All への参照は、 [CDaoWorkspace:: GetDatabaseInfo](../../mfc/reference/cdaoworkspace-class.md#getdatabaseinfo)メンバー関数によって情報がどのように返されるかを示しています。
 
-[CDaoWorkspace:: getdatabaseinfo](../../mfc/reference/cdaoworkspace-class.md#getdatabaseinfo)メンバー関数によって取得された情報`CDaoDatabaseInfo`は、構造体に格納されます。 データベース`GetDatabaseInfo`オブジェクトが`CDaoWorkspace`格納されているデータベースコレクションを含むオブジェクトに対してを呼び出します。 `CDaoDatabaseInfo`は、 `Dump`デバッグビルドでメンバー関数も定義します。 を使用`Dump`すると、 `CDaoDatabaseInfo`オブジェクトの内容をダンプできます。
+[CDaoWorkspace:: GetDatabaseInfo](../../mfc/reference/cdaoworkspace-class.md#getdatabaseinfo)メンバー関数によって取得された情報は、`CDaoDatabaseInfo` 構造体に格納されます。 データベースオブジェクトが格納されているデータベースのコレクションを含む `CDaoWorkspace` オブジェクトの `GetDatabaseInfo` を呼び出します。 `CDaoDatabaseInfo` は、デバッグビルドで `Dump` メンバー関数も定義します。 `Dump` を使用すると、`CDaoDatabaseInfo` オブジェクトの内容をダンプできます。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afxdao
 

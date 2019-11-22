@@ -1,4 +1,4 @@
----
+﻿---
 title: fdim、fdimf、fdiml
 ms.date: 04/05/2018
 api_name:
@@ -102,7 +102,7 @@ long double fdiml(
 
 ## <a name="remarks"></a>Remarks
 
-オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **fdim** を受け取って返す **float**と**long double**型。 C プログラムでは、 **fdim**は常に**double**を取得し、double を返します。
+オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **fdim** を受け取って返す **float**と**long** **double**型。 C プログラムでは、 **fdim**は常に**double**を取得し、double を返します。
 
 NaN の処理を除き、この関数はと同じ`fmax(x - y, 0)`です。
 

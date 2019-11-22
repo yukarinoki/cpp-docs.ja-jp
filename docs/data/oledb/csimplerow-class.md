@@ -37,7 +37,7 @@ helpviewer_keywords:
 ms.assetid: 06d9621d-60cc-4508-8b0c-528d1b1a809b
 ms.openlocfilehash: 19b90f4454e784907366ef6cf7e3e7e1b9ada799
 ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62390933"

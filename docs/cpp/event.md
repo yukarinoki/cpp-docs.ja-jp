@@ -15,7 +15,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62154426"
 ---
-# <a name="event"></a>__event
+# <a name="__event"></a>__event
 
 イベントを宣言します。
 

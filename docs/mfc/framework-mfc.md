@@ -12,20 +12,20 @@ helpviewer_keywords:
 - Windows API [MFC], encapsulation by MFC
 - encapsulated Win32 API [MFC]
 ms.assetid: 3be0fec8-9843-4119-ae42-ece993ef500b
-ms.openlocfilehash: d93d2d50bab4b63258a3e0fe4cd2f24c2fcde4f3
-ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
+ms.openlocfilehash: 387f53e3123b6863fcf218da39c7c5e356eb8219
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71095796"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303405"
 ---
 # <a name="framework-mfc"></a>フレームワーク (MFC)
 
 MFC (Microsoft Foundation Class) ライブラリフレームワークでの作業は、主にいくつかの主要なクラスといくつC++かのビジュアルツールに基づいています。 Win32 アプリケーションプログラミングインターフェイス (API) の大部分をカプセル化するクラスもあります。 他のクラスは、ドキュメント、ビュー、アプリケーション自体などのアプリケーションの概念をカプセル化します。 その他のユーザーは、OLE 機能、ODBC および DAO データアクセス機能をカプセル化します。  (DAO は Office 2013 でサポートされています。 DAO 3.6 は最終バージョンであり、互換性のために残されているものと見なされます)。
 
-たとえば、Win32's というウィンドウの概念は、MFC クラス`CWnd`によってカプセル化されています。 つまり、というC++ `CWnd`クラスは、Windows ウィンドウを表す`HWND`ハンドルをカプセル化または "ラップ" します。 同様に、 `CDialog`クラスは Win32 のダイアログボックスをカプセル化します。
+たとえば、Win32's というウィンドウの概念は、MFC クラス `CWnd`によってカプセル化されています。 つまり、`CWnd` とC++いうクラスは、Windows ウィンドウを表す `HWND` ハンドルをカプセル化または "ラップ" します。 同様に、クラス `CDialog` は Win32 のダイアログボックスをカプセル化します。
 
-カプセル化とはC++ 、 `CWnd`たとえば、クラスには型`HWND`のメンバー変数が含まれ、クラスのメンバー関数はをパラメーター `HWND`として受け取る Win32 関数への呼び出しをカプセル化することを意味します。 クラスメンバー関数には、通常、カプセル化する Win32 関数と同じ名前が付けられています。
+カプセル化とはC++ 、たとえば、クラス `CWnd`が `HWND`型のメンバー変数を含み、クラスのメンバー関数が、パラメーターとして `HWND` を受け取る Win32 関数への呼び出しをカプセル化することを意味します。 クラスメンバー関数には、通常、カプセル化する Win32 関数と同じ名前が付けられています。
 
 ## <a name="in-this-section"></a>このセクションの内容
 
@@ -41,13 +41,13 @@ MFC (Microsoft Foundation Class) ライブラリフレームワークでの作�
 
 [フレームワークと記述したコードとの関係](../mfc/how-the-framework-calls-your-code.md)
 
-[CWinApp: アプリケーション クラス](../mfc/cwinapp-the-application-class.md)
+[CWinApp : アプリケーション クラス](../mfc/cwinapp-the-application-class.md)
 
-[ドキュメントテンプレートとドキュメント/ビュー作成プロセス](../mfc/document-templates-and-the-document-view-creation-process.md)
+[ドキュメント テンプレートとドキュメント/ビューの作成手順](../mfc/document-templates-and-the-document-view-creation-process.md)
 
 [メッセージの処理とマップ](../mfc/message-handling-and-mapping.md)
 
-[Window オブジェクト](../mfc/window-objects.md)
+[ウィンドウ オブジェクト](../mfc/window-objects.md)
 
 ## <a name="see-also"></a>関連項目
 

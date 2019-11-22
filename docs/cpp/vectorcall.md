@@ -16,7 +16,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62393884"
 ---
-# <a name="vectorcall"></a>__vectorcall
+# <a name="__vectorcall"></a>__vectorcall
 
 **Microsoft 固有の仕様**
 
@@ -79,7 +79,7 @@ typedef __m256 (__vectorcall * vcfnptr)(double, double, double, double);
 
 以前のバージョンとの互換性のため **_vectorcall**のシノニムです **_ _vectorcall**しない限り、コンパイラ オプション[/Za\(言語拡張機能を無効にする)](../build/reference/za-ze-disable-language-extensions.md)を指定します。
 
-## <a name="vectorcall-convention-on-x64"></a>x64 での __vectorcall 規約
+## <a name="__vectorcall-convention-on-x64"></a>x64 での __vectorcall 規約
 
 **_ _Vectorcall** x64 呼び出し規則、標準の x64 呼び出し規則の追加のレジスタを利用するを拡張します。 整数型引数とベクター型引数の両方が、引数リスト内の位置に基づいてレジスタにマップされます。 HVA 引数は、未使用のベクター レジスタに割り当てられます。
 
@@ -93,7 +93,7 @@ typedef __m256 (__vectorcall * vcfnptr)(double, double, double, double);
 
 スタックは、x64、呼び出し元によって保持の実装 **_ _vectorcall**します。 呼び出された関数のためのスタックは、呼び出し元のプロローグ コードとエピローグ コードによって割り当てられ、クリアされます。 引数はスタックで右から左へプッシュされます。レジスタに渡された引数には、シャドウ スタック領域が割り当てられます。
 
-次に例を示します。 
+次に例を示します。
 
 ```cpp
 // crt_vc64.c
@@ -189,7 +189,7 @@ int __cdecl main( void )
 }
 ```
 
-## <a name="vectorcall-convention-on-x86"></a>x86 での __vectorcall 規約
+## <a name="__vectorcall-convention-on-x86"></a>x86 での __vectorcall 規約
 
 **_ _Vectorcall**呼び出し規約次のように、 **_ _fastcall**の 32 ビット整数型の引数とベクター型と HVA 引数に対して SSE ベクター レジスタを利用規則。
 
@@ -203,7 +203,7 @@ int __cdecl main( void )
 
 X86 の実装 **_ _vectorcall**次のように、呼び出し元と、呼び出された関数で、右から左にスタックにプッシュする引数の規約スタックを消去戻る直前。 スタックには、レジスタに配置されていない引数のみがプッシュされます。
 
-次に例を示します。 
+次に例を示します。
 
 ```cpp
 // crt_vc86.c

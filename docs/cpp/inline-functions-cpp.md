@@ -66,7 +66,7 @@ int main()
 
 その関数の定義が含まれていない場合、クラス メンバー関数の外部リンケージを既定値、**inline**指定子。 前の例をこれらの関数必要がありますいない明示的に宣言すると、**inline**指定子を使用して**inline**関数の定義、インライン関数を使用すると、します。 ただし、関数として再宣言するされていない**inline**その関数を呼び出した後。
 
-## <a name="inline-inline-and-forceinline"></a>Inline、_ _inline、および\__forceinline
+## <a name="inline-__inline-and-__forceinline"></a>Inline、_ _inline、および\__forceinline
 
 **inline**と **_ _inline**指定子、関数が呼び出される適切な各場所に、関数本体のコピーを挿入するようコンパイラに指示します。
 

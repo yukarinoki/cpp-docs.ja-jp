@@ -1,10 +1,10 @@
----
+﻿---
 title: C++ での属性
 ms.date: 05/06/2019
 ms.assetid: 748340d9-8abf-4940-b0a0-91b6156a3ff8
 ms.openlocfilehash: bc92e5f3e279edc6fbea7f99d52c469f9fdf04f8
 ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2019
 ms.locfileid: "65222304"
@@ -15,7 +15,7 @@ C++ 標準は一連の属性を定義し、コンパイラ ベンダー (製造�
 
 場合によっては、標準属性は、コンパイラ固有の declspec パラメーターと重複します。 Visual C で使用することができます、`[[deprecated]]`属性を使用してではなく`declspec(deprecated)`属性が任意に準拠するコンパイラで認識されるとします。 すべての他の declspec パラメーター dllimport と dllexport などにはありませんとしてまだ属性と同じので declspec 構文を使用し続ける必要があります。 属性、型システムには影響しませんし、プログラムの意味を変更しません。 コンパイラは、認識されていない属性値を無視します。
 
-**Visual Studio 2017 バージョン 15.3 以降**(で使用可能な[/std:c++17](../build/reference/std-specify-language-standard-version.md))。1 つのすべての名前を名前空間を指定する属性リストのスコープで**を使用して**導入。
+**Visual Studio 2017 バージョン 15.3 以降**(で使用可能な[/std:c++17](../build/reference/std-specify-language-standard-version.md))。1 つのすべての名前を名前空間を指定する属性リストのスコープで**using**導入。
 
 ```cpp
 void g() {

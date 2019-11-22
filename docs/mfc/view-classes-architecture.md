@@ -9,24 +9,24 @@ helpviewer_keywords:
 - control views [MFC]
 - view classes [MFC], architecture
 ms.assetid: 8894579a-1436-441e-b985-83711061e495
-ms.openlocfilehash: c6c1272d41eb7a01ec5a7ee10fadb4ab21547ce7
-ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
+ms.openlocfilehash: fda4e968a4761fcf1e2245964bd5dca3f41a82ad
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71096058"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74302986"
 ---
 # <a name="view-classes-architecture"></a>ビュー クラス (アーキテクチャ)
 
-`CView`およびその派生クラスは、フレームウィンドウのクライアント領域を表す子ウィンドウです。 ビューには、データが表示され、ドキュメントの入力が受け入れられます。
+`CView` とその派生クラスは、フレームウィンドウのクライアント領域を表す子ウィンドウです。 ビューには、データが表示され、ドキュメントの入力が受け入れられます。
 
 ビュークラスは、ドキュメントクラスと、ドキュメントテンプレートオブジェクトを使用するフレームウィンドウクラスに関連付けられています。
 
 [CView](../mfc/reference/cview-class.md)<br/>
-ドキュメントのデータのアプリケーション固有のビューの基本クラス。 ビューデータを表示し、ユーザーの入力を受け入れてデータを編集または選択します。 ビュークラスをから`CView`派生させます。
+ドキュメントのデータのアプリケーション固有のビューの基本クラス。 ビューデータを表示し、ユーザーの入力を受け入れてデータを編集または選択します。 `CView`からビュークラスを派生させます。
 
 [CScrollView](../mfc/reference/cscrollview-class.md)<br/>
-スクロール機能を持つビューの基本クラスです。 自動スクロールを行うため`CScrollView`に、からビュークラスを派生させます。
+スクロール機能を持つビューの基本クラスです。 自動スクロール用に `CScrollView` からビュークラスを派生させます。
 
 ## <a name="form-and-record-views"></a>フォームビューとレコードビュー
 
@@ -35,10 +35,10 @@ ms.locfileid: "71096058"
 レコードビューはフォームビューから派生します。 ダイアログボックステンプレートに加えて、データベースへの接続もあります。
 
 [CFormView](../mfc/reference/cformview-class.md)<br/>
-ダイアログボックステンプレートでレイアウトが定義されているスクロールビュー。 から`CFormView`クラスを派生させ、ダイアログボックステンプレートに基づいてユーザーインターフェイスを実装します。
+ダイアログボックステンプレートでレイアウトが定義されているスクロールビュー。 ダイアログボックステンプレートに基づいてユーザーインターフェイスを実装するには、`CFormView` からクラスを派生させます。
 
 [CDaoRecordView](../mfc/reference/cdaorecordview-class.md)<br/>
-データアクセスオブジェクト (DAO) レコードセットオブジェクトに直接接続されたフォームビューを提供します。 すべてのフォームビュー `CDaoRecordView`と同様に、はダイアログボックステンプレートに基づいています。 DAO は Access データベースで使用され、Office 2013 でサポートされています。 3.6 は最終バージョンであり、廃止されたと見なされます。
+データアクセスオブジェクト (DAO) レコードセットオブジェクトに直接接続されたフォームビューを提供します。 すべてのフォームビューと同様に、`CDaoRecordView` はダイアログボックステンプレートに基づいています。 DAO は Access データベースで使用され、Office 2013 でサポートされています。 DAO 3.6 は最終バージョンであり、互換性のために残されているものと見なされます。
 
 [CHtmlView](../mfc/reference/chtmlview-class.md)<br/>
 アプリケーション内での Web 参照のコントロールをサポートします。 コントロールは、MFC での動的 HTML をサポートします。
@@ -47,7 +47,7 @@ ms.locfileid: "71096058"
 フォームビューの MFC OLE DB サポートを提供します。
 
 [CRecordView](../mfc/reference/crecordview-class.md)<br/>
-Open Database Connectivity (ODBC) レコードセットオブジェクトに直接接続されたフォームビューを提供します。 すべてのフォームビュー `CRecordView`と同様に、はダイアログボックステンプレートに基づいています。
+Open Database Connectivity (ODBC) レコードセットオブジェクトに直接接続されたフォームビューを提供します。 すべてのフォームビューと同様に、`CRecordView` はダイアログボックステンプレートに基づいています。
 
 ## <a name="control-views"></a>コントロールビュー
 

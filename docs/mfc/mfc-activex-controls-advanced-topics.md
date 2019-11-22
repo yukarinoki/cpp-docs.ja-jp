@@ -1,5 +1,5 @@
 ---
-title: MFC ActiveX コントロール:詳細トピック
+title: 'MFC ActiveX コントロール : 高度なトピック'
 ms.date: 09/12/2018
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], error codes
@@ -12,16 +12,16 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], parameterized property
 - ThrowError method [MFC]
 ms.assetid: e9e34abb-8e2d-461e-bb9c-a1aec5dcecbd
-ms.openlocfilehash: e0daabf3d236eb7038f22c54ea76d616baf613a0
-ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
+ms.openlocfilehash: 9f1fa862a30a83cbda049fc63bac6c33a101587b
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71095999"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74305387"
 ---
-# <a name="mfc-activex-controls-advanced-topics"></a>MFC ActiveX コントロール:詳細トピック
+# <a name="mfc-activex-controls-advanced-topics"></a>MFC ActiveX コントロール : 高度なトピック
 
-この記事では、ActiveX コントロールの開発に関連する高度なトピックについて説明します。 不足している機能には次が含まれます。
+この記事では、ActiveX コントロールの開発に関連する高度なトピックについて説明します。 次の設定があります。
 
 - [ActiveX コントロールでのデータベースクラスの使用](#_core_using_database_classes_in_activex_controls)
 
@@ -43,7 +43,7 @@ ActiveX コントロールクラスはクラスライブラリの一部である
 MFC データベースクラスの一般的な概要については、「 [Mfc データベースクラス (DAO および ODBC)](../data/mfc-database-classes-odbc-and-dao.md)」を参照してください。 この記事では、MFC ODBC クラスと MFC DAO クラスの両方について説明します。詳細については、こちらを参照してください。
 
 > [!NOTE]
->   DAO は Office 2013 でサポートされています。 DAO 3.6 は最終バージョンであり、互換性のために残されているものと見なされます。 ビジュアルC++環境とウィザードでは、dao はサポートされていません (dao クラスは含まれていますが、引き続き使用できます)。 新しいプロジェクトには、 [OLE DB テンプレート](../data/oledb/ole-db-programming.md)または[ODBC および MFC](../data/odbc/odbc-and-mfc.md)を使用することをお勧めします。 既存のアプリケーションを維持するには、DAO のみを使用する必要があります。
+> DAO は Office 2013 でサポートされています。 DAO 3.6 は最終バージョンであり、互換性のために残されているものと見なされます。 ビジュアルC++環境とウィザードでは、dao はサポートされていません (dao クラスは含まれていますが、引き続き使用できます)。 新しいプロジェクトには、 [OLE DB テンプレート](../data/oledb/ole-db-programming.md)または[ODBC および MFC](../data/odbc/odbc-and-mfc.md)を使用することをお勧めします。 既存のアプリケーションを維持するには、DAO のみを使用する必要があります。
 
 ##  <a name="_core_implementing_a_parameterized_property"></a>パラメーター化されたプロパティの実装
 
@@ -67,9 +67,9 @@ MFC データベースクラスの一般的な概要については、「 [Mfc �
 
 1. ショートカットメニューの **[追加]** をクリックし、 **[プロパティの追加]** をクリックします。
 
-1. **[プロパティ名]** ボックスに「 `Array`」と入力します。
+1. **[プロパティ名]** ボックスに「`Array`」と入力します。
 
-1. **[プロパティの種類]** ボックスで、 **[short]** を選択します。
+1. **プロパティ型**ボックスで、**short**します。
 
 1. **[実装]** の種類 で、 **[Get/Set メソッド]** をクリックします。
 
@@ -89,13 +89,13 @@ MFC データベースクラスの一般的な概要については、「 [Mfc �
 
 [!code-cpp[NVC_MFC_AxUI#35](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_2.h)]
 
-このコードは、という`GetArray` 2 `SetArray`つの関数を宣言します。これにより、ユーザーは、プロパティにアクセスするときに特定の行と列を要求できるようになります。
+このコードは、プロパティにアクセスするときにユーザーが特定の行と列を要求できるようにする `GetArray` と `SetArray` と呼ばれる2つの関数を宣言します。
 
 さらに、プロパティの追加ウィザードでは、コントロールクラスの実装 () にあるコントロールのディスパッチマップに次の行を追加します。CPP) ファイル:
 
 [!code-cpp[NVC_MFC_AxUI#36](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_3.cpp)]
 
-最後に、関数`GetArray`と`SetArray`関数の実装がの末尾に追加されます。CPP ファイル。 ほとんどの場合、プロパティの値を返すように Get 関数を変更します。 Set 関数には、通常、プロパティが変更される前または後に実行する必要があるコードが含まれます。
+最後に、`GetArray` および `SetArray` 関数の実装がの末尾に追加されます。CPP ファイル。 ほとんどの場合、プロパティの値を返すように Get 関数を変更します。 Set 関数には、通常、プロパティが変更される前または後に実行する必要があるコードが含まれます。
 
 このプロパティを使用するには、パラメーター化されたプロパティの値を格納するために、control クラスで**short**型の2次元配列メンバー変数を宣言します。 次に、パラメーターで示されているように、適切な行と列に格納されている値を返すように Get 関数を変更し、行と列のパラメーターによって参照される値を更新するように Set 関数を変更します。
 
@@ -103,15 +103,15 @@ MFC データベースクラスの一般的な概要については、「 [Mfc �
 
 コントロールでエラー状態が発生した場合は、コントロールコンテナーにエラーを報告することが必要になる場合があります。 エラーを報告するには、エラーが発生した状況に応じて2つの方法があります。 プロパティの Get または Set 関数内、または OLE オートメーションメソッドの実装内でエラーが発生した場合、コントロールは、エラーが発生したことをコントロールユーザーに通知する、 [COleControl:: ThrowError](../mfc/reference/colecontrol-class.md#throwerror)を呼び出す必要があります。 他のタイミングでエラーが発生した場合、コントロールは、ストックエラーイベントを発生させる、 [COleControl:: 焼討 error](../mfc/reference/colecontrol-class.md#fireerror)を呼び出す必要があります。
 
-発生したエラーの種類を示すには、コントロールはまたは`ThrowError` `FireError`にエラーコードを渡す必要があります。 エラーコードは、32ビットの値を持つ OLE ステータスコードです。 可能であれば、OLECTL で定義されている標準のコードセットからエラーコードを選択します。H ヘッダーファイル。 次の表は、これらのコードをまとめたものです。
+発生したエラーの種類を示すには、コントロールは `ThrowError` または `FireError`にエラーコードを渡す必要があります。 エラーコードは、32ビットの値を持つ OLE ステータスコードです。 可能であれば、OLECTL で定義されている標準のコードセットからエラーコードを選択します。H ヘッダーファイル。 次の表は、これらのコードをまとめたものです。
 
 ### <a name="activex-control-error-codes"></a>ActiveX コントロールのエラーコード
 
-|Error|説明|
+|[エラー]|[説明]|
 |-----------|-----------------|
 |CTL_E_ILLEGALFUNCTIONCALL|無効な関数呼び出し|
 |CTL_E_OVERFLOW|オーバーフロー|
-|CTL_E_OUTOFMEMORY|メモリ不足|
+|CTL_E_OUTOFMEMORY|メモリが不足しています|
 |CTL_E_DIVISIONBYZERO|0による除算|
 |CTL_E_OUTOFSTRINGSPACE|文字列スペースが不足しています。|
 |CTL_E_OUTOFSTACKSPACE|スタック領域が不足しています。|
@@ -160,7 +160,7 @@ MFC データベースクラスの一般的な概要については、「 [Mfc �
 
 場合によっては、特定のキーストロークの組み合わせを特別な方法で処理することが必要になることがあります。たとえば、複数行テキストボックスコントロールで ENTER キーを押すか、方向キー ID が押されたときに編集コントロールのグループ間を移動すると、新しい行を挿入します。
 
-ActiveX コントロールの基本クラスが`COleControl`の場合は、 [CWnd::P retranslatemessage](../mfc/reference/cwnd-class.md#pretranslatemessage)をオーバーライドして、コンテナーがメッセージを処理する前にメッセージを処理することができます。 この手法を使用する場合、の`PreTranslateMessage`オーバーライドでメッセージを処理する場合は、常に TRUE を返します。
+ActiveX コントロールの基本クラスが `COleControl`場合は、 [CWnd::P retranslatemessage](../mfc/reference/cwnd-class.md#pretranslatemessage)をオーバーライドして、コンテナーがメッセージを処理する前にメッセージを処理することができます。 この手法を使用する場合、`PreTranslateMessage`のオーバーライドでメッセージを処理する場合は、常に**TRUE**を返します。
 
 次のコード例は、方向キーに関連するメッセージを処理する方法を示しています。
 
@@ -176,7 +176,7 @@ ActiveX コントロールのキーボードインターフェイスを処理す
 
      \- または -
 
-- ローカル変数とサブクラスをダイアログ項目として宣言します。 次のようなコードを挿入`CMyCtrl`します (はラッパークラス、IDC_MYCTRL1 はコントロールの ID です)。
+- ローカル変数とサブクラスをダイアログ項目として宣言します。 次のようなコードを挿入します (`CMyCtrl` は、コントロールの ID で IDC_MYCTRL1 ラッパークラスです)。
 
    [!code-cpp[NVC_MFC_AxCont#19](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_6.cpp)]
 

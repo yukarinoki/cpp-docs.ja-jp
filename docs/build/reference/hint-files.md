@@ -11,12 +11,12 @@ helpviewer_keywords:
 - cpp.stop
 - Class View, hint file
 ms.assetid: 17194f66-cf62-4523-abec-77db0675ab65
-ms.openlocfilehash: af28dac17c57c8c0699950cc1fdb542642c01722
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: ca111fcb8b0fc511fda3bbb3a4769ebc9fdd28bc
+ms.sourcegitcommit: 217fac22604639ebd62d366a69e6071ad5b724ac
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707111"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74189003"
 ---
 # <a name="hint-files"></a>ヒント ファイル
 
@@ -26,7 +26,7 @@ C++ 参照データベース パーサーは、短時間で大量のコードを
 
 スキップされるリージョンは複数の方法で明らかになります。
 
-- **クラス ビュー**、**Go To\(移動先\)**、**ナビゲーション バー** で不足している型と関数
+- **クラス ビュー**、**Go To\(移動先\)** 、**ナビゲーション バー** で不足している型と関数
 
 - **ナビゲーション バー** で正しくないスコープ
 
@@ -36,10 +36,10 @@ C++ 参照データベース パーサーは、短時間で大量のコードを
 
 > [!IMPORTANT]
 > ヒント ファイルを変更または追加する場合は、変更を反映するための追加の手順を実行する必要があります。
-> - Visual Studio 2017 バージョン 15.6 より前のバージョン: すべての変更で、ソリューションの .sdf ファイルと VC.db ファイルの一方または両方を削除します。
-> - Visual Studio 2017 バージョン 15.6 から 15.9: 新しいヒント ファイルを追加した後、ソリューションを閉じて再度開きます。
+> - In versions before Visual Studio 2017 version 15.6: Delete the .sdf file and/or VC.db file in the solution for all changes.
+> - In Visual Studio 2017 version 15.6 and later: Close and reopen the solution after adding new hint files.
 
-## <a name="scenario"></a>シナリオ
+## <a name="scenario"></a>通信の種類
 
 ```cpp
 #define NOEXCEPT noexcept
@@ -48,7 +48,7 @@ void Function() NOEXCEPT
 }
 ```
 
-ヒント ファイルがないと、`Function` が**クラス ビュー**、**Go To\(移動先\)**、または**ナビゲーション バー**に表示されません。 このマクロ定義のヒント ファイルを追加すると、パーサーが `NOEXCEPT` マクロを理解して置き換え、関数を正しく解析できるようになります。
+ヒント ファイルがないと、`Function` が**クラス ビュー**、**Go To\(移動先\)** 、または**ナビゲーション バー**に表示されません。 このマクロ定義のヒント ファイルを追加すると、パーサーが `NOEXCEPT` マクロを理解して置き換え、関数を正しく解析できるようになります。
 
 ```cpp.hint
 #define NOEXCEPT
@@ -92,17 +92,17 @@ Visual Studio 2017 バージョン 15.8 以降には、中断を伴うマクロ�
 
 - 強調表示されているマクロを含むヒント ファイルを作成するクイック アクションがあります。既にヒント ファイルがある場合には、そのヒント ファイルにマクロを追加します。
 
-![強調表示されているマクロ。](media/hint-squiggle-and-actions.png "ヒントの波線とクイック アクション")
+![Highlighted Macro.](media/hint-squiggle-and-actions.png "Hint squiggle and Quick Actions")
 
 いずれかのクイック アクションを実行した後、パーサーは、ヒント ファイルによる影響を受けるファイルを再解析します。
 
-既定では、問題のマクロは、修正候補として強調表示されます。 強調表示は、赤や緑の波線のようなわかりやすいものに変更できます。 **[ツール]** > **[オプション]** > **[テキスト エディター]** > **[C/C++]** > **[ビュー]** の **[Code Squiggles]\(コードの波線\)** セクションで、**[Macros in Skipped Browsing Regions]\(スキップされた参照領域のマクロ\)** を使用します。
+既定では、問題のマクロは、修正候補として強調表示されます。 強調表示は、赤や緑の波線のようなわかりやすいものに変更できます。 **[ツール]**  >  **[オプション]**  >  **[テキスト エディター]**  >  **[C/C++]**  >  **[ビュー]** の **[Code Squiggles]\(コードの波線\)** セクションで、 **[Macros in Skipped Browsing Regions]\(スキップされた参照領域のマクロ\)** を使用します。
 
-![[Macros in Skipped Browsing Regions]\(スキップされた参照領域のマクロ\) オプション。](media/skipped-regions-squiggle-option.png "スキップされた領域の波線オプション。")
+![Macros in Skipped Browsing Regions Option.](media/skipped-regions-squiggle-option.png "Skipped regions squiggle option.")
 
 ## <a name="display-browsing-database-errors"></a>参照データベース エラーを表示
 
-**[プロジェクト]** > **[参照データベース エラーを表示]** メニュー コマンドでは、解析に失敗したすべての領域が **[エラー一覧]** に表示されます。 このコマンドは、最初のヒント ファイルの作成を効率化するためのものです。 ただし、パーサーは、エラーの原因が中断を伴うマクロかどうかを通知しないため、各エラーを自分で評価する必要があります。 **[参照データベース エラーを表示]** コマンドを実行し、各エラーに移動して、影響を受けるファイルをエディターに読み込みます。 ファイルが読み込まれ、リージョン内に何らかのマクロがある場合には、それが強調表示されます。 これをヒント ファイルに追加するためのクイック アクションを呼び出すことができます。 ヒント ファイルの更新後、エラー一覧は自動的に更新されます。 また、ヒント ファイルを手動で変更している場合には、**[ソリューションの再スキャン]** コマンドを使用して更新をトリガーすることができます。
+**[プロジェクト]**  >  **[参照データベース エラーを表示]** メニュー コマンドでは、解析に失敗したすべての領域が **[エラー一覧]** に表示されます。 このコマンドは、最初のヒント ファイルの作成を効率化するためのものです。 ただし、パーサーは、エラーの原因が中断を伴うマクロかどうかを通知しないため、各エラーを自分で評価する必要があります。 **[参照データベース エラーを表示]** コマンドを実行し、各エラーに移動して、影響を受けるファイルをエディターに読み込みます。 ファイルが読み込まれ、リージョン内に何らかのマクロがある場合には、それが強調表示されます。 これをヒント ファイルに追加するためのクイック アクションを呼び出すことができます。 ヒント ファイルの更新後、エラー一覧は自動的に更新されます。 また、ヒント ファイルを手動で変更している場合には、 **[ソリューションの再スキャン]** コマンドを使用して更新をトリガーすることができます。
 
 ## <a name="architecture"></a>アーキテクチャ
 
@@ -166,7 +166,7 @@ Visual Studio 2017 バージョン 15.8 以降には、中断を伴うマクロ�
 
 ### <a name="hint-file-directories"></a>ヒント ファイルのディレクトリ
 
-![共通およびプロジェクト固有のヒント ファイルのディレクトリ。](media/hintfile.png "HintFile")
+![Common and project&#45;specific hint file directories.](media/hintfile.png "HintFile")
 
 ### <a name="directories-and-hint-file-contents"></a>ディレクトリとヒント ファイルのコンテンツ
 
@@ -214,7 +214,7 @@ Visual Studio 2017 バージョン 15.8 以降には、中断を伴うマクロ�
 
 この表は、このプロジェクト内のソース ファイルのエフェクティブ ヒントを示しています。
 
-- ソース ファイル:A1_A2_B.cpp
+- ソース ファイル: A1_A2_B.cpp
 
 - エフェクティブ ヒント:
 

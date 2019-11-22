@@ -1,4 +1,4 @@
----
+﻿---
 title: C++ でのラムダ式
 ms.date: 05/07/2019
 helpviewer_keywords:
@@ -8,7 +8,7 @@ helpviewer_keywords:
 ms.assetid: 713c7638-92be-4ade-ab22-fa33417073bf
 ms.openlocfilehash: c7543b3558da88b41102fa7b790bb9d9f3f18463
 ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2019
 ms.locfileid: "65222376"
@@ -102,7 +102,7 @@ void f(Args... args) {
 
 クラスのメソッドの本体でラムダ式を使用するには**this**外側のクラスのメソッドとデータ メンバーにアクセスを提供する capture 句へのポインター。
 
-**Visual Studio 2017 バージョン 15.3 以降**(で使用可能な[/std:c++17](../build/reference/std-specify-language-standard-version.md))。**この**ポインターを指定することで値によってキャプチャされる可能性があります`*this`capture 句でします。 値でキャプチャすることで全体*クロージャ*、無名関数オブジェクトをその encapulates ラムダ式は、ラムダが呼び出されるすべての呼び出しサイトにコピーされます。 値によってキャプチャは、ラムダは、NUMA などの特定のハードウェア アーキテクチャで特に並列または非同期の操作で実行する場合に便利です。
+**Visual Studio 2017 バージョン 15.3 以降**(で使用可能な[/std:c++17](../build/reference/std-specify-language-standard-version.md))。**this**ポインターを指定することで値によってキャプチャされる可能性があります`*this`capture 句でします。 値でキャプチャすることで全体*クロージャ*、無名関数オブジェクトをその encapulates ラムダ式は、ラムダが呼び出されるすべての呼び出しサイトにコピーされます。 値によってキャプチャは、ラムダは、NUMA などの特定のハードウェア アーキテクチャで特に並列または非同期の操作で実行する場合に便利です。
 
 クラスのメソッドをラムダ式を使用する方法を示す例を参照してください"の例。使用して、メソッドのラムダ式"で[ラムダ式の例](../cpp/examples-of-lambda-expressions.md)します。
 

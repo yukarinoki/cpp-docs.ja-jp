@@ -16,7 +16,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62261243"
 ---
-# <a name="atlcreatewnddata-structure"></a>_AtlCreateWndData 構造体
+# <a name="_atlcreatewnddata-structure"></a>_AtlCreateWndData 構造体
 
 この構造体には、ATL でウィンドウ作成コードのクラス インスタンスのデータが含まれています。
 

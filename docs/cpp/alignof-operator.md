@@ -21,7 +21,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62258253"
 ---
-# <a name="alignof-operator"></a>__alignof 演算子
+# <a name="__alignof-operator"></a>__alignof 演算子
 
 C++ 11 で、 **alignof**演算子を指定した型のバイト単位で、配置を返します。 移植性を最大にするため、Microsoft 固有の __alignof 演算子ではなく、alignof 演算子を使用してください。
 

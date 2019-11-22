@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4965
 ms.assetid: 47f3f6dc-459b-4a25-9947-f394c8966cb5
-ms.openlocfilehash: 2e93fdeba7f9b5b10340ccd1920807a3fcb345a0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ac1ffc1626a8b72fd7c9026afb6c6a54bace3750
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383851"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052231"
 ---
 # <a name="compiler-warning-level-1-c4965"></a>コンパイラの警告 (レベル 1) C4965
 
-整数 0 の暗黙的なボックスです。nullptr または明示的なキャストを使用して、
+整数0の暗黙的なボックスnullptr または明示的なキャストを使用する
 
-Visual C には、値型の暗黙的なボックス化が機能します。 現在 c++ マネージ拡張を使用して null 代入を発生させた命令がボックス化変換された整数への代入
+ビジュアルC++は、値型の暗黙的なボックス化機能を備えています。 現在、のマネージ拡張を使用して null 代入をC++行った命令は、ボックス化された int への代入になります。
 
 詳細については、「 [ボックス化](../../extensions/boxing-cpp-component-extensions.md)で定義されているインターフェイスのプライベート C++ 固有の実装です。
 
@@ -25,7 +25,7 @@ Visual C には、値型の暗黙的なボックス化が機能します。 現�
 
 次の例では、C4965 が生成されます。
 
-```
+```cpp
 // C4965.cpp
 // compile with: /clr /W1
 int main() {

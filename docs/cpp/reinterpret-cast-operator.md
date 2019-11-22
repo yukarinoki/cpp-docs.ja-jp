@@ -1,4 +1,4 @@
----
+﻿---
 title: reinterpret_cast 演算子
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,7 +13,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62403426"
 ---
-# <a name="reinterpretcast-operator"></a>reinterpret_cast 演算子
+# <a name="reinterpret_cast-operator"></a>reinterpret_cast 演算子
 
 ポインターが他のポインター型に変換されることを許可します。 また、整数型から任意のポインター型への変換およびその逆の変換を許可します。
 

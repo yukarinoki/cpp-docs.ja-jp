@@ -7,7 +7,7 @@ helpviewer_keywords:
 ms.assetid: 4be9cacb-c862-4391-894a-3a118c9c93ce
 ms.openlocfilehash: 1790f5d7ecf834c97a9242e8f42d1fb402604ac6
 ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/07/2019
 ms.locfileid: "65222480"
@@ -75,7 +75,7 @@ C++ 言語の演算子。
 イベントとイベント ハンドラーの宣言。
 
 [Microsoft 固有の修飾子](../cpp/microsoft-specific-modifiers.md)<br/>
-Microsoft C++ 固有の修飾子。 メモリをアドレス指定、呼び出し規則、 **naked**関数、拡張ストレージ クラス属性 (**_ _declspec**)、 **_ _w64**します。
+Microsoft C++ 固有の修飾子。 メモリをアドレス指定、呼び出し規則、 **naked**関数、拡張ストレージ クラス属性 ( **_ _declspec**)、 **_ _w64**します。
 
 [インライン アセンブラー](../assembler/inline/inline-assembler.md)<br/>
 アセンブリ言語の使用とC++で **_ _asm**ブロックします。

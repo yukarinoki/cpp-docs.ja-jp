@@ -1,4 +1,4 @@
----
+﻿---
 title: const_cast 演算子
 ms.date: 11/04/2016
 f1_keywords:
@@ -13,7 +13,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62399110"
 ---
-# <a name="constcast-operator"></a>const_cast 演算子
+# <a name="const_cast-operator"></a>const_cast 演算子
 
 削除、 **const**、**volatile**、および **_ _unaligned**クラスから属性。
 

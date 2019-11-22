@@ -24,7 +24,7 @@ ms.locfileid: "62267690"
 [= & qualified-name :: member-name];
 ```
 
-1. 宣言指定子: 
+1. 宣言指定子:
 
    - ストレージ クラスの指定子 (省略可能)。
 
@@ -32,7 +32,7 @@ ms.locfileid: "62267690"
 
    - 型指定子: 型の名前。  これは指されるメンバーのクラスではなく、種類です。
 
-1. 宣言子: 
+1. 宣言子:
 
    - オプションの Microsoft 固有の修飾子。 詳細については、次を参照してください。 [Microsoft 固有の修飾子](../cpp/microsoft-specific-modifiers.md)します。
 
@@ -104,7 +104,7 @@ strcpy_s( pwChildWindow->*pwCaption, cUntitledLen, szUntitled );
 (pwChildWindow->*pwCaption)[cUntitledLen - 1] = '2'; //same as //pwChildWindow->szWinCaption[cUntitledLen - 1] = '2';
 ```
 
-間の差、 **.**<strong>\*</strong>と**->** <strong>\*</strong>演算子 (メンバーへのポインター演算子) は、 **.**<strong>\*</strong>演算子は、メンバーを選択しますオブジェクトまたはオブジェクトの参照を指定すると、while、 **->** <strong>\*</strong>演算子。ポインターからメンバーを選択します。 (詳細については、これらの演算子は、次を参照してください[メンバーへのポインター演算子を含む式](../cpp/pointer-to-member-operators-dot-star-and-star.md)。)。
+間の差、 **.** <strong>\*</strong>と **->** <strong>\*</strong>演算子 (メンバーへのポインター演算子) は、 **.** <strong>\*</strong>演算子は、メンバーを選択しますオブジェクトまたはオブジェクトの参照を指定すると、while、 **->** <strong>\*</strong>演算子。ポインターからメンバーを選択します。 (詳細については、これらの演算子は、次を参照してください[メンバーへのポインター演算子を含む式](../cpp/pointer-to-member-operators-dot-star-and-star.md)。)。
 
 メンバーへのポインター演算子の結果は、メンバーの型: この場合、`char *`します。
 
@@ -127,7 +127,7 @@ strcat_s( szCaptionBase, sizeOfBuffer, " [View 1]" );
 
 ## <a name="restrictions-on-pointers-to-members"></a>メンバーへのポインターに関する制約
 
-静的メンバーのアドレスは、メンバーへのポインターではありません。 それは静的メンバーの 1 つのインスタンスへの通常のポインターです。 静的メンバーの 1 つだけのインスタンスは、通常アドレスの特定のクラスのすべてのオブジェクトが存在するため (**&**) 逆参照し、(<strong>\*</strong>) 演算子を使用できます。
+静的メンバーのアドレスは、メンバーへのポインターではありません。 それは静的メンバーの 1 つのインスタンスへの通常のポインターです。 静的メンバーの 1 つだけのインスタンスは、通常アドレスの特定のクラスのすべてのオブジェクトが存在するため ( **&** ) 逆参照し、(<strong>\*</strong>) 演算子を使用できます。
 
 ## <a name="pointers-to-members-and-virtual-functions"></a>メンバーと仮想関数へのポインター
 

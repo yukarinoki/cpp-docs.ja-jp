@@ -1,19 +1,19 @@
 ---
 title: noexcept (C++)
-ms.date: 01/12/2018
+ms.date: 11/19/2019
 f1_keywords:
 - noexcept_cpp
 ms.assetid: df24edb9-c6a6-4e37-9914-fd5c0c3716a8
-ms.openlocfilehash: cf53aca918e36d18ab7f8aa14b01caaf0e55627c
-ms.sourcegitcommit: ace42fa67e704d56d03c03745b0b17d2a5afeba4
+ms.openlocfilehash: 5e8d58ed246b0143dc3d3be545cd796a4c3d60ed
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69975901"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74245624"
 ---
 # <a name="noexcept-c"></a>noexcept (C++)
 
-**C++ 11:** 関数が例外をスローするかどうかを指定します。
+**C++11:** Specifies whether a function might throw exceptions.
 
 ## <a name="syntax"></a>構文
 
@@ -22,17 +22,17 @@ ms.locfileid: "69975901"
 ### <a name="parameters"></a>パラメーター
 
 *constant-expression*<br/>
-潜在的な例外の種類のセットが空かどうかを表す**ブール**型の定数式。 無条件バージョンは、と同じ`noexcept(true)`です。
+A constant expression of type **bool** that represents whether the set of potential exception types is empty. The unconditional version is equivalent to `noexcept(true)`.
 
 ## <a name="remarks"></a>Remarks
 
-*Noexcept 式*は、例外*指定*の一種であり、関数を終了する例外の例外ハンドラーによって照合される可能性のある型のセットを表す関数宣言のサフィックスです。 `noexcept(` *Constant_expression*が**true**、無条件シノニム**noexcept**の単項条件演算子*constant_expression* `)`は、一連の潜在的な例外の種類を指定します。関数を終了できますが空です。 つまり、関数は例外をスローしないため、例外をスコープ外に反映することはできません。 演算子`noexcept(` *constant_expression* where constant_expression は false を生成します。または、(デストラクターまたは解放関数以外の) 例外の指定がない場合は、`)`関数を終了できる可能性のある例外のセットは、すべての型のセットです。
+A *noexcept expression* is a kind of *exception specification*, a suffix to a function declaration that represents a set of types that might be matched by an exception handler for any exception that exits a function. Unary conditional operator `noexcept(`*constant_expression*`)` where *constant_expression* yields **true**, and its unconditional synonym **noexcept**, specify that the set of potential exception types that can exit a function is empty. That is, the function never throws an exception and never allows an exception to be propagated outside its scope. The operator `noexcept(`*constant_expression*`)` where *constant_expression* yields **false**, or the absence of an exception specification (other than for a destructor or deallocation function), indicates that the set of potential exceptions that can exit the function is the set of all types.
 
-関数を**noexcept**としてマークします。この関数は、直接または間接的に呼び出したすべての関数が**noexcept**または**const**でもある場合に限ります。 コンパイラは、 **noexcept**関数にバブルアップする可能性のある例外のすべてのコードパスを必ずチェックするわけではありません。 例外によってマーク`noexcept`された関数の外側のスコープが終了した場合、 [std:: terminate](../standard-library/exception-functions.md#terminate)がすぐに呼び出され、スコープ内のオブジェクトのデストラクターが呼び出される保証はありません。 動的例外指定子`throw()`ではなく、 **noexcept**を使用します。これは標準で非推奨とされます。 例外がコールスタック`noexcept`の上位に伝達されることを許可しないすべての関数に適用することをお勧めします。 関数が**noexcept**として宣言されている場合、コンパイラは複数の異なるコンテキストでより効率的なコードを生成できます。 詳細については、「[例外の指定](exception-specifications-throw-cpp.md)」を参照してください。
+Mark a function as **noexcept** only if all the functions that it calls, either directly or indirectly, are also **noexcept** or **const**. The compiler does not necessarily check every code path for exceptions that might bubble up to a **noexcept** function. If an exception does exit the outer scope of a function marked `noexcept`, [std::terminate](../standard-library/exception-functions.md#terminate) is invoked immediately, and there is no guarantee that destructors of any in-scope objects will be invoked. Use **noexcept** instead of the dynamic exception specifier `throw()`, which is now deprecated in the standard. We recommended you apply `noexcept` to any function that never allows an exception to propagate up the call stack. When a function is declared **noexcept**, it enables the compiler to generate more efficient code in several different contexts. For more information, see [Exception specifications](exception-specifications-throw-cpp.md).
 
 ## <a name="example"></a>例
 
-引数をコピーするテンプレート関数は、コピーされるオブジェクトが plain old data type (POD) であるという条件に対して、 **noexcept**として宣言される場合があります。 このような関数は、次のように宣言することができます。
+A template function that copies its argument might be declared **noexcept** on the condition that the object being copied is a plain old data type (POD). このような関数は、次のように宣言することができます。
 
 ```cpp
 #include <type_traits>
@@ -46,5 +46,5 @@ T copy_object(const T& obj) noexcept(std::is_pod<T>)
 
 ## <a name="see-also"></a>関連項目
 
-[C++ 例外処理](cpp-exception-handling.md)<br/>
-[例外の指定 (throw、noexcept)](exception-specifications-throw-cpp.md)
+[Modern C++ best practices for exceptions and error handling](errors-and-exception-handling-modern-cpp.md)<br/>
+[Exception Specifications (throw, noexcept)](exception-specifications-throw-cpp.md)

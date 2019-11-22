@@ -4,12 +4,12 @@ ms.date: 10/31/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: 6f8301c07f87feee80191f5db14fea5b16f02863
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 2233c0767fb7fac2fe496e744750f380e1c3b698
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73624426"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303235"
 ---
 # <a name="cmakesettingsjson-schema-reference"></a>CMakeSettings.json スキーマ リファレンス
 
@@ -43,7 +43,7 @@ IDE で構成を追加または削除し、JSON ファイルで直接編集す�
 - `codeAnalysisRuleset`: コード分析を実行しているときに使用するルールセットを指定します。 Visual Studio によってインストールされたルールセット ファイルの完全なパスまたはファイル名を指定できます。
 - `configurationType`: 選択したジェネレーターにビルドの種類の構成を指定します。 次のいずれかを指定できます。
 
-  - デバッグ
+  - Debug
   - 解放
   - MinSizeRel
   - RelWithDebInfo
@@ -71,9 +71,9 @@ IDE で構成を追加または削除し、JSON ファイルで直接編集す�
 
 Ninja は柔軟性や機能ではなく、ビルド速度が速いことを目的に設計されているため、既定値としてこれが設定されます。 ただし、CMake プロジェクトによっては、Ninja を使うと正しくビルドできないことがあります。 この問題が発生した場合は、代わりに Visual Studio プロジェクトを生成するように CMake に指示できます。
 
-Visual studio 2017 で Visual Studio ジェネレーターを指定するには、[Cmake] を選択してメインメニューからを開きます。 **CMake の設定を変更**します。 "Ninja" を削除して「V」と入力します。 これにより IntelliSense がアクティブになり、必要なジェネレーターを選択できます。
+Visual studio 2017 で Visual Studio ジェネレーターを指定するには、[Cmake] を選択してメインメニューからを開きます。 **CMake の設定を変更**します。 "Ninja" を削除し、「V」と入力します。 これにより IntelliSense がアクティブになり、必要なジェネレーターを選択できます。
 
-Visual studio 2019 で Visual Studio ジェネレーターを指定するには**ソリューションエクスプローラー**で*cmakelists .txt*ファイルを右クリックし、 **[プロジェクトの cmake の設定]** > [**詳細設定の表示]** > [cmake] を選択します。 **ジェネレーター**。
+Visual studio 2019 で Visual Studio ジェネレーターを指定するには**ソリューションエクスプローラー**で*cmakelists .txt*ファイルを右クリックし、 **[プロジェクトの cmake の設定]** を選択し > **[詳細設定の表示]** を選択します。 **cmake ジェネレーター**> ます。
 
 アクティブな構成で Visual Studio ジェネレーターを指定すると、`-m -v:minimal` 引数を指定して MSBuild.exe が既定で呼び出されます。 ビルドをカスタマイズするには、 *Cmakesettings. json*ファイル内で、`buildCommandArgs` プロパティを使用してビルドシステムに渡す追加の[MSBuild コマンドライン引数](../build/reference/msbuild-visual-cpp-overview.md)を指定します。
 
@@ -83,7 +83,7 @@ Visual studio 2019 で Visual Studio ジェネレーターを指定するには*
 
 - `configurationType`: 選択したジェネレーターにビルドの種類の構成を指定します。 次のいずれかを指定できます。
 
-  - デバッグ
+  - Debug
   - 解放
   - MinSizeRel
   - RelWithDebInfo
@@ -161,17 +161,17 @@ Visual studio 2019 で Visual Studio ジェネレーターを指定するには*
 
 ## <a name="environments"></a>下
 
-*環境*には、Visual Studio が cmake .exe を呼び出すために使用するプロセスで設定された環境変数がカプセル化されています。 MSVC プロジェクトの場合、変数は、[開発者コマンドプロンプト](building-on-the-command-line.md)で特定のプラットフォーム用に設定されているものです。 たとえば、`msvc_x64_x64` 環境は、 **vs 2017 の開発者コマンドプロンプト**と、 **-arch = host_arch = amd64**引数を使用して**vs 2019 用の開発者コマンドプロンプト**を実行した場合と同じです。 *Cmakesettings. json*の `env.{<variable_name>}` 構文を使用すると、フォルダーへのパスを作成するなど、個々の環境変数を参照できます。  次の定義済みの環境が用意されています。
+*環境*には、Visual Studio が cmake .exe を呼び出すために使用するプロセスで設定された環境変数がカプセル化されています。 MSVC プロジェクトの場合、変数は、[開発者コマンドプロンプト](building-on-the-command-line.md)で特定のプラットフォーム用に設定されているものです。 たとえば、`msvc_x64_x64` 環境は、 **vs 2017 の開発者コマンドプロンプト**と、 **-arch = amd64-host_arch = amd64**引数を使用した**vs 2019 の開発者コマンドプロンプト**を実行する場合と同じです。 *Cmakesettings. json*の `env.{<variable_name>}` 構文を使用すると、フォルダーへのパスを作成するなど、個々の環境変数を参照できます。  次の定義済みの環境が用意されています。
 
-- linux_arm: リモートで ARM Linux をターゲットにします。
-- linux_x64: リモートで x64 Linux をターゲットにします。
+- linux_arm: ARM Linux をリモートでターゲットにします。
+- linux_x64: x64 Linux をリモートでターゲットにします。
 - linux_x86: リモートで x86 Linux をターゲットとします。
 - msvc_arm: MSVC コンパイラを使用して ARM Windows をターゲットにします。
 - msvc_arm_x64:64 ビットの MSVC コンパイラを使用して ARM Windows をターゲットにします。
-- msvc_arm64: Target ARM64 Windows with the MSVC compiler.
-- msvc_arm64_x64: Target ARM64 Windows with 64-bit MSVC compiler.
+- msvc_arm64: MSVC コンパイラを使用して ARM64 Windows をターゲットにします。
+- msvc_arm64_x64:64 ビットの MSVC コンパイラを使用して ARM64 Windows をターゲットにします。
 - msvc_x64: MSVC コンパイラを使用して x64 Windows をターゲットにします。
-- msvc_x64_x64:64 ビットの MSVC コンパイラを使用して x64 Windows をターゲットとします。
+- msvc_x64_x64:64 ビットの MSVC コンパイラを使用して x64 Windows をターゲットにします。
 - msvc_x86: MSVC コンパイラを使用して x86 Windows をターゲットにします。
 - msvc_x86_x64:64 ビットの MSVC コンパイラを使用して x86 Windows をターゲットにします。
 
@@ -220,7 +220,7 @@ CMakeLists .txt ファイルからは、すべての環境変数が `$ENV{variab
 }
 ```
 
-次の例では、x86 デバッグ構成が **BuildDir** プロパティに対して独自の値を定義します。 この値は、**BuildRoot** が `D:\custom-builddir\x86-Debug` に評価されるように、グローバル **BuildDir** プロパティによって設定される値をオーバーライドします。
+次の例では、x86 デバッグ構成が **BuildDir** プロパティに対して独自の値を定義します。 この値は、**BuildRoot** が **に評価されるように、グローバル**BuildDir`D:\custom-builddir\x86-Debug` プロパティによって設定される値をオーバーライドします。
 
 ```json
 {
@@ -256,7 +256,7 @@ CMakeLists .txt ファイルからは、すべての環境変数が `$ENV{variab
       "generator": "Ninja",
       "configurationType": "Debug",
       "inheritEnvironments": [ "msvc_x64" ],
-      // Since this configuration doesn’t modify BuildDir, it inherits
+      // Since this configuration doesn't modify BuildDir, it inherits
       // from the one defined globally.
       "buildRoot": "${env.BuildDir}\\${name}"
     }
@@ -288,7 +288,7 @@ ninja: invalid option -- `-?'
 usage: ninja [options] [targets...]
 ```
 
-|オプション|説明|
+|オプション|[説明]|
 |--------------|------------|
 | --version  | Ninja のバージョンを書き出します ("1.7.1")|
 |   -C DIR   | 何かを実行する前に、DIR (ディレクトリ) に変更します|

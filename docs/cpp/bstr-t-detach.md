@@ -13,7 +13,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62386175"
 ---
-# <a name="bstrtdetach"></a>_bstr_t::Detach
+# <a name="_bstr_tdetach"></a>_bstr_t::Detach
 
 **Microsoft 固有の仕様**
 

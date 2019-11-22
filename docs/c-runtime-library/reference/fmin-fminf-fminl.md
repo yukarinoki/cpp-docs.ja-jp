@@ -1,4 +1,4 @@
----
+﻿---
 title: fmin、fminf、fminl
 ms.date: 04/05/2018
 api_name:
@@ -95,7 +95,7 @@ long double fminl(
 
 ## <a name="remarks"></a>Remarks
 
-オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **fmin**を受け取って返す**float**と**long double**型。 C プログラムでは、 **fmin**は常に**double**を取得し、double を返します。
+オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **fmin**を受け取って返す**float**と**long** **double**型。 C プログラムでは、 **fmin**は常に**double**を取得し、double を返します。
 
 ## <a name="requirements"></a>必要条件
 

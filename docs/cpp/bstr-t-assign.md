@@ -13,11 +13,11 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62396139"
 ---
-# <a name="bstrtassign"></a>_bstr_t::Assign
+# <a name="_bstr_tassign"></a>_bstr_t::Assign
 
 **Microsoft 固有の仕様**
 
-コピーを`BSTR`に、`BSTR`によってラップされた、 **_**`bstr_t`します。
+コピーを`BSTR`に、`BSTR`によってラップされた、 **_** `bstr_t`します。
 
 ## <a name="syntax"></a>構文
 

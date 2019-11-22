@@ -1,4 +1,4 @@
----
+﻿---
 title: キャスト演算子
 ms.custom: index-page
 ms.date: 11/04/2016
@@ -21,7 +21,7 @@ C++ 言語には、固有のキャスト演算子がいくつかあります。 
 
 - [static_cast](../cpp/static-cast-operator.md)非ポリモーフィックな型の変換に使用します。
 
-- [const_cast](../cpp/const-cast-operator.md)を削除するために使用、 **const**、**volatile**、および **_ _unaligned**属性。
+- [const_cast](../cpp/const-cast-operator.md) を削除するために使用、 **const**、**volatile**、および **__unaligned**属性。
 
 - [reinterpret_cast](../cpp/reinterpret-cast-operator.md)ビットの単純な再解釈に使用します。
 

@@ -2,7 +2,7 @@
 title: コマンドラインからC++ Microsoft ツールセットを使用する
 description: Visual Studio IDE の外にあるコマンド ラインから Microsoft C++ コンパイラ ツールチェーン (MSVC) を使用します。
 ms.custom: conceptual
-ms.date: 10/22/2019
+ms.date: 11/12/2019
 helpviewer_keywords:
 - command-line builds [C++]
 - compiling source code [C++], command line
@@ -10,16 +10,20 @@ helpviewer_keywords:
 - command line [C++], building from
 - command line [C++], compilers
 ms.assetid: 7ca9daed-a003-4162-842d-908f79058365
-ms.openlocfilehash: 7aa8673b7bb29591c7cf1c26b96b48261db9fee4
-ms.sourcegitcommit: 0a5518fdb9d87fcc326a8507ac755936285fcb94
+ms.openlocfilehash: ec30cba8e119f96efc5bca156fa565db77904520
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72811159"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051492"
 ---
 # <a name="use-the-microsoft-c-toolset-from-the-command-line"></a>コマンドラインからC++ Microsoft ツールセットを使用する
 
-Visual Studio に含まれているツールを使用し、コマンド ラインで C と C++ のアプリケーションをビルドできます。 Microsoft C++ (MSVC) コンパイラツールセットは、 [Visual Studio のダウンロード](https://visualstudio.microsoft.com/downloads/)ページからスタンドアロンパッケージとしてダウンロードすることもできます。 これは、 **Visual Studio のビルドツール**パッケージの一部です。 開発にC++必要なツールのみをダウンロードすることを選択できます。
+Visual Studio に含まれているツールを使用し、コマンド ラインで C と C++ のアプリケーションをビルドできます。 Microsoft C++ (MSVC) コンパイラツールセットは、VISUAL Studio IDE を含まないスタンドアロンパッケージとしてダウンロードすることもできます。
+
+## <a name="download-and-install-the-tools"></a>ツールをダウンロードしてインストールする
+
+Visual Studio とC++ワークロードがインストールされている場合は、すべてのコマンドラインツールを使用できます。 と Visual Studio をインストールC++する方法の詳細については、「 [visual studio でサポートをインストールC++ ](vscpp-step-0-installation.md)する」を参照してください。 コマンドラインツールセットのみが必要な場合は、 [Visual Studio のビルドツール](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019)をダウンロードします。 ダウンロードした実行可能ファイルを実行すると、Visual Studio インストーラーが更新され、実行されます。 開発にC++必要なツールのみをインストールするには、 **[ C++ビルドツール]** ワークロードを選択します。 オプションのライブラリとツールセットを選択して、**インストールの詳細**を含めることができます。 Visual Studio 2015 または2017ツールセットを使用してコードをビルドするには、省略可能な MSVC v140 または MSVC v141 ビルドツールを選択します。 選択が終わったら、 **[インストール]** を選択します。
 
 ## <a name="how-to-use-the-command-line-tools"></a>コマンド ライン ツールの使用方法
 
@@ -150,7 +154,7 @@ Visual Studio インストーラーでいずれかの C++ ワークロードを�
 
 ::: moniker range=">= vs-2019"
 
-Visual Studio 2019 コンパイラツールセットの特定のバージョンを指定するには **、-vcvars_ver = 14.2 の yyy**を使用します。
+Visual Studio 2019 コンパイラツールセットの特定のバージョンを指定するには **、-vcvars_ver = 14.2; yyyyy**を使用します。
 
 Visual Studio 2017 コンパイラツールセットの最新バージョンを指定するには、 **-vcvars_ver = 14.16**を使用します。
 
@@ -159,7 +163,7 @@ Visual Studio 2017 コンパイラツールセットの最新バージョンを�
 
 Visual Studio 2017 コンパイラツールセットの最新バージョンを指定するには、 **-vcvars_ver = 14.16**を使用します。
 
-Visual Studio 2017 コンパイラツールセットの特定のバージョンを指定するには **、-vcvars_ver = 14.1 の yy yyy**を使用します。
+Visual Studio 2017 コンパイラツールセットの特定のバージョンを指定するには **、-vcvars_ver = 14.1 x yyyyy**を使用します。
 
 ::: moniker-end
 

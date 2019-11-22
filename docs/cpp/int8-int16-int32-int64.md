@@ -1,4 +1,4 @@
----
+﻿---
 title: __int8、__int16、__int32、__int64
 ms.date: 10/09/2018
 f1_keywords:
@@ -29,7 +29,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62183455"
 ---
-# <a name="int8-int16-int32-int64"></a>__int8、__int16、__int32、__int64
+# <a name="__int8-__int16-__int32-__int64"></a>__int8、__int16、__int32、__int64
 
 **Microsoft 固有の仕様**
 
