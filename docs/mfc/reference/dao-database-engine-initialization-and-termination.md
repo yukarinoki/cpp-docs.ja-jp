@@ -5,16 +5,16 @@ helpviewer_keywords:
 - DAO (Data Access Objects), termination
 - DAO (Data Access Objects), initialization
 ms.assetid: a7edf31c-e7c2-4f3e-aada-63c3e48781da
-ms.openlocfilehash: ccdf2e7b0f31576dddccad016e6b32806cdb82bf
-ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
+ms.openlocfilehash: 24a24d5a81da18d01472fc760c2adf96ee9868d5
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71095886"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303457"
 ---
 # <a name="dao-database-engine-initialization-and-termination"></a>DAO データベース エンジンの初期化と終了
 
-DAO は Access データベースで使用され、Office 2013 でサポートされています。 3.6 は最終バージョンであり、廃止されたと見なされます。 MFC DAO オブジェクトを使用する場合は、アプリケーションまたは DLL を終了する前に、最初に DAO データベースエンジンを初期化して終了する必要があります。 `AfxDaoInit` と`AfxDaoTerm`の2つの関数は、これらのタスクを実行します。
+DAO は Access データベースで使用され、Office 2013 でサポートされています。 DAO 3.6 は最終バージョンであり、互換性のために残されているものと見なされます。 MFC DAO オブジェクトを使用する場合は、アプリケーションまたは DLL を終了する前に、最初に DAO データベースエンジンを初期化して終了する必要があります。 これらのタスクは、`AfxDaoInit` と `AfxDaoTerm`の2つの関数で実行されます。
 
 ### <a name="dao-database-engine-initialization-and-termination"></a>DAO データベース エンジンの初期化と終了
 
@@ -34,13 +34,13 @@ void AfxDaoInit();
 throw(CDaoException*);
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-ほとんどの場合、アプリケーションが必要に応じ`AfxDaoInit`て自動的に呼び出すため、を呼び出す必要はありません。
+ほとんどの場合、アプリケーションは必要に応じて自動的に呼び出しを行うため、`AfxDaoInit` を呼び出す必要はありません。
 
-関連情報、およびの呼び出し`AfxDaoInit`の例については、「[テクニカルノート 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md)」を参照してください。
+関連情報、および `AfxDaoInit`を呼び出す例については、「[テクニカルノート 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー** afxdao
 
@@ -53,15 +53,15 @@ throw(CDaoException*);
 void AfxDaoTerm();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-通常、この関数を呼び出す必要があるのは、通常の MFC DLL の場合だけです。アプリケーションは、必要な`AfxDaoTerm`ときに自動的にを呼び出します。
+通常、この関数を呼び出す必要があるのは、通常の MFC DLL の場合だけです。アプリケーションでは、必要に応じて `AfxDaoTerm` が自動的に呼び出されます。
 
-通常の mfc dll では`AfxDaoTerm` 、関数`ExitInstance`の前にを呼び出しますが、すべての mfc DAO オブジェクトが破棄された後にを呼び出します。
+通常の MFC Dll では、`ExitInstance` 関数の前に `AfxDaoTerm` を呼び出しますが、すべての MFC DAO オブジェクトが破棄された後にを呼び出します。
 
 関連情報については、「[テクニカルノート 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
   **ヘッダー** afxdao
 

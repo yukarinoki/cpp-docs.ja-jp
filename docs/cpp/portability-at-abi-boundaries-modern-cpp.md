@@ -1,22 +1,23 @@
 ---
-title: ABI の境界での移植性 (Modern C++)
-ms.date: 11/04/2016
+title: ABI の境界での移植性
+description: バイナリC++インターフェイスの境界で、C の呼び出し規約にインターフェイスを平坦化します。
+ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: abbd405e-3038-427c-8c24-e00598f0936a
-ms.openlocfilehash: 379b402354c6f08e003dffb38366d1dce20e0987
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: b3b2b217739ff5900c8ef0329ff3e8909a3fe036
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74246389"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303317"
 ---
-# <a name="portability-at-abi-boundaries-modern-c"></a>ABI の境界での移植性 (Modern C++)
+# <a name="portability-at-abi-boundaries"></a>ABI の境界での移植性
 
-Use sufficiently portable types and conventions at binary interface boundaries. A “portable type” is a C built-in type or a struct that contains only C built-in types. Class types can only be used when caller and callee agree on layout, calling convention, etc. This is only possible when both are compiled with the same compiler and compiler settings.
+バイナリインターフェイスの境界では、十分に移植可能な型と規約を使用します。 "移植可能な型" は、C の組み込み型、または C の組み込み型のみを含む構造体です。 クラス型は、呼び出し元と呼び出し先がレイアウト、呼び出し規約などに同意する場合にのみ使用できます。これは、両方が同じコンパイラとコンパイラの設定でコンパイルされている場合にのみ可能です。
 
-## <a name="how-to-flatten-a-class-for-c-portability"></a>How to flatten a class for C portability
+## <a name="how-to-flatten-a-class-for-c-portability"></a>C の移植性のためにクラスを平坦化する方法
 
-When callers may be compiled with another compiler/language, then “flatten” to an **extern "C"** API with a specific calling convention:
+呼び出し元が別のコンパイラ/言語でコンパイルされる場合は、特定の呼び出し規約で**extern "C"** API を "平坦化" します。
 
 ```cpp
 // class widget {
@@ -34,6 +35,6 @@ extern "C" {        // functions using explicit "this"
 
 ## <a name="see-also"></a>関連項目
 
-[Welcome back to C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[に戻るC++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [C++ 言語リファレンス](../cpp/cpp-language-reference.md)<br/>
 [.NET 標準ライブラリ](../standard-library/cpp-standard-library-reference.md)

@@ -4,12 +4,12 @@ description: Visual Studio で、Linux と Windows の両方をC++対象とす�
 author: mikeblome
 ms.topic: tutorial
 ms.date: 11/08/2019
-ms.openlocfilehash: 05f120335180d27e84a99819ee97c233dd1b39a7
-ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
+ms.openlocfilehash: 269c9e88133a492f66df7c7f81ab35424aff125d
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73965099"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303250"
 ---
 # <a name="tutorial-create-c-cross-platform-projects-in-visual-studio"></a>チュートリアル: Visual C++ Studio でクロスプラットフォームプロジェクトを作成する
 
@@ -24,7 +24,7 @@ Visual Studio での C と C++ の開発は、Windows だけではなくなっ�
 > * Linux マシンへの接続を追加する
 > * Linux 上で同じターゲットをビルドしてデバッグする
 
-## <a name="prerequisites"></a>必要条件
+## <a name="prerequisites"></a>前提条件
 
 * クロスプラットフォームの C++ 開発用に Visual Studio をセットアップする
   * まず、 [Visual Studio をインストール](https://visualstudio.microsoft.com/vs/)し、**ワークロードを使用C++** してと Linux 開発を行う **C++デスクトップ開発**を選択します。 この最小インストールは 3 GB のみです。 ダウンロードの速度によっては、インストールに10分以上かかることはありません。
@@ -155,7 +155,7 @@ Visual Studio によって、Windows の既定の**X64 デバッグ**構成が�
 
    リモート接続を既に追加している場合は、[ツール] > [**オプション] > [クロスプラットフォーム > 接続マネージャー**] の順に移動して、このウィンドウを開くことができます。
 
-1. [Linux マシンに接続情報](/cpp/linux/connect-to-your-remote-linux-computer.md)を入力し、 **[接続]** を選択します。 Visual Studio は、 **Linux-Debug**の既定の接続として、そのマシンを CMakeSettings. json に追加します。 また、リモートコンピューターからヘッダーを取得するので、[そのリモート接続に固有の IntelliSense](/cpp/linux/configure-a-linux-project?view=vs-2019#remote_intellisense)を利用できます。 次に、Visual Studio によってファイルがリモートコンピューターに送信され、リモートシステムに CMake キャッシュが生成されます。 これらの手順は、ネットワークの速度とリモートコンピューターの機能によっては、時間がかかることがあります。 CMake 出力ウィンドウに "ターゲット情報の抽出が完了しました" というメッセージが表示されたら、それが完了していることがわかります。
+1. [Linux マシンに接続情報](/cpp/linux/connect-to-your-remote-linux-computer)を入力し、 **[接続]** を選択します。 Visual Studio は、 **Linux-Debug**の既定の接続として、そのマシンを CMakeSettings. json に追加します。 また、リモートコンピューターからヘッダーを取得するので、[そのリモート接続に固有の IntelliSense](/cpp/linux/configure-a-linux-project?view=vs-2019#remote_intellisense)を利用できます。 次に、Visual Studio によってファイルがリモートコンピューターに送信され、リモートシステムに CMake キャッシュが生成されます。 これらの手順は、ネットワークの速度とリモートコンピューターの機能によっては、時間がかかることがあります。 CMake 出力ウィンドウに "ターゲット情報の抽出が完了しました" というメッセージが表示されたら、それが完了していることがわかります。
 
 ## <a name="set-a-breakpoint-build-and-run-on-linux"></a>Linux でブレークポイントを設定し、ビルドし、実行する
 

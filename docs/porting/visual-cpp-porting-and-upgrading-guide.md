@@ -1,62 +1,62 @@
 ---
-title: Microsoft C++ porting and upgrading guide
-description: Upgrade Microsoft C++ code to the latest version of Visual Studio.
+title: Microsoft C++移植およびアップグレードガイド
+description: Microsoft C++ code を最新バージョンの Visual Studio にアップグレードします。
 ms.date: 11/18/2019
 ms.assetid: f5fbcc3d-aa72-41a6-ad9a-a706af2166fb
 ms.topic: overview
-ms.openlocfilehash: 88b5b31428979d26bbbf810c4c04c99f411dbcbb
-ms.sourcegitcommit: 217fac22604639ebd62d366a69e6071ad5b724ac
+ms.openlocfilehash: 723879ad03b9b66c7490804e890f07d6d55e9dae
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/19/2019
-ms.locfileid: "74189344"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303347"
 ---
-# <a name="microsoft-c-porting-and-upgrading-guide"></a>Microsoft C++ porting and upgrading guide
+# <a name="microsoft-c-porting-and-upgrading-guide"></a>Microsoft C++移植およびアップグレードガイド
 
-This article provides a guide for upgrading Microsoft C++ code to the latest version of Visual Studio. For projects created in Visual Studio 2010 through 2015, just open the project in Visual Studio 2019. You can upgrade a Visual Studio 2008 or earlier project in two steps. Use Visual Studio 2010 to convert the project to MSBuild format first. Then open the project in Visual Studio 2019. For complete instructions, see [Upgrading C++ projects from earlier versions of Visual Studio](upgrading-projects-from-earlier-versions-of-visual-cpp.md).
+この記事では、Microsoft C++ code を最新バージョンの Visual Studio にアップグレードするためのガイドを提供します。 Visual Studio 2010 から2015で作成されたプロジェクトの場合は、Visual Studio 2019 でプロジェクトを開きます。 Visual Studio 2008 以前のプロジェクトをアップグレードするには、2つの手順を実行します。 Visual Studio 2010 を使用して、最初にプロジェクトを MSBuild 形式に変換します。 次に、Visual Studio 2019 でプロジェクトを開きます。 詳細な手順については、「[以前のバージョンの Visual Studio からのプロジェクトのアップグレードC++ ](upgrading-projects-from-earlier-versions-of-visual-cpp.md)」を参照してください。
 
-The toolsets in Visual Studio 2015, Visual Studio 2017, and Visual Studio 2019 are binary-compatible. Now you can upgrade to a more recent version of the compiler without having to upgrade your library dependencies. For more information, see [C++ binary compatibility 2015-2019](binary-compat-2015-2017.md).
+Visual Studio 2015、Visual Studio 2017、および Visual Studio 2019 のツールセットは、バイナリと互換性があります。 これで、ライブラリの依存関係をアップグレードしなくても、より新しいバージョンのコンパイラにアップグレードできるようになりました。 詳細については、「 [ C++バイナリ互換性 2015-2019](binary-compat-2015-2017.md)」を参照してください。
 
-When upgrading projects that use open-source libraries or are meant to run on multiple platforms, we recommended migrating to a CMake-based project. For more information, see [CMake projects in Visual Studio](../build/cmake-projects-in-visual-studio.md)
+オープンソースライブラリを使用するプロジェクトをアップグレードする場合、または複数のプラットフォームで実行する場合は、CMake ベースのプロジェクトに移行することをお勧めします。 詳細については、「 [Visual Studio での Cmake プロジェクト](../build/cmake-projects-in-visual-studio.md)」を参照してください。
 
-## <a name="reasons-to-upgrade-c-code"></a>Reasons to upgrade C++ code
+## <a name="reasons-to-upgrade-c-code"></a>コードをアップグレードC++する理由
 
-If a legacy application is running satisfactorily, in a secure environment, and isn't under active development, there might not be much incentive to upgrade it. However, consider an upgrade in these cases: Your application requires ongoing maintenance. Or, you're doing new feature development, or making performance or security improvements. An upgrade brings these benefits:
+レガシアプリケーションが十分に実行されており、セキュリティで保護された環境で動作しておらず、アクティブな開発中でない場合は、アップグレードする必要がありません。 ただし、このような場合は、アプリケーションが継続的なメンテナンスを必要とする場合に備えて、アップグレードを検討してください。 または、新しい機能の開発を行ったり、パフォーマンスやセキュリティを向上させたりしています。 アップグレードには次のような利点があります。
 
-- The same code can run faster, because we've improved compiler optimizations.
+- コンパイラの最適化が改善されたため、同じコードをより高速に実行できます。
 
-- Modern C++ features and programming practices eliminate many common causes of bugs, and produce code that's far easier to maintain than older C-style idioms.
+- 最新C++の機能とプログラミング手法により、バグの一般的な原因が多くなくなり、以前の C スタイルの表現よりもはるかに簡単に保守できるコードが生成されます。
 
-- Build times are faster, because of performance improvements in the compiler and linker.
+- コンパイラとリンカーのパフォーマンスが向上しているため、ビルド時間が短縮されます。
 
-- Better standards conformance. The [/permissive-](../build/reference/permissive-standards-conformance.md) compiler option helps you identify code that doesn't conform to the current C++ standard.
+- 標準への準拠の向上。 [/Permissive-](../build/reference/permissive-standards-conformance.md)コンパイラオプションは、現在C++の標準に準拠していないコードを特定するのに役立ちます。
 
-- Better run-time security, including more secure [C Runtime library]() features. And, compiler features such as [guard checking](../build/reference/guard-enable-guard-checks.md) and address sanitizers (new in Visual Studio 2019 version 16.4).
+- より安全な[C ランタイムライブラリ](../c-runtime-library/security-features-in-the-crt.md)機能を含む、実行時のセキュリティが向上します。 また、[ガードチェック](../build/reference/guard-enable-guard-checks.md)やアドレス Sanitizers (Visual Studio 2019 バージョン16.4 の新機能) などのコンパイラ機能。
 
-## <a name="multitargeting-vs-upgrading"></a>Multitargeting vs. upgrading
+## <a name="multitargeting-vs-upgrading"></a>マルチターゲットとアップグレード
 
-Perhaps upgrading your code base to a new toolset isn't an option for you. You can still use the latest Visual Studio to build and edit projects that use older toolsets and libraries. In Visual Studio 2019, you can take advantage of features such as:
+おそらく、コードベースを新しいツールセットにアップグレードすることはできません。 最新の Visual Studio を使用して、以前のツールセットとライブラリを使用するプロジェクトをビルドおよび編集することもできます。 Visual Studio 2019 では、次のような機能を利用できます。
 
-- modern static analysis tools, including the C++ Core Guidelines checkers and Clang-Tidy, to help identify potential problems in your source code.
+- 主要なガイドラインチェッカーや Clang C++ -Tidy などの最新の静的分析ツールを使用すると、ソースコードの潜在的な問題を特定するのに役立ちます。
 
-- automatic formatting according to your choice of modern styles can help make legacy code much more readable.
+- 最新のスタイルの選択に応じてオートフォーマットを使用すると、従来のコードをより読みやすくするのに役立ちます。
 
 詳細については、「[Visual Studio でネイティブ マルチ ターゲットを利用し、古いプロジェクトを作成する](use-native-multi-targeting.md)」を参照してください。
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-|Title|説明|
+|タイトル|[説明]|
 |-----------|-----------------|
-|[Upgrading C++ projects from earlier versions of Visual Studio](upgrading-projects-from-earlier-versions-of-visual-cpp.md)|How to upgrade your code base to Visual Studio 2019 and v142 of the compiler.|
-|[IDE tools for upgrading C++ code](ide-tools-for-upgrading-code.md)|Useful IDE features that help in the upgrade process.|
-|[C++ binary compatibility 2015-2019](binary-compat-2015-2017.md)|Consume v140 and v141 libraries as-is from v142 projects.|
-|[Visual Studio でネイティブ マルチ ターゲットを利用し、古いプロジェクトを作成する](use-native-multi-targeting.md)|Use Visual Studio 2019 with older compilers and libraries.|
-|[2003 から 2015 の Visual C++ の履歴の変更](visual-cpp-change-history-2003-2015.md)|A list of all the changes in the Microsoft C++ libraries and build tools from Visual Studio 2003 through 2015 that might require changes in your code.|
-|[2003 ～ 2015 年の Visual C++ の新機能](visual-cpp-what-s-new-2003-through-2015.md)|All the "what's new" information for Microsoft C++ from Visual Studio 2003 through Visual Studio 2015.|
-|[移植およびアップグレード: 例とケース スタディ](porting-and-upgrading-examples-and-case-studies.md)|このセクションでは、いくつかのサンプルとアプリケーションを移植してアップグレードし、エクスペリエンスと結果について説明しました。 These articles give you a sense of what's involved in the porting and upgrading process. プロセス全体を通して、アップグレードに関するヒントとテクニックについて説明し、特定のエラーを修正する方法を示します。|
-|[ユニバーサル Windows プラットフォームへの移植](porting-to-the-universal-windows-platform-cpp.md)|コードを Windows 10 に移植する方法を説明します。|
+|[以前C++のバージョンの Visual Studio からのプロジェクトのアップグレード](upgrading-projects-from-earlier-versions-of-visual-cpp.md)|コードベースを Visual Studio 2019 および v142 のコンパイラにアップグレードする方法について説明します。|
+|[コードをアップグレードC++するための IDE ツール](ide-tools-for-upgrading-code.md)|アップグレードプロセスに役立つ IDE の便利な機能。|
+|[C++バイナリ互換性2015-2019](binary-compat-2015-2017.md)|V142 プロジェクトから、v140 と v141 のライブラリをそのように使用します。|
+|[Visual Studio でネイティブ マルチ ターゲットを利用し、古いプロジェクトを作成する](use-native-multi-targeting.md)|以前のコンパイラとライブラリで Visual Studio 2019 を使用します。|
+|[Visual C++ 2003 ～ 2015 の変更履歴](visual-cpp-change-history-2003-2015.md)|Visual Studio 2003 から2015の Microsoft C++ライブラリおよびビルドツールのすべての変更の一覧。コードの変更が必要になる場合があります。|
+|[2003 ～ 2015 年の Visual C++ の新機能](visual-cpp-what-s-new-2003-through-2015.md)|Visual Studio 2003 から Visual studio 2015 までの Microsoft C++の "新機能" のすべての情報。|
+|[移植およびアップグレード: 例とケース スタディ](porting-and-upgrading-examples-and-case-studies.md)|このセクションでは、いくつかのサンプルとアプリケーションを移植してアップグレードし、エクスペリエンスと結果について説明しました。 これらの記事では、移植とアップグレードのプロセスに何が関係しているかを理解できます。 プロセス全体を通して、アップグレードに関するヒントとテクニックについて説明し、特定のエラーを修正する方法を示します。|
+|[ユニバーサル Windows プラットフォームに移植する](porting-to-the-universal-windows-platform-cpp.md)|コードを Windows 10 に移植する方法を説明します。|
 |[Visual C++ の紹介 (UNIX ユーザー向け)](introduction-to-visual-cpp-for-unix-users.md)|Visual C++ を初めて使用し、生産性を向上したい UNIX ユーザー向けの情報を提供します。|
-|[Running Linux programs on Windows](porting-from-unix-to-win32.md)|UNIX アプリケーションを Windows に移行するためのオプションについて説明します。|
+|[Windows での Linux プログラムの実行](porting-from-unix-to-win32.md)|UNIX アプリケーションを Windows に移行するためのオプションについて説明します。|
 
 ## <a name="see-also"></a>関連項目
 

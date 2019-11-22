@@ -4,18 +4,18 @@ ms.date: 05/16/2019
 helpviewer_keywords:
 - .vcxproj file structure
 ms.assetid: 14d0c552-29db-480e-80c1-7ea89d6d8e9c
-ms.openlocfilehash: 86c393796b1ce3efdb92d8aefd1f653390619ea4
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: a24349980e9395257f20fcfcc0987883060a7c1d
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837513"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303138"
 ---
 # <a name="vcxproj-and-props-file-structure"></a>.vcxproj ファイルと .props ファイルの構造
 
-[MSBuild](../msbuild-visual-cpp.md) は、Visual Studio の既定のプロジェクト システムです。Visual C++ で **[ファイル]** 、 **[新しいプロジェクト]** を選ぶと、MSBuild プロジェクトが作成されて、その設定が拡張子 `.vcxproj` の XML プロジェクト ファイルに格納されます。 プロジェクト ファイルでは .props ファイルと .targets ファイルをインポートすることもでき、これらのファイルにも設定を格納できます。 ほとんどの場合、プロジェクト ファイルを手動で編集する必要はありません。MSBuild のことをよく理解していない場合は、手動で編集しないようにしてください。 プロジェクトの設定を変更するには、可能な限り、Visual Studio のプロパティ ページを使う必要があります (「[Visual Studio で C++ コンパイラとビルド プロパティを設定する](../working-with-project-properties.md)」を参照してください)。 ただし、プロジェクト ファイルまたはプロパティ シートを手動で変更することが必要になる場合があります。 そのような場合のために、この記事ではファイルの構造に関する基本的な情報を提供します。
+[MSBuild](../msbuild-visual-cpp.md) は、Visual Studio の既定のプロジェクト システムです。Visual C++ で **[ファイル]** 、 > [新しいプロジェクト]**を選ぶと、MSBuild プロジェクトが作成されて、その設定が拡張子** の XML プロジェクト ファイルに格納されます。 プロジェクト ファイルでは .props ファイルと .targets ファイルをインポートすることもでき、これらのファイルにも設定を格納できます。 ほとんどの場合、プロジェクト ファイルを手動で編集する必要はありません。MSBuild のことをよく理解していない場合は、手動で編集しないようにしてください。 プロジェクトの設定を変更するには、可能な限り、Visual Studio のプロパティ ページを使う必要があります (「[Visual Studio で C++ コンパイラとビルド プロパティを設定する](../working-with-project-properties.md)」を参照してください)。 ただし、プロジェクト ファイルまたはプロパティ シートを手動で変更することが必要になる場合があります。 そのような場合のために、この記事ではファイルの構造に関する基本的な情報を提供します。
 
-**重要:** 
+**重要:**
 
 .vcxproj ファイルを手動で編集する場合は、以下のことに注意してください。
 
@@ -33,7 +33,7 @@ ms.locfileid: "65837513"
    <ClCompile Include="$(IntDir)\generated.cpp"/>
    ```
 
-   "サポートされていない" とは、IDE において、すべての操作に対してマクロが機能することが保証されないという意味です。 異なる構成でその値を変えないマクロは機能するはずですが、ある項目が別のフィルターまたはプロジェクトに移動すると保持されないことがあります。 異なる構成で値を変えるマクロは問題を引き起こします。IDE では、さまざまなプロジェクト構成でプロジェクト項目のパスが異なることが想定されていないためです。
+   "サポートされていない" とは、IDE において、すべての操作に対してマクロが機能することが保証されないという意味です。 異なる構成の値を変更しないマクロは機能しますが、項目が別のフィルターまたはプロジェクトに移動された場合は保存されない可能性があります。 異なる構成で値を変えるマクロは問題を引き起こします。IDE では、さまざまなプロジェクト構成でプロジェクト項目のパスが異なることが想定されていないためです。
 
 1. **[プロジェクトのプロパティ]** ダイアログで編集したときに、プロジェクトのプロパティが正しく追加、削除、変更されるためには、ファイルにプロジェクト構成ごとに異なるグループが含まれており、条件が次の形式になっている必要があります。
 
@@ -47,7 +47,7 @@ ms.locfileid: "65837513"
 
 任意のテキスト エディターまたは XML エディターを使って、.vcxproj ファイルの内容を調べることができます。 Visual Studio のソリューション エクスプローラーでプロジェクトを右クリックし、 **[プロジェクトのアンロード]** 、 **[Foo.vcxproj の編集]** の順に選ぶと表示されます。
 
-最初に注目する点は、最上位の要素が特定の順序で表示されることです。 次に例を示します。
+最初に注目する点は、最上位の要素が特定の順序で表示されることです。 例:
 
 - ほとんどのプロパティ グループおよび項目定義グループは、Microsoft.Cpp.Default.props のインポートの後に出現します。
 
@@ -55,7 +55,7 @@ ms.locfileid: "65837513"
 
 - 複数のプロパティ グループがあり、それぞれが一意のラベルを持ち、特定の順序で出現します。
 
-MSBuild は順次評価モデルに基づいているため、プロジェクト ファイル内の要素の順序が非常に重要です。  インポートされたすべての .props および .targets ファイルを含むプロジェクト ファイルが、複数のプロパティ定義で構成されている場合、最後の定義が前の定義をオーバーライドします。 次の例では、コンパイル中に値 "xyz" が設定されますが、これは MSBUild エンジンによる評価中に値 "xyz" が最後に検出されるためです。
+MSBuild は順次評価モデルに基づいているため、プロジェクト ファイル内の要素の順序が非常に重要です。  インポートされたすべての .props および .targets ファイルを含むプロジェクト ファイルが、複数のプロパティ定義で構成されている場合、最後の定義が前の定義をオーバーライドします。 次の例では、値 "xyz" はコンパイル中に設定されます。これは、MSBUild エンジンが評価中に最後にそれを検出したためです。
 
 ```xml
   <MyProperty>abc</MyProperty>
@@ -104,7 +104,7 @@ MSBuild は順次評価モデルに基づいているため、プロジェクト
 
 ### <a name="projectconfiguration-elements"></a>ProjectConfiguration 要素
 
-次のスニペットでは、プロジェクトの構成を示します。 この例では、"Debug|x64" が構成の名前です。 プロジェクトの構成の名前は、$(Configuration)|$(Platform) という形式になっている必要があります。 ProjectConfiguration ノードは 2 つのプロパティを持つことができます。Configuration と Platform です。 構成がアクティブになると、ここで指定した値がこれらのプロパティに自動的に設定されます。
+次のスニペットでは、プロジェクトの構成を示します。 この例では、"Debug|x64" が構成の名前です。 プロジェクトの構成の名前は、$(Configuration)|$(Platform) という形式になっている必要があります。 ProjectConfiguration ノードは、Configuration と Platform の 2 つのプロパティを持つことができます。 構成がアクティブになると、ここで指定した値がこれらのプロパティに自動的に設定されます。
 
 ```xml
 <ProjectConfiguration Include="Debug|x64">
@@ -153,7 +153,7 @@ IDE は、すべての ProjectConfiguration 項目で使われている Configur
 <PropertyGroup Label="Configuration" />
 ```
 
-`Configuration` プロパティ グループには、添付された構成条件 (`Condition=”'$(Configuration)|$(Platform)'=='Debug|Win32'”` など) があり、構成ごとに 1 つずつの、複数のコピーが提供されます。 このプロパティ グループは、特定の構成に対して設定されるプロパティをホストします。 構成プロパティは PlatformToolset を含み、**Microsoft.Cpp.props** でのシステム プロパティ シートのインクルードも制御します。 たとえば、プロパティ `<CharacterSet>Unicode</CharacterSet>` を定義した場合、システム プロパティ シート **microsoft.Cpp.unicodesupport.props** がインクルードされます。 **Microsoft.Cpp.props** を調べると、`<Import Condition=”'$(CharacterSet)' == 'Unicode'”   Project=”$(VCTargetsPath)\microsoft.Cpp.unicodesupport.props”/>` という行が見つかります。
+`Configuration` プロパティ グループには、添付された構成条件 (`Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"` など) があり、構成ごとに 1 つずつの、複数のコピーが提供されます。 このプロパティ グループは、特定の構成に対して設定されるプロパティをホストします。 構成プロパティは PlatformToolset を含み、**Microsoft.Cpp.props** でのシステム プロパティ シートのインクルードも制御します。 たとえば、プロパティ `<CharacterSet>Unicode</CharacterSet>` を定義した場合、システム プロパティ シート **microsoft.Cpp.unicodesupport.props** がインクルードされます。 **Microsoft.Cpp.props** を調べると、`<Import Condition="'$(CharacterSet)' == 'Unicode'" Project="$(VCTargetsPath)\microsoft.Cpp.unicodesupport.props" />` という行が見つかります。
 
 ### <a name="microsoftcppprops-import-element"></a>Import の Microsoft.Cpp.props 要素
 
@@ -195,7 +195,7 @@ IDE は、すべての ProjectConfiguration 項目で使われている Configur
 
 このプロパティ グループには、すべてのプロジェクト構成の構成ごとに 1 つずつ、複数のインスタンスがあります。 各プロパティ グループには、1 つの構成条件が添付されている必要があります。 いずれかの構成がない場合、 **[プロジェクトのプロパティ]** ダイアログは正しく動作しません。 上記のプロパティ グループとは異なり、このプロパティ グループにはラベルはありません。 このグループには、プロジェクトの構成レベルの設定が含まれます。 これらの設定は、指定された項目グループの一部であるすべてのファイルに適用されます。 ビルドのカスタマイズ項目定義のメタデータはここで初期化されます。
 
-この PropertyGroup は `<Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />` の後に続ける必要があり、それより前に Label のない他の PropertyGroup が存在していてはなりません (そうしないと、プロジェクトのプロパティの編集が正しく動作しません)。
+この PropertyGroup は `<Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />` の後に指定する必要があり、その前にラベルがない他の PropertyGroup は使用できません (それ以外の場合、プロジェクトプロパティの編集は正常に機能しません)。
 
 ### <a name="per-configuration-itemdefinitiongroup-elements"></a>構成ごとの ItemDefinitionGroup 要素
 
@@ -213,13 +213,13 @@ IDE は、すべての ProjectConfiguration 項目で使われている Configur
 
 プロジェクト内の項目 (ソース ファイルなど) が含まれます。 プロジェクト項目 (つまり、規則の定義によってプロジェクト項目として扱われる項目の種類) に対しては、条件はサポートされていません。
 
-メタデータでは、構成ごとに構成の条件が必要です (すべて同じであっても)。 次に例を示します。
+メタデータでは、構成ごとに構成の条件が必要です (すべて同じであっても)。 例:
 
 ```xml
 <ItemGroup>
   <ClCompile Include="stdafx.cpp">
-    <TreatWarningAsError Condition="‘$(Configuration)|$(Platform)’==’Debug|Win32’">true</TreatWarningAsError>
-    <TreatWarningAsError Condition="‘$(Configuration)|$(Platform)’==’Debug|x64’">true</TreatWarningAsError>
+    <TreatWarningAsError Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</TreatWarningAsError>
+    <TreatWarningAsError Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</TreatWarningAsError>
   </ClCompile>
 </ItemGroup>
 ```

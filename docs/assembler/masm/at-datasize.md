@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - '@DataSize symbol'
 ms.assetid: c31dd6ab-0706-43ed-9a5d-024730f7931b
-ms.openlocfilehash: b2c300bf7c616184ae928b4d07d8ccb93d5d37bc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: be8495e609e5ca9cf45f7cac2e7d05c9298c4dcf
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166608"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74302715"
 ---
-# <a name="datasize"></a>@DataSize
+# <a name="datasize"></a>\@DataSize
 
-場合は 0**極小**、**小さな**、 **MEDIUM**、および**フラット**の場合は 1 をモデル化**COMPACT**と**大規模な**モデル、および 2**莫大**モデル (数値と同等)。
+小さい、**小さい**、**中**、および**フラット**モデルの場合は0、**コンパクト**モデルと**大規模**モデルの場合は1、**大きな**モデルの場合は 2 (数値の等価)。
 
 ## <a name="syntax"></a>構文
 
-> @DataSize
+> **\@DataSize**
 
 ## <a name="see-also"></a>関連項目
 
-[シンボル リファレンス](../../assembler/masm/symbols-reference.md)<br/>
+[シンボル リファレンス](../../assembler/masm/symbols-reference.md)

@@ -4,12 +4,12 @@ ms.date: 10/31/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: 2efd228971f19ca525f245014f3046b1b62995dc
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: d27ea235290115a43bacb38d4dc3da536a06f527
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73624591"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303309"
 ---
 # <a name="cmake-projects-in-visual-studio"></a>Visual Studio の CMake プロジェクト
 
@@ -83,7 +83,7 @@ CMake プロジェクトをビルドするには、次の選択肢がありま�
 
 ![CMake ビルドエラー](media/cmake-build-errors.png "CMake ビルドエラー")
 
-フォルダーに複数のビルド ターゲットがある場合は、 **[CMake]** メニューまたは *CMakeLists.txt* のコンテキスト メニューで **[ビルド]** 項目を選び、ビルドする CMake ターゲットを指定できます。 CMake プロジェクトで **Ctrl + Shift + B** キーを押して、現在アクティブなドキュメントをビルドします。
+フォルダーに複数のビルド ターゲットがある場合は、 **[CMake]** メニューまたは **CMakeLists.txt** のコンテキスト メニューで *[ビルド]* 項目を選び、ビルドする CMake ターゲットを指定できます。 CMake プロジェクトで **Ctrl + Shift + B** キーを押して、現在アクティブなドキュメントをビルドします。
 
 ## <a name="debugging-cmake-projects"></a>CMake プロジェクトのデバッグ
 
@@ -228,7 +228,7 @@ CMake プロジェクトをビルドするには、次の選択肢がありま�
 
 ![CMake ビルドエラー](media/cmake-build-errors.png "CMake ビルドエラー")
 
-フォルダーに複数のビルド ターゲットがある場合は、 **[CMake]** メニューまたは *CMakeLists.txt* のコンテキスト メニューで **[ビルド]** 項目を選び、ビルドする CMake ターゲットを指定できます。 CMake プロジェクトで **Ctrl + Shift + B** キーを押して、現在アクティブなドキュメントをビルドします。
+フォルダーに複数のビルド ターゲットがある場合は、 **[CMake]** メニューまたは **CMakeLists.txt** のコンテキスト メニューで *[ビルド]* 項目を選び、ビルドする CMake ターゲットを指定できます。 CMake プロジェクトで **Ctrl + Shift + B** キーを押して、現在アクティブなドキュメントをビルドします。
 
 ## <a name="debugging-cmake-projects"></a>CMake プロジェクトのデバッグ
 
@@ -262,7 +262,7 @@ CMakeLists.txt ファイルを編集するには、**ソリューション エ�
 
 ## <a name="troubleshooting-cmake-cache-errors"></a>CMake キャッシュ エラーのトラブルシューティング
 
-問題を診断するために CMake キャッシュの状態に関する詳しい情報が必要な場合は、**CMake** のメイン メニューまたは**ソリューション エクスプローラー**で *CMakeLists.txt* のコンテキスト メニューを開き、次のコマンドのいずれかを実行します。
+問題を診断するために CMake キャッシュの状態に関する詳しい情報が必要な場合は、**CMake** のメイン メニューまたは*ソリューション エクスプローラー*で **CMakeLists.txt** のコンテキスト メニューを開き、次のコマンドのいずれかを実行します。
 
 - **[キャッシュの表示]** は、ビルド ルート フォルダーの CMakeCache.txt ファイルをエディターで開きます (ここで CMakeCache.txt に対して編集した内容はすべて、キャッシュをクリーンアップするとワイプされます。 キャッシュをクリーニングした後も変更を保持するには、「 [CMake の設定をカスタマイズ](customize-cmake-settings.md)する」を参照してください)。
 

@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - '@code symbol'
 ms.assetid: 44e050e6-d254-4157-9022-cf6afbaa0515
-ms.openlocfilehash: 94eb743c9d8af33f4043339223cf2d79bbd566fa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4ed36a94144f070bd553e8a48ce4c7dff44360c1
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166699"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74302897"
 ---
-# <a name="code"></a>@code
+# <a name="code"></a>\@コード
 
-コード セグメント (テキスト マクロ) の名前。
+コードセグメントの名前 (テキストマクロ)。
 
 ## <a name="syntax"></a>構文
 
-> @code
+> **\@コード**
 
 ## <a name="see-also"></a>関連項目
 
-[シンボル リファレンス](../../assembler/masm/symbols-reference.md)<br/>
+[シンボル リファレンス](../../assembler/masm/symbols-reference.md)
