@@ -2,12 +2,12 @@
 title: Visual Studio での C++ コードの読み取りと理解
 description: Visual Studio で C++ コード エディターを使用して、コードを書式設定し、理解します。
 ms.date: 05/28/2019
-ms.openlocfilehash: c5e4d7f3e53ef37649e3635d11cf99b10cb8a7ee
-ms.sourcegitcommit: 65ed563a8a1d4d90f872a2a6edcb086f84ec9f77
-ms.translationtype: HT
+ms.openlocfilehash: d4af4c9bc747540bada49de305c45cffc5c44374
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66742028"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303058"
 ---
 # <a name="read-and-understand-c-code-in-visual-studio"></a>Visual Studio での C++ コードの読み取りと理解
 
@@ -17,11 +17,11 @@ C++ コード エディターと Visual Studio IDE ではコーディングの�
 
 Visual Studio では、言語キーワード、型名、変数名、関数パラメーター、文字列リテラルなどのシンボルの種類を区別するため、構文要素が色付けされます。
 
-![コードの色付け](../ide/media/code-outline-colorization.png "C++ の色付け")
+![コードの色付け](../ide/media/code-outline-colorization.png "C++彩色")
 
  未使用コード (#if 0 の下のコードなど) はより薄い色になっています。
 
- ![非アクティブ コード](../ide/media/inactive-code-cpp.png "C++ 非アクティブ コード")
+ ![非アクティブコード](../ide/media/inactive-code-cpp.png "C++非アクティブコード")
 
 **クイック起動**で「フォント」と入力して、 **[フォントおよび色]** を選択すると、色をカスタマイズできます。 **[フォントおよび色]** ダイアログで [C/C++] オプションまで下にスクロールして、カスタム フォントや色を選択します。
 
@@ -29,27 +29,27 @@ Visual Studio では、言語キーワード、型名、変数名、関数パラ
 
 ソース コード ファイルの任意の場所を右クリックし、 **[アウトライン]** を選択して、コード ブロックやカスタムの領域を縮小または展開し、興味のあるコードのみを簡単に参照できるようにします。 詳細については、「[アウトライン](/visualstudio/ide/outlining)」を参照してください。
 
-![C&#43;&#43; アウトライン](../ide/media/vs2015_cpp_outlining.png "アウトライン")
+![C&#43; &#43;アウトライン](../ide/media/vs2015_cpp_outlining.png "アウトライン")
 
 中かっこ (' {' または '}') の前にカーソルを配置すると、それに対応する反対側の中かっこがエディターで強調表示されます。
 
 その他のアウトラインのオプションは、メイン メニューの **[編集]**  >  **[アウトライン]** の下にあります。
 
-## <a name="line-numbers"></a>[行番号]
+## <a name="line-numbers"></a>行番号
 
-行番号をプロジェクトに追加するには、 **[ツール]**  >  **[オプション]**  >  **[テキスト エディター]**  >  **[すべての言語]**  >  **[全般]** の順に移動するか、**クイック起動 (Ctrl + Q)** で「行番号」を検索します。 行番号はすべての言語で設定することも、C++ などの特定の言語のみで設定することもできます。
+プロジェクトに行番号を追加するには、 **[ツール]**  > [オプション > **テキストエディター** ] の順に移動します。 **[全般**] > すべての > **言語**を**選択**するか、[**クイック起動] (Ctrl + Q)** で "行番号" を検索します。 行番号はすべての言語で設定することも、C++ などの特定の言語のみで設定することもできます。
 
 ## <a name="scroll-and-zoom"></a>スクロールとズーム
 
 エディターで **Ctrl** キーを押しながらマウス ホイールをスクロールすることで、ズーム インまたはズーム アウトすることができます。 左下隅のズーム設定を使用してズームすることもできます。
 
-![C&#43;&#43; ズーム コントロール](../ide/media/zoom-control.png "ズーム コントロール")
+![C&#43; &#43;ズームコントロール](../ide/media/zoom-control.png "ズームコントロール")
 
 スクロール バーの**マップ モード**では、現在の場所を離れずに、迅速にスクロールしてコード ファイルを参照することができます。 コード マップ上の任意の場所をクリックすると、その場所に直接移動することができます。
 
-![C&#43;&#43; のコード マップ](../ide/media/vs2015-cpp-code-map.png "コード マップ")
+![C でのコードマップ&#43;&#43;](../ide/media/vs2015-cpp-code-map.png "コード マップ")
 
-**マップ モード**をオンにするには、メイン ツール バーで**クイック起動**の検索ボックスに「マップ」と入力して、 **[スクロール マップ モードを使用します]** を選択します。 詳細については、「[方法 :スクロール バーをカスタマイズしてコードを追跡する](/visualstudio/ide/how-to-track-your-code-by-customizing-the-scrollbar)。
+**マップモード**を有効にするには、メインツールバーの **[クイック起動]** 検索ボックスに「マップ」と入力し、 **[スクロールマップモードの使用]** を選択します。 詳細については、「[方法 : スクロール バーのカスタマイズによるコードの追跡](/visualstudio/ide/how-to-track-your-code-by-customizing-the-scrollbar)」を参照してください。
 
 **マップ モード**がオフの場合でも、スクロール バーにはファイルに行った変更が強調表示されます。 緑色は変更が保存されたことを示し、黄色は変更が保存されていないことを示します。
 
@@ -59,35 +59,35 @@ Visual Studio では、言語キーワード、型名、変数名、関数パラ
 
 ::: moniker range="vs-2019"
 
-![C&#43;&#43; でのクイック ヒント](../ide/media/quick-info-vs2019.png "クイック ヒント")
+![クイックヒント (C)&#43;&#43;](../ide/media/quick-info-vs2019.png "クイック ヒント")
 
 **クイック ツールヒント**には、**オンラインで検索**リンクがあります。 **[ツール]**  >  **[オプション]**  >  **[テキスト エディター]**  >  **[C++]**  >  **[ビュー]** の順に移動して、検索プロバイダーを指定します。 
 
 コードにエラーがある場合、それをポイントすると**クイック ヒント**によってエラー メッセージが表示されます。 エラー メッセージは、[エラー一覧] ウィンドウでも確認できます。
 
-![エラーに関するクイック ヒント](../ide/media/quickinfo-on-error.png "エラーに関するクイック ヒント")
+![エラーに関するクイックヒント](../ide/media/quickinfo-on-error.png "エラーに関するクイックヒント")
 
 ::: moniker-end
 
 ::: moniker range="<=vs-2017"
 
-![C&#43;&#43; でのクイック ヒント](../ide/media/quick-info.png "クイック ヒント")
+![クイックヒント (C)&#43;&#43;](../ide/media/quick-info.png "クイック ヒント")
 
 コードにエラーがある場合、それをポイントすると**クイック ヒント**によってエラー メッセージが表示されます。 エラー メッセージは、 **[エラー一覧]** ウィンドウでも確認できます。
 
-![エラーに関するクイック ヒント](../ide/media/quickinfo-on-error.png "エラーに関するクイック ヒント")
+![エラーに関するクイックヒント](../ide/media/quickinfo-on-error.png "エラーに関するクイックヒント")
 
 ::: moniker-end
 
 関数を呼び出すと、**パラメーター ヒント**にパラメーターの型と予想される順序が示されます。
 
-![C&#43;&#43; でのパラメーター ヒント](../ide/media/parameter-info.png "パラメーター ヒント")
+![C のパラメーター情報&#43;&#43;](../ide/media/parameter-info.png "パラメーター ヒント")
 
 ## <a name="peek-definition"></a>定義をここに表示
 
 変数または関数宣言をポイントして右クリックし、 **[定義をここに表示]** を選択すると、現在の場所から移動することなく、その定義のインライン ビューを表示できます。 詳細については、[[定義をここに表示] (Alt + F12)](/visualstudio/ide/how-to-view-and-edit-code-by-using-peek-definition-alt-plus-f12) に関するページを参照してください。
 
-![C&#43;&#43; の [定義をここに表示]](../ide/media/vs2015_cpp_peek_definition.png "vs2015_cpp_peek_definition")
+![C&#43; &#43;の定義を見る](../ide/media/vs2015_cpp_peek_definition.png "vs2015_cpp_peek_definition")
 
 ##  <a name="f1-help"></a>F1 ヘルプ
 
@@ -97,19 +97,19 @@ Visual Studio では、言語キーワード、型名、変数名、関数パラ
 
 **クラス ビュー**では、すべてのコード シンボルの検索可能なツリーのセットと、その範囲および親/子階層がプロジェクトごとに整理されて表示されます。 **クラス ビュー**に表示する内容は、 **[クラス ビュー設定]** (ウィンドウの上部にある歯車のボックス アイコンをクリック) から構成できます。
 
-![C&#43;&#43; のクラス ビュー](../ide/media/class-view.png "クラス ビュー")
+![C でのクラスビュー&#43;&#43;](../ide/media/class-view.png "クラス ビュー")
 
 ## <a name="generate-graph-of-include-files"></a>インクルード ファイルのグラフを生成
 
 プロジェクト内のコード ファイルを右クリックし、 **[インクルード ファイルのグラフを生成]** を選択して、他のファイルによって含まれているファイルのグラフを表示します。
 
-![インクルード ファイルの C&#43;&#43; グラフ](../ide/media/vs2015_cpp_include_graph.png "vs2015_cpp_include_graph")
+![C&#43; &#43;インクルードファイルのグラフ](../ide/media/vs2015_cpp_include_graph.png "vs2015_cpp_include_graph")
 
 ## <a name="view-call-hierarchy"></a>呼び出し階層の表示
 
 関数呼び出しを右クリックし、呼び出すすべての関数、および呼び出されるすべての関数の再帰的な一覧を表示します。 一覧内の各関数は、同じ方法で展開できます。 詳細については、[呼び出し階層](/visualstudio/ide/reference/call-hierarchy)に関するページを参照してください。
 
-![C&#43;&#43; の呼び出し階層](../ide/media/vs2015_cpp_call_hierarchy.png "vs2015_cpp_call_hierarchy")
+![C&#43; &#43;呼び出し階層](../ide/media/vs2015_cpp_call_hierarchy.png "vs2015_cpp_call_hierarchy")
 
 ## <a name="see-also"></a>関連項目
 

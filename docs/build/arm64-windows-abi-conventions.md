@@ -1,12 +1,12 @@
 ---
 title: ARM64 ABI 規則の概要
 ms.date: 03/27/2019
-ms.openlocfilehash: 3a3df475b8f814fcecaf2e67a0a62c7267a0de30
-ms.sourcegitcommit: e805200eaef4fe7a65a00051bbd305273af94fe7
+ms.openlocfilehash: 07d58bbd64795235ad63a7b26b6f18fcffdcd1d2
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2019
-ms.locfileid: "74163224"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303267"
 ---
 # <a name="overview-of-arm64-abi-conventions"></a>ARM64 ABI 規則の概要
 
@@ -105,7 +105,7 @@ AArch64 アーキテクチャでは、次に示すように、32の浮動小数�
 
 浮動小数点制御レジスタ (FPCR) には、その中のさまざまなビットフィールドに関する特定の要件があります。
 
-| Bits | 説明 | Volatile? | ロール |
+| Bits | 意味 | Volatile? | ロール |
 | - | - | - | - |
 | 26 | AHP | 不揮発性 | 代替の半精度制御。 |
 | 25 | DN | 不揮発性 | 既定の NaN モードコントロール。 |

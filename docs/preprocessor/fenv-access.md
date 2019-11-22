@@ -1,6 +1,7 @@
 ---
 title: fenv_access プラグマ
-ms.date: 08/29/2019
+description: Fenv_access プラグマディレクティブの使用法と効果について説明します。 Fenv_access ディレクティブは、実行時に浮動小数点環境へのアクセスを制御します。
+ms.date: 11/19/2019
 f1_keywords:
 - vc-pragma.fenv_access
 - fenv_access_CPP
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - pragmas, fenv_access
 - fenv_access pragma
 ms.assetid: 2ccea292-0ae4-42ce-9c67-cc189299857b
-ms.openlocfilehash: c8e66881bde12df28bf24e18230471cb4caca792
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: e03eb404f2805a4f7c96509600c063c1b1acf629
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70218597"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74305848"
 ---
 # <a name="fenv_access-pragma"></a>fenv_access プラグマ
 
@@ -21,13 +22,21 @@ ms.locfileid: "70218597"
 
 ## <a name="syntax"></a>構文
 
-> **#pragma fenv_access (** { **on** | **off** } **)**
+> **#pragma fenv_access (** { **on** |  **}** **)**
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-既定では、 **fenv_access**は**オフ**になっています。 コードが浮動小数点環境にアクセスしたり操作したりしないことをコンパイラが想定できる場合は、多くの浮動小数点コードの最適化を実行できます。 **Fenv_access**を**on**に設定すると、コードが浮動小数点環境にアクセスして状態フラグや例外をテストしたり、制御モードフラグを設定したりすることをコンパイラに通知します。 コンパイラは、コードが常に浮動小数点環境にアクセスできるように、これらの最適化を無効にします。
+既定では、 **fenv_access**は**オフ**になっています。 コンパイラは、コードが浮動小数点環境にアクセスしたり操作したりしないことを前提としています。 環境へのアクセスが必要ない場合、コンパイラは浮動小数点コードを最適化するためにさらに多くのことを行うことができます。
 
-浮動小数点の動作の詳細については、「 [/fp (浮動小数点の動作の指定)](../build/reference/fp-specify-floating-point-behavior.md)」を参照してください。
+コードが浮動小数点の状態フラグ、例外、または制御モードフラグを設定する場合は、 **fenv_access**を有効にします。 コンパイラは、浮動小数点の最適化を無効にして、コードが常に浮動小数点環境にアクセスできるようにします。
+
+[/Fp: strict] コマンドラインオプションを使用すると、 **fenv_access**が自動的に有効になります。 このとその他の浮動小数点動作の詳細については、「 [/fp (浮動小数点の動作の指定)](../build/reference/fp-specify-floating-point-behavior.md)」を参照してください。
+
+**Fenv_access**プラグマを他の浮動小数点の設定と組み合わせて使用する方法には、次のような制限があります。
+
+- 正確なセマンティクスが有効になっていない限り、 **fenv_access**を有効にすることはできません。 正確なセマンティクスを有効にするには、 [float_control](float-control.md)プラグマを使用するか、 [/fp: 精密](../build/reference/fp-specify-floating-point-behavior.md)または[/fp: strict](../build/reference/fp-specify-floating-point-behavior.md)コンパイラオプションを使用します。 他の浮動小数点コマンドラインオプションが指定されていない場合、コンパイラは既定で **/fp: 精密**になります。
+
+- **Fenv_access (on)** が設定されている場合、 **float_control**を使用して正確なセマンティクスを無効にすることはできません。
 
 **Fenv_access**の対象となる最適化の種類は次のとおりです。
 
@@ -75,7 +84,7 @@ int main() {
 out=9.999999776482582e-03
 ```
 
-前のサンプルから`#pragma fenv_access (on)`コメントアウトした場合は、コンパイラがコンパイル時の評価を行い、制御モードを使用しないため、出力が異なることに注意してください。
+前のサンプルの `#pragma fenv_access (on)` をコメントアウトすると、出力は異なります。 これは、コンパイラがコンパイル時の評価を行うためです。この評価では、制御モードは使用されません。
 
 ```cpp
 // pragma_directive_fenv_access_2.cpp
@@ -104,4 +113,4 @@ out=1.000000000000000e-02
 
 ## <a name="see-also"></a>関連項目
 
-[プラグマディレクティブと __ プラグマキーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[プラグマディレクティブと __pragma キーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

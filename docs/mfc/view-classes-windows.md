@@ -8,24 +8,24 @@ helpviewer_keywords:
 - splitter window classes [MFC]
 - view classes [MFC], Windows
 ms.assetid: b11683fb-9f43-4de3-9499-2b55775f9870
-ms.openlocfilehash: f3e9ea2ebf3eb0ce04fde0339aaf0243686248a9
-ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
+ms.openlocfilehash: a3e0f837bc13c022bec91bfff6e38c1513abaf16
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71096038"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74302963"
 ---
 # <a name="view-classes-windows"></a>ビュー クラス (Windows)
 
-`CView`およびその派生クラスは、フレームウィンドウのクライアント領域を表す子ウィンドウです。 ビューには、データが表示され、ドキュメントの入力が受け入れられます。
+`CView` とその派生クラスは、フレームウィンドウのクライアント領域を表す子ウィンドウです。 ビューには、データが表示され、ドキュメントの入力が受け入れられます。
 
 ビュークラスは、ドキュメントクラスと、ドキュメントテンプレートオブジェクトを使用するフレームウィンドウクラスに関連付けられています。
 
 [CView](../mfc/reference/cview-class.md)<br/>
-ドキュメントのデータのアプリケーション固有のビューの基本クラス。 ビューデータを表示し、ユーザーの入力を受け入れてデータを編集または選択します。 ビュークラスまたはクラスをから`CView`派生させます。
+ドキュメントのデータのアプリケーション固有のビューの基本クラス。 ビューデータを表示し、ユーザーの入力を受け入れてデータを編集または選択します。 `CView`からビュークラスまたはクラスを派生させます。
 
 [CScrollView](../mfc/reference/cscrollview-class.md)<br/>
-スクロール機能を持つビューの基本クラスです。 自動スクロールを行うため`CScrollView`に、からビュークラスを派生させます。
+スクロール機能を持つビューの基本クラスです。 自動スクロール用に `CScrollView` からビュークラスを派生させます。
 
 ## <a name="form-and-record-views"></a>フォームビューとレコードビュー
 
@@ -34,13 +34,13 @@ ms.locfileid: "71096038"
 レコードビューはフォームビューから派生します。 ダイアログボックステンプレートに加えて、データベースへの接続もあります。
 
 [CFormView](../mfc/reference/cformview-class.md)<br/>
-ダイアログボックステンプレートでレイアウトが定義されているスクロールビュー。 から`CFormView`クラスを派生させ、ダイアログボックステンプレートに基づいてユーザーインターフェイスを実装します。
+ダイアログボックステンプレートでレイアウトが定義されているスクロールビュー。 ダイアログボックステンプレートに基づいてユーザーインターフェイスを実装するには、`CFormView` からクラスを派生させます。
 
 [CDaoRecordView](../mfc/reference/cdaorecordview-class.md)<br/>
-データアクセスオブジェクト (DAO) レコードセットオブジェクトに直接接続されたフォームビューを提供します。 すべてのフォームビュー `CDaoRecordView`と同様に、はダイアログボックステンプレートに基づいています。 DAO は Access データベースで使用され、Office 2013 でサポートされています。 3.6 は最終バージョンであり、廃止されたと見なされます。
+データアクセスオブジェクト (DAO) レコードセットオブジェクトに直接接続されたフォームビューを提供します。 すべてのフォームビューと同様に、`CDaoRecordView` はダイアログボックステンプレートに基づいています。 DAO は Access データベースで使用され、Office 2013 でサポートされています。 DAO 3.6 は最終バージョンであり、互換性のために残されているものと見なされます。
 
 [CRecordView](../mfc/reference/crecordview-class.md)<br/>
-Open Database Connectivity (ODBC) レコードセットオブジェクトに直接接続されたフォームビューを提供します。 すべてのフォームビュー `CRecordView`と同様に、はダイアログボックステンプレートに基づいています。
+Open Database Connectivity (ODBC) レコードセットオブジェクトに直接接続されたフォームビューを提供します。 すべてのフォームビューと同様に、`CRecordView` はダイアログボックステンプレートに基づいています。
 
 [CHtmlEditView](../mfc/reference/chtmleditview-class.md)<br/>
 WebBrowser HTML 編集プラットフォームの機能を提供するフォームビュー。
@@ -66,7 +66,7 @@ Windows ツリーコントロールを含むビュー (「 [CTreeCtrl](../mfc/re
 
 ## <a name="related-classes"></a>関連クラス
 
-`CSplitterWnd`1つのフレームウィンドウ内に複数のビューを含めることができます。 `CPrintDialog`および`CPrintInfo`では、ビューの印刷と印刷のプレビュー機能がサポートされています。 `CRichEditDoc`と`CRichEditCntrItem`は、OLE `CRichEditView`コンテナー機能を実装するためにと共に使用されます。
+`CSplitterWnd` を使用すると、1つのフレームウィンドウ内に複数のビューを含めることができます。 `CPrintDialog` と `CPrintInfo` では、ビューの印刷と印刷のプレビュー機能がサポートされています。 `CRichEditDoc` と `CRichEditCntrItem` は、OLE コンテナー機能を実装するために `CRichEditView` と共に使用されます。
 
 [CSplitterWnd](../mfc/reference/csplitterwnd-class.md)<br/>
 ユーザーが複数のペインに分割できるウィンドウ。 これらのペインは、ユーザーまたは固定サイズによってサイズ変更できます。
@@ -75,13 +75,13 @@ Windows ツリーコントロールを含むビュー (「 [CTreeCtrl](../mfc/re
 には、ファイルを印刷するための標準のダイアログボックスが用意されています。
 
 [CPrintInfo](../mfc/reference/cprintinfo-structure.md)<br/>
-印刷または印刷プレビュージョブに関する情報を格納している構造体。 の印刷`CView`アーキテクチャで使用されます。
+印刷または印刷プレビュージョブに関する情報を格納している構造体。 `CView`の印刷アーキテクチャで使用されます。
 
 [CRichEditDoc](../mfc/reference/cricheditdoc-class.md)<br/>
-に含ま`CRichEditView`れる OLE クライアントアイテムの一覧を保持します。
+`CRichEditView`にある OLE クライアントアイテムの一覧を保持します。
 
 [CRichEditCntrItem](../mfc/reference/cricheditcntritem-class.md)<br/>
-に格納されている`CRichEditView`OLE 項目へのクライアント側アクセスを提供します。
+`CRichEditView`に格納されている OLE 項目へのクライアント側アクセスを提供します。
 
 ## <a name="see-also"></a>関連項目
 

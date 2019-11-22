@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - '@Interface symbol'
 ms.assetid: 266ecba9-9e96-4086-8ee4-a3d0161b6e29
-ms.openlocfilehash: 4c9ab7bc70315f725de410b7f47803cc22cb8acc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ae07df9c72633034c481b27270b08488d1355322
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179004"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74301937"
 ---
-# <a name="interface"></a>@Interface
+# <a name="interface"></a>\@インターフェイス
 
-言語のパラメーター (数値と同等) に関する情報。
+言語パラメーターについての情報 (数値の等価)。
 
 ## <a name="syntax"></a>構文
 
-> @Interface
+> **\@インターフェイス**
 
 ## <a name="see-also"></a>関連項目
 
-[シンボル リファレンス](../../assembler/masm/symbols-reference.md)<br/>
+[シンボル リファレンス](../../assembler/masm/symbols-reference.md)

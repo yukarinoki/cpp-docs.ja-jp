@@ -11,18 +11,18 @@ f1_keywords:
 - filesystem/std::filesystem::perms
 - filesystem/std::experimental::filesystem::perms
 ms.assetid: 0096c046-d101-464c-8259-b878a48280b0
-ms.openlocfilehash: dfbcf65462f0bb7bc6ca44f43507efa7b753e7bc
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: f148347cd132a604622415c65bb3e0352f5308eb
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457705"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303497"
 ---
 # <a name="ltfilesystemgt-enumerations"></a>&lt;filesystem&gt; 列挙体
 
 このトピックでは、filesystem ヘッダーの列挙体について説明します。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<experimental/filesystem>
 
@@ -51,7 +51,7 @@ enum class copy_options {
 
 ### <a name="values"></a>値
 
-|`Name`|説明|
+|`Name`|[説明]|
 |------------|-----------------|
 |`none`|演算の既定の動作を実行します。|
 |`skip_existing`|ファイルが既に存在する場合はコピーしません。エラーをレポートしません。|
@@ -79,7 +79,7 @@ enum class directory_options {
 
 ### <a name="values"></a>値
 
-|名前|説明|
+|名前|[説明]|
 |----------|-----------------|
 |`none`|既定の動作: ディレクトリへのシンボリック リンクを無視します。 アクセス許可の拒否はエラーです。|
 |`follow_directory_symlink`|ディレクトリへのシンボリック リンクを実際のディレクトリとして処理します。|
@@ -107,7 +107,7 @@ enum class file_type {
 
 ### <a name="values"></a>値
 
-|名前|値|説明|
+|名前|[値]|[説明]|
 |----------|-----------|-----------------|
 |`not_found`|-1|存在しないファイルを表します。|
 |`none`|0|type 属性を持たないファイルを表します (サポートされていません)。|
@@ -122,7 +122,7 @@ enum class file_type {
 
 ## <a name="perm_options"></a>perm_options
 
-には`replace`、 `add`、 `remove`、および`nofollow`の値が含まれます。
+`replace`、`add`、`remove`、および `nofollow`の値が含まれます。
 
 ```cpp
 enum class perm_options;
