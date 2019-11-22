@@ -1115,7 +1115,7 @@
                       href: build/reference/notification-hooks.md
                     - name: エラー フック
                       href: build/reference/failure-hooks.md
-                    - name: 例外 (C/C++)
+                    - name: DLL 読み込み例外コード (C/C++)
                       href: build/reference/exceptions-c-cpp.md
                 - name: 遅延読み込みしたインポートのダンプ
                   href: build/reference/dumping-delay-loaded-imports.md
@@ -3652,51 +3652,18 @@
               items:
                 - name: C++ へようこそ (Modern C++)
                   href: cpp/welcome-back-to-cpp-modern-cpp.md
-                - name: 型システム (Modern C++)
-                  expanded: false
-                  items:
-                    - name: 型システム (Modern C++)
-                      href: cpp/cpp-type-system-modern-cpp.md
-                    - name: 値型 (Modern C++)
-                      href: cpp/value-types-modern-cpp.md
-                    - name: 型変換とタイプ セーフ (Modern C++)
-                      href: cpp/type-conversions-and-type-safety-modern-cpp.md
                 - name: 均一な初期化とコンストラクターのデリゲート
                   href: cpp/uniform-initialization-and-delegating-constructors.md
                 - name: オブジェクトの有効期間とリソースの管理 (Modern C++)
                   href: cpp/object-lifetime-and-resource-management-modern-cpp.md
                 - name: オブジェクトのリソースの所有 (RAII)
                   href: cpp/objects-own-resources-raii.md
-                - name: スマート ポインター (Modern C++)
-                  expanded: false
-                  items:
-                    - name: スマート ポインター (Modern C++)
-                      href: cpp/smart-pointers-modern-cpp.md
-                    - name: '方法: unique_ptr インスタンスを作成して使用する'
-                      href: cpp/how-to-create-and-use-unique-ptr-instances.md
-                    - name: '方法: shared_ptr インスタンスを作成して使用する'
-                      href: cpp/how-to-create-and-use-shared-ptr-instances.md
-                    - name: '方法: weak_ptr インスタンスを作成して使用する'
-                      href: cpp/how-to-create-and-use-weak-ptr-instances.md
-                    - name: '方法: CComPtr および CComQIPtr インスタンスを作成して使用する'
-                      href: cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md
-                - name: コンパイル時のカプセル化の Pimpl (Modern C++)
-                  href: cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md
                 - name: コンテナー (Modern C++)
                   href: cpp/containers-modern-cpp.md
                 - name: アルゴリズム (Modern C++)
                   href: cpp/algorithms-modern-cpp.md
                 - name: 文字列および I/O の書式設定 (Modern C++)
                   href: cpp/string-and-i-o-formatting-modern-cpp.md
-                - name: エラーと例外の処理 (Modern C++)
-                  expanded: false
-                  items:
-                    - name: エラーと例外の処理 (Modern C++)
-                      href: cpp/errors-and-exception-handling-modern-cpp.md
-                    - name: '方法: 例外安全性に対応した設計をする'
-                      href: cpp/how-to-design-for-exception-safety.md
-                    - name: '方法: 例外的なコードと非例外的なコード間のインターフェイス'
-                      href: cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md
                 - name: ABI の境界での移植性 (Modern C++)
                   href: cpp/portability-at-abi-boundaries-modern-cpp.md
             - name: 構文規則
@@ -3737,6 +3704,8 @@
                 - name: 宣言と定義
                   expanded: false
                   items:
+                    - name: C++ の型システム
+                      href: cpp/cpp-type-system-modern-cpp.md
                     - name: 宣言と定義
                       href: cpp/declarations-and-definitions-cpp.md
                     - name: 宣言の概要
@@ -3880,6 +3849,8 @@
                       href: cpp/floating-limits.md
                 - name: 標準変換
                   href: cpp/standard-conversions.md
+                - name: 型変換とタイプ セーフ
+                  href: cpp/type-conversions-and-type-safety-modern-cpp.md
             - name: 組み込み演算子、優先順位と結合規則
               expanded: false
               items:
@@ -4134,7 +4105,7 @@
                       href: cpp/protected-cpp.md
                     - name: public
                       href: cpp/public-cpp.md
-                - name: コンストラクターを持たないクラスと構造体の初期化
+                - name: かっこ初期化
                   href: cpp/initializing-classes-and-structs-without-constructors-cpp.md
                 - name: コンストラクター
                   expanded: false
@@ -4145,6 +4116,8 @@
                       href: cpp/copy-constructors-and-copy-assignment-operators-cpp.md
                     - name: 移動コンストラクターと移動代入演算子
                       href: cpp/move-constructors-and-move-assignment-operators-cpp.md
+                    - name: コンストラクターのデリゲート
+                      href: cpp/delegating-constructors.md
                 - name: デストラクター
                   href: cpp/destructors-cpp.md
                 - name: メンバー関数の概要
@@ -4189,6 +4162,8 @@
                   href: cpp/special-member-functions.md
                 - name: 静的メンバー
                   href: cpp/static-members-cpp.md
+                - name: 値の型としての C++ クラス
+                  href: cpp/value-types-modern-cpp.md
                 - name: ユーザー定義型の変換
                   href: cpp/user-defined-type-conversions-cpp.md
                 - name: 変更可能なデータ メンバー
@@ -4236,41 +4211,56 @@
               items:
                 - name: ポインター
                   href: cpp/pointers-cpp.md
+                - name: 生ポインター
+                  href: cpp/raw-pointers.md
                 - name: const ポインターと volatile ポインター
                   href: cpp/const-and-volatile-pointers.md
                 - name: new および delete 演算子
                   href: cpp/new-and-delete-operators.md
+                - name: スマート ポインター
+                  href: cpp/smart-pointers-modern-cpp.md
+                - name: '方法: unique_ptr インスタンスを作成して使用する'
+                  href: cpp/how-to-create-and-use-unique-ptr-instances.md
+                - name: '方法: shared_ptr インスタンスを作成して使用する'
+                  href: cpp/how-to-create-and-use-shared-ptr-instances.md
+                - name: '方法: weak_ptr インスタンスを作成して使用する'
+                  href: cpp/how-to-create-and-use-weak-ptr-instances.md
+                - name: '方法: CComPtr および CComQIPtr インスタンスを作成して使用する'
+                  href: cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md
+                - name: コンパイル時のカプセル化の Pimpl
+                  href: cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md
             - name: C++ での例外処理
               expanded: false
               items:
                 - name: C++ での例外処理
                   href: cpp/exception-handling-in-visual-cpp.md
-                - name: 例外処理
+                - name: Modern C++ のベスト プラクティス
+                  href: cpp/errors-and-exception-handling-modern-cpp.md
+                - name: 例外安全性に対応した設計の方法
+                  href: cpp/how-to-design-for-exception-safety.md
+                - name: 例外的なコードと非例外的なコードをインターフェイスで連結する方法
+                  href: cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md
+                - name: try、throw、catch ステートメント
+                  href: cpp/try-throw-and-catch-statements-cpp.md
+                - name: catch ブロックの評価方法
+                  href: cpp/how-catch-blocks-are-evaluated-cpp.md
+                - name: 例外とスタック アンワインド
+                  href: cpp/exceptions-and-stack-unwinding-in-cpp.md
+                - name: 例外の指定 (スロー)
+                  href: cpp/exception-specifications-throw-cpp.md
+                - name: noexcept
+                  href: cpp/noexcept-cpp.md
+                - name: 未処理の C++ 例外
+                  href: cpp/unhandled-cpp-exceptions.md
+                - name: C (構造化) と C++ の混合例外
                   expanded: false
                   items:
-                    - name: 例外処理
-                      href: cpp/cpp-exception-handling.md
-                    - name: try、throw、catch ステートメント
-                      href: cpp/try-throw-and-catch-statements-cpp.md
-                    - name: catch ブロックの評価方法
-                      href: cpp/how-catch-blocks-are-evaluated-cpp.md
-                    - name: C++ での例外とスタック アンワインド
-                      href: cpp/exceptions-and-stack-unwinding-in-cpp.md
-                    - name: 例外の指定 (スロー)
-                      href: cpp/exception-specifications-throw-cpp.md
-                    - name: noexcept
-                      href: cpp/noexcept-cpp.md
-                    - name: 未処理の C++ 例外
-                      href: cpp/unhandled-cpp-exceptions.md
                     - name: C (構造化) と C++ の混合例外
-                      expanded: false
-                      items:
-                        - name: C (構造化) と C++ の混合例外
-                          href: cpp/mixing-c-structured-and-cpp-exceptions.md
-                        - name: setjmp-longjmp の使用
-                          href: cpp/using-setjmp-longjmp.md
-                        - name: C++ での構造化例外の処理
-                          href: cpp/exception-handling-differences.md
+                      href: cpp/mixing-c-structured-and-cpp-exceptions.md
+                    - name: setjmp-longjmp の使用
+                      href: cpp/using-setjmp-longjmp.md
+                    - name: C++ での構造化例外の処理
+                      href: cpp/exception-handling-differences.md
                 - name: 構造化例外処理 (SEH) (C/C++)
                   expanded: false
                   items:
