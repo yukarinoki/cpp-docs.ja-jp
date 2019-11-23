@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - .UNTILCXZ directive
 ms.assetid: 07723c4c-789d-4dfa-9407-c60e72cb975f
-ms.openlocfilehash: ddc4566b77f633dce64e762cce3cd2ddbd92981e
-ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
+ms.openlocfilehash: 10065e599c3d5d94d064253ae724915fcb11a963
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73704032"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397848"
 ---
-# <a name="untilcxz-32-bit-masm"></a>.CXZ (32 ビット MASM)
+# <a name="untilcxz-32-bit-masm"></a>.UNTILCXZ (32-bit MASM)
 
-(32 ビット MASM のみ。)「」を参照してください[。繰り返し](../../assembler/masm/dot-repeat.md)ます。
+(32-bit MASM only.) See [.REPEAT](../../assembler/masm/dot-repeat.md).
 
 ## <a name="see-also"></a>関連項目
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
+[Directives reference](directives-reference.md)

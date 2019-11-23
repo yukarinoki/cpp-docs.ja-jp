@@ -8,21 +8,21 @@ helpviewer_keywords:
 - operator OVERFLOW?
 - OVERFLOW? operator
 ms.assetid: 376b2850-993a-4538-b8f1-bd682ff7e91c
-ms.openlocfilehash: e6c92999e5f9172557b2bd853c5e97b05305ee1f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3f682a2573ea0091c32a523e849acf84d27e9030
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176591"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74396534"
 ---
 # <a name="operator-overflow"></a>OVERFLOW? 演算子
 
-オーバーフロー フラグの状態です。 内でのみ使用される[します。IF](../../assembler/masm/dot-if.md)、[します。中に](../../assembler/masm/dot-while.md)、または[します。繰り返し](../../assembler/masm/dot-repeat.md)をブロックし、アセンブリの時ではなく、実行時に評価します。
+Status of overflow flag. Used only within [.IF](../../assembler/masm/dot-if.md), [.WHILE](../../assembler/masm/dot-while.md), or [.REPEAT](../../assembler/masm/dot-repeat.md) blocks and evaluated at run time, not at assembly time.
 
 ## <a name="syntax"></a>構文
 
-> OVERFLOW?
+> **OVERFLOW?**
 
 ## <a name="see-also"></a>関連項目
 
-[演算子リファレンス](../../assembler/masm/operators-reference.md)<br/>
+[Operators reference](operators-reference.md)

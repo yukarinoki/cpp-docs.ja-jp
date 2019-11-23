@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - SQWORD directive
 ms.assetid: 329245f1-af34-4540-a912-73e9045c47fa
-ms.openlocfilehash: 8457e14ce4d53df6dffbcea4ee1a83e19a23cc49
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 37350e3248ec5118bc60a31ae61feed364682c31
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210303"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74393687"
 ---
 # <a name="sqword"></a>SQWORD
 
-割り当て、必要に応じて各 8 の符号付きバイトのストレージを初期化します`initializer`します。 また、型指定子として使用できる型が有効な任意の場所。
+Allocates and optionally initializes 8 signed bytes of storage for each *initializer*. Also can be used as a type specifier anywhere a type is legal.
 
 ## <a name="syntax"></a>構文
 
-> SQWORD 初期化子の名前 [] の初期化子].
+> *name* **SQWORD** *initializer* ⟦ __,__ *initializer* ...⟧
 
 ## <a name="see-also"></a>関連項目
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
-[QWORD](../../assembler/masm/qword.md)<br/>
-[DQ](../../assembler/masm/dq.md)<br/>
+[Directives Reference](../../assembler/masm/directives-reference.md)\
+[QWORD](../../assembler/masm/qword.md)\
+[DQ](../../assembler/masm/dq.md)

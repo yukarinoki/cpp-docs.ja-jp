@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - '@F symbol'
 ms.assetid: fa717dc8-e5a4-420d-ad3c-cb64ed258a60
-ms.openlocfilehash: 03120d1a65c46f3f67947936d00600f2139ba237
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: 82195c216552302f4f0a2a237ce95440249e9854
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74302679"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74399106"
 ---
 # <a name="f"></a>\@F
 
-次の[\@\@:](../../assembler/masm/at-at.md)ラベルの位置。
+The location of the next [\@\@:](../../assembler/masm/at-at.md) label.
 
 ## <a name="syntax"></a>構文
 
@@ -23,4 +23,4 @@ ms.locfileid: "74302679"
 
 ## <a name="see-also"></a>関連項目
 
-[シンボル リファレンス](../../assembler/masm/symbols-reference.md)
+[Symbols reference](symbols-reference.md)

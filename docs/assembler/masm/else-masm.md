@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - ELSE directive
 ms.assetid: c43af707-4567-4489-97ca-f14982d84e88
-ms.openlocfilehash: 47cda33eb415070a4eca2d0faadef683c905aaaf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: de162bfda80f659dc477d7cbb003a36de60c2328
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62185188"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397706"
 ---
 # <a name="else-masm"></a>ELSE (MASM)
 
-条件付きブロック内で別のブロックの先頭をマークします。
+Marks the beginning of an alternate block within a conditional block.
 
 ## <a name="syntax"></a>構文
 
-> ELSE
+> **ELSE**
 
 ## <a name="remarks"></a>Remarks
 
-参照してください[場合](../../assembler/masm/if-masm.md)します。
+See [IF](../../assembler/masm/if-masm.md).
 
 ## <a name="see-also"></a>関連項目
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
+[Directives reference](directives-reference.md)

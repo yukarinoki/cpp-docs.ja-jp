@@ -8,21 +8,21 @@ helpviewer_keywords:
 - Mod operator
 - operator MOD
 ms.assetid: 8e05e8c2-3f07-44f9-8216-5436dcb97cc7
-ms.openlocfilehash: 843600ce9b05bcb7a99ff9c67eaca1975e9cb65f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9008f85c7b93abf7fb7534cf74c4b3d338d80cdb
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176760"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74396651"
 ---
 # <a name="operator-mod"></a>MOD 演算子
 
-除算するときに、残りの部分 (剰余) の整数値を返します*expression1*によって*expression2*します。
+Returns the integer value of the remainder (modulo) when dividing *expression1* by *expression2*.
 
 ## <a name="syntax"></a>構文
 
-> expression1 MOD expression2
+> *expression1* **MOD** *expression2*
 
 ## <a name="see-also"></a>関連項目
 
-[演算子リファレンス](../../assembler/masm/operators-reference.md)<br/>
+[Operators reference](operators-reference.md)

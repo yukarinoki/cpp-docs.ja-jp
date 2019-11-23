@@ -8,21 +8,21 @@ helpviewer_keywords:
 - operator CARRY?
 - CARRY? operator
 ms.assetid: 5b195de7-3f66-436a-b75a-4b8d7c3c83b7
-ms.openlocfilehash: a793ec50cc5fac08b35f810b2e161b5a253b49a5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 297e4501d87217d112a3163efc76368571c41d6d
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62200912"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397072"
 ---
 # <a name="operator-carry"></a>CARRY? 演算子
 
-繰フラグの状態です。 内でのみ使用される[します。IF](../../assembler/masm/dot-if.md)、[します。中に](../../assembler/masm/dot-while.md)、または[します。繰り返し](../../assembler/masm/dot-repeat.md)をブロックし、アセンブリの時ではなく、実行時に評価します。
+Status of carry flag. Used only within [.IF](../../assembler/masm/dot-if.md), [.WHILE](../../assembler/masm/dot-while.md), or [.REPEAT](../../assembler/masm/dot-repeat.md) blocks and evaluated at run time, not at assembly time.
 
 ## <a name="syntax"></a>構文
 
-> CARRY?
+> **CARRY?**
 
 ## <a name="see-also"></a>関連項目
 
-[演算子リファレンス](../../assembler/masm/operators-reference.md)<br/>
+[Operators reference](../../assembler/masm/operators-reference.md)

@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - '@CatStr symbol'
 ms.assetid: 01fcc590-1ec2-42f6-b868-ed0433297c26
-ms.openlocfilehash: aca740aa31866cc55d9babd8fd43b78bdad96a72
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: 8c9995365b2fda16721b28805ece13102fed7505
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74302895"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74399231"
 ---
 # <a name="catstr"></a>\@CatStr
 
-1つ以上の文字列を連結するマクロ関数。 文字列を返します。
+Macro function that concatenates one or more strings. Returns a string.
 
 ## <a name="syntax"></a>構文
 
-> **\@catstr (** *string1* ⟦ __,__ *string2*...⟧ **)**
+> **\@CatStr(** *string1* ⟦ __,__ *string2*...⟧ **)**
 
 ## <a name="see-also"></a>関連項目
 
-[シンボル リファレンス](../../assembler/masm/symbols-reference.md)
+[Symbols reference](symbols-reference.md)

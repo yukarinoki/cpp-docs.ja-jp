@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MASM (Microsoft Macro Assembler), directives reference
 ms.assetid: da6efcd1-18f7-41de-81cd-a002a02f9a22
-ms.openlocfilehash: 655c177b8e5b859faf3b6d9c3250bc3ced31b430
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 12effa33b80403f3e8f1a130ac53a75b02cfefff
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62178939"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398785"
 ---
 # <a name="directives-reference"></a>ディレクティブ リファレンス
 
@@ -23,23 +23,23 @@ ms.locfileid: "62178939"
 |[.PUSHFRAME](../../assembler/masm/dot-pushframe.md)|[.PUSHREG](../../assembler/masm/dot-pushreg.md)|[.SAVEREG](../../assembler/masm/dot-savereg.md)|
 |[.SAVEXMM128](../../assembler/masm/dot-savexmm128.md)|[.SETFRAME](../../assembler/masm/dot-setframe.md)||
 
-### <a name="code-labels"></a>コード ラベル
+### <a name="code-labels"></a>Code Labels
 
 |||
 |-|-|
 |[ALIGN](../../assembler/masm/align-masm.md)|[EVEN](../../assembler/masm/even.md)|
 |[LABEL](../../assembler/masm/label-masm.md)|[ORG](../../assembler/masm/org.md)|
 
-### <a name="conditional-assembly"></a>条件付きのアセンブリ
+### <a name="conditional-assembly"></a>Conditional Assembly
 
 ||||
 |-|-|-|
 |[ELSE](../../assembler/masm/else-masm.md)|[ELSEIF](../../assembler/masm/elseif-masm.md)|[ELSEIF2](../../assembler/masm/elseif2.md)|
 |[IF](../../assembler/masm/if-masm.md)|[IF2](../../assembler/masm/if2.md)|[IFB](../../assembler/masm/ifb.md)/[IFNB](../../assembler/masm/ifnb.md)|
 |[IFDEF](../../assembler/masm/ifdef.md)/[IFNDEF](../../assembler/masm/ifndef.md)|[IFDIF](../../assembler/masm/ifdif.md)/[IFDIF&#91;&#91;I&#93;&#93;](../../assembler/masm/ifdif.md)|[IFE](../../assembler/masm/ife.md)|
-|[IFIDN](../../assembler/masm/ifidn.md)/[IFIDN&AMP;#91;&AMP;#91;しました&AMP;#93;&AMP;#93;](../../assembler/masm/ifidn.md)|||
+|[IFIDN](../../assembler/masm/ifidn.md)/[IFIDN&#91;&#91;I&#93;&#93;](../../assembler/masm/ifidn.md)|||
 
-### <a name="conditional-control-flow"></a>条件付きの制御フロー
+### <a name="conditional-control-flow"></a>Conditional Control Flow
 
 ||||
 |-|-|-|
@@ -48,7 +48,7 @@ ms.locfileid: "62178939"
 |[.IF](../../assembler/masm/dot-if.md)|[.REPEAT](../../assembler/masm/dot-repeat.md)|[.UNTIL](../../assembler/masm/dot-until.md)|
 |[.UNTILCXZ](../../assembler/masm/dot-untilcxz.md)|[.WHILE](../../assembler/masm/dot-while.md)||
 
-### <a name="conditional-error"></a>条件付きのエラー
+### <a name="conditional-error"></a>Conditional Error
 
 ||||
 |-|-|-|
@@ -57,7 +57,7 @@ ms.locfileid: "62178939"
 |[.ERRIDN](../../assembler/masm/dot-erridn.md)/[.ERRIDN&#91;&#91;I&#93;&#93;](../../assembler/masm/dot-erridn.md)|[.ERRNB](../../assembler/masm/dot-errnb.md)|[.ERRNDEF](../../assembler/masm/dot-errndef.md)|
 |[.ERRNZ](../../assembler/masm/dot-errnz.md)|||
 
-### <a name="data-allocation"></a>データの割り当て
+### <a name="data-allocation"></a>Data Allocation
 
 ||||
 |-|-|-|
@@ -65,15 +65,15 @@ ms.locfileid: "62178939"
 |[EVEN](../../assembler/masm/even.md)|[FWORD](../../assembler/masm/fword.md)|[LABEL](../../assembler/masm/label-masm.md)|
 |[ORG](../../assembler/masm/org.md)|[QWORD](../../assembler/masm/qword.md)|[REAL4](../../assembler/masm/real4.md)|
 |[REAL8](../../assembler/masm/real8.md)|[REAL10](../../assembler/masm/real10.md)|[TBYTE](../../assembler/masm/tbyte.md)|
-|[WORD](../../assembler/masm/word.md)/[剣](../../assembler/masm/sword.md)|||
+|[WORD](../../assembler/masm/word.md)/[SWORD](../../assembler/masm/sword.md)|||
 
-### <a name="equates"></a>同じです。
+### <a name="equates"></a>Equates
 
 ||||
 |-|-|-|
 |[=](../../assembler/masm/equal.md)|[EQU](../../assembler/masm/equ.md)|[TEXTEQU](../../assembler/masm/textequ.md)|
 
-### <a name="listing-control"></a>リスト コントロール
+### <a name="listing-control"></a>Listing Control
 
 ||||
 |-|-|-|
@@ -90,11 +90,11 @@ ms.locfileid: "62178939"
 |[ENDM](../../assembler/masm/endm.md)|[EXITM](../../assembler/masm/exitm.md)|[GOTO](../../assembler/masm/goto-masm.md)|
 |[LOCAL](../../assembler/masm/local-masm.md)|[MACRO](../../assembler/masm/macro.md)|[PURGE](../../assembler/masm/purge.md)|
 
-### <a name="miscellaneous"></a>その他
+### <a name="miscellaneous"></a>その他の指定
 
 ||||
 |-|-|-|
-|[エイリアス](../../assembler/masm/alias-masm.md)|[ASSUME](../../assembler/masm/assume.md)|[コメント](../../assembler/masm/comment-masm.md)|
+|[ALIAS](../../assembler/masm/alias-masm.md)|[ASSUME](../../assembler/masm/assume.md)|[COMMENT](../../assembler/masm/comment-masm.md)|
 |[ECHO](../../assembler/masm/echo.md)|[END](../../assembler/masm/end-masm.md)|[.FPO](../../assembler/masm/dot-fpo.md)|
 |[INCLUDE](../../assembler/masm/include-masm.md)|[INCLUDELIB](../../assembler/masm/includelib-masm.md)|[MMWORD](../../assembler/masm/mmword.md)|
 |[OPTION](../../assembler/masm/option-masm.md)|[POPCONTEXT](../../assembler/masm/popcontext.md)|[PUSHCONTEXT](../../assembler/masm/pushcontext.md)|
@@ -117,14 +117,14 @@ ms.locfileid: "62178939"
 |[.586P](../../assembler/masm/dot-586p.md)|[.686](../../assembler/masm/dot-686.md)|[.686P](../../assembler/masm/dot-686p.md)|
 |[.K3D](../../assembler/masm/dot-k3d.md)|[.MMX](../../assembler/masm/dot-mmx.md)|[.XMM](../../assembler/masm/dot-xmm.md)|
 
-### <a name="repeat-blocks"></a>ブロックを繰り返します
+### <a name="repeat-blocks"></a>Repeat Blocks
 
 ||||
 |-|-|-|
-|[ENDM](../../assembler/masm/endm.md)|[の](../../assembler/masm/for-masm.md)|[FORC](../../assembler/masm/forc.md)|
+|[ENDM](../../assembler/masm/endm.md)|[FOR](../../assembler/masm/for-masm.md)|[FORC](../../assembler/masm/forc.md)|
 |[GOTO](../../assembler/masm/goto-masm.md)|[REPEAT](../../assembler/masm/repeat.md)|[WHILE](../../assembler/masm/while-masm.md)|
 
-### <a name="scope"></a>スコープ
+### <a name="scope"></a>[スコープ]
 
 ||||
 |-|-|-|
@@ -139,7 +139,7 @@ ms.locfileid: "62178939"
 |[END](../../assembler/masm/end-masm.md)|[ENDS](../../assembler/masm/ends-masm.md)|[GROUP](../../assembler/masm/group.md)|
 |[SEGMENT](../../assembler/masm/segment.md)|[.SEQ](../../assembler/masm/dot-seq.md)||
 
-### <a name="simplified-segment"></a>簡略化されたセグメント
+### <a name="simplified-segment"></a>Simplified Segment
 
 ||||
 |-|-|-|
@@ -148,20 +148,20 @@ ms.locfileid: "62178939"
 |[.FARDATA](../../assembler/masm/dot-fardata.md)|[.FARDATA?](../../assembler/masm/dot-fardata-q.md)|[.MODEL](../../assembler/masm/dot-model.md)|
 |[.STACK](../../assembler/masm/dot-stack.md)|[.STARTUP](../../assembler/masm/dot-startup.md)||
 
-### <a name="string"></a>String
+### <a name="string"></a>文字列型
 
 |||
 |-|-|
 |[CATSTR](../../assembler/masm/catstr.md)|[INSTR](../../assembler/masm/instr.md)|
 |[SIZESTR](../../assembler/masm/sizestr.md)|[SUBSTR](../../assembler/masm/substr.md)|
 
-### <a name="structure-and-record"></a>構造体とレコード
+### <a name="structure-and-record"></a>Structure and Record
 
 ||||
 |-|-|-|
-|[ENDS](../../assembler/masm/ends-masm.md)|[RECORD](../../assembler/masm/record-masm.md)|[構造体](../../assembler/masm/struct-masm.md)|
+|[ENDS](../../assembler/masm/ends-masm.md)|[RECORD](../../assembler/masm/record-masm.md)|[STRUCT](../../assembler/masm/struct-masm.md)|
 |[TYPEDEF](../../assembler/masm/typedef-masm.md)|[UNION](../../assembler/masm/union.md)||
 
 ## <a name="see-also"></a>関連項目
 
-[Microsoft Macro Assembler リファレンス](../../assembler/masm/microsoft-macro-assembler-reference.md)<br/>
+[Microsoft Macro Assembler reference](../../assembler/masm/microsoft-macro-assembler-reference.md)

@@ -6,62 +6,62 @@ f1_keywords:
 helpviewer_keywords:
 - SEGMENT directive
 ms.assetid: e6f68367-6714-4f06-a79c-edfa88014430
-ms.openlocfilehash: f37be47b92a71e20821cd1e40f8cf1350dfedaff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b7344d9cb685e0212748d7835e19f398f14979e7
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210376"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74393724"
 ---
 # <a name="segment"></a>SEGMENT
 
-定義と呼ばれるプログラム セグメント*名前*セグメント属性を持つ
+Defines a program segment called *name* having segment attributes
 
 ## <a name="syntax"></a>構文
 
-> *name* SEGMENT [[READONLY]] [[*align*]] [[*combine*]] [[*use*]] [[*characteristics*]] ALIAS(*string*) [['*class*']]<br/>
-> *ステートメント*<br/>
-> *名前*終了
+> *name* **SEGMENT** ⟦**READONLY**⟧ ⟦*align*⟧ ⟦*combine*⟧ ⟦*use*⟧ ⟦*characteristics*⟧ **ALIAS(** _string_ **)** ⟦ __'__ *class* __'__ ⟧\
+> *statements*\
+> *name* **ENDS**
 
 #### <a name="parameters"></a>パラメーター
 
 *align*<br/>
-セグメントの開始アドレスを選択できるメモリ アドレスの範囲。 配置の種類は、次のいずれかにできます。
+The range of memory addresses from which a starting address for the segment can be selected. The alignment type can be any one of the following:
 
-|配置の種類|開始アドレス|
+|Align Type|Starting Address|
 |----------------|----------------------|
-|**BYTE**|[次へ] の使用可能なバイトのアドレス。|
-|**WORD**|次に利用可能な word アドレス (2 バイト ワードあたり)。|
-|**DWORD**|次にダブル ワードを使用可能なアドレス (ダブル ワードあたり 4 バイト)。|
-|**PARA**|次の段落が使用可能なアドレス (1 つの段落は 16 バイト)。|
-|**PAGE**|次に利用できるページ アドレス (1 ページあたりの 256 バイト)。|
-|**ALIGN**(*n*)|[次へ] 使用可能な*n*番目のバイトのアドレス。 詳細については「解説」を参照してください。|
+|**BYTE**|Next available byte address.|
+|**WORD**|Next available word address (2 bytes per word).|
+|**DWORD**|Next available double word address (4 bytes per double word).|
+|**PARA**|Next available paragraph address (16 bytes per paragraph).|
+|**PAGE**|Next available page address (256 bytes per page).|
+|**ALIGN**(*n*)|Next available *n*th byte address. See Remarks section for more information.|
 
-このパラメーターが指定されていない場合**PARA**既定で使用されます。
+If this parameter is not specified, **PARA** is used by default.
 
-*combine*<br/>
-**パブリック**、**スタック**、**共通**、**メモリ**、**で**<em>アドレス</em>、 **プライベート**
+*combine*\
+**PUBLIC**, **STACK**, **COMMON**, **MEMORY**, **AT**<em>address</em>, **PRIVATE**
 
-*use*<br/>
-**USE16**、 **USE32**、**フラット**
+*use*\
+**USE16**, **USE32**, **FLAT**
 
-*特性*<br/>
-**情報**、**読み取り**、**書き込み**、 **EXECUTE**、 **SHARED**、 **NOPAGE**、 **NOCACHE**、および**破棄**
+*characteristics*\
+**INFO**, **READ**, **WRITE**, **EXECUTE**, **SHARED**, **NOPAGE**, **NOCACHE**, and **DISCARD**
 
-これら COFF ののみがサポートし、類似した名前の COFF セクション特性に対応しています (たとえば、 **SHARED** IMAGE_SCN_MEM_SHARED に対応しています)。 読み取りは、IMAGE_SCN_MEM_READ フラグを設定します。 古い形式の読み取り専用フラグの原因となった IMG_SCN_MEM_WRITE フラグをクリアするセクション。 存在する場合*特性*既定の特性は使用されず、プログラマが指定したフラグのみが有効に設定されます。
+These are supported for COFF only and correspond to the COFF section characteristics of similar name (for example, **SHARED** corresponds to IMAGE_SCN_MEM_SHARED). READ sets the IMAGE_SCN_MEM_READ flag. The obsolete READONLY flag caused the section to clear the IMG_SCN_MEM_WRITE flag. If any *characteristics* are set, the default characteristics are not used and only the programmer-specified flags are in effect.
 
-`ALIAS(` *string* `)`<br/>
-この文字列は、生成された COFF オブジェクト内のセクション名として使用されます。  異なる MASM セグメント名では、同じ外部名を複数のセクションを作成します。
+_string_\
+This string is used as the section name in the emitted COFF object.  Creates multiple sections with the same external name, with distinct MASM segment names.
 
-サポートされていません **/omf**します。
+Not supported with **/omf**.
 
-*class*<br/>
-セグメントを結合して、アセンブルされたファイルで順序付けする方法を指定します。 通常、この値は、 `'DATA'`、 `'CODE'`、`'CONST'`と `'STACK'`
+*class*\
+Designates how segments should be combined and ordered in the assembled file. Typical values are, `'DATA'`, `'CODE'`, `'CONST'` and `'STACK'`
 
 ## <a name="remarks"></a>Remarks
 
-`ALIGN(n)`、 *N*は 1 から 8192 の 2 の累乗があります。 でサポートされていません **/omf**します。
+For `ALIGN(n)`, *n* may be any power of 2 from 1 to 8192; not supported with **/omf**.
 
 ## <a name="see-also"></a>関連項目
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
+[Directives reference](directives-reference.md)

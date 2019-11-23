@@ -1,92 +1,92 @@
 ---
-title: MASM 演算子リファレンス
+title: MASM Operators reference
 ms.date: 08/30/2018
 helpviewer_keywords:
 - MASM (Microsoft Macro Assembler), operators reference
 - operators [MASM]
 ms.assetid: c069cab7-d6b0-4f82-a6ce-0ca3fc7e6428
-ms.openlocfilehash: cb97c5dcb640b8d8592d842afd7dbb8cf9d0852c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5295307ad668b76e5ff39882ce2613f2042f914a
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210815"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74395208"
 ---
-# <a name="masm-operators-reference"></a>MASM 演算子リファレンス
+# <a name="masm-operators-reference"></a>MASM Operators reference
 
 ## <a name="arithmetic"></a>算術
 
 ||||
 |-|-|-|
-|[* (乗算)](operator-multiply.md)|[+ (加算)](operator-add.md)|[-(減算または否定)](operator-subtract-2.md)|
-|[.(フィールド)](operator-dot.md)|[/ (divide)](operator-subtract-1.md)|[&#91;&#93;(インデックス)](operator-brackets.md)|
-|[MOD (剰余)](operator-mod.md)|||
+|[* (multiply)](operator-multiply.md)|[+ (add)](operator-add.md)|[- (subtract or negate)](operator-subtract-2.md)|
+|[. (field)](operator-dot.md)|[/ (divide)](operator-subtract-1.md)|[&#91;&#93; (index)](operator-brackets.md)|
+|[MOD (remainder)](operator-mod.md)|||
 
 ## <a name="control-flow"></a>制御フロー
 
 ||||
 |-|-|-|
-|[\! (ランタイム論理 not)](operator-logical-not-masm-run-time.md)|[\!= (等しくないランタイム)](operator-not-equal-masm.md)|[&#124;&#124;(論理ランタイムまたは)](operator-logical-or.md)|
-|[& & (論理ランタイムと)](operator-logical-and-masm-run-time.md)|[< (ランタイム未満)](operator-less-than-masm-run-time.md)|[\<= (以下のランタイム)](operator-less-or-equal-masm-run-time.md)|
-|[(ランタイムと等しい) = =](operator-equal-masm-run-time.md)|[> (より大きいランタイム)](operator-greater-than-masm-run-time.md)|[> = (ランタイム大きいまたは等しい)](operator-greater-or-equal-masm-run-time.md)|
-|[& (ビットごとのランタイムと)](operator-bitwise-and.md)|||
-|[CARRY?(ランタイム実行のテスト)](operator-carry-q.md)|[OVERFLOW?(ランタイム オーバーフロー テスト)](operator-overflow-q.md)|[パリティでしょうか。(ランタイム パリティ テスト)](operator-parity-q.md)|
-|[サインインしますか。(符号検定のランタイム)](operator-sign-q.md)|[0 か。(ランタイム 0 テスト)](operator-zero-q.md)||
+|[\! (runtime logical not)](operator-logical-not-masm-run-time.md)|[\!= (runtime not equal)](operator-not-equal-masm.md)|[&#124;&#124; (runtime logical or)](operator-logical-or.md)|
+|[&& (runtime logical and)](operator-logical-and-masm-run-time.md)|[< (runtime less than)](operator-less-than-masm-run-time.md)|[\<= (runtime less or equal)](operator-less-or-equal-masm-run-time.md)|
+|[== (runtime equal)](operator-equal-masm-run-time.md)|[> (runtime greater than)](operator-greater-than-masm-run-time.md)|[>= (runtime greater or equal)](operator-greater-or-equal-masm-run-time.md)|
+|[& (runtime bitwise and)](operator-bitwise-and.md)|||
+|[CARRY? (runtime carry test)](operator-carry-q.md)|[OVERFLOW? (runtime overflow test)](operator-overflow-q.md)|[PARITY? (runtime parity test)](operator-parity-q.md)|
+|[SIGN? (runtime sign test)](operator-sign-q.md)|[ZERO? (runtime zero test)](operator-zero-q.md)||
 
-## <a name="logical-and-shift"></a>論理と shift キー
+## <a name="logical-and-shift"></a>Logical and Shift
 
 ||||
 |-|-|-|
-|[(ビットごとと)](operator-and.md)|[しない (ビット演算子 not)](operator-not.md)|[OR (ビットごとまたは)](operator-or.md)|
-|[SHL (shift ビット左)](operator-shl.md)|[SHR (右シフト ビット)](operator-shr.md)|[XOR (排他的論理和または)](operator-xor.md)|
+|[AND (bitwise and)](operator-and.md)|[NOT (bitwise not)](operator-not.md)|[OR (bitwise or)](operator-or.md)|
+|[SHL (shift bits left)](operator-shl.md)|[SHR (shift bits right)](operator-shr.md)|[XOR (bitwise exclusive or)](operator-xor.md)|
 
 ## <a name="macro"></a>マクロ
 
 ||||
 |-|-|-|
-|[\! (文字リテラル)](operator-logical-not-masm.md)|[% (テキストとして扱う)](operator-percent.md)||
-|[;;(コメントとして扱う)](operator-semicolons.md)|[&lt; &gt; (1 つのリテラルとして扱う)](operator-literal.md)|[& & (パラメーターの値を置き換えてください)](operator-logical-and-masm.md)|
+|[\! (character literal)](operator-logical-not-masm.md)|[% (treat as text)](operator-percent.md)||
+|[;; (treat as comment)](operator-semicolons.md)|[&lt; &gt; (treat as one literal)](operator-literal.md)|[& & (substitute parameter value)](operator-logical-and-masm.md)|
 
-## <a name="miscellaneous"></a>その他
+## <a name="miscellaneous"></a>その他の指定
 
 ||||
 |-|-|-|
-|['' (文字列として扱う)](operator-single-quote.md)|[""(文字列として扱う)](operator-double-quote.md)||
-|: (ローカルのラベルの定義)|: (セグメントとオフセットを登録する)|: (ラベルのグローバル定義)|
-|[;(コメントとして扱う)](operator-semicolon.md)|[DUP (繰り返し宣言)](operator-dup.md)||
+|[' ' (treat as string)](operator-single-quote.md)|[" " (treat as string)](operator-double-quote.md)||
+|: (local label definition)|:: (register segment and offset)|:: (global label definition)|
+|[; (treat as comment)](operator-semicolon.md)|[DUP (repeat declaration)](operator-dup.md)||
 
 ## <a name="record"></a>レコード
 
 |||
 |-|-|
-|[マスク (レコードまたはフィールドのビットマスクを取得する)](operator-mask.md)|[幅 (レコードまたはフィールドの幅を取得する)](operator-width.md)|
+|[MASK (get record or field bitmask)](operator-mask.md)|[WIDTH (get record or field width)](operator-width.md)|
 
 ## <a name="relational"></a>関係
 
 ||||
 |-|-|-|
-|[EQ (等しい)](operator-eq.md)|[GE (以上)](operator-ge.md)|[GT (より大きい)](operator-gt.md)|
-|[LE (以下)](operator-le.md)|[LT (より小さい)](operator-lt.md)|[NE (等しくない)](operator-ne.md)|
+|[EQ (equal)](operator-eq.md)|[GE (greater or equal)](operator-ge.md)|[GT (greater than)](operator-gt.md)|
+|[LE (less or equal)](operator-le.md)|[LT (less than)](operator-lt.md)|[NE (not equal)](operator-ne.md)|
 
 ## <a name="segment"></a>Segment
 
 |||
 |-|-|
-|[: (上書きをセグメント化)](operator-colon.md)|: (セグメントとオフセットを登録する)|
-|[IMAGEREL (イメージの相対オフセット)](operator-imagerel.md)|[LROFFSET (ローダーは、オフセットを解決)](operator-lroffset.md)|
-|[オフセット (セグメントの相対オフセット)](operator-offset.md)|[SECTIONREL (セクションの相対オフセット)](operator-sectionrel.md)|
-|[SEG (get セグメント)](operator-seg.md)||
+|[: (segment override)](operator-colon.md)|:: (register segment and offset)|
+|[IMAGEREL (image relative offset)](operator-imagerel.md)|[LROFFSET (loader resolved offset)](operator-lroffset.md)|
+|[OFFSET (segment relative offset)](operator-offset.md)|[SECTIONREL (section relative offset)](operator-sectionrel.md)|
+|[SEG (get segment)](operator-seg.md)||
 
-## <a name="type"></a>型
+## <a name="type"></a>[種類]
 
 ||||
 |-|-|-|
-|[高 (高 8 ビットの下位 16 ビット)](operator-high.md)|[HIGH32 (64 ビットの高い 32 ビット)](operator-high32.md)|[HIGHWORD (最下位の 32 ビットの上位 16 のビット)](operator-highword.md)|
-|[長さ (配列内の要素の数)](operator-length.md)|[LENGTHOF (配列内の要素の数)](operator-lengthof.md)|[低 (下位 8 ビット)](operator-low.md)|
-|[LOW32 (32 ビットを低)](operator-low32.md)|[LOWWORD (下位 16 ビット)](operator-lowword.md)|[OPATTR (引数の型情報の取得)](operator-opattr.md)|
-|[PTR (ポインターをまたは型として)](operator-ptr.md)|[SHORT (短いラベルの種類)](operator-short.md)|[サイズ (型または変数のサイズ)](operator-size.md)|
-|[SIZEOF (型または変数のサイズ)](operator-sizeof.md)|[この (現在の場所)](operator-this.md)|[型 (get 式の型)](operator-type.md)|
-|[.型 (引数の型情報の取得)](operator-dot-type.md)|||
+|[HIGH (high 8 bits of lowest 16 bits)](operator-high.md)|[HIGH32 (high 32 bits of 64 bits)](operator-high32.md)|[HIGHWORD (high 16 bits of lowest 32 bits)](operator-highword.md)|
+|[LENGTH (number of elements in array)](operator-length.md)|[LENGTHOF (number of elements in array)](operator-lengthof.md)|[LOW (low 8 bits)](operator-low.md)|
+|[LOW32 (low 32 bits)](operator-low32.md)|[LOWWORD (low 16 bits)](operator-lowword.md)|[OPATTR (get argument type info)](operator-opattr.md)|
+|[PTR (pointer to or as type)](operator-ptr.md)|[SHORT (mark short label type)](operator-short.md)|[SIZE (size of type or variable)](operator-size.md)|
+|[SIZEOF (size of type or variable)](operator-sizeof.md)|[THIS (current location)](operator-this.md)|[TYPE (get expression type)](operator-type.md)|
+|[.TYPE (get argument type info)](operator-dot-type.md)|||
 
 ## <a name="see-also"></a>関連項目
 
