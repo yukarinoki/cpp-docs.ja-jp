@@ -48,7 +48,7 @@ Intel Advanced Vector Extensions 512 命令を使用できるようにします�
 
 各 **/arch**オプションでは、そのオプションに関連付けられている他の非ベクター命令を使用することもできます。 例として、 **/arch: AVX2**を指定した場合の特定の bmi 命令の使用があります。
 
-@No__t-0 プリプロセッサシンボルは、 **/arch: AVX**、 **/arch: AVX2** 、または **/arch: AVX512**コンパイラオプションが指定されている場合に定義されます。 @No__t-0 プリプロセッサシンボルは、 **/arch: AVX2**または **/arch: AVX512**コンパイラオプションが指定されている場合に定義されます。 @No__t-0、`__AVX512CD__`、`__AVX512BW__`、`__AVX512DQ__`、および @no__t プロセッサのシンボルは、 **/arch: AVX512**コンパイラオプションが指定されている場合に定義されます。 詳細については、「 [Predefined Macros](../../preprocessor/predefined-macros.md)」を参照してください。 **/Arch: AVX2**オプションは Visual Studio 2013 Update 2、version 12.0.34567.1 で導入されました。 **/Arch: AVX512**のサポートは visual studio 2017 で追加され、visual studio 2019 で拡張されました。
+`__AVX__` プリプロセッサシンボルは、 **/arch: AVX**、 **/arch: AVX2** 、または **/arch: AVX512**コンパイラオプションが指定されている場合に定義されます。 `__AVX2__` プリプロセッサシンボルは、 **/arch: AVX2**または **/arch: AVX512**コンパイラオプションが指定されている場合に定義されます。 `__AVX512F__`、`__AVX512CD__`、`__AVX512BW__`、`__AVX512DQ__` および `__AVX512VL__` プリプロセッサシンボルは、 **/arch: AVX512**コンパイラオプションが指定されている場合に定義されます。 詳細については、「 [Predefined Macros](../../preprocessor/predefined-macros.md)」を参照してください。 **/Arch: AVX2**オプションは Visual Studio 2013 Update 2、version 12.0.34567.1 で導入されました。 **/Arch: AVX512**のサポートは visual studio 2017 で追加され、visual studio 2019 で拡張されました。
 
 ### <a name="to-set-the-archavx-archavx2-or-archavx512-compiler-option-in-visual-studio"></a>Visual Studio で/arch: AVX、/arch: AVX2、または/arch: AVX512 コンパイラオプションを設定するには
 
@@ -62,9 +62,9 @@ Intel Advanced Vector Extensions 512 命令を使用できるようにします�
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには
 
-- 以下を参照してください。<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.EnableEnhancedInstructionSet%2A>
+- 「<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.EnableEnhancedInstructionSet%2A>」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [/arch (最小限の CPU アーキテクチャ)](arch-minimum-cpu-architecture.md)<br/>
 [MSVC コンパイラ オプション](compiler-options.md)<br/>

@@ -16,34 +16,34 @@ ms.locfileid: "74246629"
 ---
 # <a name="const-and-volatile-pointers"></a>const ポインターと volatile ポインター
 
-The [const](const-cpp.md) and [volatile](volatile-cpp.md) keywords change how pointers are treated. The **const** keyword specifies that the pointer cannot be modified after initialization; the pointer is protected from modification thereafter.
+[Const](const-cpp.md)および[volatile](volatile-cpp.md)キーワードは、ポインターの処理方法を変更します。 **Const**キーワードは、初期化後にポインターを変更できないことを指定します。ポインターは、それ以降は変更されないように保護されています。
 
-The **volatile** keyword specifies that the value associated with the name that follows can be modified by actions other than those in the user application. Therefore, the **volatile** keyword is useful for declaring objects in shared memory that can be accessed by multiple processes or global data areas used for communication with interrupt service routines.
+**volatile**キーワードは、ユーザー アプリケーション以外の操作によってに続く名前に関連付けられている値を変更できることを指定します。 そのため、**volatile**キーワードは複数のプロセスや割り込みサービス ルーチンとの通信に使用するグローバル データ領域からアクセスできる共有メモリでオブジェクトを宣言するのに便利です。
 
-When a name is declared as **volatile**, the compiler reloads the value from memory each time it is accessed by the program. これによって、可能な最適化が大幅に減少します。 ただし、オブジェクトの状態が予期せず変わる場合、これが予測可能なプログラムの実行を保証する唯一の方法になります。
+名前として宣言されている場合**volatile**コンパイラがメモリから値をプログラムによりアクセスされるたびに再読み込みします。 これによって、可能な最適化が大幅に減少します。 ただし、オブジェクトの状態が予期せず変わる場合、これが予測可能なプログラムの実行を保証する唯一の方法になります。
 
-To declare the object pointed to by the pointer as **const** or **volatile**, use a declaration of the form:
+としてポインターが指すオブジェクトを宣言する**const**または**volatile**形式の宣言を使用します。
 
 ```cpp
 const char *cpch;
 volatile char *vpch;
 ```
 
-To declare the value of the pointer — that is, the actual address stored in the pointer — as **const** or **volatile**, use a declaration of the form:
+ポインターの値を宣言する — ポインターに格納されている実際のアドレスは、-として**const**または**volatile**形式の宣言を使用します。
 
 ```cpp
 char * const pchc;
 char * volatile pchv;
 ```
 
-The C++ language prevents assignments that would allow modification of an object or pointer declared as **const**. このような代入を実行すると、オブジェクトまたはポインターを宣言したときの情報が削除されるため、元の宣言の意図に反することになります。 次に宣言の例を示します。
+このC++言語では、 **const**として宣言されたオブジェクトまたはポインターの変更を許可する割り当てが禁止されています。 このような代入を実行すると、オブジェクトまたはポインターを宣言したときの情報が削除されるため、元の宣言の意図に反することになります。 次に宣言の例を示します。
 
 ```cpp
 const char cch = 'A';
 char ch = 'B';
 ```
 
-Given the preceding declarations of two objects (`cch`, of type **const char**, and `ch`, of type **char)** , the following declaration/initializations are valid:
+上記の2つのオブジェクト (`cch`、 **const char**型の、`ch`型の宣言 **)** に対して、次の宣言/初期化が有効になります。
 
 ```cpp
 const char *pch1 = &cch;
@@ -61,7 +61,7 @@ char *pch2 = &cch;   // Error
 char *const pch3 = &cch;   // Error
 ```
 
-`pch2` の宣言は、定数オブジェクトを変更する可能性があるポインターを宣言するため、許可されません。 The declaration of `pch3` specifies that the pointer is constant, not the object; the declaration is disallowed for the same reason the `pch2` declaration is disallowed.
+`pch2` の宣言は、定数オブジェクトを変更する可能性があるポインターを宣言するため、許可されません。 `pch3` の宣言は、ポインターがオブジェクトではなく定数であることを指定します。宣言は、`pch2` 宣言が許可されていないのと同じ理由で許可されていません。
 
 次の 8 つの代入は、ポインターを介した代入と、前に宣言したポインター値の変更を示しています。ここでは、初期化が `pch1` から `pch8` まで正しかったと仮定します。
 
@@ -76,20 +76,20 @@ pch3 = &ch;   // Error: pointer declared const
 pch4 = &ch;   // Error: pointer declared const
 ```
 
-Pointers declared as **volatile**, or as a mixture of **const** and **volatile**, obey the same rules.
+として宣言されたポインター**volatile**、またはの組み合わせとして**const**と**volatile**、同じ規則に従います。
 
-Pointers to **const** objects are often used in function declarations as follows:
+**Const**オブジェクトへのポインターは、次のように関数宣言でよく使用されます。
 
 ```cpp
 errno_t strcpy_s( char *strDestination, size_t numberOfElements, const char *strSource );
 ```
 
-The preceding statement declares a function, [strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md), where two of the three arguments are of type pointer to **char**. Because the arguments are passed by reference and not by value, the function would be free to modify both `strDestination` and `strSource` if `strSource` were not declared as **const**. The declaration of `strSource` as **const** assures the caller that `strSource` cannot be changed by the called function.
+前のステートメントでは、 [strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md)関数を宣言しています。ここで、3つの引数のうちの2つは**char**へのポインター型です。 引数は値ではなく参照によって渡されるので、`strSource` が**const**として宣言されていない場合、関数は `strDestination` と `strSource` の両方を自由に変更できます。 `strSource` を**const**として宣言すると、呼び出し元は、呼び出された関数によって変更できない `strSource` を保証します。
 
 > [!NOTE]
-> Because there is a standard conversion from *typename* <strong>\*</strong> to **const** *typename* <strong>\*</strong>, it is legal to pass an argument of type `char *` to [strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md). However, the reverse is not true; no implicit conversion exists to remove the **const** attribute from an object or pointer.
+> *Typename* <strong>\*</strong>から**const** *typename* <strong>\*</strong>への標準変換があるため、型 `char *` の引数を[strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md)に渡すことは有効です。 ただし、この逆は当てはまりません。オブジェクトまたはポインターから**const**属性を削除するための暗黙的な変換は存在しません。
 
-A **const** pointer of a given type can be assigned to a pointer of the same type. However, a pointer that is not **const** cannot be assigned to a **const** pointer. 次のコードは、正しい代入と正しくない代入を示します。
+指定された型の**const**ポインターは、同じ型のポインターに割り当てることができます。 ただし、 **const**でないポインターを**const**ポインターに割り当てることはできません。 次のコードは、正しい代入と正しくない代入を示します。
 
 ```cpp
 // const_pointer.cpp
@@ -124,7 +124,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Pointers](pointers-cpp.md)
-[Raw pointers](raw-pointers.md)
+[ポインター](pointers-cpp.md)
+[生のポインター](raw-pointers.md)
