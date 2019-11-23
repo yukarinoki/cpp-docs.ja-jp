@@ -6,34 +6,34 @@ f1_keywords:
 helpviewer_keywords:
 - COMM directive
 ms.assetid: a23548c4-ad04-41fa-91da-945f228de742
-ms.openlocfilehash: 342c8acd95fd45de1a21dc298325de9a7b40b717
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 063689087b6114f9a2d544ef0b459bf594da3cc4
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179108"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398825"
 ---
 # <a name="comm"></a>COMM
 
-指定された属性を持つ土台の変数を作成します。*定義*します。
+Creates a communal variable with the attributes specified in *definition*.
 
 ## <a name="syntax"></a>構文
 
-> **COMM** *definition* [, *definition*] ...
+> **COMM** *definition* ⟦ __,__ *definition* ...⟧
 
 ## <a name="remarks"></a>Remarks
 
-土台の変数は、リンカーによって割り当てられているし、初期化することはできません。 これは、場所やこのような変数の順序に依存できないことを意味します。
+Communal variables are allocated by the linker, and can't be initialized. This means that you can't depend on the location or sequence of such variables.
 
-各*定義*は次の形式があります。
+Each *definition* has the following form:
 
-[*langtype*] [**NEAR** &#124; **FAR**] _label_**:**_type_[**:**_count_]
+⟦*langtype*⟧ ⟦⦃**NEAR** &#124; **FAR**⦄⟧ _label_ **:** _type_⟦ **:** _count_⟧
 
-省略可能な*langtype*に続く名前の名前付け規則を設定します。 指定された任意の言語よりも優先、**します。モデル**ディレクティブ。 省略可能な**NEAR**または**FAR**現在のメモリ モデルをオーバーライドします。 *ラベル*変数の名前を指定します。 *型*任意の型指定子を指定できます ([バイト](../../assembler/masm/byte-masm.md)、 [WORD](../../assembler/masm/word.md)など) またはバイト数を指定する整数。 省略可能な*カウント*宣言されたデータ オブジェクトの要素の数を指定します。 既定値は 1 つです。
+The optional *langtype* sets the naming conventions for the name that follows. It overrides any language specified by the **.MODEL** directive. The optional **NEAR** or **FAR** override the current memory model. The *label* is the name of the variable. The *type* can be any type specifier ([BYTE](../../assembler/masm/byte-masm.md), [WORD](../../assembler/masm/word.md), and so on) or an integer specifying the number of bytes. The optional *count* specifies the number of elements in the declared data object; the default is one.
 
 ## <a name="example"></a>例
 
-この例では、512 バイトの要素の配列を作成します。
+This example creates an array of 512 BYTE elements:
 
 ```asm
 COMM FAR ByteArray:BYTE:512
@@ -41,4 +41,4 @@ COMM FAR ByteArray:BYTE:512
 
 ## <a name="see-also"></a>関連項目
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
+[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)

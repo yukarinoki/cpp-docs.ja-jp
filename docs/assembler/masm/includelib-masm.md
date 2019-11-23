@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - INCLUDELIB directive
 ms.assetid: 5455d004-8202-4b57-93f3-9aa66f133a2d
-ms.openlocfilehash: 12b629029c6ef250c288021232c23f82dcdd00a5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ef8a6e91ca8c5ca77b64b4668bf08087299701e0
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62202831"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397326"
 ---
 # <a name="includelib-masm"></a>INCLUDELIB (MASM)
 
-リンク先となる現在のモジュールをリンカーに通知*libraryname*します。
+Informs the linker that the current module should be linked with *libraryname*.
 
 ## <a name="syntax"></a>構文
 
-> INCLUDELIB libraryname
+> **INCLUDELIB** *libraryname*
 
 ## <a name="remarks"></a>Remarks
 
-*Libraryname*セミコロンが大きい、円記号が含まれている場合、山かっこで囲む必要があります-記号、小さいよりも、シンボル、単一引用符または二重引用符よりも。
+The *libraryname* must be enclosed in angle brackets if it includes a backslash, semicolon, greater-than symbol, less-than symbol, single quotation mark, or double quotation mark.
 
 ## <a name="see-also"></a>関連項目
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
+[Directives reference](directives-reference.md)

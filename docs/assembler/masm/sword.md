@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - SWORD directive
 ms.assetid: 99228a2a-4ed1-4343-a317-e59302620a55
-ms.openlocfilehash: 6209cab0de471a673d97daaeb9de42f9a1f6e2df
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d0a8c28ea5666ed5d4bd606d08ddfe5455c706a3
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210041"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74393589"
 ---
 # <a name="sword"></a>SWORD
 
-割り当て、必要に応じて、各記憶域の符号付きの word (2 バイト) を初期化します`initializer`します。 型指定子としても使用できる型が有効な任意の場所。
+Allocates and optionally initializes a signed word (2 bytes) of storage for each *initializer*. Can also be used as a type specifier anywhere a type is legal.
 
 ## <a name="syntax"></a>構文
 
-> 名前の剣初期化子 [] の初期化子].
+> *name* **SWORD** *initializer* ⟦ __,__ *initializer* ...⟧
 
 ## <a name="see-also"></a>関連項目
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
-[WORD](../../assembler/masm/word.md)<br/>
+[Directives reference](../../assembler/masm/directives-reference.md)\
+[WORD](../../assembler/masm/word.md)
