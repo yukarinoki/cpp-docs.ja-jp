@@ -1,5 +1,5 @@
 ---
-title: Visual StudioC++での C/プロジェクトとビルドシステム
+title: Visual Studio での C/C++ プロジェクトとビルドシステム
 ms.description: Use Visual Studio to compile and build C++ projects for Windows, ARM or Linux based on any project system.
 ms.date: 07/17/2019
 helpviewer_keywords:
@@ -17,7 +17,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 09/25/2019
 ms.locfileid: "71274739"
 ---
-# <a name="cc-projects-and-build-systems-in-visual-studio"></a>Visual StudioC++での C/プロジェクトとビルドシステム
+# <a name="cc-projects-and-build-systems-in-visual-studio"></a>Visual Studio での C/C++ プロジェクトとビルドシステム
 
 Visual Studio を使用して、IntelliSense を完全にサポートC++するコードベースを編集、コンパイル、ビルドすることができます。そのコードを visual studio プロジェクトに変換したり、MSVC ツールセットを使用してコンパイルしたりする必要はありません。 たとえば、Windows コンピューター上の Visual Studio でクロスプラットフォームの CMake プロジェクトを編集し、リモートの Linux コンピューターで g + + を使用して Linux 用にコンパイルできます。
 
