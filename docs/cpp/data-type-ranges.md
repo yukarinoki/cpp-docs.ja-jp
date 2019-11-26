@@ -76,15 +76,15 @@ Microsoft C++ 32 ビットおよび 64 ビット コンパイラは、この記�
 |**unsigned __int16**|2|**unsigned short**、**unsigned short int**|0 ～ 65,535|
 |**__int32**|4|**signed**、 **signed int**、 **int**|-2,147,483,648 ～ 2,147,483,647|
 |**unsigned __int32**|4|**unsigned**、**unsigned int**|0 ～ 4,294,967,295|
-|**__int64**|8|**long**、 **long long 型の署名**|-9,223,372,036,854,775,808 から 9,223,372,036,854,775,807|
+|**__int64**|8|**long**、 **signed long long**|-9,223,372,036,854,775,808 から 9,223,372,036,854,775,807|
 |**unsigned __int64**|8|**unsigned long long**|0 ～ 18,446,744,073,709,551,615|
 |**bool**|1|none|**false**または**は true。**|
 |**char**|1|none|既定では、128 ~ 127<br /><br /> [/J](../build/reference/j-default-char-type-is-unsigned.md)を使用してコンパイルするときは 0 〜 255|
 |**signed char**|1|none|-128 ～ 127|
 |**unsigned char**|1|none|0 ～ 255|
-|**short**|2|**short int**、**署名 short int**|-32,768 ～ 32,767|
+|**short**|2|**short int**、**signed short int**|-32,768 ～ 32,767|
 |**unsigned short**|2|**unsigned short int**|0 ～ 65,535|
-|**long**|4|**long int**、 **long int の署名**|-2,147,483,648 ～ 2,147,483,647|
+|**long**|4|**long int**、 **signed long int**|-2,147,483,648 ～ 2,147,483,647|
 |**unsigned long**|4|**unsigned long int**|0 ～ 4,294,967,295|
 |**long long**|8|none (と同等では **_ _int64**)|-9,223,372,036,854,775,808 から 9,223,372,036,854,775,807|
 |**unsigned long long**|8|none (と同等では**unsigned _ _int64**)|0 ～ 18,446,744,073,709,551,615|
