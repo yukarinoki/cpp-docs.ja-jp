@@ -19,7 +19,7 @@ ms.locfileid: "74541881"
 
 Microsoft 拡張機能 (/Ze) では、中かっこ内の文字列を使用して `char` の可変長配列を初期化できます。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 ```c
 // C4207.c

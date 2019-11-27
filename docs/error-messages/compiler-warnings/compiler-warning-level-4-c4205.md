@@ -19,7 +19,7 @@ ms.locfileid: "74541800"
 
 Microsoft 拡張機能 (/Ze) では、**静的**関数を別の関数内で宣言できます。 関数にはグローバルスコープが指定されています。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 ```c
 // C4205.c

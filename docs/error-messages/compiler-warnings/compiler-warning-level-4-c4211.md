@@ -19,7 +19,7 @@ ms.locfileid: "74541843"
 
 既定の Microsoft 拡張機能 (/Ze) では、`extern` 識別子を**static**として再定義できます。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 ```c
 // C4211.c

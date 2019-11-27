@@ -19,7 +19,7 @@ ms.locfileid: "74541645"
 
 旧形式の関数定義には、可変個の引数が含まれています。 これらの定義は、ANSI 互換 ([/za](../../build/reference/za-ze-disable-language-extensions.md)) でエラーを生成します。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 ```c
 // C4202.c

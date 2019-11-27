@@ -19,7 +19,7 @@ ms.locfileid: "74541898"
 
 既定の Microsoft 拡張機能 (/Ze) では、ビットフィールド構造体のメンバーは任意の整数型にすることができます。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 ```c
 // C4214.c

@@ -19,7 +19,7 @@ ms.locfileid: "74541601"
 
 コンパイラは、10 進数を含まない 8 進数を評価し、10 進数を文字と見なします。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 ```cpp
 // C4125a.cpp

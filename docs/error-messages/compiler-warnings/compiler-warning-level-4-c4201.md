@@ -19,7 +19,7 @@ ms.locfileid: "74541213"
 
 [Microsoft extensions (/Ze)] では、宣言子が別の構造体または共用体のメンバーとして指定されていない構造体を指定できます。 これらの構造体は、ANSI 互換 ([/za](../../build/reference/za-ze-disable-language-extensions.md)) でエラーを生成します。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 ```cpp
 // C4201.cpp

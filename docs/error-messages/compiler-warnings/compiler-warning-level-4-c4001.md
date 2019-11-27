@@ -23,7 +23,7 @@ ms.locfileid: "74541625"
 単一行コメントは、C99 以降C++の C では標準で標準です。
 厳密な ANSI 互換 ([/za](../../build/reference/za-ze-disable-language-extensions.md)) では、単一行のコメントを含む C ファイルは、非標準の拡張機能の使用によって C4001 を生成します。 では単一行コメントが標準でC++あるため、1行のコメントを含む C ファイルは、Microsoft 拡張機能 (/ze) を使用してコンパイルするときに C4001 を生成しません。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 警告を無効にするには #pragma 警告を非コメント化します[(disable: 4001)](../../preprocessor/warning.md)。
 

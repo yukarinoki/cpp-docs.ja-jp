@@ -21,7 +21,7 @@ ms.locfileid: "74541259"
 
 これは、ANSI C ([/za](../../build/reference/za-ze-disable-language-extensions.md)) ではエラーであり、Microsoft 拡張機能 (/ze) では警告が発生します。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 ```c
 // C4032.c

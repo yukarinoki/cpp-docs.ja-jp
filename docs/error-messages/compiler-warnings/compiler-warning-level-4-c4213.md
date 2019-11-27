@@ -19,7 +19,7 @@ ms.locfileid: "74541806"
 
 既定の Microsoft 拡張機能 (/Ze) では、代入ステートメントの左側でキャストを使用できます。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 ```c
 // C4213.c
