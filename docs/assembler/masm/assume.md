@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - ASSUME directive
 ms.assetid: cd162070-aee9-4c65-babc-005c6cc73d7c
-ms.openlocfilehash: 4bf8f0c41e9ce3e296cf201efd4fd9be2033cbdb
-ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
+ms.openlocfilehash: 73ef8bcc33087a56747b80f94482fcd6c50e3bf6
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73702464"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74399261"
 ---
 # <a name="assume-32-bit-masm"></a>想定 (32 ビット MASM)
 
@@ -19,15 +19,15 @@ ms.locfileid: "73702464"
 
 ## <a name="syntax"></a>構文
 
-> *Segregister*:*name* [, *segregister*:*name*]]...<br/>
-> *Dataregister*を想定:*type* [[, *dataregister*:*type*]]...<br/>
-> ASSUME *register*: エラー [、*登録*: エラー].<br/>
-> ASSUME [[*register*:]] 何も [、*登録*: 何も]
+> *Segregister* __:__ *name* ⟦ __,__ *segregister* __:__ *name*...⟧\
+> 次のように*dataregister* __:__ *type* ⟦ __,__ *dataregister* __:__ *type*...⟧\
+> *レジスタ* __: error__ ⟦ __、__ *register* __: error__...⟧\
+> **⟦** *Register* __:__ ⟧**NOTHING** ⟦ __、__ *register* __: nothing__...⟧
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-`ASSUME` が有効になると、アセンブラーは、指定されたレジスタの値に対する変更を監視します。 レジスタが使用されている場合、**ERROR**によってエラーが生成されます。 レジスタエラーチェックは何も削除され**NOTHING**。 1つのステートメントでさまざまな種類の仮定を組み合わせることができます。
+が有効になる**と**、アセンブラーは、指定されたレジスタの値に対する変更を監視します。 レジスタが使用されている場合、**エラー**によってエラーが生成されます。 レジスタエラーチェックは何も削除され**ません**。 1つのステートメントでさまざまな種類の仮定を組み合わせることができます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
+[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)

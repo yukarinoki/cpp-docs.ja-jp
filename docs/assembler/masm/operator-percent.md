@@ -8,21 +8,21 @@ helpviewer_keywords:
 - operator %
 - '% operator'
 ms.assetid: 7f07018e-b664-4655-aa93-9854eb271bbb
-ms.openlocfilehash: de759c3ac788c5c9c4037a3665c07f8a07a205f6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 04a887ea0766ec2b1272e618fff2c49889c02732
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176578"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74396513"
 ---
 # <a name="operator-"></a>% 演算子
 
-値を扱う*式*テキストとしてマクロの引数。
+マクロ引数の*式*の値をテキストとして扱います。
 
 ## <a name="syntax"></a>構文
 
-> % *expression*
+> **%** *式*
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[演算子リファレンス](../../assembler/masm/operators-reference.md)<br/>
+[演算子リファレンス](operators-reference.md)

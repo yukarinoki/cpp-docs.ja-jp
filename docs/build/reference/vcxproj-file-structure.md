@@ -47,7 +47,7 @@ ms.locfileid: "74303138"
 
 任意のテキスト エディターまたは XML エディターを使って、.vcxproj ファイルの内容を調べることができます。 Visual Studio のソリューション エクスプローラーでプロジェクトを右クリックし、 **[プロジェクトのアンロード]** 、 **[Foo.vcxproj の編集]** の順に選ぶと表示されます。
 
-最初に注目する点は、最上位の要素が特定の順序で表示されることです。 例:
+最初に注目する点は、最上位の要素が特定の順序で表示されることです。 例 :
 
 - ほとんどのプロパティ グループおよび項目定義グループは、Microsoft.Cpp.Default.props のインポートの後に出現します。
 
@@ -213,7 +213,7 @@ IDE は、すべての ProjectConfiguration 項目で使われている Configur
 
 プロジェクト内の項目 (ソース ファイルなど) が含まれます。 プロジェクト項目 (つまり、規則の定義によってプロジェクト項目として扱われる項目の種類) に対しては、条件はサポートされていません。
 
-メタデータでは、構成ごとに構成の条件が必要です (すべて同じであっても)。 例:
+メタデータでは、構成ごとに構成の条件が必要です (すべて同じであっても)。 例 :
 
 ```xml
 <ItemGroup>
@@ -290,7 +290,7 @@ IDE では、全般プロパティ ページで **UseOfAtl** プロパティを�
 
 独自のプロパティ シートを作成するには、VCTargets フォルダー内の .props ファイルの 1 つをコピーし、目的に応じて変更します。 Visual Studio 2019 Enterprise Edition の場合、VCTargets の既定のパスは `%ProgramFiles%\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\VC\VCTargets` です。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [Visual Studio で C++ コンパイラとビルド プロパティを設定する](../working-with-project-properties.md)<br/>
 [プロパティ ページの XML ファイル](property-page-xml-files.md)

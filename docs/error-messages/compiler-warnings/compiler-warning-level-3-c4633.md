@@ -1,5 +1,5 @@
 ---
-title: Compiler Warning (level 3) C4633
+title: コンパイラの警告 (レベル 3) C4633
 ms.date: 11/04/2016
 f1_keywords:
 - C4633
@@ -13,13 +13,13 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/19/2019
 ms.locfileid: "74189155"
 ---
-# <a name="compiler-warning-level-3-c4633"></a>Compiler Warning (level 3) C4633
+# <a name="compiler-warning-level-3-c4633"></a>コンパイラの警告 (レベル 3) C4633
 
-XML document comment target: error:  reason
+XML ドキュメントコメントの対象: エラー: 理由
 
-A name passed to the [\<param>](../../build/reference/param-visual-cpp.md) tag was not found by the compiler.
+[\<param >](../../build/reference/param-visual-cpp.md)タグに渡された名前が、コンパイラによって見つかりませんでした。
 
-The following sample generates C4633:
+次の例では、C4633 が生成されます。
 
 ```cpp
 // C4633.cpp

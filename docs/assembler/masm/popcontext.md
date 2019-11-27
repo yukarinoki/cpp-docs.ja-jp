@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - POPCONTEXT directive
 ms.assetid: 19f59290-a54d-477d-88d8-97d3f63ed417
-ms.openlocfilehash: b9319a74dc43a202691de132430de85c4d80a79b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b04f863a706fae3378c78dcd33563eaebe573005
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210591"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74395045"
 ---
 # <a name="popcontext"></a>POPCONTEXT
 
-現在の一部またはすべてを復元`context`(によって保存されるか、 [PUSHCONTEXT](../../assembler/masm/pushcontext.md)ディレクティブ)。 `context`できる**と**、 `RADIX`、**を一覧表示する**、 **CPU**、または**すべて**します。
+現在の*コンテキスト*の一部またはすべてを復元します ( [pushcontext](../../assembler/masm/pushcontext.md)ディレクティブによって保存されます)。 *コンテキスト*は、、 **RADIX**、**リスティング**、 **CPU**、または**すべて**を**想定**することができます。
 
 ## <a name="syntax"></a>構文
 
-> POPCONTEXT コンテキスト
+> **Popcontext** *コンテキスト*
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
+[ディレクティブリファレンス](directives-reference.md)

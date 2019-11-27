@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - INCLUDELIB directive
 ms.assetid: 5455d004-8202-4b57-93f3-9aa66f133a2d
-ms.openlocfilehash: 12b629029c6ef250c288021232c23f82dcdd00a5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ef8a6e91ca8c5ca77b64b4668bf08087299701e0
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62202831"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397326"
 ---
 # <a name="includelib-masm"></a>INCLUDELIB (MASM)
 
-リンク先となる現在のモジュールをリンカーに通知*libraryname*します。
+現在のモジュールが*libraryname*とリンクされる必要があることをリンカーに通知します。
 
 ## <a name="syntax"></a>構文
 
-> INCLUDELIB libraryname
+> **インクルード***名 (libraryname* )
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-*Libraryname*セミコロンが大きい、円記号が含まれている場合、山かっこで囲む必要があります-記号、小さいよりも、シンボル、単一引用符または二重引用符よりも。
+*Libraryname*には、円記号、セミコロン、大なり記号、小なり記号、単一引用符、二重引用符が含まれている場合、山かっこで囲む必要があります。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
+[ディレクティブリファレンス](directives-reference.md)

@@ -1,5 +1,5 @@
 ﻿---
-title: Exception specifications (throw, noexcept) (C++)
+title: 例外の指定 (throw、noexcept)C++()
 ms.date: 01/18/2018
 helpviewer_keywords:
 - exceptions [C++], exception specifications
@@ -15,48 +15,48 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74245879"
 ---
-# <a name="exception-specifications-throw-noexcept-c"></a>Exception specifications (throw, noexcept) (C++)
+# <a name="exception-specifications-throw-noexcept-c"></a>例外の指定 (throw、noexcept)C++()
 
-Exception specifications are a C++ language feature that indicate the programmer's intent about the exception types that can be propagated by a function. You can specify that a function may or may not exit by an exception by using an *exception specification*. The compiler can use this information to optimize calls to the function, and to terminate the program if an unexpected exception escapes the function.
+例外指定は、 C++関数によって伝達される例外の種類についてプログラマが意図したものを示す言語機能です。 例外*指定*を使用して、例外によって関数が終了するか、または終了しないかを指定できます。 コンパイラは、この情報を使用して関数の呼び出しを最適化し、予期しない例外によって関数がエスケープされた場合にプログラムを終了することができます。
 
-Prior to C++17 there were two kinds of exception specification. The *noexcept specification* was new in C++11. It specifies whether the set of potential exceptions that can escape the function is empty. The *dynamic exception specification*, or `throw(optional_type_list)` specification, was deprecated in C++11 and removed in C++17, except for `throw()`, which is an alias for `noexcept(true)`. This exception specification was designed to provide summary information about what exceptions can be thrown out of a function, but in practice it was found to be problematic. The one dynamic exception specification that did prove to be somewhat useful was the unconditional `throw()` specification. For example, the function declaration:
+C++ 17 より前では、2種類の例外指定がありました。 *Noexcept 仕様*は c++ 11 で新しく追加されました。 関数をエスケープできる可能性のある例外のセットが空であるかどうかを指定します。 *動的例外指定*(`throw(optional_type_list)` 仕様) は c++ 11 で非推奨とされ、c++ 17 では削除されました。ただし、`noexcept(true)`のエイリアスである `throw()`は除きます。 この例外指定は、関数からスローされる可能性がある例外に関する概要情報を提供するように設計されていますが、実際には、問題があることがわかりました。 ある程度役に立つことが実証された1つの動的例外指定は、無条件の `throw()` 仕様でした。 たとえば、関数宣言は次のようになります。
 
 ```cpp
 void MyFunction(int i) throw();
 ```
-このコードでは、コンパイル時に関数が例外をスローしません。 However, in **/std:c++14** mode this could lead to undefined behavior if the function does throw an exception. Therefore we recommend using the [noexcept](../cpp/noexcept-cpp.md) operator instead of the one above:
+このコードでは、コンパイル時に関数が例外をスローしません。 ただし、 **/std: c++ 14**モードでは、関数が例外をスローした場合に、未定義の動作が発生する可能性があります。 したがって、上記のいずれでもなく、 [noexcept](../cpp/noexcept-cpp.md)演算子を使用することをお勧めします。
 
 ```cpp
 void MyFunction(int i) noexcept;
 ```
-The following table summarizes the Microsoft C++ implementation of exception specifications:
+次の表に、Microsoft C++による例外指定の実装の概要を示します。
 
-|例外の指定|説明|
+|例外の指定|意味|
 |-----------------------------|-------------|
-|`noexcept`<br/>`noexcept(true)`<br/>`throw()`|関数は例外をスローしません。 In [/std:c++14](../build/reference/std-specify-language-standard-version.md) mode (which is the default), `noexcept` and `noexcept(true)` are equivalent. When an exception is thrown from a function that is declared `noexcept` or `noexcept(true)`, [std::terminate](../standard-library/exception-functions.md#terminate) is invoked. When an exception is thrown from a function declared as `throw()` in **/std:c++14** mode, the result is undefined behavior. No specific function is invoked. This is a divergence from the C++14 standard, which required the compiler to invoke [std::unexpected](../standard-library/exception-functions.md#unexpected).  <br/> **Visual Studio 2017 version 15.5 and later**: In **/std:c++17** mode , `noexcept`, `noexcept(true)`, and `throw()` are all equivalent. In **/std:c++17** mode, `throw()` is an alias for `noexcept(true)`. In **/std:c++17** mode, when an exception is thrown from a function declared with any of these specifications, [std::terminate](../standard-library/exception-functions.md#terminate)  is invoked as required by the C++17 standard.|
-|`noexcept(false)`<br/>`throw(...)`<br/>No specification|The function can throw an exception of any type.|
-|`throw(type)`| (**C++14 and earlier**) The function can throw an exception of type `type`. The compiler accepts the syntax, but interprets it as `noexcept(false)`. In **/std:c++17** mode the compiler issues warning C5040.|
+|`noexcept`<br/>`noexcept(true)`<br/>`throw()`|関数は例外をスローしません。 [/Std: c++ 14](../build/reference/std-specify-language-standard-version.md)モード (既定) では、`noexcept` と `noexcept(true)` は同等です。 `noexcept` または `noexcept(true)`として宣言された関数から例外がスローされると、 [std:: terminate](../standard-library/exception-functions.md#terminate)が呼び出されます。 **/Std: c++ 14**モードで `throw()` として宣言された関数から例外がスローされると、結果は未定義の動作になります。 特定の関数は呼び出されません。 これは C++ 14 標準の相違点であり、コンパイラが[std::](../standard-library/exception-functions.md#unexpected)を呼び出す必要がありました。  <br/> **Visual Studio 2017 バージョン15.5 以降**: **/std: c++ 17**モードでは、`noexcept`、`noexcept(true)`、および `throw()` はすべて同等です。 **/Std: c++ 17**モードでは、`throw()` は `noexcept(true)`のエイリアスです。 **/Std: c++ 17**モードでは、これらのいずれかの仕様で宣言された関数から例外がスローされると、c++ 17 標準によって必要に応じて[std:: terminate](../standard-library/exception-functions.md#terminate)が呼び出されます。|
+|`noexcept(false)`<br/>`throw(...)`<br/>指定なし|関数は、任意の型の例外をスローできます。|
+|`throw(type)`| (**C++ 14 以前**)関数は `type`型の例外をスローできます。 コンパイラは構文を受け入れますが、`noexcept(false)`として解釈します。 **/Std: c++ 17**モードでは、コンパイラは警告 C5040 を発行します。|
 
-If exception handling is used in an application, there must be a function in the call stack that handles thrown exceptions before they exit the outer scope of a function marked `noexcept`, `noexcept(true)`, or `throw()`. If any functions called between the one that throws an exception and the one that handles the exception are specified as `noexcept`, `noexcept(true)` (or `throw()` in **/std:c++17** mode), the program is terminated when the noexcept function propagates the exception.
+アプリケーションで例外処理を使用する場合、`noexcept`、`noexcept(true)`、または `throw()`とマークされた関数の外側のスコープを終了する前に、スローされた例外を処理する関数が呼び出し履歴に存在する必要があります。 例外をスローする関数と例外を処理する関数の間に呼び出された関数が `noexcept`、`noexcept(true)` (または **/std: c++ 17**モードで `throw()`) として指定されている場合、noexcept 関数が例外を伝達するとプログラムは終了します。
 
-The exception behavior of a function depends on the following factors:
+関数の例外動作は、次の要因によって異なります。
 
-- Which [language standard compilation mode](../build/reference/std-specify-language-standard-version.md) is set.
+- [標準コンパイルモード](../build/reference/std-specify-language-standard-version.md)が設定されている言語。
 - C または C++ で関数をコンパイルするかどうか。
 
-- Which [/EH](../build/reference/eh-exception-handling-model.md) compiler option you use.
+- 使用する[/EH](../build/reference/eh-exception-handling-model.md)コンパイラオプション。
 
 - 例外の指定を明示的に使用するかどうか。
 
-明示的な例外の指定は C 関数では使用できません。 A C function is assumed not to throw exceptions under **/EHsc**, and may throw structured exceptions under **/EHs**, **/EHa**, or **/EHac**.
+明示的な例外の指定は C 関数では使用できません。 C 関数は、 **/ehsc**で例外をスローしないことを前提としており、 **/ehs**、 **/eha**、または **/EHac**の下で構造化例外をスローすることがあります。
 
-The following table summarizes whether a C++ function may potentially throw under various compiler exception handling options:
+次の表は、関数C++がさまざまなコンパイラ例外処理オプションでスローする可能性があるかどうかをまとめたものです。
 
-|機能|/EHsc|/EHs|/EHa|/EHac|
+|関数|/EHsc|/EHs|/EHa|/EHac|
 |--------------|------------|-----------|-----------|------------|
-|例外を指定していない C++ 関数|[はい]|[はい]|[はい]|[はい]|
-|C++ function with `noexcept`, `noexcept(true)`, or `throw()` exception specification|Ｘ|Ｘ|[はい]|[はい]|
-|C++ function with `noexcept(false)`, `throw(...)`, or `throw(type)` exception specification|[はい]|[はい]|[はい]|[はい]|
+|例外を指定していない C++ 関数|はい|はい|はい|はい|
+|C++`noexcept`、`noexcept(true)`、または `throw()` の例外指定を含む関数|いいえ|いいえ|はい|はい|
+|C++`noexcept(false)`、`throw(...)`、または `throw(type)` の例外指定を含む関数|はい|はい|はい|はい|
 
 ## <a name="example"></a>例
 
@@ -127,7 +127,7 @@ About to throw 1
 in handler
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [try、throw、catch ステートメント (C++)](../cpp/try-throw-and-catch-statements-cpp.md)<br/>
-[Modern C++ best practices for exceptions and error handling](errors-and-exception-handling-modern-cpp.md)
+[例外C++とエラー処理に関する最新のベストプラクティス](errors-and-exception-handling-modern-cpp.md)

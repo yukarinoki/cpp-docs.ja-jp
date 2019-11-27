@@ -1,5 +1,5 @@
 ﻿---
-title: 'How to: Design for exception safety'
+title: '方法: 例外の安全性を設計する'
 ms.custom: how-to
 ms.date: 11/19/2019
 ms.topic: conceptual
@@ -11,19 +11,19 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74246516"
 ---
-# <a name="how-to-design-for-exception-safety"></a>How to: Design for exception safety
+# <a name="how-to-design-for-exception-safety"></a>方法: 例外の安全性を設計する
 
 例外機構の利点の 1 つは、例外をスローするステートメントから例外を処理する最初の catch ステートメントに、例外に関するデータと共に実行が直接ジャンプすることです。 ハンドラーは呼び出し履歴の何レベル上であってもかまいません。 try ステートメントと throw ステートメントの間で呼び出された関数は、スローされる例外に関して何も知る必要がありません。  ただし、例外が下から上に通知される可能性があるどの時点でも、予期せずにスコープから外れることができるように関数が設計されている必要があり、部分的に作成されたオブジェクト、リークしたメモリ、使用不能な状態のデータ構造体などが部分的に残らないようになっている必要があります。
 
-## <a name="basic-techniques"></a>Basic techniques
+## <a name="basic-techniques"></a>基本的な方法
 
 堅牢な例外処理ポリシーには、熟考が必要であり、デザイン プロセスの一部になっている必要があります。 一般に、ほとんどの例外は、ソフトウェア モジュールの下位層で検出されてスローされますが、一般にこれらの層には、エラーを処理したり、エンド ユーザーにメッセージを通知するための十分なコンテキストがありません。 中間層の関数は、例外オブジェクトを検査する必要があったり、最終的に例外をキャッチする上位層のための有用な追加情報がある場合に、例外をキャッチして再スローできます。 関数が例外をキャッチしてそれを "飲み込む" ことができるのは、例外から完全に回復できる場合のみです。 多くの場合、中間層の正しい動作は、呼び出し履歴の上方向へ例外を伝達することです。 最上位層でも、例外によってプログラムがその正しさを保証できない状態になる場合は、例外を処理せずにプログラムを終了するのが適切な場合があります。
 
 関数が例外を処理する方法にかかわらず、"例外セーフ" であることを保証するには、次の基本的なルールに従って関数が設計されている必要があります。
 
-### <a name="keep-resource-classes-simple"></a>Keep resource classes simple
+### <a name="keep-resource-classes-simple"></a>リソースクラスを単純なままにする
 
-When you encapsulate manual resource management in classes, use a class that does nothing except manage a single resource. By keeping the class simple, you reduce the risk of introducing resource leaks. Use [smart pointers](smart-pointers-modern-cpp.md) when possible, as shown in the following example. この例は、`shared_ptr` を使用した場合の相違点を強調するため、意図的に作成し簡略化されています。
+クラスに手動リソース管理をカプセル化する場合は、単一のリソースを管理する以外に何も実行しないクラスを使用します。 クラスを単純なままにすると、リソースリークが発生するリスクが軽減されます。 次の例に示すように、可能な場合は[スマートポインター](smart-pointers-modern-cpp.md)を使用します。 この例は、`shared_ptr` を使用した場合の相違点を強調するため、意図的に作成し簡略化されています。
 
 ```cpp
 // old-style new/delete version
@@ -83,29 +83,29 @@ public:
 };
 ```
 
-### <a name="use-the-raii-idiom-to-manage-resources"></a>Use the RAII idiom to manage resources
+### <a name="use-the-raii-idiom-to-manage-resources"></a>RAII 表現を使用してリソースを管理する
 
-To be exception-safe, a function must ensure that objects that it has allocated by using `malloc` or **new** are destroyed, and all resources such as file handles are closed or released even if an exception is thrown. The *Resource Acquisition Is Initialization* (RAII) idiom ties management of such resources to the lifespan of automatic variables. 正常に返るか例外により関数がスコープから外れた場合、すべての完全構築された自動変数のデストラクターが呼び出されます。 スマート ポインターなどの RAII ラッパー オブジェクトは、デストラクターの中で適切な delete または close 関数を呼び出します。 例外セーフなコードでは、なんらかの種類の RAII オブジェクトに各リソースの所有権をすぐに渡すことが非常に重要です。 Note that the `vector`, `string`, `make_shared`, `fstream`, and similar classes handle acquisition of the resource for you.  However, `unique_ptr` and traditional `shared_ptr` constructions are special because resource acquisition is performed by the user instead of the object; therefore, they count as *Resource Release Is Destruction* but are questionable as RAII.
+例外セーフにするために、関数は `malloc` または**新しい**を使用して割り当てられたオブジェクトが破棄され、例外がスローされた場合でもファイルハンドルなどのすべてのリソースが閉じられるか、解放されることを保証する必要があります。 *リソースの取得は初期化*(RAII) で、このようなリソースの管理を自動変数の有効期間に結び付けます。 正常に返るか例外により関数がスコープから外れた場合、すべての完全構築された自動変数のデストラクターが呼び出されます。 スマート ポインターなどの RAII ラッパー オブジェクトは、デストラクターの中で適切な delete または close 関数を呼び出します。 例外セーフなコードでは、なんらかの種類の RAII オブジェクトに各リソースの所有権をすぐに渡すことが非常に重要です。 `vector`、`string`、`make_shared`、`fstream`などのクラスが、リソースの取得を処理することに注意してください。  ただし、リソースの取得はオブジェクトではなくユーザーによって実行されるため、`unique_ptr` と従来の `shared_ptr` の構造は特別です。そのため、リソースの*解放は破棄*としてカウントされますが、RAII としては問題になります。
 
-## <a name="the-three-exception-guarantees"></a>The three exception guarantees
+## <a name="the-three-exception-guarantees"></a>3つの例外の保証
 
-Typically, exception safety is discussed in terms of the three exception guarantees that a function can provide: the *no-fail guarantee*, the *strong guarantee*, and the *basic guarantee*.
+通常、例外の安全性については、関数によって提供される3つの例外の保証であるという点で説明されています。これは、*非障害保証*、*強力な保証*、および*基本的な保証*です。
 
-### <a name="no-fail-guarantee"></a>No-fail guarantee
+### <a name="no-fail-guarantee"></a>失敗の保証
 
 no-fail (または no-throw) 保証は、関数が提供できる最も強力な保証です。 それは、関数が例外をスローしないか、例外の伝達を許可することを示します。 ただし、(a) この関数が呼び出すすべての関数が no-fail であることがわかっているか、(b) スローされるすべての例外がこの関数に達する前にキャッチされることがわかっているか、(c) この関数に達する可能性があるすべての例外をキャッチし正しく処理する方法がわかっている場合を除いて、確実にこのようなことを保証できません。
 
 strong 保証と basic 保証のどちらも、デストラクターが no-fail であることを前提としています。 標準ライブラリのすべてのコンテナーと型は、デストラクターが例外をスローしないことを保証します。 また、逆の要件もあります。標準ライブラリでは、テンプレート引数として渡される型など、ユーザー定義型のデストラクターが、例外をスローしないことが必要です。
 
-### <a name="strong-guarantee"></a>Strong guarantee
+### <a name="strong-guarantee"></a>強力な保証
 
 strong 保証は、関数が例外によりスコープから外れる場合、メモリをリークせず、プログラムの状態が変化しないことを示します。 strong 保証を提供する関数は、基本的にコミットまたはロールバック セマンティクスを持つトランザクションです。つまり、完全に成功するか無効かのどちらかになります。
 
-### <a name="basic-guarantee"></a>Basic guarantee
+### <a name="basic-guarantee"></a>基本的な保証
 
 basic 保証は、3 つのうちで最も弱い保証です。 ただし、strong 保証がメモリ消費またはパフォーマンスの点で高価すぎる場合に最善の選択肢となる場合があります。 basic 保証は、例外が発生した場合は、データが変更された可能性があるとしても、メモリがリークせず、オブジェクトが引き続き使用可能な状態にあることを示します。
 
-## <a name="exception-safe-classes"></a>Exception-safe classes
+## <a name="exception-safe-classes"></a>例外セーフクラス
 
 クラスは、安全でない関数で使用される場合であっても、自身が部分的に構築されたり部分的に破棄されるのを防ぐことにより、自身の例外セーフ性を保証するのに役立つことがあります。 クラス コンストラクターが完了前に終了した場合、オブジェクトは作成されず、そのデストラクターは決して呼び出されません。 例外の前に初期化された自動変数のデストラクターは呼び出されますが、動的に割り当てられたメモリや、スマート ポインターなどの自動変数によって管理されていないリソースはリークすることになります。
 
@@ -119,7 +119,7 @@ basic 保証は、3 つのうちで最も弱い保証です。 ただし、stron
 
 - デストラクターから例外が漏れないようにします。 C++ の基本的な原則は、デストラクターで例外が呼び出し履歴の上方向へ伝達されないようにすることです。 デストラクターで例外をスローする可能性がある操作を実行する必要がある場合は、try catch ブロックで実行し、例外を飲み込む必要があります。 標準ライブラリでは、定義されているすべてのデストラクターでこのことが保証されます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Modern C++ best practices for exceptions and error handling](errors-and-exception-handling-modern-cpp.md)<br/>
+[例外C++とエラー処理に関する最新のベストプラクティス](errors-and-exception-handling-modern-cpp.md)<br/>
 [方法: 例外的なコードと非例外的なコードをインターフェイスで連結する](how-to-interface-between-exceptional-and-non-exceptional-code.md)

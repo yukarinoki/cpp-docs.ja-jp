@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - TITLE directive
 ms.assetid: d49df4dc-75db-472c-950e-75344e3c81eb
-ms.openlocfilehash: 3bd6f2e29282992aed36589be4219a7d1878abb6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1e5f10e99413d85546b24dbb5db2b69705d62506
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62216989"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74393192"
 ---
 # <a name="title"></a>TITLE
 
-タイトルを一覧表示するプログラムを定義します。
+プログラム一覧のタイトルを定義します。
 
 ## <a name="syntax"></a>構文
 
-> タイトルのテキスト
+> **タイトル**の*テキスト*
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
+[ディレクティブリファレンス](directives-reference.md)

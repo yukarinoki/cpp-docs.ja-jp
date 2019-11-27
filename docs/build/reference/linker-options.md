@@ -23,13 +23,13 @@ LINK.exe は、COFF (Common Object File Format) オブジェクト ファイル�
 
 LINK.exe のオプションの一覧を次の表に示します。 LINK の詳細については、下記を参照してください。
 
-- [コンパイラで制御される LINK オプション](compiler-controlled-link-options.md)
+- [Compiler-Controlled LINK Options](compiler-controlled-link-options.md)
 
 - [LINK の入力ファイル](link-input-files.md)
 
 - [LINK 出力](link-output.md)
 
-- [予約済みキーワード](reserved-words.md)
+- [予約語](reserved-words.md)
 
 コマンドラインでは、リンカーオプションの大文字と小文字は区別されません。たとえば、/base と/BASE は同じことを意味します。 コマンド ラインまたは Visual Studio で各オプションを指定する方法の詳細については、そのオプションのドキュメントを参照してください。
 
@@ -37,7 +37,7 @@ LINK.exe のオプションの一覧を次の表に示します。 LINK の詳�
 
 ## <a name="linker-options-listed-alphabetically"></a>リンカーオプションの一覧 (アルファベット順)
 
-|OPTION|目的|
+|オプション|目的|
 |------------|-------------|
 |[@](at-specify-a-linker-response-file.md)|応答ファイルを指定します。|
 |[/ALIGN](align-section-alignment.md)|各セクションのアラインメントを指定します。|
@@ -87,12 +87,12 @@ LINK.exe のオプションの一覧を次の表に示します。 LINK の詳�
 |[/KEYFILE](keyfile-specify-key-or-key-pair-to-sign-an-assembly.md)|アセンブリに署名するキーまたはキー ペアを指定します。|
 |[/LARGEADDRESSAWARE](largeaddressaware-handle-large-addresses.md)|アプリケーションが 2 GB を超えるアドレスをサポートしていることをコンパイラに指定します。|
 |[/LIBPATH](libpath-additional-libpath.md)|環境ライブラリ パスの前に検索するパスを指定します。|
-|[/LINK再現](linkrepro.md)|リンク再現アーティファクトを生成するパスを指定します。|
-|[/LINKREPROTARGET](linkreprotarget.md)|指定されたターゲットを生成するときにのみ、リンク再現を生成します。<sup>16.1</sup>|
+|[/Link再現](linkrepro.md)|リンク再現アーティファクトを生成するパスを指定します。|
+|[/Linkreprotarget](linkreprotarget.md)|指定されたターゲットを生成するときにのみ、リンク再現を生成します。<sup>16.1</sup>|
 |[/LTCG](ltcg-link-time-code-generation.md)|リンク時のコード生成を指定します。|
 |[/MACHINE](machine-specify-target-platform.md)|ターゲット プラットフォームを指定します。|
 |[/MANIFEST](manifest-create-side-by-side-assembly-manifest.md)|side-by-side マニフェスト ファイルを作成し、バイナリに埋め込むことができるようにします。|
-|[/MANIFESTDEPENDENCY](manifestdependency-specify-manifest-dependencies.md)|マニフェストファイルの @no__t 0dependentAssembly > セクションを指定します。|
+|[/MANIFESTDEPENDENCY](manifestdependency-specify-manifest-dependencies.md)|マニフェストファイルの \<dependentAssembly > セクションを指定します。|
 |[/MANIFESTFILE](manifestfile-name-manifest-file.md)|マニフェスト ファイルの既定の名前を変更します。|
 |[/MANIFESTINPUT](manifestinput-specify-manifest-input.md)|リンカーが処理を行い、バイナリに埋め込むための、マニフェスト入力ファイルを指定します。 このオプションを複数回使用して、複数のマニフェストの入力ファイルを指定できます。|
 |[/MANIFESTUAC](manifestuac-embeds-uac-information-in-manifest.md)|ユーザー アカウント制御 (UAC) 情報をプログラム マニフェストに組み込むかどうかを指定します。|
@@ -139,7 +139,7 @@ LINK.exe のオプションの一覧を次の表に示します。 LINK の詳�
 
 <sup>16.1</sup>このオプションは、Visual Studio 2019 バージョン16.1 以降で使用できます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [C/C++ ビルドのリファレンス](c-cpp-building-reference.md)\
 [MSVC リンカーのリファレンス](linking.md)

@@ -8,21 +8,21 @@ helpviewer_keywords:
 - operator ' '
 - "' ' operator"
 ms.assetid: 62a5d993-3d9b-470d-ba8a-53d76afd29b1
-ms.openlocfilehash: 0b3fb01136a5021cd67c8b72925b9ca4c6a4b2ed
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4bb7e5b82abd5a76209785b814571172ec2ea54e
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176240"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74395851"
 ---
 # <a name="operator-39-39"></a>演算子&#39;&#39;
 
-処理の*テキスト*' を文字列として。
+'*Text*' を文字列として扱います。
 
 ## <a name="syntax"></a>構文
 
-> ' テキスト '
+> __'__ *text* __'__
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[演算子リファレンス](../../assembler/masm/operators-reference.md)<br/>
+[演算子リファレンス](operators-reference.md)

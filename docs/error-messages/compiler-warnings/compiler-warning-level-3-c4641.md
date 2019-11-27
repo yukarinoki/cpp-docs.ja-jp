@@ -1,5 +1,5 @@
 ---
-title: Compiler Warning (level 3) C4641
+title: コンパイラの警告 (レベル 3) C4641
 ms.date: 11/04/2016
 f1_keywords:
 - C4641
@@ -13,17 +13,17 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/19/2019
 ms.locfileid: "74189420"
 ---
-# <a name="compiler-warning-level-3-c4641"></a>Compiler Warning (level 3) C4641
+# <a name="compiler-warning-level-3-c4641"></a>コンパイラの警告 (レベル 3) C4641
 
-XML document comment has an ambiguous cross reference
+XML ドキュメントコメントはあいまいな相互参照を含んでいます
 
-The compiler was unable to unambiguously resolve a reference. To resolve this warning, specify the parameter information necessary to make the reference unambiguous.
+コンパイラは、参照を明確に解決できませんでした。 この警告を解決するには、参照を明確にするために必要なパラメーター情報を指定します。
 
 詳細については、「 [XML Documentation](../../build/reference/xml-documentation-visual-cpp.md)」を参照してください。
 
 ## <a name="example"></a>例
 
-The following sample generates C4641.
+次の例では、C4641 が生成されます。
 
 ```cpp
 // C4641.cpp

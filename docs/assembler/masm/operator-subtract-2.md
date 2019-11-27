@@ -1,5 +1,5 @@
 ---
-title: 演算子-
+title: 演算子 -
 ms.date: 08/30/2018
 f1_keywords:
 - operator -
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - operators [MASM], subtraction
 - arithmetic operators [C++], subtraction
 ms.assetid: 474607cb-e48d-4c91-bef6-91ff0971d5cf
-ms.openlocfilehash: 4046123a43e8bf0fe6831a7d51820501830e8dc1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 04a0932215254b015b10e21971baed01443e5efd
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176318"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74395479"
 ---
-# <a name="operator--"></a>演算子-
+# <a name="operator--"></a>演算子 -
 
-返します*expression1*マイナス*expression2*します。 2 番目の演算子の符号を反転させます*式*します。
+*Expression1* - *expression2*を返します。 2番目の演算子は、*式*の符号を反転します。
 
 ## <a name="syntax"></a>構文
 
-> *expression1* - *expression2*
+> *expression1* **-** *expression2*
 >
-> -*expression*
+> __-__ *式*
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[演算子リファレンス](../../assembler/masm/operators-reference.md)<br/>
+[演算子リファレンス](operators-reference.md)

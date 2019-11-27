@@ -13,12 +13,12 @@ ms.locfileid: "74245987"
 ---
 # <a name="writing-an-exception-filter"></a>例外フィルターの記述
 
-例外は、例外ハンドラーのレベルにジャンプするか、実行を続けるかのいずれかにより、処理できます。 Instead of using the exception handler code to handle the exception and falling through, you can use *filter* to clean up the problem and then, by returning -1, resume normal flow without clearing the stack.
+例外は、例外ハンドラーのレベルにジャンプするか、実行を続けるかのいずれかにより、処理できます。 例外ハンドラーコードを使用して例外を処理し、遅延を解消する代わりに、*フィルター*を使用して問題をクリーンアップし、-1 を返すことで、スタックをクリアせずに通常のフローを再開できます。
 
 > [!NOTE]
->  一部の例外は、続行できない場合があります。 If *filter* evaluates to -1 for such an exception, the system raises a new exception. When you call [RaiseException](/windows/win32/api/errhandlingapi/nf-errhandlingapi-raiseexception), you determine whether the exception will continue.
+>  一部の例外は、続行できない場合があります。 このような例外に対して*filter*が-1 と評価された場合、システムによって新しい例外が発生します。 [RaiseException](/windows/win32/api/errhandlingapi/nf-errhandlingapi-raiseexception)を呼び出すと、例外を続行するかどうかが決定されます。
 
-For example, the following code uses a function call in the *filter* expression: this function handles the problem and then returns -1 to resume normal flow of control:
+たとえば、次のコードでは、*フィルター*式で関数呼び出しを使用しています。この関数は問題を処理し、-1 を返して通常の制御フローを再開します。
 
 ```cpp
 // exceptions_Writing_an_Exception_Filter.cpp
@@ -45,11 +45,11 @@ int Eval_Exception ( int n_except ) {
 }
 ```
 
-It is a good idea to use a function call in the *filter* expression whenever *filter* needs to do anything complex. 式を評価すると、関数 (この場合、`Eval_Exception`) が実行されます。
+フィルターで複雑な処理を*行う必要が*ある場合は常に、*フィルター*式で関数呼び出しを使用することをお勧めします。 式を評価すると、関数 (この場合、`Eval_Exception`) が実行されます。
 
-Note the use of [GetExceptionCode](/windows/win32/Debug/getexceptioncode) to determine the exception. この関数は、フィルター自体の内部で呼び出す必要があります。 `Eval_Exception` cannot call `GetExceptionCode`, but it must have the exception code passed to it.
+[Getexceptioncode](/windows/win32/Debug/getexceptioncode)を使用して例外を特定することに注意してください。 この関数は、フィルター自体の内部で呼び出す必要があります。 `Eval_Exception` は `GetExceptionCode`を呼び出すことはできませんが、例外コードを渡す必要があります。
 
-このハンドラーは、例外が整数または浮動小数点数のオーバーフローでなければ、他のハンドラーに制御を渡します。 オーバーフローがあった場合、ハンドラーは関数 (`ResetVars` は一例で、API 関数ではありません) を呼び出して、いくつかのグローバル関数をリセットします。 *Statement-block-2*, which in this example is empty, can never be executed because `Eval_Exception` never returns EXCEPTION_EXECUTE_HANDLER (1).
+このハンドラーは、例外が整数または浮動小数点数のオーバーフローでなければ、他のハンドラーに制御を渡します。 オーバーフローがあった場合、ハンドラーは関数 (`ResetVars` は一例で、API 関数ではありません) を呼び出して、いくつかのグローバル関数をリセットします。 この例では空である*ステートメントブロック 2*は、`Eval_Exception` が EXCEPTION_EXECUTE_HANDLER (1) を返さないため、実行できません。
 
 関数呼び出しの使用は、複雑なフィルター式を処理するための優れた汎用的手法です。 その他の便利な 2 つの C 言語機能を次に示します。
 
@@ -57,7 +57,7 @@ Note the use of [GetExceptionCode](/windows/win32/Debug/getexceptioncode) to det
 
 - コンマ演算子
 
-条件演算子を使用すると、特定のリターン コードをチェックしてから 2 つの異なる値のいずれかを返すことができるため、この演算子は多くの場合に役立ちます。 For example, the filter in the following code recognizes the exception only if the exception is STATUS_INTEGER_OVERFLOW:
+条件演算子を使用すると、特定のリターン コードをチェックしてから 2 つの異なる値のいずれかを返すことができるため、この演算子は多くの場合に役立ちます。 たとえば、次のコードのフィルターでは、例外が STATUS_INTEGER_OVERFLOW 場合にのみ例外が認識されます。
 
 ```cpp
 __except( GetExceptionCode() == STATUS_INTEGER_OVERFLOW ? 1 : 0 ) {
@@ -69,7 +69,7 @@ __except( GetExceptionCode() == STATUS_INTEGER_OVERFLOW ? 1 : 0 ) {
 __except( GetExceptionCode() == STATUS_INTEGER_OVERFLOW ) {
 ```
 
-The conditional operator is more useful in situations where you might want the filter to evaluate to -1, EXCEPTION_CONTINUE_EXECUTION.
+条件演算子は、フィルターを-1、EXCEPTION_CONTINUE_EXECUTION に評価する必要がある場合に便利です。
 
 コンマ演算子を使用すると、1 つの式内で複数の個別演算を実行できます。 複数のステートメントを実行してから最後の式の値を返す場合とほぼ同じ効果が得られます。 たとえば、次のコードでは、変数に例外コードを保存してから、そのコードをテストしています。
 
@@ -77,7 +77,7 @@ The conditional operator is more useful in situations where you might want the f
 __except( nCode = GetExceptionCode(), nCode == STATUS_INTEGER_OVERFLOW )
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Writing an exception handler](../cpp/writing-an-exception-handler.md)<br/>
-[構造化例外処理 (C/C++)](../cpp/structured-exception-handling-c-cpp.md)
+[例外ハンドラーの記述](../cpp/writing-an-exception-handler.md)<br/>
+[Structured Exception Handling (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

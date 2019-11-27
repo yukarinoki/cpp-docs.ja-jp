@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - XMMWORD directive
 ms.assetid: 18026d32-5cab-403e-ad7e-382fb41aa9b8
-ms.openlocfilehash: 59d1ba71260ed08b761c332e887cf27517762303
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c7783049a143b19295a67cd3e9e40afeab3c814f
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210106"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74392787"
 ---
 # <a name="xmmword"></a>XMMWORD
 
-MMX と SSE (XMM) の手順では、128 ビットのマルチ メディア オペランドに使用されます。
+MMX および SSE (XMM) 命令で128ビットのマルチメディアオペランドに使用されます。
 
 ## <a name="syntax"></a>構文
 
-> XMMWORD
+> **XMMWORD**
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-`XMMWORD` 同じ型を表すために、 [_ _m128](../../cpp/m128.md)します。
+**Xmmword**は[__m128](../../cpp/m128.md)と同じ型を表すことを目的としています。
 
 ## <a name="example"></a>例
 

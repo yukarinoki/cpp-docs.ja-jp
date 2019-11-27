@@ -68,6 +68,6 @@ Windows リストコントロールを含むビュー ( [CListCtrl](../mfc/refer
 [CTreeView](../mfc/reference/ctreeview-class.md)<br/>
 Windows ツリーコントロールを含むビュー (「 [CTreeCtrl](../mfc/reference/ctreectrl-class.md)」を参照)。 ツリーコントロールは、ファイルエクスプローラーの左ペインと同様の方法で、階層内に配置されたアイコンと文字列を表示します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [クラスの概要](../mfc/class-library-overview.md)

@@ -43,6 +43,6 @@ ms.locfileid: "74303179"
 |C++ コンパイラ|**CXX**|cl|**CXXFLAGS**|
 |Resource Compiler|**RC**|リターン|**RFLAGS**|
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [NMAKE の特殊マクロ](special-nmake-macros.md)

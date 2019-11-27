@@ -83,6 +83,6 @@ Windows ツリーコントロールを含むビュー (「 [CTreeCtrl](../mfc/re
 [CRichEditCntrItem](../mfc/reference/cricheditcntritem-class.md)<br/>
 `CRichEditView`に格納されている OLE 項目へのクライアント側アクセスを提供します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [クラスの概要](../mfc/class-library-overview.md)

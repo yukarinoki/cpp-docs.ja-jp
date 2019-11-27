@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - ENDP directive
 ms.assetid: 31fc8040-8c49-43e2-8885-a20ba3b69551
-ms.openlocfilehash: 5ec4c112340036e54dbd54df910b79855295b706
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a904b26e8bc1b7c4d3b158089cae208d0f83cfbc
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62203295"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397640"
 ---
 # <a name="endp"></a>ENDP
 
-プロシージャの終了をマーク*名前*で以前に開始された**PROC**します。
+プロシージャ名の最後に、 **PROC**で開始されたプロシージャ*名*をマークします。
 
 ## <a name="syntax"></a>構文
 
-> *名前*ENDP
+> *名前* **endp**
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-参照してください[PROC](../../assembler/masm/proc.md)します。
+「 [PROC](../../assembler/masm/proc.md)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
+[ディレクティブリファレンス](directives-reference.md)

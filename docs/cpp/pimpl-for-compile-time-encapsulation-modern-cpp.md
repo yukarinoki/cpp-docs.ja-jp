@@ -12,19 +12,19 @@ ms.locfileid: "74245175"
 ---
 # <a name="pimpl-for-compile-time-encapsulation-modern-c"></a>コンパイル時のカプセル化の Pimpl (Modern C++)
 
-The *pimpl idiom* is a modern C++ technique to hide implementation, to minimize coupling, and to separate interfaces. Pimpl is short for "pointer to implementation." You may already be familiar with the concept but know it by other names like Cheshire Cat or Compiler Firewall idiom.
+*Pimpl*表現は、実装をC++非表示にするための最新の手法であり、結合を最小限にし、インターフェイスを分離します。 Pimpl は、"実装へのポインター" の省略形です。 概念は既に理解しているものの、Cheshire Cat や Compiler Firewall イディオムなどの他の名前で理解している場合があります。
 
-## <a name="why-use-pimpl"></a>Why use pimpl?
+## <a name="why-use-pimpl"></a>Pimpl を使用する理由
 
-Here's how the pimpl idiom can improve the software development lifecycle:
+次に、pimpl 表現を使用してソフトウェア開発ライフサイクルを改善する方法を示します。
 
-- Minimization of compilation dependencies.
+- コンパイル依存関係の最小化。
 
-- Separation of interface and implementation.
+- インターフェイスと実装の分離。
 
-- Portability.
+- 携帯.
 
-## <a name="pimpl-header"></a>Pimpl header
+## <a name="pimpl-header"></a>Pimpl ヘッダー
 
 ```cpp
 // my_class.h
@@ -35,11 +35,11 @@ private:
 };
 ```
 
-The pimpl idiom avoids rebuild cascades and brittle object layouts. It's well suited for (transitively) popular types.
+Pimpl 表現は、カスケードおよび不安定なオブジェクトレイアウトの再構築を回避します。 (推移的な) 人気のある型に適しています。
 
-## <a name="pimpl-implementation"></a>Pimpl implementation
+## <a name="pimpl-implementation"></a>Pimpl 実装
 
-Define the `impl` class in the .cpp file.
+.Cpp ファイルで `impl` クラスを定義します。
 
 ```cpp
 // my_class.cpp
@@ -55,10 +55,10 @@ my_class::my_class(): pimpl( new impl )
 
 ## <a name="best-practices"></a>ベスト プラクティス
 
-Consider whether to add support for non-throwing swap specialization.
+スローしないスワップ特殊化のサポートを追加するかどうかを検討します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Welcome back to C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[に戻るC++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [C++ 言語リファレンス](../cpp/cpp-language-reference.md)<br/>
-[.NET 標準ライブラリ](../standard-library/cpp-standard-library-reference.md)
+[C++ 標準ライブラリ](../standard-library/cpp-standard-library-reference.md)

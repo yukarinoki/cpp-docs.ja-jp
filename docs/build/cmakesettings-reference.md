@@ -43,7 +43,7 @@ IDE で構成を追加または削除し、JSON ファイルで直接編集す�
 - `codeAnalysisRuleset`: コード分析を実行しているときに使用するルールセットを指定します。 Visual Studio によってインストールされたルールセット ファイルの完全なパスまたはファイル名を指定できます。
 - `configurationType`: 選択したジェネレーターにビルドの種類の構成を指定します。 次のいずれかを指定できます。
 
-  - Debug
+  - デバッグ
   - 解放
   - MinSizeRel
   - RelWithDebInfo
@@ -83,7 +83,7 @@ Visual studio 2019 で Visual Studio ジェネレーターを指定するには*
 
 - `configurationType`: 選択したジェネレーターにビルドの種類の構成を指定します。 次のいずれかを指定できます。
 
-  - Debug
+  - デバッグ
   - 解放
   - MinSizeRel
   - RelWithDebInfo
@@ -288,7 +288,7 @@ ninja: invalid option -- `-?'
 usage: ninja [options] [targets...]
 ```
 
-|オプション|[説明]|
+|オプション|説明|
 |--------------|------------|
 | --version  | Ninja のバージョンを書き出します ("1.7.1")|
 |   -C DIR   | 何かを実行する前に、DIR (ディレクトリ) に変更します|

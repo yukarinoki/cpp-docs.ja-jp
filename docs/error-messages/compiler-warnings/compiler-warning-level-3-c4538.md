@@ -1,5 +1,5 @@
 ---
-title: Compiler Warning (level 3) C4538
+title: コンパイラの警告 (レベル 3) C4538
 ms.date: 11/04/2016
 f1_keywords:
 - C4538
@@ -13,13 +13,13 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/19/2019
 ms.locfileid: "74188959"
 ---
-# <a name="compiler-warning-level-3-c4538"></a>Compiler Warning (level 3) C4538
+# <a name="compiler-warning-level-3-c4538"></a>コンパイラの警告 (レベル 3) C4538
 
-'type' : const/volatile qualifiers on this type are not supported
+' type ': この型の const/volatile 修飾子はサポートされていません
 
-A qualifier keyword was applied to an array incorrectly. 詳細については、「 [配列](../../extensions/arrays-cpp-component-extensions.md)」を参照してください。
+修飾子キーワードが配列に正しく適用されませんでした。 詳細については、「 [配列](../../extensions/arrays-cpp-component-extensions.md)」を参照してください。
 
-The following sample generates C4538:
+次の例では、C4538 が生成されます。
 
 ```cpp
 // C4538.cpp

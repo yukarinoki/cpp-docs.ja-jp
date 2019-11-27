@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - .NOCREF directive
 ms.assetid: 696a6a71-7e88-4b60-8550-7857d772ed20
-ms.openlocfilehash: ef9989d378b9e5af9695b02ddda8cf1e9951d935
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4a79591db0cb5e6b05d5d7f927bcb0b1a3c8bf0e
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62178554"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398093"
 ---
 # <a name="nocref"></a>.NOCREF
 
-シンボルをシンボル テーブルとブラウザーのファイルの一覧を表示しません。
+シンボルテーブルとブラウザーファイル内の記号の一覧を表示しません。
 
 ## <a name="syntax"></a>構文
 
-> .NOCREF [名前 [, name]...]
+> **.Nocref** ⟦*name*⟦ __、__ *name* ...⟧⟧
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-名前が指定されている場合のみ、指定した名前は抑制されます。 同じ[します。XCREF](../../assembler/masm/dot-xcref.md)します。
+名前を指定した場合は、指定した名前だけが抑制されます。 と同じ[です。XCREF](../../assembler/masm/dot-xcref.md)。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
+[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)

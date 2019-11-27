@@ -1,6 +1,6 @@
 ---
-title: Brace initialization for classes, structs, and unions
-description: Use brace initialization with any C++ class, struct or union
+title: クラス、構造体、および共用体の中かっこの初期化
+description: 任意C++のクラス、構造体、または共用体と共に中かっこの初期化を使用する
 ms.date: 11/19/2019
 ms.assetid: 3e55c3d6-1c6b-4084-b9e5-221b151402f4
 ms.openlocfilehash: 41ff38bc4bcc9ebca913b5e66b5ac2f395044222
@@ -10,7 +10,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74246503"
 ---
-# <a name="brace-initialization"></a>Brace initialization
+# <a name="brace-initialization"></a>かっこ初期化
 
 クラスのコンストラクターの定義は、コンストラクターが比較的単純な場合は特に、必ずしも必要ではありません。 ユーザーは、次の例に示すように、均一初期化を使用してクラスまたは構造体のオブジェクトを初期化できます。
 
@@ -61,7 +61,7 @@ int main()
 }
 ```
 
-Note that when a class or struct has no constructor, you provide the list elements in the order that the members are declared in the class. If the class has a constructor, provide the elements in the order of the parameters. 型に既定のコンストラクターがあり、暗黙的または明示的に宣言されている場合、(空のかっこで) 既定のかっこ初期化を使用できます。 たとえば、次のクラスは、既定のかっこ初期化と既定以外のかっこ初期化を使用して初期化できます。
+クラスまたは構造体にコンストラクターがない場合は、メンバーがクラス内で宣言されている順序でリスト要素を指定します。 クラスにコンストラクターがある場合は、パラメーターの順序で要素を指定します。 型に既定のコンストラクターがあり、暗黙的または明示的に宣言されている場合、(空のかっこで) 既定のかっこ初期化を使用できます。 たとえば、次のクラスは、既定のかっこ初期化と既定以外のかっこ初期化を使用して初期化できます。
 
 ```cpp
 #include <string>
@@ -128,7 +128,7 @@ int main()
 }
 ```
 
-You can use brace initialization anywhere you would typically do initialization—for example, as a function parameter or a return value, or with the **new** keyword:
+かっこ初期化は、通常、初期化を行うときに使用できます。たとえば、関数パラメーターや戻り値として、または**new**キーワードを使用します。
 
 ```cpp
 class_d* cf = new class_d{4.5};
@@ -136,16 +136,16 @@ kr->add_d({ 4.5 });
 return { 4.5 };
 ```
 
-## <a name="initializer_list-constructors"></a>initializer_list constructors
+## <a name="initializer_list-constructors"></a>initializer_list コンストラクター
 
-The [initializer_list Class](../standard-library/initializer-list-class.md) represents a list of objects of a specified type that can be used in a constructor, and in other contexts. かっこ初期化を使用して、initializer_list を構築できます。
+[Initializer_list クラス](../standard-library/initializer-list-class.md)は、コンストラクターとその他のコンテキストで使用できる、指定した型のオブジェクトのリストを表します。 かっこ初期化を使用して、initializer_list を構築できます。
 
 ```cpp
 initializer_list<int> int_list{5, 6, 7};
 ```
 
 > [!IMPORTANT]
->  To use this class, you must include the [\<initializer_list>](../standard-library/initializer-list.md) header.
+>  このクラスを使用するには、 [\<initializer_list >](../standard-library/initializer-list.md)ヘッダーを含める必要があります。
 
 `initializer_list` をコピーできます。 この場合、新しいリストのメンバーは、元のリストのメンバーを参照します。
 
@@ -166,7 +166,7 @@ regex rgx{'x', 'y', 'z'};
 ```
 
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [クラスと構造体](../cpp/classes-and-structs-cpp.md)<br/>
 [コンストラクター](../cpp/constructors-cpp.md)

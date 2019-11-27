@@ -1,5 +1,5 @@
 ---
-title: Compiler Warning (level 3) C4521
+title: コンパイラの警告 (レベル 3) C4521
 ms.date: 11/04/2016
 f1_keywords:
 - C4521
@@ -13,17 +13,17 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/19/2019
 ms.locfileid: "74189361"
 ---
-# <a name="compiler-warning-level-3-c4521"></a>Compiler Warning (level 3) C4521
+# <a name="compiler-warning-level-3-c4521"></a>コンパイラの警告 (レベル 3) C4521
 
-'class' : multiple copy constructors specified
+' class ': 複数のコピーコンストラクターが指定されました
 
-The class has multiple copy constructors of a single type. This warning is informational; the constructors are callable in your program.
+クラスには、1つの型の複数のコピーコンストラクターがあります。 この警告は情報提供を目的としています。コンストラクターは、プログラムで呼び出すことができます。
 
-Use the [warning](../../preprocessor/warning.md) pragma to suppress this warning.
+この警告を非表示にするには、 [warning](../../preprocessor/warning.md)プラグマを使用します。
 
 ## <a name="example"></a>例
 
-The following sample generates C4521.
+次の例では、C4521 が生成されます。
 
 ```cpp
 // C4521.cpp

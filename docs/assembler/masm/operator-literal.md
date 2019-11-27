@@ -8,21 +8,21 @@ helpviewer_keywords:
 - operator <>
 - <> operator
 ms.assetid: bc5acf43-df3e-499b-a3ed-1672cfa0d1ed
-ms.openlocfilehash: 97895212964c3b02a20b2cbfbfab8824511ecfb9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 07d0488c124975424767115fa0d3ce4da0e75efb
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176669"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74396801"
 ---
 # <a name="operator-ltgt"></a>operator &lt;&gt;
 
-扱います*テキスト*単一のリテラル要素として。
+*テキスト*を1つのリテラル要素として扱います。
 
 ## <a name="syntax"></a>構文
 
-> \<*text*>
+> __\<__ *テキスト* __>__
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[演算子リファレンス](../../assembler/masm/operators-reference.md)<br/>
+[演算子リファレンス](operators-reference.md)

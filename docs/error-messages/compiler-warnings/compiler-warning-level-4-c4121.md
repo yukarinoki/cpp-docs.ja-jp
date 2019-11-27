@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4121
 ms.assetid: 8c5b85c9-2543-426b-88bc-319c50158c7e
-ms.openlocfilehash: 0d02c5aff188a82062ae537f053157795d8925d8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bafa16cbad2cb0a2475cae5a98c608096e296442
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401372"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541617"
 ---
 # <a name="compiler-warning-level-4-c4121"></a>コンパイラの警告 (レベル 4) C4121
 
@@ -19,7 +19,7 @@ ms.locfileid: "62401372"
 
 コンパイラは、パッキング境界で構造体メンバーをアラインするために埋め込みを追加しましたが、パッキング値はメンバーのサイズを下回ります。 たとえば、次のコード スニペットでは C4121 が生成されます。
 
-```
+```cpp
 // C4121.cpp
 // compile with: /W4 /c
 #pragma pack(2)
@@ -39,4 +39,4 @@ struct s
 
 この警告は、コンパイラがデータ メンバーの前に埋め込みを追加した場合にのみ発生します。 パッキングによってデータ型用にアラインされていないメモリ位置にデータが配置されたが、データ メンバーの前に埋め込みが追加されなかったときは発生しません。 データのサイズの倍数となる境界でデータがアラインされていないと、パフォーマンスが低下する可能性があります。 アラインされていないデータの読み取りおよび書き込みにより、一部のアーキテクチャでプロセッサ障害が発生した場合は、その障害の解決に桁違いの時間がかかる場合があります。 アラインされていないデータのアクセスは、一部の RISC アーキテクチャには移植できません。
 
-使用することができます[#pragma pack](../../preprocessor/pack.md)または[/Zp](../../build/reference/zp-struct-member-alignment.md)構造体の配置を指定します。 (コンパイラでは、この警告は生成しません **/Zp1**が指定されています)。
+[#Pragma pack](../../preprocessor/pack.md)または[/zp](../../build/reference/zp-struct-member-alignment.md)を使用して、構造体の配置を指定できます。 ( **/Zp1**が指定されている場合、コンパイラはこの警告を生成しません)。

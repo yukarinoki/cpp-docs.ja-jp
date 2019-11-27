@@ -1,5 +1,5 @@
 ---
-title: Compiler Warning (Level 3) C4738
+title: コンパイラの警告 (レベル 3) C4738
 ms.date: 11/04/2016
 f1_keywords:
 - C4738
@@ -13,21 +13,21 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/19/2019
 ms.locfileid: "74189396"
 ---
-# <a name="compiler-warning-level-3-c4738"></a>Compiler Warning (Level 3) C4738
+# <a name="compiler-warning-level-3-c4738"></a>コンパイラの警告 (レベル 3) C4738
 
 メモリに 32 ビットの浮動結果を格納します。パフォーマンスが低下する可能性があります
 
-C4738 warns that the result of an assignment, cast, passed argument, or other operation may need to be rounded or that the operation ran out of registers and needed to use memory (spilling). This can result in performance loss.
+C4738 は、代入、キャスト、渡された引数、またはその他の操作の結果を丸める必要があるか、または操作がレジスタから不足してメモリを使用する必要があることを警告します (書き込む)。 これにより、パフォーマンスが低下する可能性があります。
 
-To resolve this warning and avoid rounding, compile with [/fp:fast](../../build/reference/fp-specify-floating-point-behavior.md) or use `double` instead of `float`.
+この警告を解決して丸めを回避するには、 [/fp: fast](../../build/reference/fp-specify-floating-point-behavior.md)でコンパイルするか、`float`ではなく `double` を使用します。
 
-To resolve this warning and avoid running out of registers, change the order of computation and modify your use of inlining
+この警告を解決してレジスタが不足しないようにするには、計算の順序を変更し、インライン展開の使用を変更します。
 
 既定では、この警告はオフに設定されています。 詳細については、「 [Compiler Warnings That Are Off by Default](../../preprocessor/compiler-warnings-that-are-off-by-default.md)」を参照してください。
 
 ## <a name="example"></a>例
 
-The following sample generates C4738:
+次の例では、C4738 が生成されます。
 
 ```cpp
 // C4738.cpp

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4324
 ms.assetid: 420fa929-d9c0-40b4-8808-2d8ad3ca8090
-ms.openlocfilehash: 696f53dff6398555355ca3a58e25d2c6d64eaaab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 02803e165255b563df5a8b6136198f1f49e9f65d
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400865"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541086"
 ---
 # <a name="compiler-warning-level-4-c4324"></a>コンパイラの警告 (レベル 4) C4324
 
-'struct_name' : structure was padded due to __declspec(align())
+' struct_name ': __declspec (align ()) のため、構造体に埋め込まれました
 
-指定したため、構造体の末尾に埋め込みが追加された、 [__declspec(align)](../../cpp/align-cpp.md)値。
+[__Declspec (align)](../../cpp/align-cpp.md)値を指定したため、構造体の末尾に埋め込みが追加されました。
 
-たとえば、次のコードでは、C4324 が生成されます。
+たとえば、次のコードでは C4324 が生成されます。
 
-```
+```cpp
 // C4324.cpp
 // compile with: /W4
 struct __declspec(align(32)) A

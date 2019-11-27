@@ -45,7 +45,7 @@ ref class Map sealed;
 キー/値ペア内の値の型。
 
 *C*<br/>
-並べ替えキーとして 2 つの要素値を比較してマップ内の相対順序を決定できる関数オブジェクトを提供する型。 既定では、 [std:: less @ no__t >](../standard-library/less-struct.md)です。
+並べ替えキーとして 2 つの要素値を比較してマップ内の相対順序を決定できる関数オブジェクトを提供する型。 既定では、 [std:: less\<K >](../standard-library/less-struct.md)です。
 
 *__is_valid_winrt_type ()* *K*および*V*の型を検証し、型がマップに格納できない場合はわかりやすいエラーメッセージを提供する、コンパイラによって生成される関数。
 
@@ -59,11 +59,11 @@ ref class Map sealed;
 
 - パブリック ref クラス ^
 
-- value struct
+- 値構造体
 
 - パブリック列挙型クラス
 
-マップは、基本的に [std::map](../standard-library/map-class.md)のラッパーです。 これは、 C++ [Windows:: Foundation:: Collections:: IMap < Windows:: Foundation:: Collections:: ikeyvaluepair<k, @ no__t-2k, V > >](/uwp/api/Windows.Foundation.Collections.IMap_K_V_)および[IObservableMap](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_)型の具象実装であり、パブリックウィンドウで渡されます。ランタイムインターフェイス。 パブリックの戻り値またはパラメーターで `Platform::Collections::Map` 型を使用しようとすると、コンパイラ エラー C3986 が発生します。 このエラーを修正するには、パラメーターまたは戻り値の型を[Windows:: Foundation:: Collections:: IMap @ no__t-1k, V >](/uwp/api/Windows.Foundation.Collections.IMap_K_V_)に変更します。
+マップは、基本的に [std::map](../standard-library/map-class.md)のラッパーです。 これは、 C++ [Windows:: Foundation:: Collections:: IMap < Windows:: Foundation:: Collections:: ikeyvaluepair<k,\<K、V > >](/uwp/api/Windows.Foundation.Collections.IMap_K_V_)型および[IObservableMap](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_)型の具象実装であり、パブリック Windows ランタイムインターフェイスを介して渡されます。 パブリックの戻り値またはパラメーターで `Platform::Collections::Map` 型を使用しようとすると、コンパイラ エラー C3986 が発生します。 このエラーを修正するには、パラメーターまたは戻り値の型を[Windows:: Foundation:: Collections:: IMap\<K, V >](/uwp/api/Windows.Foundation.Collections.IMap_K_V_)に変更します。
 
 詳細については、[コレクション](../cppcx/collections-c-cx.md) を参照してください。
 
@@ -71,13 +71,13 @@ ref class Map sealed;
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |[Map::Map](#ctor)|マップ クラスの新しいインスタンスを初期化します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |[Map::Clear](#clear)|現在のマップ オブジェクトから、すべてのキー/値ペアを削除します。|
 |[Map::First](#first)|マップ内の最初の要素を指定する反復子を返します。|
@@ -92,7 +92,7 @@ ref class Map sealed;
 
 |||
 |-|-|
-|名前|説明|
+|Name|説明|
 |[Map:: MapChanged](#mapchanged)イベント|マップが変更されたときに発生します。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
@@ -136,7 +136,7 @@ First () によって返される反復子を保持する便利な方法は、 *
 
 ## <a name="getview"></a>Map:: GetView メソッド
 
-現在のマップの読み取り専用ビューを返します。つまり、 [Platform:: collections:: MapView クラス](../cppcx/platform-collections-mapview-class.md)を実装します。このクラスは、[Windows:: Foundation:: collections:: IMapView @ No__t, V >]/uwp/api/Windows.Foundation.Collections.IMapView_K_V_) インターフェイスを実装します。
+現在のマップの読み取り専用ビューを返します。つまり、 [Platform:: collections:: MapView クラス](../cppcx/platform-collections-mapview-class.md)が実装されています。このクラスには、[Windows:: Foundation:: collections:: IMapView\<K, V >]/uwp/api/windows.foundation.collections. IMapView_K_V_) インターフェイスが実装されています。
 
 ### <a name="syntax"></a>構文
 
@@ -146,7 +146,7 @@ Windows::Foundation::Collections::IMapView<K, V>^ GetView();
 
 ### <a name="return-value"></a>戻り値
 
-`MapView` オブジェクト。
+`MapView` オブジェクトです。
 
 ## <a name="haskey"></a>Map:: HasKey メソッド
 
@@ -182,7 +182,7 @@ virtual bool Insert(K key, V value);
 *key*<br/>
 キー/値ペアのキー部分。 *キー*の型は typename *K*です。
 
-*value*<br/>
+*値*<br/>
 キー/値ペアの値部分。 *値*の型は typename *V*です。
 
 ### <a name="return-value"></a>戻り値
@@ -258,11 +258,11 @@ event Windows::Foundation::Collections::MapChangedEventHandler<K,V>^ MapChanged;
 
 ### <a name="property-valuereturn-value"></a>プロパティ値/戻り値
 
-イベントを発生させたオブジェクトに関する情報と発生した変更の種類を含む[Mapchangedeventhandler @ no__t-1k、V >](/uwp/api/windows.foundation.collections.mapchangedeventhandler) 。 「 [」 @ No__t-1k >](/uwp/api/Windows.Foundation.Collections.IMapChangedEventArgs_K_)と[collectionchange 列挙型](/uwp/api/windows.foundation.collections.collectionchange)」も参照してください。
+イベントを発生させたオブジェクトに関する情報と発生した変更の種類を含む[Mapchangedeventhandler\<K、V >](/uwp/api/windows.foundation.collections.mapchangedeventhandler) 。 「 [」\<K >](/uwp/api/Windows.Foundation.Collections.IMapChangedEventArgs_K_)と[Collectionchange 列挙型](/uwp/api/windows.foundation.collections.collectionchange)」も参照してください。
 
 ## <a name="net-framework-equivalent"></a>同等の .NET Framework 関数
 
-またはを使用C#するアプリ Windows ランタイム Visual Basic project IMap @ No__t-1K, v > を IDictionary @ No__t-2K, v > として使用します。
+またはを使用C#しているアプリ Windows ランタイム、Visual Basic project IMap\<k、v > を IDictionary\<k、v > として使用します。
 
 ## <a name="remove"></a>Map:: Remove メソッド
 
@@ -281,7 +281,7 @@ virtual void Remove(K key);
 
 ## <a name="size"></a>Map:: Size メソッド
 
-Map 内の[Windows:: Foundation:: Collections:: ikeyvaluepair<k, @ no__t, V >](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_)要素の数を返します。
+Map 内の[Windows:: Foundation:: Collections:: ikeyvaluepair<k,\<K, V >](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_)要素の数を返します。
 
 ### <a name="syntax"></a>構文
 
@@ -293,7 +293,7 @@ virtual property unsigned int Size;
 
 マップの要素数。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [コレクション (C++/CX)](collections-c-cx.md)<br/>
 [Platform 名前空間](platform-namespace-c-cx.md)<br/>

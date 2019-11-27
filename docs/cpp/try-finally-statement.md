@@ -31,70 +31,70 @@ ms.locfileid: "74246300"
 
 **Microsoft 固有の仕様**
 
-The following syntax describes the **try-finally** statement:
+次の構文では、 **try finally**ステートメントについて説明します。
 
-> **\_\_try**<br/>
+> **\_\_試してみる**<br/>
 > {<br/>
-> &nbsp;&nbsp;&nbsp;&nbsp;// guarded code<br/>
+> &nbsp;&nbsp;&nbsp;&nbsp;//保護されたコード<br/>
 > }<br/>
-> **\_\_finally**<br/>
+> **\_\_最後**<br/>
 > {<br/>
-> &nbsp;&nbsp;&nbsp;&nbsp;// termination code<br/>
+> &nbsp;&nbsp;&nbsp;&nbsp;//終了コード<br/>
 > }
 
 ## <a name="grammar"></a>文法
 
 *try-finally-statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **\_\_try** *compound-statement* **\_\_finally** *compound-statement*
+&nbsp;&nbsp;&nbsp;&nbsp; **\_\_try** *複合ステートメント* **\_\_finally** *複合ステートメント*
 
-The **try-finally** statement is a Microsoft extension to the C and C++ languages that enables target applications to guarantee execution of cleanup code when execution of a block of code is interrupted. クリーンアップは、メモリを解放する、ファイルを閉じる、ファイル ハンドルを解放するなどのタスクで構成されます。 The **try-finally** statement is especially useful for routines that have several places where a check is made for an error that could cause premature return from the routine.
+**Try-catch**ステートメントは、コードのブロックの実行が中断されC++た場合に、対象アプリケーションがクリーンアップコードの実行を保証できるようにする、C および言語に対する Microsoft の拡張機能です。 クリーンアップは、メモリを解放する、ファイルを閉じる、ファイル ハンドルを解放するなどのタスクで構成されます。 **Try-catch**ステートメントは、ルーチンからの予期しない戻りが発生する可能性があるエラーに対してチェックが行われる複数の場所を持つルーチンで特に便利です。
 
-For related information and a code sample, see [try-except Statement](../cpp/try-except-statement.md). For more information on structured exception handling in general, see [Structured Exception Handling](../cpp/structured-exception-handling-c-cpp.md). For more information on handling exceptions in managed applications with C++/CLI, see [Exception Handling under /clr](../extensions/exception-handling-cpp-component-extensions.md).
+関連情報とコードサンプルについては、「 [try-Except ステートメント](../cpp/try-except-statement.md)」を参照してください。 構造化例外処理全般の詳細については、「[構造化例外処理](../cpp/structured-exception-handling-c-cpp.md)」を参照してください。 /Cli を使用したC++マネージアプリケーションでの例外処理の詳細については、「 [/Clr での例外処理](../extensions/exception-handling-cpp-component-extensions.md)」を参照してください。
 
 > [!NOTE]
-> 構造化例外処理では、C と C++ のソース ファイルの両方で Win32 を使用します。 ただし、特に C++ 用にデザインされたものではありません。 C++ 例外処理を使用して、コードの移植性を高めることができます。 また、C++ 例外処理は、任意の型の例外を処理できるという点で、より柔軟です。 For C++ programs, it is recommended that you use the C++ exception-handling mechanism ([try, catch, and throw](../cpp/try-throw-and-catch-statements-cpp.md) statements).
+> 構造化例外処理では、C と C++ のソース ファイルの両方で Win32 を使用します。 ただし、特に C++ 用にデザインされたものではありません。 C++ 例外処理を使用して、コードの移植性を高めることができます。 また、C++ 例外処理は、任意の型の例外を処理できるという点で、より柔軟です。 プログラムC++については、 C++例外処理機構 ([try、catch、および throw](../cpp/try-throw-and-catch-statements-cpp.md)ステートメント) を使用することをお勧めします。
 
-The compound statement after the **__try** clause is the guarded section. The compound statement after the **__finally** clause is the termination handler. ハンドラーは、保護されたセクションが例外によって終了 (異常終了) したか、標準的なフォール スルー (正常終了) で終了したかにかかわらず、保護されたセクションが終了したときに実行する一連の操作を指定します。
+**__Try**句の後の複合ステートメントは、保護されたセクションです。 **__Finally**句の後の複合ステートメントは、終了ハンドラーです。 ハンドラーは、保護されたセクションが例外によって終了 (異常終了) したか、標準的なフォール スルー (正常終了) で終了したかにかかわらず、保護されたセクションが終了したときに実行する一連の操作を指定します。
 
-Control reaches a **__try** statement by simple sequential execution (fall through). When control enters the **__try**, its associated handler becomes active. 制御のフローが try ブロックの終わりに到達すると、次のように実行は処理されます。
+制御は、単純な順次実行 (フォールスルー) によって **__try**のステートメントに到達します。 コントロールが **__try**に入ると、関連付けられているハンドラーがアクティブになります。 制御のフローが try ブロックの終わりに到達すると、次のように実行は処理されます。
 
 1. 終了ハンドラーが呼び出されます。
 
-1. When the termination handler completes, execution continues after the **__finally** statement. Regardless of how the guarded section ends (for example, via a **goto** out of the guarded body or a **return** statement), the termination handler is executed *before* the flow of control moves out of the guarded section.
+1. 終了ハンドラーが完了すると、 **__finally**ステートメントの後で実行が続行されます。 保護されたセクションがどのように終了するかに関係なく (たとえば、保護された本体または**return**ステートメントからの**goto**を使用して)、制御フローが保護されたセクションから移動*する前に*終了ハンドラーが実行されます。
 
-   A **__finally** statement does not block searching for an appropriate exception handler.
+   **__Finally**ステートメントは、適切な例外ハンドラーの検索をブロックしません。
 
-If an exception occurs in the **__try** block, the operating system must find a handler for the exception or the program will fail. If a handler is found, any and all **__finally** blocks are executed and execution resumes in the handler.
+**__Try**ブロックで例外が発生した場合、オペレーティングシステムが例外のハンドラーを見つける必要があるか、プログラムが失敗します。 ハンドラーが見つかった場合は、すべての **__finally**ブロックが実行され、ハンドラーで実行が再開されます。
 
 たとえば、次の図に示すように、一連の関数呼び出しで、関数 A を関数 D にリンクするとします。 各関数には、1 つの終了ハンドラーがあります。 関数 D で例外が発生し、A で処理されると、スタックがアンワインドされるときに、終了ハンドラーは D、C、B の順に呼び出されます。
 
-![Order of termination&#45;handler execution](../cpp/media/vc38cx1.gif "Order of termination&#45;handler execution") <br/>
+![終了&#45;ハンドラーの実行順序](../cpp/media/vc38cx1.gif "終了&#45;ハンドラーの実行順序") <br/>
 終了順序 - ハンドラーの実行
 
 > [!NOTE]
-> The behavior of try-finally is different from some other languages that support the use of **finally**, such as C#.  A single **__try** may have either, but not both, of **__finally** and **__except**.  両方を一緒に使用する場合は、外側の try-except ステートメントで内側の try-finally ステートメントを囲む必要があります。  各ブロックがいつ実行されるかを指定する規則も異なります。
+> Try-finally の動作は、など、 **finally**の使用をサポートする他の言語とC#は異なります。  1つの **__try**には、 **__finally**と **__except**の両方ではなく、両方を含めることができます。  両方を一緒に使用する場合は、外側の try-except ステートメントで内側の try-finally ステートメントを囲む必要があります。  各ブロックがいつ実行されるかを指定する規則も異なります。
 
-For compatibility with previous versions, **_try**, **_finally**, and **_leave** are synonyms for **__try**, **__finally**, and **__leave** unless compiler option [/Za \(Disable language extensions)](../build/reference/za-ze-disable-language-extensions.md) is specified.
+以前のバージョンとの互換性を維持するために、 **_try**、 **_finally**、および **_leave**は、コンパイラオプション[/Za __finally 言語拡張を無効にする)](../build/reference/za-ze-disable-language-extensions.md)が指定されていない限り、 **__try**、 **__leave**、および **\(** のシノニムです。
 
 ## <a name="the-leave-keyword"></a>__leave キーワード
 
-The **__leave** keyword is valid only within the guarded section of a **try-finally** statement, and its effect is to jump to the end of the guarded section. 実行は、終了ハンドラーの最初のステートメントに移って続行されます。
+**__Leave**キーワードは、 **try-catch**ステートメントの保護されたセクション内でのみ有効であり、その結果、保護されたセクションの末尾に移動します。 実行は、終了ハンドラーの最初のステートメントに移って続行されます。
 
-A **goto** statement can also jump out of the guarded section, but it degrades performance because it invokes stack unwinding. The **__leave** statement is more efficient because it does not cause stack unwinding.
+**Goto**ステートメントは、保護されたセクションからジャンプすることもできますが、スタックアンワインドを呼び出すため、パフォーマンスが低下します。 **__Leave**ステートメントは、スタックアンワインドが発生しないため、より効率的です。
 
 ## <a name="abnormal-termination"></a>異常終了
 
-Exiting a **try-finally** statement using the [longjmp](../c-runtime-library/reference/longjmp.md) run-time function is considered abnormal termination. It is illegal to jump into a **__try** statement, but legal to jump out of one. All **__finally** statements that are active between the point of departure (normal termination of the **__try** block) and the destination (the **__except** block that handles the exception) must be run. これは、ローカル アンワインドと呼ばれます。
+[Longjmp](../c-runtime-library/reference/longjmp.md)ランタイム関数を使用して、 **finally**ステートメントを終了すると、異常終了と見なされます。 **__Try**ステートメントにジャンプすることはできませんが、1つから除外することはできます。 出発点 ( **__try**ブロックの通常の終了) と変換先 (例外を処理する **__except**ブロック) の間でアクティブなすべての **__finally**ステートメントを実行する必要があります。 これは、ローカル アンワインドと呼ばれます。
 
-If a **try** block is prematurely terminated for any reason, including a jump out of the block, the system executes the associated **finally** block as a part of the process of unwinding the stack. In such cases, the [AbnormalTermination](/windows/win32/Debug/abnormaltermination) function returns **true** if called from within the **finally** block; otherwise, it returns **false**.
+**Try**ブロックが、ブロックからのジャンプを含め、何らかの理由で途中で終了した場合、スタックをアンワインドするプロセスの一部として、関連付けられている**finally**ブロックが実行されます。 このような場合、 [Abnormaltermination](/windows/win32/Debug/abnormaltermination)関数は、 **finally**ブロック内から呼び出されると**true**を返します。それ以外の場合は**false**を返します。
 
-The termination handler is not called if a process is killed in the middle of executing a **try-finally** statement.
+**Finally**ステートメントの実行中にプロセスが強制終了した場合、終了ハンドラーは呼び出されません。
 
-**Microsoft 固有の仕様はここまで**
+**END Microsoft 固有の仕様**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Writing a termination handler](../cpp/writing-a-termination-handler.md)<br/>
-[構造化例外処理 (C/C++)](../cpp/structured-exception-handling-c-cpp.md)<br/>
+[終了ハンドラーの記述](../cpp/writing-a-termination-handler.md)<br/>
+[Structured Exception Handling (C/C++)](../cpp/structured-exception-handling-c-cpp.md)<br/>
 [キーワード](../cpp/keywords-cpp.md)<br/>
-[Termination-Handler Syntax](/windows/win32/Debug/termination-handler-syntax)
+[終了ハンドラーの構文](/windows/win32/Debug/termination-handler-syntax)

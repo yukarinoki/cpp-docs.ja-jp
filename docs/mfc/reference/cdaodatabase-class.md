@@ -79,13 +79,13 @@ class CDaoDatabase : public CObject
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|名前|[説明]|
+|Name|説明|
 |----------|-----------------|
 |[CDaoDatabase:: CDaoDatabase](#cdaodatabase)|`CDaoDatabase` オブジェクトを構築します。 オブジェクトをデータベースに接続するには、`Open` を呼び出します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|名前|[説明]|
+|Name|説明|
 |----------|-----------------|
 |[CDaoDatabase:: CanTransact](#cantransact)|データベースでトランザクションがサポートされている場合は、0以外の値を返します。|
 |[CDaoDatabase:: CanUpdate](#canupdate)|`CDaoDatabase` オブジェクトが更新可能な場合 (読み取り専用ではない場合) は0以外の値を返します。|
@@ -113,7 +113,7 @@ class CDaoDatabase : public CObject
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
-|名前|[説明]|
+|Name|説明|
 |----------|-----------------|
 |[CDaoDatabase:: m_pDAODatabase](#m_pdaodatabase)|基になる DAO データベースオブジェクトへのポインター。|
 |[CDaoDatabase:: m_pWorkspace](#m_pworkspace)|データベースを格納し、そのトランザクション領域を定義する[CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md)オブジェクトへのポインター。|
@@ -122,7 +122,7 @@ class CDaoDatabase : public CObject
 
 サポートされているデータベース形式の詳細については、「 [GetName](../../mfc/reference/cdaoworkspace-class.md#getname)メンバー関数」を参照してください。 `CDaoDatabase`CDaoWorkspace[ オブジェクトによって表される特定の "ワークスペース" で一度に1つ以上の](../../mfc/reference/cdaoworkspace-class.md)オブジェクトをアクティブにすることができます。 ワークスペースは、Databases コレクションと呼ばれる、開いているデータベースオブジェクトのコレクションを保持します。
 
-## <a name="usage"></a>使用方法
+## <a name="usage"></a>使用法
 
 レコードセットオブジェクトを作成するときに、データベースオブジェクトを暗黙的に作成することができます。 ただし、データベースオブジェクトを明示的に作成することもできます。 既存のデータベースを `CDaoDatabase`で明示的に使用するには、次のいずれかの操作を行います。
 
@@ -890,7 +890,7 @@ void SetQueryTimeout(short nSeconds);
 
 関連情報については、DAO ヘルプの「データのプロパティ」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [CObject クラス](../../mfc/reference/cobject-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)<br/>

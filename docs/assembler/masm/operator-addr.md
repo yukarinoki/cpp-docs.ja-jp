@@ -8,21 +8,21 @@ helpviewer_keywords:
 - ADDR operator
 - operator ADDR
 ms.assetid: 9c2a46e4-3222-4a5b-baa2-07bdb62b7d03
-ms.openlocfilehash: 79e7df05adc19ad6e795c16044b02b1e6b286da4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8e45b2dfc05b3708e37618f42491ec47d90a8d9c
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176838"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397121"
 ---
 # <a name="operator-addr"></a>ADDR 演算子
 
-参照してください、 [INVOKE](../../assembler/masm/invoke.md)ディレクティブ。
+[INVOKE](../../assembler/masm/invoke.md)ディレクティブを参照してください。
 
 ## <a name="syntax"></a>構文
 
-> ADDR
+> **引き**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[演算子リファレンス](../../assembler/masm/operators-reference.md)<br/>
+[演算子リファレンス](../../assembler/masm/operators-reference.md)

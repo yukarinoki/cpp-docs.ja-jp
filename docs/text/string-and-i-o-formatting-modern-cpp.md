@@ -53,7 +53,7 @@ int main()
 
 - 便利: 標準 Posix と類似の書式指定文字列。
 
-`Boost.Format` は、安全でC++拡張性のある[iostream >\<](../standard-library/iostream-programming.md)に基づいて構築されていますが、パフォーマンスに最適化されていません。 パフォーマンスの最適化が必要な場合には、高速で使いやすい、C の [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) および [sprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md) を検討します。 ただし、これらは拡張可能であり、脆弱性から安全ではありません。 (セキュリティが強化されたバージョンがありますが、わずかながらパフォーマンスが低下します。 詳細については、「 [printf_s、_printf_s_l、wprintf_s、_wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)と[sprintf_s、_sprintf_s_l、swprintf_s、_swprintf_s_l](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md))」を参照してください。
+`Boost.Format` は、安全でC++拡張性のある[iostream >\<](../standard-library/iostream-programming.md)に基づいて構築されていますが、パフォーマンスに最適化されていません。 パフォーマンスの最適化が必要な場合は、高速で使いやすい C [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)と[sprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)を検討してください。 ただし、これらは拡張可能であり、脆弱性から安全ではありません。 (セキュリティが強化されたバージョンがありますが、わずかながらパフォーマンスが低下します。 詳細については、「 [printf_s、_printf_s_l、wprintf_s、_wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)と[sprintf_s、_sprintf_s_l、swprintf_s、_swprintf_s_l](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md))」を参照してください。
 
 次のコードは、Boost の書式設定機能のいくつかを示します。
 
@@ -67,11 +67,11 @@ int main()
     // Jean de Lattre de Tassigny              +33 (0) 987 654 321
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [に戻るC++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [C++ 言語リファレンス](../cpp/cpp-language-reference.md)<br/>
-[.NET 標準ライブラリ](../standard-library/cpp-standard-library-reference.md)<br/>
+[C++ 標準ライブラリ](../standard-library/cpp-standard-library-reference.md)<br/>
 [\<iostream>](../standard-library/iostream.md)<br/>
 [\<limits>](../standard-library/limits.md)<br/>
 [\<iomanip >](../standard-library/iomanip.md)

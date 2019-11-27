@@ -1,5 +1,5 @@
 ---
-title: Compiler Warning (level 3) C4534
+title: コンパイラの警告 (レベル 3) C4534
 ms.date: 11/04/2016
 f1_keywords:
 - c4534
@@ -13,15 +13,15 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/19/2019
 ms.locfileid: "74189090"
 ---
-# <a name="compiler-warning-level-3-c4534"></a>Compiler Warning (level 3) C4534
+# <a name="compiler-warning-level-3-c4534"></a>コンパイラの警告 (レベル 3) C4534
 
-'constructor' will not be a default constructor for class 'class' due to the default argument
+既定の引数により、' constructor ' はクラス ' class ' の既定のコンストラクターになりません
 
-An unmanaged class can have a constructor with parameters that have default values and the compiler will use this as the default constructor. A class marked with the `value` keyword will not use a constructor with default values for its parameters as a default constructor.
+アンマネージクラスは、既定値を持つパラメーターを持つコンストラクターを持つことができ、コンパイラはこれを既定のコンストラクターとして使用します。 `value` キーワードでマークされたクラスは、パラメーターの既定値を持つコンストラクターを既定のコンストラクターとして使用しません。
 
 詳細については、「[クラスと構造体](../../extensions/classes-and-structs-cpp-component-extensions.md)」を参照してください。
 
-The following sample generates C4534:
+次の例では、C4534 が生成されます。
 
 ```cpp
 // C4534.cpp

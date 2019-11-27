@@ -25,7 +25,7 @@ C++ 17 標準では、`noexcept`のエイリアス `throw()` し、`throw(<type 
 
 ## <a name="remarks"></a>Remarks
 
-**/Zc: noexceptTypes**オプションが指定されている場合、コンパイラは c++ 17 標準に準拠し、 [throw ()](../../cpp/exception-specifications-throw-cpp.md)を[noexcept](../../cpp/noexcept-cpp.md)のエイリアスとして扱い、`throw(<type list>)` と `throw(...)`を削除し、特定の型に `noexcept`を含めることができるようにします。 **/Zc: noexceptTypes**オプションは、 [/std: c++ 17](std-specify-language-standard-version.md)または[/std: latest](std-specify-language-standard-version.md)が有効になっている場合にのみ使用できます。 **/Zc: noexceptTypes**は、ISO c++ 17 標準に準拠するように既定で有効になっています。 [/Permissive-](permissive-standards-conformance.md)オプションは、 **/zc: noexceptTypes**には影響しません。 このオプションをオフにするには、 **/zc: noexceptTypes-** を指定して、 **/std: c++ 17**または **/std: latest**が指定されているときに `noexcept` の c++ 14 の動作に戻します。
+ときに、 **/zc: noexcepttypes**オプションを指定すると、コンパイラは、標準の C++17 に準拠しているし、処理[throw()](../../cpp/exception-specifications-throw-cpp.md)のエイリアスとして[noexcept](../../cpp/noexcept-cpp.md)を削除します`throw(<type list>)`。 **/Zc: noexcepttypes**場合オプションは使用のみ[/std:c++17](std-specify-language-standard-version.md)または[/std:latest](std-specify-language-standard-version.md)を有効にします。 **/Zc: noexceptTypes**は、ISO c++ 17 標準に準拠するように既定で有効になっています。 [/Permissive-](permissive-standards-conformance.md)オプションは、 **/zc: noexceptTypes**には影響しません。 指定することで、このオプションをオフに **/Zc:noexceptTypes-** の C++14 動作に戻す`noexcept`とき **/std:c++17**または **/std:latest**が指定されてです。
 
 Visual Studio 2017 バージョン15.5 以降では、 C++コンパイラは c++ 17 モードでの宣言内で、または[/permissive-](permissive-standards-conformance.md)オプションを指定したときに、一致しない例外指定を診断します。
 

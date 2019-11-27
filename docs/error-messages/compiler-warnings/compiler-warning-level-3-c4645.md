@@ -17,7 +17,7 @@ ms.locfileid: "74189375"
 
 __declspec(noreturn) で宣言された関数に return ステートメントがあります。
 
-A [return](../../cpp/return-statement-in-program-termination-cpp.md) statement was found in a function that is marked with the [noreturn](../../cpp/noreturn.md) `__declspec` modifier. `return` ステートメントは無視されました。
+[Noreturn](../../cpp/noreturn.md) `__declspec` 修飾子でマークされた関数に[return](../../cpp/return-statement-in-program-termination-cpp.md)ステートメントが見つかりました。 `return` ステートメントは無視されました。
 
 次の例では C4645 が生成されます。
 

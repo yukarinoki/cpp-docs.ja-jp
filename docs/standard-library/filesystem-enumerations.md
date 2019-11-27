@@ -51,7 +51,7 @@ enum class copy_options {
 
 ### <a name="values"></a>値
 
-|`Name`|[説明]|
+|`Name`|説明|
 |------------|-----------------|
 |`none`|演算の既定の動作を実行します。|
 |`skip_existing`|ファイルが既に存在する場合はコピーしません。エラーをレポートしません。|
@@ -79,7 +79,7 @@ enum class directory_options {
 
 ### <a name="values"></a>値
 
-|名前|[説明]|
+|Name|説明|
 |----------|-----------------|
 |`none`|既定の動作: ディレクトリへのシンボリック リンクを無視します。 アクセス許可の拒否はエラーです。|
 |`follow_directory_symlink`|ディレクトリへのシンボリック リンクを実際のディレクトリとして処理します。|
@@ -107,7 +107,7 @@ enum class file_type {
 
 ### <a name="values"></a>値
 
-|名前|[値]|[説明]|
+|Name|値|説明|
 |----------|-----------|-----------------|
 |`not_found`|-1|存在しないファイルを表します。|
 |`none`|0|type 属性を持たないファイルを表します (サポートされていません)。|
@@ -161,7 +161,7 @@ enum class perms {// names for permissions
 };
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)\
 [\<filesystem>](../standard-library/filesystem.md)
