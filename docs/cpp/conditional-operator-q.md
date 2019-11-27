@@ -1,5 +1,5 @@
 ---
-title: '条件演算子: &quest;:'
+title: '条件演算子: &quest; :'
 ms.date: 11/04/2016
 f1_keywords:
 - '?:'
@@ -15,7 +15,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/11/2019
 ms.locfileid: "72276808"
 ---
-# <a name="conditional-operator-quest-"></a>条件演算子: &quest;:
+# <a name="conditional-operator-quest-"></a>条件演算子: &quest; :
 
 ## <a name="syntax"></a>構文
 
@@ -70,7 +70,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[C++ の演算子、優先順位と結合規則](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
+[C++ の組み込み演算子、優先順位と結合規則](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
 [条件式演算子](../c-language/conditional-expression-operator.md)
