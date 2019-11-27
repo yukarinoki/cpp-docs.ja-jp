@@ -39,20 +39,20 @@ class CDaoException : public CException
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|名前|[説明]|
+|Name|説明|
 |----------|-----------------|
 |[CDaoException::CDaoException](#cdaoexception)|`CDaoException` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|名前|[説明]|
+|Name|説明|
 |----------|-----------------|
 |[CDaoException::GetErrorCount](#geterrorcount)|データベースエンジンの Errors コレクションに含まれるエラーの数を返します。|
-|[CDaoException::GetErrorInfo](#geterrorinfo)|エラーコレクション内の特定のエラーオブジェクトに関するエラー情報を返します。|
+|[CDaoException:: GetErrorInfo](#geterrorinfo)|エラーコレクション内の特定のエラーオブジェクトに関するエラー情報を返します。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
-|名前|[説明]|
+|Name|説明|
 |----------|-----------------|
 |[CDaoException:: m_nAfxDaoError](#m_nafxdaoerror)|MFC DAO クラスのエラーの拡張エラーコードを格納します。|
 |[CDaoException:: m_pErrorInfo](#m_perrorinfo)|1つの DAO エラーオブジェクトに関する情報を格納する[CDaoErrorInfo](../../mfc/reference/cdaoerrorinfo-structure.md)オブジェクトへのポインター。|
@@ -65,7 +65,7 @@ class CDaoException : public CException
 > [!NOTE]
 >  DAO データベースクラスは、Open Database Connectivity (ODBC) に基づく MFC データベースクラスとは異なります。 すべての DAO データベースクラス名には、"CDao" プレフィックスが付いています。 DAO クラスを使用して ODBC データソースにアクセスすることもできます。 一般に、DAO に基づく MFC クラスは、ODBC に基づく MFC クラスよりも多くの機能を備えています。DAO ベースのクラスは、独自のデータベースエンジンを介して、ODBC ドライバーを介してデータにアクセスできます。 DAO ベースのクラスでは、データ定義言語 (DDL) 操作 (クラスを使用したテーブルの追加など) もサポートされています。 DAO を直接呼び出す必要はありません。 ODBC クラスによってスローされる例外の詳細については、「 [CDBException](../../mfc/reference/cdbexception-class.md)」を参照してください。
 
-例外オブジェクトには、 [CATCH](../../mfc/reference/exception-processing.md#catch)式のスコープ内でアクセスできます。 `CDaoException`AfxThrowDaoException[ グローバル関数を](../../mfc/reference/exception-processing.md#afxthrowdaoexception)使用して、独自のコードからオブジェクトをスローすることもできます。
+例外オブジェクトには、 [CATCH](../../mfc/reference/exception-processing.md#catch)式のスコープ内でアクセスできます。 [AfxThrowDaoException](../../mfc/reference/exception-processing.md#afxthrowdaoexception)グローバル関数を使用して、独自のコードから `CDaoException` オブジェクトをスローすることもできます。
 
 MFC では、すべての DAO エラーは `CDaoException`型の例外として表されます。 この型の例外をキャッチした場合、`CDaoException` メンバー関数を使用して、データベースエンジンの Errors コレクションに格納されている DAO エラーオブジェクトから情報を取得できます。 各エラーが発生すると、エラーコレクションに1つまたは複数のエラーオブジェクトが配置されます。 (通常、コレクションには1つのエラーオブジェクトしか含まれていません。 ODBC データソースを使用している場合は、複数のエラーオブジェクトを取得する可能性が高くなります)。別の DAO 操作によってエラーが生成されると、Errors コレクションがクリアされ、新しい error オブジェクトが Errors コレクションに配置されます。 エラーを生成しない DAO 操作は、Errors コレクションには影響しません。
 
@@ -107,7 +107,7 @@ CDaoException();
 
 1. 例外オブジェクトの[GetErrorInfo](#geterrorinfo)メンバー関数を呼び出して、例外オブジェクトを介して、コレクション内のインデックスを使用して、一度に1つの特定のエラーオブジェクトを取得します。 例外オブジェクトは、1つの DAO エラーオブジェクトのプロキシとして考えてください。
 
-1. [m_pErrorInfo](../../mfc/reference/cdaoerrorinfo-structure.md) データメンバーで返される`GetErrorInfo`現在の [CDaoErrorInfo](#m_perrorinfo) 構造体を調べます。 そのメンバーは、DAO エラーに関する情報を提供します。
+1. [M_pErrorInfo](#m_perrorinfo)データメンバーで `GetErrorInfo` 返される現在の[CDaoErrorInfo](../../mfc/reference/cdaoerrorinfo-structure.md)構造体を調べます。 そのメンバーは、DAO エラーに関する情報を提供します。
 
 1. ODBC データソースの場合は、さらに多くのエラーオブジェクトについて、必要に応じて手順 3. と 4. を繰り返します。
 
@@ -115,7 +115,7 @@ CDaoException();
 
 MFC DAO クラスでのエラー処理の詳細については、「[例外: データベース例外](../../mfc/exceptions-database-exceptions.md)」を参照してください。
 
-##  <a name="geterrorcount"></a>  CDaoException::GetErrorCount
+##  <a name="geterrorcount"></a>CDaoException::GetErrorCount
 
 データベースエンジンの Errors コレクションに含まれる DAO エラーオブジェクトの数を取得するには、このメンバー関数を呼び出します。
 
@@ -134,7 +134,7 @@ short GetErrorCount();
 > [!NOTE]
 >  通常、Errors コレクションには、エラーオブジェクトが1つだけあります。 ただし、ODBC データソースを操作している場合は、複数存在する可能性があります。
 
-##  <a name="geterrorinfo"></a>  CDaoException::GetErrorInfo
+##  <a name="geterrorinfo"></a>CDaoException:: GetErrorInfo
 
 エラーコレクション内の特定のエラーオブジェクトに関するエラー情報を返します。
 
@@ -153,9 +153,9 @@ void GetErrorInfo(int nIndex);
 
 - エラー コード
 
-- [ソース]
+- ソース
 
-- [説明]
+- 説明
 
 - ヘルプ ファイル
 
@@ -183,9 +183,9 @@ MFC の拡張エラーコードを格納します。
 
 - クエリを実行しようとしたが、オープン状態ではない tabledef オブジェクトまたは tabledef オブジェクトに基づいてレコードセットを開こうとした AFX_DAO_ERROR_OBJECT_NOT_OPEN。
 
-##  <a name="m_perrorinfo"></a>  CDaoException::m_pErrorInfo
+##  <a name="m_perrorinfo"></a>CDaoException:: m_pErrorInfo
 
-`CDaoErrorInfo`GetErrorInfo[ を呼び出すこと](#geterrorinfo)によって最後に取得した DAO エラーオブジェクトに関する情報を提供する構造体へのポインターを格納します。
+[GetErrorInfo](#geterrorinfo)を呼び出すことによって最後に取得した DAO error オブジェクトに関する情報を提供する `CDaoErrorInfo` 構造体へのポインターを格納します。
 
 ### <a name="remarks"></a>コメント
 
@@ -194,14 +194,14 @@ MFC の拡張エラーコードを格納します。
 |CDaoErrorInfo メンバー|情報|意味|
 |--------------------------|-----------------|-------------|
 |`m_lErrorCode`|エラー コード|DAO エラーコード|
-|`m_strSource`|[ソース]|最初にエラーを生成したオブジェクトまたはアプリケーションの名前|
-|`m_strDescription`|[説明]|エラーに関連付けられている説明文字列|
+|`m_strSource`|ソース|最初にエラーを生成したオブジェクトまたはアプリケーションの名前|
+|`m_strDescription`|説明|エラーに関連付けられている説明文字列|
 |`m_strHelpFile`|ヘルプファイル|ユーザーが問題に関する情報を取得できる Windows ヘルプファイルへのパス|
 |`m_lHelpContext`|ヘルプコンテキスト|DAO ヘルプファイルのトピックのコンテキスト ID|
 
 `CDaoErrorInfo` オブジェクトに含まれる情報の詳細については、 [CDaoErrorInfo](../../mfc/reference/cdaoerrorinfo-structure.md)構造体を参照してください。
 
-##  <a name="m_scode"></a>  CDaoException::m_scode
+##  <a name="m_scode"></a>CDaoException:: m_scode
 
 エラーを説明する `SCODE` 型の値を格納します。
 
@@ -211,7 +211,7 @@ MFC の拡張エラーコードを格納します。
 
 SCODE の詳細については、「Windows SDK での[OLE エラーコードの構造](/windows/win32/com/structure-of-com-error-codes)」を参照してください。 SCODE データ型は、HRESULT データ型にマップされます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [CException クラス](../../mfc/reference/cexception-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)<br/>

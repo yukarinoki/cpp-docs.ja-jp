@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - PUBLIC directive
 ms.assetid: 56e15a68-8a35-4bdd-b1ec-a38cbbf1c582
-ms.openlocfilehash: 1ff18d3a4e3e5c6141b12c269a7faac1ff0cdefa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ec76b88134d2d9e4cfc3f18abf78f43007ef3806
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210647"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74394740"
 ---
 # <a name="public-masm"></a>PUBLIC (MASM)
 
-各変数、ラベル、またはとして指定された絶対シンボルは、*名前*プログラム内の他のすべてのモジュールを使用できます。
+*Name*として指定された各変数、ラベル、または絶対シンボルを、プログラム内の他のすべてのモジュールで使用できるようにします。
 
 ## <a name="syntax"></a>構文
 
-> [Langtype] のパブリック名 [] [langtype] 名].
+> **PUBLIC** ⟦ language-type ⟧ *name* ⟦ __,__ ⟦ language-type ⟧ *name* ...⟧
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
+[ディレクティブリファレンス](../../assembler/masm/directives-reference.md)

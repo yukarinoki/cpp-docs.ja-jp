@@ -1,5 +1,5 @@
 ---
-title: 'How to: Create and use shared_ptr instances'
+title: '方法: shared_ptr インスタンスを作成して使用する'
 ms.custom: how-to
 ms.date: 11/19/2019
 ms.topic: conceptual
@@ -11,13 +11,13 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74245827"
 ---
-# <a name="how-to-create-and-use-shared_ptr-instances"></a>How to: Create and Use shared_ptr instances
+# <a name="how-to-create-and-use-shared_ptr-instances"></a>方法: shared_ptr インスタンスを作成して使用する
 
 `shared_ptr` 型は、C++ 標準ライブラリ内のスマート ポインターであり、複数の所有者がメモリ内のオブジェクトの有効期間を管理する必要が生じる可能性があるシナリオを想定して設計されたものです。 `shared_ptr` を初期化した後、そのポインターをコピーすること、関数の引数内の値として渡すこと、および他の `shared_ptr` インスタンスに割り当てることができます。 すべてのインスタンスは同じオブジェクトを指し、1 つの "コントロール ブロック" へのアクセスを共有します。このコントロール ブロックは、新しい `shared_ptr` が追加されるとき、スコープ外になるとき、またはリセットされるときに必ず参照カウントをインクリメントおよびデクリメントします。 参照カウントが 0 に達したときに、コントロール ブロックはメモリ リソースと自らを削除します。
 
 次の図に、1 つのメモリ位置を指す `shared_ptr` の複数のインスタンスを示します。
 
-![Shared pointer diagram](media/shared_ptr.png "Shared pointer diagram")
+![共有ポインターの図](media/shared_ptr.png "共有ポインターの図")
 
 ## <a name="example-setup"></a>設定例
 
@@ -72,7 +72,7 @@ int main()
 
 ## <a name="example-1"></a>例 1
 
-最初にメモリ リソースを作成するときは、可能な限り、`shared_ptr` を作成するために [make_shared](../standard-library/memory-functions.md#make_shared) 関数を使用してください。 `make_shared` は例外セーフです。 これは、コントロール ブロックとリソースにメモリを割り当てるために同じ呼び出しを使用し、その結果、構造のオーバーヘッドが削減されます。 `make_shared` を使用しない場合は、オブジェクトを `shared_ptr` コンストラクターに渡す前にオブジェクトを作成するために、明示的な `new` 式を使用する必要があります。 次の例では、新しいオブジェクトと共に `shared_ptr` を宣言して初期化するさまざまな方法を示します。
+最初にメモリ リソースを作成するときは、可能な限り、[ を作成するために ](../standard-library/memory-functions.md#make_shared)make_shared`shared_ptr` 関数を使用してください。 `make_shared` は例外セーフです。 これは、コントロール ブロックとリソースにメモリを割り当てるために同じ呼び出しを使用し、その結果、構造のオーバーヘッドが削減されます。 `make_shared` を使用しない場合は、オブジェクトを `new` コンストラクターに渡す前にオブジェクトを作成するために、明示的な `shared_ptr` 式を使用する必要があります。 次の例では、新しいオブジェクトと共に `shared_ptr` を宣言して初期化するさまざまな方法を示します。
 
 [!code-cpp[stl_smart_pointers#1](codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_1.cpp)]
 
@@ -116,6 +116,6 @@ int main()
 
 [!code-cpp[stl_smart_pointers#3](codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_6.cpp)]
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [スマート ポインター (Modern C++)](smart-pointers-modern-cpp.md)

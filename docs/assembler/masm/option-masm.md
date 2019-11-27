@@ -6,37 +6,37 @@ f1_keywords:
 helpviewer_keywords:
 - OPTION directive
 ms.assetid: 8e10dabd-e36f-4586-ab01-ada96736b0bd
-ms.openlocfilehash: a8215bf1f816baa490a768fb2cab0b3c2e53e20b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0f90ab0115c3dde894d468bbbe60ffa0193b8336
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62217258"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74395168"
 ---
 # <a name="option-masm"></a>OPTION (MASM)
 
-有効にし、アセンブラーの機能を無効にします。
+アセンブラーの機能を有効または無効にします。
 
 ## <a name="syntax"></a>構文
 
-> オプション*optionlist*
+> **オプションオプション**の*一覧*
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-使用可能なオプションは次のとおりです。
+使用可能なオプションには次のものがあります。
 
 |||||
 |-|-|-|-|
 |**CASEMAP**|**DOTNAME**|**NODOTNAME**|**エミュレーター**|
-|**NOEMULATOR**|**EPILOGUE**|**EXPR16**|**EXPR32**|
+|**NOEMULATOR**|**エピローグ**|**EXPR16**|**EXPR32**|
 |**言語**|**LJMP**|**NOLJMP**|**M510**|
-|**NOM510**|**NOKEYWORD**|**NOSIGNEXTEND**|**OFFSET**|
+|**NOM510**|**NOKEYWORD**|**NOSIGNEXTEND**|**影**|
 |**OLDMACROS**|**NOOLDMACROS**|**OLDSTRUCTS**|**NOOLDSTRUCTS**|
 |**PROC**|**プロローグ**|**READONLY**|**NOREADONLY**|
-|**スコープ**|**NOSCOPED**|**SEGMENT**|**SETIF2**します。|
+|**役割**|**NOSCOPED**|**SEGMENT**|**SETIF2**。|
 
-言語の構文は、**オプション言語:**<em>x</em>ここで、 *x* C、SYSCALL、STDCALL、PASCAL、FORTRAN、BASIC のいずれかです。  SYSCALL や PASCAL、FORTRAN、BASIC ではサポートされません併用[します。モデル](../../assembler/masm/dot-model.md)フラットです。
+言語の構文は、 **OPTION language:** <em>x</em>です。ここで、 *x*は C、SYSCALL、STDCALL、PASCAL、FORTRAN、または BASIC.  SYSCALL、PASCAL、FORTRAN、および BASIC は、ではサポートされていません[。モデル](../../assembler/masm/dot-model.md)フラット。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
+[ディレクティブリファレンス](directives-reference.md)

@@ -8,21 +8,21 @@ helpviewer_keywords:
 - NE operator
 - operator NE
 ms.assetid: 0364a3aa-e2f1-499d-8cc7-1fbec318715c
-ms.openlocfilehash: 6a088c0cbe50911cd03d694e178635e8f937fbcb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4accdc038273647197051df719ac408cb76e0c44
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176825"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74396613"
 ---
 # <a name="operator-ne"></a>NE 演算子
 
-True (-1) を返します*expression1*と等しくない*expression2*、または場合は false (0) を返します。
+*Expression1*が*expression2*に等しくない場合は true (-1) を返し、それ以外の場合は false (0) を返します。
 
 ## <a name="syntax"></a>構文
 
-> expression1 NE expression2
+> *expression1* **NE** *expression2*
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[演算子リファレンス](../../assembler/masm/operators-reference.md)<br/>
+[演算子リファレンス](operators-reference.md)

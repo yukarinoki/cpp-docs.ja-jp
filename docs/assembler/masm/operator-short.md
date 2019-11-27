@@ -7,21 +7,21 @@ helpviewer_keywords:
 - operator SHORT
 - SHORT operator
 ms.assetid: 41e0982a-4f4e-4b48-ba58-e32d72053249
-ms.openlocfilehash: 26307b1838d3f6f185ffc6d71c3f24bd4b9945dd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6bfd9e44d997353392b0d370d713968ffd03132b
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62198734"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74396169"
 ---
 # <a name="operator-short"></a>SHORT 演算子
 
-型を設定*ラベル*を短くします。 ジャンプはすべて*ラベル*短い必要があります (ジャンプ命令から 127 バイトに-128 からの範囲で*ラベル*)。
+*ラベル*の種類を short に設定します。 *ラベル*へのすべてのジャンプは、短い形式である必要があります (-128 ~ + 127 バイトの範囲内で、ジャンプ命令から*ラベル*に)。
 
 ## <a name="syntax"></a>構文
 
-> 短いラベル
+> **短い***ラベル*
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[演算子リファレンス](../../assembler/masm/operators-reference.md)<br/>
+[演算子リファレンス](operators-reference.md)

@@ -17,29 +17,29 @@ ms.locfileid: "74245854"
 ---
 # <a name="how-catch-blocks-are-evaluated-c"></a>Catch ブロックの評価方法 (C++)
 
-C++ では任意の型の例外をスローすることができますが、一般に std::exception から派生した型をスローすることが推奨されます。 A C++ exception can be caught by a **catch** handler that specifies the same type as the thrown exception, or by a handler that can catch any type of exception.
+C++ では任意の型の例外をスローすることができますが、一般に std::exception から派生した型をスローすることが推奨されます。 C++例外は、スローされた例外と同じ型を指定する**catch**ハンドラー、または任意の型の例外をキャッチできるハンドラーによってキャッチできます。
 
 スローされる例外の型がクラスである場合、クラスは基底クラスも持つため、その例外は、例外の型の基底クラスを受け入れるハンドラー、および例外の型の基底クラスへの参照を受け入れるハンドラーでキャッチできます。 例外が参照によってキャッチされた場合、それは実際にスローされた例外オブジェクトにバインドされることに注意してください。それ以外の場合は、コピーになります (関数の引数とほぼ同じ)。
 
-When an exception is thrown, it may be caught by the following types of **catch** handlers:
+例外がスローされると、次の種類の**catch**ハンドラーによってキャッチされる可能性があります。
 
 - 任意の型を受け取ることができるハンドラー (省略記号構文を使用)。
 
-- A handler that accepts the same type as the exception object; because it is a copy, **const** and **volatile** modifiers are ignored.
+- 例外オブジェクトと同じ型を受け入れるハンドラー。これはコピーであるため、 **const**修飾子と**volatile**修飾子は無視されます。
 
 - 例外オブジェクトと同じ型への参照を受け入れるハンドラー。
 
-- A handler that accepts a reference to a **const** or **volatile** form of the same type as the exception object.
+- 例外オブジェクトと同じ型の**const**または**volatile**形式への参照を受け入れるハンドラー。
 
-- A handler that accepts a base class of the same type as the exception object; since it is a copy, **const** and **volatile** modifiers are ignored. The **catch** handler for a base class must not precede the **catch** handler for the derived class.
+- Exception オブジェクトと同じ型の基底クラスを受け取るハンドラー。これはコピーであるため、 **const**修飾子と**volatile**修飾子は無視されます。 基底クラスの**catch**ハンドラーは、派生クラスの**catch**ハンドラーの前に配置することはできません。
 
 - 例外オブジェクトと同じ型の基底クラスへの参照を受け取るハンドラー。
 
-- A handler that accepts a reference to a **const** or **volatile** form of a base class of the same type as the exception object.
+- Exception オブジェクトと同じ型の基底クラスの**const**または**volatile**形式への参照を受け入れるハンドラー。
 
 - スローされたポインター オブジェクトが標準的なポインター変換規則によって変換できるポインターを受け取るハンドラー。
 
-The order in which **catch** handlers appear is significant, because handlers for a given **try** block are examined in order of their appearance. たとえば、派生クラスのハンドラーの前に基底クラスのハンドラーを配置するとエラーになります。 After a matching **catch** handler is found, subsequent handlers are not examined. As a result, an ellipsis **catch** handler must be the last handler for its **try** block. (例:
+**Catch**ハンドラーが表示される順序は重要です。これは、特定の**try**ブロックのハンドラーが外観の順序で検証されるためです。 たとえば、派生クラスのハンドラーの前に基底クラスのハンドラーを配置するとエラーになります。 一致する**catch**ハンドラーが見つかると、後続のハンドラーは検証されません。 そのため、省略記号の**catch**ハンドラーは**try**ブロックの最後のハンドラーである必要があります。 例 :
 
 ```cpp
 // ...
@@ -62,8 +62,8 @@ catch( CExcptClass E )
 }
 ```
 
-In this example, the ellipsis **catch** handler is the only handler that is examined.
+この例では、省略記号の**catch**ハンドラーだけが検査されます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Modern C++ best practices for exceptions and error handling](../cpp/errors-and-exception-handling-modern-cpp.md)
+[例外C++とエラー処理に関する最新のベストプラクティス](../cpp/errors-and-exception-handling-modern-cpp.md)

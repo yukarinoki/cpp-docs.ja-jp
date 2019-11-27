@@ -1,6 +1,6 @@
 ---
-title: Raw pointers (C++)
-description: How to use raw pointers in C++
+title: 生のポインターC++()
+description: で生のポインターを使用する方法C++
 ms.date: 11/19/2019
 helpviewer_keywords:
 - pointers [C++]
@@ -11,11 +11,11 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74250686"
 ---
-# <a name="raw-pointers-c"></a>Raw pointers (C++)
+# <a name="raw-pointers-c"></a>生のポインターC++()
 
-A pointer is a type of variable that stores the address of an object in memory and is used to access that object. A *raw pointer* is a pointer whose lifetime is not controlled by an encapsulating object such as a [smart pointer](smart-pointers-modern-cpp.md). A raw pointer can be assigned the address of another non-pointer variable, or it can be assigned a value of [nullptr](nullptr.md). A pointer that has not been assigned a value contains random data.
+ポインターは、オブジェクトのアドレスをメモリに格納し、そのオブジェクトにアクセスするために使用される変数の一種です。 *生のポインター*は、[スマートポインター](smart-pointers-modern-cpp.md)などのカプセル化されたオブジェクトによって有効期間が制御されないポインターです。 生のポインターには、別の非ポインター変数のアドレスを割り当てることも、 [nullptr](nullptr.md)の値を割り当てることもできます。 値が割り当てられていないポインターには、ランダムなデータが含まれています。
 
-A pointer can also be *dereferenced* to retrieve the value of the object that it points at. The *member access operator* provides access to an object's members.
+ポインターを*逆*参照して、そのポインターが指すオブジェクトの値を取得することもできます。 *メンバーアクセス演算子*は、オブジェクトのメンバーへのアクセスを提供します。
 
 ```cpp
     int* p = nullptr; // declare pointer and initialize it
@@ -26,7 +26,7 @@ A pointer can also be *dereferenced* to retrieve the value of the object that it
 
 ```
 
-A pointer can point to a typed object or to **void**. When a program allocates a new object on the [heap](https://wikipedia.org/wiki/Heap) in memory, it receives the address of that object in the form of a pointer. Such pointers are called *owning pointers*; an owning pointer (or a copy of it) must be used to explicitly delete the heap-allocated object when it is no longer needed. Failure to delete the memory results in a *memory leak* and renders that memory location unavailable to any other program on the machine. For more information, see [new and delete operators](new-and-delete-operators.md).
+ポインターは、型指定されたオブジェクトを指すことも、 **void**にすることもできます。 プログラムは、メモリ内の[ヒープ](https://wikipedia.org/wiki/Heap)に新しいオブジェクトを割り当てると、そのオブジェクトのアドレスをポインターの形式で受け取ります。 このようなポインターは、所有している*ポインター*と呼ばれます。不要になったときにヒープ割り当てオブジェクトを明示的に削除するには、所有しているポインター (またはそのコピー) を使用する必要があります。 メモリの削除に失敗すると、*メモリリーク*が発生し、そのメモリの場所をコンピューター上の他のプログラムで使用できなくなります。 詳細については、「 [new および delete 演算子](new-and-delete-operators.md)」を参照してください。
 
 ```cpp
 
@@ -35,7 +35,7 @@ A pointer can point to a typed object or to **void**. When a program allocates a
     delete mc; // delete object (please don't forget!)
 ```
 
-A pointer (if it isn't declared as **const**) can be incremented or decremented so that it points to a new location in memory. This is called *pointer arithmetic* and is used in C-style programming to iterate over elements in arrays or other data structures. A **const** pointer can't be made to point to a different memory location, and in that sense is very similar to a [reference](references-cpp.md). For more information, see [const and volatile pointers](const-and-volatile-pointers.md).
+ポインター ( **const**として宣言されていない場合) は、メモリ内の新しい位置を指すようにインクリメントまたはデクリメントできます。 これは*ポインター演算*と呼ばれ、配列またはその他のデータ構造内の要素を反復処理するために C スタイルのプログラミングで使用されます。 **Const**ポインターを別のメモリ位置を指すようにすることはできません。その意味は[参照](references-cpp.md)とよく似ています。 詳細については、「 [const および volatile ポインター](const-and-volatile-pointers.md)」を参照してください。
 
 ```cpp
     // declare a C-style string. Compiler adds terminating '\0'.
@@ -49,13 +49,13 @@ A pointer (if it isn't declared as **const**) can be incremented or decremented 
     // pconst2 = &c2; // Error! pconst2 is const.
 ```
 
-On 64-bit operating systems, a pointer has a size of 64 bits; a system's pointer size determines how much addressable memory it can have. All copies of a pointer point to the same memory location. Pointers (along with references) are used extensively in C++ to pass larger objects to and from functions because it is usually far more efficient to copy an object's 64-bit address than to copy an entire object. When defining a function, specify pointer parameters as **const** unless you intend for the function to modify the object. In general, **const** references are the preferred way to pass objects to functions unless the value of the object can possibly be **nullptr**.
+64ビットオペレーティングシステムでは、ポインターのサイズは64ビットです。システムのポインターサイズによって、使用可能なメモリの量が決まります。 ポインターのすべてのコピーが同じメモリ位置を指しています。 ポインター (および参照) は、オブジェクト全体をC++コピーするよりも、オブジェクトの64ビットアドレスをコピーする方がはるかに効率的なので、より大きなオブジェクトを関数との間でやり取りするために、で広く使用されています。 関数を定義する場合は、オブジェクトを変更する関数を使用する場合を除き、ポインターパラメーターを**const**として指定します。 一般に、オブジェクトの値が**nullptr**である可能性がある場合を除き、オブジェクトを関数に渡すには、 **const**参照を使用することをお勧めします。
 
-[Pointers to functions](#pointers_to_functions) enable functions to be passed to other functions and are used for "callbacks" in C-style programming. Modern C++ uses [lambda expressions](lambda-expressions-in-cpp.md) for this purpose.
+[関数へのポインター](#pointers_to_functions)を使用すると、関数を他の関数に渡すことができ、C スタイルのプログラミングでは "コールバック" に使用されます。 モダンC++では、この目的に[ラムダ式](lambda-expressions-in-cpp.md)を使用します。
 
-## <a name="initialization-and-member-access"></a>Initialization and member access
+## <a name="initialization-and-member-access"></a>初期化とメンバーアクセス
 
-The following example shows how to declare a raw pointer and initialize it with an object allocated on the heap, and then how to use it. It also shows a few of the dangers associated with raw pointers. (Remember, this is C-style programming and not modern C++!)
+次の例は、生のポインターを宣言し、ヒープに割り当てられたオブジェクトを使用して初期化する方法と、その使用方法を示しています。 また、生のポインターに関連するいくつかの危険についても示します。 (最近C++ではなく C スタイルのプログラミングであることに注意してください)。
 
 ```cpp
 #include <iostream>
@@ -133,14 +133,14 @@ int main()
 }
 ```
 
-## <a name="pointer-arithmetic-and-arrays"></a>Pointer arithmetic and arrays
+## <a name="pointer-arithmetic-and-arrays"></a>ポインターの算術演算と配列
 
-Pointers and arrays are closely related. When an array is passed by-value to a function, it is passed as a pointer to the first element. The following example demonstrates the following important properties of pointers and arrays:
+ポインターと配列は密接に関連しています。 配列が値渡しで関数に渡されると、最初の要素へのポインターとして渡されます。 次の例は、ポインターと配列の次の重要なプロパティを示しています。
 
-- the `sizeof` operator returns the total size in bytes of an array
-- to determine the number of elements, divide total bytes by the size of one element
-- when an array is passed to a function, it *decays* to a pointer type
-- the `sizeof` operator when applied to a pointer returns the pointer size, 4 bytes on x86 or 8 bytes on x64
+- `sizeof` 演算子は、配列の合計サイズ (バイト単位) を返します。
+- 要素の数を決定するには、合計バイトを1つの要素のサイズで除算します。
+- 配列が関数に渡されると、 *decays*はポインター型になります。
+- ポインターに適用されたときの `sizeof` 演算子は、ポインターのサイズ、x86 の場合は4バイト、x64 の場合は8バイトを返します。
 
 ```cpp
 #include <iostream>
@@ -166,9 +166,9 @@ int main()
 }
 ```
 
-Certain arithmetic operations can be performed on non-const pointers to make them point to a new memory location. A pointer can be incremented and decremented using the **++** , **+=** , **-=** and **--** operators. This technique can be used in arrays and is especially useful in buffers of untyped data. A **void\*** increments by the size of a **char** (1 byte). A typed pointer increments by size of the type it points to.
+特定の算術演算を非定数ポインターに対して実行して、新しいメモリ位置を指すようにすることができます。 ポインターは、 **++** 、 **+=** 、 **-=** 、および **--** の各演算子を使用してインクリメントおよびデクリメントできます。 この手法は配列で使用でき、型指定されていないデータのバッファーで特に便利です。 **Void\*** **char** (1 バイト) のサイズによってインクリメントされます。 型指定されたポインターは、ポインターが指す型のサイズによってインクリメントされます。
 
-The following example demonstrates how pointer arithmetic can be used to access individual pixels in a bitmap on Windows. Note the use of **new** and **delete**, and the dereference operator. 
+次の例は、ポインター演算を使用して、Windows 上のビットマップ内の個々のピクセルにアクセスする方法を示しています。 **New**と**delete**、および逆参照演算子の使用に注意してください。 
 
 ```cpp
 #include <Windows.h>
@@ -233,11 +233,11 @@ int main()
 }
 ```
 
-## <a name="void-pointers"></a>void* pointers
+## <a name="void-pointers"></a>void * ポインター
 
-A pointer to **void** simply points to a raw memory location. Sometimes it is necessary to use **void\*** pointers, for example when passing between C++ code and C functions. 
+**Void**へのポインターは、単純に生のメモリ位置を指します。 場合によっては、コードと C 関数の間C++を渡すときなどに、 **void\*** ポインターを使用する必要があります。 
 
-When a typed pointer is cast to a void pointer, the contents of the memory location are not changed, but the type information is lost, so that you can't perform increment or decrement operations. A memory location can be cast, for example, from MyClass* to void* and back again to MyClass*. Such operations are inherently error-prone and require great care to avoid errors. Modern C++ discourages the use of void pointers unless absolutely necessary.
+型指定されたポインターが void ポインターにキャストされた場合、メモリ位置の内容は変更されませんが、インクリメントまたはデクリメント操作を実行できないように、型情報は失われます。 たとえば、MyClass * から void * へのメモリ位置をキャストして、再び MyClass * に戻ることができます。 このような操作は本質的にエラーが発生しやすく、エラーを回避するために細心の注意が必要です。 最新C++では、絶対に必要な場合を除き、void ポインターを使用することはできません。
 
 ```cpp
 
@@ -290,11 +290,11 @@ int main()
 }
 ```
 
-## <a name="pointers_to_functions"></a> Pointers to functions
+## <a name="pointers_to_functions"></a>関数へのポインター
 
-In C-style programming, function pointers are used primarily to pass functions to other functions. In this scenario, the caller can customize the behavior of a function without modifying it. In modern C++, [lambda expressions](lambda-expressions-in-cpp.md) provide the same capability with greater type safety and other advantages.
+C スタイルのプログラミングでは、関数ポインターは主に他の関数に関数を渡すために使用されます。 このシナリオでは、呼び出し元は関数の動作を変更せずにカスタマイズできます。 最新C++の[ラムダ式](lambda-expressions-in-cpp.md)では、より高いタイプセーフとその他の利点により、同じ機能が提供されます。
 
-A function pointer declaration specifies the signature that the pointed-to function must have:
+関数ポインター宣言は、ポイント先の関数が持つ必要があるシグネチャを指定します。
 
 ```cpp
 // Declare pointer to any function that...
@@ -310,7 +310,7 @@ void (*x)();
 int (*i)(int i, string s, double d);
 ```
 
-The following example shows a function `combine` that takes as a parameter any function that accepts a `std::string` and returns a `std::string`. Depending on the function that is passed to `combine` it will either prepend or append a string.
+次の例は、`std::string` を受け取り、`std::string`を返す関数をパラメーターとして受け取る関数 `combine` を示しています。 `combine` に渡される関数に応じて、文字列を先頭または末尾に追加します。
 
 ```cpp
 #include <iostream>
@@ -342,9 +342,9 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Smart pointers](smart-pointers-modern-cpp.md)
-[Indirection Operator: *](indirection-operator-star.md)<br/>
+[スマートポインター](smart-pointers-modern-cpp.md)
+[間接演算子: *](indirection-operator-star.md)<br/>
 [address-of 演算子: &](address-of-operator-amp.md)</br>
-[Welcome back to C++](welcome-back-to-cpp-modern-cpp.md)
+[に戻るC++](welcome-back-to-cpp-modern-cpp.md)

@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - YMMWORD directive
 ms.assetid: 955a7d23-6150-4056-befc-7f72e8258ecb
-ms.openlocfilehash: 26050c5d2498c321c0db9fc3e19d4d9e57e46255
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 58f4b8d9a654a83633e2f57219356f1a4197c127
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62216911"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74392765"
 ---
 # <a name="ymmword"></a>YMMWORD
 
-Intel Advanced Vector Extensions (AVX) 命令で 256 ビットのマルチ メディア オペランドに使用されます。
+Intel Advanced Vector Extensions (AVX) 命令を含む256ビットマルチメディアオペランドで使用されます。
 
 ## <a name="syntax"></a>構文
 
-> YMMWORD
+> **YMMWORD**
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-`YMMWORD` 同じ型を表すために、 `__m256` AVX 組み込みの。
+**Ymmword**は、AVX 組み込みの `__m256` と同じ型を表すことを目的としています。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
+[ディレクティブリファレンス](directives-reference.md)

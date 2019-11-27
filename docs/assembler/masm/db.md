@@ -6,27 +6,27 @@ f1_keywords:
 helpviewer_keywords:
 - DB directive
 ms.assetid: 0c69ccaa-043f-46e1-9f95-dc76d9bc87c8
-ms.openlocfilehash: 0dd3a4e06b19c04a495c5c30f5d10405ddfea57e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cc67cd01990f541e6d2590a08c988476324c297f
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179043"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398816"
 ---
 # <a name="db"></a>DB
 
-割り当て、必要に応じて、各ストレージのバイトを初期化します`initializer`します。 `DB` シノニムです[バイト](../../assembler/masm/byte-masm.md)
+各*初期化子*のストレージのバイトを割り当て、必要に応じて初期化します。 **DB**は[BYTE](../../assembler/masm/byte-masm.md)のシノニムです。
 
 ## <a name="syntax"></a>構文
 
-> [name]DB の初期化子 [] の初期化子].
+> ⟦*name*⟧ **DB** *初期化子*⟦ __、__ *初期化子*...⟧
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-型指定子としても使用できる型が有効な任意の場所。
+型が有効である任意の場所で、型指定子として使用することもできます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
-[DB](../../assembler/masm/db.md)<br/>
-[SBYTE](../../assembler/masm/sbyte-masm.md)<br/>
+[ディレクティブリファレンス](../../assembler/masm/directives-reference.md)\
+[DB](../../assembler/masm/db.md)\
+[SBYTE](../../assembler/masm/sbyte-masm.md)

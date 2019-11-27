@@ -1,7 +1,7 @@
 ﻿---
-title: Pointers (C++)
+title: ポインター (C++)
 ms.date: 11/19/2019
-description: About raw pointers and smart pointers in Microsoft C++.
+description: Microsoft C++における生のポインターとスマートポインターについて説明します。
 helpviewer_keywords:
 - pointers (C++)
 ms.assetid: 595387c5-8e58-4670-848f-344c7caf985e
@@ -12,28 +12,28 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74246415"
 ---
-# <a name="pointers-c"></a>Pointers (C++)
+# <a name="pointers-c"></a>ポインター (C++)
 
-A pointer is a variable that stores the memory address of an object. Pointers are used extensively in both C and C++ for three main purposes:
+ポインターは、オブジェクトのメモリアドレスを格納する変数です。 ポインターは、次の3つのC++主な目的で、C との両方で広く使用されています。
 
-- to allocate new objects on the heap,
-- to pass functions to other functions
-- to iterate over elements in arrays or other data structures.
+- ヒープに新しいオブジェクトを割り当てるには、
+- 関数を他の関数に渡すには
+- 配列またはその他のデータ構造体の要素を反復処理する場合は。
 
-In C-style programming, *raw pointers* are used for all these scenarios. However, raw pointers are the source of many serious programming errors. Therefore, their use is strongly discouraged except where they provide a significant performance benefit and there is no ambiguity as to which pointer is the *owning pointer* that is responsible for deleting the object. Modern C++ provides *smart pointers* for allocating objects, *iterators* for traversing data structures, and *lambda expressions* for passing functions. By using these language and library facilities instead of raw pointers, you will make your program safer, easier to debug, and simpler to understand and maintain. See [Smart pointers](smart-pointers-modern-cpp.md), [Iterators](../standard-library/iterators.md), and [Lambda expressions](lambda-expressions-in-cpp.md) for more information.
+C スタイルのプログラミングでは、これらすべてのシナリオに*生のポインター*が使用されます。 しかし、生のポインターは、多くの重大なプログラミングエラーの原因になります。 そのため、パフォーマンスが大幅に向上し、オブジェクトの削除を*担当するポインター*がどのポインターであるかについて、あいまいさがないことを除いて、使用することはお勧めしません。 モダンC++には、オブジェクトを割り当てるための*スマートポインター* 、データ構造を走査する*反復子*、および関数を渡す*ラムダ式*が用意されています。 生のポインターではなく、これらの言語およびライブラリ機能を使用することにより、プログラムの安全性とデバッグが容易になり、理解と保守が簡単になります。 詳細については、「[スマートポインター](smart-pointers-modern-cpp.md)、[反復子](../standard-library/iterators.md)、および[ラムダ式](lambda-expressions-in-cpp.md)」を参照してください。
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-- [Raw pointers](raw-pointers.md)
-- [Const and volatile pointers](const-and-volatile-pointers.md)
-- [new and delete operators](new-and-delete-operators.md)
-- [Smart pointers](smart-pointers-modern-cpp.md)
-- [How to: Create and use unique_ptr instances](how-to-create-and-use-unique-ptr-instances.md)
-- [How to: Create and use shared_ptr instances](how-to-create-and-use-shared-ptr-instances.md)
-- [How to: Create and use weak_ptr instances](how-to-create-and-use-weak-ptr-instances.md)
-- [How to: Create and use CComPtr and CComQIPtr instances](how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md)
+- [生のポインター](raw-pointers.md)
+- [Const ポインターと volatile ポインター](const-and-volatile-pointers.md)
+- [new 演算子と delete 演算子](new-and-delete-operators.md)
+- [スマートポインター](smart-pointers-modern-cpp.md)
+- [方法: unique_ptr インスタンスを作成して使用する](how-to-create-and-use-unique-ptr-instances.md)
+- [方法: shared_ptr インスタンスを作成して使用する](how-to-create-and-use-shared-ptr-instances.md)
+- [方法: weak_ptr インスタンスを作成して使用する](how-to-create-and-use-weak-ptr-instances.md)
+- [方法: CComPtr インスタンスと CComQIPtr インスタンスを作成して使用する](how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md)
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [反復子](../standard-library/iterators.md)</br>
 [ラムダ式](lambda-expressions-in-cpp.md)

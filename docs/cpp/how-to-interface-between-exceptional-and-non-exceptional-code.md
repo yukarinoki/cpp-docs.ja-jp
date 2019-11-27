@@ -1,5 +1,5 @@
 ﻿---
-title: 'How to: Interface between exceptional and non-exceptional code'
+title: '方法: 例外的なコードと非例外的なコードの間のインターフェイス'
 ms.custom: how-to
 ms.date: 11/19/2019
 ms.topic: conceptual
@@ -11,19 +11,19 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74245609"
 ---
-# <a name="how-to-interface-between-exceptional-and-non-exceptional-code"></a>How to: Interface between exceptional and non-exceptional code
+# <a name="how-to-interface-between-exceptional-and-non-exceptional-code"></a>方法: 例外的なコードと非例外的なコードの間のインターフェイス
 
 ここでは、C++ モジュールで一貫した例外処理を実装する方法と、例外の境界でエラー コードとの間でそれらの例外を変換する方法を説明します。
 
-C++ モジュールは、例外を使用しないコード (非例外コード) とのやり取りが必要な場合があります。 Such an interface is known as an *exception boundary*. たとえば、C++ プログラム中で Win32 関数 `CreateFile` を呼び出すことが必要な場合があります。 `CreateFile` は例外をスローせず、`GetLastError` 関数で取得できるエラー コードを設定します。 作成する C++ プログラムが重要である場合、一貫した例外ベースのエラー処理ポリシーを適用するのが一般的です。 また、非例外コードとやり取りするというだけの理由から例外の使用をあきらめたり、例外ベースのエラー ポリシーと非例外ベースのエラー ポリシーを C++ モジュールで混在させないことが一般的です。
+C++ モジュールは、例外を使用しないコード (非例外コード) とのやり取りが必要な場合があります。 このようなインターフェイスは、*例外の境界*と呼ばれます。 たとえば、C++ プログラム中で Win32 関数 `CreateFile` を呼び出すことが必要な場合があります。 `CreateFile` は例外をスローしません。代わりに、`GetLastError` 関数によって取得できるエラーコードを設定します。 作成する C++ プログラムが重要である場合、一貫した例外ベースのエラー処理ポリシーを適用するのが一般的です。 また、非例外コードとやり取りするというだけの理由から例外の使用をあきらめたり、例外ベースのエラー ポリシーと非例外ベースのエラー ポリシーを C++ モジュールで混在させないことが一般的です。
 
-## <a name="calling-non-exceptional-functions-from-c"></a>Calling non-exceptional functions from C++
+## <a name="calling-non-exceptional-functions-from-c"></a>からの非例外的関数の呼び出しC++
 
-C++ から非例外関数を呼び出す場合、すべてのエラーを検出して例外をスローする C ++ 関数でその関数をラップします。 そのようなラッパー関数を設計するときは、まず提供する例外保証の種類 (no-throw、strong、basic) を決定します。 次に、例外がスローされるときにすべてのリソース (たとえばファイル ハンドル) が正しく解放されるように関数を設計します。 通常は、スマート ポインターなどのリソース マネージャー使用してリソースを所有することになります。 For more information about design considerations, see [How to: Design for Exception Safety](how-to-design-for-exception-safety.md).
+C++ から非例外関数を呼び出す場合、すべてのエラーを検出して例外をスローする C ++ 関数でその関数をラップします。 そのようなラッパー関数を設計するときは、まず提供する例外保証の種類 (no-throw、strong、basic) を決定します。 次に、例外がスローされるときにすべてのリソース (たとえばファイル ハンドル) が正しく解放されるように関数を設計します。 通常は、スマート ポインターなどのリソース マネージャー使用してリソースを所有することになります。 設計上の考慮事項の詳細については、「[方法: 例外の安全性を](how-to-design-for-exception-safety.md)確保する」を参照してください。
 
 ### <a name="example"></a>例
 
-次の例は、内部的に Win32 関数 `CreateFile` と `ReadFile` を使用して 2 個のファイルを開いて読み取る C++ 関数を示しています。  `File` クラスは、ファイル ハンドルの RAII (Resource Acquisition Is Initialization) ラッパーです。 そのコンストラクターは、"ファイルが見つからない" 状態を検出し、例外をスローして、C++ モジュールの呼び出し履歴の上方向 (この例では `main()` 関数) にエラーを伝達します。 `File` オブジェクトが完全に作成された後で例外がスローされる場合、デストラクターは自動的に `CloseHandle` を呼び出してファイル ハンドルを解放します (If you prefer, you can use the Active Template Library (ATL) `CHandle` class for this same purpose, or a `unique_ptr` together with a custom deleter.) The functions that call Win32 and CRT APIs detect errors and then throw C++ exceptions using the locally-defined `ThrowLastErrorIf` function, which in turn uses the `Win32Exception` class, derived from the `runtime_error` class. この例のすべての関数は、strong 例外保証を提供します。つまり、これらの関数のどの場所で例外がスローされても、リソースがリークせず、プログラムの状態も変更されません。
+次の例は、内部的に Win32 関数 `CreateFile` と `ReadFile` を使用して 2 個のファイルを開いて読み取る C++ 関数を示しています。  `File` クラスは、ファイル ハンドルの RAII (Resource Acquisition Is Initialization) ラッパーです。 そのコンストラクターは、"ファイルが見つからない" 状態を検出し、例外をスローして、C++ モジュールの呼び出し履歴の上方向 (この例では `main()` 関数) にエラーを伝達します。 `File` オブジェクトが完全に作成された後で例外がスローされる場合、デストラクターは自動的に `CloseHandle` を呼び出してファイル ハンドルを解放します (必要に応じて、同じ目的で Active Template Library (ATL) `CHandle` クラスを使用することも、カスタム削除子と共に `unique_ptr` を使用することもできます。Win32 と CRT の Api を呼び出す関数は、エラーを検出C++し、ローカルに定義された `ThrowLastErrorIf` 関数を使用して例外をスローします。この関数は、`runtime_error` クラスから派生した `Win32Exception` クラスを使用します。 この例のすべての関数は、strong 例外保証を提供します。つまり、これらの関数のどの場所で例外がスローされても、リソースがリークせず、プログラムの状態も変更されません。
 
 ```cpp
 // compile with: /EHsc
@@ -158,7 +158,7 @@ int main ( int argc, char* argv[] )
 }
 ```
 
-## <a name="calling-exceptional-code-from-non-exceptional-code"></a>Calling exceptional code from non-exceptional code
+## <a name="calling-exceptional-code-from-non-exceptional-code"></a>例外的なコードからの例外的なコードの呼び出し
 
 "extern C" と宣言された C++ の関数は C プログラムから呼び出すことができます。 C++ COM サーバーは、さまざまな言語で記述されたコードで使用できます。 非例外コードから呼び出される、例外に対応した C++ のパブリック関数を実装する場合、C++ の関数は、例外が呼び出し元に伝達されないようにする必要があります。 したがって、C++ の関数は、対処方法がわかっているすべての例外を明示的にキャッチし、呼び出し元が理解できるエラー コードに適宜変換する必要があります。 発生する可能性があるすべての例外が不明な場合は、C++ の関数の最後のハンドラーとして `catch(...)` ブロックを記述します。 その場合、プログラムが不明な状態になる可能性があるため、呼び出し元に致命的なエラーを報告することをお勧めします。
 
@@ -191,7 +191,7 @@ BOOL DiffFiles2(const string& file1, const string& file2)
 }
 ```
 
-例外からエラー コードに変換するとき、考えられる 1 つの問題は、例外に格納できるような豊富な情報がエラー コードに含まれていないことが多いということです。 To address this, you can provide a **catch** block for each specific exception type that might be thrown, and perform logging to record the details of the exception before it is converted to an error code. This approach can create a lot of code repetition if multiple functions all use the same set of **catch** blocks. A good way to avoid code repetition is by refactoring those blocks into one private utility function that implements the **try** and **catch** blocks and accepts a function object that is invoked in the **try** block. 各パブリック関数では、ラムダ式としてユーティリティ関数にコードを渡します。
+例外からエラー コードに変換するとき、考えられる 1 つの問題は、例外に格納できるような豊富な情報がエラー コードに含まれていないことが多いということです。 これに対処するには、スローされる可能性のある特定の例外の種類ごとに**catch**ブロックを指定し、エラーコードに変換される前に、例外の詳細を記録するログ記録を実行します。 この方法では、複数の関数が同じ**catch**ブロックのセットを使用している場合に、多数のコードの繰り返しが生成される可能性があります。 コードの繰り返しを回避するには、これらのブロックを、 **try**ブロックと**catch**ブロックを実装し、 **try**ブロックで呼び出された関数オブジェクトを受け入れるプライベートユーティリティ関数にリファクタリングします。 各パブリック関数では、ラムダ式としてユーティリティ関数にコードを渡します。
 
 ```cpp
 template<typename Func>
@@ -234,7 +234,7 @@ bool DiffFiles3(const string& file1, const string& file2)
 
 ラムダ式について詳しくは、「[ラムダ式](lambda-expressions-in-cpp.md)」をご覧ください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Modern C++ best practices for exceptions and error handling](errors-and-exception-handling-modern-cpp.md)<br/>
+[例外C++とエラー処理に関する最新のベストプラクティス](errors-and-exception-handling-modern-cpp.md)<br/>
 [方法: 例外安全性に対応した設計をする](how-to-design-for-exception-safety.md)<br/>

@@ -6,34 +6,34 @@ f1_keywords:
 helpviewer_keywords:
 - .ALLOCSTACK directive
 ms.assetid: 9801594b-7ac2-4df2-a49d-07d9dd9af99e
-ms.openlocfilehash: b92db3d03bb5c45e67473cd4085f2369698f6b42
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6d9d86371503992d1bebe738fb6e6773581b10e3
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62185654"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398630"
 ---
 # <a name="allocstack"></a>.ALLOCSTACK
 
-生成されます、 **UWOP_ALLOC_SMALL**または**UWOP_ALLOC_LARGE**プロローグ内の現在のオフセットのサイズを指定しています。
+プロローグ内の現在のオフセットに対して、指定したサイズの**UWOP_ALLOC_SMALL**または**UWOP_ALLOC_LARGE**を生成します。
 
 ## <a name="syntax"></a>構文
 
-> .ALLOCSTACK サイズ
+> **.ALLOCSTACK** *サイズ*
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-MASM は最も効率的なエンコーディングを指定されたサイズを選択します。
+MASM は、特定のサイズに対して最も効率的なエンコードを選択します。
 
-.ALLOCSTACK が ml64.exe ユーザーは、フレームの関数をアンワインドする方法を指定することしから拡張すると、プロローグ内でのみ使用できますが、 [PROC](../../assembler/masm/proc.md)フレームの宣言、[します。ENDPROLOG](../../assembler/masm/dot-endprolog.md)ディレクティブ。 これらのディレクティブは、コードを生成しませんのみを生成する`.xdata`と`.pdata`します。 .ALLOCSTACK は、実際にアンワインド操作を実装する手順によって先行されなければなりません。 アンワインド ディレクティブと契約を確認します。 マクロでのアンワインドに本来はコードの両方をラップすることをお勧めします。
+**.ALLOCSTACK**を使用すると、ml64.exe ユーザーは、フレーム関数をアンワインドする方法を指定できます。プロローグ内では、 [PROC](../../assembler/masm/proc.md) frame 宣言からに拡張され[ます。ENDPROLOG](../../assembler/masm/dot-endprolog.md)ディレクティブ。 これらのディレクティブはコードを生成しません。`.xdata` と `.pdata`のみが生成されます。 **.ALLOCSTACK**の前には、アンワインドするアクションを実際に実装する命令が必要です。 アンワインドディレクティブと、マクロでアンワインドするコードをラップして、アグリーメントを保証することをお勧めします。
 
-`size`オペランドは 8 の倍数である必要があります。
+*サイズ*オペランドは8の倍数である必要があります。
 
-詳細については、次を参照してください。 [x64 用 MASM (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md)します。
+詳細については、「 [MASM for x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md)」を参照してください。
 
 ## <a name="sample"></a>サンプル
 
-次の例では、アンワインド/例外ハンドラーを指定する方法を示します。
+次の例は、アンワインド/例外ハンドラーを指定する方法を示しています。
 
 ```asm
 ; ml64 ex3.asm /link /entry:Example1  /SUBSYSTEM:Console
@@ -63,6 +63,6 @@ text ENDS
 END
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
+[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)

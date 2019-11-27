@@ -155,6 +155,6 @@ ms.locfileid: "74304302"
 
 アプリケーションをビルドして実行します。 ウィンドウのサイズを変更すると、グラデーション四角形が変化します。 "Hello World!" 四角形の中央に表示されます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [チュートリアル](../mfc/walkthroughs-mfc.md)

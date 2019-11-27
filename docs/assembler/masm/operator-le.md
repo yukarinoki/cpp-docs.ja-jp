@@ -8,21 +8,21 @@ helpviewer_keywords:
 - LE operator
 - operator LE
 ms.assetid: 3192e7ac-7577-47bd-ae3e-2cdebcc4e568
-ms.openlocfilehash: f461117a3f47c90b9f1866743bca5419433ac82d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 59f4e3117b3fe19e4902fc9a321dc08af0da70d8
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62200760"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74396864"
 ---
 # <a name="operator-le"></a>LE 演算子
 
-True (-1) を返します*expression1*に等しいまたはそれよりも小さい*expression2*、ない場合は、false (0) を返します。
+*Expression1*が*expression2*以下の場合は true (-1) を返し、そうでない場合は false (0) を返します。
 
 ## <a name="syntax"></a>構文
 
-> expression1 LE expression2
+> *expression1* **LE** *expression2*
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[演算子リファレンス](../../assembler/masm/operators-reference.md)<br/>
+[演算子リファレンス](operators-reference.md)

@@ -98,6 +98,6 @@ Arm のアーキテクチャでは、arm プロセッサには弱い順序付け
 
 X86 および x64 アーキテクチャでは、MSVC を使用してこれらのアーキテクチャ用に既に作成されているソフトウェアの多くが依存しているため、既定値は **/volatile: ms**です。 X86 および x64 プログラムをコンパイルするときに、 **/volatile: iso**スイッチを指定すると、従来の volatile セマンティクスに対する不要な依存を回避し、移植性を高めることができます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ARM プロセッサ用の Visual C ++ の構成する](configuring-programs-for-arm-processors-visual-cpp.md)

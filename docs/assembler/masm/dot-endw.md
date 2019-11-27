@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - .ENDW directive
 ms.assetid: c288fa8a-2f1b-4a13-aba2-04157e84110e
-ms.openlocfilehash: 41d94d4c9caca4fc05b4996b3614526dd2808799
-ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
+ms.openlocfilehash: 00489fb00c4424084625e7603355a8be3a1b1961
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73703377"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398444"
 ---
 # <a name="endw-32-bit-masm"></a>.ENDW (32 ビット MASM)
 
 ## <a name="syntax"></a>構文
 
-> .ENDW
+> **.ENDW**
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
 (32 ビット MASM のみ。)「」を参照してください[。しばらくお待ち](../../assembler/masm/dot-while.md)ください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
+[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)

@@ -1,5 +1,5 @@
 ﻿---
-title: Modern C++ best practices for exceptions and error handling
+title: 例外C++とエラー処理に関する最新のベストプラクティス
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: a6c111d0-24f9-4bbb-997d-3db4569761b7
@@ -10,7 +10,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74245862"
 ---
-# <a name="modern-c-best-practices-for-exceptions-and-error-handling"></a>Modern C++ best practices for exceptions and error handling
+# <a name="modern-c-best-practices-for-exceptions-and-error-handling"></a>例外C++とエラー処理に関する最新のベストプラクティス
 
 最新の C++ のほとんどのシナリオでは、論理エラーとランタイム エラーの両方を報告および処理する方法として、例外を使用することが推奨されます。 これは特に、エラーを検出した関数からその処理方法を認識するためのコンテキストを持つ関数までの間に、複数の関数がスタックに含まれる可能性がある場合に当てはまります。 例外は、エラーを検出して情報を呼び出し履歴に渡すコードに関する、正しく定義された正式な方法を提供します。
 
@@ -60,29 +60,29 @@ int main()
 }
 ```
 
-C++ の例外は、C# や Java などの言語と似ています。 In the **try** block, if an exception is *thrown* it will be *caught* by the first associated **catch** block whose type matches that of the exception. In other words, execution jumps from the **throw** statement to the **catch** statement. 使用可能な catch ブロックが見つからない場合、`std::terminate` が呼び出されてプログラムが終了します。 C++ では、どの種類もスローされる可能性があります。ただし、`std::exception` から直接または間接的に派生した型をスローすることをお勧めします。 In the previous example, the exception type, [invalid_argument](../standard-library/invalid-argument-class.md), is defined in the standard library in the [\<stdexcept>](../standard-library/stdexcept.md) header file. C++ does not provide, and does not require, a **finally** block to make sure that all resources are released if an exception is thrown. スマート ポインターを使用する Resource Acquisition Is Initialization (RAII) の表現形式には、リソース クリーンアップのための必須機能が用意されています。 For more information, see [How to: Design for Exception Safety](how-to-design-for-exception-safety.md). For information about the C++ stack-unwinding mechanism, see [Exceptions and Stack Unwinding](exceptions-and-stack-unwinding-in-cpp.md).
+C++ の例外は、C# や Java などの言語と似ています。 **Try**ブロックでは、例外が*スロー*された場合は、例外の型と一致する型を持つ最初に関連付けられた**catch**ブロックによって*キャッチ*されます。 つまり、実行は**throw**ステートメントから**catch**ステートメントにジャンプします。 使用可能な catch ブロックが見つからない場合、`std::terminate` が呼び出されてプログラムが終了します。 C++ では、どの種類もスローされる可能性があります。ただし、`std::exception` から直接または間接的に派生した型をスローすることをお勧めします。 前の例では、例外の種類として[invalid_argument](../standard-library/invalid-argument-class.md)が[\<stdexcept >](../standard-library/stdexcept.md)ヘッダーファイルの標準ライブラリに定義されています。 C++では、例外がスローされた場合にすべてのリソースが解放されるようにするために、 **finally**ブロックが提供されることはありません。 スマート ポインターを使用する Resource Acquisition Is Initialization (RAII) の表現形式には、リソース クリーンアップのための必須機能が用意されています。 詳細については、「[方法: 例外の安全性を](how-to-design-for-exception-safety.md)確保する」を参照してください。 C++スタックアンワインド機構の詳細については、「[例外とスタックアンワインド](exceptions-and-stack-unwinding-in-cpp.md)」を参照してください。
 
 ## <a name="basic-guidelines"></a>基本的なガイドライン
 
 堅牢なエラー処理は、どのプログラミング言語でも簡単ではありません。 例外には、適切なエラー処理をサポートする機能がいくつか用意されていますが、すべての処理を自動的に行うことはできません。 例外機構の利点を理解するため、コードをデザインするときに例外を念頭に置いてください。
 
-- 発生することのないエラーをチェックするには、アサートを使用します。 発生する可能性があるエラー (たとえば、パブリック関数のパラメーターにおける入力検証のエラーなど) をチェックするには、例外を使用します。 For more information, see the section titled **Exceptions vs. Assertions**.
+- 発生することのないエラーをチェックするには、アサートを使用します。 発生する可能性があるエラー (たとえば、パブリック関数のパラメーターにおける入力検証のエラーなど) をチェックするには、例外を使用します。 詳細については、「**例外とアサーション**」を参照してください。
 
 - 例外は、エラーを処理するコードが、1 つ以上の介在する関数呼び出しによりエラーを検出したコードから切り離されている可能性がある場合に使用します。 エラーを処理するコードが、エラーを検出したコードに密に結合されている場合は、パフォーマンスが重要なループで代わりにエラー コードを使用するかどうかを検討します。
 
-- 例外をスローまたは伝達する可能性のある関数ごとに、strong 保証、basic 保証、nothrow (noexcept) 保証の 3 つの例外保証のいずれかを指定します。 For more information, see [How to: Design for Exception Safety](how-to-design-for-exception-safety.md).
+- 例外をスローまたは伝達する可能性のある関数ごとに、strong 保証、basic 保証、nothrow (noexcept) 保証の 3 つの例外保証のいずれかを指定します。 詳細については、「[方法: 例外の安全性を](how-to-design-for-exception-safety.md)確保する」を参照してください。
 
 - 値渡しで例外をスローし、参照渡しでそれらの例外をキャッチします。 処理できない例外をキャッチしないでください。
 
-- C++11 で非推奨とされた例外指定を使用しないでください。 For more information, see the section titled **Exception specifications and noexcept**.
+- C++11 で非推奨とされた例外指定を使用しないでください。 詳細については、「**例外の指定」および「noexcept**」を参照してください。
 
-- 標準ライブラリの例外の種類は、適用するときに使用します。 Derive custom exception types from the [exception Class](../standard-library/exception-class.md) hierarchy.
+- 標準ライブラリの例外の種類は、適用するときに使用します。 [例外クラス](../standard-library/exception-class.md)階層からカスタム例外の種類を派生させます。
 
 - 例外がデストラクターまたはメモリ解放関数からエスケープしないようにしてください。
 
 ## <a name="exceptions-and-performance"></a>例外とパフォーマンス
 
-例外がスローされない場合、例外機構によるパフォーマンスの低下はごくわずかです。 例外がスローされた場合、スタックの走査およびアンワインドによるパフォーマンスの低下は、関数呼び出しとほぼ同程度です。 Additional data structures are required to track the call stack after a **try** block is entered, and additional instructions are required to unwind the stack if an exception is thrown. ただし、ほとんどの場合、パフォーマンスの低下とメモリ使用量の増加はそれほど大きくありません。 パフォーマンスに対する例外の悪影響は、メモリ制約が非常に大きいシステムでのみ大きくなる可能性があります。エラーが定期的に発生する可能性が高く、エラーを処理するコードがエラーを報告したコードに密に結合されている、パフォーマンスが重要なループでも大きくなる可能性があります。 いずれの場合も、プロファイリングや測定を行わずに例外の実際の影響を把握することは不可能です。 影響が大きくなるまれな場合でも、優れたデザインの例外ポリシーにより実現する正確さの向上、管理の容易さ、他の利点と比較することができます。
+例外がスローされない場合、例外機構によるパフォーマンスの低下はごくわずかです。 例外がスローされた場合、スタックの走査およびアンワインドによるパフォーマンスの低下は、関数呼び出しとほぼ同程度です。 **Try**ブロックが入力された後に呼び出し履歴を追跡するために、追加のデータ構造が必要です。例外がスローされた場合は、スタックをアンワインドするために追加の手順が必要になります。 ただし、ほとんどの場合、パフォーマンスの低下とメモリ使用量の増加はそれほど大きくありません。 パフォーマンスに対する例外の悪影響は、メモリ制約が非常に大きいシステムでのみ大きくなる可能性があります。エラーが定期的に発生する可能性が高く、エラーを処理するコードがエラーを報告したコードに密に結合されている、パフォーマンスが重要なループでも大きくなる可能性があります。 いずれの場合も、プロファイリングや測定を行わずに例外の実際の影響を把握することは不可能です。 影響が大きくなるまれな場合でも、優れたデザインの例外ポリシーにより実現する正確さの向上、管理の容易さ、他の利点と比較することができます。
 
 ## <a name="exceptions-vs-assertions"></a>例外とアサーション
 
@@ -90,16 +90,16 @@ C++ の例外は、C# や Java などの言語と似ています。 In the **try
 
 ## <a name="c-exceptions-versus-windows-seh-exceptions"></a>C++ 例外と Windows SEH 例外
 
-C プログラムと C++ プログラムのどちらでも、Windows オペレーティング システムの構造化例外処理 (SEH) 機構を使用できます。 The concepts in SEH resemble those in C++ exceptions, except that SEH uses the **__try**, **__except**, and **__finally** constructs instead of **try** and **catch**. In the Microsoft C++ compiler (MSVC), C++ exceptions are implemented for SEH. ただし、C++ コードを記述するときは、C++ 例外構文を使用してください。
+C プログラムと C++ プログラムのどちらでも、Windows オペレーティング システムの構造化例外処理 (SEH) 機構を使用できます。 Seh C++の概念は例外の概念と似ていますが、seh は**try**や**catch**ではなく **__try**、 **__except**、および **__finally**コンストラクトを使用する点が異なります。 Microsoft C++コンパイラ (MSVC) では、 C++ SEH に例外が実装されています。 ただし、C++ コードを記述するときは、C++ 例外構文を使用してください。
 
-For more information about SEH, see [Structured Exception Handling (C/C++)](structured-exception-handling-c-cpp.md).
+SEH の詳細については、「[構造化例外処理 (C++C/)](structured-exception-handling-c-cpp.md)」を参照してください。
 
 ## <a name="exception-specifications-and-noexcept"></a>例外指定と noexcept
 
-例外指定は、関数がスローする可能性がある例外を指定する方法として C++ に導入されました。 ただし、実際には例外指定に問題があることがわかったため、C++11 ドラフト標準では非推奨とされます。 We recommend that you do not use exception specifications except for `throw()`, which indicates that the function allows no exceptions to escape. If you must use exception specifications of the type `throw(`*type*`)`, be aware that MSVC departs from the standard in certain ways. For more information, see [Exception Specifications (throw)](exception-specifications-throw-cpp.md). `noexcept` 指定子は、`throw()` の推奨される代替手段として C++11 に導入されました。
+例外指定は、関数がスローする可能性がある例外を指定する方法として C++ に導入されました。 ただし、実際には例外指定に問題があることがわかったため、C++11 ドラフト標準では非推奨とされます。 `throw()`以外の例外を使用しないことをお勧めします。これは、関数では例外をエスケープできないことを示します。 型 *`)``throw(`型の*例外指定を使用する必要がある場合は、標準の MSVC 逸脱が特定の方法で使用されていることに注意してください。 詳細については、「[例外の指定 (throw)](exception-specifications-throw-cpp.md)」を参照してください。 `noexcept` 指定子は、`throw()` の推奨される代替手段として C++11 に導入されました。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [方法: 例外的なコードと非例外的なコードをインターフェイスで連結する](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)<br/>
 [C++ 言語リファレンス](../cpp/cpp-language-reference.md)<br/>
-[.NET 標準ライブラリ](../standard-library/cpp-standard-library-reference.md)
+[C++ 標準ライブラリ](../standard-library/cpp-standard-library-reference.md)

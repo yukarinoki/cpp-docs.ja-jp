@@ -20,7 +20,7 @@ ms.locfileid: "74245088"
 ---
 # <a name="gx-enable-exception-handling"></a>/GX (例外処理の有効化)
 
-非推奨。 Enables synchronous exception handling using the assumption that functions declared by using `extern "C"` never throw an exception.
+非推奨。 `extern "C"` を使用して宣言された関数が例外をスローしないことを想定して、同期例外処理を有効にします。
 
 ## <a name="syntax"></a>構文
 
@@ -28,25 +28,25 @@ ms.locfileid: "74245088"
 /GX
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-**/GX** is deprecated. Use the equivalent [/EHsc](eh-exception-handling-model.md) option instead. For a list of deprecated compiler options, see the **Deprecated and Removed Compiler Options** section in [Compiler Options Listed by Category](compiler-options-listed-by-category.md).
+**/Gx**は非推奨とされます。 代わりに、 [/ehsc](eh-exception-handling-model.md)オプションを使用してください。 非推奨のコンパイラオプションの一覧については、「[カテゴリ別のコンパイラオプション](compiler-options-listed-by-category.md)」の「**非推奨のコンパイラオプション**」セクションを参照してください。
 
-By default, **/EHsc**, the equivalent of **/GX**, is in effect when you compile by using the Visual Studio development environment. When using the command line tools, no exception handling is specified. This is the equivalent of **/GX-** .
+既定では、 **/ehsc**は **/gx**に相当しますが、Visual Studio 開発環境を使用してコンパイルすると有効になります。 コマンドラインツールを使用する場合、例外処理は指定されません。 これは、 **/GX-** に相当します。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
 
 1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関する記事を参照してください。
 
-1. In the navigation pane, choose **Configuration Properties**, **C/C++** , **Command Line**.
+1. ナビゲーションウィンドウで、 **[構成プロパティ]** 、 **[CC++/]** 、 **[コマンドライン]** の順に選択します。
 
 1. [追加のオプション] ボックスにコンパイラ オプションを入力します。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには
 
-- 以下を参照してください。<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>
+- 「<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [MSVC コンパイラ オプション](compiler-options.md)<br/>
 [MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)<br/>

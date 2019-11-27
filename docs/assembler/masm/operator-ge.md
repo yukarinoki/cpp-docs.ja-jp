@@ -8,21 +8,21 @@ helpviewer_keywords:
 - GE operator
 - operator GE
 ms.assetid: 28804311-174d-42d0-9ce1-2187b81bc844
-ms.openlocfilehash: 63b8486a6d3f7d8b61dc5befaaf43296f71f9ec0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 45bd137ab5833d11691261eaaa370daccdc08ed4
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176773"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74396965"
 ---
 # <a name="operator-ge"></a>GE 演算子
 
-True (-1) を返します*expression1*がより大きいまたは等しい*expression2*、ない場合は、false (0) を返します。
+*Expression1*が*expression2*以上の場合は true (-1) を返し、そうでない場合は false (0) を返します。
 
 ## <a name="syntax"></a>構文
 
-> expression1 GE expression2
+> *expression1* **GE** *expression2*
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[演算子リファレンス](../../assembler/masm/operators-reference.md)<br/>
+[演算子リファレンス](operators-reference.md)

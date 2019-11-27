@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - '@B symbol'
 ms.assetid: ca17c71a-4a5d-4470-a098-484c781dbfa7
-ms.openlocfilehash: 0d21f09491a7349585e2a1a33092177940aac163
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: 884830036bcca47c9e1d7355c2f75f5b86e5d4dd
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74302857"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74399237"
 ---
 # <a name="b"></a>\@B
 
@@ -21,6 +21,6 @@ ms.locfileid: "74302857"
 
 > **\@B**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[シンボル リファレンス](../../assembler/masm/symbols-reference.md)
+[シンボルリファレンス](symbols-reference.md)

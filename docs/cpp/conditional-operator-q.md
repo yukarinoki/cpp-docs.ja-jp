@@ -1,5 +1,5 @@
 ---
-title: '条件演算子: @no__t 0:'
+title: '条件演算子: &quest; :'
 ms.date: 11/04/2016
 f1_keywords:
 - '?:'
@@ -15,7 +15,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/11/2019
 ms.locfileid: "72276808"
 ---
-# <a name="conditional-operator-quest-"></a>条件演算子: @no__t 0:
+# <a name="conditional-operator-quest-"></a>条件演算子: &quest; :
 
 ## <a name="syntax"></a>構文
 

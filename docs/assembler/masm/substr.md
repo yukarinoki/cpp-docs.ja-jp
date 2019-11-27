@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - SUBSTR directive
 ms.assetid: d1aa9a7d-a03a-4213-93ad-ee92635fd58a
-ms.openlocfilehash: 93aa1bd434a645f3c7e29fc42429e48978f062fa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b284ca80bc2db195c35af3e5ca45441e97d9b7f1
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62217100"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74393509"
 ---
 # <a name="substr"></a>SUBSTR
 
-部分文字列を返します*テキスト アイテム*開始位置として、*位置*します。 *テキスト アイテム*前に定数リテラル文字列を指定できます、 `%`、またはマクロの関数によって返される文字列。
+*位置*から始まる*textitem*の部分文字列を返します。 *Textitem*には、リテラル文字列、`%`の前にある定数、またはマクロ関数によって返される文字列を指定できます。
 
 ## <a name="syntax"></a>構文
 
-> 名前を SUBSTR テキスト アイテム、位置 [] の長さ]
+> *名前* **SUBSTR** *textitem* __、__ *position* ⟦ __、__ *length*⟧
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
+[ディレクティブリファレンス](../../assembler/masm/directives-reference.md)

@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - FWORD directive
 ms.assetid: 8fd33d12-d49d-4e2a-80ac-0f55792e99be
-ms.openlocfilehash: 85ea61b4d2d08e183663d4c0d1e15f998b49d3c4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 65fd1c35ce5787b0fc0fa3ecb2cb5cb48050e28b
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62185533"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397494"
 ---
 # <a name="fword"></a>FWORD
 
-割り当て、必要に応じて、それぞれの 6 バイトのストレージを初期化します`initializer`します。
+は、*初期化子*ごとに6バイトのストレージを割り当て、必要に応じて初期化します。
 
 ## <a name="syntax"></a>構文
 
-> [name]FWORD 初期化子 [] の初期化子].
+> ⟦*name*⟧ **fword** *初期化子*⟦ __、__ *初期化子*...⟧
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-また、型指定子として使用できる型が有効な任意の場所。
+型が有効である任意の場所で、型指定子として使用することもできます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
-[DF](../../assembler/masm/df.md)<br/>
+[ディレクティブリファレンス](../../assembler/masm/directives-reference.md)\
+[DF](../../assembler/masm/df.md)

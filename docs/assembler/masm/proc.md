@@ -6,31 +6,31 @@ f1_keywords:
 helpviewer_keywords:
 - PROC directive
 ms.assetid: ee5bb6b6-fa15-4d73-b0cf-e650178539a9
-ms.openlocfilehash: e7931c97570c0fefcacb0123d75934867793fba4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5d1e44fcc4adbbe012b2f31fe9c6c27511bafff1
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210535"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74395023"
 ---
 # <a name="proc"></a>PROC
 
-呼ばれるプロシージャのブロックの開始と終了をマーク*ラベル*します。 ブロック内のステートメントを呼び出すことができます、**呼び出す**命令または[INVOKE](../../assembler/masm/invoke.md)ディレクティブ。
+*Label*と呼ばれるプロシージャブロックの開始と終了をマークします。 ブロック内のステートメントは、 **CALL**命令または[INVOKE](../../assembler/masm/invoke.md)ディレクティブを使用して呼び出すことができます。
 
 ## <a name="syntax"></a>構文
 
-> *label* PROC [[*distance*]] [[*langtype*]] [[*visibility*]] [[\<*prologuearg*>]] [[USES *reglist*]] [[, *parameter* [[:*tag*]]]] ...<br/>
-> [[FRAME [[:*ehandler-address*]] ]]<br/>
-> *ステートメント*<br/>
-> *ラベル*ENDP
+> *label* **PROC** ⟦*distance*⟧⟦*language-type*⟧⟦*visibility*⟧⟦ __\<__ *prologu氏 g* __>__ ⟧⟦**は** *reglist*⟧⟦ __、__ *parameter* ⟦ __:__ *tag*⟧...⟧\
+> ⟦**FRAME** ⟦ __:__ *ehandler-address*⟧⟧ \
+> *ステートメント*の\
+> *ラベル*の**endp**
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-[フレーム [:*ehandler アドレス*]] は ml64.exe でのみ有効と MASM .pdata で関数のテーブルのエントリを生成し、関数の構造化の .xdata 内の情報をアンワインドすると、例外処理のアンワインド動作します。
+⟦**FRAME** ⟦ __:__ *ehandler-address*⟧⟧は ml64.exe でのみ有効であり、MASM は .xdata 内の関数テーブルエントリを生成し、関数の構造化例外処理のアンワインド動作を実行します。
 
-ときに、**フレーム**属性は、使用が続く必要がありますが、[します。ENDPROLOG](../../assembler/masm/dot-endprolog.md)ディレクティブ。
+**FRAME**属性を使用する場合は、の後にを指定する必要があり[ます。ENDPROLOG](../../assembler/masm/dot-endprolog.md)ディレクティブ。
 
-参照してください[x64 用 MASM (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md) ml64.exe の使用の詳細についてはします。
+Ml64.exe の使用方法の詳細については、「 [MASM for x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md) 」を参照してください。
 
 ## <a name="example"></a>例
 
@@ -54,7 +54,7 @@ _text ENDS
 END
 ```
 
-上記のコードは、次の関数のテーブルを生成し、アンワインド情報。
+上記のコードでは、次の関数テーブルとアンワインド情報が出力されます。
 
 ```Output
 FileHeader->Machine 34404
@@ -77,6 +77,6 @@ Dumping Unwind Information for file ex2.exe
       Code offset: 0x01, PUSH_NONVOL, register=rbp
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
+[ディレクティブリファレンス](../../assembler/masm/directives-reference.md)

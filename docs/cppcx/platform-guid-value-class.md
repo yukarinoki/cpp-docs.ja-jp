@@ -26,19 +26,19 @@ public value struct Guid
 
 ### <a name="members"></a>メンバー
 
-`Platform::Guid` には、 [platform:: Object クラス](../cppcx/platform-object-class.md)から派生した `Equals()`、@no__t 2、および @no__t 3 の各メソッドと、 [Platform:: Type クラス](../cppcx/platform-type-class.md)から派生した @no__t 5 メソッドがあります。 `Platform::Guid` には、次のメンバーもあります。
+`Platform::Guid` には、 [platform:: Object クラス](../cppcx/platform-object-class.md)から派生した `Equals()`、`GetHashCode()`、および `ToString()` メソッドと、 [Platform:: Type クラス](../cppcx/platform-type-class.md)から派生した `GetTypeCode()` メソッドがあります。 `Platform::Guid` には、次のメンバーも含まれます。
 
 |メンバー|説明|
 |------------|-----------------|
 |[Guid](#ctor)|`Platform::Guid` の新しいインスタンスを初期化します。|
 |[operator==](#operator-equality)|等値演算子。|
 |[operator!=](#operator-inequality)|非等値演算子。|
-|[operator&lt;](#operator-less)|小なり演算子。|
-|[operator()](#operator-call)|`Platform::Guid` を `GUID`に変換します。|
+|[operator&lt;](#operator-less)|小なり演算子です。|
+|[演算子 ()](#operator-call)|`Platform::Guid` を `GUID`に変換します。|
 
 ### <a name="remarks"></a>コメント
 
-新しい @no__t 0 を生成するには、 [Windows:: Foundation:: GuidHelper:: CreateNewGuid](/uwp/api/windows.foundation.guidhelper.createnewguid#Windows_Foundation_GuidHelper_CreateNewGuid)静的メソッドを使用します。
+新しい `Platform::Guid`を生成するには、 [Windows:: Foundation:: GuidHelper:: CreateNewGuid](/uwp/api/windows.foundation.guidhelper.createnewguid#Windows_Foundation_GuidHelper_CreateNewGuid) static メソッドを使用します。
 
 ### <a name="requirements"></a>要件
 
@@ -46,7 +46,7 @@ public value struct Guid
 
 **サポートされる最小サーバー:** Windows Server 2012
 
-**名前空間:** プラットフォーム
+**名前空間:** Platform
 
 **メタデータ:** platform.winmd
 
@@ -82,43 +82,43 @@ Guid(
 ### <a name="parameters"></a>パラメーター
 
 *a*<br/>
-@No__t の最初の4バイト。
+`GUID`の最初の4バイト。
 
 *b*<br/>
-@No__t の次の2バイト (0)。
+`GUID`の次の2バイト。
 
 *c*<br/>
-@No__t の次の2バイト (0)。
+`GUID`の次の2バイト。
 
 *d*<br/>
-@No__t の次のバイト数-0。
+`GUID`の次のバイト。
 
 *e*<br/>
-@No__t の次のバイト数-0。
+`GUID`の次のバイト。
 
 *f*<br/>
-@No__t の次のバイト数-0。
+`GUID`の次のバイト。
 
 *g*<br/>
-@No__t の次のバイト数-0。
+`GUID`の次のバイト。
 
 *h*<br/>
-@No__t の次のバイト数-0。
+`GUID`の次のバイト。
 
 *i*<br/>
-@No__t の次のバイト数-0。
+`GUID`の次のバイト。
 
 *祭*<br/>
-@No__t の次のバイト数-0。
+`GUID`の次のバイト。
 
 *k*<br/>
-@No__t の次のバイト数-0。
+`GUID`の次のバイト。
 
 *m*<br/>
 [GUID 構造体](/previous-versions/cc317743(v%3dmsdn.10))の形式の `GUID`。
 
 *n*<br/>
-@No__t の残りの8バイト。-0。
+`GUID`の残りの8バイト。
 
 ## <a name="operator-equality"></a>Guid:: operator = = 演算子
 
@@ -140,7 +140,7 @@ static bool Platform::Guid::operator==(Platform::Guid guid1, Platform::Guid guid
 
 ### <a name="return-value"></a>戻り値
 
-2つの @no__t 0 インスタンスが等しい場合は True。
+2つの `Platform::Guid` インスタンスが等しい場合は True。
 
 ### <a name="remarks"></a>コメント
 
@@ -148,7 +148,7 @@ static bool Platform::Guid::operator==(Platform::Guid guid1, Platform::Guid guid
 
 ## <a name="operator-inequality"></a>Guid:: operator! = 演算子
 
-2つの @no__t 0 のインスタンスを比較して等しくないかどうかを比較します。
+2つの `Platform::Guid` インスタンスが等しくないかどうかを比較します。
 
 ### <a name="syntax"></a>構文
 
@@ -166,11 +166,11 @@ static bool Platform::Guid::operator!=(Platform::Guid guid1, Platform::Guid guid
 
 ### <a name="return-value"></a>戻り値
 
-2つの @no__t 0 インスタンスが等しくない場合は True。
+2つの `Platform::Guid` インスタンスが等しくない場合は True。
 
-## <a name="operator-less"></a>Guid:: operator @ no__t 演算子
+## <a name="operator-less"></a>Guid:: operator&lt; 演算子
 
-2つの @no__t 0 インスタンスの順序付けを比較します。
+2つの `Platform::Guid` インスタンスの順序付けを比較します。
 
 ### <a name="syntax"></a>構文
 
@@ -188,13 +188,13 @@ static bool Platform::Guid::operator<(Platform::Guid guid1, Platform::Guid guid2
 
 ### <a name="return-value"></a>戻り値
 
-*Guid1*が*guid2*の前に並べ替えられている場合は True。 順序付けは、4 32 ビットの符号なしの値の配列であるかのように各 `Platform::Guid` を扱うと、辞書式になります。 これは SQL Server または .NET Framework によって使用される順序ではなく、文字列形式による辞書式の順序付けと同じでもありません。
+*Guid1*が*guid2*の前に並べ替えられている場合は True。 順序付けは、各 `Platform::Guid` が 4 32 ビットの符号なしの値の配列であるかのように処理した後に辞書式になります。 これは SQL Server または .NET Framework によって使用される順序ではなく、文字列形式による辞書式の順序付けと同じでもありません。
 
-この演算子は、 C++標準ライブラリで @no__t 0 オブジェクトをより簡単に使用できるようにするために用意されています。
+この演算子は、 C++標準ライブラリで `Guid` オブジェクトをより簡単に使用できるようにするために用意されています。
 
 ## <a name="operator-call"></a>Guid:: operator () 演算子
 
-@No__t 0 を[GUID 構造体](/previous-versions/cc317743(v%3dmsdn.10))に暗黙的に変換します。
+`Platform::Guid` を[GUID 構造体](/previous-versions/cc317743(v%3dmsdn.10))に暗黙的に変換します。
 
 ### <a name="syntax"></a>構文
 
@@ -206,6 +206,6 @@ const GUID& Platform::Guid::operator();
 
 [GUID 構造体](/previous-versions/cc317743(v%3dmsdn.10))。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [プラットフォーム名前空間](../cppcx/platform-namespace-c-cx.md)

@@ -63,6 +63,6 @@ OLE オートメーション型の**日付**のラッパー。 日付と時刻�
 [COleVariant](../mfc/reference/colevariant-class.md)<br/>
 OLE オートメーション型**バリアント**のラッパー。 **バリアント型**のデータは、さまざまな形式で格納できます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [クラスの概要](../mfc/class-library-overview.md)

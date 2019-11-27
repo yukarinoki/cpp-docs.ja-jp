@@ -45,7 +45,7 @@ template <typename T, typename E>
 Vector オブジェクトに含まれている要素の型。
 
 *E*<br/>
-*T*型の値と等しいかどうかをテストするための二項述語を指定します。既定値は `std::equal_to<T>` です。
+*T*型の値と等しいかどうかをテストするための二項述語を指定します。既定値は `std::equal_to<T>`です。
 
 ### <a name="remarks"></a>コメント
 
@@ -57,7 +57,7 @@ Vector オブジェクトに含まれている要素の型。
 
 1. パブリック ref クラス ^
 
-1. value struct
+1. 値構造体
 
 1. パブリック列挙型クラス
 
@@ -69,13 +69,13 @@ Vector オブジェクトに含まれている要素の型。
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |[Vector:: Vector](#ctor)|ベクター クラスの新しいインスタンスを初期化します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |[Vector:: Append](#append)|指定された項目を、現在の Vector の最後の項目の後に挿入します。|
 |[Vector:: Clear](#clear)|現在のベクター内のすべての要素を削除します。|
@@ -95,8 +95,8 @@ Vector オブジェクトに含まれている要素の型。
 
 |||
 |-|-|
-|名前|説明|
-|イベント[Windows:: Foundation:: Collection:: VectorChangedEventHandler @ no__t-1T > ^ VectorChanged](/uwp/api/windows.foundation.collections.vectorchangedeventhandler)|Vector が変更されたときに発生します。|
+|Name|説明|
+|イベント[Windows:: Foundation:: Collection:: VectorChangedEventHandler\<t > ^ VectorChanged](/uwp/api/windows.foundation.collections.vectorchangedeventhandler)|Vector が変更されたときに発生します。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -198,7 +198,7 @@ virtual unsigned int GetMany(
 
 ### <a name="remarks"></a>コメント
 
-この関数は、直接クライアント コードで使用することを目的としたものではありません。 これは、Platform:: Vector インスタンスから std:: vector インスタンスへの効率的な変換を可能にするために、 [To_vector 関数](../cppcx/to-vector-function.md)で内部的に使用されます。
+この関数は、直接クライアント コードで使用することを目的としたものではありません。 Platform:: Vector インスタンスから std:: vector インスタンスへの効率的な変換を可能にするために、 [To_vector 関数](../cppcx/to-vector-function.md)で内部的に使用されます。
 
 ## <a name="getview"></a>Vector:: GetView メソッド
 
@@ -226,7 +226,7 @@ virtual bool IndexOf(T value, unsigned int* index);
 
 ### <a name="parameters"></a>パラメーター
 
-*value*<br/>
+*値*<br/>
 検索する項目。
 
 *index*<br/>
@@ -375,7 +375,7 @@ Vector(std::initializer_list<T> il);
 *size*<br/>
 ベクターの要素数。
 
-*value*<br/>
+*値*<br/>
 現在のベクターの各要素を初期化するために使用される値。
 
 *v*<br/>
@@ -390,7 +390,7 @@ Vector(std::initializer_list<T> il);
 *last*<br/>
 現在のベクターを初期化するために使用されるオブジェクトのシーケンスの最後の要素。 *最後*のの種類は、*完全転送*によって渡されます。 詳細については、「[右辺値参照宣言子: &&](../cpp/rvalue-reference-declarator-amp-amp.md)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [コレクション (C++/CX)](collections-c-cx.md)<br/>
 [Platform 名前空間](platform-namespace-c-cx.md)<br/>

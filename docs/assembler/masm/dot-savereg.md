@@ -6,27 +6,27 @@ f1_keywords:
 helpviewer_keywords:
 - .SAVEREG directive
 ms.assetid: 1dbc2ef6-a197-40e7-9e55-fddcae8cef29
-ms.openlocfilehash: cac7aa7f2bdbf6b60831d2beb062f86559ec0358
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 324cf0e70a7ad619e5741c9acc18c24a72f54d13
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62178164"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397964"
 ---
 # <a name="savereg"></a>.SAVEREG
 
-いずれかが生成されます、`UWOP_SAVE_NONVOL`または`UWOP_SAVE_NONVOL_FAR`アンワインド コードのエントリの指定した登録 (`reg`) とオフセット (`offset`) プロローグの現在のオフセットを使用します。 MASM は、最も効率的なエンコーディングを選択します。
+現在のプロローグオフセットを使用して、指定したレジスタ (*reg*) とオフセット (*オフセット*) の `UWOP_SAVE_NONVOL` または `UWOP_SAVE_NONVOL_FAR` アンワインドコードエントリを生成します。 MASM は、最も効率的なエンコードを選択します。
 
 ## <a name="syntax"></a>構文
 
-> .SAVEREG reg、オフセット
+> **.SAVEREG** *reg* __、__ *offset*
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-.SAVEREG が ml64.exe ユーザーは、フレームの関数をアンワインドする方法を指定することしから拡張すると、プロローグ内でのみ使用できますが、 [PROC](../../assembler/masm/proc.md)フレームの宣言、[します。ENDPROLOG](../../assembler/masm/dot-endprolog.md)ディレクティブ。 これらのディレクティブは、コードを生成しませんのみを生成する`.xdata`と`.pdata`します。 .SAVEREG は、実際にアンワインド操作を実装する手順によって先行されなければなりません。 アンワインド ディレクティブと契約を確認します。 マクロでのアンワインドに本来はコードの両方をラップすることをお勧めします。
+**.SAVEREG**を使用すると、ml64.exe ユーザーは、フレーム関数をアンワインドする方法を指定できます。プロローグ内では、 [PROC](../../assembler/masm/proc.md) frame 宣言からに拡張され[ます。ENDPROLOG](../../assembler/masm/dot-endprolog.md)ディレクティブ。 これらのディレクティブはコードを生成しません。`.xdata` と `.pdata`のみが生成されます。 **.SAVEREG**の前に、アンワインドするアクションを実際に実装する手順を指定する必要があります。 アンワインドディレクティブと、マクロでアンワインドするコードをラップして、アグリーメントを保証することをお勧めします。
 
-詳細については、次を参照してください。 [x64 用 MASM (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md)します。
+詳細については、「 [MASM for x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
+[ディレクティブリファレンス](directives-reference.md)

@@ -44,7 +44,7 @@ C++標準ライブラリと拡張機能のヘッダーファイル (カテゴリ
 | 範囲 | \<範囲 ><sup>20</sup> |
 | 正規表現 | [\<regex >](regex.md)<sup>11</sup> |
 | 文字列と文字データ | [\<cctype >](cctype.md)、 [\<cstdlib >](cstdlib.md)、 [\<cstring >](cstring.md)、 [\<cuchar >](cuchar.md)<sup>11</sup>、 [\<cwchar >](cwchar.md)、 [\<cwctype >](cwctype.md)、 [\<regex >](regex.md)<sup>11</sup>、 [\<string >](string.md)、 [\<string_view](string-view.md)><sup>17</sup> |
-| 時刻 | [\<chrono >](chrono.md)<sup>11</sup>、 [\<ctime >](ctime.md) |
+| 時間 | [\<chrono >](chrono.md)<sup>11</sup>、 [\<ctime >](ctime.md) |
 
 <sup>11</sup> c++ 11 標準で追加されました。
 <sup>14</sup>は c++ 14 標準で追加されました。
@@ -79,7 +79,7 @@ C++ 17 標準で非推奨<sup>と</sup>されます。
 
 ::: moniker-end
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ライブラリC++ヘッダーの使用](using-cpp-library-headers.md)\
 [C++標準ライブラリ](cpp-standard-library-reference.md)

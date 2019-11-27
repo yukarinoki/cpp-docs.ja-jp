@@ -1659,7 +1659,7 @@
                       href: atl-mfc-shared/cstring-argument-passing.md
                     - name: 'Unicode とマルチバイト文字セット (MBCS: Multibyte Character Set) のサポート'
                       href: atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md
-        - name: 辞書／辞典／その他
+        - name: 関連項目
           expanded: false
           items:
             - name: CSize クラス
@@ -3648,24 +3648,7 @@
             - name: C++ 言語リファレンス
               href: cpp/cpp-language-reference.md
             - name: C++ へようこそ (Modern C++)
-              expanded: false
-              items:
-                - name: C++ へようこそ (Modern C++)
-                  href: cpp/welcome-back-to-cpp-modern-cpp.md
-                - name: 均一な初期化とコンストラクターのデリゲート
-                  href: cpp/uniform-initialization-and-delegating-constructors.md
-                - name: オブジェクトの有効期間とリソースの管理 (Modern C++)
-                  href: cpp/object-lifetime-and-resource-management-modern-cpp.md
-                - name: オブジェクトのリソースの所有 (RAII)
-                  href: cpp/objects-own-resources-raii.md
-                - name: コンテナー (Modern C++)
-                  href: cpp/containers-modern-cpp.md
-                - name: アルゴリズム (Modern C++)
-                  href: cpp/algorithms-modern-cpp.md
-                - name: 文字列および I/O の書式設定 (Modern C++)
-                  href: cpp/string-and-i-o-formatting-modern-cpp.md
-                - name: ABI の境界での移植性 (Modern C++)
-                  href: cpp/portability-at-abi-boundaries-modern-cpp.md
+              href: cpp/welcome-back-to-cpp-modern-cpp.md
             - name: 構文規則
               expanded: false
               items:
@@ -3807,46 +3790,55 @@
                   href: cpp/alignof-and-alignas-cpp.md
                 - name: 単純型、標準レイアウト型、POD 型
                   href: cpp/trivial-standard-layout-and-pod-types.md
-            - name: 基本的な型
-              expanded: false
-              items:
-                - name: 基本的な型
-                  href: cpp/fundamental-types-cpp.md
-                - name: データ型の範囲
-                  href: cpp/data-type-ranges.md
-                - name: nullptr
-                  href: cpp/nullptr.md
-                - name: void
-                  href: cpp/void-cpp.md
-                - name: bool
-                  href: cpp/bool-cpp.md
-                - name: false
-                  href: cpp/false-cpp.md
-                - name: true
-                  href: cpp/true-cpp.md
-                - name: char、wchar_t、char16_t、char32_t
-                  href: cpp/char-wchar-t-char16-t-char32-t.md
-                - name: __int8、__int16、__int32、__int64
-                  href: cpp/int8-int16-int32-int64.md
-                - name: __m64
-                  href: cpp/m64.md
-                - name: __m128
-                  href: cpp/m128.md
-                - name: __m128d
-                  href: cpp/m128d.md
-                - name: __m128i
-                  href: cpp/m128i.md
-                - name: __ptr32、__ptr64
-                  href: cpp/ptr32-ptr64.md
-                - name: 数値制限
+                - name: 型システム
                   expanded: false
                   items:
-                    - name: 数値制限
-                      href: cpp/numerical-limits-cpp.md
-                    - name: 整数の制限
-                      href: cpp/integer-limits.md
-                    - name: 浮動小数点の制限
-                      href: cpp/floating-limits.md
+                    - name: 型システム
+                      href: cpp/cpp-type-system-modern-cpp.md
+                    - name: 値型
+                      href: cpp/value-types-modern-cpp.md
+                    - name: 型変換とタイプ セーフ
+                      href: cpp/type-conversions-and-type-safety-modern-cpp.md
+                    - name: 基本的な型
+                      expanded: false
+                      items:
+                        - name: 基本的な型
+                          href: cpp/fundamental-types-cpp.md
+                        - name: データ型の範囲
+                          href: cpp/data-type-ranges.md
+                        - name: nullptr
+                          href: cpp/nullptr.md
+                        - name: void
+                          href: cpp/void-cpp.md
+                        - name: bool
+                          href: cpp/bool-cpp.md
+                        - name: false
+                          href: cpp/false-cpp.md
+                        - name: true
+                          href: cpp/true-cpp.md
+                        - name: char、wchar_t、char16_t、char32_t
+                          href: cpp/char-wchar-t-char16-t-char32-t.md
+                        - name: __int8、__int16、__int32、__int64
+                          href: cpp/int8-int16-int32-int64.md
+                        - name: __m64
+                          href: cpp/m64.md
+                        - name: __m128
+                          href: cpp/m128.md
+                        - name: __m128d
+                          href: cpp/m128d.md
+                        - name: __m128i
+                          href: cpp/m128i.md
+                        - name: __ptr32、__ptr64
+                          href: cpp/ptr32-ptr64.md
+                        - name: 数値制限
+                          expanded: false
+                          items:
+                            - name: 数値制限
+                              href: cpp/numerical-limits-cpp.md
+                            - name: 整数の制限
+                              href: cpp/integer-limits.md
+                            - name: 浮動小数点の制限
+                              href: cpp/floating-limits.md
                 - name: 標準変換
                   href: cpp/standard-conversions.md
                 - name: 型変換とタイプ セーフ
@@ -4107,6 +4099,12 @@
                       href: cpp/public-cpp.md
                 - name: かっこ初期化
                   href: cpp/initializing-classes-and-structs-without-constructors-cpp.md
+                - name: オブジェクトの有効期間とリソースの管理 (RAII)
+                  href: cpp/object-lifetime-and-resource-management-modern-cpp.md
+                - name: コンパイル時のカプセル化の Pimpl 用法
+                  href: cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md
+                - name: ABI の境界での移植性
+                  href: cpp/portability-at-abi-boundaries-modern-cpp.md
                 - name: コンストラクター
                   expanded: false
                   items:
@@ -9790,6 +9788,8 @@
               items:
                 - name: iostream プログラミング
                   href: standard-library/iostream-programming.md
+                - name: 文字列および I/O の書式設定
+                  href: text/string-and-i-o-formatting-modern-cpp.md
                 - name: ストリームとは何か
                   expanded: false
                   items:
@@ -10224,7 +10224,7 @@
                       href: parallel/concrt/best-practices-in-the-asynchronous-agents-library.md
                     - name: 同時実行ランタイムの一般的なベスト プラクティス
                       href: parallel/concrt/general-best-practices-in-the-concurrency-runtime.md
-                - name: 辞書／辞典／その他
+                - name: 関連項目
                   expanded: false
                   items:
                     - name: 参照 (コンカレンシー ランタイム)

@@ -8,21 +8,21 @@ helpviewer_keywords:
 - operator HIGH
 - HIGH operator
 ms.assetid: 1deea1af-5cba-4477-aab9-21891250cdfc
-ms.openlocfilehash: c7142709216bee6670666fe6baaae7bc449c4a86
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4b9fb2e9a95617673505547b879e3fb0c5c7d4a9
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62200708"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74396906"
 ---
 # <a name="operator-high"></a>HIGH 演算子
 
-下位 16 ビットの上位の 8 ビットを返します*式*します。 MASM の式は、64 ビット値です。
+*式*の下位16ビットの上位8ビットを返します。 MASM の式は、64ビットの値です。
 
 ## <a name="syntax"></a>構文
 
-> 高式
+> **高***式*
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[演算子リファレンス](../../assembler/masm/operators-reference.md)<br/>
+[演算子リファレンス](operators-reference.md)

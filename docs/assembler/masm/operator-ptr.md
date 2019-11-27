@@ -8,23 +8,23 @@ helpviewer_keywords:
 - PTR operator
 - operator PTR
 ms.assetid: df280f36-ca06-4578-b99d-0aa139b2b969
-ms.openlocfilehash: 87aa8ff044318d778f823827c451c0ad3332e279
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7b1f59985d4a11dd4ffd65c8ef1086826ade6ea3
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62199927"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74396499"
 ---
 # <a name="operator-ptr"></a>PTR 演算子
 
-最初の演算子の力、*式*、指定したを持つものとして扱う*型*します。 2 番目の演算子へのポインターを指定する*型*します。
+最初の演算子は、指定された*型*を持つ*式*を強制的に処理します。 2番目の演算子は、*型*へのポインターを指定します。
 
 ## <a name="syntax"></a>構文
 
-> *type* PTR *expression*
+> **PTR** *式*の入力
 >
-> \[*距離*] PTR*型*
+> \[*distance*] **PTR** *型*
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[演算子リファレンス](../../assembler/masm/operators-reference.md)<br/>
+[演算子リファレンス](operators-reference.md)

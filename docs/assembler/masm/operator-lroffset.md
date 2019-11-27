@@ -8,21 +8,21 @@ helpviewer_keywords:
 - operator LROFFSET
 - LROFFSET operator
 ms.assetid: 61ab45d4-7a30-440d-9c11-2a9dfa6ae565
-ms.openlocfilehash: 1ed1fc7c3a927dc7899804e697e948736afb1567
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 835849d0f534e67dbc7b08ee025d54c2faf4fe82
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62199992"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74396688"
 ---
 # <a name="operator-lroffset"></a>LROFFSET 演算子
 
-オフセットを返します*式*します。 同じ**オフセット**が、ローダー解決オフセットにより、コード セグメントを配置する場合に Windows が生成されます。
+*式*のオフセットを返します。 **オフセット**と同じですが、ローダーによって解決されるオフセットが生成されます。これにより、Windows がコードセグメントを再配置できるようになります。
 
 ## <a name="syntax"></a>構文
 
-> LROFFSET 式
+> **Lroffset** *式*
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[演算子リファレンス](../../assembler/masm/operators-reference.md)<br/>
+[演算子リファレンス](operators-reference.md)

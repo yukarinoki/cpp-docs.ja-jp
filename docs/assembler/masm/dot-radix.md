@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - .RADIX directive
 ms.assetid: 3f7c2717-fd41-4aff-820d-3f40fd9280a0
-ms.openlocfilehash: cd00699da0f9a9e77ea00ab242831f4dbf690cb9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9aec577ef5cda70f7bc126fe7d1245de7edd9698
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62178606"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398020"
 ---
 # <a name="radix"></a>.RADIX
 
-値の 2 ~ 16 の範囲内の既定の基数の設定*式*します。
+2 ~ 16 の範囲の既定の基数を*expression*の値に設定します。
 
 ## <a name="syntax"></a>構文
 
-> .基数式
+> **.基数***式*
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
+[ディレクティブリファレンス](directives-reference.md)

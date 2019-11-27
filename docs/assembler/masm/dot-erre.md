@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - .ERRE directive
 ms.assetid: cfb5a4bb-4488-4101-bd06-63ba43b1473e
-ms.openlocfilehash: 6e031b64aff2421b8908ed537b9c37e42b8ebc4c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4e4d26eaec0a79c40be1623550cd864a35f54918
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62185228"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398359"
 ---
 # <a name="erre"></a>.ERRE
 
-エラーが発生*式*が false (0)。
+*Expression*が false (0) の場合、エラーが生成されます。
 
 ## <a name="syntax"></a>構文
 
-> .ERRE 式 [] メッセージ]
+> **..Erre** *expression* ⟦ __、__ *message*⟧
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
+[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)

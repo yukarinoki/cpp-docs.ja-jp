@@ -7,47 +7,47 @@ f1_keywords:
 helpviewer_keywords:
 - MASM (Microsoft Macro Assembler), ML error messages
 ms.assetid: e7e164b3-6d65-4b5b-8925-bfbebc043523
-ms.openlocfilehash: adf2c509c3d8d9110ddb757f809a4bca9199df7a
-ms.sourcegitcommit: af580f3a11b19d22288424eac7ceae1bc24ab312
+ms.openlocfilehash: b9238591ae025c4af258d8b5feda6e05c8bd291b
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66355325"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397188"
 ---
 # <a name="ml-error-messages"></a>ML エラー メッセージ
 
-MASM のコンポーネントによって生成されるエラー メッセージは、3 つのカテゴリに分類されます。
+MASM コンポーネントによって生成されるエラーメッセージは、次の3つのカテゴリに分類されます。
 
-- **致命的なエラー。** ユーティリティが、通常のプロセスを完了するを防ぎます深刻な問題を示します。
+- **致命的なエラー。** これらは、ユーティリティが通常のプロセスを完了できないような重大な問題を示しています。
 
-- **致命的でないエラー。** ユーティリティは、そのプロセスを完了可能性があります。 その場合、その結果は希望する可能性があります。
+- **致命的でないエラー。** ユーティリティのプロセスが完了する場合があります。 その場合、結果が必要なものではない可能性があります。
 
-- **警告です。** これらのメッセージは、目的の結果を取得できない可能性がある条件を示します。
+- **付.** これらのメッセージは、必要な結果を得られない可能性のある条件を示します。
 
-すべてのエラー メッセージは、次の形式をとります。
+すべてのエラーメッセージは次の形式になります。
 
-> *ユーティリティ*:*ファイル名*(*行*): {*Error_type*} (*コード*)。*Message_text*
+> *ユーティリティ*:*ファイル名*(*行*): {*Error_type*} (*コード*): *Message_text*
 
-それぞれの文字について以下に説明します。
+ここで、
 
-*ユーティリティ*<br/>
-エラー メッセージを送信したプログラムです。
+*ユーティリティ*\
+エラーメッセージを送信したプログラム。
 
-*ファイル名*<br/>
-エラーが発生元条件を含むファイルです。
+*ファイル名*\
+エラー生成条件を含むファイルです。
 
-*Line*<br/>
-おおよその行では、エラー条件が存在します。
+*行*\
+エラー状態が存在するおおよその行。
 
-*Error_type*<br/>
+*Error_type*\
 致命的なエラー、エラー、または警告。
 
-*コード*<br/>
-一意の 5 または 6 桁のエラー コード。
+*コード*\
+5桁または6桁の一意のエラーコード。
 
-*テキスト*<br/>
-短期保存と一般的なエラー状態の説明です。
+*Message_text*\
+エラー状態の概要と一般的な説明。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Microsoft Macro Assembler リファレンス](../../assembler/masm/microsoft-macro-assembler-reference.md)
+[Microsoft マクロアセンブラーリファレンス](../../assembler/masm/microsoft-macro-assembler-reference.md)

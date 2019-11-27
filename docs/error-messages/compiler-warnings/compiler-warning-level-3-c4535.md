@@ -1,5 +1,5 @@
 ---
-title: Compiler Warning (level 3) C4535
+title: コンパイラの警告 (レベル 3) C4535
 ms.date: 11/04/2016
 f1_keywords:
 - C4535
@@ -13,15 +13,15 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/19/2019
 ms.locfileid: "74189019"
 ---
-# <a name="compiler-warning-level-3-c4535"></a>Compiler Warning (level 3) C4535
+# <a name="compiler-warning-level-3-c4535"></a>コンパイラの警告 (レベル 3) C4535
 
-calling _set_se_translator() requires /EHa
+_set_se_translator () の呼び出しには/EHa が必要です
 
-The use of [_set_se_translator](../../c-runtime-library/reference/set-se-translator.md) requires the [/EHa](../../build/reference/eh-exception-handling-model.md) compiler option and not **/EHs**.
+[_Set_se_translator](../../c-runtime-library/reference/set-se-translator.md)を使用するには、 **/ehs**ではなく、 [/eha](../../build/reference/eh-exception-handling-model.md)コンパイラオプションが必要です。
 
 ## <a name="example"></a>例
 
-The following sample generates C4535.
+次の例では、C4535 が生成されます。
 
 ```cpp
 // C4535.cpp

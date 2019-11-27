@@ -6,23 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - STRUCT directive
 ms.assetid: 70c3ba6b-00db-461e-8dd9-eafd3ae5b3c8
-ms.openlocfilehash: b64e6adbabe847600147dbd773328aadf4225cb2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 73f3751f32d8cb2fc3f9daec1ac11c778ee33514
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210289"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74393568"
 ---
 # <a name="struct-masm"></a>STRUCT (MASM)
 
-指定した構造体型を宣言します*フィールド宣言*します。 各フィールドは、有効なデータの定義である必要があります。 同じ[STRUC](../../assembler/masm/struc.md)します。
+指定された*フィールド宣言*を持つ構造体型を宣言します。 各フィールドは、有効なデータ定義である必要があります。 [STRUC](../../assembler/masm/struc.md)と同じです。
 
 ## <a name="syntax"></a>構文
 
-> *名前*構造体 [*配置*] [, 一意でない]<br/>
-> *フィールドの宣言*<br/>
-> *名前*終了
+> *name* **STRUCT** ⟦*alignment*⟧⟦ __、__ **一意**でない⟧*フィールド宣言*\
+> *名前*の**終わり**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
+[ディレクティブリファレンス](../../assembler/masm/directives-reference.md)

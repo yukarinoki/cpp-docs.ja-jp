@@ -45,7 +45,7 @@ Visual Studio 2015、Visual Studio 2017、および Visual Studio 2019 のツー
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-|タイトル|[説明]|
+|タイトル|説明|
 |-----------|-----------------|
 |[以前C++のバージョンの Visual Studio からのプロジェクトのアップグレード](upgrading-projects-from-earlier-versions-of-visual-cpp.md)|コードベースを Visual Studio 2019 および v142 のコンパイラにアップグレードする方法について説明します。|
 |[コードをアップグレードC++するための IDE ツール](ide-tools-for-upgrading-code.md)|アップグレードプロセスに役立つ IDE の便利な機能。|
@@ -54,11 +54,11 @@ Visual Studio 2015、Visual Studio 2017、および Visual Studio 2019 のツー
 |[Visual C++ 2003 ～ 2015 の変更履歴](visual-cpp-change-history-2003-2015.md)|Visual Studio 2003 から2015の Microsoft C++ライブラリおよびビルドツールのすべての変更の一覧。コードの変更が必要になる場合があります。|
 |[2003 ～ 2015 年の Visual C++ の新機能](visual-cpp-what-s-new-2003-through-2015.md)|Visual Studio 2003 から Visual studio 2015 までの Microsoft C++の "新機能" のすべての情報。|
 |[移植およびアップグレード: 例とケース スタディ](porting-and-upgrading-examples-and-case-studies.md)|このセクションでは、いくつかのサンプルとアプリケーションを移植してアップグレードし、エクスペリエンスと結果について説明しました。 これらの記事では、移植とアップグレードのプロセスに何が関係しているかを理解できます。 プロセス全体を通して、アップグレードに関するヒントとテクニックについて説明し、特定のエラーを修正する方法を示します。|
-|[ユニバーサル Windows プラットフォームに移植する](porting-to-the-universal-windows-platform-cpp.md)|コードを Windows 10 に移植する方法を説明します。|
+|[ユニバーサル Windows プラットフォームへの移植](porting-to-the-universal-windows-platform-cpp.md)|コードを Windows 10 に移植する方法を説明します。|
 |[Visual C++ の紹介 (UNIX ユーザー向け)](introduction-to-visual-cpp-for-unix-users.md)|Visual C++ を初めて使用し、生産性を向上したい UNIX ユーザー向けの情報を提供します。|
 |[Windows での Linux プログラムの実行](porting-from-unix-to-win32.md)|UNIX アプリケーションを Windows に移行するためのオプションについて説明します。|
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [Visual Studio での C++](../overview/visual-cpp-in-visual-studio.md)<br/>
 [Visual Studio での C++ コンパイラの新機能](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)<br/>

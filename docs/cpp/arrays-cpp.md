@@ -15,11 +15,11 @@ ms.locfileid: "74188987"
 ---
 # <a name="arrays-c"></a>配列 (C++)
 
-An array is a sequence of objects of the same type that occupy a contiguous area of memory. Traditional C-style arrays are the source of many bugs, but are still common, especially in older code bases. In modern C++, we strongly recommend using [std::vector](../standard-library/vector-class.md) or [std::array](../standard-library/array-class-stl.md) instead of C-style arrays described in this section. Both of these standard library types store their elements as a contiguous block of memory but provide much greater type safety along with iterators that are guaranteed to point to a valid location within the sequence. For more information, see [Containers (Modern C++)](containers-modern-cpp.md).
+配列は、連続したメモリ領域を占有する同じ型のオブジェクトのシーケンスです。 従来の C スタイルの配列は多くのバグの原因ですが、特に古いコードベースでは一般的です。 現代C++では、このセクションで説明する C スタイルの配列ではなく、 [std:: vector](../standard-library/vector-class.md)または[std:: array](../standard-library/array-class-stl.md)を使用することを強くお勧めします。 これらの標準ライブラリ型はどちらも、要素を連続したメモリブロックとして格納しますが、シーケンス内の有効な位置を指すことが保証される反復子と共に、より高いタイプセーフを提供します。 詳細については、「[コンテナー C++(モダン)](containers-modern-cpp.md)」を参照してください。
 
-## <a name="stack-declarations"></a>Stack declarations
+## <a name="stack-declarations"></a>スタック宣言
 
-In a C++ array declaration, the array size is specified after the variable name, not after the type name as in some other languages. The following example declares an array of 1000 doubles to be allocated on the stack. The number of elements must be supplied as an integer literal or else as a constant expression because the compiler has to know how much stack space to allocate; it cannot use a value computed at run-time. Each element in the array is assigned a default value of 0. If you do not assign a default value, each element will initially contain whatever random values happen to be at that location.
+C++配列の宣言では、配列のサイズは、他の言語のように、型名の後ではなく、変数名の後に指定されます。 次の例では、スタックに割り当てられる1000倍精度の配列を宣言しています。 要素の数は、整数リテラルとして指定するか、定数式として指定する必要があります。これは、コンパイラが割り当てるスタック領域の量を知る必要があるためです。実行時に計算された値を使用することはできません。 配列の各要素には、既定値の0が割り当てられます。 既定値を割り当てない場合、各要素には、その場所で発生するランダムな値が最初に含まれます。
 
 ```cpp
     constexpr size_t size = 1000;
@@ -44,20 +44,20 @@ In a C++ array declaration, the array size is specified after the variable name,
     }
 ```
 
-The first element in the array is the 0th element, and the last element is the (*n*-1) element, where *n* is the number of elements the array can contain. The number of elements in the declaration must be of an integral type and must be greater than 0. It is your responsibility to ensure that your program never passes a value to the subscript operator that is greater than `(size - 1)`.
+配列の最初の要素は0番目の要素で、最後の要素は (*n-1*) 要素です。ここで、 *n*は配列に格納できる要素の数です。 宣言内の要素の数は、整数型で、0より大きい値である必要があります。 プログラムが `(size - 1)`より大きい添字演算子に値を渡さないようにするのは、お客様の責任です。
 
-A zero-sized array is legal only when the array is the last field in a **struct** or **union** and when the Microsoft extensions (/Ze) are enabled.
+サイズが0の配列は、配列が**構造体**または**共用体**の最後のフィールドであり、Microsoft 拡張機能 (/ze) が有効になっている場合にのみ有効です。
 
-Stack-based arrays are faster to allocate and access than heap-based arrays, but the number of elements can't be so large that it uses up too much stack memory. How much is too much depends on your program. You can use profiling tools to determine whether an array is too large.
+スタックベースの配列は、ヒープベースの配列よりも、割り当てやアクセスが高速になりますが、要素の数が大きくなりすぎて、スタックメモリが過剰に消費されることはありません。 プログラムに依存している量が多すぎます。 プロファイリングツールを使用すると、配列が大きすぎるかどうかを判断できます。
 
-## <a name="heap-declarations"></a>Heap declarations
+## <a name="heap-declarations"></a>ヒープ宣言
 
-If you require an array that is too large to be allocated on the stack, or whose size cannot be known at compile time, you can allocate it on the heap with a [new\[\]](new-operator-cpp.md) expression. The operator returns a pointer to the first element. You can use the subscript operator with the pointer variable just as with a stack-based array. You can also use [pointer arithmetic](../c-language/pointer-arithmetic.md) to move the pointer to any arbitrary elements in the array. It is your responsibility to ensure that:
+スタックに割り当てるには大きすぎる配列が必要な場合、またはコンパイル時にそのサイズを認識できない場合は、[新しい\[\]](new-operator-cpp.md)式を使用してヒープに割り当てることができます。 演算子は、最初の要素へのポインターを返します。 添字演算子は、スタックベースの配列の場合と同様に、ポインター変数と共に使用できます。 [ポインター演算](../c-language/pointer-arithmetic.md)を使用して、配列内の任意の要素にポインターを移動することもできます。 次のことを保証する必要があります。
 
-- you always keep a copy of the original pointer address so that you can delete the memory when you no longer need the array.
-- you do not increment or decrement the pointer address past the array bounds.
+- 配列が不要になったときにメモリを削除できるように、常に元のポインターアドレスのコピーを保持します。
+- 配列の境界を越えてポインターアドレスをインクリメントまたはデクリメントすることはできません。
 
-The following example shows how to define an array on the heap at run time, and how to access the array elements using the subscript operator or by using pointer arithmetic:
+次の例は、実行時にヒープに配列を定義する方法と、添字演算子またはポインター演算を使用して配列要素にアクセスする方法を示しています。
 
 ```cpp
 
@@ -117,7 +117,7 @@ int main()
 
 ## <a name="initializing-arrays"></a>配列の初期化
 
-You can initialize an array in a loop, one element at a time, or in a single statement. The contents of the following two arrays are identical:
+ループ内の配列、一度に1つの要素、または1つのステートメント内の配列を初期化できます。 次の2つの配列の内容は同じです。
 
 ```cpp
     int a[10];
@@ -129,11 +129,11 @@ You can initialize an array in a loop, one element at a time, or in a single sta
     int b[10]{ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 ```
 
-## <a name="passing-arrays-to-functions"></a>Passing arrays to functions
+## <a name="passing-arrays-to-functions"></a>関数への配列の引き渡し
 
-When an array is passed to a function, it is passed as a pointer to the first element. This is true for both stack-based and heap-based arrays. The pointer contains no additional size or type information. This behavior is called *pointer decay*. When you pass an array to a function, you must always specify the number of elements in a separate parameter. This behavior also implies that the array elements are not copied when the array is passed to a function. To prevent the function from modifying the elements, specify the parameter as a pointer to **const** elements.
+配列が関数に渡されると、最初の要素へのポインターとして渡されます。 これは、スタックベースとヒープベースの両方の配列に当てはまります。 ポインターには、追加のサイズまたは型情報が含まれていません。 この動作は*ポインターの減衰*と呼ばれます。 関数に配列を渡す場合は、常に個別のパラメーターの要素数を指定する必要があります。 この動作は、配列が関数に渡されたときに配列要素がコピーされないことも意味します。 関数によって要素が変更されないようにするには、パラメーターを**const**要素へのポインターとして指定します。
 
-The following example shows a function that accepts an array and a length. The pointer points to the original array, not a copy. Because the parameter is not **const**, the function can modify the array elements.
+次の例は、配列と長さを受け入れる関数を示しています。 ポインターは、コピーではなく元の配列を指しています。 パラメーターが**const**ではないため、関数は配列の要素を変更できます。
 
 ```cpp
 void process(double p*, const size_t len)
@@ -146,13 +146,13 @@ void process(double p*, const size_t len)
 }
 ```
 
-Declare the array as const to make it read-only within the function block:
+関数ブロック内で読み取り専用になるように、配列を const として宣言します。
 
 ```cpp
 void process(const double p*, const size_t len);
 ```
 
-The same function can also be declared in these ways, with no change in behavior. The array is still passed as a pointer to the first element:
+これらの方法でも同じ関数を宣言できますが、動作は変更されません。 配列は、最初の要素へのポインターとして渡されます。
 
 ```cpp
 // Unsized array
@@ -162,7 +162,7 @@ void process(const double p[] const size_t len);
 void process(const double p[1000], const size_t len);
 ```
 
-## <a name="multidimensional-arrays"></a>Multidimensional arrays
+## <a name="multidimensional-arrays"></a>多次元配列
 
 他の配列から生成された配列は、多次元配列です。 これらの多次元配列は、角かっこで囲まれた定数式を複数並べることで指定されます。 たとえば、次の宣言について考えます。
 
@@ -170,12 +170,12 @@ void process(const double p[1000], const size_t len);
 int i2[5][7];
 ```
 
-It specifies an array of type **int**, conceptually arranged in a two-dimensional matrix of five rows and seven columns, as shown in the following figure:
+ここでは、次の図に示すように、**整数**型の配列を指定しています。この配列は、5行と7列の2次元行列で概念的に配置されています。
 
-![Conceptual layout of a multi&#45;dimensional array](../cpp/media/vc38rc1.gif "Conceptual layout of a multi&#45;dimensional array") <br/>
+![多次元&#45;配列の概念レイアウト](../cpp/media/vc38rc1.gif "多次元&#45;配列の概念レイアウト") <br/>
 多次元配列の概念レイアウト
 
-In declarations of multidimensioned arrays that have an initializer list (as described in [Initializers](../cpp/initializers.md)), the constant expression that specifies the bounds for the first dimension can be omitted. (例:
+初期化子リストを持つ多次元配列の宣言 (「[初期化子](../cpp/initializers.md)」を参照) では、最初の次元の境界を指定する定数式を省略できます。 例 :
 
 ```cpp
 // arrays2.cpp
@@ -191,7 +191,7 @@ double TransportCosts[][cMarkets] = {
 
 前の宣言は、3 行 x 4 列の配列を定義します。 行はファクトリを表し、列はファクトリの出荷先のマーケットを表します。 値は、ファクトリからマーケットへの輸送コストです。 配列の最初の次元は省かれますが、コンパイラは初期化子を調べることによってこれを入力します。
 
-Use of the indirection operator (*) on an n-dimensional array type yields an n-1 dimensional array. If n is 1, a scalar (or array element) is yielded.
+N 次元の配列型で間接演算子 (*) を使用すると、n-1 次元配列が生成されます。 n が 1 の場合、スカラー (または配列要素) が生成されます。
 
 C++ 配列は、行優先順で格納されます。 行優先は、最後の添字が最も速く変化することを意味します。
 
@@ -283,7 +283,7 @@ int main()
 
 `aPoint` の最初の要素はコンストラクター `Point( int, int )` を使用して構築されます。残りの 2 つの要素は既定のコンストラクターを使用して構築されます。
 
-Static member arrays (whether **const** or not) can be initialized in their definitions (outside the class declaration). (例:
+静的メンバー配列 ( **const**かどうかに関係なく) は、その定義で (クラス宣言の外側で) 初期化できます。 例 :
 
 ```cpp
 // initializing_arrays2.cpp
@@ -301,7 +301,7 @@ int main()
 }
 ```
 
-## <a name="accessing-array-elements"></a>Accessing array elements
+## <a name="accessing-array-elements"></a>配列要素へのアクセス
 
 配列添字演算子 (`[ ]`) を使用すると、配列の個々の要素にアクセスできます。 一次元配列が添字のない式で使用されている場合、配列名は配列の最初の要素へのポインターに評価されます。
 
@@ -336,15 +336,15 @@ int main() {
 }
 ```
 
-In the preceding code, `multi` is a three-dimensional array of type **double**. The `p2multi` pointer points to an array of type **double** of size three. この例では、配列が 1 つ、2 つ、および 3 つの添字と共に使用されています。 `cout` ステートメントのように、すべての添字を指定する方が一般的ですが、`cout` に続くステートメントのように、配列要素の特定のサブセットを選択した方が便利なこともあります。
+上記のコードでは、`multi` は**double**型の3次元配列です。 `p2multi` ポインターは、サイズが3の**double**型の配列を指します。 この例では、配列が 1 つ、2 つ、および 3 つの添字と共に使用されています。 `cout` ステートメントのように、すべての添字を指定する方が一般的ですが、`cout` に続くステートメントのように、配列要素の特定のサブセットを選択した方が便利なこともあります。
 
-## <a name="overloading-subscript-operator"></a>Overloading subscript operator
+## <a name="overloading-subscript-operator"></a>添字演算子のオーバーロード
 
-Like other operators, the subscript operator (`[]`) can be redefined by the user. 添字演算子の既定の動作では、オーバーロードしない場合、次のメソッドを使用して配列名と添字を組み合わせます。
+他の演算子と同様に、添字演算子 (`[]`) はユーザーが再定義できます。 添字演算子の既定の動作では、オーバーロードしない場合、次のメソッドを使用して配列名と添字を組み合わせます。
 
 `*((array_name) + (subscript))`
 
-ポインター型を含むすべての加算と同様に、スケーリングは型のサイズを調整するように自動的に実行されます。 Therefore, the resultant value is not *n* bytes from the origin of array-name; rather, it is the *n*th element of the array. For more information about this conversion, see [Additive operators](additive-operators-plus-and.md).
+ポインター型を含むすべての加算と同様に、スケーリングは型のサイズを調整するように自動的に実行されます。 したがって、結果の値は、配列名の原点からの*n*バイトではありません。代わりに、配列の*n*番目の要素です。 この変換の詳細については、「[加法演算子](additive-operators-plus-and.md)」を参照してください。
 
 同様に、多次元配列の場合は、次のメソッドを使用してアドレスが派生されます。
 
@@ -352,19 +352,19 @@ Like other operators, the subscript operator (`[]`) can be redefined by the user
 
 ## <a name="arrays-in-expressions"></a>式の配列
 
-配列型の ID が `sizeof`、address-of (`&`)、または参照の初期化以外の式に出現すると、最初の配列要素へのポインターに変換されます。 (例:
+配列型の識別子が `sizeof`、address of (`&`)、または reference の初期化以外の式に含まれている場合は、最初の配列要素へのポインターに変換されます。 例 :
 
 ```cpp
 char szError1[] = "Error: Disk drive not ready.";
 char *psz = szError1;
 ```
 
-ポインター `psz` は、配列 `szError1` の最初の要素をポイントします。 Arrays, unlike pointers, are not modifiable l-values. したがって、次の割り当ては正しくありません。
+ポインター `psz` は、配列 `szError1` の最初の要素をポイントします。 ポインターとは異なり、配列は変更可能な左辺値ではありません。 したがって、次の割り当ては正しくありません。
 
 ```cpp
 szError1 = psz;
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[std::array](../standard-library/array-class-stl.md)
+[std:: array](../standard-library/array-class-stl.md)

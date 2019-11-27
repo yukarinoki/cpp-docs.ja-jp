@@ -1,5 +1,5 @@
 ---
-title: Visual StudioC++での C/プロジェクトとビルドシステム
+title: Visual Studio での C/C++ プロジェクトとビルドシステム
 ms.description: Use Visual Studio to compile and build C++ projects for Windows, ARM or Linux based on any project system.
 ms.date: 07/17/2019
 helpviewer_keywords:
@@ -17,9 +17,9 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 09/25/2019
 ms.locfileid: "71274739"
 ---
-# <a name="cc-projects-and-build-systems-in-visual-studio"></a>Visual StudioC++での C/プロジェクトとビルドシステム
+# <a name="cc-projects-and-build-systems-in-visual-studio"></a>Visual Studio での C/C++ プロジェクトとビルドシステム
 
-Visual Studio を使用して、IntelliSense を完全にサポートC++するコードベースを編集、コンパイル、ビルドすることができます。そのコードを visual studio プロジェクトに変換したり、MSVC ツールセットを使用してコンパイルしたりする必要はありません。 たとえば、Windows コンピューター上の Visual Studio でクロスプラットフォームの CMake プロジェクトを編集し、リモートの Linux コンピューターで g + + を使用して Linux 用にコンパイルできます。
+Visual Studio を使用して、IntelliSense を完全にサポートC++するコードベースを編集、コンパイル、ビルドすることができます。そのコードを Visual Studio プロジェクトに変換したり、MSVC ツールセットを使用してコンパイルしたりする必要はありません。 たとえば、Windows コンピューター上の Visual Studio でクロスプラットフォームの CMake プロジェクトを編集し、リモートの Linux コンピューターで g + + を使用して Linux 用にコンパイルできます。
 
 ## <a name="c-compilation"></a>C++asp.net
 
@@ -48,7 +48,7 @@ cl /EHsc hello.cpp
 
 次の一覧は、Visual Studio プロジェクトのさまざまなC++オプションを示しています。
 
-- visual studio IDE を使用して Visual Studio プロジェクトを作成し、プロパティページを使用して構成します。 Visual Studio プロジェクトでは、Windows 上で実行されるプログラムが生成されます。 概要については、Visual Studio ドキュメントの「[コンパイルとビルド](/visualstudio/ide/compiling-and-building-in-visual-studio)」を参照してください。
+- Visual Studio IDE を使用して Visual Studio プロジェクトを作成し、プロパティページを使用して構成します。 Visual Studio プロジェクトでは、Windows 上で実行されるプログラムが生成されます。 概要については、Visual Studio ドキュメントの「[コンパイルとビルド](/visualstudio/ide/compiling-and-building-in-visual-studio)」を参照してください。
 
 - CMakeLists .txt ファイルが含まれているフォルダーを開きます。 CMake のサポートは、Visual Studio に統合されています。 IDE を使用して、CMake ファイルを変更せずに編集、テスト、およびデバッグを行うことができます。 これにより、異なるエディターを使用している可能性のある他のユーザーと同じ CMake プロジェクトで作業することができます。 CMake は、クロスプラットフォームの開発に推奨されるアプローチです。 詳細については、「 [Cmake プロジェクト](cmake-projects-in-visual-studio.md)」を参照してください。
  

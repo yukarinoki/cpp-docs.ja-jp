@@ -8,21 +8,21 @@ helpviewer_keywords:
 - ZERO? operator
 - operator ZERO?
 ms.assetid: c7629c0b-3254-4f50-9bd6-31be762eb03b
-ms.openlocfilehash: 440a9e1d16991b9c7a094bc1267536a26613926a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2a9369420581fc40ca626213d5b76628a90d6b79
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62198285"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74395228"
 ---
 # <a name="operator-zero"></a>ZERO? 演算子
 
-0 個のフラグの状態です。 内でのみ使用される[します。IF](../../assembler/masm/dot-if.md)、[します。中に](../../assembler/masm/dot-while.md)、または[します。繰り返し](../../assembler/masm/dot-repeat.md)をブロックし、アセンブリの時ではなく、実行時に評価します。
+0フラグの状態です。 内でのみ使用され[ます。の場合は](../../assembler/masm/dot-if.md) [。WHILE](../../assembler/masm/dot-while.md)、or [。](../../assembler/masm/dot-repeat.md)ブロックを繰り返し、アセンブリ時間ではなく実行時に評価します。
 
 ## <a name="syntax"></a>構文
 
-> 0 か。
+> **回?**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[演算子リファレンス](../../assembler/masm/operators-reference.md)<br/>
+[演算子リファレンス](operators-reference.md)

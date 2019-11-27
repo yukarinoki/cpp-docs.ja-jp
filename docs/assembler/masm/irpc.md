@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - IRPC directive
 ms.assetid: 9f7d848c-fc5a-40e2-abf0-28db783e007d
-ms.openlocfilehash: 166c7c8b5468491a44d8b2723c25e5f996a2b261
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 67b3385c823b360983051647fcce10e989f98a47
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62178307"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397274"
 ---
 # <a name="irpc"></a>IRPC
 
 ## <a name="syntax"></a>構文
 
-> IRPC
+> **IRPC**
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-参照してください[FORC](../../assembler/masm/forc.md)します。
+「 [Forc](../../assembler/masm/forc.md)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
+[ディレクティブリファレンス](directives-reference.md)

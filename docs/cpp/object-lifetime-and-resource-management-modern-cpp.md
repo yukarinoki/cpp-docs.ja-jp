@@ -89,8 +89,8 @@ void functionUsingWidget() {
 
 オブジェクトがスコープC++外に出ると、が確実に破棄されるように設計されています。 つまり、ブロックが終了したときに構築と逆の順序で破棄されます。 オブジェクトが破棄されると、その基底クラスとメンバーが特定の順序で破棄されます。 すべてのブロックの外側で宣言されたオブジェクトは、グローバルスコープで、問題の原因になる可能性があります。 グローバルオブジェクトのコンストラクターで例外がスローされた場合、デバッグが困難になることがあります。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [に戻るC++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [C++ 言語リファレンス](../cpp/cpp-language-reference.md)<br/>
-[.NET 標準ライブラリ](../standard-library/cpp-standard-library-reference.md)
+[C++ 標準ライブラリ](../standard-library/cpp-standard-library-reference.md)

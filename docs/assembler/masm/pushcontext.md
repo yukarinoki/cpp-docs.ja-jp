@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - PUSHCONTEXT directive
 ms.assetid: 18e528ee-df6c-4ce6-8823-b35b40f757fd
-ms.openlocfilehash: b657b6519fd9e4cbd367eaefc984fd959618c57d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1d042ad50fef6d9834b35b66c88b3f83ec4995d4
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62217245"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74395717"
 ---
 # <a name="pushcontext"></a>PUSHCONTEXT
 
-現在の一部またはすべてを保存します。 `context`: セグメント レジスタを引き受けると、基数値、および cref を一覧表示のフラグ、またはプロセッサ/コプロセッサの値。 `context`できる**と**、 `RADIX`、**を一覧表示する**、 **CPU**、または**すべて**します。
+現在の*コンテキスト*の一部またはすべてを保存します。セグメントレジスタでは、基数値、リスティングおよび cref フラグ、またはプロセッサ/コプロセッサ値が想定されます。 *コンテキスト*は、、 **RADIX**、**リスティング**、 **CPU**、または**すべて**を**想定**することができます。
 
 ## <a name="syntax"></a>構文
 
-> PUSHCONTEXT コンテキスト
+> **Pushcontext** *コンテキスト*
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
+[ディレクティブリファレンス](directives-reference.md)

@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - ENDS directive
 ms.assetid: 30f68c58-de1f-4bdd-ac83-4658bdbaad65
-ms.openlocfilehash: a92b307e0d426afb4c74113de5738c15be064040
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 95ade586e1a2a422e7cfbc00fa9d92471d0f8bdf
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62185162"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397631"
 ---
 # <a name="ends-masm"></a>ENDS (MASM)
 
-セグメント、構造体、共用体の終了をマーク*名前*で以前に開始された[セグメント](../../assembler/masm/segment.md)、[構造体](../../assembler/masm/struct-masm.md)、[共用体](../../assembler/masm/union.md)、または簡略化されたセグメントディレクティブ。
+前に[セグメント](../../assembler/masm/segment.md)、構造[体](../../assembler/masm/struct-masm.md)、[共用](../../assembler/masm/union.md)体、または簡略化されたセグメントディレクティブで始まるセグメント、構造体、または共用体の*名前*の末尾をマークします。
 
 ## <a name="syntax"></a>構文
 
-> 名前の末尾が
+> *名前*の**終わり**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
+[ディレクティブリファレンス](directives-reference.md)

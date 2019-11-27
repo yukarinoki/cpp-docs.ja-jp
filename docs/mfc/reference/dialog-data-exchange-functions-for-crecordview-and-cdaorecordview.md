@@ -124,7 +124,7 @@ void AFXAPI DDX_FieldCBString(
 *nIDC*<br/>
 [CRecordView](../../mfc/reference/crecordview-class.md)または[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)オブジェクト内のコントロールの ID。
 
-*value*<br/>
+*値*<br/>
 関連付けられている `CRecordset` または `CDaoRecordset` オブジェクトのフィールドデータメンバーへの参照。
 
 *pRecordset*<br/>
@@ -172,7 +172,7 @@ void AFXAPI DDX_FieldCBStringExact(
 *nIDC*<br/>
 [CRecordView](../../mfc/reference/crecordview-class.md)または[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)オブジェクト内のコントロールの ID。
 
-*value*<br/>
+*値*<br/>
 関連付けられている `CRecordset` または `CDaoRecordset` オブジェクトのフィールドデータメンバーへの参照。
 
 *pRecordset*<br/>
@@ -220,7 +220,7 @@ void AFXAPI DDX_FieldCheck(
 *nIDC*<br/>
 コントロールプロパティに関連付けられているチェックボックスコントロールのリソース ID。
 
-*value*<br/>
+*値*<br/>
 データの交換に使用するダイアログボックス、フォームビュー、またはコントロールビューオブジェクトのメンバー変数への参照。
 
 *pRecordset*<br/>
@@ -310,7 +310,7 @@ void AFXAPI DDX_FieldLBString(
 *nIDC*<br/>
 [CRecordView](../../mfc/reference/crecordview-class.md)または[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)オブジェクト内のコントロールの ID。
 
-*value*<br/>
+*値*<br/>
 関連付けられている `CRecordset` または `CDaoRecordset` オブジェクトのフィールドデータメンバーへの参照。
 
 *pRecordset*<br/>
@@ -358,7 +358,7 @@ void AFXAPI DDX_FieldLBStringExact(
 *nIDC*<br/>
 [CRecordView](../../mfc/reference/crecordview-class.md)または[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)オブジェクト内のコントロールの ID。
 
-*value*<br/>
+*値*<br/>
 関連付けられている `CRecordset` または `CDaoRecordset` オブジェクトのフィールドデータメンバーへの参照。
 
 *pRecordset*<br/>
@@ -406,7 +406,7 @@ void AFXAPI DDX_FieldRadio(
 *nIDC*<br/>
 [CRecordView](../../mfc/reference/crecordview-class.md)または[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)オブジェクトの隣接するラジオボタンコントロールのグループ (スタイル WS_GROUP) の最初のの ID。
 
-*value*<br/>
+*値*<br/>
 関連付けられている `CRecordset` または `CDaoRecordset` オブジェクトのフィールドデータメンバーへの参照。
 
 *pRecordset*<br/>
@@ -454,7 +454,7 @@ void AFXAPI DDX_FieldScroll(
 *nIDC*<br/>
 [CRecordView](../../mfc/reference/crecordview-class.md)または[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)オブジェクトの隣接するラジオボタンコントロールのグループ (スタイル WS_GROUP) の最初のの ID。
 
-*value*<br/>
+*値*<br/>
 関連付けられている `CRecordset` または `CDaoRecordset` オブジェクトのフィールドデータメンバーへの参照。
 
 *pRecordset*<br/>
@@ -503,7 +503,7 @@ void AFXAPI DDX_FieldSlider(
 *nIDC*<br/>
 スライダーコントロールのリソース ID。
 
-*value*<br/>
+*値*<br/>
 交換する値への参照。 このパラメーターは、スライダーコントロールの現在のつまみの位置を設定するために使用されます。
 
 *pRecordset*<br/>
@@ -649,7 +649,7 @@ void AFXAPI DDX_FieldText(
 *nIDC*<br/>
 [CRecordView](../../mfc/reference/crecordview-class.md)または[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)オブジェクト内のコントロールの ID。
 
-*value*<br/>
+*値*<br/>
 関連付けられている `CRecordset` または `CDaoRecordset` オブジェクトのフィールドデータメンバーへの参照。 値のデータ型は、使用する `DDX_FieldText` のオーバーロードされたバージョンによって異なります。
 
 *pRecordset*<br/>
@@ -673,6 +673,6 @@ DDX の詳細については、「 [ダイアログ データ エクスチェン
 
   **ヘッダー** afxdao
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [マクロとグローバル](mfc-macros-and-globals.md)

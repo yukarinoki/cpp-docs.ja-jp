@@ -299,7 +299,7 @@ Visual Studio 2015 では、Visual Studio のユーザーは [CMake ジェネレ
 ::: moniker-end
 
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [チュートリアル: Visual C++ Studio でクロスプラットフォームプロジェクトを作成する](get-started-linux-cmake.md)<br/>
 [Linux CMake プロジェクトを構成する](../linux/cmake-linux-project.md)<br/>

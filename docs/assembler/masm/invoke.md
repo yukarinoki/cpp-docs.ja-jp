@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - INVOKE directive
 ms.assetid: 12d9bb40-33b9-411e-b801-45a1d675967e
-ms.openlocfilehash: 853bc9cd22d866357a4cd2d695beccc3efc20acf
-ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
+ms.openlocfilehash: a5175252364918ca218e81536b29f084f7fd19cc
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73703964"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397309"
 ---
 # <a name="invoke-32-bit-masm"></a>INVOKE (32 ビット MASM)
 
@@ -19,12 +19,12 @@ ms.locfileid: "73703964"
 
 ## <a name="syntax"></a>構文
 
-> INVOKE*式*[[, *arguments*]]
+> **呼び出し***式*⟦ __、__ *引数*...⟧
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-プロシージャに渡される各引数には、式、レジスタペア、またはアドレス式 (`ADDR`の前にある式) を指定できます。
+プロシージャに渡される各引数には、式、レジスタペア、またはアドレス式 ( **ADDR**で始まる式) を指定できます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
+[ディレクティブリファレンス](../../assembler/masm/directives-reference.md)

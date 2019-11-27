@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - '@WordSize symbol'
 ms.assetid: a4fb3bf1-4f87-4306-ad4d-27d999ce2b3a
-ms.openlocfilehash: 288ccb7e9e72e7f6b692d8ce172b4170fae1ff1a
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: 958491deab7db8ae091f1b10dcc5b9650dee5ebe
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74301959"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398873"
 ---
 # <a name="wordsize"></a>\@WordSize
 
@@ -21,6 +21,6 @@ ms.locfileid: "74301959"
 
 > **\@WordSize**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[シンボル リファレンス](../../assembler/masm/symbols-reference.md)
+[シンボルリファレンス](symbols-reference.md)

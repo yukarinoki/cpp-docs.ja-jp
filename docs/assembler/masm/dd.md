@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - DD directive
 ms.assetid: 0c238628-2fe2-437e-979d-a90bdae7b478
-ms.openlocfilehash: 6022da53ad8cde2b90431bfaf5b1ea2ddc0cac34
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e87098d2536cce5d818a0759f50b42fa50cb887a
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62178809"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398796"
 ---
 # <a name="dd"></a>DD
 
-割り当て、必要に応じてストレージの各ダブル ワード (4 バイト) を初期化します`initializer`します。 `DD` シノニムです[DWORD](../../assembler/masm/dword.md)します。
+各*初期化子*に対して、2つの単語 (4 バイト) を割り当てて、必要に応じて初期化します。 **DD**は[DWORD](../../assembler/masm/dword.md)のシノニムです。
 
 ## <a name="syntax"></a>構文
 
-> [name]DD の初期化子 [] の初期化子].
+> ⟦*name*⟧ **DD** *initializer* ⟦ __,__ *initializer* ...⟧
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-型指定子としても使用できる型が有効な任意の場所。
+型が有効である任意の場所で、型指定子として使用することもできます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)<br/>
+[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)

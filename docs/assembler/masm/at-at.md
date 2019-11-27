@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - '@@: symbol'
 ms.assetid: 4c0aa730-d534-4efd-9608-54d683d78654
-ms.openlocfilehash: 927837ae7089a042bc8b210ceecac929eb3862dc
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: 28233a637158dc025f5ba72a79b1b11197b3cbb4
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74302926"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74399247"
 ---
 # <a name=""></a>\@\@:
 
@@ -21,6 +21,6 @@ ms.locfileid: "74302926"
 
 > **\@の \@:**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[シンボル リファレンス](../../assembler/masm/symbols-reference.md)
+[シンボルリファレンス](symbols-reference.md)
