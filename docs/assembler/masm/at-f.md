@@ -15,12 +15,12 @@ ms.locfileid: "74399106"
 ---
 # <a name="f"></a>\@F
 
-The location of the next [\@\@:](../../assembler/masm/at-at.md) label.
+次の[\@\@:](../../assembler/masm/at-at.md)ラベルの位置。
 
 ## <a name="syntax"></a>構文
 
 > **\@F**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Symbols reference](symbols-reference.md)
+[シンボルリファレンス](symbols-reference.md)

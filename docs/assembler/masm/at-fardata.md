@@ -13,14 +13,14 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74399067"
 ---
-# <a name="fardata"></a>\@fardata
+# <a name="fardata"></a>\@.fardata
 
-The name of the segment defined by the [.FARDATA](../../assembler/masm/dot-fardata.md) directive (text macro).
+によって定義されるセグメントの名前[.FARDATA](../../assembler/masm/dot-fardata.md)ディレクティブ (テキストマクロ)。
 
 ## <a name="syntax"></a>構文
 
-> **\@fardata**
+> **\@.fardata**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Symbols reference](symbols-reference.md)
+[シンボルリファレンス](symbols-reference.md)

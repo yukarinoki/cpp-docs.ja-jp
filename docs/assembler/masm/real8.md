@@ -15,12 +15,12 @@ ms.locfileid: "74394611"
 ---
 # <a name="real8"></a>REAL8
 
-Allocates and optionally initializes a double-precision (8-byte) floating-point number for each *initializer*.
+各*初期化子*について、倍精度 (8 バイト) の浮動小数点数を割り当てて、必要に応じて初期化します。
 
 ## <a name="syntax"></a>構文
 
-> *name* **REAL8** *initializer* ⟦ __,__ *initializer* ...⟧
+> *名前* **REAL8** *initializer* ⟦ __、__ *初期化子*...⟧
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Directives reference](../../assembler/masm/directives-reference.md)
+[ディレクティブリファレンス](../../assembler/masm/directives-reference.md)

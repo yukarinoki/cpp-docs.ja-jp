@@ -15,22 +15,22 @@ ms.locfileid: "74397461"
 ---
 # <a name="if-masm"></a>IF (MASM)
 
-Grants assembly of *ifstatements* if *expression1* is true (nonzero) or *elseifstatements* if *expression1* is false (0) and *expression2* is true.
+*Expression1*が true (0 以外) の場合は*ifstatements*のアセンブリを、 *expression1*が false (0)、 *expression2*が true の場合は*elseifstatements*を許可します。
 
 ## <a name="syntax"></a>構文
 
-> **IF** *expression1*\
-> *if-statements*\
+> *Expression1*\
+> *if ステートメント*\
 > ⟦**ELSEIF** *expression2*\
-> *elseif-statements*⟧\
+> *elseif-ステートメント*⟧ \
 > ⟦**ELSE**\
-> *else-statements*⟧\
+> *else-ステートメント*⟧ \
 > **ENDIF**
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-The following directives may be substituted for [ELSEIF](../../assembler/masm/elseif-masm.md): **ELSEIFB**, **ELSEIFDEF**, **ELSEIFDIF**, **ELSEIFDIFI**, **ELSEIFE**, **ELSEIFIDN**, **ELSEIFIDNI**, **ELSEIFNB**, and **ELSEIFNDEF**. Optionally, assembles *else-statements* if the previous expression is false. Note that the expressions are evaluated at assembly time.
+次のディレクティブは、 [ELSEIF](../../assembler/masm/elseif-masm.md): **ELSEIFB**、 **ELSEIFDEF**、 **ELSEIFDIF**、 **ELSEIFDIFI**、 **ELSEIFE**、 **ELSEIFIDN**、ELSEIFIDNI、 **ELSEIFNB**、 **ELSEIFNDEF**の代わりに使用できます。 前の式が false の場合は、必要に応じて*else ステートメント*をアセンブルします。 式は、アセンブリ時に評価されることに注意してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Directives reference](directives-reference.md)
+[ディレクティブリファレンス](directives-reference.md)

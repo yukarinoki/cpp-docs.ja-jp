@@ -15,12 +15,12 @@ ms.locfileid: "74394601"
 ---
 # <a name="record-masm"></a>RECORD (MASM)
 
-Declares a record type consisting of the specified fields. *fieldname* names the field, *width* specifies the number of bits, and *expression* gives its initial value.
+指定されたフィールドで構成されるレコード型を宣言します。 フィールド*名はフィールドに名前を*付け、 *width*はビット数を示し、 *expression*は初期値を指定します。
 
 ## <a name="syntax"></a>構文
 
-> *recordname* **RECORD** *fieldname* __:__ *width* ⟦ __=__ *expression*⟧ ⟦ __,__ *fieldname* __:__ *width* ⟦ __=__ *expression*⟧ ...⟧
+> *recordname* **レコード** *fieldname* __:__ *width* ⟦ __=__ *expression*⟧⟦ __,__ *fieldname* __:__ *width* ⟦ __=__ *expression*⟧...⟧
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Directives reference](../../assembler/masm/directives-reference.md)
+[ディレクティブリファレンス](../../assembler/masm/directives-reference.md)

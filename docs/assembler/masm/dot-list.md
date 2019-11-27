@@ -15,16 +15,16 @@ ms.locfileid: "74398190"
 ---
 # <a name="list"></a>.LIST
 
-Starts listing of statements.
+ステートメントの一覧を開始します。
 
 ## <a name="syntax"></a>構文
 
 > **.LIST**
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
 既定値です。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Directives reference](directives-reference.md)
+[ディレクティブリファレンス](directives-reference.md)

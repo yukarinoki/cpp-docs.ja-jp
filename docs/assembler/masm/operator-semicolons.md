@@ -17,12 +17,12 @@ ms.locfileid: "74396463"
 ---
 # <a name="operator-"></a>;; 演算子
 
-Treats *text* as a comment in a macro that appears only in the macro definition. The listing does not show *text* where the macro is expanded.
+マクロ定義にのみ出現するマクロで、*テキスト*をコメントとして扱います。 この一覧には、マクロが展開されている*テキスト*は表示されません。
 
 ## <a name="syntax"></a>構文
 
-> **;;** *text*
+> **;;** *テキスト*
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Operators reference](operators-reference.md)
+[演算子リファレンス](operators-reference.md)

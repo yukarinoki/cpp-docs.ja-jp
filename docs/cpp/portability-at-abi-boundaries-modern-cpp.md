@@ -33,8 +33,8 @@ extern "C" {        // functions using explicit "this"
 }
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [に戻るC++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [C++ 言語リファレンス](../cpp/cpp-language-reference.md)<br/>
-[.NET 標準ライブラリ](../standard-library/cpp-standard-library-reference.md)
+[C++ 標準ライブラリ](../standard-library/cpp-standard-library-reference.md)

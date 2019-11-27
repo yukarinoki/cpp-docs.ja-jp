@@ -17,17 +17,17 @@ ms.locfileid: "74397410"
 ---
 # <a name="ifdif-ifdifi"></a>IFDIF、IFDIFI
 
-Grants assembly if the text items are different.
+テキスト項目が異なる場合にアセンブリを許可します。
 
 ## <a name="syntax"></a>構文
 
-> **IFDIF** *textitem1* __,__ *textitem2*\
-> **IFDIFI** *textitem1* __,__ *textitem2*
+> **IFDIF** *textitem1* __、__ *textitem2*\
+> **Ifdifi** *textitem1* __、__ *textitem2*
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-If **IFDIFI** is given, the comparison is case insensitive. See [IF](../../assembler/masm/if-masm.md) for complete syntax.
+**Ifdifi**が指定されている場合、比較では大文字と小文字が区別されません。 完全な構文について[は](../../assembler/masm/if-masm.md)、「」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Directives reference](../../assembler/masm/directives-reference.md)
+[ディレクティブリファレンス](../../assembler/masm/directives-reference.md)

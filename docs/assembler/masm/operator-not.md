@@ -16,12 +16,12 @@ ms.locfileid: "74396594"
 ---
 # <a name="operator-not"></a>NOT 演算子
 
-Returns *expression* with all bits reversed.
+すべてのビットが反転された*式*を返します。
 
 ## <a name="syntax"></a>構文
 
-> **NOT** *expression*
+> **NOT** *式*
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Operators reference](operators-reference.md)
+[演算子リファレンス](operators-reference.md)

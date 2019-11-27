@@ -60,7 +60,7 @@ DAO エラーの処理の詳細については、「[例外: データベース�
 
 **ヘッダー:** afxdao
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [構造体、スタイル、コールバック関数とメッセージ マップ](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
 [CDaoException クラス](../../mfc/reference/cdaoexception-class.md)

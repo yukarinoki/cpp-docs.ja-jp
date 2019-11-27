@@ -17,12 +17,12 @@ ms.locfileid: "74396640"
 ---
 # <a name="operator-mask"></a>MASK 演算子
 
-Returns a bit mask in which the bits in *recordfieldname* or *record* are set and all other bits are cleared.
+*Recordfieldname*または*record*のビットが設定され、他のすべてのビットがクリアされているビットマスクを返します。
 
 ## <a name="syntax"></a>構文
 
-> **MASK** {*recordfieldname* | *record*}
+> **マスク**{*recordfieldname* | *レコード*}
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Operators reference](operators-reference.md)
+[演算子リファレンス](operators-reference.md)

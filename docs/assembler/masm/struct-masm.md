@@ -15,13 +15,13 @@ ms.locfileid: "74393568"
 ---
 # <a name="struct-masm"></a>STRUCT (MASM)
 
-Declares a structure type having the specified *field-declarations*. Each field must be a valid data definition. Same as [STRUC](../../assembler/masm/struc.md).
+指定された*フィールド宣言*を持つ構造体型を宣言します。 各フィールドは、有効なデータ定義である必要があります。 [STRUC](../../assembler/masm/struc.md)と同じです。
 
 ## <a name="syntax"></a>構文
 
-> *name* **STRUCT** ⟦*alignment*⟧ ⟦ __,__ **NONUNIQUE**⟧ *field-declarations*\
-> *name* **ENDS**
+> *name* **STRUCT** ⟦*alignment*⟧⟦ __、__ **一意**でない⟧*フィールド宣言*\
+> *名前*の**終わり**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Directives reference](../../assembler/masm/directives-reference.md)
+[ディレクティブリファレンス](../../assembler/masm/directives-reference.md)

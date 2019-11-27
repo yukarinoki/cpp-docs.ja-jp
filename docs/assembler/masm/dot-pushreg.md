@@ -15,23 +15,23 @@ ms.locfileid: "74398034"
 ---
 # <a name="pushreg"></a>.PUSHREG
 
-Generates a `UWOP_PUSH_NONVOL` unwind code entry for the specified register number using the current offset in the prologue.
+プロローグ内の現在のオフセットを使用して、指定したレジスタ番号に `UWOP_PUSH_NONVOL` アンワインドコードエントリを生成します。
 
 ## <a name="syntax"></a>構文
 
-> .PUSHREG register
+> .PUSHREG レジスタ
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-**.PUSHREG** allows ml64.exe users to specify how a frame function unwinds, and is only allowed within the prologue, which extends from the [PROC](../../assembler/masm/proc.md) **FRAME** declaration to the [.ENDPROLOG](../../assembler/masm/dot-endprolog.md) directive. These directives do not generate code; they only generate `.xdata` and `.pdata`. **.PUSHREG** should be preceded by instructions that actually implement the actions to be unwound. It is a good practice to wrap both the unwind directives and the code they are meant to unwind in a macro to ensure agreement.
+**.PUSHREG**を使用すると、ml64.exe ユーザーは、フレーム関数をアンワインドする方法を指定できます。これは、 [PROC](../../assembler/masm/proc.md) **frame**宣言からに拡張されるプロローグ内でのみ使用でき[ます。ENDPROLOG](../../assembler/masm/dot-endprolog.md)ディレクティブ。 これらのディレクティブはコードを生成しません。`.xdata` と `.pdata`のみが生成されます。 **.PUSHREG**の前には、アンワインドするアクションを実際に実装する手順が必要です。 アンワインドディレクティブと、マクロでアンワインドするコードをラップして、アグリーメントを保証することをお勧めします。
 
-For more information, see [MASM for x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
+詳細については、「 [MASM for x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md)」を参照してください。
 
 ## <a name="sample"></a>サンプル
 
 ### <a name="description"></a>説明
 
-The following sample shows how to push non-volatile registers.
+次の例は、非 volatile レジスタをプッシュする方法を示しています。
 
 ### <a name="code"></a>コード
 
@@ -55,6 +55,6 @@ _text ENDS
 END
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Directives reference](directives-reference.md)
+[ディレクティブリファレンス](directives-reference.md)

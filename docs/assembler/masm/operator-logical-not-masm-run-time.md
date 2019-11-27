@@ -1,5 +1,5 @@
 ---
-title: '! 演算子 (MASM Run Time)'
+title: '! 演算子 (MASM の実行時間)'
 ms.date: 08/30/2018
 f1_keywords:
 - operator !
@@ -14,14 +14,14 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74396757"
 ---
-# <a name="operator--masm-run-time"></a>! 演算子 (MASM Run Time)
+# <a name="operator--masm-run-time"></a>! 演算子 (MASM の実行時間)
 
-Logical negation. Used only within [.IF](../../assembler/masm/dot-if.md), [.WHILE](../../assembler/masm/dot-while.md), or [.REPEAT](../../assembler/masm/dot-repeat.md) blocks and evaluated at run time, not at assembly time.
+論理否定。 内でのみ使用され[ます。の場合は](../../assembler/masm/dot-if.md) [。WHILE](../../assembler/masm/dot-while.md)、or [。](../../assembler/masm/dot-repeat.md)ブロックを繰り返し、アセンブリ時間ではなく実行時に評価します。
 
 ## <a name="syntax"></a>構文
 
 > **!** *expression*
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Operators reference](operators-reference.md)
+[演算子リファレンス](operators-reference.md)

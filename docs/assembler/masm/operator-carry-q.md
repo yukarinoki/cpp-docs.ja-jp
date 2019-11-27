@@ -17,12 +17,12 @@ ms.locfileid: "74397072"
 ---
 # <a name="operator-carry"></a>CARRY? 演算子
 
-Status of carry flag. Used only within [.IF](../../assembler/masm/dot-if.md), [.WHILE](../../assembler/masm/dot-while.md), or [.REPEAT](../../assembler/masm/dot-repeat.md) blocks and evaluated at run time, not at assembly time.
+キャリーフラグの状態。 内でのみ使用され[ます。の場合は](../../assembler/masm/dot-if.md) [。WHILE](../../assembler/masm/dot-while.md)、or [。](../../assembler/masm/dot-repeat.md)ブロックを繰り返し、アセンブリ時間ではなく実行時に評価します。
 
 ## <a name="syntax"></a>構文
 
-> **CARRY?**
+> **実行?**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Operators reference](../../assembler/masm/operators-reference.md)
+[演算子リファレンス](../../assembler/masm/operators-reference.md)

@@ -17,12 +17,12 @@ ms.locfileid: "74397121"
 ---
 # <a name="operator-addr"></a>ADDR 演算子
 
-See the [INVOKE](../../assembler/masm/invoke.md) directive.
+[INVOKE](../../assembler/masm/invoke.md)ディレクティブを参照してください。
 
 ## <a name="syntax"></a>構文
 
-> **ADDR**
+> **引き**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [演算子リファレンス](../../assembler/masm/operators-reference.md)

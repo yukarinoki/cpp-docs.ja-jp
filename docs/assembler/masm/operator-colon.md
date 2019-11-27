@@ -16,12 +16,12 @@ ms.locfileid: "74397054"
 ---
 # <a name="operator-"></a>: 演算子
 
-Overrides the default segment of *expression* with *segment*. The *segment* can be a segment register, group name, segment name, or segment expression. The *expression* must be a constant.
+*セグメント*を含む*式*の既定のセグメントをオーバーライドします。 セグメントには、セグメントレジスタ、グループ名、セグメント名、セグメント式のいずれかを*指定できます*。 *式*は定数である必要があります。
 
 ## <a name="syntax"></a>構文
 
-> *segment* **:** *expression*
+> *セグメント* **:** *式*
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Operators reference](operators-reference.md)
+[演算子リファレンス](operators-reference.md)

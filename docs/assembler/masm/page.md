@@ -15,14 +15,14 @@ ms.locfileid: "74395108"
 ---
 # <a name="page"></a>PAGE
 
-The first directive sets line *length* and character *width* of the program listing. If no arguments are given, generates a page break. The second directive increments the section number and resets the page number to 1.
+最初のディレクティブは、プログラムリストの行の*長さ*と文字*幅*を設定します。 引数を指定しない場合、では改ページが生成されます。 2番目のディレクティブは、セクション番号をインクリメントし、ページ番号を1にリセットします。
 
 ## <a name="syntax"></a>構文
 
 > **PAGE** ⟦*length*⟧⟦ __,__ *width*⟧
 
-> **PAGE +**
+> **ページ +**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Directives reference](../../assembler/masm/directives-reference.md)
+[ディレクティブリファレンス](../../assembler/masm/directives-reference.md)

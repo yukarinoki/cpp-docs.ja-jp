@@ -17,12 +17,12 @@ ms.locfileid: "74396513"
 ---
 # <a name="operator-"></a>% 演算子
 
-Treats the value of *expression* in a macro argument as text.
+マクロ引数の*式*の値をテキストとして扱います。
 
 ## <a name="syntax"></a>構文
 
-> **%** *expression*
+> **%** *式*
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Operators reference](operators-reference.md)
+[演算子リファレンス](operators-reference.md)

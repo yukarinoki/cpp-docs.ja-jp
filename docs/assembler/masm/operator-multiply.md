@@ -19,12 +19,12 @@ ms.locfileid: "74396629"
 ---
 # <a name="operator-"></a>演算子 *
 
-Returns *expression1* times *expression2*.
+*Expression1* times *expression2*を返します。
 
 ## <a name="syntax"></a>構文
 
 > *expression1* __\*__ *expression2*
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Operators reference](operators-reference.md)
+[演算子リファレンス](operators-reference.md)

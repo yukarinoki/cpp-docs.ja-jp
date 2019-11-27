@@ -19,10 +19,10 @@ ms.locfileid: "74398215"
 
 > **.LALL**
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-See [.LISTMACROALL](../../assembler/masm/dot-listmacroall.md).
+「」を参照してください[。LISTマクロ ALL](../../assembler/masm/dot-listmacroall.md)。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Directives reference](directives-reference.md)
+[ディレクティブリファレンス](directives-reference.md)

@@ -15,12 +15,12 @@ ms.locfileid: "74399247"
 ---
 # <a name=""></a>\@\@:
 
-Defines a code label recognizable only between *label1* and *label2*, where *label1* is either start of code or the previous `@@:` label, and *label2* is either end of code or the next `@@:` label. See [\@B](../../assembler/masm/at-b.md) and [\@F](../../assembler/masm/at-f.md).
+*Label1*と*label2*の間でのみ認識できるコードラベルを定義します。ここで、 *label1*はコードの開始または前の `@@:` のラベルで、 *label2*はコードの末尾または次の `@@:` ラベルのいずれかになります。 [\@B](../../assembler/masm/at-b.md)と[\@F](../../assembler/masm/at-f.md)を参照してください。
 
 ## <a name="syntax"></a>構文
 
-> **\@\@:**
+> **\@の \@:**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Symbols reference](symbols-reference.md)
+[シンボルリファレンス](symbols-reference.md)

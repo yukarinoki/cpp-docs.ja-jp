@@ -6,39 +6,39 @@ f1_keywords:
 helpviewer_keywords:
 - COMM directive
 ms.assetid: a23548c4-ad04-41fa-91da-945f228de742
-ms.openlocfilehash: 063689087b6114f9a2d544ef0b459bf594da3cc4
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: d36161ba54ca80fc0f576c6f0a7c2a9410bf8075
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74398825"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541028"
 ---
 # <a name="comm"></a>COMM
 
-Creates a communal variable with the attributes specified in *definition*.
+*定義*で指定された属性を使用して、communal 変数を作成します。
 
 ## <a name="syntax"></a>構文
 
-> **COMM** *definition* ⟦ __,__ *definition* ...⟧
+> **COMM** *definition* ⟦ __、__ *定義*...⟧
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-Communal variables are allocated by the linker, and can't be initialized. This means that you can't depend on the location or sequence of such variables.
+Communal 変数はリンカーによって割り当てられるため、初期化できません。 つまり、このような変数の場所やシーケンスに依存することはできません。
 
-Each *definition* has the following form:
+各*定義*には、次の形式があります。
 
-⟦*langtype*⟧ ⟦⦃**NEAR** &#124; **FAR**⦄⟧ _label_ **:** _type_⟦ **:** _count_⟧
+⟦*言語-* 型⟧⟦**NEAR** | **FAR**⟧ _label_ **:** _type_⟦ **:** _count_⟧
 
-The optional *langtype* sets the naming conventions for the name that follows. It overrides any language specified by the **.MODEL** directive. The optional **NEAR** or **FAR** override the current memory model. The *label* is the name of the variable. The *type* can be any type specifier ([BYTE](../../assembler/masm/byte-masm.md), [WORD](../../assembler/masm/word.md), and so on) or an integer specifying the number of bytes. The optional *count* specifies the number of elements in the declared data object; the default is one.
+省略可能な*言語の種類*は、次の名前の名前付け規則を設定します。 によって指定されたすべての言語をオーバーライド**します。モデル**ディレクティブ。 省略可能な**NEAR**または**FAR**は、現在のメモリモデルをオーバーライドします。 *ラベル*は変数の名前です。 *型*には、任意の型指定子 ([BYTE](../../assembler/masm/byte-masm.md)、 [WORD](../../assembler/masm/word.md)など)、またはバイト数を指定する整数を指定できます。 省略可能な*カウント*は、宣言されたデータオブジェクト内の要素の数を指定します。 既定の*カウント*は1です。
 
 ## <a name="example"></a>例
 
-This example creates an array of 512 BYTE elements:
+この例では、512バイトの要素の配列を作成します。
 
 ```asm
 COMM FAR ByteArray:BYTE:512
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)
+[ディレクティブリファレンス](directives-reference.md)

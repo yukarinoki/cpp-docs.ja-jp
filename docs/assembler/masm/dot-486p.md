@@ -13,14 +13,14 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398682"
 ---
-# <a name="486p-32-bit-masm"></a>.486P (32-bit MASM)
+# <a name="486p-32-bit-masm"></a>486P (32 ビット MASM)
 
-Enables assembly of all instructions (including privileged) for the 80486 processor. (32-bit MASM only.)
+80486プロセッサのすべての命令 (特権を含む) のアセンブリを有効にします。 (32 ビット MASM のみ。)
 
 ## <a name="syntax"></a>構文
 
 > **.486P**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)

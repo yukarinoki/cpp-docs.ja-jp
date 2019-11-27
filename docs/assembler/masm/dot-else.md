@@ -13,16 +13,16 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398495"
 ---
-# <a name="else-32-bit-masm"></a>.ELSE (32-bit MASM)
+# <a name="else-32-bit-masm"></a>.ELSE (32 ビット MASM)
 
 ## <a name="syntax"></a>構文
 
 > **.ELSE**
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-(32-bit MASM only.) See [.IF](../../assembler/masm/dot-if.md).
+(32 ビット MASM のみ。)「」を参照してください[。の場合](../../assembler/masm/dot-if.md)。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)

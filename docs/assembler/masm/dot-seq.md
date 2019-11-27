@@ -13,14 +13,14 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74397941"
 ---
-# <a name="seq-32-bit-masm"></a>.SEQ (32-bit MASM)
+# <a name="seq-32-bit-masm"></a>.SEQ (32 ビット MASM)
 
-Orders segments sequentially (the default order). (32-bit MASM only.)
+セグメントを順番に並べ替えます (既定の順序)。 (32 ビット MASM のみ。)
 
 ## <a name="syntax"></a>構文
 
 > **.SEQ**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Directives reference](directives-reference.md)
+[ディレクティブリファレンス](directives-reference.md)

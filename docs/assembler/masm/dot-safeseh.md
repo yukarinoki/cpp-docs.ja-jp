@@ -15,21 +15,21 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74397997"
 ---
-# <a name="safeseh-32-bit-masm"></a>.SAFESEH (32-bit MASM)
+# <a name="safeseh-32-bit-masm"></a>.SAFESEH (32 ビット MASM)
 
-Registers a function as a structured exception handler. (32-bit MASM only.)
+関数を構造化例外ハンドラーとして登録します。 (32 ビット MASM のみ。)
 
 ## <a name="syntax"></a>構文
 
-> **.SAFESEH** *identifier*
+> **.SAFESEH** *識別子*
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-*identifier* must be the ID for a locally defined [PROC](../../assembler/masm/proc.md) or [EXTRN](../../assembler/masm/extrn.md) PROC. A [LABEL](../../assembler/masm/label-masm.md) is not allowed. The .SAFESEH directive requires the [/safeseh](../../assembler/masm/ml-and-ml64-command-line-reference.md) ml.exe command-line option.
+*識別子*は、ローカルに定義された[Proc](../../assembler/masm/proc.md)または[extrn](../../assembler/masm/extrn.md) proc の id である必要があります。 [ラベル](../../assembler/masm/label-masm.md)は使用できません。 、.SAFESEH ディレクティブには、 [/safeseh](../../assembler/masm/ml-and-ml64-command-line-reference.md) ml .exe コマンドラインオプションが必要です。
 
-For more information about structured exception handlers, see [/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md).
+構造化例外ハンドラーの詳細については、「 [/safeseh](../../build/reference/safeseh-image-has-safe-exception-handlers.md)」を参照してください。
 
-For example, to register a safe exception handler, create a new MASM file (as follows), assemble with /safeseh, and add it to the linked objects.
+たとえば、安全な例外ハンドラーを登録するには、次のように新しい MASM ファイルを作成し、/safeseh でアセンブルして、リンクオブジェクトに追加します。
 
 ```asm
 .386
@@ -39,6 +39,6 @@ MyHandler   proto
 end
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Directives reference](directives-reference.md)
+[ディレクティブリファレンス](directives-reference.md)

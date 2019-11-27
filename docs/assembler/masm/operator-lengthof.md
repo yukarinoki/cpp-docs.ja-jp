@@ -17,12 +17,12 @@ ms.locfileid: "74396841"
 ---
 # <a name="operator-lengthof"></a>LENGTHOF 演算子
 
-Returns the number of data objects in *variable*.
+*変数*内のデータオブジェクトの数を返します。
 
 ## <a name="syntax"></a>構文
 
-> **LENGTHOF** *variable*
+> *変数***の長さ**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Operators reference](operators-reference.md)
+[演算子リファレンス](operators-reference.md)

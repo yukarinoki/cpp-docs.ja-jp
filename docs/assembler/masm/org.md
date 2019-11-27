@@ -15,12 +15,12 @@ ms.locfileid: "74395592"
 ---
 # <a name="org"></a>ORG
 
-Sets the location counter to *expression*.
+Location カウンターを*expression*に設定します。
 
 ## <a name="syntax"></a>構文
 
-> **ORG** *expression*
+> **組織***式*
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Directives reference](directives-reference.md)
+[ディレクティブリファレンス](directives-reference.md)

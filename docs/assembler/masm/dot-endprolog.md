@@ -15,18 +15,18 @@ ms.locfileid: "74398465"
 ---
 # <a name="endprolog"></a>.ENDPROLOG
 
-Signals the end of the prologue declarations.
+プロローグ宣言の終了を通知します。
 
 ## <a name="syntax"></a>構文
 
 > **.ENDPROLOG**
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-It is an error to use any of the prologue declarations outside of the region between [PROC](../../assembler/masm/proc.md) **FRAME** and **.ENDPROLOG**.
+[PROC](../../assembler/masm/proc.md) **FRAME**との間の領域外でプロローグ宣言を使用すると、エラーになり**ます。ENDPROLOG**。
 
-For more information, see [MASM for x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
+詳細については、「 [MASM for x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)

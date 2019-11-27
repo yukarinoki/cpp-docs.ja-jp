@@ -15,16 +15,16 @@ ms.locfileid: "74398067"
 ---
 # <a name="nolistif"></a>.NOLISTIF
 
-Suppresses listing of conditional blocks whose condition evaluates to false (0).
+条件が false (0) と評価される条件付きブロックの一覧を表示しません。
 
 ## <a name="syntax"></a>構文
 
 > **.NOLISTIF**
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-既定値です。 Same as [.SFCOND](../../assembler/masm/dot-sfcond.md).
+既定値です。 と同じ[です.SFCOND](../../assembler/masm/dot-sfcond.md)。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Directives reference](directives-reference.md)
+[ディレクティブリファレンス](directives-reference.md)

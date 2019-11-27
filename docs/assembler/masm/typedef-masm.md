@@ -15,12 +15,12 @@ ms.locfileid: "74393167"
 ---
 # <a name="typedef-masm"></a>TYPEDEF (MASM)
 
-Defines a new type called *name*, which is equivalent to *type*.
+*Name*という新しい型を定義します。これは*型*と同じです。
 
 ## <a name="syntax"></a>構文
 
-> *name* **TYPEDEF** *type*
+> **TYPEDEF** *型*の名前
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Directives reference](directives-reference.md)
+[ディレクティブリファレンス](directives-reference.md)

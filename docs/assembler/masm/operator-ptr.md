@@ -17,14 +17,14 @@ ms.locfileid: "74396499"
 ---
 # <a name="operator-ptr"></a>PTR 演算子
 
-The first operator forces the *expression* to be treated as having the specified *type*. The second operator specifies a pointer to *type*.
+最初の演算子は、指定された*型*を持つ*式*を強制的に処理します。 2番目の演算子は、*型*へのポインターを指定します。
 
 ## <a name="syntax"></a>構文
 
-> *type* **PTR** *expression*
+> **PTR** *式*の入力
 >
-> \[*distance*] **PTR** *type*
+> \[*distance*] **PTR** *型*
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Operators reference](operators-reference.md)
+[演算子リファレンス](operators-reference.md)

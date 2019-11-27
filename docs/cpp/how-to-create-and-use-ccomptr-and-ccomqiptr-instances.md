@@ -1,5 +1,5 @@
 ---
-title: 'How to: Create and use CComPtr and CComQIPtr instances'
+title: '方法: CComPtr インスタンスと CComQIPtr インスタンスを作成して使用する'
 ms.custom: how-to
 ms.date: 11/19/2019
 ms.topic: conceptual
@@ -11,7 +11,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74246537"
 ---
-# <a name="how-to-create-and-use-ccomptr-and-ccomqiptr-instances"></a>How to: Create and use CComPtr and CComQIPtr instances
+# <a name="how-to-create-and-use-ccomptr-and-ccomqiptr-instances"></a>方法: CComPtr インスタンスと CComQIPtr インスタンスを作成して使用する
 
 従来の Windows プログラミングでは、ライブラリは、多くの場合、COM オブジェクトとして (厳密には COM サーバーとして) 実装されます。 多くの Windows オペレーティング システム コンポーネントは COM サーバーとして実装されており、多くの共同作成者からこの形式のライブラリが提供されています。 COM の詳細については、「 [Component Object Model (COM)](/windows/win32/com/component-object-model--com--portal)」を参照してください。
 
@@ -23,7 +23,7 @@ ms.locfileid: "74246537"
 
 [!code-cpp[COM_smart_pointers#01](../cpp/codesnippet/CPP/how-to-create-and-use-ccomptr-and-ccomqiptr-instances_1.cpp)]
 
-`CComPtr` and its relatives are part of the ATL and are defined in \<atlcomcli.h>. `_com_ptr_t` is declared in \<comip.h>. コンパイラは、タイプ ライブラリのラッパー クラスを生成するときに `_com_ptr_t` の特殊化を作成します。
+`CComPtr` とその親戚は ATL に含まれており、\<atlcomcli. h > で定義されています。 `_com_ptr_t` は \<comip > で宣言されています。 コンパイラは、タイプ ライブラリのラッパー クラスを生成するときに `_com_ptr_t` の特殊化を作成します。
 
 ## <a name="example"></a>例
 
@@ -37,6 +37,6 @@ ATL では、よりシンプルな構文を持つ `CComQIPtr`も提供されま�
 
 [!code-cpp[COM_smart_pointers#03](../cpp/codesnippet/CPP/how-to-create-and-use-ccomptr-and-ccomqiptr-instances_3.cpp)]
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [スマート ポインター (Modern C++)](../cpp/smart-pointers-modern-cpp.md)

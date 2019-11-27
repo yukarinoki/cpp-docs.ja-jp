@@ -19,10 +19,10 @@ ms.locfileid: "74397292"
 
 > **IRP**
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-See [FOR](../../assembler/masm/for-masm.md).
+[については、を](../../assembler/masm/for-masm.md)参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Directives reference](directives-reference.md)
+[ディレクティブリファレンス](directives-reference.md)

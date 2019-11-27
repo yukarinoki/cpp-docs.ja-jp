@@ -15,14 +15,14 @@ ms.locfileid: "74392993"
 ---
 # <a name="union"></a>UNION
 
-Declares a union of one or more data types. The *field-declarations* must be valid data definitions. Omit the [ENDS](../../assembler/masm/ends-masm.md) *name* label on nested **UNION** definitions.
+1つ以上のデータ型の和集合を宣言します。 *フィールド宣言*は、有効なデータ定義である必要があります。 入れ子になった**共用体**の定義で[end](../../assembler/masm/ends-masm.md) *name*ラベルを省略します。
 
 ## <a name="syntax"></a>構文
 
-> *name* **UNION** ⟦*alignment*⟧ ⟦ __,__ **NONUNIQUE**⟧\
-> *field-declarations*\
-> ⟦*name*⟧ **ENDS**
+> *name* **UNION** ⟦*alignment*⟧⟦ __,__ **一意**でない⟧ \
+> *フィールド宣言*\
+> ⟦*name*⟧ **end**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Directives reference](../../assembler/masm/directives-reference.md)
+[ディレクティブリファレンス](../../assembler/masm/directives-reference.md)

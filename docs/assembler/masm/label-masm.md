@@ -15,14 +15,14 @@ ms.locfileid: "74397269"
 ---
 # <a name="label-masm"></a>LABEL (MASM)
 
-Creates a new label by assigning the current location-counter value and the given *type* to *name*.
+現在の場所-カウンター値と指定された*型*を*名前*に割り当てることによって、新しいラベルを作成します。
 
 ## <a name="syntax"></a>構文
 
-> *name* **LABEL** *type*
+> *名前***ラベル**の*種類*
 >
-> *name* **LABEL** ⟦**NEAR** | **FAR** | **PROC**⟧ **PTR** ⟦*type*⟧
+> *name* **LABEL** ⟦ | NEAR ** | ** **PROC**⟧ **PTR** ⟦*type*⟧
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Directives reference](directives-reference.md)
+[ディレクティブリファレンス](directives-reference.md)

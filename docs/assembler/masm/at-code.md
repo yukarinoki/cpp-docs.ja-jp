@@ -13,14 +13,14 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74399211"
 ---
-# <a name="code"></a>\@code
+# <a name="code"></a>\@コード
 
-The name of the code segment (text macro).
+コードセグメントの名前 (テキストマクロ)。
 
 ## <a name="syntax"></a>構文
 
-> **\@code**
+> **\@コード**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Symbols reference](symbols-reference.md)
+[シンボルリファレンス](symbols-reference.md)

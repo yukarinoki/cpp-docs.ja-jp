@@ -38,21 +38,21 @@ RUNTIME_FUNCTION 構造体は、メモリに DWORD で配置する必要があ�
 
 |||
 |-|-|
-|UBYTE: 3|Version|
+|UBYTE: 3|バージョン|
 |UBYTE: 5|フラグ|
 |UBYTE|プロローグのサイズ|
 |UBYTE|アンワインドコードの数|
 |UBYTE: 4|フレームレジスタ|
 |UBYTE: 4|フレームレジスタオフセット (スケーリング)|
 |USHORT \* n|アンワインドコード配列|
-|変数|の形式 (1) または (2) のいずれかを指定できます。|
+|variable|の形式 (1) または (2) のいずれかを指定できます。|
 
 (1) 例外ハンドラー
 
 |||
 |-|-|
 |ULONG|例外ハンドラーのアドレス|
-|変数|言語固有のハンドラーデータ (省略可能)|
+|variable|言語固有のハンドラーデータ (省略可能)|
 
 (2) チェーンアンワインド情報
 
@@ -72,7 +72,7 @@ UNWIND_INFO 構造体は、メモリに DWORD で配置する必要がありま�
 
    現在、次の3つのフラグが定義されています。
 
-   |フラグ|[説明]|
+   |フラグ|説明|
    |-|-|
    |`UNW_FLAG_EHANDLER`| 関数には、例外を調べる必要がある関数を検索するときに呼び出す必要がある例外ハンドラーがあります。|
    |`UNW_FLAG_UHANDLER`| 関数には、例外のアンワインド時に呼び出される必要がある終了ハンドラーがあります。|
@@ -327,7 +327,7 @@ typedef struct _DISPATCHER_CONTEXT {
 
 ### <a name="raw-pseudo-operations"></a>生の擬似操作
 
-|擬似操作|[説明]|
+|擬似操作|説明|
 |-|-|
 |PROC FRAME \[:*ehandler*]|MASM によって、関数の構造化例外処理アンワインドの動作について、.xdata 内の関数テーブルエントリが生成されます。  *Ehandler*が存在する場合、このプロシージャは言語固有のハンドラーとして .xdata に入力されます。<br /><br /> FRAME 属性を使用する場合は、の後にを指定する必要があります。ENDPROLOG ディレクティブ。  関数が ([関数型](../build/stack-usage.md#function-types)で定義されているように) リーフ関数の場合、これらの擬似演算の残りの部分と同様に、FRAME 属性は不要です。|
 |.PUSHREG*レジスタ*|プロローグ内の現在のオフセットを使用して、指定したレジスタ番号に UWOP_PUSH_NONVOL アンワインドコードエントリを生成します。<br /><br /> 不揮発性整数レジスタでのみ使用してください。  Volatile レジスタのプッシュの場合は、を使用します。ALLOCSTACK 8、代わりに|
@@ -393,7 +393,7 @@ sample ENDP
 
 [生の擬似操作](#raw-pseudo-operations)の使用を簡略化するために、ksamd64 で定義されているマクロのセットがあります。このマクロを使用して、一般的なプロシージャプロローグとエピローグを作成できます。
 
-|マクロ|[説明]|
+|マクロ|説明|
 |-|-|
 |alloc_stack (n)|(`sub rsp, n`を使用して) n バイトのスタックフレームを割り当て、適切なアンワインド情報 (. allocstack n) を出力します。|
 |save_reg *reg*、 *loc*|非揮発性レジスタ*reg*を RSP オフセット*loc*のスタックに保存し、適切なアンワインド情報を出力します。 (. savereg reg, loc)|
@@ -498,6 +498,6 @@ typedef struct _RUNTIME_FUNCTION {
     ((PVOID)((PULONG)GetLanguageSpecificData(info) + 1)
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [x64 ソフトウェア規約](../build/x64-software-conventions.md)

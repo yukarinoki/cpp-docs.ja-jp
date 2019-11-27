@@ -13,14 +13,14 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74399042"
 ---
-# <a name="filename"></a>\@FileName
+# <a name="filename"></a>\@ファイル名
 
-The base name of the main file being assembled (text macro).
+アセンブルするメインファイルの基本名 (テキストマクロ)。
 
 ## <a name="syntax"></a>構文
 
-> **\@FileName**
+> **\@ファイル名**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Symbols reference](symbols-reference.md)
+[シンボルリファレンス](symbols-reference.md)

@@ -13,18 +13,18 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398718"
 ---
-# <a name="386p-32-bit-masm"></a>.386P (32-bit MASM)
+# <a name="386p-32-bit-masm"></a>386P (32 ビット MASM)
 
-Enables assembly of all instructions (including privileged) for the 80386 processor; disables assembly of instructions introduced with later processors. (32-bit MASM only.)
+80386プロセッサのすべての命令 (特権を含む) のアセンブリを有効にします。以降のプロセッサで導入された命令のアセンブリを無効にします。 (32 ビット MASM のみ。)
 
 ## <a name="syntax"></a>構文
 
 > **.386P**
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-Also enables 80387 instructions.
+では、80387命令も有効になっています。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)

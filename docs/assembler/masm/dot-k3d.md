@@ -13,14 +13,14 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398238"
 ---
-# <a name="k3d-32-bit-masm"></a>.K3D (32-bit MASM)
+# <a name="k3d-32-bit-masm"></a>..K3D (32 ビット MASM)
 
-Enables assembly of **K3D** instructions. (32-bit MASM only.)
+**.K3d**命令のアセンブリを有効にします。 (32 ビット MASM のみ。)
 
 ## <a name="syntax"></a>構文
 
 > **.K3D**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Directives reference](directives-reference.md)
+[ディレクティブリファレンス](directives-reference.md)

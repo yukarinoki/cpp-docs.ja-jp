@@ -15,12 +15,12 @@ ms.locfileid: "74393700"
 ---
 # <a name="sizestr"></a>SIZESTR
 
-Finds the size of a text item.
+テキスト項目のサイズを検索します。
 
 ## <a name="syntax"></a>構文
 
-> *name* **SIZESTR** *textitem*
+> **SIZESTR** *textitem*という名前
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Directives reference](directives-reference.md)
+[ディレクティブリファレンス](directives-reference.md)

@@ -13,24 +13,24 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398233"
 ---
-# <a name="if-32-bit-masm"></a>.IF (32-bit MASM)
+# <a name="if-32-bit-masm"></a>.IF (32 ビット MASM)
 
-Generates code that tests *condition1* (for example, AX > 7) and executes the *statements* if that condition is true. (32-bit MASM only.)
+*Condition1* (たとえば、AX > 7) をテストし、その条件が true の場合に*ステートメント*を実行するコードを生成します。 (32 ビット MASM のみ。)
 
 ## <a name="syntax"></a>構文
 
-> **.IF** *condition1*\
-> *statements*\
-> ⟦ **.ELSEIF** *condition2*\
-> *statements*⟧\
-> ⟦ **.ELSE**\
-> *statements*⟧\
+> **.** *Condition1*\
+> *ステートメント*の\
+> ⟦ **。ELSEIF** *condition2*\
+> *ステートメント*⟧ \
+> ⟦ **。それ以外**の\
+> *ステートメント*⟧ \
 > **.ENDIF**
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-If a [.ELSE](../../assembler/masm/dot-else.md) follows, its statements are executed if the original condition was false. Note that the conditions are evaluated at run time.
+の場合は[。それ以外](../../assembler/masm/dot-else.md)の場合は、元の条件が false の場合にステートメントが実行されます。 条件は実行時に評価されることに注意してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Directives reference](directives-reference.md)
+[ディレクティブリファレンス](directives-reference.md)

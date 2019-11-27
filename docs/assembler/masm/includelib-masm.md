@@ -15,16 +15,16 @@ ms.locfileid: "74397326"
 ---
 # <a name="includelib-masm"></a>INCLUDELIB (MASM)
 
-Informs the linker that the current module should be linked with *libraryname*.
+現在のモジュールが*libraryname*とリンクされる必要があることをリンカーに通知します。
 
 ## <a name="syntax"></a>構文
 
-> **INCLUDELIB** *libraryname*
+> **インクルード***名 (libraryname* )
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-The *libraryname* must be enclosed in angle brackets if it includes a backslash, semicolon, greater-than symbol, less-than symbol, single quotation mark, or double quotation mark.
+*Libraryname*には、円記号、セミコロン、大なり記号、小なり記号、単一引用符、二重引用符が含まれている場合、山かっこで囲む必要があります。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Directives reference](directives-reference.md)
+[ディレクティブリファレンス](directives-reference.md)

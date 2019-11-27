@@ -17,12 +17,12 @@ ms.locfileid: "74395467"
 ---
 # <a name="operator-this"></a>THIS 演算子
 
-Returns an operand of specified *type* whose offset and segment values are equal to the current location counter value.
+オフセット値とセグメント値が現在の位置カウンター値と等しい、指定された*型*のオペランドを返します。
 
 ## <a name="syntax"></a>構文
 
-> **THIS** *type*
+> **この***型*
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Operators reference](operators-reference.md)
+[演算子リファレンス](operators-reference.md)

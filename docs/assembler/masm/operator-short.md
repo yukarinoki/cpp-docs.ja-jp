@@ -16,12 +16,12 @@ ms.locfileid: "74396169"
 ---
 # <a name="operator-short"></a>SHORT 演算子
 
-Sets the type of *label* to short. All jumps to *label* must be short (within the range -128 to +127 bytes from the jump instruction to *label*).
+*ラベル*の種類を short に設定します。 *ラベル*へのすべてのジャンプは、短い形式である必要があります (-128 ~ + 127 バイトの範囲内で、ジャンプ命令から*ラベル*に)。
 
 ## <a name="syntax"></a>構文
 
-> **SHORT** *label*
+> **短い***ラベル*
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Operators reference](operators-reference.md)
+[演算子リファレンス](operators-reference.md)

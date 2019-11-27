@@ -19,10 +19,10 @@ ms.locfileid: "74398201"
 
 > **.LFCOND**
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-See [.LISTIF](../../assembler/masm/dot-listif.md).
+「」を参照してください[.LISTIF](../../assembler/masm/dot-listif.md)。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Directives reference](directives-reference.md)
+[ディレクティブリファレンス](directives-reference.md)

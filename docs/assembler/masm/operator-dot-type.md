@@ -17,12 +17,12 @@ ms.locfileid: "74397038"
 ---
 # <a name="operator-type"></a>.TYPE 演算子
 
-See [OPATTR](../../assembler/masm/operator-opattr.md).
+「 [Opattr](../../assembler/masm/operator-opattr.md)」を参照してください。
 
 ## <a name="syntax"></a>構文
 
-> **.TYPE** *expression*
+> **.型***式*
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Operators reference](operators-reference.md)
+[演算子リファレンス](operators-reference.md)

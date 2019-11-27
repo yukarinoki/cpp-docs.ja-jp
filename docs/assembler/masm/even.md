@@ -15,12 +15,12 @@ ms.locfileid: "74397594"
 ---
 # <a name="even"></a>EVEN
 
-Aligns the next variable or instruction on an even byte.
+次の変数または命令を偶数バイトに配置します。
 
 ## <a name="syntax"></a>構文
 
 > **EVEN**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Directives reference](directives-reference.md)
+[ディレクティブリファレンス](directives-reference.md)

@@ -15,12 +15,12 @@ ms.locfileid: "74397807"
 ---
 # <a name="xlist"></a>.XLIST
 
-See [.NOLIST](../../assembler/masm/dot-nolist.md).
+「」を参照してください[。NOLIST](../../assembler/masm/dot-nolist.md)。
 
 ## <a name="syntax"></a>構文
 
 > **.XLIST**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Directives reference](directives-reference.md)
+[ディレクティブリファレンス](directives-reference.md)

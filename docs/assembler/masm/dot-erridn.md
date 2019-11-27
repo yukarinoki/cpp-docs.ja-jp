@@ -1,5 +1,5 @@
 ---
-title: '&period;ERRIDN, &period;ERRIDNI'
+title: '&period;ERRIDN、&period;ERRIDNI'
 ms.date: 05/23/2019
 f1_keywords:
 - .ERRIDN
@@ -15,19 +15,19 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398342"
 ---
-# <a name="perioderridn-perioderridni"></a>&period;ERRIDN, &period;ERRIDNI
+# <a name="perioderridn-perioderridni"></a>&period;ERRIDN、&period;ERRIDNI
 
-Generates an error if the text items are identical.
+テキスト項目が同一である場合に、エラーを生成します。
 
 ## <a name="syntax"></a>構文
 
-> **.ERRIDN** *textitem1* __,__ *textitem2* ⟦ __,__ *message*⟧\
-> **.ERRIDNI** *textitem1* __,__ *textitem2* ⟦ __,__ *message*⟧
+> **.Erridn** *textitem1* __、__ *textitem2* ⟦ __、__ *message*⟧ \
+> **.Erridni** *textitem1* __、__ *textitem2* ⟦ __、__ *message*⟧
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-If **&period;ERRIDNI** is given, the comparison is case insensitive.
+**&period;ERRIDNI**が指定されている場合、比較では大文字と小文字が区別されません。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Directives reference](../../assembler/masm/directives-reference.md)
+[ディレクティブリファレンス](../../assembler/masm/directives-reference.md)

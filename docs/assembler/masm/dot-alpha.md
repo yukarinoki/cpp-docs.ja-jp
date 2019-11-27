@@ -13,14 +13,14 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398599"
 ---
-# <a name="alpha-32-bit-masm"></a>.ALPHA (32-bit MASM)
+# <a name="alpha-32-bit-masm"></a>.アルファ (32 ビット MASM)
 
-Orders segments alphabetically. (32-bit MASM only.)
+セグメントをアルファベット順に並べ替えます。 (32 ビット MASM のみ。)
 
 ## <a name="syntax"></a>構文
 
 > **.ALPHA**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)

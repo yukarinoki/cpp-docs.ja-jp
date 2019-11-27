@@ -36,8 +36,8 @@ C++ 参照データベース パーサーは、短時間で大量のコードを
 
 > [!IMPORTANT]
 > ヒント ファイルを変更または追加する場合は、変更を反映するための追加の手順を実行する必要があります。
-> - In versions before Visual Studio 2017 version 15.6: Delete the .sdf file and/or VC.db file in the solution for all changes.
-> - In Visual Studio 2017 version 15.6 and later: Close and reopen the solution after adding new hint files.
+> - Visual Studio 2017 バージョン15.6 より前のバージョンの場合: すべての変更について、ソリューション内の .sdf ファイルまたは VC. db ファイルを削除します。
+> - Visual Studio 2017 バージョン15.6 以降: 新しいヒントファイルを追加した後、ソリューションを閉じてから再度開きます。
 
 ## <a name="scenario"></a>通信の種類
 
@@ -92,13 +92,13 @@ Visual Studio 2017 バージョン 15.8 以降には、中断を伴うマクロ�
 
 - 強調表示されているマクロを含むヒント ファイルを作成するクイック アクションがあります。既にヒント ファイルがある場合には、そのヒント ファイルにマクロを追加します。
 
-![Highlighted Macro.](media/hint-squiggle-and-actions.png "Hint squiggle and Quick Actions")
+![強調表示されたマクロ。](media/hint-squiggle-and-actions.png "ヒントの波線とクイックアクション")
 
 いずれかのクイック アクションを実行した後、パーサーは、ヒント ファイルによる影響を受けるファイルを再解析します。
 
-既定では、問題のマクロは、修正候補として強調表示されます。 強調表示は、赤や緑の波線のようなわかりやすいものに変更できます。 **[ツール]**  >  **[オプション]**  >  **[テキスト エディター]**  >  **[C/C++]**  >  **[ビュー]** の **[Code Squiggles]\(コードの波線\)** セクションで、 **[Macros in Skipped Browsing Regions]\(スキップされた参照領域のマクロ\)** を使用します。
+既定では、問題のマクロは、修正候補として強調表示されます。 強調表示は、赤や緑の波線のようなわかりやすいものに変更できます。 **[ツール]** [オプション] > [テキスト エディター] > [C/C++] > [ビュー]**の**[Code Squiggles]\(コードの波線\) >  セクションで、 **[Macros in Skipped Browsing Regions]\(スキップされた参照領域のマクロ\)** を使用します。
 
-![Macros in Skipped Browsing Regions Option.](media/skipped-regions-squiggle-option.png "Skipped regions squiggle option.")
+![スキップされたリージョンでのマクロの参照オプション。](media/skipped-regions-squiggle-option.png "スキップされた地域の波線オプション。")
 
 ## <a name="display-browsing-database-errors"></a>参照データベース エラーを表示
 
@@ -112,7 +112,7 @@ Visual Studio 2017 バージョン 15.8 以降には、中断を伴うマクロ�
 
 プロジェクトは、0 個以上のヒント ファイルの影響を受けることがあります。 ヒント ファイルが存在しない場合、解析システムはエラー回復手法を使用して解読できないソース コードを無視します。 それ以外の場合は、解析システムは次の方法を使用してヒントを検索して収集します。
 
-### <a name="search-order"></a>検索順序
+### <a name="search-order"></a>検索の順序
 
 解析システムでは、次の順序でヒント ファイルのディレクトリが検索されます。
 
@@ -148,7 +148,7 @@ Visual Studio 2017 バージョン 15.8 以降には、中断を伴うマクロ�
 
 ヒントは、次の構文を使用します。
 
-|構文|説明|
+|構文|意味|
 |------------|-------------|
 |`#define` *hint-name* *replacement-string*<br /><br /> `#define` *hint-name* `(` *parameter*, ...`)`*replacement-string*|新しいヒントを定義または既存のヒントを再定義するプリプロセッサ ディレクティブ。 このディレクティブの後に、プリプロセッサはソース コード内で *hint-name* が出現するたび *replacement-string* と置き換えます。<br /><br /> 2 番目の構文形式は、関数に似たヒントを定義します。 関数に似たヒントがソース コード内に出現すると、プリプロセッサは最初に *replacement-string* 内に *parameter* が出現するたびにソース コード内の対応する引数と置き換えてから、*hint-name* を *replacement-string* と置き換えます。|
 |`@<`|一連のマップ要素の開始を示すヒント ファイル固有の *replacement-string*。|
@@ -166,7 +166,7 @@ Visual Studio 2017 バージョン 15.8 以降には、中断を伴うマクロ�
 
 ### <a name="hint-file-directories"></a>ヒント ファイルのディレクトリ
 
-![Common and project&#45;specific hint file directories.](media/hintfile.png "HintFile")
+![共通およびプロジェクト&#45;固有のヒントファイルディレクトリ。](media/hintfile.png "HintFile")
 
 ### <a name="directories-and-hint-file-contents"></a>ディレクトリとヒント ファイルのコンテンツ
 
@@ -236,13 +236,13 @@ Visual Studio 2017 バージョン 15.8 以降には、中断を伴うマクロ�
 
 - エフェクティブ ヒントは、`vcpackages`、`Debug`、`A1`、および `A2` ディレクトリに格納されています。
 
-- `Debug` ヒント ファイル内の **#undef** ディレクティブにより、`vcpackages` ディレクトリ ヒント ファイル内の `#define _In_` ヒントが削除されました。
+- **ヒント ファイル内の**#undef`Debug` ディレクティブにより、`#define _In_` ディレクトリ ヒント ファイル内の `vcpackages` ヒントが削除されました。
 
 - `A1` ディレクトリ内のヒント ファイルは `START_NAMESPACE` を再定義します。
 
-- `A2` ディレクトリ内の `#undef` ヒントにより、`Debug` ディレクトリ ヒント ファイル内の `OBRACE` と `CBRACE` のヒントが削除されました。
+- `#undef` ディレクトリ内の `A2` ヒントにより、`OBRACE` ディレクトリ ヒント ファイル内の `CBRACE` と `Debug` のヒントが削除されました。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [Visual Studio の C++ プロジェクトに対して作成されるファイルの種類](file-types-created-for-visual-cpp-projects.md)<br>
 [#define ディレクティブ (C/C++)](../../preprocessor/hash-define-directive-c-cpp.md)<br>

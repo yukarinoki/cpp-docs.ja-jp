@@ -15,16 +15,16 @@ ms.locfileid: "74398148"
 ---
 # <a name="listmacro"></a>.LISTMACRO
 
-Starts listing of macro expansion statements that generate code or data.
+コードまたはデータを生成するマクロ拡張ステートメントの一覧を開始します。
 
 ## <a name="syntax"></a>構文
 
 > **.LISTMACRO**
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-既定値です。 Same as [.XALL](../../assembler/masm/dot-xall.md).
+既定値です。 と同じ[です。XALL](../../assembler/masm/dot-xall.md)。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Directives reference](directives-reference.md)
+[ディレクティブリファレンス](directives-reference.md)

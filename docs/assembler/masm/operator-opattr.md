@@ -17,12 +17,12 @@ ms.locfileid: "74396559"
 ---
 # <a name="operator-opattr"></a>OPATTR 演算子
 
-Returns a word defining the mode and scope of *expression*. The low byte is identical to the byte returned by [.TYPE](../../assembler/masm/operator-dot-type.md). The high byte contains additional information.
+*式*のモードとスコープを定義する単語を返します。 下位バイトは、によって返されるバイトと同じです[。「](../../assembler/masm/operator-dot-type.md)」と入力します。 上位バイトには追加情報が含まれています。
 
 ## <a name="syntax"></a>構文
 
-> **OPATTR** *expression*
+> **Opattr** *式*
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Operators reference](operators-reference.md)
+[演算子リファレンス](operators-reference.md)

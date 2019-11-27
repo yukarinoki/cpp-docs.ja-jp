@@ -17,12 +17,12 @@ ms.locfileid: "74396475"
 ---
 # <a name="operator-seg"></a>SEG 演算子
 
-Returns the segment of *expression*.
+*式*のセグメントを返します。
 
 ## <a name="syntax"></a>構文
 
-> **SEG** *expression*
+> **SEG** *式*
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Operators reference](operators-reference.md)
+[演算子リファレンス](operators-reference.md)

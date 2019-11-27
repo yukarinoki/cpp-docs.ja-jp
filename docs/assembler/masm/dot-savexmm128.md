@@ -15,20 +15,20 @@ ms.locfileid: "74397950"
 ---
 # <a name="savexmm128"></a>.SAVEXMM128
 
-Generates either a `UWOP_SAVE_XMM128` or a `UWOP_SAVE_XMM128_FAR` unwind code entry for the specified XMM register and offset using the current prologue offset. MASM will choose the most efficient encoding.
+現在のプロローグオフセットを使用して、指定された XMM register および offset の `UWOP_SAVE_XMM128` または `UWOP_SAVE_XMM128_FAR` アンワインドコードエントリを生成します。 MASM は、最も効率的なエンコードを選択します。
 
 ## <a name="syntax"></a>構文
 
-> **.SAVEXMM128** *xmmreg* , *offset*
+> **.SAVEXMM128** *xmmreg* 、 *offset*
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-**.SAVEXMM128** allows ml64.exe users to specify how a frame function unwinds, and is only allowed within the prologue, which extends from the [PROC](../../assembler/masm/proc.md) FRAME declaration to the [.ENDPROLOG](../../assembler/masm/dot-endprolog.md) directive. These directives do not generate code; they only generate `.xdata` and `.pdata`. .SAVEXMM128 should be preceded by instructions that actually implement the actions to be unwound. It is a good practice to wrap both the unwind directives and the code they are meant to unwind in a macro to ensure agreement.
+**.SAVEXMM128**を使用すると、ml64.exe ユーザーは、フレーム関数をアンワインドする方法を指定できます。これは、 [PROC](../../assembler/masm/proc.md) frame 宣言からに拡張されるプロローグ内でのみ使用でき[ます。ENDPROLOG](../../assembler/masm/dot-endprolog.md)ディレクティブ。 これらのディレクティブはコードを生成しません。`.xdata` と `.pdata`のみが生成されます。 .SAVEXMM128 の前に、アンワインドするアクションを実際に実装する手順を指定する必要があります。 アンワインドディレクティブと、マクロでアンワインドするコードをラップして、アグリーメントを保証することをお勧めします。
 
-*offset* must be a multiple of 16.
+*オフセット*は16の倍数である必要があります。
 
-For more information, see [MASM for x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
+詳細については、「 [MASM for x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Directives reference](directives-reference.md)
+[ディレクティブリファレンス](directives-reference.md)

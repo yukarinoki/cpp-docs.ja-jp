@@ -15,16 +15,16 @@ ms.locfileid: "74397713"
 ---
 # <a name="echo"></a>ECHO
 
-Displays *message* to the standard output device (by default, the screen).
+標準出力デバイス (既定では画面) に*メッセージ*を表示します。
 
 ## <a name="syntax"></a>構文
 
-> **ECHO** *message*
+> **エコー** *メッセージ*
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-Same as [%OUT](../../assembler/masm/percent-out.md).
+[% OUT](../../assembler/masm/percent-out.md)と同じです。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Directives reference](directives-reference.md)
+[ディレクティブリファレンス](directives-reference.md)

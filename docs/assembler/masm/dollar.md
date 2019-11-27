@@ -15,12 +15,12 @@ ms.locfileid: "74398759"
 ---
 # <a name=""></a>$
 
-The current value of the location counter.
+Location カウンターの現在の値です。
 
 ## <a name="syntax"></a>構文
 
 > **$**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [シンボル リファレンス](../../assembler/masm/symbols-reference.md)

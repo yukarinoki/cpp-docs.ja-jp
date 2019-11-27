@@ -1,5 +1,5 @@
 ---
-title: operator &#39; &#39;
+title: 演算子&#39;&#39;
 ms.date: 08/30/2018
 f1_keywords:
 - operator ' '
@@ -15,14 +15,14 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74395851"
 ---
-# <a name="operator-39-39"></a>operator &#39; &#39;
+# <a name="operator-39-39"></a>演算子&#39;&#39;
 
-Treats '*text*' as a string.
+'*Text*' を文字列として扱います。
 
 ## <a name="syntax"></a>構文
 
 > __'__ *text* __'__
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Operators reference](operators-reference.md)
+[演算子リファレンス](operators-reference.md)

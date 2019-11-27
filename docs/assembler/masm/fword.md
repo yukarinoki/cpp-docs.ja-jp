@@ -15,17 +15,17 @@ ms.locfileid: "74397494"
 ---
 # <a name="fword"></a>FWORD
 
-Allocates and optionally initializes 6 bytes of storage for each *initializer*.
+は、*初期化子*ごとに6バイトのストレージを割り当て、必要に応じて初期化します。
 
 ## <a name="syntax"></a>構文
 
-> ⟦*name*⟧ **FWORD** *initializer* ⟦ __,__ *initializer* ...⟧
+> ⟦*name*⟧ **fword** *初期化子*⟦ __、__ *初期化子*...⟧
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-Also can be used as a type specifier anywhere a type is legal.
+型が有効である任意の場所で、型指定子として使用することもできます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Directives Reference](../../assembler/masm/directives-reference.md)\
+[ディレクティブリファレンス](../../assembler/masm/directives-reference.md)\
 [DF](../../assembler/masm/df.md)

@@ -15,16 +15,16 @@ ms.locfileid: "74398118"
 ---
 # <a name="listmacroall"></a>.LISTMACROALL
 
-Starts listing of all statements in macros.
+マクロ内のすべてのステートメントの一覧を開始します。
 
 ## <a name="syntax"></a>構文
 
 > **.LISTMACROALL**
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-Same as [.LALL](../../assembler/masm/dot-lall.md).
+と同じ[です。LALL](../../assembler/masm/dot-lall.md)。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Directives reference](directives-reference.md)
+[ディレクティブリファレンス](directives-reference.md)

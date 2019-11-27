@@ -15,12 +15,12 @@ ms.locfileid: "74398916"
 ---
 # <a name="substr"></a>\@SubStr
 
-A macro function that returns a substring starting at *position*.
+*位置*から始まる部分文字列を返すマクロ関数。
 
 ## <a name="syntax"></a>構文
 
-> **\@SubStr(** *string* __,__ *position* ⟦ __,__ *length*⟧ **)**
+> **\@SubStr (** *string* __、__ *position* ⟦ __、__ *length*⟧ **)**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Symbols reference](symbols-reference.md)
+[シンボルリファレンス](symbols-reference.md)

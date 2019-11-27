@@ -13,14 +13,14 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398955"
 ---
-# <a name="model"></a>\@Model
+# <a name="model"></a>\@モデル
 
-1 for **TINY** model, 2 for **SMALL** model, 3 for **COMPACT** model, 4 for **MEDIUM** model, 5 for **LARGE** model, 6 for **HUGE** model, and 7 for **FLAT** model (numeric equate).
+1小さい**モデルの場合は**1、**小規模**モデルの場合は2、**コンパクト**モデルの場合は3、 **MEDIUM**モデルの場合は4、**大規模**モデルの場合は5、大きな**モデルの場合**は6、**フラット**モデルの場合は 7 (数値の等価)。
 
 ## <a name="syntax"></a>構文
 
-> **\@Model**
+> **\@モデル**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Symbols reference](symbols-reference.md)
+[シンボルリファレンス](symbols-reference.md)

@@ -13,14 +13,14 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398986"
 ---
-# <a name="interface"></a>\@Interface
+# <a name="interface"></a>\@インターフェイス
 
-Information about the language parameters (numeric equate).
+言語パラメーターについての情報 (数値の等価)。
 
 ## <a name="syntax"></a>構文
 
-> **\@Interface**
+> **\@インターフェイス**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Symbols reference](symbols-reference.md)
+[シンボルリファレンス](symbols-reference.md)

@@ -15,44 +15,44 @@ ms.locfileid: "74394755"
 ---
 # <a name="proto"></a>PROTO
 
-Prototypes a function or procedure. You can call the function prototyped by the PROTO directive by using the [INVOKE](invoke.md) directive.
+関数またはプロシージャをプロトタイプします。 [INVOKE](invoke.md)ディレクティブを使用して、PROTO ディレクティブでプロトタイプ宣言された関数を呼び出すことができます。
 
 ## <a name="syntax"></a>構文
 
-> *label* **PROTO** ⟦*distance*⟧ ⟦*language-type*⟧ ⟦ __,__ ⟦*parameter*⟧ __:__ *tag* ...⟧
+> *label* **PROTO** ⟦*distance*⟧⟦*language-type*⟧⟦ __,__ ⟦*parameter*⟧ __:__ *tag* ...⟧
 
 ### <a name="parameters"></a>パラメーター
 
-*label*\
-The name of the prototyped function.
+*ラベル*の\
+プロトタイプ宣言された関数の名前。
 
-*distance*\
-(Optional) Used in 16-bit memory models to override the default and indicate **NEAR** or **FAR** calls.
+*距離*\
+Optional16ビットメモリモデルで、既定値をオーバーライドし、 **NEAR**または**FAR**呼び出しを示すために使用されます。
 
-*language-type*\
-(Optional) Sets the calling and naming convention for procedures and public symbols. Supported conventions are:
+*言語の種類の*\
+Optionalプロシージャとパブリックシンボルの呼び出し規則と名前付け規則を設定します。 サポートされている規則は次のとおりです。
 
-- 32-bit **FLAT** model: **C**, **STDCALL**
+- 32-ビット**フラット**モデル: **C**、 **STDCALL**
 
-- 16-bit models: **C**, **BASIC**, **FORTRAN**, **PASCAL**, **SYSCALL**, **STDCALL**
+- 16ビットモデル: **C**、 **BASIC**、 **FORTRAN**、 **PASCAL**、 **SYSCALL**、 **STDCALL**
 
-*parameter*\
-The optional name for a function parameter.
+*パラメーター*\
+関数パラメーターの省略可能な名前です。
 
-*tag*\
-The type of a function parameter.
+*タグ*\
+関数パラメーターの型。
 
-The *parameter* and *tag* parameters may appear multiple times, once for each passed argument.
+*パラメーター*と*タグ*のパラメーターは、渡された引数ごとに1回、複数回出現する場合があります。
 
 ## <a name="example"></a>例
 
-This sample shows a **PROTO** declaration for a function named `addup3` that uses a **NEAR** call to override the 16-bit model default for procedure calls, and uses the **C** calling convention for stack parameters and return values. It takes two arguments, a **WORD** and a **VARARG**.
+このサンプルでは、`addup3` という名前の関数の**PROTO**宣言を示します。この関数は、 **NEAR**呼び出しを使用してプロシージャ呼び出しの16ビットモデルの既定値をオーバーライドし、スタックパラメーターと戻り値に**C**呼び出し規約を使用します。 2つの引数 (**単語**と**VARARG**) を受け取ります。
 
 ```MASM
 addup3 PROTO NEAR C, argcount:WORD, arg1:VARARG
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Directives Reference](directives-reference.md)\
-[.MODEL Reference](dot-model.md)
+[ディレクティブリファレンス](directives-reference.md)\
+[.モデルリファレンス](dot-model.md)

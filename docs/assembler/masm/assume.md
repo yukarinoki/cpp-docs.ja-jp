@@ -13,21 +13,21 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74399261"
 ---
-# <a name="assume-32-bit-masm"></a>ASSUME (32-bit MASM)
+# <a name="assume-32-bit-masm"></a>想定 (32 ビット MASM)
 
-Enables error checking for register values. (32-bit MASM only.)
+レジスタ値のエラーチェックを有効にします。 (32 ビット MASM のみ。)
 
 ## <a name="syntax"></a>構文
 
-> **ASSUME**  *segregister* __:__ *name* ⟦ __,__ *segregister* __:__ *name*...⟧\
-> **ASSUME**  *dataregister* __:__ *type* ⟦ __,__ *dataregister* __:__ *type*...⟧\
-> **ASSUME**  *register* __:ERROR__ ⟦ __,__ *register* __:ERROR__...⟧\
-> **ASSUME**  ⟦*register* __:__ ⟧**NOTHING** ⟦ __,__ *register* __:NOTHING__...⟧
+> *Segregister* __:__ *name* ⟦ __,__ *segregister* __:__ *name*...⟧\
+> 次のように*dataregister* __:__ *type* ⟦ __,__ *dataregister* __:__ *type*...⟧\
+> *レジスタ* __: error__ ⟦ __、__ *register* __: error__...⟧\
+> **⟦** *Register* __:__ ⟧**NOTHING** ⟦ __、__ *register* __: nothing__...⟧
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-After an **ASSUME** is put into effect, the assembler watches for changes to the values of the given registers. **ERROR** generates an error if the register is used. **NOTHING** removes register error checking. You can combine different kinds of assumptions in one statement.
+が有効になる**と**、アセンブラーは、指定されたレジスタの値に対する変更を監視します。 レジスタが使用されている場合、**エラー**によってエラーが生成されます。 レジスタエラーチェックは何も削除され**ません**。 1つのステートメントでさまざまな種類の仮定を組み合わせることができます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)

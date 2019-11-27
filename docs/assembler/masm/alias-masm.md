@@ -15,20 +15,20 @@ ms.locfileid: "74399292"
 ---
 # <a name="alias-masm"></a>ALIAS (MASM)
 
-The **ALIAS** directive creates an alternate name for a function.  This lets you create multiple names for a function, or create libraries that allow the linker (LINK.exe) to map an old function to a new function.
+**ALIAS**ディレクティブは、関数の代替名を作成します。  これにより、関数に対して複数の名前を作成したり、リンカー (convert.exe) が古い関数を新しい関数にマップできるようにするライブラリを作成したりできます。
 
 ## <a name="syntax"></a>構文
 
-> **ALIAS \<** _alias_ **> = \<** _actual-name_ **>**
+> **エイリアス \<** _エイリアス_ **> = \<** _実際の名前_ **>**
 
 #### <a name="parameters"></a>パラメーター
 
-*actual-name*\
-The actual name of the function or procedure.  The angle brackets are required.
+*実際の名前*\
+関数またはプロシージャの実際の名前。  山かっこが必要です。
 
-*alias*\
-The alternate or alias name.  The angle brackets are required.
+*エイリアス*\
+代替名または別名。  山かっこが必要です。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)

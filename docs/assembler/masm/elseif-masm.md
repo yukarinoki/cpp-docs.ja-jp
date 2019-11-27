@@ -15,16 +15,16 @@ ms.locfileid: "74398431"
 ---
 # <a name="elseif-masm"></a>ELSEIF (MASM)
 
-Combines [ELSE](../../assembler/masm/else-masm.md) and [IF](../../assembler/masm/if-masm.md) into one statement.
+[ELSE](../../assembler/masm/else-masm.md)と[if](../../assembler/masm/if-masm.md)を1つのステートメントに結合します。
 
 ## <a name="syntax"></a>構文
 
 > **ELSEIF**
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-See [IF](../../assembler/masm/if-masm.md).
+[IF](../../assembler/masm/if-masm.md)を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Directives reference](directives-reference.md)
+[ディレクティブリファレンス](directives-reference.md)

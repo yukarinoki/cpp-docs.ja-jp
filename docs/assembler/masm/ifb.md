@@ -15,16 +15,16 @@ ms.locfileid: "74397427"
 ---
 # <a name="ifb"></a>IFB
 
-Grants assembly if *textitem* is blank.
+*Textitem*が空白の場合、アセンブリを許可します。
 
 ## <a name="syntax"></a>構文
 
 > **IFB** *textitem*
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-See [IF](../../assembler/masm/if-masm.md) for complete syntax.
+完全な構文について[は](../../assembler/masm/if-masm.md)、「」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Directives reference](directives-reference.md)
+[ディレクティブリファレンス](directives-reference.md)

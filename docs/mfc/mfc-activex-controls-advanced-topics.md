@@ -69,7 +69,7 @@ MFC データベースクラスの一般的な概要については、「 [Mfc �
 
 1. **[プロパティ名]** ボックスに「`Array`」と入力します。
 
-1. **プロパティ型**ボックスで、**short**します。
+1. **[プロパティの種類]** ボックスで、 **[short]** を選択します。
 
 1. **[実装]** の種類 で、 **[Get/Set メソッド]** をクリックします。
 
@@ -107,16 +107,16 @@ MFC データベースクラスの一般的な概要については、「 [Mfc �
 
 ### <a name="activex-control-error-codes"></a>ActiveX コントロールのエラーコード
 
-|[エラー]|[説明]|
+|エラー|説明|
 |-----------|-----------------|
 |CTL_E_ILLEGALFUNCTIONCALL|無効な関数呼び出し|
 |CTL_E_OVERFLOW|オーバーフロー|
-|CTL_E_OUTOFMEMORY|メモリが不足しています|
+|CTL_E_OUTOFMEMORY|メモリ不足です|
 |CTL_E_DIVISIONBYZERO|0による除算|
 |CTL_E_OUTOFSTRINGSPACE|文字列スペースが不足しています。|
 |CTL_E_OUTOFSTACKSPACE|スタック領域が不足しています。|
 |CTL_E_BADFILENAMEORNUMBER|ファイル名または番号が正しくありません。|
-|CTL_E_FILENOTFOUND|ファイルが見つかりません|
+|CTL_E_FILENOTFOUND|ファイルが見つからない|
 |CTL_E_BADFILEMODE|ファイル モードが正しくありません。|
 |CTL_E_FILEALREADYOPEN|ファイルは既に開かれています。|
 |CTL_E_DEVICEIOERROR|デバイス I/O エラーです。|
@@ -150,7 +150,7 @@ MFC データベースクラスの一般的な概要については、「 [Mfc �
 |CTL_E_SEARCHTEXTNOTFOUND|検索文字列が見つかりませんでした|
 |CTL_E_REPLACEMENTSTOOLONG|置換後の文字列が長すぎます|
 
-必要に応じて、CUSTOM_CTL_SCODE マクロを使用して、標準コードのいずれにも含まれない条件のカスタムエラーコードを定義します。 このマクロのパラメーターは、1000 ~ 32767 の範囲の整数である必要があります。 例:
+必要に応じて、CUSTOM_CTL_SCODE マクロを使用して、標準コードのいずれにも含まれない条件のカスタムエラーコードを定義します。 このマクロのパラメーターは、1000 ~ 32767 の範囲の整数である必要があります。 例 :
 
 [!code-cpp[NVC_MFC_AxUI#37](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_4.cpp)]
 
@@ -174,12 +174,12 @@ ActiveX コントロールのキーボードインターフェイスを処理す
 
 - メンバー変数の追加ウィザードを使用して、 **[制御変数]** を選択し、コントロールの ID を選択します。 メンバー変数名を入力し、コントロールの**種類**としてコントロールのラッパークラスを選択します。
 
-     \- または -
+     または
 
 - ローカル変数とサブクラスをダイアログ項目として宣言します。 次のようなコードを挿入します (`CMyCtrl` は、コントロールの ID で IDC_MYCTRL1 ラッパークラスです)。
 
    [!code-cpp[NVC_MFC_AxCont#19](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_6.cpp)]
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [MFC ActiveX コントロール](../mfc/mfc-activex-controls.md)

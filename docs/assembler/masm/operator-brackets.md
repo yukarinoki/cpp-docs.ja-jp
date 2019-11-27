@@ -1,5 +1,5 @@
 ---
-title: operator brackets
+title: 演算子の角かっこ
 ms.date: 08/30/2018
 f1_keywords:
 - operator []
@@ -17,12 +17,12 @@ ms.locfileid: "74397081"
 ---
 # <a name="operator-"></a>operator \[\]
 
-Returns *expression1* plus \[*expression2*\].
+*Expression1* plus \[*expression2*\]を返します。
 
 ## <a name="syntax"></a>構文
 
 > *expression1* **[** expression2 **]**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [演算子リファレンス](../../assembler/masm/operators-reference.md)

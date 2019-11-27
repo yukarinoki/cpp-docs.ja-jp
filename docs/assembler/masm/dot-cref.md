@@ -15,12 +15,12 @@ ms.locfileid: "74398535"
 ---
 # <a name="cref"></a>.CREF
 
-Enables listing of symbols in the symbol portion of the symbol table and browser file.
+シンボルテーブルとブラウザーファイルのシンボル部分で記号の一覧を有効にします。
 
 ## <a name="syntax"></a>構文
 
 > **.CREF**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)

@@ -13,14 +13,14 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398555"
 ---
-# <a name="continue-32-bit-masm"></a>.CONTINUE (32-bit MASM)
+# <a name="continue-32-bit-masm"></a>.続行 (32 ビット MASM)
 
-Generates code to jump to the top of a [.WHILE](../../assembler/masm/dot-while.md) or [.REPEAT](../../assembler/masm/dot-repeat.md) block if *condition* is true. (32-bit MASM only.)
+の先頭に移動するコードを生成[します。また](../../assembler/masm/dot-while.md)は[。](../../assembler/masm/dot-repeat.md)*条件*が true の場合、ブロックを繰り返します。 (32 ビット MASM のみ。)
 
 ## <a name="syntax"></a>構文
 
-> **.CONTINUE** ⟦ **.IF** *condition*⟧
+> **.** ⟦**を続行します。IF** *condition*⟧
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)

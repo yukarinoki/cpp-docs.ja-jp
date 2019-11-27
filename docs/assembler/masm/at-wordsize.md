@@ -15,12 +15,12 @@ ms.locfileid: "74398873"
 ---
 # <a name="wordsize"></a>\@WordSize
 
-Two for a 16-bit segment or four for a 32-bit segment (numeric equate).
+16ビットセグメントの場合は2、32ビットセグメントの場合は 4 (数値の等価)。
 
 ## <a name="syntax"></a>構文
 
 > **\@WordSize**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Symbols reference](symbols-reference.md)
+[シンボルリファレンス](symbols-reference.md)

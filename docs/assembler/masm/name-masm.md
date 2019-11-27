@@ -15,12 +15,12 @@ ms.locfileid: "74397148"
 ---
 # <a name="name-masm"></a>NAME (MASM)
 
-無視されます。
+無視。
 
 ## <a name="syntax"></a>構文
 
-> **NAME**
+> **指定**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Directives reference](directives-reference.md)
+[ディレクティブリファレンス](directives-reference.md)

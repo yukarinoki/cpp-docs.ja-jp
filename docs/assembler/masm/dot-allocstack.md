@@ -15,25 +15,25 @@ ms.locfileid: "74398630"
 ---
 # <a name="allocstack"></a>.ALLOCSTACK
 
-Generates a **UWOP_ALLOC_SMALL** or a **UWOP_ALLOC_LARGE** with the specified size for the current offset in the prologue.
+プロローグ内の現在のオフセットに対して、指定したサイズの**UWOP_ALLOC_SMALL**または**UWOP_ALLOC_LARGE**を生成します。
 
 ## <a name="syntax"></a>構文
 
-> **.ALLOCSTACK** *size*
+> **.ALLOCSTACK** *サイズ*
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-MASM will choose the most efficient encoding for a given size.
+MASM は、特定のサイズに対して最も効率的なエンコードを選択します。
 
-**.ALLOCSTACK** allows ml64.exe users to specify how a frame function unwinds and is only allowed within the prologue, which extends from the [PROC](../../assembler/masm/proc.md) FRAME declaration to the [.ENDPROLOG](../../assembler/masm/dot-endprolog.md) directive. These directives do not generate code; they only generate `.xdata` and `.pdata`. **.ALLOCSTACK** should be preceded by instructions that actually implement the actions to be unwound. It is a good practice to wrap both the unwind directives and the code they are meant to unwind in a macro to ensure agreement.
+**.ALLOCSTACK**を使用すると、ml64.exe ユーザーは、フレーム関数をアンワインドする方法を指定できます。プロローグ内では、 [PROC](../../assembler/masm/proc.md) frame 宣言からに拡張され[ます。ENDPROLOG](../../assembler/masm/dot-endprolog.md)ディレクティブ。 これらのディレクティブはコードを生成しません。`.xdata` と `.pdata`のみが生成されます。 **.ALLOCSTACK**の前には、アンワインドするアクションを実際に実装する命令が必要です。 アンワインドディレクティブと、マクロでアンワインドするコードをラップして、アグリーメントを保証することをお勧めします。
 
-The *size* operand must be a multiple of 8.
+*サイズ*オペランドは8の倍数である必要があります。
 
-For more information, see [MASM for x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
+詳細については、「 [MASM for x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md)」を参照してください。
 
 ## <a name="sample"></a>サンプル
 
-The following sample shows how to specify an unwind/exception handler:
+次の例は、アンワインド/例外ハンドラーを指定する方法を示しています。
 
 ```asm
 ; ml64 ex3.asm /link /entry:Example1  /SUBSYSTEM:Console
@@ -63,6 +63,6 @@ text ENDS
 END
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)

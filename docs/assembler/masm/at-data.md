@@ -13,14 +13,14 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74399188"
 ---
-# <a name="data"></a>\@data
+# <a name="data"></a>データの \@
 
-The name of the default data group. Evaluates to DGROUP for all models except **FLAT**. Evaluates to **FLAT** under the **FLAT** memory model (text macro).
+既定のデータグループの名前。 **フラット**を除くすべてのモデルに対して、dgroup に評価されます。 **フラット**メモリモデル (テキストマクロ) では、**フラット**として評価されます。
 
 ## <a name="syntax"></a>構文
 
-> **\@data**
+> **データの \@**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Symbols reference](symbols-reference.md)
+[シンボルリファレンス](symbols-reference.md)

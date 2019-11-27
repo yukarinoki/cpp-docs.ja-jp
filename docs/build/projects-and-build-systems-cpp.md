@@ -48,7 +48,7 @@ cl /EHsc hello.cpp
 
 次の一覧は、Visual Studio プロジェクトのさまざまなC++オプションを示しています。
 
-- visual studio IDE を使用して Visual Studio プロジェクトを作成し、プロパティページを使用して構成します。 Visual Studio プロジェクトでは、Windows 上で実行されるプログラムが生成されます。 概要については、Visual Studio ドキュメントの「[コンパイルとビルド](/visualstudio/ide/compiling-and-building-in-visual-studio)」を参照してください。
+- Visual Studio IDE を使用して Visual Studio プロジェクトを作成し、プロパティページを使用して構成します。 Visual Studio プロジェクトでは、Windows 上で実行されるプログラムが生成されます。 概要については、Visual Studio ドキュメントの「[コンパイルとビルド](/visualstudio/ide/compiling-and-building-in-visual-studio)」を参照してください。
 
 - CMakeLists .txt ファイルが含まれているフォルダーを開きます。 CMake のサポートは、Visual Studio に統合されています。 IDE を使用して、CMake ファイルを変更せずに編集、テスト、およびデバッグを行うことができます。 これにより、異なるエディターを使用している可能性のある他のユーザーと同じ CMake プロジェクトで作業することができます。 CMake は、クロスプラットフォームの開発に推奨されるアプローチです。 詳細については、「 [Cmake プロジェクト](cmake-projects-in-visual-studio.md)」を参照してください。
  

@@ -15,12 +15,12 @@ ms.locfileid: "74395784"
 ---
 # <a name="purge"></a>PURGE
 
-Deletes the specified macros from memory.
+指定されたマクロをメモリから削除します。
 
 ## <a name="syntax"></a>構文
 
-> **PURGE** *macroname* ⟦ __,__ *macroname* ...⟧
+> *Macroname* ⟦ __,__ *macroname* ...⟧
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Directives reference](../../assembler/masm/directives-reference.md)
+[ディレクティブリファレンス](../../assembler/masm/directives-reference.md)

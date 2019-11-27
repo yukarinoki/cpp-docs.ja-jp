@@ -13,14 +13,14 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74399141"
 ---
-# <a name="date"></a>\@Date
+# <a name="date"></a>\@日付
 
-The system date in the format mm/dd/yy (text macro).
+Mm/dd/yy (テキストマクロ) の形式のシステム日付。
 
 ## <a name="syntax"></a>構文
 
-> **\@Date**
+> **\@日付**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Symbols reference](symbols-reference.md)
+[シンボルリファレンス](symbols-reference.md)

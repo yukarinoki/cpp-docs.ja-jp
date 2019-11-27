@@ -15,12 +15,12 @@ ms.locfileid: "74398523"
 ---
 # <a name="data"></a>.DATA?
 
-When used with [.MODEL](../../assembler/masm/dot-model.md), starts a near data segment for uninitialized data (segment name _BSS).
+と共に使用[します。モデル](../../assembler/masm/dot-model.md)では、初期化されていないデータ (セグメント名 _BSS) に対してほぼデータセグメントを開始します。
 
 ## <a name="syntax"></a>構文
 
 > **.DATA?**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)

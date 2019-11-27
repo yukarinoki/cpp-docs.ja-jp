@@ -17,12 +17,12 @@ ms.locfileid: "74396906"
 ---
 # <a name="operator-high"></a>HIGH 演算子
 
-Returns the high 8 bits of the low 16 bits of *expression*. MASM expressions are 64-bit values.
+*式*の下位16ビットの上位8ビットを返します。 MASM の式は、64ビットの値です。
 
 ## <a name="syntax"></a>構文
 
-> **HIGH** *expression*
+> **高***式*
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Operators reference](operators-reference.md)
+[演算子リファレンス](operators-reference.md)

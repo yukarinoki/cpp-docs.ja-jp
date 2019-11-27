@@ -17,12 +17,12 @@ ms.locfileid: "74396551"
 ---
 # <a name="operator-or"></a>OR 演算子
 
-Returns the result of a bitwise OR operation for *expression1* and *expression2*.
+*Expression1*と*expression2*のビットごとの or 演算の結果を返します。
 
 ## <a name="syntax"></a>構文
 
-> *expression1* **OR** *expression2*
+> *expression1* **または** *expression2*
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Operators reference](operators-reference.md)
+[演算子リファレンス](operators-reference.md)

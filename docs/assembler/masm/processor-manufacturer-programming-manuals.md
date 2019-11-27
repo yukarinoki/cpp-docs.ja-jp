@@ -11,20 +11,20 @@ ms.locfileid: "74394836"
 ---
 # <a name="processor-manufacturer-programming-manuals"></a>プロセッサの製造元のプログラミング マニュアル
 
-This article provides links to websites that may contain programming information about processors that are not manufactured, sold, or supported by Microsoft. Microsoft does not own or control the websites or the content on them.
+この記事では、Microsoft によって製造、販売、またはサポートされていないプロセッサに関するプログラミング情報が含まれている可能性のある web サイトへのリンクを示します。 Microsoft は、web サイトまたはそのコンテンツを所有または制御しません。
 
-## <a name="processor-manufacturer-websites"></a>Processor manufacturer websites
+## <a name="processor-manufacturer-websites"></a>プロセッサの製造元の web サイト
 
-- [AMD Developer Guides, Manuals & ISA Documents](https://developer.amd.com/resources/developer-guides-manuals/)
+- [AMD 開発者ガイド、マニュアル & ISA ドキュメント](https://developer.amd.com/resources/developer-guides-manuals/)
 
 - [Intel 64 and IA-32 Architectures Software Developer Manuals (インテル 64 および IA-32 アーキテクチャ ソフトウェア デベロッパーズ マニュアル)](https://software.intel.com/articles/intel-sdm)
 
-- [Introduction to Intel Advanced Vector Extensions](https://software.intel.com/articles/introduction-to-intel-advanced-vector-extensions)
+- [Intel Advanced Vector Extensions の概要](https://software.intel.com/articles/introduction-to-intel-advanced-vector-extensions)
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-Neither Visual Studio nor the Microsoft Macro Assembler support all processors.
+Visual Studio と Microsoft マクロアセンブラーはいずれも、すべてのプロセッサをサポートしていません。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Microsoft Macro Assembler reference](../../assembler/masm/microsoft-macro-assembler-reference.md)
+[Microsoft マクロアセンブラーリファレンス](../../assembler/masm/microsoft-macro-assembler-reference.md)

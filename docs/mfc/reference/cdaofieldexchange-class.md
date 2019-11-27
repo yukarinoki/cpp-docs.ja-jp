@@ -37,14 +37,14 @@ class CDaoFieldExchange
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|名前|[説明]|
+|Name|説明|
 |----------|-----------------|
 |[CDaoFieldExchange::IsValidOperation](#isvalidoperation)|現在の操作が更新対象のフィールドの型に適している場合は、0以外の値を返します。|
 |[CDaoFieldExchange::SetFieldType](#setfieldtype)|次の `SetFieldType`の呼び出しまで、DFX 関数の後続のすべての呼び出しで表される、レコードセットデータメンバー (列またはパラメーター) の種類を指定します。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
-|名前|[説明]|
+|Name|説明|
 |----------|-----------------|
 |[CDaoFieldExchange:: m_nOperation](#m_noperation)|レコードセットの `DoFieldExchange` メンバー関数への現在の呼び出しによって実行されている DFX 操作。|
 |[CDaoFieldExchange:: m_prs](#m_prs)|DFX 操作が実行されているレコードセットへのポインター。|
@@ -108,7 +108,7 @@ DFX メカニズムによって実行される操作の一部は、使用可能�
 
 `m_nOperation` に指定できる値は次のとおりです。
 
-|操作|[説明]|
+|操作|説明|
 |---------------|-----------------|
 |`AddToParameterList`|SQL ステートメントの**PARAMETERS**句を構築します。|
 |`AddToSelectList`|SQL ステートメントの**SELECT**句を構築します。|
@@ -132,7 +132,7 @@ DFX メカニズムによって実行される操作の一部は、使用可能�
 
 ### <a name="remarks"></a>コメント
 
-##  <a name="setfieldtype"></a>  CDaoFieldExchange::SetFieldType
+##  <a name="setfieldtype"></a>CDaoFieldExchange::SetFieldType
 
 `CDaoRecordset` クラスの `DoFieldExchange` オーバーライドで `SetFieldType` を呼び出します。
 
@@ -157,7 +157,7 @@ void SetFieldType(UINT nFieldType);
 
 一般に、フィールドデータメンバーまたはパラメーターデータメンバーに関連付けられている DFX 関数呼び出しの各グループの前に、`SetFieldType`を呼び出す必要があります。 各 `SetFieldType` 呼び出しの*nFieldType*パラメーターは、`SetFieldType` 呼び出しの後にある DFX 関数呼び出しによって表されるデータメンバーの型を識別します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [階層図](../../mfc/hierarchy-chart.md)<br/>
 [CDaoRecordset クラス](../../mfc/reference/cdaorecordset-class.md)

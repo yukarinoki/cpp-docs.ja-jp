@@ -13,10 +13,10 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74397848"
 ---
-# <a name="untilcxz-32-bit-masm"></a>.UNTILCXZ (32-bit MASM)
+# <a name="untilcxz-32-bit-masm"></a>.CXZ (32 ビット MASM)
 
-(32-bit MASM only.) See [.REPEAT](../../assembler/masm/dot-repeat.md).
+(32 ビット MASM のみ。)「」を参照してください[。繰り返し](../../assembler/masm/dot-repeat.md)ます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Directives reference](directives-reference.md)
+[ディレクティブリファレンス](directives-reference.md)

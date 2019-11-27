@@ -17,12 +17,12 @@ ms.locfileid: "74396801"
 ---
 # <a name="operator-ltgt"></a>operator &lt;&gt;
 
-Treats *text* as a single literal element.
+*テキスト*を1つのリテラル要素として扱います。
 
 ## <a name="syntax"></a>構文
 
-> __\<__ *text* __>__
+> __\<__ *テキスト* __>__
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Operators reference](operators-reference.md)
+[演算子リファレンス](operators-reference.md)

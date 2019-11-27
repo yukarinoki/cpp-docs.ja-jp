@@ -17,12 +17,12 @@ ms.locfileid: "74397004"
 ---
 # <a name="operator-eq"></a>EQ 演算子
 
-Returns true (-1) if *expression1* equals *expression2*, or returns false (0) if it does not.
+*Expression1*が*expression2*に等しい場合は true (-1) を返し、そうでない場合は false (0) を返します。
 
 ## <a name="syntax"></a>構文
 
 > *expression1* **EQ** *expression2*
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Operators reference](operators-reference.md)
+[演算子リファレンス](operators-reference.md)

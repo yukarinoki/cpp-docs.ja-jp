@@ -17,12 +17,12 @@ ms.locfileid: "74395329"
 ---
 # <a name="operator-width"></a>WIDTH 演算子
 
-Returns the width in bits of the current *recordfieldname* or *record*.
+現在の*recordfieldname*または*record*の幅をビット単位で返します。
 
 ## <a name="syntax"></a>構文
 
-> **WIDTH** {*recordfieldname* | *record*}
+> **幅**{*recordfieldname* | *レコード*}
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Operators reference](operators-reference.md)
+[演算子リファレンス](operators-reference.md)

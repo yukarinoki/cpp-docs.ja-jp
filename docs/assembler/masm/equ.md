@@ -15,20 +15,20 @@ ms.locfileid: "74397609"
 ---
 # <a name="equ"></a>EQU
 
-The first directive assigns numeric value of *expression* to *name*.
+最初のディレクティブは、*式*の数値を*名前*に代入します。
 
 ## <a name="syntax"></a>構文
 
-> *name* **EQU** *expression*
+> *名前***等しい***式*
 >
-> *name* **EQU** __\<__ *text* __>__
+> *name* **等しい** __\<__ *text* __>__
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-The *name* cannot be redefined later.
+後で*名前*を再定義することはできません。
 
-The second directive assigns specified *text* to *name*. The *name* can be assigned a different *text* later. See [TEXTEQU](../../assembler/masm/textequ.md).
+2番目のディレクティブは、指定された*テキスト*を*名前*に割り当てます。 *名前*には、後で別の*テキスト*を割り当てることができます。 「 [TEXTEQU](../../assembler/masm/textequ.md)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Directives reference](directives-reference.md)
+[ディレクティブリファレンス](directives-reference.md)

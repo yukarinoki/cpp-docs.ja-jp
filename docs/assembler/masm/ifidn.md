@@ -17,17 +17,17 @@ ms.locfileid: "74397377"
 ---
 # <a name="ifidn-ifidni"></a>IFIDN、IFIDNI
 
-Grants assembly if the text items are identical.
+テキスト項目が同一である場合、アセンブリを許可します。
 
 ## <a name="syntax"></a>構文
 
-> **IFIDN** *textitem1* __,__ *textitem2*\
-> **IFIDNI** *textitem1* __,__ *textitem2*
+> **Ifidn** *textitem1* __、__ *textitem2*\
+> **Ifidni** *textitem1* __、__ *textitem2*
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-If **IFIDNI** is given, the comparison is case insensitive. See [IF](../../assembler/masm/if-masm.md) for complete syntax.
+**Ifidni**が指定されている場合、比較では大文字と小文字が区別されません。 完全な構文について[は](../../assembler/masm/if-masm.md)、「」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Directives reference](../../assembler/masm/directives-reference.md)
+[ディレクティブリファレンス](../../assembler/masm/directives-reference.md)

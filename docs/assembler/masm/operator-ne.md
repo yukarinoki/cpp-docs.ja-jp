@@ -17,12 +17,12 @@ ms.locfileid: "74396613"
 ---
 # <a name="operator-ne"></a>NE 演算子
 
-Returns true (-1) if *expression1* does not equal *expression2*, or returns false (0) if it does.
+*Expression1*が*expression2*に等しくない場合は true (-1) を返し、それ以外の場合は false (0) を返します。
 
 ## <a name="syntax"></a>構文
 
 > *expression1* **NE** *expression2*
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Operators reference](operators-reference.md)
+[演算子リファレンス](operators-reference.md)

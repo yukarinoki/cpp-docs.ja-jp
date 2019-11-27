@@ -17,12 +17,12 @@ ms.locfileid: "74396160"
 ---
 # <a name="operator-shr"></a>SHR 演算子
 
-Returns the result of shifting the bits of *expression* right *count* number of bits.
+*式*を右に*カウント*するビット数をシフトした結果を返します。
 
 ## <a name="syntax"></a>構文
 
-> *expression* **SHR** *count*
+> *式*の**SHR** *数*
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Operators reference](operators-reference.md)
+[演算子リファレンス](operators-reference.md)

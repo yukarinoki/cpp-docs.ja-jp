@@ -15,16 +15,16 @@ ms.locfileid: "74398178"
 ---
 # <a name="listall"></a>.LISTALL
 
-Starts listing of all statements.
+すべてのステートメントの一覧を開始します。
 
 ## <a name="syntax"></a>構文
 
 > **.LISTALL**
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-Equivalent to the combination of [.LIST](../../assembler/masm/dot-list.md), [.LISTIF](../../assembler/masm/dot-listif.md), and [.LISTMACROALL](../../assembler/masm/dot-listmacroall.md).
+の組み合わせと等価[です。LIST](../../assembler/masm/dot-list.md)、 [.LISTIF](../../assembler/masm/dot-listif.md)、、および[。LISTマクロ ALL](../../assembler/masm/dot-listmacroall.md)。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Directives reference](directives-reference.md)
+[ディレクティブリファレンス](directives-reference.md)

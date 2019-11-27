@@ -80,7 +80,7 @@ Field オブジェクトに一意の名前を入力します。 詳細につい�
 *m_lSize*<br/>
 テキストまたは数値を含むフィールドオブジェクトのテキストまたは固定サイズを格納する DAO フィールドオブジェクトの最大サイズをバイト単位で示す値。 詳細については、DAO ヘルプの「Size プロパティ」を参照してください。 サイズには、次のいずれかの値を指定できます。
 
-|[種類]|サイズ (バイト)|[説明]|
+|種類|サイズ (バイト)|説明|
 |----------|--------------------|-----------------|
 |`dbBoolean`|1 バイト|はい/いいえ (True/False と同じ)|
 |`dbByte`|1|Byte|
@@ -88,7 +88,7 @@ Field オブジェクトに一意の名前を入力します。 詳細につい�
 |`dbLong`|4|Long|
 |`dbCurrency`|8|通貨 ([COleCurrency](../../mfc/reference/colecurrency-class.md))|
 |`dbSingle`|4|Single|
-|`dbDouble`|8|倍精度浮動小数点型|
+|`dbDouble`|8|Double|
 |`dbDate`|8|日付/時刻 ([COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md))|
 |`dbText`|1 - 255|テキスト ([CString](../../atl-mfc-shared/reference/cstringt-class.md))|
 |`dbLongBinary`|0|Long Binary (OLE オブジェクト、[CByteArray](../../mfc/reference/cbytearray-class.md);`CLongBinary`の代わりに使用)|
@@ -156,7 +156,7 @@ Field オブジェクトは MFC クラスでは表されません。 代わり�
 
 **ヘッダー:** afxdao
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [構造体、スタイル、コールバック関数とメッセージ マップ](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
 [CDaoTableDef:: GetFieldInfo](../../mfc/reference/cdaotabledef-class.md#getfieldinfo)<br/>

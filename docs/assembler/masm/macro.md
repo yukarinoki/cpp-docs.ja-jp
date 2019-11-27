@@ -15,18 +15,18 @@ ms.locfileid: "74397244"
 ---
 # <a name="macro"></a>MACRO
 
-Marks a macro block called *name* and establishes *parameter* placeholders for arguments passed when the macro is called.
+マクロブロックを*名前*としてマークし、マクロが呼び出されたときに渡される引数の*パラメーター*のプレースホルダーを確立します。
 
 ## <a name="syntax"></a>構文
 
-> *name*  **MACRO** ⟦*parameter* ⟦ **:REQ** | :=*default* |  **:VARARG**⟧ ...⟧\
-> *statements*\
-> **ENDM** ⟦*value*⟧
+> *name***マクロ**⟦*parameter* ⟦ **: REQ** |: =*既定* |  **: VARARG**⟧...⟧\
+> *ステートメント*の\
+> **Endm** ⟦*value*⟧
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-A macro function returns *value* to the calling statement.
+マクロ関数は、呼び出し元のステートメントに*値*を返します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Directives reference](directives-reference.md)
+[ディレクティブリファレンス](directives-reference.md)

@@ -15,16 +15,16 @@ ms.locfileid: "74397577"
 ---
 # <a name="exitm"></a>EXITM
 
-Terminates expansion of the current repeat or macro block and begins assembly of the next statement outside the block.
+現在の繰り返しまたはマクロブロックの展開を終了し、ブロックの外側にある次のステートメントのアセンブリを開始します。
 
 ## <a name="syntax"></a>構文
 
-> **EXITM** ⟦*textitem*⟧
+> **Exitm** ⟦*textitem*⟧
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-In a macro function, *textitem* is the value returned.
+マクロ関数では、 *textitem*は返される値です。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Directives reference](directives-reference.md)
+[ディレクティブリファレンス](directives-reference.md)

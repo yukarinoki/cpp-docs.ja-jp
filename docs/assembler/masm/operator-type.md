@@ -17,12 +17,12 @@ ms.locfileid: "74395366"
 ---
 # <a name="operator-type"></a>TYPE 演算子
 
-Returns the type of *expression*.
+*式*の型を返します。
 
 ## <a name="syntax"></a>構文
 
-> **TYPE** *expression*
+> **型***式*
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Operators reference](operators-reference.md)
+[演算子リファレンス](operators-reference.md)

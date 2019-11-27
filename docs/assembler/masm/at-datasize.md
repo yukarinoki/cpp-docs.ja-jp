@@ -15,12 +15,12 @@ ms.locfileid: "74399150"
 ---
 # <a name="datasize"></a>\@DataSize
 
-0 for **TINY**, **SMALL**, **MEDIUM**, and **FLAT** models, 1 for **COMPACT** and **LARGE** models, and 2 for **HUGE** model (numeric equate).
+小さい、**小さい**、**中**、および**フラット**モデルの場合は0、**コンパクト**モデルと**大規模**モデルの場合は1、**大きな**モデルの場合は 2 (数値の等価)。
 
 ## <a name="syntax"></a>構文
 
 > **\@DataSize**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Symbols reference](symbols-reference.md)
+[シンボルリファレンス](symbols-reference.md)

@@ -15,13 +15,13 @@ ms.locfileid: "74246376"
 ---
 # <a name="restrictions-on-termination-handlers"></a>終了ハンドラーに関する制約
 
-You cannot use a **goto** statement to jump into a **__try** statement block or a **__finally** statement block. 代わりに、制御の標準フローに従ってステートメント ブロックに入る必要があります。 (You can, however, jump out of a **__try** statement block.) Also, you cannot nest an exception handler or termination handler inside a **__finally** block.
+**Goto**ステートメントを使用して、 **__try**ステートメントブロックまたは **__finally**ステートメントブロックに移動することはできません。 代わりに、制御の標準フローに従ってステートメント ブロックに入る必要があります。 (ただし、 **__try**のステートメントブロックからジャンプできます)。また、例外ハンドラーまたは終了ハンドラーを **__finally**ブロック内に入れ子にすることはできません。
 
-また、終端ハンドラーに割り当てられた一部の種類のコードが生成する結果に問題がある場合があります。したがって、これらは慎重に使用する必要があります。 One is a **goto** statement that jumps out of a **__finally** statement block. ブロックが正常終了の一部として実行される場合、特に異常は発生しません。 ただし、システムがスタックをアンワインドしている場合は、そのアンワインドが停止し、異常な終了がなかったかのように現在の関数が制御を得ます。
+また、終端ハンドラーに割り当てられた一部の種類のコードが生成する結果に問題がある場合があります。したがって、これらは慎重に使用する必要があります。 1つは、 **__finally**ステートメントブロックからジャンプする**goto**ステートメントです。 ブロックが正常終了の一部として実行される場合、特に異常は発生しません。 ただし、システムがスタックをアンワインドしている場合は、そのアンワインドが停止し、異常な終了がなかったかのように現在の関数が制御を得ます。
 
-A **return** statement inside a **__finally** statement block presents roughly the same situation. 終了ハンドラーを含む関数の直前の呼び出し元に制御が戻ります。 システムがスタックをアンワインドしていた場合、このプロセスは停止し、例外が発生しなかったかのようにプログラムが処理されます。
+**__Finally**ステートメントブロック内の**return**ステートメントは、ほぼ同じ状況を示します。 終了ハンドラーを含む関数の直前の呼び出し元に制御が戻ります。 システムがスタックをアンワインドしていた場合、このプロセスは停止し、例外が発生しなかったかのようにプログラムが処理されます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Writing a termination handler](../cpp/writing-a-termination-handler.md)<br/>
-[構造化例外処理 (C/C++)](../cpp/structured-exception-handling-c-cpp.md)
+[終了ハンドラーの記述](../cpp/writing-a-termination-handler.md)<br/>
+[Structured Exception Handling (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

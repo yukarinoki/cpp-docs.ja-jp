@@ -1,5 +1,5 @@
 ---
-title: IF1 and IF2
+title: IF1 と IF2
 ms.date: 11/21/2019
 f1_keywords:
 - IF2
@@ -15,11 +15,11 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74397448"
 ---
-# <a name="if1-and-if2"></a>IF1 and IF2
+# <a name="if1-and-if2"></a>IF1 と IF2
 
-**IF1** block is evaluated on first assembly pass.
+**IF1** block は、最初のアセンブリパスで評価されます。
 
-**IF2** block is evaluated on every assembly pass if **OPTION:SETIF2** is **TRUE**.
+**OPTION: SETIF2**が**TRUE**の場合、すべてのアセンブリパスで**IF2** block が評価されます。
 
 ## <a name="syntax"></a>構文
 
@@ -27,22 +27,22 @@ ms.locfileid: "74397448"
 
 > **IF2;;**
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-See [IF](../../assembler/masm/if-masm.md) for complete syntax.
+完全な構文について[は](../../assembler/masm/if-masm.md)、「」を参照してください。
 
-Unlike version 5.1, MASM 6.1 and above do most of its work on its first pass, then performs as many subsequent passes as necessary. In contrast, MASM 5.1 always assembles in two source passes. As a result, you may need to revise or delete some pass-dependent constructs under MASM 6.1 and above.
+バージョン5.1 とは異なり、MASM 6.1 以降では、最初のパスでの作業のほとんどが実行され、その後、必要に応じて後続のパスが実行されます。 これに対し、MASM 5.1 は、常に2つのソースパスにアセンブルします。 その結果、MASM 6.1 以降では、一部のパス依存コンストラクトを修正または削除することが必要になる場合があります。
 
-### <a name="two-pass-directives"></a>Two-Pass Directives
+### <a name="two-pass-directives"></a>2パスディレクティブ
 
-To assure compatibility, MASM 6.1 and above support 5.1 directives referring to two passes. These include **.ERR1**, **.ERR2**, **IF1**, **IF2**, **ELSEIF1**, and **ELSEIF2**. For second-pass constructs, you must specify [OPTION SETIF2](option-masm.md). Without **OPTION SETIF2**, the **IF2** and **.ERR2** directives cause an error:
+互換性を確保するために、MASM 6.1 以降では、2つのパスを参照する5.1 ディレクティブがサポートされています。 これには、が含ま**れます。ERR1**、 **.ERR2**、 **IF1**、 **IF2**、 **ELSEIF1**、および**ELSEIF2**。 2つ目のパスの構成要素の場合は、[オプション SETIF2](option-masm.md)を指定する必要があります。 **オプション SETIF2**を使用しない場合、 **IF2**と **.ERR2**ディレクティブを実行すると、エラーが発生します。
 
 ```output
 .ERR2 not allowed : single-pass assembler
 ```
 
-MASM 6.1 and above handle first-pass constructs differently. It treats the **.ERR1** directive as **.ERR**, and the **IF1** directive as **IF**.
+MASM 6.1 以上では、最初のパスの構成が異なります。 を処理**します。ERR1**ディレクティブ **。** **IF1**ディレクティブ**と同じです**。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Directives reference](directives-reference.md)
+[ディレクティブリファレンス](directives-reference.md)

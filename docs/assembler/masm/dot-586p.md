@@ -13,14 +13,14 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398654"
 ---
-# <a name="586p-32-bit-masm"></a>.586P (32-bit MASM)
+# <a name="586p-32-bit-masm"></a>. 586P (32 ビット MASM)
 
-Enables assembly of all instructions (including privileged) for the Pentium processor. (32-bit MASM only.)
+Pentium プロセッサのすべての命令 (特権を含む) のアセンブリを有効にします。 (32 ビット MASM のみ。)
 
 ## <a name="syntax"></a>構文
 
 > **.586P**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)

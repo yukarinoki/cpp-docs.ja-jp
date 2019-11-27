@@ -15,12 +15,12 @@ ms.locfileid: "74399231"
 ---
 # <a name="catstr"></a>\@CatStr
 
-Macro function that concatenates one or more strings. Returns a string.
+1つ以上の文字列を連結するマクロ関数。 文字列を返します。
 
 ## <a name="syntax"></a>構文
 
-> **\@CatStr(** *string1* ⟦ __,__ *string2*...⟧ **)**
+> **\@catstr (** *string1* ⟦ __,__ *string2*...⟧ **)**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Symbols reference](symbols-reference.md)
+[シンボルリファレンス](symbols-reference.md)

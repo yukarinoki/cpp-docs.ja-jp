@@ -13,14 +13,14 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398749"
 ---
-# <a name="dosseg-32-bit-masm"></a>DOSSEG (32-bit MASM)
+# <a name="dosseg-32-bit-masm"></a>.DOSSEG (32 ビット MASM)
 
-Identical to [.DOSSEG](../../assembler/masm/dot-dosseg.md), which is the preferred form. (32-bit MASM only.)
+と同じ[です.DOSSEG](../../assembler/masm/dot-dosseg.md)。これは推奨される形式です。 (32 ビット MASM のみ。)
 
 ## <a name="syntax"></a>構文
 
 > **DOSSEG**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)

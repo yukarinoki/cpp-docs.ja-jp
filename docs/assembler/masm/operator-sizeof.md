@@ -16,12 +16,12 @@ ms.locfileid: "74395528"
 ---
 # <a name="operator-sizeof"></a>SIZEOF 演算子
 
-Returns the number of bytes in *variable* or *type*.
+*変数*または*型*のバイト数を返します。
 
 ## <a name="syntax"></a>構文
 
 > **SIZEOF** {*variable* | *type*}
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Operators reference](operators-reference.md)
+[演算子リファレンス](operators-reference.md)

@@ -15,12 +15,12 @@ ms.locfileid: "74397799"
 ---
 # <a name="xcref"></a>.XCREF
 
-See [.NOCREF](../../assembler/masm/dot-nocref.md).
+「」を参照してください[。NOCREF](../../assembler/masm/dot-nocref.md)。
 
 ## <a name="syntax"></a>構文
 
 > **.XCREF**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Directives reference](directives-reference.md)
+[ディレクティブリファレンス](directives-reference.md)

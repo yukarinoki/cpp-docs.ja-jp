@@ -17,12 +17,12 @@ ms.locfileid: "74396185"
 ---
 # <a name="operator-shl"></a>SHL 演算子
 
-Returns the result of shifting the bits of *expression* left *count* number of bits.
+*式*の*ビット数を*シフトした結果を返します。
 
 ## <a name="syntax"></a>構文
 
-> *expression* **SHL** *count*
+> *式* **shl** *カウント*
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Operators reference](operators-reference.md)
+[演算子リファレンス](operators-reference.md)

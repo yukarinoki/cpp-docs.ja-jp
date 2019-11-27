@@ -15,16 +15,16 @@ ms.locfileid: "74397653"
 ---
 # <a name="endm"></a>ENDM
 
-Terminates a macro or repeat block.
+マクロまたは繰り返しブロックを終了します。
 
 ## <a name="syntax"></a>構文
 
 > **ENDM**
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-See [MACRO](../../assembler/masm/macro.md), [FOR](../../assembler/masm/for-masm.md), [FORC](../../assembler/masm/forc.md), [REPEAT](../../assembler/masm/repeat.md), or [WHILE](while-masm.md).
+「[マクロ](../../assembler/masm/macro.md)、 [for](../../assembler/masm/for-masm.md)、 [forc](../../assembler/masm/forc.md)、 [REPEAT](../../assembler/masm/repeat.md)、または[WHILE](while-masm.md)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Directives reference](directives-reference.md)
+[ディレクティブリファレンス](directives-reference.md)

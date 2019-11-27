@@ -15,18 +15,18 @@ ms.locfileid: "74397734"
 ---
 # <a name="dword"></a>DWORD
 
-Allocates and optionally initializes a double word (4 bytes) of storage for each *initializer*.
+各*初期化子*に対して、2つの単語 (4 バイト) を割り当てて、必要に応じて初期化します。
 
 ## <a name="syntax"></a>構文
 
-> ⟦*name*⟧ **DWORD** *initializer* ⟦ __,__ *initializer* ...⟧
+> ⟦*name*⟧ **DWORD** *初期化子*⟦ __,__ *initializer* ...⟧
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-Can also be used as a type specifier anywhere a type is legal.
+型が有効である任意の場所で、型指定子として使用することもできます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Directives Reference](../../assembler/masm/directives-reference.md)\
-[SDWORD](../../assembler/masm/sdword.md)\
+[ディレクティブリファレンス](../../assembler/masm/directives-reference.md)\
+[Sdword](../../assembler/masm/sdword.md)\
 [DD](../../assembler/masm/dd.md)

@@ -15,16 +15,16 @@ ms.locfileid: "74397677"
 ---
 # <a name="elseif2"></a>ELSEIF2
 
-[ELSEIF](../../assembler/masm/elseif-masm.md) block evaluated on every assembly pass if **OPTION:SETIF2** is **TRUE**.
+**OPTION: SETIF2**が**TRUE**の場合、すべてのアセンブリパスで[ELSEIF](../../assembler/masm/elseif-masm.md)ブロックが評価されます。
 
 ## <a name="syntax"></a>構文
 
 > **ELSEIF2**
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-For more information about 2-pass behavior in MASM 5.1 vs MASM 6.1, see [IF1 and IF2](if2.md).
+MASM 5.1 vs MASM 6.1 の2パス動作の詳細については、「 [IF1 AND IF2](if2.md)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Directives reference](directives-reference.md)
+[ディレクティブリファレンス](directives-reference.md)

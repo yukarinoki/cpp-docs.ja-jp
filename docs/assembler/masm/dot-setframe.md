@@ -15,23 +15,23 @@ ms.locfileid: "74397930"
 ---
 # <a name="setframe"></a>.SETFRAME
 
-Fills in the frame register field and offset in the unwind information using the specified register (*reg*) and offset (*offset*). The offset must be a multiple of 16 and less than or equal to 240. This directive also generates a `UWOP_SET_FPREG` unwind code entry for the specified register using the current prologue offset.
+指定されたレジスタ (*reg*) とオフセット (*オフセット*) を使用して、アンワインド情報のフレームレジスタフィールドおよびオフセットを設定します。 オフセットは、16の倍数で240以下である必要があります。 また、このディレクティブは、現在のプロローグオフセットを使用して、指定されたレジスタの `UWOP_SET_FPREG` アンワインドコードエントリを生成します。
 
 ## <a name="syntax"></a>構文
 
-> **.SETFRAME** *reg*, *offset*
+> **.SETFRAME** *reg*、 *offset*
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-**.SETFRAME** allows ml64.exe users to specify how a frame function unwinds, and is only allowed within the prologue, which extends from the [PROC](../../assembler/masm/proc.md) FRAME declaration to the [.ENDPROLOG](../../assembler/masm/dot-endprolog.md) directive. These directives do not generate code; they only generate `.xdata` and `.pdata`. **.SETFRAME** should be preceded by instructions that actually implement the actions to be unwound. It is a good practice to wrap both the unwind directives and the code they are meant to unwind in a macro to ensure agreement.
+**.SETFRAME**を使用すると、ml64.exe ユーザーは、フレーム関数をアンワインドする方法を指定できます。これは、 [PROC](../../assembler/masm/proc.md) frame 宣言からに拡張されたプロローグ内でのみ使用でき[ます。ENDPROLOG](../../assembler/masm/dot-endprolog.md)ディレクティブ。 これらのディレクティブはコードを生成しません。`.xdata` と `.pdata`のみが生成されます。 **.SETFRAME**の前には、アンワインドするアクションを実際に実装する命令が必要です。 アンワインドディレクティブと、マクロでアンワインドするコードをラップして、アグリーメントを保証することをお勧めします。
 
-For more information, see [MASM for x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
+詳細については、「 [MASM for x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md)」を参照してください。
 
 ## <a name="sample"></a>サンプル
 
 ### <a name="description"></a>説明
 
-The following sample shows how to use a frame pointer:
+次のサンプルは、フレームポインターの使用方法を示しています。
 
 ### <a name="code"></a>コード
 
@@ -62,6 +62,6 @@ _text ENDS
 END
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Directives reference](directives-reference.md)
+[ディレクティブリファレンス](directives-reference.md)

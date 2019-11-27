@@ -20,12 +20,12 @@ ms.locfileid: "74395490"
 ---
 # <a name="operator-"></a>/ 演算子
 
-Returns *expression1* divided by *expression2*.
+*Expression2*で除算された*expression1*を返します。
 
 ## <a name="syntax"></a>構文
 
 > *expression1* __/__ *expression2*
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Operators reference](operators-reference.md)
+[演算子リファレンス](operators-reference.md)

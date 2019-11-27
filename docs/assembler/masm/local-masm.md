@@ -15,18 +15,18 @@ ms.locfileid: "74397251"
 ---
 # <a name="local-masm"></a>LOCAL (MASM)
 
-In the first directive, within a macro, **LOCAL** defines labels that are unique to each instance of the macro.
+最初のディレクティブでは、マクロ内で、マクロの各インスタンスに固有のラベル**を定義し**ます。
 
 ## <a name="syntax"></a>構文
 
-> **LOCAL** *localname* ⟦, *localname* ...⟧
+> **LOCAL** *localname* ⟦、 *localname* ...⟧
 >
-> **LOCAL** *label* ⟦ __\[__ *count* __]__ ⟧ ⟦ __:__ *type*⟧ ⟦ __,__ *label* ⟦ __\[__ *count* __]__ ⟧ ⟦*type*⟧ ...⟧
+> **LOCAL** *label* ⟦ __\[__ *count* __]__ ⟧⟦ __:__ *type*⟧⟦ __,__ *label* ⟦ __\[__ *count* __]__ ⟧⟦*type*⟧...⟧
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-In the second directive, within a procedure definition (**PROC**), **LOCAL** creates stack-based variables that exist for the duration of the procedure. The *label* may be a simple variable or an array containing *count* elements.
+2番目のディレクティブでは、プロシージャ定義 (**PROC**) 内で、プロシージャの実行中に存在するスタックベースの変数を**ローカル**で作成します。 *ラベル*は、単純な変数または*count*要素を含む配列にすることができます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Directives reference](directives-reference.md)
+[ディレクティブリファレンス](directives-reference.md)

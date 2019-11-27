@@ -15,16 +15,16 @@ ms.locfileid: "74397391"
 ---
 # <a name="ife"></a>IFE
 
-Grants assembly if *expression* is false (0).
+*Expression*が false (0) の場合、assembly を許可します。
 
 ## <a name="syntax"></a>構文
 
-> **IFE** *expression*
+> **Ife** *式*
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-See [IF](../../assembler/masm/if-masm.md) for complete syntax.
+完全な構文について[は](../../assembler/masm/if-masm.md)、「」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Directives reference](directives-reference.md)
+[ディレクティブリファレンス](directives-reference.md)

@@ -13,14 +13,14 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398933"
 ---
-# <a name="stack"></a>\@stack
+# <a name="stack"></a>\@スタック
 
-DGROUP for near stacks or STACK for far stacks (text macro).
+近距離スタックまたはスタック (テキストマクロ) のための DGROUP。
 
 ## <a name="syntax"></a>構文
 
-> **\@stack**
+> **\@スタック**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Symbols reference](symbols-reference.md)
+[シンボルリファレンス](symbols-reference.md)

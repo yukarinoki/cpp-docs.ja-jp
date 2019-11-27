@@ -15,12 +15,12 @@ ms.locfileid: "74393192"
 ---
 # <a name="title"></a>TITLE
 
-Defines the program listing title.
+プログラム一覧のタイトルを定義します。
 
 ## <a name="syntax"></a>構文
 
-> **TITLE** *text*
+> **タイトル**の*テキスト*
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Directives reference](directives-reference.md)
+[ディレクティブリファレンス](directives-reference.md)

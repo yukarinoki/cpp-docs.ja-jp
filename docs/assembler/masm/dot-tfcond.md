@@ -15,12 +15,12 @@ ms.locfileid: "74397871"
 ---
 # <a name="tfcond"></a>.TFCOND
 
-Toggles listing of false conditional blocks.
+False の条件付きブロックの一覧を切り替えます。
 
 ## <a name="syntax"></a>構文
 
 > **.TFCOND**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Directives reference](directives-reference.md)
+[ディレクティブリファレンス](directives-reference.md)

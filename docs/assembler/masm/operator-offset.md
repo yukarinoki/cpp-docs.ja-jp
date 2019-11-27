@@ -17,12 +17,12 @@ ms.locfileid: "74396576"
 ---
 # <a name="operator-offset"></a>OFFSET 演算子
 
-Returns the offset into the relevant segment of *expression*.
+*式*の関連するセグメントのオフセットを返します。
 
 ## <a name="syntax"></a>構文
 
-> **OFFSET** *expression*
+> **オフセット**の*表記*
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Operators reference](operators-reference.md)
+[演算子リファレンス](operators-reference.md)

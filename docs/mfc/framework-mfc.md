@@ -41,14 +41,14 @@ MFC (Microsoft Foundation Class) ライブラリフレームワークでの作�
 
 [フレームワークと記述したコードとの関係](../mfc/how-the-framework-calls-your-code.md)
 
-[CWinApp : アプリケーション クラス](../mfc/cwinapp-the-application-class.md)
+[CWinApp: アプリケーション クラス](../mfc/cwinapp-the-application-class.md)
 
-[ドキュメント テンプレートとドキュメント/ビューの作成手順](../mfc/document-templates-and-the-document-view-creation-process.md)
+[ドキュメントテンプレートとドキュメント/ビュー作成プロセス](../mfc/document-templates-and-the-document-view-creation-process.md)
 
 [メッセージの処理とマップ](../mfc/message-handling-and-mapping.md)
 
-[ウィンドウ オブジェクト](../mfc/window-objects.md)
+[Window オブジェクト](../mfc/window-objects.md)
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [クラスを使用した Windows アプリケーションの作成](../mfc/using-the-classes-to-write-applications-for-windows.md)

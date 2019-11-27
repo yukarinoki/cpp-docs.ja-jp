@@ -1,5 +1,5 @@
 ---
-title: GROUP
+title: グループ
 ms.date: 11/05/2019
 f1_keywords:
 - group
@@ -13,14 +13,14 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74397471"
 ---
-# <a name="group-32-bit-masm"></a>GROUP (32-bit MASM)
+# <a name="group-32-bit-masm"></a>グループ (32 ビット MASM)
 
-Add the specified *segments* to the group called *name*. (32-bit MASM only.)
+指定された*セグメント*を*名前*と呼ばれるグループに追加します。 (32 ビット MASM のみ。)
 
 ## <a name="syntax"></a>構文
 
-> *name* **GROUP** *segment* ⟦ __,__ *segment* ...⟧
+> *名前***グループ***セグメント*⟦ __、__ *セグメント*...⟧
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Directives reference](../../assembler/masm/directives-reference.md)
+[ディレクティブリファレンス](../../assembler/masm/directives-reference.md)

@@ -15,22 +15,22 @@ ms.locfileid: "74395023"
 ---
 # <a name="proc"></a>PROC
 
-Marks start and end of a procedure block called *label*. The statements in the block can be called with the **CALL** instruction or [INVOKE](../../assembler/masm/invoke.md) directive.
+*Label*と呼ばれるプロシージャブロックの開始と終了をマークします。 ブロック内のステートメントは、 **CALL**命令または[INVOKE](../../assembler/masm/invoke.md)ディレクティブを使用して呼び出すことができます。
 
 ## <a name="syntax"></a>構文
 
-> *label* **PROC** ⟦*distance*⟧ ⟦*language-type*⟧ ⟦*visibility*⟧ ⟦ __\<__ *prologuearg* __>__ ⟧ ⟦**USES** *reglist*⟧ ⟦ __,__ *parameter* ⟦ __:__ *tag*⟧ ...⟧\
-> ⟦**FRAME** ⟦ __:__ *ehandler-address*⟧ ⟧\
-> *statements*\
-> *label* **ENDP**
+> *label* **PROC** ⟦*distance*⟧⟦*language-type*⟧⟦*visibility*⟧⟦ __\<__ *prologu氏 g* __>__ ⟧⟦**は** *reglist*⟧⟦ __、__ *parameter* ⟦ __:__ *tag*⟧...⟧\
+> ⟦**FRAME** ⟦ __:__ *ehandler-address*⟧⟧ \
+> *ステートメント*の\
+> *ラベル*の**endp**
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-⟦**FRAME** ⟦ __:__ *ehandler-address*⟧ ⟧ is only valid with ml64.exe, and causes MASM to generate a function table entry in .pdata and unwind information in .xdata for a function's structured exception handling unwind behavior.
+⟦**FRAME** ⟦ __:__ *ehandler-address*⟧⟧は ml64.exe でのみ有効であり、MASM は .xdata 内の関数テーブルエントリを生成し、関数の構造化例外処理のアンワインド動作を実行します。
 
-When the **FRAME** attribute is used, it must be followed by an [.ENDPROLOG](../../assembler/masm/dot-endprolog.md) directive.
+**FRAME**属性を使用する場合は、の後にを指定する必要があり[ます。ENDPROLOG](../../assembler/masm/dot-endprolog.md)ディレクティブ。
 
-See [MASM for x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md) for more information on using ml64.exe.
+Ml64.exe の使用方法の詳細については、「 [MASM for x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md) 」を参照してください。
 
 ## <a name="example"></a>例
 
@@ -54,7 +54,7 @@ _text ENDS
 END
 ```
 
-The above code will emit the following function table and unwind information:
+上記のコードでは、次の関数テーブルとアンワインド情報が出力されます。
 
 ```Output
 FileHeader->Machine 34404
@@ -77,6 +77,6 @@ Dumping Unwind Information for file ex2.exe
       Code offset: 0x01, PUSH_NONVOL, register=rbp
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Directives reference](../../assembler/masm/directives-reference.md)
+[ディレクティブリファレンス](../../assembler/masm/directives-reference.md)

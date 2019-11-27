@@ -15,16 +15,16 @@ ms.locfileid: "74398088"
 ---
 # <a name="nolist"></a>.NOLIST
 
-Suppresses program listing.
+プログラムの一覧表示を中止します。
 
 ## <a name="syntax"></a>構文
 
 > **.NOLIST**
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-Same as [.XLIST](../../assembler/masm/dot-xlist.md).
+と同じ[です。XLIST](../../assembler/masm/dot-xlist.md)。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Directives reference](directives-reference.md)
+[ディレクティブリファレンス](directives-reference.md)

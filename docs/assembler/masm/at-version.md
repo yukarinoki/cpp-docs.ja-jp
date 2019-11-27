@@ -13,14 +13,14 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398892"
 ---
-# <a name="version"></a>\@Version
+# <a name="version"></a>\@のバージョン
 
-The major and minor version of MASM reported at the command line, as a single number (text macro). For example, MASM version 14.23.28107.0 produces "1423".
+コマンドラインで1つの数値 (テキストマクロ) として報告された MASM のメジャーバージョンとマイナーバージョン。 たとえば、MASM version 14.23.28107.0 では、"1423" が生成されます。
 
 ## <a name="syntax"></a>構文
 
-> **\@Version**
+> **\@のバージョン**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Symbols reference](symbols-reference.md)
+[シンボルリファレンス](symbols-reference.md)

@@ -17,12 +17,12 @@ ms.locfileid: "74396846"
 ---
 # <a name="operator-length"></a>LENGTH 演算子
 
-Returns the number of data items in *variable* created by the first initializer.
+最初の初期化子によって作成された*変数*内のデータ項目の数を返します。
 
 ## <a name="syntax"></a>構文
 
-> **LENGTH** *variable*
+> **長さ**の*変数*
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Operators reference](operators-reference.md)
+[演算子リファレンス](operators-reference.md)

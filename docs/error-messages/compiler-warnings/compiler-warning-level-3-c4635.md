@@ -35,4 +35,4 @@ public ref class Test {};
 
 このサンプルの次の出力に注意してください: **'member' の終了タグが開始タグ 'summary' と一致しません。**
 
-The problem with this sample is that the end tag for \<summary> is poorly formed, and the compiler does not recognize it as the \<summary> end tag.  The \<member> tag is embedded in the .xdc file by the compiler in every /doc compilation.  So, the problem here is that the end tag \</member>, does not match the previous start tag that the compiler processed (\<summary>.
+このサンプルの問題は、\<summary > の終了タグの形式が適切ではなく、コンパイラが \<の概要 > 終了タグとして認識していないことです。  \<のメンバー > タグは、すべての/doc コンパイルでコンパイラによって .xdc ファイルに埋め込まれます。  ここでの問題は、終了タグ \</メンバー > が、コンパイラが処理した前の開始タグ (\<概要 > と一致しないことです。

@@ -15,16 +15,16 @@ ms.locfileid: "74398057"
 ---
 # <a name="nolistmacro"></a>.NOLISTMACRO
 
-Suppresses listing of macro expansions.
+マクロの展開の一覧を表示しません。
 
 ## <a name="syntax"></a>構文
 
 > **.NOLISTMACRO**
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-Same as [.SALL](../../assembler/masm/dot-sall.md).
+と同じ[です。SALL](../../assembler/masm/dot-sall.md)。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Directives reference](directives-reference.md)
+[ディレクティブリファレンス](directives-reference.md)

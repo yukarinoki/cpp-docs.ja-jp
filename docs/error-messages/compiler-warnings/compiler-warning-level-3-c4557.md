@@ -1,5 +1,5 @@
 ---
-title: Compiler Warning (level 3) C4557
+title: コンパイラの警告 (レベル 3) C4557
 ms.date: 11/04/2016
 f1_keywords:
 - C4557
@@ -13,15 +13,15 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/19/2019
 ms.locfileid: "74188938"
 ---
-# <a name="compiler-warning-level-3-c4557"></a>Compiler Warning (level 3) C4557
+# <a name="compiler-warning-level-3-c4557"></a>コンパイラの警告 (レベル 3) C4557
 
 '__assume' は影響 'effect' を含んでいます。
 
-The value passed to an [__assume](../../intrinsics/assume.md) statement2 was modified.
+[__Assume](../../intrinsics/assume.md) 1 に渡された値が変更されました。
 
 既定では、この警告はオフに設定されています。 詳細については、「 [既定で無効になっているコンパイラ警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md) 」を参照してください。
 
-The following sample generates C4557:
+次の例では、C4557 が生成されます。
 
 ```cpp
 // C4557.cpp

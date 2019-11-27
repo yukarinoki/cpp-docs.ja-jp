@@ -13,14 +13,14 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74399205"
 ---
-# <a name="codesize"></a>\@CodeSize
+# <a name="codesize"></a>\@の方法
 
-0 for **TINY**, **SMALL**, **COMPACT**, and **FLAT** models, and 1 for **MEDIUM**, **LARGE**, and **HUGE** models (numeric equate).
+**小さい、小さい**、**コンパクト**、および**フラット** **モデルの場合**は0、**中規模**、**大規模**、**および大規模な**モデルの場合は 1 (数値の等価)。
 
 ## <a name="syntax"></a>構文
 
-> **\@CodeSize**
+> **\@の方法**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Symbols reference](symbols-reference.md)
+[シンボルリファレンス](symbols-reference.md)

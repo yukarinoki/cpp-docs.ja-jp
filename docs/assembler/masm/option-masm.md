@@ -15,28 +15,28 @@ ms.locfileid: "74395168"
 ---
 # <a name="option-masm"></a>OPTION (MASM)
 
-Enables and disables features of the assembler.
+アセンブラーの機能を有効または無効にします。
 
 ## <a name="syntax"></a>構文
 
-> **OPTION** *optionlist*
+> **オプションオプション**の*一覧*
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-Available options include:
+使用可能なオプションには次のものがあります。
 
 |||||
 |-|-|-|-|
-|**CASEMAP**|**DOTNAME**|**NODOTNAME**|**EMULATOR**|
-|**NOEMULATOR**|**EPILOGUE**|**EXPR16**|**EXPR32**|
-|**LANGUAGE**|**LJMP**|**NOLJMP**|**M510**|
-|**NOM510**|**NOKEYWORD**|**NOSIGNEXTEND**|**OFFSET**|
+|**CASEMAP**|**DOTNAME**|**NODOTNAME**|**エミュレーター**|
+|**NOEMULATOR**|**エピローグ**|**EXPR16**|**EXPR32**|
+|**言語**|**LJMP**|**NOLJMP**|**M510**|
+|**NOM510**|**NOKEYWORD**|**NOSIGNEXTEND**|**影**|
 |**OLDMACROS**|**NOOLDMACROS**|**OLDSTRUCTS**|**NOOLDSTRUCTS**|
-|**PROC**|**PROLOGUE**|**READONLY**|**NOREADONLY**|
-|**SCOPED**|**NOSCOPED**|**SEGMENT**|**SETIF2**.|
+|**PROC**|**プロローグ**|**READONLY**|**NOREADONLY**|
+|**役割**|**NOSCOPED**|**SEGMENT**|**SETIF2**。|
 
-The syntax for LANGUAGE is **OPTION LANGUAGE:** <em>x</em>, where *x* is one of C, SYSCALL, STDCALL, PASCAL, FORTRAN, or BASIC.  SYSCALL, PASCAL, FORTRAN, and BASIC are not supported with used with [.MODEL](../../assembler/masm/dot-model.md) FLAT.
+言語の構文は、 **OPTION language:** <em>x</em>です。ここで、 *x*は C、SYSCALL、STDCALL、PASCAL、FORTRAN、または BASIC.  SYSCALL、PASCAL、FORTRAN、および BASIC は、ではサポートされていません[。モデル](../../assembler/masm/dot-model.md)フラット。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Directives reference](directives-reference.md)
+[ディレクティブリファレンス](directives-reference.md)

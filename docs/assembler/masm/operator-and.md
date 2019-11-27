@@ -17,12 +17,12 @@ ms.locfileid: "74397108"
 ---
 # <a name="operator-and"></a>AND 演算子
 
-Returns the result of a bitwise AND operation for *expression1* and *expression2*.
+*Expression1*と*expression2*のビットごとの and 演算の結果を返します。
 
 ## <a name="syntax"></a>構文
 
-> *expression1* **AND** *expression2*
+> *expression1* **と** *expression2*
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [演算子リファレンス](../../assembler/masm/operators-reference.md)

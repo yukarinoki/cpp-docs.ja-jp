@@ -17,12 +17,12 @@ ms.locfileid: "74396651"
 ---
 # <a name="operator-mod"></a>MOD 演算子
 
-Returns the integer value of the remainder (modulo) when dividing *expression1* by *expression2*.
+*Expression1*を*expression2*で除算した場合の剰余 (剰余) の整数値を返します。
 
 ## <a name="syntax"></a>構文
 
 > *expression1* **MOD** *expression2*
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Operators reference](operators-reference.md)
+[演算子リファレンス](operators-reference.md)

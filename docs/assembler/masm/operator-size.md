@@ -17,12 +17,12 @@ ms.locfileid: "74395806"
 ---
 # <a name="operator-size"></a>SIZE 演算子
 
-Returns the number of bytes in *variable* allocated by the first initializer.
+最初の初期化子によって割り当てられた*変数*のバイト数を返します。
 
 ## <a name="syntax"></a>構文
 
-> **SIZE** *variable*
+> **サイズ***変数*
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Operators reference](operators-reference.md)
+[演算子リファレンス](operators-reference.md)

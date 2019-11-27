@@ -13,14 +13,14 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398963"
 ---
-# <a name="line"></a>\@Line
+# <a name="line"></a>\@線
 
-The source line number in the current file (numeric equate).
+現在のファイルのソース行番号 (数値の等価)。
 
 ## <a name="syntax"></a>構文
 
-> **\@Line**
+> **\@線**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Symbols reference](symbols-reference.md)
+[シンボルリファレンス](symbols-reference.md)

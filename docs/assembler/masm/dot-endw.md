@@ -13,16 +13,16 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398444"
 ---
-# <a name="endw-32-bit-masm"></a>.ENDW (32-bit MASM)
+# <a name="endw-32-bit-masm"></a>.ENDW (32 ビット MASM)
 
 ## <a name="syntax"></a>構文
 
 > **.ENDW**
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-(32-bit MASM only.) See [.WHILE](../../assembler/masm/dot-while.md).
+(32 ビット MASM のみ。)「」を参照してください[。しばらくお待ち](../../assembler/masm/dot-while.md)ください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)

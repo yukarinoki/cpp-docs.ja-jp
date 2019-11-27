@@ -13,40 +13,40 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398111"
 ---
-# <a name="model-32-bit-masm"></a>.MODEL (32-bit MASM)
+# <a name="model-32-bit-masm"></a>.モデル (32 ビット MASM)
 
-プログラム メモリ モデルを初期化します。 (32-bit MASM only.)
+プログラム メモリ モデルを初期化します。 (32 ビット MASM のみ。)
 
 ## <a name="syntax"></a>構文
 
-> **.MODEL** *memory-model* ⟦ __,__ *language-type*⟧ ⟦ __,__ *stack-option*⟧
+> **.モデル***メモリ-model* ⟦ __、__ *language type*⟧⟦ __、__ *stack option*⟧
 
 ### <a name="parameters"></a>パラメーター
 
-*memory-model*\
+*メモリモデル*\
 コードとデータ ポインターのサイズを決定する必須パラメーターです。
 
-*language-type*\
+*言語の種類の*\
 プロシージャとパブリック シンボルの呼び出しと名前付けの規則を設定する省略可能なパラメーターです。
 
-*stack-option*\
+*スタックオプション*\
 省略可能なパラメーターです。
 
-*stack-option* is not used if *memory-model* is **FLAT**.
+*stack オプション*は *、メモリモデル*が**フラット**な場合は使用されません。
 
-Specifying **NEARSTACK** groups the stack segment into a single physical segment (**DGROUP**) along with data. The stack segment register (**SS**) is assumed to hold the same address as the data segment register (**DS**). **FARSTACK** does not group the stack with **DGROUP**; thus **SS** does not equal **DS**.
+**NEARSTACK**を指定すると、スタックセグメントがデータと共に1つの物理セグメント (**dgroup**) にグループ化されます。 スタックセグメントレジスタ (**SS**) は、データセグメントレジスタ (**DS**) と同じアドレスを保持することを前提としています。 **FARSTACK**はスタックを**dgroup**でグループ化しません。そのため、 **SS**は**DS**とは等しくありません。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-**.MODEL** is not used in [MASM for x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
+**.モデル**は、 [x64 (ml64.exe) の MASM](../../assembler/masm/masm-for-x64-ml64-exe.md)では使用されません。
 
 次の表は、16 ビットおよび 32 ビットのプラットフォームを対象とする場合に各パラメーターで使用できる値を示しています。
 
 |パラメーター|32 ビットの値|16 ビットの値 (以前の 16 ビット開発のサポート)|
 |---------------|--------------------|----------------------------------------------------------------|
-|*memory-model*|**FLAT**|**TINY**, **SMALL**, **COMPACT**, **MEDIUM**, **LARGE**, **HUGE**, **FLAT**|
-|*language-type*|**C**, **STDCALL**|**C**, **BASIC**, **FORTRAN**, **PASCAL**, **SYSCALL**, **STDCALL**|
-|*stack-option*|未使用|**NEARSTACK**, **FARSTACK**|
+|*メモリ-モデル*|**現状**|**極小**、**小**、**コンパクト**、**中**、**大**、**特大**、**フラット**|
+|*言語の種類*|**C**、 **STDCALL**|**C**、 **BASIC**、 **FORTRAN**、 **PASCAL**、 **SYSCALL**、 **STDCALL**|
+|*stack-オプション*|不使用|**NEARSTACK**、 **FARSTACK**|
 
 ## <a name="code"></a>コード
 
@@ -86,6 +86,6 @@ fxn ENDP
 end
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)

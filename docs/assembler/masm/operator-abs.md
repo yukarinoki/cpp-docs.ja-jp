@@ -16,12 +16,12 @@ ms.locfileid: "74397165"
 ---
 # <a name="operator-abs"></a>ABS 演算子
 
-See the [EXTERNDEF](../../assembler/masm/externdef.md) directive.
+[EXTERNDEF](../../assembler/masm/externdef.md)ディレクティブを参照してください。
 
 ## <a name="syntax"></a>構文
 
-> **ABS**
+> **絶対**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Operators reference](operators-reference.md)
+[演算子リファレンス](operators-reference.md)

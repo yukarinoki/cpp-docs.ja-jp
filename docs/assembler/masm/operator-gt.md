@@ -17,12 +17,12 @@ ms.locfileid: "74396928"
 ---
 # <a name="operator-gt"></a>GT 演算子
 
-Returns true (-1) if *expression1* is greater than *expression2*, or returns false (0) if it is not.
+*Expression1*が*expression2*より大きい場合は true (-1) を返し、そうでない場合は false (0) を返します。
 
 ## <a name="syntax"></a>構文
 
 > *expression1* **GT** *expression2*
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Operators reference](operators-reference.md)
+[演算子リファレンス](operators-reference.md)

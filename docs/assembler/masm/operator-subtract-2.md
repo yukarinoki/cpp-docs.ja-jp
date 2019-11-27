@@ -18,14 +18,14 @@ ms.locfileid: "74395479"
 ---
 # <a name="operator--"></a>演算子 -
 
-Returns *expression1* minus *expression2*. The second operator reverses the sign of *expression*.
+*Expression1* - *expression2*を返します。 2番目の演算子は、*式*の符号を反転します。
 
 ## <a name="syntax"></a>構文
 
 > *expression1* **-** *expression2*
 >
-> __-__ *expression*
+> __-__ *式*
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Operators reference](operators-reference.md)
+[演算子リファレンス](operators-reference.md)

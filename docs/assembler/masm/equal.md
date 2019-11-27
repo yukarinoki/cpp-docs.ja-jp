@@ -15,16 +15,16 @@ ms.locfileid: "74397600"
 ---
 # <a name=""></a>=
 
-Assigns the numeric value of *expression* to *name*.
+*名前*に*式*の数値を代入します。
 
 ## <a name="syntax"></a>構文
 
-> *name* **=** *expression*
+> *名前* **=** *式*
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-The symbol can be redefined later.
+シンボルは後で再定義できます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Directives reference](directives-reference.md)
+[ディレクティブリファレンス](directives-reference.md)

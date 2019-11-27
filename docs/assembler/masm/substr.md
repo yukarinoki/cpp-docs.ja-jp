@@ -15,12 +15,12 @@ ms.locfileid: "74393509"
 ---
 # <a name="substr"></a>SUBSTR
 
-Returns a substring of *textitem*, starting at *position*. The *textitem* can be a literal string, a constant preceded by a `%`, or the string returned by a macro function.
+*位置*から始まる*textitem*の部分文字列を返します。 *Textitem*には、リテラル文字列、`%`の前にある定数、またはマクロ関数によって返される文字列を指定できます。
 
 ## <a name="syntax"></a>構文
 
-> *name* **SUBSTR** *textitem* __,__ *position* ⟦ __,__ *length*⟧
+> *名前* **SUBSTR** *textitem* __、__ *position* ⟦ __、__ *length*⟧
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Directives reference](../../assembler/masm/directives-reference.md)
+[ディレクティブリファレンス](../../assembler/masm/directives-reference.md)

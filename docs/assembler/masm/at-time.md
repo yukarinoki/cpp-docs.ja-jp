@@ -13,14 +13,14 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398897"
 ---
-# <a name="time"></a>\@Time
+# <a name="time"></a>\@時刻
 
-The system time in 24-hour hh:mm:ss format (text macro).
+24時間 hh: mm: ss 形式 (テキストマクロ) のシステム時刻。
 
 ## <a name="syntax"></a>構文
 
-> **\@Time**
+> **\@時刻**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Symbols reference](symbols-reference.md)
+[シンボルリファレンス](symbols-reference.md)

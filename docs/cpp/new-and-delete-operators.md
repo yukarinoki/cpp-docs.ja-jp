@@ -17,38 +17,38 @@ ms.locfileid: "74246449"
 ---
 # <a name="new-and-delete-operators"></a>new および delete 演算子
 
-C++ supports dynamic allocation and deallocation of objects using the [new](new-operator-cpp.md) and [delete](delete-operator-cpp.md) operators. これらの演算子は、フリー ストアと呼ばれるプールからオブジェクトのメモリを割り当てます。 The **new** operator calls the special function [operator new](new-operator-cpp.md), and the **delete** operator calls the special function [operator delete](delete-operator-cpp.md).
+C++では、 [new](new-operator-cpp.md)演算子と[delete](delete-operator-cpp.md)演算子を使用したオブジェクトの動的な割り当てと解放がサポートされています。 これらの演算子は、フリー ストアと呼ばれるプールからオブジェクトのメモリを割り当てます。 **New**演算子は特殊な関数[operator new](new-operator-cpp.md)を呼び出し、 **delete**演算子は特殊な関数[operator delete](delete-operator-cpp.md)を呼び出します。
 
-The **new** function in the C++ Standard Library supports the behavior specified in the C++ standard, which is to throw a std::bad_alloc exception if the memory allocation fails. If you still want the non-throwing version of **new**, link your program with nothrownew.obj. However, when you link with nothrownew.obj, the default **operator new** in the C++ Standard Library no longer functions.
+標準ライブラリの**新しい**関数は、 C++標準で指定されている動作をサポートします。これは、メモリ割り当てが失敗した場合に std:: bad_alloc 例外をスローします。 C++ それでも**新しい**のスローされないバージョンが必要な場合は、プログラムを nothrownew にリンクします。ただし、nothrownew とリンクすると、 C++標準ライブラリの新しい既定の**演算子**は機能しなくなります。
 
-For a list of the library files that comprise the C Runtime Library and the C++ Standard Library, see [CRT Library Features](../c-runtime-library/crt-library-features.md).
+C ランタイムライブラリとC++標準ライブラリを構成するライブラリファイルの一覧については、「 [CRT ライブラリの機能](../c-runtime-library/crt-library-features.md)」を参照してください。
 
-##  <a id="new_operator"> </a> The new operator
+##  <a id="new_operator"></a> New 演算子
 
-When a statement such as the following is encountered in a program, it translates into a call to the function **operator new**:
+次のようなステートメントがプログラムで発生すると、関数**演算子 new**の呼び出しに変換されます。
 
 ```cpp
 char *pch = new char[BUFFER_SIZE];
 ```
 
-If the request is for zero bytes of storage, **operator new** returns a pointer to a distinct object (that is, repeated calls to **operator new** return different pointers). If there is insufficient memory for the allocation request, **operator new** throws a `std::bad_alloc` exception, or returns **nullptr** if you have linked in non-throwing **operator new** support.
+要求がゼロバイトのストレージに対するものである場合、 **operator new**は別のオブジェクトへのポインターを返します (つまり、 **operator new**を繰り返し呼び出すと異なるポインターが返されます)。 割り当て要求のメモリが不足している場合、 **operator new**は `std::bad_alloc` 例外をスローします。または、非スロー演算子の**新しい**サポートにリンクしている場合は**nullptr**を返します。
 
-You can write a routine that attempts to free memory and retry the allocation; see [_set_new_handler](../c-runtime-library/reference/set-new-handler.md) for more information. For more details on the recovery scheme, see the Handling insufficient memory section of this topic.
+メモリの解放を試み、割り当てを再試行するルーチンを作成できます。詳細については、「 [_set_new_handler](../c-runtime-library/reference/set-new-handler.md) 」を参照してください。 復旧スキームの詳細については、このトピックの「メモリ不足の処理」を参照してください。
 
-The two scopes for **operator new** functions are described in the following table.
+次の表では、 **operator new**関数の2つのスコープについて説明します。
 
-### <a name="scope-for-operator-new-functions"></a>Scope for operator new functions
+### <a name="scope-for-operator-new-functions"></a>Operator new 関数のスコープ
 
-|演算子|[スコープ]|
+|演算子|スコープ|
 |--------------|-----------|
-|**::operator new**|Global|
-|*class-name* **::operator new**|インスタンス|
+|**:: operator new**|Global|
+|*クラス名* **:: operator new**|インスタンス|
 
-The first argument to **operator new** must be of type `size_t` (a type defined in \<stddef.h>), and the return type is always **void** <strong>\*</strong>.
+**Operator new**の最初の引数は `size_t` 型である必要があります (\<stddef.h > で定義されている型)。戻り値の型は常に**void** <strong>\*</strong>です。
 
-The global **operator new** function is called when the **new** operator is used to allocate objects of built-in types, objects of class type that do not contain user-defined **operator new** functions, and arrays of any type. When the **new** operator is used to allocate objects of a class type where an **operator new** is defined, that class's **operator new** is called.
+グローバルな**operator new**関数は、 **new**演算子を使用して、組み込み型のオブジェクト、ユーザー定義の**演算子の新しい**関数を含まないクラス型のオブジェクト、および任意の型の配列を割り当てるときに呼び出されます。 **New 演算子を**使用して、 **operator new**が定義されているクラス型のオブジェクトを割り当てると、そのクラスの**operator new**が呼び出されます。
 
-An **operator new** function defined for a class is a static member function (which cannot, therefore, be virtual) that hides the global **operator new** function for objects of that class type. Consider the case where **new** is used to allocate and set memory to a given value:
+クラスに対して定義された**operator new**関数は、そのクラス型のオブジェクトのグローバル**演算子 new**関数を隠す静的メンバー関数です (したがって、仮想にすることはできません)。 **New**を使用してメモリを割り当て、指定された値に設定する場合を考えてみます。
 
 ```cpp
 #include <malloc.h>
@@ -77,13 +77,13 @@ int main()
 }
 ```
 
-The argument supplied in parentheses to **new** is passed to `Blanks::operator new` as the `chInit` argument. However, the global **operator new** function is hidden, causing code such as the following to generate an error:
+**New**にかっこで指定した引数は、`chInit` 引数として `Blanks::operator new` に渡されます。 ただし、グローバルな**operator new**関数は非表示になっているため、次のようなコードでエラーが発生します。
 
 ```cpp
 Blanks *SomeBlanks = new Blanks;
 ```
 
-The compiler supports member array **new** and **delete** operators in a class declaration. (例:
+コンパイラは、クラス宣言でのメンバー配列**new**および**delete**演算子をサポートしています。 例 :
 
 ```cpp
 class MyClass
@@ -107,7 +107,7 @@ int main()
 
 ### <a name="handling-insufficient-memory"></a>メモリ不足の処理
 
-Testing for failed memory allocation can be done as shown here:
+次に示すように、失敗したメモリ割り当てのテストを行うことができます。
 
 ```cpp
 #include <iostream>
@@ -122,28 +122,28 @@ int main() {
 }
 ```
 
-There is another way to handle failed memory allocation requests. Write a custom recovery routine to handle such a failure, then register your function by calling the [_set_new_handler](../c-runtime-library/reference/set-new-handler.md) run-time function.
+失敗したメモリ割り当て要求を処理するもう1つの方法があります。 このようなエラーを処理するためのカスタム復旧ルーチンを記述し、 [_set_new_handler](../c-runtime-library/reference/set-new-handler.md)ランタイム関数を呼び出して関数を登録します。
 
-##  <a id="delete_operator"> </a> The delete operator
+##  <a id="delete_operator"></a> Delete 演算子
 
-Memory that is dynamically allocated using the **new** operator can be freed using the **delete** operator. The delete operator calls the **operator delete** function, which frees memory back to the available pool. Using the **delete** operator also causes the class destructor (if there is one) to be called.
+**New**演算子を使用して動的に割り当てられたメモリは、 **delete**演算子を使用して解放できます。 Delete 演算子は**operator delete**関数を呼び出します。これにより、使用可能なプールにメモリが解放されます。 **Delete**演算子を使用すると、クラスデストラクター (存在する場合) も呼び出されます。
 
-There are global and class-scoped **operator delete** functions. Only one **operator delete** function can be defined for a given class; if defined, it hides the global **operator delete** function. The global **operator delete** function is always called for arrays of any type.
+グローバルおよびクラススコープの**operator delete**関数があります。 特定のクラスに対して定義できる**operator delete**関数は1つだけです。定義されている場合、グローバルな**operator delete**関数は非表示になります。 グローバル**operator delete**関数は、常に任意の型の配列に対して呼び出されます。
 
-The global **operator delete** function. Two forms exist for the  global **operator delete**  and class-member **operator delete** functions:
+グローバルな**operator delete**関数。 グローバル**演算子 delete**およびクラスメンバー **operator delete**関数には、次の2つの形式が存在します。
 
 ```cpp
 void operator delete( void * );
 void operator delete( void *, size_t );
 ```
 
-Only one of the preceding two forms can be present for a given class. The first form takes a single argument of type `void *`, which contains a pointer to the object to deallocate. The second form—sized deallocation—takes two arguments, the first of which is a pointer to the memory block to deallocate and the second of which is the number of bytes to deallocate. The return type of both forms is **void** (**operator delete** cannot return a value).
+指定されたクラスには、前の2つのフォームのうち1つだけが存在できます。 最初のフォームは `void *`型の1つの引数を受け取ります。この引数には、割り当てを解除するオブジェクトへのポインターが含まれています。 2番目の形式 (サイズ割り当て解除) では、2つの引数を取ります。最初の引数は、割り当てを解除するメモリブロックへのポインターであり、2番目の引数が割り当て解除するバイト数です。 両方の形式の戻り値の型は**void**です (**operator delete**は値を返すことができません)。
 
-The intent of the second form is to speed up searching for the correct size category of the object to be deleted, which is often not stored near the allocation itself and likely uncached. The second form is useful when an **operator delete** function from a base class is used to delete an object of a derived class.
+2番目の形式の目的は、削除するオブジェクトの正しいサイズカテゴリの検索を高速化することです。これは、多くの場合、割り当て自体の近くに格納されることはなく、キャッシュされない可能性があります。 2番目の形式は、基底クラスの**operator delete**関数を使用して派生クラスのオブジェクトを削除する場合に便利です。
 
-The **operator delete** function is static; therefore, it cannot be virtual. The **operator delete** function obeys access control, as described in [Member-Access Control](member-access-control-cpp.md).
+**Operator delete**関数は static です。そのため、仮想にすることはできません。 **Operator delete**関数は、「[メンバー Access Control](member-access-control-cpp.md)」で説明されているように、アクセス制御に従います。
 
-The following example shows user-defined **operator new** and **operator delete** functions designed to log allocations and deallocations of memory:
+次の例は、メモリの割り当てと割り当て解除を記録するように設計されたユーザー定義の**operator new**関数と**operator delete**関数を示しています。
 
 ```cpp
 #include <iostream>
@@ -191,9 +191,9 @@ int main( int argc, char *argv[] ) {
 }
 ```
 
-上記のコードを "メモリ リーク" の検出に使うことができます。メモリ リークとは、フリー ストアに割り当てられ、解放されていないメモリを指します。 To perform this detection, the global **new** and **delete** operators are redefined to count allocation and deallocation of memory.
+上記のコードを "メモリ リーク" の検出に使うことができます。メモリ リークとは、フリー ストアに割り当てられ、解放されていないメモリを指します。 この検出を実行するために、グローバルな**new**および**delete**演算子は、メモリの割り当てと解放をカウントするように再定義されています。
 
-The compiler supports member array **new** and **delete** operators in a class declaration. (例:
+コンパイラは、クラス宣言でのメンバー配列**new**および**delete**演算子をサポートしています。 例 :
 
 ```cpp
 // spec1_the_operator_delete_function2.cpp

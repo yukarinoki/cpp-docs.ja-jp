@@ -15,15 +15,15 @@ ms.locfileid: "74392787"
 ---
 # <a name="xmmword"></a>XMMWORD
 
-Used for 128-bit multimedia operands with MMX and SSE (XMM) instructions.
+MMX および SSE (XMM) 命令で128ビットのマルチメディアオペランドに使用されます。
 
 ## <a name="syntax"></a>構文
 
 > **XMMWORD**
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-**XMMWORD** is intended to represent the same type as [__m128](../../cpp/m128.md).
+**Xmmword**は[__m128](../../cpp/m128.md)と同じ型を表すことを目的としています。
 
 ## <a name="example"></a>例
 

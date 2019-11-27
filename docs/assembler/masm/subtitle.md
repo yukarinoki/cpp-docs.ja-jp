@@ -1,5 +1,5 @@
 ---
-title: SUBTITLE
+title: 字幕
 ms.date: 08/30/2018
 f1_keywords:
 - SUBTITLE
@@ -13,14 +13,14 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74393468"
 ---
-# <a name="subtitle"></a>SUBTITLE
+# <a name="subtitle"></a>字幕
 
-Defines the listing subtitle. Same as [SUBTTL](../../assembler/masm/subttl.md).
+リスティングのサブタイトルを定義します。 [Subttl](../../assembler/masm/subttl.md)と同じです。
 
 ## <a name="syntax"></a>構文
 
-> **SUBTITLE** *text*
+> **サブタイトル**の*テキスト*
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Directives reference](directives-reference.md)
+[ディレクティブリファレンス](directives-reference.md)

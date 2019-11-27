@@ -15,16 +15,16 @@ ms.locfileid: "74398158"
 ---
 # <a name="listif"></a>.LISTIF
 
-Starts listing of statements in false conditional blocks.
+False 条件ブロック内のステートメントの一覧を開始します。
 
 ## <a name="syntax"></a>構文
 
 > **.LISTIF**
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-Same as [.LFCOND](../../assembler/masm/dot-lfcond.md).
+と同じ[です.LFCOND](../../assembler/masm/dot-lfcond.md)。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Directives reference](directives-reference.md)
+[ディレクティブリファレンス](directives-reference.md)

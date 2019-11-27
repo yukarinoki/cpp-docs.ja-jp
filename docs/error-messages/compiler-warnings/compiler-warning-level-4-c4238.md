@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4238
 ms.assetid: 5d4051d3-7b0f-43ea-8c8d-d194bfdceb71
-ms.openlocfilehash: c5ffa07b06f010d10edc14aa7576bb614aa9dd04
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 982457ded987f6aee4f2891bbb7d9103b830cc99
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401034"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541792"
 ---
 # <a name="compiler-warning-level-4-c4238"></a>コンパイラの警告 (レベル 4) C4238
 
-使用される標準の拡張機能: 左辺値として使用されるクラスの右辺値
+非標準の拡張機能が使用されています
 
-Microsoft の拡張機能、Visual C の以前のバージョンとの互換性 (**/Ze**) のコンテキストで、右辺値を暗黙的または明示的には、アドレスは、クラス型を使用することです。 場合によっては、次の例などの危険な指定できます。
+以前のバージョンのビジュアルC++との互換性を保つために、Microsoft extensions ( **/ze**) では、暗黙的または明示的にアドレスを取得するコンテキストで、クラス型を右辺値として使用できます。 次の例のような場合は、これが危険になることがあります。
 
 ## <a name="example"></a>例
 
-```
+```cpp
 // C4238.cpp
 // compile with: /W4 /c
 struct C {
@@ -31,4 +31,4 @@ struct C {
 C * pC = &C();   // C4238
 ```
 
-この使用法、ANSI 互換のエラーが発生 ([/Za](../../build/reference/za-ze-disable-language-extensions.md))。
+この使用法により、ANSI 互換 ([/za](../../build/reference/za-ze-disable-language-extensions.md)) でエラーが発生します。

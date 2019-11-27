@@ -18,12 +18,12 @@ ms.locfileid: "74396441"
 ---
 # <a name="operator-"></a>; 演算子
 
-Treats *text* as a comment.
+*テキスト*をコメントとして扱います。
 
 ## <a name="syntax"></a>構文
 
-> __;__ *text*
+> __;__ *テキスト*
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Operators reference](operators-reference.md)
+[演算子リファレンス](operators-reference.md)

@@ -15,16 +15,16 @@ ms.locfileid: "74397313"
 ---
 # <a name="instr"></a>INSTR
 
-Finds the first occurrence of *textitem2* in *textitem1*.
+*Textitem1*で最初に見つかった*textitem2*を検索します。
 
 ## <a name="syntax"></a>構文
 
-> *name* **INSTR** ⟦*position* __,__ ⟧ *textitem1* __,__ *textitem2*
+> *名前* **INSTR** ⟦*position* __、__ ⟧ *textitem1* __、__ *textitem2*
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-The starting *position* is optional. Each text item can be a literal string, a constant preceded by a **%** , or the string returned by a macro function.
+開始*位置*はオプションです。 各テキスト項目には、リテラル文字列、 **%** の前にある定数、またはマクロ関数によって返される文字列を指定できます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Directives reference](directives-reference.md)
+[ディレクティブリファレンス](directives-reference.md)

@@ -15,16 +15,16 @@ ms.locfileid: "74397355"
 ---
 # <a name="ifndef"></a>IFNDEF
 
-Grants assembly if *name* has not been defined.
+*名前*が定義されていない場合、アセンブリを許可します。
 
 ## <a name="syntax"></a>構文
 
-> **IFNDEF** *name*
+> **IFNDEF** *名*
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-See [IF](../../assembler/masm/if-masm.md) for complete syntax.
+完全な構文について[は](../../assembler/masm/if-masm.md)、「」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Directives reference](directives-reference.md)
+[ディレクティブリファレンス](directives-reference.md)

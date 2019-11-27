@@ -13,34 +13,34 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398257"
 ---
-# <a name="fpo-32-bit-masm"></a>.FPO (32-bit MASM)
+# <a name="fpo-32-bit-masm"></a>.FPO (32 ビット MASM)
 
-The **.FPO** directive controls the emission of debug records to the .debug$F segment or section. (32-bit MASM only.)
+**。FPO**ディレクティブは、デバッグレコードの出力を. debug $ F セグメントまたはセクションに制御します。 (32 ビット MASM のみ。)
 
 ## <a name="syntax"></a>構文
 
-> **.FPO** (*cdwLocals*, *cdwParams*, *cbProlog*, *cbRegs*, *fUseBP*, *cbFrame*)
+> **.FPO** (*cdwlocals*、 *cdwlocals*、 *cbprolog*、 *cbRegs*、 *fusebp*、 *cbprolog*)
 
 ### <a name="parameters"></a>パラメーター
 
-*cdwLocals*\
-Number of local variables, an unsigned 32 bit value.
+*Cdwlocals*\
+ローカル変数の数 (符号なし32ビット値)。
 
-*cdwParams*\
-Size of the parameters in DWORDS, an unsigned 16 bit value.
+*Cdwparams*\
+DWORD のパラメーターのサイズ (符号なし16ビット値)。
 
-*cbProlog*\
-Number of bytes in the function prolog code, an unsigned 8 bit value.
+*Cbprolog*\
+関数プロローグコード内のバイト数。符号なし8ビット値。
 
 *cbRegs*\
-Number registers saved.
+Number レジスタが保存されました。
 
-*fUseBP*\
-Indicates whether the EBP register has been allocated. either 0 or 1.
+*Fusebp*\
+EBP レジスタが割り当てられているかどうかを示します。 0または1のいずれかです。
 
-*cbFrame*\
-Indicates the frame type.  See [FPO_DATA](/windows/win32/api/winnt/ns-winnt-fpo_data) for more information.
+*Cbframe*\
+フレームの種類を示します。  詳細については、「 [FPO_DATA](/windows/win32/api/winnt/ns-winnt-fpo_data) 」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Directives reference](directives-reference.md)
+[ディレクティブリファレンス](directives-reference.md)

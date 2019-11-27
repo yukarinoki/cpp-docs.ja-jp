@@ -19,10 +19,10 @@ ms.locfileid: "74397274"
 
 > **IRPC**
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-See [FORC](../../assembler/masm/forc.md).
+「 [Forc](../../assembler/masm/forc.md)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Directives reference](directives-reference.md)
+[ディレクティブリファレンス](directives-reference.md)

@@ -13,16 +13,16 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74397841"
 ---
-# <a name="while-32-bit-masm"></a>.WHILE (32-bit MASM)
+# <a name="while-32-bit-masm"></a>.WHILE (32 ビット MASM)
 
-Generates code that executes the block of *statements* while *condition* remains true. (32-bit MASM only.)
+*条件*が true の間、*ステートメント*ブロックを実行するコードを生成します。 (32 ビット MASM のみ。)
 
 ## <a name="syntax"></a>構文
 
-> **.WHILE** *condition*\
-> *statements*\
+> **.WHILE** *条件*\
+> *ステートメント*の\
 > **.ENDW**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Directives reference](directives-reference.md)
+[ディレクティブリファレンス](directives-reference.md)

@@ -37,7 +37,7 @@ ms.locfileid: "74305503"
 
 **except**は on にも設定**されて** **いる場合に**のみ **、on に**設定できます。
 
-**push**\
+**プッシュ**\
 現在の**float_control**設定を内部コンパイラスタックにプッシュします。
 
 **pop**\
@@ -49,11 +49,11 @@ ms.locfileid: "74305503"
 
 | | float_control (正確、\*) | float_control (except、\*) | fp_contract (\*) | fenv_access (\*) |
 |-|-|-|-|-|
-| /fp: strict             | on  | on  | オート | on  |
-| /fp: strict/fp: except- | on  | オート | オート | on  |
-| /fp: 正確            | on  | オート | on  | オート |
-| /fp: 精密な/fp: except | on  | on  | on  | オート |
-| /fp: fast               | オート | オート | on  | オート |
+| /fp: strict             | 上の  | 上の  | オート | 上の  |
+| /fp: strict/fp: except- | 上の  | オート | オート | 上の  |
+| /fp: 正確            | 上の  | オート | 上の  | オート |
+| /fp: 精密な/fp: except | 上の  | 上の  | 上の  | オート |
+| /fp: fast               | オート | オート | 上の  | オート |
 
 言い換えると、 **/fp: fast**, **/fp: 精密**, **/fp: strict**, and **/fp: except**コマンドラインオプションをエミュレートするために、複数のプラグマを組み合わせて使用する必要があります。
 
@@ -129,7 +129,7 @@ int main( ) {
 Pass
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [プラグマディレクティブと __pragma キーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)\
 [fenv_access](../preprocessor/fenv-access.md)\

@@ -1,5 +1,5 @@
 ---
-title: operator dot
+title: 演算子ドット
 ms.date: 08/30/2018
 f1_keywords:
 - operator .
@@ -17,14 +17,14 @@ ms.locfileid: "74397014"
 ---
 # <a name="operator-"></a>. 演算子
 
-The first operator returns *expression* plus the offset of *field* within its structure or union. The second operator returns value at the location pointed to by *register* plus the offset of *field* within its structure or union.
+最初の演算子は、*式*とその構造または共用体内の*フィールド*のオフセットを返します。 2番目の演算子は、*レジスタ*が指す位置の値に、その構造体または共用体内の*フィールド*のオフセットを加算した値を返します。
 
 ## <a name="syntax"></a>構文
 
-> *expression* __.__ *field*⟦ __.__ *field* ...⟧
+> *式* __。__ *フィールド*⟦ __。__ *フィールド*...⟧
 >
-> **\[** _register_ **]** __.__ *field*⟦ __.__ *field* ...⟧
+> **\[** _register_ **] を入力**__します。__ *フィールド*⟦ __。__ *フィールド*...⟧
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Operators reference](operators-reference.md)
+[演算子リファレンス](operators-reference.md)

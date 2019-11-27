@@ -13,14 +13,14 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74397886"
 ---
-# <a name="startup-32-bit-masm"></a>.STARTUP (32-bit MASM)
+# <a name="startup-32-bit-masm"></a>.スタートアップ (32 ビット MASM)
 
-Generates program start-up code. (32-bit MASM only.)
+プログラムのスタートアップコードを生成します。 (32 ビット MASM のみ。)
 
 ## <a name="syntax"></a>構文
 
 > **.STARTUP**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Directives reference](directives-reference.md)
+[ディレクティブリファレンス](directives-reference.md)

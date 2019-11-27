@@ -17,7 +17,7 @@ ms.locfileid: "74246060"
 ---
 # <a name="unhandled-c-exceptions"></a>未処理の C++ 例外
 
-If a matching handler (or ellipsis **catch** handler) cannot be found for the current exception, the predefined `terminate` run-time function is called. (You can also explicitly call `terminate` in any of your handlers.) The default action of `terminate` is to call `abort`. `terminate` でアプリケーションを終了する前に他の関数を呼び出すには、呼び出す関数の名前を唯一の引数として `set_terminate` 関数を呼び出します。 `set_terminate` はプログラムの任意の時点で呼び出すことができます。 The `terminate` routine always calls the last function given as an argument to `set_terminate`.
+現在の例外に一致するハンドラー (または省略記号の**catch**ハンドラー) が見つからない場合は、定義済みの `terminate` 実行時関数が呼び出されます。 (任意のハンドラーで `terminate` を明示的に呼び出すこともできます)。`terminate` の既定のアクションでは `abort`が呼び出されます。 `terminate` でアプリケーションを終了する前に他の関数を呼び出すには、呼び出す関数の名前を唯一の引数として `set_terminate` 関数を呼び出します。 `set_terminate` はプログラムの任意の時点で呼び出すことができます。 `terminate` ルーチンは常に、`set_terminate`の引数として渡された最後の関数を呼び出します。
 
 ## <a name="example"></a>例
 
@@ -54,6 +54,6 @@ term_func was called by terminate.
 
 `term_func` 関数は、理想的には `exit` を呼び出して、プログラムまたは現在のスレッドを終了する必要があります。 そうしないで、呼び出し元に戻った場合は、`abort` が呼び出されます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Modern C++ best practices for exceptions and error handling](../cpp/errors-and-exception-handling-modern-cpp.md)
+[例外C++とエラー処理に関する最新のベストプラクティス](../cpp/errors-and-exception-handling-modern-cpp.md)

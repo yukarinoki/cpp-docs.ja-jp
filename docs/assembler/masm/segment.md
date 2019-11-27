@@ -15,53 +15,53 @@ ms.locfileid: "74393724"
 ---
 # <a name="segment"></a>SEGMENT
 
-Defines a program segment called *name* having segment attributes
+セグメント属性を持つ*name*というプログラムセグメントを定義します。
 
 ## <a name="syntax"></a>構文
 
-> *name* **SEGMENT** ⟦**READONLY**⟧ ⟦*align*⟧ ⟦*combine*⟧ ⟦*use*⟧ ⟦*characteristics*⟧ **ALIAS(** _string_ **)** ⟦ __'__ *class* __'__ ⟧\
-> *statements*\
-> *name* **ENDS**
+> *名前***セグメント**⟦**READONLY**⟧⟦*align* *⟧⟦⟧⟦* ⟧ *⟦⟧* ⟦ *⟧* **ALIAS (** _string_ **)** __'__ *class* __'__ \
+> *ステートメント*の\
+> *名前*の**終わり**
 
 #### <a name="parameters"></a>パラメーター
 
 *align*<br/>
-The range of memory addresses from which a starting address for the segment can be selected. The alignment type can be any one of the following:
+セグメントの開始アドレスを選択できるメモリアドレスの範囲。 アラインメントの種類には、次のいずれかを指定できます。
 
-|Align Type|Starting Address|
+|配置の種類|開始アドレス|
 |----------------|----------------------|
-|**BYTE**|Next available byte address.|
-|**WORD**|Next available word address (2 bytes per word).|
-|**DWORD**|Next available double word address (4 bytes per double word).|
-|**PARA**|Next available paragraph address (16 bytes per paragraph).|
-|**PAGE**|Next available page address (256 bytes per page).|
-|**ALIGN**(*n*)|Next available *n*th byte address. See Remarks section for more information.|
+|**BYTE**|次に使用可能なバイトアドレス。|
+|**WORD**|次に使用可能な単語のアドレス (1 単語あたり2バイト)。|
+|**DWORD**|次に使用可能な2つの単語のアドレス (2 単語あたり4バイト)。|
+|**割り付け**|次に使用できる段落アドレス (1 段落あたり16バイト)。|
+|**PAGE**|次に使用可能なページアドレス (ページあたり256バイト)。|
+|**ALIGN**(*n*)|次に使用可能な*n*番目のバイトアドレス。 詳細については、「解説」を参照してください。|
 
-If this parameter is not specified, **PARA** is used by default.
+このパラメーターが指定されていない場合、既定では **[段落]** が使用されます。
 
-*combine*\
-**PUBLIC**, **STACK**, **COMMON**, **MEMORY**, **AT**<em>address</em>, **PRIVATE**
+*結合*\
+**パブリック**、**スタック**、**共通**、**メモリ**、<em>アドレス</em>、**プライベート**
 
-*use*\
-**USE16**, **USE32**, **FLAT**
+\*を使用する*
+**USE16**、 **USE32**、 **FLAT**
 
-*characteristics*\
-**INFO**, **READ**, **WRITE**, **EXECUTE**, **SHARED**, **NOPAGE**, **NOCACHE**, and **DISCARD**
+*特性*\
+**INFO**、 **READ**、 **WRITE**、 **EXECUTE**、 **SHARED**、 **nopage**、 **NOCACHE**、および**DISCARD**
 
-These are supported for COFF only and correspond to the COFF section characteristics of similar name (for example, **SHARED** corresponds to IMAGE_SCN_MEM_SHARED). READ sets the IMAGE_SCN_MEM_READ flag. The obsolete READONLY flag caused the section to clear the IMG_SCN_MEM_WRITE flag. If any *characteristics* are set, the default characteristics are not used and only the programmer-specified flags are in effect.
+これらは COFF に対してのみサポートされ、COFF セクションの類似する名前の特性に対応します (たとえば、 **SHARED**は IMAGE_SCN_MEM_SHARED に対応します)。 READ IMAGE_SCN_MEM_READ フラグを設定します。 不使用の READONLY フラグが原因で、セクションの IMG_SCN_MEM_WRITE フラグがクリアされました。 いずれかの*特性*が設定されている場合、既定の特性は使用されず、プログラマが指定したフラグのみが有効になります。
 
 _string_\
-This string is used as the section name in the emitted COFF object.  Creates multiple sections with the same external name, with distinct MASM segment names.
+この文字列は、出力された COFF オブジェクトのセクション名として使用されます。  同じ外部名を持つ複数のセクションを作成し、それぞれに異なる MASM セグメント名を付けます。
 
-Not supported with **/omf**.
+**/Omf**ではサポートされていません。
 
 *class*\
-Designates how segments should be combined and ordered in the assembled file. Typical values are, `'DATA'`, `'CODE'`, `'CONST'` and `'STACK'`
+アセンブルされたファイル内でセグメントを結合および順序付けする方法を指定します。 一般的な値は、、`'DATA'`、`'CODE'`、`'CONST'`、および `'STACK'`
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-For `ALIGN(n)`, *n* may be any power of 2 from 1 to 8192; not supported with **/omf**.
+`ALIGN(n)`の場合、 *n*は 1 ~ 8192 の2の累乗になります。 **/omf**ではサポートされていません。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Directives reference](directives-reference.md)
+[ディレクティブリファレンス](directives-reference.md)

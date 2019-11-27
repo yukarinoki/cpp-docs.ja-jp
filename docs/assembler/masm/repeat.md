@@ -1,5 +1,5 @@
 ---
-title: REPEAT
+title: 繰り返し
 ms.date: 08/30/2018
 f1_keywords:
 - REPEAT
@@ -13,16 +13,16 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74394326"
 ---
-# <a name="repeat"></a>REPEAT
+# <a name="repeat"></a>繰り返し
 
-Marks a block that is to be repeated *expression* times. Same as [REPT](../../assembler/masm/rept.md).
+*式*の繰り返し回数を繰り返すブロックをマークします。 [REPT](../../assembler/masm/rept.md)と同じです。
 
 ## <a name="syntax"></a>構文
 
-> **REPEAT** *expression*\
-> *statements*\
+> **繰り返し***式*\
+> *ステートメント*の\
 > **ENDM**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Directives reference](directives-reference.md)
+[ディレクティブリファレンス](directives-reference.md)

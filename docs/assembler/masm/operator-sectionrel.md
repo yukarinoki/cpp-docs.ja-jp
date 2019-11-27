@@ -17,16 +17,16 @@ ms.locfileid: "74396484"
 ---
 # <a name="operator-sectionrel"></a>SECTIONREL 演算子
 
-Returns the section relative offset of expression relative to the section containing the target in the final executable.
+最終的な実行可能ファイルのターゲットを含むセクションを基準とした、式の相対オフセットセクションを返します。
 
 ## <a name="syntax"></a>構文
 
-> **SECTIONREL** *expression*
+> **Sectionrel** *式*
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-**SECTIONREL** is available only with COFF object emission.
+**Sectionrel**は、COFF オブジェクトの出力でのみ使用できます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[Operators reference](operators-reference.md)
+[演算子リファレンス](operators-reference.md)
