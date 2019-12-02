@@ -1,5 +1,5 @@
 ---
-title: '&lt;新しい&gt;演算子と列挙型'
+title: '&lt;new&gt;演算子と列挙型'
 ms.date: 11/04/2016
 f1_keywords:
 - new/std::operator delete
@@ -12,7 +12,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/16/2019
 ms.locfileid: "68243681"
 ---
-# <a name="ltnewgt-operators-and-enums"></a>&lt;新しい&gt;演算子と列挙型
+# <a name="ltnewgt-operators-and-enums"></a>&lt;new&gt;演算子と列挙型
 
 ## <a name="op_align_val_t"></a> enum align_val_t
 
@@ -37,7 +37,7 @@ void operator delete(void* ptr, const std::nothrow_t&) throw();
 
 ### <a name="remarks"></a>Remarks
 
-値を表示するために delete 式によって、最初の関数が呼び出されます*ptr*が無効です。 プログラムでは、この関数のシグネチャを持つ関数を定義できます。これは、C++ 標準ライブラリで定義されている既定のバージョンに置き換わります。 必要な動作は、の値を受け入れる*ptr*または null をする以前の呼び出しによって返されたつまり[演算子 new](../standard-library/new-operators.md#op_new)(**size_t**)。
+値を表示するために delete 式によって、最初の関数が呼び出されます*ptr*が無効です。 プログラムでは、この関数のシグネチャを持つ関数を定義できます。これは、C++ 標準ライブラリで定義されている既定のバージョンに置き換わります。 必要な動作は、の値を受け入れる*ptr*または null をする以前の呼び出しによって返されたつまり[new 演算子](../standard-library/new-operators.md#op_new)(**size_t**)。
 
 Null 値の既定の動作*ptr*は何もしないようにします。 その他の値の*ptr*前述のような呼び出しによって以前返される値を指定する必要があります。 Null 以外の値の既定の動作*ptr*が、以前の呼び出しによって割り当てられたストレージを再利用されます。 どのような条件下でこのような再利用できるストレージの一部またはすべてが後続の呼び出しによって割り当てが指定されていない場合`operator new`(**size_t**)、または任意の`calloc`( **size_t**)、 `malloc`( **size_t**)、または`realloc`( **void**<strong>\*</strong>、 **size_t**)。
 
@@ -47,7 +47,7 @@ Null 値の既定の動作*ptr*は何もしないようにします。 その他
 
 ### <a name="example"></a>例
 
-参照してください[演算子 new](../standard-library/new-operators.md#op_new)を使用する例については**delete 演算子**します。
+参照してください[new 演算子](../standard-library/new-operators.md#op_new)を使用する例については**delete 演算子**します。
 
 ## <a name="op_delete_arr"></a> 演算子 delete
 
@@ -124,9 +124,9 @@ new ハンドラーに必要な動作は、次の操作のいずれかを実行�
 
 3 番目の関数は、**new**( *args*) T の形式の配置 **new** 式によって呼び出されます。ここで、*args* は 1 つのオブジェクトのポインターで構成されます。 これは、既知のアドレスにあるオブジェクトの構築に役立ちます。 *ptr* が返されます。
 
-によって割り当てられたストレージを解放する**演算子 new**、呼び出す[delete 演算子](../standard-library/new-operators.md#op_delete)します。
+によって割り当てられたストレージを解放する**new 演算子**、呼び出す[delete 演算子](../standard-library/new-operators.md#op_delete)します。
 
-スローすることについてや、新しい参照の動作をスローしない[新しい演算子と delete 演算子](../cpp/new-and-delete-operators.md)します。
+スローすることについてや、新しい参照の動作をスローしない[new 演算子と delete 演算子](../cpp/new-and-delete-operators.md)します。
 
 ### <a name="example"></a>例
 
@@ -195,7 +195,7 @@ void* operator new[](std::size_t count, void* ptr) throw();
 
 ### <a name="remarks"></a>Remarks
 
-1 番目の関数は `new[]` 式によって呼び出され、そのサイズ以下の配列オブジェクトを表すために適切にアラインされた `count` バイトのストレージを割り当てます。 プログラムでは、この関数のシグネチャを持つ関数を定義できます。これは、C++ 標準ライブラリで定義されている既定のバージョンに置き換わります。 必要な動作は同じである[演算子 new](../standard-library/new-operators.md#op_new)(**size_t**)。 既定の動作では、`operator new`( `count`) が返されます。
+1 番目の関数は `new[]` 式によって呼び出され、そのサイズ以下の配列オブジェクトを表すために適切にアラインされた `count` バイトのストレージを割り当てます。 プログラムでは、この関数のシグネチャを持つ関数を定義できます。これは、C++ 標準ライブラリで定義されている既定のバージョンに置き換わります。 必要な動作は同じである[new 演算子](../standard-library/new-operators.md#op_new)(**size_t**)。 既定の動作では、`operator new`( `count`) が返されます。
 
 2 番目の関数は配置 `new[]` 式によって呼び出され、そのサイズの配列オブジェクトを表すために適切にアラインされた `count` バイトのストレージを割り当てます。 プログラムでは、この関数のシグネチャを持つ関数を定義できます。これは、C++ 標準ライブラリで定義されている既定のバージョンに置き換わります。 既定の動作を返す**operatornew**(`count`) その関数が成功した場合。 それ以外の場合は、Null ポインターが返されます。
 
