@@ -20,7 +20,7 @@ ms.locfileid: "68243681"
 enum class align_val_t : size_t {};
 ```
 
-## <a name="op_delete"></a> delete 演算子
+## <a name="op_delete"></a>delete 演算子
 
 個々 のオブジェクト ストレージの割り当てを解除する削除式によって呼び出される関数。
 
@@ -66,7 +66,7 @@ void operator delete[](void* ptr, const std::nothrow_t&) throw();
 
 ### <a name="remarks"></a>Remarks
 
-最初の関数を呼び出して、`delete[]`式の値を表示するために*ptr*が無効です。 関数は置き換え可能です。プログラムでこの関数のシグネチャを持つ関数を定義でき、これが C++ 標準ライブラリで定義された既定のバージョンに置き換わるためです。 必要な動作は、の値を受け入れる*ptr*または null をする以前の呼び出しによって返されたつまり[演算子 new&#91;&#93;](../standard-library/new-operators.md#op_new_arr)(**size_t**)。 Null 値の既定の動作*ptr*は何もしないようにします。 その他の値の*ptr*前述のような呼び出しによって以前返される値を指定する必要があります。 このような非 null 値の既定の動作*ptr*が、以前の呼び出しによって割り当てられたストレージを再利用されます。 どのような条件下でこのような再利用できるストレージの一部またはすべてが後続の呼び出しによって割り当てが指定されていない場合[演算子 new](../standard-library/new-operators.md#op_new)(**size_t**)、または任意の`calloc`(**size_t**)、 `malloc`(**size_t**)、または`realloc`( **void**<strong>\*</strong>、 **size_t**).
+最初の関数を呼び出して、`delete[]`式の値を表示するために*ptr*が無効です。 関数は置き換え可能です。プログラムでこの関数のシグネチャを持つ関数を定義でき、これが C++ 標準ライブラリで定義された既定のバージョンに置き換わるためです。 必要な動作は、の値を受け入れる*ptr*または null をする以前の呼び出しによって返されたつまり[new 演算子](../standard-library/new-operators.md#op_new_arr)(**size_t**)。 Null 値の既定の動作*ptr*は何もしないようにします。 その他の値の*ptr*前述のような呼び出しによって以前返される値を指定する必要があります。 このような非 null 値の既定の動作*ptr*が、以前の呼び出しによって割り当てられたストレージを再利用されます。 どのような条件下でこのような再利用できるストレージの一部またはすべてが後続の呼び出しによって割り当てが指定されていない場合[new 演算子](../standard-library/new-operators.md#op_new)(**size_t**)、または任意の`calloc`(**size_t**)、 `malloc`(**size_t**)、または`realloc`( **void**<strong>\*</strong>、 **size_t**).
 
 2 番目の関数は、配置によって呼び出されます`delete[]`に対応する式を`new[]`形式の式`new[]`(**std::size_t**)。 何も実行されません。
 
@@ -171,7 +171,7 @@ int main( )
 }
 ```
 
-## <a name="op_new_arr"></a> new[] 演算子
+## <a name="op_new_arr"></a> new 演算子
 
 new 式によってオブジェクトの配列にストレージを割り当てるために呼び出される割り当て関数。
 
