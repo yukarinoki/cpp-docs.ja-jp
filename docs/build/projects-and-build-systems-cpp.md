@@ -68,7 +68,7 @@ cl /EHsc hello.cpp
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-[Visual Studio プロジェクト](creating-and-managing-visual-cpp-projects.md)Visual Studio でネイティブビルドシステム (MSBuild C++ ) を使用してプロジェクトを作成、構成、およびビルドする方法。
+[Visual Studio プロジェクト](creating-and-managing-visual-cpp-projects.md)Visual Studio でネイティブビルドシステム (MSBuild) を使用して C++ プロジェクトを作成、構成、およびビルドする方法。
 
 [Cmake プロジェクト](cmake-projects-in-visual-studio.md)Visual Studio で CMake プロジェクトをコーディング、ビルド、および配置する方法について説明します。
 
