@@ -1,27 +1,27 @@
 ---
-title: コンパイラ エラー C3185
+title: コンパイラエラー C3185
 ms.date: 11/04/2016
 f1_keywords:
 - C3185
 helpviewer_keywords:
 - C3185
 ms.assetid: 5bf96279-043c-4981-9d02-b4550071b192
-ms.openlocfilehash: 45afe70b454f72dd8c9b8ce9771ce1f5aef6a10e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 36f350287a1cfaf937ee739800042aaf99f31769
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62366083"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761635"
 ---
-# <a name="compiler-error-c3185"></a>コンパイラ エラー C3185
+# <a name="compiler-error-c3185"></a>コンパイラエラー C3185
 
 マネージドまたは WinRT 型 'type' で 'typeid' が使用されました。代わりに 'operator' を使用してください
 
-適用することはできません、 [typeid](../../cpp/typeid-operator.md)演算子をマネージまたは WinRT 型は、使用して[typeid](../../extensions/typeid-cpp-component-extensions.md)代わりにします。
+[Typeid](../../cpp/typeid-operator.md)演算子をマネージ型または WinRT 型に適用することはできません。代わりに[typeid](../../extensions/typeid-cpp-component-extensions.md)を使用してください。
 
 次の例は C3185 を生成し、その修正方法を示しています。
 
-```
+```cpp
 // C3185a.cpp
 // compile with: /clr
 ref class Base {};

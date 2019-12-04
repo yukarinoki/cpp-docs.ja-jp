@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3537
 ms.assetid: f537ebd1-4fb0-4e09-a453-4f38db2c6881
-ms.openlocfilehash: 50a06180dabfa192292fae7ba1962b6b7455bb89
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ef3e954987b84ea128342b38307769903df4b346
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375926"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74740482"
 ---
 # <a name="compiler-error-c3537"></a>コンパイラ エラー C3537
 
-'type': 'auto' を含む型にキャストすることはできません
+' type ': ' auto ' を含む型にキャストすることはできません
 
-型が含まれているため、示された型の変数をキャストすることはできません、`auto`キーワードおよび既定[/Zc:auto](../../build/reference/zc-auto-deduce-variable-type.md)コンパイラ オプションが有効にします。
+型には `auto` キーワードが含まれており、既定の[/zc: auto](../../build/reference/zc-auto-deduce-variable-type.md)コンパイラオプションが有効になっているため、指定された型に変数をキャストすることはできません。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
-変数は、含む型にキャストするため、次のコード生成 C3537、`auto`キーワード。
+次のコードでは、変数が `auto` キーワードを含む型にキャストされるため、C3537 が生成されます。
 
-```
+```cpp
 // C3537.cpp
 // Compile with /Zc:auto
 int main()
@@ -38,6 +38,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [auto キーワード](../../cpp/auto-keyword.md)

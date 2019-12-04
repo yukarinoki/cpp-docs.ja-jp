@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3054
 ms.assetid: 6f4b7ac5-0d12-474b-b611-76ff26ee41ac
-ms.openlocfilehash: 1dd6450d661700d9b2f7f94e625abd9ecc64ed08
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7a35f72be07799f61587c77b511395223ae72939
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62265571"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761190"
 ---
 # <a name="compiler-error-c3054"></a>コンパイラ エラー C3054
 
 '#pragma omp parallel' は、ジェネリック クラスまたはジェネリック関数では現在サポートされていません
 
-詳細については、次を参照してください。[ジェネリック](../../extensions/generics-cpp-component-extensions.md)と[OpenMP](../../parallel/openmp/openmp-in-visual-cpp.md)します。
+詳細については、「[ジェネリック](../../extensions/generics-cpp-component-extensions.md)と[OpenMP](../../parallel/openmp/openmp-in-visual-cpp.md)」を参照してください。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では C3054 が生成されます。
 
-```
+```cpp
 // C3054.cpp
 // compile with: /openmp /clr /c
 #include <omp.h>

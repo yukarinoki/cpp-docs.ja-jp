@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2004
 ms.assetid: d81526dd-3a00-4593-87b0-d910d3d29bca
-ms.openlocfilehash: fb100d977188cd3a7d5b0ebbb3e29b53942871dc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b781e9f81342f35d66eca222bd338252b739096c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62208946"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74737492"
 ---
 # <a name="compiler-error-c2004"></a>コンパイラ エラー C2004
 
@@ -21,11 +21,11 @@ ms.locfileid: "62208946"
 
 このエラーは、Visual Studio .NET 2003 でコンパイラ準拠作業が実施された結果、生成されることもあります。プリプロセッサ ディレクティブにかっこがありません。 プリプロセッサ ディレクティブに閉じかっこがない場合は、コンパイラによってエラーが生成されます。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では C2004 が生成されます。
 
-```
+```cpp
 // C2004.cpp
 // compile with: /DDEBUG
 #include <stdio.h>
@@ -38,11 +38,11 @@ int main()
 }
 ```
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
-考えられる解決方法:
+解決方法:
 
-```
+```cpp
 // C2004b.cpp
 // compile with: /DDEBUG
 #include <stdio.h>
