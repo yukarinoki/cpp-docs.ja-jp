@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3611
 ms.assetid: 42f3e320-41de-420a-bd05-8924cab765aa
-ms.openlocfilehash: 2d4c5cb02b1b8c5472502380fe7c74ff4a91954a
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 1fedcf406e101c87c5c831ef1b6d82fea0bbfa02
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345440"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755929"
 ---
 # <a name="compiler-error-c3611"></a>コンパイラ エラー C3611
 
-'function': シールド関数は、純粋指定子を含めることはできません
+' function ': シールされた関数は、純粋指定子を持つことはできません
 
-封印された関数の宣言が正しくありません。  詳細については、次を参照してください。[シール](../../extensions/sealed-cpp-component-extensions.md)します。
+シールされた関数の宣言が正しくありません。  詳細については、「[sealed](../../extensions/sealed-cpp-component-extensions.md)」を参照してください。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では、C3611 が生成されます。
 
-```
+```cpp
 // C3611.cpp
 // compile with: /clr /c
 

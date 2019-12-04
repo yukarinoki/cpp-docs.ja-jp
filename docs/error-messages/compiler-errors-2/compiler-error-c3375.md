@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3375
 ms.assetid: f1df78c6-e6ca-48f3-8b29-4e1710002bf3
-ms.openlocfilehash: ba1dbf08fb56364d2ab5b8c40847ab89484dc005
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cf92f0fabecfa7292a4d6a8644746c489cbf139f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328799"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759751"
 ---
 # <a name="compiler-error-c3375"></a>コンパイラ エラー C3375
 
@@ -19,13 +19,13 @@ ms.locfileid: "62328799"
 
 デリゲートのインスタンス化が静的メンバー関数向けであるか、またはインスタンス関数へのバインドされていないデリゲートとして存在した可能性があるため、コンパイラはこのエラーを発行しました。
 
-詳細については、次を参照してください。[デリゲート (C++ コンポーネント拡張)](../../extensions/delegate-cpp-component-extensions.md)します。
+詳細については、「 [delegate (C++コンポーネント拡張)](../../extensions/delegate-cpp-component-extensions.md)」を参照してください。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では警告 C3375 が生成されます。
 
-```
+```cpp
 // C3375.cpp
 // compile with: /clr
 ref struct R {

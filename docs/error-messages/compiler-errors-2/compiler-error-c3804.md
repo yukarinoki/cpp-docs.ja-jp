@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3804
 ms.assetid: 7c4cda28-ec96-4d04-937b-36dbd9944722
-ms.openlocfilehash: c3c00d1d07306a9e8dc67d3f75a5cb25d8f03aee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3bccfc723a9d62b794fa657e399bd94549448490
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400085"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755292"
 ---
 # <a name="compiler-error-c3804"></a>コンパイラ エラー C3804
 
-'property_accessor': アクセサー メソッドをプロパティには、いずれかが必要がありますはすべて静的、またはすべてスタティックでないです。
+' property_accessor ': プロパティのアクセサーメソッドは、すべてスタティックであるか、またはすべてスタティックでない必要があります
 
-アクセサー関数が静的にできる非 trivial プロパティを定義するときにインスタンスが両方のか。
+自明でないプロパティを定義する場合、アクセサー関数は静的またはインスタンスのどちらでもかまいませんが、両方を指定することはできません。
 
 詳細については、「 [property](../../extensions/property-cpp-component-extensions.md) 」を参照してください。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では、C3804 が生成されます。
 
-```
+```cpp
 // C3804.cpp
 // compile with: /c /clr
 ref struct A {

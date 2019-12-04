@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3309
 ms.assetid: 75ee16e3-7d4e-4c41-b3cb-64e9849c3aab
-ms.openlocfilehash: e66aa31982b018670684c8f12b05ba6f7347cd87
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 31849320568e049a794a82c5068ac6aa11c9023e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62222398"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74735984"
 ---
 # <a name="compiler-error-c3309"></a>コンパイラ エラー C3309
 
@@ -21,7 +21,7 @@ ms.locfileid: "62222398"
 
 次の例では C3309 が生成されます。
 
-```
+```cpp
 // C3309.cpp
 #define NAME MyModule
 [module(name="NAME")];   // C3309
