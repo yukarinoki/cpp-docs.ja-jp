@@ -1,32 +1,32 @@
 ---
 title: ML の致命的でないエラー A2034
 ms.date: 08/30/2018
-ms.topic: error-reference
+ms.custom: error-reference
 f1_keywords:
 - A2034
 helpviewer_keywords:
 - A2034
 ms.assetid: 6438970c-0aee-4f14-a058-5fe47d0ee216
-ms.openlocfilehash: cbc4dc59da36df682815b0bf2c644892b2db1e70
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 578a839b319b10dff7f89d6fafdf556315a4f850
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62177865"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74856689"
 ---
 # <a name="ml-nonfatal-error-a2034"></a>ML の致命的でないエラー A2034
 
-**セグメントのブロックである必要があります。**
+**セグメントブロック内にある必要があります**
 
-セグメントのブロックの外側で、次のいずれかが見つかりました。
+次のいずれかがセグメントブロックの外部で見つかりました:
 
 - 命令
 
-- ラベルの定義
+- ラベル定義
 
-- A[この](../../assembler/masm/operator-this.md)演算子
+- [この](../../assembler/masm/operator-this.md)演算子
 
-- A [ $ ](../../assembler/masm/dollar.md)演算子
+- [$](../../assembler/masm/dollar.md)演算子
 
 - プロシージャの定義
 
@@ -34,6 +34,6 @@ ms.locfileid: "62177865"
 
 - [ORG](../../assembler/masm/org.md)ディレクティブ
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ML エラー メッセージ](../../assembler/masm/ml-error-messages.md)<br/>
