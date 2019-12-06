@@ -72,7 +72,7 @@ cl /EHsc hello.cpp
 
 [Cmake プロジェクト](cmake-projects-in-visual-studio.md)Visual Studio で CMake プロジェクトをコーディング、ビルド、および配置する方法について説明します。
 
-[フォルダープロジェクトを開く](open-folder-projects-cpp.md)Visual Studio を使用して、任意のビルドシステムC++に基づいたプロジェクトのコーディング、ビルド、配置を行う方法、またはビルドシステムを使用しない方法について説明します。 全然です。 
+[フォルダープロジェクトを開く](open-folder-projects-cpp.md) Visual Studio を使用して、任意のビルドシステムに基づいたあるいはビルドシステムのない C++ プロジェクトのコーディング、ビルド、配置を行う方法。 
 
 [リリースビルド](release-builds.md)エンドユーザーにデプロイするために最適化されたリリースビルドを作成およびトラブルシューティングする方法。
 
