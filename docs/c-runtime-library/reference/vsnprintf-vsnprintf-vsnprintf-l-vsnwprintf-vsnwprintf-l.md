@@ -55,16 +55,16 @@ helpviewer_keywords:
 - formatted text [C++]
 - vsnwprintf function
 ms.assetid: a97f92df-c2f8-4ea0-9269-76920d2d566a
-ms.openlocfilehash: 721ea80272f7a76e959528ec4114d69bd0e80507
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: abe34dc0f3baf9bdc63e0314ac70af3783d2bd9a
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70945310"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857711"
 ---
 # <a name="vsnprintf-_vsnprintf-_vsnprintf_l-_vsnwprintf-_vsnwprintf_l"></a>vsnprintf、_vsnprintf、_vsnprintf_l、_vsnwprintf、_vsnwprintf_l
 
-引数リストへのポインターを使用して、書式付き出力を書き込みます。 これらの関数のセキュリティを強化したバージョンを使用できます。「[vsnprintf_s、_vsnprintf_s、_vsnprintf_s_l、_vsnwprintf_s、_vsnwprintf_s_l](vsnprintf-s-vsnprintf-s-vsnprintf-s-l-vsnwprintf-s-vsnwprintf-s-l.md)」をご覧ください。
+引数リストへのポインターを使用して、書式付き出力を書き込みます。 これらの関数のセキュリティを強化したバージョンを使用できます。「 [vsnprintf_s, _vsnprintf_s, _vsnprintf_s_l, _vsnwprintf_s, _vsnwprintf_s_l](vsnprintf-s-vsnprintf-s-vsnprintf-s-l-vsnwprintf-s-vsnwprintf-s-l.md)」をご覧ください。
 
 ## <a name="syntax"></a>構文
 
@@ -161,7 +161,7 @@ int _vsnwprintf_l(
 
 ## <a name="return-value"></a>戻り値
 
-**Vsnprintf**関数は、書き込まれた文字数を返します。終端の null 文字はカウントされません。 *Count*で指定したバッファーサイズが、 *format*と*argptr*によって指定された出力を格納するのに十分な大きさではない場合、 **vsnprintf**の戻り値は、書き込まれる文字数になります。 null 値はカウントされません。*count*が十分に大きい場合は、文字。 戻り値が*count* -1 より大きい場合、出力は切り捨てられます。 戻り値 -1 は、エンコード エラーが発生したことを示します。
+**Vsnprintf**関数は、書き込まれた文字数を返します。終端の null 文字はカウントされません。 *Count*で指定されたバッファーサイズが、 *format*および*argptr*によって指定された出力を格納するのに十分な大きさではない場合、 **vsnprintf**の戻り値は、書き込まれる文字数になります。これは、 *count*が十分に大きい場合、null 文字をカウントしません。 戻り値が*count* -1 より大きい場合、出力は切り捨てられます。 戻り値 -1 は、エンコード エラーが発生したことを示します。
 
 **_Vsnprintf**関数と **_vsnwprintf**関数は、書き込み対象の文字数が*count*以下の場合に書き込まれた文字数を返します。書き込む文字数が*count*よりも大きい場合、これらの関数は、出力が切り捨てられたことを示す-1 を返します。
 
@@ -177,15 +177,15 @@ int _vsnwprintf_l(
 > 特定の種類のセキュリティリスクを回避するには、その*形式*がユーザー定義の文字列ではないことを確認します。 詳しくは、「 [バッファー オーバーランの回避](/windows/win32/SecBP/avoiding-buffer-overruns)」をご覧ください。
 
 > [!NOTE]
-> **_Vsnprintf**、 **_vsnprintf_l**、 **_vsnwprintf** 、および **_vsnwprintf_l**を呼び出すときに、終端の null 用の空き領域があることを確認するには、 *count*の値がバッファーの長さより厳密に小さく、バッファーをに初期化します。関数を呼び出す前に null を返します。
+> **_Vsnprintf**、 **_vsnprintf_l**、 **_vsnwprintf**および **_vsnwprintf_l**を呼び出すときに、終端の null 用の空き領域があることを確認するには、 *count*がバッファーの長さより厳密に小さく、バッファーを null に初期化してから、関数を呼び出します。
 >
 > **Vsnprintf**は常に終端の null を書き込むため、 *count*パラメーターはバッファーのサイズと同じにすることができます。
 
-Visual Studio 2015 と Windows 10 の UCRT 以降では、 **vsnprintf**は **_vsnprintf**と同じではなくなりました。 **Vsnprintf**関数は、C99 標準に準拠しています。 **_vnsprintf**は、旧バージョンの Visual Studio code との下位互換性のために残されています。
+Visual Studio 2015 と Windows 10 の UCRT 以降、 **vsnprintf**は **_vsnprintf**と同じではなくなりました。 **Vsnprintf**関数は、C99 標準に準拠しています。 **_vnsprintf**は、旧バージョンの Visual Studio code との下位互換性のために残されています。
 
 **_L**サフィックスを持つこれらの関数のバージョンは、現在のスレッドロケールの代わりに渡されたロケールパラメーターを使用する点を除いて同じです。
 
-C++ では、これらの関数にテンプレートのオーバーロードがあります。このオーバーロードは、これらの関数に対応するセキュリティで保護された新しい関数を呼び出します。 詳細については、「 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
+C++ では、これらの関数にテンプレートのオーバーロードがあります。このオーバーロードは、これらの関数に対応するセキュリティで保護された新しい関数を呼び出します。 詳細については、「[セキュリティ保護されたテンプレート オーバーロード](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -194,16 +194,16 @@ C++ では、これらの関数にテンプレートのオーバーロードが�
 |**_vsntprintf**|**_vsnprintf**|**_vsnprintf**|**_vsnwprintf**|
 |**_vsntprintf_l**|**_vsnprintf_l**|**_vsnprintf_l**|**_vsnwprintf_l**|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 |ルーチンによって返される値|必須ヘッダー (C)|必須ヘッダー (C++)|
 |-------------|---------------------------|-------------------------------|
 |**vsnprintf**、 **_vsnprintf**、 **_vsnprintf_l**|\<stdio.h>|\<stdio.h> または \<cstdio>|
 |**_vsnwprintf**、 **_vsnwprintf_l**|\<stdio.h> または \<wchar.h>|\<stdio.h>、\<wchar.h>、\<cstdio>、または \<cwchar>|
 
-**_Vsnprintf**、 **_vsnprintf_l**、 **_vsnwprintf** 、 **_vsnwprintf_l**の各関数は、Microsoft 固有の関数です。 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+**_Vsnprintf**、 **_vsnprintf_l**、 **_vsnwprintf** 、および **_vsnwprintf_l**の各関数は、Microsoft 固有の関数です。 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 ```C
 // crt_vsnwprintf.c
@@ -245,7 +245,7 @@ nSize: -1, buff: Hi there!
 
 代わりに vsnprintf を使用し、パラメータに小さな文字列を指定すると、挙動が変化します。 *Count*パラメーターにはバッファーのサイズ全体を指定できます。戻り値は、 *count*が十分に大きい場合に書き込まれた文字数です。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 ```C
 // crt_vsnprintf.c
@@ -281,7 +281,7 @@ nSize: 9, buff: Hi there!
 nSize: 10, buff: Hi there!
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ストリーム入出力](../../c-runtime-library/stream-i-o.md)<br/>
 [vprintf 系関数](../../c-runtime-library/vprintf-functions.md)<br/>

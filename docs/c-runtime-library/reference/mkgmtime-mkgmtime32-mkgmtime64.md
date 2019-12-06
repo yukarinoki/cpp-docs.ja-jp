@@ -1,6 +1,7 @@
 ---
 title: _mkgmtime、_mkgmtime32、_mkgmtime64
-ms.date: 11/04/2016
+description: _Mkgmtime、_mkgmtime32、および _mkgmtime64 C ランタイムライブラリ関数について説明し、それらの使用方法の例を示します。
+ms.date: 12/04/2019
 api_name:
 - _mkgmtime32
 - _mkgmtime64
@@ -39,16 +40,16 @@ helpviewer_keywords:
 - _mkgmtime32 function
 - time, converting
 ms.assetid: b4ca2b67-e198-4f43-b3e2-e8ad6bd01867
-ms.openlocfilehash: fcd1e3fdcca37d7e5bb381c234a6d8555ce2766c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 3d03fc62853705a68e1a2e408d6af833e8c6b02b
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951666"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857737"
 ---
 # <a name="_mkgmtime-_mkgmtime32-_mkgmtime64"></a>_mkgmtime、_mkgmtime32、_mkgmtime64
 
-**構造体** **tm**で表される utc 時刻を、 **time_t**型によって表される utc 時刻に変換します。
+**構造体** **tm**で表される utc 時刻を**TIME_T**型で表される utc 時刻に変換します。
 
 ## <a name="syntax"></a>構文
 
@@ -66,34 +67,26 @@ __time64_t _mkgmtime64(
 
 ### <a name="parameters"></a>パラメーター
 
-*timeptr*<br/>
+*timeptr*\
 変換する**struct** **tm**としての UTC 時刻へのポインター。
 
 ## <a name="return-value"></a>戻り値
 
-1970年1月1日午前0時からの経過秒数を世界協定時刻 (UTC) で表した、 **__time32_t**型または **__time64_t**型の数量。 日付が範囲外の場合 (「解説」を参照してください)、または入力を有効な時刻として解釈できない場合、戻り値は-1 になります。
+1970年1月1日午前0時からの経過秒数を世界協定時刻 (UTC) で表した **__time32_t**または **__time64_t**の種類の数量。 日付が範囲外の場合 (「解説」を参照してください)、または入力を有効な時刻として解釈できない場合、戻り値は-1 になります。
 
 ## <a name="remarks"></a>Remarks
 
-**_Mkgmtime32**関数と **_mkgmtime64**関数は、utc 時刻を utc 時刻を表す **__time32_t**または **__time64_t**型に変換します。 現地時刻を UTC 時刻に変換するには、代わりに**mktime**、 **_mktime32**、および **_mktime64**を使用します。
+**_Mkgmtime32**関数と **_mkgmtime64**関数は、utc 時刻を utc 時刻を表す **__time32_t**または **__time64_t**型に変換します。 現地時刻を UTC 時刻に変換するには、代わりに**mktime**、 **_mktime32**、 **_mktime64**を使用します。
 
-**_mkgmtime**は、 **_mkgmtime64**に評価されるインライン関数で、 **time_t**は **__time64_t**に相当します。 以前の32ビットの**time_t**として**time_t**を解釈するようにコンパイラに強制する必要がある場合は、 **_USE_32BIT_TIME_T**を定義できます。 これは推奨されません。2038年1月18日 (32 ビットの最大**範囲) の**後にアプリケーションが失敗する可能性があり、64ビットプラットフォームでは使用できないためです。
+**_mkgmtime**は **_mkgmtime64**に評価されるインライン関数であり、 **time_t**は **__time64_t**に相当します。 以前の32ビット**time_t**として**time_t**を解釈するようにコンパイラに強制する必要がある場合は **_USE_32BIT_TIME_T**を定義できます。 2038年1月18日より後にアプリケーションが失敗する可能性があるため、推奨されません。これは、32ビット**time_t**の最大範囲です。 すべての64ビットプラットフォームでは許可されていません。
 
-渡された時間の構造は、 **_mktime**関数で変更されるときと同様に、次のように変更されます。 **tm_wday**と**tm_yday**の各フィールドは、 **tm_mday**と**tm_year**の値に基づいて新しい値に設定されます。 **Tm**構造体時間を指定する場合は、 **tm_isdst**フィールドを次のように設定します。
+渡された時間の構造は、 **_mktime**関数によって変更されたときと同じように、次のように変更されます。 **tm_wday**と**tm_yday**のフィールドは**tm_mday**および**tm_year**の値に基づいて新しい値に設定されます。 時刻は UTC であると見なされるため、 **tm_isdst**フィールドは無視されます。
 
-- 標準時間が有効であることを示す場合はゼロ (0)。
+**_Mkgmtime32**関数の範囲は、1970年1月1日午前0時から23:59:59 年1月 2038 18 日 (utc) からです。 **_Mkgmtime64**の範囲は、1970年1月1日午前0時から23:59:59 年12月 31 3000 日 (utc) の範囲です。 範囲外の日付の場合、戻り値は-1 になります。 **_Mkgmtime**の範囲は **_USE_32BIT_TIME_T**が定義されているかどうかによって異なります。 定義されていない場合 (既定値)、範囲は **_mkgmtime64**と同じになります。 それ以外の場合、範囲は **_mkgmtime32**の32ビット範囲に制限されます。
 
-- 夏時間が有効であることを示す場合は 0 より大きい値。
+**Gmtime**と**localtime**はどちらも、変換に共通の静的バッファーを使用します。 このバッファーを **_mkgmtime**に指定すると、以前の内容は破棄されます。
 
-- 標準時間と夏時間のどちらが有効であるかを C ランタイム ライブラリ コードで計算する場合は 0 より小さい値。
-
-C ランタイム ライブラリは、TZ 環境変数を使用して、正しい夏時間を特定します。 TZ が設定されていない場合は、オペレーティング システムに照会して、正しい地域の夏時間の動作を取得します。 **tm_isdst**は必須フィールドです。 値が設定されていない場合、その値は未定義で、 **mktime**からの戻り値は予測できません。
-
-**_Mkgmtime32**関数の範囲は、1970年1月1日午前0時から、utc から23:59:59 年1月 2038 18 日 (utc) までです。 **_Mkgmtime64**の範囲は、1970年1月1日午前0時から23:59:59 年12月 31 3000 日 (utc) までです。 範囲外の日付の場合、戻り値は-1 になります。 **_Mkgmtime**の範囲は、 **_USE_32BIT_TIME_T**が定義されているかどうかによって異なります。 定義されていない場合 (既定)、範囲は **_mkgmtime64**;それ以外の場合、範囲は **_mkgmtime32**の32ビット範囲に制限されます。
-
-**Gmtime**と**localtime**は、静的に割り当てられた1つのバッファーを変換に使用することに注意してください。 このバッファーを**mkgmtime**に指定すると、以前の内容は破棄されます。
-
-## <a name="example"></a>例
+## <a name="examples"></a>使用例
 
 ```C
 // crt_mkgmtime.c
@@ -130,8 +123,6 @@ int main()
 }
 ```
 
-### <a name="sample-output"></a>出力例
-
 ```Output
 Seconds since midnight, January 1, 1970
 My time: 1171588492
@@ -142,7 +133,7 @@ Local Time: Thu Feb 15 17:14:52 2007
 Greenwich Mean Time: Fri Feb 16 01:14:52 2007
 ```
 
-未完成の構造体に曜日と年通算日の計算値を入力する例を次に示します。
+次の例では、 **_mkgmtime**によって不完全な構造がどのように入力されるかを示します。 このメソッドは、曜日と年の両方の値を計算します。
 
 ```C
 // crt_mkgmtime2.c
@@ -179,8 +170,6 @@ int main()
 }
 ```
 
-### <a name="output"></a>Output
-
 ```Output
 Before calling _mkgmtime, t1 = Sun Feb 12 00:00:00 2003
 t.tm_yday = 0
@@ -188,13 +177,13 @@ After calling _mkgmtime, t1 = Wed Feb 12 00:00:00 2003
 t.tm_yday = 42
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[時間管理](../../c-runtime-library/time-management.md)<br/>
-[asctime、_wasctime](asctime-wasctime.md)<br/>
-[asctime_s、_wasctime_s](asctime-s-wasctime-s.md)<br/>
-[gmtime、_gmtime32、_gmtime64](gmtime-gmtime32-gmtime64.md)<br/>
-[gmtime_s、_gmtime32_s、_gmtime64_s](gmtime-s-gmtime32-s-gmtime64-s.md)<br/>
-[localtime_s、_localtime32_s、_localtime64_s](localtime-s-localtime32-s-localtime64-s.md)<br/>
-[mktime、_mktime32、_mktime64](mktime-mktime32-mktime64.md)<br/>
-[time、_time32、_time64](time-time32-time64.md)<br/>
+[時間管理](../../c-runtime-library/time-management.md)\
+[asctime、_wasctime](asctime-wasctime.md)\
+[asctime_s、_wasctime_s](asctime-s-wasctime-s.md)\
+[gmtime、_gmtime32、_gmtime64](gmtime-gmtime32-gmtime64.md)\
+[gmtime_s、_gmtime32_s、_gmtime64_s](gmtime-s-gmtime32-s-gmtime64-s.md)\
+[localtime_s、_localtime32_s、_localtime64_s](localtime-s-localtime32-s-localtime64-s.md)\
+[mktime、_mktime32、_mktime64](mktime-mktime32-mktime64.md)\
+[time、_time32、_time64](time-time32-time64.md)

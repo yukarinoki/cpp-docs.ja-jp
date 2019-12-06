@@ -6,14 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - __writedr intrinsic
 ms.assetid: ac55c1ee-df2f-41d4-a429-6f369d2a934d
-ms.openlocfilehash: 715ef7432d506c2758c9c3da913e9c0ebb24e13f
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 473e7223e9974d0125e772c152ea85ae90b97342
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70219225"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74858062"
 ---
 # <a name="__writedr"></a>__writedr
+
+**Microsoft 固有の仕様**
 
 指定された値を指定されたデバッグレジスタに書き込みます。
 
@@ -26,27 +28,27 @@ void __writedr(unsigned DebugRegister, unsigned __int64 DebugValue); /* x64 */
 
 ### <a name="parameters"></a>パラメーター
 
-*DebugRegister*\
+*Debugregister*\
 からデバッグレジスタを識別する 0 ~ 7 の数値。
 
-*DebugValue*\
+*Debugvalue*\
 からデバッグレジスタに書き込む値。
 
 ## <a name="remarks"></a>Remarks
 
 これらの組み込みはカーネルモードでのみ使用でき、ルーチンは組み込みとしてのみ使用できます。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 |組み込み|アーキテクチャ|
 |---------------|------------------|
 |`__writedr`|x86、x64|
 
-**ヘッダーファイル**\<>
+**ヘッダーファイル**\<に存在します。 h >
 
 **Microsoft 固有の仕様はここまで**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)\
 [__readdr](../intrinsics/readdr.md)

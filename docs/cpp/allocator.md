@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - __declspec keyword [C++], allocator
 - allocator __declspec keyword
-ms.openlocfilehash: f9c8de7c8686b89a2ab9570a2558e3f649e545b5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2e2615829f6491bf660859fbc86ebcd07a56c5fe
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155239"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857685"
 ---
 # <a name="allocator"></a>allocator
 
@@ -27,10 +27,12 @@ ms.locfileid: "62155239"
 
 ## <a name="remarks"></a>Remarks
 
-Visual Studio でのネイティブ メモリ プロファイラーは、割り当て時に生成された ETW イベント データを収集して機能します。 CRT および Windows SDK のアロケーターには、割り当てデータをキャプチャできるように、ソース レベルで注釈が付けられています。 独自のアロケーターを作成するかどうかは、新しく割り当てられたヒープ メモリへのポインターを返す任意の関数で修飾できます`__declspec(allocator)`myMalloc のこの例で示すように、します。
+Visual Studio のネイティブメモリプロファイラーは、実行時にによって出力された割り当て ETW イベントデータを収集することによって機能します。 CRT および Windows SDK のアロケーターには、割り当てデータをキャプチャできるように、ソース レベルで注釈が付けられています。 独自のアロケーターを作成する場合、新しく割り当てられたヒープメモリへのポインターを返す関数は、次の myMalloc の例に示すように、`__declspec(allocator)`で修飾できます。
 
 ```cpp
 __declspec(allocator) void* myMalloc(size_t size)
 ```
 
-詳細については、次を参照してください。 [Visual Studio でのメモリ使用量の測定](/visualstudio/profiling/memory-usage)と[カスタム ネイティブ ETW ヒープ イベント](/visualstudio/profiling/custom-native-etw-heap-events)します。
+詳細については、「 [Visual Studio でのメモリ使用量の測定](/visualstudio/profiling/memory-usage)」と「[カスタムネイティブ ETW ヒープイベント](/visualstudio/profiling/custom-native-etw-heap-events)」を参照してください。
+
+**Microsoft 固有の仕様はここまで**

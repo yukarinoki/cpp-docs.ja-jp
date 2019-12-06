@@ -10,23 +10,20 @@ helpviewer_keywords:
 - based pointers
 - pointers, based
 ms.assetid: 1e5f2e96-c52e-4738-8e14-87278681205e
-ms.openlocfilehash: 0a0435aa89e4cf744a5bc3c6dc72a715ed55f954
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 393fe8f8d12266650740942d0605152b6548d146
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498785"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857698"
 ---
 # <a name="based-pointers-c"></a>ベース ポインター (C++)
 
-**Microsoft 固有の仕様**
-
-**__Based**キーワードを使用すると、ポインター (既存のポインターからのオフセットであるポインター) に基づいてポインターを宣言できます。
+**__Based**キーワードを使用すると、ポインター (既存のポインターからのオフセットであるポインター) に基づいてポインターを宣言できます。 **__Based**キーワードは Microsoft 固有です。
 
 ## <a name="syntax"></a>構文
 
 ```
-
 type __based( base ) declarator
 ```
 
@@ -34,7 +31,7 @@ type __based( base ) declarator
 
 ポインターアドレスに基づくポインターは、32ビットまたは64ビットのコンパイルで有効な **__based**キーワードの唯一の形式です。 Microsoft の 32 ビット C/C++ コンパイラでは、based ポインターは 32 ビットのポインター ベースからの 32 ビットのオフセットになります。 同様の制限は 64 ビット環境にもあり、based ポインターは 64 ビット ベースからの 64 ビット オフセットになります。
 
-ポインターに基づいたポインターの使用方法の 1 つは、ポインターを含む永続的な識別子での使用です。 ポインターに基づくポインターで構成されるリンク リストをディスクに保存でき、メモリ内の別の場所に再読み込みしても、ポインターは有効なままです。 例えば:
+ポインターに基づいたポインターの使用方法の 1 つは、ポインターを含む永続的な識別子での使用です。 ポインターに基づくポインターで構成されるリンク リストをディスクに保存でき、メモリ内の別の場所に再読み込みしても、ポインターは有効なままです。 例:
 
 ```cpp
 // based_pointers1.cpp
@@ -53,9 +50,9 @@ struct llist_t {
 
 based ポインターを逆参照する場合、ベースは、明示的に指定されているか、または宣言によって暗黙的に認識されている必要があります。
 
-以前のバージョンとの互換性を維持するために、 **_based**は、 [ \(](../build/reference/za-ze-disable-language-extensions.md)コンパイラオプションである [言語拡張を無効にする] が指定されていない限り、__based のシノニムです。
+以前のバージョンとの互換性のために、コンパイラオプション[/za \(無効になっている言語拡張)](../build/reference/za-ze-disable-language-extensions.md)が指定されていない場合、 **_based**は **__based**のシノニムになります。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次のコードは、ベースの変更による based ポインターの変更を示します。
 
@@ -92,7 +89,7 @@ int main() {
 11
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [キーワード](../cpp/keywords-cpp.md)<br/>
 [alloc_text](../preprocessor/alloc-text.md)

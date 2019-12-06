@@ -9,28 +9,28 @@ helpviewer_keywords:
 - try-catch keyword [C++], termination handlers
 - C++ exception handling, exception handlers
 ms.assetid: dd3b647d-c269-43a8-aab9-ad1458712976
-ms.openlocfilehash: 942a7e48e4315454476bfe93c68169f461b006b2
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 3282f98f48f7e416857ef2f766563ab6038ca41a
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74245123"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857269"
 ---
 # <a name="structured-exception-handling-cc"></a>Structured Exception Handling (C/C++)
 
 構造化例外処理 (SEH) は、ハードウェア障害などの特定の例外コードの状況を適切に処理するための、C に対する Microsoft の拡張機能です。 Windows と Microsoft C++では SEH がサポートされていますが、 C++ ISO 標準の例外処理を使用することをお勧めします。これにより、コードの移植性と柔軟性が向上します。 ただし、既存のコードまたは特定の種類のプログラムを維持するために、SEH を使用する必要がある場合もあります。
 
-**Microsoft 固有の仕様:**
+**Microsoft 固有:**
 
 ## <a name="grammar"></a>文法
 
 *try-except ステートメント*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__try** *複合ステートメント* **__except** **(** *式* **)** *複合ステートメント*
+&nbsp;&nbsp;&nbsp;&nbsp; **__try** *compound-statement* **__except** **(** *expression* **)** *compound-statement*
 
 *try-finally ステートメント*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp; **__try** *複合ステートメント* **__finally** *複合ステートメント*
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 SEH を使用すると、実行が予期せず終了した場合に、メモリブロックやファイルなどのリソースが正しく解放されるようにすることができます。 **Goto**ステートメントやリターンコードの詳細なテストに依存しない簡潔な構造化コードを使用して、メモリ不足などの特定の問題を処理することもできます。
 
@@ -64,7 +64,7 @@ SEH メカニズムには次の 2 つがあります。
 
 - [C++ での構造化例外の処理](../cpp/exception-handling-differences.md)
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 前述のように、 C++プログラムで SEH を使用し、 **/Eha**または **/ehsc**オプションを使用してコンパイルすると、ローカルオブジェクトのデストラクターが呼び出されます。 ただし、C++ 例外も使用している場合は、実行時の動作は予期したとおりにならない可能性があります。 この例では、これらの動作の違いを示します。
 
@@ -138,7 +138,7 @@ Destroying TestClass!
 Executing SEH __except block
 ```
 
-詳細については、「 [/EH (Exception Handling Model)](../build/reference/eh-exception-handling-model.md)」を参照してください。
+詳細については、「[/EH (例外処理モデル)](../build/reference/eh-exception-handling-model.md)」を参照してください。
 
 **END Microsoft 固有の仕様**
 

@@ -1,5 +1,5 @@
 ---
-title: プラグマディレクティブと __ プラグマキーワード
+title: プラグマ ディレクティブと __pragma キーワード
 ms.date: 08/29/2019
 f1_keywords:
 - '#pragma'
@@ -13,21 +13,21 @@ helpviewer_keywords:
 - preprocessor, pragmas
 - pragma directives (#pragma)
 ms.assetid: 9867b438-ac64-4e10-973f-c3955209873f
-ms.openlocfilehash: 2cf075e4ff8049593a1e77c5d2c1c259b224877b
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 6cfbcd325dc895719bad5dccc9c19bcda90cdaa0
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70222299"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74858075"
 ---
-# <a name="pragma-directives-and-the-__pragma-keyword"></a>プラグマディレクティブと __ プラグマキーワード
+# <a name="pragma-directives-and-the-__pragma-keyword"></a>プラグマ ディレクティブと __pragma キーワード
 
-プラグマディレクティブは、コンピューターまたはオペレーティングシステム固有のコンパイラ機能を指定します。 Microsoft コンパイラに固有の **__ プラグマ**キーワードを使用すると、マクロ定義内でプラグマディレクティブをコーディングできます。
+プラグマディレクティブは、コンピューターまたはオペレーティングシステム固有のコンパイラ機能を指定します。 Microsoft コンパイラに固有の **__pragma**キーワードを使用すると、マクロ定義内でプラグマディレクティブをコーディングできます。
 
 ## <a name="syntax"></a>構文
 
 > **#pragma** *トークン-文字列*\
-> **__ プラグマ (** *トークン文字列* **)**
+> **__pragma (** *トークン文字列* **)**
 
 ## <a name="remarks"></a>Remarks
 
@@ -46,7 +46,7 @@ Microsoft C および C++ コンパイラは、次のプラグマを認識しま
 |[alloc_text](../preprocessor/alloc-text.md)|[auto_inline](../preprocessor/auto-inline.md)|[bss_seg](../preprocessor/bss-seg.md)|
 |[check_stack](../preprocessor/check-stack.md)|[code_seg](../preprocessor/code-seg.md)|[comment](../preprocessor/comment-c-cpp.md)|
 |[component](../preprocessor/component.md)|[conform](../preprocessor/conform.md) <sup>1</sup>|[const_seg](../preprocessor/const-seg.md)|
-|[data_seg](../preprocessor/data-seg.md)|[deprecated](../preprocessor/deprecated-c-cpp.md)|[detect_mismatch](../preprocessor/detect-mismatch.md)|
+|[data_seg](../preprocessor/data-seg.md)|[非推奨](../preprocessor/deprecated-c-cpp.md)|[detect_mismatch](../preprocessor/detect-mismatch.md)|
 |[fenv_access](../preprocessor/fenv-access.md)|[float_control](../preprocessor/float-control.md)|[fp_contract](../preprocessor/fp-contract.md)|
 |[function](../preprocessor/function-c-cpp.md)|[hdrstop](../preprocessor/hdrstop.md)|[include_alias](../preprocessor/include-alias.md)|
 |[init_seg](../preprocessor/init-seg.md) <sup>1</sup>|[inline_depth](../preprocessor/inline-depth.md)|[inline_recursion](../preprocessor/inline-recursion.md)|
@@ -77,13 +77,11 @@ cl /Zp8 some_file.cpp
 // ...
 ```
 
-## <a name="the-__pragma-keyword"></a>__ プラグマ () キーワード
+## <a name="the-__pragma-keyword"></a>__Pragma () キーワード
 
-**Microsoft 固有の仕様**
+コンパイラは、 **#pragma**ディレクティブと同じ機能を持つ、Microsoft 固有の **__pragma**キーワードもサポートしています。 違いは、 **__pragma**キーワードはマクロ定義でインラインで使用できることです。 **#Pragma**ディレクティブはマクロ定義では使用できません。コンパイラは、ディレクティブのシャープ記号文字 (' # ') を文字列化[演算子 (#)](../preprocessor/stringizing-operator-hash.md)として解釈するためです。
 
-コンパイラは、 **#pragma**ディレクティブと同じ機能を持つ、 **__ プラグマ**キーワードもサポートしています。 違いは、 **__ プラグマ**キーワードはマクロ定義でインラインで使用できることです。 **#Pragma**ディレクティブはマクロ定義では使用できません。コンパイラは、ディレクティブのシャープ記号文字 (' # ') を文字列化[演算子 (#)](../preprocessor/stringizing-operator-hash.md)として解釈するためです。
-
-次のコード例は、マクロで **__ プラグマ**キーワードを使用する方法を示しています。 このコードは、「コンパイラ COM サポートのサンプル」の ACDUAL サンプルの mfcdual.h ヘッダーからの抜粋です。
+次のコード例は、マクロで **__pragma**キーワードを使用する方法を示しています。 このコードは、「コンパイラ COM サポートのサンプル」の ACDUAL サンプルの mfcdual.h ヘッダーからの抜粋です。
 
 ```cpp
 #define CATCH_ALL_DUAL \
@@ -103,10 +101,8 @@ END_CATCH_ALL \
 return _hr; \
 ```
 
-**End Microsoft 固有の仕様**
+## <a name="see-also"></a>参照
 
-## <a name="see-also"></a>関連項目
-
-[C/C++プリプロセッサリファレンス](../preprocessor/c-cpp-preprocessor-reference.md)\
+[C/C++プリプロセッサ参照](../preprocessor/c-cpp-preprocessor-reference.md)\
 [C プラグマ](../c-language/c-pragmas.md)\
 [キーワード](../cpp/keywords-cpp.md)
