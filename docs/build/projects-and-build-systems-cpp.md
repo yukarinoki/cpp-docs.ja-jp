@@ -73,7 +73,7 @@ cl /EHsc hello.cpp
 [リリースビルド](release-builds.md)エンドユーザーにデプロイするために最適化されたリリースビルドを作成およびトラブルシューティングする方法。
 
 [コマンド ラインから MSVC ツールセットを使用する](building-on-the-command-line.md)<br/>
-Visual Studio IDE を使用するのC++ではなく、コマンドラインから直接 C/C コンパイラおよびビルドツールを使用する方法について説明します。
+Visual Studio IDE を使用するのではなく、コマンドラインから直接 C/C++ コンパイラおよびビルドツールを使用する方法について説明します。
 
 [Visual Studio での dll のビルド](dlls-in-visual-cpp.md)Visual Studio で C/C++ dll (共有ライブラリ) を作成、デバッグ、および配置する方法について説明します。
 
