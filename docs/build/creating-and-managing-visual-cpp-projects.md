@@ -17,7 +17,7 @@ ms.locfileid: "73624479"
 ---
 # <a name="visual-studio-projects---c"></a>Visual Studio のプロジェクト - C++
 
-"*Visual Studio のプロジェクト*" は、MSBuild のビルド システムに基づくプロジェクトです。 MSBuild は、Visual Studio のネイティブビルドシステムであり、一般に、Windows 固有のプログラムに使用する最適なビルドシステムです。 MSBuild は Visual Studio と緊密に統合されていますが、コマンド ラインから使うこともできます。 クロスプラットフォームプロジェクト、またはオープンソースライブラリを使用するプロジェクトでは、visual studio 2017 以降の[Visual studio で Cmake プロジェクト](cmake-projects-in-visual-studio.md)を使用することをお勧めします。 以前のバージョンの Visual Studio から MSBuild プロジェクトをアップグレードする方法の詳細については、 [Microsoft C++の移植とアップグレード](../porting/visual-cpp-porting-and-upgrading-guide.md)に関するガイドを参照してください。
+"*Visual Studio のプロジェクト*" は、MSBuild のビルド システムに基づくプロジェクトです。 MSBuild は、Visual Studio のネイティブビルドシステムであり、一般に、Windows 固有のプログラムに使用する最適なビルドシステムです。 MSBuild は Visual Studio と緊密に統合されていますが、コマンド ラインから使うこともできます。 クロスプラットフォームプロジェクト、またはオープンソースライブラリを使用するプロジェクトでは、visual studio 2017 以降の[Visual Studio で Cmake プロジェクト](cmake-projects-in-visual-studio.md)を使用することをお勧めします。 以前のバージョンの Visual Studio から MSBuild プロジェクトをアップグレードする方法の詳細については、 [Microsoft C++の移植とアップグレード](../porting/visual-cpp-porting-and-upgrading-guide.md)に関するガイドを参照してください。
 
 ## <a name="create-a-project"></a>プロジェクトを作成する
 
