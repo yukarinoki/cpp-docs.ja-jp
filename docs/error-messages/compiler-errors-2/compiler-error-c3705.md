@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3705
 ms.assetid: 8361017d-5782-4214-a9d7-e9825fd29bc8
-ms.openlocfilehash: 8a1a5a7c3c54742f6952f6885a70fd5c1dcf6e0f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c4f77457be95ae22b2a67214207d361ca105811d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62227071"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757931"
 ---
 # <a name="compiler-error-c3705"></a>コンパイラ エラー C3705
 
-'function': イベントのインターフェイスを見つけることができません
+' function ': イベントインターフェイスが見つかりません
 
-COM イベントを使用するイベント インターフェイスを定義する必要があります。 なお、`#include`次の例に示すように、ATL ヘッダー ファイルの行は COM イベントを使用するために必要です。 このエラーを修正するのには、定義をコメント解除します、`IEvents`のサンプル コードのインターフェイス。
+COM イベントを使用するには、イベントインターフェイスを定義する必要があります。 COM イベントを使用するには、次のサンプルに示されている ATL ヘッダーファイルの `#include` 行が必要です。 このエラーを修正するには、サンプルコードの `IEvents` インターフェイスの定義をコメント解除します。
 
 次の例では、C3705 が生成されます。
 
-```
+```cpp
 // C3705.cpp
 // compile with: /c
 #define _ATL_ATTRIBUTES 1

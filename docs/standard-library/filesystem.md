@@ -9,12 +9,12 @@ f1_keywords:
 - filesystem/std::experimental::filesystem::directory_iterator
 - <filesystem>
 ms.assetid: 5005753b-46fa-43e1-8d4e-1b38617d3cfd
-ms.openlocfilehash: 6f97ad75dcf3f01406f305b713b9d14cbe527c52
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 0f2c90bd7c1d88a94d1dab05b98442111faa71a2
+ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457024"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74898812"
 ---
 # <a name="ltfilesystemgt"></a>&lt;filesystem&gt;
 
@@ -29,21 +29,21 @@ using namespace std::experimental::filesystem::v1;
 ```
 
 > [!IMPORTANT]
-> Visual Studio 2017 のリリース時点で\<は、ファイルシステム > ヘッダーはまだ標準でC++はありませんでした。 C++Visual Studio 2017 (MSVC v141) では、 [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf)に含まれる最終的なドラフト標準が実装されています。
+> Visual Studio 2017 のリリース時点で、\<filesystem > ヘッダーは、まだ標準でC++はありませんでした。 C++Visual Studio 2017 (MSVC v141) では、 [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf)に含まれる最終的なドラフト標準が実装されています。
 
-このヘッダーは、次の2つの広範なホストオペレーティングシステムのいずれかのファイルシステムをサポートします。Microsoft Windows および Posix。
+このヘッダーは、Microsoft Windows と POSIX の2つの広範なホストオペレーティングシステムのいずれかのファイルシステムをサポートしています。
 
-ほとんどの機能が両方のオペレーティング システムに共通していますが、このドキュメントではそれらの相違点について説明します。 例えば:
+ほとんどの機能が両方のオペレーティング システムに共通していますが、このドキュメントではそれらの相違点について説明します。 例:
 
 - Windows は、c: や \\\network_name などの複数のルート名をサポートします。 ファイル システムはツリーのフォレストで構成され、それぞれのツリーが持つ c:\ や \\\network_name\\ などの独自のルート ディレクトリと現在のディレクトリから相対パス名 (絶対パス名ではないもの) が生成されます。
 
-- Posix は、ルート名のない単一のツリー、単一のルート ディレクトリ /、および単一の現在のディレクトリをサポートします。
+- POSIX は、ルート名のない単一のツリー、単一のルートディレクトリ/、および1つの現在のディレクトリをサポートしています。
 
 もう 1 つの大きな違いは、パス名のネイティブな表現です。
 
 - Windows では、UTF-16 (文字ごとに 1 つまたは 2 つの要素) としてエンコードされた wchar_t の null 終端シーケンスが使用されます。
 
-- Posix では、UTF-8 (文字ごとに 1 つ以上の要素) としてエンコードされた char の null 終端シーケンスが使用されます。
+- POSIX では、UTF-8 (文字ごとに1つ以上の要素) としてエンコードされた char の null 終端シーケンスを使用します。
 
 - クラス パスのオブジェクトは、パス名をネイティブ形式で格納しますが、この格納形式といくつかの外部形式の間の簡単な変換をサポートします。
 
@@ -63,7 +63,7 @@ using namespace std::experimental::filesystem::v1;
 
 1. Windows は、ファイルが読み取り専用なのか書き込み可能なのかという、ディレクトリには意味のない属性を記録します。
 
-1. Posix は、ファイルが所有者、所有者のグループ、またはすべてのユーザーに加えて、その他のいくつかのアクセス許可によって、読み取り、書き込み、または実行 (ディレクトリの場合はスキャン) が可能かどうかを記録します。
+1. POSIX では、ファイルの読み取り、書き込み、または実行 (ディレクトリの場合)、所有者、所有者のグループ、または他のいくつかのアクセス許可があるかどうかが記録されます。
 
 両方のシステムに共通しているのは、ルート名に到達するまでのパス名に適用される構造です。 パス名 c:/abc/xyz/def.ext の場合:
 
@@ -87,7 +87,7 @@ using namespace std::experimental::filesystem::v1;
 
 最後に、パス オブジェクトの重要な特徴として、ヘッダー \<fstream> で定義されたクラスで filename 引数が必要な場合はパス オブジェクトを使用することができます。
 
-詳細およびコード例については、「[ファイル システムのナビゲーション (C++)](../standard-library/file-system-navigation.md)」を参照してください。
+詳細およびコード例については、「[ファイル システムのナビゲーション (C++)](../standard-library/file-system-navigation.md)」をご覧ください。
 
 ## <a name="members"></a>メンバー
 
@@ -127,6 +127,6 @@ using namespace std::experimental::filesystem::v1;
 |[perm_options](../standard-library/filesystem-enumerations.md#perm_options)||
 |[perms](../standard-library/filesystem-enumerations.md#perms)|アクセス許可とアクセス許可に対するオプションを伝達するために使用されるビットマスク型|
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)

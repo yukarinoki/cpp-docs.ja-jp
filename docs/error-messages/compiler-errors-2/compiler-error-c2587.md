@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2587
 ms.assetid: 7637a2c7-35d4-4b5a-a8f2-515a7bda98fd
-ms.openlocfilehash: 08a576d5672f0df1cbec7269f83a3f182ce0e1c3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5db305ab02d2724542fb2619f1c0b7e910eb5892
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62350507"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74748568"
 ---
 # <a name="compiler-error-c2587"></a>コンパイラ エラー C2587
 
-'identifier': ローカル変数の既定のパラメーターとしてが不適切に使用
+' identifier ': ローカル変数が既定のパラメーターとして不適切に使用される
 
-ローカル変数は、既定のパラメーターとしては許可されません。
+ローカル変数は、既定のパラメーターとして使用することはできません。
 
 次の例では、C2587 が生成されます。
 
-```
+```cpp
 // C2587.cpp
 // compile with: /c
 int i;

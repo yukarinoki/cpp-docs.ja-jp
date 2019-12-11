@@ -8,12 +8,12 @@ helpviewer_keywords:
 - statements, about statements
 - Visual C, statements
 ms.assetid: 0d49837a-5399-4881-b60c-af5f4e9720de
-ms.openlocfilehash: 1b5863a021fd74bb80162d589af7c2a1a5b36f9b
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: bfa6840553055202f26f55e1dc5971bfd047b2de
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147049"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857074"
 ---
 # <a name="overview-of-c-statements"></a>C ステートメントの概要
 
@@ -33,16 +33,16 @@ C ステートメントは、トークン、式、および他のステートメ
 
 [jump-statement](../c-language/break-statement-c.md)
 
-[try-except-statement](../c-language/try-except-statement-c.md)
+[try-except-statement](../c-language/try-except-statement-c.md) /* Microsoft 固有の \*/
 
-/* Microsoft 固有の仕様 \*/[try-finally-statement](../c-language/try-finally-statement-c.md) /\* Microsoft 固有の仕様 \*/
+[try-finally ステートメント](../c-language/try-finally-statement-c.md) /\* Microsoft 固有の \*/
 
-ステートメント本体が "複合ステートメント" であることはよくあります。 複合ステートメントは、キーワードも含めて、他のステートメントで構成されます。 複合ステートメントは、中かっこ (**{ }**) で区切られます。 他の C ステートメントはすべてセミコロン (**;**) で終了します。 セミコロンはステートメントの終端記号です。
+ステートメント本体が "複合ステートメント" であることはよくあります。 複合ステートメントは、キーワードも含めて、他のステートメントで構成されます。 複合ステートメントは、中かっこ ( **{ }** ) で区切られます。 他の C ステートメントはすべてセミコロン ( **;** ) で終了します。 セミコロンはステートメントの終端記号です。
 
 式ステートメントは、「[式と代入](../c-language/expressions-and-assignments.md)」で説明されている算術演算子または論理演算子を含むことができる C 式を含みます。 null ステートメントは空のステートメントです。
 
 どの C ステートメントも、名前とコロンで構成される識別ラベルを先頭に置くことができます。 ステートメント ラベルを認識するのは `goto` ステートメントだけであるため、ステートメント ラベルについては `goto` と一緒に説明しています。 詳細については、「[goto ステートメントとラベル付きステートメント](../c-language/goto-and-labeled-statements-c.md)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ステートメント](../c-language/statements-c.md)

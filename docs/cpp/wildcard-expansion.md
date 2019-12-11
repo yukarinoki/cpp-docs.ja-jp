@@ -11,23 +11,23 @@ helpviewer_keywords:
 - command-line wildcards
 - question mark, wildcard
 ms.assetid: 1a543398-607b-4404-93d1-45d290bde638
-ms.openlocfilehash: 2d495f94f2e3fb7b88d235edc7b98f8e90775393
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1fdea297bb45a06a08bde4f63f90eabef6ddb539
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209516"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857178"
 ---
 # <a name="wildcard-expansion"></a>ワイルドカードの展開
 
-## <a name="microsoft-specific"></a>Microsoft 固有の仕様
+**Microsoft 固有の仕様**
 
 コマンド ラインでファイル名とパスの引数を指定するときに、ワイルドカード (疑問符 (?) およびアスタリスク (*)) を使用できます。
 
-コマンドライン引数はというルーチンによって処理される`_setargv`(または`_wsetargv`ワイド文字環境で)、ワイルドカードの展開で個別の文字列に既定ではありません、`argv`文字列配列。 ワイルドカードの展開の有効化の詳細についてを参照してください[ワイルドカード引数の展開](../c-language/expanding-wildcard-arguments.md)します。
+コマンドライン引数は `_setargv` (ワイド文字環境では `_wsetargv`) と呼ばれるルーチンによって処理されます。既定では、ワイルドカードは `argv` 文字列配列内の個別の文字列に展開されません。 ワイルドカードの展開を有効にする方法の詳細については、「[ワイルドカード引数の展開](../c-language/expanding-wildcard-arguments.md)」を参照してください。
 
 **Microsoft 固有の仕様はここまで**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[main:プログラムの起動](../cpp/main-program-startup.md)
+[main: プログラムの起動](../cpp/main-program-startup.md)

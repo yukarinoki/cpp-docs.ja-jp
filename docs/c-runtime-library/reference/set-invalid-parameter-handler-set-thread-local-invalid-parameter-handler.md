@@ -30,12 +30,12 @@ helpviewer_keywords:
 - _set_invalid_parameter_handler function
 - _set_thread_local_invalid_parameter_handler function
 ms.assetid: c0e67934-1a41-4016-ad8e-972828f3ac11
-ms.openlocfilehash: 090eb43289313f12b900e671df61f74e7b464872
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d2e8dab92c70189533656bac359c794de2ad8002
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948494"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857776"
 ---
 # <a name="_set_invalid_parameter_handler-_set_thread_local_invalid_parameter_handler"></a>_set_invalid_parameter_handler、_set_thread_local_invalid_parameter_handler
 
@@ -81,7 +81,7 @@ void _invalid_parameter(
 
 *Expression*引数は、エラーを発生させた引数式のワイド文字列表現です。 *関数*の引数は、無効な引数を受け取った CRT 関数の名前です。 *File*引数は、関数を含む CRT ソースファイルの名前です。 *Line*引数は、そのファイル内の行番号です。 最後の引数は予約済みです。 CRT ライブラリのデバッグバージョンが使用されていない場合、パラメーターの値はすべて**NULL**になります。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
@@ -89,7 +89,7 @@ void _invalid_parameter(
 
 **_Set_invalid_parameter_handler**関数と **_set_thread_local_invalid_parameter_handler**関数は、Microsoft 固有の関数です。 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では、無効なパラメーターを受け取った関数および CRT ソースのファイル名と行番号を出力するために、無効なパラメーター エラー ハンドラーが使用されています。 デバッグ CRT ライブラリを使用した場合、無効なパラメーター エラーによってアサーションも発生しますが、この例では [_CrtSetReportMode](crtsetreportmode.md) を使用してアサーションが無効化されています。
 
@@ -135,8 +135,8 @@ Invalid parameter detected in function common_vfprintf. File: minkernel\crts\ucr
 Expression: format != nullptr
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [_get_invalid_parameter_handler、_get_thread_local_invalid_parameter_handler](get-invalid-parameter-handler-get-thread-local-invalid-parameter-handler.md)<br/>
 [CRT 関数のセキュリティが強化されたバージョン](../../c-runtime-library/security-enhanced-versions-of-crt-functions.md)<br/>
-[errno、_doserrno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)<br/>
+[errno、_doserrno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)<br/>

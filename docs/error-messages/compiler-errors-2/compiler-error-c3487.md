@@ -1,19 +1,19 @@
 ---
-title: コンパイル エラー C3487
+title: コンパイラ エラー C3487
 ms.date: 11/04/2016
 f1_keywords:
 - C3487
 helpviewer_keywords:
 - C3487
 ms.assetid: 39bda474-4418-4a79-98bf-2b22fa92eaaa
-ms.openlocfilehash: 01f8a1bd74ed2b7a3150afae5b46128c6f5b0ca2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7b38755470e3746066711382b2ed471badc8e197
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62381151"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74738441"
 ---
-# <a name="compiler-error-c3487"></a>コンパイル エラー C3487
+# <a name="compiler-error-c3487"></a>コンパイラ エラー C3487
 
 'return type': すべての return 式で同じ型を推測する必要があります: 以前は 'return type' でした。
 
@@ -23,11 +23,11 @@ ms.locfileid: "62381151"
 
 - ラムダの後続の戻り値の型を指定します。 ラムダからのすべての戻り値が同じ型であるか、または戻り値の型に暗黙的に変換できることを確認します。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では、ラムダの戻り値の型が一致しないため、C3487 が生成されます。
 
-```
+```cpp
 // C3487.cpp
 // Compile by using: cl /c /W4 C3487.cpp
 
@@ -42,6 +42,6 @@ int* test(int* pi) {
 }
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ラムダ式](../../cpp/lambda-expressions-in-cpp.md)

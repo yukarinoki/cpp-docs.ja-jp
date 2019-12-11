@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3287
 ms.assetid: c1fa73d2-2c82-4136-a7da-0e75e3b420ad
-ms.openlocfilehash: ab0b93aa1a74ea79515e24ef2b1e289cf0227dac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f0f3441b749e3ae074e18e1132dcc4003eba3ba3
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62222678"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74749608"
 ---
 # <a name="compiler-error-c3287"></a>コンパイラ エラー C3287
 
@@ -19,13 +19,13 @@ ms.locfileid: "62222678"
 
 ユーザー定義のコレクション クラスには、 `MoveNext` と `Current`の定義を含める必要があります。
 
-「[方法:それぞれの反復 Over a User-Defined コレクション](../../dotnet/how-to-iterate-over-a-user-defined-collection-with-for-each.md)詳細についてはします。
+詳細については、「 [How to: Iterate Over a User-Defined Collection with for each](../../dotnet/how-to-iterate-over-a-user-defined-collection-with-for-each.md) 」を参照してください。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では C3287 が生成されます。
 
-```
+```cpp
 // C3287.cpp
 // compile with: /clr
 using namespace System;

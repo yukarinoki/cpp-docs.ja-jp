@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - feraiseexcept function
 ms.assetid: 87e89151-83c2-4563-9a9a-45666245d437
-ms.openlocfilehash: 40ff315c179a6b62a3073d4f07e4e6a6d1c1acab
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 07c8a79e0a9569db80607e1ec1e16cd4b502783c
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941127"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857828"
 ---
 # <a name="feraiseexcept"></a>feraiseexcept
 
@@ -52,7 +52,7 @@ int feraiseexcept(
 
 ## <a name="remarks"></a>Remarks
 
-は、 *removed*によって指定された浮動小数点例外を発生させよう**として**います。   は **、** fenv.h> で\<定義されている次の例外マクロをサポートしています >。
+は、 *removed*によって指定された浮動小数点例外を発生させよう**として**います。   次のような例外マクロは、fenv.h> > \<で定義**されて**います。
 
 |例外処理マクロ|説明|
 |---------------------|-----------------|
@@ -67,17 +67,17 @@ int feraiseexcept(
 
 この関数を使用するには、呼び出しの前に `#pragma fenv_access(on)` ディレクティブを使用してアクセスを妨げる可能性のある浮動小数点の最適化をオフにする必要があります。 詳細については、「 [fenv_access](../../preprocessor/fenv-access.md)」を参照してください。
 
-**Microsoft 固有の仕様:** *Removed*で指定された例外は、FE_INVALID、FE_DIVBYZERO、FE_OVERFLOW、FE_UNDERFLOW、FE_INEXACT の順序で発生します。 ただし、 *removed*で指定されていない場合でも、FE_OVERFLOW または FE_UNDERFLOW が発生したときに FE_INEXACT を発生させることができます。 **END Microsoft 固有の仕様**
+**Microsoft 固有:** *Removed*で指定された例外は、FE_INVALID、FE_DIVBYZERO、FE_OVERFLOW、FE_UNDERFLOW、FE_INEXACT の順序で発生します。 ただし、 *removed*で指定されていない場合でも、FE_OVERFLOW または FE_UNDERFLOW が発生したときに FE_INEXACT を発生させることができます。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|関数|C ヘッダー|C++ ヘッダー|
+|機能|C ヘッダー|C++ ヘッダー|
 |--------------|--------------|------------------|
 |*feraiseexcept*|\<fenv.h>|\<cfenv>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [関数リファレンス (アルファベット順)](crt-alphabetical-function-reference.md)<br/>
 [fesetexceptflag](fesetexceptflag2.md)<br/>

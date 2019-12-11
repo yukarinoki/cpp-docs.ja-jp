@@ -1,6 +1,6 @@
 ---
 title: Platform::Collections::Vector クラス
-ms.date: 10/01/2019
+ms.date: 12/04/2019
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::Vector::Vector
@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - Vector Class (C++/Cx)
 ms.assetid: aee8c076-9700-47c3-99b6-799fd3edb0ca
-ms.openlocfilehash: a70856be04a63cad1c700cb3cc52711dde410265
-ms.sourcegitcommit: 4517932a67bbf2db16cfb122d3bef57a43696242
+ms.openlocfilehash: b7774c2cdab7b9abcb3ebac1453779055eacf897
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816575"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857893"
 ---
 # <a name="platformcollectionsvector-class"></a>Platform::Collections::Vector クラス
 
@@ -47,7 +47,7 @@ Vector オブジェクトに含まれている要素の型。
 *E*<br/>
 *T*型の値と等しいかどうかをテストするための二項述語を指定します。既定値は `std::equal_to<T>`です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 使用できる型は次のとおりです。
 
@@ -69,13 +69,13 @@ Vector オブジェクトに含まれている要素の型。
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|説明|
+|[名前]|説明|
 |----------|-----------------|
 |[Vector:: Vector](#ctor)|ベクター クラスの新しいインスタンスを初期化します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|説明|
+|[名前]|説明|
 |----------|-----------------|
 |[Vector:: Append](#append)|指定された項目を、現在の Vector の最後の項目の後に挿入します。|
 |[Vector:: Clear](#clear)|現在のベクター内のすべての要素を削除します。|
@@ -84,18 +84,18 @@ Vector オブジェクトに含まれている要素の型。
 |[Vector:: GetMany](#getmany)|指定されたインデックスを開始位置として、現在の Vector から項目のシーケンスを取得します。|
 |[Vector:: GetView](#getview)|ベクターの読み取り専用ビュー、つまり [Platform::Collections::VectorView](../cppcx/platform-collections-vectorview-class.md)を返します。|
 |[Vector:: IndexOf](#indexof)|現在のベクター内で指定された項目を検索し、見つかった場合は項目のインデックスを返します。|
-|[Vector::InsertAt](#insertat)|指定されたインデックスによって識別される要素の後の現在のベクターに、指定された項目を挿入します。|
+|[Vector::InsertAt](#insertat)|現在のベクター内の指定したインデックスによって識別される要素の位置に、指定した項目を挿入します。|
 |[Vector::ReplaceAll](#replaceall)|現在のベクターの要素を削除し、指定された配列の要素を挿入します。|
 |[Vector::RemoveAt](#removeat)|現在のベクターから指定されたインデックスで識別される要素を削除します。|
 |[Vector::RemoveAtEnd](#removeatend)|現在の Vector の末尾から要素を削除します。|
 |[Vector:: SetAt](#setat)|現在の Vector で、指定されたインデックスによって識別される要素に、指定された値を割り当てます。|
 |[Vector:: Size](#size)|現在のベクター オブジェクトの要素数を返します。|
 
-### <a name="events"></a>イベント
+### <a name="events"></a>Events
 
 |||
 |-|-|
-|Name|説明|
+|[名前]|説明|
 |イベント[Windows:: Foundation:: Collection:: VectorChangedEventHandler\<t > ^ VectorChanged](/uwp/api/windows.foundation.collections.vectorchangedeventhandler)|Vector が変更されたときに発生します。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
@@ -147,7 +147,7 @@ virtual Windows::Foundation::Collections::IIterator <T>^ First();
 
 Vector 内の最初の要素を指す反復子。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 First () によって返される反復子を保持する便利な方法は、 **auto**型推論キーワードで宣言された変数に戻り値を代入することです。 たとえば、`auto x = myVector->First();` のようにします。 この反復子は、コレクションの長さを認識しています。
 
@@ -196,7 +196,7 @@ virtual unsigned int GetMany(
 
 取得した項目数。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 この関数は、直接クライアント コードで使用することを目的としたものではありません。 Platform:: Vector インスタンスから std:: vector インスタンスへの効率的な変換を可能にするために、 [To_vector 関数](../cppcx/to-vector-function.md)で内部的に使用されます。
 
@@ -226,7 +226,7 @@ virtual bool IndexOf(T value, unsigned int* index);
 
 ### <a name="parameters"></a>パラメーター
 
-*値*<br/>
+*value*<br/>
 検索する項目。
 
 *index*<br/>
@@ -238,13 +238,13 @@ virtual bool IndexOf(T value, unsigned int* index);
 
 指定した項目が見つかった場合は**true** 。それ以外の場合は**false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 IndexOf は、std::find_if を使用して項目を検索します。 このため、find_if が必要とする等価比較を有効にするために、カスタム要素の種類で == および != 演算子をオーバーロードする必要があります。
 
 ##  <a name="insertat"></a>Vector:: InsertAt メソッド
 
-指定されたインデックスによって識別される要素の後の現在のベクターに、指定された項目を挿入します。
+現在のベクター内の指定したインデックスによって識別される要素の位置に、指定した項目を挿入します。
 
 ### <a name="syntax"></a>構文
 
@@ -258,7 +258,7 @@ virtual void InsertAt(unsigned int index, T item)
 ベクター オブジェクト内の特定の要素を指定する、0 から始まる符号なし整数。
 
 *item*<br/>
-*Index*で指定された要素の後にベクターに挿入する項目。 *項目*の型は、 *T*型名によって定義されます。
+*Index*で指定された要素のベクターに挿入する項目。 *項目*の型は、 *T*型名によって定義されます。
 
 ## <a name="removeat"></a>Vector:: RemoveAt メソッド
 
@@ -375,7 +375,7 @@ Vector(std::initializer_list<T> il);
 *size*<br/>
 ベクターの要素数。
 
-*値*<br/>
+*value*<br/>
 現在のベクターの各要素を初期化するために使用される値。
 
 *v*<br/>

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3399
 ms.assetid: 306ad199-d150-4f6c-bcf1-24a7948b93be
-ms.openlocfilehash: d05a861a2baedb86482503b6860098f12c41bd78
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d20b5e816930969278536fe3771df4ad38c3c86b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62300428"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74737518"
 ---
 # <a name="compiler-error-c3399"></a>コンパイラ エラー C3399
 
@@ -19,13 +19,13 @@ ms.locfileid: "62300428"
 
 `gcnew()` 制約を指定する場合は、制約型にパラメーターなしのコンストラクターがあることを指定します。 したがって、この型のインスタンスを作成してパラメーターを渡そうとすると、エラーになります。
 
-参照してください[ジェネリック型パラメーターの制約 (C +/cli CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md)詳細についてはします。
+詳細については、「[ジェネリック型パラメーターの制約 (C++/cli)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md) 」を参照してください。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では C3399 が生成されます。
 
-```
+```cpp
 // C3399.cpp
 // compile with: /clr /c
 generic <class T>

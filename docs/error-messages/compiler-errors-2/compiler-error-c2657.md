@@ -1,29 +1,29 @@
 ---
-title: コンパイラ エラー C2657
+title: コンパイラエラー C2657
 ms.date: 11/04/2016
 f1_keywords:
 - C2657
 helpviewer_keywords:
 - C2657
 ms.assetid: f7cf29a9-684a-4605-9469-ecfee9ba4b03
-ms.openlocfilehash: 4e2816092b3c0c210ae2c544e9bf9a823a9c5d18
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e060c2b9a38866a898a3c5ada9e595464050877e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360438"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756098"
 ---
-# <a name="compiler-error-c2657"></a>コンパイラ エラー C2657
+# <a name="compiler-error-c2657"></a>コンパイラエラー C2657
 
-' クラス:: *' のステートメントの先頭にある (を忘れました型を指定するか)。
+ステートメントの先頭に ' class::* ' が見つかりました (型を指定してください)。
 
-メンバーへのポインターの識別子を持つ行が開始しました。
+行は、メンバーへのポインターの識別子で始まりました。
 
-このエラーは、メンバーへポインターの宣言で型指定子がありませんが発生することができます。
+このエラーは、メンバーへのポインターの宣言で、型指定子が欠落していることが原因で発生する可能性があります。
 
 次の例では、C2657 が生成されます。
 
-```
+```cpp
 // C2657.cpp
 class C {};
 int main() {

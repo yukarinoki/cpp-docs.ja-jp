@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2806
 ms.assetid: 7c9ff1f4-1590-4c47-991d-b1075a173b48
-ms.openlocfilehash: 1d37f5d1c6e253c01ae8a3b7640fb3ee4cf12534
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: be991d26cb822221051316f3557b23a2b82e732d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62281968"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760622"
 ---
 # <a name="compiler-error-c2806"></a>コンパイラ エラー C2806
 
-'operator 演算子' が仮パラメーターが多すぎます
+' operator operator ' に含まれている仮引数が多すぎます
 
-オーバー ロードされた演算子は、パラメーターが多すぎます。
+オーバーロードされた演算子のパラメーターが多すぎます。
 
 次の例では、C2806 が生成されます。
 
-```
+```cpp
 // C2806.cpp
 // compile with: /c
 class X {

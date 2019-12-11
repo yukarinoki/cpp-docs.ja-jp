@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3480
 ms.assetid: 7b2e055a-9604-4d13-861b-b38bda1a6940
-ms.openlocfilehash: 2ebcce496fd06c30420558d80cc0a0c9318d4376
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 255fb12d587a94aac798814736f0b26770f608b0
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62173425"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760479"
 ---
 # <a name="compiler-error-c3480"></a>コンパイラ エラー C3480
 
@@ -23,11 +23,11 @@ ms.locfileid: "62173425"
 
 - ラムダ式のキャプチャ リストから変数を削除します。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 変数 `global` が外側の関数スコープではないため、次の例では C3480 が生成されます。
 
-```
+```cpp
 // C3480a.cpp
 
 int global = 0;
@@ -37,11 +37,11 @@ int main()
 }
 ```
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では、ラムダ式のキャプチャ リストから変数 `global` を削除することによって C3480 を解決しています。
 
-```
+```cpp
 // C3480b.cpp
 
 int global = 0;
@@ -51,6 +51,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ラムダ式](../../cpp/lambda-expressions-in-cpp.md)

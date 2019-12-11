@@ -1,25 +1,25 @@
 ---
 title: ML の致命的でないエラー A2070
 ms.date: 08/30/2018
-ms.topic: error-reference
+ms.custom: error-reference
 f1_keywords:
 - A2070
 helpviewer_keywords:
 - A2070
 ms.assetid: f6025e2c-b142-426f-88c8-7160df4c1631
-ms.openlocfilehash: 5ca6d78c35a77bf1576a26ba86b82bd1efc3ea1c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5bafde566432a9e572c1aeceaecf5a305d6c8a3f
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62177254"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74855811"
 ---
 # <a name="ml-nonfatal-error-a2070"></a>ML の致命的でないエラー A2070
 
-**無効な命令のオペランド**
+**命令オペランドが無効です**
 
-1 つまたは複数のオペランドが指定されている命令の無効でした。
+1つ以上のオペランドが、指定された命令に対して有効ではありませんでした。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ML エラー メッセージ](../../assembler/masm/ml-error-messages.md)<br/>

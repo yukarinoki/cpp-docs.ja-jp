@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2862
 ms.assetid: c04d8499-b799-48a1-9fb4-7902a0b0ac8e
-ms.openlocfilehash: a3e2dba20c5283d87b6e98c2f8c9aba83c2d3cb9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cd14f310a00202dce73f091dee46a4605858b698
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62227690"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755084"
 ---
 # <a name="compiler-error-c2862"></a>コンパイラ エラー C2862
 
-'interface': インターフェイスのパブリック メンバーしか
+' interface ': インターフェイスにはパブリックメンバーのみを含めることができます
 
-保護されているし、プライベート メンバーは、他のメンバー関数からのみアクセスできます。 そのメンバーのいずれかの実装が提供して可能性がありますいないために、このようなメンバーは、インターフェイスで使用されていません。
+Protected メンバーと private メンバーは、他のメンバー関数からのみアクセスできます。 このようなメンバーは、そのメンバーの実装を提供しない場合があるため、インターフェイスでは使用されません。
 
-次のサンプル C2862 が生成されます。
+次の例では、C2862 が生成されます。
 
-```
+```cpp
 // C2862.cpp
 // compile with: /c
 #include <unknwn.h>

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3868
 ms.assetid: f0e45c2a-2149-4885-a03b-0d230069f03a
-ms.openlocfilehash: 3d759d8e527bf38c7408f3497b27287e030d387e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cea8ee926bb5c1bc7482e53ed48a310c870774d1
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62338442"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761471"
 ---
 # <a name="compiler-error-c3868"></a>コンパイラ エラー C3868
 
-'type': ジェネリック パラメーター 'parameter' に対する制約が宣言の内容と異なる
+' type ': ジェネリックパラメーター ' parameter ' に対する制約は、宣言での制約と異なります
 
-複数の宣言と同じジェネリック制約があります。  詳細については、「[ジェネリック](../../extensions/generics-cpp-component-extensions.md)」を参照してください。
+複数の宣言は、同じジェネリック制約を持つ必要があります。  詳細については、「[ジェネリック](../../extensions/generics-cpp-component-extensions.md)」を参照してください。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では、C3868 が生成されます。
 
-```
+```cpp
 // C3868.cpp
 // compile with: /clr /c
 interface struct I1;

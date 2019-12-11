@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3364
 ms.assetid: 98654741-60fe-4472-a6af-e580f8c0a6e1
-ms.openlocfilehash: e99ab3919edcfb883701c08c52cd7aad60cd4591
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eae1e7ddbc34d36b55d7afa424c137db00ef047d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400358"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757346"
 ---
 # <a name="compiler-error-c3364"></a>コンパイラ エラー C3364
 
-'delegate': delegate コンス トラクター: 引数はマネージ クラスのメンバー関数またはグローバル関数へのポインターである必要があります
+' delegate ': delegate コンストラクター: 引数はマネージクラスまたはグローバル関数のメンバー関数へのポインターでなければなりません
 
-デリゲートのコンス トラクターの 2 番目のパラメーターは、メンバー関数のアドレスまたは任意のクラスの静的メンバー関数のアドレスのいずれかを取得します。 両方は、単純なアドレスとして扱われます。
+デリゲートのコンストラクターの2番目のパラメーターは、メンバー関数のアドレス、または任意のクラスの静的メンバー関数のアドレスのいずれかを受け取ります。 どちらも単純なアドレスとして扱われます。
 
 次の例では、C3364 が生成されます。
 
-```
+```cpp
 // C3364_2.cpp
 // compile with: /clr
 

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2499
 ms.assetid: b323ff4d-b3c1-4bfd-b052-ae7292d53222
-ms.openlocfilehash: 645dd3923e65240de17803a8831a0223ff0e1656
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 29fbb691304f9fc101f2367e014ae1e4e2231ff0
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360555"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756982"
 ---
 # <a name="compiler-error-c2499"></a>コンパイラ エラー C2499
 
-'class': クラスは、独自の基本クラスを指定することはできません
+' class ': クラスは、それ自体の基底クラスにすることはできません
 
-基底クラスとして定義するクラスを指定しようとしました。
+定義しようとしているクラスを基底クラスとして指定しようとしました。
 
 次の例では、C2499 が生成されます。
 
-```
+```cpp
 // C2499.cpp
 // compile with: /c
 class CMyClass : public CMyClass {};   // C2499
