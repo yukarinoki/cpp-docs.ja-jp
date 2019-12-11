@@ -1,27 +1,27 @@
 ---
-title: コンパイラ エラー C3137
+title: コンパイラエラー C3137
 ms.date: 11/04/2016
 f1_keywords:
 - C3137
 helpviewer_keywords:
 - C3137
 ms.assetid: 70bb1313-2e87-43ed-a0d8-33fa6ff475e4
-ms.openlocfilehash: c29aecb798b13233f10ad2808d1be530b25d4b54
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 43c006a5be624d95c4d86bb97819c7ec5834e20d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344617"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761287"
 ---
-# <a name="compiler-error-c3137"></a>コンパイラ エラー C3137
+# <a name="compiler-error-c3137"></a>コンパイラエラー C3137
 
-'property': プロパティを初期化できません
+' property ': プロパティは初期化できません
 
-たとえば、プロパティは、コンス トラクターの初期化リストでは初期化できません。
+コンストラクターの初期化リストなどで、プロパティを初期化することはできません。
 
 次の例では、C3137 が生成されます。
 
-```
+```cpp
 // C3137.cpp
 // compile with: /clr /c
 ref class CMyClass {

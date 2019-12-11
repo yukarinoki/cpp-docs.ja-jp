@@ -6,14 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - __readdr intrinsic
 ms.assetid: 061b05da-c85e-4052-b392-106f14bb84f1
-ms.openlocfilehash: 646330ca92af08903485fd4583eb2c217fe3e023
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: fbaf9e761f9f1450ccd12dc378ab6e498aa0df08
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70216681"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857880"
 ---
 # <a name="__readdr"></a>__readdr
+
+**Microsoft 固有の仕様**
 
 指定されたデバッグレジスタの値を読み取ります。
 
@@ -26,7 +28,7 @@ unsigned __int64 __readdr(unsigned int DebugRegister); /* x64 */
 
 ### <a name="parameters"></a>パラメーター
 
-*DebugRegister*\
+*Debugregister*\
 からデバッグレジスタを識別する 0 ~ 7 の定数。
 
 ## <a name="return-value"></a>戻り値
@@ -37,17 +39,17 @@ unsigned __int64 __readdr(unsigned int DebugRegister); /* x64 */
 
 これらの組み込みはカーネルモードでのみ使用でき、ルーチンは組み込みとしてのみ使用できます。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 |組み込み|アーキテクチャ|
 |---------------|------------------|
 |`__readdr`|x86、x64|
 
-**ヘッダーファイル**\<>
+**ヘッダーファイル**\<に存在します。 h >
 
 **Microsoft 固有の仕様はここまで**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)\
 [__readeflags](../intrinsics/readeflags.md)

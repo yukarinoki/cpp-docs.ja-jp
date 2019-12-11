@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3665
 ms.assetid: 893bb47e-8de1-43aa-af7d-fa47ad149ee9
-ms.openlocfilehash: 40de7a7b1ede5e6dbbc20d2128b782c0ad6f798b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4b0c019b2425b314f5b3503db41042d917283aa8
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62221595"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758178"
 ---
 # <a name="compiler-error-c3665"></a>コンパイラ エラー C3665
 
@@ -19,11 +19,11 @@ ms.locfileid: "62221595"
 
 デストラクターまたはファイナライザーでは使用できないキーワードが使用されています。
 
-たとえば、new スロットは、デストラクターまたはファイナライザーでは要求できません。  詳細については、次を参照してください。[明示的なオーバーライド](../../extensions/explicit-overrides-cpp-component-extensions.md)と[デストラクターおよびファイナライザー](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)します。
+たとえば、new スロットは、デストラクターまたはファイナライザーでは要求できません。  詳細については、「[明示的なオーバーライド](../../extensions/explicit-overrides-cpp-component-extensions.md)と[デストラクターおよびファイナライザー](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)」を参照してください。
 
 次の例では、C3665 が生成されます。
 
-```
+```cpp
 // C3665.cpp
 // compile with: /clr
 public ref struct R {

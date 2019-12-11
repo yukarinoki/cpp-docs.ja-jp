@@ -1,31 +1,31 @@
 ---
 title: ML の致命的でないエラー A2206
 ms.date: 08/30/2018
-ms.topic: error-reference
+ms.custom: error-reference
 f1_keywords:
 - A2206
 helpviewer_keywords:
 - A2206
 ms.assetid: 711846d0-5a09-4353-8857-60588c25526a
-ms.openlocfilehash: 1ef796fcb55f098932beb66eb7cd2083d65e5144
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6cd24e32dc000b63a6d70520250e5a792cdbc455
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62177008"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74854642"
 ---
 # <a name="ml-nonfatal-error-a2206"></a>ML の致命的でないエラー A2206
 
-**式で演算子がありません。**
+**式に演算子がありません**
 
-演算子がないために、式を評価できません。 このエラー メッセージは、前のプログラム エラーの副作用もあります。
+演算子がないため、式を評価できません。 このエラーメッセージは、前のプログラムエラーの副作用である可能性もあります。
 
-このエラーは、次の行が生成されます。
+次の行では、このエラーが生成されます。
 
 ```asm
 value1 = ( 1 + 2 ) 3
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ML エラー メッセージ](../../assembler/masm/ml-error-messages.md)<br/>

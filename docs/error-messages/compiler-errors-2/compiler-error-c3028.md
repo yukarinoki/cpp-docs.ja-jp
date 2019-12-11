@@ -1,27 +1,27 @@
 ---
-title: コンパイラ エラー C3028
+title: コンパイラエラー C3028
 ms.date: 11/04/2016
 f1_keywords:
 - C3028
 helpviewer_keywords:
 - C3028
 ms.assetid: 175e697f-8e8f-492a-8456-6240ffbbb900
-ms.openlocfilehash: 2a1d76d21005ecffc74f9fc64d4bdeb197e9653d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0a497de92d782f65bfc27db27755718e7c6bbdbe
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360048"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74735869"
 ---
-# <a name="compiler-error-c3028"></a>コンパイラ エラー C3028
+# <a name="compiler-error-c3028"></a>コンパイラエラー C3028
 
-'member': データ共有句に変数または静的データ メンバーのみを使用することができます
+' member ': データ共有句で使用できるのは、変数または静的データメンバーだけです
 
-変数または静的データ メンバー以外のシンボルは、reduction 句に渡されました。
+変数または静的データメンバー以外のシンボルが reduction 句に渡されました。
 
 次の例では、C3028 が生成されます。
 
-```
+```cpp
 // C3028.cpp
 // compile with: /openmp /link vcomps.lib
 int g_i;

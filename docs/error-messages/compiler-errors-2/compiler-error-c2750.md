@@ -1,27 +1,27 @@
 ---
-title: コンパイラ エラー C2750
+title: コンパイラエラー C2750
 ms.date: 11/04/2016
 f1_keywords:
 - C2750
 helpviewer_keywords:
 - C2750
 ms.assetid: 30450034-feb5-448c-9655-b8c5f3639695
-ms.openlocfilehash: 34d19e8e9f51c90c48ec0d429f98bb82e3d829d4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 56f4e6e1d6c392fc377fe5fdf11643ae8a2e503a
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62228539"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759608"
 ---
-# <a name="compiler-error-c2750"></a>コンパイラ エラー C2750
+# <a name="compiler-error-c2750"></a>コンパイラエラー C2750
 
-'type': 'new' は参照型で使用できません代わりに 'gcnew'
+' type ': 参照型で ' new ' を使用することはできません。代わりに ' gcnew ' を使用してください
 
-ガベージ コレクション ヒープに配置するインスタンスが発生した場合、CLR の型のインスタンスの作成に使用する必要があります[gcnew](../../extensions/ref-new-gcnew-cpp-component-extensions.md)します。
+CLR 型のインスタンスを作成して、ガベージコレクトされたヒープにインスタンスを配置するには、 [gcnew](../../extensions/ref-new-gcnew-cpp-component-extensions.md)を使用する必要があります。
 
 次の例では、C2750 が生成されます。
 
-```
+```cpp
 // C2750.cpp
 // compile with: /clr
 ref struct Y1 {};

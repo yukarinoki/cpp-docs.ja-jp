@@ -1,27 +1,27 @@
 ---
 title: ML の致命的なエラー A1008
 ms.date: 08/30/2018
-ms.topic: error-reference
+ms.custom: error-reference
 f1_keywords:
 - A1008
 helpviewer_keywords:
 - A1008
 ms.assetid: fe592f9d-c37b-4cd8-a51d-e3c15ddcab83
-ms.openlocfilehash: 93ae0dabf198369ed667dda3b00dda3ca2954f49
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 19b1aa5bdc5f3b254cf87840bbf6fabb03c18ada
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62202436"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74856892"
 ---
 # <a name="ml-fatal-error-a1008"></a>ML の致命的なエラー A1008
 
-**比類のないマクロの入れ子**
+**一致しないマクロの入れ子**
 
-マクロをファイルまたは終了ディレクティブの終了前に終了していない[ENDM](../../assembler/masm/endm.md)マクロ ブロックの外側で見つかりました。
+マクロが、ファイルの末尾の前に終了しなかったか、または終了ディレクティブ[Endm](../../assembler/masm/endm.md)がマクロブロックの外部で見つかりました。
 
-このエラーの原因の 1 つは、前にドットの省略[します。繰り返し](../../assembler/masm/dot-repeat.md)または[します。中に](../../assembler/masm/dot-while.md)します。
+このエラーの原因の1つは、の前にドットが省略されていることです[。](../../assembler/masm/dot-repeat.md)または[を繰り返します。しばらくお待ち](../../assembler/masm/dot-while.md)ください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ML エラー メッセージ](../../assembler/masm/ml-error-messages.md)<br/>

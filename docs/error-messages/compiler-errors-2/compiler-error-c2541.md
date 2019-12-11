@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2541
 ms.assetid: ed95180f-00df-4e62-a8e9-1b6dab8281bf
-ms.openlocfilehash: d8b2366bc2899b7a2ac76b0fae133351cd88a541
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: de24503d256b8c7649ce87969b1b2f6a4709ac8f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386955"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74740846"
 ---
 # <a name="compiler-error-c2541"></a>コンパイラ エラー C2541
 
-'delete': 削除: ポインターではないオブジェクトを削除することはできません
+' delete ': delete: ポインターではないオブジェクトを削除することはできません。
 
-[削除](../../cpp/delete-operator-cpp.md)がポインターでないオブジェクトに演算子が使用されました。
+ポインターではないオブジェクトで[delete](../../cpp/delete-operator-cpp.md)演算子が使用されました。
 
 次の例では、C2541 が生成されます。
 
-```
+```cpp
 // C2541.cpp
 int main() {
    int i;

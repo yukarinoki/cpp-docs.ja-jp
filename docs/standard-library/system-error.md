@@ -7,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - system_error header
 ms.assetid: 5e046c6e-48d9-4740-8c8a-05f3727c1215
-ms.openlocfilehash: e6eef7152e45e8177c451fc25592fab85c58ccb5
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: b9ddb3117afe37060b8013be235bdb11a2a031ac
+ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449757"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74898849"
 ---
-# <a name="ltsystemerrorgt"></a>&lt;system_error&gt;
+# <a name="ltsystem_errorgt"></a>&lt;system_error&gt;
 
-ヘッダー \<system_error > をインクルードして、低レベル`system_error`のシステムエラーを処理するための例外クラスと関連テンプレートを定義します。
+ヘッダー \<system_error > をインクルードして、低レベルのシステムエラーを処理するための例外クラス `system_error` および関連するテンプレートを定義します。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<system_error>
 
@@ -55,7 +55,7 @@ ms.locfileid: "68449757"
 
 |||
 |-|-|
-|[errc](../standard-library/system-error-enums.md#errc)|`<errno.h>` の Posix で定義されているすべてのエラー コードのマクロにシンボル名を提供します。|
+|[errc](../standard-library/system-error-enums.md#errc)|`<errno.h>`の POSIX で定義されているすべてのエラーコードマクロにシンボル名を提供します。|
 
 ### <a name="classes-and-structs"></a>クラスと構造体
 
@@ -69,6 +69,6 @@ ms.locfileid: "68449757"
 |[is_error_condition_enum](../standard-library/is-error-condition-enum-class.md)|[error_condition クラス](../standard-library/error-condition-class.md) 列挙型をテストする型の述語を表します。|
 |[system_error](../standard-library/system-error-class.md)|低レベル システム オーバーフローをレポートするためにスローされるすべての例外のための基底クラスを表します。|
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)

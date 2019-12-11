@@ -1,16 +1,16 @@
 ---
 title: C++ 準拠の強化
-ms.date: 10/04/2019
+ms.date: 12/04/2019
 description: Visual Studio の Microsoft C++ は、C++20 言語標準との完全準拠に向かって進んでいます。
 ms.technology: cpp-language
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 0bbfc364da217525251df0c5f09544ed1ccfe5b6
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 06fa060b674e51a3352a9a928bccdbfa6c63aae4
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73627087"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74858036"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Visual Studio の C++ 準拠の強化
 
@@ -460,6 +460,245 @@ extern "C" void f(int, int, int, BOOL){}
 ### <a name="standard-library-improvements"></a>標準ライブラリの機能強化
 
 非標準のヘッダー \<stdexcpt.h> と \<typeinfo.h> が削除されました。 これらが含まれるコードには、代わりに標準ヘッダー \<exception> と \<typeinfo> をそれぞれ含める必要があります。
+
+## <a name="improvements_164"></a> Visual Studio 2019 バージョン 16.4 の準拠の強化
+
+### <a name="better-enforcement-of-two-phase-name-lookup-for-qualified-ids-in-permissive-"></a>/permissive- での修飾 ID に対する 2 フェーズの名前参照の適用の強化
+
+2 フェーズの名前参照では、テンプレートの本文で使用される非依存名が定義時にテンプレートに表示されている必要があります。 以前は、テンプレートがインスタンス化されるときにそのような名前が検索される場合がありました。 この変更により、[/permissive-](../build/reference/permissive-standards-conformance.md) フラグを使用した MSVC で、移植性が高く準拠したコードを記述しやすくなります。
+
+Visual Studio 2019 バージョン 16.4 で **/permissive-** フラグが設定されている場合、次の例ではエラーが発生します。`f<T>` のテンプレートを定義するときに、`N::f` を参照できないためです。
+
+```cpp
+template <class T>
+int f() {
+    return N::f() + T{}; // error C2039: 'f': is not a member of 'N'
+}
+
+namespace N {
+    int f() { return 42; }
+}
+```
+
+通常、これは、次の例に示すように、不足しているヘッダーを追加するか、関数または変数を前方宣言することで修正できます。
+
+```cpp
+namespace N {
+    int f();
+}
+
+template <class T>
+int f() {
+    return N::f() + T{};
+}
+
+namespace N {
+    int f() { return 42; }
+}
+```
+
+### <a name="implicit-conversion-of-integral-constant-expressions-to-null-pointer"></a>整数定数式から Null ポインターへの暗黙的な変換
+
+MSVC コンパイラの準拠モード (/permissive-) において、[CWG イシュー 903](http://www.open-std.org/jtc1/sc22/wg21/docs/cwg_defects.html#903) が実装されるようになりました。 このルールにより、整数定数式 (整数リテラル '0' を除く) を Null ポインター定数に暗黙的に変換することが許可されなくなります。 次の例では、準拠モードで C2440 が生成されます。
+
+```cpp
+int* f(bool* p) {
+    p = false; // error C2440: '=': cannot convert from 'bool' to 'bool *'
+    p = 0; // OK
+    return false; // error C2440: 'return': cannot convert from 'bool' to 'int *'
+}
+```
+
+このエラーを修正するには、**false** ではなく **nullptr** を使用します。 リテラル 0 は引き続き許可されることに注意してください。
+
+```cpp
+int* f(bool* p) {
+    p = nullptr; // OK
+    p = 0; // OK
+    return nullptr; // OK
+}
+```
+
+### <a name="standard-rules-for-types-of-integer-literals"></a>整数リテラルの型に関する標準ルール
+
+MSVC の準拠モード ([/permissive-](../build/reference/permissive-standards-conformance.md) で有効) では、整数リテラルの型に対して標準ルールが使用されます。 以前は、大きすぎて符号付き 'int' に入らない 10 進リテラルは 'unsigned int' 型になりました。 そのようなリテラルは、2 番目に大きな符号付き整数型である 'long long' になるようになりました。 また、'll' というサフィックスが付いたリテラルで、大きすぎて符号付きの型に入らないものは、'unsigned long long' 型になります。
+
+これにより、異なる警告の診断が生成され、リテラルに対して実行される算術演算について異なる動作が発生する可能性があります。
+
+次の例は、Visual Studio 2019 バージョン 16.4 での新しい動作を示しています。 `i` 変数は **unsigned int** 型であるため、警告が発生します。 変数 `j` の上位ビットは 0 に設定されます。
+
+```cpp
+void f(int r) {
+    int i = 2964557531; // warning C4309: truncation of constant value
+    long long j = 0x8000000000000000ll >> r; // literal is now unsigned, shift will fill high-order bits with 0
+}
+```
+
+次の例は、以前の動作を維持することで、警告と実行時の動作の変更を回避する方法を示しています。
+
+```cpp
+void f(int r) {
+int i = 2964557531u; // OK
+long long j = (long long)0x8000000000000000ll >> r; // shift will keep high-order bits
+}
+```
+
+### <a name="function-parameters-that-shadow-template-parameters"></a>テンプレート パラメーターをシャドウする関数パラメーター
+
+MSVC コンパイラでは、関数パラメーターによってテンプレート パラメーターがシャドウされるとエラーが発生するようになりました。
+
+```cpp
+template<typename T>
+void f(T* buffer, int size, int& size_read);
+
+template<typename T, int Size>
+void f(T(&buffer)[Size], int& Size) // error C7576: declaration of 'Size' shadows a template parameter
+{
+    return f(buffer, Size, Size);
+}
+```
+
+このエラーを修正するには、いずれかのパラメーターの名前を変更します。
+
+```cpp
+template<typename T>
+void f(T* buffer, int size, int& size_read);
+
+template<typename T, int Size>
+void f(T (&buffer)[Size], int& size_read)
+{
+    return f(buffer, Size, size_read);
+}
+```
+
+### <a name="user-provided-specializations-of-type-traits"></a>型特性のユーザー指定の特殊化
+
+MSVC コンパイラでは、標準のサブ句 *meta.rqmts* に準拠して、`std` 名前空間で指定された type_traits テンプレートのいずれかに対するユーザー定義の特殊化が検出されると、エラーが発生するようになりました。 特に指定しない限り、このような特殊化によって未定義の動作が発生します。 次の例はこのルールに違反しているため、未定義の動作が発生します。また、`static_assert` はエラー **C2338** によって失敗します。
+
+```cpp
+#include <type_traits>
+struct S;
+
+template<>
+struct std::is_fundamental<S> : std::true_type {};
+
+static_assert(std::is_fundamental<S>::value, "fail");
+```
+
+このエラーを回避するには、目的の type_trait を継承する構造体を定義し、それを特殊化します。
+
+```cpp
+#include <type_traits>
+
+struct S;
+
+template<typename T>
+struct my_is_fundamental : std::is_fundamental<T> {};
+
+template<>
+struct my_is_fundamental<S> : std::true_type { };
+
+static_assert(my_is_fundamental<S>::value, "fail");
+```
+
+### <a name="changes-to-compiler-provided-comparison-operators"></a>コンパイラによって提供される比較演算子の変更点
+
+MSVC コンパイラでは、[/std:c++latest](../build/reference/std-specify-language-standard-version.md) オプションが有効になっている場合に、[P1630R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1630r1.html) によって比較演算子に対する次の変更点が実装されるようになりました。
+
+`operator==` を含む式で **bool** ではない戻り値の型が使用されている場合、それがコンパイラによって書き換えられることはなくなりました。 次のコードでは、"*エラー C2088: '!=': struct に対して正しくありません*" が生成されるようになりました。
+
+```cpp
+struct U {
+  operator bool() const;
+};
+
+struct S {
+  U operator==(const S&) const;
+};
+
+bool neq(const S& lhs, const S& rhs) {
+  return lhs != rhs;
+}
+```
+
+このエラーを回避するには、必要な演算子を明示的に定義する必要があります。
+
+```cpp
+struct U {
+    operator bool() const;
+};
+
+struct S {
+    U operator==(const S&) const;
+    U operator!=(const S&) const;
+};
+
+bool neq(const S& lhs, const S& rhs) {
+    return lhs != rhs;
+}
+```
+
+既定化された比較演算子が union-like クラスのメンバーである場合、それがコンパイラによって定義されることはなくなりました。 次の例では、"*C2120: void 型が他の型と同時に使われました*" が生成されるようになりました。
+
+```cpp
+#include <compare>
+
+union S {
+    int a;
+    char b;
+    auto operator<=>(const S&) const = default;
+};
+
+bool lt(const S& lhs, const S& rhs) {
+    return lhs < rhs;
+}
+```
+
+このエラーを回避するには、演算子の本体を定義します。
+
+```cpp
+#include <compare>
+
+union S {
+  int a;
+  char b;
+  auto operator<=>(const S&) const { ... }
+}; 
+
+bool lt(const S& lhs, const S& rhs) {
+  return lhs < rhs;
+}
+```
+
+クラスに参照メンバーが含まれている場合、既定化された比較演算子がコンパイラによって定義されることはなくなりました。 次のコードでは、"*エラー C2120: void 型が他の型と同時に使われました*" が生成されるようになりました。
+
+```cpp
+#include <compare>
+
+struct U {
+    int& a;
+    auto operator<=>(const U&) const = default;
+};
+
+bool lt(const U& lhs, const U& rhs) {
+    return lhs < rhs;
+}
+```
+
+このエラーを回避するには、演算子の本体を定義します。
+
+```cpp
+#include <compare>
+
+struct U {
+    int& a;
+    auto operator<=>(const U&) const { ... };
+};
+
+bool lt(const U& lhs, const U& rhs) {
+    return lhs < rhs;
+}
+```
 
 ## <a name="update_160"></a> Visual Studio 2019 のバグ修正と動作の変更
 
@@ -2820,7 +3059,7 @@ struct S
 {
     constexpr void f();
 };
- 
+
 template<>
 constexpr void S<int>::f()
 {

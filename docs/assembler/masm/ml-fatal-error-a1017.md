@@ -1,29 +1,29 @@
 ---
 title: ML の致命的なエラー A1017
 ms.date: 08/30/2018
-ms.topic: error-reference
+ms.custom: error-reference
 f1_keywords:
 - A1017
 helpviewer_keywords:
 - A1017
 ms.assetid: bef0b312-5431-4e5a-b637-c19919acf01b
-ms.openlocfilehash: 22a16569364760d0cb1d01011405f7a11dd21cac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6fb0835cca135fc994866dc2453734d7b3012a64
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62177774"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74856827"
 ---
 # <a name="ml-fatal-error-a1017"></a>ML の致命的なエラー A1017
 
-**ソースのファイル名がありません。**
+**ソースファイル名がありません**
 
-ML をリンカーに渡すアセンブリまたはファイルが見つかりませんでした。
+ML が、リンカーにアセンブルまたは渡すファイルを見つけることができませんでした。
 
-対象となるファイル名を指定しないで ML コマンド ライン オプションを指定すると、このエラーが生成されます。 .Asm 拡張機能がないファイルを構成するには、使用、 **/Ta**コマンド ライン オプション。
+このエラーは、操作するファイル名を指定せずに ML コマンドラインオプションを指定した場合に生成されます。 拡張子が .asm ではないファイルをアセンブルするには、 **/Ta**コマンドラインオプションを使用します。
 
-このエラーは、ML 環境変数には、コマンド ライン オプションが含まれている場合は、パラメーターなしで ML を呼び出すことによって生成することもできます。
+ML 環境変数にコマンドラインオプションが含まれている場合は、パラメーターを指定せずに ML を呼び出すことで、このエラーを生成することもできます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ML エラー メッセージ](../../assembler/masm/ml-error-messages.md)<br/>

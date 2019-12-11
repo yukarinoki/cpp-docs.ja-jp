@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3289
 ms.assetid: 3c1c623b-7fcf-43ab-a89a-8722532a8d29
-ms.openlocfilehash: d234ad4b7c48a66352e52d3517dfd675f27b002c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ee80fb2c917281163156ef148403088cef8e8545
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62222619"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760167"
 ---
 # <a name="compiler-error-c3289"></a>コンパイラ エラー C3289
 
@@ -19,11 +19,11 @@ ms.locfileid: "62222619"
 
 プロパティが正しく宣言されませんでした。 インデックス付きプロパティに対してアクセサーを定義する必要があります。 詳細については、「 [property](../../extensions/property-cpp-component-extensions.md) 」を参照してください。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では C3289 が生成されます。
 
-```
+```cpp
 // C3289.cpp
 // compile with: /clr
 public ref struct C {

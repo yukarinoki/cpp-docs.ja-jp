@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2502
 ms.assetid: affa0b86-15fc-4e17-b7f2-6aad4a3771c4
-ms.openlocfilehash: e23ccae55c40c9652f5a3e1f55c834a968bca784
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4ff3523ac803e7804ca56532631fe77b240c215d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165594"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74746917"
 ---
 # <a name="compiler-error-c2502"></a>コンパイラ エラー C2502
 
-'identifier': 基底クラスでアクセス修飾子が多すぎます
+' identifier ': 基底クラスのアクセス修飾子が多すぎます
 
-基本クラスには、1 つ以上のアクセス修飾子があります。 1 つのみのアクセス修飾子 (`public`、 `private`、または`protected`) は許可されています。
+基底クラスに複数のアクセス修飾子があります。 1つのアクセス修飾子 (`public`、`private`、または `protected`) のみが許可されます。
 
 次の例では、C2502 が生成されます。
 
-```
+```cpp
 // C2502.cpp
 // compile with: /c
 class A { };

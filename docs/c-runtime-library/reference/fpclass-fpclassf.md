@@ -33,12 +33,12 @@ helpviewer_keywords:
 - _fpclass function
 - _fpclassf function
 ms.assetid: 2774872d-3543-446f-bc72-db85f8b95a6b
-ms.openlocfilehash: 2e561cff956ca51707834bf869a1c114f0c99a3e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: db95453a44f6a55d4bf98638351dcda4bd8377c9
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957040"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857841"
 ---
 # <a name="_fpclass-_fpclassf"></a>_fpclass、_fpclassf
 
@@ -65,7 +65,7 @@ int _fpclassf(
 
 **_Fpclass**関数と **_fpclassf**関数は、引数*x*の浮動小数点分類を示す整数値を返します。 分類には、\<float.h> で定義された次のいずれかの値が含まれる場合があります。
 
-|値|説明|
+|Value|説明|
 |-----------|-----------------|
 |**_FPCLASS_SNAN**|シグナル型 NaN|
 |**_FPCLASS_QNAN**|クワイエット型 NaN|
@@ -82,15 +82,15 @@ int _fpclassf(
 
 **_Fpclass**関数と **_fpclassf**関数は、Microsoft 固有の関数です。 [fpclassify](fpclassify.md) によく似ていますが、引数に関するより詳細な情報を返します。 **_Fpclassf**関数は、x64 プラットフォーム用にコンパイルされた場合にのみ使用できます。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|関数|必須ヘッダー|
+|機能|必須ヘッダー|
 |--------------|---------------------|
 |**_fpclass**、 **_fpclassf**|\<float.h>|
 
 互換性と適合性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [浮動小数点サポート](../../c-runtime-library/floating-point-support.md)<br/>
 [isnan、_isnan、_isnanf](isnan-isnan-isnanf.md)<br/>

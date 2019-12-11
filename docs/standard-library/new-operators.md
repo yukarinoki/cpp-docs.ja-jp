@@ -20,7 +20,7 @@ ms.locfileid: "68243681"
 enum class align_val_t : size_t {};
 ```
 
-## <a name="op_delete"></a> delete 演算子
+## <a name="op_delete"></a>delete 演算子
 
 個々 のオブジェクト ストレージの割り当てを解除する削除式によって呼び出される関数。
 

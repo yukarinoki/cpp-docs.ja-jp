@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3654
 ms.assetid: 57d96e3f-6bbb-4eaa-934b-26c23b4ceb2e
-ms.openlocfilehash: e66f0071a3d086c84a51c8b69e52b06643344c4d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 960dbe9f18403c12919db713cc41451dd7b93aac
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62227100"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756293"
 ---
 # <a name="compiler-error-c3654"></a>コンパイラ エラー C3654
 
-'text': 明示的なオーバーライドで構文エラー
+' text ': 明示的なオーバーライドで構文エラーが発生しています。
 
-予期しない文字列は、明示的なオーバーライドででした。 詳細については、次を参照してください。[明示的なオーバーライド](../../extensions/explicit-overrides-cpp-component-extensions.md)します。
+予期しない文字列が明示的なオーバーライドに含まれていました。 詳細については、「[明示的なオーバーライド](../../extensions/explicit-overrides-cpp-component-extensions.md)」を参照してください。
 
 次の例では、C3654 が生成されます。
 
-```
+```cpp
 // C3654.cpp
 // compile with: /clr /c
 public ref struct B {

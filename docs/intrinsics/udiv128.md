@@ -5,16 +5,16 @@ f1_keywords:
 - _udiv128
 helpviewer_keywords:
 - _udiv128 intrinsic
-ms.openlocfilehash: 0e66bbe978199f47134aa288bdd2bac4eb3e332a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5e8cc9ca3dbf19a04d07edb1d73df84f2e29a5c3
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390166"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857984"
 ---
-# <a name="udiv128"></a>_udiv128
+# <a name="_udiv128"></a>_udiv128
 
-`_udiv128`組み込み 64 ビット符号なし整数では、128 ビット符号なし整数を除算します。 戻り値の商を保持して、組み込みのポインター パラメーターを通じて剰余を返します。 `_udiv128` **Microsoft 固有の仕様**します。
+`_udiv128` 組み込みは、128ビット符号なし整数を64ビット符号なし整数で除算します。 戻り値は商を保持し、組み込みはポインターパラメーターを使用して剰余を返します。 `_udiv128` は**Microsoft 固有**です。
 
 ## <a name="syntax"></a>構文
 
@@ -29,35 +29,35 @@ unsigned __int64 _udiv128(
 
 ### <a name="parameters"></a>パラメーター
 
-*highDividend* \
-[in]被除数の上位 64 ビット。
+*Highdividend* \
+から被除数の上位64ビット。
 
-*lowDividend* \
-[in]被除数の下位 64 ビット。
+*Lowdividend* \
+から被除数の下位64ビット。
 
 *除数* \
-[in]除算する 64 ビット整数。
+から除算する64ビット整数。
 
-*remainder* \
-[out]残りの 64 ビット整数のビットです。
+*残り*の \
+入出力剰余の64ビット整数ビット。
 
 ## <a name="return-value"></a>戻り値
 
-商の 64 ビット。
+商の64ビット。
 
 ## <a name="remarks"></a>Remarks
 
-128 ビット被除数の上限の 64 ビットを渡す*highDividend*との下位 64 ビット*lowDividend*します。 組み込みのでは、この値を除算する*除数*します。 残りの部分が指す 64 ビット符号なし整数に格納*剰余*、し、商の 64 ビットを返します。
+128ビット被除数の上位64ビットを*Highdividend*に、低い64ビットを*lowdividend*に渡します。 組み込みは、この値を*除数*で除算します。 剰余が*剰余*によって示された64ビット符号なし整数に格納し、商の64ビットを返します。
 
-`_udiv128`組み込みは、Visual Studio 2019 RTM 以降で利用可能です。
+`_udiv128` 組み込みは、Visual Studio 2019 RTM 以降で使用できます。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 |組み込み|アーキテクチャ|Header|
 |---------------|------------------|------------|
-|`_udiv128`|X64|\<immintrin.h>|
+|`_udiv128`|x64|\<immintrin.h>|
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [_div128](div128.md) \
 [コンパイラの組み込み](compiler-intrinsics.md)

@@ -1,28 +1,28 @@
 ---
 title: ML の致命的なエラー A1010
 ms.date: 08/30/2018
-ms.topic: error-reference
+ms.custom: error-reference
 f1_keywords:
 - A1010
 helpviewer_keywords:
 - A1010
 ms.assetid: 9e0b5241-67f4-4740-8701-3b2d2d1ad9e4
-ms.openlocfilehash: eb4d77b856e93a8d64ee6c51bec63ceae59b22e5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6ec82f7f6d559d977a9aa039ed91689a0ef4d49a
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62202066"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74856879"
 ---
 # <a name="ml-fatal-error-a1010"></a>ML の致命的なエラー A1010
 
-**比類のないブロックの入れ子。**
+**一致しないブロックの入れ子:**
 
-ブロックの先頭に、対応する end がないか、ブロックの終了を開始に対応するありませんでした。 次のいずれかが含まれます。
+最初のブロックの終わりに一致するものがないか、またはブロックの末尾に一致する先頭がありませんでした。 次のいずれかが関係している可能性があります。
 
-- などの高度なディレクティブ[します。IF](../../assembler/masm/dot-if.md)、[します。繰り返し](../../assembler/masm/dot-repeat.md)、または[します。中に](../../assembler/masm/dot-while.md)します。
+- などの高レベルのディレクティブ[。の場合は](../../assembler/masm/dot-if.md) [。](../../assembler/masm/dot-repeat.md)またはを繰り返し[ます。しばらくお待ち](../../assembler/masm/dot-while.md)ください。
 
-- などの条件付きのアセンブリ ディレクティブ[場合](../../assembler/masm/if-masm.md)、[繰り返します](../../assembler/masm/repeat.md)、または**中**します。
+- [IF](../../assembler/masm/if-masm.md)、 [REPEAT](../../assembler/masm/repeat.md)、 **WHILE**などの条件付きアセンブリディレクティブ。
 
 - 構造体または共用体の定義。
 
@@ -30,10 +30,10 @@ ms.locfileid: "62202066"
 
 - セグメントの定義。
 
-- A [POPCONTEXT](../../assembler/masm/popcontext.md)ディレクティブ。
+- [Popcontext](../../assembler/masm/popcontext.md)ディレクティブ。
 
-- 条件付きアセンブリなど、ディレクティブ、 [ELSE](../../assembler/masm/else-masm.md)、 [ELSEIF](../../assembler/masm/elseif-masm.md)、または**ENDIF** 、一致することがなく[場合](../../assembler/masm/if-masm.md)。
+- [If](../../assembler/masm/if-masm.md)と一致することのない、 [ELSE](../../assembler/masm/else-masm.md)、 [ELSEIF](../../assembler/masm/elseif-masm.md)、または**ENDIF**などの条件付きアセンブリディレクティブ。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ML エラー メッセージ](../../assembler/masm/ml-error-messages.md)<br/>
