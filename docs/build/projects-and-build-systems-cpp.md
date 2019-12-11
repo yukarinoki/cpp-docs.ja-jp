@@ -1,4 +1,4 @@
----
+﻿---
 title: Visual Studio での C/C++ プロジェクトとビルドシステム
 ms.description: Use Visual Studio to compile and build C++ projects for Windows, ARM or Linux based on any project system.
 ms.date: 07/17/2019
@@ -29,7 +29,6 @@ Visual Studio を使用して、IntelliSense を完全にサポートC++する�
 
 
 
-- プリC++プロセッサは、各ソースファイル内のすべての #directives とマクロの定義を変換します。 これにより、*翻訳単位*が作成されます。
 - C++コンパイラは、各翻訳単位をオブジェクトファイル (.obj) にコンパイルし、設定されているすべてのコンパイラオプションを適用します。
 
 

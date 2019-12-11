@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - complex<long double> function
 ms.assetid: 37591991-b385-46e9-b727-d534dbc10432
-ms.openlocfilehash: afd85321ee443359f17850384b06b854dfe89985
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 978be97484a259d7ae8f3fd24fecf07d50c4c844
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688232"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857971"
 ---
 # <a name="complexltlong-doublegt"></a>complex&lt;long double&gt;
 
@@ -38,13 +38,13 @@ complex(
 
 ### <a name="parameters"></a>パラメーター
 
-*Realval \ (_s)*
+*_RealVal*\
 構築される複素数の実数部の **long double** 型の値。
 
-*Imagval \ (_c)*
+*_ImagVal*\
 構築される複素数の虚数部の**long double**型の値。
 
-*Complexnum* \
+*Complexnum*\
 **Double**型または**float**型の複素数。実数部と虚数部が、構築される**long double**型の複素数を初期化するために使用されます。
 
 ## <a name="return-value"></a>戻り値
@@ -59,7 +59,7 @@ complex(
 
 **Microsoft 固有**: **long double**型と**double**型の表現は同じですが、個別の型です。 詳細については、「[基本型](../cpp/fundamental-types-cpp.md)」を参照してください。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 ```cpp
 // complex_comp_ld.cpp
@@ -115,13 +115,13 @@ Argument of c3 is recovered from c3 using:
 arg( c3 ) = 0.927295 radians, which is 53.1301 degrees.
 ```
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>要件
 
 **ヘッダー**: \<complex>
 
 **名前空間:** std
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [complex クラス](../standard-library/complex-class.md)\
 [C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

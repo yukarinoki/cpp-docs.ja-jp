@@ -1,27 +1,27 @@
 ---
-title: コンパイラ エラー C2701
+title: コンパイラエラー C2701
 ms.date: 11/04/2016
 f1_keywords:
 - C2701
 helpviewer_keywords:
 - C2701
 ms.assetid: 31cf2ab7-ced9-4f75-aa51-e169e20407fb
-ms.openlocfilehash: b16ddb16d98a81e53b29ff51e41d19073200a2e5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aabb47d3e0e2f494b19205626861dea43ca87033
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161291"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758334"
 ---
-# <a name="compiler-error-c2701"></a>コンパイラ エラー C2701
+# <a name="compiler-error-c2701"></a>コンパイラエラー C2701
 
-'function': 関数テンプレートをローカル クラスの friend にすることはできません。
+' function ': 関数テンプレートをローカルクラスの friend にすることはできません
 
-ローカル クラスは、フレンド関数としてのテンプレート関数を持つことができません。
+ローカルクラスは、テンプレート関数を friend 関数として持つことはできません。
 
-次の例では、C2701 エラーが生成されます。
+次の例では、C2701 が生成されます。
 
-```
+```cpp
 // C2701.cpp
 // compile with: /c
 template<typename T>   // OK

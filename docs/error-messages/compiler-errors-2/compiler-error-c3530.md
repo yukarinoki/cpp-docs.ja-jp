@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C3530
 ms.assetid: 21be81ce-b699-4c74-81bc-80a0c34d2d5a
-ms.openlocfilehash: dd4368faaf323a75116128ec3a47666260436fce
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3766eaa83457ba6cffaf8b1599983a065772911c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397420"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74750144"
 ---
 # <a name="compiler-error-c3530"></a>コンパイラ エラー C3530
 
-'auto' は、他の型指定子と組み合わせることはできません。
+' auto ' を他の型指定子と組み合わせることはできません
 
-型指定子を併用、`auto`キーワード。
+型指定子は、`auto` キーワードと共に使用されます。
 
 ### <a name="to-correct-this-error"></a>このエラーを解決するには
 
-1. 使用する変数宣言で型指定子を使用しないでください、`auto`キーワード。
+1. `auto` キーワードを使用する変数宣言では、型指定子を使用しないでください。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
-次の例では C3530 のため変数`x`が両方で宣言されて、`auto`キーワードと型`int`、例をコンパイルしたので **/Zc:auto**します。
+次の例では、変数 `x` が `auto` キーワードと型 `int`の両方で宣言されており、この例は **/zc: auto**を使用してコンパイルされているため、C3530 が生成されます。
 
-```
+```cpp
 // C3530.cpp
 // Compile with /Zc:auto
 int main()
@@ -37,6 +37,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [auto キーワード](../../cpp/auto-keyword.md)

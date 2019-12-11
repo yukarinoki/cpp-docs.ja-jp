@@ -1,17 +1,17 @@
 ---
 title: Visual Studio での C++ 開発の概要
 description: Visual Studio IDE は、コード エディター、デバッガー、テスト フレームワーク、静的アナライザー、その他のプログラミング ツールを利用した Windows、Linux、Android、iOS 上での C++ 開発をサポートしています。
-ms.date: 03/08/2019
+ms.date: 12/02/2019
 helpviewer_keywords:
 - Visual C++, development tools
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 54ed590122f1eb914ff039378914a1fd4adc5f10
-ms.sourcegitcommit: bde3279f70432f819018df74923a8bb895636f81
+ms.openlocfilehash: d72ea2ab4fa83259152101b357c6b2b69e74c723
+ms.sourcegitcommit: 8762a3f9b5476b4dee03f0ee8064ea606550986e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66182902"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74810626"
 ---
 # <a name="overview-of-c-development-in-visual-studio"></a>Visual Studio での C++ 開発の概要
 
@@ -51,13 +51,13 @@ Visual Studio では、使用するすべてのプロジェクト システム�
 
 ::: moniker range="vs-2019"
 
-![チーム エクスプローラー](media/vs2019-team-explorer.png "Visual Studio 2017 チーム エクスプローラー")
+![チーム エクスプローラー](media/vs2019-team-explorer.png "Visual Studio 2017 のチーム エクスプローラー")
 
 ::: moniker-end
 
 ::: moniker range="<=vs-2017"
 
-![チーム エクスプローラー](media/vs2017-team-explorer.png "Visual Studio 2017 チーム エクスプローラー")
+![チーム エクスプローラー](media/vs2017-team-explorer.png "Visual Studio 2017 のチーム エクスプローラー")
 
 ::: moniker-end
 
@@ -71,9 +71,9 @@ Git と Azure のリポジトリの統合については、「[Share your code w
 
 プログラムにユーザー インターフェイスがある場合、デザイナーを使用し、ボタンやリスト ボックスなどのコントロールをユーザー インターフェイスに簡単に入力できます。 ツールボックス ウィンドウからコントロールをドラッグし、デザイン サーフェイスにドロップすると、Visual Studio によって、それを動かすために必要なリソースとコードが生成されます。 その後、外観と動作をカスタマイズするコードを記述します。
 
-![デザイナーとツールボックス](media/vs2017-toolbox-designer.png "Visual Studio 2017 のデザイナーとツールボックス")
+![デザイナーとツールボックス](media/vs2017-toolbox-designer.png "Visual Studio 2017 のツールボックスとデザイナー")
 
-ユニバーサル Windows プラットフォーム アプリのユーザー インターフェイスの設計方法については、[デザインと UI](https://developer.microsoft.com/windows/design) に関するページを参照してください。
+ユニバーサル Windows プラットフォーム アプリのユーザー インターフェイスの設計方法について詳しくは、[デザインと UI](https://developer.microsoft.com/windows/design) に関するページを参照してください。
 
 MFC アプリケーションのユーザー インターフェイスの作成方法については、「[MFC デスクトップ アプリケーション](../mfc/mfc-desktop-applications.md)」を参照してください。 Win32 Windows プログラムについては、「[Windows デスクトップ アプリケーション](../windows/windows-desktop-applications-cpp.md)」を参照してください。
 
@@ -87,15 +87,13 @@ MFC アプリケーションのユーザー インターフェイスの作成方
 
 ## <a name="add-and-edit-resources"></a>リソースの追加と編集
 
-*リソース* という用語には、ダイアログ、アイコン、画像、ローカライズ可能な文字列、スプラッシュ画面、データベースの接続文字列、または実行可能ファイルに含める任意のデータなどが含まれます。
-
-ネイティブ デスクトップ C++ プロジェクトでのリソースの追加および編集の詳細については、「[リソース ファイルの操作](../windows/working-with-resource-files.md)」を参照してください。
+通常、Windows プログラムや DLL には、ダイアログ、アイコン、画像、ローカライズ可能な文字列、スプラッシュ画面、データベースの接続文字列、または任意のデータなど、いくつかの "*リソース*" が含まれます。 Visual Studio には、リソースの追加や編集を行うためのツールが含まれています。 詳細については、「[リソース ファイルの操作](../windows/working-with-resource-files.md)」をご覧ください。
 
 ## <a name="build-compile-and-link"></a>ビルド (コンパイルおよびリンク)
 
-メニュー バーの **[ビルド]**  >  **[ソリューションのビルド]** を選択するか、Ctrl + Shift + B キーを押してプロジェクトをコンパイルおよびリンクします。 ビルド エラーと警告は、エラー一覧 (Ctrl + \\、E) に報告されます。 **[出力]** ウィンドウ (Alt + 2) にビルド プロセスに関する情報が表示されます。
+メニュー バーの **[ビルド]**  >  **[ソリューションのビルド]** を選択するか、**Ctrl + Shift + B** キーの組み合わせを押して、プロジェクトのコンパイルおよびリンクを行います。 ビルド エラーと警告は、[エラー一覧] (**Ctrl + \\、E**) に報告されます。 **[出力]** ウィンドウ (**Alt + 2**) にビルド プロセスに関する情報が表示されます。
 
-![出力ウィンドウとエラー一覧](media/vs2017-output-error-list.png "Visual Studio 2017 出力ウィンドウとエラー一覧")
+![[出力] ウィンドウと [エラー一覧]](media/vs2017-output-error-list.png "Visual Studio 2017 の [出力] ウィンドウと [エラー一覧]")
 
 ビルドの構成の詳細については、[プロジェクト プロパティの操作](../build/working-with-project-properties.md)に関するページと[プロジェクトとビルド システム](../build/projects-and-build-systems-cpp.md)に関するページを参照してください。
 
@@ -103,7 +101,7 @@ MFC アプリケーションのユーザー インターフェイスの作成方
 
 ## <a name="debug"></a>デバッグ
 
-**[F5]** を押すことでデバッグを開始できます。 実行は、設定したブレークポイントで一時停止します。 また、コードを一度に 1 行ずつステップ実行したり、変数やレジスタの値を表示したり、場合によってはコードに変更を加え、再コンパイルせずにデバッグを続行したりできます。 次の図は、ブレークポイントで実行が停止したデバッグ セッションを示しています。 データ構造体メンバーの値は**ウォッチ ウィンドウ**に表示されます。
+**[F5]** を押すことでデバッグを開始できます。 (**F9** キーを押して) 設定した任意のブレークポイントで、実行を一時停止することができます。 また、コードを一度に 1 行ずつステップ実行したり (**F10** キー)、変数やレジスタの値を表示したり、場合によってはコードに変更を加え、再コンパイルせずにデバッグを続行したりできます。 次の図は、ブレークポイントで実行が停止したデバッグ セッションを示しています。 データ構造体メンバーの値は**ウォッチ ウィンドウ**に表示されます。
 
 ![デバッグ セッション](media/vs2017-debug-watch.png "Visual Studio 2017 のデバッグ セッション")
 
@@ -113,7 +111,7 @@ MFC アプリケーションのユーザー インターフェイスの作成方
 
 Visual Studio には、C++ 用の Microsoft 単体テスト フレームワークおよび Boost.Test、Google Test、CTest のサポートが含まれます。 **テスト エクスプローラー** ウィンドウからテストを実行します。
 
-![テスト エクスプローラー](media/cpp-test-explorer-passed.png "Visual Studio 2017 テスト エクスプローラー")
+![テスト エクスプローラー](media/cpp-test-explorer-passed.png "Visual Studio 2017 のテスト エクスプローラー")
 
 詳細については、[単体テストを使用してコードを検証する](/visualstudio/test/unit-test-your-code)方法に関するページと「[Visual Studio で C/C++ 用の単体テストを作成する](/visualstudio/test/writing-unit-tests-for-c-cpp)」を参照してください。
 
@@ -125,7 +123,7 @@ Visual Studio には、ソース コードの潜在的な問題を検出でき�
 
 Microsoft Store から従来のデスクトップ アプリケーションと UWP アプリの両方を展開できます。 CRT の配置は、水面下で自動的に処理されます。 詳細については、「[Publish Windows apps and games](/windows/uwp/publish/)」(Windows のアプリとゲームを公開する) を参照してください。
 
-ネイティブ C++ デスクトップを別のコンピューターに配置することもできます。詳細については、[デスクトップ アプリケーションの配置](../windows/deploying-native-desktop-applications-visual-cpp.md)に関するページを参照してください。
+また、ネイティブ C++ デスクトップを別のコンピューターに配置することもできます。 詳細については、「[デスクトップ アプリケーションの配置](../windows/deploying-native-desktop-applications-visual-cpp.md)」を参照してください。
 
 C++/CLI プログラムの配置について詳しくは、「[配置ガイド (開発者向け)](/dotnet/framework/deployment/deployment-guide-for-developers)」を参照してください。
 

@@ -1,17 +1,17 @@
 ---
 title: STRUCT (MASM)
-ms.date: 08/30/2018
+ms.date: 12/06/2019
 f1_keywords:
 - struct
 helpviewer_keywords:
 - STRUCT directive
 ms.assetid: 70c3ba6b-00db-461e-8dd9-eafd3ae5b3c8
-ms.openlocfilehash: 73f3751f32d8cb2fc3f9daec1ac11c778ee33514
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: df73d19287cad2a44c25bfece17d3f6bff7dca08
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74393568"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74987995"
 ---
 # <a name="struct-masm"></a>STRUCT (MASM)
 
@@ -21,6 +21,10 @@ ms.locfileid: "74393568"
 
 > *name* **STRUCT** ⟦*alignment*⟧⟦ __、__ **一意**でない⟧*フィールド宣言*\
 > *名前*の**終わり**
+
+## <a name="remarks"></a>Remarks
+
+*名前*引数は、開始および終了ステートメントと同じである必要があります。 
 
 ## <a name="see-also"></a>参照
 

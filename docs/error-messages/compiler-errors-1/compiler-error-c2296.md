@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2296
 ms.assetid: 47d270f4-13ce-4c16-81e2-7d67c6c4a540
-ms.openlocfilehash: ab9c9450b6e906a47a66f6c28c42ca016c98381b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 020f046648488ca67923b7035acaa6c79ce495e4
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182679"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759075"
 ---
 # <a name="compiler-error-c2296"></a>コンパイラ エラー C2296
 
-'operator': 無効な左オペランド
+' operator ': 左オペランドが正しくありません。
 
-左側のオペランドと共に使用`operator`が無効です。
+`operator` で使用される左オペランドが無効です。
 
-たとえば、コンパイラ可能性がありますを参照してください、宣言関数呼び出しを意図しました。
+たとえば、コンパイラでは、関数呼び出しの対象となった宣言が表示される場合があります。
 
 次の例では、C2296 が生成されます。
 
-```
+```cpp
 // C2296.cpp
 struct MyStruct {
    struct Help {

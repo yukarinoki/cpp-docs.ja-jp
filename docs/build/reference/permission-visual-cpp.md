@@ -1,5 +1,5 @@
 ---
-title: '&lt;アクセス許可 > (ドキュメント コメントの C++)'
+title: '&lt;のアクセス許可C++ > (ドキュメントコメント)'
 ms.date: 11/04/2016
 f1_keywords:
 - permission
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <permission> C++ XML tag
 - permission C++ XML tag
 ms.assetid: 537ee2bc-95bd-48e4-9ce6-3420c3da87f4
-ms.openlocfilehash: 764048f7bc579afa6862bdff40968588955dc307
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e7f0a59c85e3fa28d24e44953e207151c3afa0f4
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62319942"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988672"
 ---
 # <a name="ltpermissiongt"></a>&lt;permission&gt;
 
@@ -32,7 +32,7 @@ ms.locfileid: "62319942"
 
 コンパイラは、`member` が見つからない場合に警告を発行します。
 
-ジェネリック型への cref 参照を作成する方法については、「[\<see>](see-visual-cpp.md)」を参照してください。
+ジェネリック型への cref 参照を作成する方法については、[\<see>](see-visual-cpp.md) を参照してください。
 
 *description*<br/>
 メンバーへのアクセスの説明です。
@@ -41,11 +41,11 @@ ms.locfileid: "62319942"
 
 コンパイル時に [/doc](doc-process-documentation-comments-c-cpp.md) を指定して、ドキュメント コメントをファイルに出力します。
 
-MSVC コンパイラは、ドキュメント コメントを通じて 1 つのパスで cref 参照を解決しようとします。  したがって、C++ のルックアップ規則を使用する場合、コンパイラによってシンボルが見つからないと、参照が未解決としてマークされます。 詳細については、「[\<seealso>](seealso-visual-cpp.md)」を参照してください。
+MSVC コンパイラは、ドキュメントコメント内の1回のパスで cref 参照の解決を試みます。  したがって、C++ のルックアップ規則を使用する場合、コンパイラによってシンボルが見つからないと、参照が未解決としてマークされます。 詳細については、「[\<seealso>](seealso-visual-cpp.md)」を参照してください。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
-```
+```cpp
 // xml_permission_tag.cpp
 // compile with: /clr /doc /LD
 // post-build command: xdcmake xml_permission_tag.dll
@@ -57,6 +57,6 @@ public ref class TestClass {
 };
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [XML に関するドキュメント](xml-documentation-visual-cpp.md)

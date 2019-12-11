@@ -1,27 +1,27 @@
 ---
 title: ML の警告 A4012
 ms.date: 08/30/2018
-ms.topic: error-reference
+ms.custom: error-reference
 f1_keywords:
 - A4012
 helpviewer_keywords:
 - A4012
 ms.assetid: 842b1259-9679-4eeb-a02d-672a583a94e5
-ms.openlocfilehash: f58d1f420d4acc848eaf04f93c01205dd1205468
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 40aabc264c52a0b81fcd4e29d519433cf5fecdd6
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62201348"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74854564"
 ---
 # <a name="ml-warning-a4012"></a>ML の警告 A4012
 
-**クラス 'CODE' を指定せず、セグメントの行番号情報**
+**クラス ' CODE ' のないセグメントの行番号情報**
 
-「コードです」で終わるクラス名がないセグメントの指示がありました アセンブラーは、次の手順の CodeView 情報を生成できませんでした。
+セグメントに、"CODE" で終わるクラス名のない命令がありました。 アセンブラーは、これらの命令の CodeView 情報を生成しませんでした。
 
-CodeView「コードです」で終わらないクラス名を持つセグメント内のコードでのモジュールを処理できません。
+CodeView は、"CODE" で終わらないクラス名を持つセグメント内のコードを含むモジュールを処理することはできません。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ML エラー メッセージ](../../assembler/masm/ml-error-messages.md)<br/>

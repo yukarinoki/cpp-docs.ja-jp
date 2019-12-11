@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2516
 ms.assetid: cd3accc1-0179-4a13-9587-616908c4ad1d
-ms.openlocfilehash: 2114ad048c2061b81f223c86536f23737bdf43fb
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: fb0636edd621de06bea553c9975626249ae06d80
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344761"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74746501"
 ---
 # <a name="compiler-error-c2516"></a>コンパイラ エラー C2516
 
-'name': 有効な基本クラスではありません
+' name ': 有効な基底クラスではありません
 
-クラスで定義された型名から、`typedef`ステートメント。
+クラスは、`typedef` ステートメントによって定義された型名から派生します。
 
 次の例では、C2516 が生成されます。
 
-```
+```cpp
 // C2516.cpp
 typedef unsigned long ulong;
 class C : public ulong {}; // C2516

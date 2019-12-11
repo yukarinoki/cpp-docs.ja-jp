@@ -1,6 +1,7 @@
 ---
-title: 廃止された関数
-ms.date: 01/22/2019
+title: 古い関数
+description: Microsoft C ランタイムライブラリ (CRT) から非推奨とされ、削除された古い関数の一覧を示します。
+ms.date: 12/09/2019
 api_name:
 - _beep
 - _sleep
@@ -53,23 +54,23 @@ helpviewer_keywords:
 - _sleep function
 - _seterrormode function
 ms.assetid: 8e14c2d4-1481-4240-8586-47eb43db02b0
-ms.openlocfilehash: da5bd0569e7116bfd45e6112da8231d6fc2c9b44
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
-ms.translationtype: HT
+ms.openlocfilehash: c913e44a4f0d06813e877645bd01855baa6fd4dc
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940138"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988775"
 ---
 # <a name="obsolete-functions"></a>廃止された関数
 
-ライブラリの機能の中には古くなって、新しい同等物で置き換えられているものがあります。 これらを、更新されたバージョンに変更することをお勧めします。 他の古くなった関数は CRT から削除されています。 このトピックでは、非推奨の関数と、Visual Studio の特定のバージョンで削除された関数を示します。
+ライブラリの機能の中には古くなって、新しい同等物で置き換えられているものがあります。 これらの関数は、更新されたバージョンに変更することをお勧めします。 他の古くなった関数は CRT から削除されています。 この記事では、廃止された関数と、Visual Studio の特定のバージョンで削除された関数の一覧を示します。
 
 ## <a name="deprecated-as-obsolete-in-visual-studio-2015"></a>Visual Studio 2015 で非推奨とされるため使用されていない
 
 |古い関数|代替|
 |-----------------------|-----------------|
 |`is_wctype`|[iswctype](../c-runtime-library/reference/isctype-iswctype-isctype-l-iswctype-l.md)|
-|`_loaddll`|[LoadLibrary](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryw)、[LoadLibraryEx](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexw)、または [LoadPackagedLibrary](/windows/win32/api/winbase/nf-winbase-loadpackagedlibrary)|
+|`_loaddll`|[LoadLibrary](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryw)、 [LoadLibraryEx](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexw)、または [LoadPackagedLibrary](/windows/win32/api/winbase/nf-winbase-loadpackagedlibrary)|
 |`_unloaddll`|[FreeLibrary](/windows/win32/api/libloaderapi/nf-libloaderapi-freelibrary)|
 |`_getdllprocaddr`|[GetProcAddress](../build/getprocaddress.md)|
 |`_seterrormode`|[SetErrorMode](/windows/win32/api/errhandlingapi/nf-errhandlingapi-seterrormode)|
@@ -84,14 +85,12 @@ ms.locfileid: "70940138"
 |-----------------------|-----------------|
 |[_cgets、_cgetws](../c-runtime-library/cgets-cgetws.md)|[_cgets_s、_cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md)|
 |[gets、_getws](../c-runtime-library/gets-getws.md)|[gets_s、_getws_s](../c-runtime-library/reference/gets-s-getws-s.md)|
-|[_get_output_format](../c-runtime-library/get-output-format.md)|なし|
-|[_heapadd](../c-runtime-library/heapadd.md)|なし|
-|[_heapset](../c-runtime-library/heapset.md)|なし|
-|[inp、inpw](../c-runtime-library/inp-inpw.md)|なし|
-|[_inp、_inpw、_inpd](../c-runtime-library/inp-inpw-inpd.md)|なし|
-|[outp、outpw](../c-runtime-library/outp-outpw.md)|なし|
-|[_outp、_outpw、_outpd](../c-runtime-library/outp-outpw-outpd.md)|なし|
-|[_set_output_format](../c-runtime-library/set-output-format.md)|なし|
+|[_get_output_format](../c-runtime-library/get-output-format.md)|[なし]|
+|[_heapadd](../c-runtime-library/heapadd.md)|[なし]|
+|[_heapset](../c-runtime-library/heapset.md)|[なし]|
+|[sct.inp、inpw、_inp、_inpw、_inpd](../c-runtime-library/inp-inpw-inpd.md)|[なし]|
+|[outp、outp、_outp、_outpw、_outpd](../c-runtime-library/outp-outpw-outpd.md)|[なし]|
+|[_set_output_format](../c-runtime-library/set-output-format.md)|[なし]|
 
 ## <a name="removed-from-the-crt-in-earlier-versions-of-visual-studio"></a>Visual Studio の以前のバージョンで CRT から削除
 

@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C2334
 ms.assetid: 36142855-e00b-4bbf-80f5-a301edeff46e
-ms.openlocfilehash: 4f068792193fd22ccddc39f9afc555e7c8672d8c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f8a096a89bdb076b857e5adc49ad8162551612f2
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188370"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74747697"
 ---
 # <a name="compiler-error-c2334"></a>コンパイラ エラー C2334
 
-unexpected token(s) preceding ': or {'; skipping apparent function body
+': または {' の前に予期しないトークンがあります。明らかに見える関数本体をスキップします
 
-次の例では、C2334 が生成されます。 このエラーは、エラー C2059 後に発生します。
+次の例では、C2334 が生成されます。 このエラーは、エラー C2059 の後に発生します。
 
-```
+```cpp
 // C2334.cpp
 // compile with: /c
 // C2059 expected

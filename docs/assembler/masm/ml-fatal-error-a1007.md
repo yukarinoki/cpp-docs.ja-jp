@@ -1,43 +1,43 @@
 ---
 title: ML の致命的なエラー A1007
 ms.date: 08/30/2018
-ms.topic: error-reference
+ms.custom: error-reference
 f1_keywords:
 - A1007
 helpviewer_keywords:
 - A1007
 ms.assetid: bcf9c826-beb3-4e93-91fe-1ffd34995fbf
-ms.openlocfilehash: 98933c3a24da22f447174a3b51c4855690aba83e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 01633b4fa084b7d5e14af5a5c6e51e3dca684d2a
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62177904"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74856918"
 ---
 # <a name="ml-fatal-error-a1007"></a>ML の致命的なエラー A1007
 
-**入れ子のレベルが深すぎます**
+**入れ子レベルが深すぎます**
 
-アセンブラーでは、その入れ子の上限に達しました。 制限は、20 のレベルを明記します。
+アセンブラーが入れ子の制限に達しました。 特に明記されていない限り、制限は20レベルです。
 
-次のいずれかの入れ子が深すぎます。
+次のいずれかの入れ子のレベルが深すぎます。
 
-- などの高度なディレクティブ[します。IF](../../assembler/masm/dot-if.md)、[します。繰り返し](../../assembler/masm/dot-repeat.md)、または[します。中に](../../assembler/masm/dot-while.md)します。
+- などの高レベルのディレクティブ[。の場合は](../../assembler/masm/dot-if.md) [。](../../assembler/masm/dot-repeat.md)またはを繰り返し[ます。しばらくお待ち](../../assembler/masm/dot-while.md)ください。
 
 - 構造体の定義。
 
-- 条件付きのアセンブリ ディレクティブ。
+- 条件付きアセンブリディレクティブ。
 
 - プロシージャの定義。
 
-- A [PUSHCONTEXT](../../assembler/masm/pushcontext.md)ディレクティブ (上限は 10)。
+- [Pushcontext](../../assembler/masm/pushcontext.md)ディレクティブ (制限は 10)。
 
 - セグメントの定義。
 
-- インクルード ファイル。
+- インクルードファイル。
 
 - マクロ。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ML エラー メッセージ](../../assembler/masm/ml-error-messages.md)<br/>

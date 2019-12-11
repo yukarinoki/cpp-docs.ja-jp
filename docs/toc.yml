@@ -1659,7 +1659,7 @@
                       href: atl-mfc-shared/cstring-argument-passing.md
                     - name: 'Unicode とマルチバイト文字セット (MBCS: Multibyte Character Set) のサポート'
                       href: atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md
-        - name: 関連項目
+        - name: 辞書／辞典／その他
           expanded: false
           items:
             - name: CSize クラス
@@ -6369,7 +6369,9 @@
                 - name: ファイルとストリーム
                   expanded: false
                   items:
-                    - name: ファイルおよびストリーム
+                    - name: ファイルとストリーム
+                      href: c-runtime-library/files-and-streams.md
+                    - name: テキスト ストリームとバイナリ ストリーム
                       href: c-runtime-library/text-and-binary-streams.md
                     - name: バイト ストリームとワイド ストリーム
                       href: c-runtime-library/byte-and-wide-streams.md
@@ -10224,7 +10226,7 @@
                       href: parallel/concrt/best-practices-in-the-asynchronous-agents-library.md
                     - name: 同時実行ランタイムの一般的なベスト プラクティス
                       href: parallel/concrt/general-best-practices-in-the-concurrency-runtime.md
-                - name: 関連項目
+                - name: 辞書／辞典／その他
                   expanded: false
                   items:
                     - name: 参照 (コンカレンシー ランタイム)

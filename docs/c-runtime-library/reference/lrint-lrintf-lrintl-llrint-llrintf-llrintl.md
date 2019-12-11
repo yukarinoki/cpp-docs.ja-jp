@@ -45,12 +45,12 @@ helpviewer_keywords:
 - llrintf function
 - llrintl function
 ms.assetid: 28ccd5b3-5e6f-434f-997d-a21d51b8ce7f
-ms.openlocfilehash: 72870c3548f0fd6972183b0c090708c6eddc591e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c7831842eb4d3c1eef9c4c9e83bbddb557cec0e3
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953124"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857750"
 ---
 # <a name="lrint-lrintf-lrintl-llrint-llrintf-llrintl"></a>lrint、lrintf、lrintl、llrint、llrintf、llrintl
 
@@ -119,16 +119,16 @@ long long int llrintl(
 
 *X*が整数値に相当する浮動小数点値を表さない場合、これらの関数は**FE_INEXACT**を発生させます。
 
-**Microsoft 固有の仕様**:結果が戻り値の型の範囲外にある場合、またはパラメーターが NaN または無限大の場合、戻り値は実装定義になります。 Microsoft コンパイラは0 の値を返します。
+**Microsoft 固有**: 結果が戻り値の型の範囲外の場合、またはパラメーターが NaN または無限大の場合、戻り値は実装定義になります。 Microsoft コンパイラは0 の値を返します。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|関数|C ヘッダー|C++ ヘッダー|
+|機能|C ヘッダー|C++ ヘッダー|
 |--------------|--------------|------------------|
 |**lrint**、 **lrintf**、 **lrintl**、 **llrint**、 **llrintf**、 **llrintl**|\<math.h>|\<cmath>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [関数リファレンス (アルファベット順)](crt-alphabetical-function-reference.md)<br/>

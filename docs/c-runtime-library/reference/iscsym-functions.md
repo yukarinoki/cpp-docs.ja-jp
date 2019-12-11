@@ -65,12 +65,12 @@ helpviewer_keywords:
 - iscsym function
 - iscsymf function
 ms.assetid: 944dfb99-f2b8-498c-9f55-dbcf370d0a2c
-ms.openlocfilehash: ef5b2487fb49739f9a073adbc87546fb5d49d542
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: bc38e72818446a94a51a37b8df5c8c8582971b3f
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954411"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857763"
 ---
 # <a name="iscsym-iscsymf-__iscsym-__iswcsym-__iscsymf-__iswcsymf-_iscsym_l-_iswcsym_l-_iscsymf_l-_iswcsymf_l"></a>iscsym、iscsymf、__iscsym、__iswcsym、__iscsymf、__iswcsymf、_iscsym_l、_iswcsym_l、_iscsymf_l、_iswcsymf_l
 
@@ -121,7 +121,7 @@ int _iswcsymf_l(
 
 ## <a name="return-value"></a>戻り値
 
-**__Iscsym**と **__ iswcsym**は、 *c*が文字、アンダースコア、または数字の場合、0以外の値を返します。 *C*が文字またはアンダースコアの場合、 **__iscsymf**と **__ iswcsymf**の両方で0以外の値が返されます。 これらの各ルーチンは、 *c*がテスト条件を満たしていない場合は0を返します。 **_L**サフィックスを持つこれらの関数のバージョンは、ロケールに依存する動作に現在のロケールではなく渡された*ロケール*を使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+*C*が文字、アンダースコア、または数字の場合、 **__iscsym**と **__iswcsym**の両方で0以外の値が返されます。 *C*が文字またはアンダースコアの場合、 **__iscsymf**と **__iswcsymf**の両方で0以外の値が返されます。 これらの各ルーチンは、 *c*がテスト条件を満たしていない場合は0を返します。 **_L**サフィックスを持つこれらの関数のバージョンは同じですが、ロケールに依存する動作に現在のロケールではなく渡された*ロケール*を使用する点が異なります。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
 ## <a name="remarks"></a>Remarks
 
@@ -129,15 +129,15 @@ int _iswcsymf_l(
 
 旧バージョンとの互換性のために、 **iscsym**と**iscsymf**は[ &#95; &#95;、&#95; STDC](../../preprocessor/predefined-macros.md)が定義されていない場合、または0として定義されている場合にのみ、マクロとして定義それ以外の場合は未定義です。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
-|**iscsym**、 **iscsymf**、 **__iscsym**、 **__ iswcsym**、 **__iscsymf**、 **__ iswcsymf**、 **_iscsym_l**、 **_iswcsym_l**、 **_iscsymf_l**、 **_iswcsymf_l**|C: \<ctype.h><br /><br /> C++: \<cctype> または \<ctype.h>|
+|**iscsym**、 **iscsymf**、 **__iscsym**、 **__iswcsym**、 **__iscsymf**、 **__iswcsymf**、 **_iscsym_l**、 **_iswcsym_l**、 **_iscsymf_l**、 **_iswcsymf_l**|C: \<ctype.h><br /><br /> C++: \<cctype> または \<ctype.h>|
 
-**Iscsym**、 **iscsymf**、 **__iscsym**、 **__ iswcsym**、 **__iscsymf**、 **__ iswcsymf**、 **_iscsym_l**、 **_iswcsym_l**、 **_iscsymf_l**、 **_iswcsymf_l**ルーチンは Microsoft 固有です。 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+**Iscsym**、 **iscsymf**、 **__iscsym**、 **__iswcsym**、 **__iscsymf**、 **__iswcsymf**、 **_iscsym_l**、 **_iswcsym_l**、 **_iscsymf_l**、および **_iswcsymf_l**ルーチンは、Microsoft 固有のものです。 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [文字分類](../../c-runtime-library/character-classification.md)<br/>
 [ロケール](../../c-runtime-library/locale.md)<br/>

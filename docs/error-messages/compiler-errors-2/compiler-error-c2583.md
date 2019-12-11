@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2583
 ms.assetid: b1c952dc-872c-47e4-9fc8-4dd72bcee6f9
-ms.openlocfilehash: b78b9dd69b701e1a66646234d4603973657e90c6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a0154d1d9a57d0faa795e639640eb6cb42e7c7cb
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62366395"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74748646"
 ---
 # <a name="compiler-error-c2583"></a>コンパイラ エラー C2583
 
-'identifier': ' const または volatile' 'this' ポインターは、コンス トラクター/デストラクターには
+' identifier ': ' const/volatile ' ' this ' ポインターはコンストラクターまたはデストラクターでは無効です
 
-コンス トラクターまたはデストラクターが宣言されている`const`または`volatile`します。 これは認められていません。
+コンストラクターまたはデストラクターが `const` または `volatile`として宣言されています。 これは許可されていません。
 
 次の例では、C2583 が生成されます。
 
-```
+```cpp
 // C2583.cpp
 // compile with: /c
 class A {

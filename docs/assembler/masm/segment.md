@@ -1,17 +1,17 @@
 ---
 title: SEGMENT
-ms.date: 08/30/2018
+ms.date: 12/06/2019
 f1_keywords:
 - SEGMENT
 helpviewer_keywords:
 - SEGMENT directive
 ms.assetid: e6f68367-6714-4f06-a79c-edfa88014430
-ms.openlocfilehash: b7344d9cb685e0212748d7835e19f398f14979e7
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 933e4e42b4b0f9cc979a3e67805d017f723472ef
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74393724"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988005"
 ---
 # <a name="segment"></a>SEGMENT
 
@@ -33,16 +33,16 @@ ms.locfileid: "74393724"
 |**BYTE**|次に使用可能なバイトアドレス。|
 |**WORD**|次に使用可能な単語のアドレス (1 単語あたり2バイト)。|
 |**DWORD**|次に使用可能な2つの単語のアドレス (2 単語あたり4バイト)。|
-|**割り付け**|次に使用できる段落アドレス (1 段落あたり16バイト)。|
+|**PARA**|次に使用できる段落アドレス (1 段落あたり16バイト)。|
 |**PAGE**|次に使用可能なページアドレス (ページあたり256バイト)。|
 |**ALIGN**(*n*)|次に使用可能な*n*番目のバイトアドレス。 詳細については、「解説」を参照してください。|
 
 このパラメーターが指定されていない場合、既定では **[段落]** が使用されます。
 
-*結合*\
+*結合*(32 ビット MASM のみ) \
 **パブリック**、**スタック**、**共通**、**メモリ**、<em>アドレス</em>、**プライベート**
 
-\*を使用する*
+*使用*(32 ビット MASM のみ) \
 **USE16**、 **USE32**、 **FLAT**
 
 *特性*\
@@ -58,7 +58,7 @@ _string_\
 *class*\
 アセンブルされたファイル内でセグメントを結合および順序付けする方法を指定します。 一般的な値は、、`'DATA'`、`'CODE'`、`'CONST'`、および `'STACK'`
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 `ALIGN(n)`の場合、 *n*は 1 ~ 8192 の2の累乗になります。 **/omf**ではサポートされていません。
 
