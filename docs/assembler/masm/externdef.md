@@ -1,17 +1,17 @@
 ---
 title: EXTERNDEF
-ms.date: 08/30/2018
+ms.date: 12/06/2019
 f1_keywords:
 - EXTERNDEF
 helpviewer_keywords:
 - EXTERNDEF directive
 ms.assetid: 95a10de6-c345-4428-a2f2-90f7d411dc86
-ms.openlocfilehash: 469b49832c171ee78336a0c457f0d269acd3b59d
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: e757781151bd1bb57940e5c54f7333a5daa93c74
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74397541"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74987900"
 ---
 # <a name="externdef"></a>EXTERNDEF
 
@@ -21,7 +21,9 @@ ms.locfileid: "74397541"
 
 > **EXTERNDEF** ⟦*language-* type ⟧ *name* __:__ *type* ⟦ __,__ ⟦*language-* type ⟧ *name* __:__ *type* ...⟧
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
+
+*言語型*の引数は、32ビットの MASM でのみ有効です。
 
 *名前*がモジュールで定義されている場合は、[パブリック](../../assembler/masm/public-masm.md)として扱われます。 *名前*がモジュールで参照されている場合は、 [EXTERN](../../assembler/masm/extern-masm.md)として扱われます。 *名前*が参照されていない場合は無視されます。 この*型*は[ABS](../../assembler/masm/operator-abs.md)にすることができます。この場合、*名前*は定数としてインポートされます。 通常はインクルードファイルで使用されます。
 

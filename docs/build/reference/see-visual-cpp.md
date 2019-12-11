@@ -1,5 +1,5 @@
 ---
-title: '&lt;参照してください > (ドキュメント コメントの C++)'
+title: '&lt;> (C++ドキュメントコメント) を参照してください。'
 ms.date: 11/04/2016
 f1_keywords:
 - <see>
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <see> C++ XML tag
 - see C++ XML tag
 ms.assetid: 20ef66f4-b278-45cf-8613-63919edf5720
-ms.openlocfilehash: be99d3ac156c587888a7c56997d82531cf86ccec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8693646fa37648d1b20c791d99d159f2c81b8ec1
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62318902"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988619"
 ---
 # <a name="ltseegt"></a>&lt;see&gt;
 
@@ -38,13 +38,13 @@ ms.locfileid: "62318902"
 
 \<see> の使用例については、[\<summary>](summary-visual-cpp.md) を参照してください。
 
-MSVC コンパイラは、ドキュメント コメントを通じて 1 つのパスで cref 参照を解決しようとします。  したがって、C++ のルックアップ規則を使用する場合、コンパイラによってシンボルが見つからないと、参照が未解決としてマークされます。 詳細については、「[\<seealso>](seealso-visual-cpp.md)」を参照してください。
+MSVC コンパイラは、ドキュメントコメント内の1回のパスで cref 参照の解決を試みます。  したがって、C++ のルックアップ規則を使用する場合、コンパイラによってシンボルが見つからないと、参照が未解決としてマークされます。 詳細については、「[\<seealso>](seealso-visual-cpp.md)」を参照してください。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次のサンプルでは、コンパイラで参照が解決されるよう、ジェネリック型の cref 参照が作られるしくみを確認できます。
 
-```
+```cpp
 // xml_see_cref_example.cpp
 // compile with: /LD /clr /doc
 // the following cref shows how to specify the reference, such that,
@@ -69,6 +69,6 @@ generic<class T>
 ref class C {};
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [XML に関するドキュメント](xml-documentation-visual-cpp.md)

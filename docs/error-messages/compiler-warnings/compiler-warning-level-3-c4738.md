@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4738
 ms.assetid: 9094895f-7eec-46c2-83d3-249b761d585e
-ms.openlocfilehash: 5162a03b213b35913ed1fc7f39360796ccf2c4a0
-ms.sourcegitcommit: 217fac22604639ebd62d366a69e6071ad5b724ac
+ms.openlocfilehash: c1989518c3965f8faa54a05b2925d0e37455625e
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/19/2019
-ms.locfileid: "74189396"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74991707"
 ---
 # <a name="compiler-warning-level-3-c4738"></a>コンパイラの警告 (レベル 3) C4738
 
@@ -25,7 +25,7 @@ C4738 は、代入、キャスト、渡された引数、またはその他の�
 
 既定では、この警告はオフに設定されています。 詳細については、「 [Compiler Warnings That Are Off by Default](../../preprocessor/compiler-warnings-that-are-off-by-default.md)」を参照してください。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では、C4738 が生成されます。
 
