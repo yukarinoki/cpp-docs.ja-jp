@@ -50,7 +50,7 @@ cl /EHsc hello.cpp
 
 - Visual Studio IDE を使用して Visual Studio プロジェクトを作成し、プロパティページを使用して構成します。 Visual Studio プロジェクトでは、Windows 上で実行されるプログラムが生成されます。 概要については、Visual Studio ドキュメントの「[コンパイルとビルド](/visualstudio/ide/compiling-and-building-in-visual-studio)」を参照してください。
 
-- CMakeLists .txt ファイルが含まれているフォルダーを開きます。 CMake のサポートは、Visual Studio に統合されています。 IDE を使用して、CMake ファイルを変更せずに編集、テスト、およびデバッグを行うことができます。 これにより、異なるエディターを使用している可能性のある他のユーザーと同じ CMake プロジェクトで作業することができます。 CMake は、クロスプラットフォームの開発に推奨されるアプローチです。 詳細については、「 [Cmake プロジェクト](cmake-projects-in-visual-studio.md)」を参照してください。
+- CMakeLists .txt ファイルが含まれているフォルダーを開きます。 CMake のサポートは、Visual Studio に統合されています。 IDE を使用して、CMake ファイルを変更せずに編集、テスト、およびデバッグを行うことができます。 これにより、異なるエディターを使用している可能性のある他のユーザーと同じ CMake プロジェクトで作業することができます。 CMake は、クロスプラットフォームの開発に推奨されるアプローチです。 詳細については、「 [CMake プロジェクト](cmake-projects-in-visual-studio.md)」を参照してください。
  
 - プロジェクトファイルのない、ソースファイルの圧縮されていないフォルダーを開きます。 Visual Studio では、ヒューリスティックを使用してファイルをビルドします。 これは、小さなコンソールアプリケーションをコンパイルして実行する簡単な方法です。 詳細については、「[フォルダープロジェクトを開く](open-folder-projects-cpp.md)」を参照してください。
 
@@ -66,7 +66,7 @@ cl /EHsc hello.cpp
 
 [Visual Studio プロジェクト](creating-and-managing-visual-cpp-projects.md) Visual Studio でネイティブビルドシステム (MSBuild) を使用して C++ プロジェクトを作成、構成、およびビルドする方法。
 
-[Cmake プロジェクト](cmake-projects-in-visual-studio.md)Visual Studio で CMake プロジェクトをコーディング、ビルド、および配置する方法について説明します。
+[CMake プロジェクト](cmake-projects-in-visual-studio.md)Visual Studio で CMake プロジェクトをコーディング、ビルド、および配置する方法について説明します。
 
 [フォルダープロジェクトを開く](open-folder-projects-cpp.md) Visual Studio を使用して、任意のビルドシステムに基づいたあるいはビルドシステムのない C++ プロジェクトのコーディング、ビルド、配置を行う方法。 全然です。 
 
