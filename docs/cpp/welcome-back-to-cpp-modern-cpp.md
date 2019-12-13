@@ -1,135 +1,219 @@
 ---
 title: C++ へようこそ (Modern C++)
-ms.date: 11/04/2016
+ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 1cb1b849-ed9c-4721-a972-fd8f3dab42e2
-ms.openlocfilehash: 1f59395001722244cb407ef07ed8a301f08df85b
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 2739da77fbfa973ca716abc6d8fa4920b81095d9
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73624760"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303336"
 ---
 # <a name="welcome-back-to-c-modern-c"></a>C++ へようこそ (Modern C++)
 
-C++ は世界で最も広く使用されているプログラミング言語の 1 つです。 適切に記述された C++ プログラムは、高速で効率的です。 この言語は、楽しめるゲームから、高性能な科学的ソフトウェア、デバイス ドライバー、埋め込みプログラム、さらに Windows クライアント アプリケーションに至るまで、幅広いアプリケーションの作成に使用でき、他の言語よりも柔軟性があります。 20 年以上にわたって、C++ はそれらをはじめとするさまざまなソリューション使用されてきました。 ますます多くの C++ プログラマが、旧来の C のプログラミング スタイルから卒業して、最新の C++ の手法を身に着けていることを、ご存知でない方もいるかもしれません。
+過去25年間、 C++は世界で最も広く使用されているプログラミング言語の1つでした。 適切に記述された C++ プログラムは、高速で効率的です。 この言語は、低レベルのハードウェア機能にアクセスして速度を最大化し、メモリ要件を最小限に抑えることができるため、他の言語よりも柔軟性があります。 これを使用すると、ゲームからハイパフォーマンス科学ソフトウェア、デバイスドライバー、embedded プログラム、ライブラリ、コンパイラなど、他のプログラミング言語や Windows クライアントアプリなど、さまざまなアプリを作成できます。
 
-C++ の最初の要件の 1 つは、C 言語との下位互換性でした。 それ以来、C++ はさまざまな進化をとげています。C 言語でのクラスの使用に始まり、最初の C++ 言語仕様が作成され、それに続く多くの拡張が行われてきました。 この経緯のため、C++ はマルチパラダイムのプログラミング言語と呼ばれることが多くあります。 C++ では、生のポインター、配列、null で終わる文字列、カスタム データ構造、その他の機能を使って、純粋な手続き型の C スタイルのプログラミングを行うことも可能です。これにより優れたパフォーマンスが可能となりますが、バグと複雑性も生じることになります。  C スタイルのプログラミングはそのようなリスクを抱えていたため、C++ の当初のねらいの 1 つは、タイプ セーフで、作成、拡張、保守の容易なプログラムを作成可能にすることでした。 C++ は、早い段階でオブジェクト指向プログラミングなどのプログラミング パラダイムを追加しました。 長年にわたり、十分に検証されたデータ構造やアルゴリズムの標準ライブラリと共に、さまざまな機能が言語に追加されました。 これらの拡張が最新の C++ のスタイルを可能にしています。
+C++ の最初の要件の 1 つは、C 言語との下位互換性でした。 結果としC++て、生のポインター、配列、null で終わる文字列、カスタムデータ構造を使用した C スタイルのプログラミングは常に許可されていますが、優れたパフォーマンスが得られる可能性がありますが、バグや複雑さを発生させることもできます。 の進化にC++より、C スタイルの表現を使用する必要性が大幅に減少する機能が強調されています。 以前の C プログラミング機能は必要なときには存在しますが、 C++最新のコードでは、これらの機能を小さくする必要があります。 最新C++のコードは、よりシンプルで安全性が高く、洗練されています。
 
-最新の C++ では下記のような点が強化されています。
+次のセクションでは、最新C++のの主な機能の概要について説明します。 特に明記されていない限り、ここに記載されている機能は C++ 11 以降で使用できます。 Microsoft C++コンパイラでは、 [/std](../build/reference/std-specify-language-standard-version.md)コンパイラオプションを設定して、プロジェクトに使用する標準のバージョンを指定できます。
 
-- ヒープまたは静的なグローバル スコープではなく、スタック ベースのスコープ。
+## <a name="raii-and-smart-pointers"></a>RAII とスマートポインター
 
-- 明示的な型名ではなく、自動型推論。
-
-- 生のポインターではなく、スマート ポインター。
-
-- `std::string` および `std::wstring` 型 ( [\<文字列 >](../standard-library/string.md)を参照) は、未加工の `char[]` 配列ではなく、を参照してください。
-
-- 未加工の配列やカスタムコンテナーではなく、`vector`、`list`、`map` などの標準ライブラリコンテナー。 [ C++ ](../standard-library/cpp-standard-library-header-files.md) [\<vector >](../standard-library/vector.md)、 [\<リスト >](../standard-library/list.md)、および[\<マップ >](../standard-library/map.md)を参照してください。
-
-- C++手動でコード化されたものではなく、標準ライブラリの[アルゴリズム](../standard-library/algorithm.md)。
-
-- 例外はエラー状態の報告と処理のためだけに使用される。
-
-- 他のスレッド間通信メカニズムではC++なく、標準ライブラリ `std::atomic<>` を使用したロック解放のスレッド間通信 ( [\<アトミック >](../standard-library/atomic.md)を参照)。
-
-- 小さな関数ではなくインライン[ラムダ関数](../cpp/lambda-expressions-in-cpp.md)が個別に実装されています。
-
-- 範囲ベースの for ループでは、配列、 C++標準ライブラリコンテナー、Windows ランタイムコレクションを操作するより堅牢なループを `for ( for-range-declaration : expression )`の形式で記述します。 これは、コア言語サポートの一部です。 詳細については、「[範囲ベースの ForC++ステートメント ()](../cpp/range-based-for-statement-cpp.md)」を参照してください。
-
-C++ 言語自体も進化しました。 次の 2 つのコード スニペットを比較してみます。 このスニペットは以前の C++ を使ったものです。
-
-```cpp
-#include <vector>
-
-void f()
-{
-    // Assume circle and shape are user-defined types
-    circle* p = new circle( 42 );
-    vector<shape*> v = load_shapes();
-
-    for( vector<circle*>::iterator i = v.begin(); i != v.end(); ++i ) {
-        if( *i && **i == *p )
-            cout << **i << " is a match\n";
-    }
-
-    // CAUTION: If v's pointers own the objects, then you
-    // must delete them all before v goes out of scope.
-    // If v's pointers do not own the objects, and you delete
-    // them here, any code that tries to dereference copies
-    // of the pointers will cause null pointer exceptions.
-    for( vector<circle*>::iterator i = v.begin();
-            i != v.end(); ++i ) {
-        delete *i; // not exception safe
-    }
-
-    // Don't forget to delete this, too.
-    delete p;
-} // end f()
-```
-
-このスニペットは最新の C++ で同じことを行うものです。
+C スタイルのプログラミングにおけるバグの主要なクラスの1つは、 **new**で割り当てられたメモリの**delete**を呼び出すことができないため、*メモリリーク*が発生することです。 モダンC++は、リソースの取得の原則を重視しています。*初期化は*、リソース (ヒープメモリ、ファイルハンドル、ソケットなど) が、コンストラクターで新しく割り当てられたリソースを作成または受信するオブジェクトによって*所有*され、デストラクターで削除されることを示します。 RAII の原則に従うことで、所有オブジェクトがスコープ外になったときに、すべてのリソースがオペレーティングシステムに適切に返されることを保証します。 RAII の原則を簡単に導入できるようC++に、標準ライブラリには、 [std:: unique_ptr](../standard-library/unique-ptr-class.md)、 [std:: shared_ptr](../standard-library/shared-ptr-class.md)、 [std:: weak_ptr](../standard-library/weak-ptr-class.md)の3種類のスマートポインターが用意されています。 スマートポインターは、所有しているメモリの割り当てと削除を処理します。 次の例は、`make_unique()`への呼び出しでヒープに割り当てられた配列メンバーを持つクラスを示しています。 **New**と**delete**の呼び出しは、`unique_ptr` クラスによってカプセル化されます。 `widget` オブジェクトがスコープ外に出ると、unique_ptr デストラクターが呼び出され、配列に割り当てられたメモリが解放されます。  
 
 ```cpp
 #include <memory>
+class widget
+{
+private:
+    std::unique_ptr<int> data;
+public:
+    widget(const int size) { data = std::make_unique<int>(size); }
+    void do_something() {}
+};
+
+void functionUsingWidget() {
+    widget w(1000000);   // lifetime automatically tied to enclosing scope
+                // constructs w, including the w.data gadget member
+    // ...
+    w.do_something();
+    // ...
+} // automatic destruction and deallocation for w and w.data
+
+```
+
+可能な限り、ヒープメモリを割り当てるときにスマートポインターを使用します。 New 演算子と delete 演算子を明示的に使用する必要がある場合は、RAII の原則に従ってください。 詳細については、「[オブジェクトの有効期間とリソースの管理」 (RAII)](object-lifetime-and-resource-management-modern-cpp.md)を参照してください。
+
+## <a name="stdstring-and-stdstring_view"></a>std:: string および std:: string_view
+
+C スタイルの文字列は、バグのもう1つの主要な原因です。 [Std:: string および std:: wstring](../standard-library/basic-string-class.md)を使用することにより、C スタイルの文字列に関連するすべてのエラーを排除し、検索、追加、前処理などのメンバー関数の利点を得ることができます。 どちらも速度に対して高度に最適化されています。 読み取り専用アクセスのみを必要とする関数に文字列を渡す場合、(C++ 17) で[std:: string_view](../standard-library/basic-string-view-class.md)を使用すると、さらに優れたパフォーマンスを得ることができます。
+
+## <a name="stdvector-and-other-standard-library-containers"></a>std:: vector とその他の標準ライブラリコンテナー
+
+標準ライブラリのコンテナーはすべて、RAII の原則に従い、要素の安全なトラバーサルの反復子を提供し、パフォーマンスのために高度に最適化され、正確にテストされています。 これらのコンテナーを可能な限り使用することで、カスタムデータ構造に導入される可能性があるバグや非効率性を排除できます。 既定では、でC++適切なシーケンシャルコンテナーとして[ベクター](../standard-library/vector-class.md)を使用します。 これは、.NET 言語の `List<T>` に相当します。
+
+```cpp
+vector<string> apples;
+apples.push_back("Granny Smith");
+```
+
+既定の連想コンテナー として [map](../standard-library/map-class.md) (not `unordered_map`) を使用します。 低次元と複数のケースには、 [set](../standard-library/set-class.md)、 [multimap](../standard-library/multimap-class.md)、およびマルチ[セット](../standard-library/multiset-class.md)を使用します。
+
+```cpp
+map<string, string> apple_color;
+// ...
+apple_color["Granny Smith"] = "Green";
+```
+
+パフォーマンスの最適化が必要な場合は、次の使用を検討します。
+
+- たとえば、クラスメンバーとして埋め込む場合の[配列](../standard-library/array-class-stl.md)型。
+
+- [Unordered_map](../standard-library/unordered-map-class.md)などの順序付けられていない連想コンテナー。 これらの要素には、要素ごとのオーバーヘッドが少なく、一定時間の参照がありますが、正確で効率的に使用するのは困難な場合があります。
+
+- 並べ替えられた `vector`。 詳細については、「[アルゴリズム](../cpp/algorithms-modern-cpp.md)」をご覧ください。
+
+C スタイルの配列は使用しないでください。 データへの直接アクセスを必要とする古い Api の場合は、代わりに `f(vec.data(), vec.size());` などのアクセサーメソッドを使用します。 コンテナーの詳細については、「 [ C++標準ライブラリコンテナー](../standard-library/stl-containers.md)」を参照してください。
+
+## <a name="standard-library-algorithms"></a>標準ライブラリのアルゴリズム
+
+プログラムのカスタムアルゴリズムを記述する必要があると想定する前に、まず標準C++ライブラリの[アルゴリズム](../standard-library/algorithm.md)を確認してください。 標準ライブラリには、検索、並べ替え、フィルター処理、ランダム化するなど、多くの一般的な操作について、増え続けるアルゴリズムが含まれています。 数値演算ライブラリは広範囲にわたっています。 C++ 17 以降では、多くのアルゴリズムの並列バージョンが提供されています。
+
+いくつかの重要な例を示します。
+
+- **for_each**、既定のトラバーサルアルゴリズム (および範囲ベースの for ループ) です。 
+
+- **変換**(コンテナー要素のインプレース変更の場合)
+
+- **find_if**、既定の検索アルゴリズムです。
+
+- **sort**、 **lower_bound**、およびその他の既定の並べ替えと検索アルゴリズム。
+
+比較子を記述するには、狭義の **<** と *名前付きラムダ* を使用することができます。
+
+```cpp
+auto comp = [](const widget& w1, const widget& w2)
+     { return w1.weight() < w2.weight(); }
+
+sort( v.begin(), v.end(), comp );
+
+auto i = lower_bound( v.begin(), v.end(), comp );
+```
+
+## <a name="auto-instead-of-explicit-type-names"></a>明示的な型名ではなく auto
+
+C++ 11 では、変数、関数、およびテンプレート宣言で使用する[auto](auto-cpp.md)キーワードが導入されました。 **auto**は、明示的に入力する必要がないように、オブジェクトの型を推測するようにコンパイラに指示します。 **auto**は、推測された型が入れ子になったテンプレートの場合に特に便利です。
+
+```cpp
+map<int,list<string>>::iterator i = m.begin(); // C-style
+auto i = m.begin(); // modern C++
+```
+
+## <a name="range-based-for-loops"></a>範囲ベースの for ループ
+
+配列とコンテナーに対する C スタイルの反復処理では、インデックス作成エラーが発生する可能性があり、型の場合もあります。 これらのエラーを回避し、コードを読みやすくするには、標準ライブラリコンテナーと raw 配列を含む範囲ベースの for ループを使用します。 詳細については、「[範囲ベースの for ステートメント](../cpp/range-based-for-statement-cpp.md)」を参照してください。
+
+```cpp
+#include <iostream>
 #include <vector>
 
-void f()
+int main()
 {
-    // ...
-    auto p = make_shared<circle>( 42 );
-    vector<shared_ptr<shape>> v = load_shapes();
+    std::vector<int> v {1,2,3};
 
-    for( auto& s : v )
+    // C-style
+    for(int i = 0; i < v.size(); ++i)
     {
-        if( s && *s == *p )
-        {
-            cout << *s << " is a match\n";
-        }
+        std::cout << v[i];
+    }
+
+    // Modern C++:
+    for(auto& num : v)
+    {
+        std::cout << num;
     }
 }
 ```
 
-最新の C++ では、スマート ポインターを使用できるため、new/deleteを使用したり、明示的な例外処理を使用する必要はありません。 **Auto**型推論と[ラムダ関数](../cpp/lambda-expressions-in-cpp.md)を使用すると、コードをより迅速に記述し、それを強化し、それを理解することができます。 また、範囲ベース**の for**ループは、C スタイル**の**for ループとは異なり、明確で使いやすく、意図しないエラーが発生しにくくなります。 スケルトン コードを使って、最小限のコードでアプリケーションを記述できます。 さらにそのコードを例外セーフでメモリ セーフにすることができ、割り当て/解放や、エラー コードを取り扱う必要はありません。
+## <a name="constexpr-expressions-instead-of-macros"></a>マクロではなく constexpr 式
 
-最新の C++ では、2 種類のポリモーフィズムが組み込まれています: コンパイル時にテンプレート経由によるもの、および実行時に継承と仮想化によるものです。 2 種類のポリモーフィズムを活用することにより、優れた効果を生じることができます。 標準C++ライブラリテンプレート `shared_ptr` は、内部の仮想メソッドを使用して、非常に簡単な型の消去を実現します。 ただし、テンプレートが最適な選択である場合には、ポリモーフィズムの仮想化を過度に使用しないでください。 テンプレートは非常に強力です。
+C とC++のマクロは、コンパイルの前にプリプロセッサによって処理されるトークンです。 マクロトークンの各インスタンスは、ファイルがコンパイルされる前に定義された値または式に置き換えられます。 マクロは、コンパイル時の定数値を定義するために、一般的に C スタイルのプログラミングで使用されます。 ただし、マクロはエラーが発生しやすく、デバッグが困難です。 現代C++では、コンパイル時の定数に[constexpr](constexpr-cpp.md)変数を使用することをお勧めします。
 
-他の言語から C++ に移ってきた方、特に型の大部分が参照型であり、値型が非常に少ない、他のマネージド言語から移ってきた方は、C++ のクラスは既定で値型であることに注意してください。 ただし、それらを参照型として指定して、オブジェクト指向プログラミングをサポートするポリモーフィックな動作を可能とすることもできます。 値型はメモリとレイアウト コントロールに関するものであり、参照型はポリモーフィズムをサポートする基底クラスと仮想関数に関するものであることを理解すると、役に立ちます。 既定では、値型はコピー可能で、それぞれにコピー コンストラクターとコピー代入演算子があります。 参照型を指定する場合は、コピー コンストラクターとコピー代入演算子を無効化して、クラスをコピー不可にし、ポリモーフィズムをサポートする仮想デストラクターを使用します。 また値型はコンテンツに関するものであり、コピーされるときに、それぞれ変更可能な 2 つの個別の値を持ちます。 一方、参照型はオブジェクトがどのようなものであるかについての識別に関するものであり、このためポリモーフィックな型として参照される場合もあります。
+```cpp
+#define SIZE 10 / C-style
+constexpr int size = 10; // modern C++
+```
 
-再びパワーが重要視されてきているため、C++ にとってのルネサンスが訪れています。 プログラマの生産性が重要である場合には Java や C# などの言語が適していますが、パワーとパフォーマンスがより重要である場合には、それらの言語には限界があります。 高い効率性とパワーに関しては、特に制限のあるハードウェアによるデバイスでは、最新の C++ に勝るものはありません。
+### <a name="uniform-initialization"></a>一様初期化
 
-言語が最新であるだけでなく、開発ツールも最新です。 Visual Studio を使用すると、開発サイクルのすべての部分が堅牢で効率的になります。 これにはアプリケーション ライフサイクル管理 (ALM) ツール、IntelliSense などの IDE の強化、XAML などのツールに適した方法、ビルド、デバッグ、および他のツールが含まれています。
+モダンC++では、任意の型に対して中かっこの初期化を使用できます。 この形式の初期化は、配列、ベクター、またはその他のコンテナーを初期化するときに特に便利です。 次の例では、`v2` が `S`の3つのインスタンスで初期化されます。 `v3` は、それ自体が中かっこで初期化される `S` の3つのインスタンスで初期化されます。 コンパイラは、宣言された `v3`の型に基づいて、各要素の型を推測します。
 
-ドキュメントのこの部分の記事は、最新の C++ プログラムを作成するために、最も重要な機能および技術に関する、高レベルのガイドラインとベスト プラクティスを提供します。
+```cpp
+#include <vector>
 
-- [C++型システム](../cpp/cpp-type-system-modern-cpp.md)
+struct S
+{
+    std::string name;
+    float num;
+    S(std::string s, float f) : name(s), num(f) {}
+};
 
-- [均一な初期化とコンストラクターのデリゲート](../cpp/uniform-initialization-and-delegating-constructors.md)
+int main()
+{
+    // C-style initialization
+    std::vector<S> v;
+    S s1("Norah", 2.7);
+    S s2("Frank", 3.5);
+    S s3("Jeri", 85.9);
 
-- [オブジェクトの有効期間とリソース管理](../cpp/object-lifetime-and-resource-management-modern-cpp.md)
+    v.push_back(s1);
+    v.push_back(s2);
+    v.push_back(s3);
 
-- [リソースを所有するオブジェクト (RAII)](../cpp/objects-own-resources-raii.md)
+    // Modern C++:
+    std::vector<S> v2 {s1, s2, s3};
 
-- [スマートポインター](../cpp/smart-pointers-modern-cpp.md)
+    // or...
+    std::vector<S> v3{ {"Norah", 2.7}, {"Frank", 3.5}, {"Jeri", 85.9} };
 
-- [コンパイル時のカプセル化の pimpl](../cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md)
+}
+```
 
-- [コンテナー](../cpp/containers-modern-cpp.md)
+詳細については、「中[かっこの初期化](initializing-classes-and-structs-without-constructors-cpp.md)」を参照してください。
 
-- [アルゴリズム](../cpp/algorithms-modern-cpp.md)
+## <a name="move-semantics"></a>移動セマンティクス
 
-- [文字列および i/o の書式設定 (モダンC++)](../cpp/string-and-i-o-formatting-modern-cpp.md)
+モダンC++は*移動セマンティクス*を提供します。これにより、特定の状況では、以前のバージョンの言語の不要なメモリコピーを排除できます。 *移動*操作では、コピーを作成せずに、リソースの所有権を1つのオブジェクトから次のオブジェクトに転送します。 ヒープメモリ、ファイルハンドルなどのリソースを所有するクラスを実装する場合は、*移動コンストラクター*と*移動代入演算子*を定義できます。 コンパイラは、コピーが不要な場合に、オーバーロードの解決時にこれらの特殊なメンバーを選択します。 標準ライブラリのコンテナー型は、オブジェクトが定義されている場合、その移動コンストラクターを呼び出します。 詳細については、「[移動コンストラクターと移動代入C++演算子 ()](move-constructors-and-move-assignment-operators-cpp.md)」を参照してください。
 
-- [エラーと例外処理](../cpp/errors-and-exception-handling-modern-cpp.md)
+## <a name="lambda-expressions"></a>ラムダ式
 
-- [ABI の境界での移植性](../cpp/portability-at-abi-boundaries-modern-cpp.md)
+C スタイルのプログラミングでは、関数*ポインター*を使用して関数を別の関数に渡すことができます。 関数ポインターは、参照している関数がソースコード内の他の場所で定義されている可能性があります。これは、関数ポインターが呼び出された時点から遠く離れている可能性があるためです。 また、タイプセーフではありません。 モダンC++には、関数オブジェクトが用意されています。これは、 [()](function-call-operator-parens.md)演算子をオーバーライドするクラスであり、関数のように呼び出すことができます。 関数オブジェクトを作成する最も便利な方法は、インライン[ラムダ式](../cpp/lambda-expressions-in-cpp.md)を使用することです。 次の例は、ラムダ式を使用して関数オブジェクトを渡す方法を示しています。この関数は、ベクター内の各要素に対して `for_each` 関数が呼び出します。
 
-詳細については、 [c++ 11 でC++非推奨とされ](https://stackoverflow.com/questions/9299101/which-c-idioms-are-deprecated-in-c11)た Stack Overflow に関する記事を参照してください。
+```cpp
+    std::vector<int> v {1,2,3,4,5};
+    int x = 2;
+    int y = 4;
+    auto result = find_if(begin(v), end(v), [=](int i) { return i > x && i < y; });
+```
+
+ラムダ式 `[=](int i) { return i > x && i < y; }` は、"型 `int` の1つの引数を受け取り、式が true かどうかを示すブール値を返す関数として読み取ることができます。 ラムダでは、周囲のコンテキストから `x` と `y` 変数を使用できることに注意してください。 `[=]` は、これらの変数が値によって*キャプチャ*されることを指定します。つまり、ラムダ式には、それらの値の独自のコピーがあります。
+
+## <a name="exceptions"></a>例外
+
+一般的に、最新C++のルールとして、エラーコードではなく例外が発生し、エラー状況を報告して処理する最善の方法となります。 詳細については、「[例外とエラー処理の最新C++のベストプラクティス](errors-and-exception-handling-modern-cpp.md)」を参照してください。
+
+## <a name="stdatomic"></a>std:: atomic
+
+標準ライブラリC++ [std:: atomic](../standard-library/atomic-structure.md)構造体と、スレッド間の通信メカニズムに関連する型を使用します。
+
+## <a name="stdvariant-c17"></a>std:: variant (C++ 17)
+
+共用体は、さまざまな型のメンバーが同じメモリ位置を占有できるようにすることで、メモリを節約するために C スタイルのプログラミングでよく使用されます。 ただし、共用体はタイプセーフではなく、プログラミングエラーを引き起こす可能性があります。 C++ 17 では、 [std:: variant](../standard-library/variant-class.md)クラスが、共用体のより堅牢で安全な代替手段として導入されています。 [Std:: visit](../standard-library/variant-functions.md#visit)関数を使用すると、タイプセーフな方法で `variant` 型のメンバーにアクセスできます。
 
 ## <a name="see-also"></a>関連項目
 
 [C++ 言語リファレンス](../cpp/cpp-language-reference.md)<br/>
 [ラムダ式](../cpp/lambda-expressions-in-cpp.md)<br/>
 [.NET 標準ライブラリ](../standard-library/cpp-standard-library-reference.md)<br/>
-[Microsoft C++言語準拠テーブル](../overview/visual-cpp-language-conformance.md)
+[Microsoft C++ 言語の準拠表](../overview/visual-cpp-language-conformance.md)
