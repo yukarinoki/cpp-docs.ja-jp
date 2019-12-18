@@ -1,5 +1,5 @@
 ---
-title: Mixing C (structured) and C++ exceptions
+title: C (構造化) と例外C++の混合
 ms.date: 08/14/2018
 helpviewer_keywords:
 - exceptions [C++], mixed C and C++
@@ -15,32 +15,32 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74246461"
 ---
-# <a name="mixing-c-structured-and-c-exceptions"></a>Mixing C (structured) and C++ exceptions
+# <a name="mixing-c-structured-and-c-exceptions"></a>C (構造化) と例外C++の混合
 
-If you want to write portable code, the use of structured exception handling (SEH) in a C++ program isn't recommended. However, you may sometimes want to compile using [/EHa](../build/reference/eh-exception-handling-model.md) and mix structured exceptions and C++ source code, and need some facility for handling both kinds of exceptions. Because a structured exception handler has no concept of objects or typed exceptions, it can't handle exceptions thrown by C++ code. However, C++ **catch** handlers can handle structured exceptions. C++ exception handling syntax (**try**, **throw**, **catch**) isn't accepted by the C compiler, but structured exception handling syntax ( **__try**, **__except**, **__finally**) is supported by the C++ compiler.
+移植可能なコードを記述する場合は、 C++プログラムで構造化例外処理 (SEH) を使用することは推奨されません。 ただし、 [/eha](../build/reference/eh-exception-handling-model.md)を使用してコンパイルし、構造化例外とC++ソースコードを混在させ、両方の種類の例外を処理するための機能が必要になる場合があります。 構造化例外ハンドラーには、オブジェクトまたは型指定された例外の概念がないためC++ 、コードによってスローされた例外を処理することはできません。 ただし、C++**catch**ハンドラーは、構造化例外を処理できます。 C++例外処理構文 (**try**、**throw**、**catch**) が、C コンパイラは構造化例外処理の構文で受け入れられない ( **__try**、 **__except**、 **__finally**) でサポートされて、C++コンパイラ。
 
-See [_set_se_translator](../c-runtime-library/reference/set-se-translator.md) for information on how to handle structured exceptions as C++ exceptions.
+構造化例外を例外としてC++処理する方法については、「[_set_se_translator](../c-runtime-library/reference/set-se-translator.md)」を参照してください。
 
-If you mix structured and C++ exceptions, be aware of these potential issues:
+構造化された例外C++と例外を混在させる場合は、次の潜在的な問題に注意してください。
 
 - C++ の例外と構造化例外を、同じ関数内で混在させることはできません。
 
-- Termination handlers ( **__finally** blocks) are always executed, even during unwinding after an exception is thrown.
+- 終了ハンドラー ( **__finally**ブロック)、例外がスローされた後のアンワインド中にも、常に実行します。
 
-- C++ exception handling can catch and preserve unwind semantics in all modules compiled with the [/EH](../build/reference/eh-exception-handling-model.md) compiler options, which enable unwind semantics.
+- C++例外処理では、 [/EH](../build/reference/eh-exception-handling-model.md)コンパイラオプションを使用してコンパイルされたすべてのモジュールでアンワインドセマンティクスをキャッチおよび保持できます。これにより、アンワインドセマンティクスが可能になります
 
-- デストラクター関数がすべてのオブジェクトに対して呼び出されない状況もあります。 For example, if a structured exception occurs while attempting to make a function call through an uninitialized function pointer, and that function takes as parameters objects that were constructed before the call, the destructors of those objects are not called during stack unwind.
+- デストラクター関数がすべてのオブジェクトに対して呼び出されない状況もあります。 たとえば、初期化されていない関数ポインターを使用して関数呼び出しを行うときに構造化例外が発生し、その関数が呼び出し前に構築されたパラメーターオブジェクトとしてを受け取る場合、それらのオブジェクトのデストラクターは呼び出されません。スタックのアンワインド中。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
-- [Using setjmp or longjmp in C++ programs](../cpp/using-setjmp-longjmp.md)
+- [プログラムでC++ setjmp または longjmp を使用する](../cpp/using-setjmp-longjmp.md)
 
-  See more information on the use of `setjmp` and `longjmp` in C++ programs.
+  `setjmp` と `longjmp` の使用方法の詳細についてC++は、「プログラム」を参照してください。
 
 - [C++ での構造化例外の処理](../cpp/exception-handling-differences.md)
 
-  See examples of the ways you can use C++ to handle structured exceptions.
+  構造化例外の処理に使用C++できる方法の例を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[Modern C++ best practices for exceptions and error handling](../cpp/errors-and-exception-handling-modern-cpp.md)
+[例外C++とエラー処理に関する最新のベストプラクティス](../cpp/errors-and-exception-handling-modern-cpp.md)
