@@ -47,7 +47,7 @@ IDE では、プロジェクトをビルドするために必要なすべての�
 
 - [C++ デバッグ構成のプロジェクト設定](/visualstudio/debugger/project-settings-for-a-cpp-debug-configuration)
 - [デバッガーの設定と準備](/visualstudio/debugger/debugger-settings-and-preparation)
-- [デバッグの準備:ビジュアルC++プロジェクトの種類](/visualstudio/debugger/debugging-preparation-visual-cpp-project-types)
+- [デバッグの準備: Visual C++プロジェクトの種類](/visualstudio/debugger/debugging-preparation-visual-cpp-project-types)
 - [Visual Studio デバッガーでのシンボル (.pdb) ファイルとソース ファイルの指定](/visualstudio/debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger)
 
 ## <a name="c-compiler-and-linker-options"></a>C++コンパイラオプションとリンカーオプション
