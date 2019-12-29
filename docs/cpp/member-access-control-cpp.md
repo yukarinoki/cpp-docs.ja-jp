@@ -15,7 +15,7 @@ ms.locfileid: "64345030"
 ---
 # <a name="member-access-control-c"></a>メンバー アクセス コントロール (C++)
 
-アクセス制御を分離することを有効にする、[パブリック](../cpp/public-cpp.md)からクラスのインターフェイス、[プライベート](../cpp/private-cpp.md)実装の詳細と[保護](../cpp/protected-cpp.md)のみであるメンバーを使用して派生クラス。 アクセス指定子は、その後で宣言されたすべてのメンバーに対して当てはまり、これは、次のアクセス指定子が検出されるまで続きます。
+アクセス制御を分離することを有効にする、[public](../cpp/public-cpp.md)からクラスのインターフェイス、[private](../cpp/private-cpp.md)実装の詳細と[protected](../cpp/protected-cpp.md)のみであるメンバーを使用して派生クラス。 アクセス指定子は、その後で宣言されたすべてのメンバーに対して当てはまり、これは、次のアクセス指定子が検出されるまで続きます。
 
 ```cpp
 class Point
