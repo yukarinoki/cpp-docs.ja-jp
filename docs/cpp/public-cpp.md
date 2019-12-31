@@ -33,7 +33,7 @@ public base-class
 
 基底クラスの既定のアクセスは、クラスの場合はプライベートで、構造体の場合はパブリックです。 共用体に基底クラスを設定することはできません。
 
-詳細については、次を参照してください[プライベート](../cpp/private-cpp.md)、[保護](../cpp/protected-cpp.md)、[フレンド](../cpp/friend-cpp.md)、とでメンバー アクセス テーブル[クラス メンバーへのアクセスの制御](member-access-control-cpp.md).
+詳細については、[private](../cpp/private-cpp.md)、[protected](../cpp/protected-cpp.md)、[friend](../cpp/friend-cpp.md)と、[メンバー アクセス コントロール](member-access-control-cpp.md)のメンバー アクセス テーブルを参照してください。
 
 ## <a name="clr-specific"></a>/clr 固有
 
