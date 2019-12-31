@@ -47,14 +47,14 @@ IDE では、プロジェクトをビルドするために必要なすべての�
 
 - [C++ デバッグ構成のプロジェクト設定](/visualstudio/debugger/project-settings-for-a-cpp-debug-configuration)
 - [デバッガーの設定と準備](/visualstudio/debugger/debugger-settings-and-preparation)
-- [デバッグの準備: Visual C++プロジェクトの種類](/visualstudio/debugger/debugging-preparation-visual-cpp-project-types)
+- [デバッグの準備:ビジュアルC++プロジェクトの種類](/visualstudio/debugger/debugging-preparation-visual-cpp-project-types)
 - [Visual Studio デバッガーでのシンボル (.pdb) ファイルとソース ファイルの指定](/visualstudio/debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger)
 
 ## <a name="c-compiler-and-linker-options"></a>C++コンパイラオプションとリンカーオプション
 
 C++コンパイラオプションとリンカーオプションは、左側のウィンドウの **[構成プロパティ]** の下にある **[C/C++ ]** ノードと **[リンカー]** ノードの下にあります。 これらは、コンパイラに渡されるコマンドラインオプションに直接変換されます。 特定のオプションに関するドキュメントを読むには、中央のウィンドウでオプションを選択し、 **F1**キーを押します。 または、 [MSVC Compiler options](reference/compiler-options.md)と[MSVC リンカーオプション](reference/linker-options.md)のすべてのオプションに関するドキュメントを参照することもできます。 
 
-**[プロパティページ]** ダイアログボックスには、現在のプロジェクトに関連するプロパティページのみが表示されます。 たとえば、プロジェクトに .idl ファイルが含まれていない場合、MIDL プロパティ ページは表示されません。 各プロパティページの設定の詳細については、「[プロパティページC++()](reference/property-pages-visual-cpp.md)」を参照してください。 
+**[プロパティページ]** ダイアログボックスには、現在のプロジェクトに関連するプロパティページのみが表示されます。 たとえば、プロジェクトに .idl ファイルが含まれていない場合、MIDL プロパティ ページは表示されません。 各プロパティページの設定の詳細については、「[プロパティページ(C++)](reference/property-pages-visual-cpp.md)」を参照してください。 
 
 ## <a name="directory-and-path-values"></a>ディレクトリとパスの値
 
