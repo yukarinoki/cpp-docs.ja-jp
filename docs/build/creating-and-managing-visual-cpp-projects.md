@@ -1,4 +1,4 @@
----
+﻿---
 title: Visual Studio のプロジェクト - C++
 ms.date: 10/25/2019
 helpviewer_keywords:
