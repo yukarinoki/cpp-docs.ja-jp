@@ -14,7 +14,7 @@ ms.locfileid: "65837401"
 
 Visual Studio プロジェクト システムは MSBuild に基づいており、MSBuild ではファイルの形式と、任意の種類のプロジェクトをビルドするためのルールが定義されています。 MSBuild は、複数の構成とプラットフォームに対するビルドの複雑さの大部分を管理しますが、そのしくみについて少し理解しておく必要があります。 これは、カスタム構成を定義する場合、または複数のプロジェクトで共有してインポートできる再利用可能なプロパティのセットを作成する場合に、特に重要です。
 
-## <a name="the-vcxproj-file-props-files-and-targets-files"></a>.Vcxproj ファイル、.props ファイル、および .targets ファイル
+## <a name="the-vcxproj-file-props-files-and-targets-files"></a>.vcxproj ファイル、.props ファイル、および .targets ファイル
 
 プロジェクトのプロパティは、プロジェクト ファイル (*.vcxproj) に直接格納されるか、またはプロジェクト ファイルによってインポートされる他の .targets ファイルまたは .props ファイルに格納されて、既定値を提供します。 Visual Studio 2015 では、これらのファイルは **\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140** にあります。 Visual Studio 2017 または Visual Studio 2019 では、これらのファイルは **\\Program Files (x86)\\Microsoft Visual Studio\\&lt;2017 または 2019>\\_edition_\\Common7\\IDE\\VC\\VCTargets** にあります。_edition_ はインストールされている Visual Studio のエディションです。 プロパティは、独自のプロジェクトに追加されているすべてのカスタム .props ファイルにも格納されます。 これらのファイルは手動で編集しないことを強くお勧めします。MSBuild を非常によく理解しているのでないかぎり、すべてのプロパティの変更には IDE のプロパティ ページを使ってください。継承に関わるプロパティは特にそうです。
 
