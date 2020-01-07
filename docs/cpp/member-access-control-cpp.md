@@ -15,7 +15,8 @@ ms.locfileid: "64345030"
 ---
 # <a name="member-access-control-c"></a>メンバー アクセス コントロール (C++)
 
-アクセス制御により、クラスの [public](../cpp/public-cpp.md)インターフェイスを [private](../cpp/private-cpp.md)実装の詳細や、派生したクラスによる使用のみとする [protected](../cpp/protected-cpp.md)メンバーから分離することが可能になります。 アクセス指定子は、その後で宣言されたすべてのメンバーに対して当てはまり、これは、次のアクセス指定子が検出されるまで続きます。
+アクセス制御により、クラスの [public](../cpp/public-cpp.md)インターフェイスを [private](../cpp/private-cpp.md)実装の詳細や、派生したクラスによる使用のみとする [protected](../cpp/protected-cpp.md)メンバーから分離することが可能になります。アクセス指定子は、その後で宣言されたすべてのメンバーに対して当てはまり、これは、次のアクセス指定子が検出されるまで続きます。
+
 
 ```cpp
 class Point
