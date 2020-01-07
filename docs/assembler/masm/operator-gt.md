@@ -1,6 +1,6 @@
 ---
 title: GT 演算子
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - operator GT
 - GT
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - operator GT
 - GT operator
 ms.assetid: 48194297-7bf9-42f9-957a-e1a5b6d7be7c
-ms.openlocfilehash: d740a37ebd7dd75ea7567b1f652cf1b22228a283
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 43aa7259638a8219b7d25bad52d28eaa22242419
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74396928"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75316630"
 ---
 # <a name="operator-gt"></a>GT 演算子
 
@@ -23,6 +23,7 @@ ms.locfileid: "74396928"
 
 > *expression1* **GT** *expression2*
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[演算子リファレンス](operators-reference.md)
+[演算子リファレンス](operators-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

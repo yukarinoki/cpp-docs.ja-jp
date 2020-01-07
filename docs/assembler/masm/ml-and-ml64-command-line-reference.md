@@ -1,6 +1,6 @@
 ---
 title: ML および ML64 のコマンド ライン リファレンス
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - ML
 helpviewer_keywords:
@@ -54,18 +54,18 @@ helpviewer_keywords:
 - command line, reference [ML]
 - /Ta MASM compiler option
 ms.assetid: 712623c6-f77e-47ea-a945-089e57c50b40
-ms.openlocfilehash: 470cad1be6fe314fde89ee144a8935664ead5953
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 77385317ab7f90a646b7f552e471d0f434e72bfb
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74397196"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317163"
 ---
 # <a name="ml-and-ml64-command-line-reference"></a>ML および ML64 のコマンド ライン リファレンス
 
 1つ以上のアセンブリ言語のソースファイルをアセンブルしてリンクします。 コマンドラインオプションでは大文字と小文字が区別されます。
 
-Ml64.exe の詳細については、「 [MASM for x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md)」を参照してください。
+Ml64.exe の詳細については、「 [MASM for x64 (ml64.exe)](masm-for-x64-ml64-exe.md)」を参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -78,9 +78,9 @@ Ml64.exe の詳細については、「 [MASM for x64 (ml64.exe)](../../assemble
 *オプション*\
 次の表に示すオプション。
 
-|オプション|操作|
+|オプション|動作|
 |------------|------------|
-|**/AT**|最小メモリモデルのサポートを有効にします。 .Com フォーマットファイルの要件に違反するコードコンストラクターのエラーメッセージを有効にします。 これは、とは同じではないことに注意[してください。モデル](../../assembler/masm/dot-model.md)の**小さな**ディレクティブ。<br /><br /> Ml64.exe では使用できません。|
+|**/AT**|最小メモリモデルのサポートを有効にします。 .Com フォーマットファイルの要件に違反するコードコンストラクターのエラーメッセージを有効にします。 これは、とは同じではないことに注意[してください。モデル](dot-model.md)の**小さな**ディレクティブ。<br /><br /> Ml64.exe では使用できません。|
 |**/Bl** *ファイル名*|代替リンカーを選択します。|
 |**/c**|アセンブルのみ。 リンクしません。|
 |**/coff**|オブジェクトモジュールの Common Object File Format (COFF) 型を生成します。 通常は、Win32 アセンブリ言語の開発に必要です。<br /><br /> Ml64.exe では使用できません。|
@@ -89,7 +89,7 @@ Ml64.exe の詳細については、「 [MASM for x64 (ml64.exe)](../../assemble
 |**/Cx**|Public および extern シンボルの大文字と小文字を保持します。|
 |**/D** *シンボル*⟦ =*値*⟧|指定された名前のテキストマクロを定義します。 *値が指定*されていない場合は空白になります。 スペースで区切られた複数のトークンは、引用符で囲む必要があります。|
 |**/EP**|プリプロセスされたソースリスティング (STDOUT に送信) を生成します。 「 **/Sf**」を参照してください。|
-|**/ERRORREPORT** [ **NONE** &#124; **PROMPT** &#124; QUEUE &#124; **SEND** ]|実行時に dism.exe または ml64.exe が失敗した場合は、 **/errorreport**を使用して、これらの内部エラーに関する情報をマイクロソフトに送信できます。<br /><br /> **/Errorreport**の詳細については、「 [/Errorreport (内部コンパイラエラーの報告)](../../build/reference/errorreport-report-internal-compiler-errors.md)」を参照してください。|
+|**/ERRORREPORT** [ **NONE** &#124; **PROMPT** &#124; **QUEUE** &#124; **SEND** ]|実行時に dism.exe または ml64.exe が失敗した場合は、 **/errorreport**を使用して、これらの内部エラーに関する情報をマイクロソフトに送信できます。<br /><br /> **/Errorreport**の詳細については、「 [/Errorreport (内部コンパイラエラーの報告)](../../build/reference/errorreport-report-internal-compiler-errors.md)」を参照してください。|
 |**/F** *hexnum*|スタックサイズを*hexnum*バイトに設定します (これは **/link/STACK**:*number*と同じです)。 値は16進表記で表現する必要があります。 **/F**と*hexnum*の間にはスペースが必要です。|
 |**/Fe** *ファイル名*|実行可能ファイルの名前をにします。|
 |**/Fl**⟦*ファイル名*⟧|アセンブルされたコードリストを生成します。 「 **/Sf**」を参照してください。|
@@ -107,15 +107,15 @@ Ml64.exe の詳細については、「 [MASM for x64 (ml64.exe)](../../assemble
 |**/nologo**|正常に完了したアセンブリのメッセージを抑制します。|
 |**/omf**|オブジェクトモジュールのオブジェクトモジュールファイル形式 (OMF) 型を生成します。  **/omf**は **/c**を意味します。ML は、OMF オブジェクトのリンクをサポートしていません。<br /><br /> Ml64.exe では使用できません。|
 |**/Sa**|利用可能なすべての情報の一覧を表示します。|
-|**/safeseh**|例外ハンドラーを含まない、またはで宣言されているすべての例外ハンドラーを含むオブジェクトとしてマークし[ます。SAFESEH](../../assembler/masm/dot-safeseh.md)。<br /><br /> Ml64.exe では使用できません。|
+|**/safeseh**|例外ハンドラーを含まない、またはで宣言されているすべての例外ハンドラーを含むオブジェクトとしてマークし[ます。SAFESEH](dot-safeseh.md)。<br /><br /> Ml64.exe では使用できません。|
 |**/Sf**|リストファイルに先頭パスの一覧を追加します。|
-|**/Sl** *幅*|ソースリストの線の幅を1行あたりの文字数で設定します。 範囲は 60 ~ 255 または0です。 既定値は 0 です。 [ページ](../../assembler/masm/page.md)の幅と同じです。|
+|**/Sl** *幅*|ソースリストの線の幅を1行あたりの文字数で設定します。 範囲は 60 ~ 255 または0です。 既定値は 0 です。 [ページ](page.md)の幅と同じです。|
 |**/Sn**|リストを生成するときにシンボルテーブルをオフにします。|
-|**Qfe また**の*長さ*|ソースリストのページの長さをページごとの行数で設定します。 範囲は 10 ~ 255 または0です。 既定値は 0 です。 [ページ](../../assembler/masm/page.md)長と同じです。|
-|**/S** *テキスト*|ソースリストのテキストを指定します。 [サブタイトル](../../assembler/masm/subtitle.md)テキストと同じです。|
-|**/St** *テキスト*|ソースリストのタイトルを指定します。 [タイトル](../../assembler/masm/title.md)テキストと同じです。|
+|**Qfe また**の*長さ*|ソースリストのページの長さをページごとの行数で設定します。 範囲は 10 ~ 255 または0です。 既定値は 0 です。 [ページ](page.md)長と同じです。|
+|**/S** *テキスト*|ソースリストのテキストを指定します。 [サブタイトル](subtitle.md)テキストと同じです。|
+|**/St** *テキスト*|ソースリストのタイトルを指定します。 [タイトル](title.md)テキストと同じです。|
 |**/Sx**|リスト内の false 条件をオンにします。|
-|**/Ta** *ファイル名*|名前の末尾に .asm 拡張子が付いていないソースファイルをアセンブルします。|
+|**/Ta** *filename*|名前の末尾に .asm 拡張子が付いていないソースファイルをアセンブルします。|
 |**/w**|**/W0/WX**と同じです。|
 |**/W** *レベル*|警告レベルを設定します。 *level* = 0、1、2、または3です。|
 |**/WX**|警告が生成された場合は、エラーコードを返します。|
@@ -138,7 +138,7 @@ Ml64.exe の詳細については、「 [MASM for x64 (ml64.exe)](../../assemble
 
 ML および ML64.EXE の一部のコマンドラインオプションは、配置に依存します。 たとえば、ML と ML64.EXE はいくつかの **/c**オプションを受け入れることができるため、対応する **/fo**オプションは **/c**の前に指定する必要があります。 次のコマンドラインの例では、アセンブリファイルの指定ごとにオブジェクトファイルを指定しています。
 
-**eseutil.exe/Fo a1 .obj/c. .asm/Fo b1. .obj/c. asm**
+**ml.exe /Fo a1.obj /c a.asm /Fo b1.obj /c b.asm**
 
 ## <a name="environment-variables"></a>環境変数
 
@@ -148,7 +148,7 @@ ML および ML64.EXE の一部のコマンドラインオプションは、配�
 |ML|既定のコマンドラインオプションを指定します。|
 |TMP|一時ファイルのパスを指定します。|
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[ML エラーメッセージ](../../assembler/masm/ml-error-messages.md)\
-[Microsoft Macro Assembler リファレンス](../../assembler/masm/microsoft-macro-assembler-reference.md)
+[ML エラーメッセージ](ml-error-messages.md)\
+[Microsoft Macro Assembler リファレンス](microsoft-macro-assembler-reference.md)

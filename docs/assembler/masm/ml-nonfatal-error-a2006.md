@@ -1,18 +1,18 @@
 ---
 title: ML の致命的でないエラー A2006
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 ms.custom: error-reference
 f1_keywords:
 - A2006
 helpviewer_keywords:
 - A2006
 ms.assetid: b8a8f096-95df-42b5-85ed-d2530560a84c
-ms.openlocfilehash: 6c55cb66d6eaeaf620aeedc1dd924f6618cbf817
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 058100984acbd42ac2993732ab619c0a27c0edd2
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74856784"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317085"
 ---
 # <a name="ml-nonfatal-error-a2006"></a>ML の致命的でないエラー A2006
 
@@ -28,12 +28,12 @@ ms.locfileid: "74856784"
 
 - インクルードファイルにシンボルが定義されていません。
 
-- 外部シンボルが[EXTERN](../../assembler/masm/extern-masm.md)または[EXTERNDEF](../../assembler/masm/externdef.md)ディレクティブなしで使用されました。
+- 外部シンボルが[EXTERN](extern-masm.md)または[EXTERNDEF](externdef.md)ディレクティブなしで使用されました。
 
 - シンボル名のスペルが間違っています。
 
 - ローカルコードラベルがスコープ外で参照されました。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[ML エラー メッセージ](../../assembler/masm/ml-error-messages.md)<br/>
+[ML エラー メッセージ](ml-error-messages.md)

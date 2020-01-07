@@ -1,17 +1,17 @@
 ---
 title: コンストラクター (C++)
-ms.date: 11/19/2019
+ms.date: 12/27/2019
 helpviewer_keywords:
 - constructors [C++]
 - objects [C++], creating
 - instance constructors
 ms.assetid: 3e9f7211-313a-4a92-9584-337452e061a9
-ms.openlocfilehash: 6cdf6241542c3f93484097c65015181a91647d49
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 985c63c5c937f9e85b6898cdbcc61f347688b96d
+ms.sourcegitcommit: 00f50ff242031d6069aa63c81bc013e432cae0cd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74246615"
+ms.lasthandoff: 12/30/2019
+ms.locfileid: "75546394"
 ---
 # <a name="constructors-c"></a>コンストラクター (C++)
 
@@ -478,6 +478,52 @@ int main(){
 
 1. コンストラクターがデリゲート コンストラクターでない場合は、完全に構築されたすべての基底クラスのオブジェクトとメンバーが破棄されます。 ただし、オブジェクト自体が完全に構築されていないため、デストラクターは実行されません。
 
+## <a name="extended_aggregate"></a>派生コンストラクターと拡張集計初期化
+
+基底クラスのコンストラクターがパブリックではなく、派生クラスからアクセスできる場合は、Visual Studio 2017 以降の **/std: c++ 17**モードでは、空の中かっこを使用して派生型のオブジェクトを初期化することはできません。
+
+次の例では、C++14 の準拠ビヘイビアーを示します。
+
+```cpp
+struct Derived;
+
+struct Base {
+    friend struct Derived;
+private:
+    Base() {}
+};
+
+struct Derived : Base {};
+
+Derived d1; // OK. No aggregate init involved.
+Derived d2 {}; // OK in C++14: Calls Derived::Derived()
+               // which can call Base ctor.
+```
+
+C++17 で、`Derived` は集約型と見なされるようになりました。 つまり、既定のプライベート コンストラクターによる `Base` の初期化は、集約初期化ルールの一部として直接実行されます。 以前、`Base` プライベート コンストラクターは `Derived` コンストラクターを介して呼び出され、friend 宣言があるために成功していました。
+
+次の例では、Visual Studio 2017 以降の C++ 17 の動作を、 **/std: c++ 17**モードで示します。
+
+```cpp
+struct Derived;
+
+struct Base {
+    friend struct Derived;
+private:
+    Base() {}
+};
+
+struct Derived : Base {
+    Derived() {} // add user-defined constructor
+                 // to call with {} initialization
+};
+
+Derived d1; // OK. No aggregate init involved.
+
+Derived d2 {}; // error C2248: 'Base::Base': cannot access
+               // private member declared in class 'Base'
+```
+
 ### <a name="constructors-for-classes-that-have-multiple-inheritance"></a>多重継承を持つクラスのコンストラクター
 
 クラスが複数の基底クラスから派生されている場合、基底クラスのコンストラクターは、派生クラスの宣言で示されている順序で呼び出されます。
@@ -652,6 +698,6 @@ int main(){
 - [移動コンストラクターと移動代入演算子](move-constructors-and-move-assignment-operators-cpp.md)
 - [コンストラクターのデリゲート](delegating-constructors.md)
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [クラスと構造体](classes-and-structs-cpp.md)

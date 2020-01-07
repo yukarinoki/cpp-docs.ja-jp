@@ -1,6 +1,6 @@
 ---
 title: getw
-ms.date: 11/04/2016
+ms.date: 12/16/2019
 api_name:
 - getw
 api_location:
@@ -23,13 +23,15 @@ f1_keywords:
 helpviewer_keywords:
 - getw function
 ms.assetid: d3c347a4-3ff1-403b-8d02-2dd3b429bb5f
-ms.openlocfilehash: 3fe27dec9fc077d163f584c8a0634b962470cab4
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: adca9d13a3d835bdb247bff984803b3396c67f1e
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70950713"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75300964"
 ---
 # <a name="getw"></a>getw
 
-この POSIX 関数は非推奨とされます。 代わりに、ISO C++ に準拠する [_getw](getw.md) を使用してください。
+Microsoft 固有の関数名 `getw` は、 [_getw](getw.md)関数の非推奨のエイリアスです。 既定では、[コンパイラの警告 (レベル 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)が生成されます。 名前は、実装固有の名前の標準 C 規則に従っていないため、非推奨とされます。 ただし、関数は引き続きサポートされます。
+
+代わりに[_getw](getw.md)を使用することをお勧めします。 または、この関数名を引き続き使用して、警告を無効にすることもできます。 詳細については、「警告と[POSIX の関数名](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names)を[無効にする](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning)」を参照してください。

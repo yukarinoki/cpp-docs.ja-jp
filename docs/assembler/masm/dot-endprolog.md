@@ -1,17 +1,17 @@
 ---
 title: .ENDPROLOG
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - .ENDPROLOG
 helpviewer_keywords:
 - .ENDPROLOG directive
 ms.assetid: 61a2474c-9527-46e6-9f9d-bc4b42c10f35
-ms.openlocfilehash: b2eb635264590d7323c67d69b56a539907fe2c25
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: cf2209bee6c916abe0925834db3ef0b2bf583367
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74398465"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75313796"
 ---
 # <a name="endprolog"></a>.ENDPROLOG
 
@@ -23,10 +23,11 @@ ms.locfileid: "74398465"
 
 ## <a name="remarks"></a>コメント
 
-[PROC](../../assembler/masm/proc.md) **FRAME**との間の領域外でプロローグ宣言を使用すると、エラーになり**ます。ENDPROLOG**。
+[PROC](proc.md) **FRAME**との間の領域外でプロローグ宣言を使用すると、エラーになり**ます。ENDPROLOG**。
 
-詳細については、「 [MASM for x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md)」を参照してください。
+詳細については、「 [MASM for x64 (ml64.exe)](masm-for-x64-ml64-exe.md)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)
+[ディレクティブリファレンス](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

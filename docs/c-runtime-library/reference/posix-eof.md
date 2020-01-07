@@ -1,6 +1,6 @@
 ---
 title: eof
-ms.date: 11/04/2016
+ms.date: 12/16/2019
 api_name:
 - eof
 api_location:
@@ -23,13 +23,15 @@ f1_keywords:
 helpviewer_keywords:
 - eof function
 ms.assetid: 2e8fb55b-b736-46a6-be5e-15f8876a714f
-ms.openlocfilehash: e8dd9b9e86b9e0c4204462467ebc6db8be4b5336
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 40f0d17fd1acdd7b2f716a96acf121a837dc8153
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70950813"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75300990"
 ---
 # <a name="eof"></a>eof
 
-この POSIX 関数は非推奨とされます。 代わりに、ISO C++ に準拠する [_eof](eof.md) を使用してください。
+Microsoft 固有の関数名 `eof` は、 [_eof](eof.md)関数の非推奨のエイリアスです。 既定では、[コンパイラの警告 (レベル 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)が生成されます。 名前は、実装固有の名前の標準 C 規則に従っていないため、非推奨とされます。 ただし、関数は引き続きサポートされます。
+
+代わりに[_eof](eof.md)を使用することをお勧めします。 または、この関数名を引き続き使用して、警告を無効にすることもできます。 詳細については、「警告と[POSIX の関数名](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names)を[無効にする](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning)」を参照してください。
