@@ -42,7 +42,7 @@ ms.locfileid: "62330584"
 構造体に渡す型名。 タグは構造体のスコープ内で予約語になります。 タグは省略できます。 省略した場合、匿名構造体が定義されます。 詳細については、次を参照してください。[匿名クラス型](../cpp/anonymous-class-types.md)します。
 
 *base-list*<br/>
-この構造体がメンバーを継承するクラスまたは構造体のリスト (省略可能)。 参照してください[基底クラスの](../cpp/base-classes.md)詳細についてはします。 各基本クラスまたは構造体名の前に、アクセス指定子 ([パブリック](../cpp/public-cpp.md)、[プライベート](../cpp/private-cpp.md)、[保護](../cpp/protected-cpp.md)) および[仮想](../cpp/virtual-cpp.md)キーワード。 メンバー アクセス テーブルを参照してください。[クラス メンバーへのアクセスの制御](member-access-control-cpp.md)詳細についてはします。
+この構造体がメンバーを継承するクラスまたは構造体のオプション リスト。詳細は [基本クラス](../cpp/base-classes.md)を参照してください。 アクセス指定子 ([public](../cpp/public-cpp.md)、[private](../cpp/private-cpp.md)、[protected](../cpp/protected-cpp.md))および [virtual](../cpp/virtual-cpp.md)キーワードが、各基本クラス名または構造体名の前に付きます。詳細については、[メンバー アクセス コントロール](member-access-control-cpp.md)のメンバー アクセス テーブルを参照してください。
 
 *member-list*<br/>
 構造体のメンバーのリスト。 参照してください[クラス メンバーの概要](../cpp/class-member-overview.md)詳細についてはします。 ここで唯一の違いは**struct**の代わりに使用が**class**します。
@@ -66,7 +66,7 @@ C では、明示的に使用する必要あります、**struct**キーワー�
 
 構造体の変数は初期化できます。 各変数の初期化は中かっこで囲む必要があります。
 
-関連情報については、次を参照してください。[クラス](../cpp/class-cpp.md)、[共用体](../cpp/unions.md)、および[enum](../cpp/enumerations-cpp.md)します。
+関連情報については、[class](../cpp/class-cpp.md)、[Unions](../cpp/unions.md)、および [列挙型](../cpp/enumerations-cpp.md)を参照してください。
 
 ## <a name="example"></a>例
 
