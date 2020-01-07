@@ -5,12 +5,12 @@ helpviewer_keywords:
 - lifetime, and visibility
 - visibility, identifiers
 ms.assetid: ea05a253-7658-482c-9a6b-abd71169c42d
-ms.openlocfilehash: 438dd855fbbfec01a31a8d4a1a53078e3c44658c
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: f364c3c0b558c00e3d411ab5b697ed01ec395cbd
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151781"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75299079"
 ---
 # <a name="summary-of-lifetime-and-visibility"></a>有効期間と可視性の概要
 
@@ -18,17 +18,17 @@ ms.locfileid: "56151781"
 
 ### <a name="summary-of-lifetime-and-visibility"></a>有効期間と可視性の概要
 
-|属性: <br /><br /> レベル|アイテム|ストレージ クラス<br /><br /> 指定子|結果: <br /><br /> 有効期間|可視性|
+|属性:<br /><br /> レベル|項目|ストレージ クラス<br /><br /> 指定子|結果 :<br /><br /> 有効期間|可視性|
 |---------------------------|----------|----------------------------------|--------------------------|----------------|
 |ファイル スコープ|変数定義|**static**|Global|発生元のソース ファイルの剰余残りの部分|
 ||変数宣言|**extern**|Global|発生元のソース ファイルの剰余残りの部分|
 ||関数プロトタイプまたは定義|**static**|Global|単一のソース ファイル|
 ||関数プロトタイプ|**extern**|Global|ソース ファイルの残りの部分|
-|ブロック スコープ|変数宣言|**extern**|Global|ブロック|
-||変数定義|**static**|Global|ブロック|
-||変数定義|**auto** か **register**|ローカル|ブロック|
+|ブロック スコープ|変数宣言|**extern**|Global|[ブロック]|
+||変数定義|**static**|Global|[ブロック]|
+||変数定義|**auto** か **register**|Local|[ブロック]|
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 ### <a name="description"></a>説明
 
@@ -36,7 +36,7 @@ ms.locfileid: "56151781"
 
 ### <a name="code"></a>コード
 
-```
+```c
 // Lifetime_and_Visibility.c
 
 #include <stdio.h>

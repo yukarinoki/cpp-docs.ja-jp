@@ -1,6 +1,6 @@
 ---
 title: spawnve
-ms.date: 11/04/2016
+ms.date: 12/16/2019
 api_name:
 - spawnve
 api_location:
@@ -23,16 +23,18 @@ f1_keywords:
 helpviewer_keywords:
 - spawnve function
 ms.assetid: 39507df8-f15f-45fb-b2b6-01359272b147
-ms.openlocfilehash: 4a82c90b048cae441bac21875f3973f1594fe63d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 0b4171a4e10eb390f901c1246d3a2207da2513c4
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957720"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75300665"
 ---
 # <a name="spawnve"></a>spawnve
 
-この POSIX 関数は非推奨とされます。 代わりに、ISO C++ に準拠する [_spawnve](spawnve-wspawnve.md) を使用してください。
+Microsoft 固有の関数名 `spawnve` は、 [_spawnve](spawnve-wspawnve.md)関数の非推奨のエイリアスです。 既定では、[コンパイラの警告 (レベル 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)が生成されます。 名前は、実装固有の名前の標準 C 規則に従っていないため、非推奨とされます。 ただし、関数は引き続きサポートされます。
+
+代わりに[_spawnve](spawnve-wspawnve.md)を使用することをお勧めします。 または、この関数名を引き続き使用して、警告を無効にすることもできます。 詳細については、「警告と[POSIX の関数名](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names)を[無効にする](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning)」を参照してください。
 
 > [!IMPORTANT]
 > この API は、Windows ランタイムで実行するアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
