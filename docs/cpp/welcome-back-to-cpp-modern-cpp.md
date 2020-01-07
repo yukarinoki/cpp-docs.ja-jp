@@ -3,12 +3,12 @@ title: C++ へようこそ (Modern C++)
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 1cb1b849-ed9c-4721-a972-fd8f3dab42e2
-ms.openlocfilehash: 2739da77fbfa973ca716abc6d8fa4920b81095d9
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: 4dee4779e941c66af1c23f62a88cecec4916a475
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303336"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301744"
 ---
 # <a name="welcome-back-to-c-modern-c"></a>C++ へようこそ (Modern C++)
 
@@ -47,7 +47,7 @@ void functionUsingWidget() {
 
 ## <a name="stdstring-and-stdstring_view"></a>std:: string および std:: string_view
 
-C スタイルの文字列は、バグのもう1つの主要な原因です。 [Std:: string および std:: wstring](../standard-library/basic-string-class.md)を使用することにより、C スタイルの文字列に関連するすべてのエラーを排除し、検索、追加、前処理などのメンバー関数の利点を得ることができます。 どちらも速度に対して高度に最適化されています。 読み取り専用アクセスのみを必要とする関数に文字列を渡す場合、(C++ 17) で[std:: string_view](../standard-library/basic-string-view-class.md)を使用すると、さらに優れたパフォーマンスを得ることができます。
+C スタイルの文字列は、バグのもう1つの主要な原因です。 [Std:: string および std:: wstring](../standard-library/basic-string-class.md)を使用することにより、C スタイルの文字列に関連するすべてのエラーを排除し、検索、追加、前処理などのメンバー関数の利点を得ることができます。 どちらも速度に対して高度に最適化されています。 読み取り専用アクセスのみを必要とする関数に文字列を渡す場合は、C++ 17 で[std:: string_view](../standard-library/basic-string-view-class.md)を使用すると、さらに優れたパフォーマンスを得ることができます。
 
 ## <a name="stdvector-and-other-standard-library-containers"></a>std:: vector とその他の標準ライブラリコンテナー
 
@@ -80,7 +80,7 @@ C スタイルの配列は使用しないでください。 データへの直�
 
 プログラムのカスタムアルゴリズムを記述する必要があると想定する前に、まず標準C++ライブラリの[アルゴリズム](../standard-library/algorithm.md)を確認してください。 標準ライブラリには、検索、並べ替え、フィルター処理、ランダム化するなど、多くの一般的な操作について、増え続けるアルゴリズムが含まれています。 数値演算ライブラリは広範囲にわたっています。 C++ 17 以降では、多くのアルゴリズムの並列バージョンが提供されています。
 
-いくつかの重要な例を示します。
+次に重要な例を示します。
 
 - **for_each**、既定のトラバーサルアルゴリズム (および範囲ベースの for ループ) です。 
 
