@@ -3,12 +3,12 @@ title: C++ の型システム
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
-ms.openlocfilehash: 1f12f7505438dc995aaf8a045fd903488e9ff092
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 5755c7818182c5e26c5b3df6407fbe259bfdbcf3
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74246599"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301575"
 ---
 # <a name="c-type-system"></a>C++ の型システム
 
@@ -24,9 +24,7 @@ ms.locfileid: "74246599"
 
 ## <a name="specifying-variable-and-function-types"></a>変数と関数の型の指定
 
-C++は*厳密に型指定*された言語であり、*静的に型指定*されます。すべてのオブジェクトには型があり、その型は変更されません (静的データオブジェクトと混同しないでください)。
-コードで**変数を宣言する場合**は、その型を明示的に指定するか、 **auto**キーワードを使用して初期化子から型を推測するようにコンパイラに指示する必要があります。
-コードで**関数を宣言する場合**は、各引数の型とその戻り値を指定する必要があります。関数によって値が返されない場合は、 **void**を指定する必要があります。 例外は、任意の型の引数を使用できる関数テンプレートを使用する場合です。
+C++は*厳密に型指定*された言語であり、*静的に型指定*されます。すべてのオブジェクトには型があり、その型は変更されません (静的データオブジェクトと混同しないでください)。 コードで変数を宣言する場合は、その型を明示的に指定するか、 **auto**キーワードを使用して初期化子から型を推測するようにコンパイラに指示する必要があります。 コードで関数を宣言する場合は、各引数の型とその戻り値を指定する必要があります。関数によって値が返されない場合は、 **void**を指定する必要があります。 例外は、任意の型の引数を使用できる関数テンプレートを使用する場合です。
 
 最初に変数を宣言すると、後で型を変更することはできません。 ただし、変数の値または関数の戻り値を異なる型の別の変数にコピーすることはできます。 このような操作は、*型変換*と呼ばれます。これは必要な場合もありますが、データの損失または正確性の原因になる可能性があります。
 
@@ -55,7 +53,7 @@ int maxValue;                // Not recommended! maxValue contains
 
 一部の言語とは異なり、C++ には他のすべての型の派生元となる汎用基本型はありません。 この言語には、*組み込み型*とも呼ばれる多くの*基本的な型*が含まれています。 これには、 **int**、 **double**、 **long**、 **bool**などの数値型に加え、ASCII および UNICODE 文字の**char**型および**wchar_t**型が含まれます。 ほとんどの基本型 ( **bool**、 **double**、 **wchar_t**および関連する型を除く) には符号なしのバージョンがあり、変数に格納できる値の範囲が変更されます。 たとえば、32ビット符号付き整数を格納する**int**は、-2147483648 から2147483647までの値を表すことができます。 32ビットとしても格納されている**unsigned int**は、0 ~ 4294967295 の値を格納できます。 各ケースで格納できる値の合計数は同じです。範囲のみ異なります。
 
-基本型は、実行可能な操作や他の基本型に変換する方法を制御する組み込みの規則を持つコンパイラにより認識されます。 組み込み型とそのサイズと数値制限の完全な一覧については、「[基本型](../cpp/fundamental-types-cpp.md)」を参照してください。
+基本型は、実行可能な操作や他の基本型に変換する方法を制御する組み込みの規則を持つコンパイラにより認識されます。 組み込み型とそのサイズと数値制限の完全な一覧については、「[組み込み型](../cpp/fundamental-types-cpp.md)」を参照してください。
 
 次の図は、組み込み型の相対サイズを示しています。
 
@@ -63,11 +61,11 @@ int maxValue;                // Not recommended! maxValue contains
 
 次の表は、最もよく使用される基本型の一覧です。
 
-|種類|サイズ|コメント|
+|の型|サイズ|コメント|
 |----------|----------|-------------|
 |int|4 バイト|整数値の既定のオプション。|
-|double|8 バイト|浮動小数点値の既定のオプション。|
-|bool|1 バイト|true または false になる値を表します。|
+|二重線|8 バイト|浮動小数点値の既定のオプション。|
+|ブール|1 バイト|true または false になる値を表します。|
 |char|1 バイト|以前の C スタイル文字列内の ASCII 文字や、UNICODE に変換する必要がない std::string オブジェクトの ASCII 文字に使用します。|
 |wchar_t|2 バイト|UNICODE 形式でエンコードできるワイド文字を表します (Windows では UTF-16。他のオペレーティング システムでは異なる場合があります)。 これは、型 `std::wstring` の文字列で使用される文字型です。|
 |unsigned&nbsp;char|1 バイト|C++ には、組み込みの `byte` 型はありません。  バイト値を表すには unsigned char を使用します。|
@@ -90,7 +88,7 @@ PI = .75 //Error. Cannot modify const variable.
 
 **Const**修飾子は関数と変数の宣言で広く使用されており、"const 正確性" はC++の重要な概念です。基本的には、 **const**を使用して、コンパイル時に値が誤って変更されないことを保証することを意味します。 詳細については、「 [const](../cpp/const-cpp.md)」を参照してください。
 
-**Const**型は、非 const バージョンとは異なります。たとえば、 **const int**は**int**とは別の型です。変数から const 性C++を削除する必要がある場合は、このようなまれな場合に**const_cast**演算子を使用できます。 詳細については、「[型変換」および「タイプセーフ](../cpp/type-conversions-and-type-safety-modern-cpp.md)」を参照してください。
+**const**型は、非 const バージョンとは異なります。たとえば、 **const int**は**int**とは別の型です。変数から const 性C++を削除する必要がある場合は、このようなまれなケースで**const_cast**演算子を使用できます。 詳細については、「[型変換」および「タイプセーフ](../cpp/type-conversions-and-type-safety-modern-cpp.md)」を参照してください。
 
 ## <a name="string-types"></a>文字列型
 
@@ -157,7 +155,7 @@ void someFunction() {
 
 C および C++ 向けの従来の Win32 プログラミングでは、ほとんどの関数は Windows 固有の typedef マクロと #define マクロ (`windef.h` で定義) を使用して、パラメーターと戻り値の型を指定します。 これらの Windows データ型は、主に、C/C++組み込み型に与えられた特別な名前 (エイリアス) にすぎません。 これらの typedef とプリプロセッサ定義の完全な一覧については、「 [Windows データ型](/windows/win32/WinProg/windows-data-types)」を参照してください。 HRESULT や LCID など、typedef には便利で内容がわかりやすいものがあります。 INT など、他の typedef には特別な意味がなく、C++ の基本型のエイリアスにすぎません。 他の Windows のデータ型には、C プログラミングおよび 16 ビット プロセッサの時代から残っている名前がありますが、最新のハードウェアやオペレーティング システムでは目的も意味もありません。 また、Windows ランタイムライブラリに関連付けられている特殊なデータ型も[Windows ランタイム基本データ型](/windows/win32/WinRT/base-data-types)として表示されます。 最新の C++ では、値の解釈方法について Windows の型が追加の意味を伝えるのでない限り、一般的なガイドラインとして C++ の基本型が推奨されます。
 
-## <a name="more-information"></a>詳細
+## <a name="more-information"></a>その他の情報
 
 C++ の型システムの詳細については、次のトピックを参照してください。
 
@@ -166,8 +164,8 @@ C++ の型システムの詳細については、次のトピックを参照し�
 |[値型](../cpp/value-types-modern-cpp.md)|*値の型*とその使用に関連する問題について説明します。|
 |[型変換とタイプセーフ](../cpp/type-conversions-and-type-safety-modern-cpp.md)|よくある型変換の問題について説明し、その回避方法を示します。|
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [に戻るC++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [C++ 言語リファレンス](../cpp/cpp-language-reference.md)<br/>
-[C++ 標準ライブラリ](../standard-library/cpp-standard-library-reference.md)
+[.NET 標準ライブラリ](../standard-library/cpp-standard-library-reference.md)

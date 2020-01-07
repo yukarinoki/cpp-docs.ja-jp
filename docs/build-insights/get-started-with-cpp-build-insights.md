@@ -1,5 +1,5 @@
 ---
-title: Build Insights をC++使ってみる
+title: C++ Build Insights を使ってみる
 description: ビルドインサイトのC++一部であるビルド時のパフォーマンス分析ツールを使用する方法の概要について説明します。
 ms.date: 11/03/2019
 helpviewer_keywords:
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 9c31d317cd7b9c6465362e3e532db2128303f602
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 862bfae3bdb27812306dcd356aecab812ea5181c
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73633226"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75298741"
 ---
-# <a name="get-started-with-c-build-insights"></a>Build Insights をC++使ってみる
+# <a name="get-started-with-c-build-insights"></a>C++ Build Insights を使ってみる
 
 ::: moniker range="<=vs-2017"
 
@@ -39,7 +39,9 @@ WPA は、Windows アセスメント & amp; デプロイメントキット (ADK)
 
 ### <a name="to-download-and-install-wpa"></a>WPA をダウンロードしてインストールするには
 
-1. Windows ADK Insider Preview[ダウンロードページ](https://www.microsoft.com/software-download/windowsinsiderpreviewADK)に移動します。
+注: windows パフォーマンスアナライザーをインストールするには、Windows 8 以降が必要です。
+
+1. Windows ADK Insider Preview[ダウンロードページ](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewADK)に移動します。
 
 1. Windows ADK Insider Preview をダウンロードします。 ディスクイメージです。
 
@@ -103,7 +105,7 @@ WPA を起動し、先ほど収集したトレースを開きます。 WPA は�
 
 - ビルド エクスプローラー
 - ファイル
-- 機能
+- 関数
 
 これらのビューが表示されない場合は、[手順 1](#configuration-steps). で説明したように、WPA が正しく構成されていることを再確認します。 次に示すように、右側の空の分析ウィンドウにビューをドラッグすると、ビルドデータを表示できます。
 

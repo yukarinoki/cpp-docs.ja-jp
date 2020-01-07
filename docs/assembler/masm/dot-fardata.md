@@ -6,21 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - .FARDATA directive
 ms.assetid: 4458ef66-5626-4607-bf83-71637b459f77
-ms.openlocfilehash: 3a92bec747019cec1b14d3615ae5fb5a795fdc9d
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: b7f6328ea21c70fca8d15477b1e7ccb365132b22
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74398263"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317761"
 ---
 # <a name="fardata-32-bit-masm"></a>..FARDATA (32 ビット MASM)
 
-と共に使用[します。MODEL](../../assembler/masm/dot-model.md)は、初期化されたデータ (セグメント名 FAR_DATA または*名前*) のための遠くのデータセグメントを開始します。 (32 ビット MASM のみ。)
+と共に使用[します。MODEL](dot-model.md)は、初期化されたデータ (セグメント名 FAR_DATA または*名前*) のための遠くのデータセグメントを開始します。 (32 ビット MASM のみ。)
 
 ## <a name="syntax"></a>構文
 
 > **..FARDATA** ⟦*name*⟧
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[ディレクティブリファレンス](directives-reference.md)
+[ディレクティブリファレンス](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

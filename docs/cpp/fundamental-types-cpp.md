@@ -1,6 +1,6 @@
 ---
-title: 基本型 (C++)
-ms.date: 11/04/2016
+title: 組み込み型 (C++)
+ms.date: 12/11/2019
 f1_keywords:
 - __int128_cpp
 - __wchar_t_cpp
@@ -43,28 +43,28 @@ helpviewer_keywords:
 - storing types [C++]
 - data types [C++], void
 ms.assetid: 58b0106a-0406-4b74-a430-7cbd315c0f89
-ms.openlocfilehash: daa2ad2680a9d7d0239a70ed37ec1d90a3d96d97
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: f6bfc72bf279d09e89423866d9cb46ad3496b49c
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857542"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301497"
 ---
-# <a name="fundamental-types--c"></a>基本型 (C++)
+# <a name="built-in-types-c"></a>組み込み型 (C++)
 
-C++ の基本的な型は、整数、浮動小数点、および void の 3 つのカテゴリに分類されます。 整数型は整数を処理できます。 浮動小数点型は小数部分を含む可能性がある値を指定することができます。
+組み込み型 (*基本型*とも呼ばれます) は、 C++言語標準によって指定され、コンパイラに組み込まれています。 組み込み型は、どのヘッダーファイルでも定義されていません。 組み込み型は、整数、浮動小数点、および void の3つのカテゴリに分類されます。 整数型は整数を処理できます。 浮動小数点型は小数部分を含む可能性がある値を指定することができます。
 
-[void](../cpp/void-cpp.md) 型は一連の空の値を示します。 **Void**型の変数は指定できません。これは主に、値を返さない関数を宣言したり、型指定されていないデータまたは任意の型のデータへのジェネリックポインターを宣言したりするために使用されます。 任意の式を明示的に変換するか、 **void**型にキャストできます。 ただし、このような式は次の用途に制限されています。
+[void](void-cpp.md) 型は一連の空の値を示します。 **Void**型の変数は指定できません。これは主に、値を返さない関数を宣言したり、型指定されていないデータまたは任意の型のデータへのジェネリックポインターを宣言したりするために使用されます。 任意の式を明示的に変換するか、 **void**型にキャストできます。 ただし、このような式は次の用途に制限されています。
 
-- 式ステートメント (詳細については、「 [式](../cpp/expressions-cpp.md)」を参照)。
+- 式ステートメント (詳細については、「[式](expressions-cpp.md)」を参照してください)。
 
-- コンマ演算子の左のオペランド (詳細については、「 [コンマ演算子](../cpp/comma-operator.md) 」を参照)。
+- コンマ演算子の左のオペランド (詳細については、「[コンマ演算子](comma-operator.md)」を参照してください)。
 
-- 条件演算子の 2 番目または 3 番目のオペランド (`? :`) (詳細については、「 [条件演算子を含む式](../cpp/conditional-operator-q.md) 」を参照)。
+- 条件演算子の 2 番目または 3 番目のオペランド (`? :`) (詳細については、「[条件演算子を使用した式](conditional-operator-q.md)」を参照してください)。
 
-型のサイズに適用される制限を次の表に示します。 これらの制限は、Microsoft の実装に依存しません。
+次の表では、相互に関連する型サイズの制限について説明します。 これらの制限は、 C++標準によって義務付けられており、Microsoft の実装に依存しません。 特定の組み込み型の絶対サイズが標準で指定されていません。
 
-### <a name="fundamental-types-of-the-c-language"></a>C++ 言語の基本型
+### <a name="built-in-type-size-restrictions"></a>組み込みの型サイズの制限
 
 |[カテゴリ]|の型|目次|
 |--------------|----------|--------------|
@@ -82,9 +82,9 @@ C++ の基本的な型は、整数、浮動小数点、および void の 3 つ�
 
 **Microsoft 固有の仕様**
 
-次の表は、Microsoft C++ において基本的な型に必要とされるストレージの量の一覧です。
+次の表に、Microsoft C++の組み込み型に必要なストレージの容量を示します。 特に、64ビットのオペレーティングシステムでは、**長さ**が4バイトであることに注意してください。
 
-### <a name="sizes-of-fundamental-types"></a>基本型のサイズ
+### <a name="sizes-of-built-in-types"></a>組み込み型のサイズ
 
 |の型|サイズ|
 |----------|----------|
@@ -93,12 +93,12 @@ C++ の基本的な型は、整数、浮動小数点、および void の 3 つ�
 |**float**、 **__int32**、 **int**、 **unsigned int**、 **long**、 **unsigned long**|4 バイト|
 |**double**、 **_ _int64**、 **long double**、 **long**|8 バイト|
 
-**Microsoft 固有の仕様はここまで**
+**END Microsoft 固有の仕様**
 
-型ごとの値の範囲の概要については、「 [データ型の範囲](../cpp/data-type-ranges.md) 」を参照してください。
+型ごとの値の範囲の概要については、「 [データ型の範囲](data-type-ranges.md) 」を参照してください。
 
-型変換の詳細については、「 [標準変換](../cpp/standard-conversions.md)」を参照してください。
+型変換の詳細については、「 [標準変換](standard-conversions.md)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[データ型の範囲](../cpp/data-type-ranges.md)
+[データ型の範囲](data-type-ranges.md)

@@ -6,12 +6,12 @@ ms.author: mblome
 ms.date: 05/16/2019
 ms.technology: cpp-ide
 ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
-ms.openlocfilehash: 58f8a9b8223dc54bf083ebbac97528f88890777c
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: ce28d42fd3452a5e8195f3ced6bbbb06430b1d14
+ms.sourcegitcommit: 27d9db019f6d84c94de9e6aff0170d918cee6738
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837017"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75676952"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg: Windows、Linux、および MacOS 用の C++ パッケージ マネージャー
 
@@ -182,7 +182,7 @@ If you are sure you want to rebuild the above packages, run this command with th
 
 ## <a name="uninstall-vcpkg"></a>vcpkg をアンインストールする
 
-ディレクトリを削除するだけです。
+vcpkg ディレクトリだけを削除します。 このディレクトリを削除すると、vcpkg ディストリビューションと、vcpkg によってインストールされたすべてのライブラリがアンインストールされます。
 
 ## <a name="send-feedback-about-vcpkg"></a>vcpkg のフィードバックを送信する
 
