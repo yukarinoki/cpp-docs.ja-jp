@@ -1,6 +1,6 @@
 ---
 title: モジュール、インポート、エクスポート
-ms.date: 07/15/2019
+ms.date: 12/12/2019
 f1_keywords:
 - module_cpp
 - import_cpp
@@ -9,21 +9,21 @@ helpviewer_keywords:
 - modules [C++]
 - modules [C++], import
 - modules [C++], export
-description: 指定されたモジュールで定義されている型および関数にアクセスするには、import ステートメントを使用します。
-ms.openlocfilehash: ee1d50a76a3304359c0771aa0174968439f5faa4
-ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
+description: Import および export 宣言を使用して、指定したモジュールで定義されている型と関数にアクセスし、発行します。
+ms.openlocfilehash: ae28bce8e06840cafa5c92521f6e9a62aa5bfde6
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70273622"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301458"
 ---
 # <a name="module-import-export"></a>モジュール、インポート、エクスポート
 
-**Module**、 **import**、および**export**キーワードは C++20 で使用でき、/[実験的: モジュール](../build/reference/experimental-module.md)コンパイラスイッチと共に、 [/std:c++latest](../build/reference/std-specify-language-standard-version.md)が必要です。 詳細については、「」の「 [ C++モジュールの概要](modules-cpp.md)」を参照してください。
+**モジュール**、**インポート**、および**エクスポート**の宣言は c++ 20 で使用でき、/[実験的: モジュール](../build/reference/experimental-module.md)コンパイラスイッチと共に、 [/std: c++ latest](../build/reference/std-specify-language-standard-version.md)を必要とします。 詳細については、「」の「 [ C++モジュールの概要](modules-cpp.md)」を参照してください。
 
 ## <a name="module"></a>name
 
-モジュール実装ファイルの先頭にある**module**ステートメントを使用して、ファイルの内容が名前付きモジュールに属していることを指定します。 
+モジュールの実装ファイルの先頭に**モジュール**宣言を配置し、ファイルの内容が名前付きモジュールに属していることを指定します。
 
 ```cpp
 module ModuleA;
@@ -31,7 +31,7 @@ module ModuleA;
 
 ## <a name="export"></a>export
 
-モジュールのプライマリインターフェイスファイルの**export モジュール**ステートメントを使用します。このファイルには拡張子を指定する必要があり**ます。 ixx**:
+モジュールのプライマリインターフェイスファイルに**エクスポートモジュール**宣言を使用します。このファイルには拡張子を付ける必要があり**ます。 ixx**:
 
 ```cpp
 export module ModuleA;
@@ -66,11 +66,11 @@ void main() {
 }
 ```
 
-**Export**キーワードは、モジュール実装ファイルには記述できません。 **エクスポート**修飾子が名前空間名に適用されると、名前空間内のすべての名前がエクスポートされます。
+**Export**キーワードは、モジュール実装ファイルには記述できません。 名前空間の名前に**export**を適用すると、名前空間内のすべての名前がエクスポートされます。
 
-## <a name="import"></a>import
+## <a name="import"></a>取り込み
 
-モジュールの名前がプログラムに表示されるようにするには、 **import**ステートメントを使用します。 Import ステートメントは、モジュールステートメントの後、任意の #include ディレクティブの後、ファイル内の宣言の前に記述する必要があります。
+**インポート**宣言を使用して、モジュールの名前がプログラムに表示されるようにします。 インポート宣言は、モジュール宣言の後、任意の #include ディレクティブの後、ファイル内の宣言の前に記述する必要があります。
 
 ```cpp
 module ModuleA;
@@ -86,6 +86,45 @@ class Baz
 {...};
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="remarks"></a>コメント
+
+**インポート**と**モジュール**は、論理行の先頭に出現する場合にのみキーワードとして扱われます。
+
+```cpp
+
+// OK:
+module ;
+module module-name
+import :
+import <
+import "
+import module-name
+export module ;
+export module module-name
+export import :
+export import <
+export import "
+export import module-name
+
+// Error:
+int i; module ;
+```
+
+**Microsoft 固有の仕様**
+
+Microsoft C++では、トークンの**インポート**と**モジュール**は常に識別子であり、マクロの引数として使用される場合はキーワードではありません。
+
+### <a name="example"></a>使用例
+
+```cpp
+#define foo(…) __VA_ARGS__
+foo(
+import // Always an identifier, never a keyword
+)
+```
+
+**END Microsoft 固有の仕様**
+
+## <a name="see-also"></a>参照
 
 [のモジュールの概要C++](modules-cpp.md)
