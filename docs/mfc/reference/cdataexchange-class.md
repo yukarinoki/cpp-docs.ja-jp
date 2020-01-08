@@ -52,7 +52,7 @@ class CDataExchange
 |[CDataExchange::Fail](#fail)|検証が失敗したときに呼び出されます。 前のコントロールにフォーカスをリセットし、例外をスローします。|
 |[CDataExchange::PrepareCtrl](#preparectrl)|データ交換または検証用に、指定したコントロールを準備します。非エディット コントロールに使用してください。|
 |[CDataExchange::PrepareEditCtrl](#prepareeditctrl)|データ交換または検証用に、指定したエディット コントロールを準備します。|
-|[CDataExchange::PrepareOleCtrl](#prepareolectrl)|データ交換または検証用には、指定した OLE コントロールを準備します。非エディット コントロールに使用してください。|
+|[CDataExchange::PrepareOleCtrl](#prepareolectrl)|データ交換または検証用に、指定した OLE コントロールを準備します。非エディット コントロールに使用してください。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
