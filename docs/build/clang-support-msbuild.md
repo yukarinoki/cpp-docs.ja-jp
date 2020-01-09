@@ -21,7 +21,7 @@ CMake プロジェクトと MSBuild プロジェクトの両方の clang サポ�
 
 ::: moniker range="vs-2019"
 
-Clang と共に Visual Studio 2019 バージョン16.2 を使用して、Windows またはC++ Linux を対象とする visual studio プロジェクト (MSBuild) を編集、ビルド、デバッグすることができます。
+Clang と共に Visual Studio 2019 バージョン16.2 を使用して、Windows またはC++ Linux を対象とする Visual Studio プロジェクト (MSBuild) を編集、ビルド、デバッグすることができます。
 
 ## <a name="install"></a>インストール
 
