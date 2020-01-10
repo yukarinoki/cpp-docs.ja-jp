@@ -8,12 +8,12 @@ helpviewer_keywords:
 - IFDIF directive
 - IFDIFI directive
 ms.assetid: b85a553c-9098-4a57-a24f-596456eefa1c
-ms.openlocfilehash: 68fbd9eb5679bceddd810d63116eeb9b4851b7c5
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 7774c75ef69aeea7d3bb30bd63f6e7125e313a17
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74397410"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317241"
 ---
 # <a name="ifdif-ifdifi"></a>IFDIF、IFDIFI
 
@@ -26,8 +26,9 @@ ms.locfileid: "74397410"
 
 ## <a name="remarks"></a>コメント
 
-**Ifdifi**が指定されている場合、比較では大文字と小文字が区別されません。 完全な構文について[は](../../assembler/masm/if-masm.md)、「」を参照してください。
+**Ifdifi**が指定されている場合、比較では大文字と小文字が区別されません。 完全な構文について[は](if-masm.md)、「」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[ディレクティブリファレンス](../../assembler/masm/directives-reference.md)
+[ディレクティブリファレンス](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

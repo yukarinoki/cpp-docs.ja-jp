@@ -1,17 +1,17 @@
 ---
 title: .PUSHREG
-ms.date: 08/30/2018
+ms.date: 12/16/2019
 f1_keywords:
 - .PUSHREG
 helpviewer_keywords:
 - .PUSHREG directive
 ms.assetid: e0c83758-dfed-40ea-afe6-cb833c8d2d30
-ms.openlocfilehash: 2190bd05667de82dada34a63f11647c653f97247
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: de6ffd3668f47732144e8c632410f6dfde6b2f31
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74398034"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318294"
 ---
 # <a name="pushreg"></a>.PUSHREG
 
@@ -19,15 +19,18 @@ ms.locfileid: "74398034"
 
 ## <a name="syntax"></a>構文
 
-> .PUSHREG レジスタ
+> .PUSHREG*レジスタ*
 
 ## <a name="remarks"></a>コメント
 
-**.PUSHREG**を使用すると、ml64.exe ユーザーは、フレーム関数をアンワインドする方法を指定できます。これは、 [PROC](../../assembler/masm/proc.md) **frame**宣言からに拡張されるプロローグ内でのみ使用でき[ます。ENDPROLOG](../../assembler/masm/dot-endprolog.md)ディレクティブ。 これらのディレクティブはコードを生成しません。`.xdata` と `.pdata`のみが生成されます。 **.PUSHREG**の前には、アンワインドするアクションを実際に実装する手順が必要です。 アンワインドディレクティブと、マクロでアンワインドするコードをラップして、アグリーメントを保証することをお勧めします。
+**.PUSHREG**を使用すると、ml64.exe ユーザーは、フレーム関数をアンワインドする方法を指定できます。これは、 [PROC](proc.md) **frame**宣言からに拡張されるプロローグ内でのみ使用でき[ます。ENDPROLOG](dot-endprolog.md)ディレクティブ。 これらのディレクティブはコードを生成しません。`.xdata` と `.pdata`のみが生成されます。 **.PUSHREG**の前には、アンワインドするアクションを実際に実装する手順が必要です。 アンワインドディレクティブと、マクロでアンワインドするコードをラップして、アグリーメントを保証することをお勧めします。
 
-詳細については、「 [MASM for x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md)」を参照してください。
+*register*は次のいずれかです: \
+RAX |RCX |RDX |RBX |RDI |RSI |RBP |R8 |R9 |R10 |R11 |R12 |R13 |R14 |R15.
 
-## <a name="sample"></a>サンプル
+詳細については、「 [MASM for x64 (ml64.exe)](masm-for-x64-ml64-exe.md)」を参照してください。
+
+## <a name="sample"></a>［サンプル］
 
 ### <a name="description"></a>説明
 
@@ -55,6 +58,7 @@ _text ENDS
 END
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[ディレクティブリファレンス](directives-reference.md)
+[ディレクティブリファレンス](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

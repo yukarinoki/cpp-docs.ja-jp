@@ -1,15 +1,14 @@
 ---
 title: Visual Studio で C++ クロスプラットフォーム プロジェクトを作成する
 description: Visual Studio で、Linux と Windows の両方をC++対象とするオープンソースの cmake プロジェクトをセットアップ、コンパイル、およびデバッグする方法について説明します。
-author: mikeblome
 ms.topic: tutorial
-ms.date: 11/08/2019
-ms.openlocfilehash: 269c9e88133a492f66df7c7f81ab35424aff125d
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.date: 01/08/2020
+ms.openlocfilehash: 83d71d3078e892a51aef159b225fecec2b581f20
+ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303250"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75791764"
 ---
 # <a name="tutorial-create-c-cross-platform-projects-in-visual-studio"></a>チュートリアル: Visual C++ Studio でクロスプラットフォームプロジェクトを作成する
 
@@ -24,7 +23,7 @@ Visual Studio での C と C++ の開発は、Windows だけではなくなっ�
 > * Linux マシンへの接続を追加する
 > * Linux 上で同じターゲットをビルドしてデバッグする
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>[前提条件]
 
 * クロスプラットフォームの C++ 開発用に Visual Studio をセットアップする
   * まず、 [Visual Studio をインストール](https://visualstudio.microsoft.com/vs/)し、**ワークロードを使用C++** してと Linux 開発を行う **C++デスクトップ開発**を選択します。 この最小インストールは 3 GB のみです。 ダウンロードの速度によっては、インストールに10分以上かかることはありません。
@@ -44,10 +43,10 @@ Visual Studio での C と C++ の開発は、Windows だけではなくなっ�
     chmod +x cmake-3.11.18033000-MSVC_2-Linux-x86_64.sh
     ```
 
-  * スクリプトを実行するためのオプションは、`-–help` で確認できます。 `–prefix` オプションを使用して、 **/usr/local**パスでのインストールを指定することをお勧めします。これは、Visual Studio が cmake を検索する既定の場所であるためです。 次の例では Linux-x86_64 スクリプトを示します。 別のターゲットプラットフォームを使用している場合は、必要に応じて変更します。
+  * スクリプトを実行するためのオプションは、`-–help` で確認できます。 `–prefix` オプションを使用して、 **/usr**パスでのインストールを指定することをお勧めします。これは、Visual Studio が cmake を検索する既定の場所で**あるためです**。 次の例では Linux-x86_64 スクリプトを示します。 別のターゲットプラットフォームを使用している場合は、必要に応じて変更します。
 
     ```cmd
-    sudo ./cmake-3.11.18033000-MSVC_2-Linux-x86_64.sh --skip-license --prefix=/usr/local
+    sudo ./cmake-3.11.18033000-MSVC_2-Linux-x86_64.sh --skip-license --prefix=/usr
     ```
 
 * Windows マシンにインストールされている Git for Windows。

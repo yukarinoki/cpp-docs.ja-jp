@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - complex<long double> function
 ms.assetid: 37591991-b385-46e9-b727-d534dbc10432
-ms.openlocfilehash: 978be97484a259d7ae8f3fd24fecf07d50c4c844
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 5de4fc2305ef2ac6e523dcb02782455245b99429
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857971"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75302342"
 ---
 # <a name="complexltlong-doublegt"></a>complex&lt;long double&gt;
 
@@ -51,13 +51,13 @@ complex(
 
 **Long double**型の複素数。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
 クラステンプレートの明示的な特殊化は、 **long double**型の複合クラスに `complex` ていますが、クラステンプレートは、それが定義するコンストラクター内でのみ異なります。 **Long double**から**float**への変換は暗黙的に行うことができますが、 **double**から**long double**への変換は**明示的**に行う必要があります。 **explicit** を使用すると、割り当て構文を使用した型変換による開始は禁止されます。
 
 クラステンプレート `complex` とそのメンバーの詳細については、「[複合クラス](../standard-library/complex-class.md)」を参照してください。
 
-**Microsoft 固有**: **long double**型と**double**型の表現は同じですが、個別の型です。 詳細については、「[基本型](../cpp/fundamental-types-cpp.md)」を参照してください。
+**Microsoft 固有**: **long double**型と**double**型の表現は同じですが、個別の型です。 詳細については、「[組み込み型](../cpp/fundamental-types-cpp.md)」を参照してください。
 
 ## <a name="example"></a>使用例
 
@@ -121,7 +121,7 @@ arg( c3 ) = 0.927295 radians, which is 53.1301 degrees.
 
 **名前空間:** std
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [complex クラス](../standard-library/complex-class.md)\
 [C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

@@ -12,14 +12,14 @@ helpviewer_keywords:
 - _pgmptr function
 - pgmptr function
 ms.assetid: 4d44b515-0eff-4136-8bc4-684195f218f5
-ms.openlocfilehash: 6991dfe90e58352b26d7c914e1601a68674b8a5b
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: beff0401d0aa2aa21819e58618ef4c02795d4393
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57749868"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75300158"
 ---
-# <a name="pgmptr-wpgmptr"></a>_pgmptr、_wpgmptr
+# <a name="_pgmptr-_wpgmptr"></a>_pgmptr、_wpgmptr
 
 実行可能ファイルのパスです。 非推奨。[_get_pgmptr](../c-runtime-library/reference/get-pgmptr.md) と [_get_wpgmptr](../c-runtime-library/reference/get-wpgmptr.md) を使用してください。
 
@@ -30,7 +30,7 @@ extern char *_pgmptr;
 extern wchar_t *_wpgmptr;
 ```
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>コメント
 
 コマンド インタープリター (Cmd.exe) からプログラムを実行すると、`_pgmptr` は実行可能ファイルの完全なパスに自動的に初期化されます。 たとえば、Hello.exe が C:\BIN にあり、C:\BIN がパス内にある場合は、次のように、実行時に `_pgmptr` が C:\BIN\Hello.exe に設定されます。
 
@@ -50,15 +50,15 @@ C> hello
 
 ## <a name="requirements"></a>要件
 
-|変数|必須ヘッダー|
+|[Variable]|必須ヘッダー|
 |--------------|---------------------|
-|`_pgmptr`、 `_wpgmptr`|\<stdlib.h>|
+|`_pgmptr`、`_wpgmptr`|\<stdlib.h>|
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次のプログラムで、`_pgmptr` の使用方法を示します。
 
-```
+```c
 // crt_pgmptr.c
 // compile with: /W3
 // The following program demonstrates the use of _pgmptr.

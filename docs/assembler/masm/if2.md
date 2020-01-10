@@ -8,12 +8,12 @@ helpviewer_keywords:
 - IF2 directive
 - IF2 directive
 ms.assetid: a0f75564-b51b-4e39-ad3b-f7421e7ecad6
-ms.openlocfilehash: f1b5126d9294c229d773acd29af463164bb46536
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 60f8b0dcedb61ac06de929aff300845e342d7cfc
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74397448"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317319"
 ---
 # <a name="if1-and-if2"></a>IF1 と IF2
 
@@ -29,7 +29,7 @@ ms.locfileid: "74397448"
 
 ## <a name="remarks"></a>コメント
 
-完全な構文について[は](../../assembler/masm/if-masm.md)、「」を参照してください。
+完全な構文について[は](if-masm.md)、「」を参照してください。
 
 バージョン5.1 とは異なり、MASM 6.1 以降では、最初のパスでの作業のほとんどが実行され、その後、必要に応じて後続のパスが実行されます。 これに対し、MASM 5.1 は、常に2つのソースパスにアセンブルします。 その結果、MASM 6.1 以降では、一部のパス依存コンストラクトを修正または削除することが必要になる場合があります。
 
@@ -43,6 +43,7 @@ ms.locfileid: "74397448"
 
 MASM 6.1 以上では、最初のパスの構成が異なります。 を処理**します。ERR1**ディレクティブ **。** **IF1**ディレクティブ**と同じです**。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[ディレクティブリファレンス](directives-reference.md)
+[ディレクティブリファレンス](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

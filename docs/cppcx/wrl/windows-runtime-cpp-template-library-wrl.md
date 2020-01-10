@@ -3,19 +3,19 @@ title: Windows ランタイム C++ テンプレート ライブラリ (WRL)
 ms.date: 11/04/2016
 ms.topic: overview
 ms.assetid: b915afce-553b-44a7-b8dc-0ab601758eb0
-ms.openlocfilehash: 7a7b37a32ebaa0bb6ad71c8f710300256589388d
-ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
+ms.openlocfilehash: 41b8b45f89e94b8de2ddcb9c87bfd72122db8e1a
+ms.sourcegitcommit: 27d9db019f6d84c94de9e6aff0170d918cee6738
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74541203"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75676939"
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Windows ランタイム C++ テンプレート ライブラリ (WRL)
 
 Windows ランタイム C++ テンプレート ライブラリ (WRL) は、Windows ランタイム コンポーネントを作成および使用するための低レベルの手段を提供するテンプレート ライブラリです。
 
 > [!NOTE]
-> WRL は、Windows ランタイム Api C++向けの標準 c++ 17 言語投影である/WinRT で置き換えられました。 C++/WinRT は、Windows 10 SDK のバージョン1803以降で使用できます。 C++/WinRT は、完全にヘッダーファイルに実装され、最新の Windows API に対するファーストクラスのアクセスを提供するように設計されています。
+> WRL は、Windows ランタイム Api C++向けの標準 c++ 17 言語投影である/WinRT で置き換えられました。 C++/WinRT はバージョン 1803 以降から Windows 10 SDK で使用できます。 C++/WinRT は、完全にヘッダーファイルに実装され、最新の Windows API に対するファーストクラスのアクセスを提供するように設計されています。
 >
 > / C++WinRT では、標準に準拠した c++ 17 コンパイラを使用して Windows ランタイム api を使用し、作成することができます。 C++通常、WinRT は、Windows ランタイムの他の言語オプションよりもパフォーマンスが向上し、バイナリが小さくなります。 C++/CX と WRL は引き続きサポートされますが、新しいアプリケーションでは C++/WinRT を使用することを強くお勧めします。 詳細については、「[C++/WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/index)」を参照してください。
 
@@ -147,5 +147,5 @@ Windows ランタイムC++テンプレートライブラリには、いくつか
 |-|-|
 |[カテゴリ別のキー Api](key-wrl-apis-by-category.md)|プライマリ Windows ランタイムC++テンプレートライブラリの型、関数、およびマクロについて取り上げます。|
 |[参照](wrl-reference.md)|Windows ランタイムC++テンプレートライブラリのリファレンス情報が含まれています。|
-|[クイックリファレンスC++/cx)](../../cppcx/quick-reference-c-cx.md)|Windows ランタイムをサポートC++する/cx 機能について簡単に説明します。|
+|[クイック リファレンス (C++/CX)](../../cppcx/quick-reference-c-cx.md)|Windows ランタイムをサポートC++する/cx 機能について簡単に説明します。|
 |[ビジュアルでの Windows ランタイムコンポーネントの使用C++](/windows/uwp/winrt-components/walkthrough-creating-a-basic-windows-runtime-component-in-cpp-and-calling-it-from-javascript-or-csharp)|/Cx を使用C++して基本的な Windows ランタイムコンポーネントを作成する方法について説明します。|

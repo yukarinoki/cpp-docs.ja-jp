@@ -48,12 +48,12 @@ helpviewer_keywords:
 - tspawnlpe function
 - _tspawnle function
 ms.assetid: bb47c703-5216-4e09-8023-8cf25bbf2cf9
-ms.openlocfilehash: c4a8b33c2233dc0c680ddbe5063ab6fe25a729b0
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
-ms.translationtype: HT
+ms.openlocfilehash: 81f4bf6c60a0c0e4011536e8d3bc104bbc33e04f
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957277"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301705"
 ---
 # <a name="_spawn-_wspawn-functions"></a>_spawn 系関数と _wspawn 系関数
 
@@ -68,14 +68,14 @@ ms.locfileid: "70957277"
 
 関数名の最後の文字は、関数の種類を示します。
 
-|文字|バリアント|
+|Letter|バリアント|
 |-|-|
 | `e`  | 環境設定へのポインター配列 `envp` が新しいプロセスに渡されます。  |
 | `l`  | コマンド ライン引数が `_spawn` 関数に個別に渡されます。 このサフィックスは、通常は、新しいプロセスに渡すパラメーターの個数が事前にわかっている場合に使用します。  |
 | `p`  | `PATH` 環境変数を使用して、実行するファイルを検索します。  |
 | `v`  | コマンド ライン引数へのポインター配列 `argv` が `_spawn` 関数に渡されます。 このサフィックスは、通常は、新しいプロセスに渡すパラメーターの個数が可変の場合に使用します。  |
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>コメント
 
 `_spawn` 関数はそれぞれ新しいプロセスを作成して実行します。 それらの関数は、現在使用中のマルチバイト コード ページに従ってマルチバイト文字シーケンスを認識し、マルチバイト文字列の引数を適切な方法で自動的に処理します。 `_wspawn` 関数は、`_spawn` 関数のワイド文字バージョンで、マルチバイト文字の文字列を処理しません。 それ以外の点では、`_wspawn` 関数は対応する `_spawn` 関数と同じように動作します。
 
@@ -130,7 +130,7 @@ ms.locfileid: "70957277"
 
 ## <a name="environment-of-the-spawned-process"></a>生成されたプロセスの環境
 
-`_spawn` 呼び出しを作成するときに開いたファイルは、新しいプロセスでも開いたままです。 `_spawnl`、`_spawnlp`、`_spawnv`、`_spawnvp` の各呼び出しでは、新しいプロセスが呼び出しプロセスの環境を継承します。 `envp` 引数を使用して環境設定のリストを渡すことで、`_spawnle`、`_spawnlpe`、`_spawnve`、`_spawnvpe` の各呼び出しを使用して、新しいプロセスの環境を変更できます。 引数 `envp` は文字ポインターの配列であり、最後の要素以外の各要素は、環境変数を定義する null で終わる文字列を指します。 通常、このような文字列の形式は `NAME`=`value` であり、`NAME` は環境変数名、`value` はその変数に設定する文字列の値です。 `value` は二重引用符で囲みません。`envp` 配列の最後の要素は **NULL** にする必要があります。 `envp` 自身が **NULL** である場合、生成されたプロセスは親プロセスの環境設定を継承します。
+`_spawn` 呼び出しを作成するときに開いたファイルは、新しいプロセスでも開いたままです。 `_spawnl`、`_spawnlp`、`_spawnv`、`_spawnvp` の各呼び出しでは、新しいプロセスが呼び出しプロセスの環境を継承します。 `envp` 引数を使用して環境設定のリストを渡すことで、`_spawnle`、`_spawnlpe`、`_spawnve`、`_spawnvpe` の各呼び出しを使用して、新しいプロセスの環境を変更できます。 引数 `envp` は文字ポインターの配列であり、最後の要素以外の各要素は、環境変数を定義する null で終わる文字列を指します。 通常、このような文字列の形式は `NAME`=`value` であり、`NAME` は環境変数名、`value` はその変数に設定する文字列の値です。 (`value` は二重引用符で囲まれていないことに注意してください)。`envp` 配列の最後の要素は**NULL**にする必要があります。 `envp` 自身が **NULL** である場合、生成されたプロセスは親プロセスの環境設定を継承します。
 
 `_spawn` 関数は、開いているファイルに関するすべての情報 (変換モードを含む) を新しいプロセスに渡すことができます。 この情報は環境内の `C_FILE_INFO` エントリを通してリアル モードで渡されます。 通常、スタートアップ コードはこのエントリを処理してから、環境から削除します。 ただし、`_spawn` 関数によって C 以外のプロセスが生成される場合、このエントリは環境内に残されます。 環境を印刷すると、環境情報がバイナリ形式でリアル モードで渡されているため、このエントリの定義文字列にグラフィック文字が示されます。 これ以外の影響が通常の操作に及ぶことはありません。 保護モードでは、環境情報はテキスト形式で渡されるため、グラフィック文字は含まれません。
 
@@ -146,9 +146,9 @@ ms.locfileid: "70957277"
 
 - [_popen、_wpopen](../c-runtime-library/reference/popen-wpopen.md) を呼び出してパイプを作成し、**cmd.exe /c** (または **command.exe /c**) を使用してアプリを呼び出します。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
-```
+```c
 // crt_spawn.c
 // This program accepts a number in the range
 // 1-8 from the command line. Based on the number it receives,

@@ -1,17 +1,17 @@
 ---
 title: .ALLOCSTACK
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - .ALLOCSTACK
 helpviewer_keywords:
 - .ALLOCSTACK directive
 ms.assetid: 9801594b-7ac2-4df2-a49d-07d9dd9af99e
-ms.openlocfilehash: 6d9d86371503992d1bebe738fb6e6773581b10e3
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: bcc94619dfa24ab5c8b5d23a60825641290ef176
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74398630"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75314186"
 ---
 # <a name="allocstack"></a>.ALLOCSTACK
 
@@ -25,13 +25,13 @@ ms.locfileid: "74398630"
 
 MASM は、特定のサイズに対して最も効率的なエンコードを選択します。
 
-**.ALLOCSTACK**を使用すると、ml64.exe ユーザーは、フレーム関数をアンワインドする方法を指定できます。プロローグ内では、 [PROC](../../assembler/masm/proc.md) frame 宣言からに拡張され[ます。ENDPROLOG](../../assembler/masm/dot-endprolog.md)ディレクティブ。 これらのディレクティブはコードを生成しません。`.xdata` と `.pdata`のみが生成されます。 **.ALLOCSTACK**の前には、アンワインドするアクションを実際に実装する命令が必要です。 アンワインドディレクティブと、マクロでアンワインドするコードをラップして、アグリーメントを保証することをお勧めします。
+**.ALLOCSTACK**を使用すると、ml64.exe ユーザーは、フレーム関数をアンワインドする方法を指定できます。プロローグ内では、 [PROC](proc.md) frame 宣言からに拡張され[ます。ENDPROLOG](dot-endprolog.md)ディレクティブ。 これらのディレクティブはコードを生成しません。`.xdata` と `.pdata`のみが生成されます。 **.ALLOCSTACK**の前には、アンワインドするアクションを実際に実装する命令が必要です。 アンワインドディレクティブと、マクロでアンワインドするコードをラップして、アグリーメントを保証することをお勧めします。
 
 *サイズ*オペランドは8の倍数である必要があります。
 
-詳細については、「 [MASM for x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md)」を参照してください。
+詳細については、「 [MASM for x64 (ml64.exe)](masm-for-x64-ml64-exe.md)」を参照してください。
 
-## <a name="sample"></a>サンプル
+## <a name="sample"></a>［サンプル］
 
 次の例は、アンワインド/例外ハンドラーを指定する方法を示しています。
 
@@ -63,6 +63,7 @@ text ENDS
 END
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)
+[ディレクティブリファレンス](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

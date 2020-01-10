@@ -1,6 +1,6 @@
 ---
 title: stricmp、wcsicmp
-ms.date: 11/04/2016
+ms.date: 12/16/2019
 api_name:
 - stricmp
 - wcsicmp
@@ -26,13 +26,15 @@ helpviewer_keywords:
 - stricmp function
 - wcsicmp function
 ms.assetid: 2e3c6703-2635-4961-a253-e2c4c5029ed8
-ms.openlocfilehash: 8288aa8c9b631b9c4d5317fb13fdbbfcd9cad40a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d47249a3b41c76bf87ece8ed2e8a0fbbfc05ff09
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958112"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75300509"
 ---
 # <a name="stricmp-wcsicmp"></a>stricmp、wcsicmp
 
-これらの POSIX 関数は非推奨とされました。 代わりに、ISO C++ に準拠する [_stricmp、_wcsicmp、_mbsicmp、_stricmp_l、_wcsicmp_l、_mbsicmp_l](stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md) を使用してください。
+Microsoft 固有の関数名 `stricmp` と `wcsicmp` は、 [_stricmp および _wcsicmp](stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md)関数の非推奨のエイリアスです。 既定では、[コンパイラの警告 (レベル 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)が生成されます。 これらの名前は、実装固有の名前の標準 C 規則に従っていないため、非推奨とされます。 ただし、関数は引き続きサポートされます。
+
+代わりに、 [_stricmp または _wcsicmp](stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md)を使用することをお勧めします。 または、これらの関数名を引き続き使用して、警告を無効にすることもできます。 詳細については、「警告と[POSIX の関数名](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names)を[無効にする](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning)」を参照してください。

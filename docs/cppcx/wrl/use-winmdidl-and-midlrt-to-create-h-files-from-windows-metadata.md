@@ -3,12 +3,12 @@ title: '方法: winmdidl.exe と midlrt.exe を使用して、Windows メタデ�
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 4be8ba11-c223-44ad-9256-7e1edae9a7bc
-ms.openlocfilehash: 8288fc11fd53fdef423a57d0faefbaa7c06326aa
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 3aa7cd28a37ec7187cc3c87927a83e45eeda2a4e
+ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500430"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75791724"
 ---
 # <a name="how-to-use-winmdidlexe-and-midlrtexe-to-create-h-files-from-windows-metadata"></a>方法: winmdidl.exe と midlrt.exe を使用して、Windows メタデータから .h ファイルを作成する
 
@@ -16,11 +16,11 @@ winmdidl.exe と midlrt.exe によって、ネイティブ C++ コードと Wind
 
 これらのツールは、次の 2 つの主要シナリオで使用します。
 
-- Windows ランタイム テンプレート ライブラリ (WRL) を使用して作成された C++ アプリケーションが、カスタム Windows ランタイム コンポーネントを使用できるようにする、カスタム IDL ファイルとヘッダー ファイルの作成。
+- Windows ランタイム テンプレート ライブラリ (WRL) を使用して作成された C ++ アプリケーションが、カスタム Windows ランタイム コンポーネントを使用できるようにする、カスタム IDL ファイルとヘッダー ファイルの作成。
 
 - Windows ランタイム コンポーネントでのユーザー定義のイベントの種類用のプロキシおよびスタブ ファイルの生成。 詳細については、「 [Windows ランタイムコンポーネントのカスタムイベントとイベントアクセサー](/windows/uwp/winrt-components/custom-events-and-event-accessors-in-windows-runtime-components)」を参照してください。
 
-これらのツールは、カスタム .winmd ファイルを解析する場合にのみ必要です。 Windows オペレーティング システムのコンポーネント用の .idl および .h ファイルは、既に生成されます。 Windows 8.1 の既定では、これらのファイルは、Kits\8.1\Include\winrt\\(x86) \windows にあります。
+これらのツールは、カスタム .winmd ファイルを解析する場合にのみ必要です。 Windows オペレーティング システムのコンポーネント用の .idl および .h ファイルは、既に生成されます。 Windows 8.1 の既定では、これらのファイルは、Kits\8.1\Include\winrt (x86) \Windows \\\にあります。
 
 ## <a name="location-of-the-tools"></a>ツールの場所
 
@@ -41,7 +41,7 @@ winmdidl の著作権メッセージとバージョン番号のコンソール�
 **/時刻**<br/>
 コンソール出力に総実行時間を表示します。
 
-**/outdir:** <em>ディレクトリ</em><br/>
+**/outdir:** <em>dir</em><br/>
 出力ディレクトリを指定します。 パスに空白が含まれる場合は、引用符を使用します。 既定の出力ディレクトリは *\<ドライブ >* : \Users\\ *\<ユーザー名 >* \AppData\Local\VirtualStore\Program Files (x86) \Microsoft VisualStudio 12.0\\します。
 
 **/バナー:** <em>ファイル</em><br/>
@@ -65,11 +65,11 @@ winmdidl の著作権メッセージとバージョン番号のコンソール�
 
 次の例に、操作が成功したことを示す winmdidl からのコンソール表示を示します。
 
-**C:\users\giraffe\documents\\\Test_for_winmdidl.idl の生成**
+**C:\users\giraffe\documents\\Test_for_winmdidl を生成しています**
 
 次に、midlrt が生成された IDL ファイルに実行されます。 **Metadata_dir**引数が .idl ファイルの名前の後に指定されていることに注意してください。 \WinMetadata\ のパスが必要です。これは windows.winmd の場所です。
 
-`C:\Program Files (x86)\Microsoft Visual Studio 12.0> midlrt "c:\users\mblome\documents\test_for_winmdidl.idl" /metadata_dir "C:\Windows\System32\WinMetadata"`
+`C:\Program Files (x86)\Microsoft Visual Studio 12.0> midlrt "c:\users\username\documents\test_for_winmdidl.idl" /metadata_dir "C:\Windows\System32\WinMetadata"`
 
 ## <a name="remarks"></a>Remarks
 

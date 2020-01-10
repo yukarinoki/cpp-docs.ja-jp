@@ -6,30 +6,30 @@ helpviewer_keywords:
 - FLT_EPSILON constant
 - floating-point numbers, precision
 ms.assetid: 1acb1add-ac06-4134-a2fd-aff13d8c4c15
-ms.openlocfilehash: 387b2f4a7156e42e59bd70c5a6f747943fb54ca7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 373ce9fa2c2c96fac349940076873a4a637a9dbe
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62313585"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75298715"
 ---
 # <a name="why-floating-point-numbers-may-lose-precision"></a>浮動小数点数の精度の低下
 
-一般に、浮動小数点 10 進値には、正確なバイナリ表現はありません。 これは、CPU が浮動小数点データを表示する方法の副作用です。 このため、ある程度有効桁数の損失が発生する可能性があり、いくつかの浮動小数点演算で予期しない結果を生成可能性があります。
+浮動小数点値には、通常、正確なバイナリ表現がありません。 これは、CPU が浮動小数点データを表す方法の副作用です。 このため、精度の低下が発生する可能性があり、一部の浮動小数点演算では予期しない結果が生じる可能性があります。
 
-この動作は、次のいずれかの結果を示します。
+この動作は、次のいずれかの結果になります。
 
-- 10 進数のバイナリ表現を正確なことができない可能性があります。
+- 10進数のバイナリ表現は正確でない場合があります。
 
-- (Float と double 型の混合など) に使用される数値の間で型の不一致があります。
+- 使用されている数値の間に型の不一致があります (float と double の混合など)。
 
-動作を解決するには、取得プログラマのほとんどの値が大きいまたはよりも小さいを必要とすることを確認するか、またはこれらと有効桁数が保持される Binary Coded Decimal (BCD) ライブラリを使用します。
+この動作を解決するには、ほとんどのプログラマが、値が必要な値より大きいか小さいか、または有効桁数を維持するバイナリのコード化された Decimal (BCD) ライブラリを取得して使用します。
 
-浮動小数点値のバイナリ表現は、有効桁数と浮動小数点演算の精度に影響します。 Microsoft Visual C を使用して[IEEE 浮動小数点形式](ieee-floating-point-representation.md)します。
+浮動小数点値のバイナリ表現は、浮動小数点演算の精度と精度に影響します。 Microsoft Visual C++は[、IEEE 浮動小数点形式](ieee-floating-point-representation.md)を使用します。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
-```
+```c
 // Floating-point_number_precision.c
 // Compile options needed: none. Value of c is printed with a decimal
 // point precision of 10 and 6 (printf rounded value by default) to
@@ -60,7 +60,7 @@ They are not equal! The value of c is  2.4679999352 or 2.468000
 
 ## <a name="comments"></a>コメント
 
-EPSILON、1.192092896e として float に対して定義されている、FLT_EPSILON 定数を使用できます-07F、または倍精度 2.2204460492503131e として定義されている、DBL_EPSILON-016 します。 これらの定数の float.h を含める必要があります。 これらの定数が定義されている最も小さい正の値として x を指定すると、このような x + 1.0 が 1.0 に等しくなりません。 これは非常に小さな数であるため、膨大な数に関連する計算のユーザー定義許容値を使用する必要があります。
+イプシロンの場合は、1.192092896 e-07F として定義されている定数 FLT_EPSILON を使用するか、2.2204460492503131 016 として定義されている DBL_EPSILON を使用できます。 これらの定数には、float を含める必要があります。 これらの定数は、x + 1.0 が1.0 と等しくならないように、最小の正の数値 x として定義されます。 これは非常に小さな数値であるため、非常に大きな数値を含む計算にはユーザー定義の許容範囲を使用する必要があります。
 
 ## <a name="see-also"></a>関連項目
 

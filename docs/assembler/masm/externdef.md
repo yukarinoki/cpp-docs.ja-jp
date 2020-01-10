@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - EXTERNDEF directive
 ms.assetid: 95a10de6-c345-4428-a2f2-90f7d411dc86
-ms.openlocfilehash: e757781151bd1bb57940e5c54f7333a5daa93c74
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 2cc5884a7473da9175a6b6af4b4251314deffeb4
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74987900"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75313393"
 ---
 # <a name="externdef"></a>EXTERNDEF
 
@@ -21,12 +21,13 @@ ms.locfileid: "74987900"
 
 > **EXTERNDEF** ⟦*language-* type ⟧ *name* __:__ *type* ⟦ __,__ ⟦*language-* type ⟧ *name* __:__ *type* ...⟧
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
 *言語型*の引数は、32ビットの MASM でのみ有効です。
 
-*名前*がモジュールで定義されている場合は、[パブリック](../../assembler/masm/public-masm.md)として扱われます。 *名前*がモジュールで参照されている場合は、 [EXTERN](../../assembler/masm/extern-masm.md)として扱われます。 *名前*が参照されていない場合は無視されます。 この*型*は[ABS](../../assembler/masm/operator-abs.md)にすることができます。この場合、*名前*は定数としてインポートされます。 通常はインクルードファイルで使用されます。
+*名前*がモジュールで定義されている場合は、[パブリック](public-masm.md)として扱われます。 *名前*がモジュールで参照されている場合は、 [EXTERN](extern-masm.md)として扱われます。 *名前*が参照されていない場合は無視されます。 この*型*は[ABS](operator-abs.md)にすることができます。この場合、*名前*は定数としてインポートされます。 通常はインクルードファイルで使用されます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)
+[ディレクティブリファレンス](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

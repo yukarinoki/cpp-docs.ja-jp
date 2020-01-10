@@ -3,12 +3,12 @@ title: クラス、構造体、および共用体の中かっこの初期化
 description: 任意C++のクラス、構造体、または共用体と共に中かっこの初期化を使用する
 ms.date: 11/19/2019
 ms.assetid: 3e55c3d6-1c6b-4084-b9e5-221b151402f4
-ms.openlocfilehash: c746c6e4c17e5a55475d70f6dc3d927088af579f
-ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
+ms.openlocfilehash: a2c9db4572b0dde94c42ec6768a0f3bed7766a96
+ms.sourcegitcommit: 15677b0e4d2518847ce59b158990b25c4077e565
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/02/2019
-ms.locfileid: "74683001"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75652625"
 ---
 # <a name="brace-initialization"></a>かっこ初期化
 
@@ -128,13 +128,15 @@ int main()
 }
 ```
 
-かっこ初期化は、通常、初期化を行うときに使用できます。たとえば、関数パラメーターや戻り値として、または**new**キーワードを使用します。
+かっこ初期化を使用することができますの初期化をどこでも通常実行 — たとえば、関数パラメーターまたは戻り値として、**new**キーワード。
 
 ```cpp
 class_d* cf = new class_d{4.5};
 kr->add_d({ 4.5 });
 return { 4.5 };
 ```
+
+**/Std: c++ 17**モードでは、空の中かっこの初期化に関する規則の方が若干制限されています。 「[派生コンストラクターと拡張集計の初期化」を](constructors-cpp.md#extended_aggregate)参照してください。
 
 ## <a name="initializer_list-constructors"></a>initializer_list コンストラクター
 
@@ -162,11 +164,11 @@ if (ilist1.begin() == ilist2.begin())
 vector<int> v1{ 9, 10, 11 };
 map<int, string> m1{ {1, "a"}, {2, "b"} };
 string s{ 'a', 'b', 'c' };
-regex rgx{'x', 'y', 'z'};
+regex rgx{ 'x', 'y', 'z' };
 ```
 
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [クラスと構造体](../cpp/classes-and-structs-cpp.md)<br/>
 [コンストラクター](../cpp/constructors-cpp.md)
