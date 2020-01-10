@@ -1,6 +1,6 @@
 ---
-title: 書き込み
-ms.date: 11/04/2016
+title: write
+ms.date: 12/16/2019
 api_name:
 - write
 api_location:
@@ -23,13 +23,15 @@ f1_keywords:
 helpviewer_keywords:
 - write function
 ms.assetid: 1cbf112e-b9ef-4df6-993a-83abd4213acd
-ms.openlocfilehash: 509c973fd999fb041838c2ca7908387fc687a665
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 2892bb5f342f3bec26e82da069d013e76f877b03
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70950302"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75300782"
 ---
-# <a name="write"></a>書き込み
+# <a name="write"></a>write
 
-この POSIX 関数は非推奨とされます。 代わりに、ISO C++ に準拠する [_write](write.md) を使用してください。
+Microsoft 実装の POSIX 関数名 `write` は、 [_write](write.md)関数の非推奨のエイリアスです。 既定では、[コンパイラの警告 (レベル 3) C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)が生成されます。 名前は、実装固有の名前の標準 C 規則に従っていないため、非推奨とされます。 ただし、関数は引き続きサポートされます。
+
+代わりに[_write](write.md)を使用することをお勧めします。 または、この関数名を引き続き使用して、警告を無効にすることもできます。 詳細については、「警告と[POSIX の関数名](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names)を[無効にする](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning)」を参照してください。

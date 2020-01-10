@@ -6,25 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - END directive
 ms.assetid: 128d1c17-f4c4-4ac6-bdb7-d14b4a9a7f4c
-ms.openlocfilehash: dbaa9948f598f894e5dedbe04fd975936c34590b
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 5386a38df6a561f23d0a10ca32c4d39ff8f4576f
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74987974"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317397"
 ---
-# <a name="end-masm"></a>END (MASM)
+# <a name="end"></a>End
 
-モジュールの終了をマークし、必要に応じてプログラムのエントリポイントを*アドレス*に設定します。
+モジュールの終了をマークします。また、必要に応じて、プログラムのエントリポイントを*設定します*。
 
 ## <a name="syntax"></a>構文
 
-> **END** ⟦*address*⟧
+> **END** ⟦の終了*id*⟧
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-*アドレス*引数は32ビット MASM でのみ有効です。
+引数*は*、32ビット MASM でのみ有効です。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[ディレクティブリファレンス](directives-reference.md)
+[ディレクティブリファレンス](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

@@ -1,15 +1,15 @@
 ---
 title: Visual Studio での C++ ビルド システムの [フォルダーを開く] のサポート
-ms.date: 10/21/2019
+ms.date: 12/02/2019
 helpviewer_keywords:
 - Open Folder Projects in Visual Studio
 ms.assetid: abd1985e-3717-4338-9e80-869db5435175
-ms.openlocfilehash: 0eed40430050655f8fd9bdc83144adc7aa8c32e7
-ms.sourcegitcommit: ea9d78dbb93bf3f8841dde93dbc12bd66f6f32ff
+ms.openlocfilehash: 8342060e7286c1089312874199bf341ec36bed62
+ms.sourcegitcommit: 6c1960089b92d007fc28c32af1e4bef0f85fdf0c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72778335"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75556698"
 ---
 # <a name="open-folder-support-for-c-build-systems-in-visual-studio"></a>Visual Studio での C++ ビルド システムの [フォルダーを開く] のサポート
 
@@ -39,15 +39,15 @@ CMake は、 C++デスクトップワークロードのコンポーネントと�
 
 ## <a name="configure-code-navigation-with-cpppropertiesjson"></a>CppProperties を使用したコードナビゲーションの構成
 
-IntelliSense と参照の動作 ( **[定義へ移動**] など) を正しく動作させるには、Visual Studio で、使用しているコンパイラ、システムヘッダーの場所、およびその他のインクルードファイルが配置されている場所を指定する必要があります。開いたフォルダー (ワークスペースフォルダー)。 構成を指定するには、メインツールバーのドロップダウンから **[構成の管理]** を選択します。
+IntelliSense と参照の動作 ( **[定義へ移動**] など) を正しく動作させるには、Visual Studio で、使用しているコンパイラ、システムヘッダー、および追加のインクルードファイルが開かれているフォルダー (ワークスペースフォルダー) に直接存在しない場所を確認する必要があります。 構成を指定するには、メインツールバーのドロップダウンから **[構成の管理]** を選択します。
 
 ![構成の管理ドロップダウン](media/manage-configurations-dropdown.png)
 
-現在、Visual Studio では、次の4つの既定C++の構成が提供されています。すべて Microsoft コンパイラ用です。
+Visual Studio には、次の既定の構成が用意されています。
 
 ![既定の構成](media/default-configurations.png)
 
-たとえば、 **[x64-デバッグ]** を選択すると、Visual Studio はルートプロジェクトフォルダーに*cppproperties. json*という名前のファイルを作成し、次のように設定します。
+たとえば、 **[x64-デバッグ]** を選択すると、Visual Studio によって、ルートプロジェクトフォルダーに*cppproperties. json*というファイルが作成されます。
 
 ```json
 {
@@ -73,19 +73,18 @@ IntelliSense と参照の動作 ( **[定義へ移動**] など) を正しく動�
 }
 ```
 
-この構成は、Visual Studio [x64 開発者コマンドプロンプト](building-on-the-command-line.md)の環境変数を "継承" します。 これらの変数の1つは `INCLUDE`、`${env.INCLUDE}` マクロを使用してここで参照できます。 @No__t_0 プロパティは、IntelliSense に必要なすべてのソースを検索する場所を Visual Studio に指示します。 この場合、"INCLUDE 環境変数で指定されたすべてのディレクトリと、現在の作業フォルダーツリー内のすべてのディレクトリを検索" と表示されます。 @No__t_0 プロパティは、ドロップダウンに表示される名前で、任意の名前を指定できます。 @No__t_0 プロパティは、条件付きコンパイルブロックが検出されたときに IntelliSense にヒントを提供します。 @No__t_0 プロパティは、コンパイラの種類に基づいていくつかの追加のヒントを提供します。 MSVC、GCC、Clang では、いくつかのオプションを使用できます。
+この構成は、Visual Studio [x64 開発者コマンドプロンプト](building-on-the-command-line.md)の環境変数を継承します。 これらの変数の1つは `INCLUDE`、`${env.INCLUDE}` マクロを使用してここで参照できます。 `includePath` プロパティは、IntelliSense に必要なすべてのソースを検索する場所を Visual Studio に指示します。 この場合、"INCLUDE 環境変数で指定されたすべてのディレクトリと、現在の作業フォルダーツリー内のすべてのディレクトリを検索" と表示されます。 `name` プロパティは、ドロップダウンに表示される名前で、任意の名前を指定できます。 `defines` プロパティは、条件付きコンパイルブロックが検出されたときに IntelliSense にヒントを提供します。 `intelliSenseMode` プロパティは、コンパイラの種類に基づいていくつかの追加のヒントを提供します。 MSVC、GCC、Clang では、いくつかのオプションを使用できます。
 
 > [!NOTE]
 > Visual Studio が*Cppproperties. json*の設定を無視しているように思われる場合は、次のような例外を追加してみ*てください:* `!/CppProperties.json`。
 
-## <a name="example-configuration-for-gcc"></a>GCC の構成例
+## <a name="default-configuration-for-mingw-w64"></a>MinGW の既定の構成-mingw-w64
 
-Microsoft C++以外のコンパイラを使用している場合は、カスタム構成と環境を*cppproperties. json*で作成する必要があります。 次の例は、MSYS2 インストールで GCC を使用するための1つのカスタム構成を含む完全な*Cppproperties. json*ファイルを示しています。
+MinGW Mingw-w64 構成を追加すると、JSON は次のようになります。
 
 ```json
 {
-  "configurations": [
-   {
+  {
       "inheritEnvironments": [
         "mingw_64"
       ],
@@ -100,22 +99,19 @@ Microsoft C++以外のコンパイラを使用している場合は、カスタ�
           "MINGW64_ROOT": "C:\\msys64\\mingw64",
           "BIN_ROOT": "${env.MINGW64_ROOT}\\bin",
           "FLAVOR": "x86_64-w64-mingw32",
-          "TOOLSET_VERSION": "8.3.0",
-          "PATH": "${env.MINGW64_ROOT}\\bin;${env.MINGW64_ROOT}\\..\\usr\\local\\bin;${env.MINGW64_ROOT}\\..\\usr\\bin;${env.MINGW64_ROOT}\\..\\bin;${env.PATH}",
+          "TOOLSET_VERSION": "9.1.0",
+          "PATH": "${env.BIN_ROOT};${env.MINGW64_ROOT}\\..\\usr\\local\\bin;${env.MINGW64_ROOT}\\..\\usr\\bin;${env.MINGW64_ROOT}\\..\\bin;${env.PATH}",
           "INCLUDE": "${env.MINGW64_ROOT}\\include\\c++\\${env.TOOLSET_VERSION};${env.MINGW64_ROOT}\\include\\c++\\${env.TOOLSET_VERSION}\\tr1;${env.MINGW64_ROOT}\\include\\c++\\${env.TOOLSET_VERSION}\\${env.FLAVOR}",
           "environment": "mingw_64"
         }
       ]
-   }
+    }
 }
 ```
 
-@No__t_0 ブロックに注意してください。 環境変数と同様に動作するプロパティを定義します。このプロパティは、 *Cppproperties. json*ファイルだけでなく、その他の構成ファイルで*あるという* *タスク*でも使用できます。 @No__t_0 構成は `mingw_w64` 環境を継承し、その `INCLUDE` プロパティを使用して `includePath` の値を指定します。 必要に応じて、この配列プロパティに他のパスを追加することができます。
+`environments` ブロックに注意してください。 環境変数と同様に動作するプロパティを定義します。このプロパティは、 *Cppproperties. json*ファイルだけでなく、その他の構成ファイルで*あるという* *タスク*でも使用できます。 `Mingw64` 構成は `mingw_w64` 環境を継承し、その `INCLUDE` プロパティを使用して `includePath`の値を指定します。 必要に応じて、この配列プロパティに他のパスを追加することができます。
 
-> [!WARNING]
-> 現在、`environments` で指定された `INCLUDE` 値が `includePath` プロパティに正しく渡されないという既知の問題があります。 この問題を回避するには、完全なリテラルインクルードパスを `includePath` 配列に追加します。
-
-@No__t_0 プロパティは、GCC に適した値に設定されます。 これらすべてのプロパティの詳細については、「 [Cppproperties スキーマリファレンス](cppproperties-schema-reference.md)」を参照してください。
+`intelliSenseMode` プロパティは、GCC に適した値に設定されます。 これらすべてのプロパティの詳細については、「 [Cppproperties スキーマリファレンス](cppproperties-schema-reference.md)」を参照してください。
 
 すべてが正常に動作している場合は、型にマウスポインターを合わせると、GCC ヘッダーから IntelliSense が表示されます。
 
@@ -123,7 +119,7 @@ Microsoft C++以外のコンパイラを使用している場合は、カスタ�
 
 ## <a name="enable-intellisense-diagnostics"></a>IntelliSense 診断を有効にする
 
-IntelliSense が表示されない場合、トラブルシューティングを行うには、**ツール**  > **オプション** > **テキストエディター**  > **C/C++**   > **詳細**設定 に移動し、**ログを有効に**する を選択します。を**true**にします。 最初に、**ログ記録レベル**を5に設定し、フィルターを8に**ログ記録**するようにします。
+IntelliSense が表示されない場合、トラブルシューティングを行うには、 **[ツール]**  > [オプション > **テキストエディター** ] > [ **C++ C/**  > 詳細設定] に移動し、ログを **[有効]** にする を **[** **true** **]** に設定します。 最初に、**ログ記録レベル**を5に設定し、フィルターを8に**ログ記録**するようにします。
 
 ![診断ログ記録](media/diagnostic-logging.png)
 
@@ -158,9 +154,9 @@ IDE でタスクとして直接実行することで、現在のワークスペ�
 
 ```
 
-JSON ファイルは、**ソリューションエクスプローラー**の上部にある **[すべてのファイルを表示]** ボタンをクリックすると表示される vs サブフォルダーに配置されます *。* このタスクを実行するには**ソリューションエクスプローラー**のルートノードを右クリックし、**ビルド** hello の順に選択します。 タスクが完了すると、**ソリューションエクスプローラー**に新しいファイルが表示さ*れます。*
+JSON ファイルは、 *vs*サブフォルダーに配置されます。 このフォルダーを表示するには、**ソリューションエクスプローラー**の上部にある **[すべてのファイルを表示]** ボタンをクリックします。 このタスクを実行するには**ソリューションエクスプローラー**のルートノードを右クリックし、**ビルド** hello の順に選択します。 タスクが完了すると、**ソリューションエクスプローラー**に新しいファイルが表示さ*れます。*
 
-さまざまな種類のタスクを定義できます。 次の例は、1つのタスクを定義する*tasks と json ファイル*を示しています。 `taskLabel` では、コンテキスト メニューに表示される名前を定義します。 `appliesTo` では、コマンドを実行できるファイルを定義します。 @No__t_0 プロパティは、COMSPEC 環境変数を参照します。これは、コンソールのパス (Windows の場合は*cmd.exe* ) を識別します。 CppProperties.json または CMakeSettings.json で宣言されている環境変数を参照することもできます。 `args` プロパティでは、呼び出すコマンド ラインを指定します。 `${file}` マクロは、**ソリューション エクスプローラー**で選択したファイルを取得します。 次の例では、現在選択されている .cpp ファイルのファイル名が表示されます。
+さまざまな種類のタスクを定義できます。 次の例は、1つのタスクを定義する*tasks と json ファイル*を示しています。 `taskLabel` では、コンテキスト メニューに表示される名前を定義します。 `appliesTo` では、コマンドを実行できるファイルを定義します。 `command` プロパティは、COMSPEC 環境変数を参照します。これは、コンソールのパス (Windows の場合は*cmd.exe* ) を識別します。 CppProperties.json または CMakeSettings.json で宣言されている環境変数を参照することもできます。 `args` プロパティでは、呼び出すコマンド ラインを指定します。 `${file}` マクロは、**ソリューション エクスプローラー**で選択したファイルを取得します。 次の例では、現在選択されている .cpp ファイルのファイル名が表示されます。
 
 ```json
 {
@@ -183,7 +179,7 @@ JSON ファイルは、**ソリューションエクスプローラー**の上�
 
 ### <a name="configure-debugging-parameters-with-launchvsjson"></a>launch.vs.json でデバッグ パラメーターを構成する
 
-プログラムのコマンドライン引数とデバッグ手順をカスタマイズするには、**ソリューションエクスプローラー**で実行可能ファイルを右クリックし、 **[デバッグと起動の設定]** を選択します。 これにより、既存の*起動と json*ファイルが開きます。存在しない場合は、最小の起動設定のセットを含む新しいファイルが作成されます。 まず、どの種類のデバッグセッションを構成するかを選択します。 MinGw mingw-w64 プロジェクトをデバッグする場合は、 **MinGGW/cygwin (gdb) に対して C/C++ Launch**を選択します。 これにより、 *gdb*を使用して既定値についての何らかの推測を行うための起動構成が作成されます。 これらの既定値の1つは `MINGW_PREFIX` です。 次に示すようにリテラルパスを置き換えることも、 *Cppproperties. json*で `MINGW_PREFIX` プロパティを定義することもできます。
+プログラムのコマンドライン引数とデバッグ手順をカスタマイズするには、**ソリューションエクスプローラー**で実行可能ファイルを右クリックし、 **[デバッグと起動の設定]** を選択します。 これにより、既存の*起動と json*ファイルが開きます。存在しない場合は、最小の起動設定のセットを含む新しいファイルが作成されます。 まず、どの種類のデバッグセッションを構成するかを選択します。 MinGw mingw-w64 プロジェクトをデバッグする場合は、 **MinGw/cygwin (gdb) に対して C/C++ Launch**を選択します。 これにより、 *gdb*を使用して既定値についての何らかの推測を行うための起動構成が作成されます。 これらの既定値の1つは `MINGW_PREFIX`です。 次に示すようにリテラルパスを置き換えることも、 *Cppproperties. json*で `MINGW_PREFIX` プロパティを定義することもできます。
 
 ```json
 {

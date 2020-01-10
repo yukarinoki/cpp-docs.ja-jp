@@ -25,19 +25,19 @@ helpviewer_keywords:
 - debugging [CRT], heap-related problems
 - _heapset function
 ms.assetid: 9667eeb0-55bc-4c19-af5f-d1fd0a142b3c
-ms.openlocfilehash: 65b74798c4b3b513acea0b51ecc0cb7df98391c1
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
-ms.translationtype: HT
+ms.openlocfilehash: c47ab59b1d8b9e73add640f7a7cf5fb146dc7c53
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944305"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75300262"
 ---
 # <a name="_heapset"></a>_heapset
 
 ヒープの最小限の一貫性をチェックし、空きエントリを指定した値に設定します。
 
 > [!IMPORTANT]
->  これは古い関数です。 Visual Studio 2015 以降、CRT で使用できません。
+>  これは古い関数です。 Visual Studio 2015 以降では、CRT で使用できません。
 
 ## <a name="syntax"></a>構文
 
@@ -63,25 +63,25 @@ int _heapset(
 | `_HEAPEMPTY`  | ヒープが初期化されていません。  |
 | `_HEAPOK`  | ヒープは一貫性があると思われます。  |
 
-また、エラーが発生した場合、`_heapset` は `errno` を `ENOSYS` に設定します。
+また、エラーが発生した場合、 `_heapset` は `errno` を `ENOSYS`に設定します。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>コメント
 
 `_heapset` 関数は、誤って上書きされた空きメモリの場所またはノードを示します。
 
 `_heapset` は、ヒープの最小限の一貫性をチェックし、ヒープの空きエントリの各バイトに `fill` 値を設定します。 この既知の値は、空きノードがあるヒープのメモリ位置を示すとともに、解放されたメモリに誤って書き込まれたデータを含むのはどれかを示します。 オペレーティング システムで `_heapset` がサポートされていない場合 (Windows 98 など)、この関数は `_HEAPOK` を返し、`errno` を `ENOSYS` に設定します。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|ルーチンによって返される値|必須ヘッダー|オプション ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|省略可能なヘッダー|
 |-------------|---------------------|---------------------|
 |`_heapset`|\<malloc.h>|\<errno.h>|
 
-互換性について詳しくは、概要の「[互換性](../c-runtime-library/compatibility.md)」をご覧ください。
+互換性の詳細については、「C ランタイム ライブラリ」の「 [互換性](../c-runtime-library/compatibility.md) 」を参照してください。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
-```
+```c
 // crt_heapset.c
 // This program checks the heap and
 // fills in free entries with the character 'Z'.

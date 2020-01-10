@@ -1,6 +1,7 @@
 ---
 title: _mbclen、mblen、_mblen_l、_mbclen_l
-ms.date: 01/22/2019
+description: Microsoft C ランタイムライブラリ (CRT) の _mbclen、mblen、_mblen_l、および _mbclen_l の各関数について説明します。
+ms.date: 01/08/2020
 api_name:
 - _mbclen
 - mblen
@@ -42,12 +43,12 @@ helpviewer_keywords:
 - mbclen function
 - mblen function
 ms.assetid: d5eb92a0-b7a3-464a-aaf7-9890a8e3ed70
-ms.openlocfilehash: 96775f513b33eb407981480c17cb609dd85383f6
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 4676d850448af386a5aface69f616a4ac6f85cbf
+ms.sourcegitcommit: 7bd3567fc6a0e7124aab51cad63bbdb44a99a848
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952562"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75755070"
 ---
 # <a name="_mbclen-mblen-_mblen_l-_mbclen_l"></a>_mbclen、mblen、_mblen_l、_mbclen_l
 
@@ -79,29 +80,33 @@ int _mblen_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*c*<br/>
+*c*\
 マルチバイト文字。
 
-*mbstr*<br/>
+*mbstr*\
 マルチバイト文字のバイト シーケンスのアドレス。
 
-*count*<br/>
+*カウント*\
 チェックするバイト数。
 
-*locale*<br/>
+*ロケール*\
 使用するロケール。
 
 ## <a name="return-value"></a>戻り値
 
-**_mbclen**は1または2を返します。これは、マルチバイト文字*c*が1バイトまたは2バイト長であるかどうかによって異なります。 **_Mbclen**のエラーは返されません。 *Mbstr*が**NULL**でない場合、 **mblen**はマルチバイト文字の長さをバイト単位で返します。 *Mbstr*が**null**の場合、またはワイド文字の null 文字を指している場合、 **mblen**は0を返します。 *Mbstr*が指すオブジェクトが、最初の*カウント*文字の中で有効なマルチバイト文字を形成していない場合、 **mblen**は-1 を返します。
+**_mbclen**と **_mbclen_l**は、マルチバイト文字*c*の長さに従って1または2を返します。 関数は、 *c*がマルチバイトであるかどうかにかかわらず、常に utf-8 に対して1を返します。 **_Mbclen**のエラーは返されません。
+
+*Mbstr*が**NULL**でない場合、 **mblen**と **_mblen_l**はマルチバイト文字の長さをバイト単位で返します。 **Mblen**関数と **_mblen_l**関数は、utf-8 では正しく動作し、1 ~ 3 の値を返す場合があります。 *Mbstr*が**null** (またはワイド文字の null 文字を指している) の場合、 **mblen**と **_mblen_l**は0を返します。 *Mbstr*が指すオブジェクトは、最初の*カウント*文字の中で有効なマルチバイト文字を形成する必要があります。または、 **mblen**と **_mblen_l**は-1 を返します。
 
 ## <a name="remarks"></a>Remarks
 
-**_Mbclen**関数は、マルチバイト文字*c*の長さをバイト単位で返します。 **_Ismbblead**への暗黙の呼び出しによって、 *c*がマルチバイト文字の先行バイトを指していない場合、 **_mbclen**の結果は予測できません。
+**_Mbclen**関数は、マルチバイト文字*c*の長さをバイト単位で返します。 *C*がマルチバイト文字の先行バイトを指していない場合 ( [_ismbblead](ismbblead-ismbblead-l.md)への暗黙的な呼び出しによって決定された場合)、 **_mbclen**の結果は予測できません。
 
-**mblen**は、有効なマルチバイト文字の場合は*mbstr*の長さをバイト単位で返し、コードページに関連付けられたマルチバイト文字の有効性を判断します。 **mblen**は、 *mbstr*に含まれているが**MB_CUR_MAX**バイトを超えるバイト*数*以下を調べます。
+有効なマルチバイト文字の場合、 **mblen**は*mbstr*の長さをバイト単位で返します。 また、コードページに関連付けられているマルチバイト文字の有効性も確認します。 **mblen**は、 *mbstr*に含まれているが**MB_CUR_MAX**バイト数以下のバイト*数*を調べます。
 
-出力値は、ロケールの**LC_CTYPE**カテゴリの設定に影響されます。詳細については、「 [setlocale](setlocale-wsetlocale.md) 」を参照してください。 **_L**サフィックスが付いていないこれらの関数のバージョンは、このロケールに依存する動作に現在のロケールを使用します。 末尾**のサフィックスが付い**たバージョンは同じように動作しますが、渡されたロケールパラメーターを代わりに使用します。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+出力値は、ロケールの**LC_CTYPE**カテゴリの設定に影響されます。 **_L**サフィックスが付いていないこれらの関数のバージョンは、このロケールに依存する動作に現在のロケールを使用します。 **_L**サフィックスが付いたバージョンは同じように動作しますが、渡されたロケールパラメーターを代わりに使用します。 詳細については、「 [setlocale](setlocale-wsetlocale.md)と[ロケール](../../c-runtime-library/locale.md)」を参照してください。
+
+**_mbclen**、 **_mblen_l**、および **_mbclen_l**は、標準 C ライブラリの一部ではなく、Microsoft 固有のものです。 移植性のあるコードを作成する場合は、使用しないことをお勧めします。 標準 C 互換の場合は、代わりに**mblen**または**mbrlen**を使用します。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -109,7 +114,7 @@ int _mblen_l(
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tclen**|マクロまたはインライン関数にマップされます|**_mbclen**|マクロまたはインライン関数にマップされます|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
@@ -117,9 +122,9 @@ int _mblen_l(
 |**mblen**|\<stdlib.h>|
 |**_mblen_l**|\<stdlib.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 ```C
 // crt_mblen.c
@@ -160,8 +165,9 @@ Length in bytes of NULL multibyte character 0: 0
 
 ## <a name="see-also"></a>関連項目
 
-[文字分類](../../c-runtime-library/character-classification.md)<br/>
-[ロケール](../../c-runtime-library/locale.md)<br/>
-[マルチバイト文字のシーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
-[_mbccpy、_mbccpy_l](mbccpy-mbccpy-l.md)<br/>
-[strlen、wcslen、_mbslen、_mbslen_l、_mbstrlen、_mbstrlen_l](strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md)<br/>
+[文字分類](../../c-runtime-library/character-classification.md)\
+[ロケール](../../c-runtime-library/locale.md)\
+[マルチバイト文字のシーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)\
+[_mbccpy、_mbccpy_l](mbccpy-mbccpy-l.md)\
+[mbrlen](mbrlen.md)\
+[strlen、wcslen、_mbslen、_mbslen_l、_mbstrlen、_mbstrlen_l](strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md)

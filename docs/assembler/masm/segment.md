@@ -1,17 +1,17 @@
 ---
 title: SEGMENT
-ms.date: 12/06/2019
+ms.date: 12/16/2019
 f1_keywords:
 - SEGMENT
 helpviewer_keywords:
 - SEGMENT directive
 ms.assetid: e6f68367-6714-4f06-a79c-edfa88014430
-ms.openlocfilehash: 933e4e42b4b0f9cc979a3e67805d017f723472ef
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 569604bfd6ed11039ce5492223b8d5f986ceea7a
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988005"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318463"
 ---
 # <a name="segment"></a>SEGMENT
 
@@ -25,7 +25,7 @@ ms.locfileid: "74988005"
 
 #### <a name="parameters"></a>パラメーター
 
-*align*<br/>
+\ の*配置*
 セグメントの開始アドレスを選択できるメモリアドレスの範囲。 アラインメントの種類には、次のいずれかを指定できます。
 
 |配置の種類|開始アドレス|
@@ -58,10 +58,11 @@ _string_\
 *class*\
 アセンブルされたファイル内でセグメントを結合および順序付けする方法を指定します。 一般的な値は、、`'DATA'`、`'CODE'`、`'CONST'`、および `'STACK'`
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
 `ALIGN(n)`の場合、 *n*は 1 ~ 8192 の2の累乗になります。 **/omf**ではサポートされていません。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[ディレクティブリファレンス](directives-reference.md)
+[ディレクティブリファレンス](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

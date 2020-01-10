@@ -6,21 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - .BREAK directive
 ms.assetid: 4f55dfce-ff41-4a68-9423-b0077dfc9206
-ms.openlocfilehash: e4692e38cbbdda4ad09bdfa248c9bc386c27dd3d
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 3096aaf827eecb4e297e5a1d04f5e982294053de
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74398592"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75314134"
 ---
 # <a name="break-32-bit-masm"></a>.中断 (32 ビット MASM)
 
-を終了するコードを生成[します。また](../../assembler/masm/dot-while.md)は[。](../../assembler/masm/dot-repeat.md)*条件*が true の場合、ブロックを繰り返します。 (32 ビット MASM のみ。)
+を終了するコードを生成[します。また](dot-while.md)は[。](dot-repeat.md)*条件*が true の場合、ブロックを繰り返します。 (32 ビット MASM のみ。)
 
 ## <a name="syntax"></a>構文
 
 > **.** ⟦**を中断します。IF** *condition*⟧
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)
+[ディレクティブリファレンス](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

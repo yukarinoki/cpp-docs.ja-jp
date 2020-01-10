@@ -1,26 +1,27 @@
 ---
 title: STRUC
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - STRUC
 helpviewer_keywords:
 - STRUC directive
 ms.assetid: 1c7c131e-b787-4902-8db7-3a2342e523f9
-ms.openlocfilehash: fcd4a0e97f5bb93b02b1e3fc53202796ceaf8d15
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 1070b3884d5cbaedbcd2f2502c7a10c68e17bdef
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74393675"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75319178"
 ---
 # <a name="struc"></a>STRUC
 
-「[構造体](../../assembler/masm/struct-masm.md)」を参照してください。
+「[構造体](struct-masm.md)」を参照してください。
 
 ## <a name="syntax"></a>構文
 
 > **STRUC**
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[ディレクティブリファレンス](directives-reference.md)
+[ディレクティブリファレンス](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

@@ -1,16 +1,16 @@
 ---
 title: MASM オペレーターリファレンス
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 helpviewer_keywords:
 - MASM (Microsoft Macro Assembler), operators reference
 - operators [MASM]
 ms.assetid: c069cab7-d6b0-4f82-a6ce-0ca3fc7e6428
-ms.openlocfilehash: 5295307ad668b76e5ff39882ce2613f2042f914a
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: c0059ab1b0204b79e040d18bd5aa88145775ebcd
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74395208"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318762"
 ---
 # <a name="masm-operators-reference"></a>MASM オペレーターリファレンス
 
@@ -47,7 +47,7 @@ ms.locfileid: "74395208"
 |[\! (文字リテラル)](operator-logical-not-masm.md)|[% (テキストとして扱う)](operator-percent.md)||
 |[;;(コメントとして扱う)](operator-semicolons.md)|[&lt; &gt; (1 つのリテラルとして扱う)](operator-literal.md)|[& & (代替パラメーター値)](operator-logical-and-masm.md)|
 
-## <a name="miscellaneous"></a>その他
+## <a name="miscellaneous"></a>その他の指定
 
 ||||
 |-|-|-|
@@ -77,7 +77,7 @@ ms.locfileid: "74395208"
 |[オフセット (セグメントの相対オフセット)](operator-offset.md)|[SECTIONREL (セクション相対オフセット)](operator-sectionrel.md)|
 |[SEG (セグメントの取得)](operator-seg.md)||
 
-## <a name="type"></a>種類
+## <a name="type"></a>の型
 
 ||||
 |-|-|-|
@@ -88,6 +88,7 @@ ms.locfileid: "74395208"
 |[SIZEOF (型または変数のサイズ)](operator-sizeof.md)|[この (現在の場所)](operator-this.md)|[型 (式の型の取得)](operator-type.md)|
 |[.型 (引数の型の情報を取得)](operator-dot-type.md)|||
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[Microsoft Macro Assembler リファレンス](microsoft-macro-assembler-reference.md)<br/>
+[Microsoft マクロアセンブラーリファレンス](microsoft-macro-assembler-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

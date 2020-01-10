@@ -1,17 +1,17 @@
 ---
 title: .SETFRAME
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - .SETFRAME
 helpviewer_keywords:
 - .SETFRAME directive
 ms.assetid: eaa9b5ed-4daa-4f1e-bdb6-100758007ab3
-ms.openlocfilehash: a21dda496d32abcfeb4692d0228afdbcfd4e5ebb
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 8c491a811634995398a37aa001cc1c93f8434114
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74397930"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318242"
 ---
 # <a name="setframe"></a>.SETFRAME
 
@@ -23,11 +23,11 @@ ms.locfileid: "74397930"
 
 ## <a name="remarks"></a>コメント
 
-**.SETFRAME**を使用すると、ml64.exe ユーザーは、フレーム関数をアンワインドする方法を指定できます。これは、 [PROC](../../assembler/masm/proc.md) frame 宣言からに拡張されたプロローグ内でのみ使用でき[ます。ENDPROLOG](../../assembler/masm/dot-endprolog.md)ディレクティブ。 これらのディレクティブはコードを生成しません。`.xdata` と `.pdata`のみが生成されます。 **.SETFRAME**の前には、アンワインドするアクションを実際に実装する命令が必要です。 アンワインドディレクティブと、マクロでアンワインドするコードをラップして、アグリーメントを保証することをお勧めします。
+**.SETFRAME**を使用すると、ml64.exe ユーザーは、フレーム関数をアンワインドする方法を指定できます。これは、 [PROC](proc.md) frame 宣言からに拡張されたプロローグ内でのみ使用でき[ます。ENDPROLOG](dot-endprolog.md)ディレクティブ。 これらのディレクティブはコードを生成しません。`.xdata` と `.pdata`のみが生成されます。 **.SETFRAME**の前には、アンワインドするアクションを実際に実装する命令が必要です。 アンワインドディレクティブと、マクロでアンワインドするコードをラップして、アグリーメントを保証することをお勧めします。
 
-詳細については、「 [MASM for x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md)」を参照してください。
+詳細については、「 [MASM for x64 (ml64.exe)](masm-for-x64-ml64-exe.md)」を参照してください。
 
-## <a name="sample"></a>サンプル
+## <a name="sample"></a>［サンプル］
 
 ### <a name="description"></a>説明
 
@@ -62,6 +62,7 @@ _text ENDS
 END
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[ディレクティブリファレンス](directives-reference.md)
+[ディレクティブリファレンス](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - .IF directive
 ms.assetid: dccc7615-8fc7-4829-9f39-0ee405f6c1e3
-ms.openlocfilehash: e8213052dce8d84d62f90d4bc2653435c2b31434
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 6992ec8b151a83b3f9fa920997845c20caf0476d
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74398233"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317748"
 ---
 # <a name="if-32-bit-masm"></a>.IF (32 ビット MASM)
 
@@ -29,8 +29,9 @@ ms.locfileid: "74398233"
 
 ## <a name="remarks"></a>コメント
 
-の場合は[。それ以外](../../assembler/masm/dot-else.md)の場合は、元の条件が false の場合にステートメントが実行されます。 条件は実行時に評価されることに注意してください。
+の場合は[。それ以外](dot-else.md)の場合は、元の条件が false の場合にステートメントが実行されます。 条件は実行時に評価されることに注意してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[ディレクティブリファレンス](directives-reference.md)
+[ディレクティブリファレンス](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

@@ -1,17 +1,17 @@
 ---
 title: x64 用 MASM (ml64.exe)
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 helpviewer_keywords:
 - ml64
 - ml64.exe
 - masm for x64
 ms.assetid: 89059103-f372-4968-80ea-0c7f90bb9c91
-ms.openlocfilehash: 68f5a14b092109a647e7a81ed6c3fef148a5571b
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 5e324414a0d4d7e74bb28d54c1d858ef6fb9793c
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74397226"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75312743"
 ---
 # <a name="masm-for-x64-ml64exe"></a>x64 用 MASM (ml64.exe)
 
@@ -19,7 +19,7 @@ Visual Studio には、x64 コードをターゲットにするために、32ビ
 
 MASM を使用して x64 ターゲットのコードをコマンドラインでビルドするには、x64 ターゲット用の開発者コマンドプロンプトを使用する必要があります。これにより、必要なパスとその他の環境変数が設定されます。 開発者コマンドプロンプトを起動する方法の詳細については、「[コマンドラインでのC++ C/コードのビルド](../../build/building-on-the-command-line.md)」を参照してください。
 
-Ml64.exe コマンドラインオプションの詳細については、「 [ML および Ml64.exe コマンドラインリファレンス](../../assembler/masm/ml-and-ml64-command-line-reference.md)」を参照してください。
+Ml64.exe コマンドラインオプションの詳細については、「 [ML および Ml64.exe コマンドラインリファレンス](ml-and-ml64-command-line-reference.md)」を参照してください。
 
 インラインアセンブラーまたは ASM キーワードの使用は、x64 ターゲットまたは ARM ターゲットではサポートされていません。 インラインアセンブラーを使用する x86 コードを x64 または ARM に移植するには、コードをC++に変換するか、コンパイラの組み込みを使用するか、アセンブラー言語のソースファイルを作成します。 Microsoft C++コンパイラは、可能な限りクロスプラットフォーム方式に近い形で、特殊な関数命令 (privileged、bit scan/test、インタロックなど) を使用できるようにするための組み込みをサポートしています。 使用可能な組み込みの詳細については、「[コンパイラの組み込み](../../intrinsics/compiler-intrinsics.md)」を参照してください。
 
@@ -43,21 +43,21 @@ Visual Studio プロジェクトシステムでは、 C++プロジェクトで M
 
 X64 を対象とするアセンブラー言語のソースコードでは、次の ml64.exe 固有のディレクティブを使用できます。
 
-- [.ALLOCSTACK](../../assembler/masm/dot-allocstack.md)
+- [.ALLOCSTACK](dot-allocstack.md)
 
-- [.ENDPROLOG](../../assembler/masm/dot-endprolog.md)
+- [.ENDPROLOG](dot-endprolog.md)
 
-- [.PUSHFRAME](../../assembler/masm/dot-pushframe.md)
+- [.PUSHFRAME](dot-pushframe.md)
 
-- [.PUSHREG](../../assembler/masm/dot-pushreg.md)
+- [.PUSHREG](dot-pushreg.md)
 
-- [.SAVEREG](../../assembler/masm/dot-savereg.md)
+- [.SAVEREG](dot-savereg.md)
 
-- [.SAVEXMM128](../../assembler/masm/dot-savexmm128.md)
+- [.SAVEXMM128](dot-savexmm128.md)
 
-- [.SETFRAME](../../assembler/masm/dot-setframe.md)
+- [.SETFRAME](dot-setframe.md)
 
-さらに、ml64.exe で使用できるように[PROC](../../assembler/masm/proc.md)ディレクティブが更新されました。
+さらに、ml64.exe で使用できるように[PROC](proc.md)ディレクティブが更新されました。
 
 ## <a name="32-bit-address-mode-address-size-override"></a>32-ビットアドレスモード (アドレスサイズのオーバーライド)
 
@@ -80,6 +80,6 @@ mov eax, DWORD PTR [rcx*2+r10d]
 mov eax, DWORD PTR [ecx*2+r10+0100h]
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[Microsoft Macro Assembler リファレンス](../../assembler/masm/microsoft-macro-assembler-reference.md)
+[Microsoft Macro Assembler リファレンス](microsoft-macro-assembler-reference.md)

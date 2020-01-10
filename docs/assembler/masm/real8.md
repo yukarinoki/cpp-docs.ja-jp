@@ -1,17 +1,17 @@
 ---
 title: REAL8
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - REAL8
 helpviewer_keywords:
 - REAL8 directive
 ms.assetid: 757244ea-e4c9-4fc9-94ec-16313578bede
-ms.openlocfilehash: 3d1d5826ece0cd9eb45b9c095b1d00702be0f89d
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: d709f79ecab33a53f780dec774dfbcb5c7d81172
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74394611"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318554"
 ---
 # <a name="real8"></a>REAL8
 
@@ -21,6 +21,7 @@ ms.locfileid: "74394611"
 
 > *名前* **REAL8** *initializer* ⟦ __、__ *初期化子*...⟧
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[ディレクティブリファレンス](../../assembler/masm/directives-reference.md)
+[ディレクティブリファレンス](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

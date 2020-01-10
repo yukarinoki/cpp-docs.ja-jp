@@ -1,18 +1,18 @@
 ---
 title: SIZEOF 演算子
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - operator SIZEOF
 helpviewer_keywords:
 - sizeof operator
 - operator SIZEOF
 ms.assetid: a14ed307-7d01-4be5-982f-64982a348589
-ms.openlocfilehash: 969b0f2490892ea33d5fe27548ff3866402f576c
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 28870c523e1fbab7e2ee510dacbf9a3b5248fd11
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74395528"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318866"
 ---
 # <a name="operator-sizeof"></a>SIZEOF 演算子
 
@@ -22,6 +22,7 @@ ms.locfileid: "74395528"
 
 > **SIZEOF** {*variable* | *type*}
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[演算子リファレンス](operators-reference.md)
+[演算子リファレンス](operators-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

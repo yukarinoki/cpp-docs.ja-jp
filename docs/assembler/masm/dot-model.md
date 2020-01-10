@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - .MODEL directive
 ms.assetid: 057f00df-1515-4c55-852a-d936c8a34b53
-ms.openlocfilehash: bfc114a6e71c0eb0ae70005c2657871b6c9e9692
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 92f14a352e5c177d767232eed36a7e705fd155ce
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74398111"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317631"
 ---
 # <a name="model-32-bit-masm"></a>.モデル (32 ビット MASM)
 
@@ -38,11 +38,11 @@ ms.locfileid: "74398111"
 
 ## <a name="remarks"></a>コメント
 
-**.モデル**は、 [x64 (ml64.exe) の MASM](../../assembler/masm/masm-for-x64-ml64-exe.md)では使用されません。
+**.モデル**は、 [x64 (ml64.exe) の MASM](masm-for-x64-ml64-exe.md)では使用されません。
 
 次の表は、16 ビットおよび 32 ビットのプラットフォームを対象とする場合に各パラメーターで使用できる値を示しています。
 
-|パラメーター|32 ビットの値|16 ビットの値 (以前の 16 ビット開発のサポート)|
+|パラメータ|32 ビットの値|16 ビットの値 (以前の 16 ビット開発のサポート)|
 |---------------|--------------------|----------------------------------------------------------------|
 |*メモリ-モデル*|**現状**|**極小**、**小**、**コンパクト**、**中**、**大**、**特大**、**フラット**|
 |*言語の種類*|**C**、 **STDCALL**|**C**、 **BASIC**、 **FORTRAN**、 **PASCAL**、 **SYSCALL**、 **STDCALL**|
@@ -54,7 +54,7 @@ MASM 関連のサンプルについては、[Visual Studio 2010 向けの Visual
 
 `.MODEL` ディレクティブの使用例を次に示します。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 ```asm
 ; file simple.asm
@@ -86,6 +86,7 @@ fxn ENDP
 end
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)
+[ディレクティブリファレンス](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

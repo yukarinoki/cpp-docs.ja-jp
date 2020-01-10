@@ -5,12 +5,12 @@ description: Visual Studio の Microsoft C++ は、C++20 言語標準との完�
 ms.technology: cpp-language
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 06fa060b674e51a3352a9a928bccdbfa6c63aae4
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: de31c2e61f0a10c785d610d3227a659c59b56d38
+ms.sourcegitcommit: 00f50ff242031d6069aa63c81bc013e432cae0cd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74858036"
+ms.lasthandoff: 12/30/2019
+ms.locfileid: "75546433"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Visual Studio の C++ 準拠の強化
 
@@ -1135,7 +1135,7 @@ Visual Studio の以前のバージョンでは、変数が **extern** として
 
 ### <a name="rewording-enable_shared_from_this"></a>`enable_shared_from_this` の新しい表現
 
-[P0033R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0033r1.html) `enable_shared_from_this` は C++ 11 で追加されました。 C++ 17 標準では、特殊なケースの処理を改善するために仕様を更新します。 [14]
+[P0033R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0033r1.html) C++ 11 で `enable_shared_from_this` が追加されました。 C++ 17 標準では、特殊なケースの処理を改善するために仕様を更新します。 [14]
 
 ### <a name="splicing-maps-and-sets"></a>マップと設定のスプライス
 
@@ -1151,9 +1151,9 @@ Visual Studio の以前のバージョンでは、変数が **extern** として
 
 ### <a name="fixes-for-not_fn"></a>`not_fn()` の修正
 
-[P0358R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0358r1.html) `std::not_fn` の新しい表現は、ラッパー呼び出し時の値のカテゴリの伝達をサポートします。
+[P0358R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0358r1.html)`std::not_fn` の新しい表現は、ラッパー呼び出し時の値のカテゴリの伝達をサポートします。
 
-### <a name="shared_ptrt-shared_ptrtn"></a>`shared_ptr<T[]>`、 `shared_ptr<T[N]>`
+### <a name="shared_ptrt-shared_ptrtn"></a>`shared_ptr<T[]>`、`shared_ptr<T[N]>`
 
 [P0414R2](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0414r2.html) ライブラリ基盤から C++ 17 への `shared_ptr` の変更のマージ。 [14]
 
@@ -1241,13 +1241,11 @@ B b(42L); // now calls B(int)
 
 [P0017R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0017r1.html)
 
-基本クラスのコンストラクターがパブリックでない場合、Visual Studio バージョン 15.7 の **/std:c++17** モードでは、空のかっこを使用して派生型のオブジェクトを初期化することができなくなりました。
-
+基底クラスのコンストラクターがパブリックではないが、派生クラスからアクセスできる場合、Visual Studio 2017 バージョン 15.7 の **/std:c++17** モードでは、空のかっこを使用して派生型のオブジェクトを初期化することができなくなりました。
 次の例では、C++14 の準拠ビヘイビアーを示します。
 
 ```cpp
 struct Derived;
-
 struct Base {
     friend struct Derived;
 private:
@@ -1255,32 +1253,26 @@ private:
 };
 
 struct Derived : Base {};
-
 Derived d1; // OK. No aggregate init involved.
 Derived d2 {}; // OK in C++14: Calls Derived::Derived()
                // which can call Base ctor.
 ```
 
 C++17 で、`Derived` は集約型と見なされるようになりました。 つまり、既定のプライベート コンストラクターによる `Base` の初期化は、集約初期化ルールの一部として直接実行されます。 以前、`Base` プライベート コンストラクターは `Derived` コンストラクターを介して呼び出され、friend 宣言があるために成功していました。
-
 次の例では、Visual Studio バージョン 15.7 の C++17 ビヘイビアーを **/std:c++17** モードで示しまています。
 
 ```cpp
 struct Derived;
-
 struct Base {
     friend struct Derived;
 private:
     Base() {}
 };
-
 struct Derived : Base {
     Derived() {} // add user-defined constructor
                  // to call with {} initialization
 };
-
 Derived d1; // OK. No aggregate init involved.
-
 Derived d2 {}; // error C2248: 'Base::Base': cannot access
                // private member declared in class 'Base'
 ```
@@ -1928,7 +1920,7 @@ __declspec(noinline) extern "C" HRESULT __stdcall //C4768
 extern "C" __declspec(noinline) HRESULT __stdcall
 ```
 
-15.3 の既定ではこの警告はオフになっており (15.5 では既定でオン)、 **/Wall** **/WX** を指定してコンパイルされたコードにのみ影響します。
+15.3 では既定でこの警告はオフになっており (15.5 では既定でオン)、 **/Wall** **/WX** を指定してコンパイルされたコードにのみ影響します。
 
 ### <a name="decltype-and-calls-to-deleted-destructors"></a>**decltype** と削除されたデストラクターの呼び出し
 

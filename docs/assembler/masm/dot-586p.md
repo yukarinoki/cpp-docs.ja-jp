@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - .586P directive
 ms.assetid: 90da2a7d-66f4-4073-b1a9-874de6e8f05d
-ms.openlocfilehash: d12d180d43302044a9c3906ffd9b2d197b74b067
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: af6bd0545631ae348f88a77bc724dd0530e69b68
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74398654"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75314498"
 ---
 # <a name="586p-32-bit-masm"></a>. 586P (32 ビット MASM)
 
@@ -21,6 +21,7 @@ Pentium プロセッサのすべての命令 (特権を含む) のアセンブ�
 
 > **.586P**
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)
+[ディレクティブリファレンス](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

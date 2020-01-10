@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - .PUSHFRAME directive
 ms.assetid: 17b123d0-4c6d-4fd2-85eb-798e8ad0a73c
-ms.openlocfilehash: 5f951396291ecb12dab500a364f176106c5daa8b
-ms.sourcegitcommit: 2cac0150ab3bc8260f866451019b8e22c7e1ac11
+ms.openlocfilehash: 0aaec119d26d87fddb1eba505458da1250a5926e
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/09/2019
-ms.locfileid: "74945853"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317579"
 ---
 # <a name="pushframe"></a>.PUSHFRAME
 
@@ -22,12 +22,13 @@ ms.locfileid: "74945853"
 
 > **.PUSHFRAME** ⟦**CODE**⟧;;
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-.PUSHFRAME を使用すると、ml64.exe ユーザーは、フレーム関数をアンワインドする方法を指定できます。 これはプロローグ内でのみ許可されます。これは、 [PROC](../../assembler/masm/proc.md) FRAME 宣言からにまで拡張され[ます。ENDPROLOG](../../assembler/masm/dot-endprolog.md)ディレクティブ。 これらのディレクティブはコードを生成しません。`.xdata` と `.pdata`のみが生成されます。 **.PUSHFRAME**の前には、アンワインドするアクションを実際に実装する命令が必要です。 アグリーメントを保証するために、アンワインドディレクティブとマクロでアンワインドするコードの両方をラップすることをお勧めします。
+.PUSHFRAME を使用すると、ml64.exe ユーザーは、フレーム関数をアンワインドする方法を指定できます。 これはプロローグ内でのみ許可されます。これは、 [PROC](proc.md) FRAME 宣言からにまで拡張され[ます。ENDPROLOG](dot-endprolog.md)ディレクティブ。 これらのディレクティブはコードを生成しません。`.xdata` と `.pdata`のみが生成されます。 **.PUSHFRAME**の前には、アンワインドするアクションを実際に実装する命令が必要です。 アグリーメントを保証するために、アンワインドディレクティブとマクロでアンワインドするコードの両方をラップすることをお勧めします。
 
-詳細については、「 [MASM for x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md)」を参照してください。
+詳細については、「 [MASM for x64 (ml64.exe)](masm-for-x64-ml64-exe.md)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[ディレクティブリファレンス](directives-reference.md)
+[ディレクティブリファレンス](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

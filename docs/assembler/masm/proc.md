@@ -6,33 +6,33 @@ f1_keywords:
 helpviewer_keywords:
 - PROC directive
 ms.assetid: ee5bb6b6-fa15-4d73-b0cf-e650178539a9
-ms.openlocfilehash: e68a7fc9814ba1ca07095e036e88fb5917220086
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 85d9a1e82eebcd83cb0f12f5ca751ec9415af18d
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74987936"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318671"
 ---
 # <a name="proc"></a>PROC
 
-*Label*と呼ばれるプロシージャブロックの開始と終了をマークします。 ブロック内のステートメントは、 **CALL**命令または[INVOKE](../../assembler/masm/invoke.md)ディレクティブを使用して呼び出すことができます。
+*Label*と呼ばれるプロシージャブロックの開始と終了をマークします。 ブロック内のステートメントは、 **CALL**命令または[INVOKE](invoke.md)ディレクティブを使用して呼び出すことができます。
 
 ## <a name="syntax"></a>構文
 
-> *label* **PROC** ⟦*distance*⟧⟦*language-type*⟧⟦*visibility*⟧⟦ __\<__ *prologu氏 g* __>__ ⟧⟦**は** *reglist*⟧⟦ __、__ *parameter* ⟦ __:__ *tag*⟧...⟧\
+> *label* **PROC** ⟦*distance*⟧⟦*language-type*⟧⟦ **PUBLIC** | **PRIVATE** | **EXPORT** ⟧⟦ __\<__ *prologu氏 g* __>__ ⟧⟦**は** *reglist*⟧⟦ __、__ *parameter* ⟦ __:__ *tag*⟧...⟧\
 > ⟦**FRAME** ⟦ __:__ *ehandler-address*⟧⟧ \
 > *ステートメント*の\
 > *ラベル*の**endp**
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
 ⟦*Distance*⟧と⟦*language type*⟧引数は、32ビット MASM でのみ有効です。
 
 ⟦**FRAME** ⟦ __:__ *ehandler-address*⟧⟧は ml64.exe でのみ有効であり、MASM は .xdata 内の関数テーブルエントリを生成し、関数の構造化例外処理のアンワインド動作を実行します。
 
-**FRAME**属性を使用する場合は、の後にを指定する必要があり[ます。ENDPROLOG](../../assembler/masm/dot-endprolog.md)ディレクティブ。
+**FRAME**属性を使用する場合は、の後にを指定する必要があり[ます。ENDPROLOG](dot-endprolog.md)ディレクティブ。
 
-Ml64.exe の使用方法の詳細については、「 [MASM for x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md) 」を参照してください。
+Ml64.exe の使用方法の詳細については、「 [MASM for x64 (ml64.exe)](masm-for-x64-ml64-exe.md) 」を参照してください。
 
 ## <a name="example"></a>使用例
 
@@ -79,6 +79,7 @@ Dumping Unwind Information for file ex2.exe
       Code offset: 0x01, PUSH_NONVOL, register=rbp
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[ディレクティブリファレンス](../../assembler/masm/directives-reference.md)
+[ディレクティブリファレンス](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

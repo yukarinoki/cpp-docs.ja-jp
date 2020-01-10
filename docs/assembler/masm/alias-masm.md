@@ -1,19 +1,19 @@
 ﻿---
 title: ALIAS (MASM)
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - Alias
 helpviewer_keywords:
 - ALIAS directive
 ms.assetid: d9725c49-58de-41da-ab01-b06a56cf5cf2
-ms.openlocfilehash: 274ac451005015b2693d8674673af574ec781bdc
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 5aef169c5632e74722438c63718ce5b783a8da09
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74399292"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75316604"
 ---
-# <a name="alias-masm"></a>ALIAS (MASM)
+# <a name="alias"></a>ALIAS
 
 **ALIAS**ディレクティブは、関数の代替名を作成します。  これにより、関数に対して複数の名前を作成したり、リンカー (convert.exe) が古い関数を新しい関数にマップできるようにするライブラリを作成したりできます。
 
@@ -29,6 +29,7 @@ ms.locfileid: "74399292"
 *エイリアス*\
 代替名または別名。  山かっこが必要です。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)
+[ディレクティブリファレンス](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

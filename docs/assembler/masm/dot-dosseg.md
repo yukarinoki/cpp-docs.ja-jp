@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - .DOSSEG directive
 ms.assetid: 175ad470-0a2b-4e2b-b078-65e224fec040
-ms.openlocfilehash: 17edea122afc03a8c3a2fdc86ee6c06c2ccf3c85
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: e27b0ae185542c11ee29119575d5c8225501f71e
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74398488"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75313848"
 ---
 # <a name="dosseg-32-bit-masm"></a>..DOSSEG (32 ビット MASM)
 
@@ -23,8 +23,9 @@ ms.locfileid: "74398488"
 
 ## <a name="remarks"></a>コメント
 
-DGROUP 内のセグメントは、BSS または STACK にないセグメント、BSS セグメント、および最後のスタックセグメントの順に続きます。 MASM のスタンドアロンプログラムでは、主に CodeView サポートを確保するために使用されます。 [.Dosseg](../../assembler/masm/dosseg.md)と同じです。
+DGROUP 内のセグメントは、BSS または STACK にないセグメント、BSS セグメント、および最後のスタックセグメントの順に続きます。 MASM のスタンドアロンプログラムでは、主に CodeView サポートを確保するために使用されます。 [.Dosseg](dosseg.md)と同じです。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)
+[ディレクティブリファレンス](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

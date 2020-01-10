@@ -8,12 +8,12 @@ helpviewer_keywords:
 - .ERRDIF directive
 - .ERRDIFI directive
 ms.assetid: af7cb441-0373-4c7e-af9c-06bcb9ed2b0a
-ms.openlocfilehash: 3e779b1546efc310ee12b17130f9194d90cf3419
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 1bcbdf46e12bacbb5bab68d12605c0cce9cae4d5
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74398368"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75313562"
 ---
 # <a name="errdif-errdifi"></a>.ERRDIF、.ERRDIFI
 
@@ -28,6 +28,7 @@ ms.locfileid: "74398368"
 
 **の場合。ERRDIFI**が指定されている場合、比較では大文字と小文字が区別されません。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[ディレクティブリファレンス](../../assembler/masm/directives-reference.md)
+[ディレクティブリファレンス](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

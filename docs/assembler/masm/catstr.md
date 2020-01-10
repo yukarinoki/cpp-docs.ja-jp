@@ -1,17 +1,17 @@
 ---
 title: CATSTR
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - CATSTR
 helpviewer_keywords:
 - CATSTR directive
 ms.assetid: ae893190-8247-4435-a74e-de2f00db052f
-ms.openlocfilehash: 3dc888e29c8db173a7624e41ccb9904cd27552e9
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: ca2cee09f0fd109028178c4fbbc88ac15f859675
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74398846"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75315187"
 ---
 # <a name="catstr"></a>CATSTR
 
@@ -25,6 +25,7 @@ ms.locfileid: "74398846"
 
 各テキスト項目には、リテラル文字列、 **%** の前にある定数、またはマクロ関数によって返される文字列を指定できます。 **Catstr**は、 [TEXTEQU](textequ.md)のシノニムです。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[ディレクティブ リファレンス](../../assembler/masm/directives-reference.md)
+[ディレクティブリファレンス](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

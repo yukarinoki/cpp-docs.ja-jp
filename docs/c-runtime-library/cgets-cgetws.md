@@ -30,12 +30,12 @@ helpviewer_keywords:
 - cgetws function
 - cgets function
 ms.assetid: 4d5e134a-58c3-4f62-befd-5d235b0212f4
-ms.openlocfilehash: aa258eaba34feec8ea25d780ea6392f195e37508
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
-ms.translationtype: HT
+ms.openlocfilehash: 97a8de0a7fd0f278e6b0e3730a52ca3d0be6e07a
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944692"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75299001"
 ---
 # <a name="_cgets-_cgetws"></a>_cgets、_cgetws
 
@@ -75,13 +75,13 @@ wchar_t *_cgetws(
 
 `_cgets` と `_cgetws` は文字列の先頭である `buffer[2]`へのポインターを返します。 `buffer` が **NULL** の場合は、「[パラメーターの検証](../c-runtime-library/parameter-validation.md)」で説明されているように、これらの関数は無効なパラメーター ハンドラーを呼び出します。 実行の継続が許可された場合、これらは **NULL** を返し、`errno` を `EINVAL` に設定します。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>コメント
 
 これらの関数は、コンソールから文字列を読み込み、 `buffer`が指す位置に文字列とその長さを格納します。 `buffer` パラメーターは文字配列へのポインターである必要があります。 配列の最初の要素 ( `buffer[0]`) には、読み取る文字列の最大長 (文字数) を格納します。 配列は、文字列、終端の null 文字 ('\0')、およびその他の 2 バイト分を格納するのに十分な要素を持つ必要があります。 関数は、文字をキャリッジ リターンとラインフィード (CR-LF) の組み合わせが現れるか、指定した文字数を読み取るまで文字を読み取ります。 文字列は `buffer[2]`を先頭として格納されます。 関数が CR-LF を読み取ると、null 文字 ('\0') を格納します。 次に、関数は 2 番目の配列要素である `buffer[1]`に文字列の実際の長さを格納します。
 
 コンソール ウィンドウでは、 `_cgets` または `_cgetws` が呼び出されたときにはすべての編集キーがアクティブになっているため、F3 キーを押すと最後に入力したエントリが繰り返されます。
 
-C++ では、これらの関数にテンプレートのオーバーロードがあります。このオーバーロードは、これらの関数に対応するセキュリティで保護された新しい関数を呼び出します。 詳細については、「 [Secure Template Overloads](../c-runtime-library/secure-template-overloads.md)」を参照してください。
+C++ では、これらの関数にテンプレートのオーバーロードがあります。このオーバーロードは、これらの関数に対応するセキュリティで保護された新しい関数を呼び出します。 詳細については、「[セキュリティ保護されたテンプレート オーバーロード](../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -89,18 +89,18 @@ C++ では、これらの関数にテンプレートのオーバーロードが�
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |`_cgetts`|`_cgets`|`_cgets`|`_cgetws`|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |`_cgets`|\<conio.h>|
 |`_cgetws`|\<conio.h> または \<wchar.h>|
 
-互換性の詳細については、「 [互換性](../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../c-runtime-library/compatibility.md)」をご覧ください。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
-```
+```c
 // crt_cgets.c
 // compile with: /c /W3
 // This program creates a buffer and initializes

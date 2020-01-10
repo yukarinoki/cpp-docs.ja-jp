@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - PROTO directive
 ms.assetid: 0487ee16-9dc7-43d1-9445-cd1601f5a080
-ms.openlocfilehash: 9df66b6c89498a2cc1a1864a668b7addfbaf593c
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 3963fa29050653d1706222d33734c4b5f2a17919
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74987872"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318645"
 ---
 # <a name="proto"></a>PROTO
 
@@ -52,7 +52,8 @@ Optionalプロシージャとパブリックシンボルの呼び出し規則と
 addup3 PROTO NEAR C, argcount:WORD, arg1:VARARG
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [ディレクティブリファレンス](directives-reference.md)\
-[.モデルリファレンス](dot-model.md)
+[.モデル参照](dot-model.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

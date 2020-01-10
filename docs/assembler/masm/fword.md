@@ -1,17 +1,17 @@
 ---
 title: FWORD
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - FWORD
 helpviewer_keywords:
 - FWORD directive
 ms.assetid: 8fd33d12-d49d-4e2a-80ac-0f55792e99be
-ms.openlocfilehash: 65fd1c35ce5787b0fc0fa3ecb2cb5cb48050e28b
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 6aac9b581e08d9874296d2fbfa6991455c20cfd4
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74397494"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75313211"
 ---
 # <a name="fword"></a>FWORD
 
@@ -25,7 +25,8 @@ ms.locfileid: "74397494"
 
 型が有効である任意の場所で、型指定子として使用することもできます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[ディレクティブリファレンス](../../assembler/masm/directives-reference.md)\
-[DF](../../assembler/masm/df.md)
+[ディレクティブリファレンス](directives-reference.md)\
+[DF](df.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

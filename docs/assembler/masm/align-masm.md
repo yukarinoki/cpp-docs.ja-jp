@@ -1,25 +1,25 @@
 ---
 title: ALIGN (MASM)
-ms.date: 01/02/2019
+ms.date: 12/17/2019
 f1_keywords:
 - align
 helpviewer_keywords:
 - ALIGN directive
 ms.assetid: 1c386b23-439f-4ec3-a6de-74427b25e47f
-ms.openlocfilehash: 22b18f2e238c780377b84fc2be3eb6678686bb73
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 700721768deaf92e88b32a97e68c6e017219d19d
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74399284"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75316591"
 ---
-# <a name="align-masm"></a>ALIGN (MASM)
+# <a name="align"></a>ALIGN
 
 **ALIGN**ディレクティブは、パラメーターの倍数であるアドレスに次のデータ要素または命令を配置します。 パラメーターは、セグメントのアラインメント以下の2の累乗 (たとえば、1、2、4など) である必要があります。
 
 ## <a name="syntax"></a>構文
 
-> **ALIGN** ⟦*number*⟧
+> **ALIGN** ⟦*constantExpression*⟧
 
 ## <a name="remarks"></a>コメント
 
@@ -29,7 +29,8 @@ ms.locfileid: "74399284"
 
 データがアラインされると、スキップされた領域にはゼロが埋め込まれます。 命令がアラインされると、スキップされた領域に適切なサイズの NOP 命令が挿入されます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [\](even.md)
-[ディレクティブリファレンス](directives-reference.md)
+[ディレクティブリファレンス](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)
