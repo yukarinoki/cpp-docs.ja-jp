@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::locale [C++], facet
 - std::locale [C++], id
 ms.assetid: 7dd6d271-472d-4750-8fb5-ea8f55fbef62
-ms.openlocfilehash: a11f5bf7e8c280da3ba2cae82cf355a3b28c0577
-ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
+ms.openlocfilehash: 551bca93a30bee52dc4c838864df28cb747d91df
+ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72890154"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74898835"
 ---
 # <a name="locale-class"></a>locale クラス
 
@@ -108,7 +108,7 @@ messages<char>
 messages<wchar_t>
 ```
 
-(最後のカテゴリは Posix で必要ですが、C 標準では必要ありません。)
+(最後のカテゴリは POSIX では必須ですが、C 標準には必要ありません)。
 
 これらの定義済みのファセットの一部は、テキストシーケンスとの間での数値の変換を制御するために `iostream` クラスによって使用されます。
 
@@ -120,7 +120,7 @@ messages<wchar_t>
 static locale empty();
 ```
 
-ファセットがないロケール オブジェクトを構築することもできます。 透過的なロケールでもあります。 テンプレート関数[has_facet](../standard-library/locale-functions.md#has_facet)と[use_facet](../standard-library/locale-functions.md#use_facet)が、要求されたファセットを透過的なロケールで見つけることができない場合、最初にグローバルロケールを参照し、次に、それが透過的である場合はクラシックロケールを参照します。 そのため、次のように記述できます。
+ファセットがないロケール オブジェクトを構築することもできます。 透過的なロケールでもあります。 テンプレート関数が [use_facet](../standard-library/locale-functions.md#use_facet) [has_facet](../standard-library/locale-functions.md#has_facet)で、要求されたファセットが透過的なロケールで見つからない場合は、最初にグローバルロケールを参照し、次に、それが透過的な場合はクラシックロケールを参照します。 そのため、次のように記述できます。
 
 ```cpp
 cout.imbue(locale::empty());
@@ -166,7 +166,7 @@ cout.imbue(loc);
 
 ### <a name="operators"></a>演算子
 
-|演算子|説明|
+|[演算子]|説明|
 |-|-|
 |[operator=](#op_eq)|ロケールを割り当てます。|
 |[operator!=](#op_neq)|2 つのロケールが等しくないかどうかをテストします。|
@@ -175,12 +175,12 @@ cout.imbue(loc);
 
 ### <a name="classes"></a>クラス
 
-|インスタンス|説明|
+|&lt;クラス&gt; のすべてのオブジェクト|説明|
 |-|-|
 |[facet](#facet_class)|すべてのロケールのファセットの基底クラスとして機能するクラス。|
 |[`id`](#id_class)|このメンバー クラスは、ロケール内でファセットを検索するためのインデックスとして使用される一意のファセット ID を提供します。|
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<locale>
 
@@ -206,17 +206,17 @@ static const int none = 0;
 
 この型は、クラスロケールに対してローカルなビットマスク型の個別の要素のグループを表すことができる**int**型のシノニムです。または、対応する C ロケールカテゴリのいずれかを表すために使用できます。 要素は次のとおりです。
 
-- `collate`。 C カテゴリ LC_COLLATE に対応します。
+- `collate`。 C カテゴリに対応して LC_COLLATE
 
-- `ctype`、C カテゴリの LC_CTYPE に対応
+- `ctype`。 C カテゴリに対応して LC_CTYPE
 
-- `monetary`。 C カテゴリ LC_MONETARY に対応します。
+- `monetary`。 C カテゴリに対応して LC_MONETARY
 
-- `numeric`。 C カテゴリ LC_NUMERIC に対応します。
+- `numeric`。 C カテゴリに対応して LC_NUMERIC
 
-- `time`。 C カテゴリ LC_TIME に対応します。
+- `time`。 C カテゴリに対応して LC_TIME
 
-- `messages`。 Posix カテゴリ LC_MESSAGES に対応します。
+- `messages`。 POSIX カテゴリに対応 LC_MESSAGES
 
 次の2つの便利な値があります。
 
@@ -224,7 +224,7 @@ static const int none = 0;
 
 - `all`。すべてのカテゴリの C 共用体に対応 LC_ALL
 
-`monetary` &#124;`time`のように、これらの定数と共に `OR` を使用すると、カテゴリの任意のグループを表すことができます。
+`monetary` &#124; `time`のように、これらの定数と共に `OR` を使用すると、カテゴリの任意のグループを表すことができます。
 
 ## <a name="classic"></a>  locale::classic
 
@@ -242,7 +242,7 @@ C ロケールへの参照。
 
 Classic C ロケールは、標準 C ライブラリ内の米国英語の ASCII ロケールです。 これは、国際化されていないプログラムで暗黙的に使用されるロケールです。
 
-### <a name="example"></a>例
+### <a name="example"></a>使用例
 
 ```cpp
 // locale_classic.cpp
@@ -297,9 +297,9 @@ locale combine(const locale& source_locale) const;
 
 ### <a name="return-value"></a>戻り値
 
-このメンバー関数は、 *source_locale*に記載されているファセット `Facet` **\*** を置き換えるか、を追加するロケールオブジェクトを返します。
+このメンバー関数は、 *source_locale*に記載されているファセット `Facet` **\*** を置き換えるロケールオブジェクトを返します。
 
-### <a name="example"></a>例
+### <a name="example"></a>使用例
 
 ```cpp
 // locale_combine.cpp
@@ -371,7 +371,7 @@ static locale global(const locale& new_default_locale);
 
 プログラムの起動時には、グローバル ロケールはクラシック ロケールと同じです。 `global()` 関数は `setlocale( LC_ALL, loc.name. c_str())` を呼び出して、標準 C ライブラリ内で一致するロケールを設定します。
 
-### <a name="example"></a>例
+### <a name="example"></a>使用例
 
 ```cpp
 // locale_global.cpp
@@ -454,7 +454,7 @@ locale(const locale& from_locale, const Facet* new_facet);
 
 ### <a name="remarks"></a>Remarks
 
-最初のコンストラクターは、グローバル ロケールと一致するようにオブジェクトを初期化します。 2番目と3番目のコンストラクターは、すべてのロケールカテゴリを初期化して、ロケール名*locale_name*との動作が一致するようにします。 残りのコンストラクターは、 *from_locale*をコピーします。ただし、以下の例外があります。
+最初のコンストラクターは、グローバル ロケールと一致するようにオブジェクトを初期化します。 2番目と3番目のコンストラクターは、すべてのロケールカテゴリを初期化して、ロケール名*locale_name*との動作が一致するようにします。 残りのコンストラクターは*from_locale*をコピーします。ただし、次の点に注意してください。
 
 `locale(const locale& from_locale, const locale& Other, category new_category);`
 
@@ -464,15 +464,15 @@ C & *new_category*が0以外のカテゴリ c に対応する*他の*ファセ�
 
 `locale(const locale& from_locale, const string& locale_name, category new_category);`
 
-`replace_category & new_category` が0以外のカテゴリ*replace_category*に対応するファセットを `locale(locale_name, all)` 置き換えます。
+`replace_category & new_category` が0以外のカテゴリ*replace_category*カテゴリに対応するファセットを `locale(locale_name, all)` 置き換えます。
 
 `template<class Facet> locale(const locale& from_locale, Facet* new_facet);`
 
-*new_facet*が null ポインターではない場合 *、ファセット*の*from_locale*を (またはに追加して) 置換します。
+*new_facet*が null ポインターではない場合は、ファセット*new_facet* *from_locale*を (またはに追加して) 置換します。
 
-Locale name *locale_name*が null ポインターの場合、または無効な場合、関数は[runtime_error](../standard-library/runtime-error-class.md)をスローします。
+ロケール名*locale_name*が null ポインターである場合、または無効な場合、関数は[runtime_error](../standard-library/runtime-error-class.md)をスローします。
 
-### <a name="example"></a>例
+### <a name="example"></a>使用例
 
 ```cpp
 // locale_locale.cpp
@@ -524,7 +524,7 @@ string name() const;
 
 ロケールの名前を指定する文字列。
 
-### <a name="example"></a>例
+### <a name="example"></a>使用例
 
 ```cpp
 // locale_name.cpp
@@ -580,7 +580,7 @@ bool operator!=(const locale& right) const;
 
 2つのロケールは、それらが同じロケールである場合、一方が他方のコピーである場合、または同じ名前を持つ場合に等しくなります。
 
-### <a name="example"></a>例
+### <a name="example"></a>使用例
 
 ```cpp
 // locale_op_ne.cpp
@@ -661,7 +661,7 @@ return (fac.compare(left.begin(), left.end(), right.begin(), right.end()) < 0);
 
 これは、locale オブジェクトを関数オブジェクトとして使用できることを意味します。
 
-### <a name="example"></a>例
+### <a name="example"></a>使用例
 
 ```cpp
 // locale_op_compare.cpp
@@ -713,7 +713,7 @@ bool operator==(const locale& right) const;
 
 2つのロケールは、それらが同じロケールである場合、一方が他方のコピーである場合、または同じ名前を持つ場合に等しくなります。
 
-### <a name="example"></a>例
+### <a name="example"></a>使用例
 
 ```cpp
 // locale_op_eq.cpp
@@ -757,7 +757,7 @@ locales loc1 (German_Germany.1252)
 and loc3 (English_United States.1252) are not equal.
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [\<locale>](../standard-library/locale.md)\
 [コード ページ](../c-runtime-library/code-pages.md)\
