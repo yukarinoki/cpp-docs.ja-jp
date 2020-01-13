@@ -1,5 +1,5 @@
 ---
-title: Visual Studio プロジェクトでの clang/LLVM のサポート
+title: Visual Studio プロジェクトでの Clang/LLVM のサポート
 ms.date: 08/30/2019
 ms.description: Configure a Visual Studio MSBuild project to use the Clang/LLVM toolchain.
 helpviewer_keywords:
@@ -11,11 +11,11 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 09/03/2019
 ms.locfileid: "70222631"
 ---
-# <a name="clangllvm-support-in-visual-studio-projects"></a>Visual Studio プロジェクトでの clang/LLVM のサポート
+# <a name="clangllvm-support-in-visual-studio-projects"></a>Visual Studio プロジェクトでの Clang/LLVM のサポート
 
 ::: moniker range="<=vs-2017"
 
-CMake プロジェクトと MSBuild プロジェクトの両方の clang サポートは、Visual Studio 2019 で利用できます。
+CMake プロジェクトと MSBuild プロジェクトの両方の Clang サポートは、Visual Studio 2019 で利用できます。
 
 ::: moniker-end
 
