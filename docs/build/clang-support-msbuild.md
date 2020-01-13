@@ -1,5 +1,5 @@
 ---
-title: Visual Studio プロジェクトでの clang/LLVM のサポート
+title: Visual Studio プロジェクトでの Clang/LLVM のサポート
 ms.date: 08/30/2019
 ms.description: Configure a Visual Studio MSBuild project to use the Clang/LLVM toolchain.
 helpviewer_keywords:
@@ -11,11 +11,11 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 09/03/2019
 ms.locfileid: "70222631"
 ---
-# <a name="clangllvm-support-in-visual-studio-projects"></a>Visual Studio プロジェクトでの clang/LLVM のサポート
+# <a name="clangllvm-support-in-visual-studio-projects"></a>Visual Studio プロジェクトでの Clang/LLVM のサポート
 
 ::: moniker range="<=vs-2017"
 
-CMake プロジェクトと MSBuild プロジェクトの両方の clang サポートは、Visual Studio 2019 で利用できます。
+CMake プロジェクトと MSBuild プロジェクトの両方の Clang サポートは、Visual Studio 2019 で利用できます。
 
 ::: moniker-end
 
@@ -25,7 +25,7 @@ Clang と共に Visual Studio 2019 バージョン16.2 を使用して、Windows
 
 ## <a name="install"></a>インストール
 
-Visual Studio で最適な IDE サポートを利用するには、最新の Clang compiler tools for Windows を使用することをお勧めします。 これらのツールをまだ持っていない場合は、Visual Studio インストーラーを開き、[デスクトップ開発] の [オプションコンポーネント**を使用C++** して **C++ clang tools for Windows** ] を選択してインストールできます。 コンピューターで既存の clang インストールを使用する場合は、  **C++ v142 build tools の clang-cl を選択します。** 省略可能なコンポーネント。 Microsoft C++標準ライブラリには、現在、clang 8.0.0; 以降が必要です。Clang のバンドル版は、標準ライブラリの Microsoft の実装で更新プログラムを最新の状態に維持するために自動的に更新されます。 
+Visual Studio で最適な IDE サポートを利用するには、最新の Clang compiler tools for Windows を使用することをお勧めします。 これらのツールをまだ持っていない場合は、Visual Studio インストーラーを開き、[デスクトップ開発] の [オプションコンポーネント**を使用C++** して **C++ Clang tools for Windows** ] を選択してインストールできます。 コンピューターで既存の Clang インストールを使用する場合は、  **C++ v142 build tools の clang-cl を選択します。** 省略可能なコンポーネント。 Microsoft C++標準ライブラリには、現在、Clang 8.0.0; 以降が必要です。Clang のバンドル版は、標準ライブラリの Microsoft の実装で更新プログラムを最新の状態に維持するために自動的に更新されます。 
 
 ![Clang コンポーネントのインストール](media/clang-install-vs2019.png)
 
@@ -35,9 +35,9 @@ Clang を使用するように Visual Studio プロジェクトを構成する�
 
 ![Clang コンポーネントのインストール](media/clang-msbuild-prop-page.png)
 
-Visual Studio にバンドルされている Clang ツールを使用している場合は、追加の手順は必要ありません。 Windows プロジェクトの場合、既定では、Visual Studio は clang [-cl](https://llvm.org/devmtg/2014-04/PDFs/Talks/clang-cl.pdf)モードで clang を呼び出し、標準ライブラリの Microsoft 実装によるリンクを呼び出します。 既定では、 **clang-cl**はに`C:\Program Files (x86)\Microsoft Visual Studio\2019\Common7\IDE\CommonExtensions\Microsoft\Llvm\bin`あります。
+Visual Studio にバンドルされている Clang ツールを使用している場合は、追加の手順は必要ありません。 Windows プロジェクトの場合、既定では、Visual Studio は Clang [-cl](https://llvm.org/devmtg/2014-04/PDFs/Talks/clang-cl.pdf)モードで Clang を呼び出し、標準ライブラリの Microsoft 実装によるリンクを呼び出します。 既定では、 **clang-cl**はに`C:\Program Files (x86)\Microsoft Visual Studio\2019\Common7\IDE\CommonExtensions\Microsoft\Llvm\bin`あります。
 
-カスタム clang インストールを使用している場合は、**プロジェクト** > **プロパティ** > の [**VC++ ディレクトリ** > ]**構成プロパティ** > [**実行可能ファイル] を変更できます。** カスタム clang インストールルートをそこに最初のディレクトリとして追加するか、 `LLVMInstallDir`プロパティの値を変更することによって、ディレクトリを指定します。 詳細について[は、「カスタム LLVM の場所の設定](#custom_llvm_location)」を参照してください。
+カスタム Clang インストールを使用している場合は、**プロジェクト** > **プロパティ** > の [**VC++ ディレクトリ** > ]**構成プロパティ** > [**実行可能ファイル] を変更できます。** カスタム Clang インストールルートをそこに最初のディレクトリとして追加するか、 `LLVMInstallDir`プロパティの値を変更することによって、ディレクトリを指定します。 詳細について[は、「カスタム LLVM の場所の設定](#custom_llvm_location)」を参照してください。
 
 ## <a name="configure-a-linux-project-to-use-clang-tools"></a>Clang tools を使用するように Linux プロジェクトを構成する
 
@@ -52,7 +52,7 @@ Clang を使用するように Visual Studio Linux プロジェクトを構成�
 
 ![Clang コンポーネントのインストール](media/clang-msbuild-prop-page.png)
 
-Linux では、Visual Studio は既定で PATH 環境プロパティで検出された最初の Clang の場所を使用します。 カスタムの`LLVMInstallDir` clang インストールを使用している場合は、プロパティの値を変更するか、または**プロジェクト** > の**プロパティ** > **VC++ ディレクトリ** >  **の下のパスを置き換える必要があります。構成プロパティ** > の**実行可能なディレクトリ**。 詳細について[は、「カスタム LLVM の場所の設定](#custom_llvm_location)」を参照してください。
+Linux では、Visual Studio は既定で PATH 環境プロパティで検出された最初の Clang の場所を使用します。 カスタムの`LLVMInstallDir` Clang インストールを使用している場合は、プロパティの値を変更するか、または**プロジェクト** > の**プロパティ** > **VC++ ディレクトリ** >  **の下のパスを置き換える必要があります。構成プロパティ** > の**実行可能なディレクトリ**。 詳細について[は、「カスタム LLVM の場所の設定](#custom_llvm_location)」を参照してください。
 
 ## <a name="custom_llvm_location"></a>カスタム LLVM の場所を設定する
 
@@ -68,7 +68,7 @@ Linux では、Visual Studio は既定で PATH 環境プロパティで検出さ
 
 ## <a name="set-additional-properties-edit-build-and-debug"></a>追加のプロパティの設定、編集、ビルド、およびデバッグ
 
-Clang 構成を設定したら、プロジェクトノードでもう一度右クリックし、[プロジェクトの**再読み込み**] をクリックします。 これで、Clang ツールを使用してプロジェクトをビルドおよびデバッグできるようになりました。 Visual Studio は、Clang コンパイラを使用していることを検出し、IntelliSense、強調表示、ナビゲーション、およびその他の編集機能を提供します。 **出力ウィンドウ**にエラーと警告が表示されます。 Clang 構成のプロジェクトプロパティページは、MSVC の場合と非常によく似ていますが、Clang 構成では、エディットコンティニュなどの一部のコンパイラに依存する機能は使用できません。 プロパティページでは使用できない clang コンパイラまたはリンカーオプションを設定するには、[**構成プロパティ** > ] の [**C/C++ (またはリンカー)** **] コマンドライン**の下にあるプロパティページで手動で追加します。 > **追加のオプション。**  > 
+Clang 構成を設定したら、プロジェクトノードでもう一度右クリックし、[プロジェクトの**再読み込み**] をクリックします。 これで、Clang ツールを使用してプロジェクトをビルドおよびデバッグできるようになりました。 Visual Studio は、Clang コンパイラを使用していることを検出し、IntelliSense、強調表示、ナビゲーション、およびその他の編集機能を提供します。 **出力ウィンドウ**にエラーと警告が表示されます。 Clang 構成のプロジェクトプロパティページは、MSVC の場合と非常によく似ていますが、Clang 構成では、エディットコンティニュなどの一部のコンパイラに依存する機能は使用できません。 プロパティページでは使用できない Clang コンパイラまたはリンカーオプションを設定するには、[**構成プロパティ** > ] の [**C/C++ (またはリンカー)** **] コマンドライン**の下にあるプロパティページで手動で追加します。 > **追加のオプション。**  > 
 
 デバッグ時には、ブレークポイント、メモリとデータの視覚化、およびその他のほとんどのデバッグ機能を使用できます。  
 
