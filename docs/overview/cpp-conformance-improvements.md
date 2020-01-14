@@ -3,14 +3,12 @@ title: C++ 準拠の強化
 ms.date: 12/04/2019
 description: Visual Studio の Microsoft C++ は、C++20 言語標準との完全準拠に向かって進んでいます。
 ms.technology: cpp-language
-author: mikeblome
-ms.author: mblome
-ms.openlocfilehash: de31c2e61f0a10c785d610d3227a659c59b56d38
-ms.sourcegitcommit: 00f50ff242031d6069aa63c81bc013e432cae0cd
+ms.openlocfilehash: e9c2a69c8d33ea692a76a5642a15b581567c2c63
+ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/30/2019
-ms.locfileid: "75546433"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75793844"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Visual Studio の C++ 準拠の強化
 
@@ -2591,7 +2589,7 @@ struct D : B<T*> {
 };
 ```
 
-Visual Studio 2017 バージョン 15.7 の **/std:c++17** モードでは、D の **using** ステートメントにキーワード **typename** が必要です。**typename** がないと、コンパイラで警告 C4346: *'B<T\*>::type': 依存名は型ではありません*、およびエラー C2061: *構文エラー: 識別子 'type'* が発生します。
+Visual Studio 2017 バージョン 15.7 の **/std:c++17** モードでは、D の **using** ステートメントにキーワード **typename** が必要です。**typename** がないと、コンパイラで警告 C4346: 'B<T>::type': 依存名は型ではありません*、およびエラー C2061: *構文エラー: 識別子 'type'* が発生します。
 
 ```cpp
 template<typename T>

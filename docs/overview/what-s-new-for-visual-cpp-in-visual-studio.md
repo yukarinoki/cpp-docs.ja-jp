@@ -3,14 +3,12 @@ title: Visual Studio での C++ の新機能
 ms.date: 07/02/2019
 ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
-author: mikeblome
-ms.author: mblome
-ms.openlocfilehash: bde8b8e17c3186d22493f099a5f7d1b5a2646a67
-ms.sourcegitcommit: 2362d15b5eb18d27773c3f7522da3d0eed9e2571
+ms.openlocfilehash: 04cf4ecf447120302125c797bd70c00c62b5def9
+ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73754136"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75793972"
 ---
 # <a name="whats-new-for-c-in-visual-studio"></a>Visual Studio での C++ の新機能
 
@@ -312,7 +310,7 @@ Microsoft C++ コンパイラは Intel の AVX-512 に対応しています。�
 
 ##### <a name="visual-studio-2017-rtm-version-150"></a>Visual Studio 2017 RTM (バージョン 15.0)
 
-- `basic_string` `_ITERATOR_DEBUG_LEVEL != 0` の診断は若干改良されました。 文字列構造の IDL チェックが失敗すると、その失敗の原因となった特定の動作が報告されるようになりました。 たとえば、"string iterator not dereferencable (文字列反復子を逆参照できません)" の代わりに、"cannot dereference string iterator because it is out of range (e.g. an end iterator) (範囲外のため文字列反復子を逆参照できません (例: 終了反復子))" が報告されます。
+- `basic_string``_ITERATOR_DEBUG_LEVEL != 0` の診断は若干改良されました。 文字列構造の IDL チェックが失敗すると、その失敗の原因となった特定の動作が報告されるようになりました。 たとえば、"string iterator not dereferencable (文字列反復子を逆参照できません)" の代わりに、"cannot dereference string iterator because it is out of range (e.g. an end iterator) (範囲外のため文字列反復子を逆参照できません (例: 終了反復子))" が報告されます。
 - 以前はコードが永続的にブロックされていた `std::promise` の移動代入演算子が修正されました。
 - `atomic<T*>` の `T*` への暗黙の変換でコンパイラのエラーが修正されました。
 - `pointer_traits<Ptr>` で `Ptr::rebind<U>` が適切に検出されるようになりました。

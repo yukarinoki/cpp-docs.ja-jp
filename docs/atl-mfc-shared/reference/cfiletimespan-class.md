@@ -1,6 +1,7 @@
 ---
 title: CFileTimeSpan クラス
-ms.date: 01/06/2020
+description: Active Template Library (ATL) および Microsoft Foundation Classes (MFC) の CFileTimeSpan クラスは、FILETIME 単位の時間間隔を管理します。
+ms.date: 01/10/2020
 f1_keywords:
 - CFileTimeSpan
 - ATLTIME/ATL::CFileTimeSpan
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - shared classes, CFileTimeSpan
 - CFileTimeSpan class
 ms.assetid: 5856fb39-9c82-4027-8ccf-8760890491ec
-ms.openlocfilehash: 9220ed8373e78db727b43ecb59880dcfbcc98f96
-ms.sourcegitcommit: 7bd3567fc6a0e7124aab51cad63bbdb44a99a848
+ms.openlocfilehash: 89d95759b11ff7e52c2a8fa75cf94f7b7b81fa36
+ms.sourcegitcommit: c3283062ce4e382aec7f11626d358a37caf8cdbb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75755053"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75914380"
 ---
 # <a name="cfiletimespan-class"></a>CFileTimeSpan クラス
 
@@ -61,7 +62,7 @@ class CFileTimeSpan
 
 ## <a name="remarks"></a>Remarks
 
-このクラスは、ファイルシステムが使用する単位の相対的な期間を処理するメソッドを提供します。 これらの単位は、ファイルがいつ作成されたか、最後にアクセスしたか、または最後に変更されたかに関する操作でよく使用されます。 このクラスのメソッドは、 [CFileTime クラス](../../atl-mfc-shared/reference/cfiletime-class.md)オブジェクトと組み合わせて使用されることがよくあります。
+`CFileTimeSpan` クラスは、ファイルシステムが使用する単位の相対的な期間を処理するメソッドを提供します。 これらの単位は、ファイルが作成されたとき、最後にアクセスしたとき、または最後に変更されたときなど、ファイル操作でよく使用されます。 このクラスのメソッドは、 [CFileTime クラス](../../atl-mfc-shared/reference/cfiletime-class.md)オブジェクトと組み合わせて使用されることがよくあります。
 
 ## <a name="example"></a>使用例
 
@@ -87,11 +88,11 @@ CFileTimeSpan(LONGLONG nSpan) throw();
 既存の `CFileTimeSpan` オブジェクト。
 
 *Nspan*\
-ミリ秒単位の時間。
+FILETIME 単位の期間。
 
 ### <a name="remarks"></a>Remarks
 
-`CFileTimeSpan` オブジェクトは、既存の `CFileTimeSpan` オブジェクトを使用して作成することも、64ビット値として表すこともできます。 既定のコンストラクターは、時間間隔を0に設定します。
+`CFileTimeSpan` オブジェクトは、既存の `CFileTimeSpan` オブジェクトを使用して作成することも、100ナノ秒の FILETIME 単位で64ビット値として表すこともできます。 詳細については、「 [CFileTime](cfiletime-class.md)」を参照してください。 既定のコンストラクターは、時間間隔を0に設定します。
 
 ## <a name="gettimespan"></a>CFileTimeSpan:: GetTimeSpan
 
@@ -103,7 +104,7 @@ LONGLONG GetTimeSpan() const throw();
 
 ### <a name="return-value"></a>戻り値
 
-時間間隔をミリ秒単位で返します。
+100-ナノ秒の FILETIME 単位の時間間隔を返します。 詳細については、「 [CFileTime](cfiletime-class.md)」を参照してください。
 
 ## <a name="operator_-"></a>  CFileTimeSpan::operator -
 
@@ -303,7 +304,7 @@ void SetTimeSpan(LONGLONG nSpan) throw();
 ### <a name="parameters"></a>パラメーター
 
 *Nspan*\
-時間間隔の新しい値 (100 ナノ秒単位)。 詳細については、「 [CFileTime](cfiletime-class.md)」を参照してください。
+100-ナノ秒の FILETIME 単位の期間の新しい値。 詳細については、「 [CFileTime](cfiletime-class.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
