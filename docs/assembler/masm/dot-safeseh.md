@@ -8,12 +8,12 @@ helpviewer_keywords:
 - SAFESEH directive
 - .SAFESEH directive
 ms.assetid: 6eaac8c4-c46f-47ae-8a66-f5cfeb267e43
-ms.openlocfilehash: df9798800da293e5e0b4f545a8442380b7ff9408
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 5953ad6bdf1d9d1b0070ce83dd1d764799b7440a
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74397997"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317566"
 ---
 # <a name="safeseh-32-bit-masm"></a>.SAFESEH (32 ビット MASM)
 
@@ -25,7 +25,7 @@ ms.locfileid: "74397997"
 
 ## <a name="remarks"></a>コメント
 
-*識別子*は、ローカルに定義された[Proc](../../assembler/masm/proc.md)または[extrn](../../assembler/masm/extrn.md) proc の id である必要があります。 [ラベル](../../assembler/masm/label-masm.md)は使用できません。 、.SAFESEH ディレクティブには、 [/safeseh](../../assembler/masm/ml-and-ml64-command-line-reference.md) ml .exe コマンドラインオプションが必要です。
+*識別子*は、ローカルに定義された[Proc](proc.md)または[extrn](extrn.md) proc の id である必要があります。 [ラベル](label-masm.md)は使用できません。 、.SAFESEH ディレクティブには、 [/safeseh](ml-and-ml64-command-line-reference.md) ml .exe コマンドラインオプションが必要です。
 
 構造化例外ハンドラーの詳細については、「 [/safeseh](../../build/reference/safeseh-image-has-safe-exception-handlers.md)」を参照してください。
 
@@ -41,4 +41,5 @@ end
 
 ## <a name="see-also"></a>参照
 
-[ディレクティブリファレンス](directives-reference.md)
+[ディレクティブリファレンス](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)
