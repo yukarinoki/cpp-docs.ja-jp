@@ -33,11 +33,11 @@ public base-class
 
 基底クラスの既定のアクセスは、クラスの場合はプライベートで、構造体の場合はパブリックです。 共用体に基底クラスを設定することはできません。
 
-詳細については、[private](../cpp/private-cpp.md)、[protected](../cpp/protected-cpp.md)、[friend](../cpp/friend-cpp.md)と、[メンバー アクセス コントロール](member-access-control-cpp.md)のメンバー アクセス テーブルを参照してください。
+詳細については、次を参照してください[プライベート](../cpp/private-cpp.md)、[保護](../cpp/protected-cpp.md)、[フレンド](../cpp/friend-cpp.md)、とでメンバー アクセス テーブル[クラス メンバーへのアクセスの制御](member-access-control-cpp.md).
 
 ## <a name="clr-specific"></a>/clr 固有
 
-CLR 型では、C++ アクセス指定子のキーワード (**public**、**private**、および**protected**) 型およびアセンブリに関連メソッドの可視性に影響を与えることができます。 詳細については、次を参照してください。[メンバー アクセス コントロール](member-access-control-cpp.md)します。
+CLR 型では、C++ アクセス指定子のキーワード (**public**、**private**、および **protected**) 型およびアセンブリの関連メソッドの可視性に影響を与えることができます。 詳細については、次を参照してください。[メンバー アクセス コントロール](member-access-control-cpp.md)します。
 
 > [!NOTE]
 >  ファイルがコンパイルされた[/LN](../build/reference/ln-create-msil-module.md)この動作の影響は受けません。 この場合、すべてのマネージド クラス (パブリックかプライベート) が表示されます。
