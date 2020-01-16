@@ -4,12 +4,12 @@ description: Visual Studio を使用して CMake デバッガーの設定を構�
 ms.date: 01/13/2020
 helpviewer_keywords:
 - CMake debugging
-ms.openlocfilehash: ff1de8241c2489e675f82f469f1cf697a72f5034
-ms.sourcegitcommit: 275b71219d2a8bd5d78f87e21dd909e9968c2f44
+ms.openlocfilehash: 5e627f02b5245baede6e92268cedfc43957f3abc
+ms.sourcegitcommit: 49e4fb3e0300fe86c814130661f1bf68b16e72e2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75946809"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "76031327"
 ---
 # <a name="configure-cmake-debugging-sessions"></a>CMake デバッグ セッションを構成する
 
@@ -73,7 +73,7 @@ Launch ファイルと*json*ファイルを保存すると、Visual Studio に�
 
 ## <a name="launchvsjson-reference-for-remote-linux-projects"></a>リモートの Linux プロジェクトの場合は、「」を参照してください。
 
-次のプロパティは、**リモートデバッグ構成**に固有です。 また、 [gdb にコマンドを直接送信](https://github.com/microsoft/MIEngine/wiki/Executing-custom-gdb-lldb-commands)し、 [miengine のログ記録を有効に](https://github.com/microsoft/MIEngine/wiki/Logging)することもできます。 これらのプロパティを使用して、gdb に送信されるコマンド、gdb が返す出力、および各コマンドの実行時間を確認できます。
+次のプロパティは、**リモートデバッグ構成**に固有です。 また、[カスタムの gdb コマンドを実行](https://github.com/microsoft/MIEngine/wiki/Executing-custom-gdb-lldb-commands)して、基になるデバッガーにコマンドを直接送信したり、 [miengine のログ記録を有効](https://github.com/microsoft/MIEngine/wiki/Logging)にして、gdb に送信されるコマンド、gdb が返す出力、および各コマンドの実行時間を確認することもできます。
 
 - `cwd`: リモートコンピューター上の依存関係やその他のファイルを検索するための現在の作業ディレクトリ。 マクロ `${debugInfo.defaultWorkingDirectory}` を使用できます。 既定値は、 *Cmakelists*でオーバーライドされない限り、リモートワークスペースのルートになります。 このプロパティは、リモート構成にのみ使用されます。`currentDir` は、ローカルプロジェクトの起動中のアプリの現在のディレクトリを設定するために使用されます。
 
