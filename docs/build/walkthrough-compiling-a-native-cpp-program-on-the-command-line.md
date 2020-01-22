@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル: コマンド ラインでのネイティブ C++ プログラムのコンパイル'
+title: 'Walkthrough: Compiling a Native C++ Program on the Command Line (チュートリアル: コマンド ラインでのネイティブ C++ プログラムのコンパイル)'
 description: コマンドプロンプトからC++ Microsoft コンパイラを使用します。
 ms.custom: conceptual
 ms.date: 04/23/2019
@@ -9,22 +9,22 @@ helpviewer_keywords:
 - compiling programs [C++]
 - command-line applications [C++], native
 ms.assetid: b200cfd1-0440-498f-90ee-7ecf92492dc0
-ms.openlocfilehash: daab00768f8140869a8db39c73f4fec3ab6304c7
-ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
+ms.openlocfilehash: d002fd4c4edc99775e62023dda7998fba2c6a44f
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74051512"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518175"
 ---
-# <a name="walkthrough-compiling-a-native-c-program-on-the-command-line"></a>チュートリアル: コマンド ラインでのネイティブ C++ プログラムのコンパイル
+# <a name="walkthrough-compiling-a-native-c-program-on-the-command-line"></a>Walkthrough: Compiling a Native C++ Program on the Command Line (チュートリアル: コマンド ラインでのネイティブ C++ プログラムのコンパイル)
 
 Visual Studio には、基本的なC++コンソールアプリからユニバーサル Windows プラットフォームアプリ、デスクトップアプリ、デバイスドライバー、.net コンポーネントまで、すべてを作成するために使用できるコマンドラインコンパイラが含まれています。
 
-このチュートリアルでは、テキストエディターを使用して基本的な "Hello, C++ World" スタイルのプログラムを作成し、コマンドラインでコンパイルします。 コマンドラインを使用せずに visual studio ide を試す場合は、「[チュートリアル: プロジェクトとソリューションの使用 (C++)](../ide/walkthrough-working-with-projects-and-solutions-cpp.md) 」または「[デスクトップ開発用のC++ visual studio ide の使用](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)」を参照してください。
+このチュートリアルでは、"Hello, World"の基本的な作成-エディターでテキストを使用して C++ プログラムのスタイル設定し、それをコマンドラインでコンパイルします。 コマンドラインを使用せずに visual studio ide を試す場合は、「[チュートリアル: プロジェクトとソリューションの使用 (C++)](../ide/walkthrough-working-with-projects-and-solutions-cpp.md) 」または「[デスクトップ開発用のC++ visual studio ide の使用](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)」を参照してください。
 
 このチュートリアルでは、表示されている Visual C++ プログラムを入力する代わりに独自の Visual C++ プログラムを使用するか、別のヘルプ記事の Visual C++ コード サンプルを使用できます。
 
-## <a name="prerequisites"></a>必要条件
+## <a name="prerequisites"></a>Prerequisites
 
 このチュートリアルを完了するには、visual studio と、ワークロードを**使用C++** したオプションのデスクトップ開発、または visual studio 用のコマンドラインビルドツールをインストールしておく必要があります。
 
@@ -78,7 +78,7 @@ C またはC++プログラムをコマンドラインでビルドする前に、
    ```cpp
    #include <iostream>
    using namespace std;
-   void main()
+   int main()
    {
        cout << "Hello, world, from Visual C++!" << endl;
    }
@@ -142,9 +142,9 @@ C またはC++プログラムをコマンドラインでビルドする前に、
 
    これで、コマンドラインツールを使用C++してプログラムをコンパイルして実行できました。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次のステップ:
 
-この "Hello, World" の例は、 C++プログラムが取得できるのと同じように単純です。 実際のプログラムには、ヘッダーファイルやその他のソースファイルがあり、ライブラリにリンクされているので、便利な作業を行うことができます。
+この"Hello, World"の例は、単純な C++ プログラムを取得できます。 実際のプログラムではヘッダー ファイルとより多くのソース ファイルがあり、ライブラリにリンクし、有益な処理を実行します。
 
 このチュートリアルの手順を使用すると、表示されるC++サンプルコードを入力する代わりに、独自のコードを作成できます。 他の場所にあるC++多くのコードサンプルプログラムをビルドすることもできます。 ソースコードを配置し、任意の書き込み可能なディレクトリにアプリを構築することができます。 既定では、visual studio IDE は、使用している Visual studio のバージョンに対してという名前の Visual Studio フォルダーの Projects サブフォルダー内にあるプロジェクトをドキュメントフォルダーに作成します。
 

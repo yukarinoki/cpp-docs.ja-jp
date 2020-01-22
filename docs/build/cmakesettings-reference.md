@@ -4,12 +4,12 @@ ms.date: 11/22/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: 08ecb5bc55ead207d6e4a0029a21e737d447143b
-ms.sourcegitcommit: 6c1960089b92d007fc28c32af1e4bef0f85fdf0c
+ms.openlocfilehash: fb7dc81648ae301962b952b0440d8a24b397c0d8
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75556735"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518206"
 ---
 # <a name="cmakesettingsjson-schema-reference"></a>CMakeSettings.json スキーマ リファレンス
 
@@ -146,6 +146,7 @@ Visual studio 2019 で Visual Studio ジェネレーターを指定するには*
 ```
 
 `"type"`を定義しない場合、`"STRING"` の種類は既定で想定されることに注意してください。
+- `remoteCopyOptimizations`: リモートターゲットへのソースコピーを制御するための**Visual Studio 2019 バージョン 16.5**以降のプロパティ。 既定では、最適化が有効になっています。 `remoteCopyUseOptimizations`、`rsyncSingleDirectoryCommandArgs`、および `remoteCopySourcesMaxSmallChange` を含みます。
 
 ## <a name="environments"></a>下
 

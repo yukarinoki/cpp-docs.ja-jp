@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4789
 ms.assetid: 5800c301-5afb-4af0-85c1-ceb54d775234
-ms.openlocfilehash: 36a5032098c5caabb1b050833e487fd58679a782
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 36278615631d017db1d1c2fc4eecf8c1612892de
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62187232"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518401"
 ---
 # <a name="compiler-warning-level-1-c4789"></a>コンパイラの警告 (レベル 1) C4789
 
-> バッファー '*識別子*' のサイズの*N* (バイト) でオーバーランが発生されます。*M*オフセットから始まるバイトが書き込まれます*L*
+> サイズが*N*バイトのバッファー '*identifier*' がオーバーランします。*M*バイトはオフセット*L*から書き込まれます
 
 ## <a name="remarks"></a>Remarks
 
-**C4789**特定の C ランタイム (CRT) 関数を使用する場合、バッファー オーバーランについて警告が表示されます。 サイズの不一致がある場合は、パラメーターが渡されるまたは割り当てが行われたときにも報告できます。 警告は、コンパイル時に、データ サイズがわかっている場合は。 この警告は、一般的なデータ サイズの不一致の検出が回避されるような状況のためのものです。
+特定の C ランタイム (CRT) 関数が使用されている場合、 **C4789**はバッファーオーバーランについて警告します。 また、パラメーターが渡されたときや割り当てが行われたときに、サイズの不一致を報告することもできます。 コンパイル時にデータサイズがわかっている場合は、警告が発生する可能性があります。 この警告は、一般的なデータ サイズの不一致の検出が回避されるような状況のためのものです。
 
-**C4789**ときに警告が表示されます、コンパイル時に小さすぎることが知られているデータ ブロックにデータをコピーします。
+**C4789**は、コンパイル時に小さすぎることがわかっているデータブロックにデータがコピーされるときに警告を出します。
 
-コピーは、これらの CRT 関数のいずれかの組み込みの形式を使用している場合、警告が発生します。
+この警告は、次のいずれかの CRT 関数の組み込み形式をコピーで使用した場合に発生します。
 
 - [strcpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)
 
@@ -31,9 +31,9 @@ ms.locfileid: "62187232"
 
 - [memcpy](../../c-runtime-library/reference/memcpy-wmemcpy.md)、 [wmemcpy](../../c-runtime-library/reference/memcpy-wmemcpy.md)
 
-警告には、大きいデータ型、パラメーターをキャストし、左辺値参照からのコピー割り当てを作成するときにも表示されます。
+また、パラメーターをより大きなデータ型にキャストしてから、左辺値参照からコピー割り当てを作成した場合にも、警告が表示されます。
 
-Visual C では、決して実行されるコード パスに対してこの警告を生成可能性があります。 次の例に示すように、`#pragma` を使用して、警告を一時的に無効にすることができます。
+ビジュアルC++では、実行されないコードパスに対してこの警告が生成されることがあります。 次の例に示すように、`#pragma` を使用して、警告を一時的に無効にすることができます。
 
 ```cpp
 #pragma warning( push )
@@ -42,9 +42,9 @@ Visual C では、決して実行されるコード パスに対してこの警�
 #pragma warning( pop )
 ```
 
-この手法では、その特定のコード ブロックの警告を生成すると Visual C が保持されます。 `#pragma warning(push)` は、`#pragma warning(disable: 4789)` によって変更される前に、既存の状態を維持します。 `#pragma warning(pop)` はプッシュされた状態を復元し、`#pragma warning(disable:4789)` の効果を削除します。 詳細については、C++プリプロセッサ ディレクティブ`#pragma`を参照してください[警告](../../preprocessor/warning.md)と[プラグマ ディレクティブと _ _pragma キーワード](../../preprocessor/pragma-directives-and-the-pragma-keyword.md)します。
+この表現を使用C++すると、その特定のコードブロックに対する警告がビジュアルに生成されません。 `#pragma warning(push)` は、`#pragma warning(disable: 4789)` によって変更される前に、既存の状態を維持します。 `#pragma warning(pop)` はプッシュされた状態を復元し、`#pragma warning(disable:4789)` の効果を削除します。 プリプロセッサディレクティブ `#pragma`のC++詳細については、「 [Warning](../../preprocessor/warning.md) [ディレクティブと Pragma ディレクティブ」および「__Pragma キーワード](../../preprocessor/pragma-directives-and-the-pragma-keyword.md)」を参照してください。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例では C4789 が生成されます。
 
@@ -68,7 +68,7 @@ int main()
 }
 ```
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 次の例でも C4789 が生成されます。
 
@@ -78,7 +78,7 @@ int main()
 // processor: x86
 short G;
 
-void main()
+int main()
 {
    int * p = (int *)&G;
    *p = 3;   // C4789 - writes an int through a pointer to short

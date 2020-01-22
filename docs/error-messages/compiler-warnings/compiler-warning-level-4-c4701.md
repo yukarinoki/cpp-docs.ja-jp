@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4701
 ms.assetid: d7c76c66-1f3f-4d3c-abe4-5d94c84a5a1f
-ms.openlocfilehash: cbe70de39d2306edd50bb936ac5bbb4ad14af0e5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b83ad810da06de1f9d640477f73d4393c932054a
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395288"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518388"
 ---
 # <a name="compiler-warning-level-4-c4701"></a>コンパイラの警告 (レベル 4) C4701
 
-初期化されていない可能性があるローカル変数 'name' の使用
+初期化されていない可能性があるローカル変数 ' name ' を使用します
 
-ローカル変数*名前*値を割り当てられることがなく使用される可能性があります。 これは、予期しない結果につながりますでした。
+ローカル変数*名*は、値を割り当てずに使用されている可能性があります。 これにより、予測できない結果が生じる可能性があります。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
-次のコードには、C4701 と C4703 が生成されます。
+次のコードでは、C4701 と C4703 が生成されます。
 
 ```cpp
 #include <malloc.h>
@@ -37,7 +37,7 @@ void func(int size)
         free(p);
 }
 
-void main()
+int main()
 {
     func(9);
 }
@@ -48,7 +48,7 @@ c:\src\test.cpp(10) : warning C4701: potentially uninitialized local variable 'p
 c:\src\test.cpp(10) : warning C4703: potentially uninitialized local pointer variable 'p' used
 ```
 
-この警告を解決するには、この例で示すように、変数を初期化します。
+この警告を解決するには、次の例に示すように変数を初期化します。
 
 ```cpp
 #include <malloc.h>
@@ -64,7 +64,7 @@ void func(int size)
         free(p);
 }
 
-void main()
+int main()
 {
     func(9);
 }
