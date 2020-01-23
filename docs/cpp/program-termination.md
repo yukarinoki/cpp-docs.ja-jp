@@ -1,44 +1,52 @@
 ---
 title: C++プログラムの終了
-ms.date: 12/10/2019
+description: 言語プログラムをC++exit する方法について説明します。
+ms.date: 01/15/2020
 helpviewer_keywords:
 - terminating execution
 - quitting applications
 - exiting applications
 - programs [C++], terminating
 ms.assetid: fa0ba9de-b5f1-4e7b-aa65-e7932068b48c
-ms.openlocfilehash: a0e86cacd951327d39296a183be5ee4fbc36fd15
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+no-loc:
+- exit
+- abort
+- return
+- main
+- atexit
+- void
+ms.openlocfilehash: f83c9d5da5b0a1127603a97fd7946e9cca43a7a5
+ms.sourcegitcommit: e93f3e6a110fe38bc642055bdf4785e620d4220f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301341"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76123956"
 ---
 # <a name="c-program-termination"></a>C++プログラムの終了
 
-でC++は、次の方法でプログラムを終了できます。
+でC++は、次の方法でプログラムを exit できます。
 
-- [Exit](exit-function.md)関数を呼び出します。
-- [Abort](abort-function.md)関数を呼び出します。
+- [exit](exit-function.md)関数を呼び出します。
+- [abort](abort-function.md)関数を呼び出します。
 - `main`から[return](return-statement-cpp.md)ステートメントを実行します。
 
-## <a name="exit-function"></a>exit 関数
+## <a name="opno-locexit-function"></a>exit 関数
 
-\<stdlib.h> > で宣言されている[exit](../c-runtime-library/reference/exit-exit-exit.md)関数は、プログラムC++を終了します。 `exit` の引数として指定された値は、プログラムのリターンコードまたは終了コードとしてオペレーティングシステムに返されます。 慣例により、ゼロのリターン コードは、プログラムが正常に完了したことを意味します。 \<stdlib.h> > で定義されている定数 EXIT_FAILURE と EXIT_SUCCESS を使用して、プログラムの成功または失敗を示すことができます。
+\<stdlib.h> > で宣言された[exit](../c-runtime-library/reference/exit-exit-exit.md)関数は、プログラムをC++終了します。 `exit` の引数として指定された値は、プログラムの return コードまたは exit コードとしてオペレーティングシステムに返されます。 規則により、return コードがゼロの場合は、プログラムが正常に完了したことを意味します。 \<stdlib.h> > で定義されている定数 EXIT_FAILURE と EXIT_SUCCESS を使用して、プログラムの成功または失敗を示すことができます。
 
-`main` 関数から**return**ステートメントを発行することは、戻り値を引数として `exit` 関数を呼び出すことと同じです。
+`main` 関数から **return** ステートメントを発行することは、return 値を引数として `exit` 関数を呼び出すことと同じです。
 
-## <a name="abort-function"></a>abort 関数
+## <a name="opno-locabort-function"></a>abort 関数
 
-[abort](../c-runtime-library/reference/abort.md) 関数（標準インクルードファイル \<stdlib.h> で宣言されている）はC++プログラムを終了させます。 `exit` と `abort` の違いは、`exit` によってC++実行時の終了処理を実行できることです (グローバルオブジェクトのデストラクターが呼び出されます)。一方、`abort` はプログラムをすぐに終了します。 `abort` 関数は、初期化されたグローバル静的オブジェクトの通常の破棄プロセスをバイパスします。 また、 [atexit](../c-runtime-library/reference/atexit.md)関数を使用して指定された特別な処理も省略します。
+[abort](../c-runtime-library/reference/abort.md)関数は、標準のインクルードファイル \<stdlib.h> > でも宣言されており、 C++プログラムを終了します。 `exit` と `abort` の違いは、`exit` によってC++実行時の終了処理を実行できることです (グローバルオブジェクトのデストラクターが呼び出されます)。一方、`abort` はプログラムをすぐに終了します。 `abort` 関数は、初期化されたグローバル静的オブジェクトの通常の破棄プロセスをバイパスします。 また、 [atexit](../c-runtime-library/reference/atexit.md)関数を使用して指定された特別な処理をバイパスします。
 
-## <a name="atexit-function"></a>atexit 関数
+## <a name="opno-locatexit-function"></a>atexit 関数
 
-[Atexit](../c-runtime-library/reference/atexit.md)関数を使用して、プログラムの終了前に実行するアクションを指定します。 **Atexit**の呼び出し前に初期化されたグローバルな静的オブジェクトは、終了処理関数を実行する前に破棄されます。
+[atexit](../c-runtime-library/reference/atexit.md)関数を使用して、プログラムを終了する前に実行するアクションを指定します。 exit処理関数を実行する前に、 **atexit** の呼び出しの前に初期化されたグローバルな静的オブジェクトは破棄されません。
 
-## <a name="return-statement-in-main"></a>main の return ステートメント
+## <a name="opno-locreturn-statement-in-opno-locmain"></a>main 内の return ステートメント
 
-発行、[return](return-statement-cpp.md)ステートメントから`main`呼び出しと同じ機能が、`exit`関数。 次に例を示します。
+`main` から[return](return-statement-cpp.md)ステートメントを発行することは、`exit` 関数を呼び出すことと機能的には同じです。 次に例を示します。
 
 ```cpp
 // return_statement.cpp
@@ -50,15 +58,15 @@ int main()
 }
 ```
 
-`exit`と**return**前の例のステートメントは機能的に同じです。 ただし、 C++では、 **void**以外の戻り値の型を持つ関数は値を返す必要があります。 **return**ステートメントを使用するから値を返す`main`します。
+前の例の `exit` および **return** ステートメントは機能的には同じです。 ただし、 C++では、 **void** 以外の return 型を持つ関数に値 return 必要があります。 **return** ステートメントを使用すると、`main`の値を return できます。
 
 ## <a name="destruction-of-static-objects"></a>静的オブジェクトの破棄
 
-`exit` を呼び出したとき、または `main`から**return**ステートメントを実行すると、静的オブジェクトは初期化の逆の順序 (存在する場合は `atexit` の呼び出しの後) で破棄されます。 次の例は、こうした初期化やクリーンアップがどのように機能するのかを示します。
+`exit` を呼び出したとき、または `main`から **return** ステートメントを実行すると、静的オブジェクトは初期化の逆の順序 (存在する場合は `atexit` の呼び出しの後) で破棄されます。 次の例は、こうした初期化やクリーンアップがどのように機能するのかを示します。
 
 ### <a name="example"></a>使用例
 
-次の例では、`main`に入る前に、静的オブジェクト `sd1` および `sd2` が作成され、初期化されます。 使用してこのプログラムの終了後、**return**ステートメントでは、まず`sd2`が破棄されるし、 `sd1`。 `ShowData` クラスのデストラクターは、これらの静的オブジェクトに関連付けられたファイルを閉じます
+次の例では、`main`に入る前に、静的オブジェクト `sd1` および `sd2` が作成され、初期化されます。 このプログラムが **return** ステートメントを使用して終了すると、最初に `sd2` が破棄され、`sd1`ます。 `ShowData` クラスのデストラクターは、これらの静的オブジェクトに関連付けられたファイルを閉じます
 
 ```cpp
 // using_exit_or_return1.cpp
@@ -107,7 +115,6 @@ int main() {
 }
 ```
 
-
 ## <a name="see-also"></a>関連項目
 
-[main: プログラムの起動](main-program-startup.md)
+[main 関数とコマンドライン引数](main-function-command-line-args.md)

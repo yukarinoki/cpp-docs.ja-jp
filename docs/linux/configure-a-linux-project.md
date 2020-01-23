@@ -2,12 +2,12 @@
 title: Visual Studio で C++ Linux プロジェクトを構成する
 ms.date: 06/11/2019
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: 1cfaeb6611a27af498325739271d4dba38581dd6
-ms.sourcegitcommit: c53a3efcc5d51fc55fa57ac83cca796b33ae888f
+ms.openlocfilehash: 5d42ca587946d3b5adcbd3b6fe35a6c1e1bb9ae8
+ms.sourcegitcommit: 49e4fb3e0300fe86c814130661f1bf68b16e72e2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71960657"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "76031371"
 ---
 # <a name="configure-a-linux-project"></a>Linux プロジェクトを構成する
 
@@ -95,6 +95,9 @@ Linux サポートは Visual Studio 2017 以降で使用できます。
 ## <a name="remote_intellisense"></a> リモート システムのヘッダーでの IntelliSense
 
 **接続マネージャー**で新しい接続を追加すると、Visual Studio によってリモート システム上のコンパイラのインクルード ディレクトリが自動的に検出されます。 Visual Studio によってこれらのファイルが圧縮されて、お使いのローカル Windows コンピューター上のディレクトリにコピーされます。 その後、Visual Studio または CMake プロジェクトでその接続を使用するたびに、IntelliSense を提供するためにこれらのディレクトリ内のヘッダーが使用されます。
+
+> [!NOTE]
+> Visual Studio 2019 バージョン 16.5 以降では、リモート ヘッダーのコピーが最適化されています。 Linux プロジェクトを開くとき、または Linux ターゲットに合わせて CMake を構成するときに、ヘッダーがオンデマンドでコピーされるようになりました。 コピーは、プロジェクトに指定されたコンパイラに基づいて、プロジェクトごとにバックグラウンドで実行されます。 詳細については、「[Linux IntelliSense の精度とパフォーマンスの改善点](https://devblogs.microsoft.com/cppblog/improvements-to-accuracy-and-performance-of-linux-intellisense/)」を参照してください。
 
 この機能は、Linux コンピューターにインストールされている zip に依存します。 この apt-get コマンドを使用して、zip をインストールできます。
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - main function
 - programs [C++], terminating
 ms.assetid: 5984f1bd-072d-4e06-8640-122fb1454401
-ms.openlocfilehash: d16f8a5b7b6b23ad90aad886bbb9654e706549cb
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: 28b0d826dc02376f952d3522f2f037eacd298b8e
+ms.sourcegitcommit: e93f3e6a110fe38bc642055bdf4785e620d4220f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151041"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76123943"
 ---
 # <a name="main-function-and-program-execution"></a>main 関数とプログラム実行
 
@@ -26,7 +26,7 @@ ms.locfileid: "56151041"
 main( int argc, char *argv[ ], char *envp[ ] )
 ```
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
 
 ソース プログラム内の関数は、1 つ以上の特定のタスクを実行します。 **main** 関数は、これらの関数を呼び出して、それぞれのタスクを実行することができます。 **main** が別の関数を呼び出すときは、その関数の最初のステートメントから実行が開始されるように、その関数に実行制御を渡します。 関数は、`return` ステートメントが実行されたとき、または関数の終わりに達したときに、**main** に制御を戻します。
 
@@ -38,5 +38,5 @@ main( int argc, char *argv[ ], char *envp[ ] )
 
 ## <a name="see-also"></a>関連項目
 
-[main:プログラムの起動](../cpp/main-program-startup.md)<br/>
+[main 関数とコマンドライン引数C++()](../cpp/main-function-command-line-args.md)\
 [C コマンド ライン引数の解析](../c-language/parsing-c-command-line-arguments.md)

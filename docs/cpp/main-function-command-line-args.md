@@ -1,26 +1,42 @@
 ---
 title: main 関数とコマンドライン引数 (C++)
-description: Main 関数は、 C++プログラムのエントリポイントです。
-ms.date: 12/10/2019
+description: main 関数は、 C++プログラムのエントリポイントです。
+ms.date: 01/15/2019
 ms.assetid: c6568ee6-40ab-4ae8-aa44-c99e232f64ac
-ms.openlocfilehash: 95e774700c63dc815f6d814bfda84a38a38d4e6e
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+no-loc:
+- main
+- wmain
+- inline
+- static
+- _tmain
+- void
+- exit
+- argc
+- argv
+- envp
+- CreateProcess
+- GetModuleFileName
+- char
+- wchar_t
+- extern
+ms.openlocfilehash: 33753e30304a9bb63c135979d3f20098e6b6401a
+ms.sourcegitcommit: e93f3e6a110fe38bc642055bdf4785e620d4220f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75302410"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76123904"
 ---
-# <a name="main-function-and-command-line-arguments"></a>main 関数とコマンドライン引数
+# <a name="opno-locmain-function-and-command-line-arguments"></a>main 関数とコマンドライン引数
 
-すべてC++のプログラムには `main` 機能が必要です。 Main 関数を使用せずC++に *.exe*プロジェクトをコンパイルしようとすると、コンパイラでエラーが発生します。 (ダイナミックリンクライブラリとスタティックライブラリには `main` 機能がありません)。`main` 関数は、ソースコードの実行を開始しますが、プログラムが `main` 関数に入る前に、明示的な初期化子を持たない静的クラスメンバーはすべて0に設定されます。 Microsoft C++では、`main`に入る前に、グローバルな静的オブジェクトも初期化されます。 `main` 関数には、他の関数には適用されないC++いくつかの制限が適用されます。 `main` 関数:
+すべてC++のプログラムには `main` 機能が必要です。 main 関数を使用せずC++に *.exe*プロジェクトをコンパイルしようとすると、コンパイラによってエラーが発生します。 (ダイナミックリンクライブラリと static ライブラリには、`main` の機能はありません)。`main` 関数は、ソースコードの実行を開始しますが、プログラムが `main` 関数に入る前に、明示的な初期化子を持たないすべての static クラスメンバーを0に設定します。 Microsoft C++では、グローバル static オブジェクトも `main`に入る前に初期化されます。 `main` 関数には、他の関数には適用されないC++いくつかの制限が適用されます。 `main` 関数:
 
 - オーバーロードできません (「[関数のオーバーロード](function-overloading.md)」を参照してください)。
-- として宣言できません**inline**します。
-- として宣言できません**static**します。
+- を **inline** として宣言することはできません。
+- を **static** として宣言することはできません。
 - そのアドレスを取得することはできません。
 - 呼び出すことはできません。
 
-`main` の宣言構文は次のとおりです。
+main 関数は、言語に組み込まれているため、宣言を持ちません。 これが行われた場合、`main` の宣言構文は次のようになります。
 
 ```cpp
 int main();
@@ -38,7 +54,7 @@ int wmain(int argc, wchar_t *argv[], wchar_t *envp[]);
 
 また、tchar.h で定義されている `_tmain`を使用することもできます。 `_tmain` は、_UNICODE が定義されていない限り、`main` に解決されます。 定義されている場合、`_tmain` は `wmain` に解決されます。
 
-戻り値が指定されていない場合、コンパイラは戻り値として0を指定します。 または、`main` 関数と `wmain` 関数を、 **void** (戻り値なし) を返すように宣言できます。 **Void**を返すように `main` または `wmain` を宣言する場合、 [return](../cpp/return-statement-in-program-termination-cpp.md)ステートメントを使用して、親プロセスまたはオペレーティングシステムに終了コードを返すことはできません。 `main` または `wmain` が**void**として宣言されている場合に終了コードを返すには、 [exit](../cpp/exit-function.md)関数を使用する必要があります。
+戻り値が指定されていない場合、コンパイラは戻り値として0を指定します。 または、`main` 関数と `wmain` 関数を、 **void** を返すように宣言できます (戻り値はありません)。 **void** を返すように `main` または `wmain` を宣言する場合、 [return](../cpp/return-statement-in-program-termination-cpp.md)ステートメントを使用して、親プロセスまたはオペレーティングシステムに exit コードを返すことはできません。 `main` または `wmain` が **void** として宣言されている場合に exit コードを返すには、 [exit](../cpp/exit-function.md)関数を使用する必要があります。
 
 **END Microsoft 固有の仕様**
 
@@ -54,7 +70,7 @@ int wmain( int argc, wchar_t* argv[], wchar_t* envp[]);
 引数の定義は、次のとおりです。
 
 *argc*<br/>
-*Argv*の後続の引数の数を含む整数。 *Argc*パラメーターには、常に1以上の値を指定します。
+*argv* で後に続く引数の数を含む整数。 *argc* パラメーターは常に1以上です。
 
 *argv*<br/>
 プログラムのユーザーが入力したコマンド ライン引数を表す、null で終了する文字列配列。 慣例により、`argv[0]` はプログラムの呼び出しに使用するコマンド、`argv[1]` は最初のコマンドライン引数、`argv[argc]`までは常に NULL になります。 コマンドライン処理の抑制については、「[コマンドライン処理のカスタマイズ](../cpp/customizing-cpp-command-line-processing.md)」を参照してください。
@@ -62,18 +78,18 @@ int wmain( int argc, wchar_t* argv[], wchar_t* envp[]);
 最初のコマンド ライン引数は、必ず `argv[1]` となり、最後のコマンド ライン引数は、`argv[argc - 1]` になります。
 
 > [!NOTE]
-> 慣例により、`argv[0]` はプログラムが呼び出されるコマンドです。 ただし、 [CreateProcess](/windows/win32/api/libloaderapi/nf-libloaderapi-getmodulefilenamew)を使用してプロセスを生成することができます。また、1番目と2番目の引数 (*lpapplicationname*と`argv[0]` *lpapplicationname*) の両方を使用する場合、実行可能ファイル名にすることはできません。[GetModuleFileName](/windows/win32/api/libloaderapi/nf-libloaderapi-getmodulefilenamew) にを使用します。実行可能ファイル名とその完全修飾パスを取得する場合は。
+> 慣例により、`argv[0]` はプログラムが呼び出されるコマンドです。 ただし、 [CreateProcess](/windows/win32/api/libloaderapi/nf-libloaderapi-getmodulefilenamew)を使用してプロセスを生成することができます。1番目と2番目の引数 (*Lpapplicationname*と*lpapplicationname*) の両方を使用すると、`argv[0]` は実行可能ファイル名ではない可能性があります。[GetModuleFileName](/windows/win32/api/libloaderapi/nf-libloaderapi-getmodulefilenamew)を使用して、実行可能ファイル名とその完全修飾パスを取得します。
 
 **Microsoft 固有の仕様**
 
 *envp*<br/>
-多くの UNIX システムで共通する拡張機能である*envp*配列は、Microsoft C++で使用されています。 これは、ユーザーの環境で設定された変数を表す文字列の配列です。 この配列は NULL エントリで終了します。 **Char** (`char *envp[]`) へのポインターの配列として、または**char** (`char **envp`) へのポインターへのポインターとして宣言できます。 プログラムで `main`ではなく `wmain` を使用する場合は、 **char**ではなく**wchar_t**データ型を使用します。 `main` に渡される環境ブロックと `wmain` は、現在の環境の "固定" コピーです。 その後、`putenv` または `_wputenv`への呼び出しを使用して環境を変更すると、(`getenv` または `_wgetenv` によって返される) 現在の環境、および `_environ` 変数または `_wenviron` 変数) が変更されますが、envp が指すブロックは変更されません。 環境処理の抑制については、「[コマンドライン処理のカスタマイズ](../cpp/customizing-cpp-command-line-processing.md)」を参照してください。 この引数は、C では ANSI 互換ですが、C++ では非互換です。
+*envp* 配列は、多くの UNIX システムで共通の拡張機能であり、Microsoft C++で使用されています。 これは、ユーザーの環境で設定された変数を表す文字列の配列です。 この配列は NULL エントリで終了します。 これは、 **char** (`char *envp[]`) へのポインターの配列として、または **char** (`char **envp`) へのポインターへのポインターとして宣言できます。 プログラムで `main`ではなく `wmain` を使用する場合は、 **char** ではなく **wchar_t** データ型を使用します。 `main` に渡される環境ブロックと `wmain` は、現在の環境の "固定" コピーです。 後で `putenv` または `_wputenv`の呼び出しを使用して環境を変更した場合、(`getenv` または `_wgetenv` によって返された) 現在の環境、および `_environ` または `_wenviron` 変数) は変更されますが、envp が指すブロックは変更されません。 環境処理の抑制については、「[コマンドライン処理のカスタマイズ](../cpp/customizing-cpp-command-line-processing.md)」を参照してください。 この引数は、C では ANSI 互換ですが、C++ では非互換です。
 
 **END Microsoft 固有の仕様**
 
 ### <a name="example"></a>使用例
 
-次の例は、 *argc*、 *argv*、および*envp*引数を使用して `main`する方法を示しています。
+次の例は、 *argc* 、 *argv* 、および *envp* 引数を使用して `main`する方法を示しています。
 
 ```cpp
 // argument_definitions.cpp
@@ -172,9 +188,9 @@ int main( int argc,      // Number of strings in array argv
 
 プログラムがコマンド ラインの引数を受け取らない場合は、コマンド ライン処理を実行するライブラリ ルーチンの使用を制約することで、領域を節約できます。 このルーチンは `_setargv` と呼ばれ、[ワイルドカードの展開](../cpp/wildcard-expansion.md)で説明されています。 使用しないようにするには、`main` 関数を含むファイルで何も実行しないルーチンを定義し、`_setargv`という名前を指定します。 `_setargv`の定義によって `_setargv` の呼び出しが満たされ、ライブラリのバージョンが読み込まれません。
 
-同様に、`envp` 引数を使用して環境テーブルにアクセスしない場合は、環境処理ルーチン `_setenvp`の代わりに独自の空のルーチンを使用することができます。 `_setargv` 関数と同様に、`_setenvp` を**extern "C"** として宣言する必要があります。
+同様に、`envp` 引数を使用して環境テーブルにアクセスしない場合は、環境処理ルーチン `_setenvp`の代わりに独自の空のルーチンを使用することができます。 `_setargv` 関数と同様に、`_setenvp` は **extern "C"** として宣言する必要があります。
 
-プログラムによって、C ランタイムライブラリで `spawn` または `exec` のルーチンファミリが呼び出される場合があります。 この場合、このルーチンは親プロセスから子プロセスに環境を渡すために使用されるため、環境処理ルーチンを抑制しないでください。
+プログラムによって、C ランタイムライブラリで `spawn` または `exec` のルーチンファミリが呼び出される場合があります。 存在する場合は、環境処理ルーチンを抑制しないでください。このルーチンは、親プロセスから子プロセスに環境を渡すために使用されるためです。
 
 **END Microsoft 固有の仕様**
 
