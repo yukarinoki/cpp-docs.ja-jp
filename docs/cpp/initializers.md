@@ -6,12 +6,12 @@ helpviewer_keywords:
 - arrays [C++], array-element initializers
 - aggregate initializers [C++]
 ms.assetid: ce301ed8-aa1c-47b2-bb39-9f0541b4af85
-ms.openlocfilehash: fd926177dd7540d8dc1e8512e9f17e20a0b8238c
-ms.sourcegitcommit: 20a1356193fbe0ddd1002e798b952917eafc3439
+ms.openlocfilehash: 2cc68f2384402ce1eb3ac06b414f597a6b3951f0
+ms.sourcegitcommit: e93f3e6a110fe38bc642055bdf4785e620d4220f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68661615"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76123969"
 ---
 # <a name="initializers"></a>初期化子
 
@@ -81,7 +81,7 @@ ms.locfileid: "68661615"
 
 - 数値変数は 0 (0.0 や 0.0000000000 など) に初期化されます。
 
-- Char 変数はに`'\0'`初期化されます。
+- Char 変数は `'\0'`に初期化されます。
 
 - ポインターは**nullptr**に初期化されます。
 
@@ -173,7 +173,7 @@ int main() {
 }
 ```
 
-グローバルな静的オブジェクトの初期化の詳細については、「[スタートアップに関するその他の考慮事項](../cpp/additional-startup-considerations.md)」を参照してください。
+グローバルな静的オブジェクトの初期化の詳細については、「 [main 関数とコマンドライン引数](main-function-command-line-args.md)」を参照してください。
 
 ### <a name="value-initialization"></a>値の初期化
 
@@ -276,7 +276,7 @@ shared_ptr<int> sp = new int(1729); // the constructor is explicit; same error
 
 - **new**キーワードと空でない中かっこまたはかっこを使用して変数が初期化されています
 
-- 変数は**static_cast**で初期化されます。
+- 変数が**static_cast**で初期化されています
 
 - コンストラクターで、基底クラスと非静的メンバーが初期化子リストを使用して初期化される。
 
@@ -417,7 +417,7 @@ int main() {
 }
 ```
 
-次の出力が表示されます。
+以下の出力が表示されます。
 
 ```Output
 agg1: c: 1
@@ -427,7 +427,7 @@ myArr3: 8 9 10 0 0
 ```
 
 > [!IMPORTANT]
-> 宣言されているが、集計の初期化中に明示的に初期化されて`myArr3`いない配列メンバーは、上記のようにゼロ初期化されます。
+> 前の `myArr3` のように、宣言されているが、集計初期化中に明示的に初期化されていない配列メンバーはゼロ初期化されます。
 
 #### <a name="initializing-unions-and-structs"></a>共用体と構造体の初期化
 
@@ -480,7 +480,7 @@ int main() {
 
 ### <a name="reference-initialization"></a>参照の初期化
 
-参照型の変数は、参照型の派生元のオブジェクト型、または参照型の派生元の型に変換できるオブジェクト型により初期化する必要があります。 例えば:
+参照型の変数は、参照型の派生元のオブジェクト型、または参照型の派生元の型に変換できるオブジェクト型により初期化する必要があります。 例:
 
 ```cpp
 // initializing_references.cpp
@@ -505,25 +505,25 @@ reference-type 変数の初期化と reference-type 変数の代入は、構文�
 
 Reference-type 変数は、以下の場合にのみ初期化子なしで宣言できます。
 
-- 関数宣言 (プロトタイプ)。 例えば:
+- 関数宣言 (プロトタイプ)。 例:
 
     ```cpp
     int func( int& );
     ```
 
-- Function-return 型宣言。 例えば:
+- Function-return 型宣言。 例:
 
     ```cpp
     int& func( int& );
     ```
 
-- reference-type クラス メンバーの宣言。 例えば:
+- reference-type クラス メンバーの宣言。 例:
 
     ```cpp
     class c {public:   int& i;};
     ```
 
-- **Extern**として明示的に指定された変数の宣言。 例えば:
+- **Extern**として明示的に指定された変数の宣言。 例:
 
     ```cpp
     extern int& iVal;
@@ -534,7 +534,7 @@ reference-type 変数を初期化する場合、コンパイラではオブジ�
 ![参照型の初期化のためのデシジョングラフ](../cpp/media/vc38s71.gif "参照型の初期化のためのデシジョングラフ") <br/>
 参照型の初期化のためのデシジョングラフ
 
-Volatile 型 ( **volatile** *typename* <strong>&</strong> *identifier*として宣言 **) への**参照は、同じ型の**volatile**オブジェクト、または**volatile**として宣言されていないオブジェクトを使用して初期化できます. ただし、その型の**const**オブジェクトを使用して初期化することはできません。 同様に、const**型への**参照 ( **const** *typename* <strong>&</strong> *identifier*として宣言された) は、同じ型の**const**オブジェクト (または、その型またはオブジェクトに対する変換を含む任意のもの) を使用して初期化できます。これは**const**として宣言されていません)。 ただし、その型の**volatile**オブジェクトを使用して初期化することはできません。
+Volatile 型 ( **volatile** *typename* <strong>&</strong> *identifier* **) への**参照は、同じ型の**volatile**オブジェクト、または**volatile**として宣言されていないオブジェクトを使用して初期化できます。 ただし、その型の**const**オブジェクトを使用して初期化することはできません。 同様に、const**型への**参照 ( **const** *typename* <strong>&</strong> *identifier*として宣言) は、同じ型の**const**オブジェクト (または、その型への変換または**const**として宣言されていないオブジェクトによる変換を含むすべてのオブジェクト) を使用して初期化できます。 ただし、その型の**volatile**オブジェクトを使用して初期化することはできません。
 
 **Const**または**volatile**キーワードで修飾されていない参照は、 **const**および**volatile**として宣言されたオブジェクトでのみ初期化できます。
 

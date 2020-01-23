@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::setiosflags [C++]
 - std::setprecision [C++]
 - std::setw [C++]
-ms.openlocfilehash: 995ad9ae21d7f00a74a912436d599dfead2c9ebb
-ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
+ms.openlocfilehash: 944834e40a399622b5c85d95100d4ca3c3c2da93
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72890147"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518466"
 ---
 # <a name="ltiomanipgt-functions"></a>&lt;iomanip&gt; 関数
 
@@ -61,7 +61,7 @@ T7 get_money(Money& amount, bool use_intl);
 
 ### <a name="remarks"></a>Remarks
 
-マニピュレーターは、ストリーム `str`から抽出されたときに、 *use_intl*を使用して国際形式を示す、`str`に関連付けられているロケールファ `money_get` セットのメンバー関数 `get` を呼び出す `formatted input function` として動作するオブジェクトを返します. 成功した場合は、抽出された通貨値の*金額*がに格納されます。 その後、マニピュレーターが `str` を返します。
+マニピュレーターは、ストリームから抽出されたときに `str`が、`str`に関連付けられたロケールファ `money_get` セットのメンバー関数 `get` を呼び出す `formatted input function` として動作するオブジェクトを返します。このオブジェクトは*use_intl*を使用して国際形式を示します。 成功した場合は、抽出された通貨値の*金額*がに格納されます。 その後、マニピュレーターが `str` を返します。
 
 `Money` は `long double` 型であるか、`str` と同じ要素および特徴パラメーターを持つ `basic_string` のインスタンス化である必要があります。
 
@@ -105,11 +105,11 @@ T8 put_money(const Money& amount, bool use_intl);
 
 ### <a name="return-value"></a>戻り値
 
-`str`を返します。
+`str` を返します。
 
 ### <a name="remarks"></a>Remarks
 
-マニピュレーターは、ストリーム `str` に挿入されたときに、`str` に関連付けられているロケール ファセット `money_put` のメンバー関数 `put` を呼び出す書式付き出力関数として動作するオブジェクトを返します。 成功した場合、`amount` 呼び出しは use_intl を使用して適切に書式設定され、を使用して国際形式と `str.fill()`を塗りつぶし要素として示します。 その後、マニピュレーターが `str` を返します。
+マニピュレーターは、ストリーム `str` に挿入されたときに、`str` に関連付けられているロケール ファセット `money_put` のメンバー関数 `put` を呼び出す書式付き出力関数として動作するオブジェクトを返します。 成功した場合、呼び出しは、 *use_intl*を使用して `amount` 適切な形式で、fill 要素として国際形式と `str.fill()`を示します。 その後、マニピュレーターが `str` を返します。
 
 `Money` は `long double` 型であるか、`str` と同じ要素および特徴パラメーターを持つ `basic_string` のインスタンス化である必要があります。
 
@@ -132,7 +132,7 @@ T10 put_time(struct tm* time_ptr, const Elem* time_format);
 
 ### <a name="remarks"></a>Remarks
 
-マニピュレーターは、ストリーム `str` に挿入されるときに、`formatted output function` として動作するオブジェクトを返します。 出力関数は、`str` に関連付けられているロケール ファセット `time_put` のメンバー関数 `put` を呼び出します。 Output 関数は、 *time_ptr*を使用して時間構造を示し、 *time_format*は null で終わる書式文字列の先頭を示します。 成功した場合、この呼び出しは、書式文字列からのリテラル テキストと時間構造体からの変換された値を挿入します。 その後、マニピュレーターが `str` を返します。
+マニピュレーターは、ストリーム `str` に挿入されるときに、`formatted output function` として動作するオブジェクトを返します。 出力関数は、`str` に関連付けられているロケール ファセット `time_put` のメンバー関数 `put` を呼び出します。 出力関数は、 *time_ptr*を使用して時間構造を示し、 *time_format* null で終わる書式文字列の先頭を示します。 成功した場合、この呼び出しは、書式文字列からのリテラル テキストと時間構造体からの変換された値を挿入します。 その後、マニピュレーターが `str` を返します。
 
 ## <a name="quoted"></a>  quoted
 
@@ -147,8 +147,8 @@ quoted(const char* str, char delimiter, char escape) // or wide versions
 
 ### <a name="parameters"></a>パラメーター
 
-*str* \
-Std:: string、char\*、文字列リテラル、または未加工の文字列リテラル、またはこれらのいずれかのワイドバージョン (std:: wstring、wchar_t\*など)。
+*str*\
+Std:: string、char\*、文字列リテラル、または未加工の文字列リテラル、またはこれらのいずれかのワイドバージョン (例: std:: wstring、wchar_t\*)。
 
 *区切り記号*\
 文字列の先頭と末尾の区切り記号として使用するユーザー指定の文字またはワイド文字。
@@ -160,7 +160,7 @@ Std:: string、char\*、文字列リテラル、または未加工の文字列�
 
 「[挿入演算子と制御形式の使用](../standard-library/using-insertion-operators-and-controlling-format.md)」を参照してください。
 
-### <a name="example"></a>例
+### <a name="example"></a>使用例
 
 この例では、ナロー文字列を使用した既定の区切り文字とエスケープ文字と共に `quoted` を使用する方法を示します。 ワイド文字列は、同様にサポートされています。
 
@@ -195,7 +195,7 @@ void show_quoted_v_nonquoted()
     cout << "Quoted          : " << extracted_quoted << endl;
 }
 
-void main(int argc, char* argv[])
+int main(int argc, char* argv[])
 {
     show_quoted_v_nonquoted();
 
@@ -217,7 +217,7 @@ Press Enter to exit
 */
 ```
 
-### <a name="example"></a>例
+### <a name="example"></a>使用例
 
 カスタムの区切り記号やエスケープ文字を指定する方法を次に示します。
 
@@ -271,7 +271,7 @@ void show_custom_escape()
     // after round-tripping.
 }
 
-void main(int argc, char* argv[])
+int main(int argc, char* argv[])
 {
     cout << "Custom delimiter:" << endl;
     show_custom_delimiter();
@@ -318,7 +318,7 @@ T1 resetiosflags(ios_base::fmtflags mask);
 
 マニピュレーターは、ストリーム `str`から抽出または挿入されると、`str.`[setf](../standard-library/ios-base-class.md#setf)`(ios_base::`[fmtflags](../standard-library/ios-base-class.md#fmtflags)`, mask)`を呼び出し、`str`を返すオブジェクトを返します。
 
-### <a name="example"></a>例
+### <a name="example"></a>使用例
 
 `resetiosflags` の使用例については、「[setw](../standard-library/iomanip-functions.md#setw)」を参照してください。
 
@@ -347,7 +347,7 @@ T3 setbase(int base);
 
 - *Base*がその他の値の場合、mask は[fmtflags](../standard-library/ios-base-class.md#fmtflags)`(0)``ios_base::`ます。
 
-### <a name="example"></a>例
+### <a name="example"></a>使用例
 
 `setbase` の使用例については、「[setw](../standard-library/iomanip-functions.md#setw)」を参照してください。
 
@@ -362,14 +362,14 @@ T4 setfill(Elem Ch);
 
 ### <a name="parameters"></a>パラメーター
 
-*Ch* \
+*Ch*\
 右揃えの表示でスペースを埋めるために使用する文字。
 
 ### <a name="return-value"></a>戻り値
 
 テンプレートマニピュレーターは、ストリーム `str`から抽出または挿入されるときに、`str.`[fill](../standard-library/basic-ios-class.md#fill)`(Ch)`を呼び出し、`str`を返すオブジェクトを返します。 `Elem` 型は、ストリーム `str`の要素型と同じである必要があります。
 
-### <a name="example"></a>例
+### <a name="example"></a>使用例
 
 `setfill` の使用例については、「[setw](../standard-library/iomanip-functions.md#setw)」を参照してください。
 
@@ -390,7 +390,7 @@ T2 setiosflags(ios_base::fmtflags mask);
 
 マニピュレーターは、ストリーム `str`から抽出または挿入されるときに、`str.`[setf](../standard-library/ios-base-class.md#setf)`(mask)`を呼び出し、`str`を返すオブジェクトを返します。
 
-### <a name="example"></a>例
+### <a name="example"></a>使用例
 
 `setiosflags` の使用例については、「[setw](../standard-library/iomanip-functions.md#setw)」を参照してください。
 
@@ -411,7 +411,7 @@ T5 setprecision(streamsize Prec);
 
 マニピュレーターは、ストリーム `str`から抽出または挿入されるときに `str.`[精度](../standard-library/ios-base-class.md#precision)`(Prec)`を呼び出し、`str`を返すオブジェクトを返します。
 
-### <a name="example"></a>例
+### <a name="example"></a>使用例
 
 `setprecision` の使用例については、「[setw](../standard-library/iomanip-functions.md#setw)」を参照してください。
 
@@ -436,7 +436,7 @@ T6 setw(streamsize Wide);
 
 setw は、ストリーム内の次の要素についてのみ幅を設定します。幅を指定する各要素の前に setw を挿入する必要があります。
 
-### <a name="example"></a>例
+### <a name="example"></a>使用例
 
 ```cpp
 // iomanip_setw.cpp
