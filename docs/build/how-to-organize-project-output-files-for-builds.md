@@ -70,4 +70,4 @@ ms.locfileid: "65220666"
 
 ## <a name="see-also"></a>関連項目
 
-[C++Visual Studio でプロジェクトの種類](reference/visual-cpp-project-types.md)
+[Visual Studio での C++ プロジェクトの種類](reference/visual-cpp-project-types.md)
