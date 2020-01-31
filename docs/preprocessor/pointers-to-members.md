@@ -10,12 +10,12 @@ helpviewer_keywords:
 - members, pointers to
 - pointers_to_members pragma
 ms.assetid: 8325428c-c90a-4aed-9e82-cb1dda23f4ca
-ms.openlocfilehash: fb5b277252b6c1422a87c5f2a2e2b7230ec49632
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 6058e3e4855eb745a01410e31eb9f454ef131ab1
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70219065"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821409"
 ---
 # <a name="pointers_to_members-pragma"></a>pointers_to_members プラグマ
 
@@ -29,7 +29,7 @@ ms.locfileid: "70219065"
 
 ## <a name="remarks"></a>Remarks
 
-**Pointers_to_members**プラグマは、 [/vmb または/vmg](../build/reference/vmb-vmg-representation-method.md)コンパイラオプションや[継承キーワード](../cpp/inheritance-keywords.md)を使用する代わりに、ソースファイルに配置できます。
+[/Vmb または/vmg](../build/reference/vmb-vmg-representation-method.md)コンパイラオプションや[継承キーワード](../cpp/inheritance-keywords.md)を使用する代わりに、ソースファイルに**pointers_to_members**プラグマを配置できます。
 
 *ポインター宣言*引数は、関連付けられている関数定義の前または後に、メンバーへのポインターを宣言したかどうかを指定します。 *ポインター宣言*引数は、次の2つの記号のいずれかになります。
 
@@ -44,12 +44,12 @@ ms.locfileid: "70219065"
 |--------------|--------------|
 | **single_inheritance** | 最も一般的な表現は、単一継承、メンバー関数へのポインターです。 メンバーへのポインターが宣言されているクラス定義の継承モデルが多重継承モデルまたは仮想モデルの場合、エラーが発生します。 |
 | **multiple_inheritance** | 最も一般的な表現は、多重継承、メンバー関数へのポインターです。 メンバーへのポインターが宣言されているクラス定義の継承モデルが仮想モデルの場合、エラーが発生します。 |
-| **virtual_inheritance** | 最も一般的な表現は、仮想継承、メンバー関数へのポインターです。 エラーが発生することはありません。 **virtual_inheritance**は、が使用さ`#pragma pointers_to_members(full_generality)`れている場合の既定の引数です。 |
+| **virtual_inheritance** | 最も一般的な表現は、仮想継承、メンバー関数へのポインターです。 エラーが発生することはありません。 `#pragma pointers_to_members(full_generality)` を使用する場合、 **virtual_inheritance**は既定の引数です。 |
 
 > [!CAUTION]
-> **Pointers_to_members**プラグマは、適用するソースコードファイルと、 `#include`ディレクティブの後にのみ配置することをお勧めします。 これにより、プラグマが他のファイルに影響を与えるリスクが減少すると共に、同じ変数、関数、またはクラス名に誤って複数の定義を指定するリスクが減少します。
+> **Pointers_to_members**プラグマは、`#include` ディレクティブの後にのみ、影響を与えるソースコードファイル内に配置することをお勧めします。 これにより、プラグマが他のファイルに影響を与えるリスクが軽減され、同じ変数、関数、またはクラス名に対して複数の定義が誤って指定されます。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 ```cpp
 //   Specify single-inheritance only
@@ -60,4 +60,4 @@ ms.locfileid: "70219065"
 
 ## <a name="see-also"></a>関連項目
 
-[プラグマディレクティブと __ プラグマキーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[プラグマディレクティブと __pragma キーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

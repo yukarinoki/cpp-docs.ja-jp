@@ -7,16 +7,16 @@ f1_keywords:
 - event/Microsoft::WRL::InvokeModeOptions
 helpviewer_keywords:
 - AgileEventSource class
-ms.openlocfilehash: 095c61dcef208028bf1c0f4b3443ba10110da8ed
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fa1e0a72d865b2993e149f6e4d2b57fe13463a61
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223041"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821741"
 ---
 # <a name="agileeventsource-class"></a>AgileEventSource クラス
 
-任意のスレッドからアクセス可能なコンポーネントである、アジャイル コンポーネントによって発生するイベントを表します。 継承[EventSource](eventsource-class.md)をオーバーライドし、`Add`アジャイルのイベントを起動する方法のオプションを指定する追加の型パラメーターを持つメンバー関数。
+任意のスレッドからアクセスできるコンポーネントであるアジャイルコンポーネントによって発生するイベントを表します。 [EventSource](eventsource-class.md)から継承し、`Add` メンバー関数を追加の型パラメーターでオーバーライドして、アジャイルイベントの呼び出し方法を指定します。
 
 ## <a name="syntax"></a>構文
 
@@ -33,14 +33,14 @@ class AgileEventSource :
 ## <a name="parameters"></a>パラメーター
 
 *TDelegateInterface*<br/>
-イベント ハンドラーを表すデリゲートのインターフェイスです。
+イベントハンドラーを表すデリゲートへのインターフェイス。
 
 *TEventSourceOptions*<br/>
-[InvokeModeOptions](invokemodeoptions-structure.md) invokeMode フィールドに設定されている構造`InvokeMode::StopOnFirstError`または`InvokeMode::FireAll`します。
+InvokeMode フィールドが `InvokeMode::StopOnFirstError` または `InvokeMode::FireAll`に設定されている[InvokeModeOptions](invokemodeoptions-structure.md)構造体。
 
 ## <a name="remarks"></a>Remarks
 
-Windows ランタイム コンポーネントの大半は、アジャイル コンポーネントです。 詳細については、次を参照してください。[スレッドとマーシャ リング (C++/CX)](../../cppcx/threading-and-marshaling-c-cx.md)します。
+Windows ランタイムのコンポーネントの大部分はアジャイルコンポーネントです。 詳細については、「[スレッド処理C++とマーシャリング (/cx)](../../cppcx/threading-and-marshaling-c-cx.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -48,23 +48,23 @@ Windows ランタイム コンポーネントの大半は、アジャイル コ�
 
 `AgileEventSource`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** event.h
+**ヘッダー:** イベント .h
 
-**名前空間:** Microsoft::wrl
+**名前空間:** Microsoft::WRL
 
 ## <a name="members"></a>メンバー
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|名前|説明|
+|[名前]|説明|
 |----------|-----------------|
-|[AgileEventSource::Add メソッド](#add)|現在のイベント ハンドラーのセットを指定したデリゲート インターフェイスによって表されるアジャイル イベント ハンドラーを追加します。 **AgileEventSource**オブジェクト。|
+|[AgileEventSource:: Add メソッド](#add)|指定されたデリゲートインターフェイスによって表されるアジャイルイベントハンドラーを、現在の**Agileeventsource**オブジェクトのイベントハンドラーのセットに追加します。|
 
-## <a name="add"></a> AgileEventSource::Add メソッド
+## <a name="add"></a>AgileEventSource:: Add メソッド
 
-現在のイベント ハンドラーのセットを指定したデリゲート インターフェイスによって表されるイベント ハンドラーを追加します。 [EventSource](eventsource-class.md)オブジェクト。
+指定されたデリゲートインターフェイスによって表されるイベントハンドラーを、現在の[EventSource](eventsource-class.md)オブジェクトのイベントハンドラーのセットに追加します。
 
 ### <a name="syntax"></a>構文
 
@@ -78,10 +78,10 @@ HRESULT Add(
 ### <a name="parameters"></a>パラメーター
 
 *delegateInterface*<br/>
-イベント ハンドラーを表すデリゲート オブジェクトのインターフェイスです。
+イベントハンドラーを表すデリゲートオブジェクトへのインターフェイス。
 
 *token*<br/>
-この操作の完了時、イベントを表すハンドルです。 パラメーターとしてこのトークンを使用して、`Remove()`メソッドをイベント ハンドラーを破棄します。
+この操作が完了すると、イベントを表すハンドル。 このトークンを `Remove()` メソッドのパラメーターとして使用して、イベントハンドラーを破棄します。
 
 ### <a name="return-value"></a>戻り値
 
