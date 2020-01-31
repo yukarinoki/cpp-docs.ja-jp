@@ -23,16 +23,16 @@ helpviewer_keywords:
 - Microsoft::WRL::EventSource::targets_ data member
 - Microsoft::WRL::EventSource::targetsPointerLock_ data member
 ms.assetid: 91f1c072-6af4-44e6-b6d8-ac6d0c688dde
-ms.openlocfilehash: e9070fe756410e3e1bb1e5840eb3f06e29c2f46b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1350e51ff609a888b6a8ad6841be6856b68c7994
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398512"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821832"
 ---
 # <a name="eventsource-class"></a>EventSource クラス
 
-非アジャイルのイベントを表します。 `EventSource` メンバー関数は、イベント ハンドラーの追加、削除、および呼び出しを実行します。 アジャイルのイベントを使用して[AgileEventSource](agileeventsource-class.md)します。
+非アジャイルイベントを表します。 `EventSource` メンバー関数は、イベント ハンドラーの追加、削除、および呼び出しを実行します。 アジャイルイベントの場合は、 [Agileeventsource](agileeventsource-class.md)を使用します。
 
 ## <a name="syntax"></a>構文
 
@@ -44,46 +44,46 @@ class EventSource;
 ### <a name="parameters"></a>パラメーター
 
 *TDelegateInterface*<br/>
-イベント ハンドラーを表すデリゲートのインターフェイスです。
+イベントハンドラーを表すデリゲートへのインターフェイス。
 
 ## <a name="members"></a>メンバー
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-| 名前                                     | 説明                                            |
+| [名前]                                     | 説明                                            |
 | ---------------------------------------- | ------------------------------------------------------ |
 | [EventSource::EventSource](#eventsource) | `EventSource` クラスの新しいインスタンスを初期化します。 |
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-| 名前                                 | 説明                                                                                                                                                      |
+| [名前]                                 | 説明                                                                                                                                                      |
 | ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [EventSource::Add](#add)             | 現在のイベント ハンドラーのセットを指定したデリゲート インターフェイスによって表されるイベント ハンドラーを追加します。`EventSource`オブジェクト。                     |
-| [EventSource::GetSize](#getsize)     | 現在関連付けられているイベント ハンドラーの数を取得`EventSource`オブジェクト。                                                                         |
-| [EventSource::InvokeAll](#invokeall) | 現在関連付けられている各イベント ハンドラーを呼び出す`EventSource`オブジェクトの指定された引数の型と引数を使用します。                                      |
-| [EventSource::Remove](#remove)       | 現在関連付けられているイベント ハンドラーのセットから、指定されたイベント登録トークンによって表されるイベント ハンドラーを削除します。`EventSource`オブジェクト。 |
+| [EventSource::Add](#add)             | 指定されたデリゲートインターフェイスによって表されるイベントハンドラーを、現在の `EventSource` オブジェクトのイベントハンドラーのセットに追加します。                     |
+| [EventSource:: GetSize](#getsize)     | 現在の `EventSource` オブジェクトに関連付けられているイベントハンドラーの数を取得します。                                                                         |
+| [EventSource:: InvokeAll](#invokeall) | 指定された引数の型および引数を使用して、現在の `EventSource` オブジェクトに関連付けられている各イベントハンドラーを呼び出します。                                      |
+| [EventSource::Remove](#remove)       | 現在の `EventSource` オブジェクトに関連付けられている一連のイベントハンドラーから、指定したイベント登録トークンによって表されるイベントハンドラーを削除します。 |
 
-### <a name="protected-data-members"></a>プロテクト データ メンバー
+### <a name="protected-data-members"></a>保護されるデータ メンバー
 
-| 名前                                                    | 説明                                                                                                                       |
+| [名前]                                                    | 説明                                                                                                                       |
 | ------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| [EventSource::addRemoveLock_](#addremovelock)           | アクセスを同期、 [targets _](#targets)配列を追加するときに、削除、またはイベント ハンドラーを呼び出します。                          |
-| [Eventsource::targets _](#targets)                       | 1 つまたは複数のイベント ハンドラーの配列。                                                                                           |
-| [EventSource::targetsPointerLock_](#targetspointerlock) | この eventsource イベントのハンドラーが追加されている場合でも、削除、または呼び出される内部データ メンバーへのアクセスを同期します。 |
+| [EventSource::addRemoveLock_](#addremovelock)           | イベントハンドラーを追加、削除、または呼び出すときに、 [targets_](#targets)配列へのアクセスを同期します。                          |
+| [EventSource:: targets_](#targets)                       | 1つ以上のイベントハンドラーの配列。                                                                                           |
+| [EventSource:: targetsPointerLock_](#targetspointerlock) | この EventSource のイベントハンドラーが追加、削除、または呼び出されている間でも、内部データメンバーへのアクセスを同期します。 |
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
 `EventSource`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** event.h
+**ヘッダー:** イベント .h
 
-**名前空間:** Microsoft::wrl
+**名前空間:** Microsoft::WRL
 
 ## <a name="add"></a>EventSource::Add
 
-現在のイベント ハンドラーのセットを指定したデリゲート インターフェイスによって表されるイベント ハンドラーを追加します。`EventSource`オブジェクト。
+指定されたデリゲートインターフェイスによって表されるイベントハンドラーを、現在の `EventSource` オブジェクトのイベントハンドラーのセットに追加します。
 
 ```cpp
 HRESULT Add(
@@ -95,18 +95,18 @@ HRESULT Add(
 ### <a name="parameters"></a>パラメーター
 
 *delegateInterface*<br/>
-イベント ハンドラーを表すデリゲート オブジェクトのインターフェイスです。
+イベントハンドラーを表すデリゲートオブジェクトへのインターフェイス。
 
 *token*<br/>
-この操作の完了時、イベントを表すハンドルです。 パラメーターとしてこのトークンを使用して、 [Remove()](#remove)メソッドをイベント ハンドラーを破棄します。
+この操作が完了すると、イベントを表すハンドル。 このトークンを[Remove ()](#remove)メソッドのパラメーターとして使用して、イベントハンドラーを破棄します。
 
 ### <a name="return-value"></a>戻り値
 
 成功した場合は S_OK、そうでない場合はエラーを示す HRESULT。
 
-## <a name="addremovelock"></a>EventSource::addRemoveLock_
+## <a name="addremovelock"></a>EventSource:: addRemoveLock_
 
-アクセスを同期、 [targets _](#targets)配列を追加するときに、削除、またはイベント ハンドラーを呼び出します。
+イベントハンドラーを追加、削除、または呼び出すときに、 [targets_](#targets)配列へのアクセスを同期します。
 
 ```cpp
 Wrappers::SRWLock addRemoveLock_;
@@ -120,9 +120,9 @@ Wrappers::SRWLock addRemoveLock_;
 EventSource();
 ```
 
-## <a name="getsize"></a>EventSource::GetSize
+## <a name="getsize"></a>EventSource:: GetSize
 
-現在関連付けられているイベント ハンドラーの数を取得`EventSource`オブジェクト。
+現在の `EventSource` オブジェクトに関連付けられているイベントハンドラーの数を取得します。
 
 ```cpp
 size_t GetSize() const;
@@ -130,11 +130,11 @@ size_t GetSize() const;
 
 ### <a name="return-value"></a>戻り値
 
-内のイベント ハンドラーの数[targets _](#targets)します。
+[Targets_](#targets)内のイベントハンドラーの数。
 
-## <a name="invokeall"></a>EventSource::InvokeAll
+## <a name="invokeall"></a>EventSource:: InvokeAll
 
-現在関連付けられている各イベント ハンドラーを呼び出す`EventSource`オブジェクトの指定された引数の型と引数を使用します。
+指定された引数の型および引数を使用して、現在の `EventSource` オブジェクトに関連付けられている各イベントハンドラーを呼び出します。
 
 ```cpp
 void InvokeAll();
@@ -293,68 +293,68 @@ void InvokeAll(
 ### <a name="parameters"></a>パラメーター
 
 *T0*<br/>
-0 番目のイベント ハンドラーの引数の型。
+取り出しイベントハンドラーの引数の型。
 
 *T1*<br/>
-最初のイベント ハンドラーの引数の型。
+最初のイベントハンドラー引数の型。
 
 *T2*<br/>
-2 番目のイベント ハンドラーの引数の型。
+2番目のイベントハンドラー引数の型。
 
 *T3*<br/>
-3 番目のイベント ハンドラーの引数の型。
+3番目のイベントハンドラー引数の型。
 
 *T4*<br/>
-4 番目のイベント ハンドラーの引数の型。
+4番目のイベントハンドラー引数の型。
 
 *T5*<br/>
-5 番目のイベント ハンドラーの引数の型。
+5番目のイベントハンドラー引数の型。
 
 *T6*<br/>
-6 番目のイベント ハンドラーの引数の型。
+6番目のイベントハンドラー引数の型。
 
 *T7*<br/>
-7 番目のイベント ハンドラーの引数の型。
+7番目のイベントハンドラー引数の型。
 
 *T8*<br/>
-8 番目のイベント ハンドラーの引数の型。
+8番目のイベントハンドラー引数の型。
 
 *T9*<br/>
-9 番目のイベント ハンドラーの引数の型。
+9番目のイベントハンドラー引数の型。
 
 *arg0*<br/>
-0 番目のイベント ハンドラーの引数。
+取り出しイベントハンドラーの引数。
 
 *arg1*<br/>
-最初のイベント ハンドラーの引数。
+最初のイベントハンドラー引数。
 
-*arg2*<br/>
-2 番目のイベント ハンドラーの引数。
+*引数*<br/>
+2番目のイベントハンドラー引数。
 
 *arg3*<br/>
-3 番目のイベント ハンドラーの引数。
+3番目のイベントハンドラー引数。
 
 *arg4*<br/>
-4 番目のイベント ハンドラーの引数。
+4番目のイベントハンドラー引数。
 
 *arg5*<br/>
-5 番目のイベント ハンドラーの引数。
+5番目のイベントハンドラー引数。
 
 *arg6*<br/>
-6 番目のイベント ハンドラーの引数。
+6番目のイベントハンドラー引数。
 
 *arg7*<br/>
-7 番目のイベント ハンドラーの引数。
+7番目のイベントハンドラー引数。
 
 *arg8*<br/>
-8 番目のイベント ハンドラーの引数。
+8番目のイベントハンドラー引数。
 
 *arg9*<br/>
-9 番目のイベント ハンドラーの引数。
+9番目のイベントハンドラー引数。
 
 ## <a name="remove"></a>EventSource::Remove
 
-現在関連付けられているイベント ハンドラーのセットから、指定されたイベント登録トークンによって表されるイベント ハンドラーを削除します。`EventSource`オブジェクト。
+現在の `EventSource` オブジェクトに関連付けられている一連のイベントハンドラーから、指定したイベント登録トークンによって表されるイベントハンドラーを削除します。
 
 ```cpp
 HRESULT Remove(
@@ -365,31 +365,31 @@ HRESULT Remove(
 ### <a name="parameters"></a>パラメーター
 
 *token*<br/>
-イベント ハンドラーを表すハンドル。 このトークンはイベント ハンドラーの登録時に返された、 [Add()](#add)メソッド。
+イベントハンドラーを表すハンドル。 このトークンは、イベントハンドラーが[Add ()](#add)メソッドによって登録されたときに返されます。
 
 ### <a name="return-value"></a>戻り値
 
 成功した場合は S_OK、そうでない場合はエラーを示す HRESULT。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-詳細については、`EventRegistrationToken`構造体を参照してください、 **Windows::Foundation::EventRegistrationToken 構造**でトピック、 **Windows ランタイム**リファレンス ドキュメント。
+`EventRegistrationToken` 構造体の詳細については、 **Windows ランタイム**リファレンスドキュメントの「 **Windows:: Foundation:: EventRegistrationToken structure** 」を参照してください。
 
-## <a name="targets"></a>Eventsource::targets _
+## <a name="targets"></a>EventSource:: targets_
 
-1 つまたは複数のイベント ハンドラーの配列。
+1つ以上のイベントハンドラーの配列。
 
 ```cpp
 ComPtr<Details::EventTargetArray> targets_;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-ときに、現在で表されるイベント`EventSource`オブジェクトが、イベント ハンドラーは呼び出されます。
+現在の `EventSource` オブジェクトによって表されるイベントが発生すると、イベントハンドラーが呼び出されます。
 
-## <a name="targetspointerlock"></a>Eventsource::targetspointerlock _
+## <a name="targetspointerlock"></a>EventSource:: targetsPointerLock_
 
-このイベント ハンドラーの中にも、内部データ メンバーへのアクセスを同期`EventSource`の追加、削除、または呼び出されました。
+この `EventSource` のイベントハンドラーが追加、削除、または呼び出されている場合でも、内部データメンバーへのアクセスを同期します。
 
 ```cpp
 Wrappers::SRWLock targetsPointerLock_;

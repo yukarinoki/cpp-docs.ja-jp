@@ -26,12 +26,12 @@ helpviewer_keywords:
 - write function
 - files [C++], writing to
 ms.assetid: 7b868c33-766f-4e1a-95a7-e8d25f0604c4
-ms.openlocfilehash: 2c483df8e07b9496a0a22c1a1ebccf2b40d129cb
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 5eaee64c1bf6ad4b4d59c3a7b1a1434741e74454
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944851"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821793"
 ---
 # <a name="_write"></a>_write
 
@@ -60,13 +60,13 @@ int _write(
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合、 **_write**は書き込まれたバイト数を返します。 ディスク上に残っている実際の領域が、関数がディスクに書き込もうとしているバッファーのサイズよりも小さい場合、 **_write**は失敗し、バッファーの内容はディスクにフラッシュされません。 戻り値-1 はエラーを示します。 無効なパラメーターが渡されると、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、この関数は無効なパラメーター ハンドラーを呼び出します。 実行の継続が許可された場合、この関数は-1 を返し、 **errno**は次の3つの値のいずれかに設定されます。**EBADF**。ファイル記述子が無効であるか、ファイルが書き込み用に開かれていないことを示します。**ENOSPC**。これは、操作に必要な領域がデバイスに残っていないことを意味します。または**EINVAL**。*バッファー*が null ポインターであるか、また*は奇数の*バイト数が Unicode モードでファイルに書き込まれるように渡されたことを示します。
+成功した場合、 **_write**は書き込まれたバイト数を返します。 ディスク上に残っている実際の領域が、関数がディスクに書き込もうとしているバッファーのサイズよりも小さい場合、 **_write**は失敗し、バッファーの内容はディスクにフラッシュされません。 戻り値-1 はエラーを示します。 無効なパラメーターが渡されると、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、この関数は無効なパラメーター ハンドラーを呼び出します。 実行の継続が許可された場合、この関数は-1 を返し、 **errno**は3つの値のいずれかに設定され**ます。これは、ファイル**記述子が無効であるか、ファイルが書き込み用に開かれていないことを意味します。**ENOSPC**。これは、操作に必要な領域がデバイスに残っていないことを意味します。または**EINVAL**。*バッファー*が null ポインターであるか、また*は奇数のバイト数が*Unicode モードでファイルに書き込まれるように渡されたことを示します。
 
-これらのリターン コードとその他のリターン コードの詳細については、「[errno、_doserrno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
+これらのリターン コードとその他のリターン コードの詳細については、「[errno、_doserrno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
 ファイルがテキストモードで開かれている場合、各ラインフィード文字は出力のキャリッジリターンラインフィードのペアで置き換えられます。 置換は戻り値には影響しません。
 
-ファイルが Unicode 変換モードで開かれている場合 (たとえば、 *fd*が **_open** 、 **_sopen** 、 **_O_WTEXT**、 **_O_U16TEXT**、または **_O_U8TEXT**を含むモードパラメーターを使用して開かれている場合)、またはを使用して開いた場合などです。**fopen**と、 **ccs = UNICODE**、 **ccs = 16LE**、または**ccs = utf-8**を含むモードパラメーター、または **_setmode**を使用してモードが UNICODE 変換モードに変更された場合、*バッファー*はへのポインターとして解釈されます。**utf-16**データを含む**wchar_t**の配列。 このモードで奇数バイトの書き込みを試みると、パラメーター検証エラーが発生します。
+ファイルが Unicode 変換モードで開かれている場合 (たとえば、 **_open**または **_sopen**と、 **_O_WTEXT**、 **_O_U16TEXT**、または **_O_U8TEXT**を含むモードパラメーターを使用して*fd*が開かれている場合、または**fopen**を使用して開かれており、かつ、 **ccs = unicode**、 **ccs = 16LE**、または**ccs**を含むモードパラメーター**を使用し**て開かれている場合は、*バッファー*はへのポインターと解釈されます**utf-16**データを含む**wchar_t**の配列。 このモードで奇数バイトの書き込みを試みると、パラメーター検証エラーが発生します。
 
 ## <a name="remarks"></a>Remarks
 
@@ -74,15 +74,15 @@ int _write(
 
 テキストモードで開かれたファイルに書き込む場合、 **_write**は CTRL + Z 文字をファイルの論理終端として扱います。 デバイスに書き込む場合、 **_write**はバッファー内の CTRL + Z 文字を出力ターミネータとして扱います。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_write**|\<io.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 ```C
 // crt__write.c
@@ -124,7 +124,7 @@ int main( void )
             perror("Invalid parameter: buffer was NULL!");
             break;
          default:
-            // An unrelated error occured
+            // An unrelated error occurred
             perror("Unexpected error!");
       }
    }

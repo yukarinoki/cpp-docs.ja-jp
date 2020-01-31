@@ -1,14 +1,13 @@
 ---
 title: Visual Studio でターゲットの Linux システムに接続する
 description: Visual Studio の C++ プロジェクト内からリモートの Linux マシンまたは Linux 用 Windows サブシステムに接続する方法です。
-ms.date: 11/09/2019
-ms.assetid: 5eeaa683-4e63-4c46-99ef-2d5f294040d4
-ms.openlocfilehash: 4069979100c3b71a32e90ad72fb334d21a226e64
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.date: 01/17/2020
+ms.openlocfilehash: d0065b63d7a81d3ae3d68b26184c88aca77f601c
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74755279"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518219"
 ---
 # <a name="connect-to-your-target-linux-system-in-visual-studio"></a>Visual Studio でターゲットの Linux システムに接続する
 
@@ -18,17 +17,58 @@ Linux サポートは Visual Studio 2017 以降で使用できます。
 
 ::: moniker-end
 
+::: moniker range="vs-2017"
+
+Linux プロジェクトのターゲットは、リモート マシンとなるように構成することも、Windows Subsystem for Linux (WSL) とすることもできます。 両方のリモート マシンと WSL に対して、Visual Studio 2017 でリモート接続を設定する必要があります。
+
+::: moniker-end
+
+::: moniker range="vs-2019"
+
+Linux プロジェクトのターゲットは、リモート マシンとなるように構成することも、Windows Subsystem for Linux (WSL) とすることもできます。 リモート マシンの場合は、Visual Studio でリモート接続を設定する必要があります。 WSL に接続するには、[WSL への接続](#connect-to-wsl)に関するセクションに進んでください。
+
+::: moniker-end
+
 ::: moniker range=">=vs-2017"
 
-Linux プロジェクトのターゲットは、リモート マシンとなるように構成することも、Windows Subsystem for Linux (WSL) とすることもできます。 リモート マシンの場合と、Visual Studio 2017 上の WSL の場合は、リモート接続を設定する必要があります。
+リモート接続を使用する場合、Visual Studio はリモート マシンで C++ Linux プロジェクトをビルドします。 物理マシン、クラウド内の VM、WSL のいずれであるかは関係ありません。
+プロジェクトをビルドするために、Visual Studio はソース コードをリモートの Linux コンピューターにコピーします。 その後、コードは Visual Studio の設定に基づいてコンパイルされます。
 
-## <a name="connect-to-a-remote-linux-computer"></a>リモートの Linux コンピューターに接続する
+::: moniker-end
 
-C++ の Linux プロジェクトをリモートの Linux システム (VM または物理マシン) 用にビルドするときは、Linux のソース コードがリモートの Linux コンピューターにコピーされます。 その後、Visual Studio の設定に基づいてコンパイルされます。
+::: moniker range="vs-2019"
 
-このリモート接続をセットアップするには、次のようにします。
+> [!NOTE]
+> Visual Studio 2019 バージョン 16.5 以降でも、リモート開発のために、Linux システムへの安全な Federal Information Processing Standard (FIPS) 140-2 準拠の暗号化接続がサポートされています。 FISP 準拠の接続を使用するには、代わりに「[FIPS 準拠の安全なリモート Linux 開発のセットアップ](set-up-fips-compliant-secure-remote-linux-development.md)」のステップに従ってください。
 
-1. 初回のプロジェクトのビルドを行います。 または、新しいエントリを手動で作成できます。 **[ツール] > [オプション]** を選択し、 **[クロス プラットフォーム] > [接続マネージャー]** ノードを開き、 **[追加]** ボタンをクリックします。
+::: moniker-end
+
+::: moniker range=">=vs-2017"
+
+## <a name="set-up-the-ssh-server-on-the-remote-system"></a>リモート システム上で SSH サーバーを設定する
+
+Linux システム上でまだ ssh が設定および実行されていない場合、次のステップに従ってインストールします。 この記事の例では、Ubuntu 18.04 LTS と OpenSSH サーバー バージョン 7.6 を使用します。 ただし、比較的最近のバージョンの OpenSSH を使用する任意のディストリビューションでも同じ手順を使用できます。
+
+1. Linux システム上で、OpenSSH サーバーをインストールして起動します。
+
+   ```bash
+   sudo apt install openssh-server
+   sudo service ssh start
+   ```
+
+1. システム起動時に自動的に ssh サーバーを起動したい場合、systemctl を使用して有効にします。
+
+   ```bash
+   sudo systemctl enable ssh
+   ```
+
+## <a name="set-up-the-remote-connection"></a>リモート接続を設定する
+
+1. Visual Studio のメニュー バーで **[ツール] > [オプション]** を選択して、 **[オプション]** ダイアログを開きます。 その後、 **[クロス プラットフォーム] > [接続マネージャー]** を選択して [接続マネージャー] ダイアログを開きます。
+
+   まだ Visual Studio で接続を設定したことがない場合、プロジェクトを初めてビルドする際に、Visual Studio によって [接続マネージャー] ダイアログが開かれます。
+
+1. [接続マネージャー] ダイアログで、 **[追加]** ボタンを選択して新しい接続を追加します。
 
    ![接続マネージャー](media/settings_connectionmanager.png)
 
@@ -48,19 +88,11 @@ C++ の Linux プロジェクトをリモートの Linux システム (VM また
    | **秘密キー ファイル**    | ssh 接続用に作成された秘密キー ファイル
    | **パスフレーズ**          | 上で選択した秘密キーで使用されるパスフレーズ
 
-   認証には、パスワードまたはキー ファイルとパスフレーズを使用することができます。 多くの開発シナリオでは、パスワード認証で十分です。 公開/秘密キー ファイルを使う方がよい場合は、新しいものを作成するか、[既存のものを再利用する](https://security.stackexchange.com/questions/10203/reusing-private-public-keys)ことができます。 現在は、RSA および DSA キーのみがサポートされています。
-
-   秘密 RSA キー ファイルを作成するには、次の手順のようにします。
-
-   1. Windows コンピューターで、`ssh-keygen -t rsa` を使って ssh キー ペアを作成します。 このコマンドにより、公開キーと秘密キーが作成されます。 既定では、`C:\Users\%USERNAME%\.ssh` の下に `id_rsa.pub` と `id_rsa` という名前のキーが配置されます。
-
-   1. Windows から Linux マシンに公開キーをコピーします: `scp -p C:\Users\%USERNAME%\.ssh\id_rsa.pub user@hostname`。
-
-   1. Linux システムで、承認済みキーのリストにキーを追加します (および、ファイルに適切なアクセス許可があることを確認します): `cat ~/id_rsa.pub >> ~/.ssh/authorized_keys; chmod 600 ~/.ssh/authorized_keys`
+   認証には、パスワードまたはキー ファイルとパスフレーズを使用することができます。 多くの開発シナリオではパスワード認証で十分ですが、キー ファイルはさらに安全です。 既にキーの組があるなら、それを再利用できます。 現在、Visual Studio のリモート接続では RSA と DSA キーのみがサポートされています。
 
 1. **[接続]** ボタンを選択すると、リモート コンピューターへの接続が試行されます。
 
-   接続が成功すると、Visual Studio ではリモートのヘッダーを使うように IntelliSense の構成が開始されます。 詳しくは、「[リモート システムのヘッダーでの IntelliSense](configure-a-linux-project.md#remote_intellisense)」をご覧ください。
+   接続が成功すると、Visual Studio ではリモートのヘッダーを使うように IntelliSense が構成されます。 詳しくは、「[リモート システムのヘッダーでの IntelliSense](configure-a-linux-project.md#remote_intellisense)」をご覧ください。
 
    接続に失敗した場合は、変更する必要がある入力ボックスが赤色で示されます。
 
@@ -72,13 +104,23 @@ C++ の Linux プロジェクトをリモートの Linux システム (VM また
 
    ::: moniker range="vs-2019"
 
-   **[ツール] > [オプション] > [クロス プラットフォーム] > [ログ]** に移動し、接続に関する問題のトラブルシューティングに役立つログ記録を有効にします。
+## <a name="logging-for-remote-connections"></a>リモート接続のログを記録する
+
+   ログを有効にして、接続の問題のトラブルシューティングに役立てることができます。 メニュー バーで、 **[ツール] > [オプション]** の順に選択します。 **[オプション]** ダイアログで、 **[クロス プラットフォーム] > [ログ]** を選択します。
 
    ![リモート ログ記録](media/remote-logging-vs2019.png)
 
    ログには、接続、リモート マシンに送信されたすべてのコマンド (そのテキスト、終了コード、実行時間)、および Visual Studio からシェルへのすべての出力が含まれます。 ログ記録は、Visual Studio でのすべてのクロスプラットフォーム CMake プロジェクトまたは MSBuild ベースの Linux プロジェクトで機能します。
 
-   ファイルまたは出力ウィンドウの **[クロス プラットフォームのログ]** ウィンドウに送られるように、出力を構成できます。 MSBuild ベースの Linux プロジェクトの場合、リモート マシンに送信された MSBuild コマンドは、プロセス外で出力されるため、 **[出力ウィンドウ]** にはルーティングされません。 代わりに、"msbuild_" というプレフィックスが付いたファイルに記録されます。
+   ファイルまたは出力ウィンドウの **[クロス プラットフォームのログ]** ペインに送られるように、出力を構成できます。 MSBuild ベースの Linux プロジェクトの場合、リモート マシンに送信された MSBuild コマンドは、プロセス外で出力されるため、 **[出力ウィンドウ]** にはルーティングされません。 代わりに、"msbuild_" というプレフィックスが付いたファイルに記録されます。
+
+## <a name="command-line-utility-for-the-connection-manager"></a>接続マネージャーのコマンドライン ユーティリティ  
+
+**Visual Studio 2019 バージョン 16.5 以降**:ConnectionManager.exe は、Visual Studio 外でのリモート開発の接続を管理するためのコマンドライン ユーティリティです。 これは、新しい開発マシンをプロビジョニングするなどのタスクに役立ちます。 または、これを利用して Visual Studio で継続的インテグレーションを設定することもできます。 ConnectionManager コマンドの例とすべてのリファレンスについては、「[ConnectionManager リファレンス](connectionmanager-reference.md)」を参照してください。  
+
+::: moniker-end
+
+::: moniker range=">=vs-2017"
 
 ## <a name="tcp-port-forwarding"></a>TCP ポート フォワーディング
 
@@ -94,9 +136,9 @@ rsync は、ソース ファイルをリモート システムにコピーする
 
 gdbserver は、埋め込みデバイスでのデバッグに使用できます。 TCP ポート フォワーディングを有効にできない場合は、すべてのリモート デバッグ シナリオで gdb を使用する必要があります。 リモート システム上のプロジェクトをデバッグする場合、既定で Gdb が使用されます。
 
-::: moniker-end
-
 ## <a name="connect-to-wsl"></a>WSL に接続する
+
+::: moniker-end
 
 ::: moniker range="vs-2017"
 

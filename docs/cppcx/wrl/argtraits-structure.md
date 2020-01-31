@@ -9,16 +9,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::ArgTraits structure
 - Microsoft::WRL::Details::ArgTraits::args constant
 ms.assetid: 58ae4115-c1bc-48c8-b01b-e60554841c30
-ms.openlocfilehash: 17109508cf99888ccde79be39a41c5361da24c6e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c13e7fec3289b66b40e44f91404a50cba7a473b1
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398811"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821715"
 ---
 # <a name="argtraits-structure"></a>ArgTraits 構造体
 
-WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。
+は WRL インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。
 
 ## <a name="syntax"></a>構文
 
@@ -130,47 +130,47 @@ struct ArgTraits<
 ### <a name="parameters"></a>パラメーター
 
 *TMemberFunction*<br/>
-Typename パラメーターことはできませんと一致する ArgTraits 構造体の`Invoke`メソッド シグネチャ。
+`Invoke` メソッドシグネチャと一致しない ArgTraits 構造体の Typename パラメーター。
 
 *TDelegateInterface*<br/>
-デリゲートのインターフェイスです。
+デリゲートインターフェイス。
 
 *TArg1*<br/>
-最初の引数の型、`Invoke`メソッド。
+`Invoke` メソッドの1番目の引数の型。
 
 *TArg2*<br/>
-2 番目の引数の型、`Invoke`メソッド。
+`Invoke` メソッドの2番目の引数の型。
 
 *TArg3*<br/>
-3 番目の引数の型、`Invoke`メソッド。
+`Invoke` メソッドの3番目の引数の型。
 
 *TArg4*<br/>
-4 番目の引数の型、`Invoke`メソッド。
+`Invoke` メソッドの4番目の引数の型。
 
 *TArg5*<br/>
-5 番目の引数の型、`Invoke`メソッド。
+`Invoke` メソッドの5番目の引数の型。
 
 *TArg6*<br/>
-6 番目の引数の型、`Invoke`メソッド。
+`Invoke` メソッドの6番目の引数の型。
 
 *TArg7*<br/>
-7 番目の引数の型、`Invoke`メソッド。
+`Invoke` メソッドの7番目の引数の型。
 
 *TArg8*<br/>
-8 番目の引数の型、`Invoke`メソッド。
+`Invoke` メソッドの8番目の引数の型。
 
 *TArg9*<br/>
-9 番目の引数の型、`Invoke`メソッド。
+`Invoke` メソッドの9番目の引数の型。
 
 ## <a name="remarks"></a>Remarks
 
-`ArgTraits`構造体は、インターフェイス、およびパラメーターの数が指定された匿名のメンバー関数に指定したデリゲートを宣言します。
+`ArgTraits` 構造体は、指定されたデリゲートインターフェイスと、指定された数のパラメーターを持つ匿名メンバー関数を宣言します。
 
 ## <a name="members"></a>メンバー
 
-### <a name="public-typedefs"></a>パブリック typedef
+### <a name="public-typedefs"></a>パブリック Typedef
 
-名前       | 説明
+[名前]       | 説明
 ---------- | ----------------------
 `Arg1Type` | TArg1 の typedef。
 `Arg2Type` | TArg2 の typedef。
@@ -184,23 +184,23 @@ Typename パラメーターことはできませんと一致する ArgTraits 構
 
 ### <a name="public-constants"></a>パブリック定数
 
-名前                     | 説明
+[名前]                     | 説明
 ------------------------ | ---------------------------------------------------------------------------------------
-[Argtraits::args](#args) | パラメーターの数のカウントを保持、`Invoke`デリゲート インターフェイスのメソッド。
+[ArgTraits:: args](#args) | デリゲートインターフェイスの `Invoke` メソッドのパラメーター数のカウントを保持します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
 `ArgTraits`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** event.h
+**ヘッダー:** イベント .h
 
-**名前空間:** Microsoft::WRL::Details
+**名前空間:** Microsoft:: WRL::D etails
 
-## <a name="args"></a>Argtraits::args
+## <a name="args"></a>ArgTraits:: args
 
-WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。
+は WRL インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。
 
 ```cpp
 static const int args = -1;
@@ -208,4 +208,4 @@ static const int args = -1;
 
 ### <a name="remarks"></a>Remarks
 
-パラメーターの数のカウントを保持、`Invoke`デリゲート インターフェイスのメソッド。 ときに`args`-1 とに一致することができますなし、`Invoke`メソッド シグネチャ。
+デリゲートインターフェイスの `Invoke` メソッドのパラメーター数のカウントを保持します。 `args` が-1 の場合、`Invoke` メソッドシグネチャに一致することはできません。
