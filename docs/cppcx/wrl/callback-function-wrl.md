@@ -1,18 +1,18 @@
 ---
-title: コールバック関数 (WRL)
+title: Callback 関数 (WRL)
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
 - event/Microsoft::WRL::Callback
 ms.assetid: afb15d25-3230-44f7-b321-e17c54872943
-ms.openlocfilehash: d37e6fdd2521f07728305bfbf5441cebb363030a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 10fb053ed97aaca0f4a31e3843d96aa194d8949d
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398902"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821689"
 ---
-# <a name="callback-function-wrl"></a>コールバック関数 (WRL)
+# <a name="callback-function-wrl"></a>Callback 関数 (WRL)
 
 メンバー関数がコールバック メソッドであるオブジェクトを作成します。
 
@@ -197,7 +197,7 @@ ComPtr<TDelegateInterface> Callback(
 *TCallback*<br/>
 オブジェクトとそのコールバック メンバー関数を表すオブジェクト型を指定するテンプレート パラメーター。
 
-*TCallbackObject*<br/>
+*T//オブジェクト*<br/>
 イベントが発生したときに呼び出されるメソッドをメンバー関数に持つオブジェクトを指定するテンプレート パラメーター。
 
 *TArg1*<br/>
@@ -222,12 +222,12 @@ ComPtr<TDelegateInterface> Callback(
 7 番目のコールバック メソッドの引数の型を指定するテンプレート パラメーター。
 
 *TArg8*<br/>
-8 番目のコールバック メソッドの引数の型を指定するテンプレート パラメーター。
+8番目のコールバックメソッドの引数の型を指定するテンプレートパラメーター。
 
 *TArg9*<br/>
 9 番目のコールバック メソッドの引数の型を指定するテンプレート パラメーター。
 
-*callback*<br/>
+*コール*<br/>
 コールバック オブジェクトおよびそのメンバー関数を表すオブジェクト。
 
 *object*<br/>
@@ -242,13 +242,13 @@ ComPtr<TDelegateInterface> Callback(
 
 ## <a name="remarks"></a>Remarks
 
-デリゲート オブジェクトの基本である必要があります`IUnknown`ではなく、`IInspectable`します。
+デリゲートオブジェクトの基本は、`IInspectable`ではなく `IUnknown`である必要があります。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** event.h
+**ヘッダー:** イベント .h
 
-**名前空間:** Microsoft::wrl
+**名前空間:** Microsoft::WRL
 
 ## <a name="see-also"></a>関連項目
 
