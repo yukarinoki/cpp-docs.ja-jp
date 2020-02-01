@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3390
 ms.assetid: 84800a87-c8e6-45aa-82ae-02f816dc8d97
-ms.openlocfilehash: 3f1149d4584a0ea3d0061a3ec4e2b77830603ef2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c624d3b0379d057b0ed566deffc2a0efcc324f88
+ms.sourcegitcommit: c4528a7424d35039454f17778baf1b5f98fbbee7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400319"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76912873"
 ---
 # <a name="compiler-error-c3390"></a>コンパイラ エラー C3390
 
@@ -19,11 +19,11 @@ ms.locfileid: "62400319"
 
 ジェネリック型のインスタンス化が正しく行われませんでした。  型定義を確認してください。  詳細については、「[ジェネリック](../../extensions/generics-cpp-component-extensions.md)」を参照してください。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
-最初のサンプルを使用して c# を c++ のジェネリック型を作成するときに、サポートされていない特定の制約を持つジェネリック型を含むコンポーネントを作成する/cli CLR。 詳細については、「[型パラメーターの制約](/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters)」を参照してください。
+最初のサンプルでC#は、を使用して、/clr でC++ジェネリック型を作成するときにサポートされない特定の制約を持つジェネリック型を含むコンポーネントを作成します。 詳細については、「[型パラメーターの制約](/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters)」を参照してください。
 
-```cs
+```csharp
 // C3390.cs
 // Compile by using: csc /target:library C3390.cs
 // a C# program
@@ -33,7 +33,7 @@ where V : struct
 where N : new() {}
 ```
 
-C3390.dll コンポーネントは、次の例では C3390 が生成されます。
+C3390 コンポーネントが使用可能になると、次の例では C3390 が生成されます。
 
 ```cpp
 // C3390_b.cpp
