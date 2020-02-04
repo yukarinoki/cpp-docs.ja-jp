@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - feraiseexcept function
 ms.assetid: 87e89151-83c2-4563-9a9a-45666245d437
-ms.openlocfilehash: 07c8a79e0a9569db80607e1ec1e16cd4b502783c
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: e98c402169ed0f35ab1bdf0b8221a2248f252f21
+ms.sourcegitcommit: ba4180a2d79d7e391f2f705797505d4aedbc2a5e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857828"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76972206"
 ---
 # <a name="feraiseexcept"></a>feraiseexcept
 
@@ -50,7 +50,7 @@ int feraiseexcept(
 
 指定したすべての例外が正常に発生した場合は、0 を返します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
 は、 *removed*によって指定された浮動小数点例外を発生させよう**として**います。   次のような例外マクロは、fenv.h> > \<で定義**されて**います。
 
@@ -61,7 +61,7 @@ int feraiseexcept(
 |FE_INVALID|前の浮動小数点演算でドメイン エラーが発生しました。|
 |FE_OVERFLOW|範囲エラーが発生しました。前の浮動小数点演算結果は大きすぎて表現できませんでした。|
 |FE_UNDERFLOW|前の浮動小数点演算結果は小さすぎて最大有効桁数で表現できませんでした。|
-|FE_ALLEXCEPT|すべてのサポートされる浮動小数点例外のビット演算 OR。|
+|FE_ALL_EXCEPT|すべてのサポートされる浮動小数点例外のビット演算 OR。|
 
 *Removed*引数には、0、例外マクロ値の1つ、またはサポートされている2つ以上の例外マクロのビットごとの or を指定できます。 指定した例外処理マクロのいずれかが FE_OVERFLOW または FE_UNDERFLOW の場合、副作用として FE_INEXACT 例外が発生する可能性があります。
 
@@ -71,13 +71,13 @@ int feraiseexcept(
 
 ## <a name="requirements"></a>要件
 
-|機能|C ヘッダー|C++ ヘッダー|
+|関数|C ヘッダー|C++ ヘッダー|
 |--------------|--------------|------------------|
 |*feraiseexcept*|\<fenv.h>|\<cfenv>|
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [関数リファレンス (アルファベット順)](crt-alphabetical-function-reference.md)<br/>
 [fesetexceptflag](fesetexceptflag2.md)<br/>

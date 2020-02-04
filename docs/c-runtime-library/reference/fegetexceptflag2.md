@@ -25,12 +25,12 @@ f1_keywords:
 helpviewer_keywords:
 - fegetexceptflag function
 ms.assetid: 2d28f0ca-70c9-4cff-be8b-3d876eacde71
-ms.openlocfilehash: 3d3bf59b28a464dc163dc027b867e890c3c8797b
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b840408ce704ad5519fbf233de41c8d5422006ad
+ms.sourcegitcommit: ba4180a2d79d7e391f2f705797505d4aedbc2a5e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941228"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76972186"
 ---
 # <a name="fegetexceptflag"></a>fegetexceptflag
 
@@ -57,9 +57,9 @@ int fegetexceptflag(
 
 成功した場合は 0 を返します。 それ以外の場合は、0 以外の値を返します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-**Fegetexceptflag**関数は、 *pstatus*が指す**fexcept_t**オブジェクトの*removed*によって指定された浮動小数点例外状態フラグの現在の状態を格納します。  *pstatus*は有効な**fexcept_t**オブジェクトを指している必要があります。それ以降の動作は未定義です。 **Fegetexceptflag**関数は、fenv.h> > で\<定義されている次の例外マクロをサポートしています。
+**Fegetexceptflag**関数は、 *pstatus*が指す**fexcept_t**オブジェクト内の*removed*で指定された浮動小数点例外状態フラグの現在の状態を格納します。  *pstatus*は有効な**fexcept_t**オブジェクトを指している必要があります。それ以降の動作は未定義です。 **Fegetexceptflag**関数は、次の例外マクロをサポートしています。これらのマクロは \<fenv.h> > で定義されています。
 
 |例外処理マクロ|説明|
 |---------------------|-----------------|
@@ -68,19 +68,19 @@ int fegetexceptflag(
 |FE_INVALID|前の浮動小数点演算でドメイン エラーが発生しました。|
 |FE_OVERFLOW|範囲エラーが発生しました。前の浮動小数点演算結果は大きすぎて表現できませんでした。|
 |FE_UNDERFLOW|前の浮動小数点演算結果は小さすぎて最大有効桁数で表現できませんでした。|
-|FE_ALLEXCEPT|すべてのサポートされる浮動小数点例外のビット演算 OR。|
+|FE_ALL_EXCEPT|すべてのサポートされる浮動小数点例外のビット演算 OR。|
 
 *Removed*引数には、0、サポートされている浮動小数点例外マクロの1つ、または2つ以上のマクロのビットごとの or を指定できます。 他の引数値の結果は未定義です。
 
 この関数を使用するには、呼び出しの前に `#pragma fenv_access(on)` ディレクティブを使用してアクセスを妨げる可能性のある浮動小数点の最適化をオフにする必要があります。 詳細については、「 [fenv_access](../../preprocessor/fenv-access.md)」を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 |関数|C ヘッダー|C++ ヘッダー|
 |--------------|--------------|------------------|
 |**fegetexceptflag**|\<fenv.h>|\<cfenv>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
