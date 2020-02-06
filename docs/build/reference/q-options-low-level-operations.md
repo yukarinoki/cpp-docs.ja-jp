@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Q compiler option [C++]
 - -Q compiler option [C++]
 - /Q compiler option [C++]
-ms.openlocfilehash: 9dd3675f200be4f0ec66620bcf3cf05706991b66
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.openlocfilehash: 722a63a43e5e08fe80b26f908c7ae92df2fdb29c
+ms.sourcegitcommit: 0f4ee9056d65043fa5a715f0ad1031c0ed30e2b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518174"
+ms.lasthandoff: 02/05/2020
+ms.locfileid: "77034520"
 ---
 # <a name="q-options-low-level-operations"></a>/Q オプション (低水準の操作)
 
@@ -34,9 +34,13 @@ ms.locfileid: "76518174"
 
 - [/Qspectre](qspectre.md): 特定の Spectre セキュリティの脆弱性を軽減するための手順を生成します。
 
+- [/Qspectre-load](qspectre-load.md): 負荷に基づいて Spectre セキュリティの脆弱性を軽減するための手順を生成します。
+
+- [/Qspectre-load-cf](qspectre-load-cf.md): 負荷がかかる制御フローの指示に基づいて、Spectre セキュリティの脆弱性を軽減するための手順を生成します。
+
 - [/Qvec-report (自動ベクター化 Reporting Level)](qvec-report-auto-vectorizer-reporting-level.md): 自動ベクター化のレポートレベルを有効にします。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [MSVC コンパイラ オプション](compiler-options.md)<br/>
 [MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)
