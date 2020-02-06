@@ -4,12 +4,12 @@ ms.date: 01/08/2020
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: 0734cdc6fb7d8b543c6415bfd6b4f98469703586
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.openlocfilehash: 191ea3d5d6f4647f7130757a4657820483d212b5
+ms.sourcegitcommit: 0f4ee9056d65043fa5a715f0ad1031c0ed30e2b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518414"
+ms.lasthandoff: 02/05/2020
+ms.locfileid: "77034585"
 ---
 # <a name="compiler-options-listed-by-category"></a>カテゴリ別のコンパイラ オプション
 
@@ -69,6 +69,8 @@ ms.locfileid: "76518414"
 |[/Qpar-report](qpar-report-auto-parallelizer-reporting-level.md)|自動並列化のレポート レベルを有効にします。|
 |[/Qsafe_fp_loads](qsafe-fp-loads.md)|浮動小数点値の整数移動命令を使用し、特定の浮動小数点読み込み最適化を無効にします。|
 |[/Qspectre](qspectre.md)|Spectre 攻撃のクラスについて、CVE 2017-5753 の軽減策を有効にします。|
+|[/Qspectre-load](qspectre-load.md)|すべての読み込み命令のシリアル化命令を生成します。|
+|[/Qspectre-load-cf](qspectre-load-cf.md)|メモリを読み込む制御フロー命令ごとに、シリアル化命令を生成します。|
 |[/Qvec-report](qvec-report-auto-vectorizer-reporting-level.md)|自動ベクター化のレポート レベルを有効にします。|
 |[/RTC](rtc-run-time-error-checks.md)|ランタイム エラー チェックを有効にします。|
 |[/volatile](volatile-volatile-keyword-interpretation.md)|volatile キーワードの解釈方法を選択します。|
@@ -145,7 +147,7 @@ ms.locfileid: "76518414"
 |[/MT](md-mt-ld-use-run-time-library.md)|LIBCMT.lib を使用して、マルチスレッド実行可能ファイルをコンパイルして作成します。|
 |[/MTd](md-mt-ld-use-run-time-library.md)|LIBCMTD.lib を使用して、デバッグ バージョンのマルチスレッド実行可能ファイルをコンパイルして作成します。|
 
-## <a name="miscellaneous"></a>その他の指定
+## <a name="miscellaneous"></a>その他
 
 |オプション|目的|
 |------------|-------------|
@@ -226,7 +228,7 @@ ms.locfileid: "76518414"
 |[/Ze](za-ze-disable-language-extensions.md)|非推奨。 言語拡張機能を有効にします。|
 |[/Zg](zg-generate-function-prototypes.md)|Visual Studio 2015 で削除されました。 関数プロトタイプを生成します。|
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [C/C++ ビルドのリファレンス](c-cpp-building-reference.md)<br/>
 [MSVC コンパイラ オプション](compiler-options.md)<br/>

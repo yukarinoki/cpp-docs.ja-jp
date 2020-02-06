@@ -3,12 +3,12 @@ title: アルファベット順のコンパイラ オプション
 ms.date: 01/08/2020
 helpviewer_keywords:
 - compiler options, C++
-ms.openlocfilehash: 72441692869dbed806474a7054fedff53b923d42
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.openlocfilehash: d64a41802c18627cf8e07f0d83b53fa5a4555f5b
+ms.sourcegitcommit: 0f4ee9056d65043fa5a715f0ad1031c0ed30e2b6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518375"
+ms.lasthandoff: 02/05/2020
+ms.locfileid: "77034598"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>アルファベット順のコンパイラ オプション
 
@@ -113,6 +113,8 @@ ms.locfileid: "76518375"
 |[/Qpar (自動並行化)](qpar-auto-parallelizer.md)|[#pragma loop()](../../preprocessor/loop.md) ディレクティブでマークされているループの自動並列化を有効にします。|
 |[/Qsafe_fp_loads](qsafe-fp-loads.md)|浮動小数点値の整数移動命令を使用し、特定の浮動小数点読み込み最適化を無効にします。|
 |[/Qspectre](qspectre.md)|特定のスペクター バリアント 1 のセキュリティ脆弱性を軽減するコンパイラの命令生成を指定します。|
+|[/Qspectre-load](qspectre-load.md)|ロード命令に基づいて Spectre のセキュリティ脆弱性を軽減するための命令をシリアル化するためのコンパイラの生成を指定します。|
+|[/Qspectre-load-cf](qspectre-load-cf.md)|メモリを読み込む制御フロー命令に基づいて、Spectre のセキュリティ脆弱性を軽減するための命令をシリアル化するためのコンパイラの生成を指定します。|
 |[/Qvec-report (自動ベクター化レポート作成レベル)](qvec-report-auto-vectorizer-reporting-level.md)|自動ベクター化のレポート レベルを有効にします。|
 |[/RTC](rtc-run-time-error-checks.md)|ランタイム エラー チェックを有効にします。|
 |[/sdl](sdl-enable-additional-security-checks.md)|追加のセキュリティ機能と警告を有効にします。|
@@ -168,7 +170,7 @@ ms.locfileid: "76518375"
 |[/Zs](zs-syntax-check-only.md)|構文だけをチェックします。|
 |[/ZW](zw-windows-runtime-compilation.md)|Windows ランタイムで実行する出力ファイルを作成します。|
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [MSVC コンパイラ オプション](compiler-options.md)<br/>
 [MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)
