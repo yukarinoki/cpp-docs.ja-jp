@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - unsupported_feature class
 ms.assetid: 6b1ab917-df13-48c7-9648-7cb2465a0ff5
-ms.openlocfilehash: 451318bfbcfb9c5e002677556944e3499c0ed5fb
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: 561f0a258943f6d7e1c0f1b5cae716592c931fbc
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525418"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127713"
 ---
-# <a name="unsupportedfeature-class"></a>unsupported_feature クラス
+# <a name="unsupported_feature-class"></a>unsupported_feature クラス
 
 サポートされていない機能が使用される場合にスローされる例外です。
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 class unsupported_feature : public runtime_exception;
 ```
 
@@ -29,9 +29,9 @@ class unsupported_feature : public runtime_exception;
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
-|[unsupported_feature コンス トラクター](#unsupported_feature)|`unsupported_feature` 例外の新しいインスタンスを構築します。|
+|[unsupported_feature コンストラクター](#unsupported_feature)|`unsupported_feature` 例外の新しいインスタンスを構築します。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -41,13 +41,13 @@ class unsupported_feature : public runtime_exception;
 
 `unsupported_feature`
 
-## <a name="unsupported_feature"></a> unsupported_feature
+## <a name="unsupported_feature"></a>unsupported_feature
 
   `unsupported_feature` 例外の新しいインスタンスを構築します。
 
 ### <a name="syntax"></a>構文
 
-```
+```cpp
 explicit unsupported_feature(
     const char * _Message ) throw();
 
@@ -63,12 +63,12 @@ unsupported_feature() throw();
 
 `unsupported_feature` オブジェクト。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
-**ヘッダー:** amprt.h
+**ヘッダー:** amprt. h
 
-**名前空間:** コンカレンシー
+**名前空間:** Concurrency
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [コンカレンシー名前空間 (C++ AMP)](concurrency-namespace-cpp-amp.md)

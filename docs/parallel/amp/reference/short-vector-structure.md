@@ -6,20 +6,20 @@ f1_keywords:
 - AMP_SHORT_VECTORS/short_vector
 - AMP_SHORT_VECTORS/Concurrency::graphics::short_vector::short_vector Constructor
 ms.assetid: e4f50b8f-1150-437d-b58c-79c5fb883708
-ms.openlocfilehash: 012a70ae628a896c8202e46a5624f37f58b0781b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 531b8d53eac8d997b7e8ca4d29aad7d34ef90e22
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351548"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126436"
 ---
-# <a name="shortvector-structure"></a>short_vector 構造体
+# <a name="short_vector-structure"></a>short_vector 構造体
 
-short_vector は short ベクターを汎用的にプログラミングに役立つメタプログラミングの定義を提供します。
+short_vector には、短いベクターを一般的にプログラミングするのに役立つメタプログラミング定義が用意されています。
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 template<
     typename _Scalar_type,
     int _Size
@@ -75,42 +75,42 @@ template<>
 struct short_vector<double, 4>;
 ```
 
-#### <a name="parameters"></a>パラメーター
+### <a name="parameters"></a>パラメーター
 
 *_Scalar_type*<br/>
 
-*サイズ) (_s*<br/>
+*_Size*<br/>
 
 ## <a name="members"></a>メンバー
 
 ### <a name="public-typedefs"></a>パブリック typedef
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |`type`||
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
-|[short_vector::short_vector コンス トラクター](#ctor)||
+|[short_vector:: short_vector コンストラクター](#ctor)||
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
 `short_vector`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
-**ヘッダー:** amp_short_vectors.h
+**ヘッダー:** amp_short_vectors
 
-**名前空間:** Concurrency::graphics
+**名前空間:** Concurrency:: graphics
 
-##  <a name="ctor"></a>  short_vector::short_vector コンス トラクター
+## <a name="ctor"></a>short_vector:: short_vector コンストラクター
 
-```
+```cpp
 short_vector();
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [Concurrency::graphics 名前空間](concurrency-graphics-namespace.md)

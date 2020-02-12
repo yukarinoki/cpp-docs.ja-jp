@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - invalid_operation class
 ms.assetid: 26ba07dc-fcdf-44cb-b748-a31d35205b52
-ms.openlocfilehash: 8b971a12ff83753546cfea7b90288d1bc43400c0
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: e17d530569d16ba0084a58bf0be00d4a8423b7f6
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64341034"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77140881"
 ---
-# <a name="invalidoperation-class"></a>invalid_operation クラス
+# <a name="invalid_operation-class"></a>invalid_operation クラス
 
-このクラスは、同時実行ランタイムによってスローされる他の例外の種類によって正確に記述されない無効な操作を実行しようとした場合にスローされる例外を表します。
+このクラスは、コンカレンシー ランタイムによってスローされる他の例外の種類によって正確に記述されない無効な操作を実行しようとした場合にスローされる例外を表します。
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 class invalid_operation : public std::exception;
 ```
 
@@ -29,11 +29,11 @@ class invalid_operation : public std::exception;
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |[invalid_operation](#ctor)|オーバーロードされます。 `invalid_operation` オブジェクトを構築します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 通常、この例外がスローされる条件については、それぞれのメソッドにドキュメント化されています。
 
@@ -43,17 +43,17 @@ class invalid_operation : public std::exception;
 
 `invalid_operation`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
-**ヘッダー:** concrt.h
+**ヘッダー:** concrt .h
 
 **名前空間:** concurrency
 
-##  <a name="ctor"></a> invalid_operation
+## <a name="ctor"></a>invalid_operation
 
 `invalid_operation` オブジェクトを構築します。
 
-```
+```cpp
 explicit _CRTIMP invalid_operation(_In_z_ const char* _Message) throw();
 
 invalid_operation() throw();
@@ -64,6 +64,6 @@ invalid_operation() throw();
 *_Message*<br/>
 エラーの説明メッセージ。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [コンカレンシー名前空間](concurrency-namespace.md)

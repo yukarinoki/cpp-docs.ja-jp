@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - invalid_oversubscribe_operation class
 ms.assetid: 0a9c5f08-d5e6-4ad0-90a9-517472b3ac28
-ms.openlocfilehash: 200743d41c1c45f2a957dba0716dd7aa07e3de76
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7a879fc2da2f963cd4b5ea5fcd7e9506f86ce051
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405314"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77140831"
 ---
-# <a name="invalidoversubscribeoperation-class"></a>invalid_oversubscribe_operation クラス
+# <a name="invalid_oversubscribe_operation-class"></a>invalid_oversubscribe_operation クラス
 
-このクラスは、場合にスローされる例外を表します、`Context::Oversubscribe`メソッドを呼び出すと、`_BeginOversubscription`パラメーターに設定**false**を事前に呼び出さずに、`Context::Oversubscribe`メソッドを`_BeginOversubscription`パラメーターに設定**true**します。
+このクラスは、`_BeginOversubscription` パラメーターを**true**に設定して `Context::Oversubscribe` メソッドを前に呼び出すことなく、`_BeginOversubscription` パラメーターを**false**に設定して `Context::Oversubscribe` メソッドを呼び出すとスローされる例外を表します。
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 class invalid_oversubscribe_operation : public std::exception;
 ```
 
@@ -29,7 +29,7 @@ class invalid_oversubscribe_operation : public std::exception;
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |[invalid_oversubscribe_operation](#ctor)|オーバーロードされます。 `invalid_oversubscribe_operation` オブジェクトを構築します。|
 
@@ -39,17 +39,17 @@ class invalid_oversubscribe_operation : public std::exception;
 
 `invalid_oversubscribe_operation`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
-**ヘッダー:** concrt.h
+**ヘッダー:** concrt .h
 
 **名前空間:** concurrency
 
-##  <a name="ctor"></a> invalid_oversubscribe_operation
+## <a name="ctor"></a>invalid_oversubscribe_operation
 
 `invalid_oversubscribe_operation` オブジェクトを構築します。
 
-```
+```cpp
 explicit _CRTIMP invalid_oversubscribe_operation(_In_z_ const char* _Message) throw();
 
 invalid_oversubscribe_operation() throw();
@@ -60,6 +60,6 @@ invalid_oversubscribe_operation() throw();
 *_Message*<br/>
 エラーの説明メッセージ。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [コンカレンシー名前空間](concurrency-namespace.md)

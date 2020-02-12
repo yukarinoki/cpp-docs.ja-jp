@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ConcRT (see Concurrency Runtime)
 - Concurrency Runtime
 ms.assetid: 874bc58f-8dce-483e-a3a1-4dcc9e52ed2c
-ms.openlocfilehash: a96c54a01788f03158b9fcdcd0bf72eb2b1ce84d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: a17b4439baaec9caacfeca08983d0255b5a145de
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69510553"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77141616"
 ---
 # <a name="concurrency-runtime"></a>コンカレンシー ランタイム
 
@@ -20,7 +20,7 @@ C++ のコンカレンシー ランタイムにより、信頼性が高く、ス
 リファレンスドキュメントについては、「[リファレンス](../../parallel/concrt/reference/reference-concurrency-runtime.md)」を参照してください。
 
 > [!TIP]
->  コンカレンシー ランタイムは C++11 機能に大きく依存しており、最新の C++ のスタイルが採用されています。 詳細については、「」[をC++](../../cpp/welcome-back-to-cpp-modern-cpp.md)参照してください。
+> コンカレンシー ランタイムは C++11 機能に大きく依存しており、最新の C++ のスタイルが採用されています。 詳細については、「」[をC++](../../cpp/welcome-back-to-cpp-modern-cpp.md)参照してください。
 
 ## <a name="choosing-concurrency-runtime-features"></a>コンカレンシー ランタイムの機能を選択する
 
@@ -62,7 +62,7 @@ C++ のコンカレンシー ランタイムにより、信頼性が高く、ス
 |||
 |-|-|
 |[C++ における UWP アプリ用の非同期操作の作成](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)|同時実行ランタイムを使用して UWP アプリで非同期操作を作成する際に留意すべき重要な点について説明します。|
-|[チュートリアル: タスクおよび XML HTTP 要求を使用した接続](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)|PPL タスク`IXMLHTTPRequest2`をおよび`IXMLHTTPRequest2Callback`インターフェイスと組み合わせて、UWP アプリで HTTP GET 要求と POST 要求を web サービスに送信する方法について説明します。|
+|[チュートリアル: タスクおよび XML HTTP 要求を使用した接続](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)|PPL タスクを `IXMLHTTPRequest2` および `IXMLHTTPRequest2Callback` インターフェイスと組み合わせて、UWP アプリで HTTP GET 要求と POST 要求を web サービスに送信する方法について説明します。|
 |[Windows ランタイムアプリのサンプル](https://code.msdn.microsoft.com/windowsapps)|Windows 8.x 用のダウンロード可能なコードサンプルとデモアプリが含まれています。 C++ のサンプルでは、UX の応答性を保つためにバックグラウンドでデータを処理する PPL のタスクなど、コンカレンシー ランタイムの機能を使用します。|
 
 ## <a name="dataflow-programming-in-the-asynchronous-agents-library"></a>非同期エージェント ライブラリでのデータ フロー プログラミング
@@ -103,6 +103,6 @@ C++ のコンカレンシー ランタイムにより、信頼性が高く、ス
 |[Parallel Computing in C++ and Native Code forum (C++ とネイティブ コードでの並列コンピューティング フォーラム)](https://go.microsoft.com/fwlink/p/?linkid=183874)|コンカレンシー ランタイムに関するコミュニティ ディスカッションに参加できます。|
 |[並列プログラミング](/dotnet/standard/parallel-programming/index)|.NET Framework で使用できる並列プログラミングモデルについて説明します。|
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[参照](../../parallel/concrt/reference/reference-concurrency-runtime.md)
+[リファレンス](../../parallel/concrt/reference/reference-concurrency-runtime.md)

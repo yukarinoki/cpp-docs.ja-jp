@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - uninitialized_object class
 ms.assetid: 6ae3c4e8-64a6-4511-a158-03be197b63af
-ms.openlocfilehash: a977957fcb28a7f4c6c849c954026e2bda4e728c
-ms.sourcegitcommit: a61d17cffdd50f1c3c6e082a01bbcbc85b6cc5a7
+ms.openlocfilehash: ef7ded0bf925d3430b70064c4979b75e08f9cf45
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65975155"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127700"
 ---
-# <a name="uninitializedobject-class"></a>uninitialized_object クラス
+# <a name="uninitialized_object-class"></a>uninitialized_object クラス
 
 初期化されていないオブジェクトが使用される場合にスローされる例外です。
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 class uninitialized_object : public runtime_exception;
 ```
 
@@ -29,9 +29,9 @@ class uninitialized_object : public runtime_exception;
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
-|[uninitialized_object コンス トラクター](#uninitialized_object)|`uninitialized_object` クラスの新しいインスタンスを初期化します。|
+|[uninitialized_object コンストラクター](#uninitialized_object)|`uninitialized_object` クラスの新しいインスタンスを初期化します。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -41,19 +41,19 @@ class uninitialized_object : public runtime_exception;
 
 `uninitialized_object`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
-**ヘッダー:** amprt.h
+**ヘッダー:** amprt. h
 
-**名前空間:** コンカレンシー
+**名前空間:** Concurrency
 
-## <a name="uninitialized_object"></a> uninitialized_object
+## <a name="uninitialized_object"></a>uninitialized_object
 
 `uninitialized_object` 例外の新しいインスタンスを構築します。
 
 ### <a name="syntax"></a>構文
 
-```
+```cpp
 explicit uninitialized_object(
     const char * _Message ) throw();
 
@@ -67,8 +67,8 @@ uninitialized_object() throw();
 
 ### <a name="return-value"></a>戻り値
 
-`uninitialized_object`例外オブジェクト。
+`uninitialized_object` exception オブジェクトです。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [コンカレンシー名前空間 (C++ AMP)](concurrency-namespace-cpp-amp.md)

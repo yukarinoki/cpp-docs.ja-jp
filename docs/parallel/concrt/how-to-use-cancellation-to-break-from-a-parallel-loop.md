@@ -1,36 +1,36 @@
 ---
-title: '方法: 取り消しを使用して並列ループを中断する'
+title: '方法: キャンセル処理を使用して並列ループを中断する'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - writing a parallel search algorithm [Concurrency Runtime]
 - parallel search algorithm, writing [Concurrency Runtime]
 ms.assetid: 421cd2de-f058-465f-b890-dd8fcc0df273
-ms.openlocfilehash: 08f33a75bc5c5391333a2d9368d4ed6563e117c2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 21907de6c5625f7774ae788cef0449ac49107e40
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62346263"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142132"
 ---
-# <a name="how-to-use-cancellation-to-break-from-a-parallel-loop"></a>方法: 取り消しを使用して並列ループを中断する
+# <a name="how-to-use-cancellation-to-break-from-a-parallel-loop"></a>方法: キャンセル処理を使用して並列ループを中断する
 
 この例では、キャンセルを使用して基本的な並列検索アルゴリズムを実装する方法を示します。
 
 ## <a name="example"></a>例
 
-次の例では、キャンセルを使用して、配列内の要素を検索します。 `parallel_find_any`関数は、 [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for)アルゴリズムと[concurrency::run_with_cancellation_token](reference/concurrency-namespace-functions.md#run_with_cancellation_token)指定された値を含む位置を検索する関数。 並列ループには、値が検出されると、呼び出し、 [concurrency::cancellation_token_source::cancel](reference/cancellation-token-source-class.md#cancel)今後の作業をキャンセルするメソッド。
+次の例では、キャンセルを使用して、配列内の要素を検索します。 `parallel_find_any` 関数は、 [concurrency::p arallel_for](reference/concurrency-namespace-functions.md#parallel_for)アルゴリズムと[concurrency:: run_with_cancellation_token](reference/concurrency-namespace-functions.md#run_with_cancellation_token)関数を使用して、指定された値を含む位置を検索します。 並列ループは、値を検出すると、 [concurrency:: cancellation_token_source:: cancel](reference/cancellation-token-source-class.md#cancel)メソッドを呼び出して、将来の作業をキャンセルします。
 
 [!code-cpp[concrt-parallel-array-search#1](../../parallel/concrt/codesnippet/cpp/how-to-use-cancellation-to-break-from-a-parallel-loop_1.cpp)]
 
-[Concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for)アルゴリズムが同時に動作します。 そのため、事前に決められた順序で操作を行うことはできません。 配列に値の複数のインスタンスが含まれている場合、結果の位置のいずれかを使用できます。
+[Concurrency::p arallel_for](reference/concurrency-namespace-functions.md#parallel_for)アルゴリズムは同時に動作します。 そのため、事前に決められた順序で操作は実行されません。 配列に値の複数のインスタンスが含まれている場合、結果はその位置のいずれかになります。
 
 ## <a name="compiling-the-code"></a>コードのコンパイル
 
-コード例をコピーし、Visual Studio プロジェクトに貼り付けるか、という名前のファイルに貼り付ける`parallel-array-search.cpp`Visual Studio コマンド プロンプト ウィンドウで、次のコマンドを実行します。
+コード例をコピーし、Visual Studio プロジェクトに貼り付けるか、`parallel-array-search.cpp` という名前のファイルに貼り付けてから、Visual Studio のコマンドプロンプトウィンドウで次のコマンドを実行します。
 
-**cl.exe /EHsc parallel-array-search.cpp**
+> **cl.exe/EHsc parallel-array-search**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [PPL における取り消し処理](cancellation-in-the-ppl.md)<br/>
 [並列アルゴリズム](../../parallel/concrt/parallel-algorithms.md)<br/>
