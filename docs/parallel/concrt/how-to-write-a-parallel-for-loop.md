@@ -1,20 +1,20 @@
 ---
-title: '方法: Parallel_for ループを記述します。'
+title: '方法: parallel_for ループを記述する'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - writing a parallel_for loop [Concurrency Runtime]
 - parallel_for function, example
 ms.assetid: adb4d64e-5514-4b70-8dcb-b9210e6b5a1c
-ms.openlocfilehash: d6ac30a5de0ff45adad1064aeab708e6a84f5e9f
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 5903114a12de46dc06929c83e9995b39d0136810
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346369"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77141859"
 ---
-# <a name="how-to-write-a-parallelfor-loop"></a>方法: Parallel_for ループを記述します。
+# <a name="how-to-write-a-parallel_for-loop"></a>方法: parallel_for ループを記述する
 
-この例を使用して、 [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for)に 2 つの行列の積を計算します。
+この例では、 [concurrency::p arallel_for](reference/concurrency-namespace-functions.md#parallel_for)を使用して2つの行列の積を計算する方法を示します。
 
 ## <a name="example"></a>例
 
@@ -45,11 +45,11 @@ parallel: 1311
 
 ## <a name="compiling-the-code"></a>コードのコンパイル
 
-コードをコンパイルするにコピーし、Visual Studio プロジェクトに貼り付けるかという名前のファイルに貼り付ける`parallel-matrix-multiply.cpp`Visual Studio コマンド プロンプト ウィンドウで、次のコマンドを実行します。
+コードをコンパイルするには、コードをコピーし、Visual Studio プロジェクトに貼り付けるか、`parallel-matrix-multiply.cpp` という名前のファイルに貼り付けてから、Visual Studio のコマンドプロンプトウィンドウで次のコマンドを実行します。
 
-**cl.exe /EHsc parallel-matrix-multiply.cpp**
+> **cl.exe/EHsc parallel-matrix-multiply**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [並列アルゴリズム](../../parallel/concrt/parallel-algorithms.md)<br/>
 [parallel_for 関数](reference/concurrency-namespace-functions.md#parallel_for)
