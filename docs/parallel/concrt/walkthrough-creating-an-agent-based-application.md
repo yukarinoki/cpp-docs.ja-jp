@@ -1,22 +1,22 @@
 ---
-title: 'チュートリアル: エージェントベースのアプリケーションの作成'
+title: 'チュートリアル: エージェント ベースのアプリケーションの作成'
 ms.date: 04/25/2019
 helpviewer_keywords:
 - asynchronous agents, creating
 - agent class, example
 ms.assetid: 730f42ce-6d58-4753-b948-fd9c9ef2ce6c
-ms.openlocfilehash: 4a2fabd9ab4f358d40b17e662fb64ab70d01c58e
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: 3ece04811a75fba22db447875dc6ed08c22987b5
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69631663"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142050"
 ---
-# <a name="walkthrough-creating-an-agent-based-application"></a>チュートリアル: エージェントベースのアプリケーションの作成
+# <a name="walkthrough-creating-an-agent-based-application"></a>チュートリアル: エージェント ベースのアプリケーションの作成
 
 ここでは、基本的なエージェント ベースのアプリケーションの作成方法について説明します。 このチュートリアルでは、テキスト ファイルから非同期的にデータを読み取るエージェントを作成できます。 このアプリケーションでは、Adler-32 チェックサム アルゴリズムを使用して、そのファイルの内容のチェックサムを計算します。
 
-## <a name="prerequisites"></a>必須コンポーネント
+## <a name="prerequisites"></a>前提条件
 
 このチュートリアルを完了するには、次のトピックを理解する必要があります。
 
@@ -28,7 +28,7 @@ ms.locfileid: "69631663"
 
 - [同期データ構造](../../parallel/concrt/synchronization-data-structures.md)
 
-##  <a name="top"></a> セクション
+## <a name="top"></a> セクション
 
 このチュートリアルでは、次のタスクを実行する方法を示します。
 
@@ -38,7 +38,7 @@ ms.locfileid: "69631663"
 
 - [アプリケーションでの file_reader クラスの使用](#useagentclass)
 
-##  <a name="createapplication"></a>コンソールアプリケーションの作成
+## <a name="createapplication"></a>コンソールアプリケーションの作成
 
 このセクションでは、プログラムでC++使用するヘッダーファイルを参照するコンソールアプリケーションを作成する方法について説明します。 最初の手順は、使用している Visual Studio のバージョンによって異なります。 このページの左上にあるバージョンセレクターが正しく設定されていることを確認します。
 
@@ -46,15 +46,15 @@ ms.locfileid: "69631663"
 
 ### <a name="to-create-a-c-console-application-in-visual-studio-2019"></a>Visual Studio 2019 C++でコンソールアプリケーションを作成するには
 
-1. メイン メニューで、 **[ファイル]** > **[新規作成]** > **[プロジェクト]** の順に選択して、 **[新しいプロジェクトの作成]** ダイアログ ボックスを開きます。
+1. メインメニューから、[**ファイル**>**新しい**>**プロジェクト**] を選択して **[新しいプロジェクトの作成]** ダイアログボックスを開きます。
 
 1. ダイアログの上部で、 **[言語]** を **[C++]** に、 **[プラットフォーム]** を **[Windows]** に、 **[プロジェクト タイプ]** を **[コンソール]** に設定します。 
 
-1. フィルター処理されたプロジェクト タイプの一覧から、 **[コンソール アプリ]** を選択して、 **[次へ]** を選択します。 次のページで、プロジェクト`BasicAgent`の名前として「」と入力し、必要に応じてプロジェクトの場所を指定します。
+1. フィルター処理されたプロジェクト タイプの一覧から、 **[コンソール アプリ]** を選択して、 **[次へ]** を選択します。 次のページで、プロジェクトの名前として「`BasicAgent`」と入力し、必要に応じてプロジェクトの場所を指定します。
 
 1. **[作成]** ボタンをクリックしてプロジェクトを作成します。
 
-1. **ソリューションエクスプローラー**でプロジェクトノードを右クリックし、 **[プロパティ]** を選択します。 [**構成プロパティ** > ] [**C/C++**  > **プリコンパイル済みヘッダー** > ] [**プリコンパイル済み**ヘッダー] の順に選択します。
+1. **ソリューションエクスプローラー**でプロジェクトノードを右クリックし、 **[プロパティ]** を選択します。 **構成プロパティ** > **CC++ /**  > **プリコンパイル済み**ヘッダー > プリコンパイル済み**ヘッダー**  の順に選択し、**作成** を選択します。
 
 ::: moniker-end
 
@@ -64,7 +64,7 @@ ms.locfileid: "69631663"
 
 1. **[ファイル]** メニューの **[新規作成]** をクリックし、 **[プロジェクト]** をクリックして **[新しいプロジェクト]** ダイアログボックスを表示します。
 
-1. **新しいプロジェクト**ダイアログ ボックスで、 **Visual C**内のノード、**プロジェクトの種類**クリックしてウィンドウ**Win32 コンソール アプリケーション** **テンプレート**ウィンドウ。 プロジェクトの名前 (たとえば`BasicAgent`、) を入力し、 **[OK]** をクリックして、 **Win32 コンソールアプリケーションウィザード**を表示します。
+1. **[新しいプロジェクト]** ダイアログボックスの **[プロジェクトの種類]** ペインで**ビジュアルC++** ノードを選択し、 **[テンプレート]** ペインで **[Win32 コンソールアプリケーション]** を選択します。 プロジェクトの名前 (たとえば、`BasicAgent`) を入力し、 **[OK]** をクリックして、 **Win32 コンソールアプリケーションウィザード**を表示します。
 
 1. **[Win32 コンソールアプリケーションウィザード]** ダイアログボックスで、 **[完了]** をクリックします。
 
@@ -80,13 +80,13 @@ ms.locfileid: "69631663"
 
 [[トップ](#top)]
 
-##  <a name="createagentclass"></a>File_reader クラスの作成
+## <a name="createagentclass"></a>File_reader クラスの作成
 
 ここでは、`file_reader` クラスの作成方法について説明します。 ランタイムは、各エージェントがそれぞれのコンテキストで処理を実行するようにスケジュールを設定します。 そのため、処理を同期的に実行する一方で、他のコンポーネントとは非同期的に通信するエージェントを作成できます。 `file_reader` クラスでは、指定された入力ファイルからデータを読み取り、そのファイルのデータを指定されたターゲット コンポーネントに送信します。
 
 #### <a name="to-create-the-file_reader-class"></a>file_reader クラスを作成するには
 
-1. 新しい C++ ヘッダー ファイルをプロジェクトに追加します。 これを行うには、**ソリューションエクスプローラー**で **[ヘッダーファイル]** ノードを右クリックし、 **[追加]** をクリックして、 **[新しい項目]** をクリックします。 **[テンプレート]** ペインで、 **[ヘッダーファイル (.h)]** を選択します。 **[新しい項目の追加]** ダイアログボックスで`file_reader.h` 、 **[名前]** ボックスに「」と入力し、 **[追加]** をクリックします。
+1. 新しい C++ ヘッダー ファイルをプロジェクトに追加します。 これを行うには、**ソリューションエクスプローラー**で **[ヘッダーファイル]** ノードを右クリックし、 **[追加]** をクリックして、 **[新しい項目]** をクリックします。 **[テンプレート]** ペインで、 **[ヘッダーファイル (.h)]** を選択します。 **[新しい項目の追加]** ダイアログボックスで、 **[名前]** ボックスに「`file_reader.h`」と入力し、 **[追加]** をクリックします。
 
 1. file_reader.h に、次のコードを追加します。
 
@@ -100,7 +100,7 @@ ms.locfileid: "69631663"
 
 [!code-cpp[concrt-basic-agent#3](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_4.h)]
 
-   `_file_name` メンバーは、エージェントが読み取る対象のファイル名です。 メンバーは、エージェントがファイルの内容を書き込む[concurrency:: ITarget](../../parallel/concrt/reference/itarget-class.md)オブジェクトです。 `_target` `_error` メンバーでは、エージェントの有効期間中に発生したエラーを保持します。
+   `_file_name` メンバーは、エージェントが読み取る対象のファイル名です。 `_target` メンバーは、エージェントがファイルの内容を書き込む[concurrency:: ITarget](../../parallel/concrt/reference/itarget-class.md)オブジェクトです。 `_error` メンバーでは、エージェントの有効期間中に発生したエラーを保持します。
 
 1. `file_reader` クラスの `public` セクションに `file_reader` コンストラクターの次のコードを追加します。
 
@@ -114,7 +114,7 @@ ms.locfileid: "69631663"
 
    `get_error` メソッドにより、エージェントの有効期間中に発生したエラーを取得します。
 
-1. クラスの`protected`セクションで、 [concurrency:: agent:: run](reference/agent-class.md#run)メソッドを実装します。
+1. クラスの `protected` セクションで、 [concurrency:: agent:: run](reference/agent-class.md#run)メソッドを実装します。
 
 [!code-cpp[concrt-basic-agent#6](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_7.h)]
 
@@ -128,7 +128,7 @@ file_reader.h の内容全体の例を次に示します。
 
 [[トップ](#top)]
 
-##  <a name="useagentclass"></a>アプリケーションでの file_reader クラスの使用
+## <a name="useagentclass"></a>アプリケーションでの file_reader クラスの使用
 
 ここでは、`file_reader` クラスを使用して、テキスト ファイルの内容を読み取る方法について説明します。 また、このファイルデータを受け取り、その Adler-32 チェックサムを計算する[concurrency:: call](../../parallel/concrt/reference/call-class.md)オブジェクトを作成する方法についても説明します。
 
@@ -142,7 +142,7 @@ file_reader.h の内容全体の例を次に示します。
 
 [!code-cpp[concrt-basic-agent#9](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_10.cpp)]
 
-1. 関数で、処理の終了を通知する[concurrency:: event](../../parallel/concrt/reference/event-class.md)オブジェクトを作成します。 `_tmain`
+1. `_tmain` 関数で、処理の終了を通知する[concurrency:: event](../../parallel/concrt/reference/event-class.md)オブジェクトを作成します。
 
 [!code-cpp[concrt-basic-agent#10](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_11.cpp)]
 
@@ -192,7 +192,7 @@ over the lazy dog
 Adler-32 sum is fefb0d75
 ```
 
-## <a name="robust-programming"></a>信頼性の高いプログラミング
+## <a name="robust-programming"></a>堅牢性の高いプログラミング
 
 データ メンバーへの同時アクセスを回避するために、クラスの `protected` セクションまたは `private` セクションに、処理を実行するメソッドを追加することをお勧めします。 クラスの `public` セクションには、メッセージをエージェントに送信するメソッドまたはメッセージをエージェントから受信するメソッドのみを追加してください。
 
@@ -200,9 +200,9 @@ Adler-32 sum is fefb0d75
 
 ## <a name="next-steps"></a>次の手順
 
-エージェントベースのアプリケーションの別の例について[は、「チュートリアル:Join を使用して](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md)デッドロックを防止します。
+エージェントベースのアプリケーションの別の例については、「[チュートリアル: join を使用したデッドロックの回避](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [非同期エージェント ライブラリ](../../parallel/concrt/asynchronous-agents-library.md)<br/>
 [非同期メッセージ ブロック](../../parallel/concrt/asynchronous-message-blocks.md)<br/>

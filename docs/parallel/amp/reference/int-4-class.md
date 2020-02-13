@@ -268,40 +268,40 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::int_4::bg
 - amp_short_vectors/Concurrency::graphics::int_4::yxz
 ms.assetid: 01768c28-23a8-4965-8267-96834864f4eb
-ms.openlocfilehash: 7bcdd005ab5f530e08fc6e5326404d19f85faf4b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3ca8eb4c93b3e9cd9108712727d1f83421c9d679
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180213"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126670"
 ---
-# <a name="int4-class"></a>int_4 クラス
+# <a name="int_4-class"></a>int_4 クラス
 
 4 個の整数の short ベクターを表します。
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 class int_4;
 ```
 
 ## <a name="members"></a>メンバー
 
-### <a name="public-typedefs"></a>パブリック typedef
+### <a name="public-typedefs"></a>パブリック Typedef
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
-|[int_4 コンス トラクター](#ctor)|オーバーロードされます。 既定のコンストラクター。すべての要素を 0 で初期化します。|
+|[int_4 コンストラクター](#ctor)|オーバーロードされます。 既定のコンストラクター。すべての要素を 0 で初期化します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |int_4::get_w||
 |int_4::get_wx||
@@ -318,7 +318,7 @@ class int_4;
 |int_4::get_wzx||
 |int_4::get_wzxy||
 |int_4::get_wzy||
-|int_4::get_wzyx||
+|int_4:: get_wzyx||
 |int_4::get_x||
 |int_4::get_xw||
 |int_4::get_xwy||
@@ -442,7 +442,7 @@ class int_4;
 
 ### <a name="public-operators"></a>パブリック演算子
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |int_4::operator-||
 |int_4::operator--||
@@ -455,20 +455,20 @@ class int_4;
 |int_4::operator~||
 |int_4::operator++||
 |int_4::operator+=||
-|int_4::operator<\<=||
+|int_4:: operator <\<=||
 |int_4::operator=||
 |int_4::operator-=||
 |int_4::operator>>=||
 
 ### <a name="public-constants"></a>パブリック定数
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
-|[定数のサイズ](#int_4__size)||
+|[サイズ定数](#int_4__size)||
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |int_4::a||
 |int_4::ab||
@@ -603,17 +603,17 @@ class int_4;
 
 `int_4`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** amp_short_vectors.h
+**ヘッダー:** amp_short_vectors
 
-**名前空間:** Concurrency::graphics
+**名前空間:** Concurrency:: graphics
 
-##  <a name="ctor"></a> int_4
+## <a name="ctor"></a>int_4
 
 既定のコンストラクター。すべての要素を 0 で初期化します。
 
-```
+```cpp
 int_4() restrict(amp,
     cpu);
 
@@ -656,29 +656,29 @@ explicit inline int_4(
 ### <a name="parameters"></a>パラメーター
 
 *_V0*<br/>
-0 の要素を初期化する値。
+要素0を初期化する値。
 
 *_V1*<br/>
-1 要素を初期化する値。
+要素1を初期化する値。
 
 *_V2*<br/>
-2 要素を初期化する値。
+要素2を初期化する値。
 
 *_V3*<br/>
-3 要素を初期化する値。
+要素3を初期化する値。
 
 *_V*<br/>
 初期化の値。
 
 *_Other*<br/>
-初期化するために使用するオブジェクト。
+の初期化に使用されるオブジェクト。
 
-##  <a name="int_4__size"></a> サイズ
+## <a name="int_4__size"></a>幅
 
-```
+```cpp
 static const int size = 4;
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [Concurrency::graphics 名前空間](concurrency-graphics-namespace.md)

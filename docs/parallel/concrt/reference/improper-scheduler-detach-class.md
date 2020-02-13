@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - improper_scheduler_detach class
 ms.assetid: 30132102-c900-4951-a470-b63b4e3aa2d2
-ms.openlocfilehash: 7e85ff8ea7ffb817c141094649cd39b8becccf53
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2f5ad16893a898d4258762b25fea3d557607a3f8
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262347"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77141146"
 ---
-# <a name="improperschedulerdetach-class"></a>improper_scheduler_detach クラス
+# <a name="improper_scheduler_detach-class"></a>improper_scheduler_detach クラス
 
 このクラスは、`CurrentScheduler::Detach` オブジェクトの `Attach` メソッドによってスケジューラにアタッチされていないコンテキストで `Scheduler` メソッドが呼び出された場合にスローされる例外を表します。
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 class improper_scheduler_detach : public std::exception;
 ```
 
@@ -29,7 +29,7 @@ class improper_scheduler_detach : public std::exception;
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |[improper_scheduler_detach](#ctor)|オーバーロードされます。 `improper_scheduler_detach` オブジェクトを構築します。|
 
@@ -39,17 +39,17 @@ class improper_scheduler_detach : public std::exception;
 
 `improper_scheduler_detach`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** concrt.h
+**ヘッダー:** concrt .h
 
 **名前空間:** concurrency
 
-##  <a name="ctor"></a> improper_scheduler_detach
+## <a name="ctor"></a>improper_scheduler_detach
 
 `improper_scheduler_detach` オブジェクトを構築します。
 
-```
+```cpp
 explicit _CRTIMP improper_scheduler_detach(_In_z_ const char* _Message) throw();
 
 improper_scheduler_detach() throw();
@@ -60,7 +60,7 @@ improper_scheduler_detach() throw();
 *_Message*<br/>
 エラーの説明メッセージ。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [コンカレンシー名前空間](concurrency-namespace.md)<br/>
 [Scheduler クラス](scheduler-class.md)

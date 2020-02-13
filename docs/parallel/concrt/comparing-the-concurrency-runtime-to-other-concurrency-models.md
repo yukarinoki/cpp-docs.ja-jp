@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Concurrency Runtime, compared to other models
 ms.assetid: d8b9a1f4-f15f-43c3-a5b4-c0991edf9c86
-ms.openlocfilehash: 9cc48687eb083ea4fab53380f62856b747c9d86a
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 5bc6691f6d0b166bb3084091ee6af70474937568
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69512817"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77141330"
 ---
 # <a name="comparing-the-concurrency-runtime-to-other-concurrency-models"></a>コンカレンシー ランタイムとその他のコンカレンシー モデルの比較
 
@@ -19,7 +19,7 @@ ms.locfileid: "69512817"
 
 コンカレンシー ランタイムの機能と生産性向上を通して、別のコンカレンシー モデルを使用する既存のアプリケーションを補完できます。 コンカレンシー ランタイムでは、複数のタスク スケジューラが同じコンピューティング リソースを求めて競合する場合に、負荷分散は保証されません。 ただし、作業負荷が重複しない場合、この影響はごくわずかです。
 
-##  <a name="top"></a> セクション
+## <a name="top"></a> セクション
 
 - [プリエンプティブ スケジューリングと協調スケジューリングの比較](#models)
 
@@ -27,13 +27,13 @@ ms.locfileid: "69512817"
 
 - [コンカレンシー ランタイムと OpenMP の比較](#openmp)
 
-##  <a name="models"></a> プリエンプティブ スケジューリングと協調スケジューリングの比較
+## <a name="models"></a> プリエンプティブ スケジューリングと協調スケジューリングの比較
 
 プリエンプティブ モデルと協調スケジューリング モデルは、複数のタスクで、プロセッサやハードウェア スレッドなど、コンピューティング リソースを共有するための 2 つの一般的な方法です。
 
 ### <a name="preemptive-and-cooperative-scheduling"></a>プリエンプティブ スケジューリングと協調スケジューリング
 
-*プリエンプティブ スケジューリング* は、ラウンド ロビン方式の優先順位ベースのメカニズムで、すべてのタスクに対し、コンピューティング リソースへの排他アクセス権を所定の時間だけ与え、その後別のタスクに切り替えます。 プリエンプティブスケジューリングは、Windows などのマルチタスクオペレーティングシステムで一般的です。 *協調スケジューリング*は、タスクが終了するまで、またはタスクがリソースへのアクセスを生成するまで、すべてのタスクにコンピューティングリソースへの排他アクセスを提供するメカニズムです。 コンカレンシー ランタイムは、処理リソースを最大限活用するために、協調スケジューリングを、オペレーティング システムのプリエンプティブ スケジューラと共に使用します。
+*プリエンプティブ スケジューリング* は、ラウンド ロビン方式の優先順位ベースのメカニズムで、すべてのタスクに対し、コンピューティング リソースへの排他アクセス権を所定の時間だけ与え、その後別のタスクに切り替えます。 プリエンプティブ スケジューリングは、Windows などのマルチタスク オペレーティング システムで一般的です。 *協調スケジューリング*は、タスクが終了するまで、またはタスクがリソースへのアクセスを生成するまで、すべてのタスクにコンピューティングリソースへの排他アクセスを提供するメカニズムです。 コンカレンシー ランタイムは、処理リソースを最大限活用するために、協調スケジューリングを、オペレーティング システムのプリエンプティブ スケジューラと共に使用します。
 
 ### <a name="differences-between-preemptive-and-cooperative-schedulers"></a>プリエンプティブ スケジューラと協調スケジューラの違い
 
@@ -51,7 +51,7 @@ ms.locfileid: "69512817"
 
 [[トップ](#top)]
 
-##  <a name="winapi"></a> コンカレンシー ランタイムと Windows API の比較
+## <a name="winapi"></a> コンカレンシー ランタイムと Windows API の比較
 
 Microsoft Windows アプリケーション プログラミング インターフェイス (通常は Windows API と呼ばれます。以前は Win32 と呼ばれていました) は、アプリケーションでコンカレンシーを可能にするプログラミング モデルを提供します。 コンカレンシー ランタイムは、基になるオペレーティング システムから利用できない追加のプログラミング モデルを提供するために、Windows API を基に構築されています。
 
@@ -81,7 +81,7 @@ Windows 7 および Windows Server 2008 R2 では、オペレーティング シ
 
 [[トップ](#top)]
 
-##  <a name="openmp"></a> コンカレンシー ランタイムと OpenMP の比較
+## <a name="openmp"></a> コンカレンシー ランタイムと OpenMP の比較
 
 コンカレンシー ランタイムでは、さまざまなプログラミング モデルを使用できます。 これらのモデルは、他のライブラリのモデルと重複する場合や、他のライブラリのモデルを補完する場合があります。 このセクションでは、コンカレンシー ランタイムと [OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp)を比較します。
 
@@ -95,7 +95,7 @@ OpenMP プログラミング モデルは、オープン標準により定義さ
 
 [[トップ](#top)]
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [コンカレンシー ランタイム](../../parallel/concrt/concurrency-runtime.md)<br/>
 [概要](../../parallel/concrt/asynchronous-message-blocks.md)<br/>

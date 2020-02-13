@@ -6,19 +6,19 @@ helpviewer_keywords:
 - IXMLHTTPRequest2 and tasks, example
 - IXHR2 and tasks, example
 ms.assetid: e8e12d46-604c-42a7-abfd-b1d1bb2ed6b3
-ms.openlocfilehash: b11b56578cadc4b3bd037acf84014a718f9fad84
-ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
+ms.openlocfilehash: f1d91e4d203e17242bcf6e784d1ef70a03a9bc33
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "69512141"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142057"
 ---
 # <a name="walkthrough-connecting-using-tasks-and-xml-http-requests"></a>チュートリアル: タスクおよび XML HTTP 要求を使用した接続
 
 この例では、 [IXMLHTTPRequest2](/windows/win32/api/msxml6/nn-msxml6-ixmlhttprequest2)インターフェイスと[IXMLHTTPRequest2Callback](/windows/win32/api/msxml6/nn-msxml6-ixmlhttprequest2callback)インターフェイスをタスクと共に使用して、HTTP GET および POST 要求をユニバーサル Windows プラットフォーム (UWP) アプリの web サービスに送信する方法を示します。 タスクと `IXMLHTTPRequest2` を組み合わせることによって、他のタスクと共に構成するコードを記述できます。 たとえば、タスクのチェーンの一部としてダウンロード タスクを使用できます。 ダウンロード タスクは、処理が取り消された場合にも応答できます。
 
 > [!TIP]
->  また、REST SDK をC++使用してC++ 、アプリまたはデスクトップC++アプリから、UWP アプリから HTTP 要求を実行することもできます。 詳細については、「 [ C++ REST SDK (コードネーム "カサブランカ")](https://github.com/Microsoft/cpprestsdk)」を参照してください。
+> また、REST SDK をC++使用してC++ 、アプリまたはデスクトップC++アプリから、UWP アプリから HTTP 要求を実行することもできます。 詳細については、「 [ C++ REST SDK (コードネーム "カサブランカ")](https://github.com/Microsoft/cpprestsdk)」を参照してください。
 
 タスクの詳細については、「[タスクの並列](../../parallel/concrt/task-parallelism-concurrency-runtime.md)化」を参照してください。 Uwp アプリでタスクを使用する方法の詳細については、「[でC++の非同期プログラミング](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps)」と「 [uwp C++アプリ用の非同期操作の作成](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)」を参照してください。
 
@@ -27,7 +27,7 @@ ms.locfileid: "69512141"
 `IXMLHTTPRequest2` を使用し、タスクを使用しない例については、「[クイックスタート: XML HTTP 要求を使用した接続 (IXMLHTTPRequest2)](/previous-versions/windows/apps/hh770550\(v=win.10\))」を参照してください。
 
 > [!TIP]
->  `IXMLHTTPRequest2` と `IXMLHTTPRequest2Callback` は、UWP アプリで使用するために推奨されているインターフェイスです。 また、この例をデスクトップ アプリケーションでの使用に適用することもできます。
+> `IXMLHTTPRequest2` と `IXMLHTTPRequest2Callback` は、UWP アプリで使用するために推奨されているインターフェイスです。 また、この例をデスクトップ アプリケーションでの使用に適用することもできます。
 
 ## <a name="prerequisites"></a>前提条件
 
@@ -43,9 +43,9 @@ UWP サポートは、Visual Studio 2017 以降では省略可能です。 イ�
 
 取り消し操作をサポートするため、`HttpRequest`、`HttpRequestBuffersCallback`、および `HttpRequestStringCallback` のクラスは、キャンセル トークンを使用します。 `HttpRequestBuffersCallback` クラスと `HttpRequestStringCallback` クラスは、 [concurrency:: cancellation_token:: register_callback](reference/cancellation-token-class.md#register_callback)メソッドを使用して、タスクの完了イベントがキャンセルに応答するようにします。 この取り消しのコールバックは、ダウンロードを中止します。 キャンセルの詳細については、「[キャンセル](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md#cancellation)」を参照してください。
 
-#### <a name="to-define-the-httprequest-class"></a>HttpRequest クラスを定義するには
+### <a name="to-define-the-httprequest-class"></a>HttpRequest クラスを定義するには
 
-1. メインメニューから、[**ファイル** > **新しい** > **プロジェクト**] を選択します。 
+1. メインメニューから、[**ファイル** > **新しい** > **プロジェクト**] を選択します。
 
 1. 空のC++ **アプリ (ユニバーサル Windows)** テンプレートを使用して、空の XAML アプリプロジェクトを作成します。 この例では、プロジェクトの名前を `UsingIXMLHTTPRequest2`とします。
 
@@ -67,29 +67,29 @@ UWP サポートは、Visual Studio 2017 以降では省略可能です。 イ�
 
 このセクションでは、UWP アプリで `HttpRequest` クラスを使用する方法について説明します。 このアプリケーションは、URL リソースを定義する入力ボックス、GET と POST の操作を実行するボタン コマンド、現在の操作を取り消すボタン コマンドを提供します。
 
-#### <a name="to-use-the-httprequest-class"></a>HttpRequest クラスを使用するには
+### <a name="to-use-the-httprequest-class"></a>HttpRequest クラスを使用するには
 
 1. Mainpage.xaml で、次のように[StackPanel](/uwp/api/Windows.UI.Xaml.Controls.StackPanel)要素を定義します。
 
    [!code-xml[concrt-using-ixhr2#A1](../../parallel/concrt/codesnippet/xaml/walkthrough-connecting-using-tasks-and-xml-http-requests_4.xaml)]
 
-2. MainPage.xaml.h で、この `#include` ディレクティブを追加します。
+1. MainPage.xaml.h で、この `#include` ディレクティブを追加します。
 
    [!code-cpp[concrt-using-ixhr2#A2](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_5.h)]
 
-3. MainPage.xaml.h で、これらの `private` メンバー変数を `MainPage` クラスに追加します。
+1. MainPage.xaml.h で、これらの `private` メンバー変数を `MainPage` クラスに追加します。
 
    [!code-cpp[concrt-using-ixhr2#A3](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_6.h)]
 
-4. MainPage.xaml.h で `private` メソッド `ProcessHttpRequest` を宣言します。
+1. MainPage.xaml.h で `private` メソッド `ProcessHttpRequest` を宣言します。
 
    [!code-cpp[concrt-using-ixhr2#A4](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_7.h)]
 
-5. MainPage.xaml.cpp で、これらの `using` ステートメントを追加します。
+1. MainPage.xaml.cpp で、これらの `using` ステートメントを追加します。
 
    [!code-cpp[concrt-using-ixhr2#A5](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_8.cpp)]
 
-6. MainPage.xaml.cpp で、`GetButton_Click` クラスの `PostButton_Click`、 `CancelButton_Click`、 `MainPage` メソッドを実装します。
+1. MainPage.xaml.cpp で、`GetButton_Click` クラスの `PostButton_Click`、 `CancelButton_Click`、 `MainPage` メソッドを実装します。
 
    [!code-cpp[concrt-using-ixhr2#A6](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_9.cpp)]
 
@@ -100,11 +100,11 @@ UWP サポートは、Visual Studio 2017 以降では省略可能です。 イ�
 
    [!code-cpp[concrt-using-ixhr2#A7](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_10.cpp)]
 
-8. プロジェクトのプロパティの **[リンカー]** 、 **[入力]** の下で、`shcore.lib` と `msxml6.lib`を指定します。
+1. プロジェクトのプロパティの **[リンカー]** 、 **[入力]** の下で、`shcore.lib` と `msxml6.lib`を指定します。
 
 実行中のアプリケーションを次に示します。
 
-(../../parallel/concrt/media/concrt_usingixhr2.png "Windows ランタイムアプリを実行し")ている実行![中の Windows ランタイムアプリ]
+![実行中の Windows ランタイムアプリ](../../parallel/concrt/media/concrt_usingixhr2.png "実行中の Windows ランタイムアプリ")
 
 ## <a name="next-steps"></a>次の手順
 

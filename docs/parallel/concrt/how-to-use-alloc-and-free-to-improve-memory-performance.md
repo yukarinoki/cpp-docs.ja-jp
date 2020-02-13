@@ -1,26 +1,26 @@
 ---
-title: '方法: 割り当てを使用し、メモリのパフォーマンスを向上させるために無料'
+title: '方法: Alloc および Free を使用してメモリ パフォーマンスを改善する'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Alloc and Free, using [Concurrency Runtime]
 - Using Alloc and Free [Concurrency Runtime]
 ms.assetid: e1fab9e8-a97d-4104-bead-e95958db79f9
-ms.openlocfilehash: f55bf360ac2b4c7162c1ed2b917ac6ce8c7cd11f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8438e833262d42c6083f48f759501c573a35c772
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410020"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142783"
 ---
-# <a name="how-to-use-alloc-and-free-to-improve-memory-performance"></a>方法: 割り当てを使用し、メモリのパフォーマンスを向上させるために無料
+# <a name="how-to-use-alloc-and-free-to-improve-memory-performance"></a>方法: Alloc および Free を使用してメモリ パフォーマンスを改善する
 
-このドキュメントは、使用する方法を示します、 [concurrency::alloc](reference/concurrency-namespace-functions.md#alloc)と[concurrency::free](reference/concurrency-namespace-functions.md#free)メモリのパフォーマンスを向上させるために機能します。 ここでは、それぞれが `new` 演算子と `delete` 演算子を指定する、配列の 3 種類の要素を並行して反転するときの所要時間を比較します。
+このドキュメントでは、 [concurrency:: Alloc](reference/concurrency-namespace-functions.md#alloc)関数と[Concurrency:: Free](reference/concurrency-namespace-functions.md#free)関数を使用して、メモリパフォーマンスを向上させる方法について説明します。 ここでは、それぞれが `new` 演算子と `delete` 演算子を指定する、配列の 3 種類の要素を並行して反転するときの所要時間を比較します。
 
 `Alloc` 関数と `Free` 関数は、複数のスレッドで `Alloc` と `Free` の両方を頻繁に呼び出す場合に最も役に立ちます。 ランタイムは、スレッドごとに個別のメモリ キャッシュを保持します。したがって、ランタイムは、ロックまたはメモリ バリアを使用せずにメモリを管理します。
 
 ## <a name="example"></a>例
 
-それぞれが `new` 演算子と `delete` 演算子を指定する、3 種類の例を次に示します。 `new_delete`クラスはグローバル`new`と`delete`演算子、`malloc_free`クラスは、C ランタイムを使用して[malloc](../../c-runtime-library/reference/malloc.md)と[無料](../../c-runtime-library/reference/free.md)関数、および`Alloc_Free`クラスは、同時実行ランタイムを使用して`Alloc`と`Free`関数。
+それぞれが `new` 演算子と `delete` 演算子を指定する、3 種類の例を次に示します。 `new_delete` クラスは、グローバルな `new` と `delete` の演算子を使用し、`malloc_free` クラスは C ランタイムの[malloc](../../c-runtime-library/reference/malloc.md)関数と[free](../../c-runtime-library/reference/free.md)関数を使用し、`Alloc_Free` クラスは同時実行ランタイム関数と `Alloc` 関数を使用します。`Free`
 
 [!code-cpp[concrt-allocators#1](../../parallel/concrt/codesnippet/cpp/how-to-use-alloc-and-free-to-improve-memory-performance_1.cpp)]
 
@@ -54,11 +54,11 @@ Took 656 ms with Alloc/Free.
 
 ## <a name="compiling-the-code"></a>コードのコンパイル
 
-コード例をコピーし、Visual Studio プロジェクトに貼り付けるか、という名前のファイルに貼り付ける`allocators.cpp`Visual Studio コマンド プロンプト ウィンドウで、次のコマンドを実行します。
+コード例をコピーし、Visual Studio プロジェクトに貼り付けるか、`allocators.cpp` という名前のファイルに貼り付けてから、Visual Studio のコマンドプロンプトウィンドウで次のコマンドを実行します。
 
-**cl.exe/EHsc allocators.cpp**
+> **cl.exe/EHsc アロケーター**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [メモリ管理関数](../../parallel/concrt/memory-management-functions.md)<br/>
 [Alloc 関数](reference/concurrency-namespace-functions.md#alloc)<br/>

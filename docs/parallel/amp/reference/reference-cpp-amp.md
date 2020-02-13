@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, reference
 ms.assetid: 372a8aed-8a53-48c9-996f-9c3cf09c9fa8
-ms.openlocfilehash: a334c7873675183dc06abfc2fe51472190996bf3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ff7c2b0894a2fa3de7674a72bc93dd3f781398b9
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351171"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126410"
 ---
 # <a name="reference-c-amp"></a>リファレンス (C++ AMP)
 
 このセクションでは、C++ Accelerated Massive Parallelism (C++ AMP) ランタイムに関する参照情報について説明します。
 
 > [!NOTE]
->  C++ 言語の標準では、ライブラリなどの実装用として、アンダースコア (`_`) 文字で始まる識別子の使用が予約されています。 コード内でアンダースコアで始まる名前を使用しないでください。 この規則に従った名前を持つコード要素の動作は永続的に保証されたものではなく、今後のリリースで変更されることがあります。 そのため、このようなコード要素はこのドキュメントから除外されています。
+> C++ 言語の標準では、ライブラリなどの実装用として、アンダースコア (`_`) 文字で始まる識別子の使用が予約されています。 コード内でアンダースコアで始まる名前を使用しないでください。 この規則に従った名前を持つコード要素の動作は永続的に保証されたものではなく、今後のリリースで変更されることがあります。 そのため、このようなコード要素はこのドキュメントから除外されています。
 
 ## <a name="in-this-section"></a>このセクションの内容
 
