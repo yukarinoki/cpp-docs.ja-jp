@@ -1,18 +1,21 @@
 ---
 title: アルファベット順のコンパイラ オプション
-ms.date: 01/08/2020
+description: Microsoft C/C++コンパイラのコマンドラインオプションのアルファベット順の一覧です。
+ms.date: 02/09/2020
 helpviewer_keywords:
 - compiler options, C++
-ms.openlocfilehash: d64a41802c18627cf8e07f0d83b53fa5a4555f5b
-ms.sourcegitcommit: 0f4ee9056d65043fa5a715f0ad1031c0ed30e2b6
+ms.openlocfilehash: 6b3412378aa4bb36ea861a81758d2227df3432c6
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/05/2020
-ms.locfileid: "77034598"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257742"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>アルファベット順のコンパイラ オプション
 
-次の表は、コンパイラ オプションをアルファベット順の一覧にしたものです。 カテゴリ別の一覧については、「 [カテゴリ別のコンパイラ オプション](compiler-options-listed-by-category.md)」を参照してください。
+このテーブルには、コンパイラオプションのアルファベット順の一覧が含まれています。 カテゴリ別のコンパイラオプションの一覧については、「[カテゴリ別のコンパイラオプション](compiler-options-listed-by-category.md)の一覧」を参照してください。
+
+## <a name="compiler-options"></a>コンパイラ オプション
 
 |オプション|目的|
 |------------|-------------|
@@ -27,19 +30,19 @@ ms.locfileid: "77034598"
 |[/c](c-compile-without-linking.md)|リンクを行わないでコンパイルします。|
 |[/cgthreads](cgthreads-code-generation-threads.md)|最適化およびコード生成に使用する cl.exe スレッド数を指定します。|
 |[/clr](clr-common-language-runtime-compilation.md)|共通言語ランタイムで実行する出力ファイルを作成します。|
-|[/constexpr](constexpr-control-constexpr-evaluation.md)|コンパイル時に constexpr の評価を制御します。|
+|[/constexpr](constexpr-control-constexpr-evaluation.md)|コンパイル時に**constexpr**の評価を制御します。|
 |[/D](d-preprocessor-definitions.md)|定数とマクロを定義します。|
 |[/diagnostics](diagnostics-compiler-diagnostic-options.md)|診断メッセージの形式を制御します。|
 |[/doc](doc-process-documentation-comments-c-cpp.md)|ドキュメント コメントを XML ファイルに出力します。|
 |[/E](e-preprocess-to-stdout.md)|プリプロセッサ出力を標準出力にコピーします。|
 |[/EH](eh-exception-handling-model.md)|例外処理のモデルを指定します。|
 |[/EP](ep-preprocess-to-stdout-without-hash-line-directives.md)|プリプロセッサ出力を標準出力にコピーします。|
-|[/errorReport](errorreport-report-internal-compiler-errors.md)|内部コンパイラエラー (ICE) 情報を Microsoft C++チームに直接提供できます。|
+|[/errorReport](errorreport-report-internal-compiler-errors.md)| 非推奨。 エラー報告は、 [Windows エラー報告 (WER)](/windows/win32/wer/windows-error-reporting)設定によって制御されます。 |
 |[/execution-charset](execution-charset-set-execution-character-set.md)|実行文字セットを設定します。|
 |[/実験的: モジュール](experimental-module.md)|実験的なモジュールのサポートを有効にします。|
 |[/実験的: プリプロセッサ](experimental-preprocessor.md)|試験的に準拠するプリプロセッサのサポートを有効にします。|
 |[/F](f-set-stack-size.md)|スタック サイズを設定します。|
-|[/favor](favor-optimize-for-architecture-specifics.md)|特定の x64 アーキテクチャ用に最適化されたコード、または AMD64 と Extended Memory 64 テクノロジ (EM64T) アーキテクチャの両方のマイクロアーキテクチャの仕様に合わせたコードを生成します。|
+|[/favor](favor-optimize-for-architecture-specifics.md)|特定の x64 アーキテクチャ用に最適化されたコードを生成します。 または、AMD64 アーキテクチャと EM64T アーキテクチャの両方で、特定のマイクロアーキテクチャに対応します。|
 |[/FA](fa-fa-listing-file.md)|リスティング ファイルを作成します。|
 |[/Fa](fa-fa-listing-file.md)|リスティング ファイル名を設定します。|
 |[/FC](fc-full-path-of-source-code-file-in-diagnostics.md)|診断テキストで cl.exe に渡されるソース コード ファイルの完全パスを表示します。|
@@ -52,7 +55,7 @@ ms.locfileid: "77034598"
 |[/fp](fp-specify-floating-point-behavior.md)|浮動小数点の動作を指定します。|
 |[/Fp](fp-name-dot-pch-file.md)|プリコンパイル済みヘッダー ファイルの名前を指定します。|
 |[/FR](fr-fr-create-dot-sbr-file.md)<br /><br /> [/Fr](fr-fr-create-dot-sbr-file.md)|ブラウザー ファイルを生成します。 **/Fr** は非推奨とされました。|
-|[/FS](fs-force-synchronous-pdb-writes.md)|プログラム データベース (PDB) ファイルへの書き込みを MSPDBSRV.EXE によりシリアル化します。|
+|[/FS](fs-force-synchronous-pdb-writes.md)|MSPDBSRV を使用してプログラムデータベース (PDB) ファイルへのすべての書き込みを強制的にシリアル化します。EXCEL.EXE.|
 |[/FU](fu-name-forced-hash-using-file.md)|[#using](../../preprocessor/hash-using-directive-cpp.md) ディレクティブに渡された場合と同じ方法でファイル名の使用を強制します。|
 |[/Fx](fx-merge-injected-code.md)|挿入されたコードをソース ファイルとマージします。|
 |[/GA](ga-optimize-for-windows-application.md)|Windows アプリケーション用にコードを最適化します。|
@@ -172,5 +175,5 @@ ms.locfileid: "77034598"
 
 ## <a name="see-also"></a>参照
 
-[MSVC コンパイラ オプション](compiler-options.md)<br/>
-[MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)
+[MSVC コンパイラオプション](compiler-options.md)\
+[MSVC コンパイラのコマンドライン構文](compiler-command-line-syntax.md)

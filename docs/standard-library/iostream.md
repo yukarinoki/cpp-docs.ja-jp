@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - iostream header
 ms.assetid: de5d39e1-7e77-4b55-bcd1-7c77b41515c8
-ms.openlocfilehash: 471b149eba32d163e6e3e54e1c2820bbe0b94133
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 2906e802072c43a93c59ca40d15e032adeeeef97
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449038"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257807"
 ---
 # <a name="ltiostreamgt"></a>&lt;iostream&gt;
 
@@ -32,19 +32,19 @@ ms.locfileid: "68449038"
 ```
 
 > [!NOTE]
-> Iostream \<> ライブラリは、 `#include <ios>` `#include <streambuf>` `#include <ostream>` 、、、およびの各ステートメントを使用します。 `#include <istream>`
+> \<iostream > ライブラリでは、`#include <ios>`、`#include <streambuf>`、`#include <istream>`、および `#include <ostream>` ステートメントを使用します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
 このオブジェクトは、次の 2 つのグループに分類されます。
 
-- [cin](#cin)、 [cout](#cout)、 [cerr](#cerr) [、および](#clog)はバイト指向で、従来のバイト単位の転送を実行します。
+- [cin](#cin)、 [cout](#cout)、 [cerr](#cerr)、およびはバイト指向で、従来のバイト単位の転送を[実行します](#clog)。
 
 - [wcin](#wcin)、[wcout](#wcout)、[wcerr](#wcerr)、および [wclog](#wclog) はワイド指向で、プログラムが内部で操作するワイド文字に翻訳したり、ワイド文字から翻訳したりします。
 
 標準入力など、ストリームに対して特定の操作を実行すると、同じストリームで別の向きの操作を行うことはできません。 そのため、 [cin](#cin)と[wcin](#wcin)の両方で、プログラムを同じように操作することはできません。
 
-このヘッダーで宣言されたすべてのオブジェクトは、特別なプロパティを共有します。これは、定義するすべての静的なオブジェクト\<の前に、iostream > を含む翻訳単位で構築されていることを前提としています。 同様に、定義した静的オブジェクトのデストラクターの前に、これらのオブジェクトが破棄されないと見なすことができます。 (ただし、出力ストリームはプログラムの終了時にフラッシュされます)。そのため、プログラムの開始前とプログラムの終了後に、標準ストリームに対する安全な読み取りまたは書き込みを行うことができます。
+このヘッダーで宣言されているすべてのオブジェクトは、特別なプロパティを共有します。これは、定義するすべての静的オブジェクトの前に、\<iostream > を含む翻訳単位で構築されていることを前提としています。 同様に、定義した静的オブジェクトのデストラクターの前に、これらのオブジェクトが破棄されないと見なすことができます。 (ただし、出力ストリームはプログラムの終了時にフラッシュされます)。そのため、プログラムの開始前とプログラムの終了後に、標準ストリームから安全に読み取りまたは書き込みを行うことができます。
 
 ただし、この保証は一般的ではありません。 静的コンストラクターは、別の翻訳単位で、関数を呼び出す場合があります。 呼び出された関数は、このヘッダーで宣言されたオブジェクトが構築されていると想定できません。これは、静的な構築に含まれる翻訳単位の順序が不明であることを前提としています。 このようなコンテキストでこれらのオブジェクトを使用するには、最初に [ios_base::Init](../standard-library/ios-base-class.md#init) クラスのオブジェクトを構築します。
 
@@ -63,7 +63,7 @@ ms.locfileid: "68449038"
 
 ###  <a name="cerr"></a>cerr
 
-オブジェクト `cerr` は、\<cstdio> で宣言されたオブジェクト `stderr` に関連付けられているストリーム バッファーへの出力を制御します。
+オブジェクト `cerr` は、`stderr`cstdio> で宣言されたオブジェクト \< に関連付けられているストリーム バッファーへの出力を制御します。
 
 ```cpp
 extern ostream cerr;
@@ -73,9 +73,9 @@ extern ostream cerr;
 
 [ostream](../standard-library/ostream-typedefs.md#ostream) オブジェクト。
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>コメント
 
-このオブジェクトは、バイト ストリームとして、標準エラー出力へのバッファリングされていない挿入を制御します。 オブジェクトが構築された時点で、式 `cerr.`[flags](../standard-library/ios-base-class.md#flags) `&` [unitbuf](../standard-library/ios-functions.md#unitbuf) は 0 以外で、`cerr.tie() == &cout` になります。
+このオブジェクトは、バイト ストリームとして、標準エラー出力へのバッファリングされていない挿入を制御します。 オブジェクトが構築されると、`&` [unitbuf](../standard-library/ios-functions.md#unitbuf)の式 `cerr.`[フラグ](../standard-library/ios-base-class.md#flags)が0以外になり、`cerr.tie() == &cout`ます。
 
 #### <a name="example"></a>例
 
@@ -119,13 +119,13 @@ extern istream cin;
 
 [istream](../standard-library/istream-typedefs.md#istream) オブジェクト。
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>コメント
 
 オブジェクトは、バイト ストリームとして標準入力からの抽出を制御します。 オブジェクトが構築されると、`cin.`[tie](../standard-library/basic-ios-class.md#tie) の呼び出しは `&`[cout](#cout) を返します。
 
 #### <a name="example"></a>例
 
-この例では`cin` 、は、数値以外の文字が含まれている場合に、ストリームの fail ビットを設定します。 プログラムは、fail ビットをクリアし、ストリームから無効な文字を除去して続行します。
+この例では、`cin` は、数値以外の文字が含まれている場合に、ストリームの fail ビットを設定します。 プログラムは、fail ビットをクリアし、ストリームから無効な文字を除去して続行します。
 
 ```cpp
 // iostream_cin.cpp
@@ -170,13 +170,13 @@ extern ostream clog;
 
 [ostream](../standard-library/ostream-typedefs.md#ostream) オブジェクト。
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>コメント
 
 このオブジェクトは、バイト ストリームとして、標準エラー出力へのバッファリングされている挿入を制御します。
 
 #### <a name="example"></a>例
 
-`clog` の使用例については、「[cerr](#cerr)」をご覧ください。
+[ の使用例については、「](#cerr)cerr`clog`」をご覧ください。
 
 ###  <a name="cout"></a>cout
 
@@ -190,13 +190,13 @@ extern ostream cout;
 
 [ostream](../standard-library/ostream-typedefs.md#ostream) オブジェクト。
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>コメント
 
 このオブジェクトは、バイト ストリームとして、標準出力への挿入を制御します。
 
 #### <a name="example"></a>例
 
-`cout` の使用例については、「[cerr](#cerr)」をご覧ください。
+[ の使用例については、「](#cerr)cerr`cout`」をご覧ください。
 
 ### <a name="wcerr"></a>wcerr
 
@@ -210,13 +210,13 @@ extern wostream wcerr;
 
 [wostream](../standard-library/ostream-typedefs.md#wostream) オブジェクト。
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>コメント
 
-このオブジェクトは、ワイド ストリームとして、標準エラー出力へのバッファリングされていない挿入を制御します。 オブジェクトが構築された時点で、式 `wcerr.`[flags](../standard-library/ios-base-class.md#flags) `&` [unitbuf](../standard-library/ios-functions.md#unitbuf) は 0 以外になります。
+このオブジェクトは、ワイド ストリームとして、標準エラー出力へのバッファリングされていない挿入を制御します。 オブジェクトが構築されると、`&` [unitbuf](../standard-library/ios-functions.md#unitbuf)の式 `wcerr.`[フラグ](../standard-library/ios-base-class.md#flags)が0以外になります。
 
 #### <a name="example"></a>例
 
-`wcerr` の使用例については、「[cerr](#cerr)」をご覧ください。
+[ の使用例については、「](#cerr)cerr`wcerr`」をご覧ください。
 
 ### <a name="wcin"></a>wcin
 
@@ -230,13 +230,13 @@ extern wistream wcin;
 
 [wistream](../standard-library/istream-typedefs.md#wistream) オブジェクト。
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>コメント
 
 オブジェクトは、ワイド ストリームとして標準入力からの抽出を制御します。 オブジェクトが構築されると、`wcin.`[tie](../standard-library/basic-ios-class.md#tie) の呼び出しは `&`[wcout](#wcout) を返します。
 
 #### <a name="example"></a>例
 
-`wcin` の使用例については、「[cerr](#cerr)」をご覧ください。
+[ の使用例については、「](#cerr)cerr`wcin`」をご覧ください。
 
 ### <a name="wclog"></a>wclog
 
@@ -250,13 +250,13 @@ extern wostream wclog;
 
 [wostream](../standard-library/ostream-typedefs.md#wostream) オブジェクト。
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>コメント
 
 このオブジェクトは、ワイド ストリームとして、標準エラー出力へのバッファリングされている挿入を制御します。
 
 #### <a name="example"></a>例
 
-`wclog` の使用例については、「[cerr](#cerr)」をご覧ください。
+[ の使用例については、「](#cerr)cerr`wclog`」をご覧ください。
 
 ### <a name="wcout"></a>wcout
 
@@ -270,17 +270,17 @@ extern wostream wcout;
 
 [wostream](../standard-library/ostream-typedefs.md#wostream) オブジェクト。
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>コメント
 
 このオブジェクトは、ワイド ストリームとして、標準出力への挿入を制御します。
 
 #### <a name="example"></a>例
 
-`wcout` の使用例については、「[cerr](#cerr)」をご覧ください。
+[ の使用例については、「](#cerr)cerr`wcout`」をご覧ください。
 
-`wcout` ステートメントの `CString` インスタンスは、次の例に示されているように `const wchar_t*` にキャストする必要があります。
+`CString` ステートメントの `wcout` インスタンスは、次の例に示されているように `const wchar_t*` にキャストする必要があります。
 
-```
+```cpp
 CString cs("meow");
 
 wcout <<(const wchar_t*) cs <<endl;
@@ -288,7 +288,7 @@ wcout <<(const wchar_t*) cs <<endl;
 
 詳細については、「[CString の基本操作](../atl-mfc-shared/basic-cstring-operations.md)」をご覧ください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)\
 [C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\

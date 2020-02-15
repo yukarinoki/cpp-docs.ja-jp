@@ -1,6 +1,7 @@
 ---
 title: ML および ML64 のコマンド ライン リファレンス
-ms.date: 12/17/2019
+description: Microsoft MASM ML および ML64.EXE アセンブラのコマンドラインオプションに関するリファレンスガイドです。
+ms.date: 02/09/2020
 f1_keywords:
 - ML
 helpviewer_keywords:
@@ -54,12 +55,12 @@ helpviewer_keywords:
 - command line, reference [ML]
 - /Ta MASM compiler option
 ms.assetid: 712623c6-f77e-47ea-a945-089e57c50b40
-ms.openlocfilehash: 77385317ab7f90a646b7f552e471d0f434e72bfb
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: b5c5a79417cb141da3d5cfe1c08aa39e02a9c7c2
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75317163"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257365"
 ---
 # <a name="ml-and-ml64-command-line-reference"></a>ML および ML64 のコマンド ライン リファレンス
 
@@ -71,30 +72,30 @@ Ml64.exe の詳細については、「 [MASM for x64 (ml64.exe)](masm-for-x64-m
 
 > ML \[*オプション*] *filename* \[ \[*オプション*] *filename*]
 >
-> ML64.EXE \[*オプション*] *filename* \[ \[*オプション*] *filename*]... \[/link *linkoptions*]
+> ML64.EXE \[*オプション*] *filename* \[ \[*オプション*] *filename*]... \[/link *link_options*]
 
 ### <a name="parameters"></a>パラメーター
 
 *オプション*\
 次の表に示すオプション。
 
-|オプション|動作|
+|オプション|操作|
 |------------|------------|
-|**/AT**|最小メモリモデルのサポートを有効にします。 .Com フォーマットファイルの要件に違反するコードコンストラクターのエラーメッセージを有効にします。 これは、とは同じではないことに注意[してください。モデル](dot-model.md)の**小さな**ディレクティブ。<br /><br /> Ml64.exe では使用できません。|
+|**/AT**|最小メモリモデルのサポートを有効にします。 .Com フォーマットファイルの要件に違反するコードコンストラクターのエラーメッセージを有効にします。 このオプションは、とは等価ではありません[。モデル](dot-model.md)の**小さな**ディレクティブ。<br /><br /> Ml64.exe では使用できません。|
 |**/Bl** *ファイル名*|代替リンカーを選択します。|
-|**/c**|アセンブルのみ。 リンクしません。|
-|**/coff**|オブジェクトモジュールの Common Object File Format (COFF) 型を生成します。 通常は、Win32 アセンブリ言語の開発に必要です。<br /><br /> Ml64.exe では使用できません。|
+|**/c**|アセンブルのみ。 リンクは行われません。|
+|**/coff**|オブジェクトモジュールの Common Object File Format (COFF) 型を生成します。 Win32 アセンブリ言語の開発に必要です。<br /><br /> Ml64.exe では使用できません。|
 |**/Cp**|すべてのユーザー識別子の大文字と小文字を保持します。|
 |**/Cu**|すべての識別子を大文字にマップします (既定)。<br /><br /> Ml64.exe では使用できません。|
 |**/Cx**|Public および extern シンボルの大文字と小文字を保持します。|
 |**/D** *シンボル*⟦ =*値*⟧|指定された名前のテキストマクロを定義します。 *値が指定*されていない場合は空白になります。 スペースで区切られた複数のトークンは、引用符で囲む必要があります。|
 |**/EP**|プリプロセスされたソースリスティング (STDOUT に送信) を生成します。 「 **/Sf**」を参照してください。|
-|**/ERRORREPORT** [ **NONE** &#124; **PROMPT** &#124; **QUEUE** &#124; **SEND** ]|実行時に dism.exe または ml64.exe が失敗した場合は、 **/errorreport**を使用して、これらの内部エラーに関する情報をマイクロソフトに送信できます。<br /><br /> **/Errorreport**の詳細については、「 [/Errorreport (内部コンパイラエラーの報告)](../../build/reference/errorreport-report-internal-compiler-errors.md)」を参照してください。|
-|**/F** *hexnum*|スタックサイズを*hexnum*バイトに設定します (これは **/link/STACK**:*number*と同じです)。 値は16進表記で表現する必要があります。 **/F**と*hexnum*の間にはスペースが必要です。|
+|**/ERRORREPORT** [ **NONE** &#124; **PROMPT** &#124; QUEUE &#124; **SEND** ]| 非推奨。 エラー報告は、 [Windows エラー報告 (WER)](/windows/win32/wer/windows-error-reporting)設定によって制御されます。 |
+|**/F** *hexnum*|スタックサイズを*hexnum*バイト ( **/link/STACK**:*number*と同じ) に設定します。 値は16進表記で表現する必要があります。 **/F**と*hexnum*の間にはスペースが必要です。|
 |**/Fe** *ファイル名*|実行可能ファイルの名前をにします。|
 |**/Fl**⟦*ファイル名*⟧|アセンブルされたコードリストを生成します。 「 **/Sf**」を参照してください。|
 |**/Fm**⟦*filename*⟧|リンカーマップファイルを作成します。|
-|**/Fo** *ファイル名*|オブジェクトファイルに名前を付いています。 詳細については、「解説」を参照してください。|
+|**/Fo** *ファイル名*|オブジェクトファイルに名前を付いています。 詳細については、「[解説](#remarks)」をご覧ください。|
 |**/FPi**|浮動小数点演算 (混合言語のみ) のエミュレーター修正を生成します。<br /><br /> Ml64.exe では使用できません。|
 |**/Fr**⟦*filename*⟧|ソースブラウザーの .sbr ファイルを生成します。|
 |**/Fr**⟦*filename*⟧|ソースブラウザーの .sbr ファイルの拡張形式を生成します。|
@@ -115,7 +116,7 @@ Ml64.exe の詳細については、「 [MASM for x64 (ml64.exe)](masm-for-x64-m
 |**/S** *テキスト*|ソースリストのテキストを指定します。 [サブタイトル](subtitle.md)テキストと同じです。|
 |**/St** *テキスト*|ソースリストのタイトルを指定します。 [タイトル](title.md)テキストと同じです。|
 |**/Sx**|リスト内の false 条件をオンにします。|
-|**/Ta** *filename*|名前の末尾に .asm 拡張子が付いていないソースファイルをアセンブルします。|
+|**/Ta** *ファイル名*|名前が .asm 拡張子で終わらないソースファイルをアセンブルします。|
 |**/w**|**/W0/WX**と同じです。|
 |**/W** *レベル*|警告レベルを設定します。 *level* = 0、1、2、または3です。|
 |**/WX**|警告が生成された場合は、エラーコードを返します。|
@@ -131,14 +132,16 @@ Ml64.exe の詳細については、「 [MASM for x64 (ml64.exe)](masm-for-x64-m
 *ファイル名*\
 ファイルの名前です。
 
-*linkoptions*\
-リンクオプション。  詳細については、「[リンカーオプション](../../build/reference/linker-options.md)」を参照してください。
+*link_options*\
+リンクオプション。 詳細については、「[リンカー オプション](../../build/reference/linker-options.md)」を参照してください。
 
 ## <a name="remarks"></a>コメント
 
 ML および ML64.EXE の一部のコマンドラインオプションは、配置に依存します。 たとえば、ML と ML64.EXE はいくつかの **/c**オプションを受け入れることができるため、対応する **/fo**オプションは **/c**の前に指定する必要があります。 次のコマンドラインの例では、アセンブリファイルの指定ごとにオブジェクトファイルを指定しています。
 
-**ml.exe /Fo a1.obj /c a.asm /Fo b1.obj /c b.asm**
+```cmd
+ml.exe /Fo a1.obj /c a.asm /Fo b1.obj /c b.asm
+```
 
 ## <a name="environment-variables"></a>環境変数
 
@@ -148,7 +151,7 @@ ML および ML64.EXE の一部のコマンドラインオプションは、配�
 |ML|既定のコマンドラインオプションを指定します。|
 |TMP|一時ファイルのパスを指定します。|
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ML エラーメッセージ](ml-error-messages.md)\
 [Microsoft Macro Assembler リファレンス](microsoft-macro-assembler-reference.md)

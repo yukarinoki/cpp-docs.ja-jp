@@ -1,7 +1,7 @@
 ---
 title: MSVC リンカーオプション
 description: Microsoft LINK リンカーでサポートされているオプションの一覧。
-ms.date: 09/24/2019
+ms.date: 02/09/2020
 f1_keywords:
 - link
 helpviewer_keywords:
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - libraries [C++], linking to COFF
 - LINK tool [C++], linker options
 ms.assetid: c1d51b8a-bd23-416d-81e4-900e02b2c129
-ms.openlocfilehash: c7a44be5bb21bf83d621bd57c45713bd01e22cb6
-ms.sourcegitcommit: a361362354f6ce51eda4ffdb016b81c24cd225cb
+ms.openlocfilehash: 12710aff1cf833e277e48ab2f13abc702c7d6c14
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71712703"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257547"
 ---
 # <a name="linker-options"></a>リンカー オプション
 
@@ -31,7 +31,7 @@ LINK.exe のオプションの一覧を次の表に示します。 LINK の詳�
 
 - [予約語](reserved-words.md)
 
-コマンドラインでは、リンカーオプションの大文字と小文字は区別されません。たとえば、/base と/BASE は同じことを意味します。 コマンド ラインまたは Visual Studio で各オプションを指定する方法の詳細については、そのオプションのドキュメントを参照してください。
+コマンドラインでは、リンカーオプションの大文字と小文字は区別されません。たとえば、`/base` と `/BASE` は同じことを意味します。 コマンド ラインまたは Visual Studio で各オプションを指定する方法の詳細については、そのオプションのドキュメントを参照してください。
 
 [comment](../../preprocessor/comment-c-cpp.md) プラグマを使用して、一部のリンカー オプションを指定できます。
 
@@ -41,7 +41,7 @@ LINK.exe のオプションの一覧を次の表に示します。 LINK の詳�
 |------------|-------------|
 |[@](at-specify-a-linker-response-file.md)|応答ファイルを指定します。|
 |[/ALIGN](align-section-alignment.md)|各セクションのアラインメントを指定します。|
-|[/ALLOWBIND](allowbind-prevent-dll-binding.md)|DLL をバインディングできないことを指定します。|
+|[/ALLOWBIND](allowbind-prevent-dll-binding.md)|DLL をバインドできないことを指定します。|
 |[/ALLOWISOLATION](allowisolation-manifest-lookup.md)|マニフェスト検索の動作を指定します。|
 |[/APPCONTAINER](appcontainer-windows-store-app.md)|アプリケーションが appcontainer プロセス環境内で実行される必要があるかどうかを指定します。|
 |[/ASSEMBLYDEBUG](assemblydebug-add-debuggableattribute.md)|<xref:System.Diagnostics.DebuggableAttribute> をマネージド イメージに追加します。|
@@ -61,24 +61,24 @@ LINK.exe のオプションの一覧を次の表に示します。 LINK の詳�
 |[/DELAY](delay-delay-load-import-settings.md)|DLL の遅延読み込みを制御します。|
 |[/DELAYLOAD](delayload-delay-load-import.md)|指定した DLL に遅延読み込みを発生させます。|
 |[/DELAYSIGN](delaysign-partially-sign-an-assembly.md)|アセンブリに部分署名します。|
-|[/DEPENDENTLOADFLAG](dependentloadflag.md)|依存する DLL 読み込みに既定のフラグを設定します。|
+|[/Dependentloadflag](dependentloadflag.md)|依存する DLL 読み込みに既定のフラグを設定します。|
 |[/DLL](dll-build-a-dll.md)|DLL をビルドします。|
 |[/DRIVER](driver-windows-nt-kernel-mode-driver.md)|カーネル モード ドライバーを作成します。|
-|[/DYNAMICBASE](dynamicbase-use-address-space-layout-randomization.md)|ASLR (Address Space Layout Randomization) 機能を使用してロード時にランダムに再ベースできる実行可能イメージを生成するかどうかを指定します。|
+|[/DYNAMICBASE](dynamicbase-use-address-space-layout-randomization.md)|アドレス空間レイアウトのランダム化 (ASLR) 機能を使用して、読み込み時に再配置される実行可能イメージを生成するかどうかを指定します。|
 |[/ENTRY](entry-entry-point-symbol.md)|開始アドレスを設定します。|
-|[/errorReport](errorreport-report-internal-linker-errors.md)|内部リンカー エラーを Microsoft に報告します。|
+|[/ERRORREPORT](errorreport-report-internal-linker-errors.md)| 非推奨。 エラー報告は、 [Windows エラー報告 (WER)](/windows/win32/wer/windows-error-reporting)設定によって制御されます。 |
 |[/EXPORT](export-exports-a-function.md)|関数をエクスポートします。|
 |[/FILEALIGN](filealign.md)|出力ファイル内のセクションを指定した値の倍数に配置します。|
 |[/FIXED](fixed-fixed-base-address.md)|指定のベース アドレスだけに読み込まれるプログラムを作成します。|
 |[/FORCE](force-force-file-output.md)|未解決のシンボルまたは複数定義のシンボルがある場合でも、リンクを強制的に終了します。|
 |[/FUNCTIONPADMIN](functionpadmin-create-hotpatchable-image.md)|ホット パッチ可能なイメージを作成します。|
-|[/GENPROFILE、/FASTGENPROFILE](genprofile-fastgenprofile-generate-profiling-instrumented-build.md)|これらのオプションは、ガイド付き最適化のプロファイル (PGO) をサポートするために、どちらもリンカーによる .pgd ファイルの生成を指定します。 /GENPROFILE と /FASTGENPROFILE は、それぞれに異なる既定のパラメーターを使用します。|
+|[/GENPROFILE、/FASTGENPROFILE](genprofile-fastgenprofile-generate-profiling-instrumented-build.md)|これらのオプションは、ガイド付き最適化のプロファイル (PGO) をサポートするために、リンカーによる *`.pgd`* ファイルの生成を指定します。 /GENPROFILE と /FASTGENPROFILE は、それぞれに異なる既定のパラメーターを使用します。|
 |[/GUARD](guard-enable-guard-checks.md)|制御フロー ガードによる保護を有効にします。|
 |[/HEAP](heap-set-heap-size.md)|ヒープ サイズをバイト単位で設定します。|
 |[/HIGHENTROPYVA](highentropyva-support-64-bit-aslr.md)|高エントロピの 64 ビット ASLR (Address Space Layout Randomization) のサポートを指定します。|
-|[/IDLOUT](idlout-name-midl-output-files.md)|.idl ファイル名およびその他の MIDL の出力ファイル名を指定します。|
+|[/IDLOUT](idlout-name-midl-output-files.md)|*`.idl`* ファイルの名前とその他の MIDL 出力ファイルを指定します。|
 |[/IGNORE](ignore-ignore-specific-warnings.md)|指定されたリンカー警告の出力を抑制します。|
-|[/IGNOREIDL](ignoreidl-don-t-process-attributes-into-midl.md)|.idl ファイル内に属性情報を挿入しません。|
+|[/IGNOREIDL](ignoreidl-don-t-process-attributes-into-midl.md)|*`.idl`* ファイルに属性情報を処理しないようにします。|
 |[/IMPLIB](implib-name-import-library.md)|既定のインポート ライブラリ名をオーバーライドします。|
 |[/INCLUDE](include-force-symbol-references.md)|シンボルを明示的に参照します。|
 |[/INCREMENTAL](incremental-link-incrementally.md)|インクリメンタル リンクの処理方法を制御します。|
@@ -100,7 +100,7 @@ LINK.exe のオプションの一覧を次の表に示します。 LINK の詳�
 |[/MAPINFO](mapinfo-include-information-in-mapfile.md)|指定した情報をマップ ファイルに格納します。|
 |[/MERGE](merge-combine-sections.md)|セクションを結合します。|
 |[/MIDL](midl-specify-midl-command-line-options.md)|MIDL コマンド ライン オプションを指定します。|
-|[/NATVIS](natvis-add-natvis-to-pdb.md)|デバッガービジュアライザーを Natvis ファイルから PDB に追加します。|
+|[/NATVIS](natvis-add-natvis-to-pdb.md)|デバッガービジュアライザーを Natvis ファイルからプログラムデータベース (PDB) に追加します。|
 |[/NOASSEMBLY](noassembly-create-a-msil-module.md)|.NET Framework アセンブリを作成しません。|
 |[/NODEFAULTLIB](nodefaultlib-ignore-libraries.md)|外部参照を解決するときに、すべてのまたは指定した既定のライブラリを無視します。|
 |[/NOENTRY](noentry-no-entry-point.md)|リソースだけの DLL を作成します。|
@@ -109,22 +109,22 @@ LINK.exe のオプションの一覧を次の表に示します。 LINK の詳�
 |[/OPT](opt-optimizations.md)|LINK の最適化を制御します。|
 |[/ORDER](order-put-functions-in-order.md)|指定された順序で COMDAT をイメージに取り込みます。|
 |[/OUT](out-output-file-name.md)|出力ファイル名を指定します。|
-|[/PDB](pdb-use-program-database.md)|プログラム データベース (PDB) ファイルを作成します。|
+|[/PDB](pdb-use-program-database.md)|PDB ファイルを作成します。|
 |[/PDBALTPATH](pdbaltpath-use-alternate-pdb-path.md)|別の場所を使用して PDB ファイルを保存します。|
-|[/PDBSTRIPPED](pdbstripped-strip-private-symbols.md)|プログラム データベース (PDB) ファイルの作成時にプライベート シンボルを含めません。|
-|[/PGD](pgd-specify-database-for-profile-guided-optimizations.md)|ガイド付き最適化のプロファイル用の .pgd ファイルを指定します。|
+|[/PDBSTRIPPED](pdbstripped-strip-private-symbols.md)|プライベートシンボルを持たない PDB ファイルを作成します。|
+|[/PGD](pgd-specify-database-for-profile-guided-optimizations.md)|ガイド付き最適化のプロファイル用の *`.pgd`* ファイルを指定します。|
 |[/POGOSAFEMODE](pogosafemode-linker-option.md)|**廃止**スレッドセーフな PGO によってインストルメント化されたビルドを作成します。|
 |[/PROFILE](profile-performance-tools-profiler.md)|パフォーマンス ツール プロファイラーで使用できる出力ファイルを作成します。|
-|[/RELEASE](release-set-the-checksum.md)|.exe ヘッダーにチェックサムを設定します。|
+|[/RELEASE](release-set-the-checksum.md)|*`.exe`* ヘッダーにチェックサムを設定します。|
 |[/SAFESEH](safeseh-image-has-safe-exception-handlers.md)|安全な例外ハンドラーのテーブルがイメージに含まれるように指定します。|
 |[/SECTION](section-specify-section-attributes.md)|セクションの属性をオーバーライドします。|
 |[/SOURCELINK](sourcelink.md)|PDB に追加する SourceLink ファイルを指定します。|
 |[/STACK](stack-stack-allocations.md)|スタック サイズをバイト単位で設定します。|
 |[/STUB](stub-ms-dos-stub-file-name.md)|MS-DOS スタブ プログラムを Win32 プログラムにアタッチします。|
-|[/SUBSYSTEM](subsystem-specify-subsystem.md)|オペレーティング システムに対して、.exe ファイルの実行方法を指定します。|
-|[/SWAPRUN](swaprun-load-linker-output-to-swap-file.md)|リンカー出力をスワップ ファイルにコピーしてから実行します。|
+|[/SUBSYSTEM](subsystem-specify-subsystem.md)|*`.exe`* ファイルの実行方法をオペレーティングシステムに指示します。|
+|[/SWAPRUN](swaprun-load-linker-output-to-swap-file.md)|リンカー出力をスワップファイルにコピーしてから実行するように、オペレーティングシステムに指示します。|
 |[/TLBID](tlbid-specify-resource-id-for-typelib.md)|リンカーによって生成されたタイプ ライブラリのリソース ID を指定します。|
-|[/TLBOUT](tlbout-name-dot-tlb-file.md)|.tlb ファイル名およびその他の MIDL の出力ファイル名を指定します。|
+|[/TLBOUT](tlbout-name-dot-tlb-file.md)|*`.tlb`* ファイルの名前とその他の MIDL 出力ファイルを指定します。|
 |[/TSAWARE](tsaware-create-terminal-server-aware-application.md)|ターミナル サーバーでの実行専用のアプリケーションを作成します。|
 |[/USEPROFILE](useprofile.md)|ガイド付き最適化のプロファイルのトレーニングデータを使用して、最適化されたイメージを作成します。|
 |[/VERBOSE](verbose-print-progress-messages.md)|リンカーの進行状況メッセージを出力します。|
