@@ -6,29 +6,29 @@ f1_keywords:
 helpviewer_keywords:
 - is_bind_expression class
 ms.assetid: 0715f9e9-2239-4778-a1cf-2c21f49dfd47
-ms.openlocfilehash: 6cd6d45788ec36f6827d1403ce3f7e5057004433
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 9d83ff978ccbaec5e66509ac94f22cf29bc20866
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245198"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77258083"
 ---
-# <a name="isbindexpression-class"></a>is_bind_expression クラス
+# <a name="is_bind_expression-class"></a>is_bind_expression クラス
 
 `bind` の呼び出しによって型が生成されたかどうかテストします。
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 template<class Ty>
 struct is_bind_expression {
    static const bool value;
 };
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-型 `Ty` が `bind` への呼び出しによって返される型の場合、定数メンバー `value` は true です。それ以外の場合は false です。
+型 `value` が `Ty` への呼び出しによって返される型の場合、定数メンバー `bind` は true です。それ以外の場合は false です。
 
 ## <a name="example"></a>例
 

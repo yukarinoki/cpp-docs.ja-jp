@@ -6,23 +6,23 @@ f1_keywords:
 - std::<hash_map>
 helpviewer_keywords:
 - hash_map header
-ms.openlocfilehash: e586a933c2a80b7e611bcd4b4714e300eb21a0ad
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 6bb2ca0cc14bcc4a9b9df9877902de9181e0a768
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689570"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77258147"
 ---
 # <a name="lthash_mapgt"></a>&lt;hash_map&gt;
 
 > [!NOTE]
-> このヘッダーは廃止され、互換性のために残されています。 別の方法として[> \<unordered_map](unordered-map.md)ます。
+> このヘッダーは廃止され、互換性のために残されています。 代替手段は[> unordered_map\<](unordered-map.md)です。
 
-コンテナークラステンプレート hash_map と hash_multimap、およびそのサポートテンプレートを定義します。
+コンテナークラステンプレート hash_map と hash_multimap と、そのサポートテンプレートを定義します。
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 #include <hash_map>
 ```
 
@@ -41,20 +41,20 @@ ms.locfileid: "72689570"
 
 ### <a name="classes"></a>クラス
 
-|インスタンス|説明|
+|クラス|説明|
 |-|-|
-|[hash_compare クラス](hash-compare-class.md)|ハッシュ連想コンテナー (hash_map、hash_multimap、hash_set、または hash_multiset) のいずれかで使用できるオブジェクトを記述します。これは、既定の `Traits` パラメーターオブジェクトとして、含まれる要素の順序付けおよびハッシュを行います。|
+|[hash_compare クラス](hash-compare-class.md)|ハッシュ連想コンテナー (hash_map、hash_multimap、hash_set、または hash_multiset) のいずれかで使用できるオブジェクトを記述します。これは、格納されている要素の順序付けおよびハッシュを行う既定の `Traits` パラメーターオブジェクトとして使用できます。|
 |[value_compare クラス](value-compare-class.md)|要素のキーの値を比較し、要素の hash_map 内の相対順序を決定して、hash_map の要素を比較できる関数オブジェクトを提供します。|
 |[hash_map クラス](hash-map-class.md)|一意の並べ替えキーとそれに関連付けられている値のペアを要素として持つコレクションのデータを格納したり、迅速に取得したりするために使用されます。|
 |[hash_multimap クラス](hash-multimap-class.md)|必ずしも一意ではない並べ替えキーとそれに関連付けられている値のペアを要素として持つコレクションのデータを格納したり、迅速に取得したりするために使用されます。|
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>要件
 
-**ヘッダー:** \<hash_map>
+**ヘッダー:** \<hash_map >
 
 **名前空間:** stdext
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ヘッダー ファイル リファレンス](cpp-standard-library-header-files.md)\
 [C++ 標準ライブラリ内のスレッド セーフ](thread-safety-in-the-cpp-standard-library.md)\

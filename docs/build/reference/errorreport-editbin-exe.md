@@ -1,6 +1,7 @@
 ---
 title: /ERRORREPORT (editbin.exe)
-ms.date: 11/04/2016
+description: Microsoft EDITBIN ユーティリティ/ERRORREPORT コマンドラインオプションのリファレンスです。
+ms.date: 02/09/2020
 f1_keywords:
 - /ERRORREPORT
 helpviewer_keywords:
@@ -8,25 +9,26 @@ helpviewer_keywords:
 - ERRORREPORT editbin option
 - /ERRORREPORT editbin option
 ms.assetid: eca66ac3-b754-4bd7-9dd4-e04fc79a71b6
-ms.openlocfilehash: a23d64b8491b2521746eb3bfab2372ed563f2c58
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6c2ec8b6cda7b794114ed38cfb72b885bf2e38a1
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62271711"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257596"
 ---
 # <a name="errorreport-editbinexe"></a>/ERRORREPORT (editbin.exe)
 
-```
-/ERRORREPORT[NONE | PROMPT | QUEUE | SEND ]
-```
+> [!NOTE]
+> /ERRORREPORT オプションは非推奨とされます。 Windows Vista 以降では、エラー報告は[Windows エラー報告 (WER)](/windows/win32/wer/windows-error-reporting)設定によって制御されます。
 
-## <a name="remarks"></a>Remarks
+## <a name="syntax"></a>構文
 
-使用することができます editbin.exe は、実行時に失敗した場合、 **/ERRORREPORT**これらの内部エラーに関する情報を Microsoft に送信します。
+> **/Errorreport** \[ **NONE** \| **PROMPT** \| **QUEUE** \| **SEND** ]
 
-詳細については **/ERRORREPORT**を参照してください[/errorReport (内部コンパイラ エラーを報告する)](errorreport-report-internal-compiler-errors.md)します。
+## <a name="remarks"></a>コメント
 
-## <a name="see-also"></a>関連項目
+**/Errorreport**引数は、Windows エラー報告サービスの設定によってオーバーライドされます。 EDITBIN では、レポートが Windows エラー報告によって有効になっている場合、内部エラーのレポートが Microsoft に自動的に送信されます。 Windows エラー報告で無効になっている場合、レポートは送信されません。
+
+## <a name="see-also"></a>参照
 
 [EDITBIN オプション](editbin-options.md)

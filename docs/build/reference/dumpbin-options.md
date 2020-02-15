@@ -1,17 +1,18 @@
 ---
 title: DUMPBIN オプション
-ms.date: 10/24/2019
+description: Microsoft DUMPBIN ユーティリティのコマンドラインオプションのリファレンスガイドです。
+ms.date: 02/09/2020
 f1_keywords:
 - dumpbin
 helpviewer_keywords:
 - DUMPBIN program, options
 ms.assetid: 563b696e-7599-4480-94b9-014776289ec8
-ms.openlocfilehash: 81c66f1971294531a2904a0b681819476bcc1eb2
-ms.sourcegitcommit: 6ed1bc5b26dc60a780c1fc5f2f19d57ba1dc47d8
+ms.openlocfilehash: 98a4fd221d66b93f945667deadaba3180f8d3e66
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73144559"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257729"
 ---
 # <a name="dumpbin-options"></a>DUMPBIN オプション
 
@@ -33,7 +34,7 @@ DUMPBIN には、次のオプションがあります。
 
 - [/Disasm\[: {BYTES\|NOBYTES}\]](disasm.md)
 
-- [/ERRORREPORT: {NONE |PROMPT |QUEUE |メッセージ](errorreport-dumpbin-exe.md)
+- [/ERRORREPORT: {NONE |PROMPT |QUEUE |送信}](errorreport-dumpbin-exe.md) (非推奨)
 
 - [/EXPORTS](dash-exports.md)
 
@@ -71,9 +72,9 @@ DUMPBIN には、次のオプションがあります。
 
 - [/TLS](tls.md)
 
-コマンドラインで DUMPBIN でサポートされているオプションを一覧表示するには、/? を使用し**ます。** オプション.
+コマンドラインで DUMPBIN でサポートされているオプションを一覧表示するには、/? を使用し**ます。** オプション。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [その他の MSVC ビルドツール](c-cpp-build-tools.md)\
 [DUMPBIN コマンドライン](dumpbin-command-line.md)\

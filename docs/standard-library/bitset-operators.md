@@ -12,12 +12,12 @@ helpviewer_keywords:
 - std::operator&amp; (bitset)
 - std::operator&gt;&gt; (bitset)
 - std::operator&lt;&lt; (bitset)
-ms.openlocfilehash: cd1dfc035fde06c4be0f90e1bd11b231d64ab811
-ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
+ms.openlocfilehash: 23c6abffe7e433a0550c45502a12e9adaf652a33
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72890139"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257989"
 ---
 # <a name="ltbitsetgt-operators"></a>&lt;bitset&gt; 演算子
 
@@ -77,7 +77,7 @@ bitset 3: 0001
 
 ビット シーケンスのテキスト表現を出力ストリームに挿入します。
 
-```
+```cpp
 template <class CharType, class Traits, size_t N>
 basic_ostream<CharType, Traits>& operator<<(
     basic_ostream<CharType, Traits>& ostr,
@@ -93,7 +93,7 @@ basic_ostream<CharType, Traits>& operator<<(
 
 `ostr`内のビットシーケンスのテキスト表現。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 このテンプレート関数は `operator<<`をオーバーロードします。これにより、最初に文字列に変換せずにビットセットを書き出すことができます。 このテンプレート関数は、実質的に次の内容を実行します。
 
@@ -134,7 +134,7 @@ int main( )
 
 ビット文字の文字列をビットセットに読み込みます。
 
-```
+```cpp
 template <class CharType, class Traits, size_t Bits>
 basic_istream<CharType, Traits>& operator>> (
     basic_istream<CharType, Traits>& i_str,
@@ -153,9 +153,9 @@ basic_istream<CharType, Traits>& operator>> (
 
 このテンプレート関数は、文字列*i_str*を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-このテンプレート関数は、*ビットセットに*格納する `operator>>` をオーバーロードします。 `str` は*i_str*から抽出された`< CharType, Traits, allocator< CharType > >&` [basic_string](basic-string-class.md)型のオブジェクト `bitset(str)`ます。
+このテンプレート関数は、`operator>>` をオーバーロードして、*ビットセット内*の値 `bitset(str)`を格納します。 `str` は、 *`< CharType, Traits, allocator< CharType > >&`* から抽出された[basic_string](basic-string-class.md)型のオブジェクトです。
 
 このテンプレート関数は、 *i_str*から要素を抽出し、次のようになるまでビットセットに挿入します。
 

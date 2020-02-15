@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - tuple class
 ms.assetid: c38749be-ae4d-41f3-98ea-6aa3250de9a3
-ms.openlocfilehash: 1727d3a12b7186d3cc868ef6bb78711774057407
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 9890a6a9dea1671f14b66897a80f4b49861dff2b
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688871"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257105"
 ---
 # <a name="tuple-class"></a>タプル クラス
 
@@ -20,7 +20,7 @@ ms.locfileid: "72688871"
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 class tuple {
    tuple();
    explicit tuple(P1, P2, ..., PN); // 0 < N
@@ -41,12 +41,12 @@ class tuple {
 
 ### <a name="parameters"></a>パラメーター
 
-*TN* \
+*TN*\
 N 番目の tuple 要素の型。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-クラステンプレートは、`T1`、`T2`、...、`TN` の型の N 個のオブジェクトをそれぞれ `0 <= N <= Nmax` で格納するオブジェクトを表します。 @No__t_0 組インスタンスの範囲は、そのテンプレート引数の `N` 数です。 テンプレート引数の `Ti` と、その型の対応する格納値のインデックスが `i - 1` ます。 このドキュメントでは、1から N の型に番号を付けますが、対応するインデックス値の範囲は 0 ~ N-1 です。
+クラステンプレートは、`T1`、`T2`、...、`TN`の型の N 個のオブジェクトをそれぞれ `0 <= N <= Nmax`で格納するオブジェクトを表します。 `tuple<T1, T2, ..., TN>` 組インスタンスの範囲は、そのテンプレート引数の `N` 数です。 テンプレート引数の `Ti` と、その型の対応する格納値のインデックスが `i - 1`ます。 このドキュメントでは、1から N の型に番号を付けますが、対応するインデックス値の範囲は 0 ~ N-1 です。
 
 ## <a name="example"></a>例
 
@@ -137,15 +137,15 @@ template <class U1, class U2>
 
 ### <a name="parameters"></a>パラメーター
 
-@No__t_1 の*解除*
+\ の*解除*
 N 番目のコピーされたタプル要素の型。
 
 *右*\
 コピー元のタプル。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-最初の2つのメンバー演算子は、*右*の要素を `*this` の対応する要素に代入します。 3 番目のメンバー演算子は、`*this` のインデックス 0 位置の要素に `right.first` を割り当て、インデックス 1 の要素に `right.second` を割り当てます。 これらの 3 つすべてのメンバー演算子は、`*this` を返します。
+最初の2つのメンバー演算子は、*右*の要素を `*this`の対応する要素に代入します。 3 番目のメンバー演算子は、`right.first` のインデックス 0 位置の要素に `*this` を割り当て、インデックス 1 の要素に `right.second` を割り当てます。 これらの 3 つすべてのメンバー演算子は、`*this` を返します。
 
 残りのメンバー演算子はそれ以前のコンストラクターと似ていますが、[Rvalue 参照宣言子: &&](../cpp/rvalue-reference-declarator-amp-amp.md) を使用します。
 
@@ -215,7 +215,7 @@ template <class... Types>
 *右*\
 要素が*左*の組の要素と交換される組。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 この関数は、`left.swap(right)` を実行します。
 
@@ -246,13 +246,13 @@ template <class U1, class U2>
 
 ### <a name="parameters"></a>パラメーター
 
-@No__t_1 の*解除*
+\ の*解除*
 N 番目のコピーされたタプル要素の型。
 
 *右*\
 コピー元のタプル。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 1 つ目のコンストラクターは、要素が既定で構築されるオブジェクトを構築します。
 
