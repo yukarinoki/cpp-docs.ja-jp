@@ -1,5 +1,5 @@
 ---
-title: Debug Iterator Support
+title: 反復子のデバッグのサポート
 ms.date: 09/13/2018
 helpviewer_keywords:
 - Safe Libraries
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - incompatible iterators
 - debug iterator support
 ms.assetid: f3f5bd15-4be8-4d64-a4d0-8bc0761c68b6
-ms.openlocfilehash: 3ccb618c9a3c6b21d6ffe3fbbce7b6c1140e0564
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: f43367fd58d8ab2a62fb2312efcd9fc9ec0cfc42
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450586"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416205"
 ---
-# <a name="debug-iterator-support"></a>Debug Iterator Support
+# <a name="debug-iterator-support"></a>反復子のデバッグのサポート
 
 Visual C++ ランタイム ライブラリは、反復子の不正な使用を検出し、実行時にアサートしてダイアログ ボックスを表示します。 反復子のデバッグのサポートを有効にするには、デバッグ バージョンの C++ 標準ライブラリと C ランタイム ライブラリを使ってプログラムをコンパイルする必要があります。 詳しくは、「[CRT ライブラリの機能](../c-runtime-library/crt-library-features.md)」をご覧ください。 チェックを行う反復子を使う方法については、「[チェックを行う反復子](../standard-library/checked-iterators.md)」をご覧ください。
 
@@ -54,7 +54,7 @@ int main() {
 }
 ```
 
-## <a name="using-iteratordebuglevel"></a>デバッグレベルの使用 (_c)
+## <a name="using-_iterator_debug_level"></a>_ITERATOR_DEBUG_LEVEL の使用
 
 プリプロセッサ マクロ [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) を使って、デバッグ ビルドで反復子デバッグ機能を無効にできます。 このプログラムはアサートしませんが、それでも未定義の動作をトリガーします。
 
@@ -130,7 +130,7 @@ int main()
 
 ## <a name="iterators-going-out-of-scope"></a>スコープ外に出る反復子
 
-また、デバッグ反復子チェックでは、for ループ**スコープが終了**したときに**for**ループで宣言されている反復子変数がスコープ外になります。
+また、デバッグ反復子チェックでは **、for ループスコープが終了**したときに**for**ループで宣言されている反復子変数がスコープ外になります。
 
 ```cpp
 // iterator_debugging_4.cpp
@@ -148,7 +148,7 @@ int main() {
 
 ## <a name="destructors-for-debug-iterators"></a>デバッグ反復子のデストラクター
 
-反復子のデバッグには重要なデストラクターがあります。 デストラクターが実行されず、オブジェクトのメモリが解放されると、アクセス違反とデータ破損が発生する可能性があります。 次の例について考えます。
+反復子のデバッグには重要なデストラクターがあります。 デストラクターが実行されず、オブジェクトのメモリが解放されると、アクセス違反とデータ破損が発生する可能性があります。 次の例を考えてみましょう。
 
 ```cpp
 // iterator_debugging_5.cpp
@@ -165,7 +165,7 @@ struct derived : base {
    ~derived() {}
 };
 
- int main() {
+int main() {
    std::vector<int> vect( 10 );
    base * pb = new derived( vect.begin() );
    delete pb;  // doesn't call ~derived()
@@ -173,6 +173,6 @@ struct derived : base {
 }
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [C++ 標準ライブラリの概要](../standard-library/cpp-standard-library-overview.md)

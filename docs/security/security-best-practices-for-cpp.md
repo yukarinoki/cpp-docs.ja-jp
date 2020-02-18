@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [C++]
 - security [C++], best practices
 ms.assetid: 86acaccf-cdb4-4517-bd58-553618e3ec42
-ms.openlocfilehash: 914498a79d3d3ddae08ae672aac35c6e913ef238
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: eaaa581ff622438c2e395c34b4b026aca693a845
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988074"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416161"
 ---
 # <a name="security-best-practices-for-c"></a>C++ のセキュリティ推奨事項
 
@@ -35,7 +35,7 @@ ms.locfileid: "74988074"
 [/NXCOMPAT](../build/reference/nxcompat.md)、 [/NXCOMPAT (データ実行防止と互換性あり)](../build/reference/nxcompat-compatible-with-data-execution-prevention.md) 。これらのコンパイラオプションとリンカーオプションでは、データ実行防止 (DEP) の互換性が有効になります。 DEP は、CPU で非コード ページが実行されないようにします。
 
 [/analyze (コード分析)](../build/reference/analyze-code-analysis.md)<br/>
-このコンパイラ オプションを使用すると、潜在的なセキュリティ上の問題 (バッファー オーバーラン、非初期化メモリ、null ポインターの逆参照、メモリ リークなど) を報告するコード解析がアクティブになります。 このオプションの既定値はオフです。 詳細については、「[コード分析のC++ C/概要](/visualstudio/code-quality/code-analysis-for-c-cpp-overview)」を参照してください。
+このコンパイラ オプションを使用すると、潜在的なセキュリティ上の問題 (バッファー オーバーラン、非初期化メモリ、null ポインターの逆参照、メモリ リークなど) を報告するコード解析がアクティブになります。 このオプションの既定値はオフです。 詳細については、「[コード分析のC++ C/概要](/cpp/code-quality/code-analysis-for-c-cpp-overview)」を参照してください。
 
 [/DYNAMICBASE (ASLR (Address Space Layout Randomization) の使用)](../build/reference/dynamicbase-use-address-space-layout-randomization.md)<br/>
 このリンカー オプションにより、実行開始時にメモリ内の個別の場所で読み込むことができる実行可能イメージをビルドできます。 また、このオプションを使用すると、メモリ内のスタックの位置を予測することが非常に難しくなります。
@@ -66,7 +66,7 @@ C ランタイム ライブラリ (CRT) が強化され、セキュリティ上�
 
 - 名前付け規則
 
-- パフォーマンス
+- パフォーマンス テスト
 
 - セキュリティ
 
@@ -95,5 +95,5 @@ Administrators グループに属する Windows ユーザー アカウントを�
 ## <a name="see-also"></a>参照
 
 <xref:System.Security> <br/>
-[Security](/dotnet/standard/security/index)<br/>
+[セキュリティ](/dotnet/standard/security/index)<br/>
 [ユーザー アカウント制御 (UAC: User Account Control) がアプリケーションに与える影響](how-user-account-control-uac-affects-your-application.md)
