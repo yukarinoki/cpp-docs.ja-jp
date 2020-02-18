@@ -5,19 +5,19 @@ ms.date: 07/02/2019
 ms.technology: cpp-ide
 helpviewer_keywords:
 - Visual C++, home page
-ms.openlocfilehash: 74e1b34549a8e8d0f1e22e6f40aacbd4429b272f
-ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
+ms.openlocfilehash: 0a4093860c7d06e8240e03b1487546f80da24b88
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75793789"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416102"
 ---
 # <a name="c-in-visual-studio"></a>Visual Studio での C++
 
 > [!NOTE]
 > この開発者向けドキュメントは、Visual Studio 2015 以降に適用されます。 自分の Visual Studio のバージョンと合わせるには、ページの左上にあるバージョン セレクターを使います。
 >
-> プログラムを実行するために Visual C++ 再頒布可能パッケージを探している場合、[Microsoft ダウンロード センター](https://www.microsoft.com/download/)にアクセスして検索ボックスに「**Visual C++**」と入力してください。
+> プログラムを実行するために Visual C++ 再頒布可能パッケージを探している場合、[Microsoft ダウンロード センター](https://www.microsoft.com/download/)にアクセスして検索ボックスに「**Visual C++** 」と入力してください。
 
 Microsoft Visual C++ (通常は短縮形で Visual C++ または MSVC と表現される) とは、Windows 上で Visual Studio の一部として利用できる C++、C、およびアセンブリ言語の開発ツールおよびライブラリの名前です。 これらのツールとライブラリでは、ユニバーサル Windows プラットフォーム (UWP) アプリ、ネイティブ Windows デスクトップおよびサーバー アプリケーション、Windows、Linux、Android、iOS 上で実行されるクロスプラットフォーム ライブラリおよびアプリに加えて、.NET Framework を使用する管理対象のアプリおよびライブラリを作成できます。 Visual C++ を使用すると、単純なコンソール アプリから最も高度で複雑な Windows デスクトップ用アプリまで、またデバイス ドライバーやオペレーティング システムのコンポーネントからモバイル デバイス用のクロスプラットフォーム ゲームまで、さらに最小の IoT デバイスから Azure クラウドにおけるマルチ サーバー ハイ パフォーマンス コンピューティングに至るまであらゆるアプリを記述することができます。
 
@@ -82,7 +82,7 @@ C++ エディターの生産性機能を使用し、コードのリファクタ�
 [ネイティブ コードのデバッグ](/visualstudio/debugger/debugging-native-code)<br/>
 C++ プロジェクトで Visual Studio デバッガーを使用します。
 
-[C/C++ のコード分析の概要](/visualstudio/code-quality/code-analysis-for-c-cpp-overview)<br/>
+[C/C++ のコード分析の概要](/cpp/code-quality/code-analysis-for-c-cpp-overview)<br/>
 静的な分析を行うために、SAL 注釈または C++ Core Guidelines チェッカーを使用します。
 
 [Visual Studio で C/C++ 用の単体テストを作成する](/visualstudio/test/writing-unit-tests-for-c-cpp)<br/>

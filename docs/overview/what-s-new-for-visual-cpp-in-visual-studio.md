@@ -3,12 +3,12 @@ title: Visual Studio での C++ の新機能
 ms.date: 07/02/2019
 ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
-ms.openlocfilehash: 04cf4ecf447120302125c797bd70c00c62b5def9
-ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
+ms.openlocfilehash: df7cf44831781086f1b36d32ea9ed773a5dff9a4
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75793972"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415721"
 ---
 # <a name="whats-new-for-c-in-visual-studio"></a>Visual Studio での C++ の新機能
 
@@ -647,7 +647,7 @@ Visual Studio 2017 に同梱されている Clang/C2 ツールセットが **/bi
 
 ## <a name="c-code-analysis"></a>C++ コードの分析
 
-[C++ コア ガイドライン](https://github.com/isocpp/CppCoreGuidelines)を適用するための C++ コア チェッカーが Visual Studio で配布されています。 プロジェクトのプロパティ ページの **[Code Analysis Extensions]\(コード分析の拡張機能\)** ダイアログでチェックを有効にするだけで、拡張機能がコード分析の実行時に含まれます。 詳細については、「[Using the C++ Core Guidelines checkers (C++ Core ガイドラインのチェッカーを使用する)](/visualstudio/code-quality/using-the-cpp-core-guidelines-checkers)」をご覧ください。
+[C++ コア ガイドライン](https://github.com/isocpp/CppCoreGuidelines)を適用するための C++ コア チェッカーが Visual Studio で配布されています。 プロジェクトのプロパティ ページの **[Code Analysis Extensions]\(コード分析の拡張機能\)** ダイアログでチェックを有効にするだけで、拡張機能がコード分析の実行時に含まれます。 詳細については、「[Using the C++ Core Guidelines checkers (C++ Core ガイドラインのチェッカーを使用する)](/cpp/code-quality/using-the-cpp-core-guidelines-checkers)」をご覧ください。
 
 ![CppCoreCheck](media/CppCoreCheck.png "CppCoreCheck のプロパティ ページ")
 
@@ -668,7 +668,7 @@ Visual Studio 2017 に同梱されている Clang/C2 ツールセットが **/bi
 ##### <a name="visual-studio-2017-version-157"></a>Visual Studio 2017 バージョン 15.7
 
 - 実行するコード分析ルールを指定できる [/analyze: ruleset](../build/reference/analyze-code-analysis.md) のサポートの追加。
-- 追加の C++ Core Guidelines ルールのサポートの追加。  詳細については、「[Using the C++ Core Guidelines checkers (C++ Core ガイドラインのチェッカーを使用する)](/visualstudio/code-quality/using-the-cpp-core-guidelines-checkers)」をご覧ください。
+- 追加の C++ Core Guidelines ルールのサポートの追加。  詳細については、「[Using the C++ Core Guidelines checkers (C++ Core ガイドラインのチェッカーを使用する)](/cpp/code-quality/using-the-cpp-core-guidelines-checkers)」をご覧ください。
 
 ## <a name="unit-testing"></a>単体テスト
 
