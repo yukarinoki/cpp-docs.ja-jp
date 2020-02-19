@@ -10,12 +10,12 @@ helpviewer_keywords:
 - pop warning pragma
 - warning pragma
 ms.assetid: 8e9a0dec-e223-4657-b21d-5417ebe29cc8
-ms.openlocfilehash: c6c9668f614f932b0a96f30ad3e0395e39ddc400
-ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
+ms.openlocfilehash: d8b110d459bba1e0b7e2fd6e2c95e7eed638fc99
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/02/2019
-ms.locfileid: "74683347"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416185"
 ---
 # <a name="warning-pragma"></a>warning pragma
 
@@ -29,16 +29,16 @@ ms.locfileid: "74683347"
 > **#pragma 警告 (プッシュ**[ **,** *n* ] **)** \
 > **#pragma 警告 (pop)**
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
 次の警告指定子パラメーターを使用できます。
 
-|警告指定子|説明|
+|警告指定子|意味|
 |------------------------|-------------|
 |*1、2、3、4*|指定された警告に特定のレベルを適用します。 は、既定ではオフになっている、指定された警告もオンにします。|
-|*default*|警告の動作を既定値にリセットします。 は、既定ではオフになっている、指定された警告もオンにします。 警告は、既定の文書化されたレベルで生成されます。<br /><br /> 詳細については、「[既定でオフになっているコンパイラ警告](../preprocessor/compiler-warnings-that-are-off-by-default.md)」を参照してください。|
-|*切り替える*|指定された警告メッセージを発行しません。|
-|*エラー*|指定した警告をエラーとして報告します。|
+|*既定値*|警告の動作を既定値にリセットします。 は、既定ではオフになっている、指定された警告もオンにします。 警告は、既定の文書化されたレベルで生成されます。<br /><br /> 詳細については、「[既定でオフになっているコンパイラ警告](../preprocessor/compiler-warnings-that-are-off-by-default.md)」を参照してください。|
+|*disable*|指定された警告メッセージを発行しません。|
+|*error*|指定した警告をエラーとして報告します。|
 |*once*|指定したメッセージを 1 回だけ表示します。|
 |*振ら*|プラグマの現在の状態をスタックにプッシュし、次の行に対して指定された警告を無効にします。次に、プラグマの状態がリセットされるように警告スタックをポップします。|
 
@@ -54,10 +54,10 @@ ms.locfileid: "74683347"
 // Disable warning messages 4507 and 4034.
 #pragma warning( disable : 4507 34 )
 
-// Issue warning 4385 only once.
+// Issue warning C4385 only once.
 #pragma warning( once : 4385 )
 
-// Report warning 4164 as an error.
+// Report warning C4164 as an error.
 #pragma warning( error : 164 )
 ```
 
@@ -93,7 +93,7 @@ int main() {
 
 プラグマ `warning( push )` には、警告ごとに現在の警告状態が格納されます。 プラグマ `warning( push, n )` は、すべての警告の現在の状態を格納し、グローバル警告レベルを*n*に設定します。
 
-プラグマ `warning( pop )` スタックにプッシュされた最後の警告状態をポップします。 *プッシュ*と*pop*の間で警告状態に加えた変更は元に戻されます。 次の例について考えます。
+プラグマ `warning( pop )` スタックにプッシュされた最後の警告状態をポップします。 *プッシュ*と*pop*の間で警告状態に加えた変更は元に戻されます。 次の例を考えてみましょう。
 
 ```cpp
 #pragma warning( push )

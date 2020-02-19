@@ -2,12 +2,12 @@
 title: Visual Studio での C++ コードの読み取りと理解
 description: Visual Studio で C++ コード エディターを使用して、コードを書式設定し、理解します。
 ms.date: 05/28/2019
-ms.openlocfilehash: d4af4c9bc747540bada49de305c45cffc5c44374
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: 2ddeabd9d70ebb344fe6d14abe520ee51a42eebb
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303058"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416123"
 ---
 # <a name="read-and-understand-c-code-in-visual-studio"></a>Visual Studio での C++ コードの読み取りと理解
 
@@ -19,9 +19,9 @@ Visual Studio では、言語キーワード、型名、変数名、関数パラ
 
 ![コードの色付け](../ide/media/code-outline-colorization.png "C++彩色")
 
- 未使用コード (#if 0 の下のコードなど) はより薄い色になっています。
+未使用コード (#if 0 の下のコードなど) はより薄い色になっています。
 
- ![非アクティブコード](../ide/media/inactive-code-cpp.png "C++非アクティブコード")
+![非アクティブコード](../ide/media/inactive-code-cpp.png "C++非アクティブコード")
 
 **クイック起動**で「フォント」と入力して、 **[フォントおよび色]** を選択すると、色をカスタマイズできます。 **[フォントおよび色]** ダイアログで [C/C++] オプションまで下にスクロールして、カスタム フォントや色を選択します。
 
@@ -35,7 +35,7 @@ Visual Studio では、言語キーワード、型名、変数名、関数パラ
 
 その他のアウトラインのオプションは、メイン メニューの **[編集]**  >  **[アウトライン]** の下にあります。
 
-## <a name="line-numbers"></a>行番号
+## <a name="line-numbers"></a>[行番号]
 
 プロジェクトに行番号を追加するには、 **[ツール]**  > [オプション > **テキストエディター** ] の順に移動します。 **[全般**] > すべての > **言語**を**選択**するか、[**クイック起動] (Ctrl + Q)** で "行番号" を検索します。 行番号はすべての言語で設定することも、C++ などの特定の言語のみで設定することもできます。
 
@@ -111,7 +111,7 @@ Visual Studio では、言語キーワード、型名、変数名、関数パラ
 
 ![C&#43; &#43;呼び出し階層](../ide/media/vs2015_cpp_call_hierarchy.png "vs2015_cpp_call_hierarchy")
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [コードの作成とリファクタリング (C++)](writing-and-refactoring-code-cpp.md)</br>
 [Visual Studio で C++コード ベース内を移動する](navigate-code-cpp.md)</br>

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -analyze compiler option [C++]
 - analyze compiler option [C++]
 ms.assetid: 81da536a-e030-4bd4-be18-383927597d08
-ms.openlocfilehash: f537fdea2703805c7ab1c57ba0d4429f6b683ae4
-ms.sourcegitcommit: 9aab425662a66825772f091112986952f341f7c8
+ms.openlocfilehash: c0cebe1cbd160bdec257a960f90039c1af3bfee2
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72444889"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416046"
 ---
 # <a name="analyze-code-analysis"></a>/analyze (コード分析)
 
@@ -41,7 +41,7 @@ ms.locfileid: "72444889"
 アナライザーの出力が**出力**ウィンドウに表示されないようにします。
 
 **/analyze: stacksize** *number*\
-このオプションと共に使用する*number*パラメーターでは、警告[C6262](/visualstudio/code-quality/c6262)が生成されるスタックフレームのサイズ (バイト単位) を指定します。 *数値*の前のスペースは省略可能です。 このパラメーターが指定されていない場合、スタックフレームサイズは既定で 16 KB になります。
+このオプションと共に使用する*number*パラメーターでは、警告[C6262](/cpp/code-quality/c6262)が生成されるスタックフレームのサイズ (バイト単位) を指定します。 *数値*の前のスペースは省略可能です。 このパラメーターが指定されていない場合、スタックフレームサイズは既定で 16 KB になります。
 
 **/analyze: max_paths** *数*\
 このオプションで使用される*number*パラメーターでは、分析するコードパスの最大数を指定します。 このパラメーターが指定されていない場合、既定では、数値は256です。 値を大きくすると、より詳細なチェックが行われますが、分析に時間がかかることがあります。
@@ -71,14 +71,14 @@ Visual Studio に付属しているルールセットは、%VSINSTALLDIR%\Team �
 
 ::: moniker range="<=vs-2017"
 
-LocalC261XX は、同時実行に関連するコード分析チェックを実装するプラグインです。 たとえば、 [C26100](/visualstudio/code-quality/c26100)、 [C26101](/visualstudio/code-quality/c26101)、 [C26167](/visualstudio/code-quality/c26167)のようになります。
+LocalC261XX は、同時実行に関連するコード分析チェックを実装するプラグインです。 たとえば、 [C26100](/cpp/code-quality/c26100)、 [C26101](/cpp/code-quality/c26101)、 [C26167](/cpp/code-quality/c26167)のようになります。
 
 Local、c .dll を実行するには、次のコンパイラオプションを使用します。 **/analyze: Plugin Localて c .dll**
 
 ::: moniker-end
 ::: moniker range=">=vs-2019"
 
-ConcurrencyCheck は、C261XX 警告の範囲内で同時実行に関連するコード分析チェックを実装します。 たとえば、 [C26100](/visualstudio/code-quality/c26100)、 [C26101](/visualstudio/code-quality/c26101)、 [C26167](/visualstudio/code-quality/c26167)のようになります。
+ConcurrencyCheck は、C261XX 警告の範囲内で同時実行に関連するコード分析チェックを実装します。 たとえば、 [C26100](/cpp/code-quality/c26100)、 [C26101](/cpp/code-quality/c26101)、 [C26167](/cpp/code-quality/c26167)のようになります。
 
 ConcurrencyCheck を実行するには、まず開発者コマンドプロンプトから次のコマンドを実行します。
 
@@ -98,9 +98,9 @@ set Esp.Extensions=CppCoreCheck.dll
 
 その後、次のコンパイラオプションを使用します。 **/analyze: プラグイン**では、dll を使用します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
-詳細については、「 [c/C++ ](/visualstudio/code-quality/code-analysis-for-c-cpp-overview) c + + のコード分析」と「 [c/C++警告のコード分析](/visualstudio/code-quality/code-analysis-for-c-cpp-warnings)」を参照してください。
+詳細については、「 [c/C++ ](/cpp/code-quality/code-analysis-for-c-cpp-overview) c + + のコード分析」と「 [c/C++警告のコード分析](/cpp/code-quality/code-analysis-for-c-cpp-warnings)」を参照してください。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
 
@@ -112,7 +112,7 @@ set Esp.Extensions=CppCoreCheck.dll
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには
 
-1. 「<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.EnablePREfast%2A>」を参照してください。
+1. [https://docs.microsoft.com/azure/active-directory/develop/scenario-protected-web-api-overview](<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.EnablePREfast%2A>) をご覧ください。
 
 ## <a name="see-also"></a>参照
 

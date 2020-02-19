@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Visual C++, development tools
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: d72ea2ab4fa83259152101b357c6b2b69e74c723
-ms.sourcegitcommit: 8762a3f9b5476b4dee03f0ee8064ea606550986e
+ms.openlocfilehash: 4e04e189b44fe61759a9422139d856ab8a09f201
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74810626"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415713"
 ---
 # <a name="overview-of-c-development-in-visual-studio"></a>Visual Studio での C++ 開発の概要
 
@@ -47,7 +47,7 @@ Visual Studio では、使用するすべてのプロジェクト システム�
 
 ## <a name="add-to-source-control"></a>ソース管理に追加
 
-ソース管理では、複数の開発者間で作業を調整したり、開発中の作業を運用コードから分離したり、ソース コードをバックアップしたりすることができます。 Visual Studio は、Git と [Team Foundation バージョン管理 \(TFVC\)](/azure/devops/repos/tfvc/) をその**チーム エクスプローラー** ウィンドウをサポートしています。 
+ソース管理では、複数の開発者間で作業を調整したり、開発中の作業を運用コードから分離したり、ソース コードをバックアップしたりすることができます。 Visual Studio は、Git と [Team Foundation バージョン管理 \(TFVC\)](/azure/devops/repos/tfvc/) をその**チーム エクスプローラー** ウィンドウをサポートしています。
 
 ::: moniker range="vs-2019"
 
@@ -117,7 +117,7 @@ Visual Studio には、C++ 用の Microsoft 単体テスト フレームワー�
 
 ## <a name="analyze"></a>解析
 
-Visual Studio には、ソース コードの潜在的な問題を検出できる静的コード分析ツールが含まれています。 それらのツールには、[C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md) ルール チェッカーの実装が含まれています。 詳細については、「[C/C++ のコード分析の概要](/visualstudio/code-quality/code-analysis-for-c-cpp-overview)」を参照してください。
+Visual Studio には、ソース コードの潜在的な問題を検出できる静的コード分析ツールが含まれています。 それらのツールには、[C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md) ルール チェッカーの実装が含まれています。 詳細については、「[C/C++ のコード分析の概要](/cpp/code-quality/code-analysis-for-c-cpp-overview)」を参照してください。
 
 ## <a name="deploy-completed-applications"></a>完成したアプリケーションの配置
 

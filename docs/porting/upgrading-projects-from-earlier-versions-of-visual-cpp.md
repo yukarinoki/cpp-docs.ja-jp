@@ -6,12 +6,12 @@ helpviewer_keywords:
 - 32-bit code porting
 - upgrading Visual C++ applications, 32-bit code
 ms.assetid: 18cdacaa-4742-43db-9e4c-2d9e73d8cc84
-ms.openlocfilehash: a18d2dbabdeec0f283fb4eca7ed52e616f9d224a
-ms.sourcegitcommit: b67b08472b6f1ee8f1c5684bba7056d3e0fc745f
+ms.openlocfilehash: bc9fb5628c1a628b91f306c346f2bbb1dea13de8
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76725722"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416109"
 ---
 # <a name="upgrade-c-projects-from-earlier-versions-of-visual-studio"></a>以前C++のバージョンの Visual Studio からのプロジェクトのアップグレード
 
@@ -47,7 +47,7 @@ ms.locfileid: "76725722"
 
 1. プラットフォームツールセット、 C++言語標準、および Windows SDK バージョン (該当する場合) を優先するバージョンに設定します。 (**プロジェクト** > **プロパティ** > **構成プロパティ** > **全般**)
 
-1. 多数のエラーが発生した場合は、修正中にいくつかのオプションを一時的にオフにすることができます。 [/Permissive-](../build/reference/permissive-standards-conformance.md)オプションをオフにするには、[**プロジェクト** > の**プロパティ** > **構成プロパティ**] > [ **C/C++**  > **言語**] を使用します。 [コード分析](/visualstudio/code-quality/code-analysis-for-c-cpp-overview)オプションをオフにするには、 **[コード分析]**  > [**プロジェクト** > の**プロパティ** > **構成プロパティ**] を使用します。
+1. 多数のエラーが発生した場合は、修正中にいくつかのオプションを一時的にオフにすることができます。 [/Permissive-](../build/reference/permissive-standards-conformance.md)オプションをオフにするには、[**プロジェクト** > の**プロパティ** > **構成プロパティ**] > [ **C/C++**  > **言語**] を使用します。 [コード分析](/cpp/code-quality/code-analysis-for-c-cpp-overview)オプションをオフにするには、 **[コード分析]**  > [**プロジェクト** > の**プロパティ** > **構成プロパティ**] を使用します。
 
 1. すべての依存関係が存在し、インクルードパスまたはライブラリの場所が正しいことを確認します。 (**プロジェクト** > **プロパティ** > **VC + + ディレクトリ** > の**構成プロパティ**)
 
@@ -74,7 +74,7 @@ ms.locfileid: "76725722"
 [VCBuild と MSBuild の](build-system-changes.md)\
 [ポートサードパーティライブラリ](porting-third-party-libraries.md)
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [Visual Studio の Visual C++ の新機能](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)\
 [ビジュアルC++の変更履歴 2003-2015](../porting/visual-cpp-change-history-2003-2015.md)\

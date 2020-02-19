@@ -375,6 +375,8 @@
           href: build/arm64-exception-handling.md
     - name: Windows XP 用プログラムの構成
       href: build/configuring-programs-for-windows-xp.md
+    - name: C/C++ のコード分析
+      href: code-quality/
     - name: コンパイラとビルド ツールのリファレンス
       expanded: false
       items:

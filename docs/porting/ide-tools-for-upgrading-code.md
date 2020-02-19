@@ -3,12 +3,12 @@ title: コードをアップグレードC++するための VISUAL Studio IDE ツ
 description: Visual C++ Studio のコードエディターとコード分析ツールは、 C++コードベースを最新化するのに役立ちます。
 ms.date: 11/13/2019
 ms.topic: conceptual
-ms.openlocfilehash: 3f85b955b688489bfc04c4bfc0605201e883e3d4
-ms.sourcegitcommit: 4dde7914608508e47c21cae03ac58fe953a0c29b
+ms.openlocfilehash: 409fc0a2fa6cd39c7751dc34b20b231ffbea3956
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74119634"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416154"
 ---
 # <a name="visual-studio-ide-tools-for-upgrading-c-code"></a>コードをアップグレードC++するための VISUAL Studio IDE ツール
 
@@ -24,7 +24,7 @@ Visual Studio では、コンパイラC++オプション、コード分析の警
 
 - すべてのバージョンの標準に準拠しているが、最新C++のベストプラクティスとは見なされないコード。
 
-   変更が推奨されるコードを特定するには、[コード分析](/visualstudio/code-quality/code-analysis-for-c-cpp-overview)を実行します。
+   変更が推奨されるコードを特定するには、[コード分析](/cpp/code-quality/code-analysis-for-c-cpp-overview)を実行します。
 
 ## <a name="open-and-convert-a-legacy-project"></a>レガシプロジェクトを開いて変換する
 
@@ -74,7 +74,7 @@ Visual Studio では、コンパイラC++オプション、コード分析の警
 
 ![エラー一覧でのコード分析の警告](media/code-analysis-error-list.png "エラー一覧でのコード分析の警告")
 
-アクティブになっている規則を変更し、カスタムのルールセットを作成できます。 コード分析の使用方法の詳細については、「[コードC++分析の C/概要](/visualstudio/code-quality/code-analysis-for-c-cpp-overview)」を参照してください。
+アクティブになっている規則を変更し、カスタムのルールセットを作成できます。 コード分析の使用方法の詳細については、「[コードC++分析の C/概要](/cpp/code-quality/code-analysis-for-c-cpp-overview)」を参照してください。
 
 ## <a name="use-quick-actions-to-modernize-code"></a>クイックアクションを使用してコードを最新化する
 

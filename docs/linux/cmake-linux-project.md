@@ -3,12 +3,12 @@ title: Visual Studio で Linux CMake プロジェクトを作成および構成�
 description: Visual Studio で Linux CMake プロジェクトを作成、構成、編集、コンパイルする方法
 ms.date: 10/04/2019
 ms.assetid: f8707b32-f90d-494d-ae0b-1d44425fdc25
-ms.openlocfilehash: 128b8dac297398ffbfadfaade5b36c843d55e163
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 9c6a60162c2dbbab8e348b27d1987d7f1001bee0
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73625961"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416086"
 ---
 # <a name="create-and-configure-a-linux-cmake-project"></a>Linux CMake プロジェクトの作成と構成
 
@@ -175,7 +175,7 @@ Visual Studio 2017 の既定の CMake 設定を変更するには、メイン �
 
 ::: moniker range="vs-2019"
 
- Visual Studio 2019 バージョン 16.1 以降での既定の Linux-Debug 構成を次に示します。
+Visual Studio 2019 バージョン 16.1 以降での既定の Linux-Debug 構成を次に示します。
 
 ```json
 {
