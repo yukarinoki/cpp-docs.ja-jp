@@ -1,5 +1,5 @@
 ---
-title: setlocale、_wsetlocale
+title: setlocale, _wsetlocale
 description: Microsoft C runtime (CRT) ライブラリ関数 setlocale および _wsetlocaleについて説明します。
 ms.date: 01/28/2020
 api_name:
@@ -37,12 +37,12 @@ ms.assetid: 3ffb684e-5990-4202-9553-b5339af9520d
 no-loc:
 - setlocale
 - _wsetlocale
-ms.openlocfilehash: 08684e17a801e660ae2771c9e717dfa28621d600
-ms.sourcegitcommit: 684181561490e0d1955cf601d222f67f09af6d00
+ms.openlocfilehash: b1c7b739e671caebc51022945a369a632ecebb9e
+ms.sourcegitcommit: f38f770bfda1c174d2b81fabda7c893b15bd83a1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76894347"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77473858"
 ---
 # <a name="setlocale-_wsetlocale"></a>setlocale、_wsetlocale
 
@@ -87,7 +87,7 @@ en-US
 
 **Setlocale**によって返された文字列をコピーして、プログラムのロケール情報のその部分を復元できます。 **Setlocale**によって返される文字列には、グローバルまたはスレッドローカルストレージが使用されます。 後で**setlocale**を呼び出すと、文字列が上書きされ、以前の呼び出しによって返された文字列ポインターが無効になります。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
 *Locale*および*category*によって指定された現在のプログラムのロケール情報の一部またはすべてを設定、変更、または照会するには、 **setlocale**関数を使用します。 *ロケール*とは、プログラムの特定の側面をカスタマイズできる地域 (国/地域と言語) を指します。 ロケールに依存するカテゴリとしては、日付の形式や通貨値の表示形式などがあります。 コンピューターで複数の形式がサポートされている言語の既定の文字列に*ロケール*を設定した場合は、 **setlocale**戻り値をチェックして、有効な言語を確認する必要があります。 たとえば、 *locale*を "中国語" に設定した場合、戻り値は "簡体字中国語または繁体字中国語" のいずれかになります。
 
@@ -101,7 +101,7 @@ en-US
 
 *Category*引数は、影響を受けるプログラムのロケール情報の部分を指定します。 *Category*に使用されるマクロと、影響を与えるプログラムの部分は次のとおりです。
 
-|*カテゴリ*フラグ|影響が及ぶ対象|
+|*カテゴリ*フラグ|影響|
 |-|-|
 | **LC_ALL** | 次に示すように、すべてのカテゴリです。 |
 | **LC_COLLATE** | **Strcoll 系**、 **_stricoll**、 **wcscoll**、 **_wcsicoll**、 **strxfrm**、 **_strncoll**、 **_strnicoll**、 **_wcsncoll**、 **_wcsnicoll**、および**wcsxfrm**の各関数。 |
@@ -118,7 +118,7 @@ en-US
 
 `setlocale( LC_ALL, "C" );`
 
-*Locale*引数は、ロケール名、言語文字列、言語文字列と国/地域コード、コードページ、言語文字列、国/地域コード、およびコードページを受け取ることができます。 使用できるロケール名、言語、国/地域コード、およびコード ページのセットには、1 文字に 2 バイトを超えるデータを必要とする (UTF-7、UTF-8 など) コード ページを除き、Windows の NLS API でサポートされるすべてが含まれています。 UTF-8 または UTF-8 のコードページ値を指定すると、 **setlocale**は失敗し、 **NULL**が返されます。 **Setlocale**でサポートされているロケール名のセットについては、「[ロケール名、言語、および国/地域識別文字列](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)」を参照してください。 **Setlocale**でサポートされる言語および国/地域識別文字列のセットは、「[言語文字列](../../c-runtime-library/language-strings.md)と[国/地域識別文字列](../../c-runtime-library/country-region-strings.md)」に記載されています。 パフォーマンス上の理由と、コードに埋め込まれた、またはストレージに対してシリアル化されたロケール文字列の保守容易性の理由により、ロケール名形式を使用することをお勧めします。 オペレーティング システムの更新によってロケール名の文字列が変更される可能性は、言語および国/地域名の形式よりも低くなっています。
+*Locale*引数は、ロケール名、言語文字列、言語文字列と国/地域コード、コードページ、言語文字列、国/地域コード、およびコードページを受け取ることができます。 使用できるロケール名、言語、国/地域コード、およびコードページのセットには、Windows NLS API でサポートされているものがすべて含まれています。 **Setlocale**でサポートされているロケール名のセットについては、「[ロケール名、言語、および国/地域識別文字列](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)」を参照してください。 **Setlocale**でサポートされる言語および国/地域識別文字列のセットは、「[言語文字列](../../c-runtime-library/language-strings.md)と[国/地域識別文字列](../../c-runtime-library/country-region-strings.md)」に記載されています。 パフォーマンス上の理由と、コードに埋め込まれた、またはストレージに対してシリアル化されたロケール文字列の保守容易性の理由により、ロケール名形式を使用することをお勧めします。 オペレーティング システムの更新によってロケール名の文字列が変更される可能性は、言語および国/地域名の形式よりも低くなっています。
 
 *Locale*引数として渡された null ポインターは、国際化環境を設定するのではなく、をクエリするように**setlocale**に指示します。 *Locale*引数が null ポインターの場合、プログラムの現在のロケール設定は変更されません。 代わりに、 **setlocale**は、スレッドの現在のロケールの*カテゴリ*に関連付けられている文字列へのポインターを返します。 *Category*引数が**LC_ALL**の場合、関数は各カテゴリの現在の設定をセミコロンで区切って示す文字列を返します。 たとえば、呼び出しのシーケンス
 
@@ -130,7 +130,7 @@ setlocale(LC_MONETARY, "fr-FR");
 printf("%s\n", setlocale(LC_ALL, NULL));
 ```
 
-の戻り値
+は、次の値は返します。
 
 ```Output
 LC_COLLATE=en-US;LC_CTYPE=en-US;LC_MONETARY=fr-FR;LC_NUMERIC=en-US;LC_TIME=en-US
@@ -196,20 +196,20 @@ LC_COLLATE=en-US;LC_CTYPE=en-US;LC_MONETARY=fr-FR;LC_NUMERIC=en-US;LC_TIME=en-US
 
 `setlocale( LC_ALL, "English_United States.1252");`
 
-詳細については、「[C/C++ プリプロセッサ リファレンス](../../preprocessor/c-cpp-preprocessor-reference.md)」の [setlocale](../../preprocessor/setlocale.md) pragma ディレクティブをご覧ください。
+詳細については、「[C/C++ プリプロセッサ リファレンス](../../preprocessor/setlocale.md)」の [setlocale](../../preprocessor/c-cpp-preprocessor-reference.md) pragma ディレクティブをご覧ください。
 
 関数[_configthreadlocale](configthreadlocale.md)は、 **setlocale**がプログラム内のすべてのスレッドのロケールに影響するか、呼び出し元のスレッドのロケールだけに影響するかを制御するために使用されます。
 
 ## <a name="requirements"></a>要件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**setlocale**|\<locale.h>|
 |**_wsetlocale**|\<locale.h> または \<wchar.h>|
 
-互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 ```C
 // crt_setlocale.c
@@ -313,7 +313,7 @@ The thread locale is now set to de-DE.
 The time in de-DE locale is: 'Mittwoch, 12. Mai 2004'
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ロケール名、言語、および国/地域識別文字列](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)\
 [_configthreadlocale](configthreadlocale.md)\
@@ -325,7 +325,7 @@ The time in de-DE locale is: 'Mittwoch, 12. Mai 2004'
 [mbstowcs、_mbstowcs_l](mbstowcs-mbstowcs-l.md)\
 [mbtowc、_mbtowc_l](mbtowc-mbtowc-l.md)\
 [_setmbcp](setmbcp.md)\
-[strcoll Functions](../../c-runtime-library/strcoll-functions.md)\
+[strcoll 関数](../../c-runtime-library/strcoll-functions.md)\
 [strftime、wcsftime、_strftime_l、_wcsftime_l](strftime-wcsftime-strftime-l-wcsftime-l.md)\
 [strxfrm、wcsxfrm、_strxfrm_l、_wcsxfrm_l](strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)\
 [wcstombs、_wcstombs_l](wcstombs-wcstombs-l.md)\
