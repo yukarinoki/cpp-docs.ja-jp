@@ -4,12 +4,12 @@ ms.date: 11/22/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: fb7dc81648ae301962b952b0440d8a24b397c0d8
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.openlocfilehash: 542a469393d3655418f69e5d51d59adfa824ad15
+ms.sourcegitcommit: 9a63e9b36d5e7fb13eab15c2c35bedad4fb03ade
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518206"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77600041"
 ---
 # <a name="cmakesettingsjson-schema-reference"></a>CMakeSettings.json スキーマ リファレンス
 
@@ -31,7 +31,7 @@ IDE で構成を追加または削除し、JSON ファイルで直接編集す�
 
 `configuration` には次のプロパティがあります。
 
-- `addressSDanitizerEnabled`: `true` は、アドレスサニタイザー (Windows の試験段階) でプログラムをコンパイルします。 Linux では、最適な結果を得るために、-fno-frame-ポインターとコンパイラの最適化レベル Os または-Oo を使用してコンパイルします。
+- `addressSanitizerEnabled`: `true` は、アドレスサニタイザー (Windows の試験段階) でプログラムをコンパイルします。 Linux では、最適な結果を得るために、-fno-frame-ポインターとコンパイラの最適化レベル Os または-Oo を使用してコンパイルします。
 - `addressSanitizerRuntimeFlags`: ASAN_OPTIONS 環境変数を介して AddressSanitizer に渡されるランタイムフラグ。 形式: フラグ 1 = 値: フラグ 2 = value2。
 - `buildCommandArgs`: --ビルド-- の後に CMake に渡されるネイティブ ビルド スイッチを指定します。 たとえば、Ninja ジェネレーターの使用時に -v を渡すと、コマンド ラインの出力が Ninja に強制されます。 Ninja コマンドの詳細については、「[Ninja のコマンド ライン引数](#ninja)」参照してください。
 - `buildRoot`: 選択したジェネレーターに CMake がビルド スクリプトを生成するディレクトリを指定します。  **-DCMAKE_BINARY_DIR**スイッチにマップし、 *cmakecache.txt*が作成される場所を指定します。 フォルダーが存在しない場合は、作成されます。 サポートされているマクロには、`${workspaceRoot}`、`${workspaceHash}`、`${projectFile}`、`${projectDir}`、`${thisFile}`、`${thisFileDir}`、`${name}`、`${generator}`、`${env.VARIABLE}` などがあります。
@@ -211,7 +211,7 @@ CMakeLists .txt ファイルからは、すべての環境変数が `$ENV{variab
 }
 ```
 
-次の例では、x86 デバッグ構成が **BuildDir** プロパティに対して独自の値を定義します。 この値は、**BuildRoot** が `D:\custom-builddir\x86-Debug` に評価されるように、グローバル **BuildDir** プロパティによって設定される値をオーバーライドします。
+次の例では、x86 デバッグ構成が **BuildDir** プロパティに対して独自の値を定義します。 この値は、**BuildRoot** が **に評価されるように、グローバル**BuildDir`D:\custom-builddir\x86-Debug` プロパティによって設定される値をオーバーライドします。
 
 ```json
 {
@@ -255,7 +255,7 @@ CMakeLists .txt ファイルからは、すべての環境変数が `$ENV{variab
 }
 ```
 
-## <a name="macros"></a>[マクロ]
+## <a name="macros"></a>マクロ
 
 *Cmakesettings. json*では、次のマクロを使用できます。
 
@@ -279,7 +279,7 @@ ninja: invalid option -- `-?'
 usage: ninja [options] [targets...]
 ```
 
-|オプション|説明|
+|オプション|Description|
 |--------------|------------|
 | --version  | Ninja のバージョンを書き出します ("1.7.1")|
 |   -C DIR   | 何かを実行する前に、DIR (ディレクトリ) に変更します|
