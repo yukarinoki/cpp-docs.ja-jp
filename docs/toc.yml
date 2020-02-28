@@ -2455,7 +2455,7 @@
 - name: Linux 開発
   href: linux/
 - name: クロス プラットフォームのモバイル開発
-  href: /visualstudio/cross-platform/visual-cpp-for-cross-platform-mobile-development
+  href: cross-platform/
 - name: C++/CLI による .NET 開発
   expanded: false
   items:
