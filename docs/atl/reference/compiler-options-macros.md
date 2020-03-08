@@ -17,11 +17,11 @@ helpviewer_keywords:
 - compiler options, macros
 ms.assetid: a869adc6-b3de-4299-b040-9ae20b45f82c
 ms.openlocfilehash: 84083c696ee7bdcbb9538bf587c4aaded7a3932e
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69630637"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78857172"
 ---
 # <a name="compiler-options-macros"></a>コンパイラオプションのマクロ
 
@@ -31,7 +31,7 @@ ms.locfileid: "69630637"
 |-|-|
 |[_ATL_ALL_WARNINGS](#_atl_all_warnings)|以前のバージョンの ATL から変換されたプロジェクトのエラーを有効にするシンボル。|
 |[_ATL_APARTMENT_THREADED](#_atl_apartment_threaded)|1つ以上のオブジェクトがアパートメントスレッドを使用するかどうかを定義します。|
-|[_ATL_CSTRING_EXPLICIT_CONSTRUCTORS](#_atl_cstring_explicit_constructors)|特定`CString`のコンストラクターを明示的に行い、意図しない変換を防止します。|
+|[_ATL_CSTRING_EXPLICIT_CONSTRUCTORS](#_atl_cstring_explicit_constructors)|特定の `CString` コンストラクターを明示的に使用して、意図しない変換を防止します。|
 |[_ATL_ENABLE_PTM_WARNING](#_atl_enable_ptm_warning)|標準に準拠した構文をC++使用するには、このマクロを定義します。これにより、非標準の構文を使用してメンバー関数へのポインターを初期化するときに、C4867 コンパイラエラーが生成されます。|
 |[_ATL_FREE_THREADED](#_atl_free_threaded)|1つ以上のオブジェクトが、フリースレッドまたはニュートラルスレッドを使用するかどうかを定義します。|
 |[_ATL_MULTI_THREADED](#_atl_multi_threaded)|プロジェクトを示すシンボルには、"Free" または "ニュートラル" とマークされたオブジェクトが含まれます。 代わりに、マクロ[_ATL_FREE_THREADED](#_atl_free_threaded)を使用する必要があります。|
@@ -49,9 +49,9 @@ ms.locfileid: "69630637"
 #define _ATL_ALL_WARNINGS
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-Visual C++ .net 2002 より前では、ATL は多くの警告を無効にし、ユーザーコードに表示されないように無効にしました。 具体的には、次のように使用します。
+Visual C++ .net 2002 より前では、ATL は多くの警告を無効にし、ユーザーコードに表示されないように無効にしました。 具体的な内容は次のとおりです。
 
 - C4127 条件式は定数です
 
@@ -73,9 +73,9 @@ Visual C++ .net 2002 より前では、ATL は多くの警告を無効にし、�
 
 [!code-cpp[NVC_ATL_Utilities#97](../../atl/codesnippet/cpp/compiler-options-macros_1.h)]
 
-これ`#define`が追加された場合、ATL ヘッダーはこれらの警告の状態を保持し、グローバルに無効にしないようにします (または、ユーザーが個々の警告を明示的に無効にし、有効にしない場合)。
+この `#define` が追加された場合、ATL ヘッダーはこれらの警告の状態を保持して、グローバルに無効にしないようにします (または、ユーザーが個々の警告を明示的に無効にし、有効にしない場合)。
 
-新しいプロジェクトは、 `#define`既定で*pch* (Visual Studio 2017 以前の*stdafx.h* ) に設定されています。
+新しいプロジェクトでは、既定で*pch* (Visual Studio 2017 以前の*stdafx.h* ) で設定された `#define` ます。
 
 ##  <a name="_atl_apartment_threaded"></a>_ATL_APARTMENT_THREADED
 
@@ -85,25 +85,25 @@ Visual C++ .net 2002 より前では、ATL は多くの警告を無効にし、�
 _ATL_APARTMENT_THREADED
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 アパートメントスレッドを指定します。 ATL オブジェクトで使用できるスレッド処理モデルの説明については、「その他のスレッド処理オプションの[プロジェクトのスレッド処理モデルを指定](../../atl/specifying-the-threading-model-for-a-project-atl.md)する」および「 [Atl シンプルオブジェクトウィザード](../../atl/reference/options-atl-simple-object-wizard.md)」を参照してください。
 
 ##  <a name="_atl_cstring_explicit_constructors"></a>_ATL_CSTRING_EXPLICIT_CONSTRUCTORS
 
-特定`CString`のコンストラクターを明示的に行い、意図しない変換を防止します。
+特定の `CString` コンストラクターを明示的に使用して、意図しない変換を防止します。
 
 ```
 _ATL_CSTRING_EXPLICIT_CONSTRUCTORS
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-このコンストラクターが定義されている場合、1つのパラメーターを受け取るすべての CString コンストラクターは、明示的なキーワードを使用してコンパイルされます。これにより、入力引数の暗黙の型変換ができなくなります。 これは、たとえば、_UNICODE が定義されている場合に、char * 文字列を CString コンストラクター引数として使用しようとすると、コンパイラエラーが発生することを意味します。 このマクロは、ナロー文字列型とワイド文字列型の間の暗黙的な変換を防止する必要がある場合に使用します。
+このコンストラクターが定義されている場合、1つのパラメーターを受け取るすべての CString コンストラクターは、明示的なキーワードを使用してコンパイルされます。これにより、入力引数の暗黙の型変換ができなくなります。 これは、たとえば _UNICODE が定義されている場合に、char * 文字列を CString コンストラクター引数として使用しようとすると、コンパイラエラーが発生することを意味します。 このマクロは、ナロー文字列型とワイド文字列型の間の暗黙的な変換を防止する必要がある場合に使用します。
 
-すべてのコンストラクター文字列引数に対して _T マクロを使用することにより、_ATL_CSTRING_EXPLICIT_CONSTRUCTORS を定義し、_UNICODE が定義されているかどうかに関係なく、コンパイルエラーを回避できます。
+すべてのコンストラクター文字列引数に対して _T マクロを使用すると、_UNICODE が定義されているかどうかに関係なく、_ATL_CSTRING_EXPLICIT_CONSTRUCTORS を定義し、コンパイルエラーを回避できます。
 
-##  <a name="_atl_enable_ptm_warning"></a>  _ATL_ENABLE_PTM_WARNING
+##  <a name="_atl_enable_ptm_warning"></a>_ATL_ENABLE_PTM_WARNING
 
 このマクロは、メンバー関数へのポインターに対しC++て ANSI 標準準拠の構文を強制的に使用するために定義します。 このマクロを使用すると、非標準の構文を使用してメンバー関数へのポインターを初期化するときに、C4867 コンパイラエラーが生成されます。
 
@@ -111,11 +111,11 @@ _ATL_CSTRING_EXPLICIT_CONSTRUCTORS
 #define _ATL_ENABLE_PTM_WARNING
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-ATL および MFC ライブラリは、Microsoft C++コンパイラの標準C++準拠の向上に合わせて変更されています。 ANSI C++規格によれば、クラスメンバー関数へのポインターの構文はで`&CMyClass::MyFunc`ある必要があります。
+ATL および MFC ライブラリは、Microsoft C++コンパイラの標準C++準拠の向上に合わせて変更されています。 ANSI C++規格によれば、クラスメンバー関数へのポインターの構文は `&CMyClass::MyFunc`する必要があります。
 
-[_ATL_ENABLE_PTM_WARNING](#_atl_enable_ptm_warning)が定義されていない場合 (既定のケース)、ATL/MFC はマクロマップ (特にメッセージマップ) の C4867 エラーを無効にします。これにより、以前のバージョンで作成されたコードを以前と同様に引き続きビルドできます。 **_ATL_ENABLE_PTM_WARNING**を定義する場合は、コードがC++標準に準拠している必要があります。
+[_ATL_ENABLE_PTM_WARNING](#_atl_enable_ptm_warning)が定義されていない場合 (既定のケース)、ATL/MFC はマクロマップ (特にメッセージマップ) の C4867 エラーを無効にして、以前のバージョンで作成されたコードを以前と同じようにビルドできるようにします。 **_ATL_ENABLE_PTM_WARNING**を定義する場合は、コードがC++標準に準拠している必要があります。
 
 ただし、非標準のフォームは非推奨とされます。 既存のコードを標準準拠のC++構文に移動する必要があります。 コード例を次に示します。
 
@@ -135,7 +135,7 @@ ATL および MFC ライブラリは、Microsoft C++コンパイラの標準C++�
 _ATL_FREE_THREADED
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 フリースレッド処理を指定します。 フリースレッドは、マルチスレッドアパートメントモデルと同じです。 ATL オブジェクトで使用できるスレッド処理モデルの説明については、「その他のスレッド処理オプションの[プロジェクトのスレッド処理モデルを指定](../../atl/specifying-the-threading-model-for-a-project-atl.md)する」および「 [Atl シンプルオブジェクトウィザード](../../atl/reference/options-atl-simple-object-wizard.md)」を参照してください。
 
@@ -147,7 +147,7 @@ _ATL_FREE_THREADED
 _ATL_MULTI_THREADED
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 このシンボルが定義されている場合、ATL はグローバルデータへのアクセスを適切に同期するコードを取得します。 新しいコードでは、代わりに同等のマクロ[_ATL_FREE_THREADED](#_atl_free_threaded)を使用する必要があります。
 
@@ -159,7 +159,7 @@ _ATL_MULTI_THREADED
 _ATL_NO_AUTOMATIC_NAMESPACE
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 このシンボルが定義されていない場合 (atlbase. h を含む) は、既定で**名前空間 ATL を使用し**ます。これにより、名前の競合が発生する可能性があります。 これを回避するには、このシンボルを定義します。
 
@@ -171,7 +171,7 @@ _ATL_NO_AUTOMATIC_NAMESPACE
 _ATL_NO_COM_SUPPORT
 ```
 
-##  <a name="atl_no_vtable"></a>  ATL_NO_VTABLE
+##  <a name="atl_no_vtable"></a>ATL_NO_VTABLE
 
 クラスのコンストラクターおよびデストラクターで vtable ポインターが初期化されないようにするシンボル。
 
@@ -179,7 +179,7 @@ _ATL_NO_COM_SUPPORT
 ATL_NO_VTABLE
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 Vtable ポインターがクラスのコンストラクターおよびデストラクターで初期化されない場合、リンカーは、その vtable と、それが指すすべての関数を削除できます。 **__Declspec (novtable)** に展開されます。
 
@@ -204,7 +204,7 @@ Vtable ポインターがクラスのコンストラクターおよびデスト�
 *myfunction*<br/>
 インライン展開しない関数。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 関数をインラインとして宣言して、ヘッダーファイルに配置できるようにする必要がある場合でも、このシンボルを使用します。 **__Declspec (noinline)** に展開されます。
 
@@ -216,10 +216,10 @@ Vtable ポインターがクラスのコンストラクターおよびデスト�
 _ATL_SINGLE_THREADED
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 オブジェクトが常にプライマリ COM スレッドで実行されることを指定します。 ATL オブジェクトで使用できるスレッド処理モデルの説明については、「その他のスレッド処理オプションの[プロジェクトのスレッド処理モデルを指定](../../atl/specifying-the-threading-model-for-a-project-atl.md)する」および「 [Atl シンプルオブジェクトウィザード](../../atl/reference/options-atl-simple-object-wizard.md)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[[マクロ]](../../atl/reference/atl-macros.md)
+[マクロ](../../atl/reference/atl-macros.md)
