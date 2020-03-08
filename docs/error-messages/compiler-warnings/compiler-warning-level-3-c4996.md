@@ -8,11 +8,11 @@ helpviewer_keywords:
 - C4996
 ms.assetid: 926c7cc2-921d-43ed-ae75-634f560dd317
 ms.openlocfilehash: 98662dc0b5439c1f8857e4f2ad259793a4d03e41
-ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74898778"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865224"
 ---
 # <a name="compiler-warning-level-3-c4996"></a>コンパイラの警告 (レベル 3) C4996
 
@@ -21,7 +21,7 @@ ms.locfileid: "74898778"
 > [!IMPORTANT]
 > この警告は、常に、シンボルを宣言するヘッダーファイルの作成者からの意図的なメッセージです。 結果を理解することなく、非推奨のシンボルを使用しないでください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 Visual Studio ライブラリの多くの関数、メンバー関数、テンプレート関数、およびグローバル変数は*非推奨*とされます。 POSIX や Microsoft 固有の関数などの一部は、現在、優先名が異なるため非推奨とされます。 一部の C ランタイムライブラリ関数は安全ではなく、より安全なバリアントがあるため、非推奨とされます。 他のユーザーは廃止されているため、非推奨となりました。 廃止されたメッセージには、通常、非推奨の関数またはグローバル変数の代替候補が含まれています。
 

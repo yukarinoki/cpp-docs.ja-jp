@@ -53,11 +53,11 @@ helpviewer_keywords:
 - CView [MFC], OnUpdate
 ms.assetid: 9cff3c56-7564-416b-b9a4-71a9254ed755
 ms.openlocfilehash: f6be846e80209ce94c84222d61c37a7964baad03
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77127510"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78855542"
 ---
 # <a name="cview-class"></a>CView クラス
 
@@ -73,13 +73,13 @@ class AFX_NOVTABLE CView : public CWnd
 
 ### <a name="protected-constructors"></a>プロテクト コンストラクター
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[CView:: CView](#cview)|`CView` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[CView::D oPreparePrinting](#doprepareprinting)|[印刷] ダイアログボックスを表示し、プリンターデバイスコンテキストを作成します。`OnPreparePrinting` メンバー関数をオーバーライドするときに、を呼び出します。|
 |[CView:: GetDocument](#getdocument)|ビューに関連付けられているドキュメントを返します。|
@@ -97,7 +97,7 @@ class AFX_NOVTABLE CView : public CWnd
 
 ### <a name="protected-methods"></a>プロテクト メソッド
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[CView:: Onアクティブフレーム](#onactivateframe)|ビューを含むフレームウィンドウがアクティブ化または非アクティブ化されたときに呼び出されます。|
 |[CView:: Onアクティブビュー](#onactivateview)|ビューがアクティブになったときに呼び出されます。|
@@ -159,7 +159,7 @@ Microsoft Foundation Class ライブラリには、`CScrollView`だけでなく�
 
 `CView`
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxwin.h
 
@@ -533,7 +533,7 @@ virtual DROPEFFECT OnDropEx(
 ユーザーが現在のキーの状態に基づいて既定のドロップ操作を選択した場合の効果。 DROPEFFECT_NONE の可能性があります。 ドロップ効果については、「解説」を参照してください。
 
 *ドロップ*<br/>
-ドロップソースがサポートするドロップ効果の一覧。 ドロップ効果の値は、ビットごとの OR ( **&#124;**) 演算を使用して組み合わせることができます。 ドロップ効果については、「解説」を参照してください。
+ドロップソースがサポートするドロップ効果の一覧。 ドロップ効果の値は、ビットごとの OR ( **&#124;** ) 演算を使用して組み合わせることができます。 ドロップ効果については、「解説」を参照してください。
 
 *視点*<br/>
 ビュークライアント領域を基準とした、現在のマウス位置。

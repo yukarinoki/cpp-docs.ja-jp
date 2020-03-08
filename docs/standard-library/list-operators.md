@@ -17,15 +17,15 @@ helpviewer_keywords:
 - std::operator&lt;= (list)
 - std::operator== (list)
 ms.openlocfilehash: 7b0b7540c1b9a55140405a55e8e034f9c6ec646c
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246464"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78874435"
 ---
 # <a name="ltlistgt-operators"></a>&lt;list&gt; 演算子
 
-## <a name="op_neq"></a> operator!=
+## <a name="op_neq"></a>operator! =
 
 演算子の左辺の list オブジェクトが右辺の list オブジェクトと等しくないかどうかを調べます。
 
@@ -38,16 +38,16 @@ bool operator!=(
 ### <a name="parameters"></a>パラメーター
 
 *左*\
-`list` 型のオブジェクト。
+`list` 型オブジェクト。
 
-*そうです*\
-`list` 型のオブジェクト。
+*右*\
+`list` 型オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
 リストが等しくない場合は **true**、リストが等しい場合は **false**。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 list オブジェクト間の比較は、要素のペアの比較に基づいています。 2 つの list は、同じ数の要素を持ち、各要素の値が同じである場合に等しくなります。 それ以外の場合は等しくありません。
 
@@ -89,16 +89,16 @@ bool operator<(
 ### <a name="parameters"></a>パラメーター
 
 *左*\
-`list` 型のオブジェクト。
+`list` 型オブジェクト。
 
-*そうです*\
-`list` 型のオブジェクト。
+*右*\
+`list` 型オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
 演算子の左辺の list が演算子の右辺の list 未満である場合は **true**、それ以外の場合は **false**。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 list オブジェクト間の比較は、要素のペアの比較に基づいています。 2 つのオブジェクト間の小なり関係は、最初の等しくない要素のペアの比較に基づいています。
 
@@ -131,7 +131,7 @@ List c1 is less than list c2.
 */
 ```
 
-## <a name="op_lt_eq"></a> 演算子&lt;=
+## <a name="op_lt_eq"></a>演算子&lt;=
 
 演算子の左辺の list オブジェクトが右辺の list オブジェクト以下かどうかを調べます。
 
@@ -144,16 +144,16 @@ bool operator<=(
 ### <a name="parameters"></a>パラメーター
 
 *左*\
-`list` 型のオブジェクト。
+`list` 型オブジェクト。
 
-*そうです*\
-`list` 型のオブジェクト。
+*右*\
+`list` 型オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
 演算子の左辺の list が演算子の右辺の list 以下である場合は **true**、それ以外の場合は **false**。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 list オブジェクト間の比較は、要素のペアの比較に基づいています。 2 つのオブジェクト間の "以下" 関係は、最初の等しくない要素のペアの比較に基づいています。
 
@@ -186,7 +186,7 @@ List c1 is less than or equal to list c2.
 */
 ```
 
-## <a name="op_eq_eq"></a> 演算子 = =
+## <a name="op_eq_eq"></a>operator = =
 
 演算子の左辺の list オブジェクトが右辺の list オブジェクトと等しいかどうかを調べます。
 
@@ -199,16 +199,16 @@ bool operator==(
 ### <a name="parameters"></a>パラメーター
 
 *左*\
-`list` 型のオブジェクト。
+`list` 型オブジェクト。
 
-*そうです*\
-`list` 型のオブジェクト。
+*右*\
+`list` 型オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
 演算子の左辺の list が演算子の右辺の list と等しい場合は **true**、それ以外の場合は **false**。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 list オブジェクト間の比較は、要素のペアの比較に基づいています。 2 つの list は、同じ数の要素を持ち、各要素の値が同じである場合に等しくなります。 それ以外の場合は等しくありません。
 
@@ -250,16 +250,16 @@ bool operator>(
 ### <a name="parameters"></a>パラメーター
 
 *左*\
-`list` 型のオブジェクト。
+`list` 型オブジェクト。
 
-*そうです*\
-`list` 型のオブジェクト。
+*右*\
+`list` 型オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
 演算子の左辺の list が演算子の右辺の list より大きい場合は **true**、それ以外の場合は **false**。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 list オブジェクト間の比較は、要素のペアの比較に基づいています。 2 つのオブジェクト間の大なり関係は、最初の等しくない要素のペアの比較に基づいています。
 
@@ -292,7 +292,7 @@ List c1 is greater than list c2.
 */
 ```
 
-## <a name="op_gt_eq"></a> 演算子&gt;=
+## <a name="op_gt_eq"></a>演算子&gt;=
 
 演算子の左辺の list オブジェクトが右辺の list オブジェクト以上かどうかを調べます。
 
@@ -305,16 +305,16 @@ bool operator>=(
 ### <a name="parameters"></a>パラメーター
 
 *左*\
-`list` 型のオブジェクト。
+`list` 型オブジェクト。
 
-*そうです*\
-`list` 型のオブジェクト。
+*右*\
+`list` 型オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
 演算子の左辺の list が演算子の右辺の list 以上である場合は **true**、それ以外の場合は **false**。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 list オブジェクト間の比較は、要素のペアの比較に基づいています。 2 つのオブジェクト間の "以上" 関係は、最初の等しくない要素のペアの比較に基づいています。
 

@@ -14,15 +14,15 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::ComPtrRefBase::ptr_ data member
 ms.assetid: 6d344c1a-cc13-4a3f-8a0d-f167ccb9348f
 ms.openlocfilehash: df4e2aa1ce650fd5b1f04baf2f7c4cd2fb4cff93
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398642"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865822"
 ---
 # <a name="comptrrefbase-class"></a>ComPtrRefBase クラス
 
-WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。
+は WRL インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。
 
 ## <a name="syntax"></a>構文
 
@@ -34,32 +34,32 @@ class ComPtrRefBase;
 ### <a name="parameters"></a>パラメーター
 
 *T*<br/>
-A [ComPtr\<T >](comptr-class.md)ことによって表されるだけでなく、インターフェイスから派生した型または型、`ComPtr`します。
+[Comptr\<t >](comptr-class.md)型、またはその派生型であり、`ComPtr`によって表されるインターフェイスだけではありません。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-基本クラスを表します、 [ComPtrRef](comptrref-class.md)クラス。
+[Comptrref](comptrref-class.md)クラスの基本クラスを表します。
 
 ## <a name="members"></a>メンバー
 
-### <a name="public-typedefs"></a>パブリック typedef
+### <a name="public-typedefs"></a>パブリック Typedef
 
-名前            | 説明
+Name            | Description
 --------------- | -------------------------------------------------
-`InterfaceType` | テンプレート パラメーターの型のシノニム*T*します。
+`InterfaceType` | テンプレートパラメーター *T*の型のシノニム。
 
 ### <a name="public-operators"></a>パブリック演算子
 
-名前                                                                       | 説明
+Name                                                                       | Description
 -------------------------------------------------------------------------- | -----------------------------------------------------------------------------------------------------
-[Comptrrefbase::operator IInspectable * *](#operator-iinspectable-star-star) | 現在ではキャスト[ptr _](#ptr)をポインターを-、-ポインターのデータ メンバー、`IInspectable`インターフェイス。
-[Comptrrefbase::operator IUnknown * *](#operator-iunknown-star-star)         | 現在ではキャスト[ptr _](#ptr)をポインターを-、-ポインターのデータ メンバー、`IUnknown`インターフェイス。
+[ComPtrRefBase:: operator IInspectable * *](#operator-iinspectable-star-star) | 現在の[ptr_](#ptr)データメンバーを `IInspectable` インターフェイスへのポインターへのポインターにキャストします。
+[ComPtrRefBase:: operator IUnknown * *](#operator-iunknown-star-star)         | 現在の[ptr_](#ptr)データメンバーを `IUnknown` インターフェイスへのポインターへのポインターにキャストします。
 
-### <a name="protected-data-members"></a>プロテクト データ メンバー
+### <a name="protected-data-members"></a>保護されるデータ メンバー
 
-名前                        | 説明
+Name                        | Description
 --------------------------- | ----------------------------------------------------------------
-[Comptrrefbase::ptr _](#ptr) | 現在のテンプレート パラメーターで指定された型へのポインター。
+[ComPtrRefBase::p tr_](#ptr) | 現在のテンプレートパラメーターによって指定された型へのポインター。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -69,46 +69,46 @@ A [ComPtr\<T >](comptr-class.md)ことによって表されるだけでなく、
 
 **ヘッダー:** client.h
 
-**名前空間:** Microsoft::WRL::Details
+**名前空間:** Microsoft:: WRL::D etails
 
-## <a name="operator-iinspectable-star-star"></a>Comptrrefbase::operator IInspectable\* \*演算子
+## <a name="operator-iinspectable-star-star"></a>ComPtrRefBase:: operator IInspectable\*\* 演算子
 
-WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。
+は WRL インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。
 
 ```cpp
 operator IInspectable**() const;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-現在ではキャスト[ptr _](#ptr)をポインターを-、-ポインターのデータ メンバー、`IInspectable`インターフェイス。
+現在の[ptr_](#ptr)データメンバーを `IInspectable` インターフェイスへのポインターへのポインターにキャストします。
 
-場合に、エラーが出力されますが、現在`ComPtrRefBase`から派生していない`IInspectable`。
+現在の `ComPtrRefBase` が `IInspectable`から派生していない場合は、エラーが生成されます。
 
-このキャストは使用可能な場合にのみ`__WRL_CLASSIC_COM__`が定義されています。
+このキャストは、`__WRL_CLASSIC_COM__` が定義されている場合にのみ使用できます。
 
-## <a name="operator-iunknown-star-star"></a>Comptrrefbase::operator IUnknown * * 演算子
+## <a name="operator-iunknown-star-star"></a>ComPtrRefBase:: operator IUnknown * * 演算子
 
-WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。
+は WRL インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。
 
 ```cpp
 operator IUnknown**() const;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-現在ではキャスト[ptr _](#ptr)をポインターを-、-ポインターのデータ メンバー、`IUnknown`インターフェイス。
+現在の[ptr_](#ptr)データメンバーを `IUnknown` インターフェイスへのポインターへのポインターにキャストします。
 
-場合に、エラーが出力されますが、現在`ComPtrRefBase`から派生していない`IUnknown`。
+現在の `ComPtrRefBase` が `IUnknown`から派生していない場合は、エラーが生成されます。
 
-## <a name="ptr"></a>Comptrrefbase::ptr _
+## <a name="ptr"></a>ComPtrRefBase::p tr_
 
-WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。
+は WRL インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。
 
 ```cpp
 T* ptr_;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-現在のテンプレート パラメーターで指定された型へのポインター。 `ptr_` 保護されたデータ メンバーです。
+現在のテンプレートパラメーターによって指定された型へのポインター。 `ptr_` は、保護されたデータメンバーです。

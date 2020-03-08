@@ -10,15 +10,15 @@ f1_keywords:
 - tuple/std::operator==
 ms.assetid: f25752dc-d3e2-4e12-b5ac-9a8682ca60ed
 ms.openlocfilehash: 5554f08f32048bafde5bdb2c316e12e1e01c6ffb
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68241657"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866195"
 ---
 # <a name="lttuplegt-operators"></a>&lt;tuple&gt; 演算子
 
-## <a name="op_neq"></a> operator!=
+## <a name="op_neq"></a>operator! =
 
 `tuple` オブジェクトどうしが等しくないかどうかを比較します。
 
@@ -34,7 +34,7 @@ bool operator!=(const tuple<T1, T2, ..., TN>& tpl1,
 *TN*\
 N 番目の tuple 要素の型。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 この関数は、`N` が 0 の場合は false、それ以外の場合は `get<0>(tpl1) != get<0>(tpl2) || get<1>(tpl1) != get<1>(tpl2) || ... || get<N - 1>(tpl1) == get<N - 1>(tpl2)` を返します。
 
@@ -99,7 +99,7 @@ bool operator<(const tuple<T1, T2, ..., TN>& tpl1,
 *TN*\
 N 番目の tuple 要素の型。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 この関数は、`N` が 0 より大きくかつ `tpl1` 内の最初に異なる値が `tpl2` 内の対応する値よりも小さい場合は true、それ以外の場合は false を返します。
 
@@ -148,7 +148,7 @@ false
 true
 ```
 
-## <a name="op_lt_eq"></a> 演算子&lt;=
+## <a name="op_lt_eq"></a>演算子&lt;=
 
 `tuple` オブジェクトの大小関係 (以下) を比較します。
 
@@ -164,9 +164,9 @@ bool operator<=(const tuple<T1, T2, ..., TN>& tpl1,
 *TN*\
 N 番目の tuple 要素の型。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`!(tpl2 < tpl1)` が返されます。
+`!(tpl2 < tpl1)`が返されます。
 
 ### <a name="example"></a>例
 
@@ -213,7 +213,7 @@ true
 false
 ```
 
-## <a name="op_eq_eq"></a> 演算子 = =
+## <a name="op_eq_eq"></a>operator = =
 
 `tuple` オブジェクトどうしが等しいかどうかを比較します。
 
@@ -229,7 +229,7 @@ bool operator==(const tuple<T1, T2, ..., TN>& tpl1,
 *TN*\
 N 番目の tuple 要素の型。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 この関数は、`N` が 0 の場合は true、それ以外の場合は `get<0>(tpl1) == get<0>(tpl2) && get<1>(tpl1) == get<1>(tpl2) && ... && get<N - 1>(tpl1) == get<N - 1>(tpl2)` を返します。
 
@@ -294,9 +294,9 @@ bool operator>(const tuple<T1, T2, ..., TN>& tpl1,
 *TN*\
 N 番目の tuple 要素の型。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`tpl2 < tpl1` が返されます。
+`tpl2 < tpl1`が返されます。
 
 ### <a name="example"></a>例
 
@@ -343,7 +343,7 @@ false
 true
 ```
 
-## <a name="op_gt_eq"></a> 演算子&gt;=
+## <a name="op_gt_eq"></a>演算子&gt;=
 
 `tuple` オブジェクトの大小関係 (以上) を比較します。
 
@@ -359,9 +359,9 @@ bool operator>=(const tuple<T1, T2, ..., TN>& tpl1,
 *TN*\
 N 番目の tuple 要素の型。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`!(tpl1 < tpl2)` が返されます。
+`!(tpl1 < tpl2)`が返されます。
 
 ### <a name="example"></a>例
 

@@ -63,11 +63,11 @@ helpviewer_keywords:
 - CDaoWorkspace [MFC], m_pDAOWorkspace
 ms.assetid: 64f60de6-4df1-4d4a-a65b-c489b5257d52
 ms.openlocfilehash: c1d235035cee9342c8c54c7aaa4e05a96d5a37e3
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303480"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78883872"
 ---
 # <a name="cdaoworkspace-class"></a>CDaoWorkspace クラス
 
@@ -83,13 +83,13 @@ class CDaoWorkspace : public CObject
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[CDaoWorkspace::CDaoWorkspace](#cdaoworkspace)|ワークスペースオブジェクトを構築します。 その後、`Create` または `Open`を呼び出します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[CDaoWorkspace:: Append](#append)|新しく作成されたワークスペースをデータベースエンジンのワークスペースコレクションに追加します。|
 |[CDaoWorkspace:: BeginTrans](#begintrans)|新しいトランザクションを開始します。これは、ワークスペースで開いているすべてのデータベースに適用されます。|
@@ -120,11 +120,11 @@ class CDaoWorkspace : public CObject
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[CDaoWorkspace:: m_pDAOWorkspace](#m_pdaoworkspace)|基になる DAO ワークスペースオブジェクトを指します。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 ほとんどの場合、複数のワークスペースは必要ありません。また、明示的なワークスペースオブジェクトを作成する必要はありません。データベースとレコードセットオブジェクトを開くと、DAO の既定のワークスペースが使用されます。 ただし、必要に応じて、追加のワークスペースオブジェクトを作成することによって、一度に複数のセッションを実行できます。 各ワークスペースオブジェクトには、独自のデータベースコレクション内の複数の開いているデータベースオブジェクトを含めることができます。 MFC では、ワークスペースは主にトランザクションマネージャーであり、開いているデータベースのセットをすべて同じ "トランザクション空間" で指定します。
 
@@ -143,7 +143,7 @@ class CDaoWorkspace : public CObject
 
 - データベースエンジンのワークスペースコレクションにアクセスします。このコレクションには、追加されたすべてのアクティブなワークスペースが格納されます。 また、ワークスペースをコレクションに追加せずに作成および操作することもできます。
 
-## <a name="security"></a>セキュリティ
+## <a name="security"></a>Security
 
 MFC は、セキュリティ制御に使用される DAO のユーザーとグループのコレクションを実装していません。 DAO のこれらの側面が必要な場合は、DAO インターフェイスを直接呼び出すことによって自分でプログラミングする必要があります。 詳細については、「[テクニカルノート 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md)」を参照してください。
 
@@ -189,7 +189,7 @@ DAO の直接呼び出しと DAO セキュリティの詳細については、�
 
 `CDaoWorkspace`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxdao
 
@@ -201,7 +201,7 @@ DAO の直接呼び出しと DAO セキュリティの詳細については、�
 virtual void Append();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `Append`、新しく作成されたワークスペースオブジェクトをデータベースエンジンのワークスペースコレクションに追加します。 ワークスペースはデータベースエンジンセッション間で保持されません。ディスク上ではなくメモリにのみ格納されます。 ワークスペースを追加する必要はありません。そうでない場合は、引き続き使用できます。
 
@@ -217,7 +217,7 @@ virtual void Append();
 void BeginTrans();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `BeginTrans`を呼び出した後、データまたはデータベース構造に対して行った更新は、トランザクションをコミットするときに有効になります。 ワークスペースは1つのトランザクション空間を定義するため、トランザクションはワークスペース内の開いているすべてのデータベースに適用されます。 トランザクションを完了するには、次の2つの方法があります。
 
@@ -237,7 +237,7 @@ void BeginTrans();
 CDaoWorkspace();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 C++オブジェクトを構築した後、次の2つのオプションがあります。
 
@@ -257,7 +257,7 @@ C++オブジェクトを構築した後、次の2つのオプションがあり�
 virtual void Close();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 開いているワークスペースオブジェクトを閉じると、基になる DAO オブジェクトが解放されます。ワークスペースがワークスペースコレクションのメンバーである場合は、そのオブジェクトをコレクションから削除します。 `Close` を呼び出すことをお勧めします。
 
@@ -276,7 +276,7 @@ virtual void Close();
 void CommitTrans();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 トランザクションは、データベースのデータまたはその構造に対する一連の変更で構成されます。これは、 [BeginTrans](#begintrans)の呼び出しから始まります。 トランザクションを完了したら、 [Rollback](#rollback)を使用してトランザクションをコミットするか、ロールバックする (変更をキャンセルする) 必要があります。 既定では、トランザクションを使用しない場合、レコードの更新はすぐにコミットされます。 `BeginTrans` を呼び出すと、`CommitTrans`を呼び出すまで更新のコミットメントが遅延されます。
 
@@ -319,7 +319,7 @@ static void PASCAL CompactDatabase(
 パスワードで保護されたデータベースを圧縮するときに使用するパスワードです。 パスワードを受け取る `CompactDatabase` のバージョンを使用する場合は、すべてのパラメーターを指定する必要があることに注意してください。 また、これは connect パラメーターであるため、次のように特殊な書式設定が必要です。PWD = *Lpszpassword*。 たとえば、次のようになります。PWD = "ハッピー"。 (先頭にセミコロンが必要です)。
 
 *lpszLocale*<br/>
-*Lpszdestname*を作成するための照合順序を指定するために使用される文字列式。 `dbLangGeneral` の既定値 (下記参照) を受け入れてこの引数を省略した場合、新しいデータベースのロケールは古いデータベースのロケールと同じになります。 指定できる値は次のとおりです。
+*Lpszdestname*を作成するための照合順序を指定するために使用される文字列式。 `dbLangGeneral` の既定値 (下記参照) を受け入れてこの引数を省略した場合、新しいデータベースのロケールは古いデータベースのロケールと同じになります。 次のいずれかの値になります。
 
 - `dbLangGeneral` 英語、ドイツ語、フランス語、ポルトガル語、イタリア語、および現代のスペイン語
 
@@ -371,7 +371,7 @@ static void PASCAL CompactDatabase(
 > [!CAUTION]
 >  データベースが暗号化されていない場合は、ユーザーまたはパスワードのセキュリティを実装している場合でも、データベースを構成するバイナリディスクファイルを直接読み取ることができます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 データベース内のデータを変更すると、データベースファイルが断片化し、必要以上のディスク領域を使用できるようになります。 データベースファイルを最適化するには、定期的にデータベースを圧縮する必要があります。 通常、圧縮されたデータベースは小さくなります。 また、データベースをコピーして圧縮するときに、照合順序、暗号化、またはデータ形式のバージョンを変更することもできます。
 
@@ -405,7 +405,7 @@ virtual void Create(
 *lpszPassword*<br/>
 新しいワークスペースオブジェクトのパスワードです。 パスワードの長さは最大14文字で、ASCII 0 (null) 以外の任意の文字を含めることができます。 パスワードでは大文字と小文字が区別されます。 関連情報については、DAO ヘルプの「Password プロパティ」を参照してください。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 全体的な作成プロセスは次のとおりです。
 
@@ -429,7 +429,7 @@ short GetDatabaseCount();
 
 ワークスペース内の開いているデータベースの数。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `GetDatabaseCount` は、ワークスペースの Databases コレクション内で定義されているすべてのデータベースをループ処理する必要がある場合に便利です。 コレクション内の特定のデータベースに関する情報を取得するには、「 [Getdatabaseinfo](#getdatabaseinfo)」を参照してください。 一般的な使用方法としては、開いているデータベースの数に対して `GetDatabaseCount` を呼び出し、次にその番号をループインデックスとして使用して `GetDatabaseInfo`を繰り返し呼び出します。
 
@@ -469,7 +469,7 @@ void GetDatabaseInfo(
 *lpszName*<br/>
 名前で参照するデータベースオブジェクトの名前。 名前は、最大14文字の文字列で、新しいワークスペースオブジェクトに一意の名前を付けます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 関数の1つのバージョンでは、インデックスを使用してデータベースを検索できます。 もう1つのバージョンでは、データベースを名前で検索できます。
 
@@ -487,7 +487,7 @@ static CString PASCAL GetIniPath();
 
 レジストリの場所を格納している[CString](../../atl-mfc-shared/reference/cstringt-class.md) 。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この場所を使用して、データベースエンジンの設定に関する情報を取得できます。 返される情報は、実際にはレジストリサブキーの名前です。
 
@@ -505,7 +505,7 @@ BOOL GetIsolateODBCTrans();
 
 ODBC トランザクションが分離されている場合は0以外の。それ以外の場合は0です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 場合によっては、同じ ODBC データベースで複数の同時トランザクションが保留されている必要があります。 これを行うには、トランザクションごとに個別のワークスペースを開く必要があります。 各ワークスペースはデータベースに対して独自の ODBC 接続を持つことができるので、システムのパフォーマンスが低下することに注意してください。 トランザクションの分離は通常必要ではないため、同じユーザーが開いている複数のワークスペースオブジェクトからの ODBC 接続は、既定で共有されます。
 
@@ -525,7 +525,7 @@ static short PASCAL GetLoginTimeout();
 
 ODBC データベースにログインしようとしたときにエラーが発生するまでの秒数。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この値は、ODBC データベースにログインしようとしたときにエラーが発生するまでの秒数を表します。 LoginTimeout の既定値は20秒です。 LoginTimeout が0に設定されている場合、タイムアウトは発生せず、データソースとの通信が応答を停止する可能性があります。
 
@@ -545,7 +545,7 @@ CString GetName();
 
 DAO ワークスペースオブジェクトのユーザー定義名を格納している[CString](../../atl-mfc-shared/reference/cstringt-class.md) 。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 名前は、データベースエンジンのワークスペースコレクション内の DAO ワークスペースオブジェクトに名前でアクセスする場合に便利です。
 
@@ -563,7 +563,7 @@ CString GetUserName();
 
 ワークスペースオブジェクトの所有者を表す[CString](../../atl-mfc-shared/reference/cstringt-class.md) 。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ワークスペースの所有者のアクセス許可を取得または設定するには、直接 DAO を呼び出して Permissions プロパティの設定を確認します。これにより、ユーザーが持つアクセス許可が決まります。 アクセス許可を操作するには、システムが必要です。MDA ファイル。
 
@@ -581,7 +581,7 @@ static CString PASCAL GetVersion();
 
 オブジェクトに関連付けられているデータベースエンジンのバージョンを示す[CString](../../atl-mfc-shared/reference/cstringt-class.md) 。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 返される値は、"major. minor" という形式のバージョン番号を表します。たとえば、"3.0" のようになります。 製品バージョン番号 (3.0 など) は、バージョン番号 (3)、ピリオド、およびリリース番号 (0) で構成されます。
 
@@ -599,7 +599,7 @@ short GetWorkspaceCount();
 
 ワークスペースコレクション内の開いているワークスペースの数。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この数には、コレクションに追加されていない開いているワークスペースは含まれません。 `GetWorkspaceCount` は、ワークスペースコレクション内で定義されているすべてのワークスペースをループ処理する必要がある場合に便利です。 コレクション内の特定のワークスペースに関する情報を取得するには、「 [GetWorkspaceInfo](#getworkspaceinfo)」を参照してください。 一般的な使用方法としては、開いているワークスペースの数に対して `GetWorkspaceCount` を呼び出してから、その番号をループインデックスとして使用して `GetWorkspaceInfo`を繰り返し呼び出します。
 
@@ -639,7 +639,7 @@ void GetWorkspaceInfo(
 *lpszName*<br/>
 名前で検索するためのワークスペースオブジェクトの名前。 名前は、最大14文字の文字列で、新しいワークスペースオブジェクトに一意の名前を付けます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 *Wkspcinfo*で返される情報の説明については、 [CDaoWorkspaceInfo](../../mfc/reference/cdaoworkspaceinfo-structure.md)構造体を参照してください。 この構造体には、前に説明した情報の項目に対応するメンバーが含まれ*ています。* 1つのレベルで情報を要求すると、以前のレベルについても情報が得られます。
 
@@ -656,7 +656,7 @@ static void PASCAL Idle(int nAction = dbFreeLocks);
 *N 操作*<br/>
 アイドル処理中に実行するアクション。 現在、有効なアクションは `dbFreeLocks`のみです。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 これは、多くの場合、マルチユーザー、マルチタスク環境では、レコードセット内のすべてのレコードを最新の状態に保つために十分なバックグラウンド処理時間がないためです。
 
@@ -681,7 +681,7 @@ BOOL IsOpen() const;
 
 ワークスペースオブジェクトが開いている場合は0以外。それ以外の場合は0です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 オープン状態のワークスペースのメンバー関数を呼び出すことができます。
 
@@ -689,7 +689,7 @@ BOOL IsOpen() const;
 
 基になる DAO ワークスペースオブジェクトへのポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 基になる DAO オブジェクトに直接アクセスする必要がある場合は、このデータメンバーを使用します。 このポインターを使用して、DAO オブジェクトのインターフェイスを呼び出すことができます。
 
@@ -708,7 +708,7 @@ virtual void Open(LPCTSTR lpszName = NULL);
 *lpszName*<br/>
 開く DAO ワークスペースオブジェクトの名前。ワークスペースに一意の名前を付けて、最大14文字の文字列を指定します。 既定値の NULL をそのまま使用して、既定のワークスペースを明示的に開きます。 名前付けの要件については、「[作成](#create)用の*lpszname*パラメーター」を参照してください。 関連情報については、DAO ヘルプの「Name プロパティ」を参照してください。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `CDaoWorkspace` オブジェクトを構築した後、このメンバー関数を呼び出して、次のいずれかの操作を行います。
 
@@ -722,8 +722,8 @@ virtual void Open(LPCTSTR lpszName = NULL);
 
 ||||
 |-|-|-|
-|[生成](#create)|[GetVersion](#getversion)|[SetDefaultUser](#setdefaultuser)|
-|[GetIniPath](#getinipath)|[退席](#idle)|[SetIniPath](#setinipath)|
+|[作成](#create)|[GetVersion](#getversion)|[SetDefaultUser](#setdefaultuser)|
+|[GetIniPath](#getinipath)|[Idle](#idle)|[SetIniPath](#setinipath)|
 |[GetLoginTimeout](#getlogintimeout)|[SetDefaultPassword](#setdefaultpassword)|[SetLoginTimeout](#setlogintimeout)|
 
 ##  <a name="repairdatabase"></a>CDaoWorkspace::RepairDatabase
@@ -739,7 +739,7 @@ static void PASCAL RepairDatabase(LPCTSTR lpszName);
 *lpszName*<br/>
 既存の Microsoft Jet エンジンデータベースファイルのパスとファイル名。 パスを省略した場合は、現在のディレクトリだけが検索されます。 システムで汎用名前付け規則 (UNC) がサポートされている場合は、次のようなネットワークパスを指定することもできます。たとえば、"\\\\\\\\\MYSHARE\\\MYDIR\\\MYDB.MDB "。 パス文字列には二重のC++円記号が必要です。これは、"\\" がエスケープ文字であるためです。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 修復する前に、 *Lpszname*で指定されたデータベースを閉じる必要があります。 マルチユーザー環境では、他のユーザーは、修復中に*Lpszname*を開くことはできません。 *Lpszname*が閉じられていないか、排他的に使用できない場合は、エラーが発生します。
 
@@ -758,7 +758,7 @@ static void PASCAL RepairDatabase(LPCTSTR lpszName);
 void Rollback();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 > [!CAUTION]
 >  1つのワークスペースオブジェクト内では、トランザクションは常にワークスペースに対してグローバルであり、1つのデータベースまたはレコードセットに限定されません。 ワークスペーストランザクション内の複数のデータベースまたはレコードセットに対して操作を実行する場合、`Rollback` は、これらのすべてのデータベースおよびレコードセットに対するすべての操作を復元します。
@@ -781,7 +781,7 @@ static void PASCAL SetDefaultPassword(LPCTSTR lpszPassword);
 *lpszPassword*<br/>
 既定のパスワードです。 パスワードの長さは最大14文字で、ASCII 0 (null) 以外の任意の文字を含めることができます。 パスワードでは大文字と小文字が区別されます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 設定した既定のパスワードは、通話後に作成する新しいワークスペースに適用されます。 後続のワークスペースを作成する場合、 [create](#create)呼び出しでパスワードを指定する必要はありません。
 
@@ -810,7 +810,7 @@ static void PASCAL SetDefaultUser(LPCTSTR lpszDefaultUser);
 *lpszDefaultUser*<br/>
 既定のユーザー名。 ユーザー名は、長さが 1-20 文字で、アルファベット文字を含めることができます。アクセントが付いている文字、数字、スペース、記号: "(引用符)、/(スラッシュ)、\ (円記号)、\[ \] (角かっこ&#124; )、: (コロン)、(パイプ)、\< (小なり記号)、> (大なり記号)、+ (正符号)、= (等号)、;(セミコロン)、、(コンマ)、(疑問符)、\* (アスタリスク)、先頭のスペース、および制御文字 (ASCII 00 から ASCII 31)。 関連情報については、DAO ヘルプの「UserName プロパティ」を参照してください。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 設定した既定のユーザー名は、の呼び出し後に作成する新しいワークスペースに適用されます。 後続のワークスペースを作成する場合、 [create](#create)呼び出しでユーザー名を指定する必要はありません。
 
@@ -839,7 +839,7 @@ static void PASCAL SetIniPath(LPCTSTR lpszRegistrySubKey);
 *lpszRegistrySubkey*<br/>
 Microsoft Jet データベースエンジン設定の場所またはインストール可能な ISAM データベースに必要なパラメーターの Windows レジストリサブキーの名前を含む文字列。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 特別な設定を指定する必要がある場合にのみ `SetIniPath` を呼び出します。 詳細については、DAO ヘルプの「IniPath プロパティ」を参照してください。
 
@@ -861,7 +861,7 @@ void SetIsolateODBCTrans(BOOL bIsolateODBCTrans);
 *bIsolateODBCTrans*<br/>
 ODBC トランザクションの分離を開始する場合は TRUE を渡します。 ODBC トランザクションの分離を停止する場合は、FALSE を渡します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 場合によっては、同じ ODBC データベースで複数の同時トランザクションが保留されている必要があります。 これを行うには、トランザクションごとに個別のワークスペースを開く必要があります。 各ワークスペースはデータベースに対して独自の ODBC 接続を持つことができますが、システムのパフォーマンスが低下します。 トランザクションの分離は通常必要ではないため、同じユーザーが開いている複数のワークスペースオブジェクトからの ODBC 接続は、既定で共有されます。
 
@@ -880,7 +880,7 @@ static void PASCAL SetLoginTimeout(short nSeconds);
 *nSeconds*<br/>
 ODBC データベースにログインしようとしたときにエラーが発生するまでの秒数。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この値は、ODBC データベースにログインしようとしたときにエラーが発生するまでの秒数を表します。 LoginTimeout の既定値は20秒です。 LoginTimeout が0に設定されている場合、タイムアウトは発生せず、データソースとの通信が応答を停止する可能性があります。
 

@@ -37,11 +37,11 @@ helpviewer_keywords:
 - COleDataSource [MFC], SetClipboard
 ms.assetid: 02c8ee7d-8e10-4463-8613-bb2a0305ca69
 ms.openlocfilehash: 5cd573590bc1adb303e0b4c5cd600b9fa6c685b2
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77127856"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78855758"
 ---
 # <a name="coledatasource-class"></a>COleDataSource クラス
 
@@ -57,13 +57,13 @@ class COleDataSource : public CCmdTarget
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[COleDataSource:: COleDataSource](#coledatasource)|`COleDataSource` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[COleDataSource:: CacheData](#cachedata)|`STGMEDIUM` 構造体を使用して、指定された形式でデータを提供します。|
 |[COleDataSource:: CacheGlobalData](#cacheglobaldata)|は、HGLOBAL を使用して、指定された形式でデータを提供します。|
@@ -80,7 +80,7 @@ class COleDataSource : public CCmdTarget
 |[COleDataSource:: OnSetData](#onsetdata)|`COleDataSource` オブジェクトのデータを置換するために呼び出されます。|
 |[COleDataSource:: SetClipboard](#setclipboard)|`COleDataSource` オブジェクトをクリップボードに配置します。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 OLE データソースは直接作成できます。 また、 [COleClientItem](../../mfc/reference/coleclientitem-class.md)クラスと[COleServerItem](../../mfc/reference/coleserveritem-class.md)クラスは、`CopyToClipboard` と `DoDragDrop` メンバー関数に応答して OLE データソースを作成します。 簡単な説明については、「 [COleServerItem:: CopyToClipboard](../../mfc/reference/coleserveritem-class.md#copytoclipboard) 」を参照してください。 クライアント項目またはサーバー項目クラスの `OnGetClipboardData` メンバー関数をオーバーライドして、`CopyToClipboard` または `DoDragDrop` メンバー関数用に作成された OLE データソースのデータにクリップボード形式を追加します。
 
@@ -96,7 +96,7 @@ OLE データソースは直接作成できます。 また、 [COleClientItem](
 
 `COleDataSource`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxole
 
@@ -122,7 +122,7 @@ void CacheData(
 *lpFormatEtc*<br/>
 データが提供される形式を記述する[FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)構造体を指します。 *CfFormat*で指定されたクリップボード形式以外の追加の書式情報を指定する場合は、このパラメーターの値を指定します。 NULL の場合は、`FORMATETC` 構造内の他のフィールドに既定値が使用されます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この関数は即時レンダリングを使用してデータを提供するため、データを指定する必要があります。 データは必要になるまでキャッシュされます。
 
@@ -158,7 +158,7 @@ void CacheGlobalData(
 *lpFormatEtc*<br/>
 データが提供される形式を記述する[FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)構造体を指します。 *CfFormat*で指定されたクリップボード形式以外の追加の書式情報を指定する場合は、このパラメーターの値を指定します。 NULL の場合は、`FORMATETC` 構造内の他のフィールドに既定値が使用されます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この関数は、即時レンダリングを使用してデータを提供するため、関数を呼び出すときにデータを指定する必要があります。データは必要になるまでキャッシュされます。 大量のデータを提供する場合や、構造化されたストレージメディアが必要な場合は、`CacheData` メンバー関数を使用します。
 
@@ -194,7 +194,7 @@ void DelayRenderData(
 *lpFormatEtc*<br/>
 データが提供される形式を記述する[FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)構造体を指します。 *CfFormat*で指定されたクリップボード形式以外の追加の書式情報を指定する場合は、このパラメーターの値を指定します。 NULL の場合は、`FORMATETC` 構造内の他のフィールドに既定値が使用されます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この関数は、遅延レンダリングを使用してデータを提供するため、データはすぐには提供されません。 [OnRenderData](#onrenderdata)または[OnRenderGlobalData](#onrenderglobaldata)メンバー関数は、データを要求するために呼び出されます。
 
@@ -224,7 +224,7 @@ void DelayRenderFileData(
 *lpFormatEtc*<br/>
 データが提供される形式を記述する[FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)構造体を指します。 *CfFormat*で指定されたクリップボード形式以外の追加の書式情報を指定する場合は、このパラメーターの値を指定します。 NULL の場合は、`FORMATETC` 構造内の他のフィールドに既定値が使用されます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この関数は、遅延レンダリングを使用してデータを提供するため、データはすぐには提供されません。 [OnRenderFileData](#onrenderfiledata)メンバー関数は、データを要求するために呼び出されます。
 
@@ -254,7 +254,7 @@ void DelaySetData(
 *lpFormatEtc*<br/>
 データが置換される形式を記述する[FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)構造体を指します。 *CfFormat*で指定されたクリップボード形式以外の追加の書式情報を指定する場合は、このパラメーターの値を指定します。 NULL の場合は、`FORMATETC` 構造内の他のフィールドに既定値が使用されます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 [Onsetdata](#onsetdata)は、このような場合にフレームワークによって呼び出されます。 これは、フレームワークが[COleServerItem:: GetDataSource](../../mfc/reference/coleserveritem-class.md#getdatasource)からデータソースを返す場合にのみ使用されます。 `DelaySetData` が呼び出されない場合、`OnSetData` 関数は呼び出されません。 サポートするクリップボードまたは `FORMATETC` 形式ごとに `DelaySetData` を呼び出す必要があります。
 
@@ -296,7 +296,7 @@ DROPEFFECT DoDragDrop(
 
 ドラッグアンドドロップ操作によって生成されるドロップ効果。それ以外の場合は、指定された四角形を離れる前にユーザーがマウスボタンを離したため、操作が開始されない場合は DROPEFFECT_NONE。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ドラッグアンドドロップ操作はすぐには開始されません。 マウスカーソルが、 *lpRectStartDrag*で指定された四角形から離れるか、指定されたミリ秒数が経過するまで待機します。 *LpRectStartDrag*が NULL の場合、四角形のサイズは1ピクセルです。
 
@@ -320,7 +320,7 @@ DROPEFFECT DoDragDrop(
 void Empty();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 キャッシュと遅延の両方の表示形式は空になるため、再利用できます。
 
@@ -334,7 +334,7 @@ void Empty();
 static void PASCAL FlushClipboard();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 [Setclipboard](#setclipboard)を使用してクリップボードにデータを格納します。
 
@@ -372,7 +372,7 @@ virtual BOOL OnRenderData(
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 指定された形式は、遅延レンダリングのために[DelayRenderData](#delayrenderdata)または[DelayRenderFileData](#delayrenderfiledata)メンバー関数を使用して、以前に `COleDataSource` オブジェクトに配置されています。 指定されたストレージメディアがファイルまたはメモリのいずれかである場合、この関数の既定の実装は[OnRenderFileData](#onrenderfiledata)または[OnRenderGlobalData](#onrenderglobaldata)を呼び出します。 これらの形式のいずれも指定しない場合、既定の実装では0が返され、何も実行されません。 MFC によって処理される遅延レンダリングの詳細については、「[データオブジェクトとデータソース: 操作](../../mfc/data-objects-and-data-sources-manipulation.md)」を参照してください。
 
@@ -404,7 +404,7 @@ virtual BOOL OnRenderFileData(
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 指定された形式は、遅延レンダリングのために[DelayRenderData](#delayrenderdata)メンバー関数を使用して、以前に `COleDataSource` オブジェクトに配置されています。 この関数の既定の実装では、単に FALSE が返されます。
 
@@ -434,7 +434,7 @@ virtual BOOL OnRenderGlobalData(
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 指定された形式は、遅延レンダリングのために[DelayRenderData](#delayrenderdata)メンバー関数を使用して、以前に `COleDataSource` オブジェクトに配置されています。 この関数の既定の実装では、単に FALSE が返されます。
 
@@ -470,7 +470,7 @@ virtual BOOL OnSetData(
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 データソースは、データが正常に取得されるまでデータの所有権を取得しません。 つまり、`OnSetData` が0を返す場合、所有権は取得されません。 データソースが所有権を取得すると、 [ReleaseStgMedium](/windows/win32/api/ole2/nf-ole2-releasestgmedium)関数を呼び出すことによってストレージメディアが解放されます。
 

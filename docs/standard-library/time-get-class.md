@@ -39,11 +39,11 @@ helpviewer_keywords:
 - std::time_get [C++], get_year
 ms.assetid: 869d5f5b-dbab-4628-8333-bdea7e272023
 ms.openlocfilehash: e605423b829305bd1e7bde8be4fdbf312c8ce3c1
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72685501"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876192"
 ---
 # <a name="time_get-class"></a>time_get クラス
 
@@ -59,32 +59,32 @@ class time_get : public time_base;
 
 ### <a name="parameters"></a>パラメーター
 
-*Chartype* \
+*Chartype*\
 文字をエンコードするためにプログラム内で使用される型。
 
-*InputIterator* \
+*InputIterator*\
 時刻値の読み取り元の反復子。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 すべてのロケールのファセットと同様、静的オブジェクト ID に最初に格納されている値は 0 です。 格納されている値に初めてアクセスしようとすると、**id** に一意の正の値が格納されます。
 
 ### <a name="constructors"></a>コンストラクター
 
-|コンストラクター|説明|
+|Constructor|Description|
 |-|-|
 |[time_get](#time_get)|`time_get` 型のオブジェクトのコンストラクター。|
 
-### <a name="typedefs"></a>Typedef
+### <a name="typedefs"></a>Typedefs
 
-|型名|説明|
+|種類の名前。|Description|
 |-|-|
 |[char_type](#char_type)|ロケールによって使用される文字を表すために使用される型。|
 |[iter_type](#iter_type)|入力反復子を表す型。|
 
 ### <a name="member-functions"></a>メンバー関数
 
-|メンバー関数|説明|
+|メンバー関数|Description|
 |-|-|
 |[date_order](#date_order)|ファセットによって使用される日付順序を返します。|
 |[do_date_order](#do_date_order)|ファセットによって使用される日付順序を返すために呼び出されるプロテクト仮想メンバー関数。|
@@ -101,9 +101,9 @@ class time_get : public time_base;
 |[get_weekday](#get_weekday)|曜日の名前として文字列を解析します。|
 |[get_year](#get_year)|年の名前として文字列を解析します。|
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<locale>
+**ヘッダー:** \<ロケール >
 
 **名前空間:** std
 
@@ -115,7 +115,7 @@ class time_get : public time_base;
 typedef CharType char_type;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 この型は、テンプレート パラメーター **CharType** のシノニムです。
 
@@ -131,7 +131,7 @@ dateorder date_order() const;
 
 ファセットによって使用される日付順序。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このメンバー関数は、[do_date_order](#do_date_order) を返します。
 
@@ -191,9 +191,9 @@ virtual dateorder do_date_order() const;
 
 ファセットによって使用される日付順序。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-プロテクト仮想メンバー関数は、日付の部分が [do_get_date](#do_get_date) と一致する順序を示す、**time_base::dateorder** 型の値を返します。 この実装では、値は **time_base::mdy** であり、December 2, 1979 の形式の日付に対応します。
+プロテクト仮想メンバー関数は、日付の部分が **do_get_date** と一致する順序を示す、[time_base::dateorder](#do_get_date) 型の値を返します。 この実装では、値は **time_base::mdy** であり、December 2, 1979 の形式の日付に対応します。
 
 ### <a name="example"></a>例
 
@@ -217,34 +217,34 @@ iter_type first,
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*の \
+*最初*の\
 変換されるシーケンスの開始位置を示す入力反復子。
 
-*最後*の \
+*最後*の\
 シーケンスの終了位置を示す入力反復子。
 
-*iosbase. flags* \
+*iosbase. flags*\
 ストリーム オブジェクト。
 
 *状態*\
 適切なビットマスク要素がエラーを示すように設定されている iosbase. flags のフィールド。
 
-*ptm* \
+*ptm*\
 時間を格納する時間構造体へのポインター。
 
-*fmt* \
+*fmt*\
 変換指定子の文字。
 
-*mod* \
+*mod*\
 省略可能な修飾子文字。
 
 ### <a name="return-value"></a>戻り値
 
 変換されない最初の要素を指定する反復子を返します。 変換エラーが発生すると `state` に `ios_base::failbit` が設定され、*最初*にが返されます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この仮想メンバー関数は、範囲 [`first`、`last`) 内の1つ以上の入力要素を変換およびスキップし、`*pt` の1つ以上のメンバーに格納されている値を確認します。 変換エラーが発生すると `state` に `ios_base::failbit` が設定され、*最初*にが返されます。 それ以外の場合、この関数は変換されていないの最初の要素を示す反復子を返します。
+この仮想メンバー関数は、範囲 [`first`、`last`) 内の1つ以上の入力要素を変換およびスキップし、`*pt`の1つ以上のメンバーに格納されている値を確認します。 変換エラーが発生すると `state` に `ios_base::failbit` が設定され、*最初*にが返されます。 それ以外の場合、この関数は変換されていないの最初の要素を示す反復子を返します。
 
 変換指定子は、次のとおりです。
 
@@ -294,11 +294,11 @@ iter_type first,
 
 `'Y'`。動作は、[time_get::get_year](#get_year) と同じです。
 
-その他の変換指定子は、`state` に `ios_base::failbit` を設定して返します。 この実装では、修飾子には効果がありません。
+その他の変換指定子は、`ios_base::failbit` に `state` を設定して返します。 この実装では、修飾子には効果がありません。
 
 ## <a name="do_get_date"></a>  time_get::do_get_date
 
-`strftime` の *x* 指定子によって生成される日付として文字列を解析するために呼び出されるプロテクト仮想メンバー関数。
+*の*x`strftime` 指定子によって生成される日付として文字列を解析するために呼び出されるプロテクト仮想メンバー関数。
 
 ```cpp
 virtual iter_type do_get_date(iter_type first,
@@ -310,28 +310,28 @@ virtual iter_type do_get_date(iter_type first,
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*の \
+*最初*の\
 変換されるシーケンスの開始位置を示す入力反復子。
 
-*最後*の \
+*最後*の\
 変換されるシーケンスの終了位置を示す入力反復子。
 
-*iosbase. flags* \
+*iosbase. flags*\
 書式設定フラグ。これが設定されている場合、通貨記号は省略可能です。それ以外の場合は必須です。
 
 *状態*\
 操作が成功したかどうかに基づき、ストリームの状態に適したビットマスク要素を設定します。
 
-*ptm* \
+*ptm*\
 日付の情報を格納する場所へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
 入力フィールドを超える先頭の要素を示す入力反復子。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-プロテクト仮想メンバー関数は、シーケンス [ `first`, `last`) の先頭から始め、空でない完全な日付入力フィールドを認識するまで、連続した要素との一致を試みます。 成功した場合は、このフィールドをコンポーネント**tm:: tm \_mon**、 **tm:: tm \_day**、および**tm:: tm \_year**と同等の値に変換し、それぞれの結果を `ptm->tm_mon`、`ptm->tm_day`、および `ptm->tm_year` に格納します。 これは、日付入力フィールドを超える先頭の要素を示す反復子を返します。 それ以外の場合、関数は `iosbase::failbit` を*状態*に設定します。 これは、有効な日付入力フィールドのプレフィックスを超える先頭の要素を示す反復子を返します。 どちらの場合も、戻り値が*last*と等しい場合、関数は*状態*の `ios_base::eofbit` を設定します。
+プロテクト仮想メンバー関数は、シーケンス [ `first`, `last`) の先頭から始め、空でない完全な日付入力フィールドを認識するまで、連続した要素との一致を試みます。 成功した場合、このフィールドをコンポーネント**tm:: tm\_mon**、 **tm:: tm\_day**、および**tm:: tm\_year**と同等の値に変換し、それぞれの結果を `ptm->tm_mon`、`ptm->tm_day`、および `ptm->tm_year`に格納します。 これは、日付入力フィールドを超える先頭の要素を示す反復子を返します。 それ以外の場合、関数は `iosbase::failbit` を*状態*に設定します。 これは、有効な日付入力フィールドのプレフィックスを超える先頭の要素を示す反復子を返します。 どちらの場合も、戻り値が*last*と等しい場合、関数は*状態*の `ios_base::eofbit` を設定します。
 
 日付入力フィールドの形式はロケールに依存します。 既定のロケールの場合、日付入力フィールドは MMM DD, YYYY の形式になります。各要素の説明は次のとおりです。
 
@@ -361,28 +361,28 @@ virtual iter_type do_get_monthname(iter_type first,
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*の \
+*最初*の\
 変換されるシーケンスの開始位置を示す入力反復子。
 
-*最後*の \
+*最後*の\
 変換されるシーケンスの終了位置を示す入力反復子。
 
-*iosbase. flags* \
-使用されません。
+*iosbase. flags*\
+未使用。
 
 *状態*\
 操作が成功したかどうかに基づき、ストリームの状態に適したビットマスク要素を設定する出力パラメーター。
 
-*ptm* \
+*ptm*\
 月の情報を格納する場所へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
 入力フィールドを超える先頭の要素を示す入力反復子。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-プロテクト仮想メンバー関数は、シーケンス [ `first`, `last`) の先頭から始め、空でない完全な月入力フィールドを認識するまで、連続した要素との一致を試みます。 成功した場合、このフィールドをコンポーネント**tm:: tm \_mon**と同等の値に変換し、結果を `ptm->tm_mon` に格納します。 これは、月入力フィールドを超える先頭の要素を示す反復子を返します。 それ以外の場合、関数は `ios_base::failbit` を*状態*に設定します。 これは、有効な月入力フィールドのプレフィックスを超える先頭の要素を示す反復子を返します。 どちらの場合も、戻り値が*last*と等しい場合、関数は*状態*の `ios_base::eofbit` を設定します。
+プロテクト仮想メンバー関数は、シーケンス [ `first`, `last`) の先頭から始め、空でない完全な月入力フィールドを認識するまで、連続した要素との一致を試みます。 成功した場合、このフィールドをコンポーネント**tm:: tm\_mon**と同等の値に変換し、結果を `ptm->tm_mon`に格納します。 これは、月入力フィールドを超える先頭の要素を示す反復子を返します。 それ以外の場合、関数は `ios_base::failbit` を*状態*に設定します。 これは、有効な月入力フィールドのプレフィックスを超える先頭の要素を示す反復子を返します。 どちらの場合も、戻り値が*last*と等しい場合、関数は*状態*の `ios_base::eofbit` を設定します。
 
 月入力フィールドは、Jan、January、Feb、February などのようなロケール固有のシーケンスのセットの最長のものに一致するシーケンスです。 変換後の値は、January 以降の月を示す数値です。
 
@@ -392,7 +392,7 @@ virtual iter_type do_get_monthname(iter_type first,
 
 ## <a name="do_get_time"></a>  time_get::do_get_time
 
-`strftime` の *X* 指定子によって生成される日付として文字列を解析するために呼び出されるプロテクト仮想メンバー関数。
+*の*X`strftime` 指定子によって生成される日付として文字列を解析するために呼び出されるプロテクト仮想メンバー関数。
 
 ```cpp
 virtual iter_type do_get_time(iter_type first,
@@ -404,28 +404,28 @@ virtual iter_type do_get_time(iter_type first,
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*の \
+*最初*の\
 変換されるシーケンスの開始位置を示す入力反復子。
 
-*最後*の \
+*最後*の\
 変換されるシーケンスの終了位置を示す入力反復子。
 
-*iosbase. flags* \
-使用されません。
+*iosbase. flags*\
+未使用。
 
 *状態*\
 操作が成功したかどうかに基づき、ストリームの状態に適したビットマスク要素を設定します。
 
-*ptm* \
+*ptm*\
 日付の情報を格納する場所へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
 入力フィールドを超える先頭の要素を示す入力反復子。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-プロテクト仮想メンバー関数は、シーケンス [ `first`, `last`) の先頭から始め、空でない完全な時刻入力フィールドを認識するまで、連続した要素との一致を試みます。 成功した場合は、このフィールドをコンポーネント `tm::tm_hour`、`tm::tm_min`、および `tm::tm_sec` と同等の値に変換し、それぞれ `ptm->tm_hour`、`ptm->tm_min`、および `ptm->tm_sec` に結果を格納します。 これは、時刻入力フィールドを超える先頭の要素を示す反復子を返します。 それ以外の場合、関数は `ios_base::failbit` を*状態*に設定します。 これは、有効な時刻入力フィールドのプレフィックスを超える先頭の要素を示す反復子を返します。 どちらの場合も、戻り値が*last*と等しい場合、関数は*状態*の `ios_base::eofbit` を設定します。
+プロテクト仮想メンバー関数は、シーケンス [ `first`, `last`) の先頭から始め、空でない完全な時刻入力フィールドを認識するまで、連続した要素との一致を試みます。 成功した場合は、このフィールドをコンポーネント `tm::tm_hour`、`tm::tm_min`、および `tm::tm_sec`と同等の値に変換し、それぞれ `ptm->tm_hour`、`ptm->tm_min`、および `ptm->tm_sec`に結果を格納します。 これは、時刻入力フィールドを超える先頭の要素を示す反復子を返します。 それ以外の場合、関数は `ios_base::failbit` を*状態*に設定します。 これは、有効な時刻入力フィールドのプレフィックスを超える先頭の要素を示す反復子を返します。 どちらの場合も、戻り値が*last*と等しい場合、関数は*状態*の `ios_base::eofbit` を設定します。
 
 この実装では、時刻入力フィールドは HH:MM:SS の形式になります。各要素の説明は次のとおりです。
 
@@ -455,28 +455,28 @@ virtual iter_type do_get_weekday(iter_type first,
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*の \
+*最初*の\
 変換されるシーケンスの開始位置を示す入力反復子。
 
-*最後*の \
+*最後*の\
 変換されるシーケンスの終了位置を示す入力反復子。
 
-*iosbase. flags* \
+*iosbase. flags*\
 書式設定フラグ。これが設定されている場合、通貨記号は省略可能です。それ以外の場合は必須です。
 
 *状態*\
 操作が成功したかどうかに基づき、ストリームの状態に適したビットマスク要素を設定します。
 
-*ptm* \
+*ptm*\
 曜日の情報を格納する場所へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
 入力フィールドを超える先頭の要素を示す入力反復子。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-仮想プロテクトメンバー関数は、シーケンス [`first`、`last`) の*先頭*から始まる連続した要素を、空でない完全な曜日入力フィールドを認識するまで照合しようとします。 成功した場合、このフィールドをコンポーネント**tm:: tm \_wday**と同等の値に変換し、結果を `ptm->tm_wday` に格納します。 これは、曜日入力フィールドを超える先頭の要素を示す反復子を返します。 それ以外の場合、関数は `ios_base::failbit` を*状態*に設定します。 これは、有効な曜日入力フィールドのプレフィックスを超える先頭の要素を示す反復子を返します。 どちらの場合も、戻り値が*last*と等しい場合、関数は*状態*の `ios_base::eofbit` を設定します。
+仮想プロテクトメンバー関数は、シーケンス [`first`、`last`) の*先頭*から始まる連続した要素を、空でない完全な曜日入力フィールドを認識するまで照合しようとします。 成功した場合、このフィールドをコンポーネント**tm:: tm\_wday**と同等の値に変換し、結果を `ptm->tm_wday`に格納します。 これは、曜日入力フィールドを超える先頭の要素を示す反復子を返します。 それ以外の場合、関数は `ios_base::failbit` を*状態*に設定します。 これは、有効な曜日入力フィールドのプレフィックスを超える先頭の要素を示す反復子を返します。 どちらの場合も、戻り値が*last*と等しい場合、関数は*状態*の `ios_base::eofbit` を設定します。
 
 曜日入力フィールドは、Sun、Sunday、Mon、Monday などのようなロケール固有のシーケンスのセットの最長のものに一致するシーケンスです。 変換後の値は、Sunday 以降の曜日を示す数値です。
 
@@ -498,28 +498,28 @@ virtual iter_type do_get_year(iter_type first,
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*の \
+*最初*の\
 変換されるシーケンスの開始位置を示す入力反復子。
 
-*最後*の \
+*最後*の\
 変換されるシーケンスの終了位置を示す入力反復子。
 
-*iosbase. flags* \
+*iosbase. flags*\
 書式設定フラグ。これが設定されている場合、通貨記号は省略可能です。それ以外の場合は必須です。
 
 *状態*\
 操作が成功したかどうかに基づき、ストリームの状態に適したビットマスク要素を設定します。
 
-*ptm* \
+*ptm*\
 年の情報を格納する場所へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
 入力フィールドを超える先頭の要素を示す入力反復子。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-仮想プロテクトメンバー関数は、シーケンス [`first`、`last`) の*先頭*から空でない完全な年入力フィールドを認識するまで、連続した要素との照合を試みます。 成功した場合、このフィールドをコンポーネント**tm:: tm \_year**と同等の値に変換し、結果を `ptm->tm_year` に格納します。 これは、年入力フィールドを超える先頭の要素を示す反復子を返します。 それ以外の場合、関数は `ios_base::failbit` を*状態*に設定します。 これは、有効な年入力フィールドのプレフィックスを超える先頭の要素を示す反復子を返します。 どちらの場合も、戻り値が*last*と等しい場合、関数は*状態*の `ios_base::eofbit` を設定します。
+仮想プロテクトメンバー関数は、シーケンス [`first`、`last`) の*先頭*から空でない完全な年入力フィールドを認識するまで、連続した要素との照合を試みます。 成功した場合、このフィールドをコンポーネント**tm:: tm\_year**と同等の値に変換し、結果を `ptm->tm_year`に格納します。 これは、年入力フィールドを超える先頭の要素を示す反復子を返します。 それ以外の場合、関数は `ios_base::failbit` を*状態*に設定します。 これは、有効な年入力フィールドのプレフィックスを超える先頭の要素を示す反復子を返します。 どちらの場合も、戻り値が*last*と等しい場合、関数は*状態*の `ios_base::eofbit` を設定します。
 
 年入力フィールドは、対応する数値が範囲 [1900, 2036) 内である必要があります。 格納される値は、この値から 1900 を引いた値です。 この実装では、範囲 [69, 136) の値は、[1969, 2036) の範囲の年を表します。 範囲 [0, 69) の値も許容されますが、特定の変換環境に応じて [1900, 1969) または [2000, 2069) のいずれかの範囲の年を表すことがあります。
 
@@ -553,44 +553,44 @@ iter_type get(
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*の \
+*最初*の\
 変換するシーケンスの開始位置を示す入力反復子。
 
-*最後*の \
+*最後*の\
 変換するシーケンスの終了位置を示す入力反復子。
 
-*iosbase. flags* \
-ストリーム。
+*iosbase. flags*\
+ストリームです。
 
 *状態*\
 適切なビットマスク要素を設定して、ストリームの状態がエラーであることを示します。
 
-*ptm* \
+*ptm*\
 時間を格納する時間構造体へのポインター。
 
-*fmt* \
+*fmt*\
 変換指定子の文字。
 
-*mod* \
+*mod*\
 省略可能な修飾子文字。
 
-*fmt_first* \
+*fmt_first*\
 形式のディレクティブの開始位置を指します。
 
-*fmt_last* \
+*fmt_last*\
 形式のディレクティブの終了位置を指します。
 
 ### <a name="return-value"></a>戻り値
 
-時間構造体 `*ptm` を割り当てるために使用されたデータの後の最初の文字を指す反復子を返します。
+時間構造体 `*ptm`を割り当てるために使用されたデータの後の最初の文字を指す反復子を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 最初のメンバー関数は `do_get(first, last, iosbase, state, ptm, fmt, mod)` を返します。
 
-2 番目のメンバー関数は `[fmt_first, fmt_last)` で区切られた形式の制御下で `do_get` を呼び出します。 この形式はフィールドのシーケンスとして扱われ、`[first, last)` で区切られたゼロ個以上の入力要素の変換をそれぞれのフィールドが決定します。 これは、変換されていない最初の要素を指定する反復子を返します。 フィールドには次の 3 つの種類があります。
+2 番目のメンバー関数は `do_get` で区切られた形式の制御下で `[fmt_first, fmt_last)` を呼び出します。 この形式はフィールドのシーケンスとして扱われ、`[first, last)` で区切られたゼロ個以上の入力要素の変換をそれぞれのフィールドが決定します。 これは、変換されていない最初の要素を指定する反復子を返します。 フィールドには次の 3 つの種類があります。
 
-1セント (%)形式で、次に set [EOQ #] 内の省略可能な修飾子*mod* 、その後に*変換指定子*を指定して、*最初*のを `do_get(first, last, iosbase, state, ptm, fmt, mod)` によって返される値に置き換えます。 変換に失敗すると、*状態*が `ios_base::failbit` に設定され、が返されます。
+1セント (%)形式で、次に set [EOQ #] 内の省略可能な修飾子*mod* 、その後に*変換指定子*を指定して、*最初*のを `do_get(first, last, iosbase, state, ptm, fmt, mod)`によって返される値に置き換えます。 変換に失敗すると、*状態*が `ios_base::failbit` に設定され、が返されます。
 
 この形式の空白要素は、ゼロ個以上の入力の空白要素をスキップします。
 
@@ -598,7 +598,7 @@ iter_type get(
 
 ## <a name="get_date"></a>  time_get::get_date
 
-`strftime` の *x* 指定子によって生成される日付として文字列を解析します。
+*の*x`strftime` 指定子によって生成される日付として文字列を解析します。
 
 ```cpp
 iter_type get_date(iter_type first,
@@ -610,26 +610,26 @@ iter_type get_date(iter_type first,
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*の \
+*最初*の\
 変換されるシーケンスの開始位置を示す入力反復子。
 
-*最後*の \
+*最後*の\
 変換されるシーケンスの終了位置を示す入力反復子。
 
-*iosbase. flags* \
+*iosbase. flags*\
 書式設定フラグ。これが設定されている場合、通貨記号は省略可能です。それ以外の場合は必須です。
 
 *状態*\
 操作が成功したかどうかに基づき、ストリームの状態に適したビットマスク要素を設定します。
 
-*ptm* \
+*ptm*\
 日付の情報を格納する場所へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
 入力フィールドを超える先頭の要素を示す入力反復子。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このメンバー関数は、 [do_get_date](#do_get_date)(`first`、`last`、`iosbase`、`state`、`ptm`) を返します。
 
@@ -704,26 +704,26 @@ iter_type get_monthname(iter_type first,
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*の \
+*最初*の\
 変換されるシーケンスの開始位置を示す入力反復子。
 
-*最後*の \
+*最後*の\
 変換されるシーケンスの終了位置を示す入力反復子。
 
-*iosbase. flags* \
-使用されません。
+*iosbase. flags*\
+未使用。
 
 *状態*\
 操作が成功したかどうかに基づき、ストリームの状態に適したビットマスク要素を設定する出力パラメーター。
 
-*ptm* \
+*ptm*\
 月の情報を格納する場所へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
 入力フィールドを超える先頭の要素を示す入力反復子。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このメンバー関数は、 [do_get_monthname](#do_get_monthname)(`first`、`last`、`iosbase`、`state`、`ptm`) を返します。
 
@@ -784,7 +784,7 @@ tm_isdst: 0
 
 ## <a name="get_time"></a>  time_get::get_time
 
-`strftime` の *X* 指定子によって生成される日付として文字列を解析します。
+*の*X`strftime` 指定子によって生成される日付として文字列を解析します。
 
 ```cpp
 iter_type get_time(iter_type first,
@@ -796,26 +796,26 @@ iter_type get_time(iter_type first,
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*の \
+*最初*の\
 変換されるシーケンスの開始位置を示す入力反復子。
 
-*最後*の \
+*最後*の\
 変換されるシーケンスの終了位置を示す入力反復子。
 
-*iosbase. flags* \
-使用されません。
+*iosbase. flags*\
+未使用。
 
 *状態*\
 操作が成功したかどうかに基づき、ストリームの状態に適したビットマスク要素を設定します。
 
-*ptm* \
+*ptm*\
 日付の情報を格納する場所へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
 入力フィールドを超える先頭の要素を示す入力反復子。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このメンバー関数は、 [do_get_time](#do_get_time)(`first`、`last`、`iosbase`、`state`、`ptm`) を返します。
 
@@ -877,26 +877,26 @@ iter_type get_weekday(iter_type first,
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*の \
+*最初*の\
 変換されるシーケンスの開始位置を示す入力反復子。
 
-*最後*の \
+*最後*の\
 変換されるシーケンスの終了位置を示す入力反復子。
 
-*iosbase. flags* \
+*iosbase. flags*\
 書式設定フラグ。これが設定されている場合、通貨記号は省略可能です。それ以外の場合は必須です。
 
 *状態*\
 操作が成功したかどうかに基づき、ストリームの状態に適したビットマスク要素を設定します。
 
-*ptm* \
+*ptm*\
 曜日の情報を格納する場所へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
 入力フィールドを超える先頭の要素を示す入力反復子。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このメンバー関数は、 [do_get_weekday](#do_get_weekday)(`first`、`last`、`iosbase`、`state`、`ptm`) を返します。
 
@@ -954,26 +954,26 @@ iter_type get_year(iter_type first,
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*の \
+*最初*の\
 変換されるシーケンスの開始位置を示す入力反復子。
 
-*最後*の \
+*最後*の\
 変換されるシーケンスの終了位置を示す入力反復子。
 
-*iosbase. flags* \
+*iosbase. flags*\
 書式設定フラグ。これが設定されている場合、通貨記号は省略可能です。それ以外の場合は必須です。
 
 *状態*\
 操作が成功したかどうかに基づき、ストリームの状態に適したビットマスク要素を設定します。
 
-*ptm* \
+*ptm*\
 年の情報を格納する場所へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
 入力フィールドを超える先頭の要素を示す入力反復子。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このメンバー関数は、 [do_get_year](#do_get_year)(`first`、`last`、`iosbase`、`state`、`ptm`) を返します。
 
@@ -1026,7 +1026,7 @@ tm_year: 28
 typedef InputIterator iter_type;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 この型は、テンプレート パラメーター **InputIterator** のシノニムです。
 
@@ -1040,10 +1040,10 @@ explicit time_get(size_t refs = 0);
 
 ### <a name="parameters"></a>パラメーター
 
-*refs* \
+*refs*\
 オブジェクトのメモリ管理のタイプを指定するために使用する整数値。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 *Refs*パラメーターに指定できる値とその意味は次のとおりです。
 
@@ -1057,7 +1057,7 @@ explicit time_get(size_t refs = 0);
 
 コンストラクターは、 **locale::** [facet](../standard-library/locale-class.md#facet_class)(`refs`) を使用して、その基本オブジェクトを初期化します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [\<locale>](../standard-library/locale.md)\
 [time_base クラス](../standard-library/time-base-class.md)\

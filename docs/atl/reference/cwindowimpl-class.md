@@ -19,11 +19,11 @@ helpviewer_keywords:
 - subclassing windows, ATL
 ms.assetid: 02eefd45-a0a6-4d1b-99f6-dbf627e2cc2f
 ms.openlocfilehash: b8b633dcf4ea14e899ee00552b553476cf697689
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69496187"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78862973"
 ---
 # <a name="cwindowimpl-class"></a>CWindowImpl クラス
 
@@ -48,15 +48,15 @@ class ATL_NO_VTABLE CWindowImpl : public CWindowImplBaseT<TBase, TWinTraits>
 クラスの基底クラス。 既定では、基本クラスは[CWindow](../../atl/reference/cwindow-class.md)です。
 
 *TWinTraits*<br/>
-ウィンドウのスタイルを定義する[特徴クラス](../../atl/understanding-window-traits.md)。 既定値は `CControlWinTraits` です。
+ウィンドウのスタイルを定義する[特徴クラス](../../atl/understanding-window-traits.md)。 既定では、 `CControlWinTraits`です。
 
 ## <a name="members"></a>メンバー
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|名前|説明|
+|Name|Description|
 |----------|-----------------|
-|[CWindowImpl::Create](#create)|ウィンドウを作成します。|
+|[CWindowImpl:: Create](#create)|ウィンドウを作成します。|
 
 ### <a name="cwindowimplbaset-methods"></a>CWindowImplBaseT メソッド
 
@@ -65,7 +65,7 @@ class ATL_NO_VTABLE CWindowImpl : public CWindowImplBaseT<TBase, TWinTraits>
 |[DefWindowProc](#defwindowproc)|既定のメッセージ処理を提供します。|
 |[GetCurrentMessage](#getcurrentmessage)|現在のメッセージを返します。|
 |[GetWindowProc](#getwindowproc)|現在のウィンドウ プロシージャを返します。|
-|[OnFinalMessage](#onfinalmessage)|最後のメッセージを受信した後 (通常は WM_NCDESTROY) に呼び出されます。|
+|[OnFinalMessage](#onfinalmessage)|最後のメッセージを受信した後に呼び出されます (通常は WM_NCDESTROY)。|
 |[SubclassWindow](#subclasswindow)|ウィンドウをサブクラス化します。|
 |[UnsubclassWindow](#unsubclasswindow)|前にサブクラス化されたウィンドウを復元します。|
 
@@ -82,11 +82,11 @@ class ATL_NO_VTABLE CWindowImpl : public CWindowImplBaseT<TBase, TWinTraits>
 |-|-|
 |[m_pfnSuperWindowProc](#m_pfnsuperwindowproc)|ウィンドウ クラスの元のウィンドウ プロシージャをポイントします。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-を使用`CWindowImpl`すると、ウィンドウを作成したり、既存のウィンドウをサブクラス化したりできます。 ウィンドウ`CWindowImpl`プロシージャはメッセージマップを使用して、メッセージを適切なハンドラーに送信します。
+`CWindowImpl` を使用すると、ウィンドウを作成したり、既存のウィンドウをサブクラス化したりできます。 `CWindowImpl` ウィンドウプロシージャはメッセージマップを使用して、メッセージを適切なハンドラーに送信します。
 
-`CWindowImpl::Create`[CWndClassInfo](../../atl/reference/cwndclassinfo-class.md)によって管理されるウィンドウクラスの情報に基づいて、ウィンドウを作成します。 `CWindowImpl`[DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class)マクロが含まれてい`CWndClassInfo`ます。これは、新しいウィンドウクラスを登録することを意味します。 既存のウィンドウクラスをスーパークラス化する場合は、から`CWindowImpl`クラスを派生させ、 [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass)マクロをインクルードします。 この場合、`CWndClassInfo` は、既存のクラスに基づくウィンドウ クラスを登録しますが、`CWindowImpl::WindowProc` を使用します。 例えば:
+`CWindowImpl::Create` は、 [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md)によって管理されるウィンドウクラスの情報に基づいてウィンドウを作成します。 `CWindowImpl` には[DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class)マクロが含まれています。これは `CWndClassInfo` 新しいウィンドウクラスを登録することを意味します。 既存のウィンドウクラスをスーパークラス化する場合は、`CWindowImpl` からクラスを派生させ、 [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass)マクロを含めます。 この場合、`CWndClassInfo` は、既存のクラスに基づくウィンドウ クラスを登録しますが、`CWindowImpl::WindowProc` を使用します。 次に例を示します。
 
 [!code-cpp[NVC_ATL_Windowing#43](../../atl/codesnippet/cpp/cwindowimpl-class_1.h)]
 
@@ -96,15 +96,15 @@ class ATL_NO_VTABLE CWindowImpl : public CWindowImplBaseT<TBase, TWinTraits>
 `CWindowImpl` は、ウィンドウのサブクラス化もサポートします。 `SubclassWindow` メソッドは、既存のウィンドウを `CWindowImpl` オブジェクトにアタッチし、ウィンドウ プロシージャを `CWindowImpl::WindowProc` に変更します。 `CWindowImpl` の各インスタンスは、別のウィンドウをサブクラス化できます。
 
 > [!NOTE]
->  特定`CWindowImpl`のオブジェクトに対して、 `Create`また`SubclassWindow`はを呼び出します。 同じオブジェクトで両方のメソッドを呼び出さないでください。
+>  特定の `CWindowImpl` オブジェクトに対して、`Create` または `SubclassWindow`を呼び出します。 同じオブジェクトで両方のメソッドを呼び出さないでください。
 
-に`CWindowImpl`加えて、ATL には、別のオブジェクトに格納されているウィンドウを作成するための[CContainedWindow](../../atl/reference/ccontainedwindowt-class.md)が用意されています。
+ATL には、`CWindowImpl`に加えて、別のオブジェクトに含まれるウィンドウを作成する[CContainedWindow](../../atl/reference/ccontainedwindowt-class.md)が用意されています。
 
-基本クラスのデストラクター (~ `CWindowImplRoot`) では、オブジェクトが破棄される前にウィンドウが失われることが保証されます。
+基底クラスのデストラクター (~ `CWindowImplRoot`) によって、オブジェクトが破棄される前にウィンドウが確実に失われます。
 
-`CWindowImpl`から派生します。これは、から派生`TBase`し、[CMessageMap](../../atl/reference/cmessagemap-class.md) から派生します。`CWindowImplBaseT` `CWindowImplRoot`
+`CWindowImpl` は、`TBase` と[CMessageMap](../../atl/reference/cmessagemap-class.md)から派生した `CWindowImplRoot`から派生する `CWindowImplBaseT`から派生します。
 
-|詳細情報:|解決方法|
+|詳細情報|参照先|
 |--------------------------------|---------|
 |コントロールの作成|[ATL チュートリアル](../../atl/active-template-library-atl-tutorial.md)|
 |ATL でのウィンドウの使用|[ATL ウィンドウ クラス](../../atl/atl-window-classes.md)|
@@ -126,7 +126,7 @@ class ATL_NO_VTABLE CWindowImpl : public CWindowImplBaseT<TBase, TWinTraits>
 
 **ヘッダー:** atlwin. h
 
-##  <a name="create"></a>  CWindowImpl::Create
+##  <a name="create"></a>CWindowImpl:: Create
 
 新しいウィンドウクラスに基づいてウィンドウを作成します。
 
@@ -147,7 +147,7 @@ HWND Create(
 から親ウィンドウまたはオーナーウィンドウへのハンドル。
 
 *rect*<br/>
-からウィンドウの位置を指定する[RECT](/previous-versions/dd162897\(v=vs.85\))構造体。 は`RECT` 、ポインターによって、または参照渡しで渡すことができます。
+からウィンドウの位置を指定する[RECT](/previous-versions/dd162897\(v=vs.85\))構造体。 `RECT` は、ポインターまたは参照渡しで渡すことができます。
 
 *szWindowName*<br/>
 からウィンドウの名前を指定します。 既定値は NULL です。
@@ -168,19 +168,19 @@ HWND Create(
 
 成功した場合は、新しく作成されたウィンドウへのハンドル。 それ以外の場合は NULL。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`Create`は、最初にウィンドウクラスが登録されていない場合は、それを登録します。 新しく作成されたウィンドウは、自動的`CWindowImpl`にオブジェクトにアタッチされます。
+がまだ登録されていない場合、`Create` は最初にウィンドウクラスを登録します。 新しく作成されたウィンドウは、`CWindowImpl` オブジェクトに自動的にアタッチされます。
 
 > [!NOTE]
->  既に`Create` [SubclassWindow](#subclasswindow)を呼び出している場合は、を呼び出さないでください。
+>  既に[SubclassWindow](#subclasswindow)を呼び出している場合は、`Create` を呼び出さないでください。
 
-既存のウィンドウクラスに基づくウィンドウクラスを使用するには、から`CWindowImpl`クラスを派生させ、 [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass)マクロをインクルードします。 既存のウィンドウクラスのウィンドウプロシージャは、 [m_pfnSuperWindowProc](#m_pfnsuperwindowproc)に保存されます。 詳細については、「 [CWindowImpl](../../atl/reference/cwindowimpl-class.md)の概要」を参照してください。
+既存のウィンドウクラスに基づくウィンドウクラスを使用するには、`CWindowImpl` からクラスを派生させ、 [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass)マクロを含めます。 既存のウィンドウクラスのウィンドウプロシージャは[m_pfnSuperWindowProc](#m_pfnsuperwindowproc)に保存されます。 詳細については、「 [CWindowImpl](../../atl/reference/cwindowimpl-class.md)の概要」を参照してください。
 
 > [!NOTE]
 >  0を*Menuorid*パラメーターの値として使用する場合は、コンパイラエラーを回避するために、0u (既定値) として指定する必要があります。
 
-##  <a name="defwindowproc"></a>  CWindowImpl::DefWindowProc
+##  <a name="defwindowproc"></a>CWindowImpl::D efWindowProc
 
 [WindowProc](#windowproc)によって呼び出され、メッセージマップによって処理されないメッセージを処理します。
 
@@ -208,15 +208,15 @@ LRESULT DefWindowProc();
 
 メッセージ処理の結果。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-既定では`DefWindowProc` 、は[CallWindowProc](/windows/win32/api/winuser/nf-winuser-callwindowprocw) Win32 関数を呼び出して、 [m_pfnSuperWindowProc](#m_pfnsuperwindowproc)で指定されたウィンドウプロシージャにメッセージ情報を送信します。
+既定では、`DefWindowProc` は、 [m_pfnSuperWindowProc](#m_pfnsuperwindowproc)で指定されたウィンドウプロシージャにメッセージ情報を送信するために、 [CallWindowProc](/windows/win32/api/winuser/nf-winuser-callwindowprocw) Win32 関数を呼び出します。
 
 パラメーターのない関数は、現在のメッセージから必要なパラメーターを自動的に取得します。
 
-##  <a name="getcurrentmessage"></a>  CWindowImpl::GetCurrentMessage
+##  <a name="getcurrentmessage"></a>CWindowImpl:: GetCurrentMessage
 
-`MSG`構造体にパッケージ化された現在のメッセージを返します。
+`MSG` 構造体にパッケージ化された現在のメッセージを返します。
 
 ```
 const MSG* GetCurrentMessage();
@@ -226,9 +226,9 @@ const MSG* GetCurrentMessage();
 
 現在のメッセージ。
 
-##  <a name="getwindowproc"></a>  CWindowImpl::GetWindowProc
+##  <a name="getwindowproc"></a>CWindowImpl:: GetWindowProc
 
-現在`WindowProc`のウィンドウプロシージャを返します。
+現在のウィンドウプロシージャ `WindowProc`を返します。
 
 ```
 virtual WNDPROC GetWindowProc();
@@ -238,11 +238,11 @@ virtual WNDPROC GetWindowProc();
 
 現在のウィンドウプロシージャ。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 ウィンドウプロシージャを独自のに置き換えるには、このメソッドをオーバーライドします。
 
-##  <a name="getwndclassinfo"></a>  CWindowImpl::GetWndClassInfo
+##  <a name="getwndclassinfo"></a>CWindowImpl:: GetWndClassInfo
 
 ウィンドウクラス情報にアクセスするために、 [Create](#create)によって呼び出されます。
 
@@ -254,15 +254,15 @@ static CWndClassInfo& GetWndClassInfo();
 
 [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md)の静的インスタンス。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-既定では`CWindowImpl` 、は、新しいウィンドウクラスを指定する[DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class)マクロを使用してこのメソッドを取得します。
+既定では、`CWindowImpl` は、新しいウィンドウクラスを指定する[DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class)マクロを使用してこのメソッドを取得します。
 
-既存のウィンドウクラスをスーパークラスにするには`CWindowImpl` 、からクラスを派生させ`GetWndClassInfo`、 [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass)マクロを含めてオーバーライドします。 詳細については、「 [CWindowImpl](../../atl/reference/cwindowimpl-class.md)の概要」を参照してください。
+既存のウィンドウクラスをスーパークラスにするには、`CWindowImpl` からクラスを派生させ、 [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass)マクロを含めて `GetWndClassInfo`をオーバーライドします。 詳細については、「 [CWindowImpl](../../atl/reference/cwindowimpl-class.md)の概要」を参照してください。
 
-DECLARE_WND_CLASS マクロと DECLARE_WND_SUPERCLASS マクロを使用するだけでなく`GetWndClassInfo` 、独自の実装でをオーバーライドすることもできます。
+DECLARE_WND_CLASS マクロと DECLARE_WND_SUPERCLASS マクロを使用するだけでなく、独自の実装で `GetWndClassInfo` をオーバーライドすることもできます。
 
-##  <a name="m_pfnsuperwindowproc"></a>  CWindowImpl::m_pfnSuperWindowProc
+##  <a name="m_pfnsuperwindowproc"></a>CWindowImpl:: m_pfnSuperWindowProc
 
 ウィンドウに応じて、は次のいずれかのウィンドウプロシージャを指します。
 
@@ -270,15 +270,15 @@ DECLARE_WND_CLASS マクロと DECLARE_WND_SUPERCLASS マクロを使用する�
 WNDPROC m_pfnSuperWindowProc;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 |ウィンドウの種類|ウィンドウプロシージャ|
 |--------------------|----------------------|
-|[DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class)マクロを使用して指定された新しいウィンドウクラスに基づくウィンドウ。|[DefWindowProc](/windows/win32/api/winuser/nf-winuser-defwindowprocw) Win32 関数。|
+|[DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class)マクロで指定された新しいウィンドウクラスに基づくウィンドウ。|[DefWindowProc](/windows/win32/api/winuser/nf-winuser-defwindowprocw) Win32 関数。|
 |[DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass)マクロを使用して指定された既存のクラスを変更するウィンドウクラスに基づくウィンドウ。|既存のウィンドウクラスのウィンドウプロシージャ。|
 |サブクラスウィンドウです。|サブクラスウィンドウの元のウィンドウプロシージャ。|
 
-[CWindowImpl::D efwindowproc](#defwindowproc)は、に保存されている`m_pfnSuperWindowProc`ウィンドウプロシージャにメッセージ情報を送信します。
+[CWindowImpl::D efwindowproc](#defwindowproc)は、`m_pfnSuperWindowProc`に保存されたウィンドウプロシージャにメッセージ情報を送信します。
 
 ##  <a name="onfinalmessage"></a>CWindowImpl:: OnFinalMessage
 
@@ -293,13 +293,13 @@ virtual void OnFinalMessage(HWND hWnd);
 *hWnd*<br/>
 から破棄されるウィンドウへのハンドル。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-の既定の`OnFinalMessage`実装では何も実行されませんが、ウィンドウを破棄する前に、この関数をオーバーライドしてクリーンアップを処理することができます。 ウィンドウの破棄時にオブジェクトを自動的に削除する場合は、この関数で**delete this;** を呼び出すことができます。
+`OnFinalMessage` の既定の実装では何も実行されませんが、ウィンドウを破棄する前に、この関数をオーバーライドしてクリーンアップを処理することができます。 ウィンドウの破棄時にオブジェクトを自動的に削除する場合は、この関数で**delete this;** を呼び出すことができます。
 
-##  <a name="subclasswindow"></a>  CWindowImpl::SubclassWindow
+##  <a name="subclasswindow"></a>CWindowImpl:: SubclassWindow
 
-*HWnd*によって識別されるウィンドウをサブクラス`CWindowImpl`化し、オブジェクトにアタッチします。
+*HWnd*によって識別されるウィンドウをサブクラス化し、`CWindowImpl` オブジェクトにアタッチします。
 
 ```
 BOOL SubclassWindow(HWND hWnd);
@@ -314,16 +314,16 @@ BOOL SubclassWindow(HWND hWnd);
 
 ウィンドウが正常にサブクラス化された場合は TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 サブクラス化されたウィンドウで、 [CWindowImpl:: WindowProc](#windowproc)が使用されるようになりました。 元のウィンドウプロシージャは[m_pfnSuperWindowProc](#m_pfnsuperwindowproc)に保存されます。
 
 > [!NOTE]
->  既に`SubclassWindow` [Create](#create)を呼び出している場合は、を呼び出さないでください。
+>  既に[Create](#create)を呼び出している場合は、`SubclassWindow` を呼び出さないでください。
 
 ##  <a name="unsubclasswindow"></a>CWindowImpl:: UnsubclassWindow
 
-サブクラスウィンドウを`CWindowImpl`オブジェクトからデタッチし、 [m_pfnSuperWindowProc](#m_pfnsuperwindowproc)に保存されている元のウィンドウプロシージャを復元します。
+サブクラスウィンドウを `CWindowImpl` オブジェクトからデタッチし、 [m_pfnSuperWindowProc](#m_pfnsuperwindowproc)に保存された元のウィンドウプロシージャを復元します。
 
 ```
 HWND UnsubclassWindow();
@@ -333,7 +333,7 @@ HWND UnsubclassWindow();
 
 以前にサブクラス化されたウィンドウへのハンドル。
 
-##  <a name="windowproc"></a>  CWindowImpl::WindowProc
+##  <a name="windowproc"></a>CWindowImpl:: WindowProc
 
 この静的関数は、ウィンドウプロシージャを実装します。
 
@@ -363,9 +363,9 @@ static LRESULT CALLBACK WindowProc(
 
 メッセージ処理の結果。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`WindowProc`は、 [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)で宣言された既定のメッセージマップを使用して、メッセージを適切なハンドラーに送信します。 必要に応じ`WindowProc`て、 [DefWindowProc](#defwindowproc)を呼び出して、追加のメッセージ処理を行います。 最終的なメッセージが処理されない`WindowProc`場合、は次の処理を実行します。
+`WindowProc` は、既定のメッセージマップ ( [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)で宣言) を使用して、メッセージを適切なハンドラーに送信します。 必要に応じて、`WindowProc` は、追加のメッセージ処理のために[DefWindowProc](#defwindowproc)を呼び出します。 最終的なメッセージが処理されない場合、`WindowProc` は次の処理を実行します。
 
 - ウィンドウがサブクラス化されていない場合は、サブクラス解除を実行します。
 
@@ -373,9 +373,9 @@ static LRESULT CALLBACK WindowProc(
 
 - ウィンドウが破棄される前に[Onfinalmessage](#onfinalmessage)を呼び出します。
 
-をオーバーライド`WindowProc`して、メッセージを処理するためのさまざまなメカニズムを提供できます。
+`WindowProc` をオーバーライドして、メッセージを処理するためのさまざまなメカニズムを提供できます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)<br/>
 [CComControl クラス](../../atl/reference/ccomcontrol-class.md)<br/>

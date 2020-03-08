@@ -41,11 +41,11 @@ helpviewer_keywords:
 - CDateTimeCtrl [MFC], SetTime
 ms.assetid: 7113993b-5d37-4148-939f-500a190c5bdc
 ms.openlocfilehash: ec9060ba60c4d9877e5ee32bc68da0134f0ccf20
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69506996"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866935"
 ---
 # <a name="cdatetimectrl-class"></a>Cdatetimectrl 使い方クラス
 
@@ -61,32 +61,32 @@ class CDateTimeCtrl : public CWnd
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|名前|説明|
+|Name|Description|
 |----------|-----------------|
 |[Cdatetimectrl 使い方:: Cdatetimectrl 使い方](#cdatetimectrl)|`CDateTimeCtrl` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|名前|説明|
+|Name|Description|
 |----------|-----------------|
 |[Cdatetimectrl 使い方:: Close当月 Cal](#closemonthcal)|現在の日付と時刻の選択コントロールを閉じます。|
-|[CDateTimeCtrl::Create](#create)|日付と時刻の選択コントロールを作成し、 `CDateTimeCtrl`オブジェクトにアタッチします。|
+|[Cdatetimectrl 使い方:: Create](#create)|日付と時刻の選択コントロールを作成し、`CDateTimeCtrl` オブジェクトにアタッチします。|
 |[Cdatetimectrl 使い方:: GetDateTimePickerInfo](#getdatetimepickerinfo)|現在の日付と時刻の選択コントロールに関する情報を取得します。|
 |[Cdatetimectrl 使い方:: GetIdealSize](#getidealsize)|現在の日付または時刻を表示するために必要な、日付と時刻の選択コントロールの理想的なサイズを返します。|
 |[Cdatetimectrl 使い方:: GetMonthCalColor](#getmonthcalcolor)|日付と時刻の選択コントロール内の月間予定表の特定の部分の色を取得します。|
-|[Cdatetimectrl 使い方:: GetMonthCalCtrl](#getmonthcalctrl)|日付と時刻の選択コントロールに関連付けられたオブジェクトを取得します。`CMonthCalCtrl`|
+|[Cdatetimectrl 使い方:: GetMonthCalCtrl](#getmonthcalctrl)|日付と時刻の選択コントロールに関連付けられている `CMonthCalCtrl` オブジェクトを取得します。|
 |[Cdatetimectrl 使い方:: GetMonthCalFont](#getmonthcalfont)|日付と時刻の選択コントロールの子月間予定表コントロールで現在使用されているフォントを取得します。|
 |[Cdatetimectrl 使い方:: GetMonthCalStyle](#getmonthcalstyle)|現在の日付と時刻の選択コントロールのスタイルを取得します。|
-|[CDateTimeCtrl::GetRange](#getrange)|日付と時刻の選択コントロールで許容される現在の最小値と最大システム時刻を取得します。|
-|[CDateTimeCtrl::GetTime](#gettime)|日付と時刻の選択コントロールから現在選択されている時刻を取得し、 `SYSTEMTIME`指定した構造体に格納します。|
+|[Cdatetimectrl 使い方:: GetRange](#getrange)|日付と時刻の選択コントロールで許容される現在の最小値と最大システム時刻を取得します。|
+|[Cdatetimectrl 使い方:: GetTime](#gettime)|日付と時刻の選択コントロールから現在選択されている時刻を取得し、指定した `SYSTEMTIME` 構造体に格納します。|
 |[Cdatetimectrl 使い方:: SetFormat](#setformat)|指定された書式指定文字列に従って、日付と時刻の選択コントロールの表示を設定します。|
 |[Cdatetimectrl 使い方:: SetMonthCalColor](#setmonthcalcolor)|日付と時刻の選択コントロール内の月間予定表の特定の部分の色を設定します。|
 |[Cdatetimectrl 使い方:: SetMonthCalFont](#setmonthcalfont)|日付と時刻の選択コントロールの子の月間予定表コントロールが使用するフォントを設定します。|
 |[Cdatetimectrl 使い方:: SetMonthCalStyle](#setmonthcalstyle)|現在の日付と時刻の選択コントロールのスタイルを設定します。|
-|[CDateTimeCtrl::SetRange](#setrange)|日付と時刻の選択コントロールに許容されるシステム時間の最小値と最大値を設定します。|
+|[Cdatetimectrl 使い方:: SetRange](#setrange)|日付と時刻の選択コントロールに許容されるシステム時間の最小値と最大値を設定します。|
 |[Cdatetimectrl 使い方:: SetTime](#settime)|日時指定コントロールの時刻を設定します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 日付と時刻の選択コントロール (DTP コントロール) は、ユーザーとの日付と時刻の情報を交換するための簡単なインターフェイスを提供します。 このインターフェイスには、コントロールに格納されている日付と時刻の情報の一部を表示するフィールドが含まれています。 ユーザーは、指定されたフィールド内の文字列の内容を変更することによって、コントロールに格納されている情報を変更できます。 ユーザーは、マウスまたはキーボードを使用してフィールド間を移動できます。
 
@@ -100,7 +100,7 @@ class CDateTimeCtrl : public CWnd
 
 [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
-[CWnd](../../mfc/reference/cwnd-class.md)
+[から派生しているのではない](../../mfc/reference/cwnd-class.md)
 
 `CDateTimeCtrl`
 
@@ -108,7 +108,7 @@ class CDateTimeCtrl : public CWnd
 
 **ヘッダー:** afxdtctl
 
-##  <a name="cdatetimectrl"></a>  CDateTimeCtrl::CDateTimeCtrl
+##  <a name="cdatetimectrl"></a>Cdatetimectrl 使い方:: Cdatetimectrl 使い方
 
 `CDateTimeCtrl` オブジェクトを構築します。
 
@@ -124,13 +124,13 @@ CDateTimeCtrl();
 void CloseMonthCal() const;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このメソッドは、Windows SDK で説明されている[DTM_CLOSEMONTHCAL](/windows/win32/Controls/dtm-closemonthcal)メッセージを送信します。
 
 ### <a name="example"></a>例
 
-次のコード例では、 *m_dateTimeCtrl*変数を定義しています。この変数は、[日時指定コントロール] コントロールにプログラムでアクセスするために使用されます。 この変数は次の例で使用されています。
+次のコード例では、プログラムを使用して日付と時刻の選択コントロールにアクセスするために使用される、 *m_dateTimeCtrl*変数を定義します。 この変数は次の例で使用されています。
 
 [!code-cpp[NVC_MFC_CDateTimeCtrl_s1#1](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_1.h)]
 
@@ -140,9 +140,9 @@ void CloseMonthCal() const;
 
 [!code-cpp[NVC_MFC_CDateTimeCtrl_s1#5](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_2.cpp)]
 
-##  <a name="create"></a>  CDateTimeCtrl::Create
+##  <a name="create"></a>Cdatetimectrl 使い方:: Create
 
-日付と時刻の選択コントロールを作成し、 `CDateTimeCtrl`オブジェクトにアタッチします。
+日付と時刻の選択コントロールを作成し、`CDateTimeCtrl` オブジェクトにアタッチします。
 
 ```
 virtual BOOL Create(
@@ -170,21 +170,21 @@ virtual BOOL Create(
 
 作成が成功した場合は0以外の。それ以外の場合は0です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 ##### <a name="to-create-a-date-and-time-picker-control"></a>日付と時刻の選択コントロールを作成するには
 
-1. [Cdatetimectrl 使い方](#cdatetimectrl)を呼び出して、 `CDateTimeCtrl`オブジェクトを構築します。
+1. [Cdatetimectrl 使い方](#cdatetimectrl)を呼び出して、`CDateTimeCtrl` オブジェクトを構築します。
 
-1. このメンバー関数を呼び出します。これにより、Windows の日付と時刻の選択コントロール`CDateTimeCtrl`が作成され、オブジェクトにアタッチされます。
+1. このメンバー関数を呼び出します。これにより、Windows の日付と時刻の選択コントロールが作成され、`CDateTimeCtrl` オブジェクトにアタッチされます。
 
-を呼び出す`Create`と、コモンコントロールが初期化されます。
+`Create`を呼び出すと、コモンコントロールが初期化されます。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFC_CDateTimeCtrl#1](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_3.cpp)]
 
-##  <a name="getdatetimepickerinfo"></a>  CDateTimeCtrl::GetDateTimePickerInfo
+##  <a name="getdatetimepickerinfo"></a>Cdatetimectrl 使い方:: GetDateTimePickerInfo
 
 現在の日付と時刻の選択コントロールに関する情報を取得します。
 
@@ -194,7 +194,7 @@ BOOL GetDateTimePickerInfo(LPDATETIMEPICKERINFO pDateTimePickerInfo) const;
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
+|パラメーター|Description|
 |---------------|-----------------|
 |*pDateTimePickerInfo*|入出力現在の日付と時刻の選択コントロールの説明を受け取る[DATETIMEPICKERINFO](/windows/win32/api/commctrl/ns-commctrl-datetimepickerinfo)構造体へのポインター。<br /><br /> 呼び出し元は、この構造体の割り当てを行います。 ただし、このメソッドは、構造体の*cbSize*メンバーを初期化します。|
 
@@ -202,13 +202,13 @@ BOOL GetDateTimePickerInfo(LPDATETIMEPICKERINFO pDateTimePickerInfo) const;
 
 このメソッドが成功した場合は TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このメソッドは、Windows SDK で説明されている[DTM_GETDATETIMEPICKERINFO](/windows/win32/Controls/dtm-getdatetimepickerinfo)メッセージを送信します。
 
 ### <a name="example"></a>例
 
-次のコード例では、 *m_dateTimeCtrl*変数を定義しています。この変数は、[日時指定コントロール] コントロールにプログラムでアクセスするために使用されます。 この変数は次の例で使用されています。
+次のコード例では、プログラムを使用して日付と時刻の選択コントロールにアクセスするために使用される、 *m_dateTimeCtrl*変数を定義します。 この変数は次の例で使用されています。
 
 [!code-cpp[NVC_MFC_CDateTimeCtrl_s1#1](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_1.h)]
 
@@ -235,9 +235,9 @@ COLORREF GetMonthCalColor(int iColor) const;
 
 正常終了した場合は、月間予定表コントロールの指定した部分の色設定を表す COLORREF 値。 関数は、失敗した場合は-1 を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメンバー関数は、Windows SDK で説明されているように、Win32 message [DTM_GETMCCOLOR](/windows/win32/Controls/dtm-getmccolor)の動作を実装します。
+このメンバー関数は、Windows SDK で説明されているように、Win32 メッセージ[DTM_GETMCCOLOR](/windows/win32/Controls/dtm-getmccolor)の動作を実装します。
 
 ### <a name="example"></a>例
 
@@ -245,7 +245,7 @@ COLORREF GetMonthCalColor(int iColor) const;
 
 ##  <a name="getmonthcalctrl"></a>Cdatetimectrl 使い方:: GetMonthCalCtrl
 
-日付と時刻の選択コントロールに関連付けられたオブジェクトを取得します。`CMonthCalCtrl`
+日付と時刻の選択コントロールに関連付けられている `CMonthCalCtrl` オブジェクトを取得します。
 
 ```
 CMonthCalCtrl* GetMonthCalCtrl() const;
@@ -255,15 +255,15 @@ CMonthCalCtrl* GetMonthCalCtrl() const;
 
 [CMonthCalCtrl](../../mfc/reference/cmonthcalctrl-class.md)オブジェクトへのポインター。失敗した場合は NULL、ウィンドウが表示されていない場合は NULL。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-日付と時刻の選択コントロールユーザーがドロップダウン矢印をクリックしたときに、月間予定表の子コントロールが作成されます。 `CMonthCalCtrl`オブジェクトが不要になった場合は破棄されるため、アプリケーションは、日付と時刻の選択コントロールの子月カレンダーを表すオブジェクトの格納に依存しないようにする必要があります。
+日付と時刻の選択コントロールユーザーがドロップダウン矢印をクリックしたときに、月間予定表の子コントロールが作成されます。 `CMonthCalCtrl` オブジェクトが不要になった場合は破棄されるため、アプリケーションは、日付と時刻の選択コントロールの子月のカレンダーを表すオブジェクトの格納に依存しないようにする必要があります。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFC_CDateTimeCtrl#3](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_6.cpp)]
 
-##  <a name="getmonthcalfont"></a>  CDateTimeCtrl::GetMonthCalFont
+##  <a name="getmonthcalfont"></a>Cdatetimectrl 使い方:: GetMonthCalFont
 
 日付と時刻の選択コントロールの月間予定表コントロールで現在使用されているフォントを取得します。
 
@@ -275,9 +275,9 @@ CFont* GetMonthCalFont() const;
 
 [CFont](../../mfc/reference/cfont-class.md)オブジェクトへのポインター。失敗した場合は NULL。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-戻り値が指すオブジェクトは一時オブジェクトであり、次のアイドル処理時に破棄されます。`CFont`
+戻り値が指す `CFont` オブジェクトは一時オブジェクトであり、次のアイドル処理時に破棄されます。
 
 ##  <a name="getmonthcalstyle"></a>Cdatetimectrl 使い方:: GetMonthCalStyle
 
@@ -291,11 +291,11 @@ DWORD GetMonthCalStyle() const;
 
 ドロップダウン月間予定表コントロールのスタイル。日付と時刻の選択コントロールスタイルのビットごとの組み合わせ (または) です。 詳細については、「[月間予定表コントロールスタイル](/windows/win32/Controls/month-calendar-control-styles)」を参照してください。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このメソッドは、Windows SDK で説明されている[DTM_GETMCSTYLE](/windows/win32/Controls/dtm-getmcstyle)メッセージを送信します。
 
-##  <a name="getrange"></a>  CDateTimeCtrl::GetRange
+##  <a name="getrange"></a>Cdatetimectrl 使い方:: GetRange
 
 日付と時刻の選択コントロールで許容される現在の最小値と最大システム時刻を取得します。
 
@@ -312,14 +312,14 @@ DWORD GetRange(
 ### <a name="parameters"></a>パラメーター
 
 *pMinRange*<br/>
-オブジェクト`CDateTimeCtrl`で許可されている最も早い時刻を格納している、 [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)オブジェクトまたは[CTime](../../atl-mfc-shared/reference/ctime-class.md)オブジェクトへのポインター。
+`CDateTimeCtrl` オブジェクトで許可されている最も早い時刻を格納している、 [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)オブジェクトまたは[CTime](../../atl-mfc-shared/reference/ctime-class.md)オブジェクトへのポインター。
 
 *pMaxRange*<br/>
-オブジェクトへのポインター `COleDateTime` 、 `CTime`またはオブジェクト内で`CDateTimeCtrl`許可されている最新の時間を格納しているオブジェクトへのポインター。
+`CDateTimeCtrl` オブジェクトで許可されている最新の時刻を格納している `COleDateTime` オブジェクトまたは `CTime` オブジェクトへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-どの範囲が設定されているかを示すフラグを含む DWORD 値です。 If
+どの範囲が設定されているかを示すフラグを含む DWORD 値です。 状況
 
 `return value & GDTR_MAX` == 0
 
@@ -329,17 +329,17 @@ DWORD GetRange(
 
 次に、最初のパラメーターが有効になります。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメンバー関数は、Windows SDK で説明されているように、Win32 message [DTM_GETRANGE](/windows/win32/Controls/dtm-getrange)の動作を実装します。 MFC の実装では、または`COleDateTime` `CTime`のいずれかを指定できます。
+このメンバー関数は、Windows SDK で説明されているように、Win32 メッセージ[DTM_GETRANGE](/windows/win32/Controls/dtm-getrange)の動作を実装します。 MFC の実装では、`COleDateTime` と `CTime` のどちらを使用するかを指定できます。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFC_CDateTimeCtrl#4](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_7.cpp)]
 
-##  <a name="gettime"></a>  CDateTimeCtrl::GetTime
+##  <a name="gettime"></a>Cdatetimectrl 使い方:: GetTime
 
-日付と時刻の選択コントロールから現在選択されている時刻を取得し、 `SYSTEMTIME`指定した構造体に格納します。
+日付と時刻の選択コントロールから現在選択されている時刻を取得し、指定した `SYSTEMTIME` 構造体に格納します。
 
 ```
 BOOL GetTime(COleDateTime& timeDest) const;
@@ -357,19 +357,19 @@ DWORD GetTime(LPSYSTEMTIME pTimeDest) const;
 
 ### <a name="return-value"></a>戻り値
 
-最初のバージョンでは、時刻が`COleDateTime`オブジェクトに正常に書き込まれた場合は0以外の場合は0。それ以外の場合は0。 2番目と3番目のバージョンでは、 [NMDATETIMECHANGE](/windows/win32/api/commctrl/ns-commctrl-nmdatetimechange)構造体の*dwflag*メンバーセットと同じ DWORD 値が設定されています。 詳細については、後述の「**解説**」を参照してください。
+最初のバージョンでは、時刻が `COleDateTime` オブジェクトに正常に書き込まれた場合は0以外の。それ以外の場合は0です。 2番目と3番目のバージョンでは、 [NMDATETIMECHANGE](/windows/win32/api/commctrl/ns-commctrl-nmdatetimechange)構造体の*dwflag*メンバーセットと同じ DWORD 値が設定されています。 詳細については、後述の「**解説**」を参照してください。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメンバー関数は、Windows SDK で説明されているように、Win32 message [DTM_GETSYSTEMTIME](/windows/win32/Controls/dtm-getsystemtime)の動作を実装します。 の`GetTime`MFC 実装では、クラスまたは`COleDateTime` `CTime`クラスを使用するか、 `SYSTEMTIME`構造体を使用して時刻情報を格納できます。
+このメンバー関数は、Windows SDK で説明されているように、Win32 メッセージ[DTM_GETSYSTEMTIME](/windows/win32/Controls/dtm-getsystemtime)の動作を実装します。 `GetTime`の MFC 実装では、`COleDateTime` または `CTime` クラスを使用することも、`SYSTEMTIME` 構造体を使用して時刻情報を格納することもできます。
 
-上記の2番目と3番目のバージョンの戻り値 DWORD は、 [NMDATETIMECHANGE](/windows/win32/api/commctrl/ns-commctrl-nmdatetimechange) structure メンバーの*dwFlags*に示されているように、日付と時刻の選択コントロールが "日付なし" の状態に設定されているかどうかを示します。 返される値が GDT_NONE の場合、コントロールは "no date" 状態に設定され、DTS_SHOWNONE スタイルを使用します。 返される値が GDT_VALID の場合は、システム時刻がコピー先の場所に正常に格納されます。
+上記の2番目と3番目のバージョンの戻り値 DWORD は、 [NMDATETIMECHANGE](/windows/win32/api/commctrl/ns-commctrl-nmdatetimechange) structure メンバーの*dwFlags*に示されているように、日付と時刻の選択コントロールが "日付なし" の状態に設定されているかどうかを示します。 返された値が GDT_NONE の場合、コントロールは "日付なし" の状態に設定され、DTS_SHOWNONE スタイルを使用します。 返された値が GDT_VALID の場合は、システム時刻がコピー先の場所に正常に格納されます。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFC_CDateTimeCtrl#5](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_8.cpp)]
 
-##  <a name="getidealsize"></a>  CDateTimeCtrl::GetIdealSize
+##  <a name="getidealsize"></a>Cdatetimectrl 使い方:: GetIdealSize
 
 現在の日付または時刻を表示するために必要な、日付と時刻の選択コントロールの理想的なサイズを返します。
 
@@ -379,7 +379,7 @@ BOOL GetIdealSize(LPSIZE psize) const;
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
+|パラメーター|Description|
 |---------------|-----------------|
 |*psize*|入出力コントロールの理想的なサイズを格納している[サイズ](/windows/win32/api/windef/ns-windef-size)構造体へのポインター。|
 
@@ -387,13 +387,13 @@ BOOL GetIdealSize(LPSIZE psize) const;
 
 戻り値は常に TRUE です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このメソッドは、Windows SDK で説明されている[DTM_GETIDEALSIZE](/windows/win32/Controls/dtm-getidealsize)メッセージを送信します。
 
 ### <a name="example"></a>例
 
-次のコード例では、 *m_dateTimeCtrl*変数を定義しています。この変数は、[日時指定コントロール] コントロールにプログラムでアクセスするために使用されます。 この変数は次の例で使用されています。
+次のコード例では、プログラムを使用して日付と時刻の選択コントロールにアクセスするために使用される、 *m_dateTimeCtrl*変数を定義します。 この変数は次の例で使用されています。
 
 [!code-cpp[NVC_MFC_CDateTimeCtrl_s1#1](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_1.h)]
 
@@ -403,7 +403,7 @@ BOOL GetIdealSize(LPSIZE psize) const;
 
 [!code-cpp[NVC_MFC_CDateTimeCtrl_s1#2](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_9.cpp)]
 
-##  <a name="setformat"></a>  CDateTimeCtrl::SetFormat
+##  <a name="setformat"></a>Cdatetimectrl 使い方:: SetFormat
 
 指定された書式指定文字列に従って、日付と時刻の選択コントロールの表示を設定します。
 
@@ -423,9 +423,9 @@ BOOL SetFormat(LPCTSTR pstrFormat);
 > [!NOTE]
 >  ユーザー入力では、この呼び出しの成功または失敗は判断されません。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメンバー関数は、Windows SDK で説明されているように、Win32 message [DTM_SETFORMAT](/windows/win32/Controls/dtm-setformat)の動作を実装します。
+このメンバー関数は、Windows SDK で説明されているように、Win32 メッセージ[DTM_SETFORMAT](/windows/win32/Controls/dtm-setformat)の動作を実装します。
 
 ### <a name="example"></a>例
 
@@ -446,7 +446,7 @@ COLORREF SetMonthCalColor(
 *iColor*<br/>
 設定する月間予定表コントロールの領域を指定する**int**値。 この値には、次のいずれかを指定できます。
 
-|[値]|説明|
+|値|意味|
 |-----------|-------------|
 |MCSC_BACKGROUND|月の間に表示される背景色を設定します。|
 |MCSC_MONTHBK|月内に表示される背景色を設定します。|
@@ -462,15 +462,15 @@ COLORREF SetMonthCalColor(
 
 正常終了した場合に、月間予定表コントロールの指定した部分の前の色設定を表す COLORREF 値。 それ以外の場合、メッセージは-1 を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメンバー関数は、Windows SDK で説明されているように、Win32 message [DTM_SETMCCOLOR](/windows/win32/Controls/dtm-setmccolor)の動作を実装します。
+このメンバー関数は、Windows SDK で説明されているように、Win32 メッセージ[DTM_SETMCCOLOR](/windows/win32/Controls/dtm-setmccolor)の動作を実装します。
 
 ### <a name="example"></a>例
 
   [Cdatetimectrl 使い方:: GetMonthCalColor](#getmonthcalcolor)の例を参照してください。
 
-##  <a name="setmonthcalfont"></a>  CDateTimeCtrl::SetMonthCalFont
+##  <a name="setmonthcalfont"></a>Cdatetimectrl 使い方:: SetMonthCalFont
 
 日付と時刻の選択コントロールの子の月間予定表コントロールが使用するフォントを設定します。
 
@@ -488,16 +488,16 @@ void SetMonthCalFont(
 *より描画*<br/>
 フォントの設定時にコントロールをすぐに再描画するかどうかを指定します。 このパラメーターを TRUE に設定すると、コントロール自体が再描画されます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメンバー関数は、Windows SDK で説明されているように、Win32 message [DTM_SETMCFONT](/windows/win32/Controls/dtm-setmcfont)の動作を実装します。
+このメンバー関数は、Windows SDK で説明されているように、Win32 メッセージ[DTM_SETMCFONT](/windows/win32/Controls/dtm-setmcfont)の動作を実装します。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFC_CDateTimeCtrl#7](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_11.cpp)]
 
 > [!NOTE]
->  このコードを使用する場合は、 `CDialog` *m_MonthFont*型`CFont`の派生クラスのメンバーを作成することをお勧めします。
+>  このコードを使用する場合は、`CDialog`派生クラスのメンバーを `CFont`型の*m_MonthFont*として作成することをお勧めします。
 
 ##  <a name="setmonthcalstyle"></a>Cdatetimectrl 使い方:: SetMonthCalStyle
 
@@ -509,7 +509,7 @@ DWORD SetMonthCalStyle(DWORD dwStyle);
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
+|パラメーター|Description|
 |---------------|-----------------|
 |*dwStyle*|からMonth calendar コントロールスタイルのビットごとの組み合わせである、新しい月間予定表コントロールスタイル。 詳細については、「[月間予定表コントロールスタイル](/windows/win32/Controls/month-calendar-control-styles)」を参照してください。|
 
@@ -517,13 +517,13 @@ DWORD SetMonthCalStyle(DWORD dwStyle);
 
 ドロップダウン月間予定表コントロールの以前のスタイル。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このメソッドは、Windows SDK で説明されている[DTM_SETMCSTYLE](/windows/win32/Controls/dtm-setmcstyle)メッセージを送信します。
 
 ### <a name="example"></a>例
 
-次のコード例では、 *m_dateTimeCtrl*変数を定義しています。この変数は、[日時指定コントロール] コントロールにプログラムでアクセスするために使用されます。 この変数は次の例で使用されています。
+次のコード例では、プログラムを使用して日付と時刻の選択コントロールにアクセスするために使用される、 *m_dateTimeCtrl*変数を定義します。 この変数は次の例で使用されています。
 
 [!code-cpp[NVC_MFC_CDateTimeCtrl_s1#1](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_1.h)]
 
@@ -533,7 +533,7 @@ DWORD SetMonthCalStyle(DWORD dwStyle);
 
 [!code-cpp[NVC_MFC_CDateTimeCtrl_s1#3](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_12.cpp)]
 
-##  <a name="setrange"></a>  CDateTimeCtrl::SetRange
+##  <a name="setrange"></a>Cdatetimectrl 使い方:: SetRange
 
 日付と時刻の選択コントロールに許容されるシステム時間の最小値と最大値を設定します。
 
@@ -550,24 +550,24 @@ BOOL SetRange(
 ### <a name="parameters"></a>パラメーター
 
 *pMinRange*<br/>
-オブジェクト`CDateTimeCtrl`で許可されている最も早い時刻を格納している、 [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)オブジェクトまたは[CTime](../../atl-mfc-shared/reference/ctime-class.md)オブジェクトへのポインター。
+`CDateTimeCtrl` オブジェクトで許可されている最も早い時刻を格納している、 [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)オブジェクトまたは[CTime](../../atl-mfc-shared/reference/ctime-class.md)オブジェクトへのポインター。
 
 *pMaxRange*<br/>
-オブジェクトへのポインター `COleDateTime` 、 `CTime`またはオブジェクト内で`CDateTimeCtrl`許可されている最新の時間を格納しているオブジェクトへのポインター。
+`CDateTimeCtrl` オブジェクトで許可されている最新の時刻を格納している `COleDateTime` オブジェクトまたは `CTime` オブジェクトへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメンバー関数は、Windows SDK で説明されているように、Win32 message [DTM_SETRANGE](/windows/win32/Controls/dtm-setrange)の動作を実装します。 MFC の実装では、または`COleDateTime` `CTime`のいずれかを指定できます。 オブジェクトの`COleDateTime`状態が NULL の場合は、範囲が削除されます。 `CTime`ポインターまたはポインターがNULLの場合、範囲は`COleDateTime`削除されます。
+このメンバー関数は、Windows SDK で説明されているように、Win32 メッセージ[DTM_SETRANGE](/windows/win32/Controls/dtm-setrange)の動作を実装します。 MFC の実装では、`COleDateTime` と `CTime` のどちらを使用するかを指定できます。 `COleDateTime` オブジェクトの状態が NULL の場合、範囲は削除されます。 `CTime` ポインターまたは `COleDateTime` ポインターが NULL の場合、範囲は削除されます。
 
 ### <a name="example"></a>例
 
   [Cdatetimectrl 使い方:: GetRange](#getrange)の例を参照してください。
 
-##  <a name="settime"></a>  CDateTimeCtrl::SetTime
+##  <a name="settime"></a>Cdatetimectrl 使い方:: SetTime
 
 日時指定コントロールの時刻を設定します。
 
@@ -589,15 +589,15 @@ BOOL SetTime(LPSYSTEMTIME pTimeNew = NULL);
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメンバー関数は、Windows SDK で説明されているように、Win32 message [DTM_SETSYSTEMTIME](/windows/win32/Controls/dtm-setsystemtime)の動作を実装します。 の`SetTime`MFC 実装で`COleDateTime`は、クラスまたは`CTime`クラスを使用するか、 `SYSTEMTIME`構造体を使用して時刻情報を設定できます。
+このメンバー関数は、Windows SDK で説明されているように、Win32 メッセージ[DTM_SETSYSTEMTIME](/windows/win32/Controls/dtm-setsystemtime)の動作を実装します。 `SetTime`の MFC 実装では、`COleDateTime` または `CTime` クラスを使用することも、`SYSTEMTIME` 構造体を使用して時刻情報を設定することもできます。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFC_CDateTimeCtrl#8](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_13.cpp)]
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [MFC のサンプル CMNCTRL1](../../overview/visual-cpp-samples.md)<br/>
 [CWnd クラス](../../mfc/reference/cwnd-class.md)<br/>

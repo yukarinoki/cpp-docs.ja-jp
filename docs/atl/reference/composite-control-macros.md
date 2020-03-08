@@ -1,5 +1,5 @@
 ---
-title: 複合コントロールに関するマクロ
+title: 複合コントロールマクロ
 ms.date: 05/06/2019
 f1_keywords:
 - atlcom/ATL::BEGIN_SINK_MAP
@@ -9,33 +9,33 @@ helpviewer_keywords:
 - composite controls, macros
 ms.assetid: 17f2dd5e-07e6-4aa6-b965-7a361c78c45e
 ms.openlocfilehash: 685bf55910d4746463de30b17b71aa6d246db199
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221106"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78857120"
 ---
-# <a name="composite-control-macros"></a>複合コントロールに関するマクロ
+# <a name="composite-control-macros"></a>複合コントロールマクロ
 
-これらのマクロは、イベント シンク マップとエントリを定義します。
+これらのマクロは、イベントシンクマップとエントリを定義します。
 
 |||
 |-|-|
-|[BEGIN_SINK_MAP](#begin_sink_map)|複合コントロールのイベント シンク マップの先頭をマークします。|
-|[END_SINK_MAP](#end_sink_map)|複合コントロールのイベント シンク マップの終了を示します。|
-|[SINK_ENTRY](#sink_entry)|イベント シンク マップするエントリ。|
-|[SINK_ENTRY_EX](#sink_entry_ex)|追加のパラメーターでイベント シンク マップするエントリ。|
-|[SINK_ENTRY_EX_P](#sink_entry_ex)| (Visual Studio 2017)Iid へのポインターを受け取る点を除いて、SINK_ENTRY_EX 類似します。|
-|[SINK_ENTRY_INFO](#sink_entry_info)|使用するための手動で指定された型情報とイベント シンク マップするエントリ[IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md)します。|
-|[SINK_ENTRY_INFO_P](#sink_entry_info)| (Visual Studio 2017)Iid へのポインターを受け取る点を除いて、SINK_ENTRY_INFO 類似します。|
+|[BEGIN_SINK_MAP](#begin_sink_map)|複合コントロールのイベントシンクマップの開始をマークします。|
+|[END_SINK_MAP](#end_sink_map)|複合コントロールのイベントシンクマップの終了をマークします。|
+|[SINK_ENTRY](#sink_entry)|イベントシンクマップへのエントリ。|
+|[SINK_ENTRY_EX](#sink_entry_ex)|追加のパラメーターを持つイベントシンクマップへのエントリ。|
+|[SINK_ENTRY_EX_P](#sink_entry_ex)| (Visual Studio 2017)SINK_ENTRY_EX に似ていますが、iid へのポインターを受け取る点が異なります。|
+|[SINK_ENTRY_INFO](#sink_entry_info)|[IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md)で使用するために手動で指定された型情報を持つイベントシンクマップへのエントリ。|
+|[SINK_ENTRY_INFO_P](#sink_entry_info)| (Visual Studio 2017)SINK_ENTRY_INFO に似ていますが、iid へのポインターを受け取る点が異なります。|
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlcom.h
+**ヘッダー:** atlcom. h
 
-##  <a name="begin_sink_map"></a>  BEGIN_SINK_MAP
+##  <a name="begin_sink_map"></a>BEGIN_SINK_MAP
 
-複合コントロールのイベント シンク マップの先頭を宣言します。
+複合コントロールのイベントシンクマップの開始を宣言します。
 
 ```
 BEGIN_SINK_MAP(_class)
@@ -44,19 +44,19 @@ BEGIN_SINK_MAP(_class)
 ### <a name="parameters"></a>パラメーター
 
 *_class*<br/>
-[in]コントロールを指定します。
+からコントロールを指定します。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Windowing#104](../../atl/codesnippet/cpp/composite-control-macros_1.h)]
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-ActiveX イベント シンクのみサポートの戻り値の HRESULT 型または void、イベント ハンドラー メソッドからの CE ATL の実装その他の戻り値はサポートされていませんし、その動作は未定義です。
+CE ATL の ActiveX イベントシンクの実装では、イベントハンドラーメソッドから HRESULT 型または void 型の戻り値のみがサポートされます。その他の戻り値はサポートされておらず、その動作は未定義です。
 
-##  <a name="end_sink_map"></a>  END_SINK_MAP
+##  <a name="end_sink_map"></a>END_SINK_MAP
 
-複合コントロールのイベント シンク マップの末尾を宣言します。
+複合コントロールのイベントシンクマップの終了を宣言します。
 
 ```
 END_SINK_MAP()
@@ -66,13 +66,13 @@ END_SINK_MAP()
 
 [!code-cpp[NVC_ATL_Windowing#104](../../atl/codesnippet/cpp/composite-control-macros_1.h)]
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-ActiveX イベント シンクのみサポートの戻り値の HRESULT 型または void、イベント ハンドラー メソッドからの CE ATL の実装その他の戻り値はサポートされていませんし、その動作は未定義です。
+CE ATL の ActiveX イベントシンクの実装では、イベントハンドラーメソッドから HRESULT 型または void 型の戻り値のみがサポートされます。その他の戻り値はサポートされておらず、その動作は未定義です。
 
-##  <a name="sink_entry"></a>  SINK_ENTRY
+##  <a name="sink_entry"></a>SINK_ENTRY
 
-ハンドラー関数を宣言します (*fn*) 指定したイベント (*dispid*) で指定されたコントロールの*id*します。
+*Id*で識別されるコントロールの、指定されたイベント (*dispid*) のハンドラー関数 (*fn*) を宣言します。
 
 ```
 SINK_ENTRY( id, dispid, fn )
@@ -80,26 +80,26 @@ SINK_ENTRY( id, dispid, fn )
 
 ### <a name="parameters"></a>パラメーター
 
-*ID*<br/>
-[in]コントロールを識別します。
+*id*<br/>
+からコントロールを識別します。
 
 *dispid*<br/>
-[in]指定したイベントを識別します。
+から指定されたイベントを識別します。
 
-*fn*<br/>
-[in]イベント ハンドラー関数の名前です。 この関数を使用する必要があります、`_stdcall`呼び出し規約と dispinterface スタイルの適切な署名があります。
+*1億*<br/>
+からイベントハンドラー関数の名前。 この関数は、`_stdcall` の呼び出し規約を使用し、適切なディスパッチインターフェイススタイルのシグネチャを持つ必要があります。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Windowing#104](../../atl/codesnippet/cpp/composite-control-macros_1.h)]
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-ActiveX イベント シンクのみサポートの戻り値の HRESULT 型または void、イベント ハンドラー メソッドからの CE ATL の実装その他の戻り値はサポートされていませんし、その動作は未定義です。
+CE ATL の ActiveX イベントシンクの実装では、イベントハンドラーメソッドから HRESULT 型または void 型の戻り値のみがサポートされます。その他の戻り値はサポートされておらず、その動作は未定義です。
 
-##  <a name="sink_entry_ex"></a>  SINK_ENTRY_EX and SINK_ENTRY_EX_P
+##  <a name="sink_entry_ex"></a>SINK_ENTRY_EX と SINK_ENTRY_EX_P
 
-ハンドラー関数を宣言します (*fn*) 指定したイベント (*dispid*)、ディスパッチ インターフェイスの (*iid*) で指定されたコントロールの*id*.
+*Id*で識別されるコントロールのディスパッチインターフェイス (*iid*) の、指定されたイベント (*dispid*) のハンドラー関数 (*fn*) を宣言します。
 
 ```
 SINK_ENTRY_EX( id, iid, dispid, fn )
@@ -108,32 +108,32 @@ SINK_ENTRY_EX_P( id, piid, dispid, fn ) // (Visual Studio 2017)
 
 ### <a name="parameters"></a>パラメーター
 
-*ID*<br/>
-[in]コントロールを識別します。
+*id*<br/>
+からコントロールを識別します。
 
 *iid*<br/>
-[in]ディスパッチ インターフェイスを識別します。
+からディスパッチインターフェイスを識別します。
 
 *piid*<br/>
-[in]ディスパッチ インターフェイスへのポインター。
+からディスパッチインターフェイスへのポインター。
 
 *dispid*<br/>
-[in]指定したイベントを識別します。
+から指定されたイベントを識別します。
 
-*fn*<br/>
-[in]イベント ハンドラー関数の名前です。 この関数を使用する必要があります、`_stdcall`呼び出し規約と dispinterface スタイルの適切な署名があります。
+*1億*<br/>
+からイベントハンドラー関数の名前。 この関数は、`_stdcall` の呼び出し規約を使用し、適切なディスパッチインターフェイススタイルのシグネチャを持つ必要があります。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Windowing#136](../../atl/codesnippet/cpp/composite-control-macros_2.h)]
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-ActiveX イベント シンクのみサポートの戻り値の HRESULT 型または void、イベント ハンドラー メソッドからの CE ATL の実装その他の戻り値はサポートされていませんし、その動作は未定義です。
+CE ATL の ActiveX イベントシンクの実装では、イベントハンドラーメソッドから HRESULT 型または void 型の戻り値のみがサポートされます。その他の戻り値はサポートされておらず、その動作は未定義です。
 
-##  <a name="sink_entry_info"></a>  SINK_ENTRY_INFO and SINK_ENTRY_INFO_P
+##  <a name="sink_entry_info"></a>SINK_ENTRY_INFO と SINK_ENTRY_INFO_P
 
-必要な情報を提供するイベント シンク マップ内を使用して[IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md)関連するハンドラー関数にイベントをルーティングします。
+イベントシンクマップ内の SINK_ENTRY_INFO マクロを使用して、 [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md)が関連するハンドラー関数にイベントをルーティングするために必要な情報を提供します。
 
 ```
 SINK_ENTRY_INFO( id, iid, dispid, fn, info )
@@ -142,29 +142,29 @@ SINK_ENTRY_INFO_P( id, piid, dispid, fn, info ) // (Visual Studio 2017)
 
 ### <a name="parameters"></a>パラメーター
 
-*ID*<br/>
-[in]イベント ソースを識別する符号なし整数。 この値に一致する必要があります、 *nID*関連で使用するテンプレート パラメーター [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md)基本クラス。
+*id*<br/>
+からイベントソースを識別する符号なし整数。 この値は、関連する[IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md)基本クラスで使用される*nID*テンプレートパラメーターと一致している必要があります。
 
 *iid*<br/>
-[in]ディスパッチ インターフェイスを識別する IID。
+からディスパッチインターフェイスを識別する IID。
 
 *piid*<br/>
-[in]ディスパッチ インターフェイスを識別する IID へのポインター。
+からディスパッチインターフェイスを識別する IID へのポインター。
 
 *dispid*<br/>
-[in]指定したイベントを識別するように DISPID。
+から指定されたイベントを識別する DISPID。
 
-*fn*<br/>
-[in]イベント ハンドラー関数の名前です。 この関数を使用する必要があります、`_stdcall`呼び出し規約と dispinterface スタイルの適切な署名があります。
+*1億*<br/>
+からイベントハンドラー関数の名前。 この関数は、`_stdcall` の呼び出し規約を使用し、適切なディスパッチインターフェイススタイルのシグネチャを持つ必要があります。
 
-*情報*<br/>
-[in]イベント ハンドラー関数の情報を入力します。 この型情報がへのポインターの形で提供される、`_ATL_FUNC_INFO`構造体。 CC_CDECL の CALLCONV フィールド for Windows CE でサポートされる唯一のオプション、`_ATL_FUNC_INFO`構造体。 その他の値はサポートされていませんので、動作が定義されていません。
+*info*<br/>
+からイベントハンドラー関数の型情報。 この型情報は、`_ATL_FUNC_INFO` 構造体へのポインターの形式で提供されます。 CC_CDECL は、`_ATL_FUNC_INFO` 構造体の CALLCONV フィールドの Windows CE でサポートされている唯一のオプションです。 その他の値はサポートされていないため、動作は定義されていません。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-最初の 4 つのマクロのパラメーターは、のものと同じ、 [SINK_ENTRY_EX](#sink_entry_ex)マクロ。 最後のパラメーターは、イベントの種類の情報を提供します。 ActiveX イベント シンクのみサポートの戻り値の HRESULT 型または void、イベント ハンドラー メソッドからの CE ATL の実装その他の戻り値はサポートされていませんし、その動作は未定義です。
+最初の4つのマクロパラメーターは、 [SINK_ENTRY_EX](#sink_entry_ex)マクロのパラメーターと同じです。 最後のパラメーターは、イベントの型情報を提供します。 CE ATL の ActiveX イベントシンクの実装では、イベントハンドラーメソッドから HRESULT 型または void 型の戻り値のみがサポートされます。その他の戻り値はサポートされておらず、その動作は未定義です。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[[マクロ]](../../atl/reference/atl-macros.md)<br/>
+[マクロ](../../atl/reference/atl-macros.md)<br/>
 [複合コントロールに関するグローバル関数](../../atl/reference/composite-control-global-functions.md)

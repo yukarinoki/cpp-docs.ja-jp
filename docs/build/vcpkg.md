@@ -5,11 +5,11 @@ ms.date: 01/10/2020
 ms.technology: cpp-ide
 ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
 ms.openlocfilehash: 7c3dddd62a66c746d92d2f931b97e354ee27d75f
-ms.sourcegitcommit: ba129dc55dc3ff638f3af5ac0e87ec2ca1cb2674
-ms.translationtype: HT
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75869707"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78857024"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg: Windows、Linux、および MacOS 用の C++ パッケージ マネージャー
 
@@ -25,7 +25,7 @@ vcpkg は Windows カタログ内のライブラリに、バイナリ<sup>1</sup
 
 また、ポートのコレクションにプライベート ライブラリを持つ vcpkg クローンを作成することもできます。 作成済みのバイナリとヘッダーをダウンロードするポートを追加します。 次に、それらのファイルを適切な場所にコピーするだけの、portfile.cmake ファイルを記述します。
 
-<sup>1</sup> *注: 一部の専用のライブラリでは、ソースは入手できません。vcpkg では、このような場合に互換性のあるビルド済みのバイナリをダウンロードします。*
+<sup>1</sup> *注: ソースは、一部の独自のライブラリでは使用できません。このような場合、vcpkg は互換性のあるビルド済みバイナリをダウンロードします。*
 
 ## <a name="installation"></a>インストール
 
@@ -204,7 +204,7 @@ vcpkg インスタンスの内容は次のとおりです。
 
 ## <a name="command-line-reference"></a>コマンド ライン リファレンス
 
-|コマンド|説明|
+|command|Description|
 |---------|---------|
 |**vcpkg search \[pat]**|インストールに使用できるパッケージを検索します|
 |**vcpkg install \<pkg>...**|パッケージをインストールします|
@@ -226,7 +226,7 @@ vcpkg インスタンスの内容は次のとおりです。
 
 ### <a name="options"></a>オプション
 
-|オプション|説明|
+|オプション|Description|
 |---------|---------|
 |**--triplet \<t>**|ターゲット アーキテクチャのトリプレットを指定します。 (既定値: `%VCPKG_DEFAULT_TRIPLET%`。**vcpkg help triplet** も参照してください)|
 |**--vcpkg-root \<path>**|vcpkg ルート ディレクトリを指定します (既定値: `%VCPKG_ROOT%`)|

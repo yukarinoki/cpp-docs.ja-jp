@@ -12,11 +12,11 @@ helpviewer_keywords:
 - connection points [C++], notifying of events
 ms.assetid: eb7a563e-6bce-4cdf-8d20-8c6a5307781b
 ms.openlocfilehash: 694127ceccc1d1b55e5da9abca799dff77dcfc60
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69496941"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78864919"
 ---
 # <a name="cfirepropnotifyevent-class"></a>C焼討 Propnotifyevent クラス
 
@@ -35,16 +35,16 @@ class CFirePropNotifyEvent
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|名前|説明|
+|Name|Description|
 |----------|-----------------|
-|[CFirePropNotifyEvent::FireOnChanged](#fireonchanged)|雑音コントロールプロパティが変更されたことをコンテナーのシンクに通知します。|
-|[CFirePropNotifyEvent::FireOnRequestEdit](#fireonrequestedit)|雑音コントロールプロパティが変更されようとしていることをコンテナーのシンクに通知します。|
+|[C焼討 Propnotifyevent:: FireOnChanged](#fireonchanged)|雑音コントロールプロパティが変更されたことをコンテナーのシンクに通知します。|
+|[C焼討 Propnotifyevent:: 焼討 Onrequestedit](#fireonrequestedit)|雑音コントロールプロパティが変更されようとしていることをコンテナーのシンクに通知します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-`CFirePropNotifyEvent`には、コントロールプロパティが変更されたか変更されようとしていることをコンテナーのシンクに通知する2つのメソッドがあります。
+`CFirePropNotifyEvent` には、コントロールのプロパティが変更されたか変更しようとしていることをコンテナーのシンクに通知する2つのメソッドがあります。
 
-コントロールを実装しているクラスがから`IPropertyNotifySink` `CFirePropNotifyEvent`派生している場合は、また`FireOnRequestEdit`は`FireOnChanged`を呼び出すと、メソッドが呼び出されます。 コントロールクラスがから`IPropertyNotifySink`派生していない場合、これらの関数の呼び出しは S_OK を返します。
+コントロールを実装しているクラスが `IPropertyNotifySink`から派生している場合は、`FireOnRequestEdit` または `FireOnChanged`を呼び出すと、`CFirePropNotifyEvent` メソッドが呼び出されます。 コントロールクラスが `IPropertyNotifySink`から派生していない場合、これらの関数の呼び出しは S_OK を返します。
 
 コントロールの作成の詳細については、 [ATL チュートリアル](../../atl/active-template-library-atl-tutorial.md)を参照してください。
 
@@ -52,7 +52,7 @@ class CFirePropNotifyEvent
 
 **ヘッダー:** atlctl. h
 
-##  <a name="fireonchanged"></a>  CFirePropNotifyEvent::FireOnChanged
+##  <a name="fireonchanged"></a>C焼討 Propnotifyevent:: FireOnChanged
 
 指定されたオブジェクトのプロパティが変更されたことを、すべての接続された[IPropertyNotifySink](/windows/win32/api/ocidl/nn-ocidl-ipropertynotifysink)インターフェイス (オブジェクトのすべての接続ポイント) に通知します。
 
@@ -62,8 +62,8 @@ static HRESULT FireOnChanged(IUnknown* pUnk, DISPID dispID);
 
 ### <a name="parameters"></a>パラメーター
 
-*pUnk*<br/>
-から通知を送信`IUnknown`するオブジェクトのへのポインター。
+*パンク*<br/>
+から通知を送信するオブジェクトの `IUnknown` へのポインター。
 
 *dispID*<br/>
 から変更されたプロパティの識別子。
@@ -72,11 +72,11 @@ static HRESULT FireOnChanged(IUnknown* pUnk, DISPID dispID);
 
 標準の HRESULT 値の1つ。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 コントロールが接続ポイントをサポートしていない場合でも、この関数は安全に呼び出すことができます。
 
-##  <a name="fireonrequestedit"></a>  CFirePropNotifyEvent::FireOnRequestEdit
+##  <a name="fireonrequestedit"></a>C焼討 Propnotifyevent:: 焼討 Onrequestedit
 
 指定されたオブジェクトプロパティが変更されようとしている、すべての接続されている[IPropertyNotifySink](/windows/win32/api/ocidl/nn-ocidl-ipropertynotifysink)インターフェイス (オブジェクトのすべての接続ポイント) に通知します。
 
@@ -86,8 +86,8 @@ static HRESULT FireOnRequestEdit(IUnknown* pUnk, DISPID dispID);
 
 ### <a name="parameters"></a>パラメーター
 
-*pUnk*<br/>
-から通知を送信`IUnknown`するオブジェクトのへのポインター。
+*パンク*<br/>
+から通知を送信するオブジェクトの `IUnknown` へのポインター。
 
 *dispID*<br/>
 から変更するプロパティの識別子。
@@ -96,10 +96,10 @@ static HRESULT FireOnRequestEdit(IUnknown* pUnk, DISPID dispID);
 
 標準の HRESULT 値の1つ。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 コントロールが接続ポイントをサポートしていない場合でも、この関数は安全に呼び出すことができます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [クラスの概要](../../atl/atl-class-overview.md)

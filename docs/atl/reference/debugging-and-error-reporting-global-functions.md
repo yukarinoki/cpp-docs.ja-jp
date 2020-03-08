@@ -1,5 +1,5 @@
 ---
-title: デバッグとエラー報告に関するグローバル関数
+title: デバッグとエラー報告のグローバル関数
 ms.date: 11/04/2016
 f1_keywords:
 - atlcomcli/ATL::AtlHresultFromLastError
@@ -9,25 +9,25 @@ helpviewer_keywords:
 - functions [ATL], error reporting
 ms.assetid: 11339c02-98cd-428d-b3b9-7deeb155a6a3
 ms.openlocfilehash: f7483b7473383958089b0c88d0b3c2645ddc2a4f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62276667"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78864887"
 ---
-# <a name="debugging-and-error-reporting-global-functions"></a>デバッグとエラー報告に関するグローバル関数
+# <a name="debugging-and-error-reporting-global-functions"></a>デバッグとエラー報告のグローバル関数
 
-これらの関数は、便利なデバッグとトレース機能を提供します。
+これらの関数は、便利なデバッグ機能とトレース機能を提供します。
 
 |||
 |-|-|
-|[AtlHresultFromLastError](debugging-and-error-reporting-global-functions.md#atlhresultfromlasterror)|返します、 `GetLastError` HRESULT の形式でのエラー コード。|
+|[AtlHresultFromLastError](debugging-and-error-reporting-global-functions.md#atlhresultfromlasterror)|HRESULT の形式で `GetLastError` エラーコードを返します。|
 |[AtlHresultFromWin32](debugging-and-error-reporting-global-functions.md#atlhresultfromwin32)|Win32 エラー コードを HRESULT に変換します。|
-|[AtlReportError](debugging-and-error-reporting-global-functions.md#atlreporterror)|設定`IErrorInfo`をクライアントにエラーの詳細を提供します。|
+|[AtlReportError](debugging-and-error-reporting-global-functions.md#atlreporterror)|エラーの詳細をクライアントに提供するように `IErrorInfo` を設定します。|
 |[AtlThrow](debugging-and-error-reporting-global-functions.md#atlthrow)|`CAtlException` をスローします。|
 |[AtlThrowLastWin32](debugging-and-error-reporting-global-functions.md#atlthrowlastwin32)|Windows の `GetLastError` 関数の結果に基づいてエラーを通知します。|
 
-##  <a name="atlhresultfromlasterror"></a>  AtlHresultFromLastError
+##  <a name="atlhresultfromlasterror"></a>AtlHresultFromLastError
 
 呼び出し側スレッドの直前のエラー コード値を HRESULT の形式で返します。
 
@@ -35,15 +35,15 @@ ms.locfileid: "62276667"
 HRESULT AtlHresultFromLastError();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`AtlHresultFromLastError` 呼び出し`GetLastError`最後のエラーを取得して、HRESULT_FROM_WIN32 マクロを使用して、HRESULT に変換してから、エラーが返されます。
+`AtlHresultFromLastError` は `GetLastError` を呼び出して最後のエラーを取得し、HRESULT_FROM_WIN32 マクロを使用して HRESULT に変換した後にエラーを返します。
 
 ### <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlcomcli.h
+**ヘッダー:** atlcomcli. h
 
-##  <a name="atlhresultfromwin32"></a>  AtlHresultFromWin32
+##  <a name="atlhresultfromwin32"></a>AtlHresultFromWin32
 
 Win32 エラー コードを HRESULT に変換します。
 
@@ -56,20 +56,20 @@ AtlHresultFromWin32(DWORD error);
 *error*<br/>
 変換するエラー値。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-Win32 エラー コードを HRESULT_FROM_WIN32 マクロを使用して、HRESULT に変換します。
+マクロ HRESULT_FROM_WIN32 を使用して、Win32 エラーコードを HRESULT に変換します。
 
 > [!NOTE]
->  使用する代わりに`HRESULT_FROM_WIN32(GetLastError())`、関数を使用して[AtlHresultFromLastError](debugging-and-error-reporting-global-functions.md#atlhresultfromlasterror)します。
+>  `HRESULT_FROM_WIN32(GetLastError())`を使用する代わりに、 [AtlHresultFromLastError](debugging-and-error-reporting-global-functions.md#atlhresultfromlasterror)関数を使用します。
 
 ### <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlcomcli.h
+**ヘッダー:** atlcomcli. h
 
-##  <a name="atlreporterror"></a>  AtlReportError
+##  <a name="atlreporterror"></a>AtlReportError
 
-設定、`IErrorInfo`オブジェクトのクライアントにエラー情報を提供するインターフェイス。
+オブジェクトのクライアントにエラー情報を提供するために、`IErrorInfo` インターフェイスを設定します。
 
 ```
 HRESULT WINAPI AtlReportError(
@@ -120,51 +120,51 @@ HRESULT WINAPI AtlReportError(
 ### <a name="parameters"></a>パラメーター
 
 *clsid*<br/>
-[in]エラーを報告するオブジェクトの CLSID。
+からエラーを報告するオブジェクトの CLSID。
 
 *lpszDesc*<br/>
-[in]エラーを説明する文字列。 Unicode バージョンを指定する*lpszDesc*の入力 LPCOLESTR; ANSI バージョンは、LPCSTR の種類を指定します。
+からエラーを説明する文字列。 Unicode バージョンでは、 *Lpszdesc*が LPCOLESTR 型であることが指定されています。ANSI バージョンでは、LPCSTR の種類を指定します。
 
 *iid*<br/>
-[in]エラーがオペレーティング システムによって定義されている場合は、エラーまたは GUID_ を定義するインターフェイスの IID。
+からエラーを定義するインターフェイスの IID。オペレーティングシステムによってエラーが定義されている場合は GUID_NULL します。
 
 *hRes*<br/>
-[in]呼び出し元に必要な HRESULT が返されます。
+から呼び出し元に返される HRESULT。
 
 *nID*<br/>
-[in]エラー説明文字列が格納されているリソースの識別子です。 この値は 0x0200 と 0 xffff の範囲である必要があります。 デバッグ ビルドで、 **ASSERT**なります*nID*有効な文字列のインデックスを作成しません。 リリース ビルドでエラーを説明する文字列を「不明なエラー」に設定されます。
+からエラー説明文字列が格納されているリソース識別子。 この値は、0x0200 ~ 0xFFFF の範囲で指定する必要があります。 デバッグビルドでは、 *nID*が有効な文字列にインデックスを作成しない場合、**アサート**が発生します。 リリースビルドでは、エラーの説明文字列が "不明なエラー" に設定されます。
 
 *dwHelpID*<br/>
-[in]エラーのヘルプ コンテキスト識別子。
+からエラーのヘルプコンテキスト識別子。
 
 *lpszHelpFile*<br/>
-[in]パスとエラーを説明するヘルプ ファイルの名前。
+からエラーを説明するヘルプファイルのパスと名前。
 
 *hInst*<br/>
-[in]リソースへのハンドル。 このパラメーターは、既定では、`__AtlBaseModuleModule::GetResourceInstance`ここで、`__AtlBaseModuleModule`のグローバル インスタンス[CAtlBaseModule](../../atl/reference/catlbasemodule-class.md)またはその派生クラス。
+からリソースへのハンドル。 既定では、このパラメーターは `__AtlBaseModuleModule::GetResourceInstance`です。 `__AtlBaseModuleModule` は[CAtlBaseModule](../../atl/reference/catlbasemodule-class.md)のグローバルインスタンス、またはそれから派生したクラスです。
 
 ### <a name="return-value"></a>戻り値
 
-場合、 *hRes*パラメーターが 0 以外の場合は、値を返します*hRes*します。 場合*hRes*が 0 の最初の 4 つのバージョン`AtlReportError`DISP_E_EXCEPTION を返します。 最後の 2 つのバージョンが、マクロの結果を返す**MAKE_HRESULT (1, FACILITY_ITF、** `nID` **)** します。
+*Hres*パラメーターが0以外の場合、は*hres*の値を返します。 *Hres*が0の場合、`AtlReportError` の最初の4つのバージョンが DISP_E_EXCEPTION を返します。 最後の2つのバージョンは、マクロ**MAKE_HRESULT (1、FACILITY_ITF、** `nID` **)** の結果を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-文字列*lpszDesc*エラーの説明テキストとして使用されます。 クライアントが受信すると、 *hRes*から返す`AtlReportError`、クライアントがアクセスできる、`IErrorInfo`エラーの詳細の構造。
+文字列*Lpszdesc*は、エラーの説明テキストとして使用されます。 クライアントが `AtlReportError`から返す*Hres*を受け取ると、クライアントは `IErrorInfo` 構造にアクセスしてエラーの詳細を確認できます。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_COM#52](../../atl/codesnippet/cpp/debugging-and-error-reporting-global-functions_1.cpp)]
 
 > [!CAUTION]
->  使用しない`AtlReportError`C++ の catch ハンドラー。 これらの関数の一部のオーバーライドを使用して、ATL 文字列変換マクロは、内部的には、使用される、`_alloca`関数を内部的にします。 使用して`AtlReportError`C++ catch ハンドラーの C++ の catch ハンドラーで例外が発生します。
+>  Catch ハンドラーでは `AtlReportError` C++を使用しないでください。 これらの関数の一部のオーバーライドでは、内部で ATL 文字列変換マクロを使用します。このマクロは内部的に `_alloca` 関数を使用します。 Catch ハンドラーで `AtlReportError` C++を使用すると、catch C++ハンドラーで例外が発生する可能性があります。
 
 ### <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlcom.h
+**ヘッダー:** atlcom. h
 
-##  <a name="atlthrow"></a>  AtlThrow
+##  <a name="atlthrow"></a>AtlThrow
 
-この関数では、HRESULT のステータス コードに基づいてエラーを通知します。
+HRESULT ステータスコードに基づいてエラーを通知するには、この関数を呼び出します。
 
 ```
 __declspec(noreturn) inline void AtlThrow(HRESULT hr);
@@ -175,21 +175,21 @@ __declspec(noreturn) inline void AtlThrow(HRESULT hr);
 *hr*<br/>
 標準の HRESULT 値。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この関数は、エラーが発生した場合の ATL および MFC コードによって使用されます。 独自のコードから呼び出すこともできます。 この関数の既定の実装は、MFC または ATL プロジェクトの種類とシンボルのシンボルの定義に依存します。
+この関数は、エラー条件が発生した場合に ATL および MFC コードによって使用されます。 また、独自のコードから呼び出すこともできます。 この関数の既定の実装は、シンボルの定義と、プロジェクトの種類 (MFC または ATL) によって _ATL_NO_EXCEPTIONS ます。
 
-すべてのケースでは、この関数は、デバッガーに HRESULT をトレースします。
+どのような場合でも、この関数はデバッガーに対して HRESULT をトレースします。
 
-Visual Studio 2015 Update 3 以降では、この関数は、誤った SAL 警告を回避するために、属性付き __declspec(noreturn) です。
+Visual Studio 2015 Update 3 以降では、擬似 SAL の警告を回避するために、この関数には __declspec (noreturn) が付けられています。
 
-MFC プロジェクトでシンボルが定義されていない場合に、この関数がスロー、 [CMemoryException](../../mfc/reference/cmemoryexception-class.md)または[COleException](../../mfc/reference/coleexception-class.md) HRESULT の値に基づきます。
+_ATL_NO_EXCEPTIONS が MFC プロジェクトで定義されていない場合、この関数は HRESULT の値に基づいて[CMemoryException](../../mfc/reference/cmemoryexception-class.md)または[COleException](../../mfc/reference/coleexception-class.md)をスローします。
 
-ATL プロジェクトでシンボルが定義されていない場合、関数、 [CAtlException](../../atl/reference/catlexception-class.md)します。
+ATL プロジェクトで _ATL_NO_EXCEPTIONS が定義されていない場合、関数は[CAtlException](../../atl/reference/catlexception-class.md)をスローします。
 
-シンボルが定義されている場合、関数は例外をスローする代わりにアサーション失敗を発生させます。
+_ATL_NO_EXCEPTIONS が定義されている場合、関数は、例外をスローする代わりにアサーションエラーを発生させます。
 
-ATL プロジェクトでは、ATL によって、障害発生時に使用するには、この関数の実装を提供することができます。 これを行うには、定義、独自の関数と同じシグネチャを持つ`AtlThrow`と #define`AtlThrow`関数の名前になります。 これは、atlexcept.h (つまり atlbase.h atlexcept.h が含まれるために、ATL ヘッダーをインクルードする前に行う必要があります) を含める前に実行する必要があります。 関数の属性`__declspec(noreturn)`誤った SAL 警告を回避するためにします。
+ATL プロジェクトでは、エラーが発生した場合に ATL が使用する、この関数の独自の実装を提供できます。 これを行うには、`AtlThrow` と同じシグネチャを使用して独自の関数を定義し、関数の名前として `AtlThrow` #define します。 これは、atlexcept. h を含める前に実行する必要があります (これは、atlexcept. h には atlexcept の atlexcept 含まれているため、ATL ヘッダーを含める前に実行する必要があることを意味します)。 属性 `__declspec(noreturn)`、擬似 SAL 警告を回避するために関数を使用します。
 
 ### <a name="example"></a>例
 
@@ -197,9 +197,9 @@ ATL プロジェクトでは、ATL によって、障害発生時に使用する
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atldef.h
+**ヘッダー:** atldef. h
 
-##  <a name="atlthrowlastwin32"></a>  AtlThrowLastWin32
+##  <a name="atlthrowlastwin32"></a>AtlThrowLastWin32
 
 Windows の `GetLastError` 関数の結果に基づいてエラーを通知します。
 
@@ -207,21 +207,21 @@ Windows の `GetLastError` 関数の結果に基づいてエラーを通知し�
 inline void AtlThrowLastWin32();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この関数の結果のトレース`GetLastError`デバッガーにします。
+この関数は、`GetLastError` の結果をデバッガーにトレースします。
 
-MFC プロジェクトでシンボルが定義されていない場合に、この関数がスロー、 [CMemoryException](../../mfc/reference/cmemoryexception-class.md)または[COleException](../../mfc/reference/coleexception-class.md)によって返される値に基づいて`GetLastError`します。
+_ATL_NO_EXCEPTIONS が MFC プロジェクトで定義されていない場合、この関数は、`GetLastError`によって返された値に基づいて[CMemoryException](../../mfc/reference/cmemoryexception-class.md)または[COleException](../../mfc/reference/coleexception-class.md)をスローします。
 
-ATL プロジェクトでシンボルが定義されていない場合、関数、 [CAtlException](../../atl/reference/catlexception-class.md)します。
+ATL プロジェクトで _ATL_NO_EXCEPTIONS が定義されていない場合、関数は[CAtlException](../../atl/reference/catlexception-class.md)をスローします。
 
-シンボルが定義されている場合、関数は例外をスローする代わりにアサーション失敗を発生させます。
+_ATL_NO_EXCEPTIONS が定義されている場合、関数は、例外をスローする代わりにアサーションエラーを発生させます。
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atldef.h
+**ヘッダー:** atldef. h
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [関数](../../atl/reference/atl-functions.md)<br/>
 [デバッグとエラー報告に関するマクロ](../../atl/reference/debugging-and-error-reporting-macros.md)

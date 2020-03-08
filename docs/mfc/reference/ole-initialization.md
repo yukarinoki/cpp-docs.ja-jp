@@ -8,26 +8,26 @@ helpviewer_keywords:
 - OLE initialization
 ms.assetid: aa8a54a7-24c3-4344-b2c6-dbcf6084fa31
 ms.openlocfilehash: 6860697dd3adbe26197dd9075e84f402029e00a5
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69502022"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78855692"
 ---
 # <a name="ole-initialization"></a>OLE の初期化
 
-アプリケーションで OLE system サービスを使用するには、OLE システム Dll を初期化し、Dll が正しいバージョンであることを確認する必要があります。 関数`AfxOleInit`は、OLE システム dll を初期化します。
+アプリケーションで OLE system サービスを使用するには、OLE システム Dll を初期化し、Dll が正しいバージョンであることを確認する必要があります。 `AfxOleInit` 関数は、OLE システム Dll を初期化します。
 
 ### <a name="ole-initialization"></a>OLE の初期化
 
 |||
 |-|-|
 |[AfxOleInit](#afxoleinit)|OLE ライブラリを初期化します。|
-|[AfxEnableControlContainer](#afxenablecontrolcontainer)|OLE コントロールのコンテインメントのサポートを有効`InitInstance`にするには、アプリケーションオブジェクトの関数でこの関数を呼び出します。|
+|[AfxEnableControlContainer](#afxenablecontrolcontainer)|OLE コントロールのコンテインメントのサポートを有効にするには、アプリケーションオブジェクトの `InitInstance` 関数でこの関数を呼び出します。|
 
 ## <a name="afxenablecontrolcontainer"></a>AfxEnableControlContainer
 
-OLE コントロールのコンテインメントのサポートを有効`InitInstance`にするには、アプリケーションオブジェクトの関数でこの関数を呼び出します。
+OLE コントロールのコンテインメントのサポートを有効にするには、アプリケーションオブジェクトの `InitInstance` 関数でこの関数を呼び出します。
 
 ### <a name="syntax"></a>構文
 
@@ -35,7 +35,7 @@ OLE コントロールのコンテインメントのサポートを有効`InitIn
 void AfxEnableControlContainer( );
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 OLE コントロール (現在は ActiveX コントロールと呼ばれます) の詳細については、「 [Activex コントロールのトピック](../mfc-activex-controls.md)」を参照してください。
 
@@ -55,7 +55,7 @@ BOOL AFXAPI AfxOleInit();
 
 成功した場合は 0 以外の値です。初期化に失敗した場合は 0 です。失敗の原因は多くの場合、正しくないバージョンの OLE システム DLL がインストールされていることです。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 MFC アプリケーションに対する OLE サポートを初期化するには、この関数を呼び出します。 この関数を呼び出すと、次のアクションが発生します。
 
@@ -67,12 +67,12 @@ MFC アプリケーションに対する OLE サポートを初期化するに�
 >  **AfxOleInit**が MFC DLL から呼び出された場合、呼び出しは失敗します。 この関数は DLL から呼び出された場合、呼び出し元アプリケーションによって OLE システムが既に初期化されていることを想定するため、失敗が生じます。
 
 > [!NOTE]
->  MFC アプリケーションは、シングルスレッド アパートメント (STA) として初期化する必要があります。 `InitInstance`オーバーライドで[CoInitializeEx](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex)を呼び出した場合は、COINIT_APARTMENTTHREADED (COINIT_MULTITHREADED ではなく) を指定します。
+>  MFC アプリケーションは、シングルスレッド アパートメント (STA) として初期化する必要があります。 `InitInstance` override で[CoInitializeEx](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex)を呼び出した場合は、COINIT_MULTITHREADED ではなく COINIT_APARTMENTTHREADED を指定します。
 
 ### <a name="requirements"></a>必要条件
 
 **ヘッダー :** afxdisp.h
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [マクロとグローバル](../../mfc/reference/mfc-macros-and-globals.md)

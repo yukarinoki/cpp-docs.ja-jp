@@ -11,19 +11,19 @@ helpviewer_keywords:
 - std::get [C++]
 - std::swap [C++]
 ms.openlocfilehash: 61b5404d0f22cd902e35f6bee680df3c719804f2
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456774"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78875892"
 ---
 # <a name="ltarraygt-functions"></a>&lt;array&gt; 関数
 
-配列\<> ヘッダーには、**配列**オブジェクトに対して`get`実行`swap`される、との2つの非メンバー関数が含まれています。
+\<array > ヘッダーには、**配列**オブジェクトを操作する、`get` と `swap`の2つの非メンバー関数が含まれています。
 
 |||
 |-|-|
-|[get](#get)|[swap](#swap)|
+|[get](#get)|[スワップ](#swap)|
 
 ## <a name="get"></a>  get
 
@@ -42,16 +42,16 @@ constexpr T&& get(array<T, N>&& arr) noexcept;
 
 ### <a name="parameters"></a>パラメーター
 
-*化*\
+*[インデックス]* \
 要素のオフセット。
 
-*\T*\
+*T*\
 要素の型。
 
-*非該当*\
+*N*\
 配列の要素数。
 
-*→*\
+*arr*\
 選択する配列。
 
 ### <a name="example"></a>例
@@ -88,7 +88,7 @@ int main()
 
 ## <a name="swap"></a>  swap
 
-2つの**配列**オブジェクトを交換`std::swap`するの非メンバーテンプレートの特殊化。
+2つの**配列**オブジェクトを交換する `std::swap` の非メンバーテンプレートの特殊化。
 
 ```cpp
 template <class Ty, std::size_t N>
@@ -97,19 +97,19 @@ void swap(array<Ty, N>& left, array<Ty, N>& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*~* \
+*Ty*\
 要素の型。
 
-*非該当*\
+*N*\
 配列のサイズ。
 
-*左側*\
+*左*\
 交換する最初の配列。
 
-*そうです*\
+*右*\
 交換する 2 番目の配列。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このテンプレート関数は、`left.swap(right)` を実行します。
 
@@ -159,6 +159,6 @@ int main()
 0 1 2 3
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [\<array>](../standard-library/array.md)

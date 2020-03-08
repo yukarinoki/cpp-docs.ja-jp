@@ -9,11 +9,11 @@ f1_keywords:
 - atlbase/ATL::AtlComModuleGetClassObject
 ms.assetid: c2f0a35d-857c-4538-a44d-c4ea0db63b06
 ms.openlocfilehash: f9c3697259e1cee2b1107ded785ca583d730b55e
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69495462"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78863202"
 ---
 # <a name="server-registration-global-functions"></a>サーバー登録のグローバル関数
 
@@ -34,7 +34,7 @@ ms.locfileid: "69495462"
 
 **ヘッダー:** atlbase. h
 
-##  <a name="atlcommoduleregisterserver"></a>  AtlComModuleRegisterServer
+##  <a name="atlcommoduleregisterserver"></a>AtlComModuleRegisterServer
 
 オブジェクト マップのオブジェクトをすべて登録します。
 
@@ -58,15 +58,15 @@ COM モジュールへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`AtlComModuleRegisterServer`ATL によって自動生成されるオブジェクトマップをウォークし、マップ内の各オブジェクトを登録します。 *Pclsid*が NULL でない場合は、 *pclsid*によって参照されるオブジェクトのみが登録されます。それ以外の場合は、すべてのオブジェクトが登録されます。
+ATL によって自動生成されたオブジェクトマップをウォークし、マップ内の各オブジェクトを登録 `AtlComModuleRegisterServer` ます。 *Pclsid*が NULL でない場合は、 *pclsid*によって参照されるオブジェクトのみが登録されます。それ以外の場合は、すべてのオブジェクトが登録されます。
 
 この関数は、 [CAtlComModule:: RegisterServer](catlcommodule-class.md#registerserver)によって呼び出されます。
 
-##  <a name="atlcommoduleunregisterserver"></a>  AtlComModuleUnregisterServer
+##  <a name="atlcommoduleunregisterserver"></a>AtlComModuleUnregisterServer
 
 オブジェクト マップのオブジェクトの登録をすべて解除します。
 
@@ -90,11 +90,11 @@ COM モジュールへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`AtlComModuleUnregisterServer`ATL オブジェクトマップをウォークし、マップ内の各オブジェクトの登録を解除します。 *Pclsid*が NULL でない場合は、 *pclsid*によって参照されるオブジェクトのみが登録解除されます。それ以外の場合は、すべてのオブジェクトが登録解除されます。
+`AtlComModuleUnregisterServer` は、ATL オブジェクトマップをウォークし、マップ内の各オブジェクトの登録を解除します。 *Pclsid*が NULL でない場合は、 *pclsid*によって参照されるオブジェクトのみが登録解除されます。それ以外の場合は、すべてのオブジェクトが登録解除されます。
 
 この関数は、 [CAtlComModule:: UnregisterServer](catlcommodule-class.md#unregisterserver)によって呼び出されます。
 
@@ -122,9 +122,9 @@ COM モジュールへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このヘルパー関数は、 [CComModule:: RegisterClassObjects](ccommodule-class.md#registerclassobjects) (ATL 7.0 では廃止されました) および[CAtlExeModuleT:: RegisterClassObjects](catlexemodulet-class.md#registerclassobjects)によって使用されます。
 
@@ -143,13 +143,13 @@ COM モジュールへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このヘルパー関数は、 [CComModule:: RevokeClassObjects](ccommodule-class.md#revokeclassobjects) (ATL 7.0 では廃止されました) および[CAtlExeModuleT:: RevokeClassObjects](catlexemodulet-class.md#revokeclassobjects)によって使用されます。
 
-##  <a name="atlcommodulegetclassobject"></a>  AtlComModuleGetClassObject
+##  <a name="atlcommodulegetclassobject"></a>AtlComModuleGetClassObject
 
 この関数は、クラス ファクトリを返すために呼び出されます。
 
@@ -177,12 +177,12 @@ COM モジュールへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このヘルパー関数は、 [CComModule:: GetClassObject](ccommodule-class.md#getclassobject) (ATL 7.0 では廃止されました) および[Catldllmodulet:: GetClassObject](catldllmodulet-class.md#getclassobject)によって使用されます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [関数](../../atl/reference/atl-functions.md)

@@ -18,15 +18,15 @@ helpviewer_keywords:
 - std::operator&lt; (iterator)
 - std::operator&lt;= (iterator), std::operator== (iterator)
 ms.openlocfilehash: 7455610af5f03be024753e26f67e561b14c85612
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244017"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78884132"
 ---
 # <a name="ltiteratorgt-operators"></a>&lt;iterator&gt; 演算子
 
-## <a name="op_neq"></a> operator!=
+## <a name="op_neq"></a>operator! =
 
 演算子の左側の反復子オブジェクトが右側の反復子オブジェクトと等しくないかどうかを調べます。
 
@@ -44,16 +44,16 @@ bool operator!=(const istreambuf_iterator<CharType, Traits>& left, const istream
 ### <a name="parameters"></a>パラメーター
 
 *左*\
-`iterator` 型のオブジェクト。
+`iterator` 型オブジェクト。
 
-*そうです*\
-`iterator` 型のオブジェクト。
+*右*\
+`iterator` 型オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
 反復子オブジェクトが等しくない場合は **true**、反復子オブジェクトが等しい場合は **false**。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 コンテナー内の同じ要素に対応する場合は、1 つの反復子オブジェクトが別の反復子オブジェクトと等しくなります。 2 つの反復子がコンテナー内の異なる要素を指す場合、これらの反復子は等しくありません。
 
@@ -119,7 +119,7 @@ in the reversed sequence: 7.
 The iterators are not equal.
 ```
 
-## <a name="op_eq_eq"></a> 演算子 = =
+## <a name="op_eq_eq"></a>operator = =
 
 演算子の左側の反復子オブジェクトが右側の反復子オブジェクトと等しいかどうかを調べます。
 
@@ -150,18 +150,18 @@ bool operator==(
 *左*\
 iterator 型のオブジェクト。
 
-*そうです*\
+*右*\
 iterator 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-**true**反復子オブジェクトが等しい場合**false**反復子オブジェクトが等しくない場合。
+反復子オブジェクトが等しい場合は**true** 。反復子オブジェクトが等しくない場合は**false** 。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 コンテナー内の同じ要素に対応する場合は、1 つの反復子オブジェクトが別の反復子オブジェクトと等しくなります。 2 つの反復子がコンテナー内の異なる要素を指す場合、これらの反復子は等しくありません。
 
-True の場合にだけを返す最初の 2 つのテンプレート演算子は、*左*と*右*同じ反復子を格納します。 3 番目のテンプレート演算子は true の場合にだけ返します*左*と*右*同じストリーム ポインターを格納します。 4 番目のテンプレート演算子は `left.equal (right)` を返します。
+最初の2つのテンプレート演算子は、 *left*と*right*の両方が同じ反復子を格納している場合にのみ true を返します。 3番目のテンプレート演算子は、 *left*と*right*の両方に同じストリームポインターが格納されている場合にのみ、true を返します。 4 番目のテンプレート演算子は `left.equal (right)` を返します。
 
 ### <a name="example"></a>例
 
@@ -237,16 +237,16 @@ bool operator<(const reverse_iterator<RandomIterator>& left, const reverse_itera
 ### <a name="parameters"></a>パラメーター
 
 *左*\
-`iterator` 型のオブジェクト。
+`iterator` 型オブジェクト。
 
-*そうです*\
-`iterator` 型のオブジェクト。
+*右*\
+`iterator` 型オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
 式の左側の反復子が式の右側の反復子未満の場合は **true**、式の右側の反復子以上の場合は **false**。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 1 つの反復子オブジェクトが、別の反復子オブジェクトが対応する要素よりも前にコンテナーで発生する要素に対応する場合、その反復子オブジェクトは別の反復子オブジェクト未満となります。 1 つの反復子オブジェクトが、別の反復子オブジェクトが対応する要素と同じ要素またはその要素よりも後にコンテナーで発生する要素に対応する場合、その反復子オブジェクトは別の反復子オブジェクト以上となります。
 
@@ -316,7 +316,7 @@ in the reversed sequence: 8.
 The iterator rVPOS1 is less than the iterator rVPOS2.
 ```
 
-## <a name="op_lt_eq"></a> 演算子&lt;=
+## <a name="op_lt_eq"></a>演算子&lt;=
 
 演算子の左側の反復子オブジェクトが右側の反復子オブジェクト以下かどうかを調べます。
 
@@ -330,14 +330,14 @@ bool operator<=(const reverse_iterator<RandomIterator>& left, const reverse_iter
 *左*\
 iterator 型のオブジェクト。
 
-*そうです*\
+*右*\
 iterator 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
 式の左側の反復子が右側の反復子以下の場合は **true**、右側の反復子より大きい場合は **false**。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 1 つの反復子オブジェクトが、別の反復子オブジェクトが対応する要素と同じ要素またはその要素よりも前にコンテナーで発生する要素に対応する場合、その反復子オブジェクトは別の反復子オブジェクト以下となります。 1 つの反復子オブジェクトが、別の反復子オブジェクトが対応する要素よりも後にコンテナーで発生する要素に対応する場合、その反復子オブジェクトは別の反復子オブジェクトより大きくなります。
 
@@ -425,14 +425,14 @@ bool operator>(const reverse_iterator<RandomIterator>& left, const reverse_itera
 *左*\
 iterator 型のオブジェクト。
 
-*そうです*\
+*右*\
 iterator 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
 式の左側の反復子が式の右側の反復子より大きい場合は **true**、式の右側の反復子以下の場合は **false**。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 1 つの反復子オブジェクトが、別の反復子オブジェクトが対応する要素よりも後にコンテナーで発生する要素に対応する場合、その反復子オブジェクトは別の反復子オブジェクトより大きくなります。 1 つの反復子オブジェクトが、別の反復子オブジェクトが対応する要素と同じ要素またはその要素よりも前にコンテナーで発生する要素に対応する場合、その反復子オブジェクトは別の反復子オブジェクト以下となります。
 
@@ -500,7 +500,7 @@ in the reversed sequence: 8.
 The iterator rVPOS1 is greater than the iterator rVPOS2.
 ```
 
-## <a name="op_gt_eq"></a> 演算子&gt;=
+## <a name="op_gt_eq"></a>演算子&gt;=
 
 演算子の左側の反復子オブジェクトが右側の反復子オブジェクト以上かどうかを調べます。
 
@@ -514,14 +514,14 @@ bool operator>=(const reverse_iterator<RandomIterator>& left, const reverse_iter
 *左*\
 iterator 型のオブジェクト。
 
-*そうです*\
+*右*\
 iterator 型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
 式の左側の反復子が式の右側の反復子以上の場合は **true**、式の右側の反復子未満の場合は **false**。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 1 つの反復子オブジェクトが、別の反復子オブジェクトが対応する要素と同じ要素またはその要素よりも後にコンテナーで発生する要素に対応する場合、その反復子オブジェクトは別の反復子オブジェクト以上となります。 1 つの反復子オブジェクトが、別の反復子オブジェクトが対応する要素よりも前にコンテナーで発生する要素に対応する場合、その反復子オブジェクトは別の反復子オブジェクト未満となります。
 
@@ -595,7 +595,7 @@ in the reversed sequence: 8.
 The iterator rVPOS1 is greater than or equal to the iterator rVPOS2.
 ```
 
-## <a name="op_add"></a> operator +
+## <a name="op_add"></a>演算子 +
 
 反復子にオフセットを追加し、新しいオフセット位置に挿入された要素をアドレス指定する `move_iterator` または `reverse_iterator` アドレスを返します。
 
@@ -618,12 +618,12 @@ operator+(
 *_Off*\
 const move_iterator または const reverse_iterator がオフセットされる位置の数。
 
-*そうです*\
+*右*\
 オフセットされる反復子。
 
 ### <a name="return-value"></a>戻り値
 
-合計を返します*右* +  *_Off*します。
+*_Off* * + 合計*を返します。
 
 ### <a name="example"></a>例
 
@@ -674,7 +674,7 @@ The iterator rVPOS1 now points to the fifth element
 in the reversed sequence: 2.
 ```
 
-## <a name="operator-"></a> 演算子-
+## <a name="operator-"></a>operator
 
 ある反復子を別の反復子から減算し、その差異を返します。
 
@@ -695,20 +695,20 @@ Tdiff operator-(
 *左*\
 反復子。
 
-*そうです*\
+*右*\
 反復子。
 
 ### <a name="return-value"></a>戻り値
 
 2 つの反復子の相違点。`.`
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 1 つ目のテンプレート演算子は `left.base() - right.base()` を返します。
 
 2 つ目のテンプレート演算子は `right.current - left.current` を返します。
 
-`Tdiff` は、返される式の種類によって決まります。 それ以外の場合は `RandomIterator1::difference_type` です。
+`Tdiff` は、返される式の種類によって決まります。 それ以外の場合は、`RandomIterator1::difference_type` となります。
 
 ### <a name="example"></a>例
 

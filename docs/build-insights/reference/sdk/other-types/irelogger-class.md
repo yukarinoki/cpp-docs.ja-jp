@@ -13,8 +13,8 @@ ms.openlocfilehash: d0796cec3fe4ac6183279e8d8013a9550f18b61c
 ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78334074"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78857058"
 ---
 # <a name="irelogger-class"></a>IRelogger クラス
 

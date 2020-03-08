@@ -12,11 +12,11 @@ helpviewer_keywords:
 - IThreadProxy structure
 ms.assetid: feb89241-a555-4e61-ad48-40add54daeca
 ms.openlocfilehash: b87694393af4634ec97d05070aa5513cd132098a
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77140081"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78854182"
 ---
 # <a name="ithreadproxy-structure"></a>IThreadProxy 構造体
 
@@ -32,14 +32,14 @@ struct IThreadProxy;
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[IThreadProxy:: GetId](#getid)|スレッドプロキシの一意の識別子を返します。|
 |[IThreadProxy:: SwitchOut](#switchout)|基になる仮想プロセッサ ルートからコンテキストの関連付けを解除します。|
 |[IThreadProxy:: SwitchTo](#switchto)|現在実行中のコンテキストから別のコンテキストへの協調的なコンテキスト切り替えを実行します。|
 |[IThreadProxy:: YieldToSystem](#yieldtosystem)|呼び出し元のスレッドから、現在のプロセッサ上で実行する準備が整っている別のスレッドに実行を切り替えます。 オペレーティングシステムは、次に実行されるスレッドを選択します。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 スレッドプロキシは、処理をディスパッチする手段として、インターフェイス `IExecutionContext` によって表される実行コンテキストと結合されます。
 
@@ -47,7 +47,7 @@ struct IThreadProxy;
 
 `IThreadProxy`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** concrtrm. h
 
@@ -78,7 +78,7 @@ virtual void SwitchOut(SwitchingProxyState switchState = Blocking) = 0;
 *switchState*<br/>
 切り替えを実行しているスレッド プロキシの状態を示します。 `SwitchingProxyState` 型のパラメーター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 なんらかの理由で、実行している仮想プロセッサ ルートからコンテキストの関連付けを解除する必要がある場合には、`SwitchOut` を使用します。 パラメーター `switchState` に渡す値によって、または仮想プロセッサ ルート上で実行されるかどうかによって、呼び出しはすぐに制御を返すか、またはコンテキストに関連付けられたスレッド プロキシをブロックします。 パラメーターを `SwitchOut` に設定して `Idle` を呼び出すと、エラーになります。 これにより、 [invalid_argument](../../../standard-library/invalid-argument-class.md)例外が発生します。
 
@@ -110,7 +110,7 @@ virtual void SwitchTo(
 *switchState*<br/>
 切り替えを実行しているスレッド プロキシの状態を示します。 `SwitchingProxyState` 型のパラメーター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 最初の実行コンテキストの[Iexecutioncontext::D ispatch](iexecutioncontext-structure.md#dispatch)メソッドから別の実行コンテキストに切り替えるには、このメソッドを使用します。 メソッドは、実行コンテキストがまだ関連付けられていない場合は、その `pContext` をスレッドプロキシに関連付けます。 現在のスレッドプロキシの所有権は、`switchState` 引数に指定した値によって決まります。
 
@@ -130,7 +130,7 @@ virtual void SwitchTo(
 virtual void YieldToSystem() = 0;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 通常の Windows スレッドによってサポートされるスレッドプロキシによって呼び出された場合、`YieldToSystem` は Windows の関数 `SwitchToThread`とまったく同じように動作します。 ただし、ユーザーモードスケジュール可能 (UMS) スレッドから呼び出された場合、`SwitchToThread` 関数は、次のスレッドを選択して、オペレーティングシステムではなくユーザーモードスケジューラに実行するタスクを委任します。 システムで別の準備ができているスレッドに切り替えるために必要な効果を実現するには、`YieldToSystem`を使用します。
 

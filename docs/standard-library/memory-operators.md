@@ -11,15 +11,15 @@ f1_keywords:
 - memory/std::operator==
 ms.assetid: 257e3ba9-c4c2-4ae8-9b11-b156ba9c28de
 ms.openlocfilehash: 661f1bb4c0f5734d88dd23f73c69b362f59a76c2
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243819"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78884075"
 ---
 # <a name="ltmemorygt-operators"></a>&lt;memory&gt; 演算子
 
-## <a name="op_neq"></a> operator!=
+## <a name="op_neq"></a>operator! =
 
 オブジェクト間の不等性をテストします。
 
@@ -45,7 +45,7 @@ bool operator!=(
 *左*\
 不等性をテストする一方のオブジェクト。
 
-*そうです*\
+*右*\
 不等性をテストする一方のオブジェクト。
 
 *Ty1*\
@@ -58,7 +58,7 @@ bool operator!=(
 
 オブジェクトが等しくない場合は **true**、オブジェクトが等しい場合は **false**。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 1 つ目のテンプレートの演算子は、false を返します。 (すべての既定のアロケーターは等価です。)
 
@@ -120,7 +120,7 @@ sp0 != sp0 == false
 sp0 != sp1 == true
 ```
 
-## <a name="op_eq_eq"></a> 演算子 = =
+## <a name="op_eq_eq"></a>operator = =
 
 オブジェクト同士が等しいかどうかをテストします。
 
@@ -146,7 +146,7 @@ bool operator==(
 *左*\
 等しいかどうかをテストするオブジェクト。
 
-*そうです*\
+*右*\
 等しいかどうかをテストするオブジェクト。
 
 *Ty1*\
@@ -157,9 +157,9 @@ bool operator==(
 
 ### <a name="return-value"></a>戻り値
 
-**true**オブジェクトが等しい場合**false**オブジェクトが等しくない場合。
+オブジェクトが等しい場合は**true** 、オブジェクトが等しくない場合は**false** 。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 1 つ目のテンプレート演算子は true を返します。 (すべての既定のアロケーターは等価です。)
 
@@ -232,7 +232,7 @@ sp0 == sp0 == true
 sp0 == sp1 == false
 ```
 
-## <a name="op_gt_eq"></a> 演算子&gt;=
+## <a name="op_gt_eq"></a>演算子&gt;=
 
 1 つ目のオブジェクトが 2 つ目のオブジェクト以上であるかをテストします。
 
@@ -253,7 +253,7 @@ bool operator>=(
 *左*\
 比較するオブジェクトの 1 つ。
 
-*そうです*\
+*右*\
 比較するオブジェクトの 1 つ。
 
 *Ty1*\
@@ -262,9 +262,9 @@ bool operator>=(
 *Ty2*\
 右辺の共有ポインターによって制御される型。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-テンプレートの演算子を返す`left.get() >= right.get()`します。
+このテンプレート演算子は `left.get() >= right.get()`を返します。
 
 ## <a name="op_lt"></a> 演算子&lt;
 
@@ -287,7 +287,7 @@ bool operator<(
 *左*\
 比較するオブジェクトの 1 つ。
 
-*そうです*\
+*右*\
 比較するオブジェクトの 1 つ。
 
 *Ty1*\
@@ -296,7 +296,7 @@ bool operator<(
 *Ty2*\
 右辺のポインターによって制御される型。
 
-## <a name="op_lt_eq"></a> 演算子&lt;=
+## <a name="op_lt_eq"></a>演算子&lt;=
 
 1 番目のオブジェクトが 2 番目のオブジェクト以下であるかどうかをテストします。
 
@@ -317,7 +317,7 @@ bool operator<=(
 *左*\
 比較するオブジェクトの 1 つ。
 
-*そうです*\
+*右*\
 比較するオブジェクトの 1 つ。
 
 *Ty1*\
@@ -326,9 +326,9 @@ bool operator<=(
 *Ty2*\
 右辺の共有ポインターによって制御される型。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-テンプレートの演算子を返します `left.get() <= right.get()`
+このテンプレート演算子はを返し `left.get() <= right.get()`
 
 ## <a name="op_gt"></a> 演算子&gt;
 
@@ -351,7 +351,7 @@ bool operator>(
 *左*\
 比較するオブジェクトの 1 つ。
 
-*そうです*\
+*右*\
 比較するオブジェクトの 1 つ。
 
 *Ty1*\
@@ -360,7 +360,7 @@ bool operator>(
 *Ty2*\
 右辺の共有ポインターによって制御される型。
 
-## <a name="op_lt_lt"></a> 演算子&lt;&lt;
+## <a name="op_lt_lt"></a>演算子&lt;&lt;
 
 共有ポインターをストリームに書き込みます。
 
@@ -375,7 +375,7 @@ std::basic_ostream<Elem, Tr>& operator<<(std::basic_ostream<Elem, Tr>& out,
 *Elem*\
 ストリーム要素の型。
 
-*tr*\
+*Tr*\
 ストリーム要素の特性の型。
 
 *Ty*\
@@ -387,7 +387,7 @@ std::basic_ostream<Elem, Tr>& operator<<(std::basic_ostream<Elem, Tr>& out,
 *sp*\
 共有ポインター。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このテンプレート関数は `out << sp.get()` を返します。
 
