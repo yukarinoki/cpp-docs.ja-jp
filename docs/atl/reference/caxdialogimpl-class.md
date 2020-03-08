@@ -18,11 +18,11 @@ helpviewer_keywords:
 - ATL, dialog boxes
 ms.assetid: 817df483-3fa8-44e7-8487-72ba0881cd27
 ms.openlocfilehash: 548d2aed0644187b4b8dee1e472b581f1f92d6a1
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497665"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865057"
 ---
 # <a name="caxdialogimpl-class"></a>CAxDialogImpl クラス
 
@@ -41,49 +41,49 @@ class ATL_NO_VTABLE CAxDialogImpl : public CDialogImplBaseT<TBase>
 #### <a name="parameters"></a>パラメーター
 
 *T*<br/>
-から`CAxDialogImpl`派生したクラス。
+`CAxDialogImpl`から派生したクラス。
 
 *TBase*<br/>
-の`CDialogImplBaseT`基本ウィンドウクラス。
+`CDialogImplBaseT`の基本ウィンドウクラス。
 
 ## <a name="members"></a>メンバー
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|名前|説明|
+|Name|Description|
 |----------|-----------------|
 |[CAxDialogImpl::AdviseSinkMap](#advisesinkmap)|このメソッドを呼び出して、オブジェクトのシンクマップのイベントマップ内のすべてのエントリをアドバイズまたはアドバイズ中止します。|
 |[CAxDialogImpl:: Create](#create)|モードレスダイアログボックスを作成するには、このメソッドを呼び出します。|
 |[CAxDialogImpl::D estroyWindow](#destroywindow)|このメソッドを呼び出して、モードレスダイアログボックスを破棄します。|
 |[CAxDialogImpl::D oModal](#domodal)|モーダルダイアログボックスを作成するには、このメソッドを呼び出します。|
 |[CAxDialogImpl:: EndDialog](#enddialog)|モーダルダイアログボックスを破棄するには、このメソッドを呼び出します。|
-|[CAxDialogImpl:: Get Proc](#getdialogproc)|コールバック関数への`DialogProc`ポインターを取得するには、このメソッドを呼び出します。|
+|[CAxDialogImpl:: Get Proc](#getdialogproc)|`DialogProc` コールバック関数へのポインターを取得するには、このメソッドを呼び出します。|
 |[CAxDialogImpl:: GetIDD](#getidd)|ダイアログテンプレートリソース ID を取得するには、このメソッドを呼び出します。|
 |[CAxDialogImpl::IsDialogMessage](#isdialogmessage)|メッセージがこのダイアログボックスを対象としているかどうかを判断するには、このメソッドを呼び出します。メッセージが表示されている場合は、メッセージを処理します。|
 
-### <a name="protected-data-members"></a>プロテクト データ メンバー
+### <a name="protected-data-members"></a>保護されるデータ メンバー
 
-|名前|説明|
+|Name|Description|
 |----------|-----------------|
-|[CAxDialogImpl::m_bModal](#m_bmodal)|デバッグビルドにのみ存在し、ダイアログボックスがモーダルである場合は true に設定されている変数。|
+|[CAxDialogImpl:: m_bModal](#m_bmodal)|デバッグビルドにのみ存在し、ダイアログボックスがモーダルである場合は true に設定されている変数。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-`CAxDialogImpl`モーダルまたはモードレスのダイアログボックスを作成できます。 `CAxDialogImpl`既定のメッセージマップを使用してメッセージを適切なハンドラーに送信するダイアログボックスの手順を示します。
+`CAxDialogImpl` では、モーダルまたはモードレスのダイアログボックスを作成できます。 `CAxDialogImpl` には、既定のメッセージマップを使用してメッセージを適切なハンドラーに送信するダイアログボックスの手順が用意されています。
 
-`CAxDialogImpl`はから`CDialogImplBaseT`派生します。これは、 *tbase* (既定で`CWindow`は) `CMessageMap`とで派生します。
+`CAxDialogImpl` は `CDialogImplBaseT`から派生します。これは、 *Tbase* (既定では `CWindow`) と `CMessageMap`から派生します。
 
 クラスでは、ダイアログテンプレートリソース ID を指定する IDD メンバーを定義する必要があります。 たとえば、 **[クラスの追加]** ダイアログボックスを使用して ATL ダイアログオブジェクトを追加すると、クラスに次の行が自動的に追加されます。
 
 [!code-cpp[NVC_ATL_Windowing#41](../../atl/codesnippet/cpp/caxdialogimpl-class_1.h)]
 
-ここ`MyDialog`で、は ATL ダイアログウィザードで入力した**短い名前**です。
+ここで、`MyDialog` は ATL ダイアログウィザードで入力した**短い名前**です。
 
 詳細について[は、「ダイアログボックスの実装](../../atl/implementing-a-dialog-box.md)」を参照してください。
 
-で`CAxDialogImpl`作成されたモーダルダイアログボックス上の ActiveX コントロールは、アクセラレータキーをサポートしていないことに注意してください。 で`CAxDialogImpl`作成されたダイアログボックスでアクセラレータキーをサポートするには、モードレスダイアログボックスを作成し、独自のメッセージループを使用して、キーを処理するメッセージをキューから取得した後で[CAxDialogImpl:: IsDialogMessage](#isdialogmessage)を使用します。
+`CAxDialogImpl` で作成されたモーダルダイアログボックス上の ActiveX コントロールは、アクセラレータキーをサポートしていないことに注意してください。 `CAxDialogImpl`で作成されたダイアログボックスでアクセラレータキーをサポートするには、モードレスダイアログボックスを作成し、独自のメッセージループを使用して、キーを処理するメッセージをキューから取得した後で[CAxDialogImpl:: IsDialogMessage](#isdialogmessage)を使用します。
 
-の詳細につい`CAxDialogImpl`ては、「 [ATL コントロールコンテインメント](../../atl/atl-control-containment-faq.md)に関する FAQ」を参照してください。
+`CAxDialogImpl`の詳細については、「 [ATL コントロールコンテインメント](../../atl/atl-control-containment-faq.md)に関する FAQ」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -101,7 +101,7 @@ class ATL_NO_VTABLE CAxDialogImpl : public CDialogImplBaseT<TBase>
 
 **ヘッダー:** atlwin. h
 
-##  <a name="advisesinkmap"></a>  CAxDialogImpl::AdviseSinkMap
+##  <a name="advisesinkmap"></a>CAxDialogImpl::AdviseSinkMap
 
 このメソッドを呼び出して、オブジェクトのシンクマップのイベントマップ内のすべてのエントリをアドバイズまたはアドバイズ中止します。
 
@@ -116,7 +116,7 @@ HRESULT AdviseSinkMap(bool bAdvise);
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
 ##  <a name="create"></a>CAxDialogImpl:: Create
 
@@ -136,15 +136,15 @@ HWND Create(HWND hWndParent, RECT&, LPARAM dwInitParam = NULL);
 からWM_INITDIALOG メッセージの*lParam*パラメーターのダイアログボックスに渡す値を指定します。
 
 *RECT &*<br/>
-このパラメーターは使用されません。 このパラメーターは、によっ`CComControl`て渡されます。
+このパラメーターは使用されません。 このパラメーターは `CComControl`によって渡されます。
 
 ### <a name="return-value"></a>戻り値
 
 新しく作成されたダイアログボックスへのハンドル。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このダイアログボックスは、 `CAxDialogImpl`自動的にオブジェクトにアタッチされます。 モーダルダイアログボックスを作成するには、 [DoModal](#domodal)を呼び出します。
+このダイアログボックスは、`CAxDialogImpl` オブジェクトに自動的にアタッチされます。 モーダルダイアログボックスを作成するには、 [DoModal](#domodal)を呼び出します。
 
 2番目のオーバーライドは、 [CComControl](../../atl/reference/ccomcontrol-class.md)でダイアログボックスを使用できるようにするためだけに用意されています。
 
@@ -160,9 +160,9 @@ BOOL DestroyWindow();
 
 ウィンドウが正常に破棄された場合は TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-モーダルダイアログボックス`DestroyWindow`を破棄するためにを呼び出さないでください。 代わりに[EndDialog](#enddialog)を呼び出してください。
+モーダルダイアログボックスを破棄するために `DestroyWindow` を呼び出さないでください。 代わりに[EndDialog](#enddialog)を呼び出してください。
 
 ##  <a name="domodal"></a>CAxDialogImpl::D oModal
 
@@ -186,9 +186,9 @@ INT_PTR DoModal(
 
 成功した場合は、 [EndDialog](#enddialog)への呼び出しで指定された*nRetCode*パラメーターの値。それ以外の場合は-1。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このダイアログボックスは、 `CAxDialogImpl`自動的にオブジェクトにアタッチされます。
+このダイアログボックスは、`CAxDialogImpl` オブジェクトに自動的にアタッチされます。
 
 モードレスダイアログボックスを作成するには、 [create](#create)を呼び出します。
 
@@ -209,16 +209,16 @@ BOOL EndDialog(int nRetCode);
 
 ダイアログボックスが破棄される場合は TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`EndDialog`は、ダイアログボックスのプロシージャを使用して呼び出す必要があります。 ダイアログボックスが破棄された後、Windows では 、ダイアログボックスを作成し`DoModal`たの戻り値として nRetCode の値が使用されます。
+`EndDialog` は、ダイアログボックスのプロシージャを使用して呼び出す必要があります。 ダイアログボックスが破棄された後、Windows では、ダイアログボックスを作成した `DoModal`の戻り値として*nRetCode*の値が使用されます。
 
 > [!NOTE]
->  モードレスダイアログボックス`EndDialog`を破棄するためにを呼び出さないでください。 代わりに[DestroyWindow](#destroywindow)を呼び出してください。
+>  `EndDialog` を呼び出して、モードレスダイアログボックスを破棄しないでください。 代わりに[DestroyWindow](#destroywindow)を呼び出してください。
 
 ##  <a name="getdialogproc"></a>CAxDialogImpl:: Get Proc
 
-コールバック関数への`DialogProc`ポインターを取得するには、このメソッドを呼び出します。
+`DialogProc` コールバック関数へのポインターを取得するには、このメソッドを呼び出します。
 
 ```
 virtual DLGPROC GetDialogProc();
@@ -226,11 +226,11 @@ virtual DLGPROC GetDialogProc();
 
 ### <a name="return-value"></a>戻り値
 
-`DialogProc`コールバック関数へのポインターを返します。
+`DialogProc` コールバック関数へのポインターを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-関数`DialogProc`は、アプリケーション定義のコールバック関数です。
+`DialogProc` 関数は、アプリケーション定義のコールバック関数です。
 
 ##  <a name="getidd"></a>CAxDialogImpl:: GetIDD
 
@@ -244,7 +244,7 @@ int GetIDD();
 
 ダイアログテンプレートリソース ID を返します。
 
-##  <a name="isdialogmessage"></a>  CAxDialogImpl::IsDialogMessage
+##  <a name="isdialogmessage"></a>CAxDialogImpl::IsDialogMessage
 
 メッセージがこのダイアログボックスを対象としているかどうかを判断するには、このメソッドを呼び出します。メッセージが表示されている場合は、メッセージを処理します。
 
@@ -261,11 +261,11 @@ BOOL IsDialogMessage(LPMSG pMsg);
 
 メッセージが処理されている場合は TRUE、それ以外の場合は FALSE を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このメソッドは、メッセージループ内から呼び出すことを目的としています。
 
-##  <a name="m_bmodal"></a>  CAxDialogImpl::m_bModal
+##  <a name="m_bmodal"></a>CAxDialogImpl:: m_bModal
 
 デバッグビルドにのみ存在し、ダイアログボックスがモーダルである場合は true に設定されている変数。
 
@@ -273,7 +273,7 @@ BOOL IsDialogMessage(LPMSG pMsg);
 bool m_bModal;
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [CDialogImpl クラス](../../atl/reference/cdialogimpl-class.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

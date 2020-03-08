@@ -6,11 +6,11 @@ f1_keywords:
 - concrt/concurrency:[operator&amp;&amp
 ms.assetid: 8e373f23-fc8e-49f7-82e6-ba0c57b822f8
 ms.openlocfilehash: 676e1936af317a6ab19959f8fd09b1de06dfaf69
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77143246"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78883773"
 ---
 # <a name="concurrency-namespace-operators"></a>コンカレンシー名前空間演算子
 
@@ -60,7 +60,7 @@ inline task<void> operator||(
 
 入力タスクのいずれかが正常に完了したときに正常に完了するタスク。 入力したタスクの種類が `T` である場合、この関数の出力は `task<std::vector<T>` になります。 入力したタスクの種類が `void` である場合、出力のタスクも `task<void>` になります。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 両方のタスクが取り消された場合、または例外がスローされた場合、返されたタスクは canceled 状態で完了し、例外が発生した場合は、そのタスクで `get()` または `wait()` を呼び出すとスローされます。
 
@@ -109,7 +109,7 @@ inline task<void>  operator&&(
 
 入力した両方のタスクが正常に完了したときに正常に完了するタスク。 入力したタスクの種類が `T` である場合、この関数の出力は `task<std::vector<T>>` になります。 入力したタスクの種類が `void` である場合、出力のタスクも `task<void>` になります。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 いずれかのタスクが取り消された場合、または例外がスローされた場合、返されたタスクは早期に完了し、取り消された状態になります。また、そのタスクで `get()` または `wait()` を呼び出すと、例外がスローされます。
 
@@ -145,7 +145,7 @@ inline bool operator== (
 
 演算子の左辺の同時実行ベクターが、演算子の右辺の同時実行ベクターと等しい場合は**true** 。それ以外の場合は**false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 2つの同時実行ベクターは、同じ数の要素を持ち、各要素の値が同じである場合に等しくなります。 それ以外の場合は等しくありません。
 
@@ -183,7 +183,7 @@ inline bool operator!= (
 
 同時実行ベクターが等しくない場合は**true**を返します。同時実行ベクターが等しい場合は**false** 。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 2つの同時実行ベクターは、同じ数の要素を持ち、各要素の値が同じである場合に等しくなります。 それ以外の場合は等しくありません。
 
@@ -221,7 +221,7 @@ inline bool operator<(
 
 演算子の左辺の同時実行ベクターが演算子の右辺の同時実行ベクターより小さい場合は**true** 。それ以外の場合は**false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この演算子の動作は、`std` 名前空間の `vector` クラスの同等の演算子と同じです。
 
@@ -259,7 +259,7 @@ inline bool operator<= (
 
 演算子の左辺の同時実行ベクターが、演算子の右辺の同時実行ベクター以下である場合は**true**を返します。それ以外の場合は**false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この演算子の動作は、`std` 名前空間の `vector` クラスの同等の演算子と同じです。
 
@@ -297,7 +297,7 @@ inline bool operator>(
 
 演算子の左辺の同時実行ベクターが演算子の右辺の同時実行ベクターより大きい場合は**true** 。それ以外の場合は**false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この演算子の動作は、`std` 名前空間の `vector` クラスの同等の演算子と同じです。
 
@@ -335,7 +335,7 @@ inline bool operator>= (
 
 演算子の左辺の同時実行ベクターが演算子の右辺の同時実行ベクター以上の場合、 **true**を返します。それ以外の場合は**false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この演算子の動作は、`std` 名前空間の `vector` クラスの同等の演算子と同じです。
 

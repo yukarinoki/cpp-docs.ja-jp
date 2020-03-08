@@ -17,11 +17,11 @@ helpviewer_keywords:
 - ATL, hosting ActiveX controls
 ms.assetid: 85e79261-43e4-4770-bde0-1ff87f222b0f
 ms.openlocfilehash: 6f5c178090a970906209e41da9298be61a61c639
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927855"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78864744"
 ---
 # <a name="caxwindow-class"></a>CAxWindow クラス
 
@@ -42,31 +42,31 @@ class CAxWindow : public CWindow
 
 |||
 |-|-|
-|[AttachControl](#attachcontrol)|既存の`CAxWindow` ActiveX コントロールをオブジェクトにアタッチします。|
+|[AttachControl](#attachcontrol)|既存の ActiveX コントロールを `CAxWindow` オブジェクトにアタッチします。|
 |[CAxWindow](#caxwindow)|`CAxWindow` オブジェクトを構築します。|
-|[CreateControl](#createcontrol)|ActiveX コントロールを作成して初期化し、 `CAxWindow`ウィンドウでホストします。|
+|[CreateControl](#createcontrol)|ActiveX コントロールを作成して初期化し、[`CAxWindow`] ウィンドウでホストします。|
 |[CreateControlEx](#createcontrolex)|ActiveX コントロールを作成し、コントロールからインターフェイスポインター (またはポインター) を取得します。|
-|[GetWndClassName](#getwndclassname)|雑音`CAxWindow`オブジェクトの定義済みのクラス名を取得します。|
-|[QueryControl](#querycontrol)|ホストさ`IUnknown`れている ActiveX コントロールのを取得します。|
-|[QueryHost](#queryhost)|オブジェクトのポインターを取得します。 `IUnknown` `CAxWindow`|
-|[SetExternalDispatch](#setexternaldispatch)|`CAxWindow`オブジェクトによって使用される外部ディスパッチインターフェイスを設定します。|
-|[SetExternalUIHandler](#setexternaluihandler)|オブジェクトによっ`IDocHostUIHandler`て使用される外部インターフェイスを設定します。 `CAxWindow`|
+|[GetWndClassName](#getwndclassname)|雑音`CAxWindow` オブジェクトの定義済みのクラス名を取得します。|
+|[QueryControl](#querycontrol)|ホストされている ActiveX コントロールの `IUnknown` を取得します。|
+|[QueryHost](#queryhost)|`CAxWindow` オブジェクトの `IUnknown` ポインターを取得します。|
+|[SetExternalDispatch](#setexternaldispatch)|`CAxWindow` オブジェクトによって使用される外部ディスパッチインターフェイスを設定します。|
+|[SetExternalUIHandler](#setexternaluihandler)|`CAxWindow` オブジェクトによって使用される外部 `IDocHostUIHandler` インターフェイスを設定します。|
 
-### <a name="operators"></a>演算子
+### <a name="operators"></a>オペレーター
 
 |||
 |-|-|
-|[operator=](#operator_eq)|HWND を既存`CAxWindow`のオブジェクトに割り当てます。|
+|[operator =](#operator_eq)|既存の `CAxWindow` オブジェクトに HWND を割り当てます。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-このクラスには、ActiveX コントロールをホストするウィンドウを操作するためのメソッドが用意されています。 ホスティングは、によっ`CAxWindow`てラップされる " **AtlAxWin80"** によって提供されます。
+このクラスには、ActiveX コントロールをホストするウィンドウを操作するためのメソッドが用意されています。 ホスティングは、`CAxWindow`によってラップされる " **AtlAxWin80"** によって提供されます。
 
-クラス`CAxWindow`は、 `CAxWindowT`クラスの特殊化として実装されます。 この特殊化は次のように宣言されます。
+クラス `CAxWindow` は、`CAxWindowT` クラスの特殊化として実装されます。 この特殊化は次のように宣言されます。
 
 `typedef CAxWindowT<CWindow> CAxWindow;`
 
-基底クラスを変更する必要がある場合は、を`CAxWindowT`使用して、新しい基底クラスをテンプレート引数として指定できます。
+基底クラスを変更する必要がある場合は、`CAxWindowT` を使用し、テンプレート引数として新しい基底クラスを指定できます。
 
 ## <a name="requirements"></a>必要条件
 
@@ -85,22 +85,22 @@ HRESULT AttachControl(
 ### <a name="parameters"></a>パラメーター
 
 *pControl*<br/>
-からコントロール`IUnknown`のへのポインター。
+からコントロールの `IUnknown` へのポインター。
 
 *ppUnkContainer*<br/>
-入出力`IUnknown` ホスト`AxWin` (オブジェクト) のへのポインター。
+入出力ホスト (`AxWin` オブジェクト) の `IUnknown` へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
 標準の HRESULT 値。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-を呼び出す`AttachControl`前に、アタッチされるコントロールオブジェクトが正しく初期化されている必要があります。
+`AttachControl`を呼び出す前に、アタッチされるコントロールオブジェクトが正しく初期化されている必要があります。
 
 ##  <a name="caxwindow"></a>CAxWindow::CAxWindow
 
-既存の`CAxWindow`ウィンドウオブジェクトハンドルを使用してオブジェクトを構築します。
+既存のウィンドウオブジェクトハンドルを使用して `CAxWindow` オブジェクトを構築します。
 
 ```
 CAxWindow(HWND hWnd = NULL);
@@ -132,24 +132,24 @@ HRESULT CreateControl(
 *lpszName*<br/>
 コントロールを作成する文字列へのポインター。 次のいずれかの方法で書式設定する必要があります。
 
-- などの ProgID。`"MSCAL.Calendar.7"`
+- `"MSCAL.Calendar.7"` などの ProgID
 
-- などの CLSID`"{8E27C92B-1264-101C-8A2F-040224009C02}"`
+- `"{8E27C92B-1264-101C-8A2F-040224009C02}"` などの CLSID
 
-- のような URL`"<https://www.microsoft.com>"`
+- URL (`"<https://www.microsoft.com>"` など)
 
-- などのアクティブなドキュメントへの参照`"file://\\\Documents\MyDoc.doc"`
+- `"file://\\\Documents\MyDoc.doc"` などのアクティブなドキュメントへの参照
 
-- HTML のフラグメント (など)`"MSHTML:\<HTML>\<BODY>This is a line of text\</BODY>\</HTML>"`
+- HTML のフラグメント (`"MSHTML:\<HTML>\<BODY>This is a line of text\</BODY>\</HTML>"` など)
 
    > [!NOTE]
-   > `"MSHTML:"`は、MSHTML ストリームとして指定されるように、HTML フラグメントの前に配置する必要があります。 Windows Mobile プラットフォームでは、ProgID と CLSID のみがサポートされています。 CE IE がサポートされている Windows Mobile 以外の Windows CE embedded プラットフォームでは、ProgID、CLSID、URL、active ドキュメントへの参照、HTML のフラグメントを含むすべての型がサポートされます。
+   > `"MSHTML:"` は、MSHTML ストリームとして指定されるように、HTML フラグメントの前に記述する必要があります。 Windows Mobile プラットフォームでは、ProgID と CLSID のみがサポートされています。 CE IE がサポートされている Windows Mobile 以外の Windows CE embedded プラットフォームでは、ProgID、CLSID、URL、active ドキュメントへの参照、HTML のフラグメントを含むすべての型がサポートされます。
 
 *pStream*<br/>
-からコントロールのプロパティを初期化するために使用されるストリームへのポインター。 NULL を指定できます。
+からコントロールのプロパティを初期化するために使用されるストリームへのポインター。 NULL にすることができます。
 
 *ppUnkContainer*<br/>
-入出力コンテナーのを`IUnknown`受け取るポインターのアドレス。 NULL を指定できます。
+入出力コンテナーの `IUnknown` を受け取るポインターのアドレス。 NULL にすることができます。
 
 *dwResID*<br/>
 HTML リソースのリソース ID。 指定したリソースを使用して、WebBrowser コントロールが作成され、読み込まれます。
@@ -158,7 +158,7 @@ HTML リソースのリソース ID。 指定したリソースを使用して�
 
 標準の HRESULT 値。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このメソッドの2番目のバージョンを使用すると、HTML コントロールが作成され、 *dwResID*によって識別されるリソースにバインドされます。
 
@@ -170,7 +170,7 @@ HTML リソースのリソース ID。 指定したリソースを使用して�
 
 ### <a name="example"></a>例
 
-を使用`CreateControl`するサンプルについては、「 [ATL AXHost を使用した ActiveX コントロールのホスト](../../atl/hosting-activex-controls-using-atl-axhost.md)」を参照してください。
+`CreateControl`を使用するサンプルについては、「 [ATL AXHost を使用した ActiveX コントロールのホスト](../../atl/hosting-activex-controls-using-atl-axhost.md)」を参照してください。
 
 ##  <a name="createcontrolex"></a>CAxWindow::CreateControlEx
 
@@ -199,33 +199,33 @@ HRESULT CreateControlEx(
 *lpszName*<br/>
 コントロールを作成する文字列へのポインター。 次のいずれかの方法で書式設定する必要があります。
 
-- などの ProgID。`"MSCAL.Calendar.7"`
+- `"MSCAL.Calendar.7"` などの ProgID
 
-- などの CLSID`"{8E27C92B-1264-101C-8A2F-040224009C02}"`
+- `"{8E27C92B-1264-101C-8A2F-040224009C02}"` などの CLSID
 
-- のような URL`"<https://www.microsoft.com>"`
+- URL (`"<https://www.microsoft.com>"` など)
 
-- などのアクティブなドキュメントへの参照`"file://\\\Documents\MyDoc.doc"`
+- `"file://\\\Documents\MyDoc.doc"` などのアクティブなドキュメントへの参照
 
-- HTML のフラグメント (など)`"MSHTML:\<HTML>\<BODY>This is a line of text\</BODY>\</HTML>"`
+- HTML のフラグメント (`"MSHTML:\<HTML>\<BODY>This is a line of text\</BODY>\</HTML>"` など)
 
    > [!NOTE]
-   > `"MSHTML:"`は、MSHTML ストリームとして指定されるように、HTML フラグメントの前に配置する必要があります。 Windows Mobile プラットフォームでは、ProgID と CLSID のみがサポートされています。 CE IE がサポートされている Windows Mobile 以外の Windows CE embedded プラットフォームでは、ProgID、CLSID、URL、active ドキュメントへの参照、HTML のフラグメントを含むすべての型がサポートされます。
+   > `"MSHTML:"` は、MSHTML ストリームとして指定されるように、HTML フラグメントの前に記述する必要があります。 Windows Mobile プラットフォームでは、ProgID と CLSID のみがサポートされています。 CE IE がサポートされている Windows Mobile 以外の Windows CE embedded プラットフォームでは、ProgID、CLSID、URL、active ドキュメントへの参照、HTML のフラグメントを含むすべての型がサポートされます。
 
 *pStream*<br/>
-からコントロールのプロパティを初期化するために使用されるストリームへのポインター。 NULL を指定できます。
+からコントロールのプロパティを初期化するために使用されるストリームへのポインター。 NULL にすることができます。
 
 *ppUnkContainer*<br/>
-入出力コンテナーのを`IUnknown`受け取るポインターのアドレス。 NULL を指定できます。
+入出力コンテナーの `IUnknown` を受け取るポインターのアドレス。 NULL にすることができます。
 
 *ppUnkControl*<br/>
-入出力コントロールのを`IUnknown`受け取るポインターのアドレス。 NULL を指定できます。
+入出力コントロールの `IUnknown` を受け取るポインターのアドレス。 NULL にすることができます。
 
 *iidSink*<br/>
-から含まれているオブジェクトの送信インターフェイスのインターフェイス識別子。 IID_NULL することができます。
+から含まれているオブジェクトの送信インターフェイスのインターフェイス識別子。 IID_NULL できます。
 
 *punkSink*<br/>
-から*Iidsink*に`IUnknown`よって指定された、格納されているオブジェクトのコネクションポイントに接続するシンクオブジェクトのインターフェイスへのポインター。
+から*Iidsink*によって指定された、格納されているオブジェクトの接続ポイントに接続するシンクオブジェクトの `IUnknown` インターフェイスへのポインター。
 
 *dwResID*<br/>
 からHTML リソースのリソース ID。 指定したリソースを使用して、WebBrowser コントロールが作成され、読み込まれます。
@@ -234,17 +234,17 @@ HRESULT CreateControlEx(
 
 標準の HRESULT 値。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは[CAxWindow:: CreateControl](#createcontrol)に似ていますが、その`CreateControlEx`メソッドとは異なり、新しく作成されたコントロールへのインターフェイスポインターを受け取り、コントロールによって発生するイベントを受け取るようにイベントシンクを設定することもできます。
+このメソッドは[CAxWindow:: CreateControl](#createcontrol)に似ていますが、そのメソッドとは異なり、`CreateControlEx` では、新しく作成されたコントロールへのインターフェイスポインターを受け取り、コントロールによって発生するイベントを受け取るようにイベントシンクを設定することもできます。
 
 ライセンスされた ActiveX コントロールを作成、初期化、およびホストする方法については、「 [CAxWindow2T:: CreateControlLicEx](../../atl/reference/caxwindow2t-class.md#createcontrollicex) 」を参照してください。
 
 ### <a name="example"></a>例
 
-を使用`CreateControlEx`するサンプルについては、「 [ATL AXHost を使用した ActiveX コントロールのホスト](../../atl/hosting-activex-controls-using-atl-axhost.md)」を参照してください。
+`CreateControlEx`を使用するサンプルについては、「 [ATL AXHost を使用した ActiveX コントロールのホスト](../../atl/hosting-activex-controls-using-atl-axhost.md)」を参照してください。
 
-##  <a name="getwndclassname"></a>  CAxWindow::GetWndClassName
+##  <a name="getwndclassname"></a>CAxWindow::GetWndClassName
 
 ウィンドウクラスの名前を取得します。
 
@@ -258,7 +258,7 @@ Nonlicensed ActiveX コントロールをホストできるウィンドウクラ
 
 ##  <a name="operator_eq"></a>CAxWindow:: operator =
 
-HWND を既存`CAxWindow`のオブジェクトに割り当てます。
+既存の `CAxWindow` オブジェクトに HWND を割り当てます。
 
 ```
 CAxWindow<TBase>& operator=(HWND hWnd);
@@ -273,7 +273,7 @@ CAxWindow<TBase>& operator=(HWND hWnd);
 
 現在の `CAxWindow` オブジェクトへの参照を返します。
 
-##  <a name="querycontrol"></a>  CAxWindow::QueryControl
+##  <a name="querycontrol"></a>CAxWindow:: QueryControl
 
 ホストされているコントロールの指定したインターフェイスを取得します。
 
@@ -298,7 +298,7 @@ HRESULT QueryControl(Q** ppUnk);
 
 標準の HRESULT 値。
 
-##  <a name="queryhost"></a>  CAxWindow::QueryHost
+##  <a name="queryhost"></a>CAxWindow:: QueryHost
 
 ホストの指定されたインターフェイスを返します。
 
@@ -323,13 +323,13 @@ HRESULT QueryHost(Q** ppUnk);
 
 標準の HRESULT 値。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-ホストのインターフェイスを使用すると、によって`AxWin`実装されるウィンドウホストコードの基になる機能にアクセスできます。
+ホストのインターフェイスを使用すると、`AxWin`によって実装された、ウィンドウホストコードの基になる機能にアクセスできます。
 
-##  <a name="setexternaldispatch"></a>  CAxWindow::SetExternalDispatch
+##  <a name="setexternaldispatch"></a>CAxWindow:: SetExternalDispatch
 
-`CAxWindow`オブジェクトの外部ディスパッチインターフェイスを設定します。
+`CAxWindow` オブジェクトの外部ディスパッチインターフェイスを設定します。
 
 ```
 HRESULT SetExternalDispatch(IDispatch* pDisp);
@@ -338,7 +338,7 @@ HRESULT SetExternalDispatch(IDispatch* pDisp);
 ### <a name="parameters"></a>パラメーター
 
 *pDisp*<br/>
-から`IDispatch`インターフェイスへのポインター。
+から`IDispatch` インターフェイスへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -346,7 +346,7 @@ HRESULT SetExternalDispatch(IDispatch* pDisp);
 
 ##  <a name="setexternaluihandler"></a>CAxWindow:: SetExternalUIHandler
 
-`CAxWindow`オブジェクトの外部[IDocHostUIHandlerDispatch](../../atl/reference/idochostuihandlerdispatch-interface.md)インターフェイスを設定します。
+`CAxWindow` オブジェクトの外部[IDocHostUIHandlerDispatch](../../atl/reference/idochostuihandlerdispatch-interface.md)インターフェイスを設定します。
 
 ```
 HRESULT SetExternalUIHandler(IDocHostUIHandlerDispatch* pUIHandler);
@@ -355,17 +355,17 @@ HRESULT SetExternalUIHandler(IDocHostUIHandlerDispatch* pUIHandler);
 ### <a name="parameters"></a>パラメーター
 
 *pUIHandler*<br/>
-から`IDocHostUIHandlerDispatch`インターフェイスへのポインター。
+から`IDocHostUIHandlerDispatch` インターフェイスへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
 標準の HRESULT 値。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-外部`IDocHostUIHandlerDispatch`インターフェイスは、ホストのサイトに`IDocHostUIHandlerDispatch`インターフェイスのクエリを実行するコントロールによって使用されます。 WebBrowser コントロールは、これを行う1つのコントロールです。
+外部 `IDocHostUIHandlerDispatch` インターフェイスは、ホストのサイトに対して `IDocHostUIHandlerDispatch` インターフェイスを照会するコントロールによって使用されます。 WebBrowser コントロールは、これを行う1つのコントロールです。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ATLCON サンプル](../../overview/visual-cpp-samples.md)<br/>
 [CWindow クラス](../../atl/reference/cwindow-class.md)<br/>

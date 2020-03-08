@@ -19,11 +19,11 @@ helpviewer_keywords:
 - std::operator&lt;= (thread)
 - std::operator== (thread)
 ms.openlocfilehash: c0593b8016cf45abe64114958ccda84eb3704844
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458436"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876173"
 ---
 # <a name="ltthreadgt-operators"></a>&lt;thread&gt; 演算子
 
@@ -45,21 +45,21 @@ bool operator>= (
 
 ### <a name="parameters"></a>パラメーター
 
-*左側*\
+*左*\
 左側の `thread::id` オブジェクト。
 
-*そうです*\
+*右*\
 右側の `thread::id` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
 `!(Left < Right)`
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 この関数では、例外がスローされません。
 
-## <a name="op_gt"></a>  operator&gt;
+## <a name="op_gt"></a> 演算子&gt;
 
 一方の `thread::id` オブジェクトの値が、もう一方のオブジェクトの値より大きいかどうかを判断します。
 
@@ -71,17 +71,17 @@ bool operator> (
 
 ### <a name="parameters"></a>パラメーター
 
-*左側*\
+*左*\
 左側の `thread::id` オブジェクト。
 
-*そうです*\
+*右*\
 右側の `thread::id` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
 `Right < Left`
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 この関数では、例外がスローされません。
 
@@ -97,21 +97,21 @@ bool operator<= (
 
 ### <a name="parameters"></a>パラメーター
 
-*左側*\
+*左*\
 左側の `thread::id` オブジェクト。
 
-*そうです*\
+*右*\
 右側の `thread::id` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
 `!(Right < Left)`
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 この関数では、例外がスローされません。
 
-## <a name="op_lt"></a>  operator&lt;
+## <a name="op_lt"></a> 演算子&lt;
 
 一方の `thread::id` オブジェクトの値が、もう一方のオブジェクトの値より小さいかどうかを判断します。
 
@@ -123,17 +123,17 @@ bool operator<(
 
 ### <a name="parameters"></a>パラメーター
 
-*左側*\
+*左*\
 左側の `thread::id` オブジェクト。
 
-*そうです*\
+*右*\
 右側の `thread::id` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
 *左*の順序で*右*に先行する場合は**true** 。それ以外の場合は**false**。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 この演算子は、すべての `thread::id` オブジェクトでの全体の順序付けを定義します。 これらのオブジェクトは、連想コンテナー内のキーとして使用できます。
 
@@ -151,17 +151,17 @@ bool operator!= (
 
 ### <a name="parameters"></a>パラメーター
 
-*左側*\
+*左*\
 左側の `thread::id` オブジェクト。
 
-*そうです*\
+*右*\
 右側の `thread::id` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
 `!(Left == Right)`
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 この関数では、例外がスローされません。
 
@@ -177,17 +177,17 @@ bool operator== (
 
 ### <a name="parameters"></a>パラメーター
 
-*左側*\
+*左*\
 左側の `thread::id` オブジェクト。
 
-*そうです*\
+*右*\
 右側の `thread::id` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
 2つのオブジェクトが同じ実行スレッドを表している場合、またはどちらのオブジェクトも実行スレッドを表している場合は**true** 。それ以外の場合は**false**。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 この関数では、例外がスローされません。
 
@@ -206,19 +206,19 @@ basic_ostream<Elem, Tr>& operator<<(
 *Ostr*\
 [basic_ostream](../standard-library/basic-ostream-class.md) オブジェクト。
 
-*番号*\
+*Id*\
 `thread::id` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
 *Ostr*。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 この関数は、 *Ostr*に*Id*を挿入します。
 
 2 つの `thread::id` オブジェクトが等しい場合、これらのオブジェクトの挿入されたテキスト表現は同じです。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [\<thread>](../standard-library/thread.md)
