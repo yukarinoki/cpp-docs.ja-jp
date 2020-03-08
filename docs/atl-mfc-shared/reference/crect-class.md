@@ -35,11 +35,11 @@ helpviewer_keywords:
 - RECT structure
 ms.assetid: dee4e752-15d6-4db4-b68f-1ad65b2ed6ca
 ms.openlocfilehash: 13f86c411cca98f5817d1b3b2d9162ae8af8b734
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821370"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866533"
 ---
 # <a name="crect-class"></a>CRect クラス
 
@@ -55,27 +55,27 @@ class CRect : public tagRECT
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|[名前]|説明|
+|Name|Description|
 |----------|-----------------|
 |[CRect:: CRect](#crect)|`CRect` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|[名前]|説明|
+|Name|Description|
 |----------|-----------------|
 |[CRect:: 右下](#bottomright)|`CRect`の右下の点を返します。|
-|[CRect::CenterPoint](#centerpoint)|`CRect`の小惑星を返します。|
-|[CRect::CopyRect](#copyrect)|コピー元の四角形の寸法を `CRect`にコピーします。|
-|[CRect::DeflateRect](#deflaterect)|`CRect`の幅と高さを小さくします。|
-|[CRect::EqualRect](#equalrect)|`CRect` が、指定された四角形と等しいかどうかを判断します。|
+|[CRect:: 小惑星](#centerpoint)|`CRect`の小惑星を返します。|
+|[CRect:: CopyRect](#copyrect)|コピー元の四角形の寸法を `CRect`にコピーします。|
+|[CRect::D eflateRect](#deflaterect)|`CRect`の幅と高さを小さくします。|
+|[CRect:: EqualRect](#equalrect)|`CRect` が、指定された四角形と等しいかどうかを判断します。|
 |[CRect:: Height](#height)|`CRect`の高さを計算します。|
-|[CRect::InflateRect](#inflaterect)|`CRect`の幅と高さを大きくします。|
-|[CRect::IntersectRect](#intersectrect)|2つの四角形の交差部分に等しい `CRect` を設定します。|
+|[CRect:: InflateRect](#inflaterect)|`CRect`の幅と高さを大きくします。|
+|[CRect:: IntersectRect](#intersectrect)|2つの四角形の交差部分に等しい `CRect` を設定します。|
 |[CRect:: IsRectEmpty](#isrectempty)|`CRect` が空かどうかを判断します。 幅と高さのどちらかまたは両方が0の場合、`CRect` は空になります。|
 |[CRect:: IsRectNull](#isrectnull)|`top`、`bottom`、`left`、および `right` のメンバー変数がすべて0に等しいかどうかを判断します。|
-|[CRect::MoveToX](#movetox)|`CRect` を指定した x 座標に移動します。|
-|[CRect::MoveToXY](#movetoxy)|指定した x 座標と y 座標に `CRect` を移動します。|
-|[CRect::MoveToY](#movetoy)|`CRect` を指定した y 座標に移動します。|
+|[CRect:: MoveToX](#movetox)|`CRect` を指定した x 座標に移動します。|
+|[CRect:: MoveToXY](#movetoxy)|指定した x 座標と y 座標に `CRect` を移動します。|
+|[CRect:: MoveToY](#movetoy)|`CRect` を指定した y 座標に移動します。|
 |[CRect:: NormalizeRect](#normalizerect)|`CRect`の高さと幅を標準化します。|
 |[CRect:: OffsetRect](#offsetrect)|指定したオフセットだけ `CRect` を移動します。|
 |[CRect::P の実行](#ptinrect)|指定したポイントが `CRect`内にあるかどうかを判断します。|
@@ -83,13 +83,13 @@ class CRect : public tagRECT
 |[CRect:: SetRectEmpty](#setrectempty)|`CRect` を空の四角形 (すべての座標が0に等しい) に設定します。|
 |[CRect:: Size](#size)|`CRect`のサイズを計算します。|
 |[CRect:: SubtractRect](#subtractrect)|ある四角形を別の四角形から減算します。|
-|[CRect::TopLeft](#topleft)|`CRect`の左上の点を返します。|
+|[CRect:: TopLeft](#topleft)|`CRect`の左上の点を返します。|
 |[CRect:: UnionRect](#unionrect)|2つの四角形の和集合に等しい `CRect` を設定します。|
 |[CRect:: Width](#width)|`CRect`の幅を計算します。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
-|[名前]|説明|
+|Name|Description|
 |----------|-----------------|
 |[CRect:: operator-](#operator_-)|`CRect` または縮小 `CRect` から指定されたオフセットを減算し、結果として得られる `CRect`を返します。|
 |[CRect:: operator LPCRECT](#operator_lpcrect)|`CRect` を `LPCRECT` に変換します。|
@@ -105,7 +105,7 @@ class CRect : public tagRECT
 |[CRect:: operator-=](#operator_-_eq)|`CRect` または縮小 `CRect`から指定されたオフセットを減算します。|
 |[CRect:: operator = =](#operator_eq_eq)|`CRect` が四角形と等しいかどうかを判断します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 `CRect` には、`CRect` オブジェクトと Windows `RECT` 構造体を操作するためのメンバー関数も含まれています。
 
@@ -128,11 +128,11 @@ class CRect : public tagRECT
 
 `CRect`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atltypes. h
 
-##  <a name="bottomright"></a>  CRect::BottomRight
+##  <a name="bottomright"></a>CRect:: 右下
 
 座標は、`CRect`に含まれる[CPoint](cpoint-class.md)オブジェクトへの参照として返されます。
 
@@ -145,11 +145,11 @@ const CPoint& BottomRight() const throw();
 
 四角形の右下隅の座標です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 この関数を使用すると、四角形の右下隅を取得または設定できます。 代入演算子の左側にあるこの関数を使用して、コーナーを設定します。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 // use BottomRight() to retrieve the bottom
@@ -175,7 +175,7 @@ rect2.BottomRight() = ptLow;
 ASSERT(rect2 == CRect(10, 10, 180, 180));
 ```
 
-##  <a name="centerpoint"></a>  CRect::CenterPoint
+##  <a name="centerpoint"></a>CRect:: 小惑星
 
 左右の値を加算して2で割ることによって `CRect` の小惑星を計算し、上と下の値を加算して2で除算します。
 
@@ -187,7 +187,7 @@ CPoint CenterPoint() const throw();
 
 `CRect`の小惑星である `CPoint` オブジェクト。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 // Code from this OnPaint() implementation can be pasted into your own application
@@ -238,7 +238,7 @@ void CMyDlg::OnPaint()
 }
 ```
 
-##  <a name="copyrect"></a>  CRect::CopyRect
+##  <a name="copyrect"></a>CRect:: CopyRect
 
 `CRect`に `lpSrcRect` 四角形をコピーします。
 
@@ -251,7 +251,7 @@ void CopyRect(LPCRECT lpSrcRect) throw();
 *lpSrcRect*<br/>
 コピーする[RECT](/windows/win32/api/windef/ns-windef-rect)構造体または `CRect` オブジェクトをポイントします。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 CRect rectSource(35, 10, 125, 10);
@@ -301,7 +301,7 @@ CRect(POINT topLeft, POINT bottomRight) throw();
 `CRect`の下部を指定します。
 
 *srcRect*<br/>
-は、の `CRect`座標を使用して [RECT](/windows/win32/api/windef/ns-windef-rect) 構造体を参照します。
+`CRect`の座標を使用して、 [RECT](/windows/win32/api/windef/ns-windef-rect)構造体を参照します。
 
 *lpSrcRect*<br/>
 `CRect`の座標を使用して `RECT` 構造体をポイントします。
@@ -318,13 +318,13 @@ CRect(POINT topLeft, POINT bottomRight) throw();
 *右下*<br/>
 `CRect`の右下の位置を指定します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 引数が指定されていない場合、`left`、`top`、`right`、および `bottom` のメンバーは初期化されません。
 
 `CRect`(`const RECT&`) コンストラクターと `CRect`(`LPCRECT`) コンストラクターは、 [Copyrect](#copyrect)を実行します。 その他のコンストラクターは、オブジェクトのメンバー変数を直接初期化します。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 // default constructor doesn't initialize!
@@ -362,7 +362,7 @@ CRect rect5(pt, ptBottomRight);
 ASSERT(rect5 == rect4);
 ```
 
-##  <a name="deflaterect"></a>  CRect::DeflateRect
+##  <a name="deflaterect"></a>CRect::D eflateRect
 
 縮小 `CRect` を `DeflateRect` するには、中心に向かって移動します。
 
@@ -382,10 +382,10 @@ void DeflateRect(int l, int t, int r, int b) throw();
 `CRect`の上下を収縮する単位数を指定します。
 
 *size*<br/>
-Deflate する`CRect`単位の数を指定する [SIZE](/windows/win32/api/windef/ns-windef-size) または [CSize](csize-class.md)。 `cx` の値は、左右の単位を縮小する単位の数を指定し、`cy` の値は、上と下を収縮する単位の数を指定します。
+`CRect`deflate する単位の数を指定する[サイズ](/windows/win32/api/windef/ns-windef-size)または[CSize](csize-class.md) 。 `cx` の値は、左右の単位を縮小する単位の数を指定し、`cy` の値は、上と下を収縮する単位の数を指定します。
 
 *lpRect*<br/>
-各辺を収縮する単位`CRect`の数を指定する [RECT](/windows/win32/api/windef/ns-windef-rect) 構造体またはを指します。
+各辺を収縮する単位の数を指定する[RECT](/windows/win32/api/windef/ns-windef-rect)構造体または `CRect` を指します。
 
 *l*<br/>
 `CRect`の左側を収縮する単位数を指定します。
@@ -399,13 +399,13 @@ Deflate する`CRect`単位の数を指定する [SIZE](/windows/win32/api/winde
 *b*<br/>
 `CRect`の下部を deflate する単位数を指定します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 これを行うには、`DeflateRect`、左右に単位を追加し、右と下から単位を減算します。 `DeflateRect` のパラメーターは符号付きの値です。正の値は `CRect` を deflate し、負の値はそれを拡大します。
 
 最初の2つのオーバーロードは、`CRect` の反対側の両方のペアを縮小して、合計幅が*x* (または `cx`) の2倍に減少し、合計の高さが*y* (または `cy`) の2倍に減少するようにします。 他の2つのオーバーロードは、`CRect` の両側を他のオーバーロードとは別に deflate します。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 CRect rect(10, 10, 50, 50);
@@ -420,7 +420,7 @@ ASSERT(rect2.left == 11 && rect2.right == 47);
 ASSERT(rect2.top == 12 && rect2.bottom == 46);
 ```
 
-##  <a name="equalrect"></a>  CRect::EqualRect
+##  <a name="equalrect"></a>CRect:: EqualRect
 
 `CRect` が、指定された四角形と等しいかどうかを判断します。
 
@@ -431,7 +431,7 @@ BOOL EqualRect(LPCRECT lpRect) const throw();
 ### <a name="parameters"></a>パラメーター
 
 *lpRect*<br/>
-四角形の左上隅と右下`CRect`隅の座標を格納している [RECT](/windows/win32/api/windef/ns-windef-rect) 構造体またはオブジェクトを指します。
+四角形の左上隅と右下隅の座標を格納している[RECT](/windows/win32/api/windef/ns-windef-rect)構造体または `CRect` オブジェクトをポイントします。
 
 ### <a name="return-value"></a>戻り値
 
@@ -440,7 +440,7 @@ BOOL EqualRect(LPCRECT lpRect) const throw();
 > [!NOTE]
 >  両方の四角形が正規化されているか、この関数が失敗する可能性があります。 [NormalizeRect](#normalizerect)を呼び出して、この関数を呼び出す前に四角形を正規化することができます。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 CRect rect1(35, 150, 10, 25);
@@ -471,14 +471,14 @@ int Height() const throw();
 
 `CRect`の高さ。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 結果の値には負の値を指定できます。
 
 > [!NOTE]
 >  四角形が正規化されているか、この関数が失敗する可能性があります。 [NormalizeRect](#normalizerect)を呼び出して、この関数を呼び出す前に四角形を正規化することができます。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 CRect rect(20, 30, 80, 70);
@@ -488,7 +488,7 @@ int nHt = rect.Height();
 ASSERT(nHt == 40);
 ```
 
-##  <a name="inflaterect"></a>  CRect::InflateRect
+##  <a name="inflaterect"></a>CRect:: InflateRect
 
 `InflateRect` の側を中央から移動して `CRect` をします。
 
@@ -508,10 +508,10 @@ void InflateRect(int l, int t, int r,  int b) throw();
 `CRect`の上と下を拡大する単位数を指定します。
 
 *size*<br/>
-膨張する`CRect`単位の数を指定する [SIZE](/windows/win32/api/windef/ns-windef-size) または [CSize](csize-class.md)。 `cx` 値には、左右に拡大する単位の数を指定し、`cy` の値では、上と下に膨張する単位の数を指定します。
+`CRect`を展開する単位の数を指定する[サイズ](/windows/win32/api/windef/ns-windef-size)または[CSize](csize-class.md) 。 `cx` 値には、左右に拡大する単位の数を指定し、`cy` の値では、上と下に膨張する単位の数を指定します。
 
 *lpRect*<br/>
-各辺を膨張する単位`CRect`の数を指定する [RECT](/windows/win32/api/windef/ns-windef-rect) 構造体またはを指します。
+各辺を膨張させる単位数を指定する[RECT](/windows/win32/api/windef/ns-windef-rect)構造体または `CRect` を指します。
 
 *l*<br/>
 `CRect`の左側を拡大する単位数を指定します。
@@ -525,13 +525,13 @@ void InflateRect(int l, int t, int r,  int b) throw();
 *b*<br/>
 `CRect`の下部を拡大する単位数を指定します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 これを行うには、`InflateRect` 左および上から単位を減算し、単位を右と下に追加します。 `InflateRect` のパラメーターは符号付きの値です。正の値は `CRect` を膨張させ、負の値を収縮します。
 
 最初の2つのオーバーロードは、`CRect` の反対側の両方のペアを膨張させて、合計幅が*x* (または `cx`) の2倍に増加し、合計の高さが*y* (または `cy`) の2倍増加するようにします。 他の2つのオーバーロードは、`CRect` の各側を他のオーバーロードとは別に膨張させます。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 CRect rect(0, 0, 300, 300);
@@ -541,7 +541,7 @@ rect.InflateRect(50, 200);
 ASSERT(rect == CRect(-50, -200, 350, 500));
 ```
 
-##  <a name="intersectrect"></a>  CRect::IntersectRect
+##  <a name="intersectrect"></a>CRect:: IntersectRect
 
 2つの既存の四角形の積集合と等しい `CRect` を作成します。
 
@@ -561,14 +561,14 @@ BOOL IntersectRect(LPCRECT lpRect1, LPCRECT lpRect2) throw();
 
 積集合が空でない場合は0以外の。積集合が空の場合は0。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 共通部分は、両方の既存の四角形に含まれる最大の四角形です。
 
 > [!NOTE]
 >  両方の四角形が正規化されているか、この関数が失敗する可能性があります。 [NormalizeRect](#normalizerect)を呼び出して、この関数を呼び出す前に四角形を正規化することができます。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 CRect rectOne(125,  0, 150, 200);
@@ -584,7 +584,7 @@ rectInter2 &= rectTwo;
 ASSERT(rectInter2 == CRect(125, 75, 150, 95));
 ```
 
-##  <a name="isrectempty"></a>  CRect::IsRectEmpty
+##  <a name="isrectempty"></a>CRect:: IsRectEmpty
 
 `CRect` が空かどうかを判断します。
 
@@ -596,14 +596,14 @@ BOOL IsRectEmpty() const throw();
 
 `CRect` が空の場合は0以外の。`CRect` が空でない場合は0。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 幅と高さのどちらかまたは両方が0または負の場合、四角形は空になります。 `IsRectNull`とは異なり、四角形のすべての座標がゼロであるかどうかを判断します。
 
 > [!NOTE]
 >  四角形が正規化されているか、この関数が失敗する可能性があります。 [NormalizeRect](#normalizerect)を呼び出して、この関数を呼び出す前に四角形を正規化することができます。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 CRect rectNone(0, 0, 0, 0);
@@ -614,7 +614,7 @@ CRect rectEmpty(35, 35, 35, 35);
 ASSERT(rectEmpty.IsRectEmpty());
 ```
 
-##  <a name="isrectnull"></a>  CRect::IsRectNull
+##  <a name="isrectnull"></a>CRect:: IsRectNull
 
 `CRect` の上、左、下、右側の値がすべて0に等しいかどうかを判断します。
 
@@ -626,11 +626,11 @@ BOOL IsRectNull() const throw();
 
 `CRect`の top、left、bottom、および right の各値がすべて0に等しい場合は0以外の値。それ以外の場合は0です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 `IsRectEmpty`とは異なり、四角形が空かどうかを判断します。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 CRect rectNone(0, 0, 0, 0);
@@ -656,7 +656,7 @@ void MoveToX(int x) throw();
 *x*<br/>
 四角形の左上隅の絶対値の x 座標。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 CRect rect(0, 0, 100, 100);
@@ -666,7 +666,7 @@ rect.MoveToX(10);
 ASSERT(rect == CRect(10, 0, 110, 100));
 ```
 
-##  <a name="movetoxy"></a>  CRect::MoveToXY
+##  <a name="movetoxy"></a>CRect:: MoveToXY
 
 この関数を呼び出して、指定した絶対値の x 座標と y 座標に四角形を移動します。
 
@@ -686,7 +686,7 @@ void MoveToXY(POINT point) throw();
 *視点*<br/>
 四角形の左上隅を指定する `POINT` 構造体。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 CRect rect(0, 0, 100, 100);
@@ -695,7 +695,7 @@ rect.MoveToXY(10, 10);
 ASSERT(rect == CRect(10, 10, 110, 110));
 ```
 
-##  <a name="movetoy"></a>  CRect::MoveToY
+##  <a name="movetoy"></a>CRect:: MoveToY
 
 四角形を*y*によって指定された絶対 y 座標に移動するには、この関数を呼び出します。
 
@@ -708,7 +708,7 @@ void MoveToY(int y) throw();
 *y*<br/>
 四角形の左上隅の絶対値の y 座標。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 CRect rect(0, 0, 100, 100);
@@ -717,7 +717,7 @@ rect.MoveToY(10);
 ASSERT(rect == CRect(0, 10, 100, 110));
 ```
 
-##  <a name="normalizerect"></a>  CRect::NormalizeRect
+##  <a name="normalizerect"></a>CRect:: NormalizeRect
 
 高さと幅の両方が正であるように、`CRect` を正規化します。
 
@@ -725,14 +725,14 @@ ASSERT(rect == CRect(0, 10, 100, 110));
 void NormalizeRect() throw();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 四角形は、Windows が座標に通常使用する4番目のクアドラントの配置に対して正規化されます。 `NormalizeRect` では、上と下の値が比較され、上の方が下部より大きい場合はそれらを交換します。 同様に、左側の値が右側よりも大きい場合は、左辺と右辺の値が入れ替えられます。 この関数は、さまざまなマッピングモードおよび反転された四角形を処理する場合に便利です。
 
 > [!NOTE]
 > 次の `CRect` メンバー関数は、適切に機能するために正規化された四角形が必要です。 [Height](#height)、 [Width](#width)、 [Size](#size)、 [isrectempty](#isrectempty)、 [ptinrect](#ptinrect)、 [EqualRect](#equalrect)、 [UnionRect](#unionrect)、 [IntersectRect](#intersectrect)、 [SubtractRect](#subtractrect)、 [operator = =](#operator_eq_eq)、 [operator! =](#operator_neq)、 [operator &#124; ](#operator_or)、 [operator &#124;=](#operator_or_eq)、operator [&](#operator_amp)、 [operator & =](#operator_amp_eq)。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 CRect rect1(110, 100, 250, 310);
@@ -742,7 +742,7 @@ rect2.NormalizeRect();
 ASSERT(rect1 == rect2);
 ```
 
-##  <a name="offsetrect"></a>  CRect::OffsetRect
+##  <a name="offsetrect"></a>CRect:: OffsetRect
 
 指定したオフセットだけ `CRect` を移動します。
 
@@ -766,11 +766,11 @@ void OffsetRect(SIZE size) throw();
 *size*<br/>
 移動する次元の両方を指定する[サイズ](/windows/win32/api/windef/ns-windef-size)構造体または[CSize](csize-class.md)オブジェクトを格納します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 X 軸と*y*単位の `CRect`*x*単位を y 軸に沿って移動します。 *X*および*y*パラメーターは符号付きの値であるため、`CRect` を左または右に移動できます。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 CRect rect(0, 0, 35, 35);
@@ -786,7 +786,7 @@ ASSERT(rect == CRect(230, 230, 265, 265));
 operator LPCRECT() const throw();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 この関数を使用する場合、アドレスの ( **&** ) 演算子は必要ありません。 この演算子は、`LPCRECT`を予期している関数に `CRect` オブジェクトを渡すときに自動的に使用されます。
 
@@ -798,11 +798,11 @@ operator LPCRECT() const throw();
 operator LPRECT() throw();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 この関数を使用する場合、アドレスの ( **&** ) 演算子は必要ありません。 この演算子は、`LPRECT`を予期している関数に `CRect` オブジェクトを渡すときに自動的に使用されます。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 「 [CRect:: operator LPCRECT](#operator_lpcrect)」の例を参照してください。
 
@@ -819,7 +819,7 @@ void operator=(const RECT& srcRect) throw();
 *srcRect*<br/>
 ソースの四角形を参照します。 には、 [RECT](/windows/win32/api/windef/ns-windef-rect)または `CRect`を指定できます。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 CRect rect(0, 0, 127, 168);
@@ -846,12 +846,12 @@ BOOL operator==(const RECT& rect) const throw();
 
 等しい場合は0以外の値。それ以外の場合は0です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 > [!NOTE]
 >  両方の四角形が正規化されているか、この関数が失敗する可能性があります。 [NormalizeRect](#normalizerect)を呼び出して、この関数を呼び出す前に四角形を正規化することができます。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 CRect rect1(35, 150, 10, 25);
@@ -886,12 +886,12 @@ BOOL operator!=(const RECT& rect) const throw();
 
 等しくない場合は0以外の値。それ以外の場合は0です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 > [!NOTE]
 >  両方の四角形が正規化されているか、この関数が失敗する可能性があります。 [NormalizeRect](#normalizerect)を呼び出して、この関数を呼び出す前に四角形を正規化することができます。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 CRect rect1(35, 150, 10, 25);
@@ -928,15 +928,15 @@ void operator+=(LPCRECT lpRect) throw();
 四角形を移動する単位の数を指定する[サイズ](/windows/win32/api/windef/ns-windef-size)構造体または[CSize](csize-class.md)オブジェクト。
 
 *lpRect*<br/>
-各辺`CRect` を拡大する単位の数を含む [RECT](/windows/win32/api/windef/ns-windef-rect) 構造体またはオブジェクトを指し`CRect`ます。
+`CRect`の各辺を拡大する単位数を格納している[RECT](/windows/win32/api/windef/ns-windef-rect)構造体または `CRect` オブジェクトを指します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 パラメーターの*x*と*y* (または `cx` と `cy`) の値が `CRect`に追加されます。
 
 3番目のオーバーロード増えは、パラメーターの各メンバーで指定された単位数によって `CRect` ます。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 CRect   rect1(100, 235, 200, 335);
@@ -966,15 +966,15 @@ void operator-=(LPCRECT lpRect) throw();
 四角形を移動する単位の数を指定する[サイズ](/windows/win32/api/windef/ns-windef-size)構造体または[CSize](csize-class.md)オブジェクト。
 
 *lpRect*<br/>
-各辺を `CRect`収縮する単位数を格納している [RECT](/windows/win32/api/windef/ns-windef-rect) 構造体またはオブジェクトを指します。`CRect`
+`CRect`の各辺を縮小する単位数を格納している[RECT](/windows/win32/api/windef/ns-windef-rect)構造体または `CRect` オブジェクトを指します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 パラメーターの*x*と*y* (または `cx` と `cy`) の値は `CRect`から減算されます。
 
 3番目のオーバーロード縮小は、パラメーターの各メンバーで指定された単位数によって `CRect` ます。 このオーバーロードは[DeflateRect](#deflaterect)のように機能することに注意してください。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 CRect   rect1(100, 235, 200, 335);
@@ -998,14 +998,14 @@ void operator&=(const RECT& rect) throw();
 *rect*<br/>
 に[RECT](/windows/win32/api/windef/ns-windef-rect)または `CRect`が含まれています。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 交差部分は、両方の四角形に含まれる最大の四角形です。
 
 > [!NOTE]
 >  両方の四角形が正規化されているか、この関数が失敗する可能性があります。 [NormalizeRect](#normalizerect)を呼び出して、この関数を呼び出す前に四角形を正規化することができます。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 「 [CRect:: IntersectRect](#intersectrect)」の例を参照してください。
 
@@ -1022,14 +1022,14 @@ void operator|=(const RECT& rect) throw();
 *rect*<br/>
 `CRect` または[四角形](/windows/win32/api/windef/ns-windef-rect)が含まれています。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 共用体は、両方のソース四角形を含む最小の四角形です。
 
 > [!NOTE]
 >  両方の四角形が正規化されているか、この関数が失敗する可能性があります。 [NormalizeRect](#normalizerect)を呼び出して、この関数を呼び出す前に四角形を正規化することができます。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 CRect   rect1(100,  0, 200, 300);
@@ -1059,19 +1059,19 @@ CRect operator+(SIZE size) const throw();
 戻り値を移動する単位の数を指定する[サイズ](/windows/win32/api/windef/ns-windef-size)構造体または[CSize](csize-class.md)オブジェクト。
 
 *lpRect*<br/>
-戻り値の各辺を`CRect`膨張させる単位数を格納する [RECT](/windows/win32/api/windef/ns-windef-rect) 構造体またはオブジェクトを指します。
+戻り値の各辺を拡大する単位数を格納する[RECT](/windows/win32/api/windef/ns-windef-rect)構造体または `CRect` オブジェクトをポイントします。
 
 ### <a name="return-value"></a>戻り値
 
 `CRect` を移動または拡大した結果の `CRect`、パラメーターで指定された単位数だけです。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 パラメーターの*x*と*y* (または `cx` と `cy`) のパラメーターが `CRect`の位置に追加されます。
 
 3番目のオーバーロードは、パラメーターの各メンバーで指定された単位数によって大きく `CRect` に等しい新しい `CRect` を返します。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 CRect   rect1(100, 235, 200, 335);
@@ -1096,25 +1096,25 @@ CRect operator-(LPCRECT lpRect) const throw();
 ### <a name="parameters"></a>パラメーター
 
 *視点*<br/>
-戻り値を移動`CPoint`する単位の数を指定する [POINT](/windows/win32/api/windef/ns-windef-point) 構造またはオブジェクト。
+戻り値を移動する単位の数を指定する[ポイント](/windows/win32/api/windef/ns-windef-point)構造または `CPoint` オブジェクト。
 
 *size*<br/>
-戻り値を移動`CSize`する単位の数を指定する [SIZE](/windows/win32/api/windef/ns-windef-size) 構造体またはオブジェクト。
+戻り値を移動する単位の数を指定する[サイズ](/windows/win32/api/windef/ns-windef-size)構造体または `CSize` オブジェクト。
 
 *lpRect*<br/>
-戻り値の各辺を`CRect`収縮する単位数を格納している [RECT](/windows/win32/api/windef/ns-windef-rect) 構造体またはオブジェクトを指します。
+戻り値の各辺を収縮する単位数を格納する[RECT](/windows/win32/api/windef/ns-windef-rect)構造体または `CRect` オブジェクトをポイントします。
 
 ### <a name="return-value"></a>戻り値
 
 `CRect` を移動または deflating した結果の `CRect`、パラメーターで指定された単位数だけです。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 パラメーターの*x*および*y* (または `cx` および `cy`) パラメーターは `CRect`の位置から減算されます。
 
 3番目のオーバーロードは、パラメーターの各メンバーで指定された単位数で `CRect` deflated に等しい新しい `CRect` を返します。 このオーバーロードは、 [SubtractRect](#subtractrect)ではなく[DeflateRect](#deflaterect)のように機能することに注意してください。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 CRect   rect1(100, 235, 200, 335);
@@ -1143,14 +1143,14 @@ CRect operator&(const RECT& rect2) const throw();
 
 `CRect` と*rect2*の積集合である `CRect`。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 交差部分は、両方の四角形に含まれる最大の四角形です。
 
 > [!NOTE]
 >  両方の四角形が正規化されているか、この関数が失敗する可能性があります。 [NormalizeRect](#normalizerect)を呼び出して、この関数を呼び出す前に四角形を正規化することができます。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 CRect   rect1(100,  0, 200, 300);
@@ -1180,14 +1180,14 @@ rect2) const throw();
 
 `CRect` と*rect2*の和集合である `CRect`。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 共用体は、両方の四角形を含む最小の四角形です。
 
 > [!NOTE]
 >  両方の四角形が正規化されているか、この関数が失敗する可能性があります。 [NormalizeRect](#normalizerect)を呼び出して、この関数を呼び出す前に四角形を正規化することができます。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 CRect   rect1(100,  0, 200, 300);
@@ -1199,7 +1199,7 @@ CRect   rectResult(0, 0, 300, 300);
 ASSERT(rectResult == rect3);
 ```
 
-##  <a name="ptinrect"></a>  CRect::PtInRect
+##  <a name="ptinrect"></a>CRect::P の実行
 
 指定したポイントが `CRect`内にあるかどうかを判断します。
 
@@ -1216,14 +1216,14 @@ BOOL PtInRect(POINT point) const throw();
 
 ポイントが `CRect`内にある場合は0以外の。それ以外の場合は0です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 点は、左側または上側にある場合、または4辺のいずれかにある場合、`CRect` 内にあります。 右または下の点が `CRect`の外側にあります。
 
 > [!NOTE]
 >  四角形が正規化されているか、この関数が失敗する可能性があります。 [NormalizeRect](#normalizerect)を呼び出して、この関数を呼び出す前に四角形を正規化することができます。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 CRect rect(5, 5, 100, 100);
@@ -1251,7 +1251,7 @@ pt.y = 50;
 ASSERT(rect.PtInRect(pt));
 ```
 
-##  <a name="setrect"></a>  CRect::SetRect
+##  <a name="setrect"></a>CRect:: SetRect
 
 `CRect` の大きさを指定した座標に設定します。
 
@@ -1273,7 +1273,7 @@ void SetRect(int x1, int y1, int x2, int y2) throw();
 *y2*<br/>
 右下隅の y 座標を指定します。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 CRect rect;
@@ -1281,7 +1281,7 @@ rect.SetRect(256, 256, 512, 512);
 ASSERT(rect == CRect(256, 256, 512, 512));
 ```
 
-##  <a name="setrectempty"></a>  CRect::SetRectEmpty
+##  <a name="setrectempty"></a>CRect:: SetRectEmpty
 
 すべての座標を0に設定することにより、`CRect` を null の四角形にします。
 
@@ -1289,7 +1289,7 @@ ASSERT(rect == CRect(256, 256, 512, 512));
 void SetRectEmpty() throw();
 ```
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 CRect rect;
@@ -1311,14 +1311,14 @@ CSize Size() const throw();
 
 `CRect`のサイズを格納している[CSize](csize-class.md)オブジェクト。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 高さまたは幅は負の値にすることができます。
 
 > [!NOTE]
 >  四角形が正規化されているか、この関数が失敗する可能性があります。 [NormalizeRect](#normalizerect)を呼び出して、この関数を呼び出す前に四角形を正規化することができます。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 CRect rect(10, 10, 50, 50);
@@ -1326,7 +1326,7 @@ CSize sz = rect.Size();
 ASSERT(sz.cx == 40 && sz.cy == 40);
 ```
 
-##  <a name="subtractrect"></a>  CRect::SubtractRect
+##  <a name="subtractrect"></a>CRect:: SubtractRect
 
 `CRect` の次元を `lpRectSrc1`からの `lpRectSrc2` の減算と同じにします。
 
@@ -1346,7 +1346,7 @@ BOOL SubtractRect(LPCRECT lpRectSrc1, LPCRECT lpRectSrc2) throw();
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 減算は、 *lpRectScr1*と*lpRectScr2*が交差していない、 *lpRectScr1*内のすべての点を含む最小の四角形です。
 
@@ -1359,7 +1359,7 @@ BOOL SubtractRect(LPCRECT lpRectSrc1, LPCRECT lpRectSrc2) throw();
 > [!NOTE]
 >  両方の四角形が正規化されているか、この関数が失敗する可能性があります。 [NormalizeRect](#normalizerect)を呼び出して、この関数を呼び出す前に四角形を正規化することができます。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 RECT   rectOne;
@@ -1393,7 +1393,7 @@ rectOut.SubtractRect(rect1, rect2);
 ASSERT(rectResult == rectOut);
 ```
 
-##  <a name="topleft"></a>  CRect::TopLeft
+##  <a name="topleft"></a>CRect:: TopLeft
 
 座標は、`CRect`に含まれる[CPoint](cpoint-class.md)オブジェクトへの参照として返されます。
 
@@ -1406,15 +1406,15 @@ const CPoint& TopLeft() const throw();
 
 四角形の左上隅の座標です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 この関数を使用すると、四角形の左上隅を取得または設定できます。 代入演算子の左側にあるこの関数を使用して、コーナーを設定します。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 「 [CRect:: 小惑星](#centerpoint)」の例を参照してください。
 
-##  <a name="unionrect"></a>  CRect::UnionRect
+##  <a name="unionrect"></a>CRect:: UnionRect
 
 `CRect` の大きさを、2つのソース四角形の和集合と等しくなるようにします。
 
@@ -1425,7 +1425,7 @@ BOOL UnionRect(LPCRECT lpRect1, LPCRECT lpRect2) throw();
 ### <a name="parameters"></a>パラメーター
 
 *lpRect1*<br/>
-ソース四角形を格納し`CRect`ている [RECT](/windows/win32/api/windef/ns-windef-rect) またはを指します。
+ソース四角形を含む[RECT](/windows/win32/api/windef/ns-windef-rect)または `CRect` を指します。
 
 *lpRect2*<br/>
 コピー元の四角形を格納している `RECT` または `CRect` を指します。
@@ -1434,7 +1434,7 @@ BOOL UnionRect(LPCRECT lpRect1, LPCRECT lpRect2) throw();
 
 共用体が空でない場合は0以外の。共用体が空の場合は0。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 共用体は、両方のソース四角形を含む最小の四角形です。
 
@@ -1443,7 +1443,7 @@ BOOL UnionRect(LPCRECT lpRect1, LPCRECT lpRect2) throw();
 > [!NOTE]
 >  両方の四角形が正規化されているか、この関数が失敗する可能性があります。 [NormalizeRect](#normalizerect)を呼び出して、この関数を呼び出す前に四角形を正規化することができます。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 CRect   rect1(100,  0, 200, 300);
@@ -1467,14 +1467,14 @@ int Width() const throw();
 
 `CRect`の幅。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 幅には負の値を指定できます。
 
 > [!NOTE]
 >  四角形が正規化されているか、この関数が失敗する可能性があります。 [NormalizeRect](#normalizerect)を呼び出して、この関数を呼び出す前に四角形を正規化することができます。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 CRect rect(20, 30, 80, 70);
@@ -1483,7 +1483,7 @@ int nWid = rect.Width();
 ASSERT(nWid == 60);
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [CPoint クラス](cpoint-class.md)<br/>
 [CSize クラス](csize-class.md)<br/>

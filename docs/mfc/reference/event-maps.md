@@ -5,11 +5,11 @@ helpviewer_keywords:
 - event maps [MFC]
 ms.assetid: 1ed53aee-bc53-43cd-834a-6fb935c0d29b
 ms.openlocfilehash: 34741dc05efe77c0932343739540370f54db6008
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70907893"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78855622"
 ---
 # <a name="event-maps"></a>イベント マップ
 
@@ -19,7 +19,7 @@ Microsoft Foundation Class ライブラリには、イベントを発生させ�
 
 [!code-cpp[NVC_MFCAxCtl#16](../../mfc/reference/codesnippet/cpp/event-maps_1.cpp)]
 
-マクロ`EVENT_STOCK_CLICK`は、マウスクリックが検出されるたびに、コントロールがストッククリックイベントを起動することを示します。 その他のストックイベントの詳細な一覧については[、ActiveX コントロールに関する記事をご覧ください。イベント](../../mfc/mfc-activex-controls-events.md)。 カスタムイベントを示すマクロを使用することもできます。
+`EVENT_STOCK_CLICK` マクロは、マウスクリックを検出するたびに、コントロールがストッククリックイベントを起動することを示します。 その他のストックイベントの詳細な一覧については、「 [ActiveX コントロール: イベント](../../mfc/mfc-activex-controls-events.md)」を参照してください。 カスタムイベントを示すマクロを使用することもできます。
 
 イベントマップマクロは重要ですが、通常は直接挿入されません。 これは、 **[プロパティ]** ウィンドウ (**クラスビュー**) では、イベント発生関数をイベントに関連付ける際に、ソースファイルにイベントマップエントリが自動的に作成されるためです。 イベントマップエントリを編集または追加する場合はいつでも、 **[プロパティ]** ウィンドウを使用できます。
 
@@ -51,17 +51,17 @@ MFC には、イベントマップをサポートするために次のマクロ�
 
 ##  <a name="declare_event_map"></a>DECLARE_EVENT_MAP
 
-プログラム`COleControl`内の各派生クラスは、イベントマップを提供して、コントロールが起動するイベントを指定できます。
+プログラム内の各 `COleControl`派生クラスは、イベントマップを提供して、コントロールが起動するイベントを指定できます。
 
 ```cpp
 DECLARE_EVENT_MAP()
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 クラス宣言の最後に DECLARE_EVENT_MAP マクロを使用します。 次に、クラスのメンバー関数を定義する .cpp ファイルで、BEGIN_EVENT_MAP マクロ、各コントロールのイベントのマクロエントリ、および END_EVENT_MAP マクロを使用して、イベント一覧の末尾を宣言します。
 
-イベントマップの詳細については、ActiveX [コントロールに関する記事を参照してください。イベント](../../mfc/mfc-activex-controls-events.md)。
+イベントマップの詳細については、「 [ActiveX コントロール: イベント](../../mfc/mfc-activex-controls-events.md)」を参照してください。
 
 ### <a name="requirements"></a>必要条件
 
@@ -83,11 +83,11 @@ BEGIN_EVENT_MAP(theClass,  baseClass)
 *baseClass*<br/>
 *クラス*の基底クラスの名前を指定します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-クラスのメンバー関数を定義する実装 (.cpp) ファイルで、BEGIN_EVENT_MAP マクロを使用してイベントマップを開始し、各イベントにマクロエントリを追加して、END_EVENT_MAP マクロを使用してイベントマップを完成させます。
+クラスのメンバー関数を定義する実装 (.cpp) ファイルで、BEGIN_EVENT_MAP マクロを使用してイベントマップを開始し、各イベントにマクロエントリを追加して、END_EVENT_MAP マクロを使用してイベントマップを完了します。
 
-イベントマップと BEGIN_EVENT_MAP マクロの詳細については、ActiveX コントロール[に関する記事を参照してください。イベント](../../mfc/mfc-activex-controls-events.md)。
+イベントマップと BEGIN_EVENT_MAP マクロの詳細については、「 [ActiveX コントロール: イベント](../../mfc/mfc-activex-controls-events.md)」を参照してください。
 
 ### <a name="requirements"></a>必要条件
 
@@ -124,26 +124,26 @@ EVENT_CUSTOM(pszName, pfnFire,  vtsParams)
 *Vtsparc*<br/>
 関数のパラメーターリストを指定する1つ以上の定数のスペース区切りのリスト。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-*Vtsparc ams*パラメーターは、定数の`VTS_`値をスペースで区切ったリストです。 これらの値のうち1つ以上 (コンマではない) で区切られた関数のパラメーターリストを指定します。 例えば:
+*Vtsparc ams*パラメーターは、`VTS_` 定数の空白で区切られた値の一覧です。 これらの値のうち1つ以上 (コンマではない) で区切られた関数のパラメーターリストを指定します。 次に例を示します。
 
 [!code-cpp[NVC_MFCActiveXControl#13](../../mfc/codesnippet/cpp/event-maps_2.cpp)]
 
-RGB カラー値を表す32ビット整数を含むリストを指定し、その後に OLE フォントオブジェクト`IFontDisp`のインターフェイスへのポインターを指定します。
+RGB カラー値を表す32ビット整数を含むリストを指定し、その後に OLE フォントオブジェクトの `IFontDisp` インターフェイスへのポインターを指定します。
 
-`VTS_`定数とその意味は次のとおりです。
+`VTS_` 定数とその意味は次のとおりです。
 
-|シンボル|パラメーターの型|
+|Symbol|パラメーターのタイプ|
 |------------|--------------------|
 |VTS_I2|**short**|
 |VTS_I4|**long**|
 |VTS_R4|**float**|
 |VTS_R8|**double**|
 |VTS_COLOR|OLE_COLOR|
-|VTS_CY|貨|
+|VTS_CY|通貨|
 |VTS_DATE|DATE|
-|VTS_BSTR|**const**__char\*__|
+|VTS_BSTR|**const** __char\*__|
 |VTS_DISPATCH|LPDISPATCH|
 |VTS_FONT|`IFontDispatch*`|
 |VTS_HANDLE|HANDLE|
@@ -165,7 +165,7 @@ RGB カラー値を表す32ビット整数を含むリストを指定し、そ�
 |VTS_YSIZE_HIMETRIC|OLE_YSIZE_HIMETRIC|
 
 > [!NOTE]
-> Variant データ定数へのポインターを提供する VTS_FONT および VTS_PICTURE を除き、すべての variant 型に対して追加のバリアント定数が定義されています。 これらの定数は、 `VTS_Pconstantname`規約を使用して名前が付けられます。 たとえば、VTS_PCOLOR は VTS_COLOR 定数へのポインターです。
+> Variant データ定数へのポインターを提供する VTS_FONT および VTS_PICTURE を除き、すべてのバリアント型に対して追加のバリアント定数が定義されています。 これらの定数には、`VTS_Pconstantname` 規約を使用して名前が付けられます。 たとえば、VTS_PCOLOR は VTS_COLOR 定数へのポインターです。
 
 ### <a name="requirements"></a>必要条件
 
@@ -197,15 +197,15 @@ EVENT_CUSTOM_ID(
 *Vtsparc*<br/>
 イベントが発生したときにコントロールコンテナーに渡されるパラメーターの変数リスト。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-*Vtsparc ams*引数は、定数の`VTS_`値をスペースで区切ったリストです。 これらの値のうち1つ以上がコンマではなくスペースで区切られている場合は、関数のパラメーターリストを指定します。 例えば:
+*Vtsparc ams*引数は、`VTS_` 定数の空白で区切られた値のリストです。 これらの値のうち1つ以上がコンマではなくスペースで区切られている場合は、関数のパラメーターリストを指定します。 次に例を示します。
 
 [!code-cpp[NVC_MFCActiveXControl#13](../../mfc/codesnippet/cpp/event-maps_2.cpp)]
 
-RGB カラー値を表す32ビット整数を含むリストを指定し、その後に OLE フォントオブジェクト`IFontDisp`のインターフェイスへのポインターを指定します。
+RGB カラー値を表す32ビット整数を含むリストを指定し、その後に OLE フォントオブジェクトの `IFontDisp` インターフェイスへのポインターを指定します。
 
-`VTS_`定数の一覧については、「 [EVENT_CUSTOM](#event_custom)」を参照してください。
+`VTS_` 定数の一覧については、「 [EVENT_CUSTOM](#event_custom)」を参照してください。
 
 ### <a name="requirements"></a>必要条件
 
@@ -227,7 +227,7 @@ ON_OLEVERB(idsVerbName,  memberFxn)
 *memberFxn*<br/>
 動詞が呼び出されたときにフレームワークによって呼び出される関数。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 リソースエディターを使用して、文字列テーブルに追加されるカスタム動詞名を作成できます。
 
@@ -240,7 +240,7 @@ BOOL memberFxn(
    LPCRECT  lpRect);
 ```
 
-*Lpmsg*、 *hWndParent*、および*lpRect*パラメーターの値は、 `IOleObject::DoVerb`メンバー関数の対応するパラメーターから取得されます。
+*Lpmsg*、 *HWndParent*、および*lpRect*パラメーターの値は、`IOleObject::DoVerb` メンバー関数の対応するパラメーターから取得されます。
 
 ### <a name="requirements"></a>必要条件
 
@@ -262,9 +262,9 @@ ON_STDOLEVERB(iVerb, memberFxn)
 *memberFxn*<br/>
 動詞が呼び出されたときにフレームワークによって呼び出される関数。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-標準の動詞インデックスは、の形式`OLEIVERB_`で、その後にアクションが続きます。 標準動詞の例として、OLEIVERB_SHOW、OLEIVERB_HIDE、および OLEIVERB_UIACTIVATE があります。
+標準動詞インデックスは、`OLEIVERB_`の形式で、その後にアクションが続きます。 OLEIVERB_SHOW、OLEIVERB_HIDE、OLEIVERB_UIACTIVATE は、標準的な動詞の例です。
 
 *MemberFxn*パラメーターとして使用する関数プロトタイプの説明については、「 [ON_OLEVERB](#on_oleverb) 」を参照してください。
 
@@ -272,6 +272,6 @@ ON_STDOLEVERB(iVerb, memberFxn)
 
 **ヘッダー** afxole
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [マクロとグローバル](../../mfc/reference/mfc-macros-and-globals.md)

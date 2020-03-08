@@ -6,15 +6,15 @@ f1_keywords:
 - chrono/std::time_point_cast
 ms.assetid: d6800e15-77a1-4df3-900e-d8b2fee190c7
 ms.openlocfilehash: 85fdd413354b3f310d3315a80cf7da983cf6621d
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244919"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865201"
 ---
 # <a name="ltchronogt-functions"></a>&lt;chrono&gt; 関数
 
-## <a name="duration_cast"></a> duration_cast
+## <a name="duration_cast"></a>duration_cast
 
 `duration` オブジェクトを指定した型にキャストします。
 
@@ -34,11 +34,11 @@ constexpr ToDuration round(const duration<Rep, Period>& d);
 
 対象の型に収まる必要のある場合、省略された期間 `duration` を表す `To` 型の `Dur` オブジェクト。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 `To` が `duration` のインスタンス化の場合、この関数はオーバーロードの解決に関与しません。
 
-## <a name="time_point_cast"></a> time_point_cast
+## <a name="time_point_cast"></a>time_point_cast
 
 [time_point](../standard-library/time-point-class.md) オブジェクトを指定した型にキャストします。
 
@@ -61,6 +61,6 @@ round(const time_point<Clock, Duration>& tp);
 
 `time_point` 型の継続時間を含む `To` オブジェクト。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 `To` が [duration](../standard-library/duration-class.md) のインスタンス化ではない限り、この関数はオーバーロードの解決に関与しません。
