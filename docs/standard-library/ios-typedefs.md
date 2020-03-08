@@ -10,11 +10,11 @@ f1_keywords:
 - iosfwd/std::wstreampos
 ms.assetid: 0b962632-3439-44de-bf26-20c67a7f0ff3
 ms.openlocfilehash: 20bffbeb7720274302633c5dda9e6364c06d5b54
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72687884"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856399"
 ---
 # <a name="ltiosgt-typedefs"></a>&lt;ios&gt; typedefs
 
@@ -26,9 +26,9 @@ ms.locfileid: "72687884"
 typedef basic_ios<char, char_traits<char>> ios;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-この型はクラステンプレート[basic_ios](../standard-library/basic-ios-class.md)のシノニムで、既定の文字の特性を持つ**char**型の要素に対して特殊化されています。
+この型は、クラステンプレート[basic_ios](../standard-library/basic-ios-class.md)のシノニムであり、既定の文字の特性を持つ**char**型の要素に対して特殊化されています。
 
 ## <a name="streamoff"></a>streamoff
 
@@ -42,9 +42,9 @@ typedef basic_ios<char, char_traits<char>> ios;
 #endif
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-型は、さまざまなストリーム位置決め操作に関連するオフセット バイト数を格納できるオブジェクトを記述する、符号付き整数です。 この表現は、少なくとも 32 ビットあります。 これは、ストリーム内の任意のバイト位置を表すのに必ずしも十分なサイズとは限りません。 @No__t_0 値は、通常、間違ったオフセットを示します。
+型は、さまざまなストリーム位置決め操作に関連するオフセット バイト数を格納できるオブジェクトを記述する、符号付き整数です。 この表現は、少なくとも 32 ビットあります。 これは、ストリーム内の任意のバイト位置を表すのに必ずしも十分なサイズとは限りません。 `streamoff(-1)` 値は、通常、間違ったオフセットを示します。
 
 ## <a name="streampos"></a>streampos
 
@@ -54,7 +54,7 @@ typedef basic_ios<char, char_traits<char>> ios;
 typedef fpos<mbstate_t> streampos;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 この型は、[fpos](../standard-library/fpos-class.md)< `mbstate_t`> の同意語です。
 
@@ -93,7 +93,7 @@ int main( )
 #endif
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 型は、さまざまなストリーム操作に関連する要素数のカウントを格納できるオブジェクトを記述する、符号付き整数です。 この表現は、少なくとも 16 ビットあります。 これは、ストリーム内の任意のバイト位置を表すのに必ずしも十分なサイズとは限りません。
 
@@ -125,9 +125,9 @@ int main( )
 typedef basic_ios<wchar_t, char_traits<wchar_t>> wios;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-この型はクラステンプレート[basic_ios](../standard-library/basic-ios-class.md)のシノニムで、既定の文字の特性を持つ**wchar_t**型の要素に対して特殊化されています。
+この型は、クラステンプレート[basic_ios](../standard-library/basic-ios-class.md)のシノニムであり、既定の文字の特性を持つ**wchar_t**型の要素に対して特殊化されています。
 
 ## <a name="wstreampos"></a>wstreampos
 
@@ -137,7 +137,7 @@ typedef basic_ios<wchar_t, char_traits<wchar_t>> wios;
 typedef fpos<mbstate_t> wstreampos;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 この型は、[fpos](../standard-library/fpos-class.md)< `mbstate_t`> の同意語です。
 

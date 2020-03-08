@@ -18,11 +18,11 @@ helpviewer_keywords:
 - CComPtrBase class
 ms.assetid: 6dbe9543-dee8-4a97-b02f-dd3a25f4a1a0
 ms.openlocfilehash: 740920225fc513a869b4a92344f87004831e4768
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75298613"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78864961"
 ---
 # <a name="ccomptrbase-class"></a>CComPtrBase クラス
 
@@ -44,13 +44,13 @@ class CComPtrBase
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|[名前]|説明|
+|Name|説明|
 |----------|-----------------|
 |[CComPtrBase:: ~ CComPtrBase](#dtor)|デストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|[名前]|説明|
+|Name|説明|
 |----------|-----------------|
 |[CComPtrBase:: Advise](#advise)|`CComPtrBase`のコネクションポイントとクライアントのシンクとの間の接続を作成するには、このメソッドを呼び出します。|
 |[CComPtrBase:: Attach](#attach)|既存のポインターの所有権を取得するには、このメソッドを呼び出します。|
@@ -58,25 +58,25 @@ class CComPtrBase
 |[CComPtrBase:: CopyTo](#copyto)|`CComPtrBase` ポインターを別のポインター変数にコピーするには、このメソッドを呼び出します。|
 |[CComPtrBase::D etach](#detach)|ポインターの所有権を解放するには、このメソッドを呼び出します。|
 |[CComPtrBase::IsEqualObject](#isequalobject)|このメソッドを呼び出して、指定した `IUnknown` が `CComPtrBase` オブジェクトに関連付けられている同じオブジェクトを指しているかどうかを確認します。|
-|[CComPtrBase::QueryInterface](#queryinterface)|指定したインターフェイスへのポインターを返すには、このメソッドを呼び出します。|
+|[CComPtrBase:: QueryInterface](#queryinterface)|指定したインターフェイスへのポインターを返すには、このメソッドを呼び出します。|
 |[CComPtrBase:: Release](#release)|インターフェイスを解放するには、このメソッドを呼び出します。|
 |[CComPtrBase:: SetSite](#setsite)|`CComPtrBase` オブジェクトのサイトを親オブジェクトの `IUnknown` に設定するには、このメソッドを呼び出します。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
-|[名前]|説明|
+|Name|説明|
 |----------|-----------------|
 |[CComPtrBase:: operator T *](#operator_t_star)|キャスト演算子。|
 |[CComPtrBase:: operator!](#operator_not)|NOT 演算子。|
 |[CComPtrBase:: operator &](#operator_amp)|&amp; 演算子。|
 |[CComPtrBase:: operator *](#operator_star)|\* 演算子。|
-|[CComPtrBase:: operator <](#ccomptrbase__operator lt)|"未満" 演算子。|
+|[CComPtrBase:: operator <](#ccomptrbase__operator lt)|小なり演算子。|
 |[CComPtrBase:: operator = =](#operator_eq_eq)|等値演算子。|
 |[CComPtrBase:: operator->](#operator_ptr)|メンバーへのポインター演算子。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
-|[名前]|説明|
+|Name|説明|
 |----------|-----------------|
 |[CComPtrBase::p](#p)|ポインターデータメンバー変数。|
 
@@ -88,7 +88,7 @@ class CComPtrBase
 
 **ヘッダー:** atlcomcli. h
 
-##  <a name="advise"></a>  CComPtrBase::Advise
+##  <a name="advise"></a>CComPtrBase:: Advise
 
 `CComPtrBase`のコネクションポイントとクライアントのシンクとの間の接続を作成するには、このメソッドを呼び出します。
 
@@ -101,7 +101,7 @@ HRESULT Advise(
 
 ### <a name="parameters"></a>パラメーター
 
-*pUnk*<br/>
+*パンク*<br/>
 クライアントの `IUnknown`へのポインター。
 
 *iid*<br/>
@@ -187,7 +187,7 @@ NULL の場合、オブジェクトが集計の一部として作成されてい
 
 デバッグビルドでは、 [CComPtrBase::p](#p)が NULL と等しくない場合にアサーションエラーが発生します。
 
-##  <a name="copyto"></a>  CComPtrBase::CopyTo
+##  <a name="copyto"></a>CComPtrBase:: CopyTo
 
 `CComPtrBase` ポインターを別のポインター変数にコピーするには、このメソッドを呼び出します。
 
@@ -316,7 +316,7 @@ _NoAddRefReleaseOnCComPtr<T>* operator->() const throw();
 
 ##  <a name="operator_lt"></a>CComPtrBase:: operator &lt;
 
-"未満" 演算子。
+小なり演算子。
 
 ```
 bool operator<(T* pT) const throw();
@@ -355,7 +355,7 @@ T* p;
 
 このメンバー変数は、ポインター情報を保持します。
 
-##  <a name="queryinterface"></a>  CComPtrBase::QueryInterface
+##  <a name="queryinterface"></a>CComPtrBase:: QueryInterface
 
 指定したインターフェイスへのポインターを返すには、このメソッドを呼び出します。
 
@@ -382,7 +382,7 @@ template <class Q> HRESULT QueryInterface(Q
 
 デバッグビルドでは、 *pp*が NULL と等しくない場合にアサーションエラーが発生します。
 
-##  <a name="release"></a>  CComPtrBase::Release
+##  <a name="release"></a>CComPtrBase:: Release
 
 インターフェイスを解放するには、このメソッドを呼び出します。
 
@@ -415,6 +415,6 @@ HRESULT SetSite(IUnknown* punkParent) throw();
 
 このメソッドは、 [Atlsetchildsite](composite-control-global-functions.md#atlsetchildsite)を呼び出します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [クラスの概要](../../atl/atl-class-overview.md)

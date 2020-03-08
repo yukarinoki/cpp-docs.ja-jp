@@ -5,15 +5,15 @@ f1_keywords:
 - istream/std::operator&gt;&gt;
 ms.assetid: 7174da41-f301-4a34-b631-0ab918b188d2
 ms.openlocfilehash: 5ac5c61488530f99cdad38ca1bfca365b6ac0f8c
-ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72890175"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78874827"
 ---
 # <a name="ltistreamgt-operators"></a>&lt;istream&gt; 演算子
 
-## <a name="op_gt_gt"></a>  operator&gt;&gt;
+## <a name="op_gt_gt"></a>  演算子&gt;&gt;
 
 ストリームから文字と文字列を抽出します。
 
@@ -56,23 +56,23 @@ basic_istream<Elem, Tr>& operator>>(
 
 ### <a name="parameters"></a>パラメーター
 
-*Ch* \
+*Ch*\
 単一の文字。
 
 *Istr*\
 ストリーム。
 
-*str* \
+*str*\
 文字列。
 
-*val* \
+*val*\
 型。
 
 ### <a name="return-value"></a>戻り値
 
 ストリーム
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 `basic_istream` クラスもいくつかの抽出演算子を定義します。 詳細については、「[basic_istream::operator >>](../standard-library/basic-istream-class.md#op_gt_gt)」を参照してください。
 
@@ -168,6 +168,6 @@ int main( )
 }
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [\<istream>](../standard-library/istream.md)

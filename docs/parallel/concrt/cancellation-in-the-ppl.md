@@ -10,11 +10,11 @@ helpviewer_keywords:
 - canceling parallel tasks [Concurrency Runtime]
 ms.assetid: baaef417-b2f9-470e-b8bd-9ed890725b35
 ms.openlocfilehash: 6e23ccd6fcae03bcad40ea560356f4d1290dbcdd
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142070"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866338"
 ---
 # <a name="cancellation-in-the-ppl"></a>PPL における取り消し処理
 
@@ -23,7 +23,7 @@ ms.locfileid: "77142070"
 > [!NOTE]
 > ランタイムは例外処理を使用して取り消し処理を実装します。 これらの例外をコードでキャッチまたは処理しないでください。 さらに、タスクの関数本体では例外セーフなコードを作成することをお勧めします。 たとえば、タスクの本体で例外がスローされた場合にリソースが正しく処理されるようにするに*は、リソース取得の初期化*(RAII) パターンを使用します。 取り消し可能なタスクで RAII パターンを使用してリソースをクリーンアップする完全な例については、「[チュートリアル: ユーザーインターフェイススレッドからの作業の削除](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md)」を参照してください。
 
-## <a name="key-points"></a>主要なポイント
+## <a name="key-points"></a>重要なポイント
 
 - 取り消し処理は他の処理と連携して行われ、取り消し処理を要求するコードと取り消し処理に応答するタスクの間に連携が必要です。
 
@@ -108,7 +108,7 @@ PPL は、細かく分類されたタスクおよび計算を管理するため�
 > [!CAUTION]
 > `task` コンストラクターまたは[concurrency:: create_task](reference/concurrency-namespace-functions.md#create_task)関数にキャンセルトークンを渡さない場合、そのタスクはキャンセル可能なされません。 また、入れ子のタスク (別のタスクの本体で作成されたタスク) のコンストラクターに同じキャンセル トークンを渡して、すべてのタスクを同時に取り消す必要があります。
 
-キャンセル トークンが取り消されるときに任意のコードを実行できます。 たとえば、ユーザーが操作をキャンセルするためにユーザーインターフェイスの [**キャンセル**] ボタンを選択した場合、ユーザーが別の操作を開始するまでそのボタンを無効にすることができます。 次の例は、 [concurrency:: cancellation_token:: register_callback](reference/cancellation-token-class.md#register_callback)メソッドを使用して、キャンセルトークンが取り消されたときに実行されるコールバック関数を登録する方法を示しています。
+キャンセル トークンが取り消されるときに任意のコードを実行できます。 たとえば、ユーザーが操作をキャンセルするためにユーザーインターフェイスの **[キャンセル]** ボタンを選択した場合、ユーザーが別の操作を開始するまでそのボタンを無効にすることができます。 次の例は、 [concurrency:: cancellation_token:: register_callback](reference/cancellation-token-class.md#register_callback)メソッドを使用して、キャンセルトークンが取り消されたときに実行されるコールバック関数を登録する方法を示しています。
 
 [!code-cpp[concrt-task-cancellation-callback#1](../../parallel/concrt/codesnippet/cpp/cancellation-in-the-ppl_5.cpp)]
 
@@ -251,7 +251,7 @@ Caught 50
 |[並列アルゴリズム](../../parallel/concrt/parallel-algorithms.md)|データのコレクションに対して同時処理を実行する並列アルゴリズムについて説明します。|
 |[並列パターン ライブラリ (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)|並列パターン ライブラリの概要を説明します。|
 
-## <a name="reference"></a>辞書／辞典／その他
+## <a name="reference"></a>参照
 
 [task クラス (コンカレンシー ランタイム)](../../parallel/concrt/reference/task-class.md)
 

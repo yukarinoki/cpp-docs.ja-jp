@@ -13,18 +13,18 @@ helpviewer_keywords:
 - CAxWindow2 class
 ms.assetid: b87bc943-7991-4537-b902-2138d7f4d837
 ms.openlocfilehash: 0d5991dcbf79d1c2415594636a09908586d1dc2f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62260029"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78864743"
 ---
 # <a name="caxwindow2t-class"></a>CAxWindow2T クラス
 
-このクラスは、ライセンスされた ActiveX コントロールをホストするためのサポートがあります、ActiveX コントロールをホストするウィンドウを操作するためのメソッドを提供します。
+このクラスは、ActiveX コントロールをホストするウィンドウを操作するためのメソッドを提供します。また、ライセンスされた ActiveX コントロールのホストもサポートしています。
 
 > [!IMPORTANT]
->  このクラスとそのメンバーは、Windows ランタイムで実行するアプリケーションでは使用できません。
+>  このクラスとそのメンバーは、Windows ランタイムで実行されるアプリケーションでは使用できません。
 
 ## <a name="syntax"></a>構文
 
@@ -37,43 +37,43 @@ template <class TBase = CWindow>
 #### <a name="parameters"></a>パラメーター
 
 *TBase*<br/>
-元のクラス`CAxWindowT`派生します。
+`CAxWindowT` の派生元のクラス。
 
 ## <a name="members"></a>メンバー
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |[CAxWindow2T::CAxWindow2T](#caxwindow2t)|`CAxWindow2T` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
-|[CAxWindow2T::Create](#create)|ホスト ウィンドウを作成します。|
+|[CAxWindow2T:: Create](#create)|ホストウィンドウを作成します。|
 |[CAxWindow2T::CreateControlLic](#createcontrollic)|ライセンスされた ActiveX コントロールを作成して初期化し、指定されたウィンドウでホストします。|
-|[CAxWindow2T::CreateControlLicEx](#createcontrollicex)|ライセンスされた ActiveX コントロールを作成します、初期化し、指定したウィンドウでホストおよびコントロールからインターフェイス ポインターを (またはポインター) を取得します。|
-|[CAxWindow2T::GetWndClassName](#getwndclassname)|ウィンドウ クラスの名前を取得する静的メソッド。|
+|[CAxWindow2T::CreateControlLicEx](#createcontrollicex)|ライセンスされた ActiveX コントロールを作成して初期化し、指定したウィンドウでホストし、インターフェイスポインター (またはポインター) をコントロールから取得します。|
+|[CAxWindow2T::GetWndClassName](#getwndclassname)|ウィンドウクラスの名前を取得する静的メソッド。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
-|[CAxWindow2T::operator =](#operator_eq)|既存の HWND を割り当てます`CAxWindow2T`オブジェクト。|
+|[CAxWindow2T:: operator =](#operator_eq)|既存の `CAxWindow2T` オブジェクトに HWND を割り当てます。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-`CAxWindow2T` ActiveX コントロールをホストするウィンドウを操作するためのメソッドを提供します。 `CAxWindow2T` ライセンスされた ActiveX コントロールをホストするためのサポートがあります。 によって提供されるホスティング" **AtlAxWinLic80**"、によってラップされる`CAxWindow2T`します。
+`CAxWindow2T` には、ActiveX コントロールをホストするウィンドウを操作するためのメソッドが用意されています。 `CAxWindow2T` は、ライセンスされた ActiveX コントロールのホストもサポートしています。 ホスティングは、`CAxWindow2T`によってラップされる " **AtlAxWinLic80**" によって提供されます。
 
-クラス`CAxWindow2`の特殊化として実装されます、`CAxWindow2T`クラス。 この特殊化は、としてを宣言されます。
+クラス `CAxWindow2` は、`CAxWindow2T` クラスの特殊化として実装されます。 この特殊化は次のように宣言されます。
 
 `typedef CAxWindow2T <CWindow> CAxWindow2;`
 
 > [!NOTE]
-> `CAxWindowT` メンバーが記載されている[CAxWindow](../../atl/reference/caxwindow-class.md)します。
+> `CAxWindowT` のメンバーについては、 [CAxWindow](../../atl/reference/caxwindow-class.md)に記載されています。
 
-参照してください[ActiveX コントロール ATL を使用しての AXHost をホストしている](../../atl/hosting-activex-controls-using-atl-axhost.md)のこのクラスのメンバーを使用するサンプルです。
+このクラスのメンバーを使用するサンプルについては、「 [ATL AXHost を使用した ActiveX コントロールのホスト](../../atl/hosting-activex-controls-using-atl-axhost.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -83,11 +83,11 @@ template <class TBase = CWindow>
 
 `CAxWindow2T`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** atlwin.h
+**ヘッダー:** atlwin. h
 
-##  <a name="caxwindow2t"></a>  CAxWindow2T::CAxWindow2T
+##  <a name="caxwindow2t"></a>CAxWindow2T::CAxWindow2T
 
 `CAxWindow2T` オブジェクトを構築します。
 
@@ -100,9 +100,9 @@ CAxWindow2T(HWND  hWnd = NULL) : CAxWindowT<TBase>(hWnd)
 *hWnd*<br/>
 既存のウィンドウのハンドル。
 
-##  <a name="create"></a>  CAxWindow2T::Create
+##  <a name="create"></a>CAxWindow2T:: Create
 
-ホスト ウィンドウを作成します。
+ホストウィンドウを作成します。
 
 ```
 HWND Create(
@@ -115,19 +115,19 @@ HWND Create(
     LPVOID lpCreateParam = NULL);
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-`CAxWindow2T::Create` 呼び出し[CWindow::Create](../../atl/reference/cwindow-class.md#create) 、LPCTSTR の*lpstrWndClass*パラメーターがコントロールのホスティングを提供する、ウィンドウ クラスに設定 (`AtlAxWinLic80`)。
+`CAxWindow2T::Create` は、LPCTSTR *lpstrWndClass*パラメーターを、コントロールのホスト (`AtlAxWinLic80`) を提供するウィンドウクラスに設定して[CWindow:: Create](../../atl/reference/cwindow-class.md#create)を呼び出します。
 
-参照してください`CWindow::Create`パラメーターと戻り値の説明をします。
+パラメーターと戻り値の説明については、「`CWindow::Create`」を参照してください。
 
-**注**の値として 0 が使用する場合、 *MenuOrID*パラメーター 0 u として指定する必要があります (既定値)、コンパイラ エラーを回避するためにします。
+**メモ**0を*Menuorid*パラメーターの値として使用する場合は、コンパイラエラーを回避するために、0u (既定値) として指定する必要があります。
 
 ### <a name="example"></a>例
 
-参照してください[ActiveX コントロール ATL を使用しての AXHost をホストしている](../../atl/hosting-activex-controls-using-atl-axhost.md)を使用するサンプルの`CAxWindow2T::Create`します。
+`CAxWindow2T::Create`を使用するサンプルについては、「 [ATL AXHost を使用した ActiveX コントロールのホスト](../../atl/hosting-activex-controls-using-atl-axhost.md)」を参照してください。
 
-##  <a name="createcontrollic"></a>  CAxWindow2T::CreateControlLic
+##  <a name="createcontrollic"></a>CAxWindow2T::CreateControlLic
 
 ライセンスされた ActiveX コントロールを作成して初期化し、指定されたウィンドウでホストします。
 
@@ -147,20 +147,20 @@ HRESULT CreateControlLic(
 
 ### <a name="parameters"></a>パラメーター
 
-*bstrLicKey*<br/>
-コントロールのライセンス キーライセンスの付いていないコントロールを作成する場合は NULL です。
+*Bstrのキー*<br/>
+コントロールのライセンスキー。Nonlicensed コントロールを作成する場合は NULL です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-参照してください[については](../../atl/reference/caxwindow-class.md#createcontrol)の残りのパラメーターと戻り値の説明。
+残りのパラメーターと戻り値の説明については、「 [CAxWindow:: CreateControl](../../atl/reference/caxwindow-class.md#createcontrol) 」を参照してください。
 
 ### <a name="example"></a>例
 
-参照してください[ActiveX コントロール ATL を使用しての AXHost をホストしている](../../atl/hosting-activex-controls-using-atl-axhost.md)を使用するサンプルの`CAxWindow2T::CreateControlLic`します。
+`CAxWindow2T::CreateControlLic`を使用するサンプルについては、「 [ATL AXHost を使用した ActiveX コントロールのホスト](../../atl/hosting-activex-controls-using-atl-axhost.md)」を参照してください。
 
-##  <a name="createcontrollicex"></a>  CAxWindow2T::CreateControlLicEx
+##  <a name="createcontrollicex"></a>CAxWindow2T::CreateControlLicEx
 
-ライセンスされた ActiveX コントロールを作成します、初期化し、指定したウィンドウでホストおよびコントロールからインターフェイス ポインターを (またはポインター) を取得します。
+ライセンスされた ActiveX コントロールを作成して初期化し、指定したウィンドウでホストし、インターフェイスポインター (またはポインター) をコントロールから取得します。
 
 ```
 HRESULT CreateControlLicEx(
@@ -184,20 +184,20 @@ HRESULT CreateControlLicEx(
 
 ### <a name="parameters"></a>パラメーター
 
-*bstrLicKey*<br/>
-コントロールのライセンス キーライセンスの付いていないコントロールを作成する場合は NULL です。
+*Bstrのキー*<br/>
+コントロールのライセンスキー。Nonlicensed コントロールを作成する場合は NULL です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-参照してください[CAxWindow::CreateControlEx](../../atl/reference/caxwindow-class.md#createcontrolex)の残りのパラメーターと戻り値の説明。
+残りのパラメーターと戻り値の説明については、「 [CAxWindow:: CreateControlEx](../../atl/reference/caxwindow-class.md#createcontrolex) 」を参照してください。
 
 ### <a name="example"></a>例
 
-参照してください[ActiveX コントロール ATL を使用しての AXHost をホストしている](../../atl/hosting-activex-controls-using-atl-axhost.md)を使用するサンプルの`CAxWindow2T::CreateControlLicEx`します。
+`CAxWindow2T::CreateControlLicEx`を使用するサンプルについては、「 [ATL AXHost を使用した ActiveX コントロールのホスト](../../atl/hosting-activex-controls-using-atl-axhost.md)」を参照してください。
 
-##  <a name="getwndclassname"></a>  CAxWindow2T::GetWndClassName
+##  <a name="getwndclassname"></a>CAxWindow2T::GetWndClassName
 
-ウィンドウ クラスの名前を取得します。
+ウィンドウクラスの名前を取得します。
 
 ```
 static LPCTSTR GetWndClassName();
@@ -205,11 +205,11 @@ static LPCTSTR GetWndClassName();
 
 ### <a name="return-value"></a>戻り値
 
-ウィンドウ クラスの名前を含む文字列へのポインター (`AtlAxWinLic80`) にライセンスおよびライセンスの付いていない ActiveX コントロールをホストすることができます。
+ライセンスおよび nonlicensed ActiveX コントロールをホストできるウィンドウクラス (`AtlAxWinLic80`) の名前を格納している文字列へのポインター。
 
-##  <a name="operator_eq"></a>  CAxWindow2T::operator =
+##  <a name="operator_eq"></a>CAxWindow2T:: operator =
 
-既存の HWND を割り当てます`CAxWindow2T`オブジェクト。
+既存の `CAxWindow2T` オブジェクトに HWND を割り当てます。
 
 ```
 CAxWindow2T<TBase>& operator= (HWND hWnd);
@@ -220,7 +220,7 @@ CAxWindow2T<TBase>& operator= (HWND hWnd);
 *hWnd*<br/>
 既存のウィンドウのハンドル。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [クラスの概要](../../atl/atl-class-overview.md)<br/>
-[コントロール コンテインメント:](../../atl/atl-control-containment-faq.md)
+[コントロールコンテインメントに関する FAQ](../../atl/atl-control-containment-faq.md)

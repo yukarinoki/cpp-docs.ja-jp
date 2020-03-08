@@ -53,11 +53,11 @@ helpviewer_keywords:
 - CPropertySheet [MFC], m_psh
 ms.assetid: 8461ccff-d14f-46e0-a746-42ad642ef94e
 ms.openlocfilehash: 23d17aee2aacbc1484c0f3e181bc824546ab49a2
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69502826"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865453"
 ---
 # <a name="cpropertysheet-class"></a>CPropertySheet クラス
 
@@ -73,13 +73,13 @@ class CPropertySheet : public CWnd
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |[CPropertySheet:: CPropertySheet](#cpropertysheet)|`CPropertySheet` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |[CPropertySheet:: AddPage](#addpage)|プロパティ シートにページを追加します。|
 |[CPropertySheet:: Construct](#construct)|`CPropertySheet` オブジェクトを構築します。|
@@ -96,7 +96,7 @@ class CPropertySheet : public CWnd
 |[CPropertySheet:: Map Rect](#mapdialogrect)|四角形のダイアログボックス単位を画面単位に変換します。|
 |[CPropertySheet:: OnInitDialog](#oninitdialog)|プロパティシートの初期化を強化するためにオーバーライドします。|
 |[CPropertySheet::P ressButton](#pressbutton)|プロパティシート内の指定したボタンの選択をシミュレートします。|
-|[CPropertySheet::RemovePage](#removepage)|プロパティシートからページを削除します。|
+|[CPropertySheet:: RemovePage](#removepage)|プロパティシートからページを削除します。|
 |[CPropertySheet:: SetActivePage](#setactivepage)|アクティブなページオブジェクトをプログラムによって設定します。|
 |[CPropertySheet:: Setfinish テキスト](#setfinishtext)|[完了] ボタンのテキストを設定します。|
 |[CPropertySheet:: SetTitle](#settitle)|プロパティシートのキャプションを設定します。|
@@ -105,21 +105,21 @@ class CPropertySheet : public CWnd
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |[CPropertySheet:: m_psh](#m_psh)|Windows の[PROPSHEETHEADER](/windows/win32/api/prsht/ns-prsht-propsheetheadera_v2)構造体。 基本的なプロパティシートパラメーターへのアクセスを提供します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-プロパティシートは、1つ`CPropertySheet`のオブジェクトと1つ以上の[CPropertyPage](../../mfc/reference/cpropertypage-class.md)オブジェクトで構成されます。 フレームワークは、タブインデックスのセットと、現在選択されているページを含む領域をウィンドウとして表示します。 ユーザーは、適切なタブを使用して特定のページに移動します。
+プロパティシートは、`CPropertySheet` オブジェクトと1つ以上の[CPropertyPage](../../mfc/reference/cpropertypage-class.md)オブジェクトで構成されます。 フレームワークは、タブインデックスのセットと、現在選択されているページを含む領域をウィンドウとして表示します。 ユーザーは、適切なタブを使用して特定のページに移動します。
 
-`CPropertySheet`Windows 98 および Windows NT 2000 で導入された拡張[PROPSHEETHEADER](/windows/win32/api/prsht/ns-prsht-propsheetheadera_v2)構造体をサポートします。 構造体には、"ウォーターマーク" 背景ビットマップの使用をサポートする追加のフラグとメンバーが含まれています。
+`CPropertySheet` は、Windows 98 および Windows NT 2000 で導入された拡張[PROPSHEETHEADER](/windows/win32/api/prsht/ns-prsht-propsheetheadera_v2)構造体をサポートします。 構造体には、"ウォーターマーク" 背景ビットマップの使用をサポートする追加のフラグとメンバーが含まれています。
 
 これらの新しいイメージをプロパティシートオブジェクトに自動的に表示するには、 [CPropertySheet:: Construct](#construct)または[CPropertySheet:: CPropertySheet](#cpropertysheet)の呼び出しで、ビットマップおよびパレットのイメージに有効な値を渡します。
 
-は、 [CDialog](../../mfc/reference/cdialog-class.md)から派生した`CPropertySheet`ものではありませんが、オブジェクトの管理は、オブジェクトの`CDialog`管理と似ています。 `CPropertySheet` たとえば、プロパティシートを作成するには、コンストラクターを呼び出し、モーダルプロパティシートに対して[DoModal](#domodal)を呼び出すか、モードレスプロパティシートに対してを[作成](#create)するという2部構成の構築が必要になります。 `CPropertySheet`には、次の2種類のコンストラクターがあります。[CPropertySheet:: Construct](#construct)と[CPropertySheet:: CPropertySheet](#cpropertysheet)。
+`CPropertySheet` が[CDialog](../../mfc/reference/cdialog-class.md)から派生していない場合でも、`CPropertySheet` オブジェクトの管理は `CDialog` オブジェクトの管理に似ています。 たとえば、プロパティシートを作成するには、コンストラクターを呼び出し、モーダルプロパティシートに対して[DoModal](#domodal)を呼び出すか、モードレスプロパティシートに対してを[作成](#create)するという2部構成の構築が必要になります。 `CPropertySheet` には、 [CPropertySheet:: Construct](#construct)と[CPropertySheet:: CPropertySheet](#cpropertysheet)という2種類のコンストラクターがあります。
 
-オブジェクトを`CPropertySheet`構築すると、[ウィンドウスタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)によっては初回例外が発生する可能性があります。 この結果、システムは、シートが作成される前にプロパティシートのスタイルを変更しようとします。 この例外を回避するには、を作成`CPropertySheet`するときに次のスタイルを設定してください。
+`CPropertySheet` オブジェクトを構築すると、[ウィンドウスタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)によっては初回例外が発生する可能性があります。 この結果、システムは、シートが作成される前にプロパティシートのスタイルを変更しようとします。 この例外を回避するには、`CPropertySheet`を作成するときに次のスタイルを設定してください。
 
 - DS_3DLOOK
 
@@ -137,15 +137,15 @@ class CPropertySheet : public CWnd
 
 - WS_CLIPCHILDREN
 
-それ以外`Window Styles`は禁止されているため、有効にしないでください。
+その他の `Window Styles` は禁止されているため、有効にしないでください。
 
-`CPropertySheet`オブジェクトと外部オブジェクトとの間でのデータ交換は、 `CDialog`オブジェクトとのデータ交換に似ています。 重要な違いは、プロパティシートの設定は通常、 `CPropertyPage` `CPropertySheet`オブジェクト自体ではなく、オブジェクトのメンバー変数であることです。
+`CPropertySheet` オブジェクトと外部オブジェクトとの間でのデータ交換は、`CDialog` オブジェクトとのデータ交換に似ています。 重要な違いは、プロパティシートの設定は、通常、`CPropertySheet` オブジェクトではなく、`CPropertyPage` オブジェクトのメンバー変数であることです。
 
 ウィザードと呼ばれるタブダイアログボックスの種類を作成することができます。これは、デバイスの設定やニュースレターの作成など、操作の手順をユーザーに案内する一連のプロパティページを含むプロパティシートで構成されています。 ウィザードの [型タブ] ダイアログボックスでは、プロパティページにタブはなく、一度に表示できるプロパティページは1つだけです。 また、 **[OK]** ボタンと **[今すぐ適用]** ボタンの代わりに、ウィザードの種類 タブのダイアログボックスには、 **[戻る]** ボタン、 **[次へ]** または **[完了**] ボタン、 **[キャンセル**] ボタン、および **[ヘルプ]** ボタンがあります。
 
 ウィザードの種類のダイアログボックスを作成するには、標準のプロパティシートを作成する場合と同じ手順に従いますが、 [DoModal](#domodal)を呼び出す前に[setwizardmode](#setwizardmode)を呼び出します。 ウィザードのボタンを有効にするには、 [Setwizardbuttons](#setwizardbuttons)を呼び出し、フラグを使用して関数と外観をカスタマイズします。 **[完了**] ボタンを有効にするには、ウィザードの最後のページでユーザーが操作を実行した後で、 [setfinish text](#setfinishtext)を呼び出します。
 
-オブジェクトの使用`CPropertySheet`方法の詳細については、「[プロパティシートとプロパティページ](../../mfc/property-sheets-and-property-pages-in-mfc.md)」を参照してください。
+`CPropertySheet` オブジェクトの使用方法の詳細については、「[プロパティシートとプロパティページ](../../mfc/property-sheets-and-property-pages-in-mfc.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -153,11 +153,11 @@ class CPropertySheet : public CWnd
 
 [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
-[CWnd](../../mfc/reference/cwnd-class.md)
+[から派生しているのではない](../../mfc/reference/cwnd-class.md)
 
 `CPropertySheet`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afxdlgs
 
@@ -172,19 +172,19 @@ void AddPage(CPropertyPage* pPage);
 ### <a name="parameters"></a>パラメーター
 
 *pPage*<br/>
-プロパティシートに追加するページをポイントします。 Nll は指定できません。
+プロパティシートに追加するページをポイントします。 NULL にすることはできません。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 プロパティシートに表示するページを左から右に追加します。
 
-`AddPage``CPropertySheet`オブジェクトのページリストに[CPropertyPage](../../mfc/reference/cpropertypage-class.md#cpropertypage)オブジェクトを追加しますが、実際にはページのウィンドウを作成しません。 フレームワークは、ユーザーがページを選択するまで、ページのウィンドウの作成を延期します。
+`AddPage` は、`CPropertySheet` オブジェクトのページリストに[CPropertyPage](../../mfc/reference/cpropertypage-class.md#cpropertypage)オブジェクトを追加しますが、実際にはページのウィンドウを作成しません。 フレームワークは、ユーザーがページを選択するまで、ページのウィンドウの作成を延期します。
 
-を使用して`AddPage` `CPropertySheet`プロパティページを追加すると、はの親`CPropertyPage`になります。 プロパティページからプロパティシートにアクセスするには、 [CWnd:: GetParent](../../mfc/reference/cwnd-class.md#getparent)を呼び出します。
+`AddPage`を使用してプロパティページを追加すると、`CPropertySheet` は `CPropertyPage`の親になります。 プロパティページからプロパティシートにアクセスするには、 [CWnd:: GetParent](../../mfc/reference/cwnd-class.md#getparent)を呼び出します。
 
-プロパティシートウィンドウの作成が呼び出さ`AddPage`れるまで待機する必要はありません。 通常は、 [DoModal](#domodal)を`AddPage`呼び出す前、またはを[作成](#create)する前に、を呼び出します。
+`AddPage`を呼び出すために、プロパティシートウィンドウが作成されるまで待つ必要はありません。 通常は、`AddPage` を呼び出してから、 [DoModal](#domodal)または[Create](#create)を呼び出します。
 
-プロパティページの`AddPage`表示後にを呼び出すと、タブ行に新しく追加されたページが反映されます。
+プロパティページを表示した後に `AddPage` を呼び出すと、タブ行に新しく追加されたページが反映されます。
 
 ### <a name="example"></a>例
 
@@ -234,7 +234,7 @@ void Construct(
 最初に配置されるページのインデックス。 既定値は、シートに追加された最初のページです。
 
 *pszCaption*<br/>
-プロパティシートに使用するキャプションを格納している文字列へのポインター。 Nll は指定できません。
+プロパティシートに使用するキャプションを格納している文字列へのポインター。 NULL にすることはできません。
 
 *hbmWatermark*<br/>
 プロパティページのウォーターマークビットマップを処理します。
@@ -245,17 +245,17 @@ void Construct(
 *hbmHeader*<br/>
 プロパティページのヘッダービットマップを処理します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-クラスコンストラクターのいずれかがまだ呼び出されていない場合は、このメンバー関数を呼び出します。 たとえば、オブジェクトの`Construct` `CPropertySheet`配列を宣言または割り当てたときに、を呼び出します。 配列の場合は、配列内の各`Construct`メンバーに対してを呼び出す必要があります。
+クラスコンストラクターのいずれかがまだ呼び出されていない場合は、このメンバー関数を呼び出します。 たとえば、`CPropertySheet` オブジェクトの配列を宣言または割り当てる場合は、`Construct` を呼び出します。 配列の場合は、配列内のメンバーごとに `Construct` を呼び出す必要があります。
 
 プロパティシートを表示するには、 [DoModal](#domodal)または[Create](#create)を呼び出します。 最初のパラメーターに含まれる文字列は、プロパティシートのキャプションバーに配置されます。
 
-上に示したの3番目または4番`Construct`目のプロトタイプを使用している場合は、透かしやヘッダーの画像を自動的に表示することができます。また、 *hbmwatermark*、hて*透かし*、および/または*hbmwatermark*パラメーターに有効な値を渡します。
+上の一覧にある `Construct`の3番目または4番目のプロトタイプを使用し、 *Hbmwatermark*、 *hの透かし*、または*hbmwatermark*パラメーターに有効な値を渡すと、ウォーターマークやヘッダー画像を自動的に表示できます。
 
 ### <a name="example"></a>例
 
-次の例は、どのような状況で`Construct`呼び出すかを示しています。
+次の例は、`Construct`を呼び出す状況を示しています。
 
 [!code-cpp[NVC_MFCDocView#130](../../mfc/codesnippet/cpp/cpropertysheet-class_2.cpp)]
 
@@ -305,7 +305,7 @@ CPropertySheet(
 最初に配置されるページのインデックス。 既定値は、シートに追加された最初のページです。
 
 *pszCaption*<br/>
-プロパティシートに使用するキャプションを格納している文字列を指します。 Nll は指定できません。
+プロパティシートに使用するキャプションを格納している文字列を指します。 NULL にすることはできません。
 
 *hbmWatermark*<br/>
 プロパティシートの背景ビットマップを処理するハンドル。
@@ -316,13 +316,13 @@ CPropertySheet(
 *hbmHeader*<br/>
 プロパティページのヘッダービットマップを処理するハンドル。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 プロパティシートを表示するには、 [DoModal](#domodal)または[Create](#create)を呼び出します。 最初のパラメーターに含まれる文字列は、プロパティシートのキャプションバーに配置されます。
 
-複数のパラメーターがある場合 (たとえば、配列を使用している場合) は、`CPropertySheet` の代わりに [Construct](#construct) を使用します。
+複数のパラメーターがある場合 (たとえば、配列を使用している場合) は、`CPropertySheet`の代わりに[Construct](#construct)を使用します。
 
-上記の3番目または4番目`CPropertySheet`のプロトタイプを使用し、 *hbmwatermark*パラメーター、hて*透かし*値、または*hbmwatermark*パラメーターに有効な値を渡すと、ウォーターマークやヘッダー画像を自動的に表示できます。
+上の `CPropertySheet`の3番目または4番目のプロトタイプを使用すると、透かしやヘッダーの画像を自動的に表示することができます。また、 *Hbmwatermark*、 *h、watermark*、および/または*hbmwatermark*パラメーターに有効な値を渡します。
 
 ### <a name="example"></a>例
 
@@ -353,15 +353,15 @@ virtual BOOL Create(CWnd* pParentWnd = NULL,
 
 プロパティシートが正常に作成された場合は0以外の値。それ以外の場合は0です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-の呼び出しは`Create` 、コンストラクターの内部に配置することも、コンストラクターが呼び出された後に呼び出すこともできます。
+`Create` の呼び出しは、コンストラクターの内部に配置することも、コンストラクターが呼び出された後に呼び出すこともできます。
 
-*DwStyle*として-1 を渡すことによって表される既定&#124;の&#124;スタイル&#124;は&#124;、&#124;実際には WS_SYSMENU WS_POPUP WS_CAPTION DS_MODALFRAME DS_CONTEXTHELP WS_VISIBLE です。 既定の拡張ウィンドウスタイルは、 *Dwexstyle*として0を渡すことによって表され、実際には WS_EX_DLGMODALFRAME です。
+*DwStyle*として-1 を渡すことによって表される既定&#124;の&#124;スタイル&#124;は&#124;、&#124;実際には WS_POPUP WS_CAPTION DS_MODALFRAME DS_CONTEXTHELP WS_VISIBLE WS_SYSMENU ます。 既定の拡張ウィンドウスタイルは、 *Dwexstyle*として0を渡すことによって表され、実際には WS_EX_DLGMODALFRAME ます。
 
-この`Create`メンバー関数は、プロパティシートを作成した直後にを返します。 プロパティシートを破棄するには、 [CWnd::D estroywindow](../../mfc/reference/cwnd-class.md#destroywindow)を呼び出します。
+`Create` メンバー関数は、プロパティシートを作成した直後にを返します。 プロパティシートを破棄するには、 [CWnd::D estroywindow](../../mfc/reference/cwnd-class.md#destroywindow)を呼び出します。
 
-の呼び出しで表示されるモードレスプロパティ`Create`シートには、[OK]、[キャンセル]、[今すぐ適用]、および [ヘルプ] ボタンはモーダルプロパティシートとして表示されません。 必要なボタンは、ユーザーが作成する必要があります。
+`Create` の呼び出しと共に表示されるモードレスプロパティシートには、[OK]、[キャンセル]、[今すぐ適用]、および [ヘルプ] ボタンはモーダルプロパティシートとして表示されません。 必要なボタンは、ユーザーが作成する必要があります。
 
 モーダルプロパティシートを表示するには、代わりに[DoModal](#domodal)を呼び出します。
 
@@ -371,7 +371,7 @@ virtual BOOL Create(CWnd* pParentWnd = NULL,
 
 [!code-cpp[NVC_MFCDocView#133](../../mfc/codesnippet/cpp/cpropertysheet-class_5.cpp)]
 
-##  <a name="domodal"></a>  CPropertySheet::DoModal
+##  <a name="domodal"></a>CPropertySheet::D oModal
 
 モーダルプロパティシートを表示します。
 
@@ -381,18 +381,18 @@ virtual INT_PTR DoModal();
 
 ### <a name="return-value"></a>戻り値
 
-IDOK または IDCANCEL (関数が成功した場合)。それ以外の場合は0または-1。 プロパティシートがウィザードとして設定されている場合 (「 [setwizardmode](#setwizardmode)」を参照)、 `DoModal` ID_WIZFINISH または IDCANCEL のいずれかが返されます。
+IDOK または IDCANCEL (関数が成功した場合)。それ以外の場合は0または-1。 プロパティシートがウィザードとして設定されている場合 (「 [Setwizardmode](#setwizardmode)」を参照)、`DoModal` は ID_WIZFINISH または IDCANCEL を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-戻り値は、プロパティシートを閉じたコントロールの ID に対応します。 この関数が戻ると、プロパティシートとすべてのページに対応するウィンドウが破棄されます。 オブジェクト自体も存在します。 通常は、`DoModal` が IDOK を返した後、[CPropertyPage](../../mfc/reference/cpropertypage-class.md) オブジェクトからデータを取得します。
+戻り値は、プロパティシートを閉じたコントロールの ID に対応します。 この関数が戻ると、プロパティシートとすべてのページに対応するウィンドウが破棄されます。 オブジェクト自体も存在します。 通常は、`DoModal` が IDOK を返した後に、 [CPropertyPage](../../mfc/reference/cpropertypage-class.md)オブジェクトからデータを取得します。
 
 モードレスプロパティシートを表示するには、代わりに[Create](#create)を呼び出します。
 
 対応するダイアログリソースからプロパティページを作成すると、初回例外が発生する可能性があります。 これにより、ページが作成される前に、プロパティページによってダイアログリソースのスタイルが必要なスタイルに変わります。 一般に、リソースは読み取り専用であるため、例外が発生します。 システムは例外を処理し、変更されたリソースのコピーを作成します。 そのため、初回例外を無視することができます。
 
 > [!NOTE]
->  この例外は、非同期例外処理モデルを使用してコンパイルする場合に、オペレーティングシステムによって処理される必要があります。 例外処理モデルの詳細については、「 [/EH (例外処理モデル)](../../build/reference/eh-exception-handling-model.md)」を参照してください。 この場合は、catch がすべての例外`CPropertySheet::DoModal`を処理C++する try-catch ブロックを使用して、の呼び出しをラップしません`catch (...)`。たとえば、のようになります。 このブロックは、オペレーティングシステムに対して想定されている例外を処理し、予期しない動作を発生させます。 ただし、特定の例外のC++種類や、アクセス違反例外がオペレーティングシステムに渡される構造化例外処理では、例外処理を安全に使用できます。
+>  この例外は、非同期例外処理モデルを使用してコンパイルする場合に、オペレーティングシステムによって処理される必要があります。 例外処理モデルの詳細については、「 [/EH (例外処理モデル)](../../build/reference/eh-exception-handling-model.md)」を参照してください。 この場合は、catch がすべての例外 (`catch (...)`などC++ ) を処理する try-catch ブロックを使用して `CPropertySheet::DoModal` の呼び出しをラップしません。 このブロックは、オペレーティングシステムに対して想定されている例外を処理し、予期しない動作を発生させます。 ただし、特定の例外のC++種類や、アクセス違反例外がオペレーティングシステムに渡される構造化例外処理では、例外処理を安全に使用できます。
 
 この初回例外が生成されないようにするには、プロパティシートの[ウィンドウスタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)が正しいことを手動で保証します。 プロパティシートには、次のスタイルを設定する必要があります。
 
@@ -418,7 +418,7 @@ IDOK または IDCANCEL (関数が成功した場合)。それ以外の場合は
 
 [CPropertySheet:: AddPage](#addpage)の例を参照してください。
 
-##  <a name="enablestackedtabs"></a>  CPropertySheet::EnableStackedTabs
+##  <a name="enablestackedtabs"></a>CPropertySheet:: EnableStackedTabs
 
 プロパティシート内のタブの行を積み重ねるかどうかを示します。
 
@@ -431,11 +431,11 @@ void EnableStackedTabs(BOOL bStacked);
 *bStacked*<br/>
 プロパティシートで積み上げタブを有効にするかどうかを示します。 *Bstacked*を FALSE に設定して、タグの積み上げ行を無効にします。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-既定では、プロパティシートに表示されるタブの数が、プロパティシートの幅の1行に収まりきらない場合、タブは複数の行にスタックされます。 スタックタブではなくスクロールタブを使用するには、[DoModal](#domodal) または [Create](#create) を呼び出す前に、*bstacked* を FALSE に設定して `EnableStackedTabs` を呼び出します。
+既定では、プロパティシートに表示されるタブの数が、プロパティシートの幅の1行に収まりきらない場合、タブは複数の行にスタックされます。 スタックタブではなくスクロールタブを使用するには、 [DoModal](#domodal)を呼び出す前、または[Create](#create)を実行する前に、 *bstacked*が FALSE に設定された `EnableStackedTabs` を呼び出します。
 
-モーダルプロパティシート`EnableStackedTabs`またはモードレスプロパティシートを作成するときに、を呼び出す必要があります。 このスタイルをから派生し`CPropertySheet`たクラスに組み込むには、WM_CREATE のメッセージハンドラーを記述します。 [CWnd:: OnCreate](../../mfc/reference/cwnd-class.md#oncreate)のオーバーライドされたバージョンで`EnableStackedTabs( FALSE )` 、基本クラスの実装を呼び出す前にを呼び出します。
+モーダルプロパティシートまたはモードレスプロパティシートを作成する場合は、`EnableStackedTabs` を呼び出す必要があります。 このスタイルを `CPropertySheet`派生クラスに組み込むには、WM_CREATE のメッセージハンドラーを記述します。 [CWnd:: OnCreate](../../mfc/reference/cwnd-class.md#oncreate)のオーバーライドされたバージョンで、基本クラスの実装を呼び出す前に `EnableStackedTabs( FALSE )` を呼び出します。
 
 ### <a name="example"></a>例
 
@@ -454,7 +454,7 @@ void EndDialog(int nEndID);
 *nEndID*<br/>
 プロパティシートの戻り値として使用される識別子。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 このメンバー関数は、[OK]、[キャンセル]、または [閉じる] ボタンが押されたときにフレームワークによって呼び出されます。 プロパティシートを閉じる必要があるイベントが発生した場合は、このメンバー関数を呼び出します。
 
@@ -464,9 +464,9 @@ void EndDialog(int nEndID);
 
 [CPropertySheet::P ressButton](#pressbutton)の例を参照してください。
 
-##  <a name="getactiveindex"></a>  CPropertySheet::GetActiveIndex
+##  <a name="getactiveindex"></a>CPropertySheet:: GetActiveIndex
 
-プロパティシートウィンドウのアクティブページのインデックス番号を取得し、返されたインデックス番号をの`GetPage`パラメーターとして使用します。
+プロパティシートウィンドウのアクティブページのインデックス番号を取得し、返されたインデックス番号を `GetPage`のパラメーターとして使用します。
 
 ```
 int GetActiveIndex() const;
@@ -492,7 +492,7 @@ CPropertyPage* GetActivePage() const;
 
 アクティブページへのポインター。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 アクティブページで何らかのアクションを実行するには、このメンバー関数を使用します。
 
@@ -521,7 +521,7 @@ CPropertyPage* GetPage(int nPage) const;
 
 [CPropertyPage:: OnWizardFinish](../../mfc/reference/cpropertypage-class.md#onwizardfinish)の例を参照してください。
 
-##  <a name="getpagecount"></a>  CPropertySheet::GetPageCount
+##  <a name="getpagecount"></a>CPropertySheet:: GetPageCount
 
 プロパティシート内の現在のページ数を決定します。
 
@@ -537,7 +537,7 @@ int GetPageCount() const;
 
 [CPropertyPage:: OnWizardFinish](../../mfc/reference/cpropertypage-class.md#onwizardfinish)の例を参照してください。
 
-##  <a name="getpageindex"></a>  CPropertySheet::GetPageIndex
+##  <a name="getpageindex"></a>CPropertySheet:: GetPageIndex
 
 プロパティシート内の指定されたページのインデックス番号を取得します。
 
@@ -548,15 +548,15 @@ int GetPageIndex(CPropertyPage* pPage);
 ### <a name="parameters"></a>パラメーター
 
 *pPage*<br/>
-検索するインデックスを持つページをポイントします。 Nll は指定できません。
+検索するインデックスを持つページをポイントします。 NULL にすることはできません。
 
 ### <a name="return-value"></a>戻り値
 
 ページのインデックス番号。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-たとえば、を使用`GetPageIndex`して、 [setactivepage](#setactivepage)または[getpage](#getpage)を使用するためにページインデックスを取得します。
+たとえば、 [Setactivepage](#setactivepage)または[getpage](#getpage)を使用するために、`GetPageIndex` を使用してページインデックスを取得します。
 
 ### <a name="example"></a>例
 
@@ -574,7 +574,7 @@ CTabCtrl* GetTabControl() const;
 
 タブコントロールへのポインター。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 たとえば、初期化中に各タブにビットマップを追加する場合は、このメンバー関数を呼び出します。
 
@@ -582,13 +582,13 @@ CTabCtrl* GetTabControl() const;
 
 [!code-cpp[NVC_MFCDocView#136](../../mfc/codesnippet/cpp/cpropertysheet-class_8.cpp)]
 
-##  <a name="m_psh"></a>  CPropertySheet::m_psh
+##  <a name="m_psh"></a>CPropertySheet:: m_psh
 
 [PROPSHEETHEADER](/windows/win32/api/prsht/ns-prsht-propsheetheadera_v2)の特性を格納するメンバーを持つ構造体。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-この構造体を使用して、プロパティシートを構築した後で、 [DoModal](#domodal)メンバー関数と共に表示する前に、外観を初期化します。 たとえば、の`m_psh` *dwSize*メンバーを、プロパティシートに設定するサイズに設定します。
+この構造体を使用して、プロパティシートを構築した後で、 [DoModal](#domodal)メンバー関数と共に表示する前に、外観を初期化します。 たとえば、`m_psh` の*dwSize*メンバーには、プロパティシートで使用するサイズを設定します。
 
 メンバーの一覧など、この構造の詳細については、Windows SDK の「PROPSHEETHEADER」を参照してください。
 
@@ -596,7 +596,7 @@ CTabCtrl* GetTabControl() const;
 
 [!code-cpp[NVC_MFCDocView#143](../../mfc/codesnippet/cpp/cpropertysheet-class_9.cpp)]
 
-##  <a name="mapdialogrect"></a>  CPropertySheet::MapDialogRect
+##  <a name="mapdialogrect"></a>CPropertySheet:: Map Rect
 
 四角形のダイアログボックス単位を画面単位に変換します。
 
@@ -609,15 +609,15 @@ void MapDialogRect(LPRECT lpRect) const;
 *lpRect*<br/>
 変換するダイアログボックス座標を格納している[RECT](/previous-versions/dd162897\(v=vs.85\))構造体または[CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトをポイントします。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 ダイアログボックスの単位は、ダイアログボックスのテキストに使用されるフォントの平均の幅と高さから派生した、現在のダイアログボックスの基本単位に関して示されています。 1つの水平方向の単位はダイアログボックスの基本幅の単位の1番目で、1つの垂直方向の単位はダイアログボックスの基本高さの単位の8分の1です。
 
-[GetDS_SETFONT Baseunits](/windows/win32/api/winuser/nf-winuser-getdialogbaseunits) Windows 関数はシステムフォントのサイズ情報を返しますが、リソース定義ファイルでスタイルを使用する場合は、各プロパティシートに別のフォントを指定できます。 Windows SDK で説明されている[Mapの rect](/windows/win32/api/winuser/nf-winuser-mapdialogrect)ウィンドウ関数は、このダイアログボックスに適したフォントを使用します。
+[Getの Baseunits](/windows/win32/api/winuser/nf-winuser-getdialogbaseunits) Windows 関数は、システムフォントのサイズ情報を返しますが、リソース定義ファイルで DS_SETFONT スタイルを使用する場合は、各プロパティシートに別のフォントを指定することができます。 Windows SDK で説明されている[Mapの rect](/windows/win32/api/winuser/nf-winuser-mapdialogrect)ウィンドウ関数は、このダイアログボックスに適したフォントを使用します。
 
-この`MapDialogRect`メンバー関数は、 *lpRect*内のダイアログボックス単位を画面単位 (ピクセル) で置き換えます。これにより、四角形を使用してダイアログボックスを作成したり、ボックス内にコントロールを配置したりすることができます。
+`MapDialogRect` メンバー関数は、 *lpRect*内のダイアログボックス単位を画面単位 (ピクセル) で置き換えます。これにより、四角形を使用してダイアログボックスを作成したり、ボックス内にコントロールを配置したりすることができます。
 
-##  <a name="oninitdialog"></a>  CPropertySheet::OnInitDialog
+##  <a name="oninitdialog"></a>CPropertySheet:: OnInitDialog
 
 をオーバーライドして、プロパティシートの初期化を強化します。
 
@@ -627,13 +627,13 @@ virtual BOOL OnInitDialog();
 
 ### <a name="return-value"></a>戻り値
 
-アプリケーションで、プロパティシート内のコントロールのいずれかに入力フォーカスを設定するかどうかを指定します。 が`OnInitDialog` 0 以外の値を返した場合、Windows は、プロパティシートの最初のコントロールに入力フォーカスを設定します。 アプリケーションが0を返すのは、プロパティシート内のコントロールのいずれかに入力フォーカスが明示的に設定されている場合のみです。
+アプリケーションで、プロパティシート内のコントロールのいずれかに入力フォーカスを設定するかどうかを指定します。 `OnInitDialog` が0以外の値を返した場合、Windows は、プロパティシートの最初のコントロールに入力フォーカスを設定します。 アプリケーションが0を返すのは、プロパティシート内のコントロールのいずれかに入力フォーカスが明示的に設定されている場合のみです。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-このメンバー関数は、WM_INITDIALOG メッセージへの応答として呼び出されます。 このメッセージは、プロパティシートが表示される直前に発生する、 [Create](#create)または[DoModal](#domodal)呼び出し中にプロパティシートに送信されます。
+このメンバー関数は、WM_INITDIALOG メッセージに応答して呼び出されます。 このメッセージは、プロパティシートが表示される直前に発生する、 [Create](#create)または[DoModal](#domodal)呼び出し中にプロパティシートに送信されます。
 
-プロパティシートの初期化時に特別な処理を実行する必要がある場合は、このメンバー関数をオーバーライドします。 オーバーライドされたバージョンでは、最初に`OnInitDialog`基本クラスを呼び出しますが、戻り値は無視します。 通常は、オーバーライドされたメンバー関数から TRUE を返します。
+プロパティシートの初期化時に特別な処理を実行する必要がある場合は、このメンバー関数をオーバーライドします。 オーバーライドされたバージョンでは、最初に基底クラス `OnInitDialog` を呼び出しますが、その戻り値は無視します。 通常は、オーバーライドされたメンバー関数から TRUE を返します。
 
 このメンバー関数には、メッセージマップエントリは必要ありません。
 
@@ -648,33 +648,33 @@ void PressButton(int nButton);
 ### <a name="parameters"></a>パラメーター
 
 *nButton*<br/>
-nButton:押されたボタンを識別します。 このパラメーターには、次のいずれかの値を指定できます。
+nButton: 押されたボタンを識別します。 このパラメーターには、次のいずれかの値を指定できます。
 
-- PSBTN_BACK は、[戻る] ボタンを選択します。
+- PSBTN_BACK [戻る] ボタンを選択します。
 
-- PSBTN_NEXT は [次へ] ボタンを選択します。
+- PSBTN_NEXT [次へ] ボタンを選択します。
 
-- PSBTN_FINISH は [完了] ボタンを選択します。
+- PSBTN_FINISH [完了] ボタンを選択します。
 
-- PSBTN_OK は、[OK] ボタンを選択します。
+- PSBTN_OK [OK] ボタンが選択されます。
 
-- PSBTN_APPLYNOW によって [今すぐ適用] ボタンが選択されます。
+- PSBTN_APPLYNOW [今すぐ適用] ボタンが選択されます。
 
-- PSBTN_CANCEL は [キャンセル] ボタンを選択します。
+- PSBTN_CANCEL [キャンセル] ボタンが選択されます。
 
-- PSBTN_HELP は、[ヘルプ] ボタンを選択します。
+- PSBTN_HELP [ヘルプ] ボタンを選択します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 Windows SDK Pressbutton メッセージの詳細については、「 [PSM_PRESSBUTTON](/windows/win32/Controls/psm-pressbutton) 」を参照してください。
 
-を`PressButton`呼び出すと、プロパティページからフレームワークに[PSN_APPLY](/windows/win32/Controls/psn-apply)通知が送信されません。 この通知を送信するには、 [CPropertyPage:: OnOK](../../mfc/reference/cpropertypage-class.md#onok)を呼び出します。
+`PressButton` を呼び出すと、プロパティページからフレームワークに[PSN_APPLY](/windows/win32/Controls/psn-apply)通知が送信されません。 この通知を送信するには、 [CPropertyPage:: OnOK](../../mfc/reference/cpropertypage-class.md#onok)を呼び出します。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFCDocView#137](../../mfc/codesnippet/cpp/cpropertysheet-class_10.cpp)]
 
-##  <a name="removepage"></a>  CPropertySheet::RemovePage
+##  <a name="removepage"></a>CPropertySheet:: RemovePage
 
 プロパティシートからページを削除し、関連付けられているウィンドウを破棄します。
 
@@ -686,14 +686,14 @@ void RemovePage(int nPage);
 ### <a name="parameters"></a>パラメーター
 
 *pPage*<br/>
-プロパティシートから削除するページをポイントします。 Nll は指定できません。
+プロパティシートから削除するページをポイントします。 NULL にすることはできません。
 
 *nPage*<br/>
 削除するページのインデックス。 0から、プロパティシート内のページ数より1小さい値にする必要があります。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-[CPropertyPage](../../mfc/reference/cpropertypage-class.md)オブジェクト自体は、 `CPropertySheet`ウィンドウの所有者が閉じられるまで破棄されません。
+[CPropertyPage](../../mfc/reference/cpropertypage-class.md)オブジェクト自体は、`CPropertySheet` ウィンドウの所有者が閉じられるまで破棄されません。
 
 ##  <a name="setactivepage"></a>CPropertySheet:: SetActivePage
 
@@ -710,15 +710,15 @@ BOOL SetActivePage(CPropertyPage* pPage);
 設定するページのインデックス。 0から、プロパティシート内のページ数より1小さい値にする必要があります。
 
 *pPage*<br/>
-プロパティシートで設定するページをポイントします。 NULL にすることはできません。
+プロパティシートで設定するページをポイントします。 NULL は指定できません。
 
 ### <a name="return-value"></a>戻り値
 
 プロパティシートが正常にアクティブ化された場合は0以外の値。それ以外の場合は0です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-たとえば、あるページ`SetActivePage`に対するユーザーの操作によって、別のページがアクティブページになるようにする場合は、を使用します。
+たとえば、あるページに対するユーザーの操作によって別のページがアクティブページになるようにする場合は、`SetActivePage` を使用します。
 
 ### <a name="example"></a>例
 
@@ -737,9 +737,9 @@ void SetFinishText(LPCTSTR lpszText);
 *lpszText*<br/>
 [完了] コマンドボタンに表示されるテキストを指します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-を`SetFinishText`呼び出して、[完了] コマンドボタンにテキストを表示し、ウィザードの最後のページでユーザーが操作を完了した後、[次へ] ボタンと [戻る] ボタンを非表示にします。
+`SetFinishText` を呼び出して [完了] コマンドボタンにテキストを表示し、ウィザードの最後のページでユーザーが操作を完了した後、[次へ] ボタンと [戻る] ボタンを非表示にします。
 
 ### <a name="example"></a>例
 
@@ -758,12 +758,12 @@ void SetTitle(
 ### <a name="parameters"></a>パラメーター
 
 *nStyle*<br/>
-プロパティシートのタイトルのスタイルを指定します。 スタイルは、0または PSH_PROPTITLE として指定する必要があります。 スタイルが PSH_PROPTITLE に設定されている場合は、キャプションとして指定されたテキストの後に "Properties" という単語が表示されます。 たとえば、(" `SetTitle`simple", PSH_PROPTITLE) を呼び出すと、プロパティシートのキャプションが "simple Properties" になります。
+プロパティシートのタイトルのスタイルを指定します。 スタイルは、0または PSH_PROPTITLE として指定する必要があります。 スタイルが PSH_PROPTITLE として設定されている場合は、キャプションとして指定されたテキストの後に "Properties" という単語が表示されます。 たとえば、`SetTitle`("Simple", PSH_PROPTITLE) を呼び出すと、プロパティシートのキャプションが "Simple Properties" になります。
 
 *lpszText*<br/>
 プロパティシートのタイトルバーでキャプションとして使用されるテキストを指します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 既定では、プロパティシートはプロパティシートコンストラクターの caption パラメーターを使用します。
 
@@ -784,23 +784,23 @@ void SetWizardButtons(DWORD dwFlags);
 *dwFlags*<br/>
 ウィザードのボタンの機能と外観をカスタマイズするフラグのセット。 このパラメーターは、次の値の組み合わせにすることができます。
 
-- PSWIZB_BACK 戻るボタン
+- PSWIZB_BACK 戻る ボタン
 
-- PSWIZB_NEXT [次へ] ボタン
+- PSWIZB_NEXT 次へ ボタン
 
-- PSWIZB_FINISH 完了ボタン
+- PSWIZB_FINISH 完了 ボタン
 
-- PSWIZB_DISABLEDFINISH Disabled [完了] ボタン
+- PSWIZB_DISABLEDFINISH 無効になった [完了] ボタン
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-ダイアログ`SetWizardButtons`が開いた後にのみを呼び出します。 `SetWizardButtons` [DoModal](#domodal)を呼び出す前にを呼び出すことはできません。 通常は、 `SetWizardButtons` [CPropertyPage:: OnSetActive](../../mfc/reference/cpropertypage-class.md#onsetactive)からを呼び出す必要があります。
+ダイアログが開いた後にのみ `SetWizardButtons` を呼び出します。[DoModal](#domodal)を呼び出す前に `SetWizardButtons` を呼び出すことはできません。 通常は、 [CPropertyPage:: OnSetActive](../../mfc/reference/cpropertypage-class.md#onsetactive)から `SetWizardButtons` を呼び出す必要があります。
 
 ユーザーがウィザードを完了した後で [完了] ボタンのテキストを変更したり、[次へ] ボタンと [戻る] ボタンを非表示にしたりする場合は、 [Setfinish テキスト](#setfinishtext)を呼び出します。 [完了] と [次へ] と同じボタンが共有されていることに注意してください。 [完了] ボタンまたは [次へ] ボタンを一度に表示できますが、両方を表示することはできません。
 
 ### <a name="example"></a>例
 
-には`CStylePage`、、 `CColorPage`、および`CShapePage`の3つのウィザードプロパティページがあります。`CPropertySheet`  次のコード片では、ウィザードのプロパティページで **[戻る]** ボタンと **[次へ**] ボタンを有効または無効にする方法を示しています。
+`CPropertySheet` には、`CStylePage`、`CColorPage`、および `CShapePage`の3つのウィザードプロパティページがあります。  次のコード片では、ウィザードのプロパティページで **[戻る]** ボタンと **[次へ**] ボタンを有効または無効にする方法を示しています。
 
 [!code-cpp[NVC_MFCDocView#140](../../mfc/codesnippet/cpp/cpropertysheet-class_13.cpp)]
 
@@ -816,19 +816,19 @@ void SetWizardButtons(DWORD dwFlags);
 void SetWizardMode();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 ウィザードのプロパティページの重要な特性は、ユーザーがタブではなく [次へ] または [完了]、[戻る]、および [キャンセル] の各ボタンを使用して移動することです。
 
-[DoModal](#domodal) を呼び出す前に `SetWizardMode` を呼び出します。 を呼び出し`SetWizardMode`た後`DoModal` 、は ID_WIZFINISH (ユーザーが [完了] ボタンで閉じた場合) または IDCANCEL を返します。
+[DoModal](#domodal)を呼び出す前に `SetWizardMode` を呼び出します。 `SetWizardMode`を呼び出した後、`DoModal` は ID_WIZFINISH (ユーザーが [完了] ボタンで閉じた場合) または IDCANCEL を返します。
 
-`SetWizardMode`PSH_WIZARD フラグを設定します。
+`SetWizardMode` PSH_WIZARD フラグを設定します。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFCDocView#142](../../mfc/codesnippet/cpp/cpropertysheet-class_15.cpp)]
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [MFC のサンプル CMNCTRL1](../../overview/visual-cpp-samples.md)<br/>
 [MFC のサンプル CMNCTRL2](../../overview/visual-cpp-samples.md)<br/>
