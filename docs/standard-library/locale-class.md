@@ -22,11 +22,11 @@ helpviewer_keywords:
 - std::locale [C++], id
 ms.assetid: 7dd6d271-472d-4750-8fb5-ea8f55fbef62
 ms.openlocfilehash: 551bca93a30bee52dc4c838864df28cb747d91df
-ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74898835"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856554"
 ---
 # <a name="locale-class"></a>locale クラス
 
@@ -240,7 +240,7 @@ C ロケールへの参照。
 
 ### <a name="remarks"></a>Remarks
 
-Classic C ロケールは、標準 C ライブラリ内の米国英語の ASCII ロケールです。 これは、国際化されていないプログラムで暗黙的に使用されるロケールです。
+従来の C ロケールは米国標準 C ライブラリ内の英語の ASCII ロケール。 これは、国際化されていないプログラムで暗黙的に使用されるロケールです。
 
 ### <a name="example"></a>使用例
 
