@@ -10,11 +10,11 @@ helpviewer_keywords:
 - DLLs [C++], about DLLs
 ms.assetid: 5216bca4-51e2-466b-b221-0e3e776056f0
 ms.openlocfilehash: 7083924f137fa9283da40404c7d15183e59c0b1c
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821422"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78872530"
 ---
 # <a name="create-cc-dlls-in-visual-studio"></a>Visual Studio でC++の C/dll の作成
 
@@ -121,7 +121,7 @@ MFC に含まれる DLL やライブラリに適用される一定の名前付�
 [Visual Basic アプリケーションからの DLL 関数の呼び出し](calling-dll-functions-from-visual-basic-applications.md)\
 Visual Basic アプリケーションから DLL 関数を呼び出す方法について説明します。
 
-## <a name="related-sections"></a>関連セクション
+## <a name="related-sections"></a>関連項目
 
 [DLL\ の一部としての MFC の使用](../mfc/tn011-using-mfc-as-part-of-a-dll.md)
 MFC ライブラリを Windows ダイナミックリンクライブラリの一部として使用できるようにするレギュラー MFC Dll について説明します。

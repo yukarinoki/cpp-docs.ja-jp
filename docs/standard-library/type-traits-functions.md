@@ -25,13 +25,13 @@ helpviewer_keywords:
 - std::is_trivially_move_assignable
 - std::is_trivially_move_constructible
 ms.openlocfilehash: 48ca51d56994f3d487af6744801acedf5c6cc79c
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447041"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78874195"
 ---
-# <a name="lttypetraitsgt-functions"></a>&lt;type_traits&gt; 関数
+# <a name="lttype_traitsgt-functions"></a>&lt;type_traits&gt; 関数
 
 ||||
 |-|-|-|
@@ -52,15 +52,15 @@ struct is_assignable;
 
 ### <a name="parameters"></a>パラメーター
 
-*宛先*\
+*\*
 代入を受け取るオブジェクトの型。
 
-*差出人*\
+\*から*
 値を渡すオブジェクトの型。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-評価されていない式 `declval<To>() = declval<From>()` は整形式である必要があります。 と*の*両方で、完全な型、 **void**、または不明なバインドの配列を指定する必要があります。
+評価されていない式 `declval<To>() = declval<From>()` は整形式である必要があります。 と*の*両方で、完全な型、 **void**、または不明なバインドの配列を*指定する必要*があります。
 
 ## <a name="is_copy_assignable"></a>  is_copy_assignable
 
@@ -73,10 +73,10 @@ struct is_copy_assignable;
 
 ### <a name="parameters"></a>パラメーター
 
-*~* \
+*Ty*\
 照会する型。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 型*Ty*がコピー代入演算子を持つクラスである場合、型述語のインスタンスは true を保持します。それ以外の場合は、false を保持します。 is_assignable\<Ty&, const Ty&> に相当します。
 
@@ -91,10 +91,10 @@ struct is_copy_constructible;
 
 ### <a name="parameters"></a>パラメーター
 
-*~* \
+*Ty*\
 照会する型。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 型*Ty*がコピーコンストラクターを持つクラスである場合、型述語のインスタンスは true を保持します。それ以外の場合は、false を保持します。
 
@@ -143,10 +143,10 @@ struct is_default_constructible;
 
 ### <a name="parameters"></a>パラメーター
 
-*\T*\
+*T*\
 照会する型。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 型*T*が既定のコンストラクターを持つクラス型である場合、型述語のインスタンスは true を保持します。それ以外の場合は、false を保持します。 これは、述語 `is_constructible<T>`と同じです。 型*T*は、完全な型、 **void**、または不明なバインドの配列である必要があります。
 
@@ -195,10 +195,10 @@ struct is_move_assignable;
 
 ### <a name="parameters"></a>パラメーター
 
-*\T*\
+*T*\
 照会する型。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 型への右辺値参照を型の参照に割り当てる事ができる場合、その型は移動代入可能です。 型述語は `is_assignable<T&, T&&>` と同じです。 移動代入できる型には、コンパイラにより生成された移動代入演算子またはユーザー定義の移動代入演算子を含む参照可能なスカラー型やクラス型があります。
 
@@ -213,10 +213,10 @@ struct is_move_constructible;
 
 ### <a name="parameters"></a>パラメーター
 
-*\T*\
+*T*\
 評価される型
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 移動操作を使用して型*T*を構築できる場合は true に評価される型述語。 この述語は `is_constructible<T, T&&>` と同じです。
 
@@ -231,10 +231,10 @@ struct is_nothrow_move_assignable;
 
 ### <a name="parameters"></a>パラメーター
 
-*~* \
+*Ty*\
 照会する型。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 型が nothrow の移動代入演算子*を持つ場合*、型の述語のインスタンスは true を保持します。それ以外の場合は、false を保持します。
 
@@ -273,14 +273,14 @@ struct is_trivially_copy_assignable;
 
 ### <a name="parameters"></a>パラメーター
 
-*\T*\
+*T*\
 照会する型。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 型*T*が自明なコピー代入演算子を持つクラスである場合、型述語のインスタンスは true を保持します。それ以外の場合は、false を保持します。
 
-クラス*t*の割り当てコンストラクターは、暗黙的に指定されている場合 *、クラス t*に仮想関数がない場合、クラス*t*に仮想基底クラスがない場合、クラス型のすべての非静的データメンバーのクラスに自明な代入が含まれます。演算子、およびクラスの型配列のすべての非静的データメンバーのクラスに自明な代入演算子があります。
+クラス*t*の割り当てコンストラクターは、暗黙的に指定されている場合、クラス*t に*仮想関数がない場合、*クラス t に*仮想基底クラスがない場合、クラス型のすべての非静的データメンバーのクラスに自明な代入演算子がある場合、クラスの型配列のすべての非静的データメンバーのクラスに自明な代入演算子があります。
 
 ## <a name="is_trivially_move_assignable"></a>  is_trivially_move_assignable
 
@@ -293,10 +293,10 @@ struct is_trivially_move_assignable;
 
 ### <a name="parameters"></a>パラメーター
 
-*~* \
+*Ty*\
 照会する型。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 型*Ty*が自明なムーブ代入演算子を持つクラスである場合、型述語のインスタンスは true を保持します。それ以外の場合は、false を保持します。
 
@@ -323,10 +323,10 @@ struct is_trivially_move_constructible;
 
 ### <a name="parameters"></a>パラメーター
 
-*~* \
+*Ty*\
 照会する型。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 型*Ty*が自明な移動コンストラクターを持つクラスである場合、型述語のインスタンスは true を保持します。それ以外の場合は、false を保持します。
 
@@ -348,6 +348,6 @@ struct is_trivially_move_constructible;
 
 クラスの型配列のすべての非静的データ メンバーのクラスに自明な移動コンストラクターがある
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [<type_traits>](../standard-library/type-traits.md)
