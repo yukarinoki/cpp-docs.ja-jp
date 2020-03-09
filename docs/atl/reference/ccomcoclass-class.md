@@ -13,11 +13,11 @@ helpviewer_keywords:
 - aggregation [C++], aggregation models
 ms.assetid: 67cfefa4-8df9-47fa-ad58-2d1a1ae25762
 ms.openlocfilehash: 5b4e39fa4d93893d288bb8de03d8a71b671be087
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497393"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78863204"
 ---
 # <a name="ccomcoclass-class"></a>CComCoClass クラス
 
@@ -33,7 +33,7 @@ class CComCoClass
 #### <a name="parameters"></a>パラメーター
 
 *T*<br/>
-から`CComCoClass`派生したクラス。
+`CComCoClass`から派生したクラス。
 
 *pclsid*<br/>
 オブジェクトの CLSID へのポインター。
@@ -42,24 +42,24 @@ class CComCoClass
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|名前|説明|
+|Name|Description|
 |----------|-----------------|
 |[CComCoClass:: CreateInstance](#createinstance)|雑音クラスのインスタンスを作成し、インターフェイスを照会します。|
 |[CComCoClass:: Error](#error)|雑音クライアントに豊富なエラー情報を返します。|
 |[CComCoClass:: GetObjectCLSID](#getobjectclsid)|雑音オブジェクトのクラス識別子を返します。|
 |[CComCoClass:: GetObjectDescription](#getobjectdescription)|雑音をオーバーライドして、オブジェクトの説明を返します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-`CComCoClass`オブジェクトの CLSID を取得し、エラー情報を設定し、クラスのインスタンスを作成するためのメソッドを提供します。 オブジェクトマップに登録されているクラスは、 `CComCoClass`から派生する必要があります。
+`CComCoClass` には、オブジェクトの CLSID を取得し、エラー情報を設定し、クラスのインスタンスを作成するためのメソッドが用意されています。 オブジェクトマップに登録されているクラスは、`CComCoClass`から派生する必要があります。
 
-`CComCoClass`では、オブジェクトの既定のクラスファクトリと集計モデルも定義されています。 `CComCoClass`では、次の2つのマクロを使用します。
+また `CComCoClass` では、オブジェクトの既定のクラスファクトリと集計モデルも定義されています。 `CComCoClass` では、次の2つのマクロを使用します。
 
 - [DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory)[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)するクラスファクトリを宣言します。
 
 - [DECLARE_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_aggregatable)オブジェクトを集計できることを宣言します。
 
-クラス定義で別のマクロを指定することで、これらの既定値のいずれかをオーバーライドできます。 たとえば、の`CComClassFactory`代わりに[CComClassFactory2](../../atl/reference/ccomclassfactory2-class.md)を使用するには、 [DECLARE_CLASSFACTORY2](aggregation-and-class-factory-macros.md#declare_classfactory2)マクロを指定します。
+クラス定義で別のマクロを指定することで、これらの既定値のいずれかをオーバーライドできます。 たとえば、`CComClassFactory`ではなく[CComClassFactory2](../../atl/reference/ccomclassfactory2-class.md)を使用するには、 [DECLARE_CLASSFACTORY2](aggregation-and-class-factory-macros.md#declare_classfactory2)マクロを指定します。
 
 [!code-cpp[NVC_ATL_COM#2](../../atl/codesnippet/cpp/ccomcoclass-class_1.h)]
 
@@ -69,7 +69,7 @@ class CComCoClass
 
 ##  <a name="createinstance"></a>CComCoClass:: CreateInstance
 
-Com API `CreateInstance`を使用せずに com オブジェクトのインスタンスを作成し、インターフェイスポインターを取得するには、これらの関数を使用します。
+Com API を使用せずに COM オブジェクトのインスタンスを作成し、インターフェイスポインターを取得するには、次の `CreateInstance` 関数を使用します。
 
 ```
 template <class  Q>
@@ -94,7 +94,7 @@ static HRESULT CreateInstance(IUnknown* punkOuter, Q** pp);
 
 標準の HRESULT 値。 返される可能性のある戻り値の説明については、Windows SDK の「 [CoCreateInstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance) 」を参照してください。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 一般的なオブジェクトの作成には、この関数の最初のオーバーロードを使用します。作成されるオブジェクトを集計する必要がある場合は、2番目のオーバーロードを使用します。
 
@@ -106,13 +106,13 @@ static HRESULT CreateInstance(IUnknown* punkOuter, Q** pp);
 
 ### <a name="example"></a>例
 
-次の例では`CDocument` 、は、 `IDocument`インターフェイスを実装するから`CComCoClass`派生したウィザードで生成された ATL クラスです。 クラスは、OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO マクロを使用してオブジェクトマップに登録されるため、クライアントが[CoCreateInstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance)を使用してドキュメントのインスタンスを作成することはできません。 `CApplication`は、ドキュメントクラスのインスタンスを作成するために、独自の COM インターフェイスの1つにメソッドを提供するコクラスです。 次のコードは、 `CreateInstance` `CComCoClass`基本クラスから継承されたメンバーを使用して、ドキュメントクラスのインスタンスを簡単に作成する方法を示しています。
+次の例では、`CDocument` は、`IDocument` インターフェイスを実装する `CComCoClass` から派生したウィザードで生成された ATL クラスです。 クラスは OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO マクロと共にオブジェクトマップに登録されるため、クライアントが[CoCreateInstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance)を使用してドキュメントのインスタンスを作成することはできません。 `CApplication` は、ドキュメントクラスのインスタンスを作成するために、独自の COM インターフェイスの1つにメソッドを提供するコクラスです。 次のコードは、`CComCoClass` 基底クラスから継承された `CreateInstance` メンバーを使用して、ドキュメントクラスのインスタンスを簡単に作成する方法を示しています。
 
 [!code-cpp[NVC_ATL_COM#11](../../atl/codesnippet/cpp/ccomcoclass-class_2.cpp)]
 
 ##  <a name="error"></a>CComCoClass:: Error
 
-この静的関数は`IErrorInfo` 、クライアントにエラー情報を提供するインターフェイスを設定します。
+この静的関数は、クライアントにエラー情報を提供するために `IErrorInfo` インターフェイスを設定します。
 
 ```
 static HRESULT WINAPI Error(
@@ -157,10 +157,10 @@ static HRESULT Error(
 ### <a name="parameters"></a>パラメーター
 
 *lpszDesc*<br/>
-からエラーを説明する文字列。 Unicode バージョンの`Error`では、 *lpszdesc*の種類が LPCOLESTR であることが指定されています。 ANSI バージョンでは、LPCSTR の種類が指定されています。
+からエラーを説明する文字列。 Unicode バージョンの `Error` では、 *Lpszdesc*が LPCOLESTR 型であることが指定されています。ANSI バージョンでは、LPCSTR の種類を指定します。
 
 *iid*<br/>
-からエラーがオペレーティングシステムによって定義されている場合は、エラーまたは GUID_NULL (既定値) を定義するインターフェイスの IID。
+からエラーが定義されているインターフェイスの IID。オペレーティングシステムによってエラーが定義されている場合は GUID_NULL (既定値)。
 
 *hRes*<br/>
 から呼び出し元に返される HRESULT。 既定値は 0 です。 *Hres*の詳細については、「解説」を参照してください。
@@ -175,17 +175,17 @@ static HRESULT Error(
 からエラーを説明するヘルプファイルのパスと名前。
 
 *hInst*<br/>
-からリソースへのハンドル。 既定では、このパラメーター `_AtlModule::GetResourceInstance`はです`_AtlModule` 。ここで、は[CAtlModule](../../atl/reference/catlmodule-class.md)のグローバルインスタンスです。
+からリソースへのハンドル。 既定では、このパラメーターは `_AtlModule::GetResourceInstance`です。 `_AtlModule` は[CAtlModule](../../atl/reference/catlmodule-class.md)のグローバルインスタンスです。
 
 ### <a name="return-value"></a>戻り値
 
 標準の HRESULT 値。 詳細については、「解説」を参照してください。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-を呼び出す`Error`には、オブジェクトが`ISupportErrorInfo Interface`インターフェイスを実装する必要があります。
+`Error`を呼び出すには、オブジェクトが `ISupportErrorInfo Interface` インターフェイスを実装する必要があります。
 
-*Hres*パラメーターが0以外の場合、 `Error`は*hres*の値を返します。 *Hres*が0の場合、の最初の`Error` 4 つのバージョンは DISP_E_EXCEPTION を返します。 最後の2つのバージョンは、マクロ**MAKE_HRESULT (1, FACILITY_ITF,** *nID* **)** の結果を返します。
+*Hres*パラメーターが0以外の場合、`Error` は*hres*の値を返します。 *Hres*が0の場合、`Error` の最初の4つのバージョンが DISP_E_EXCEPTION を返します。 最後の2つのバージョンは、マクロ**MAKE_HRESULT (1、FACILITY_ITF、** *nID* **)** の結果を返します。
 
 ##  <a name="getobjectclsid"></a>CComCoClass:: GetObjectCLSID
 
@@ -211,16 +211,16 @@ static LPCTSTR WINAPI GetObjectDescription();
 
 クラスオブジェクトの説明。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-既定の実装では、NULL が返されます。 このメソッドは、 [DECLARE_OBJECT_DESCRIPTION](object-map-macros.md#declare_object_description)マクロを使用してオーバーライドできます。 例えば:
+既定の実装では、NULL が返されます。 このメソッドは、 [DECLARE_OBJECT_DESCRIPTION](object-map-macros.md#declare_object_description)マクロでオーバーライドできます。 次に例を示します。
 
 [!code-cpp[NVC_ATL_COM#12](../../atl/codesnippet/cpp/ccomcoclass-class_3.h)]
 
-`GetObjectDescription`はによっ`IComponentRegistrar::GetComponents`て呼び出されます。 `IComponentRegistrar`は、DLL 内の個々のコンポーネントの登録と登録解除を可能にするオートメーションインターフェイスです。 ATL プロジェクトウィザードを使用してコンポーネントレジストラーオブジェクトを作成すると、ウィザードによって`IComponentRegistrar`インターフェイスが自動的に実装されます。 `IComponentRegistrar`は、通常、Microsoft トランザクションサーバーによって使用されます。
+`GetObjectDescription` は `IComponentRegistrar::GetComponents`によって呼び出されます。 `IComponentRegistrar` は、DLL 内の個々のコンポーネントを登録および登録解除できるオートメーションインターフェイスです。 ATL プロジェクトウィザードを使用してコンポーネントレジストラーオブジェクトを作成すると、ウィザードによって `IComponentRegistrar` インターフェイスが自動的に実装されます。 `IComponentRegistrar` は、通常、Microsoft Transaction Server によって使用されます。
 
 ATL プロジェクトウィザードの詳細については、「 [Atl プロジェクトの作成](../../atl/reference/creating-an-atl-project.md)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [クラスの概要](../../atl/atl-class-overview.md)

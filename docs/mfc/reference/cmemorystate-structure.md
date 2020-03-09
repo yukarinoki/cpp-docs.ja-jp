@@ -9,15 +9,15 @@ helpviewer_keywords:
 - detecting memory leaks [MFC]
 ms.assetid: 229d9de7-a6f3-4cc6-805b-5a9d9b1bfe1d
 ms.openlocfilehash: a110e1345cb970c117de125bd8105e1bc86eaf94
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62163755"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78855322"
 ---
 # <a name="cmemorystate-structure"></a>CMemoryState 構造体
 
-プログラムでのメモリ リークを検出する便利な手段を提供します。
+プログラムのメモリリークを検出する便利な方法を提供します。
 
 ## <a name="syntax"></a>構文
 
@@ -29,71 +29,71 @@ struct CMemoryState
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
-|[CMemoryState::CMemoryState](#cmemorystate)|メモリのチェックポイントを制御するクラスのような構造を構築します。|
+|[CMemoryState:: CMemoryState](#cmemorystate)|メモリチェックポイントを制御するクラスに似た構造体を構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
-|[Cmemorystate::checkpoint](#checkpoint)|現在のメモリ状態のスナップショット (チェックポイント) を取得します。|
-|[:Difference](#difference)|型の 2 つのオブジェクト間の差を計算`CMemoryState`します。|
-|[CMemoryState::DumpAllObjectsSince](#dumpallobjectssince)|以前のチェックポイント以降には、現在割り当てられているすべてのオブジェクトの概要をダンプします。|
-|[Cmemorystate::dumpstatistics](#dumpstatistics)|メモリ割り当ての統計を出力する`CMemoryState`オブジェクト。|
+|[CMemoryState:: Checkpoint](#checkpoint)|現在のメモリ状態のスナップショット (チェックポイント) を取得します。|
+|[CMemoryState::D ifference](#difference)|`CMemoryState`型の2つのオブジェクトの差を計算します。|
+|[CMemoryState::D umpAllObjectsSince](#dumpallobjectssince)|前回のチェックポイント以降に現在割り当てられているすべてのオブジェクトの概要をダンプします。|
+|[CMemoryState::D umpStatistics](#dumpstatistics)|`CMemoryState` オブジェクトのメモリ割り当ての統計を出力します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-`CMemoryState` 構造体であり、基底クラスではありません。
+`CMemoryState` は構造体であり、基本クラスを持ちません。
 
-オブジェクトのメモリがヒープに割り当てが必要でなくなったときの割り当て解除されず、「メモリ リーク」が発生します。 このようなメモリ リークは最終的に、メモリ不足のエラーにつながります。 割り当てるし、プログラムでメモリの割り当てを解除するいくつかの方法はあります。
+"メモリリーク" は、オブジェクトのメモリがヒープに割り当てられていて、不要になったときに割り当てが解除されない場合に発生します。 このようなメモリリークが原因で、メモリ不足エラーが発生する可能性があります。 プログラムにメモリを割り当てたり、割り当てを解除したりするには、いくつかの方法があります。
 
-- 使用して、 `malloc` /  `free`ランタイム ライブラリ関数のファミリです。
+- `malloc`/ 使用して、ランタイムライブラリの関数の `free` ファミリを使用します。
 
-- Windows API のメモリ管理関数を使用して`LocalAlloc` /  `LocalFree`と`GlobalAlloc` / `GlobalFree`します。
+- Windows API のメモリ管理関数を使用すると、`LocalAlloc`/ `LocalFree` と `GlobalAlloc`/ `GlobalFree`ます。
 
-- C++ を使用して**新しい**と**削除**演算子。
+- C++ **New**演算子と**delete**演算子を使用します。
 
-`CMemoryState`検出メモリにのみ役立ちます診断を使用してメモリが割り当てられるときに発生するリーク、**新しい**演算子が使用して割り当て解除されません**削除**します。 メモリ管理関数の他の 2 つのグループは、C++ 以外のプログラム、およびで両者を混在させる**新しい**と**削除**同じプログラムでは推奨されません。 置換する追加のマクロ、DEBUG_NEW が提供される、**新しい**演算子と、ファイルとメモリの割り当ての行番号を追跡する必要があります。 DEBUG_NEW が通常使用されるたびに使用される、**新しい**演算子。
+`CMemoryState` 診断は、 **new**演算子を使用して割り当てられたメモリが**delete**を使用して割り当て解除されない場合に発生するメモリリークの検出にのみ役立ちます。 他の2つのメモリ管理関数は、C++プログラム以外では使用できません。また、同じプログラムで**new**と**delete**を混在させることはお勧めしません。 メモリ割り当てのファイルと行番号の追跡が必要な場合は、 **NEW**演算子を置き換えるために、DEBUG_NEW の追加のマクロが用意されています。 DEBUG_NEW は、通常**NEW**演算子を使用するときに常に使用されます。
 
-その他の診断と同様、`CMemoryState`診断は、プログラムのデバッグ バージョンで使用可能なだけです。 デバッグ バージョンには、_DEBUG 定数が定義されている必要があります。
+他の診断と同様に、`CMemoryState` 診断は、プログラムのデバッグバージョンでのみ使用できます。 デバッグバージョンには _DEBUG 定数が定義されている必要があります。
 
-使用することができます、プログラムがメモリ リークが疑われる場合、 `Checkpoint`、 `Difference`、および`DumpStatistics`プログラムの実行の 2 つの異なるポイントでメモリの状態 (割り当てられたオブジェクト) の違いを検出する機能。 この情報は、関数が割り当てたすべてのオブジェクトをクリーンアップするかどうかを決めるのに役立ちます。
+プログラムにメモリリークが発生していると思われる場合は、`Checkpoint`、`Difference`、および `DumpStatistics` の各関数を使用して、プログラム実行の2つの異なるポイントでのメモリ状態 (割り当てられたオブジェクト) の違いを検出できます。 この情報は、関数によって割り当てられたすべてのオブジェクトがクリーンアップされるかどうかを判断するのに役立ちます。
 
-使用することが単に割り当てと解放の不均衡が発生した場所を知ることも十分な情報が提供されていない場合、`DumpAllObjectsSince`以前の呼び出し以降に割り当てられたすべてのオブジェクトをダンプする関数`Checkpoint`します。 このダンプは、割り当て、ソース ファイルと、オブジェクトが割り当てられた場所 (DEBUG_NEW は、割り当てを使用している) 場合、行の順序を示しています。 および、オブジェクト、そのアドレスとそのサイズの派生です。 `DumpAllObjectsSince` オブジェクトごとにも呼び出して`Dump`関数を現在の状態に関する情報を提供します。
+割り当てと解放の不均衡が発生している場所を知るだけで十分な情報が得られない場合は、`DumpAllObjectsSince` 関数を使用して、前の `Checkpoint`の呼び出し以降に割り当てられたすべてのオブジェクトをダンプできます。 このダンプは、割り当ての順序、ソースファイルとオブジェクトが割り当てられた行 (割り当てに DEBUG_NEW を使用している場合)、オブジェクトの派生、アドレス、およびそのサイズを示します。 また `DumpAllObjectsSince` は、各オブジェクトの `Dump` 関数を呼び出して、現在の状態に関する情報を提供します。
 
-使用する方法の詳細についての`CMemoryState`し、その他の診断を参照してください[MFC アプリケーションのデバッグ](/visualstudio/debugger/mfc-debugging-techniques)します。
+`CMemoryState` およびその他の診断の使用方法の詳細については、「 [MFC アプリケーションのデバッグ](/visualstudio/debugger/mfc-debugging-techniques)」を参照してください。
 
 > [!NOTE]
->  型のオブジェクトの宣言`CMemoryState`してメンバー関数への呼び出しを囲む必要がありますと`#if defined(_DEBUG)/#endif`ディレクティブ。 これにより、メモリ診断は、プログラムのデバッグ ビルドにのみ含まれます。
+>  `CMemoryState` 型のオブジェクトの宣言とメンバー関数の呼び出しは、`#if defined(_DEBUG)/#endif` ディレクティブで囲む必要があります。 これにより、プログラムのデバッグビルドにのみメモリ診断が含まれるようになります。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
 `CMemoryState`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afx.h
 
-##  <a name="checkpoint"></a>  CMemoryState::Checkpoint
+##  <a name="checkpoint"></a>CMemoryState:: Checkpoint
 
-スナップショットのメモリの概要を取得し、これに格納`CMemoryState`オブジェクト。
+メモリのスナップショットの概要を取得し、この `CMemoryState` オブジェクトに格納します。
 
 ```
 void Checkpoint();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-`CMemoryState`メンバー関数[違い](#difference)と[DumpAllObjectsSince](#dumpallobjectssince)このスナップショット データを使用します。
+`CMemoryState` メンバー関数の[違い](#difference)と[DumpAllObjectsSince](#dumpallobjectssince)は、このスナップショットデータを使用します。
 
 ### <a name="example"></a>例
 
-  例をご覧ください、 [CMemoryState](#cmemorystate)コンス トラクター。
+  [CMemoryState](#cmemorystate)コンストラクターの例を参照してください。
 
-##  <a name="cmemorystate"></a>  CMemoryState::CMemoryState
+##  <a name="cmemorystate"></a>CMemoryState:: CMemoryState
 
-空を構築します`CMemoryState`オブジェクトが入力する必要がありますが、[チェックポイント](#checkpoint)または[違い](#difference)メンバー関数。
+[チェックポイント](#checkpoint)または[差分](#difference)メンバー関数によって入力する必要がある空の `CMemoryState` オブジェクトを構築します。
 
 ```
 CMemoryState();
@@ -103,9 +103,9 @@ CMemoryState();
 
 [!code-cpp[NVC_MFC_Utilities#18](../../mfc/codesnippet/cpp/cmemorystate-structure_1.cpp)]
 
-##  <a name="difference"></a>  CMemoryState::Difference
+##  <a name="difference"></a>CMemoryState::D ifference
 
-2 つ`CMemoryState`オブジェクト、し、この違いを格納`CMemoryState`オブジェクト。
+2つの `CMemoryState` オブジェクトを比較し、その違いをこの `CMemoryState` オブジェクトに格納します。
 
 ```
 BOOL Difference(
@@ -116,52 +116,52 @@ BOOL Difference(
 ### <a name="parameters"></a>パラメーター
 
 *oldState*<br/>
-メモリの初期状態で定義されている、`CMemoryState`チェックポイントします。
+`CMemoryState` チェックポイントによって定義される初期メモリ状態。
 
 *newState*<br/>
-定義されている新しいメモリ状態を`CMemoryState`チェックポイントします。
+`CMemoryState` チェックポイントによって定義された新しいメモリ状態。
 
 ### <a name="return-value"></a>戻り値
 
-2 つのメモリ状態が異なっている場合は 0 以外それ以外の場合 0 を返します。
+2つのメモリ状態が異なる場合は0以外。それ以外の場合は0です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-[チェックポイント](#checkpoint)2 つのメモリ状態パラメーターのそれぞれに対して呼び出されてする必要があります。
+2つのメモリ状態パラメーターのそれぞれに対して、[チェックポイント](#checkpoint)が呼び出されている必要があります。
 
 ### <a name="example"></a>例
 
-  例をご覧ください、 [CMemoryState](#cmemorystate)コンス トラクター。
+  [CMemoryState](#cmemorystate)コンストラクターの例を参照してください。
 
-##  <a name="dumpallobjectssince"></a>  CMemoryState::DumpAllObjectsSince
+##  <a name="dumpallobjectssince"></a>CMemoryState::D umpAllObjectsSince
 
-呼び出し、`Dump`クラスから派生した型のすべてのオブジェクトの関数`CObject`を割り当てられた (およびまだ割り当てられている)、前回[チェックポイント](#checkpoint)この呼び出す`CMemoryState`オブジェクト。
+この `CMemoryState` オブジェクトの最後の[チェックポイント](#checkpoint)呼び出し以降に割り当てられた (ただし、まだ割り当てられている) `CObject` クラスから派生した型のすべてのオブジェクトに対して、`Dump` 関数を呼び出します。
 
 ```
 void DumpAllObjectsSince() const;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-呼び出す`DumpAllObjectsSince`、初期化されていないと`CMemoryState`オブジェクトが現在メモリ内のすべてのオブジェクトをダンプします。
+初期化されていない `CMemoryState` オブジェクトを使用して `DumpAllObjectsSince` を呼び出すと、現在メモリにあるすべてのオブジェクトがダンプされます。
 
 ### <a name="example"></a>例
 
-  例をご覧ください、 [CMemoryState](#cmemorystate)コンス トラクター。
+  [CMemoryState](#cmemorystate)コンストラクターの例を参照してください。
 
-##  <a name="dumpstatistics"></a>  CMemoryState::DumpStatistics
+##  <a name="dumpstatistics"></a>CMemoryState::D umpStatistics
 
-簡潔なメモリの統計情報レポートを印刷、`CMemoryState`で塗りつぶされているオブジェクト、[違い](#difference)メンバー関数。
+[差分](#difference)メンバー関数によって入力された `CMemoryState` オブジェクトから簡潔なメモリ統計レポートを出力します。
 
 ```
 void DumpStatistics() const;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-印刷すると、レポート、 [afxDump](diagnostic-services.md#afxdump)デバイス、次に示します。
+[AfxDump](diagnostic-services.md#afxdump)デバイスに印刷されるレポートには、次のものが表示されます。
 
-サンプル レポートは、数 (または容量) の情報を提供します。
+サンプルレポートでは、の数 (または金額) に関する情報が提供されます。
 
 - 空きブロック
 
@@ -169,32 +169,32 @@ void DumpStatistics() const;
 
 - CRT ブロック
 
-- ignore ブロック
+- ブロックの無視
 
 - クライアント ブロック
 
-- 1 つ (バイト) をいつでも、プログラムで使用される最大メモリ
+- プログラムによって一度に使用される最大メモリ (バイト単位)
 
-- 現在 (バイト) をプログラムによって使用される合計メモリ
+- プログラムによって現在使用されているメモリの合計 (バイト単位)
 
-無料のブロックは、ブロックが割り当て解除が遅延場合数`afxMemDF`に設定された`delayFreeMemDF`します。 詳細については、次を参照してください。 [afxMemDF](diagnostic-services.md#afxmemdf)、"MFC マクロとグローバル"セクションでします。
+Free ブロックは、`afxMemDF` が `delayFreeMemDF`に設定されている場合に、割り当て解除が遅延されたブロックの数です。 詳細については、「MFC マクロとグローバル」の「 [afxMemDF](diagnostic-services.md#afxmemdf)」を参照してください。
 
 ### <a name="example"></a>例
 
-  次のコードを配置する必要があります*projname*App.cpp します。 次のグローバル変数を定義します。
+  次のコードは、 *projname*app.xaml に配置する必要があります。 次のグローバル変数を定義します。
 
 [!code-cpp[NVC_MFC_Utilities#40](../../mfc/codesnippet/cpp/cmemorystate-structure_2.cpp)]
 
-`InitInstance`関数、行を追加します。
+`InitInstance` 関数で、次の行を追加します。
 
 [!code-cpp[NVC_MFC_Utilities#41](../../mfc/codesnippet/cpp/cmemorystate-structure_3.cpp)]
 
-ハンドラーを追加、`ExitInstance`関数を次のコードを使用します。
+`ExitInstance` 関数のハンドラーを追加し、次のコードを使用します。
 
 [!code-cpp[NVC_MFC_Utilities#42](../../mfc/codesnippet/cpp/cmemorystate-structure_4.cpp)]
 
-ここでの出力を表示するデバッグ モードでプログラムを実行することができます、`DumpStatistics`関数。
+これで、プログラムをデバッグモードで実行し、`DumpStatistics` 関数の出力を確認できるようになりました。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [階層図](../../mfc/hierarchy-chart.md)

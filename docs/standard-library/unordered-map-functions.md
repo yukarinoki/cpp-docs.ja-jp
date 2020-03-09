@@ -9,13 +9,13 @@ ms.assetid: cf2e4115-f205-4a0e-90be-a143ffcc1f44
 helpviewer_keywords:
 - std::swap (unordered_map/multimap)
 ms.openlocfilehash: 8ad81157d12de017198afeeb48f3b329ef20dbde
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454821"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78873985"
 ---
-# <a name="ltunorderedmapgt-functions"></a>&lt;unordered_map&gt; 関数
+# <a name="ltunordered_mapgt-functions"></a>&lt;unordered_map&gt; 関数
 
 |||
 |-|-|
@@ -34,10 +34,10 @@ void swap(
 
 ### <a name="parameters"></a>パラメーター
 
-*レジストリ*\
+*キー*\
 キーの型。
 
-*~* \
+*Ty*\
 マップされた型。
 
 *ハッシュ*\
@@ -46,16 +46,16 @@ void swap(
 *Pred*\
 等価比較関数のオブジェクト型。
 
-*割り当て*\
+*Alloc*\
 アロケーター クラス。
 
-*左側*\
+*左*\
 スワップする最初のコンテナー。
 
-*そうです*\
+*右*\
 スワップする 2 番目のコンテナー。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このテンプレート関数は、`left.`[unordered_map::swap](../standard-library/unordered-map-class.md#swap)`(right)` を実行します。
 
@@ -127,10 +127,10 @@ void swap(
 
 ### <a name="parameters"></a>パラメーター
 
-*レジストリ*\
+*キー*\
 キーの型。
 
-*~* \
+*Ty*\
 マップされた型。
 
 *ハッシュ*\
@@ -139,16 +139,16 @@ void swap(
 *Pred*\
 等価比較関数のオブジェクト型。
 
-*割り当て*\
+*Alloc*\
 アロケーター クラス。
 
-*左側*\
+*左*\
 スワップする最初のコンテナー。
 
-*そうです*\
+*右*\
 スワップする 2 番目のコンテナー。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このテンプレート関数は、`left.`[unordered_multimap::swap](../standard-library/unordered-multimap-class.md#swap)`(right)` を実行します。
 
@@ -207,6 +207,6 @@ int main()
 [c, 3] [b, 2] [a, 1]
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [<unordered_map>](../standard-library/unordered-map.md)

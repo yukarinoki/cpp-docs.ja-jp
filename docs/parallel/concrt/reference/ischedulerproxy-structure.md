@@ -14,11 +14,11 @@ helpviewer_keywords:
 - ISchedulerProxy structure
 ms.assetid: af416973-7a1c-4c30-aa3b-4161c2aaea54
 ms.openlocfilehash: 776f70f9b93eb2e38151ceb5e84b4664420cf954
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77140328"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78854179"
 ---
 # <a name="ischedulerproxy-structure"></a>ISchedulerProxy 構造体
 
@@ -34,7 +34,7 @@ struct ISchedulerProxy;
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[ISchedulerProxy:: BindContext](#bindcontext)|まだ関連付けられていない場合は、実行コンテキストをスレッドプロキシに関連付けます。|
 |[ISchedulerProxy:: CreateOversubscriber](#createoversubscriber)|既存の実行リソースに関連付けられているハードウェアスレッドに新しい仮想プロセッサルートを作成します。|
@@ -43,7 +43,7 @@ struct ISchedulerProxy;
 |[ISchedulerProxy:: SubscribeCurrentThread](#subscribecurrentthread)|現在のスレッドをリソースマネージャーに登録し、このスケジューラに関連付けます。|
 |[ISchedulerProxy:: UnbindContext](#unbindcontext)|`pContext` パラメーターによって指定された実行コンテキストからスレッドプロキシの関連付けを解除し、スレッドプロキシファクトリの解放プールに返します。 このメソッドは、 [ISchedulerProxy:: BindContext](#bindcontext)メソッドを使用してバインドされた実行コンテキストでのみ呼び出すことができます。また、 [Ithreadproxy:: SwitchTo](ithreadproxy-structure.md#switchto)メソッド呼び出しの `pContext` パラメーターではまだ開始されていません。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 リソースマネージャーは、 [Iresourcemanager:: RegisterScheduler](iresourcemanager-structure.md#registerscheduler)メソッドを使用して、それに登録するすべてのスケジューラに `ISchedulerProxy` インターフェイスを渡します。
 
@@ -51,7 +51,7 @@ struct ISchedulerProxy;
 
 `ISchedulerProxy`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** concrtrm. h
 
@@ -70,7 +70,7 @@ virtual void BindContext(_Inout_ IExecutionContext* pContext) = 0;
 *pContext*<br/>
 スレッドプロキシに関連付ける実行コンテキストへのインターフェイス。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 通常、 [Ithreadproxy:: SwitchTo](ithreadproxy-structure.md#switchto)メソッドは、必要に応じてスレッドプロキシを実行コンテキストにバインドします。 ただし、`SwitchTo` メソッドが既にバインドされたコンテキストに切り替わるように、コンテキストを事前にバインドする必要がある状況があります。 これは、メモリを割り当てるメソッドを呼び出すことができず、スレッドプロキシファクトリの空きプールでスレッドプロキシを使用できない場合に、スレッドプロキシのバインドにメモリの割り当てが含まれている可能性があるため、UMS スケジューリングコンテキストの場合です。
 
@@ -93,7 +93,7 @@ virtual IVirtualProcessorRoot* CreateOversubscriber(_Inout_ IExecutionResource* 
 
 `IVirtualProcessorRoot` インターフェイスです。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 スケジューラが特定のハードウェアスレッドを制限時間内にオーバーサブスクライブする場合は、このメソッドを使用します。 仮想プロセッサルートが完成したら、`IVirtualProcessorRoot` インターフェイスで[Remove](iexecutionresource-structure.md#remove)メソッドを呼び出して、それをリソースマネージャーに返す必要があります。
 
@@ -116,7 +116,7 @@ virtual IExecutionResource* RequestInitialVirtualProcessors(bool doSubscribeCurr
 
 パラメーター `doSubscribeCurrentThread` の値が**true**の場合、現在のスレッドの `IExecutionResource` インターフェイス。 値が**false**の場合、メソッドは NULL を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 スケジューラは、すべての作業を実行する前に、この方法を使用してリソースマネージャーの仮想プロセッサルートを要求します。 リソースマネージャーは[IScheduler:: GetPolicy](ischeduler-structure.md#getpolicy)を使用してスケジューラのポリシーにアクセスし、ポリシーキー `MinConcurrency`、`MaxConcurrency` および `TargetOversubscriptionFactor` の値を使用して、スケジューラに割り当てるハードウェアスレッドの数と、各ハードウェアスレッドに対して作成する仮想プロセッサのルートの数を決定します。 スケジューラポリシーを使用してスケジューラの初期割り当てを決定する方法の詳細については、「 [Policyelementkey](concurrency-namespace-enums.md)」を参照してください。
 
@@ -136,7 +136,7 @@ virtual IExecutionResource* RequestInitialVirtualProcessors(bool doSubscribeCurr
 virtual void Shutdown() = 0;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 スケジューラがシャットダウンする前に、`ISchedulerProxy::RequestInitialVirtualProcessors` または `ISchedulerProxy::SubscribeCurrentThread` メソッドを使用して外部スレッドをサブスクライブした結果としてスケジューラが受信したすべての `IExecutionContext` インターフェイスは、`IExecutionResource::Remove` を使用してリソースマネージャーに返される必要があります。
 
@@ -156,7 +156,7 @@ virtual IExecutionResource* SubscribeCurrentThread() = 0;
 
 ランタイムの現在のスレッドを表す `IExecutionResource` インターフェイス。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 リソースマネージャーが、スケジューラや他のスケジューラにリソースを割り当てるときに現在のスレッドを考慮する必要がある場合は、この方法を使用します。 これは特に、スケジューラにキューに置かれている作業にスレッドが参加する予定の場合に、スケジューラがリソースマネージャーから受け取る仮想プロセッサルートと共に役立ちます。 リソースマネージャーは情報を使用して、システム上のハードウェアスレッドの不要なオーバーサブスクリプションを防止します。
 

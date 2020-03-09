@@ -30,11 +30,11 @@ helpviewer_keywords:
 - threadprivate OpenMP directive
 ms.assetid: 0562c263-344c-466d-843e-de830d918940
 ms.openlocfilehash: 4db341cf58884263e414e24aacf888c8c88e57cc
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142001"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78882911"
 ---
 # <a name="openmp-directives"></a>OpenMP ディレクティブ
 
@@ -44,7 +44,7 @@ Visual C++は、次の OpenMP ディレクティブをサポートしていま�
 
 並列作業共有の場合:
 
-|ディレクティブ|説明|
+|ディレクティブ|Description|
 |---------|-----------|
 |[parallel](#parallel)|並行して複数のスレッドによって実行されるコードである並列領域を定義します。|
 |[for](#for-openmp)|並列領域内の `for` ループで実行される作業をスレッド間で分割します。|
@@ -53,7 +53,7 @@ Visual C++は、次の OpenMP ディレクティブをサポートしていま�
 
 マスターおよび同期の場合:
 
-|ディレクティブ|説明|
+|ディレクティブ|Description|
 |---------|-----------|
 |[master](#master)|マスタースレッドだけがプログラムのセクションを実行するように指定します。|
 |[critical](#critical)|コードを一度に1つのスレッドでのみ実行することを指定します。|
@@ -64,7 +64,7 @@ Visual C++は、次の OpenMP ディレクティブをサポートしていま�
 
 データ環境の場合:
 
-|ディレクティブ|説明|
+|ディレクティブ|Description|
 |---------|-----------|
 |[threadprivate](#threadprivate)|変数がスレッドに対してプライベートであることを指定します。|
 
@@ -79,7 +79,7 @@ Visual C++は、次の OpenMP ディレクティブをサポートしていま�
 
 ### <a name="parameters"></a>パラメーター
 
-*expression*<br/>
+*式 (expression)*<br/>
 2つ以上の書き込みに対して保護するメモリ位置を持つ、*左辺*値を持つステートメント。
 
 ### <a name="remarks"></a>解説
@@ -540,7 +540,7 @@ Optional0個以上の句、「**解説**」を参照してください。
 - [if](openmp-clauses.md#if-openmp)
 - [private](openmp-clauses.md#private-openmp)
 - [firstprivate](openmp-clauses.md#firstprivate)
-- [default](openmp-clauses.md#default-openmp)
+- [既定値](openmp-clauses.md#default-openmp)
 - [共用](openmp-clauses.md#shared-openmp)
 - [copyin](openmp-clauses.md#copyin)
 - [reduction](openmp-clauses.md#reduction)
@@ -716,7 +716,7 @@ write output
 
 プロセスの起動時に静的に読み込まれる DLL で `threadprivate` を使用することはできますが、 [/DELAYLOAD (遅延読み込みのインポート) で読み込まれる dll (遅延読み込みのインポート)](../../../build/reference/delayload-delay-load-import.md)[などの](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryw)dll で、`threadprivate` を使用することはできません。これは、`LoadLibrary`も使用します。
 
-*破棄可能な*型の `threadprivate` 変数は、というデストラクターを持つことが保証されていません。 例:
+*破棄可能な*型の `threadprivate` 変数は、というデストラクターを持つことが保証されていません。 次に例を示します。
 
 ```cpp
 struct MyType

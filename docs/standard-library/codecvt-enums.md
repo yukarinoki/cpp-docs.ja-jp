@@ -7,11 +7,11 @@ ms.assetid: 46a8b073-01bc-46d3-b3d3-a8540f9422c1
 helpviewer_keywords:
 - std::codecvt_mode
 ms.openlocfilehash: bbef1fe28c3321f06c0cc586062cd017168f8e73
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459793"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866154"
 ---
 # <a name="ltcodecvtgt-enums"></a>&lt;codecvt&gt; 列挙型
 
@@ -27,7 +27,7 @@ enum codecvt_mode {
 };
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 列挙体では、[\<codecvt>](../standard-library/codecvt.md) で宣言されているロケール ファセットに構成情報を提供する 3 つの定数が定義されます。 それぞれの値は次のとおりです。
 
@@ -39,6 +39,6 @@ enum codecvt_mode {
 
 これらの定数は任意の組み合わせで論理和を指定することができます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [\<codecvt>](../standard-library/codecvt.md)

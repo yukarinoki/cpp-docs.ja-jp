@@ -1,5 +1,5 @@
 ---
-title: ATL の Typedef
+title: ATL Typedef
 ms.date: 11/04/2016
 f1_keywords:
 - atlcore/ATL::_ATL_BASE_MODULE
@@ -24,72 +24,72 @@ helpviewer_keywords:
 - ATL, typedefs
 ms.assetid: 7dd05baa-3efb-4e3b-af23-793c610f4560
 ms.openlocfilehash: f3db32e85ea9cba1e946db6259c00c621650e969
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62260858"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78857107"
 ---
-# <a name="atl-typedefs"></a>ATL の Typedef
+# <a name="atl-typedefs"></a>ATL Typedef
 
 Active Template Library には、次の typedef が含まれています。
 
 |||
 |-|-|
-|[_ATL_BASE_MODULE](#_atl_base_module)|基づく typedef として定義されている[_ATL_BASE_MODULE70](../../atl/reference/atl-base-module70-structure.md)します。|
-|[_ATL_COM_MODULE](#_atl_com_module)|基づく typedef として定義されている[_ATL_COM_MODULE70](../../atl/reference/atl-com-module70-structure.md)します。|
-|[_ATL_MODULE](#_atl_module)|基づく typedef として定義されている[_ATL_MODULE70](../../atl/reference/atl-module70-structure.md)します。|
-|[_ATL_WIN_MODULE](#_atl_win_module)|基づく typedef として定義されている[_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md)|
-|[ATL_URL_PORT](#atl_url_port)|使用される型[CUrl](../../atl/reference/curl-class.md)のポート番号を指定します。|
-|[CComDispatchDriver](#ccomdispatchdriver)|このクラスは、COM インターフェイス ポインターを管理します。|
-|[CComGlobalsThreadModel](#ccomglobalsthreadmodel)|適切なスレッドのスレッド処理に使用されているモデルに関係なく、モデルのメソッドを呼び出します。|
-|[CComObjectThreadModel](#ccomobjectthreadmodel)|適切なスレッドのスレッド処理に使用されているモデルに関係なく、モデルのメソッドを呼び出します。|
-|[CContainedWindow](#ccontainedwindow)|このクラスの特殊化は、`CContainedWindowT`します。|
-|[CPath](#cpath)|特殊化[CPathT](../../atl/reference/cpatht-class.md)を使用して`CString`します。|
-|[CPathA](#cpatha)|特殊化[CPathT](../../atl/reference/cpatht-class.md)を使用して`CStringA`します。|
-|[CPathW](#cpathw)|特殊化[CPathT](../../atl/reference/cpatht-class.md)を使用して`CStringW`します。|
-|[CSimpleValArray](#csimplevalarray)|単純型を格納する配列を表します。|
-|[DefaultThreadTraits](#defaultthreadtraits)|既定のスレッドの特性クラス。|
-|[LPCURL](#lpcurl)|定数へのポインター [CUrl](../../atl/reference/curl-class.md)オブジェクト。|
-|[LPURL](#lpurl)|ポインターを[CUrl](../../atl/reference/curl-class.md)オブジェクト。|
+|[_ATL_BASE_MODULE](#_atl_base_module)|[_ATL_BASE_MODULE70](../../atl/reference/atl-base-module70-structure.md)に基づく typedef として定義されます。|
+|[_ATL_COM_MODULE](#_atl_com_module)|[_ATL_COM_MODULE70](../../atl/reference/atl-com-module70-structure.md)に基づく typedef として定義されます。|
+|[_ATL_MODULE](#_atl_module)|[_ATL_MODULE70](../../atl/reference/atl-module70-structure.md)に基づく typedef として定義されます。|
+|[_ATL_WIN_MODULE](#_atl_win_module)|[_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md)に基づく typedef として定義されます。|
+|[ATL_URL_PORT](#atl_url_port)|ポート番号を指定するために[CUrl](../../atl/reference/curl-class.md)によって使用される型。|
+|[CComDispatchDriver](#ccomdispatchdriver)|このクラスは、COM インターフェイスポインターを管理します。|
+|[CComGlobalsThreadModel](#ccomglobalsthreadmodel)|使用されているスレッドモデルに関係なく、適切なスレッドモデルメソッドを呼び出します。|
+|[CComObjectThreadModel](#ccomobjectthreadmodel)|使用されているスレッドモデルに関係なく、適切なスレッドモデルメソッドを呼び出します。|
+|[CContainedWindow](#ccontainedwindow)|このクラスは `CContainedWindowT`の特殊化です。|
+|[CPath](#cpath)|`CString`を使用した[Cpatht](../../atl/reference/cpatht-class.md)の特殊化。|
+|[CPathA](#cpatha)|`CStringA`を使用した[Cpatht](../../atl/reference/cpatht-class.md)の特殊化。|
+|[CPathW](#cpathw)|`CStringW`を使用した[Cpatht](../../atl/reference/cpatht-class.md)の特殊化。|
+|[CSimpleValArray](#csimplevalarray)|単純型を格納するための配列を表します。|
+|[DefaultThreadTraits](#defaultthreadtraits)|既定のスレッド特徴クラス。|
+|[LPCURL](#lpcurl)|定数[CUrl](../../atl/reference/curl-class.md)オブジェクトへのポインター。|
+|[LPURL](#lpurl)|[CUrl](../../atl/reference/curl-class.md)オブジェクトへのポインターです。|
 
-##  <a name="_atl_base_module"></a>  _ATL_BASE_MODULE
+##  <a name="_atl_base_module"></a>_ATL_BASE_MODULE
 
-_ATL_BASE_MODULE70 に基づいて typedef として定義されます。
+_ATL_BASE_MODULE70 に基づく typedef として定義されます。
 
 ```
 typedef ATL::_ATL_BASE_MODULE70 _ATL_BASE_MODULE;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-すべての ATL プロジェクトで使用されます。 基づく[_ATL_BASE_MODULE70](../../atl/reference/atl-base-module70-structure.md)します。
+すべての ATL プロジェクトで使用されます。 [_ATL_BASE_MODULE70](../../atl/reference/atl-base-module70-structure.md)に基づいています。
 
-ATL 7.0 のモジュールのクラスの一部であるクラスは、_ATL_BASE_MODULE 構造から派生します。  ATL モジュール クラスの詳細についてを参照してください[COM モジュール クラス](../../atl/com-modules-classes.md)します。
+ATL 7.0 モジュールクラスの一部であるクラスは、_ATL_BASE_MODULE 構造体から派生します。  ATL モジュールクラスの詳細については、「 [COM Modules クラス](../../atl/com-modules-classes.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlcore.h
+**ヘッダー:** atlcore .h
 
-##  <a name="_atl_com_module"></a>  _ATL_COM_MODULE
+##  <a name="_atl_com_module"></a>_ATL_COM_MODULE
 
-_ATL_COM_MODULE70 に基づいて typedef として定義されます。
+_ATL_COM_MODULE70 に基づく typedef として定義されます。
 
 ```
 typedef ATL::_ATL_COM_MODULE70 _ATL_COM_MODULE;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-COM 機能を使用する ATL プロジェクトで使用します。 基づく[_ATL_COM_MODULE70](../../atl/reference/atl-com-module70-structure.md)します。
+COM 機能を使用する ATL プロジェクトによって使用されます。 [_ATL_COM_MODULE70](../../atl/reference/atl-com-module70-structure.md)に基づいています。
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlbase.h
+**ヘッダー:** atlbase. h
 
-##  <a name="_atl_module"></a>  _ATL_MODULE
+##  <a name="_atl_module"></a>_ATL_MODULE
 
-_ATL_MODULE70 に基づいて typedef として定義されます。
+_ATL_MODULE70 に基づく typedef として定義されます。
 
 ```
 typedef ATL::_ATL_MODULE70 _ATL_MODULE;
@@ -99,29 +99,29 @@ typedef ATL::_ATL_MODULE70 _ATL_MODULE;
 
 **ヘッダー:**
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-基づく[_ATL_MODULE70](../../atl/reference/atl-module70-structure.md)します。
+[_ATL_MODULE70](../../atl/reference/atl-module70-structure.md)に基づいています。
 
-##  <a name="_atl_win_module"></a>  _ATL_WIN_MODULE
+##  <a name="_atl_win_module"></a>_ATL_WIN_MODULE
 
-_ATL_WIN_MODULE70 に基づいて typedef として定義されます。
+_ATL_WIN_MODULE70 に基づく typedef として定義されます。
 
 ```
 typedef ATL::_ATL_WIN_MODULE70 _ATL_WIN_MODULE;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-ウィンドウ化機能を使用する ATL プロジェクトで使用されます。 基づく[_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md)します。
+ウィンドウ機能を使用する ATL プロジェクトによって使用されます。 [_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md)に基づいています。
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlbase.h
+**ヘッダー:** atlbase. h
 
-##  <a name="atl_url_port"></a>  ATL_URL_PORT
+##  <a name="atl_url_port"></a>ATL_URL_PORT
 
-使用される型[CUrl](curl-class.md)のポート番号を指定します。
+ポート番号を指定するために[CUrl](curl-class.md)によって使用される型。
 
 ```
 typedef WORD ATL_URL_PORT;
@@ -129,11 +129,11 @@ typedef WORD ATL_URL_PORT;
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlutil.h
+**ヘッダー:** atlutil. h
 
-##  <a name="ccomdispatchdriver"></a>  CComDispatchDriver
+##  <a name="ccomdispatchdriver"></a>CComDispatchDriver
 
-このクラスは、COM インターフェイス ポインターを管理します。
+このクラスは、COM インターフェイスポインターを管理します。
 
 ```
 typedef CComQIPtr<IDispatch, &__uuidof(IDispatch)> CComDispatchDriver;
@@ -141,11 +141,11 @@ typedef CComQIPtr<IDispatch, &__uuidof(IDispatch)> CComDispatchDriver;
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlbase.h
+**ヘッダー:** atlbase. h
 
-##  <a name="ccomglobalsthreadmodel"></a>  CComGlobalsThreadModel
+##  <a name="ccomglobalsthreadmodel"></a>CComGlobalsThreadModel
 
-適切なスレッドのスレッド処理に使用されているモデルに関係なく、モデルのメソッドを呼び出します。
+使用されているスレッドモデルに関係なく、適切なスレッドモデルメソッドを呼び出します。
 
 ```
 #if defined(_ATL_SINGLE_THREADED)
@@ -159,33 +159,33 @@ typedef CComMultiThreadModel CComGlobalsThreadModel;
 #endif
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-アプリケーションで使用するスレッド モデルに応じて、 **typedef**名前`CComGlobalsThreadModel`参照[CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md)または[CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md). これらのクラスを追加提供`typedef`クリティカル セクションのクラスを参照する名前。
+アプリケーションで使用されるスレッドモデルに応じて、 **typedef**名 `CComGlobalsThreadModel` [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md)または[CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)のいずれかを参照します。 これらのクラスは、重要なセクションクラスを参照するために、追加の `typedef` 名を提供します。
 
 > [!NOTE]
-> `CComGlobalsThreadModel` クラスを参照しない[CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md)します。
+> `CComGlobalsThreadModel` はクラス[CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md)を参照していません。
 
-使用して`CComGlobalsThreadModel`がなくなり、特定のスレッド処理モデル クラスを指定します。 使用されている、スレッド処理モデルに関係なく、適切なメソッドが呼び出されます。
+`CComGlobalsThreadModel` を使用すると、特定のスレッドモデルクラスを指定できます。 使用されているスレッドモデルに関係なく、適切なメソッドが呼び出されます。
 
-ほかに`CComGlobalsThreadModel`、ATL には、 **typedef**名前[CComObjectThreadModel](#ccomobjectthreadmodel)します。 各によって参照されるクラス`typedef`次の表に示すように使用すると、スレッド処理モデルによって異なります。
+`CComGlobalsThreadModel`に加えて、ATL には**typedef**名[CComObjectThreadModel](#ccomobjectthreadmodel)が用意されています。 各 `typedef` によって参照されるクラスは、次の表に示すように、使用されるスレッドモデルによって異なります。
 
-|Typedef|1 つのスレッド処理|アパートメント スレッド|フリー スレッド|
+|Typedef|単一スレッド|アパートメントスレッド|フリースレッド|
 |-------------|----------------------|-------------------------|--------------------|
 |`CComObjectThreadModel`|S|S|M|
 |`CComGlobalsThreadModel`|S|M|M|
 
 S = `CComSingleThreadModel`;M = `CComMultiThreadModel`
 
-使用`CComObjectThreadModel`1 つのオブジェクト クラス内で。 使用`CComGlobalsThreadModel`または複数のスレッド、モジュールのリソースを保護する場合、プログラムにグローバルに使用できるオブジェクト。
+1つのオブジェクトクラス内で `CComObjectThreadModel` を使用します。 プログラムでグローバルに使用できるオブジェクトの `CComGlobalsThreadModel` を使用するか、複数のスレッド間でモジュールリソースを保護する必要があります。
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlbase.h
+**ヘッダー:** atlbase. h
 
-##  <a name="ccomobjectthreadmodel"></a>  CComObjectThreadModel
+##  <a name="ccomobjectthreadmodel"></a>CComObjectThreadModel
 
-適切なスレッドのスレッド処理に使用されているモデルに関係なく、モデルのメソッドを呼び出します。
+使用されているスレッドモデルに関係なく、適切なスレッドモデルメソッドを呼び出します。
 
 ```
 #if defined(_ATL_SINGLE_THREADED)
@@ -199,33 +199,33 @@ typedef CComMultiThreadModel CComObjectThreadModel;
 #endif
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-アプリケーションで使用するスレッド モデルに応じて、`typedef`名前`CComObjectThreadModel`参照[CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md)または[CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)。 これらのクラスを追加提供`typedef`クリティカル セクションのクラスを参照する名前。
+アプリケーションで使用されるスレッドモデルに応じて、`typedef` 名 `CComObjectThreadModel` [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md)または[CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)のいずれかを参照します。 これらのクラスは、重要なセクションクラスを参照するために、追加の `typedef` 名を提供します。
 
 > [!NOTE]
-> `CComObjectThreadModel` クラスを参照しない[CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md)します。
+> `CComObjectThreadModel` はクラス[CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md)を参照していません。
 
-使用して`CComObjectThreadModel`がなくなり、特定のスレッド処理モデル クラスを指定します。 使用されている、スレッド処理モデルに関係なく、適切なメソッドが呼び出されます。
+`CComObjectThreadModel` を使用すると、特定のスレッドモデルクラスを指定できます。 使用されているスレッドモデルに関係なく、適切なメソッドが呼び出されます。
 
-ほかに`CComObjectThreadModel`、ATL には、 **typedef**名前[CComGlobalsThreadModel](#ccomglobalsthreadmodel)します。 各によって参照されるクラス**typedef**次の表に示すように使用すると、スレッド処理モデルによって異なります。
+`CComObjectThreadModel`に加えて、ATL には**typedef**名[CComGlobalsThreadModel](#ccomglobalsthreadmodel)が用意されています。 各**typedef**によって参照されるクラスは、次の表に示すように、使用されるスレッドモデルによって異なります。
 
-|Typedef|1 つのスレッド処理|アパートメント スレッド|フリー スレッド|
+|Typedef|単一スレッド|アパートメントスレッド|フリースレッド|
 |-------------|----------------------|-------------------------|--------------------|
 |`CComObjectThreadModel`|S|S|M|
 |`CComGlobalsThreadModel`|S|M|M|
 
 S = `CComSingleThreadModel`;M = `CComMultiThreadModel`
 
-使用`CComObjectThreadModel`1 つのオブジェクト クラス内で。 使用`CComGlobalsThreadModel`でいずれかであるオブジェクトをプログラム、または複数のスレッド、モジュールのリソースを保護する場合に、グローバルに利用できます。
+1つのオブジェクトクラス内で `CComObjectThreadModel` を使用します。 プログラムでグローバルに使用できるオブジェクトの `CComGlobalsThreadModel` を使用するか、複数のスレッド間でモジュールリソースを保護する必要があります。
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlbase.h
+**ヘッダー:** atlbase. h
 
-##  <a name="ccontainedwindow"></a>  CContainedWindow
+##  <a name="ccontainedwindow"></a>CContainedWindow
 
-このクラスの特殊化は、`CContainedWindowT`します。
+このクラスは `CContainedWindowT`の特殊化です。
 
 ```
 typedef CContainedWindowT<CWindow> CContainedWindow;
@@ -233,15 +233,15 @@ typedef CContainedWindowT<CWindow> CContainedWindow;
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlwin.h
+**ヘッダー:** atlwin. h
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`CContainedWindow` 特殊化した[CContainedWindowT](../../atl/reference/ccontainedwindowt-class.md)します。 基底クラスまたは特性を変更する場合を使用して、`CContainedWindowT`直接します。
+`CContainedWindow` は[CContainedWindowT](../../atl/reference/ccontainedwindowt-class.md)の特殊化です。 基底クラスまたは特徴を変更する場合は、`CContainedWindowT` を直接使用します。
 
-##  <a name="cpath"></a>  CPath
+##  <a name="cpath"></a>CPath
 
-特殊化[CPathT](../../atl/reference/cpatht-class.md)を使用して`CString`します。
+`CString`を使用した[Cpatht](../../atl/reference/cpatht-class.md)の特殊化。
 
 ```
 typedef CPathT<CString> CPath;
@@ -249,11 +249,11 @@ typedef CPathT<CString> CPath;
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlpath.h
+**ヘッダー:** atlpath .h
 
-##  <a name="cpatha"></a>  CPathA
+##  <a name="cpatha"></a>CPathA
 
-特殊化[CPathT](../../atl/reference/cpatht-class.md)を使用して`CStringA`します。
+`CStringA`を使用した[Cpatht](../../atl/reference/cpatht-class.md)の特殊化。
 
 ```
 typedef CPathT<CStringA> CPathA;
@@ -261,11 +261,11 @@ typedef CPathT<CStringA> CPathA;
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlpath.h
+**ヘッダー:** atlpath .h
 
-##  <a name="cpathw"></a>  CPathW
+##  <a name="cpathw"></a>CPathW
 
-特殊化[CPathT](../../atl/reference/cpatht-class.md)を使用して`CStringW`します。
+`CStringW`を使用した[Cpatht](../../atl/reference/cpatht-class.md)の特殊化。
 
 ```
 typedef ATL::CPathT<CStringW> CPathW;
@@ -273,27 +273,27 @@ typedef ATL::CPathT<CStringW> CPathW;
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlpath.h
+**ヘッダー:** atlpath .h
 
-##  <a name="csimplevalarray"></a>  CSimpleValArray
+##  <a name="csimplevalarray"></a>CSimpleValArray
 
-単純型を格納する配列を表します。
+単純型を格納するための配列を表します。
 
 ```
 #define CSimpleValArray CSimpleArray
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`CSimpleValArray` 作成および単純なデータ型を含む配列を管理するために提供されます。 単純な #include の define [CSimpleArray](../../atl/reference/csimplearray-class.md)します。
+`CSimpleValArray` は、単純なデータ型を含む配列を作成および管理するために用意されています。 [CSimpleArray](../../atl/reference/csimplearray-class.md)の単純な #define です。
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlsimpcoll.h
+**ヘッダー:** atl. h
 
-##  <a name="lpcurl"></a>  LPCURL
+##  <a name="lpcurl"></a>LPCURL
 
-定数へのポインター [CUrl](../../atl/reference/curl-class.md)オブジェクト。
+定数[CUrl](../../atl/reference/curl-class.md)オブジェクトへのポインター。
 
 ```
 typedef const CUrl* LPCURL;
@@ -301,11 +301,11 @@ typedef const CUrl* LPCURL;
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlutil.h
+**ヘッダー:** atlutil. h
 
-##  <a name="defaultthreadtraits"></a>  DefaultThreadTraits
+##  <a name="defaultthreadtraits"></a>DefaultThreadTraits
 
-既定のスレッドの特性クラス。
+既定のスレッド特徴クラス。
 
 ### <a name="syntax"></a>構文
 
@@ -317,17 +317,17 @@ typedef const CUrl* LPCURL;
 #endif
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-現在のプロジェクトでは、マルチ スレッドの CRT を使用する場合は、DefaultThreadTraits が CRTThreadTraits として定義されます。 それ以外の場合、Win32ThreadTraits が使用されます。
+現在のプロジェクトがマルチスレッド CRT を使用している場合、DefaultThreadTraits は CRTThreadTraits として定義されます。 それ以外の場合は、Win32ThreadTraits が使用されます。
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlbase.h
+**ヘッダー:** atlbase. h
 
-##  <a name="lpurl"></a>  LPURL
+##  <a name="lpurl"></a>LPURL
 
-ポインターを[CUrl](../../atl/reference/curl-class.md)オブジェクト。
+[CUrl](../../atl/reference/curl-class.md)オブジェクトへのポインターです。
 
 ```
 typedef CUrl* LPURL;
@@ -335,12 +335,12 @@ typedef CUrl* LPURL;
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlutil.h
+**ヘッダー:** atlutil. h
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ATL COM デスクトップ コンポーネント](../../atl/atl-com-desktop-components.md)<br/>
 [関数](../../atl/reference/atl-functions.md)<br/>
 [グローバル変数](../../atl/reference/atl-global-variables.md)<br/>
 [クラスと構造体](../../atl/reference/atl-classes.md)<br/>
-[[マクロ]](../../atl/reference/atl-macros.md)
+[マクロ](../../atl/reference/atl-macros.md)

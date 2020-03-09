@@ -8,11 +8,11 @@ helpviewer_keywords:
 - blocks, description
 ms.assetid: 1321f228-d389-40ac-b0cd-4f6e9293602b
 ms.openlocfilehash: fb9cf4400c96b588e8704e972dd29ab27f41cae9
-ms.sourcegitcommit: 6ed1bc5b26dc60a780c1fc5f2f19d57ba1dc47d8
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73144523"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856932"
 ---
 # <a name="description-blocks"></a>記述ブロック
 
@@ -212,6 +212,6 @@ reverse.exe : {\src\omega;e:\repo\backwards}retro.obj
 
 ターゲット `reverse.exe` には、依存する `retro.obj`が1つあります。 中かっこで囲まれたリストは、2つのディレクトリを指定します。 NMAKE は、まず現在のディレクトリ内の `retro.obj` を検索します。 存在しない場合は、NMAKE によって `\src\omega` ディレクトリ、`e:\repo\backwards` ディレクトリが検索されます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [NMAKE リファレンス](nmake-reference.md)
