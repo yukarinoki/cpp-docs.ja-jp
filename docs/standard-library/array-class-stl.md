@@ -97,11 +97,11 @@ helpviewer_keywords:
 - std::array [C++], swap
 ms.assetid: fdfd43a5-b2b5-4b9e-991f-93bf10fb4293
 ms.openlocfilehash: e93f5089e62956e7473c95eb6835046b5fe992bf
-ms.sourcegitcommit: 217fac22604639ebd62d366a69e6071ad5b724ac
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/19/2019
-ms.locfileid: "74189410"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78883810"
 ---
 # <a name="array-class-c-standard-library"></a>array クラス (C++ 標準ライブラリ)
 
@@ -130,7 +130,7 @@ class array;
 |[const_reference](#const_reference)|要素への定数参照の型です。|
 |[const_reverse_iterator](#const_reverse_iterator)|被制御シーケンスの定数反転反復子の型です。|
 |[difference_type](#difference_type)|2 つの要素間の距離を表す、符号付きの型です。|
-|[iterator](#iterator)|被制御シーケンスの反復子の型です。|
+|[Iterator](#iterator)|被制御シーケンスの反復子の型です。|
 |[pointer](#pointer)|要素へのポインターの型です。|
 |[reference](#reference)|要素への参照の型です。|
 |[reverse_iterator](#reverse_iterator)|被制御シーケンスの反転反復子の型です。|
@@ -157,7 +157,7 @@ class array;
 |[rbegin](#rbegin)|反転被制御シーケンスの先頭を指定します。|
 |[rend](#rend)|反転被制御シーケンスの末尾を指定します。|
 |[size](#size)|要素の数をカウントします。|
-|[swap](#swap)|2 つのコンテナーのコンテンツを交換します。|
+|[スワップ](#swap)|2 つのコンテナーのコンテンツを交換します。|
 
 |演算子|説明|
 |-|-|
@@ -166,7 +166,7 @@ class array;
 
 ## <a name="remarks"></a>コメント
 
-この型は、既定のコンストラクター `array()` と既定代入演算子 `operator=` を持ち、`aggregate` の要件を満たします。 そのため、`array<Ty, N>` 型のオブジェクトは、集計初期化子を使用して初期化できます。 次に例を示します。
+この型は、既定のコンストラクター `array()` と既定代入演算子 `operator=` を持ち、`aggregate` の要件を満たします。 そのため、`array<Ty, N>` 型のオブジェクトは、集計初期化子を使用して初期化できます。 たとえば、次のように入力します。
 
 ```cpp
 array<int, 4> ai = { 1, 2, 3 };
@@ -176,7 +176,7 @@ array<int, 4> ai = { 1, 2, 3 };
 
 ## <a name="requirements"></a>要件
 
-**Header:** \<array>
+**ヘッダー:** \<配列 >
 
 **名前空間:** std
 
@@ -1037,7 +1037,7 @@ constexpr size_type max_size() const;
 
 ### <a name="remarks"></a>コメント
 
-このメンバー関数は、`N` を返します。
+このメンバー関数は、 `N`を返します。
 
 ### <a name="example"></a>例
 
@@ -1410,7 +1410,7 @@ constexpr size_type size() const;
 
 ### <a name="remarks"></a>コメント
 
-このメンバー関数は、`N` を返します。
+このメンバー関数は、 `N`を返します。
 
 ### <a name="example"></a>例
 

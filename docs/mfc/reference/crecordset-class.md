@@ -131,11 +131,11 @@ helpviewer_keywords:
 - CRecordset [MFC], m_strSort
 ms.assetid: dd89a21d-ef39-4aab-891b-1e373d67c855
 ms.openlocfilehash: 1ebdb18254171d28b5d5e02367596b79142df284
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73626190"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78871654"
 ---
 # <a name="crecordset-class"></a>CRecordset クラス
 
@@ -151,13 +151,13 @@ class CRecordset : public CObject
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|名|説明|
+|Name|説明|
 |----------|-----------------|
 |[CRecordset:: CRecordset](#crecordset)|`CRecordset` オブジェクトを構築します。 派生クラスは、このクラスを呼び出すコンストラクターを提供する必要があります。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|名|説明|
+|Name|説明|
 |----------|-----------------|
 |[CRecordset:: AddNew](#addnew)|新しいレコードを追加するための準備をします。 `Update` を呼び出して、追加を完了します。|
 |[CRecordset:: CanAppend](#canappend)|`AddNew` メンバー関数を使用してレコードセットに新しいレコードを追加できる場合は、0以外の値を返します。|
@@ -217,11 +217,11 @@ class CRecordset : public CObject
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
-|名|説明|
+|Name|説明|
 |----------|-----------------|
-|[CRecordset:: m_hstmt](#m_hstmt)|レコードセットの ODBC ステートメントハンドルを格納します。 「`HSTMT`」と入力します。|
-|[CRecordset:: m_nFields](#m_nfields)|レコードセットのフィールドデータメンバーの数を格納します。 「`UINT`」と入力します。|
-|[CRecordset:: m_nParams](#m_nparams)|レコードセット内のパラメーターデータメンバーの数を格納します。 「`UINT`」と入力します。|
+|[CRecordset:: m_hstmt](#m_hstmt)|レコードセットの ODBC ステートメントハンドルを格納します。 「`HSTMT`.|
+|[CRecordset:: m_nFields](#m_nfields)|レコードセットのフィールドデータメンバーの数を格納します。 「`UINT`.|
+|[CRecordset:: m_nParams](#m_nparams)|レコードセット内のパラメーターデータメンバーの数を格納します。 「`UINT`.|
 |[CRecordset:: m_pDatabase](#m_pdatabase)|レコードセットをデータソースに接続するために使用する `CDatabase` オブジェクトへのポインターを格納します。|
 |[CRecordset:: m_strFilter](#m_strfilter)|構造化照会言語 (SQL) `WHERE` 句を指定する `CString` が含まれています。 特定の条件を満たすレコードのみを選択するためのフィルターとして使用されます。|
 |[CRecordset:: m_strSort](#m_strsort)|SQL `ORDER BY` 句を指定する `CString` が含まれています。 レコードの並べ替え方法を制御するために使用します。|
@@ -257,7 +257,7 @@ class CRecordset : public CObject
 
 `CRecordset`
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afxdb.h
 
@@ -269,7 +269,7 @@ class CRecordset : public CObject
 virtual void AddNew();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 新しく追加されたレコードを表示するには、 [Requery](#requery)メンバー関数を呼び出す必要があります。 レコードのフィールドは、最初は Null になります。 (データベース用語では、Null は "値がありません" を意味し、でC++は null と同じではありません)。操作を完了するには、 [Update](#update)メンバー関数を呼び出す必要があります。 `Update` によって、データソースへの変更が保存されます。
 
@@ -318,7 +318,7 @@ BOOL CanBookmark() const;
 
 レコードセットがブックマークをサポートしている場合は0以外の。それ以外の場合は0です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 この関数は、 [Open](#open)メンバー関数の*dwOptions*パラメーターの `CRecordset::useBookmarks` オプションに依存しません。 指定した ODBC ドライバーおよびカーソルの種類でブックマークがサポートされているかどうかを示す `CanBookmark` です。 サポートされている場合は、ブックマークを使用できるようにするかどうかを `CRecordset::useBookmarks` に示します。
 
@@ -335,7 +335,7 @@ BOOL CanBookmark() const;
 void Cancel();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 MFC ODBC クラスで非同期処理が使用されなくなったことに注意してください。非同期操作を実行するには、ODBC API 関数 `SQLSetConnectOption`を直接呼び出す必要があります。 詳細については、『 *ODBC SDK プログラマーズガイド』* の「非同期関数の実行」を参照してください。
 
@@ -347,7 +347,7 @@ MFC ODBC クラスで非同期処理が使用されなくなったことに注�
 void CancelUpdate();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 > [!NOTE]
 >  このメンバー関数は、バルク行フェッチを使用しているレコードセットには適用されません。このようなレコードセットは、`Edit`、`AddNew`、または `Update`を呼び出すことができないためです。 バルク行フェッチの詳細については、「 [レコードセット: バルク行フェッチ (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)」を参照してください。
@@ -380,7 +380,7 @@ BOOL CanScroll() const;
 
 レコードセットでスクロールが許可されている場合は0以外の。それ以外の場合は0です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 スクロールの詳細については、「[レコードセット: スクロール (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)」を参照してください。
 
@@ -396,7 +396,7 @@ BOOL CanTransact() const;
 
 レコードセットでトランザクションが許可されている場合は0以外の。それ以外の場合は0です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 詳細については、「[トランザクション (ODBC)](../../data/odbc/transaction-odbc.md)」を参照してください。
 
@@ -412,7 +412,7 @@ BOOL CanUpdate() const;
 
 レコードセットを更新できる場合は0以外の。それ以外の場合は0です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 基になるデータソースが読み取り専用の場合、またはレコードセットを開いたときに*dwOptions*パラメーターに `CRecordset::readOnly` を指定した場合は、レコードセットが読み取り専用になることがあります。
 
@@ -429,7 +429,7 @@ virtual void CheckRowsetError(RETCODE nRetCode);
 *nRetCode*<br/>
 ODBC API 関数のリターンコード。 詳細については、「解説」を参照してください。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 この仮想メンバー関数は、レコードがフェッチされるときに発生するエラーを処理します。これは、バルク行フェッチ時に役立ちます。 `CheckRowsetError` をオーバーライドして、独自のエラー処理を実装することもできます。
 
@@ -442,7 +442,7 @@ ODBC API 関数のリターンコード。 詳細については、「解説」�
 |SQL_NO_DATA_FOUND|結果セットのすべての行がフェッチされました。|
 |SQL_ERROR|関数が失敗しました。 `SQLError`を呼び出すことによって、追加情報を取得できます。|
 |SQL_INVALID_HANDLE|無効な環境ハンドル、接続ハンドル、またはステートメントハンドルが原因で関数が失敗しました。 これは、プログラミングエラーを示します。 `SQLError`から追加情報を入手することはできません。|
-|SQL_STILL_EXECUTING|非同期的に開始された関数はまだ実行されています。 既定では、MFC はこの値を `CheckRowsetError`に渡さないことに注意してください。MFC では、SQL_STILL_EXECUTING が返されなくなるまで、`SQLExtendedFetch` の呼び出しを続けます。|
+|SQL_STILL_EXECUTING|非同期的に開始された関数はまだ実行されています。 既定では、MFC はこの値を `CheckRowsetError`に渡さないことに注意してください。MFC は、SQL_STILL_EXECUTING が返されなくなるまで `SQLExtendedFetch` を呼び出し続けます。|
 
 `SQLError`の詳細については、Windows SDK を参照してください。 バルク行フェッチの詳細については、「 [レコードセット: バルク行フェッチ (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)」を参照してください。
 
@@ -454,7 +454,7 @@ ODBC API 関数のリターンコード。 詳細については、「解説」�
 virtual void Close();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 レコードセットに割り当てられたフレームワークの ODBC HSTMT とすべてのメモリの割り当てが解除されます。 通常、`Close`を呼び出した後、 C++レコードセットオブジェクトが**new**で割り当てられている場合は、レコードセットオブジェクトを削除します。
 
@@ -477,7 +477,7 @@ CRecordset(CDatabase* pDatabase = NULL);
 *pDatabase*<br/>
 `CDatabase` オブジェクトへのポインターまたは NULL 値を格納します。 NULL ではなく、`CDatabase` オブジェクトの `Open` メンバー関数が呼び出されていない場合は、それをデータソースに接続するために、レコードセットは独自の `Open` 呼び出しの間に、その関数を開こうとします。 NULL を渡した場合、`CDatabase` オブジェクトが作成され、ClassWizard でレコードセットクラスを派生させるときに指定したデータソース情報を使用して接続されます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 `CRecordset` を直接使用することも、`CRecordset`からアプリケーション固有のクラスを派生させることもできます。 ClassWizard を使用して、レコードセットクラスを派生させることができます。
 
@@ -498,7 +498,7 @@ CRecordset(CDatabase* pDatabase = NULL);
 virtual void Delete();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 削除が正常に完了すると、レコードセットのフィールドデータメンバーが Null 値に設定され、削除されたレコードから移動するために、`Move` 関数のいずれかを明示的に呼び出す必要があります。 削除されたレコードから移動すると、それに戻ることはできません。 データソースでトランザクションがサポートされている場合は、トランザクションの一部 `Delete` 呼び出しを行うことができます。 詳細については、「[トランザクション (ODBC)](../../data/odbc/transaction-odbc.md)」を参照してください。
 
@@ -529,7 +529,7 @@ virtual void DoBulkFieldExchange(CFieldExchange* pFX);
 *.Cer*<br/>
 [CFieldExchange](../../mfc/reference/cfieldexchange-class.md)オブジェクトへのポインター。 フレームワークでは、フィールド交換操作のコンテキストを指定するために、このオブジェクトが既に設定されています。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 バルク行フェッチが実装されている場合、フレームワークはこのメンバー関数を呼び出して、データソースからレコードセットオブジェクトにデータを自動的に転送します。 また `DoBulkFieldExchange` は、パラメーターデータメンバー (存在する場合) を、レコードセットの選択に使用する SQL ステートメント文字列のパラメータープレースホルダーにバインドします。
 
@@ -557,7 +557,7 @@ virtual void DoFieldExchange(CFieldExchange* pFX);
 *.Cer*<br/>
 [CFieldExchange](../../mfc/reference/cfieldexchange-class.md)オブジェクトへのポインター。 フレームワークでは、フィールド交換操作のコンテキストを指定するために、このオブジェクトが既に設定されています。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 バルク行フェッチが実装されていない場合、フレームワークはこのメンバー関数を呼び出して、レコードセットオブジェクトのフィールドデータメンバーと、データソースの現在のレコードの対応する列との間でデータを自動的に交換します。 また `DoFieldExchange` は、パラメーターデータメンバー (存在する場合) を、レコードセットの選択に使用する SQL ステートメント文字列のパラメータープレースホルダーにバインドします。
 
@@ -586,7 +586,7 @@ RFX 関数の詳細については、「[レコードフィールドエクスチ
 virtual void Edit();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 `Edit`を呼び出した後、フィールドのデータメンバーを変更するには、その値を直接リセットします。 この操作は、後で[Update](#update)メンバー関数を呼び出して、変更内容をデータソースに保存すると完了します。
 
@@ -621,7 +621,7 @@ BOOL FlushResultSet();
 
 取得する結果セットの数が多い場合は0以外。それ以外の場合は0です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 現在の結果セットでカーソルを完全に終了した場合にのみ、`FlushResultSet` を呼び出す必要があります。 `FlushResultSet`を呼び出して次の結果セットを取得すると、その結果セットでカーソルが有効にならないことに注意してください。`FlushResultSet`を呼び出した後、 [MoveNext](#movenext)メンバー関数を呼び出す必要があります。
 
@@ -652,7 +652,7 @@ void GetBookmark(CDBVariant& varBookmark);
 *varBookmark*<br/>
 現在のレコードのブックマークを表す[CDBVariant](../../mfc/reference/cdbvariant-class.md)オブジェクトへの参照。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 レコードセットでブックマークがサポートされているかどうかを判断するには、 [Canbookmark](#canbookmark)を呼び出します。 サポートされている場合にブックマークを使用できるようにするには、 [Open](#open)メンバー関数の*dwOptions*パラメーターで `CRecordset::useBookmarks` オプションを設定する必要があります。
 
@@ -678,7 +678,7 @@ virtual CString GetDefaultConnect();
 
 既定の接続文字列を含む `CString` です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 フレームワークは、このメンバー関数を呼び出して、レコードセットの基になるデータソースの既定の接続文字列を取得します。 ClassWizard では、テーブルと列に関する情報を取得するために、ClassWizard で使用するのと同じデータソースを識別することで、この関数を実装しています。 アプリケーションの開発中にこの既定の接続を利用すると便利な場合があります。 ただし、既定の接続は、アプリケーションのユーザーには適していない場合があります。 その場合は、ClassWizard のバージョンを破棄して、この関数を再実装する必要があります。 接続文字列の詳細については、「[データソース (ODBC)](../../data/odbc/data-source-odbc.md)」を参照してください。
 
@@ -694,7 +694,7 @@ virtual CString GetDefaultSQL();
 
 既定の SQL ステートメントを含む `CString` です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 フレームワークは、このメンバー関数を呼び出して、レコードセットの基になる既定の SQL ステートメントを取得します。 テーブル名または SQL **SELECT**ステートメントを指定できます。
 
@@ -739,7 +739,7 @@ void GetFieldValue(
 *varValu*e フィールドの値を格納する[CDBVariant](../../mfc/reference/cdbvariant-class.md)オブジェクトへの参照。
 
 *nFieldType*<br/>
-フィールドの ODBC C データ型。 既定値の DEFAULT_FIELD_TYPE を使用すると、次の表に基づいて、`GetFieldValue` によって SQL データ型の C データ型が決定されます。 それ以外の場合は、データ型を直接指定するか、互換性のあるデータ型を選択することができます。たとえば、任意のデータ型を SQL_C_CHAR に格納できます。
+フィールドの ODBC C データ型。 DEFAULT_FIELD_TYPE の既定値を使用すると、次の表に基づいて、SQL データ型の C データ型の `GetFieldValue` を強制的に決定します。 それ以外の場合は、データ型を直接指定するか、互換性のあるデータ型を選択することができます。たとえば、任意のデータ型を SQL_C_CHAR に格納できます。
 
 |C データ型|SQL データ型|
 |-----------------|-------------------|
@@ -761,7 +761,7 @@ ODBC データ型の詳細については、Windows SDK の付録 D の「SQL �
 *strValue*<br/>
 フィールドのデータ型に関係なく、テキストに変換されたフィールドの値を格納する[CString](../../atl-mfc-shared/reference/cstringt-class.md)オブジェクトへの参照。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 名前またはインデックスを使用して、フィールドを検索できます。 フィールド値は、`CDBVariant` オブジェクトまたは `CString` オブジェクトのいずれかに格納できます。
 
@@ -772,7 +772,7 @@ ODBC データ型の詳細については、Windows SDK の付録 D の「SQL �
 > [!NOTE]
 >  `CRecordset`から派生せずにレコードセットオブジェクトを宣言する場合は、ODBC カーソルライブラリを読み込まないでください。 カーソルライブラリでは、レコードセットに少なくとも1つのバインドされた列が必要です。ただし、`CRecordset` を直接使用する場合は、どの列もバインドされません。 メンバー関数[cdatabase:: OpenEx](../../mfc/reference/cdatabase-class.md#openex)および[CDatabase:: Open](../../mfc/reference/cdatabase-class.md#open)は、カーソルライブラリが読み込まれるかどうかを制御します。
 
-`GetFieldValue` は、ODBC API 関数 `SQLGetData`を呼び出します。 ドライバーがフィールド値の実際の長さの SQL_NO_TOTAL 値を出力した場合、`GetFieldValue` は例外をスローします。 `SQLGetData`の詳細については、Windows SDK を参照してください。
+`GetFieldValue` は、ODBC API 関数 `SQLGetData`を呼び出します。 ドライバーがフィールド値の実際の長さに SQL_NO_TOTAL 値を出力した場合、`GetFieldValue` は例外をスローします。 `SQLGetData`の詳細については、Windows SDK を参照してください。
 
 ### <a name="example"></a>例
 
@@ -797,7 +797,7 @@ short GetODBCFieldCount() const;
 
 レコードセット内のフィールドの数。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 レコードセットの作成の詳細については、「[レコードセット: レコードセットの作成と終了 (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)」を参照してください。
 
@@ -826,7 +826,7 @@ void GetODBCFieldInfo(
 *nIndex*<br/>
 フィールドの0から始まるインデックス。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 関数の1つのバージョンでは、名前でフィールドを検索できます。 もう1つのバージョンでは、インデックスを使用してフィールドを検索できます。
 
@@ -846,7 +846,7 @@ long GetRecordCount() const;
 
 レコードセット内のレコードの数。レコードセットにレコードが含まれていない場合は0。レコード数を特定できない場合は-1。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 > [!CAUTION]
 >  レコード数は、ユーザーがレコードを移動したときに表示されている最も大きい番号のレコードである "high watermark" として維持されます。 レコードの合計数は、ユーザーが最後のレコードを超えた後にのみ認識されます。 パフォーマンス上の理由から、`MoveLast`を呼び出すと、カウントは更新されません。 レコードを自分でカウントするには、`IsEOF` が0以外の値を返すまで `MoveNext` を繰り返し呼び出します。 `CRecordset:AddNew` と `Update` を使用してレコードを追加すると、カウントが増加します。`CRecordset::Delete` を使用してレコードを削除すると、カウントが減少します。
@@ -863,7 +863,7 @@ DWORD GetRowsetSize() const;
 
 特定のフェッチ中に取得する行の数。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 バルク行フェッチを使用している場合、レコードセットを開いたときの既定の行セットサイズは25です。それ以外の場合は1になります。
 
@@ -883,7 +883,7 @@ DWORD GetRowsFetched() const;
 
 特定のフェッチの後にデータソースから取得された行の数。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 これは、バルク行フェッチを実装している場合に便利です。 行セットのサイズは通常、フェッチから取得する行の数を示します。ただし、レコードセット内の行の合計数は、行セットで取得される行の数にも影響します。 たとえば、レコードセットの行セットサイズが4に設定されたレコードが10個ある場合、`MoveNext` を呼び出すことによってレコードセットをループ処理すると、最終的な行セットには2つのレコードしか含まれません。
 
@@ -912,11 +912,11 @@ WORD GetRowStatus(WORD wRow) const;
 
 行の状態の値です。 詳細については、「解説」を参照してください。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 `GetRowStatus` は、データソースから最後に取得された行の状態を変更したか、 *Wrow*に対応する行がフェッチされなかったかを示す値を返します。 次の表は、可能性のある戻り値の一覧です。
 
-|状態の値|説明|
+|ステータス値|説明|
 |------------------|-----------------|
 |SQL_ROW_SUCCESS|行は変更されません。|
 |SQL_ROW_UPDATED|行が更新されました。|
@@ -938,9 +938,9 @@ void GetStatus(CRecordsetStatus& rStatus) const;
 ### <a name="parameters"></a>パラメーター
 
 *rStatus*<br/>
-`CRecordsetStatus` オブジェクトへの参照。 詳細については、次の「解説」を参照してください。
+`CRecordsetStatus` オブジェクトへの参照です。 詳細については、次の「解説」を参照してください。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 `CRecordset` インデックスの追跡を試みますが、状況によってはこれが不可能な場合があります。 説明については、「 [GetRecordCount](#getrecordcount) 」を参照してください。
 
@@ -972,7 +972,7 @@ const CString& GetSQL() const;
 
 SQL ステートメントを含む `CString` への**const**参照。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 通常、これは SQL **SELECT**ステートメントです。 `GetSQL` によって返される文字列は読み取り専用です。
 
@@ -993,7 +993,7 @@ const CString& GetTableName() const;
 
 レコードセットがテーブルに基づいている場合は、テーブル名を含む `CString` への**定数**参照。それ以外の場合は、空の文字列。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 `GetTableName` は、レコードセットがテーブルに基づいていて、複数のテーブルまたは定義済みのクエリ (ストアドプロシージャ) の結合ではない場合にのみ有効です。 名前は読み取り専用です。
 
@@ -1012,7 +1012,7 @@ BOOL IsBOF() const;
 
 レコードセットにレコードが含まれていない場合、または最初のレコードの前に後方にスクロールした場合は0以外の。それ以外の場合は0です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 レコードごとにスクロールしてレコードセットの最初のレコードの前に移動したかどうかを調べるには、このメンバー関数を呼び出します。 また、`IsBOF` を `IsEOF` と共に使用して、レコードセットにレコードが含まれているか、空であるかを判断することもできます。 `Open`を呼び出した直後、レコードセットにレコードが含まれていない場合、`IsBOF` は0以外の値を返します。少なくとも1つのレコードを含むレコードセットを開くと、最初のレコードが現在のレコードになり、`IsBOF` 0 が返されます。
 
@@ -1036,11 +1036,11 @@ BOOL IsDeleted() const;
 
 レコードセットが削除されたレコードに配置されている場合は0以外の。それ以外の場合は0です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 レコードまでスクロールし、`IsDeleted` が TRUE (0 以外) を返した場合は、他のレコードセット操作を実行する前に、別のレコードまでスクロールする必要があります。
 
-`IsDeleted` の結果は、レコードセットの種類、レコードセットが更新可能かどうか、レコードセットを開いたときに `CRecordset::skipDeletedRecords` オプションを指定したかどうか、ドライバーが削除されたレコードをパックしているかどうか、および複数の要素があるかどうかなど、さまざまな要因によって異なります。ユーザ.
+`IsDeleted` の結果は、レコードセットの種類、レコードセットが更新可能かどうか、レコードセットを開いたときに [`CRecordset::skipDeletedRecords`] オプションを指定したかどうか、ドライバーが削除されたレコードをパックしているかどうか、複数のユーザーがいるかどうかなど、さまざまな要因によって異なります。
 
 `CRecordset::skipDeletedRecords` とドライバーパッキングの詳細については、「 [Open](#open) member 関数」を参照してください。
 
@@ -1059,7 +1059,7 @@ BOOL IsEOF() const;
 
 レコードセットにレコードが含まれていない場合、または最後のレコードを超えてスクロールした場合は0以外。それ以外の場合は0です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 レコードごとにスクロールしてレコードセットの最後のレコードを超えたかどうかを確認するには、このメンバー関数を呼び出します。 `IsEOF` を使用して、レコードセットにレコードが含まれているか、空であるかどうかを確認することもできます。 `Open`を呼び出した直後、レコードセットにレコードが含まれていない場合、`IsEOF` は0以外の値を返します。 少なくとも1つのレコードを含むレコードセットを開くと、最初のレコードが現在のレコードになり、`IsEOF` 0 が返されます。
 
@@ -1086,7 +1086,7 @@ BOOL IsFieldDirty(void* pv);
 
 `AddNew` または `Edit`を呼び出した後に指定されたフィールドデータメンバーが変更された場合は0以外の。それ以外の場合は0です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 `CRecordset` の[更新](#update)メンバー関数 (`Edit` または `AddNew`) の呼び出しによって現在のレコードが更新されると、すべてのダーティフィールドデータメンバーのデータがデータソースのレコードに転送されます。
 
@@ -1116,7 +1116,7 @@ BOOL IsFieldNull(void* pv);
 
 指定されたフィールドデータメンバーに Null のフラグが設定されている場合は0以外の値。それ以外の場合は0です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 このメンバー関数を呼び出して、レコードセットの指定したフィールドデータメンバーに Null としてフラグが設定されているかどうかを確認します。 (データベース用語では、Null は "値がありません" を意味し、でC++は null と同じではありません)。フィールドデータメンバーに Null のフラグが設定されている場合、そのメンバーは、値がない現在のレコードの列として解釈されます。
 
@@ -1138,7 +1138,7 @@ BOOL IsFieldNullable(void* pv);
 *pv*<br/>
 状態を確認するフィールドデータメンバーへのポインター。または、いずれかのフィールドが Null 値に設定できるかどうかを判断する場合は NULL。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 このメンバー関数を呼び出して、指定されたフィールドデータメンバーが "nullable" である (Null 値に設定できる) かどうかを確認します。C++ Null は null と同じではありません。これは、データベース用語では、"値がない" ことを意味します。
 
@@ -1177,7 +1177,7 @@ BOOL IsOpen() const;
 
 レコードセットに関連付けられた、HSTMT 型の ODBC ステートメントデータ構造体を表すハンドルを格納します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 ODBC データソースに対する各クエリは、HSTMT に関連付けられています。
 
@@ -1190,7 +1190,7 @@ ODBC データソースに対する各クエリは、HSTMT に関連付けられ
 
 レコードセットクラスのフィールドデータメンバーの数を格納します。これは、データソースからレコードセットによって選択された列の数です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 レコードセットクラスのコンストラクターは、正しい数値を使用して `m_nFields` を初期化する必要があります。 バルク行フェッチを実装していない場合、ClassWizard では、レコードセットクラスを宣言するときに、この初期化が書き込まれます。 また、手動で書き込むこともできます。
 
@@ -1211,9 +1211,9 @@ ODBC データソースに対する各クエリは、HSTMT に関連付けられ
 
 Recordset クラスのパラメーターデータメンバーの数を格納します。つまり、レコードセットのクエリで渡されるパラメーターの数です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-レコードセットクラスにパラメーターデータメンバーが含まれている場合、クラスのコンストラクターは、正しい数値を使用して `m_nParams` を初期化する必要があります。 `m_nParams` の値の既定値は0です。 パラメーターデータメンバー (手動で行う必要があります) を追加する場合は、パラメーターの数を反映するために、クラスコンストラクターに初期化を手動で追加する必要もあります (これは、`m_strFilter` のプレースホルダーの数と少なくとも同じである必要があり `m_strSort`文字列)。
+レコードセットクラスにパラメーターデータメンバーが含まれている場合、クラスのコンストラクターは、正しい数値を使用して `m_nParams` を初期化する必要があります。 `m_nParams` の値の既定値は0です。 パラメーターデータメンバー (手動で行う必要があります) を追加する場合は、パラメーターの数を反映するために、クラスコンストラクターに初期化を手動で追加する必要もあります (これは、`m_strFilter` または `m_strSort` 文字列の ' ' プレースホルダーの数と少なくとも同じである必要があります)。
 
 フレームワークは、レコードセットのクエリをパラメーター化するときに、この数値を使用します。
 
@@ -1228,7 +1228,7 @@ Recordset クラスのパラメーターデータメンバーの数を格納し�
 
 レコードセットをデータソースに接続するために使用する `CDatabase` オブジェクトへのポインターを格納します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 この変数は2つの方法で設定されます。 通常は、レコードセットオブジェクトを構築するときに、既に接続されている `CDatabase` オブジェクトへのポインターを渡します。 代わりに NULL を渡すと、`CRecordset` によって `CDatabase` オブジェクトが作成され、接続されます。 どちらの場合も、`CRecordset` によってこの変数にポインターが格納されます。
 
@@ -1238,7 +1238,7 @@ Recordset クラスのパラメーターデータメンバーの数を格納し�
 
 レコードセットオブジェクトを作成した後、その `Open` メンバー関数を呼び出す前に、このデータメンバーを使用して、SQL **WHERE**句を含む `CString` を格納します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 レコードセットは、この文字列を使用して、`Open` または `Requery` の呼び出し時に選択したレコードを制限 (またはフィルター) します。 これは、"カリフォルニアに基づくすべての販売員" ("state = CA") など、レコードのサブセットを選択する場合に便利です。 **WHERE**句の ODBC SQL 構文は、
 
@@ -1258,7 +1258,7 @@ SQL の**WHERE**句の詳細については、「 [sql](../../data/odbc/sql.md)�
 
 レコードセットオブジェクトを作成した後、その `Open` メンバー関数を呼び出す前に、このデータメンバーを使用して、SQL **ORDER by**句を含む `CString` を格納します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 レコードセットは、この文字列を使用して、`Open` または `Requery` の呼び出し時に選択したレコードを並べ替えます。 この機能を使用して、1つまたは複数の列のレコードセットを並べ替えることができます。 **ORDER by**句の ODBC SQL 構文は、
 
@@ -1292,7 +1292,7 @@ virtual void Move(
 *wFetchType*<br/>
 `Move` がフェッチする行セットを決定します。 詳細については、「解説」を参照してください。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 *NRows*に値0を渡すと、`Move` によって現在のレコードが更新されます。`Move` により、現在の `AddNew` または `Edit` モードが終了し、`AddNew` または `Edit` が呼び出される前に現在のレコードの値が復元されます。
 
@@ -1316,7 +1316,7 @@ virtual void Move(
 |SQL_FETCH_BOOKMARK|*NRows*に対応するブックマーク値を持つ行から始まる行セット。|[SetBookmark](#setbookmark)|
 
 > [!NOTE]
->  前方参照専用のレコードセットの場合、`Move` は*wFetchType*に対して SQL_FETCH_NEXT の値を指定した場合にのみ有効です。
+>  前方参照専用のレコードセットでは、`Move` は*wFetchType*の値 SQL_FETCH_NEXT でのみ有効です。
 
 > [!CAUTION]
 >  レコードセットにレコードがない場合、`Move` を呼び出すと例外がスローされます。 レコードセットにレコードがあるかどうかを確認するには、 [IsBOF](#isbof)と[IsEOF](#iseof)を呼び出します。
@@ -1341,7 +1341,7 @@ virtual void Move(
 void MoveFirst();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 バルク行フェッチが実装されているかどうかにかかわらず、これは常にレコードセットの最初のレコードになります。
 
@@ -1373,7 +1373,7 @@ void MoveFirst();
 void MoveLast();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 バルク行フェッチを実装していない場合、レコードセットの行セットサイズは1であるため、`MoveLast` は単にレコードセットの最後のレコードに移動します。
 
@@ -1403,7 +1403,7 @@ void MoveLast();
 void MoveNext();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 バルク行フェッチを実装していない場合、レコードセットの行セットサイズは1であるため、`MoveNext` は単に次のレコードに移動します。
 
@@ -1433,7 +1433,7 @@ void MoveNext();
 void MovePrev();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 バルク行フェッチを実装していない場合、レコードセットの行セットサイズは1であるため、`MovePrev` は単に前のレコードに移動します。
 
@@ -1471,7 +1471,7 @@ virtual void OnSetOptions(HSTMT hstmt);
 *hstmt*<br/>
 オプションを設定する ODBC ステートメントの HSTMT です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 `OnSetOptions` を呼び出して、指定した ODBC ステートメントのオプション (選択時に使用) を設定します。 フレームワークは、このメンバー関数を呼び出して、レコードセットの初期オプションを設定します。 `OnSetOptions` は、スクロール可能なカーソルおよびカーソルの同時実行に対するデータソースのサポートを決定し、それに応じてレコードセットのオプションを設定します。 (`OnSetOptions` は選択操作に使用されるのに対し、`OnSetUpdateOptions` は更新操作に使用されます)。
 
@@ -1492,7 +1492,7 @@ virtual void OnSetUpdateOptions(HSTMT hstmt);
 *hstmt*<br/>
 オプションを設定する ODBC ステートメントの HSTMT です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 `OnSetUpdateOptions` を呼び出して、指定した ODBC ステートメントのオプション (update で使用) を設定します。 このメンバー関数は、レコードセット内のレコードを更新するための HSTMT を作成した後に、フレームワークによって呼び出されます。 (`OnSetOptions` は選択操作に使用されるのに対し、`OnSetUpdateOptions` は更新操作に使用されます)。`OnSetUpdateOptions` は、スクロール可能なカーソルおよびカーソルの同時実行に対するデータソースのサポートを決定し、それに応じてレコードセットのオプションを設定します。
 
@@ -1514,7 +1514,7 @@ virtual BOOL Open(
 ### <a name="parameters"></a>パラメーター
 
 *Noて Type*<br/>
-既定値の AFX_DB_USE_DEFAULT_TYPE をそのまま使用するか、`enum OpenType`の次のいずれかの値を使用します。
+既定値の AFX_DB_USE_DEFAULT_TYPE を受け入れるか、`enum OpenType`の次のいずれかの値を使用します。
 
 - 双方向スクロールを使用してレコードセットを `CRecordset::dynaset` します。 レコードのメンバーシップおよび順序は、レコードセットを開いたときに決定されますが、他のユーザーによるデータ値の変更は、フェッチ操作後に表示されます。 ダイナセットは、キーセット ドリブン レコードセットとも呼ばれます。
 
@@ -1576,7 +1576,7 @@ virtual BOOL Open(
 
 `CRecordset` オブジェクトが正常に開かれた場合は0以外の場合は。[CDatabase:: Open](../../mfc/reference/cdatabase-class.md#open) (呼び出された場合) が0を返す場合は0。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 レコードセットによって定義されたクエリを実行するには、このメンバー関数を呼び出す必要があります。 `Open`を呼び出す前に、レコードセットオブジェクトを作成する必要があります。
 
@@ -1631,7 +1631,7 @@ void RefreshRowset(
 *wLockType*<br/>
 更新後に行をロックする方法を示す値。 詳細については、「解説」を参照してください。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 *Wrow*に値0を渡すと、行セット内のすべての行が更新されます。
 
@@ -1659,7 +1659,7 @@ virtual BOOL Requery();
 
 レコードセットが正常に再構築された場合は0以外の場合は。それ以外の場合は0です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 いくつかのレコードが返された場合、最初のレコードが現在のレコードになります。
 
@@ -1691,7 +1691,7 @@ void SetAbsolutePosition(long nRows);
 *nRows*<br/>
 レコードセット内の現在のレコードの、1から始まる序数の位置。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 `SetAbsolutePosition` は、この序数位置に基づいて現在のレコードポインターを移動します。
 
@@ -1703,7 +1703,7 @@ ODBC レコードセットの場合、絶対位置の設定1はレコードセ�
 負の値を `SetAbsolutePosition`に渡すこともできます。 この場合、レコードセットの位置はレコードセットの末尾から評価されます。 たとえば、`SetAbsolutePosition( -1 )` は、現在のレコードポインターをレコードセット内の最後のレコードに移動します。
 
 > [!NOTE]
->  絶対位置は、サロゲートレコード番号として使用するためのものではありません。 ブックマークは、前のレコードが削除されたときにレコードの位置が変更されるため、指定した位置に保持して返すことをお勧めします。 また、レコードセットが再作成された場合、特定のレコードの絶対位置が同じであることを保証することはできません。これは、レコードセット内の個々のレコードの順序が、SQL ステートメントで Order BY を使用して作成されている場合を除きます。句。
+>  絶対位置は、サロゲートレコード番号として使用するためのものではありません。 ブックマークは、前のレコードが削除されたときにレコードの位置が変更されるため、指定した位置に保持して返すことをお勧めします。 また、レコードセットが再作成された場合、特定のレコードの絶対位置が同じであることを保証することはできません。これは、レコードセット内の個々のレコードの順序が、 **ORDER BY**句を使用して SQL ステートメントで作成されている場合を除き、そのレコードが確実に再作成されるためです。
 
 レコードセットナビゲーションとブックマークの詳細については、「[レコードセット: スクロール (odbc)](../../data/odbc/recordset-scrolling-odbc.md) 」および「[レコードセット: ブックマークと絶対位置 (odbc)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)」を参照してください。
 
@@ -1720,7 +1720,7 @@ void SetBookmark(const CDBVariant& varBookmark);
 *varBookmark*<br/>
 特定のレコードのブックマーク値を格納している[CDBVariant](../../mfc/reference/cdbvariant-class.md)オブジェクトへの参照。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 レコードセットでブックマークがサポートされているかどうかを判断するには、 [Canbookmark](#canbookmark)を呼び出します。 サポートされている場合にブックマークを使用できるようにするには、 [Open](#open)メンバー関数の*dwOptions*パラメーターで `CRecordset::useBookmarks` オプションを設定する必要があります。
 
@@ -1750,14 +1750,14 @@ void SetFieldDirty(void* pv, BOOL bDirty = TRUE);
 *bDirty*<br/>
 フィールドデータメンバーに "ダーティ" としてフラグを設定する場合は TRUE (変更された場合)。 それ以外の場合は、フィールドデータメンバーに "clean" (変更なし) のフラグを設定する場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 フィールドを変更せずにマークすると、フィールドが更新されず、SQL トラフィックが少なくなります。
 
 > [!NOTE]
 >  このメンバー関数は、バルク行フェッチを使用しているレコードセットには適用されません。 バルク行フェッチを実装している場合、`SetFieldDirty` によってアサーションが失敗します。 バルク行フェッチの詳細については、「 [レコードセット: バルク行フェッチ (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)」を参照してください。
 
-フレームワークは、変更されたフィールドのデータメンバーを、レコードフィールドエクスチェンジ (RFX) メカニズムによってデータソースのレコードに書き込まれるようにマークします。 フィールドの値を変更すると、通常はダーティフィールドが自動的にダーティに設定されるため、`SetFieldDirty` を自分で呼び出す必要はほとんどありませんが、フィールドデータの値に関係なく、明示的に列が更新または挿入されるようにすることが必要になる場合があります。レプリカ.
+フレームワークは、変更されたフィールドのデータメンバーを、レコードフィールドエクスチェンジ (RFX) メカニズムによってデータソースのレコードに書き込まれるようにマークします。 フィールドの値を変更すると、通常はダーティフィールドが自動的にダーティに設定されるため、`SetFieldDirty` を自分で呼び出す必要はほとんどありませんが、フィールドデータメンバー内の値に関係なく、明示的に列が更新または挿入されるようにすることが必要になる場合があります。
 
 > [!CAUTION]
 >  このメンバー関数は、 [Edit](#edit)または[AddNew](#addnew)を呼び出した後にのみ呼び出してください。
@@ -1790,7 +1790,7 @@ void SetFieldNull(void* pv, BOOL bNull = TRUE);
 *bNull*<br/>
 フィールドデータメンバーに値がないことを示すフラグが設定されている場合は0以外 (Null)。 それ以外の場合は、フィールドデータメンバーに Null 以外のフラグが設定されている場合は0になります。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 レコードセットに新しいレコードを追加すると、すべてのフィールドデータメンバーは最初に Null 値に設定され、"ダーティ" (変更) としてフラグが設定されます。 データソースからレコードを取得する場合、その列には既に値があるか、または Null になります。
 
@@ -1836,7 +1836,7 @@ void SetLockingMode(UINT nMode);
 
 - `pessimistic` ペシミスティックロックは、`Edit` が呼び出されるとすぐにレコードをロックし、`Update` の呼び出しが完了するか新しいレコードに移動するまでロックを保持します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 レコードセットが更新に使用する2つのレコードロックの方法を指定する必要がある場合は、このメンバー関数を呼び出します。 既定では、レコードセットのロックモードは `optimistic`です。 これは、より慎重な `pessimistic` ロック戦略に変更できます。 レコードセットオブジェクトを構築して開いた後、`Edit`を呼び出す前に、`SetLockingMode` を呼び出します。
 
@@ -1858,7 +1858,7 @@ void SetParamNull(
 *bNull*<br/>
 TRUE (既定値) の場合、パラメーターは Null としてフラグが設定されます。 それ以外の場合、パラメーターには Null 以外のフラグが設定されます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 [SetFieldNull](#setfieldnull)とは異なり、レコードセットを開く前に `SetParamNull` を呼び出すことができます。
 
@@ -1880,7 +1880,7 @@ void SetRowsetCursorPosition(WORD wRow, WORD wLockType = SQL_LOCK_NO_CHANGE);
 *wLockType*<br/>
 更新後に行をロックする方法を示す値。 詳細については、「解説」を参照してください。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 バルク行フェッチを実装する場合、レコードは行セットによって取得され、フェッチされた行セットの最初のレコードが現在のレコードになります。 行セット内の別のレコードを現在のレコードにするには、`SetRowsetCursorPosition`を呼び出します。 たとえば、`SetRowsetCursorPosition` を[GetFieldValue](#getfieldvalue)メンバー関数と組み合わせて、レコードセットの任意のレコードからデータを動的に取得することができます。
 
@@ -1909,7 +1909,7 @@ virtual void SetRowsetSize(DWORD dwNewRowsetSize);
 *dwNewRowsetSize*<br/>
 特定のフェッチ中に取得する行の数。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 この仮想メンバー関数は、バルク行フェッチを使用しているときに、1つのフェッチ中に取得する行数を指定します。 バルク行フェッチを実装するには、 [Open](#open)メンバー関数の*dwOptions*パラメーターで `CRecordset::useMultiRowFetch` オプションを設定する必要があります。
 
@@ -1919,7 +1919,7 @@ virtual void SetRowsetSize(DWORD dwNewRowsetSize);
 `Open` を呼び出す前に `SetRowsetSize` を呼び出して、レコードセットの行セットのサイズを初期設定します。 バルク行フェッチを実装する場合の既定の行セットサイズは25です。
 
 > [!NOTE]
->  `SetRowsetSize`を呼び出すときは注意が必要です。 `Open`の dwOptions パラメーターの `CRecordset::userAllocMultiRowBuffers` オプションで指定されているように、データのストレージを手動で割り当てる場合は、`SetRowsetSize`を呼び出した後、カーソルを実行する前に、これらのストレージバッファーを再割り当てする必要があるかどうかを確認する必要があります。ナビゲーション操作。
+>  `SetRowsetSize`を呼び出すときは注意が必要です。 `Open`の dwOptions パラメーターの `CRecordset::userAllocMultiRowBuffers` オプションで指定されているように、データのストレージを手動で割り当てる場合は、`SetRowsetSize`を呼び出した後、カーソルナビゲーション操作を実行する前に、これらのストレージバッファーを再割り当てする必要があるかどうかを確認する必要があります。
 
 行セットサイズの現在の設定を取得するには、 [GetRowsetSize](#getrowsetsize)を呼び出します。
 
@@ -1937,7 +1937,7 @@ virtual BOOL Update();
 
 1つのレコードが正常に更新された場合は0以外。それ以外の場合は、列が変更されていない場合は0です。 レコードが更新されなかった場合、または複数のレコードが更新された場合は、例外がスローされます。 また、データソースのその他のエラーに対しても例外がスローされます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 このメンバー関数は、 [AddNew](#addnew)または[Edit](#edit)メンバー関数の呼び出しの後に呼び出します。 この呼び出しは、`AddNew` または `Edit` 操作を完了するために必要です。
 
@@ -1957,7 +1957,7 @@ virtual BOOL Update();
 
 「[トランザクション: レコードセットでのトランザクションの実行 (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [CObject クラス](../../mfc/reference/cobject-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)<br/>
