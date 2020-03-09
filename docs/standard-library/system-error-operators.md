@@ -6,17 +6,17 @@ f1_keywords:
 - system_error/std::operator==
 ms.assetid: c14edefb-bd8a-4e90-88d3-c59c98e6f73c
 ms.openlocfilehash: 5cf6a455beb5654ef65f7411db4783a32c71d625
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246212"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876273"
 ---
-# <a name="ltsystemerrorgt-operators"></a>&lt;system_error&gt; 演算子
+# <a name="ltsystem_errorgt-operators"></a>&lt;system_error&gt; 演算子
 
-## <a name="op_eq_eq"></a> 演算子 = =
+## <a name="op_eq_eq"></a>operator = =
 
-演算子の左側のオブジェクトが右側のオブジェクトと等しいかどうかを調べます。
+演算子の左辺のオブジェクトが右辺のオブジェクトと等しいかどうかを調べます。
 
 ```cpp
 bool operator==(const error_code& left,
@@ -34,18 +34,18 @@ bool operator==(const error_condition& left,
 *左*\
 等しいかどうかをテストするオブジェクト。
 
-*そうです*\
+*右*\
 等しいかどうかをテストするオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
 オブジェクトが等しい場合は **true**、オブジェクトが等しくない場合は **false**。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 この関数は `left.category() == right.category() && left.value() == right.value()` を返します。
 
-## <a name="op_neq"></a> operator!=
+## <a name="op_neq"></a>operator! =
 
 演算子の左側のオブジェクトが右側のオブジェクトと等しくないかどうかを調べます。
 
@@ -61,14 +61,14 @@ bool operator!=(const error_condition& left, const error_condition& right);
 *左*\
 不等性をテストするオブジェクト。
 
-*そうです*\
+*右*\
 不等性をテストするオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-**true**オブジェクトが渡された場合*左*が渡されたオブジェクトと等しく*右*。 そうしないと**false**します。
+*左* *に渡さ*れたオブジェクトが、渡されたオブジェクトと等しくない場合は**true** 。それ以外の場合は**false**。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 この関数は `!(left == right)` を返します。
 
@@ -105,18 +105,18 @@ inline bool operator<(
 *左*\
 比較されるオブジェクト。
 
-*そうです*\
+*右*\
 比較されるオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-**true**オブジェクトが渡された場合*左*で渡されるオブジェクトより小さい*右*;それ以外の場合、 **false**します。
+*左* *に渡さ*れたオブジェクトが、渡されたオブジェクトより小さい場合は**true** 。それ以外の場合は**false**。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 この関数はエラー順序をテストします。
 
-## <a name="op_ostream"></a> 演算子&lt;&lt;
+## <a name="op_ostream"></a>演算子&lt;&lt;
 
 ```cpp
 template <class charT, class traits> 

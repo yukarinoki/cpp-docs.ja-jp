@@ -67,11 +67,11 @@ helpviewer_keywords:
 - CDaoQueryDef [MFC], m_pDatabase
 ms.assetid: 9676a4a3-c712-44d4-8c5d-d1cc78288d3a
 ms.openlocfilehash: 08fb2909a4fd2e5bda3dfc63d19224a515c7c699
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399747"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78883890"
 ---
 # <a name="cdaoquerydef-class"></a>CDaoQueryDef クラス
 
@@ -87,99 +87,99 @@ class CDaoQueryDef : public CObject
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|名前|説明|
+|Name|Description|
 |----------|-----------------|
-|[CDaoQueryDef::CDaoQueryDef](#cdaoquerydef)|`CDaoQueryDef` オブジェクトを構築します。 次に呼び出す`Open`または`Create`ニーズに応じて、します。|
+|[CDaoQueryDef::CDaoQueryDef](#cdaoquerydef)|`CDaoQueryDef` オブジェクトを構築します。 次に、必要に応じて `Open` または `Create`を呼び出します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|名前|説明|
+|Name|Description|
 |----------|-----------------|
-|[CDaoQueryDef::Append](#append)|データベースのクエリ定義のコレクションとして保存されたクエリには、クエリ定義を追加します。|
-|[CDaoQueryDef::CanUpdate](#canupdate)|クエリは、データベースを更新できる場合、0 以外の値を返します。|
-|[CDaoQueryDef::Close](#close)|クエリ定義のオブジェクトを閉じます。 これが完了したら、C++ オブジェクトを破棄します。|
-|[CDaoQueryDef::Create](#create)|基になる DAO クエリ定義のオブジェクトを作成します。 クエリ定義を使用して、一時的なクエリ、または呼び出しとして`Append`データベースに保存します。|
-|[CDaoQueryDef::Execute](#execute)|クエリ定義のオブジェクトによって定義されたクエリを実行します。|
-|[CDaoQueryDef::GetConnect](#getconnect)|クエリ定義に関連付けられている接続文字列を返します。 接続文字列は、データ ソースを識別します。 (SQL のパススルー クエリのみ。 それ以外の場合、空の文字列です。)|
+|[CDaoQueryDef:: Append](#append)|データベースのクエリ定義コレクションに保存されたクエリとして、クエリを追加します。|
+|[CDaoQueryDef:: CanUpdate](#canupdate)|クエリでデータベースを更新できる場合は0以外の値を返します。|
+|[CDaoQueryDef:: Close](#close)|Querydef オブジェクトを閉じます。 終了時C++にオブジェクトを破棄します。|
+|[CDaoQueryDef:: Create](#create)|基になる DAO querydef オブジェクトを作成します。 クエリ定義を一時クエリとして使用するか、`Append` を呼び出してデータベースに保存します。|
+|[CDaoQueryDef:: Execute](#execute)|Querydef オブジェクトによって定義されたクエリを実行します。|
+|[CDaoQueryDef:: GetConnect](#getconnect)|クエリ定義に関連付けられた接続文字列を返します。 接続文字列は、データソースを識別します。 (SQL パススルークエリのみの場合は、それ以外の場合は空の文字列)。|
 |[CDaoQueryDef::GetDateCreated](#getdatecreated)|保存されたクエリが作成された日付を返します。|
-|[CDaoQueryDef::GetDateLastUpdated](#getdatelastupdated)|保存されたクエリの最終更新日を返します。|
-|[CDaoQueryDef::GetFieldCount](#getfieldcount)|クエリ定義で定義されているフィールドの数を返します。|
-|[CDaoQueryDef::GetFieldInfo](#getfieldinfo)|クエリで定義されている指定されたフィールドに関する情報を返します。|
-|[CDaoQueryDef::GetName](#getname)|クエリ定義の名前を返します。|
-|[CDaoQueryDef::GetODBCTimeout](#getodbctimeout)|ODBC (ODBC クエリ) に対して使用するタイムアウト値を返すクエリを実行するとします。 これは、クエリの操作が完了するためにどのくらいの期間決定します。|
-|[CDaoQueryDef::GetParameterCount](#getparametercount)|クエリに定義されているパラメーターの数を返します。|
-|[CDaoQueryDef::GetParameterInfo](#getparameterinfo)|クエリには、指定されたパラメーターに関する情報を返します。|
-|[CDaoQueryDef::GetParamValue](#getparamvalue)|クエリに指定されたパラメーターの値を返します。|
-|[CDaoQueryDef::GetRecordsAffected](#getrecordsaffected)|アクション クエリによって影響を受けたレコードの数を返します。|
-|[CDaoQueryDef::GetReturnsRecords](#getreturnsrecords)|クエリのクエリ定義で定義されているレコードを返す場合は 0 以外を返します。|
-|[CDaoQueryDef::GetSQL](#getsql)|クエリ定義で定義されたクエリを指定する SQL 文字列を返します。|
-|[CDaoQueryDef::GetType](#gettype)|クエリの種類を返します。 削除、更新、追加、テーブルを作成および具合です。|
-|[CDaoQueryDef::IsOpen](#isopen)|クエリ定義が開いていて、実行できる場合は、0 以外の値を返します。|
-|[CDaoQueryDef::Open](#open)|データベースのクエリ定義のコレクションに格納されている既存のクエリ定義を開きます。|
-|[CDaoQueryDef::SetConnect](#setconnect)|ODBC データ ソースに対してパススルー クエリの接続文字列を設定します。|
-|[CDaoQueryDef::SetName](#setname)|クエリ定義の作成時に使用されている名を置き換えて、保存されたクエリの名前を設定します。|
-|[CDaoQueryDef::SetODBCTimeout](#setodbctimeout)|ODBC (ODBC クエリ) に対して使用するタイムアウト値の設定、クエリを実行するとします。|
-|[CDaoQueryDef::SetParamValue](#setparamvalue)|クエリに指定されたパラメーターの値を設定します。|
-|[CDaoQueryDef::SetReturnsRecords](#setreturnsrecords)|クエリ定義がレコードを返すかどうかを指定します。 この属性を TRUE に設定は、SQL パススルー クエリに対して有効ではのみです。|
-|[CDaoQueryDef::SetSQL](#setsql)|クエリ定義で定義されたクエリを指定する SQL 文字列を設定します。|
+|[CDaoQueryDef:: GetDateLastUpdated](#getdatelastupdated)|保存されたクエリが最後に更新された日付を返します。|
+|[CDaoQueryDef:: GetFieldCount](#getfieldcount)|クエリ定義によって定義されたフィールドの数を返します。|
+|[CDaoQueryDef::GetFieldInfo](#getfieldinfo)|クエリで定義されている、指定されたフィールドに関する情報を返します。|
+|[CDaoQueryDef:: GetName](#getname)|クエリ定義の名前を返します。|
+|[CDaoQueryDef:: GetODBCTimeout](#getodbctimeout)|クエリ実行時に ODBC (ODBC クエリの場合) で使用されるタイムアウト値を返します。 これにより、クエリのアクションが完了するまでの期間が決まります。|
+|[CDaoQueryDef:: GetParameterCount](#getparametercount)|クエリに対して定義されているパラメーターの数を返します。|
+|[CDaoQueryDef:: GetParameterInfo](#getparameterinfo)|指定されたパラメーターに関する情報をクエリに返します。|
+|[CDaoQueryDef::GetParamValue](#getparamvalue)|クエリに対して指定されたパラメーターの値を返します。|
+|[CDaoQueryDef::GetRecordsAffected](#getrecordsaffected)|アクションクエリの影響を受けたレコードの数を返します。|
+|[CDaoQueryDef::GetReturnsRecords](#getreturnsrecords)|クエリ定義によって定義されたクエリがレコードを返す場合は、0以外の値を返します。|
+|[CDaoQueryDef::GetSQL](#getsql)|クエリ定義によって定義されたクエリを指定する SQL 文字列を返します。|
+|[CDaoQueryDef:: GetType](#gettype)|クエリの種類 (削除、更新、追加、テーブルの作成など) を返します。|
+|[CDaoQueryDef:: IsOpen](#isopen)|クエリ定義が開いて実行できる場合は、0以外の値を返します。|
+|[CDaoQueryDef:: Open](#open)|データベースのクエリ定義コレクションに格納されている既存のクエリ定義を開きます。|
+|[CDaoQueryDef:: SetConnect](#setconnect)|ODBC データソースに対する SQL パススルークエリの接続文字列を設定します。|
+|[CDaoQueryDef:: SetName](#setname)|クエリの作成時に使用した名前を置き換えて、保存されたクエリの名前を設定します。|
+|[CDaoQueryDef:: SetODBCTimeout](#setodbctimeout)|クエリ実行時に ODBC によって使用されるタイムアウト値を設定します (ODBC クエリの場合)。|
+|[CDaoQueryDef::SetParamValue](#setparamvalue)|指定されたパラメーターの値をクエリに設定します。|
+|[CDaoQueryDef::SetReturnsRecords](#setreturnsrecords)|クエリ定義がレコードを返すかどうかを指定します。 この属性を TRUE に設定することは、SQL パススルークエリに対してのみ有効です。|
+|[CDaoQueryDef::SetSQL](#setsql)|クエリ定義によって定義されたクエリを指定する SQL 文字列を設定します。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
-|名前|説明|
+|Name|Description|
 |----------|-----------------|
-|[CDaoQueryDef::m_pDAOQueryDef](#m_pdaoquerydef)|基になる DAO クエリ定義のオブジェクトの OLE インターフェイスへのポインター。|
-|[CDaoQueryDef::m_pDatabase](#m_pdatabase)|ポインター、`CDaoDatabase`クエリ定義が関連付けられているオブジェクト。 かどうか、クエリ定義をデータベースに保存可能性があります。|
+|[CDaoQueryDef:: m_pDAOQueryDef](#m_pdaoquerydef)|基になる DAO querydef オブジェクトの OLE インターフェイスへのポインター。|
+|[CDaoQueryDef:: m_pDatabase](#m_pdatabase)|クエリ定義が関連付けられている `CDaoDatabase` オブジェクトへのポインター。 クエリがデータベースに保存されている可能性があります。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-クエリ定義は、クエリ、および「作成日」や「ODBC タイムアウトします」など、そのプロパティを記述した SQL ステートメントを含むデータ アクセス オブジェクト 保存せずに、一時的なクエリ定義のオブジェクトを作成することもできますが、便利な- と非常に効率的-よくを保存するには、データベース内のクエリを再利用します。 A [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)オブジェクトは、その保存したクエリ定義が含まれています QueryDefs コレクションと呼ばれる、コレクションを保持します。
+クエリ定義は、クエリを記述する SQL ステートメントとそのプロパティ ("作成日" や "ODBC タイムアウト" など) を含むデータアクセスオブジェクトです。 一時クエリオブジェクトを保存せずに作成することもできますが、データベースで頻繁に再利用されるクエリを保存することは便利で、はるかに効率的です。 [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)オブジェクトは、クエリが保存されたクエリを含むコレクションを管理します。
 
 > [!NOTE]
->  DAO データベース クラスは、ベースの開いているデータベースの接続 (ODBC) で MFC データベース クラスとは異なります。 DAO データベース クラスの名前には、"CDao"プレフィックスが付いています。 DAO クラスで ODBC データ ソースのアクセスできます。 一般に、DAO に基づいて MFC クラスは ODBC; に基づいて MFC クラスよりもより高機能ですDAO ベースのクラスは、独自のデータベース エンジンを使用して、ODBC ドライバーを含む、データにアクセスできます。 DAO ベースのクラスには、DAO を直接呼び出すことがなく、クラスを使用してテーブルの追加などのデータ定義言語 (DDL) 操作もサポートします。
+>  DAO データベースクラスは、Open Database Connectivity (ODBC) に基づく MFC データベースクラスとは異なります。 すべての DAO データベースクラス名には、"CDao" プレフィックスが付いています。 DAO クラスを使用して ODBC データソースにアクセスすることもできます。 一般に、DAO に基づく MFC クラスは、ODBC に基づく MFC クラスよりも多くの機能を備えています。DAO ベースのクラスは、独自のデータベースエンジンを介して、ODBC ドライバーを介してデータにアクセスできます。 DAO ベースのクラスでは、データ定義言語 (DDL) 操作 (クラスを使用したテーブルの追加など) もサポートされています。 DAO を直接呼び出す必要はありません。
 
 ## <a name="usage"></a>使用法
 
-クエリ定義のオブジェクトのいずれも使用または新たに作成する保存済みのクエリを使用するクエリまたは一時的なクエリを保存します。
+既存の保存済みクエリを操作するか、新しい保存されたクエリまたは一時クエリを作成するには、クエリ定義オブジェクトを使用します。
 
-1. すべての場合、最初に構築、`CDaoQueryDef`へのポインターを提供する、オブジェクト、 [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)クエリが属しているオブジェクトします。
+1. いずれの場合も、最初に `CDaoQueryDef` オブジェクトを構築し、クエリが属する[CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)オブジェクトへのポインターを提供します。
 
-1. 目的に応じて、次を実行します。
+1. 必要に応じて、次の操作を行います。
 
-   - 保存済みのクエリを使用するには、クエリ定義オブジェクトを呼び出す[オープン](#open)保存されたクエリの名前を指定して、メンバー関数。
+   - 既存の保存済みクエリを使用するには、保存されたクエリの名前を指定して、querydef オブジェクトの[Open](#open)メンバー関数を呼び出します。
 
-   - 新しい保存されたクエリを作成するには、クエリ定義オブジェクトを呼び出す[作成](#create)メンバー関数は、クエリの名前を指定します。 呼び出して[Append](#append)データベースのクエリ定義のコレクションに追加して、クエリを保存します。 `Create` クエリ定義では、開いている状態を呼び出した後は`Create`呼び出さないでください`Open`します。
+   - 新しい保存されたクエリを作成するには、クエリの名前を指定して、querydef オブジェクトの[create](#create) member 関数を呼び出します。 次に、 [Append](#append)を呼び出して、クエリをデータベースのクエリ定義コレクションに追加して保存します。 `Create` は、`Create` を呼び出した後に `Open`を呼び出さずに、クエリ定義をオープン状態にします。
 
-   - 一時的なクエリ定義を作成するには`Create`します。 クエリ名に空の文字列を渡します。 `Append` を呼び出さないでください。
+   - 一時的なクエリを作成するには、`Create`を呼び出します。 クエリ名として空の文字列を渡します。 `Append` を呼び出さないでください。
 
-クエリ定義オブジェクトの使用が完了したらを呼び出すその[閉じる](#close)メンバー関数です。 は、クエリ定義のオブジェクトを破棄します。
+Querydef オブジェクトの使用が終了したら、 [Close](#close)メンバー関数を呼び出します。次に、querydef オブジェクトを破棄します。
 
 > [!TIP]
->  保存されたクエリを作成する最も簡単な方法では、それらを作成し、Microsoft Access を使用して、データベースに保存します。 開くでき、MFC コード内で使用できます。
+>  保存したクエリを作成する最も簡単な方法は、Microsoft Access を使用してそれらを作成し、データベースに保存することです。 次に、MFC コードでそれらを開いて使用できます。
 
-## <a name="purposes"></a>目的
+## <a name="purposes"></a>おい
 
-次の目的のいずれかのクエリ定義のオブジェクトを使用できます。
+次のいずれかの目的で、querydef オブジェクトを使用できます。
 
-- 作成する、`CDaoRecordset`オブジェクト
+- `CDaoRecordset` オブジェクトを作成するには
 
-- オブジェクトの呼び出しに`Execute`アクション クエリまたは SQL パススルー クエリを直接実行するメンバー関数
+- オブジェクトの `Execute` メンバー関数を呼び出して、アクションクエリまたは SQL パススルークエリを直接実行するには
 
-Select、アクション、クロス集計、削除、更新プログラムを含めて、クエリの任意の型のクエリ定義のオブジェクトを使用し、追加、テーブルの作成、データ定義、SQL パススルー、共用体、一括クエリできます。 クエリの種類については、指定した SQL ステートメントの内容によって決まります。 クエリの種類については、次を参照してください。、`Execute`と[GetType](#gettype)メンバー関数。 レコード セットは行を返すのよく使用されるクエリは、通常を使用して、**を選択しています.** キーワード。 `Execute` 一括操作の最もよく使用されます。 詳細については、次を参照してください。 [Execute](#execute)と[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)します。
+選択、アクション、クロス集計、削除、更新、追加、テーブルの作成、データ定義、SQL パススルー、共用体、一括クエリなど、任意の種類のクエリに対して、querydef オブジェクトを使用できます。 クエリの種類は、指定した SQL ステートメントの内容によって決まります。 クエリの種類の詳細については、「`Execute` および[GetType](#gettype)メンバー関数」を参照してください。 レコードセットは、通常、行を返すクエリに使用され、通常は**SELECT...FROM**キーワード。 `Execute` は、一括操作で最も一般的に使用されます。 詳細については、「 [Execute](#execute)および[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)」を参照してください。
 
-## <a name="querydefs-and-recordsets"></a>クエリ定義とレコード セット
+## <a name="querydefs-and-recordsets"></a>クエリ定義とレコードセット
 
-クエリ定義のオブジェクトを使用して作成する、`CDaoRecordset`オブジェクトを通常、作成または前述のように、クエリ定義を開きます。 呼び出すときに、クエリ定義のオブジェクトにポインターを渡すこと、レコード セット オブジェクトを構築し、 [cdaorecordset::open](../../mfc/reference/cdaorecordset-class.md#open)します。 渡すクエリ定義は、開いている状態でなければなりません。 詳細については、クラスを参照してください。 [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)します。
+Querydef オブジェクトを使用して `CDaoRecordset` オブジェクトを作成するには、通常、前述のように、クエリを作成または開きます。 次に、 [CDaoRecordset:: Open](../../mfc/reference/cdaorecordset-class.md#open)を呼び出すときに、レコードセットオブジェクトへのポインターを渡して、レコードセットオブジェクトを構築します。 渡すクエリ定義は、open 状態である必要があります。 詳細については、「クラス[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)」を参照してください。
 
-クエリ定義を使用して、開いている状態である場合を除き、レコード セット (最も一般的なクエリ定義の使用) を作成することはできません。 いずれかを呼び出すことによって、クエリ定義を開いている状態に`Open`または`Create`します。
+オープン状態でない限り、クエリを使用してレコードセットを作成することはできません (クエリ定義で最も一般的に使用されます)。 `Open` または `Create`を呼び出すことによって、クエリ定義をオープン状態にします。
 
 ## <a name="external-databases"></a>外部データベース
 
-クエリ定義のオブジェクトは、外部データベース エンジンのネイティブの SQL 構文を使用することをお勧めします。 たとえば、(Microsoft SQL Server で使用) と Transact SQL クエリを作成でき、クエリ定義のオブジェクトに格納できます。 Microsoft Jet データベース エンジンに基づいていない SQL クエリを使用する必要がある場合は、外部データ ソースを指す接続文字列を指定する必要があります。 有効な接続文字列を使用したクエリはデータベース エンジンをバイパスし、処理用の外部のデータベース サーバーに直接クエリを渡します。
+外部データベースエンジンのネイティブ SQL 言語を使用するには、クエリ定義オブジェクトを使用することをお勧めします。 たとえば、Microsoft SQL Server で使用されるように Transact SQL クエリを作成し、それを querydef オブジェクトに格納することができます。 Microsoft Jet データベースエンジンに基づいていない SQL クエリを使用する必要がある場合は、外部データソースを参照する接続文字列を指定する必要があります。 有効な接続文字列を持つクエリは、データベースエンジンをバイパスし、クエリを直接外部データベースサーバーに渡して処理します。
 
 > [!TIP]
->  ODBC テーブルの操作の推奨される方法は、Microsoft Jet に添付すること (します。MDB) データベース。
+>  ODBC テーブルを使用する場合は、Microsoft Jet () に接続することをお勧めします。MDB) データベース。
 
-関連情報については、「QueryDef オブジェクト」、「QueryDefs コレクション」および DAO SDK の「CdbDatabase オブジェクト」のトピックを参照してください。
+関連情報については、DAO SDK の「QueryDef オブジェクト」、「クエリコレクション」、および「CdbDatabase オブジェクト」のトピックを参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -189,25 +189,25 @@ Select、アクション、クロス集計、削除、更新プログラムを�
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** afxdao.h
+**ヘッダー:** afxdao
 
-##  <a name="append"></a>  CDaoQueryDef::Append
+##  <a name="append"></a>CDaoQueryDef:: Append
 
-呼び出した後に、このメンバー関数を呼び出す[作成](#create)新しいクエリ オブジェクトを作成します。
+[Create](#create)を呼び出して新しい querydef オブジェクトを作成した後に、このメンバー関数を呼び出します。
 
 ```
 virtual void Append();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`Append` データベースのクエリ定義のコレクションにオブジェクトを追加することによって、データベースのクエリ定義を保存します。 それを付加せず、一時オブジェクトとしてクエリ定義を使用できますが、呼び出す必要がある場合は、これを保存する`Append`します。
+`Append` は、データベースのクエリ定義コレクションにオブジェクトを追加することによって、データベースにクエリを保存します。 このクエリは追加せずに一時オブジェクトとして使用できますが、永続化する場合は `Append`を呼び出す必要があります。
 
-MFC が型の例外をスローする場合は、一時的なクエリ定義のオブジェクトを追加しようとすると、 [CDaoException](../../mfc/reference/cdaoexception-class.md)します。
+一時的な querydef オブジェクトを追加しようとすると、MFC は[CDaoException](../../mfc/reference/cdaoexception-class.md)型の例外をスローします。
 
-##  <a name="canupdate"></a>  CDaoQueryDef::CanUpdate
+##  <a name="canupdate"></a>CDaoQueryDef:: CanUpdate
 
-クエリ定義を変更できるかどうかを判断するには、このメンバー関数を呼び出すなどの名前または SQL 文字列を変更するなど。
+このメンバー関数を呼び出して、名前や SQL 文字列を変更するなど、クエリ定義を変更できるかどうかを判断します。
 
 ```
 BOOL CanUpdate();
@@ -215,19 +215,19 @@ BOOL CanUpdate();
 
 ### <a name="return-value"></a>戻り値
 
-クエリ定義を変更する権限がある場合、0 以外の場合それ以外の場合 0 を返します。
+クエリ定義を変更することが許可されている場合は0以外の。それ以外の場合は0です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-場合は、クエリ定義を変更できます。
+次の場合に、クエリ定義を変更できます。
 
-- 読み取り専用で開かれているデータベースに基づきません。
+- 読み取り専用で開かれているデータベースには基づいていません。
 
-- データベースに対する更新アクセス許可があります。
+- データベースに対する更新権限があります。
 
-   これは、セキュリティ機能を実装するかどうかによって異なります。 MFC ではセキュリティのサポートはされていません必要があります、自分で実装を直接に DAO を呼び出すか、Microsoft Access を使用しています。 「アクセス許可のプロパティ」DAO ヘルプのトピックを参照してください。
+   これは、セキュリティ機能が実装されているかどうかによって異なります。 MFC では、セキュリティがサポートされていません。直接、または Microsoft Access を使用して DAO を呼び出すことによって、独自に実装する必要があります。 DAO ヘルプの「Permissions プロパティ」を参照してください。
 
-##  <a name="cdaoquerydef"></a>  CDaoQueryDef::CDaoQueryDef
+##  <a name="cdaoquerydef"></a>CDaoQueryDef::CDaoQueryDef
 
 `CDaoQueryDef` オブジェクトを構築します。
 
@@ -238,37 +238,37 @@ CDaoQueryDef(CDaoDatabase* pDatabase);
 ### <a name="parameters"></a>パラメーター
 
 *pDatabase*<br/>
-開いているへのポインター [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)オブジェクト。
+開いている[CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)オブジェクトへのポインター。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-オブジェクトは、データベースのクエリ定義のコレクション、コレクションに格納される新しいクエリまたは格納しないようにの一時的なクエリに格納されている既存のクエリ定義を表すことができます。 次の手順は、クエリ定義の種類によって異なります。
+オブジェクトは、データベースのクエリ定義コレクションに格納されている既存のクエリ定義、コレクションに格納される新しいクエリ、または格納されない一時的なクエリを表すことができます。 次の手順は、クエリの種類によって異なります。
 
-- オブジェクトは、既存のクエリ定義を表している場合は、オブジェクトを呼び出す[オープン](#open)メンバー関数を初期化します。
+- オブジェクトが既存のクエリ定義を表している場合は、オブジェクトの[Open](#open)メンバー関数を呼び出して初期化します。
 
-- オブジェクトを保存する新しいクエリ定義を表している場合は、オブジェクトを呼び出す[作成](#create)メンバー関数。 これにより、オブジェクトがデータベースのクエリ定義のコレクションに追加します。 呼び出して`CDaoQueryDef`メンバー関数、オブジェクトの属性を設定します。 最後に、呼び出す[Append](#append)します。
+- オブジェクトが、保存する新しいクエリを表す場合は、オブジェクトの[Create](#create) member 関数を呼び出します。 これにより、データベースのクエリ定義コレクションにオブジェクトが追加されます。 次に、`CDaoQueryDef` メンバー関数を呼び出して、オブジェクトの属性を設定します。 最後に、 [Append](#append)を呼び出します。
 
-- オブジェクトは、一時的なクエリ定義 (データベースに保存しない) を表している場合は、呼び出す`Create`クエリの名前の空の文字列を渡します。 呼び出した後`Create`、直接その属性を設定して、クエリ定義を初期化します。 `Append` を呼び出さないでください。
+- オブジェクトが (データベースに保存されるのではなく) 一時的なクエリを表す場合は、`Create`を呼び出して、クエリの名前に空の文字列を渡します。 `Create`を呼び出した後、属性を直接設定して、クエリ定義を初期化します。 `Append` を呼び出さないでください。
 
-クエリ定義の属性を設定するには、使用することができます、 [SetName](#setname)、 [SetSQL](#setsql)、 [SetConnect](#setconnect)、[に](#setodbctimeout)、および[SetReturnsRecords](#setreturnsrecords)メンバー関数。
+クエリ定義の属性を設定するには、 [SetName](#setname)、 [SetSQL](#setsql)、 [setconnect](#setconnect)、 [Setodbctimeout](#setodbctimeout)、および[SetReturnsRecords](#setreturnsrecords)の各メンバー関数を使用します。
 
-呼び出すクエリ定義のオブジェクトが完了したら、その[閉じる](#close)メンバー関数。 クエリ定義へのポインターがある場合は、使用、**削除**C++ オブジェクトを破棄する演算子。
+Querydef オブジェクトが完成したら、 [Close](#close)メンバー関数を呼び出します。 クエリ定義へのポインターがある場合は、 **delete**演算子を使用してC++オブジェクトを破棄します。
 
-##  <a name="close"></a>  CDaoQueryDef::Close
+##  <a name="close"></a>CDaoQueryDef:: Close
 
-クエリ定義のオブジェクトの使用が終わったときに、このメンバー関数を呼び出します。
+このメンバー関数は、querydef オブジェクトの使用が終了したときに呼び出します。
 
 ```
 virtual void Close();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-基になる DAO オブジェクトを解放クエリ定義を終了しますが、保存された DAO クエリ定義オブジェクトまたは C++ 破棄しません`CDaoQueryDef`オブジェクト。 同じです。 これはいない[CDaoDatabase::DeleteQueryDef](../../mfc/reference/cdaodatabase-class.md#deletequerydef)、DAO (ない場合は一時的なクエリ定義) で、データベースのクエリ定義のコレクションから、クエリ定義を削除します。
+クエリを終了すると、基になる DAO オブジェクトが解放されますが、保存C++された dao querydef オブジェクトや `CDaoQueryDef` オブジェクトは破棄されません。 これは、 [eletequerydef:D](../../mfc/reference/cdaodatabase-class.md#deletequerydef)と同じではありません。これは、DAO のデータベースのクエリコレクションコレクションからクエリを削除します (一時的なクエリを実行しない場合)。
 
-##  <a name="create"></a>  CDaoQueryDef::Create
+##  <a name="create"></a>CDaoQueryDef:: Create
 
-新しい保存されたクエリまたは新しい一時的なクエリを作成するには、このメンバー関数を呼び出します。
+このメンバー関数を呼び出して、新しい保存されたクエリまたは新しい一時クエリを作成します。
 
 ```
 virtual void Create(
@@ -279,20 +279,20 @@ virtual void Create(
 ### <a name="parameters"></a>パラメーター
 
 *lpszName*<br/>
-データベースに保存されたクエリの一意の名前。 詳細については、文字列は、DAO のヘルプで「CreateQueryDef メソッド」を参照してください。 既定値、空の文字列を使用する場合は、一時的なクエリ定義が作成されます。 このようなクエリは、クエリ定義のコレクションには保存されません。
+データベースに保存されているクエリの一意の名前。 文字列の詳細については、DAO ヘルプの「CreateQueryDef メソッド」を参照してください。 既定値の空の文字列をそのまま使用すると、一時的なクエリが作成されます。 このようなクエリは、クエリ定義コレクションに保存されません。
 
 *lpszSQL*<br/>
-クエリを定義する SQL 文字列です。 後で呼び出す必要がある場合は、既定値は NULL に同意した[SetSQL](#setsql)文字列を設定します。 それまでは、クエリは定義されません。 ただしはレコード セットを開くに未定義のクエリを使用することができます。詳細については、「解説」を参照してください。 QueryDefs コレクションにクエリ定義を追加する前に、SQL ステートメントを定義する必要があります。
+クエリを定義する SQL 文字列。 既定値の NULL をそのまま使用する場合は、後で[SetSQL](#setsql)を呼び出して文字列を設定する必要があります。 それまでは、クエリは定義されていません。 ただし、未定義のクエリを使用してレコードセットを開くことはできます。詳細については、「解説」を参照してください。 クエリ定義をクエリコレクションに追加する前に、SQL ステートメントを定義する必要があります。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-内の名前を渡す場合*lpszName*を呼び出して[Append](#append)データベースのクエリ定義のコレクションにクエリ定義を保存します。 それ以外の場合、オブジェクトは一時的なクエリ定義では保存されません。 いずれかの場合も、クエリ定義は、開いている状態では、作成に使用できる、 [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)オブジェクトまたはクエリ定義の[Execute](#execute)メンバー関数。
+*Lpszname*に名前を渡すと、 [Append](#append)を呼び出して、データベースのクエリ定義コレクションにクエリを保存できます。 それ以外の場合、オブジェクトは一時的なクエリ定義であり、保存されません。 どちらの場合も、クエリ定義はオープン状態であり、それを使用して[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)オブジェクトを作成するか、またはクエリ定義の[Execute](#execute)メンバー関数を呼び出すことができます。
 
-SQL ステートメントを指定しない場合*lpszSQL*を使用してクエリを実行することはできません`Execute`が、これを使用するにはレコード セットを作成します。 その場合は、MFC は、レコード セットの既定の SQL ステートメントを使用します。
+*LpszSQL*で SQL ステートメントを指定しなかった場合は、`Execute` でクエリを実行することはできませんが、このクエリを使用してレコードセットを作成することはできます。 その場合、MFC では、レコードセットの既定の SQL ステートメントが使用されます。
 
-##  <a name="execute"></a>  CDaoQueryDef::Execute
+##  <a name="execute"></a>CDaoQueryDef:: Execute
 
-クエリ定義のオブジェクトによって定義されたクエリを実行するには、このメンバー関数を呼び出します。
+このメンバー関数を呼び出して、querydef オブジェクトによって定義されたクエリを実行します。
 
 ```
 virtual void Execute(int nOptions = dbFailOnError);
@@ -301,45 +301,45 @@ virtual void Execute(int nOptions = dbFailOnError);
 ### <a name="parameters"></a>パラメーター
 
 *nOptions*<br/>
-クエリの特性を決定する整数。 関連情報については、DAO ヘルプの「メソッドの実行」トピックを参照してください。 ビットごとの OR 演算子を使用することができます ( **&#124;**) この引数は、次の定数を結合します。
+クエリの特性を決定する整数。 関連情報については、DAO ヘルプの「Execute メソッド」を参照してください。 この引数には、ビットごとの OR **&#124;** 演算子 () を使用して、次の定数を組み合わせることができます。
 
-- `dbDenyWrite` 他のユーザーに書き込みアクセス許可を拒否します。
+- `dbDenyWrite` 他のユーザーに対する書き込み権限を拒否します。
 
-- `dbInconsistent` 更新プログラムの一貫性がありません。
+- 整合性のない更新プログラムを `dbInconsistent` します。
 
-- `dbConsistent` 一貫性のある更新します。
+- 整合性のある更新プログラムを `dbConsistent` します。
 
-- `dbSQLPassThrough` SQL パススルーします。 処理のために、ODBC データベースに渡される SQL ステートメントをによりします。
+- SQL パススルーを `dbSQLPassThrough` します。 SQL ステートメントを ODBC データベースに渡して処理します。
 
-- `dbFailOnError` 既定値です。 ロールバック エラーが発生した場合の更新プログラムと、エラー レポートをユーザーにします。
+- `dbFailOnError` 既定値です。 エラーが発生した場合は更新をロールバックし、エラーをユーザーに報告します。
 
-- `dbSeeChanges` 別のユーザーが編集してデータを変更する場合は、実行時エラーを生成します。
+- 別のユーザーが編集中のデータを変更している場合は、`dbSeeChanges` 実行時エラーが生成されます。
 
 > [!NOTE]
->  用語の説明「一貫性のない」と「一貫性」DAO ヘルプの「メソッドの実行」トピックを参照してください。
+>  「一貫性のない」と「一貫性」という用語の説明については、DAO ヘルプの「Execute メソッド」を参照してください。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この方法で実行するために使用されるクエリ定義オブジェクトを次のクエリの型の 1 つのみ表現できます。
+この方法で実行するために使用される Querydef オブジェクトは、次のいずれかの種類のクエリのみを表すことができます。
 
-- アクションのクエリ
+- アクションクエリ
 
-- SQL パススルー クエリ
+- SQL パススルークエリ
 
-`Execute` select クエリなど、レコードを返すクエリに対しては機能しません。 `Execute` など使用一括操作のクエリでは、よく**UPDATE**、**挿入**、または**SELECT INTO**、またはデータ定義言語 (DDL) 操作。
+`Execute` は、select クエリなどのレコードを返すクエリに対しては機能しません。 `Execute` は、 **UPDATE**、 **INSERT**、 **SELECT INTO**、データ定義言語 (DDL) 操作などの一括操作クエリでよく使用されます。
 
 > [!TIP]
->  ODBC データ ソースを操作することをお勧めの Microsoft Jet にテーブルをアタッチする (します。MDB) データベース。 詳細については、"にアクセスする外部のデータベースと DAO"DAO ヘルプのトピックを参照してください。
+>  ODBC データソースを操作するには、Microsoft Jet にテーブルをアタッチする方法をお勧めします (「」をお勧めします。MDB) データベース。 詳細については、DAO ヘルプの「DAO を使用した外部データベースへのアクセス」を参照してください。
 
-呼び出す、 [GetRecordsAffected](#getrecordsaffected)最新によって影響を受けたレコードの数を決定するクエリ定義オブジェクトのメンバー関数`Execute`呼び出します。 たとえば、`GetRecordsAffected`削除、更新、またはアクションのクエリを実行するときに挿入されるレコードの数に関する情報を返します。 返されるカウントが cascade を更新または削除時に、関連テーブルの変更が有効では反映されません。
+Querydef オブジェクトの[GetRecordsAffected](#getrecordsaffected)メンバー関数を呼び出して、最新の `Execute` 呼び出しによって影響を受けたレコードの数を確認します。 たとえば、`GetRecordsAffected` は、アクションクエリの実行時に削除、更新、または挿入されたレコードの数に関する情報を返します。 返されるカウントには、連鎖更新または削除が有効になっている場合、関連テーブルの変更は反映されません。
 
-両方を含めた場合`dbInconsistent`と`dbConsistent`、結果は、既定で含める場合はどちらも、または`dbInconsistent`します。
+`dbInconsistent` と `dbConsistent` の両方を含める場合、またはどちらも含まない場合、結果は既定の `dbInconsistent`になります。
 
-`Execute` レコード セットは返されません。 使用して`Execute`レコードを選択するクエリに MFC の種類の例外をスローすると、 [CDaoException](../../mfc/reference/cdaoexception-class.md)します。
+`Execute` はレコードセットを返しません。 レコードを選択するクエリで `Execute` を使用すると、MFC によって型[CDaoException](../../mfc/reference/cdaoexception-class.md)の例外がスローされます。
 
-##  <a name="getconnect"></a>  CDaoQueryDef::GetConnect
+##  <a name="getconnect"></a>CDaoQueryDef:: GetConnect
 
-クエリ定義のデータ ソースに関連付けられた接続文字列を取得するには、このメンバー関数を呼び出します。
+このメンバー関数を呼び出して、クエリ定義のデータソースに関連付けられている接続文字列を取得します。
 
 ```
 CString GetConnect();
@@ -347,20 +347,20 @@ CString GetConnect();
 
 ### <a name="return-value"></a>戻り値
 
-A [CString](../../atl-mfc-shared/reference/cstringt-class.md)クエリ定義の接続文字列を格納しています。
+クエリ定義の接続文字列を格納している[CString](../../atl-mfc-shared/reference/cstringt-class.md) 。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この関数は、ODBC データ ソースと特定の ISAM ドライバーでのみ使用されます。 Microsoft Jet では使用されません (します。MDB) データベース。この場合、`GetConnect`空の文字列を返します。 詳細については、次を参照してください。 [SetConnect](#setconnect)します。
+この関数は、ODBC データソースと特定の ISAM ドライバーでのみ使用されます。 Microsoft Jet () では使用されません。MDB) データベース。この場合、`GetConnect` は空の文字列を返します。 詳細については、「 [Setconnect](#setconnect)」を参照してください。
 
 > [!TIP]
->  ODBC テーブルを使用することをお勧めが接続先にするには、します。MDB データベースです。 詳細については、"にアクセスする外部のデータベースと DAO"DAO ヘルプのトピックを参照してください。
+>  ODBC テーブルを使用する場合は、にアタッチすることをお勧めします。MDB データベース。 詳細については、DAO ヘルプの「DAO を使用した外部データベースへのアクセス」を参照してください。
 
-接続文字列については、DAO のヘルプ「プロパティの接続」を参照してください。
+接続文字列の詳細については、DAO ヘルプのトピック「Connect プロパティ」を参照してください。
 
-##  <a name="getdatecreated"></a>  CDaoQueryDef::GetDateCreated
+##  <a name="getdatecreated"></a>CDaoQueryDef::GetDateCreated
 
-クエリ定義のオブジェクトが作成された日付を取得するには、このメンバー関数を呼び出します。
+このメンバー関数を呼び出して、querydef オブジェクトが作成された日付を取得します。
 
 ```
 COleDateTime GetDateCreated();
@@ -368,15 +368,15 @@ COleDateTime GetDateCreated();
 
 ### <a name="return-value"></a>戻り値
 
-A [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)クエリ定義が作成された日時を含むオブジェクト。
+クエリ定義が作成された日付と時刻を格納している[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)オブジェクト。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-関連情報については、DAO のヘルプ トピックの"DateCreated、LastUpdated プロパティ"を参照してください。
+関連情報については、DAO ヘルプの「DateCreated、LastUpdated Properties」を参照してください。
 
-##  <a name="getdatelastupdated"></a>  CDaoQueryDef::GetDateLastUpdated
+##  <a name="getdatelastupdated"></a>CDaoQueryDef:: GetDateLastUpdated
 
-最終更新時刻、日付のクエリ定義のオブジェクトを取得するには、このメンバー関数の呼び出し、そのプロパティのいずれかが変更されたとき、その名前、SQL 文字列、または接続文字列など。
+このメンバー関数を呼び出して、クエリ定義オブジェクトが最後に更新された日付 (名前、SQL 文字列、接続文字列など) が変更された日時を取得します。
 
 ```
 COleDateTime GetDateLastUpdated();
@@ -384,15 +384,15 @@ COleDateTime GetDateLastUpdated();
 
 ### <a name="return-value"></a>戻り値
 
-A [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)クエリ定義が最後に更新された日時を含むオブジェクト。
+クエリ定義が最後に更新された日付と時刻を含む[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)オブジェクト。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-関連情報については、DAO のヘルプ トピックの"DateCreated、LastUpdated プロパティ"を参照してください。
+関連情報については、DAO ヘルプの「DateCreated、LastUpdated Properties」を参照してください。
 
-##  <a name="getfieldcount"></a>  CDaoQueryDef::GetFieldCount
+##  <a name="getfieldcount"></a>CDaoQueryDef:: GetFieldCount
 
-クエリのフィールドの数を取得するには、このメンバー関数を呼び出します。
+クエリ内のフィールドの数を取得するには、このメンバー関数を呼び出します。
 
 ```
 short GetFieldCount();
@@ -402,13 +402,13 @@ short GetFieldCount();
 
 クエリで定義されているフィールドの数。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`GetFieldCount` クエリ定義のすべてのフィールドをループに役立ちます。 そのために、使用`GetFieldCount`と共に[GetFieldInfo](#getfieldinfo)します。
+`GetFieldCount` は、クエリ定義内のすべてのフィールドをループ処理する場合に便利です。 そのためには、 [Getfieldinfo](#getfieldinfo)と共に `GetFieldCount` を使用します。
 
-##  <a name="getfieldinfo"></a>  CDaoQueryDef::GetFieldInfo
+##  <a name="getfieldinfo"></a>CDaoQueryDef:: GetFieldInfo
 
-さまざまな種類のクエリ定義で定義されているフィールドに関する情報を取得するには、このメンバー関数を呼び出します。
+このメンバー関数を呼び出して、クエリ定義で定義されているフィールドに関するさまざまな種類の情報を取得します。
 
 ```
 void GetFieldInfo(
@@ -425,30 +425,30 @@ void GetFieldInfo(
 ### <a name="parameters"></a>パラメーター
 
 *nIndex*<br/>
-インデックスで検索する場合、クエリ定義のフィールド コレクションで目的のフィールドの 0 から始まるインデックス。
+インデックスによる検索のために、クエリ定義の Fields コレクション内の目的のフィールドの0から始まるインデックス。
 
 *fieldinfo*<br/>
-参照を`CDaoFieldInfo`オブジェクトを要求された情報を返します。
+要求された情報を返す `CDaoFieldInfo` オブジェクトへの参照。
 
-*dwInfoOptions*<br/>
-取得するフィールドに関する情報を指定するオプション。 使用可能なオプションを返す関数が何とここは。
+*オプション*<br/>
+取得するフィールドに関する情報を指定するオプション。 使用可能なオプションは、関数が返す原因と共にここに表示されます。
 
-- AFX_DAO_PRIMARY_INFO (既定値) の名前、種類、サイズ、属性
+- AFX_DAO_PRIMARY_INFO (既定) 名前、種類、サイズ、属性
 
-- プラス AFX_DAO_SECONDARY_INFO プライマリ情報:必要に応じて、序数の位置 0 の長さ、ソース フィールド、外部名、ソース テーブル、照合順序を許可します。
+- 主要な情報に加えて、序数の位置、必須、長さ0の許可、ソースフィールド、外部名、ソーステーブル、照合順序を AFX_DAO_SECONDARY_INFO します。
 
-- AFX_DAO_ALL_INFO プライマリとセカンダリの情報に加えて:既定値、入力テキスト、検証規則
+- プライマリとセカンダリの情報に加え、既定値、検証テキスト、検証規則を AFX_DAO_ALL_INFO します。
 
 *lpszName*<br/>
-名前で検索の目的のフィールドの名前を含む文字列。 使用することができます、 [CString](../../atl-mfc-shared/reference/cstringt-class.md)します。
+名前で検索する目的のフィールドの名前を格納している文字列。 [CString](../../atl-mfc-shared/reference/cstringt-class.md)を使用できます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-返される情報の説明については*fieldinfo*を参照してください、 [CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md)構造体。 この構造体は、わかりやすい情報に対応するメンバー *dwInfoOptions*上。 1 つのレベルの情報を要求すると、その情報も同様のレベルを取得します。
+*Fieldinfo*で返される情報の説明については、 [CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md)構造体を参照してください。 この構造体には、上の*Dwinのオプション*の説明情報に対応するメンバーが含まれています。 1レベルの情報を要求すると、以前のレベルの情報も取得されます。
 
-##  <a name="getname"></a>  CDaoQueryDef::GetName
+##  <a name="getname"></a>CDaoQueryDef:: GetName
 
-クエリ定義によって表されるクエリの名前を取得するには、このメンバー関数を呼び出します。
+このメンバー関数を呼び出して、クエリの実行によって表されるクエリの名前を取得します。
 
 ```
 CString GetName();
@@ -458,13 +458,13 @@ CString GetName();
 
 クエリ名を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-クエリ定義名は一意のユーザー定義の名前です。 クエリ定義名の詳細については、「Name プロパティ」DAO ヘルプのトピックを参照してください。
+クエリ定義名は、一意のユーザー定義名です。 クエリ定義名の詳細については、DAO ヘルプの「Name プロパティ」を参照してください。
 
-##  <a name="getodbctimeout"></a>  CDaoQueryDef::GetODBCTimeout
+##  <a name="getodbctimeout"></a>CDaoQueryDef:: GetODBCTimeout
 
-ODBC データ ソースへのクエリがタイムアウトするまで、現在の制限時間を取得するには、このメンバー関数を呼び出します。
+このメンバー関数を呼び出して、ODBC データソースに対するクエリがタイムアウトになるまでの現在の制限を取得します。
 
 ```
 short GetODBCTimeout();
@@ -472,18 +472,18 @@ short GetODBCTimeout();
 
 ### <a name="return-value"></a>戻り値
 
-タイムアウトをクエリするまでの秒数。
+クエリがタイムアウトするまでの秒数。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この制限時間については、DAO ヘルプの「補足プロパティ」を参照してください。
+この制限時間の詳細については、DAO ヘルプの「ODBCTimeout プロパティ」を参照してください。
 
 > [!TIP]
->  ODBC テーブルの操作の推奨される方法は、Microsoft Jet に添付すること (します。MDB) データベース。 詳細については、"にアクセスする外部のデータベースと DAO"DAO ヘルプのトピックを参照してください。
+>  ODBC テーブルを使用する場合は、Microsoft Jet () に接続することをお勧めします。MDB) データベース。 詳細については、DAO ヘルプの「DAO を使用した外部データベースへのアクセス」を参照してください。
 
-##  <a name="getparametercount"></a>  CDaoQueryDef::GetParameterCount
+##  <a name="getparametercount"></a>CDaoQueryDef:: GetParameterCount
 
-保存されたクエリのパラメーターの数を取得するには、このメンバー関数を呼び出します。
+このメンバー関数を呼び出して、保存されたクエリのパラメーターの数を取得します。
 
 ```
 short GetParameterCount();
@@ -491,17 +491,17 @@ short GetParameterCount();
 
 ### <a name="return-value"></a>戻り値
 
-クエリで定義されたパラメーターの数。
+クエリで定義されているパラメーターの数。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`GetParameterCount` クエリ定義のすべてのパラメーターをループに役立ちます。 そのために、使用`GetParameterCount`と共に[GetParameterInfo](#getparameterinfo)します。
+`GetParameterCount` は、クエリ定義内のすべてのパラメーターをループ処理する場合に便利です。 そのためには、 [Getparameterinfo](#getparameterinfo)と共に `GetParameterCount` を使用します。
 
-関連情報については、「パラメーター オブジェクト」、「Parameters コレクション」および"パラメーターの宣言 (SQL)"DAO ヘルプのトピックを参照してください。
+関連情報については、DAO ヘルプの「Parameter オブジェクト」、「Parameters Collection」、「PARAMETERS 宣言 (SQL)」を参照してください。
 
-##  <a name="getparameterinfo"></a>  CDaoQueryDef::GetParameterInfo
+##  <a name="getparameterinfo"></a>CDaoQueryDef:: GetParameterInfo
 
-クエリ定義で定義されているパラメーターに関する情報を取得するには、このメンバー関数を呼び出します。
+このメンバー関数を呼び出して、クエリ定義で定義されているパラメーターに関する情報を取得します。
 
 ```
 void GetParameterInfo(
@@ -518,28 +518,28 @@ void GetParameterInfo(
 ### <a name="parameters"></a>パラメーター
 
 *nIndex*<br/>
-インデックスで検索する場合、クエリ定義のパラメーター コレクションで目的のパラメーターの 0 から始まるインデックス。
+インデックスによる検索のために、クエリ定義の Parameters コレクション内にある目的のパラメーターの0から始まるインデックス。
 
 *パラメーター情報*<br/>
-参照を[CDaoParameterInfo](../../mfc/reference/cdaoparameterinfo-structure.md)オブジェクトを要求された情報を返します。
+要求された情報を返す[CDaoParameterInfo](../../mfc/reference/cdaoparameterinfo-structure.md)オブジェクトへの参照。
 
-*dwInfoOptions*<br/>
-取得するパラメーターに関する情報を指定するオプション。 利用可能なオプションは、原因は何を返す関数と共にとおりです。
+*オプション*<br/>
+取得するパラメーターに関する情報を指定するオプション。 使用可能なオプションは、関数が返す原因と共にここに表示されます。
 
-- AFX_DAO_PRIMARY_INFO (既定値) の名前、型
+- AFX_DAO_PRIMARY_INFO (既定) 名前、型
 
 *lpszName*<br/>
-名前で検索の目的のパラメーターの名前を含む文字列。 使用することができます、 [CString](../../atl-mfc-shared/reference/cstringt-class.md)します。
+名前で検索する目的のパラメーターの名前を格納している文字列。 [CString](../../atl-mfc-shared/reference/cstringt-class.md)を使用できます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-返される情報の説明については*paraminfo*を参照してください、 [CDaoParameterInfo](../../mfc/reference/cdaoparameterinfo-structure.md)構造体。 この構造体は、わかりやすい情報に対応するメンバー *dwInfoOptions*上。
+*パラメーター情報*で返される情報の説明については、 [CDaoParameterInfo](../../mfc/reference/cdaoparameterinfo-structure.md)構造体を参照してください。 この構造体には、上の*Dwinのオプション*の説明情報に対応するメンバーが含まれています。
 
-関連情報については、"パラメーターの宣言 (SQL)"DAO ヘルプのトピックを参照してください。
+関連情報については、DAO ヘルプの「PARAMETERS 宣言 (SQL)」を参照してください。
 
-##  <a name="getparamvalue"></a>  CDaoQueryDef::GetParamValue
+##  <a name="getparamvalue"></a>CDaoQueryDef::GetParamValue
 
-クエリ定義のパラメーターのコレクションに格納されている指定されたパラメーターの現在の値を取得するには、このメンバー関数を呼び出します。
+このメンバー関数を呼び出して、クエリ定義の Parameters コレクションに格納されている、指定したパラメーターの現在の値を取得します。
 
 ```
 virtual COleVariant GetParamValue(LPCTSTR lpszName);
@@ -549,24 +549,24 @@ virtual COleVariant GetParamValue(int nIndex);
 ### <a name="parameters"></a>パラメーター
 
 *lpszName*<br/>
-パラメーターの名前で検索値の名前。
+名前によって検索するために必要な値を持つパラメーターの名前。
 
 *nIndex*<br/>
-インデックスで検索する場合、クエリ定義のパラメーター コレクション内のパラメーターの 0 から始まるインデックス。 呼び出すには、この値を取得できます[GetParameterCount](#getparametercount)と[GetParameterInfo](#getparameterinfo)します。
+インデックスによって検索するための、クエリ定義の Parameters コレクション内のパラメーターの0から始まるインデックス。 この値は、 [Getparametercount](#getparametercount)と[getparameterinfo](#getparameterinfo)の呼び出しを使用して取得できます。
 
 ### <a name="return-value"></a>戻り値
 
-クラスのオブジェクト[COleVariant](../../mfc/reference/colevariant-class.md)パラメーターの値を格納しています。
+パラメーターの値を格納している[COleVariant](../../mfc/reference/colevariant-class.md)クラスのオブジェクト。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-パラメーター名、またはコレクションの序数位置を使用してアクセスできます。
+パラメーターには、名前またはコレクション内の序数位置を使用してアクセスできます。
 
-関連情報については、"パラメーターの宣言 (SQL)"DAO ヘルプのトピックを参照してください。
+関連情報については、DAO ヘルプの「PARAMETERS 宣言 (SQL)」を参照してください。
 
-##  <a name="getrecordsaffected"></a>  CDaoQueryDef::GetRecordsAffected
+##  <a name="getrecordsaffected"></a>CDaoQueryDef::GetRecordsAffected
 
-最後の呼び出しの影響を受けたレコードの数を判断するには、このメンバー関数を呼び出す[Execute](#execute)します。
+[Execute](#execute)の最後の呼び出しによって影響を受けたレコードの数を確認するには、このメンバー関数を呼び出します。
 
 ```
 long GetRecordsAffected();
@@ -574,17 +574,17 @@ long GetRecordsAffected();
 
 ### <a name="return-value"></a>戻り値
 
-影響を受けたレコードの数。
+影響を受けたレコード数です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-返されるカウントが cascade を更新または削除時に、関連テーブルの変更が有効では反映されません。
+返されるカウントには、連鎖更新または削除が有効になっている場合、関連テーブルの変更は反映されません。
 
-関連情報については、「RecordsAffected プロパティ」DAO ヘルプのトピックを参照してください。
+関連情報については、DAO ヘルプの「RecordsAffected プロパティ」を参照してください。
 
-##  <a name="getreturnsrecords"></a>  CDaoQueryDef::GetReturnsRecords
+##  <a name="getreturnsrecords"></a>CDaoQueryDef::GetReturnsRecords
 
-クエリ定義をレコードを返すクエリに基づいているかどうかを判断するには、このメンバー関数を呼び出します。
+このメンバー関数を呼び出して、レコードを返すクエリに基づいてクエリを実行するかどうかを判断します。
 
 ```
 BOOL GetReturnsRecords();
@@ -592,17 +592,17 @@ BOOL GetReturnsRecords();
 
 ### <a name="return-value"></a>戻り値
 
-レコードを返すクエリ定義がクエリに基づいている場合、0 以外の場合それ以外の場合 0 を返します。
+レコードを返すクエリに基づいてクエリを実行する場合は0以外の値。それ以外の場合は0です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメンバー関数は、SQL パススルー クエリに対してのみ使用されます。 SQL クエリの詳細については、次を参照してください。、 [Execute](#execute)メンバー関数。 SQL パススルー クエリと操作の詳細については、次を参照してください。、 [SetReturnsRecords](#setreturnsrecords)メンバー関数。
+このメンバー関数は、SQL パススルークエリにのみ使用されます。 SQL クエリの詳細については、「 [Execute](#execute)メンバー関数」を参照してください。 SQL パススルークエリの操作の詳細については、「 [SetReturnsRecords](#setreturnsrecords)メンバー関数」を参照してください。
 
-関連情報については、「レコード表示プロパティ」DAO ヘルプのトピックを参照してください。
+関連情報については、DAO ヘルプの「ReturnsRecords プロパティ」を参照してください。
 
-##  <a name="getsql"></a>  CDaoQueryDef::GetSQL
+##  <a name="getsql"></a>CDaoQueryDef::GetSQL
 
-クエリ定義の基になるクエリを定義する SQL ステートメントを取得するには、このメンバー関数を呼び出します。
+このメンバー関数を呼び出して、クエリ定義の基になるクエリを定義する SQL ステートメントを取得します。
 
 ```
 CString GetSQL();
@@ -612,15 +612,15 @@ CString GetSQL();
 
 クエリ定義の基になるクエリを定義する SQL ステートメント。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-キーワードや、テーブル名の文字列をおそらく解析されます。
+次に、キーワードやテーブル名などの文字列を解析します。
 
-関連情報については、"SQL Property"、"比較の Microsoft Jet データベース エンジン SQL と ANSI SQL"、および「クエリを実行する、データベースを SQL でコード」DAO ヘルプのトピックを参照してください。
+関連情報については、DAO ヘルプの「SQL プロパティ」、「Microsoft Jet データベースエンジン SQL と ANSI SQL の比較」、および「コード内の SQL を使用したデータベースのクエリ」を参照してください。
 
-##  <a name="gettype"></a>  CDaoQueryDef::GetType
+##  <a name="gettype"></a>CDaoQueryDef:: GetType
 
-クエリ定義のクエリの種類を判断するには、このメンバー関数を呼び出します。
+このメンバー関数を呼び出して、クエリの種類を決定します。
 
 ```
 short GetType();
@@ -628,42 +628,42 @@ short GetType();
 
 ### <a name="return-value"></a>戻り値
 
-クエリ定義で定義されたクエリの型。 値は、「解説」を参照してください。
+クエリ定義によって定義されたクエリの型。 値については、「解説」を参照してください。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-クエリの種類はどのような文字列に指定したクエリ定義の SQL クエリを作成するか、既存のクエリ定義のによって設定されます[SetSQL](#setsql)メンバー関数。 この関数によって返されるクエリの種類には、次の値のいずれかを指定できます。
+クエリの種類は、クエリ定義を作成するときに、querydef の SQL 文字列で指定したものによって設定されるか、既存の querydef の[SetSQL](#setsql)メンバー関数を呼び出します。 この関数によって返されるクエリの種類は、次のいずれかの値になります。
 
-- `dbQSelect` 選択します
+- `dbQSelect` 選択
 
 - `dbQAction` 動作
 
-- `dbQCrosstab` クロス集計
+- クロス集計 `dbQCrosstab`
 
-- `dbQDelete` Delete
+- `dbQDelete` の削除
 
-- `dbQUpdate` 更新プログラム
+- `dbQUpdate` Update
 
 - `dbQAppend` 追加
 
-- `dbQMakeTable` テーブルな作成
+- テーブル作成 `dbQMakeTable`
 
-- `dbQDDL` データ定義
+- データ定義の `dbQDDL`
 
 - `dbQSQLPassThrough` パススルー
 
 - `dbQSetOperation` 共用体
 
-- `dbQSPTBulk` 併用`dbQSQLPassThrough`クエリ レコードは返されませんを指定します。
+- `dbQSPTBulk` `dbQSQLPassThrough` と共に使用して、レコードを返さないクエリを指定します。
 
 > [!NOTE]
->  SQL パススルー クエリを作成するに設定しないでください、`dbSQLPassThrough`定数。 これは自動的に設定、Microsoft Jet データベース エンジンによってクエリ定義のオブジェクトを作成し、接続文字列を設定します。
+>  SQL パススルークエリを作成するには、`dbSQLPassThrough` 定数を設定しないでください。 これは、Microsoft Jet データベースエンジンによって、querydef オブジェクトを作成し、接続文字列を設定するときに自動的に設定されます。
 
-SQL 文字列については、次を参照してください。 [GetSQL](#getsql)します。 クエリの種類については、次を参照してください。 [Execute](#execute)します。
+SQL 文字列の詳細については、「 [GetSQL](#getsql)」を参照してください。 クエリの種類の詳細については、「 [Execute](#execute)」を参照してください。
 
-##  <a name="isopen"></a>  CDaoQueryDef::IsOpen
+##  <a name="isopen"></a>CDaoQueryDef:: IsOpen
 
-確認するには、このメンバー関数を呼び出すかどうか、`CDaoQueryDef`オブジェクトが現在開いています。
+このメンバー関数を呼び出して、`CDaoQueryDef` オブジェクトが現在開いているかどうかを確認します。
 
 ```
 BOOL IsOpen() const;
@@ -671,31 +671,31 @@ BOOL IsOpen() const;
 
 ### <a name="return-value"></a>戻り値
 
-0 以外の値、`CDaoQueryDef`オブジェクトが現在開いている場合は 0 それ以外の場合。
+`CDaoQueryDef` オブジェクトが現在開いている場合は0以外の。それ以外の場合は0です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-クエリ定義は、呼び出しに使用する前に、開いている状態である必要があります[Execute](#execute)を作成したり、 [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)オブジェクト。 か、開いている状態の呼び出しにクエリ定義を格納する[作成](#create)(新しいクエリを定義) のまたは[開く](#open)(の既存のクエリ定義)。
+[Execute](#execute)または[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)オブジェクトを作成するために使用する前に、クエリ定義をオープン状態にする必要があります。 オープン状態の呼び出しにクエリを配置するには、 [Create](#create) (新しい querydef の場合) または[open](#open) (既存のクエリの場合) を呼び出します。
 
-##  <a name="m_pdatabase"></a>  CDaoQueryDef::m_pDatabase
+##  <a name="m_pdatabase"></a>CDaoQueryDef:: m_pDatabase
 
-ポインターが含まれています、 [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)クエリ定義のオブジェクトに関連付けられたオブジェクト。
+Querydef オブジェクトに関連付けられた[CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)オブジェクトへのポインターを格納します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-データベースに直接アクセスする必要がある場合は、このポインターを使用して — たとえば、他のクエリ定義またはレコード セットへのポインターを取得するデータベースのコレクションでオブジェクトします。
+データベースに直接アクセスする必要がある場合は、このポインターを使用します。たとえば、データベースのコレクション内の他のクエリ定義またはレコードセットオブジェクトへのポインターを取得します。
 
-##  <a name="m_pdaoquerydef"></a>  CDaoQueryDef::m_pDAOQueryDef
+##  <a name="m_pdaoquerydef"></a>CDaoQueryDef:: m_pDAOQueryDef
 
-基になる DAO クエリ定義のオブジェクトの OLE インターフェイスへのポインターが含まれています。
+基になる DAO querydef オブジェクトの OLE インターフェイスへのポインターを格納します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このポインターは、完全性とその他のクラスとの整合性に対して提供されます。 ただし、MFC には、DAO のクエリ定義ではなく完全にカプセル化するためが必要になる可能性があることはできません。 使用する場合は注意: この操作はわかっている場合を除き、ポインターの値を変更して具体的には、します。
+このポインターは、他のクラスとの一貫性を保つために用意されています。 ただし、MFC では DAO のクエリ定義が完全にカプセル化されるため、必要になる可能性はほとんどありません。 使用する場合は慎重に行う必要があります。特に、何を行っているかわからない場合は、ポインターの値を変更しないでください。
 
-##  <a name="open"></a>  CDaoQueryDef::Open
+##  <a name="open"></a>CDaoQueryDef:: Open
 
-データベースのクエリ定義のコレクションに保存したクエリ定義を開くには、このメンバー関数を呼び出します。
+このメンバー関数を呼び出して、データベースのクエリ定義コレクションに保存されている定義済みのクエリを開きます。
 
 ```
 virtual void Open(LPCTSTR lpszName = NULL);
@@ -704,15 +704,15 @@ virtual void Open(LPCTSTR lpszName = NULL);
 ### <a name="parameters"></a>パラメーター
 
 *lpszName*<br/>
-開く、保存されたクエリ定義の名前を含む文字列。 使用することができます、 [CString](../../atl-mfc-shared/reference/cstringt-class.md)します。
+開く、保存されたクエリの名前を含む文字列。 [CString](../../atl-mfc-shared/reference/cstringt-class.md)を使用できます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-呼び出すことができます、クエリ定義が開いたら、その[Execute](#execute)メンバー関数または作成するクエリを使用して、 [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)オブジェクト。
+クエリ定義が開いたら、その[Execute](#execute)メンバー関数を呼び出すか、またはクエリを使用して、 [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)オブジェクトを作成できます。
 
-##  <a name="setconnect"></a>  CDaoQueryDef::SetConnect
+##  <a name="setconnect"></a>CDaoQueryDef:: SetConnect
 
-クエリ定義オブジェクトの接続文字列を設定するには、このメンバー関数を呼び出します。
+このメンバー関数を呼び出して、querydef オブジェクトの接続文字列を設定します。
 
 ```
 void SetConnect(LPCTSTR lpszConnect);
@@ -721,22 +721,22 @@ void SetConnect(LPCTSTR lpszConnect);
 ### <a name="parameters"></a>パラメーター
 
 *lpszConnect*<br/>
-関連付けられている接続文字列を含む文字列[CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)オブジェクト。
+関連付けられた[CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)オブジェクトの接続文字列を含む文字列。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-接続文字列は、ODBC および必要に応じて、特定の ISAM ドライバーに追加情報を渡す使用されます。 Microsoft Jet 用は使用されません (します。MDB) データベース。
+接続文字列は、必要に応じて ODBC および特定の ISAM ドライバーに追加情報を渡すために使用されます。 Microsoft Jet () では使用されません。MDB) データベース。
 
 > [!TIP]
->  ODBC テーブルを使用することをお勧めが接続先にするには、します。MDB データベースです。
+>  ODBC テーブルを使用する場合は、にアタッチすることをお勧めします。MDB データベース。
 
-ODBC データ ソースへの SQL パススルー クエリを表すクエリを実行する前に設定された接続文字列で`SetConnect`を呼び出すと[SetReturnsRecords](#setreturnsrecords)クエリがレコードを返すかどうかを指定します。
+SQL パススルークエリを表すクエリを ODBC データソースに対して実行する前に、接続文字列を `SetConnect` に設定し、 [SetReturnsRecords](#setreturnsrecords)を呼び出して、クエリがレコードを返すかどうかを指定します。
 
-詳細については、接続文字列の構造との接続文字列コンポーネントの例については、DAO のヘルプ「プロパティの接続」を参照してください。
+接続文字列の構造と接続文字列コンポーネントの例の詳細については、DAO ヘルプの「Connect プロパティ」を参照してください。
 
-##  <a name="setname"></a>  CDaoQueryDef::SetName
+##  <a name="setname"></a>CDaoQueryDef:: SetName
 
-一時的でないクエリ定義の名前を変更する場合は、このメンバー関数を呼び出します。
+一時的ではないクエリの名前を変更する場合は、このメンバー関数を呼び出します。
 
 ```
 void SetName(LPCTSTR lpszName);
@@ -745,15 +745,15 @@ void SetName(LPCTSTR lpszName);
 ### <a name="parameters"></a>パラメーター
 
 *lpszName*<br/>
-関連付けられている nontemporary クエリの新しい名前を含む文字列[CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)オブジェクト。
+関連付けられた[CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)オブジェクトの非一時クエリの新しい名前を含む文字列。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-クエリ定義名は、ユーザー定義の一意の名前です。 呼び出すことができます`SetName`クエリを定義する前に、オブジェクトがクエリ定義のコレクションに追加されます。
+クエリ定義名は、一意のユーザー定義名です。 `SetName` を呼び出すことができます。その前に、querydef オブジェクトをクエリ定義コレクションに追加します。
 
-##  <a name="setodbctimeout"></a>  CDaoQueryDef::SetODBCTimeout
+##  <a name="setodbctimeout"></a>CDaoQueryDef:: SetODBCTimeout
 
-ODBC データ ソースへのクエリがタイムアウトするまでに時間制限を設定するには、このメンバー関数を呼び出します。
+ODBC データソースに対するクエリがタイムアウトするまでの制限時間を設定するには、このメンバー関数を呼び出します。
 
 ```
 void SetODBCTimeout(short nODBCTimeout);
@@ -762,17 +762,17 @@ void SetODBCTimeout(short nODBCTimeout);
 ### <a name="parameters"></a>パラメーター
 
 *nODBCTimeout*<br/>
-タイムアウトをクエリするまでの秒数。
+クエリがタイムアウトするまでの秒数。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメンバー関数では、「タイムアウト」接続されているデータ ソースに対する後続の処理までの秒数の既定をオーバーライドできます。 操作は、ネットワーク アクセスの問題や、過剰なクエリ処理時間のためタイムアウト可能性があります。 呼び出す`SetODBCTimeout`クエリ タイムアウト値を変更する場合は、このクエリの定義を持つクエリを実行する前にします。 (ODBC 接続を再利用とタイムアウト値は、同じ接続上のすべてのクライアントに対して同じ) です。
+このメンバー関数を使用すると、接続されたデータソースに対する後続の操作の "タイムアウト" までの既定の秒数をオーバーライドできます。 操作は、ネットワークアクセスの問題、クエリ処理時間の超過などによってタイムアウトする場合があります。 クエリのタイムアウト値を変更する場合は、このクエリを使用してクエリを実行する前に `SetODBCTimeout` を呼び出します。 (ODBC で接続を再利用する場合、タイムアウト値は、同じ接続上のすべてのクライアントで同じになります)。
 
-クエリ タイムアウトの既定値は、60 秒です。
+クエリタイムアウトの既定値は60秒です。
 
-##  <a name="setparamvalue"></a>  CDaoQueryDef::SetParamValue
+##  <a name="setparamvalue"></a>CDaoQueryDef::SetParamValue
 
-実行時に、クエリ定義でパラメーターの値を設定するには、このメンバー関数を呼び出します。
+実行時にクエリ定義のパラメーターの値を設定するには、このメンバー関数を呼び出します。
 
 ```
 virtual void SetParamValue(
@@ -790,20 +790,20 @@ virtual void SetParamValue(
 値を設定するパラメーターの名前。
 
 *varValue*<br/>
-値を設定します。「解説」を参照してください。
+設定する値。「解説」を参照してください。
 
 *nIndex*<br/>
-クエリ定義のパラメーター コレクション内のパラメーターの序数位置。 呼び出すには、この値を取得できます[GetParameterCount](#getparametercount)と[GetParameterInfo](#getparameterinfo)します。
+クエリ定義の Parameters コレクション内のパラメーターの位置を表す序数です。 この値は、 [Getparametercount](#getparametercount)と[getparameterinfo](#getparameterinfo)の呼び出しを使用して取得できます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-パラメーターは、クエリ定義の SQL 文字列の一部として確立するが既に必要があります。 パラメーター名、またはコレクションの序数位置を使用してアクセスできます。
+パラメーターは、クエリ定義の SQL 文字列の一部として既に設定されている必要があります。 パラメーターには、名前またはコレクション内の序数位置を使用してアクセスできます。
 
-として設定する値を指定する`COleVariant`オブジェクト。 目的の値と型の設定については、`COleVariant`オブジェクト、クラスを参照してください。 [COleVariant](../../mfc/reference/colevariant-class.md)します。
+`COleVariant` オブジェクトとして設定する値を指定します。 `COleVariant` オブジェクトでの必要な値と型の設定の詳細については、「クラス[COleVariant](../../mfc/reference/colevariant-class.md)」を参照してください。
 
-##  <a name="setreturnsrecords"></a>  CDaoQueryDef::SetReturnsRecords
+##  <a name="setreturnsrecords"></a>CDaoQueryDef::SetReturnsRecords
 
-外部データベースに SQL パススルー クエリの設定のプロセスの一環として、このメンバー関数を呼び出します。
+SQL パススルークエリを外部データベースに設定するプロセスの一部として、このメンバー関数を呼び出します。
 
 ```
 void SetReturnsRecords(BOOL bReturnsRecords);
@@ -812,15 +812,15 @@ void SetReturnsRecords(BOOL bReturnsRecords);
 ### <a name="parameters"></a>パラメーター
 
 *bReturnsRecords*<br/>
-外部データベースにクエリがレコードを返す場合に TRUE を渡すそれ以外の場合、FALSE です。
+外部データベースに対するクエリでレコードが返される場合は TRUE を渡します。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このような場合は、クエリ定義を作成し、他を使用してそのプロパティを設定`CDaoQueryDef`メンバー関数。 外部データベースについては、次を参照してください。 [SetConnect](#setconnect)します。
+このような場合は、他の `CDaoQueryDef` メンバー関数を使用して、クエリを作成し、そのプロパティを設定する必要があります。 外部データベースの説明については、「 [Setconnect](#setconnect)」を参照してください。
 
-##  <a name="setsql"></a>  CDaoQueryDef::SetSQL
+##  <a name="setsql"></a>CDaoQueryDef::SetSQL
 
-クエリを実行する SQL ステートメントを設定するには、このメンバー関数を呼び出します。
+このメンバー関数を呼び出して、クエリ実行によって実行される SQL ステートメントを設定します。
 
 ```
 void SetSQL(LPCTSTR lpszSQL);
@@ -829,13 +829,13 @@ void SetSQL(LPCTSTR lpszSQL);
 ### <a name="parameters"></a>パラメーター
 
 *lpszSQL*<br/>
-実行に適した完全な SQL ステートメントを含む文字列。 この文字列の構文は、DBMS に依存する、クエリの対象とします。 Microsoft Jet データベース エンジンで使用される構文の詳細については、「作成 SQL ステートメントでコード」DAO ヘルプのトピックを参照してください。
+実行に適した完全な SQL ステートメントを含む文字列。 この文字列の構文は、クエリが対象とする DBMS によって異なります。 Microsoft Jet データベースエンジンで使用される構文の詳細については、DAO ヘルプのトピック「コードでの SQL ステートメントの作成」を参照してください。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-一般的な使用`SetSQL`パススルーの SQL クエリで使用するためのクエリ定義オブジェクトを設定します。 (対象となる DBMS 上の SQL パススルー クエリの構文、DBMS のマニュアルを参照してください)。
+`SetSQL` の一般的な使用方法は、SQL パススルークエリで使用するために、querydef オブジェクトを設定することです。 (ターゲット DBMS に対する SQL パススルークエリの構文については、DBMS のドキュメントを参照してください)。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [CObject クラス](../../mfc/reference/cobject-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)<br/>

@@ -201,11 +201,11 @@ helpviewer_keywords:
 - std::partition_copy [C++]
 - std::swap [C++]
 ms.openlocfilehash: 199634997397cca0008c60843b5d977633277331
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
-ms.translationtype: MT
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821884"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78854865"
 ---
 # <a name="ltalgorithmgt-functions"></a>&lt;algorithm&gt; 関数
 
@@ -257,13 +257,13 @@ ForwardIterator adjacent_find(
 
 このような要素のペアが見つかった場合に、互いに等しい (最初のバージョンでは)、または二項述語によって指定された条件を満たす、隣接する要素の1番目の反復子。 それ以外の場合は、 *last*を指す反復子が返されます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `adjacent_find` アルゴリズムは、変化しないシーケンス アルゴリズムです。 検索範囲が有効であり、すべてのポインターが逆参照可能であって、かつ先頭位置からのインクリメントにより最後の位置に到達可能である必要があります。 アルゴリズムの時間の複雑さは、範囲に含まれる要素の数に比例します。
 
 要素間の一致を判断するために使用される `operator==` によって、そのオペランド間の等価関係関係が強制される必要があります。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 // alg_adj_fnd.cpp
@@ -364,11 +364,11 @@ bool all_of(
 
 指定された範囲内の各要素で条件が検出された場合、または範囲が空の場合は**true**を返し、それ以外の場合は**false**を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このテンプレート関数は、`[0, last - first)`範囲内の各 `N` に対して、述語 `pred(*(first + N))` が**true**の場合にのみ**true**を返します。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 // alg_all_of.cpp
@@ -440,13 +440,13 @@ bool any_of(
 
 指定された範囲で少なくとも1回条件が検出された場合は**true**を返します。条件が検出されない場合は**false**を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このテンプレート関数は、範囲内の `N` の場合にのみ**true**を返します。
 
 `[0, last - first)`、述語 `pred(*(first + N))` は true です。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 // alg_any_of.cpp
@@ -517,7 +517,7 @@ bool binary_search(
 
 指定した値と等しいか等しい範囲内に要素が見つかった場合は**true** 。それ以外の場合は**false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 参照される並べ替えられたソースの範囲が有効であり、すべてのポインターが逆参照可能であって、かつシーケンス内で先頭位置からのインクリメントにより最後の位置に到達可能である必要があります。
 
@@ -529,7 +529,7 @@ bool binary_search(
 
 アルゴリズムの複雑さは、ランダムアクセス反復子の場合は対数、それ以外の場合は (`last` - `first`) のステップ数に比例して線形的になります。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 // alg_bin_srch.cpp
@@ -656,7 +656,7 @@ constexpr const Type& clamp(
 
 `value < lower`の場合は*下位*への参照を返し、`upper < value`の場合は*upper*への参照を返します。 それ以外の場合は、 *value*への参照を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 *Upper*の値が*低い*場合、動作は未定義です。
 
@@ -697,7 +697,7 @@ ForwardIterator2 copy(
 
 ターゲット範囲の最後の要素の1つ後ろの位置を示す出力反復子。つまり、反復子が `result` + (*最後*の - *最初*の)。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ソース範囲内が有効で、コピーするすべての要素を保持する十分な領域がターゲットに必要です。
 
@@ -705,7 +705,7 @@ ForwardIterator2 copy(
 
 `copy` アルゴリズムは、反復子が指す値のみを変更し、ターゲット範囲の要素に新しい値を割り当てます。 これは、新しい要素の作成には使用できず、空のコンテナーに要素を直接挿入することはできません。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 // alg_copy.cpp
@@ -790,7 +790,7 @@ BidirectionalIterator2 copy_backward(
 
 ターゲット範囲の最後の要素の1つ後ろの位置を示す出力反復子。つまり、反復子は*Destend* (*last* - *first*) をアドレス指定します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ソース範囲内が有効で、コピーするすべての要素を保持する十分な領域がターゲットに必要です。
 
@@ -802,7 +802,7 @@ BidirectionalIterator2 copy_backward(
 
 `copy_backward` アルゴリズムは、反復子が指す値のみを変更し、ターゲット範囲の要素に新しい値を割り当てます。 これは、新しい要素の作成には使用できず、空のコンテナーに要素を直接挿入することはできません。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 // alg_copy_bkwd.cpp
@@ -902,15 +902,15 @@ ForwardIterator2 copy_if(
 
 条件を満たす各要素について、 *dest*が1回インクリメントされる出力反復子。 言い換えると、戻り値から*dest*を引いた値は、コピーされた要素の数と同じになります。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このテンプレート関数は、
 
 `if (pred(*first + N)) * dest++ = *(first + N))`
 
-を `[0, last - first)` の範囲で、各 `N` に対して 1 回評価し、`N` の値を最低値から厳密に 1 ずつ増やします。 *Dest*と*最初*にストレージの領域を指定する場合は、 *dest*を `[ first, last )`の範囲に含めることはできません。
+を `N` の範囲で、各 `[0, last - first)` に対して 1 回評価し、`N` の値を最低値から厳密に 1 ずつ増やします。 *Dest*と*最初*にストレージの領域を指定する場合は、 *dest*を `[ first, last )`の範囲に含めることはできません。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 // alg_copy_if.cpp
@@ -1002,11 +1002,11 @@ ForwardIterator2 copy_n(
 
 要素のコピー先となった場所を示す出力反復子を返します。 これは、 *dest*パラメーターの戻り値と同じです。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このテンプレート関数は、`[0, count)`範囲内の各 `N` に対して `*(dest + N) = *(first + N))` を1回評価します。これにより、`N` の値が最小値から厳密に増加します。 その後で `dest + N` が返されます。 *Dest*と*最初*にストレージの領域を指定する場合は、 *dest*を `[first, last)`の範囲に含めることはできません。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 // alg_copy_n.cpp
@@ -1073,13 +1073,13 @@ count(
 
 値の*値*を持つ範囲 [*first*, *last*) 内の要素の数をカウントする `InputIterator` の差の型。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 要素と指定された値の間の一致を判断するために使用される `operator==` によって、オペランド間の等価関係が強制される必要があります。
 
 このアルゴリズムは、テンプレート関数 [count_if](../standard-library/algorithm-functions.md#count_if) を使用してすべての述語を満たす要素をカウントするために汎用化されます。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 // alg_count.cpp
@@ -1154,11 +1154,11 @@ count_if(
 
 述語で指定された条件を満たす要素の数。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このテンプレート関数は、アルゴリズム [count](../standard-library/algorithm-functions.md#count) を汎化したものであり、"特定の値に等しい" ことを示す述語を任意の述語に置き換えます。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 // alg_count_if.cpp
@@ -1205,7 +1205,7 @@ The number of elements in v1 greater than 10 is: 2.
 
 二項述語によって指定された等値または等価について、2 つの範囲を要素ごとに比較します。
 
-異なる種類のコンテナー (たとえば `vector` と `list`) 内の要素を比較する場合、異なる要素型を比較する場合、またはコンテナー内のサブ範囲を比較する必要がある場合は、`std::equal` を使用します。 そうではなく、同じ種類のコンテナー内の同じ型の要素を比較する場合は、各コンテナーによって提供される非メンバーの `operator==` を使用します。
+異なる種類のコンテナー (たとえば `std::equal` と `vector`) 内の要素を比較する場合、異なる要素型を比較する場合、またはコンテナー内のサブ範囲を比較する必要がある場合は、`list` を使用します。 そうではなく、同じ種類のコンテナー内の同じ型の要素を比較する場合は、各コンテナーによって提供される非メンバーの `operator==` を使用します。
 
 C++14 コードでは 2 範囲のオーバーロードを使用します。これは、2 つ目の範囲に対して 1 つの反復子のみを受け取るオーバーロードでは、2 つ目の範囲が 1 つ目の範囲より大きい場合にその差を検出できず、2 つ目の範囲が 1 つ目の範囲より小さい場合に未定義の動作が発生するためです。
 
@@ -1295,7 +1295,7 @@ bool equal(
 
 二項述語の下で、要素ごとに比較したとき、範囲が同一または等価の場合に限り **true**。それ以外の場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 検索対象の範囲が有効であること、すべての反復子が逆参照可能であること、さらに先頭位置からのインクリメントにより最後の位置に到達可能であることが必要です。
 
@@ -1303,7 +1303,7 @@ bool equal(
 
 `operator==` でもユーザー定義の述語でも、そのオペランド間で対称的、再帰的、および推移的な等価関係を強制する必要はありません。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 #include <iostream>
@@ -1375,7 +1375,7 @@ pair<ForwardIterator, ForwardIterator> equal_range(
 
 範囲内の要素が*value*と等価でない場合、戻り値のペアの前方反復子は等しいため、範囲の順序には関係なく、*値*を挿入できる位置を指定します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 アルゴリズムによって返されるペアの 1 番目の反復子は [lower_bound](../standard-library/algorithm-functions.md#lower_bound) で、2 番目の反復子は [upper_bound](../standard-library/algorithm-functions.md#upper_bound) です。
 
@@ -1385,7 +1385,7 @@ pair<ForwardIterator, ForwardIterator> equal_range(
 
 アルゴリズムの複雑さは、ランダムアクセス反復子の場合は対数、それ以外の場合はに比例するステップ数 (*最後* - *最初*) です。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 // alg_equal_range.cpp
@@ -1535,11 +1535,11 @@ void fill(
 *value*\
 範囲 [*first*, *last*) 内の要素に割り当てられる値。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 割り当て先の範囲が有効であり、すべてのポインターが逆参照可能であって、かつ先頭位置からのインクリメントにより最後の位置に到達可能である必要があります。 複雑さは、範囲のサイズに応じて線形的です。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 // alg_fill.cpp
@@ -1617,11 +1617,11 @@ ForwardIterator fill_n(
 
 *Count* > 0 の場合は、最後の要素の後にある要素への反復子。それ以外の場合は最初の要素。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 割り当て先の範囲が有効であり、すべてのポインターが逆参照可能であって、かつ先頭位置からのインクリメントにより最後の位置に到達可能である必要があります。 複雑さは、範囲のサイズに応じて線形的です。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 // alg_fill_n.cpp
@@ -1706,7 +1706,7 @@ ForwardIterator find(
 
 指定された値が検索範囲内で最初に出現する位置を示す入力反復子。 同等の値を持つ要素が見つからない場合、は*last*を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 要素と指定された値の間の一致を判断するために使用される `operator==` によって、オペランド間の等価関係が強制される必要があります。
 
@@ -1774,13 +1774,13 @@ find_end(
 
 指定されたシーケンス [first2, last2) に一致する、[first1, last1) 内の最後のサブシーケンスの最初の要素の位置を示す前方反復子。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 要素と指定された値の間の一致を判断するために使用される `operator==` によって、オペランド間の等価関係が強制される必要があります。
 
 参照されている範囲が有効であり、すべてのポインターが逆参照可能であって、かつ各シーケンス内で先頭位置からのインクリメントにより最後の位置に到達可能である必要があります。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 // alg_find_end.cpp
@@ -1938,13 +1938,13 @@ find_first_of(
 
 指定したシーケンスと一致するか二項述語で指定された意味で等価である、最初のサブシーケンスの最初の要素の位置を指す前方反復子。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 要素と指定された値の間の一致を判断するために使用される `operator==` によって、オペランド間の等価関係が強制される必要があります。
 
 参照されている範囲が有効であり、すべてのポインターが逆参照可能であって、かつ各シーケンス内で先頭位置からのインクリメントにより最後の位置に到達可能である必要があります。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 // alg_find_first_of.cpp
@@ -2076,11 +2076,11 @@ ForwardIterator find_if(
 
 述語によって指定された条件を満たす範囲内の最初の要素を参照する入力反復子 (述語の結果は**true**になります)。 述語を満たす要素が見つからない場合、は*last*を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このテンプレート関数は、アルゴリズム [find](../standard-library/algorithm-functions.md#find) を汎化したものであり、"特定の値に等しい" ことを示す述語を任意の述語に置き換えます。 論理的に反対のもの (述語の条件を満たさない最初の要素を検索) については、「[find_if_not](../standard-library/algorithm-functions.md#find_if_not)」を参照してください。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 // cl.exe /W4 /nologo /EHsc /MTd
@@ -2198,7 +2198,7 @@ ForwardIterator find_if_not(
 
 述語によって指定された条件を満たさない範囲内の最初の要素を参照する入力反復子 (述語は**false**になります)。 すべての要素が述語を満たす場合 (述語はすべての要素に対して**true**になります)、は*last*を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このテンプレート関数は、アルゴリズム [find](../standard-library/algorithm-functions.md#find) を汎化したものであり、"特定の値に等しい" ことを示す述語を任意の述語に置き換えます。 論理的に反対のもの (述語の条件を満たす最初の要素を検索) については、「[find_if](../standard-library/algorithm-functions.md#find_if)」を参照してください。
 
@@ -2238,7 +2238,7 @@ void for_each(
 
 範囲内のすべての要素に適用後の関数オブジェクトのコピー。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 アルゴリズム `for_each` は非常に柔軟で、範囲内の各要素をユーザーが指定したさまざまな方法で変更できます。 テンプレート化された関数は、異なるパラメーターを渡すことで、変更されたフォームで再利用することができます。 ユーザー定義関数は、範囲内のすべての要素を処理した後にアルゴリズムが返す可能性のある内部状態内に情報を蓄積することができます。
 
@@ -2246,7 +2246,7 @@ void for_each(
 
 複雑さは線形的で、最大で (*最後* - *最初*) の比較があります。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 // alg_for_each.cpp
@@ -2405,7 +2405,7 @@ void generate(
 *gen*\
 引数を指定しないで呼び出され、範囲内の各要素に割り当てられる値を生成するために使用される関数オブジェクト。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 関数オブジェクトは範囲内の要素ごとに呼び出されます。呼び出されるたびに同じ値を返す必要はありません。 たとえば、ファイルから読み取る、ローカル状態を参照して変更するなどのことができます。 ジェネレーターの結果の型は、その範囲の前方反復子の値の型に変換可能である必要があります。
 
@@ -2413,7 +2413,7 @@ void generate(
 
 複雑さは線形的で、必要なジェネレーターに対して正確に (`last` - `first`) の呼び出しが行われます。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 // alg_generate.cpp
@@ -2489,7 +2489,7 @@ ForwardIterator generate_n(
 *gen*\
 引数を指定しないで呼び出され、範囲内の各要素に割り当てられる値を生成するために使用される関数オブジェクト。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 関数オブジェクトは範囲内の要素ごとに呼び出されます。呼び出されるたびに同じ値を返す必要はありません。 たとえば、ファイルから読み取る、ローカル状態を参照して変更するなどのことができます。 ジェネレーターの結果の型は、その範囲の前方反復子の値の型に変換可能である必要があります。
 
@@ -2497,7 +2497,7 @@ ForwardIterator generate_n(
 
 複雑さは、要求されているジェネレーターへの呼び出し回数 `count` に正確に比例して線形的です。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 // cl.exe /EHsc /nologo /W4 /MTd
@@ -2604,7 +2604,7 @@ bool includes(
 
 最初の並べ替えられた範囲に 2 番目の並べ替えられた範囲内のすべての要素が含まれている場合は **true**、それ以外の場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このテストを検討する別の方法は、テストによって 2 番目のソース範囲が最初のソース範囲のサブセットであるかどうかが決定したことです。
 
@@ -2618,7 +2618,7 @@ bool includes(
 
 アルゴリズムの複雑さは線形的で、空でないソース範囲に対して最大 `2 * ((last1 - first1) - (last2 - first2)) - 1` の比較があります。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 // alg_includes.cpp
@@ -2818,7 +2818,7 @@ void inplace_merge(
 *pred*\
 1 つの要素が別の要素より小さいという意味を定義するユーザー定義の述語関数オブジェクト。 比較述語は2つの引数を受け取り、最初の要素が2番目の要素より小さい場合は**true**を返し、それ以外の場合は**false**を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 参照される並べ替えられた連続する範囲が有効であり、すべてのポインターが逆参照可能であって、かつ各シーケンス内で先頭位置からのインクリメントにより最後の位置に到達可能である必要があります。
 
@@ -2826,7 +2826,7 @@ void inplace_merge(
 
 複雑さは、アルゴリズムがメモリを一時バッファーに割り当てる際に使用可能なメモリによって異なります。 使用可能なメモリが十分にある場合、最適なケースは `(last - first) - 1` 比較で線形的になります。補助メモリが使用できない場合、最悪のケースは `N log(N)`*になります。ここ*で、 *N* = *最後*に - ます。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 // alg_inplace_merge.cpp
@@ -2985,13 +2985,13 @@ bool is_heap(
 
 指定された範囲の要素がヒープを形成する場合は**true** 、それ以外の場合は**false**を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 1つ目のテンプレート関数は、 [is_heap_until](../standard-library/algorithm-functions.md#is_heap_until)`(first , last) == last`を返します。
 
 2 番目のテンプレート関数は、以下を返します。
 
-`is_heap_until(first, last, pred) == last`.
+[https://login.microsoftonline.com/consumers/](`is_heap_until(first, last, pred) == last`)
 
 ## <a name="is_heap_until"></a>is_heap_until
 
@@ -3041,7 +3041,7 @@ RandomAccessIterator is_heap_until(
 
 指定された範囲がヒープを形成する場合、または1つ以下の要素が含まれる場合は、 *last*を返します。 それ以外の場合、ヒープの条件を満たさない最初の要素の反復子を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 最初のテンプレート関数は、`[first, last)` 内の最後の反復子 `next` を返します。 `[first, next)` は、関数オブジェクト `std::less<>`によって順序付けられたヒープです。 `last - first` 距離が2未満の場合、関数は*last*を返します。
 
@@ -3084,7 +3084,7 @@ bool is_partitioned(
 
 条件の**true**をテストする特定の範囲のすべての要素が、 **false**をテストする要素の前にある場合は**true**を返します。それ以外の場合は**false**を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このテンプレート関数は、`[first, last)` 内のすべての要素が*pred*によってパーティション分割されている場合にのみ**true**を返します。つまり、`pred (Y)` が**false**であるすべての要素 `Y` する前に、`pred (X)` が true である `[first, last)` に `X` すべての要素が発生します。
 
@@ -3144,7 +3144,7 @@ bool is_permutation(
 
 比較演算子の述語に従って同一になるように範囲を再配置できる場合は**true** 。それ以外の場合は**false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `is_permutation` は、最悪の場合に 2 次の複雑さを持ちます。
 
@@ -3152,7 +3152,7 @@ bool is_permutation(
 
 2 つ目と 4 つ目のテンプレート関数も同様に動作しますが、`operator==(X, Y)` を `Pred(X, Y)` に置き換えている点が異なります。 正常に動作するには、述語が対称的、推移的、および再帰的である必要があります。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 `is_permutation` を使用する方法を次の例に示します。
 
@@ -3252,7 +3252,7 @@ bool is_sorted(
 *pred*\
 2 つの要素間の順序を決定するテストの条件。 比較述語は2つの引数を受け取り、 **true**または**false**を返します。 これは `operator<` と同じタスクを実行します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 1つ目のテンプレート関数は、 [is_sorted_until](#is_sorted_until)`( first, last ) == last`を返します。 `operator<` 関数は、順序の比較を実行します。
 
@@ -3308,7 +3308,7 @@ ForwardIterator is_sorted_until(
 
 並べ替え順序で最後の要素に設定された `ForwardIterator` を返します。 並べ替えられたシーケンスは、*最初*から開始されます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 最初のテンプレート関数は、`[first, last]` 内の最後の反復子 `next` を返します。これにより、`[first, next)` は `operator<`によって並べ替えられた並べ替え済みのシーケンスになります。 `distance()` が2未満の場合、関数は*last*を返します。
 
@@ -3331,13 +3331,13 @@ void iter_swap( ForwardIterator1 left, ForwardIterator2 right );
 *右*\
 値が交換される 2 つ目の前方反復子。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `swap` は、旧バージョンとC++の互換性のために標準に含まれていた**iter_swap**に優先して使用する必要があります。 `Fit1` および `Fit2` が前方反復子の場合、`iter_swap( Fit1, Fit2 )`は `swap( *Fit1, *Fit2 )`と同じです。
 
 入力前方反復子の値の型は、同じ値にする必要があります。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 // alg_iter_swap.cpp
@@ -3532,7 +3532,7 @@ bool lexicographical_compare(
 
 最初の範囲が 2 番目の範囲よりも辞書順で小さい場合は **true**、それ以外の場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 シーケンス間の辞書式比較は、次の条件を満たすまで要素ごとに比較します。
 
@@ -3542,7 +3542,7 @@ bool lexicographical_compare(
 
 - 不等ずが見つかりません。シーケンスの要素数が同じであるため、シーケンスは等しく、比較の結果は**false**になります。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 // alg_lex_comp.cpp
@@ -3674,7 +3674,7 @@ ForwardIterator lower_bound(
 
 等価の基準が二項述語で指定できる場合に、順序付けられた範囲内で、指定した値と等価以上の値を持つ最初の要素の位置にある前方反復子。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 参照される並べ替えられたソースの範囲が有効であり、すべての反復子が逆参照可能であって、かつシーケンス内で先頭位置からのインクリメントにより最後の位置に到達可能である必要があります。
 
@@ -3686,7 +3686,7 @@ ForwardIterator lower_bound(
 
 アルゴリズムの複雑さは、ランダムアクセス反復子では対数的であり、そうでない場合は (`last - first`) のステップ数に比例して線形的です。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 // alg_lower_bound.cpp
@@ -3804,7 +3804,7 @@ void make_heap(
 *pred*\
 1 つの要素が別の要素より小さいという意味を定義するユーザー定義の述語関数オブジェクト。 二項述語は 2 つの引数を受け取り、条件が満たされている場合は **true** 、満たされていない場合は **false** を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ヒープには次の 2 つのプロパティがあります。
 
@@ -3816,7 +3816,7 @@ void make_heap(
 
 複雑さは線形的で、`3 * (last - first)` の比較が必要です。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 // alg_make_heap.cpp
@@ -3899,11 +3899,11 @@ constexpr Type& max(
 
 2 つのオブジェクトのうち大きい方のオブジェクト。大きいオブジェクトが存在しない場合は、2 つのオブジェクトのうち 1 番目のオブジェクトが返されます。 initializer_list を使用する場合、リスト内にある最大のオブジェクトが返されます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `max` アルゴリズムでは、パラメーターとして渡されるオブジェクトを使うことはほとんどありません。 C++ 標準ライブラリの多くのアルゴリズムは、パラメーターとして渡された反復子によって位置が指定されている要素の範囲で動作します。 要素の範囲で動作する関数が必要な場合は、代わりに [max_element](../standard-library/algorithm-functions.md#max_element) を使用してください。 Visual Studio 2017 では、initializer_list を受け取るオーバーロードで**constexpr**が有効になります。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 // alg_max.cpp
@@ -4119,13 +4119,13 @@ ForwardIterator max_element(
 
 検索範囲内の最大の要素の最初の出現位置を示す前方反復子。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 参照されている範囲が有効であり、すべてのポインターが逆参照可能であって、かつ各シーケンス内で先頭位置からのインクリメントにより最後の位置に到達可能である必要があります。
 
 複雑さは線形的で、空でない範囲に対して `(last - first) - 1` 比較が必要です。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 // alg_max_element.cpp
@@ -4294,7 +4294,7 @@ ForwardIterator merge(
 
 並べ替えられたターゲット範囲内の最後の要素の 1 つ後ろの位置を示す出力反復子。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 参照される並べ替えられたソース範囲が有効であり、すべてのポインターが逆参照可能であって、かつ各シーケンス内で先頭位置からのインクリメントにより最後の位置に到達可能である必要があります。
 
@@ -4310,7 +4310,7 @@ ForwardIterator merge(
 
 [list クラス](../standard-library/list-class.md)には、2 つのリストの要素を結合するメンバー関数 "merge" が用意されています。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 // alg_merge.cpp
@@ -4464,11 +4464,11 @@ constexpr Type min(
 
 2 つのオブジェクトのうち小さい方のオブジェクト。小さいオブジェクトが存在しない場合は、2 つのオブジェクトのうち 1 番目のオブジェクトが返されます。 `initializer_list`の場合は、リスト内の最小のオブジェクトが返されます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `min` アルゴリズムでは、パラメーターとして渡されるオブジェクトを使うことはほとんどありません。 C++ 標準ライブラリの多くのアルゴリズムは、パラメーターとして渡された反復子によって位置が指定されている要素の範囲で動作します。 要素の範囲を使用する関数が必要な場合は、[min_element](../standard-library/algorithm-functions.md#min_element) を使用してください。 [constexpr](../cpp/constexpr-cpp.md)は、Visual Studio 2017 の `initializer_list` オーバーロードで有効にされました。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 // alg_min.cpp
@@ -4683,13 +4683,13 @@ ForwardIterator min_element(
 
 検索範囲内の最小の要素の最初の出現位置を示す前方反復子。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 参照されている範囲が有効であり、すべてのポインターが逆参照可能であって、かつ各シーケンス内で先頭位置からのインクリメントにより最後の位置に到達可能である必要があります。
 
 複雑さは線形的で、空でない範囲に対して `(last - first) - 1` 比較が必要です。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 // alg_min_element.cpp
@@ -4845,15 +4845,15 @@ pair<ForwardIterator, ForwardIterator> minmax_element(
 
 ### <a name="return-value"></a>戻り値
 
-を返します。
+戻り値
 
-`pair<ForwardIterator, ForwardIterator>( min_element(first, last), max_element(first, last))`.
+[https://login.microsoftonline.com/consumers/](`pair<ForwardIterator, ForwardIterator>( min_element(first, last), max_element(first, last))`)
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 1 番目のテンプレート関数は、以下を返します。
 
-`pair<ForwardIterator,ForwardIterator>(min_element(first,last), max_element(first,last))`.
+[https://login.microsoftonline.com/consumers/](`pair<ForwardIterator,ForwardIterator>(min_element(first,last), max_element(first,last))`)
 
 2 番目のテンプレート関数は、`operator<(X, Y)` と `pred(X, Y)` を置き換える点を除いて、同じ動作をします。
 
@@ -4899,9 +4899,9 @@ constexpr pair<Type&, Type&> minmax(
 *引数*\
 比較するメンバーが含まれている `initializer_list`。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
-最初のテンプレート関数は、 *right*が*left*より小さい場合に `pair<const Type&, const Type&>( right, left )` を返します。 それ以外の場合は、 `pair<const Type&, const Type&>( left, right )`を返します。
+最初のテンプレート関数は、 *right*が*left*より小さい場合に `pair<const Type&, const Type&>( right, left )` を返します。 それ以外の場合は `pair<const Type&, const Type&>( left, right )`を返します。
 
 2番目のメンバー関数は、1番目の要素が小さい方のペアを返します。2番目の要素は、述語*pred*によって比較されたときに大きくなります。
 
@@ -5009,7 +5009,7 @@ mismatch(
 
 2 つの範囲で一致しない位置を示す反復子のペア。ペアを構成する 1 つ目の反復子は 1 つ目の範囲内の位置を示し、2 つ目の反復子は 2 つ目の範囲内の位置を示します。 比較する各範囲内の要素間に違いがない場合、または 2 つの範囲内のすべての要素ペアによって 2 つ目のバージョンの二項述語が満たされている場合、1 つ目の反復子は 1 つ目の範囲内の最後の要素の 1 つ後の位置を示し、2 つ目の反復子は 2 つ目の範囲内の最後のテスト対象の要素の 1 つ後の位置を示します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 1 つ目のテンプレート関数では、first2 で始まる範囲内に、[first1, last1) で指定された範囲内にあるのと同じ数の要素があると想定しています。 2つ目の範囲にさらに値がある場合は無視されます。値が少ない場合は、未定義の動作が発生します。
 
@@ -5019,7 +5019,7 @@ mismatch(
 
 ユーザー定義の述語では、そのオペランド間で対称的、再帰的、および推移的な等価関係を強制する必要はありません。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 mismatch の使用例を次に示します。 C++03 オーバーロードは、これにより予期しない結果が引き起こされるしくみを示すことのみを目的に記載しています。
 
@@ -5147,7 +5147,7 @@ ForwardIterator2 move(
 *dest*\
 移動された要素が格納される出力反復子。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このテンプレート関数は、`[0, last - first)`範囲内の各 `N` に対して `*(dest + N) = move(*(first + N))` を1回評価します。これにより、`N` の値が最小値から厳密に増加します。 その後で `dest + N` が返されます。 `dest` し、*最初*にストレージの領域を指定する場合は、 *dest*を `[first, last)`の範囲に指定することはできません。
 
@@ -5174,7 +5174,7 @@ BidirectionalIterator2 move_backward(
 *Destend*\
 移動先範囲の最後の要素の 1 つ後ろの位置を示す双方向反復子。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このテンプレート関数は、`[0, last - first)`範囲内の各 `N` に対して `*(destEnd - N - 1) = move(*(last - N - 1))` を1回評価します。これにより、`N` の値が最小値から厳密に増加します。 その後で `destEnd - (last - first)` が返されます。 *Destend*と*最初*にストレージの領域を指定した場合、 *destend*を `[first, last)`の範囲に含めることはできません。
 
@@ -5212,7 +5212,7 @@ bool next_permutation(
 
 辞書順序で次の順列が存在し、範囲の元の順序を置き換えた場合は **true**、それ以外の場合は **false**。この場合は、順序が辞書式の最小の順列に変換されています。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 参照されている範囲が有効であり、すべてのポインターが逆参照可能であって、かつシーケンス内で先頭位置からのインクリメントにより最後の位置に到達可能である必要があります。
 
@@ -5220,7 +5220,7 @@ bool next_permutation(
 
 複雑さは線形的で、最大 `(last - first) / 2` のスワップがあります。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 // alg_next_perm.cpp
@@ -5410,7 +5410,7 @@ void nth_element(
 *pred*\
 順序内の次の要素によって満たされる比較条件を定義するユーザー定義の述語関数オブジェクト。 比較述語は2つの引数を受け取り、満たされた場合は**true**を返し、満たされていない場合は**false**を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 参照されている範囲が有効であり、すべてのポインターが逆参照可能であって、かつシーケンス内で先頭位置からのインクリメントにより最後の位置に到達可能である必要があります。
 
@@ -5420,7 +5420,7 @@ void nth_element(
 
 並べ替えの複雑さの平均は、 *last first*に関して線形的です。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 // alg_nth_elem.cpp
@@ -5523,7 +5523,7 @@ bool none_of(
 
 指定された範囲で少なくとも1回条件が検出されなかった場合は**true** 、条件が検出された場合は**false**を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このテンプレート関数は、`[0, last - first)`範囲の一部の `N` では、述語 `pred(*(first + N))` が常に**false**である場合にのみ**true**を返します。
 
@@ -5578,7 +5578,7 @@ void partial_sort(
 *pred*\
 順序内の次の要素によって満たされる比較条件を定義するユーザー定義の述語関数オブジェクト。 二項述語は 2 つの引数を受け取り、条件が満たされている場合は **true** 、満たされていない場合は **false** を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 参照されている範囲が有効であり、すべてのポインターが逆参照可能であって、かつシーケンス内で先頭位置からのインクリメントにより最後の位置に到達可能である必要があります。
 
@@ -5586,7 +5586,7 @@ void partial_sort(
 
 部分的な並べ替えの複雑さの平均は、 *O*((`last`- `first`) ログ (`sortEnd`- `first`)) です。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 // alg_partial_sort.cpp
@@ -5720,13 +5720,13 @@ RandomAccessIterator partial_sort_copy(
 
 ソース範囲から挿入された最後の要素の 1 つ後ろの位置のターゲット範囲内の要素を示すランダム アクセス反復子。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ソース範囲とターゲット範囲は重複できません。また、両方とも有効であり、すべてのポインターが逆参照可能であって、かつ各シーケンス内で先頭位置からのインクリメントにより最後の位置に到達可能である必要があります。
 
 二項述語は、同等でない要素は順序付けされ、同等の要素は順序付けされないように、厳密弱順序を提供する必要があります。 2 つの要素がどちらも他方より小さくない場合、2 つの要素は同等ですが、必ずしも等しいわけではありません。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 // alg_partial_sort_copy.cpp
@@ -5839,7 +5839,7 @@ ForwardIterator partition(
 
 述語条件を満たさない範囲内の最初の要素の位置を示す双方向反復子。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 参照されている範囲が有効であり、すべてのポインターが逆参照可能であって、かつシーケンス内で先頭位置からのインクリメントにより最後の位置に到達可能である必要があります。
 
@@ -5847,7 +5847,7 @@ ForwardIterator partition(
 
 複雑さは線形的であり、 *pred*のアプリケーションと、最大で `(last - first)/2` スワップの `(last - first)` アプリケーションがあります。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 // alg_partition.cpp
@@ -5931,7 +5931,7 @@ pair<ForwardIterator1, ForwardIterator2> partition_copy(
 *pred*\
 テストする条件。 これは、テストする条件を定義するユーザー定義の述語関数オブジェクトによって提供されます。 単項述語は1つの引数を取り、 **true**または**false**を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このテンプレート関数は、`[first,last)` 内の各要素 `X` を `*dest1++` にコピーします (`pred(X)` が true の場合)。または、それ以外の場合は `*dest2++` します。 `pair<OutputIterator1, OutputIterator2>(dest1, dest2)` を返します。
 
@@ -5962,7 +5962,7 @@ ForwardIterator partition_point(
 
 *Pred*によってテストされた条件を満たさない最初の要素を参照する `ForwardIterator` を返します。見つからない場合は、 *last*を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このテンプレート関数は、`pred(*it)` が**false**である `[first, last)` 内の最初の反復子 `it` を検索します。 シーケンスは、 *pred*によって順序付けされている必要があります。
 
@@ -5994,7 +5994,7 @@ void pop_heap(
 *pred*\
 1 つの要素が別の要素より小さいという意味を定義するユーザー定義の述語関数オブジェクト。 二項述語は 2 つの引数を受け取り、条件が満たされている場合は **true** 、満たされていない場合は **false** を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `pop_heap` アルゴリズムは、push_heap アルゴリズムで実行されるのと逆の操作で、ヒープに追加される要素が既にヒープ内にある他のどの要素よりも大きい場合に、範囲の最後から 2 番目の位置にある要素が範囲内の前の要素を構成するヒープに追加されます。
 
@@ -6012,7 +6012,7 @@ void pop_heap(
 
 複雑さは対数で、最大 `log (last - first)` の比較が必要です。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 // alg_pop_heap.cpp
@@ -6107,7 +6107,7 @@ bool prev_permutation(
 
 辞書式前の順列が存在し、範囲の元の順序を置き換えた場合は**true** 。それ以外の場合は**false**。この場合、順序は辞書式の最大の順列に変換されます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 参照されている範囲が有効であり、すべてのポインターが逆参照可能であって、かつシーケンス内で先頭位置からのインクリメントにより最後の位置に到達可能である必要があります。
 
@@ -6115,7 +6115,7 @@ bool prev_permutation(
 
 複雑さは線形的で、最大で (`last` - `first`)/2 のスワップがあります。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 // alg_prev_perm.cpp
@@ -6278,7 +6278,7 @@ void push_heap(
 *pred*\
 1 つの要素が別の要素より小さいという意味を定義するユーザー定義の述語関数オブジェクト。 二項述語は 2 つの引数を受け取り、条件が満たされている場合は **true** 、満たされていない場合は **false** を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 最初に要素を既存のヒープの最後にプッシュ バックしてから、アルゴリズムを使用してこの要素を既存のヒープに追加する必要があります。
 
@@ -6296,7 +6296,7 @@ void push_heap(
 
 複雑さは対数で、最大 `log(last - first)` の比較が必要です。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 // alg_push_heap.cpp
@@ -6404,7 +6404,7 @@ ForwardIterator remove(
 
 変更された範囲の新しい末尾の位置、つまり、指定された値を含まない残されたシーケンスの最後の要素の 1 つ後を示す前方反復子。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 参照されている範囲が有効であり、すべてのポインターが逆参照可能であって、かつシーケンス内で先頭位置からのインクリメントにより最後の位置に到達可能である必要があります。
 
@@ -6416,7 +6416,7 @@ ForwardIterator remove(
 
 [List クラス](../standard-library/list-class.md)には、`remove`のより効率的なメンバー関数バージョンが用意されています。これもポインターをエディットコンティニュします。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 // alg_remove.cpp
@@ -6505,7 +6505,7 @@ ForwardIterator2 remove_copy(
 
 ターゲット範囲の新しい末尾の位置、つまり、指定された値を含まない残されたシーケンス コピーの最後の要素の 1 つ後ろを示す前方反復子。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 参照されているソース範囲とターゲット範囲が有効であり、すべてのポインターが逆参照可能であって、かつシーケンス内で先頭位置からのインクリメントにより最後の位置に到達可能である必要があります。
 
@@ -6517,7 +6517,7 @@ ForwardIterator2 remove_copy(
 
 複雑さは線形的です。(`last` - `first`) の等価比較と、最大で (`last` - `first`) の割り当てがあります。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 // alg_remove_copy.cpp
@@ -6603,7 +6603,7 @@ ForwardIterator2 remove_copy_if(
 
 ターゲット範囲の最後の新しい位置、つまり、述語を満たす要素を含まない残されたシーケンスの最後の要素の 1 つ後ろを示す前方反復子。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 参照されているソース範囲が有効であり、すべてのポインターが逆参照可能であって、かつシーケンス内で先頭位置からのインクリメントにより最後の位置に到達可能である必要があります。
 
@@ -6615,9 +6615,9 @@ ForwardIterator2 remove_copy_if(
 
 複雑さは線形的であり、(`last` - `first`) の等価比較と、最大で (`last` - `first`) の割り当てがあります。
 
-これらの関数の動作については、「[チェックを行う反復子](../standard-library/checked-iterators.md)」を参照してください。
+これらの関数の動作については、「 [Checked Iterators](../standard-library/checked-iterators.md)」を参照してください。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 // alg_remove_copy_if.cpp
@@ -6705,7 +6705,7 @@ ForwardIterator remove_if(
 
 変更された範囲の新しい末尾の位置、つまり、指定された値を含まない残されたシーケンスの最後の要素の 1 つ後を示す前方反復子。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 参照されている範囲が有効であり、すべてのポインターが逆参照可能であって、かつシーケンス内で先頭位置からのインクリメントにより最後の位置に到達可能である必要があります。
 
@@ -6717,7 +6717,7 @@ ForwardIterator remove_if(
 
 list には、ポインターを再リンクする remove のより効率的なメンバー関数バージョンがあります。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 // alg_remove_if.cpp
@@ -6807,7 +6807,7 @@ void replace(
 *Newval*\
 古い値を持つ要素に割り当てられる新しい値。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 参照されている範囲が有効であり、すべてのポインターが逆参照可能であって、かつシーケンス内で先頭位置からのインクリメントにより最後の位置に到達可能である必要があります。
 
@@ -6817,7 +6817,7 @@ void replace(
 
 複雑さは線形的です。(`last` - `first`) の等価比較と、最大で (`last` - `first`) の新しい値の割り当てがあります。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 // alg_replace.cpp
@@ -6903,7 +6903,7 @@ ForwardIterator2 replace_copy(
 
 変更された要素のシーケンスがコピーされるターゲット範囲内の最後の要素の1つ後ろの位置を指す出力反復子。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 参照されているソース範囲とターゲット範囲は重複できません。また、両方とも有効であり、すべてのポインターが逆参照可能であって、かつシーケンス内で先頭位置からのインクリメントにより最後の位置に到達可能である必要があります。
 
@@ -6913,7 +6913,7 @@ ForwardIterator2 replace_copy(
 
 複雑さは線形的であり、(`last` - `first`) の等価比較と、最大で (`last` - `first`) の新しい値の割り当てがあります。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 // alg_replace_copy.cpp
@@ -7018,7 +7018,7 @@ ForwardIterator2 replace_copy_if(
 
 変更された要素のシーケンスがコピーされるターゲット範囲内の最後の要素の1つ後ろの位置を指す出力反復子。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 参照されているソース範囲とターゲット範囲は重複できません。また、両方とも有効であり、すべてのポインターが逆参照可能であって、かつシーケンス内で先頭位置からのインクリメントにより最後の位置に到達可能である必要があります。
 
@@ -7028,7 +7028,7 @@ ForwardIterator2 replace_copy_if(
 
 複雑さは線形的です。(`last` - `first`) の等価比較と、最大で (`last` - `first`) の新しい値の割り当てがあります。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 // alg_replace_copy_if.cpp
@@ -7132,7 +7132,7 @@ void replace_if(
 *value*\
 古い値が述語を満たす要素に割り当てられている新しい値。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 参照されている範囲が有効であり、すべてのポインターが逆参照可能であって、かつシーケンス内で先頭位置からのインクリメントにより最後の位置に到達可能である必要があります。
 
@@ -7144,7 +7144,7 @@ void replace_if(
 
 複雑さは線形的であり、(`last` - `first`) の等価比較と、最大で (`last` - `first`) の新しい値の割り当てがあります。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 // alg_replace_if.cpp
@@ -7218,11 +7218,11 @@ void reverse(
 *最後*の\
 要素の順序を変える範囲内の、最後の要素の 1 つ後ろの位置を指し示す入力反復子。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 参照されているソース範囲が有効であり、すべてのポインターが逆参照可能であって、かつシーケンス内で先頭位置からのインクリメントにより最後の位置に到達可能である必要があります。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 // alg_reverse.cpp
@@ -7302,11 +7302,11 @@ ForwardIterator reverse_copy(
 
 変更された要素のシーケンスがコピーされるターゲット範囲内の最後の要素の1つ後ろの位置を指す出力反復子。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 参照されているソース範囲とターゲット範囲が有効であり、すべてのポインターが逆参照可能であって、かつシーケンス内で先頭位置からのインクリメントにより最後の位置に到達可能である必要があります。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 // alg_reverse_copy.cpp
@@ -7380,13 +7380,13 @@ ForwardIterator rotate(
 *最後*の\
 回転対象の範囲内の最後の要素の 1 つ後ろの位置を示す前方反復子。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 参照されている範囲が有効であり、すべてのポインターが逆参照可能であって、かつシーケンス内で先頭位置からのインクリメントにより最後の位置に到達可能である必要があります。
 
 複雑さは線形的で、最大で (`last` - `first`) のスワップがあります。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 // alg_rotate.cpp
@@ -7503,13 +7503,13 @@ ForwardIterator2 rotate_copy(
 
 ターゲット範囲の最後の要素の 1 つ後ろの位置を示す出力反復子。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 参照されている範囲が有効であり、すべてのポインターが逆参照可能であって、かつシーケンス内で先頭位置からのインクリメントにより最後の位置に到達可能である必要があります。
 
 複雑さは線形的で、最大で (`last` - `first`) のスワップがあります。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 // alg_rotate_copy.cpp
@@ -7652,7 +7652,7 @@ ForwardIterator search(
 
 指定したシーケンスと一致するか二項述語で指定された意味で等価である、最初のサブシーケンスの最初の要素の位置を指す前方反復子。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 要素と指定された値の間の一致を判断するために使用される `operator==` によって、オペランド間の等価関係が強制される必要があります。
 
@@ -7660,7 +7660,7 @@ ForwardIterator search(
 
 平均の複雑さは、検索範囲のサイズに対して線形的で、最も複雑な場合は、検索対象のシーケンスのサイズに対しても線形的です。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 // alg_search.cpp
@@ -7821,7 +7821,7 @@ ForwardIterator search_n(
 
 指定したシーケンスと一致するか二項述語で指定された意味で等価である、最初のサブシーケンスの最初の要素の位置を指す前方反復子。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 要素と指定された値の間の一致を判断するために使用される `operator==` によって、オペランド間の等価関係が強制される必要があります。
 
@@ -7829,7 +7829,7 @@ ForwardIterator search_n(
 
 複雑さは、検索されたサイズに対して線形的です。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 // alg_search_n.cpp
@@ -7981,7 +7981,7 @@ ForwardIterator set_difference(
 
 2 つのソース範囲の差を表すための並べ替え済みのターゲット範囲の、最後の要素の 1 つ後ろの位置を示す出力反復子。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 参照される並べ替えられたソース範囲が有効であり、すべてのポインターが逆参照可能であって、かつ各シーケンス内で先頭位置からのインクリメントにより最後の位置に到達可能である必要があります。
 
@@ -7995,7 +7995,7 @@ ForwardIterator set_difference(
 
 アルゴリズムの複雑さは線形的で、空でないソース範囲に対して最大 `2 * ((last1 - first1) - (last2 - first2)) - 1` の比較があります。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 // alg_set_diff.cpp
@@ -8183,7 +8183,7 @@ ForwardIterator set_intersection(
 
 2 つのソース範囲の交差を表すための並べ替え済みのターゲット範囲の、最後の要素の 1 つ後ろの位置を示す出力反復子。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 参照される並べ替えられたソース範囲が有効であり、すべてのポインターが逆参照可能であって、かつ各シーケンス内で先頭位置からのインクリメントにより最後の位置に到達可能である必要があります。
 
@@ -8197,7 +8197,7 @@ merge アルゴリズムを適用するための事前条件として、それ�
 
 アルゴリズムの複雑さは線形的で、空でないソース範囲に対して最大 `2 * ((last1 - first1) + (last2 - first2)) - 1` の比較があります。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 // alg_set_intersection.cpp
@@ -8381,7 +8381,7 @@ ForwardIterator set_symmetric_difference(
 
 2 つのソース範囲の対称差を表すための並べ替え済みのターゲット範囲の、最後の要素の 1 つ後ろの位置を示す出力反復子。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 参照される並べ替えられたソース範囲が有効であり、すべてのポインターが逆参照可能であって、かつ各シーケンス内で先頭位置からのインクリメントにより最後の位置に到達可能である必要があります。
 
@@ -8395,7 +8395,7 @@ ForwardIterator set_symmetric_difference(
 
 アルゴリズムの複雑さは線形的で、空でないソース範囲に対して最大 `2 * ((last1 - first1) - (last2 - first2)) - 1` の比較があります。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 // alg_set_sym_diff.cpp
@@ -8583,7 +8583,7 @@ ForwardIterator set_union(
 
 2 つのソース範囲の和集合を表すための並べ替え済みのターゲット範囲の、最後の要素の 1 つ後ろの位置を示す出力反復子。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 参照される並べ替えられたソース範囲が有効であり、すべてのポインターが逆参照可能であって、かつ各シーケンス内で先頭位置からのインクリメントにより最後の位置に到達可能である必要があります。
 
@@ -8597,7 +8597,7 @@ ForwardIterator set_union(
 
 アルゴリズムの複雑さは線形的で、最大 `2 * ((last1 - first1) - (last2 - first2)) - 1` の比較があります。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 // alg_set_union.cpp
@@ -8739,7 +8739,7 @@ void shuffle(
 *gen*\
 `shuffle()` 関数が操作で使用する乱数ジェネレーター。 `UniformRandomNumberGenerator` の要件を満たしている必要があります。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `shuffle()` を使用するコード サンプルの詳細については、「[\<random>](../standard-library/random.md)」を参照してください。
 
@@ -8785,9 +8785,9 @@ void sort(
 並べ替えられる範囲内の最後の要素の 1 つ後ろの位置を示すランダム アクセス反復子。
 
 *pred*\
-順序内の次の要素によって満たされる比較条件を定義するユーザー定義の述語関数オブジェクト。 この二項述語は2つの引数を受け取り、2つの引数が順序付けられている場合は**true**を返し、それ以外の場合は**false**を返します。 この比較子関数は、シーケンスからの要素のペアで厳密弱順序を強制する必要があります。 詳細については、「[アルゴリズム](../standard-library/algorithms.md)」をご覧ください。
+順序内の次の要素によって満たされる比較条件を定義するユーザー定義の述語関数オブジェクト。 この二項述語は2つの引数を受け取り、2つの引数が順序付けられている場合は**true**を返し、それ以外の場合は**false**を返します。 この比較子関数は、シーケンスからの要素のペアで厳密弱順序を強制する必要があります。 詳細については、「[アルゴリズム](../standard-library/algorithms.md)」を参照してください。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 参照されている範囲が有効であり、すべてのポインターが逆参照可能であって、かつシーケンス内で先頭位置からのインクリメントにより最後の位置に到達可能である必要があります。
 
@@ -8795,7 +8795,7 @@ void sort(
 
 並べ替えの複雑さの平均は `O( N log N )`*です。ここ*で、 *N* = *最後*に - ます。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 // alg_sort.cpp
@@ -8891,7 +8891,7 @@ void sort_heap(
 *pred*\
 1 つの要素が別の要素より小さいという意味を定義するユーザー定義の述語関数オブジェクト。 比較述語は2つの引数を受け取り、満たされた場合は**true**を返し、満たされていない場合は**false**を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ヒープには次の 2 つのプロパティがあります。
 
@@ -8909,7 +8909,7 @@ void sort_heap(
 
 複雑さは最大 `N log N`であり、 *N* = *最後* - *最初*になります。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 // alg_sort_heap.cpp
@@ -9000,13 +9000,13 @@ BidirectionalIterator stable_partition(
 
 述語条件を満たさない範囲内の最初の要素の位置を示す双方向反復子。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 参照されている範囲が有効であり、すべてのポインターが逆参照可能であって、かつシーケンス内で先頭位置からのインクリメントにより最後の位置に到達可能である必要があります。
 
 要素*a*と*b*は同等ですが、必ずしも等しいとは限りません。両方の `pred( a, b )` が false で `pred( b, a )` が false である場合、 *pred*はパラメーター指定の述語です。 `stable_partition` アルゴリズムは安定しており、同等の要素の相対順序が保持されることを保証します。 アルゴリズム `partition` は、必ずしもこの順序を維持するわけではありません。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 // alg_stable_partition.cpp
@@ -9097,7 +9097,7 @@ void stable_sort(
 *pred*\
 順序内の次の要素によって満たされる比較条件を定義するユーザー定義の述語関数オブジェクト。 二項述語は 2 つの引数を受け取り、条件が満たされている場合は **true** 、満たされていない場合は **false** を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 参照されている範囲が有効であり、すべてのポインターが逆参照可能であって、かつシーケンス内で先頭位置からのインクリメントにより最後の位置に到達可能である必要があります。
 
@@ -9105,7 +9105,7 @@ void stable_sort(
 
 `stable_sort` の実行時の複雑さは、使用可能なメモリの量によって異なりますが、最適なケース (十分なメモリ) が `O(N log N)`、最悪のケースは `O(N (log N)^2)`に*なります*。ここで、 *N* = *最後*に - します。 通常、`sort` アルゴリズムは `stable_sort`よりも大幅に高速です。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 // alg_stable_sort.cpp
@@ -9195,11 +9195,11 @@ void swap(
 *右*\
 最初のオーバーライドでは、2 番目のオブジェクトがそのコンテンツを交換させます。 2 番目のオーバーライドでは、オブジェクトの 2 番目の配列がそのコンテンツを交換させます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 最初のオーバーロードは、個々のオブジェクトで動作するように設計されています。 2 番目のオーバー ロードは、2 つの配列間でオブジェクトのコンテンツをスワップします。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 // alg_swap.cpp
@@ -9292,13 +9292,13 @@ ForwardIterator2 swap_ranges(
 
 要素が交換される 2 番目の範囲の最後の位置の 1 つ後ろを指す前方反復子。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 参照されている範囲が有効であり、すべてのポインターが逆参照可能であって、かつ各シーケンス内で先頭位置からのインクリメントにより最後の位置に到達可能である必要があります。 2 番目の範囲は最初の範囲と同じ大きさにする必要があります。
 
 複雑さは線形的で、 *last1* - *first1*のスワップが実行されます。 同じ種類のコンテナーから要素がスワップされる場合、そのコンテナーの `swap` メンバー関数を使用する必要があります。これは、メンバー関数には一般的に一定の複雑さがあるからです。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 // alg_swap_ranges.cpp
@@ -9421,7 +9421,7 @@ ForwardIterator transform(
 
 関数オブジェクトで変換された出力要素を受け取るターゲット範囲の最後の要素の 1 つ後ろの位置を示す出力反復子。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 参照されている範囲が有効であり、すべてのポインターが逆参照可能であって、かつ各シーケンス内で先頭位置からのインクリメントにより最後の位置に到達可能である必要があります。 変換先の範囲は、変換されたソース範囲を格納するのに十分な大きさである必要があります。
 
@@ -9429,7 +9429,7 @@ ForwardIterator transform(
 
 複雑さは線形的で、最大で (`last1` - `first1`) の比較があります。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 // alg_transform.cpp
@@ -9563,7 +9563,7 @@ ForwardIterator unique(
 
 連続する重複を含まない変更されたシーケンスの新しい末尾への前方反復子。削除されていない最後の要素の 1 つ後ろの位置を示します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 アルゴリズムの両方の形式により、連続した等値要素ペアの 2 番目の重複が削除されます。
 
@@ -9577,7 +9577,7 @@ ForwardIterator unique(
 
 連想コンテナーでは、これらのアルゴリズムを使用できません。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 // alg_unique.cpp
@@ -9719,7 +9719,7 @@ ForwardIterator2 unique_copy(ExecutionPolicy&& exec,
 
 連続する重複が削除されたコピーを受け取るターゲット範囲の最後の要素の 1 つ後ろの位置を示す出力反復子。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 アルゴリズムの両方の形式により、連続した等値要素ペアの 2 番目の重複が削除されます。
 
@@ -9729,7 +9729,7 @@ ForwardIterator2 unique_copy(ExecutionPolicy&& exec,
 
 複雑さは線形的で、(`last` - `first`) 比較が必要です。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 // alg_unique_copy.cpp
@@ -9838,7 +9838,7 @@ ForwardIterator upper_bound(
 
 指定した値を超える値を持つ最初の要素の位置への前方反復子。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 参照される並べ替えられたソースの範囲が有効であり、すべての反復子が逆参照可能であって、かつシーケンス内で先頭位置からのインクリメントにより最後の位置に到達可能である必要があります。
 
@@ -9850,7 +9850,7 @@ ForwardIterator upper_bound(
 
 アルゴリズムの複雑さは、ランダムアクセス反復子では対数的であり、そうでない場合は (`last - first`) のステップ数に比例して線形的です。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 ```cpp
 // alg_upper_bound.cpp
