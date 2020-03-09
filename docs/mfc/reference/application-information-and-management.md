@@ -6,11 +6,11 @@ helpviewer_keywords:
 - applications [MFC], managing
 ms.assetid: b72f4154-24db-4e75-bca3-6873e2459c15
 ms.openlocfilehash: c372f43bc5184349e70f29b6c0ae6a490f2102ed
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821871"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78854556"
 ---
 # <a name="application-information-and-management"></a>アプリケーションの情報と管理
 
@@ -116,7 +116,7 @@ CWinThread* AfxBeginThread(
 
 `AfxBeginThread`の詳細については、「[マルチスレッド: ワーカースレッドの作成](../../parallel/multithreading-creating-worker-threads.md)」および「[マルチスレッド: ユーザーインターフェイススレッドの作成](../../parallel/multithreading-creating-user-interface-threads.md)」を参照してください。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 「 [CSocket:: Attach](../../mfc/reference/csocket-class.md#attach)」の例を参照してください。
 
@@ -234,7 +234,7 @@ DLL モジュールをマップするには `AfxLoadLibrary` を使用します�
 
 アプリケーションで複数のスレッドを使用する場合は、`AfxFreeLibrary` と `AfxLoadLibrary` (Win32 関数 `FreeLibrary` および `LoadLibrary`ではなく) を必ず使用してください。 `AfxLoadLibrary` と `AfxFreeLibrary` を使用すると、MFC 拡張 DLL が読み込まれてアンロードされるときに実行される起動コードとシャットダウンコードが、MFC のグローバル状態を破壊することがなくなります。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 [AfxLoadLibrary](#afxloadlibrary)の例を参照してください。
 
@@ -242,7 +242,7 @@ DLL モジュールをマップするには `AfxLoadLibrary` を使用します�
 
   **ヘッダー** afxdll_
 
-## <a name="afxgetapp"></a>  AfxGetApp
+## <a name="afxgetapp"></a>AfxGetApp
 
 この関数によって返されるポインターは、メインのメッセージディスパッチコードや最上位のウィンドウなどのアプリケーション情報にアクセスするために使用できます。
 
@@ -258,7 +258,7 @@ CWinApp* AFXAPI AfxGetApp();
 
 このメソッドが NULL を返す場合は、アプリケーションのメインウィンドウがまだ完全に初期化されていないことを示している可能性があります。 また、問題がある可能性もあります。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 [!code-cpp[NVC_MFCWindowing#126](../../mfc/reference/codesnippet/cpp/application-information-and-management_1.cpp)]
 
@@ -266,7 +266,7 @@ CWinApp* AFXAPI AfxGetApp();
 
   **ヘッダー** afxwin.h
 
-## <a name="afxgetappname"></a>  AfxGetAppName
+## <a name="afxgetappname"></a>AfxGetAppName
 
 返される文字列は、診断メッセージに使用することも、一時文字列名のルートとして使用することもできます。
 
@@ -278,7 +278,7 @@ LPCTSTR AFXAPI AfxGetAppName();
 
 アプリケーションの名前を格納している null で終わる文字列。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 [!code-cpp[NVC_MFCWindowing#127](../../mfc/reference/codesnippet/cpp/application-information-and-management_2.cpp)]
 
@@ -286,7 +286,7 @@ LPCTSTR AFXAPI AfxGetAppName();
 
   **ヘッダー** afxwin.h
 
-## <a name="afxgetinstancehandle"></a>  AfxGetInstanceHandle
+## <a name="afxgetinstancehandle"></a>AfxGetInstanceHandle
 
 この関数を使用すると、現在のアプリケーションのインスタンスハンドルを取得できます。
 
@@ -302,7 +302,7 @@ HINSTANCE  AFXAPI AfxGetInstanceHandle();
 
 `AfxGetInstanceHandle` は常に実行可能ファイル () の HINSTANCE を返します。EXE) を呼び出します。ただし、USRDLL バージョンの MFC にリンクされている DLL 内から呼び出された場合を除きます。 この場合、HINSTANCE が DLL に返されます。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 [!code-cpp[NVC_MFCWindowing#128](../../mfc/reference/codesnippet/cpp/application-information-and-management_3.cpp)]
 
@@ -330,7 +330,7 @@ CWnd* AFXAPI AfxGetMainWnd();
 
 アプリケーションが OLE サーバーではない場合、この関数を呼び出すことは、アプリケーションオブジェクトの*m_pMainWnd*メンバーを直接参照することと同じです。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 [!code-cpp[NVC_MFCWindowing#129](../../mfc/reference/codesnippet/cpp/application-information-and-management_4.cpp)]
 
@@ -338,7 +338,7 @@ CWnd* AFXAPI AfxGetMainWnd();
 
   **ヘッダー** afxwin.h
 
-## <a name="afxgetperuserregistration"></a>  AfxGetPerUserRegistration
+## <a name="afxgetperuserregistration"></a>AfxGetPerUserRegistration
 
 アプリケーションがレジストリアクセスを**HKEY_CURRENT_USER** (**HKCU**) ノードにリダイレクトするかどうかを判断するには、この関数を使用します。
 
@@ -360,7 +360,7 @@ TRUE は、レジストリ情報が HKCU ノードに送られることを示し
 
   **ヘッダー** afxstat_
 
-## <a name="afxgetresourcehandle"></a>  AfxGetResourceHandle
+## <a name="afxgetresourcehandle"></a>AfxGetResourceHandle
 
 この関数によって返される HINSTANCE ハンドルを使用して、アプリケーションのリソースに直接アクセスします。たとえば、Windows の関数 `FindResource`を呼び出します。
 
@@ -372,7 +372,7 @@ extern HINSTANCE  AfxGetResourceHandle();
 
 アプリケーションの既定のリソースが読み込まれる HINSTANCE ハンドル。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 [!code-cpp[NVC_MFCWindowing#130](../../mfc/reference/codesnippet/cpp/application-information-and-management_5.cpp)]
 
@@ -380,7 +380,7 @@ extern HINSTANCE  AfxGetResourceHandle();
 
   **ヘッダー** afxwin.h
 
-## <a name="afxgetthread"></a>  AfxGetThread
+## <a name="afxgetthread"></a>AfxGetThread
 
 現在実行中のスレッドを表す[CWinThread](../../mfc/reference/cwinthread-class.md)オブジェクトへのポインターを取得するには、この関数を呼び出します。
 
@@ -399,7 +399,7 @@ CWinThread* AfxGetThread();
 > [!NOTE]
 > Visual C++バージョン4.2、5.0、または6.0 から `AfxGetThread` を呼び出す MFC プロジェクトを移植する場合は、スレッドが見つからない場合は、`AfxGetThread` [AfxGetApp](#afxgetapp)を呼び出します。 新しいバージョンのコンパイラでは、スレッドが見つからなかった場合、`AfxGetThread` は NULL を返します。 アプリケーションスレッドが必要な場合は、`AfxGetApp`を呼び出す必要があります。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 [!code-cpp[NVC_MFCWindowing#132](../../mfc/reference/codesnippet/cpp/application-information-and-management_6.cpp)]
 
@@ -407,7 +407,7 @@ CWinThread* AfxGetThread();
 
   **ヘッダー** afxwin.h
 
-## <a name="afxinitrichedit"></a>  AfxInitRichEdit
+## <a name="afxinitrichedit"></a>AfxInitRichEdit
 
 この関数を呼び出して、アプリケーションのリッチエディットコントロール (バージョン 1.0) を初期化します。
 
@@ -429,7 +429,7 @@ BOOL AFXAPI AfxInitRichEdit();
 
   **ヘッダー** afxwin.h
 
-## <a name="afxinitrichedit2"></a>  AfxInitRichEdit2
+## <a name="afxinitrichedit2"></a>AfxInitRichEdit2
 
 この関数を呼び出して、アプリケーションのリッチエディットコントロール (バージョン2.0 以降) を初期化します。
 
@@ -556,7 +556,7 @@ HINSTANCE AFXAPI AfxLoadLibrary(LPCTSTR lpszModuleName);
 
 アプリケーションで `AfxLoadLibrary` を使用するには、MFC の DLL バージョンに動的にリンクする必要があります。 `AfxLoadLibrary`のヘッダーファイル Afxdll_ .h は、MFC が DLL としてアプリケーションにリンクされている場合にのみ含まれます。 Mfc の DLL バージョンにリンクして MFC 拡張 Dll を使用または作成する必要があるため、この要件は仕様によるものです。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 [!code-cpp[NVC_MFC_DLLUser#1](../../mfc/reference/codesnippet/cpp/application-information-and-management_7.cpp)]
 [!code-cpp[NVC_MFC_DLLUser#2](../../mfc/reference/codesnippet/cpp/application-information-and-management_8.cpp)]
@@ -584,7 +584,7 @@ HINSTANCE AFXAPI AfxLoadLibraryEx(LPCTSTR lpFileName, HANDLE hFile, DWORD dwFlag
 パスが指定されておらず、ファイル名拡張子が省略されている場合は、既定の拡張子です。DLL が追加されます。 ただし、ファイル名の文字列には、モジュール名に拡張子が付いていないことを示すために、末尾のポイント文字 (.) を含めることができます。 パスが指定されていない場合、関数は[デスクトップアプリケーションの検索順序](/windows/win32/dlls/dynamic-link-library-search-order#search-order-for-desktop-applications)を使用します。
 
 *hFile*\
-このパラメーターは、今後使用するために予約されています。 NULL にする必要があります。
+このパラメーターは将来使用するために予約されています。 NULL にする必要があります。
 
 *dwFlags*\
 モジュールの読み込み時に実行されるアクション。 フラグが指定されていない場合、この関数の動作は `AfxLoadLibrary` 関数と同じになります。 このパラメーターの有効な値については、 [LoadLibraryEx](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexw)のドキュメントを参照してください。
@@ -658,7 +658,7 @@ BOOL AFXAPI AfxRegisterClass(WNDCLASS* lpWndClass);
 
 DLL 以外のビルドでは、アプリケーションに登録されているクラスが自動的に登録解除されるため、`AfxRegisterClass` 識別子は、Windows の関数 `RegisterClass`にマップされるマクロとして定義されます。 `RegisterClass`ではなく `AfxRegisterClass` を使用する場合、アプリケーションと DLL の両方でコードを変更せずに使用できます。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 [!code-cpp[NVC_MFC_DLL#3](../../atl-mfc-shared/codesnippet/cpp/application-information-and-management_10.cpp)]
 
@@ -717,7 +717,7 @@ Microsoft Foundation Class ライブラリによって、いくつかの標準�
 
 ウィンドウクラスの登録と `AfxRegisterWndClass` 関数の詳細については、「テクニカルノート[テクニカルノート 1: ウィンドウクラスの登録」](../../mfc/tn001-window-class-registration.md)を参照してください。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 [!code-cpp[NVC_MFCWindowing#134](../../mfc/reference/codesnippet/cpp/application-information-and-management_11.cpp)]
 
@@ -765,7 +765,7 @@ void AFXAPI AfxSetResourceHandle(HINSTANCE hInstResource);
 *Hinstresource*\
 のインスタンスまたはモジュールハンドル。アプリケーションのリソースの読み込み元となる EXE または DLL ファイル。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 [!code-cpp[NVC_MFCWindowing#135](../../mfc/reference/codesnippet/cpp/application-information-and-management_12.cpp)]
 
@@ -861,7 +861,7 @@ MFC に用意されている `WinMain` 関数を使用しないコンソール�
 > [!NOTE]
 > アセンブリのアクティベーションコンテキストを作成すると、MFC はユーザーモジュールによって提供されるマニフェストリソースを使用します。 アクティベーションコンテキストは `AfxWinInit`で作成されます。 詳細については、「 [MFC モジュール状態でのアクティベーションコンテキストのサポート](../../mfc/support-for-activation-contexts-in-the-mfc-module-state.md)」を参照してください。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 [!code-cpp[NVC_MFC_AfxWinInit#1](../../mfc/reference/codesnippet/cpp/application-information-and-management_13.cpp)]
 
@@ -869,7 +869,7 @@ MFC に用意されている `WinMain` 関数を使用しないコンソール�
 
   **ヘッダー** afxwin.h
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [マクロとグローバル](mfc-macros-and-globals.md)\
 [CWinApp クラス](cwinapp-class.md)\
