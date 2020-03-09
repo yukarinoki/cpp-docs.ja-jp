@@ -12,11 +12,11 @@ helpviewer_keywords:
 - loading DLLs [C++]
 ms.assetid: 7592e276-dd6e-4a74-90c8-e1ee35598ea3
 ms.openlocfilehash: 2f907fedcaaf9897749ee0eb6a7ea5a33e1af679
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821383"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856827"
 ---
 # <a name="link-an-executable-to-a-dll"></a>DLL と実行形式のリンク
 
@@ -36,7 +36,7 @@ ms.locfileid: "76821383"
 
 ### <a name="implicit-linking"></a>暗黙的リンク
 
-アプリケーションのコードで DLL のエクスポート関数を呼び出すと、暗黙にリンクされます。 DLL 関数を呼び出す実行形式のソース コードをコンパイルまたはアセンブルすると、オブジェクト コード内に外部関数への参照が生成されます。 この外部参照を解決するには、アプリケーションをインポート ライブラリ (.lib) ファイルとリンクする必要があります。インポート ライブラリは、DLL の作成元が提供します。
+暗黙のリンクは、アプリケーションのコードがエクスポートされた DLL 関数を呼び出す場合に発生します。 DLL 関数を呼び出す実行形式のソース コードをコンパイルまたはアセンブルすると、オブジェクト コード内に外部関数への参照が生成されます。 この外部参照を解決するには、アプリケーションをインポート ライブラリ (.lib) ファイルとリンクする必要があります。インポート ライブラリは、DLL の作成元が提供します。
 
 インポート ライブラリには、DLL を読み込んで、DLL 内の関数呼び出しを実装するコードが含まれるだけです。 リンカーは、インポート ライブラリ内に外部関数を見つけると、その関数のコードは DLL 内にあるものと認識します。 リンカーは、単に DLL コードの場所を実行可能ファイルに記入することによって、外部参照を解決します。システムはプロセスの起動時にこの情報を利用します。
 
@@ -143,6 +143,6 @@ HRESULT LoadAndCallSomeFunction(DWORD dwParam1, UINT * puParam2)
 
 - [ダイナミックリンクライブラリの検索順序](/windows/win32/Dlls/dynamic-link-library-search-order)
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [Visual Studio での C/C++ Dll の作成](dlls-in-visual-cpp.md)

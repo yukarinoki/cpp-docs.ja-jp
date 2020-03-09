@@ -13,15 +13,15 @@ helpviewer_keywords:
 - std::ends [C++]
 - std::flush [C++]
 ms.openlocfilehash: 8d93e46b0323058d93c6d0bd8c1ee566998aef61
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447192"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78874822"
 ---
 # <a name="ltostreamgt-functions"></a>&lt;ostream&gt; 関数
 
-これらは、ostream &lt;&gt;で定義されているグローバルテンプレート関数です。 メンバー関数については、 [Basic_ostream クラス](basic-ostream-class.md)のドキュメントを参照してください。
+これらは、&lt;ostream&gt;で定義されているグローバルテンプレート関数です。 メンバー関数については、 [Basic_ostream クラス](basic-ostream-class.md)のドキュメントを参照してください。
 
 ||||
 |-|-|-|
@@ -55,7 +55,7 @@ basic_ostream<Elem, Tr>& endl(
 
 ### <a name="remarks"></a>Remarks
 
-マニピュレーターは*Ostr*を呼び出します。[put](../standard-library/basic-ostream-class.md#put)(*Ostr*。[拡大](../standard-library/basic-ios-class.md#widen)(' \n ')) を呼び出し、 *Ostr*を呼び出します。[フラッシュ](../standard-library/basic-ostream-class.md#flush)。 *Ostr*が返されます。
+マニピュレーターは*Ostr*を呼び出します。[put](../standard-library/basic-ostream-class.md#put)(*ostr*.[widen](../standard-library/basic-ios-class.md#widen)(' \n ')) を拡大し、 *ostr*を呼び出します。[フラッシュ](../standard-library/basic-ostream-class.md#flush)。 *Ostr*が返されます。
 
 ### <a name="example"></a>例
 
@@ -190,10 +190,10 @@ void swap(
 *Tr*\
 文字の特徴 (traits)。
 
-*左側*\
+*左*\
 `basic_ostream` オブジェクトへの左辺値参照。
 
-*そうです*\
+*右*\
 `basic_ostream` オブジェクトへの左辺値参照。
 
 ### <a name="remarks"></a>Remarks

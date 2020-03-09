@@ -104,11 +104,11 @@ helpviewer_keywords:
 - CListBox [MFC], VKeyToItem
 ms.assetid: 7ba3c699-c286-4cd9-9066-532c41ec05d1
 ms.openlocfilehash: 5c3337641dcfc720a5f9fbccf5bb0614e97c3b54
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518427"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865523"
 ---
 # <a name="clistbox-class"></a>CListBox クラス
 
@@ -124,13 +124,13 @@ class CListBox : public CWnd
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|[名前]|説明|
+|Name|説明|
 |----------|-----------------|
 |[CListBox:: CListBox](#clistbox)|`CListBox` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|[名前]|説明|
+|Name|説明|
 |----------|-----------------|
 |[CListBox::AddString](#addstring)|リストボックスに文字列を追加します。|
 |[CListBox:: CharToItem](#chartoitem)|をオーバーライドして、文字列を持たないオーナー描画リストボックスにカスタム WM_CHAR 処理を提供します。|
@@ -141,46 +141,46 @@ class CListBox : public CWnd
 |[CListBox::D ir](#dir)|ファイル名、ドライブ、またはその両方を現在のディレクトリからリストボックスに追加します。|
 |[CListBox::D rawItem](#drawitem)|オーナー描画リストボックスの視覚的な側面が変化したときにフレームワークによって呼び出されます。|
 |[CListBox:: FindString](#findstring)|リストボックス内の文字列を検索します。|
-|[CListBox::FindStringExact](#findstringexact)|指定した文字列と一致する最初のリストボックス文字列を検索します。|
-|[CListBox::GetAnchorIndex](#getanchorindex)|リストボックス内の現在のアンカー項目の0から始まるインデックスを取得します。|
-|[CListBox::GetCaretIndex](#getcaretindex)|複数選択リストボックス内にフォーカスを持つ四角形を持つ項目のインデックスを確認します。|
-|[CListBox::GetCount](#getcount)|リストボックス内の文字列の数を返します。|
-|[CListBox::GetCurSel](#getcursel)|リストボックス内で現在選択されている文字列の0から始まるインデックスを返します。|
+|[CListBox:: FindStringExact](#findstringexact)|指定した文字列と一致する最初のリストボックス文字列を検索します。|
+|[CListBox:: GetAnchorIndex](#getanchorindex)|リストボックス内の現在のアンカー項目の0から始まるインデックスを取得します。|
+|[CListBox:: GetCaretIndex](#getcaretindex)|複数選択リストボックス内にフォーカスを持つ四角形を持つ項目のインデックスを確認します。|
+|[CListBox:: GetCount](#getcount)|リストボックス内の文字列の数を返します。|
+|[CListBox:: GetCurSel](#getcursel)|リストボックス内で現在選択されている文字列の0から始まるインデックスを返します。|
 |[CListBox:: GetHorizontalExtent](#gethorizontalextent)|リストボックスを水平方向にスクロールできる幅 (ピクセル単位) を返します。|
 |[CListBox:: GetItemData](#getitemdata)|リストボックス項目に関連付けられている値を返します。|
 |[CListBox:: GetItemDataPtr](#getitemdataptr)|リストボックス項目へのポインターを返します。|
 |[CListBox:: GetItemHeight](#getitemheight)|リストボックス内の項目の高さを決定します。|
-|[CListBox::GetItemRect](#getitemrect)|現在表示されているリストボックス項目の外接する四角形を返します。|
-|[CListBox::GetListBoxInfo](#getlistboxinfo)|列あたりの項目数を取得します。|
-|[CListBox::GetLocale](#getlocale)|リストボックスのロケール識別子を取得します。|
+|[CListBox:: GetItemRect](#getitemrect)|現在表示されているリストボックス項目の外接する四角形を返します。|
+|[CListBox:: GetListBoxInfo](#getlistboxinfo)|列あたりの項目数を取得します。|
+|[CListBox:: GetLocale](#getlocale)|リストボックスのロケール識別子を取得します。|
 |[CListBox:: GetSel](#getsel)|リストボックス項目の選択状態を返します。|
-|[CListBox::GetSelCount](#getselcount)|複数選択のリストボックスで現在選択されている文字列の数を返します。|
+|[CListBox:: GetSelCount](#getselcount)|複数選択のリストボックスで現在選択されている文字列の数を返します。|
 |[CListBox:: GetSelItems](#getselitems)|リストボックスで現在選択されている文字列のインデックスを返します。|
 |[CListBox:: GetText](#gettext)|リストボックス項目をバッファーにコピーします。|
-|[CListBox::GetTextLen](#gettextlen)|リストボックス項目の長さをバイト単位で返します。|
-|[CListBox::GetTopIndex](#gettopindex)|リストボックス内の最初に表示された文字列のインデックスを返します。|
+|[CListBox:: GetTextLen](#gettextlen)|リストボックス項目の長さをバイト単位で返します。|
+|[CListBox:: GetTopIndex](#gettopindex)|リストボックス内の最初に表示された文字列のインデックスを返します。|
 |[CListBox:: InitStorage](#initstorage)|リストボックスの項目および文字列のメモリブロックを事前します。|
 |[CListBox::InsertString](#insertstring)|リストボックス内の特定の位置に文字列を挿入します。|
-|[CListBox::ItemFromPoint](#itemfrompoint)|ポイントに最も近いリストボックス項目のインデックスを返します。|
+|[CListBox:: ItemFromPoint](#itemfrompoint)|ポイントに最も近いリストボックス項目のインデックスを返します。|
 |[CListBox:: MeasureItem](#measureitem)|オーナー描画リストボックスが作成され、リストボックスのディメンションを決定するときに、フレームワークによって呼び出されます。|
-|[CListBox::ResetContent](#resetcontent)|リストボックスからすべてのエントリを削除します。|
+|[CListBox:: ResetContent](#resetcontent)|リストボックスからすべてのエントリを削除します。|
 |[CListBox:: SelectString](#selectstring)|単一選択リストボックス内の文字列を検索して選択します。|
-|[CListBox::SelItemRange](#selitemrange)|複数選択リストボックス内の文字列の範囲を選択または選択解除します。|
-|[CListBox::SetAnchorIndex](#setanchorindex)|複数選択のリストボックスでアンカーを設定して、拡張選択を開始します。|
-|[CListBox::SetCaretIndex](#setcaretindex)|複数選択リストボックス内の指定したインデックス位置にある項目にフォーカスを示す四角形を設定します。|
+|[CListBox:: SelItemRange](#selitemrange)|複数選択リストボックス内の文字列の範囲を選択または選択解除します。|
+|[CListBox:: SetAnchorIndex](#setanchorindex)|複数選択のリストボックスでアンカーを設定して、拡張選択を開始します。|
+|[CListBox:: SetCaretIndex](#setcaretindex)|複数選択リストボックス内の指定したインデックス位置にある項目にフォーカスを示す四角形を設定します。|
 |[CListBox:: SetColumnWidth](#setcolumnwidth)|複数列のリストボックスの列幅を設定します。|
-|[CListBox::SetCurSel](#setcursel)|リストボックスの文字列を選択します。|
+|[CListBox:: SetCurSel](#setcursel)|リストボックスの文字列を選択します。|
 |[CListBox:: SetHorizontalExtent](#sethorizontalextent)|リストボックスを水平方向にスクロールできる幅 (ピクセル単位) を設定します。|
 |[CListBox:: SetItemData](#setitemdata)|リストボックス項目に関連付けられた値を設定します。|
 |[CListBox:: SetItemDataPtr](#setitemdataptr)|リストボックス項目へのポインターを設定します。|
 |[CListBox:: SetItemHeight](#setitemheight)|リストボックス内の項目の高さを設定します。|
-|[CListBox::SetLocale](#setlocale)|リストボックスのロケール識別子を設定します。|
+|[CListBox:: SetLocale](#setlocale)|リストボックスのロケール識別子を設定します。|
 |[CListBox:: SetSel](#setsel)|複数選択リストボックス内のリストボックス項目を選択または選択解除します。|
 |[CListBox:: SetTabStops](#settabstops)|リストボックス内のタブストップ位置を設定します。|
-|[CListBox::SetTopIndex](#settopindex)|リストボックス内で最初に表示される文字列の0から始まるインデックスを設定します。|
-|[CListBox::VKeyToItem](#vkeytoitem)|をオーバーライドして、LBS_WANTKEYBOARDINPUT スタイルセットを持つリストボックスにカスタムの WM_KEYDOWN 処理を提供します。|
+|[CListBox:: SetTopIndex](#settopindex)|リストボックス内で最初に表示される文字列の0から始まるインデックスを設定します。|
+|[CListBox:: VKeyToItem](#vkeytoitem)|をオーバーライドして、LBS_WANTKEYBOARDINPUT スタイルセットを持つリストボックスにカスタムの WM_KEYDOWN 処理を提供します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
 リストボックスには、ユーザーが表示および選択できる、ファイル名などの項目の一覧が表示されます。
 
@@ -240,7 +240,7 @@ class CListBox : public CWnd
 
 **ヘッダー:** afxwin.h
 
-##  <a name="addstring"></a>  CListBox::AddString
+##  <a name="addstring"></a>CListBox:: AddString
 
 リストボックスに文字列を追加します。
 
@@ -257,13 +257,13 @@ int AddString(LPCTSTR lpszItem);
 
 リストボックス内の文字列の0から始まるインデックス。 エラーが発生した場合、戻り値は LB_ERR ます。新しい文字列を格納するのに十分な領域がない場合、戻り値は LB_ERRSPACE ます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 リストボックスが[LBS_SORT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)スタイルで作成されなかった場合、文字列はリストの末尾に追加されます。 それ以外の場合は、文字列がリストに挿入され、リストが並べ替えられます。 リストボックスが LBS_SORT スタイルを使用して作成され、 [LBS_HASSTRINGS](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)スタイルではない場合、フレームワークは `CompareItem` メンバー関数の1回以上の呼び出しによってリストを並べ替えます。
 
 [Insertstring](#insertstring)を使用して、リストボックス内の特定の位置に文字列を挿入します。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 [!code-cpp[NVC_MFC_CListBox#3](../../mfc/codesnippet/cpp/clistbox-class_1.cpp)]
 
@@ -289,7 +289,7 @@ virtual int CharToItem(
 
 追加のアクションがない場合は-1 または-2、キーストロークの既定のアクションを実行するリストボックス項目のインデックスを指定する場合は負以外の数値を返します。 既定の実装では、-1 が返されます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 WM_CHARTOITEM メッセージは WM_CHAR メッセージを受信したときにリストボックスによって送信されますが、リストボックスがこれらの条件をすべて満たしている場合に限ります。
 
@@ -305,7 +305,7 @@ WM_CHARTOITEM メッセージは WM_CHAR メッセージを受信したときに
 
 戻り値が0以上の場合は、リストボックス内の項目のインデックスを指定し、リストボックスが、指定された項目のキーストロークの既定の動作を実行することを示します。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 [!code-cpp[NVC_MFC_CListBox#4](../../mfc/codesnippet/cpp/clistbox-class_2.cpp)]
 
@@ -317,11 +317,11 @@ WM_CHARTOITEM メッセージは WM_CHAR メッセージを受信したときに
 CListBox();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 `CListBox` オブジェクトを作成するには、2つの手順を実行します。 まず、コンストラクター `ClistBox` 呼び出し、次に `Create`を呼び出します。これにより、Windows のリストボックスが初期化され、`CListBox`にアタッチされます。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 [!code-cpp[NVC_MFC_CListBox#1](../../mfc/codesnippet/cpp/clistbox-class_3.cpp)]
 
@@ -342,7 +342,7 @@ virtual int CompareItem(LPCOMPAREITEMSTRUCT lpCompareItemStruct);
 
 [COMPAREITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-compareitemstruct)構造体に記述されている2つの項目の相対位置を示します。 次のいずれかの値を指定できます。
 
-|Value|説明|
+|値|意味|
 |-----------|-------------|
 |-1|項目1は項目2の前に並べ替えられます。|
 |0|項目1と項目2は同じように並べ替えられます。|
@@ -350,15 +350,15 @@ virtual int CompareItem(LPCOMPAREITEMSTRUCT lpCompareItemStruct);
 
 `COMPAREITEMSTRUCT` 構造の説明については、「 [CWnd:: OnCompareItem](../../mfc/reference/cwnd-class.md#oncompareitem) 」を参照してください。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 既定では、このメンバー関数は何も行いません。 LBS_SORT スタイルを使用してオーナー描画リストボックスを作成する場合は、このメンバー関数をオーバーライドして、リストボックスに追加された新しい項目の並べ替えのフレームワークをサポートする必要があります。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 [!code-cpp[NVC_MFC_CListBox#5](../../mfc/codesnippet/cpp/clistbox-class_4.cpp)]
 
-##  <a name="create"></a>  CListBox::Create
+##  <a name="create"></a>CListBox:: Create
 
 Windows のリストボックスを作成し、`CListBox` オブジェクトにアタッチします。
 
@@ -388,7 +388,7 @@ virtual BOOL Create(
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 `CListBox` オブジェクトを作成するには、2つの手順を実行します。 まず、コンストラクターを呼び出し、次に `Create`を呼び出します。これにより、Windows のリストボックスが初期化され、`CListBox` オブジェクトにアタッチされます。
 
@@ -412,11 +412,11 @@ virtual BOOL Create(
 
 - このコントロールへのタブ移動を許可する WS_TABSTOP
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 [!code-cpp[NVC_MFC_CListBox#2](../../mfc/codesnippet/cpp/clistbox-class_5.cpp)]
 
-##  <a name="deleteitem"></a>  CListBox::DeleteItem
+##  <a name="deleteitem"></a>CListBox::D eleteItem
 
 ユーザーがオーナー描画 `CListBox` オブジェクトから項目を削除するか、リストボックスを破棄すると、フレームワークによって呼び出されます。
 
@@ -429,17 +429,17 @@ virtual void DeleteItem(LPDELETEITEMSTRUCT lpDeleteItemStruct);
 *lpDeleteItemStruct*<br/>
 削除された項目に関する情報を格納している Windows [DELETEITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-deleteitemstruct)構造体への long ポインター。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 この関数の既定の実装は、何も行いません。 この関数をオーバーライドして、必要に応じてオーナー描画リストボックスを再描画します。
 
 `DELETEITEMSTRUCT` 構造の説明については、「 [CWnd:: OnDeleteItem](../../mfc/reference/cwnd-class.md#ondeleteitem) 」を参照してください。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 [!code-cpp[NVC_MFC_CListBox#6](../../mfc/codesnippet/cpp/clistbox-class_6.cpp)]
 
-##  <a name="deletestring"></a>  CListBox::DeleteString
+##  <a name="deletestring"></a>CListBox::D eleteString
 
 リストボックスから、[位置] の*項目を削除*します。
 
@@ -456,11 +456,11 @@ int DeleteString(UINT nIndex);
 
 リストに残っている文字列の数。 *NIndex*がリスト内の項目数より大きいインデックスを指定している場合、戻り値は LB_ERR です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 *これで*、すべての項目が1つ下に移動します。 たとえば、リストボックスに2つの項目が含まれている場合、最初の項目を削除すると、残りの項目が最初の位置になります。 1番目の位置の項目の場合は、[ *nIndex*] = 0 になります。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 [!code-cpp[NVC_MFC_CListBox#7](../../mfc/codesnippet/cpp/clistbox-class_7.cpp)]
 
@@ -479,7 +479,7 @@ int Dir(
 *attr*<br/>
 `CFile::GetStatu`[s](../../mfc/reference/cfile-class.md#getstatus)に記述されている**列挙**値の任意の組み合わせ、または次の値の任意の組み合わせを指定できます。
 
-|Value|説明|
+|値|意味|
 |-----------|-------------|
 |0x0000|ファイルの読み取りまたは書き込みを行うことができます。|
 |0x0001|ファイルはから読み取ることができますが、に書き込むことはできません。|
@@ -497,7 +497,7 @@ int Dir(
 
 リストに追加された最後のファイル名の0から始まるインデックス。 エラーが発生した場合、戻り値は LB_ERR ます。新しい文字列を格納するのに十分な領域がない場合、戻り値は LB_ERRSPACE ます。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 [!code-cpp[NVC_MFC_CListBox#8](../../mfc/codesnippet/cpp/clistbox-class_8.cpp)]
 
@@ -514,7 +514,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 *lpDrawItemStruct*<br/>
 必要な描画の種類に関する情報を格納している[DRAWITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-drawitemstruct)構造体への long ポインター。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 `DRAWITEMSTRUCT` 構造体の `itemAction` メンバーと `itemState` メンバーは、実行される描画アクションを定義します。
 
@@ -522,7 +522,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 
 `DRAWITEMSTRUCT` 構造の説明については、「 [CWnd:: OnDrawItem](../../mfc/reference/cwnd-class.md#ondrawitem) 」を参照してください。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 [!code-cpp[NVC_MFC_CListBox#9](../../mfc/codesnippet/cpp/clistbox-class_9.cpp)]
 
@@ -548,11 +548,11 @@ int FindString(
 
 一致する項目の0から始まるインデックス番号。検索に失敗した場合は LB_ERR。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 文字列を検索して選択するには、 [Selectstring](#selectstring)メンバー関数を使用します。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 [!code-cpp[NVC_MFC_CListBox#10](../../mfc/codesnippet/cpp/clistbox-class_10.cpp)]
 
@@ -578,15 +578,15 @@ Null で終わる検索対象の文字列を指します。 この文字列に�
 
 一致する項目のインデックス。検索に失敗した場合は LB_ERR。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 リストボックスがオーナー描画スタイルを使用して作成され、 [LBS_HASSTRINGS](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)スタイルが指定されていない場合、`FindStringExact` メンバー関数は、ダブルワード値と*lpszFind*の値を照合しようとします。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 [!code-cpp[NVC_MFC_CListBox#11](../../mfc/codesnippet/cpp/clistbox-class_11.cpp)]
 
-##  <a name="getanchorindex"></a>  CListBox::GetAnchorIndex
+##  <a name="getanchorindex"></a>CListBox:: GetAnchorIndex
 
 リストボックス内の現在のアンカー項目の0から始まるインデックスを取得します。
 
@@ -598,15 +598,15 @@ int GetAnchorIndex() const;
 
 成功した場合は、現在のアンカー項目のインデックス。それ以外の場合は LB_ERR。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 複数選択のリストボックスでは、アンカー項目は、連続して選択された項目のブロックの最初または最後の項目です。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
   「 [CListBox:: SetAnchorIndex](#setanchorindex)」の例を参照してください。
 
-##  <a name="getcaretindex"></a>  CListBox::GetCaretIndex
+##  <a name="getcaretindex"></a>CListBox:: GetCaretIndex
 
 複数選択リストボックス内にフォーカスを持つ四角形を持つ項目のインデックスを確認します。
 
@@ -618,15 +618,15 @@ int GetCaretIndex() const;
 
 リストボックス内でフォーカスを示す四角形を持つ項目の0から始まるインデックス。 リストボックスが単一選択リストボックスの場合、戻り値は選択されている項目のインデックス (存在する場合) です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 項目は選択できない場合もあります。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
   「 [CListBox:: SetCaretIndex](#setcaretindex)」の例を参照してください。
 
-##  <a name="getcount"></a>  CListBox::GetCount
+##  <a name="getcount"></a>CListBox:: GetCount
 
 リストボックス内の項目の数を取得します。
 
@@ -638,15 +638,15 @@ int GetCount() const;
 
 リストボックス内の項目の数。エラーが発生した場合は LB_ERR。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 返されるカウントは、最後の項目のインデックス値よりも1だけ大きくなります (インデックスは0から始まります)。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 [!code-cpp[NVC_MFC_CListBox#12](../../mfc/codesnippet/cpp/clistbox-class_12.cpp)]
 
-##  <a name="getcursel"></a>  CListBox::GetCurSel
+##  <a name="getcursel"></a>CListBox:: GetCurSel
 
 単一選択リストボックス内で現在選択されている項目 (存在する場合) の0から始まるインデックスを取得します。
 
@@ -660,11 +660,11 @@ int GetCurSel() const;
 
 複数選択のリストボックスで、フォーカスのある項目のインデックス。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 複数選択のリストボックスに対して `GetCurSel` を呼び出さないでください。 代わりに、 [CListBox:: GetSelItems](#getselitems)を使用してください。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 [!code-cpp[NVC_MFC_CListBox#13](../../mfc/codesnippet/cpp/clistbox-class_13.cpp)]
 
@@ -680,15 +680,15 @@ int GetHorizontalExtent() const;
 
 リストボックスのスクロール可能な幅 (ピクセル単位)。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 これは、リストボックスに水平スクロールバーがある場合にのみ適用されます。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 [!code-cpp[NVC_MFC_CListBox#14](../../mfc/codesnippet/cpp/clistbox-class_14.cpp)]
 
-##  <a name="getitemdata"></a>  CListBox::GetItemData
+##  <a name="getitemdata"></a>CListBox:: GetItemData
 
 指定されたリストボックス項目に関連付けられた、アプリケーションが提供したダブルワード値を取得します。
 
@@ -705,15 +705,15 @@ DWORD_PTR GetItemData(int nIndex) const;
 
 項目に関連付けられている値。エラーが発生した場合は LB_ERR。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 ダブルワード値は、 [SetItemData](#setitemdata)呼び出しの*dwItemData*パラメーターでした。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 [!code-cpp[NVC_MFC_CListBox#15](../../mfc/codesnippet/cpp/clistbox-class_15.cpp)]
 
-##  <a name="getitemdataptr"></a>  CListBox::GetItemDataPtr
+##  <a name="getitemdataptr"></a>CListBox:: GetItemDataPtr
 
 指定されたリストボックス項目に関連付けられた、アプリケーションが提供した32ビット値をポインターとして取得します (**void** <strong>\*</strong>)。
 
@@ -730,7 +730,7 @@ void* GetItemDataPtr(int nIndex) const;
 
 ポインターを取得します。エラーが発生した場合は-1 を取得します。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 [!code-cpp[NVC_MFC_CListBox#16](../../mfc/codesnippet/cpp/clistbox-class_16.cpp)]
 
@@ -751,11 +751,11 @@ int GetItemHeight(int nIndex) const;
 
 リストボックス内の項目の高さ (ピクセル単位)。 リストボックスに[LBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)スタイルがある場合、戻り値は、 *nIndex*によって指定された項目の高さになります。 エラーが発生した場合、戻り値は LB_ERR です。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 [!code-cpp[NVC_MFC_CListBox#17](../../mfc/codesnippet/cpp/clistbox-class_17.cpp)]
 
-##  <a name="getitemrect"></a>  CListBox::GetItemRect
+##  <a name="getitemrect"></a>CListBox:: GetItemRect
 
 リストボックスウィンドウに現在表示されているリストボックス項目の境界となる四角形の寸法を取得します。
 
@@ -777,11 +777,11 @@ int GetItemRect(
 
 エラーが発生した場合は LB_ERR します。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 [!code-cpp[NVC_MFC_CListBox#18](../../mfc/codesnippet/cpp/clistbox-class_18.cpp)]
 
-##  <a name="getlistboxinfo"></a>  CListBox::GetListBoxInfo
+##  <a name="getlistboxinfo"></a>CListBox:: GetListBoxInfo
 
 列あたりの項目数を取得します。
 
@@ -793,11 +793,11 @@ DWORD GetListBoxInfo() const;
 
 `CListBox` オブジェクトの列あたりの項目数。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 このメンバー関数は、Windows SDK で説明されているように、 [LB_GETLISTBOXINFO](/windows/win32/Controls/lb-getlistboxinfo)メッセージの機能をエミュレートします。
 
-##  <a name="getlocale"></a>  CListBox::GetLocale
+##  <a name="getlocale"></a>CListBox:: GetLocale
 
 リストボックスによって使用されるロケールを取得します。
 
@@ -809,11 +809,11 @@ LCID GetLocale() const;
 
 リストボックス内の文字列のロケール識別子 (LCID) 値。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 たとえば、ロケールは、並べ替えられたリストボックス内の文字列の並べ替え順序を決定するために使用されます。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
   「 [CListBox:: SetLocale](#setlocale)」の例を参照してください。
 
@@ -834,17 +834,17 @@ int GetSel(int nIndex) const;
 
 指定した項目が選択されている場合は正の数値。それ以外の場合は0になります。 エラーが発生した場合、戻り値は LB_ERR です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 このメンバー関数は、単一選択と複数選択のリストボックスの両方で動作します。
 
 現在選択されているリストボックス項目のインデックスを取得するには、[ [CListBox:: GetCurSel](#getcursel)] を使用します。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 [!code-cpp[NVC_MFC_CListBox#19](../../mfc/codesnippet/cpp/clistbox-class_19.cpp)]
 
-##  <a name="getselcount"></a>  CListBox::GetSelCount
+##  <a name="getselcount"></a>CListBox:: GetSelCount
 
 複数選択リストボックス内の選択された項目の合計数を取得します。
 
@@ -856,7 +856,7 @@ int GetSelCount() const;
 
 リストボックス内の選択された項目の数。 リストボックスが単一選択リストボックスの場合、戻り値は LB_ERR です。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
   「 [CListBox:: GetSelItems](#getselitems)」の例を参照してください。
 
@@ -882,11 +882,11 @@ int GetSelItems(
 
 バッファーに配置された実際の項目数。 リストボックスが単一選択リストボックスの場合、戻り値は `LB_ERR`です。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 [!code-cpp[NVC_MFC_CListBox#20](../../mfc/codesnippet/cpp/clistbox-class_20.cpp)]
 
-##  <a name="gettext"></a>  CListBox::GetText
+##  <a name="gettext"></a>CListBox:: GetText
 
 リストボックスから文字列を取得します。
 
@@ -909,21 +909,21 @@ void GetText(
 は、文字列を受け取るバッファーを指します。 バッファーには、文字列と終端の null 文字に十分な領域が必要です。 文字列のサイズは、`GetTextLen` メンバー関数を呼び出すことによって事前に決定できます。
 
 *rString*<br/>
-`CString` オブジェクトへの参照。
+`CString` オブジェクトへの参照です。
 
 ### <a name="return-value"></a>戻り値
 
 文字列の長さ (バイト単位)。終端の null 文字は除外されます。 *NIndex*で有効なインデックスが指定されていない場合、戻り値は LB_ERR になります。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 このメンバー関数の2番目の形式は、`CString` オブジェクトに文字列テキストを格納します。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 [!code-cpp[NVC_MFC_CListBox#21](../../mfc/codesnippet/cpp/clistbox-class_21.cpp)]
 
-##  <a name="gettextlen"></a>  CListBox::GetTextLen
+##  <a name="gettextlen"></a>CListBox:: GetTextLen
 
 リストボックス項目内の文字列の長さを取得します。
 
@@ -940,11 +940,11 @@ int GetTextLen(int nIndex) const;
 
 終端の null 文字を除く、文字列の長さ (文字数)。 *NIndex*で有効なインデックスが指定されていない場合、戻り値は LB_ERR になります。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
   「 [CListBox:: GetText](#gettext)」の例を参照してください。
 
-##  <a name="gettopindex"></a>  CListBox::GetTopIndex
+##  <a name="gettopindex"></a>CListBox:: GetTopIndex
 
 リストボックス内の最初に表示される項目の0から始まるインデックスを取得します。
 
@@ -956,15 +956,15 @@ int GetTopIndex() const;
 
 成功した場合はリストボックス内の最初に表示された項目の0から始まるインデックス。それ以外の場合は LB_ERR。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 最初は、項目0がリストボックスの一番上にありますが、リストボックスがスクロールされている場合は、別の項目が一番上に表示されます。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 [!code-cpp[NVC_MFC_CListBox#22](../../mfc/codesnippet/cpp/clistbox-class_22.cpp)]
 
-##  <a name="initstorage"></a>  CListBox::InitStorage
+##  <a name="initstorage"></a>CListBox:: InitStorage
 
 リストボックス項目を格納するためのメモリを割り当てます。
 
@@ -986,7 +986,7 @@ int InitStorage(
 
 成功した場合は、メモリの再割り当てが必要になる前にリストボックスに格納できる項目の最大数を指定します。それ以外の場合は LB_ERRSPACE、十分なメモリが使用できないことを意味します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 多数の項目を `CListBox`に追加する前に、この関数を呼び出します。
 
@@ -994,11 +994,11 @@ int InitStorage(
 
 Windows 95/98 のみ: *Nitems*パラメーターは16ビット値に制限されています。 これは、リストボックスに32767を超える項目を含めることができないことを意味します。 項目の数は制限されていますが、リストボックス内の項目の合計サイズは、使用可能なメモリによってのみ制限されます。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 [!code-cpp[NVC_MFC_CListBox#23](../../mfc/codesnippet/cpp/clistbox-class_23.cpp)]
 
-##  <a name="insertstring"></a>  CListBox::InsertString
+##  <a name="insertstring"></a>CListBox:: InsertString
 
 リストボックスに文字列を挿入します。
 
@@ -1020,15 +1020,15 @@ int InsertString(
 
 文字列が挿入された位置の 0 から始まるインデックス。 エラーが発生した場合、戻り値は LB_ERR ます。新しい文字列を格納するのに十分な領域がない場合、戻り値は LB_ERRSPACE ます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 [Addstring](#addstring)メンバー関数とは異なり、`InsertString` では、 [LBS_SORT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)スタイルを持つリストが並べ替えられることはありません。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 [!code-cpp[NVC_MFC_CListBox#24](../../mfc/codesnippet/cpp/clistbox-class_24.cpp)]
 
-##  <a name="itemfrompoint"></a>  CListBox::ItemFromPoint
+##  <a name="itemfrompoint"></a>CListBox:: ItemFromPoint
 
 *Pt*で指定されたポイントに最も近いリストボックス項目を決定します。
 
@@ -1050,11 +1050,11 @@ UINT ItemFromPoint(
 
 *Pt*で指定したポイントまでの最も近い項目のインデックス。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 この関数を使用すると、マウスカーソルを移動するリストボックス項目を特定できます。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
   「 [CListBox:: SetAnchorIndex](#setanchorindex)」の例を参照してください。
 
@@ -1071,19 +1071,19 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 *lpMeasureItemStruct*<br/>
 [MEASUREITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-measureitemstruct)構造体への long ポインター。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 既定では、このメンバー関数は何も行いません。 このメンバー関数をオーバーライドし、`MEASUREITEMSTRUCT` 構造体に入力して、ウィンドウにリストボックスの寸法を通知します。 リストボックスが[LBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)スタイルで作成されている場合、フレームワークはリストボックスの各項目に対してこのメンバー関数を呼び出します。 それ以外の場合、このメンバーは1回だけ呼び出されます。
 
-の`SubclassDlgItem` メンバー`CWnd`関数で作成されたオーナー描画リストボックスで [LBS_OWNERDRAWFIXED](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) スタイルを使用する方法の詳細については、[テクニカルノート 14](../../mfc/tn014-custom-controls.md)の説明を参照してください。
+`CWnd`の `SubclassDlgItem` メンバー関数で作成された所有者描画リストボックスで[LBS_OWNERDRAWFIXED](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)スタイルを使用する方法の詳細については、[テクニカルノート 14](../../mfc/tn014-custom-controls.md)の説明を参照してください。
 
 `MEASUREITEMSTRUCT` 構造の説明については、「 [CWnd:: OnMeasureItem](../../mfc/reference/cwnd-class.md#onmeasureitem) 」を参照してください。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 [!code-cpp[NVC_MFC_CListBox#25](../../mfc/codesnippet/cpp/clistbox-class_25.cpp)]
 
-##  <a name="resetcontent"></a>  CListBox::ResetContent
+##  <a name="resetcontent"></a>CListBox:: ResetContent
 
 リストボックスからすべての項目を削除します。
 
@@ -1091,11 +1091,11 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 void ResetContent();
 ```
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 [!code-cpp[NVC_MFC_CListBox#26](../../mfc/codesnippet/cpp/clistbox-class_26.cpp)]
 
-##  <a name="selectstring"></a>  CListBox::SelectString
+##  <a name="selectstring"></a>CListBox:: SelectString
 
 指定した文字列と一致するリストボックス項目を検索し、一致する項目が見つかった場合は項目を選択します。
 
@@ -1117,7 +1117,7 @@ int SelectString(
 
 検索が成功した場合は、選択された項目のインデックス。 検索に失敗した場合、戻り値は LB_ERR、現在の選択内容は変更されません。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 必要に応じて、リストボックスがスクロールされ、選択した項目が表示されます。
 
@@ -1127,11 +1127,11 @@ int SelectString(
 
 項目を選択せずに文字列を検索するには、`FindString` メンバー関数を使用します。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 [!code-cpp[NVC_MFC_CListBox#27](../../mfc/codesnippet/cpp/clistbox-class_27.cpp)]
 
-##  <a name="selitemrange"></a>  CListBox::SelItemRange
+##  <a name="selitemrange"></a>CListBox:: SelItemRange
 
 複数選択リストボックス内の複数の連続する項目を選択します。
 
@@ -1157,15 +1157,15 @@ int SelItemRange(
 
 エラーが発生した場合は LB_ERR します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 このメンバー関数は、複数選択のリストボックスでのみ使用してください。 複数選択のリストボックスで項目を1つだけ選択する必要がある場合 ( *Nfirstitem*が*nfirstitem*と等しい場合)、代わりに[SetSel](#setsel)メンバー関数を呼び出します。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 [!code-cpp[NVC_MFC_CListBox#28](../../mfc/codesnippet/cpp/clistbox-class_28.cpp)]
 
-##  <a name="setanchorindex"></a>  CListBox::SetAnchorIndex
+##  <a name="setanchorindex"></a>CListBox:: SetAnchorIndex
 
 複数選択のリストボックスでアンカーを設定して、拡張選択を開始します。
 
@@ -1178,15 +1178,15 @@ void SetAnchorIndex(int nIndex);
 *nIndex*<br/>
 アンカーとなるリストボックス項目の0から始まるインデックスを指定します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 複数選択のリストボックスでは、アンカー項目は、連続して選択された項目のブロックの最初または最後の項目です。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 [!code-cpp[NVC_MFC_CListBox#29](../../mfc/codesnippet/cpp/clistbox-class_29.cpp)]
 
-##  <a name="setcaretindex"></a>  CListBox::SetCaretIndex
+##  <a name="setcaretindex"></a>CListBox:: SetCaretIndex
 
 複数選択リストボックス内の指定したインデックス位置にある項目にフォーカスを示す四角形を設定します。
 
@@ -1208,11 +1208,11 @@ int SetCaretIndex(
 
 エラーが発生した場合は LB_ERR します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 項目が表示されていない場合は、スクロールして表示されます。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 [!code-cpp[NVC_MFC_CListBox#30](../../mfc/codesnippet/cpp/clistbox-class_30.cpp)]
 
@@ -1229,11 +1229,11 @@ void SetColumnWidth(int cxWidth);
 *cxWidth*<br/>
 すべての列の幅をピクセル単位で指定します。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 [!code-cpp[NVC_MFC_CListBox#31](../../mfc/codesnippet/cpp/clistbox-class_31.cpp)]
 
-##  <a name="setcursel"></a>  CListBox::SetCurSel
+##  <a name="setcursel"></a>CListBox:: SetCurSel
 
 必要に応じて、文字列を選択し、ビューにスクロールします。
 
@@ -1243,14 +1243,14 @@ int SetCurSel(int nSelect);
 
 ### <a name="parameters"></a>パラメーター
 
-*nSelect*<br/>
+*n*<br/>
 選択する文字列の0から始まるインデックスを指定します。 *N*が-1 の場合、リストボックスは選択されていないことを示します。
 
 ### <a name="return-value"></a>戻り値
 
 エラーが発生した場合は LB_ERR します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 新しい文字列を選択すると、リストボックスには、前に選択した文字列から強調表示が削除されます。
 
@@ -1258,7 +1258,7 @@ int SetCurSel(int nSelect);
 
 複数選択のリストボックスで選択範囲を設定または削除するには、[ [CListBox:: SetSel](#setsel)] を使用します。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 [!code-cpp[NVC_MFC_CListBox#32](../../mfc/codesnippet/cpp/clistbox-class_32.cpp)]
 
@@ -1275,7 +1275,7 @@ void SetHorizontalExtent(int cxExtent);
 *cxExtent*<br/>
 リストボックスを水平方向にスクロールできるピクセル数を指定します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 リストボックスのサイズがこの値よりも小さい場合、水平スクロールバーはリストボックス内の項目を水平方向にスクロールします。 リストボックスがこの値より大きいか大きい場合、水平スクロールバーは非表示になります。
 
@@ -1283,7 +1283,7 @@ void SetHorizontalExtent(int cxExtent);
 
 このメンバー関数は、複数列のリストボックスには役立ちません。 複数列のリストボックスの場合は、`SetColumnWidth` メンバー関数を呼び出します。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 [!code-cpp[NVC_MFC_CListBox#33](../../mfc/codesnippet/cpp/clistbox-class_33.cpp)]
 
@@ -1309,7 +1309,7 @@ int SetItemData(
 
 エラーが発生した場合は LB_ERR します。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 [!code-cpp[NVC_MFC_CListBox#34](../../mfc/codesnippet/cpp/clistbox-class_34.cpp)]
 
@@ -1335,11 +1335,11 @@ int SetItemDataPtr(
 
 エラーが発生した場合は LB_ERR します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 項目が追加または削除されると、リストボックス内の項目の相対位置が変化する場合でも、このポインターはリストボックスの有効期間中は有効なままです。 そのため、ボックス内の項目のインデックスは変更される可能性がありますが、ポインターは信頼できる状態のままです。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 [!code-cpp[NVC_MFC_CListBox#35](../../mfc/codesnippet/cpp/clistbox-class_35.cpp)]
 
@@ -1365,15 +1365,15 @@ int SetItemHeight(
 
 インデックスまたは高さが無効である場合に LB_ERR します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 リストボックスに[LBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)スタイルが設定さ*れている*場合、この関数は、指定した項目の高さを返します。 それ以外の場合、この関数はリストボックス内のすべての項目の高さを設定します。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 [!code-cpp[NVC_MFC_CListBox#36](../../mfc/codesnippet/cpp/clistbox-class_36.cpp)]
 
-##  <a name="setlocale"></a>  CListBox::SetLocale
+##  <a name="setlocale"></a>CListBox:: SetLocale
 
 このリストボックスのロケール識別子を設定します。
 
@@ -1390,11 +1390,11 @@ LCID SetLocale(LCID nNewLocale);
 
 このリストボックスの前のロケール識別子 (LCID) 値。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 `SetLocale` が呼び出されない場合は、既定のロケールがシステムから取得されます。 このシステムの既定のロケールは、コントロールパネルの地域 (または国際) アプリケーションを使用して変更できます。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 [!code-cpp[NVC_MFC_CListBox#37](../../mfc/codesnippet/cpp/clistbox-class_37.cpp)]
 
@@ -1420,13 +1420,13 @@ int SetSel(
 
 エラーが発生した場合は LB_ERR します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 このメンバー関数は、複数選択のリストボックスでのみ使用してください。
 
 1つの選択リストボックスから項目を選択するには、[ [CListBox:: SetCurSel](#setcursel)] を使用します。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 [!code-cpp[NVC_MFC_CListBox#38](../../mfc/codesnippet/cpp/clistbox-class_38.cpp)]
 
@@ -1458,7 +1458,7 @@ BOOL SetTabStops(
 
 すべてのタブが設定されている場合は0以外の。それ以外の場合は0です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 タブストップを既定サイズの2ダイアログ単位に設定するには、このメンバー関数のパラメーターなしのバージョンを呼び出します。 タブストップを2以外のサイズに設定するには、 *cxEachStop*引数を使用してバージョンを呼び出します。
 
@@ -1466,11 +1466,11 @@ BOOL SetTabStops(
 
 `SetTabStops` メンバー関数の呼び出しに応答するには、リストボックスが[LBS_USETABSTOPS](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)スタイルを使用して作成されている必要があります。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 [!code-cpp[NVC_MFC_CListBox#39](../../mfc/codesnippet/cpp/clistbox-class_39.cpp)]
 
-##  <a name="settopindex"></a>  CListBox::SetTopIndex
+##  <a name="settopindex"></a>CListBox:: SetTopIndex
 
 特定のリストボックス項目が確実に表示されるようにします。
 
@@ -1487,11 +1487,11 @@ int SetTopIndex(int nIndex);
 
 成功した場合は0。エラーが発生した場合は LB_ERR。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 システムは、[ *nIndex* ] で指定された項目がリストボックスの一番上に表示されるか、最大のスクロール範囲に達したときまで、リストボックスをスクロールします。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 [!code-cpp[NVC_MFC_CListBox#40](../../mfc/codesnippet/cpp/clistbox-class_40.cpp)]
 
@@ -1517,7 +1517,7 @@ virtual int VKeyToItem(
 
 それ以外の操作を行う場合は-2、既定のアクションの場合は-1、キーストロークの既定のアクションを実行するリストボックスアイテムのインデックスを指定する場合は負でない数値を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 WM_VKEYTOITEM メッセージは、WM_KEYDOWN メッセージを受信したときにリストボックスによって送信されますが、リストボックスが次の両方を満たしている場合に限ります。
 
@@ -1533,11 +1533,11 @@ WM_VKEYTOITEM メッセージは、WM_KEYDOWN メッセージを受信したと�
 
 戻り値が0以上の場合は、リストボックス内の項目のインデックスを指定し、リストボックスが、指定された項目のキーストロークの既定の動作を実行することを示します。
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 [!code-cpp[NVC_MFC_CListBox#41](../../mfc/codesnippet/cpp/clistbox-class_41.cpp)]
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [MFC のサンプル CTRLTEST](../../overview/visual-cpp-samples.md)<br/>
 [CWnd クラス](../../mfc/reference/cwnd-class.md)<br/>
@@ -1545,6 +1545,6 @@ WM_VKEYTOITEM メッセージは、WM_KEYDOWN メッセージを受信したと�
 [CWnd クラス](../../mfc/reference/cwnd-class.md)<br/>
 [CButton クラス](../../mfc/reference/cbutton-class.md)<br/>
 [CComboBox クラス](../../mfc/reference/ccombobox-class.md)<br/>
-[CEdit Class](../../mfc/reference/cedit-class.md)<br/>
+[CEdit クラス](../../mfc/reference/cedit-class.md)<br/>
 [CScrollBar クラス](../../mfc/reference/cscrollbar-class.md)<br/>
 [CStatic クラス](../../mfc/reference/cstatic-class.md)

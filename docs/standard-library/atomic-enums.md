@@ -7,11 +7,11 @@ ms.assetid: cd3a81c5-a19e-448f-952a-c34c717f21a9
 helpviewer_keywords:
 - std::memory_order
 ms.openlocfilehash: 14b816177593a9f6dade60e36676a37f724fc209
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457593"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78867084"
 ---
 # <a name="ltatomicgt-enums"></a>&lt;atomic&gt; 列挙型
 
@@ -41,6 +41,6 @@ typedef enum memory_order {
 |`memory_order_acq_rel`|`memory_order_acquire` と `memory_order_release` を組み合わせます。|
 |`memory_order_seq_cst`|`memory_order_acquire` と `memory_order_release` を組み合わせます。 `memory_order_seq_cst` としてマークされたメモリ アクセスには、順番に一貫性がある必要があります。|
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [\<atomic>](../standard-library/atomic.md)
