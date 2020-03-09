@@ -7,11 +7,11 @@ f1_keywords:
 - exception/std::unexpected_handler
 ms.assetid: 2a338480-35e2-46f7-b223-52d4e84a5768
 ms.openlocfilehash: aba17b7bf052b6974bf849f60ff895b8e84a1092
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501958"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78854909"
 ---
 # <a name="ltexceptiongt-typedefs"></a>&lt;exception&gt; typedefs
 
@@ -23,7 +23,7 @@ ms.locfileid: "69501958"
 typedef unspecified exception_ptr;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 `exception_ptr` 型を実装するために使用される未指定の内部クラス。
 
@@ -31,7 +31,7 @@ typedef unspecified exception_ptr;
 
 `exception_ptr` 変数を宣言する場合、変数は例外に関連付けられません。 つまり、例外参照フィールドが NULL です。 このような `exception_ptr` オブジェクトは、*null exception_ptr* と呼ばれます。
 
-例外を `current_exception` オブジェクトに割り当てるには、`make_exception_ptr` または `exception_ptr` 関数を使用します。 `exception_ptr` 変数に例外を割り当てた場合、変数の例外参照フィールドは例外のコピーを指します。 例外をコピーするためのメモリが不足している場合、例外参照フィールドは、[std::bad_alloc](../standard-library/bad-alloc-class.md) 例外のコピーを指し示します。 または`current_exception` `make_exception_ptr`関数が他の理由で例外をコピーできない場合`terminate` 、関数は CRT 関数を呼び出して現在のプロセスを終了します。
+例外を `current_exception` オブジェクトに割り当てるには、`make_exception_ptr` または `exception_ptr` 関数を使用します。 `exception_ptr` 変数に例外を割り当てた場合、変数の例外参照フィールドは例外のコピーを指します。 例外をコピーするためのメモリが不足している場合、例外参照フィールドは、[std::bad_alloc](../standard-library/bad-alloc-class.md) 例外のコピーを指し示します。 `current_exception` または `make_exception_ptr` 関数が他の理由で例外をコピーできない場合、関数は `terminate` CRT 関数を呼び出して現在のプロセスを終了します。
 
 名前とは異なり、`exception_ptr` オブジェクト自体はポインターではありません。 ポインターのセマンティクスに従わず、ポインターのメンバー アクセス (`->`) 演算子または間接 (*) 演算子で使用することはできません。 `exception_ptr` オブジェクトには、パブリック データ メンバーまたはメンバー関数がありません。
 
@@ -47,13 +47,13 @@ typedef unspecified exception_ptr;
 typedef void (*terminate_handler)();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 この型は、終了ハンドラーとして使用するのに適した関数へのポインターを表します。
 
 ### <a name="example"></a>例
 
-`terminate_handler` の使用例については、「[set_terminate](../standard-library/exception-functions.md#set_terminate)」を参照してください。
+[ の使用例については、「](../standard-library/exception-functions.md#set_terminate)set_terminate`terminate_handler`」を参照してください。
 
 ## <a name="unexpected_handler"></a>unexpected_handler
 
@@ -65,4 +65,4 @@ typedef void (*unexpected_handler)();
 
 ### <a name="example"></a>例
 
-`unexpected_handler` の使用例については、「[set_unexpected](../standard-library/exception-functions.md#set_unexpected)」を参照してください。
+[ の使用例については、「](../standard-library/exception-functions.md#set_unexpected)set_unexpected`unexpected_handler`」を参照してください。
