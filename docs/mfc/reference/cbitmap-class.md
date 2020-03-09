@@ -35,11 +35,11 @@ helpviewer_keywords:
 - CBitmap [MFC], SetBitmapDimension
 ms.assetid: 3980616a-c59d-495a-86e6-62bd3889c84c
 ms.openlocfilehash: 7161a4cf4484b6cc9e76e6955de558ca6e9121ca
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69507453"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78855553"
 ---
 # <a name="cbitmap-class"></a>CBitmap クラス
 
@@ -55,39 +55,39 @@ class CBitmap : public CGdiObject
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|名前|説明|
+|Name|Description|
 |----------|-----------------|
 |[CBitmap:: CBitmap](#cbitmap)|`CBitmap` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|名前|説明|
+|Name|Description|
 |----------|-----------------|
 |[CBitmap:: CreateBitmap](#createbitmap)|指定した幅、高さ、およびビットパターンを持つデバイス依存のメモリビットマップを使用して、オブジェクトを初期化します。|
-|[CBitmap:: CreateBitmapIndirect](#createbitmapindirect)|`BITMAP`構造体に指定されている幅、高さ、ビットパターンが指定されている場合は、ビットマップを使用してオブジェクトを初期化します。|
+|[CBitmap:: CreateBitmapIndirect](#createbitmapindirect)|幅、高さ、およびビットパターンが指定されている場合は、`BITMAP` 構造体で指定されているビットマップを使用して、オブジェクトを初期化します。|
 |[CBitmap:: CreateCompatibleBitmap](#createcompatiblebitmap)|指定したデバイスとの互換性を確保するために、ビットマップを使用してオブジェクトを初期化します。|
 |[CBitmap:: CreateDiscardableBitmap](#creatediscardablebitmap)|指定したデバイスと互換性のある破棄できないビットマップを使用して、オブジェクトを初期化します。|
-|[CBitmap:: FromHandle](#fromhandle)|`CBitmap` Windows`HBITMAP`ビットマップへのハンドルが指定された場合に、オブジェクトへのポインターを返します。|
-|[CBitmap:: GetBitmap](#getbitmap)|`BITMAP`構造体にビットマップに関する情報を格納します。|
+|[CBitmap:: FromHandle](#fromhandle)|Windows `HBITMAP` ビットマップへのハンドルが指定された場合に、`CBitmap` オブジェクトへのポインターを返します。|
+|[CBitmap:: GetBitmap](#getbitmap)|`BITMAP` 構造体に、ビットマップに関する情報を格納します。|
 |[CBitmap:: GetBitmapBits](#getbitmapbits)|指定したビットマップのビットを、指定したバッファーにコピーします。|
 |[CBitmap:: GetBitmapDimension](#getbitmapdimension)|ビットマップの幅と高さを返します。 高さと幅は、以前に[Setbitmapdimension](#setbitmapdimension)メンバー関数によって設定されていると見なされます。|
 |[CBitmap:: LoadBitmap](#loadbitmap)|アプリケーションの実行可能ファイルから名前付きビットマップリソースを読み込み、オブジェクトにビットマップをアタッチすることによって、オブジェクトを初期化します。|
-|[CBitmap::LoadMappedBitmap](#loadmappedbitmap)|ビットマップを読み込み、色を現在のシステムカラーにマップします。|
-|[CBitmap::LoadOEMBitmap](#loadoembitmap)|定義済みの Windows ビットマップを読み込み、オブジェクトにビットマップをアタッチすることによって、オブジェクトを初期化します。|
+|[CBitmap:: LoadMappedBitmap](#loadmappedbitmap)|ビットマップを読み込み、色を現在のシステムカラーにマップします。|
+|[CBitmap:: LoadOEMBitmap](#loadoembitmap)|定義済みの Windows ビットマップを読み込み、オブジェクトにビットマップをアタッチすることによって、オブジェクトを初期化します。|
 |[CBitmap:: SetBitmapBits](#setbitmapbits)|ビットマップのビットを、指定したビット値に設定します。|
 |[CBitmap:: SetBitmapDimension](#setbitmapdimension)|0\.1-ミリメートル単位でビットマップに幅と高さを割り当てます。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
-|名前|説明|
+|Name|Description|
 |----------|-----------------|
-|[CBitmap:: operator HBITMAP](#operator_hbitmap)|`CBitmap`オブジェクトにアタッチされている Windows ハンドルを返します。|
+|[CBitmap:: operator HBITMAP](#operator_hbitmap)|`CBitmap` オブジェクトにアタッチされている Windows ハンドルを返します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-オブジェクトを使用`CBitmap`するには、オブジェクトを構築し、初期化メンバー関数のいずれかを使用してビットマップハンドルをそのオブジェクトにアタッチしてから、オブジェクトのメンバー関数を呼び出します。
+`CBitmap` オブジェクトを使用するには、オブジェクトを構築し、初期化メンバー関数のいずれかを使用してビットマップハンドルをそのオブジェクトにアタッチしてから、オブジェクトのメンバー関数を呼び出します。
 
-など`CBitmap`のグラフィックオブジェクトの使用方法の詳細については、「[グラフィックオブジェクト](../../mfc/graphic-objects.md)」を参照してください。
+`CBitmap`などのグラフィックオブジェクトの使用方法の詳細については、「[グラフィックオブジェクト](../../mfc/graphic-objects.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -109,11 +109,11 @@ class CBitmap : public CGdiObject
 CBitmap();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 生成されたオブジェクトは、初期化メンバー関数のいずれかを使用して初期化する必要があります。
 
-##  <a name="createbitmap"></a>  CBitmap::CreateBitmap
+##  <a name="createbitmap"></a>CBitmap:: CreateBitmap
 
 指定した幅、高さ、ビット パターンに設定されている、デバイス依存のメモリ ビットマップを初期化します。
 
@@ -141,13 +141,13 @@ BOOL CreateBitmap(
 表示ピクセルごとのカラー ビット数を指定します。
 
 *lpBits*<br/>
-初期のビットマップのビット値を含むバイト配列を指します。 NULL の場合、新しいビットマップは初期化されずに残ります。
+初期のビットマップのビット値を含むバイト配列を指します。 NULL の場合、新しいビットマップは初期化されないままになります。
 
 ### <a name="return-value"></a>戻り値
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 色ビットマップの場合は、 *Nplanes*または*nbitcount*パラメーターを1に設定する必要があります。 両方のパラメーターを 1 に設定すると、 `CreateBitmap` によってモノクロのビットマップが作成されます。
 
@@ -155,7 +155,7 @@ BOOL CreateBitmap(
 
 `CBitmap` 関数によって作成された `CreateBitmap` オブジェクトでの作業終了後、デバイス コンテキスト外のビットマップを最初に選択し、次に `CBitmap` オブジェクトを削除します。
 
-詳細については、 `bmBits` `BITMAP`構造体のフィールドの説明を参照してください。 [BITMAP](/windows/win32/api/wingdi/ns-wingdi-bitmap) 構造体については、 [CBitmap::CreateBitmapIndirect](#createbitmapindirect) メンバー関数の下で説明されています。
+詳細については、`BITMAP` 構造の `bmBits` フィールドの説明を参照してください。 [BITMAP](/windows/win32/api/wingdi/ns-wingdi-bitmap) 構造体については、 [CBitmap::CreateBitmapIndirect](#createbitmapindirect) メンバー関数の下で説明されています。
 
 ##  <a name="createbitmapindirect"></a>CBitmap:: CreateBitmapIndirect
 
@@ -174,15 +174,15 @@ BOOL CreateBitmapIndirect(LPBITMAP lpBitmap);
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-表示デバイス用のビットマップを直接選択することはできませんが、 [cdc:: SelectObject](../../mfc/reference/cdc-class.md#selectobject)を使用してメモリデバイスコンテキストの現在のビットマップとして選択し、 [Cdc:: BitBlt](../../mfc/reference/cdc-class.md#bitblt)または[cdc:: を使用して互換性のある任意のデバイスコンテキストにコピーできます。StretchBlt](../../mfc/reference/cdc-class.md#stretchblt)関数。 ( [CDC::P atBlt](../../mfc/reference/cdc-class.md#patblt)関数は、現在のブラシのビットマップを、ディスプレイデバイスコンテキストに直接コピーできます)。
+ディスプレイデバイスに対してビットマップを直接選択することはできませんが、 [cdc:: SelectObject](../../mfc/reference/cdc-class.md#selectobject)を使用してメモリデバイスコンテキストの現在のビットマップとして選択し、 [Cdc:: BitBlt](../../mfc/reference/cdc-class.md#bitblt)または[cdc:: StretchBlt](../../mfc/reference/cdc-class.md#stretchblt)関数を使用して互換性のある任意のデバイスコンテキストにコピーすることができます。 ( [CDC::P atBlt](../../mfc/reference/cdc-class.md#patblt)関数は、現在のブラシのビットマップを、ディスプレイデバイスコンテキストに直接コピーできます)。
 
-*Lpbitmap*パラメーターによって示される`GetObject` `BITMAP`構造体が関数を使用して入力されている場合、ビットマップのビットは指定されず、ビットマップは初期化されません。 ビットマップを初期化するには、アプリケーションで[CDC:: BitBlt](../../mfc/reference/cdc-class.md#bitblt)や[setdibits](/windows/win32/api/wingdi/nf-wingdi-setdibits)などの関数を使用して、の最初の`CGdiObject::GetObject`パラメーターで識別されるビットマップのビットを、によって`CreateBitmapIndirect`作成されたビットマップにコピーします。
+*Lpbitmap*パラメーターが指す `BITMAP` 構造体が `GetObject` 関数を使用して入力されている場合、ビットマップのビットは指定されず、ビットマップは初期化されません。 ビットマップを初期化するには、アプリケーションで[CDC:: BitBlt](../../mfc/reference/cdc-class.md#bitblt)や[setdibits](/windows/win32/api/wingdi/nf-wingdi-setdibits)などの関数を使用して、`CGdiObject::GetObject` の最初のパラメーターで識別されるビットマップのビットを、`CreateBitmapIndirect`によって作成されたビットマップにコピーします。
 
-関数で`CBitmap` `CreateBitmapIndirect`作成されたオブジェクトを終了したら、まずデバイス`CBitmap`コンテキストからビットマップを選択し、次にオブジェクトを削除します。
+`CreateBitmapIndirect` 関数で作成された `CBitmap` オブジェクトを終了したら、まずデバイスコンテキストからビットマップを選択し、次に `CBitmap` オブジェクトを削除します。
 
-##  <a name="createcompatiblebitmap"></a>  CBitmap::CreateCompatibleBitmap
+##  <a name="createcompatiblebitmap"></a>CBitmap:: CreateCompatibleBitmap
 
 *PDC*によって指定されたデバイスと互換性のあるビットマップを初期化します。
 
@@ -208,7 +208,7 @@ BOOL CreateCompatibleBitmap(
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 ビットマップには、指定されたデバイスコンテキストと同じ数のカラープレーンまたは同じビット/ピクセル形式があります。 *PDC*によって指定されたものと互換性のある任意のメモリデバイスの現在のビットマップとして選択できます。
 
@@ -216,9 +216,9 @@ BOOL CreateCompatibleBitmap(
 
 メモリデバイスコンテキストが作成されると、GDI は自動的にモノクロの株価ビットマップを選択します。
 
-カラーメモリデバイスコンテキストではカラービットマップまたはモノクロビットマップを選択できるため、 `CreateCompatibleBitmap`関数によって返されるビットマップの形式は常に同じであるとは限りません。ただし、メモリ以外のデバイスコンテキストでは、互換性のあるビットマップの形式は常にデバイスの形式。
+カラーメモリデバイスコンテキストではカラービットマップまたはモノクロビットマップを選択できるため、`CreateCompatibleBitmap` 関数によって返されるビットマップの形式は常に同じではありません。ただし、非メモリデバイスコンテキストの互換性のあるビットマップの形式は、常にデバイスの形式になります。
 
-関数で作成され`CBitmap`たオブジェクトを終了したら、まずデバイス`CBitmap`コンテキストからビットマップを選択し、次にオブジェクトを削除します。 `CreateCompatibleBitmap`
+`CreateCompatibleBitmap` 関数で作成された `CBitmap` オブジェクトを終了したら、まずデバイスコンテキストからビットマップを選択し、次に `CBitmap` オブジェクトを削除します。
 
 ##  <a name="creatediscardablebitmap"></a>CBitmap:: CreateDiscardableBitmap
 
@@ -246,17 +246,17 @@ BOOL CreateDiscardableBitmap(
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 ビットマップには、指定されたデバイスコンテキストと同じ数のカラープレーンまたは同じビット/ピクセル形式があります。 アプリケーションでは、 *pDC*によって指定されたものと互換性のあるメモリデバイスの現在のビットマップとして、このビットマップを選択できます。
 
 Windows は、この関数によって作成されたビットマップを、アプリケーションが表示コンテキストに選択していない場合にのみ破棄できます。 Windows が選択されていないビットマップを破棄し、後でそのビットマップを選択しようとすると、 [CDC:: SelectObject](../../mfc/reference/cdc-class.md#selectobject)関数は NULL を返します。
 
-関数で作成され`CBitmap`たオブジェクトを終了したら、まずデバイス`CBitmap`コンテキストからビットマップを選択し、次にオブジェクトを削除します。 `CreateDiscardableBitmap`
+`CreateDiscardableBitmap` 関数で作成された `CBitmap` オブジェクトを終了したら、まずデバイスコンテキストからビットマップを選択し、次に `CBitmap` オブジェクトを削除します。
 
 ##  <a name="fromhandle"></a>CBitmap:: FromHandle
 
-Windows GDI ビットマップへの`CBitmap`ハンドルが指定された場合に、オブジェクトへのポインターを返します。
+Windows GDI ビットマップへのハンドルが指定された場合に、`CBitmap` オブジェクトへのポインターを返します。
 
 ```
 static CBitmap* PASCAL FromHandle(HBITMAP hBitmap);
@@ -269,13 +269,13 @@ Windows GDI ビットマップを指定します。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合`CBitmap`はオブジェクトへのポインター、それ以外の場合は NULL。
+成功した場合は `CBitmap` オブジェクトへのポインター。それ以外の場合は NULL。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-オブジェクトがハンドルにまだアタッチされていない場合は`CBitmap` 、一時オブジェクトが作成され、アタッチされます。 `CBitmap` この一時`CBitmap`オブジェクトは、アプリケーションが次にそのイベントループ内でアイドル状態になったときにのみ有効です。その時点で、すべての一時グラフィックオブジェクトが削除されます。 別の方法として、一時オブジェクトは1つのウィンドウメッセージの処理中にのみ有効であるということもあります。
+`CBitmap` オブジェクトがハンドルにまだアタッチされていない場合は、一時 `CBitmap` オブジェクトが作成され、アタッチされます。 この一時 `CBitmap` オブジェクトは、アプリケーションが次にそのイベントループ内でアイドル状態になったときにのみ有効です。その時点で、すべての一時グラフィックオブジェクトが削除されます。 別の方法として、一時オブジェクトは1つのウィンドウメッセージの処理中にのみ有効であるということもあります。
 
-##  <a name="getbitmap"></a>  CBitmap::GetBitmap
+##  <a name="getbitmap"></a>CBitmap:: GetBitmap
 
 添付ビットマップのイメージプロパティを取得します。
 
@@ -292,7 +292,7 @@ int GetBitmap(BITMAP* pBitMap);
 
 メソッドが成功した場合は0以外の。それ以外の場合は0です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 ##  <a name="getbitmapbits"></a>CBitmap:: GetBitmapBits
 
@@ -316,7 +316,7 @@ DWORD GetBitmapBits(
 
 メソッドが正常に終了した場合にバッファーにコピーされたバイト数。それ以外の場合は0です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 必要なバッファーサイズを決定するには、 [CBitmap:: GetBitmap](#getbitmap)を使用します。
 
@@ -330,13 +330,13 @@ CSize GetBitmapDimension() const;
 
 ### <a name="return-value"></a>戻り値
 
-ビットマップの幅と高さ。0.1 単位で計測されます。 高さは`cy` `CSize`オブジェクトのメンバーにあり、幅は`cx`メンバーに含まれています。 ビットマップの幅と高さがを使用`SetBitmapDimension`して設定されていない場合、戻り値は0になります。
+ビットマップの幅と高さ。0.1 単位で計測されます。 高さは、`CSize` オブジェクトの `cy` メンバーにあり、幅は `cx` メンバーに含まれています。 ビットマップの幅と高さが `SetBitmapDimension`を使用して設定されていない場合、戻り値は0になります。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 高さと幅は、 [Setbitmapdimension](#setbitmapdimension)メンバー関数を使用して以前に設定されたものと見なされます。
 
-##  <a name="loadbitmap"></a>  CBitmap::LoadBitmap
+##  <a name="loadbitmap"></a>CBitmap:: LoadBitmap
 
 アプリケーションの実行可能ファイルから、 *nIDResource*内の ID 番号で識別された、 *lpszresourcename*よって指定されたビットマップリソースを読み込みます。
 
@@ -357,13 +357,13 @@ BOOL LoadBitmap(UINT nIDResource);
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-読み込まれたビットマップが`CBitmap`オブジェクトにアタッチされます。
+読み込まれたビットマップは、`CBitmap` オブジェクトにアタッチされます。
 
-Lpszresourcename よって識別されるビットマップが存在しない場合、またはビットマップを読み込むためのメモリが不足している場合、この関数は0を返します。
+*Lpszresourcename*よって識別されるビットマップが存在しない場合、またはビットマップを読み込むためのメモリが不足している場合、この関数は0を返します。
 
-[CGdiObject::D eleteobject](../../mfc/reference/cgdiobject-class.md#deleteobject)関数を使用して、 `LoadBitmap` `CBitmap`関数によって読み込まれたビットマップを削除したり、デストラクターがオブジェクトを削除したりすることができます。
+[CGdiObject::D eleteobject](../../mfc/reference/cgdiobject-class.md#deleteobject)関数を使用して、`LoadBitmap` 関数によって読み込まれたビットマップを削除したり、`CBitmap` デストラクターがオブジェクトを削除したりすることができます。
 
 > [!CAUTION]
 >  オブジェクトを削除する前に、そのオブジェクトがデバイスコンテキストに選択されていないことを確認してください。
@@ -374,7 +374,7 @@ OBM_UPARRROWIOBM_DNARROWIOBM_RGARROWIOBM_LFARROWI
 
 これらのビットマップは、Windows バージョン3.0 以前のデバイスドライバーでは見つかりません。 ビットマップの完全な一覧とそれらの外観の表示については、Windows SDK を参照してください。
 
-##  <a name="loadmappedbitmap"></a>  CBitmap::LoadMappedBitmap
+##  <a name="loadmappedbitmap"></a>CBitmap:: LoadMappedBitmap
 
 ビットマップを読み込み、色を現在のシステムカラーにマップするには、このメンバー関数を呼び出します。
 
@@ -395,7 +395,7 @@ BOOL LoadMappedBitmap(
 ビットマップのフラグ。 0または CMB_MASKED を指定できます。
 
 *lpColorMap マップ*<br/>
-ビットマップをマップする`COLORMAP`ために必要な色情報を格納している構造体へのポインター。 このパラメーターが NULL の場合、関数は既定のカラーマップを使用します。
+ビットマップをマップするために必要な色情報を格納している `COLORMAP` 構造体へのポインター。 このパラメーターが NULL の場合、関数は既定のカラーマップを使用します。
 
 *nMapSize*<br/>
 *Lpcolormap*マップが指すカラーマップの数。
@@ -404,13 +404,13 @@ BOOL LoadMappedBitmap(
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-既定では`LoadMappedBitmap` 、ボタンのグリフでよく使用される色がによってマップされます。
+既定では、ボタンのグリフでよく使用される色は `LoadMappedBitmap` によってマップされます。
 
 マップされたビットマップの作成の詳細については、Windows SDK の「Windows 関数[CreateMappedBitmap](https://go.microsoft.com/fwlink/p/?linkid=230562) 」と「[カラーマップ](/windows/win32/api/commctrl/ns-commctrl-colormap)の構造」を参照してください。
 
-##  <a name="loadoembitmap"></a>  CBitmap::LoadOEMBitmap
+##  <a name="loadoembitmap"></a>CBitmap:: LoadOEMBitmap
 
 Windows によって使用される定義済みのビットマップを読み込みます。
 
@@ -447,15 +447,15 @@ BOOL LoadOEMBitmap(UINT nIDBitmap);
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-OBM_OLD で始まるビットマップ名は、3.0 より前の Windows バージョンで使用されているビットマップを表します。
+OBM_OLD で始まるビットマップ名は、3.0 より前の Windows バージョンで使用されるビットマップを表します。
 
 定数 OEMRESOURCE は、WINDOWS を含める前に定義する必要があることに注意してください。**OBM_** 定数を使用するための H。
 
 ##  <a name="operator_hbitmap"></a>CBitmap:: operator HBITMAP
 
-`CBitmap`オブジェクトのアタッチされた Windows GDI ハンドルを取得するには、この演算子を使用します。
+この演算子を使用して、`CBitmap` オブジェクトのアタッチされた Windows GDI ハンドルを取得します。
 
 ```
 operator HBITMAP() const;
@@ -463,11 +463,11 @@ operator HBITMAP() const;
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は、 `CBitmap`オブジェクトによって表される Windows GDI オブジェクトへのハンドル。それ以外の場合は NULL。
+成功した場合は、`CBitmap` オブジェクトによって表される Windows GDI オブジェクトへのハンドル。それ以外の場合は NULL。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この演算子は、 `HBITMAP`オブジェクトの直接使用をサポートするキャスト演算子です。
+この演算子は、`HBITMAP` オブジェクトの直接使用をサポートするキャスト演算子です。
 
 グラフィックオブジェクトの使用方法の詳細については、「Windows SDK の[グラフィックオブジェクト](/windows/win32/gdi/graphic-objects)」を参照してください。
 
@@ -487,7 +487,7 @@ DWORD SetBitmapBits(
 *Lpbits*が指すバイト数を指定します。
 
 *lpBits*<br/>
-`CBitmap`オブジェクトにコピーされるピクセル値を格納しているバイト配列を指します。 ビットマップがイメージを正しく表示できるようにするには、CBitmap インスタンスの作成時に指定した高さ、幅、および色深度の値に合わせて値を書式設定する必要があります。 詳細については、「 [CBitmap:: CreateBitmap](#createbitmap)」を参照してください。
+`CBitmap` オブジェクトにコピーされるピクセル値を格納しているバイト配列を指します。 ビットマップがイメージを正しく表示できるようにするには、CBitmap インスタンスの作成時に指定した高さ、幅、および色深度の値に合わせて値を書式設定する必要があります。 詳細については、「 [CBitmap:: CreateBitmap](#createbitmap)」を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
@@ -513,13 +513,13 @@ CSize SetBitmapDimension(
 
 ### <a name="return-value"></a>戻り値
 
-前のビットマップのサイズ。 高さは、 `CSize`オブジェクト`cy`のメンバー変数にあり、width は`cx`メンバー変数に含まれています。
+前のビットマップのサイズ。 高さは、`CSize` オブジェクトの `cy` メンバー変数にあり、width は `cx` メンバー変数に含まれています。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 GDI は、アプリケーションが[Getbitmapdimension](#getbitmapdimension)メンバー関数を呼び出すときにこれらの値を返さない限り、これらの値を使用しません。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [MFC のサンプル MDI](../../overview/visual-cpp-samples.md)<br/>
 [CGdiObject クラス](../../mfc/reference/cgdiobject-class.md)<br/>

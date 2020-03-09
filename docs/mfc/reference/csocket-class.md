@@ -21,15 +21,15 @@ helpviewer_keywords:
 - CSocket [MFC], OnMessagePending
 ms.assetid: 7f23c081-d24d-42e3-b511-8053ca53d729
 ms.openlocfilehash: a861e557b7368d13d615aaf796faded93c72b040
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323961"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78854554"
 ---
 # <a name="csocket-class"></a>CSocket クラス
 
-派生した`CAsyncSocket`、Windows ソケット API のカプセル化を継承しより高い抽象化レベルを表す、`CAsyncSocket`オブジェクト。
+は `CAsyncSocket`から派生し、Windows ソケット API のカプセル化を継承し、`CAsyncSocket` オブジェクトよりも高いレベルの抽象化を表します。
 
 ## <a name="syntax"></a>構文
 
@@ -41,46 +41,46 @@ class CSocket : public CAsyncSocket
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|名前|説明|
+|Name|Description|
 |----------|-----------------|
-|[CSocket::CSocket](#csocket)|`CSocket` オブジェクトを構築します。|
+|[CSocket:: CSocket](#csocket)|`CSocket` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|名前|説明|
+|Name|Description|
 |----------|-----------------|
-|[Csocket::attach](#attach)|ソケットのハンドルをアタッチ、`CSocket`オブジェクト。|
-|[CSocket::CancelBlockingCall](#cancelblockingcall)|現在進行中というブロッキング呼び出しをキャンセルします。|
-|[CSocket::Create](#create)|ソケットが作成されます。|
-|[CSocket::FromHandle](#fromhandle)|ポインターを返します、`CSocket`オブジェクト、ソケット ハンドルを指定します。|
-|[CSocket::IsBlocking](#isblocking)|ブロック呼び出しが進行中かどうかを判断します。|
+|[CSocket:: Attach](#attach)|ソケットハンドルを `CSocket` オブジェクトにアタッチします。|
+|[CSocket:: CancelBlockingCall](#cancelblockingcall)|現在実行中のブロッキング呼び出しをキャンセルします。|
+|[CSocket:: Create](#create)|ソケットを作成します。|
+|[CSocket:: FromHandle](#fromhandle)|ソケットハンドルが指定されている場合、`CSocket` オブジェクトへのポインターを返します。|
+|[CSocket:: IsBlocking](#isblocking)|ブロック呼び出しが進行中かどうかを判断します。|
 
 ### <a name="protected-methods"></a>プロテクト メソッド
 
-|名前|説明|
+|Name|Description|
 |----------|-----------------|
-|[CSocket::OnMessagePending](#onmessagepending)|ブロッキング呼び出しが完了するを待機中には、保留中のメッセージの処理と呼ばれます。|
+|[CSocket:: OnMessagePending](#onmessagepending)|ブロック呼び出しの完了を待機している間、保留中のメッセージを処理するために呼び出されます。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-`CSocket` クラスと連携`CSocketFile`と`CArchive`データの送受信を管理します。
+`CSocket` は、データの送受信を管理するために `CSocketFile` および `CArchive` のクラスと連携します。
 
-A`CSocket`オブジェクトも用意されています、ブロックの同期操作に不可欠である`CArchive`します。 など、機能をブロックしている`Receive`、 `Send`、 `ReceiveFrom`、 `SendTo`、および`Accept`(から継承されたすべて`CAsyncSocket`)、返されない、`WSAEWOULDBLOCK`でエラー`CSocket`します。 代わりに、これらの関数は、操作が完了するまで待機します。 場合に、元の呼び出しが WSAEINTR エラーで終了するさらに、`CancelBlockingCall`がブロックしてこれらの関数のいずれかの中に呼び出されます。
+`CSocket` オブジェクトは、`CArchive`の同期操作に不可欠なブロッキングも提供します。 `Receive`、`Send`、`ReceiveFrom`、`SendTo`、`Accept` (すべて `CAsyncSocket`から継承) などのブロック関数は `WSAEWOULDBLOCK` で `CSocket`エラーを返しません。 代わりに、これらの関数は、操作が完了するまで待機します。 また、これらの関数のいずれかがブロックされている間に `CancelBlockingCall` が呼び出された場合、元の呼び出しはエラー WSAEINTR で終了します。
 
-使用する、 `CSocket` 、コンス トラクターを呼び出すオブジェクトを呼び出して`Create`基になるソケット ハンドル (ソケットの種類) を作成します。 既定のパラメーターの`Create`ストリーム ソケットを作成、ソケットを使用していない場合は、`CArchive`オブジェクト、データグラム ソケットを作成する代わりに、またはサーバー ソケットを作成するのには特定のポートにバインドするパラメーターを指定することができます。 使用して、クライアント ソケット接続`Connect`クライアント側と`Accept`サーバー側でします。 作成し、`CSocketFile`オブジェクトし、関連付けることを`CSocket`オブジェクト、`CSocketFile`コンス トラクター。 次に、作成、`CArchive`を送信するためのオブジェクトと (必要に応じて) データを受信するための 1 つ関連付けるし、使用して、`CSocketFile`オブジェクト、`CArchive`コンス トラクター。 通信が完了したら、破棄、 `CArchive`、 `CSocketFile`、および`CSocket`オブジェクト。 ソケットのデータ型が、情報の記事で説明されている[Windows ソケット。バック グラウンド](../../mfc/windows-sockets-background.md)します。
+`CSocket` オブジェクトを使用するには、コンストラクターを呼び出し、次に `Create` を呼び出して、基になるソケットハンドル (型ソケット) を作成します。 ストリームソケットを作成 `Create` の既定のパラメーターですが、`CArchive` オブジェクトでソケットを使用していない場合は、代わりに、パラメーターを指定してデータグラムソケットを作成するか、特定のポートにバインドしてサーバーソケットを作成することができます。 クライアント側で `Connect` を使用してクライアントソケットに接続し、サーバー側で `Accept` します。 次に、`CSocketFile` オブジェクトを作成し、`CSocketFile` コンストラクターの `CSocket` オブジェクトに関連付けます。 次に、送信用の `CArchive` オブジェクトを作成し、必要に応じてデータを受信するためのオブジェクトを作成し、`CArchive` コンストラクターの `CSocketFile` オブジェクトと関連付けます。 通信が完了したら、`CArchive`、`CSocketFile`、および `CSocket` オブジェクトを破棄します。 ソケットデータ型については、「 [Windows Sockets: Background](../../mfc/windows-sockets-background.md)」を参照してください。
 
-使用すると`CArchive`で`CSocketFile`と`CSocket`、状況が発生する可能性があります、`CSocket::Receive`ループに入る (によって`PumpMessages(FD_READ)`) バイトの要求された時間待機しています。 これは Windows sockets FD_READ 通知ごとに 1 つだけ受信呼び出しを許可するためですが、`CSocketFile`と`CSocket`FD_READ ごとの複数の受信呼び出しを許可します。 読み取るデータがない場合に、FD_READ が発生した場合、アプリケーションがハングします。 別の FD_READ 取得しない場合、アプリケーションはソケット通信を停止します。
+`CSocketFile` と `CSocket`で `CArchive` を使用する場合、要求されたバイト数を待機し `PumpMessages(FD_READ)`て `CSocket::Receive` がループに入る状況が発生する可能性があります。 これは、Windows sockets では FD_READ 通知ごとに1つの recv 呼び出しのみが許可されるのに対し、`CSocketFile` と `CSocket` では FD_READ ごとに複数の recv 呼び出しが許可されるためです。 読み取るデータが存在しない場合に FD_READ を取得すると、アプリケーションがハングします。 別の FD_READ が得られない場合、アプリケーションはソケット経由の通信を停止します。
 
-次のように、この問題を解決できます。 `OnReceive`メソッドを呼び出し、socket クラスの`CAsyncSocket::IOCtl(FIONREAD, ...)`を呼び出す前に、`Serialize`ソケットから読み取ることが予想されるデータが 1 つの TCP パケットのネットワークのメディア (最大転送単位のサイズを超えるとメッセージ クラスのメソッド、通常は、少なくとも 1096 バイト)。 使用可能なデータのサイズが小さいと、必要以上の場合は、すべてのデータを受信して、読み取り操作を開始してから、待機します。
+この問題は、次のように解決できます。 ソケットクラスの `OnReceive` メソッドで、ソケットから読み取られると予想されるデータが1つの TCP パケット (ネットワークメディアの最大転送単位 (通常は1096バイト以上)) のサイズを超えたときに、メッセージクラスの `Serialize` メソッドを呼び出す前に `CAsyncSocket::IOCtl(FIONREAD, ...)` を呼び出します。 使用可能なデータのサイズが必要以上に満たない場合は、すべてのデータが受信されるのを待ってから、読み取り操作を開始します。
 
-次の例では、`m_dwExpected`は、ユーザーが受信するバイトのおおよその数です。 宣言している他の場所で、コードと見なされます。
+次の例では、`m_dwExpected` は、ユーザーが受け取ると予想されるおおよそのバイト数です。 コード内の他の場所で宣言することを前提としています。
 
 [!code-cpp[NVC_MFCSocketThread#4](../../mfc/reference/codesnippet/cpp/csocket-class_1.cpp)]
 
 > [!NOTE]
->  静的にリンクされた MFC アプリケーションでセカンダリ スレッドで MFC ソケットを使用する場合を呼び出す必要があります`AfxSocketInit`ソケット ライブラリを初期化するためにソケットを使用する各スレッドにします。 既定では、`AfxSocketInit`は、プライマリ スレッドでのみ呼び出されます。
+>  静的にリンクされた MFC アプリケーションでセカンダリスレッドで MFC ソケットを使用する場合は、ソケットを使用してソケットライブラリを初期化する各スレッドで `AfxSocketInit` を呼び出す必要があります。 既定では、`AfxSocketInit` はプライマリスレッドでのみ呼び出されます。
 
-詳細については、次を参照してください。 [MFC における Windows ソケット](../../mfc/windows-sockets-in-mfc.md)、 [Windows ソケット。アーカイブ付きソケットの使用](../../mfc/windows-sockets-using-sockets-with-archives.md)、 [Windows ソケット。ソケットのアーカイブ動作](../../mfc/windows-sockets-how-sockets-with-archives-work.md)、 [Windows ソケット。操作のシーケンス](../../mfc/windows-sockets-sequence-of-operations.md)、 [Windows ソケット。アーカイブを使用するソケットの例](../../mfc/windows-sockets-example-of-sockets-using-archives.md)します。
+詳細については、「 [MFC の Windows sockets](../../mfc/windows-sockets-in-mfc.md)」、「 [Windows ソケット: アーカイブ付きソケットの使用](../../mfc/windows-sockets-using-sockets-with-archives.md)」、「windows ソケット: アーカイブを使用するソケットの[しくみ](../../mfc/windows-sockets-how-sockets-with-archives-work.md)」、「windows ソケット:[操作のシーケンス](../../mfc/windows-sockets-sequence-of-operations.md)」、「 [Windows ソケット: アーカイブを使用するソケットの例](../../mfc/windows-sockets-example-of-sockets-using-archives.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -92,11 +92,11 @@ A`CSocket`オブジェクトも用意されています、ブロックの同期�
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** afxsock.h
+**ヘッダー:** afxsock
 
-##  <a name="attach"></a>  CSocket::Attach
+##  <a name="attach"></a>CSocket:: Attach
 
-アタッチするには、このメンバー関数を呼び出す、`hSocket`へのハンドルを`CSocket`オブジェクト。
+このメンバー関数を呼び出して、`CSocket` オブジェクトに `hSocket` ハンドルをアタッチします。
 
 ```
 BOOL Attach(SOCKET hSocket);
@@ -105,17 +105,17 @@ BOOL Attach(SOCKET hSocket);
 ### <a name="parameters"></a>パラメーター
 
 *hSocket*<br/>
-ソケットへのハンドルが含まれています。
+ソケットを表すハンドルを格納します。
 
 ### <a name="return-value"></a>戻り値
 
 正常終了した場合は 0 以外を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-ソケットのハンドルがオブジェクトに格納されている[m_hSocket](../../mfc/reference/casyncsocket-class.md#m_hsocket)データ メンバー。
+ソケットハンドルは、オブジェクトの[m_hSocket](../../mfc/reference/casyncsocket-class.md#m_hsocket)データメンバーに格納されます。
 
-詳細については、次を参照してください。 [Windows ソケット。アーカイブ付きソケットの使用](../../mfc/windows-sockets-using-sockets-with-archives.md)します。
+詳細については、「 [Windows ソケット: アーカイブでのソケットの使用](../../mfc/windows-sockets-using-sockets-with-archives.md)」を参照してください。
 
 ### <a name="example"></a>例
 
@@ -125,27 +125,27 @@ BOOL Attach(SOCKET hSocket);
 
 [!code-cpp[NVC_MFCSocketThread#3](../../mfc/reference/codesnippet/cpp/csocket-class_4.cpp)]
 
-##  <a name="cancelblockingcall"></a>  CSocket::CancelBlockingCall
+##  <a name="cancelblockingcall"></a>CSocket:: CancelBlockingCall
 
-現在進行中のブロッキング呼び出しをキャンセルするには、このメンバー関数を呼び出します。
+現在実行中のブロック呼び出しを取り消すには、このメンバー関数を呼び出します。
 
 ```
 void CancelBlockingCall();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この関数は、このソケットに対する未処理のブロッキング操作をキャンセルします。 元のブロックの呼び出しは、できるだけ早く WSAEINTR エラーで終了します。
+この関数は、このソケットの未処理のブロッキング操作を取り消します。 元のブロック呼び出しは、エラー WSAEINTR でできるだけ早く終了します。
 
-ブロッキング`Connect`操作、Windows ソケットの実装が終了ブロック呼び出しが、不可能になるソケット リソースは、接続が完了した (および、リセットされました) までにリリースされるとすぐに、またはタイムアウトしました。これは、アプリケーションは、新しいソケット (使用可能なソケットがない場合) を開くか、同じピアに接続するためにすぐにしようとする場合にのみある可能性があります。
+`Connect` のブロッキング操作の場合は、Windows ソケットの実装によってブロック呼び出しができるだけ早く終了しますが、接続が完了してからリセットされるか、またはタイムアウトになるまでソケットリソースが解放されない可能性があります。これは、アプリケーションが (ソケットが使用できない場合) 新しいソケットをすぐに開くか、同じピアに接続する場合にのみ、顕著になる可能性があります。
 
-以外のすべての操作をキャンセル`Accept`不定状態で、ソケットのままにできます。 アプリケーションが確実に実行できることに依存できる唯一の操作への呼び出しは、アプリケーションでは、ソケットでのブロッキング操作をキャンセルした場合`Close`、一部の Windows Sockets 実装でその他の操作に使用することがあります。 最大の移植性を必要に応じて、アプリケーションの場合は、キャンセル後の操作の実行に依存しないように注意する必要があります。
+`Accept` 以外の操作を取り消すと、ソケットが中間状態のままになる可能性があります。 アプリケーションがソケットでのブロック操作をキャンセルした場合、そのアプリケーションがソケット上で実行できる操作は `Close`への呼び出しに依存しますが、一部の Windows ソケット実装では他の操作が機能することがあります。 アプリケーションの移植性を最大にする場合は、キャンセル後の操作の実行に依存しないように注意する必要があります。
 
-詳細については、次を参照してください。 [Windows ソケット。アーカイブ付きソケットの使用](../../mfc/windows-sockets-using-sockets-with-archives.md)します。
+詳細については、「 [Windows ソケット: アーカイブでのソケットの使用](../../mfc/windows-sockets-using-sockets-with-archives.md)」を参照してください。
 
-##  <a name="create"></a>  CSocket::Create
+##  <a name="create"></a>CSocket:: Create
 
-呼び出す、**作成**Windows ソケットを作成し、アタッチするソケット オブジェクトを構築した後、メンバー関数。
+Socket オブジェクトを構築した後に**create** member 関数を呼び出して、Windows ソケットを作成し、それをアタッチします。
 
 ```
 BOOL Create(
@@ -157,32 +157,32 @@ BOOL Create(
 ### <a name="parameters"></a>パラメーター
 
 *nSocketPort*<br/>
-Mfc でポートを選択する場合、ソケットまたは 0 で使用する特定のポート。
+ソケットで使用される特定のポート。 MFC でポートを選択する場合は0。
 
 *nSocketType*<br/>
-SOCK_STREAM または SOCK_DGRAM します。
+SOCK_STREAM または SOCK_DGRAM。
 
 *lpszSocketAddress*<br/>
-接続のソケットでは、「128.56.22.8」などのピリオドで区切られた数のネットワーク アドレスを含む文字列へのポインター。 このパラメーターに文字列、NULL が渡される、`CSocket`インスタンスがすべてのネットワーク インターフェイス上のクライアント アクティビティを待機する必要があります。
+接続されたソケットのネットワークアドレスを格納している文字列へのポインター ("128.56.22.8" など)。 このパラメーターに NULL 文字列を渡すことは、`CSocket` インスタンスがすべてのネットワークインターフェイスでクライアントアクティビティをリッスンする必要があることを示します。
 
 ### <a name="return-value"></a>戻り値
 
-関数が成功した場合、0 以外の場合0、および特定のエラー コードを呼び出すことによって取得されるそれ以外の場合`GetLastError`します。
+関数が成功した場合は0以外の。それ以外の場合は0、`GetLastError`を呼び出すことによって特定のエラーコードを取得できます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`Create` 呼び出して`Bind`指定のアドレスにソケットをバインドします。 次の種類のソケットがサポートされています。
+次に、`Bind` を呼び出して、ソケットを指定されたアドレスにバインドします。 `Create` 次のソケットの種類がサポートされています。
 
-- SOCK_STREAM に、シーケンス処理、信頼性の高い双方向の接続ベースのバイト ストリームを提供します。 インターネット アドレス ファミリの伝送制御プロトコル (TCP) を使用します。
+- SOCK_STREAM は、シーケンス、信頼性、双方向の、接続ベースのバイトストリームを提供します。 は、インターネットアドレスファミリに伝送制御プロトコル (TCP) を使用します。
 
-- SOCK_DGRAM サポート データグラムには、固定 (通常は短い) 最大長のコネクションレスで信頼性の低いのバッファーします。 インターネット アドレス ファミリには、ユーザー データグラム プロトコル (UDP) を使用します。 このオプションを使用する、ソケットを使用する必要がありますいないを`CArchive`オブジェクト。
+- SOCK_DGRAM は、固定された (通常は小さい) 最大長の、コネクションレスで信頼性の低いバッファーであるデータグラムをサポートします。 は、インターネットアドレスファミリにユーザーデータグラムプロトコル (UDP) を使用します。 このオプションを使用するには、`CArchive` オブジェクトでソケットを使用しないようにする必要があります。
 
     > [!NOTE]
-    >  `Accept`メンバー関数は、新しい空への参照を受け取ります`CSocket`オブジェクトをパラメーターとして。 呼び出す前に、このオブジェクトを構築する必要があります`Accept`します。 注意このソケット オブジェクトがスコープ接続は閉じられますがなくなるとします。 呼び出さない`Create`この新しいソケット オブジェクト。
+    >  `Accept` メンバー関数は、新しい空の `CSocket` オブジェクトへの参照をそのパラメーターとして受け取ります。 `Accept`を呼び出す前に、このオブジェクトを作成する必要があります。 このソケットオブジェクトがスコープ外に出ると、接続が閉じられることに注意してください。 この新しいソケットオブジェクトに対して `Create` を呼び出さないでください。
 
-ストリームとデータグラム ソケットの詳細については、記事をご覧ください。 [Windows ソケット。バック グラウンド](../../mfc/windows-sockets-background.md)、 [Windows ソケット。ポートとソケット アドレス](../../mfc/windows-sockets-ports-and-socket-addresses.md)、および[Windows ソケット。アーカイブ付きソケットの使用](../../mfc/windows-sockets-using-sockets-with-archives.md)します。
+ストリームソケットとデータグラムソケットの詳細については、「 [Windows ソケット: バックグラウンド](../../mfc/windows-sockets-background.md)」、「 [Windows ソケット: ポートとソケットアドレス](../../mfc/windows-sockets-ports-and-socket-addresses.md)」、および「 [Windows ソケット: アーカイブ付きソケットの使用](../../mfc/windows-sockets-using-sockets-with-archives.md)」を参照してください。
 
-##  <a name="csocket"></a>  CSocket::CSocket
+##  <a name="csocket"></a>CSocket:: CSocket
 
 `CSocket` オブジェクトを構築します。
 
@@ -190,15 +190,15 @@ SOCK_STREAM または SOCK_DGRAM します。
 CSocket();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-呼び出す必要があります、作成した後、`Create`メンバー関数。
+構築後、`Create` メンバー関数を呼び出す必要があります。
 
-詳細については、次を参照してください。 [Windows ソケット。アーカイブ付きソケットの使用](../../mfc/windows-sockets-using-sockets-with-archives.md)します。
+詳細については、「 [Windows ソケット: アーカイブでのソケットの使用](../../mfc/windows-sockets-using-sockets-with-archives.md)」を参照してください。
 
-##  <a name="fromhandle"></a>  CSocket::FromHandle
+##  <a name="fromhandle"></a>CSocket:: FromHandle
 
-ポインターを返します、`CSocket`オブジェクト。
+`CSocket` オブジェクトへのポインターを返します。
 
 ```
 static CSocket* PASCAL FromHandle(SOCKET hSocket);
@@ -207,21 +207,21 @@ static CSocket* PASCAL FromHandle(SOCKET hSocket);
 ### <a name="parameters"></a>パラメーター
 
 *hSocket*<br/>
-ソケットへのハンドルが含まれています。
+ソケットを表すハンドルを格納します。
 
 ### <a name="return-value"></a>戻り値
 
-ポインター、`CSocket`がある場合は NULL またはありません`CSocket`オブジェクトに関連付けられて*hSocket*。
+`CSocket` オブジェクトへのポインター。 *Hsocket*に `CSocket` オブジェクトがアタッチされていない場合は NULL。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-場合、ソケット ハンドルが指定されると、`CSocket`オブジェクトがハンドルに関連付けられていない場合、メンバー関数は、NULL が返され、一時オブジェクトは作成されません。
+ソケットハンドルが指定されている場合、`CSocket` オブジェクトがハンドルにアタッチされていない場合、メンバー関数は NULL を返し、一時オブジェクトを作成しません。
 
-詳細については、次を参照してください。 [Windows ソケット。アーカイブ付きソケットの使用](../../mfc/windows-sockets-using-sockets-with-archives.md)します。
+詳細については、「 [Windows ソケット: アーカイブでのソケットの使用](../../mfc/windows-sockets-using-sockets-with-archives.md)」を参照してください。
 
-##  <a name="isblocking"></a>  CSocket::IsBlocking
+##  <a name="isblocking"></a>CSocket:: IsBlocking
 
-ブロック呼び出しが進行中かを判断するには、このメンバー関数を呼び出します。
+ブロック呼び出しが進行中かどうかを判断するには、このメンバー関数を呼び出します。
 
 ```
 BOOL IsBlocking();
@@ -229,15 +229,15 @@ BOOL IsBlocking();
 
 ### <a name="return-value"></a>戻り値
 
-ソケットがブロッキングされている場合は 0 以外それ以外の場合 0 を返します。
+ソケットがブロックしている場合は0以外。それ以外の場合は0です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-詳細については、次を参照してください。 [Windows ソケット。アーカイブ付きソケットの使用](../../mfc/windows-sockets-using-sockets-with-archives.md)します。
+詳細については、「 [Windows ソケット: アーカイブでのソケットの使用](../../mfc/windows-sockets-using-sockets-with-archives.md)」を参照してください。
 
-##  <a name="onmessagepending"></a>  CSocket::OnMessagePending
+##  <a name="onmessagepending"></a>CSocket:: OnMessagePending
 
-Windows から特定のメッセージを検索し、ソケットで対処するには、このメンバー関数をオーバーライドします。
+このメンバー関数をオーバーライドして、Windows から特定のメッセージを検索し、ソケット内の特定のメッセージに応答します。
 
 ```
 virtual BOOL OnMessagePending();
@@ -245,17 +245,17 @@ virtual BOOL OnMessagePending();
 
 ### <a name="return-value"></a>戻り値
 
-メッセージが処理された場合、0 以外の場合それ以外の場合 0 を返します。
+メッセージが処理された場合は0以外の。それ以外の場合は0です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-これは、高度なオーバーライド可能な。
+これは高度なオーバーライド可能です。
 
-Framework 呼び出し`OnMessagePending`ソケットは、アプリケーションに関心のあるメッセージを処理する機会を提供する Windows メッセージをポンプが中にします。 使用する方法の例については`OnMessagePending`、記事をご覧ください[Windows ソケット。ソケット クラスから派生する](../../mfc/windows-sockets-deriving-from-socket-classes.md)します。
+このフレームワークは、ソケットが Windows メッセージをポンプしている間に `OnMessagePending` を呼び出し、アプリケーションにとって関心のあるメッセージを処理する機会を提供します。 `OnMessagePending`を使用する方法の例については、「 [Windows ソケット: ソケットクラスからの派生](../../mfc/windows-sockets-deriving-from-socket-classes.md)」を参照してください。
 
-詳細については、次を参照してください。 [Windows ソケット。アーカイブ付きソケットの使用](../../mfc/windows-sockets-using-sockets-with-archives.md)します。
+詳細については、「 [Windows ソケット: アーカイブでのソケットの使用](../../mfc/windows-sockets-using-sockets-with-archives.md)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [CAsyncSocket クラス](../../mfc/reference/casyncsocket-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)<br/>
