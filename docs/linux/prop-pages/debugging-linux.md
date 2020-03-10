@@ -2,12 +2,12 @@
 title: デバッガー プロパティ (Linux C++)| Microsoft Docs
 ms.date: 06/07/2019
 ms.assetid: 0c1c0fcc-a49b-451c-a5cb-ce9711fac064
-ms.openlocfilehash: d76e398d648db7c5cf65e4ca2bb1665aef4359ad
-ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
+ms.openlocfilehash: 8a57e983a32e1ef1eca2bf2452df2cd39d453467
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66821401"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78883708"
 ---
 # <a name="c-debugging-properties-linux-c"></a>C++ デバッグ プロパティ (Linux C++)
 
@@ -21,7 +21,7 @@ Linux サポートは Visual Studio 2017 以降で使用できます。
 
 プロパティ | 説明 | オプション
 --- | ---| ---
-リモート デバッグ コンピューター | **Visual Studio 2019 バージョン 16.1**: プログラムのデバッグを行うマシンを指定します。 [[全般]](general-linux.md) ページで指定されたリモート ビルド コンピューターとは異なる場合があります。
+リモート デバッグ コンピューター | **Visual Studio 2019 バージョン 16.1**: プログラムのデバッグを行うマシンを指定します。 [[全般]](general-linux.md) ページで指定されたリモート ビルド コンピューターとは異なる場合があります。 ターゲット マシン接続を追加または編集するには、 **[ツール]**  >  **[オプション]**  >  **[クロス プラットフォーム]**  >  **[接続マネージャー]** を使用します。
 起動前コマンド | デバッガーの開始前にシェルで実行されるコマンド。これはデバッグ環境に影響を与えるために使用できます。
 プログラム | リモート システムでデバッグするプログラムへの完全なパス。 空のままにするか、変更しない場合、既定値は現在のプロジェクト出力になります。
 プログラムの引数 | デバッグ中のプログラムに渡すコマンド ライン引数。
