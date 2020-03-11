@@ -6,13 +6,13 @@ f1_keywords:
 - hash_map/std::operator==
 ms.assetid: 24b9bb9e-e983-4060-bce5-2c7c8161ee61
 ms.openlocfilehash: c4cc73feb3c8163a2be9f0122f57eaa0fb8ab3b8
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448728"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856697"
 ---
-# <a name="lthashmapgt-operators"></a>&lt;hash_map&gt; 演算子
+# <a name="lthash_mapgt-operators"></a>&lt;hash_map&gt; 演算子
 
 |||
 |-|-|
@@ -32,21 +32,21 @@ bool operator!=(const hash_map <Key, Type, Traits, Allocator>& left, const hash_
 
 ### <a name="parameters"></a>パラメーター
 
-*左側*\
-`hash_map` 型のオブジェクト。
+*左*\
+`hash_map` 型オブジェクト。
 
-*そうです*\
-`hash_map` 型のオブジェクト。
+*右*\
+`hash_map` 型オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
 hash_maps が等しくない場合は **true**、hash_maps が等しい場合は **false**。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 hash_map オブジェクト間の比較は、要素のペアの比較に基づいています。 2 つの hash_maps は、同じ数の要素を持ち、各要素の値が同じである場合に等しくなります。 それ以外の場合は等しくありません。
 
-[Stdext 名前空間](stdext-namespace.md)の[< hash_map >](hash-map.md)ヘッダーファイルと[< > hash_set](hash-set.md)ヘッダーファイルのメンバー。
+[< Hash_map](hash-map.md)のメンバーは、 [Stdext 名前空間](stdext-namespace.md)の hash_set ヘッダーファイルを > および[<](hash-set.md)します。
 
 ### <a name="example"></a>例
 
@@ -101,17 +101,17 @@ bool operator==(const hash_map <Key, Type, Traits, Allocator>& left, const hash_
 
 ### <a name="parameters"></a>パラメーター
 
-*左側*\
-`hash_map` 型のオブジェクト。
+*左*\
+`hash_map` 型オブジェクト。
 
-*そうです*\
-`hash_map` 型のオブジェクト。
+*右*\
+`hash_map` 型オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
 演算子の左辺の hash_map が演算子の右辺の hash_map と等しい場合は **true**、それ以外の場合は **false**。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 hash_map オブジェクト間の比較は、要素のペアの比較に基づいています。 2 つの hash_maps は、同じ数の要素を持ち、各要素の値が同じである場合に等しくなります。 それ以外の場合は等しくありません。
 
@@ -168,17 +168,17 @@ bool operator!=(const hash_multimap <Key, Type, Traits, Allocator>& left, const 
 
 ### <a name="parameters"></a>パラメーター
 
-*左側*\
-`hash_multimap` 型のオブジェクト。
+*左*\
+`hash_multimap` 型オブジェクト。
 
-*そうです*\
-`hash_multimap` 型のオブジェクト。
+*右*\
+`hash_multimap` 型オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
 hash_multimaps が等しくない場合は **true**、hash_multimaps が等しい場合は **false**。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 hash_multimap オブジェクト間の比較は、要素のペアの比較に基づいています。 2 つの hash_multimaps は、同じ数の要素を持ち、各要素の値が同じである場合に等しくなります。 それ以外の場合は等しくありません。
 
@@ -235,17 +235,17 @@ bool operator==(const hash_multimap <Key, Type, Traits, Allocator>& left, const 
 
 ### <a name="parameters"></a>パラメーター
 
-*左側*\
-`hash_multimap` 型のオブジェクト。
+*左*\
+`hash_multimap` 型オブジェクト。
 
-*そうです*\
-`hash_multimap` 型のオブジェクト。
+*右*\
+`hash_multimap` 型オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
 演算子の左辺の hash_multimap が演算子の右辺の hash_multimap と等しい場合は **true**、それ以外の場合は **false**。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 hash_multimap オブジェクト間の比較は、要素のペアの比較に基づいています。 2 つの hash_multimaps は、同じ数の要素を持ち、各要素の値が同じである場合に等しくなります。 それ以外の場合は等しくありません。
 
@@ -289,6 +289,6 @@ The hash_multimaps hm1 and hm2 are not equal.
 The hash_multimaps hm1 and hm3 are equal.
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [<hash_map>](hash-map.md)

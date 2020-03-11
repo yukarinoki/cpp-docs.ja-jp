@@ -1,5 +1,5 @@
 ---
-title: '&lt;バリアント&gt;関数'
+title: バリアント&gt; 関数の &lt;
 ms.date: 04/04/2019
 f1_keywords:
 - variant/std::get
@@ -7,17 +7,17 @@ f1_keywords:
 - variant/std::holds_alternative
 - variant/std::visit
 ms.openlocfilehash: d558eb086e076ba22722080b0c19f3d5733136d2
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68268384"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865757"
 ---
-# <a name="ltvariantgt-functions"></a>&lt;バリアント&gt;関数
+# <a name="ltvariantgt-functions"></a>バリアント&gt; 関数の &lt;
 
-## <a name="get"></a> 取得
+## <a name="get"></a>取得
 
-オブジェクトの変化形を取得します。
+オブジェクトのバリアントを取得します。
 
 ```cpp
 template <size_t I, class... Types>
@@ -38,9 +38,9 @@ template <class T, class... Types>
     constexpr const T&& get(const variant<Types...>&&);
 ```
 
-## <a name="get_if"></a> get_if
+## <a name="get_if"></a>get_if
 
-存在する場合は、オブジェクトの変化形を取得します。
+オブジェクトが存在する場合は、そのバリアントを取得します。
 
 ```cpp
 template <size_t I, class... Types>
@@ -53,23 +53,23 @@ template <class T, class... Types>
     constexpr add_pointer_t<const T> get_if(const variant<Types...>*) noexcept;
 ```
 
-## <a name="holds_alternative"></a> holds_alternative
+## <a name="holds_alternative"></a>holds_alternative
 
-返す**true**バリアントが存在する場合。
+バリアントが存在する場合は**true**を返します。
 
 ```cpp
 template <class T, class... Types>
     constexpr bool holds_alternative(const variant<Types...>&) noexcept;
 ```
 
-## <a name="swap"></a> スワップ
+## <a name="swap"></a>フォト
 
 ```cpp
 template <class... Types>
     void swap(variant<Types...>&, variant<Types...>&) noexcept(see below);
 ```
 
-## <a name="variant_npos"></a> variant_npos
+## <a name="variant_npos"></a>variant_npos
 
 ```cpp
 namespace std {
@@ -77,9 +77,9 @@ namespace std {
 }
 ```
 
-## <a name="visit"></a> 参照してください。
+## <a name="visit"></a>ごと
 
-次の移動**バリアント**します。
+次の**バリアント**に移動します。
 
 ```cpp
 template <class Visitor, class... Variants>

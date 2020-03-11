@@ -15,18 +15,18 @@ helpviewer_keywords:
 - std::swap [C++]
 - std::yield [C++]
 ms.openlocfilehash: 8064cec7e94a909d7dc2e1b22142d362bb7b9488
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458498"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876174"
 ---
 # <a name="ltthreadgt-functions"></a>&lt;thread&gt; 関数
 
 ||||
 |-|-|-|
 |[get_id](#get_id)|[sleep_for](#sleep_for)|[sleep_until](#sleep_until)|
-|[swap](#swap)|[yield](#yield)|
+|[スワップ](#swap)|[yield](#yield)|
 
 ## <a name="get_id"></a>  get_id
 
@@ -55,7 +55,7 @@ inline void sleep_for(const chrono::duration<Rep, Period>& Rel_time);
 *Rel_time*\
 期間を指定する [duration](../standard-library/duration-class.md) オブジェクト。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 関数は、 *Rel_time*によって指定された時間以上、呼び出し元スレッドをブロックします。 この関数では、例外がスローされません。
 
@@ -75,7 +75,7 @@ void sleep_until(const xtime *Abs_time);
 *Abs_time*\
 特定の時点を表します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 この関数では、例外がスローされません。
 
@@ -89,13 +89,13 @@ void swap(thread& Left, thread& Right) noexcept;
 
 ### <a name="parameters"></a>パラメーター
 
-*左側*\
+*左*\
 左**スレッド**オブジェクト。
 
-*そうです*\
+*右*\
 右側の**スレッド**オブジェクト。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 関数は `Left.swap(Right)` を呼び出します。
 
@@ -107,6 +107,6 @@ void swap(thread& Left, thread& Right) noexcept;
 inline void yield() noexcept;
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [\<thread>](../standard-library/thread.md)

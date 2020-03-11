@@ -34,11 +34,11 @@ helpviewer_keywords:
 - concurrent_vector class
 ms.assetid: a217b4ac-af2b-4d41-94eb-09a75ee28622
 ms.openlocfilehash: 002f1e3f691de3315810efed8f7d8f6c547cf653
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77143135"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78854183"
 ---
 # <a name="concurrent_vector-class"></a>concurrent_vector クラス
 
@@ -63,7 +63,7 @@ private details::_Concurrent_vector_base_v4;
 
 ## <a name="members"></a>メンバー
 
-### <a name="public-typedefs"></a>パブリック typedef
+### <a name="public-typedefs"></a>パブリック Typedef
 
 |Name|説明|
 |----------|-----------------|
@@ -95,7 +95,7 @@ private details::_Concurrent_vector_base_v4;
 |[at](#at)|オーバーロードされます。 同時実行ベクター内の指定したインデックス位置にある要素へのアクセスを提供します。 このメソッドは、読み取り操作の場合は同時実行セーフです。また、`_Index` 値が同時実行ベクターのサイズよりも小さいことを確認した場合に限り、ベクターを拡大しています。|
 |[back](#back)|オーバーロードされます。 同時実行ベクター内の最後の要素への参照または `const` 参照を返します。 同時実行ベクターが空の場合、戻り値は未定義になります。 このメソッドはコンカレンシー セーフです。|
 |[begin](#begin)|オーバーロードされます。 同時実行ベクターの先頭に `iterator` または `const_iterator` 型の反復子を返します。 このメソッドはコンカレンシー セーフです。|
-|[capacity](#capacity)|より多くのメモリを割り当てることなく、同時実行ベクターを拡張できる最大サイズを返します。 このメソッドはコンカレンシー セーフです。|
+|[容量](#capacity)|より多くのメモリを割り当てることなく、同時実行ベクターを拡張できる最大サイズを返します。 このメソッドはコンカレンシー セーフです。|
 |[cbegin](#cbegin)|同時実行ベクターの先頭に `const_iterator` 型の反復子を返します。 このメソッドはコンカレンシー セーフです。|
 |[cend](#cend)|同時実行ベクターの末尾に `const_iterator` 型の反復子を返します。 このメソッドはコンカレンシー セーフです。|
 |[オフ](#clear)|同時実行ベクター内のすべての要素を消去します。 このメソッドはコンカレンシー セーフではありません。|
@@ -115,7 +115,7 @@ private details::_Concurrent_vector_base_v4;
 |[resize](#resize)|オーバーロードされます。 必要に応じて、同時実行ベクターのサイズを要求されたサイズに変更し、要素を削除または追加します。 このメソッドはコンカレンシー セーフではありません。|
 |[shrink_to_fit](#shrink_to_fit)|断片化を軽減し、メモリ使用量を最適化するために、同時実行ベクターの内部表現を圧縮します。 このメソッドはコンカレンシー セーフではありません。|
 |[size](#size)|同時実行ベクター内の要素の数を返します。 このメソッドはコンカレンシー セーフです。|
-|[swap](#swap)|2つの同時実行ベクターの内容を交換します。 このメソッドはコンカレンシー セーフではありません。|
+|[スワップ](#swap)|2つの同時実行ベクターの内容を交換します。 このメソッドはコンカレンシー セーフではありません。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
@@ -124,7 +124,7 @@ private details::_Concurrent_vector_base_v4;
 |[operator\[\]](#operator_at)|オーバーロードされます。 同時実行ベクター内の指定したインデックス位置にある要素へのアクセスを提供します。 このメソッドは、読み取り操作の場合は同時実行セーフです。また、`_Index` 値が同時実行ベクターのサイズよりも小さいことを確認した場合に限り、ベクターを拡大しながらも、同時実行セーフです。|
 |[operator=](#operator_eq)|オーバーロードされます。 別の `concurrent_vector` オブジェクトの内容をこのオブジェクトに割り当てます。 このメソッドはコンカレンシー セーフではありません。|
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>コメント
 
 `concurrent_vector` クラスの詳細については、「[並列コンテナーとオブジェクト](../../../parallel/concrt/parallel-containers-and-objects.md)」を参照してください。
 
@@ -136,7 +136,7 @@ private details::_Concurrent_vector_base_v4;
 
 `concurrent_vector`
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>要件
 
 **ヘッダー:** concurrent_vector
 
@@ -173,7 +173,7 @@ void assign(_InputIterator _Begin,
 *_End*<br/>
 ソース範囲の最後の要素の1つ後ろの反復子。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 `assign` は同時実行セーフではありません。 このメソッドを呼び出すときに、他のスレッドが同時実行ベクターに対してメソッドを呼び出していないことを確認する必要があります。
 
@@ -196,7 +196,7 @@ const_reference at(size_type _Index) const;
 
 指定したインデックス位置にある項目への参照。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 `const` 以外の参照を返す関数 `at` のバージョンを使用して、異なるスレッドから要素に同時に書き込むことはできません。 同じデータ要素に対する同時読み取り操作と書き込み操作を同期するには、別の同期オブジェクトを使用する必要があります。
 
@@ -242,7 +242,7 @@ size_type capacity() const;
 
 より多くのメモリを割り当てることなく、同時実行ベクターを拡張できる最大サイズ。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 C++標準ライブラリ `vector`とは異なり、`concurrent_vector` オブジェクトがより多くのメモリを割り当てると、既存の要素は移動されません。
 
@@ -278,7 +278,7 @@ const_iterator cend() const;
 void clear();
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 `clear` は同時実行セーフではありません。 このメソッドを呼び出すときに、他のスレッドが同時実行ベクターに対してメソッドを呼び出していないことを確認する必要があります。 `clear` は内部配列を解放しません。 内部配列を解放するには、`clear`後に `shrink_to_fit` 関数を呼び出します。
 
@@ -342,7 +342,7 @@ concurrent_vector(_InputIterator _Begin,
 *_End*<br/>
 コピーする要素範囲を超える最初の要素の位置。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 すべてのコンストラクターは、アロケーター オブジェクト `_Al` を格納し、ベクターを初期化します。
 
@@ -467,7 +467,7 @@ iterator grow_by(
 
 最初の項目に追加される反復子。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 `_Item` が指定されていない場合は、新しい要素が既定で構築されます。
 
@@ -547,7 +547,7 @@ const_reference operator[](size_type _index) const;
 
 指定したインデックス位置にある項目への参照。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 `const` 以外の参照を返す `operator []` のバージョンを使用して、異なるスレッドから要素に同時に書き込むことはできません。 同じデータ要素に対する同時読み取り操作と書き込み操作を同期するには、別の同期オブジェクトを使用する必要があります。
 
@@ -613,7 +613,7 @@ void reserve(size_type _N);
 *_N*<br/>
 領域を予約する要素の数。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 `reserve` は同時実行セーフではありません。 このメソッドを呼び出すときに、他のスレッドが同時実行ベクターに対してメソッドを呼び出していないことを確認する必要があります。 メソッドから制御が戻った後の同時実行ベクターの容量は、要求された予約よりも大きくなる可能性があります。
 
@@ -638,7 +638,7 @@ Concurrent_vector の新しいサイズ。
 *val*<br/>
 新しいサイズが元のサイズより大きい場合に、ベクターに追加される新しい要素の値。 値を省略した場合、新しいオブジェクトにはその型の既定値が割り当てられます。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 コンテナーのサイズが要求されたサイズより小さい場合は、要求されたサイズに達するまで要素がベクターに追加されます。 コンテナーのサイズが要求されたサイズよりも大きい場合は、コンテナーのサイズが `_N`になるまで、コンテナーの末尾に近い要素が削除されます。 コンテナーの現在のサイズが要求されたサイズと同じ場合は、何も実行されません。
 
@@ -652,7 +652,7 @@ Concurrent_vector の新しいサイズ。
 void shrink_to_fit();
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 このメソッドは、メモリの移動の要素を内部的に再割り当てし、すべての反復子を無効にします。 `shrink_to_fit` は同時実行セーフではありません。 この関数を呼び出すときに、他のスレッドが同時実行ベクターに対してメソッドを呼び出していないことを確認する必要があります。
 
@@ -668,7 +668,7 @@ size_type size() const;
 
 この `concurrent_vector` オブジェクト内の要素の数。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 返されるサイズには、関数 `push_back`の呼び出しによって追加されたすべての要素、またはこのメソッドを呼び出す前に完了した拡張操作が含まれることが保証されます。 ただし、いずれかの拡張メソッドの同時呼び出しによって割り当てられているが、まだ構築中の要素が含まれる場合もあります。
 

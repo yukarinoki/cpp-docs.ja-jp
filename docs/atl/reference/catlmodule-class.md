@@ -21,11 +21,11 @@ helpviewer_keywords:
 - CAtlModule class
 ms.assetid: 63fe02f1-4c4b-4e7c-ae97-7ad7b4252415
 ms.openlocfilehash: 798e94aed3bbd98108866ce0a1810485bd68699b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497748"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78857149"
 ---
 # <a name="catlmodule-class"></a>CAtlModule クラス
 
@@ -41,34 +41,34 @@ class ATL_NO_VTABLE CAtlModule : public _ATL_MODULE
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |[CAtlModule::CAtlModule](#catlmodule)|コンストラクターです。|
 |[CAtlModule:: ~ CAtlModule](#dtor)|デストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |[CAtlModule::AddCommonRGSReplacements](#addcommonrgsreplacements)|このメソッドをオーバーライドして、ATL レジストリコンポーネント (レジストラー) の置換マップにパラメーターを追加します。|
-|[CAtlModule::AddTermFunc](#addtermfunc)|モジュールが終了したときに呼び出される新しい関数を追加します。|
+|[CAtlModule:: AddTermFunc](#addtermfunc)|モジュールが終了したときに呼び出される新しい関数を追加します。|
 |[CAtlModule::GetGITPtr](#getgitptr)|グローバルインターフェイスポインターを返します。|
-|[CAtlModule::GetLockCount](#getlockcount)|ロック数を返します。|
+|[CAtlModule:: GetLockCount](#getlockcount)|ロック数を返します。|
 |[CAtlModule:: Lock](#lock)|ロック数をインクリメントします。|
 |[CAtlModule:: Term](#term)|すべてのデータメンバーを解放します。|
-|[CAtlModule::Unlock](#unlock)|ロック カウントをデクリメントします。|
+|[CAtlModule:: Unlock](#unlock)|ロック カウントをデクリメントします。|
 |[CAtlModule::UpdateRegistryFromResourceD](#updateregistryfromresourced)|指定したリソースに含まれているスクリプトを実行して、オブジェクトの登録または登録解除を行います。|
-|[CAtlModule::UpdateRegistryFromResourceDHelper](#updateregistryfromresourcedhelper)|このメソッドは、レジストリ`UpdateRegistryFromResourceD`の更新を実行するためにによって呼び出されます。|
+|[CAtlModule::UpdateRegistryFromResourceDHelper](#updateregistryfromresourcedhelper)|このメソッドは、レジストリの更新を実行するために `UpdateRegistryFromResourceD` によって呼び出されます。|
 |[CAtlModule::UpdateRegistryFromResourceS](#updateregistryfromresources)|指定したリソースに含まれているスクリプトを実行して、オブジェクトの登録または登録解除を行います。 このメソッドは、ATL レジストリコンポーネントに静的にリンクします。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
-|[CAtlModule::m_libid](#m_libid)|現在のモジュールの GUID を格納します。|
-|[CAtlModule::m_pGIT](#m_pgit)|グローバルインターフェイステーブルへのポインター。|
+|[CAtlModule:: m_libid](#m_libid)|現在のモジュールの GUID を格納します。|
+|[CAtlModule:: m_pGIT](#m_pgit)|グローバルインターフェイステーブルへのポインター。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
 このクラスは、 [CAtlExeModuleT](../../atl/reference/catlexemodulet-class.md)クラスおよび[CAtlServiceModuleT クラス](../../atl/reference/catlservicemodulet-class.md)[によって](../../atl/reference/catldllmodulet-class.md)使用され、それぞれ DLL アプリケーション、EXE アプリケーション、および Windows サービスのサポートを提供します。
 
@@ -82,11 +82,11 @@ ATL のモジュールの詳細については、「 [Atl モジュールクラ�
 
 `CAtlModule`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** atlbase. h
 
-##  <a name="addcommonrgsreplacements"></a>  CAtlModule::AddCommonRGSReplacements
+##  <a name="addcommonrgsreplacements"></a>CAtlModule::AddCommonRGSReplacements
 
 このメソッドをオーバーライドして、ATL レジストリコンポーネント (レジストラー) の置換マップにパラメーターを追加します。
 
@@ -101,15 +101,15 @@ virtual HRESULT AddCommonRGSReplacements(IRegistrarBase* /* pRegistrar*/) throw(
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 置き換え可能パラメーターを使用すると、レジストラーのクライアントは実行時のデータを指定できます。 これを行うために、レジストラーは、スクリプト内の置き換え可能パラメーターに関連付けられた値を入力する置換マップを保持します。 レジストラーは、これらのエントリを実行時に作成します。
 
 詳細については、「[置換可能なパラメーター (レジストラーのプリプロセッサ) の使用](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md)」を参照してください。
 
-##  <a name="addtermfunc"></a>  CAtlModule::AddTermFunc
+##  <a name="addtermfunc"></a>CAtlModule:: AddTermFunc
 
 モジュールが終了したときに呼び出される新しい関数を追加します。
 
@@ -127,7 +127,7 @@ HRESULT AddTermFunc(_ATL_TERMFUNC* pFunc, DWORD_PTR dw) throw();
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
 ##  <a name="catlmodule"></a>CAtlModule::CAtlModule
 
@@ -137,7 +137,7 @@ HRESULT AddTermFunc(_ATL_TERMFUNC* pFunc, DWORD_PTR dw) throw();
 CAtlModule() throw();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 データメンバーを初期化し、モジュールのスレッドの周囲のクリティカルセクションを開始します。
 
@@ -149,11 +149,11 @@ CAtlModule() throw();
 ~CAtlModule() throw();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 すべてのデータメンバーを解放します。
 
-##  <a name="getgitptr"></a>  CAtlModule::GetGITPtr
+##  <a name="getgitptr"></a>CAtlModule::GetGITPtr
 
 グローバルインターフェイステーブルへのポインターを取得します。
 
@@ -168,9 +168,9 @@ virtual HRESULT GetGITPtr(IGlobalInterfaceTable** ppGIT) throw();
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラーコードを返します。 E_POINTER は、 *Ppgit*が NULL と等しい場合に返されます。
+成功した場合は S_OK を返し、失敗した場合はエラーコードを返します。 *Ppgit*が NULL と等しい場合、E_POINTER が返されます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 グローバルインターフェイステーブルオブジェクトが存在しない場合は、そのオブジェクトが作成され、そのアドレスがメンバー変数[CAtlModule:: m_pGIT](#m_pgit)に格納されます。
 
@@ -178,7 +178,7 @@ virtual HRESULT GetGITPtr(IGlobalInterfaceTable** ppGIT) throw();
 
 グローバルインターフェイステーブルの詳細については、「 [Igloの interfacetable](/windows/win32/api/objidl/nn-objidl-iglobalinterfacetable) 」を参照してください。
 
-##  <a name="getlockcount"></a>  CAtlModule::GetLockCount
+##  <a name="getlockcount"></a>CAtlModule:: GetLockCount
 
 ロック数を返します。
 
@@ -190,7 +190,7 @@ virtual LONG GetLockCount() throw();
 
 ロック数を返します。 この値は、診断やデバッグに役立ちます。
 
-##  <a name="lock"></a>  CAtlModule::Lock
+##  <a name="lock"></a>CAtlModule:: Lock
 
 ロック数をインクリメントします。
 
@@ -202,7 +202,7 @@ virtual LONG Lock() throw();
 
 ロックカウントをインクリメントし、更新された値を返します。 この値は、診断やデバッグに役立ちます。
 
-##  <a name="m_libid"></a>  CAtlModule::m_libid
+##  <a name="m_libid"></a>CAtlModule:: m_libid
 
 現在のモジュールの GUID を格納します。
 
@@ -210,7 +210,7 @@ virtual LONG Lock() throw();
 static GUID m_libid;
 ```
 
-##  <a name="m_pgit"></a>  CAtlModule::m_pGIT
+##  <a name="m_pgit"></a>CAtlModule:: m_pGIT
 
 グローバルインターフェイステーブルへのポインター。
 
@@ -218,7 +218,7 @@ static GUID m_libid;
 IGlobalInterfaceTable* m_pGIT;
 ```
 
-##  <a name="term"></a>  CAtlModule::Term
+##  <a name="term"></a>CAtlModule:: Term
 
 すべてのデータメンバーを解放します。
 
@@ -226,7 +226,7 @@ IGlobalInterfaceTable* m_pGIT;
 void Term() throw();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 すべてのデータメンバーを解放します。 このメソッドは、デストラクターによって呼び出されます。
 
@@ -274,9 +274,9 @@ HRESULT WINAPI UpdateRegistryFromResourceD(
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 *Lpszres または nResID*によって指定されたリソースに含まれるスクリプトを実行します。 *Bregister*が TRUE の場合、このメソッドはオブジェクトをシステムレジストリに登録します。それ以外の場合は、レジストリからオブジェクトを削除します。
 
@@ -286,7 +286,7 @@ ATL レジストリコンポーネント (レジストラー) に静的にリン
 
 ##  <a name="updateregistryfromresourcedhelper"></a>CAtlModule::UpdateRegistryFromResourceDHelper
 
-このメソッドは、レジストリ`UpdateRegistryFromResourceD`の更新を実行するためにによって呼び出されます。
+このメソッドは、レジストリの更新を実行するために `UpdateRegistryFromResourceD` によって呼び出されます。
 
 ```
 inline HRESULT WINAPI UpdateRegistryFromResourceDHelper(
@@ -308,9 +308,9 @@ inline HRESULT WINAPI UpdateRegistryFromResourceDHelper(
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 このメソッドは、 [CAtlModule:: UpdateRegistryFromResourceD](#updateregistryfromresourced)の実装を提供します。
 
@@ -346,13 +346,13 @@ HRESULT WINAPI UpdateRegistryFromResourceS(
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK、失敗した場合はエラー HRESULT を返します。
+成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-[CAtlModule:: UpdateRegistryFromResourceD](#updateregistryfromresourced) `CAtlModule::UpdateRegistryFromResourceS`に似ていますが、ATL レジストリコンポーネント (レジストラー) への静的リンクを作成します。
+[CAtlModule:: UpdateRegistryFromResourceD](#updateregistryfromresourced)を除き、ATL レジストリコンポーネント (レジストラー) への静的なリンクを作成する `CAtlModule::UpdateRegistryFromResourceS` ます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [_ATL_MODULE](atl-typedefs.md#_atl_module)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)<br/>

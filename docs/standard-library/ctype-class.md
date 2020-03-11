@@ -37,11 +37,11 @@ helpviewer_keywords:
 - std::ctype [C++], widen
 ms.assetid: 3627154c-49d9-47b5-b28f-5bbedee38e3b
 ms.openlocfilehash: 640b2cc8506e498006feedbea6825a0e51a88209
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688166"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876310"
 ---
 # <a name="ctype-class"></a>ctype クラス
 
@@ -56,26 +56,26 @@ class ctype : public ctype_base;
 
 ### <a name="parameters"></a>パラメーター
 
-*Chartype* \
+*Chartype*\
 文字をエンコードするためにプログラム内で使用される型。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
 すべてのロケールのファセットと同様、静的オブジェクト ID に最初に格納されている値は 0 です。 格納されている値に初めてアクセスしようとすると、`id` に一意の正の値が格納されます。 分類の条件は、基底クラス ctype_base の入れ子になったビットマスク型で提供されます。
 
 標準C++ライブラリでは、このクラステンプレートの次の2つの明示的な特殊化を定義しています。
 
-- `ctype<char>`。相違点が個別に記述されている明示的な特殊化です。 詳細については、「 [ctype &lt;char &gt; クラス](../standard-library/ctype-char-class.md)」を参照してください。
+- `ctype<char>`。相違点が個別に記述されている明示的な特殊化です。 詳細については、「 [ctype&lt;char&gt; クラス](../standard-library/ctype-char-class.md)」を参照してください。
 
 - `ctype<wchar_t>`。要素をワイド文字として扱います。
 
-クラステンプレート `ctype<CharType>` のその他の特殊化:
+クラステンプレート `ctype<CharType>`のその他の特殊化:
 
-- @No__t_3 式を使用して、 *chartype*型の値*ch*を**char**型の値に変換します。
+- `(char)ch`式を使用して、 *chartype*型の値*ch*を**char**型の値に変換します。
 
-- @No__t_3 式を使用して**char**型の値*Byte*を*chartype*型の値に変換します。
+- `CharType(byte)`式を使用して**char**型の値*Byte*を*chartype*型の値に変換します。
 
-その他のすべての操作は、明示的な特殊化 `ctype<char>` の場合と同じように、 **char**値に対して実行されます。
+その他のすべての操作は、明示的な特殊化 `ctype<char>`の場合と同じように、 **char**値に対して実行されます。
 
 ### <a name="constructors"></a>コンストラクター
 
@@ -83,9 +83,9 @@ class ctype : public ctype_base;
 |-|-|
 |[ctype](#ctype)|文字のロケール ファセットとして機能する `ctype` クラスのオブジェクトのコンストラクター。|
 
-### <a name="typedefs"></a>Typedef
+### <a name="typedefs"></a>Typedefs
 
-|型名|説明|
+|種類の名前。|説明|
 |-|-|
 |[char_type](#char_type)|ロケールによって使用される文字を表す型。|
 
@@ -108,9 +108,9 @@ class ctype : public ctype_base;
 |[toupper](#toupper)|文字または文字の範囲を大文字に変換します。|
 |[widen](#widen)|ネイティブ文字セットの**char**型の文字を、ロケールで使用される `CharType` 型の対応する文字に変換します。|
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>要件
 
-**ヘッダー:** \<locale>
+**ヘッダー:** \<ロケール >
 
 **名前空間:** std
 
@@ -122,13 +122,13 @@ class ctype : public ctype_base;
 typedef CharType char_type;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 この型は、テンプレート パラメーター *CharType* のシノニムです。
 
 ### <a name="example"></a>例
 
-戻り値として `char_type` を使用する例については、メンバー関数 [widen](#widen) をご覧ください。
+戻り値として [ を使用する例については、メンバー関数 ](#widen)widen`char_type` をご覧ください。
 
 ## <a name="ctype"></a>  ctype::ctype
 
@@ -140,12 +140,12 @@ explicit ctype(size_t _Refs = 0);
 
 ### <a name="parameters"></a>パラメーター
 
-*Refs \ (_c)*
+*_Refs*\
 オブジェクトのメモリ管理のタイプを指定するために使用する整数値。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-*Refs*パラメーターに指定できる値とその意味は、次のとおりです。
+*_Refs*パラメーターに指定できる値とその意味は次のとおりです。
 
 - 0: オブジェクトの有効期間はそれが含まれるロケールによって管理されます。
 
@@ -155,7 +155,7 @@ explicit ctype(size_t _Refs = 0);
 
 デストラクターが保護されているため、利用できる直接的な例はありません。
 
-コンストラクターは、**locale::** [facet](../standard-library/locale-class.md#facet_class)( `_Refs`) を使用して、その `locale::facet` 基本オブジェクトを初期化します。
+コンストラクターは、`locale::facet`locale::facet[( ](../standard-library/locale-class.md#facet_class)) を使用して、その `_Refs` 基本オブジェクトを初期化します。
 
 ## <a name="do_is"></a>  ctype::do_is
 
@@ -174,19 +174,19 @@ virtual const CharType *do_is(
 
 ### <a name="parameters"></a>パラメーター
 
-*Maskval* \
+*Maskval*\
 文字をテストするマスク値。
 
-*ch* \
+*ch*\
 属性をテストする文字。
 
-*最初*の \
+*最初*の\
 属性を分類する範囲の最初の文字を示すポインター。
 
-*最後*の \
+*最後*の\
 属性を分類する範囲の最初の文字の直後に続く文字を示すポインター。
 
-*dest* \
+*dest*\
 各文字の属性の特徴になるマスク値を格納する配列の先頭を示すポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -195,7 +195,7 @@ virtual const CharType *do_is(
 
 2 番目のメンバー関数は、範囲内の各文字の属性を特徴付けるマスク値を含む配列を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 文字の属性を分類するマスク値は、ctype の派生元である、クラス [ctype_base](../standard-library/ctype-base-class.md) により提供されます。 最初のメンバー関数は、ビットマスクと呼ばれ、ビット単位の論理演算子 (&#124;、&、^、~) によりマスク値の組み合わせから形成されるその最初のパラメーターの式を受け取ります。
 
@@ -221,19 +221,19 @@ virtual const CharType* do_narrow(
 
 ### <a name="parameters"></a>パラメーター
 
-*ch* \
+*ch*\
 変換されるロケールにより使用される型 `Chartype` の文字。
 
-*既定*の \
+*既定*の\
 **Char**型の対応する文字を持たない `CharType` 型の文字に、メンバー関数によって割り当てられる既定値。
 
-*最初*の \
+*最初*の\
 変換の対象となる一定範囲の文字のうち、最初の文字を示すポインター。
 
-*最後*の \
+*最後*の\
 変換の対象となる一定範囲の文字のうち、最初の文字の直後に続く文字を示すポインター。
 
-*dest* \
+*dest*\
 変換された文字の範囲を格納するターゲット範囲内の**char**型の最初の文字を指す定数ポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -242,9 +242,9 @@ virtual const CharType* do_narrow(
 
 保護されている 2 番目のメンバー関数は、型 `CharType` の文字から変換されたネイティブ文字の宛先範囲を示すポインターを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-2番目のプロテクトメンバーテンプレート関数は `dest` [`I`] の値 `do_narrow` (`first` [`I`]、`default`) に格納します。このとき、間隔 [0, `I` `last`  - ) に `first` します。
+2番目のプロテクトメンバーテンプレート関数は `dest`[`I`] の値 `do_narrow`(`first` [`I`]、`default`) に格納します。このとき、間隔 [0, `I` `last` - ) に `first`します。
 
 ### <a name="example"></a>例
 
@@ -263,22 +263,22 @@ virtual const CharType *do_scan_is(
 
 ### <a name="parameters"></a>パラメーター
 
-*Maskval* \
+*Maskval*\
 文字により照合されるマスク値。
 
-*最初*の \
+*最初*の\
 スキャンの対象となる一定範囲の文字のうち、最初の文字を示すポインター。
 
-*最後*の \
+*最後*の\
 スキャンの対象となる一定範囲の文字のうち、最初の文字の直後に続く文字を示すポインター。
 
 ### <a name="return-value"></a>戻り値
 
 指定されたマスクに一致する範囲内の最初の文字を示すポインター。 このような値が存在しない場合、関数は*last*を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-プロテクトメンバー関数は、 [do_is](#do_is)(`maskVal`, \* `ptr`) が true である範囲 [`first`, `last`) 内の `ptr` 最小のポインターを返します。
+プロテクトメンバー関数は、 [do_is](#do_is)(`maskVal`、\* `ptr`) が true の範囲 [`first`、`last`) 内の `ptr` 最小のポインターを返します。
 
 ### <a name="example"></a>例
 
@@ -297,22 +297,22 @@ virtual const CharType *do_scan_not(
 
 ### <a name="parameters"></a>パラメーター
 
-*Maskval* \
+*Maskval*\
 文字により照合されないマスク値。
 
-*最初*の \
+*最初*の\
 スキャンの対象となる一定範囲の文字のうち、最初の文字を示すポインター。
 
-*最後*の \
+*最後*の\
 スキャンの対象となる一定範囲の文字のうち、最初の文字の直後に続く文字を示すポインター。
 
 ### <a name="return-value"></a>戻り値
 
 指定されたマスクに一致しない範囲内の最初の文字を示すポインター。 このような値が存在しない場合、関数は*last*を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-プロテクトメンバー関数は、 [do_is](#do_is)(`maskVal`, \* `ptr`) が false である範囲 [`first`, `last`) 内の `ptr` 最小のポインターを返します。
+プロテクトメンバー関数は、 [do_is](#do_is)(`maskVal`、\* `ptr`) が false の範囲 [`first`、`last`) 内の `ptr` 最小のポインターを返します。
 
 ### <a name="example"></a>例
 
@@ -332,22 +332,22 @@ virtual const CharType *do_tolower(
 
 ### <a name="parameters"></a>パラメーター
 
-*ch* \
+*ch*\
 小文字に変換される文字。
 
-*最初*の \
+*最初*の\
 大文字/小文字を変換する一定範囲の文字のうち、最初の文字を示すポインター。
 
-*最後*の \
+*最後*の\
 大文字/小文字を変換する一定範囲の文字のうち、最初の文字の直後に続く文字を示すポインター。
 
 ### <a name="return-value"></a>戻り値
 
 最初のプロテクトメンバー関数は、パラメーター *ch*の小文字形式を返します。 小文字の形式が存在しない場合は、 *ch*が返されます。 2番目のプロテクトメンバー関数は、 *last*を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-2番目のプロテクトメンバーテンプレート関数は、各要素 `first` [`I`] を  -  (`first` [`do_tolower`]) で間隔 [0, `last` `first` `I`) の `I` に置き換えます。
+2番目のプロテクトメンバーテンプレート関数は、各要素 `first` [`I`] を  - (`first`[`do_tolower`]) で間隔 [0, `last``first` `I`) の `I` に置き換えます。
 
 ### <a name="example"></a>例
 
@@ -367,22 +367,22 @@ virtual const CharType *do_toupper(
 
 ### <a name="parameters"></a>パラメーター
 
-*ch* \
+*ch*\
 大文字に変換される文字。
 
-*最初*の \
+*最初*の\
 大文字/小文字を変換する一定範囲の文字のうち、最初の文字を示すポインター。
 
-*最後*の \
+*最後*の\
 大文字/小文字を変換する一定範囲の文字のうち、最初の文字の直後に続く文字を示すポインター。
 
 ### <a name="return-value"></a>戻り値
 
 最初のプロテクトメンバー関数は、パラメーター *ch*の大文字形式を返します。 大文字の形式が存在しない場合は、 *ch*を返します。 2番目のプロテクトメンバー関数は、 *last*を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-2番目のプロテクトメンバーテンプレート関数は、各要素 `first` [`I`] を  -  (`first` [`do_toupper`]) で間隔 [0, `last` `first` `I`) の `I` に置き換えます。
+2番目のプロテクトメンバーテンプレート関数は、各要素 `first` [`I`] を  - (`first`[`do_toupper`]) で間隔 [0, `last``first` `I`) の `I` に置き換えます。
 
 ### <a name="example"></a>例
 
@@ -406,13 +406,13 @@ virtual const char *do_widen(
 *byte*\
 変換するネイティブ文字セットの**char**型の文字。
 
-*最初*の \
+*最初*の\
 変換の対象となる一定範囲の文字のうち、最初の文字を示すポインター。
 
-*最後*の \
+*最後*の\
 変換の対象となる一定範囲の文字のうち、最初の文字の直後に続く文字を示すポインター。
 
-*dest* \
+*dest*\
 変換後の文字範囲を格納する宛先範囲のうち、型 `CharType` の最初の文字を示すポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -421,9 +421,9 @@ virtual const char *do_widen(
 
 2番目のプロテクトメンバー関数は、 **char**型のネイティブ文字から変換されたロケールによって使用される `CharType` 型の文字の宛先範囲へのポインターを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-保護されている 2 番目のメンバー テンプレート関数は、値 `do_widen`( `first`[ `I`]) を `dest`[ `I`] に格納します。`I` の間隔は [0, `last` - `first`) です。
+保護されている 2 番目のメンバー テンプレート関数は、値 `dest`( `I`[ `do_widen`]) を `first`[ `I`] に格納します。`I` の間隔は [0, `last` - `first`) です。
 
 ### <a name="example"></a>例
 
@@ -444,19 +444,19 @@ const CharType *is(
 
 ### <a name="parameters"></a>パラメーター
 
-*Maskval* \
+*Maskval*\
 文字をテストするマスク値。
 
-*ch* \
+*ch*\
 属性をテストする文字。
 
-*最初*の \
+*最初*の\
 属性を分類する範囲の最初の文字を示すポインター。
 
-*最後*の \
+*最後*の\
 属性を分類する範囲の最初の文字の直後に続く文字を示すポインター。
 
-*dest* \
+*dest*\
 各文字の属性の特徴になるマスク値を格納する配列の先頭を示すポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -465,7 +465,7 @@ const CharType *is(
 
 2 番目のメンバー関数は、属性を分類する範囲の最後の文字を示すポインターを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 文字の属性を分類するマスク値は、ctype の派生元である、クラス [ctype_base クラス](../standard-library/ctype-base-class.md)により提供されます。 最初のメンバー関数は、ビットマスクと呼ばれ、ビット単位の論理演算子 (&#124;、&、^、~) によりマスク値の組み合わせから形成されるその最初のパラメーターの式を受け取ります。
 
@@ -524,19 +524,19 @@ const CharType* narrow(
 
 ### <a name="parameters"></a>パラメーター
 
-*ch* \
+*ch*\
 変換されるロケールにより使用される型 `Chartype` の文字。
 
-*既定*の \
+*既定*の\
 **Char**型の対応する文字を持たない `CharType` 型の文字に、メンバー関数によって割り当てられる既定値。
 
-*最初*の \
+*最初*の\
 変換の対象となる一定範囲の文字のうち、最初の文字を示すポインター。
 
-*最後*の \
+*最後*の\
 変換の対象となる一定範囲の文字のうち、最初の文字の直後に続く文字を示すポインター。
 
-*dest* \
+*dest*\
 変換された文字の範囲を格納するターゲット範囲内の**char**型の最初の文字を指す定数ポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -545,9 +545,9 @@ const CharType* narrow(
 
 2 番目のメンバー関数は、型 `CharType` の文字から変換されたネイティブ文字の宛先範囲を示すポインターを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-1つ目のメンバー関数は、 [do_narrow](#do_narrow)(`ch`、`default`) を返します。 2番目のメンバー関数は、 [do_narrow](#do_narrow) (`first`、`last`、`default`、`dest`) を返します。 基本ソース文字にのみ、`narrow` の下で一意の逆像 `CharType` が与えられることが約束されます。 これの基本ソース文字については、`narrow` ( [widen](#widen) ( **c** ), 0 ) == **c** という不変式が適用されます。
+1つ目のメンバー関数は、 [do_narrow](#do_narrow)(`ch`、`default`) を返します。 2番目のメンバー関数は、 [do_narrow](#do_narrow) (`first`、`last`、`default`、`dest`) を返します。 基本ソース文字にのみ、`CharType` の下で一意の逆像 `narrow` が与えられることが約束されます。 これの基本ソース文字については、`narrow` ( [widen](#widen) ( **c** ), 0 ) == **c** という不変式が適用されます。
 
 ### <a name="example"></a>例
 
@@ -588,20 +588,20 @@ const CharType *scan_is(
 
 ### <a name="parameters"></a>パラメーター
 
-*Maskval* \
+*Maskval*\
 文字により照合されるマスク値。
 
-*最初*の \
+*最初*の\
 スキャンの対象となる一定範囲の文字のうち、最初の文字を示すポインター。
 
-*最後*の \
+*最後*の\
 スキャンの対象となる一定範囲の文字のうち、最初の文字の直後に続く文字を示すポインター。
 
 ### <a name="return-value"></a>戻り値
 
 指定されたマスクに一致する範囲内の最初の文字を示すポインター。 このような値が存在しない場合、関数は*last*を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 このメンバー関数は、 [do_scan_is](#do_scan_is)(`maskVal`、`first`、`last`) を返します。
 
@@ -644,20 +644,20 @@ const CharType *scan_not(
 
 ### <a name="parameters"></a>パラメーター
 
-*Maskval* \
+*Maskval*\
 文字により照合されないマスク値。
 
-*最初*の \
+*最初*の\
 スキャンの対象となる一定範囲の文字のうち、最初の文字を示すポインター。
 
-*最後*の \
+*最後*の\
 スキャンの対象となる一定範囲の文字のうち、最初の文字の直後に続く文字を示すポインター。
 
 ### <a name="return-value"></a>戻り値
 
 指定されたマスクに一致しない範囲内の最初の文字を示すポインター。 このような値が存在しない場合、関数は*last*を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 このメンバー関数は、 [do_scan_not](#do_scan_not)(`maskVal`、`first`、`last`) を返します。
 
@@ -699,13 +699,13 @@ const CharType *tolower(CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*ch* \
+*ch*\
 小文字に変換される文字。
 
-*最初*の \
+*最初*の\
 大文字/小文字を変換する一定範囲の文字のうち、最初の文字を示すポインター。
 
-*最後*の \
+*最後*の\
 大文字/小文字を変換する一定範囲の文字のうち、最初の文字の直後に続く文字を示すポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -714,7 +714,7 @@ const CharType *tolower(CharType* first, const CharType* last) const;
 
 2番目のメンバー関数は、 *last*を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 1つ目のメンバー関数は、 [do_tolower](#do_tolower)(`ch`) を返します。 2番目のメンバー関数は、 [do_tolower](#do_tolower)(`first`、`last`) を返します。
 
@@ -754,13 +754,13 @@ const CharType *toupper(CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*ch* \
+*ch*\
 大文字に変換される文字。
 
-*最初*の \
+*最初*の\
 大文字/小文字を変換する一定範囲の文字のうち、最初の文字を示すポインター。
 
-*最後*の \
+*最後*の\
 大文字/小文字を変換する一定範囲の文字のうち、最初の文字の直後に続く文字を示すポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -769,7 +769,7 @@ const CharType *toupper(CharType* first, const CharType* last) const;
 
 2番目のメンバー関数は、 *last*を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 1つ目のメンバー関数は、 [do_toupper](#do_toupper)(`ch`) を返します。 2 番目のメンバー関数は、[do_toupper](#do_toupper)( `first`, `last`) を返します。
 
@@ -812,13 +812,13 @@ const char *widen(const char* first, const char* last, CharType* dest) const;
 *byte*\
 変換するネイティブ文字セットのうち、型 char の文字。
 
-*最初*の \
+*最初*の\
 変換の対象となる一定範囲の文字のうち、最初の文字を示すポインター。
 
-*最後*の \
+*最後*の\
 変換の対象となる一定範囲の文字のうち、最初の文字の直後に続く文字を示すポインター。
 
-*dest* \
+*dest*\
 変換後の文字範囲を格納する宛先範囲のうち、型 `CharType` の最初の文字を示すポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -827,7 +827,7 @@ const char *widen(const char* first, const char* last, CharType* dest) const;
 
 2番目のメンバー関数は、 **char**型のネイティブ文字から変換されたロケールによって使用される `CharType` 型の文字の宛先範囲へのポインターを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 1つ目のメンバー関数は、 [do_widen](#do_widen)(`byte`) を返します。 2番目のメンバー関数は、 [do_widen](#do_widen)(`first`、`last`、`dest`) を返します。
 
@@ -861,7 +861,7 @@ Hello everyone!
 Hello everyone!
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [\<locale>](../standard-library/locale.md)\
 [C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

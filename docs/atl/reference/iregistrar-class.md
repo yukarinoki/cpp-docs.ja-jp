@@ -16,11 +16,11 @@ helpviewer_keywords:
 - Iregistrar Interface
 ms.assetid: e88c04b7-0c93-4ae8-aeb9-ecd78f87421e
 ms.openlocfilehash: e347bdba1656a53cd705123a26650dad50d3892f
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927763"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78857147"
 ---
 # <a name="iregistrar-interface"></a>IRegistrar インターフェイス
 
@@ -32,7 +32,7 @@ ms.locfileid: "70927763"
 typedef interface IRegistrar IRegistrar;
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
 詳細については、「[置換可能なパラメーター (レジストラーのプリプロセッサ) の使用](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md)」を参照してください。
 
@@ -40,18 +40,18 @@ typedef interface IRegistrar IRegistrar;
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
-|[IRegistrar::ResourceRegisterSz](#resourceregistersz)|リソースを登録します。 |
-|[IRegistrar::ResourceUnregisterSz](#resourceunregistersz)| リソースの登録を解除します。|
+|[IRegistrar:: ResourceRegisterSz](#resourceregistersz)|リソースを登録します。 |
+|[IRegistrar:: ResourceUnregisterSz](#resourceunregistersz)| リソースの登録を解除します。|
 |[IRegistrar:: FileRegister](#fileregister)|ファイルを登録します。|
 |[IRegistrar:: FileUnregister 解除](#fileunregister)|ファイルの登録を解除します。|
 |[IRegistrar:: StringRegister](#stringregister)|文字列を登録します。|
 |[IRegistrar:: StringUnregister 解除](#stringunregister)|文字列の登録を解除します|
 |[IRegistrar:: ResourceRegister](#resourceregister)|リソースを登録します。|
-|[IRegistrar::ResourceUnregister](#resourceunregister)|リソースの登録を解除します。|
+|[IRegistrar:: ResourceUnregister 解除](#resourceunregister)|リソースの登録を解除します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** atlifase
 
@@ -77,7 +77,7 @@ virtual HRESULT STDMETHODCALLTYPE ResourceUnregisterSz(
     /* [in] */ _In_z_ LPCOLESTR szType) = 0;
 ```
 
-##  <a name="fileregister"></a>  IRegistrar::FileRegister
+##  <a name="fileregister"></a>IRegistrar:: FileRegister
 
 ファイルを登録します。
 
@@ -86,7 +86,7 @@ virtual HRESULT STDMETHODCALLTYPE FileRegister(
     /* [in] */ _In_z_ LPCOLESTR fileName) = 0;
 ```
 
-##  <a name="fileunregister"></a>  IRegistrar::FileUnregister
+##  <a name="fileunregister"></a>IRegistrar:: FileUnregister 解除
 
 ファイルの登録を解除します。
 
@@ -95,7 +95,7 @@ virtual HRESULT STDMETHODCALLTYPE FileUnregister(
     /* [in] */ _In_z_ LPCOLESTR fileName) = 0;
 ```
 
-##  <a name="stringregister"></a>  IRegistrar::StringRegister
+##  <a name="stringregister"></a>IRegistrar:: StringRegister
 
 指定した文字列データを登録します。
 
@@ -104,7 +104,7 @@ virtual HRESULT STDMETHODCALLTYPE StringRegister(
     /* [in] */ _In_z_ LPCOLESTR data) = 0;
 ```
 
-##  <a name="stringunregister"></a>  IRegistrar::StringUnregister
+##  <a name="stringunregister"></a>IRegistrar:: StringUnregister 解除
 
 指定された文字列データの登録を解除します。
 
@@ -113,7 +113,7 @@ virtualHRESULT STDMETHODCALLTYPE StringUnregister(
     /* [in] */ _In_z_ LPCOLESTR data) = 0;
 ```
 
-##  <a name="resourceregister"></a>  IRegistrar::ResourceRegister
+##  <a name="resourceregister"></a>IRegistrar:: ResourceRegister
 
 リソースを登録します。
 
@@ -124,7 +124,7 @@ virtual HRESULT STDMETHODCALLTYPE ResourceRegister(
     /* [in] */ _In_z_ LPCOLESTR szType) = 0;
 ```
 
-##  <a name="resourceunregister"></a>  IRegistrar::ResourceUnregister
+##  <a name="resourceunregister"></a>IRegistrar:: ResourceUnregister 解除
 
 リソースの登録を解除します。
 
@@ -135,7 +135,7 @@ virtualHRESULT STDMETHODCALLTYPE ResourceUnregister(
     /* [in] */ _In_z_ LPCOLESTR szType) = 0;
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [置き換え可能パラメーターの使用 (レジストラー プリプロセッサ)](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)<br/>

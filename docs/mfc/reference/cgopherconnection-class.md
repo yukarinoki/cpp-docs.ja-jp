@@ -15,18 +15,18 @@ helpviewer_keywords:
 - CGopherConnection [MFC], OpenFile
 ms.assetid: b5b96aea-ac99-430e-bd84-d1372b43f78f
 ms.openlocfilehash: f5d655aa7fd2eb9e41c15c60a71492c24ba43c43
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69506192"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78883903"
 ---
 # <a name="cgopherconnection-class"></a>CGopherConnection クラス
 
 gopher インターネット サーバーへの接続を管理します。
 
 > [!NOTE]
->  クラス`CGopherConnection` 、`CGopherFile`、 、`CGopherLocator`およびそれらのメンバーは、Windows XP プラットフォームでは動作しないため、非推奨とされますが、以前のプラットフォームでも引き続き動作します。 `CGopherFileFind`
+>  クラス `CGopherConnection`、`CGopherFile`、`CGopherFileFind`、`CGopherLocator`、およびそれらのメンバーは、Windows XP プラットフォームでは動作しないため、非推奨とされますが、以前のプラットフォームでは動作し続けます。
 
 ## <a name="syntax"></a>構文
 
@@ -38,27 +38,27 @@ class CGopherConnection : public CInternetConnection
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |[CGopherConnection::CGopherConnection](#cgopherconnection)|`CGopherConnection` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
-|[CGopherConnection::CreateLocator](#createlocator)|Gopher サーバー上のファイルを検索するための[CGopherLocator](../../mfc/reference/cgopherlocator-class.md)オブジェクトを作成します。|
-|[CGopherConnection::GetAttribute](#getattribute)|Gopher オブジェクトに関する属性情報を取得します。|
-|[CGopherConnection::OpenFile](#openfile)|Gopher ファイルを開きます。|
+|[CGopherConnection:: CreateLocator](#createlocator)|Gopher サーバー上のファイルを検索するための[CGopherLocator](../../mfc/reference/cgopherlocator-class.md)オブジェクトを作成します。|
+|[CGopherConnection:: GetAttribute](#getattribute)|Gopher オブジェクトに関する属性情報を取得します。|
+|[CGopherConnection:: OpenFile](#openfile)|Gopher ファイルを開きます。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
 Gopher サービスは、MFC WinInet クラスによって認識される3つのインターネットサービスのうちの1つです。
 
-クラス`CGopherConnection`には、gopher サービスを管理するコンストラクターと3つの追加メンバー関数が含まれています。[OpenFile](#openfile)、 [createlocator](#createlocator)、および[GetAttribute](#getattribute)。
+クラス `CGopherConnection` には、gopher、 [createlocator](#createlocator)、 [GetAttribute](#getattribute)の各サービスを管理するコンストラクターと3つの追加のメンバー関数が含まれてい[ます。](#openfile)
 
-Gopher インターネットサーバーと通信するには、まず[CInternetSession](../../mfc/reference/cinternetsession-class.md)のインスタンスを作成してから、 [CInternetSession:: GetGopherConnection](../../mfc/reference/cinternetsession-class.md#getgopherconnection)を呼び出します。これ`CGopherConnection`により、オブジェクトが作成され、そのオブジェクトへのポインターが返されます。 オブジェクトを`CGopherConnection`直接作成することはありません。
+Gopher インターネットサーバーと通信するには、まず[CInternetSession](../../mfc/reference/cinternetsession-class.md)のインスタンスを作成し、次に[CInternetSession:: GetGopherConnection](../../mfc/reference/cinternetsession-class.md#getgopherconnection)を呼び出します。これにより、`CGopherConnection` オブジェクトが作成され、ポインターが返されます。 `CGopherConnection` オブジェクトを直接作成することはありません。
 
-が他の MFC インターネット`CGopherConnection`クラスと連携する方法の詳細については、「 [WinInet を使用したインターネットプログラミング](../../mfc/win32-internet-extensions-wininet.md)」を参照してください。 サポートされている2つのインターネットサービス (FTP と HTTP) の使用の詳細については、「 [CHttpConnection](../../mfc/reference/chttpconnection-class.md) and [CFtpConnection](../../mfc/reference/cftpconnection-class.md)クラス」を参照してください。
+`CGopherConnection` が他の MFC インターネットクラスと連携する方法の詳細については、「 [WinInet を使用したインターネットプログラミング](../../mfc/win32-internet-extensions-wininet.md)」を参照してください。 サポートされている2つのインターネットサービス (FTP と HTTP) の使用の詳細については、「 [CHttpConnection](../../mfc/reference/chttpconnection-class.md) and [CFtpConnection](../../mfc/reference/cftpconnection-class.md)クラス」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -68,13 +68,13 @@ Gopher インターネットサーバーと通信するには、まず[CInternet
 
 `CGopherConnection`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afxinet.h
 
-##  <a name="cgopherconnection"></a>  CGopherConnection::CGopherConnection
+##  <a name="cgopherconnection"></a>CGopherConnection::CGopherConnection
 
-このメンバー関数は、オブジェクトを`CGopherConnection`構築するために呼び出されます。
+このメンバー関数は、`CGopherConnection` オブジェクトを構築するために呼び出されます。
 
 ```
 CGopherConnection(
@@ -122,11 +122,11 @@ FTP サーバー名を含む文字列へのポインターです。
 *nPort*<br/>
 サーバーで使用する TCP/IP ポートを識別する番号。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-を`CGopherConnection`直接作成することはありません。 代わりに、 [CInternetSession:: GetGopherConnection](../../mfc/reference/cinternetsession-class.md#getgopherconnection)を呼び出して、 `CGopherConnection`オブジェクトを作成し、そのオブジェクトへのポインターを返します。
+`CGopherConnection` を直接作成することはありません。 代わりに、 [CInternetSession:: GetGopherConnection](../../mfc/reference/cinternetsession-class.md#getgopherconnection)を呼び出して、`CGopherConnection` オブジェクトを作成し、そのオブジェクトへのポインターを返します。
 
-##  <a name="createlocator"></a>  CGopherConnection::CreateLocator
+##  <a name="createlocator"></a>CGopherConnection:: CreateLocator
 
 Gopher サーバー上のファイルを検索または特定するための gopher ロケーターを作成するには、このメンバー関数を呼び出します。
 
@@ -155,7 +155,7 @@ static CGopherLocator CreateLocator(
 項目を取得するために gopher サーバーに送信されるセレクター文字列へのポインター。 *pstrSelectorString*は NULL にすることができます。
 
 *dwGopherType*<br/>
-これは、 *pstrSelectorString*がディレクトリまたはドキュメントを参照するかどうか、および要求が gopher または gopher + であるかどうかを指定します。 Windows SDK[の構造体の属性を参照](/windows/win32/api/wininet/ns-wininet-gopher_find_dataw)してください。
+これは、 *pstrSelectorString*がディレクトリまたはドキュメントを参照するかどうか、および要求が gopher または gopher + であるかどうかを指定します。 Windows SDK で[GOPHER_FIND_DATA](/windows/win32/api/wininet/ns-wininet-gopher_find_dataw)構造体の属性を参照してください。
 
 *pstrLocator*<br/>
 開くファイルを識別する文字列へのポインター。 通常、この文字列は[CGopherFileFind:: GetLocator](../../mfc/reference/cgopherfilefind-class.md#getlocator)の呼び出しから返されます。
@@ -170,13 +170,13 @@ Gopher サーバー名を含む文字列へのポインターです。
 
 [CGopherLocator](../../mfc/reference/cgopherlocator-class.md)オブジェクトです。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 静的バージョンのメンバー関数ではサーバーを指定する必要がありますが、非静的バージョンでは接続オブジェクトのサーバー名が使用されます。
 
 Gopher サーバーから情報を取得するには、最初にアプリケーションで gopher ロケーターを取得する必要があります。 その後、アプリケーションでは、ロケーターを不透明なトークンとして処理する必要があります (つまり、アプリケーションはロケーターを使用できますが、直接操作や比較を行うことはできません)。 通常、アプリケーションは、 [CGopherFileFind:: FindFile](../../mfc/reference/cgopherfilefind-class.md#findfile)メンバー関数の呼び出しにロケーターを使用して、特定の情報を取得します。
 
-##  <a name="getattribute"></a>  CGopherConnection::GetAttribute
+##  <a name="getattribute"></a>CGopherConnection:: GetAttribute
 
 このメンバー関数を呼び出して、gopher サーバーから項目に関する特定の属性情報を取得します。
 
@@ -201,7 +201,7 @@ BOOL GetAttribute(
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 呼び出しが失敗した場合は、Win32 関数[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)を呼び出してエラーの原因を特定することができます。
 
-##  <a name="openfile"></a>  CGopherConnection::OpenFile
+##  <a name="openfile"></a>CGopherConnection:: OpenFile
 
 このメンバー関数を呼び出して、gopher サーバー上のファイルを開きます。
 
@@ -219,7 +219,7 @@ CGopherFile* OpenFile(
 [CGopherLocator](../../mfc/reference/cgopherlocator-class.md)オブジェクトへの参照。
 
 *dwFlags*<br/>
-INTERNET_FLAG_ * フラグの任意の組み合わせ。 INTERNET_FLAG_\*フラグの詳細については、「 [CInternetSession:: OpenUrl](../../mfc/reference/cinternetsession-class.md#openurl) 」を参照してください。
+INTERNET_FLAG_ * フラグの任意の組み合わせ。 INTERNET_FLAG_\* フラグの詳細については、「 [CInternetSession:: OpenUrl](../../mfc/reference/cinternetsession-class.md#openurl) 」を参照してください。
 
 *pstrView*<br/>
 ファイルビュー文字列へのポインター。 ファイルの複数のビューがサーバーに存在する場合、このパラメーターは開くファイルビューを指定します。 *PstrView*が NULL の場合、既定のファイルビューが使用されます。
@@ -231,11 +231,11 @@ INTERNET_FLAG_ * フラグの任意の組み合わせ。 INTERNET_FLAG_\*フラ�
 
 開く[CGopherFile](../../mfc/reference/cgopherfile-class.md)オブジェクトへのポインター。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-*DwContext*の既定値をオーバーライドして、コンテキスト識別子を任意の値に設定します。 コンテキスト識別子は、その[CInternetSession](../../mfc/reference/cinternetsession-class.md)オブジェクトによって作成`CGopherConnection`されるオブジェクトのこの特定の操作に関連付けられます。 値は[CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)に返され、識別された操作の状態が示されます。 インターネットの最初[の手順に関する記事を参照してください。WinInet](../../mfc/wininet-basics.md)の詳細については、「」を参照してください。
+*DwContext*の既定値をオーバーライドして、コンテキスト識別子を任意の値に設定します。 コンテキスト識別子は、 [CInternetSession](../../mfc/reference/cinternetsession-class.md)オブジェクトによって作成された `CGopherConnection` オブジェクトのこの特定の操作に関連付けられます。 値は[CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)に返され、識別された操作の状態が示されます。 コンテキスト識別子の詳細については、「[インターネットの最初の手順: WinInet](../../mfc/wininet-basics.md) 」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [CInternetConnection クラス](../../mfc/reference/cinternetconnection-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)<br/>

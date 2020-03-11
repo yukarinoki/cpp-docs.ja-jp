@@ -18,11 +18,11 @@ helpviewer_keywords:
 - CurrentScheduler class
 ms.assetid: 31c20e0e-4cdf-49b4-8220-d726130aad2b
 ms.openlocfilehash: 6bf61af9ff55722553353a045c87501dbd27fad9
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77143078"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78867136"
 ---
 # <a name="currentscheduler-class"></a>CurrentScheduler クラス
 
@@ -42,16 +42,16 @@ class CurrentScheduler;
 |----------|-----------------|
 |[作成](#create)|`_Policy` パラメーターによって記述された動作を持つ新しいスケジューラを作成し、呼び出し元のコンテキストにアタッチします。 新しく作成されたスケジューラは、呼び出し元のコンテキストの現在のスケジューラになります。|
 |[CreateScheduleGroup](#createschedulegroup)|オーバーロードされます。 呼び出し元のコンテキストに関連付けられているスケジューラ内に新しいスケジュールグループを作成します。 パラメーター `_Placement` を受け取るバージョンを使用すると、新しく作成されたスケジュールグループ内のタスクが、そのパラメーターで指定された場所で実行されるようにバイアスされます。|
-|[デタッチ](#detach)|現在のスケジューラを呼び出し元のコンテキストからデタッチし、以前にアタッチされたスケジューラを現在のスケジューラとして復元します (存在する場合)。 このメソッドから制御が戻った後、呼び出し元のコンテキストは、前に `CurrentScheduler::Create` または `Scheduler::Attach` のいずれかのメソッドを使用してコンテキストにアタッチされたスケジューラによって管理されます。|
+|[[デタッチ]](#detach)|現在のスケジューラを呼び出し元のコンテキストからデタッチし、以前にアタッチされたスケジューラを現在のスケジューラとして復元します (存在する場合)。 このメソッドから制御が戻った後、呼び出し元のコンテキストは、前に `CurrentScheduler::Create` または `Scheduler::Attach` のいずれかのメソッドを使用してコンテキストにアタッチされたスケジューラによって管理されます。|
 |[Get](#get)|呼び出し元のコンテキストに関連付けられているスケジューラへのポインターを返します。これは、現在のスケジューラとも呼ばれます。|
 |[GetNumberOfVirtualProcessors](#getnumberofvirtualprocessors)|呼び出し元のコンテキストに関連付けられているスケジューラの仮想プロセッサの現在の数を返します。|
 |[GetPolicy](#getpolicy)|現在のスケジューラが作成されたポリシーのコピーを返します。|
-|[ID](#id)|現在のスケジューラの一意の識別子を返します。|
+|[Id](#id)|現在のスケジューラの一意の識別子を返します。|
 |[IsAvailableLocation](#isavailablelocation)|指定された場所が現在のスケジューラで使用できるかどうかを判断します。|
 |[RegisterShutdownEvent](#registershutdownevent)|現在のコンテキストに関連付けられているスケジューラがシャットダウンして自身を破棄するときに、`_ShutdownEvent` パラメーターで渡された Windows イベントハンドルをシグナル状態にします。 イベントがシグナル状態になると、スケジューラに対してスケジュールされていたすべての作業が完了します。 この方法では、複数のシャットダウンイベントを登録できます。|
 |[ScheduleTask](#scheduletask)|オーバーロードされます。 呼び出し元のコンテキストに関連付けられているスケジューラ内の軽量タスクをスケジュールします。 軽量タスクは、ランタイムによって決定されるスケジュールグループに配置されます。 パラメーター `_Placement` を受け取るバージョンでは、指定された位置でタスクの実行がバイアスされます。|
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>コメント
 
 呼び出し元のコンテキストに関連付けられているスケジューラ (「 [scheduler](scheduler-class.md)」を参照) が存在しない場合、`CurrentScheduler` クラス内の多くのメソッドによって、プロセスの既定のスケジューラがアタッチされます。 これは、このような呼び出し中にプロセスの既定のスケジューラが作成されることを意味する場合もあります。
 
@@ -59,7 +59,7 @@ class CurrentScheduler;
 
 `CurrentScheduler`
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>要件
 
 **ヘッダー:** concrt .h
 
@@ -78,7 +78,7 @@ static void __cdecl Create(const SchedulerPolicy& _Policy);
 *_Policy*<br/>
 新しく作成されたスケジューラの動作を説明するスケジューラポリシー。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 スケジューラが呼び出し元のコンテキストにアタッチされると、スケジューラに参照カウントが暗黙的に配置されます。
 
@@ -107,7 +107,7 @@ static ScheduleGroup* __cdecl CreateScheduleGroup(location& _Placement);
 
 新しく作成されたスケジュールグループへのポインター。 この `ScheduleGroup` オブジェクトには、最初の参照カウントが配置されています。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 呼び出し元のコンテキストにスケジューラが現在関連付けられていない場合、このメソッドを呼び出すと、プロセスの既定のスケジューラが作成されるか、または呼び出し元コンテキストにアタッチされます。
 
@@ -123,7 +123,7 @@ static ScheduleGroup* __cdecl CreateScheduleGroup(location& _Placement);
 static void __cdecl Detach();
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 `Detach` メソッドは、スケジューラから参照カウントを暗黙的に削除します。
 
@@ -143,7 +143,7 @@ static Scheduler* __cdecl Get();
 
 呼び出し元のコンテキスト (現在のスケジューラ) に関連付けられているスケジューラへのポインター。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 呼び出し元のコンテキストにスケジューラが現在関連付けられていない場合、このメソッドを呼び出すと、プロセスの既定のスケジューラが作成されるか、または呼び出し元コンテキストにアタッチされます。 このメソッドによって返される `Scheduler` オブジェクトには、追加の参照は配置されません。
 
@@ -159,7 +159,7 @@ static unsigned int __cdecl GetNumberOfVirtualProcessors();
 
 スケジューラが呼び出し元のコンテキストに関連付けられている場合、そのスケジューラの仮想プロセッサの現在の数。それ以外の場合は、`-1`値です。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 呼び出し元のコンテキストがまだスケジューラに関連付けられていない場合、このメソッドはスケジューラの添付ファイルにはなりません。
 
@@ -177,7 +177,7 @@ static SchedulerPolicy __cdecl GetPolicy();
 
 現在のスケジューラが作成されたポリシーのコピー。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 呼び出し元のコンテキストにスケジューラが現在関連付けられていない場合、このメソッドを呼び出すと、プロセスの既定のスケジューラが作成されるか、または呼び出し元コンテキストにアタッチされます。
 
@@ -193,7 +193,7 @@ static unsigned int __cdecl Id();
 
 スケジューラが呼び出し元のコンテキストに関連付けられている場合は、そのスケジューラの一意の識別子。それ以外の場合は、`-1`値です。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 呼び出し元のコンテキストがまだスケジューラに関連付けられていない場合、このメソッドはスケジューラの添付ファイルにはなりません。
 
@@ -214,7 +214,7 @@ static bool __cdecl IsAvailableLocation(const location& _Placement);
 
 `_Placement` 引数によって指定された場所が現在のスケジューラで使用できるかどうかを示す値。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 呼び出し元のコンテキストがまだスケジューラに関連付けられていない場合、このメソッドはスケジューラの添付ファイルにはなりません。
 
@@ -233,7 +233,7 @@ static void __cdecl RegisterShutdownEvent(HANDLE _ShutdownEvent);
 *_ShutdownEvent*<br/>
 現在のコンテキストに関連付けられているスケジューラがシャットダウンして自身を破棄したときにランタイムによって通知される Windows イベントオブジェクトへのハンドル。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 呼び出し元のコンテキストにスケジューラがアタッチされていない場合は、このメソッドを呼び出すと[scheduler_not_attached](scheduler-not-attached-class.md)例外がスローされます。
 
@@ -263,7 +263,7 @@ static void __cdecl ScheduleTask(
 *_Placement*<br/>
 ライトウェイトタスクがで実行されるようにバイアスされる場所への参照。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 呼び出し元のコンテキストにスケジューラが現在関連付けられていない場合、このメソッドを呼び出すと、プロセスの既定のスケジューラが作成されるか、または呼び出し元コンテキストにアタッチされます。
 

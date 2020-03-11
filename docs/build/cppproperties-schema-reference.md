@@ -4,17 +4,17 @@ ms.date: 08/09/2019
 helpviewer_keywords:
 - CppProperties.json file [C++]
 ms.openlocfilehash: d59fca412a26d08f88ccbda20a2c0444cf33b1cb
-ms.sourcegitcommit: 6c1960089b92d007fc28c32af1e4bef0f85fdf0c
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75556670"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856814"
 ---
 # <a name="cpppropertiesjson-reference"></a>CppProperties. json リファレンス
 
 CMake を使用しないオープンフォルダープロジェクトでは、IntelliSense のプロジェクト構成設定を*Cppproperties. json*ファイルに格納できます。 (CMake プロジェクトでは、 [Cmakesettings. json](customize-cmake-settings.md)ファイルを使用します)。構成は、名前と値のペアで構成され、#include パス、コンパイラスイッチ、およびその他のパラメーターを定義します。 開いているフォルダープロジェクトに構成を追加する方法の詳細については、「[フォルダープロジェクトをC++開く](open-folder-projects-cpp.md)」を参照してください。 以下のセクションでは、さまざまな設定の概要を説明します。 スキーマの詳細な説明を表示するには、CppProperties_schema に移動*します。* この場合、 *cppproperties. json*が開いているときに、コードエディターの上部に完全なパスが指定されます。
 
-## <a name="configuration-properties"></a>構成のプロパティ
+## <a name="configuration-properties"></a>構成プロパティ
 
 構成には、次のどのプロパティでも含めることができます。
 
@@ -131,7 +131,7 @@ Linux ワークロードがインストールされている場合、Linux お�
 |`${projectRoot}`| *Cppproperties. json*が配置されているフォルダーへの完全パス|
 |`${env.vsInstallDir}`| Visual Studio の実行中のインスタンスがインストールされているフォルダーへの完全パス|
 
-### <a name="example"></a>使用例
+### <a name="example"></a>例
 
 プロジェクトにインクルードフォルダーがあり、Windows SDK の*windows .h*とその他の共通ヘッダーも含まれている場合は、次のインクルードを使用して*cppproperties. json*構成ファイルを更新することをお勧めします。
 

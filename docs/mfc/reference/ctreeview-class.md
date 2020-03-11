@@ -11,15 +11,15 @@ helpviewer_keywords:
 - CTreeView [MFC], GetTreeCtrl
 ms.assetid: 5df583a6-d69f-42ca-9d8d-57e04558afff
 ms.openlocfilehash: fec8379a3944d981672754274f50dd4e60f71b61
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323597"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78883994"
 ---
 # <a name="ctreeview-class"></a>CTreeView クラス
 
-簡単に使用およびツリー コントロールの[CTreeCtrl](../../mfc/reference/ctreectrl-class.md)MFC のドキュメント/ビュー アーキテクチャのツリー コントロールの機能をカプセル化するクラス。
+ツリーコントロールと、ツリーコントロールの機能をカプセル化する[CTreeCtrl](../../mfc/reference/ctreectrl-class.md)クラスを、MFC のドキュメント/ビューアーキテクチャで簡単に使用できるようにします。
 
 ## <a name="syntax"></a>構文
 
@@ -31,19 +31,19 @@ class CTreeView : public CCtrlView
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
-|[CTreeView::CTreeView](#ctreeview)|`CTreeView` オブジェクトを構築します。|
+|[CTreeView:: CTreeView](#ctreeview)|`CTreeView` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
-|[CTreeView::GetTreeCtrl](#gettreectrl)|ビューに関連付けられているツリーのコントロールを返します。|
+|[CTreeView:: Treeview](#gettreectrl)|ビューに関連付けられているツリーコントロールを返します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-このアーキテクチャの詳細については、「の概要、 [CView](../../mfc/reference/cview-class.md)クラスとクロス リファレンスがあります。
+このアーキテクチャの詳細については、「 [CView](../../mfc/reference/cview-class.md)クラスの概要」と「相互参照」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -51,7 +51,7 @@ class CTreeView : public CCtrlView
 
 [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
-[CWnd](../../mfc/reference/cwnd-class.md)
+[から派生しているのではない](../../mfc/reference/cwnd-class.md)
 
 [CView](../../mfc/reference/cview-class.md)
 
@@ -59,11 +59,11 @@ class CTreeView : public CCtrlView
 
 `CTreeView`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** afxcview.h
+**ヘッダー:** afxcview
 
-##  <a name="ctreeview"></a>  CTreeView::CTreeView
+##  <a name="ctreeview"></a>CTreeView:: CTreeView
 
 `CTreeView` オブジェクトを構築します。
 
@@ -71,18 +71,18 @@ class CTreeView : public CCtrlView
 CTreeView();
 ```
 
-##  <a name="gettreectrl"></a>  CTreeView::GetTreeCtrl
+##  <a name="gettreectrl"></a>CTreeView:: Treeview
 
-ビューに関連付けられているツリーのコントロールへの参照を返します。
+ビューに関連付けられているツリーコントロールへの参照を返します。
 
 ```
 CTreeCtrl& GetTreeCtrl() const;
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [CCtrlView クラス](../../mfc/reference/cctrlview-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)<br/>
 [CView クラス](../../mfc/reference/cview-class.md)<br/>
 [CCtrlView クラス](../../mfc/reference/cctrlview-class.md)<br/>
-[CTreeCtrl クラス](../../mfc/reference/ctreectrl-class.md)
+[CTreeCtrl Class](../../mfc/reference/ctreectrl-class.md)

@@ -85,15 +85,15 @@ helpviewer_keywords:
 - std::experimental::filesystem::temp_directory_path
 - std::experimental::filesystem::u8path
 ms.openlocfilehash: 1ab57a6fc13a03d02963f3d7ecc80f63decb9487
-ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74898708"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78875827"
 ---
 # <a name="ltfilesystemgt-functions"></a>&lt;filesystem&gt; 関数
 
-[\<filesystem >](../standard-library/filesystem.md)ヘッダーに含まれるこれらの free 関数は、パス、ファイル、シンボリックリンク、ディレクトリ、およびボリュームに対する操作を変更し、クエリを実行します。 詳細およびコード例については、「[ファイル システムのナビゲーション (C++)](../standard-library/file-system-navigation.md)」をご覧ください。
+[\<filesystem >](../standard-library/filesystem.md)ヘッダーに含まれるこれらの free 関数は、パス、ファイル、シンボリックリンク、ディレクトリ、およびボリュームに対する操作を変更し、クエリを実行します。 詳細およびコード例については、「[ファイル システムのナビゲーション (C++)](../standard-library/file-system-navigation.md)」を参照してください。
 
 ## <a name="absolute"></a>絶対
 

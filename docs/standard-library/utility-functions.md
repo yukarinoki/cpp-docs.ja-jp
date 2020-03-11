@@ -15,15 +15,15 @@ helpviewer_keywords:
 - std::move [C++]
 - std::swap [C++]
 ms.openlocfilehash: 723b077500b9b741445efcd8574fb26cd53e5fc7
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246310"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78854866"
 ---
 # <a name="ltutilitygt-functions"></a>&lt;utility&gt; 関数
 
-## <a name="asconst"></a> as_const
+## <a name="asconst"></a>as_const
 
 ```cpp
 template <class T> constexpr add_const_t<T>& as_const(T& t) noexcept;
@@ -32,15 +32,15 @@ template <class T> void as_const(const T&&) = delete;
 
 ### <a name="return-value"></a>戻り値
 
-返します*T*します。
+*T*を返します。
 
-## <a name="declval"></a> declval
+## <a name="declval"></a>declval
 
 ```cpp
 template <class T> add_rvalue_reference_t<T> declval() noexcept;  // as unevaluated operand
 ```
 
-## <a name="exchange"></a> Exchange
+## <a name="exchange"></a>エクスチェンジ
 
 **(C++14)** オブジェクトに新しい値を代入し、古い値を返します。
 
@@ -57,9 +57,9 @@ new_val の値を受け取るオブジェクト。
 *new_val*\
 値が val にコピーまたは移動されるオブジェクト。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-複合型の場合、`exchange` は、move コンストラクターが使用可能な場合に古い値がコピーされることを防ぎ、一時オブジェクトの場合や移動された場合は新しい値がコピーされることを防いで任意の型を新しい値として受け入れ、利用可能な任意の変換代入演算子を利用します。 Exchange 関数は異なる[:swap](../standard-library/algorithm-functions.md#swap)左の引数が移動または右の引数にコピーされないという点でします。
+複合型の場合、`exchange` は、move コンストラクターが使用可能な場合に古い値がコピーされることを防ぎ、一時オブジェクトの場合や移動された場合は新しい値がコピーされることを防いで任意の型を新しい値として受け入れ、利用可能な任意の変換代入演算子を利用します。 左の引数が右の引数に移動またはコピーされない場合、exchange 関数は[std:: swap](../standard-library/algorithm-functions.md#swap)とは異なります。
 
 ### <a name="example"></a>例
 
@@ -95,7 +95,7 @@ The old value of c1 is: 1
 The new value of c1 after exchange is: 2
 ```
 
-## <a name="forward"></a> 転送
+## <a name="forward"></a>推進
 
 引数が右辺値または右辺値参照である場合に、条件付きで引数を右辺値参照にキャストします。 これによって、完全転送をサポートする転送関数に対する引数の右辺値性が復元されます。
 
@@ -109,25 +109,25 @@ template <class Type>    // accepts everything else
 
 ### <a name="parameters"></a>パラメーター
 
-*型*\
-渡された値の型*Arg*、これはの型よりも異なる可能性があります*Arg*します。 通常、転送関数のテンプレート引数によって決まります。
+*[種類]* \
+*Arg で渡*される値の型。 *arg*の型とは異なる場合があります。 通常、転送関数のテンプレート引数によって決まります。
 
-*arg*\
+*Arg*\
 キャストする引数。
 
 ### <a name="return-value"></a>戻り値
 
-右辺値参照を返します*Arg*で値が渡された場合*Arg*を右辺値または右辺値への参照元が、それ以外*Arg*その型を変更することがなく。
+*Arg*で渡された値が最初は右辺値または右辺値参照であった場合、 *arg*への右辺値参照を返します。それ以外の場合は、型を変更せずに*Arg*を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 `forward` を呼び出すために明示的なテンプレート引数を指定する必要があります。
 
-`forward` 引数には転送されません。 代わりに、引数が元から右辺値または右辺値参照であった場合、条件付きで引数を右辺値参照にキャストすることにより、`forward` は、転送された引数の元の型の情報を使って、コンパイラでオーバーロードを解決できるようにします。 転送関数の引数の明確な型が元の型よりも異なる可能性があります: たとえば、右辺値、関数の引数として使用され、パラメーター名にバインドされますどのような値が実際に右辺値として存在すると、左辺値になります、名前を持つ —`forward`引数の右辺値性を復元します。
+`forward` は引数を転送しません。 代わりに、引数が元から右辺値または右辺値参照であった場合、条件付きで引数を右辺値参照にキャストすることにより、`forward` は、転送された引数の元の型の情報を使って、コンパイラでオーバーロードを解決できるようにします。 転送関数に対する引数の見かけ上の型は、元の型とは異なる場合があります。たとえば、右辺値が関数の引数として使用され、パラメーター名にバインドされている場合などです。名前を指定すると、実際には右辺値として存在する値を持つ左辺値が使用され、`forward` は引数の右辺値性を復元します。
 
-オーバー ロードの解決を実行する引数の元の値の右辺値性を復元すると呼びます*完全転送*します。 完全転送によって、テンプレート関数はいずれかの参照型の引数を受け取り、正しいオーバーロードの解決に必要な場合に引数の右辺値性を復元できます。 完全転送を使用することによって、右辺値の移動セマンティクスを保持することができ、引数の参照型のみが異なる関数にオーバーロードを用意する必要がなくなります。
+オーバーロードの解決を行うために、引数の元の値の右辺値性を復元することを、*完全転送*と呼びます。 完全転送によって、テンプレート関数はいずれかの参照型の引数を受け取り、正しいオーバーロードの解決に必要な場合に引数の右辺値性を復元できます。 完全転送を使用することによって、右辺値の移動セマンティクスを保持することができ、引数の参照型のみが異なる関数にオーバーロードを用意する必要がなくなります。
 
-## <a name="from_chars"></a> from_chars
+## <a name="from_chars"></a>from_chars
 
 ```cpp
 from_chars_result from_chars(const char* first, const char* last, see below& value, int base = 10);
@@ -139,7 +139,7 @@ from_chars_result from_chars(const char* first, const char* last, double& value,
 from_chars_result from_chars(const char* first, const char* last, long double& value, chars_format fmt = chars_format::general);
 ```
 
-## <a name="get"></a> 取得
+## <a name="get"></a>取得
 
 `pair` オブジェクトから、インデックスの位置または型を使用して要素を取得します。
 
@@ -186,8 +186,8 @@ template <class T2, class T1>
 
 ### <a name="parameters"></a>パラメーター
 
-*インデックス*\
-選択した要素の 0 から始まるインデックス。
+*[インデックス]* \
+選択された要素の0から始まるインデックス。
 
 *T1*\
 1 番目の pair 要素の型。
@@ -195,16 +195,16 @@ template <class T2, class T1>
 *T2*\
 2 番目の pair 要素の型。
 
-*プル要求*\
+*pr*\
 選択する pair。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 各テンプレート関数は、 `pair` 引数の要素への参照を返します。
 
-インデックス付きのオーバー ロードの場合の値*インデックス*は 0 を返し`pr.first`場合の値*インデックス*は、関数が返す 1 `pr.second`。 型 `RI` は、返される要素の型です。
+インデックス付きオーバーロードの場合、 *index*の値が0の場合、関数は `pr.first` を返します。*インデックス*の値が1の場合、関数は `pr.second`を返します。 型 `RI` は、返される要素の型です。
 
-インデックス パラメーターがないオーバー ロード、返される要素が型引数によって推測されます。 呼び出す`get<T>(Tuple)`場合、コンパイラ エラーが生成されます*pr*より T 型の 1 つの要素が含まれています
+インデックスパラメーターがないオーバーロードの場合、返される要素は型引数によって推測されます。 *Pr*に t 型の要素が複数含まれている場合、`get<T>(Tuple)` を呼び出すとコンパイラエラーが発生します。
 
 ### <a name="example"></a>例
 
@@ -235,35 +235,35 @@ int main()
 1 0.27
 ```
 
-## <a name="index_sequence"></a> index_sequence
+## <a name="index_sequence"></a>index_sequence
 
 ```cpp
 template<size_t... I>
     using index_sequence = integer_sequence<size_t, I...>;
 ```
 
-## <a name="index_sequence_for"></a> index_sequence_for
+## <a name="index_sequence_for"></a>index_sequence_for
 
 ```cpp
 template<class... T>
     using index_sequence_for = make_index_sequence<sizeof...(T)>;
 ```
 
-## <a name="make_index_sequence"></a> make_index_sequence
+## <a name="make_index_sequence"></a>make_index_sequence
 
 ```cpp
 template<size_t N>
     using make_index_sequence = make_integer_sequence<size_t, N>;
 ```
 
-## <a name="make_integer_sequence"></a> make_integer_sequence
+## <a name="make_integer_sequence"></a>make_integer_sequence
 
 ```cpp
 template<class T, T N>
     using make_integer_sequence = integer_sequence<T, see below >;
 ```
 
-## <a name="make_pair"></a> make_pair
+## <a name="make_pair"></a>make_pair
 
 `pair` 型のオブジェクトを作成するために使用できるテンプレート関数。コンポーネントの型は、パラメーターとして渡されるデータ型に基づいて自動的に選択されます。
 
@@ -291,9 +291,9 @@ template <class T, class U>
 
 ### <a name="return-value"></a>戻り値
 
-作成されたペア オブジェクト: `pair` < `T`、`U`> (`Val1`、 `Val2`)。
+構築されたペアオブジェクト: `pair`<`T`、`U`> (`Val1`、`Val2`)。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 `make_pair` は、[reference_wrapper Class](../standard-library/reference-wrapper-class.md) 型のオブジェクトを参照型に変換し、減衰配列および関数をポインターに変換します。
 
@@ -301,11 +301,11 @@ template <class T, class U>
 
 - 入力の型 `T` が `reference_wrapper<X>` である場合、戻り値の型 `T` は `X&` です。
 
-- それ以外の場合、戻り値の型 `T` は `decay<T>::type` になります。 場合[decay クラス](../standard-library/decay-class.md)サポートされていない戻り値の型`T`は、入力の型と同じ`T`します。
+- それ以外の場合、戻り値の型 `T` は `decay<T>::type` になります。 場合、[ディケイクラス](../standard-library/decay-class.md)がサポートされていない、戻り値の型 `T` は `T`入力型と同じです。
 
 戻り値の型 `U` は、入力の型 `U` から同様に決定されます。
 
-利点の 1 つ`make_pair`が格納されているオブジェクトの種類は、コンパイラによって自動的に決定され、明示的に指定する必要はありません。 など、明示的なテンプレート引数を使用しない`make_pair<int, int>(1, 2)`を使用すると`make_pair`のため詳細は、コンパイル エラーを引き起こす可能性のある複雑な右辺値参照の問題を追加します。 この例の場合、正しい構文は `make_pair(1, 2)` です。
+`make_pair` の利点の1つは、格納されるオブジェクトの型がコンパイラによって自動的に決定され、明示的に指定する必要がないことです。 `make_pair` を使用する場合は、`make_pair<int, int>(1, 2)` などの明示的なテンプレート引数を使用しないでください。これは詳細で、コンパイルエラーの原因となる可能性のある複雑な右辺値参照の問題が追加されるためです。 この例の場合、正しい構文は `make_pair(1, 2)` です。
 
 `make_pair` ヘルパー関数は、入力パラメーターとしてペアを必要とする関数に 2 個の値を渡すこともできます。
 
@@ -313,7 +313,7 @@ template <class T, class U>
 
 `make_pair` ヘルパー関数を使用してペアを宣言して初期化する方法の例については、「[pair 構造体](../standard-library/pair-structure.md)」を参照してください。
 
-## <a name="move"></a> 移動
+## <a name="move"></a>合わせ
 
 無条件に引数を右辺値参照にキャストし、型の移動が有効である場合に型が移動できることを通知します。
 
@@ -324,33 +324,33 @@ template <class Type>
 
 ### <a name="parameters"></a>パラメーター
 
-*型*\
-渡された引数の型から推論される型*Arg*と共に、参照縮小規則。
+*[種類]* \
+*Arg*で渡された引数の型から推測される型と、参照の折りたたみ規則が含まれます。
 
-*arg*\
-キャストする引数。 型*Arg* 、右辺値参照として指定するが、`move`も左辺値参照は、右辺値参照にバインドできるため、左辺値の引数を受け取ります。
+*Arg*\
+キャストする引数。 *引数*の型は右辺値参照として指定されているように見えますが、`move` 左辺値参照を右辺値参照にバインドできるため、左辺値の引数も受け入れます。
 
 ### <a name="return-value"></a>戻り値
 
 型が参照型であるかどうかに関係なく、右辺値参照としての `Arg`。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-テンプレート引数*型*を明示的に指定するが、渡された値の型から推測は目的として*Arg*します。 型*型*参照縮小規則に従ってさらに調整されます。
+テンプレート引数の*型*は明示的に指定することを意図していませんが、 *Arg*で渡される値の型から推測されます。 *型*の型は、参照の折りたたみ規則に従ってさらに調整されます。
 
-`move` 引数を移動しません。 無条件に引数をキャストするには、代わりに、-、左辺値可能性があります: で渡される値のコピーをするのではなく、コンパイラに移動して、その後、右辺値参照にできます*Arg*の型が移動を有効にした場合。 その型では、移動-有効になっていない場合は場合、代わりにコピーされます。
+`move` は引数を移動しません。 代わりに、その引数 (左辺値である可能性があります) を無条件に右辺値参照にキャストすることにより、コンパイラは、型が移動が有効な場合に、 *Arg*で渡される値をコピーではなく移動できます。 型が移動可能でない場合は、代わりにコピーされます。
 
-値が渡された場合*Arg* lvalue です-は、名前またはそのアドレスを取得することができます:、移動が発生したときに無効にします。 渡された値を参照しない*Arg*名前またはアドレスが移動された後でします。
+*Arg*で渡される値が左辺値である場合 (つまり、名前またはそのアドレスを取得できる場合)、移動が発生すると無効になります。 *引数*に渡された値を、移動後の名前またはアドレスで参照しないでください。
 
-## <a name="moveif"></a> move_if_noexcept
+## <a name="moveif"></a>move_if_noexcept
 
 ```cpp
 template <class T> constexpr conditional_t< !is_nothrow_move_constructible_v<T> && is_copy_constructible_v<T>, const T&, T&&> move_if_noexcept(T& x) noexcept;
 ```
 
-## <a name="swap"></a> スワップ
+## <a name="swap"></a>フォト
 
-2 つの型の要素を交換または[pair 構造体](../standard-library/pair-structure.md)オブジェクト。
+2つの型または[ペアの構造体](../standard-library/pair-structure.md)オブジェクトの要素を交換します。
 
 ```cpp
 template <class T>
@@ -364,16 +364,16 @@ template <class T, class U>
 ### <a name="parameters"></a>パラメーター
 
 *左*\
-型または型のオブジェクト`pair`します。
+型または型のオブジェクト `pair`。
 
-*そうです*\
-型または型のオブジェクト`pair`します。
+*右*\
+型または型のオブジェクト `pair`。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-利点の 1 つ`swap`が格納されているオブジェクトの種類は、コンパイラによって自動的に決定され、明示的に指定する必要はありません。 など、明示的なテンプレート引数を使用しない`swap<int, int>(1, 2)`を使用すると`swap`のため詳細は、コンパイル エラーを引き起こす可能性のある複雑な右辺値参照の問題を追加します。
+`swap` の利点の1つは、格納されるオブジェクトの型がコンパイラによって自動的に決定され、明示的に指定する必要がないことです。 `swap` を使用する場合は、`swap<int, int>(1, 2)` などの明示的なテンプレート引数を使用しないでください。これは詳細で、コンパイルエラーの原因となる可能性のある複雑な右辺値参照の問題が追加されるためです。
 
-## <a name="to_chars"></a> to_chars
+## <a name="to_chars"></a>to_chars
 
 ```cpp
 to_chars_result to_chars(char* first, char* last, see below value, int base = 10);
@@ -388,6 +388,6 @@ to_chars_result to_chars(char* first, char* last, double value, chars_format fmt
 to_chars_result to_chars(char* first, char* last, long double value, chars_format fmt, int precision);
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-範囲の情報を入力して、値を文字の文字列に変換`[first, last)`ここで、`[first, last)`する有効な範囲にあることが必要です。
+範囲 `[first, last)`を埋めることによって値を文字列に変換します。 `[first, last)` は有効な範囲である必要があります。

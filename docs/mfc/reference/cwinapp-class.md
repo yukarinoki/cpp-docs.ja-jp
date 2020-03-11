@@ -193,11 +193,11 @@ helpviewer_keywords:
 - CWinApp [MFC], m_pDataRecoveryHandler
 ms.assetid: e426a3cd-0d15-40d6-bd55-beaa5feb2343
 ms.openlocfilehash: e65ad8b5d8b14ff747adc55b517d9e695d9cbb66
-ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71095757"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78855585"
 ---
 # <a name="cwinapp-class"></a>CWinApp クラス
 
@@ -213,30 +213,30 @@ class CWinApp : public CWinThread
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |[CWinApp:: CWinApp](#cwinapp)|`CWinApp` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |[CWinApp::、Adddoctemplate](#adddoctemplate)|アプリケーションの利用可能なドキュメントテンプレートの一覧にドキュメントテンプレートを追加します。|
-|[CWinApp::AddToRecentFileList](#addtorecentfilelist)|最近使用した (MRU) ファイルの一覧にファイル名を追加します。|
-|[CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback)|アプリケーションが予期せず終了したときにフレームワークによって呼び出されます。|
+|[CWinApp:: AddToRecentFileList](#addtorecentfilelist)|最近使用した (MRU) ファイルの一覧にファイル名を追加します。|
+|[CWinApp:: ApplicationRecoveryCallback](#applicationrecoverycallback)|アプリケーションが予期せず終了したときにフレームワークによって呼び出されます。|
 |[CWinApp:: CloseAllDocuments](#closealldocuments)|開いているすべてのドキュメントを閉じます。|
-|[CWinApp::CreatePrinterDC](#createprinterdc)|プリンターデバイスコンテキストを作成します。|
-|[CWinApp::DelRegTree](#delregtree)|指定されたキーとそのすべてのサブキーを削除します。|
+|[CWinApp:: Createプリンター Dc](#createprinterdc)|プリンターデバイスコンテキストを作成します。|
+|[CWinApp::D elRegTree](#delregtree)|指定されたキーとそのすべてのサブキーを削除します。|
 |[CWinApp::D oMessageBox](#domessagebox)|アプリケーションの[AfxMessageBox](cstring-formatting-and-message-box-display.md#afxmessagebox)を実装します。|
 |[CWinApp::D oWaitCursor](#dowaitcursor)|待機カーソルをオンまたはオフにします。|
-|[CWinApp::EnableD2DSupport](#enabled2dsupport)|Application D2D のサポートを有効にします。 このメソッドは、メイン ウィンドウが初期化される前に呼び出します。|
+|[CWinApp:: EnableD2DSupport](#enabled2dsupport)|Application D2D のサポートを有効にします。 このメソッドは、メイン ウィンドウが初期化される前に呼び出します。|
 |[CWinApp:: EnableHtmlHelp](#enablehtmlhelp)|WinHelp ではなく、アプリケーションの Html ヘルプを実装します。|
-|[CWinApp::EnableTaskbarInteraction](#enabletaskbarinteraction)|タスクバーとの対話を有効にします。|
+|[CWinApp:: EnableTaskbarInteraction](#enabletaskbarinteraction)|タスクバーとの対話を有効にします。|
 |[CWinApp:: ExitInstance](#exitinstance)|アプリケーションの終了時にクリーンアップするようにオーバーライドします。|
-|[CWinApp::GetApplicationRecoveryParameter](#getapplicationrecoveryparameter)|アプリケーションの回復方法の入力パラメーターを取得します。|
-|[CWinApp::GetApplicationRecoveryPingInterval](#getapplicationrecoverypinginterval)|再開マネージャーが復旧コールバック関数から戻るまで待機する時間を返します。|
+|[CWinApp:: GetApplicationRecoveryParameter](#getapplicationrecoveryparameter)|アプリケーションの回復方法の入力パラメーターを取得します。|
+|[CWinApp:: GetApplicationRecoveryPingInterval](#getapplicationrecoverypinginterval)|再開マネージャーが復旧コールバック関数から戻るまで待機する時間を返します。|
 |[CWinApp:: GetApplicationRestartFlags](#getapplicationrestartflags)|再起動マネージャーのフラグを返します。|
-|[CWinApp::GetAppRegistryKey](#getappregistrykey)|HKEY_CURRENT_USER\\"Software" \RegistryKey\ProfileName. のキーを返します|
+|[CWinApp:: GetAppRegistryKey](#getappregistrykey)|HKEY_CURRENT_USER\\"Software" \RegistryKey\ProfileName. のキーを返します。|
 |[CWinApp:: GetDataRecoveryHandler](#getdatarecoveryhandler)|アプリケーションのこのインスタンスのデータ回復ハンドラーを取得します。|
 |[CWinApp:: GetFirstDocTemplatePosition](#getfirstdoctemplateposition)|最初のドキュメントテンプレートの位置を取得します。|
 |[CWinApp:: Ge@ Pmode](#gethelpmode)|アプリケーションによって使用されるヘルプの種類を取得します。|
@@ -245,68 +245,68 @@ class CWinApp : public CWinThread
 |[CWinApp:: GetProfileBinary](#getprofilebinary)|アプリケーションののエントリからバイナリデータを取得します。INI ファイル。|
 |[CWinApp:: GetProfileInt](#getprofileint)|アプリケーションののエントリから整数を取得します。INI ファイル。|
 |[CWinApp:: GetProfileString](#getprofilestring)|アプリケーションののエントリから文字列を取得します。INI ファイル。|
-|[CWinApp::GetSectionKey](#getsectionkey)|HKEY_CURRENT_USER\\"software"/registrykey\ appname lpszsectionのキーを返します。|
-|[CWinApp::HideApplication](#hideapplication)|すべてのドキュメントを閉じる前に、アプリケーションを非表示にします。|
-|[CWinApp::HtmlHelp](#htmlhelp)|Windows 関数`HTMLHelp`を呼び出します。|
-|[CWinApp::InitInstance](#initinstance)|ウィンドウオブジェクトの作成など、Windows インスタンスの初期化を実行するには、をオーバーライドします。|
-|[CWinApp::IsTaskbarInteractionEnabled](#istaskbarinteractionenabled)|Windows 7 タスクバーの対話が有効かどうかを示します。|
+|[CWinApp:: GetSectionKey](#getsectionkey)|\\"Software" \ Registrykey\ appHKEY_CURRENT_USER のキーを返します。|
+|[CWinApp:: HideApplication](#hideapplication)|すべてのドキュメントを閉じる前に、アプリケーションを非表示にします。|
+|[CWinApp:: Html](#htmlhelp)|Windows の `HTMLHelp` 関数を呼び出します。|
+|[CWinApp:: InitInstance](#initinstance)|ウィンドウオブジェクトの作成など、Windows インスタンスの初期化を実行するには、をオーバーライドします。|
+|[CWinApp:: IsTaskbarInteractionEnabled](#istaskbarinteractionenabled)|Windows 7 タスクバーの対話が有効かどうかを示します。|
 |[CWinApp:: LoadCursor](#loadcursor)|カーソルリソースを読み込みます。|
-|[CWinApp::LoadIcon](#loadicon)|アイコンリソースを読み込みます。|
-|[CWinApp::LoadOEMCursor](#loadoemcursor)|WINDOWS で**OCR_** 定数によって指定された windows OEM 定義済みカーソルを読み込みます。始め.|
+|[CWinApp:: LoadIcon](#loadicon)|アイコンリソースを読み込みます。|
+|[CWinApp:: LoadOEMCursor](#loadoemcursor)|WINDOWS で**OCR_** 定数によって指定された windows OEM 定義済みカーソルを読み込みます。始め.|
 |[CWinApp:: LoadOEMIcon](#loadoemicon)|WINDOWS で**OIC_** 定数によって指定された windows OEM 定義済みアイコンを読み込みます。始め.|
 |[CWinApp:: LoadStandardCursor](#loadstandardcursor)|WINDOWS で**IDC_** 定数によって指定された windows 定義済みのカーソルを読み込みます。始め.|
-|[CWinApp::LoadStandardIcon](#loadstandardicon)|WINDOWS で**IDI_** 定数によって指定された windows の定義済みアイコンを読み込みます。始め.|
-|[CWinApp::OnDDECommand](#onddecommand)|動的データ交換 (DDE) の execute コマンドに応答して、フレームワークによって呼び出されます。|
-|[CWinApp::OnIdle](#onidle)|をオーバーライドして、アプリケーション固有のアイドル時処理を実行します。|
-|[CWinApp::OpenDocumentFile](#opendocumentfile)|ファイルからドキュメントを開くためにフレームワークによって呼び出されます。|
-|[CWinApp::ParseCommandLine](#parsecommandline)|コマンドラインの個々のパラメーターとフラグを解析します。|
-|[CWinApp::PreTranslateMessage](#pretranslatemessage)|Windows 関数[TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage)および[DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage)にディスパッチされる前に、メッセージをフィルター処理します。|
-|[CWinApp::ProcessMessageFilter](#processmessagefilter)|アプリケーションに到着する前に、特定のメッセージをインターセプトします。|
-|[CWinApp::ProcessShellCommand](#processshellcommand)|コマンドラインの引数とフラグを処理します。|
-|[CWinApp::ProcessWndProcException](#processwndprocexception)|アプリケーションのメッセージおよびコマンドハンドラーによってスローされた未処理の例外をすべてインターセプトします。|
-|[CWinApp::Register](#register)|カスタマイズされた登録を実行します。|
-|[CWinApp::RegisterWithRestartManager](#registerwithrestartmanager)|アプリケーションを再起動マネージャーに登録します。|
-|[CWinApp::ReopenPreviousFilesAtRestart](#reopenpreviousfilesatrestart)|アプリケーションが予期せず終了したときに開いたファイルを再起動マネージャーが再度開くかどうかを指定します。|
-|[CWinApp::RestartInstance](#restartinstance)|再起動マネージャーによって開始されたアプリケーションの再起動を処理します。|
-|[CWinApp::RestoreAutosavedFilesAtRestart](#restoreautosavedfilesatrestart)|再起動マネージャーが、アプリケーションの再起動時に自動保存されたファイルを復元するかどうかを指定します。|
-|[CWinApp::Run](#run)|既定のメッセージループを実行します。 メッセージループをカスタマイズするには、をオーバーライドします。|
+|[CWinApp:: LoadStandardIcon](#loadstandardicon)|WINDOWS で**IDI_** 定数によって指定された windows の定義済みアイコンを読み込みます。始め.|
+|[CWinApp:: OnDDECommand](#onddecommand)|動的データ交換 (DDE) の execute コマンドに応答して、フレームワークによって呼び出されます。|
+|[CWinApp:: OnIdle](#onidle)|をオーバーライドして、アプリケーション固有のアイドル時処理を実行します。|
+|[CWinApp:: OpenDocumentFile](#opendocumentfile)|ファイルからドキュメントを開くためにフレームワークによって呼び出されます。|
+|[CWinApp::P arseCommandLine](#parsecommandline)|コマンドラインの個々のパラメーターとフラグを解析します。|
+|[CWinApp::P reTranslateMessage](#pretranslatemessage)|Windows 関数[TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage)および[DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage)にディスパッチされる前に、メッセージをフィルター処理します。|
+|[CWinApp::P Roて Messagefilter](#processmessagefilter)|アプリケーションに到着する前に、特定のメッセージをインターセプトします。|
+|[CWinApp::P rocessShellCommand](#processshellcommand)|コマンドラインの引数とフラグを処理します。|
+|[CWinApp::P rocessWndProcException](#processwndprocexception)|アプリケーションのメッセージおよびコマンドハンドラーによってスローされた未処理の例外をすべてインターセプトします。|
+|[CWinApp:: Register](#register)|カスタマイズされた登録を実行します。|
+|[CWinApp:: RegisterWithRestartManager](#registerwithrestartmanager)|アプリケーションを再起動マネージャーに登録します。|
+|[CWinApp:: Reopen前の Filesatrestart](#reopenpreviousfilesatrestart)|アプリケーションが予期せず終了したときに開いたファイルを再起動マネージャーが再度開くかどうかを指定します。|
+|[CWinApp:: RestartInstance](#restartinstance)|再起動マネージャーによって開始されたアプリケーションの再起動を処理します。|
+|[CWinApp:: RestoreAutosavedFilesAtRestart](#restoreautosavedfilesatrestart)|再起動マネージャーが、アプリケーションの再起動時に自動保存されたファイルを復元するかどうかを指定します。|
+|[CWinApp:: Run](#run)|既定のメッセージループを実行します。 メッセージループをカスタマイズするには、をオーバーライドします。|
 |[CWinApp:: RunAutomated](#runautomated)|アプリケーションのコマンドラインで **/Automation**オプションをテストします。 互換性のために残されています。 代わりに、 [ParseCommandLine](#parsecommandline)を呼び出した後、 [CCommandLineInfo:: m_bRunAutomated](../../mfc/reference/ccommandlineinfo-class.md#m_brunautomated)の値を使用します。|
-|[CWinApp::RunEmbedded](#runembedded)|アプリケーションのコマンドラインで **/Embedding**オプションをテストします。 互換性のために残されています。 代わりに、 [ParseCommandLine](#parsecommandline)を呼び出した後、 [CCommandLineInfo:: m_bRunEmbedded](../../mfc/reference/ccommandlineinfo-class.md#m_brunembedded)の値を使用します。|
+|[CWinApp:: RunEmbedded](#runembedded)|アプリケーションのコマンドラインで **/Embedding**オプションをテストします。 互換性のために残されています。 代わりに、 [ParseCommandLine](#parsecommandline)を呼び出した後、 [CCommandLineInfo:: m_bRunEmbedded](../../mfc/reference/ccommandlineinfo-class.md#m_brunembedded)の値を使用します。|
 |[CWinApp:: SaveAllModified](#saveallmodified)|変更されたすべてのドキュメントを保存するようにユーザーに要求します。|
 |[CWinApp:: SelectPrinter](#selectprinter)|以前にユーザーが [印刷] ダイアログボックスを使用して指定したプリンターを選択します。|
 |[CWinApp:: Se@ Pmode](#sethelpmode)|アプリケーションによって使用されるヘルプの種類を設定し、初期化します。|
-|[CWinApp::SupportsApplicationRecovery](#supportsapplicationrecovery)|予期せずに終了したアプリケーションを再起動マネージャーが回復するかどうかを指定します。|
+|[CWinApp:: SupportsApplicationRecovery](#supportsapplicationrecovery)|予期せずに終了したアプリケーションを再起動マネージャーが回復するかどうかを指定します。|
 |[CWinApp:: SupportsAutosaveAtInterval](#supportsautosaveatinterval)|再起動マネージャーが開いているドキュメントを一定の間隔で自動保存するかどうかを指定します。|
 |[CWinApp:: SupportsAutosaveAtRestart](#supportsautosaveatrestart)|アプリケーションの再起動時に、再起動マネージャーが開いているドキュメントを自動保存するかどうかを指定します。|
 |[CWinApp:: SupportsRestartManager](#supportsrestartmanager)|アプリケーションが再起動マネージャーをサポートしているかどうかを判断します。|
-|[CWinApp:: 登録解除](#unregister)|オブジェクトによって登録されて`CWinApp`いることがわかっているすべての登録を解除します。|
-|[CWinApp:: WinHelp](#winhelp)|Windows 関数`WinHelp`を呼び出します。|
+|[CWinApp:: 登録解除](#unregister)|`CWinApp` オブジェクトによって登録されていることがわかっているすべての登録を解除します。|
+|[CWinApp:: WinHelp](#winhelp)|Windows の `WinHelp` 関数を呼び出します。|
 |[CWinApp:: WriteProfileBinary](#writeprofilebinary)|アプリケーションののエントリにバイナリデータを書き込みます。INI ファイル。|
 |[CWinApp:: WriteProfileInt](#writeprofileint)|アプリケーションののエントリに整数を書き込みます。INI ファイル。|
-|[CWinApp::WriteProfileString](#writeprofilestring)|アプリケーションののエントリに文字列を書き込みます。INI ファイル。|
+|[CWinApp:: WriteProfileString](#writeprofilestring)|アプリケーションののエントリに文字列を書き込みます。INI ファイル。|
 
 ### <a name="protected-methods"></a>プロテクト メソッド
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
-|[CWinApp::EnableShellOpen](#enableshellopen)|ユーザーが Windows ファイルマネージャーからデータファイルを開くことを許可します。|
-|[CWinApp::LoadStdProfileSettings](#loadstdprofilesettings)|標準を読み込みます。INI ファイルの設定を使用すると、MRU ファイルリスト機能が有効になります。|
-|[CWinApp::OnContextHelp](#oncontexthelp)|アプリケーション内の SHIFT + F1 ヘルプを処理します。|
-|[CWinApp::OnFileNew](#onfilenew)|ID_FILE_NEW コマンドを実装します。|
-|[CWinApp::OnFileOpen](#onfileopen)|ID_FILE_OPEN コマンドを実装します。|
-|[CWinApp::OnFilePrintSetup](#onfileprintsetup)|ID_FILE_PRINT_SETUP コマンドを実装します。|
-|[CWinApp::OnHelp](#onhelp)|アプリケーション内で F1 ヘルプを (現在のコンテキストを使って) 処理します。|
-|[CWinApp:: OnHelpFinder](#onhelpfinder)|ID_HELP_FINDER コマンドと ID_DEFAULT_HELP コマンドを処理します。|
-|[CWinApp::OnHelpIndex](#onhelpindex)|ID_HELP_INDEX コマンドを処理し、既定のヘルプトピックを提供します。|
-|[CWinApp::OnHelpUsing](#onhelpusing)|ID_HELP_USING コマンドを処理します。|
-|[CWinApp::RegisterShellFileTypes](#registershellfiletypes)|すべてのアプリケーションのドキュメントの種類を Windows ファイルマネージャーに登録します。|
-|[CWinApp::SetAppID](#setappid)|アプリケーションのアプリケーションユーザーモデル ID を明示的に設定します。 ユーザーインターフェイスをユーザーに提示する前に、このメソッドを呼び出す必要があります (最適な場所はアプリケーションコンストラクターです)。|
+|[CWinApp:: EnableShellOpen](#enableshellopen)|ユーザーが Windows ファイルマネージャーからデータファイルを開くことを許可します。|
+|[CWinApp:: LoadStdProfileSettings](#loadstdprofilesettings)|標準を読み込みます。INI ファイルの設定を使用すると、MRU ファイルリスト機能が有効になります。|
+|[CWinApp:: OnContextHelp](#oncontexthelp)|アプリケーション内の SHIFT + F1 ヘルプを処理します。|
+|[CWinApp:: OnFileNew](#onfilenew)|ID_FILE_NEW コマンドを実装します。|
+|[CWinApp:: OnFileOpen](#onfileopen)|ID_FILE_OPEN コマンドを実装します。|
+|[CWinApp:: OnFilePrintSetup](#onfileprintsetup)|ID_FILE_PRINT_SETUP コマンドを実装します。|
+|[CWinApp:: OnHelp](#onhelp)|アプリケーション内で F1 ヘルプを (現在のコンテキストを使って) 処理します。|
+|[CWinApp:: OnHelpFinder](#onhelpfinder)|ID_HELP_FINDER および ID_DEFAULT_HELP コマンドを処理します。|
+|[CWinApp:: OnHelpIndex](#onhelpindex)|ID_HELP_INDEX コマンドを処理し、既定のヘルプトピックを提供します。|
+|[CWinApp:: OnHelpUsing](#onhelpusing)|ID_HELP_USING コマンドを処理します。|
+|[CWinApp:: RegisterShellFileTypes](#registershellfiletypes)|すべてのアプリケーションのドキュメントの種類を Windows ファイルマネージャーに登録します。|
+|[CWinApp:: SetAppID](#setappid)|アプリケーションのアプリケーションユーザーモデル ID を明示的に設定します。 ユーザーインターフェイスをユーザーに提示する前に、このメソッドを呼び出す必要があります (最適な場所はアプリケーションコンストラクターです)。|
 |[CWinApp:: SetRegistryKey](#setregistrykey)|ではなく、アプリケーション設定がレジストリに格納されます。INI ファイル。|
-|[CWinApp::UnregisterShellFileTypes](#unregistershellfiletypes)|Windows ファイルマネージャーを使用して、すべてのアプリケーションのドキュメントの種類の登録を解除します。|
+|[CWinApp:: UnregisterShellFileTypes](#unregistershellfiletypes)|Windows ファイルマネージャーを使用して、すべてのアプリケーションのドキュメントの種類の登録を解除します。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |[CWinApp:: m_bHelpMode](#m_bhelpmode)|ユーザーがヘルプコンテキストモードであるかどうかを示します (通常は SHIFT + F1 キーを使用して呼び出されます)。|
 |[CWinApp:: m_eHelpType](#m_ehelptype)|アプリケーションで使用されるヘルプの種類を指定します。|
@@ -314,50 +314,50 @@ class CWinApp : public CWinThread
 |[CWinApp:: m_lpCmdLine](#m_lpcmdline)|アプリケーションのコマンドラインを指定する null で終わる文字列を指します。|
 |[CWinApp:: m_nCmdShow](#m_ncmdshow)|ウィンドウを最初に表示する方法を指定します。|
 |[CWinApp:: m_pActiveWnd](#m_pactivewnd)|OLE サーバーがアクティブになっている場合の、コンテナーアプリケーションのメインウィンドウへのポインター。|
-|[CWinApp::m_pszAppID](#m_pszappid)|アプリケーションユーザーモデル ID。|
-|[CWinApp::m_pszAppName](#m_pszappname)|アプリケーション名を示します。|
-|[CWinApp::m_pszExeName](#m_pszexename)|アプリケーションのモジュール名。|
+|[CWinApp:: m_pszAppID](#m_pszappid)|アプリケーションユーザーモデル ID。|
+|[CWinApp:: m_pszAppName](#m_pszappname)|アプリケーションの名前を指定します。|
+|[CWinApp:: m_pszExeName](#m_pszexename)|アプリケーションのモジュール名。|
 |[CWinApp:: m_pszHelpFilePath](#m_pszhelpfilepath)|アプリケーションのヘルプファイルへのパス。|
 |[CWinApp:: m_pszProfileName](#m_pszprofilename)|アプリケーションの。INI ファイル名。|
 |[CWinApp:: m_pszRegistryKey](#m_pszregistrykey)|アプリケーションプロファイル設定を格納するための完全なレジストリキーを決定するために使用されます。|
 
-### <a name="protected-data-members"></a>プロテクト データ メンバー
+### <a name="protected-data-members"></a>保護されるデータ メンバー
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |[CWinApp:: m_dwRestartManagerSupportFlags](#m_dwrestartmanagersupportflags)|再起動マネージャーの動作を決定するフラグ。|
 |[CWinApp:: m_nAutosaveInterval](#m_nautosaveinterval)|自動保存の時間の長さ (ミリ秒単位)。|
-|[CWinApp::m_pDataRecoveryHandler](#m_pdatarecoveryhandler)|アプリケーションのデータ復旧ハンドラーへのポインター。|
+|[CWinApp:: m_pDataRecoveryHandler](#m_pdatarecoveryhandler)|アプリケーションのデータ復旧ハンドラーへのポインター。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
 アプリケーションオブジェクトには、アプリケーション (およびそのインスタンスの各インスタンス) を初期化し、アプリケーションを実行するためのメンバー関数が用意されています。
 
-Microsoft Foundation クラスを使用する各アプリケーションには、から`CWinApp`派生したオブジェクトを1つだけ含めることができます。 このオブジェクトは、他のC++グローバルオブジェクトが構築されるときに作成され、 `WinMain` Windows が Microsoft Foundation Class ライブラリによって提供される関数を呼び出したときに既に使用できるようになります。 派生`CWinApp`オブジェクトをグローバルレベルで宣言します。
+Microsoft Foundation クラスを使用する各アプリケーションには、`CWinApp`から派生したオブジェクトを1つだけ含めることができます。 このオブジェクトは、他のC++グローバルオブジェクトが構築されるときに作成され、Windows が Microsoft Foundation Class ライブラリによって提供される `WinMain` 関数を呼び出すと既に使用できるようになります。 派生 `CWinApp` オブジェクトをグローバルレベルで宣言します。
 
-から`CWinApp`アプリケーションクラスを派生させる場合は、 [InitInstance](#initinstance)メンバー関数をオーバーライドして、アプリケーションのメインウィンドウオブジェクトを作成します。
+`CWinApp`からアプリケーションクラスを派生させる場合は、 [InitInstance](#initinstance)メンバー関数をオーバーライドして、アプリケーションのメインウィンドウオブジェクトを作成します。
 
-Microsoft Foundation Class ライブラリには、 `CWinApp`メンバー関数に加えて、 `CWinApp`オブジェクトやその他のグローバル情報にアクセスするための次のグローバル関数が用意されています。
+Microsoft Foundation Class ライブラリには、`CWinApp` メンバー関数に加えて、`CWinApp` オブジェクトおよびその他のグローバル情報にアクセスするための次のグローバル関数が用意されています。
 
-- [AfxGetApp](application-information-and-management.md#afxgetapp)オブジェクトへの`CWinApp`ポインターを取得します。
+- [AfxGetApp](application-information-and-management.md#afxgetapp)`CWinApp` オブジェクトへのポインターを取得します。
 
 - [AfxGetInstanceHandle](application-information-and-management.md#afxgetinstancehandle)現在のアプリケーションインスタンスへのハンドルを取得します。
 
 - [AfxGetResourceHandle](application-information-and-management.md#afxgetresourcehandle)アプリケーションのリソースへのハンドルを取得します。
 
-- [AfxGetAppName](application-information-and-management.md#afxgetappname)アプリケーション名を格納している文字列へのポインターを取得します。 また、 `CWinApp`オブジェクトへのポインターがある場合は、を`m_pszExeName`使用してアプリケーション名を取得します。
+- [AfxGetAppName](application-information-and-management.md#afxgetappname)アプリケーション名を格納している文字列へのポインターを取得します。 または、`CWinApp` オブジェクトへのポインターがある場合は、`m_pszExeName` を使用してアプリケーションの名前を取得します。
 
-「 [CWinApp:クラスの詳細](../../mfc/cwinapp-the-application-class.md)については、次の概要などのアプリケーションクラスを参照してください。 `CWinApp`
+次の概要など、`CWinApp` クラスの詳細については、「 [CWinApp: Application クラス](../../mfc/cwinapp-the-application-class.md)」を参照してください。
 
-- `CWinApp`-アプリケーションウィザードによって作成された派生コード。
+- アプリケーションウィザードによって作成された `CWinApp`の派生コード。
 
-- `CWinApp`アプリケーションの実行シーケンスのロール。
+- アプリケーションの実行シーケンスでの `CWinApp`の役割。
 
 - `CWinApp`の既定のメンバー関数の実装。
 
-- `CWinApp`キー overridables。
+- `CWinApp`のキー overridables。
 
-データ`m_hPrevInstance`メンバーはもう存在しません。 アプリケーションの別のインスタンスが実行されているかどうかを確認するには、名前付きミューテックスを使用します。 ミューテックスを開くことができない場合は、実行中のアプリケーションの他のインスタンスは存在しません。
+`m_hPrevInstance` データメンバーは存在しません。 アプリケーションの別のインスタンスが実行されているかどうかを確認するには、名前付きミューテックスを使用します。 ミューテックスを開くことができない場合は、実行中のアプリケーションの他のインスタンスは存在しません。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -369,11 +369,11 @@ Microsoft Foundation Class ライブラリには、 `CWinApp`メンバー関数�
 
 `CWinApp`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afxwin.h
 
-##  <a name="adddoctemplate"></a>  CWinApp::AddDocTemplate
+##  <a name="adddoctemplate"></a>CWinApp::、Adddoctemplate
 
 このメンバー関数を呼び出して、アプリケーションが保持する使用可能なドキュメントテンプレートの一覧にドキュメントテンプレートを追加します。
 
@@ -384,9 +384,9 @@ void AddDocTemplate(CDocTemplate* pTemplate);
 ### <a name="parameters"></a>パラメーター
 
 *pTemplate*<br/>
-追加するへの`CDocTemplate`ポインター。
+追加する `CDocTemplate` へのポインター。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 [RegisterShellFileTypes](#registershellfiletypes)を呼び出す前に、すべてのドキュメントテンプレートをアプリケーションに追加する必要があります。
 
@@ -394,7 +394,7 @@ void AddDocTemplate(CDocTemplate* pTemplate);
 
 [!code-cpp[NVC_MFCWindowing#35](../../mfc/reference/codesnippet/cpp/cwinapp-class_1.cpp)]
 
-##  <a name="addtorecentfilelist"></a>  CWinApp::AddToRecentFileList
+##  <a name="addtorecentfilelist"></a>CWinApp:: AddToRecentFileList
 
 このメンバー関数を呼び出して、 *Lpszpathname*を MRU ファイルリストに追加します。
 
@@ -407,7 +407,7 @@ virtual void AddToRecentFileList(LPCTSTR lpszPathName);
 *lpszPathName*<br/>
 ファイルのパス。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 このメンバー関数を使用する前に、 [LoadStdProfileSettings](#loadstdprofilesettings)メンバー関数を呼び出して、現在の MRU ファイルリストを読み込む必要があります。
 
@@ -417,7 +417,7 @@ virtual void AddToRecentFileList(LPCTSTR lpszPathName);
 
 [!code-cpp[NVC_MFCWindowing#36](../../mfc/reference/codesnippet/cpp/cwinapp-class_2.cpp)]
 
-##  <a name="applicationrecoverycallback"></a>  CWinApp::ApplicationRecoveryCallback
+##  <a name="applicationrecoverycallback"></a>CWinApp:: ApplicationRecoveryCallback
 
 アプリケーションが予期せず終了したときにフレームワークによって呼び出されます。
 
@@ -434,11 +434,11 @@ virtual DWORD ApplicationRecoveryCallback(LPVOID lpvParam);
 
 このメソッドが成功した場合は0。エラーが発生した場合は0以外の。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 アプリケーションが再起動マネージャーをサポートしている場合、アプリケーションが予期せず終了したときに、フレームワークはこの関数を呼び出します。
 
-の既定の`ApplicationRecoveryCallback`実装では`CDataRecoveryHandler` 、を使用して、現在開いているドキュメントの一覧をレジストリに保存します。 このメソッドは、ファイルを自動保存しません。
+`ApplicationRecoveryCallback` の既定の実装では、`CDataRecoveryHandler` を使用して、現在開いているドキュメントの一覧をレジストリに保存します。 このメソッドは、ファイルを自動保存しません。
 
 動作をカスタマイズするには、派生した[Cwinapp クラス](../../mfc/reference/cwinapp-class.md)でこの関数をオーバーライドするか、独自のアプリケーションの回復メソッドをパラメーターとして[CWinApp:: RegisterWithRestartManager](#registerwithrestartmanager)に渡します。
 
@@ -455,11 +455,11 @@ void CloseAllDocuments(BOOL bEndSession);
 *bEndSession*<br/>
 Windows セッションを終了するかどうかを指定します。 セッションが終了している場合は TRUE です。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-を呼び出す`CloseAllDocuments`前に[hideapplication](#hideapplication)を呼び出してください。
+`CloseAllDocuments`を呼び出す前に[Hideapplication](#hideapplication)を呼び出してください。
 
-##  <a name="createprinterdc"></a>  CWinApp::CreatePrinterDC
+##  <a name="createprinterdc"></a>CWinApp:: Createプリンター Dc
 
 選択したプリンターからプリンターデバイスコンテキスト (DC) を作成するには、このメンバー関数を呼び出します。
 
@@ -476,15 +476,15 @@ BOOL CreatePrinterDC(CDC& dc);
 
 プリンターデバイスコンテキストが正常に作成された場合は0以外の。それ以外の場合は0です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-`CreatePrinterDC`参照渡しで渡すデバイスコンテキストを初期化して、出力に使用できるようにします。
+`CreatePrinterDC` は、参照渡しで渡すデバイスコンテキストを初期化するので、それを使用して印刷することができます。
 
 関数が正常に実行された場合は、印刷が完了したら、デバイスコンテキストを破棄する必要があります。 [Cdc](../../mfc/reference/cdc-class.md)オブジェクトのデストラクターを使用することも、 [Cdc::D eletedc](../../mfc/reference/cdc-class.md#deletedc)を呼び出すことによって明示的に実行することもできます。
 
 ##  <a name="cwinapp"></a>CWinApp:: CWinApp
 
-オブジェクトを`CWinApp`構築し、アプリケーション名として格納される*lpszappname*を渡します。
+`CWinApp` オブジェクトを構築し、アプリケーション名として格納される*Lpszappname*を渡します。
 
 ```
 CWinApp(LPCTSTR lpszAppName = NULL);
@@ -493,13 +493,13 @@ CWinApp(LPCTSTR lpszAppName = NULL);
 ### <a name="parameters"></a>パラメーター
 
 *lpszAppName*<br/>
-Windows が使用するアプリケーション名を含む null で終わる文字列。 この引数が指定されていないか`CWinApp` NULL の場合、はリソース文字列 AFX_IDS_APP_TITLE または実行可能ファイルのファイル名を使用します。
+Windows が使用するアプリケーション名を含む null で終わる文字列。 この引数が指定されていないか NULL の場合、`CWinApp` はリソース文字列 AFX_IDS_APP_TITLE または実行可能ファイルのファイル名を使用します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-派生クラスの1つの`CWinApp`グローバルオブジェクトを作成する必要があります。 アプリケーションには、オブジェクト`CWinApp`を1つだけ含めることができます。 コンストラクターは`CWinApp`オブジェクトへのポインターを格納します`WinMain` 。これにより、は、オブジェクトのメンバー関数を呼び出してアプリケーションを初期化し、実行できるようになります。
+`CWinApp`派生クラスの1つのグローバルオブジェクトを作成する必要があります。 アプリケーションで使用できる `CWinApp` オブジェクトは1つだけです。 コンストラクターは `CWinApp` オブジェクトへのポインターを格納し、`WinMain` がオブジェクトのメンバー関数を呼び出してアプリケーションを初期化して実行できるようにします。
 
-##  <a name="delregtree"></a>  CWinApp::DelRegTree
+##  <a name="delregtree"></a>CWinApp::D elRegTree
 
 特定のレジストリキーとそのすべてのサブキーを削除します。
 
@@ -527,9 +527,9 @@ CAtlTransactionManager オブジェクトへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-関数が成功した場合、戻り値は ERROR_SUCCESS です。 関数が失敗した場合、戻り値は Winerror.h で定義されている0以外のエラーコードになります。
+関数が成功した場合、戻り値は ERROR_SUCCESS になります。 関数が失敗した場合、戻り値は Winerror.h で定義されている0以外のエラーコードになります。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 指定したキーとそのサブキーを削除するには、この関数を呼び出します。
 
@@ -557,13 +557,13 @@ virtual int DoMessageBox(
 
 ### <a name="return-value"></a>戻り値
 
-と`AfxMessageBox`同じ値を返します。
+`AfxMessageBox`と同じ値を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-メッセージボックスを開くためにこのメンバー関数を呼び出さないでください。代わりに`AfxMessageBox`を使用してください。
+メッセージボックスを開くためにこのメンバー関数を呼び出さないでください。代わりに `AfxMessageBox` を使用してください。
 
-アプリケーション全体の呼び出しの`AfxMessageBox`処理をカスタマイズするには、このメンバー関数をオーバーライドします。
+`AfxMessageBox` 呼び出しのアプリケーション全体の処理をカスタマイズするには、このメンバー関数をオーバーライドします。
 
 ##  <a name="dowaitcursor"></a>CWinApp::D oWaitCursor
 
@@ -578,19 +578,19 @@ virtual void DoWaitCursor(int nCode);
 *nCode*<br/>
 このパラメーターが1の場合、待機カーソルが表示されます。 0の場合、参照カウントをインクリメントせずに待機カーソルが復元されます。 -1 の場合、待機カーソルは終了します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-既定では、砂時計カーソルが実装されます。 `DoWaitCursor`参照カウントを保持します。 正の場合、砂時計カーソルが表示されます。
+既定では、砂時計カーソルが実装されます。 `DoWaitCursor` は参照カウントを保持します。 正の場合、砂時計カーソルが表示されます。
 
-通常は直接を呼び出す`DoWaitCursor`ことはできませんが、このメンバー関数をオーバーライドして待機カーソルを変更したり、待機カーソルが表示されている間に追加の処理を行ったりすることもできます。
+通常は `DoWaitCursor` 直接呼び出すことはできませんが、このメンバー関数をオーバーライドして待機カーソルを変更したり、待機カーソルが表示されている間に追加の処理を行ったりすることができます。
 
-待機カーソルを実装するためのより簡単で効率的な方法に`CWaitCursor`ついては、を使用してください。
+待機カーソルを実装するためのより簡単で効率的な方法については、`CWaitCursor`を使用します。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFCWindowing#37](../../mfc/reference/codesnippet/cpp/cwinapp-class_3.cpp)]
 
-##  <a name="enabled2dsupport"></a>  CWinApp::EnableD2DSupport
+##  <a name="enabled2dsupport"></a>CWinApp:: EnableD2DSupport
 
 Visual Studio 2010 SP1 が必要です。
 
@@ -614,27 +614,27 @@ D2D ファクトリとそれによって作成されるリソースのスレッ�
 
 D2D のサポートが有効になっている場合は TRUE、それ以外の場合は FALSE を返します。
 
-##  <a name="enablehtmlhelp"></a>  CWinApp::EnableHtmlHelp
+##  <a name="enablehtmlhelp"></a>CWinApp:: EnableHtmlHelp
 
-アプリケーションのヘルプに html ヘルプを使用するに`CWinApp`は、派生クラスのコンストラクター内からこのメンバー関数を呼び出します。
+アプリケーションのヘルプに Html ヘルプを使用するには、`CWinApp`派生クラスのコンストラクター内からこのメンバー関数を呼び出します。
 
 ```
 void EnableHtmlHelp();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 ##  <a name="enableshellopen"></a>CWinApp:: EnableShellOpen
 
-アプリケーションのユーザーが Windows ファイルマネージャー `InitInstance`内からファイルをダブルクリックしてデータファイルを開けるようにするには、通常はオーバーライドからこの関数を呼び出します。
+アプリケーションのユーザーが Windows ファイルマネージャー内からファイルをダブルクリックしてデータファイルを開くことができるようにするには、通常は `InitInstance` オーバーライドからこの関数を呼び出します。
 
 ```
 void EnableShellOpen();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-この関数と共にメンバー関数を呼び出すか、を指定します。`RegisterShellFileTypes`ドキュメントの種類を手動で登録するためのアプリケーションを含む REG ファイル。
+この関数と共に `RegisterShellFileTypes` メンバー関数を呼び出すか、を指定します。ドキュメントの種類を手動で登録するためのアプリケーションを含む REG ファイル。
 
 ### <a name="example"></a>例
 
@@ -657,13 +657,13 @@ Windows 7 タスクバーとの対話を有効にするか (TRUE)、無効 (FALS
 
 タスクバーの操作を有効または無効にすることができる場合は TRUE を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 メインウィンドウを作成する前にこのメソッドを呼び出す必要があります。それ以外の場合は、アサートして FALSE を返します。
 
 ##  <a name="exitinstance"></a>CWinApp:: ExitInstance
 
-アプリケーションのこのインスタンスを終了する`Run`ために、メンバー関数内からフレームワークによって呼び出されます。
+アプリケーションのこのインスタンスを終了するために、`Run` メンバー関数内からフレームワークによって呼び出されます。
 
 ```
 virtual int ExitInstance();
@@ -671,11 +671,11 @@ virtual int ExitInstance();
 
 ### <a name="return-value"></a>戻り値
 
-アプリケーションの終了コード。0はエラーがないことを示し、0より大きい値はエラーを示します。 この値は、からの`WinMain`戻り値として使用されます。
+アプリケーションの終了コード。0はエラーがないことを示し、0より大きい値はエラーを示します。 この値は `WinMain`からの戻り値として使用されます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-このメンバー関数は、 `Run`メンバー関数内のどこからでも呼び出すことはできません。
+このメンバー関数は、`Run` メンバー関数内のどこからでも呼び出すことはできません。
 
 この関数の既定の実装では、アプリケーションのにフレームワークオプションを書き込みます。INI ファイル。 アプリケーションの終了時にクリーンアップするには、この関数をオーバーライドします。
 
@@ -683,7 +683,7 @@ virtual int ExitInstance();
 
 [!code-cpp[NVC_MFCWindowing#39](../../mfc/reference/codesnippet/cpp/cwinapp-class_5.cpp)]
 
-##  <a name="getapplicationrecoveryparameter"></a>  CWinApp::GetApplicationRecoveryParameter
+##  <a name="getapplicationrecoveryparameter"></a>CWinApp:: GetApplicationRecoveryParameter
 
 アプリケーションの回復方法の入力パラメーターを取得します。
 
@@ -695,13 +695,13 @@ virtual LPVOID GetApplicationRecoveryParameter();
 
 アプリケーションの回復方法の既定の入力パラメーター。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 この関数の既定の動作では、NULL が返されます。
 
 詳細については、「 [CWinApp:: ApplicationRecoveryCallback](#applicationrecoverycallback)」を参照してください。
 
-##  <a name="getapplicationrecoverypinginterval"></a>  CWinApp::GetApplicationRecoveryPingInterval
+##  <a name="getapplicationrecoverypinginterval"></a>CWinApp:: GetApplicationRecoveryPingInterval
 
 再開マネージャーが復旧コールバック関数から戻るまで待機する時間を返します。
 
@@ -713,11 +713,11 @@ virtual DWORD GetApplicationRecoveryPingInterval();
 
 ミリ秒単位の時間の長さ。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 再起動マネージャーに登録されているアプリケーションが予期せず終了した場合、アプリケーションは開いているドキュメントを保存し、回復コールバック関数を呼び出します。 既定の回復コールバック関数は、 [CWinApp:: ApplicationRecoveryCallback](#applicationrecoverycallback)です。
 
-復旧コールバック関数が返されるのをフレームワークが待機する時間の長さは、ping の間隔です。 Ping 間隔をカスタマイズするには、 `CWinApp::GetApplicationRecoveryPingInterval`をオーバーライドするか、に`RegisterWithRestartManager`カスタム値を指定します。
+復旧コールバック関数が返されるのをフレームワークが待機する時間の長さは、ping の間隔です。 Ping 間隔をカスタマイズするには、`CWinApp::GetApplicationRecoveryPingInterval` をオーバーライドするか、`RegisterWithRestartManager`にカスタム値を指定します。
 
 ##  <a name="getapplicationrestartflags"></a>CWinApp:: GetApplicationRestartFlags
 
@@ -731,7 +731,7 @@ virtual DWORD GetApplicationRestartFlags();
 
 再起動マネージャーのフラグ。 既定の実装では、0が返されます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 再起動マネージャーのフラグは、既定の実装には影響しません。 これらは将来使用するために提供されています。
 
@@ -747,7 +747,7 @@ Restart manager フラグに指定できる値は次のとおりです。
 
 - RESTART_NO_REBOOT
 
-##  <a name="getappregistrykey"></a>  CWinApp::GetAppRegistryKey
+##  <a name="getappregistrykey"></a>CWinApp:: GetAppRegistryKey
 
 HKEY_CURRENT_USER\\"Software" \RegistryKey\ProfileName. のキーを返します。
 
@@ -758,13 +758,13 @@ HKEY GetAppRegistryKey(CAtlTransactionManager* pTM = NULL);
 ### <a name="parameters"></a>パラメーター
 
 *pTM*<br/>
-オブジェクトへの`CAtlTransactionManager`ポインター。
+`CAtlTransactionManager` オブジェクトへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
 関数が成功した場合はアプリケーションキー。それ以外の場合は NULL。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 ##  <a name="getdatarecoveryhandler"></a>CWinApp:: GetDataRecoveryHandler
 
@@ -778,9 +778,9 @@ virtual CDataRecoveryHandler *GetDataRecoveryHandler();
 
 アプリケーションのこのインスタンスのデータ回復ハンドラー。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-再起動マネージャーを使用する各アプリケーションは、 [CDataRecoveryHandler クラス](../../mfc/reference/cdatarecoveryhandler-class.md)のインスタンスを1つ持つ必要があります。 このクラスは、開いているドキュメントとワークファイルの監視を行います。 の動作は、 `CDataRecoveryHandler`再起動マネージャーの構成によって異なります。 詳細については、「 [CDataRecoveryHandler クラス](../../mfc/reference/cdatarecoveryhandler-class.md)」を参照してください。
+再起動マネージャーを使用する各アプリケーションは、 [CDataRecoveryHandler クラス](../../mfc/reference/cdatarecoveryhandler-class.md)のインスタンスを1つ持つ必要があります。 このクラスは、開いているドキュメントとワークファイルの監視を行います。 `CDataRecoveryHandler` の動作は、再起動マネージャーの構成によって異なります。 詳細については、「 [CDataRecoveryHandler クラス](../../mfc/reference/cdatarecoveryhandler-class.md)」を参照してください。
 
 このメソッドは、Windows Vista より前のオペレーティングシステムでは NULL を返します。 再起動マネージャーは、Windows Vista より前のオペレーティングシステムではサポートされていません。
 
@@ -798,7 +798,7 @@ POSITION GetFirstDocTemplatePosition() const;
 
 反復またはオブジェクトポインターの取得に使用できる位置の値。リストが空の場合は NULL です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 [GetNextDocTemplate](#getnextdoctemplate)の呼び出しで返される位置の値を使用して、最初の[CDocTemplate](../../mfc/reference/cdoctemplate-class.md)オブジェクトを取得します。
 
@@ -824,16 +824,16 @@ CDocTemplate* GetNextDocTemplate(POSITION& pos) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*po*<br/>
-または`GetNextDocTemplate` [getfirstdoctemplateposition](#getfirstdoctemplateposition)への前回の呼び出しによって返された位置の値への参照。 値は、この呼び出しによって次の位置に更新されます。
+*pos*<br/>
+`GetNextDocTemplate` または[Getfirstdoctemplateposition](#getfirstdoctemplateposition)の前回の呼び出しによって返された位置の値への参照。 値は、この呼び出しによって次の位置に更新されます。
 
 ### <a name="return-value"></a>戻り値
 
 [CDocTemplate](../../mfc/reference/cdoctemplate-class.md)オブジェクトへのポインター。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-`GetNextDocTemplate` を`GetFirstDocTemplatePosition`呼び出して最初の位置を設定する場合は、前方反復ループでを使用できます。
+`GetFirstDocTemplatePosition`を呼び出すことによって最初の位置を設定する場合は、前方反復ループで `GetNextDocTemplate` を使用できます。
 
 位置の値が有効であることを確認する必要があります。 無効な場合は、Microsoft Foundation Class ライブラリのデバッグバージョンがアサートされます。
 
@@ -856,7 +856,7 @@ BOOL GetPrinterDeviceDefaults(struct tagPDA* pPrintDlg);
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 Windows から現在のプリンターの既定値を取得します。必要に応じて INI ファイルを使用するか、印刷設定でユーザーによって設定された最後のプリンター構成を使用します。
 
@@ -894,12 +894,12 @@ BOOL GetProfileBinary(
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 このメンバー関数は大文字と小文字が区別されないので、場合によっては、 *Lpszsection*および*lpszEntry*パラメーター内の文字列が異なる場合があります。
 
 > [!NOTE]
-> `GetProfileBinary`バッファーを割り当て、そのアドレスを\* *ppdata*に返します。 呼び出し元は、 **delete []** を使用してバッファーを解放します。
+> `GetProfileBinary` によってバッファーが割り当てられ、そのアドレスが \* *Ppdata*に返されます。 呼び出し元は、 **delete []** を使用してバッファーを解放します。
 
 > [!IMPORTANT]
 > この関数が返すデータは、NULL で終わるデータとは限らないため、呼び出し元で検証を行う必要があります。 詳しくは、「 [バッファー オーバーランの回避](/windows/win32/SecBP/avoiding-buffer-overruns)」をご覧ください。
@@ -938,7 +938,7 @@ UINT GetProfileInt(
 
 このメンバー関数は .INI ファイル内の値として 16 進表記をサポートします。 符号付き整数を取得する場合は、値を**int**にキャストする必要があります。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 このメンバー関数は大文字と小文字が区別されないので、場合によっては、 *Lpszsection*および*lpszEntry*パラメーター内の文字列が異なる場合があります。
 
@@ -951,7 +951,7 @@ UINT GetProfileInt(
 
 その他の例については、「 [CWinApp:: WriteProfileInt](#writeprofileint)」を参照してください。
 
-##  <a name="getprofilestring"></a>  CWinApp::GetProfileString
+##  <a name="getprofilestring"></a>CWinApp:: GetProfileString
 
 このメンバー関数を呼び出して、アプリケーションのレジストリまたはの指定したセクション内のエントリに関連付けられている文字列を取得します。INI ファイル。
 
@@ -975,9 +975,9 @@ CString GetProfileString(
 
 ### <a name="return-value"></a>戻り値
 
-戻り値は、アプリケーションのの文字列です。INI ファイルまたは*Lpszdefault* (文字列が見つからない場合)。 フレームワークでサポートされる文字列の最大長は _MAX_PATH です。 *Lpszdefault*が NULL の場合、戻り値は空の文字列になります。
+戻り値は、アプリケーションのの文字列です。INI ファイルまたは*Lpszdefault* (文字列が見つからない場合)。 フレームワークでサポートされている文字列の最大長は _MAX_PATH です。 *Lpszdefault*が NULL の場合、戻り値は空の文字列になります。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 > [!IMPORTANT]
 > この関数が返すデータは、NULL で終わるデータとは限らないため、呼び出し元で検証を行う必要があります。 詳しくは、「 [バッファー オーバーランの回避](/windows/win32/SecBP/avoiding-buffer-overruns)」をご覧ください。
@@ -988,9 +988,9 @@ CString GetProfileString(
 
 別の例については、「 [CWinApp:: GetProfileInt](#getprofileint)」の例を参照してください。
 
-##  <a name="getsectionkey"></a>  CWinApp::GetSectionKey
+##  <a name="getsectionkey"></a>CWinApp:: GetSectionKey
 
-HKEY_CURRENT_USER\\"software" \ registrykey\ appname lpszsectionのキーを返します。
+\\"Software" \ Registrykey\ appHKEY_CURRENT_USER のキーを返します。
 
 ```
 HKEY GetSectionKey(
@@ -1004,15 +1004,15 @@ HKEY GetSectionKey(
 取得するキーの名前。
 
 *pTM*<br/>
-オブジェクトへの`CAtlTransactionManager`ポインター。
+`CAtlTransactionManager` オブジェクトへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
 関数が成功した場合はセクションキー。それ以外の場合は NULL。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-##  <a name="hideapplication"></a>  CWinApp::HideApplication
+##  <a name="hideapplication"></a>CWinApp:: HideApplication
 
 開いているドキュメントを閉じる前に、アプリケーションを非表示にするには、このメンバー関数を呼び出します。
 
@@ -1020,7 +1020,7 @@ HKEY GetSectionKey(
 void HideApplication();
 ```
 
-##  <a name="htmlhelp"></a>  CWinApp::HtmlHelp
+##  <a name="htmlhelp"></a>CWinApp:: Html
 
 このメンバー関数を呼び出して、Html ヘルプアプリケーションを呼び出します。
 
@@ -1033,18 +1033,18 @@ virtual void HtmlHelp(
 ### <a name="parameters"></a>パラメーター
 
 *dwData*<br/>
-追加データを指定します。 使用される値は、 *Ncmd*パラメーターの値によって異なります。 既定値`0x000F`は[HH_HELP_CONTEXT](/previous-versions/windows/desktop/htmlhelp/hh-help-context-command)を意味します。
+追加データを指定します。 使用される値は、 *Ncmd*パラメーターの値によって異なります。 既定値は `0x000F` [HH_HELP_CONTEXT](/previous-versions/windows/desktop/htmlhelp/hh-help-context-command)を意味します。
 
 *nCmd*<br/>
 要求されるヘルプの種類を指定します。 使用可能な値の一覧と*Dwdata*パラメーターへの影響については、Windows SDK の[htmlhelpw](/windows/win32/api/htmlhelp/nf-htmlhelp-htmlhelpw)または[htmlhelpw](/windows/win32/api/htmlhelp/nf-htmlhelp-htmlhelpa) API 関数に記述されている*ucommand*パラメーターを参照してください。 
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 フレームワークは、この関数を呼び出して、Html ヘルプアプリケーションを呼び出します。
 
 アプリケーションが終了すると、フレームワークは自動的に Html ヘルプアプリケーションを終了します。
 
-##  <a name="initinstance"></a>  CWinApp::InitInstance
+##  <a name="initinstance"></a>CWinApp:: InitInstance
 
 Windows では、同じプログラムの複数のコピーを同時に実行できます。
 
@@ -1056,14 +1056,14 @@ virtual BOOL InitInstance();
 
 初期化が成功した場合は0以外の。それ以外の場合は0です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-アプリケーションの初期化は、概念的には、プログラムの初回実行時に実行される1回限りのアプリケーションの初期化と、プログラムのコピーが実行されるたびに実行されるインスタンスの初期化の2つのセクションに分けられます。 フレームワークのの`WinMain`実装では、この関数を呼び出します。
+アプリケーションの初期化は、概念的には、プログラムの初回実行時に実行される1回限りのアプリケーションの初期化と、プログラムのコピーが実行されるたびに実行されるインスタンスの初期化の2つのセクションに分けられます。 フレームワークの `WinMain` の実装では、この関数を呼び出します。
 
-を`InitInstance`オーバーライドして、Windows で実行されているアプリケーションの新しい各インスタンスを初期化します。 通常は、を`InitInstance`オーバーライドしてメインウィンドウオブジェクトを構築し`CWinThread::m_pMainWnd` 、そのウィンドウを指すようにデータメンバーを設定します。 このメンバー関数をオーバーライドする方法の詳細に[ついては、「CWinApp:アプリケーションクラス](../../mfc/cwinapp-the-application-class.md)。
+`InitInstance` をオーバーライドして、Windows で実行されているアプリケーションの新しい各インスタンスを初期化します。 通常は、`InitInstance` をオーバーライドしてメインウィンドウオブジェクトを作成し、そのウィンドウを指すように `CWinThread::m_pMainWnd` データメンバーを設定します。 このメンバー関数をオーバーライドする方法の詳細については、「 [CWinApp: Application クラス](../../mfc/cwinapp-the-application-class.md)」を参照してください。
 
 > [!NOTE]
-> MFC アプリケーションは、シングルスレッド アパートメント (STA) として初期化する必要があります。 `InitInstance`オーバーライドで[CoInitializeEx](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex)を呼び出した場合は、COINIT_APARTMENTTHREADED (COINIT_MULTITHREADED ではなく) を指定します。
+> MFC アプリケーションは、シングルスレッド アパートメント (STA) として初期化する必要があります。 `InitInstance` override で[CoInitializeEx](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex)を呼び出した場合は、COINIT_MULTITHREADED ではなく COINIT_APARTMENTTHREADED を指定します。
 
 ### <a name="example"></a>例
 
@@ -1079,13 +1079,13 @@ virtual BOOL IsTaskbarInteractionEnabled();
 
 ### <a name="return-value"></a>戻り値
 
-が呼び出され`EnableTaskbarInteraction`ていて、オペレーティングシステムが Windows 7 以降である場合に TRUE を返します。
+`EnableTaskbarInteraction` が呼び出されていて、オペレーティングシステムが Windows 7 以降である場合に TRUE を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 タスクバーの相互作用とは、MDI アプリケーションが、アプリケーションのタスクバーボタンの上にマウスポインターを置いたときに表示される別のタブ付きサムネイルに MDI 子のコンテンツを表示することを意味します。
 
-##  <a name="loadcursor"></a>  CWinApp::LoadCursor
+##  <a name="loadcursor"></a>CWinApp:: LoadCursor
 
 現在の実行可能ファイルから、 *nIDResource*によって指定された、 *lpszresourcename*持つという名前のカーソルリソースを読み込みます。
 
@@ -1096,7 +1096,7 @@ HCURSOR LoadCursor(LPCTSTR lpszResourceName) const;  HCURSOR LoadCursor(UINT nID
 ### <a name="parameters"></a>パラメーター
 
 *lpszResourceName*<br/>
-カーソルリソースの名前を含む null で終わる文字列を指します。 この引数には`CString` 、を使用できます。
+カーソルリソースの名前を含む null で終わる文字列を指します。 この引数には `CString` を使用できます。
 
 *nIDResource*<br/>
 カーソルリソースの ID。 リソースの一覧については、Windows SDK の「 [Loadcursor](/windows/win32/api/winuser/nf-winuser-loadcursorw) 」を参照してください。
@@ -1105,9 +1105,9 @@ HCURSOR LoadCursor(LPCTSTR lpszResourceName) const;  HCURSOR LoadCursor(UINT nID
 
 成功した場合はカーソルを処理するハンドル。それ以外の場合は NULL。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-`LoadCursor`まだ読み込まれていない場合にのみ、カーソルをメモリに読み込みます。それ以外の場合は、既存のリソースのハンドルを取得します。
+`LoadCursor` は、カーソルがまだ読み込まれていない場合にのみ、メモリに読み込まれます。それ以外の場合は、既存のリソースのハンドルを取得します。
 
 定義済みの Windows カーソルにアクセスするには、 [Loadstandardcursor](#loadstandardcursor)または[loadstandardcursor](#loadoemcursor)メンバー関数を使用します。
 
@@ -1115,7 +1115,7 @@ HCURSOR LoadCursor(LPCTSTR lpszResourceName) const;  HCURSOR LoadCursor(UINT nID
 
 [!code-cpp[NVC_MFCWindowing#44](../../mfc/reference/codesnippet/cpp/cwinapp-class_11.cpp)]
 
-##  <a name="loadicon"></a>  CWinApp::LoadIcon
+##  <a name="loadicon"></a>CWinApp:: LoadIcon
 
 実行可能ファイルから、 *nIDResource*によって指定された、 *lpszresourcename*またはという名前のアイコンリソースを読み込みます。
 
@@ -1126,7 +1126,7 @@ HICON LoadIcon(LPCTSTR lpszResourceName) const;  HICON LoadIcon(UINT nIDResource
 ### <a name="parameters"></a>パラメーター
 
 *lpszResourceName*<br/>
-アイコンリソースの名前を含む null で終わる文字列を指します。 この引数には、 `CString`を使用することもできます。
+アイコンリソースの名前を含む null で終わる文字列を指します。 この引数には `CString` を使用することもできます。
 
 *nIDResource*<br/>
 アイコンリソースの ID 番号。
@@ -1135,16 +1135,16 @@ HICON LoadIcon(LPCTSTR lpszResourceName) const;  HICON LoadIcon(UINT nIDResource
 
 成功した場合はアイコンを示すハンドル。それ以外の場合は NULL。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-`LoadIcon`まだ読み込まれていない場合にのみ、アイコンを読み込みます。それ以外の場合は、既存のリソースのハンドルを取得します。
+`LoadIcon` は、まだ読み込まれていない場合にのみ、アイコンを読み込みます。それ以外の場合は、既存のリソースのハンドルを取得します。
 
 定義済みの Windows アイコンにアクセスするには、 [LoadStandardIcon](#loadstandardicon)または[loadoemicon](#loadoemicon)メンバー関数を使用します。
 
 > [!NOTE]
-> このメンバー関数は Win32 API 関数[Loadicon](/windows/win32/api/winuser/nf-winuser-loadiconw)を呼び出します。このアイコンは、SM_CXICON および SM_CYICON システムメトリック値に対応するサイズのアイコンのみを読み込むことができます。
+> このメンバー関数は、Win32 API 関数[Loadicon](/windows/win32/api/winuser/nf-winuser-loadiconw)を呼び出します。このアイコンは、サイズが SM_CXICON と SM_CYICON システムメトリック値に準拠しているアイコンのみを読み込むことができます。
 
-##  <a name="loadoemcursor"></a>  CWinApp::LoadOEMCursor
+##  <a name="loadoemcursor"></a>CWinApp:: LoadOEMCursor
 
 *NIDCursor*によって指定された Windows の定義済みカーソルリソースを読み込みます。
 
@@ -1155,15 +1155,15 @@ HCURSOR LoadOEMCursor(UINT nIDCursor) const;
 ### <a name="parameters"></a>パラメーター
 
 *nIDCursor*<br/>
-定義済みの Windows カーソルを指定する**OCR_** manifest 定数識別子。 WINDOWS の**OCR_** 定数`#include \<afxwin.h>`にアクセスするには、の前にが`#define OEMRESOURCE`必要です。始め.
+定義済みの Windows カーソルを指定する**OCR_** マニフェスト定数識別子。 WINDOWS の**OCR_** 定数にアクセスするには、`#include \<afxwin.h>` する前に `#define OEMRESOURCE` が必要です。始め.
 
 ### <a name="return-value"></a>戻り値
 
 成功した場合はカーソルを処理するハンドル。それ以外の場合は NULL。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-定義済み`LoadOEMCursor`の Windows カーソルにアクセスするには、または[loadstandardcursor](#loadstandardcursor)メンバー関数を使用します。
+定義済みの Windows カーソルにアクセスするには、`LoadOEMCursor` または[Loadstandardcursor](#loadstandardcursor)メンバー関数を使用します。
 
 ### <a name="example"></a>例
 
@@ -1182,15 +1182,15 @@ HICON LoadOEMIcon(UINT nIDIcon) const;
 ### <a name="parameters"></a>パラメーター
 
 *nIDIcon*<br/>
-定義済みの Windows アイコンを指定する**OIC_** manifest 定数識別子。 WINDOWS の**OIC_** 定数`#include \<afxwin.h>`にアクセスするには、の前にが`#define OEMRESOURCE`必要です。始め.
+定義済みの Windows アイコンを指定する**OIC_** マニフェスト定数識別子。 WINDOWS の**OIC_** 定数にアクセスするには、`#include \<afxwin.h>` する前に `#define OEMRESOURCE` が必要です。始め.
 
 ### <a name="return-value"></a>戻り値
 
 成功した場合はアイコンを示すハンドル。それ以外の場合は NULL。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-定義済みの Windows アイコンにアクセスするには、`LoadOEMIcon` または [LoadStandardIcon](#loadstandardicon) メンバー関数を使用します。
+定義済みの Windows アイコンにアクセスするには、`LoadOEMIcon` または[LoadStandardIcon](#loadstandardicon)メンバー関数を使用します。
 
 ##  <a name="loadstandardcursor"></a>CWinApp:: LoadStandardCursor
 
@@ -1203,45 +1203,45 @@ HCURSOR LoadStandardCursor(LPCTSTR lpszCursorName) const;
 ### <a name="parameters"></a>パラメーター
 
 *Lpszカーソル名*<br/>
-定義済みの Windows カーソルを指定する**IDC_** manifest 定数識別子。 これらの識別子は WINDOWS で定義されています。始め. 次の一覧に、 *Lpszカーソル名*に使用できる定義済みの値と意味を示します。
+定義済みの Windows カーソルを指定する**IDC_** マニフェスト定数識別子。 これらの識別子は WINDOWS で定義されています。始め. 次の一覧に、 *Lpszカーソル名*に使用できる定義済みの値と意味を示します。
 
 - IDC_ARROW 標準の矢印カーソル
 
 - IDC_IBEAM 標準のテキスト挿入カーソル
 
-- Windows が時間のかかるタスクを実行するときに使用される IDC_WAIT 砂時計カーソル
+- Windows が時間のかかるタスクを実行するときに使用される砂時計カーソル IDC_WAIT
 
-- IDC_CROSS クロスヘアカーソルを選択します
+- 選択範囲の十字線カーソルを IDC_CROSS
 
-- IDC_UPARROW をポイントする矢印
+- IDC_UPARROW 矢印をポイントする
 
-- IDC_SIZE は廃止され、サポートされていません。IDC_SIZEALL を使用する
+- IDC_SIZE 互換性のために残されています。IDC_SIZEALL を使用する
 
-- IDC_SIZEALL 4 つの矢印を指します。 ウィンドウのサイズを変更するために使用するカーソル。
+- 4つの矢印を IDC_SIZEALL ます。 ウィンドウのサイズを変更するために使用するカーソル。
 
-- IDC_ICON Obsolete およびサポートされていません。 IDC_ARROW を使用します。
+- IDC_ICON 互換性のために残されています。 IDC_ARROW を使用します。
 
-- 左上と右下で両端を持つ2方向矢印を IDC_SIZENWSE します。
+- 左上と右下に両端がある双方向矢印 IDC_SIZENWSE
 
-- IDC_SIZENESW の右上隅と左下にある双方向矢印
+- 右上隅と左下にある双方向矢印 IDC_SIZENESW
 
-- IDC_SIZEWE 横方向双方向矢印
+- 左右双方向矢印を IDC_SIZEWE
 
-- IDC_SIZENS Vertical 双方向矢印
+- 垂直方向の2方向矢印を IDC_SIZENS
 
 ### <a name="return-value"></a>戻り値
 
 成功した場合はカーソルを処理するハンドル。それ以外の場合は NULL。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-定義済み`LoadStandardCursor`の Windows カーソルにアクセスするには、または[loadoemcursor](#loadoemcursor)メンバー関数を使用します。
+定義済みの Windows カーソルにアクセスするには、`LoadStandardCursor` または[Loadoemcursor](#loadoemcursor)メンバー関数を使用します。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFCWindowing#47](../../mfc/reference/codesnippet/cpp/cwinapp-class_14.cpp)]
 
-##  <a name="loadstandardicon"></a>  CWinApp::LoadStandardIcon
+##  <a name="loadstandardicon"></a>CWinApp:: LoadStandardIcon
 
 *Lpsziconname*によって指定された Windows 定義済みのアイコンリソースを読み込みます。
 
@@ -1258,11 +1258,11 @@ HICON LoadStandardIcon(LPCTSTR lpszIconName) const;
 
 成功した場合はアイコンを示すハンドル。それ以外の場合は NULL。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-定義済み`LoadStandardIcon`の Windows アイコンにアクセスするには、または[loadoemicon](#loadoemicon)メンバー関数を使用します。
+定義済みの Windows アイコンにアクセスするには、`LoadStandardIcon` または[Loadoemicon](#loadoemicon)メンバー関数を使用します。
 
-##  <a name="loadstdprofilesettings"></a>  CWinApp::LoadStdProfileSettings
+##  <a name="loadstdprofilesettings"></a>CWinApp:: LoadStdProfileSettings
 
 このメンバー関数を[InitInstance](#initinstance)メンバー関数内から呼び出して、最近使用した (MRU) ファイルと最後のプレビュー状態の一覧を有効にし、読み込みます。
 
@@ -1275,7 +1275,7 @@ void LoadStdProfileSettings(UINT nMaxMRU = _AFX_MRU_COUNT);
 *nMaxMRU*<br/>
 追跡する最近使用したファイルの数。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 *Nmaxmru*が0の場合、mru リストは保持されません。
 
@@ -1287,9 +1287,9 @@ void LoadStdProfileSettings(UINT nMaxMRU = _AFX_MRU_COUNT);
 BOOL m_bHelpMode;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-ヘルプコンテキストモードでは、カーソルは疑問符になり、ユーザーは画面に移動できます。 ヘルプモードでの特別な処理を実装する場合は、このフラグを調べます。 `m_bHelpMode`は、BOOL 型のパブリック変数です。
+ヘルプコンテキストモードでは、カーソルは疑問符になり、ユーザーは画面に移動できます。 ヘルプモードでの特別な処理を実装する場合は、このフラグを調べます。 `m_bHelpMode` は、BOOL 型のパブリック変数です。
 
 ##  <a name="m_dwrestartmanagersupportflags"></a>CWinApp:: m_dwRestartManagerSupportFlags
 
@@ -1299,35 +1299,35 @@ BOOL m_bHelpMode;
 DWORD m_dwRestartManagerSupportFlags;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-再起動マネージャーを有効にする`m_dwRestartManagerSupportFlags`には、を目的の動作に設定します。 次の表は、使用可能なフラグを示しています。
+再起動マネージャーを有効にするには、`m_dwRestartManagerSupportFlags` を目的の動作に設定します。 次の表は、使用可能なフラグを示しています。
 
 |||
 |-|-|
 |フラグ|説明|
 |AFX_RESTART_MANAGER_SUPPORT_RESTART|アプリケーションは、 [CWinApp:: RegisterWithRestartManager](#registerwithrestartmanager)を使用して登録されます。 再起動マネージャーは、予期せず終了した場合に、アプリケーションを再起動する役割を担います。|
-|- AFX_RESTART_MANAGER_SUPPORT_RECOVERY|アプリケーションは再起動マネージャーに登録され、再起動マネージャーはアプリケーションを再起動するときに、回復コールバック関数を呼び出します。 既定の回復コールバック関数は、 [CWinApp:: ApplicationRecoveryCallback](#applicationrecoverycallback)です。|
-|- AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART|自動保存が有効になり、再起動マネージャーによって、アプリケーションの再起動時に開いているすべてのドキュメントが自動保存されます。|
-|- AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL|自動保存が有効になり、再起動マネージャーは開いているドキュメントを一定の間隔で自動保存します。 間隔は、 [CWinApp:: m_nAutosaveInterval](#m_nautosaveinterval)で定義されます。|
-|- AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES|再起動マネージャーは、予期しない終了からアプリケーションを再起動した後、以前に開いていたドキュメントを開きます。 [CDataRecoveryHandler クラス](../../mfc/reference/cdatarecoveryhandler-class.md)は、開いているドキュメントの一覧を格納し、それらを復元します。|
-|- AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES|再起動マネージャーは、アプリケーションの再起動後に、自動保存されたファイルを復元するようにユーザーに要求します。 クラス`CDataRecoveryHandler`は、ユーザーに対してクエリを行います。|
-|- AFX_RESTART_MANAGER_SUPPORT_NO_AUTOSAVE|AFX_RESTART_MANAGER_SUPPORT_RESTART、AFX_RESTART_MANAGER_SUPPORT_RECOVER、および AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES の和集合。|
-|- AFX_RESTART_MANAGER_SUPPORT_ALL_ASPECTS|AFX_RESTART_MANAGER_SUPPORT_NO_AUTOSAVE、AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART、AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL、および AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES の和集合。|
-|- AFX_RESTART_MANAGER_SUPPORT_RESTART_ASPECTS|AFX_RESTART_MANAGER_SUPPORT_RESTART、AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART、AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES、および AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES の和集合。|
-|- AFX_RESTART_MANAGER_SUPPORT_RECOVERY_ASPECTS|Union ofAFX_RESTART_MANAGER_SUPPORT_RECOVERY、AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL、AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES、および AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES。|
+|-AFX_RESTART_MANAGER_SUPPORT_RECOVERY|アプリケーションは再起動マネージャーに登録され、再起動マネージャーはアプリケーションを再起動するときに、回復コールバック関数を呼び出します。 既定の回復コールバック関数は、 [CWinApp:: ApplicationRecoveryCallback](#applicationrecoverycallback)です。|
+|-AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART|自動保存が有効になり、再起動マネージャーによって、アプリケーションの再起動時に開いているすべてのドキュメントが自動保存されます。|
+|-AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL|自動保存が有効になり、再起動マネージャーは開いているドキュメントを一定の間隔で自動保存します。 この間隔は、 [CWinApp:: m_nAutosaveInterval](#m_nautosaveinterval)によって定義されます。|
+|-AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES|再起動マネージャーは、予期しない終了からアプリケーションを再起動した後、以前に開いていたドキュメントを開きます。 [CDataRecoveryHandler クラス](../../mfc/reference/cdatarecoveryhandler-class.md)は、開いているドキュメントの一覧を格納し、それらを復元します。|
+|-AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES|再起動マネージャーは、アプリケーションの再起動後に、自動保存されたファイルを復元するようにユーザーに要求します。 `CDataRecoveryHandler` クラスは、ユーザーを照会します。|
+|-AFX_RESTART_MANAGER_SUPPORT_NO_AUTOSAVE|AFX_RESTART_MANAGER_SUPPORT_RESTART、AFX_RESTART_MANAGER_SUPPORT_RECOVER、および AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES の和集合。|
+|-AFX_RESTART_MANAGER_SUPPORT_ALL_ASPECTS|AFX_RESTART_MANAGER_SUPPORT_NO_AUTOSAVE、AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART、AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL、および AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES の和集合。|
+|-AFX_RESTART_MANAGER_SUPPORT_RESTART_ASPECTS|AFX_RESTART_MANAGER_SUPPORT_RESTART、AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART、AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES、および AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES の和集合。|
+|-AFX_RESTART_MANAGER_SUPPORT_RECOVERY_ASPECTS|Union ofAFX_RESTART_MANAGER_SUPPORT_RECOVERY、AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL、AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES、および AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES。|
 
 ##  <a name="m_ehelptype"></a>CWinApp:: m_eHelpType
 
-このデータメンバーの型は、 `CWinApp`クラス内で定義されている列挙型 AFX_HELP_TYPE です。
+このデータメンバーの型は AFX_HELP_TYPE 列挙型であり、`CWinApp` クラス内で定義されます。
 
 ```
 AFX_HELP_TYPE m_eHelpType;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-AFX_HELP_TYPE 列挙体は次のように定義されています。
+AFX_HELP_TYPE 列挙体は次のように定義されます。
 
 ```
 enum AFX_HELP_TYPE {
@@ -1336,21 +1336,21 @@ enum AFX_HELP_TYPE {
     };
 ```
 
-- アプリケーションのヘルプを HTML ヘルプに設定するには、 [Sei pmode](#sethelpmode)を`afxHTMLHelp`呼び出し、を指定します。
+- アプリケーションのヘルプを HTML ヘルプに設定するには、 [Sei pmode](#sethelpmode)を呼び出し、`afxHTMLHelp`を指定します。
 
-- アプリケーションのヘルプを WinHelp に設定するには`SetHelpMode` 、を`afxWinHelp`呼び出し、を指定します。
+- アプリケーションのヘルプを WinHelp に設定するには、`SetHelpMode` を呼び出し、`afxWinHelp`を指定します。
 
-##  <a name="m_hinstance"></a>  CWinApp::m_hInstance
+##  <a name="m_hinstance"></a>CWinApp:: m_hInstance
 
-Windows によってに`WinMain`渡される hInstance パラメーターに対応します。
+`WinMain`に Windows によって渡される*hInstance*パラメーターに対応します。
 
 ```
 HINSTANCE m_hInstance;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-`m_hInstance`データメンバーは、Windows で実行されているアプリケーションの現在のインスタンスへのハンドルです。 これは、グローバル関数[AfxGetInstanceHandle](application-information-and-management.md#afxgetinstancehandle)によって返されます。 `m_hInstance`は、HINSTANCE 型のパブリック変数です。
+`m_hInstance` データメンバーは、Windows で実行されているアプリケーションの現在のインスタンスへのハンドルです。 これは、グローバル関数[AfxGetInstanceHandle](application-information-and-management.md#afxgetinstancehandle)によって返されます。 `m_hInstance` は、HINSTANCE 型のパブリック変数です。
 
 ### <a name="example"></a>例
 
@@ -1358,15 +1358,15 @@ HINSTANCE m_hInstance;
 
 ##  <a name="m_lpcmdline"></a>CWinApp:: m_lpCmdLine
 
-Windows によってに`WinMain`渡される lpCmdLine パラメーターに対応します。
+`WinMain`に Windows によって渡される*lpCmdLine*パラメーターに対応します。
 
 ```
 LPTSTR m_lpCmdLine;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-アプリケーションのコマンドラインを指定する null で終わる文字列を指します。 アプリケーション`m_lpCmdLine`の起動時にユーザーが入力したコマンドライン引数にアクセスするには、を使用します。 `m_lpCmdLine`は、LPTSTR 型のパブリック変数です。
+アプリケーションのコマンドラインを指定する null で終わる文字列を指します。 アプリケーションの起動時にユーザーが入力したコマンドライン引数にアクセスするには、`m_lpCmdLine` を使用します。 `m_lpCmdLine` は、LPTSTR 型のパブリック変数です。
 
 ### <a name="example"></a>例
 
@@ -1380,21 +1380,21 @@ LPTSTR m_lpCmdLine;
 int m_nAutosaveInterval;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 開いているドキュメントを設定した間隔で自動保存するように再起動マネージャーを構成できます。 アプリケーションがファイルを自動保存しない場合、このパラメーターは無効です。
 
-##  <a name="m_ncmdshow"></a>  CWinApp::m_nCmdShow
+##  <a name="m_ncmdshow"></a>CWinApp:: m_nCmdShow
 
-Windows によってに`WinMain`渡される*ncmdshow*パラメーターに対応します。
+Windows によって `WinMain`に渡される*Ncmdshow*パラメーターに対応します。
 
 ```
 int m_nCmdShow;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-アプリケーションのメイン`m_nCmdShow`ウィンドウに対して[CWnd:: ShowWindow](../../mfc/reference/cwnd-class.md#showwindow)を呼び出す場合は、を引数として渡す必要があります。 `m_nCmdShow`**int**型のパブリック変数です。
+アプリケーションのメインウィンドウに対して[CWnd:: ShowWindow](../../mfc/reference/cwnd-class.md#showwindow)を呼び出す場合は、引数として `m_nCmdShow` を渡す必要があります。 `m_nCmdShow` は**int**型のパブリック変数です。
 
 ### <a name="example"></a>例
 
@@ -1404,13 +1404,13 @@ int m_nCmdShow;
 
 OLE サーバーアプリケーションが埋め込み先でアクティブになっている OLE コンテナーアプリケーションのメインウィンドウへのポインターを格納するには、このデータメンバーを使用します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 このデータメンバーが NULL の場合、アプリケーションはアクティブな状態ではありません。
 
 フレームワークは、フレームウィンドウが OLE コンテナーアプリケーションによって埋め込み先に配置されている場合に、このメンバー変数を設定します。
 
-##  <a name="m_pdatarecoveryhandler"></a>  CWinApp::m_pDataRecoveryHandler
+##  <a name="m_pdatarecoveryhandler"></a>CWinApp:: m_pDataRecoveryHandler
 
 アプリケーションのデータ復旧ハンドラーへのポインター。
 
@@ -1418,26 +1418,26 @@ OLE サーバーアプリケーションが埋め込み先でアクティブに�
 CDataRecoveryHandler* m_pDataRecoveryHandler;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 アプリケーションのデータ回復ハンドラーは、開いているドキュメントを監視し、それらを自動保存します。 フレームワークは、予期せずに終了した後にアプリケーションが再起動したときに、データ回復ハンドラーを使用して自動保存されたファイルを復元します。 詳細については、「 [CDataRecoveryHandler クラス](../../mfc/reference/cdatarecoveryhandler-class.md)」を参照してください。
 
-##  <a name="m_pszappname"></a>  CWinApp::m_pszAppName
+##  <a name="m_pszappname"></a>CWinApp:: m_pszAppName
 
-アプリケーション名を示します。
+アプリケーションの名前を指定します。
 
 ```
 LPCTSTR m_pszAppName;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-アプリケーション名は、 [CWinApp](#cwinapp)コンストラクターに渡されたパラメーターから取得できます。または、指定されていない場合は、ID が AFX_IDS_APP_TITLE のリソース文字列になります。 アプリケーション名がリソース内に見つからない場合は、プログラムのから取得されます。EXE ファイル名。
+アプリケーション名は、 [CWinApp](#cwinapp)コンストラクターに渡されたパラメーターから取得できます。指定されていない場合は、AFX_IDS_APP_TITLE の ID を持つリソース文字列になります。 アプリケーション名がリソース内に見つからない場合は、プログラムのから取得されます。EXE ファイル名。
 
-グローバル関数[AfxGetAppName](application-information-and-management.md#afxgetappname)によって返されます。 `m_pszAppName`**const char**<strong>\*</strong>型のパブリック変数です。
+グローバル関数[AfxGetAppName](application-information-and-management.md#afxgetappname)によって返されます。 `m_pszAppName` は**const char** <strong>\*</strong>型のパブリック変数です。
 
 > [!NOTE]
-> に`m_pszAppName`値を割り当てた場合は、ヒープに動的に割り当てられる必要があります。 デストラクター `CWinApp`は、このポインターを使用して**free**() を呼び出します。 多くの`_tcsdup`場合、() ランタイムライブラリ関数を使用して割り当てを実行します。 また、新しい値を割り当てる前に、現在のポインターに関連付けられているメモリを解放します。 例:
+> `m_pszAppName`に値を割り当てた場合は、ヒープに動的に割り当てられる必要があります。 `CWinApp` デストラクターは、このポインターを使用して**free**() を呼び出します。 多くの場合、割り当てを行うには、`_tcsdup`() ランタイムライブラリ関数を使用します。 また、新しい値を割り当てる前に、現在のポインターに関連付けられているメモリを解放します。 例 :
 
 [!code-cpp[NVC_MFCWindowing#57](../../mfc/reference/codesnippet/cpp/cwinapp-class_18.cpp)]
 
@@ -1445,7 +1445,7 @@ LPCTSTR m_pszAppName;
 
 [!code-cpp[NVC_MFCWindowing#65](../../mfc/reference/codesnippet/cpp/cwinapp-class_19.cpp)]
 
-##  <a name="m_pszexename"></a>  CWinApp::m_pszExeName
+##  <a name="m_pszexename"></a>CWinApp:: m_pszExeName
 
 拡張子のないアプリケーションの実行可能ファイルの名前を格納します。
 
@@ -1453,12 +1453,12 @@ LPCTSTR m_pszAppName;
 LPCTSTR m_pszExeName;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-[M_pszAppName](#m_pszappname)とは異なり、この名前に空白を含めることはできません。 `m_pszExeName`**const char**<strong>\*</strong>型のパブリック変数です。
+[M_pszAppName](#m_pszappname)とは異なり、この名前に空白を含めることはできません。 `m_pszExeName` は**const char** <strong>\*</strong>型のパブリック変数です。
 
 > [!NOTE]
-> に`m_pszExeName`値を割り当てた場合は、ヒープに動的に割り当てられる必要があります。 デストラクター `CWinApp`は、このポインターを使用して**free**() を呼び出します。 多くの`_tcsdup`場合、() ランタイムライブラリ関数を使用して割り当てを実行します。 また、新しい値を割り当てる前に、現在のポインターに関連付けられているメモリを解放します。 例:
+> `m_pszExeName`に値を割り当てた場合は、ヒープに動的に割り当てられる必要があります。 `CWinApp` デストラクターは、このポインターを使用して**free**() を呼び出します。 多くの場合、割り当てを行うには、`_tcsdup`() ランタイムライブラリ関数を使用します。 また、新しい値を割り当てる前に、現在のポインターに関連付けられているメモリを解放します。 例 :
 
 [!code-cpp[NVC_MFCWindowing#58](../../mfc/reference/codesnippet/cpp/cwinapp-class_20.cpp)]
 
@@ -1470,16 +1470,16 @@ LPCTSTR m_pszExeName;
 LPCTSTR m_pszHelpFilePath;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-既定では、フレームワークは`m_pszHelpFilePath` 、アプリケーションの名前に "" を指定して初期化します。HLP "が追加されています。 ヘルプファイルの名前を変更するには、 `m_pszHelpFilePath`をに設定して、目的のヘルプファイルの完全な名前を含む文字列を指定します。 これを行うための便利な場所は、アプリケーションの[InitInstance](#initinstance)関数です。 `m_pszHelpFilePath`**const char**<strong>\*</strong>型のパブリック変数です。
+既定では、フレームワークは `m_pszHelpFilePath` を "でアプリケーションの名前に初期化します。HLP "が追加されています。 ヘルプファイルの名前を変更するには、`m_pszHelpFilePath` を、目的のヘルプファイルの完全な名前を含む文字列を指すように設定します。 これを行うための便利な場所は、アプリケーションの[InitInstance](#initinstance)関数です。 `m_pszHelpFilePath` は**const char** <strong>\*</strong>型のパブリック変数です。
 
 > [!NOTE]
-> に`m_pszHelpFilePath`値を割り当てた場合は、ヒープに動的に割り当てられる必要があります。 デストラクター `CWinApp`は、このポインターを使用して**free**() を呼び出します。 多くの`_tcsdup`場合、() ランタイムライブラリ関数を使用して割り当てを実行します。 また、新しい値を割り当てる前に、現在のポインターに関連付けられているメモリを解放します。 例:
+> `m_pszHelpFilePath`に値を割り当てた場合は、ヒープに動的に割り当てられる必要があります。 `CWinApp` デストラクターは、このポインターを使用して**free**() を呼び出します。 多くの場合、割り当てを行うには、`_tcsdup`() ランタイムライブラリ関数を使用します。 また、新しい値を割り当てる前に、現在のポインターに関連付けられているメモリを解放します。 例 :
 
 [!code-cpp[NVC_MFCWindowing#59](../../mfc/reference/codesnippet/cpp/cwinapp-class_21.cpp)]
 
-##  <a name="m_pszprofilename"></a>  CWinApp::m_pszProfileName
+##  <a name="m_pszprofilename"></a>CWinApp:: m_pszProfileName
 
 アプリケーションのの名前を格納します。INI ファイル。
 
@@ -1487,12 +1487,12 @@ LPCTSTR m_pszHelpFilePath;
 LPCTSTR m_pszProfileName;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-`m_pszProfileName`**const char**<strong>\*</strong>型のパブリック変数です。
+`m_pszProfileName` は**const char** <strong>\*</strong>型のパブリック変数です。
 
 > [!NOTE]
-> に`m_pszProfileName`値を割り当てた場合は、ヒープに動的に割り当てられる必要があります。 デストラクター `CWinApp`は、このポインターを使用して**free**() を呼び出します。 多くの`_tcsdup`場合、() ランタイムライブラリ関数を使用して割り当てを実行します。 また、新しい値を割り当てる前に、現在のポインターに関連付けられているメモリを解放します。 例:
+> `m_pszProfileName`に値を割り当てた場合は、ヒープに動的に割り当てられる必要があります。 `CWinApp` デストラクターは、このポインターを使用して**free**() を呼び出します。 多くの場合、割り当てを行うには、`_tcsdup`() ランタイムライブラリ関数を使用します。 また、新しい値を割り当てる前に、現在のポインターに関連付けられているメモリを解放します。 例 :
 
 [!code-cpp[NVC_MFCWindowing#60](../../mfc/reference/codesnippet/cpp/cwinapp-class_22.cpp)]
 
@@ -1504,17 +1504,17 @@ LPCTSTR m_pszProfileName;
 LPCTSTR m_pszRegistryKey;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 通常、このデータメンバーは読み取り専用として扱われます。
 
-- 値はレジストリキーに格納されます。 アプリケーションプロファイル設定の名前は、次のレジストリキーに追加されます。HKEY_CURRENT_USER/Software/LocalAppWizard-Generated/。
+- 値はレジストリキーに格納されます。 アプリケーションプロファイル設定の名前は、次のレジストリキーに追加されます: HKEY_CURRENT_USER/Software/LocalAppWizard-Generated/.
 
-に`m_pszRegistryKey`値を割り当てた場合は、ヒープに動的に割り当てられる必要があります。 デストラクター `CWinApp`は、このポインターを使用して**free**() を呼び出します。 多くの`_tcsdup`場合、() ランタイムライブラリ関数を使用して割り当てを実行します。 また、新しい値を割り当てる前に、現在のポインターに関連付けられているメモリを解放します。 例:
+`m_pszRegistryKey`に値を割り当てた場合は、ヒープに動的に割り当てられる必要があります。 `CWinApp` デストラクターは、このポインターを使用して**free**() を呼び出します。 多くの場合、割り当てを行うには、`_tcsdup`() ランタイムライブラリ関数を使用します。 また、新しい値を割り当てる前に、現在のポインターに関連付けられているメモリを解放します。 例 :
 
 [!code-cpp[NVC_MFCWindowing#61](../../mfc/reference/codesnippet/cpp/cwinapp-class_23.cpp)]
 
-##  <a name="m_pszappid"></a>  CWinApp::m_pszAppID
+##  <a name="m_pszappid"></a>CWinApp:: m_pszAppID
 
 アプリケーションユーザーモデル ID。
 
@@ -1522,9 +1522,9 @@ LPCTSTR m_pszRegistryKey;
 LPCTSTR m_pszAppID;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-##  <a name="oncontexthelp"></a>  CWinApp::OnContextHelp
+##  <a name="oncontexthelp"></a>CWinApp:: OnContextHelp
 
 アプリケーション内の SHIFT + F1 ヘルプを処理します。
 
@@ -1532,13 +1532,13 @@ LPCTSTR m_pszAppID;
 afx_msg void OnContextHelp();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-このメンバー関数を`ON_COMMAND( ID_CONTEXT_HELP, OnContextHelp )`有効にする`CWinApp`には、クラスメッセージマップにステートメントを追加し、アクセラレータテーブルエントリ (通常は SHIFT + F1 キー) も追加する必要があります。
+このメンバー関数を有効にするには、`ON_COMMAND( ID_CONTEXT_HELP, OnContextHelp )` ステートメントを `CWinApp` クラスのメッセージマップに追加し、アクセラレータテーブルのエントリ (通常は SHIFT + F1 キー) を追加する必要があります。
 
-`OnContextHelp`アプリケーションをヘルプモードにします。 カーソルが矢印と疑問符に変わり、ユーザーはマウスポインターを移動し、マウスの左ボタンを押して、ダイアログボックス、ウィンドウ、メニュー、またはコマンドボタンを選択できます。 このメンバー関数は、カーソルの下にあるオブジェクトのヘルプコンテキストを取得し、そのヘルプコンテキストを使用して Windows 関数 WinHelp を呼び出します。
+`OnContextHelp` は、アプリケーションをヘルプモードにします。 カーソルが矢印と疑問符に変わり、ユーザーはマウスポインターを移動し、マウスの左ボタンを押して、ダイアログボックス、ウィンドウ、メニュー、またはコマンドボタンを選択できます。 このメンバー関数は、カーソルの下にあるオブジェクトのヘルプコンテキストを取得し、そのヘルプコンテキストを使用して Windows 関数 WinHelp を呼び出します。
 
-##  <a name="onddecommand"></a>  CWinApp::OnDDECommand
+##  <a name="onddecommand"></a>CWinApp:: OnDDECommand
 
 メインフレームウィンドウが DDE 実行メッセージを受信すると、フレームワークによって呼び出されます。
 
@@ -1555,7 +1555,7 @@ virtual BOOL OnDDECommand(LPTSTR lpszCommand);
 
 コマンドが処理される場合は0以外の。それ以外の場合は0です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 既定の実装は、コマンドがドキュメントを開く要求であるかどうかを確認し、存在する場合は、指定されたドキュメントを開きます。 通常、Windows ファイルマネージャーは、ユーザーがデータファイルをダブルクリックしたときに、このような DDE コマンド文字列を送信します。 この関数をオーバーライドして、他の DDE 実行コマンド (印刷するコマンドなど) を処理します。
 
@@ -1563,7 +1563,7 @@ virtual BOOL OnDDECommand(LPTSTR lpszCommand);
 
 [!code-cpp[NVC_MFCWindowing#48](../../mfc/reference/codesnippet/cpp/cwinapp-class_24.cpp)]
 
-##  <a name="onfilenew"></a>  CWinApp::OnFileNew
+##  <a name="onfilenew"></a>CWinApp:: OnFileNew
 
 ID_FILE_NEW コマンドを実装します。
 
@@ -1571,9 +1571,9 @@ ID_FILE_NEW コマンドを実装します。
 afx_msg void OnFileNew();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-このメンバー関数を`ON_COMMAND( ID_FILE_NEW, OnFileNew )`有効にする`CWinApp`には、ステートメントをクラスメッセージマップに追加する必要があります。 有効になっている場合、この関数は File New コマンドの実行を処理します。
+このメンバー関数を有効にするには、`ON_COMMAND( ID_FILE_NEW, OnFileNew )` ステートメントを `CWinApp` クラスのメッセージマップに追加する必要があります。 有効になっている場合、この関数は File New コマンドの実行を処理します。
 
 既定の動作とこのメンバー関数をオーバーライドする方法については、「[テクニカルノート 22](../../mfc/tn022-standard-commands-implementation.md) 」を参照してください。
 
@@ -1583,7 +1583,7 @@ afx_msg void OnFileNew();
 
 [!code-cpp[NVC_MFCWindowing#50](../../mfc/reference/codesnippet/cpp/cwinapp-class_26.cpp)]
 
-##  <a name="onfileopen"></a>  CWinApp::OnFileOpen
+##  <a name="onfileopen"></a>CWinApp:: OnFileOpen
 
 ID_FILE_OPEN コマンドを実装します。
 
@@ -1591,9 +1591,9 @@ ID_FILE_OPEN コマンドを実装します。
 afx_msg void OnFileOpen();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-このメンバー関数を`ON_COMMAND( ID_FILE_OPEN, OnFileOpen )`有効にする`CWinApp`には、ステートメントをクラスメッセージマップに追加する必要があります。 有効になっている場合、この関数は File Open コマンドの実行を処理します。
+このメンバー関数を有効にするには、`ON_COMMAND( ID_FILE_OPEN, OnFileOpen )` ステートメントを `CWinApp` クラスのメッセージマップに追加する必要があります。 有効になっている場合、この関数は File Open コマンドの実行を処理します。
 
 既定の動作と、このメンバー関数をオーバーライドする方法に関するガイダンスについては、「[テクニカルノート 22](../../mfc/tn022-standard-commands-implementation.md)」を参照してください。
 
@@ -1603,7 +1603,7 @@ afx_msg void OnFileOpen();
 
 [!code-cpp[NVC_MFCWindowing#50](../../mfc/reference/codesnippet/cpp/cwinapp-class_26.cpp)]
 
-##  <a name="onfileprintsetup"></a>  CWinApp::OnFilePrintSetup
+##  <a name="onfileprintsetup"></a>CWinApp:: OnFilePrintSetup
 
 ID_FILE_PRINT_SETUP コマンドを実装します。
 
@@ -1611,9 +1611,9 @@ ID_FILE_PRINT_SETUP コマンドを実装します。
 afx_msg void OnFilePrintSetup();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-このメンバー関数を`ON_COMMAND( ID_FILE_PRINT_SETUP, OnFilePrintSetup )`有効にする`CWinApp`には、ステートメントをクラスメッセージマップに追加する必要があります。 有効になっている場合、この関数は、ファイル印刷コマンドの実行を処理します。
+このメンバー関数を有効にするには、`ON_COMMAND( ID_FILE_PRINT_SETUP, OnFilePrintSetup )` ステートメントを `CWinApp` クラスのメッセージマップに追加する必要があります。 有効になっている場合、この関数は、ファイル印刷コマンドの実行を処理します。
 
 既定の動作と、このメンバー関数をオーバーライドする方法に関するガイダンスについては、「[テクニカルノート 22](../../mfc/tn022-standard-commands-implementation.md)」を参照してください。
 
@@ -1623,7 +1623,7 @@ afx_msg void OnFilePrintSetup();
 
 [!code-cpp[NVC_MFCWindowing#50](../../mfc/reference/codesnippet/cpp/cwinapp-class_26.cpp)]
 
-##  <a name="onhelp"></a>  CWinApp::OnHelp
+##  <a name="onhelp"></a>CWinApp:: OnHelp
 
 アプリケーション内で F1 ヘルプを (現在のコンテキストを使って) 処理します。
 
@@ -1631,29 +1631,29 @@ afx_msg void OnFilePrintSetup();
 afx_msg void OnHelp();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 通常は、F1 キーのアクセラレータキーのエントリも追加します。 F1 キーを有効にすることは、必須条件ではなく、規則にすぎません。
 
-このメンバー関数を`ON_COMMAND( ID_HELP, OnHelp )`有効にする`CWinApp`には、ステートメントをクラスメッセージマップに追加する必要があります。 有効な場合は、ユーザーが F1 キーを押したときにフレームワークによって呼び出されます。
+このメンバー関数を有効にするには、`ON_COMMAND( ID_HELP, OnHelp )` ステートメントを `CWinApp` クラスのメッセージマップに追加する必要があります。 有効な場合は、ユーザーが F1 キーを押したときにフレームワークによって呼び出されます。
 
 このメッセージハンドラー関数の既定の実装では、現在のウィンドウ、ダイアログボックス、またはメニュー項目に対応するヘルプコンテキストが決定され、WINHELP が呼び出されます。EXCEL.EXE. コンテキストが現在使用できない場合、関数は既定のコンテキストを使用します。
 
-このメンバー関数をオーバーライドして、現在フォーカスがあるウィンドウ、ダイアログボックス、メニュー項目、またはツールバーボタン以外にヘルプコンテキストを設定します。 目的`WinHelp`のヘルプコンテキスト ID を指定してを呼び出します。
+このメンバー関数をオーバーライドして、現在フォーカスがあるウィンドウ、ダイアログボックス、メニュー項目、またはツールバーボタン以外にヘルプコンテキストを設定します。 目的のヘルプコンテキスト ID を使用して `WinHelp` を呼び出します。
 
 ##  <a name="onhelpfinder"></a>CWinApp:: OnHelpFinder
 
-ID_HELP_FINDER コマンドと ID_DEFAULT_HELP コマンドを処理します。
+ID_HELP_FINDER および ID_DEFAULT_HELP コマンドを処理します。
 
 ```
 afx_msg void OnHelpFinder();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-このメンバー関数を`ON_COMMAND( ID_HELP_FINDER, OnHelpFinder )`有効にする`CWinApp`には、ステートメントをクラスメッセージマップに追加する必要があります。 有効にした場合、フレームワークは、アプリケーションのユーザーが Help Finder コマンドを選択して標準の**HELP_FINDER**トピック`WinHelp`で呼び出すヘルプファインダーコマンドを選択すると、このメッセージハンドラー関数を呼び出します。
+このメンバー関数を有効にするには、`ON_COMMAND( ID_HELP_FINDER, OnHelpFinder )` ステートメントを `CWinApp` クラスのメッセージマップに追加する必要があります。 有効にした場合、フレームワークは、アプリケーションのユーザーが Help Finder コマンドを選択して標準**HELP_FINDER**トピックで `WinHelp` を呼び出すと、このメッセージハンドラー関数を呼び出します。
 
-##  <a name="onhelpindex"></a>  CWinApp::OnHelpIndex
+##  <a name="onhelpindex"></a>CWinApp:: OnHelpIndex
 
 ID_HELP_INDEX コマンドを処理し、既定のヘルプトピックを提供します。
 
@@ -1661,11 +1661,11 @@ ID_HELP_INDEX コマンドを処理し、既定のヘルプトピックを提供
 afx_msg void OnHelpIndex();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-このメンバー関数を`ON_COMMAND( ID_HELP_INDEX, OnHelpIndex )`有効にする`CWinApp`には、ステートメントをクラスメッセージマップに追加する必要があります。 有効にした場合、フレームワークは、アプリケーションのユーザーが標準の`WinHelp` **HELP_INDEX**トピックで呼び出される Help Index コマンドを選択したときに、このメッセージハンドラー関数を呼び出します。
+このメンバー関数を有効にするには、`ON_COMMAND( ID_HELP_INDEX, OnHelpIndex )` ステートメントを `CWinApp` クラスのメッセージマップに追加する必要があります。 有効にした場合、フレームワークは、アプリケーションのユーザーが Help Index コマンドを選択して標準**HELP_INDEX**トピックで `WinHelp` を呼び出すと、このメッセージハンドラー関数を呼び出します。
 
-##  <a name="onhelpusing"></a>  CWinApp::OnHelpUsing
+##  <a name="onhelpusing"></a>CWinApp:: OnHelpUsing
 
 ID_HELP_USING コマンドを処理します。
 
@@ -1673,11 +1673,11 @@ ID_HELP_USING コマンドを処理します。
 afx_msg void OnHelpUsing();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-このメンバー関数を`ON_COMMAND( ID_HELP_USING, OnHelpUsing )`有効にする`CWinApp`には、ステートメントをクラスメッセージマップに追加する必要があります。 フレームワークは、アプリケーションのユーザーが [Help Using] コマンドを選択して標準の`WinHelp` **HELP_HELPONHELP**トピックでアプリケーションを呼び出すときに、このメッセージハンドラー関数を呼び出します。
+このメンバー関数を有効にするには、`ON_COMMAND( ID_HELP_USING, OnHelpUsing )` ステートメントを `CWinApp` クラスのメッセージマップに追加する必要があります。 このメッセージハンドラー関数は、アプリケーションのユーザーが、標準**HELP_HELPONHELP**トピックを使用して `WinHelp` アプリケーションを呼び出すために [ヘルプ] メニューの [ヘルプ] を選択したときに呼び出されます。
 
-##  <a name="onidle"></a>  CWinApp::OnIdle
+##  <a name="onidle"></a>CWinApp:: OnIdle
 
 アイドル時間の処理を実行するには、このメンバー関数をオーバーライドします。
 
@@ -1688,42 +1688,42 @@ virtual BOOL OnIdle(LONG lCount);
 ### <a name="parameters"></a>パラメーター
 
 *lCount*<br/>
-アプリケーションのメッセージキューが`OnIdle`空のときにが呼び出されるたびに、カウンターがインクリメントされます。 このカウントは、新しいメッセージが処理されるたびに0にリセットされます。 *LCount*パラメーターを使用すると、メッセージを処理せずにアプリケーションがアイドル状態になっている時間の相対的な長さを確認できます。
+アプリケーションのメッセージキューが空のときに `OnIdle` が呼び出されるたびにインクリメントされるカウンター。 このカウントは、新しいメッセージが処理されるたびに0にリセットされます。 *LCount*パラメーターを使用すると、メッセージを処理せずにアプリケーションがアイドル状態になっている時間の相対的な長さを確認できます。
 
 ### <a name="return-value"></a>戻り値
 
 アイドル状態の処理時間を増やすには0以外。アイドル時間がこれ以上必要ない場合は0。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-`OnIdle`は、アプリケーションのメッセージキューが空のときに、既定のメッセージループで呼び出されます。 オーバーライドを使用して、独自のバックグラウンドアイドルハンドラータスクを呼び出します。
+アプリケーションのメッセージキューが空の場合、既定のメッセージループで `OnIdle` が呼び出されます。 オーバーライドを使用して、独自のバックグラウンドアイドルハンドラータスクを呼び出します。
 
-`OnIdle`は、アイドル処理時間が不要であることを示すために0を返す必要があります。 *LCount*パラメーターは、メッセージキューが`OnIdle`空のときにが呼び出されるたびに増分され、新しいメッセージが処理されるたびに0にリセットされます。 この数に基づいて、異なるアイドルルーチンを呼び出すことができます。
+`OnIdle` は0を返して、アイドル処理時間が必要ないことを示します。 *LCount*パラメーターは、メッセージキューが空のときに `OnIdle` が呼び出されるたびに増分され、新しいメッセージが処理されるたびに0にリセットされます。 この数に基づいて、異なるアイドルルーチンを呼び出すことができます。
 
 次に、アイドルループ処理の概要を示します。
 
-1. Microsoft Foundation Class ライブラリ内のメッセージループがメッセージキューを確認し、保留中のメッセージが検出さ`OnIdle`れなかった場合は、アプリケーションオブジェクトを呼び出し、 *lCount*引数として0を指定します。
+1. Microsoft Foundation Class ライブラリ内のメッセージループがメッセージキューを確認し、保留中のメッセージが検出されなかった場合は、アプリケーションオブジェクトの `OnIdle` を呼び出し、 *lCount*引数として0を指定します。
 
-2. `OnIdle`処理を実行し、0以外の値を返して、さらに処理を行うために再度呼び出す必要があることを示します。
+2. `OnIdle` はいくつかの処理を実行し、0以外の値を返して、さらに処理を行うためにもう一度呼び出す必要があることを示します。
 
-3. メッセージループは、メッセージキューを再度確認します。 保留中のメッセージがない場合は`OnIdle` 、を再度呼び出して、 *lCount*引数をインクリメントします。
+3. メッセージループは、メッセージキューを再度確認します。 保留中のメッセージがない場合は、`OnIdle` を再度呼び出して、 *lCount*引数をインクリメントします。
 
-4. 最終的に`OnIdle`は、はすべてのアイドルタスクの処理を終了し、0を返します。 これにより、メッセージキューから次`OnIdle`のメッセージが受信されるまで呼び出しを停止するようメッセージループに指示します。この時点で、引数が0に設定された状態で、アイドルサイクルが再開されます。
+4. 最終的に `OnIdle` は、すべてのアイドルタスクの処理を終了し、0を返します。 これにより、メッセージキューから次のメッセージが受信されるまで、`OnIdle` の呼び出しを停止するようメッセージループに指示します。この時点で、引数が0に設定された状態で、アイドル状態のサイクルが再開されます。
 
-アプリケーションがを返すまで`OnIdle` `OnIdle`ユーザー入力を処理できないため、時間のかかるタスクを実行しないでください。
+`OnIdle` が返されるまでアプリケーションがユーザー入力を処理できないため、`OnIdle` 中に時間のかかるタスクを実行しないでください。
 
 > [!NOTE]
-> 更新プログラムの既定`OnIdle`の実装では、メニュー項目やツールバーボタンなどのユーザーインターフェイスオブジェクトが実行され、内部データ構造のクリーンアップが実行されます。 したがって、をオーバーライド`OnIdle`する場合は、 `CWinApp::OnIdle`オーバーライドさ`lCount`れたバージョンのを使用してを呼び出す必要があります。 最初に、すべての基本クラスのアイドル処理を呼び出します (つまり、 `OnIdle`基底クラスが0を返すまで)。 基本クラスの処理が完了する前に作業を実行する必要がある場合は、基本クラスの実装を確認して、作業を行うための適切な*lCount*を選択します。
+> `OnIdle` の既定の実装では、メニュー項目やツールバーボタンなどのユーザーインターフェイスオブジェクトが更新され、内部データ構造のクリーンアップが実行されます。 したがって、`OnIdle`をオーバーライドする場合は、オーバーライドされたバージョンの `lCount` を使用して `CWinApp::OnIdle` を呼び出す必要があります。 最初に、すべての基本クラスのアイドル処理を呼び出します (つまり、基底クラス `OnIdle` が0を返すまで)。 基本クラスの処理が完了する前に作業を実行する必要がある場合は、基本クラスの実装を確認して、作業を行うための適切な*lCount*を選択します。
 
-メッセージキューからメッセージが取得されるたびに `OnIdle` を呼び出さない場合は、[CWinThreadIsIdleMessage](../../mfc/reference/cwinthread-class.md#isidlemessage) をオーバーライドできます。 アプリケーションで非常に短いタイマーが設定されている場合、またはシステムが WM_SYSTIMER メッセージを`OnIdle`送信している場合は、が繰り返し呼び出され、パフォーマンスが低下します。
+メッセージキューからメッセージが取得されるたびに `OnIdle` が呼び出されないようにするには、 [CWinThreadIsIdleMessage](../../mfc/reference/cwinthread-class.md#isidlemessage)をオーバーライドします。 アプリケーションで非常に短いタイマーが設定されている場合、またはシステムが WM_SYSTIMER メッセージを送信している場合、`OnIdle` は繰り返し呼び出され、パフォーマンスが低下します。
 
 ### <a name="example"></a>例
 
-次の2つの例は、 `OnIdle`の使用方法を示しています。 最初の例では、 *lCount*引数を使用して2つのアイドルタスクを処理し、タスクの優先順位を設定します。 最初のタスクは優先度が高く、可能な場合はいつでも実行する必要があります。 2番目のタスクは重要度が低いため、ユーザー入力に長い待ち時間がある場合にのみ実行してください。 の`OnIdle`基本クラスバージョンへの呼び出しに注意してください。 2番目の例では、優先順位の異なるアイドルタスクのグループを管理します。
+次の2つの例は、`OnIdle`の使用方法を示しています。 最初の例では、 *lCount*引数を使用して2つのアイドルタスクを処理し、タスクの優先順位を設定します。 最初のタスクは優先度が高く、可能な場合はいつでも実行する必要があります。 2番目のタスクは重要度が低いため、ユーザー入力に長い待ち時間がある場合にのみ実行してください。 `OnIdle`の基本クラスバージョンへの呼び出しに注意してください。 2番目の例では、優先順位の異なるアイドルタスクのグループを管理します。
 
 [!code-cpp[NVC_MFCWindowing#51](../../mfc/reference/codesnippet/cpp/cwinapp-class_27.cpp)]
 
-##  <a name="opendocumentfile"></a>  CWinApp::OpenDocumentFile
+##  <a name="opendocumentfile"></a>CWinApp:: OpenDocumentFile
 
 フレームワークは、このメソッドを呼び出して、アプリケーションの名前付きの[CDocument](../../mfc/reference/cdocument-class.md)ファイルを開きます。
 
@@ -1743,9 +1743,9 @@ virtual CDocument* OpenDocumentFile(
 
 ### <a name="return-value"></a>戻り値
 
-成功し`CDocument`た場合はへのポインター。それ以外の場合は NULL。
+成功した場合は `CDocument` へのポインター。それ以外の場合は NULL。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 その名前を持つドキュメントが既に開いている場合、そのドキュメントを含む最初のフレームウィンドウにフォーカスが移動します。 アプリケーションが複数のドキュメントテンプレートをサポートしている場合、フレームワークはファイル名拡張子を使用して、ドキュメントの読み込みを試みる適切なドキュメントテンプレートを検索します。 成功した場合は、ドキュメントテンプレートによって、ドキュメントのフレームウィンドウとビューが作成されます。
 
@@ -1753,7 +1753,7 @@ virtual CDocument* OpenDocumentFile(
 
 [!code-cpp[NVC_MFCWindowing#52](../../mfc/reference/codesnippet/cpp/cwinapp-class_16.cpp)]
 
-##  <a name="parsecommandline"></a>  CWinApp::ParseCommandLine
+##  <a name="parsecommandline"></a>CWinApp::P arseCommandLine
 
 このメンバー関数を呼び出してコマンドラインを解析し、パラメーターを一度に1つずつ[CCommandLineInfo::P arseparam](../../mfc/reference/ccommandlineinfo-class.md#parseparam)に送信します。
 
@@ -1766,25 +1766,25 @@ void ParseCommandLine(CCommandLineInfo& rCmdInfo);
 *rCmdInfo*<br/>
 [CCommandLineInfo](../../mfc/reference/ccommandlineinfo-class.md)オブジェクトへの参照。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-アプリケーションウィザードを使用して新しい MFC プロジェクトを開始すると、アプリケーションウィザードによっ`CCommandLineInfo`てのローカルインスタンスが作成され、 [InitInstance](#initinstance)メンバー関数でと`ParseCommandLine`が呼び出さ`ProcessShellCommand`れます。 コマンドラインは、次に示すルートに従います。
+アプリケーションウィザードを使用して新しい MFC プロジェクトを開始すると、アプリケーションウィザードによって `CCommandLineInfo`のローカルインスタンスが作成され、 [InitInstance](#initinstance)メンバー関数で `ProcessShellCommand` と `ParseCommandLine` が呼び出されます。 コマンドラインは、次に示すルートに従います。
 
-1. で`InitInstance`作成された`CCommandLineInfo`オブジェクトは、に`ParseCommandLine`渡されます。
+1. `InitInstance`で作成されると、`CCommandLineInfo` オブジェクトが `ParseCommandLine`に渡されます。
 
-2. `ParseCommandLine`次に`CCommandLineInfo::ParseParam` 、パラメーターごとに1回、を繰り返し呼び出します。
+2. `ParseCommandLine` は、パラメーターごとに1回ずつ、`CCommandLineInfo::ParseParam` を繰り返し呼び出します。
 
-3. `ParseParam` が `CCommandLineInfo` オブジェクトを塗りつぶし、[ProcessShellCommand](#processshellcommand) に渡します。
+3. `ParseParam` に `CCommandLineInfo` オブジェクトが格納され、その後[ProcessShellCommand](#processshellcommand)に渡されます。
 
-4. `ProcessShellCommand`コマンドライン引数とフラグを処理します。
+4. `ProcessShellCommand` は、コマンドライン引数とフラグを処理します。
 
-必要に応じてを`ParseCommandLine`直接呼び出すことができることに注意してください。
+必要に応じて `ParseCommandLine` を直接呼び出すことができることに注意してください。
 
 コマンドラインフラグの詳細については、「 [CCommandLineInfo:: m_nShellCommand](../../mfc/reference/ccommandlineinfo-class.md#m_nshellcommand)」を参照してください。
 
-##  <a name="pretranslatemessage"></a>  CWinApp::PreTranslateMessage
+##  <a name="pretranslatemessage"></a>CWinApp::P reTranslateMessage
 
-Windows 関数[TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage)および[DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage)にディスパッチされる前にウィンドウメッセージをフィルター処理するには、この関数をオーバーライドします。既定の実装では、アクセラレータキー変換が実行されるため`CWinApp::PreTranslateMessage`、オーバーライドされたバージョンのメンバー関数。
+この関数をオーバーライドすると、ウィンドウメッセージが Windows 関数[TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage)および[DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage)にディスパッチされる前にフィルター処理されます。既定の実装では、アクセラレータキー変換が実行されるため、オーバーライドされたバージョンで `CWinApp::PreTranslateMessage` メンバー関数を呼び出す必要があります。
 
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -1797,9 +1797,9 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 
 ### <a name="return-value"></a>戻り値
 
-メッセージがで完全に処理され`PreTranslateMessage` 、それ以上処理されない場合は0以外の。 メッセージを通常の方法で処理する必要がある場合は0。
+メッセージが `PreTranslateMessage` で完全に処理され、それ以上処理されない場合は0以外の。 メッセージを通常の方法で処理する必要がある場合は0。
 
-##  <a name="processmessagefilter"></a>  CWinApp::ProcessMessageFilter
+##  <a name="processmessagefilter"></a>CWinApp::P Roて Messagefilter
 
 フレームワークのフック関数は、このメンバー関数を呼び出して、特定の Windows メッセージをフィルター処理して応答します。
 
@@ -1821,15 +1821,15 @@ Windows[メッセージ](/windows/win32/api/winuser/ns-winuser-msg)structure へ
 
 メッセージが処理される場合は0以外の。それ以外の場合は0です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 フック関数は、アプリケーションの通常のメッセージ処理に送信される前に、イベントを処理します。
 
 この高度な機能をオーバーライドする場合は、フレームワークのフック処理を維持するために、基本クラスのバージョンを必ず呼び出してください。
 
-##  <a name="processshellcommand"></a>  CWinApp::ProcessShellCommand
+##  <a name="processshellcommand"></a>CWinApp::P rocessShellCommand
 
-このメンバー関数は、 *rcmdinfo*によって識別される`CCommandLineInfo`オブジェクトから渡されたパラメーターを受け入れ、指定されたアクションを実行するために、 [InitInstance](#initinstance)によって呼び出されます。
+このメンバー関数は、 *Rcmdinfo*によって識別される `CCommandLineInfo` オブジェクトから渡されたパラメーターを受け入れるために[InitInstance](#initinstance)によって呼び出され、指定されたアクションを実行します。
 
 ```
 BOOL ProcessShellCommand(CCommandLineInfo& rCmdInfo);
@@ -1844,19 +1844,19 @@ BOOL ProcessShellCommand(CCommandLineInfo& rCmdInfo);
 
 シェルコマンドが正常に処理された場合は0以外の。 0の場合は、 [InitInstance](#initinstance)から FALSE を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-アプリケーションウィザードを使用して新しい MFC プロジェクトを開始すると、アプリケーションウィザード`CCommandLineInfo`によってのローカルインスタンスが作成され、 `InitInstance`メンバー関数でと[ParseCommandLine](#parsecommandline)が呼び出さ`ProcessShellCommand`れます。 コマンドラインは、次に示すルートに従います。
+アプリケーションウィザードを使用して新しい MFC プロジェクトを開始すると、アプリケーションウィザードによって `CCommandLineInfo`のローカルインスタンスが作成され、`InitInstance` メンバー関数で `ProcessShellCommand` と[ParseCommandLine](#parsecommandline)が呼び出されます。 コマンドラインは、次に示すルートに従います。
 
-1. で`InitInstance`作成された`CCommandLineInfo`オブジェクトは、に`ParseCommandLine`渡されます。
+1. `InitInstance`で作成されると、`CCommandLineInfo` オブジェクトが `ParseCommandLine`に渡されます。
 
-2. `ParseCommandLine`次に、パラメーターごとに1回、 [CCommandLineInfo::P arseparam](../../mfc/reference/ccommandlineinfo-class.md#parseparam)を繰り返し呼び出します。
+2. `ParseCommandLine` は、パラメーターごとに1回、 [CCommandLineInfo::P arseparam](../../mfc/reference/ccommandlineinfo-class.md#parseparam)を繰り返し呼び出します。
 
-3. `ParseParam`オブジェクトを`CCommandLineInfo`いっぱいにして、に`ProcessShellCommand`渡します。
+3. `ParseParam` に `CCommandLineInfo` オブジェクトが格納され、`ProcessShellCommand`に渡されます。
 
-4. `ProcessShellCommand`コマンドライン引数とフラグを処理します。
+4. `ProcessShellCommand` は、コマンドライン引数とフラグを処理します。
 
-[CCommandLineInfo:: m_nShellCommand](../../mfc/reference/ccommandlineinfo-class.md#m_nshellcommand)で`CCommandLineInfo`識別されるオブジェクトのデータメンバーは、 `CCommandLineInfo`クラス内で定義されている次の列挙型です。
+[CCommandLineInfo:: m_nShellCommand](../../mfc/reference/ccommandlineinfo-class.md#m_nshellcommand)によって識別される `CCommandLineInfo` オブジェクトのデータメンバーは、`CCommandLineInfo` クラス内で定義されている次の列挙型です。
 
 ```
 enum {
@@ -1868,9 +1868,9 @@ enum {
     };
 ```
 
-これらの各値の簡単な説明について`CCommandLineInfo::m_nShellCommand`は、「」を参照してください。
+これらの各値の簡単な説明については、「`CCommandLineInfo::m_nShellCommand`」を参照してください。
 
-##  <a name="processwndprocexception"></a>  CWinApp::ProcessWndProcException
+##  <a name="processwndprocexception"></a>CWinApp::P rocessWndProcException
 
 このメンバー関数は、アプリケーションのメッセージハンドラーまたはコマンドハンドラーの1つでスローされた例外をハンドラーがキャッチしない場合は常に、フレームワークによって呼び出されます。
 
@@ -1892,7 +1892,7 @@ virtual LRESULT ProcessWndProcException(
 
 Windows に返される値。 通常、これは windows メッセージの場合は0L、コマンドメッセージの場合は 1L (TRUE) になります。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 このメンバー関数を直接呼び出さないでください。
 
@@ -1900,9 +1900,9 @@ Windows に返される値。 通常、これは windows メッセージの場�
 
 このメンバー関数をオーバーライドして、例外のグローバルな処理を提供します。 メッセージボックスを表示する場合にのみ、基本機能を呼び出します。
 
-##  <a name="register"></a>  CWinApp::Register
+##  <a name="register"></a>CWinApp:: Register
 
-によって処理されない`RegisterShellFileTypes`すべての登録タスクを実行します。
+`RegisterShellFileTypes`によって処理されない登録タスクを実行します。
 
 ```
 virtual BOOL Register();
@@ -1912,11 +1912,11 @@ virtual BOOL Register();
 
 正常に完了した場合はゼロ以外、それ以外の場合は 0 です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 既定の実装では、単に TRUE が返されます。 カスタマイズされた登録手順を提供するには、この関数をオーバーライドします。
 
-##  <a name="registershellfiletypes"></a>  CWinApp::RegisterShellFileTypes
+##  <a name="registershellfiletypes"></a>CWinApp:: RegisterShellFileTypes
 
 このメンバー関数を呼び出して、すべてのアプリケーションのドキュメントの種類を Windows ファイルマネージャーに登録します。
 
@@ -1929,18 +1929,18 @@ void RegisterShellFileTypes(BOOL bCompat = FALSE);
 *bCompat*<br/>
 からTRUE を使用すると、シェルコマンドの登録エントリが Print および Print に追加され、ユーザーはシェルから直接ファイルを印刷したり、ファイルをプリンターオブジェクトにドラッグしたりできます。 また、DefaultIcon キーも追加します。 既定では、旧バージョンとの互換性のために、このパラメーターは FALSE です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-これにより、ユーザーは、アプリケーションで作成されたデータファイルをファイルマネージャー内でダブルクリックして開くことができます。 アプリケーション`RegisterShellFileTypes`の各ドキュメントテンプレートに対して[、adddoctemplate](#adddoctemplate)を呼び出した後、を呼び出します。 また、`RegisterShellFileTypes` を呼び出すと、[EnableShellOpen](#enableshellopen) メンバー関数も呼び出されます。
+これにより、ユーザーは、アプリケーションで作成されたデータファイルをファイルマネージャー内でダブルクリックして開くことができます。 アプリケーションの各ドキュメントテンプレートに対して[、adddoctemplate](#adddoctemplate)を呼び出した後、`RegisterShellFileTypes` を呼び出します。 また、`RegisterShellFileTypes`を呼び出すと、 [EnableShellOpen](#enableshellopen)メンバー関数も呼び出されます。
 
-`RegisterShellFileTypes`アプリケーションが保持する[CDocTemplate](../../mfc/reference/cdoctemplate-class.md)オブジェクトの一覧を反復処理し、各ドキュメントテンプレートについて、Windows がファイルの関連付けのために保持する登録データベースにエントリを追加します。 ファイルマネージャーは、ユーザーがダブルクリックしたときに、これらのエントリを使用してデータファイルを開きます。 これにより、を出荷する必要がなくなります。アプリケーションと共に REG ファイルを作成します。
+`RegisterShellFileTypes` は、アプリケーションが保持する[CDocTemplate](../../mfc/reference/cdoctemplate-class.md)オブジェクトの一覧を反復処理し、各ドキュメントテンプレートについて、Windows がファイルの関連付けのために保持する登録データベースにエントリを追加します。 ファイルマネージャーは、ユーザーがダブルクリックしたときに、これらのエントリを使用してデータファイルを開きます。 これにより、を出荷する必要がなくなります。アプリケーションと共に REG ファイルを作成します。
 
 > [!NOTE]
-> `RegisterShellFileTypes`は、ユーザーが管理者権限でプログラムを実行した場合にのみ機能します。 プログラムに管理者権限がない場合、レジストリキーを変更することはできません。
+> `RegisterShellFileTypes` は、ユーザーが管理者権限でプログラムを実行した場合にのみ機能します。 プログラムに管理者権限がない場合、レジストリキーを変更することはできません。
 
-指定したファイル名拡張子が登録データベースによって既に別の種類のファイルに関連付けられている場合、新しい関連付けは作成されません。 この情報`CDocTemplate`を登録するために必要な文字列の形式については、クラスを参照してください。
+指定したファイル名拡張子が登録データベースによって既に別の種類のファイルに関連付けられている場合、新しい関連付けは作成されません。 この情報を登録するために必要な文字列の形式については、`CDocTemplate` クラスを参照してください。
 
-##  <a name="registerwithrestartmanager"></a>  CWinApp::RegisterWithRestartManager
+##  <a name="registerwithrestartmanager"></a>CWinApp:: RegisterWithRestartManager
 
 アプリケーションを再起動マネージャーに登録します。
 
@@ -1967,22 +1967,22 @@ virtual HRESULT RegisterWithRestartManager(
 |*strRestartIdentifier*|から再起動マネージャーのこのインスタンスを識別する一意の文字列。 Restart manager id は、アプリケーションの各インスタンスに対して一意です。|
 |*pwzCommandLineArgs*|からコマンドラインからの追加の引数を含む文字列。|
 |*dwRestartFlags*|から再起動マネージャーのオプションフラグ。 詳細については、「解説」を参照してください。|
-|*Preco・コールバック*|から回復コールバック関数。 この関数は、LPVOID パラメーターを入力として受け取り、DWORD を返す必要があります。 既定の回復コールバック関数`CWinApp::ApplicationRecoveryCallback`はです。|
+|*Preco・コールバック*|から回復コールバック関数。 この関数は、LPVOID パラメーターを入力として受け取り、DWORD を返す必要があります。 既定の回復コールバック関数は `CWinApp::ApplicationRecoveryCallback`です。|
 |*lpvParam*|から復旧コールバック関数の入力パラメーター。 詳細については、「 [CWinApp:: ApplicationRecoveryCallback](#applicationrecoverycallback)」を参照してください。|
 |*dwPingInterval*|から再起動マネージャーが復旧コールバック関数から戻るまで待機する時間の長さ。 このパラメーターは、ミリ秒単位で指定します。|
-|*Dwのフラグ*|から復旧コールバック関数に渡されるフラグ。 将来使用するために予約されています。|
+|*Dwのフラグ*|から復旧コールバック関数に渡されるフラグ。 将来利用するために予約されています。|
 
 ### <a name="return-value"></a>戻り値
 
 メソッドが成功した場合は S_OK。それ以外の場合は、エラーコード。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-アプリケーションでワークファイルに既定の MFC 実装を使用する場合は、の`RegisterWithRestartManager`単純なバージョンを使用する必要があります。 アプリケーションの自動保存動作`RegisterWithRestartManager`をカスタマイズする場合は、の複合バージョンを使用します。
+アプリケーションでワークファイルに既定の MFC 実装を使用している場合は、`RegisterWithRestartManager`の簡易バージョンを使用する必要があります。 アプリケーションの自動保存動作をカスタマイズする場合は、`RegisterWithRestartManager` の複合バージョンを使用します。
 
-*StrRestartIdentifier*に空の文字列を指定してこのメソッドを`RegisterWithRestartManager`呼び出すと、によって、再起動マネージャーのこのインスタンスの一意の識別子文字列が作成されます。
+*StrRestartIdentifier*に空の文字列を指定してこのメソッドを呼び出すと、`RegisterWithRestartManager` によって、再起動マネージャーのこのインスタンスの一意の識別子文字列が作成されます。
 
-アプリケーションが予期せず終了すると、再起動マネージャーによってアプリケーションがコマンドラインから再起動され、一意の再起動識別子がオプションの引数として提供されます。 このシナリオでは、フレームワークは`RegisterWithRestartManager` 2 回を呼び出します。 最初の呼び出しは、文字列識別子に対して空の文字列を使用して、 [CWinApp:: InitInstance](#initinstance)から取得されます。 次に、メソッド[CWinApp::P rocessshellcommand](#processshellcommand)は`RegisterWithRestartManager` 、一意の再起動識別子を使用してを呼び出します。
+アプリケーションが予期せず終了すると、再起動マネージャーによってアプリケーションがコマンドラインから再起動され、一意の再起動識別子がオプションの引数として提供されます。 このシナリオでは、フレームワークは `RegisterWithRestartManager` を2回呼び出します。 最初の呼び出しは、文字列識別子に対して空の文字列を使用して、 [CWinApp:: InitInstance](#initinstance)から取得されます。 次に、メソッド[CWinApp::P rocessshellcommand](#processshellcommand)は、一意の再起動識別子を使用して `RegisterWithRestartManager` を呼び出します。
 
 アプリケーションを再起動マネージャーに登録すると、再起動マネージャーによってアプリケーションが監視されます。 アプリケーションが予期せず終了した場合、再起動マネージャーは、シャットダウンプロセス中に復旧コールバック関数を呼び出します。 再起動マネージャーは、回復コールバック関数からの応答に対して*Dwpinginterval*を待機します。 復旧コールバック関数がこの時間内に応答しない場合、アプリケーションは復旧コールバック関数を実行せずに終了します。
 
@@ -1996,7 +1996,7 @@ virtual HRESULT RegisterWithRestartManager(
 
 - RESTART_NO_REBOOT
 
-##  <a name="reopenpreviousfilesatrestart"></a>  CWinApp::ReopenPreviousFilesAtRestart
+##  <a name="reopenpreviousfilesatrestart"></a>CWinApp:: Reopen前の Filesatrestart
 
 アプリケーションが予期せず終了したときに開いたファイルを再起動マネージャーが再度開くかどうかを指定します。
 
@@ -2008,7 +2008,7 @@ virtual BOOL ReopenPreviousFilesAtRestart() const;
 
 [TRUE] を指定すると、再起動マネージャーによって以前に開いたファイルが再度開かれます。FALSE は、再起動マネージャーではないことを示します。
 
-##  <a name="restartinstance"></a>  CWinApp::RestartInstance
+##  <a name="restartinstance"></a>CWinApp:: RestartInstance
 
 再起動マネージャーによって開始されたアプリケーションの再起動を処理します。
 
@@ -2020,13 +2020,13 @@ virtual BOOL CWinApp::RestartInstance();
 
 データ復旧ハンドラーが以前に開いたドキュメントを開く場合は TRUE。データ回復ハンドラーにエラーがある場合、または以前に開いていたドキュメントがない場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 再起動マネージャーによってアプリケーションが再起動されると、フレームワークはこのメソッドを呼び出します。 このメソッドは、データ復旧ハンドラーを取得し、自動保存されたファイルを復元します。 このメソッドは、 [CDataRecoveryHandler:: RestoreAutosavedDocuments](../../mfc/reference/cdatarecoveryhandler-class.md#restoreautosaveddocuments)を呼び出して、ユーザーが自動保存されたファイルを復元する必要があるかどうかを判断します。
 
 [CDataRecoveryHandler](../../mfc/reference/cdatarecoveryhandler-class.md)が開いているドキュメントがないと判断した場合、このメソッドは FALSE を返します。 開いているドキュメントがない場合は、通常、アプリケーションが起動します。
 
-##  <a name="restoreautosavedfilesatrestart"></a>  CWinApp::RestoreAutosavedFilesAtRestart
+##  <a name="restoreautosavedfilesatrestart"></a>CWinApp:: RestoreAutosavedFilesAtRestart
 
 再起動マネージャーが、アプリケーションの再起動時に自動保存されたファイルを復元するかどうかを指定します。
 
@@ -2038,7 +2038,7 @@ virtual BOOL RestoreAutosavedFilesAtRestart() const;
 
 TRUE は、再起動マネージャーが自動保存されたファイルを復元することを示します。FALSE は、再起動マネージャーではないことを示します。
 
-##  <a name="run"></a>  CWinApp::Run
+##  <a name="run"></a>CWinApp:: Run
 
 既定のメッセージループを提供します。
 
@@ -2048,13 +2048,13 @@ virtual int Run();
 
 ### <a name="return-value"></a>戻り値
 
-によって`WinMain`返される int 値。
+`WinMain`によって返される**int**値。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-`Run`アプリケーションが WM_QUIT メッセージを受信するまで、Windows メッセージを取得してディスパッチします。 アプリケーションのメッセージキューに現在メッセージが含まれていない場合、`Run` は [OnIdle](#onidle) を呼び出して、アイドル時の処理を実行します。 受信メッセージは、特別な処理のために[PreTranslateMessage](#pretranslatemessage)メンバー関数に移動し、 `TranslateMessage`標準キーボード翻訳の windows 関数に移動`DispatchMessage`します。最後に、windows 関数が呼び出されます。
+`Run` は、アプリケーションが WM_QUIT メッセージを受信するまで Windows メッセージを取得してディスパッチします。 アプリケーションのメッセージキューに現在メッセージが含まれていない場合、`Run` は[OnIdle](#onidle)を呼び出してアイドル時間の処理を実行します。 受信メッセージは、特別な処理のために[PreTranslateMessage](#pretranslatemessage)メンバー関数に移動し、標準のキーボード変換のために Windows 関数 `TranslateMessage` に移動します。最後に、`DispatchMessage` Windows 関数が呼び出されます。
 
-`Run`がオーバーライドされることはほとんどありませんが、これをオーバーライドして特殊な動作を提供することができます。
+`Run` がオーバーライドされることはほとんどありませんが、これをオーバーライドして特殊な動作を行うことができます。
 
 ##  <a name="runautomated"></a>CWinApp:: RunAutomated
 
@@ -2068,11 +2068,11 @@ BOOL RunAutomated();
 
 オプションが見つかった場合は0以外の。それ以外の場合は0です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 このオプションが指定されている場合、コマンドラインからオプションが削除されます。 OLE オートメーションの詳細については、「[オートメーションサーバー](../../mfc/automation-servers.md)」を参照してください。
 
-##  <a name="runembedded"></a>  CWinApp::RunEmbedded
+##  <a name="runembedded"></a>CWinApp:: RunEmbedded
 
 この関数を呼び出して、サーバーアプリケーションがクライアントアプリケーションによって起動されたかどうかを示す " **/Embedding**" または " **-埋め込み**" オプションが存在するかどうかを確認します。
 
@@ -2084,9 +2084,9 @@ BOOL RunEmbedded();
 
 オプションが見つかった場合は0以外の。それ以外の場合は0です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-このオプションが指定されている場合、コマンドラインからオプションが削除されます。 埋め込みの詳細については、 [「サーバー:サーバー](../../mfc/servers-implementing-a-server.md)の実装。
+このオプションが指定されている場合、コマンドラインからオプションが削除されます。 埋め込みの詳細については、「サーバー [: サーバーの実装](../../mfc/servers-implementing-a-server.md)」を参照してください。
 
 ##  <a name="saveallmodified"></a>CWinApp:: SaveAllModified
 
@@ -2100,7 +2100,7 @@ virtual BOOL SaveAllModified();
 
 アプリケーションを安全に終了する場合は0以外。アプリケーションを安全に終了できない場合は0。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 このメンバー関数の既定の実装では、アプリケーション内の変更されたすべてのドキュメントに対して、 [CDocument:: SaveModified](../../mfc/reference/cdocument-class.md#savemodified)メンバー関数が順に呼び出されます。
 
@@ -2126,9 +2126,9 @@ void SelectPrinter(
 *bFreeOld*<br/>
 以前に選択されたプリンターを解放します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-*Hdevmode*と*hDevNames*の両方が NULL の`SelectPrinter`場合、では現在の既定のプリンターが使用されます。
+*Hdevmode*と*hDevNames*の両方が NULL の場合、`SelectPrinter` は現在の既定のプリンターを使用します。
 
 ##  <a name="sethelpmode"></a>CWinApp:: Se@ Pmode
 
@@ -2143,11 +2143,11 @@ void SetHelpMode(AFX_HELP_TYPE eHelpType);
 *eHelpType*<br/>
 使用するヘルプの種類を指定します。 詳細については、「 [CWinApp:: m_eHelpType](#m_ehelptype) 」を参照してください。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 アプリケーションのヘルプの種類を設定します。
 
-アプリケーションのヘルプの種類を Html ヘルプに設定するには、 [Enablehtmlhelp](#enablehtmlhelp)を呼び出します。 を呼び出し`EnableHTMLHelp`た後、アプリケーションはヘルプアプリケーションとして html を使用する必要があります。 WinHelp を使用するようにを変更する場合は、 `SetHelpMode`を呼び出して、 *ehelptype*をに`afxWinHelp`設定します。
+アプリケーションのヘルプの種類を Html ヘルプに設定するには、 [Enablehtmlhelp](#enablehtmlhelp)を呼び出します。 `EnableHTMLHelp`を呼び出すと、アプリケーションはヘルプアプリケーションとして Html ヘルプを使用する必要があります。 WinHelp を使用するようにを変更する場合は、`SetHelpMode` を呼び出して、 *Ehelptype*を `afxWinHelp`に設定します。
 
 ##  <a name="setregistrykey"></a>CWinApp:: SetRegistryKey
 
@@ -2166,11 +2166,11 @@ void SetRegistryKey(UINT nIDRegistryKey);
 *nIDRegistryKey*<br/>
 レジストリキーの名前を含む文字列リソースの ID。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-この関数は *、m_pszRegistryKey*を設定します。この`GetProfileInt`関数`GetProfileString`は`WriteProfileInt` `WriteProfileString` 、の、、、 `CWinApp`の各メンバー関数によって使用されます。 この関数が呼び出された場合は、最近使用した (MRU) ファイルの一覧もレジストリに格納されます。 通常、レジストリキーは会社の名前です。 次の形式のキーに格納されています。HKEY_CURRENT_USER\Software\\< 会社名\>\\< アプリケーション名\><セクション名\><値\>の名前。\\\\
+この関数は*m_pszRegistryKey*を設定します。これは `WriteProfileString` の `GetProfileInt`、`GetProfileString`、`WriteProfileInt`、および `CWinApp`メンバー関数によって使用されます。 この関数が呼び出された場合は、最近使用した (MRU) ファイルの一覧もレジストリに格納されます。 通常、レジストリキーは会社の名前です。 次の形式のキーに格納されます: HKEY_CURRENT_USER \ ソフトウェア\\< 会社名\>\\< アプリケーション名\>\\< セクション名\>\\< 値名前\>。
 
-##  <a name="supportsapplicationrecovery"></a>  CWinApp::SupportsApplicationRecovery
+##  <a name="supportsapplicationrecovery"></a>CWinApp:: SupportsApplicationRecovery
 
 予期せずに終了したアプリケーションを再起動マネージャーが回復するかどうかを指定します。
 
@@ -2218,7 +2218,7 @@ virtual BOOL SupportsRestartManager() const;
 
 TRUE は、アプリケーションが再起動マネージャーをサポートしていることを示します。FALSE は、アプリケーションがそうでないことを示します。
 
-##  <a name="unregister"></a>  CWinApp::Unregister
+##  <a name="unregister"></a>CWinApp:: 登録解除
 
 アプリケーションオブジェクトによって登録されたすべてのファイルの登録を解除します。
 
@@ -2230,13 +2230,13 @@ virtual BOOL Unregister();
 
 正常に完了した場合はゼロ以外、それ以外の場合は 0 です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-関数`Unregister`は、アプリケーションオブジェクトと[Register](#register)関数によって実行される登録を元に戻します。 通常、どちらの関数も MFC によって暗黙的に呼び出されるため、コードには表示されません。
+`Unregister` 関数は、アプリケーションオブジェクトと[Register](#register)関数によって実行される登録を元に戻します。 通常、どちらの関数も MFC によって暗黙的に呼び出されるため、コードには表示されません。
 
 この関数をオーバーライドして、カスタム登録解除手順を実行します。
 
-##  <a name="unregistershellfiletypes"></a>  CWinApp::UnregisterShellFileTypes
+##  <a name="unregistershellfiletypes"></a>CWinApp:: UnregisterShellFileTypes
 
 このメンバー関数を呼び出して、すべてのアプリケーションのドキュメントの種類を Windows ファイルマネージャーで登録解除します。
 
@@ -2262,7 +2262,7 @@ virtual void WinHelp(
 *nCmd*<br/>
 要求されるヘルプの種類を指定します。 使用可能な値の一覧と*Dwdata*パラメーターへの影響については、「 [WinHelp](/windows/win32/api/winuser/nf-winuser-winhelpw) Windows 関数」を参照してください。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 フレームワークは、この関数を呼び出して WinHelp アプリケーションを起動することもできます。
 
@@ -2304,7 +2304,7 @@ BOOL WriteProfileBinary(
 
 ### <a name="example"></a>例
 
-この例で`CWinApp* pApp = AfxGetApp();`は、を使用して、MFC アプリケーションの`WriteProfileBinary`任意`GetProfileBinary`の関数からとを使用する方法を示す CWinApp クラスを取得します。
+この例では、`CWinApp* pApp = AfxGetApp();` を使用して、MFC アプリケーションの任意の関数から `WriteProfileBinary` と `GetProfileBinary` を使用する方法を示す CWinApp クラスを取得します。
 
 [!code-cpp[NVC_MFCWindowing#54](../../mfc/reference/codesnippet/cpp/cwinapp-class_29.cpp)]
 
@@ -2329,7 +2329,7 @@ BOOL WriteProfileInt(
 *lpszEntry*<br/>
 は、値の書き込み先のエントリを含む、null で終わる文字列を指します。 指定したセクションにエントリが存在しない場合は、作成されます。
 
-*nValue*<br/>
+*N 値*<br/>
 書き込む値を格納します。
 
 ### <a name="return-value"></a>戻り値
@@ -2338,13 +2338,13 @@ BOOL WriteProfileInt(
 
 ### <a name="example"></a>例
 
-この例で`CWinApp* pApp = AfxGetApp();`は、を使用して、MFC アプリケーションの任意の`GetProfileString`関数から`GetProfileInt` 、、、およびを使用できる方法を`WriteProfileInt`示す`WriteProfileString`CWinApp クラスを取得します。
+この例では、`CWinApp* pApp = AfxGetApp();` を使用して、MFC アプリケーションの任意の関数から `WriteProfileString`、`WriteProfileInt`、`GetProfileString`、および `GetProfileInt` を使用できる方法を示す CWinApp クラスを取得します。
 
 [!code-cpp[NVC_MFCWindowing#43](../../mfc/reference/codesnippet/cpp/cwinapp-class_9.cpp)]
 
 別の例については、「 [CWinApp:: GetProfileInt](#getprofileint)」の例を参照してください。
 
-##  <a name="writeprofilestring"></a>  CWinApp::WriteProfileString
+##  <a name="writeprofilestring"></a>CWinApp:: WriteProfileString
 
 このメンバー関数を呼び出して、指定した文字列をアプリケーションのレジストリまたはの指定したセクションに書き込みます。INI ファイル。
 
@@ -2389,9 +2389,9 @@ void SetAppID(LPCTSTR lpcszAppID);
 *lpcszAppID*<br/>
 アプリケーションユーザーモデル ID を指定します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [CWinThread クラス](../../mfc/reference/cwinthread-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)<br/>

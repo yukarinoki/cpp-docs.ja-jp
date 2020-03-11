@@ -5,15 +5,15 @@ f1_keywords:
 - deque/std::swap
 ms.assetid: 1d14be53-b0b7-4f66-90cc-65bdeac563fd
 ms.openlocfilehash: e1bbdb864aabf892ca34860911412e4cf737e8cd
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245673"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78883807"
 ---
 # <a name="ltdequegt-functions"></a>&lt;deque&gt; 関数
 
-## <a name="swap"></a> スワップ
+## <a name="swap"></a>フォト
 
 2 つの deque の要素を交換します。
 
@@ -26,10 +26,10 @@ void swap(
 ### <a name="parameters"></a>パラメーター
 
 *左*\
-`deque` 型のオブジェクト。
+`deque` 型オブジェクト。
 
-*そうです*\
-`deque` 型のオブジェクト。
+*右*\
+`deque` 型オブジェクト。
 
 ### <a name="example"></a>例
 

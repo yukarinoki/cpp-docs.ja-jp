@@ -8,11 +8,11 @@ f1_keywords:
 - atlcom/ATL::REQUIRED_CATEGORY
 ms.assetid: 223578cb-6180-4787-a8d8-ba3787a5d3ee
 ms.openlocfilehash: 411e06cc795827eef356018ba427510fd9eb7c06
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497854"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78864447"
 ---
 # <a name="category-macros"></a>カテゴリマクロ
 
@@ -25,7 +25,7 @@ ms.locfileid: "69497854"
 |[IMPLEMENTED_CATEGORY](#implemented_category)|COM オブジェクトによって実装されるカテゴリを示します。|
 |[REQUIRED_CATEGORY](#required_category)|COM オブジェクトによってコンテナーに必要なカテゴリを示します。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** atlcom. h
 
@@ -42,13 +42,13 @@ BEGIN_CATEGORY_MAP(theClass)
 *クラス*<br/>
 からカテゴリマップを格納しているクラスの名前。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 Category マップは、COM クラスが実装するコンポーネントカテゴリと、そのコンテナーから必要なカテゴリを指定するために使用されます。
 
-COM クラスによって実装されている各カテゴリのマップに[IMPLEMENTED_CATEGORY](#implemented_category)エントリを追加します。 クラスがクライアントを実装する必要がある各カテゴリのマップに[REQUIRED_CATEGORY](#required_category)エントリを追加します。 マップの末尾に[END_CATEGORY_MAP](#end_category_map)マクロを設定します。
+COM クラスによって実装されている各カテゴリのマップに[IMPLEMENTED_CATEGORY](#implemented_category)エントリを追加します。 クラスがクライアントを実装する必要がある各カテゴリの[REQUIRED_CATEGORY](#required_category)エントリをマップに追加します。 マップの末尾に[END_CATEGORY_MAP](#end_category_map)マクロを設定します。
 
-クラスに[OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto)または[OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto)が関連付けられている場合、モジュールが登録されると、マップに表示されるコンポーネントカテゴリが自動的に登録されます。
+クラスに関連付けられている[OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto)または[OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto)がある場合は、モジュールが登録されると、マップに表示されるコンポーネントカテゴリが自動的に登録されます。
 
 > [!NOTE]
 >  ATL では、標準のコンポーネントカテゴリマネージャーを使用して、コンポーネントカテゴリを登録します。 モジュールが登録されているときに、マネージャーがシステムに存在しない場合、登録は成功しますが、そのクラスにはコンポーネントカテゴリが登録されません。
@@ -59,7 +59,7 @@ COM クラスによって実装されている各カテゴリのマップに[IMP
 
 [!code-cpp[NVC_ATL_Windowing#100](../../atl/codesnippet/cpp/category-macros_1.h)]
 
-##  <a name="end_category_map"></a>  END_CATEGORY_MAP
+##  <a name="end_category_map"></a>END_CATEGORY_MAP
 
 カテゴリマップの終了をマークします。
 
@@ -71,7 +71,7 @@ END_CATEGORY_MAP()
 
 [BEGIN_CATEGORY_MAP](#begin_category_map)の例を参照してください。
 
-##  <a name="implemented_category"></a>  IMPLEMENTED_CATEGORY
+##  <a name="implemented_category"></a>IMPLEMENTED_CATEGORY
 
 コンポーネントの[カテゴリマップ](#begin_category_map)に IMPLEMENTED_CATEGORY マクロを追加して、 *catID*パラメーターで識別されるカテゴリの実装として登録する必要があることを指定します。
 
@@ -84,9 +84,9 @@ IMPLEMENTED_CATEGORY(catID)
 *catID*<br/>
 から実装されているカテゴリのグローバル一意識別子 (GUID) を保持する CATID 定数または変数。 *CatID*のアドレスが取得され、マップに追加されます。 ストックカテゴリの選択については、次の表を参照してください。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-クラスに関連付けられた[OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto)または[OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto)マクロがある場合は、モジュールが登録されると、マップに表示されるコンポーネントカテゴリが自動的に登録されます。
+クラスに関連付けられている[OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto)または[OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto)マクロがある場合は、モジュールが登録されると、マップに表示されるコンポーネントカテゴリが自動的に登録されます。
 
 クライアントは、クラスに登録されているカテゴリ情報を使用して、そのクラスのインスタンスを作成することなく、その機能と要件を決定できます。
 
@@ -121,9 +121,9 @@ REQUIRED_CATEGORY( catID )
 *catID*<br/>
 から必須カテゴリのグローバル一意識別子 (GUID) を保持する CATID 定数または変数。 *CatID*のアドレスが取得され、マップに追加されます。 ストックカテゴリの選択については、次の表を参照してください。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-クラスに関連付けられた[OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto)または[OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto)マクロがある場合は、モジュールが登録されると、マップに表示されるコンポーネントカテゴリが自動的に登録されます。
+クラスに関連付けられている[OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto)または[OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto)マクロがある場合は、モジュールが登録されると、マップに表示されるコンポーネントカテゴリが自動的に登録されます。
 
 クライアントは、クラスに登録されているカテゴリ情報を使用して、そのクラスのインスタンスを作成することなく、その機能と要件を決定できます。 たとえば、コントロールでは、コンテナーがデータバインディングをサポートしている必要があります。 コンテナーは、そのコントロールが必要とするカテゴリのカテゴリマネージャーに対してクエリを実行することで、コントロールをホストするために必要な機能があるかどうかを確認できます。 コンテナーが必要な機能をサポートしていない場合、COM オブジェクトのホストを拒否することができます。
 
@@ -145,6 +145,6 @@ REQUIRED_CATEGORY( catID )
 
 [!code-cpp[NVC_ATL_Windowing#135](../../atl/codesnippet/cpp/category-macros_2.h)]
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[[マクロ]](../../atl/reference/atl-macros.md)
+[マクロ](../../atl/reference/atl-macros.md)

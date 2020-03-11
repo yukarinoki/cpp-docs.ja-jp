@@ -1,5 +1,5 @@
 ---
-title: プロパティ マップに関するマクロ
+title: プロパティマップマクロ
 ms.date: 11/04/2016
 f1_keywords:
 - atlcom/ATL::BEGIN_PROP_MAP
@@ -12,32 +12,32 @@ helpviewer_keywords:
 - property maps
 ms.assetid: 128bc742-2b98-4b97-a243-684dbb83db77
 ms.openlocfilehash: 1e2e7235dd924467d9d5e0613a704fedf8340ae4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62197269"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78857185"
 ---
-# <a name="property-map-macros"></a>プロパティ マップに関するマクロ
+# <a name="property-map-macros"></a>プロパティマップマクロ
 
-これらのマクロは、プロパティ マップとエントリを定義します。
+これらのマクロは、プロパティマップとエントリを定義します。
 
 |||
 |-|-|
-|[BEGIN_PROP_MAP](#begin_prop_map)|ATL プロパティのマップの先頭をマークします。|
-|[PROP_DATA_ENTRY](#prop_data_entry)|範囲、またはディメンションは、ActiveX コントロールのことを示します。|
-|[PROP_ENTRY_TYPE](#prop_entry_type)|プロパティ マップには、プロパティの説明、プロパティの DISPID、およびプロパティ ページの CLSID を入力します。|
-|[PROP_ENTRY_TYPE_EX](#prop_entry_type_ex)|プロパティの DISPID、プロパティ ページの CLSID、プロパティの説明を入力し、`IDispatch`プロパティ マップに IID。|
-|[PROP_PAGE](#prop_page)|プロパティ マップには、プロパティ ページの CLSID を入力します。|
-|[END_PROP_MAP](#end_prop_map)|ATL プロパティのマップの最後をマークします。|
+|[BEGIN_PROP_MAP](#begin_prop_map)|ATL プロパティマップの開始をマークします。|
+|[PROP_DATA_ENTRY](#prop_data_entry)|ActiveX コントロールのエクステント (次元) を示します。|
+|[PROP_ENTRY_TYPE](#prop_entry_type)|プロパティの説明、プロパティの DISPID、およびプロパティページの CLSID をプロパティマップに入力します。|
+|[PROP_ENTRY_TYPE_EX](#prop_entry_type_ex)|プロパティの説明、プロパティの DISPID、プロパティページの CLSID、および `IDispatch` IID をプロパティマップに入力します。|
+|[PROP_PAGE](#prop_page)|プロパティページの CLSID をプロパティマップに入力します。|
+|[END_PROP_MAP](#end_prop_map)|ATL プロパティマップの終了をマークします。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** atlcom.h
+**ヘッダー:** atlcom. h
 
-##  <a name="begin_prop_map"></a>  BEGIN_PROP_MAP
+##  <a name="begin_prop_map"></a>BEGIN_PROP_MAP
 
-オブジェクトのプロパティのマップの先頭をマークします。
+オブジェクトのプロパティマップの開始をマークします。
 
 ```
 BEGIN_PROP_MAP(theClass)
@@ -46,23 +46,23 @@ BEGIN_PROP_MAP(theClass)
 ### <a name="parameters"></a>パラメーター
 
 *クラス*<br/>
-[in]プロパティ マップを含むクラスを指定します。
+からプロパティマップを含むクラスを指定します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-プロパティの Dispid、Clsid、 プロパティ ページのプロパティの説明を格納するプロパティ マップと`IDispatch`Iid。 クラス[IPerPropertyBrowsingImpl](../../atl/reference/iperpropertybrowsingimpl-class.md)、 [IPersistPropertyBagImpl](../../atl/reference/ipersistpropertybagimpl-class.md)、 [IPersistStreamInitImpl](../../atl/reference/ipersiststreaminitimpl-class.md)、および[ISpecifyPropertyPagesImpl](../../atl/reference/ispecifypropertypagesimpl-class.md)プロパティ マップを使用して取得し、この情報を設定します。
+プロパティマップには、プロパティの説明、プロパティ Dispid、プロパティページの Clsid、および `IDispatch` Iid がが格納されます。 クラス[Iperpropertybrowsingimpl](../../atl/reference/iperpropertybrowsingimpl-class.md)、 [IPersistPropertyBagImpl](../../atl/reference/ipersistpropertybagimpl-class.md)、 [IPersistStreamInitImpl](../../atl/reference/ipersiststreaminitimpl-class.md)、および[ISpecifyPropertyPagesImpl](../../atl/reference/ispecifypropertypagesimpl-class.md)は、プロパティマップを使用してこの情報を取得して設定します。
 
-ATL プロジェクト ウィザードを使用してオブジェクトを作成するときに、ウィザードはマップを作成する空のプロパティを続けて[マクロと](#end_prop_map)します。
+ATL プロジェクトウィザードを使用してオブジェクトを作成すると、ウィザードによって空のプロパティマップが作成されます。これには、BEGIN_PROP_MAP の後に[END_PROP_MAP](#end_prop_map)を指定します。
 
-プロパティ マップを使用してオブジェクトを可能性がありますエクステントはありませんので、ユーザー インターフェイスがあるないために、あり、その場合は、プロパティ マップのエクステント (つまり、ディメンション) を保存できません。 オブジェクトがユーザー インターフェイスを持つ ActiveX コントロールの場合は、エクステントがあります。 この場合、指定する必要があります[するため](#prop_data_entry)範囲を指定するプロパティ マップします。
+プロパティマップを使用しているオブジェクトにはユーザーインターフェイスがない可能性があるため、プロパティマップのエクステント (つまり、次元) は BEGIN_PROP_MAP によって保存されません。そのため、エクステントは存在しません。 オブジェクトがユーザーインターフェイスを持つ ActiveX コントロールである場合は、範囲があります。 この場合は、プロパティマップで[PROP_DATA_ENTRY](#prop_data_entry)を指定して範囲を指定する必要があります。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Windowing#103](../../atl/codesnippet/cpp/property-map-macros_1.h)]
 
-##  <a name="prop_data_entry"></a>  PROP_DATA_ENTRY
+##  <a name="prop_data_entry"></a>PROP_DATA_ENTRY
 
-範囲、またはディメンションは、ActiveX コントロールのことを示します。
+ActiveX コントロールのエクステント (次元) を示します。
 
 ```
 PROP_DATA_ENTRY( szDesc, member, vt)
@@ -71,31 +71,31 @@ PROP_DATA_ENTRY( szDesc, member, vt)
 ### <a name="parameters"></a>パラメーター
 
 *szDesc*<br/>
-[in]プロパティの説明。
+からプロパティの説明。
 
 *member*<br/>
-[in]エクステント; を含むデータ メンバーたとえば、`m_sizeExtent`します。
+からエクステントを含むデータメンバー。たとえば、`m_sizeExtent`のようにします。
 
 *vt*<br/>
-[in]プロパティのバリアント型を指定します。
+からプロパティのバリアント型を指定します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-このマクロは、永続化する指定したデータ メンバーをによりします。
+このマクロは、指定されたデータメンバーを永続化します。
 
-ActiveX コントロールを作成するときに、このマクロはプロパティのマップ マクロの後に挿入された[あり、その場合](#begin_prop_map)とプロパティのマップ マクロの前に[マクロと](#end_prop_map)します。
+ActiveX コントロールを作成すると、プロパティマップマクロ[BEGIN_PROP_MAP](#begin_prop_map)後、プロパティマップマクロ[END_PROP_MAP](#end_prop_map)の前に、ウィザードによってこのマクロが挿入されます。
 
 ### <a name="example"></a>例
 
-次の例では、オブジェクトの範囲 (`m_sizeExtent`) は、永続化されます。
+次の例では、オブジェクト (`m_sizeExtent`) の範囲が永続化されています。
 
 [!code-cpp[NVC_ATL_Windowing#131](../../atl/codesnippet/cpp/property-map-macros_2.h)]
 
 [!code-cpp[NVC_ATL_Windowing#132](../../atl/codesnippet/cpp/property-map-macros_3.h)]
 
-##  <a name="prop_entry_type"></a>  PROP_ENTRY_TYPE
+##  <a name="prop_entry_type"></a>PROP_ENTRY_TYPE
 
-このマクロを使用すると、オブジェクトのプロパティのマップにプロパティの説明、プロパティの DISPID、およびプロパティ ページの CLSID を入力します。
+このマクロを使用して、プロパティの説明、プロパティの DISPID、およびプロパティページの CLSID をオブジェクトのプロパティマップに入力します。
 
 ```
 PROP_ENTRY_TYPE( szDesc, dispid, clsid, vt)
@@ -104,30 +104,30 @@ PROP_ENTRY_TYPE( szDesc, dispid, clsid, vt)
 ### <a name="parameters"></a>パラメーター
 
 *szDesc*<br/>
-[in]プロパティの説明。
+からプロパティの説明。
 
 *dispid*<br/>
-[in]プロパティの DISPID。
+からプロパティの DISPID。
 
 *clsid*<br/>
-[in]関連付けられているプロパティ ページの CLSID。 関連付けられたプロパティ ページがないプロパティの特別な値 CLSID_ を使用します。
+から関連付けられているプロパティページの CLSID。 プロパティページが関連付けられていないプロパティには、特殊な値 CLSID_NULL を使用します。
 
 *vt*<br/>
-[in]プロパティの型。
+からプロパティの型。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-PROP_ENTRY マクロは、安全では非推奨にしました。 PROP_ENTRY_TYPE("で交換済みです。
+PROP_ENTRY マクロは安全ではなく、非推奨とされました。 これは PROP_ENTRY_TYPE に置き換えられました。
 
-[あり、その場合](#begin_prop_map)マクロには、プロパティ マップの先頭は[マクロと](#end_prop_map)マクロは、終了をマークします。
+[BEGIN_PROP_MAP](#begin_prop_map)マクロは、プロパティマップの先頭をマークします。[END_PROP_MAP](#end_prop_map)マクロは、終了をマークします。
 
 ### <a name="example"></a>例
 
-例をご覧ください[あり、その場合](#begin_prop_map)します。
+[BEGIN_PROP_MAP](#begin_prop_map)の例を参照してください。
 
-##  <a name="prop_entry_type_ex"></a>  PROP_ENTRY_TYPE_EX
+##  <a name="prop_entry_type_ex"></a>PROP_ENTRY_TYPE_EX
 
-ような[PROP_ENTRY_TYPE](#prop_entry_type)が、オブジェクトは、複数のデュアル インターフェイスをサポートしている場合、特定の IID を指定できます。
+[PROP_ENTRY_TYPE](#prop_entry_type)に似ていますが、オブジェクトが複数のデュアルインターフェイスをサポートしている場合は、特定の IID を指定することができます。
 
 ```
 PROP_ENTRY_TYPE_EX( szDesc, dispid, clsid, iidDispatch, vt)
@@ -136,35 +136,35 @@ PROP_ENTRY_TYPE_EX( szDesc, dispid, clsid, iidDispatch, vt)
 ### <a name="parameters"></a>パラメーター
 
 *szDesc*<br/>
-[in]プロパティの説明。
+からプロパティの説明。
 
 *dispid*<br/>
-[in]プロパティの DISPID。
+からプロパティの DISPID。
 
 *clsid*<br/>
-[in]関連付けられているプロパティ ページの CLSID。 関連付けられたプロパティ ページがないプロパティの特別な値 CLSID_ を使用します。
+から関連付けられているプロパティページの CLSID。 プロパティページが関連付けられていないプロパティには、特殊な値 CLSID_NULL を使用します。
 
 *iidDispatch*<br/>
-[in]プロパティを定義するデュアル インターフェイスの IID。
+からプロパティを定義するデュアルインターフェイスの IID。
 
 *vt*<br/>
-[in]プロパティの型。
+からプロパティの型。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-PROP_ENTRY_EX マクロは、安全では非推奨にしました。 これは、PROP_ENTRY_TYPE_EX に置き換えられています。
+PROP_ENTRY_EX マクロは安全ではなく、非推奨とされました。 これは PROP_ENTRY_TYPE_EX に置き換えられました。
 
-[あり、その場合](#begin_prop_map)マクロには、プロパティ マップの先頭は[マクロと](#end_prop_map)マクロは、終了をマークします。
+[BEGIN_PROP_MAP](#begin_prop_map)マクロは、プロパティマップの先頭をマークします。[END_PROP_MAP](#end_prop_map)マクロは、終了をマークします。
 
 ### <a name="example"></a>例
 
-次の例では、グループのエントリ`IMyDual1`のエントリを続けて`IMyDual2`します。 デュアル インターフェイスによってグループ化には、パフォーマンスが向上します。
+次の例では、`IMyDual1` のエントリと `IMyDual2`のエントリをグループ化します。 デュアルインターフェイスでグループ化すると、パフォーマンスが向上します。
 
 [!code-cpp[NVC_ATL_Windowing#133](../../atl/codesnippet/cpp/property-map-macros_4.h)]
 
-##  <a name="prop_page"></a>  PROP_PAGE
+##  <a name="prop_page"></a>PROP_PAGE
 
-このマクロを使用すると、オブジェクトのプロパティのマップにプロパティ ページの CLSID を入力します。
+このマクロを使用して、プロパティページの CLSID をオブジェクトのプロパティマップに入力します。
 
 ```
 PROP_PAGE(clsid)
@@ -173,37 +173,37 @@ PROP_PAGE(clsid)
 ### <a name="parameters"></a>パラメーター
 
 *clsid*<br/>
-[in]プロパティ ページの CLSID。
+からプロパティページの CLSID。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-PROP_PAGE と似ています[PROP_ENTRY_TYPE](#prop_entry_type)プロパティの説明または DISPID は必要ありません。
+PROP_PAGE は[PROP_ENTRY_TYPE](#prop_entry_type)に似ていますが、プロパティの説明または DISPID は必要ありません。
 
 > [!NOTE]
->  PROP_ENTRY_TYPE("の CLSID を入力した場合または[PROP_ENTRY_TYPE_EX](#prop_entry_type_ex)PROP_PAGE で追加のエントリを作成する必要はありません。
+>  PROP_ENTRY_TYPE または[PROP_ENTRY_TYPE_EX](#prop_entry_type_ex)を持つ CLSID を既に入力している場合は、PROP_PAGE で追加エントリを作成する必要はありません。
 
-[あり、その場合](#begin_prop_map)マクロには、プロパティ マップの先頭は[マクロと](#end_prop_map)マクロは、終了をマークします。
+[BEGIN_PROP_MAP](#begin_prop_map)マクロは、プロパティマップの先頭をマークします。[END_PROP_MAP](#end_prop_map)マクロは、終了をマークします。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Windowing#134](../../atl/codesnippet/cpp/property-map-macros_5.h)]
 
-##  <a name="end_prop_map"></a>  END_PROP_MAP
+##  <a name="end_prop_map"></a>END_PROP_MAP
 
-オブジェクトのプロパティのマップの最後をマークします。
+オブジェクトのプロパティマップの末尾をマークします。
 
 ```
 END_PROP_MAP()
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-ATL プロジェクト ウィザードを使用してオブジェクトを作成するときに、ウィザードはマップを作成する空のプロパティを指定して[あり、その場合](#begin_prop_map)マクロと続きます。
+ATL プロジェクトウィザードを使用してオブジェクトを作成すると、ウィザードによって空のプロパティマップが作成されます。これには、 [BEGIN_PROP_MAP](#begin_prop_map)の後に END_PROP_MAP を指定します。
 
 ### <a name="example"></a>例
 
-例をご覧ください[あり、その場合](#begin_prop_map)します。
+[BEGIN_PROP_MAP](#begin_prop_map)の例を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[[マクロ]](../../atl/reference/atl-macros.md)
+[マクロ](../../atl/reference/atl-macros.md)

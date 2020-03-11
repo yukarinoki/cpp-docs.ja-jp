@@ -18,11 +18,11 @@ helpviewer_keywords:
 - agent class
 ms.assetid: 1b09e3d2-5e37-4966-b016-907ef1512456
 ms.openlocfilehash: f0092f5f90bbdf253c09dbdc80849c3db472212f
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142888"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78882939"
 ---
 # <a name="agent-class"></a>agent クラス
 
@@ -62,7 +62,7 @@ class agent;
 |[完成です](#done)|エージェントを `agent_done` 状態に移動し、エージェントが完了したことを示します。|
 |[run](#run)|エージェントのメインタスクを表します。 `run` は、派生クラスでオーバーライドする必要があり、エージェントが開始された後に実行する必要があるものを指定します。|
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>コメント
 
 詳細については、「[非同期エージェント](../../../parallel/concrt/asynchronous-agents.md)」を参照してください。
 
@@ -70,7 +70,7 @@ class agent;
 
 `agent`
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>要件
 
 **ヘッダー:** agents.h
 
@@ -96,7 +96,7 @@ agent(ScheduleGroup& _PGroup);
 *_PGroup*<br/>
 エージェントの実行タスクがスケジュールされている `ScheduleGroup` オブジェクトです。 使用される `Scheduler` オブジェクトは、スケジュール グループによって暗黙的に指定されます。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 `_PScheduler` または `_PGroup` パラメーターを指定しない場合、ランタイムは既定のスケジューラを使用しています。
 
@@ -108,7 +108,7 @@ agent(ScheduleGroup& _PGroup);
 virtual ~agent();
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 ターミナル状態 (`agent_done` または `agent_canceled`) に含まれていないエージェントを破棄すると、エラーになります。 これは、`agent` クラスを継承するクラスのデストラクターでエージェントがターミナル状態になるのを待機することによって回避できます。
 
@@ -136,7 +136,7 @@ bool done();
 
 エージェントが `agent_done` 状態に移動した場合は**true** 、それ以外の場合は**false** 。 取り消されたエージェントを `agent_done` 状態に移行することはできません。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 エージェントの実行が完了したことがわかっている場合は、`run` メソッドの最後にこのメソッドを呼び出す必要があります。
 
@@ -148,7 +148,7 @@ bool done();
 virtual void run() = 0;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 このメソッドが呼び出される直前に、エージェントの状態が `agent_started` に変更されます。 メソッドは、を返す前に、適切な状態でエージェントの `done` を呼び出す必要があり、例外をスローしないことがあります。
 
@@ -210,7 +210,7 @@ static agent_status __cdecl wait(
 
 待機が完了したときのエージェントの `agent_status`。 これは、`agent_canceled` または `agent_done`のいずれかになります。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 エージェントタスクは、エージェントが `agent_canceled` または `agent_done` の状態を入力すると完了します。
 
@@ -242,7 +242,7 @@ static void __cdecl wait_for_all(
 *_Timeout*<br/>
 待機する最大時間 (ミリ秒単位)。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 エージェントタスクは、エージェントが `agent_canceled` または `agent_done` の状態を入力すると完了します。
 
@@ -278,7 +278,7 @@ static void __cdecl wait_for_one(
 *_Timeout*<br/>
 待機する最大時間 (ミリ秒単位)。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 エージェントタスクは、エージェントが `agent_canceled` または `agent_done` の状態を入力すると完了します。
 

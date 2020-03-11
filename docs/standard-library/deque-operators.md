@@ -17,15 +17,15 @@ helpviewer_keywords:
 - std::operator&lt;= (deque)
 - std::operator== (deque)
 ms.openlocfilehash: 868909ac4346a59cade3660f288a0f0e71bc4ed0
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245660"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78883809"
 ---
 # <a name="ltdequegt-operators"></a>&lt;deque&gt; の演算子
 
-## <a name="op_neq"></a> operator!=
+## <a name="op_neq"></a>operator! =
 
 演算子の左側の deque オブジェクトが右側の deque オブジェクトと等しくないかどうかを調べます。
 
@@ -36,16 +36,16 @@ bool operator!=(const deque<Type, Allocator>& left, const deque<Type, Allocator>
 ### <a name="parameters"></a>パラメーター
 
 *左*\
-`deque` 型のオブジェクト。
+`deque` 型オブジェクト。
 
-*そうです*\
-`deque` 型のオブジェクト。
+*右*\
+`deque` 型オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
 deque オブジェクトが等しくない場合は **true**、deque オブジェクトが等しい場合は **false**。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 deque オブジェクト間の比較は、要素のペアの比較に基づいています。 2 つの deque オブジェクトは、同じ数の要素を持ち、各要素の値が同じである場合に等しくなります。 それ以外の場合は等しくありません。
 
@@ -87,16 +87,16 @@ bool operator<(const deque<Type, Allocator>& left, const deque<Type, Allocator>&
 ### <a name="parameters"></a>パラメーター
 
 *左*\
-`deque` 型のオブジェクト。
+`deque` 型オブジェクト。
 
-*そうです*\
-`deque` 型のオブジェクト。
+*右*\
+`deque` 型オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
 演算子の左辺の deque が演算子の右辺の deque 未満である場合は **true**、それ以外の場合は **false**。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 deque オブジェクト間の比較は、要素のペアの比較に基づいています。 2 つのオブジェクト間の小なり関係は、最初の等しくない要素のペアの比較に基づいています。
 
@@ -131,7 +131,7 @@ int main( )
 Deque c1 is less than deque c2.
 ```
 
-## <a name="op_lt_eq"></a> 演算子&lt;=
+## <a name="op_lt_eq"></a>演算子&lt;=
 
 演算子の左側の deque オブジェクトが右側の deque オブジェクト以下かどうかを調べます。
 
@@ -142,16 +142,16 @@ bool operator<=(const deque<Type, Allocator>& left, const deque<Type, Allocator>
 ### <a name="parameters"></a>パラメーター
 
 *左*\
-`deque` 型のオブジェクト。
+`deque` 型オブジェクト。
 
-*そうです*\
-`deque` 型のオブジェクト。
+*右*\
+`deque` 型オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
 演算子の左辺の deque が演算子の右辺の deque 以下である場合は **true**、それ以外の場合は **false**。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 deque オブジェクト間の比較は、要素のペアの比較に基づいています。 2 つのオブジェクト間の "以下" 関係は、最初の等しくない要素のペアの比較に基づいています。
 
@@ -186,7 +186,7 @@ int main( )
 Deque c1 is less than or equal to deque c2.
 ```
 
-## <a name="op_eq_eq"></a> 演算子 = =
+## <a name="op_eq_eq"></a>operator = =
 
 演算子の左側の deque オブジェクトが右側の deque オブジェクトと等しいかどうかを調べます。
 
@@ -197,16 +197,16 @@ bool operator==(const deque<Type, Allocator>& left, const deque<Type, Allocator>
 ### <a name="parameters"></a>パラメーター
 
 *左*\
-`deque` 型のオブジェクト。
+`deque` 型オブジェクト。
 
-*そうです*\
-`deque` 型のオブジェクト。
+*右*\
+`deque` 型オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
 演算子の左辺の deque が演算子の右辺の deque と等しい場合は **true**、それ以外の場合は **false**。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 deque オブジェクト間の比較は、要素のペアの比較に基づいています。 2 つの deque は、同じ数の要素を持ち、各要素の値が同じである場合に等しくなります。 それ以外の場合は等しくありません。
 
@@ -255,16 +255,16 @@ bool operator>(const deque<Type, Allocator>& left, const deque<Type, Allocator>&
 ### <a name="parameters"></a>パラメーター
 
 *左*\
-`deque` 型のオブジェクト。
+`deque` 型オブジェクト。
 
-*そうです*\
-`deque` 型のオブジェクト。
+*右*\
+`deque` 型オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
 演算子の左辺の deque が演算子の右辺の deque より大きい場合は **true**、それ以外の場合は **false**。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 deque オブジェクト間の比較は、要素のペアの比較に基づいています。 2 つのオブジェクト間の大なり関係は、最初の等しくない要素のペアの比較に基づいています。
 
@@ -300,7 +300,7 @@ int main( )
 Deque c1 is greater than deque c2.
 ```
 
-## <a name="op_gt_eq"></a> 演算子&gt;=
+## <a name="op_gt_eq"></a>演算子&gt;=
 
 演算子の左側の deque オブジェクトが右側の deque オブジェクト以上かどうかを調べます。
 
@@ -311,16 +311,16 @@ bool operator>=(const deque<Type, Allocator>& left, const deque<Type, Allocator>
 ### <a name="parameters"></a>パラメーター
 
 *左*\
-`deque` 型のオブジェクト。
+`deque` 型オブジェクト。
 
-*そうです*\
-`deque` 型のオブジェクト。
+*右*\
+`deque` 型オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
 演算子の左辺の deque が演算子の右辺の deque 以上である場合は **true**、それ以外の場合は **false**。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 deque オブジェクト間の比較は、要素のペアの比較に基づいています。 2 つのオブジェクト間の "以上" 関係は、最初の等しくない要素のペアの比較に基づいています。
 

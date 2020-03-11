@@ -37,11 +37,11 @@ helpviewer_keywords:
 - .rct files [C++]
 ms.assetid: 82be732a-cdcd-4a58-8de7-976d1418f86b
 ms.openlocfilehash: c997c7a1b2d7fb3a852a42fa78faf2be6074705e
-ms.sourcegitcommit: 9aab425662a66825772f091112986952f341f7c8
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72444966"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866122"
 ---
 # <a name="how-to-create-resources-c"></a>方法: リソースを作成するC++()
 
@@ -118,9 +118,9 @@ ms.locfileid: "72444966"
 | プロパティ | 説明 |
 |---|---|
 | **リソースの種類** | 作成するリソースの種類を指定します。<br/><br/>カーソルとダイアログボックスのリソースカテゴリを展開すると、にある追加のリソースが表示さ*れます。\Microsoft Visual Studio \<version\>\\< LCID\>* 。または、。 .Rct ファイルを追加する必要がある場合は、ここに配置するか、別の[インクルードパス](../windows/how-to-specify-include-directories-for-resources.md)を指定します。 ツリーコントロールの最上位レベルに表示されるリソースは、Visual Studio によって提供される既定のリソースです。 .Rct ファイル内のリソースは、適切なカテゴリの2番目のレベルに表示されます。 追加できる .rct ファイルの数には、事前設定された制限はありません。<br/><br/> |
-| **新規** | **[リソースの種類]** ボックスで選択した種類に基づいてリソースを作成し、適切なエディターでリソースを開きます。<br/><br/>たとえば、ダイアログリソースを作成すると、[ダイアログエディター](../windows/dialog-editor.md)にリソースが表示されます。 |
-| **Import** | **[インポート]** ダイアログボックスを開いて、現在のプロジェクトにインポートするリソースに移動します。<br/><br/>ビットマップ、アイコン、カーソル、HTML、サウンド () をインポートできます。WAV)、またはカスタムリソースファイル。 |
-| **カスタム** | カスタムリソースを作成するには、 **[新しいカスタムリソース]** ダイアログボックスを開きます。<br/><br/>には、カスタムリソースの種類の名前を入力するためのテキストボックスを提供する、**リソースの種類**のプロパティも含まれています。 をC++終了すると、その名前が自動的に大文字になります。 カスタムリソースは、[バイナリエディター](../windows/binary-editor.md)でのみ編集できます。 |
+| **[新規作成]** | **[リソースの種類]** ボックスで選択した種類に基づいてリソースを作成し、適切なエディターでリソースを開きます。<br/><br/>たとえば、ダイアログリソースを作成すると、[ダイアログエディター](../windows/dialog-editor.md)にリソースが表示されます。 |
+| **[インポート]** | **[インポート]** ダイアログボックスを開いて、現在のプロジェクトにインポートするリソースに移動します。<br/><br/>ビットマップ、アイコン、カーソル、HTML、サウンド () をインポートできます。WAV)、またはカスタムリソースファイル。 |
+| **Custom** | カスタムリソースを作成するには、 **[新しいカスタムリソース]** ダイアログボックスを開きます。<br/><br/>には、カスタムリソースの種類の名前を入力するためのテキストボックスを提供する、**リソースの種類**のプロパティも含まれています。 をC++終了すると、その名前が自動的に大文字になります。 カスタムリソースは、[バイナリエディター](../windows/binary-editor.md)でのみ編集できます。 |
 
 新しいリソースを作成すると、ビジュアルC++によって、`IDD_Dialog1`などの一意の名前が割り当てられます。 このリソース ID をカスタマイズするには、関連付けられているリソースエディターまたは[プロパティウィンドウ](/visualstudio/ide/reference/properties-window)でリソースのプロパティを編集します。
 
@@ -155,7 +155,7 @@ ms.locfileid: "72444966"
 > [!NOTE]
 > 言語固有のテンプレートファイルは、メインテンプレートディレクトリのサブディレクトリに配置します。 たとえば、英語専用のテンプレートファイルは *..\\< リソーステンプレートディレクトリ\>\ 1033*です。
 >
-> Visual Studio で新しい .rct ファイル検索 *\Program Files\Microsoft Visual Studio\<バージョン\>\VC\VCResourceTemplates*、 *\Program Files\Microsoft Visual Studio \<バージョン > \VC\VCResourceTemplates\\< LCID\>*  (など、1033 は英語の LCID)、または任意の場所に、[インクルード パス](../windows/how-to-specify-include-directories-for-resources.md)します。 .Rct ファイルを別の場所に保存する場合は、インクルードパスに場所を追加する必要があります。
+> Visual Studio で新しい .rct ファイルが検索されます。このファイルは、 *Visual studio \<バージョン\>\ Vc\ vcresourcetemplates*、 *\<、\\>* (英語の場合は 1033)、または[インクルードパス](../windows/how-to-specify-include-directories-for-resources.md)上の任意の場所で使用されています。\> .Rct ファイルを別の場所に保存する場合は、インクルードパスに場所を追加する必要があります。
 
 ### <a name="to-create-and-use-a-resource-template"></a>リソーステンプレートを作成して使用するには
 

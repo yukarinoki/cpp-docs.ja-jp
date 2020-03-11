@@ -6,15 +6,15 @@ f1_keywords:
 - allocators/std::operator==
 ms.assetid: b55d67cb-3c69-46bf-ad40-e845fb096c4e
 ms.openlocfilehash: b7429e298cdf14d727fc481db6c4a3bf8574b5e7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62377895"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78875959"
 ---
 # <a name="ltallocatorsgt-operators"></a>&lt;allocators&gt; 演算子
 
-これらは、グローバル テンプレートの演算子関数で定義されている&lt;アロケーター&gt;します。 クラスのメンバー演算子関数は、クラスのドキュメントを参照してください。
+これらは &lt;アロケーター&gt;で定義されているグローバルテンプレート演算子関数です。 クラスメンバー演算子関数については、クラスのドキュメントを参照してください。
 
 |||
 |-|-|
@@ -42,7 +42,7 @@ bool operator!=(
 
 アロケーター オブジェクトが等しくない場合は **true**、アロケーター オブジェクトが等しい場合は **false**。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 テンプレート演算子は `!(left == right)` を返します。
 
@@ -68,10 +68,10 @@ bool operator==(
 
 アロケーター オブジェクトが等しい場合は **true**、アロケーター オブジェクトが等しくない場合は **false**。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 このテンプレート演算子は `left.equals(right)` を返します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [\<allocators>](../standard-library/allocators-header.md)

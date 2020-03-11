@@ -6,11 +6,11 @@ helpviewer_keywords:
 - containers, C++ Standard Library
 ms.assetid: 8e915ca1-19ba-4f0d-93c8-e2c3bfd638eb
 ms.openlocfilehash: 1119947534c030afaad64e4905e58365ffffd05e
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72686104"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856731"
 ---
 # <a name="c-standard-library-containers"></a>C++ 標準ライブラリのコンテナー
 
@@ -44,7 +44,7 @@ ms.locfileid: "72686104"
 
 `map` と `set` のどちらでも、キーまたは要素の 1 つのインスタンスだけをコンテナーに挿入できます。 要素の複数のインスタンスが必要な場合は、`multimap` または `multiset` を使用します。 順序なしのバージョンは `unordered_multimap` と `unordered_multiset` です。 詳細については、「[multimap クラス](../standard-library/multimap-class.md)」、「[unordered_multimap クラス](../standard-library/unordered-multimap-class.md)」、「[multiset クラス](../standard-library/multiset-class.md)」、および「[unordered_multiset クラス](../standard-library/unordered-multiset-class.md)」をご覧ください。
 
-順序ありのマップおよびセットは双方向反復子をサポートしており、順序なしのバージョンは前方反復子をサポートしています。 詳細については、「[反復子](../standard-library/iterators.md)」をご覧ください。
+順序ありのマップおよびセットは双方向反復子をサポートしており、順序なしのバージョンは前方反復子をサポートしています。 詳細については、「 [反復子](../standard-library/iterators.md)」を参照してください。
 
 ### <a name="heterogeneous-lookup-in-associative-containers-c14"></a>連想コンテナーの異種ルックアップ (C++14)
 
@@ -58,7 +58,7 @@ std::set<BigObject, std::less<>> myNewSet;
 
 既定の比較子を使用すると、コンテナーは c++ 11 以前と同じように正確に動作します。
 
-次の例では、`std::set` のユーザーが、各オブジェクトの `BigObject::id` メンバーと比較できる短い文字列を渡すだけでルックアップを実行できるようにするために `operator<` をオーバーロードする方法を示しています。
+次の例では、`operator<` のユーザーが、各オブジェクトの `std::set` メンバーと比較できる短い文字列を渡すだけでルックアップを実行できるようにするために `BigObject::id` をオーバーロードする方法を示しています。
 
 ```cpp
 #include <set>
@@ -121,7 +121,7 @@ int main()
 
 map、multimap、set、multiset 内の次のメンバー関数は、異種ルックアップをサポートするように、あらかじめオーバーロードされています。
 
-1. find
+1. 検索
 
 1. count
 
@@ -141,7 +141,7 @@ map、multimap、set、multiset 内の次のメンバー関数は、異種ルッ
 
 `stack` コンテナーは、LIFO (後入れ先出し) のセマンティクスに従います。 スタックに最後にプッシュされた要素が最初にポップされます。 詳細については、「[stack Class (stack クラス)](../standard-library/stack-class.md)」をご覧ください。
 
-コンテナー アダプターは反復子をサポートしていないため、C++ 標準ライブラリ アルゴリズムでは使用できません。 詳細については、「[アルゴリズム](../standard-library/algorithms.md)」をご覧ください。
+コンテナー アダプターは反復子をサポートしていないため、C++ 標準ライブラリ アルゴリズムでは使用できません。 詳細については、「[アルゴリズム](../standard-library/algorithms.md)」を参照してください。
 
 ## <a name="requirements-for-container-elements"></a>コンテナー要素の要件
 
@@ -155,7 +155,7 @@ map、multimap、set、multiset 内の次のメンバー関数は、異種ルッ
 
 ## <a name="accessing-container-elements"></a>コンテナー要素へのアクセス
 
-コンテナーの要素には、反復子を使用してアクセスします。 詳細については、「[反復子](../standard-library/iterators.md)」をご覧ください。
+コンテナーの要素には、反復子を使用してアクセスします。 詳細については、「 [反復子](../standard-library/iterators.md)」を参照してください。
 
 > [!NOTE]
 > また、C++ 標準ライブラリ コレクションに対する反復処理には[範囲ベースの for ループ](../cpp/range-based-for-statement-cpp.md)を使用できます。
@@ -168,9 +168,9 @@ map、multimap、set、multiset 内の次のメンバー関数は、異種ルッ
 
 C++ 14 以降では、2つの完全な範囲を受け取る `std::equal`、`std::mismatch`、または `std::is_permutation` 関数のオーバーロードのいずれかを使用して、異なるコンテナーや要素の種類を比較できます。 これらのオーバーロードを使用すると、長さが異なるコンテナーを比較できます。 これらのオーバーロードは、ユーザー エラーの影響を受けにくく、長さが異なるコンテナーを比較しているときに一定の時間で false を返すように最適化されています。 そのため、(1) 使用しない明確な理由があるか (2) [std::list](../standard-library/list-class.md) コンテナーを使用している (2 つの範囲の最適化を行うメリットがありません) のでない限り、これらのオーバーロードを使用することをお勧めします。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[コンテナー](../cpp/containers-modern-cpp.md)\
+[Containers](../cpp/containers-modern-cpp.md)\
 [C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)\
 [\<sample container>](../standard-library/sample-container.md)\
 [C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

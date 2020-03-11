@@ -45,15 +45,15 @@ helpviewer_keywords:
 - CControlBar [MFC], m_pInPlaceOwner
 ms.assetid: 4d668c55-9b42-4838-97ac-cf2b3000b82c
 ms.openlocfilehash: 41e40b3da7b4a294fe396a9d93f7c6a93593ff95
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62345826"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866438"
 ---
 # <a name="ccontrolbar-class"></a>CControlBar Class
 
-コントロール バー クラスの基本クラス[CStatusBar](../../mfc/reference/cstatusbar-class.md)、 [CToolBar](../../mfc/reference/ctoolbar-class.md)、 [CDialogBar](../../mfc/reference/cdialogbar-class.md)、 [CReBar](../../mfc/reference/crebar-class.md)、および[COleResizeBar](../../mfc/reference/coleresizebar-class.md)します。
+コントロールバークラス[CStatusBar](../../mfc/reference/cstatusbar-class.md)、 [CToolBar](../../mfc/reference/ctoolbar-class.md)、 [CDialogBar](../../mfc/reference/cdialogbar-class.md)、 [CReBar](../../mfc/reference/crebar-class.md)、および[coleresizebar](../../mfc/reference/coleresizebar-class.md)の基本クラス。
 
 ## <a name="syntax"></a>構文
 
@@ -65,41 +65,41 @@ class CControlBar : public CWnd
 
 ### <a name="protected-constructors"></a>プロテクト コンストラクター
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
-|[CControlBar::CControlBar](#ccontrolbar)|`CControlBar` オブジェクトを構築します。|
+|[CControlBar:: CControlBar](#ccontrolbar)|`CControlBar` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
-|[CControlBar::CalcDynamicLayout](#calcdynamiclayout)|としてダイナミック コントロール バーのサイズを返します、 [CSize](../../atl-mfc-shared/reference/csize-class.md)オブジェクト。|
-|[CControlBar::CalcFixedLayout](#calcfixedlayout)|としてコントロール バーのサイズを返します、 [CSize](../../atl-mfc-shared/reference/csize-class.md)オブジェクト。|
-|[CControlBar::CalcInsideRect](#calcinsiderect)|境界線を含むコントロール バー領域の現在のディメンションを返します。|
-|[CControlBar::DoPaint](#dopaint)|コントロール バーの境界線およびグリップをレンダリングします。|
-|[CControlBar::DrawBorders](#drawborders)|コントロール バーの境界線をレンダリングします。|
-|[CControlBar::DrawGripper](#drawgripper)|コントロール バーのグリップをレンダリングします。|
-|[CControlBar::EnableDocking](#enabledocking)|コントロール バーをドッキングまたはフローティングできるようにします。|
-|[したとき](#getbarstyle)|コントロール バーのスタイル設定を取得します。|
-|[CControlBar::GetBorders](#getborders)|コントロール バーの境界線の値を取得します。|
-|[CControlBar::GetCount](#getcount)|コントロール バーの HWND 以外の要素の数を返します。|
-|[CControlBar::GetDockingFrame](#getdockingframe)|コントロール バーがドッキングされるフレームへのポインターを返します。|
-|[CControlBar::IsFloating](#isfloating)|対象のコントロール バーがフローティング コントロール バーである場合に、ゼロ以外の値を返します。|
-|[CControlBar::OnUpdateCmdUI](#onupdatecmdui)|コマンド UI ハンドラーを呼び出します。|
-|[CControlBar::SetBarStyle](#setbarstyle)|コントロール バーのスタイル設定を変更します。|
-|[CControlBar::SetBorders](#setborders)|コントロール バーの境界線の値を設定します。|
-|[CControlBar::SetInPlaceOwner](#setinplaceowner)|コントロール バーのインプレース所有者を変更します。|
+|[CControlBar:: CalcDynamicLayout](#calcdynamiclayout)|動的コントロールバーのサイズを[CSize](../../atl-mfc-shared/reference/csize-class.md)オブジェクトとして返します。|
+|[CControlBar:: CalcFixedLayout](#calcfixedlayout)|コントロールバーのサイズを[CSize](../../atl-mfc-shared/reference/csize-class.md)オブジェクトとして返します。|
+|[CControlBar:: CalcInsideRect](#calcinsiderect)|境界線を含むコントロール バー領域の現在のディメンションを返します。|
+|[CControlBar::D oPaint](#dopaint)|コントロール バーの境界線およびグリップをレンダリングします。|
+|[CControlBar::D rawBorders](#drawborders)|コントロール バーの境界線をレンダリングします。|
+|[CControlBar::D rawGripper](#drawgripper)|コントロール バーのグリップをレンダリングします。|
+|[CControlBar:: EnableDocking](#enabledocking)|コントロール バーをドッキングまたはフローティングできるようにします。|
+|[CControlBar:: GetBarStyle](#getbarstyle)|コントロール バーのスタイル設定を取得します。|
+|[CControlBar:: GetBorders](#getborders)|コントロール バーの境界線の値を取得します。|
+|[CControlBar:: GetCount](#getcount)|コントロールバーの非 HWND 要素の数を返します。|
+|[CControlBar:: Getdocの枠](#getdockingframe)|コントロール バーがドッキングされるフレームへのポインターを返します。|
+|[CControlBar:: IsFloating](#isfloating)|対象のコントロール バーがフローティング コントロール バーである場合に、ゼロ以外の値を返します。|
+|[CControlBar:: OnUpdateCmdUI](#onupdatecmdui)|コマンド UI ハンドラーを呼び出します。|
+|[CControlBar:: SetBarStyle](#setbarstyle)|コントロール バーのスタイル設定を変更します。|
+|[CControlBar:: SetBorders](#setborders)|コントロール バーの境界線の値を設定します。|
+|[CControlBar:: Setinplace 所有者](#setinplaceowner)|コントロール バーのインプレース所有者を変更します。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
-|[CControlBar::m_bAutoDelete](#m_bautodelete)|ゼロ以外の場合は、Windows のコントロール バーが破棄されると、`CControlBar` オブジェクトが削除されます。|
-|[CControlBar::m_pInPlaceOwner](#m_pinplaceowner)|コントロール バーのインプレース所有者です。|
+|[CControlBar:: m_bAutoDelete](#m_bautodelete)|ゼロ以外の場合は、Windows のコントロール バーが破棄されると、`CControlBar` オブジェクトが削除されます。|
+|[CControlBar:: m_pInPlaceOwner](#m_pinplaceowner)|コントロール バーのインプレース所有者です。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-通常、コントロール バーは、フレーム ウィンドウの左側または右側にアラインされるウィンドウです。 いずれかの Windows メッセージに応答を生成する windows には、HWND ベースのコントロールや windows でないし、アプリケーション コードまたはフレームワーク コードによって管理されている非 HWND ベースの項目が子項目に含めることができます。 リスト ボックスやエディット コントロール、HWND ベースのコントロールの例ステータス バー ペインやビットマップ ボタンは、HWND ベースのコントロールの例を示します。
+通常、コントロール バーは、フレーム ウィンドウの左側または右側にアラインされるウィンドウです。 これには、HWND ベースのコントロールである子項目が含まれる場合があります。これは、windows メッセージを生成して応答するウィンドウであるか、または windows ではなく、アプリケーションコードまたはフレームワークコードによって管理されている非 HWND ベースの項目です。 リストボックスとエディットコントロールは、HWND ベースのコントロールの例です。ステータスバーペインおよびビットマップボタンは、HWND ベースでないコントロールの例です。
 
 通常、コントロール バーのウィンドウは親フレーム ウィンドウの子ウィンドウであり、通常はクライアント ビューまたはフレーム ウィンドウの MDI クライアントの兄弟です。 `CControlBar` オブジェクトは、親ウィンドウのクライアント領域の四角形に関する情報を使用して、それ自体を配置します。 次に、親ウィンドウのクライアント領域においてどの程度の未割り当て領域が残っているかについて、親ウィンドウに通知します。
 
@@ -107,7 +107,7 @@ class CControlBar : public CWnd
 
 - [コントロール バー](../../mfc/control-bars.md)
 
-- [テクニカル ノート 31:コントロール バー](../../mfc/tn031-control-bars.md)します。
+- [テクニカルノート 31: コントロールバー](../../mfc/tn031-control-bars.md)。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -115,17 +115,17 @@ class CControlBar : public CWnd
 
 [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
-[CWnd](../../mfc/reference/cwnd-class.md)
+[から派生しているのではない](../../mfc/reference/cwnd-class.md)
 
 `CControlBar`
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** afxext.h
 
-##  <a name="calcdynamiclayout"></a>  CControlBar::CalcDynamicLayout
+##  <a name="calcdynamiclayout"></a>CControlBar:: CalcDynamicLayout
 
-フレームワークは、動的なツールバーのサイズを計算するには、このメンバー関数を呼び出します。
+フレームワークは、このメンバー関数を呼び出して、動的ツールバーのサイズを計算します。
 
 ```
 virtual CSize CalcDynamicLayout(
@@ -136,32 +136,32 @@ virtual CSize CalcDynamicLayout(
 ### <a name="parameters"></a>パラメーター
 
 *nLength*<br/>
-コントロール バー、水平方向または垂直方向に応じてのいずれかの要求されたディメンション*寸法*します。
+*Dwmode*に応じて、水平方向または垂直方向のコントロールバーの要求されたディメンション。
 
-*nMode*<br/>
-次の定義済みフラグを使用して、ダイナミック コントロール バーの幅と高さを決定します。 ビットごとの OR を使用して (&#124;) フラグを結合する演算子。
+*Evaluationmode*<br/>
+次の定義済みフラグは、ダイナミックコントロールバーの高さと幅を決定するために使用されます。 フラグを組み合わせるには、&#124;ビットごとの or () 演算子を使用します。
 
-|レイアウト モードのフラグ|その意味|
+|レイアウトモードフラグ|意味|
 |-----------------------|-------------------|
-|LM_STRETCH|コントロール バーをフレームのサイズに引き伸ばすかどうかを示します。 バーがドッキング バー (ドッキングの使用不可) ではない場合に設定します。 設定されていない、バーがドッキングまたはフローティング (ドッキングの使用可能)。 設定すると、LM_STRETCH 無視*されて*いる状態に基づいたディメンションを返します。 LM_STRETCH 動作と同様に、 *bStretch*で使用されるパラメーター [CalcFixedLayout](#calcfixedlayout); 伸縮と印刷の向きの関係の詳細については、メンバー関数を参照してください。|
-|いる|バーが水平方向または垂直方向であることを示します。 場合は、バーが水平方向と垂直方向の場合は設定されませんを設定します。 いる動作と同様に、 *bHorz*で使用されるパラメーター [CalcFixedLayout](#calcfixedlayout); 伸縮と印刷の向きの関係の詳細については、メンバー関数を参照してください。|
-|LM_MRUWIDTH|動的な幅を最近使用します。 無視*されて*パラメーターとは、記憶された最近の幅を使用します。|
-|LM_HORZDOCK|ディメンションを水平にドッキングします。 無視*されて*パラメーターを最大の幅の動的なサイズを返します。|
-|LM_VERTDOCK|ディメンションを垂直方向にドッキングします。 無視*されて*パラメーターを最大の高さを持つ動的なサイズを返します。|
-|LM_LENGTHY|場合設定*されて*幅ではなく、高さ (Y 方向) を示します。|
-|LM_COMMIT|LM_MRUWIDTH をフローティング コントロール バーの現在の幅にリセットします。|
+|LM_STRETCH|コントロールバーをフレームのサイズに拡大する必要があるかどうかを示します。 バーがドッキングバーではない (ドッキングでは使用できない) 場合に設定します。 バーがドッキングされている場合、またはフローティング状態の場合 (ドッキングで使用可能) には設定されません。 設定した場合、LM_STRETCH は*Nlength*を無視し、LM_HORZ の状態に基づいてディメンションを返します。 LM_STRETCH は、 [CalcFixedLayout](#calcfixedlayout)で使用される*bstretch*パラメーターと同様に機能します。拡大と向きの関係の詳細については、メンバー関数を参照してください。|
+|LM_HORZ|バーが水平方向または垂直方向であることを示します。 バーを水平方向に配置するかどうかを設定します。垂直方向の場合は設定されません。 LM_HORZ は、 [CalcFixedLayout](#calcfixedlayout)で使用される*bHorz*パラメーターと同様に機能します。拡大と向きの関係の詳細については、メンバー関数を参照してください。|
+|LM_MRUWIDTH|最近使用した動的な幅。 は*Nlength*パラメーターを無視し、最近使用した文字幅を記憶しています。|
+|LM_HORZDOCK|水平方向にドッキングされた寸法。 *Nlength*パラメーターを無視し、最大幅の動的サイズを返します。|
+|LM_VERTDOCK|垂直方向にドッキングされた寸法。 は、 *Nlength*パラメーターを無視し、最大の高さを持つ動的なサイズを返します。|
+|LM_LENGTHY|*Nlength*が幅ではなく高さ (Y 方向) を示す場合に設定します。|
+|LM_COMMIT|LM_MRUWIDTH をフローティングコントロールバーの現在の幅にリセットします。|
 
 ### <a name="return-value"></a>戻り値
 
-コントロール バー (ピクセル単位) のサイズ、 [CSize](../../atl-mfc-shared/reference/csize-class.md)オブジェクト。
+[CSize](../../atl-mfc-shared/reference/csize-class.md)オブジェクトのコントロールバーのサイズ (ピクセル単位)。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-派生したクラスで独自の動的レイアウトを提供するには、このメンバー関数をオーバーライド`CControlBar`します。 派生した MFC クラス`CControlBar`など[CToolbar](../../mfc/reference/ctoolbar-class.md)このメンバー関数をオーバーライドし、独自の実装を提供します。
+このメンバー関数をオーバーライドすると、`CControlBar`から派生したクラスに独自の動的レイアウトが提供されます。 `CControlBar`から派生した MFC クラス ( [CToolbar](../../mfc/reference/ctoolbar-class.md)など) は、このメンバー関数をオーバーライドし、独自の実装を提供します。
 
-##  <a name="calcfixedlayout"></a>  CControlBar::CalcFixedLayout
+##  <a name="calcfixedlayout"></a>CControlBar:: CalcFixedLayout
 
-コントロール バーの水平方向のサイズを計算するには、このメンバー関数を呼び出します。
+コントロールバーの水平方向のサイズを計算するには、このメンバー関数を呼び出します。
 
 ```
 virtual CSize CalcFixedLayout(
@@ -172,31 +172,31 @@ virtual CSize CalcFixedLayout(
 ### <a name="parameters"></a>パラメーター
 
 *bStretch*<br/>
-バーをフレームのサイズに引き伸ばすかどうかを示します。 *BStretch*バーのドッキング バー (ドッキングの使用不可) ではないと (ドッキングの使用可能) をドッキングまたはフローティングがある場合に 0 をパラメーターが 0 以外の場合は。
+バーをフレームのサイズに拡大する必要があるかどうかを示します。 バーがドッキングバーではなく、ドッキングされている (ドッキングで使用可能な) 場合、 *Bstretch*パラメーターは0以外になります。
 
 *bHorz*<br/>
-バーが水平方向または垂直方向であることを示します。 *BHorz*バーが水平方向および垂直方向にある場合は 0 の場合は、パラメーターが 0 以外の場合。
+バーが水平方向または垂直方向であることを示します。 *BHorz*パラメーターは、横棒が水平方向の場合は0以外で、垂直方向の場合は0になります。
 
 ### <a name="return-value"></a>戻り値
 
-コントロール バー (ピクセル単位) のサイズ、`CSize`オブジェクト。
+`CSize` オブジェクトのコントロールバーのサイズ (ピクセル単位)。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-ツールバーなどのコントロール バーが水平方向に拡張できます。 または垂直方向にボタンに合わせて、コントロール バーに含まれています。
+ツールバーなどのコントロールバーは、水平方向または垂直方向に伸縮して、コントロールバーに含まれるボタンを収めることができます。
 
-場合*bStretch*が true の場合、拡張によって提供される方向に沿ってディメンション*bHorz*します。 つまり場合、 *bHorz* false で、コントロール バーが垂直方向に拡大されます。 場合*bStretch* FALSE は、stretch は行われません。 次の表は、の組み合わせ、および結果として得られるコントロール バー スタイルを示しています。 *bStretch*と*bHorz*します。
+*Bstretch*が TRUE の場合は、 *bHorz*によって提供される方向に沿ってディメンションを伸縮します。 つまり、 *bHorz*が FALSE の場合、コントロールバーは垂直方向に拡大されます。 *Bstretch*が FALSE の場合、ストレッチは行われません。 次の表は、 *Bstretch*と*bHorz*の考えられる順列と、結果として得られるコントロールバーのスタイルを示しています。
 
-|bStretch|bHorz|拡大|[方向]|ドッキングかどうかのドッキング|
+|bStretch|bHorz|拡大|[方向]|ドッキング/非ドッキング|
 |--------------|-----------|----------------|-----------------|--------------------------|
-|true|true|水平方向の拡大|横方向に配置|ドッキングしません。|
-|true|false|垂直方向の拡大|垂直方向|ドッキングしません。|
-|false|true|伸縮しません。|横方向に配置|ドッキング|
-|false|false|伸縮しません。|垂直方向|ドッキング|
+|TRUE|TRUE|横方向の伸縮|水平方向|ドッキングしない|
+|TRUE|FALSE|垂直方向の伸縮|垂直方向|ドッキングしない|
+|FALSE|TRUE|拡張を使用できません|水平方向|ドッキング|
+|FALSE|FALSE|拡張を使用できません|垂直方向|ドッキング|
 
-##  <a name="calcinsiderect"></a>  CControlBar::CalcInsideRect
+##  <a name="calcinsiderect"></a>CControlBar:: CalcInsideRect
 
-フレームワークは、コントロール バーのクライアント領域を計算するには、この関数を呼び出します。
+フレームワークは、この関数を呼び出して、コントロールバーのクライアント領域を計算します。
 
 ```
 virtual void CalcInsideRect(
@@ -207,18 +207,18 @@ virtual void CalcInsideRect(
 ### <a name="parameters"></a>パラメーター
 
 *rect*<br/>
-コントロール バーの現在のディメンションが含まれています境界線を含むです。
+コントロールバーの現在の大きさを格納します。境界線を含めます。
 
 *bHorz*<br/>
-バーが水平方向または垂直方向であることを示します。 *BHorz*バーが水平方向および垂直方向にある場合は 0 の場合は、パラメーターが 0 以外の場合。
+バーが水平方向または垂直方向であることを示します。 *BHorz*パラメーターは、横棒が水平方向の場合は0以外で、垂直方向の場合は0になります。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-コントロール バーが描画される前に、この関数が呼び出されます。
+この関数は、コントロールバーが描画される前に呼び出されます。
 
-コントロール バーのグリップ バー、罫線の描画をカスタマイズするには、この関数をオーバーライドします。
+コントロールバーの境界線とグリップバーのレンダリングをカスタマイズするには、この関数をオーバーライドします。
 
-##  <a name="ccontrolbar"></a>  CControlBar::CControlBar
+##  <a name="ccontrolbar"></a>CControlBar:: CControlBar
 
 `CControlBar` オブジェクトを構築します。
 
@@ -226,9 +226,9 @@ virtual void CalcInsideRect(
 CControlBar();
 ```
 
-##  <a name="dopaint"></a>  CControlBar::DoPaint
+##  <a name="dopaint"></a>CControlBar::D oPaint
 
-枠線とコントロール バーのグリップ バーを表示するためにフレームワークによって呼び出されます。
+コントロールバーの境界線とグリップバーを描画するためにフレームワークによって呼び出されます。
 
 ```
 virtual void DoPaint(CDC* pDC);
@@ -237,17 +237,17 @@ virtual void DoPaint(CDC* pDC);
 ### <a name="parameters"></a>パラメーター
 
 *pDC*<br/>
-境界線およびコントロール バーのグリップをレンダリングするために使用するデバイス コンテキストへのポインター。
+コントロールバーの境界線とグリップのレンダリングに使用されるデバイスコンテキストを指します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-コントロール バーの描画動作をカスタマイズするには、この関数をオーバーライドします。
+コントロールバーの描画動作をカスタマイズするには、この関数をオーバーライドします。
 
-もう 1 つのカスタマイズの方法は、オーバーライドする、`DrawBorders`と`DrawGripper`関数し、境界線およびグリップ用のカスタムの描画コードを追加します。 既定では、これらのメソッドが呼び出されるため`DoPaint`メソッドは、のオーバーライドを`DoPaint`は必要ありません。
+別のカスタマイズ方法として、`DrawBorders` および `DrawGripper` 関数をオーバーライドし、境界線とグリップのカスタム描画コードを追加します。 これらのメソッドは既定の `DoPaint` メソッドによって呼び出されるため、`DoPaint` のオーバーライドは必要ありません。
 
-##  <a name="drawborders"></a>  CControlBar::DrawBorders
+##  <a name="drawborders"></a>CControlBar::D rawBorders
 
-コントロール バーの境界線を表示するためにフレームワークによって呼び出されます。
+コントロールバーの境界線を描画するためにフレームワークによって呼び出されます。
 
 ```
 virtual void DrawBorders(
@@ -258,18 +258,18 @@ virtual void DrawBorders(
 ### <a name="parameters"></a>パラメーター
 
 *pDC*<br/>
-コントロール バーの境界線の描画に使用するデバイス コンテキストへのポインター。
+コントロールバーの境界線を描画するために使用されるデバイスコンテキストを指します。
 
 *rect*<br/>
-A`CRect`コントロール バーのサイズを格納しているオブジェクト。
+コントロールバーの大きさを格納している `CRect` オブジェクト。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-コントロール バーの境界線の外観をカスタマイズするには、この関数をオーバーライドします。
+コントロールバーの境界線の外観をカスタマイズするには、この関数をオーバーライドします。
 
-##  <a name="drawgripper"></a>  CControlBar::DrawGripper
+##  <a name="drawgripper"></a>CControlBar::D rawGripper
 
-コントロール バーのグリップを表示するためにフレームワークによって呼び出されます。
+コントロールバーのグリップをレンダリングするためにフレームワークによって呼び出されます。
 
 ```
 virtual void DrawGripper(
@@ -280,18 +280,18 @@ virtual void DrawGripper(
 ### <a name="parameters"></a>パラメーター
 
 *pDC*<br/>
-コントロール バーのグリップをレンダリングするために使用するデバイス コンテキストへのポインター。
+コントロールバーのグリップを表示するために使用されるデバイスコンテキストを指します。
 
 *rect*<br/>
-A`CRect`コントロール バーのグリップの大きさを格納しているオブジェクト。
+コントロールバーのグリップの大きさを格納している `CRect` オブジェクト。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-コントロール バーのグリップの外観をカスタマイズするには、この関数をオーバーライドします。
+コントロールバーのグリップの外観をカスタマイズするには、この関数をオーバーライドします。
 
-##  <a name="enabledocking"></a>  CControlBar::EnableDocking
+##  <a name="enabledocking"></a>CControlBar:: EnableDocking
 
-ドッキング コントロール バーを有効にするには、この関数を呼び出します。
+コントロールバーをドッキングできるようにするには、この関数を呼び出します。
 
 ```
 void EnableDocking(DWORD dwDockStyle);
@@ -300,29 +300,29 @@ void EnableDocking(DWORD dwDockStyle);
 ### <a name="parameters"></a>パラメーター
 
 *dwDockStyle*<br/>
-サポートされている場合は、コントロール バーがドッキングをサポートするかどうかとするコントロール バーをドッキングできる、親ウィンドウの辺を指定します。 次の 1 つ以上を指定できます。
+コントロールバーがドッキングをサポートしている場合は、コントロールバーがドッキングできる親ウィンドウの辺をサポートするかどうかを指定します。 次の1つまたは複数を指定できます。
 
-- CBRS_ALIGN_TOP は、クライアント領域の上部にドッキングできます。
+- CBRS_ALIGN_TOP を使用すると、クライアント領域の上部にドッキングできます。
 
-- CBRS_ALIGN_BOTTOM は、クライアント領域の下部にドッキングできます。
+- CBRS_ALIGN_BOTTOM を使用すると、クライアント領域の下部にドッキングできます。
 
-- CBRS_ALIGN_LEFT は、クライアント領域の左側にドッキングできます。
+- CBRS_ALIGN_LEFT を使用すると、クライアント領域の左側にドッキングできます。
 
-- CBRS_ALIGN_RIGHT は、クライアント領域の右側にドッキングできます。
+- CBRS_ALIGN_RIGHT を使用すると、クライアント領域の右側にドッキングできます。
 
-- CBRS_ALIGN_ANY は、クライアント領域の任意の辺にドッキングできます。
+- CBRS_ALIGN_ANY を使用すると、クライアント領域の任意の側でドッキングできます。
 
-- CBRS_FLOAT_MULTI は、1 つのミニフレーム ウィンドウにフローティングする複数のコントロール バーを使用できます。
+- CBRS_FLOAT_MULTI を使用すると、1つのミニフレームウィンドウで複数のコントロールバーをフローティングできます。
 
-0 の場合 (つまり、いないことを示すフラグ)、コントロール バーがドッキングされます。
+0の場合 (つまり、フラグが指定されていない場合)、コントロールバーはドッキングされません。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-指定した辺は、移行先フレーム ウィンドウのドッキングの辺のいずれかに一致する必要がありますか、そのフレーム ウィンドウにコントロール バーをドッキングすることはできません。
+指定された辺は、対象のフレームウィンドウでドッキングが有効になっている側のいずれかと一致する必要があります。または、コントロールバーをそのフレームウィンドウにドッキングできません。
 
-##  <a name="getbarstyle"></a>  CControlBar::GetBarStyle
+##  <a name="getbarstyle"></a>CControlBar:: GetBarStyle
 
-判断するためには、この関数を呼び出す**cbrs _** (コントロール バーのスタイル) の設定は、コントロール バーに現在設定されています。
+コントロールバーに現在設定されている**CBRS_** (コントロールバースタイル) 設定を確認するには、この関数を呼び出します。
 
 ```
 DWORD GetBarStyle();
@@ -330,15 +330,15 @@ DWORD GetBarStyle();
 
 ### <a name="return-value"></a>戻り値
 
-現在**cbrs _** コントロール バーの設定 (コントロール バーのスタイル)。 参照してください[CControlBar::SetBarStyle](#setbarstyle)使用可能なスタイルの完全な一覧についてはします。
+コントロールバーの現在の**CBRS_** (コントロールバーのスタイル) 設定。 使用できるスタイルの完全な一覧については、「 [CControlBar:: SetBarStyle](#setbarstyle) 」を参照してください。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-処理しない**ws _** (ウィンドウ スタイル) スタイル。
+**WS_** (ウィンドウスタイル) スタイルを処理しません。
 
-##  <a name="getborders"></a>  CControlBar::GetBorders
+##  <a name="getborders"></a>CControlBar:: GetBorders
 
-コントロール バーの境界線の現在の値を返します。
+コントロールバーの現在の境界の値を返します。
 
 ```
 CRect GetBorders() const;
@@ -346,11 +346,11 @@ CRect GetBorders() const;
 
 ### <a name="return-value"></a>戻り値
 
-A`CRect`コントロール バー オブジェクトの各辺のピクセル単位で、現在の幅を格納しているオブジェクト。 値など、*左*、メンバーの[CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクト、左の境界線の幅です。
+コントロールバーオブジェクトの各辺の現在の幅 (ピクセル単位) を格納している `CRect` オブジェクト。 たとえば、*左側*のメンバーの値 ( [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクト) は、左側の境界線の幅です。
 
-##  <a name="getcount"></a>  CControlBar::GetCount
+##  <a name="getcount"></a>CControlBar:: GetCount
 
-HWND ではない項目の数を返します、`CControlBar`オブジェクト。
+`CControlBar` オブジェクト上の HWND 以外の項目の数を返します。
 
 ```
 int GetCount() const;
@@ -358,15 +358,15 @@ int GetCount() const;
 
 ### <a name="return-value"></a>戻り値
 
-HWND 以外のアイテムの数、`CControlBar`オブジェクト。 この関数の場合は 0 を返します、 [CDialogBar](../../mfc/reference/cdialogbar-class.md)オブジェクト。
+`CControlBar` オブジェクト上の HWND 以外の項目の数。 この関数は、 [CDialogBar](../../mfc/reference/cdialogbar-class.md)オブジェクトに対して0を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-派生のオブジェクトに依存する項目の種類: ペイン[CStatusBar](../../mfc/reference/cstatusbar-class.md)オブジェクトおよびボタンとの区切り記号[CToolBar](../../mfc/reference/ctoolbar-class.md)オブジェクト。
+項目の型は、派生オブジェクト、 [CStatusBar](../../mfc/reference/cstatusbar-class.md)オブジェクトのペイン、および[CToolBar](../../mfc/reference/ctoolbar-class.md)オブジェクトのボタンと区切り記号によって異なります。
 
-##  <a name="getdockingframe"></a>  CControlBar::GetDockingFrame
+##  <a name="getdockingframe"></a>CControlBar:: Getdocの枠
 
-コントロール バーがドッキングされている現在のフレーム ウィンドウへのポインターを取得するには、このメンバー関数を呼び出します。
+コントロールバーがドッキングされている現在のフレームウィンドウへのポインターを取得するには、このメンバー関数を呼び出します。
 
 ```
 CFrameWnd* GetDockingFrame() const;
@@ -374,17 +374,17 @@ CFrameWnd* GetDockingFrame() const;
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は、フレーム ウィンドウへのポインターそれ以外の場合は NULL です。
+成功した場合は、フレームウィンドウへのポインター。それ以外の場合は NULL。
 
-場合 (つまり、コントロール バーがフローティング) 場合に、コントロール バーは、フレーム ウィンドウにドッキングされていない、この関数は、その親にポインターを返します[CMiniFrameWnd](../../mfc/reference/cminiframewnd-class.md)します。
+コントロールバーがフレームウィンドウにドッキングされていない場合 (つまり、コントロールバーが浮動小数点型の場合)、この関数は親[CMiniFrameWnd](../../mfc/reference/cminiframewnd-class.md)へのポインターを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-ドッキング可能なコントロール バーの詳細については、次を参照してください。 [CControlBar::EnableDocking](#enabledocking)と[CFrameWnd::DockControlBar](../../mfc/reference/cframewnd-class.md#dockcontrolbar)します。
+ドッキング可能なコントロールバーの詳細については、「 [CControlBar:: EnableDocking](#enabledocking) and [CFrameWnd::D ockcontrolbar](../../mfc/reference/cframewnd-class.md#dockcontrolbar)」を参照してください。
 
-##  <a name="isfloating"></a>  CControlBar::IsFloating
+##  <a name="isfloating"></a>CControlBar:: IsFloating
 
-コントロール バーがフローティングかドッキングかどうかを判断するには、このメンバー関数を呼び出します。
+コントロールバーがフローティングまたはドッキングされているかどうかを判断するには、このメンバー関数を呼び出します。
 
 ```
 BOOL IsFloating() const;
@@ -392,13 +392,13 @@ BOOL IsFloating() const;
 
 ### <a name="return-value"></a>戻り値
 
-コントロール バーが固定されていない場合は 0 以外それ以外の場合 0 を返します。
+コントロールバーがフローティングの場合は0以外の場合は。それ以外の場合は0です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-ドッキング コントロール バーの状態を変更するには、呼び出して[切り離すには](../../mfc/reference/cframewnd-class.md#floatcontrolbar)します。
+コントロールバーの状態をドッキングからフローティングに変更するには、 [CFrameWnd:: FloatControlBar](../../mfc/reference/cframewnd-class.md#floatcontrolbar)を呼び出します。
 
-##  <a name="m_bautodelete"></a>  CControlBar::m_bAutoDelete
+##  <a name="m_bautodelete"></a>CControlBar:: m_bAutoDelete
 
 ゼロ以外の場合は、Windows のコントロール バーが破棄されると、`CControlBar` オブジェクトが削除されます。
 
@@ -406,15 +406,15 @@ BOOL IsFloating() const;
 BOOL m_bAutoDelete;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-*m_bAutoDelete* BOOL 型のパブリック変数です。
+*m_bAutoDelete*は、BOOL 型のパブリック変数です。
 
-コントロール バー オブジェクトは通常、フレーム ウィンドウ オブジェクトに埋め込まれます。 この場合、 *m_bAutoDelete* 0 は、フレーム ウィンドウが破棄されるときに、埋め込まれたコントロール バー オブジェクトが破棄されるためです。
+通常、コントロールバーオブジェクトはフレームウィンドウオブジェクトに埋め込まれます。 この場合、埋め込まれたコントロールバーオブジェクトは、フレームウィンドウが破棄されると破棄されるため、 *m_bAutoDelete*は0になります。
 
-割り当てる場合、この変数を 0 以外の値に設定、`CControlBar`を呼び出すと、ヒープ上のオブジェクトが行わない**削除**します。
+ヒープに `CControlBar` オブジェクトを割り当て、 **delete**を呼び出す予定がない場合は、この変数を0以外の値に設定します。
 
-##  <a name="m_pinplaceowner"></a>  CControlBar::m_pInPlaceOwner
+##  <a name="m_pinplaceowner"></a>CControlBar:: m_pInPlaceOwner
 
 コントロール バーのインプレース所有者です。
 
@@ -422,9 +422,9 @@ BOOL m_bAutoDelete;
 CWnd* m_pInPlaceOwner;
 ```
 
-##  <a name="onupdatecmdui"></a>  CControlBar::OnUpdateCmdUI
+##  <a name="onupdatecmdui"></a>CControlBar:: OnUpdateCmdUI
 
-このメンバー関数は、ツールバーまたはステータス バーの状態を更新するためにフレームワークによって呼び出されます。
+このメンバー関数は、ツールバーまたはステータスバーの状態を更新するためにフレームワークによって呼び出されます。
 
 ```
 virtual void OnUpdateCmdUI(
@@ -435,20 +435,20 @@ virtual void OnUpdateCmdUI(
 ### <a name="parameters"></a>パラメーター
 
 *pTarget*<br/>
-アプリケーションのメイン フレーム ウィンドウへのポインター。 このポインターは、更新メッセージをルーティングするために使用されます。
+アプリケーションのメインフレームウィンドウをポイントします。 このポインターは、更新メッセージをルーティングするために使用されます。
 
-*持たず*<br/>
-更新ハンドラーがないコントロールが無効と自動的に表示されるかどうかを示すフラグ。
+*bDisableIfNoHndler*<br/>
+更新ハンドラーを持たないコントロールを自動的に無効として表示するかどうかを示すフラグです。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-各ボタンまたはウィンドウを更新するのにには、更新ハンドラーを適切に設定するのに、メッセージ マップに ON_UPDATE_COMMAND_UI マクロを使用します。 参照してください[ON_UPDATE_COMMAND_UI](message-map-macros-mfc.md#on_update_command_ui)詳細については、このマクロを使用します。
+個々のボタンまたはウィンドウを更新するには、メッセージマップで ON_UPDATE_COMMAND_UI マクロを使用して、更新ハンドラーを適切に設定します。 このマクロの使用方法の詳細については、「 [ON_UPDATE_COMMAND_UI](message-map-macros-mfc.md#on_update_command_ui) 」を参照してください。
 
-`OnUpdateCmdUI` アプリケーションがアイドル状態のときに、フレームワークによって呼び出されます。 フレーム ウィンドウを更新する必要がありますいないを子ウィンドウを直接には少なくとも表示されるフレーム ウィンドウの。 `OnUpdateCmdUI` 高度なは、オーバーライド可能な。
+`OnUpdateCmdUI` は、アプリケーションがアイドル状態のときにフレームワークによって呼び出されます。 更新するフレームウィンドウは、少なくとも、表示されているフレームウィンドウの子ウィンドウである必要があります。 `OnUpdateCmdUI` は高度なオーバーライド可能です。
 
-##  <a name="setbarstyle"></a>  CControlBar::SetBarStyle
+##  <a name="setbarstyle"></a>CControlBar:: SetBarStyle
 
-必要な設定するには、この関数を呼び出す**cbrs _** コントロール バーのスタイル。
+コントロールバーの目的の**CBRS_** スタイルを設定するには、この関数を呼び出します。
 
 ```
 void SetBarStyle(DWORD dwStyle);
@@ -457,41 +457,41 @@ void SetBarStyle(DWORD dwStyle);
 ### <a name="parameters"></a>パラメーター
 
 *dwStyle*<br/>
-コントロール バーに必要なスタイル。 次の 1 つ以上を指定できます。
+コントロールバーに必要なスタイル。 次の1つまたは複数を指定できます。
 
-- CBRS_ALIGN_TOP は、フレーム ウィンドウのクライアント領域の上部にドッキング コントロール バーを使用できます。
+- CBRS_ALIGN_TOP を使用すると、コントロールバーをフレームウィンドウのクライアント領域の上部にドッキングできます。
 
-- CBRS_ALIGN_BOTTOM は、フレーム ウィンドウのクライアント領域の下部にドッキング コントロール バーを使用できます。
+- CBRS_ALIGN_BOTTOM を使用すると、コントロールバーをフレームウィンドウのクライアント領域の下部にドッキングできます。
 
-- CBRS_ALIGN_LEFT は、フレーム ウィンドウのクライアント領域の左側にドッキング コントロール バーを使用できます。
+- CBRS_ALIGN_LEFT を使用すると、コントロールバーをフレームウィンドウのクライアント領域の左側にドッキングできます。
 
-- CBRS_ALIGN_RIGHT は、フレーム ウィンドウのクライアント領域の右側にドッキング コントロール バーを使用できます。
+- CBRS_ALIGN_RIGHT を使用すると、コントロールバーをフレームウィンドウのクライアント領域の右側にドッキングできます。
 
-- CBRS_ALIGN_ANY は、フレーム ウィンドウのクライアント領域の任意の辺にドッキング コントロール バーを使用できます。
+- CBRS_ALIGN_ANY を使用すると、コントロールバーをフレームウィンドウのクライアント領域の任意の辺にドッキングできます。
 
-- CBRS_BORDER_TOP により、境界線を表示されるときにバー コントロールの上端に描画します。
+- CBRS_BORDER_TOP を使用すると、コントロールバーの上端に境界線が表示されます。
 
-- CBRS_BORDER_BOTTOM により、境界線を表示されるときにバー コントロールの下端に描画します。
+- CBRS_BORDER_BOTTOM を使用すると、コントロールバーの下端に境界線が表示されます。
 
-- CBRS_BORDER_LEFT により、境界線を表示されるときにバー コントロールの左端に描画します。
+- CBRS_BORDER_LEFT により、コントロールバーの左端に境界線が表示されます。
 
-- CBRS_BORDER_RIGHT により、境界線を表示されるときにバー コントロールの右端に描画します。
+- CBRS_BORDER_RIGHT によって、表示されるときにコントロールバーの右端に境界線が描画されます。
 
-- CBRS_FLOAT_MULTI は、1 つのミニフレーム ウィンドウにフローティングする複数のコントロール バーを使用できます。
+- CBRS_FLOAT_MULTI を使用すると、1つのミニフレームウィンドウで複数のコントロールバーをフローティングできます。
 
-- CBRS_TOOLTIPS とツール ヒント コントロール バーに表示されます。
+- CBRS_TOOLTIPS によって、コントロールバーにツールヒントが表示されます。
 
-- CBRS_FLYBY によりメッセージのテキスト ツール ヒントとして同時に更新します。
+- CBRS_FLYBY すると、メッセージテキストがツールヒントと同時に更新されます。
 
-- CBRS_GRIPPER によりグリッパー、バンドをで使用されるような`CReBar`オブジェクトは、いずれかの描画される`CControlBar`-クラスを派生します。
+- CBRS_GRIPPER により、`CReBar` オブジェクトのバンドで使用されるようなグリップが、`CControlBar`派生クラスに描画されます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-影響しません、 **ws _** (ウィンドウ スタイル) 設定します。
+**WS_** (ウィンドウスタイル) 設定には影響しません。
 
-##  <a name="setborders"></a>  CControlBar::SetBorders
+##  <a name="setborders"></a>CControlBar:: SetBorders
 
-コントロール バーの境界線のサイズを設定するには、この関数を呼び出します。
+コントロールバーの境界線のサイズを設定するには、この関数を呼び出します。
 
 ```
 void SetBorders(
@@ -506,27 +506,27 @@ void SetBorders(LPCRECT lpRect);
 ### <a name="parameters"></a>パラメーター
 
 *cxLeft*<br/>
-コントロール バーの左罫線の幅をピクセル単位で。
+コントロールバーの左の境界線の幅 (ピクセル単位)。
 
 *cyTop*<br/>
-コントロール バーの上枠線の高さをピクセル単位で。
+コントロールバーの上罫線の高さ (ピクセル単位)。
 
 *cxRight*<br/>
-コントロール バーの右罫線の幅をピクセル単位で。
+コントロールバーの右の境界線の幅 (ピクセル単位)。
 
 *cyBottom*<br/>
-コントロール バーの下の境界線の高さをピクセル単位で。
+コントロールバーの下境界線の高さ (ピクセル単位)。
 
 *lpRect*<br/>
-ポインターを[CRect](../../atl-mfc-shared/reference/crect-class.md)コントロール バー オブジェクトの各境界のピクセル単位で、現在の幅を格納しているオブジェクト。
+コントロールバーオブジェクトの各境界線の現在の幅 (ピクセル単位) を格納している、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトへのポインター。
 
 ### <a name="example"></a>例
 
-次のコード例では、5 (ピクセル単位) をコントロール バーの上端と下端の枠線と左および右の境界線を 2 ピクセルに設定します。
+次のコード例では、コントロールバーの上と下の境界線を5ピクセルに設定し、左と右の境界線を2ピクセルに設定します。
 
 [!code-cpp[NVC_MFCControlLadenDialog#61](../../mfc/codesnippet/cpp/ccontrolbar-class_1.cpp)]
 
-##  <a name="setinplaceowner"></a>  CControlBar::SetInPlaceOwner
+##  <a name="setinplaceowner"></a>CControlBar:: Setinplace 所有者
 
 コントロール バーのインプレース所有者を変更します。
 
@@ -536,14 +536,14 @@ void SetInPlaceOwner(CWnd* pWnd);
 
 ### <a name="parameters"></a>パラメーター
 
-*我が物*<br/>
-`CWnd` オブジェクトへのポインター。
+*pWnd*<br/>
+`CWnd` オブジェクトを指すポインターです。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[MFC サンプル CTRLBARS](../../overview/visual-cpp-samples.md)<br/>
+[MFC のサンプル CTRLBARS](../../overview/visual-cpp-samples.md)<br/>
 [CWnd クラス](../../mfc/reference/cwnd-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)<br/>
 [CToolBar クラス](../../mfc/reference/ctoolbar-class.md)<br/>

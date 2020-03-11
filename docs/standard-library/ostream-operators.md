@@ -5,11 +5,11 @@ f1_keywords:
 - ostream/std::operator&lt;&lt;
 ms.assetid: 9282a62e-a3d1-4371-a284-fbc9515bb9a2
 ms.openlocfilehash: c80abcb08423b4bb269e7d60ac43ef97d197a0e9
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453530"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78874823"
 ---
 # <a name="ltostreamgt-operators"></a>&lt;ostream&gt; 演算子
 
@@ -80,19 +80,19 @@ basic_ostream <_Elem, _Tr>& operator<<(
 
 ### <a name="parameters"></a>パラメーター
 
-*Ch (_p)* \
+*_Ch*\
 単一の文字。
 
-*Elem (_t)* \
+*_Elem*\
 要素型。
 
 *_Ostr*\
-`basic_ostream` オブジェクト。
+`basic_ostream` オブジェクトです。
 
-*引数*\
+*str*\
 文字列。
 
-*Tr (_m)* \
+*_Tr*\
 文字の特徴 (traits)。
 
 *val*\
@@ -100,9 +100,9 @@ basic_ostream <_Elem, _Tr>& operator<<(
 
 ### <a name="return-value"></a>戻り値
 
-ストリーム。
+ストリームです。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 `basic_ostream`クラスもいくつかの挿入演算子を定義します。 詳細については、[basic_ostream::operator&lt;&lt;](../standard-library/basic-ostream-class.md#basic_ostream_operator_lt_lt)をご覧ください。
 
@@ -115,7 +115,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     const Elem *str);
 ```
 
-str で始まるシーケンスの`traits_type::`長さ N`str`=[長さ](../standard-library/char-traits-struct.md#length)() を決定し、シーケンスを挿入します。 N < `_Ostr.`[width](../standard-library/ios-base-class.md#width) の場合は、関数はまた `_Ostr.width` - N 充填文字の繰り返しを挿入します。 (`_Ostr`の場合、繰り返しはシーケンスの前に置かれます。 [flags](../standard-library/ios-base-class.md#flags) & != [left](../standard-library/ios-functions.md#left)。`adjustfield` それ以外の場合、繰り返しはシーケンスに後続します。 関数は、 *_Ostr*を返します。
+*str*から始まるシーケンスの長さ N = `traits_type::`[長さ](../standard-library/char-traits-struct.md#length)(`str`) を決定し、シーケンスを挿入します。 N < `_Ostr.`[width](../standard-library/ios-base-class.md#width) の場合は、関数はまた `_Ostr.width` - N 充填文字の繰り返しを挿入します。 (`_Ostr`の場合、繰り返しはシーケンスの前に置かれます。 [フラグ](../standard-library/ios-base-class.md#flags) & `adjustfield`! = [left](../standard-library/ios-functions.md#left)です。 それ以外の場合、繰り返しはシーケンスに後続します。 関数は *_Ostr*を返します。
 
 下記のテンプレート関数は
 
@@ -146,7 +146,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     const Elem *str);
 ```
 
-ただし、 *str*で始まるシーケンスの*各要素は*、 [put](../standard-library/basic-ostream-class.md#put)`_Ostr.`[(拡張 (](../standard-library/basic-ios-class.md#widen)`_Ch`)) を呼び`Elem`出す`_Ostr.`ことによって、型のオブジェクトに変換されます。
+ただし、 *str*で始まるシーケンスの各要素 *_Ch*は、`_Ostr.`[put](../standard-library/basic-ostream-class.md#put)(`_Ostr.`[拡大](../standard-library/basic-ios-class.md#widen)(`_Ch`)) を呼び出すことによって `Elem` 型のオブジェクトに変換されます。
 
 下記のテンプレート関数は
 
@@ -166,7 +166,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     Elem _Ch);
 ```
 
-ただし、 ( `Elem` `_Ostr.put` (`_Ch`)) を呼び出すことによって、Ch が型のオブジェクトに変換される点が異なります。 `_Ostr.widen`
+ただし、 *_Ch*は `_Ostr.put`(`_Ostr.widen`(`_Ch`)) を呼び出すことによって `Elem` 型のオブジェクトに変換されます。
 
 下記のテンプレート関数は
 
@@ -206,7 +206,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     Elem _Ch);
 ```
 
-(これを挿入する前に、 *Ch*を広げる必要はありません)。
+(挿入前に *_Ch*を拡大する必要はありません)。
 
 下記のテンプレート関数は
 
@@ -217,7 +217,7 @@ basic_ostream<char, _Tr>& operator<<(
     const signed char *str);
 ```
 
-< `_Ostr` < (`const char *` )`str`を返します。
+`_Ostr` < < (`const char *`) `str`を返します。
 
 下記のテンプレート関数は
 
@@ -228,7 +228,7 @@ basic_ostream<char, _Tr>& operator<<(
     signed char _Ch);
 ```
 
-< `_Ostr` < (`char` )`_Ch`を返します。
+`_Ostr` < < (`char`) `_Ch`を返します。
 
 下記のテンプレート関数は
 
@@ -239,7 +239,7 @@ basic_ostream<char, _Tr>& operator<<(
     const unsigned char *str);
 ```
 
-< `_Ostr` < (`const char *` )`str`を返します。
+`_Ostr` < < (`const char *`) `str`を返します。
 
 下記のテンプレート関数は
 
@@ -250,7 +250,7 @@ basic_ostream<char, _Tr>& operator<<(
     unsigned char _Ch);
 ```
 
-< `_Ostr` < (`char` )`_Ch`を返します。
+`_Ostr` < < (`char`) `_Ch`を返します。
 
 下記のテンプレート関数は
 
@@ -261,12 +261,12 @@ basic_ostream<_Elem, _Tr>& operator<<(
     T val);
 ```
 
-`_Ostr` `<<` `val` を返します (さらに `_Ostr` への [RValue Reference](../cpp/rvalue-reference-declarator-amp-amp.md) をそのプロセス内の lvalue に変換します)。
+`val` `<<` `_Ostr` を返します。また、`_Ostr` への[右辺値参照](../cpp/rvalue-reference-declarator-amp-amp.md)をプロセス内の左辺値に変換します。
 
 ### <a name="example"></a>例
 
-`operator<<` の使用例は、[flush](../standard-library/ostream-functions.md#flush) をご覧ください。
+[ の使用例は、](../standard-library/ostream-functions.md#flush)flush`operator<<` をご覧ください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [\<ostream>](../standard-library/ostream.md)

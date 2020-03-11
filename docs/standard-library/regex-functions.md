@@ -14,11 +14,11 @@ helpviewer_keywords:
 - std::swap [C++]
 - std::swap [C++]
 ms.openlocfilehash: b2be3e4a830113ee86a05fea0d39fd8e12ec3e9a
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451589"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876143"
 ---
 # <a name="ltregexgt-functions"></a>&lt;regex&gt; 関数
 
@@ -27,9 +27,9 @@ ms.locfileid: "68451589"
 |[regex_match](#regex_match)|正規表現がターゲット文字列全体と一致するかどうかをテストします。|
 |[regex_replace](#regex_replace)|一致した正規表現を置換します。|
 |[regex_search](#regex_search)|正規表現との一致を検索します。|
-|[swap](#swap)|2つ`basic_regex`また`match_results`は複数のオブジェクトを交換します。|
+|[スワップ](#swap)|2つの `basic_regex` オブジェクトまたは `match_results` オブジェクトを交換します。|
 
-## <a name="regex_match"></a>  regex_match
+## <a name="regex_match"></a>regex_match
 
 正規表現がターゲット文字列全体と一致するかどうかをテストします。
 
@@ -84,14 +84,14 @@ bool regex_match(
 
 ### <a name="parameters"></a>パラメーター
 
-*BidIt*\
-サブマッチ用の反復子の型。 一般的なケースでは、 `string::const_iterator`、 `wstring::const_iterator`、 `const char*`また`const wchar_t*`はのいずれかです。
+*Bidit*\
+サブマッチの反復子の型。 一般的なケースとしては、`string::const_iterator`、`wstring::const_iterator`、`const char*` または `const wchar_t*`のいずれかです。
 
-*割り当て*\
+*Alloc*\
 一致結果のアロケーター クラス。
 
 *Elem*\
-一致させる要素の型。 一般的なケースでは`string`、 `wstring`、 `char*` 、 `wchar_t*`またはです。
+一致させる要素の型。 一般的なケースでは、これは `string`、`wstring`、`char*` または `wchar_t*`です。
 
 *RXtraits*\
 要素の特徴 (traits) クラス。
@@ -99,36 +99,36 @@ bool regex_match(
 *Alloc2*\
 正規表現のアロケーター クラス。
 
-*IOtraits*\
+*Iotraits*\
 文字列の特徴 (traits) クラス。
 
-*IOalloc*\
+*Ioalloc*\
 文字列のアロケーター クラス。
 
-*示す*\
+*flags*\
 一致のフラグ。
 
-*まずは*\
+*最初*の\
 一致させるシーケンスの先頭。
 
-*前の*\
+*最後*の\
 一致させるシーケンスの末尾。
 
 *一致*\
-一致結果。 Elem 型に対応します。 [smatch](../standard-library/regex-typedefs.md#smatch) `string`の場合`char*`は`wstring`、 [wsmatch](../standard-library/regex-typedefs.md#wsmatch)の場合は、 [cmatch](../standard-library/regex-typedefs.md#cmatch)の場合は、または[wcmatch](../standard-library/regex-typedefs.md#wcmatch) `wchar_t*`の場合はです。
+一致結果。 Elem 型に対応します。 `string`の場合は[smatch](../standard-library/regex-typedefs.md#smatch) 、`wstring`の場合は[wsmatch](../standard-library/regex-typedefs.md#wsmatch) 、`char*` の場合は[cmatch](../standard-library/regex-typedefs.md#cmatch) 、`wchar_t*`の場合は[wcmatch](../standard-library/regex-typedefs.md#wcmatch)に対応します。
 
-*ポインター*\
-一致させるシーケンスの先頭を指すポインター。 *Ptr* `char*`がの場合は、 `cmatch`および`regex`を使用します。 *Ptr*がの`wchar_t*`場合は`wcmatch` 、 `wregex`とを使用します。
+*ptr*\
+一致させるシーケンスの先頭を指すポインター。 *Ptr*が `char*`場合は、`cmatch` と `regex`を使用します。 *Ptr*が `wchar_t*` 場合は、`wcmatch` と `wregex`を使用します。
 
-*書き直し*\
-一致させる正規表現。 `regex` との`char*`場合は、 `wregex`およびの`wstring`場合はを入力します。 `wchar_t*` `string`
+*再*\
+照合する正規表現。 `string` と `char*`の場合は `regex`、`wstring` と `wchar_t*`には `wregex` を入力します。
 
-*引数*\
+*str*\
 一致させる文字列。 *Elem*の型に対応します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-各テンプレート関数は、オペランドシーケンス*str*全体が正規表現の引数*re*と完全に一致する場合にのみ true を返します。 [Regex_search](../standard-library/regex-functions.md#regex_search)を使用して、ターゲットシーケンス内の部分`regex_iterator`文字列を一致させ、複数の一致を検索します。 `match_results` オブジェクトを受け取る関数は、一致が成功したかどうかを反映し、さらに成功した場合は正規表現内のさまざまなキャプチャ グループがキャプチャした内容を反映するようにそのメンバーを設定します。
+各テンプレート関数は、オペランドシーケンス*str*全体が正規表現の引数*re*と完全に一致する場合にのみ true を返します。 [Regex_search](../standard-library/regex-functions.md#regex_search)を使用して、ターゲットシーケンス内の部分文字列を一致させ、`regex_iterator` 複数の一致を検索します。 `match_results` オブジェクトを受け取る関数は、一致が成功したかどうかを反映し、さらに成功した場合は正規表現内のさまざまなキャプチャ グループがキャプチャした内容を反映するようにそのメンバーを設定します。
 
 `match_results` オブジェクトを受け取る関数は、一致が成功したかどうかを反映し、さらに成功した場合は正規表現内のさまざまなキャプチャ グループがキャプチャした内容を反映するようにそのメンバーを設定します。
 
@@ -196,7 +196,7 @@ Regex found in Drizzle
 The matching text is: 2014-04-02
 ```
 
-## <a name="regex_replace"></a>  regex_replace
+## <a name="regex_replace"></a>regex_replace
 
 一致した正規表現を置換します。
 
@@ -223,44 +223,44 @@ basic_string<Elem> regex_replace(
 *OutIt*\
 置換用の反復子の型。
 
-*BidIt*\
-サブマッチ用の反復子の型。
+*Bidit*\
+サブマッチの反復子の型。
 
 *RXtraits*\
 要素の特徴 (traits) クラス。
 
-*割り当て*\
+*Alloc*\
 正規表現のアロケーター クラス。
 
 *Elem*\
 一致させる要素の型。
 
-*示す*\
+*flags*\
 一致のフラグ。
 
-*まずは*\
+*最初*の\
 一致させるシーケンスの先頭。
 
 *fmt*\
 置換の形式。
 
-*前の*\
+*最後*の\
 一致させるシーケンスの末尾。
 
 *out*\
 出力反復子。
 
-*書き直し*\
-一致させる正規表現。
+*再*\
+照合する正規表現。
 
-*引数*\
+*str*\
 一致させる文字列。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-最初の関数は、 [regex_iterator クラス](../standard-library/regex-iterator-class.md)オブジェクト`iter(first, last, re, flags)`を構築し、それを使用し`[first, last)`てその入力範囲を`T0 M0 T1 M1...TN-1 MN-1 TN`一連の`Mn`サブシーケンスに分割します。ここで、は反復子によって検出された n 番目の一致です。 一致が見つからない場合は、`T0` は入力範囲全体であり `N` はゼロです。 `(flags & format_first_only) != 0` である場合、最初の一致のみが使用され、`T1` がその一致に続く入力テキストのすべてであり、`N` は 1 です。 `i`範囲`Ti` `(flags & format_no_copy) == 0` 内の各について、範囲内のテキストを反復子 out にコピーする場合は。 `[0, N)`そして `m.format(out, fmt, flags)` を呼び出します。ここで `m` はサブシーケンス `Mi` の反復子オブジェクト `iter` によって返される `match_results` オブジェクトです。 最後に、 `(flags & format_no_copy) == 0`範囲`TN`内のテキストを反復子*out*にコピーします。関数は、*を返します*。
+最初の関数は、 [Regex_iterator クラス](../standard-library/regex-iterator-class.md)オブジェクト `iter(first, last, re, flags)` を構築し、それを使用して入力範囲を `[first, last)` 一連のサブシーケンス `T0 M0 T1 M1...TN-1 MN-1 TN`に分割します。ここで `Mn` は、反復子によって検出された n 番目の一致です。 一致が見つからない場合は、`T0` は入力範囲全体であり `N` はゼロです。 `(flags & format_first_only) != 0` である場合、最初の一致のみが使用され、`T1` がその一致に続く入力テキストのすべてであり、`N` は 1 です。 `[0, N)`範囲内の各 `i` に対して、`(flags & format_no_copy) == 0` 場合は `Ti` 範囲内のテキストを反復子*out*にコピーします。次に、`m.format(out, fmt, flags)`を呼び出します。 `m` は、サブシーケンス `Mi`の反復子オブジェクト `iter` によって返される `match_results` オブジェクトです。 最後に、`(flags & format_no_copy) == 0` 場合は `TN` 範囲内のテキストを反復子*out*にコピーします。関数は、*を返します*。
 
-2 番目の関数は、`basic_string<charT>` 型のローカル変数 `result` を構築し、`regex_replace(back_inserter(result), str.begin(), str.end(), re, fmt, flags)`を呼び出します。 `result` を返します。
+2 番目の関数は、`result` 型のローカル変数 `basic_string<charT>` を構築し、`regex_replace(back_inserter(result), str.begin(), str.end(), re, fmt, flags)`を呼び出します。 `result` を返します。
 
 ### <a name="example"></a>例
 
@@ -304,7 +304,7 @@ replacement == AdAeAf
 replacement == Adaeaf
 ```
 
-## <a name="regex_search"></a>  regex_search
+## <a name="regex_search"></a>regex_search
 
 正規表現との一致を検索します。
 
@@ -353,10 +353,10 @@ bool regex_search(
 
 ### <a name="parameters"></a>パラメーター
 
-*BidIt*\
-サブマッチ用の反復子の型。
+*Bidit*\
+サブマッチの反復子の型。
 
-*割り当て*\
+*Alloc*\
 一致結果のアロケーター クラス。
 
 *Elem*\
@@ -368,34 +368,34 @@ bool regex_search(
 *Alloc2*\
 正規表現のアロケーター クラス。
 
-*IOtraits*\
+*Iotraits*\
 文字列の特徴 (traits) クラス。
 
-*IOalloc*\
+*Ioalloc*\
 文字列のアロケーター クラス。
 
-*示す*\
+*flags*\
 一致のフラグ。
 
-*まずは*\
+*最初*の\
 一致させるシーケンスの先頭。
 
-*前の*\
+*最後*の\
 一致させるシーケンスの末尾。
 
 *一致*\
 一致結果。
 
-*ポインター*\
+*ptr*\
 一致させるシーケンスの先頭を指すポインター。
 
-*書き直し*\
-一致させる正規表現。
+*再*\
+照合する正規表現。
 
-*引数*\
+*str*\
 一致させる文字列。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 各テンプレート関数は、オペランドシーケンス内の正規表現の引数*re*の検索が成功した場合にのみ true を返します。 `match_results` オブジェクトを受け取る関数は、検索が成功したかどうかを反映し、さらに成功した場合は正規表現内のさまざまなキャプチャ グループがキャプチャした内容を反映するように、そのメンバーを設定します。
 
@@ -457,7 +457,7 @@ search(string, "abc") == true
 
 ## <a name="swap"></a>  swap
 
-2つ`basic_regex`また`match_results`は複数のオブジェクトを交換します。
+2つの `basic_regex` オブジェクトまたは `match_results` オブジェクトを交換します。
 
 ```cpp
 template <class Elem, class RXtraits>
@@ -479,7 +479,7 @@ void swap(
 *RXtraits*\
 要素の特徴 (traits) クラス。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 このテンプレート関数は、一定時間でそれぞれの引数の内容を交換し、例外をスローしません。
 
@@ -518,13 +518,13 @@ length == 3
 string == aaa
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [\<regex>](../standard-library/regex.md)\
-[regex_constants クラス](../standard-library/regex-constants-class.md)\
-[regex_error クラス](../standard-library/regex-error-class.md)\
-[regex_iterator クラス](../standard-library/regex-iterator-class.md)\
+[Regex_constants クラス](../standard-library/regex-constants-class.md)\
+[Regex_error クラス](../standard-library/regex-error-class.md)\
+[Regex_iterator クラス](../standard-library/regex-iterator-class.md)\
 [\<regex > 演算子](../standard-library/regex-operators.md)\
-[regex_token_iterator クラス](../standard-library/regex-token-iterator-class.md)\
-[regex_traits クラス](../standard-library/regex-traits-class.md)\
+[Regex_token_iterator クラス](../standard-library/regex-token-iterator-class.md)\
+[Regex_traits クラス](../standard-library/regex-traits-class.md)\
 [\<regex> typedefs](../standard-library/regex-typedefs.md)

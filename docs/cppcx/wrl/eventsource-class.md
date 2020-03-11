@@ -24,11 +24,11 @@ helpviewer_keywords:
 - Microsoft::WRL::EventSource::targetsPointerLock_ data member
 ms.assetid: 91f1c072-6af4-44e6-b6d8-ac6d0c688dde
 ms.openlocfilehash: 1350e51ff609a888b6a8ad6841be6856b68c7994
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821832"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865731"
 ---
 # <a name="eventsource-class"></a>EventSource クラス
 
@@ -50,24 +50,24 @@ class EventSource;
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-| [名前]                                     | 説明                                            |
+| Name                                     | 説明                                            |
 | ---------------------------------------- | ------------------------------------------------------ |
-| [EventSource::EventSource](#eventsource) | `EventSource` クラスの新しいインスタンスを初期化します。 |
+| [EventSource:: EventSource](#eventsource) | `EventSource` クラスの新しいインスタンスを初期化します。 |
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-| [名前]                                 | 説明                                                                                                                                                      |
+| Name                                 | 説明                                                                                                                                                      |
 | ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [EventSource::Add](#add)             | 指定されたデリゲートインターフェイスによって表されるイベントハンドラーを、現在の `EventSource` オブジェクトのイベントハンドラーのセットに追加します。                     |
+| [EventSource:: Add](#add)             | 指定されたデリゲートインターフェイスによって表されるイベントハンドラーを、現在の `EventSource` オブジェクトのイベントハンドラーのセットに追加します。                     |
 | [EventSource:: GetSize](#getsize)     | 現在の `EventSource` オブジェクトに関連付けられているイベントハンドラーの数を取得します。                                                                         |
 | [EventSource:: InvokeAll](#invokeall) | 指定された引数の型および引数を使用して、現在の `EventSource` オブジェクトに関連付けられている各イベントハンドラーを呼び出します。                                      |
-| [EventSource::Remove](#remove)       | 現在の `EventSource` オブジェクトに関連付けられている一連のイベントハンドラーから、指定したイベント登録トークンによって表されるイベントハンドラーを削除します。 |
+| [EventSource:: Remove](#remove)       | 現在の `EventSource` オブジェクトに関連付けられている一連のイベントハンドラーから、指定したイベント登録トークンによって表されるイベントハンドラーを削除します。 |
 
 ### <a name="protected-data-members"></a>保護されるデータ メンバー
 
-| [名前]                                                    | 説明                                                                                                                       |
+| Name                                                    | 説明                                                                                                                       |
 | ------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| [EventSource::addRemoveLock_](#addremovelock)           | イベントハンドラーを追加、削除、または呼び出すときに、 [targets_](#targets)配列へのアクセスを同期します。                          |
+| [EventSource:: addRemoveLock_](#addremovelock)           | イベントハンドラーを追加、削除、または呼び出すときに、 [targets_](#targets)配列へのアクセスを同期します。                          |
 | [EventSource:: targets_](#targets)                       | 1つ以上のイベントハンドラーの配列。                                                                                           |
 | [EventSource:: targetsPointerLock_](#targetspointerlock) | この EventSource のイベントハンドラーが追加、削除、または呼び出されている間でも、内部データメンバーへのアクセスを同期します。 |
 
@@ -81,7 +81,7 @@ class EventSource;
 
 **名前空間:** Microsoft::WRL
 
-## <a name="add"></a>EventSource::Add
+## <a name="add"></a>EventSource:: Add
 
 指定されたデリゲートインターフェイスによって表されるイベントハンドラーを、現在の `EventSource` オブジェクトのイベントハンドラーのセットに追加します。
 
@@ -112,7 +112,7 @@ HRESULT Add(
 Wrappers::SRWLock addRemoveLock_;
 ```
 
-## <a name="eventsource"></a>EventSource::EventSource
+## <a name="eventsource"></a>EventSource:: EventSource
 
 `EventSource` クラスの新しいインスタンスを初期化します。
 
@@ -352,7 +352,7 @@ void InvokeAll(
 *arg9*<br/>
 9番目のイベントハンドラー引数。
 
-## <a name="remove"></a>EventSource::Remove
+## <a name="remove"></a>EventSource:: Remove
 
 現在の `EventSource` オブジェクトに関連付けられている一連のイベントハンドラーから、指定したイベント登録トークンによって表されるイベントハンドラーを削除します。
 
