@@ -157,11 +157,11 @@ helpviewer_keywords:
 - CMDIFrameWndEx [MFC], m_bDisableSetRedraw
 ms.assetid: dbcafcb3-9a7a-4f11-9dfe-ba57565c81d0
 ms.openlocfilehash: 42e630c1280eb366f9007511ac5d74ac19455a56
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70741592"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866700"
 ---
 # <a name="cmdiframewndex-class"></a>CMDIFrameWndEx クラス
 
@@ -177,81 +177,81 @@ class CMDIFrameWndEx : public CMDIFrameWnd
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|名前|説明|
+|Name|Description|
 |----------|-----------------|
 |[CMDIFrameWndEx:: ActiveItemRecalcLayout](#activeitemrecalclayout)|アクティブな項目のレイアウトを再計算します。|
 |`CMDIFrameWndEx::AddDockSite`|このメソッドは使用されません。|
-|[CMDIFrameWndEx::AddPane](#addpane)|ペインをドッキングマネージャーに登録します。|
+|[CMDIFrameWndEx:: AddPane](#addpane)|ペインをドッキングマネージャーに登録します。|
 |[CMDIFrameWndEx:: AdjustClientArea](#adjustclientarea)|クライアント領域を縮小して境界線を使用できるようにします。|
 |[CMDIFrameWndEx:: AdjustDockingLayout](#adjustdockinglayout)|ドッキングされているすべてのウィンドウのレイアウトを再計算します。|
 |[CMDIFrameWndEx:: AreMDITabs](#aremditabs)|MDI タブ機能または MDI タブ付きグループ機能が有効かどうかを決定します。|
 |[CMDIFrameWndEx:: CanCovertControlBarToMDIChild](#cancovertcontrolbartomdichild)|フレームウィンドウがドッキングペインをタブ付きドキュメントに変換できるかどうかを判断するために、フレームワークによって呼び出されます。|
 |[CMDIFrameWndEx:: ControlBarToTabbedDocument](#controlbartotabbeddocument)|指定したドッキングペインをタブ付きドキュメントに変換します。|
-|[CMDIFrameWndEx::CreateDocumentWindow](#createdocumentwindow)|子ドキュメントウィンドウを作成します。|
+|[CMDIFrameWndEx:: CreateDocumentWindow](#createdocumentwindow)|子ドキュメントウィンドウを作成します。|
 |[CMDIFrameWndEx:: CreateNewWindow](#createnewwindow)|新しいウィンドウを作成するためにフレームワークによって呼び出されます。|
 |`CMDIFrameWndEx::CreateObject`|このクラス型の動的インスタンスを作成するために、フレームワークで使用されます。|
 |[CMDIFrameWndEx::D ockPane](#dockpane)|指定したペインをフレームウィンドウにドッキングします。|
 |[CMDIFrameWndEx::D ockPaneLeftOf](#dockpaneleftof)|ウィンドウを別のウィンドウの左側にドッキングします。|
-|[CMDIFrameWndEx::EnableAutoHidePanes](#enableautohidepanes)|ペインがメインフレームウィンドウの指定した辺にドッキングされている場合、ウィンドウの自動非表示モードを有効にします。|
-|[CMDIFrameWndEx::EnableDocking](#enabledocking)|MDI フレームウィンドウに属するペインのドッキングを有効にします。|
-|[CMDIFrameWndEx::EnableFullScreenMainMenu](#enablefullscreenmainmenu)|全画面表示モードでメインメニューを表示または非表示にします。|
-|[CMDIFrameWndEx::EnableFullScreenMode](#enablefullscreenmode)|フレームウィンドウの全画面表示モードを有効にします。|
-|[CMDIFrameWndEx::EnableLoadDockState](#enableloaddockstate)|ドッキング状態の読み込みを有効または無効にします。|
-|[CMDIFrameWndEx::EnableMDITabbedGroups](#enablemditabbedgroups)|MDI タブ付きグループ機能を有効または無効にします。|
-|[CMDIFrameWndEx::EnableMDITabs](#enablemditabs)|MDI タブ機能を有効または無効にします。 有効にすると、各 MDI 子ウィンドウのタブがフレームウィンドウに表示されます。|
+|[CMDIFrameWndEx:: EnableAutoHidePanes](#enableautohidepanes)|ペインがメインフレームウィンドウの指定した辺にドッキングされている場合、ウィンドウの自動非表示モードを有効にします。|
+|[CMDIFrameWndEx:: EnableDocking](#enabledocking)|MDI フレームウィンドウに属するペインのドッキングを有効にします。|
+|[CMDIFrameWndEx:: EnableFullScreenMainMenu](#enablefullscreenmainmenu)|全画面表示モードでメインメニューを表示または非表示にします。|
+|[CMDIFrameWndEx:: EnableFullScreenMode](#enablefullscreenmode)|フレームウィンドウの全画面表示モードを有効にします。|
+|[CMDIFrameWndEx:: EnableLoadDockState](#enableloaddockstate)|ドッキング状態の読み込みを有効または無効にします。|
+|[CMDIFrameWndEx:: EnableMDITabbedGroups](#enablemditabbedgroups)|MDI タブ付きグループ機能を有効または無効にします。|
+|[CMDIFrameWndEx:: EnableMDITabs](#enablemditabs)|MDI タブ機能を有効または無効にします。 有効にすると、各 MDI 子ウィンドウのタブがフレームウィンドウに表示されます。|
 |[CMDIFrameWndEx:: EnableMDITabsLastActiveActivation](#enablemditabslastactiveactivation)|ユーザーが現在のタブを閉じたときに、最後にアクティブになったタブをアクティブにするかどうかを指定します。|
-|[CMDIFrameWndEx::EnablePaneMenu](#enablepanemenu)|アプリケーションウィンドウの一覧を表示するポップアップウィンドウメニューの自動作成と管理を有効または無効にします。  .|
-|[CMDIFrameWndEx::EnableWindowsDialog](#enablewindowsdialog)|[Cmfcwindowsmanagerdialog](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)ダイアログボックスを呼び出すコマンド ID を持つメニュー項目を挿入します。|
+|[CMDIFrameWndEx:: EnablePaneMenu](#enablepanemenu)|アプリケーションウィンドウの一覧を表示するポップアップウィンドウメニューの自動作成と管理を有効または無効にします。  。|
+|[CMDIFrameWndEx:: EnableWindowsDialog](#enablewindowsdialog)|[Cmfcwindowsmanagerdialog](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)ダイアログボックスを呼び出すコマンド ID を持つメニュー項目を挿入します。|
 |[CMDIFrameWndEx:: GetActivePopup](#getactivepopup)|現在表示されているポップアップ メニューへのポインターを返します。|
-|[CMDIFrameWndEx::GetPane](#getpane)|指定されたコントロール ID を持つペインへのポインターを返します。|
+|[CMDIFrameWndEx:: GetPane](#getpane)|指定されたコントロール ID を持つペインへのポインターを返します。|
 |[CMDIFrameWndEx:: GetDefaultResId](#getdefaultresid)|MDI フレームウィンドウの共有リソースの ID を返します。|
-|[CMDIFrameWndEx::GetMDITabGroups](#getmditabgroups)|MDI タブ付きウィンドウの一覧を返します。|
-|[CMDIFrameWndEx::GetMDITabs](#getmditabs)|下線付きのタブ付きウィンドウへの参照を返します。|
-|[CMDIFrameWndEx::GetMDITabsContextMenuAllowedItems](#getmditabscontextmenualloweditems)|MDI タブ付きグループ機能が有効になっている場合に、どのコンテキストメニュー項目が有効であるかを決定するフラグの組み合わせを返します。|
+|[CMDIFrameWndEx:: GetMDITabGroups](#getmditabgroups)|MDI タブ付きウィンドウの一覧を返します。|
+|[CMDIFrameWndEx:: GetMDITabs](#getmditabs)|下線付きのタブ付きウィンドウへの参照を返します。|
+|[CMDIFrameWndEx:: GetMDITabsContextMenuAllowedItems](#getmditabscontextmenualloweditems)|MDI タブ付きグループ機能が有効になっている場合に、どのコンテキストメニュー項目が有効であるかを決定するフラグの組み合わせを返します。|
 |[CMDIFrameWndEx:: GetMenuBar](#getmenubar)|フレームウィンドウにアタッチされているメニューバーオブジェクトへのポインターを返します。|
-|[CMDIFrameWndEx::GetRibbonBar](#getribbonbar)|フレームのリボンバーコントロールを取得します。|
+|[CMDIFrameWndEx:: GetRibbonBar](#getribbonbar)|フレームのリボンバーコントロールを取得します。|
 |[CMDIFrameWndEx:: GetTearOffBars](#gettearoffbars)|ティアオフ状態にある[CPane](../../mfc/reference/cpane-class.md)派生オブジェクトの一覧を返します。|
 |`CMDIFrameWndEx::GetThisClass`|このクラス型に関連付けられている[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)オブジェクトへのポインターを取得するために、フレームワークによって呼び出されます。|
-|[CMDIFrameWndEx::GetToolbarButtonToolTipText](#gettoolbarbuttontooltiptext)|アプリケーションがツールバーボタンのツールヒントを表示するときに、フレームワークによって呼び出されます。|
-|[CMDIFrameWndEx::InsertPane](#insertpane)|指定したペインをドッキングマネージャーに登録します。|
-|[CMDIFrameWndEx::IsFullScreen](#isfullscreen)|フレームウィンドウが全画面表示モードであるかどうかを判断します。|
-|[CMDIFrameWndEx::IsMDITabbedGroup](#ismditabbedgroup)|MDI タブ付きグループ機能が有効かどうかを決定します。|
-|[CMDIFrameWndEx::IsMemberOfMDITabGroup](#ismemberofmditabgroup)|指定したタブ付きウィンドウが、MDI タブ付きグループ内のウィンドウの一覧にあるかどうかを判断します。|
+|[CMDIFrameWndEx:: GetToolbarButtonToolTipText](#gettoolbarbuttontooltiptext)|アプリケーションがツールバーボタンのツールヒントを表示するときに、フレームワークによって呼び出されます。|
+|[CMDIFrameWndEx:: InsertPane](#insertpane)|指定したペインをドッキングマネージャーに登録します。|
+|[CMDIFrameWndEx:: IsFullScreen 画面](#isfullscreen)|フレームウィンドウが全画面表示モードであるかどうかを判断します。|
+|[CMDIFrameWndEx:: IsMDITabbedGroup](#ismditabbedgroup)|MDI タブ付きグループ機能が有効かどうかを決定します。|
+|[CMDIFrameWndEx:: IsMemberOfMDITabGroup](#ismemberofmditabgroup)|指定したタブ付きウィンドウが、MDI タブ付きグループ内のウィンドウの一覧にあるかどうかを判断します。|
 |[CMDIFrameWndEx:: IsMenuBarAvailable](#ismenubaravailable)|フレームウィンドウにメニューバーがあるかどうかを判断します。|
-|[CMDIFrameWndEx::IsPointNearDockSite](#ispointneardocksite)|指定したポイントがドッキングサイトの近くにあるかどうかを判断します。|
-|[CMDIFrameWndEx::IsPrintPreview](#isprintpreview)|フレームウィンドウが印刷プレビューモードかどうかを判断します。|
-|[CMDIFrameWndEx::LoadFrame](#loadframe)|リソース情報からフレームウィンドウを作成します。 ( `CMDIFrameWnd::LoadFrame`をオーバーライドします)。|
-|[CMDIFrameWndEx::LoadMDIState](#loadmdistate)|MDI タブ付きグループの指定されたレイアウトと、以前に開かれたドキュメントのリストを読み込みます。|
-|[CMDIFrameWndEx::MDITabMoveToNextGroup](#mditabmovetonextgroup)|アクティブなタブを現在アクティブになっているタブ付きウィンドウから、次または前のタブ付きグループに移動します。|
+|[CMDIFrameWndEx:: IsPointNearDockSite](#ispointneardocksite)|指定したポイントがドッキングサイトの近くにあるかどうかを判断します。|
+|[CMDIFrameWndEx:: IsPrintPreview](#isprintpreview)|フレームウィンドウが印刷プレビューモードかどうかを判断します。|
+|[CMDIFrameWndEx:: LoadFrame](#loadframe)|リソース情報からフレームウィンドウを作成します。 (`CMDIFrameWnd::LoadFrame` をオーバーライドします。)|
+|[CMDIFrameWndEx:: LoadMDIState](#loadmdistate)|MDI タブ付きグループの指定されたレイアウトと、以前に開かれたドキュメントのリストを読み込みます。|
+|[CMDIFrameWndEx:: MDITabMoveToNextGroup](#mditabmovetonextgroup)|アクティブなタブを現在アクティブになっているタブ付きウィンドウから、次または前のタブ付きグループに移動します。|
 |[CMDIFrameWndEx:: MDITabNewGroup](#mditabnewgroup)|1つのウィンドウを持つ新しいタブ付きグループを作成します。|
-|[CMDIFrameWndEx::NegotiateBorderSpace](#negotiateborderspace)|OLE の埋め込み先のアクティブ化時に、フレームウィンドウの境界領域をネゴシエートします。|
+|[CMDIFrameWndEx:: NegotiateBorderSpace](#negotiateborderspace)|OLE の埋め込み先のアクティブ化時に、フレームウィンドウの境界領域をネゴシエートします。|
 |[CMDIFrameWndEx:: Onclosedocのウィンドウ](#onclosedockingpane)|ドッキング可能なウィンドウの**閉じる**ボタンをユーザーがクリックすると、フレームワークによって呼び出されます。|
-|[CMDIFrameWndEx::OnCloseMiniFrame](#oncloseminiframe)|ユーザーがフローティングミニフレームウィンドウの **[閉じる]** ボタンをクリックしたときに、フレームワークによって呼び出されます。|
+|[CMDIFrameWndEx:: OnCloseMiniFrame フレーム](#oncloseminiframe)|ユーザーがフローティングミニフレームウィンドウの **[閉じる]** ボタンをクリックしたときに、フレームワークによって呼び出されます。|
 |[CMDIFrameWndEx:: OnClosePopupMenu](#onclosepopupmenu)|アクティブなポップアップ メニューが WM_DESTROY メッセージを処理するときに、フレームワークによって呼び出されます。|
-|[CMDIFrameWndEx::OnCmdMsg](#oncmdmsg)|コマンドメッセージをルーティングおよびディスパッチし、コマンドのユーザーインターフェイスオブジェクトを更新するために、フレームワークによって呼び出されます。|
-|[CMDIFrameWndEx::OnDrawMenuImage](#ondrawmenuimage)|メニュー項目に関連付けられているイメージが描画されるときに、フレームワークによって呼び出されます。|
+|[CMDIFrameWndEx:: OnCmdMsg](#oncmdmsg)|コマンドメッセージをルーティングおよびディスパッチし、コマンドのユーザーインターフェイスオブジェクトを更新するために、フレームワークによって呼び出されます。|
+|[CMDIFrameWndEx:: OnDrawMenuImage](#ondrawmenuimage)|メニュー項目に関連付けられているイメージが描画されるときに、フレームワークによって呼び出されます。|
 |[CMDIFrameWndEx:: OnDrawMenuLogo](#ondrawmenulogo)|[CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)が WM_PAINT メッセージを処理するときに、フレームワークによって呼び出されます。|
-|[CMDIFrameWndEx::OnEraseMDIClientBackground](#onerasemdiclientbackground)|MDI フレームウィンドウが WM_ERASEBKGND メッセージを処理するときに、フレームワークによって呼び出されます。|
-|[CMDIFrameWndEx::OnMenuButtonToolHitTest](#onmenubuttontoolhittest)|[CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)オブジェクトが WM_NCHITTEST メッセージを処理するときに、フレームワークによって呼び出されます。|
-|[CMDIFrameWndEx::OnMoveMiniFrame](#onmoveminiframe)|ミニフレームウィンドウを移動するためにフレームワークによって呼び出されます。|
-|[CMDIFrameWndEx::OnSetPreviewMode](#onsetpreviewmode)|アプリケーションのメインフレームウィンドウの印刷プレビューモードを設定します。 ( [CFrameWnd::OnSetPreviewMode](../../mfc/reference/cframewnd-class.md#onsetpreviewmode)をオーバーライドします)。|
+|[CMDIFrameWndEx:: OnEraseMDIClientBackground](#onerasemdiclientbackground)|MDI フレームウィンドウが WM_ERASEBKGND メッセージを処理するときに、フレームワークによって呼び出されます。|
+|[CMDIFrameWndEx:: OnMenuButtonToolHitTest](#onmenubuttontoolhittest)|[CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)オブジェクトが WM_NCHITTEST メッセージを処理するときに、フレームワークによって呼び出されます。|
+|[CMDIFrameWndEx:: OnMoveMiniFrame](#onmoveminiframe)|ミニフレームウィンドウを移動するためにフレームワークによって呼び出されます。|
+|[CMDIFrameWndEx:: OnSetPreviewMode](#onsetpreviewmode)|アプリケーションのメインフレームウィンドウの印刷プレビューモードを設定します。 ( [CFrameWnd::OnSetPreviewMode](../../mfc/reference/cframewnd-class.md#onsetpreviewmode)をオーバーライドします)。|
 |[CMDIFrameWndEx:: OnShowCustomizePane](#onshowcustomizepane)|[クイックカスタマイズ] ウィンドウがアクティブになったときにフレームワークによって呼び出されます。|
-|[CMDIFrameWndEx::OnShowMDITabContextMenu](#onshowmditabcontextmenu)|コンテキストメニューをいずれかのタブに表示する必要がある場合に、フレームワークによって呼び出されます。 (MDI タブ付きグループに対してのみ有効です)。|
+|[CMDIFrameWndEx:: OnShowMDITabContextMenu](#onshowmditabcontextmenu)|コンテキストメニューをいずれかのタブに表示する必要がある場合に、フレームワークによって呼び出されます。 (MDI タブ付きグループに対してのみ有効です)。|
 |[CMDIFrameWndEx:: OnShowPanes](#onshowpanes)|ペインの表示と非表示を切り替えるためにフレームワークによって呼び出されます。|
-|[CMDIFrameWndEx::OnShowPopupMenu](#onshowpopupmenu)|ポップアップ メニューがアクティブにされるときにフレームワークによって呼び出されます。|
-|[CMDIFrameWndEx::OnSizeMDIClient](#onsizemdiclient)|クライアントの MDI ウィンドウのサイズが変更されるときにフレームワークによって呼び出されます。|
-|[CMDIFrameWndEx::OnTearOffMenu](#ontearoffmenu)|ティアオフ バーのあるメニューがアクティブ化されるときにフレームワークによって呼び出されます。|
-|[CMDIFrameWndEx::OnUpdateFrameMenu](#onupdateframemenu)|フレームメニューを更新するためにフレームワークによって呼び出されます。 ( `CMDIFrameWnd::OnUpdateFrameMenu`をオーバーライドします)。|
-|[CMDIFrameWndEx::PaneFromPoint](#panefrompoint)|指定されたポイントを含むドッキングペインを返します。|
-|`CMDIFrameWndEx::PreTranslateMessage`|[TranslateMessage](../../mfc/reference/cwinapp-class.md) および [DispatchMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) の各 Windows 関数にディスパッチされる前に、ウィンドウ メッセージを変換するためにクラス [CWinApp](/windows/win32/api/winuser/nf-winuser-dispatchmessage) で使用されます。  ( `CMDIFrameWnd::PreTranslateMessage`をオーバーライドします)。|
-|[CMDIFrameWndEx::RecalcLayout](#recalclayout)|フレームウィンドウのレイアウトを再計算するために、フレームワークによって呼び出されます。 ( [CFrameWnd:: RecalcLayout](../../mfc/reference/cframewnd-class.md#recalclayout)をオーバーライドします)。|
-|[CMDIFrameWndEx::RemovePaneFromDockManager](#removepanefromdockmanager)|ペインの登録を解除し、ドッキングマネージャーから削除します。|
+|[CMDIFrameWndEx:: OnShowPopupMenu](#onshowpopupmenu)|ポップアップ メニューがアクティブにされるときにフレームワークによって呼び出されます。|
+|[CMDIFrameWndEx:: OnSizeMDIClient](#onsizemdiclient)|クライアントの MDI ウィンドウのサイズが変更されるときにフレームワークによって呼び出されます。|
+|[CMDIFrameWndEx:: OnTearOffMenu](#ontearoffmenu)|ティアオフ バーのあるメニューがアクティブ化されるときにフレームワークによって呼び出されます。|
+|[CMDIFrameWndEx:: OnUpdateFrameMenu](#onupdateframemenu)|フレームメニューを更新するためにフレームワークによって呼び出されます。 (`CMDIFrameWnd::OnUpdateFrameMenu` をオーバーライドします。)|
+|[CMDIFrameWndEx::P aneFromPoint](#panefrompoint)|指定されたポイントを含むドッキングペインを返します。|
+|`CMDIFrameWndEx::PreTranslateMessage`|[TranslateMessage](../../mfc/reference/cwinapp-class.md) および [DispatchMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) の各 Windows 関数にディスパッチされる前に、ウィンドウ メッセージを変換するためにクラス [CWinApp](/windows/win32/api/winuser/nf-winuser-dispatchmessage) で使用されます。  (`CMDIFrameWnd::PreTranslateMessage` をオーバーライドします。)|
+|[CMDIFrameWndEx:: RecalcLayout](#recalclayout)|フレームウィンドウのレイアウトを再計算するために、フレームワークによって呼び出されます。 ( [CFrameWnd:: RecalcLayout](../../mfc/reference/cframewnd-class.md#recalclayout)をオーバーライドします)。|
+|[CMDIFrameWndEx:: RemovePaneFromDockManager](#removepanefromdockmanager)|ペインの登録を解除し、ドッキングマネージャーから削除します。|
 |[CMDIFrameWndEx:: SaveMDIState](#savemdistate)|MDI タブ付きグループの現在のレイアウトと、以前に開かれたドキュメントの一覧を保存します。|
 |[CMDIFrameWndEx:: Setprintプレビューフレーム](#setprintpreviewframe)|印刷プレビューフレームウィンドウを設定します。|
 |[CMDIFrameWndEx:: SetupToolbarMenu](#setuptoolbarmenu)|ダミーの項目を検索して、指定されたユーザー定義の項目で置き換えることで、ツールバーのオブジェクトを変更します。|
-|[CMDIFrameWndEx::ShowFullScreen](#showfullscreen)|メインフレームを通常モードから全画面表示モードに切り替えます。|
+|[CMDIFrameWndEx:: ShowFullScreen 画面](#showfullscreen)|メインフレームを通常モードから全画面表示モードに切り替えます。|
 |[CMDIFrameWndEx:: ShowPane](#showpane)|指定したペインの表示と非表示を切り替えます。|
-|[CMDIFrameWndEx::ShowWindowsDialog](#showwindowsdialog)|[Cmfcwindowsmanagerdialog ダイアログ](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)ボックスを作成して開きます。|
+|[CMDIFrameWndEx:: ShowWindowsDialog](#showwindowsdialog)|[Cmfcwindowsmanagerdialog ダイアログ](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)ボックスを作成して開きます。|
 |[CMDIFrameWndEx:: TabbedDocumentToControlBar](#tabbeddocumenttocontrolbar)|指定したタブ付きドキュメントをドッキングペインに変換します。|
 |[CMDIFrameWndEx:: updatecap](#updatecaption)|ウィンドウのフレームキャプションを更新するためにフレームワークによって呼び出されます。|
 |[CMDIFrameWndEx:: UpdateMDITabbedBarsIcons](#updatemditabbedbarsicons)|各 MDI タブ付きペインのアイコンを設定します。|
@@ -259,18 +259,18 @@ class CMDIFrameWndEx : public CMDIFrameWnd
 
 ### <a name="data-members"></a>データ メンバー
 
-|名前|説明|
+|Name|Description|
 |----------|-----------------|
 |[CMDIFrameWndEx:: m_bCanCovertControlBarToMDIChild](#m_bcancovertcontrolbartomdichild)|ドッキングペインを MDI 子ウィンドウに変換できるかどうかを決定します。|
-|[CMDIFrameWndEx::m_bDisableSetRedraw](#m_bdisablesetredraw)|MDI 子ウィンドウの再描画の最適化を有効または無効にします。|
+|[CMDIFrameWndEx:: m_bDisableSetRedraw](#m_bdisablesetredraw)|MDI 子ウィンドウの再描画の最適化を有効または無効にします。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-Mdi アプリケーションで拡張カスタマイズ機能を利用するには、アプリケーションの mdi フレームウィンドウクラスをでは`CMDIFrameWndEx` `CMDIFrameWnd`なくから派生させます。
+MDI アプリケーションで拡張カスタマイズ機能を利用するには、アプリケーションの MDI フレームウィンドウクラスを `CMDIFrameWnd`ではなく `CMDIFrameWndEx` から派生させます。
 
 ## <a name="example"></a>例
 
-次の例では、から`CMDIFrameWndEx`クラスを派生させることができます。 このコードスニペットは、drawclient サンプルから抜粋した[ものです。MFC リボンベースの OLE オブジェクト描画アプリケーション](../../overview/visual-cpp-samples.md)です。
+次の例では、`CMDIFrameWndEx`からクラスを派生させることができます。 このコードスニペットは、 [Drawclient サンプル: MFC リボンベースの OLE オブジェクト描画アプリケーション](../../overview/visual-cpp-samples.md)から取得されます。
 
 [!code-cpp[NVC_MFC_DrawClient#1](../../mfc/reference/codesnippet/cpp/cmdiframewndex-class_1.h)]
 
@@ -280,7 +280,7 @@ Mdi アプリケーションで拡張カスタマイズ機能を利用するに�
 
 [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
-[CWnd](../../mfc/reference/cwnd-class.md)
+[から派生しているのではない](../../mfc/reference/cwnd-class.md)
 
 [CFrameWnd](../../mfc/reference/cframewnd-class.md)
 
@@ -292,7 +292,7 @@ Mdi アプリケーションで拡張カスタマイズ機能を利用するに�
 
 **ヘッダー:** afxMDIFrameWndEx
 
-##  <a name="activeitemrecalclayout"></a>  CMDIFrameWndEx::ActiveItemRecalcLayout
+##  <a name="activeitemrecalclayout"></a>CMDIFrameWndEx:: ActiveItemRecalcLayout
 
 アクティブな項目のレイアウトを再計算します。
 
@@ -300,7 +300,7 @@ Mdi アプリケーションで拡張カスタマイズ機能を利用するに�
 void ActiveItemRecalcLayout();
 ```
 
-##  <a name="addpane"></a>  CMDIFrameWndEx::AddPane
+##  <a name="addpane"></a>CMDIFrameWndEx:: AddPane
 
 ペインをドッキングマネージャーに登録します。
 
@@ -322,7 +322,7 @@ BOOL AddPane(
 
 ペインが正常に登録されている場合は、0以外の値を返します。 ペインがドッキングマネージャーに既に登録されている場合は0を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 各ペインは、ドッキングレイアウトの一部を取得する前に、 [CDockingManager クラス](../../mfc/reference/cdockingmanager-class.md)に登録する必要があります。 このメソッドは、特定のウィンドウをドッキングすることをドッキングマネージャーに通知するために使用します。 このウィンドウが登録されると、ドッキングマネージャーによって、ドッキングマネージャーによって管理されるペインの一覧内の配置設定と位置に基づいて配置されます。
 
@@ -334,7 +334,7 @@ BOOL AddPane(
 virtual void AdjustClientArea();
 ```
 
-##  <a name="adjustdockinglayout"></a>  CMDIFrameWndEx::AdjustDockingLayout
+##  <a name="adjustdockinglayout"></a>CMDIFrameWndEx:: AdjustDockingLayout
 
 ドッキングされているすべてのウィンドウのレイアウトを再計算します。
 
@@ -345,9 +345,9 @@ virtual void AdjustDockingLayout(HDWP hdwp=NULL);
 ### <a name="parameters"></a>パラメーター
 
 *hdwp*<br/>
-から複数のウィンドウ位置の構造体を識別します。 この値を取得するには`BeginDeferWindowPos`、を呼び出します。
+から複数のウィンドウ位置の構造体を識別します。 この値は、`BeginDeferWindowPos`を呼び出すことによって取得できます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このメンバー関数を呼び出して、フレームウィンドウにドッキングされているすべてのペインのレイアウトを再計算します。
 
@@ -364,11 +364,11 @@ BOOL AreMDITabs(int* pnMDITabsType=NULL) const;
 *pnMDITabsType*<br/>
 入出力有効になっている機能を示す整数変数へのポインター。
 
-- 0すべての機能が無効になっています。
+- 0: すべての機能が無効になります。
 
-- 1:MDI タブが有効になります。
+- 1: MDI タブが有効になっています。
 
-- 2:MDI タブ付きグループが有効になります。
+- 2: MDI タブ付きグループが有効になっています。
 
 ### <a name="return-value"></a>戻り値
 
@@ -376,7 +376,7 @@ MDI タブまたは MDI タブ付きグループが有効な場合に TRUE を�
 
 上記の機能のいずれも有効になっていない場合は FALSE を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 この関数を使用すると、フレームウィンドウに対して MDI タブまたは MDI タブ付きグループが有効になっているかどうかを確認できます。 [CMDIFrameWndEx:: EnableMDITabs](#enablemditabs)を使用して、MDI タブ機能を有効または無効にします。
 
@@ -394,7 +394,7 @@ virtual BOOL CanCovertControlBarToMDIChild();
 
 フレームウィンドウがドッキングペインをタブ付きドキュメントに変換できる場合に TRUE を返します。それ以外の場合は FALSE を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 派生クラスでこのメソッドをオーバーライドし、TRUE を返します。これにより、ドッキングペインからタブ付きドキュメントへの変換が可能になります。 または、 [CMDIFrameWndEx:: m_bCanCovertControlBarToMDIChild](#m_bcancovertcontrolbartomdichild)を TRUE に設定することもできます。
 
@@ -415,7 +415,7 @@ virtual CMDIChildWndEx* ControlBarToTabbedDocument(CDockablePane* pBar);
 
 ドッキングペインを含む新しい MDI 子ウィンドウへのポインターを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このメソッドは、ドッキングペインをタブ付きドキュメントに変換します。 このメソッドを呼び出すと、フレームワークは[CMDIChildWndEx Class](../../mfc/reference/cmdichildwndex-class.md)オブジェクトを作成し、ドッキングマネージャーからドッキングペインを削除して、新しい MDI 子ウィンドウにドッキングペインを追加します。 MDI 子ウィンドウは、クライアント領域全体をカバーするようにドッキングペインのサイズを変更します。
 
@@ -439,9 +439,9 @@ virtual CMDIChildWndEx* CreateDocumentWindow(
 
 ### <a name="return-value"></a>戻り値
 
-へ`CMDIChildWndEx`のポインター。
+`CMDIChildWndEx` を指すポインターです。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 フレームワークは、以前にレジストリに保存されたドキュメントのリストを読み込むときに、このメソッドを呼び出します。
 
@@ -449,9 +449,9 @@ virtual CMDIChildWndEx* CreateDocumentWindow(
 
 ### <a name="example"></a>例
 
-次の例では`CreateDocumentWindow` 、 [を VisualStudioDemo サンプルで使用する方法を示します。MFC Visual Studio アプリケーション](../../overview/visual-cpp-samples.md)。
+次の例は、 [VisualStudioDemo サンプル: MFC Visual Studio アプリケーション](../../overview/visual-cpp-samples.md)で `CreateDocumentWindow` を使用する方法を示しています。
 
-この例では`g_strStartViewName` 、ディスクファイルから実際に読み込まれていない "仮想ドキュメント" (たとえば、"スタートページ") の名前を指定できます。 そのため、このケースを処理するには特別な処理が必要です。
+この例では、`g_strStartViewName`、ディスクファイルから実際に読み込まれていない "仮想ドキュメント" (たとえば、"スタートページ") の名前にすることができます。 そのため、このケースを処理するには特別な処理が必要です。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#13](../../mfc/codesnippet/cpp/cmdiframewndex-class_2.cpp)]
 
@@ -499,13 +499,13 @@ void DockPane(
 *lpRect*<br/>
 から使用しません。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このメソッドは、指定されたペインを、 [Cbasepane:: EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking)と[CMDIFrameWndEx:: EnableDocking](#enabledocking)が呼び出されたときに指定されたフレームウィンドウのいずれかの辺にドッキングします。
 
 ### <a name="example"></a>例
 
-`DockPane` メソッドの使用例を次に示します。 このコードスニペットは、VisualStudioDemo [サンプルから抜粋したものです。MFC Visual Studio アプリケーション](../../overview/visual-cpp-samples.md)。
+`DockPane` メソッドの使用例を次に示します。 このコードスニペットは、 [VisualStudioDemo サンプル: MFC Visual Studio アプリケーション](../../overview/visual-cpp-samples.md)から取得されています。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#4](../../mfc/codesnippet/cpp/cmdiframewndex-class_3.cpp)]
 
@@ -525,23 +525,23 @@ BOOL DockPaneLeftOf(
 からドッキングペインへのポインター。
 
 *自分の*<br/>
-からドッキングサイトとして機能するペインへのポインター。 .
+からドッキングサイトとして機能するペインへのポインター。 。
 
 ### <a name="return-value"></a>戻り値
 
-操作が成功した場合は TRUE を返します。 それ以外の場合は FALSE を返します。
+操作が成功した場合は TRUE を返します。 それ以外の場合は、FALSE を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 複数のペインオブジェクトを事前に定義された順序でドッキングするには、このメソッドを呼び出します。 このメソッドは、 *Pbar* *によって*指定されたペインを、によって指定されたペインの左側にドッキングします。
 
 ### <a name="example"></a>例
 
-次の例は、 `DockPaneLeftOf` [VisualStudioDemo サンプルでのメソッドの使用方法を示しています。MFC Visual Studio アプリケーション](../../overview/visual-cpp-samples.md)。
+次の例は、 [VisualStudioDemo サンプル: MFC Visual Studio アプリケーション](../../overview/visual-cpp-samples.md)で `DockPaneLeftOf` メソッドを使用する方法を示しています。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#5](../../mfc/codesnippet/cpp/cmdiframewndex-class_4.cpp)]
 
-##  <a name="enableautohidepanes"></a>  CMDIFrameWndEx::EnableAutoHidePanes
+##  <a name="enableautohidepanes"></a>CMDIFrameWndEx:: EnableAutoHidePanes
 
 ペインがメインフレームウィンドウの指定した辺にドッキングされている場合、ウィンドウの自動非表示モードを有効にします。
 
@@ -568,13 +568,13 @@ BOOL EnableAutoHidePanes(DWORD dwDockStyle);
 
 ### <a name="example"></a>例
 
-次の例は、 `EnableAutoHidePanes` [VisualStudioDemo サンプルでのメソッドの使用方法を示しています。MFC Visual Studio アプリケーション](../../overview/visual-cpp-samples.md)。
+次の例は、 [VisualStudioDemo サンプル: MFC Visual Studio アプリケーション](../../overview/visual-cpp-samples.md)で `EnableAutoHidePanes` メソッドを使用する方法を示しています。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#6](../../mfc/codesnippet/cpp/cmdiframewndex-class_5.cpp)]
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="enabledocking"></a>  CMDIFrameWndEx::EnableDocking
+##  <a name="enabledocking"></a>CMDIFrameWndEx:: EnableDocking
 
 MDI フレームウィンドウに属するペインのドッキングを有効にします。
 
@@ -589,17 +589,17 @@ BOOL EnableDocking(DWORD dwDockStyle);
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この関数を呼び出して、 `CMDIFrameWndEx`オブジェクトに属するペインのドッキングを有効にします。
+この関数を呼び出して、`CMDIFrameWndEx` オブジェクトに属するペインのドッキングを有効にします。
 
 ### <a name="example"></a>例
 
-次の例は、 `EnableDocking` [VisualStudioDemo サンプルでのメソッドの使用方法を示しています。MFC Visual Studio アプリケーション](../../overview/visual-cpp-samples.md)。
+次の例は、 [VisualStudioDemo サンプル: MFC Visual Studio アプリケーション](../../overview/visual-cpp-samples.md)で `EnableDocking` メソッドを使用する方法を示しています。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#7](../../mfc/codesnippet/cpp/cmdiframewndex-class_6.cpp)]
 
-##  <a name="enablefullscreenmainmenu"></a>  CMDIFrameWndEx::EnableFullScreenMainMenu
+##  <a name="enablefullscreenmainmenu"></a>CMDIFrameWndEx:: EnableFullScreenMainMenu
 
 全画面表示モードでメインメニューを表示または非表示にします。
 
@@ -612,9 +612,9 @@ void EnableFullScreenMainMenu(BOOL bEnableMenu);
 *bEnableMenu*<br/>
 からメインメニューを全画面表示モードで表示する場合は TRUE、非表示にする場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="enablefullscreenmode"></a>  CMDIFrameWndEx::EnableFullScreenMode
+##  <a name="enablefullscreenmode"></a>CMDIFrameWndEx:: EnableFullScreenMode
 
 フレームウィンドウの全画面表示モードを有効にします。
 
@@ -627,11 +627,11 @@ void EnableFullScreenMode(UINT uiFullScreenCmd);
 *uiFullScreenCmd*<br/>
 から全画面表示モードを有効または無効にするコマンドの ID です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-全画面表示モードでは、すべてのドッキングコントロールバー、ツールバー、およびメニューが非表示になり、アクティブなビューのサイズが全画面に表示されるように変更されます。全画面表示モードを有効にする場合は、有効または無効にするコマンドの ID を指定する必要があります。 メインフレームの`EnableFullScreenMode` `OnCreate`関数からを呼び出すことができます。 フレームウィンドウを全画面表示モードに切り替えると、フレームワークによって、指定されたコマンド ID を持つ1つのボタンを持つフローティングツールバーが作成されます。メインメニューを画面に表示したままにする場合は、 [CMDIFrameWndEx:: EnableFullScreenMainMenu](#enablefullscreenmainmenu)を呼び出します。
+全画面表示モードでは、すべてのドッキングコントロールバー、ツールバー、およびメニューが非表示になり、アクティブなビューのサイズが全画面に表示されるように変更されます。全画面表示モードを有効にする場合は、有効または無効にするコマンドの ID を指定する必要があります。 メインフレームの `OnCreate` 関数から `EnableFullScreenMode` を呼び出すことができます。 フレームウィンドウを全画面表示モードに切り替えると、フレームワークによって、指定されたコマンド ID を持つ1つのボタンを持つフローティングツールバーが作成されます。メインメニューを画面に表示したままにする場合は、 [CMDIFrameWndEx:: EnableFullScreenMainMenu](#enablefullscreenmainmenu)を呼び出します。
 
-##  <a name="enableloaddockstate"></a>  CMDIFrameWndEx::EnableLoadDockState
+##  <a name="enableloaddockstate"></a>CMDIFrameWndEx:: EnableLoadDockState
 
 ドッキング状態の読み込みを有効または無効にします。
 
@@ -644,9 +644,9 @@ void EnableLoadDockState(BOOL bEnable = TRUE);
 *bEnable*<br/>
 からドッキング状態の読み込みを有効にする場合は TRUE。ドッキング状態の読み込みを無効にする場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="enablemditabbedgroups"></a>  CMDIFrameWndEx::EnableMDITabbedGroups
+##  <a name="enablemditabbedgroups"></a>CMDIFrameWndEx:: EnableMDITabbedGroups
 
 フレームウィンドウの MDI タブ付きグループ機能を有効または無効にします。
 
@@ -664,7 +664,7 @@ void EnableMDITabbedGroups(
 *params*<br/>
 からMDI クライアント領域に作成される子ウィンドウにフレームワークが適用するパラメーターを指定します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 MDI タブ付きグループ機能を有効または無効にするには、このメソッドを使用します。 この機能により、mdi アプリケーションは mdi クライアント領域内で垂直方向または水平方向に配置された子ウィンドウをタブ付きウィンドウとして表示できます。 タブ付きウィンドウのグループはスプリッターで区切られます。 ユーザーはスプリッターを使用してタブ付きグループのサイズを変更できます。
 
@@ -680,13 +680,13 @@ MDI タブ付きグループ機能を有効または無効にするには、こ�
 
 *Benable*を FALSE に設定してこのメソッドを呼び出した場合、 *params*は無視されます。
 
-MDI タブ付きグループが既に有効になっている場合でも、このメソッドを再度呼び出して、子ウィンドウの設定を変更することができます。 *Benable*を TRUE に設定してメソッドを呼び出し、 *params*パラメーターで`CMDITabInfo`指定されたオブジェクトのメンバーを変更します。
+MDI タブ付きグループが既に有効になっている場合でも、このメソッドを再度呼び出して、子ウィンドウの設定を変更することができます。 *Benable*を TRUE に設定してメソッドを呼び出し、 *params*パラメーターで指定された `CMDITabInfo` オブジェクトのメンバーを変更します。
 
 MDI タブ付きグループの使用方法の詳細については、「 [Mdi タブ付きグループ](../../mfc/mdi-tabbed-groups.md)」を参照してください。
 
 ### <a name="example"></a>例
 
-次の例では`EnableMDITabbedGroups` 、 [を VisualStudioDemo サンプルで使用する方法を示します。MFC Visual Studio アプリケーション](../../overview/visual-cpp-samples.md)。
+次の例は、 [VisualStudioDemo サンプル: MFC Visual Studio アプリケーション](../../overview/visual-cpp-samples.md)で `EnableMDITabbedGroups` を使用する方法を示しています。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#8](../../mfc/codesnippet/cpp/cmdiframewndex-class_7.cpp)]
 
@@ -720,7 +720,7 @@ void EnableMDITabs(
 タブを閉じるボタンを表示するかどうかを指定します。
 
 *style*<br/>
-タブのスタイルを指定します。 通常のタブの場合は STYLE_3D_SCROLLED、Microsoft OneNote のタブの場合は STYLE_3D_ONENOTE を使用します。
+タブのスタイルを指定します。 Microsoft OneNote タブの通常のタブまたは STYLE_3D_ONENOTE には STYLE_3D_SCROLLED を使用します。
 
 *bTabCustomTooltips ヒント*<br/>
 カスタムツールヒントを有効にするかどうかを指定します。
@@ -728,17 +728,17 @@ void EnableMDITabs(
 *bActiveTabCloseButton*<br/>
 TRUE の場合、 **[閉じる]** ボタンはタブ領域の右上隅ではなく、アクティブなタブに表示されます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 MDI フレームウィンドウの MDI タブ機能を有効または無効にするには、このメソッドを呼び出します。 有効にすると、すべての子ウィンドウがタブとして表示されます。
 
-タブラベルは、パラメーター *Tablocation*の設定に応じて、フレームの上部または下部に配置できます。 `CMFCTabCtrl::LOCATION_BOTTOM` (既定の設定) または`CMFCTabCtrl::LOCATION_TOP`を指定できます。
+タブラベルは、パラメーター *Tablocation*の設定に応じて、フレームの上部または下部に配置できます。 `CMFCTabCtrl::LOCATION_BOTTOM` (既定の設定) または `CMFCTabCtrl::LOCATION_TOP`のいずれかを指定できます。
 
 *Btabcustomtooltips ヒント*が TRUE の場合、AFX_WM_ON_GET_TAB_TOOLTIP メッセージがメインフレームウィンドウに送信されます。 コードはこのメッセージを処理し、MDI タブのカスタムツールヒントをフレームワークに提供できます。
 
 ### <a name="example"></a>例
 
-次の例は、 `EnableMDITabs` [mditabsdemo サンプルでを使用する方法を示しています。MFC のタブ付き](../../overview/visual-cpp-samples.md)MDI アプリケーション。
+次の例では、`EnableMDITabs` を、 [Mditabsdemo サンプル: MFC タブ付き MDI アプリケーション](../../overview/visual-cpp-samples.md)で使用する方法を示します。
 
 [!code-cpp[NVC_MFC_MDITabsDemo#3](../../mfc/reference/codesnippet/cpp/cmdiframewndex-class_8.cpp)]
 
@@ -755,7 +755,7 @@ void EnableMDITabsLastActiveActivation(BOOL bLastActiveTab=TRUE);
 *bLastActiveTab*<br/>
 からTRUE の場合は、最後にアクティブになったタブのアクティブ化を有効にします。FALSE の場合は、最後にアクティブになったタブのアクティブ化を無効にします。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 アクティブなタブを閉じるときにタブを開くには、次の2つの方法があります。
 
@@ -765,9 +765,9 @@ void EnableMDITabsLastActiveActivation(BOOL bLastActiveTab=TRUE);
 
 既定の実装では、最初の方法が使用されます。
 
-を`EnableMDITabsLastActiveActivation`使用すると、タブのアクティブ化の2番目の方法を有効にできます。 Windows が MDI 子ウィンドウを開く方法をエミュレートします。
+`EnableMDITabsLastActiveActivation` を使用して、タブのアクティブ化の2番目の方法を有効にします。 Windows が MDI 子ウィンドウを開く方法をエミュレートします。
 
-##  <a name="enablepanemenu"></a>  CMDIFrameWndEx::EnablePaneMenu
+##  <a name="enablepanemenu"></a>CMDIFrameWndEx:: EnablePaneMenu
 
 アプリケーションウィンドウの一覧を表示するポップアップウィンドウメニューの自動作成と管理を有効または無効にします。
 
@@ -801,17 +801,17 @@ void EnablePaneMenu(
 *bViewMenuShowsToolbarsOnly*<br/>
 からTRUE の場合、[ペイン] メニューには、ツールバーの一覧のみが表示されます。 FALSE の場合、メニューには、ツールバーとドッキングバーの一覧が表示されます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 ポップアップウィンドウのメニューには、アプリケーションのウィンドウの一覧が表示され、ユーザーは個々のペインの表示と非表示を切り替えることができます。
 
 ### <a name="example"></a>例
 
-次の例では`EnablePaneMenu` 、 [を VisualStudioDemo サンプルで使用する方法を示します。MFC Visual Studio アプリケーション](../../overview/visual-cpp-samples.md)。
+次の例は、 [VisualStudioDemo サンプル: MFC Visual Studio アプリケーション](../../overview/visual-cpp-samples.md)で `EnablePaneMenu` を使用する方法を示しています。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#9](../../mfc/codesnippet/cpp/cmdiframewndex-class_9.cpp)]
 
-##  <a name="enablewindowsdialog"></a>  CMDIFrameWndEx::EnableWindowsDialog
+##  <a name="enablewindowsdialog"></a>CMDIFrameWndEx:: EnableWindowsDialog
 
 [Cmfcwindowsmanagerdialog](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)ダイアログボックスを呼び出すコマンド ID を持つメニュー項目を挿入します。
 
@@ -838,22 +838,22 @@ void EnableWindowsDialog(
 から項目のテキストを指定します。
 
 *bShowHelpButton*<br/>
-からWindows の管理] ダイアログボックスに **[ヘルプ]** ボタンを表示するかどうかを指定します。
+からWindows の管理 ダイアログボックスに **[ヘルプ]** ボタンを表示するかどうかを指定します。
 
 *uiMenuTextResId*<br/>
 から項目のテキスト文字列を格納している文字列リソース識別子。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドを使用して、MDI 子ウィンドウ管理ダイアログボックス ( [Cmfcwindowsmanagerdialog クラス](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)) を呼び出すコマンドを持つメニュー項目を挿入します。 *UiMenuId*によって指定されたメニューに新しい項目が挿入されます。 WM_CREATE `EnableWindowsDialog`メッセージを処理するときに、を呼び出します。
+このメソッドを使用して、MDI 子ウィンドウ管理ダイアログボックス ( [Cmfcwindowsmanagerdialog クラス](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)) を呼び出すコマンドを持つメニュー項目を挿入します。 *UiMenuId*によって指定されたメニューに新しい項目が挿入されます。 WM_CREATE メッセージを処理するときに `EnableWindowsDialog` を呼び出します。
 
 ### <a name="example"></a>例
 
-次の例では`EnableWindowsDialog` 、 [を VisualStudioDemo サンプルで使用する方法を示します。MFC Visual Studio アプリケーション](../../overview/visual-cpp-samples.md)。
+次の例は、 [VisualStudioDemo サンプル: MFC Visual Studio アプリケーション](../../overview/visual-cpp-samples.md)で `EnableWindowsDialog` を使用する方法を示しています。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#10](../../mfc/codesnippet/cpp/cmdiframewndex-class_10.cpp)]
 
-##  <a name="getactivepopup"></a>  CMDIFrameWndEx::GetActivePopup
+##  <a name="getactivepopup"></a>CMDIFrameWndEx:: GetActivePopup
 
 現在表示されているポップアップ メニューへのポインターを返します。
 
@@ -865,11 +865,11 @@ CMFCPopupMenu* GetActivePopup() const;
 
 アクティブなポップアップメニューへのポインター。アクティブなポップアップメニューがない場合は NULL。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 現在表示されている[CMFCPopupMenu クラス](../../mfc/reference/cmfcpopupmenu-class.md)オブジェクトへのポインターを取得するには、この関数を使用します。
 
-##  <a name="getdefaultresid"></a>  CMDIFrameWndEx::GetDefaultResId
+##  <a name="getdefaultresid"></a>CMDIFrameWndEx:: GetDefaultResId
 
 MDI フレームウィンドウの共有リソースの ID を返します。
 
@@ -881,11 +881,11 @@ UINT GetDefaultResId() const;
 
 リソース ID の値。 フレームウィンドウにメニューバーがない場合は0。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このメソッドは、MDI フレームウィンドウが[CFrameWnd:: LoadFrame](../../mfc/reference/cframewnd-class.md#loadframe)によって読み込まれたときに指定されたリソース ID を返します。
 
-##  <a name="getmditabgroups"></a>  CMDIFrameWndEx::GetMDITabGroups
+##  <a name="getmditabgroups"></a>CMDIFrameWndEx:: GetMDITabGroups
 
 MDI タブ付きウィンドウの一覧を返します。
 
@@ -897,11 +897,11 @@ const CObList& GetMDITabGroups() const;
 
 タブ付きウィンドウのリストを含む、 [CObList クラス](../../mfc/reference/coblist-class.md)オブジェクトへの参照。 リストを保存したり、変更したりしないでください。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このメソッドを使用して、タブ付きウィンドウの一覧にアクセスします。 個々のタブ付きウィンドウのいくつかのパラメーターを変更したりクエリを実行したりする場合に便利です。
 
-##  <a name="getmditabs"></a>  CMDIFrameWndEx::GetMDITabs
+##  <a name="getmditabs"></a>CMDIFrameWndEx:: GetMDITabs
 
 下線付きのタブ付きウィンドウへの参照を返します。
 
@@ -913,7 +913,7 @@ CMFCTabCtrl& GetMDITabs();
 
 下線付きのタブ付きウィンドウへの参照。
 
-##  <a name="getmditabscontextmenualloweditems"></a>  CMDIFrameWndEx::GetMDITabsContextMenuAllowedItems
+##  <a name="getmditabscontextmenualloweditems"></a>CMDIFrameWndEx:: GetMDITabsContextMenuAllowedItems
 
 MDI タブ付きグループ機能が有効になっている場合に、どの操作が有効であるかを決定するフラグの組み合わせを返します。
 
@@ -933,7 +933,7 @@ DWORD GetMDITabsContextMenuAllowedItems();
 
 - BCGP_MDI_CAN_MOVE_NEXT-タブを次のタブグループに移動できます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 MDI タブ付きグループ機能が有効になっている場合は、特定のウィンドウのタブで許可されている操作を把握しておく必要があります。 このメソッドは、タブ付きウィンドウの現在のレイアウトを分析し、ショートカットメニューなどのビルドに使用できるフラグの組み合わせを返します。
 
@@ -957,7 +957,7 @@ const CMFCMenuBar* GetMenuBar() const;
 
 メニューバーオブジェクトへのポインター。
 
-##  <a name="getpane"></a>  CMDIFrameWndEx::GetPane
+##  <a name="getpane"></a>CMDIFrameWndEx:: GetPane
 
 指定されたコントロール ID を持つペインへのポインターを返します。
 
@@ -974,7 +974,7 @@ CBasePane* GetPane(UINT nID);
 
 指定されたコントロール ID を持つペインへのポインター (存在する場合)。 それ以外の場合は NULL。
 
-##  <a name="getribbonbar"></a>  CMDIFrameWndEx::GetRibbonBar
+##  <a name="getribbonbar"></a>CMDIFrameWndEx:: GetRibbonBar
 
 フレームのリボンバーコントロールを取得します。
 
@@ -986,7 +986,7 @@ CMFCRibbonBar* GetRibbonBar();
 
 フレームの[CMFCRibbonBar クラス](../../mfc/reference/cmfcribbonbar-class.md)へのポインター。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 ##  <a name="gettearoffbars"></a>CMDIFrameWndEx:: GetTearOffBars
 
@@ -998,11 +998,11 @@ const CObList& GetTearOffBars() const;
 
 ### <a name="return-value"></a>戻り値
 
-ティアオフ状態にあるから派生したオブジェクトへ`CPane`のポインターのコレクションを格納する、 [CObList クラス](../../mfc/reference/coblist-class.md)オブジェクトへの参照。
+ティアオフ状態にある `CPane`派生オブジェクトへのポインターのコレクションを格納する、 [CObList クラス](../../mfc/reference/coblist-class.md)オブジェクトへの参照。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`CMDIFrameWndEx`ティアオフメニューのコレクションを保持します。 このリストへの参照を取得するには、このメソッドを使用します。
+`CMDIFrameWndEx` は、ティアオフメニューのコレクションを保持します。 このリストへの参照を取得するには、このメソッドを使用します。
 
 ##  <a name="gettoolbarbuttontooltiptext"></a>CMDIFrameWndEx:: GetToolbarButtonToolTipText
 
@@ -1026,9 +1026,9 @@ virtual BOOL GetToolbarButtonToolTipText(
 
 ツールヒントが表示されている場合は TRUE。 それ以外の場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="insertpane"></a>  CMDIFrameWndEx::InsertPane
+##  <a name="insertpane"></a>CMDIFrameWndEx:: InsertPane
 
 指定したペインをドッキングマネージャーに登録します。
 
@@ -1054,11 +1054,11 @@ BOOL InsertPane(
 
 メソッドがペインを正常に登録した場合は TRUE。ペインがドッキングマネージャーに既に登録されている場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このメソッドを使用して、 *pControlBar*によって指定されたペインについてドッキングマネージャーに通知します。 ドッキングマネージャーは、ドッキングマネージャーの内部リスト内のウィンドウの配置と位置に応じて、このペインを整列します。
 
-##  <a name="isfullscreen"></a>  CMDIFrameWndEx::IsFullScreen
+##  <a name="isfullscreen"></a>CMDIFrameWndEx:: IsFullScreen 画面
 
 フレームウィンドウが全画面表示モードであるかどうかを判断します。
 
@@ -1070,11 +1070,11 @@ BOOL IsFullScreen() const;
 
 フレームウィンドウが全画面表示モードの場合は TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 全画面表示モードを設定するには、 [CMDIFrameWndEx:: EnableFullScreenMode](#enablefullscreenmode)メソッドを呼び出します。
 
-##  <a name="ismditabbedgroup"></a>  CMDIFrameWndEx::IsMDITabbedGroup
+##  <a name="ismditabbedgroup"></a>CMDIFrameWndEx:: IsMDITabbedGroup
 
 MDI タブ付きグループ機能を有効にするかどうかを指定します。
 
@@ -1086,11 +1086,11 @@ BOOL IsMDITabbedGroup() const;
 
 MDI タブ付きグループ機能が有効な場合は TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 通常の MDI タブまたは MDI タブ付きグループ機能が有効になっているかどうかを確認するには、 [CMDIFrameWndEx:: AreMDITabs](#aremditabs)を使用します。
 
-##  <a name="ismemberofmditabgroup"></a>  CMDIFrameWndEx::IsMemberOfMDITabGroup
+##  <a name="ismemberofmditabgroup"></a>CMDIFrameWndEx:: IsMemberOfMDITabGroup
 
 指定したタブ付きウィンドウが、MDI タブ付きグループ内のウィンドウの一覧にあるかどうかを判断します。
 
@@ -1119,7 +1119,7 @@ BOOL IsMenuBarAvailable() const;
 
 メニューバーオブジェクトへのポインターが NULL でない場合は TRUE。それ以外の場合は FALSE。
 
-##  <a name="ispointneardocksite"></a>  CMDIFrameWndEx::IsPointNearDockSite
+##  <a name="ispointneardocksite"></a>CMDIFrameWndEx:: IsPointNearDockSite
 
 指定したポイントがドッキングサイトの近くにあるかどうかを判断します。
 
@@ -1136,7 +1136,7 @@ BOOL IsPointNearDockSite(
 から指定された画面座標のポイント。
 
 *dwBarAlignment*<br/>
-からポイントが近づいている端を指定します。 指定できる値は、CBRS_ALIGN_LEFT、CBRS_ALIGN_RIGHT、CBRS_ALIGN_TOP、および CBRS_ALIGN_BOTTOM です。
+からポイントが近づいている端を指定します。 指定できる値は、CBRS_ALIGN_LEFT、CBRS_ALIGN_RIGHT、CBRS_ALIGN_TOP、および CBRS_ALIGN_BOTTOM
 
 *bOuterEdge*<br/>
 からポイントがドッキングサイトの外側の境界の近くにある場合は TRUE。それ以外の場合は FALSE。
@@ -1145,11 +1145,11 @@ BOOL IsPointNearDockSite(
 
 ポイントがドッキングサイトの近くにある場合は TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 ドッキングマネージャーの感度セット内にあるポイントは、ドッキングサイトの近くにあります。 既定の感度は15ピクセルです。
 
-##  <a name="isprintpreview"></a>  CMDIFrameWndEx::IsPrintPreview
+##  <a name="isprintpreview"></a>CMDIFrameWndEx:: IsPrintPreview
 
 フレームウィンドウが印刷プレビューモードかどうかを判断します。
 
@@ -1161,9 +1161,9 @@ BOOL IsPrintPreview();
 
 フレームウィンドウが印刷プレビューモードの場合は TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="loadframe"></a>  CMDIFrameWndEx::LoadFrame
+##  <a name="loadframe"></a>CMDIFrameWndEx:: LoadFrame
 
 リソース情報からフレームウィンドウを作成します。
 
@@ -1193,7 +1193,7 @@ virtual BOOL LoadFrame(
 
 メソッドが成功した場合は TRUE。それ以外の場合は FALSE。
 
-##  <a name="loadmdistate"></a>  CMDIFrameWndEx::LoadMDIState
+##  <a name="loadmdistate"></a>CMDIFrameWndEx:: LoadMDIState
 
 MDI タブ付きグループの指定されたレイアウトと、以前に開かれたドキュメントのリストを読み込みます。
 
@@ -1210,25 +1210,25 @@ virtual BOOL LoadMDIState(LPCTSTR lpszProfileName);
 
 読み込みに成功した場合は TRUE。読み込みに失敗した場合、または読み込むデータが存在しない場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 MDI タブおよびグループの状態と、開いているドキュメントの一覧を読み込んだたり保存したりするには、次の手順を実行します。
 
 - メインフレームが閉じられているときに[CMDIFrameWndEx:: SaveMDIState を呼び出します。](#savemdistate)
 
-- メインフレームを作成するときに、 [CMDIFrameWndEx:: LoadMDIState](#loadmdistate)を呼び出します。 この呼び出しの推奨される場所は、メインフレームが初めて表示される前です。 `CWinAppEx::EnableLoadWindowPlacement` を`LoadMDIState`呼び出した`(pMainFrame);`後`pMainFrame->LoadFrame (IDR_MAINFRAME);.`にadd`CBCGPWorkspace::ReloadWindowPlacement`を追加して、レジストリに格納されている位置にメインフレームを表示します。 `(FALSE);`
+- メインフレームを作成するときに、 [CMDIFrameWndEx:: LoadMDIState](#loadmdistate)を呼び出します。 この呼び出しの推奨される場所は、メインフレームが初めて表示される前です。 `(pMainFrame);` の呼び出しの後に `CBCGPWorkspace::ReloadWindowPlacement` `LoadMDIState` を追加 `pMainFrame->LoadFrame (IDR_MAINFRAME);.` 前に `CWinAppEx::EnableLoadWindowPlacement` `(FALSE);` を追加して、レジストリに格納されている位置にメインフレームを表示します。
 
-- アプリケーション`GetDocumentName`でファイル`CMDIChildWndEx`として格納されていないドキュメントが表示される場合は、派生クラスでをオーバーライドします。 返された文字列は、ドキュメント識別子としてレジストリに保存されます。 [CMDIChildWndEx:: GetDocumentName](../../mfc/reference/cmdichildwndex-class.md#getdocumentname)の基本実装は、 [CDocument:: getpathname](../../mfc/reference/cdocument-class.md#getpathname)から取得された値を返します。
+- アプリケーションでファイルとして保存されていないドキュメントが表示される場合は、`CMDIChildWndEx`派生クラスの `GetDocumentName` をオーバーライドします。 返された文字列は、ドキュメント識別子としてレジストリに保存されます。 [CMDIChildWndEx:: GetDocumentName](../../mfc/reference/cmdichildwndex-class.md#getdocumentname)の基本実装は、 [CDocument:: getpathname](../../mfc/reference/cdocument-class.md#getpathname)から取得された値を返します。
 
-- [CMDIFrameWndEx:: CreateDocumentWindow](#createdocumentwindow)をオーバーライドして、ドキュメントがレジストリから読み込まれたときに正しく作成されるようにします。 最初のパラメーターは、返され`GetDocumentName`た文字列です。
+- [CMDIFrameWndEx:: CreateDocumentWindow](#createdocumentwindow)をオーバーライドして、ドキュメントがレジストリから読み込まれたときに正しく作成されるようにします。 最初のパラメーターは `GetDocumentName` 返される文字列です。
 
 ### <a name="example"></a>例
 
-次の例では`LoadMDIState` 、 [を VisualStudioDemo サンプルで使用する方法を示します。MFC Visual Studio アプリケーション](../../overview/visual-cpp-samples.md)。
+次の例は、 [VisualStudioDemo サンプル: MFC Visual Studio アプリケーション](../../overview/visual-cpp-samples.md)で `LoadMDIState` を使用する方法を示しています。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#11](../../mfc/codesnippet/cpp/cmdiframewndex-class_11.cpp)]
 
-##  <a name="mditabmovetonextgroup"></a>  CMDIFrameWndEx::MDITabMoveToNextGroup
+##  <a name="mditabmovetonextgroup"></a>CMDIFrameWndEx:: MDITabMoveToNextGroup
 
 アクティブなタブを現在アクティブになっているタブ付きウィンドウから、次または前のタブ付きグループに移動します。
 
@@ -1241,7 +1241,7 @@ void MDITabMoveToNextGroup(BOOL bNext=TRUE);
 *bNext*<br/>
 からTRUE の場合は、タブを次のタブ付きグループに移動します。 FALSE の場合は、前のタブ付きグループに移動します。
 
-##  <a name="mditabnewgroup"></a>  CMDIFrameWndEx::MDITabNewGroup
+##  <a name="mditabnewgroup"></a>CMDIFrameWndEx:: MDITabNewGroup
 
 1つのウィンドウを持つ新しいタブ付きグループを作成します。
 
@@ -1254,13 +1254,13 @@ void MDITabNewGroup(BOOL bVert=TRUE);
 *bVert*<br/>
 から新しいグループの配置を指定します。 TRUE の場合、新しいグループは垂直方向に整列されます。 FALSE の場合、新しいグループは水平に配置されます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 新しいタブ付きウィンドウ (新しいタブ付きグループ) を作成し、最初のタブを追加するには、この関数を使用します。
 
 ### <a name="example"></a>例
 
-次の例では`MDITabNewGroup` 、 [を VisualStudioDemo サンプルで使用する方法を示します。MFC Visual Studio アプリケーション](../../overview/visual-cpp-samples.md)。
+次の例は、 [VisualStudioDemo サンプル: MFC Visual Studio アプリケーション](../../overview/visual-cpp-samples.md)で `MDITabNewGroup` を使用する方法を示しています。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#12](../../mfc/codesnippet/cpp/cmdiframewndex-class_12.cpp)]
 
@@ -1272,19 +1272,19 @@ void MDITabNewGroup(BOOL bVert=TRUE);
 BOOL m_bCanCovertControlBarToMDIChild;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-ドッキングコントロールバーを MDI 子ウィンドウに変換できるかどうかを示します。 このフラグが TRUE の場合、ユーザーが**タブ付きドキュメント**コマンドを選択すると、フレームワークによって自動的に変換が処理されます。 フラグは保護されているため、このオプションを明示的`m_bCanCovertControlBarToMDIChild`に有効にするに`CMDIFrameWndEx`は、の派生クラスのコンストラクター `CanConvertControlBarToMDIChild`でを設定するか、をオーバーライドする必要があります。
+ドッキングコントロールバーを MDI 子ウィンドウに変換できるかどうかを示します。 このフラグが TRUE の場合、ユーザーが**タブ付きドキュメント**コマンドを選択すると、フレームワークによって自動的に変換が処理されます。 フラグは保護されているため、このオプションを明示的に有効にするには、`CMDIFrameWndEx`派生クラスのコンストラクターで `m_bCanCovertControlBarToMDIChild` を設定するか、または `CanConvertControlBarToMDIChild`をオーバーライドします。
 
 既定値は `FALSE` です。
 
 ### <a name="example"></a>例
 
-次の例では`m_bCanCovertControlBarToMDIChild` 、 [を VisualStudioDemo サンプルで使用する方法を示します。MFC Visual Studio アプリケーション](../../overview/visual-cpp-samples.md)。
+次の例は、 [VisualStudioDemo サンプル: MFC Visual Studio アプリケーション](../../overview/visual-cpp-samples.md)で `m_bCanCovertControlBarToMDIChild` を使用する方法を示しています。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#13](../../mfc/codesnippet/cpp/cmdiframewndex-class_2.cpp)]
 
-##  <a name="m_bdisablesetredraw"></a>  CMDIFrameWndEx::m_bDisableSetRedraw
+##  <a name="m_bdisablesetredraw"></a>CMDIFrameWndEx:: m_bDisableSetRedraw
 
 MDI 子ウィンドウの再描画の最適化を有効または無効にします。
 
@@ -1292,15 +1292,15 @@ MDI 子ウィンドウの再描画の最適化を有効または無効にしま�
 AFX_IMPORT_DATA static BOOL m_bDisableSetRedraw;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 既定値は TRUE です。
 
-MDI 子の再描画を最適化する場合は、このフラグを FALSE に設定します。 この場合、フレームワークは、アプリケーション`SetRedraw (FALSE)`がアクティブなタブを変更するときにメインフレームに対してを呼び出します。
+MDI 子の再描画を最適化する場合は、このフラグを FALSE に設定します。 この場合、フレームワークは、アプリケーションがアクティブなタブを変更するときに、メインフレームの `SetRedraw (FALSE)` を呼び出します。
 
 このフラグにより、望ましくない影響が発生する可能性があります (表示されるバックグラウンドアプリケーションなど)。 そのため、MDI タブのアクティブ化中に顕著なちらつきが発生した場合にのみ、既定値を変更することをお勧めします。
 
-##  <a name="negotiateborderspace"></a>  CMDIFrameWndEx::NegotiateBorderSpace
+##  <a name="negotiateborderspace"></a>CMDIFrameWndEx:: NegotiateBorderSpace
 
 OLE の埋め込み先のアクティブ化時に、フレームウィンドウの境界領域をネゴシエートします。
 
@@ -1313,7 +1313,7 @@ virtual BOOL NegotiateBorderSpace(
 ### <a name="parameters"></a>パラメーター
 
 *nBorderCmd*<br/>
-から列挙型`CFrameWnd::BorderCmd`の次のいずれかの値が含まれます。
+から列挙 `CFrameWnd::BorderCmd`の次のいずれかの値が含まれます。
 
 - `borderGet` = 1
 
@@ -1328,7 +1328,7 @@ virtual BOOL NegotiateBorderSpace(
 
 メソッドが成功した場合は0以外の。それ以外の場合は0です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このメソッドは、OLE 境界領域ネゴシエーションの実装です。
 
@@ -1347,15 +1347,15 @@ virtual BOOL OnCloseDockingPane(CDockablePane* pWnd);
 
 ### <a name="return-value"></a>戻り値
 
-ドッキングペインを閉じることができる場合は TRUE。 それ以外の場合は FALSE。
+ドッキングペインを閉じることができる場合は TRUE。 それ以外の場合は、False です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 ドッキングペインの非表示を処理するには、このメソッドをオーバーライドします。 ドッキングペインが非表示にならないようにする場合は FALSE を返します。
 
 既定の実装では、何も実行されず、TRUE が返されます。
 
-##  <a name="oncloseminiframe"></a>  CMDIFrameWndEx::OnCloseMiniFrame
+##  <a name="oncloseminiframe"></a>CMDIFrameWndEx:: OnCloseMiniFrame フレーム
 
 ユーザーが浮動ミニフレームウィンドウの **[閉じる]** ボタンをクリックしたときに、フレームワークによって呼び出されます。
 
@@ -1370,9 +1370,9 @@ virtual BOOL OnCloseMiniFrame(CPaneFrameWnd*);
 
 ### <a name="return-value"></a>戻り値
 
-浮動ミニフレームウィンドウを閉じることができる場合は TRUE。 それ以外の場合は FALSE。
+浮動ミニフレームウィンドウを閉じることができる場合は TRUE。 それ以外の場合は、False です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 浮動ミニフレームウィンドウの非表示を処理するには、このメソッドをオーバーライドします。 浮動ミニフレームウィンドウが非表示にならないようにする場合は、FALSE を返します。
 
@@ -1391,11 +1391,11 @@ virtual void OnClosePopupMenu(CMFCPopupMenu* pMenuPopup);
 *pMenuPopup*<br/>
 からポップアップメニューへのポインター。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 これらのオブジェクトが WM_DESTROY メッセージを処理するときに、MDI フレームウィンドウに属する[CMFCPopupMenu クラス](../../mfc/reference/cmfcpopupmenu-class.md)オブジェクトからの通知を処理する場合は、このメソッドをオーバーライドします。
 
-##  <a name="oncmdmsg"></a>  CMDIFrameWndEx::OnCmdMsg
+##  <a name="oncmdmsg"></a>CMDIFrameWndEx:: OnCmdMsg
 
 コマンドメッセージをルーティングおよびディスパッチし、コマンドのユーザーインターフェイスオブジェクトを更新するために、フレームワークによって呼び出されます。
 
@@ -1419,13 +1419,13 @@ virtual BOOL OnCmdMsg(
 から*NCode*の値に従って使用されます。 *Pextra*の詳細については、「 [CCmdTarget:: OnCmdMsg](../../mfc/reference/ccmdtarget-class.md#oncmdmsg) 」を参照してください。
 
 *pHandlerInfo*<br/>
-[入力、出力]通常、このパラメーターは NULL にする必要があります。NULL でない場合`OnCmdMsg`は、コマンドを`pmf`ディスパッチするのではなく、 *pHandlerInfo*構造体のメンバー `pTarget`とメンバーをに入力します。
+[入力、出力]通常、このパラメーターは NULL にする必要があります。NULL でない場合は、コマンドをディスパッチするのではなく、 *pHandlerInfo*構造体の `pTarget` と `pmf` メンバーを `OnCmdMsg` ます。
 
 ### <a name="return-value"></a>戻り値
 
 メッセージが処理される場合は0以外の。それ以外の場合は0です。
 
-##  <a name="ondrawmenuimage"></a>  CMDIFrameWndEx::OnDrawMenuImage
+##  <a name="ondrawmenuimage"></a>CMDIFrameWndEx:: OnDrawMenuImage
 
 メニュー項目に関連付けられているイメージが描画されるときに、フレームワークによって呼び出されます。
 
@@ -1451,11 +1451,11 @@ virtual BOOL OnDrawMenuImage(
 
 メソッドがイメージを描画する場合は TRUE。 既定の実装では、FALSE が返されます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-の派生オブジェクトによって所有されて`CMDIFrameWndEx`いるメニューバーに属するメニュー項目のイメージレンダリングをカスタマイズする場合は、このメソッドをオーバーライドします。 既定の実装では、何も行われません。
+`CMDIFrameWndEx`派生オブジェクトによって所有されているメニューバーに属するメニュー項目のイメージレンダリングをカスタマイズする場合は、このメソッドをオーバーライドします。 既定の実装では、何も行われません。
 
-##  <a name="ondrawmenulogo"></a>  CMDIFrameWndEx::OnDrawMenuLogo
+##  <a name="ondrawmenulogo"></a>CMDIFrameWndEx:: OnDrawMenuLogo
 
 [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)が WM_PAINT メッセージを処理するときに、フレームワークによって呼び出されます。
 
@@ -1466,11 +1466,11 @@ virtual void OnDrawMenuLogo(
     const CRect&);
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この関数をオーバーライドすると、 `CMDIFrameWndEx`から派生したオブジェクトによって所有されているメニューバーに属するロゴがポップアップメニューに表示されます。 既定の実装では、何も行われません。
+この関数をオーバーライドすると、`CMDIFrameWndEx`派生オブジェクトによって所有されているメニューバーに属するロゴがポップアップメニューに表示されます。 既定の実装では、何も行われません。
 
-##  <a name="onerasemdiclientbackground"></a>  CMDIFrameWndEx::OnEraseMDIClientBackground
+##  <a name="onerasemdiclientbackground"></a>CMDIFrameWndEx:: OnEraseMDIClientBackground
 
 MDI フレームウィンドウが WM_ERASEBKGND メッセージを処理するときに、フレームワークによって呼び出されます。
 
@@ -1482,11 +1482,11 @@ virtual BOOL OnEraseMDIClientBackground(CDC*);
 
 アプリケーションがメッセージを処理し、背景を消去する場合は TRUE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-派生クラスで`CMDIFrameWndEx`WM_ERASEBKGND メッセージを処理する場合は、このメンバー関数をオーバーライドします。
+`CMDIFrameWndEx`派生クラスで WM_ERASEBKGND メッセージを処理する場合は、このメンバー関数をオーバーライドします。
 
-##  <a name="onmenubuttontoolhittest"></a>  CMDIFrameWndEx::OnMenuButtonToolHitTest
+##  <a name="onmenubuttontoolhittest"></a>CMDIFrameWndEx:: OnMenuButtonToolHitTest
 
 [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)オブジェクトが WM_NCHITTEST メッセージを処理するときに、フレームワークによって呼び出されます。
 
@@ -1508,11 +1508,11 @@ virtual BOOL OnMenuButtonToolHitTest(
 
 アプリケーションが*pTI*パラメーターに入力する場合は TRUE。 既定の実装では、FALSE が返されます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 特定のメニュー項目に関する情報をツールヒントに提供する場合は、このメソッドをオーバーライドします。 既定の実装では、何も行われません。
 
-##  <a name="onmoveminiframe"></a>  CMDIFrameWndEx::OnMoveMiniFrame
+##  <a name="onmoveminiframe"></a>CMDIFrameWndEx:: OnMoveMiniFrame
 
 ミニフレームウィンドウを移動するためにフレームワークによって呼び出されます。
 
@@ -1529,7 +1529,7 @@ virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
 
 メソッドが成功した場合は TRUE。それ以外の場合は FALSE。
 
-##  <a name="onsetpreviewmode"></a>  CMDIFrameWndEx::OnSetPreviewMode
+##  <a name="onsetpreviewmode"></a>CMDIFrameWndEx:: OnSetPreviewMode
 
 アプリケーションのメインフレームウィンドウの印刷プレビューモードを設定します。
 
@@ -1545,9 +1545,9 @@ virtual void OnSetPreviewMode(
 からTRUE の場合、印刷プレビューモードを設定します。 FALSE の場合、プレビューモードをキャンセルします。
 
 *pState*<br/>
-から`CPrintPreviewState`構造体へのポインター。
+から`CPrintPreviewState` 構造体へのポインター。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このメソッド[は、CFrameWnd:: OnSetPreviewMode](../../mfc/reference/cframewnd-class.md#onsetpreviewmode)をオーバーライドします。
 
@@ -1573,13 +1573,13 @@ virtual BOOL OnShowCustomizePane(
 
 このメソッドは常に TRUE を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 クイックカスタマイズ ウィンドウは、ユーザーがツールバーの **カスタマイズ** をクリックしたときに表示されるメニューです。
 
 [クイックカスタマイズ] ウィンドウで変更を行うには、派生クラスでこのメソッドをオーバーライドします。
 
-##  <a name="onshowmditabcontextmenu"></a>  CMDIFrameWndEx::OnShowMDITabContextMenu
+##  <a name="onshowmditabcontextmenu"></a>CMDIFrameWndEx:: OnShowMDITabContextMenu
 
 ショートカットメニューがいずれかのタブに表示される前に、フレームワークによって呼び出されます。 MDI タブ付きグループに対してのみ有効です。
 
@@ -1615,17 +1615,17 @@ virtual BOOL OnShowMDITabContextMenu(
 
 [CBCGPMDIFrameWnd](../../mfc/reference/cmdiframewndex-class.md)派生クラスでこのメソッドをオーバーライドします。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-を処理`OnShowMDITabContextMenu`しない場合、ショートカットメニューは表示されません。 この関数は、MDI タブ付きグループ機能を有効にすると、 **MFC アプリケーションウィザード**によって生成されます。
+`OnShowMDITabContextMenu`を処理しない場合は、ショートカットメニューが表示されません。 この関数は、MDI タブ付きグループ機能を有効にすると、 **MFC アプリケーションウィザード**によって生成されます。
 
 ### <a name="example"></a>例
 
-次の例では`OnShowMDITabContextMenu` 、 [を VisualStudioDemo サンプルで使用する方法を示します。MFC Visual Studio アプリケーション](../../overview/visual-cpp-samples.md)。
+次の例は、 [VisualStudioDemo サンプル: MFC Visual Studio アプリケーション](../../overview/visual-cpp-samples.md)で `OnShowMDITabContextMenu` を使用する方法を示しています。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#14](../../mfc/codesnippet/cpp/cmdiframewndex-class_13.cpp)]
 
-##  <a name="onshowpanes"></a>  CMDIFrameWndEx::OnShowPanes
+##  <a name="onshowpanes"></a>CMDIFrameWndEx:: OnShowPanes
 
 ペインの表示と非表示を切り替えるためにフレームワークによって呼び出されます。
 
@@ -1642,13 +1642,13 @@ virtual BOOL OnShowPanes(BOOL bShow);
 
 このメソッドを呼び出した結果、ペインの状態が変化した場合は TRUE。ペインが既に*bShow*によって指定された状態にある場合は FALSE。 たとえば、ペインが非表示になっていて、 *bShow*が false の場合、戻り値は false になります。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 既定の実装では、最上位レベルのフレームウィンドウからツールバーが削除されます。
 
 [CDockingManager:: m_bHideDockingBarsInContainerMode](../../mfc/reference/cdockingmanager-class.md#m_bhidedockingbarsincontainermode)が TRUE (既定値) の場合、すべてのドッキングウィンドウが非表示になります。
 
-##  <a name="onshowpopupmenu"></a>  CMDIFrameWndEx::OnShowPopupMenu
+##  <a name="onshowpopupmenu"></a>CMDIFrameWndEx:: OnShowPopupMenu
 
 ポップアップメニューを開いたときにフレームワークによって呼び出されます。
 
@@ -1658,15 +1658,15 @@ virtual BOOL OnShowPopupMenu(CMFCPopupMenu*);
 
 ### <a name="return-value"></a>戻り値
 
-ポップアップメニューを表示する場合は TRUE。 それ以外の場合は FALSE。 既定の実装では、TRUE が返されます。
+ポップアップメニューを表示する場合は TRUE。 それ以外の場合は、False です。 既定の実装では、TRUE が返されます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 ポップアップメニューのアクティブ化時に特別な処理を実装する場合は、このメソッドをオーバーライドします。 たとえば、通常のメニュー項目をカラーメニューボタンに変更する場合は、ティアオフバーなどを設定します。
 
 既定の実装では、何も行われません。
 
-##  <a name="onsizemdiclient"></a>  CMDIFrameWndEx::OnSizeMDIClient
+##  <a name="onsizemdiclient"></a>CMDIFrameWndEx:: OnSizeMDIClient
 
 クライアントの MDI ウィンドウのサイズが変更されるときにフレームワークによって呼び出されます。
 
@@ -1684,7 +1684,7 @@ virtual void OnSizeMDIClient(
 *rectNew*<br/>
 からMDI クライアントウィンドウの新しいサイズ。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 ##  <a name="ontearoffmenu"></a>CMDIFrameWndEx:: OnTearOffMenu
 
@@ -1699,16 +1699,16 @@ virtual BOOL OnTearOffMenu(
 ### <a name="parameters"></a>パラメーター
 
 *pMenuPopup*<br/>
-[in] ポップアップ メニューへのポインター。
+からポップアップメニューへのポインター。
 
 *pBar*<br/>
-[in] ティアオフ バーへのポインター。
+からティアオフバーへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
 ティアオフバーのあるポップアップメニューをアクティブにすることを許可する場合は TRUE。それ以外の場合は FALSE。 既定値は TRUE です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 ティアオフバーに特別な設定を実装する場合は、この関数をオーバーライドします。 既定の実装では、何も行われません。
 
@@ -1725,7 +1725,7 @@ virtual void OnUpdateFrameMenu(HMENU hMenuAlt);
 *hMenuAlt*<br/>
 からメニューへのハンドル。
 
-##  <a name="panefrompoint"></a>  CMDIFrameWndEx::PaneFromPoint
+##  <a name="panefrompoint"></a>CMDIFrameWndEx::P aneFromPoint
 
 指定されたポイントを含むドッキングペインを返します。
 
@@ -1764,11 +1764,11 @@ CBasePane* PaneFromPoint(
 
 ドッキングペインへのポインター。*ポイント*で指定された点がコントロールに含まれていない場合は NULL。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 呼び出しは[CDockingManager クラス](../../mfc/reference/cdockingmanager-class.md)にリダイレクトされます。 詳細については、「 [CDockingManager:: ControlBarFromPoint](../../mfc/reference/cdockingmanager-class.md#panefrompoint) 」を参照してください。
 
-##  <a name="recalclayout"></a>  CMDIFrameWndEx::RecalcLayout
+##  <a name="recalclayout"></a>CMDIFrameWndEx:: RecalcLayout
 
 フレームウィンドウのレイアウトを再計算するために、フレームワークによって呼び出されます。
 
@@ -1781,11 +1781,11 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 *bNotify*<br/>
 からフレームウィンドウのアクティブなインプレース項目がレイアウト変更の通知を受信するかどうかを決定します。 TRUE の場合、項目には通知されます。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このメソッド[は、CFrameWnd:: RecalcLayout](../../mfc/reference/cframewnd-class.md#recalclayout)をオーバーライドします。
 
-##  <a name="removepanefromdockmanager"></a>  CMDIFrameWndEx::RemovePaneFromDockManager
+##  <a name="removepanefromdockmanager"></a>CMDIFrameWndEx:: RemovePaneFromDockManager
 
 ペインの登録を解除し、ドッキングマネージャーから削除します。
 
@@ -1815,7 +1815,7 @@ void RemovePaneFromDockManager(
 *pBarReplacement*<br/>
 から削除されたペインを置き換えるペインへのポインター。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 ドッキングレイアウトに参加するには、各ペインをドッキングマネージャーに登録する必要があります。 ペインを登録するには、 [CMDIFrameWndEx:: addpane](#addpane)または[CMDIFrameWndEx:: insertpane](#insertpane)を使用します。
 
@@ -1838,29 +1838,29 @@ virtual BOOL SaveMDIState(LPCTSTR lpszProfileName);
 
 保存に成功した場合は TRUE。保存に失敗した場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 MDI タブおよびグループの状態と、開いているドキュメントの一覧を読み込んだたり保存したりするには、次の手順を実行します。
 
-- メイン`SaveMDIState`フレームが閉じられているときに呼び出す
+- メインフレームが閉じられているときに `SaveMDIState` を呼び出します。
 
 - メインフレームを作成するときに、 [CMDIFrameWndEx:: LoadMDIState](#loadmdistate)を呼び出します。 この呼び出しの推奨される場所は、メインフレームが初めて表示される前です。
 
-- 前`CWinAppEx::EnableLoadWindowPlacement(FALSE);`に呼び出す`pMainFrame->LoadFrame (IDR_MAINFRAME);`
+- `pMainFrame->LoadFrame (IDR_MAINFRAME);` する前に `CWinAppEx::EnableLoadWindowPlacement(FALSE);` を呼び出します
 
-- の`CWinAppEx::ReloadWindowPlacement(pMainFrame)` 後`LoadMDIState`にを呼び出して、レジストリに格納されている位置にメインフレームを表示します。
+- `LoadMDIState` の後に `CWinAppEx::ReloadWindowPlacement(pMainFrame)` を呼び出して、レジストリに格納されている位置にメインフレームを表示します。
 
-- アプリケーション`GetDocumentName`でファイル`CMDIChildWndEx`として格納されていないドキュメントが表示される場合は、派生クラスでをオーバーライドします。 返された文字列は、ドキュメント識別子としてレジストリに保存されます。 詳細については、「 [CMDIChildWndEx:: GetDocumentName](../../mfc/reference/cmdichildwndex-class.md#getdocumentname)」を参照してください。
+- アプリケーションでファイルとして保存されていないドキュメントが表示される場合は、`CMDIChildWndEx`派生クラスの `GetDocumentName` をオーバーライドします。 返された文字列は、ドキュメント識別子としてレジストリに保存されます。 詳細については、「 [CMDIChildWndEx:: GetDocumentName](../../mfc/reference/cmdichildwndex-class.md#getdocumentname)」を参照してください。
 
-- [CMDIFrameWndEx:: CreateDocumentWindow](#createdocumentwindow)をオーバーライドして、ドキュメントがレジストリから読み込まれたときに正しく作成されるようにします。 のパラメーター `CreateDocumentWindow`は、前に`GetDocumentName`返された文字列です。
+- [CMDIFrameWndEx:: CreateDocumentWindow](#createdocumentwindow)をオーバーライドして、ドキュメントがレジストリから読み込まれたときに正しく作成されるようにします。 `CreateDocumentWindow` するパラメーターは、前に `GetDocumentName` 返された文字列です。
 
 ### <a name="example"></a>例
 
-次の例では`SaveMDIState` 、 [を VisualStudioDemo サンプルで使用する方法を示します。MFC Visual Studio アプリケーション](../../overview/visual-cpp-samples.md)。
+次の例は、 [VisualStudioDemo サンプル: MFC Visual Studio アプリケーション](../../overview/visual-cpp-samples.md)で `SaveMDIState` を使用する方法を示しています。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#15](../../mfc/codesnippet/cpp/cmdiframewndex-class_14.cpp)]
 
-##  <a name="setprintpreviewframe"></a>  CMDIFrameWndEx::SetPrintPreviewFrame
+##  <a name="setprintpreviewframe"></a>CMDIFrameWndEx:: Setprintプレビューフレーム
 
 印刷プレビューフレームウィンドウを設定します。
 
@@ -1873,7 +1873,7 @@ void SetPrintPreviewFrame(CFrameWnd* pWnd);
 *pWnd*<br/>
 から印刷プレビューフレームウィンドウへのポインター。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 ##  <a name="setuptoolbarmenu"></a>CMDIFrameWndEx:: SetupToolbarMenu
 
@@ -1897,7 +1897,7 @@ void SetupToolbarMenu(
 *uiViewUserToolbarCmdLast*<br/>
 から最後のユーザー定義コマンドを指定します。
 
-##  <a name="showfullscreen"></a>  CMDIFrameWndEx::ShowFullScreen
+##  <a name="showfullscreen"></a>CMDIFrameWndEx:: ShowFullScreen 画面
 
 メインフレームを通常モードから全画面表示モードに切り替えます。
 
@@ -1905,7 +1905,7 @@ void SetupToolbarMenu(
 void ShowFullScreen();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 ##  <a name="showpane"></a>CMDIFrameWndEx:: ShowPane
 
@@ -1933,17 +1933,17 @@ void ShowPane(
 *bActivate*<br/>
 からペインをアクティブとして表示する場合は TRUE。 FALSE。ペインを非アクティブとして表示します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-ペインを表示または非表示にするには、このメソッドを呼び出します。 ドッキングペインに`ShowWindow`は使用しないでください。
+ペインを表示または非表示にするには、このメソッドを呼び出します。 ドッキングペインには `ShowWindow` を使用しないでください。
 
 ### <a name="example"></a>例
 
-次の例では`ShowPane` 、 [を VisualStudioDemo サンプルで使用する方法を示します。MFC Visual Studio アプリケーション](../../overview/visual-cpp-samples.md)。
+次の例は、 [VisualStudioDemo サンプル: MFC Visual Studio アプリケーション](../../overview/visual-cpp-samples.md)で `ShowPane` を使用する方法を示しています。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#16](../../mfc/codesnippet/cpp/cmdiframewndex-class_15.cpp)]
 
-##  <a name="showwindowsdialog"></a>  CMDIFrameWndEx::ShowWindowsDialog
+##  <a name="showwindowsdialog"></a>CMDIFrameWndEx:: ShowWindowsDialog
 
 [Cmfcwindowsmanagerdialog ダイアログ](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)ボックスを作成して開きます。
 
@@ -1953,7 +1953,7 @@ void ShowWindowsDialog();
 
 ### <a name="example"></a>例
 
-次の例では`ShowWindowsDialog` 、 [を VisualStudioDemo サンプルで使用する方法を示します。MFC Visual Studio アプリケーション](../../overview/visual-cpp-samples.md)。
+次の例は、 [VisualStudioDemo サンプル: MFC Visual Studio アプリケーション](../../overview/visual-cpp-samples.md)で `ShowWindowsDialog` を使用する方法を示しています。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#18](../../mfc/codesnippet/cpp/cmdiframewndex-class_16.cpp)]
 
@@ -1974,13 +1974,13 @@ virtual BOOL TabbedDocumentToControlBar(CMDIChildWndEx* pMDIChildWnd);
 
 メソッドが成功した場合は TRUE、失敗した場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このメソッドを使用して、タブ付きドキュメントをドッキングペインに変換します。 タブ付きドキュメントは、 [CMDIFrameWndEx:: ControlBarToTabbedDocument](#controlbartotabbeddocument)を使用して作成されている必要があります。
 
 ### <a name="example"></a>例
 
-次の例では`TabbedDocumentToControlBar` 、 [を VisualStudioDemo サンプルで使用する方法を示します。MFC Visual Studio アプリケーション](../../overview/visual-cpp-samples.md)。
+次の例は、 [VisualStudioDemo サンプル: MFC Visual Studio アプリケーション](../../overview/visual-cpp-samples.md)で `TabbedDocumentToControlBar` を使用する方法を示しています。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#19](../../mfc/codesnippet/cpp/cmdiframewndex-class_17.cpp)]
 
@@ -1992,7 +1992,7 @@ virtual BOOL TabbedDocumentToControlBar(CMDIChildWndEx* pMDIChildWnd);
 void UpdateCaption();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 ##  <a name="updatemditabbedbarsicons"></a>CMDIFrameWndEx:: UpdateMDITabbedBarsIcons
 
@@ -2020,11 +2020,11 @@ virtual void WinHelp(
 *nCmd*<br/>
 から要求されたヘルプの種類を指定します。 使用可能な値の一覧と*Dwdata*パラメーターへの影響については、Windows SDK の「 [WinHelp 関数](/windows/win32/api/winuser/nf-winuser-winhelpw)」を参照してください。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このメソッドは [CWnd::WinHelp](../../mfc/reference/cwnd-class.md#winhelp)をオーバーライドします。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [階層図](../../mfc/hierarchy-chart.md)<br/>
 [クラス](../../mfc/reference/mfc-classes.md)<br/>
