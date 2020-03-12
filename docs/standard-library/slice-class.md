@@ -13,17 +13,17 @@ helpviewer_keywords:
 - std::slice [C++], stride
 ms.assetid: 00f0b03d-d657-4b81-ba53-5a9034bb2bf2
 ms.openlocfilehash: 830e345eb7522cef44dbf6e727a976fb79c1e081
-ms.sourcegitcommit: 49cf365176557456f56c994e06ea1a38f73e938b
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2020
-ms.locfileid: "78937451"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79094862"
 ---
 # <a name="slice-class"></a>slice クラス
 
 親 valarray の 1 次元サブセットを定義するために使用する valarray のユーティリティ クラス。 valarray が配列内のすべての要素を持つ 2 次元行列と見なされる場合、スライスにより 2 次元配列のうち 1 次元のベクターが抽出されます。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 クラスは、[slice_array](../standard-library/slice-array-class.md) 型のオブジェクトを特徴とするパラメーターを格納します。クラスのスライスのオブジェクトが [valarray](../standard-library/valarray-class.md#op_at) **\<Type>** クラスのオブジェクトの引数として現れる場合、valarray のサブセットは間接的に構築されます。 親の valarray から選択したサブセットを指定する格納値には、以下が含まれています。
 
@@ -39,19 +39,19 @@ valarray での操作は、スライスによって定義されたソースと�
 
 ### <a name="constructors"></a>コンストラクター
 
-|コンストラクター|説明|
+|Constructor|Description|
 |-|-|
 |[slice](#slice)|等間隔で離れ、指定した要素で開始する多数の要素で構成する `valarray` のサブセットを定義します。|
 
 ### <a name="member-functions"></a>メンバー関数
 
-|メンバー関数|説明|
+|メンバー関数|Description|
 |-|-|
 |[size](#size)|`valarray` のスライスにある要素の数を調べます。|
 |[start](#start)|`valarray` のスライスの開始インデックスを検索します。|
 |[stride](#stride)|`valarray` のスライスにある要素間の距離を検索します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<valarray >
 
@@ -149,7 +149,7 @@ slice(
 
 既定のコンストラクターは、開始インデックス、長さの合計、およびストライドに対して 0 を格納します。 2番目のコンストラクターは、開始インデックスの *_StartIndex* 、合計長の *_Len* 、およびストライドの*ストライド*を格納します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ストライドは負となる場合があります。
 
