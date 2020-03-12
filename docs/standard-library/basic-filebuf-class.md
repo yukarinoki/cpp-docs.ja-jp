@@ -40,12 +40,12 @@ helpviewer_keywords:
 - std::basic_filebuf [C++], uflow
 - std::basic_filebuf [C++], underflow
 ms.assetid: 3196ba5c-bf38-41bd-9a95-70323ddfca1a
-ms.openlocfilehash: 16d485320eb3970bd5c1e4a7a7fabb0602149e6f
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: ec6fced70a53d27fdb3312a5b349e9e653ccbd24
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856582"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79128851"
 ---
 # <a name="basic_filebuf-class"></a>basic_filebuf クラス
 
@@ -342,7 +342,7 @@ bool is_open() const;
 
 ### <a name="return-value"></a>戻り値
 
-ファイルポインターが null ポインターではない場合は**true** 。
+ファイルポインターが null でない場合は**true** 。
 
 ### <a name="example"></a>例
 
@@ -413,7 +413,7 @@ basic_filebuf<Char_T, Tr> *open(
 
 ### <a name="return-value"></a>戻り値
 
-ファイル ポインターが Null ポインターの場合、関数は Null ポインターを返します。 それ以外の場合は、**this** を返します。
+バッファーが既に開いている場合、またはファイルポインターが null ポインターの場合、関数は null ポインターを返します。 それ以外の場合は、**this** を返します。
 
 ### <a name="remarks"></a>解説
 
