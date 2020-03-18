@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::operator&lt;= (map)
 - std::operator== (map)
 ms.openlocfilehash: deb442d0ba1fbd180fdb41b66de73df92bee7fc9
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883963"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425521"
 ---
 # <a name="ltmapgt-operators"></a>&lt;map&gt; 演算子
 
@@ -47,7 +47,7 @@ bool operator!=(
 
 map が等しくない場合は **true**、map が等しい場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 map オブジェクト間の比較は、要素のペアの比較に基づいています。 2 つの map は、同じ数の要素を持ち、各要素の値が同じである場合に等しくなります。 それ以外の場合は等しくありません。
 
@@ -112,7 +112,7 @@ bool operator<(
 
 演算子の左辺の map が演算子の右辺の map より厳密に小さい場合は **true**、それ以外の場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 map オブジェクト間の比較は、要素のペアの比較に基づいています。 2 つのオブジェクト間の小なり関係は、最初の等しくない要素のペアの比較に基づいています。
 
@@ -245,7 +245,7 @@ bool operator==(
 
 演算子の左辺の map が演算子の右辺の map と等しい場合は **true**、それ以外の場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 map オブジェクト間の比較は、要素のペアの比較に基づいています。 2 つの map は、同じ数の要素を持ち、各要素の値が同じである場合に等しくなります。 それ以外の場合は等しくありません。
 
@@ -310,7 +310,7 @@ bool operator>(
 
 演算子の左辺の map が演算子の右辺の map より大きい場合は **true**、それ以外の場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 map オブジェクト間の比較は、要素のペアの比較に基づいています。 2 つのオブジェクト間の大なり関係は、最初の等しくない要素のペアの比較に基づいています。
 
@@ -442,7 +442,7 @@ bool operator!=(
 
 multimap が等しくない場合は **true**、multimap が等しい場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 multimap オブジェクト間の比較は、要素のペアの比較に基づいています。 2 つの multimap は、同じ数の要素を持ち各要素の値が同じである場合に、等しくなります。 それ以外の場合は等しくありません。
 
@@ -507,7 +507,7 @@ bool operator<(
 
 演算子の左辺の multimap が演算子の右辺の multimap より厳密に小さい場合は **true**、それ以外の場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 multimap オブジェクト間の比較は、要素のペアの比較に基づいています。 2 つのオブジェクト間の小なり関係は、最初の等しくない要素のペアの比較に基づいています。
 
@@ -640,7 +640,7 @@ bool operator==(
 
 演算子の左辺の multimap が演算子の右辺の multimap と等しい場合は **true**、それ以外の場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 multimap オブジェクト間の比較は、要素のペアの比較に基づいています。 2 つの multimap は、同じ数の要素を持ち各要素の値が同じである場合に、等しくなります。 それ以外の場合は等しくありません。
 
@@ -705,7 +705,7 @@ bool operator>(
 
 演算子の左辺の multimap が演算子の右辺の multimap より大きい場合は **true**、それ以外の場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 multimap オブジェクト間の比較は、要素のペアの比較に基づいています。 2 つのオブジェクト間の大なり関係は、最初の等しくない要素のペアの比較に基づいています。
 

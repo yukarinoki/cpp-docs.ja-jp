@@ -41,11 +41,11 @@ helpviewer_keywords:
 - accelerator class
 ms.assetid: 37eed593-cf87-4611-9cdc-e98df6c2377a
 ms.openlocfilehash: 72a570ab28696730f835c42748a6ea12b865ca55
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855920"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427483"
 ---
 # <a name="accelerator-class"></a>accelerator クラス
 
@@ -61,14 +61,14 @@ class accelerator;
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[accelerator コンストラクター](#ctor)|`accelerator` クラスの新しいインスタンスを初期化します。|
 |[~ accelerator デストラクター](#ctor)|`accelerator` オブジェクトを破棄します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[create_view](#create_view)|このアクセラレータの `accelerator_view` オブジェクトを作成して返します。|
 |[get_all](#get_all)|使用可能なすべてのアクセラレータを表す `accelerator` オブジェクトのベクターを返します。|
@@ -90,7 +90,7 @@ class accelerator;
 
 ### <a name="public-operators"></a>パブリック演算子
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[operator!=](#operator_neq)|この `accelerator` オブジェクトと別のオブジェクトを比較し、同じである場合は**false**を返します。それ以外の場合は**true**を返します。|
 |[operator=](#operator_eq)|指定された `accelerator` オブジェクトの内容をこのオブジェクトにコピーします。|
@@ -98,7 +98,7 @@ class accelerator;
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[cpu_accelerator](#cpu_accelerator)|CPU `accelerator` の文字列定数を取得します。|
 |[dedicated_memory](#dedicated_memory)|`accelerator` の専用のメモリ (KB 単位) を取得します。|
@@ -121,13 +121,13 @@ class accelerator;
 
 `accelerator`
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 アクセラレータは、データ並列計算用に最適化されたハードウェアの機能です。 多くの場合、アクセラレータは独立した GPU ですが、DirectX REF デバイス、WARP (SSE 命令で加速される CPU 側のデバイス)、または CPU 自体などの仮想ホスト側のエンティティでもあることがあります。
 
 使用できるデバイスをエミュレートすることによって、または既定のデバイス、参照デバイス、または WARP デバイスを取得することによって、`accelerator` オブジェクトを構築することができます。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** amprt. h
 

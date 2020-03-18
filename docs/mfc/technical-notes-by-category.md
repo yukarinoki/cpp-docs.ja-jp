@@ -1,19 +1,17 @@
 ---
 title: カテゴリ別テクニカル ノート
 ms.date: 11/04/2016
-f1_keywords:
-- vc.tables.mfc.technotes
 ms.assetid: b9f1c953-233d-4d64-9e8e-ca69b79460b8
-ms.openlocfilehash: 7bd6ab2c035fe49a88bd12b62ca26e83e7d9072a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d6fff9c1b95ec5d1cc3c28431a2732548fbf5163
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62306549"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446799"
 ---
 # <a name="technical-notes-by-category"></a>カテゴリ別テクニカル ノート
 
-テクニカル ノートは、次のカテゴリに分類されます。 数値のテクニカル ノートの一覧を表示するには、次を参照してください。[番号順テクニカル ノート](../mfc/technical-notes-by-number.md)します。
+テクニカルノートは、次のカテゴリに分類されます。 テクニカルノートの番号リストについては、「[テクニカルノート](../mfc/technical-notes-by-number.md)」を参照してください。
 
 ### <a name="mfc-and-windows"></a>MFC と Windows
 
@@ -24,7 +22,7 @@ ms.locfileid: "62306549"
 |[テクニカル ノート 17: ウィンドウ オブジェクトの破棄](../mfc/tn017-destroying-window-objects.md)|
 |[テクニカル ノート 51: 今後の CTL3D の使い方](../mfc/tn051-using-ctl3d-now-and-in-the-future.md)|
 
-### <a name="mfc-architecture"></a>MFC のアーキテクチャ
+### <a name="mfc-architecture"></a>MFC アーキテクチャ
 
 ||
 |-|
@@ -43,7 +41,7 @@ ms.locfileid: "62306549"
 |[テクニカル ノート 44: MFC の DBCS サポート](../mfc/tn044-mfc-support-for-dbcs.md)|
 |[テクニカル ノート 46: MFC クラスのコメント規約](../mfc/tn046-commenting-conventions-for-the-mfc-classes.md)|
 |[テクニカル ノート 58: MFC のモジュール状態の実装](../mfc/tn058-mfc-module-state-implementation.md)|
-|[テクニカル ノート 59: MFC の MBCS または Unicode 変換マクロの使用](../mfc/tn059-using-mfc-mbcs-unicode-conversion-macros.md)|
+|[テクニカルノート 59: MFC の MBCS/Unicode 変換マクロの使用](../mfc/tn059-using-mfc-mbcs-unicode-conversion-macros.md)|
 |[テクニカル ノート 66: MFC 3.x から 4.0 への移植によくある問題点](../mfc/tn066-common-mfc-3-x-to-4-0-porting-issues.md)|
 
 ### <a name="mfc-controls"></a>MFC コントロール
@@ -51,9 +49,9 @@ ms.locfileid: "62306549"
 ||
 |-|
 |[テクニカル ノート 14: カスタム コントロール](../mfc/tn014-custom-controls.md)|
-|[テクニカル ノート 60: Windows コモン コントロール](../mfc/tn060-the-new-windows-common-controls.md)|
+|[テクニカルノート 60: Windows コモンコントロール](../mfc/tn060-the-new-windows-common-controls.md)|
 |[テクニカル ノート 61: ON_NOTIFY メッセージと WM_NOTIFY メッセージ](../mfc/tn061-on-notify-and-wm-notify-messages.md)|
-|[テクニカル ノート 62: Windows コントロールへのメッセージ リフレクション](../mfc/tn062-message-reflection-for-windows-controls.md)|
+|[テクニカル ノート 62: Windows コントロールへのメッセージ リフレクション (メッセージ返送)](../mfc/tn062-message-reflection-for-windows-controls.md)|
 
 ### <a name="mfc-database"></a>MFC データベース
 
@@ -61,10 +59,10 @@ ms.locfileid: "62306549"
 |-|
 |[テクニカル ノート 42: ODBC ドライバーの開発に関する推奨事項](../mfc/tn042-odbc-driver-developer-recommendations.md)|
 |[テクニカル ノート 43: RFX ルーチン](../mfc/tn043-rfx-routines.md)|
-|[テクニカル ノート 45: MFC/データベースの Long のサポート](../mfc/tn045-mfc-database-support-for-long-varchar-varbinary.md)|
-|[テクニカル ノート 47: データベース トランザクション条件の緩和](../mfc/tn047-relaxing-database-transaction-requirements.md)|
+|[テクニカルノート 45: MFC/データベースの Long Varchar/Varbinary のサポート](../mfc/tn045-mfc-database-support-for-long-varchar-varbinary.md)|
+|[テクニカル ノート 47: データベース トランザクション要件の緩和](../mfc/tn047-relaxing-database-transaction-requirements.md)|
 |[テクニカル ノート 48: MFC データベース アプリケーション用の ODBC セットアップおよび管理プログラムの作成](../mfc/tn048-writing-odbc-setup-and-administration-programs.md)|
-|[テクニカル ノート 53: MFC DAO クラス用カスタム DFX ルーチン](../mfc/tn053-custom-dfx-routines-for-dao-database-classes.md)|
+|[テクニカルノート 53: MFC DAO クラス用のカスタム DFX ルーチン](../mfc/tn053-custom-dfx-routines-for-dao-database-classes.md)|
 |[テクニカル ノート 54: MFC DAO クラス使用中の DAO の直接呼び出し](../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md)|
 |[テクニカル ノート 55: MFC ODBC データベース クラス アプリケーションの MFC DAO クラスへの移行](../mfc/tn055-migrating-mfc-odbc-database-class-applications-to-mfc-dao-classes.md)|
 |[テクニカル ノート 68: Microsoft Access 7 ODBC ドライバーでのトランザクションの実行](../mfc/tn068-performing-transactions-with-the-microsoft-access-7-odbc-driver.md)|
@@ -82,13 +80,13 @@ ms.locfileid: "62306549"
 
 ||
 |-|
-|[テクニカル ノート 38: しかし、MFC/OLE IUnknown の実装](../mfc/tn038-mfc-ole-iunknown-implementation.md)|
-|[テクニカル ノート 39: しかし、MFC/OLE オートメーションの実装](../mfc/tn039-mfc-ole-automation-implementation.md)|
-|[テクニカル ノート 40: MFC/OLE 埋め込み先サイズ変更とズーム](../mfc/tn040-mfc-ole-in-place-resizing-and-zooming.md)|
-|[テクニカル ノート 41: Mfc/ole1 から MFC/OLE2 に](../mfc/tn041-mfc-ole1-migration-to-mfc-ole-2.md)|
-|[テクニカル ノート 49: しかし、MFC/OLE の MBCS から Unicode への翻訳層 (MFCANS32)](../mfc/tn049-mfc-ole-mbcs-to-unicode-translation-layer-mfcans32.md)|
-|[テクニカル ノート 50: しかし、MFC/OLE コモン ダイアログ (MFCUIx32)](../mfc/tn050-mfc-ole-common-dialogs-mfcuix32.md)|
-|[テクニカル ノート 64: アパートメント モデルの OLE コントロールのスレッド処理](../mfc/tn064-apartment-model-threading-in-activex-controls.md)|
+|[テクニカルノート 38: MFC/OLE IUnknown の実装](../mfc/tn038-mfc-ole-iunknown-implementation.md)|
+|[テクニカルノート 39: MFC/OLE オートメーションの実装](../mfc/tn039-mfc-ole-automation-implementation.md)|
+|[テクニカルノート 40: MFC/OLE の埋め込み先のサイズ変更とズーム](../mfc/tn040-mfc-ole-in-place-resizing-and-zooming.md)|
+|[テクニカルノート 41: mfc/OLE1 からから MFC/OLE2 への移行](../mfc/tn041-mfc-ole1-migration-to-mfc-ole-2.md)|
+|[テクニカルノート 49: MFC/OLE MBCS から Unicode 翻訳レイヤー (MFCANS32)](../mfc/tn049-mfc-ole-mbcs-to-unicode-translation-layer-mfcans32.md)|
+|[テクニカルノート 50: MFC/OLE コモンダイアログ (MFCUIx32)](../mfc/tn050-mfc-ole-common-dialogs-mfcuix32.md)|
+|[テクニカルノート 64: OLE コントロールでのアパートメントモデルのスレッド処理](../mfc/tn064-apartment-model-threading-in-activex-controls.md)|
 |[テクニカル ノート 65: OLE オートメーション サーバー用デュアル インターフェイス サポート](../mfc/tn065-dual-interface-support-for-ole-automation-servers.md)|
 |[テクニカル ノート 71: MFC IOleCommandTarget の実装](../mfc/tn071-mfc-iolecommandtarget-implementation.md)|
 
@@ -99,7 +97,7 @@ ms.locfileid: "62306549"
 |[テクニカル ノート 20: ID 名および番号に関する規約](../mfc/tn020-id-naming-and-numbering-conventions.md)|
 |[テクニカル ノート 23: MFC の標準リソース](../mfc/tn023-standard-mfc-resources.md)|
 |[テクニカル ノート 24: MFC で定義されているメッセージおよびリソース](../mfc/tn024-mfc-defined-messages-and-resources.md)|
-|[テクニカル ノート 28: 状況依存のヘルプのサポート](../mfc/tn028-context-sensitive-help-support.md)|
+|[Tテクニカル ノート 28: 状況依存のヘルプのサポート](../mfc/tn028-context-sensitive-help-support.md)|
 |[テクニカル ノート 35: Visual C++ における複数のリソース ファイルとヘッダー ファイルの使用](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md)|
 |[テクニカル ノート 36: AppWizard と ClassWizard を使って CFormView を利用する方法](../mfc/tn036-using-cformview-with-appwizard-and-classwizard.md)|
 |[テクニカル ノート 70: MFC のウィンドウ クラス名](../mfc/tn070-mfc-window-class-names.md)|

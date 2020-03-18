@@ -3,11 +3,7 @@ title: vector&lt;bool&gt; クラス
 ms.date: 11/04/2016
 f1_keywords:
 - vector<bool>
-- vector/std::vector::const_pointer
-- vector/std::vector::const_reference
-- vector/std::vector::pointer
 - vector/std::vector::flip
-- vector/std::vector::swap
 helpviewer_keywords:
 - std::vector [C++], const_pointer
 - std::vector [C++], const_reference
@@ -15,16 +11,16 @@ helpviewer_keywords:
 - std::vector [C++], flip
 - std::vector [C++], swap
 ms.assetid: 8028c8ed-ac9c-4f06-aba1-5de45c00aafb
-ms.openlocfilehash: d4ae53f9a14f04d5656a13c32e75494688c5cdd0
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 4043b46bf2f93b362de029577fe9ac3c11dbcaa2
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452266"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443928"
 ---
 # <a name="vectorltboolgt-class"></a>vector&lt;bool&gt; クラス
 
-クラスは、 **bool**型の要素の [vector](../standard-library/vector-class.md) の部分的特殊化です。`vector<bool>` これには、特殊化によって使用される基になる型のアロケーターがあり、1ビットあたり1つの**ブール**値を格納することによって領域を最適化します。
+`vector<bool>` クラスは、 **bool**型の要素の[vector](../standard-library/vector-class.md)の部分的特殊化です。 これには、特殊化によって使用される基になる型のアロケーターがあり、1ビットあたり1つの**ブール**値を格納することによって領域を最適化します。
 
 ## <a name="syntax"></a>構文
 
@@ -33,15 +29,15 @@ template <class Allocator = allocator<bool>>
 class vector<bool, Allocator>
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
 このクラス テンプレートの特殊化は vector と同様に動作しますが、この記事で説明する違いがあります。
 
 **Bool**型を処理する操作は、コンテナーストレージの値に対応します。 `allocator_traits::construct` はこれらの値の構築には使用されません。
 
-### <a name="typedefs"></a>Typedef
+### <a name="typedefs"></a>Typedefs
 
-|型名|説明|
+|種類の名前。|説明|
 |-|-|
 |[const_pointer](#const_pointer)|`const_iterator` のブール型要素への定数ポインターとして使用できる `vector<bool>` への typedef。|
 |[const_reference](#const_reference)|**Bool**の typedef。 初期化後に、元の値への更新を確認しません。|
@@ -52,7 +48,7 @@ class vector<bool, Allocator>
 |メンバー関数|説明|
 |-|-|
 |[flip](#flip)|`vector<bool>` 内のすべてのビットを反転させます。|
-|[swap](#swap)|2 つの `vector<bool>` の要素を交換します。|
+|[スワップ](#swap)|2 つの `vector<bool>` の要素を交換します。|
 |[operator&#91;&#93;](#op_at)|指定した位置における `vector<bool>` 要素へのシミュレートされた参照を返します。|
 |`at`|[vector](../standard-library/vector-class.md)::at 関数と同様に機能します。ただし、プロキシ クラス [vector\<bool>::reference](#reference_class) を使用します。 「[operator&#91;&#93;](#op_at)」も参照してください。|
 |`front`|[vector](../standard-library/vector-class.md)::front 関数と同様に機能します。ただし、プロキシ クラス [vector\<bool>::reference](#reference_class) を使用します。 「[operator&#91;&#93;](#op_at)」も参照してください。|
@@ -64,7 +60,7 @@ class vector<bool, Allocator>
 |-|-|
 |[vector\<bool> reference クラス](#reference_class)|`bool&` の動作をシミュレートするためのプロキシとして機能するクラスで、そのオブジェクトは `vector<bool>` オブジェクト内の要素 (単一ビット) への参照を提供できます。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー**: \<vector>
 
@@ -86,7 +82,7 @@ typedef const_iterator const_pointer;
 typedef bool const_reference;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 詳細とコード例については、「[vector&lt;bool&gt;::reference::operator=](#reference_operator_eq)」を参照してください。
 
@@ -142,7 +138,7 @@ vector&<bool&>::const_reference operator[](size_type Pos) const;
 
 |パラメーター|説明|
 |-|-|
-|*Po*|`vector<bool>` 要素の位置。|
+|*Pos*|`vector<bool>` 要素の位置。|
 
 ### <a name="return-value"></a>戻り値
 
@@ -150,13 +146,13 @@ vector&<bool&>::const_reference operator[](size_type Pos) const;
 
 指定された位置がコンテナーのサイズ以上の場合、結果は未定義になります。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-コンパイルしたときに [レベルの設定] を使用した場合、ベクターの境界の外にある要素にアクセスしようとすると、実行時エラーが発生します。  詳細については、「 [Checked Iterators](../standard-library/checked-iterators.md)」を参照してください。
+_ITERATOR_DEBUG_LEVEL 設定を使用してコンパイルした場合、ベクターの境界の外にある要素にアクセスしようとすると、実行時エラーが発生します。  詳細については、「 [Checked Iterators](../standard-library/checked-iterators.md)」を参照してください。
 
 ### <a name="example"></a>例
 
-このコード例は、`vector<bool>::operator[]` の正しい使用方法と、コメント アウトされた 2 つの一般的なコーディングの誤りを示しています。`vector<bool>::reference` が返す `vector<bool>::operator[]` オブジェクトのアドレスを取得できないため、これらの誤りによってエラーが発生します。
+このコード例では、`vector<bool>::operator[]` の正しい使用方法と、コメントアウトされた2つの一般的なコーディングの誤りを示しています。このような誤りが原因でエラーが発生するのは、`vector<bool>::operator[]` が返す `vector<bool>::reference` オブジェクトのアドレスを取得できないためです。
 
 ```cpp
 // cl.exe /EHsc /nologo /W4 /MTd
@@ -195,9 +191,9 @@ typedef iterator pointer;
 
 ## <a name="reference_class"></a>  vector\<bool>::reference クラス
 
-`vector<bool>::reference` クラスは `bool&` をシミュレートするために [vector\<bool> クラス](../standard-library/vector-bool-class.md)によって提供されるプロキシ クラスです。
+`vector<bool>::reference` クラスは [ をシミュレートするために \<vector](../standard-library/vector-bool-class.md)bool> クラス`bool&`によって提供されるプロキシ クラスです。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 C++ では、ネイティブにビットを直接参照しないため、シミュレートされた参照が必要です。 `vector<bool>` は、要素ごとに 1 ビットだけ使用します。このビットは、このプロキシ クラスを使用して参照できます。 ただし、参照のシミュレーションは、特定の代入が有効でないため、完全ではありません。 たとえば、`vector<bool>::reference` オブジェクトのアドレスを受け取ることができないため、[vector\<bool>::operator&#91;&#93;](#op_at) を使用する次のコードは正しくありません。
 
@@ -257,7 +253,7 @@ The vector with first element flipped is:
 
 ###  <a name="reference_operator_bool"></a>  vector\<bool>::reference::operator bool
 
-からブール型への`vector<bool>::reference`暗黙の型変換を提供します。
+`vector<bool>::reference` から**ブール**型への暗黙の型変換を提供します。
 
 ```cpp
 operator bool() const;
@@ -267,7 +263,7 @@ operator bool() const;
 
 vector\<bool> オブジェクトの要素のブール値。
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>コメント
 
 `vector<bool>` オブジェクトはこの演算子では変更できません。
 
@@ -282,7 +278,7 @@ reference& operator=(bool Val);
 
 ### <a name="parameters"></a>パラメーター
 
-*そうです*\
+*右*\
 値がビットに割り当てられている要素の参照。
 
 *Val*\
@@ -361,7 +357,7 @@ The original value of the 3rd element still stored in a bool: false
 
 ## <a name="swap"></a>  vector\<bool>::swap
 
-プロキシ クラス [vector\<bool>::reference](#reference_class) を使用してブール ベクター (`vector<bool>`) の 2 つの要素を交換する静的メンバー関数。
+プロキシ クラス `vector<bool>`vector[bool>::reference\< を使用してブール ベクター (](#reference_class)) の 2 つの要素を交換する静的メンバー関数。
 
 ```cpp
 static void swap(
@@ -371,17 +367,17 @@ static void swap(
 
 ### <a name="parameters"></a>パラメーター
 
-*左側*\
+*左*\
 *右*の要素と交換される要素。
 
-*そうです*\
+*右*\
 *左*要素と交換される要素。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 このオーバーロードは `vector<bool>` の特別なプロキシの要件をサポートします。 [vector](../standard-library/vector-class.md)::swap には、`vector<bool>::swap()` の単一引数のオーバーロードと同じ機能があります。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)

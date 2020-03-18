@@ -22,7 +22,6 @@ topic_type:
 - apiref
 f1_keywords:
 - wexecvpe
-- execvpe
 - _wexecvpe
 - _execvpe
 helpviewer_keywords:
@@ -31,12 +30,12 @@ helpviewer_keywords:
 - _wexecvpe function
 - _execvpe function
 ms.assetid: c0c3c986-d9c0-4814-a96c-10f0b3092766
-ms.openlocfilehash: eab63cd54d410daf1dd4d09fb3d904feca0a230d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 49b7f4c55dd0c84807d6ed754ae9b45d63f37dcf
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941740"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443014"
 ---
 # <a name="_execvpe-_wexecvpe"></a>_execvpe、_wexecvpe
 
@@ -84,17 +83,17 @@ intptr_t _wexecvpe(
 |**ENOEXEC**|指定されたファイルが実行可能ファイルでないか、無効な実行可能ファイル形式です。|
 |**ENOMEM**|新しいプロセスを実行するのに十分なメモリがないか、使用できるメモリが破損しているか、または無効なブロックが存在します (これは、呼び出しプロセスが正しく割り当てられていないことを示します)。|
 
-リターン コードの詳細については、「[errno、_doserrno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
+これらのリターン コードとその他のリターン コードの詳細については、「[errno、_doserrno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
 これらの関数は、新しいプロセスを読み込んで実行し、コマンド ライン引数へポインターの配列を、および環境の設定へポインターの配列を渡します。 これらの関数は、 **PATH**環境変数を使用して、実行するファイルを検索します。
 
-パラメーター**の検証には**、どのような方法がありますか。 *Cmdname*が null ポインターの場合、または*argv*が null ポインター、空の配列へのポインター、または最初の引数として空の文字列を含む配列へのポインターである場合、「」で[説明されているように、これらの関数は無効なパラメーターハンドラーを呼び出します。パラメーターの検証](../../c-runtime-library/parameter-validation.md)。 実行の継続が許可された場合、これらの関数は**errno**を**EINVAL**に設定し、-1 を返します。 プロセスは起動されません。
+**_Execvpe**関数は、パラメーターを検証します。 *Cmdname*が null ポインターである場合、または*argv*が null ポインター、空の配列へのポインター、または最初の引数として空の文字列を含む配列へのポインターである場合、これらの関数は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、これらの関数は**errno**を**EINVAL**に設定し、-1 を返します。 プロセスは起動されません。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|関数|必須ヘッダー|オプション ヘッダー|
+|関数|必須ヘッダー|省略可能なヘッダー|
 |--------------|---------------------|---------------------|
 |**_execvpe**|\<process.h>|\<errno.h>|
 |**_wexecvpe**|\<process.h> または \<wchar.h>|\<errno.h>|
@@ -105,7 +104,7 @@ intptr_t _wexecvpe(
 
 「[_exec 関数、_wexec 関数](../../c-runtime-library/exec-wexec-functions.md)」の例を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [プロセス制御と環境制御](../../c-runtime-library/process-and-environment-control.md)<br/>
 [_exec、_wexec 系関数](../../c-runtime-library/exec-wexec-functions.md)<br/>

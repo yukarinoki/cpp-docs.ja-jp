@@ -1,24 +1,22 @@
 ---
 title: CToolBarCtrl の使い方
 ms.date: 11/04/2016
-f1_keywords:
-- CToolBarCtrl
 helpviewer_keywords:
 - CToolBarCtrl class [MFC]
 - toolbar controls [MFC], creating
 ms.assetid: 13cf3753-135b-4a3e-a850-ed30177fcf9d
-ms.openlocfilehash: 70bb563b7dd4558ab1943ad87ee3db5b877951e6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a82a763ca357feccbe5b61d4f85d6038563c1c11
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411670"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442239"
 ---
 # <a name="using-ctoolbarctrl"></a>CToolBarCtrl の使い方
 
-ツール バー コントロールを使用することができます ([CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)) ボタンと省略可能なスペースを含むコントロール ウィンドウを作成します。 ツールバー コントロールのウィンドウ内の各ボタンは、ユーザーがそれを親ウィンドウにコマンド メッセージを送信します。 通常、ツールバーのボタンは、アプリケーションのコマンドにアクセスするユーザーの追加と直接的な方法を提供する、アプリケーションのメニュー内の項目に対応します。
+ツールバーコントロール ([CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)) を使用して、ボタンとオプションの空白を含むコントロールウィンドウを作成できます。 ツールバーコントロールウィンドウの各ボタンは、ユーザーが選択したときに、親ウィンドウにコマンドメッセージを送信します。 通常、ツールバーのボタンは、アプリケーションのメニュー内の項目に対応しており、ユーザーがアプリケーションのコマンドにアクセスするための追加の直接的な方法を提供します。
 
-## <a name="what-do-you-want-to-know-more-about"></a>方法については、するして操作を行います
+## <a name="what-do-you-want-to-know-more-about"></a>詳細については、次を参照してください。
 
 - [ツール バーの作成方法](../mfc/methods-of-creating-a-toolbar.md)
 
@@ -32,6 +30,6 @@ ms.locfileid: "62411670"
 
 - [ツール バー コントロールの外観のカスタマイズ](../mfc/customizing-the-appearance-of-a-toolbar-control.md)
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [コントロール](../mfc/controls-mfc.md)

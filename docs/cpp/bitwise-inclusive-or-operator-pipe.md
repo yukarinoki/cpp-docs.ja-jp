@@ -2,7 +2,6 @@
 title: 'ビット処理包括的 OR 演算子: |'
 ms.date: 06/14/2018
 f1_keywords:
-- bitor
 - '|'
 helpviewer_keywords:
 - OR operator [C++], bitwise inclusive
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - inclusive OR operator
 - '| operator'
 ms.assetid: 4c8a6a68-d828-447d-875a-aedb4ce3aa9a
-ms.openlocfilehash: 848bf3b2ec61084b59ab5b1ee6807f6066a4675e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0df3493930206d655c0d9bca8a2468151aa3c2c6
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62184294"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445513"
 ---
 # <a name="bitwise-inclusive-or-operator-"></a>ビット処理包括的 OR 演算子: |
 
@@ -23,15 +22,15 @@ ms.locfileid: "62184294"
 
 > *expression1* **|** *expression2*
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-ビットごとの包括的 OR 演算子 (**&#124;**)、最初のオペランドを 2 番目のオペランドの対応するビットの各ビットと比較します。 どちらかのビットが 1 の場合、対応する結果のビットは 1 に設定されます。 それ以外の場合は、対応する結果ビットが 0 に設定されます。
+ビットごとの包括的 OR 演算子 **&#124;** () は、最初のオペランドの各ビットを2番目のオペランドの対応するビットと比較します。 いずれかのビットが 1 の場合、対応する結果ビットは 1 に設定されます。 それ以外の場合、対応する結果ビットは 0 に設定されます。
 
-ビットごとの包括的 OR 演算子のオペランドは両方とも整数型である必要があります。 通常の算術変換は、「[標準変換](standard-conversions.md)オペランドに適用されます。
+ビットごとの包括的 OR 演算子のオペランドは両方とも整数型である必要があります。 [標準変換](standard-conversions.md)で扱う通常の算術変換は、オペランドに適用されます。
 
-## <a name="operator-keyword-for-124"></a>演算子キーワード&#124;
+## <a name="operator-keyword-for-124"></a>の Operator キーワード&#124;
 
-**Bitor**演算子と等価のテキストは、  **&#124;** します。 アクセスする 2 つの方法がある、 **bitor**演算子をプログラムで: ヘッダー ファイルをインクルード\<iso646.h > を使用してコンパイル、 [/Za](../build/reference/za-ze-disable-language-extensions.md) (言語拡張を無効にする) コンパイラ オプション。
+**ビット or**演算子は、に **&#124;** 相当するテキストです。 プログラムの**bitor**演算子にアクセスするには、次の2つの方法があります。ヘッダーファイル \<iso646 > を含めるか、または[/za](../build/reference/za-ze-disable-language-extensions.md) (言語拡張機能を無効にする) コンパイラオプションを使用してコンパイルします。
 
 ## <a name="example"></a>例
 
@@ -50,7 +49,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [C++ の組み込み演算子、優先順位と結合規則](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
 [C ビット処理演算子](../c-language/c-bitwise-operators.md)

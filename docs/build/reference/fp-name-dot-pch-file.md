@@ -1,10 +1,9 @@
 ---
-title: /Fp (名前&period;pch ファイル)
-description: /Fp コンパイラ オプションを使用して、プリコンパイル済みヘッダー ファイル名を指定します。
+title: /Fp (pch ファイルの名前 &period;)
+description: /Fp コンパイラオプションを使用して、プリコンパイル済みヘッダーファイル名を指定します。
 ms.date: 05/31/2019
 f1_keywords:
 - VC.Project.VCCLCompilerTool.PrecompiledHeaderFile
-- /fp
 - VC.Project.VCCLWCECompilerTool.PrecompiledHeaderFile
 helpviewer_keywords:
 - Fp compiler option [C++]
@@ -16,54 +15,54 @@ helpviewer_keywords:
 - precompiled header files, naming
 - /Fp compiler option [C++]
 ms.assetid: 0fcd9cbd-e09f-44d3-9715-b41efb5d0be2
-ms.openlocfilehash: 6e7faa934d14acb5d129173c5e0c7ee67d6caf2b
-ms.sourcegitcommit: 540fa2f5015de1adfa7b6bf823f6eb4ed5a6a4bd
+ms.openlocfilehash: d62c5bd9fc7920c0a2a5530879680fad2a01d39a
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/03/2019
-ms.locfileid: "66460878"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439780"
 ---
-# <a name="fp-name-periodpch-file"></a>/Fp (名前&period;pch ファイル)
+# <a name="fp-name-periodpch-file"></a>/Fp (pch ファイルの名前 &period;)
 
-既定のパス名を使用する代わりにプリコンパイル済みヘッダーのパス名を提供します。
+既定のパス名を使用するのではなく、プリコンパイル済みヘッダーのパス名を提供します。
 
 ## <a name="syntax"></a>構文
 
 > **/Fp**<em>パス名</em>
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-使用して、 **/Fp**オプションと[/Yc (プリコンパイル済みヘッダー ファイルの作成)](yc-create-precompiled-header-file.md)または[/Yu (プリコンパイル済みヘッダー ファイルの使用)](yu-use-precompiled-header-file.md)プリコンパイル済みヘッダー (PCH) のパスとファイル名を指定するにはファイルです。 既定では、 **/Yc**オプションは、ソース ファイルの基本名を使用して PCH ファイル名を作成し、 *pch*拡張機能。
+[/Yc (プリコンパイル済みヘッダーファイルの作成)](yc-create-precompiled-header-file.md)または[/yu (](yu-use-precompiled-header-file.md)プリコンパイル済みヘッダーファイルの使用) で **/fp**オプションを使用して、プリコンパイル済みヘッダー (PCH) ファイルのパスとファイル名を指定します。 既定では、 **/yc**オプションは、ソースファイルのベース名と*pch*拡張子を使用して pch ファイル名を作成します。
 
-拡張機能の一部として指定しない場合、 *pathname*、拡張機能の*pch*と見なされます。 スラッシュを使用してディレクトリ名を指定する場合 ( **/** ) の末尾に*pathname*、既定のファイル名は、vc*バージョン*0. pch 場所*バージョン*Visual Studio ツールセットのメジャー バージョンします。 このディレクトリが存在するか、C1083 エラーが生成されます。
+拡張機能を*パス名*の一部として指定しない場合、 *pch*の拡張子が使用されます。 *パス*名の末尾にスラッシュ ( **/** ) を使用してディレクトリ名を指定した場合、既定のファイル名は vc*バージョン*0. .pch になります。ここで、 *version*は Visual Studio ツールセットのメジャーバージョンです。 このディレクトリが存在している必要があります。存在しない場合、エラー C1083 が生成されます。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関するページを参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での C++ コンパイラとビルド プロパティの設定](../working-with-project-properties.md)に関する記事を参照してください。
 
-1. 開く、**構成プロパティ** > **C/C++**  > **プリコンパイル済みヘッダー**プロパティ ページ。
+1. **構成プロパティ** > **C/C++**  > **プリコンパイル済みヘッダー**  プロパティページを開きます。
 
-1. 変更、**プリコンパイル済みヘッダー出力ファイル**プロパティ。
+1. **プリコンパイル済みヘッダーの出力ファイル**のプロパティを変更します。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには
 
-- 以下を参照してください。<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>
+- [https://docs.microsoft.com/azure/active-directory/develop/scenario-protected-web-api-overview](<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>) をご覧ください。
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
-個別のプログラムのデバッグ ビルドのプリコンパイル済みヘッダー ファイルのバージョンをという名前を作成するには、など、コマンドを指定できます。
+プログラムのデバッグビルド用にプリコンパイル済みヘッダーファイルの名前付きバージョンを個別に作成するには、次のようなコマンドを指定します。
 
 ```CMD
 CL /DDEBUG /Zi /Yc /FpDPROG.PCH PROG.CPP
 ```
 
-次のコマンドでは、MYPCH.pch をという名前のプリコンパイル済みヘッダー ファイルの使用を指定します。 コンパイラは PROG.cpp MYAPP.h、月末までのソース コードをプリコンパイルし、MYPCH.pch にプリコンパイル済みのコードが配置します。 MYPCH.pch のコンテンツを使用し、.obj ファイルを作成する PROG.cpp の残りの部分をコンパイルします。 この例の出力は、PROG.exe という名前のファイルです。
+次のコマンドは、MYPCH .pch という名前のプリコンパイル済みヘッダーファイルを使用することを指定します。 コンパイラは、myapp.exe のソースコードを MYAPP の末尾からプリコンパイルし、プリコンパイル済みコードを MYPCH .pch に配置します。 次に、MYPCH の内容を使用し、残りの PROG をコンパイルして .obj ファイルを作成します。 この例の出力は、PROG という名前のファイルです。
 
 ```CMD
 CL /YuMYAPP.H /FpMYPCH.PCH PROG.CPP
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [出力ファイル (/F) オプション](output-file-f-options.md)<br/>
 [MSVC コンパイラ オプション](compiler-options.md)<br/>

@@ -264,12 +264,12 @@ helpviewer_keywords:
 - CListCtrl [MFC], SubItemHitTest
 - CListCtrl [MFC], Update
 ms.assetid: fe08a1ca-4b05-4ff7-a12a-ee4c765a2197
-ms.openlocfilehash: c8f1b8a9ed0ca8437ba40e77b47448d1bb209d20
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: 83d7c0223e2ca4a40560e29932beca1f17f74f80
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79424441"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442679"
 ---
 # <a name="clistctrl-class"></a>CListCtrl クラス
 
@@ -1381,6 +1381,7 @@ public:
 ### <a name="example"></a>例
 
 次のコード例は、`GetGroupInfoByIndex` メソッドを示しています。 このコード例の前のセクションでは、レポートビューに "ClientID" と "グレード" という名前の2つの列を表示するリストビューコントロールを作成しました。 次のコード例では、インデックスが0であるグループに関する情報を取得します (そのようなグループが存在する場合)。
+
 ```cpp
     // GetGroupInfoByIndex
     const int GROUP_HEADER_BUFFER_SIZE = 40;
@@ -1457,6 +1458,7 @@ BOOL GetGroupRect(
 ### <a name="example"></a>例
 
 次のコード例では、現在のリストビューコントロールにアクセスするために使用される、`m_listCtrl`変数を定義します。 この変数は次の例で使用されています。
+
 ```cpp
 public:
     // Variable used to access the list control.
@@ -4240,6 +4242,7 @@ int CALLBACK CompareFunc(LPARAM lParam1,
     LPARAM lParam2,
     LPARAM lParamSort);
 ```
+
 比較関数は、最初の項目が2番目の項目の前にある場合は負の値、最初の項目が2番目の項目の場合は正の値、2つの項目が等しい場合は0を返す必要があります。
 
 *LParam1*パラメーターは、比較される最初の項目に関連付けられている32ビット値です。 *lParam2*パラメーターは、2番目の項目に関連付けられている値です。 これらは、リストに挿入されたときに、項目の[LVITEM](/windows/win32/api/commctrl/ns-commctrl-lvitemw)構造体の*lParam*メンバーに指定された値です。 *Lparamsort*パラメーターは、 *dwdata*値と同じです。
@@ -4300,6 +4303,7 @@ int CALLBACK CompareFunc(LPARAM lParam1,
     LPARAM lParam2,
     LPARAM lParamSort);
 ```
+
 このメッセージは、比較関数に渡される情報の種類を除き、 [LVM_SORTITEMS](/windows/win32/Controls/lvm-sortitems)に似ています。 [LVM_SORTITEMS](/windows/win32/Controls/lvm-sortitems)では、 *lParam1*と*lParam2*は比較する項目の値です。 [LVM_SORTITEMSEX](/windows/win32/Controls/lvm-sortitemsex)では、 *lParam1*は比較する最初の項目の現在のインデックスであり、 *lParam2*は2番目の項目の現在のインデックスです。 [LVM_GETITEMTEXT](/windows/win32/Controls/lvm-getitemtext)メッセージを送信して、項目に関する詳細情報を取得できます。
 
 比較関数は、最初の項目が2番目の項目の前にある場合は負の値、最初の項目が2番目の項目の場合は正の値、2つの項目が等しい場合は0を返す必要があります。

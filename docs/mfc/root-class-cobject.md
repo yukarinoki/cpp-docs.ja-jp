@@ -1,31 +1,29 @@
 ---
-title: ルート クラス:CObject
+title: 'ルート クラス: CObject'
 ms.date: 11/04/2016
-f1_keywords:
-- CObject
 helpviewer_keywords:
 - base classes [MFC], MFC objects
 - classes [MFC], MFC base class [MFC]
 - root class [MFC]
 - MFC, base class
 ms.assetid: 593706f3-e9e5-435f-815d-e7b5176b2a61
-ms.openlocfilehash: 664f6608c98a6edba85ddc666b42db802c8736f8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ca1912175c00d12a201a53631216eef69ab50a82
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62308863"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446450"
 ---
-# <a name="root-class-cobject"></a>ルート クラス:CObject
+# <a name="root-class-cobject"></a>ルート クラス: CObject
 
-Microsoft Foundation Class (MFC) ライブラリ内のクラスのほとんどは、クラス階層のルートにある単一の基本クラスから派生します。 `CObject` 多数の非常に少ないオーバーヘッドで、そこから派生したすべてのクラスへの便利な機能を提供します。 詳細については`CObject`、機能を参照してくださいと[を使用して CObject](../mfc/using-cobject.md)します。
+MFC (Microsoft Foundation Class) ライブラリのクラスのほとんどは、クラス階層のルートにある1つの基底クラスから派生します。 `CObject` は、非常に低いオーバーヘッドで、このクラスから派生したすべてのクラスに便利な機能を提供します。 `CObject` とその機能の詳細については、「 [CObject の使用](../mfc/using-cobject.md)」を参照してください。
 
 [CObject](../mfc/reference/cobject-class.md)<br/>
-ほとんどの MFC クラスの最終的な基本クラス。 データをシリアル化して、ランタイム クラス情報の取得をサポートします。
+ほとんどの MFC クラスの最上位の基本クラス。 データのシリアル化とクラスに関するランタイム情報の取得をサポートします。
 
 [CRuntimeClass](../mfc/reference/cruntimeclass-structure.md)<br/>
-構造体の実行時にオブジェクトの正確なクラスを判別するために使用します。
+実行時にオブジェクトの正確なクラスを決定するために使用される構造体。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [クラスの概要](../mfc/class-library-overview.md)

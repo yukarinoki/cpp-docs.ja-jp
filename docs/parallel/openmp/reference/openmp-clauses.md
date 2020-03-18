@@ -7,7 +7,6 @@ f1_keywords:
 - copyprivate
 - default
 - firstprivate
-- if
 - lastprivate
 - nowait
 - num_threads
@@ -33,12 +32,12 @@ helpviewer_keywords:
 - schedule OpenMP clause
 - shared OpenMP clause
 ms.assetid: 806e7d8f-b204-4e4c-a12c-273ab540a7ca
-ms.openlocfilehash: 92bd73fda5891b0bbf7393d1a7fda573d0f00263
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: 37f86eeb172c5f8b496ed724142af002f5db8d41
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79424159"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446345"
 ---
 # <a name="openmp-clauses"></a>OpenMP 句
 
@@ -48,7 +47,7 @@ Visual C++では、次の OpenMP 句がサポートされています。
 
 一般的な属性の場合:
 
-|句|Description|
+|句|説明|
 |------|-----------|
 |[if](#if-openmp)|ループを並列で実行するか、直列で実行するかを指定します。|
 |[num_threads](#num-threads)|スレッドチーム内のスレッドの数を設定します。|
@@ -58,7 +57,7 @@ Visual C++では、次の OpenMP 句がサポートされています。
 
 データ共有属性の場合:
 
-|句|Description|
+|句|説明|
 |------|-----------|
 |[private](#private-openmp)|各スレッドが変数の独自のインスタンスを持つ必要があることを指定します。|
 |[firstprivate](#firstprivate)|各スレッドが変数の独自のインスタンスを持つ必要があり、変数の値を使用して変数を初期化する必要があることを指定します。これは、parallel コンストラクトの前に存在するためです。|
@@ -82,7 +81,7 @@ copyin(var)
 *var*<br/>
 Parallel コンストラクトの前に存在するため、マスタースレッドで変数の値を使用して初期化される `threadprivate` 変数。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 `copyin` は、次のディレクティブに適用されます。
 
@@ -109,7 +108,7 @@ copyprivate(var)
 *var*<br/>
 共有する1つ以上の変数。 複数の変数を指定する場合は、変数名をコンマで区切ります。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 `copyprivate` は、[単一](openmp-directives.md#single)のディレクティブに適用されます。
 
@@ -189,7 +188,7 @@ Value = 1.008000, thread = 1
 default(shared | none)
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 `shared`は、`default` 句が指定されていない場合に有効です。これは、並列領域内の任意の変数が、 [shared](#shared-openmp)句で指定されているかのように処理されることを意味します。 `none` は、 [private](#private-openmp)、 [shared](#shared-openmp)、 [reduction](#reduction)、 [firstprivate](#firstprivate)、または[a.6 lastprivate](#lastprivate)句でスコープされていない並行領域で使用される変数があると、コンパイラエラーが発生することを意味します。
 
@@ -218,7 +217,7 @@ firstprivate(var)
 *var*<br/>
 変数は、各スレッド内にインスタンスを持ち、変数の値を使用して初期化されます。これは、parallel コンストラクトの前に存在するためです。 複数の変数を指定する場合は、変数名をコンマで区切ります。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 `firstprivate` は、次のディレクティブに適用されます。
 
@@ -246,7 +245,7 @@ if(expression)
 *式 (expression)*<br/>
 True (0 以外) に評価された場合に並列領域内のコードが並列実行される整数式。 式が false (ゼロ) に評価されると、並列領域は (1 つのスレッドによって) シリアルで実行されます。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 `if` は、次のディレクティブに適用されます。
 
@@ -305,7 +304,7 @@ lastprivate(var)
 *var*<br/>
 いずれかのスレッドのプライベートバージョンと同じように設定されている変数は、最後の反復処理 (for ループコンストラクト) または最後のセクション (#pragma セクション) を実行します。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 `lastprivate` は、次のディレクティブに適用されます。
 
@@ -326,7 +325,7 @@ lastprivate(var)
 nowait
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 `nowait` は、次のディレクティブに適用されます。
 
@@ -396,7 +395,7 @@ num_threads(num)
 *num*<br/>
 スレッド数
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 `num_threads` 句には、 [omp_set_num_threads](openmp-functions.md#omp-set-num-threads)関数と同じ機能があります。
 
@@ -420,7 +419,7 @@ num_threads(num)
 ordered
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 `ordered` は[for](openmp-directives.md#for-openmp)ディレクティブに適用されます。
 
@@ -443,7 +442,7 @@ private(var)
 *var*<br/>
 各スレッドにインスタンスを持つ変数。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 `private` は、次のディレクティブに適用されます。
 
@@ -648,7 +647,7 @@ reduction(operation:var)
 *var*<br/>
 スカラーを減らすために使用する1つ以上の変数。 複数の変数を指定する場合は、変数名をコンマで区切ります。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 `reduction` は、次のディレクティブに適用されます。
 
@@ -787,7 +786,7 @@ schedule(type[,size])
 *size*<br/>
 Optionalイテレーションのサイズを指定します。 *サイズ*は整数でなければなりません。 *型*が `runtime`の場合は無効です。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 詳細については、「 [2.4.1 for コンストラクト](../../../parallel/openmp/2-4-1-for-construct.md)」を参照してください。
 
@@ -918,7 +917,7 @@ shared(var)
 *var*<br/>
 共有する1つ以上の変数。 複数の変数を指定する場合は、変数名をコンマで区切ります。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 スレッド間で変数を共有するもう1つの方法は、 [copyprivate](#copyprivate)句を使用することです。
 

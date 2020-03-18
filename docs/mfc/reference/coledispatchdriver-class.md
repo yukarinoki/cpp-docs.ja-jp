@@ -27,11 +27,11 @@ helpviewer_keywords:
 - COleDispatchDriver [MFC], m_lpDispatch
 ms.assetid: 3ed98daf-cdc7-4374-8a0c-cf695a8d3657
 ms.openlocfilehash: fa88147b57b0506f7f9ab96d4a5d2f43fdd75458
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855633"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426631"
 ---
 # <a name="coledispatchdriver-class"></a>COleDispatchDriver クラス
 
@@ -47,13 +47,13 @@ class COleDispatchDriver
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[COleDispatchDriver:: COleDispatchDriver](#coledispatchdriver)|`COleDispatchDriver` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[COleDispatchDriver:: AttachDispatch](#attachdispatch)|`COleDispatchDriver` オブジェクトに `IDispatch` 接続をアタッチします。|
 |[COleDispatchDriver:: CreateDispatch](#createdispatch)|`IDispatch` 接続を作成し、`COleDispatchDriver` オブジェクトにアタッチします。|
@@ -65,19 +65,19 @@ class COleDispatchDriver
 
 ### <a name="public-operators"></a>パブリック演算子
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[COleDispatchDriver:: operator =](#operator_eq)|ソース値を `COleDispatchDriver` オブジェクトにコピーします。|
 |[COleDispatchDriver:: operator LPDISPATCH](#operator_lpdispatch)|基になる `IDispatch` ポインターにアクセスします。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[COleDispatchDriver:: m_bAutoRelease](#m_bautorelease)|`ReleaseDispatch` またはオブジェクトの破棄中に `IDispatch` を解放するかどうかを指定します。|
 |[COleDispatchDriver:: m_lpDispatch](#m_lpdispatch)|この `COleDispatchDriver`にアタッチされている `IDispatch` インターフェイスへのポインターを示します。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 `COleDispatchDriver` には基底クラスがありません。
 
@@ -95,7 +95,7 @@ OLE ディスパッチインターフェイスは、オブジェクトのメソ�
 
 `COleDispatchDriver`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー :** afxdisp.h
 
@@ -117,7 +117,7 @@ void AttachDispatch(
 *bAutoRelease*<br/>
 このオブジェクトがスコープ外になるときにディスパッチが解放されるかどうかを指定します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この関数は、 `IDispatch` オブジェクトに既にアタッチされている `COleDispatchDriver` ポインターを解放します。
 
@@ -146,7 +146,7 @@ COleDispatchDriver(const COleDispatchDriver& dispatchSrc);
 *dispatchSrc*<br/>
 既存の `COleDispatchDriver` オブジェクトへの参照。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 フォーム `COleDispatchDriver`(`LPDISPATCH lpDispatch`、 **BOOL**`bAutoRelease` = **TRUE**) は、 [IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)インターフェイスに接続します。
 
@@ -203,7 +203,7 @@ LPDISPATCH DetachDispatch();
 
 以前にアタッチされた OLE `IDispatch` オブジェクトへのポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `IDispatch` が解放されていません。
 
@@ -272,13 +272,13 @@ void AFX_CDECL InvokeHelper(
 *[...]*<br/>
 *Pbparaminfo*で指定された型のパラメーターの変数リスト。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 *Pbparaminfo*パラメーターは、メソッドまたはプロパティに渡されるパラメーターの型を指定します。 引数の変数一覧は、構文宣言では、 **...** で表されます。
 
 *Vtret*引数に使用できる値は、varenum 列挙体から取得されます。 次の値を指定できます。
 
-|シンボル|戻り値の型|
+|Symbol|戻り値の型|
 |------------|-----------------|
 |VT_EMPTY|**void**|
 |VT_I2|**short**|
@@ -312,7 +312,7 @@ TRUE の場合、 [m_lpDispatch](#m_lpdispatch)によってアクセスされる
 BOOL m_bAutoRelease;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 既定では、コンストラクターで `m_bAutoRelease` が TRUE に設定されています。
 
@@ -330,7 +330,7 @@ COM オブジェクトの解放の詳細については、「Windows SDK での[
 LPDISPATCH m_lpDispatch;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `m_lpDispatch` データメンバーは、LPDISPATCH 型のパブリック変数です。
 
@@ -373,7 +373,7 @@ operator LPDISPATCH();
 void ReleaseDispatch();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 自動リリースがこの接続に対して設定されている場合、この関数は、インターフェイスを解放する前に `IDispatch::Release` を呼び出します。
 

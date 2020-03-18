@@ -1,8 +1,6 @@
 ---
-title: テクニカル ノート 64:ActiveX コントロールでのアパートメントモデルのスレッド処理
+title: 'テクニカル ノート 64: ActiveX コントロールにおけるアパートメント モデルのスレッド処理'
 ms.date: 11/04/2016
-f1_keywords:
-- vc.controls.activex
 helpviewer_keywords:
 - OLE controls [MFC], container support
 - containers [MFC], multithreaded
@@ -10,14 +8,14 @@ helpviewer_keywords:
 - multithread container [MFC]
 - apartment model threading [MFC]
 ms.assetid: b2ab4c88-6954-48e2-9a74-01d4a60df073
-ms.openlocfilehash: 2c6b9dd3ed244f7169e5055eebe7a34e3345e841
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: f490e82e179da4614eea345136a9edfb1d320705
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69513330"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442117"
 ---
-# <a name="tn064-apartment-model-threading-in-activex-controls"></a>テクニカル ノート 64:ActiveX コントロールでのアパートメントモデルのスレッド処理
+# <a name="tn064-apartment-model-threading-in-activex-controls"></a>テクニカル ノート 64: ActiveX コントロールにおけるアパートメント モデルのスレッド処理
 
 > [!NOTE]
 >  次のテクニカル ノートは、最初にオンライン ドキュメントの一部とされてから更新されていません。 結果として、一部のプロシージャおよびトピックが最新でないか、不正になります。 最新の情報について、オンライン ドキュメントのキーワードで関係のあるトピックを検索することをお勧めします。
@@ -40,7 +38,7 @@ ms.locfileid: "69513330"
 
 ## <a name="protecting-shared-data"></a>共有データの保護
 
-コントロールで静的メンバー変数などの共有データを使用する場合、複数のスレッドが同時にデータを変更できないようにするには、そのデータへのアクセスがクリティカルセクションで保護されている必要があります。 この目的のためにクリティカルセクションを設定するには、コントロールのクラスで`CCriticalSection`クラスの静的メンバー変数を宣言します。 コードが共有`Unlock`データにアクセスするすべての場所で、このクリティカルセクションオブジェクトのおよびメンバー関数を使用します。`Lock`
+コントロールで静的メンバー変数などの共有データを使用する場合、複数のスレッドが同時にデータを変更できないようにするには、そのデータへのアクセスがクリティカルセクションで保護されている必要があります。 この目的のためにクリティカルセクションを設定するには、コントロールのクラスで `CCriticalSection` クラスの静的メンバー変数を宣言します。 コードが共有データにアクセスするすべての場所で、このクリティカルセクションオブジェクトの `Lock` および `Unlock` メンバー関数を使用します。
 
 たとえば、すべてのインスタンスで共有される文字列を保持する必要があるコントロールクラスを考えてみます。 この文字列は、静的メンバー変数に保持し、クリティカルセクションによって保護することができます。 コントロールのクラス宣言には、次のものが含まれます。
 
@@ -60,7 +58,7 @@ int CString CSampleCtrl::_strShared;
 CCriticalSection CSampleCtrl::_critSect;
 ```
 
-`_strShared`静的メンバーへのアクセスは、クリティカルセクションで保護できます。
+次に、`_strShared` の静的メンバーへのアクセスを、クリティカルセクションで保護できます。
 
 ```
 void CSampleCtrl::SomeMethod()
@@ -76,7 +74,7 @@ if (_strShared.Empty())
 
 ## <a name="registering-an-apartment-model-aware-control"></a>アパートメントモデルに対応したコントロールの登録
 
-アパートメントモデルのスレッド処理をサポートするコントロールは、クラス id のレジストリエントリに "アパートメント" の値を持つ名前付きの値 "ThreadingModel" をクラス*id* \\ **の下に追加することで、この機能をレジストリで示す必要があります。InprocServer32**キー。 このキーがコントロールに自動的に登録されるようにするには、6番目のパラメーター `AfxOleRegisterControlClass`の afxRegApartmentThreading フラグをに渡します。
+アパートメントモデルのスレッド処理をサポートするコントロールは *、クラス id\\* **InprocServer32** key の下にあるクラス id レジストリエントリに "アパートメント" の値を持つ名前付きの値 "ThreadingModel" を追加することによって、この機能をレジストリで示す必要があります。 このキーがコントロールに自動的に登録されるようにするには、6番目のパラメーターの*afxRegApartmentThreading*フラグを `AfxOleRegisterControlClass`に渡します。
 
 ```
 BOOL CSampleCtrl::CSampleCtrlFactory::UpdateRegistry(BOOL bRegister)
@@ -107,7 +105,7 @@ else
 
 コントロールがアパートメントモデルのスレッド処理の規則に従っていない場合は、このパラメーターで*afxRegApartmentThreading*を渡さないようにする必要があります。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [番号順テクニカル ノート](../mfc/technical-notes-by-number.md)<br/>
 [カテゴリ別テクニカル ノート](../mfc/technical-notes-by-category.md)

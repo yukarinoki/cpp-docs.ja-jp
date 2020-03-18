@@ -8,7 +8,6 @@ f1_keywords:
 - memory/std::const_pointer_cast
 - memory/std::declare_no_pointers
 - memory/std::declare_reachable
-- memory/std::default_delete
 - memory/std::dynamic_pointer_cast
 - memory/std::get_deleter
 - memory/std::get_pointer_safety
@@ -28,8 +27,6 @@ f1_keywords:
 - memory/std::uninitialized_copy_n
 - memory/std::uninitialized_fill
 - memory/std::uninitialized_fill_n
-- memory/std::get_temporary_buffer
-- memory/std::return_temporary_buffer
 ms.assetid: 3e1898c2-44b7-4626-87ce-84962e4c6f1a
 helpviewer_keywords:
 - std::addressof [C++]
@@ -77,12 +74,12 @@ helpviewer_keywords:
 - std::uninitialized_copy_n [C++]
 - std::uninitialized_fill [C++]
 - std::uninitialized_fill_n [C++]
-ms.openlocfilehash: 2aceb96fcda49df8a1fd40a1bd8011170dccd8ef
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: fa8f0dd7e5588891aeef4fbe04a907fbbfc52b52
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79425497"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447397"
 ---
 # <a name="ltmemorygt-functions"></a>&lt;memory&gt; 関数
 
@@ -113,7 +110,7 @@ const T* addressof(
 
 オーバーロードされた `operator&()` が存在する場合でも、*値*によって参照されるオブジェクトまたは関数の実際のアドレス。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 ## <a name="align"></a>位置
 
@@ -148,7 +145,7 @@ void* align(
 
 要求されたアラインバッファーが使用可能な領域に収まりきらない場合は、null ポインターです。それ以外の場合は、 *ptr*の新しい値。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 変更された*ptr*および*空間*パラメーターを使用すると、同じバッファーで `align()` を繰り返し呼び出すことができます。これは、*アラインメント*と*サイズ*の値が異なる可能性があります。 `align()` の使用方法の 1 つを次のコード スニペットに示します。
 
@@ -194,7 +191,7 @@ shared_ptr<T> allocate_shared(
 *args*\
 オブジェクトになるゼロ個以上の引数。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 関数は、 *alloc*によって割り当てられて構築される `T(args...)` へのポインターであるオブジェクト `shared_ptr<T>`を作成します。
 
@@ -330,7 +327,7 @@ shared_ptr<T> const_pointer_cast(
 *sp*\
 引数の共有ポインター。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 このテンプレート関数は、`const_cast<T*>(sp.get())` が null ポインターを返す場合、空の `shared_ptr` オブジェクトを返します。それ以外の場合は、 *sp*によって所有されているリソースを所有する `shared_ptr<T>` オブジェクトを返します。 式 `const_cast<T*>(sp.get())` は有効な式である必要があります。
 
@@ -377,7 +374,7 @@ void declare_no_pointers(
 *size*\
 トレース可能なポインターを含まない、 *ptr*で開始されるブロックのサイズ。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 関数は、範囲内のアドレスに追跡可能なポインターが含まれてい `[ ptr, ptr + size)` ことをガベージコレクターに通知します。 (割り当てられたストレージへのポインターは、到達可能な場合を除き、逆参照しないでください)。
 
@@ -395,7 +392,7 @@ void declare_reachable(
 *ptr*\
 到達可能な割り当て済みの有効なストレージ領域へのポインター。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 *Ptr*が null でない場合、関数は、 *ptr*に到達できるようになったこと、つまり、割り当てられた有効なストレージを指していることをガベージコレクターに通知します。
 
@@ -423,7 +420,7 @@ struct default_delete
 *その他の*\
 削除対象の配列内の要素の型。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 クラステンプレートは、 **new 演算子**で割り当てられたスカラーオブジェクトを削除する削除子を記述します。これは、クラステンプレート `unique_ptr`での使用に適しています。 明示的な特殊化 `default_delete<T[]>` もあります。
 
@@ -495,7 +492,7 @@ shared_ptr<T> dynamic_pointer_cast(
 *sp*\
 引数の共有ポインター。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 このテンプレート関数は、`dynamic_cast<T*>(sp.get())` が null ポインターを返す場合、空の `shared_ptr` オブジェクトを返します。それ以外の場合は、 *sp*によって所有されているリソースを所有する `shared_ptr<T>` オブジェクトを返します。 式 `dynamic_cast<T*>(sp.get())` は有効な式である必要があります。
 
@@ -556,7 +553,7 @@ Deleter* get_deleter(
 *sp*\
 共有ポインター。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 このテンプレート関数は、`shared_ptr` オブジェクト*sp*に属する*削除子*型の削除子へのポインターを返します。 *Sp*に削除子がない場合、または削除子が*削除子*型でない場合、この関数は0を返します。
 
@@ -612,7 +609,7 @@ get_deleter(sp1) != 0 == true
 pointer_safety get_pointer_safety() noexcept;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 関数は、自動ガベージコレクターが想定するポインターの安全性の種類を返します。
 
@@ -635,7 +632,7 @@ pair<T *, ptrdiff_t> get_temporary_buffer(
 
 最初のコンポーネントが割り当て済みのメモリへのポインターで、2 番目のコンポーネントがバッファーのサイズ指定である `pair`。これで、格納可能な要素の最大数が示されます。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 この関数はメモリを要求しますが、成功しない場合もあります。 バッファーが割り当てられなかった場合、関数は、2 番目のコンポーネントが 0 で、最初のコンポーネントが Null ポインターである pair を返します。
 
@@ -689,7 +686,7 @@ shared_ptr<T> make_shared(
 *args*\
 0 個以上のコンス トラクター引数。 関数は、提供された引数に基づいてどのコンストラクターのオーバーロードを呼び出すかを推測します。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 オブジェクトを作成するための簡単で効率的な方法として `make_shared` を使用し、同時にオブジェクトへの共有アクセスを管理するために `shared_ptr` を使用します。 意味的には、これら 2 つのステートメントは同等です。
 
@@ -806,7 +803,7 @@ template <class T, class... Args>
 *size*\
 新しい配列に領域を割り当てる要素の数。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 1つ目のオーバーロードは、単一のオブジェクトに使用されます。 2番目のオーバーロードが配列に対して呼び出されます。 3番目のオーバーロードは、型引数で配列のサイズを指定できないようにします (make_unique\<T [N] >)。この構築は、現在の標準ではサポートされていません。 `make_unique` を使用して、配列への `unique_ptr` を作成する場合、配列要素を個別に初期化する必要があります。 このオーバーロードを使用するのではなく、 [std:: vector](vector-class.md)を使用することをお勧めします。
 
@@ -891,7 +888,7 @@ template<> struct owner_less<void>
 *右*\
 共有またはウィーク ポインター。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 クラステンプレートは、すべてのメンバー演算子を `left.owner_before(right)`を返すように定義します。
 
@@ -914,7 +911,7 @@ shared_ptr<T> reinterpret_pointer_cast(
 *ptr*\
 `shared_ptr<U>`への参照。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 *Ptr*が空の場合は、新しい `shared_ptr` も空になります。それ以外の場合は、 *ptr*を持つ所有権を共有します。 新しい共有ポインターは `reinterpret_cast<Y*>(ptr.get())`を評価した結果であり、`Y` は `typename std::shared_ptr<T>::element_type`ます。 `reinterpret_cast<T*>((U*)nullptr)` が整形式でない場合、動作は定義されていません。
 
@@ -935,7 +932,7 @@ void return_temporary_buffer(
 *バッファー*\
 割り当てを解放するメモリへのポインター。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 この関数は、一時的なメモリに対してのみ使用してください。
 
@@ -1002,7 +999,7 @@ shared_ptr<T> static_pointer_cast(
 *sp*\
 引数の共有ポインター。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 このテンプレート関数は、 *sp*が空の `shared_ptr` オブジェクトの場合、空の `shared_ptr` オブジェクトを返します。それ以外の場合は、 *sp*によって所有されているリソースを所有する `shared_ptr<T>` オブジェクトを返します。 式 `static_cast<T*>(sp.get())` は有効な式である必要があります。
 
@@ -1077,7 +1074,7 @@ void swap(
 *右*\
 右ポインター。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 このテンプレート関数は、`left.swap(right)` を呼び出します。
 
@@ -1144,7 +1141,7 @@ void undeclare_no_pointers(
 *size*\
 メモリ範囲内のバイト数。 この値は、`declare_no_pointers` の呼び出しで使用されている数値と同じである必要があります。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 関数は、`[ptr, ptr + size)` アドレスの範囲に追跡可能なポインターが含まれている可能性があることをガベージコレクターに通知します。
 
@@ -1163,7 +1160,7 @@ T *undeclare_reachable(
 *ptr*\
 [Declare_reachable](#declare_reachable)を使用して既にマークされているメモリアドレスへのポインター。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 *Ptr*が**nullptr**でない場合、関数は、 *ptr*に到達できなくなったことをガベージコレクターに通知します。 これは、 *ptr*と等しいかどうかを比較する、安全に派生したポインターを返します。
 
@@ -1204,7 +1201,7 @@ ForwardIterator uninitialized_copy(
 
 ソース範囲が空の場合を除き、ターゲット範囲を超える最初の位置を示す前方反復子。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 このアルゴリズムによって、オブジェクトの構築からメモリの割り当てを分離できます。
 
@@ -1324,7 +1321,7 @@ ForwardIterator uninitialized_copy_n(
 
 ターゲットを超えた最初の位置を示す前方反復子。 ソース範囲が空の場合、反復子は*最初*にアドレスを指定します。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 このテンプレート関数は、次のコードを効果的に実行します。
 
@@ -1367,7 +1364,7 @@ void uninitialized_default_construct(
 *最後*の\
 構築する範囲内の最後の要素の1つ後ろを指す反復子。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 実行ポリシーのないバージョンは、実質的に次のようになります。
 
@@ -1415,7 +1412,7 @@ ForwardIterator uninitialized_default_construct_n(
 
 ソース範囲が空の場合を除き、ターゲット範囲を超える最初の位置を示す前方反復子。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 実行ポリシーのないバージョンは、実質的に次のようになります。
 
@@ -1465,7 +1462,7 @@ void uninitialized_fill(
 *value*\
 ターゲット範囲を初期化するために使用される値。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 このアルゴリズムによって、オブジェクトの構築からメモリの割り当てを分離できます。
 
@@ -1553,7 +1550,7 @@ ForwardIterator uninitialized_fill_n(
 *value*\
 ターゲット範囲を初期化するために使用する値。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 このアルゴリズムによって、オブジェクトの構築からメモリの割り当てを分離できます。
 
@@ -1635,7 +1632,7 @@ ForwardIterator uninitialized_move(
 *dest*\
 ターゲット範囲の先頭。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 実行ポリシーのないバージョンは、実質的に次のようになります。
 
@@ -1685,7 +1682,7 @@ pair<InputIterator, ForwardIterator> uninitialized_move_n(
 *dest*\
 ターゲット範囲の先頭。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 実行ポリシーのないバージョンは、実質的に次のようになります。
 
@@ -1730,7 +1727,7 @@ void uninitialized_value_construct(
 *最後*の\
 Range から value への構造体の最後の要素の1つ後ろを指す反復子。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 実行ポリシーのないバージョンは、実質的に次のようになります。
 
@@ -1776,7 +1773,7 @@ ForwardIterator uninitialized_value_construct_n(
 *カウント*\
 構築するターゲット範囲内の要素の数。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 実行ポリシーのないバージョンは、実質的に次のようになります。
 

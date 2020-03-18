@@ -1,5 +1,5 @@
 ---
-title: データ オブジェクトとデータ ソース:操作
+title: 'データ オブジェクトとデータ ソース : 操作'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - data objects [MFC], manipulating
@@ -12,86 +12,86 @@ helpviewer_keywords:
 - delayed rendering [MFC]
 - OLE [MFC], data sources
 ms.assetid: f7f27e77-bb5d-4131-b819-d71bf929ebaf
-ms.openlocfilehash: 81dfe911866c4d1ba1720ee2c9854076c499f0a3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: adbe2a77fb0069e9874ab20a51b3ab08aabbe1f6
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62241550"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447005"
 ---
-# <a name="data-objects-and-data-sources-manipulation"></a>データ オブジェクトとデータ ソース:操作
+# <a name="data-objects-and-data-sources-manipulation"></a>データ オブジェクトとデータ ソース : 操作
 
-データ オブジェクトまたはデータ ソースが作成された後は、さまざまなデータの挿入とデータが、形式を列挙するデータの削除などの一般的な操作を実行できます。 この記事では、最も一般的な操作を完了するために必要な手法について説明します。 ここでは、次の内容について説明します。
+データオブジェクトまたはデータソースを作成した後は、データの挿入と削除、データの形式の列挙など、データに対して多くの一般的な操作を実行できます。 この記事では、最も一般的な操作を完了するために必要な手法について説明します。 取り上げるトピックは次のとおりです。
 
-- [データ ソースにデータを挿入](#_core_inserting_data_into_a_data_source)
+- [データソースへのデータの挿入](#_core_inserting_data_into_a_data_source)
 
-- [データ オブジェクトで使用できる形式を決定します。](#_core_determining_the_formats_available_in_a_data_object)
+- [データオブジェクトで使用できる形式の確認](#_core_determining_the_formats_available_in_a_data_object)
 
-- [データ オブジェクトからのデータの取得](#_core_retrieving_data_from_a_data_object)
+- [データオブジェクトからのデータの取得](#_core_retrieving_data_from_a_data_object)
 
-##  <a name="_core_inserting_data_into_a_data_source"></a> データ ソースにデータを挿入
+##  <a name="_core_inserting_data_into_a_data_source"></a>データソースへのデータの挿入
 
-データ ソースにデータを挿入する方法でデータがすぐに提供されているかどうかによって異なります。 またはが指定されて、オンデマンドで、どのメディアにします。 可能性は次のとおりです。
+データソースへのデータの挿入方法は、データがすぐに提供されるか、または必要に応じて提供されるかによって異なります。 その可能性は次のとおりです。
 
-### <a name="supplying-data-immediately-immediate-rendering"></a>データをすぐに (直接レンダリング) を指定します。
+### <a name="supplying-data-immediately-immediate-rendering"></a>すぐにデータを提供する (即時レンダリング)
 
-- 呼び出す`COleDataSource::CacheGlobalData`データを指定しているすべてのクリップボード形式の繰り返しです。 使用するには、クリップボードの形式を渡すデータを格納しているメモリを識別するハンドルと、オプションで、 **FORMATETC**データを記述する構造体。
+- データを提供するすべてのクリップボード形式に対して `COleDataSource::CacheGlobalData` を繰り返し呼び出します。 使用するクリップボード形式、データを格納するメモリへのハンドル、およびデータを記述する**FORMATETC**構造体を渡します。
 
-     - または -
+     または
 
-- 直接操作する場合**STGMEDIUM**構造体を呼び出す`COleDataSource::CacheData`の代わりに`COleDataSource::CacheGlobalData`で上記のオプション。
+- **STGMEDIUM**構造体を直接操作する場合は、上記のオプションの `COleDataSource::CacheGlobalData` ではなく `COleDataSource::CacheData` を呼び出します。
 
-### <a name="supplying-data-on-demand-delayed-rendering"></a>(遅延レンダリング) オンデマンドでデータを提供します。
+### <a name="supplying-data-on-demand-delayed-rendering"></a>必要に応じたデータの提供 (遅延レンダリング)
 
-これは、高度なトピックです。
+これは高度なトピックです。
 
-- 呼び出す`COleDataSource::DelayRenderData`データを指定しているすべてのクリップボード形式の繰り返しです。 使用するクリップボード形式を渡すと、オプションで、 **FORMATETC**データを記述する構造体。 データが要求されたときに、フレームワークは呼び出します`COleDataSource::OnRenderData`、オーバーライドする必要があります。
+- データを提供するすべてのクリップボード形式に対して `COleDataSource::DelayRenderData` を繰り返し呼び出します。 使用するクリップボード形式と、必要に応じて、データを記述する**FORMATETC**構造体を渡します。 データが要求されると、フレームワークは `COleDataSource::OnRenderData`を呼び出します。これはオーバーライドする必要があります。
 
-     - または -
+     または
 
-- 使用する場合、 `CFile` 、データを入力するオブジェクトを呼び出す`COleDataSource::DelayRenderFileData`の代わりに`COleDataSource::DelayRenderData`前記のオプションでします。 データが要求されたときに、フレームワークは呼び出します`COleDataSource::OnRenderFileData`、オーバーライドする必要があります。
+- `CFile` オブジェクトを使用してデータを指定する場合は、前のオプションで `COleDataSource::DelayRenderData` の代わりに `COleDataSource::DelayRenderFileData` を呼び出します。 データが要求されると、フレームワークは `COleDataSource::OnRenderFileData`を呼び出します。これはオーバーライドする必要があります。
 
-##  <a name="_core_determining_the_formats_available_in_a_data_object"></a> データ オブジェクトで使用できる形式を決定します。
+##  <a name="_core_determining_the_formats_available_in_a_data_object"></a>データオブジェクトで使用できる形式の確認
 
-アプリケーションには、ユーザーにデータを貼り付けることができるように、処理できるクリップボードの形式があるかどうかを把握する必要があります。 これを行うには、アプリケーションは、次の操作を行う必要があります。
+アプリケーションでユーザーがデータを貼り付けられるようにするには、クリップボードに処理できる形式があるかどうかを確認する必要があります。 これを行うには、アプリケーションで次の操作を行う必要があります。
 
-1. 作成、`COleDataObject`オブジェクトと**FORMATETC**構造体。
+1. `COleDataObject` オブジェクトと**FORMATETC**構造体を作成します。
 
-1. データ オブジェクトの`AttachClipboard`にデータ オブジェクトをクリップボードのデータに関連付けるメンバー関数。
+1. データオブジェクトの `AttachClipboard` メンバー関数を呼び出して、データオブジェクトをクリップボードのデータに関連付けます。
 
-1. 次のいずれかの操作を行います。
+1. 以下のいずれかを実行します。
 
-   - データ オブジェクトの`IsDataAvailable`メンバー関数は 1 つだけを使用する必要があるか 2 つの書式設定する必要があります。 クリップボードのデータが、アプリケーションよりもはるかに多くの形式をサポートしている場合の時間の節約は、このします。
+   - 必要な形式が1つまたは2つしかない場合は、データオブジェクトの `IsDataAvailable` メンバー関数を呼び出します。 これにより、クリップボードのデータがアプリケーションよりもはるかに多くの形式をサポートする場合の時間が短縮されます。
 
-         -or-
+     \- または -
 
-   - データ オブジェクトの`BeginEnumFormats`メンバー関数は、クリップボードで使用できる形式の列挙を開始します。 呼び出して`GetNextFormat`クリップボードを返すまで、形式、アプリケーションがサポートまたはないその他の形式があります。
+   - データオブジェクトの `BeginEnumFormats` メンバー関数を呼び出して、クリップボードで使用可能な形式の列挙を開始します。 次に、アプリケーションがサポートする形式がクリップボードから返されるまで、または形式がなくなるまで `GetNextFormat` を呼び出します。
 
-使用する場合**ON_UPDATE_COMMAND_UI**、貼り付け、および [編集] メニュー項目を貼り付けを有効にできます。 これを行うには、いずれかを呼び出す`CMenu::EnableMenuItem`または`CCmdUI::Enable`します。 どのようなコンテナーの詳細についてはアプリケーションする必要があります メニュー項目でし、を参照してください[メニューとリソース。コンテナーの変更点](../mfc/menus-and-resources-container-additions.md)します。
+**ON_UPDATE_COMMAND_UI**を使用している場合は、[編集] メニューの [貼り付け] を有効にし、場合によっては特殊な項目を貼り付けることができます。 これを行うには、`CMenu::EnableMenuItem` または `CCmdUI::Enable`を呼び出します。 コンテナーアプリケーションがメニュー項目とそのタイミングを使用する場合の詳細については、「[メニューとリソース: コンテナーの追加](../mfc/menus-and-resources-container-additions.md)」を参照してください。
 
-##  <a name="_core_retrieving_data_from_a_data_object"></a> データ オブジェクトからのデータの取得
+##  <a name="_core_retrieving_data_from_a_data_object"></a>データオブジェクトからのデータの取得
 
-データ形式を決めたら、残っているは、データ オブジェクトから、データを取得します。 これを行うには、ユーザーは、データを格納する場所を決定し、アプリケーションが適切な関数を呼び出します。 次のメディアのいずれかで使用可能なデータになります。
+データ形式を決定した後は、データオブジェクトからデータを取得するだけです。 これを行うために、ユーザーはデータを配置する場所を決定し、アプリケーションは適切な関数を呼び出します。 データは、次のいずれかのメディアで使用できます。
 
-|Medium|関数を呼び出す|
+|中|呼び出す関数|
 |------------|----------------------|
-|グローバル メモリ (`HGLOBAL`)|`COleDataObject::GetGlobalData`|
+|グローバルメモリ (`HGLOBAL`)|`COleDataObject::GetGlobalData`|
 |ファイル (`CFile`)|`COleDataObject::GetFileData`|
-|**STGMEDIUM**構造 (`IStorage`)|`COleDataObject::GetData`|
+|**STGMEDIUM**構造体 (`IStorage`)|`COleDataObject::GetData`|
 
-一般的には、メディアでのクリップボード形式と共に指定されます。 たとえば、 **CF_EMBEDDEDSTRUCT**オブジェクトは常に、`IStorage`を必要とする中、 **STGMEDIUM**構造体。 そのため、用途`GetData`受け入れることができるこれらの関数の 1 つだけのため、 **STGMEDIUM**構造体。
+通常、メディアはクリップボード形式と共に指定されます。 たとえば、 **CF_EMBEDDEDSTRUCT**オブジェクトは常に、 **STGMEDIUM**構造体を必要とする `IStorage` メディアにあります。 したがって、 **STGMEDIUM**構造体を受け取ることができる関数の唯一の1つであるため、`GetData` を使用します。
 
-クリップボード形式がある場合、`IStream`または`HGLOBAL`フレームワークを提供できます、中、`CFile`データを参照するポインター。 アプリケーションは、ファイルからデータをインポートする場合と同じ方法で多くのデータを取得するために読み取るファイルを使用できます。 基本的には、これは、クライアント側のインターフェイスを`OnRenderData`と`OnRenderFileData`ルーチン、データ ソース。
+クリップボードの形式が `IStream` または `HGLOBAL` 中の場合、フレームワークはデータを参照する `CFile` ポインターを提供できます。 次に、ファイル読み取りを使用して、ファイルからデータをインポートする場合とほぼ同じ方法でデータを取得できます。 基本的に、これはデータソース内の `OnRenderData` および `OnRenderFileData` ルーチンへのクライアント側のインターフェイスです。
 
-ユーザーは、ドキュメントにデータの挿入と同様、同じ形式でその他のデータのようになりましたことができます。
+これで、ユーザーは、同じ形式の他のデータと同じように、ドキュメントにデータを挿入できるようになりました。
 
-### <a name="what-do-you-want-to-know-more-about"></a>方法については、するして操作を行います
+### <a name="what-do-you-want-to-know-more-about"></a>詳細については、次を参照してください。
 
-- [ドラッグ アンド ドロップ](../mfc/drag-and-drop-ole.md)
+- [ドラッグアンドドロップ](../mfc/drag-and-drop-ole.md)
 
 - [クリップボード](../mfc/clipboard.md)
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [データ オブジェクトとデータ ソース (OLE)](../mfc/data-objects-and-data-sources-ole.md)<br/>
 [COleDataObject クラス](../mfc/reference/coledataobject-class.md)<br/>

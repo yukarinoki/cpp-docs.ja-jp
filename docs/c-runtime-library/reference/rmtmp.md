@@ -20,7 +20,6 @@ api_type:
 topic_type:
 - apiref
 f1_keywords:
-- rmtmp
 - _rmtmp
 helpviewer_keywords:
 - removing temporary files
@@ -30,12 +29,12 @@ helpviewer_keywords:
 - files [C++], removing
 - temporary files [C++], removing
 ms.assetid: 7419501e-2587-4f2a-b469-0dca07f84736
-ms.openlocfilehash: 314399cf174974132a3635631162a7ffa89342c4
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: de28768f479df00eae315c99b80103c5319b38af
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949158"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442786"
 ---
 # <a name="_rmtmp"></a>_rmtmp
 
@@ -52,13 +51,13 @@ int _rmtmp( void );
 
 **_rmtmp**は、終了して削除された一時ファイルの数を返します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
 **_Rmtmp**関数は、現在のディレクトリ内のすべての一時ファイルをクリーンアップします。 関数は、 **tmpfile**によって作成されたファイルのみを削除します。一時ファイルが作成されたディレクトリと同じディレクトリ内でのみ使用してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**_rmtmp**|\<stdio.h>|
 
@@ -72,7 +71,7 @@ int _rmtmp( void );
 
 「[tmpfile](tmpfile.md)」の例をご覧ください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ストリーム入出力](../../c-runtime-library/stream-i-o.md)<br/>
 [_flushall](flushall.md)<br/>

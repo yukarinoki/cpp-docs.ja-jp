@@ -20,23 +20,19 @@ api_type:
 topic_type:
 - apiref
 f1_keywords:
-- cabsl
 - _cabs
-- _cabsl
 helpviewer_keywords:
 - cabs function
-- cabsl function
 - absolute values
-- _cabsl function
 - _cabs function
 - calculating absolute values
 ms.assetid: fea292ee-1a39-4a0a-b416-4a189346ff26
-ms.openlocfilehash: 5e2536fbeed2f466d3795e2ed26e643279e8bc67
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ba24b10fb267c9b54ec4944704de988128b4b419
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943412"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443054"
 ---
 # <a name="_cabs"></a>_cabs
 
@@ -52,20 +48,20 @@ double _cabs(
 
 ### <a name="parameters"></a>パラメーター
 
-*z*<br/>
+*方向*<br/>
 複素数。
 
 ## <a name="return-value"></a>戻り値
 
-cab が成功した場合、その引数の絶対値が返されます **(_t)** 。 オーバーフロー時に**は、** **HUGE_VAL**が返され、 **errno**が**ERANGE**に設定されます。 エラー処理は [_matherr](matherr.md) で変更できます。
+**_cabs**は、成功した場合、引数の絶対値を返します。 オーバーフローの場合、 **_cabs**は**HUGE_VAL**を返し、 **errno**を**ERANGE**に設定します。 エラー処理は [_matherr](matherr.md) で変更できます。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-**Cab**関数は、複素数の絶対値を計算します。この値は[、complex 型](../../c-runtime-library/standard-types.md)の構造体である必要があります。 構造体*z*は、実際のコンポーネント*x*と虚数成分*y*で構成されています。 **Cab**を呼び出すと、式`sqrt( z.x * z.x + z.y * z.y )`の値と等価の値が生成されます。
+**_Cabs**関数は、複素数の絶対値を計算します。この値は[_complex](../../c-runtime-library/standard-types.md)型の構造体である必要があります。 構造体*z*は、実際のコンポーネント*x*と虚数成分*y*で構成されています。 **_Cabs**を呼び出すと、`sqrt( z.x * z.x + z.y * z.y )`式と等価な値が生成されます。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**_cabs**|\<math.h>|
 
@@ -96,7 +92,7 @@ int main( void )
 The absolute value of 3.000000 + 4.000000i is 5.000000
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [浮動小数点サポート](../../c-runtime-library/floating-point-support.md)<br/>
 [abs、labs、llabs、_abs64](abs-labs-llabs-abs64.md)<br/>

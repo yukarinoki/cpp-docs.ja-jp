@@ -25,7 +25,6 @@ f1_keywords:
 - _fputwchar
 - fputwchar
 - _fputtchar
-- fputchar
 - _fputchar
 helpviewer_keywords:
 - fputchar function
@@ -36,12 +35,12 @@ helpviewer_keywords:
 - fputtchar function
 - _fputchar function
 ms.assetid: b92ff600-a924-4f2b-b0e7-3097ee31bdff
-ms.openlocfilehash: 39642be871c1c5b5c2deaf35b7c26d19c188b440
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b78c59b937a8854d7a36355173a1ccf4f219d541
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956933"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442972"
 ---
 # <a name="_fputchar-_fputwchar"></a>_fputchar、_fputwchar
 
@@ -69,9 +68,9 @@ wint_t _fputwchar(
 
 エラー コードの詳細については、「[_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-どちらの関数も、1つの文字*c*を**stdout**に書き込み、必要に応じてインジケーターを進めます。 **_fputchar**はと同じ`fputc( stdout )`です。 これは、 **putchar**とも同じですが、関数およびマクロとしてではなく、関数としてのみ実装されます。 **Fputc**や**putchar**とは異なり、これらの関数は ANSI 規格と互換性がありません。
+どちらの関数も、1つの文字*c*を**stdout**に書き込み、必要に応じてインジケーターを進めます。 **_fputchar**は `fputc( stdout )`と同じです。 これは、 **putchar**とも同じですが、関数およびマクロとしてではなく、関数としてのみ実装されます。 **Fputc**や**putchar**とは異なり、これらの関数は ANSI 規格と互換性がありません。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -79,7 +78,7 @@ wint_t _fputwchar(
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_fputtchar**|**_fputchar**|**_fputchar**|**_fputwchar**|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 |関数|必須ヘッダー|
 |--------------|---------------------|
@@ -113,7 +112,7 @@ int main( void )
 This is a test of _fputchar!!
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ストリーム入出力](../../c-runtime-library/stream-i-o.md)<br/>
 [fgetc、fgetwc](fgetc-fgetwc.md)<br/>

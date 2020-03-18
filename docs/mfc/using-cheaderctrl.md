@@ -1,29 +1,27 @@
 ---
 title: CHeaderCtrl の使い方
 ms.date: 11/04/2016
-f1_keywords:
-- CHeaderCtrl
 helpviewer_keywords:
 - header controls [MFC], using
 - CHeaderCtrl class [MFC]
 ms.assetid: fb3e512b-9539-43c4-a7e7-3fafd6d0706e
-ms.openlocfilehash: bf99aad508aee52bc8d345ca084ef96ef40f803b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 74e306368d7354bbc9f8281a8bf7fa857b6bf524
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386409"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444003"
 ---
 # <a name="using-cheaderctrl"></a>CHeaderCtrl の使い方
 
-クラスによって表されるヘッダー コントロールを使用して[CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)、単票形式の一覧については、列ヘッダーを表示します。 たとえば、ヘッダー コントロールは、スプレッドシートに列のコントロールを実装するため便利になります。
+[CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)クラスによって表されるヘッダーコントロールを使用して、列形式のリストの列ヘッダーを表示します。 たとえば、ヘッダーコントロールは、スプレッドシートに列コントロールを実装する場合に便利です。
 
-ヘッダー コントロールは通常、項目と呼ばれる"ヘッダーを"テキストまたは数値の関連付けられた列のタイトルの付いた各部分に分割されます。 に応じて、スタイルを設定するには、さまざまなヘッダー アイテムを操作するユーザーの直接の方法を行うことができます。
+ヘッダーコントロールは、通常、"ヘッダー項目" と呼ばれる部分に分かれています。各要素は、テキストまたは数値の関連付けられた列のタイトルを示しています。 設定したスタイルによっては、ユーザーがヘッダー項目を操作するための直接的な方法が多数用意されています。
 
 > [!NOTE]
->  [CListCtrl](../mfc/reference/clistctrl-class.md)埋め込みヘッダーのコントロールを提供し、 [CListView](../mfc/reference/clistview-class.md)をカプセル化します`CListCtrl`MFC クラスで。 一般に、使用すると考える`CHeaderCtrl`を自分で描画するラベルの一覧にします。
+>  [CListCtrl](../mfc/reference/clistctrl-class.md)は埋め込みヘッダーコントロールを提供し、 [CListView](../mfc/reference/clistview-class.md)は MFC クラスの `CListCtrl` をカプセル化します。 一般に、`CHeaderCtrl` を使用して、自分で描画する予定の一覧にラベルを付けると考えてください。
 
-## <a name="what-do-you-want-to-know-more-about"></a>方法については、するして操作を行います
+## <a name="what-do-you-want-to-know-more-about"></a>詳細については、次を参照してください。
 
 - [ヘッダー コントロールおよびリスト コントロール](../mfc/header-control-and-list-control.md)
 
@@ -49,6 +47,6 @@ ms.locfileid: "62386409"
 
 - [ヘッダー コントロール通知の処理](../mfc/processing-header-control-notifications.md)
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [コントロール](../mfc/controls-mfc.md)

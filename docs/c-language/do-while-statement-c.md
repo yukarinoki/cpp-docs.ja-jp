@@ -3,16 +3,15 @@ title: do-while ステートメント (C)
 ms.date: 11/04/2016
 f1_keywords:
 - do
-- while
 helpviewer_keywords:
 - do-while keyword [C]
 ms.assetid: f2ac20a6-10c7-4a08-b5e3-c3b3639dbeaf
-ms.openlocfilehash: 052b02beca49f5de19c6f68cc475edb5f5daf6e2
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: 3658fe7635ad77db6d6e08ff9d7c30e29d665721
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147504"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79438591"
 ---
 # <a name="do-while-statement-c"></a>do-while ステートメント (C)
 
@@ -20,7 +19,7 @@ ms.locfileid: "56147504"
 
 ## <a name="syntax"></a>構文
 
-*iteration-statement*: &nbsp;&nbsp;&nbsp;&nbsp;**do**  *statement*  **while (**  *expression*  **) ;**
+*繰り返しステートメント*: &nbsp;&nbsp;&nbsp;&nbsp;**do***ステートメント***while (** *式* **) です。**
 
 *do-while* ステートメント内の *expression* は、ループの本体が実行された後で評価されます。 したがって、ループの本体は、常に少なくとも 1 回は実行されます。
 
@@ -42,8 +41,8 @@ do
 } while ( x > 0 );
 ```
 
-この *do-while* ステートメントでは、`x` の初期値に関係なく、2 つのステートメント `y = f( x );` および `x--;` が実行されます。 次に、`x > 0` が評価されます。 `x` が 0 より大きい場合、ステートメント本体が再度実行され、`x > 0` が再評価されます。 `x` が 0 より大きい間、ステートメント本体が繰り返し実行されます。 *do-while* ステートメントの実行は、`x` が 0 または負になると終了します。 ループの本体は、少なくとも 1 回は実行されます。
+この *do-while* ステートメントでは、`y = f( x );` の初期値に関係なく、2 つのステートメント `x--;` および `x` が実行されます。 次に、`x > 0` が評価されます。 `x` が 0 より大きい場合、ステートメント本体が再度実行され、`x > 0` が再評価されます。 `x` が 0 より大きい間、ステートメント本体が繰り返し実行されます。 *do-while* ステートメントの実行は、`x` が 0 または負になると終了します。 ループの本体は、少なくとも 1 回は実行されます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [do-while ステートメント (C++)](../cpp/do-while-statement-cpp.md)

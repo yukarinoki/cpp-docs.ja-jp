@@ -1,55 +1,53 @@
 ---
 title: OLE コモン ダイアログ クラス
 ms.date: 11/04/2016
-f1_keywords:
-- vc.classes.ole
 helpviewer_keywords:
 - ActiveX classes [MFC]
 - dialog classes [MFC], OLE
 - OLE common dialog classes [MFC]
 - common dialog classes [MFC]
 ms.assetid: 706526ae-f94f-4909-a0f8-6b5fe954fd97
-ms.openlocfilehash: d34c141fc9a2b53eab6a4c0b0ce1799ff5243d84
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b44a7b203c17f09f872cfedbb05798affb57f0f9
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62186393"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447676"
 ---
 # <a name="ole-common-dialog-classes"></a>OLE コモン ダイアログ クラス
 
-これらのクラスは、さまざまな標準の OLE ダイアログ ボックスを実装して、OLE の一般的なタスクを処理します。 OLE の機能を一貫したユーザー インターフェイスも提供します。
+これらのクラスは、多くの標準 OLE ダイアログボックスを実装することによって、一般的な OLE タスクを処理します。 また、OLE 機能の一貫したユーザーインターフェイスも用意されています。
 
 [COleDialog](../mfc/reference/coledialog-class.md)<br/>
-すべての OLE ダイアログ ボックスの一般的な実装を格納するフレームワークで使用します。 ユーザー インターフェイス カテゴリ内のすべてのダイアログ ボックス クラスは、この基本クラスから派生します。 `COleDialog` 直接使用することはできません。
+すべての OLE ダイアログボックスの共通の実装を格納するために、フレームワークによって使用されます。 ユーザーインターフェイスカテゴリのすべてのダイアログボックスクラスは、この基本クラスから派生します。 `COleDialog` を直接使用することはできません。
 
 [COleInsertDialog](../mfc/reference/coleinsertdialog-class.md)<br/>
-リンクまたは埋め込みアイテムの新しい OLE を挿入するは、オブジェクトの挿入 ダイアログ ボックスで、標準のユーザー インターフェイスを表示します。
+[オブジェクトの挿入] ダイアログボックスを表示します。これは、新しい OLE リンクまたは埋め込みアイテムを挿入するための標準ユーザーインターフェイスです。
 
 [COlePasteSpecialDialog](../mfc/reference/colepastespecialdialog-class.md)<br/>
-貼り付け ダイアログ ボックス、編集貼り付けコマンドを実装するための標準のユーザー インターフェイスを表示します。
+[特殊な貼り付け] ダイアログボックスを表示します。このダイアログボックスは、[貼り付けの編集] を実装するための標準ユーザーインターフェイスです。
 
 [COleLinksDialog](../mfc/reference/colelinksdialog-class.md)<br/>
-リンクの編集 ダイアログ ボックスで、リンクされた項目に関する情報を変更するための標準のユーザー インターフェイスを表示します。
+リンクされた項目に関する情報を変更するための標準ユーザーインターフェイスである [リンクの編集] ダイアログボックスを表示します。
 
 [COleChangeIconDialog](../mfc/reference/colechangeicondialog-class.md)<br/>
-アイコンの変更のダイアログ ボックスで、OLE に関連付けられているアイコンの埋め込みを変更するか、リンクされた項目の標準のユーザー インターフェイスが表示されます。
+OLE 埋め込みまたはリンクされた項目に関連付けられているアイコンを変更するための標準ユーザーインターフェイスである [アイコンの変更] ダイアログボックスを表示します。
 
 [COleConvertDialog](../mfc/reference/coleconvertdialog-class.md)<br/>
-変換 ダイアログ ボックスで、OLE 項目の 1 つの型を変換するための標準的なユーザー インターフェイスを表示します。
+OLE 項目をある種類から別の型に変換するための標準ユーザーインターフェイスである [変換] ダイアログボックスを表示します。
 
 [COlePropertiesDialog](../mfc/reference/colepropertiesdialog-class.md)<br/>
-Windows の一般的な OLE プロパティ ダイアログ ボックスをカプセル化します。 共通の OLE プロパティ ダイアログ ボックスを表示し、Windows の標準に準拠した方法での OLE ドキュメント項目のプロパティを変更する簡単な方法を提供します。
+Windows のコモン OLE プロパティダイアログボックスをカプセル化します。 共通の OLE プロパティダイアログボックスを使用すると、Windows 標準と一貫性のある方法で OLE ドキュメントアイテムのプロパティを簡単に表示および変更することができます。
 
 [COleUpdateDialog](../mfc/reference/coleupdatedialog-class.md)<br/>
-更新プログラム ダイアログ ボックスで、ドキュメント内のすべてのリンクを更新するための標準のユーザー インターフェイスを表示します。 ダイアログ ボックスには、完了するまで、更新手順を閉じる方法を示す進行状況インジケーターが含まれています。
+ドキュメント内のすべてのリンクを更新するための標準ユーザーインターフェイスである [更新] ダイアログボックスを表示します。 ダイアログボックスには、更新手順の終了方法を示す進行状況インジケーターが表示されます。
 
 [COleChangeSourceDialog](../mfc/reference/colechangesourcedialog-class.md)<br/>
-ソースの変更 ダイアログ ボックスで、宛先またはリンクのソースを変更するための標準のユーザー インターフェイスを表示します。
+リンク先を変更するための標準ユーザーインターフェイスである [変更ソース] ダイアログボックスを表示します。
 
 [COleBusyDialog](../mfc/reference/colebusydialog-class.md)<br/>
-サーバーがビジー状態とサーバーが応答していないダイアログ ボックスを使用中のアプリケーションへの呼び出しを処理するための標準のユーザー インターフェイスを表示します。 通常、によって自動的に表示されます、`COleMessageFilter`実装します。
+ビジー状態のアプリケーションの呼び出しを処理するための標準ユーザーインターフェイスである [サーバーがビジー] ダイアログボックスと [サーバーに応答しません] ダイアログボックスが表示されます。 通常、`COleMessageFilter` の実装によって自動的に表示されます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [クラスの概要](../mfc/class-library-overview.md)

@@ -13,11 +13,11 @@ helpviewer_keywords:
 - std::make_error_condition
 - std::system_category
 ms.openlocfilehash: ab4d0d1ee810df8f719bba762262eb03bf899408
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78876274"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427615"
 ---
 # <a name="ltsystem_errorgt-functions"></a>&lt;system_error&gt; 関数
 
@@ -29,7 +29,7 @@ ms.locfileid: "78876274"
 const error_category& generic_category() noexcept;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `generic_category` オブジェクトは[error_category](../standard-library/error-category-class.md)の実装です。
 
@@ -64,7 +64,7 @@ error_code make_error_code(std::errc error) noexcept;
 
 エラー コード オブジェクト。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ## <a name="make_error_condition"></a>make_error_condition
 
@@ -83,7 +83,7 @@ error_condition make_error_condition(std::errc error) noexcept;
 
 エラー条件オブジェクト。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ## <a name="system_category"></a>system_category
 
@@ -93,6 +93,6 @@ error_condition make_error_condition(std::errc error) noexcept;
 const error_category& system_category() noexcept;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `system_category` オブジェクトは[error_category](../standard-library/error-category-class.md)の実装です。

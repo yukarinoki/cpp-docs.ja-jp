@@ -4,7 +4,6 @@ description: .Lib で使用できるコマンドラインオプションにつ�
 ms.date: 02/09/2020
 f1_keywords:
 - VC.Project.VCLibrarianTool.TargetMachine
-- Lib
 - VC.Project.VCLibrarianTool.PrintProgress
 - VC.Project.VCLibrarianTool.SuppressStartupBanner
 helpviewer_keywords:
@@ -27,12 +26,12 @@ helpviewer_keywords:
 - semicolon, command files
 - / command files
 ms.assetid: d54f5c81-7147-4b2c-a8db-68ce6eb1eabd
-ms.openlocfilehash: 0688365fa83edcacd901321fead48c9c98df2faf
-ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
+ms.openlocfilehash: 871b92809f38b4dcbf84de802b1ac9940ea6f1e9
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77257560"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79438937"
 ---
 # <a name="running-lib"></a>LIB の実行
 
@@ -60,7 +59,7 @@ LIB を実行するには、コマンド `lib`を入力し、その後に LIB �
 
 次のオプションは、LIB のすべてのモードに適用されます。
 
-> **/Errorreport** \[**NONE** &#124; **PROMPT** &#124; QUEUE &#124; **SEND**]
+> **/Errorreport** \[**NONE** &#124; **PROMPT** &#124; **QUEUE** QUEUE &#124; **SEND**]
 
 /ERRORREPORT オプションは非推奨とされます。 Windows Vista 以降では、エラー報告は[Windows エラー報告 (WER)](/windows/win32/wer/windows-error-reporting)設定によって制御されます。
 

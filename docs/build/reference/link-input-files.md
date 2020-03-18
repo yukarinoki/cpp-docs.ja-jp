@@ -1,8 +1,6 @@
 ---
 title: LINK の入力ファイル
 ms.date: 11/04/2016
-f1_keywords:
-- link
 helpviewer_keywords:
 - files [C++], LINK
 - module definition files
@@ -14,23 +12,23 @@ helpviewer_keywords:
 - import libraries [C++], linker files
 - command input to linker files [C++]
 ms.assetid: bb26fcc5-509a-4620-bc3e-b6c6e603a412
-ms.openlocfilehash: 48ad9423ae35c22a97a873fe6a2a0479c12ab33b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 25d8e20903a97186e2c32a079fd74ece3626b7fa
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62291510"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439344"
 ---
 # <a name="link-input-files"></a>LINK の入力ファイル
 
-リンカーは、オブジェクト、インポートと標準ライブラリ、リソース、モジュールの定義、およびコマンドの入力が含まれているファイルに指定します。 リンクは、ファイルの内容に関する判断を行うファイルの拡張機能を使用しません。 代わりに、リンクは、各入力ファイルがファイルの種類を判断するを調べます。
+リンカーには、オブジェクト、インポートと標準ライブラリ、リソース、モジュール定義、およびコマンド入力を含むファイルが用意されています。 リンクはファイルの拡張子を使用せず、ファイルの内容を想定していません。 代わりに、リンクによって各入力ファイルが調べられ、ファイルの種類が決まります。
 
-コマンドラインでのオブジェクト ファイルは、コマンドラインで表示される順序で処理されます。 ライブラリは、次の注意点がありますも、コマンドラインの順序で検索されます。シンボルは未解決のときライブラリからのオブジェクト ファイルで検索のライブラリで最初に、され、コマンドラインから次のライブラリと[/DEFAULTLIB (既定のライブラリの指定)](defaultlib-specify-default-library.md)ディレクティブ、し、コマンドラインの先頭のすべてのライブラリを
+コマンドライン上のオブジェクトファイルは、コマンドラインに表示される順序で処理されます。 ライブラリはコマンドラインの順序でも検索されますが、次の点に注意してください。ライブラリからオブジェクトファイルを取り込むときに解決されないシンボルは、先にそのライブラリで検索されます。次に、コマンドラインと[/DEFAULTLIB (既定のライブラリの指定)](defaultlib-specify-default-library.md)ディレクティブから次のライブラリを検索し、コマンドラインの先頭にある任意のライブラリ
 
 > [!NOTE]
->  リンクでは、応答ファイルおよびファイルの順序でのコメントの始まりとしてセミコロン (またはその他の任意の文字) を不要になった受け取ります。 セミコロンは、モジュール定義ファイル (.def) 内のコメントの始まりとしてのみ認識されます。
+>  リンクは、応答ファイルと注文ファイルのコメントの先頭として、セミコロン (またはその他の文字) を受け付けなくなりました。 セミコロンは、モジュール定義ファイル (.def) のコメントの先頭としてのみ認識されます。
 
-リンクは、次の種類の入力ファイルを使用します。
+リンクでは、次の種類の入力ファイルが使用されます。
 
 - [.obj ファイル](dot-obj-files-as-linker-input.md)
 
@@ -52,7 +50,7 @@ ms.locfileid: "62291510"
 
 - [.ilk ファイル](dot-ilk-files-as-linker-input.md)
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [MSVC リンカーのリファレンス](linking.md)<br/>
 [MSVC リンカー オプション](linker-options.md)

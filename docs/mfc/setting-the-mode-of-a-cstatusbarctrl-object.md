@@ -1,8 +1,6 @@
 ---
 title: CStatusBarCtrl オブジェクトのモードの設定
 ms.date: 11/04/2016
-f1_keywords:
-- CStatusBarCtrl
 helpviewer_keywords:
 - simple mode and status bar controls
 - IsSimple method, using
@@ -11,25 +9,25 @@ helpviewer_keywords:
 - non-simple mode and status bar controls
 - CStatusBarCtrl class [MFC], simple and nonsimple modes
 ms.assetid: ca6076e5-1501-4e33-8d35-9308941e46c0
-ms.openlocfilehash: a6d1a0edb356f9737aa287809dd8bca4146c1854
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 79b499533196447898ce62ea9dc86c1674fc0302
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62307721"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446433"
 ---
 # <a name="setting-the-mode-of-a-cstatusbarctrl-object"></a>CStatusBarCtrl オブジェクトのモードの設定
 
-2 つのモードを`CStatusBarCtrl`オブジェクト: シンプルで標準。 ほとんどの場合、ステータス バー コントロールはテキストとアイコンではおそらくまたはアイコンと共に、1 つまたは複数の部分になります。 これは標準モードと呼ばれます。 このモードの詳細については、次を参照してください。[の CStatusBarCtrl オブジェクトの初期化](../mfc/initializing-the-parts-of-a-cstatusbarctrl-object.md)します。
+`CStatusBarCtrl` オブジェクトには、単純と非単純の2つのモードがあります。 ほとんどの場合、ステータスバーコントロールには1つ以上の部分が含まれ、テキストと、おそらくアイコンやアイコンが表示されます。 これは、非単純モードと呼ばれます。 このモードの詳細については、「 [CStatusBarCtrl オブジェクトの部分の初期化](../mfc/initializing-the-parts-of-a-cstatusbarctrl-object.md)」を参照してください。
 
-ただし、だけする必要がある 1 行のテキストを表示する場合があります。 この場合は、単純なモードは、ニーズのための十分なは。 モードを変更する、`CStatusBarCtrl`シンプル オブジェクト、呼び出しを行う、 [SetSimple](../mfc/reference/cstatusbarctrl-class.md#setsimple)メンバー関数。 ステータス バー コントロールは、単純なモードでは後で呼び出すことによって、テキストを設定、`SetText`メンバー関数を値として 255、 *nPane*パラメーター。
+ただし、1行のテキストのみを表示する必要がある場合もあります。 この場合、必要に応じて simple モードが十分です。 `CStatusBarCtrl` オブジェクトのモードを simple に変更するには、 [Setsimple](../mfc/reference/cstatusbarctrl-class.md#setsimple)メンバー関数を呼び出します。 ステータスバーコントロールが簡易モードになったら、`SetText` メンバー関数を呼び出してテキストを設定し、 *Npane*パラメーターの値として255を渡します。
 
-使用することができます、 [IsSimple](../mfc/reference/cstatusbarctrl-class.md#issimple)モードを決定する関数、`CStatusBarCtrl`オブジェクトします。
+[Issimple](../mfc/reference/cstatusbarctrl-class.md#issimple)関数を使用すると、`CStatusBarCtrl` オブジェクトがどのモードであるかを判断できます。
 
 > [!NOTE]
->  単純でないから、[シンプル] に変更されるステータス バーのオブジェクトまたはその逆の場合、ウィンドウがすぐに再描画される場合と、該当する場合、定義されている任意の部分が自動的に復元します。
+>  ステータスバーオブジェクトが単純から単純に、またはその逆に変更されている場合は、すぐにウィンドウが再描画され、該当する場合は定義されたパーツが自動的に復元されます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [CStatusBarCtrl の使い方](../mfc/using-cstatusbarctrl.md)<br/>
 [コントロール](../mfc/controls-mfc.md)

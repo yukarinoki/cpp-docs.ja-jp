@@ -20,7 +20,7 @@ f1_keywords:
 - AFXGLOBALS/AFX_GLOBAL_DATA::GetTextHeight
 - AFXGLOBALS/AFX_GLOBAL_DATA::GetWICFactory
 - AFXGLOBALS/AFX_GLOBAL_DATA::GetWriteFactory
-- AFXGLOBALS/AFX_GLOBAL_DATA::IsD2DInitialized
+- AFXGLOBALS/AFX_GLOBAL_DATA::InitD2D
 - AFXGLOBALS/AFX_GLOBAL_DATA::Is32BitIcons
 - AFXGLOBALS/AFX_GLOBAL_DATA::IsD2DInitialized
 - AFXGLOBALS/AFX_GLOBAL_DATA::IsDwmCompositionEnabled
@@ -55,12 +55,12 @@ helpviewer_keywords:
 - AFX_GLOBAL_DATA structure [MFC]
 - AFX_GLOBAL_DATA constructor
 ms.assetid: c7abf2fb-ad5e-4336-a01d-260c29ed53a2
-ms.openlocfilehash: dda3056cbed18ef93e09b52cd9d0a6b00e1db177
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: 66cfb66e091d487ea9d3f563b7b6bbb9ca1ea928
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79426055"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447340"
 ---
 # <a name="afx_global_data-structure"></a>AFX_GLOBAL_DATA 構造体
 
@@ -76,14 +76,14 @@ struct AFX_GLOBAL_DATA
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|Description|
+|Name|説明|
 |----------|-----------------|
 |`AFX_GLOBAL_DATA::AFX_GLOBAL_DATA`|`AFX_GLOBAL_DATA` 構造体を構築します。|
 |`AFX_GLOBAL_DATA::~AFX_GLOBAL_DATA`|デストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|Description|
+|Name|説明|
 |----------|-----------------|
 |[AFX_GLOBAL_DATA:: クリーンアップ](#cleanup)|ブラシ、フォント、DLL など、フレームワークにより割り当てられたリソースを解放します。|
 |[AFX_GLOBAL_DATA::D 2D1MakeRotateMatrix](#d2d1makerotatematrix)|指定した点を中心に指定した角度ずつ回転する回転変換を作成します。|
@@ -100,7 +100,7 @@ struct AFX_GLOBAL_DATA
 |[AFX_GLOBAL_DATA:: GetTextHeight](#gettextheight)|現在のフォントのテキスト文字の高さを取得します。|
 |[AFX_GLOBAL_DATA:: GetWICFactory](#getwicfactory)|グローバル データに格納されている `IWICImagingFactory` インターフェイスへのポインターを返します。 インターフェイスが初期化されていない場合は、既定のパラメーターでインターフェイスが作成されます。|
 |[AFX_GLOBAL_DATA:: GetWriteFactory](#getwritefactory)|グローバル データに格納されている `IDWriteFactory` インターフェイスへのポインターを返します。 インターフェイスが初期化されていない場合は、既定のパラメーターでインターフェイスが作成されます。|
-|[AFX_GLOBAL_DATA:: IsD2DInitialized](#isd2dinitialized)|`D2D`、 `DirectWrite`、および `WIC` の各ファクトリを初期化します。 このメソッドは、メイン ウィンドウが初期化される前に呼び出します。|
+|[AFX_GLOBAL_DATA:: InitD2D](#initd2d)|`D2D`、 `DirectWrite`、および `WIC` の各ファクトリを初期化します。 このメソッドは、メイン ウィンドウが初期化される前に呼び出します。|
 |[AFX_GLOBAL_DATA:: Is32BitIcons](#is32biticons)|定義済みの 32 ビット アイコンがサポートされているかどうかを示します。|
 |[AFX_GLOBAL_DATA:: IsD2DInitialized](#isd2dinitialized)|`D2D` が初期化されているかどうかを調べます。|
 |[AFX_GLOBAL_DATA:: IsDwmCompositionEnabled](#isdwmcompositionenabled)|Windows の [DwmIsCompositionEnabled](/windows/win32/api/dwmapi/nf-dwmapi-dwmiscompositionenabled) のメソッドを簡単な方法で呼び出すことができます。|
@@ -117,7 +117,7 @@ struct AFX_GLOBAL_DATA
 
 ### <a name="protected-methods"></a>プロテクト メソッド
 
-|Name|Description|
+|Name|説明|
 |----------|-----------------|
 |[AFX_GLOBAL_DATA:: EnableAccessibilitySupport](#enableaccessibilitysupport)|Microsoft Active Accessibility のサポートを有効または無効にします。 Active Accessibility は、ユーザー インターフェイス要素に関する情報を公開するための信頼できる方法を提供します。|
 |[AFX_GLOBAL_DATA:: IsAccessibilitySupport](#isaccessibilitysupport)|Microsoft Active Accessibility のサポートが有効かどうかを示します。|
@@ -125,7 +125,7 @@ struct AFX_GLOBAL_DATA
 
 ### <a name="data-members"></a>データ メンバー
 
-|Name|Description|
+|Name|説明|
 |----------|-----------------|
 |[AFX_GLOBAL_DATA:: bIsOSAlphaBlendingSupport](#bisosalphablendingsupport)|現在のオペレーティング システムがアルファ ブレンドをサポートするかどうかを示します。|
 |[AFX_GLOBAL_DATA:: bIsWindows7](#biswindows7)|アプリケーションが Windows 7 OS 以上で実行されているかどうかを示します。|
@@ -142,7 +142,7 @@ struct AFX_GLOBAL_DATA
 |[AFX_GLOBAL_DATA:: m_nDragFrameThicknessDock](#m_ndragframethicknessdock)|ドッキング状態を知らせるのに使用するドラッグ フレームの幅を指定します。|
 |[AFX_GLOBAL_DATA:: m_nDragFrameThicknessFloat](#m_ndragframethicknessfloat)|フローティング状態を知らせるのに使用するドラッグ フレームの幅を指定します。|
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 `AFX_GLOBAL_DATA` 構造体内のデータのほとんどは、アプリケーションの起動時に初期化されます。
 
@@ -150,7 +150,7 @@ struct AFX_GLOBAL_DATA
 
 `AFX_GLOBAL_DATA`
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー :** afxglobals.h
 
@@ -162,7 +162,7 @@ struct AFX_GLOBAL_DATA
 BOOL  bIsOSAlphaBlendingSupport;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 TRUE は、アルファブレンドがサポートされることを示します。それ以外の場合は FALSE。
 
@@ -280,7 +280,7 @@ HTHEME を作成するには、 [openの](/windows/win32/api/uxtheme/nf-uxtheme-
 
 指定したテキストを描画するためにテーマが使用される場合は TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 テーマは、アプリケーションの視覚スタイルを定義します。 *Htheme*パラメーターが NULL の場合、または[Drawex etextex](/windows/win32/api/uxtheme/nf-uxtheme-drawthemetextex)メソッドがサポートされていない場合、または[デスクトップウィンドウマネージャー](/windows/win32/dwm/dwm-overview) (DWM) の構成が無効になっている場合は、テキストの描画にテーマが使用されません。
 
@@ -297,7 +297,7 @@ void EnableAccessibilitySupport(BOOL bEnable=TRUE);
 *bEnable*<br/>
 からユーザー補助機能のサポートを有効にする場合は TRUE。ユーザー補助機能のサポートを無効にする場合は FALSE。 既定値は TRUE です。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 Active Accessibility は、プログラムと Windows オペレーティングシステムが支援技術製品と連携する方法を向上させる COM ベースのテクノロジです。 ユーザーインターフェイス要素に関する情報を公開するための信頼できるメソッドを提供します。 ただし、Microsoft UI Automation という新しいアクセシビリティモデルが使用できるようになりました。 2つのテクノロジの比較については、「 [UI Automation」と「Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility)」を参照してください。
 
@@ -333,13 +333,13 @@ BOOL ExcludeTag(
 
 このメソッドが成功した場合は TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 XML タグのペアは、指定されたバッファー内のテキストの実行の開始と終了を示す、名前付きの開始タグと終了タグで構成されます。 *Strbuffer*パラメーターはバッファーを指定し、 *LPSZTAG*パラメーターは XML タグの名前を指定します。
 
 次の表に示す記号を使用して、指定したバッファー内の一連のエスケープ文字をエンコードします。 *Strtag*パラメーターのシンボルを実際のエスケープ文字に変換するには、 *BISCHARSLIST*パラメーターに TRUE を指定します。 次の表では、 [_T ()](../../c-runtime-library/data-type-mappings.md)マクロを使用して、シンボルとエスケープ文字列を指定しています。
 
-|Symbol|[エスケープ文字]|
+|シンボル|[エスケープ文字]|
 |------------|----------------------|
 |_T ("\\\t")|_T("\t")|
 |_T ("\\\n")|_T("\n")|
@@ -366,7 +366,7 @@ COLORREF GetColor(int nColor);
 
 指定したユーザーインターフェイス要素の RGB 色の値。 詳細については、「解説」を参照してください。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 *Ncolor*パラメーターが範囲外の場合、戻り値は0です。 0は有効な RGB 値でもあるため、このメソッドを使用して、システムカラーが現在のオペレーティングシステムでサポートされているかどうかを判断することはできません。 代わりに、 [Getsyscolorbrush](/windows/win32/api/winuser/nf-winuser-getsyscolorbrush)メソッドを使用します。このメソッドは、色がサポートされていない場合に NULL を返します。
 
@@ -486,7 +486,7 @@ BOOL Is32BitIcons() const;
 
 定義済みの32ビットアイコンがサポートされている場合は TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 このメソッドは、フレームワークで32ビットの組み込みアイコンがサポートされている場合、およびオペレーティングシステムが1ピクセルあたり16ビット以上をサポートしている場合や、イメージがハイコントラストで表示されない場合に TRUE を返します。
 
@@ -502,7 +502,7 @@ BOOL IsAccessibilitySupport() const;
 
 アクセシビリティサポートが有効な場合は TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 Microsoft Active Accessibility は、アプリケーションをアクセス可能にするための以前のソリューションでした。 Microsoft UI オートメーションは、Microsoft Windows の新しいユーザー補助モデルであり、支援技術製品および自動テストツールのニーズに対応することを目的としています。
 
@@ -535,6 +535,7 @@ BOOL IsDwmCompositionEnabled();
 ## <a name="ishighcontrastmode"></a>AFX_GLOBAL_DATA:: IsHighContrastMode
 
 イメージが現在、ハイ コントラストで表示されているかどうかを判定します。
+
 ```
 BOOL IsHighContrastMode() const;
 ```
@@ -543,7 +544,7 @@ BOOL IsHighContrastMode() const;
 
 イメージが現在黒または白のハイコントラストモードで表示されている場合は TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 黒のハイコントラストモードでは、ライトに面した端が白で、背景が黒になっています。 ホワイトハイコントラストモードでは、ライトに面している端は黒で、背景は白です。
 
@@ -559,7 +560,7 @@ BOOL IsWindowsLayerSupportAvailable() const;
 
 レイヤードウィンドウがサポートされている場合は TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 レイヤードウィンドウがサポートされている場合、*スマートドッキング*マーカーはレイヤードウィンドウを使用します。
 
@@ -571,7 +572,7 @@ BOOL IsWindowsLayerSupportAvailable() const;
 BOOL  m_bUseBuiltIn32BitIcons;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 TRUE は、フレームワークが32ビットのカラーアイコンを使用することを指定します。FALSE は、低い解像度のアイコンを指定します。 `AFX_GLOBAL_DATA::AFX_GLOBAL_DATA` コンストラクターは、このメンバーを TRUE に初期化します。
 
@@ -585,7 +586,7 @@ TRUE は、フレームワークが32ビットのカラーアイコンを使用�
 BOOL m_bUseSystemFont;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 TRUE はシステムフォントを使用するように指定します。それ以外の場合は FALSE。 `AFX_GLOBAL_DATA::AFX_GLOBAL_DATA` コンストラクターは、このメンバーを FALSE に初期化します。
 
@@ -631,7 +632,7 @@ HICON m_hiconTool;
 int  m_nAutoHideToolBarMargin;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 `AFX_GLOBAL_DATA::AFX_GLOBAL_DATA` コンストラクターは、このメンバーを4ピクセルに初期化します。
 
@@ -643,7 +644,7 @@ int  m_nAutoHideToolBarMargin;
 int   m_nAutoHideToolBarSpacing;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 `AFX_GLOBAL_DATA::AFX_GLOBAL_DATA` コンストラクターは、このメンバーを14ピクセルに初期化します。
 
@@ -655,7 +656,7 @@ int   m_nAutoHideToolBarSpacing;
 int  m_nDragFrameThicknessDock;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 `AFX_GLOBAL_DATA::AFX_GLOBAL_DATA` コンストラクターは、このメンバーを3ピクセルに初期化します。
 
@@ -667,7 +668,7 @@ int  m_nDragFrameThicknessDock;
 int  m_nDragFrameThicknessFloat;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 `AFX_GLOBAL_DATA::AFX_GLOBAL_DATA` コンストラクターは、このメンバーを4ピクセルに初期化します。
 
@@ -679,7 +680,7 @@ int  m_nDragFrameThicknessFloat;
 void OnSettingChange();
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 このメソッドは、フレームワーク変数をユーザーのデスクトップの特定の属性の状態に設定します。 このメソッドは、メニューアニメーション、メニューフェード、およびタスクバーの自動非表示機能の現在の状態を検出します。
 
@@ -700,7 +701,7 @@ CString RegisterWindowClass(LPCTSTR lpszClassNamePrefix);
 
 このメソッドが成功した場合は、登録されたクラスの修飾名。それ以外の場合は、[リソース例外](exception-processing.md#afxthrowresourceexception)です。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 戻り値は、 *Lpszclassnameprefix*パラメーター文字列のコロン区切りのリストと、現在のアプリケーションインスタンスのハンドルの16進テキスト表現です。アプリケーションカーソル。識別子が IDC_ARROW である矢印カーソルです。と背景ブラシ。 MFC ウィンドウクラスの登録の詳細については、「 [AfxRegisterClass](../../mfc/reference/application-information-and-management.md#afxregisterclass)」を参照してください。
 
@@ -716,7 +717,7 @@ BOOL Resume();
 
 このメソッドが成功した場合は TRUE。それ以外の場合は FALSE。 デバッグモードでは、このメソッドが失敗した場合、このメソッドはアサートします。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 このメソッドは、フレームワークが[WM_POWERBROADCAST](/windows/win32/Power/wm-powerbroadcast)メッセージを受信すると呼び出されます。
 
@@ -772,7 +773,7 @@ BOOL SetMenuFont(
 
 このメソッドが成功した場合は TRUE。それ以外の場合は FALSE。 デバッグモードでは、このメソッドが失敗した場合、このメソッドはアサートします。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 このメソッドは、既定のメニュー項目で使用される水平の標準フォント、下線付きのフォント、および太字のフォントを作成します。 このメソッドは、必要に応じて通常の縦書きフォントを作成します。 論理フォントの詳細については、「 [CFont:: CreateFontIndirect](../../mfc/reference/cfont-class.md#createfontindirect)」を参照してください。
 
@@ -784,7 +785,7 @@ BOOL SetMenuFont(
 void UpdateFonts();
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 論理フォントの詳細については、「`CFont::CreateFontIndirect`」を参照してください。
 

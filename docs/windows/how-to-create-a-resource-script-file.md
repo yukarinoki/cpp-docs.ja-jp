@@ -2,7 +2,6 @@
 title: '方法: リソースを作成するC++()'
 ms.date: 02/14/2019
 f1_keywords:
-- vc.editors.resource
 - vc.resvw.add.MFC
 - vs.resourceview.F1
 - vc.editors.insertresource
@@ -36,12 +35,12 @@ helpviewer_keywords:
 - resources [C++], templates
 - .rct files [C++]
 ms.assetid: 82be732a-cdcd-4a58-8de7-976d1418f86b
-ms.openlocfilehash: c997c7a1b2d7fb3a852a42fa78faf2be6074705e
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: 93bee6319d356128f56c1886d395cf25db372e80
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79426583"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443871"
 ---
 # <a name="how-to-create-resources-c"></a>方法: リソースを作成するC++()
 
@@ -115,7 +114,7 @@ ms.locfileid: "79426583"
 
 **リソースビュー** windows には、 C++ windows デスクトップアプリケーションプロジェクトにリソースを追加するための次のプロパティを持つ [リソースの追加] ダイアログボックスがあります。
 
-| プロパティ | Description |
+| プロパティ | 説明 |
 |---|---|
 | **リソースの種類** | 作成するリソースの種類を指定します。<br/><br/>カーソルとダイアログボックスのリソースカテゴリを展開すると、にある追加のリソースが表示さ*れます。\Microsoft Visual Studio \<version\>\\< LCID\>* 。または、。 .Rct ファイルを追加する必要がある場合は、ここに配置するか、別の[インクルードパス](../windows/how-to-specify-include-directories-for-resources.md)を指定します。 ツリーコントロールの最上位レベルに表示されるリソースは、Visual Studio によって提供される既定のリソースです。 .Rct ファイル内のリソースは、適切なカテゴリの2番目のレベルに表示されます。 追加できる .rct ファイルの数には、事前設定された制限はありません。<br/><br/> |
 | **[新規作成]** | **[リソースの種類]** ボックスで選択した種類に基づいてリソースを作成し、適切なエディターでリソースを開きます。<br/><br/>たとえば、ダイアログリソースを作成すると、[ダイアログエディター](../windows/dialog-editor.md)にリソースが表示されます。 |
@@ -183,7 +182,7 @@ ms.locfileid: "79426583"
 
 リソーススクリプトファイルを開いた状態で、メニューの **[ファイル]** にアクセスし、 **\<*Filename*>** を > 保存します。 場所を指定し、[ **OK]** を選択します。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 Win32
 

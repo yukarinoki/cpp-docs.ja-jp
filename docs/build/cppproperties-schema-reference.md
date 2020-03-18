@@ -3,12 +3,12 @@ title: CppProperties. json リファレンス
 ms.date: 08/09/2019
 helpviewer_keywords:
 - CppProperties.json file [C++]
-ms.openlocfilehash: d59fca412a26d08f88ccbda20a2c0444cf33b1cb
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: c276b566d8efc116c8789fd7ebec17dc2017a00d
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422842"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442557"
 ---
 # <a name="cpppropertiesjson-reference"></a>CppProperties. json リファレンス
 
@@ -28,7 +28,7 @@ CMake を使用しないオープンフォルダープロジェクトでは、In
 |`forcedInclude`|すべてのコンパイル単位に自動的にインクルードされるヘッダー (MSVC の /FI または clang の -include に対応します)|
 |`undefines`|未定義にするマクロのリスト (MSVC の /U に対応します)|
 |`intelliSenseMode`|使用する IntelliSense エンジン。 MSVC、gcc、または Clang に対して定義済みのアーキテクチャ固有のバリアントの1つを指定できます。|
-|`environments`|コマンドプロンプトで環境変数のように動作し、$ {env.<VARIABLE>} を使用してアクセスする、ユーザー定義の変数のセット マクロ.|
+|`environments`|コマンドプロンプトで環境変数のように動作し、$ {env\<VARIABLE >} マクロを使用してアクセスする、ユーザー定義の変数のセット。|
 
 ### <a name="intellisensemode-values"></a>intelliSenseMode の値
 
@@ -64,7 +64,7 @@ CMake を使用しないオープンフォルダープロジェクトでは、In
 
 Visual Studio には、対応する開発者コマンドプロンプトにC++マップされる、Microsoft 向けの次の定義済みの環境が用意されています。 これらの環境のいずれかを継承する場合は、グローバルプロパティを使用して環境変数を参照できます。このマクロ構文には、$ {env\<変数 >} を `env` します。
 
-|変数名|Description|
+|[変数名]|説明|
 |-----------|-----------------|
 |vsdev|既定の Visual Studio 環境|
 |msvc_x86|x86 ツールを使って、x86 用にコンパイルします|
@@ -77,7 +77,7 @@ Visual Studio には、対応する開発者コマンドプロンプトにC++マ
 
 Linux ワークロードがインストールされている場合、Linux および WSL をリモートでターゲットにするために次の環境変数を使用できます。
 
-|変数名|Description|
+|[変数名]|説明|
 |-----------|-----------------|
 |linux_x86|x86 Linux をリモートでターゲットにします|
 |linux_x64|x64 Linux をリモートでターゲットにします|
@@ -162,7 +162,7 @@ Linux ワークロードがインストールされている場合、Linux お�
 
 IntelliSense が表示されない場合、トラブルシューティングを行うには、 **[ツール]**  > [オプション > **テキストエディター** ] > [ **C++ C/**  > 詳細設定] に移動し、ログを **[有効]** にする を **[** **true** **]** に設定します。 最初に、**ログ記録レベル**を5に設定し、フィルターを8に**ログ記録**するようにします。
 
-![診断ログ](media/diagnostic-logging.png)
+![診断ログ記録](media/diagnostic-logging.png)
 
 出力は**出力ウィンドウ**にパイプ処理され、[**出力元C++の表示]** を選択すると表示されます。 出力には、IntelliSense が使用しようとしている実際のインクルードパスの一覧が含まれます。 パスが*Cppproperties. json*のパスと一致しない場合は、フォルダーを閉じて、キャッシュされた参照データを含む*vs*サブフォルダーを削除してみてください。
 

@@ -47,11 +47,11 @@ helpviewer_keywords:
 - std::moneypunct [C++], thousands_sep
 ms.assetid: cf2650da-3e6f-491c-95d5-23e57f582ee6
 ms.openlocfilehash: 7960ee8b5e9ce6b27494e896e38bbf6b5256fe7e
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78884007"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425425"
 ---
 # <a name="moneypunct-class"></a>moneypunct クラス
 
@@ -72,7 +72,7 @@ class moneypunct;
 *国際*\
 国際的な規則を確認するかどうかを指定するフラグ。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 すべてのロケールのファセットと同様、静的オブジェクト ID に最初に格納されている値は 0 です。 格納されている値に初めてアクセスしようとすると、**id** に一意の正の値が格納されます。
 
@@ -80,20 +80,20 @@ const 静的オブジェクト intl は、テンプレート パラメーター 
 
 ### <a name="constructors"></a>コンストラクター
 
-|コンストラクター|説明|
+|Constructor|Description|
 |-|-|
 |[moneypunct](#moneypunct)|`moneypunct` 型のオブジェクトのコンストラクター。|
 
 ### <a name="typedefs"></a>Typedefs
 
-|種類の名前。|説明|
+|種類の名前。|Description|
 |-|-|
 |[char_type](#char_type)|ロケールによって使用される文字を表すために使用される型。|
 |[string_type](#string_type)|`CharType` 型の文字を格納する文字列を表す型。|
 
 ### <a name="member-functions"></a>メンバー関数
 
-|メンバー関数|説明|
+|メンバー関数|Description|
 |-|-|
 |[curr_symbol](#curr_symbol)|通貨記号として使用する要素のロケール固有のシーケンスを返します。|
 |[decimal_point](#decimal_point)|小数点記号として使用する要素のロケール固有のシーケンスを返します。|
@@ -114,7 +114,7 @@ const 静的オブジェクト intl は、テンプレート パラメーター 
 |[positive_sign](#positive_sign)|正の記号として使用する要素のロケール固有のシーケンスを返します。|
 |[thousands_sep](#thousands_sep)|桁区切り記号として使用する要素のロケール固有のシーケンスを返します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<ロケール >
 
@@ -128,7 +128,7 @@ const 静的オブジェクト intl は、テンプレート パラメーター 
 typedef CharType char_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この型は、テンプレート パラメーター **CharType** のシノニムです。
 
@@ -144,7 +144,7 @@ string_type curr_symbol() const;
 
 通貨記号を含む文字列。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、[do_curr_symbol](#do_curr_symbol) を返します。
 
@@ -181,7 +181,7 @@ CharType decimal_point() const;
 
 小数点記号として使用する要素のロケール固有のシーケンス。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、[do_decimal_point](#do_decimal_point) を返します。
 
@@ -387,7 +387,7 @@ int frac_digits() const;
 
 小数点の右側に表示する桁数のロケール固有の数。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、[do_frac_digits](#do_frac_digits) を返します。
 
@@ -456,7 +456,7 @@ string grouping() const;
 
 小数点の左側の数字をグループ化する方法を決定するロケール固有の規則。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、[do_grouping](#do_grouping) を返します。
 
@@ -526,7 +526,7 @@ explicit moneypunct(size_t _Refs = 0);
 *_Refs*\
 オブジェクトのメモリ管理のタイプを指定するために使用する整数値。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 *_Refs*パラメーターに指定できる値とその意味は次のとおりです。
 
@@ -552,7 +552,7 @@ pattern neg_format() const;
 
 負の値の出力を書式設定するためのロケール固有の規則。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、[do_neg_format](#do_neg_format) を返します。
 
@@ -600,7 +600,7 @@ string_type negative_sign() const;
 
 負の記号として使用する要素のロケール固有のシーケンスを返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、[do_negative_sign](#do_negative_sign) を返します。
 
@@ -662,7 +662,7 @@ pattern pos_format() const;
 
 正の値の出力を書式設定するためのロケール固有の規則。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、[do_pos_format](#do_pos_format) を返します。
 
@@ -710,7 +710,7 @@ string_type positive_sign() const;
 
 正の記号として使用する要素のロケール固有のシーケンス。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、[do_positive_sign](#do_positive_sign) を返します。
 
@@ -768,7 +768,7 @@ French_France.1252 domestic positive sign:
 typedef basic_string<CharType, Traits, Allocator> string_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この型は、区切り記号のコピーを格納できるオブジェクトを持つクラステンプレート[basic_string](../standard-library/basic-string-class.md)の特殊化を表します。
 
@@ -784,7 +784,7 @@ CharType thousands_sep() const;
 
 桁区切り記号として使用する要素のロケール固有のシーケンス。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、[do_thousands_sep](#do_thousands_sep) を返します。
 
