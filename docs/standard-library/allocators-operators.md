@@ -6,11 +6,11 @@ f1_keywords:
 - allocators/std::operator==
 ms.assetid: b55d67cb-3c69-46bf-ad40-e845fb096c4e
 ms.openlocfilehash: b7429e298cdf14d727fc481db6c4a3bf8574b5e7
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78875959"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424057"
 ---
 # <a name="ltallocatorsgt-operators"></a>&lt;allocators&gt; 演算子
 
@@ -33,7 +33,7 @@ bool operator!=(
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
+|パラメーター|Description|
 |---------------|-----------------|
 |*left*|不等性をテストする一方のアロケーター オブジェクト。|
 |*right*|不等性をテストする一方のアロケーター オブジェクト。|
@@ -42,7 +42,7 @@ bool operator!=(
 
 アロケーター オブジェクトが等しくない場合は **true**、アロケーター オブジェクトが等しい場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 テンプレート演算子は `!(left == right)` を返します。
 
@@ -59,7 +59,7 @@ bool operator==(
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
+|パラメーター|Description|
 |---------------|-----------------|
 |*left*|等しいかどうかをテストする一方のアロケーター オブジェクト。|
 |*right*|等しいかどうかをテストする一方のアロケーター オブジェクト。|
@@ -68,7 +68,7 @@ bool operator==(
 
 アロケーター オブジェクトが等しい場合は **true**、アロケーター オブジェクトが等しくない場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このテンプレート演算子は `left.equals(right)` を返します。
 

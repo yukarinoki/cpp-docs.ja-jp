@@ -154,11 +154,11 @@ helpviewer_keywords:
 - CWindow class
 ms.assetid: fefa00c8-f053-4bcf-87bc-dc84f5386683
 ms.openlocfilehash: f6d52c8fce8e1437e87f9f251b7f5f050efa6fed
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78864747"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423220"
 ---
 # <a name="cwindow-class"></a>CWindow クラス
 
@@ -177,13 +177,13 @@ class CWindow
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[CWindow:: CWindow](#cwindow)|コンストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[CWindow:: Eiconicwindows](#arrangeiconicwindows)|最小化されたすべての子ウィンドウを整列します。|
 |[CWindow:: Attach](#attach)|ウィンドウを `CWindow` オブジェクトにアタッチします。|
@@ -331,19 +331,19 @@ class CWindow
 
 ### <a name="public-operators"></a>パブリック演算子
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[CWindow:: operator HWND](#operator_hwnd)|`CWindow` オブジェクトを HWND に変換します。|
 |[CWindow:: operator =](#operator_eq)|HWND を `CWindow` オブジェクトに割り当てます。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[CWindow:: m_hWnd](#m_hwnd)|`CWindow` オブジェクトに関連付けられているウィンドウへのハンドル。|
 |[CWindow:: rcDefault](#rcdefault)|既定のウィンドウのサイズが含まれます。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 `CWindow` には、ATL でウィンドウを操作するための基本機能が用意されています。 `CWindow` メソッドの多くは、単に Win32 API 関数の1つをラップしています。 たとえば、`CWindow::ShowWindow` と `ShowWindow`のプロトタイプを比較します。
 
@@ -374,7 +374,7 @@ class CWindow
 
 Windows の詳細については、「Windows SDK」の「 [windows](/windows/win32/winmsg/windows)とそれ以降のトピック」を参照してください。 ATL で windows を使用する方法の詳細については、「 [Atl ウィンドウクラス](../../atl/atl-window-classes.md)」を参照してください。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlwin. h
 
@@ -386,7 +386,7 @@ Windows の詳細については、「Windows SDK」の「 [windows](/windows/wi
 UINT ArrangeIconicWindows() throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「並べ替え[Eiconicwindows](/windows/win32/api/winuser/nf-winuser-arrangeiconicwindows) 」を参照してください。
 
@@ -415,7 +415,7 @@ void Attach(HWND hWndNew) throw();
 HDC BeginPaint(LPPAINTSTRUCT lpPaint) throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [Beginpaint](/windows/win32/api/winuser/nf-winuser-beginpaint) 」を参照してください。
 
@@ -431,7 +431,7 @@ Windows SDK の「 [Beginpaint](/windows/win32/api/winuser/nf-winuser-beginpaint
 BOOL BringWindowToTop() throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [Bringwindowtotop](/windows/win32/api/winuser/nf-winuser-bringwindowtotop) 」を参照してください。
 
@@ -468,7 +468,7 @@ BOOL CenterWindow(HWND hWndCenter = NULL) throw();
 BOOL ChangeClipboardChain(HWND hWndNewNext) throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [ChangeClipboardChain](/windows/win32/api/winuser/nf-winuser-changeclipboardchain) 」を参照してください。
 
@@ -480,7 +480,7 @@ Windows SDK の「 [ChangeClipboardChain](/windows/win32/api/winuser/nf-winuser-
 BOOL CheckDlgButton(int nIDButton, UINT nCheck) throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の[Checkdlgbutton](/windows/win32/api/winuser/nf-winuser-checkdlgbutton)を参照してください。
 
@@ -495,7 +495,7 @@ BOOL CheckRadioButton(
     int nIDCheckButton) throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の[Checkradiobutton](/windows/win32/api/winuser/nf-winuser-checkradiobutton)を参照してください。
 
@@ -507,7 +507,7 @@ Windows SDK の[Checkradiobutton](/windows/win32/api/winuser/nf-winuser-checkrad
 HWND ChildWindowFromPoint(POINT point) const throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [ChildWindowFromPoint](/windows/win32/api/winuser/nf-winuser-childwindowfrompoint) 」を参照してください。
 
@@ -519,7 +519,7 @@ Windows SDK の「 [ChildWindowFromPoint](/windows/win32/api/winuser/nf-winuser-
 HWND ChildWindowFromPoint(POINT point, UINT uFlags) const throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [Childwindowfrompointex](/windows/win32/api/winuser/nf-winuser-childwindowfrompointex) 」を参照してください。
 
@@ -532,7 +532,7 @@ BOOL ClientToScreen(LPPOINT lpPoint) const throw();
 BOOL ClientToScreen(LPRECT lpRect) const throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [Clienttoscreen](/windows/win32/api/winuser/nf-winuser-clienttoscreen) 」を参照してください。
 
@@ -584,7 +584,7 @@ HWND Create(
 
 成功した場合は、 [m_hWnd](#m_hwnd)によって指定された、新しく作成されたウィンドウへのハンドル。 それ以外の場合は NULL。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `CWindow::rcDefault` は `__declspec(selectany) RECT CWindow::rcDefault = {CW_USEDEFAULT, CW_USEDEFAULT, 0, 0};` と定義されます。
 
@@ -600,7 +600,7 @@ HWND Create(
 BOOL CreateCaret(HBITMAP pBitmap) throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [CreateCaret](/windows/win32/api/winuser/nf-winuser-createcaret) 」を参照してください。
 
@@ -612,7 +612,7 @@ Windows SDK の「 [CreateCaret](/windows/win32/api/winuser/nf-winuser-createcar
 BOOL CreateGrayCaret(int nWidth, int nHeight) throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [CreateCaret](/windows/win32/api/winuser/nf-winuser-createcaret) 」を参照してください。
 
@@ -626,7 +626,7 @@ Win32 関数のビットマップハンドルパラメーターに (HBITMAP) 1 �
 BOOL CreateSolidCaret(int nWidth, int nHeight) throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [CreateCaret](/windows/win32/api/winuser/nf-winuser-createcaret) 」を参照してください。
 
@@ -645,7 +645,7 @@ CWindow(HWND hWnd = NULL) throw();
 *hWnd*<br/>
 からウィンドウを処理するハンドル。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 [M_hWnd](#m_hwnd)メンバーを*hWnd*に初期化します。既定では NULL です。
 
@@ -667,7 +667,7 @@ HDWP DeferWindowPos(
     UINT uFlags) throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [DeferWindowPos](/windows/win32/api/winuser/nf-winuser-deferwindowpos) 」を参照してください。
 
@@ -679,7 +679,7 @@ Windows SDK の「 [DeferWindowPos](/windows/win32/api/winuser/nf-winuser-deferw
 BOOL DestroyWindow() throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [DestroyWindow](/windows/win32/api/winuser/nf-winuser-destroywindow) 」を参照してください。
 
@@ -717,7 +717,7 @@ int DlgDirList(
     UINT nFileType) throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [DlgDirList](/windows/win32/api/winuser/nf-winuser-dlgdirlistw) 」を参照してください。
 
@@ -733,7 +733,7 @@ int DlgDirListComboBox(
     UINT nFileType) throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [DlgDirListComboBox](/windows/win32/api/winuser/nf-winuser-dlgdirlistcomboboxw) 」を参照してください。
 
@@ -748,7 +748,7 @@ BOOL DlgDirSelect(
     int nIDListBox) throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [DlgDirSelectEx](/windows/win32/api/winuser/nf-winuser-dlgdirselectexw) 」を参照してください。
 
@@ -763,7 +763,7 @@ BOOL DlgDirSelectComboBox(
     int nIDComboBox) throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [DlgDirSelectComboBoxEx](/windows/win32/api/winuser/nf-winuser-dlgdirselectcomboboxexw) 」を参照してください。
 
@@ -775,7 +775,7 @@ Windows SDK の「 [DlgDirSelectComboBoxEx](/windows/win32/api/winuser/nf-winuse
 void DragAcceptFiles(BOOL bAccept = TRUE);
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [Dragacceptfiles](/windows/win32/api/shellapi/nf-shellapi-dragacceptfiles) 」を参照してください。
 
@@ -787,7 +787,7 @@ Windows SDK の「 [Dragacceptfiles](/windows/win32/api/shellapi/nf-shellapi-dra
 BOOL DrawMenuBar() throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [DrawMenuBar](/windows/win32/api/winuser/nf-winuser-drawmenubar) 」を参照してください。
 
@@ -799,7 +799,7 @@ Windows SDK の「 [DrawMenuBar](/windows/win32/api/winuser/nf-winuser-drawmenub
 BOOL EnableScrollBar(UINT uSBFlags, UINT uArrowFlags = ESB_ENABLE_BOTH) throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [EnableScrollBar](/windows/win32/api/winuser/nf-winuser-enablescrollbar) 」を参照してください。
 
@@ -811,7 +811,7 @@ Windows SDK の「 [EnableScrollBar](/windows/win32/api/winuser/nf-winuser-enabl
 BOOL EnableWindow(BOOL bEnable = TRUE) throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [Enablewindow](/windows/win32/api/winuser/nf-winuser-enablewindow) 」を参照してください。
 
@@ -827,7 +827,7 @@ Windows SDK の「 [Enablewindow](/windows/win32/api/winuser/nf-winuser-enablewi
 void EndPaint(LPPAINTSTRUCT lpPaint) throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [Endpaint](/windows/win32/api/winuser/nf-winuser-endpaint) 」を参照してください。
 
@@ -843,7 +843,7 @@ Windows SDK の「 [Endpaint](/windows/win32/api/winuser/nf-winuser-endpaint) �
 BOOL FlashWindow(BOOL bInvert) throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [FlashWindow](/windows/win32/api/winuser/nf-winuser-flashwindow) 」を参照してください。
 
@@ -855,7 +855,7 @@ Windows SDK の「 [FlashWindow](/windows/win32/api/winuser/nf-winuser-flashwind
 BOOL GetClientRect(LPRECT lpRect) const throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [Getclientrect](/windows/win32/api/winuser/nf-winuser-getclientrect) 」を参照してください。
 
@@ -871,7 +871,7 @@ Windows SDK の「 [Getclientrect](/windows/win32/api/winuser/nf-winuser-getclie
 HDC GetDC() throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [GetDC](/windows/win32/api/winuser/nf-winuser-getdc) 」を参照してください。
 
@@ -887,7 +887,7 @@ Windows SDK の「 [GetDC](/windows/win32/api/winuser/nf-winuser-getdc) 」を�
 HDC GetDCEx(HRGN hRgnClip, DWORD flags) throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [GetDCEx](/windows/win32/api/winuser/nf-winuser-getdcex) 」を参照してください。
 
@@ -908,7 +908,7 @@ HWND GetDescendantWindow(int nID) const throw();
 
 子孫ウィンドウへのハンドル。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `GetDescendantWindow` は、直下の子であるウィンドウだけでなく、子ウィンドウのツリー全体を検索します。
 
@@ -938,7 +938,7 @@ HRESULT GetDlgControl(
 
 成功した場合は S_OK を返し、有効な場合は HRESULT を返します。 たとえば、関数は、 *nID*によって指定されたコントロールが見つからない場合に E_FAIL を返します。また、コントロールが見つかった場合は E_NOINTERFACE を返しますが、 *iid*によって指定されたインターフェイスをサポートしていません。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このポインターを使用して、インターフェイスのメソッドを呼び出すことができます。
 
@@ -950,7 +950,7 @@ HRESULT GetDlgControl(
 int GetDlgCtrlID() const throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [Getdlgctrlid](/windows/win32/api/winuser/nf-winuser-getdlgctrlid) 」を参照してください。
 
@@ -980,7 +980,7 @@ HRESULT GetDlgHost(
 
 *Iid*によって指定されたウィンドウがコントロールコンテナーであり、要求されたインターフェイスを取得できる場合は S_OK を返します。 ウィンドウがコントロールコンテナーでない場合、または要求されたインターフェイスを取得できなかった場合は E_FAIL を返します。 指定された ID のウィンドウが見つからなかった場合、戻り値は HRESULT_FROM_WIN32 (ERROR_CONTROL_ID_NOT_FOUND) と等しくなります。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このポインターを使用して、インターフェイスのメソッドを呼び出すことができます。
 
@@ -992,7 +992,7 @@ HRESULT GetDlgHost(
 HWND GetDlgItem(int nID) const throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [Getdlgitem](/windows/win32/api/winuser/nf-winuser-getdlgitem) 」を参照してください。
 
@@ -1007,7 +1007,7 @@ UINT GetDlgItemInt(
     BOOL bSigned = TRUE) const throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [Getdlgitemint](/windows/win32/api/winuser/nf-winuser-getdlgitemint) 」を参照してください。
 
@@ -1026,11 +1026,11 @@ BOOL GetDlgItemText(
     BSTR& bstrText) const throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [Getdlgitemtext](/windows/win32/api/winuser/nf-winuser-getdlgitemtextw) 」を参照してください。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメソッドの2番目のバージョンでは、コントロールのテキストを BSTR にコピーできます。 このバージョンは、テキストが正常にコピーされた場合に TRUE を返します。それ以外の場合は FALSE。
 
@@ -1046,7 +1046,7 @@ DWORD GetExStyle() const throw();
 
 ウィンドウの拡張スタイル。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 通常のウィンドウスタイルを取得するには、 [GetStyle](#getstyle)を呼び出します。
 
@@ -1095,7 +1095,7 @@ HICON GetIcon(BOOL bBigIcon = TRUE) const;
 
 アイコンハンドル。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `GetIcon` によって[WM_GETICON](/windows/win32/winmsg/wm-geticon)メッセージがウィンドウに送信されます。
 
@@ -1107,7 +1107,7 @@ HICON GetIcon(BOOL bBigIcon = TRUE) const;
 HWND GetLastActivePopup() const throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [Getlastactivepopup](/windows/win32/api/winuser/nf-winuser-getlastactivepopup) 」を参照してください。
 
@@ -1119,7 +1119,7 @@ Windows SDK の「 [Getlastactivepopup](/windows/win32/api/winuser/nf-winuser-ge
 HMENU GetMenu() const throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [Getmenu](/windows/win32/api/winuser/nf-winuser-getmenu) 」を参照してください。
 
@@ -1131,7 +1131,7 @@ Windows SDK の「 [Getmenu](/windows/win32/api/winuser/nf-winuser-getmenu) 」�
 HWND GetNextDlgGroupItem(HWND hWndCtl, BOOL bPrevious = FALSE) const throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [GetNextDlgGroupItem](/windows/win32/api/winuser/nf-winuser-getnextdlggroupitem) 」を参照してください。
 
@@ -1143,7 +1143,7 @@ WS_TABSTOP スタイルを持つ直前または次のコントロールを取得
 HWND GetNextDlgTabItem(HWND hWndCtl, BOOL bPrevious = FALSE) const throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [GetNextDlgTabItem](/windows/win32/api/winuser/nf-winuser-getnextdlgtabitem) 」を参照してください。
 
@@ -1155,7 +1155,7 @@ Windows SDK の「 [GetNextDlgTabItem](/windows/win32/api/winuser/nf-winuser-get
 HWND GetParent() const throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [GetParent](/windows/win32/api/winuser/nf-winuser-getparent) 」を参照してください。
 
@@ -1171,7 +1171,7 @@ Windows SDK の「 [GetParent](/windows/win32/api/winuser/nf-winuser-getparent) 
 BOOL GetScrollInfo(int nBar, LPSCROLLINFO lpScrollInfo) throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [GetScrollInfo](/windows/win32/api/winuser/nf-winuser-getscrollinfo) 」を参照してください。
 
@@ -1183,7 +1183,7 @@ Windows SDK の「 [GetScrollInfo](/windows/win32/api/winuser/nf-winuser-getscro
 int GetScrollPos(int nBar) const throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [Getscrollpos](/windows/win32/api/winuser/nf-winuser-getscrollpos) 」を参照してください。
 
@@ -1198,7 +1198,7 @@ BOOL GetScrollRange(
     LPINT lpMaxPos) const throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [Getscrollrange](/windows/win32/api/winuser/nf-winuser-getscrollrange) 」を参照してください。
 
@@ -1214,7 +1214,7 @@ DWORD GetStyle() const throw();
 
 ウィンドウのスタイル。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 拡張ウィンドウスタイルを取得するには、 [Getexstyle](#getexstyle)を呼び出します。
 
@@ -1230,7 +1230,7 @@ DWORD GetStyle() const throw();
 HMENU GetSystemMenu(BOOL bRevert) const throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [GetSystemMenu](/windows/win32/api/winuser/nf-winuser-getsystemmenu) 」を参照してください。
 
@@ -1266,7 +1266,7 @@ HWND GetTopLevelWindow() const throw();
 HWND GetTopWindow() const throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [Gettopwindow](/windows/win32/api/winuser/nf-winuser-gettopwindow) 」を参照してください。
 
@@ -1282,7 +1282,7 @@ Windows SDK の「 [Gettopwindow](/windows/win32/api/winuser/nf-winuser-gettopwi
 BOOL GetUpdateRect(LPRECT lpRect, BOOL bErase = FALSE) throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [GetUpdateRect](/windows/win32/api/winuser/nf-winuser-getupdaterect) 」を参照してください。
 
@@ -1294,7 +1294,7 @@ Windows SDK の「 [GetUpdateRect](/windows/win32/api/winuser/nf-winuser-getupda
 int GetUpdateRgn(HRGN hRgn, BOOL bErase = FALSE) throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [GetUpdateRgn](/windows/win32/api/winuser/nf-winuser-getupdatergn) 」を参照してください。
 
@@ -1306,7 +1306,7 @@ Windows SDK の「 [GetUpdateRgn](/windows/win32/api/winuser/nf-winuser-getupdat
 HWND GetWindow(UINT nCmd) const throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「`GetWindow`」を参照してください。
 
@@ -1318,7 +1318,7 @@ Windows SDK の「`GetWindow`」を参照してください。
 DWORD GetWindowContextHelpId() const throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [GetWindowContextHelpId](/windows/win32/api/winuser/nf-winuser-getwindowcontexthelpid) 」を参照してください。
 
@@ -1330,7 +1330,7 @@ Windows SDK の「 [GetWindowContextHelpId](/windows/win32/api/winuser/nf-winuse
 HDC GetWindowDC() throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [GetWindowDC](/windows/win32/api/winuser/nf-winuser-getwindowdc) 」を参照してください。
 
@@ -1346,7 +1346,7 @@ Windows SDK の「 [GetWindowDC](/windows/win32/api/winuser/nf-winuser-getwindow
 LONG GetWindowLong(int nIndex) const throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の[Getwindowlong](/windows/win32/api/winuser/nf-winuser-getwindowlongw)を参照してください。
 
@@ -1361,11 +1361,11 @@ Windows SDK の[Getwindowlong](/windows/win32/api/winuser/nf-winuser-getwindowlo
 LONG_PTR GetWindowLongPtr(int nIndex) const throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [GetWindowLongPtr](/windows/win32/api/winuser/nf-winuser-getwindowlongptrw) 」を参照してください。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ポインターまたはハンドルを取得している場合、この関数は `CWindow::GetWindowLong` メソッドよりも優先されます。
 
@@ -1382,7 +1382,7 @@ Windows SDK の「 [GetWindowLongPtr](/windows/win32/api/winuser/nf-winuser-getw
 BOOL GetWindowPlacement(WINDOWPLACEMENT FAR* lpwndpl) const throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の[Getwindowplacement](/windows/win32/api/winuser/nf-winuser-getwindowplacement)を参照してください。
 
@@ -1394,7 +1394,7 @@ Windows SDK の[Getwindowplacement](/windows/win32/api/winuser/nf-winuser-getwin
 DWORD GetWindowProcessID() throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [Getwindowthreadprocessid](/windows/win32/api/winuser/nf-winuser-getwindowthreadprocessid) 」を参照してください。
 
@@ -1410,7 +1410,7 @@ Windows SDK の「 [Getwindowthreadprocessid](/windows/win32/api/winuser/nf-winu
 BOOL GetWindowRect(LPRECT lpRect) const throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [Getwindowrect](/windows/win32/api/winuser/nf-winuser-getwindowrect) 」を参照してください。
 
@@ -1422,7 +1422,7 @@ Windows SDK の「 [Getwindowrect](/windows/win32/api/winuser/nf-winuser-getwind
 int GetWindowRgn(HRGN hRgn) throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [Getwindowrgn](/windows/win32/api/winuser/nf-winuser-getwindowrgn) 」を参照してください。
 
@@ -1454,7 +1454,7 @@ int GetWindowText(CSimpleString& strText) const;
 
 テキストが正常にコピーされた場合、戻り値は TRUE です。それ以外の場合、戻り値は FALSE です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の[Getwindowtext](/windows/win32/api/winuser/nf-winuser-getwindowtextw)を参照してください。
 
@@ -1468,7 +1468,7 @@ Windows SDK の[Getwindowtext](/windows/win32/api/winuser/nf-winuser-getwindowte
 int GetWindowTextLength() const throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [GetWindowTextLength](/windows/win32/api/winuser/nf-winuser-getwindowtextlengthw) 」を参照してください。
 
@@ -1480,7 +1480,7 @@ Windows SDK の「 [GetWindowTextLength](/windows/win32/api/winuser/nf-winuser-g
 DWORD GetWindowThreadID() throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [Getwindowthreadprocessid](/windows/win32/api/winuser/nf-winuser-getwindowthreadprocessid) 」を参照してください。
 
@@ -1496,7 +1496,7 @@ Windows SDK の「 [Getwindowthreadprocessid](/windows/win32/api/winuser/nf-winu
 WORD GetWindowWord(int nIndex) const throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の[Getwindowlong](/windows/win32/api/winuser/nf-winuser-getwindowlongw)を参照してください。
 
@@ -1508,7 +1508,7 @@ Windows SDK の[Getwindowlong](/windows/win32/api/winuser/nf-winuser-getwindowlo
 void GotoDlgCtrl(HWND hWndCtrl) const throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [WM_NEXTDLGCTL](/windows/win32/dlgbox/wm-nextdlgctl) 」を参照してください。
 
@@ -1520,7 +1520,7 @@ Windows SDK の「 [WM_NEXTDLGCTL](/windows/win32/dlgbox/wm-nextdlgctl) 」を�
 BOOL HideCaret() throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [HideCaret](/windows/win32/api/winuser/nf-winuser-hidecaret) 」を参照してください。
 
@@ -1539,7 +1539,7 @@ BOOL HiliteMenuItem(
     UINT uHilite) throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [HiliteMenuItem](/windows/win32/api/winuser/nf-winuser-hilitemenuitem) 」を参照してください。
 
@@ -1551,7 +1551,7 @@ Windows SDK の「 [HiliteMenuItem](/windows/win32/api/winuser/nf-winuser-hilite
 BOOL Invalidate(BOOL bErase = TRUE) throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [InvalidateRect](/windows/win32/api/winuser/nf-winuser-invalidaterect) 」を参照してください。
 
@@ -1569,7 +1569,7 @@ Windows SDK の「 [InvalidateRect](/windows/win32/api/winuser/nf-winuser-invali
 BOOL InvalidateRect(LPCRECT lpRect, BOOL bErase = TRUE) throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [InvalidateRect](/windows/win32/api/winuser/nf-winuser-invalidaterect) 」を参照してください。
 
@@ -1581,11 +1581,11 @@ Windows SDK の「 [InvalidateRect](/windows/win32/api/winuser/nf-winuser-invali
 void InvalidateRgn(HRGN hRgn, BOOL bErase = TRUE) throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [InvalidateRgn](/windows/win32/api/winuser/nf-winuser-invalidatergn) 」を参照してください。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 **Void**の戻り値の型を指定します。 `InvalidateRgn` の Win32 関数は常に TRUE を返します。
 
@@ -1597,7 +1597,7 @@ Windows SDK の「 [InvalidateRgn](/windows/win32/api/winuser/nf-winuser-invalid
 BOOL IsChild(const HWND hWnd) const throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [Ischild](/windows/win32/api/winuser/nf-winuser-ischild) 」を参照してください。
 
@@ -1609,7 +1609,7 @@ Windows SDK の「 [Ischild](/windows/win32/api/winuser/nf-winuser-ischild) 」�
 BOOL IsDialogMessage(LPMSG lpMsg) throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [IsDialogMessage](/windows/win32/api/winuser/nf-winuser-isdialogmessagew) 」を参照してください。
 
@@ -1621,7 +1621,7 @@ Windows SDK の「 [IsDialogMessage](/windows/win32/api/winuser/nf-winuser-isdia
 UINT IsDlgButtonChecked(int nIDButton) const throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [Isdlgbuttonchecked](/windows/win32/api/winuser/nf-winuser-isdlgbuttonchecked) 」を参照してください。
 
@@ -1633,7 +1633,7 @@ Windows SDK の「 [Isdlgbuttonchecked](/windows/win32/api/winuser/nf-winuser-is
 BOOL IsIconic() const throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [Isiconic](/windows/win32/api/winuser/nf-winuser-isiconic) 」を参照してください。
 
@@ -1661,7 +1661,7 @@ BOOL IsParentDialog() throw();
 BOOL IsWindow() throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の[Iswindow](/windows/win32/api/winuser/nf-winuser-iswindow)を参照してください。
 
@@ -1677,7 +1677,7 @@ Windows SDK の[Iswindow](/windows/win32/api/winuser/nf-winuser-iswindow)を参�
 BOOL IsWindowEnabled() const throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK で[Iswindowenabled](/windows/win32/api/winuser/nf-winuser-iswindowenabled)を参照してください。
 
@@ -1693,7 +1693,7 @@ Windows SDK で[Iswindowenabled](/windows/win32/api/winuser/nf-winuser-iswindowe
 BOOL IsWindowVisible() const throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK で[Iswindowvisible](/windows/win32/api/winuser/nf-winuser-iswindowvisible)を参照してください。
 
@@ -1709,7 +1709,7 @@ Windows SDK で[Iswindowvisible](/windows/win32/api/winuser/nf-winuser-iswindowv
 BOOL IsWindowUnicode() throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [Iswindowunicode](/windows/win32/api/winuser/nf-winuser-iswindowunicode) 」を参照してください。
 
@@ -1725,7 +1725,7 @@ Windows SDK の「 [Iswindowunicode](/windows/win32/api/winuser/nf-winuser-iswin
 BOOL IsZoomed() const throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [Iszoomed](/windows/win32/api/winuser/nf-winuser-iszoomed) 」を参照してください。
 
@@ -1737,7 +1737,7 @@ Windows SDK の「 [Iszoomed](/windows/win32/api/winuser/nf-winuser-iszoomed) �
 BOOL KillTimer(UINT nIDEvent) throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 「Windows SDK での[「」を](/windows/win32/api/winuser/nf-winuser-killtimer)参照してください。
 
@@ -1758,7 +1758,7 @@ BOOL LockWindowUpdate(BOOL bLock = TRUE) throw();
 
 ウィンドウが正常にロックされた場合は TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 *BLock*が TRUE の場合、このメソッドは[m_hWnd](#m_hwnd)を Win32 関数に渡します。それ以外の場合は、NULL を渡します。
 
@@ -1785,7 +1785,7 @@ int MapWindowPoints(
     LPRECT lpRect) const throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [Mapwindowpoints](/windows/win32/api/winuser/nf-winuser-mapwindowpoints) 」を参照してください。
 
@@ -1802,7 +1802,7 @@ int MessageBox(
     UINT nType = MB_OK) throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の[MessageBox](/windows/win32/api/winuser/nf-winuser-messagebox)を参照してください。
 
@@ -1836,7 +1836,7 @@ BOOL ModifyStyle(
 
 ウィンドウスタイルが変更された場合は TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 追加または削除するスタイルは、ビットごとの OR ( &#124; ) 演算子を使用して組み合わせることができます。 使用可能なウィンドウスタイルについては、Windows SDKfor の[CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww)関数を参照してください。
 
@@ -1882,7 +1882,7 @@ BOOL ModifyStyleEx(
 
 拡張ウィンドウスタイルが変更された場合は TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 追加または削除するスタイルは、ビットごとの OR ( &#124; ) 演算子を使用して組み合わせることができます。 使用できる拡張スタイルについては、Windows SDKfor の[CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)関数を参照してください。
 
@@ -1919,7 +1919,7 @@ BOOL MoveWindow(
     BOOL bRepaint = TRUE) throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 トップレベルウィンドウオブジェクトの場合、x および y パラメーターは画面の左上隅を基準とした相対値です。 子ウィンドウオブジェクトの場合は、親ウィンドウのクライアント領域の左上隅を基準とした相対的なオブジェクトです。
 
@@ -1933,7 +1933,7 @@ BOOL MoveWindow(
 void NextDlgCtrl() const throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [WM_NEXTDLGCTL](/windows/win32/dlgbox/wm-nextdlgctl) 」を参照してください。
 
@@ -1945,7 +1945,7 @@ Windows SDK の「 [WM_NEXTDLGCTL](/windows/win32/dlgbox/wm-nextdlgctl) 」を�
 BOOL OpenClipboard() throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の[Openclipboard](/windows/win32/api/winuser/nf-winuser-openclipboard)を参照してください。
 
@@ -1976,7 +1976,7 @@ BOOL PostMessage(
     LPARAM lParam = 0) throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [PostMessage](/windows/win32/api/winuser/nf-winuser-postmessagew) 」を参照してください。
 
@@ -1994,7 +1994,7 @@ Windows SDK の「 [PostMessage](/windows/win32/api/winuser/nf-winuser-postmessa
 void PrevDlgCtrl() const throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [WM_NEXTDLGCTL](/windows/win32/dlgbox/wm-nextdlgctl) 」を参照してください。
 
@@ -2075,7 +2075,7 @@ BOOL RedrawWindow(
 throw()
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [Redrawwindow](/windows/win32/api/winuser/nf-winuser-redrawwindow) 」を参照してください。
 
@@ -2091,7 +2091,7 @@ Windows SDK の「 [Redrawwindow](/windows/win32/api/winuser/nf-winuser-redrawwi
 int ReleaseDC(HDC hDC);
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [ReleaseDC](/windows/win32/api/winuser/nf-winuser-releasedc) 」を参照してください。
 
@@ -2130,7 +2130,7 @@ BOOL ScreenToClient(LPPOINT lpPoint) const throw();
 BOOL ScreenToClient(LPRECT lpRect) const throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の[Screentoclient](/windows/win32/api/winuser/nf-winuser-screentoclient)を参照してください。
 
@@ -2148,7 +2148,7 @@ BOOL ScrollWindow(
     LPCRECT lpClipRect = NULL) throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [ScrollWindow](/windows/win32/api/winuser/nf-winuser-scrollwindow) 」を参照してください。
 
@@ -2167,7 +2167,7 @@ int ScrollWindowEx(
     UINT flags) throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [ScrollWindowEx](/windows/win32/api/winuser/nf-winuser-scrollwindowex) 」を参照してください。
 
@@ -2183,7 +2183,7 @@ LRESULT SendDlgItemMessage(
     LPARAM lParam = 0) throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [SendDlgItemMessage](/windows/win32/api/winuser/nf-winuser-senddlgitemmessagew) 」を参照してください。
 
@@ -2204,7 +2204,7 @@ static LRESULT SendMessage(
     LPARAM lParam) throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [SendMessage](/windows/win32/api/winuser/nf-winuser-sendmessage) 」を参照してください。
 
@@ -2238,7 +2238,7 @@ void SendMessageToDescendants(
 *bDeep*<br/>
 からTRUE (既定値) の場合、メッセージはすべての子孫ウィンドウに送信されます。それ以外の場合は、直接の子ウィンドウにのみ送信されます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 *Bdeep*が TRUE の場合、他のすべての子孫ウィンドウにもメッセージが送信されます。
 
@@ -2253,7 +2253,7 @@ BOOL SendNotifyMessage(
     LPARAM lParam = 0) throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [Sendnotifymessage](/windows/win32/api/winuser/nf-winuser-sendnotifymessagew) 」を参照してください。
 
@@ -2267,7 +2267,7 @@ Windows SDK の「 [Sendnotifymessage](/windows/win32/api/winuser/nf-winuser-sen
 HWND SetActiveWindow() throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [SetActiveWindow](/windows/win32/api/winuser/nf-winuser-setactivewindow) 」を参照してください。
 
@@ -2283,7 +2283,7 @@ Windows SDK の「 [SetActiveWindow](/windows/win32/api/winuser/nf-winuser-setac
 HWND SetCapture() throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [SetCapture](/windows/win32/api/winuser/nf-winuser-setcapture) 」を参照してください。
 
@@ -2295,7 +2295,7 @@ Windows SDK の「 [SetCapture](/windows/win32/api/winuser/nf-winuser-setcapture
 HWND SetClipboardViewer() throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [Setクリップボードビューアー](/windows/win32/api/winuser/nf-winuser-setclipboardviewer) 」を参照してください。
 
@@ -2327,7 +2327,7 @@ BOOL SetDlgItemInt(
     BOOL bSigned = TRUE) throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [Setdlgitemint](/windows/win32/api/winuser/nf-winuser-setdlgitemint) 」を参照してください。
 
@@ -2339,7 +2339,7 @@ Windows SDK の「 [Setdlgitemint](/windows/win32/api/winuser/nf-winuser-setdlgi
 BOOL SetDlgItemText(int nID, LPCTSTR lpszString) throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [Setdlgitemtext](/windows/win32/api/winuser/nf-winuser-setdlgitemtextw) 」を参照してください。
 
@@ -2351,7 +2351,7 @@ Windows SDK の「 [Setdlgitemtext](/windows/win32/api/winuser/nf-winuser-setdlg
 HWND SetFocus() throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [SetFocus](/windows/win32/api/winuser/nf-winuser-setfocus) 」を参照してください。
 
@@ -2415,7 +2415,7 @@ HICON SetIcon(HICON hIcon, BOOL bBigIcon = TRUE) throw();
 
 前のアイコンへのハンドル。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `SetIcon` によって[WM_SETICON](/windows/win32/winmsg/wm-seticon)メッセージがウィンドウに送信されます。
 
@@ -2427,7 +2427,7 @@ HICON SetIcon(HICON hIcon, BOOL bBigIcon = TRUE) throw();
 BOOL SetMenu(HMENU hMenu) throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [Setmenu](/windows/win32/api/winuser/nf-winuser-setmenu) 」を参照してください。
 
@@ -2439,7 +2439,7 @@ Windows SDK の「 [Setmenu](/windows/win32/api/winuser/nf-winuser-setmenu) 」�
 HWND SetParent(HWND hWndNewParent) throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [Setparent](/windows/win32/api/winuser/nf-winuser-setparent) 」を参照してください。
 
@@ -2460,7 +2460,7 @@ void SetRedraw(BOOL bRedraw = TRUE) throw();
 *より描画*<br/>
 から再描画フラグの状態を指定します。 TRUE (既定値) の場合、再描画フラグが設定されます。FALSE の場合、フラグはクリアされます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `SetRedraw` を呼び出して、変更を再描画できるようにするか、変更が再描画されないようにします。
 
@@ -2479,7 +2479,7 @@ int SetScrollInfo(
     BOOL bRedraw = TRUE) throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [SetScrollInfo](/windows/win32/api/winuser/nf-winuser-setscrollinfo) 」を参照してください。
 
@@ -2494,7 +2494,7 @@ int SetScrollPos(
     BOOL bRedraw = TRUE) throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [SetScrollPos](/windows/win32/api/winuser/nf-winuser-setscrollpos) 」を参照してください。
 
@@ -2510,7 +2510,7 @@ BOOL SetScrollRange(
     BOOL bRedraw = TRUE) throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [SetScrollRange](/windows/win32/api/winuser/nf-winuser-setscrollrange) 」を参照してください。
 
@@ -2525,7 +2525,7 @@ UINT SetTimer(
     void (CALLBACK* lpfnTimer)(HWND, UINT, UINT, DWORD) = NULL) throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [SetTimer](/windows/win32/api/winuser/nf-winuser-settimer) 」を参照してください。
 
@@ -2537,7 +2537,7 @@ Windows SDK の「 [SetTimer](/windows/win32/api/winuser/nf-winuser-settimer) �
 BOOL SetWindowContextHelpId(DWORD dwContextHelpId) throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [SetWindowContextHelpId](/windows/win32/api/winuser/nf-winuser-setwindowcontexthelpid) 」を参照してください。
 
@@ -2549,7 +2549,7 @@ Windows SDK の「 [SetWindowContextHelpId](/windows/win32/api/winuser/nf-winuse
 LONG SetWindowLong(int nIndex, LONG dwNewLong) throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [SetWindowLong](/windows/win32/api/winuser/nf-winuser-setwindowlongw) 」を参照してください。
 
@@ -2564,7 +2564,7 @@ Windows SDK の「 [SetWindowLong](/windows/win32/api/winuser/nf-winuser-setwind
 LONG_PTR SetWindowLongPtr(int nIndex, LONG_PTR dwNewLong) throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [SetWindowLongPtr](/windows/win32/api/winuser/nf-winuser-setwindowlongptrw) 」を参照してください。
 
@@ -2578,7 +2578,7 @@ Windows SDK の「 [SetWindowLongPtr](/windows/win32/api/winuser/nf-winuser-setw
 BOOL SetWindowPlacement(const WINDOWPLACEMENT FAR* lpwndpl);
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [SetWindowPlacement](/windows/win32/api/winuser/nf-winuser-setwindowplacement) 」を参照してください。
 
@@ -2601,7 +2601,7 @@ BOOL SetWindowPos(
     UINT nFlags) throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [SetWindowPos](/windows/win32/api/winuser/nf-winuser-setwindowpos) 」を参照してください。
 
@@ -2615,7 +2615,7 @@ Windows SDK の「 [SetWindowPos](/windows/win32/api/winuser/nf-winuser-setwindo
 int SetWindowRgn(HRGN hRgn, BOOL bRedraw = FALSE) throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [SetWindowRgn](/windows/win32/api/winuser/nf-winuser-setwindowrgn) 」を参照してください。
 
@@ -2627,7 +2627,7 @@ Windows SDK の「 [SetWindowRgn](/windows/win32/api/winuser/nf-winuser-setwindo
 BOOL SetWindowText(LPCTSTR lpszString) throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [SetWindowText](/windows/win32/api/winuser/nf-winuser-setwindowtextw) 」を参照してください。
 
@@ -2643,7 +2643,7 @@ Windows SDK の「 [SetWindowText](/windows/win32/api/winuser/nf-winuser-setwind
 WORD SetWindowWord(int nIndex, WORD wNewWord) throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [SetWindowLong](/windows/win32/api/winuser/nf-winuser-setwindowlongw) 」を参照してください。
 
@@ -2655,7 +2655,7 @@ Windows SDK の「 [SetWindowLong](/windows/win32/api/winuser/nf-winuser-setwind
 BOOL ShowCaret() throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [Showcaret](/windows/win32/api/winuser/nf-winuser-showcaret) 」を参照してください。
 
@@ -2671,7 +2671,7 @@ Windows SDK の「 [Showcaret](/windows/win32/api/winuser/nf-winuser-showcaret) 
 BOOL ShowOwnedPopups(BOOL bShow = TRUE) throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [ShowOwnedPopups](/windows/win32/api/winuser/nf-winuser-showownedpopups) 」を参照してください。
 
@@ -2683,7 +2683,7 @@ Windows SDK の「 [ShowOwnedPopups](/windows/win32/api/winuser/nf-winuser-showo
 BOOL ShowScrollBar(UINT nBar, BOOL bShow = TRUE) throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [Showscrollbar](/windows/win32/api/winuser/nf-winuser-showscrollbar) 」を参照してください。
 
@@ -2695,7 +2695,7 @@ Windows SDK の「 [Showscrollbar](/windows/win32/api/winuser/nf-winuser-showscr
 BOOL ShowWindow(int nCmdShow) throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [ShowWindow](/windows/win32/api/winuser/nf-winuser-showwindow) 」を参照してください。
 
@@ -2711,7 +2711,7 @@ Windows SDK の「 [ShowWindow](/windows/win32/api/winuser/nf-winuser-showwindow
 BOOL ShowWindowAsync(int nCmdShow) throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [Showwindowasync](/windows/win32/api/winuser/nf-winuser-showwindowasync) 」を参照してください。
 
@@ -2723,7 +2723,7 @@ Windows SDK の「 [Showwindowasync](/windows/win32/api/winuser/nf-winuser-showw
 BOOL UpdateWindow() throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [Updatewindow](/windows/win32/api/winuser/nf-winuser-updatewindow) 」を参照してください。
 
@@ -2739,7 +2739,7 @@ Windows SDK の「 [Updatewindow](/windows/win32/api/winuser/nf-winuser-updatewi
 BOOL ValidateRect(LPCRECT lpRect) throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [ValidateRect](/windows/win32/api/winuser/nf-winuser-validaterect) 」を参照してください。
 
@@ -2751,7 +2751,7 @@ Windows SDK の「 [ValidateRect](/windows/win32/api/winuser/nf-winuser-validate
 BOOL ValidateRgn(HRGN hRgn) throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [ValidateRgn](/windows/win32/api/winuser/nf-winuser-validatergn) 」を参照してください。
 
@@ -2766,7 +2766,7 @@ BOOL WinHelp(
     DWORD dwData = 0) throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows SDK の「 [WinHelp](/windows/win32/api/winuser/nf-winuser-winhelpw) 」を参照してください。
 

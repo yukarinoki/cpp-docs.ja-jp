@@ -10,17 +10,17 @@ helpviewer_keywords:
 - else keyword [C++]
 ms.assetid: f8c45cde-6bce-42ae-81db-426b3dbd4caa
 ms.openlocfilehash: 0e9de2d39e09e148c7e4f3ea82c3dadb173c2d0c
-ms.sourcegitcommit: 20a1356193fbe0ddd1002e798b952917eafc3439
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68661636"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423772"
 ---
 # <a name="if-else-statement-c"></a>if-else ステートメント (C++)
 
 条件分岐を制御します。 If*ブロック*内のステートメントは、 *if 式*が0以外の値 (または TRUE) に評価される場合にのみ実行されます。 *Expression*の値が0以外の場合は、*ステートメント*とブロック内の他のすべてのステートメントが実行され、else ブロック (存在する場合) がスキップされます。 *Expression*の値が0の場合は、if ブロックがスキップされ、else ブロック (存在する場合) が実行されます。 0以外に評価される式は、
 
-- true
+- TRUE
 - null 以外のポインター。
 - 0以外の算術値。
 - 算術、ブール型、またはポインター型への明確な変換を定義するクラス型。 (変換の詳細については、「[標準変換](../cpp/standard-conversions.md)」を参照してください)。
@@ -113,7 +113,7 @@ int main()
 
 ## <a name="if_with_init"></a>if ステートメントと初期化子
 
-**Visual Studio 2017 バージョン15.3 以降**( [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)で使用可能):**If**ステートメントには、名前付き変数を宣言して初期化する式を含めることもできます。 変数が if ブロックのスコープ内でのみ必要な場合は、この形式の if ステートメントを使用します。
+**Visual Studio 2017 バージョン15.3 以降**( [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)で利用可能): **if**ステートメントに、名前付き変数を宣言して初期化する式を含めることもできます。 変数が if ブロックのスコープ内でのみ必要な場合は、この形式の if ステートメントを使用します。
 
 ## <a name="example"></a>例
 
@@ -161,11 +161,11 @@ int main()
 
 **If**ステートメントのすべての形式で、構造体以外の任意の値を持つことができる*expression*は、すべての副作用を含めて評価されます。 *ステートメント*s に[break](../cpp/break-statement-cpp.md)、 [continue](../cpp/continue-statement-cpp.md)、または[goto](../cpp/goto-statement-cpp.md)が含まれて**いる場合**を除き、if ステートメントからプログラムの次のステートメントに制御が渡されます。
 
-`if...else`ステートメントの**else**句は、対応する**else**ステートメントを持たない、同じスコープ内の最も近い**if**ステートメントに関連付けられています。
+`if...else` ステートメントの**else**句は、対応する**else**ステートメントが含まれていない同じスコープ内の最も近い**if**ステートメントに関連付けられています。
 
-## <a name="a-nameif_constexpr-if-constexpr-statements"></a><a name="if_constexpr">constexpr ステートメントの場合
+## <a name="a-nameif_constexpr-if-constexpr-statements"></a><a name="if_constexpr"> constexpr ステートメント
 
-**Visual Studio 2017 バージョン15.3 以降**( [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)で使用可能):関数テンプレートでは、 **if constexpr**ステートメントを使用して、複数の関数オーバーロードに頼ることなく、コンパイル時の分岐決定を行うことができます。 たとえば、パラメーターのアンパックを処理する1つの関数を記述できます (ゼロパラメーターのオーバーロードは必要ありません)。
+**Visual Studio 2017 バージョン15.3 以降**( [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)で利用可能): 関数テンプレートで**は、if constexpr**ステートメントを使用して、複数の関数オーバーロードに頼ることなく、コンパイル時の分岐決定を行うことができます。 たとえば、パラメーターのアンパックを処理する1つの関数を記述できます (ゼロパラメーターのオーバーロードは必要ありません)。
 
 ```cpp
 template <class T, class... Rest>
@@ -186,7 +186,7 @@ void f(T&& t, Rest&&... r)
 }
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [選択ステートメント](../cpp/selection-statements-cpp.md)<br/>
 [キーワード](../cpp/keywords-cpp.md)<br/>

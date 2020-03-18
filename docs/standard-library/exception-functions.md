@@ -25,11 +25,11 @@ helpviewer_keywords:
 - std::uncaught_exception [C++]
 - std::unexpected [C++]
 ms.openlocfilehash: 34a34c48be8bb0e319a7d0eebeccba805cafbc1f
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78854908"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424825"
 ---
 # <a name="ltexceptiongt-functions"></a>&lt;exception&gt; 関数
 
@@ -45,7 +45,7 @@ exception_ptr current_exception();
 
 現在の例外を指す [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) オブジェクト。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 catch ブロックで `current_exception` 関数を呼び出します。 例外が処理中で、catch ブロックで例外をキャッチできる場合、`current_exception` 関数は、例外を参照する `exception_ptr` オブジェクトを返します。 それ以外の場合、関数は null `exception_ptr` オブジェクトを返します。
 
@@ -73,7 +73,7 @@ template <class E>
 
 *以外*のの現在の例外のコピーを指す[exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)オブジェクト。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `make_exception_ptr` 関数を呼び出すことは、C++ 例外をスローし、その例外を catch ブロック内でキャッチしてから、[current_exception](../standard-library/exception-functions.md#current_exception) 関数を呼び出し、例外を参照する `exception_ptr` オブジェクトを返すことと同じです。 `make_exception_ptr` 関数の Microsoft 実装は、例外のスローとキャッチよりも効果的です。
 
@@ -92,7 +92,7 @@ void rethrow_exception(exception_ptr P);
 *P*\
 再スローするためにキャッチされる例外。 *P*が null [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)の場合、関数は[std:: bad_exception](../standard-library/bad-exception-class.md)をスローします。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 キャッチした例外を `exception_ptr` オブジェクトに保存すると、プライマリ スレッドはオブジェクトを処理できます。 プライマリ スレッドで、引数として `rethrow_exception` オブジェクトを指定して `exception_ptr` 関数を呼び出します。 `rethrow_exception` 関数は `exception_ptr` オブジェクトから例外を抽出し、プライマリ スレッドのコンテキストで例外をスローします。
 
@@ -121,7 +121,7 @@ terminate_handler set_terminate(terminate_handler fnew) throw();
 
 終了時に呼び出されていた、以前の関数のアドレス。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 関数は、新しい[terminate_handler](../standard-library/exception-typedefs.md#terminate_handler)を関数 * *fnew*として確立します。 したがって、 *fnew*を null ポインターにすることはできません。 この関数は、以前の終了ハンドラーのアドレスを返します。
 
@@ -168,7 +168,7 @@ template <class E>
     void rethrow_if_nested(const E& e);
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ポリモーフィックなクラス型でない場合、または `nested_exception` にアクセスできないかあいまいである場合は、何の影響もありません。 それ以外の場合、は動的なキャストを実行します。
 
@@ -189,7 +189,7 @@ unexpected_handler set_unexpected(unexpected_handler fnew) throw();
 
 以前の `unexpected_handler` のアドレス。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 *fnew*を null ポインターにすることはできません。
 
@@ -228,7 +228,7 @@ int main()
 void terminate();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 関数は、 **void**型の関数である terminate ハンドラーを呼び出します。 `terminate` がプログラムによって直接呼び出された場合、終了ハンドラーは、 [set_terminate](../standard-library/exception-functions.md#set_terminate)の呼び出しによって最後に設定されたものになります。 Throw 式の評価中に、他のいくつかの理由によって `terminate` が呼び出された場合、終了ハンドラーは、throw 式を評価した直後に有効なものになります。
 
@@ -245,7 +245,7 @@ template <class T> [[noreturn]]
     void throw_with_nested(T&& t);
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 入れ子になった例外を使用して例外をスローします。
 
@@ -322,7 +322,7 @@ In Test::~Test("outside try block")
 void unexpected();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 C++ 標準では、関数が throw のリストにない例外をスローした場合に、`unexpected` を呼び出す必要があります。 現在の実装では、これをサポートしていません。 次の例では、予期しないハンドラーを呼び出す `unexpected` を直接呼び出します。
 

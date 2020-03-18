@@ -15,11 +15,11 @@ helpviewer_keywords:
 - CAtlDllModuleT class
 ms.assetid: 351d5767-8257-4878-94be-45a85e31a72d
 ms.openlocfilehash: be42915c6c2e941bc5fc1de78c5c7ac26ccca6e2
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78863198"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423442"
 ---
 # <a name="catldllmodulet-class"></a>CAtlDllModuleT クラス
 
@@ -41,14 +41,14 @@ class ATL_NO_VTABLE CAtlDllModuleT : public CAtlModuleT<T>
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[CAtlDllModuleT:: CAtlDllModuleT](#catldllmodulet)|コンストラクターです。|
 |[CAtlDllModuleT:: ~ CAtlDllModuleT](#dtor)|デストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[CAtlDllModuleT::D llCanUnloadNow](#dllcanunloadnow)|DLL をアンロードできるかどうかをテストします。|
 |[CAtlDllModuleT::D llGetClassObject](#dllgetclassobject)|クラスファクトリを返します。|
@@ -57,7 +57,7 @@ class ATL_NO_VTABLE CAtlDllModuleT : public CAtlModuleT<T>
 |[CAtlDllModuleT::D llUnregisterServer](#dllunregisterserver)|DLL 内のオブジェクトのシステムレジストリのエントリを削除します。|
 |[CAtlDllModuleT:: GetClassObject](#getclassobject)|クラスファクトリを返します。 [DllGetClassObject](#dllgetclassobject)によって呼び出されます。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 `CAtlDllModuleT` は、ダイナミックリンクライブラリ (DLL) 用のモジュールを表し、すべての DLL プロジェクトで使用される関数を提供します。 この[CAtlModuleT](../../atl/reference/catlmodulet-class.md)クラスの特殊化には、登録のサポートが含まれています。
 
@@ -73,7 +73,7 @@ ATL のモジュールの詳細については、「 [Atl モジュールクラ�
 
 `CAtlDllModuleT`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlbase. h
 
@@ -151,7 +151,7 @@ DLL_PROCESS_ATTACH に設定すると、DLL_THREAD_ATTACH と DLL_THREAD_DETACH 
 
 常に TRUE を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 DLL_THREAD_ATTACH と DLL_THREAD_DETACH の通知呼び出しを無効にすると、多数の Dll を持つマルチスレッドアプリケーションで、スレッドを頻繁に作成して削除する可能性があり、その Dll が attachment/デタッチのスレッドレベルの通知を必要としない場合に便利です。
 
@@ -215,7 +215,7 @@ HRESULT GetClassObject(
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメソッドは、 [Catldllmodulet::D llgetclassobject](#dllgetclassobject)によって呼び出され、旧バージョンとの互換性のために用意されています。
 

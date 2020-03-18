@@ -34,11 +34,11 @@ helpviewer_keywords:
 - source_block class
 ms.assetid: fbdd4146-e8d0-42e8-b714-fe633f69ffbf
 ms.openlocfilehash: 3a0d69bc2e2904b1dcf37a7e9891d95bd869a610
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866135"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424189"
 ---
 # <a name="source_block-class"></a>source_block クラス
 
@@ -63,20 +63,20 @@ class source_block : public ISource<typename _TargetLinkRegistry::type::type>;
 
 ### <a name="public-typedefs"></a>パブリック Typedef
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |`target_iterator`|接続されたターゲットをウォークする反復子。|
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[source_block](#ctor)|`source_block` オブジェクトを構築します。|
 |[~ source_block デストラクター](#dtor)|`source_block` オブジェクトを破棄します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[受入](#accept)|この `source_block` オブジェクトによって提供されたメッセージを受け取り、所有権を呼び出し元に転送します。|
 |[acquire_ref](#acquire_ref)|この `source_block` オブジェクトの参照カウントを取得して、削除されないようにします。|
@@ -90,7 +90,7 @@ class source_block : public ISource<typename _TargetLinkRegistry::type::type>;
 
 ### <a name="protected-methods"></a>プロテクト メソッド
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[accept_message](#accept_message)|派生クラスでオーバーライドされると、ソースによって提供されるメッセージを受け入れます。 メッセージブロックは、`_MsgId` を検証してメッセージを返すように、このメソッドをオーバーライドする必要があります。|
 |[async_send](#async_send)|メッセージを非同期にキューに入れ、伝達タスクを開始します (まだ完了していない場合)。|
@@ -109,7 +109,7 @@ class source_block : public ISource<typename _TargetLinkRegistry::type::type>;
 |[unlink_target_notification](#unlink_target_notification)|ターゲットがこの `source_block` オブジェクトからリンク解除されたことを通知するコールバック。|
 |[wait_for_outstanding_async_sends](#wait_for_outstanding_async_sends)|すべての非同期伝達が完了するまで待機します。 この伝達子に固有のスピン待機は、すべての非同期伝達がブロックを破棄する前に完了するまでの時間を確保するために、メッセージブロックのデストラクターで使用されます。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 このクラスによって提供されるリンク管理と同期を利用するには、メッセージブロックをこのブロックから派生させる必要があります。
 
@@ -119,7 +119,7 @@ class source_block : public ISource<typename _TargetLinkRegistry::type::type>;
 
 `source_block`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** agents.h
 
@@ -147,7 +147,7 @@ virtual message<_Target_type>* accept(
 
 呼び出し元が所有権を持っている `message` オブジェクトへのポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 パラメーター `_PTarget` が `NULL`場合、メソッドは[invalid_argument](../../../standard-library/invalid-argument-class.md)例外をスローします。
 
@@ -170,7 +170,7 @@ virtual message<_Target_type>* accept_message(runtime_object_identity _MsgId) = 
 
 現在呼び出し元に所有権があることを示すメッセージへのポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 所有権を譲渡するには、元のメッセージポインターが返される必要があります。 所有権を維持するには、メッセージペイロードのコピーを作成して返す必要があります。
 
@@ -182,7 +182,7 @@ virtual message<_Target_type>* accept_message(runtime_object_identity _MsgId) = 
 virtual void acquire_ref(_Inout_ ITarget<_Target_type> *);
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメソッドは、`link_target` メソッド中にこのソースにリンクされている `ITarget` オブジェクトによって呼び出されます。
 
@@ -221,7 +221,7 @@ virtual message<_Target_type>* consume(
 
 呼び出し元が所有権を持っている `message` オブジェクトへのポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 パラメーター `_PTarget` が `NULL`場合、メソッドは[invalid_argument](../../../standard-library/invalid-argument-class.md)例外をスローします。
 
@@ -246,7 +246,7 @@ virtual message<_Target_type>* consume_message(runtime_object_identity _MsgId) =
 
 現在呼び出し元に所有権があることを示すメッセージへのポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `accept`と似ていますが、常に `reserve`の呼び出しが前に続きます。
 
@@ -289,7 +289,7 @@ virtual void link_target(_Inout_ ITarget<_Target_type>* _PTarget);
 *_PTarget*<br/>
 この `source_block` オブジェクトにリンクする `ITarget` ブロックへのポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 パラメーター `_PTarget` が `NULL`場合、メソッドは[invalid_argument](../../../standard-library/invalid-argument-class.md)例外をスローします。
 
@@ -353,7 +353,7 @@ virtual void release(
 *_PTarget*<br/>
 `release` メソッドを呼び出しているターゲットブロックへのポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 パラメーター `_PTarget` が `NULL`場合、メソッドは[invalid_argument](../../../standard-library/invalid-argument-class.md)例外をスローします。
 
@@ -385,7 +385,7 @@ virtual void release_ref(_Inout_ ITarget<_Target_type>* _PTarget);
 *_PTarget*<br/>
 このメソッドを呼び出しているターゲットブロックへのポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメソッドは、このソースからリンク解除されている `ITarget` オブジェクトによって呼び出されます。 ソースブロックは、ターゲットブロック用に予約されているすべてのリソースを解放できます。
 
@@ -419,7 +419,7 @@ virtual bool reserve(
 
 メッセージが正常に予約されている場合は**true** 、それ以外の場合は**false** 。 予約は、さまざまな理由で失敗する可能性があります。これには、メッセージが既に別のターゲットによって既に予約または受け入れられている場合、ソースが予約を拒否する場合などがあります。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 パラメーター `_PTarget` が `NULL`場合、メソッドは[invalid_argument](../../../standard-library/invalid-argument-class.md)例外をスローします。
 
@@ -442,7 +442,7 @@ virtual bool reserve_message(runtime_object_identity _MsgId) = 0;
 
 メッセージが正常に予約されている場合は**true** 、それ以外の場合は**false** 。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `reserve` が呼び出された後、 **true**が返された場合は、メッセージの所有権を取得または解放するために、`consume` または `release` のいずれかを呼び出す必要があります。
 
@@ -496,7 +496,7 @@ virtual void unlink_target(_Inout_ ITarget<_Target_type>* _PTarget);
 *_PTarget*<br/>
 この `source_block` オブジェクトからリンクを解除する `ITarget` ブロックへのポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 パラメーター `_PTarget` が `NULL`場合、メソッドは[invalid_argument](../../../standard-library/invalid-argument-class.md)例外をスローします。
 

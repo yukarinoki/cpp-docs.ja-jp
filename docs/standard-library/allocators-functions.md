@@ -15,11 +15,11 @@ helpviewer_keywords:
 - std::CACHE_SUBALLOC [C++]
 - std::SYNC_DEFAULT [C++]
 ms.openlocfilehash: 5355661e370daf8826541c036f7301e5c25788d7
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78875924"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424081"
 ---
 # <a name="ltallocatorsgt-macros"></a>&lt;allocators&gt; マクロ
 
@@ -36,7 +36,7 @@ ms.locfileid: "78875924"
 #define ALLOCATOR_DECL(cache, sync, name) <alloc_template>
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 マクロを使用すると、テンプレート定義 `template <class Type> class name {.....}` および特殊化 `template <> class name<void> {.....}` が生成されます。これにより、同期フィルター `sync` と、`cache`型のキャッシュを使用するアロケータークラステンプレートが定義されます。
 
@@ -76,7 +76,7 @@ public:
 #define CACHE_CHUNKLIST <cache_class>
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ## <a name="cache_freelist"></a>  CACHE_FREELIST
 
@@ -86,7 +86,7 @@ public:
 #define CACHE_FREELIST(max) <cache_class>
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ## <a name="cache_suballoc"></a>  CACHE_SUBALLOC
 
@@ -96,7 +96,7 @@ public:
 #define CACHE_SUBALLOC <cache_class>
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ## <a name="sync_default"></a>  SYNC_DEFAULT
 
@@ -106,7 +106,7 @@ public:
 #define SYNC_DEFAULT <sync_template>
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 コンパイラがシングル スレッド アプリケーションとマルチ スレッド アプリケーションの両方のコンパイルをサポートしている場合、マクロはシングル スレッド アプリケーションには `stdext::allocators::sync_none` を生成し、それ以外の場合は `stdext::allocators::sync_shared` を生成します。
 

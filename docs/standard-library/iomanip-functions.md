@@ -27,11 +27,11 @@ helpviewer_keywords:
 - std::setprecision [C++]
 - std::setw [C++]
 ms.openlocfilehash: 944834e40a399622b5c85d95100d4ca3c3c2da93
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856593"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426955"
 ---
 # <a name="ltiomanipgt-functions"></a>&lt;iomanip&gt; 関数
 
@@ -59,7 +59,7 @@ T7 get_money(Money& amount, bool use_intl);
 *use_intl*\
 **True**の場合は、国際対応形式を使用します。 既定値は **false** です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 マニピュレーターは、ストリームから抽出されたときに `str`が、`str`に関連付けられたロケールファ `money_get` セットのメンバー関数 `get` を呼び出す `formatted input function` として動作するオブジェクトを返します。このオブジェクトは*use_intl*を使用して国際形式を示します。 成功した場合は、抽出された通貨値の*金額*がに格納されます。 その後、マニピュレーターが `str` を返します。
 
@@ -82,7 +82,7 @@ T10 put_time(struct tm *time_ptr, const Elem *time_format);
 *time_format*\
 時刻値を取得するために使用する目的の形式。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 マニピュレーターは、ストリーム `str` から抽出されたときに、時間構造体を示す `formatted input function` および null で終わる書式文字列の先頭を示す `get` を使用して、`time_get` に関連付けられているロケール ファセット `str` のメンバー関数 `tptr` を呼び出す `fmt` として動作するオブジェクトを返します。 成功した場合、この呼び出しによって、抽出された時刻フィールドに関連付けられている値が時間構造体に格納されます。 その後、マニピュレーターが `str` を返します。
 
@@ -105,9 +105,9 @@ T8 put_money(const Money& amount, bool use_intl);
 
 ### <a name="return-value"></a>戻り値
 
-`str` を返します。
+`str` が返されます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 マニピュレーターは、ストリーム `str` に挿入されたときに、`put` に関連付けられているロケール ファセット `money_put` のメンバー関数 `str` を呼び出す書式付き出力関数として動作するオブジェクトを返します。 成功した場合、呼び出しは、 *use_intl*を使用して `amount` 適切な形式で、fill 要素として国際形式と `str.fill()`を示します。 その後、マニピュレーターが `str` を返します。
 
@@ -130,7 +130,7 @@ T10 put_time(struct tm* time_ptr, const Elem* time_format);
 *time_format*\
 時刻値を書き込むための目的の形式。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 マニピュレーターは、ストリーム `str` に挿入されるときに、`formatted output function` として動作するオブジェクトを返します。 出力関数は、`put` に関連付けられているロケール ファセット `time_put` のメンバー関数 `str` を呼び出します。 出力関数は、 *time_ptr*を使用して時間構造を示し、 *time_format* null で終わる書式文字列の先頭を示します。 成功した場合、この呼び出しは、書式文字列からのリテラル テキストと時間構造体からの変換された値を挿入します。 その後、マニピュレーターが `str` を返します。
 
@@ -156,7 +156,7 @@ Std:: string、char\*、文字列リテラル、または未加工の文字列�
 *エスケープ*\
 文字列内のエスケープ シーケンスのエスケープ文字として使用する、ユーザー指定の文字またはワイド文字。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 「[挿入演算子と制御形式の使用](../standard-library/using-insertion-operators-and-controlling-format.md)」を参照してください。
 
@@ -432,7 +432,7 @@ T6 setw(streamsize Wide);
 
 マニピュレーターは、ストリーム `str`から抽出または挿入されるときに `str.`[width](../standard-library/ios-base-class.md#width)`(Wide)`を呼び出し、`str`を返すオブジェクトを返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 setw は、ストリーム内の次の要素についてのみ幅を設定します。幅を指定する各要素の前に setw を挿入する必要があります。
 

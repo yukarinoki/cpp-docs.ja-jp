@@ -30,11 +30,11 @@ helpviewer_keywords:
 - std::cref [C++]
 ms.assetid: c34d0b45-50a7-447a-9368-2210d06339a4
 ms.openlocfilehash: 546d8c61e875dd7c295e892359e39fa5a76867b4
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865562"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427093"
 ---
 # <a name="ltfunctionalgt-functions"></a>&lt;functional&gt; 関数
 
@@ -77,7 +77,7 @@ N 番目の引数の型。
 *tN*\
 N 番目の呼び出しの引数。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `FT, T1, T2, ..., TN` 型は、コピーによって構築可能である必要があります。また、`INVOKE(fn, t1, ..., tN)` は `w1, w2, ..., wN`の値に対して有効な式である必要があります。
 
@@ -173,7 +173,7 @@ template <class Operation, class Type>
 
 二項関数オブジェクトの最初の引数を*左*の値にバインドした結果として生成される単項関数オブジェクト。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 関数バインダーは、関数アダプターの一種です。 関数オブジェクトを返すため、特定の型の関数構成で使用して、より複雑で強力な式を作成できます。
 
@@ -267,7 +267,7 @@ template <class Operation, class Type>
 
 二項関数オブジェクトの2番目の引数を*right*にバインドした単項関数オブジェクトの結果。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 関数バインダーは、関数アダプターの一種です。 関数オブジェクトを返すため、特定の型の関数構成で使用して、より複雑で強力な式を作成できます。
 
@@ -377,7 +377,7 @@ struct bit_and<void>
 
 `Left & Right` の結果。 特殊化されたテンプレートは、結果の完全転送を行います。結果には `operator&` によって返された型が含まれます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `bit_and` ファンクターは、基本データ型の整数型、または二項 `operator&` を実装しているユーザー定義型に制限されます。
 
@@ -413,7 +413,7 @@ struct bit_not<void>
 
 `~ Right` の結果。 特殊化されたテンプレートは、結果の完全転送を行います。結果には `operator~` によって返された型が含まれます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `bit_not` ファンクターは、基本データ型の整数型、または二項 `operator~` を実装しているユーザー定義型に制限されます。
 
@@ -454,7 +454,7 @@ struct bit_or<void>
 
 `Left | Right` の結果。 特殊化されたテンプレートは、結果の完全転送を行います。結果には `operator|` によって返された型が含まれます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `bit_or` ファンクターは、基本データ型の整数型、または `operator|` を実装しているユーザー定義型に制限されます。
 
@@ -495,7 +495,7 @@ struct bit_xor<void>
 
 `Left ^ Right` の結果。 特殊化されたテンプレートは、結果の完全転送を行います。結果には `operator^` によって返された型が含まれます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `bit_xor` ファンクターは、基本データ型の整数型、または二項 `operator^` を実装しているユーザー定義型に制限されます。
 
@@ -519,7 +519,7 @@ reference_wrapper<const Ty> cref(const reference_wrapper<Ty>& arg);
 *arg*\
 ラップする引数。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 最初の関数は `reference_wrapper<const Ty>(arg.get())` を返します。 定数参照をラップするために使用します。 2 番目の関数は `reference_wrapper<const Ty>(arg)` を返します。 ラップされた参照を定数参照として再ラップするために使用します。
 
@@ -582,7 +582,7 @@ invoke_result_t<Callable, Args...>
 *仕様*\
 **Noexcept**指定 `std::is_nothrow_invocable_v<Callable, Args>)`。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 パラメーター*引数*を使用して、呼び出し可能オブジェクト*fn*を呼び出します。 実際には `INVOKE(std::forward<Callable>(fn), std::forward<Args>(args)...)`、擬似関数 `INVOKE(f, t1, t2, ..., tN)` は次のいずれかを意味します。
 
@@ -693,7 +693,7 @@ unspecified mem_fn(RTy Ty::*pm);
 *Ty*\
 メンバー関数ポインターの型。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このテンプレート関数は、単純な呼び出しラッパー `cw`を返します。これは、`cw(t, a2, ..., aN)` 式が `INVOKE(pm, t, a2, ..., aN)`と同じであるためです。 例外はスローされません。
 
@@ -949,7 +949,7 @@ unary_negate<UnaryPredicate> not1(const UnaryPredicate& predicate);
 
 変更される単項述語の否定である単項述語。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `unary_negate` が単項述語 `predicate(x)`から構築されている場合は、`!predicate(x)`が返されます。
 
@@ -1021,7 +1021,7 @@ binary_negate<BinaryPredicate> not2(const BinaryPredicate& func);
 
 変更される二項述語の否定である二項述語。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `binary_negate` が `binary_predicate(x, y)`バイナリ述語から構築されている場合は、`!binary_predicate(x, y)`が返されます。
 
@@ -1093,7 +1093,7 @@ template <class Callable>
 *func*\
 転送呼び出しラッパーを構築するために使用される呼び出し可能オブジェクト。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このテンプレート関数は、この exposition のみのクラスに基づいて、`return call_wrapper(std::forward<Callable>(func))`のような呼び出しラッパーを返します。
 
@@ -1202,7 +1202,7 @@ pointer_to_binary_function<Arg1, Arg2, Result, Result (*)(Arg1, Arg2)> ptr_fun(R
 
 2番目のテンプレート関数は、\<**Arg1**、 **Arg2**、 **Result**> (\* `pfunc`) [pointer_to_binary_function](../standard-library/pointer-to-binary-function-class.md)二項関数を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 関数ポインターは関数オブジェクトです。 パラメーターとして関数を想定している任意のアルゴリズムに渡すことができますが、適応性はありません。 その入れ子になった型に関する情報は、アダプターと共に使用するために必要です。たとえば、値をバインドしたり、それを否定したりすることができます。 `ptr_fun` ヘルパー関数による単項関数ポインターと二項関数ポインターの変換では、関数アダプターと共に単項関数ポインターおよび二項関数ポインターを使用できます。
 
@@ -1322,7 +1322,7 @@ template <class FT>
 *f2*\
 2 番目の関数オブジェクト。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `f1.swap(f2)`が返されます。
 

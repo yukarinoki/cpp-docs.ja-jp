@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::operator&lt;= (deque)
 - std::operator== (deque)
 ms.openlocfilehash: 868909ac4346a59cade3660f288a0f0e71bc4ed0
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883809"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424831"
 ---
 # <a name="ltdequegt-operators"></a>&lt;deque&gt; の演算子
 
@@ -45,7 +45,7 @@ bool operator!=(const deque<Type, Allocator>& left, const deque<Type, Allocator>
 
 deque オブジェクトが等しくない場合は **true**、deque オブジェクトが等しい場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 deque オブジェクト間の比較は、要素のペアの比較に基づいています。 2 つの deque オブジェクトは、同じ数の要素を持ち、各要素の値が同じである場合に等しくなります。 それ以外の場合は等しくありません。
 
@@ -96,7 +96,7 @@ bool operator<(const deque<Type, Allocator>& left, const deque<Type, Allocator>&
 
 演算子の左辺の deque が演算子の右辺の deque 未満である場合は **true**、それ以外の場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 deque オブジェクト間の比較は、要素のペアの比較に基づいています。 2 つのオブジェクト間の小なり関係は、最初の等しくない要素のペアの比較に基づいています。
 
@@ -151,7 +151,7 @@ bool operator<=(const deque<Type, Allocator>& left, const deque<Type, Allocator>
 
 演算子の左辺の deque が演算子の右辺の deque 以下である場合は **true**、それ以外の場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 deque オブジェクト間の比較は、要素のペアの比較に基づいています。 2 つのオブジェクト間の "以下" 関係は、最初の等しくない要素のペアの比較に基づいています。
 
@@ -206,7 +206,7 @@ bool operator==(const deque<Type, Allocator>& left, const deque<Type, Allocator>
 
 演算子の左辺の deque が演算子の右辺の deque と等しい場合は **true**、それ以外の場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 deque オブジェクト間の比較は、要素のペアの比較に基づいています。 2 つの deque は、同じ数の要素を持ち、各要素の値が同じである場合に等しくなります。 それ以外の場合は等しくありません。
 
@@ -264,7 +264,7 @@ bool operator>(const deque<Type, Allocator>& left, const deque<Type, Allocator>&
 
 演算子の左辺の deque が演算子の右辺の deque より大きい場合は **true**、それ以外の場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 deque オブジェクト間の比較は、要素のペアの比較に基づいています。 2 つのオブジェクト間の大なり関係は、最初の等しくない要素のペアの比較に基づいています。
 
@@ -320,7 +320,7 @@ bool operator>=(const deque<Type, Allocator>& left, const deque<Type, Allocator>
 
 演算子の左辺の deque が演算子の右辺の deque 以上である場合は **true**、それ以外の場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 deque オブジェクト間の比較は、要素のペアの比較に基づいています。 2 つのオブジェクト間の "以上" 関係は、最初の等しくない要素のペアの比較に基づいています。
 

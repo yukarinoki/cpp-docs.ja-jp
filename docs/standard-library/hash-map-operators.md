@@ -6,11 +6,11 @@ f1_keywords:
 - hash_map/std::operator==
 ms.assetid: 24b9bb9e-e983-4060-bce5-2c7c8161ee61
 ms.openlocfilehash: c4cc73feb3c8163a2be9f0122f57eaa0fb8ab3b8
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856697"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424729"
 ---
 # <a name="lthash_mapgt-operators"></a>&lt;hash_map&gt; 演算子
 
@@ -42,7 +42,7 @@ bool operator!=(const hash_map <Key, Type, Traits, Allocator>& left, const hash_
 
 hash_maps が等しくない場合は **true**、hash_maps が等しい場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 hash_map オブジェクト間の比較は、要素のペアの比較に基づいています。 2 つの hash_maps は、同じ数の要素を持ち、各要素の値が同じである場合に等しくなります。 それ以外の場合は等しくありません。
 
@@ -111,7 +111,7 @@ bool operator==(const hash_map <Key, Type, Traits, Allocator>& left, const hash_
 
 演算子の左辺の hash_map が演算子の右辺の hash_map と等しい場合は **true**、それ以外の場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 hash_map オブジェクト間の比較は、要素のペアの比較に基づいています。 2 つの hash_maps は、同じ数の要素を持ち、各要素の値が同じである場合に等しくなります。 それ以外の場合は等しくありません。
 
@@ -178,7 +178,7 @@ bool operator!=(const hash_multimap <Key, Type, Traits, Allocator>& left, const 
 
 hash_multimaps が等しくない場合は **true**、hash_multimaps が等しい場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 hash_multimap オブジェクト間の比較は、要素のペアの比較に基づいています。 2 つの hash_multimaps は、同じ数の要素を持ち、各要素の値が同じである場合に等しくなります。 それ以外の場合は等しくありません。
 
@@ -245,7 +245,7 @@ bool operator==(const hash_multimap <Key, Type, Traits, Allocator>& left, const 
 
 演算子の左辺の hash_multimap が演算子の右辺の hash_multimap と等しい場合は **true**、それ以外の場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 hash_multimap オブジェクト間の比較は、要素のペアの比較に基づいています。 2 つの hash_multimaps は、同じ数の要素を持ち、各要素の値が同じである場合に等しくなります。 それ以外の場合は等しくありません。
 

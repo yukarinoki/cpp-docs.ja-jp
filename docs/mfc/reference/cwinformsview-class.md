@@ -11,11 +11,11 @@ helpviewer_keywords:
 - CWinFormsView [MFC], GetControl
 ms.assetid: d597e397-6529-469b-88f5-7f65a6b9e895
 ms.openlocfilehash: f4a5e6b88527dad8606092ccebd4899bba5181f6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323308"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426289"
 ---
 # <a name="cwinformsview-class"></a>CWinFormsView クラス
 
@@ -31,39 +31,39 @@ class CWinFormsView : public CView;
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|名前|説明|
+|Name|Description|
 |----------|-----------------|
-|[CWinFormsView::CWinFormsView](#cwinformsview)|`CWinFormsView` オブジェクトを構築します。|
+|[CWinFormsView:: CWinFormsView](#cwinformsview)|`CWinFormsView` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|名前|説明|
+|Name|Description|
 |----------|-----------------|
-|[CWinFormsView::GetControl](#getcontrol)|Windows フォーム コントロールへのポインターを取得します。|
+|[CWinFormsView:: GetControl](#getcontrol)|Windows フォームコントロールへのポインターを取得します。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
-|名前||
+|Name||
 |----------|-|
-|[CWinFormsView::operator コントロール ^](#operator_control)|Windows フォーム コントロールへのポインターとして型をキャストします。|
+|[CWinFormsView:: operator コントロール ^](#operator_control)|型を Windows フォームコントロールへのポインターとしてキャストします。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-MFC を使用して、 `CWinFormsView` MFC ビュー内での .NET Framework Windows フォーム コントロールをホストするクラス。 コントロールは、ネイティブ ビューの子であるし、MFC ビューの全体のクライアント領域を占有します。 結果は、`CFormView`ビューで、Windows フォーム デザイナーを利用し、実行時に豊富なフォーム ベースのビューを作成することができます。
+MFC では、`CWinFormsView` クラスを使用して、MFC ビュー内の .NET Framework Windows フォームコントロールをホストします。 コントロールはネイティブビューの子であり、MFC ビューのクライアント領域全体を占有します。 結果は `CFormView` ビューに似ており、Windows フォームデザイナーと実行時間を利用して、豊富なフォームベースのビューを作成できます。
 
-Windows フォームの使用に関する詳細については、次を参照してください。 [MFC における Windows フォーム ユーザー コントロールを使用して](../../dotnet/using-a-windows-form-user-control-in-mfc.md)します。
-
-> [!NOTE]
->  MFC Windows フォームの統合は、MFC と動的にリンクするプロジェクトでのみ機能 (プロジェクトの AFXDLL が定義されている場合)。
+Windows フォームの使用方法の詳細については、「 [MFC での Windows フォームユーザーコントロールの使用](../../dotnet/using-a-windows-form-user-control-in-mfc.md)」を参照してください。
 
 > [!NOTE]
->  CWinFormsView は MFC スプリッター ウィンドウをサポートしていません ( [CSplitterWnd クラス](../../mfc/reference/csplitterwnd-class.md))。 現在のみ Windows フォームのスプリッター コントロールがサポートされています。
+>  MFC Windows フォーム統合は、MFC と動的にリンクするプロジェクト (AFXDLL が定義されているプロジェクト) でのみ機能します。
+
+> [!NOTE]
+>  CWinFormsView は MFC スプリッターウィンドウ ( [CSplitterWnd クラス](../../mfc/reference/csplitterwnd-class.md)) をサポートしていません。 現時点では、Windows フォームスプリッターコントロールのみがサポートされています。
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** afxwinforms.h
+**ヘッダー:** afxwinforms
 
-##  <a name="cwinformsview"></a>  CWinFormsView::CWinFormsView
+##  <a name="cwinformsview"></a>CWinFormsView:: CWinFormsView
 
 `CWinFormsView` オブジェクトを構築します。
 
@@ -74,19 +74,19 @@ CWinFormsView(System::Type^ pManagedViewType);
 ### <a name="parameters"></a>パラメーター
 
 *pManagedViewType*<br/>
-Windows フォーム ユーザー コントロールのデータ型へのポインター。
+Windows フォームユーザーコントロールのデータ型へのポインター。
 
 ### <a name="example"></a>例
 
-次の例では、`CUserView`クラスから継承`CWinFormsView`の型を渡すと`UserControl1`を`CWinFormsView`コンス トラクター。 `UserControl1` カスタム ビルド ControlLibrary1.dll コントロールです。
+次の例では、`CUserView` クラスは `CWinFormsView` から継承し、`UserControl1` の型を `CWinFormsView` コンストラクターに渡します。 `UserControl1` は、ControlLibrary1 のカスタムビルドコントロールです。
 
 [!code-cpp[NVC_MFC_Managed#1](../../mfc/reference/codesnippet/cpp/cwinformsview-class_1.h)]
 
 [!code-cpp[NVC_MFC_Managed#2](../../mfc/reference/codesnippet/cpp/cwinformsview-class_2.cpp)]
 
-##  <a name="getcontrol"></a>  CWinFormsView::GetControl
+##  <a name="getcontrol"></a>CWinFormsView:: GetControl
 
-Windows フォーム コントロールへのポインターを取得します。
+Windows フォームコントロールへのポインターを取得します。
 
 ```
 System::Windows::Forms::Control^ GetControl() const;
@@ -94,29 +94,29 @@ System::Windows::Forms::Control^ GetControl() const;
 
 ### <a name="return-value"></a>戻り値
 
-`System.Windows.Forms.Control` オブジェクトへのポインター。
+`System.Windows.Forms.Control` オブジェクトを指すポインターです。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-Windows フォームを使用する方法の例は、次を参照してください。 [MFC における Windows フォーム ユーザー コントロールを使用して](../../dotnet/using-a-windows-form-user-control-in-mfc.md)します。
+Windows フォームの使用方法の例については、「 [MFC での Windows フォームユーザーコントロールの使用](../../dotnet/using-a-windows-form-user-control-in-mfc.md)」を参照してください。
 
-##  <a name="operator_control"></a>  CWinFormsView::operator コントロール ^
+##  <a name="operator_control"></a>CWinFormsView:: operator コントロール ^
 
-Windows フォーム コントロールへのポインターとして型をキャストします。
+型を Windows フォームコントロールへのポインターとしてキャストします。
 
 ```
 operator System::Windows::Forms::Control^() const;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この演算子は、渡すことができます、`CWinFormsView`型の Windows フォーム コントロールへのポインターを受け取る関数をビュー<xref:System.Windows.Forms.Control>します。
+この演算子を使用すると、<xref:System.Windows.Forms.Control>型の Windows フォームコントロールへのポインターを受け取る関数に `CWinFormsView` ビューを渡すことができます。
 
 ### <a name="example"></a>例
 
-  参照してください[CWinFormsView::GetControl](#getcontrol)します。
+  「 [CWinFormsView:: GetControl](#getcontrol)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [階層図](../../mfc/hierarchy-chart.md)<br/>
 [CWinFormsControl クラス](../../mfc/reference/cwinformscontrol-class.md)<br/>

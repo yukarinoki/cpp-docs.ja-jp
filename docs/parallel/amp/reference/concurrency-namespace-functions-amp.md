@@ -14,11 +14,11 @@ f1_keywords:
 - amp/Concurrency::tile_static_memory_fence
 ms.assetid: 2bef0985-cb90-4ece-90b9-66529aec73c9
 ms.openlocfilehash: 90a23ce111f7307610de3f0ad4bcec05d8de27df
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855733"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424987"
 ---
 # <a name="concurrency-namespace-functions-amp"></a>コンカレンシー名前空間関数 (AMP)
 
@@ -43,7 +43,7 @@ inline void all_memory_fence(const tile_barrier& _Barrier) restrict(amp);
 ### <a name="parameters"></a>パラメーター
 
 *_Barrier*<br/>
-`tile_barrier` オブジェクトです。
+`tile_barrier` オブジェクト。
 
 ## <a name="amp_uninitialize"></a>amp_uninitialize
 

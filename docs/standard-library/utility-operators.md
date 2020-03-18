@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::operator&lt;= (utility)
 - std::operator== (utility)
 ms.openlocfilehash: ec6c996487dc2e6c5ce628fe5e080b4f601479d9
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78854867"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427597"
 ---
 # <a name="ltutilitygt-operators"></a>&lt;utility&gt; 演算子
 
@@ -52,7 +52,7 @@ template <class T, class U>
 
 ペアが等しくない場合には **true**。等しい場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ペアのそれぞれの要素が等しい場合に、ペアが等しくなります。 片方のペアの最初または 2 番目の要素のいずれかがもう一方のペアの対応する要素と等しくない場合には、2 つのペアは等しくありません。
 
@@ -124,7 +124,7 @@ constexpr bool operator==(const pair<T, U>& left, const pair<T, U>& right);
 
 ペアが等しい場合には **true**。**が等しくないときには**false`pair`。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ペアのそれぞれの要素が等しい場合に、ペアが等しくなります。 `left`が返されます。 **first** == `right`。 **first** && `left`。 **second** == `right`。 **second** に初期化します。 片方のペアの最初または 2 番目の要素のいずれかがもう一方のペアの対応する要素と等しくない場合には、2 つのペアは等しくありません。
 
@@ -187,7 +187,7 @@ constexpr bool operator<(const pair<T, U>& left, const pair<T, U>& right);
 
 演算子の左辺の **が演算子の右辺の** より厳密に小さい場合は `pair`true`pair`、それ以外の場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `left` `pair` オブジェクトは、 *left*が*right*以下の場合、`right` `pair` オブジェクトより厳密に小さくなると言います。
 
@@ -264,7 +264,7 @@ constexpr bool operator<=(const pair<T, U>& left, const pair<T, U>& right);
 
 演算子の左辺の **が演算子の右辺の** 以下である場合は `pair`true`pair`、それ以外の場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ペアを比較する場合、2 つのペアの最初の要素の値が、最も優先度が高くなります。 最初の要素の値が異なる場合、その比較の結果がペアの比較の結果として扱われます。 最初の要素の値が同じである場合、2 番目の要素の値が比較され、その比較の結果がペアの比較の結果として扱われます。
 
@@ -349,7 +349,7 @@ constexpr bool operator>(const pair<T, U>& left, const pair<T, U>& right);
 
 演算子の左辺にある **が演算子の右辺の** より厳密に大きい場合は `pair`true`pair`、それ以外の場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `left` `pair` オブジェクトは、 *left*が*right*以上の場合、`right` `pair` オブジェクトより厳密に大きくなると言います。
 
@@ -436,7 +436,7 @@ template <class T, class U>
 
 演算子の左辺の **が演算子の右辺の** 以上である場合は `pair`true`pair`、それ以外の場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ペアを比較する場合、2 つのペアの最初の要素の値が、最も優先度が高くなります。 最初の要素の値が異なる場合、その比較の結果がペアの比較の結果として扱われます。 最初の要素の値が同じである場合、2 番目の要素の値が比較され、その比較の結果がペアの比較の結果として扱われます。
 

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - type libraries [MFC], accessing
 ms.assetid: a03fa7f0-86c2-4119-bf81-202916fb74b3
 ms.openlocfilehash: 23d4675bd3638d2effd1b967f0729f9e70dac6de
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78867035"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426193"
 ---
 # <a name="type-library-access"></a>タイプ ライブラリ アクセス
 
@@ -37,11 +37,11 @@ DECLARE_OLETYPELIB(class_name)
 *class_name*<br/>
 タイプライブラリに関連するコントロールクラスの名前。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このマクロは、コントロールクラスのヘッダーファイルで使用します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー :** afxdisp.h
 
@@ -67,11 +67,11 @@ IMPLEMENT_OLETYPELIB(class_name, tlid, wVerMajor,  wVerMinor)
 *wVerMinor*<br/>
 タイプライブラリのマイナーバージョン番号。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このマクロは、DECLARE_OLETYPELIB マクロを使用するコントロールクラスの実装ファイルに記述されている必要があります。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー :** afxdisp.h
 

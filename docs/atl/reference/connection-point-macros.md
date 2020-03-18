@@ -1,5 +1,5 @@
 ---
-title: コネクション ポイントに関するマクロ
+title: 接続ポイントのマクロ
 ms.date: 11/04/2016
 f1_keywords:
 - atlcom/ATL::BEGIN_CONNECTION_POINT_MAP
@@ -8,30 +8,30 @@ helpviewer_keywords:
 - connection points [C++], macros
 ms.assetid: cc3a6dd3-5538-45df-b027-1f34963c31e5
 ms.openlocfilehash: cb8d6f696980ef91d7b43c960dc50289ea8500a6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62278203"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423154"
 ---
-# <a name="connection-point-macros"></a>コネクション ポイントに関するマクロ
+# <a name="connection-point-macros"></a>接続ポイントのマクロ
 
-これらのマクロは、コネクション ポイントのマップとエントリを定義します。
+これらのマクロは、接続ポイントマップとエントリを定義します。
 
 |||
 |-|-|
-|[BEGIN_CONNECTION_POINT_MAP](#begin_connection_point_map)|接続ポイントのマップ エントリの先頭をマークします。|
-|[CONNECTION_POINT_ENTRY](#connection_point_entry)|接続ポイントをマップに入力します。|
-|[CONNECTION_POINT_ENTRY_P](#connection_point_entry)| (Visual Studio 2017)同様に CONNECTION_POINT_ENTRY では、iid へのポインターがかかります。|
-|[END_CONNECTION_POINT_MAP](#end_connection_point_map)|接続ポイントのマップ エントリの終了を示します。|
+|[BEGIN_CONNECTION_POINT_MAP](#begin_connection_point_map)|接続ポイントのマップエントリの開始をマークします。|
+|[CONNECTION_POINT_ENTRY](#connection_point_entry)|マップに接続ポイントを入力します。|
+|[CONNECTION_POINT_ENTRY_P](#connection_point_entry)| (Visual Studio 2017)CONNECTION_POINT_ENTRY と似ていますが、iid へのポインターを受け取ります。|
+|[END_CONNECTION_POINT_MAP](#end_connection_point_map)|接続ポイントのマップエントリの終了をマークします。|
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlcom.h
+**ヘッダー:** atlcom. h
 
-##  <a name="begin_connection_point_map"></a>  BEGIN_CONNECTION_POINT_MAP
+##  <a name="begin_connection_point_map"></a>BEGIN_CONNECTION_POINT_MAP
 
-接続ポイントのマップ エントリの先頭をマークします。
+接続ポイントのマップエントリの開始をマークします。
 
 ```
 BEGIN_CONNECTION_POINT_MAP(x)
@@ -40,21 +40,21 @@ BEGIN_CONNECTION_POINT_MAP(x)
 ### <a name="parameters"></a>パラメーター
 
 *x*<br/>
-[in]接続ポイントを含むクラスの名前。
+からコネクションポイントを格納しているクラスの名前。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-BEGIN_CONNECTION_POINT_MAP マクロ、コネクション ポイントのマップを開始、各接続ポイントのエントリを追加、 [CONNECTION_POINT_ENTRY](#connection_point_entry)マクロを含むマップを完了して、 [END_CONNECTION_POINT_MAP](#end_connection_point_map)マクロ。
+BEGIN_CONNECTION_POINT_MAP マクロを使用して接続ポイントマップを開始し、 [CONNECTION_POINT_ENTRY](#connection_point_entry)マクロを使用して各接続ポイントのエントリを追加し、 [END_CONNECTION_POINT_MAP](#end_connection_point_map)マクロを使用してマップを完了します。
 
-ATL 接続ポイントの詳細については、記事を参照してください。[コネクション ポイント](../../atl/atl-connection-points.md)します。
+ATL のコネクションポイントの詳細については、「[接続ポイント](../../atl/atl-connection-points.md)」を参照してください。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Windowing#101](../../atl/codesnippet/cpp/connection-point-macros_1.h)]
 
-##  <a name="connection_point_entry"></a>  CONNECTION_POINT_ENTRY と CONNECTION_POINT_ENTRY_P
+##  <a name="connection_point_entry"></a>CONNECTION_POINT_ENTRY と CONNECTION_POINT_ENTRY_P
 
-アクセスできるようにに接続ポイントのマップに指定されたインターフェイスの接続ポイントを入力します。
+指定したインターフェイスの接続ポイントを接続ポイントマップに入力して、そのインターフェイスにアクセスできるようにします。
 
 ```
 CONNECTION_POINT_ENTRY(iid)
@@ -64,42 +64,42 @@ CONNECTION_POINT_ENTRY_P(piid) // (Visual Studio 2017)
 ### <a name="parameters"></a>パラメーター
 
 *iid*<br/>
-[in]コネクション ポイントのマップに追加されているインターフェイスの GUID です。
+からコネクションポイントマップに追加されるインターフェイスの GUID。
 
 *piid*<br/>
-[in]Adde をされているインターフェイスの GUID へのポインター。
+からAdde であるインターフェイスの GUID へのポインター。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-マップ内の接続ポイント エントリを使って[IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md)します。 コネクション ポイントのマップを含むクラスを継承する必要があります`IConnectionPointContainerImpl`します。
+マップ内の接続ポイントエントリは、 [IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md)によって使用されます。 コネクションポイントマップを含むクラスは、`IConnectionPointContainerImpl`から継承する必要があります。
 
-接続ポイントのマップを開始、 [BEGIN_CONNECTION_POINT_MAP](#begin_connection_point_map)マクロ、CONNECTION_POINT_ENTRY マクロでは、接続ポイントの各エントリの追加し、を対応付けを完了、 [END_CONNECTION_POINT_MAP](#end_connection_point_map)マクロ。
+[BEGIN_CONNECTION_POINT_MAP](#begin_connection_point_map)マクロを使用して接続ポイントマップを開始し、CONNECTION_POINT_ENTRY マクロを使用して各接続ポイントのエントリを追加し、 [END_CONNECTION_POINT_MAP](#end_connection_point_map)マクロを使用してマップを完了します。
 
-ATL 接続ポイントの詳細については、記事を参照してください。[コネクション ポイント](../../atl/atl-connection-points.md)します。
+ATL のコネクションポイントの詳細については、「[接続ポイント](../../atl/atl-connection-points.md)」を参照してください。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Windowing#120](../../atl/codesnippet/cpp/connection-point-macros_2.h)]
 
-##  <a name="end_connection_point_map"></a>  END_CONNECTION_POINT_MAP
+##  <a name="end_connection_point_map"></a>END_CONNECTION_POINT_MAP
 
-接続ポイントのマップ エントリの終了を示します。
+接続ポイントのマップエントリの終了をマークします。
 
 ```
 END_CONNECTION_POINT_MAP()
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-接続ポイントのマップを開始、 [BEGIN_CONNECTION_POINT_MAP](#begin_connection_point_map)マクロは、各接続ポイントのエントリを追加、 [CONNECTION_POINT_ENTRY](#connection_point_entry)マクロ、END_ でマップを完了してCONNECTION_POINT_MAP マクロです。
+[BEGIN_CONNECTION_POINT_MAP](#begin_connection_point_map)マクロを使用して接続ポイントマップを開始し、 [CONNECTION_POINT_ENTRY](#connection_point_entry)マクロを使用して各接続ポイントのエントリを追加し、END_CONNECTION_POINT_MAP マクロを使用してマップを完了します。
 
-ATL 接続ポイントの詳細については、記事を参照してください。[コネクション ポイント](../../atl/atl-connection-points.md)します。
+ATL のコネクションポイントの詳細については、「[接続ポイント](../../atl/atl-connection-points.md)」を参照してください。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Windowing#128](../../atl/codesnippet/cpp/connection-point-macros_3.h)]
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[[マクロ]](../../atl/reference/atl-macros.md)<br/>
+[マクロ](../../atl/reference/atl-macros.md)<br/>
 [コネクション ポイントに関するグローバル関数](../../atl/reference/connection-point-global-functions.md)

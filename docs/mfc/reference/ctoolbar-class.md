@@ -45,11 +45,11 @@ helpviewer_keywords:
 - CToolBar [MFC], SetSizes
 ms.assetid: e868da26-5e07-4607-9651-e2f863ad9059
 ms.openlocfilehash: 4977cbe0b749724f999d6d7089d46f12d1e2963e
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866439"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426823"
 ---
 # <a name="ctoolbar-class"></a>CToolBar クラス
 
@@ -65,13 +65,13 @@ class CToolBar : public CControlBar
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[CToolBar:: CToolBar](#ctoolbar)|`CToolBar` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[CToolBar:: CommandToIndex](#commandtoindex)|指定されたコマンド ID を持つボタンのインデックスを返します。|
 |[CToolBar:: Create](#create)|Windows ツールバーを作成し、`CToolBar` オブジェクトにアタッチします。|
@@ -92,7 +92,7 @@ class CToolBar : public CControlBar
 |[CToolBar:: SetHeight](#setheight)|ツールバーの高さを設定します。|
 |[CToolBar:: SetSizes](#setsizes)|ボタンとそのビットマップのサイズを設定します。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 ボタンは、プッシュボタン、チェックボックスボタン、オプションボタンのように動作します。 `CToolBar` オブジェクトは、通常、 [CFrameWnd](../../mfc/reference/cframewnd-class.md)または[CMDIFrameWnd](../../mfc/reference/cmdiframewnd-class.md)クラスから派生したフレームウィンドウオブジェクトの埋め込みメンバーです。
 
@@ -155,7 +155,7 @@ class CToolBar : public CControlBar
 
 `CToolBar`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxext.h
 
@@ -220,7 +220,7 @@ virtual BOOL Create(
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 また、ツールバーの高さを既定値に設定します。
 
@@ -266,11 +266,11 @@ virtual BOOL CreateEx(
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 また、ツールバーの高さを既定値に設定します。
 
-埋め込みのツールバーコントロールの作成時に特定のスタイルが存在する必要がある場合は、 [Create](#create)ではなく `CreateEx`を使用します。 たとえば、Internet Explorer 4 のツール&#124;バーに似たツールバーを作成するには、[dwCtrlStyle] を TBSTYLE_FLAT TBSTYLE_TRANSPARENT に設定します。
+埋め込みのツールバーコントロールの作成時に特定のスタイルが存在する必要がある場合は、 [Create](#create)ではなく `CreateEx`を使用します。 たとえば、Internet Explorer *dwCtrlStyle* 4 のツール&#124;バーに似たツールバーを作成するには、[dwCtrlStyle] を TBSTYLE_FLAT TBSTYLE_TRANSPARENT に設定します。
 
 ### <a name="example"></a>例
 
@@ -284,7 +284,7 @@ virtual BOOL CreateEx(
 CToolBar();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 [Create](#create) member 関数を呼び出して、ツールバーウィンドウを作成します。
 
@@ -314,7 +314,7 @@ void GetButtonInfo(
 *iImage*<br/>
 ビットマップ内のボタンのイメージのインデックスに設定されている整数への参照。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 これらの値は、 *nID*、 *nstyle*、および*iImage*によって参照される変数に割り当てられます。 イメージインデックスは、すべてのツールバーボタンの画像を含むビットマップ内の画像の位置です。 最初のイメージは0の位置にあります。
 
@@ -337,7 +337,7 @@ UINT GetButtonStyle(int nIndex) const;
 
 *NIndex*によって指定されたボタンまたは区切り記号のスタイル。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ボタンのスタイルによって、ボタンの表示方法と、ユーザー入力に対する応答方法が決まります。 ボタンスタイルの例については、「 [SetButtonStyle](#setbuttonstyle) 」を参照してください。
 
@@ -365,7 +365,7 @@ void GetButtonText(
 
 ボタンテキストを格納している `CString` オブジェクト。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数の2番目の形式は、`CString` オブジェクトに文字列テキストを格納します。
 
@@ -386,7 +386,7 @@ ID を取得する項目のインデックス。
 
 *NIndex*によって指定されたボタンまたは区切り記号のコマンド ID。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 区切り記号は ID_SEPARATOR を返します。
 
@@ -408,7 +408,7 @@ virtual void GetItemRect(
 *lpRect*<br/>
 項目の座標を格納する[RECT](/windows/win32/api/windef/ns-windef-rect)構造体のアドレス。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 座標は、ツールバーの左上隅を基準とした相対的なピクセル数です。
 
@@ -430,7 +430,7 @@ CToolBarCtrl& GetToolBarCtrl() const;
 
 `CToolBarCtrl` オブジェクトへの参照です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `GetToolBarCtrl` を使用すると、Windows ツールバーコモンコントロールの機能を活用し、ツールバーのカスタマイズに[CToolBarCtrl](../../mfc/reference/ctoolbarctrl-class.md)が提供するサポートを利用できます。
 
@@ -461,7 +461,7 @@ BOOL LoadBitmap(UINT nIDResource);
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ビットマップには、ツールバーボタンごとに1つのイメージが含まれている必要があります。 画像のサイズが標準サイズ (幅16ピクセル、高さ15ピクセル) でない場合は、 [setsizes](#setsizes)を呼び出して、ボタンのサイズと画像を設定します。
 
@@ -489,7 +489,7 @@ BOOL LoadToolBar(UINT nIDResource);
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ツールバーリソースの作成の詳細については、「」の[ツールバーエディター](../../windows/toolbar-editor.md)を参照してください。
 
@@ -514,7 +514,7 @@ BOOL SetBitmap(HBITMAP hbmImageWell);
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 たとえば、`SetBitmap` を呼び出して、ユーザーがボタンの操作を変更するドキュメントに対して操作を実行した後に、ビットマップイメージを変更します。
 
@@ -560,7 +560,7 @@ void SetButtonInfo(
 *iImage*<br/>
 ビットマップ内のボタンのイメージの新しいインデックス。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 TBBS_SEPARATOR スタイルを持つ区切り記号の場合、この関数は、区切り記号の幅をピクセル単位で*iImage*に格納されている値に設定します。
 
@@ -591,7 +591,7 @@ BOOL SetButtons(
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 配列の要素に ID_SEPARATOR 値がある場合、ツールバーの対応する位置に区切り記号が作成されます。 また、この関数は、各ボタンのスタイルを TBBS_BUTTON に設定し、各区切り記号のスタイルを TBBS_SEPARATOR に設定し、イメージのインデックスを各ボタンに割り当てます。 イメージインデックスは、ビットマップ内のボタンのイメージの位置を指定します。
 
@@ -633,7 +633,7 @@ void SetButtonStyle(
 
 - ボタンのテキストにアクセラレータプレフィックスが関連付けられていない TBBS_NOPREFIX
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ボタンのスタイルによって、ボタンの表示方法と、ユーザー入力に対する応答方法が決まります。
 
@@ -681,7 +681,7 @@ void SetHeight(int cyHeight);
 *cyHeight*<br/>
 ツールバーの高さ (ピクセル単位)。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 [Setsizes](#setsizes)を呼び出した後、このメンバー関数を使用して、標準のツールバーの高さをオーバーライドします。 高さが小さすぎる場合、ボタンは下部にクリップされます。
 
@@ -705,7 +705,7 @@ void SetSizes(
 *sizeImage*<br/>
 各イメージのサイズ (ピクセル単位)。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 *Sizeimage*パラメーターには、ツールバーのビットマップ内のイメージのサイズ (ピクセル単位) が含まれている必要があります。 *Sizebutton*の大きさは、イメージを保持するのに十分であり、幅と高さが6ピクセルである必要があります。 また、この関数は、ボタンに応じてツールバーの高さを設定します。
 

@@ -3,11 +3,11 @@ title: ATL HTTP ユーティリティ関数
 ms.date: 11/04/2016
 ms.assetid: 4db57ef2-31fa-4696-bbeb-79a9035033ed
 ms.openlocfilehash: ca6dfdfb02f5ef629c6eb523744260f177a3309b
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865033"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423538"
 ---
 # <a name="atl-http-utility-functions"></a>ATL HTTP ユーティリティ関数
 
@@ -24,7 +24,7 @@ ms.locfileid: "78865033"
 |[RGBToHtml](#rgbtohtml)|[COLORREF](/windows/win32/gdi/colorref)値をその色の値に対応する HTML テキストに変換します。|
 |[SystemTimeToHttpDate](#systemtimetohttpdate)|システム時刻を HTTP ヘッダーで使用できる形式の文字列に変換します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlutil. h
 
@@ -72,7 +72,7 @@ inline BOOL AtlCanonicalizeUrl(
 
 成功した場合は TRUE、失敗した場合は FALSE を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 現在のバージョンの[InternetCanonicalizeUrl](/windows/win32/api/wininet/nf-wininet-internetcanonicalizeurlw)のように動作しますが、WinInet や Internet Explorer をインストールする必要はありません。
 
@@ -110,7 +110,7 @@ inline BOOL AtlCombineUrl(
 
 成功した場合は TRUE、失敗した場合は FALSE を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 は、現在のバージョンの[Internet連結 Eurl](/windows/win32/api/wininet/nf-wininet-internetcombineurlw)のように動作しますが、WinInet や Internet Explorer をインストールする必要はありません。
 
@@ -189,7 +189,7 @@ inline BOOL AtlIsUnsafeUrlChar(char chIn) throw();
 
 入力文字が安全でない場合は TRUE、それ以外の場合は FALSE を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Url で使用しない文字は、この関数を使用してテストし、 [AtlCanonicalizeUrl](#atlcanonicalizeurl)を使用して変換することができます。
 
@@ -229,7 +229,7 @@ DWORD 変数へのポインター。 関数が成功した場合、変数はバ�
 
 成功した場合は TRUE、失敗した場合は FALSE を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 [AtlEscapeUrl](#atlescapeurl)によって適用された変換処理を反転します。
 
@@ -259,7 +259,7 @@ HTML カラー値のテキストを受信するために、呼び出し元が割
 
 成功した場合は TRUE、失敗した場合は FALSE を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 HTML カラー値は、カラーの赤、緑、および青の各成分に対して2桁を使用する、シャープ記号と6桁の16進数の値 (たとえば、#FFFFFF が白) です。
 

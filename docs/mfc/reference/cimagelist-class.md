@@ -75,11 +75,11 @@ helpviewer_keywords:
 - CImageList [MFC], m_hImageList
 ms.assetid: b6d1a704-1c82-4548-8a8f-77972adc98a5
 ms.openlocfilehash: 1555209ce0f1c2caacbfb4b01107775db948d230
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78890708"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425857"
 ---
 # <a name="cimagelist-class"></a>CImageList クラス
 
@@ -95,13 +95,13 @@ class CImageList : public CObject
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[CImageList:: CImageList](#cimagelist)|`CImageList` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[CImageList:: Add](#add)|イメージリストにイメージまたはイメージを追加します。|
 |[CImageList:: Attach](#attach)|イメージリストを `CImageList` オブジェクトにアタッチします。|
@@ -138,17 +138,17 @@ class CImageList : public CObject
 
 ### <a name="public-operators"></a>パブリック演算子
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[CImageList:: operator HIMAGELIST](#operator_himagelist)|`CImageList`にアタッチされている HIMAGELIST を返します。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[CImageList:: m_hImageList](#m_himagelist)|このオブジェクトにアタッチされているイメージリストを格納しているハンドル。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 "イメージリスト" は、同じサイズのイメージのコレクションであり、それぞれが0から始まるインデックスで参照できます。 イメージリストは、多数のアイコンまたはビットマップのセットを効率的に管理するために使用されます。 イメージリスト内のすべてのイメージは、画面デバイス形式の1つのワイドビットマップに含まれています。 イメージリストには、画像を透過的に描画するために使用されるマスクを含むモノクロビットマップを含めることもできます (アイコンのスタイル)。 Microsoft Win32 アプリケーションプログラミングインターフェイス (API) には、イメージの描画、イメージリストの作成と破棄、イメージの追加と削除、イメージの置換、イメージの結合、イメージのドラッグなどを可能にするイメージリスト関数が用意されています。
 
@@ -162,7 +162,7 @@ class CImageList : public CObject
 
 `CImageList`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxcmn.h
 
@@ -200,7 +200,7 @@ int Add(HICON hIcon);
 
 成功した場合は、最初の新しいイメージの0から始まるインデックス。それ以外の場合は-1。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 操作が完了したら、アイコンハンドルを解放する必要があります。
 
@@ -251,7 +251,7 @@ BOOL BeginDrag(
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この関数は、ドラッグに使用される一時イメージリストを作成します。 イメージは、指定されたイメージとそのマスクを現在のカーソルと結合します。 後続の WM_MOUSEMOVE メッセージに応答して、`DragMove` メンバー関数を使用してドラッグイメージを移動できます。 ドラッグ操作を終了するには、`EndDrag` メンバー関数を使用します。
 
@@ -408,7 +408,7 @@ BOOL Create(CImageList* pImageList);
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `CImageList` を作成するには、2つの手順を実行します。 まず、コンストラクターを呼び出し、次に `Create`を呼び出します。これにより、イメージリストが作成され、`CImageList` オブジェクトにアタッチされます。
 
@@ -456,7 +456,7 @@ HIMAGELIST Detach();
 
 イメージリストオブジェクトを表すハンドル。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この関数は、イメージリストオブジェクトへのハンドルを返します。
 
@@ -486,7 +486,7 @@ static BOOL PASCAL DragEnter(
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 座標はウィンドウの左上隅に対して相対的であるため、座標を指定するときに、境界線、タイトルバー、メニューバーなどのウィンドウ要素の幅を補正する必要があります。
 
@@ -536,7 +536,7 @@ static BOOL PASCAL DragMove(CPoint pt);
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 通常、この関数は WM_MOUSEMOVE メッセージに応答して呼び出されます。 ドラッグ操作を開始するには、`BeginDrag` メンバー関数を使用します。
 
@@ -561,7 +561,7 @@ static BOOL PASCAL DragShowNolock(BOOL bShow);
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 [CImageList::D ragenter](#dragenter)関数は、ドラッグ操作中にウィンドウに対するすべての更新をロックします。 ただし、この関数ではウィンドウはロックされません。
 
@@ -649,7 +649,7 @@ BOOL DrawEx(
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 関数は、指定された描画スタイルを使用して、指定した色でイメージをブレンドします。
 
@@ -744,7 +744,7 @@ ILS_APLHA と共に使用する場合、このメンバーはアルファチャ�
 
 イメージが正常に描画された場合は TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Win32 構造体を自分で入力する場合は、最初のバージョンを使用します。 1つ以上の MFC の既定の引数を利用する場合、または構造の管理を避ける場合は、2番目のバージョンを使用します。
 
@@ -762,7 +762,7 @@ Win32 構造体を自分で入力する場合は、最初のバージョンを�
 static void PASCAL EndDrag();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ドラッグ操作を開始するには、`BeginDrag` メンバー関数を使用します。
 
@@ -787,7 +787,7 @@ HICON ExtractIcon(int nImage);
 
 成功した場合は、アイコンのハンドル。それ以外の場合は NULL。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメソッドは、アイコンを作成するための[ImageList_ExtractIcon](/windows/win32/api/commctrl/nf-commctrl-imagelist_extracticon)マクロの動作に依存します。 アイコンの作成とクリーンアップの詳細については、 [ImageList_ExtractIcon](/windows/win32/api/commctrl/nf-commctrl-imagelist_extracticon)マクロに関する説明を参照してください。
 
@@ -812,7 +812,7 @@ static CImageList* PASCAL FromHandle(HIMAGELIST hImageList);
 
 成功した場合は `CImageList` オブジェクトへのポインター。それ以外の場合は NULL。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `CImageList` がハンドルにまだアタッチされていない場合は、一時 `CImageList` オブジェクトが作成され、アタッチされます。 この一時 `CImageList` オブジェクトは、アプリケーションが次にそのイベントループ内でアイドル状態になるまで有効です。その時点で、すべての一時オブジェクトが削除されます。
 
@@ -837,7 +837,7 @@ static CImageList* PASCAL FromHandlePermanent(HIMAGELIST hImageList);
 
 成功した場合は `CImageList` オブジェクトへのポインター。それ以外の場合は NULL。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `CImageList` オブジェクトがハンドルにアタッチされていない場合は、NULL が返されます。
 
@@ -921,7 +921,7 @@ BOOL GetImageInfo(
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `IMAGEINFO` 構造体には、イメージリスト内のイメージに関する情報が含まれています。
 
@@ -947,7 +947,7 @@ HIMAGELIST GetSafeHandle() const;
 
 `HIMAGELIST m_hImageList;`
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `m_hImageList` データメンバーは、HIMAGELIST 型のパブリック変数です。
 
@@ -967,7 +967,7 @@ operator HIMAGELIST() const;
 
 成功した場合は、`CImageList` オブジェクトによって表されるイメージリストへのハンドル。それ以外の場合は NULL。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この演算子は、HIMAGELIST オブジェクトの直接使用をサポートするキャスト演算子です。
 
@@ -1013,7 +1013,7 @@ BOOL Remove(int nImage);
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 *N イメージ*の後にあるすべての項目が1つ下に移動します。 たとえば、イメージリストに2つの項目が含まれている場合、最初の項目を削除すると、残りの項目が最初の位置になります。 最初の位置の項目については、 *Nimage*= 0 を使用します。
 
@@ -1056,7 +1056,7 @@ int Replace(
 
 **Int**を返すバージョンは、成功した場合、イメージの0から始まるインデックスを返します。それ以外の場合は-1。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 [SetImageCount](#setimagecount)を呼び出した後にこのメンバー関数を呼び出して、新しい有効なイメージをプレースホルダーイメージのインデックス番号に割り当てます。
 
@@ -1107,7 +1107,7 @@ BOOL SetDragCursorImage(
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ドラッグ関数ではドラッグ操作中に新しいイメージが使用されるため、`CImageList::SetDragCursorImage`を呼び出した後に、Windows の[ShowCursor](/windows/win32/api/winuser/nf-winuser-showcursor)関数を使用して、実際のマウスカーソルを非表示にする必要があります。 それ以外の場合、ドラッグ操作の間、システムには2つのマウスカーソルが表示されることがあります。
 
@@ -1128,7 +1128,7 @@ BOOL SetImageCount(UINT uNewCount);
 
 成功した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数を呼び出してイメージリスト内のイメージの数を増やす場合は、追加のイメージごとに[Replace](#replace)を呼び出して、新しいインデックスを有効なイメージに割り当てます。 有効なイメージにインデックスを割り当てられなかった場合、新しいイメージを作成する描画操作は予測できません。
 
@@ -1160,7 +1160,7 @@ BOOL SetOverlayImage(
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 最大4つのインデックスを一覧に追加できます。
 

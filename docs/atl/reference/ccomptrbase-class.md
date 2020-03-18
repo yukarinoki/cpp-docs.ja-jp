@@ -18,11 +18,11 @@ helpviewer_keywords:
 - CComPtrBase class
 ms.assetid: 6dbe9543-dee8-4a97-b02f-dd3a25f4a1a0
 ms.openlocfilehash: 740920225fc513a869b4a92344f87004831e4768
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78864961"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423280"
 ---
 # <a name="ccomptrbase-class"></a>CComPtrBase クラス
 
@@ -44,13 +44,13 @@ class CComPtrBase
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[CComPtrBase:: ~ CComPtrBase](#dtor)|デストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[CComPtrBase:: Advise](#advise)|`CComPtrBase`のコネクションポイントとクライアントのシンクとの間の接続を作成するには、このメソッドを呼び出します。|
 |[CComPtrBase:: Attach](#attach)|既存のポインターの所有権を取得するには、このメソッドを呼び出します。|
@@ -64,7 +64,7 @@ class CComPtrBase
 
 ### <a name="public-operators"></a>パブリック演算子
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[CComPtrBase:: operator T *](#operator_t_star)|キャスト演算子。|
 |[CComPtrBase:: operator!](#operator_not)|NOT 演算子。|
@@ -76,15 +76,15 @@ class CComPtrBase
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[CComPtrBase::p](#p)|ポインターデータメンバー変数。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 このクラスは、 [CComQIPtr](../../atl/reference/ccomqiptr-class.md)や[CCOMPTR](../../atl/reference/ccomptr-class.md)などの COM メモリ管理ルーチンを使用する他のスマートポインターの基礎となります。 派生クラスは、独自のコンストラクターと演算子を追加しますが、`CComPtrBase`によって提供されるメソッドに依存します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlcomcli. h
 
@@ -114,7 +114,7 @@ HRESULT Advise(
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 詳細については、「 [AtlAdvise](connection-point-global-functions.md#atladvise) 」を参照してください。
 
@@ -131,7 +131,7 @@ void Attach(T* p2) throw();
 *p2*<br/>
 `CComPtrBase` オブジェクトは、このポインターの所有権を取得します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `Attach` は、既存の[CComPtrBase::p](#p)メンバー変数に対して[CComPtrBase:: Release](#release)を呼び出し、`CComPtrBase::p`に*p2*を割り当てます。 `CComPtrBase` オブジェクトがポインターの所有権を取得すると、オブジェクトの参照カウントが0になった場合にポインターと割り当てられたデータを削除するポインターの `Release` が自動的に呼び出されます。
 
@@ -143,7 +143,7 @@ void Attach(T* p2) throw();
 ~CComPtrBase() throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `CComPtrBase`が指すインターフェイスを解放します。
 
@@ -181,7 +181,7 @@ NULL の場合、オブジェクトが集計の一部として作成されてい
 
 成功した場合は S_OK、失敗した場合は REGDB_E_CLASSNOTREG、CLASS_E_NOAGGREGATION、CO_E_CLASSSTRING または E_NOINTERFACE を返します。 これらのエラーの説明については、「 [CoCreateClassInstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance) And [Clsidfromprogid](/windows/win32/api/combaseapi/nf-combaseapi-clsidfromprogid) 」を参照してください。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 メソッドの最初の形式が呼び出された場合、CLSID を復旧するために[Clsidfromprogid](/windows/win32/api/combaseapi/nf-combaseapi-clsidfromprogid)が使用されます。 どちらのフォームも[CoCreateClassInstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance)を呼び出します。
 
@@ -204,7 +204,7 @@ HRESULT CopyTo(T** ppT) throw();
 
 成功した場合は S_OK を返し、失敗した場合は E_POINTER を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `CComPtrBase` ポインターを*ppT*にコピーします。 [CComPtrBase::p](#p)メンバー変数の参照カウントがインクリメントされます。
 
@@ -222,7 +222,7 @@ T* Detach() throw();
 
 ポインターのコピーを返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ポインターの所有権を解放し、 [CComPtrBase::p](#p)データメンバー変数を NULL に設定して、ポインターのコピーを返します。
 
@@ -310,7 +310,7 @@ _NoAddRefReleaseOnCComPtr<T>* operator->() const throw();
 
 [CComPtrBase::p](#p)データメンバー変数の値を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この演算子を使用すると、`CComPtrBase` オブジェクトが指すクラスのメソッドを呼び出すことができます。 デバッグビルドでは、`CComPtrBase` データメンバーが NULL を指している場合、アサーションエラーが発生します。
 
@@ -339,7 +339,7 @@ bool operator<(T* pT) const throw();
 operator T*() const throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 クラステンプレートで定義されているオブジェクトデータ型へのポインターを返します。
 
@@ -351,7 +351,7 @@ operator T*() const throw();
 T* p;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー変数は、ポインター情報を保持します。
 
@@ -376,7 +376,7 @@ template <class Q> HRESULT QueryInterface(Q
 
 成功した場合は S_OK を返し、失敗した場合は E_NOINTERFACE を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメソッド[は、IUnknown:: QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q))を呼び出します。
 
@@ -390,7 +390,7 @@ template <class Q> HRESULT QueryInterface(Q
 void Release() throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 インターフェイスが解放され、 [CComPtrBase::p](#p)が NULL に設定されます。
 
@@ -411,7 +411,7 @@ HRESULT SetSite(IUnknown* punkParent) throw();
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメソッドは、 [Atlsetchildsite](composite-control-global-functions.md#atlsetchildsite)を呼び出します。
 

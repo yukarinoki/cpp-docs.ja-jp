@@ -37,11 +37,11 @@ helpviewer_keywords:
 - std::ctype [C++], widen
 ms.assetid: 3627154c-49d9-47b5-b28f-5bbedee38e3b
 ms.openlocfilehash: 640b2cc8506e498006feedbea6825a0e51a88209
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78876310"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427171"
 ---
 # <a name="ctype-class"></a>ctype クラス
 
@@ -59,7 +59,7 @@ class ctype : public ctype_base;
 *Chartype*\
 文字をエンコードするためにプログラム内で使用される型。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 すべてのロケールのファセットと同様、静的オブジェクト ID に最初に格納されている値は 0 です。 格納されている値に初めてアクセスしようとすると、`id` に一意の正の値が格納されます。 分類の条件は、基底クラス ctype_base の入れ子になったビットマスク型で提供されます。
 
@@ -79,19 +79,19 @@ class ctype : public ctype_base;
 
 ### <a name="constructors"></a>コンストラクター
 
-|コンストラクター|説明|
+|Constructor|Description|
 |-|-|
 |[ctype](#ctype)|文字のロケール ファセットとして機能する `ctype` クラスのオブジェクトのコンストラクター。|
 
 ### <a name="typedefs"></a>Typedefs
 
-|種類の名前。|説明|
+|種類の名前。|Description|
 |-|-|
 |[char_type](#char_type)|ロケールによって使用される文字を表す型。|
 
 ### <a name="member-functions"></a>メンバー関数
 
-|メンバー関数|説明|
+|メンバー関数|Description|
 |-|-|
 |[do_is](#do_is)|1 つの文字が特定の属性を持つかどうかをテストしたり、範囲内の各文字の属性を分類して配列に格納したりするために呼び出される仮想関数。|
 |[do_narrow](#do_narrow)|ロケールによって使用される `CharType` 型の文字を、ネイティブ文字セットの**char**型の対応する文字に変換するために呼び出される仮想関数。|
@@ -108,7 +108,7 @@ class ctype : public ctype_base;
 |[toupper](#toupper)|文字または文字の範囲を大文字に変換します。|
 |[widen](#widen)|ネイティブ文字セットの**char**型の文字を、ロケールで使用される `CharType` 型の対応する文字に変換します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<ロケール >
 
@@ -122,7 +122,7 @@ class ctype : public ctype_base;
 typedef CharType char_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この型は、テンプレート パラメーター *CharType* のシノニムです。
 
@@ -143,7 +143,7 @@ explicit ctype(size_t _Refs = 0);
 *_Refs*\
 オブジェクトのメモリ管理のタイプを指定するために使用する整数値。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 *_Refs*パラメーターに指定できる値とその意味は次のとおりです。
 
@@ -195,7 +195,7 @@ virtual const CharType *do_is(
 
 2 番目のメンバー関数は、範囲内の各文字の属性を特徴付けるマスク値を含む配列を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 文字の属性を分類するマスク値は、ctype の派生元である、クラス [ctype_base](../standard-library/ctype-base-class.md) により提供されます。 最初のメンバー関数は、ビットマスクと呼ばれ、ビット単位の論理演算子 (&#124;、&、^、~) によりマスク値の組み合わせから形成されるその最初のパラメーターの式を受け取ります。
 
@@ -242,7 +242,7 @@ virtual const CharType* do_narrow(
 
 保護されている 2 番目のメンバー関数は、型 `CharType` の文字から変換されたネイティブ文字の宛先範囲を示すポインターを返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 2番目のプロテクトメンバーテンプレート関数は `dest`[`I`] の値 `do_narrow`(`first` [`I`]、`default`) に格納します。このとき、間隔 [0, `I` `last` - ) に `first`します。
 
@@ -276,7 +276,7 @@ virtual const CharType *do_scan_is(
 
 指定されたマスクに一致する範囲内の最初の文字を示すポインター。 このような値が存在しない場合、関数は*last*を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 プロテクトメンバー関数は、 [do_is](#do_is)(`maskVal`、\* `ptr`) が true の範囲 [`first`、`last`) 内の `ptr` 最小のポインターを返します。
 
@@ -310,7 +310,7 @@ virtual const CharType *do_scan_not(
 
 指定されたマスクに一致しない範囲内の最初の文字を示すポインター。 このような値が存在しない場合、関数は*last*を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 プロテクトメンバー関数は、 [do_is](#do_is)(`maskVal`、\* `ptr`) が false の範囲 [`first`、`last`) 内の `ptr` 最小のポインターを返します。
 
@@ -345,7 +345,7 @@ virtual const CharType *do_tolower(
 
 最初のプロテクトメンバー関数は、パラメーター *ch*の小文字形式を返します。 小文字の形式が存在しない場合は、 *ch*が返されます。 2番目のプロテクトメンバー関数は、 *last*を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 2番目のプロテクトメンバーテンプレート関数は、各要素 `first` [`I`] を  - (`first`[`do_tolower`]) で間隔 [0, `last``first` `I`) の `I` に置き換えます。
 
@@ -380,7 +380,7 @@ virtual const CharType *do_toupper(
 
 最初のプロテクトメンバー関数は、パラメーター *ch*の大文字形式を返します。 大文字の形式が存在しない場合は、 *ch*を返します。 2番目のプロテクトメンバー関数は、 *last*を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 2番目のプロテクトメンバーテンプレート関数は、各要素 `first` [`I`] を  - (`first`[`do_toupper`]) で間隔 [0, `last``first` `I`) の `I` に置き換えます。
 
@@ -421,7 +421,7 @@ virtual const char *do_widen(
 
 2番目のプロテクトメンバー関数は、 **char**型のネイティブ文字から変換されたロケールによって使用される `CharType` 型の文字の宛先範囲へのポインターを返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 保護されている 2 番目のメンバー テンプレート関数は、値 `dest`( `I`[ `do_widen`]) を `first`[ `I`] に格納します。`I` の間隔は [0, `last` - `first`) です。
 
@@ -465,7 +465,7 @@ const CharType *is(
 
 2 番目のメンバー関数は、属性を分類する範囲の最後の文字を示すポインターを返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 文字の属性を分類するマスク値は、ctype の派生元である、クラス [ctype_base クラス](../standard-library/ctype-base-class.md)により提供されます。 最初のメンバー関数は、ビットマスクと呼ばれ、ビット単位の論理演算子 (&#124;、&、^、~) によりマスク値の組み合わせから形成されるその最初のパラメーターの式を受け取ります。
 
@@ -545,7 +545,7 @@ const CharType* narrow(
 
 2 番目のメンバー関数は、型 `CharType` の文字から変換されたネイティブ文字の宛先範囲を示すポインターを返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 1つ目のメンバー関数は、 [do_narrow](#do_narrow)(`ch`、`default`) を返します。 2番目のメンバー関数は、 [do_narrow](#do_narrow) (`first`、`last`、`default`、`dest`) を返します。 基本ソース文字にのみ、`CharType` の下で一意の逆像 `narrow` が与えられることが約束されます。 これの基本ソース文字については、`narrow` ( [widen](#widen) ( **c** ), 0 ) == **c** という不変式が適用されます。
 
@@ -601,7 +601,7 @@ const CharType *scan_is(
 
 指定されたマスクに一致する範囲内の最初の文字を示すポインター。 このような値が存在しない場合、関数は*last*を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、 [do_scan_is](#do_scan_is)(`maskVal`、`first`、`last`) を返します。
 
@@ -657,7 +657,7 @@ const CharType *scan_not(
 
 指定されたマスクに一致しない範囲内の最初の文字を示すポインター。 このような値が存在しない場合、関数は*last*を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、 [do_scan_not](#do_scan_not)(`maskVal`、`first`、`last`) を返します。
 
@@ -714,7 +714,7 @@ const CharType *tolower(CharType* first, const CharType* last) const;
 
 2番目のメンバー関数は、 *last*を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 1つ目のメンバー関数は、 [do_tolower](#do_tolower)(`ch`) を返します。 2番目のメンバー関数は、 [do_tolower](#do_tolower)(`first`、`last`) を返します。
 
@@ -769,7 +769,7 @@ const CharType *toupper(CharType* first, const CharType* last) const;
 
 2番目のメンバー関数は、 *last*を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 1つ目のメンバー関数は、 [do_toupper](#do_toupper)(`ch`) を返します。 2 番目のメンバー関数は、[do_toupper](#do_toupper)( `first`, `last`) を返します。
 
@@ -827,7 +827,7 @@ const char *widen(const char* first, const char* last, CharType* dest) const;
 
 2番目のメンバー関数は、 **char**型のネイティブ文字から変換されたロケールによって使用される `CharType` 型の文字の宛先範囲へのポインターを返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 1つ目のメンバー関数は、 [do_widen](#do_widen)(`byte`) を返します。 2番目のメンバー関数は、 [do_widen](#do_widen)(`first`、`last`、`dest`) を返します。
 

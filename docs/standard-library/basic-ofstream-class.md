@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::basic_ofstream [C++], swap
 ms.assetid: 3bcc9c51-6dfc-4844-8fcc-22ef57c9dff1
 ms.openlocfilehash: a73803f25c4fb9e54703b8bca93e68fedb63074e
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865869"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424063"
 ---
 # <a name="basic_ofstream-class"></a>basic_ofstream クラス
 
@@ -42,7 +42,7 @@ class basic_ofstream : public basic_ostream<Elem, Tr>
 *Tr*\
 ファイル バッファーの基本要素の特徴 (通常は `char_traits`< `Elem`>)。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 **Wchar_t**特殊化 `basic_ofstream` がファイルに書き込む場合、ファイルがテキストモードで開かれていると、MBCS シーケンスが書き込まれます。 内部表現には `wchar_t` 文字のバッファーが使用されます。
 
@@ -72,13 +72,13 @@ int main(int argc, char **argv)
 
 ### <a name="constructors"></a>コンストラクター
 
-|コンストラクター|説明|
+|Constructor|Description|
 |-|-|
 |[basic_ofstream](#basic_ofstream)|`basic_ofstream` 型のオブジェクトを作成します。|
 
 ### <a name="member-functions"></a>メンバー関数
 
-|メンバー関数|説明|
+|メンバー関数|Description|
 |-|-|
 |[close](#close)|ファイルを閉じます。|
 |[is_open](#is_open)|ファイルが開いているかどうかを判断します。|
@@ -86,13 +86,13 @@ int main(int argc, char **argv)
 |[rdbuf](#rdbuf)|格納されたストリーム バッファーのアドレスを返します。|
 |[スワップ](#swap)|この `basic_ofstream` の内容を、指定された `basic_ofstream` の内容と交換します。|
 
-### <a name="operators"></a>演算子
+### <a name="operators"></a>オペレーター
 
-|演算子|説明|
+|演算子|Description|
 |-|-|
 |[operator=](#op_eq)|このストリーム オブジェクトの内容を割り当てます。 これは、`rvalue reference` が関係する移動代入で、コピーを残しません。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<fstream >
 
@@ -133,7 +133,7 @@ basic_ofstream(
 *右*\
 この `basic_ofstream` オブジェクトを初期化するために使用されている `basic_ofstream` オブジェクトへの右辺値参照。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 最初のコンストラクターは[basic_ostream](../standard-library/basic-ostream-class.md)(`sb`) を呼び出すことによって基底クラスを初期化します。 `sb` は、クラス[basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem``Tr`> の格納されているオブジェクトです。 また、`sb``basic_filebuf`< , `Elem`> を呼び出すことで `Tr` の初期化もします。
 
@@ -171,7 +171,7 @@ int main(int argc, char **argv)
 void close();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 メンバー関数は、[rdbuf](../standard-library/basic-ifstream-class.md#rdbuf) **->** [close](../standard-library/basic-filebuf-class.md#close) を呼び出します。
 
@@ -191,7 +191,7 @@ bool is_open() const;
 
 ファイルが開いている場合は **true**、それ以外の場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、 [rdbuf](#rdbuf) **->** [is_open](../standard-library/basic-filebuf-class.md#is_open)を返します。
 
@@ -252,7 +252,7 @@ void open(
 *_Prot*\
 `shflag`_fsopen、_wfsopen[ の ](../c-runtime-library/reference/fsopen-wfsopen.md) パラメーターと同等の既定のファイル保護。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、 [rdbuf](#rdbuf) **->** [open](../standard-library/basic-filebuf-class.md#open)(_ *Filename*, &#124; `_Mode` `ios_base::out`) を呼び出します。 この関数が null ポインターを返す場合、関数は[setstate](../standard-library/basic-ios-class.md#setstate)(`failbit`) を呼び出します。
 
@@ -275,9 +275,9 @@ basic_ofstream& operator=(basic_ofstream&& right);
 
 ### <a name="return-value"></a>戻り値
 
-`*this` を返します。
+`*this` が返されます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 メンバー演算子は、右辺値参照として扱われる*right*の内容を使用して、オブジェクトの内容を置き換えます。
 
@@ -310,7 +310,7 @@ void swap(basic_ofstream& right);
 *右*\
 別の `lvalue` オブジェクトへの `basic_ofstream` 参照です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、このオブジェクトの内容を*右*の内容と交換します。
 

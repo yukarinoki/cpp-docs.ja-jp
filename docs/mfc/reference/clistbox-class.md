@@ -104,11 +104,11 @@ helpviewer_keywords:
 - CListBox [MFC], VKeyToItem
 ms.assetid: 7ba3c699-c286-4cd9-9066-532c41ec05d1
 ms.openlocfilehash: 5c3337641dcfc720a5f9fbccf5bb0614e97c3b54
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865523"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425839"
 ---
 # <a name="clistbox-class"></a>CListBox クラス
 
@@ -124,13 +124,13 @@ class CListBox : public CWnd
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[CListBox:: CListBox](#clistbox)|`CListBox` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[CListBox::AddString](#addstring)|リストボックスに文字列を追加します。|
 |[CListBox:: CharToItem](#chartoitem)|をオーバーライドして、文字列を持たないオーナー描画リストボックスにカスタム WM_CHAR 処理を提供します。|
@@ -180,7 +180,7 @@ class CListBox : public CWnd
 |[CListBox:: SetTopIndex](#settopindex)|リストボックス内で最初に表示される文字列の0から始まるインデックスを設定します。|
 |[CListBox:: VKeyToItem](#vkeytoitem)|をオーバーライドして、LBS_WANTKEYBOARDINPUT スタイルセットを持つリストボックスにカスタムの WM_KEYDOWN 処理を提供します。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 リストボックスには、ユーザーが表示および選択できる、ファイル名などの項目の一覧が表示されます。
 
@@ -236,7 +236,7 @@ class CListBox : public CWnd
 
 `CListBox`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxwin.h
 
@@ -257,7 +257,7 @@ int AddString(LPCTSTR lpszItem);
 
 リストボックス内の文字列の0から始まるインデックス。 エラーが発生した場合、戻り値は LB_ERR ます。新しい文字列を格納するのに十分な領域がない場合、戻り値は LB_ERRSPACE ます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 リストボックスが[LBS_SORT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)スタイルで作成されなかった場合、文字列はリストの末尾に追加されます。 それ以外の場合は、文字列がリストに挿入され、リストが並べ替えられます。 リストボックスが LBS_SORT スタイルを使用して作成され、 [LBS_HASSTRINGS](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)スタイルではない場合、フレームワークは `CompareItem` メンバー関数の1回以上の呼び出しによってリストを並べ替えます。
 
@@ -289,7 +289,7 @@ virtual int CharToItem(
 
 追加のアクションがない場合は-1 または-2、キーストロークの既定のアクションを実行するリストボックス項目のインデックスを指定する場合は負以外の数値を返します。 既定の実装では、-1 が返されます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 WM_CHARTOITEM メッセージは WM_CHAR メッセージを受信したときにリストボックスによって送信されますが、リストボックスがこれらの条件をすべて満たしている場合に限ります。
 
@@ -317,7 +317,7 @@ WM_CHARTOITEM メッセージは WM_CHAR メッセージを受信したときに
 CListBox();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `CListBox` オブジェクトを作成するには、2つの手順を実行します。 まず、コンストラクター `ClistBox` 呼び出し、次に `Create`を呼び出します。これにより、Windows のリストボックスが初期化され、`CListBox`にアタッチされます。
 
@@ -350,7 +350,7 @@ virtual int CompareItem(LPCOMPAREITEMSTRUCT lpCompareItemStruct);
 
 `COMPAREITEMSTRUCT` 構造の説明については、「 [CWnd:: OnCompareItem](../../mfc/reference/cwnd-class.md#oncompareitem) 」を参照してください。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 既定では、このメンバー関数は何も行いません。 LBS_SORT スタイルを使用してオーナー描画リストボックスを作成する場合は、このメンバー関数をオーバーライドして、リストボックスに追加された新しい項目の並べ替えのフレームワークをサポートする必要があります。
 
@@ -388,7 +388,7 @@ virtual BOOL Create(
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `CListBox` オブジェクトを作成するには、2つの手順を実行します。 まず、コンストラクターを呼び出し、次に `Create`を呼び出します。これにより、Windows のリストボックスが初期化され、`CListBox` オブジェクトにアタッチされます。
 
@@ -429,7 +429,7 @@ virtual void DeleteItem(LPDELETEITEMSTRUCT lpDeleteItemStruct);
 *lpDeleteItemStruct*<br/>
 削除された項目に関する情報を格納している Windows [DELETEITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-deleteitemstruct)構造体への long ポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この関数の既定の実装は、何も行いません。 この関数をオーバーライドして、必要に応じてオーナー描画リストボックスを再描画します。
 
@@ -456,7 +456,7 @@ int DeleteString(UINT nIndex);
 
 リストに残っている文字列の数。 *NIndex*がリスト内の項目数より大きいインデックスを指定している場合、戻り値は LB_ERR です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 *これで*、すべての項目が1つ下に移動します。 たとえば、リストボックスに2つの項目が含まれている場合、最初の項目を削除すると、残りの項目が最初の位置になります。 1番目の位置の項目の場合は、[ *nIndex*] = 0 になります。
 
@@ -514,7 +514,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 *lpDrawItemStruct*<br/>
 必要な描画の種類に関する情報を格納している[DRAWITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-drawitemstruct)構造体への long ポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `DRAWITEMSTRUCT` 構造体の `itemAction` メンバーと `itemState` メンバーは、実行される描画アクションを定義します。
 
@@ -548,7 +548,7 @@ int FindString(
 
 一致する項目の0から始まるインデックス番号。検索に失敗した場合は LB_ERR。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 文字列を検索して選択するには、 [Selectstring](#selectstring)メンバー関数を使用します。
 
@@ -578,7 +578,7 @@ Null で終わる検索対象の文字列を指します。 この文字列に�
 
 一致する項目のインデックス。検索に失敗した場合は LB_ERR。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 リストボックスがオーナー描画スタイルを使用して作成され、 [LBS_HASSTRINGS](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)スタイルが指定されていない場合、`FindStringExact` メンバー関数は、ダブルワード値と*lpszFind*の値を照合しようとします。
 
@@ -598,7 +598,7 @@ int GetAnchorIndex() const;
 
 成功した場合は、現在のアンカー項目のインデックス。それ以外の場合は LB_ERR。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 複数選択のリストボックスでは、アンカー項目は、連続して選択された項目のブロックの最初または最後の項目です。
 
@@ -618,7 +618,7 @@ int GetCaretIndex() const;
 
 リストボックス内でフォーカスを示す四角形を持つ項目の0から始まるインデックス。 リストボックスが単一選択リストボックスの場合、戻り値は選択されている項目のインデックス (存在する場合) です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 項目は選択できない場合もあります。
 
@@ -638,7 +638,7 @@ int GetCount() const;
 
 リストボックス内の項目の数。エラーが発生した場合は LB_ERR。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 返されるカウントは、最後の項目のインデックス値よりも1だけ大きくなります (インデックスは0から始まります)。
 
@@ -660,7 +660,7 @@ int GetCurSel() const;
 
 複数選択のリストボックスで、フォーカスのある項目のインデックス。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 複数選択のリストボックスに対して `GetCurSel` を呼び出さないでください。 代わりに、 [CListBox:: GetSelItems](#getselitems)を使用してください。
 
@@ -680,7 +680,7 @@ int GetHorizontalExtent() const;
 
 リストボックスのスクロール可能な幅 (ピクセル単位)。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 これは、リストボックスに水平スクロールバーがある場合にのみ適用されます。
 
@@ -705,7 +705,7 @@ DWORD_PTR GetItemData(int nIndex) const;
 
 項目に関連付けられている値。エラーが発生した場合は LB_ERR。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ダブルワード値は、 [SetItemData](#setitemdata)呼び出しの*dwItemData*パラメーターでした。
 
@@ -793,7 +793,7 @@ DWORD GetListBoxInfo() const;
 
 `CListBox` オブジェクトの列あたりの項目数。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、Windows SDK で説明されているように、 [LB_GETLISTBOXINFO](/windows/win32/Controls/lb-getlistboxinfo)メッセージの機能をエミュレートします。
 
@@ -809,7 +809,7 @@ LCID GetLocale() const;
 
 リストボックス内の文字列のロケール識別子 (LCID) 値。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 たとえば、ロケールは、並べ替えられたリストボックス内の文字列の並べ替え順序を決定するために使用されます。
 
@@ -834,7 +834,7 @@ int GetSel(int nIndex) const;
 
 指定した項目が選択されている場合は正の数値。それ以外の場合は0になります。 エラーが発生した場合、戻り値は LB_ERR です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、単一選択と複数選択のリストボックスの両方で動作します。
 
@@ -915,7 +915,7 @@ void GetText(
 
 文字列の長さ (バイト単位)。終端の null 文字は除外されます。 *NIndex*で有効なインデックスが指定されていない場合、戻り値は LB_ERR になります。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数の2番目の形式は、`CString` オブジェクトに文字列テキストを格納します。
 
@@ -956,7 +956,7 @@ int GetTopIndex() const;
 
 成功した場合はリストボックス内の最初に表示された項目の0から始まるインデックス。それ以外の場合は LB_ERR。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 最初は、項目0がリストボックスの一番上にありますが、リストボックスがスクロールされている場合は、別の項目が一番上に表示されます。
 
@@ -986,7 +986,7 @@ int InitStorage(
 
 成功した場合は、メモリの再割り当てが必要になる前にリストボックスに格納できる項目の最大数を指定します。それ以外の場合は LB_ERRSPACE、十分なメモリが使用できないことを意味します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 多数の項目を `CListBox`に追加する前に、この関数を呼び出します。
 
@@ -1020,7 +1020,7 @@ int InsertString(
 
 文字列が挿入された位置の 0 から始まるインデックス。 エラーが発生した場合、戻り値は LB_ERR ます。新しい文字列を格納するのに十分な領域がない場合、戻り値は LB_ERRSPACE ます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 [Addstring](#addstring)メンバー関数とは異なり、`InsertString` では、 [LBS_SORT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)スタイルを持つリストが並べ替えられることはありません。
 
@@ -1050,7 +1050,7 @@ UINT ItemFromPoint(
 
 *Pt*で指定したポイントまでの最も近い項目のインデックス。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この関数を使用すると、マウスカーソルを移動するリストボックス項目を特定できます。
 
@@ -1071,7 +1071,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 *lpMeasureItemStruct*<br/>
 [MEASUREITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-measureitemstruct)構造体への long ポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 既定では、このメンバー関数は何も行いません。 このメンバー関数をオーバーライドし、`MEASUREITEMSTRUCT` 構造体に入力して、ウィンドウにリストボックスの寸法を通知します。 リストボックスが[LBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)スタイルで作成されている場合、フレームワークはリストボックスの各項目に対してこのメンバー関数を呼び出します。 それ以外の場合、このメンバーは1回だけ呼び出されます。
 
@@ -1117,7 +1117,7 @@ int SelectString(
 
 検索が成功した場合は、選択された項目のインデックス。 検索に失敗した場合、戻り値は LB_ERR、現在の選択内容は変更されません。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 必要に応じて、リストボックスがスクロールされ、選択した項目が表示されます。
 
@@ -1157,7 +1157,7 @@ int SelItemRange(
 
 エラーが発生した場合は LB_ERR します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、複数選択のリストボックスでのみ使用してください。 複数選択のリストボックスで項目を1つだけ選択する必要がある場合 ( *Nfirstitem*が*nfirstitem*と等しい場合)、代わりに[SetSel](#setsel)メンバー関数を呼び出します。
 
@@ -1178,7 +1178,7 @@ void SetAnchorIndex(int nIndex);
 *nIndex*<br/>
 アンカーとなるリストボックス項目の0から始まるインデックスを指定します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 複数選択のリストボックスでは、アンカー項目は、連続して選択された項目のブロックの最初または最後の項目です。
 
@@ -1208,7 +1208,7 @@ int SetCaretIndex(
 
 エラーが発生した場合は LB_ERR します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 項目が表示されていない場合は、スクロールして表示されます。
 
@@ -1250,7 +1250,7 @@ int SetCurSel(int nSelect);
 
 エラーが発生した場合は LB_ERR します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 新しい文字列を選択すると、リストボックスには、前に選択した文字列から強調表示が削除されます。
 
@@ -1275,7 +1275,7 @@ void SetHorizontalExtent(int cxExtent);
 *cxExtent*<br/>
 リストボックスを水平方向にスクロールできるピクセル数を指定します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 リストボックスのサイズがこの値よりも小さい場合、水平スクロールバーはリストボックス内の項目を水平方向にスクロールします。 リストボックスがこの値より大きいか大きい場合、水平スクロールバーは非表示になります。
 
@@ -1335,7 +1335,7 @@ int SetItemDataPtr(
 
 エラーが発生した場合は LB_ERR します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 項目が追加または削除されると、リストボックス内の項目の相対位置が変化する場合でも、このポインターはリストボックスの有効期間中は有効なままです。 そのため、ボックス内の項目のインデックスは変更される可能性がありますが、ポインターは信頼できる状態のままです。
 
@@ -1365,7 +1365,7 @@ int SetItemHeight(
 
 インデックスまたは高さが無効である場合に LB_ERR します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 リストボックスに[LBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)スタイルが設定さ*れている*場合、この関数は、指定した項目の高さを返します。 それ以外の場合、この関数はリストボックス内のすべての項目の高さを設定します。
 
@@ -1390,7 +1390,7 @@ LCID SetLocale(LCID nNewLocale);
 
 このリストボックスの前のロケール識別子 (LCID) 値。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `SetLocale` が呼び出されない場合は、既定のロケールがシステムから取得されます。 このシステムの既定のロケールは、コントロールパネルの地域 (または国際) アプリケーションを使用して変更できます。
 
@@ -1420,7 +1420,7 @@ int SetSel(
 
 エラーが発生した場合は LB_ERR します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、複数選択のリストボックスでのみ使用してください。
 
@@ -1458,7 +1458,7 @@ BOOL SetTabStops(
 
 すべてのタブが設定されている場合は0以外の。それ以外の場合は0です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 タブストップを既定サイズの2ダイアログ単位に設定するには、このメンバー関数のパラメーターなしのバージョンを呼び出します。 タブストップを2以外のサイズに設定するには、 *cxEachStop*引数を使用してバージョンを呼び出します。
 
@@ -1487,7 +1487,7 @@ int SetTopIndex(int nIndex);
 
 成功した場合は0。エラーが発生した場合は LB_ERR。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 システムは、[ *nIndex* ] で指定された項目がリストボックスの一番上に表示されるか、最大のスクロール範囲に達したときまで、リストボックスをスクロールします。
 
@@ -1517,7 +1517,7 @@ virtual int VKeyToItem(
 
 それ以外の操作を行う場合は-2、既定のアクションの場合は-1、キーストロークの既定のアクションを実行するリストボックスアイテムのインデックスを指定する場合は負でない数値を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 WM_VKEYTOITEM メッセージは、WM_KEYDOWN メッセージを受信したときにリストボックスによって送信されますが、リストボックスが次の両方を満たしている場合に限ります。
 

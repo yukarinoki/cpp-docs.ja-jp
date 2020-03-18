@@ -35,11 +35,11 @@ helpviewer_keywords:
 - CMapStringToOb [MFC], SetAt
 ms.assetid: 09653980-b885-4f3a-8594-0aeb7f94c601
 ms.openlocfilehash: b56e9052533269ba62d248312f07ac16db71bf4a
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78876375"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424321"
 ---
 # <a name="cmapstringtoob-class"></a>CMapStringToOb クラス
 
@@ -55,13 +55,13 @@ class CMapStringToOb : public CObject
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[CMapStringToOb:: CMapStringToOb](#cmapstringtoob)|コンストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[CMapStringToOb:: GetCount](#getcount)|このマップ内の要素の数を返します。|
 |[CMapStringToOb:: GetHashTableSize](#gethashtablesize)|ハッシュテーブル内の現在の要素数を確認します。|
@@ -79,11 +79,11 @@ class CMapStringToOb : public CObject
 
 ### <a name="public-operators"></a>パブリック演算子
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[CMapStringToOb:: operator \[ \]](#operator_at)|Map に要素を挿入します。 `SetAt`の場合は演算子を代入します。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 `CString`- `CObject*` ペア (要素) をマップに挿入すると、文字列または `CString` 値をキーとして使用して、ペアを効率的に取得または削除できます。 また、マップ内のすべての要素を反復処理することもできます。
 
@@ -103,7 +103,7 @@ POSITION 型の変数は、すべてのマップバリエーションの代替�
 
 `CMapStringToOb`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxcoll.h
 
@@ -120,7 +120,7 @@ CMapStringToOb(INT_PTR nBlockSize = 10);
 *nBlockSize*<br/>
 マップを拡張するためのメモリ割り当ての粒度を指定します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 マップが大きくなるにつれて、メモリは*Nblocksize*エントリの単位で割り当てられます。
 
@@ -153,7 +153,7 @@ INT_PTR GetCount() const;
 
 このマップ内の要素の数。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 次の表は、`CMapStringToOb::GetCount`に似た他のメンバー関数を示しています。
 
@@ -184,7 +184,7 @@ UINT GetHashTableSize() const;
 
 ハッシュテーブル内の要素の数を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 次の表は、`CMapStringToOb::GetHashTableSize`に似た他のメンバー関数を示しています。
 
@@ -219,7 +219,7 @@ void GetNextAssoc(
 *右辺値*<br/>
 取得した要素の戻り値 (`CObject` ポインター) を指定します。 このパラメーターの詳細については、「解説」を参照してください。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この関数は、マップ内のすべての要素を反復処理する場合に最も役立ちます。 位置シーケンスは必ずしもキー値のシーケンスと同じではないことに注意してください。
 
@@ -269,7 +269,7 @@ INT_PTR GetSize() const;
 
 マップ内のアイテムの数。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Map 内の要素の数を取得するには、このメソッドを呼び出します。
 
@@ -300,7 +300,7 @@ POSITION GetStartPosition() const;
 
 マップの反復処理の開始位置を示す位置の値です。または、マップが空の場合は NULL になります。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 イテレーションシーケンスは予測できません。したがって、"map 内の最初の要素" には特別な意味はありません。
 
@@ -336,7 +336,7 @@ UINT HashKey(LPCTSTR key) const;
 
 キーのハッシュ値
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 次の表は、`CMapStringToOb::HashKey`に似た他のメンバー関数を示しています。
 
@@ -367,7 +367,7 @@ void InitHashTable(
 *今すぐ*<br/>
 TRUE の場合、初期化時にハッシュテーブルを割り当てます。それ以外の場合は、必要に応じてテーブルが割り当てられます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 最適なパフォーマンスを得るには、ハッシュテーブルのサイズを素数にする必要があります。 競合を最小限に抑えるには、予想される最大のデータセットよりもサイズを約20% 大きくする必要があります。
 
@@ -398,7 +398,7 @@ BOOL IsEmpty() const;
 
 [RemoveAll](#removeall)の例を参照してください。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 次の表は、 **CMapStringToOb:: IsEmpty**に似た他のメンバー関数を示しています。
 
@@ -433,7 +433,7 @@ BOOL Lookup(
 
 要素が見つかった場合は0以外の。それ以外の場合は0です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `Lookup` は、ハッシュアルゴリズムを使用して、正確に一致するキー (`CString` 値) を持つ map 要素をすばやく検索します。
 
@@ -476,7 +476,7 @@ BOOL LookupKey(
 
 キーが見つかった場合は0以外の値。それ以外の場合は0です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 関連付けられた要素がマップから削除された後、またはマップが破棄された後に使用された場合、キーへの参照を使用することは安全ではありません。
 
@@ -499,7 +499,7 @@ CObject*& operator[ ](lpctstr key);
 
 `CObject` オブジェクトへのポインターへの参照。または、マップが空であるか、*キー*が範囲外の場合は NULL になります。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 したがって、代入ステートメント (左辺値) の左側でのみ使用できます。 指定したキーを持つマップ要素がない場合は、新しい要素が作成されます。
 
@@ -538,7 +538,7 @@ Operator [] example: A CMapStringToOb with 2 elements
 void RemoveAll();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 各キーによって参照される `CObject` オブジェクトは破棄されません。 `RemoveAll` 関数は、参照される `CObject` オブジェクトが破棄されないようにすると、メモリリークが発生する可能性があります。
 
@@ -578,7 +578,7 @@ BOOL RemoveKey(LPCTSTR key);
 
 エントリが見つかり、正常に削除された場合は0以外の値。それ以外の場合は0です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 これにより、`CObject` オブジェクトが他の場所で削除されない場合に、メモリリークが発生する可能性があります。
 
@@ -626,7 +626,7 @@ void SetAt(
 *newValue*<br/>
 新しい要素の値である `CObject` ポインターを指定します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 まず、キーが検索されます。 キーが見つかった場合は、対応する値が変更されます。それ以外の場合は、新しいキーと値の要素が作成されます。
 

@@ -165,11 +165,11 @@ helpviewer_keywords:
 - COleClientItem [MFC], OnShowItem
 ms.assetid: 7f571b7c-2758-4839-847a-0cf1ef643128
 ms.openlocfilehash: 9f97f117f0fd8570855079aca7bdfd7a63118bc5
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855558"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427027"
 ---
 # <a name="coleclientitem-class"></a>COleClientItem クラス
 
@@ -185,13 +185,13 @@ class COleClientItem : public CDocItem
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[COleClientItem:: COleClientItem](#coleclientitem)|`COleClientItem` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[COleClientItem:: Activate](#activate)|操作の OLE 項目を開き、指定された動詞を実行します。|
 |[COleClientItem:: のアクティブな形式](#activateas)|項目を別の型としてアクティブにします。|
@@ -265,7 +265,7 @@ class COleClientItem : public CDocItem
 
 ### <a name="protected-methods"></a>プロテクト メソッド
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[COleClientItem:: CanActivate](#canactivate)|インプレースアクティブ化が許可されているかどうかを判断するために、フレームワークによって呼び出されます。|
 |[COleClientItem:: OnChangeItemPosition](#onchangeitemposition)|項目の位置が変更されたときにフレームワークによって呼び出されます。|
@@ -277,7 +277,7 @@ class COleClientItem : public CDocItem
 |[COleClientItem:: OnScrollBy](#onscrollby)|項目をビューにスクロールするために、フレームワークによって呼び出されます。|
 |[COleClientItem:: OnShowItem](#onshowitem)|OLE 項目を表示するためにフレームワークによって呼び出されます。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 OLE 項目は、サーバーアプリケーションによって作成および管理されるデータを表します。このデータは、ドキュメントに "シームレスに" 組み込むことができます。これにより、ユーザーが1つのドキュメントとして表示されるようになります。 その結果、OLE 項目とそれを含むドキュメントで構成される "複合ドキュメント" になります。
 
@@ -302,7 +302,7 @@ OLE 項目は、埋め込みまたはリンクすることができます。 埋
 
 `COleClientItem`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxole
 
@@ -320,9 +320,9 @@ void Activate(
 ### <a name="parameters"></a>パラメーター
 
 *nVerb*<br/>
-実行する動詞を指定します。 次のいずれかです。
+実行する動詞を指定します。 次のいずれかを指定できます。
 
-|値|意味|シンボル|
+|値|意味|Symbol|
 |-----------|-------------|------------|
 |- 0|主動詞|OLEIVERB_PRIMARY|
 |- 1|2番目の動詞|(なし)|
@@ -338,7 +338,7 @@ OLE 項目を含むコンテナービューウィンドウへのポインター�
 *lpMsg*<br/>
 項目がアクティブ化される原因となったメッセージへのポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 サーバーアプリケーションが Microsoft Foundation Class ライブラリを使用して記述されている場合、この関数によって、対応する `COleServerItem` オブジェクトの[OnDoVerb](../../mfc/reference/coleserveritem-class.md#ondoverb)メンバー関数が実行されます。
 
@@ -372,7 +372,7 @@ virtual BOOL ActivateAs(
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 これは、Coleconvertdialog によって自動的に呼び出されます[::D oConvert](../../mfc/reference/coleconvertdialog-class.md#doconvert)。 通常は直接呼び出されません。
 
@@ -401,7 +401,7 @@ virtual BOOL CanActivate();
 
 インプレースアクティブ化が許可されている場合は0以外の。それ以外の場合は0です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 既定の実装では、コンテナーに有効なウィンドウがある場合にインプレースアクティブ化が許可されます。 アクティベーション要求を受け入れたり拒否したりするための特別なロジックを実装するには、この関数をオーバーライドします。 たとえば、OLE 項目が小さすぎるか、現在表示されていない場合は、アクティベーション要求を拒否できます。
 
@@ -424,7 +424,7 @@ OLE 項目が作成される[COleDataObject](../../mfc/reference/coledataobject-
 
 コンテナーが `COleDataObject` オブジェクトから埋め込みオブジェクトを作成できる場合は0以外の。それ以外の場合は0です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `COleDataObject` クラスは、クリップボードからさまざまな形式のデータを取得するためのデータ転送、ドラッグアンドドロップ、または埋め込み OLE 項目からデータを取得するために使用されます。
 
@@ -449,7 +449,7 @@ OLE 項目が作成される[COleDataObject](../../mfc/reference/coledataobject-
 
 コンテナーが `COleDataObject` オブジェクトからリンクオブジェクトを作成できる場合は0以外の。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `COleDataObject` クラスは、クリップボードからさまざまな形式のデータを取得するためのデータ転送、ドラッグアンドドロップ、または埋め込み OLE 項目からデータを取得するために使用されます。
 
@@ -469,7 +469,7 @@ static BOOL PASCAL CanPaste();
 
 埋め込み OLE 項目をクリップボードから貼り付けることができる場合は0以外の。それ以外の場合は0です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 詳細については、Windows SDK の「 [Olegetclipboard](/windows/win32/api/ole2/nf-ole2-olegetclipboard) 」と「 [Olequerycreatefromdata](/windows/win32/api/ole2/nf-ole2-olequerycreatefromdata) 」を参照してください。
 
@@ -485,7 +485,7 @@ static BOOL PASCAL CanPasteLink();
 
 クリップボードからリンクされた OLE 項目を貼り付けることができる場合は0以外の。それ以外の場合は0です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 詳細については、「Windows SDK の[Olegetclipboard](/windows/win32/api/ole2/nf-ole2-olegetclipboard)と[Olequerylinkfromdata](/windows/win32/api/ole2/nf-ole2-olequerylinkfromdata) 」を参照してください。
 
@@ -508,7 +508,7 @@ OLE 項目が読み込まれた状態に戻ったときに、どのような状�
 
 - OLE 項目を保存するかどうかをユーザーに確認 OLECLOSE_PROMPTSAVE ます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 OLE 項目が実行されていない場合、この関数は無効です。
 
@@ -527,7 +527,7 @@ COleClientItem(COleDocument* pContainerDoc = NULL);
 *pContainerDoc*<br/>
 この項目を格納するコンテナードキュメントへのポインター。 これは、任意の[COleDocument](../../mfc/reference/coledocument-class.md)派生にすることができます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 NULL ポインターを渡すと、コンテナードキュメントは追加されません。 [COleDocument:: AddItem](../../mfc/reference/coledocument-class.md#additem)を明示的に呼び出す必要があります。
 
@@ -570,7 +570,7 @@ virtual BOOL ConvertTo(REFCLSID clsidNew);
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 これは、 [Coleconvertdialog](../../mfc/reference/coleconvertdialog-class.md)によって自動的に呼び出されます。 直接呼び出す必要はありません。
 
@@ -587,7 +587,7 @@ void CopyToClipboard(BOOL bIncludeLink = FALSE);
 *bIncludeLink*<br/>
 リンク情報をクリップボードにコピーして、リンクされた項目を貼り付けることができる場合は TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 通常、[編集] メニューの [コピー] または [切り取り] コマンドのメッセージハンドラーを記述するときに、この関数を呼び出します。 Copy コマンドまたは Cut コマンドを実装する場合は、コンテナーアプリケーションで項目選択を実装する必要があります。
 
@@ -610,7 +610,7 @@ BOOL CreateCloneFrom(const COleClientItem* pSrcItem);
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 コピーは、ソースアイテムと同じです。 この関数を使用すると、元に戻す操作をサポートできます。
 
@@ -640,7 +640,7 @@ OLE 項目の作成時にキャッシュするクリップボードデータ形�
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 通常は、[編集] メニューの [貼り付け] コマンドのメッセージハンドラーからこの関数を呼び出します。 ( [CanPaste](#canpaste)メンバー関数が0以外の値を返す場合、フレームワークによって貼り付けコマンドが有効になります)。
 
@@ -676,7 +676,7 @@ OLE 項目の作成時にキャッシュするクリップボードデータ形�
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 クリップボードからの貼り付け、ドラッグアンドドロップ操作などのデータ転送操作には、サーバーアプリケーションによって提供される情報を含む `COleDataObject` オブジェクトが用意されています。 これは通常、 [CView:: OnDrop](../../mfc/reference/cview-class.md#ondrop)のオーバーライドで使用されます。
 
@@ -716,7 +716,7 @@ OLE 項目の作成時にキャッシュするクリップボードデータ形�
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 [ファイルから作成] ボタンを選択したときに、ユーザーが [オブジェクトの挿入] ダイアログボックスから [OK] を選択した場合、フレームワークは[COleInsertDialog:: CreateItem](../../mfc/reference/coleinsertdialog-class.md#createitem)からこの関数を呼び出します。
 
@@ -748,7 +748,7 @@ OLE 項目の作成時にキャッシュするクリップボードデータ形�
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 通常は、[編集] メニューの [リンクの貼り付け] コマンドのメッセージハンドラーからこの関数を呼び出します。 (クリップボードにリンク可能な OLE 項目が含まれている場合は、 [COleDocument](../../mfc/reference/coledocument-class.md)の既定の実装で [貼り付けリンク] コマンドが有効になっています)。
 
@@ -784,7 +784,7 @@ OLE 項目の作成時にキャッシュするクリップボードデータ形�
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ユーザーがリンクを作成する必要がある場合は、drop 操作中にこれを呼び出します。 また、[貼り付けの編集] コマンドを処理するためにも使用できます。 このメソッドは、リンクオプションが選択されている場合に `COleClientItem::CreateLinkFromClipboard` と[COlePasteSpecialDialog:: CreateItem](../../mfc/reference/colepastespecialdialog-class.md#createitem)のフレームワークによって呼び出されます。
 
@@ -820,7 +820,7 @@ OLE 項目の作成時にキャッシュするクリップボードデータ形�
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 [ファイルから作成] ボタンを選択し、[リンク] チェックボックスをオンにすると、ユーザーが [オブジェクトの挿入] ダイアログボックスから [OK] を選択した場合、フレームワークはこの関数を呼び出します。 [COleInsertDialog:: CreateItem](../../mfc/reference/coleinsertdialog-class.md#createitem)から呼び出されます。
 
@@ -856,7 +856,7 @@ OLE 項目の作成時にキャッシュするクリップボードデータ形�
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 [新規作成] ボタンを選択したときに、ユーザーが [オブジェクトの挿入] ダイアログボックスから [OK] を選択した場合、フレームワークはこの関数を呼び出します。
 
@@ -888,7 +888,7 @@ OLE 項目の作成時にキャッシュするクリップボードデータ形�
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 静的項目はプレゼンテーションデータを含みますが、ネイティブデータは含まれません。したがって、編集することはできません。 通常、 [Createfromclipboard](#createfromclipboard)メンバー関数が失敗した場合は、この関数を呼び出します。
 
@@ -924,7 +924,7 @@ OLE 項目の作成時にキャッシュするクリップボードデータ形�
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 静的項目はプレゼンテーションデータを含みますが、ネイティブデータは含まれません。したがって、編集することはできません。 これは基本的に[Createstaticfromclipboard](#createstaticfromclipboard)と同じですが、クリップボードだけでなく、任意の `COleDataObject`から静的項目を作成することもできます。
 
@@ -940,7 +940,7 @@ OLE 項目を非アクティブ化し、関連付けられているすべての�
 void Deactivate();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 通常は、ユーザーがアイテムの境界外のクライアント領域でマウスをクリックしたときに、埋め込み先のアクティブな OLE アイテムを非アクティブ化します。 OLE 項目を非アクティブ化すると、元に戻す状態が破棄され、再アクティブ化[andundo](#reactivateandundo)メンバー関数を呼び出すことができなくなることに注意してください。
 
@@ -956,7 +956,7 @@ void Deactivate();
 void DeactivateUI();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この関数は、コンテナーアプリケーションのユーザーインターフェイスを元の状態に復元し、埋め込み先アクティベーション用に作成されたメニューやその他のコントロールを非表示にします。
 
@@ -977,7 +977,7 @@ void Delete(BOOL bAutoDelete = TRUE);
 *bAutoDelete*<br/>
 項目をドキュメントから削除するかどうかを指定します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この関数は、 [Release](#release)メンバー関数を呼び出します。これにC++より、項目のオブジェクトが削除され、ドキュメントから OLE 項目が完全に削除されます。 OLE 項目が埋め込まれている場合は、項目のネイティブデータが削除されます。 実行中のサーバーを常に閉じます。このため、項目が開いているリンクの場合、この関数は閉じます。
 
@@ -1015,7 +1015,7 @@ DROPEFFECT DoDragDrop(
 
 DROPEFFECT 値。 DROPEFFECT_MOVE 場合は、元のデータを削除する必要があります。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ドラッグアンドドロップ操作はすぐには開始されません。 マウスカーソルが、 *lpRectStartDrag*で指定された四角形から離れるか、指定されたミリ秒数が経過するまで待機します。 *LpRectStartDrag*が NULL の場合、四角形のサイズは1ピクセルです。
 
@@ -1045,7 +1045,7 @@ virtual BOOL DoVerb(
 *nVerb*<br/>
 実行する動詞を指定します。 次のいずれかを含めることができます。
 
-|値|意味|シンボル|
+|値|意味|Symbol|
 |-----------|-------------|------------|
 |- 0|主動詞|OLEIVERB_PRIMARY|
 |- 1|2番目の動詞|(なし)|
@@ -1065,7 +1065,7 @@ virtual BOOL DoVerb(
 
 動詞が正常に実行された場合は0以外の。それ以外の場合は0です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この関数は、[アクティベーション](#activate)メンバー関数を呼び出して動詞を実行します。 また、例外をキャッチし、スローされた場合はメッセージボックスをユーザーに表示します。
 
@@ -1097,7 +1097,7 @@ OLE 項目の側面、つまり、どのように表示するかを指定しま�
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 関数は、`COleServerItem`の[OnDraw](../../mfc/reference/coleserveritem-class.md#ondraw)メンバー関数によって作成された OLE 項目のメタファイル表現を使用する場合があります。
 
@@ -1141,7 +1141,7 @@ BOOL GetCachedExtent(
 
 成功した場合は0以外の。OLE 項目が空白の場合は0。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この関数は、 [Getextent](#getextent)と同じ情報を提供します。 ただし、`GetCachedExtent` を呼び出して、他の OLE ハンドラー ( [OnChange](#onchange)など) の処理中にエクステント情報を取得することができます。 ディメンションは MM_HIMETRIC 単位です。
 
@@ -1162,7 +1162,7 @@ void GetClassID(CLSID* pClassID) const;
 *pClassID*<br/>
 クラス ID を取得するための、 [CLSID](/windows/win32/com/clsid-key-hklm)型の識別子へのポインター。 CLSID の詳細については、Windows SDK を参照してください。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 クラス ID は、項目を編集するアプリケーションを一意に識別する128ビットの数値です。
 
@@ -1194,7 +1194,7 @@ OLE アイテムに格納されているデータを受け取る[COleDataSource]
 *lpSize*<br/>
 オブジェクトのサイズ (ピクセル単位)。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `GetClipboardData` は、 [OnGetClipboardData](#ongetclipboarddata)の既定の実装として呼び出されます。 `CopyToClipboard`によって提供されるデータ形式だけでなく、データ形式を提供する場合にのみ、`OnGetClipboardData` をオーバーライドします。 `CopyToClipboard`を呼び出す前または後に、これらの形式を `COleDataSource` オブジェクトに配置し、`COleDataSource` オブジェクトを[COleDataSource:: SetClipboard](../../mfc/reference/coledatasource-class.md#setclipboard)関数に渡します。 たとえば、コンテナードキュメント内の OLE 項目の位置をクリップボードに追加するには、その情報を渡すための独自の形式を定義し、`CopyToClipboard`を呼び出す前に `COleDataSource` に配置します。
 
@@ -1210,7 +1210,7 @@ COleDocument* GetDocument() const;
 
 OLE 項目を格納しているドキュメントへのポインター。 項目がドキュメントの一部でない場合は NULL。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このポインターは、`COleClientItem` コンストラクターに引数として渡された `COleDocument` オブジェクトへのアクセスを許可します。
 
@@ -1226,7 +1226,7 @@ DVASPECT GetDrawAspect() const;
 
 値が[Setdrawaspect](#setdrawaspect)の参照に一覧表示されている dvaspect 列挙子の値。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 アスペクトは、アイテムをどのように表示するかを指定します。
 
@@ -1252,7 +1252,7 @@ BOOL GetExtent(
 
 成功した場合は0以外の。OLE 項目が空白の場合は0。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 サーバーアプリケーションが Microsoft Foundation Class ライブラリを使用して記述されている場合、この関数によって、対応する `COleServerItem` オブジェクトの[OnGetExtent](../../mfc/reference/coleserveritem-class.md#ongetextent)メンバー関数が呼び出されます。 取得したサイズは、 [Setextent](#setextent)メンバー関数によって最後に設定されたサイズと異なる場合があることに注意してください。`SetExtent` によって指定されたサイズは、提案として扱われます。 ディメンションは MM_HIMETRIC 単位です。
 
@@ -1280,7 +1280,7 @@ static HICON GetIconFromRegistry(CLSID& clsid);
 
 アイコンリソースへの有効なハンドル。サーバーのアイコンまたは既定のアイコンが見つからない場合は NULL。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、サーバーが既に実行されている場合でも、サーバーを起動したり、アイコンを動的に取得したりすることはありません。 代わりに、このメンバー関数は、サーバーの実行可能イメージを開き、登録時にサーバーに関連付けられている静的アイコンを取得します。
 
@@ -1296,7 +1296,7 @@ HGLOBAL GetIconicMetafile();
 
 成功した場合はメタファイルへのハンドル。それ以外の場合は NULL。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 現在のアイコンがない場合は、既定のアイコンが返されます。 これは、MFC または OLE ダイアログによって自動的に呼び出され、通常は直接呼び出されません。
 
@@ -1314,7 +1314,7 @@ CWnd* GetInPlaceWindow();
 
 項目の埋め込み先編集ウィンドウへのポインター。項目がアクティブでない場合、またはそのサーバーが使用できない場合は NULL。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この関数は、埋め込み先のアクティブな項目に対してのみ呼び出す必要があります。
 
@@ -1330,7 +1330,7 @@ UINT GetItemState() const;
 
 `COleClientItem::ItemState` 列挙値。 `emptyState`、`loadedState`、`openState`、`activeState`、`activeUIState`のいずれかを指定できます。 これらの状態の詳細については、「[コンテナー: クライアント項目の状態](../../mfc/containers-client-item-states.md)」を参照してください。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 OLE 項目の状態が変化したときに通知を受けるには、 [OnChange](#onchange)メンバー関数を使用します。
 
@@ -1348,7 +1348,7 @@ SCODE GetLastStatus() const;
 
 SCODE 値。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ブール値 FALSE を返すメンバー関数、または NULL を返すその他のメンバー関数の場合は、`GetLastStatus` より詳細なエラー情報が返されます。 多くの OLE メンバー関数は、より重大なエラーに対して例外をスローすることに注意してください。 SCODE の解釈に関する具体的な情報は、最後に SCODE 値を返した基になる OLE 呼び出しによって異なります。
 
@@ -1370,7 +1370,7 @@ OLEUPDATE GetLinkUpdateOptions();
 
 - OLEUPDATE_ONCALL、( [UpdateLink](#updatelink)メンバー関数が呼び出されたときに) コンテナーアプリケーションからの要求に対してのみリンク項目を更新します。 このオプションでは、[リンク] ダイアログボックスの [手動リンク-更新] オプションボタンがサポートされています。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 これは高度な操作です。
 
@@ -1420,7 +1420,7 @@ OLE 項目の型を記述する文字列の必要なバリアントを示す値�
 *rString*<br/>
 OLE 項目の型を記述する文字列が返される[CString](../../atl-mfc-shared/reference/cstringt-class.md)オブジェクトへの参照。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 これは、多くの場合、システム登録データベースのエントリです。
 
@@ -1440,7 +1440,7 @@ BOOL IsInPlaceActive() const;
 
 OLE 項目がアクティブである場合は0以外の。それ以外の場合は0です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 項目が適切に編集されているかどうかによって、異なるロジックを実行するのが一般的です。 関数は、現在の項目の状態が `activeState` と `activeUIState`のどちらかであるかどうかをチェックします。
 
@@ -1456,7 +1456,7 @@ BOOL IsLinkUpToDate() const;
 
 OLE 項目が最新の場合は0以外の。それ以外の場合は0です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ソースドキュメントが更新されている場合、リンクされた項目は最新ではない可能性があります。 リンクが含まれている埋め込み項目は、同様に古くなる可能性があります。 関数は、OLE 項目の再帰的なチェックを行います。 OLE 項目が古くなっているかどうかを判断することは、実際に更新を実行する場合と比べてコストが高くなる可能性があることに注意してください。
 
@@ -1476,7 +1476,7 @@ BOOL IsModified() const;
 
 OLE 項目がダーティの場合は0以外の。それ以外の場合は0です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 詳細については、Windows SDK の「 [IPersistStorage:: IsDirty](/windows/win32/api/objidl/nf-objidl-ipersiststorage-isdirty) 」を参照してください。
 
@@ -1492,7 +1492,7 @@ BOOL IsOpen() const;
 
 OLE 項目が開いている場合は0以外の。それ以外の場合は0です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 これは、陰影パターンを使用してオブジェクトを描画するタイミングを決定するために使用されます。 開いているオブジェクトには、オブジェクトの上にハッチパターンが描画される必要があります。 これを行うには、 [CRectTracker](../../mfc/reference/crecttracker-class.md)オブジェクトを使用します。
 
@@ -1508,7 +1508,7 @@ BOOL IsRunning() const;
 
 OLE 項目が実行されている場合は0以外の。それ以外の場合は0です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 詳細については、Windows SDK の「 [OleIsRunning](/windows/win32/api/ole2/nf-ole2-oleisrunning) 」を参照してください。
 
@@ -1520,7 +1520,7 @@ OLE 項目が実行されている場合は0以外の。それ以外の場合は
 virtual void OnActivate();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この関数は、サーバーが実行されていることを示すために呼び出され、ユーザーインターフェイスがコンテナーアプリケーションにインストールされていることを示すものではないことに注意してください。 この時点で、オブジェクトにはアクティブなユーザーインターフェイスがありません (が `activeUIState`ではありません)。 メニューまたはツールバーがインストールされていません。 [Onアクティブ ui](#onactivateui)メンバー関数は、発生したときに呼び出されます。
 
@@ -1534,7 +1534,7 @@ virtual void OnActivate();
 virtual void OnActivateUI();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 これで、オブジェクトのツールバーとメニューがインストールされました。
 
@@ -1566,7 +1566,7 @@ virtual void OnChange(
 *dwParam*<br/>
 *NCode*が OLE_SAVED または OLE_CLOSED の場合、このパラメーターは使用されません。 *NCode*が OLE_CHANGED 場合、このパラメーターは、変更された OLE 項目の縦横比を指定します。 使用可能な値については、 [COleClientItem::D raw](#draw)の*dwparam*パラメーターを参照してください。 *NCode*が OLE_CHANGED_STATE の場合、このパラメーターは `COleClientItem::ItemState` 列挙値であり、入力されている状態を示します。 次の値のいずれかを指定できます: `emptyState`、`loadedState`、`openState`、`activeState`、または `activeUIState`。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 (サーバーアプリケーションが Microsoft Foundation Class ライブラリを使用して記述されている場合、この関数は `COleServerDoc` または `COleServerItem`の `Notify` メンバー関数への応答として呼び出されます)。*NCode*が OLE_CHANGED または OLE_SAVED の場合、既定の実装はコンテナードキュメントを変更済みとしてマークします。
 
@@ -1591,7 +1591,7 @@ virtual BOOL OnChangeItemPosition(const CRect& rectPos);
 
 項目の位置が正常に変更された場合は0以外の。それ以外の場合は0です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 既定の実装では、OLE 項目の新しい表示される四角形が決定され、新しい値を使用して[SetItemRects](#setitemrects)が呼び出されます。 既定の実装では、項目の表示可能な四角形が計算され、その情報がサーバーに渡されます。
 
@@ -1605,7 +1605,7 @@ OLE 項目が埋め込み先のアクティブ状態 (`activeState`) から読�
 virtual void OnDeactivate();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 OLE 項目が閉じていることを示すために、この関数が呼び出されます。これは、ユーザーインターフェイスがコンテナーアプリケーションから削除されていることを示します。 この場合、 [Ondeアクティブ化 ui](#ondeactivateui)メンバー関数が呼び出されます。
 
@@ -1619,7 +1619,7 @@ OLE 項目をアクティブ化した後に、ユーザーが元に戻すコマ�
 virtual void OnDeactivateAndUndo();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 既定の実装では、サーバーのユーザーインターフェイスを非アクティブ化するために[Deの ui](#deactivateui)が呼び出されます。 コンテナーアプリケーションで undo コマンドを実装する場合は、この関数をオーバーライドします。 オーバーライドで、関数の基本クラスバージョンを呼び出し、アプリケーションで最後に実行されたコマンドを元に戻します。
 
@@ -1638,7 +1638,7 @@ virtual void OnDeactivateUI(BOOL bUndoable);
 *bUndoable*<br/>
 編集の変更を取り消し可能にするかどうかを指定します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この関数は、コンテナーアプリケーションのユーザーインターフェイスを元の状態に復元し、埋め込み先アクティベーション用に作成されたメニューやその他のコントロールを非表示にします。
 
@@ -1652,7 +1652,7 @@ OLE 項目の編集中に元に戻す状態を破棄するアクションをユ�
 virtual void OnDiscardUndoState();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 既定の実装では、何も行われません。 コンテナーアプリケーションで undo コマンドを実装する場合は、この関数をオーバーライドします。 オーバーライドで、コンテナーアプリケーションの元に戻す状態を破棄します。
 
@@ -1686,7 +1686,7 @@ virtual COleDataSource* OnGetClipboardData(
 
 クリップボードデータを格納している[COleDataSource](../../mfc/reference/coledatasource-class.md)オブジェクトへのポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この関数の既定の実装では、 [GetClipboardData](#getclipboarddata)を呼び出します。
 
@@ -1703,7 +1703,7 @@ virtual void OnGetClipRect(CRect& rClipRect);
 *rClipRect*<br/>
 項目のクリッピング四角形の座標を保持する、 [CRect](../../atl-mfc-shared/reference/crect-class.md)クラスのオブジェクトへのポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 座標は、コンテナーアプリケーションウィンドウのクライアント領域に対して相対的にピクセル単位で表されます。
 
@@ -1722,7 +1722,7 @@ virtual void OnGetItemPosition(CRect& rPosition);
 *rPosition*<br/>
 項目の位置座標を格納する、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトへの参照。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 座標は、コンテナーアプリケーションウィンドウのクライアント領域に対して相対的にピクセル単位で表されます。
 
@@ -1754,7 +1754,7 @@ virtual BOOL OnGetWindowContext(
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この関数は、OLE 項目の親ウィンドウに関する情報を取得するために使用されます。
 
@@ -1782,7 +1782,7 @@ virtual void OnInsertMenus(
 *lpMenuWidths*<br/>
 は、ファイル、編集、コンテナー、オブジェクト、ウィンドウ、ヘルプの各メニューグループに含まれるメニューの数を示す6つの LONG 値の配列を指します。 コンテナーアプリケーションは、この配列の要素0、2、および4に対応する [ファイル]、[コンテナー]、[ウィンドウ] の各メニューグループを担当します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメニューがサーバーに渡され、独自のメニューが挿入され、複合メニューが作成されます。 この関数を繰り返し呼び出して、複数の複合メニューを作成できます。
 
@@ -1803,7 +1803,7 @@ virtual void OnRemoveMenus(CMenu* pMenuShared);
 *Pmen氏*<br/>
 [Oninsertmenus](#oninsertmenus)メンバー関数の呼び出しによって構築された複合メニューを指します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 既定の実装では、埋め込み先コンテナーメニュー、つまり、[ファイル]、[コンテナー]、[ウィンドウ] の各メニューグループが削除*されます*。 既定の実装がアプリケーションに適していない場合は、この関数をオーバーライドします。たとえば、アプリケーションで、ドキュメントの種類にリソースを関連付けるためのドキュメントテンプレートが使用されていないとします。 この関数をオーバーライドする場合は、 [Oninsertmenus](#oninsertmenus)と[OnSetMenu](#onsetmenu)もオーバーライドすることをお勧めします。 これは高度なオーバーライド可能です。
 
@@ -1828,7 +1828,7 @@ X 方向および y 方向のスクロール間隔をピクセル単位で指定
 
 項目がスクロールされた場合は0以外の。項目をスクロールできなかった場合は0。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 たとえば、OLE 項目が部分的に表示されていて、ユーザーが埋め込み先編集の実行中に、表示されている領域の外に移動した場合、この関数はカーソルを表示したままにします。 既定の実装では、何も行われません。 指定した量だけ項目をスクロールするには、この関数をオーバーライドします。 スクロールの結果として、OLE 項目の表示部分が変化する場合があることに注意してください。 [SetItemRects](#setitemrects)を呼び出して、項目の表示可能な四角形を更新します。
 
@@ -1856,7 +1856,7 @@ virtual void OnSetMenu(
 *hwndActiveObject*<br/>
 OLE 項目の編集ウィンドウへのハンドル。 これは、OLE から編集コマンドを受け取るウィンドウです。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 既定の実装では、複合メニューをインストールまたは削除した後、 [Olesetmenudescriptor](/windows/win32/api/ole2/nf-ole2-olesetmenudescriptor)関数を呼び出してディスパッチコードをインストールまたは削除します。 既定の実装がアプリケーションに適していない場合は、この関数をオーバーライドします。 この関数をオーバーライドする場合は、 [Oninsertmenus](#oninsertmenus)と[OnRemoveMenus](#onremovemenus)もオーバーライドすることをお勧めします。 これは高度なオーバーライド可能です。
 
@@ -1884,7 +1884,7 @@ virtual BOOL OnShowControlBars(
 
 関数呼び出しによってコントロールバーの状態が変更された場合は0以外の。呼び出しによって変更が行われない場合は0。 *pFrameWnd*がコンテナーのフレームウィンドウを指していない場合は。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 コントロールバーが既に BShow によって指定された状態にある場合、この関数は0を返し*ます。* これは、たとえば、コントロールバーが非表示になっていて、 *bShow*が FALSE である場合などに発生します。
 
@@ -1898,7 +1898,7 @@ OLE 項目を表示するためにフレームワークによって呼び出さ�
 virtual void OnShowItem();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 これは、コンテナーアプリケーションが埋め込みアイテムへのリンクをサポートしている場合 (つまり、 [COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md)からドキュメントクラスを派生した場合) に使用されます。 この関数は、埋め込み先でのアクティブ化時、または OLE 項目がリンクソースであり、ユーザーがそれを編集する必要があるときに呼び出されます。 既定の実装では、コンテナードキュメントの最初のビューがアクティブ化されます。 OLE 項目が表示されるように、この関数をオーバーライドしてドキュメントをスクロールします。
 
@@ -1914,7 +1914,7 @@ virtual BOOL OnUpdateFrameTitle();
 
 この関数がフレームタイトルを正常に更新した場合は0以外の値。それ以外の場合は0。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 既定の実装では、フレームウィンドウのタイトルは変更されません。 アプリケーションに別のフレームタイトルが必要な場合は、この関数をオーバーライドします (たとえば、 *docname*の " *server app* - *item* " (レポート内の Microsoft Excel-スプレッドシート))。DOC ")。 これは高度なオーバーライド可能です。
 
@@ -1930,7 +1930,7 @@ BOOL ReactivateAndUndo();
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 コンテナーアプリケーションで undo コマンドがサポートされている場合は、OLE 項目を非アクティブにした直後に undo コマンドをユーザーが選択した場合は、この関数を呼び出します。
 
@@ -1951,7 +1951,7 @@ virtual void Release(OLECLOSE dwCloseOption = OLECLOSE_NOSAVE);
 *dwCloseOption*<br/>
 OLE 項目が読み込まれた状態に戻ったときに、どのような状況で OLE 項目を保存するかを指定するフラグ。 使用可能な値の一覧については、「 [COleClientItem:: Close](#close)」を参照してください。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `Release` は、`COleClientItem` デストラクターによって呼び出されます。
 
@@ -1969,7 +1969,7 @@ BOOL Reload();
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 [[アクティブ化] を呼び出し](#activateas)て、項目を別の型の項目としてアクティブ化した後に、`Reload` 関数を呼び出します。
 
@@ -1981,7 +1981,7 @@ BOOL Reload();
 void Run();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 項目をアクティブにする前に、`Run` メンバー関数を呼び出して、サーバーアプリケーションを起動します。 これは、 [Activate](#activate)と[DoVerb](#doverb)によって自動的に行われるので、通常、この関数を呼び出す必要はありません。 [DoVerb](#doverb)を実行する前に、 [setextent](#setextent)などの項目属性を設定するためにサーバーを実行する必要がある場合は、この関数を呼び出します。
 
@@ -2006,7 +2006,7 @@ DVASPECT 列挙子の値。 このパラメーターには、次のいずれか�
 
 - DVASPECT_DOCPRINT 項目は、[ファイル] メニューの [印刷] コマンドを使用して印刷されたかのように表されます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この側面では、その関数の*Ndrawaspect*引数の既定値が使用されている場合に、[描画](#draw)によって項目がどのようにレンダリングされるかを指定します。
 
@@ -2030,7 +2030,7 @@ void SetExtent(
 *nDrawAspect*<br/>
 境界を設定する OLE 項目の縦横比を指定します。 使用可能な値については、「 [Setdrawaspect](#setdrawaspect)」を参照してください。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 サーバーアプリケーションが Microsoft Foundation Class ライブラリを使用して記述されている場合、これにより、対応する `COleServerItem` オブジェクトの[OnSetExtent](../../mfc/reference/coleserveritem-class.md#onsetextent)メンバー関数が呼び出されます。 OLE 項目は、それに応じて表示を調整できます。 ディメンションは MM_HIMETRIC 単位にする必要があります。 ユーザーが OLE 項目のサイズを変更する場合、または何らかの形式のレイアウトネゴシエーションをサポートする場合は、この関数を呼び出します。
 
@@ -2054,7 +2054,7 @@ void SetHostNames(
 *lpszHostObj*<br/>
 OLE 項目が格納されているコンテナーの識別文字列へのポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 サーバーアプリケーションが Microsoft Foundation Class ライブラリを使用して記述されている場合、この関数は、OLE 項目を含む `COleServerDoc` ドキュメントの[Onsethostnames](../../mfc/reference/coleserverdoc-class.md#onsethostnames)メンバー関数を呼び出します。 この情報は、OLE 項目が編集されているときにウィンドウタイトルで使用されます。 コンテナードキュメントが読み込まれるたびに、フレームワークはドキュメント内のすべての OLE 項目に対してこの関数を呼び出します。 `SetHostNames` は、埋め込みアイテムにのみ適用できます。 埋め込み OLE 項目を編集するためにアクティブ化するたびに、この関数を呼び出す必要はありません。
 
@@ -2079,7 +2079,7 @@ BOOL SetIconicMetafile(HGLOBAL hMetaPict);
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 メタファイルを取得するには、 [geを](#geticonicmetafile)使用します。
 
@@ -2107,7 +2107,7 @@ BOOL SetItemRects(
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この関数は、 [Onchangeitemposition](#onchangeitemposition)メンバー関数の既定の実装によって呼び出されます。 OLE 項目の位置または表示部分が変更されるたびに、この関数を呼び出す必要があります。 通常、これは、ビューの[OnSize](../../mfc/reference/cwnd-class.md#onsize)および[onscrollby](../../mfc/reference/cview-class.md#onscrollby)メンバー関数から呼び出すことを意味します。
 
@@ -2130,7 +2130,7 @@ void SetLinkUpdateOptions(OLEUPDATE dwUpdateOpt);
 
 - OLEUPDATE_ONCALL、( [UpdateLink](#updatelink)メンバー関数が呼び出されたときに) コンテナーアプリケーションからの要求に対してのみリンク項目を更新します。 このオプションでは、[リンク] ダイアログボックスの [手動リンク-更新] オプションボタンがサポートされています。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 通常、[リンク] ダイアログボックスでユーザーが選択した更新プログラムのオプションは変更しないでください。
 
@@ -2157,7 +2157,7 @@ BOOL SetPrintDevice(const PRINTDLG* ppd);
 
 関数が成功した場合は0以外の。それ以外の場合は0です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この関数は、項目の印刷ターゲットデバイスを更新しますが、プレゼンテーションキャッシュを更新しません。 項目のプレゼンテーションキャッシュを更新するには、 [UpdateLink](#updatelink)を呼び出します。
 
@@ -2179,7 +2179,7 @@ BOOL UpdateLink();
 
 正常に完了した場合はゼロ以外、それ以外の場合は 0 です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 リンク項目の場合、関数はリンクソースを検索して、OLE 項目の新しいプレゼンテーションを取得します。 このプロセスには、1つまたは複数のサーバーアプリケーションの実行が含まれる場合がありますが、この処理には時間がかかることがあります。 埋め込みアイテムの場合、関数は再帰的に動作し、埋め込みアイテムに古いリンクが含まれているかどうかを確認し、更新します。 ユーザーは、[リンク] ダイアログボックスを使用して個々のリンクを手動で更新することもできます。
 

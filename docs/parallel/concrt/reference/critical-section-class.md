@@ -15,11 +15,11 @@ helpviewer_keywords:
 - critical_section class
 ms.assetid: fa3c89d6-be5d-4d1b-bddb-8232814e6cf6
 ms.openlocfilehash: aef3ae6100133374cb89098f118c447effafd840
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78867169"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424249"
 ---
 # <a name="critical_section-class"></a>critical_section クラス
 
@@ -35,26 +35,26 @@ class critical_section;
 
 ### <a name="public-typedefs"></a>パブリック Typedef
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |`native_handle_type`|`critical_section` オブジェクトへの参照です。|
 
 ### <a name="public-classes"></a>パブリック クラス
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[critical_section:: scoped_lock クラス](#critical_section__scoped_lock_class)|`critical_section` オブジェクトの例外セーフ RAII ラッパー。|
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[critical_section](#ctor)|新しいクリティカルセクションを構築します。|
 |[~ critical_section デストラクター](#dtor)|クリティカルセクションを破棄します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[lock](#lock)|このクリティカルセクションを取得します。|
 |[native_handle](#native_handle)|プラットフォーム固有のネイティブハンドル (存在する場合) を返します。|
@@ -62,7 +62,7 @@ class critical_section;
 |[try_lock_for](#try_lock_for)|特定のミリ秒数の間、ブロックせずにロックを取得しようとします。|
 |[unlock](#unlock)|クリティカルセクションのロックを解除します。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 詳細については、「[同期データ構造](../../../parallel/concrt/synchronization-data-structures.md)」を参照してください。
 
@@ -70,7 +70,7 @@ class critical_section;
 
 `critical_section`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** concrt .h
 
@@ -92,7 +92,7 @@ critical_section();
 ~critical_section();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 デストラクターの実行時にロックが保持されないことが想定されています。 ロックが保持されている状態でクリティカルセクションを破棄できるようにすると、未定義の動作が発生します。
 
@@ -104,7 +104,7 @@ critical_section();
 void lock();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 多くの場合、 [scoped_lock](#critical_section__scoped_lock_class)コンストラクトを使用して、例外セーフな方法で `critical_section` オブジェクトを取得および解放する方が安全です。
 
@@ -122,7 +122,7 @@ native_handle_type native_handle();
 
 クリティカルセクションへの参照。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `critical_section` オブジェクトは、Windows オペレーティングシステムのプラットフォーム固有のネイティブハンドルに関連付けられていません。 メソッドは、単にオブジェクト自体への参照を返します。
 

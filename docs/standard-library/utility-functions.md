@@ -15,11 +15,11 @@ helpviewer_keywords:
 - std::move [C++]
 - std::swap [C++]
 ms.openlocfilehash: 723b077500b9b741445efcd8574fb26cd53e5fc7
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78854866"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427681"
 ---
 # <a name="ltutilitygt-functions"></a>&lt;utility&gt; 関数
 
@@ -57,7 +57,7 @@ new_val の値を受け取るオブジェクト。
 *new_val*\
 値が val にコピーまたは移動されるオブジェクト。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 複合型の場合、`exchange` は、move コンストラクターが使用可能な場合に古い値がコピーされることを防ぎ、一時オブジェクトの場合や移動された場合は新しい値がコピーされることを防いで任意の型を新しい値として受け入れ、利用可能な任意の変換代入演算子を利用します。 左の引数が右の引数に移動またはコピーされない場合、exchange 関数は[std:: swap](../standard-library/algorithm-functions.md#swap)とは異なります。
 
@@ -119,7 +119,7 @@ template <class Type>    // accepts everything else
 
 *Arg*で渡された値が最初は右辺値または右辺値参照であった場合、 *arg*への右辺値参照を返します。それ以外の場合は、型を変更せずに*Arg*を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `forward` を呼び出すために明示的なテンプレート引数を指定する必要があります。
 
@@ -198,7 +198,7 @@ template <class T2, class T1>
 *pr*\
 選択する pair。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 各テンプレート関数は、 `pair` 引数の要素への参照を返します。
 
@@ -293,7 +293,7 @@ template <class T, class U>
 
 構築されたペアオブジェクト: `pair`<`T`、`U`> (`Val1`、`Val2`)。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `make_pair` は、[reference_wrapper Class](../standard-library/reference-wrapper-class.md) 型のオブジェクトを参照型に変換し、減衰配列および関数をポインターに変換します。
 
@@ -334,7 +334,7 @@ template <class Type>
 
 型が参照型であるかどうかに関係なく、右辺値参照としての `Arg`。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 テンプレート引数の*型*は明示的に指定することを意図していませんが、 *Arg*で渡される値の型から推測されます。 *型*の型は、参照の折りたたみ規則に従ってさらに調整されます。
 
@@ -369,7 +369,7 @@ template <class T, class U>
 *右*\
 型または型のオブジェクト `pair`。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `swap` の利点の1つは、格納されるオブジェクトの型がコンパイラによって自動的に決定され、明示的に指定する必要がないことです。 `swap` を使用する場合は、`swap<int, int>(1, 2)` などの明示的なテンプレート引数を使用しないでください。これは詳細で、コンパイルエラーの原因となる可能性のある複雑な右辺値参照の問題が追加されるためです。
 
@@ -388,6 +388,6 @@ to_chars_result to_chars(char* first, char* last, double value, chars_format fmt
 to_chars_result to_chars(char* first, char* last, long double value, chars_format fmt, int precision);
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 範囲 `[first, last)`を埋めることによって値を文字列に変換します。 `[first, last)` は有効な範囲である必要があります。

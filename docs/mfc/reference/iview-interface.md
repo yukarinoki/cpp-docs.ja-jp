@@ -13,15 +13,15 @@ helpviewer_keywords:
 - views [MFC], classes
 ms.assetid: 9321f299-486e-4551-bee9-d2c4a7b91548
 ms.openlocfilehash: 22e08a70ff4cc742406a1489899c0ba1df7eb664
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62321950"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426253"
 ---
 # <a name="iview-interface"></a>IView インターフェイス
 
-いくつかのメソッドを実装する[CWinFormsView](../../mfc/reference/cwinformsview-class.md)を使用してマネージ コントロールを表示通知を送信します。
+[CWinFormsView](../../mfc/reference/cwinformsview-class.md)が、ビュー通知をマネージコントロールに送信するために使用するいくつかのメソッドを実装します。
 
 ## <a name="syntax"></a>構文
 
@@ -33,27 +33,27 @@ interface class IView
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|名前|説明|
+|Name|Description|
 |----------|-----------------|
-|[IView::OnActivateView](#onactivateview)|ビューがアクティブ化または非アクティブ化されたときに、MFC によって呼び出されます。|
-|[IView::OnInitialUpdate](#oninitialupdate)|ビューが最初に、ドキュメントに接続されているが、ビューが最初に表示される前に、フレームワークによって呼び出されます。|
-|[IView::OnUpdate](#onupdate)|ビューのドキュメントが変更された後に、MFC によって呼び出されますこの関数は、ビューの変更を反映するように表示を更新できます。|
+|[IView:: Onアクティブビュー](#onactivateview)|ビューがアクティブ化または非アクティブ化されたときに MFC によって呼び出されます。|
+|[IView:: OnInitialUpdate](#oninitialupdate)|最初にビューがドキュメントにアタッチされた後、最初にビューが表示される前に、フレームワークによって呼び出されます。|
+|[IView:: OnUpdate](#onupdate)|ビューのドキュメントが変更された後に MFC によって呼び出されます。この関数を使用すると、ビューが変更を反映するように表示を更新できます。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-`IView` いくつかのメソッドを実装する`CWinFormsView`を使用してホストされているマネージ コントロールを一般的な通知の表示を転送します。 これらは[OnInitialUpdate](#oninitialupdate)、 [OnUpdate](#onupdate)と[OnActivateView](#onactivateview)します。
+`IView` は、共通のビュー通知をホストされたマネージコントロールに転送するために `CWinFormsView` 使用するいくつかのメソッドを実装します。 これらは、 [OnInitialUpdate](#oninitialupdate)、 [OnUpdate](#onupdate) 、および[onアクティブビュー](#onactivateview)です。
 
-`IView` ような[CView](../../mfc/reference/cview-class.md)が管理されたビューとコントロールでのみ使用されます。
+`IView` は[CView](../../mfc/reference/cview-class.md)に似ていますが、マネージビューおよびコントロールでのみ使用されます。
 
-Windows フォームの使用に関する詳細については、次を参照してください。 [MFC における Windows フォーム ユーザー コントロールを使用して](../../dotnet/using-a-windows-form-user-control-in-mfc.md)します。
+Windows フォームの使用方法の詳細については、「 [MFC での Windows フォームユーザーコントロールの使用](../../dotnet/using-a-windows-form-user-control-in-mfc.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-ヘッダー: afxwinforms.h が (アセンブリ atlmfc\lib\mfcmifc80.dll で定義)
+ヘッダー: afxwinforms (アセンブリに定義されています) (アセンブリに定義されています。
 
-## <a name="onactivateview"></a> IView::OnActivateView
+## <a name="onactivateview"></a>IView:: Onアクティブビュー
 
-ビューがアクティブ化または非アクティブ化されたときに、MFC によって呼び出されます。
+ビューがアクティブ化または非アクティブ化されたときに MFC によって呼び出されます。
 ```
 void OnActivateView(bool activate);
 ```
@@ -61,27 +61,27 @@ void OnActivateView(bool activate);
 ## <a name="parameters"></a>パラメーター
 
 *activate*<br/>
-表示されているかどうかを示しますがアクティブまたは非アクティブ化します。
+ビューがアクティブ化または非アクティブ化されているかどうかを示します。
 
-## <a name="oninitialupdate"></a> IView::OnInitialUpdate
+## <a name="oninitialupdate"></a>IView:: OnInitialUpdate
 
-ビューが最初に、ドキュメントに接続されているが、ビューが最初に表示される前に、フレームワークによって呼び出されます。
+最初にビューがドキュメントにアタッチされた後、最初にビューが表示される前に、フレームワークによって呼び出されます。
 ```
 void OnInitialUpdate();
 ```
 
-## <a name="onupdate"></a> IView::OnUpdate
+## <a name="onupdate"></a>IView:: OnUpdate
 
 ビューのドキュメントが変更された後に、MFC によって呼び出されます。
 ```
 void OnUpdate();
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-この関数は、ビューの変更を反映するように表示を更新できます。
+この関数を使用すると、ビューが変更を反映するように表示を更新できます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [CWinFormsView クラス](../../mfc/reference/cwinformsview-class.md)<br/>
 [CView クラス](../../mfc/reference/cview-class.md)

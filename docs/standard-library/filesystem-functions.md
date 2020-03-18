@@ -85,11 +85,11 @@ helpviewer_keywords:
 - std::experimental::filesystem::temp_directory_path
 - std::experimental::filesystem::u8path
 ms.openlocfilehash: 1ab57a6fc13a03d02963f3d7ecc80f63decb9487
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78875827"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427111"
 ---
 # <a name="ltfilesystemgt-functions"></a>&lt;filesystem&gt; 関数
 
@@ -184,7 +184,7 @@ void copy(const path& from, const path& to, copy_options opts, error_code& ec) n
 
 - それ以外の場合は、`is_directory(f)`場合は  / `from.filename(), opts)`を `copy_file(from, to`します。
 
-- それ以外の場合は、`copy_file(from, to, opts)` になります。
+- それ以外の場合は `copy_file(from, to, opts)`。
 
 それ以外の場合、`is_directory(f) && (opts & copy_options::recursive || !opts)`した場合は、次のようになります。
 

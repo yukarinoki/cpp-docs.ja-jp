@@ -16,11 +16,11 @@ helpviewer_keywords:
 - Iregistrar Interface
 ms.assetid: e88c04b7-0c93-4ae8-aeb9-ecd78f87421e
 ms.openlocfilehash: e347bdba1656a53cd705123a26650dad50d3892f
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78857147"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423052"
 ---
 # <a name="iregistrar-interface"></a>IRegistrar インターフェイス
 
@@ -32,7 +32,7 @@ ms.locfileid: "78857147"
 typedef interface IRegistrar IRegistrar;
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 詳細については、「[置換可能なパラメーター (レジストラーのプリプロセッサ) の使用](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md)」を参照してください。
 
@@ -40,7 +40,7 @@ typedef interface IRegistrar IRegistrar;
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[IRegistrar:: ResourceRegisterSz](#resourceregistersz)|リソースを登録します。 |
 |[IRegistrar:: ResourceUnregisterSz](#resourceunregistersz)| リソースの登録を解除します。|
@@ -51,7 +51,7 @@ typedef interface IRegistrar IRegistrar;
 |[IRegistrar:: ResourceRegister](#resourceregister)|リソースを登録します。|
 |[IRegistrar:: ResourceUnregister 解除](#resourceunregister)|リソースの登録を解除します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlifase
 

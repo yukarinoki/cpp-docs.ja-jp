@@ -14,11 +14,11 @@ helpviewer_keywords:
 - std::swap [C++]
 - std::swap [C++]
 ms.openlocfilehash: b2be3e4a830113ee86a05fea0d39fd8e12ec3e9a
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78876143"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425197"
 ---
 # <a name="ltregexgt-functions"></a>&lt;regex&gt; 関数
 
@@ -126,7 +126,7 @@ bool regex_match(
 *str*\
 一致させる文字列。 *Elem*の型に対応します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 各テンプレート関数は、オペランドシーケンス*str*全体が正規表現の引数*re*と完全に一致する場合にのみ true を返します。 [Regex_search](../standard-library/regex-functions.md#regex_search)を使用して、ターゲットシーケンス内の部分文字列を一致させ、`regex_iterator` 複数の一致を検索します。 `match_results` オブジェクトを受け取る関数は、一致が成功したかどうかを反映し、さらに成功した場合は正規表現内のさまざまなキャプチャ グループがキャプチャした内容を反映するようにそのメンバーを設定します。
 
@@ -256,7 +256,7 @@ basic_string<Elem> regex_replace(
 *str*\
 一致させる文字列。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 最初の関数は、 [Regex_iterator クラス](../standard-library/regex-iterator-class.md)オブジェクト `iter(first, last, re, flags)` を構築し、それを使用して入力範囲を `[first, last)` 一連のサブシーケンス `T0 M0 T1 M1...TN-1 MN-1 TN`に分割します。ここで `Mn` は、反復子によって検出された n 番目の一致です。 一致が見つからない場合は、`T0` は入力範囲全体であり `N` はゼロです。 `(flags & format_first_only) != 0` である場合、最初の一致のみが使用され、`T1` がその一致に続く入力テキストのすべてであり、`N` は 1 です。 `[0, N)`範囲内の各 `i` に対して、`(flags & format_no_copy) == 0` 場合は `Ti` 範囲内のテキストを反復子*out*にコピーします。次に、`m.format(out, fmt, flags)`を呼び出します。 `m` は、サブシーケンス `Mi`の反復子オブジェクト `iter` によって返される `match_results` オブジェクトです。 最後に、`(flags & format_no_copy) == 0` 場合は `TN` 範囲内のテキストを反復子*out*にコピーします。関数は、*を返します*。
 
@@ -395,7 +395,7 @@ bool regex_search(
 *str*\
 一致させる文字列。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 各テンプレート関数は、オペランドシーケンス内の正規表現の引数*re*の検索が成功した場合にのみ true を返します。 `match_results` オブジェクトを受け取る関数は、検索が成功したかどうかを反映し、さらに成功した場合は正規表現内のさまざまなキャプチャ グループがキャプチャした内容を反映するように、そのメンバーを設定します。
 
@@ -479,7 +479,7 @@ void swap(
 *RXtraits*\
 要素の特徴 (traits) クラス。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このテンプレート関数は、一定時間でそれぞれの引数の内容を交換し、例外をスローしません。
 

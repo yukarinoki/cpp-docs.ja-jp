@@ -51,11 +51,11 @@ helpviewer_keywords:
 - omp_unset_nest_lock OpenMP function
 ms.assetid: a55a2e5c-a260-44ee-bbd6-de7e2351b384
 ms.openlocfilehash: 4508c683ff5d4bece290b7fef2bbd83ae8023eac
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78882909"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424123"
 ---
 # <a name="openmp-functions"></a>OpenMP の関数
 
@@ -65,7 +65,7 @@ OpenMP 標準C++のビジュアル実装には、次の関数とデータ型が�
 
 環境実行の場合:
 
-|関数|説明|
+|Function|Description|
 |--------|-----------|
 |[omp_set_num_threads](#omp-set-num-threads)|[Num_threads](openmp-clauses.md#num-threads)句でオーバーライドされない限り、今後の並列領域のスレッド数を設定します。|
 |[omp_get_num_threads](#omp-get-num-threads)|並列領域内のスレッドの数を返します。|
@@ -80,7 +80,7 @@ OpenMP 標準C++のビジュアル実装には、次の関数とデータ型が�
 
 ロック用:
 
-|関数|説明|
+|Function|Description|
 |--------|-----------|
 |[omp_init_lock](#omp-init-lock)|単純なロックを初期化します。|
 |[omp_init_nest_lock](#omp-init-nest-lock)|ロックを初期化します。|
@@ -93,14 +93,14 @@ OpenMP 標準C++のビジュアル実装には、次の関数とデータ型が�
 |[omp_test_lock](#omp-test-lock)|ロックの設定を試みますが、スレッドの実行をブロックしません。|
 |[omp_test_nest_lock](#omp-test-nest-lock)|A.17 lock を設定しようとしますが、スレッドの実行をブロックしません。|
 
-|データ型|説明|
+|データ型|Description|
 |---------|-----------|
 |`omp_lock_t`|ロックが使用可能かどうか、またはスレッドがロックを所有しているかどうかなど、ロックの状態を保持する型。|
 |`omp_nest_lock_t`|ロックに関する次のいずれかの情報を保持する型。ロックが使用可能かどうか、およびロックを所有しているスレッドの id と入れ子数を保持します。|
 
 タイミングルーチンの場合:
 
-|関数|説明|
+|Function|Description|
 |--------|-----------|
 |[omp_get_wtime](#omp-get-wtime)|ある時点から経過した時間の秒単位の値を返します。|
 |[omp_get_wtick](#omp-get-wtick)|プロセッサのクロックティックまでの秒数を返します。|
@@ -120,7 +120,7 @@ void omp_destroy_lock(
 *lock*<br/>
 [Omp_init_lock](#omp-init-lock)で初期化された `omp_lock_t` 型の変数。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 詳細については、「 [3.2.2 omp_destroy_lock and omp_destroy_nest_lock functions](../../../parallel/openmp/3-2-2-omp-destroy-lock-and-omp-destroy-nest-lock-functions.md)」を参照してください。
 
@@ -143,7 +143,7 @@ void omp_destroy_nest_lock(
 *lock*<br/>
 [Omp_init_nest_lock](#omp-init-nest-lock)で初期化された `omp_nest_lock_t` 型の変数。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 詳細については、「 [3.2.2 omp_destroy_lock and omp_destroy_nest_lock functions](../../../parallel/openmp/3-2-2-omp-destroy-lock-and-omp-destroy-nest-lock-functions.md)」を参照してください。
 
@@ -163,7 +163,7 @@ int omp_get_dynamic();
 
 0以外の値は、スレッドが動的に調整されることを意味します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 スレッドの動的な調整は、 [omp_set_dynamic](#omp-set-dynamic)と[OMP_DYNAMIC](openmp-environment-variables.md#omp-dynamic)で指定されます。
 
@@ -181,7 +181,7 @@ int omp_get_dynamic();
 int omp_get_max_threads( )
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 詳細については、「 [3.1.3 omp_get_max_threads 関数](../../../parallel/openmp/3-1-3-omp-get-max-threads-function.md)」を参照してください。
 
@@ -235,7 +235,7 @@ int omp_get_nested( );
 
 0以外の値は、入れ子になった並列処理が有効であることを意味します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 入れ子になった並列処理は、 [omp_set_nested](#omp-set-nested)と[OMP_NESTED](openmp-environment-variables.md#omp-nested)で指定されます。
 
@@ -253,7 +253,7 @@ int omp_get_nested( );
 int omp_get_num_procs();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 詳細については、「 [3.1.5 omp_get_num_procs 関数](../../../parallel/openmp/3-1-5-omp-get-num-procs-function.md)」を参照してください。
 
@@ -290,7 +290,7 @@ int main( )
 int omp_get_num_threads( );
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 詳細については、「 [3.1.2 omp_get_num_threads 関数](../../../parallel/openmp/3-1-2-omp-get-num-threads-function.md)」を参照してください。
 
@@ -340,7 +340,7 @@ int main()
 int omp_get_thread_num( );
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 詳細については、「 [3.1.4 omp_get_thread_num 関数](../../../parallel/openmp/3-1-4-omp-get-thread-num-function.md)」を参照してください。
 
@@ -356,7 +356,7 @@ int omp_get_thread_num( );
 double omp_get_wtick( );
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 詳細については、「 [3.3.2 omp_get_wtick 関数](../../../parallel/openmp/3-3-2-omp-get-wtick-function.md)」を参照してください。
 
@@ -376,7 +376,7 @@ double omp_get_wtime( );
 
 任意の数の一定のポイントから経過した時間の秒単位の値を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 その時点では、プログラムの実行中に一貫性が保たれ、今後の比較が可能になります。
 
@@ -421,7 +421,7 @@ wtick = 2.793651148400146e-007
 int omp_in_parallel( );
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 詳細については、「 [3.1.6 omp_in_parallel 関数](../../../parallel/openmp/3-1-6-omp-in-parallel-function.md)」を参照してください。
 
@@ -466,7 +466,7 @@ void omp_init_lock(
 *lock*<br/>
 `omp_lock_t` 型の変数。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 詳細については、「 [3.2.1 omp_init_lock and omp_init_nest_lock functions](../../../parallel/openmp/3-2-1-omp-init-lock-and-omp-init-nest-lock-functions.md)」を参照してください。
 
@@ -558,7 +558,7 @@ void omp_init_nest_lock(
 *lock*<br/>
 `omp_nest_lock_t` 型の変数。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 最初の入れ子数は0です。
 
@@ -643,7 +643,7 @@ void omp_set_dynamic(
 *val*<br/>
 今後の並列領域で使用可能なスレッド数をランタイムが調整できるかどうかを示す値。 0以外の場合、ランタイムはスレッドの数を調整できます。ゼロの場合、ランタイムはスレッドの数を動的に調整しません。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 スレッド数は、 [omp_set_num_threads](#omp-set-num-threads)または[OMP_NUM_THREADS](openmp-environment-variables.md#omp-num-threads)によって設定された値を超えることはありません。
 
@@ -694,7 +694,7 @@ void omp_set_lock(
 *lock*<br/>
 [Omp_init_lock](#omp-init-lock)で初期化された `omp_lock_t` 型の変数。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 詳細については、「 [3.2.3 omp_set_lock and omp_set_nest_lock functions](../../../parallel/openmp/3-2-3-omp-set-lock-and-omp-set-nest-lock-functions.md)」を参照してください。
 
@@ -717,7 +717,7 @@ void omp_set_nest_lock(
 *lock*<br/>
 [Omp_init_nest_lock](#omp-init-nest-lock)で初期化された `omp_nest_lock_t` 型の変数。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 詳細については、「 [3.2.3 omp_set_lock and omp_set_nest_lock functions](../../../parallel/openmp/3-2-3-omp-set-lock-and-omp-set-nest-lock-functions.md)」を参照してください。
 
@@ -740,7 +740,7 @@ void omp_set_nested(
 *val*<br/>
 0以外の値を指定すると、入れ子になった並列処理が有効になります。一方、入れ子になった並列
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 OMP で入れ子になった並列処理を有効にするには、`omp_set_nested`を使用するか、 [OMP_NESTED](openmp-environment-variables.md#omp-nested)環境変数を設定します。
 
@@ -793,7 +793,7 @@ void omp_set_num_threads(
 *num_threads*<br/>
 並列領域内のスレッドの数。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 詳細については、「 [3.1.1 omp_set_num_threads 関数](../../../parallel/openmp/3-1-1-omp-set-num-threads-function.md)」を参照してください。
 
@@ -816,7 +816,7 @@ int omp_test_lock(
 *lock*<br/>
 [Omp_init_lock](#omp-init-lock)で初期化された `omp_lock_t` 型の変数。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 詳細については、「 [3.2.5 omp_test_lock and omp_test_nest_lock functions](../../../parallel/openmp/3-2-5-omp-test-lock-and-omp-test-nest-lock-functions.md)」を参照してください。
 
@@ -889,7 +889,7 @@ int omp_test_nest_lock(
 *lock*<br/>
 [Omp_init_nest_lock](#omp-init-nest-lock)で初期化された `omp_nest_lock_t` 型の変数。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 詳細については、「 [3.2.5 omp_test_lock and omp_test_nest_lock functions](../../../parallel/openmp/3-2-5-omp-test-lock-and-omp-test-nest-lock-functions.md)」を参照してください。
 
@@ -980,7 +980,7 @@ void omp_unset_lock(
 *lock*<br/>
 スレッドが所有し、関数で実行されている、 [omp_init_lock](#omp-init-lock)で初期化された `omp_lock_t` 型の変数。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 詳細については、「 [3.2.4 omp_unset_lock and omp_unset_nest_lock functions](../../../parallel/openmp/3-2-4-omp-unset-lock-and-omp-unset-nest-lock-functions.md)」を参照してください。
 
@@ -1003,7 +1003,7 @@ void omp_unset_nest_lock(
 *lock*<br/>
 スレッドが所有し、関数で実行されている、 [omp_init_nest_lock](#omp-init-nest-lock)で初期化された `omp_nest_lock_t` 型の変数。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 詳細については、「 [3.2.4 omp_unset_lock and omp_unset_nest_lock functions](../../../parallel/openmp/3-2-4-omp-unset-lock-and-omp-unset-nest-lock-functions.md)」を参照してください。
 

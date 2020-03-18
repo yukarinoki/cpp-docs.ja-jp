@@ -95,11 +95,11 @@ helpviewer_keywords:
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
 ms.openlocfilehash: 5ad8784f3bff999eec046aa91f52b1cd164764e5
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78876362"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425881"
 ---
 # <a name="cedit-class"></a>CEdit Class
 
@@ -115,13 +115,13 @@ class CEdit : public CWnd
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[CEdit:: CEdit](#cedit)|`CEdit` コントロールオブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[CEdit:: CanUndo](#canundo)|エディットコントロール操作を元に戻すことができるかどうかを判断します。|
 |[CEdit:: CharFromPos](#charfrompos)|指定した位置に最も近い文字の行と文字のインデックスを取得します。|
@@ -167,7 +167,7 @@ class CEdit : public CWnd
 |[CEdit:: ShowBalloonTip](#showballoontip)|現在の編集コントロールに関連付けられているバルーンヒントを表示します。|
 |[CEdit:: 元に戻す](#undo)|最後の編集コントロール操作を元に戻します。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 エディットコントロールは、ユーザーがテキストを入力できる四角形の子ウィンドウです。
 
@@ -227,7 +227,7 @@ ES_READONLY などの編集コントロールで特定のスタイルを変更�
 
 `CEdit`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxwin.h
 
@@ -243,7 +243,7 @@ BOOL CanUndo() const;
 
 `Undo` メンバー関数の呼び出しによって最後の編集操作を元に戻すことができる場合は0以外の。元に戻すことができない場合は0。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 詳細については、Windows SDK の「 [EM_CANUNDO](/windows/win32/Controls/em-canundo) 」を参照してください。
 
@@ -259,7 +259,7 @@ BOOL CanUndo() const;
 CEdit();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 [Create](#create)を使用して、Windows のエディットコントロールを構築します。
 
@@ -284,7 +284,7 @@ int CharFromPos(CPoint pt) const;
 
 下位ワードの文字インデックス、および上位ワード内の行のインデックスです。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 > [!NOTE]
 >  このメンバー関数は、Windows 95 および Windows NT 4.0 から使用できます。
@@ -303,7 +303,7 @@ int CharFromPos(CPoint pt) const;
 void Clear();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `Clear` によって実行される削除は、 [Undo](#undo)メンバー関数を呼び出すことによって元に戻すことができます。
 
@@ -323,7 +323,7 @@ void Clear();
 void Copy();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 詳細については、Windows SDK の「 [WM_COPY](/windows/win32/dataxchg/wm-copy) 」を参照してください。
 
@@ -361,7 +361,7 @@ virtual BOOL Create(
 
 初期化が成功した場合は0以外の。それ以外の場合は0です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `CEdit` オブジェクトを作成するには、2つの手順を実行します。 まず、`CEdit` コンストラクターを呼び出し、次に `Create`を呼び出します。これにより、Windows のエディットコントロールが作成され `CEdit` オブジェクトにアタッチされます。
 
@@ -393,7 +393,7 @@ virtual BOOL Create(
 void Cut();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `Cut` によって実行される削除は、 [Undo](#undo)メンバー関数を呼び出すことによって元に戻すことができます。
 
@@ -413,7 +413,7 @@ void Cut();
 void EmptyUndoBuffer();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 エディットコントロールは、最後の操作を元に戻すことができなくなります。 元に戻すフラグは、エディットコントロール内の操作を元に戻すことができる場合に設定されます。
 
@@ -442,7 +442,7 @@ BOOL FmtLines(BOOL bAddEOL);
 
 書式設定が行われる場合は0以外の。それ以外の場合は0です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ソフトライン改行は、2つのキャリッジリターンと、単語の折り返しによって改行される行の末尾に挿入される改行で構成されます。 ハード改行は、1つのキャリッジリターンとラインフィードで構成されます。 ハード改行で終わる行は、`FmtLines`の影響を受けません。
 
@@ -482,7 +482,7 @@ CString GetCueBanner() const;
 
 2番目のオーバーロードでは、メソッドが成功した場合は、キューのテキストを含む[CString](../../atl-mfc-shared/using-cstring.md)です。それ以外の場合は、空の文字列 ("") です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメソッドは、Windows SDK で説明されている[EM_GETCUEBANNER](/windows/win32/Controls/em-getcuebanner)メッセージを送信します。 詳細については、 [Edit_GetCueBannerText](/windows/win32/api/commctrl/nf-commctrl-edit_getcuebannertext)マクロを参照してください。
 
@@ -498,7 +498,7 @@ int GetFirstVisibleLine() const;
 
 最上位の行の0から始まるインデックス。 単一行エディットコントロールの場合、戻り値は0です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 詳細については、Windows SDK の「 [EM_GETFIRSTVISIBLELINE](/windows/win32/Controls/em-getfirstvisibleline) 」を参照してください。
 
@@ -518,7 +518,7 @@ HLOCAL GetHandle() const;
 
 エディットコントロールの内容を保持しているバッファーを識別するローカルメモリハンドル。 単一行のエディットコントロールにメッセージを送信するなどのエラーが発生した場合、戻り値は0です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ハンドルはローカルメモリハンドルであり、ローカルメモリハンドルをパラメーターとして受け取る**ローカル**の Windows メモリ関数のいずれかによって使用される場合があります。
 
@@ -547,7 +547,7 @@ BOOL GetHighlight(
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
+|パラメーター|Description|
 |---------------|-----------------|
 |*ピクチャの開始*|入出力強調表示されているテキスト範囲内の最初の文字の0から始まるインデックス番号。|
 |*ピクチャの終了*|入出力強調表示されているテキスト範囲内の最後の文字の0から始まるインデックス番号。|
@@ -556,7 +556,7 @@ BOOL GetHighlight(
 
 このメソッドが成功した場合は TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメソッドは、Windows SDK で説明されている[EM_GETHILITE](/windows/win32/Controls/em-gethilite)メッセージを送信します。 `SetHighlight` と `GetHighlight` はどちらも、現在 UNICODE ビルドでのみ有効です。
 
@@ -572,7 +572,7 @@ UINT GetLimitText() const;
 
 この `CEdit` オブジェクトの現在のテキスト制限 (TCHARs)。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 テキストの上限は、エディットコントロールが受け入れることができるテキストの最大サイズ (TCHARs 単位) です。
 
@@ -615,7 +615,7 @@ int GetLine(
 
 実際にコピーされた文字数。 *NIndex*によって指定された行番号がエディットコントロールの行数よりも大きい場合、戻り値は0です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 コピーされた行に null 終端文字が含まれていません。
 
@@ -637,7 +637,7 @@ int GetLineCount() const;
 
 複数行のエディットコントロールの行数を格納している整数。 エディットコントロールにテキストが入力されていない場合、戻り値は1です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `GetLineCount` は、複数行のエディットコントロールによってのみ処理されます。
 
@@ -659,7 +659,7 @@ DWORD GetMargins() const;
 
 下位ワードの左余白の幅、および上位の単語の右余白の幅です ()。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 余白はピクセル単位で計測されます。
 
@@ -684,7 +684,7 @@ BOOL GetModify() const;
 
 編集コントロールの内容が変更されている場合は0以外の。変更されていない場合は0。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows は、エディットコントロールの内容が変更されているかどうかを示す内部フラグを保持します。 このフラグは、エディットコントロールが最初に作成されたときにクリアされ、 [Setmodify](#setmodify)メンバー関数を呼び出すことによってクリアすることもできます。
 
@@ -706,7 +706,7 @@ TCHAR GetPasswordChar() const;
 
 ユーザーが入力した文字の代わりに表示される文字を指定します。 パスワード文字が存在しない場合、戻り値は NULL になります。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ES_PASSWORD スタイルでエディットコントロールを作成すると、コントロールをサポートする DLL によって既定のパスワード文字が決定されます。 マニフェストまたは[Initcommoncontrolsex](/windows/win32/api/commctrl/nf-commctrl-initcommoncontrolsex)メソッドは、どの DLL がエディットコントロールをサポートしているかを判断します。 User32.dll がエディットコントロールをサポートしている場合、既定のパスワード文字はアスタリスク (' * ', U + 002A) です。 Comctl32.dll バージョン6がエディットコントロールをサポートしている場合、既定の文字は黒の円 (' ● ', U + 25CF) です。 共通コントロールをサポートしている DLL とバージョンの詳細については、「 [Shell および Common Controls Versions](/previous-versions/windows/desktop/legacy/bb776779\(v=vs.85\))」を参照してください。
 
@@ -729,7 +729,7 @@ void GetRect(LPRECT lpRect) const;
 *lpRect*<br/>
 書式設定の四角形を受け取る `RECT` 構造体を指します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 書式設定用の四角形は、エディットコントロールウィンドウのサイズに依存しない、テキストの限定された四角形です。
 
@@ -765,7 +765,7 @@ void GetSel(
 
 DWORD を返すバージョンでは、下位ワードの開始位置を含む値、および上位ワードの選択範囲の終了後の最初の項目の位置を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 詳細については、Windows SDK の「 [EM_GETSEL](/windows/win32/Controls/em-getsel) 」を参照してください。
 
@@ -785,7 +785,7 @@ BOOL HideBalloonTip();
 
 このメソッドが成功した場合は TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この関数は、Windows SDK で説明されている[EM_HIDEBALLOONTIP](/windows/win32/Controls/em-hideballoontip)メッセージを送信します。
 
@@ -802,7 +802,7 @@ void LimitText(int nChars = 0);
 *nChars*<br/>
 ユーザーが入力できるテキストの長さ (TCHARs 単位) を指定します。 このパラメーターが0の場合、テキストの長さは UINT_MAX バイトに設定されます。 これは既定の動作です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 テキストの制限を変更すると、ユーザーが入力できるテキストのみが制限されます。 エディットコントロールに既に存在するテキストには影響しません。また、`CWnd`の[SetWindowText](cwnd-class.md#setwindowtext)メンバー関数によってエディットコントロールにコピーされるテキストの長さにも影響しません。 アプリケーションで `SetWindowText` 関数を使用して、`LimitText`への呼び出しで指定されているよりも多くのテキストを編集コントロールに配置する場合、ユーザーは編集コントロール内の任意のテキストを削除できます。 ただし、テキストの制限により、現在の選択範囲を削除してもテキストがテキストの上限を超えない限り、ユーザーは既存のテキストを新しいテキストに置き換えることができなくなります。
 
@@ -832,7 +832,7 @@ int LineFromChar(int nIndex = -1) const;
 
 *NIndex*によって指定された文字インデックスを含む行の0から始まる行番号。 *NIndex*が-1 の場合は、選択範囲の最初の文字を含む行の番号が返されます。 選択されていない場合は、現在の行番号が返されます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 文字インデックスは、エディットコントロールの先頭からの文字数です。
 
@@ -861,7 +861,7 @@ int LineIndex(int nLine = -1) const;
 
 *N 行*で指定された行の文字インデックス。または、指定した行番号が編集コントロールの行数よりも大きい場合は-1。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 文字インデックスは、エディットコントロールの先頭から指定した行までの文字数です。
 
@@ -898,7 +898,7 @@ int LineLength(int nLine = -1) const;
 
 TCHAR 型の詳細については、「 [Windows データ型](/windows/win32/WinProg/windows-data-types)」の表にある tchar 行を参照してください。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメソッドは、Windows SDK で説明されている[EM_LINELENGTH](/windows/win32/Controls/em-linelength)メッセージでサポートされています。
 
@@ -924,7 +924,7 @@ void LineScroll(
 *nChars*<br/>
 水平方向にスクロールする文字位置の数を指定します。 エディットコントロールに ES_RIGHT スタイルまたは ES_CENTER スタイルが指定されている場合、この値は無視されます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、複数行のエディットコントロールによってのみ処理されます。
 
@@ -946,7 +946,7 @@ void LineScroll(
 void Paste();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 クリップボードに CF_TEXT 形式のデータが含まれている場合にのみ、データが挿入されます。
 
@@ -973,7 +973,7 @@ CPoint PosFromChar(UINT nChar) const;
 
 *NChar*によって指定された文字の左上隅の座標。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 文字は、0から始まるインデックス値を指定することによって指定されます。 *NChar*がこの `CEdit` オブジェクトの最後の文字のインデックスより大きい場合、戻り値は、この `CEdit` オブジェクトの最後の文字の直後の文字位置の座標を指定します。
 
@@ -1002,7 +1002,7 @@ void ReplaceSel(LPCTSTR lpszNewText, BOOL bCanUndo = FALSE);
 *bCanUndo*<br/>
 この関数を元に戻すことができるように指定するには、このパラメーターの値を TRUE に設定します。 既定値は FALSE です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 エディットコントロール内のテキストの一部だけを置換します。 すべてのテキストを置換する場合は、 [CWnd:: SetWindowText](cwnd-class.md#setwindowtext)メンバー関数を使用します。
 
@@ -1042,7 +1042,7 @@ TRUE の場合、コントロールにフォーカスがあるときでも、キ
 
 メソッドが成功した場合は TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメソッドは、Windows SDK で説明されている[EM_SETCUEBANNER](/windows/win32/Controls/em-setcuebanner)メッセージを送信します。 詳細については、 [Edit_SetCueBannerTextFocused](/windows/win32/api/commctrl/nf-commctrl-edit_setcuebannertextfocused)マクロを参照してください。
 
@@ -1065,7 +1065,7 @@ void SetHandle(HLOCAL hBuffer);
 *hBuffer*<br/>
 ローカルメモリへのハンドルを格納します。 このハンドルは、LMEM_MOVEABLE フラグを使用して、 [LocalAlloc](/windows/win32/api/winbase/nf-winbase-localalloc) Windows 関数の前回の呼び出しによって作成されている必要があります。 メモリには、null で終わる文字列が含まれていると見なされます。 そうでない場合は、割り当てられたメモリの最初のバイトを0に設定する必要があります。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 エディットコントロールは、独自のバッファーを割り当てる代わりに、現在表示されているテキストを格納するために、このバッファーを使用します。
 
@@ -1098,12 +1098,12 @@ void SetHighlight(
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
+|パラメーター|Description|
 |---------------|-----------------|
 |*ichStart*|から強調表示するテキスト範囲内の最初の文字の0から始まるインデックス番号。|
 |*ichEnd*|から強調表示するテキスト範囲内の最後の文字の0から始まるインデックス番号。|
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメソッドは、Windows SDK で説明されている[EM_SETHILITE](/windows/win32/Controls/em-sethilite)メッセージを送信します。  このメソッドは、Windows SDK で説明されている[EM_SETHILITE](/windows/win32/Controls/em-sethilite)メッセージを送信します。 `SetHighlight` と `GetHighlight` はどちらも、UNICODE ビルドに対してのみ有効です。
 
@@ -1120,7 +1120,7 @@ void SetLimitText(UINT nMax);
 *N1 日*<br/>
 新しいテキストの制限値 (文字数)。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Text 制限は、エディットコントロールが受け入れることができるテキストの最大量 (文字数) です。
 
@@ -1152,7 +1152,7 @@ void SetMargins(
 *nRight*<br/>
 新しい右余白の幅 (ピクセル単位)。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 > [!NOTE]
 >  このメンバー関数は、Windows 95 および Windows NT 4.0 から使用できます。
@@ -1176,7 +1176,7 @@ void SetModify(BOOL bModified = TRUE);
 *bModified*<br/>
 値が TRUE の場合は、テキストが変更されたことを示します。値が FALSE の場合は、変更されていないことを示します。 既定では、modified フラグが設定されています。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Modified フラグは、エディットコントロール内のテキストが変更されたかどうかを示します。 ユーザーがテキストを変更するたびに自動的に設定されます。 値を取得するには、 [Getmodify](#getmodify)メンバー関数を使用します。
 
@@ -1199,7 +1199,7 @@ void SetPasswordChar(TCHAR ch);
 *ハーフ*<br/>
 ユーザーが入力した文字の代わりに表示される文字を指定します。 *Ch*が0の場合は、ユーザーが入力した実際の文字が表示されます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 パスワード文字を設定すると、ユーザーが入力した文字ごとにその文字が表示されます。
 
@@ -1232,7 +1232,7 @@ BOOL SetReadOnly(BOOL bReadOnly = TRUE);
 
 操作が成功した場合は0以外の場合は。エラーが発生した場合は0。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 現在の設定を検索するには、 [CWnd:: GetStyle](cwnd-class.md#getstyle)の戻り値の[ES_READONLY](styles-used-by-mfc.md#edit-styles)フラグをテストします。
 
@@ -1255,7 +1255,7 @@ void SetRect(LPCRECT lpRect);
 *lpRect*<br/>
 書式指定用の四角形の新しい次元を指定する `RECT` 構造体または `CRect` オブジェクトをポイントします。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバーは、複数行のエディットコントロールによってのみ処理されます。
 
@@ -1284,7 +1284,7 @@ void SetRectNP(LPCRECT lpRect);
 *lpRect*<br/>
 四角形の新しい寸法を指定する `RECT` 構造体または `CRect` オブジェクトを指します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 書式設定用の四角形は、エディットコントロールウィンドウのサイズに依存しない、テキストの限定された四角形です。
 
@@ -1331,7 +1331,7 @@ void SetSel(
 *nEndChar*<br/>
 終了位置を指定します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 詳細については、Windows SDK の「 [EM_SETSEL](/windows/win32/Controls/em-setsel) 」を参照してください。
 
@@ -1367,7 +1367,7 @@ BOOL SetTabStops(
 
 タブが設定されている場合は0以外の。それ以外の場合は0です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 テキストが複数行の編集コントロールにコピーされると、テキスト内のタブ文字によって、次のタブストップまでの領域が生成されます。
 
@@ -1398,7 +1398,7 @@ BOOL ShowBalloonTip(
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
+|パラメーター|Description|
 |---------------|-----------------|
 |*pEditBalloonTip*|からバルーンヒントを記述する[EDITBALLOONTIP](/windows/win32/api/commctrl/ns-commctrl-editballoontip)構造体へのポインター。|
 |*lpszTitle*|からバルーンヒントのタイトルを含む Unicode 文字列へのポインター。|
@@ -1409,7 +1409,7 @@ BOOL ShowBalloonTip(
 
 このメソッドが成功した場合は TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この関数は、Windows SDK で説明されている[EM_SHOWBALLOONTIP](/windows/win32/Controls/em-showballoontip)メッセージを送信します。 詳細については、 [Edit_ShowBalloonTip](/windows/win32/api/commctrl/nf-commctrl-edit_showballoontip)マクロを参照してください。
 
@@ -1437,7 +1437,7 @@ BOOL Undo();
 
 単一行のエディットコントロールの場合、戻り値は常に0以外になります。 複数行のエディットコントロールでは、元に戻す操作が成功した場合、戻り値は0以外の値になります。また、元に戻す操作が失敗した場合は0になります。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 元に戻す操作は元に戻すこともできます。 たとえば、`Undo`の最初の呼び出しを使用して、削除されたテキストを復元できます。 編集操作が介在しない限り、`Undo`の2回目の呼び出しでテキストを削除できます。
 

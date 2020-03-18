@@ -19,11 +19,11 @@ helpviewer_keywords:
 - composite controls, global functions
 ms.assetid: 536884cd-e863-4c7a-ab0a-604dc60a0bbe
 ms.openlocfilehash: 525fc01247053a1e2bc993398978cb332262a1a5
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78864746"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423196"
 ---
 # <a name="composite-control-global-functions"></a>複合コントロールのグローバル関数
 
@@ -48,7 +48,7 @@ ms.locfileid: "78864746"
 |[AtlAxWinTerm](#atlaxwinterm)|AxWin オブジェクトのホストコードを初期化前します。|
 |[AtlGetObjectSourceInterface](#atlgetobjectsourceinterface)|オブジェクトの既定のソースインターフェイスに関する情報を返します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlhost. h
 
@@ -86,7 +86,7 @@ ATLAPI_(int) AtlAxDialogBox(
 
 標準の HRESULT 値の1つ。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ActiveX コントロールを含むダイアログテンプレートで `AtlAxDialogBox` を使用するには、ダイアログリソースの**コントロール**セクションの*テキスト*フィールドとして有効な CLSID、APPID、または URL 文字列を指定し、同じセクションの下にある "AtlAxWin80" を*クラス名*フィールドとして指定します。 有効な**コントロール**セクションは次のようになります。
 
@@ -133,7 +133,7 @@ ATLAPI_(HWND) AtlAxCreateDialog(
 
 標準の HRESULT 値の1つ。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 表示されるダイアログボックスには、ActiveX コントロールを含めることができます。
 
@@ -182,7 +182,7 @@ ATLAPI AtlAxCreateControl(
 
 標準の HRESULT 値の1つ。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このグローバル関数は、 [AtlAxCreateControlEx](#atlaxcreatecontrolex)(*lpszname*、 *hWnd*、 *PSTREAM*、null、null、null、null) を呼び出した場合と同じ結果を得ます。
 
@@ -243,7 +243,7 @@ ATLAPI AtlAxCreateControlEx(
 
 標準の HRESULT 値の1つ。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `AtlAxCreateControlEx` は[AtlAxCreateControl](#atlaxcreatecontrol)に似ていますが、新しく作成されたコントロールへのインターフェイスポインターを受け取り、コントロールによって発生するイベントを受け取るようにイベントシンクを設定することもできます。
 
@@ -359,7 +359,7 @@ ATLAPI AtlAxCreateControlLicEx(
 
 標準の HRESULT 値の1つ。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `AtlAxCreateControlLicEx` は[AtlAxCreateControlLic](#atlaxcreatecontrollic)に似ていますが、新しく作成されたコントロールへのインターフェイスポインターを受け取り、コントロールによって発生するイベントを受け取るようにイベントシンクを設定することもできます。
 
@@ -393,7 +393,7 @@ ATLAPI AtlAxAttachControl(
 
 標準の HRESULT 値の1つ。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 コントロールを同時に作成してアタッチするには、 [AtlAxCreateControlEx](#atlaxcreatecontrolex)と[AtlAxCreateControl](#atlaxcreatecontrol)を使用します。
 
@@ -472,7 +472,7 @@ ATLAPI_(BOOL) AtlAxWinInit();
 
 コントロールをホストしているコードが正常に初期化された場合は0以外の場合は。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ATL コントロールをホストする API を使用する前に、この関数を呼び出す必要があります。 この関数を呼び出すと、「Windows SDK」で説明されているように、 **"AtlAxWin"** ウィンドウクラスを[CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww)または[CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)の呼び出しで使用できます。
 
@@ -488,7 +488,7 @@ inline BOOL AtlAxWinTerm();
 
 常に TRUE を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この関数は、Windows SDK で説明されているように、単に[UnregisterClass](/windows/win32/api/winuser/nf-winuser-unregisterclassw)を呼び出します。
 
@@ -528,7 +528,7 @@ ATLAPI AtlGetObjectSourceInterface(
 
 標準の HRESULT 値。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `AtlGetObjectSourceInterface` は、既定のソースインターフェイスのインターフェイス ID と、そのインターフェイスを記述するタイプライブラリの LIBID およびメジャーバージョン番号とマイナーバージョン番号を提供します。
 

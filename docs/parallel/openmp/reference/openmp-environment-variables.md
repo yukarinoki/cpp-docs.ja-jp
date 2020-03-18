@@ -15,11 +15,11 @@ helpviewer_keywords:
 - OMP_SCHEDULE OpenMP environment variable
 ms.assetid: 2178ce2b-ffa1-45ec-a455-64437711d15d
 ms.openlocfilehash: 838427320fcb68cedb97b36156fc18002ed962d8
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78882908"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424129"
 ---
 # <a name="openmp-environment-variables"></a>OpenMP の環境変数
 
@@ -27,7 +27,7 @@ OpenMP API で使用される環境変数へのリンクを示します。
 
 OpenMP 標準C++のビジュアル実装には、次の環境変数が含まれています。 これらの環境変数はプログラムの起動時に読み込まれ、その値に対する変更は実行時には無視されます (たとえば、 [_putenv、_wputenv](../../../c-runtime-library/reference/putenv-wputenv.md))。
 
-|[環境変数]|説明|
+|環境変数|Description|
 |--------------------|-----------|
 |[OMP_SCHEDULE](#omp-schedule)|`for` または `parallel for` ディレクティブで `schedule(runtime)` が指定されている場合に、 [schedule](openmp-clauses.md#schedule)句の動作を変更します。|
 |[OMP_NUM_THREADS](#omp-num-threads)|[Omp_set_num_threads](openmp-functions.md#omp-set-num-threads)または[num_threads](openmp-clauses.md#num-threads)でオーバーライドされない限り、並列領域内のスレッドの最大数を設定します。|
@@ -42,7 +42,7 @@ OpenMP ランタイムが並列領域のスレッド数を調整できるかど�
 set OMP_DYNAMIC[=TRUE | =FALSE]
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `OMP_DYNAMIC` 環境変数は、 [omp_set_dynamic](openmp-functions.md#omp-set-dynamic)関数によってオーバーライドできます。
 
@@ -72,7 +72,7 @@ set OMP_DYNAMIC
 set OMP_NESTED[=TRUE | =FALSE]
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `OMP_NESTED` 環境変数は、 [omp_set_nested](openmp-functions.md#omp-set-nested)関数によってオーバーライドできます。
 
@@ -107,7 +107,7 @@ set OMP_NUM_THREADS[=num]
 *num*<br/>
 並列領域に必要なスレッドの最大数。ビジュアルC++実装では最大64です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `OMP_NUM_THREADS` 環境変数は、 [omp_set_num_threads](openmp-functions.md#omp-set-num-threads)関数または[num_threads](openmp-clauses.md#num-threads)によってオーバーライドできます。
 
@@ -145,7 +145,7 @@ Optionalイテレーションのサイズを指定します。 *サイズ*は正
 *type*<br/>
 スケジュールの種類 (`dynamic`、`guided`、`runtime`、または `static`)。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 OpenMP 標準のビジュアルC++実装の既定値は `OMP_SCHEDULE=static,0`です。
 

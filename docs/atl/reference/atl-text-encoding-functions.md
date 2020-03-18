@@ -26,11 +26,11 @@ f1_keywords:
 - atlenc/ATL::UUEncodeGetRequiredLength
 ms.assetid: 2ae1648b-2b87-4112-92aa-0069fcfd23da
 ms.openlocfilehash: 1380d33c485c1ac895558bbcaf86c902c6074cd4
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865034"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423526"
 ---
 # <a name="atl-text-encoding-functions"></a>ATL テキストエンコーディング関数
 
@@ -62,7 +62,7 @@ ms.locfileid: "78865034"
 |[UUEncode](#uuencode)|データを uuencode します。 |
 |[UUEncodeGetRequiredLength](#uuencodegetrequiredlength)|指定したサイズのデータからエンコードされた文字列を格納できるバッファーのサイズを、文字数で取得します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlenc
 
@@ -106,7 +106,7 @@ ATLAPI_(DWORD) AtlGetVersion(void* pReserved);
 
 [!code-cpp[NVC_ATL_Utilities#95](../../atl/codesnippet/cpp/atl-text-encoding-functions_1.cpp)]
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlbase. h
 
@@ -187,7 +187,7 @@ int * pnDestLen) throw();
 
 成功した場合は TRUE、失敗した場合は FALSE を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ソースデータの各バイトは、2つの16進文字としてエンコードされます。
 
@@ -255,7 +255,7 @@ Unicode 文字列の長さ (文字数)。
 
 変換された文字列の文字数を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 変換された文字列に必要なバッファーのサイズを確認するには、この関数を呼び出して、 *szdest*と*ndest*に0を渡します。
 
@@ -293,7 +293,7 @@ inline BOOL BEncode(
 
 成功した場合は TRUE、失敗した場合は FALSE を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 "B" エンコード方式については、RFC 2047 ([https://www.ietf.org/rfc/rfc2047.txt](https://www.ietf.org/rfc/rfc2047.txt)) を参照してください。
 
@@ -317,7 +317,7 @@ inline int BEncodeGetRequiredLength(int nSrcLen, int nCharsetLen) throw();
 
 *NSrcLen*バイトのエンコードされたデータを保持できるバッファーに必要な文字数。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 "B" エンコード方式については、RFC 2047 ([https://www.ietf.org/rfc/rfc2047.txt](https://www.ietf.org/rfc/rfc2047.txt)) を参照してください。
 
@@ -358,11 +358,11 @@ inline int EscapeXML(
 
 変換された文字列の長さ (文字数)。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 次の表に、この関数によって実行される可能性のある変換を示します。
 
-|ソース|[Destination]|
+|source|宛先|
 |------------|-----------------|
 |\<|&lt;|
 |>|&gt;|
@@ -445,7 +445,7 @@ inline BOOL QEncode(
 
 成功した場合は TRUE、失敗した場合は FALSE を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 "Q" エンコード方式については、RFC 2047 ([https://www.ietf.org/rfc/rfc2047.txt](https://www.ietf.org/rfc/rfc2047.txt)) を参照してください。
 
@@ -469,7 +469,7 @@ inline int QEncodeGetRequiredLength(int nSrcLen, int nCharsetLen) throw();
 
 *NSrcLen*バイトのエンコードされたデータを保持できるバッファーに必要な文字数。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 "Q" エンコード方式については、RFC 2047 ([https://www.ietf.org/rfc/rfc2047.txt](https://www.ietf.org/rfc/rfc2047.txt)) を参照してください。
 
@@ -507,7 +507,7 @@ inline BOOL QPDecode(
 
 成功した場合は TRUE、失敗した場合は FALSE を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 引用符で囲まれた印刷可能なエンコード方式については、RFC 2045 ([https://www.ietf.org/rfc/rfc2045.txt](https://www.ietf.org/rfc/rfc2045.txt)) を参照してください。
 
@@ -528,7 +528,7 @@ inline int QPDecodeGetRequiredLength(int nSrcLen) throw();
 
 デコードされた文字列の*nSrcLen*文字を保持できるバッファーに必要なバイト数。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 引用符で囲まれた印刷可能なエンコード方式については、RFC 2045 ([https://www.ietf.org/rfc/rfc2045.txt](https://www.ietf.org/rfc/rfc2045.txt)) を参照してください。
 
@@ -572,7 +572,7 @@ inline BOOL QPEncode(
 
 成功した場合は TRUE、失敗した場合は FALSE を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 引用符で囲まれた印刷可能なエンコード方式については、RFC 2045 ([https://www.ietf.org/rfc/rfc2045.txt](https://www.ietf.org/rfc/rfc2045.txt)) を参照してください。
 
@@ -593,7 +593,7 @@ inline int QPEncodeGetRequiredLength(int nSrcLen) throw ();
 
 *NSrcLen*バイトのエンコードされたデータを保持できるバッファーに必要な文字数。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 引用符で囲まれた印刷可能なエンコード方式については、RFC 2045 ([https://www.ietf.org/rfc/rfc2045.txt](https://www.ietf.org/rfc/rfc2045.txt)) を参照してください。
 
@@ -627,7 +627,7 @@ Pdest の長さ (バイト単位) を格納している変数へのポインタ�
 
 成功した場合は TRUE、失敗した場合は FALSE を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この uuencoding 実装は、POSIX P 1003.2 b/D11 仕様に従います。
 
@@ -648,7 +648,7 @@ inline int UUDecodeGetRequiredLength(int nSrcLen) throw ();
 
 デコードされた文字列の*nSrcLen*文字を保持できるバッファーに必要なバイト数。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この uuencoding 実装は、POSIX P 1003.2 b/D11 仕様に従います。
 
@@ -696,7 +696,7 @@ ATLSMTP_UUENCODE_HEADER が*dwFlags*に指定されている場合に、ヘッ�
 
 成功した場合は TRUE、失敗した場合は FALSE を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この uuencoding 実装は、POSIX P 1003.2 b/D11 仕様に従います。
 
@@ -717,7 +717,7 @@ inline int UUEncodeGetRequiredLength(int nSrcLen) throw ();
 
 *NSrcLen*バイトのエンコードされたデータを保持できるバッファーに必要な文字数。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この uuencoding 実装は、POSIX P 1003.2 b/D11 仕様に従います。
 

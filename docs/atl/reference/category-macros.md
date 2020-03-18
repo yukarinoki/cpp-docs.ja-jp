@@ -8,11 +8,11 @@ f1_keywords:
 - atlcom/ATL::REQUIRED_CATEGORY
 ms.assetid: 223578cb-6180-4787-a8d8-ba3787a5d3ee
 ms.openlocfilehash: 411e06cc795827eef356018ba427510fd9eb7c06
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78864447"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423496"
 ---
 # <a name="category-macros"></a>カテゴリマクロ
 
@@ -25,7 +25,7 @@ ms.locfileid: "78864447"
 |[IMPLEMENTED_CATEGORY](#implemented_category)|COM オブジェクトによって実装されるカテゴリを示します。|
 |[REQUIRED_CATEGORY](#required_category)|COM オブジェクトによってコンテナーに必要なカテゴリを示します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlcom. h
 
@@ -42,7 +42,7 @@ BEGIN_CATEGORY_MAP(theClass)
 *クラス*<br/>
 からカテゴリマップを格納しているクラスの名前。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Category マップは、COM クラスが実装するコンポーネントカテゴリと、そのコンテナーから必要なカテゴリを指定するために使用されます。
 
@@ -84,7 +84,7 @@ IMPLEMENTED_CATEGORY(catID)
 *catID*<br/>
 から実装されているカテゴリのグローバル一意識別子 (GUID) を保持する CATID 定数または変数。 *CatID*のアドレスが取得され、マップに追加されます。 ストックカテゴリの選択については、次の表を参照してください。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 クラスに関連付けられている[OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto)または[OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto)マクロがある場合は、モジュールが登録されると、マップに表示されるコンポーネントカテゴリが自動的に登録されます。
 
@@ -94,7 +94,7 @@ IMPLEMENTED_CATEGORY(catID)
 
 ### <a name="a-selection-of-stock-categories"></a>ストックカテゴリの選択
 
-|説明|シンボル|レジストリ GUID|
+|Description|Symbol|レジストリ GUID|
 |-----------------|------------|-------------------|
 |スクリプトに対して安全|CATID_SafeForScripting|{7DD95801-9882-11CF-9FA9-00AA006C42C4}|
 |初期化に対して安全|CATID_SafeForInitializing|{7DD95802-9882-11CF-9FA9-00AA006C42C4}|
@@ -121,7 +121,7 @@ REQUIRED_CATEGORY( catID )
 *catID*<br/>
 から必須カテゴリのグローバル一意識別子 (GUID) を保持する CATID 定数または変数。 *CatID*のアドレスが取得され、マップに追加されます。 ストックカテゴリの選択については、次の表を参照してください。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 クラスに関連付けられている[OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto)または[OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto)マクロがある場合は、モジュールが登録されると、マップに表示されるコンポーネントカテゴリが自動的に登録されます。
 
@@ -131,7 +131,7 @@ REQUIRED_CATEGORY( catID )
 
 ### <a name="a-selection-of-stock-categories"></a>ストックカテゴリの選択
 
-|説明|シンボル|レジストリ GUID|
+|Description|Symbol|レジストリ GUID|
 |-----------------|------------|-------------------|
 |スクリプトに対して安全|CATID_SafeForScripting|{7DD95801-9882-11CF-9FA9-00AA006C42C4}|
 |初期化に対して安全|CATID_SafeForInitializing|{7DD95802-9882-11CF-9FA9-00AA006C42C4}|

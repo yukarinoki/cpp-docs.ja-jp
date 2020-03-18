@@ -195,11 +195,11 @@ helpviewer_keywords:
 - WS_EX_WINDOWEDGE constant [MFC]
 ms.assetid: d3b9af37-31b5-4c97-a8ad-189fd724b04c
 ms.openlocfilehash: 0c5f5aaacf96eef52b36421534b02f9d2a5fff6c
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78854071"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426793"
 ---
 # <a name="styles-used-by-mfc"></a>MFC で使用するスタイル
 
@@ -213,7 +213,7 @@ ms.locfileid: "78854071"
 
 次の表は、ボタンの種類の一覧です。 次のいずれかを必要に応じて選択できます。 ボタンの種類を指定しない場合、既定値は BS_PUSHBUTTON になります。
 
-|種類|説明|
+|種類|Description|
 |----------|-----------------|
 |BS_3STATE|BST_CHECKED、BST_INDETERMINATE、および BST_UNCHECKED の3つの状態を持つチェックボックスボタンを作成します。 このボタンをクリックすると、[所有者] ウィンドウに BN_CLICKED 通知が送信されますが、ボタンの状態は変わりません。 既定では、関連付けられたテキストはチェック ボックスの右側に表示されます。 チェックボックスの左側にテキストを表示するには、BS_LEFTTEXT または BS_RIGHTBUTTON スタイルを使用します。|
 |BS_AUTO3STATE|BST_CHECKED、BST_INDETERMINATE、および BST_UNCHECKED の3つの状態を持つチェックボックスボタンを作成します。 このボタンをクリックすると、[所有者] ウィンドウに BN_CLICKED 通知が送信され、ボタンの状態が変わります。 このボタンは、BST_CHECKED、BST_INDETERMINATE、および BST_UNCHECKED の順序で循環状態になります。 既定では、関連付けられたテキストはチェック ボックスの右側に表示されます。 チェックボックスの左側にテキストを表示するには、BS_LEFTTEXT または BS_RIGHTBUTTON スタイルを使用します。|
@@ -235,7 +235,7 @@ ms.locfileid: "78854071"
 
 次の表は、オプション ボタンとチェック ボックスに固有のスタイルの一覧です。 これらのスタイルは、オプション ボタンおよびチェック ボックス以外のボタンの種類では無視されます。 次の中から 1 つ以上を必要に応じて選択できます。
 
-|スタイル|説明|
+|Style|Description|
 |-----------|-----------------|
 |BS_LEFTTEXT|オプション ボタンまたはチェック ボックスのスタイルと組み合わせて指定すると、オプション ボタンまたはチェック ボックスの左側にテキストが表示されます。|
 |BS_RIGHTBUTTON|オプション ボタンまたはチェック ボックスのスタイルと組み合わせて指定すると、オプション ボタンまたはチェック ボックスの左側にテキストが表示されます。 このスタイルは、BS_LEFTTEXT スタイルと同じです。|
@@ -245,7 +245,7 @@ ms.locfileid: "78854071"
 
 次の表は、水平方向と垂直方向のテキストの配置オプションの一覧です。 次のいずれかを必要に応じて選択できます。
 
-|スタイル|説明|
+|Style|Description|
 |-----------|-----------------|
 |BS_LEFT|ボタンの四角形の内部にテキストを左寄せで配置します。 ただし、ボタンが BS_RIGHTBUTTON スタイルのないチェックボックスまたはオプションボタンの場合、テキストはチェックボックスまたはオプションボタンの右側に揃えて表示されます。|
 |BS_RIGHT|ボタンの四角形の内部にテキストを右寄せで配置します。 ただし、ボタンが BS_RIGHTBUTTON スタイルのないチェックボックスまたはオプションボタンの場合、テキストはチェックボックスまたはオプションボタンの右側に右に合わせて表示されます。|
@@ -258,7 +258,7 @@ ms.locfileid: "78854071"
 
 次の表は、ボタンに表示する内容を指定するオプションの一覧です。 テキストしか表示されないボタンの種類では、これらのスタイルは無視されます。 次のいずれかを必要に応じて選択できます。
 
-|スタイル|説明|
+|Style|Description|
 |-----------|-----------------|
 |BS_BITMAP|ボタンにビットマップを表示することを指定します。|
 |BS_ICON|ボタンにアイコンを表示することを指定します。|
@@ -268,7 +268,7 @@ ms.locfileid: "78854071"
 
 次の表は、任意のボタンの種類で使用できるその他のオプションの一覧です。 次の中から 1 つ以上を必要に応じて選択できます。
 
-|スタイル|説明|
+|Style|Description|
 |-----------|-----------------|
 |BS_FLAT|ボタンが 2 次元であり、3 次元イメージを作成するための既定の網かけは描画しないように指定します。|
 |BS_MULTILINE|文字列が長すぎてボタンの四角形の内部に 1 行で収まらない場合は、ボタン テキストを複数行に折り返します。|
@@ -278,7 +278,7 @@ ms.locfileid: "78854071"
 
 MFC では、次のコンボ ボックス スタイルを使用できます。 Windows のコンボボックススタイルの詳細については、「[コンボボックスのスタイル (windows)](/windows/win32/Controls/combo-box-styles)」を参照してください。
 
-|スタイル|説明|
+|Style|Description|
 |-----------|-----------------|
 |CBS_AUTOHSCROLL|ユーザーが行の末尾に文字を入力したときに、編集コントロール内のテキストを右に自動的にスクロールします。 このスタイルが設定されていないと、四角形境界内に収まる長さのテキストしか入力できません。|
 |CBS_DISABLENOSCROLL|リストボックスにスクロールするのに十分な項目が含まれていない場合は、無効になっている垂直スクロールバーが表示されます。 このスタイルが設定されていないと、項目が少なくてスクロールする必要がない場合、スクロール バーは表示されません。|
@@ -298,7 +298,7 @@ MFC では、次のコンボ ボックス スタイルを使用できます。 W
 
 編集スタイルは、 [CEdit クラス](../../mfc/reference/cedit-class.md)オブジェクトに適用されます。 [CEdit:: Create](../../mfc/reference/cedit-class.md#create)の*dwStyle*パラメーターにスタイルの組み合わせを指定します。 Windows での編集コントロールスタイルの詳細については、「[コントロールスタイルの編集 (windows)](/windows/win32/Controls/edit-control-styles)」を参照してください。
 
-|スタイル|説明|
+|Style|Description|
 |-----------|-----------------|
 |ES_AUTOHSCROLL|ユーザーが行の末尾に文字を入力したときに、テキストを自動的に10文字分だけ右にスクロールします。 ユーザーが ENTER キーを押すと、コントロールはすべてのテキストを位置0に戻します。|
 |ES_AUTOVSCROLL|ユーザーが最後の行で ENTER キーを押したときに、自動的に1ページ上にテキストをスクロールします。|
@@ -319,7 +319,7 @@ MFC では、次のコンボ ボックス スタイルを使用できます。 W
 
 フレームウィンドウスタイルは、 [CFrameWnd クラス](../../mfc/reference/cframewnd-class.md)オブジェクトに適用されます。 [CFrameWnd:: Create](../../mfc/reference/cframewnd-class.md#create)の*dwStyle*パラメーターにスタイルの組み合わせを指定します。
 
-|スタイル|説明|
+|Style|Description|
 |-----------|-----------------|
 |FWS_ADDTOTITLE|フレームウィンドウのタイトルの末尾に追加する情報を指定します。 たとえば、"Microsoft Draw in 文書作成" などです。 アプリケーションウィザードの [ドキュメントテンプレート文字列] タブに表示される文字列を指定できます。 このオプションをオフにする必要がある場合は、`CWnd::PreCreateWindow` メンバー関数をオーバーライドします。|
 |FWS_PREFIXTITLE|フレームウィンドウのタイトルで、アプリケーション名の前にドキュメント名を表示します。 たとえば、"Document-WordPad" のようになります。 アプリケーションウィザードの [ドキュメントテンプレート文字列] タブに表示される文字列を指定できます。 このオプションをオフにする必要がある場合は、`CWnd::PreCreateWindow` メンバー関数をオーバーライドします。|
@@ -329,7 +329,7 @@ MFC では、次のコンボ ボックス スタイルを使用できます。 W
 
 リストボックススタイルは、 [CListBox クラス](../../mfc/reference/clistbox-class.md)オブジェクトに適用されます。 [CListBox:: Create](../../mfc/reference/clistbox-class.md#create)の*dwStyle*パラメーターにスタイルの組み合わせを指定します。 Windows のリストボックスのスタイルの詳細については、「[リストボックスのスタイル (windows)](/windows/win32/Controls/list-box-styles)」を参照してください。
 
-|スタイル|説明|
+|Style|Description|
 |-----------|-----------------|
 |LBS_DISABLENOSCROLL|リストボックスにスクロールするのに十分な項目が含まれていない場合は、無効になっている垂直スクロールバーが表示されます。 このスタイルが設定されていないと、項目が少なくてスクロールする必要がない場合、スクロール バーは表示されません。|
 |LBS_EXTENDEDSEL|ユーザーは、SHIFT キーとマウスまたは特殊キーの組み合わせを使用して、複数の項目を選択できます。|
@@ -356,7 +356,7 @@ MFC では、次のコンボ ボックス スタイルを使用できます。 W
 
 ### <a name="message-box-types"></a>メッセージボックスの型
 
-|スタイル|説明|
+|Style|Description|
 |-----------|-----------------|
 |MB_ABORTRETRYIGNORE|メッセージボックスには、[中止]、[再試行]、および [無視] の3つのプッシュボタンが含まれています。|
 |MB_OK|メッセージボックスには、[OK] という1つのプッシュボタンが含まれています。|
@@ -367,7 +367,7 @@ MFC では、次のコンボ ボックス スタイルを使用できます。 W
 
 ### <a name="message-box-modality"></a>メッセージボックスモダリティ
 
-|スタイル|説明|
+|Style|Description|
 |-----------|-----------------|
 |MB_APPLMODAL|ユーザーは、現在のウィンドウで作業を続行する前に、メッセージボックスに応答する必要があります。 ただし、ユーザーは他のアプリケーションのウィンドウに移動して、そのウィンドウで作業することができます。 MB_SYSTEMMODAL も MB_TASKMODAL も指定されていない場合、既定値は MB_APPLMODAL です。|
 |MB_SYSTEMMODAL|すべてのアプリケーションは、ユーザーがメッセージボックスに応答するまで中断されます。 システムモーダルメッセージボックスを使用すると、ユーザーに対して、早急に対処する必要がある重大で害を与える可能性があるエラーを通知し、控えめに使用する必要があります。|
@@ -375,7 +375,7 @@ MFC では、次のコンボ ボックス スタイルを使用できます。 W
 
 ### <a name="message-box-icons"></a>メッセージボックスのアイコン
 
-|スタイル|説明|
+|Style|Description|
 |-----------|-----------------|
 |MB_ICONEXCLAMATION|メッセージボックスに感嘆符アイコンが表示されます。|
 |MB_ICONINFORMATION|円内の "I" で構成されるアイコンが、メッセージボックスに表示されます。|
@@ -384,7 +384,7 @@ MFC では、次のコンボ ボックス スタイルを使用できます。 W
 
 ### <a name="message-box-default-buttons"></a>メッセージボックスの既定のボタン
 
-|スタイル|説明|
+|Style|Description|
 |-----------|-----------------|
 |MB_DEFBUTTON1|最初のボタンが既定値です。 MB_DEFBUTTON2 または MB_DEFBUTTON3 が指定されていない場合、最初のボタンは常に既定値になります。|
 |MB_DEFBUTTON2|2番目のボタンが既定値です。|
@@ -394,7 +394,7 @@ MFC では、次のコンボ ボックス スタイルを使用できます。 W
 
 スクロールバースタイルは[Cscrollbar クラス](../../mfc/reference/cscrollbar-class.md)オブジェクトに適用されます。 [Cscrollbar:: Create](../../mfc/reference/cscrollbar-class.md#create)の*dwStyle*パラメーターにスタイルの組み合わせを指定します。 ウィンドウのスクロールバーコントロールスタイルの詳細については、「[スクロールバーコントロールスタイル (windows)](/windows/win32/Controls/scroll-bar-control-styles)」を参照してください。
 
-|スタイル|説明|
+|Style|Description|
 |-----------|-----------------|
 |SBS_BOTTOMALIGN|SBS_HORZ スタイルと共に使用します。 スクロールバーの下端は、`Create` メンバー関数で指定された四角形の下端に合わせて調整されます。 スクロールバーには、システムのスクロールバーの高さが既定で設定されています。|
 |SBS_HORZ|水平スクロールバーを指定します。 SBS_BOTTOMALIGN も SBS_TOPALIGN スタイルも指定されていない場合、`Create` メンバー関数で指定された高さ、幅、および位置がスクロールバーに表示されます。|
@@ -411,7 +411,7 @@ MFC では、次のコンボ ボックス スタイルを使用できます。 W
 
 静的スタイルは、 [CStatic クラス](../../mfc/reference/cstatic-class.md)オブジェクトに適用されます。 [CStatic:: Create](../../mfc/reference/cstatic-class.md#create)の*dwStyle*パラメーターにスタイルの組み合わせを指定します。 Windows の静的コントロールスタイルの詳細については、「[静的コントロールスタイル (windows)](/windows/win32/Controls/static-control-styles)」を参照してください。
 
-|スタイル|説明|
+|Style|Description|
 |-----------|-----------------|
 |SS_BITMAP|スタティックコントロールにビットマップを表示するように指定します。 指定されたテキストは、リソースファイル内の他の場所で定義されたビットマップ (ファイル名ではありません) の名前です。 スタイルは、nWidth パラメーターと nHeight パラメーターを無視します。コントロールは、ビットマップに合わせて自動的にサイズを調整します。|
 |SS_BLACKFRAME|ウィンドウフレームと同じ色で描画されたフレームを持つボックスを指定します。 既定値は黒です。|
@@ -445,7 +445,7 @@ MFC では、次のコンボ ボックス スタイルを使用できます。 W
 
 ウィンドウスタイルは、 [CWnd クラス](../../mfc/reference/cwnd-class.md)オブジェクトに適用されます。 [Cwnd:: Create](../../mfc/reference/cwnd-class.md#create)または[Cwnd:: CreateEx](../../mfc/reference/cwnd-class.md#createex)の*dwStyle*パラメーターにスタイルの組み合わせを指定します。 Windows のウィンドウスタイルの詳細については、「[ウィンドウスタイル (windows)](/windows/win32/winmsg/window-styles)」を参照してください。
 
-|スタイル|説明|
+|Style|Description|
 |-----------|-----------------|
 |WS_BORDER|境界線を持つウィンドウを作成します。|
 |WS_CAPTION|タイトルバーを持つウィンドウを作成します (WS_BORDER スタイルを意味します)。 WS_DLGFRAME スタイルでは使用できません。|
@@ -479,7 +479,7 @@ MFC では、次のコンボ ボックス スタイルを使用できます。 W
 
 拡張ウィンドウスタイルは、 [CWnd クラス](../../mfc/reference/cwnd-class.md)オブジェクトに適用されます。 [CWnd:: CreateEx](../../mfc/reference/cwnd-class.md#createex)の*dwexstyle*パラメーターにスタイルの組み合わせを指定します。 Windows での拡張ウィンドウスタイルの詳細については、「[拡張ウィンドウスタイル (windows)](/windows/win32/winmsg/extended-window-styles)」を参照してください。
 
-|スタイル|説明|
+|Style|Description|
 |-----------|-----------------|
 |WS_EX_ACCEPTFILES|このスタイルで作成されたウィンドウがドラッグアンドドロップファイルを受け入れることを指定します。|
 |WS_EX_APPWINDOW|ウィンドウが表示されているときに、トップレベルウィンドウをタスクバーに強制的に配置します。|

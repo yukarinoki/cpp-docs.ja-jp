@@ -15,11 +15,11 @@ helpviewer_keywords:
 - CDaoFieldExchange [MFC], m_prs
 ms.assetid: 350a663e-92ff-44ab-ad53-d94efa2e5823
 ms.openlocfilehash: cfffebd16c3c1d62dc4084b962c22911e4b46ae5
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78872474"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426085"
 ---
 # <a name="cdaofieldexchange-class"></a>CDaoFieldExchange クラス
 
@@ -37,19 +37,19 @@ class CDaoFieldExchange
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[CDaoFieldExchange::IsValidOperation](#isvalidoperation)|現在の操作が更新対象のフィールドの型に適している場合は、0以外の値を返します。|
 |[CDaoFieldExchange::SetFieldType](#setfieldtype)|次の `SetFieldType`の呼び出しまで、DFX 関数の後続のすべての呼び出しで表される、レコードセットデータメンバー (列またはパラメーター) の種類を指定します。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[CDaoFieldExchange:: m_nOperation](#m_noperation)|レコードセットの `DoFieldExchange` メンバー関数への現在の呼び出しによって実行されている DFX 操作。|
 |[CDaoFieldExchange:: m_prs](#m_prs)|DFX 操作が実行されているレコードセットへのポインター。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 `CDaoFieldExchange` には基底クラスがありません。
 
@@ -73,7 +73,7 @@ class CDaoFieldExchange
 
 `CDaoFieldExchange`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxdao
 
@@ -89,7 +89,7 @@ BOOL IsValidOperation();
 
 現在の操作が更新対象のフィールドの型に適している場合は0以外の。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 DFX メカニズムによって実行される操作の一部は、使用可能なフィールドの種類のいずれかにのみ適用されます。 既存の DFX 関数のモデルに従います。
 
@@ -99,7 +99,7 @@ DFX メカニズムによって実行される操作の一部は、使用可能�
 
 フィールド交換オブジェクトに関連付けられている[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)オブジェクトに対して実行される操作を識別します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `CDaoFieldExchange` オブジェクトは、レコードセットに対するさまざまな DFX 操作のコンテキストを提供します。
 
@@ -108,7 +108,7 @@ DFX メカニズムによって実行される操作の一部は、使用可能�
 
 `m_nOperation` に指定できる値は次のとおりです。
 
-|操作|説明|
+|操作|Description|
 |---------------|-----------------|
 |`AddToParameterList`|SQL ステートメントの**PARAMETERS**句を構築します。|
 |`AddToSelectList`|SQL ステートメントの**SELECT**句を構築します。|
@@ -130,7 +130,7 @@ DFX メカニズムによって実行される操作の一部は、使用可能�
 
 `CDaoFieldExchange` オブジェクトに関連付けられた[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)オブジェクトへのポインターを格納します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ##  <a name="setfieldtype"></a>CDaoFieldExchange::SetFieldType
 
@@ -149,7 +149,7 @@ void SetFieldType(UINT nFieldType);
 
 - `CDaoFieldExchange::param`
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 通常、ClassWizard はこの呼び出しを書き込みます。 独自の関数を記述し、ウィザードを使用して `DoFieldExchange` 関数を記述する場合は、フィールドマップ外で独自の関数の呼び出しを追加します。 ウィザードを使用しない場合、フィールドマップは表示されません。 この呼び出しは、クラスのフィールドデータメンバーごとに1つずつ、DFX 関数の呼び出しの前に、`CDaoFieldExchange::outputColumn`としてフィールド型を識別します。
 

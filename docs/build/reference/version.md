@@ -2,18 +2,18 @@
 title: /VERSION
 ms.date: 11/04/2016
 f1_keywords:
-- /version
+- /version_editbin
 helpviewer_keywords:
 - /VERSION editbin option
 - -VERSION editbin option
 - VERSION editbin option
 ms.assetid: 1fa08266-3088-4261-8d84-d4408e1cef46
-ms.openlocfilehash: 9b8d0eb291cc09e96af1a3e471ead4d00519e927
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9b2e769e110481c5e44c85be1c3451b2544b730d
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62316653"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79438755"
 ---
 # <a name="version"></a>/VERSION
 
@@ -21,12 +21,12 @@ ms.locfileid: "62316653"
 /VERSION:left[,right]
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-このオプションは、イメージのヘッダーにバージョン番号を配置します。
+このオプションを選択すると、イメージのヘッダーにバージョン番号が配置されます。
 
-整数部のバージョンの数、小数点の左側の部分がによって表される`left`します。 小数部分のバージョンの数、小数点の右側の部分がによって表される`right`します。
+バージョン番号の整数部分 (小数点の左側の部分) は、`left`によって表されます。 バージョン番号の小数部 (小数点の右側の部分) は、`right`によって表されます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [EDITBIN オプション](editbin-options.md)

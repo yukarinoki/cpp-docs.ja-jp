@@ -24,11 +24,11 @@ helpviewer_keywords:
 - Microsoft::WRL::EventSource::targetsPointerLock_ data member
 ms.assetid: 91f1c072-6af4-44e6-b6d8-ac6d0c688dde
 ms.openlocfilehash: 1350e51ff609a888b6a8ad6841be6856b68c7994
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865731"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423640"
 ---
 # <a name="eventsource-class"></a>EventSource クラス
 
@@ -50,13 +50,13 @@ class EventSource;
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-| Name                                     | 説明                                            |
+| Name                                     | Description                                            |
 | ---------------------------------------- | ------------------------------------------------------ |
 | [EventSource:: EventSource](#eventsource) | `EventSource` クラスの新しいインスタンスを初期化します。 |
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-| Name                                 | 説明                                                                                                                                                      |
+| Name                                 | Description                                                                                                                                                      |
 | ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [EventSource:: Add](#add)             | 指定されたデリゲートインターフェイスによって表されるイベントハンドラーを、現在の `EventSource` オブジェクトのイベントハンドラーのセットに追加します。                     |
 | [EventSource:: GetSize](#getsize)     | 現在の `EventSource` オブジェクトに関連付けられているイベントハンドラーの数を取得します。                                                                         |
@@ -65,7 +65,7 @@ class EventSource;
 
 ### <a name="protected-data-members"></a>保護されるデータ メンバー
 
-| Name                                                    | 説明                                                                                                                       |
+| Name                                                    | Description                                                                                                                       |
 | ------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
 | [EventSource:: addRemoveLock_](#addremovelock)           | イベントハンドラーを追加、削除、または呼び出すときに、 [targets_](#targets)配列へのアクセスを同期します。                          |
 | [EventSource:: targets_](#targets)                       | 1つ以上のイベントハンドラーの配列。                                                                                           |
@@ -75,7 +75,7 @@ class EventSource;
 
 `EventSource`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** イベント .h
 
@@ -371,7 +371,7 @@ HRESULT Remove(
 
 成功した場合は S_OK、そうでない場合はエラーを示す HRESULT。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `EventRegistrationToken` 構造体の詳細については、 **Windows ランタイム**リファレンスドキュメントの「 **Windows:: Foundation:: EventRegistrationToken structure** 」を参照してください。
 
@@ -383,7 +383,7 @@ HRESULT Remove(
 ComPtr<Details::EventTargetArray> targets_;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 現在の `EventSource` オブジェクトによって表されるイベントが発生すると、イベントハンドラーが呼び出されます。
 

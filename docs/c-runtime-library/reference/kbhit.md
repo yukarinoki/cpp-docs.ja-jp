@@ -21,7 +21,6 @@ topic_type:
 - apiref
 f1_keywords:
 - _kbhit
-- kbhit
 - conio/_kbhit
 helpviewer_keywords:
 - keyboard input
@@ -33,12 +32,12 @@ helpviewer_keywords:
 - _kbhit function
 - keyboards, checking input
 ms.assetid: e82a1cc9-bbec-4150-b678-a7e433220fe4
-ms.openlocfilehash: 49c8df1a2c600ad3976babea0b560108ea69efd8
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 972b060dd98b5d267fa1f529c898573d4b82bb61
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953513"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79438093"
 ---
 # <a name="_kbhit"></a>_kbhit
 
@@ -56,15 +55,15 @@ int _kbhit( void );
 
 ## <a name="return-value"></a>戻り値
 
-キーが押された場合は、0以外の値が返されます。 **(_l)** それ以外の場合は 0 を返します。
+キーが押されている場合、 **_kbhit**は0以外の値を返します。 それ以外の場合は 0 を返します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-**(_L)** 関数は、コンソールで最近のキー入力を確認します。 関数がゼロ以外の値を返した場合、キーストロークがバッファー内で待機しています。 プログラムは、 **_getch**または **_getche**を呼び出して、キーストロークを取得できます。
+**_Kbhit**関数は、最近のキー入力をコンソールで確認します。 関数がゼロ以外の値を返した場合、キーストロークがバッファー内で待機しています。 プログラムは **_getch**または **_getche**を呼び出して、キーストロークを取得できます。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**_kbhit**|\<conio.h>|
 
@@ -99,13 +98,13 @@ int main( void )
 }
 ```
 
-### <a name="sample-output"></a>出力例
+### <a name="sample-output"></a>サンプル出力
 
 ```Output
 Hit me!! Hit me!! Hit me!! Hit me!! Hit me!! Hit me!! Hit me!!
 Key struck was 'q'
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [コンソール入出力とポート入出力](../../c-runtime-library/console-and-port-i-o.md)<br/>

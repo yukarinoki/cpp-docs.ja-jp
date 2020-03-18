@@ -6,11 +6,11 @@ f1_keywords:
 - iosfwd/std::wostream
 ms.assetid: 2ec4dc52-a01f-4654-bd65-dd5288777c48
 ms.openlocfilehash: d0ceae12069712c7a124990d0f81968c21bc683a
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856610"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425305"
 ---
 # <a name="ltostreamgt-typedefs"></a>&lt;ostream&gt; typedef
 
@@ -26,7 +26,7 @@ ms.locfileid: "78856610"
 typedef basic_ostream<char, char_traits<char>> ostream;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この型は、クラステンプレート[basic_ostream](../standard-library/basic-ostream-class.md)のシノニムであり、既定の文字の特性を持つ**char**型の要素に対して特殊化されています。
 
@@ -38,7 +38,7 @@ typedef basic_ostream<char, char_traits<char>> ostream;
 typedef basic_ostream<wchar_t, char_traits<wchar_t>> wostream;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この型は、クラステンプレート[basic_ostream](../standard-library/basic-ostream-class.md)のシノニムであり、既定の文字の特性を持つ**wchar_t**型の要素に対して特殊化されています。
 

@@ -15,11 +15,11 @@ helpviewer_keywords:
 - std::swap [C++]
 - std::yield [C++]
 ms.openlocfilehash: 8064cec7e94a909d7dc2e1b22142d362bb7b9488
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78876174"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426181"
 ---
 # <a name="ltthreadgt-functions"></a>&lt;thread&gt; 関数
 
@@ -55,7 +55,7 @@ inline void sleep_for(const chrono::duration<Rep, Period>& Rel_time);
 *Rel_time*\
 期間を指定する [duration](../standard-library/duration-class.md) オブジェクト。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 関数は、 *Rel_time*によって指定された時間以上、呼び出し元スレッドをブロックします。 この関数では、例外がスローされません。
 
@@ -75,7 +75,7 @@ void sleep_until(const xtime *Abs_time);
 *Abs_time*\
 特定の時点を表します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この関数では、例外がスローされません。
 
@@ -95,7 +95,7 @@ void swap(thread& Left, thread& Right) noexcept;
 *右*\
 右側の**スレッド**オブジェクト。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 関数は `Left.swap(Right)` を呼び出します。
 

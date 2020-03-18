@@ -21,11 +21,11 @@ helpviewer_keywords:
 - DAO [MFC], dialog data exchange (DDX) support
 ms.assetid: 0d8cde38-3a2c-4100-9589-ac80a7b1ce91
 ms.openlocfilehash: 8b216941837cd79492aa6cb707481073b5321bce
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
-ms.translationtype: MT
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866595"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426715"
 ---
 # <a name="dialog-data-exchange-functions-for-crecordview-and-cdaorecordview"></a>CRecordView と CDaoRecordView のダイアログ データ エクスチェンジ (DDX) 関数
 
@@ -82,7 +82,7 @@ void AFXAPI DDX_FieldCBIndex(
 *pRecordset*<br/>
 データが交換される[CRecordset](../../mfc/reference/crecordset-class.md)または[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)オブジェクトへのポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 レコードセットからコントロールにデータを移動するとき、この関数は、 *index*で指定された値に基づいてコントロールの選択を設定します。 レコードセットからコントロールへの転送で、レコードセットフィールドが Null の場合、MFC はインデックスの値を0に設定します。 コントロールからレコードセットへの転送で、コントロールが空の場合、または項目が選択されていない場合、レコードセットフィールドは0に設定されます。
 
@@ -94,7 +94,7 @@ DDX の詳細については、「 [ダイアログ データ エクスチェン
 
 一般的な DDX_Field の例については、「 [DDX_FieldText](#ddx_fieldtext) 」を参照してください。 この例は `DDX_FieldCBIndex`に似ています。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxdao
 
@@ -130,7 +130,7 @@ void AFXAPI DDX_FieldCBString(
 *pRecordset*<br/>
 データが交換される[CRecordset](../../mfc/reference/crecordset-class.md)または[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)オブジェクトへのポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 レコードセットからコントロールにデータを移動するとき、この関数は、コンボボックスの現在の選択範囲を、[*値*] に指定された文字列の文字で始まる最初の行に設定します。 レコードセットからコントロールへの転送では、レコードセットフィールドが Null の場合、コンボボックスから選択が削除され、コンボボックスの編集コントロールが空に設定されます。 コントロールからレコードセットへの転送では、コントロールが空の場合、フィールドがを許可する場合、レコードセットフィールドは Null に設定されます。
 
@@ -142,7 +142,7 @@ DDX の詳細については、「 [ダイアログ データ エクスチェン
 
 一般的な DDX_Field の例については、「 [DDX_FieldText](#ddx_fieldtext) 」を参照してください。 この例には `DDX_FieldCBString`の呼び出しが含まれています。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdao
 
@@ -178,7 +178,7 @@ void AFXAPI DDX_FieldCBStringExact(
 *pRecordset*<br/>
 データが交換される[CRecordset](../../mfc/reference/crecordset-class.md)または[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)オブジェクトへのポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 レコードセットからコントロールにデータを移動するとき、この関数は、コンボボックスの現在の選択範囲を、[*値*] に指定された文字列と完全に一致する最初の行に設定します。 レコードセットからコントロールへの転送では、レコードセットフィールドが NULL の場合、コンボボックスから選択が削除され、コンボボックスのエディットボックスが空に設定されます。 コントロールからレコードセットへの転送では、コントロールが空の場合、レコードセットフィールドは NULL に設定されます。
 
@@ -190,7 +190,7 @@ DDX の詳細については、「 [ダイアログ データ エクスチェン
 
 一般的な DDX_Field の例については、「 [DDX_FieldText](#ddx_fieldtext) 」を参照してください。 `DDX_FieldCBStringExact` の呼び出しは似ています。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdao
 
@@ -226,13 +226,13 @@ void AFXAPI DDX_FieldCheck(
 *pRecordset*<br/>
 データが交換される[CRecordset](../../mfc/reference/crecordset-class.md)または[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)オブジェクトへのポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `DDX_FieldCheck` が呼び出されると、*値*がチェックボックスコントロールの現在の状態に設定されます。または、転送の方向に応じて、コントロールの状態が*value*に設定されます。
 
 DDX の詳細については、「 [ダイアログ データ エクスチェンジとダイアログ データ バリデーション](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdao
 
@@ -268,7 +268,7 @@ void AFXAPI DDX_FieldLBIndex(
 *pRecordset*<br/>
 データが交換される[CRecordset](../../mfc/reference/crecordset-class.md)または[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)オブジェクトへのポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 レコードセットからコントロールにデータを移動するとき、この関数は、 *index*で指定された値に基づいてコントロールの選択を設定します。 レコードセットからコントロールへの転送で、レコードセットフィールドが Null の場合、MFC はインデックスの値を0に設定します。 コントロールからレコードセットへの転送では、コントロールが空の場合、レコードセットフィールドは0に設定されます。
 
@@ -280,7 +280,7 @@ DDX の詳細については、「 [ダイアログ データ エクスチェン
 
 一般的な DDX_Field の例については、「 [DDX_FieldText](#ddx_fieldtext) 」を参照してください。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdao
 
@@ -316,7 +316,7 @@ void AFXAPI DDX_FieldLBString(
 *pRecordset*<br/>
 データが交換される[CRecordset](../../mfc/reference/crecordset-class.md)または[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)オブジェクトへのポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 逆方向では、この関数は、リストボックスの現在の選択範囲を、*値*で指定された文字列内の文字で始まる最初の行に設定します。 レコードセットからコントロールへの転送では、レコードセットフィールドが Null の場合、リストボックスから任意の選択が削除されます。 コントロールからレコードセットへの転送では、コントロールが空の場合、レコードセットフィールドは Null に設定されます。
 
@@ -328,7 +328,7 @@ DDX の詳細については、「 [ダイアログ データ エクスチェン
 
 一般的な DDX_Field の例については、「 [DDX_FieldText](#ddx_fieldtext) 」を参照してください。 `DDX_FieldLBString` の呼び出しは似ています。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdao
 
@@ -364,7 +364,7 @@ void AFXAPI DDX_FieldLBStringExact(
 *pRecordset*<br/>
 データが交換される[CRecordset](../../mfc/reference/crecordset-class.md)または[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)オブジェクトへのポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 逆方向では、この関数は、リストボックスの現在の選択項目を [*値*] に指定された文字列と完全に一致する最初の行に設定します。 レコードセットからコントロールへの転送では、レコードセットフィールドが Null の場合、リストボックスから任意の選択が削除されます。 コントロールからレコードセットへの転送では、コントロールが空の場合、レコードセットフィールドは Null に設定されます。
 
@@ -376,7 +376,7 @@ DDX の詳細については、「 [ダイアログ データ エクスチェン
 
 一般的な DDX_Field の例については、「 [DDX_FieldText](#ddx_fieldtext) 」を参照してください。 `DDX_FieldLBStringExact` の呼び出しは似ています。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdao
 
@@ -412,7 +412,7 @@ void AFXAPI DDX_FieldRadio(
 *pRecordset*<br/>
 データが交換される[CRecordset](../../mfc/reference/crecordset-class.md)または[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)オブジェクトへのポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 レコードセットフィールドからビューに転送する場合、この関数は、 *n 番目*のオプションボタン (0 から始まる) をオンにして、他のボタンをオフにします。 逆方向では、この関数はレコードセットフィールドを現在オン (オン) になっているラジオボタンの序数に設定します。 レコードセットからコントロールへの転送で、レコードセットフィールドが Null の場合、[いいえ] ボタンは選択されていません。 コントロールからレコードセットへの転送では、コントロールが選択されていない場合、フィールドで許可されている場合、レコードセットフィールドは Null に設定されます。
 
@@ -424,7 +424,7 @@ DDX の詳細については、「 [ダイアログ データ エクスチェン
 
 一般的な DDX_Field の例については、「 [DDX_FieldText](#ddx_fieldtext) 」を参照してください。 `DDX_FieldRadio` の呼び出しは似ています。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdao
 
@@ -460,7 +460,7 @@ void AFXAPI DDX_FieldScroll(
 *pRecordset*<br/>
 データが交換される[CRecordset](../../mfc/reference/crecordset-class.md)または[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)オブジェクトへのポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 レコードセットからコントロールにデータを移動するとき、この関数は、スクロールバーコントロールのスクロール位置を [*値*] に指定された値に設定します。 レコードセットからコントロールへの転送では、レコードセットフィールドが Null の場合、スクロールバーコントロールは0に設定されます。 コントロールからレコードセットへの転送では、コントロールが空の場合、レコードセットフィールドの値は0になります。
 
@@ -472,7 +472,7 @@ DDX の詳細については、「 [ダイアログ データ エクスチェン
 
 一般的な DDX_Field の例については、「 [DDX_FieldText](#ddx_fieldtext) 」を参照してください。 `DDX_FieldScroll` の呼び出しは似ています。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdao
 
@@ -509,7 +509,7 @@ void AFXAPI DDX_FieldSlider(
 *pRecordset*<br/>
 データの交換に使用する、関連付けられている `CRecordset` または `CDaoRecordset` オブジェクトへのポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 レコードセットからスライダーにデータを移動すると、この関数はスライダーの位置を [*値*] に指定された値に設定します。 レコードセットからコントロールへの転送で、レコードセットフィールドが Null の場合、スライダーコントロールの位置は0に設定されます。 コントロールからレコードセットへの転送では、コントロールが空の場合、レコードセットフィールドの値は0になります。
 
@@ -523,7 +523,7 @@ DDX の詳細については、「 [ダイアログ データ エクスチェン
 
 一般的な DDX_Field の例については、「 [DDX_FieldText](#ddx_fieldtext) 」を参照してください。 `DDX_FieldSlider` の呼び出しは似ています。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxdao
 
@@ -655,7 +655,7 @@ void AFXAPI DDX_FieldText(
 *pRecordset*<br/>
 データが交換される[CRecordset](../../mfc/reference/crecordset-class.md)または[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)オブジェクトへのポインター。 このポインターは、`DDX_FieldText` が Null 値を検出して設定できるようにします。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)オブジェクトの場合、`DDX_FieldText` は、 [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)と[COleCurrency](../../mfc/reference/colecurrency-class.md)値の転送も管理します。 空のエディットボックスコントロールは、Null 値を示します。 レコードセットからコントロールへの転送では、レコードセットフィールドが Null の場合、エディットボックスは空に設定されます。 コントロールからレコードセットへの転送では、コントロールが空の場合、レコードセットフィールドは Null に設定されます。
 
@@ -669,7 +669,7 @@ DDX の詳細については、「 [ダイアログ データ エクスチェン
 
 [!code-cpp[NVC_MFCDatabase#43](../../mfc/codesnippet/cpp/dialog-data-exchange-functions-for-crecordview-and-cdaorecordview_1.cpp)]
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdao
 
