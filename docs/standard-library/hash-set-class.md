@@ -87,11 +87,11 @@ helpviewer_keywords:
 - stdext::hash_set::value_comp
 ms.assetid: c765c06e-cbb6-48c2-93ca-d15468eb28d7
 ms.openlocfilehash: becf038678f4abbe285e719e4d1cc1f3f12de982
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865136"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426967"
 ---
 # <a name="hash_set-class"></a>hash_set クラス
 
@@ -120,7 +120,7 @@ hash_set に格納される要素のデータ型。
 *アロケーター*\
 メモリの hash_set の割り当てと解放に関する詳細をカプセル化する、格納されたアロケーター オブジェクトを表す型。 この引数は省略可能であり、既定値は `allocator<Key>` です。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 hash_set は次のようなものです。
 
@@ -150,13 +150,13 @@ hash_set クラスに用意されている反復子は双方向反復子です�
 
 ### <a name="constructors"></a>コンストラクター
 
-|コンストラクター|説明|
+|Constructor|Description|
 |-|-|
 |[hash_set](#hash_set)|空の `hash_set`、または他の `hash_set` の全体または一部のコピーである hash_multiset を構築します。|
 
 ### <a name="typedefs"></a>Typedefs
 
-|種類の名前。|説明|
+|種類の名前。|Description|
 |-|-|
 |[allocator_type](#allocator_type)|`allocator` オブジェクトの `hash_set` クラスを表す型。|
 |[const_iterator](#const_iterator)|`const` 内の 1 つの `hash_set` 要素を読み取ることができる双方向反復子を提供する型。|
@@ -176,7 +176,7 @@ hash_set クラスに用意されている反復子は双方向反復子です�
 
 ### <a name="member-functions"></a>メンバー関数
 
-|メンバー関数|説明|
+|メンバー関数|Description|
 |-|-|
 |[begin](#begin)|`hash_set` 内の最初の要素を指す反復子を返します。|
 |[cbegin](#cbegin)|`hash_set` 内の最初の要素を指す定数反復子を返します。|
@@ -204,13 +204,13 @@ hash_set クラスに用意されている反復子は双方向反復子です�
 |[upper_bound](#upper_bound)|指定したキー以上のキーを持つ、`hash_set` 内の最初の要素を指す反復子を返します。|
 |[value_comp](#value_comp)|`hash_set` の要素キー値をハッシュおよび順序付けするために使用するハッシュ特性オブジェクトのコピーを取得します。|
 
-### <a name="operators"></a>演算子
+### <a name="operators"></a>オペレーター
 
-|演算子|説明|
+|演算子|Description|
 |-|-|
 |[hash_set::operator=](#op_eq)|別の `hash_set` のコピーで `hash_set` の要素を置き換えます。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<hash_set >
 
@@ -227,7 +227,7 @@ hash_set オブジェクトのアロケーター クラスを表す型。
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::allocator_type allocator_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `allocator_type` は、テンプレートパラメーター*アロケーター*のシノニムです。
 
@@ -254,7 +254,7 @@ iterator begin();
 
 hash_set 内の最初の要素、または空の hash_set の次の位置を指す双方向反復子。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `begin` の戻り値が `const_iterator`に割り当てられている場合、hash_set オブジェクト内の要素は変更できません。 `begin` の戻り値が `iterator`に割り当てられている場合は、hash_set オブジェクト内の要素を変更できます。
 
@@ -313,7 +313,7 @@ const_iterator cbegin() const;
 
 [hash_set](../standard-library/hash-set-class.md) 内の最初の要素、または空の `hash_set` の次の位置を指す定数双方向反復子。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `cbegin` の戻り値で `hash_set` オブジェクト内の要素を変更することはできません。
 
@@ -360,7 +360,7 @@ const_iterator cend() const;
 
 [hash_set](../standard-library/hash-set-class.md) リスト内の最後の要素の次の位置を指す定数双方向反復子。 `hash_set` が空の場合は、`hash_set::cend == hash_set::begin`。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `cend` は、反復子が `hash_set` の末尾に達したかどうかをテストするために使用します。 `cend` によって返された値は逆参照しないでください。
 
@@ -404,7 +404,7 @@ hash_set のすべての要素を消去します。
 void clear();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ### <a name="example"></a>例
 
@@ -448,7 +448,7 @@ hash_set の 1 つの **const** 要素を読み取ることができる双方向
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::const_iterator const_iterator;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `const_iterator` 型で要素の値を変更することはできません。
 
@@ -467,7 +467,7 @@ hash_set 内の **const** 要素へのポインターを提供する型。
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::const_pointer const_pointer;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `const_pointer` 型で要素の値を変更することはできません。
 
@@ -484,7 +484,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::const_reference const_reference;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ### <a name="example"></a>例
 
@@ -531,7 +531,7 @@ hash_set の 任意の **const** 要素を読み取ることができる双方�
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::const_reverse_iterator const_reverse_iterator;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `const_reverse_iterator` 型は要素の値を変更できず、逆の順序で hash_set を反復処理するために使用します。
 
@@ -561,7 +561,7 @@ size_type count(const Key& key) const;
 
 hash_set に一致するキーを持つ要素が含まれていない場合は 0。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 メンバー関数は、次の範囲内の要素の数を返します。
 
@@ -618,7 +618,7 @@ const_reverse_iterator crbegin() const;
 
 反転された [hash_set](../standard-library/hash-set-class.md) 内の最初の要素を示す、または反転されていない `hash_set` 内の最後の要素だったものを示す定数逆順双方向反復子。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 hash_set で `crbegin`hash_set::begin[ が使用されるように、](#begin) は、反転された hash_set で使用されます。
 
@@ -670,7 +670,7 @@ const_reverse_iterator crend() const;
 
 逆順の [hash_set](../standard-library/hash-set-class.md) 内の最後の要素の次の場所 (通常の順序の `hash_set` 内の最初の要素の前の場所) を指す定数逆順双方向反復子。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `crend` は、`hash_set`hash_set::end[ が ](#end) で使われるときと同様の方法で、反転された `hash_set` で使われます。
 
@@ -719,7 +719,7 @@ hash_set の要素の数を、反復子が指す要素の範囲に基づいて�
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::difference_type difference_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `difference_type` は、コンテナーの反復子を減算またはインクリメントするときに返される型です。 通常、`difference_type` は、[ `first`, `last`) の範囲内で、反復子 `first` と `last` の間にある要素の数を表すために使用され、`first` が指す要素と、`last` が指す要素の 1 つ前までの範囲の要素を含みます。
 
@@ -801,7 +801,7 @@ emplace(
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
+|パラメーター|Description|
 |-|-|
 |*val*|挿入される要素が [ にまだ含まれていない場合、より一般的には、キーが同じ順序付けになる要素がまだ含まれていない場合に、](../standard-library/hash-set-class.md)hash_set`hash_set` に挿入される要素の値。|
 
@@ -809,7 +809,7 @@ emplace(
 
 `emplace` メンバー関数は、挿入が行われた場合に**true**を返す**ブール**値を持つ**ペアを返し**ます。また、順序の値が同じキーを持つ要素が `hash_set` に既に含まれており、その反復子コンポーネントが、新しい要素が挿入されたアドレスまたは要素が既に存在していたアドレスを返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ### <a name="example"></a>例
 
@@ -853,7 +853,7 @@ iterator emplace(
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
+|パラメーター|Description|
 |-|-|
 |*val*|挿入される要素が [ にまだ含まれていない場合、より一般的には、キーが同じ順序付けになる要素がまだ含まれていない場合に、](../standard-library/hash-set-class.md)hash_set`hash_set` に挿入される要素の値。|
 |*_Where*|正しい挿入ポイントの検索を開始する場所 (挿入ポイントが *_Where*の直後にある場合は、対数時間ではなく、償却定数時間で挿入できます)。|
@@ -862,7 +862,7 @@ iterator emplace(
 
 [hash_set::emplace](#emplace) メンバー関数は、`hash_set` に新しい要素が挿入された位置、または、同等の順序での既存の要素が存在する位置を指す反復子を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 挿入ポイントが *_Where*の直後にある場合、挿入は対数時間ではなく償却定数時間で実行できます。
 
@@ -907,7 +907,7 @@ bool empty() const;
 
 hash_set が空の場合は **true**、hash_set が空ではない場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ### <a name="example"></a>例
 
@@ -958,7 +958,7 @@ iterator end();
 
 hash_set 内の最後の要素の次の位置を指す双方向反復子。 hash_set が空の場合は、hash_set::end == hash_set::begin。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `end` は、反復子が hash_set の末尾に達したかどうかをテストするために使用されます。 `end` によって返された値は逆参照しないでください。
 
@@ -1028,7 +1028,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 メンバー関数によって返されたペア pr の最初の反復子にアクセスするには、`pr`を使用します。 **最初**に、下限の反復子を逆参照するには、\*(`pr`を使用します。 **最初**)。 メンバー関数によって返さ `pr` ペアの2番目の反復子にアクセスするには、`pr`を使用します。 **次**に、上限の反復子を逆参照するには、\*(`pr`を使用します。 **2 番目**)。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ### <a name="example"></a>例
 
@@ -1122,7 +1122,7 @@ hash_set から削除する要素のキー。
 
 最初の 2 つのメンバー関数の場合は、削除された要素の後の最初の残存要素を指定する双方向反復子、または hash_set の末尾へのポインター (残存要素が存在しない場合)。 3 番目のメンバー関数の場合は、hash_set から削除された要素の数。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 メンバー関数が例外をスローすることはありません。
 
@@ -1231,7 +1231,7 @@ const_iterator find(const Key& key) const;
 
 指定したキーと等しい要素の位置を指す `iterator` または `const_iterator`。キーの一致が検出されない場合は、hash_set 内の最後の要素の次の位置を指す。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、小なり比較関係に基づいて順序を誘発する二項述語の下で、並べ替えキーが引数キーに `equivalent` される hash_set 内の要素を指す反復子を返します。
 
@@ -1304,7 +1304,7 @@ Hash_set が、テンプレートパラメーター*アロケーター*である
 
 *アロケーター*の詳細については、 [hash_set クラス](../standard-library/hash-set-class.md)のトピックの「解説」を参照してください。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 hash_set クラスのアロケーターは、クラスがどのようにストレージを管理するかを指定します。 C++ 標準ライブラリ コンテナー クラスで提供される既定のアロケーターは、ほとんどのプログラミング要件に対応しています。 独自のアロケーター クラスを作成して使用することは、C++ における高度な作業の 1 つです。
 
@@ -1419,7 +1419,7 @@ hash_set(
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
+|パラメーター|Description|
 |-|-|
 |*ウムアルクラ*|この `hash_set` オブジェクトに使用するストレージ アロケーター クラス。既定では、`Allocator` です。|
 |*コンペティション*|`const Traits` 内の要素の並べ替えに使用される、`hash_set` 型の比較関数。既定では `hash_compare` です。|
@@ -1427,7 +1427,7 @@ hash_set(
 |*First*|コピーする要素範囲内の最初の要素の位置。|
 |*Last*|コピーする要素範囲を超える最初の要素の位置。|
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 すべてのコンストラクターは、アロケーター オブジェクトの型を格納します。このオブジェクトは `hash_set` のメモリ ストレージを管理し、後で [hash_set::get_allocator](#get_allocator) を呼び出して取得することができます。 代替アロケーターの代わりに使用されるクラス宣言やプリプロセス マクロでは、アロケーターのパラメーターが省略される場合があります。
 
@@ -1472,7 +1472,7 @@ void insert(
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
+|パラメーター|Description|
 |-|-|
 |*Val*|挿入される要素が `hash_set` にまだ含まれていない場合、より一般的には、キーが同じ順序付けになる要素がまだ含まれていない場合に、`hash_set` に挿入される要素の値。|
 |*Where*|正しい挿入ポイントの検索を開始する場所 (挿入ポイントが `_Where` の直後にある場合、挿入処理は対数時間ではなく償却定数時間で実行できます)。|
@@ -1488,7 +1488,7 @@ void insert(
 
 2 番目の `insert` メンバー関数は、`hash_set` に新しい要素が挿入された位置を指す反復子を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 3 番目のメンバー関数は initializer_list の要素を挿入します。
 
@@ -1505,7 +1505,7 @@ hash_set 内の任意の要素の読み取りまたは変更ができる双方�
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::iterator iterator;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `iterator` 型を使用して、要素の値を変更できます。
 
@@ -1530,7 +1530,7 @@ Hash_set が要素の並べ替えに使用する関数オブジェクトを返�
 
 *特徴*の詳細については、 [hash_set クラス](../standard-library/hash-set-class.md)に関するトピックを参照してください。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 格納されているオブジェクトは以下のメンバー関数を定義します。
 
@@ -1600,7 +1600,7 @@ int main( )
 typedef Traits key_compare;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `key_compare` は、テンプレートパラメーターの*特徴*のシノニムです。
 
@@ -1623,7 +1623,7 @@ typedef Traits key_compare;
 typedef Key key_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `key_type` は、テンプレートパラメーター*キー*のシノニムです。
 
@@ -1657,7 +1657,7 @@ iterator lower_bound(const Key& key);
 
 引数キー以上のキーを持つ hash_set 内の要素の位置を指す、またはキーの一致が検出されない場合は hash_set 内の最後の要素の次の位置を指す、`iterator` または `const_iterator`。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ### <a name="example"></a>例
 
@@ -1724,7 +1724,7 @@ size_type max_size() const;
 
 hash_set の可能な最大長。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ### <a name="example"></a>例
 
@@ -1762,11 +1762,11 @@ hash_set& operator=(hash_set&& right);
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
+|パラメーター|Description|
 |-|-|
 |*right*|[ にコピーする ](../standard-library/hash-set-class.md)hash_set`hash_set`。|
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `hash_set`内の既存の要素を消去した後、 *`operator=` の内容*を `hash_set`にコピーまたは移動します。
 
@@ -1819,7 +1819,7 @@ hash_set 内の要素へのポインターを提供する型。
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::pointer pointer;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `pointer` 型を使用して、要素の値を変更できます。
 
@@ -1842,7 +1842,7 @@ reverse_iterator rbegin();
 
 反転された hash_set 内の最初の要素を示す、または反転されていない hash_set 内の最後の要素だったものを示す逆順双方向反復子。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 hash_set で `rbegin`begin[ が使用されるように、](#begin) は、反転された hash_set で使用されます。
 
@@ -1919,7 +1919,7 @@ hash_set に格納されている要素への参照を提供する型。
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::reference reference;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ### <a name="example"></a>例
 
@@ -1975,7 +1975,7 @@ reverse_iterator rend();
 
 逆順の hash_set 内の最後の要素の次の場所 (通常の順序の hash_set 内の最初の要素の前の場所) を指す逆順双方向反復子。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 hash_set で `rend`end[ が使用されるように、](#end) は、反転された hash_set で使用されます。
 
@@ -2055,7 +2055,7 @@ After the erasure, the last element in the reversed hash_set is 20.
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::reverse_iterator reverse_iterator;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 型 `reverse_iterator` は、逆の順序で hash_set を反復処理するために使用します。
 
@@ -2078,7 +2078,7 @@ size_type size() const;
 
 hash_set の現在の長さ。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ### <a name="example"></a>例
 
@@ -2121,7 +2121,7 @@ hash_set 内の要素の数を表すことができる符号なし整数型。
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::size_type size_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ### <a name="example"></a>例
 
@@ -2143,7 +2143,7 @@ void swap(hash_set& right);
 *右*\
 ターゲットの hash_set と交換する要素を提供する引数の hash_set。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 メンバー関数は、要素を交換する 2 つの hash_set において要素を指定している参照、ポインター、反復子を無効にすることはありません。
 
@@ -2223,7 +2223,7 @@ iterator upper_bound(const Key& key);
 
 引数キー以上のキーを持つ hash_set 内の要素の位置を指す、またはキーの一致が検出されない場合は hash_set 内の最後の要素の次の位置を指す、`iterator` または `const_iterator`。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ### <a name="example"></a>例
 
@@ -2292,7 +2292,7 @@ Hash_set が要素の並べ替えに使用する関数オブジェクトを返�
 
 *比較*の詳細については、 [hash_set クラス](../standard-library/hash-set-class.md)のトピックの「解説」を参照してください。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 格納されているオブジェクトは以下のメンバー関数を定義します。
 
@@ -2362,7 +2362,7 @@ int main( )
 typedef key_compare value_compare;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `value_compare` は、テンプレートパラメーターの*特徴*のシノニムです。
 

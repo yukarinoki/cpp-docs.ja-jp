@@ -26,14 +26,14 @@ helpviewer_keywords:
 - std::piecewise_constant_distribution [C++], param_type
 - std::piecewise_constant_distribution [C++], param_type
 ms.assetid: 2c9a21fa-623e-4d63-b827-3f1556b6dedb
-ms.openlocfilehash: 62cfba1fda3d9a42788e8dd47144705fb05c6787
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: db537e7cfab70c2ac4e235a752216b892882f8cf
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455237"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446197"
 ---
-# <a name="piecewiseconstantdistribution-class"></a>piecewise_constant_distribution クラス
+# <a name="piecewise_constant_distribution-class"></a>piecewise_constant_distribution クラス
 
 可変幅の区間を持ち、各区間に一様確率を含む区分定数分布を生成します。
 
@@ -80,10 +80,10 @@ public:
 
 ### <a name="parameters"></a>パラメーター
 
-*RealType*\
-浮動小数点演算の結果の型。既定値は**double**です。 使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
+*Realtype*\
+浮動小数点演算の結果の型。既定値は**double**です。 使用可能な型については、「[\<random>](../standard-library/random.md)」を参照してください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
 この標本分布には、各区間に一様確率を含む可変幅の区間があります。 他のサンプリング分布の詳細については、「[piecewise_linear_distribution クラス](../standard-library/piecewise-linear-distribution-class.md)」および「[discrete_distribution](../standard-library/discrete-distribution-class.md)」をご覧ください。
 
@@ -98,7 +98,7 @@ public:
 
 プロパティ関数 `densities()` は、格納されている分布の区間セットを含む `vector<result_type>` を返します。これは、コンストラクター パラメーターに指定されている重みに従って計算されます。
 
-プロパティ メンバー関数 `param()` は、格納されている分布パラメーター パッケージ `param_type` を設定または返します。
+プロパティ メンバー `param()` は、格納されている分布パラメーター パッケージ `param_type` を設定または返します。
 
 メンバー関数の `min()` と `max()` はそれぞれ、考えられる結果の最小値と最大値を返します。
 
@@ -106,7 +106,7 @@ public:
 
 `operator()` メンバー関数は、現在のパラメーター パッケージと指定したパラメーター パッケージのいずれかから、URNG エンジンに基づいて次に生成された値を返します。
 
-分布クラスとそのメンバーの詳細については、[\<random>](../standard-library/random.md) をご覧ください。
+分布クラスとそのメンバーの詳細については、[\<random>](../standard-library/random.md) を参照してください。
 
 ## <a name="example"></a>例
 
@@ -212,9 +212,9 @@ Distribution for 100 samples:
     14-15 ::::::::
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** \<random>
+**ヘッダー:** \<ランダム >
 
 **名前空間:** std
 
@@ -248,19 +248,19 @@ explicit piecewise_constant_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>パラメーター
 
-*firstI*\
+*Firsti*\
 ターゲット範囲内の先頭の要素を示す入力反復子。
 
-*lastI*\
+*Lasti*\
 ターゲット範囲内の末尾の要素を示す入力反復子。
 
-*firstW*\
+*Firstw*\
 重み範囲内の先頭の要素を示す入力反復子。
 
-*不定期*\
+*間隔*\
 分布の区間を含む [initializer_list](../cpp/initializers.md)。
 
-*数*\
+*カウント*\
 分布範囲内にある要素の数。
 
 *xmin*\
@@ -275,11 +275,12 @@ explicit piecewise_constant_distribution(const param_type& parm);
 *parm*\
 分布の作成に使用されるパラメーターの構造体。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 既定のコンストラクターは、確率密度が 1 の、0 から 1 までの 1 つの区間を含むように、格納されているパラメーターを設定します。
 
 反復子の範囲コンストラクター
+
 ```cpp
 template <class InputIteratorI, class InputIteratorW>
 piecewise_constant_distribution(InputIteratorI firstI, InputIteratorI lastI,
@@ -289,6 +290,7 @@ piecewise_constant_distribution(InputIteratorI firstI, InputIteratorI lastI,
 シーケンスにわたる反復子の区間 [ `firstI`, `lastI`) と、`firstW` で始まる対応する重みシーケンスを使用して分布オブジェクトを構築します。
 
 初期化子リスト コンストラクター
+
 ```cpp
 template <class UnaryOperation>
 piecewise_constant_distribution(initializer_list<result_type>
@@ -299,15 +301,17 @@ intervals,
 初期化子リストの*間隔*、および関数*weightfunc*から生成された重みを持つ分布オブジェクトを構築します。
 
 次のように定義されたコンストラクターは
+
 ```cpp
 template <class UnaryOperation>
 piecewise_constant_distribution(size_t count, result_type xmin, result_type xmax,
     UnaryOperation weightfunc);
 ```
 
-[`xmin,xmax`] で均等に分布した数の間隔を持つ分布オブジェクトを構築し、各間隔の重みを関数*weightfunc*に従って割り当てます。 *weightfunc*は、1つのパラメーターを受け取り、戻り値を持つ必要があります。値。どちらもに`double`変換可能です。 **前提条件:** `xmin < xmax`
+[`xmin,xmax`] で均等に分布した*カウント*間隔を使用して分布オブジェクトを構築し、各間隔の重みを関数*weightfunc*に従って割り当てます。 *weightfunc*は、1つのパラメーターを受け取り、戻り値を持つ必要があります。これらはどちらも `double`に変換可能です。 **前提条件:** `xmin < xmax`
 
 次のように定義されたコンストラクターは
+
 ```cpp
 explicit piecewise_constant_distribution(const param_type& parm);
 ```
@@ -338,13 +342,13 @@ struct param_type {
 
 [piecewise_constant_distribution](#piecewise_constant_distribution) のコンストラクター パラメーターをご覧ください。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 **前提条件:** `xmin < xmax`
 
 この構造体は、インスタンス化時に分布のクラス コンストラクターに渡したり、`param()` メンバー関数に渡して、既存の分布の格納されているパラメーターを設定したり、`operator()` に渡して、格納されているパラメーターの代わりに使用したりすることができます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [\<random>](../standard-library/random.md)\
 [piecewise_linear_distribution](../standard-library/piecewise-linear-distribution-class.md)

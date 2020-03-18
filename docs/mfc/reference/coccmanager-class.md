@@ -31,11 +31,11 @@ helpviewer_keywords:
 - COccManager [MFC], SplitDialogTemplate
 ms.assetid: 7d47aeed-d1ab-48e3-b4cf-d429718e370a
 ms.openlocfilehash: c2a49e3396879e5f1e0864ab5342b57541c6b36c
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865939"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423937"
 ---
 # <a name="coccmanager-class"></a>COccManager クラス
 
@@ -51,7 +51,7 @@ class COccManager : public CNoTrackObject
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[COccManager:: CreateContainer](#createcontainer)|`COleContainer` オブジェクトを作成します。|
 |[COccManager:: CreateDlgControls](#createdlgcontrols)|関連付けられている `COleContainer` オブジェクトによってホストされる ActiveX コントロールを作成します。|
@@ -66,7 +66,7 @@ class COccManager : public CNoTrackObject
 |[COccManager:: SetDefaultButton](#setdefaultbutton)|指定したコントロールの既定の状態を切り替えます。|
 |[COccManager:: Splitのテンプレート](#splitdialogtemplate)|指定されたダイアログテンプレートのコモンコントロールから、既存の ActiveX コントロールを分離します。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 基底クラスである `CNoTrackObject`は、ドキュメントに記載されていない基本クラスです (AFXTLS にあります)。H)。 MFC フレームワークによって使用されるように設計された `CNoTrackObject` クラスから派生したクラスは、メモリリーク検出から除外されます。 `CNoTrackObject`から直接派生させることはお勧めしません。
 
@@ -76,7 +76,7 @@ class COccManager : public CNoTrackObject
 
 `COccManager`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxocc
 
@@ -97,7 +97,7 @@ virtual COleControlContainer* CreateContainer(CWnd* pWnd);
 
 新しく作成されたコンテナーへのポインター。それ以外の場合は NULL。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 カスタムサイトの作成の詳細については、「 [COleControlContainer:: AttachControlSite](../../mfc/reference/colecontrolcontainer-class.md#attachcontrolsite)」を参照してください。
 
@@ -152,7 +152,7 @@ virtual COleControlSite* CreateSite(COleControlContainer* pCtrlCont);
 
 新しく作成されたコントロールサイトへのポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 [COleControlSite](../../mfc/reference/colecontrolsite-class.md)派生クラスを使用して、カスタムコントロールサイトを作成するには、この関数をオーバーライドします。
 
@@ -203,7 +203,7 @@ virtual BOOL IsDialogMessage(
 
 メッセージが処理される場合は0以外の。それ以外の場合は0。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `IsDialogMessage` の既定の動作では、キーボードメッセージを確認し、対応するダイアログボックスの選択に変換します。 たとえば、TAB キーを押すと、次のコントロールまたはコントロールグループが選択されます。
 
@@ -227,7 +227,7 @@ static BOOL AFX_CDECL IsLabelControl(COleControlSiteOrWnd* pWnd);
 
 コントロールがラベルの場合は0以外の。それ以外の場合は0
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ラベルコントロールとは、順序の次のコントロールに対するラベルのように機能するコントロールです。
 
@@ -257,7 +257,7 @@ static BOOL AFX_CDECL IsMatchingMnemonic(
 
 ニーモニックがコントロールと一致する場合は0以外の。それ以外の場合は0
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ##  <a name="onevent"></a>COccManager:: OnEvent
 
@@ -289,7 +289,7 @@ NULL でない場合は、コマンドをディスパッチするのではなく
 
 イベントが処理された場合は0以外の値。それ以外の場合は0。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 既定のイベント処理プロセスをカスタマイズするには、この関数をオーバーライドします。
 
@@ -315,7 +315,7 @@ virtual const DLGTEMPLATE* PreCreateDialog(
 
 ダイアログボックスの作成に使用されるダイアログテンプレート構造体へのポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 既定の動作では、`SplitDialogTemplate`を呼び出し、ActiveX コントロールが存在するかどうかを確認してから、結果のダイアログテンプレートを返します。
 
@@ -334,7 +334,7 @@ virtual void PostCreateDialog(_AFX_OCC_DIALOG_INFO* pOccDialogInfo);
 *Poccの情報*<br/>
 ダイアログテンプレートおよびダイアログでホストされている ActiveX コントロールに関する情報を格納している `_AFX_OCC_DIALOG_INFO` 構造体。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメモリは `SplitDialogTemplate`への呼び出しによって割り当てられており、ダイアログボックスの任意のホスト型 ActiveX コントロールに使用されていました。
 
@@ -362,7 +362,7 @@ static void AFX_CDECL SetDefaultButton(
 
 成功した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 > [!NOTE]
 >  コントロールには OLEMISC_ACTSLIKEBUTTON ステータスビットが設定されている必要があります。 OLEMISC フラグの詳細については、Windows SDK の[OLEMISC](/windows/win32/api/oleidl/ne-oleidl-olemisc)のトピックを参照してください。
@@ -389,7 +389,7 @@ ActiveX コントロールであるダイアログボックス項目へのポイ
 
 非 ActiveX コントロールのみを含むダイアログテンプレート構造体へのポインター。 ActiveX コントロールが存在しない場合は、NULL が返されます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ActiveX コントロールが見つかると、テンプレートが分析され、非 ActiveX コントロールのみを含む新しいテンプレートが作成されます。 このプロセス中に見つかった ActiveX コントロールは、 *ppOleDlgItems*に追加されます。
 

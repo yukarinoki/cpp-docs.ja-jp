@@ -4,20 +4,20 @@ ms.date: 04/22/2019
 helpviewer_keywords:
 - warnings, by compiler version
 - cl.exe compiler, setting warning options
-ms.openlocfilehash: 7e0a2d9a342446acbb62ea64031e84e03855e026
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: bf42981396abf8e91077da5c1cc1f180891d2a63
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69630820"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446549"
 ---
 # <a name="compiler-warnings-by-compiler-version"></a>コンパイラのバージョン別のコンパイラの警告
 
-コンパイラは、 [/Wv](../../build/reference/compiler-option-warning-level.md)コンパイラオプションを使用して、指定したバージョンより後に導入された警告を非表示にすることができます。 このオプションは、新しいツールセットのバージョンを導入するときに、新しい警告を一時的に抑制するときにビルドプロセスを管理する場合に便利です。 このオプションでは、新しいエラーメッセージではなく、警告のみが抑制されます。 すべての新しい警告を完全に抑制しないでください。 常に最高の通常の警告レベル`/W4`でコンパイルし、ビルドの`/Wv`オプションをできるだけ早く削除することをお勧めします。
+コンパイラは、 [/Wv](../../build/reference/compiler-option-warning-level.md)コンパイラオプションを使用して、指定したバージョンより後に導入された警告を非表示にすることができます。 このオプションは、新しいツールセットのバージョンを導入するときに、新しい警告を一時的に抑制するときにビルドプロセスを管理する場合に便利です。 このオプションでは、新しいエラーメッセージではなく、警告のみが抑制されます。 すべての新しい警告を完全に抑制しないでください。 常に最高の標準警告レベルでコンパイルし、`/W4`して、ビルドの `/Wv` オプションをできるだけ早く削除することをお勧めします。
 
 これらのバージョンのコンパイラでは、新しい警告が導入されました。
 
-| 製品 | コンパイラのバージョン番号 |
+| Product | コンパイラのバージョン番号 |
 |-|-|
 | Visual Studio 2002 | 13.00.9466 |
 | Visual Studio 2003 | 13.10.3077 |
@@ -36,18 +36,18 @@ ms.locfileid: "69630820"
 | Visual Studio 2017 バージョン 15.6 | 19.13.26128.0 |
 | Visual Studio 2017 バージョン 15.7 | 19.14.26428.0 |
 | Visual Studio 2017 バージョン 15.8 | 19.15.26726.0 |
-| Visual Studio 2017 バージョン15.9 | 19.16.26926.0 |
+| Visual Studio 2017 バージョン 15.9 | 19.16.26926.0 |
 | Visual Studio 2019 RTM | 19.20.27004.0 |
 
-`/Wv`オプションには、メジャー番号、メジャー番号、マイナー番号、メジャー番号、マイナー番号、およびビルド番号のみを指定できます。 コンパイラは、指定された数で始まるバージョンに一致するすべての警告を報告し、指定された数よりも大きいバージョンのすべての警告を抑制します。 たとえば、は`/Wv:17` 、Visual Studio 2012 のいずれかのバージョン以前に発生した警告を報告し、Visual Studio 2013 (バージョン 18) 以降のコンパイラによって導入された警告を抑制します。 Visual Studio 2015 update 2 以降で導入された警告を非表示に`/Wv:19.00.23506`するには、を使用します。 Visual `/Wv:19.11` studio 2017 バージョン15.5 より前のバージョンの visual studio で導入された警告をレポートするために使用します。ただし、visual studio 2017 バージョン15.5 以降で導入された警告は表示されません。
+`/Wv` オプションには、メジャー番号、メジャー番号、マイナー番号、メジャー番号、マイナー番号、およびビルド番号のみを指定できます。 コンパイラは、指定された数で始まるバージョンに一致するすべての警告を報告し、指定された数よりも大きいバージョンのすべての警告を抑制します。 たとえば、`/Wv:17` は、Visual Studio 2012 のいずれかのバージョン以前に発生した警告を報告し、Visual Studio 2013 (バージョン 18) 以降のコンパイラによって発生した警告を抑制します。 Visual Studio 2015 update 2 以降で導入された警告を非表示にするには、`/Wv:19.00.23506`を使用できます。 `/Wv:19.11` を使用すると、visual studio 2017 バージョン15.5 より前のバージョンの Visual Studio で導入された警告を報告できますが、Visual Studio 2017 バージョン15.5 以降で導入された警告は表示されません。
 
-次のセクションでは、 C++ `/Wv`コンパイラオプションを使用して非表示にできる、各バージョンのビジュアルで導入された警告について説明します。 オプション`/Wv`では、一覧に表示されていない警告を抑制することはできません。これは、指定したバージョンのコンパイラを中します。
+次のセクションでは、`/Wv` コンパイラオプションを使用しC++て非表示にできる、ビジュアルの各バージョンで導入された警告について説明します。 `/Wv` オプションでは、一覧に表示されていない警告を抑制することはできません。これは、指定したバージョンのコンパイラを中します。
 
 ::: moniker range=">= vs-2019"
 
 ## <a name="warnings-introduced-in-visual-studio-2019-rtw-compiler-version-1920270040"></a>Visual Studio 2019 RTW で導入された警告 (コンパイラバージョン 19.20.27004.0)
 
-これらの警告と、それ以降のバージョンのすべての警告は、 `/Wv:19.15`コンパイラオプションを使用して抑制されます。
+これらの警告と、それ以降のバージョンのすべての警告は、コンパイラオプション `/Wv:19.15`を使用して抑制されます。
 
 |||
 |-|-|
@@ -59,7 +59,7 @@ ms.locfileid: "69630820"
 
 ## <a name="warnings-introduced-in-visual-studio-2017-version-158-compiler-version-1915267260"></a>Visual Studio 2017 バージョン15.8 で導入された警告 (コンパイラバージョン 19.15.26726.0)
 
-これらの警告と、それ以降のバージョンのすべての警告は、 `/Wv:19.14`コンパイラオプションを使用して抑制されます。
+これらの警告と、それ以降のバージョンのすべての警告は、コンパイラオプション `/Wv:19.14`を使用して抑制されます。
 
 |||
 |-|-|
@@ -85,7 +85,7 @@ ms.locfileid: "69630820"
 
 ## <a name="warnings-introduced-in-visual-studio-2017-version-157-compiler-version-1914264280"></a>Visual Studio 2017 バージョン15.7 で導入された警告 (コンパイラバージョン 19.14.26428.0)
 
-これらの警告と、それ以降のバージョンのすべての警告は、 `/Wv:19.13`コンパイラオプションを使用して抑制されます。
+これらの警告と、それ以降のバージョンのすべての警告は、コンパイラオプション `/Wv:19.13`を使用して抑制されます。
 
 |||
 |-|-|
@@ -94,7 +94,7 @@ ms.locfileid: "69630820"
 
 ## <a name="warnings-introduced-in-visual-studio-2017-version-156-compiler-version-1913261280"></a>Visual Studio 2017 バージョン15.6 で導入された警告 (コンパイラバージョン 19.13.26128.0)
 
-これらの警告と、それ以降のバージョンのすべての警告は、 `/Wv:19.12`コンパイラオプションを使用して抑制されます。
+これらの警告と、それ以降のバージョンのすべての警告は、コンパイラオプション `/Wv:19.12`を使用して抑制されます。
 
 |||
 |-|-|
@@ -102,7 +102,7 @@ ms.locfileid: "69630820"
 
 ## <a name="warnings-introduced-in-visual-studio-2017-version-155-compiler-version-1912258300"></a>Visual Studio 2017 バージョン15.5 で導入された警告 (コンパイラバージョン 19.12.25830.0)
 
-これらの警告と、それ以降のバージョンのすべての警告は、 `/Wv:19.11`コンパイラオプションを使用して抑制されます。
+これらの警告と、それ以降のバージョンのすべての警告は、コンパイラオプション `/Wv:19.11`を使用して抑制されます。
 
 |||
 |-|-|
@@ -116,7 +116,7 @@ ms.locfileid: "69630820"
 
 ## <a name="warnings-introduced-in-visual-studio-2017-version-153-compiler-version-1911255060"></a>Visual Studio 2017 バージョン15.3 で導入された警告 (コンパイラバージョン 19.11.25506.0)
 
-これらの警告と、それ以降のバージョンのすべての警告は、 `/Wv:19.10`コンパイラオプションを使用して抑制されます。
+これらの警告と、それ以降のバージョンのすべての警告は、コンパイラオプション `/Wv:19.10`を使用して抑制されます。
 
 |||
 |-|-|
@@ -138,7 +138,7 @@ ms.locfileid: "69630820"
 
 ## <a name="warnings-introduced-in-visual-studio-2017-rtm-compiler-version-1910250170"></a>Visual Studio 2017 RTM で導入された警告 (コンパイラバージョン 19.10.25017.0)
 
-これらの警告と、それ以降のバージョンのすべての警告は、 `/Wv:19.00`コンパイラオプションを使用して抑制されます。
+これらの警告と、それ以降のバージョンのすべての警告は、コンパイラオプション `/Wv:19.00`を使用して抑制されます。
 
 |||
 |-|-|
@@ -151,7 +151,7 @@ ms.locfileid: "69630820"
 
 ## <a name="warnings-introduced-in-visual-studio-2015-update-3-compiler-version-1900242151"></a>Visual Studio 2015 Update 3 で導入された警告 (コンパイラバージョン 19.00.24215.1)
 
-これらの警告と、それ以降のバージョンのすべての警告は、 `/Wv:19.00.23918`コンパイラオプションを使用して抑制されます。
+これらの警告と、それ以降のバージョンのすべての警告は、コンパイラオプション `/Wv:19.00.23918`を使用して抑制されます。
 
 |||
 |-|-|
@@ -162,7 +162,7 @@ ms.locfileid: "69630820"
 
 ## <a name="warnings-introduced-in-visual-studio-2015-update-2-compiler-version-1900239180"></a>Visual Studio 2015 Update 2 で導入された警告 (コンパイラバージョン 19.00.23918.0)
 
-これらの警告と、それ以降のバージョンのすべての警告は、 `/Wv:19.00.23506`コンパイラオプションを使用して抑制されます。
+これらの警告と、それ以降のバージョンのすべての警告は、コンパイラオプション `/Wv:19.00.23506`を使用して抑制されます。
 
 |||
 |-|-|
@@ -173,7 +173,7 @@ ms.locfileid: "69630820"
 
 ## <a name="warnings-introduced-in-visual-studio-2015-update-1-compiler-version-1900235060"></a>Visual Studio 2015 Update 1 で導入された警告 (コンパイラバージョン 19.00.23506.0)
 
-これらの警告と、それ以降のバージョンのすべての警告は、 `/Wv:19.00.23026`コンパイラオプションを使用して抑制されます。
+これらの警告と、それ以降のバージョンのすべての警告は、コンパイラオプション `/Wv:19.00.23026`を使用して抑制されます。
 
 |||
 |-|-|
@@ -184,7 +184,7 @@ ms.locfileid: "69630820"
 
 ## <a name="warnings-introduced-in-visual-studio-2015-rtm-compiler-version-1900230260"></a>Visual Studio 2015 RTM で導入された警告 (コンパイラバージョン 19.00.23026.0)
 
-これらの警告と、それ以降のバージョンのすべての警告は、 `/Wv:18`コンパイラオプションを使用して抑制されます。
+これらの警告と、それ以降のバージョンのすべての警告は、コンパイラオプション `/Wv:18`を使用して抑制されます。
 
 |||
 |-|-|
@@ -243,7 +243,7 @@ ms.locfileid: "69630820"
 
 ## <a name="warnings-introduced-in-visual-studio-2013-compiler-version-1800210051"></a>Visual Studio 2013 で導入された警告 (コンパイラバージョン 18.00.21005.1)
 
-これらの警告と、それ以降のバージョンのすべての警告は、 `/Wv:17`コンパイラオプションを使用して抑制されます。
+これらの警告と、それ以降のバージョンのすべての警告は、コンパイラオプション `/Wv:17`を使用して抑制されます。
 
 |||
 |-|-|
@@ -272,7 +272,7 @@ ms.locfileid: "69630820"
 
 ## <a name="warnings-introduced-in-visual-studio-2012-compiler-version-1700511061"></a>Visual Studio 2012 で導入された警告 (コンパイラバージョン 17.00.51106.1)
 
-これらの警告と、それ以降のバージョンのすべての警告は、 `/Wv:16`コンパイラオプションを使用して抑制されます。
+これらの警告と、それ以降のバージョンのすべての警告は、コンパイラオプション `/Wv:16`を使用して抑制されます。
 
 |||
 |-|-|
@@ -305,7 +305,7 @@ ms.locfileid: "69630820"
 | C4703 | `potentially uninitialized local pointer variable 'name' used` |
 | C4728 | `/Yl- option ignored because PCH reference is required` |
 | C4745 | `volatile access of 'name' cannot be honored due to its size` |
-| C4746|' name ' の揮発性アクセスは/volatile: < iso に従います | ms > 設定;__iso_volatile_load/store 組み込み関数の使用を検討する |
+| C4746| `volatile access of 'name' is subject to /volatile:<iso | ms> setting; consider using __iso_volatile_load/store intrinsic functions` |
 | C4872 | `floating point division by zero detected when compiling the call graph for the concurrency::parallel_for_each at: 'description'` |
 | C4880 | `casting from 'type' to 'type': casting away constness from a pointer or reference may result in undefined behavior in an amp restricted function` |
 | C4881 | `the constructor and/or the destructor will not be invoked for tile_static variable 'type'` |
@@ -315,7 +315,7 @@ ms.locfileid: "69630820"
 
 ## <a name="warnings-introduced-in-visual-studio-2010-compiler-version-16004021901"></a>Visual Studio 2010 で導入された警告 (コンパイラバージョン 16.00.40219.01)
 
-これらの警告と、それ以降のバージョンのすべての警告は、 `/Wv:15`コンパイラオプションを使用して抑制されます。
+これらの警告と、それ以降のバージョンのすべての警告は、コンパイラオプション `/Wv:15`を使用して抑制されます。
 
 |||
 |-|-|
@@ -331,7 +331,7 @@ ms.locfileid: "69630820"
 
 ## <a name="warnings-introduced-in-visual-studio-2008-compiler-version-15002102208"></a>Visual Studio 2008 で導入された警告 (コンパイラバージョン 15.00.21022.08)
 
-これらの警告と、それ以降のバージョンのすべての警告は、 `/Wv:14`コンパイラオプションを使用して抑制されます。
+これらの警告と、それ以降のバージョンのすべての警告は、コンパイラオプション `/Wv:14`を使用して抑制されます。
 
 |||
 |-|-|
@@ -346,7 +346,7 @@ ms.locfileid: "69630820"
 
 ## <a name="warnings-introduced-in-visual-studio-2005-compiler-version-140050727762"></a>Visual Studio 2005 で導入された警告 (コンパイラバージョン 14.00.50727.762)
 
-これらの警告と、それ以降のバージョンのすべての警告は、 `/Wv:13`コンパイラオプションを使用して抑制されます。
+これらの警告と、それ以降のバージョンのすべての警告は、コンパイラオプション `/Wv:13`を使用して抑制されます。
 
 |||
 |-|-|
@@ -489,7 +489,7 @@ ms.locfileid: "69630820"
 
 ## <a name="warnings-introduced-in-visual-studio-2003-compiler-version-13103077"></a>Visual Studio 2003 で導入された警告 (コンパイラバージョン 13.10.3077)
 
-これらの警告と、それ以降のバージョンのすべての警告は、 `/Wv:13.00.9466`コンパイラオプションを使用して抑制されます。
+これらの警告と、それ以降のバージョンのすべての警告は、コンパイラオプション `/Wv:13.00.9466`を使用して抑制されます。
 
 |||
 |-|-|
@@ -525,7 +525,7 @@ ms.locfileid: "69630820"
 
 ## <a name="warnings-introduced-in-visual-studio-2002-compiler-version-13009466"></a>Visual Studio 2002 で導入された警告 (コンパイラバージョン 13.00.9466)
 
-これらの警告と、それ以降のバージョンのすべての警告は、 `/Wv:12`コンパイラオプションを使用して抑制されます。
+これらの警告と、それ以降のバージョンのすべての警告は、コンパイラオプション `/Wv:12`を使用して抑制されます。
 
 |||
 |-|-|
@@ -672,7 +672,7 @@ ms.locfileid: "69630820"
 | C4997 | `'type': coclass does not implement a COM interface or pseudo-interface` |
 | C4998 | `EXPECTATION FAILED: description(number)` |
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [C/C++コンパイラおよびビルドツールのエラーと警告](../compiler-errors-1/c-cpp-build-errors.md) \
 [コンパイラの警告 C4000-C5999](compiler-warnings-c4000-c5999.md) \

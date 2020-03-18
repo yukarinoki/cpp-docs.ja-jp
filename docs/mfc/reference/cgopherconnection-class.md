@@ -15,11 +15,11 @@ helpviewer_keywords:
 - CGopherConnection [MFC], OpenFile
 ms.assetid: b5b96aea-ac99-430e-bd84-d1372b43f78f
 ms.openlocfilehash: f5d655aa7fd2eb9e41c15c60a71492c24ba43c43
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883903"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424363"
 ---
 # <a name="cgopherconnection-class"></a>CGopherConnection クラス
 
@@ -38,19 +38,19 @@ class CGopherConnection : public CInternetConnection
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[CGopherConnection::CGopherConnection](#cgopherconnection)|`CGopherConnection` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[CGopherConnection:: CreateLocator](#createlocator)|Gopher サーバー上のファイルを検索するための[CGopherLocator](../../mfc/reference/cgopherlocator-class.md)オブジェクトを作成します。|
 |[CGopherConnection:: GetAttribute](#getattribute)|Gopher オブジェクトに関する属性情報を取得します。|
 |[CGopherConnection:: OpenFile](#openfile)|Gopher ファイルを開きます。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 Gopher サービスは、MFC WinInet クラスによって認識される3つのインターネットサービスのうちの1つです。
 
@@ -68,7 +68,7 @@ Gopher インターネットサーバーと通信するには、まず[CInternet
 
 `CGopherConnection`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxinet.h
 
@@ -122,7 +122,7 @@ FTP サーバー名を含む文字列へのポインターです。
 *nPort*<br/>
 サーバーで使用する TCP/IP ポートを識別する番号。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `CGopherConnection` を直接作成することはありません。 代わりに、 [CInternetSession:: GetGopherConnection](../../mfc/reference/cinternetsession-class.md#getgopherconnection)を呼び出して、`CGopherConnection` オブジェクトを作成し、そのオブジェクトへのポインターを返します。
 
@@ -170,7 +170,7 @@ Gopher サーバー名を含む文字列へのポインターです。
 
 [CGopherLocator](../../mfc/reference/cgopherlocator-class.md)オブジェクトです。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 静的バージョンのメンバー関数ではサーバーを指定する必要がありますが、非静的バージョンでは接続オブジェクトのサーバー名が使用されます。
 
@@ -231,7 +231,7 @@ INTERNET_FLAG_ * フラグの任意の組み合わせ。 INTERNET_FLAG_\* フラ
 
 開く[CGopherFile](../../mfc/reference/cgopherfile-class.md)オブジェクトへのポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 *DwContext*の既定値をオーバーライドして、コンテキスト識別子を任意の値に設定します。 コンテキスト識別子は、 [CInternetSession](../../mfc/reference/cinternetsession-class.md)オブジェクトによって作成された `CGopherConnection` オブジェクトのこの特定の操作に関連付けられます。 値は[CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)に返され、識別された操作の状態が示されます。 コンテキスト識別子の詳細については、「[インターネットの最初の手順: WinInet](../../mfc/wininet-basics.md) 」を参照してください。
 

@@ -2,19 +2,17 @@
 title: 互換性
 description: Microsoft Universal C runtime library (UCRT) と標準 C ライブラリ、POSIX、安全な CRT、およびストアアプリの互換性について説明します。
 ms.date: 12/06/2019
-f1_keywords:
-- c.programs
 helpviewer_keywords:
 - CRT, compatibility
 - compatibility, C run-time libraries
 - compatibility
 ms.assetid: 346709cb-edda-4909-9a19-3d253eddb6b7
-ms.openlocfilehash: a3bc6f53d1c86268cae95e60a93576c4ac8e3e14
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: fba85462218d0cc2ba1d52caa4e59b2cfb9f4fd6
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988732"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443484"
 ---
 # <a name="compatibility"></a>互換性
 
@@ -28,13 +26,13 @@ C++ 標準では、グローバル名前空間のアンダースコアで始ま�
 
 特定の関数に関するドキュメントで別途説明されている場合を除き、UCRT は Windows API と互換性があります。  Windows ストアアプリまたはユニバーサル Windows プラットフォーム ([UWP](/uwp)) アプリでは、一部の関数はサポートされていません。 これらの関数は、「[ユニバーサル Windows プラットフォームアプリでサポートされていない CRT 関数](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」に記載されています。
 
-## <a name="related-articles"></a>関連トピック
+## <a name="related-articles"></a>関連記事
 
-|[タイトル]|説明|
+|タイトル|説明|
 |-----------|-----------------|
 |[UWP アプリ、Windows ランタイム、および C ランタイム](../c-runtime-library/windows-store-apps-the-windows-runtime-and-the-c-run-time.md)|UCRT ルーチンがユニバーサル Windows アプリまたは Microsoft Store アプリと互換性がない場合について説明します。|
 |[ANSI C 準拠](../c-runtime-library/ansi-c-compliance.md)|UCRT における標準に適合した名前付けについて説明します。|
 |[UNIX](../c-runtime-library/unix.md)|プログラムを UNIX に移植するためのガイドラインを提供します。|
 |[Windows プラットフォーム (CRT)](../c-runtime-library/windows-platforms-crt.md)|CRT がサポートするオペレーティング システムの一覧を示します。|
-|[下位互換性](../c-runtime-library/backward-compatibility.md)|CRT の古い名前が新しい名前にマップされる方法について説明します。|
+|[旧バージョンとの互換性](../c-runtime-library/backward-compatibility.md)|CRT の古い名前が新しい名前にマップされる方法について説明します。|
 |[CRT ライブラリの機能](../c-runtime-library/crt-library-features.md)|CRT ライブラリ (.lib) ファイルと、関連するコンパイラ オプションの概要を示します。|

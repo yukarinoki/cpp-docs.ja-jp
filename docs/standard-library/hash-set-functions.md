@@ -6,11 +6,11 @@ f1_keywords:
 - hash_set/std::swap (hash_multiset)
 ms.assetid: 557a0162-3728-4537-97dc-f9f6cc7ece94
 ms.openlocfilehash: 2fbc05c16ba6629397bbb07bab30cb9315a16e1f
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883845"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426937"
 ---
 # <a name="lthash_setgt-functions"></a>&lt;hash_set&gt; 関数
 
@@ -39,7 +39,7 @@ void swap(
 *左*\
 要素が hash_set*右側*の要素と交換される hash_set。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `swap` テンプレート関数は、コンテナークラス hash_set に特化したアルゴリズムであり、メンバー関数 `left.`[swap](../standard-library/hash-set-class.md#swap)(`right`) を実行します。 これは、コンパイラによる関数テンプレートの部分的な順序付けのインスタンスです。 テンプレートと関数呼び出しの照合が一意にならないようにテンプレート関数がオーバーロードされた場合、コンパイラは、最も特化したバージョンのテンプレート関数を選択します。 テンプレート関数の一般的なバージョン
 
@@ -70,7 +70,7 @@ void swap(hash_multiset <Key, Traits, Allocator>& left, hash_multiset <Key, Trai
 *左*\
 要素が hash_multiset*右側*の要素と交換される hash_multiset。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `swap` テンプレート関数は、コンテナークラス hash_multiset に特化したアルゴリズムであり、メンバー関数 `left.`[swap](../standard-library/hash-multiset-class.md#swap)(`right`) を実行します。 これは、コンパイラによる関数テンプレートの部分的な順序付けのインスタンスです。 テンプレートと関数呼び出しの照合が一意にならないようにテンプレート関数がオーバーロードされた場合、コンパイラは、最も特化したバージョンのテンプレート関数を選択します。 テンプレート関数の一般的なバージョン
 

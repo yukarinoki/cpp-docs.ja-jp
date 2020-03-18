@@ -9,11 +9,11 @@ helpviewer_keywords:
 - detecting memory leaks [MFC]
 ms.assetid: 229d9de7-a6f3-4cc6-805b-5a9d9b1bfe1d
 ms.openlocfilehash: a110e1345cb970c117de125bd8105e1bc86eaf94
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855322"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426139"
 ---
 # <a name="cmemorystate-structure"></a>CMemoryState 構造体
 
@@ -29,20 +29,20 @@ struct CMemoryState
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[CMemoryState:: CMemoryState](#cmemorystate)|メモリチェックポイントを制御するクラスに似た構造体を構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[CMemoryState:: Checkpoint](#checkpoint)|現在のメモリ状態のスナップショット (チェックポイント) を取得します。|
 |[CMemoryState::D ifference](#difference)|`CMemoryState`型の2つのオブジェクトの差を計算します。|
 |[CMemoryState::D umpAllObjectsSince](#dumpallobjectssince)|前回のチェックポイント以降に現在割り当てられているすべてのオブジェクトの概要をダンプします。|
 |[CMemoryState::D umpStatistics](#dumpstatistics)|`CMemoryState` オブジェクトのメモリ割り当ての統計を出力します。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 `CMemoryState` は構造体であり、基本クラスを持ちません。
 
@@ -71,7 +71,7 @@ struct CMemoryState
 
 `CMemoryState`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afx.h
 
@@ -83,7 +83,7 @@ struct CMemoryState
 void Checkpoint();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `CMemoryState` メンバー関数の[違い](#difference)と[DumpAllObjectsSince](#dumpallobjectssince)は、このスナップショットデータを使用します。
 
@@ -125,7 +125,7 @@ BOOL Difference(
 
 2つのメモリ状態が異なる場合は0以外。それ以外の場合は0です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 2つのメモリ状態パラメーターのそれぞれに対して、[チェックポイント](#checkpoint)が呼び出されている必要があります。
 
@@ -141,7 +141,7 @@ BOOL Difference(
 void DumpAllObjectsSince() const;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 初期化されていない `CMemoryState` オブジェクトを使用して `DumpAllObjectsSince` を呼び出すと、現在メモリにあるすべてのオブジェクトがダンプされます。
 
@@ -157,7 +157,7 @@ void DumpAllObjectsSince() const;
 void DumpStatistics() const;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 [AfxDump](diagnostic-services.md#afxdump)デバイスに印刷されるレポートには、次のものが表示されます。
 

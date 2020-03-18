@@ -13,11 +13,11 @@ helpviewer_keywords:
 - CAxWindow2 class
 ms.assetid: b87bc943-7991-4537-b902-2138d7f4d837
 ms.openlocfilehash: 0d5991dcbf79d1c2415594636a09908586d1dc2f
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78864743"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423376"
 ---
 # <a name="caxwindow2t-class"></a>CAxWindow2T クラス
 
@@ -43,13 +43,13 @@ template <class TBase = CWindow>
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[CAxWindow2T::CAxWindow2T](#caxwindow2t)|`CAxWindow2T` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[CAxWindow2T:: Create](#create)|ホストウィンドウを作成します。|
 |[CAxWindow2T::CreateControlLic](#createcontrollic)|ライセンスされた ActiveX コントロールを作成して初期化し、指定されたウィンドウでホストします。|
@@ -58,11 +58,11 @@ template <class TBase = CWindow>
 
 ### <a name="public-operators"></a>パブリック演算子
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[CAxWindow2T:: operator =](#operator_eq)|既存の `CAxWindow2T` オブジェクトに HWND を割り当てます。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 `CAxWindow2T` には、ActiveX コントロールをホストするウィンドウを操作するためのメソッドが用意されています。 `CAxWindow2T` は、ライセンスされた ActiveX コントロールのホストもサポートしています。 ホスティングは、`CAxWindow2T`によってラップされる " **AtlAxWinLic80**" によって提供されます。
 
@@ -83,7 +83,7 @@ template <class TBase = CWindow>
 
 `CAxWindow2T`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlwin. h
 
@@ -115,7 +115,7 @@ HWND Create(
     LPVOID lpCreateParam = NULL);
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `CAxWindow2T::Create` は、LPCTSTR *lpstrWndClass*パラメーターを、コントロールのホスト (`AtlAxWinLic80`) を提供するウィンドウクラスに設定して[CWindow:: Create](../../atl/reference/cwindow-class.md#create)を呼び出します。
 
@@ -150,7 +150,7 @@ HRESULT CreateControlLic(
 *Bstrのキー*<br/>
 コントロールのライセンスキー。Nonlicensed コントロールを作成する場合は NULL です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 残りのパラメーターと戻り値の説明については、「 [CAxWindow:: CreateControl](../../atl/reference/caxwindow-class.md#createcontrol) 」を参照してください。
 
@@ -187,7 +187,7 @@ HRESULT CreateControlLicEx(
 *Bstrのキー*<br/>
 コントロールのライセンスキー。Nonlicensed コントロールを作成する場合は NULL です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 残りのパラメーターと戻り値の説明については、「 [CAxWindow:: CreateControlEx](../../atl/reference/caxwindow-class.md#createcontrolex) 」を参照してください。
 

@@ -5,11 +5,11 @@ f1_keywords:
 - chrono/std::operator modulo
 ms.assetid: c5a19267-4684-40c1-b7a9-cc1012b058f3
 ms.openlocfilehash: 398e2429c38cffb454c7b510aa5ab44fbe4cfef6
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865202"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427207"
 ---
 # <a name="ltchronogt-operators"></a>&lt;chrono&gt; 演算子
 
@@ -46,10 +46,10 @@ constexpr typename common_type<Duration1, Duration2>::type
 右側の `duration` オブジェクトまたは `time_point` オブジェクト。
 
 *時刻*\
-`time_point` オブジェクトです。
+`time_point` オブジェクト。
 
 *期間*\
-`duration` オブジェクトです。
+`duration` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -109,7 +109,7 @@ constexpr duration<typename common_type<Rep1, Rep2>::type, Period2>
 ### <a name="parameters"></a>パラメーター
 
 *期間*\
-`duration` オブジェクトです。
+`duration` オブジェクト。
 
 *Mult*\
 整数値。
@@ -143,7 +143,7 @@ constexpr typename common_type<Rep1, Rep2>::type
 ### <a name="parameters"></a>パラメーター
 
 *期間*\
-`duration` オブジェクトです。
+`duration` オブジェクト。
 
 *Div*\
 整数値。
@@ -195,10 +195,10 @@ time_point<Clock, constexpr typename common_type<duration<Rep1, Period1>, Durati
 右側の `duration` オブジェクトまたは `time_point` オブジェクト。
 
 *時刻*\
-`time_point` オブジェクトです。
+`time_point` オブジェクト。
 
 *期間*\
-`duration` オブジェクトです。
+`duration` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -371,7 +371,7 @@ constexpr typename common_type<duration<Rep1, _Period1>, duration<Rep2, Period2>
 ### <a name="parameters"></a>パラメーター
 
 *期間*\
-`duration` オブジェクトです。
+`duration` オブジェクト。
 
 *Div*\
 整数値。

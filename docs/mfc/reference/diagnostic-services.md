@@ -18,12 +18,12 @@ helpviewer_keywords:
 - diagnostics [MFC], diagnostic services
 - diagnostic functions and variables [MFC]
 ms.assetid: 8d78454f-9fae-49c2-88c9-d3fabd5393e8
-ms.openlocfilehash: 4cf3f53d1e238218b4eb892dc92e3c823dcc1296
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: 6880a6a3d25738bd0480168902044530d06f7e7f
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79426751"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446215"
 ---
 # <a name="diagnostic-services"></a>診断サービス
 
@@ -109,6 +109,7 @@ _AFX_SECURE_NO_WARNINGS
 // define this before including any afx files in *pch.h* (*stdafx.h* in Visual Studio 2017 and earlier)
 #define _AFX_SECURE_NO_WARNINGS
 ```
+
 ```cpp
 CRichEditCtrl* pRichEdit = new CRichEditCtrl;
 pRichEdit->Create(WS_CHILD|WS_VISIBLE|WS_BORDER|ES_MULTILINE,
@@ -127,11 +128,11 @@ pRichEdit->GetSelText(sz);
 void AfxDebugBreak( );
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 `AfxDebugBreak` は、MFC アプリケーションのリリースバージョンには影響しないため、削除する必要があります。 この関数は、MFC アプリケーションでのみ使用してください。 Win32 API のバージョン、`DebugBreak`を使用して、非 MFC アプリケーションで中断を発生させます。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afxver_
 
@@ -148,7 +149,7 @@ ASSERT(booleanExpression)
 *booleanExpression*<br/>
 0以外または0に評価される式 (ポインター値を含む) を指定します。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 結果が0の場合、マクロは診断メッセージを出力し、プログラムを中止します。 条件が0以外の場合は、何も実行されません。
 
@@ -167,7 +168,7 @@ MFC のリリースバージョンでは、ASSERT は式を評価しないため
 
 [!code-cpp[NVC_MFC_Utilities#44](../../mfc/codesnippet/cpp/diagnostic-services_2.cpp)]
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afx.h
 
@@ -187,7 +188,7 @@ ASSERT_KINDOF(classname, pobject)
 *pobject*<br/>
 クラスオブジェクトへのポインター。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 *Pobject*パラメーターは、オブジェクトへのポインターである必要があり、 **const**にすることができます。 が指すオブジェクトとクラスは `CObject` ランタイムクラス情報をサポートしている必要があります。 たとえば、`pDocument` が `CMyDoc` クラスまたはその派生クラスのオブジェクトへのポインターであることを確認するには、次のコードを記述します。
 
@@ -202,7 +203,7 @@ ASSERT_KINDOF(classname, pobject)
 > [!NOTE]
 >  この関数は、MFC のデバッグバージョンでのみ使用できます。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afx.h
 
@@ -219,7 +220,7 @@ ASSERT_VALID(pObject)
 *pObject*<br/>
 `AssertValid` メンバー関数のオーバーライドバージョンを持つ `CObject` から派生したクラスのオブジェクトを指定します。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 ASSERT_VALID は、引数として渡されたオブジェクトの `AssertValid` メンバー関数を呼び出します。
 
@@ -234,7 +235,7 @@ MFC のリリースバージョンでは、ASSERT_VALID は何も行いません
 
 [!code-cpp[NVC_MFCCObjectSample#19](../../mfc/codesnippet/cpp/diagnostic-services_5.cpp)]
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afx.h
 
@@ -246,7 +247,7 @@ MFC のリリースバージョンでは、ASSERT_VALID は何も行いません
 #define  new DEBUG_NEW
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 プログラム内のすべての場所で DEBUG_NEW を使用できます。通常は、 **NEW**演算子を使用してヒープ記憶域を割り当てます。
 
@@ -261,7 +262,7 @@ DEBUG_NEW を使用するには、ソースファイルに次のディレクテ�
 > [!NOTE]
 >  以前のバージョンの MFC (4.1 およびそれ以前) では、IMPLEMENT_DYNCREATE または IMPLEMENT_SERIAL マクロを呼び出したすべてのステートメントの後に `#define` ステートメントを配置する必要がありました。 これはもう不要です。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afx.h
 
@@ -273,7 +274,7 @@ DEBUG_NEW を使用するには、ソースファイルに次のディレクテ�
 DEBUG_ONLY(expression)
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 リリースビルドでは、DEBUG_ONLY はその引数を評価しません。 これは、デバッグビルドでのみ実行する必要があるコードがある場合に便利です。
 
@@ -283,7 +284,7 @@ DEBUG_ONLY マクロは、`#ifdef _DEBUG` と `#endif`を持つ周囲の*式*と
 
 [!code-cpp[NVC_MFC_Utilities#32](../../mfc/codesnippet/cpp/diagnostic-services_6.cpp)]
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afx.h
 
@@ -303,7 +304,7 @@ ENSURE_VALID( booleanExpression  )
 *booleanExpression*<br/>
 テストするブール式を指定します。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 これらのマクロの目的は、パラメーターの検証を強化することです。 マクロを使用すると、コード内の不適切なパラメーターをさらに処理できなくなります。 ASSERT マクロとは異なり、マクロはアサーションの生成に加えて例外をスローします。
 
@@ -314,7 +315,7 @@ ENSURE_VALID( booleanExpression  )
 ENSURE_VALID は ASSERT_VALID マクロ (デバッグビルドでのみ効果がある) を呼び出します。 また、ポインターが NULL の場合、ENSURE_VALID は例外をスローします。 NULL テストは、デバッグ構成とリリース構成の両方で実行されます。
 
 これらのテストのいずれかが失敗した場合は、アサートと同じ方法で警告メッセージが表示されます。 マクロは、必要に応じて無効な引数の例外をスローします。
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afx.h
 
@@ -328,7 +329,7 @@ ENSURE_VALID は ASSERT_VALID マクロ (デバッグビルドでのみ効果が
 THIS_FILE
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 この情報は、ASSERT マクロと VERIFY マクロによって使用されます。 アプリケーションウィザードとコードウィザードでは、作成したソースコードファイルにマクロが配置されます。
 
@@ -344,7 +345,7 @@ static char THIS_FILE[] = __FILE__;
 // compiler recognizes.
 ```
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afx.h
 
@@ -357,7 +358,7 @@ TRACE(exp)
 TRACE(DWORD  category,  UINT  level, LPCSTR lpszFormat, ...)
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 トレースの詳細については、「 [ATLTRACE2](../../atl/reference/debugging-and-error-reporting-macros.md#atltrace2) 」を参照してください。 TRACE と ATLTRACE2 の動作は同じです。
 
@@ -365,7 +366,7 @@ MFC のデバッグバージョンでは、このマクロは、指定された�
 
 詳細については、「 [MFC アプリケーションのデバッグ](/visualstudio/debugger/mfc-debugging-techniques)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afx.h
 
@@ -382,7 +383,7 @@ VERIFY(booleanExpression)
 *booleanExpression*<br/>
 0以外または0に評価される式 (ポインター値を含む) を指定します。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 結果が0の場合、マクロは診断メッセージを出力し、プログラムを停止します。 条件が0以外の場合は、何も実行されません。
 
@@ -398,7 +399,7 @@ MFC のリリースバージョンでは、VERIFY は式を評価しますが、
 
 [!code-cpp[NVC_MFCDocView#198](../../mfc/codesnippet/cpp/diagnostic-services_7.cpp)]
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afx.h
 
@@ -410,7 +411,7 @@ MFC のリリースバージョンでは、VERIFY は式を評価しますが、
 CDumpContext  afxDump;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 `afxDump` は、デバッガーの [出力] ウィンドウまたはデバッグターミナルに `CDumpContext` 情報を送信できる定義済みの[CDumpContext](../../mfc/reference/cdumpcontext-class.md)オブジェクトです。 通常は、`CObject::Dump`のパラメーターとして `afxDump` を指定します。
 
@@ -422,7 +423,7 @@ Windows NT とすべてのバージョンの Windows では、アプリケーシ
 
 [!code-cpp[NVC_MFC_Utilities#23](../../mfc/codesnippet/cpp/diagnostic-services_8.cpp)]
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afx.h
 
@@ -441,13 +442,13 @@ void AfxDump(const CObject* pOb);
 *pOb*<br/>
 `CObject`から派生したクラスのオブジェクトへのポインター。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 `AfxDump` は、オブジェクトの `Dump` メンバー関数を呼び出し、`afxDump` 変数によって指定された場所に情報を送信します。 `AfxDump` は、MFC のデバッグバージョンでのみ使用できます。
 
 プログラムコードは `AfxDump`を呼び出さないでください。代わりに、適切なオブジェクトの `Dump` メンバー関数を呼び出す必要があります。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afx.h
 
@@ -459,7 +460,7 @@ void AfxDump(const CObject* pOb);
 int  afxMemDF;
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 `afxMemDF` は、列挙 `afxMemDF`によって指定された次の値を持つことができます。
 
@@ -473,7 +474,7 @@ int  afxMemDF;
 
 [!code-cpp[NVC_MFC_Utilities#30](../../mfc/codesnippet/cpp/diagnostic-services_9.cpp)]
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afx.h
 
@@ -487,7 +488,7 @@ throw CMemoryException*
 throw COleException*
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 エラーの場合、関数は例外をスローします。 渡された SCODE が E_OUTOFMEMORY 場合、関数は[AfxThrowMemoryException](exception-processing.md#afxthrowmemoryexception)を呼び出して[CMemoryException](../../mfc/reference/cmemoryexception-class.md)をスローします。 それ以外の場合、関数は[AfxThrowOleException](exception-processing.md#afxthrowoleexception)を呼び出すことによって[COleException](../../mfc/reference/coleexception-class.md)をスローします。
 
@@ -500,7 +501,7 @@ throw COleException*
 
 [!code-cpp[NVC_MFCOleContainer#33](../../mfc/codesnippet/cpp/diagnostic-services_10.cpp)]
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afx.h
 
@@ -516,7 +517,7 @@ BOOL  AfxCheckMemory();
 
 メモリエラーがない場合は0以外。それ以外の場合は0です。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 関数がメモリの破損を検出しなかった場合は、何も出力しません。
 
@@ -537,7 +538,7 @@ BOOL  AfxCheckMemory();
 
 [!code-cpp[NVC_MFCCObjectSample#26](../../mfc/codesnippet/cpp/diagnostic-services_11.cpp)]
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afx.h
 
@@ -554,13 +555,13 @@ void AfxDump(const CObject* pOb);
 *pOb*<br/>
 `CObject`から派生したクラスのオブジェクトへのポインター。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 `AfxDump` は、オブジェクトの `Dump` メンバー関数を呼び出し、`afxDump` 変数によって指定された場所に情報を送信します。 `AfxDump` は、MFC のデバッグバージョンでのみ使用できます。
 
 プログラムコードは `AfxDump`を呼び出さないでください。代わりに、適切なオブジェクトの `Dump` メンバー関数を呼び出す必要があります。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afx.h
 
@@ -587,7 +588,7 @@ void AFXAPI AfxDumpStack(DWORD dwTarget = AFX_STACK_DUMP_TARGET_DEFAULT);
 
 - AFX_STACK_DUMP_TARGET_ODS は、Win32 関数 `OutputDebugString()`によって、出力をデバッガーに直接送信します。 このオプションを選択すると、デバッガーがプロセスにアタッチされたときにデバッグビルドとリリースビルドの両方でデバッガー出力が生成されます。 AFX_STACK_DUMP_TARGET_ODS は常にデバッガーに到達し (アタッチされている場合)、リダイレクトできません。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 次の例は、MFC ダイアログアプリケーションのボタンハンドラーから `AfxDumpStack` を呼び出すことによって生成される1行の出力を反映しています。
 
@@ -621,7 +622,7 @@ BFF928E0: WINDOWS\SYSTEM\KERNEL32.DLL! UTUnRegister + 2492 bytes
 
 たとえば、次の表は、上記の出力の最初の行を示しています。
 
-|Output|Description|
+|出力|説明|
 |------------|-----------------|
 |`00427D55:`|最後の関数呼び出しの戻り先アドレス。|
 |`DUMP2\DEBUG\DUMP2.EXE!`|関数呼び出しを含むモジュールの完全なパス名。|
@@ -635,7 +636,8 @@ BFF928E0: WINDOWS\SYSTEM\KERNEL32.DLL! UTUnRegister + 2492 bytes
 - ファイル IMAGEHLP.DLL。DLL はパスになければなりません。 この DLL がない場合は、関数によってエラーメッセージが表示されます。 IMAGEHLP.DLL によって提供される関数セットの詳細については、「[イメージヘルプライブラリ](/windows/win32/Debug/image-help-library)」を参照してください。
 
 - スタック上のフレームを持つモジュールには、デバッグ情報が含まれている必要があります。 デバッグ情報が含まれていない場合でも、関数はスタックトレースを生成しますが、トレースの詳細は低くなります。
-  ### <a name="requirements"></a>必要条件
+
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afx.h
 
@@ -656,7 +658,7 @@ BOOL AFXAPI AfxEnableMemoryLeakDump(BOOL bDump);
 
 このフラグの以前の値。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 アプリケーションが MFC ライブラリをアンロードしたときに、MFC ライブラリがメモリ リークを確認します。 この時点で、Visual Studio の **[デバッグ]** ウィンドウからメモリリークがユーザーに報告されます。
 
@@ -665,7 +667,7 @@ BOOL AFXAPI AfxEnableMemoryLeakDump(BOOL bDump);
 > [!NOTE]
 >  この方法を使用してメモリ リーク ダンプをオフにすると、アプリケーションで有効なメモリ リークのレポートを受け取らなくなります。 この方法を使用するのは、メモリ リーク ダンプに誤ったメモリ リークが含まれているという確信がある場合のみにする必要があります。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afx.h
 
@@ -686,7 +688,7 @@ BOOL AfxEnableMemoryTracking(BOOL bTrack);
 
 追跡-有効化フラグの前の設定。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 この関数を使用すると、ブロックが正しく割り当てられていることがわかっているコードセクションでの追跡を無効にできます。
 
@@ -699,7 +701,7 @@ BOOL AfxEnableMemoryTracking(BOOL bTrack);
 
 [!code-cpp[NVC_MFC_Utilities#24](../../mfc/codesnippet/cpp/diagnostic-services_12.cpp)]
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afx.h
 
@@ -729,7 +731,7 @@ BOOL AfxIsMemoryBlock(
 
 メモリブロックが現在割り当てられていて、長さが正しい場合は0以外の値。それ以外の場合は0です。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 また、指定したサイズを、割り当てられた元のサイズと比較して確認します。 関数が0以外の値を返した場合、割り当てシーケンス番号が*Plrequestnumber*に返されます。 この数は、ブロックが他のすべての**新しい**割り当てに対して相対的に割り当てられた順序を表します。
 
@@ -737,7 +739,7 @@ BOOL AfxIsMemoryBlock(
 
 [!code-cpp[NVC_MFC_Utilities#27](../../mfc/codesnippet/cpp/diagnostic-services_13.cpp)]
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afx.h
 
@@ -769,7 +771,7 @@ BOOL AfxIsValidAddress(
 
 非デバッグビルドでは、 *lp*が NULL でない場合は0以外になります。それ以外の場合は0です。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 アドレスは、 **new**によって割り当てられたブロックに制限されません。
 
@@ -777,7 +779,7 @@ BOOL AfxIsValidAddress(
 
 [!code-cpp[NVC_MFC_Utilities#28](../../mfc/codesnippet/cpp/diagnostic-services_14.cpp)]
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afx.h
 
@@ -809,7 +811,7 @@ BOOL  AfxIsValidString(
 
 [!code-cpp[NVC_MFC_Utilities#29](../../mfc/codesnippet/cpp/diagnostic-services_15.cpp)]
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afx.h
 
@@ -830,7 +832,7 @@ AFX_ALLOC_HOOK AfxSetAllocHook(AFX_ALLOC_HOOK pfnAllocHook);
 
 割り当てを許可する場合は0以外の。それ以外の場合は0です。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 Microsoft Foundation Class ライブラリのデバッグメモリアロケーターは、ユーザー定義のフック関数を呼び出して、ユーザーがメモリ割り当てを監視し、割り当てが許可されているかどうかを制御できるようにします。 割り当て用のフック関数は、次のようにプロトタイプ宣言されます。
 
@@ -847,7 +849,7 @@ Microsoft Foundation Class ライブラリのデバッグメモリアロケー�
 
 AFXAPI 呼び出し規約は、呼び出し先がスタックからパラメーターを削除する必要があることを意味します。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afx.h
 
@@ -870,7 +872,7 @@ AFXAPI AfxDoForAllClasses(
 *pContext*<br/>
 呼び出し元が反復関数に渡すことができる省略可能なデータを指します。 このポインターは NULL にすることができます。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 シリアル化可能な `CObject`派生クラスは、DECLARE_SERIAL マクロを使用して派生したクラスです。 *PContext*で `AfxDoForAllClasses` に渡されるポインターは、呼び出されるたびに、指定された反復関数に渡されます。
 
@@ -883,7 +885,7 @@ AFXAPI AfxDoForAllClasses(
 
 [!code-cpp[NVC_MFCCollections#114](../../mfc/codesnippet/cpp/diagnostic-services_17.cpp)]
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afx.h
 
@@ -905,7 +907,7 @@ void AfxDoForAllObjects(
 *pContext*<br/>
 呼び出し元が反復関数に渡すことができる省略可能なデータを指します。 このポインターは NULL にすることができます。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 Stack、global、または embedded オブジェクトは列挙されません。 *PContext*で `AfxDoForAllObjects` に渡されるポインターは、呼び出されるたびに、指定された反復関数に渡されます。
 

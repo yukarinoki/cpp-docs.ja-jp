@@ -53,11 +53,11 @@ helpviewer_keywords:
 - CArchive [MFC], m_pDocument
 ms.assetid: 9e950d23-b874-456e-ae4b-fe00781a7699
 ms.openlocfilehash: 3cf5c3b7a79e846928b5a7ee0af12a3324e141a3
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855320"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424627"
 ---
 # <a name="carchive-class"></a>CArchive クラス
 
@@ -73,13 +73,13 @@ class CArchive
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[CArchive:: CArchive](#carchive)|`CArchive` オブジェクトを作成します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[CArchive:: Abort](#abort)|例外をスローせずにアーカイブを閉じます。|
 |[CArchive:: Close](#close)|書き込まれていないデータをフラッシュし、`CFile`から切断します。|
@@ -105,18 +105,18 @@ class CArchive
 
 ### <a name="public-operators"></a>パブリック演算子
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[CArchive:: operator &lt;&lt;](#operator_lt_lt)|オブジェクトとプリミティブ型をアーカイブに格納します。|
 |[CArchive:: operator &gt;&gt;](#operator_gt_gt)|アーカイブからオブジェクトとプリミティブ型を読み込みます。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[CArchive:: m_pDocument](#m_pdocument)||
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 `CArchive` には基底クラスがありません。
 
@@ -138,7 +138,7 @@ class CArchive
 
 `CArchive`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afx.h
 
@@ -150,7 +150,7 @@ class CArchive
 void Abort ();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `CArchive` デストラクターは通常、`Close`を呼び出します。これにより、関連付けられた `CFile` オブジェクトに保存されていないすべてのデータがフラッシュされます。 これにより、例外が発生する可能性があります。
 
@@ -194,7 +194,7 @@ CArchive(
 *lpBuf*<br/>
 ユーザーが指定し*たサイズの*バッファーへのポインターです (省略可能)。 このパラメーターを指定しない場合、アーカイブによってローカルヒープからバッファーが割り当てられ、オブジェクトが破棄されると解放されます。 アーカイブでは、ユーザーが指定したバッファーは解放されません。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 アーカイブを作成した後で、この仕様を変更することはできません。
 
@@ -212,7 +212,7 @@ CArchive(
 void Close();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 アーカイブに対するそれ以上の操作は許可されていません。 アーカイブを閉じた後、同じファイルに対して別のアーカイブを作成するか、ファイルを閉じることができます。
 
@@ -230,7 +230,7 @@ void Close();
 void Flush();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 メンバー関数 `Flush` は、すべてのデータがアーカイブからファイルに転送されるようにします。 ファイルからストレージメディアへの転送を完了するには、 [CFile:: Close](../../mfc/reference/cfile-class.md#close)を呼び出す必要があります。
 
@@ -250,7 +250,7 @@ CFile* GetFile() const;
 
 使用されている `CFile` オブジェクトへの定数ポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `GetFile`を使用する前に、アーカイブをフラッシュする必要があります。
 
@@ -270,7 +270,7 @@ UINT GetObjectSchema();
 
 逆シリアル化中に、読み取るオブジェクトのバージョン。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この関数の呼び出しは、`CArchive` オブジェクトが読み込まれている場合にのみ有効です ( [CArchive:: IsLoading](#isloading)は0以外の値を返します)。 `Serialize` 関数の最初の呼び出しである必要があり、1回だけ呼び出されます。 戻り値 (UINT)-1 は、バージョン番号が不明であることを示します。
 
@@ -292,7 +292,7 @@ BOOL IsBufferEmpty() const;
 
 アーカイブのバッファーが空の場合は0以外の。それ以外の場合は0です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この関数は、MFC Windows Sockets クラス `CSocketFile`を使用したプログラミングをサポートするために用意されています。 `CFile` オブジェクトに関連付けられたアーカイブには、このファイルを使用する必要はありません。
 
@@ -312,7 +312,7 @@ BOOL IsLoading() const;
 
 アーカイブが現在読み込みに使用されている場合は0以外の。それ以外の場合は0です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、アーカイブされたクラスの `Serialize` 関数によって呼び出されます。
 
@@ -332,7 +332,7 @@ BOOL IsStoring() const;
 
 アーカイブが現在使用されている場合は0以外の。それ以外の場合は0です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、アーカイブされたクラスの `Serialize` 関数によって呼び出されます。
 
@@ -355,7 +355,7 @@ void MapObject(const CObject* pOb);
 *pOb*<br/>
 格納されているオブジェクトへの定数ポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 たとえば、ドキュメントをシリアル化することはできませんが、ドキュメントに含まれる項目をシリアル化することになります。 `MapObject`を呼び出すことにより、これらの項目 (サブオブジェクト) がドキュメントを参照できるようになります。 また、シリアル化されたサブ項目は*m_pDocument*バックポインターをシリアル化できます。
 
@@ -379,7 +379,7 @@ NULL に設定すると、既定では、`CDocument` へのポインターは、
 CDocument* m_pDocument;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このポインターの一般的な使用方法は、シリアル化プロセスに関する追加情報をシリアル化するすべてのオブジェクトに伝達することです。 これは、ドキュメント内のオブジェクトが必要に応じてドキュメントにアクセスできるように、シリアル化されているドキュメント (`CDocument`派生クラス) を使用してポインターを初期化することで実現されます。 このポインターは、シリアル化中に `COleClientItem` オブジェクトによっても使用されます。
 
@@ -439,7 +439,7 @@ CArchive& operator<<(LONGLONG dwdw);
 
 1行に複数の挿入演算子を使用できるようにする `CArchive` 参照。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 上記の最後の2つのバージョンは、64ビットの整数を格納するためのものです。
 
@@ -519,7 +519,7 @@ CArchive& operator>>(LONGLONG& dwdw);
 
 複数の抽出演算子を1行に対して有効にする `CArchive` 参照。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 上記の最後の2つのバージョンは、64ビットの整数を読み込むためのものです。
 
@@ -559,7 +559,7 @@ UINT Read(void* lpBuf, UINT nMax);
 
 実際に読み取られたバイト数を格納している符号なし整数。 戻り値が要求された数より小さい場合は、ファイルの末尾に達しています。 ファイルの終わりの条件では、例外はスローされません。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 アーカイブでは、バイトは解釈されません。
 
@@ -595,7 +595,7 @@ CRuntimeClass* ReadClass(
 
 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)構造体へのポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 要求された*Pclassrefrequested* NULL でない場合、`ReadClass` は、アーカイブされたクラス情報がランタイムクラスと互換性があるかどうかを確認します。 互換性がない場合、`ReadClass` は[Cアーカイブ例外](../../mfc/reference/carchiveexception-class.md)をスローします。
 
@@ -626,7 +626,7 @@ CObject* ReadObject(const CRuntimeClass* pClass);
 
 Cobject [:: IsKindOf](../../mfc/reference/cobject-class.md#iskindof)を使用して、正しい派生クラスに安全にキャストする必要がある[cobject](../../mfc/reference/cobject-class.md)ポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 通常、この関数は、 [CObject](../../mfc/reference/cobject-class.md)ポインターに対してオーバーロードされた `CArchive` 抽出 ( **>>** ) 演算子によって呼び出されます。 `ReadObject`は、アーカイブされたクラスの `Serialize` 関数を呼び出します。
 
@@ -662,7 +662,7 @@ BOOL を返すバージョンでは、成功した場合は TRUE になります
 
 `LPTSTR`を返すバージョンでは、テキストデータを格納しているバッファーへのポインター。ファイルの終わりに達した場合は NULL です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 *N1 日*パラメーターが指定されたメンバー関数のバージョンでは、バッファーは*n1 日*文字の上限まで保持します。 読み取りは、復帰とラインフィードのペアによって停止されます。 末尾の改行文字は常に削除されます。 どちらの場合も、null 文字 (' \ 0 ') が追加されます。
 
@@ -685,7 +685,7 @@ void SerializeClass(const CRuntimeClass* pClassRef);
 *pClassRef*<br/>
 基底クラスのランタイムクラスオブジェクトへのポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `SerializeClass` は、`CArchive`の方向に応じて、クラスへの参照を `CArchive` オブジェクトに対して読み取りまたは書き込みを行います。 基底クラスのオブジェクトをシリアル化する便利な方法として、 [Readclass](#readclass)と[writeclass](#writeclass)の代わりに `SerializeClass` を使用します。`SerializeClass` に必要なコードが少なく、パラメーターが少なくなっています。
 
@@ -712,7 +712,7 @@ void SetLoadParams(UINT nGrowBy = 1024);
 *nGrowBy*<br/>
 サイズの増加が必要な場合に割り当てる要素スロットの最小数。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `CArchive` は、load 配列を使用して、アーカイブに格納されているオブジェクトへの参照を解決します。 `SetLoadParams` を使用すると、読み込み配列のサイズを大きくすることができます。
 
@@ -735,7 +735,7 @@ void SetObjectSchema(UINT nSchema);
 *nSchema*<br/>
 オブジェクトのスキーマを指定します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 次に[Getobjectschema](#getobjectschema)を呼び出すと、 *nschema*に格納されている値が返されます。
 
@@ -761,7 +761,7 @@ void SetStoreParams(UINT nHashSize = 2053, UINT nBlockSize = 128);
 *nBlockSize*<br/>
 パラメーターを拡張するためのメモリ割り当ての粒度を指定します。 最高のパフォーマンスを得るには、2の累乗である必要があります。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `SetStoreParams` では、シリアル化プロセス中に一意のオブジェクトを識別するために使用されるマップのハッシュテーブルサイズとブロックサイズを設定できます。
 
@@ -787,7 +787,7 @@ void Write(const void* lpBuf, INT nMax);
 *N1 日*<br/>
 アーカイブに書き込むバイト数を指定する整数。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 アーカイブでは、バイトはフォーマットされません。
 
@@ -810,7 +810,7 @@ void WriteClass(const CRuntimeClass* pClassRef);
 *pClassRef*<br/>
 要求されたクラス参照に対応する[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)構造体へのポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `WriteClass` は、基本クラスの[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)への参照を `CArchive`に書き込みます。 参照を取得するには、 [CArchive:: ReadClass](#readclass)を使用します。
 
@@ -837,7 +837,7 @@ void WriteObject(const CObject* pOb);
 *pOb*<br/>
 格納されているオブジェクトへの定数ポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 通常、この関数は `CObject`に対してオーバーロードされた `CArchive` 挿入 ( **<<** ) 演算子によって呼び出されます。 `WriteObject`は、アーカイブされたクラスの `Serialize` 関数を呼び出します。
 
@@ -867,7 +867,7 @@ void WriteString(LPCTSTR lpsz);
 *lpsz*<br/>
 Null で終わるテキスト文字列を格納しているバッファーへのポインターを指定します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 終端の null 文字 (' \ 0 ') はファイルに書き込まれません。また、改行も自動的に書き込まれません。
 

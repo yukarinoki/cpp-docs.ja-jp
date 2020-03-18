@@ -1,19 +1,16 @@
 ---
 title: new および delete 演算子
 ms.date: 11/19/2019
-f1_keywords:
-- delete_cpp
-- new
 helpviewer_keywords:
 - new keyword [C++]
 - delete keyword [C++]
 ms.assetid: fa721b9e-0374-4f04-bb87-032ea775bcc8
-ms.openlocfilehash: c64b15f1e1e63b1e743743883429ffd11007de0a
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 2fd665ce2570bbe7750684057cdf7f517f6f64f3
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74246449"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445445"
 ---
 # <a name="new-and-delete-operators"></a>new および delete 演算子
 
@@ -23,7 +20,7 @@ C++では、 [new](new-operator-cpp.md)演算子と[delete](delete-operator-cpp.
 
 C ランタイムライブラリとC++標準ライブラリを構成するライブラリファイルの一覧については、「 [CRT ライブラリの機能](../c-runtime-library/crt-library-features.md)」を参照してください。
 
-##  <a id="new_operator"></a> New 演算子
+##  <a id="new_operator"> </a> New 演算子
 
 次のようなステートメントがプログラムで発生すると、関数**演算子 new**の呼び出しに変換されます。
 
@@ -41,8 +38,8 @@ char *pch = new char[BUFFER_SIZE];
 
 |演算子|スコープ|
 |--------------|-----------|
-|**:: operator new**|Global|
-|*クラス名* **:: operator new**|インスタンス|
+|**:: operator new**|グローバル|
+|*クラス名* **:: operator new**|クラス|
 
 **Operator new**の最初の引数は `size_t` 型である必要があります (\<stddef.h > で定義されている型)。戻り値の型は常に**void** <strong>\*</strong>です。
 
@@ -124,7 +121,7 @@ int main() {
 
 失敗したメモリ割り当て要求を処理するもう1つの方法があります。 このようなエラーを処理するためのカスタム復旧ルーチンを記述し、 [_set_new_handler](../c-runtime-library/reference/set-new-handler.md)ランタイム関数を呼び出して関数を登録します。
 
-##  <a id="delete_operator"></a> Delete 演算子
+##  <a id="delete_operator"> </a> Delete 演算子
 
 **New**演算子を使用して動的に割り当てられたメモリは、 **delete**演算子を使用して解放できます。 Delete 演算子は**operator delete**関数を呼び出します。これにより、使用可能なプールにメモリが解放されます。 **Delete**演算子を使用すると、クラスデストラクター (存在する場合) も呼び出されます。
 
@@ -191,7 +188,7 @@ int main( int argc, char *argv[] ) {
 }
 ```
 
-上記のコードを "メモリ リーク" の検出に使うことができます。メモリ リークとは、フリー ストアに割り当てられ、解放されていないメモリを指します。 この検出を実行するために、グローバルな**new**および**delete**演算子は、メモリの割り当てと解放をカウントするように再定義されています。
+上記のコードを使用して "メモリ リーク" の検出に使うことができます。メモリ リークとは、フリー ストアに割り当てられ、解放されていないメモリを指します。 この検出を実行するために、グローバルな**new**および**delete**演算子は、メモリの割り当てと解放をカウントするように再定義されています。
 
 コンパイラは、クラス宣言でのメンバー配列**new**および**delete**演算子をサポートしています。 例 :
 

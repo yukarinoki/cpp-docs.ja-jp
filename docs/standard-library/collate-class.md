@@ -23,11 +23,11 @@ helpviewer_keywords:
 - std::collate [C++], transform
 ms.assetid: 92168798-9628-4a2e-be6e-fa62dcd4d6a6
 ms.openlocfilehash: 88b04ad4f14faf4d152c0ce2b9c3477928263c52
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866157"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427177"
 ---
 # <a name="collate-class"></a>collate クラス
 
@@ -45,26 +45,26 @@ class collate : public locale::facet;
 *Chartype*\
 文字をエンコードするためにプログラム内で使用される型。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 すべてのロケールのファセットと同様、静的オブジェクト ID に最初に格納されている値は 0 です。 格納されている値に初めてアクセスしようとすると、`id` に一意の正の値が格納されます。 一部の言語では、複数の文字が 1 文字のように処理され、また別の言語では、個々の文字が 2 文字であるかのように処理されます。 照合クラスが提供する照合サービスは、これらの状況で文字を並べ替える方法を示します。
 
 ### <a name="constructors"></a>コンストラクター
 
-|コンストラクター|説明|
+|Constructor|Description|
 |-|-|
 |[collate](#collate)|文字列の並べ替え規則を処理するためにロケールのファセットとして機能する `collate` クラスのオブジェクトのコンストラクター。|
 
 ### <a name="typedefs"></a>Typedefs
 
-|種類の名前。|説明|
+|種類の名前。|Description|
 |-|-|
 |[char_type](#char_type)|`CharType` 型の文字を表す型。|
 |[string_type](#string_type)|`basic_string` 型の文字を格納する `CharType` 型の文字列を表す型。|
 
 ### <a name="member-functions"></a>メンバー関数
 
-|メンバー関数|説明|
+|メンバー関数|Description|
 |-|-|
 |[compare](#compare)|等値または非等値のファセット固有の規則に従って、2 文字シーケンスを比較します。|
 |[do_compare](#do_compare)|等値または非等値のファセット固有の規則に従って、2 文字シーケンスを比較するために呼び出される仮想関数。|
@@ -73,7 +73,7 @@ class collate : public locale::facet;
 |[hash](#hash)|ファセット固有の規則に従ってシーケンスのハッシュ値を決定します。|
 |[transform](#transform)|ロケールの文字シーケンスを、同じロケールから同様に変換された他の文字シーケンスとの辞書式の比較で使用できる文字列に変換します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<ロケール >
 
@@ -87,7 +87,7 @@ class collate : public locale::facet;
 typedef CharType char_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この型は、テンプレート パラメーター `CharType`のシノニムです。
 
@@ -114,7 +114,7 @@ const char* _Locname,
 *_Locname*\
 ロケールの名前。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 *_Refs*パラメーターに指定できる値とその意味は次のとおりです。
 
@@ -161,7 +161,7 @@ int compare(const CharType* first1,
 
 - シーケンスが等しい場合は 0。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 シーケンスの最も早い等しくないペアにより小さい要素がある場合、または等しくないペアは存在しないが、最初のシーケンスの方が短い場合は、最初のシーケンスが小さいと見なされます。
 
@@ -227,7 +227,7 @@ virtual int do_compare(const CharType* first1,
 
 - シーケンスが等しい場合は 0。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 プロテクト仮想メンバー関数は、[* first1, Last1) * のシーケンスを、 *[first2, last2*) のシーケンスと比較します。 `CharType`型の対応する要素のペアの間に `operator<` を適用して値を比較します。 シーケンスの最も早い等しくないペアにより小さい要素がある場合、または等しくないペアは存在しないが、最初のシーケンスの方が短い場合は、最初のシーケンスが小さいと見なされます。
 
@@ -255,7 +255,7 @@ virtual long do_hash(const CharType* first, const CharType* last) const;
 
 シーケンスの **long** 型のハッシュ値。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ハッシュ値は、リストの配列で擬似ランダムにシーケンスを分散させる場合などに役立ちます。
 
@@ -283,7 +283,7 @@ virtual string_type do_transform(const CharType* first, const CharType* last) co
 
 変換された文字シーケンスである文字列。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 protected 仮想メンバー関数は、被制御シーケンスがシーケンス [ [, ](#string_type)) のコピーである `first`string_type`last` クラスのオブジェクトを返します。 Collate\< **Chartype**> から派生したクラスが[do_compare](#do_compare)をオーバーライドする場合は、一致するように `do_transform` もオーバーライドする必要があります。 `collate::compare` に渡した場合、変換された 2 つの文字列の結果は、派生クラスで比較するために未変換文字列を渡した場合と同じものが生成される必要があります。
 
@@ -311,7 +311,7 @@ long hash(const CharType* first, const CharType* last) const;
 
 シーケンスの **long** 型のハッシュ値。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、[do_hash](#do_hash)( `first`, `last`) を返します。
 
@@ -353,7 +353,7 @@ int main( )
 typedef basic_string<CharType> string_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この型は、ソースシーケンスのコピーを格納できるオブジェクトを持つクラステンプレート[basic_string](../standard-library/basic-string-class.md)の特殊化を表します。
 
@@ -381,7 +381,7 @@ string_type transform(const CharType* first, const CharType* last) const;
 
 変換された文字シーケンスを含む文字列。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、 [do_transform](#do_transform)(`first`、`last`) を返します。
 

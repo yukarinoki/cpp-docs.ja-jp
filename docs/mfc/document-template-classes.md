@@ -1,36 +1,34 @@
 ---
 title: ドキュメント テンプレート クラス
 ms.date: 11/04/2016
-f1_keywords:
-- vc.classes.document
 helpviewer_keywords:
 - document templates [MFC], classes
 ms.assetid: 901749e9-8048-44a0-b5e2-361554650a73
-ms.openlocfilehash: 2589bc8f04e791f73529af91ffb148c2c717cd08
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 82b9ce4c242df7c85ada0722b2c1e993a0cf3f81
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62164990"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446916"
 ---
 # <a name="document-template-classes"></a>ドキュメント テンプレート クラス
 
-ドキュメント テンプレート オブジェクトがドキュメント、ビュー、および、新しいドキュメントのフレーム ウィンドウ オブジェクトの作成を調整またはビューを作成します。
+ドキュメントテンプレートオブジェクトは、新しいドキュメントまたはビューが作成されたときに、ドキュメント、ビュー、およびフレームウィンドウオブジェクトの作成を調整します。
 
 [CDocTemplate](../mfc/reference/cdoctemplate-class.md)<br/>
-ドキュメント テンプレートの基本クラスです。 このクラスを直接; 使用はしないでください。代わりに、このクラスから派生したその他のドキュメント テンプレート クラスのいずれかを使用します。
+ドキュメントテンプレートの基本クラスです。 このクラスを直接使用することはありません。代わりに、このクラスから派生した他のドキュメントテンプレートクラスの1つを使用します。
 
 [CMultiDocTemplate](../mfc/reference/cmultidoctemplate-class.md)<br/>
-マルチ ドキュメント インターフェイス (MDI) 内のドキュメントのテンプレート。 MDI アプリケーションには、複数のドキュメントを同時に開くことができます。
+マルチドキュメントインターフェイス (MDI) のドキュメント用のテンプレート。 MDI アプリケーションでは、一度に複数のドキュメントを開くことができます。
 
 [CSingleDocTemplate](../mfc/reference/csingledoctemplate-class.md)<br/>
-シングル ドキュメント インターフェイス (SDI) 内のドキュメントのテンプレート。 SDI アプリケーションでは、同時に開く 1 つだけのドキュメントがあります。
+シングルドキュメントインターフェイス (SDI) のドキュメント用のテンプレート。 SDI アプリケーションは、一度に1つのドキュメントを開いているだけです。
 
 ## <a name="related-class"></a>関連クラス
 
 [CCreateContext](../mfc/reference/ccreatecontext-structure.md)<br/>
-構造体は、ドキュメント、ビュー、フレーム ウィンドウ オブジェクトの作成を調整するウィンドウの作成関数には、ドキュメント テンプレートで渡されます。
+ドキュメント、ビュー、およびフレームウィンドウオブジェクトの作成を調整するために、ドキュメントテンプレートによってウィンドウ作成関数に渡される構造体。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [クラスの概要](../mfc/class-library-overview.md)

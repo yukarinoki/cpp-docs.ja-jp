@@ -17,12 +17,12 @@ helpviewer_keywords:
 - std::basic_string_view::operator&lt;
 - std::basic_string_view::operator&lt;&lt;
 - std::basic_string_view::operator&lt;=, std::basic_string_view::operator==
-ms.openlocfilehash: 699b1f1bddeb71ecbf03297d162a7e45ebd39609
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: 871b7dc93f5d548897cf77e55dbacf5a104cbee9
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79425059"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446760"
 ---
 # <a name="ltstring_viewgt-operators"></a>&lt;string_view&gt; 演算子
 
@@ -67,7 +67,7 @@ bool operator!=(
 
 演算子の左側のオブジェクトが右側のオブジェクトと等しく辞書式ない場合は**true**を返します。それ以外の場合は**false**。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 *Convertible_string_type*からもう一方の側の string_view への暗黙的な変換が存在する必要があります。 
 
@@ -106,7 +106,7 @@ bool operator==(
 
 演算子の左側のオブジェクトが右側のオブジェクトと辞書式等しい場合は**true**を返します。それ以外の場合は**false**。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 *Convertible_string_type*からもう一方の側の string_view への暗黙的な変換が存在する必要があります。 
 
@@ -116,6 +116,7 @@ bool operator==(
 ## <a name="op_lt"></a> 演算子&lt;
 
 演算子の左側のオブジェクトが右側のオブジェクトより小さいかどうかをテストし sidestring_view
+
 ```cpp
 template <class CharType, class Traits>
 bool operator<(
@@ -145,7 +146,7 @@ bool operator<(
 
 演算子の左側のオブジェクトが右側のオブジェクトよりも辞書式小さい場合は**true**を返します。それ以外の場合は**false**。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 *Convertible_string_type*からもう一方の側の string_view への暗黙的な変換が存在する必要があります。 
 
@@ -206,7 +207,7 @@ bool operator<=(
 
 演算子の左側のオブジェクトが右側のオブジェクト以下である場合は**true**を辞書式します。それ以外の場合は**false**。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 「 [Operator&lt;](#op_lt)」を参照してください。
 
@@ -232,7 +233,7 @@ inline basic_ostream<CharType, Traits>& operator<<(
 
 書き込み先の出力ストリーム。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 この演算子を使用して、string_view の内容を出力ストリームに挿入します。たとえば、 [std:: cout](iostream.md#cout)を使用します。
 
@@ -269,7 +270,7 @@ bool operator>(
 
 演算子の左辺のオブジェクトが右辺の string_view オブジェクトよりも大きい場合は**true**を返します。それ以外の場合は**false**。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 「 [Operator&lt;](#op_lt)」を参照してください。
 
@@ -306,7 +307,7 @@ bool operator>=(
 
 演算子の左側のオブジェクトが右側のオブジェクト以上で辞書式場合は**true**を指定します。それ以外の場合は**false**。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 「 [Operator&lt;](#op_lt)」を参照してください。
 

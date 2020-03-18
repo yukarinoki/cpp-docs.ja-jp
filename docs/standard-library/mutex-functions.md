@@ -15,11 +15,11 @@ helpviewer_keywords:
 - std::lock [C++]
 - std::try_to_lock [C++]
 ms.openlocfilehash: f6bd6a86e91c2d59fec2083dcf0ec6314d7c41ab
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856301"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425419"
 ---
 # <a name="ltmutexgt-functions-and-variables"></a>&lt;mutex&gt; 関数および変数
 
@@ -52,7 +52,7 @@ void call_once(once_flag& Flag,
 *\*
 引数リスト。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 *フラグ*が有効でない場合、関数は、`invalid_argument`のエラーコードを持つ[system_error](../standard-library/system-error-class.md)をスローします。 それ以外の場合、テンプレート関数は、その*フラグ*引数を使用して、テンプレート関数が呼び出される回数に関係なく、`F(A...)` が正常に1回だけ呼び出されるようにします。 `F(A...)` が例外をスローして終了した場合、呼び出しは失敗です。
 
@@ -73,7 +73,7 @@ template <class L1, class L2, class... L3>
 void lock(L1&, L2&, L3&...);
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このテンプレート関数に対する引数は、例外をスローする可能性がある  *への呼び出しを除いて、* mutex 型`try_lock`である必要があります。
 

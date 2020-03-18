@@ -3,11 +3,6 @@ title: '&lt;filesystem&gt;'
 description: 標準C++ライブラリの filesystem ヘッダーに含まれるクラス、関数、および型について説明します。
 ms.date: 01/22/2020
 f1_keywords:
-- filesystem/std::experimental::filesystem::directory_entry
-- filesystem/std::experimental::filesystem::recursive_directory_iterator
-- filesystem/std::experimental::filesystem::path
-- filesystem/std::experimental::filesystem::filesystem_error
-- filesystem/std::experimental::filesystem::directory_iterator
 - <filesystem>
 ms.assetid: 5005753b-46fa-43e1-8d4e-1b38617d3cfd
 no-loc:
@@ -17,12 +12,12 @@ no-loc:
 - wchar_t
 - char16_t
 - char32_t
-ms.openlocfilehash: dbe6dc89d5460a08ffafd86aa3fcd01222c82166
-ms.sourcegitcommit: b67b08472b6f1ee8f1c5684bba7056d3e0fc745f
+ms.openlocfilehash: f9e384953a4e675ad6235a274c447031976a1585
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76725683"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441712"
 ---
 # &lt;filesystem&gt;
 
@@ -42,7 +37,7 @@ using namespace std::experimental::filesystem::v1;
 
 このヘッダーは、2つの広範なホストオペレーティングシステム (Microsoft Windows と POSIX) のいずれかのファイルシステムをサポートしています。
 
-ほとんどの機能が両方のオペレーティング システムに共通していますが、このドキュメントではそれらの相違点について説明します。 例:
+ほとんどの機能が両方のオペレーティング システムに共通していますが、このドキュメントではそれらの相違点について説明します。 例 :
 
 - Windows では、`c:` や `\\network_name`などの複数のルート名がサポートされています。 ファイルシステムは、ツリーのフォレストで構成されます。各ツリーには、`c:\` または `\\network_name\`のような独自のルートディレクトリがあり、それぞれに固有のディレクトリがあり、相対パス名 (絶対パス名ではないもの) を完了します。
 
@@ -125,7 +120,7 @@ using namespace std::experimental::filesystem::v1;
 
 [\<filesystem> 演算子](../standard-library/filesystem-operators.md)
 
-## <a name="enumerations"></a>列挙
+## <a name="enumerations"></a>列挙体
 
 |||
 |-|-|
@@ -135,6 +130,6 @@ using namespace std::experimental::filesystem::v1;
 |[perm_options](../standard-library/filesystem-enumerations.md#perm_options)| `permissions` 関数のオプションを列挙します。 |
 |[perms](../standard-library/filesystem-enumerations.md#perms)|アクセス許可とアクセス許可に対するオプションを伝達するために使用されるビットマスク型|
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ヘッダーファイルのリファレンス](../standard-library/cpp-standard-library-header-files.md)

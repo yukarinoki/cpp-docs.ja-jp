@@ -3,38 +3,37 @@ title: 非推奨のプラグマ
 ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.deprecated
-- deprecated_CPP
 helpviewer_keywords:
 - deprecated pragma
 - pragmas, deprecated
 ms.assetid: 9c046f12-7875-499a-8d5d-12f8642fed2d
-ms.openlocfilehash: 2e76d1c53cb900c108e2839a9aad17b330143a5d
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 5694c5175ff23952c601884243b428a842278b7d
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70222406"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446483"
 ---
 # <a name="deprecated-pragma"></a>非推奨のプラグマ
 
-**deprecated**プラグマを使用すると、関数、型、またはその他の識別子が将来のリリースでサポートされなくなる可能性があるか、使用できなくなることを示すことができます。
+**非推奨**のプラグマを使用すると、関数、型、またはその他の識別子が将来のリリースでサポートされなくなったり、使用されなくなったりすることを示すことができます。
 
 > [!NOTE]
-> C++ 14 `[[deprecated]]`属性の詳細と、Microsoft `__declspec(deprecated)`修飾子または**非推奨**のプラグマではなくこの属性を使用する場合のガイダンスについては、「 [」のC++「属性](../cpp/attributes.md)」を参照してください。
+> C++ 14 `[[deprecated]]` 属性の詳細、および Microsoft `__declspec(deprecated)` 修飾子または**非推奨**のプラグマの代わりにその属性を使用する場合のガイダンスについては、「 [」のC++「属性](../cpp/attributes.md)」を参照してください。
 
 ## <a name="syntax"></a>構文
 
 > **#pragma 非推奨 (** *identifier1* [ **,** *identifier2* ...] **)**
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-コンパイラがで指定された識別子を検出した場合、**deprecated**プラグマ、コンパイラの警告を発行[C4995](../error-messages/compiler-warnings/compiler-warning-level-3-c4995.md)します。
+コンパイラは、**非推奨**のプラグマによって指定された識別子を検出すると、コンパイラの警告[C4995](../error-messages/compiler-warnings/compiler-warning-level-3-c4995.md)を発行します。
 
 マクロ名の使用を避けることができます。 マクロ名を引用符で囲んで配置します。そうしないと、マクロ展開が発生します。
 
-**deprecated**プラグマは、すべての一致する識別子で機能し、アカウントに署名を受け取らない、オーバー ロードされた関数の特定のバージョンを非推奨の最適なオプションではありません。 スコープ内にある一致する関数名は、警告をトリガーします。
+**非推奨**のプラグマはすべての一致する識別子に対して機能し、署名は考慮されないため、オーバーロードされた関数の特定のバージョンを非推奨するのに最適な方法ではありません。 スコープ内にある一致する関数名は、警告をトリガーします。
 
-C++ 14 を使用することをお勧めします。`[[deprecated]]`属性は、可能であれば、の代わりに、**deprecated**プラグマ。 Microsoft 固有[__declspec(deprecated)](../cpp/deprecated-cpp.md)宣言修飾子はより多くの場合の方が適切でも、**deprecated**プラグマ。 `[[deprecated]]`属性と`__declspec(deprecated)`修飾子を使用すると、オーバー ロードされた関数の特定のフォームの非推奨のステータスを指定できます。 診断の警告のみに表示されます、特定のオーバー ロードされた関数への参照属性または修飾子に適用されます。
+**非推奨**のプラグマではなく、可能な場合は c++ 14 の `[[deprecated]]` 属性を使用することをお勧めします。 Microsoft 固有の[__declspec (非推奨)](../cpp/deprecated-cpp.md)宣言修飾子は、**非推奨**のプラグマよりも多くの場合に適しています。 `[[deprecated]]` 属性および `__declspec(deprecated)` 修飾子を使用すると、オーバーロードされた関数の特定の形式に非推奨の状態を指定できます。 診断の警告のみに表示されます、特定のオーバー ロードされた関数への参照属性または修飾子に適用されます。
 
 ## <a name="example"></a>例
 
@@ -73,6 +72,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[プラグマディレクティブと __ プラグマキーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[プラグマディレクティブと __pragma キーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

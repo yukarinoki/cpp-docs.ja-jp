@@ -1,5 +1,5 @@
 ---
-title: 入出力処理の推奨事項
+title: 入力出力の処理に関する推奨事項
 ms.date: 11/04/2016
 helpviewer_keywords:
 - I/O [MFC], about I/O
@@ -8,45 +8,45 @@ helpviewer_keywords:
 - I/O [MFC], options
 - I/O [MFC], file-based options
 ms.assetid: d664b175-3b4a-40c3-b14b-39de6b12e419
-ms.openlocfilehash: 760c213c3af7f9c75374f04e3dfc6b9499eade5c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 956a92fd1761f61081afa2eb9c6cb35fe72b46d6
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62218565"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446900"
 ---
 # <a name="recommendations-for-handling-inputoutput"></a>入出力処理の推奨事項
 
-ファイル ベースの I/O を使用するかどうかは、次のデシジョン ツリーの質問に応答する方法によって異なります。
+ファイルベースの i/o を使用するかどうかは、次のデシジョンツリーの質問にどのように対応するかによって異なります。
 
-**アプリケーションでプライマリ データがディスク ファイル内に存在します。**
+**アプリケーションのプライマリデータがディスクファイルに存在するか**
 
-- はい、プライマリ データは、ディスク ファイルには。
+- はい。プライマリデータはディスクファイルに格納されています。
 
-     **アプリケーションでファイルを開く上のメモリにファイル全体を読み取るし、ファイル全体で書き戻しをディスクにファイルの保存**
+     **アプリケーションがファイル全体を開いているファイルのメモリに読み込み、ファイル全体をファイル保存時にディスクに書き戻すようにします。**
 
-   - うん：これは、既定の MFC ドキュメント ケースです。 使用`CDocument`シリアル化します。
+   - [はい] : これは、既定で MFC のドキュメントです。 `CDocument` シリアル化を使用します。
 
-   - 違います：これは、通常のファイルの更新トランザクション ベースの場合です。 トランザクションごとのファイルを更新し、不要`CDocument`シリアル化します。
+   - いいえ。これは、通常、ファイルのトランザクションベースの更新の場合です。 ファイルはトランザクションごとに更新するので、`CDocument` シリアル化は必要ありません。
 
-- いいえ、プライマリ データは、ディスク ファイルに存在しません。
+- いいえ、プライマリデータがディスクファイルに存在しません。
 
-     **データは、ODBC データ ソース内で存在します。**
+     **データが ODBC データソースに存在するか**
 
-   - はい、ODBC データ ソースのデータが存在します。
+   - はい、データは ODBC データソースに格納されています。
 
-         Use MFC's database support. The standard MFC implementation for this case includes a `CDatabase` object, as discussed in the article [MFC: Using Database Classes with Documents and Views](../data/mfc-using-database-classes-with-documents-and-views.md). The application might also read and write an auxiliary file — the purpose of the application wizard "both a database view and file support" option. In this case, you'd use serialization for the auxiliary file.
+      MFC のデータベースサポートを使用します。 この場合の MFC の標準的な実装には、「 [mfc: ドキュメントおよびビューでのデータベースクラスの使用](../data/mfc-using-database-classes-with-documents-and-views.md)」で説明されているように、`CDatabase` オブジェクトが含まれています。 アプリケーションでは、アプリケーションウィザードの "データベースビューとファイルサポートの両方" オプションの代わりに、補助ファイルの読み取りと書き込みを行うこともできます。 この場合は、補助ファイルにシリアル化を使用します。
 
-   - いいえ、ODBC データ ソースのデータが存在しません。
+   - いいえ。データは ODBC データソースには存在しません。
 
-         Examples of this case: the data resides in a non-ODBC DBMS; the data is read via some other mechanism, such as OLE or DDE.
+      この例では、データは ODBC 以外の DBMS に存在します。データは、OLE や DDE などの他のメカニズムを使用して読み取られます。
 
-         In such cases, you won't use serialization, and your application won't have Open and Save menu items. You might still want to use a `CDocument` as a home base, just as an MFC ODBC application uses the document to store `CRecordset` objects. But you won't use the framework's default File Open/Save document serialization.
+      このような場合、シリアル化は使用されず、アプリケーションにはメニュー項目の [開く] と [保存] がありません。 MFC ODBC アプリケーションでドキュメントを使用して `CRecordset` オブジェクトを格納するのと同じように、`CDocument` をホームベースとして使用することもできます。 ただし、フレームワークの既定のファイルオープン/保存ドキュメントのシリアル化は使用しません。
 
-サポートし、オープン、保存、[ファイル] メニューのコマンドを付けて、フレームワークは、ドキュメントのシリアル化を提供します。 シリアル化データ読み取りし、書き込み、クラスから派生したオブジェクトを含む`CObject`に永続的なストレージ、通常のディスク ファイル。 シリアル化は簡単に使用し、ニーズの多くは機能しますが、多くのデータ アクセス アプリケーションで適切でない可能性があります。 データ アクセス アプリケーションは、通常、トランザクション単位でデータを更新します。 トランザクションではなく読み取りと書き込みデータ ファイル全体を一度に影響を受けるレコードだけが更新されます。
+[ファイル] メニューの [開く]、[保存]、[名前を付けて保存] コマンドをサポートするために、フレームワークにはドキュメントのシリアル化が用意されています。 シリアル化は、クラス `CObject`から派生したオブジェクトを含むデータを、永続ストレージ (通常はディスクファイル) に読み書きします。 シリアル化は使いやすく、多くのニーズに対応していますが、多くのデータアクセスアプリケーションでは不適切な場合があります。 通常、データアクセスアプリケーションはトランザクションごとにデータを更新します。 データファイル全体を一度に読み取り、書き込みするのではなく、トランザクションによって影響を受けたレコードを更新します。
 
-シリアル化については、次を参照してください。[シリアル化](../mfc/serialization-in-mfc.md)します。
+シリアル化の詳細については、「[シリアル化](../mfc/serialization-in-mfc.md)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [シリアル化: シリアル化とデータベースの入力/出力](../mfc/serialization-serialization-vs-database-input-output.md)

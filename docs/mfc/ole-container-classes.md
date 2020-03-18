@@ -1,8 +1,6 @@
 ---
 title: OLE コンテナー クラス
 ms.date: 11/04/2016
-f1_keywords:
-- vc.classes.ole
 helpviewer_keywords:
 - ActiveX classes [MFC]
 - container classes [MFC]
@@ -11,43 +9,43 @@ helpviewer_keywords:
 - OLE [MFC], classes
 - containers [MFC], OLE container applications
 ms.assetid: 1e27e1ab-4c22-41eb-8547-6915c72668ae
-ms.openlocfilehash: 87db824e5ab4daec15870b245ea8341be7442109
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 61db5310637d13da2d2cc183f12f8f62aa60e328
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62186011"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447658"
 ---
 # <a name="ole-container-classes"></a>OLE コンテナー クラス
 
-これらのクラスは、コンテナーのアプリケーションによって使用されます。 両方`COleLinkingDoc`と`COleDocument`のコレクションを管理`COleClientItem`オブジェクト。 ドキュメント クラスから派生するのではなく`CDocument`から派生します`COleLinkingDoc`または`COleDocument`ドキュメントに埋め込まれたオブジェクトへのリンクのサポートが必要かどうかによって異なります。
+これらのクラスは、コンテナーアプリケーションによって使用されます。 `COleLinkingDoc` と `COleDocument` はどちらも `COleClientItem` オブジェクトのコレクションを管理します。 ドキュメントクラスを `CDocument`から派生させるのではなく、ドキュメントに埋め込まれたオブジェクトへのリンクをサポートするかどうかに応じて、`COleLinkingDoc` または `COleDocument`から派生させます。
 
-使用して、`COleClientItem`をドキュメント別のドキュメントからに埋め込まれたか、別のドキュメントへのリンクの各 OLE 項目を表すオブジェクト。
+別のドキュメントに埋め込まれているか別のドキュメントへのリンクであるドキュメント内の各 OLE 項目を表すには、`COleClientItem` オブジェクトを使用します。
 
 [COleDocObjectItem](../mfc/reference/coledocobjectitem-class.md)<br/>
-Active ドキュメント コンテインメントをサポートしています。
+アクティブなドキュメントコンテインメントをサポートします。
 
 [COleDocument](../mfc/reference/coledocument-class.md)<br/>
-基本的なコンテナーのサポートだけでなく、複合ドキュメントの実装に使用されます。 派生したクラスのコンテナーとして機能します`CDocItem`します。 このクラスは、文書化しの基本クラスは、コンテナーの基底クラスとして使用できます`COleServerDoc`します。
+複合ドキュメントの実装、および基本的なコンテナーのサポートに使用されます。 `CDocItem`から派生したクラスのコンテナーとして機能します。 このクラスは、コンテナードキュメントの基本クラスとして使用でき、`COleServerDoc`の基本クラスとして使用できます。
 
 [COleLinkingDoc](../mfc/reference/colelinkingdoc-class.md)<br/>
-派生したクラス`COleDocument`をリンクするため、インフラストラクチャを提供します。 代わりにこのクラスから、コンテナー アプリケーションのドキュメント クラスを派生する必要があります`COleDocument`埋め込みオブジェクトへのリンクをサポートするためにしたい場合。
+リンク用のインフラストラクチャを提供する `COleDocument` から派生したクラス。 埋め込みオブジェクトへのリンクをサポートする場合は、`COleDocument` ではなく、このクラスからコンテナーアプリケーションのドキュメントクラスを派生させる必要があります。
 
 [CRichEditDoc](../mfc/reference/cricheditdoc-class.md)<br/>
-リッチ エディット コントロールに含まれる OLE クライアント アイテムの一覧を保持します。 併用[CRichEditView](../mfc/reference/cricheditview-class.md)と[CRichEditCntrItem](../mfc/reference/cricheditcntritem-class.md)します。
+リッチエディットコントロール内の OLE クライアント項目のリストを保持します。 [CRichEditView](../mfc/reference/cricheditview-class.md)および[CRichEditCntrItem](../mfc/reference/cricheditcntritem-class.md)と共に使用します。
 
 [CDocItem](../mfc/reference/cdocitem-class.md)<br/>
-抽象基本クラスの`COleClientItem`と`COleServerItem`します。 派生したクラスのオブジェクトを`CDocItem`文書の一部を表します。
+`COleClientItem` および `COleServerItem`の抽象基本クラス。 `CDocItem` から派生したクラスのオブジェクトは、ドキュメントの一部を表します。
 
 [COleClientItem](../mfc/reference/coleclientitem-class.md)<br/>
-埋め込みまたはリンクされている OLE アイテムへの接続のクライアント側を表すクライアント項目クラス。 クライアント アイテムは、このクラスから派生します。
+埋め込み OLE またはリンクされた OLE アイテムへのクライアント側の接続の側を表すクライアントアイテムクラス。 このクラスからクライアント項目を派生させます。
 
 [CRichEditCntrItem](../mfc/reference/cricheditcntritem-class.md)<br/>
-Ole 項目で使用する場合は、リッチ エディット コントロールに格納されているクライアント側のアクセスを提供します。`CRichEditView`と`CRichEditDoc`します。
+`CRichEditView` および `CRichEditDoc`と共に使用する場合に、リッチエディットコントロールに格納されている OLE 項目にクライアント側でアクセスできるようにします。
 
 [COleException](../mfc/reference/coleexception-class.md)<br/>
-OLE の処理中のエラーによる例外。 このクラスは、コンテナーとサーバーの両方で使用されます。
+OLE 処理のエラーによって発生する例外。 このクラスは、コンテナーとサーバーの両方で使用されます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [クラスの概要](../mfc/class-library-overview.md)

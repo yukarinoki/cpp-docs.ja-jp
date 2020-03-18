@@ -1,19 +1,18 @@
 ---
-title: '&lt;含める > (ドキュメント コメントの C++)'
+title: '> を含める &lt;C++ (ドキュメントコメント)'
 ms.date: 11/04/2016
 f1_keywords:
-- include
 - <include>
 helpviewer_keywords:
 - include C++ XML tag
 - <include> C++ XML tag
 ms.assetid: 392a3e61-0371-4617-8362-446650876ce3
-ms.openlocfilehash: b7d1033aa5b6c95c0db8eb9debf74596dc214fb0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e1d6a26f28069cfb4a1c74bd591d63bc89352774
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62291328"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439509"
 ---
 # <a name="ltincludegt"></a>&lt;include&gt;
 
@@ -27,7 +26,7 @@ ms.locfileid: "62291328"
 
 #### <a name="parameters"></a>パラメーター
 
-*ファイル名*<br/>
+*filename*<br/>
 文書を含むファイルの名前。 ファイル名をパスで修飾することができます。  名前は、一重引用符または二重引用符で囲みます。  コンパイラは、`filename` が見つからない場合に警告を発行します。
 
 *tagpath*<br/>
@@ -36,10 +35,10 @@ ms.locfileid: "62291328"
 *name*<br/>
 コメントの前に配置するタグの名前指定子。`name` には `id` が指定されます。
 
-*ID*<br/>
+*id*<br/>
 コメントの前に配置するタグの ID。  名前は、一重引用符または二重引用符で囲みます。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
 \<include> タグは XML XPath 構文を使用します。 \<include> の使用をカスタマイズする方法については、XPath に関するドキュメントを参照してください。
 
@@ -110,6 +109,6 @@ The summary for this other type.
 </doc>
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [XML に関するドキュメント](xml-documentation-visual-cpp.md)

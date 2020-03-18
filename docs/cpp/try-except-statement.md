@@ -4,16 +4,12 @@ ms.date: 10/09/2018
 f1_keywords:
 - _abnormal_termination_cpp
 - _exception_code_cpp
-- EXCEPTION_CONTINUE_SEARCH
 - _exception_info
 - __except
 - _except
-- EXCEPTION_CONTINUE_EXECUTION
 - _exception_code
 - __except_cpp
 - _exception_info_cpp
-- EXCEPTION_EXECUTE_HANDLER
-- _abnormal_termination
 helpviewer_keywords:
 - __try keyword [C++]
 - EXCEPTION_CONTINUE_EXECUTION macro
@@ -26,12 +22,12 @@ helpviewer_keywords:
 - _exception_info keyword [C++]
 - _abnormal_termination keyword [C++]
 ms.assetid: 30d60071-ea49-4bfb-a8e6-7a420de66381
-ms.openlocfilehash: af378f510f11e1fe7d08619b5f33efe92a13d7be
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 7d3a92aa8c6d1f77a1795eabde0ae1e575bb5770
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74245169"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444129"
 ---
 # <a name="try-except-statement"></a>try-except ステートメント
 
@@ -67,7 +63,7 @@ ms.locfileid: "74245169"
 
 1. 保護されたセクションの実行中に例外が発生しなかった場合は、 **__except**句の後のステートメントから実行が続行されます。
 
-1. 保護されたセクションの実行中、または保護されたセクションがを呼び出すルーチンで例外が発生した場合、 **__except** *式*(*フィルター*式) が評価され、値によって例外の処理方法が決まります。 指定できる値は 3 つあります。
+1. 保護されたセクションの実行中、または保護されたセクションがを呼び出すルーチンで例外が発生した場合、 **__except** *式*(*フィルター*式) が評価され、値によって例外の処理方法が決まります。 指定可能な 3 つの値は次のとおりです。
 
    - EXCEPTION_CONTINUE_EXECUTION (-1) 例外は破棄されます。 例外が発生した位置から実行を継続します。
 
@@ -182,10 +178,10 @@ in except
 world
 ```
 
-**END Microsoft 固有の仕様**
+**Microsoft 固有の仕様はここまで**
 
 ## <a name="see-also"></a>参照
 
 [例外ハンドラーの記述](../cpp/writing-an-exception-handler.md)<br/>
-[Structured Exception Handling (C/C++)](../cpp/structured-exception-handling-c-cpp.md)<br/>
+[構造化例外処理 (C/C++)](../cpp/structured-exception-handling-c-cpp.md)<br/>
 [キーワード](../cpp/keywords-cpp.md)

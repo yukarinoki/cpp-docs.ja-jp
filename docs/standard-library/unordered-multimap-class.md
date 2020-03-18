@@ -138,11 +138,11 @@ helpviewer_keywords:
 - std::unordered_multimap::swap
 ms.assetid: 4baead6c-5870-4b85-940f-a47d6b891c27
 ms.openlocfilehash: f19e6c1a4befa3e1b5ddd46e607b8cf894f29ba6
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78873987"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427717"
 ---
 # <a name="unordered_multimap-class"></a>unordered_multimap クラス
 
@@ -161,7 +161,7 @@ class unordered_multimap;
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
+|パラメーター|Description|
 |-|-|
 |*[キー]*|キーの型。|
 |*Ty*|マップされた型。|
@@ -171,7 +171,7 @@ class unordered_multimap;
 
 ## <a name="members"></a>メンバー
 
-|型定義|説明|
+|型定義|Description|
 |-|-|
 |[allocator_type](#allocator_type)|ストレージを管理するためのアロケーターの型です。|
 |[const_iterator](#const_iterator)|被制御シーケンスの定数反復子の型です。|
@@ -190,7 +190,7 @@ class unordered_multimap;
 |[size_type](#size_type)|2 つの要素間の距離を表す、符号なしの型です。|
 |[value_type](#value_type)|要素の型。|
 
-|メンバー関数|説明|
+|メンバー関数|Description|
 |-|-|
 |[begin](#begin)|被制御シーケンスの先頭を指定します。|
 |[つぶし](#bucket)|キー値のバケット番号を取得します。|
@@ -220,11 +220,11 @@ class unordered_multimap;
 |[スワップ](#swap)|2 つのコンテナーのコンテンツを交換します。|
 |[unordered_multimap](#unordered_multimap)|コンテナー オブジェクトを構築します。|
 
-|演算子|説明|
+|演算子|Description|
 |-|-|
 |[unordered_multimap::operator=](#op_eq)|ハッシュ テーブルをコピーします。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 このオブジェクトは、このオブジェクトが制御するシーケンスを、格納されている 2 つのオブジェクト ([unordered_multimap::key_equal](#key_equal) 型の比較関数オブジェクトと、[unordered_multimap::hasher](#hasher) 型のハッシュ関数オブジェクト) を呼び出すことによって並べ替えます。 格納されている 1 つ目のオブジェクトには、メンバー関数 [unordered_multimap::key_eq](#key_eq)`()` を呼び出すことによってアクセスします。格納されている 2 つ目のオブジェクトには、メンバー関数 [unordered_multimap::hash_function](#hash)`()` を呼び出すことによってアクセスします。 具体的には、`X` 型のすべての値 `Y` と `Key` について、`key_eq()(X, Y)` が呼び出され、2 つの引数値の大小関係が等しい場合は true が返されます。`hash_function()(keyval)` の呼び出しからは、`size_t` 型の値の分布が生成されます。 クラステンプレート[Unordered_map クラス](../standard-library/unordered-map-class.md)とは異なり、`unordered_multimap` 型のオブジェクトでは、被制御シーケンスの任意の2つの要素に対して `key_eq()(X, Y)` が常に false であることは保証されません。 つまり、キーの重複が許されることになります。
 
@@ -234,7 +234,7 @@ class unordered_multimap;
 
 被制御シーケンスに対するストレージの割り当ておよび解放は、格納されている [unordered_multimap::allocator_type](#allocator_type) 型のアロケーター オブジェクトを介して行われます。 このようなアロケーターオブジェクトは、`allocator`型のオブジェクトと同じ外部インターフェイスを持つ必要があります。 コンテナー オブジェクトを代入しても、格納されているアロケーター オブジェクトはコピーされない点に注意してください。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<unordered_map >
 
@@ -248,7 +248,7 @@ class unordered_multimap;
 typedef Alloc allocator_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この型は、テンプレート パラメーター `Alloc`のシノニムです。
 
@@ -294,11 +294,11 @@ const_local_iterator begin(size_type nbucket) const;
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
+|パラメーター|Description|
 |-|-|
 |*nbucket*|バケット番号。|
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 最初の 2 つのメンバー関数は、シーケンスの最初の要素 (または空のシーケンスの末尾の次の位置) を示す前方反復子を返します。 最後の2つのメンバー関数は、バケット*nbucket*の最初の要素 (または空のバケットの末尾の次の位置) を示す前方反復子を返します。
 
@@ -359,7 +359,7 @@ size_type bucket(const Key& keyval) const;
 *keyval*\
 マップするキー値。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、キー値*keyval*に現在対応しているバケット番号を返します。
 
@@ -410,7 +410,7 @@ bucket_size(7) == 1
 size_type bucket_count() const;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、現在のバケット数を返します。
 
@@ -501,7 +501,7 @@ size_type bucket_size(size_type nbucket) const;
 *nbucket*\
 バケット番号。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、バケット数*nbucket*のサイズを返します。
 
@@ -556,7 +556,7 @@ const_iterator cbegin() const;
 
 範囲の最初の要素、または空の範囲の末尾の次の位置 (空の範囲の場合は `cbegin() == cend()`) を指す、**定数**前方アクセス反復子。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `cbegin` の戻り値で範囲内の要素を変更することはできません。
 
@@ -582,7 +582,7 @@ const_iterator cend() const;
 
 範囲の末尾の次の位置を指し示す**定数**前方アクセス反復子。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `cend` は、反復子が範囲の末尾を超えたかどうかをテストするために使用されます。
 
@@ -606,7 +606,7 @@ auto i2 = Container.cend();
 void clear();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、 [unordered_multimap:: erase](#erase)`(` [unordered_multimap:: begin](#begin)`(),` [unordered_multimap:: end](#end)`())`を呼び出します。
 
@@ -673,7 +673,7 @@ empty() == false
 typedef T1 const_iterator;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この型は、被制御シーケンスの定数前方反復子として使用できるオブジェクトを表します。 ここでは、実装定義型 `T1`のシノニムとして記述されています。
 
@@ -716,7 +716,7 @@ int main()
 typedef T5 const_local_iterator;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この型は、バケットの定数前方反復子として使用できるオブジェクトを表します。 ここでは、実装定義型 `T5`のシノニムとして記述されています。
 
@@ -764,7 +764,7 @@ int main()
 typedef Alloc::const_pointer const_pointer;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この型は、被制御シーケンスの要素への定数ポインターとして使用できるオブジェクトを表します。
 
@@ -810,7 +810,7 @@ int main()
 typedef Alloc::const_reference const_reference;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この型は、被制御シーケンスの要素への定数参照として使用できるオブジェクトを表します。
 
@@ -861,7 +861,7 @@ size_type count(const Key& keyval) const;
 *keyval*\
 検索対象のキー値。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、[unordered_multimap::equal_range](#equal_range)`(keyval)` で区切られた範囲内の要素数を返します。
 
@@ -911,7 +911,7 @@ count('C') == 0
 typedef T3 difference_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 符号付き整数型は、被制御シーケンス内にある 2 つの要素のアドレスの違いを表すことのできるオブジェクトを記述します。 ここでは、実装定義型 `T3`のシノニムとして記述されています。
 
@@ -973,7 +973,7 @@ iterator emplace(Args&&... args);
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
+|パラメーター|Description|
 |-|-|
 |*args*|unordered_multimap に挿入される要素を構築するために転送される引数。|
 
@@ -981,7 +981,7 @@ iterator emplace(Args&&... args);
 
 新しく挿入される要素を指す反復子。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この関数では、コンテナー要素を指す参照は無効になりません。ただし、コンテナーを指すすべての反復子が無効になる場合があります。
 
@@ -1004,7 +1004,7 @@ iterator emplace_hint(
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
+|パラメーター|Description|
 |-|-|
 |*args*|unordered に挿入される要素を構築するために転送される引数。|
 |*where*|正しい挿入ポイントの検索を開始する場所に関するヒント。|
@@ -1013,7 +1013,7 @@ iterator emplace_hint(
 
 新しく挿入される要素を指す反復子。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この関数では、コンテナー要素を指す参照は無効になりません。ただし、コンテナーを指すすべての反復子が無効になる場合があります。
 
@@ -1031,7 +1031,7 @@ iterator emplace_hint(
 bool empty() const;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、被制御シーケンスが空の場合に true を返します。
 
@@ -1106,11 +1106,11 @@ const_local_iterator end(size_type nbucket) const;
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
+|パラメーター|Description|
 |-|-|
 |*nbucket*|バケット番号。|
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 最初の 2 つのメンバー関数は、シーケンスの末尾の次を示す前方反復子を返します。 最後の2つのメンバー関数は、バケット*nbucket*の末尾の次の位置を示す前方反復子を返します。
 
@@ -1177,7 +1177,7 @@ std::pair<const_iterator, const_iterator>
 *keyval*\
 検索対象のキー値。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `[X.first, X.second)` このメンバー関数は、 *keyval*と同等の順序付けを持つ被制御シーケンスの要素だけを区切る反復子のペア `X` を返します。 そのような要素が存在しない場合は、どちらの反復子も `end()`です。
 
@@ -1267,7 +1267,7 @@ size_type erase(
 
 3 番目のメンバー関数の場合は、unordered_multimap から削除された要素の数を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 コード例については、「[map::erase](../standard-library/map-class.md#erase)」を参照してください。
 
@@ -1284,7 +1284,7 @@ const_iterator find(const Key& keyval) const;
 *keyval*\
 検索対象のキー値。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、[unordered_multimap::equal_range](#equal_range)`(keyval).first` を返します。
 
@@ -1339,7 +1339,7 @@ find('b') == true: [b, 2]
 Alloc get_allocator() const;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、格納されているアロケーター オブジェクトを返します。
 
@@ -1377,7 +1377,7 @@ al == std::allocator() is true
 Hash hash_function() const;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、格納されているハッシュ関数オブジェクトを返します。
 
@@ -1415,7 +1415,7 @@ hfn('b') == 1647086
 typedef Hash hasher;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この型は、テンプレート パラメーター `Hash`のシノニムです。
 
@@ -1485,7 +1485,7 @@ IList);
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
+|パラメーター|Description|
 |-|-|
 |*Val*|unordered_multimap に挿入される要素の値。|
 |*Where*|正しい挿入ポイントの検索を開始する場所|
@@ -1501,7 +1501,7 @@ IList);
 
 単一要素とヒントのメンバー関数 (3) と (4) は、新しい要素が unordered_multimap に挿入された位置を指す反復子を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この関数では、ポインターや参照は無効になりません。ただし、コンテナーを指すすべての反復子が無効になる場合があります。
 
@@ -1525,7 +1525,7 @@ IList);
 typedef T0 iterator;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この型は、被制御シーケンスの前方反復子として使用できるオブジェクトを表します。 ここでは、実装定義型 `T0`のシノニムとして記述されています。
 
@@ -1568,7 +1568,7 @@ int main()
 Pred key_eq() const;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、格納されている比較関数オブジェクトを返します。
 
@@ -1608,7 +1608,7 @@ cmpfn('a', 'b') == false
 typedef Pred key_equal;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この型は、テンプレート パラメーター `Pred`のシノニムです。
 
@@ -1648,7 +1648,7 @@ cmpfn('a', 'b') == false
 typedef Key key_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この型は、テンプレート パラメーター `Key`のシノニムです。
 
@@ -1703,7 +1703,7 @@ int main()
 float load_factor() const;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、バケットごとの平均要素数 `(float)`[unordered_multimap::size](#size)`() / (float)`[unordered_multimap::bucket_count](#bucket_count)`()` を返します。
 
@@ -1771,7 +1771,7 @@ int main()
 typedef T4 local_iterator;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この型は、バケットの前方反復子として使用できるオブジェクトを表します。 ここでは、実装定義型 `T4`のシノニムとして記述されています。
 
@@ -1819,7 +1819,7 @@ int main()
 typedef Ty mapped_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この型は、テンプレート パラメーター `Ty`のシノニムです。
 
@@ -1874,7 +1874,7 @@ int main()
 size_type max_bucket_count() const;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、現在許可されているバケットの最大数を返します。
 
@@ -1967,7 +1967,7 @@ void max_load_factor(float factor);
 *要因*\
 新しい最大テーブル占有率。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 1 つ目のメンバー関数は、格納されている最大テーブル占有率を返します。 2番目のメンバー関数は、格納されている最大占有率を*係数*に置き換えます。
 
@@ -2053,7 +2053,7 @@ max_load_factor() == 0.1
 size_type max_size() const;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、オブジェクトが制御できる最も長いシーケンスの長さを返します。
 
@@ -2092,11 +2092,11 @@ unordered_multimap& operator=(unordered_multimap&& right);
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
+|パラメーター|Description|
 |-|-|
 |*right*|unordered_multimap にコピーされる unordered_multimap を指定します。|
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Unordered_multimap 内の既存の要素を消去した後、 *`operator=` の内容*を unordered_multimap にコピーまたは移動します。
 
@@ -2145,7 +2145,7 @@ int main( )
 typedef Alloc::pointer pointer;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この型は、被制御シーケンスの要素へのポインターとして機能するオブジェクトを表します。
 
@@ -2191,7 +2191,7 @@ int main()
 typedef Alloc::reference reference;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この型は、被制御シーケンスの要素への参照として機能するオブジェクトを表します。
 
@@ -2242,7 +2242,7 @@ void rehash(size_type nbuckets);
 *nbuckets*\
 要求されたバケット数。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、バケットの数を少なくとも*nbuckets*に変更し、必要に応じてハッシュテーブルを再構築します。
 
@@ -2315,7 +2315,7 @@ max_load_factor() == 0.1
 size_type size() const;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、被制御シーケンスの長さを返します。
 
@@ -2382,7 +2382,7 @@ empty() == false
 typedef T2 size_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 符号なし整数型は、被制御シーケンスの長さを表すことができるオブジェクトを表します。 ここでは、実装定義型 `T2`のシノニムとして記述されています。
 
@@ -2423,7 +2423,7 @@ void swap(unordered_multimap& right);
 *右*\
 交換先のコンテナー。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、`*this` と*right*の間で被制御シーケンスを交換します。 [unordered_multimap::get_allocator](#get_allocator)`() == right.get_allocator()` の場合は、この処理が一定の時間内に実行されます。例外がスローされるのは、格納されている `Tr` 型の traits オブジェクトをコピーした場合のみで、2 つの被制御シーケンス内の要素を指定する参照、ポインター、反復子は一切無効化されません。 それ以外の場合、2 つの被制御シーケンス内の要素数に比例した回数、要素の割り当てとコンストラクター呼び出しが実行されます。
 
@@ -2536,7 +2536,7 @@ unordered_multimap(
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
+|パラメーター|Description|
 |-|-|
 |*InputIterator*|反復子の型。|
 |*ウムアルクラ*|格納するアロケーター オブジェクト。|
@@ -2546,7 +2546,7 @@ unordered_multimap(
 |*Right*|コピーするコンテナー。|
 |*IList*|要素のコピー元の initializer_list。|
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 1つ目のコンストラクターは、 *Right*によって制御されるシーケンスのコピーを指定します。 2 つ目のコンストラクターは、空の被制御シーケンスのコピーを指定します。 3 番目のコンストラクター。 *右*に移動して、シーケンスのコピーを指定します。 4 つ目、5 つ目、6 つ目、7 つ目、および 8 つ目のコンストラクターは、メンバーの initializer_list を使用します。 9 つ目のコンストラクターは、要素値 `[First, Last)` のシーケンスを挿入します。
 
@@ -2691,7 +2691,7 @@ int main()
 typedef std::pair<const Key, Ty> value_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この型は、被制御シーケンス内の要素を示します。
 

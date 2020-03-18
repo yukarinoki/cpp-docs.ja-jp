@@ -5,18 +5,18 @@ helpviewer_keywords:
 - standard dialog, data exchange routines
 ms.assetid: c6adb7f3-f9af-4cc5-a9ea-315c5b60ad1a
 ms.openlocfilehash: 47586f9cff0fcbe2cd7bad31f3d93fed08190830
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69511580"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426601"
 ---
 # <a name="standard-dialog-data-exchange-routines"></a>標準的なダイアログ データ エクスチェンジ ルーチン
 
 このトピックでは、一般的な MFC ダイアログコントロールに使用される標準のダイアログデータエクスチェンジ (DDX) ルーチンの一覧を示します。
 
 > [!NOTE]
->  標準的なダイアログデータ交換ルーチンは、ヘッダーファイル afxdd_ に定義されています。 ただし、アプリケーションには afxwin.h を含める必要があります。
+>  標準的なダイアログデータ交換ルーチンは、ヘッダーファイル afxdd_ .h に定義されています。 ただし、アプリケーションには afxwin.h を含める必要があります。
 
 ### <a name="ddx-functions"></a>DDX 関数
 
@@ -41,7 +41,7 @@ ms.locfileid: "69511580"
 
 ##  <a name="ddx_cbindex"></a>DDX_CBIndex
 
-この`DDX_CBIndex`関数は、ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトのコンボボックスコントロールと、ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトの**int**データメンバー間の**int**データの転送を管理します。
+`DDX_CBIndex` 関数は、ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトのコンボボックスコントロールと、ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトの**int**データメンバー間の**int**データの転送を管理します。
 
 ```
 void AFXAPI DDX_CBIndex(
@@ -53,17 +53,17 @@ void AFXAPI DDX_CBIndex(
 ### <a name="parameters"></a>パラメーター
 
 *pDX*<br/>
-`CDataExchange` オブジェクトへのポインター。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
+`CDataExchange` オブジェクトを指すポインターです。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
 *nIDC*<br/>
 コントロールプロパティに関連付けられているコンボボックスコントロールのリソース ID。
 
-*index*<br/>
+*インデックス*<br/>
 データの交換に使用するダイアログボックス、フォームビュー、またはコントロールビューオブジェクトのメンバー変数への参照。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-が`DDX_CBIndex`呼び出されると、 *index*は、現在のコンボボックスの選択項目のインデックスに設定されます。 項目が選択されていない場合、 *index*は0に設定されます。
+`DDX_CBIndex` が呼び出されると、*インデックス*は、現在のコンボボックスの選択項目のインデックスに設定されます。 項目が選択されていない場合、 *index*は0に設定されます。
 
 DDX の詳細については、「 [ダイアログ データ エクスチェンジとダイアログ データ バリデーション](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。
 
@@ -73,7 +73,7 @@ DDX の詳細については、「 [ダイアログ データ エクスチェン
 
 ##  <a name="ddx_cbstring"></a>DDX_CBString
 
-この`DDX_CBString`関数は、ダイアログボックス`CString` 、フォームビュー、または`CString`コントロールビューオブジェクトのコンボボックスコントロールの編集コントロールと、ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトのデータメンバーの間のデータ転送を管理します。
+`DDX_CBString` 関数は、ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトのコンボボックスコントロールの編集コントロール、およびダイアログボックス、フォームビュー、またはコントロールビューオブジェクトの `CString` データメンバー間の `CString` データの転送を管理します。
 
 ```
 void AFXAPI DDX_CBString(
@@ -85,7 +85,7 @@ void AFXAPI DDX_CBString(
 ### <a name="parameters"></a>パラメーター
 
 *pDX*<br/>
-`CDataExchange` オブジェクトへのポインター。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
+`CDataExchange` オブジェクトを指すポインターです。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
 *nIDC*<br/>
 コントロールプロパティに関連付けられているコンボボックスコントロールのリソース ID。
@@ -93,9 +93,9 @@ void AFXAPI DDX_CBString(
 *value*<br/>
 データの交換に使用するダイアログボックス、フォームビュー、またはコントロールビューオブジェクトのメンバー変数への参照。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-を`DDX_CBString`呼び出すと、 *value*が現在のコンボボックスの選択項目に設定されます。 項目が選択されていない場合、*値*は長さが0の文字列に設定されます。
+`DDX_CBString` が呼び出されると、現在のコンボボックスの選択に*値*が設定されます。 項目が選択されていない場合、*値*は長さが0の文字列に設定されます。
 
 > [!NOTE]
 >  コンボボックスがドロップダウンリストボックスの場合、交換される値は255文字に制限されます。
@@ -108,7 +108,7 @@ DDX の詳細については、「 [ダイアログ データ エクスチェン
 
 ##  <a name="ddx_cbstringexact"></a>DDX_CBStringExact
 
-この`DDX_CBStringExact`関数は、ダイアログボックス`CString` 、フォームビュー、または`CString`コントロールビューオブジェクトのコンボボックスコントロールの編集コントロールと、ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトのデータメンバーの間のデータ転送を管理します。
+`DDX_CBStringExact` 関数は、ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトのコンボボックスコントロールの編集コントロール、およびダイアログボックス、フォームビュー、またはコントロールビューオブジェクトの `CString` データメンバー間の `CString` データの転送を管理します。
 
 ```
 void AFXAPI DDX_CBStringExact(
@@ -120,7 +120,7 @@ void AFXAPI DDX_CBStringExact(
 ### <a name="parameters"></a>パラメーター
 
 *pDX*<br/>
-`CDataExchange` オブジェクトへのポインター。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
+`CDataExchange` オブジェクトを指すポインターです。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
 *nIDC*<br/>
 コントロールプロパティに関連付けられているコンボボックスコントロールのリソース ID。
@@ -128,9 +128,9 @@ void AFXAPI DDX_CBStringExact(
 *value*<br/>
 データの交換に使用するダイアログボックス、フォームビュー、またはコントロールビューオブジェクトのメンバー変数への参照。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-を`DDX_CBStringExact`呼び出すと、 *value*が現在のコンボボックスの選択項目に設定されます。 項目が選択されていない場合、*値*は長さが0の文字列に設定されます。
+`DDX_CBStringExact` が呼び出されると、現在のコンボボックスの選択に*値*が設定されます。 項目が選択されていない場合、*値*は長さが0の文字列に設定されます。
 
 > [!NOTE]
 >  コンボボックスがドロップダウンリストボックスの場合、交換される値は255文字に制限されます。
@@ -141,9 +141,9 @@ DDX の詳細については、「 [ダイアログ データ エクスチェン
 
   **ヘッダー** afxdd_
 
-##  <a name="ddx_check"></a>  DDX_Check
+##  <a name="ddx_check"></a>DDX_Check
 
-この`DDX_Check`関数は、ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトのチェックボックスコントロールと、ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトの**int**データメンバー間の**int**データの転送を管理します。
+`DDX_Check` 関数は、ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトのチェックボックスコントロールと、ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトの**int**データメンバー間の**int**データの転送を管理します。
 
 ```
 void AFXAPI DDX_Check(
@@ -155,7 +155,7 @@ void AFXAPI DDX_Check(
 ### <a name="parameters"></a>パラメーター
 
 *pDX*<br/>
-`CDataExchange` オブジェクトへのポインター。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
+`CDataExchange` オブジェクトを指すポインターです。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
 *nIDC*<br/>
 コントロールプロパティに関連付けられているチェックボックスコントロールのリソース ID。
@@ -163,9 +163,9 @@ void AFXAPI DDX_Check(
 *value*<br/>
 データの交換に使用するダイアログボックス、フォームビュー、またはコントロールビューオブジェクトのメンバー変数への参照。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-が`DDX_Check`呼び出されると、*値*はチェックボックスコントロールの現在の状態に設定されます。 使用可能な状態値の一覧については、Windows SDK の「 [BM_GETCHECK](/windows/win32/Controls/bm-getcheck) 」を参照してください。
+`DDX_Check` が呼び出されると、*値*はチェックボックスコントロールの現在の状態に設定されます。 使用可能な状態の値の一覧については、Windows SDK の「 [BM_GETCHECK](/windows/win32/Controls/bm-getcheck) 」を参照してください。
 
 DDX の詳細については、「 [ダイアログ データ エクスチェンジとダイアログ データ バリデーション](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。
 
@@ -175,7 +175,7 @@ DDX の詳細については、「 [ダイアログ データ エクスチェン
 
 ##  <a name="ddx_control"></a>DDX_Control
 
-この`DDX_Control`関数は、ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトの*nidc*によって指定されたコントロールをサブクラス化します。
+`DDX_Control` 関数は、ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトの*Nidc*によって指定されたコントロールをサブクラス化します。
 
 ```
 void AFXAPI DDX_Control(
@@ -195,9 +195,9 @@ void AFXAPI DDX_Control(
 *rControl*<br/>
 指定したコントロールに関連するダイアログボックス、フォームビュー、またはコントロールビューオブジェクトのメンバー変数への参照。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-*PDX*オブジェクトは、 `DoDataExchange`関数が呼び出されたときにフレームワークによって提供されます。 したがって`DDX_Control` 、は、の`DoDataExchange`オーバーライド内でのみ呼び出す必要があります。
+*PDX*オブジェクトは、`DoDataExchange` 関数が呼び出されたときにフレームワークによって提供されます。 したがって、`DDX_Control` は、`DoDataExchange`のオーバーライド内でのみ呼び出す必要があります。
 
 DDX の詳細については、「 [ダイアログ データ エクスチェンジとダイアログ データ バリデーション](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。
 
@@ -205,9 +205,9 @@ DDX の詳細については、「 [ダイアログ データ エクスチェン
 
   **ヘッダー** afxdd_
 
-##  <a name="ddx_datetimectrl"></a>  DDX_DateTimeCtrl
+##  <a name="ddx_datetimectrl"></a>DDX_DateTimeCtrl
 
-この`DDX_DateTimeCtrl`関数は、ダイアログボックスまたはフォームビューオブジェクトの日付と時刻の選択コントロール ( [cdatetimectrl 使い方](../../mfc/reference/cdatetimectrl-class.md)) と、ダイアログボックスまたはフォームの[CTime](../../atl-mfc-shared/reference/ctime-class.md)または[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)データメンバーのどちらかで、日付と時刻のデータの転送を管理します。オブジェクトを表示します。
+`DDX_DateTimeCtrl` 関数は、ダイアログボックスまたはフォームビューオブジェクトの日付と時刻の選択コントロール ( [cdatetimectrl 使い方](../../mfc/reference/cdatetimectrl-class.md)) と、ダイアログボックスまたはフォームビューオブジェクトの[CTime](../../atl-mfc-shared/reference/ctime-class.md)または[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)データメンバーのどちらかで、日付と時刻のデータの転送を管理します。
 
 ```
 void AFXAPI DDX_DateTimeCtrl(
@@ -235,13 +235,13 @@ void AFXAPI DDX_DateTimeCtrl(
 メンバー変数に関連付けられている日付と時刻の選択コントロールのリソース ID。
 
 *value*<br/>
-最初の2つのバージョンで`CTime`は、データの交換に使用されるまたは`COleDateTime`メンバー変数、ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトへの参照。 3番目のバージョンでは、 `CString`データメンバーコントロールビューオブジェクトへの参照です。
+最初の2つのバージョンでは、データの交換に使用する `CTime` または `COleDateTime` メンバー変数、ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトへの参照。 3番目のバージョンでは、`CString` データメンバーコントロールビューオブジェクトへの参照です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-が`DDX_DateTimeCtrl`呼び出されると、*値*が日付と時刻の選択コントロールの現在の状態に設定されるか、または exchange の方向に応じてコントロールが*value*に設定されます。
+`DDX_DateTimeCtrl` が呼び出されると、*値*が日付と時刻の選択コントロールの現在の状態に設定されるか、または exchange の方向に応じてコントロールが*value*に設定されます。
 
-上の3番目の`DDX_DateTimeCtrl`バージョンでは、 `CString`は、日付と時刻のコントロールと、コントロールビューオブジェクトの[CString](../../atl-mfc-shared/reference/cstringt-class.md)データメンバーとの間のデータ転送を管理します。 文字列は、日付と時刻の書式設定に現在のロケールの規則を使用して書式設定されます。
+上の3番目のバージョンでは、`DDX_DateTimeCtrl` によって、日付と時刻のコントロールと、コントロールビューオブジェクトの[CString](../../atl-mfc-shared/reference/cstringt-class.md)データメンバーの間の `CString` データの転送が管理されます。 文字列は、日付と時刻の書式設定に現在のロケールの規則を使用して書式設定されます。
 
 DDX の詳細については、「 [ダイアログ データ エクスチェンジとダイアログ データ バリデーション](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。
 
@@ -274,19 +274,19 @@ void DDX_ManagedControl(
 *control*<br/>
 [CWinFormsControl クラス](cwinformscontrol-class.md)オブジェクトへの参照。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`DDX_ManagedControl`[CWinFormsControl:: CreateManagedControl](cwinformscontrol-class.md#createmanagedcontrol)を呼び出して、リソースコントロール ID に一致するコントロールを作成します。 を`DDX_ManagedControl`使用して、 [CDialog:: OnInitDialog](cdialog-class.md#oninitdialog)のリソース id からコントロールを作成します。 データ交換では、Windows フォームコントロールで DDX/DDV 関数を使用する必要はありません。
+`DDX_ManagedControl` は、 [CWinFormsControl:: CreateManagedControl](cwinformscontrol-class.md#createmanagedcontrol)を呼び出して、リソースコントロール ID に一致するコントロールを作成します。 `DDX_ManagedControl` を使用して、 [CDialog:: OnInitDialog](cdialog-class.md#oninitdialog)のリソース id からコントロールを作成します。 データ交換では、Windows フォームコントロールで DDX/DDV 関数を使用する必要はありません。
 
-詳細については、「[方法 :Windows フォーム](../../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md)で DDX/DDV データバインドを実行します。
+詳細については、「[方法: Windows フォームで DDX/DDV データバインディングを実行する](../../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md)」を参照してください。
 
 ### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxwinforms
 
-##  <a name="ddx_ipaddress"></a>  DDX_IPAddress
+##  <a name="ddx_ipaddress"></a>DDX_IPAddress
 
-関数`DDX_IPAddress`は、IP アドレスコントロールと、コントロールビューオブジェクトのデータメンバーとの間のデータ転送を管理します。
+`DDX_IPAddress` 関数は、IP アドレスコントロールと、コントロールビューオブジェクトのデータメンバーとの間のデータ転送を管理します。
 
 ```
 void AFXAPI DDX_IPAddress(
@@ -298,7 +298,7 @@ void AFXAPI DDX_IPAddress(
 ### <a name="parameters"></a>パラメーター
 
 *pDX*<br/>
-`CDataExchange` オブジェクトへのポインター。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
+`CDataExchange` オブジェクトを指すポインターです。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
 *nIDC*<br/>
 コントロールプロパティに関連付けられた IP アドレスコントロールのリソース ID。
@@ -313,11 +313,11 @@ IP アドレスコントロールの4つのフィールドの値を格納して�
 |1|16 ~ 23|
 |0|24 ~ 31|
 
-Win32 [IPM_GETADDRESS](/windows/win32/Controls/ipm-getaddress)を使用して値を読み取るか、 [IPM_SETADDRESS](/windows/win32/Controls/ipm-setaddress)を使用して値を入力します。 これらのメッセージについては、Windows SDK を参照してください。
+値を読み取るには Win32 [IPM_GETADDRESS](/windows/win32/Controls/ipm-getaddress)を使用し、値を入力するには[IPM_SETADDRESS](/windows/win32/Controls/ipm-setaddress)を使用します。 これらのメッセージについては、Windows SDK を参照してください。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-が`DDX_IPAddress`呼び出されると、IP アドレスコントロールから*値*が読み取られるか、または exchange の方向に応じて*値*がコントロールに書き込まれます。
+`DDX_IPAddress` が呼び出されると、IP アドレスコントロールから*値*が読み取られるか、exchange の方向に応じて*値*がコントロールに書き込まれます。
 
 DDX の詳細については、「 [ダイアログ データ エクスチェンジとダイアログ データ バリデーション](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。
 
@@ -327,7 +327,7 @@ DDX の詳細については、「 [ダイアログ データ エクスチェン
 
 ##  <a name="ddx_lbindex"></a>DDX_LBIndex
 
-この`DDX_LBIndex`関数は、ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトのリストボックスコントロールと、ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトの**int**データメンバー間の**int**データの転送を管理します。
+`DDX_LBIndex` 関数は、ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトのリストボックスコントロールと、ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトの**int**データメンバー間の**int**データの転送を管理します。
 
 ```
 void AFXAPI DDX_LBIndex(
@@ -339,17 +339,17 @@ void AFXAPI DDX_LBIndex(
 ### <a name="parameters"></a>パラメーター
 
 *pDX*<br/>
-`CDataExchange` オブジェクトへのポインター。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
+`CDataExchange` オブジェクトを指すポインターです。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
 *nIDC*<br/>
 コントロールプロパティに関連付けられているリストボックスコントロールのリソース ID。
 
-*index*<br/>
+*インデックス*<br/>
 データの交換に使用するダイアログボックス、フォームビュー、またはコントロールビューオブジェクトのメンバー変数への参照。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-が`DDX_LBIndex`呼び出されると、 *index*は現在のリストボックスの選択項目のインデックスに設定されます。 項目が選択されていない場合、 *index*は-1 に設定されます。
+`DDX_LBIndex` が呼び出されると、 *index*は現在のリストボックスの選択項目のインデックスに設定されます。 項目が選択されていない場合、 *index*は-1 に設定されます。
 
 DDX の詳細については、「 [ダイアログ データ エクスチェンジとダイアログ データ バリデーション](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。
 
@@ -359,7 +359,7 @@ DDX の詳細については、「 [ダイアログ データ エクスチェン
 
 ##  <a name="ddx_lbstring"></a>DDX_LBString
 
-この`DDX_LBString`関数は、ダイアログボックス`CString` 、フォームビュー、または`CString`コントロールビューオブジェクトのリストボックスコントロールと、ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトのデータメンバーの間のデータ転送を管理します。
+`DDX_LBString` 関数は、ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトのリストボックスコントロールと、ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトの `CString` データメンバー間の `CString` データの転送を管理します。
 
 ```
 void AFXAPI DDX_LBString(
@@ -371,7 +371,7 @@ void AFXAPI DDX_LBString(
 ### <a name="parameters"></a>パラメーター
 
 *pDX*<br/>
-`CDataExchange` オブジェクトへのポインター。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
+`CDataExchange` オブジェクトを指すポインターです。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
 *nIDC*<br/>
 コントロールプロパティに関連付けられているリストボックスコントロールのリソース ID。
@@ -379,11 +379,11 @@ void AFXAPI DDX_LBString(
 *value*<br/>
 データの交換に使用するダイアログボックス、フォームビュー、またはコントロールビューオブジェクトのメンバー変数への参照。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-を`DDX_LBString`呼び出してリストボックスコントロールにデータを転送すると、コントロール内の先頭に一致する*値*を持つ最初の項目が選択されます。 (プレフィックスだけでなく、項目全体に一致させるには、 [DDX_LBStringExact](#ddx_lbstringexact)を使用します)。一致する項目がない場合は、項目が選択されません。 照合では大文字と小文字が区別されません。
+リストボックスコントロールにデータを転送するために `DDX_LBString` を呼び出すと、コントロール内の先頭に一致する*値*を持つ最初の項目が選択されます。 (プレフィックスだけでなく、項目全体に一致させるには、 [DDX_LBStringExact](#ddx_lbstringexact)を使用します)。一致する項目がない場合は、項目が選択されません。 照合では大文字と小文字が区別されません。
 
-が`DDX_LBString`呼び出され、リストボックスコントロールからデータが転送されるときに、現在のリストボックスの選択に*値*が設定されます。 項目が選択されていない場合、*値*は長さが0の文字列に設定されます。
+リストボックスコントロールからデータを転送するために `DDX_LBString` が呼び出されると、現在のリストボックスの選択に*値*が設定されます。 項目が選択されていない場合、*値*は長さが0の文字列に設定されます。
 
 > [!NOTE]
 >  リストボックスがドロップダウンリストボックスの場合、交換される値は255文字に制限されます。
@@ -396,7 +396,7 @@ DDX の詳細については、「 [ダイアログ データ エクスチェン
 
 ##  <a name="ddx_lbstringexact"></a>DDX_LBStringExact
 
-この`DDX_CBStringExact`関数は、ダイアログボックス`CString` 、フォームビュー、または`CString`コントロールビューオブジェクトのリストボックスコントロールの編集コントロールと、ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトのデータメンバーの間のデータ転送を管理します。
+`DDX_CBStringExact` 関数は、ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトのリストボックスコントロールの編集コントロールと、ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトの `CString` データメンバー間の `CString` データの転送を管理します。
 
 ```
 void AFXAPI DDX_LBStringExact(
@@ -408,7 +408,7 @@ void AFXAPI DDX_LBStringExact(
 ### <a name="parameters"></a>パラメーター
 
 *pDX*<br/>
-`CDataExchange` オブジェクトへのポインター。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
+`CDataExchange` オブジェクトを指すポインターです。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
 *nIDC*<br/>
 コントロールプロパティに関連付けられているリストボックスコントロールのリソース ID。
@@ -416,11 +416,11 @@ void AFXAPI DDX_LBStringExact(
 *value*<br/>
 データの交換に使用するダイアログボックス、フォームビュー、またはコントロールビューオブジェクトのメンバー変数への参照。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-を`DDX_LBStringExact`呼び出してリストボックスコントロールにデータを転送すると、コントロール内の*値*に一致する最初の項目が選択されます。 (項目全体ではなくプレフィックスだけを一致させるには、 [DDX_LBString](#ddx_lbstring)を使用します)。一致する項目がない場合は、項目が選択されません。 照合では大文字と小文字が区別されません。
+リストボックスコントロールにデータを転送するために `DDX_LBStringExact` を呼び出すと、*値*に一致するコントロールの最初の項目が選択されます。 (項目全体ではなくプレフィックスだけを一致させるには、 [DDX_LBString](#ddx_lbstring)を使用します。)一致する項目がない場合は、項目が選択されません。 照合では大文字と小文字が区別されません。
 
-が`DDX_CBStringExact`呼び出され、リストボックスコントロールからデータが転送されるときに、現在のリストボックスの選択に*値*が設定されます。 項目が選択されていない場合、*値*は長さが0の文字列に設定されます。
+リストボックスコントロールからデータを転送するために `DDX_CBStringExact` が呼び出されると、現在のリストボックスの選択に*値*が設定されます。 項目が選択されていない場合、*値*は長さが0の文字列に設定されます。
 
 > [!NOTE]
 >  リストボックスがドロップダウンリストボックスの場合、交換される値は255文字に制限されます。
@@ -433,7 +433,7 @@ DDX の詳細については、「 [ダイアログ データ エクスチェン
 
 ##  <a name="ddx_monthcalctrl"></a>DDX_MonthCalCtrl
 
-この`DDX_MonthCalCtrl`関数は、ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトの月間予定表コントロール ( [CMonthCalCtrl](../../mfc/reference/cmonthcalctrl-class.md)) と、ダイアログボックスの[CTime](../../atl-mfc-shared/reference/ctime-class.md)または[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)データメンバーのどちらかの形式で、日付データの転送を管理します。ビュー、またはコントロールビューオブジェクト。
+`DDX_MonthCalCtrl` 関数は、ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトの月間予定表コントロール ( [CMonthCalCtrl](../../mfc/reference/cmonthcalctrl-class.md)) と、ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトの[CTime](../../atl-mfc-shared/reference/ctime-class.md)または[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)データメンバーのどちらかで、日付データの転送を管理します。
 
 ```
 void AFXAPI DDX_MonthCalCtrl(
@@ -456,14 +456,14 @@ void AFXAPI DDX_MonthCalCtrl(
 メンバー変数に関連付けられている月間予定表コントロールのリソース ID。
 
 *value*<br/>
-データの交換に`CTime`使用`COleDateTime`するダイアログボックス、フォームビュー、またはコントロールビューオブジェクトのまたはメンバー変数への参照。
+データの交換に使用するダイアログボックス、フォームビュー、またはコントロールビューオブジェクトの `CTime` または `COleDateTime` メンバー変数への参照。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 > [!NOTE]
->  コントロールは、日付値のみを管理します。 時間オブジェクトの時間フィールドは、コントロールウィンドウの作成時間を反映するように設定され`CMonthCalCtrl::SetCurSel`ます。また、がの呼び出しによってコントロールに設定された時間も反映されます。
+>  コントロールは、日付値のみを管理します。 時間オブジェクトの時間フィールドは、コントロールウィンドウの作成時間を反映するように設定されます。または、`CMonthCalCtrl::SetCurSel`の呼び出しによってコントロールに設定された時間を反映します。
 
-が`DDX_MonthCalCtrl`呼び出されると、 *value*は月間予定表コントロールの現在の状態に設定されます。
+`DDX_MonthCalCtrl` が呼び出されると、 *value*は月間予定表コントロールの現在の状態に設定されます。
 
 DDX の詳細については、「 [ダイアログ データ エクスチェンジとダイアログ データ バリデーション](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。
 
@@ -471,9 +471,9 @@ DDX の詳細については、「 [ダイアログ データ エクスチェン
 
   **ヘッダー** afxdd_
 
-##  <a name="ddx_radio"></a>  DDX_Radio
+##  <a name="ddx_radio"></a>DDX_Radio
 
-この`DDX_Radio`関数は、ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトのラジオコントロールグループと、ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトの**int**データメンバー間の**int**データの転送を管理します。 **Int**データメンバーの値は、グループ内のどのオプションボタンが選択されているかに応じて決定されます。
+`DDX_Radio` 関数は、ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトのラジオコントロールグループと、ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトの**int**データメンバー間の**int**データの転送を管理します。 **Int**データメンバーの値は、グループ内のどのオプションボタンが選択されているかに応じて決定されます。
 
 ```
 void AFXAPI DDX_Radio(
@@ -485,7 +485,7 @@ void AFXAPI DDX_Radio(
 ### <a name="parameters"></a>パラメーター
 
 *pDX*<br/>
-`CDataExchange` オブジェクトへのポインター。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
+`CDataExchange` オブジェクトを指すポインターです。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
 *nIDC*<br/>
 グループ内の最初のラジオコントロールのリソース ID。
@@ -493,11 +493,11 @@ void AFXAPI DDX_Radio(
 *value*<br/>
 データの交換に使用するダイアログボックス、フォームビュー、またはコントロールビューオブジェクトのメンバー変数への参照。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-が`DDX_Radio`呼び出されると、 *value*はラジオコントロールグループの現在の状態に設定されます。 値は、現在チェックされているラジオコントロールの0から始まるインデックスとして設定されます。ラジオコントロールがチェックされない場合は-1 になります。
+`DDX_Radio` が呼び出されると、 *value*はラジオコントロールグループの現在の状態に設定されます。 値は、現在チェックされているラジオコントロールの0から始まるインデックスとして設定されます。ラジオコントロールがチェックされない場合は-1 になります。
 
-たとえば、グループ内の最初のオプションボタンがチェックされている場合 (WS_GROUP style のボタン)、 **int**メンバーの値は0になります。
+たとえば、グループ内の最初のオプションボタンがオンになっている場合 (WS_GROUP スタイルのボタン)、 **int**メンバーの値は0になります。
 
 DDX の詳細については、「 [ダイアログ データ エクスチェンジとダイアログ データ バリデーション](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。
 
@@ -507,7 +507,7 @@ DDX の詳細については、「 [ダイアログ データ エクスチェン
 
 ##  <a name="ddx_scroll"></a>DDX_Scroll
 
-この`DDX_Scroll`関数は、ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトのスクロールバーコントロールと、ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトの**int**データメンバーの間の**int**データの転送を管理します。
+`DDX_Scroll` 関数は、ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトのスクロールバーコントロールと、ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトの**int**データメンバーの間の**int**データの転送を管理します。
 
 ```
 void AFXAPI DDX_Scroll(
@@ -519,7 +519,7 @@ void AFXAPI DDX_Scroll(
 ### <a name="parameters"></a>パラメーター
 
 *pDX*<br/>
-`CDataExchange` オブジェクトへのポインター。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
+`CDataExchange` オブジェクトを指すポインターです。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
 *nIDC*<br/>
 コントロールプロパティに関連付けられているスクロールバーコントロールのリソース ID。
@@ -527,9 +527,9 @@ void AFXAPI DDX_Scroll(
 *value*<br/>
 データの交換相手になるダイアログ ボックス、フォーム ビュー、またはコントロール ビュー オブジェクトのメンバー変数への参照。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-が`DDX_Scroll`呼び出されると、*値*はコントロールのつまみの現在位置に設定されます。 コントロールのつまみの現在位置に関連付けられている値の詳細については、Windows SDK の「 [Getscrollpos](/windows/win32/api/winuser/nf-winuser-getscrollpos) 」を参照してください。
+`DDX_Scroll` が呼び出されると、*値*はコントロールのつまみの現在位置に設定されます。 コントロールのつまみの現在位置に関連付けられている値の詳細については、Windows SDK の「 [Getscrollpos](/windows/win32/api/winuser/nf-winuser-getscrollpos) 」を参照してください。
 
 DDX の詳細については、「 [ダイアログ データ エクスチェンジとダイアログ データ バリデーション](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。
 
@@ -539,7 +539,7 @@ DDX の詳細については、「 [ダイアログ データ エクスチェン
 
 ##  <a name="ddx_slider"></a>DDX_Slider
 
-この`DDX_Slider`関数は、ダイアログボックスまたはフォームビューのスライダーコントロールと、ダイアログボックスまたはフォームビューオブジェクトの**int**データメンバー間の**int**データの転送を管理します。
+`DDX_Slider` 関数は、ダイアログボックスまたはフォームビューのスライダーコントロールと、ダイアログボックスまたはフォームビューオブジェクトの**int**データメンバーの間の**int**データの転送を管理します。
 
 ```
 void AFXAPI DDX_Slider(
@@ -559,9 +559,9 @@ void AFXAPI DDX_Slider(
 *value*<br/>
 交換する値への参照。 このパラメーターは、スライダーコントロールの現在位置を保持または設定します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-が`DDX_Slider`呼び出されたときに、*値*がコントロールのつまみの現在位置に設定されるか、または exchange の方向に応じて値が位置を受け取ります。
+`DDX_Slider` が呼び出されると、*値*がコントロールのつまみの現在位置に設定されるか、または exchange の方向に応じて値が位置を受け取ります。
 
 DDX の詳細については、「 [ダイアログ データ エクスチェンジとダイアログ データ バリデーション](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。 スライダーコントロールの詳細については、「 [Using csliderctrl 使い方](../../mfc/using-csliderctrl.md)」を参照してください。
 
@@ -571,7 +571,7 @@ DDX の詳細については、「 [ダイアログ データ エクスチェン
 
 ##  <a name="ddx_text"></a>DDX_Text
 
-この`DDX_Text`関数は、ダイアログボックス、フォームビュー、コントロールビュー、および`CString` [CString](../../atl-mfc-shared/reference/cstringt-class.md)データの編集コントロール間の**int**、 **UINT**、 **long**、DWORD、、 **float**、または**double**データの転送を管理します。ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトのメンバー。
+`DDX_Text` 関数は、ダイアログボックス、フォームビュー、コントロールビューの編集コントロールと、ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトの[CString](../../atl-mfc-shared/reference/cstringt-class.md)データメンバーの間で、 **int**、 **UINT**、 **long**、DWORD、`CString`、 **float**、または**double**データの転送を管理します。
 
 ```
 void AFXAPI DDX_Text(
@@ -639,9 +639,9 @@ void AFXAPI DDX_Text(
 ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトの編集コントロールの ID。
 
 *value*<br/>
-ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトのデータメンバーへの参照。 *値*のデータ型は、使用するの`DDX_Text`オーバーロードされたバージョンによって異なります。
+ダイアログボックス、フォームビュー、またはコントロールビューオブジェクトのデータメンバーへの参照。 *値*のデータ型は、使用する `DDX_Text` のオーバーロードされたバージョンによって異なります。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 DDX の詳細については、「 [ダイアログ データ エクスチェンジとダイアログ データ バリデーション](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。
 
@@ -649,7 +649,7 @@ DDX の詳細については、「 [ダイアログ データ エクスチェン
 
   **ヘッダー** afxdd_
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [標準的なダイアログ データ検証ルーチン](standard-dialog-data-validation-routines.md)<br/>
 [マクロとグローバル](mfc-macros-and-globals.md)<br/>

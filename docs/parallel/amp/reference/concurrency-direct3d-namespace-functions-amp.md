@@ -22,11 +22,11 @@ f1_keywords:
 - amp/Concurrency::direct3d::umin
 ms.assetid: 28943b62-52c9-42dc-baf1-ca7b095c1a19
 ms.openlocfilehash: 438d211ac2f15bf781b704a7d0d7484d1542f131
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866312"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424981"
 ---
 # <a name="concurrencydirect3d-namespace-functions-amp"></a>Concurrency::direct3d 名前空間関数 (AMP)
 
@@ -42,7 +42,7 @@ ms.locfileid: "78866312"
 |[彩度](#saturate)|[sign](#sign)|[smoothstep](#smoothstep)|
 |[画面](#step)|[umax](#umax)|[umin](#umin)|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** amp. h**名前空間:** Concurrency
 
@@ -146,7 +146,7 @@ Direct3D デバイス インターフェイスへのポインター。
 
 渡された Direct3D デバイス インターフェイスから作成された `accelerator_view` オブジェクト。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 この関数は、Direct3D デバイス インターフェイスへの既存のポインターから新しい `accelerator_view` オブジェクトを作成します。 関数呼び出しが成功した場合、パラメーターの参照カウントはインターフェイスに対する `AddRef` 呼び出しを使用してインクリメントされます。 DirectX コードで不要になった場合は、オブジェクトを安全に解放できます。 メソッドの呼び出しが失敗すると、 [runtime_exception](runtime-exception-class.md)がスローされます。
 

@@ -7,17 +7,17 @@ helpviewer_keywords:
 - dispatch map macros [MFC]
 ms.assetid: bef9d08b-ad35-4c3a-99d8-04150c7c04e2
 ms.openlocfilehash: f1afa95d7c20d54f2015255a7e4e0d7ad9ae9c2b
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856651"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426709"
 ---
 # <a name="dispatch-maps"></a>ディスパッチ マップ
 
 OLE オートメーションには、メソッドを呼び出し、アプリケーション間でプロパティにアクセスするための方法が用意されています。 これらの要求をディスパッチするために Microsoft Foundation Class ライブラリによって提供されるメカニズムは、"ディスパッチマップ" です。これは、オブジェクトの関数とプロパティの内部および外部の名前だけでなく、プロパティ自体とのデータ型を指定します。関数の引数。
 
-|ディスパッチマップマクロ|説明|
+|ディスパッチマップマクロ|Description|
 |-|-|
 |[DECLARE_DISPATCH_MAP](#declare_dispatch_map)|クラスのメソッドとプロパティを公開するためにディスパッチマップが使用されることを宣言します (クラス宣言で使用する必要があります)。|
 |[BEGIN_DISPATCH_MAP](#begin_dispatch_map)|ディスパッチマップの定義を開始します。|
@@ -37,7 +37,7 @@ OLE オートメーションには、メソッドを呼び出し、アプリケ�
 DECLARE_DISPATCH_MAP()
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 クラス宣言の最後に DECLARE_DISPATCH_MAP マクロを使用します。 次に、でを行います。クラスのメンバー関数を定義する CPP ファイルで、BEGIN_DISPATCH_MAP マクロを使用します。 次に、クラスに公開されているメソッドとプロパティ (DISP_FUNCTION、DISP_PROPERTY など) のそれぞれにマクロエントリを含めます。 最後に、END_DISPATCH_MAP マクロを使用します。
 
@@ -50,7 +50,7 @@ DECLARE_DISPATCH_MAP()
 
 [!code-cpp[NVC_MFCAutomation#10](../../mfc/codesnippet/cpp/dispatch-maps_1.h)]
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxwin.h
 
@@ -70,11 +70,11 @@ BEGIN_DISPATCH_MAP(theClass, baseClass)
 *baseClass*<br/>
 *クラス*の基本クラス名を指定します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 クラスのメンバー関数を定義する実装 (.cpp) ファイルで、BEGIN_DISPATCH_MAP マクロを使用してディスパッチマップを開始し、各ディスパッチ関数とプロパティにマクロエントリを追加し、を使用してディスパッチマップを完了し END_DISPATCH_MAP マクロ。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー :** afxdisp.h
 
@@ -86,11 +86,11 @@ BEGIN_DISPATCH_MAP(theClass, baseClass)
 END_DISPATCH_MAP()
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 BEGIN_DISPATCH_MAP と組み合わせて使用する必要があります。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー :** afxdisp.h
 
@@ -124,11 +124,11 @@ DISP_FUNCTION(
 *Vtsparc*<br/>
 関数のパラメーターリストを指定する1つ以上の定数のスペース区切りのリスト。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 *Vtretval*引数の型は VARTYPE です。 この引数に指定できる値は、`VARENUM` 列挙型から取得されます。
 
-|シンボル|の戻り値の型 :|
+|Symbol|の戻り値の型 :|
 |------------|-----------------|
 |VT_EMPTY|**void**|
 |VT_I2|**short**|
@@ -152,7 +152,7 @@ DISP_FUNCTION(
 
 `VTS_` 定数とその意味は次のとおりです。
 
-|シンボル|パラメーターのタイプ|
+|Symbol|パラメーターのタイプ|
 |------------|--------------------|
 |VTS_I2|**short**|
 |VTS_I4|**long**|
@@ -180,7 +180,7 @@ DISP_FUNCTION(
 |VTS_PUNKNOWN|`LPUNKNOWN*`|
 |VTS_NONE|パラメーターなし|
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー :** afxdisp.h
 
@@ -210,11 +210,11 @@ DISP_PROPERTY(
 *vtPropType*<br/>
 プロパティの型を指定する値。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 *Vtproptype*引数は、 **VARTYPE**型です。 この引数に指定できる値は、VARENUM 列挙体から取得されます。
 
-|シンボル|プロパティの種類|
+|Symbol|プロパティの種類|
 |------------|-----------------------|
 |VT_I2|**short**|
 |VT_I4|**long**|
@@ -231,7 +231,7 @@ DISP_PROPERTY(
 
 外部クライアントがプロパティを変更すると、 *memberName*によって指定されたメンバー変数の値が変更されます。変更の通知はありません。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー :** afxdisp.h
 
@@ -265,13 +265,13 @@ DISP_PROPERTY_EX(
 *vtPropType*<br/>
 プロパティの型を指定する値。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 *Memberget*関数と*メンバメンバー*関数には、 *vtproptype*引数によって決定されるシグネチャがあります。 *Memberget*関数は引数を取らず、 *vtproptype*によって指定された型の値を返します。 *メンバセット*関数は、 *vtproptype*によって指定された型の引数を受け取り、nothing を返します。
 
 *Vtproptype*引数は、VARTYPE 型です。 この引数に指定できる値は、VARENUM 列挙体から取得されます。 これらの値の一覧については、 [DISP_FUNCTION](#disp_function)の*Vtretval*パラメーターの解説を参照してください。 DISP_FUNCTION の解説に記載されている VT_EMPTY は、プロパティのデータ型として許可されていないことに注意してください。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー :** afxdisp.h
 
@@ -305,13 +305,13 @@ DISP_PROPERTY_NOTIFY(
 *vtPropType*<br/>
 プロパティの型を指定する値。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 DISP_PROPERTY で定義されたプロパティとは異なり、DISP_PROPERTY_NOTIFY で定義されたプロパティは、プロパティが変更されたときに、 *Pfnafterset*によって指定された関数を自動的に呼び出します。
 
 *Vtproptype*引数は、VARTYPE 型です。 この引数に指定できる値は、VARENUM 列挙体から取得されます。
 
-|シンボル|プロパティの種類|
+|Symbol|プロパティの種類|
 |------------|-----------------------|
 |VT_I2|**short**|
 |VT_I4|**long**|
@@ -326,7 +326,7 @@ DISP_PROPERTY で定義されたプロパティとは異なり、DISP_PROPERTY_N
 |VT_VARIANT|VARIANT|
 |VT_UNKNOWN|LPUNKNOWN|
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー :** afxdisp.h
 
@@ -364,7 +364,7 @@ DISP_PROPERTY_PARAM(
 *Vtsparc*<br/>
 空白で区切られた `VTS_*` variant パラメーター型の文字列。パラメーターごとに1つです。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 DISP_PROPERTY_EX マクロとは異なり、このマクロではプロパティのパラメーターリストを指定できます。 これは、インデックス付きまたはパラメーター化されたプロパティを実装する場合に便利です。
 
@@ -386,7 +386,7 @@ Get および set メンバー関数の次の宣言について考えてみま�
 
 [!code-cpp[NVC_MFCActiveXControl#12](../../mfc/codesnippet/cpp/dispatch-maps_6.cpp)]
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー :** afxdisp.h
 
@@ -406,13 +406,13 @@ DISP_DEFVALUE(theClass, pszName)
 *pszName*<br/>
 オブジェクトの "値" を表すプロパティの外部名。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 既定値を使用すると、Visual Basic アプリケーションのオートメーションオブジェクトをより簡単にプログラミングできるようになります。
 
 オブジェクトの "既定値" は、オブジェクトへの参照にプロパティまたはメンバー関数が指定されていない場合に取得または設定されるプロパティです。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー :** afxdisp.h
 

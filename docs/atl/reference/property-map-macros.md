@@ -12,11 +12,11 @@ helpviewer_keywords:
 - property maps
 ms.assetid: 128bc742-2b98-4b97-a243-684dbb83db77
 ms.openlocfilehash: 1e2e7235dd924467d9d5e0613a704fedf8340ae4
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78857185"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79422974"
 ---
 # <a name="property-map-macros"></a>プロパティマップマクロ
 
@@ -31,7 +31,7 @@ ms.locfileid: "78857185"
 |[PROP_PAGE](#prop_page)|プロパティページの CLSID をプロパティマップに入力します。|
 |[END_PROP_MAP](#end_prop_map)|ATL プロパティマップの終了をマークします。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlcom. h
 
@@ -48,7 +48,7 @@ BEGIN_PROP_MAP(theClass)
 *クラス*<br/>
 からプロパティマップを含むクラスを指定します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 プロパティマップには、プロパティの説明、プロパティ Dispid、プロパティページの Clsid、および `IDispatch` Iid がが格納されます。 クラス[Iperpropertybrowsingimpl](../../atl/reference/iperpropertybrowsingimpl-class.md)、 [IPersistPropertyBagImpl](../../atl/reference/ipersistpropertybagimpl-class.md)、 [IPersistStreamInitImpl](../../atl/reference/ipersiststreaminitimpl-class.md)、および[ISpecifyPropertyPagesImpl](../../atl/reference/ispecifypropertypagesimpl-class.md)は、プロパティマップを使用してこの情報を取得して設定します。
 
@@ -79,7 +79,7 @@ PROP_DATA_ENTRY( szDesc, member, vt)
 *vt*<br/>
 からプロパティのバリアント型を指定します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このマクロは、指定されたデータメンバーを永続化します。
 
@@ -115,7 +115,7 @@ PROP_ENTRY_TYPE( szDesc, dispid, clsid, vt)
 *vt*<br/>
 からプロパティの型。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 PROP_ENTRY マクロは安全ではなく、非推奨とされました。 これは PROP_ENTRY_TYPE に置き換えられました。
 
@@ -150,7 +150,7 @@ PROP_ENTRY_TYPE_EX( szDesc, dispid, clsid, iidDispatch, vt)
 *vt*<br/>
 からプロパティの型。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 PROP_ENTRY_EX マクロは安全ではなく、非推奨とされました。 これは PROP_ENTRY_TYPE_EX に置き換えられました。
 
@@ -175,7 +175,7 @@ PROP_PAGE(clsid)
 *clsid*<br/>
 からプロパティページの CLSID。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 PROP_PAGE は[PROP_ENTRY_TYPE](#prop_entry_type)に似ていますが、プロパティの説明または DISPID は必要ありません。
 
@@ -196,7 +196,7 @@ PROP_PAGE は[PROP_ENTRY_TYPE](#prop_entry_type)に似ていますが、プロ�
 END_PROP_MAP()
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ATL プロジェクトウィザードを使用してオブジェクトを作成すると、ウィザードによって空のプロパティマップが作成されます。これには、 [BEGIN_PROP_MAP](#begin_prop_map)の後に END_PROP_MAP を指定します。
 

@@ -1,8 +1,6 @@
 ---
-title: Compiler-Controlled LINK Options
+title: コンパイラで制御される LINK オプション
 ms.date: 11/04/2016
-f1_keywords:
-- link
 helpviewer_keywords:
 - LINK tool [C++], compiler-controlled options
 - linker [C++], CL compiler control
@@ -10,39 +8,39 @@ helpviewer_keywords:
 - cl.exe compiler [C++], features that affect linking
 - cl.exe compiler [C++], controlling linker
 ms.assetid: e4c03896-c99c-4599-8502-e0f4bebe69d0
-ms.openlocfilehash: bc7a6cc596f138daa373042abca51642c24cf737
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: f631d0ebbbd9e60fe5d54aac6fb158461d3f4d38
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64342864"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79440112"
 ---
-# <a name="compiler-controlled-link-options"></a>Compiler-Controlled LINK Options
+# <a name="compiler-controlled-link-options"></a>コンパイラで制御される LINK オプション
 
-CL コンパイラは、/c オプションを指定しない限り、リンクを自動的に呼び出します。 CL は、いくつかのコマンド ライン オプションと引数をリンカーに制御を提供します。 次の表では、リンクに影響を与える CL の機能をまとめたものです。
+/C オプションを指定しない限り、CL コンパイラは LINK を自動的に呼び出します。 CL は、コマンドラインオプションと引数を使用して、リンカーを制御します。 次の表は、リンクに影響を与える CL の機能の概要を示しています。
 
-|CL の仕様|CL アクション リンクに影響を与える|
+|CL 仕様|リンクに影響を与える CL アクション|
 |----------------------|---------------------------------|
-|.C、.cxx、.cpp、または .def 以外の任意のファイル名拡張子|リンクへの入力としてファイル名を渡します|
-|*ファイル名*.def|/DEF を渡します*filename*.def。|
-|/F*数*|パス/STACK:*数*|
-|/Fd*ファイル名*|/PDB を渡します*ファイル名。*|
-|/Fe*ファイル名*|渡します/アウト:*ファイル名*|
-|/Fm*ファイル名*|パス/MAP:*ファイル名*|
-|/Gy|パッケージ化された関数 (Comdat); を作成します。関数レベルのリンクを可能に|
+|.C、.cxx、.cpp、.def 以外の任意のファイル名拡張子|ファイル名をリンクに入力として渡します。|
+|*ファイル名*. def|/DEF:*filename*. DEF を渡します。|
+|/F*番号*|Pass/STACK:*number*|
+|/Fd*ファイル名*|/PDB:*filename*を渡します。|
+|/Fe*ファイル名*|/OUT:*filename*を渡します。|
+|/Fm*ファイル名*|/MAP:*filename*を渡します。|
+|/Gy|パッケージ関数 (Comdat) を作成します。関数レベルのリンクを有効にします|
 |/LD|/DLL を渡します|
 |/LDd|/DLL を渡します|
-|/link|コマンドラインの残りの部分を LINK に渡します。|
-|/MD、/MT または|既定のライブラリ名を .obj ファイル配置します。|
-|/Mdd または/MTd|既定のライブラリ名は、.obj ファイルに配置します。 シンボルを定義 **_DEBUG**|
-|/nologo|/NOLOGO を渡します|
-|/Zd|/DEBUG のパス|
-|/Zi または/Z7|/DEBUG のパス|
-|/Zl|.Obj ファイルから既定のライブラリ名を省略します。|
+|/link|コマンドラインの残りの部分をリンクに渡します|
+|/MD または/MT|.Obj ファイルに既定のライブラリ名を配置します。|
+|/MDd または/MTd|.Obj ファイルに既定のライブラリ名を配置します。 シンボルを定義し **_DEBUG**|
+|/nologo|/NOLOGO|
+|/Zd|/DEBUG を渡します。|
+|/Zi または/Z7|/DEBUG を渡します。|
+|/Zl|.Obj ファイルから既定のライブラリ名を省略します|
 
-詳細については、次を参照してください。 [MSVC コンパイラ オプション](compiler-options.md)します。
+詳細については、「 [MSVC Compiler Options](compiler-options.md)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [MSVC リンカーのリファレンス](linking.md)<br/>
 [MSVC リンカー オプション](linker-options.md)

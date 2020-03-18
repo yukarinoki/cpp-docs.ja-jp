@@ -9,10 +9,8 @@ f1_keywords:
 - flush
 - for
 - master
-- ordered
 - parallel
 - section
-- SECTIONS
 - single
 - threadprivate
 helpviewer_keywords:
@@ -29,12 +27,12 @@ helpviewer_keywords:
 - single OpenMP directive
 - threadprivate OpenMP directive
 ms.assetid: 0562c263-344c-466d-843e-de830d918940
-ms.openlocfilehash: 4db341cf58884263e414e24aacf888c8c88e57cc
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: bfd2cec32acdd6431a571916f1c80e1700ef3af7
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79424153"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441774"
 ---
 # <a name="openmp-directives"></a>OpenMP ディレクティブ
 
@@ -44,7 +42,7 @@ Visual C++は、次の OpenMP ディレクティブをサポートしていま�
 
 並列作業共有の場合:
 
-|ディレクティブ|Description|
+|Directive|説明|
 |---------|-----------|
 |[parallel](#parallel)|並行して複数のスレッドによって実行されるコードである並列領域を定義します。|
 |[for](#for-openmp)|並列領域内の `for` ループで実行される作業をスレッド間で分割します。|
@@ -53,7 +51,7 @@ Visual C++は、次の OpenMP ディレクティブをサポートしていま�
 
 マスターおよび同期の場合:
 
-|ディレクティブ|Description|
+|Directive|説明|
 |---------|-----------|
 |[master](#master)|マスタースレッドだけがプログラムのセクションを実行するように指定します。|
 |[critical](#critical)|コードを一度に1つのスレッドでのみ実行することを指定します。|
@@ -64,7 +62,7 @@ Visual C++は、次の OpenMP ディレクティブをサポートしていま�
 
 データ環境の場合:
 
-|ディレクティブ|Description|
+|Directive|説明|
 |---------|-----------|
 |[threadprivate](#threadprivate)|変数がスレッドに対してプライベートであることを指定します。|
 
@@ -82,7 +80,7 @@ Visual C++は、次の OpenMP ディレクティブをサポートしていま�
 *式 (expression)*<br/>
 2つ以上の書き込みに対して保護するメモリ位置を持つ、*左辺*値を持つステートメント。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 `atomic` ディレクティブは句をサポートしていません。
 
@@ -121,7 +119,7 @@ Number of threads: 10
 #pragma omp barrier
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 `barrier` ディレクティブは句をサポートしていません。
 
@@ -147,7 +145,7 @@ Number of threads: 10
 *name*<br/>
 Optionalクリティカルコードを識別する名前。 名前はかっこで囲む必要があります。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 `critical` ディレクティブは句をサポートしていません。
 
@@ -224,7 +222,7 @@ max = 29358
 *var*<br/>
 Optional同期するオブジェクトを表す変数のコンマ区切りのリスト。 *Var*が指定されていない場合は、すべてのメモリがフラッシュされます。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 `flush` ディレクティブは句をサポートしていません。
 
@@ -304,7 +302,7 @@ Optional0個以上の句、「**解説**」を参照してください。
 *for_statement*<br/>
 `for` ループ。 `for` ループ内のユーザーコードによってインデックス変数が変更されると、未定義の動作が発生します。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 `for` ディレクティブは、次の句をサポートしています。
 
@@ -395,7 +393,7 @@ The sum of 1 through 10 is 55
 }
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 `master` ディレクティブは句をサポートしていません。
 
@@ -455,7 +453,7 @@ a[4] = 16
    structured-block
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 `ordered` ディレクティブは、`ordered` 句を持つ[for](#for-openmp)または `parallel for` コンストラクトの動的な範囲内である必要があります。
 
@@ -533,7 +531,7 @@ test2() iteration 4
 *条項*<br/>
 Optional0個以上の句、「**解説**」を参照してください。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 `parallel` ディレクティブは、次の句をサポートしています。
 
@@ -595,7 +593,7 @@ Hello from thread 3
 *条項*<br/>
 Optional0個以上の句、「**解説**」を参照してください。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 `sections` ディレクティブには、0個以上の `section` ディレクティブを含めることができます。
 
@@ -650,7 +648,7 @@ Hello from thread 0
 *条項*<br/>
 Optional0個以上の句、「**解説**」を参照してください。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 `single` ディレクティブは、次の句をサポートしています。
 
@@ -708,7 +706,7 @@ write output
 *var*<br/>
 スレッドに対してプライベートにする変数のコンマ区切りのリスト。 *var*は、グローバルまたは名前空間スコープの変数またはローカルの静的変数のいずれかである必要があります。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 `threadprivate` ディレクティブは句をサポートしていません。
 
@@ -716,7 +714,7 @@ write output
 
 プロセスの起動時に静的に読み込まれる DLL で `threadprivate` を使用することはできますが、 [/DELAYLOAD (遅延読み込みのインポート) で読み込まれる dll (遅延読み込みのインポート)](../../../build/reference/delayload-delay-load-import.md)[などの](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryw)dll で、`threadprivate` を使用することはできません。これは、`LoadLibrary`も使用します。
 
-*破棄可能な*型の `threadprivate` 変数は、というデストラクターを持つことが保証されていません。 次に例を示します。
+*破棄可能な*型の `threadprivate` 変数は、というデストラクターを持つことが保証されていません。 例 :
 
 ```cpp
 struct MyType

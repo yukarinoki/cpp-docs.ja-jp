@@ -47,11 +47,11 @@ f1_keywords:
 - amp_math/Concurrency::fast_math::trunc
 ms.assetid: f5763d62-795b-4de6-a7a5-c7115f158708
 ms.openlocfilehash: 3652e02d9f3ff7b09ee7334dba20188e40344cb5
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865471"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424951"
 ---
 # <a name="concurrencyfast_math-namespace-functions"></a>Concurrency::fast_math 名前空間関数
 
@@ -1273,7 +1273,7 @@ inline float truncf(float _X) restrict(amp);
 
 引数の整数部分を返します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** Amp_math**名前空間:** Concurrency:: fast_math
 

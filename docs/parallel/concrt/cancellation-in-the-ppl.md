@@ -10,11 +10,11 @@ helpviewer_keywords:
 - canceling parallel tasks [Concurrency Runtime]
 ms.assetid: baaef417-b2f9-470e-b8bd-9ed890725b35
 ms.openlocfilehash: 6e23ccd6fcae03bcad40ea560356f4d1290dbcdd
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866338"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427489"
 ---
 # <a name="cancellation-in-the-ppl"></a>PPL における取り消し処理
 
@@ -242,7 +242,7 @@ Caught 50
 
 ## <a name="related-topics"></a>関連トピック
 
-|タイトル|説明|
+|タイトル|Description|
 |-----------|-----------------|
 |[方法: キャンセル処理を使用して並列ループを中断する](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md)|取り消し処理を使用して並列検索アルゴリズムを実装する方法について説明します。|
 |[方法: 例外処理を使用して並列ループを中断する](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md)|`task_group` クラスを使用して基本的なツリー構造の検索アルゴリズムを作成する方法を示します。|
@@ -251,7 +251,7 @@ Caught 50
 |[並列アルゴリズム](../../parallel/concrt/parallel-algorithms.md)|データのコレクションに対して同時処理を実行する並列アルゴリズムについて説明します。|
 |[並列パターン ライブラリ (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)|並列パターン ライブラリの概要を説明します。|
 
-## <a name="reference"></a>参照
+## <a name="reference"></a>リファレンス
 
 [task クラス (コンカレンシー ランタイム)](../../parallel/concrt/reference/task-class.md)
 

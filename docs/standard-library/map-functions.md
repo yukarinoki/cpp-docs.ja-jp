@@ -6,11 +6,11 @@ f1_keywords:
 - map/std::swap (multimap)
 ms.assetid: 7cb3d1a5-7add-4726-a73f-61927eafd466
 ms.openlocfilehash: e7876b37bfc006eaecf2f1e36273c5ae8689dad4
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883962"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425527"
 ---
 # <a name="ltmapgt-functions"></a>&lt;map&gt; 系関数
 
@@ -33,7 +33,7 @@ void swap(
 *左*\
 マップ*右側*の要素と交換される要素を持つマップ。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このテンプレート関数は、コンテナークラス map に特化したアルゴリズムであり、`left`メンバー関数を実行します。[swap](../standard-library/map-class.md#swap)(`right`)。 これは、コンパイラによる関数テンプレートの部分的な順序付けのインスタンスです。 テンプレートと関数呼び出しの照合が一意にならないようにテンプレート関数がオーバーロードされた場合、コンパイラは、最も特化したバージョンのテンプレート関数を選択します。 汎用バージョンのテンプレート関数、**テンプレート**\<**クラス t**> **void swap**( **t &** 、 **t &** ) は、代入によって機能し、処理が遅くなります。 各コンテナー内の特化バージョンのほうが、コンテナー クラスの内部表現で使用できるため大幅に高速になります。
 
@@ -60,7 +60,7 @@ void swap(
 *左*\
 要素が multimap *right*の要素と交換される multimap。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このテンプレート関数は、コンテナークラス multimap に特化したアルゴリズムであり、メンバー関数 `left`を実行するためにコンテナークラスで実行されます。[swap](../standard-library/multimap-class.md#swap) (`right`)。 これは、コンパイラによる関数テンプレートの部分的な順序付けのインスタンスです。 テンプレートと関数呼び出しの照合が一意にならないようにテンプレート関数がオーバーロードされた場合、コンパイラは、最も特化したバージョンのテンプレート関数を選択します。 汎用バージョンのテンプレート関数、**テンプレート**\<**クラス t**> **void swap**( **t &** 、 **t &** ) は、代入によって機能し、処理が遅くなります。 各コンテナー内の特化バージョンのほうが、コンテナー クラスの内部表現で使用できるため大幅に高速になります。
 

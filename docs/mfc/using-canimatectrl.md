@@ -1,34 +1,32 @@
 ---
 title: CAnimateCtrl の使い方
 ms.date: 11/04/2016
-f1_keywords:
-- CAnimateCtrl
 helpviewer_keywords:
 - animation controls [MFC], CAnimateCtrl class
 - controls [MFC], animation
 - CAnimateCtrl class [MFC], about CAnimateCtrl class [MFC]
 ms.assetid: 696c0805-bef0-4e2e-a9e7-b37b9215b7f0
-ms.openlocfilehash: b967cc6dde6b4f639ef081b3821f6a7e5a2fe295
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 79c1a0111317514ef6fd68acd0c6a2ebdccc3ba4
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351642"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447106"
 ---
 # <a name="using-canimatectrl"></a>CAnimateCtrl の使い方
 
-アニメーション コントロール、クラスによって表される[CAnimateCtrl](../mfc/reference/canimatectrl-class.md)、オーディオ Video Interleaved (AVI) 形式でクリップを表示するウィンドウ-Windows の標準のビデオ/オーディオ形式。 AVI クリップは、一連の映画のように、ビットマップ フレームです。
+[CAnimateCtrl](../mfc/reference/canimatectrl-class.md)クラスによって表されるアニメーションコントロールは、AUDIO VIDEO INTERLEAVED (AVI) 形式 (標準の Windows ビデオ/オーディオ形式) でクリップを表示するウィンドウです。 AVI クリップは、ムービーのような一連のビットマップフレームです。
 
-スレッドの継続実行 AVI クリップが表示されますが、ために、アニメーション コントロールの 1 つの一般的な用途は、時間のかかる操作中にシステムの使用状況を示すは。 たとえば、Windows の検索 ダイアログ ボックスでは、システム ファイルを検索として移動虫眼鏡が表示されます。
+AVI クリップが表示されている間、スレッドは実行を続けているため、アニメーションコントロールの一般的な用途の1つは、時間のかかる操作中にシステムの動作を示すことです。 たとえば、[Windows 検索] ダイアログボックスには、システムがファイルを検索するときに、移動中の虫眼鏡が表示されます。
 
-アニメーション コントロールは、単純な AVI クリップを再生できますのみと、サウンドをサポートしていません。 (完了の制限事項の一覧を表示するには、次を参照してください[CAnimateCtrl](../mfc/reference/canimatectrl-class.md)。)。アニメーション コントロールの機能が大幅に限定されるため、変更される可能性は、マルチ メディアの再生または録音機能を提供するコントロールを必要がある場合、MCIWnd コントロールなどの代替を使用してください。 MCIWnd 管理の詳細については、マルチ メディアのドキュメントを参照してください。
+アニメーションコントロールで再生できるのは単純な AVI クリップだけで、サウンドはサポートされていません。 (制限事項の完全な一覧については、「 [CAnimateCtrl](../mfc/reference/canimatectrl-class.md)」を参照してください)。アニメーションコントロールの機能は厳しく制限されており、変更される可能性があるため、マルチメディア再生や記録機能を提供するコントロールが必要な場合は、MCIWnd コントロールなどの代替手段を使用する必要があります。 MCIWnd コントロールの詳細については、マルチメディアのドキュメントを参照してください。
 
-## <a name="what-do-you-want-to-know-more-about"></a>方法については、するして操作を行います
+## <a name="what-do-you-want-to-know-more-about"></a>詳細については、次を参照してください。
 
 - [アニメーション コントロールの使い方](../mfc/using-an-animation-control.md)
 
 - [アニメーション コントロールによる通知の送信](../mfc/notifications-sent-by-animation-controls.md)
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [コントロール](../mfc/controls-mfc.md)

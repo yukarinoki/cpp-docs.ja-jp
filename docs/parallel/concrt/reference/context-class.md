@@ -21,11 +21,11 @@ helpviewer_keywords:
 - Context class
 ms.assetid: c0d553f3-961d-4ecd-9a29-4fa4351673b8
 ms.openlocfilehash: 7c47d9db64b0af7d5413abed3f85e9d41a591fa2
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865498"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427405"
 ---
 # <a name="context-class"></a>Context クラス
 
@@ -41,13 +41,13 @@ class Context;
 
 ### <a name="protected-constructors"></a>プロテクト コンストラクター
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[~ Context デストラクター](#dtor)||
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[ブロック](#block)|現在のコンテキストをブロックします。|
 |[CurrentContext](#currentcontext)|現在のコンテキストへのポインターを返します。|
@@ -63,7 +63,7 @@ class Context;
 |[VirtualProcessorId](#virtualprocessorid)|現在のコンテキストが実行されている仮想プロセッサの識別子を返します。|
 |[Yield](#yield)|別のコンテキストが実行できるように実行を譲歩します。 実行の権利を譲る他のコンテキストが存在しない場合、スケジューラによって別のオペレーティング システム スレッドに明け渡されます。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 同時実行ランタイム scheduler (「 [scheduler](scheduler-class.md)」を参照) は、実行コンテキストを使用して、アプリケーションによってキューに置かれた作業を実行します。 Win32 スレッドは、Windows オペレーティング システムの実行コンテキストの例です。
 
@@ -75,7 +75,7 @@ class Context;
 
 `Context`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** concrt .h
 
@@ -89,7 +89,7 @@ class Context;
 static void __cdecl Block();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 呼び出し元のコンテキストにスケジューラが現在関連付けられていない場合、このメソッドを呼び出すと、プロセスの既定のスケジューラが作成されるか、または呼び出し元コンテキストにアタッチされます。
 
@@ -117,7 +117,7 @@ static Context* __cdecl CurrentContext();
 
 現在のコンテキストへのポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 呼び出し元のコンテキストにスケジューラが現在関連付けられていない場合、このメソッドを呼び出すと、プロセスの既定のスケジューラが作成されるか、または呼び出し元コンテキストにアタッチされます。
 
@@ -145,7 +145,7 @@ virtual unsigned int GetScheduleGroupId() const = 0;
 
 コンテキストが現在処理されているスケジュールグループの識別子。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメソッドからの戻り値は、コンテキストが実行されているスケジュールグループの瞬間的なサンプリングです。 現在のコンテキスト以外のコンテキストでこのメソッドが呼び出された場合、値は返された時点で古くなる可能性があり、依存することはできません。 通常、このメソッドは、デバッグまたはトレースの目的でのみ使用されます。
 
@@ -161,7 +161,7 @@ virtual unsigned int GetVirtualProcessorId() const = 0;
 
 コンテキストが現在仮想プロセッサで実行されている場合は、コンテキストが現在実行されている仮想プロセッサの識別子。それ以外の場合は、`-1`値です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメソッドからの戻り値は、コンテキストが実行されている仮想プロセッサの瞬間的なサンプリングです。 この値は、返される瞬間に古くなる可能性があり、依存することはできません。 通常、このメソッドは、デバッグまたはトレースの目的でのみ使用されます。
 
@@ -201,7 +201,7 @@ virtual bool IsSynchronouslyBlocked() const = 0;
 
 コンテキストが同期的にブロックされているかどうか。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 コンテキストがブロックを引き起こしたアクションを明示的に実行した場合、そのコンテキストは同期的にブロックされていると見なされます。 スレッドスケジューラでは、これは、`Context::Block` メソッドまたは `Context::Block` メソッドを使用して構築された同期オブジェクトへの直接呼び出しを示します。
 
@@ -253,7 +253,7 @@ static unsigned int __cdecl ScheduleGroupId();
 virtual void Unblock() = 0;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `Unblock` メソッドの呼び出しが、[ブロック](#block)メソッドへの対応する呼び出しの前に来るようにすることは、完全に有効です。 `Block` メソッドと `Unblock` メソッドの呼び出しが適切にペアになっている限り、ランタイムはどちらの順序の自然な競合を適切に処理します。 `Block` 呼び出しの前に `Unblock` 呼び出しを行うと、`Block` 呼び出しの効果が単に否定されます。
 
@@ -273,7 +273,7 @@ static unsigned int __cdecl VirtualProcessorId();
 
 現在のコンテキストがスケジューラにアタッチされている場合は、現在のコンテキストが実行されている仮想プロセッサの識別子。それ以外の場合は、`-1`値です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメソッドからの戻り値は、現在のコンテキストが実行されている仮想プロセッサの瞬間的なサンプリングです。 この値は、返される瞬間に古くなる可能性があり、依存することはできません。 通常、このメソッドは、デバッグまたはトレースの目的でのみ使用されます。
 
@@ -285,7 +285,7 @@ static unsigned int __cdecl VirtualProcessorId();
 static void __cdecl Yield();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 呼び出し元のコンテキストにスケジューラが現在関連付けられていない場合、このメソッドを呼び出すと、プロセスの既定のスケジューラが作成されるか、または呼び出し元コンテキストにアタッチされます。
 
@@ -297,7 +297,7 @@ static void __cdecl Yield();
 static void __cdecl YieldExecution();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 呼び出し元のコンテキストにスケジューラが現在関連付けられていない場合、このメソッドを呼び出すと、プロセスの既定のスケジューラが作成されるか、または呼び出し元コンテキストにアタッチされます。
 

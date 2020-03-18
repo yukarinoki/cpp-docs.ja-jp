@@ -1,8 +1,6 @@
 ---
-title: CWinApp:Application クラス
+title: 'CWinApp : アプリケーション クラス'
 ms.date: 11/04/2016
-f1_keywords:
-- CWinApp
 helpviewer_keywords:
 - application class [MFC]
 - CWinApp class [MFC], CWinThread
@@ -14,30 +12,30 @@ helpviewer_keywords:
 - WinMain method [MFC], in MFC
 - CWinApp class [MFC], WinMain
 ms.assetid: 935822bb-d463-481b-a5f6-9719d68ed1d5
-ms.openlocfilehash: d9f0d4f5ba6b6b070b23ce98ecda8c7accf44934
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8518e21a9fa6bcf5ac640cff25b17c5028046b06
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62241563"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447026"
 ---
-# <a name="cwinapp-the-application-class"></a>CWinApp:Application クラス
+# <a name="cwinapp-the-application-class"></a>CWinApp : アプリケーション クラス
 
-Mfc アプリケーションのメイン クラスには、初期化、実行、および Windows オペレーティング システム用のアプリケーションの終了がカプセル化します。 フレームワークで構築されたアプリケーションには、いずれかが必要し、から派生したクラスのオブジェクトを 1 つだけ[CWinApp](../mfc/reference/cwinapp-class.md)します。 Windows が作成される前に、このオブジェクトが構築されます。
+MFC のメインアプリケーションクラスは、Windows オペレーティングシステム用のアプリケーションの初期化、実行、および終了をカプセル化します。 フレームワーク上に構築されたアプリケーションには、 [CWinApp](../mfc/reference/cwinapp-class.md)から派生したクラスのオブジェクトが1つだけ必要です。 このオブジェクトは、windows が作成される前に構築されます。
 
-`CWinApp` 派生`CWinThread`、1 つまたは複数のスレッドがありますアプリケーションの実行のメイン スレッドを表します。 MFC の最近のバージョンで、 `InitInstance`、**実行**、 `ExitInstance`、および`OnIdle`クラスでメンバー関数が実際には`CWinThread`します。 場合と同様、これらの関数はここで説明`CWinApp`メンバー代わりに、あるプライマリ スレッドではなくアプリケーション オブジェクトとしてのオブジェクトの役割。
-
-> [!NOTE]
->  アプリケーション クラスでは、実行のアプリケーションのプライマリ スレッドを構成します。 Win32 API 関数を使用して、セカンダリ スレッドを作成することもできます。 これらのスレッドは、MFC ライブラリを使用できます。 詳細については、次を参照してください。[マルチ スレッド](../parallel/multithreading-support-for-older-code-visual-cpp.md)します。
-
-Windows オペレーティング システムの任意のプログラムと同様に、framework のアプリケーションがあります、`WinMain`関数。 Framework アプリケーションでは、ただし、書き`WinMain`します。 クラス ライブラリによって提供され、アプリケーションが起動するときに呼び出されます。 `WinMain` ウィンドウ クラスの登録などの標準的なサービスを実行します。 呼び出してメンバーを初期化し、アプリケーションを実行するアプリケーション オブジェクトの関数。 (カスタマイズできる`WinMain`オーバーライドすることで、`CWinApp`メンバー関数を`WinMain`呼び出し)。
-
-アプリケーションを初期化するために`WinMain`アプリケーション オブジェクトの呼び出し`InitApplication`と`InitInstance`メンバー関数。 アプリケーションのメッセージ ループを実行する`WinMain`呼び出し、**実行**メンバー関数。 、終了時に`WinMain`アプリケーション オブジェクトの呼び出し`ExitInstance`メンバー関数。
+`CWinApp` は、アプリケーションの実行のメインスレッドを表す `CWinThread`から派生します。これは、1つまたは複数のスレッドを持つ可能性があります。 MFC の最近のバージョンでは、`InitInstance`、 **Run**、`ExitInstance`、および `OnIdle` の各メンバー関数は実際にはクラス `CWinThread`にあります。 この説明では、オブジェクトのロールがプライマリスレッドとしてではなくアプリケーションオブジェクトとして扱われるため、これらの関数については、ここでは代わりにメンバーを `CWinApp` しているかのように説明します。
 
 > [!NOTE]
->  表示される名前**太字**このドキュメントでは、Microsoft Foundation Class ライブラリと Visual C によって指定された要素を示します。 表示される名前`monospaced`型が作成または上書きされた要素を示しています。
+>  アプリケーションクラスは、アプリケーションの主要な実行スレッドを構成します。 Win32 API 関数を使用すると、実行のセカンダリスレッドを作成することもできます。 これらのスレッドは、MFC ライブラリを使用できます。 詳細については、「[マルチスレッド](../parallel/multithreading-support-for-older-code-visual-cpp.md)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+Windows オペレーティングシステムの任意のプログラムと同様に、フレームワークアプリケーションには `WinMain` 機能があります。 ただし、フレームワークアプリケーションでは、`WinMain`は記述しません。 これはクラスライブラリによって提供され、アプリケーションの起動時に呼び出されます。 `WinMain` は、ウィンドウクラスの登録などの標準的なサービスを実行します。 次に、アプリケーションオブジェクトのメンバー関数を呼び出して、アプリケーションを初期化して実行します。 (`WinMain` をカスタマイズするには、を呼び出し `WinMain` `CWinApp` メンバー関数をオーバーライドします)。
+
+アプリケーションを初期化するために、`WinMain` はアプリケーションオブジェクトの `InitApplication` と `InitInstance` メンバー関数を呼び出します。 アプリケーションのメッセージループを実行するために、`WinMain` は**実行**メンバー関数を呼び出します。 終了時に、`WinMain` はアプリケーションオブジェクトの `ExitInstance` メンバー関数を呼び出します。
+
+> [!NOTE]
+>  このドキュメントで**太字**で示されている名前は、Microsoft Foundation Class ライブラリとビジュアルC++によって提供される要素を示しています。 `monospaced` 型に表示される名前は、作成またはオーバーライドする要素を示します。
+
+## <a name="see-also"></a>参照
 
 [MFC の一般的なトピック](../mfc/general-mfc-topics.md)<br/>
 [CWinApp および MFC アプリケーション ウィザード](../mfc/cwinapp-and-the-mfc-application-wizard.md)<br/>

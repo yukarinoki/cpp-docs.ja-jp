@@ -1,43 +1,41 @@
 ---
 title: MFC アプリケーション アーキテクチャ クラス
 ms.date: 11/04/2016
-f1_keywords:
-- vc.classes.mfc
 helpviewer_keywords:
 - MFC, classes
 - MFC, application development
 - classes [MFC], MFC
 - application architecture classes [MFC]
 ms.assetid: 71b2de54-b44d-407e-9c71-9baf954e18d9
-ms.openlocfilehash: 47feeb056d02b81bb88ccf3c5fd49bc983583ee7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1e09447623b32e9b10063af5bc91ac9589f45e44
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62239306"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447725"
 ---
 # <a name="mfc-application-architecture-classes"></a>MFC アプリケーション アーキテクチャ クラス
 
-このカテゴリのクラスは、framework アプリケーションのアーキテクチャに貢献します。 これらは、ほとんどのアプリケーションに共通の機能を指定します。 アプリケーション固有の機能を追加するためにフレームワークを入力します。 通常、そのアーキテクチャのクラスから新しいクラスを派生して、新しいメンバーの追加または既存のメンバー関数をオーバーライドして行います。
+このカテゴリのクラスは、フレームワークアプリケーションのアーキテクチャに寄与します。 ほとんどのアプリケーションに共通の機能を提供します。 アプリケーション固有の機能を追加するには、フレームワークに入力します。 通常は、アーキテクチャクラスから新しいクラスを派生させ、新しいメンバーを追加するか、既存のメンバー関数をオーバーライドします。
 
-[アプリケーション ウィザード](../mfc/reference/mfc-application-wizard.md)いくつかの種類の異なる方法で、アプリケーション フレームワークを使用して、すべてのアプリケーションを生成します。 SDI (シングル ドキュメント インターフェイス) と MDI (マルチ ドキュメント インターフェイス) アプリケーション有効にドキュメント/ビュー アーキテクチャと呼ばれるフレームワークの一部を利用します。 ダイアログ ベースのアプリケーション、フォーム ベースのアプリケーション、Dll などのアプリケーションの他の種類は、ドキュメント/ビュー アーキテクチャの機能の一部のみを使用します。
+[アプリケーションウィザード](../mfc/reference/mfc-application-wizard.md)では、アプリケーションフレームワークをさまざまな方法で使用する、複数の種類のアプリケーションが生成されます。 SDI (シングルドキュメントインターフェイス) と MDI (マルチドキュメントインターフェイス) アプリケーションでは、ドキュメント/ビューアーキテクチャと呼ばれるフレームワークの一部が完全に使用されます。 ダイアログベースのアプリケーション、フォームベースのアプリケーション、Dll など、他の種類のアプリケーションでは、ドキュメント/ビューアーキテクチャの機能の一部のみを使用します。
 
-ドキュメント/ビュー アプリケーションには、ドキュメント、ビュー、およびフレーム ウィンドウの 1 つまたは複数のセットが含まれます。 ドキュメント テンプレート オブジェクトには、各ドキュメント/ビュー/フレーム セットについては、クラスが関連付けられます。
+ドキュメント/ビューアプリケーションには、ドキュメント、ビュー、およびフレームウィンドウの1つ以上のセットが含まれています。 ドキュメントテンプレートオブジェクトは、各ドキュメント/ビュー/フレームセットのクラスを関連付けます。
 
-MFC アプリケーションでのドキュメント/ビュー アーキテクチャを使用する必要はありませんは、さまざまな利点があります。 印刷と印刷プレビューのサポートの現状、MFC OLE コンテナーとサーバーのサポートはドキュメント/ビュー アーキテクチャに基づきます。
+MFC アプリケーションでドキュメント/ビューアーキテクチャを使用する必要はありませんが、そのためにはさまざまな利点があります。 MFC OLE コンテナーとサーバーのサポートは、印刷と印刷プレビューのサポートとして、ドキュメント/ビューアーキテクチャに基づいています。
 
-すべての MFC アプリケーションで少なくとも 2 つのオブジェクトがある: アプリケーション オブジェクトから派生した[CWinApp](../mfc/reference/cwinapp-class.md)、やある種のメイン ウィンドウのオブジェクトから (多くの場合、間接的に) 派生[CWnd](../mfc/reference/cwnd-class.md)します。 (メイン ウィンドウがから派生するほとんどの場合、 [CFrameWnd](../mfc/reference/cframewnd-class.md)、 [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md)、または[CDialog](../mfc/reference/cdialog-class.md)から派生する`CWnd`)。
+すべての MFC アプリケーションには、少なくとも2つのオブジェクトがあります。 [CWinApp](../mfc/reference/cwinapp-class.md)から派生したアプリケーションオブジェクトと、 [CWnd](../mfc/reference/cwnd-class.md)から派生した (多くの場合は間接的に) メインウィンドウオブジェクトです。 (ほとんどの場合、メインウィンドウは、`CWnd`から派生した[CFrameWnd](../mfc/reference/cframewnd-class.md)、 [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md)、または[CDialog](../mfc/reference/cdialog-class.md)から派生します)。
 
-ドキュメント/ビュー アーキテクチャを使用するアプリケーションには、追加のオブジェクトが含まれます。 プリンシパル オブジェクトは次のとおりです。
+ドキュメント/ビューアーキテクチャを使用するアプリケーションには、追加のオブジェクトが含まれています。 プリンシパルオブジェクトは次のとおりです。
 
-- クラスから派生したアプリケーション オブジェクト[CWinApp](../mfc/reference/cwinapp-class.md)、前述のとおりです。
+- 前に説明したように、クラス[CWinApp](../mfc/reference/cwinapp-class.md)から派生したアプリケーションオブジェクト。
 
-- クラスから派生した 1 つまたは複数のドキュメント クラス オブジェクト[CDocument](../mfc/reference/cdocument-class.md)します。 ドキュメント クラスのオブジェクトは、ビューで操作されるデータの内部表現を担当します。 データ ファイルに関連付けられている必要があります。
+- [CDocument](../mfc/reference/cdocument-class.md)クラスから派生した1つ以上のドキュメントクラスオブジェクト。 ドキュメントクラスオブジェクトは、ビューで操作されるデータの内部表現を担います。 データファイルに関連付けられている可能性があります。
 
-- クラスから派生した 1 つまたは複数のビュー オブジェクト[CView](../mfc/reference/cview-class.md)します。 それぞれのビューは、ドキュメントにアタッチされ、フレーム ウィンドウに関連付けられているされるウィンドウです。 ビューは、表示し、ドキュメント クラスのオブジェクトに含まれるデータを操作します。
+- クラス[CView](../mfc/reference/cview-class.md)から派生した1つ以上のビューオブジェクト。 各ビューは、ドキュメントにアタッチされ、フレームウィンドウに関連付けられているウィンドウです。 ビューは、ドキュメントクラスオブジェクトに含まれるデータを表示および操作します。
 
-ドキュメント/ビュー アプリケーションには、フレーム ウィンドウも含まれています (から派生した[CFrameWnd](../mfc/reference/cframewnd-class.md)) とドキュメント テンプレート (から派生した[CDocTemplate](../mfc/reference/cdoctemplate-class.md))。
+ドキュメント/ビューアプリケーションには、( [CFrameWnd](../mfc/reference/cframewnd-class.md)から派生した) フレームウィンドウとドキュメントテンプレート ( [CDocTemplate](../mfc/reference/cdoctemplate-class.md)から派生) も含まれています。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [クラスの概要](../mfc/class-library-overview.md)

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - CTreeView [MFC], GetTreeCtrl
 ms.assetid: 5df583a6-d69f-42ca-9d8d-57e04558afff
 ms.openlocfilehash: fec8379a3944d981672754274f50dd4e60f71b61
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883994"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426775"
 ---
 # <a name="ctreeview-class"></a>CTreeView クラス
 
@@ -31,17 +31,17 @@ class CTreeView : public CCtrlView
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[CTreeView:: CTreeView](#ctreeview)|`CTreeView` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[CTreeView:: Treeview](#gettreectrl)|ビューに関連付けられているツリーコントロールを返します。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 このアーキテクチャの詳細については、「 [CView](../../mfc/reference/cview-class.md)クラスの概要」と「相互参照」を参照してください。
 
@@ -59,7 +59,7 @@ class CTreeView : public CCtrlView
 
 `CTreeView`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxcview
 

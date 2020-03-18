@@ -2,17 +2,17 @@
 title: sequenced_policy クラス
 ms.date: 04/18/2019
 f1_keywords:
-- execution/std::execution::parallel_policy
-ms.openlocfilehash: 63be7166b84fa452f53baf6b6de16831eb657a23
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+- execution/std::execution::sequenced_policy
+ms.openlocfilehash: 5647f20b560828016231a9bbd38977c51211e6bb
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68269194"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444919"
 ---
-# <a name="sequencedpolicy-class"></a>sequenced_policy クラス
+# <a name="sequenced_policy-class"></a>sequenced_policy クラス
 
-並列アルゴリズムのオーバー ロードを区別する、並列アルゴリズムの実行を並列いない可能性がありますを必要とする一意の型として使用されます。
+並列アルゴリズムのオーバーロードを明確にするために一意の型として使用され、並列アルゴリズムの実行を並列化できないようにする必要があります。
 
 ## <a name="syntax"></a>構文
 
@@ -20,6 +20,6 @@ ms.locfileid: "68269194"
 class execution::sequenced_policy;
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-使用の並列アルゴリズムの実行中に、 `execution::sequenced_policy` 、キャッチされない例外を使用して、要素アクセス関数の呼び出しが終了した場合、ポリシー`terminate()`呼び出されます。
+`execution::sequenced_policy` ポリシーを使用した並列アルゴリズムの実行中に、要素アクセス関数の呼び出しがキャッチされない例外によって終了した場合、`terminate()` が呼び出されます。

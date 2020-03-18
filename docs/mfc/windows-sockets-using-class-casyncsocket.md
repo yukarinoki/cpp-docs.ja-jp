@@ -1,8 +1,6 @@
 ---
-title: Windows ソケット:Casyncsocket クラス
+title: 'Windows ソケット: CAsyncSocket クラスの使い方'
 ms.date: 11/04/2016
-f1_keywords:
-- CAsyncSocket
 helpviewer_keywords:
 - CAsyncSocket class [MFC], programming model
 - Windows Sockets [MFC], asynchronous
@@ -11,97 +9,97 @@ helpviewer_keywords:
 - sockets [MFC], asynchronous operation
 - Windows Sockets [MFC], converting Unicode and MBCS strings
 ms.assetid: 825dae17-7c1b-4b86-8d6c-da7f1afb5d8d
-ms.openlocfilehash: 51274791393d95517bd8de5ae7248dc634018037
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3977308776c4ec6fed844038c4453ad03d065f98
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399565"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445940"
 ---
-# <a name="windows-sockets-using-class-casyncsocket"></a>Windows ソケット:Casyncsocket クラス
+# <a name="windows-sockets-using-class-casyncsocket"></a>Windows ソケット: CAsyncSocket クラスの使い方
 
-この記事では、クラスを使用する方法を説明します。 [CAsyncSocket](../mfc/reference/casyncsocket-class.md)します。 このクラスには、非常に低いレベルで Windows ソケット API がカプセル化してあります。 `CAsyncSocket` ネットワーク通信の詳細を把握するけれども、ネットワーク イベントの通知のコールバックをするプログラマが使用されます。 この前提に基づき、この記事では、基本的な命令のみです。 使用を検討する必要がありますおそらく`CAsyncSocket`Windows ソケットの MFC アプリケーションで複数のネットワーク プロトコルを扱うさが柔軟性を犠牲したくない場合。 クラスの別の一般的なモデルを使用するよりも自分で可能性が直接、複数の通信をプログラミングの効率が向上を取得することができますを感じることがあるも`CSocket`します。
+この記事では、 [CAsyncSocket](../mfc/reference/casyncsocket-class.md)クラスの使用方法について説明します。 このクラスでは、Windows Sockets API が非常に低いレベルでカプセル化されていることに注意してください。 `CAsyncSocket` は、ネットワーク通信の詳細を把握しているが、ネットワークイベントの通知にコールバックを使用する必要があるプログラマによって使用されます。 この前提に基づいて、この記事では基本的な手順のみを説明します。 Windows ソケットを使用して、MFC アプリケーションで複数のネットワークプロトコルを簡単に処理できるようにする必要があるが、柔軟性を犠牲にしたくない場合は、`CAsyncSocket` を使用することを検討してください。 また、クラス `CSocket`の汎用的な代替モデルを使用するよりも、より効率的に通信をプログラミングすることにより、効率を向上させることができます。
 
-`CAsyncSocket` 記載されていますが、 *MFC リファレンス*します。 Visual C では、Windows SDK には、Windows ソケット仕様も提供します。 詳細に残されます。 Visual C からのサンプル アプリケーションは提供されません`CAsyncSocket`します。
+`CAsyncSocket` は、「 *MFC リファレンス*」に記載されています。 またC++ 、Visual は、Windows SDK にある Windows ソケット仕様も提供します。 詳細はお持ちのままです。 ビジュアルC++には `CAsyncSocket`のサンプルアプリケーションが用意されていません。
 
-高度なネットワーク通信について知識ではなく、かつ、簡単な方法の場合は、クラスを使用して[CSocket](../mfc/reference/csocket-class.md)で、`CArchive`オブジェクト。 参照してください[Windows ソケット。アーカイブ付きソケットの使用](../mfc/windows-sockets-using-sockets-with-archives.md)詳細についてはします。
+ネットワーク通信について十分な知識がなく、単純なソリューションが必要な場合は、`CArchive` オブジェクト[と共にクラスを使用](../mfc/reference/csocket-class.md)します。 詳細については、「 [Windows ソケット: アーカイブでのソケットの使用](../mfc/windows-sockets-using-sockets-with-archives.md)」を参照してください。
 
-この記事では次の内容について説明します。
+この記事には、次の内容が含まれます。
 
-- 作成と使用、`CAsyncSocket`オブジェクト。
+- `CAsyncSocket` オブジェクトの作成と使用
 
-- [お客様の責任で CAsyncSocket](#_core_your_responsibilities_with_casyncsocket)します。
+- [CAsyncSocket による責任](#_core_your_responsibilities_with_casyncsocket)。
 
-##  <a name="_core_creating_and_using_a_casyncsocket_object"></a> CAsyncSocket オブジェクトの作成と
+##  <a name="_core_creating_and_using_a_casyncsocket_object"></a>CAsyncSocket オブジェクトの作成と使用
 
 #### <a name="to-use-casyncsocket"></a>CAsyncSocket を使用するには
 
-1. 構築、 [CAsyncSocket](../mfc/reference/casyncsocket-class.md)オブジェクトおよびオブジェクトを使用して作成する、基になる**ソケット**を処理します。
+1. [CAsyncSocket](../mfc/reference/casyncsocket-class.md)オブジェクトを構築し、オブジェクトを使用して基になる**ソケット**ハンドルを作成します。
 
-   ソケットの作成では、2 段階の構築の MFC のパターンに従います。
+   ソケットの作成は、2段階構築の MFC パターンに従います。
 
-   例:
+   例 :
 
    [!code-cpp[NVC_MFCSimpleSocket#3](../mfc/codesnippet/cpp/windows-sockets-using-class-casyncsocket_1.cpp)]
 
-     - または -
+     または
 
    [!code-cpp[NVC_MFCSimpleSocket#4](../mfc/codesnippet/cpp/windows-sockets-using-class-casyncsocket_2.cpp)]
 
-   上記の最初のコンス トラクターを作成、`CAsyncSocket`スタック上のオブジェクト。 2 番目のコンス トラクターを作成、`CAsyncSocket`ヒープにします。 最初の[作成](../mfc/reference/casyncsocket-class.md#create)上記の呼び出しでは、既定のパラメーターを使用して、ストリーム ソケットを作成します。 2 番目の`Create`呼び出しは、指定したポートとアドレスを持つデータグラム ソケットを作成します。 (いずれかを使用する`Create`いずれかの構築方法とバージョン)。
+   上の1つ目のコンストラクターは、スタック上に `CAsyncSocket` オブジェクトを作成します。 2番目のコンストラクターは、ヒープに `CAsyncSocket` を作成します。 上記の最初の[Create](../mfc/reference/casyncsocket-class.md#create)呼び出しでは、既定のパラメーターを使用してストリームソケットを作成します。 2番目の `Create` 呼び出しは、指定されたポートとアドレスを使用してデータグラムソケットを作成します。 (どちらの構築方法でも `Create` バージョンのいずれかを使用できます)。
 
-   パラメーターを`Create`は。
+   `Create` するパラメーターは次のとおりです。
 
-   - 「ポート」: 短整数。
+   - "Port": 短整数。
 
-         For a server socket, you must specify a port. For a client socket, you typically accept the default value for this parameter, which lets Windows Sockets select a port.
+      サーバーソケットの場合は、ポートを指定する必要があります。 クライアントソケットの場合は、通常、このパラメーターの既定値をそのまま使用します。これにより、Windows ソケットがポートを選択できるようになります。
 
-   - ソケットの種類:**SOCK_STREAM** (既定値) または**SOCK_DGRAM**します。
+   - ソケットの種類: **SOCK_STREAM** (既定値) または**SOCK_DGRAM**です。
 
-   - ソケットの"address"「専用」や「128.56.22.8」など。
+   - "Ftp.microsoft.com" や "128.56.22.8" などのソケットの "アドレス"。
 
-         This is your Internet Protocol (IP) address on the network. You will probably always rely on the default value for this parameter.
+      これは、ネットワーク上のインターネットプロトコル (IP) アドレスです。 このパラメーターの既定値を常に使用することがあります。
 
-   用語"port"および「ソケット アドレス」で説明[Windows ソケット。ポートとソケット アドレス](../mfc/windows-sockets-ports-and-socket-addresses.md)します。
+   「 [Windows ソケット: ポートとソケット](../mfc/windows-sockets-ports-and-socket-addresses.md)アドレス」では、"ポート" と "ソケットアドレス" という用語について説明しています。
 
-1. ソケットがクライアントの場合は、ソケット オブジェクトをサーバーに接続を使用して、ソケット[不要なため](../mfc/reference/casyncsocket-class.md#connect)します。
+1. ソケットがクライアントの場合は、 [CAsyncSocket:: connect](../mfc/reference/casyncsocket-class.md#connect)を使用して、ソケットオブジェクトをサーバーソケットに接続します。
 
-     - または -
+     または
 
-   ソケットがサーバーの場合は、設定、ソケットのリッスンを開始 (で[CAsyncSocket::Listen](../mfc/reference/casyncsocket-class.md#listen)) のクライアントからの接続試行します。 接続要求を受信するでそのまま使用[CAsyncSocket::Accept](../mfc/reference/casyncsocket-class.md#accept)します。
+   ソケットがサーバーである場合は、クライアントからの接続試行に対して ( [CAsyncSocket:: Listen](../mfc/reference/casyncsocket-class.md#listen)を使用した) リッスンを開始するようにソケットを設定します。 接続要求を受け取ったら、 [CAsyncSocket:: accept](../mfc/reference/casyncsocket-class.md#accept)で受け入れます。
 
-   接続を受け入れた後には、パスワードの検証などのタスクを実行できます。
+   接続を受け入れると、パスワードの検証などのタスクを実行できます。
 
     > [!NOTE]
-    >  `Accept`メンバー関数は、新しい空への参照を受け取ります`CSocket`オブジェクトをパラメーターとして。 呼び出す前に、このオブジェクトを構築する必要があります`Accept`します。 このソケット オブジェクトがスコープ外になった場合、接続が閉じられます。 呼び出さない`Create`この新しいソケット オブジェクト。 例については、この記事を参照してください。 [Windows ソケット。操作のシーケンス](../mfc/windows-sockets-sequence-of-operations.md)します。
+    >  `Accept` メンバー関数は、新しい空の `CSocket` オブジェクトへの参照をそのパラメーターとして受け取ります。 `Accept`を呼び出す前に、このオブジェクトを作成する必要があります。 このソケットオブジェクトがスコープ外に出ると、接続は閉じられます。 この新しいソケットオブジェクトに対して `Create` を呼び出さないでください。 例については、「 [Windows ソケット: 操作のシーケンス](../mfc/windows-sockets-sequence-of-operations.md)」を参照してください。
 
-1. 呼び出すことによって、他のソケットとの通信を実行、 `CAsyncSocket` Windows ソケット API 関数をカプセル化するオブジェクトのメンバー関数。
+1. Windows Sockets API 関数をカプセル化する `CAsyncSocket` オブジェクトのメンバー関数を呼び出すことによって、他のソケットとの通信を実行します。
 
-   Windows ソケット仕様とクラスを参照してください[CAsyncSocket](../mfc/reference/casyncsocket-class.md)で、 *MFC リファレンス*します。
+   『 *MFC リファレンス*』の「Windows Sockets specification And class [CAsyncSocket](../mfc/reference/casyncsocket-class.md) 」を参照してください。
 
-1. 破棄、`CAsyncSocket`オブジェクト。
+1. `CAsyncSocket` オブジェクトを破棄します。
 
-   スタック上にソケット オブジェクトを作成する場合は、関数スコープから外れたときにデストラクターが呼び出されます。 使用して、ヒープ上のソケット オブジェクトを作成した場合、**新しい**演算子を使用して責任を負いますが、**削除**オブジェクトを破棄する演算子。
+   ソケットオブジェクトをスタック上に作成した場合は、含んでいる関数がスコープ外に出ると、そのデストラクターが呼び出されます。 **New**演算子を使用してヒープにソケットオブジェクトを作成した場合は、 **delete**演算子を使用してオブジェクトを破棄する必要があります。
 
-   デストラクターは、オブジェクトの[閉じる](../mfc/reference/casyncsocket-class.md#close)メンバー関数は、オブジェクトを破棄します。
+   デストラクターは、オブジェクトを破棄する前に、オブジェクトの[Close](../mfc/reference/casyncsocket-class.md#close)メンバー関数を呼び出します。
 
-コードでは、このシーケンスの例については (実際の`CSocket`オブジェクト) を参照してください[Windows ソケット。操作のシーケンス](../mfc/windows-sockets-sequence-of-operations.md)します。
+コード内のこのシーケンスの例 (実際には `CSocket` オブジェクト) については、「 [Windows ソケット: 操作のシーケンス](../mfc/windows-sockets-sequence-of-operations.md)」を参照してください。
 
-##  <a name="_core_your_responsibilities_with_casyncsocket"></a> CAsyncSocket でお客様の責任
+##  <a name="_core_your_responsibilities_with_casyncsocket"></a>CAsyncSocket による責任
 
-クラスのオブジェクトを作成するときに[CAsyncSocket](../mfc/reference/casyncsocket-class.md)、オブジェクトには、Windows がカプセル化**ソケット**を処理し、そのハンドルに対する操作を提供します。 使用すると`CAsyncSocket`API を直接使用する場合に発生する可能性がありますすべての問題に対処する必要があります。 例えば:
+[CAsyncSocket](../mfc/reference/casyncsocket-class.md)クラスのオブジェクトを作成すると、オブジェクトは Windows**ソケット**ハンドルをカプセル化し、そのハンドルに対する操作を提供します。 `CAsyncSocket`を使用する場合は、API を直接使用する場合に直面する可能性のあるすべての問題に対処する必要があります。 例 :
 
-- シナリオの「ブロック」されます。
+- "ブロッキング" シナリオ。
 
-- 送信側と受信のマシン間のバイト順序の違い
+- 送信側と受信側のコンピューターのバイト順の違い。
 
-- Unicode とマルチバイト文字の間の変換 (MBCS) 文字列を設定します。
+- Unicode とマルチバイト文字セット (MBCS) の文字列間の変換。
 
-これらの条項および情報の追加の定義は、次を参照してください。 [Windows ソケット。ブロック](../mfc/windows-sockets-blocking.md)、 [Windows ソケット。バイトの順序付け](../mfc/windows-sockets-byte-ordering.md)、 [Windows ソケット。文字列を変換する](../mfc/windows-sockets-converting-strings.md)します。
+これらの用語の定義と追加情報については、「 [Windows ソケット: ブロッキング](../mfc/windows-sockets-blocking.md)、 [Windows ソケット: バイトの順序付け](../mfc/windows-sockets-byte-ordering.md)、 [Windows ソケット: 文字列の変換](../mfc/windows-sockets-converting-strings.md)」を参照してください。
 
-これらの問題に関係なくクラス`CAsycnSocket`場合があります、最適な選択肢をアプリケーションで必要なすべての柔軟性と制御を取得できます。 クラスの使用を検討する必要がありますそうでない場合`CSocket`代わりにします。 `CSocket` 多くのユーザーからの詳細を非表示になります: Windows がブロックされた呼び出し中にメッセージが表示され、ポンプへのアクセスを it `CArchive`、バイト順序の相違点と文字列変換を管理します。
+これらの問題が発生しても、アプリケーションで取得できる柔軟性と制御がすべて必要な場合は、クラス `CAsycnSocket` が適切な選択肢となります。 そうでない場合は、代わりにクラス `CSocket` を使用することを検討してください。 `CSocket` は、さまざまな詳細を非表示にします。ブロック呼び出し中に Windows メッセージをポンプし、バイト順の違いと文字列変換を管理する `CArchive`にアクセスできるようにします。
 
-詳細については次を参照してください:
+詳細については、次を参照してください。
 
 - [Windows ソケット: 予備知識](../mfc/windows-sockets-background.md)
 
@@ -109,6 +107,6 @@ ms.locfileid: "62399565"
 
 - [Windows ソケット: データグラム ソケット](../mfc/windows-sockets-datagram-sockets.md)
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [MFC における Windows ソケット](../mfc/windows-sockets-in-mfc.md)

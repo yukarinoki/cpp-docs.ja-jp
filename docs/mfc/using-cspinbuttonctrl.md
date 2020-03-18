@@ -1,20 +1,18 @@
 ---
 title: CSpinButtonCtrl の使い方
 ms.date: 11/04/2016
-f1_keywords:
-- CSpinButtonCtrl
 helpviewer_keywords:
 - up-down controls [MFC], spin button control
 - up-down controls
 - spin button control
 - CSpinButtonCtrl class [MFC], using
 ms.assetid: a91db36b-e11e-42ef-8e89-51915cc486d2
-ms.openlocfilehash: a2a12672f0e70248e135bdd177b76589b6197c75
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 775668426cd11e20a4c863f07a964935d0d5420f
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69513467"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447178"
 ---
 # <a name="using-cspinbuttonctrl"></a>CSpinButtonCtrl の使い方
 
@@ -35,6 +33,6 @@ ms.locfileid: "69513467"
 
 - [スピン ボタンのメンバー関数](../mfc/spin-button-member-functions.md)
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [コントロール](../mfc/controls-mfc.md)

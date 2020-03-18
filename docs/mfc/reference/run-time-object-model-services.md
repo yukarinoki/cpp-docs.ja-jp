@@ -4,12 +4,12 @@ ms.date: 03/27/2019
 helpviewer_keywords:
 - run-time object model services macros
 ms.assetid: 4a3e79df-2ee3-43a4-8193-20298828de85
-ms.openlocfilehash: f8b891467d91d0c945b6c59c90dbc49fd7cbcb30
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: a4e471decd07cb2025b833513403b64f43105d0c
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79426703"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446438"
 ---
 # <a name="run-time-object-model-services"></a>ランタイム オブジェクト モデル サービス
 
@@ -69,11 +69,11 @@ AFX_COMCTL32_IF_EXISTS(  proc );
 *proc*<br/>
 関数名を格納している null で終わる文字列へのポインター、または関数の序数値を指定します。 このパラメーターが序数値の場合は、下位ワードである必要があります。上位ワードはゼロである必要があります。 このパラメーターは Unicode で指定する必要があります。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 このマクロを使用して、コモンコントロールライブラリが、 [GetProcAddress](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress)を呼び出すのではなく、 *proc*によって指定された関数を使用するかどうかを判断します。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 afxcomctl32.h, afxcomctl32.h. inl
 
@@ -92,11 +92,11 @@ AFX_COMCTL32_IF_EXISTS2( proc );
 *proc*<br/>
 関数名を格納している null で終わる文字列へのポインター、または関数の序数値を指定します。 このパラメーターが序数値の場合は、下位ワードである必要があります。上位ワードはゼロである必要があります。 このパラメーターは Unicode で指定する必要があります。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 このマクロを使用して、コモンコントロールライブラリが、 [GetProcAddress](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress)を呼び出すのではなく、 *proc*によって指定された関数を使用するかどうかを判断します。 このマクロは、AFX_COMCTL32_IF_EXISTS の Unicode バージョンです。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 afxcomctl32.h, afxcomctl32.h. inl
 
@@ -113,7 +113,7 @@ DECLARE_DYNAMIC(class_name)
 *class_name*<br/>
 クラスの実際の名前。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 クラスのヘッダー (.h) モジュールに DECLARE_DYNAMIC マクロを追加し、このクラスのオブジェクトにアクセスする必要があるすべての .cpp モジュールにそのモジュールを含めます。
 
@@ -127,7 +127,7 @@ DECLARE_DYNAMIC マクロの詳細については、「 [CObject クラスのト
 
 [IMPLEMENT_DYNAMIC](#implement_dynamic)の例を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afx.h
 
@@ -144,7 +144,7 @@ DECLARE_DYNCREATE(class_name)
 *class_name*<br/>
 クラスの実際の名前。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 フレームワークは、この機能を使用して新しいオブジェクトを動的に作成します。 たとえば、新しいドキュメントを開いたときに作成される新しいビューです。 ドキュメント、ビュー、およびフレームクラスは、動的に作成する必要があるため、動的作成をサポートする必要があります。
 
@@ -161,7 +161,7 @@ DECLARE_DYNCREATE マクロの詳細については、「 [CObject クラスの�
 
 [IMPLEMENT_DYNCREATE](#implement_dyncreate)の例を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afx.h
 
@@ -180,11 +180,11 @@ DECLARE_OLECTLTYPE( class_name )
 *class_name*<br/>
 コントロールクラスの名前。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 `GetUserTypeNameID` と `GetMiscStatus` は、`COleControl`で宣言された純粋仮想関数です。 これらの関数は純粋仮想であるため、コントロールクラスでオーバーライドする必要があります。 DECLARE_OLECTLTYPE に加えて、コントロールクラスの宣言に IMPLEMENT_OLECTLTYPE マクロを追加する必要があります。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afxctl.h
 
@@ -203,13 +203,13 @@ DECLARE_PROPPAGEIDS( class_name )
 *class_name*<br/>
 プロパティページを所有するコントロールクラスの名前。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 クラス宣言の最後に `DECLARE_PROPPAGEIDS` マクロを使用します。 次に、クラスのメンバー関数を定義する .cpp ファイルで、`BEGIN_PROPPAGEIDS` マクロ、コントロールの各プロパティページのマクロエントリ、および `END_PROPPAGEIDS` マクロを使用して、プロパティページリストの末尾を宣言します。
 
 プロパティページの詳細については、「 [ActiveX コントロール: プロパティページ](../mfc-activex-controls-property-pages.md)」を参照してください。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afxctl.h
 
@@ -226,7 +226,7 @@ DECLARE_SERIAL(class_name)
 *class_name*<br/>
 クラスの実際の名前。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 シリアル化とは、オブジェクトの内容をファイルとの間で書き込みまたは読み取りを行うプロセスです。
 
@@ -246,7 +246,7 @@ DECLARE_SERIAL マクロの詳細については、「 [CObject クラスのト�
 
 [!code-cpp[NVC_MFCCObjectSample#21](../../mfc/codesnippet/cpp/run-time-object-model-services_2.h)]
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afx.h
 
@@ -266,7 +266,7 @@ IMPLEMENT_DYNAMIC(class_name, base_class_name)
 *base_class_name*<br/>
 基本クラスの名前。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 .Cpp モジュールで IMPLEMENT_DYNAMIC マクロを使用し、結果として得られるオブジェクトコードを1回だけリンクします。
 
@@ -278,7 +278,7 @@ IMPLEMENT_DYNAMIC(class_name, base_class_name)
 
 [!code-cpp[NVC_MFCCObjectSample#3](../../mfc/codesnippet/cpp/run-time-object-model-services_4.cpp)]
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afx.h
 
@@ -298,7 +298,7 @@ IMPLEMENT_DYNCREATE(class_name, base_class_name)
 *base_class_name*<br/>
 基本クラスの実際の名前。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 フレームワークは、この機能を使用して、新しいオブジェクトを動的に作成します。たとえば、シリアル化中にディスクからオブジェクトを読み取る場合です。 クラス実装ファイルに IMPLEMENT_DYNCREATE マクロを追加します。 詳細については、「 [CObject クラスのトピック](../../mfc/using-cobject.md)」を参照してください。
 
@@ -314,7 +314,7 @@ DECLARE_DYNCREATE マクロと IMPLEMENT_DYNCREATE マクロを使用する場�
 
 [!code-cpp[NVC_MFCCObjectSample#23](../../mfc/codesnippet/cpp/run-time-object-model-services_6.cpp)]
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afx.h
 
@@ -340,15 +340,15 @@ IMPLEMENT_OLECREATE_FLAGS( class_name, external_name, nFlags,
 *nFlags*<br/>
 には、次のフラグが1つ以上含まれています。
 
-   - `afxRegInsertable` を使用すると、OLE オブジェクトの [オブジェクトの挿入] ダイアログボックスにコントロールを表示できます。
-   - `afxRegApartmentThreading`、レジストリ内のスレッドモデルを ThreadingModel = アパートメントに設定します。
-   - `afxRegFreeThreading` は、レジストリのスレッドモデルを ThreadingModel = Free に設定します。
+- `afxRegInsertable` を使用すると、OLE オブジェクトの [オブジェクトの挿入] ダイアログボックスにコントロールを表示できます。
+- `afxRegApartmentThreading`、レジストリ内のスレッドモデルを ThreadingModel = アパートメントに設定します。
+- `afxRegFreeThreading` は、レジストリのスレッドモデルを ThreadingModel = Free に設定します。
 
-         You can combine the two flags `afxRegApartmentThreading` and `afxRegFreeThreading` to set ThreadingModel=Both. See [InprocServer32](/windows/win32/com/inprocserver32) in the Windows SDK for more information on threading model registration.
+2つのフラグ `afxRegApartmentThreading` と `afxRegFreeThreading` を組み合わせて、ThreadingModel = Both に設定することができます。 スレッドモデルの登録の詳細については、Windows SDK の「 [InprocServer32](/windows/win32/com/inprocserver32) 」を参照してください。
 
 *l*、 *w1*、 *w2*、 *b1*、 *b2*、 *b3*、 *b4*、 *b5*、 *b6*、 *b7*、 *b8*クラスの CLSID のコンポーネント。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 > [!NOTE]
 >  IMPLEMENT_OLECREATE_FLAGS を使用する場合は、 *nFlags*パラメーターを使用して、オブジェクトがサポートするスレッドモデルを指定できます。 Treading モデルのみをサポートする場合は、IMPLEMENT_OLECREATE を使用します。
@@ -357,7 +357,7 @@ IMPLEMENT_OLECREATE_FLAGS( class_name, external_name, nFlags,
 
 OLE クラス ID は、オブジェクトの一意の128ビット識別子です。 1つの**long**、2つの**単語**、および 8**バイト**で構成されます。構文の*説明では*、 *l*、 *w1*、 *w2*、 *b1*によって表されます。 アプリケーションウィザードとコードウィザードでは、必要に応じて一意の OLE クラス Id が作成されます。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー :** afxdisp.h
 
@@ -382,7 +382,7 @@ DECLARE_OLECTLTYPE( class_name, idsUserTypeName, dwOleMisc )
 *dwOleMisc*<br/>
 1つ以上のフラグを格納している列挙体。 この列挙体の詳細については、Windows SDK の「 [OLEMISC](/windows/win32/api/oleidl/ne-oleidl-olemisc) 」を参照してください。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 IMPLEMENT_OLECTLTYPE に加えて、コントロールクラスの宣言に DECLARE_OLECTLTYPE マクロを追加する必要があります。
 
@@ -391,7 +391,7 @@ IMPLEMENT_OLECTLTYPE に加えて、コントロールクラスの宣言に DECL
 > [!NOTE]
 >  ActiveX コントロールウィザードで使用される既定の設定は、OLEMISC_ACTIVATEWHENVISIBLE、OLEMISC_SETCLIENTSITEFIRST、OLEMISC_INSIDEOUT、OLEMISC_CANTLINKINSIDE、および OLEMISC_RECOMPOSEONRESIZE です。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afxctl.h
 
@@ -414,7 +414,7 @@ IMPLEMENT_SERIAL(class_name, base_class_name, wSchema)
 *wSchema*<br/>
 逆シリアル化プログラムで、以前のバージョンのプログラムで作成されたデータを識別および処理できるように、アーカイブにエンコードされる UINT の "バージョン番号"。 クラススキーマ番号を-1 にすることはできません。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 .Cpp モジュールで IMPLEMENT_SERIAL マクロを使用します。次に、結果として得られるオブジェクトコードを1回だけリンクします。
 
@@ -428,7 +428,7 @@ AFX_API マクロを使用して、DECLARE_SERIAL および IMPLEMENT_SERIAL マ
 
 [!code-cpp[NVC_MFCCObjectSample#24](../../mfc/codesnippet/cpp/run-time-object-model-services_7.cpp)]
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afx.h
 
@@ -445,7 +445,7 @@ RUNTIME_CLASS(class_name)
 *class_name*<br/>
 クラスの実際の名前 (引用符で囲まれていない)。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 RUNTIME_CLASS は、 *class_name*によって指定されたクラスの[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)構造体へのポインターを返します。 DECLARE_DYNAMIC、DECLARE_DYNCREATE、または DECLARE_SERIAL で宣言された `CObject`派生クラスのみが `CRuntimeClass` 構造体へのポインターを返します。
 
@@ -455,7 +455,7 @@ RUNTIME_CLASS は、 *class_name*によって指定されたクラスの[CRuntim
 
 [!code-cpp[NVC_MFCCObjectSample#25](../../mfc/codesnippet/cpp/run-time-object-model-services_8.cpp)]
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー:** afx.h
 
@@ -472,7 +472,7 @@ DECLARE_OLECREATE(class_name)
 *class_name*<br/>
 クラスの実際の名前。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 このマクロは、他の OLE 対応アプリケーションがこの型のオブジェクトを作成できるようにします。
 
@@ -480,7 +480,7 @@ DECLARE_OLECREATE(class_name)
 
 クラスの宣言に DECLARE_OLECREATE が含まれている場合は、IMPLEMENT_OLECREATE をクラスの実装に含める必要があります。 DECLARE_OLECREATE を使用するクラス宣言では、DECLARE_DYNCREATE または DECLARE_SERIAL も使用する必要があります。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー**: afxdisp.h
 
@@ -502,7 +502,7 @@ IMPLEMENT_OLECREATE(class_name, external_name, l, w1, w2, b1, b2, b3, b4, b5, b6
 
 *l*、 *w1*、 *w2*、 *b1*、 *b2*、 *b3*、 *b4*、 *b5*、 *b6*、 *b7*、 *b8*クラスの CLSID のコンポーネント。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 > [!NOTE]
 >  IMPLEMENT_OLECREATE を使用する場合、既定では、単一のスレッドモデルのみがサポートされます。 IMPLEMENT_OLECREATE_FLAGS を使用する場合は、 *nFlags*パラメーターを使用して、オブジェクトがサポートするスレッドモデルを指定できます。
@@ -511,7 +511,7 @@ IMPLEMENT_OLECREATE(class_name, external_name, l, w1, w2, b1, b2, b3, b4, b5, b6
 
 OLE クラス ID は、オブジェクトの一意の128ビット識別子です。 1つの**long**、2つの**単語**、および 8**バイト**で構成されます。構文の*説明では*、 *l*、 *w1*、 *w2*、 *b1*によって表されます。 アプリケーションウィザードとコードウィザードでは、必要に応じて一意の OLE クラス Id が作成されます。
 
-### <a name="requirements"></a>必要条件
+### <a name="requirements"></a>要件
 
 **ヘッダー**: afxdisp.h
 

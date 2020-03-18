@@ -21,11 +21,11 @@ helpviewer_keywords:
 - CFont [MFC], GetLogFont
 ms.assetid: 3fad6bfe-d6ce-4ab9-967a-5ce0aa102800
 ms.openlocfilehash: c37b2f657105e0065e0cddb2c508424bd6c89b0a
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866608"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424393"
 ---
 # <a name="cfont-class"></a>CFont クラス
 
@@ -41,13 +41,13 @@ class CFont : public CGdiObject
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[CFont:: CFont](#cfont)|`CFont` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[CFont:: CreateFont](#createfont)|指定した特性を使用して `CFont` を初期化します。|
 |[CFont:: CreateFontIndirect](#createfontindirect)|`LOGFONT` 構造体で指定された特性を使用して `CFont` オブジェクトを初期化します。|
@@ -58,11 +58,11 @@ class CFont : public CGdiObject
 
 ### <a name="public-operators"></a>パブリック演算子
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[CFont:: operator HFONT](#operator_hfont)|`CFont` オブジェクトにアタッチされている Windows GDI フォントハンドルを返します。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 `CFont` オブジェクトを使用するには、`CFont` オブジェクトを構築し、 [Createfont](#createfont)、 [createfontindirect](#createfontindirect)、 [createpointfont](#createpointfont)、または[Createpointfontindirect](#createpointfontindirect)を使用して Windows フォントをそのオブジェクトに添付し、オブジェクトのメンバー関数を使用してフォントを操作します。
 
@@ -78,7 +78,7 @@ class CFont : public CGdiObject
 
 `CFont`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxwin.h
 
@@ -90,7 +90,7 @@ class CFont : public CGdiObject
 CFont();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 結果として得られるオブジェクトは、使用する前に、`CreateFont`、`CreateFontIndirect`、`CreatePointFont`、または `CreatePointFontIndirect` で初期化する必要があります。
 
@@ -178,7 +178,7 @@ OEM 文字セットはシステムに依存します。
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 フォントは、その後、任意のデバイスコンテキストのフォントとして選択できます。
 
@@ -209,7 +209,7 @@ BOOL CreateFontIndirect(const LOGFONT* lpLogFont);
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 フォントは、その後、任意のデバイスの現在のフォントとして選択できます。
 
@@ -247,7 +247,7 @@ BOOL CreatePointFont(
 
 成功した場合は0以外の。それ以外の場合は0。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 *PDC*によってポイントされている CDC オブジェクトを使用して、 *nPointSize*の高さを論理単位に自動的に変換します。
 
@@ -279,7 +279,7 @@ BOOL CreatePointFontIndirect(
 
 成功した場合は0以外の。それ以外の場合は0。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この関数は、`LOGFONT` 構造体を Windows に渡す前に、 *pDC*が指す CDC オブジェクトを使用して、`lfHeight` の高さを論理単位に自動的に変換します。
 
@@ -306,7 +306,7 @@ Windows フォントを扱う HFONT ハンドル。
 
 成功した場合は `CFont` オブジェクトへのポインター。それ以外の場合は NULL。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `CFont` オブジェクトがハンドルにまだアタッチされていない場合は、一時 `CFont` オブジェクトが作成され、アタッチされます。 この一時 `CFont` オブジェクトは、アプリケーションが次にそのイベントループ内でアイドル状態になったときにのみ有効です。その時点で、すべての一時グラフィックオブジェクトが削除されます。 これを言うもう1つの方法は、一時オブジェクトが、1つのウィンドウメッセージの処理中にのみ有効であることです。
 
@@ -347,7 +347,7 @@ operator HFONT() const;
 
 成功した場合に `CFont` にアタッチされた Windows GDI フォントオブジェクトのハンドル。それ以外の場合は NULL。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この演算子は `CFont` から[フォントおよびテキスト](/windows/win32/gdi/fonts-and-text)への変換に自動的に使用されるため、`CFont` オブジェクトを hfonts を想定している関数に渡すことができます。
 
