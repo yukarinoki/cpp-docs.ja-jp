@@ -3,16 +3,18 @@ layout: LandingPage
 title: C++ ドキュメントによる Linux 開発
 description: Linux で実行されているアプリケーションを作成し、デバッグする。
 ms.topic: landing-page
-ms.openlocfilehash: ee956f25914e1996acb6776d9ecbb8c9e79c689b
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 9c09e9bd590ece013a2ee7d85017b3e046394232
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70216110"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441510"
 ---
 # <a name="linux-development-with-c-documentation"></a>C++ ドキュメントによる Linux 開発
 
 Visual Studio 2017 以降を使用して、Linux リモート マシンまたは Linux 用 Windows サブシステムで実行されているアプリケーションを作成およびデバッグします。
+
+<!-- markdownlint-disable MD033 -->
 
 <ul class="panelContent cardsF">
     <li>

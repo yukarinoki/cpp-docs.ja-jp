@@ -1,17 +1,15 @@
 ---
 title: CListCtrl の使い方
 ms.date: 11/04/2016
-f1_keywords:
-- CListCtrl
 helpviewer_keywords:
 - CListCtrl class [MFC], using
 ms.assetid: 20d6a5d6-8f07-4ddf-975f-ea2dfebcc835
-ms.openlocfilehash: 8641b7aec3aacf4de6aabfdcc9ffcbc64c278b41
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: ada26f43849bec2ad4cb63a6084c10805e27fcb0
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69512906"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441979"
 ---
 # <a name="using-clistctrl"></a>CListCtrl の使い方
 
@@ -22,7 +20,7 @@ ms.locfileid: "69512906"
 関連情報については、「Windows SDK の[リストビューコントロールについて](/windows/win32/Controls/list-view-controls-overview)」を参照してください。
 
 > [!NOTE]
->  Windows SDK は、リストコントロールを "リストビューコントロール" として参照します。 この "表示" の使用方法は、特`CListView`に MFC ビュークラスを参照していません。 詳細については、「[リストコントロールとリストビュー](../mfc/list-control-and-list-view.md)」を参照してください。
+>  Windows SDK は、リストコントロールを "リストビューコントロール" として参照します。 この "表示" の使用方法では、MFC ビュークラス (特に `CListView`) は参照されません。 詳細については、「[リストコントロールとリストビュー](../mfc/list-control-and-list-view.md)」を参照してください。
 
 ## <a name="what-do-you-want-to-know-more-about"></a>詳細については、次を参照してください。
 
@@ -52,6 +50,6 @@ ms.locfileid: "69512906"
 
 - [リスト コントロールの破棄](../mfc/destroying-the-list-control.md)
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [コントロール](../mfc/controls-mfc.md)

@@ -403,11 +403,11 @@ helpviewer_keywords:
 - CDC [MFC], m_hDC
 ms.assetid: 715b3334-cb2b-4c9c-8067-02eb7c66c8b2
 ms.openlocfilehash: bae2f9a5a4f39c4eeffe68cc33e744e44c6800c8
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855574"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426133"
 ---
 # <a name="cdc-class"></a>CDC クラス
 
@@ -423,13 +423,13 @@ class CDC : public CObject
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[CDC:: CDC](#cdc)|`CDC` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[CDC:: AbortDoc](#abortdoc)|現在の印刷ジョブを終了し、`StartDoc` メンバー関数の最後の呼び出し以降にアプリケーションがデバイスに書き込んだすべてのものを消去します。|
 |[CDC:: AbortPath](#abortpath)|デバイスコンテキスト内のすべてのパスを閉じて破棄します。|
@@ -629,18 +629,18 @@ class CDC : public CObject
 
 ### <a name="public-operators"></a>パブリック演算子
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[CDC:: operator HDC](#operator_hdc)|デバイスコンテキストのハンドルを取得します。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[CDC:: m_hAttribDC](#m_hattribdc)|この `CDC` オブジェクトによって使用される属性デバイスコンテキスト。|
 |[CDC:: m_hDC](#m_hdc)|この `CDC` オブジェクトによって使用される出力デバイスコンテキスト。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 `CDC` オブジェクトは、ウィンドウのクライアント領域に関連付けられた表示コンテキストを操作するためのメンバーだけでなく、ディスプレイやプリンターなどのデバイスコンテキストを操作するためのメンバー関数を提供します。
 
@@ -676,7 +676,7 @@ class CDC : public CObject
 
 `CDC`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxwin.h
 
@@ -700,7 +700,7 @@ int AbortDoc();
 
 - SP_USERABORT ユーザーは、印刷マネージャーを使用してジョブを終了しました。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、ABORTDOC プリンターのエスケープを置き換えます。
 
@@ -732,7 +732,7 @@ BOOL AbortPath();
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 デバイスコンテキストにオープンパスの角かっこがある場合、パスの角かっこは閉じられ、パスは破棄されます。 デバイスコンテキストに閉じたパスがある場合、パスは破棄されます。
 
@@ -758,7 +758,7 @@ BOOL AddMetaFileComment(
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 コメントには、画像のソースや作成日などのプライベート情報を含めることができます。 コメントは、アプリケーション署名とその後に続くデータで始まる必要があります。 コメントには、位置固有のデータを含めることはできません。 位置固有のデータは、レコードの場所を指定します。1つのメタファイルが別のメタファイル内に埋め込まれる可能性があるため、このデータを含めることはできません。 この関数は、拡張メタファイルでのみ使用できます。
 
@@ -816,7 +816,7 @@ BOOL AlphaBlend(
 
 成功した場合は TRUE、それ以外の場合は FALSE。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 詳細については、Windows SDK の「 [AlphaBlend](/windows/win32/api/wingdi/nf-wingdi-alphablend) 」を参照してください。
 
@@ -854,7 +854,7 @@ X 軸に対する角度の開始角度を指定します。
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 線分は、現在の位置から円弧の先頭まで描画されます。円弧は、指定された半径と中心を持つ円の境界に沿って描画されます。 円弧の長さは、指定された開始角度とスイープ角度によって定義されます。
 
@@ -922,7 +922,7 @@ BOOL Arc(
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 関数を使用して描画された円弧は、指定された外接する四角形によって定義された楕円のセグメントです。
 
@@ -992,7 +992,7 @@ BOOL ArcTo(
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この関数は `CDC::Arc`に似ていますが、現在の位置が更新される点が異なります。 点 ( *x1*, *y1*) と ( *x2*, *y2*) は、外接する四角形を指定します。 指定された外接する四角形によって形成される楕円は、円弧の曲線を定義します。円弧は、外接する四角形の中心から ( *x3*, *y3*) までの放射状線と交差する点から反時計回り (既定の弧の方向) になります。 円弧は、外接する四角形の中心から ( *x4*, *y4*) の放射状線と交差しています。 開始点と終了点が同じ場合、完全な楕円が描画されます。
 
@@ -1015,7 +1015,7 @@ Windows デバイスコンテキスト。
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 *HDC*は `m_hDC`と出力デバイスコンテキストの両方に格納され、`m_hAttribDC`の属性デバイスコンテキストに格納されます。
 
@@ -1031,7 +1031,7 @@ BOOL BeginPath();
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 パスの角かっこが開いた後、アプリケーションは GDI 描画関数の呼び出しを開始して、パス内に存在する点を定義できます。 アプリケーションでは、`EndPath` メンバー関数を呼び出すことによって、開いているパスの角かっこを閉じることができます。 アプリケーションが `BeginPath`を呼び出すと、以前のパスはすべて破棄されます。
 
@@ -1089,7 +1089,7 @@ BOOL BitBlt(
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 アプリケーションでは、ウィンドウ領域またはクライアント領域をバイト境界上に配置して、`BitBlt` 操作がバイト揃えの四角形で確実に行われるようにすることができます。 (ウィンドウクラスを登録するときに、CS_BYTEALIGNWINDOW または CS_BYTEALIGNCLIENT フラグを設定します)。
 
@@ -1175,7 +1175,7 @@ BOOL Chord(
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ( *X1*, *y1*) パラメーターと ( *x2*, *y2*) パラメーターは、コードの一部である楕円を囲む四角形の左上隅と右下隅をそれぞれ指定します。 ( *X3*, *y3*) パラメーターと ( *x4*, *y4*) パラメーターは、楕円と交差する直線のエンドポイントを指定します。 このコードは、選択したペンを使用して描画され、選択したブラシを使用して塗りつぶされます。
 
@@ -1197,7 +1197,7 @@ BOOL CloseFigure();
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 関数は、現在の位置から図形の最初の点まで (通常は `MoveTo` メンバー関数の最新の呼び出しで指定されたポイント)、直線結合スタイルを使用して線を結ぶことにより、図を閉じます。 図形が `CloseFigure`ではなく `LineTo` メンバー関数を使用して閉じられている場合は、終端のキャップを使用して結合ではなくコーナーが作成されます。 `CloseFigure` は、デバイスコンテキストに開いているパスの角かっこがある場合にのみ呼び出す必要があります。
 
@@ -1220,7 +1220,7 @@ BOOL CreateCompatibleDC(CDC* pDC);
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 メモリデバイスコンテキストは、表示サーフェイスを表すメモリのブロックです。 互換性のあるデバイスの実際のデバイス画面にイメージをコピーする前に、メモリ内のイメージを準備するために使用できます。
 
@@ -1262,7 +1262,7 @@ BOOL CreateDC(
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 印刷。[DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea)構造体を使用する場合は、H ヘッダーファイルが必要です。
 
@@ -1298,7 +1298,7 @@ BOOL CreateIC(
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 情報コンテキストは、デバイスコンテキストを作成せずに、デバイスに関する情報をすばやく取得する方法を提供します。
 
@@ -1316,7 +1316,7 @@ BOOL DeleteDC();
 
 関数が正常に完了した場合は0以外の。それ以外の場合は0です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `DeleteDC` メンバー関数は、現在の `CDC` オブジェクト内の `m_hDC` に関連付けられている Windows デバイスコンテキストを削除します。 この `CDC` オブジェクトが特定のデバイスの最後にアクティブなデバイスコンテキストである場合、デバイスには通知され、デバイスによって使用されるすべての記憶域とシステムリソースが解放されます。
 
@@ -1363,7 +1363,7 @@ void DPtoHIMETRIC(LPSIZE lpSize) const;
 *lpSize*<br/>
 [サイズ](/windows/win32/api/windef/ns-windef-size)構造体または[CSize](../../atl-mfc-shared/reference/csize-class.md)オブジェクトを指します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 デバイスコンテキストオブジェクトのマッピングモードが MM_LOENGLISH、MM_HIENGLISH、MM_LOMETRIC、または MM_HIMETRIC の場合、変換は物理インチのピクセル数に基づいています。 マッピングモードが他の非制約モード (MM_TEXT など) の1つである場合、変換は論理インチのピクセル数に基づいています。
 
@@ -1394,7 +1394,7 @@ void DPtoLP(LPSIZE lpSize) const;
 *lpSize*<br/>
 [サイズ](/windows/win32/api/windef/ns-windef-size)構造体または[CSize](../../atl-mfc-shared/reference/csize-class.md)オブジェクトを指します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 関数は、デバイス座標系から、各点 (またはサイズの次元) の座標を GDI の論理座標系にマップします。 変換は、現在のマッピングモードと、デバイスのウィンドウとビューポートのオリジンとエクステントの設定によって異なります。
 
@@ -1440,7 +1440,7 @@ void Draw3dRect(
 *暦年*<br/>
 3次元四角形の高さを指定します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 四角形は、 *clrTopLeft*によって指定された色の上および左側と、 *clrbottom right*によって指定された色の下と右側で描画されます。
 
@@ -1482,7 +1482,7 @@ void DrawDragRect(
 *pBrushLast*<br/>
 最後に使用されたブラシオブジェクトへのポインター。 既定のハーフトーンブラシを使用する場合は NULL に設定します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 視覚的なフィードバックを提供するために、マウス位置をサンプリングするときにループで呼び出します。 `DrawDragRect`を呼び出すと、前の四角形が消去され、新しい四角形が描画されます。 たとえば、ユーザーが画面上で四角形をドラッグすると、`DrawDragRect` は元の四角形を消去し、新しい位置に新しい四角形を再描画します。 既定では、`DrawDragRect` はハーフトーンブラシを使用して四角形を描画し、ちらつきをなくし、滑らかな移動用の四角形の外観を作成します。
 
@@ -1540,7 +1540,7 @@ int DrawEscape(
 
 関数の結果を指定します。 成功した場合は0より大きい。実装のみをチェックする QUERYESCSUPPORT draw エスケープは除きます。エスケープが実装されていない場合は0。または、エラーが発生した場合は0未満です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 アプリケーションが `DrawEscape`を呼び出すと、 *Ninputsize*と*lpszinputdata*によって識別されるデータが、指定された表示ドライバーに直接渡されます。
 
@@ -1557,7 +1557,7 @@ void DrawFocusRect(LPCRECT lpRect);
 *lpRect*<br/>
 描画する四角形の論理座標を指定する[RECT](/windows/win32/api/windef/ns-windef-rect)構造体または[CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトをポイントします。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 これはブール XOR 関数であるため、同じ四角形でもう一度この関数を呼び出すと、四角形がディスプレイから削除されます。 この関数によって描画された四角形はスクロールできません。 この関数によって描画された四角形を含む領域をスクロールするには、まず `DrawFocusRect` を呼び出して、ディスプレイから四角形を削除します。次に、領域をスクロールし、`DrawFocusRect` をもう一度呼び出して、新しい位置に四角形を描画します。
 
@@ -1590,7 +1590,7 @@ BOOL DrawFrameControl(
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 いくつかの場合、 *nState*は*nType*パラメーターに依存します。 次の一覧は、4つの*nType*値と*nState*の関係を示しています。
 
@@ -1681,7 +1681,7 @@ BOOL DrawIcon(
 
 関数が正常に完了した場合は0以外の。それ以外の場合は0です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 関数は、 *x*と*y*で指定した位置にアイコンの左上隅を置きます。 場所は、デバイスコンテキストの現在のマッピングモードに従います。
 
@@ -1848,7 +1848,7 @@ int DrawText(
 
 関数が成功した場合のテキストの高さ。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 タブを適切なスペースに展開することによってテキストの書式を設定し、指定された四角形の左、右、または中央にテキストを配置し、指定された四角形内に収まるようにテキストを分割します。 書式設定の種類は、 *Nformat*によって指定されます。
 
@@ -1904,7 +1904,7 @@ int DrawTextEx(
 *lpDTParams*<br/>
 追加の書式設定オプションを指定する[Drawtextparams](/windows/win32/api/winuser/ns-winuser-drawtextparams)構造体へのポインター。 このパラメーターには NULL を指定できます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 タブを適切なスペースに展開することによってテキストの書式を設定し、指定された四角形の左、右、または中央にテキストを配置し、指定された四角形内に収まるようにテキストを分割します。 書式設定の種類は、 *Nformat*と*lpDTParams*によって指定されます。 詳細については、Windows SDK の「 [CDC::D rawText](#drawtext) 」と「 [drawtextex](/windows/win32/api/winuser/nf-winuser-drawtextexw) 」を参照してください。
 
@@ -1945,7 +1945,7 @@ BOOL Ellipse(LPCRECT lpRect);
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 楕円の中心は、 *x1*、 *y1*、 *x2*、 *y2*、または*lpRect*によって指定された外接する四角形の中心です。 楕円は現在のペンで描画され、その内部は現在のブラシで塗りつぶされます。
 
@@ -1965,7 +1965,7 @@ int EndDoc();
 
 関数が成功した場合は0以上、エラーが発生した場合は負の値。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、ENDDOC printer エスケープを置き換えます。印刷ジョブが正常に完了したら、すぐに呼び出す必要があります。
 
@@ -1989,7 +1989,7 @@ int EndPage();
 
 関数が成功した場合は0以上、エラーが発生した場合は負の値。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、通常、デバイスドライバーを新しいページに進めるために使用されます。
 
@@ -2043,7 +2043,7 @@ int EnumObjects(
 
 [コールバック関数](callback-functions-used-by-mfc.md#enum_objects)によって返される最後の値を指定します。 その意味はユーザー定義です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 指定された型のオブジェクトごとに、渡されるコールバック関数が、そのオブジェクトの情報と共に呼び出されます。 システムは、それ以上オブジェクトが存在しないか、コールバック関数が0を返すまで、コールバック関数を呼び出します。
 
@@ -2122,7 +2122,7 @@ int Escape(
 
 - SP_USERABORT ユーザーは、印刷マネージャーを使用してジョブを終了しました。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 元のプリンターのエスケープの場合、Win32 アプリケーションでは QUERYESCSUPPORT のみがサポートされます。 他のすべてのプリンターエスケープは互換性のために残されていますが、16ビットアプリケーションとの互換性のためだけにサポートされています。
 
@@ -2189,7 +2189,7 @@ int ExcludeClipRect(LPCRECT lpRect);
 
 - SIMPLEREGION 領域に重複する境界線がありません。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 *X2* - *x1*の絶対値によって指定される四角形の幅は、32767単位を超えることはできません。 この制限は、四角形の高さにも適用されます。
 
@@ -2252,7 +2252,7 @@ BOOL ExtFloodFill(
 
 関数が成功した場合は0以外の。それ以外の場合は、塗りつぶしを完了できなかった場合は、指定した点に*crColor* (FLOODFILLBORDER が要求された場合) によって指定された境界の色がある場合、 *crColor*によって指定された色 (FLOODFILLSURFACE が要求された場合)、またはポイントがクリッピング領域の外側にある場合は0。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、 *nFillType*で塗りつぶしの種類を指定できるため、`FloodFill` よりも柔軟性が高くなります。
 
@@ -2319,7 +2319,7 @@ BOOL ExtTextOut(
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 四角形の領域は不透明にすることができ (現在の背景色で塗りつぶされます)、クリッピング領域にすることができます。
 
@@ -2337,7 +2337,7 @@ BOOL FillPath();
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 内部がいっぱいになると、パスはデバイスコンテキストから破棄されます。
 
@@ -2359,7 +2359,7 @@ void FillRect(
 *pBrush*<br/>
 四角形の塗りつぶしに使用するブラシを識別します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 関数は、左および上の境界線を含む完全な四角形を塗りつぶしますが、右と下の境界線は塗りつぶしません。
 
@@ -2391,7 +2391,7 @@ BOOL FillRgn(
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ブラシを作成するには、`CBrush` メンバー関数 `CreateHatchBrush`、`CreatePatternBrush`、`CreateSolidBrush`、または `GetStockObject`によって取得される必要があります。
 
@@ -2435,7 +2435,7 @@ void FillSolidRect(
 *暦年*<br/>
 四角形の高さを指定します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `FillSolidRect` は[CDC:: FillRect](#fillrect); とよく似ています。ただし、`FillSolidRect` は、(COLORREF パラメーターによって示される) 純色のみを使用しますが、`FillRect` ブラシを受け取ります。したがって、純色、ディザーカラー、ハッチブラシ、パターンで四角形に塗りつぶすために使用できます。 `FillSolidRect` 通常、`FillRect`よりも高速です。
 
@@ -2480,7 +2480,7 @@ BOOL FloodFill(
 
 関数が成功した場合は0以外の。それ以外の場合は、塗りつぶしを完了できなかった場合は0が返されます。指定したポイントには*crColor*によって指定された境界色があるか、またはそのポイントがクリッピング領域の外側にあります。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この領域は、 *crColor*によって指定されたとおりに境界されていると見なされます。 `FloodFill` 関数は、 *x*と*y*によって指定された点から開始し、色の境界へのすべての方向に続きます。
 
@@ -2506,7 +2506,7 @@ void FrameRect(
 *pBrush*<br/>
 四角形をフレーム化するために使用するブラシを識別します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 関数は、指定されたブラシを使用して境界線を描画します。 境界線の幅と高さは常に1つの論理単位です。
 
@@ -2565,7 +2565,7 @@ Windows デバイスコンテキストを表すハンドルを格納します。
 
 ポインターは一時的である可能性があり、すぐに使用できる範囲を超えて格納しないでください。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `CDC` オブジェクトがハンドルに関連付けられていない場合は、一時的な `CDC` オブジェクトが生成され、関連付けられます。
 
@@ -2591,7 +2591,7 @@ int GetArcDirection() const;
 
 エラーが発生した場合、戻り値は0です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 弧関数と四角形関数は、円弧の方向を使用します。
 
@@ -2607,7 +2607,7 @@ CSize GetAspectRatioFilter() const;
 
 現在の縦横比フィルターで使用される縦横比を表す `CSize` オブジェクト。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 縦横比は、デバイスのピクセル幅と高さによって形成される比率です。 デバイスの縦横比に関する情報は、フォントの作成、選択、および表示に使用されます。 Windows には、使用可能なすべてのフォントの特定の縦横比に合わせてデザインされたフォントを選択するための、縦横比フィルターという特殊なフィルターが用意されています。 フィルターでは `SetMapperFlags` メンバー関数によって指定された縦横比が使用されます。
 
@@ -2623,7 +2623,7 @@ COLORREF GetBkColor() const;
 
 RGB カラー値。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 背景モードが不透明である場合、システムは背景色を使用して、スタイル設定された線のギャップ、ブラシのハッチ線間のギャップ、および文字セルの背景を塗りつぶします。 システムは、色とモノクロのデバイスコンテキストの間でビットマップを変換するときに、背景色も使用します。
 
@@ -2639,7 +2639,7 @@ int GetBkMode() const;
 
 現在のバックグラウンドモード。非透過または透明にすることができます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 バックグラウンドモードでは、テキスト、ハッチブラシ、または実線以外のペンスタイルを描画する前に、システムが描画サーフェイス上の既存の背景色を削除するかどうかを定義します。
 
@@ -2689,7 +2689,7 @@ CPoint GetBrushOrg() const;
 
 (デバイスユニット内の) ブラシの現在の原点を、 [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)オブジェクトとして生成します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 最初のブラシの原点は、クライアント領域の (0, 0) にあります。 戻り値は、デスクトップウィンドウの原点を基準として、このポイントをデバイス単位で指定します。
 
@@ -2738,7 +2738,7 @@ DWORD GetCharacterPlacement(
 
 関数が失敗した場合は、0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、Windows SDK で説明されているように、関数[Get文字配置](/windows/win32/api/wingdi/nf-wingdi-getcharacterplacementw)の機能をエミュレートします。
 
@@ -2776,7 +2776,7 @@ BOOL GetCharABCWidths(
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 幅は論理単位で返されます。 この関数は、TrueType フォントでのみ成功します。
 
@@ -2820,7 +2820,7 @@ BOOL GetCharABCWidthsI(
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、Windows SDK で説明されているように、関数[GetCharABCWidthsI](/windows/win32/api/wingdi/nf-wingdi-getcharabcwidthsi)の機能をエミュレートします。
 
@@ -2858,7 +2858,7 @@ BOOL GetCharWidth(
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 たとえば、 *Nfirstchar*が文字 ' a ' を識別し、 *nfirstchar*が文字 ' z ' を識別する場合、関数はすべての小文字の幅を取得します。
 
@@ -2896,7 +2896,7 @@ BOOL GetCharWidthI(
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、Windows SDK で説明されているように、 [Getchar幅 i](/windows/win32/api/wingdi/nf-wingdi-getcharwidthi)関数の機能をエミュレートします。
 
@@ -2925,7 +2925,7 @@ virtual int GetClipBox(LPRECT lpRect) const;
 
 - SIMPLEREGION クリッピング領域に重複する境界線がありません。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 次元は、 *lpRect*が指すバッファーにコピーされます。
 
@@ -2958,7 +2958,7 @@ CBitmap* GetCurrentBitmap() const;
 
 正常に終了した場合は `CBitmap` オブジェクトへのポインター。それ以外の場合は NULL。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、一時オブジェクトを返す場合があります。
 
@@ -2974,7 +2974,7 @@ CBrush* GetCurrentBrush() const;
 
 正常に終了した場合は `CBrush` オブジェクトへのポインター。それ以外の場合は NULL。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、一時オブジェクトを返す場合があります。
 
@@ -2990,7 +2990,7 @@ CFont* GetCurrentFont() const;
 
 正常に終了した場合は `CFont` オブジェクトへのポインター。それ以外の場合は NULL。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、一時オブジェクトを返す場合があります。
 
@@ -3006,7 +3006,7 @@ CPalette* GetCurrentPalette() const;
 
 正常に終了した場合は `CPalette` オブジェクトへのポインター。それ以外の場合は NULL。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、一時オブジェクトを返す場合があります。
 
@@ -3022,7 +3022,7 @@ CPen* GetCurrentPen() const;
 
 正常に終了した場合は `CPen` オブジェクトへのポインター。それ以外の場合は NULL。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、一時オブジェクトを返す場合があります。
 
@@ -3038,7 +3038,7 @@ CPoint GetCurrentPosition() const;
 
 `CPoint` オブジェクトとしての現在の位置。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 現在の位置は、`MoveTo` メンバー関数を使用して設定できます。
 
@@ -3056,7 +3056,7 @@ COLORREF GetDCBrushColor() const;
 
 関数が失敗した場合、戻り値は CLR_INVALID です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、Windows SDK で説明されているように、関数[いる getdcbrushcolor](/windows/win32/api/wingdi/nf-wingdi-getdcbrushcolor)の機能をエミュレートします。
 
@@ -3074,7 +3074,7 @@ COLORREF GetDCPenColor() const;
 
 関数が失敗した場合、戻り値は CLR_INVALID です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、Windows SDK で説明されているように、Win32 関数[Getdcpencolor](/windows/win32/api/wingdi/nf-wingdi-getdcpencolor)を利用します。
 
@@ -3129,7 +3129,7 @@ DWORD GetFontData(
 
 関数が成功した場合に*lpData*によって示されるバッファーで返されるバイト数を指定します。それ以外の場合は-1。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 取得する情報は、フォントファイルへのオフセットと返される情報の長さを指定することによって識別されます。
 
@@ -3151,7 +3151,7 @@ DWORD GetFontLanguageInfo() const;
 
 戻り値は、現在選択されているフォントの特性を識別します。 使用可能な値の完全な一覧については、「 [GetFontLanguageInfo](/windows/win32/api/wingdi/nf-wingdi-getfontlanguageinfo)」を参照してください。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、Windows SDK で説明されているように、関数[GetFontLanguageInfo](/windows/win32/api/wingdi/nf-wingdi-getfontlanguageinfo)の機能をエミュレートします。
 
@@ -3200,7 +3200,7 @@ DWORD GetGlyphOutline(
 
 *Cbbuffer*が0の場合、または*LPBUFFER*が NULL の場合に取得される情報に必要なバッファーのサイズ (バイト単位)。 それ以外の場合は、関数が成功した場合は正の値になり、エラーが発生した場合は-1 になります。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 アプリケーションでは、 *lpmat2*によって示される構造体に2つずつの変換行列を指定することにより、ビットマップ形式で取得された文字をローテーションできます。
 
@@ -3222,7 +3222,7 @@ int GetGraphicsMode() const;
 
 エラーの詳細情報を取得するには、 [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)を呼び出します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメソッドは、Windows GDI 関数[GetGraphicsMode](/windows/win32/api/wingdi/nf-wingdi-getgraphicsmode)をラップします。
 
@@ -3238,7 +3238,7 @@ static CBrush* PASCAL GetHalftoneBrush();
 
 成功した場合は `CBrush` オブジェクトへのポインター。それ以外の場合は NULL。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ハーフトーンブラシは、交互に前景と背景の色がディザーパターンを作成するピクセルを示しています。 ハーフトーンブラシによって作成されるディザーパターンの例を次に示します。
 
@@ -3278,7 +3278,7 @@ DWORD GetLayout() const;
 
 成功した場合は、現在のデバイスコンテキストのレイアウトフラグ。 それ以外の場合は、GDI_ERROR ます。 拡張エラー情報については、 [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)を呼び出してください。 レイアウトフラグの一覧については、「 [CDC:: SetLayout](#setlayout)」を参照してください。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 既定のレイアウトは左から右です。
 
@@ -3294,7 +3294,7 @@ int GetMapMode() const;
 
 マッピングモード。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 マッピングモードの詳細については、「`SetMapMode` メンバー関数」を参照してください。
 
@@ -3313,7 +3313,7 @@ float GetMiterLimit() const;
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 マイタ制限は、マイタカット結合を持つ幾何学線を描画するときに使用されます。
 
@@ -3334,7 +3334,7 @@ COLORREF GetNearestColor(COLORREF crColor) const;
 
 デバイスが表すことができる*crColor*の値に最も近い純色を定義する RGB (赤、緑、青) の色の値。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 指定されたデバイスは、この色を表すことができる必要があります。
 
@@ -3363,7 +3363,7 @@ UINT GetOutlineTextMetrics(
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 [OUTLINETEXTMETRIC](/windows/win32/api/wingdi/ns-wingdi-outlinetextmetricw)構造体には、 [textmetric](/windows/win32/api/wingdi/ns-wingdi-textmetricw)構造体など、TrueType 形式で提供されるフォントメトリック情報の大部分が含まれています。 `OUTLINETEXTMETRIC` 構造体の最後の4つのメンバーは、文字列へのポインターです。 アプリケーションでは、他のメンバーに必要な領域に加えて、これらの文字列用に領域を割り当てる必要があります。 文字列のサイズにはシステムによる制限がないため、メモリを割り当てる最も簡単な方法は、`GetOutlineTextMetrics` 関数の最初の呼び出しで*lpotm*に NULL を指定することによって、必要なサイズを取得することです。
 
@@ -3393,7 +3393,7 @@ BOOL GetOutputCharWidth(
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 たとえば、 *Nfirstchar*が文字 ' a ' を識別し、 *nfirstchar*が文字 ' z ' を識別する場合、関数はすべての小文字の幅を取得します。
 
@@ -3439,7 +3439,7 @@ CSize GetOutputTabbedTextExtent(
 
 [CSize](../../atl-mfc-shared/reference/csize-class.md)オブジェクト内の文字列の大きさ (論理単位)。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 文字列に1つ以上のタブ文字が含まれている場合、文字列の幅は、 *Lpntabstoppositions*によって指定されたタブストップに基づきます。 関数は、現在選択されているフォントを使用して、文字列のサイズを計算します。
 
@@ -3476,7 +3476,7 @@ CSize GetOutputTextExtent(const CString& str) const;
 
 [CSize](../../atl-mfc-shared/reference/csize-class.md)オブジェクトで返される文字列の大きさ (論理単位)。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 現在のクリッピング領域は、`GetOutputTextExtent`によって返される幅と高さには影響しません。
 
@@ -3537,7 +3537,7 @@ PT_BEZIERTO 型は常に3セットで発生します。 その直前のパスの
 
 *NCount*パラメーターが0以外の場合は、列挙された点の数。 *NCount*が0の場合、パス内の点の合計数 (および `GetPath` はバッファーに何も書き込みません)。 *NCount*が0以外で、パス内の点の数より小さい場合、戻り値は-1 になります。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 デバイスコンテキストには、閉じたパスが含まれている必要があります。 パスのポイントが論理座標で返されます。 ポイントはデバイス座標でパスに格納されるため、`GetPath` は、現在の変換の逆のを使用して、デバイス座標から論理座標に点を変更します。 パス内のすべての曲線を直線セグメントに変換するには、`FlattenPath` メンバー関数を `GetPath`する前に呼び出すことができます。
 
@@ -3572,7 +3572,7 @@ COLORREF GetPixel(POINT point) const;
 
 関数のいずれかのバージョンについて、指定されたポイントの色の RGB カラー値。 座標がクリッピング領域内のポイントを指定していない場合は、-1 になります。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ポイントはクリッピング領域に存在する必要があります。 点がクリッピング領域にない場合、関数は効果がなく、-1 を返します。
 
@@ -3592,7 +3592,7 @@ int GetPolyFillMode() const;
 
 関数が成功した場合は、現在の多角形塗りつぶしモード、代替またはワインディング。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 多角形入力モードの詳細については、`SetPolyFillMode` メンバー関数を参照してください。
 
@@ -3608,7 +3608,7 @@ int GetROP2() const;
 
 描画モード。 描画モードの値の一覧については、「`SetROP2` メンバー関数」を参照してください。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 描画モードでは、塗りつぶされたオブジェクトの色と塗りつぶしオブジェクトの内部を、表示サーフェイス上の既存の色と組み合わせて使用する方法を指定します。
 
@@ -3624,7 +3624,7 @@ HDC GetSafeHdc() const;
 
 デバイスコンテキストハンドル。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、null ポインターでも使用できます。
 
@@ -3640,7 +3640,7 @@ int GetStretchBltMode() const;
 
 戻り値は、現在のビットマップ伸縮モード (STRETCH_ANDSCANS、STRETCH_DELETESCANS、または STRETCH_ORSCANS) を指定します (関数が正常に実行された場合)。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ビットマップ伸縮モードは、`StretchBlt` のメンバー関数によって拡張または圧縮されたビットマップから情報を削除する方法を定義します。
 
@@ -3684,7 +3684,7 @@ CSize GetTabbedTextExtent(
 
 [CSize](../../atl-mfc-shared/reference/csize-class.md)オブジェクト内の文字列の大きさ (論理単位)。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 文字列に1つ以上のタブ文字が含まれている場合、文字列の幅は、 *Lpntabstoppositions*によって指定されたタブストップに基づきます。 関数は、現在選択されているフォントを使用して、文字列のサイズを計算します。
 
@@ -3722,7 +3722,7 @@ UINT GetTextAlign() const;
 
 - TA_UPDATECP は、現在の位置が更新されることを指定します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 テキスト配置フラグは、`TextOut` および `ExtTextOut` のメンバー関数が、文字列の開始点に対してテキストの文字列をどのように配置するかを決定します。 テキストの配置フラグは、必ずしも1ビットのフラグではなく、0に等しくなる可能性があります。 フラグが設定されているかどうかをテストするには、アプリケーションで次の手順を実行する必要があります。
 
@@ -3750,7 +3750,7 @@ int GetTextCharacterExtra() const;
 
 Intercharacter 間隔の量。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 GDI は、デバイスコンテキストにテキスト行を書き込むときに、改行文字を含む各文字にこの間隔を追加します。
 
@@ -3768,7 +3768,7 @@ COLORREF GetTextColor() const;
 
 現在のテキストの色を RGB カラー値として指定します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 テキストの色は、GDI のテキスト出力メンバー関数[TextOut](#textout)、 [ExtTextOut](#exttextout)、および[TabbedTextOut](#tabbedtextout)を使用して描画された文字の前景色です。
 
@@ -3799,7 +3799,7 @@ CSize GetTextExtent(const CString& str) const;
 
 [CSize](../../atl-mfc-shared/reference/csize-class.md)オブジェクト内の文字列の大きさ (論理単位)。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この情報は、属性デバイスコンテキスト[m_hAttribDC](#m_hattribdc)から取得されます。
 
@@ -3847,7 +3847,7 @@ BOOL GetTextExtentExPointI(
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、Windows SDK で説明されているように、関数[GetTextExtentExPointI](/windows/win32/api/wingdi/nf-wingdi-gettextextentexpointi)の機能をエミュレートします。
 
@@ -3877,7 +3877,7 @@ BOOL GetTextExtentPointI(
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、Windows SDK で説明されているように、関数[GetTextExtentPointI](/windows/win32/api/wingdi/nf-wingdi-gettextextentpointi)の機能をエミュレートします。
 
@@ -3908,7 +3908,7 @@ int GetTextFace(CString& rString) const;
 
 バッファーにコピーされたバイト数。終端の null 文字は含まれません。 エラーが発生した場合は0になります。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 タイプフェイス名は、null で終わる文字列としてコピーされます。
 
@@ -3965,7 +3965,7 @@ CWnd* GetWindow() const;
 
 成功した場合は `CWnd` オブジェクトへのポインター。それ以外の場合は NULL。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 これは高度な機能です。 たとえば、このメンバー関数は、印刷時または印刷プレビュー時にビューウィンドウを返さない場合があります。 出力に関連付けられたウィンドウが常に返されます。 指定された DC 描画を使用する出力関数は、このウィンドウに表示されます。
 
@@ -4014,7 +4014,7 @@ BOOL GetWorldTransform(XFORM& rXform) const;
 
 エラーの詳細情報を取得するには、 [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)を呼び出します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメソッドは、Windows GDI 関数[GetWorldTransform](/windows/win32/api/wingdi/nf-wingdi-getworldtransform)をラップします。
 
@@ -4052,7 +4052,7 @@ BOOL GradientFill(
 
 成功した場合は TRUE、それ以外の場合は FALSE。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 詳細については、Windows SDK の「`GradientFill`」を参照してください。
 
@@ -4105,7 +4105,7 @@ virtual BOOL GrayString(
 
 文字列が描画された場合は0以外の値。 `TextOut` 関数またはアプリケーションから提供された出力関数が0を返した場合は0、メモリが不足している場合は、暗転用のメモリビットマップを作成できません。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 関数は、選択したブラシと背景に関係なくテキストを淡色表示します。 `GrayString` メンバー関数は、現在選択されているフォントを使用します。 この関数を使用する前に、MM_TEXT マッピングモードを選択する必要があります。
 
@@ -4132,7 +4132,7 @@ void HIMETRICtoDP(LPSIZE lpSize) const;
 *lpSize*<br/>
 [サイズ](/windows/win32/api/windef/ns-windef-size)構造体または[CSize](../../atl-mfc-shared/reference/csize-class.md)オブジェクトを指します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 デバイスコンテキストオブジェクトのマッピングモードが MM_LOENGLISH、MM_HIENGLISH、MM_LOMETRIC または MM_HIMETRIC の場合、変換は物理インチのピクセル数に基づいています。 マッピングモードが他の非制約モード (MM_TEXT など) の1つである場合、変換は論理インチのピクセル数に基づいています。
 
@@ -4149,7 +4149,7 @@ void HIMETRICtoLP(LPSIZE lpSize) const;
 *lpSize*<br/>
 [サイズ](/windows/win32/api/windef/ns-windef-size)構造体または[CSize](../../atl-mfc-shared/reference/csize-class.md)オブジェクトを指します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この関数は、OLE から HIMETRIC サイズを取得し、アプリケーションの自然マッピングモードに変換する場合に使用します。
 
@@ -4198,7 +4198,7 @@ int IntersectClipRect(LPCRECT lpRect);
 
 - SIMPLEREGION 新しいクリッピング領域に重複する境界線がありません。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 GDI は、新しい境界内に収まるように後続のすべての出力をクリップします。 幅と高さは32767を超えることはできません。
 
@@ -4215,7 +4215,7 @@ void InvertRect(LPCRECT lpRect);
 *lpRect*<br/>
 反転させる四角形の論理座標を格納している `RECT` を指します。 このパラメーターに `CRect` オブジェクトを渡すこともできます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 反転は論理的な NOT 演算で、各ピクセルのビットを反転させます。 モノクロディスプレイでは、関数によって、白ピクセルと黒ピクセルが白になります。 色の表示では、反転は、ディスプレイの色がどのように生成されるかによって異なります。 同じ四角形を使用して2回 `InvertRect` を呼び出すと、その表示が以前の色に復元されます。
 
@@ -4242,7 +4242,7 @@ BOOL InvertRgn(CRgn* pRgn);
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 モノクロディスプレイでは、関数によって、白ピクセルと黒ピクセルが白になります。 色の表示では、反転は、ディスプレイの色の生成方法によって異なります。
 
@@ -4285,7 +4285,7 @@ BOOL LineTo(POINT point);
 
 直線が描画される場合は0以外の。それ以外の場合は0です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 選択したペンで線が描画されます。 現在位置が*x*、 *y* 、または*point*に設定されています。
 
@@ -4320,7 +4320,7 @@ void LPtoDP(LPSIZE lpSize) const;
 *lpSize*<br/>
 [サイズ](/windows/win32/api/windef/ns-windef-size)構造体または[CSize](../../atl-mfc-shared/reference/csize-class.md)オブジェクトを指します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 関数は、GDI の論理座標系からデバイス座標系に、各点 (またはサイズの次元) の座標をマップします。 変換は、現在のマッピングモードと、デバイスのウィンドウとビューポートのオリジンとエクステントの設定によって異なります。
 
@@ -4339,7 +4339,7 @@ void LPtoHIMETRIC(LPSIZE lpSize) const;
 *lpSize*<br/>
 `SIZE` 構造体または `CSize` オブジェクトを指します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 アプリケーションの自然マッピングモードから変換して、OLE に HIMETRIC サイズを指定するときに、この関数を使用します。 デバイスのウィンドウとビューポートの範囲が結果に影響することに注意してください。
 
@@ -4353,7 +4353,7 @@ void LPtoHIMETRIC(LPSIZE lpSize) const;
 HDC m_hAttribDC;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 既定では、このデバイスコンテキストは `m_hDC`に相当します。 一般に、デバイスコンテキストから情報を要求する GDI 呼び出し `CDC` `m_hAttribDC`に送られます。 これら2つのデバイスコンテキストの使用の詳細については、 [CDC](../../mfc/reference/cdc-class.md)クラスの説明を参照してください。
 
@@ -4365,7 +4365,7 @@ HDC m_hAttribDC;
 HDC m_hDC;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 既定では、`m_hDC` は、`CDC`によってラップされたその他のデバイスコンテキスト `m_hAttribDC`と等しくなります。 一般に、出力を作成する GDI 呼び出し `CDC` `m_hDC` デバイスコンテキストに送られます。 `m_hDC` を初期化し、別のデバイスを指すよう `m_hAttribDC` できます。 これら2つのデバイスコンテキストの使用の詳細については、 [CDC](../../mfc/reference/cdc-class.md)クラスの説明を参照してください。
 
@@ -4427,7 +4427,7 @@ BOOL MaskBlt(
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 *Maskbitmap*によって指定されたマスクの値が1の場合は、 *dwRop*によって指定された前景ラスター操作コードをその場所に適用する必要があることを示します。 マスクの値が0の場合は、 *dwRop*によって指定されたバックグラウンドラスター操作コードがその場所で適用されることを示します。 ラスター操作にソースが必要な場合は、マスクの四角形がソースの四角形をカバーする必要があります。 そうでない場合、関数は失敗します。 ラスター操作にソースが不要な場合は、マスクの四角形が変換先の四角形に対応している必要があります。 そうでない場合、関数は失敗します。
 
@@ -4461,7 +4461,7 @@ BOOL ModifyWorldTransform(
 
 エラーの詳細情報を取得するには、 [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)を呼び出します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメソッドは、Windows GDI 関数[ModifyWorldTransform](/windows/win32/api/wingdi/nf-wingdi-modifyworldtransform)をラップします。
 
@@ -4531,7 +4531,7 @@ int OffsetClipRgn(SIZE size);
 
 - SIMPLEREGION クリッピング領域に重複する境界線がありません。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 関数は、y 軸に沿って x 軸と*y*単位に沿って領域の*x*単位を移動します。
 
@@ -4591,7 +4591,7 @@ operator HDC() const;
 
 成功した場合は、デバイスコンテキストオブジェクトのハンドル。それ以外の場合は NULL。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ハンドルを使用すると、Windows Api を直接呼び出すことができます。
 
@@ -4656,7 +4656,7 @@ BOOL PatBlt(
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 パターンは、選択したブラシと、デバイス上に既にあるパターンを組み合わせたものです。 *DwRop*によって指定されたラスター操作コードは、パターンの結合方法を定義します。 この関数に一覧表示されているラスター操作は、完全な256三項ラスター操作コードの一部に限定されています。特に、ソースを参照するラスター操作コードは使用できません。
 
@@ -4722,7 +4722,7 @@ BOOL Pie(
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 弧の中心は、 *x1*、 *y1*、 *x2*、および*y2* (または*lpRect*) によって指定された外接する四角形の中心です。 円弧の開始点と終了点は、 *x3*、 *y3*、 *X4*、および*y4* ( *ptstart*および*ptstart*) によって指定されます。
 
@@ -4761,7 +4761,7 @@ BOOL PlayMetaFile(
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 メタファイルは何回でも再生できます。
 
@@ -4821,7 +4821,7 @@ BOOL PlgBlt(
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 指定されたビットマスクハンドルが有効なモノクロビットマップを識別する場合、この関数は、このビットマップを使用して、ソースの四角形の色データのビットをマスクします。
 
@@ -4859,7 +4859,7 @@ BOOL PolyBezier(
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この関数は、 *lpPoints*パラメーターで指定されたエンドポイントと制御ポイントを使用して、3次ベジエスプラインを描画します。 最初のスプラインは、2番目と3番目の点を制御点として使用することで、最初の点から4番目の点まで描画されます。 シーケンス内の後続の各スプラインには、3つ以上の点が必要です。前のスプラインの終点が開始点として使用され、シーケンス内の次の2つの点は制御点で、3番目はエンドポイントです。
 
@@ -4887,7 +4887,7 @@ BOOL PolyBezierTo(
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この関数は、 *lpPoints*パラメーターで指定された制御点を使用して、3次ベジエスプラインを描画します。 最初の2つの点を制御点として使用して、最初のスプラインを現在の位置から3番目の点まで描画します。 後続の各スプラインでは、関数にはさらに3つの点が必要です。また、前のスプラインの終点を次の点として使用します。 `PolyBezierTo` は、現在の位置を最後のベジエスプラインの終点に移動します。 この図は塗りつぶされていません。 この関数は、現在のペンを使用して線を描画します。
 
@@ -4935,7 +4935,7 @@ PT_BEZIERTO 型は常に3セットで発生します。 現在の位置は、ベ
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この関数を使用すると、`CDC::MoveTo`、`CDC::LineTo`、および `CDC::PolyBezierTo` メンバー関数への連続した呼び出しの代わりに、不整合な数値を描画できます。 直線とスプラインは、現在のペンを使用して描画され、数値は塗りつぶされません。 `CDC::BeginPath` メンバー関数の呼び出しによって開始されたアクティブなパスがある場合は、`PolyDraw` をパスに追加します。 *LpPoints*配列と*lptypes*に含まれる点は、各点が `CDC::MoveTo`、`CDC::LineTo`、または `CDC::BezierTo` 操作の一部であるかどうかを示します。 また、図を閉じることもできます。 この関数は、現在の位置を更新します。
 
@@ -4965,7 +4965,7 @@ BOOL Polygon(
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 必要に応じて、最後の頂点から最初の頂点までの線を描画することによって、多角形が自動的に閉じられます。
 
@@ -4997,7 +4997,7 @@ BOOL Polyline(
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 線は、現在のペンを使用して、最初の点から後続の点まで描画されます。 `LineTo` メンバー関数とは異なり、`Polyline` 関数は、現在の位置を使用したり更新したりすることはありません。
 
@@ -5025,7 +5025,7 @@ BOOL PolylineTo(
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 現在の位置から、現在のペンを使用して、 *lpPoints*パラメーターで指定された最初の点まで直線が描画されます。 この関数は、行を追加するたびに、前の行の終了位置から、 *lpPoints*で指定された次の点まで描画します。 `PolylineTo` は、現在の位置を最後の行の終了位置に移動します。 この関数によって描画された線分が閉じた図形を形成する場合、図形は塗りつぶされません。
 
@@ -5055,7 +5055,7 @@ BOOL PolyPolygon(
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ポリゴンは、結合されていないか、重複している可能性があります。
 
@@ -5091,7 +5091,7 @@ BOOL PolyPolyline(
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 線分は、現在のペンを使用して描画されます。 セグメントで形成された図形は塗りつぶされません。 現在の位置は、この関数によって使用されることも更新されることもありません。
 
@@ -5146,7 +5146,7 @@ UINT RealizePalette();
 
 システムパレット内の異なるエントリにマップされた論理パレット内のエントリの数を示します。 これは、論理パレットが最後に認識されてからシステムパレットの変更に対応するために、この関数が再マップしたエントリの数を表します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 論理カラーパレットは、カラー集中型のアプリケーションとシステムの間のバッファーとして機能します。これにより、アプリケーションは、独自に表示した色や他のウィンドウで表示されている色に干渉することなく、必要な数の色を使用できます。
 
@@ -5189,7 +5189,7 @@ BOOL Rectangle(LPCRECT lpRect);
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 四角形の内部は、現在のブラシを使用して塗りつぶされます。
 
@@ -5224,7 +5224,7 @@ virtual BOOL RectVisible(LPCRECT lpRect) const;
 virtual void ReleaseAttribDC();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 これによって `Detach` が発生することはありません。 出力デバイスコンテキストだけが `CDC` オブジェクトにアタッチされ、デタッチできます。
 
@@ -5236,7 +5236,7 @@ virtual void ReleaseAttribDC();
 virtual void ReleaseOutputDC();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 出力デバイスコンテキストが `CDC` オブジェクトにアタッチされている場合、このメンバー関数を呼び出すことはできません。 出力デバイスコンテキストをデタッチするには、`Detach` メンバー関数を使用します。
 
@@ -5257,7 +5257,7 @@ Windows `DEVMODE` 構造体へのポインター。
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 デバイスコンテキストは、Windows `DEVMODE` 構造体で指定された情報から更新されます。 このメンバー関数は、属性デバイスコンテキストのみをリセットします。
 
@@ -5284,7 +5284,7 @@ virtual BOOL RestoreDC(int nSavedDC);
 
 指定したコンテキストが復元された場合は0以外の。それ以外の場合は0です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `RestoreDC` は、以前に `SaveDC` メンバー関数の呼び出しによって作成されたスタックから状態情報をポップすることによって、デバイスコンテキストを復元します。
 
@@ -5338,7 +5338,7 @@ BOOL RoundRect(
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 四角形の内部は、現在のブラシを使用して塗りつぶされます。
 
@@ -5360,7 +5360,7 @@ virtual int SaveDC();
 
 保存されているデバイスコンテキストを識別する整数。 エラーが発生した場合は0になります。 この戻り値は、`RestoreDC`を呼び出すことによってデバイスコンテキストを復元するために使用できます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 保存されたデバイスコンテキストは、後で `RestoreDC`を使用して復元できます。
 
@@ -5396,7 +5396,7 @@ virtual CSize ScaleViewportExt(
 
 `CSize` オブジェクトとしての、以前のビューポートのエクステント (デバイス単位)。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 数式は次のように記述されます。
 
@@ -5436,7 +5436,7 @@ virtual CSize ScaleWindowExt(
 
 `CSize` オブジェクトとしての、前のウィンドウのエクステント (論理単位)。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 数式は次のように記述されます。
 
@@ -5484,7 +5484,7 @@ BOOL ScrollDC(
 
 スクロールを実行する場合は0以外の。それ以外の場合は0です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 *LpRectUpdate*が NULL の場合、Windows は更新用の四角形を計算しません。 *Prgnupdate*と*lpRectUpdate*の両方が NULL の場合、Windows では更新リージョンは計算されません。 *Prgnupdate*が NULL でない場合、Windows は、(`ScrollDC` メンバー関数によって定義された) スクロールプロセスによってカバーされていない領域への有効なポインターが含まれていると想定します。 *LpRectUpdate*で返される更新リージョンは、必要に応じて `CWnd::InvalidateRgn` に渡すことができます。
 
@@ -5517,7 +5517,7 @@ BOOL SelectClipPath(int nMode);
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 識別されたデバイスコンテキストには、閉じたパスが含まれている必要があります。
 
@@ -5567,7 +5567,7 @@ int SelectClipRgn(
 
 - SIMPLEREGION 新しいクリッピング領域に重複する境界線がありません。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 選択された領域のコピーのみが使用されます。 リージョン自体は、他の任意の数のデバイスコンテキストに対して選択することも、削除することもできます。
 
@@ -5622,7 +5622,7 @@ Region パラメーターを受け取るメンバー関数のバージョンは�
 
 - SIMPLEREGION 新しいクリッピング領域に重複する境界線がありません。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 クラス `CDC` には、ペン、ブラシ、フォント、ビットマップ、領域など、特定の種類の GDI オブジェクトに特化した5つのバージョンが用意されています。 新しく選択されたオブジェクトは、同じ型の前のオブジェクトを置き換えます。 たとえば、`SelectObject` の一般バージョンの*pObject*が[CPen](../../mfc/reference/cpen-class.md)オブジェクトを指している場合、関数は、現在のペンを*pObject*で指定されたペンで置き換えます。
 
@@ -5652,7 +5652,7 @@ CPalette* SelectPalette(
 
 *PPalette*によって指定されたパレットによって置き換えられた論理パレットを識別する `CPalette` オブジェクトへのポインター。 エラーが発生した場合は NULL になります。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 新しいパレットは、GDI がデバイスコンテキストに表示される色を制御し、前のパレットを置き換えるパレットオブジェクトになります。
 
@@ -5734,7 +5734,7 @@ Abort プロシージャとしてインストールする abort 関数へのポ�
 
 - SP_USERABORT ユーザーは、印刷マネージャーを使用してジョブを終了しました。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 スプール中に印刷ジョブがキャンセルされることをアプリケーションが許可する場合は、 [StartDoc](#startdoc)メンバー関数を使用して印刷ジョブを開始する前に、abort 関数を設定する必要があります。 プリントマネージャーは、スプール中に abort 関数を呼び出して、アプリケーションが印刷ジョブをキャンセルするか、ディスク領域不足の状態を処理できるようにします。 Abort 関数が設定されていない場合、スプール用のディスク領域が不足していると、印刷ジョブは失敗します。
 
@@ -5771,7 +5771,7 @@ int SetArcDirection(int nArcDirection);
 
 成功した場合は、古い円弧の方向を指定します。それ以外の場合は0です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 既定の方向は反時計回りです。 `SetArcDirection` 関数は、次の関数が描画する方向を指定します。
 
@@ -5794,7 +5794,7 @@ virtual void SetAttribDC(HDC hDC);
 *hDC*<br/>
 Windows デバイスコンテキスト。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、デバイスコンテキストを `CDC` オブジェクトにアタッチしません。 出力デバイスコンテキストのみが `CDC` オブジェクトにアタッチされます。
 
@@ -5815,7 +5815,7 @@ virtual COLORREF SetBkColor(COLORREF crColor);
 
 前の背景色を RGB 色値として指定します。 エラーが発生した場合、戻り値は0x80000000 になります。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 背景モードが不透明である場合、システムは背景色を使用して、スタイル設定された線のギャップ、ブラシのハッチ線間のギャップ、および文字セルの背景を塗りつぶします。 システムは、色とモノクロのデバイスコンテキストの間でビットマップを変換するときに、背景色も使用します。
 
@@ -5842,7 +5842,7 @@ int SetBkMode(int nBkMode);
 
 前のバックグラウンドモード。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 バックグラウンドモードでは、テキスト、ハッチブラシ、または実線以外のペンスタイルを描画する前に、システムが描画サーフェイス上の既存の背景色を削除するかどうかを定義します。
 
@@ -5884,7 +5884,7 @@ UINT SetBoundsRect(
 
 - DCB_ENABLE の範囲の累積がオンになっています。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Windows では、すべての描画操作に対して外接する四角形を維持できます。 この四角形は、アプリケーションでクエリおよびリセットできます。 描画の境界は、ビットマップキャッシュを無効にする場合に便利です。
 
@@ -5915,7 +5915,7 @@ CPoint SetBrushOrg(POINT point);
 
 デバイスユニット内のブラシの前の原点。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ブラシの原点の既定の座標は、(0, 0) です。 ブラシの原点を変更するには、`CBrush` オブジェクトの `UnrealizeObject` 関数を呼び出し、`SetBrushOrg`を呼び出します。次に、`SelectObject` メンバー関数を呼び出して、デバイスコンテキストにブラシを選択します。
 
@@ -5938,7 +5938,7 @@ BOOL SetColorAdjustment(const COLORADJUSTMENT* lpColorAdjust);
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 カラー調整値は、ハーフトーンモードが設定されている場合に `CDC::StretchBlt` メンバー関数を呼び出すために、ソースビットマップの入力色を調整するために使用されます。
 
@@ -5961,7 +5961,7 @@ COLORREF SetDCBrushColor(COLORREF crColor);
 
 関数が失敗した場合、戻り値は CLR_INVALID です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメソッドは、Windows SDK で説明されているように、関数[SetDCBrushColor](/windows/win32/api/wingdi/nf-wingdi-setdcbrushcolor)の機能をエミュレートします。
 
@@ -5982,7 +5982,7 @@ COLORREF SetDCPenColor(COLORREF crColor);
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、Windows SDK で説明されているように、Win32 関数[Setdcpencolor](/windows/win32/api/wingdi/nf-wingdi-setdcpencolor)を利用します。
 
@@ -6005,7 +6005,7 @@ int SetGraphicsMode(int iMode);
 
 失敗した場合は0を返します。 エラーの詳細情報を取得するには、 [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)を呼び出します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメソッドは、Windows GDI 関数[SetGraphicsMode](/windows/win32/api/wingdi/nf-wingdi-setgraphicsmode)をラップします。
 
@@ -6034,7 +6034,7 @@ DWORD SetLayout(DWORD dwLayout);
 
 失敗した場合は、GDI_ERROR ます。 エラーの詳細情報を取得するには、 [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)を呼び出します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 通常、ウィンドウに対して `SetLayout` を呼び出すことはありません。 代わりに、WS_EX_RTLREADING などの[拡張ウィンドウスタイル](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)を設定して、ウィンドウの右から左へのレイアウトを制御します。 プリンターやメタファイルなどのデバイスコンテキストは、このレイアウトを継承しません。 右から左へのレイアウトのためにデバイスコンテキストを設定する唯一の方法は、`SetLayout`を呼び出すことです。
 
@@ -6077,7 +6077,7 @@ virtual int SetMapMode(int nMapMode);
 
 以前のマッピングモード。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 マッピングモードは、論理ユニットをデバイスユニットに変換するために使用される単位を定義します。また、デバイスの x 軸と y 軸の向きも定義します。 GDI は、マッピングモードを使用して論理座標を適切なデバイス座標に変換します。 MM_TEXT モードを使用すると、アプリケーションはデバイスピクセルで作業できます。1単位は1ピクセルです。 ピクセルの物理サイズは、デバイスごとに異なります。
 
@@ -6107,7 +6107,7 @@ DWORD SetMapperFlags(DWORD dwFlag);
 
 フォントマッパーフラグの前の値。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 アプリケーションで `SetMapperFlags` を使用すると、フォントマッパーは、指定されたデバイスの縦横比と完全に一致する物理フォントのみを選択することができます。
 
@@ -6132,7 +6132,7 @@ BOOL SetMiterLimit(float fMiterLimit);
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 マイタの長さは、結合の内側の線の壁面と、結合の外側の線の壁面の交差部分との距離として定義されます。 マイターリミットは、マイタ長が線の幅に対して許容される最大の比率です。 既定のマイター制限は10.0 です。
 
@@ -6149,7 +6149,7 @@ virtual void SetOutputDC(HDC hDC);
 *hDC*<br/>
 Windows デバイスコンテキスト。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、デバイスコンテキストが `CDC` オブジェクトにアタッチされていない場合にのみ呼び出すことができます。 このメンバー関数は `m_hDC` を設定しますが、`CDC` オブジェクトにデバイスコンテキストをアタッチしません。
 
@@ -6186,7 +6186,7 @@ COLORREF SetPixel(
 
 ポイントが実際に描画される色の RGB 値。 この値は、その色の近似値が使用される場合に、 *crColor*で指定された値と異なることがあります。 関数が失敗した場合 (ポイントがクリッピング領域の外側にある場合)、戻り値は-1 になります。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ポイントはクリッピング領域に存在する必要があります。 点がクリッピング領域にない場合、関数は何も行いません。
 
@@ -6225,7 +6225,7 @@ BOOL SetPixelV(
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ポイントは、クリッピング領域と、デバイス画面の表示部分の両方に存在する必要があります。 すべてのデバイスがメンバー関数をサポートしているわけではありません。 詳細については、`CDC::GetDeviceCaps` メンバー関数の RC_BITBLT 機能を参照してください。 実際に描画されたポイントの色の値を返す必要がないため、`SetPixelV` は `SetPixel` より高速です。
 
@@ -6246,7 +6246,7 @@ int SetPolyFillMode(int nPolyFillMode);
 
 成功した場合は、前の入力モード。それ以外の場合は0です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 多角形の塗りつぶしモードが別の場合、システムは各スキャン行の奇数と偶数の多角形の辺の間に領域を塗りつぶします。 つまり、システムによって、最初と2番目の側、3番目と4番目の側の間の領域が塗りつぶされます。 このモードが既定値です。
 
@@ -6303,7 +6303,7 @@ int SetROP2(int nDrawMode);
 
 Windows SDK で指定されている値のいずれかを指定できます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 描画モードでは、塗りつぶされたオブジェクトの色と塗りつぶしオブジェクトの内部を、表示サーフェイス上の既存の色と組み合わせて使用する方法を指定します。
 
@@ -6322,7 +6322,7 @@ int SetStretchBltMode(int nStretchMode);
 *nStretchMode*<br/>
 伸縮モードを指定します。 次のいずれかの値を指定できます。
 
-|値|説明|
+|値|Description|
 |-----------|-----------------|
 |BLACKONWHITE|削除されたピクセルと既存のピクセルの色の値を使用して、ブール値と演算を実行します。 ビットマップがモノクロビットマップである場合、このモードでは白いピクセルを犠牲にして黒いピクセルが保持されます。|
 |COLORONCOLOR|ピクセルを削除します。 このモードでは、消去されたピクセルのすべての行が削除されますが、情報を保持しません。|
@@ -6338,7 +6338,7 @@ int SetStretchBltMode(int nStretchMode);
 
 前の伸縮モード。 STRETCH_ANDSCANS、STRETCH_DELETESCANS、または STRETCH_ORSCANS にすることができます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ビットマップ伸縮モードでは、関数を使用して圧縮されたビットマップから情報を削除する方法が定義されます。
 
@@ -6385,7 +6385,7 @@ UINT SetTextAlign(UINT nFlags);
 
 成功した場合は、前のテキスト配置設定。 下位バイトには水平の設定が含まれ、上位バイトには垂直の設定が含まれます。それ以外の場合は0です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `TextOut` および `ExtTextOut` のメンバー関数は、表示またはデバイスにテキストの文字列を配置するときに、これらのフラグを使用します。 フラグは、特定のポイントとテキストの範囲を示す四角形の間のリレーションシップを指定します。 この点の座標は、パラメーターとして `TextOut` メンバー関数に渡されます。 テキストの境界となる四角形は、テキスト文字列内の隣接する文字セルによって形成されます。
 
@@ -6406,7 +6406,7 @@ int SetTextCharacterExtra(int nCharExtra);
 
 前の intercharacter 間隔の量。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 GDI は、デバイスコンテキストにテキスト行を書き込むときに、改行文字を含む各文字にこの間隔を追加します。 Intercharacter 間隔の既定値は0です。
 
@@ -6427,7 +6427,7 @@ virtual COLORREF SetTextColor(COLORREF crColor);
 
 前のテキストの色の RGB 値。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 システムは、このデバイスコンテキストにテキストを書き込むとき、およびカラーとモノクロのデバイスコンテキスト間でビットマップを変換するときに、このテキストの色を使用します。
 
@@ -6459,7 +6459,7 @@ int SetTextJustification(
 
 関数が正常に実行された場合は、それ以外の場合は0です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 アプリケーションでは、`GetTextMetrics` のメンバー関数を使用して、フォントの改行文字を取得できます。
 
@@ -6500,7 +6500,7 @@ CSize SetViewportExt(SIZE size);
 
 ビューポートの前のエクステントを[CSize](../../atl-mfc-shared/reference/csize-class.md)オブジェクトとして。 エラーが発生すると、返された `CSize` オブジェクトの x 座標と y 座標の両方が0に設定されます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ビューポートは、デバイスコンテキストウィンドウと共に、GDI が論理座標系のポイントを、実際のデバイスの座標系のポイントにどのようにマップするかを定義します。 つまり、GDI が論理座標をデバイス座標に変換する方法を定義します。
 
@@ -6544,7 +6544,7 @@ CPoint SetViewportOrg(POINT point);
 
 `CPoint` オブジェクトとしてのビューポートの前の原点 (デバイス座標内)。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ビューポートは、デバイスコンテキストウィンドウと共に、GDI が論理座標系のポイントを、実際のデバイスの座標系のポイントにどのようにマップするかを定義します。 つまり、GDI が論理座標をデバイス座標に変換する方法を定義します。
 
@@ -6581,7 +6581,7 @@ CSize SetWindowExt(SIZE size);
 
 `CSize` オブジェクトとしてのウィンドウの前のエクステント (論理単位)。 エラーが発生した場合は、返された `CSize` オブジェクトの x 座標と y 座標の両方が0に設定されます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ウィンドウは、デバイスコンテキストビューポートと共に、GDI が論理座標系のポイントをデバイス座標系のポイントにマップする方法を定義します。
 
@@ -6632,7 +6632,7 @@ CPoint SetWindowOrg(POINT point);
 
 `CPoint` オブジェクトとしてのウィンドウの前の原点。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ウィンドウは、デバイスコンテキストビューポートと共に、GDI が論理座標系のポイントをデバイス座標系のポイントにマップする方法を定義します。
 
@@ -6659,7 +6659,7 @@ BOOL SetWorldTransform(const XFORM& rXform);
 
 エラーの詳細情報を取得するには、 [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)を呼び出します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメソッドは、Windows GDI 関数[SetWorldTransform](/windows/win32/api/wingdi/nf-wingdi-setworldtransform)をラップします。
 
@@ -6686,7 +6686,7 @@ int StartDoc(LPCTSTR lpszDocName);
 
 関数が失敗した場合、戻り値は0以下です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 これにより、1つのページよりも長いドキュメントを他のジョブと混在させることができなくなります。
 
@@ -6712,7 +6712,7 @@ int StartPage();
 
 関数が成功した場合は0以上、エラーが発生した場合は負の値。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `StartPage` は、NEWFRAME とバンド情報のエスケープよりも優先されます。
 
@@ -6808,7 +6808,7 @@ BOOL StretchBlt(
 
 ビットマップが描画された場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この関数は、コピー先デバイス コンテキストの伸縮モード (`SetStretchBltMode` で設定) を使用して、ビットマップを拡大または縮小する方法を決定します。
 
@@ -6836,7 +6836,7 @@ BOOL StrokeAndFillPath();
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 デバイスコンテキストには、閉じたパスが含まれている必要があります。 `StrokeAndFillPath` メンバー関数は、パス内のすべての開いている図形を閉じるのと同じ効果があります。ただし、ペンの幅が広い場合でも、塗りつぶされた領域がストローク領域と重なることはありません。
 
@@ -6852,7 +6852,7 @@ BOOL StrokePath();
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 デバイスコンテキストには、閉じたパスが含まれている必要があります。
 
@@ -6909,7 +6909,7 @@ CSize TabbedTextOut(
 
 `CSize` オブジェクトとしての文字列の大きさ (論理単位)。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 テキストは現在選択されているフォントで書かれています。 *Ntabpositions*が0で*Lpntabstoppositions*が NULL の場合、タブは平均文字幅の8倍に拡張されます。
 
@@ -6955,7 +6955,7 @@ BOOL TextOut(
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 文字の起点は文字セルの左上隅です。 既定では、関数は現在位置を使用することも、更新することもありません。
 
@@ -7019,7 +7019,7 @@ BOOL TransparentBlt(
 
 成功した場合は TRUE、それ以外の場合は FALSE。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `TransparentBlt` を使用すると、透明度が可能になります。つまり、 *Clrtransparent*によって示される RGB 色は、転送用に透明に表示されます。
 
@@ -7033,7 +7033,7 @@ BOOL TransparentBlt(
 void UpdateColors();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 認識された論理パレットを持つ非アクティブウィンドウは、システムパレットが変更されたときにクライアント領域を再描画する代わりに、`UpdateColors` を呼び出すことができます。
 
@@ -7053,7 +7053,7 @@ BOOL WidenPath();
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この関数は、現在のペンが2番目のバージョンの `CreatePen` メンバー関数によって作成されたジオメトリックペンである場合、またはペンが最初のバージョンの `CreatePen` で作成され、幅が1より大きい場合にのみ成功します。 デバイスコンテキストには、閉じたパスが含まれている必要があります。 パス内のすべてのベジエ曲線は、拡大された曲線のおおよその直線のシーケンスに変換されます。 そのため、`WidenPath` が呼び出された後も、パスにはベジエ曲線が残っていません。
 

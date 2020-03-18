@@ -29,15 +29,15 @@ helpviewer_keywords:
 - CMFCListCtrl [MFC], Sort
 ms.assetid: 50d16aee-138c-4f34-8690-cb75d544ef2e
 ms.openlocfilehash: 599a00af28ee5b8effbabbe5b334022ceb49f91a
-ms.sourcegitcommit: 725e86dabe2901175ecc63261c3bf05802dddff4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68682346"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425821"
 ---
 # <a name="cmfclistctrl-class"></a>CMFCListCtrl クラス
 
-クラス`CMFCListCtrl`は、 [CMFCHeaderCtrl クラス](../../mfc/reference/cmfcheaderctrl-class.md)の高度なヘッダーコントロール機能をサポートすることによって、 [CListCtrl クラス](../../mfc/reference/clistctrl-class.md)クラスの機能を拡張します。
+`CMFCListCtrl` クラスは、 [CMFCHeaderCtrl クラス](../../mfc/reference/cmfcheaderctrl-class.md)の高度なヘッダーコントロール機能をサポートすることで、 [CListCtrl クラス](../../mfc/reference/clistctrl-class.md)クラスの機能を拡張します。
 
 ## <a name="syntax"></a>構文
 
@@ -49,7 +49,7 @@ class CMFCListCtrl : public CListCtrl
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|名前|説明|
+|Name|Description|
 |----------|-----------------|
 |[CMFCListCtrl::EnableMarkSortedColumn](#enablemarksortedcolumn)|並べ替えられた列を別の背景色でマークする機能を有効にします。|
 |[CMFCListCtrl::EnableMultipleSort](#enablemultiplesort)|複数の並べ替えモードを有効にします。|
@@ -63,9 +63,9 @@ class CMFCListCtrl : public CListCtrl
 |[CMFCListCtrl:: SetSortColumn](#setsortcolumn)|現在の並べ替えられた列と並べ替え順序を設定します。|
 |[CMFCListCtrl:: Sort](#sort)|リストコントロールを並べ替えます。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-`CMFCListCtrl`では、 [CListCtrl クラス](../../mfc/reference/clistctrl-class.md)クラスに2つの拡張機能が用意されています。 まず、ヘッダーに自動的に並べ替え矢印を描画して、列の並べ替えが使用可能なオプションであることを示します。 2つ目は、同時に複数の列のデータの並べ替えをサポートすることです。
+`CMFCListCtrl` では、 [CListCtrl クラス](../../mfc/reference/clistctrl-class.md)クラスに2つの拡張機能が用意されています。 まず、ヘッダーに自動的に並べ替え矢印を描画して、列の並べ替えが使用可能なオプションであることを示します。 2つ目は、同時に複数の列のデータの並べ替えをサポートすることです。
 
 ## <a name="example"></a>例
 
@@ -80,7 +80,7 @@ class CMFCListCtrl : public CListCtrl
 
 [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
-[CWnd](../../mfc/reference/cwnd-class.md)
+[から派生しているのではない](../../mfc/reference/cwnd-class.md)
 
 [CListCtrl](../../mfc/reference/clistctrl-class.md)
 
@@ -90,7 +90,7 @@ class CMFCListCtrl : public CListCtrl
 
 **ヘッダー:** afxlistctrl
 
-##  <a name="enablemarksortedcolumn"></a>  CMFCListCtrl::EnableMarkSortedColumn
+##  <a name="enablemarksortedcolumn"></a>CMFCListCtrl::EnableMarkSortedColumn
 
 並べ替えられた列を別の背景色でマークします。
 
@@ -108,9 +108,9 @@ void EnableMarkSortedColumn(
 *より描画*<br/>
 からコントロールをすぐに再描画するかどうかを決定するブール型パラメーターです。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`EnableMarkSortedColumn`メソッド`CDrawingManager::PixelAlpha`を使用して、並べ替えられた列に使用する色を計算します。 選択された色は、通常の背景色に基づいています。
+`EnableMarkSortedColumn` は、`CDrawingManager::PixelAlpha` メソッドを使用して、並べ替えられた列に使用する色を計算します。 選択された色は、通常の背景色に基づいています。
 
 ##  <a name="enablemultiplesort"></a>CMFCListCtrl::EnableMultipleSort
 
@@ -125,7 +125,7 @@ void EnableMultipleSort(BOOL bEnable = TRUE);
 *bEnable*<br/>
 から複数の列の並べ替えモードを有効にするかどうかを指定するブール値です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 複数の列に基づいて並べ替えを有効にすると、列に階層が設定されます。 最初に、データの行がプライマリ列で並べ替えられます。 同等の値は、その後、優先度に基づいて後続の各列によって並べ替えられます。
 
@@ -141,7 +141,7 @@ virtual CMFCHeaderCtrl& GetHeaderCtrl();
 
 基になる[CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md)オブジェクトへの参照。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 リストコントロールのヘッダーコントロールは、列のタイトルを含むウィンドウです。 通常は、列のすぐ上に配置されます。
 
@@ -157,7 +157,7 @@ BOOL IsMultipleSort() const;
 
 リストコントロールが複数の並べ替えをサポートしている場合は TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 [CMFCListCtrl クラス](../../mfc/reference/cmfclistctrl-class.md)で複数の並べ替えがサポートされている場合、ユーザーはリストコントロール内のデータを複数の列で並べ替えることができます。 複数の並べ替えを有効にするには、 [CMFCListCtrl:: EnableMultipleSort](#enablemultiplesort)を呼び出します。
 
@@ -187,11 +187,11 @@ virtual int OnCompareItems(
 
 2つの項目の相対位置を示す整数。 負の値は、最初の項目が2番目の項目の前にある必要があることを示し、正の値は最初の項目が2番目の項目の後に続くことを示し、0は2つの項目が等しいことを示します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 既定の実装では、常に0が返されます。 独自の並べ替えアルゴリズムを提供するには、この関数をオーバーライドします。
 
-##  <a name="ongetcellbkcolor"></a>  CMFCListCtrl::OnGetCellBkColor
+##  <a name="ongetcellbkcolor"></a>CMFCListCtrl::OnGetCellBkColor
 
 フレームワークは、個々のセルの背景色を決定する必要がある場合に、このメソッドを呼び出します。
 
@@ -213,11 +213,11 @@ virtual COLORREF OnGetCellBkColor(
 
 セルの背景色を指定する COLOREF 値。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-の既定の`OnGetCellBkColor`実装では、指定された入力パラメーターを使用`GetBkColor`せず、代わりにを呼び出します。 したがって、既定では、リストコントロール全体の背景色は同じになります。 派生クラスで`OnGetCellBkColor`をオーバーライドして、個々のセルを個別の背景色でマークすることができます。
+`OnGetCellBkColor` の既定の実装では、指定された入力パラメーターは使用されず、代わりに単に `GetBkColor`を呼び出します。 したがって、既定では、リストコントロール全体の背景色は同じになります。 派生クラスの `OnGetCellBkColor` をオーバーライドして、個々のセルを個別の背景色でマークすることができます。
 
-##  <a name="ongetcellfont"></a>  CMFCListCtrl::OnGetCellFont
+##  <a name="ongetcellfont"></a>CMFCListCtrl::OnGetCellFont
 
 フレームワークは、個々のセルのフォントを取得するときに、このメソッドを呼び出します。
 
@@ -243,11 +243,11 @@ virtual HFONT OnGetCellFont(
 
 現在のセルに使用されるフォントを示すハンドル。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 既定では、このメソッドは NULL を返します。 リストコントロール内のすべてのセルのフォントは同じです。 異なるセルに異なるフォントを提供するには、このメソッドをオーバーライドします。
 
-##  <a name="ongetcelltextcolor"></a>  CMFCListCtrl::OnGetCellTextColor
+##  <a name="ongetcelltextcolor"></a>CMFCListCtrl::OnGetCellTextColor
 
 フレームワークは、個々のセルのテキストの色を決定する必要がある場合に、このメソッドを呼び出します。
 
@@ -269,11 +269,11 @@ virtual COLORREF OnGetCellTextColor(
 
 セルのテキストの色を指定する COLOREF 値。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-既定では、このメソッド`GetTextColor`は入力パラメーターに関係なく、を呼び出します。 リストコントロール全体のテキストの色は同じになります。 派生クラスで`OnGetCellTextColor`をオーバーライドして、個別のセルにテキストの色を付けることができます。
+既定では、このメソッドは入力パラメーターに関係なく `GetTextColor` を呼び出します。 リストコントロール全体のテキストの色は同じになります。 派生クラスの `OnGetCellTextColor` をオーバーライドして、個別のセルにテキストの色を付けることができます。
 
-##  <a name="removesortcolumn"></a>  CMFCListCtrl::RemoveSortColumn
+##  <a name="removesortcolumn"></a>CMFCListCtrl::RemoveSortColumn
 
 並べ替えられた列の一覧から並べ替え列を削除します。
 
@@ -286,7 +286,7 @@ void RemoveSortColumn(int iColumn);
 *iColumn*<br/>
 から削除する列。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このメソッドは、ヘッダーコントロールから並べ替え列を削除します。 [CMFCHeaderCtrl:: RemoveSortColumn](../../mfc/reference/cmfcheaderctrl-class.md#removesortcolumn)を呼び出します。
 
@@ -312,7 +312,7 @@ void SetSortColumn(
 *bAdd*<br/>
 から*IColumn*によって示される列を並べ替え列のリストに追加するかどうかを指定するブール値です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このメソッドは、 [CMFCHeaderCtrl:: SetSortColumn](../../mfc/reference/cmfcheaderctrl-class.md#setsortcolumn)メソッドを使用して、ヘッダーコントロールに入力パラメーターを渡します。
 
@@ -338,7 +338,7 @@ virtual void Sort(
 *bAdd*<br/>
 からこのメソッドが、 *iColumn*によって示される列を並べ替え列のリストに追加するかどうかを指定するブール値です。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [階層図](../../mfc/hierarchy-chart.md)<br/>
 [クラス](../../mfc/reference/mfc-classes.md)<br/>

@@ -21,19 +21,18 @@ topic_type:
 - apiref
 f1_keywords:
 - _putw
-- putw
 helpviewer_keywords:
 - integers, writing to streams
 - putw function
 - streams, writing integers to
 - _putw function
 ms.assetid: 83d63644-249d-4a39-87e5-3b7aa313968d
-ms.openlocfilehash: 0515ae911a653bde1208b1711bf33dd8b4e2f8e1
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: be2ee5c1b3706b1f2a0847415ab4a82a6a4bbe4f
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949741"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443722"
 ---
 # <a name="_putw"></a>_putw
 
@@ -62,13 +61,13 @@ int _putw(
 
 エラー コードの詳細については、「[_doserrno、errno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
 **_Putw**関数は、 **int**型のバイナリ値をストリームの現在位置に書き込み*ます。* **_putw**は、ストリーム内の項目の配置には影響しません。また、特別な配置を想定していません。 **_putw**は、主に以前のライブラリとの互換性を維持するためのものです。 **_Putw**で移植性の問題が発生する可能性があります。これは **、int のサイズと** **int**内のバイトの順序がシステム間で異なるためです。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**_putw**|\<stdio.h>|
 
@@ -110,13 +109,13 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>出力
 
 ```Output
 Wrote ten words
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ストリーム入出力](../../c-runtime-library/stream-i-o.md)<br/>
 [_getw](getw.md)<br/>

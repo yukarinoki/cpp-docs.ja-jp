@@ -1,8 +1,6 @@
 ---
 title: CWnd と HWND の分離
 ms.date: 11/04/2016
-f1_keywords:
-- CWnd
 helpviewer_keywords:
 - HWND, detaching CWnd from
 - removing HWNDs from CWnds
@@ -10,25 +8,25 @@ helpviewer_keywords:
 - detaching CWnds from HWNDs
 - Detach method (CWnd class)
 ms.assetid: 6efadf84-0517-4a3f-acfd-216e088f19c6
-ms.openlocfilehash: 259af94958f88643e9c3ce725b25c4e92cc38226
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f7a6f97ba9f1dd3a928a5450c1a899ce09a4ac5f
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394573"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446962"
 ---
 # <a name="detaching-a-cwnd-from-its-hwnd"></a>CWnd と HWND の分離
 
-オブジェクトを回避する必要がある場合`HWND`リレーションシップ、MFC 別提供`CWnd`メンバー関数は、[デタッチ](../mfc/reference/cwnd-class.md#detach)Windows のウィンドウから C++ ウィンドウ オブジェクトを切断します。 これは、デストラクターが、オブジェクトが破棄されると、Windows のウィンドウを破棄することを防ぎます。
+オブジェクト`HWND` の関係を回避する必要がある場合は、MFC によって別[Detach](../mfc/reference/cwnd-class.md#detach)の `CWnd` メンバー関数でC++ある Detach が提供され、Windows ウィンドウからウィンドウオブジェクトが切断されます。 これにより、オブジェクトが破棄されたときに、デストラクターが Windows ウィンドウを破棄するのを防ぎます。
 
-## <a name="what-do-you-want-to-know-more-about"></a>方法については、するして操作を行います
+## <a name="what-do-you-want-to-know-more-about"></a>詳細については、次を参照してください。
 
-- [ウィンドウの作成](../mfc/creating-windows.md)
+- [作成 (ウィンドウを)](../mfc/creating-windows.md)
 
 - [ウィンドウの破棄順序](../mfc/window-destruction-sequence.md)
 
-- [割り当てとウィンドウ メモリの解放](../mfc/allocating-and-deallocating-window-memory.md)
+- [ウィンドウメモリの割り当てと割り当て解除](../mfc/allocating-and-deallocating-window-memory.md)
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [Window オブジェクト](../mfc/window-objects.md)

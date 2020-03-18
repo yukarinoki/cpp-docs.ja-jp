@@ -135,11 +135,11 @@ helpviewer_keywords:
 - std::unordered_set::swap
 ms.assetid: ac08084e-05a7-48c0-9ae4-d40c529922dd
 ms.openlocfilehash: 1aebb30649d138b22c5b9dae95662f84a6bf39f2
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78890743"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427699"
 ---
 # <a name="unordered_set-class"></a>unordered_set クラス
 
@@ -2462,7 +2462,7 @@ unordered_set(
 
 1つ目のコンストラクターは、 *Right*によって制御されるシーケンスのコピーを指定します。 2 つ目のコンストラクターは、空の被制御シーケンスのコピーを指定します。 3番目のコンストラクターは、4番目のコンストラクターを*右*に移動することによってシーケンスのコピーを指定します。4番目のコンストラクターは、initializer_list を使用して、コピーする要素を指定します。 9 つ目のコンストラクターは、要素値 `[first, last)` のシーケンスを挿入します。
 
-さらに、格納された複数の値を初期化する処理が実行されます。この処理は、すべてのコンストラクターに共通です。 コピーコンストラクターの場合、値は*Right*から取得されます。 または次の手順を実行してください。
+さらに、格納された複数の値を初期化する処理が実行されます。この処理は、すべてのコンストラクターに共通です。 コピーコンストラクターの場合、値は*Right*から取得されます。 それ以外の場合:
 
 バケットの最小数は、引数*bucket_count*(存在する場合) です。それ以外の場合は、実装定義の値 `N0`としてここで説明されている既定値になります。
 

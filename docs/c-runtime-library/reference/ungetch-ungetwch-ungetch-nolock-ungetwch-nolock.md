@@ -27,7 +27,6 @@ f1_keywords:
 - ungetwch
 - ungetch_nolock
 - _ungetwch
-- ungetch
 - ungetwch_nolock
 - _ungetch
 - _ungettch_nolock
@@ -47,12 +46,12 @@ helpviewer_keywords:
 - ungetwch_nolock function
 - _ungetwch function
 ms.assetid: 70ae71c6-228c-4883-a57d-de6d5f873825
-ms.openlocfilehash: 2f6b782334df710ac9fe6359fda77b40a31e060c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 5fd34d0c975ee49bce688cd902a6df856b5d6963
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70945907"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443750"
 ---
 # <a name="_ungetch-_ungetwch-_ungetch_nolock-_ungetwch_nolock"></a>_ungetch、_ungetwch、_ungetch_nolock、_ungetwch_nolock
 
@@ -87,9 +86,9 @@ wint_t _ungetwch_nolock(
 
 成功した場合、どちらの関数も文字*c*を返します。 エラーが発生した場合、 **_ungetch**は**EOF**の値を返し、 **_ungetwch**は**WEOF**を返します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-これらの関数は、文字*c*をコンソールにプッシュして、 *c*を **_getch**または **_getche** (または **_getwch**または **_getwche**) によって読み取られた次の文字にします。 **_ungetch**と **_ungetwch**は、次の読み取りの前に複数回呼び出された場合に失敗します。 *C*引数を**EOF** (または**WEOF**) にすることはできません。
+これらの関数は、文字*c*をコンソールにプッシュして、 *c*を **_getch**または **_getche** (または **_getwch**または **_getwche**) が読み取る次の文字にします。 **_ungetch**と **_ungetwch**は、次の読み取りの前に複数回呼び出された場合に失敗します。 *C*引数を**EOF** (または**WEOF**) にすることはできません。
 
 **_nolock** サフィックスが付いているバージョンは同じものですが、他のスレッドによる干渉から保護されない点が異なります。 他のスレッドをロックアウトするオーバーヘッドが発生しないため、処理が速くなる場合があります。 これらの関数は、シングルスレッド アプリケーション、呼び出し元のスコープで既にスレッド分離を処理している場合などのスレッドセーフなコンテキストでのみ使用してください。
 
@@ -100,11 +99,11 @@ wint_t _ungetwch_nolock(
 |**_ungettch**|**_ungetch**|**_ungetch**|**_ungetwch**|
 |**_ungettch_nolock**|**_ungetch_nolock**|**_ungetch_nolock**|**_ungetwch_nolock**|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
-|**_ungetch**、 **ungetch_t**|\<conio.h>|
+|**_ungetch**、 **_ungetch_nolock**|\<conio.h>|
 |**_ungetwch**、 **_ungetwch_nolock**|\<conio.h> または \<wchar.h>|
 
 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
@@ -151,7 +150,7 @@ int main( void )
 Whitetoken = White
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [コンソール入出力とポート入出力](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_cscanf、_cscanf_l、_cwscanf、_cwscanf_l](cscanf-cscanf-l-cwscanf-cwscanf-l.md)<br/>
