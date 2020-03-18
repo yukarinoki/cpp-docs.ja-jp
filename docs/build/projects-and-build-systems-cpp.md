@@ -10,12 +10,12 @@ helpviewer_keywords:
 - C++, build options
 ms.assetid: fa6ed4ff-334a-4d99-b5e2-a1f83d2b3008
 ms.topic: overview
-ms.openlocfilehash: 1548f82b62163600b5220c553bebcea72020abbc
-ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
+ms.openlocfilehash: df3b768c139bc4dc000c185d7153fd4aa38ae94a
+ms.sourcegitcommit: 44eeb065c3148d0484de791080a3f963109744fc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274739"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79509452"
 ---
 # <a name="cc-projects-and-build-systems-in-visual-studio"></a>Visual Studio での C/C++ プロジェクトとビルドシステム
 
@@ -23,7 +23,7 @@ Visual Studio を使用して、IntelliSense を完全にサポートC++する�
 
 ## <a name="c-compilation"></a>C++コンパイル
 
-プログラムをC++ビルドするには、1つまたは複数のファイルからソースコードをコンパイルしてから、それらのファイルを実行可能ファイル (.exe)、動的読み込みライブラリ (.dll)、またはスタティックライブラリ (.lib) にリンクします。 
+プログラム*build*をC++ビルドするには、1つまたは複数のファイルからソースコードをコンパイルしてから、それらのファイルを実行可能ファイル (.exe)、動的読み込みライブラリ (.dll)、またはスタティックライブラリ (.lib) にリンクします。 
 
 基本C++コンパイルには、次の3つの主要な手順が含まれます。
 
@@ -40,17 +40,18 @@ Microsoft C++コンパイラ、リンカー、標準ライブラリ、および�
 ```cmd
 cl /EHsc hello.cpp
 ```
+
 ここで、コンパイラ (cl.exe) によってC++プリプロセッサとリンカーが自動的に呼び出され、最終的な出力ファイルが生成されることに注意してください。  詳細については、「[コマンドラインでのビルド](building-on-the-command-line.md)」を参照してください。
 
 ## <a name="build-systems-and-projects"></a>ビルドシステムとプロジェクト
 
-ほとんどの実際のプログラムでは、複数の構成 (デバッグとリリース)、複数のプラットフォーム (x86、x64、ARM など) 、特定の順序でコンパイルする必要がある実行可能ファイルの為にいくつかの*ビルドシステム*を使用して複数のソースファイルをコンパイルする複雑な作業を管理します あなたが設定したビルド構成ファイルを、ビルドシステムはコンパイラを呼び出す前に入力として受け入れます。 実行可能ファイルをビルドするために必要なソースコードファイルとビルド構成ファイルのセットは、"*プロジェクト*" と呼ばれます。 
+ほとんどの実際のプログラムでは、いくつかの*ビルドシステム*を使用して、複数の構成 (デバッグとリリース)、複数のプラットフォーム (x86、X64、ARM など) 用の複数のソースファイルをコンパイルする複雑な処理、カスタムビルドステップ、および特定の順序でコンパイルする必要がある複数の実行可能ファイルを管理します。 あなたが設定したビルド構成ファイルを、ビルドシステムはコンパイラを呼び出す前に入力として受け入れます。 実行可能ファイルをビルドするために必要なソースコードファイルとビルド構成ファイルのセットは、"*プロジェクト*" と呼ばれます。 
 
 次の一覧は、Visual Studio プロジェクトのさまざまなC++オプションを示しています。
 
 - Visual Studio IDE を使用して Visual Studio プロジェクトを作成し、プロパティページを使用して構成します。 Visual Studio プロジェクトでは、Windows 上で実行されるプログラムが生成されます。 概要については、Visual Studio ドキュメントの「[コンパイルとビルド](/visualstudio/ide/compiling-and-building-in-visual-studio)」を参照してください。
 
-- CMakeLists .txt ファイルが含まれているフォルダーを開きます。 CMake のサポートは、Visual Studio に統合されています。 IDE を使用して、CMake ファイルを変更せずに編集、テスト、およびデバッグを行うことができます。 これにより、異なるエディターを使用している可能性のある他のユーザーと同じ CMake プロジェクトで作業することができます。 CMake は、クロスプラットフォームの開発に推奨されるアプローチです。 詳細については、「 [CMake プロジェクト](cmake-projects-in-visual-studio.md)」を参照してください。
+- CMakeLists .txt ファイルが含まれているフォルダーを開きます。 CMake のサポートは、Visual Studio に統合されています。 IDE を使用して、CMake ファイルを変更せずに編集、テスト、およびデバッグを行うことができます。 これにより、異なるエディターを使用している可能性のある他のユーザーと同じ CMake プロジェクトで作業することができます。 CMake は、クロスプラットフォームの開発に推奨されるアプローチです。 詳細については、「 [Cmake プロジェクト](cmake-projects-in-visual-studio.md)」を参照してください。
  
 - プロジェクトファイルのない、ソースファイルの圧縮されていないフォルダーを開きます。 Visual Studio では、ヒューリスティックを使用してファイルをビルドします。 これは、小さなコンソールアプリケーションをコンパイルして実行する簡単な方法です。 詳細については、「[フォルダープロジェクトを開く](open-folder-projects-cpp.md)」を参照してください。
 
@@ -64,11 +65,11 @@ cl /EHsc hello.cpp
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-[Visual Studio プロジェクト](creating-and-managing-visual-cpp-projects.md) Visual Studio でネイティブビルドシステム (MSBuild) を使用して C++ プロジェクトを作成、構成、およびビルドする方法。
+[Visual Studio プロジェクト](creating-and-managing-visual-cpp-projects.md)Visual Studio でネイティブビルドシステム (MSBuild C++ ) を使用してプロジェクトを作成、構成、およびビルドする方法。
 
-[CMake プロジェクト](cmake-projects-in-visual-studio.md)Visual Studio で CMake プロジェクトをコーディング、ビルド、および配置する方法について説明します。
+[Cmake プロジェクト](cmake-projects-in-visual-studio.md)Visual Studio で CMake プロジェクトをコーディング、ビルド、および配置する方法について説明します。
 
-[フォルダープロジェクトを開く](open-folder-projects-cpp.md) Visual Studio を使用して、任意のビルドシステムに基づいたあるいはビルドシステムのない C++ プロジェクトのコーディング、ビルド、配置を行う方法。 全然です。 
+[フォルダープロジェクトを開く](open-folder-projects-cpp.md)Visual Studio を使用して、任意のビルドシステムC++に基づいたプロジェクトのコーディング、ビルド、配置を行う方法、またはビルドシステムを使用しない方法について説明します。 と思います。 
 
 [リリースビルド](release-builds.md)エンドユーザーにデプロイするために最適化されたリリースビルドを作成およびトラブルシューティングする方法。
 
@@ -77,7 +78,7 @@ Visual Studio IDE を使用するのではなく、コマンドラインから�
 
 [Visual Studio での dll のビルド](dlls-in-visual-cpp.md)Visual Studio で C/C++ dll (共有ライブラリ) を作成、デバッグ、および配置する方法について説明します。
 
-[チュートリアル: スタティックライブラリ](walkthrough-creating-and-using-a-static-library-cpp.md)の作成と使用 .lib バイナリファイルの作成方法。
+[チュートリアル: スタティックライブラリの作成と使用](walkthrough-creating-and-using-a-static-library-cpp.md).Lib バイナリファイルを作成する方法。
 
 [CC++ /分離アプリケーションと Side-by-side アセンブリのビルド](building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)分離アプリケーションと side-by-side アセンブリの概念に基づいて、Windows デスクトップアプリケーションの配置モデルについて説明します。
 

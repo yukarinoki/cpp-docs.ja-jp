@@ -5,12 +5,12 @@ ms.date: 09/26/2018
 helpviewer_keywords:
 - _ATL_MIN_CRT macro
 ms.assetid: 08ff14e8-aa49-4139-a110-5d071939cf1e
-ms.openlocfilehash: df89837e8f453443dc092a1b96e9c3f395fa2353
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 4244dae532f467f28a5ca53e15ee601344999233
+ms.sourcegitcommit: 44eeb065c3148d0484de791080a3f963109744fc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77127381"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79509379"
 ---
 # <a name="changing-the-drawing-code-atl-tutorial-part-4"></a>描画コードの変更 (ATL チュートリアル、パート 4)
 
@@ -102,7 +102,7 @@ ms.locfileid: "77127381"
 
 ## <a name="building-and-testing-the-control"></a>コントロールのビルドとテスト
 
-コントロールをリビルドします。 Polyctl.htm ファイルが開いている場合は閉じていることを確認し、[**ビルド**] メニューの [**多角形のビルド**] をクリックします。 Polyctl.htm ページからもう一度コントロールを表示できますが、今度は ActiveX コントロールテストコンテナーを使用します。
+コントロールをリビルドします。 Polyctl.htm ファイルが開いている場合は閉じていることを確認し、 **[ビルド]** メニューの **[多角形のビルド]** をクリックします。 Polyctl.htm ページからもう一度コントロールを表示できますが、今度は ActiveX コントロールテストコンテナーを使用します。
 
 ### <a name="to-use-the-activex-control-test-container"></a>ActiveX コントロールテストコンテナーを使用するには
 
@@ -111,12 +111,15 @@ ms.locfileid: "77127381"
     > [!NOTE]
     > `ATL::CW2AEX`関連のエラーについては、スクリプト .Cpp で、行 `TRACE( "XActiveScriptSite::GetItemInfo( %s )\n", pszNameT );` を `TRACE( "XActiveScriptSite::GetItemInfo( %s )\n", pszNameT.m_psz );`に、行 `TRACE( "Source Text: %s\n", COLE2CT( bstrSourceLineText ) );` を `TRACE( "Source Text: %s\n", bstrSourceLineText );`に置き換えます。<br/>
     > `HMONITOR`関連のエラーについては、`TCProps` プロジェクトで Stdafx.h を開き、次のように置き換えます。
+    >
     > ```
     > #ifndef WINVER
     > #define WINVER 0x0400
     > #endif
     > ```
+    >
     > with
+    >
     > ```
     > #ifndef WINVER
     > #define WINVER 0x0500
@@ -124,7 +127,7 @@ ms.locfileid: "77127381"
     > #endif
     > ```
 
-1. **テストコンテナー**で、[**編集**] メニューの [**新しいコントロールの挿入**] をクリックします。
+1. **テストコンテナー**で、 **[編集]** メニューの **[新しいコントロールの挿入]** をクリックします。
 
 1. `PolyCtl class`という名前のコントロールを見つけて、[ **OK]** をクリックします。 丸の中に緑色の三角形が表示されます。
 
@@ -132,13 +135,13 @@ ms.locfileid: "77127381"
 
 ### <a name="to-modify-a-controls-property-from-within-the-test-container"></a>テストコンテナー内からコントロールのプロパティを変更するには
 
-1. [**テストコンテナー**] で、[**コントロール**] メニューの [**メソッドの呼び出し**] をクリックします。
+1. **[テストコンテナー]** で、 **[コントロール]** メニューの **[メソッドの呼び出し]** をクリックします。
 
-    [**メソッドの呼び出し**] ダイアログボックスが表示されます。
+    **[メソッドの呼び出し]** ダイアログボックスが表示されます。
 
-1. [**メソッド名**] ボックスの一覧から、[ **PropPut** version of the**両辺**] プロパティを選択します。
+1. **[メソッド名]** ボックスの一覧から、[ **PropPut** version of the**両辺**] プロパティを選択します。
 
-1. [**パラメーター値**] ボックスに「`5`」と入力し、[**値の設定**] をクリックして、[**呼び出し**] をクリックします。
+1. **[パラメーター値]** ボックスに「`5`」と入力し、 **[値の設定]** をクリックして、 **[呼び出し]** をクリックします。
 
 コントロールは変更されないことに注意してください。 `m_nSides` 変数を設定して内部の辺の数を変更しても、コントロールは再描画されませんでした。 別のアプリケーションに切り替えてから**テストコンテナー**に戻すと、コントロールが再描画され、正しい数の辺があることがわかります。
 
