@@ -10,11 +10,11 @@ f1_keywords:
 - array/std::array::operator==
 ms.assetid: c8f46282-f179-4909-9a01-639cb8e18c27
 ms.openlocfilehash: 3d65cd6b6b8549fd9964f6c5bb6d8b2d3c0a27b6
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78875893"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427303"
 ---
 # <a name="ltarraygt-operators"></a>&lt;array&gt; 演算子
 
@@ -50,7 +50,7 @@ bool operator!=(
 *右*\
 比較する右のコンテナー。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このテンプレート関数は `!(left == right)` を返します。
 
@@ -123,7 +123,7 @@ bool operator<(
 *右*\
 比較する右のコンテナー。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このテンプレート関数は、`operator<` をオーバーロードして、クラステンプレート[配列クラス](../standard-library/array-class-stl.md)の2つのオブジェクトを比較します。 `lexicographical_compare(left.begin(), left.end(), right.begin())`が返されます。
 
@@ -196,7 +196,7 @@ bool operator<=(
 *右*\
 比較する右のコンテナー。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このテンプレート関数は `!(right < left)` を返します。
 
@@ -269,7 +269,7 @@ bool operator==(
 *右*\
 比較する右のコンテナー。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このテンプレート関数は、`operator==` をオーバーロードして、クラステンプレート[配列クラス](../standard-library/array-class-stl.md)の2つのオブジェクトを比較します。 `equal(left.begin(), left.end(), right.begin())`が返されます。
 
@@ -342,7 +342,7 @@ bool operator>(
 *右*\
 比較する右のコンテナー。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このテンプレート関数は `(right < left)` を返します。
 
@@ -415,7 +415,7 @@ bool operator>=(
 *右*\
 比較する右のコンテナー。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このテンプレート関数は `!(left < right)` を返します。
 

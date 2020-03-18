@@ -25,11 +25,11 @@ helpviewer_keywords:
 - COleInsertDialog [MFC], m_io
 ms.assetid: a9ec610b-abde-431e-bd01-c40159a66dbb
 ms.openlocfilehash: a884f946b60be0567f39477f434db8efe041e393
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855601"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427009"
 ---
 # <a name="coleinsertdialog-class"></a>COleInsertDialog クラス
 
@@ -45,13 +45,13 @@ class COleInsertDialog : public COleDialog
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[COleInsertDialog::COleInsertDialog](#coleinsertdialog)|`COleInsertDialog` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[COleInsertDialog:: CreateItem](#createitem)|ダイアログボックスで選択した項目を作成します。|
 |[COleInsertDialog::D oModal](#domodal)|[OLE オブジェクトの挿入] ダイアログボックスを表示します。|
@@ -63,11 +63,11 @@ class COleInsertDialog : public COleDialog
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[COleInsertDialog:: m_io](#m_io)|ダイアログボックスの動作を制御する OLEUIINSERTOBJECT 型の構造体。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 このダイアログボックスを呼び出す必要がある場合は `COleInsertDialog` クラスのオブジェクトを作成します。 `COleInsertDialog` オブジェクトが構築されたら、 [m_io](#m_io)構造を使用して、ダイアログボックス内のコントロールの値または状態を初期化できます。 `m_io` 構造体の型は OLEUIINSERTOBJECT です。 このダイアログクラスの使用方法の詳細については、「 [DoModal](#domodal)メンバー関数」を参照してください。
 
@@ -94,7 +94,7 @@ OLE 固有のダイアログボックスの詳細については、 [ole の記�
 
 `COleInsertDialog`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxodlgs
 
@@ -130,7 +130,7 @@ COleInsertDialog (
 *pParentWnd*<br/>
 ダイアログオブジェクトが属する親またはオーナーウィンドウオブジェクト (`CWnd`型) を指します。 NULL の場合は、ダイアログオブジェクトの親ウィンドウがメインアプリケーションウィンドウに設定されます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ダイアログボックスを表示するには、 [DoModal](#domodal)関数を呼び出します。
 
@@ -151,7 +151,7 @@ BOOL CreateItem(COleClientItem* pItem);
 
 項目が作成された場合は0以外の。それ以外の場合は0です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この関数を呼び出す前に、`COleClientItem` オブジェクトを割り当てる必要があります。
 
@@ -188,7 +188,7 @@ INT_PTR
 
 - エラーが発生した場合は IDABORT。 IDABORT が返された場合は、 [COleDialog:: GetLastError](../../mfc/reference/coledialog-class.md#getlasterror)メンバー関数を呼び出して、発生したエラーの種類に関する詳細情報を取得します。 考えられるエラーの一覧については、Windows SDK の「 [OleUIInsertObject](/windows/win32/api/oledlg/nf-oledlg-oleuiinsertobjectw)関数」を参照してください。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 [M_io](#m_io)構造体のメンバーを設定してさまざまなダイアログボックスコントロールを初期化する場合は、`DoModal`を呼び出す前にこの操作を行う必要がありますが、ダイアログオブジェクトが構築された後に実行する必要があります。
 
@@ -206,7 +206,7 @@ REFCLSID GetClassID() const;
 
 選択された項目に関連付けられている CLSID を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 詳細については、Windows SDK の「 [CLSID キー](/windows/win32/com/clsid-key-hklm) 」を参照してください。
 
@@ -226,7 +226,7 @@ DVASPECT GetDrawAspect() const;
 
 - [アイコンとして表示] チェックボックスがオンになっている場合に DVASPECT_ICON 返されます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 [DoModal](#domodal)が IDOK を返す場合にのみ、この関数を呼び出します。
 
@@ -268,7 +268,7 @@ UINT GetSelectionType() const;
 
 選択された種類。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 戻り値の型の値は、`COleInsertDialog` クラスで宣言された `Selection` 列挙型によって指定されます。
 
@@ -296,7 +296,7 @@ enum Selection {
 OLEUIINSERTOBJECT m_io;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この構造体のメンバーは、直接またはメンバー関数を使用して変更できます。
 

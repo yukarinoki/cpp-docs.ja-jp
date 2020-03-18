@@ -81,11 +81,11 @@ helpviewer_keywords:
 - CStringT class
 ms.assetid: 7cacc59c-425f-40f1-8f5b-6db921318ec9
 ms.openlocfilehash: a411ed54a73a0dee49ebbd9ccacbd7c6f8e69ca5
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856314"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423562"
 ---
 # <a name="cstringt-class"></a>CStringT クラス
 
@@ -134,14 +134,14 @@ class CStringT :
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[CStringT:: CStringT](#cstringt)|さまざまな方法で `CStringT` オブジェクトを構築します。|
 |[CStringT:: ~ CStringT](#_dtorcstringt)|`CStringT` オブジェクトを破棄します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[CStringT:: AllocSysString](#allocsysstring)|`CStringT` データから BSTR を割り当てます。|
 |[CStringT:: AnsiToOem](#ansitooem)|ANSI 文字セットから OEM 文字セットへのインプレース変換を行います。|
@@ -178,7 +178,7 @@ class CStringT :
 |[CStringT:: TrimLeft](#trimleft)|文字列から先頭の空白文字をトリミングします。|
 |[CStringT:: TrimRight](#trimright)|文字列から末尾の空白文字をトリミングします。|
 
-### <a name="operators"></a>演算子
+### <a name="operators"></a>オペレーター
 
 |||
 |-|-|
@@ -192,7 +192,7 @@ class CStringT :
 |[CStringT:: operator &lt;=](#operator_lt_eq)|演算子の左辺の文字列が右側の文字列以下であるかどうかを判断します。|
 |[CStringT:: operator &gt;=](#operator_gt_eq)|演算子の左辺の文字列が、右側の文字列以上かどうかを判断します。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 `CStringT` は[CSimpleStringT クラス](../../atl-mfc-shared/reference/csimplestringt-class.md)から継承します。 文字操作、順序付け、検索などの高度な機能は、`CStringT`によって実装されます。
 
@@ -251,7 +251,7 @@ MFC ベースのアプリケーションでは、次の文字列型を使用で�
 
 `CStringT` はテンプレート引数を使用してサポートされる文字型 ( [wchar_t](../../c-runtime-library/standard-types.md)または[char](../../c-runtime-library/standard-types.md)) を定義するため、メソッドパラメーターの型はいつでも複雑になることがあります。 この問題を簡単にするために、定義済みの型のセットが `CStringT` クラス全体で定義および使用されます。 次の表に、さまざまな種類の一覧を示します。
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |`XCHAR`|`CStringT` オブジェクトと同じ文字型の単一の文字 ( **wchar_t**または**char**)。|
 |`YCHAR`|`CStringT` オブジェクトとは逆の文字型を持つ1文字 ( **wchar_t**または**char**)。|
@@ -269,7 +269,7 @@ MFC ベースのアプリケーションでは、次の文字列型を使用で�
 
 `CStringT`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |ヘッダー|用途|
 |------------|-------------|
@@ -288,7 +288,7 @@ BSTR AllocSysString() const;
 
 新しく割り当てられた文字列。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 MFC プログラムでは、十分なメモリが存在しない場合、 [CMemoryException クラス](../../mfc/reference/cmemoryexception-class.md)がスローされます。 ATL プログラムでは、 [CAtlException](../../atl/reference/catlexception-class.md)がスローされます。 通常、この関数は、オートメーション用の文字列を返すために使用されます。
 
@@ -310,7 +310,7 @@ Windows での OLE 割り当て関数の詳細については、Windows SDK の�
 void AnsiToOem();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 _UNICODE が定義されている場合、この関数は使用できません。
 
@@ -338,7 +338,7 @@ void __cdecl AppendFormat(UINT nFormatID, [, argument] ...);
 *argument*<br/>
 省略可能な引数。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この関数は、`CStringT`に一連の文字と値を書式設定して追加します。 省略可能な各引数 (存在する場合) は、 *pszFormat*の対応する書式指定に従って変換され、 *nFormatID*によって識別される文字列リソースから追加されます。
 
@@ -363,7 +363,7 @@ int Collate(PCXSTR psz) const throw();
 
 文字列が同一の場合は0、`CStringT` オブジェクトが*psz*未満の場合は0、この `CStringT` オブジェクトが*psz*より大きい場合 > は0を < ます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `_tcscoll`の汎用テキスト関数は、TCHAR で定義されています。H は、コンパイル時に定義された文字セットに応じて、`strcoll`、`wcscoll`、または `_mbscoll`のいずれかにマップされます。 各関数は、現在使用中のコードページに従って、大文字と小文字を区別して文字列の比較を実行します。 詳細については、「 [strcoll 系、wcscoll、_mbscoll、_strcoll_l、_wcscoll_l、_mbscoll_l](../../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md)」を参照してください。
 
@@ -384,7 +384,7 @@ int CollateNoCase(PCXSTR psz) const throw();
 
 文字列が同一である場合 (大文字と小文字を区別しない場合) は0、この `CStringT` オブジェクトが*psz*未満の場合は 0 (大文字小文字を区別しない)、また > はこの `CStringT` オブジェクトが*psz*より大きい場合は0を < します (大文字と小文字を区別しません)。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `_tcscoll`の汎用テキスト関数は、TCHAR で定義されています。H は、コンパイル時に定義された文字セットに応じて、`stricoll`、`wcsicoll`、または `_mbsicoll`のいずれかにマップされます。 各関数は、現在使用中のコードページに従って、文字列の大文字と小文字を区別しない比較を実行します。 詳細については、「 [strcoll 系、wcscoll、_mbscoll、_strcoll_l、_wcscoll_l、_mbscoll_l](../../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md)」を参照してください。
 
@@ -409,7 +409,7 @@ int Compare(PCXSTR psz) const;
 
 文字列が同一の場合は0、`CStringT` オブジェクトが*psz*未満の場合は0、この `CStringT` オブジェクトが*psz*より大きい場合 > は0を < ます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `_tcscmp`の汎用テキスト関数は、TCHAR で定義されています。H は、コンパイル時に定義された文字セットに応じて、`strcmp`、`wcscmp`、または `_mbscmp`のいずれかにマップされます。 各関数は、文字列の大文字と小文字を区別した比較を実行し、ロケールの影響を受けません。 詳細については、「 [strcmp、wcscmp、_mbscmp](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)」を参照してください。
 
@@ -438,7 +438,7 @@ int CompareNoCase(PCXSTR psz) const throw();
 
 文字列が同一である場合 (大文字と小文字を区別しない場合) は0、この `CStringT` オブジェクトが*psz*未満の場合は 0 (大文字小文字を区別しない)、また > はこの `CStringT` オブジェクトが*psz*より大きい場合は0を < します (大文字と小文字を区別しません)。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `_tcsicmp`の汎用テキスト関数は、TCHAR で定義されています。H は、コンパイル時に定義された文字セットに応じて、`_stricmp`、`_wcsicmp`、`_mbsicmp`のいずれかにマップされます。 各関数は、文字列の大文字と小文字を区別しない比較を実行します。 比較は、ロケールの LC_CTYPE の側面に依存しますが、LC_COLLATE はありません。 詳細については、「 [_stricmp、_wcsicmp、_mbsicmp、_stricmp_l、_wcsicmp_l、_mbsicmp_l](../../c-runtime-library/reference/stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md)」を参照してください。
 
@@ -564,7 +564,7 @@ TCHAR (ANSI 文字列と Unicode 文字列の両方)。
 *pString*<br/>
 `CStringT` オブジェクトのハンドル。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 コンストラクターは、割り当てられた新しいストレージに入力データをコピーするので、メモリ例外が発生する可能性があることに注意する必要があります。 これらのコンストラクターの一部は変換関数として機能することに注意してください。 これにより、たとえば `CStringT` オブジェクトが想定されている LPTSTR などを置き換えることができます。
 
@@ -596,7 +596,7 @@ TCHAR (ANSI 文字列と Unicode 文字列の両方)。
 ~CStringT() throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `CStringT` オブジェクトを破棄します。
 
@@ -620,7 +620,7 @@ int Delete(int iIndex, int nCount = 1);
 
 変更された文字列の長さ。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 *NCount*が文字列よりも長い場合は、文字列の残りの部分が削除されます。
 
@@ -659,7 +659,7 @@ int Find(XCHAR ch, int iStart=0) const throw();
 
 要求された部分文字列または文字と一致する、この `CStringT` オブジェクト内の最初の文字の0から始まるインデックス。部分文字列または文字が見つからない場合は-1。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 関数は、1つの文字 (ランタイム関数 `strchr`) と文字列 (`strstr`に似ています) の両方を受け入れるようにオーバーロードされています。
 
@@ -684,7 +684,7 @@ int FindOneOf(PCXSTR pszCharSet) const throw();
 
 この文字列の最初の文字の0から始まるインデックス。 *Pszcharset*にも含まれます。一致するものがない場合は-1。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 *Pszcharset*内のいずれかの文字が最初に出現する位置を検索します。
 
@@ -712,7 +712,7 @@ void __cdecl Format(PCXSTR pszFormat,  [, argument] ...);
 *argument*<br/>
 省略可能な引数。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この関数は、一連の文字と値の書式を設定し、`CStringT`に格納します。 省略可能な各引数 (存在する場合) は、 *pszFormat*の対応する書式指定に従って変換され、出力されます。また、 *nFormatID*によって識別される文字列リソースから出力されます。
 
@@ -746,7 +746,7 @@ void __cdecl FormatMessage(PCXSTR pszFormat, [, argument]...);
 *argument*<br/>
 省略可能な引数。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 関数には、入力としてメッセージ定義が必要です。 メッセージ定義は、 *pszFormat*または*nFormatID*によって識別される文字列リソースによって決定されます。 関数は、書式設定されたメッセージテキストを `CStringT` オブジェクトにコピーし、要求された場合は埋め込み挿入シーケンスを処理します。
 
@@ -775,7 +775,7 @@ void FormatMessageV(PCXSTR pszFormat, va_list* pArgList);
 *pArgList*<br/>
 引数のリストへのポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 関数には、 *pszFormat*によって決定される、入力としてのメッセージ定義が必要です。 関数は、書式設定されたメッセージテキストと引数の変数リストを `CStringT` オブジェクトにコピーし、要求された場合は埋め込み挿入シーケンスを処理します。
 
@@ -800,7 +800,7 @@ void FormatV(PCXSTR pszFormat, va_list args);
 *args*<br/>
 引数のリストへのポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 C スタイルの文字配列にデータを書式設定するのと同じ `vsprintf_s` 方法で、書式設定された文字列と引数の変数リストを `CStringT` 文字列に書き込みます。
 
@@ -827,7 +827,7 @@ BOOL GetEnvironmentVariable(PCXSTR pszVar);
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 呼び出し元プロセスの環境ブロックから、指定された変数の値を取得します。 値は、null で終わる文字列の形式で指定します。
 
@@ -859,7 +859,7 @@ int Insert(int iIndex, XCHAR ch);
 
 変更された文字列の長さ。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 *IIndex*パラメーターは、文字または部分文字列用の領域を確保するために移動される最初の文字を識別します。 *NIndex*が0の場合は、文字列全体の前に挿入が行われます。 *NIndex*が文字列の長さよりも大きい場合、この関数は、現在の文字列と、 *ch*または*psz*によって提供される新しい素材を連結します。
 
@@ -884,7 +884,7 @@ CStringT Left(int nCount) const;
 
 指定の文字範囲のコピーを含む `CStringT` オブジェクト。 返された `CStringT` オブジェクトは空の場合があります。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 *NCount*が文字列の長さを超える場合は、文字列全体が抽出されます。 `Left` は、Basic `Left` 関数に類似します。
 
@@ -919,7 +919,7 @@ Windows 文字列リソース ID。
 
 リソースの読み込みが成功した場合は0以外の場合は。それ以外の場合は0です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 指定された言語 (*wlanguage*) を使用して、指定されたモジュール (*hInstance*) から文字列リソース (*nID*) を読み込みます。
 
@@ -971,7 +971,7 @@ CStringT& MakeUpper();
 
 結果として得られる大文字の文字列。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ### <a name="example"></a>例
 
@@ -998,7 +998,7 @@ CStringT Mid(int iFirst) const;
 
 指定の文字範囲のコピーを含む `CStringT` オブジェクト。 返される `CStringT` オブジェクトは空になる場合があることに注意してください。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 関数は、抽出された部分文字列のコピーを返します。 `Mid` は基本的な Mid 関数に似ています (ただし、Basic のインデックスは1から始まる)。
 
@@ -1016,7 +1016,7 @@ CStringT Mid(int iFirst) const;
 void OemToAnsi();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 _UNICODE が定義されている場合、この関数は使用できません。
 
@@ -1065,7 +1065,7 @@ CStringT& operator=(const VARIANT& var);
 *pszSrc*<br/>
 割り当てられている元の文字列へのポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 代入演算子は、別の `CStringT` オブジェクト、文字ポインター、または1つの文字を受け入れます。 新しいストレージを割り当てることができるため、この演算子を使用するたびにメモリ例外が発生する可能性があることに注意してください。
 
@@ -1108,7 +1108,7 @@ friend CStringT operator+(wchar_t ch1, const CStringT& str2,);
 *psz2*<br/>
 文字列または文字と連結する文字列へのポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `CStringT::operator+` 関数には、7つのオーバーロード形式があります。 最初のバージョンでは、既存の2つの `CStringT` オブジェクトを連結します。 次の2つは、`CStringT` オブジェクトと null で終わる文字列を連結します。 次の2つは、`CStringT` オブジェクトと ANSI 文字を連結します。 最後の2つは、`CStringT` オブジェクトと Unicode 文字を連結したものです。
 
@@ -1162,7 +1162,7 @@ CStringT& operator+=(const VARIANT& var);
 *strSrc*<br/>
 この文字列に連結する `CStringT`。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 演算子は、別の `CStringT` オブジェクト、文字ポインター、または1つの文字を受け入れます。 この連結演算子を使用すると、この `CStringT` オブジェクトに追加された文字に新しいストレージを割り当てることができるため、メモリ例外が発生する可能性があることに注意してください。
 
@@ -1209,7 +1209,7 @@ Null で終わる比較対象の文字列へのポインター。
 *psz2*<br/>
 Null で終わる比較対象の文字列へのポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 左側の文字列または文字が右側の文字列または文字と等しいかどうかをテストし、それに応じて TRUE または FALSE を返します。
 
@@ -1251,7 +1251,7 @@ Null で終わる比較対象の文字列へのポインター。
 *psz2*<br/>
 Null で終わる比較対象の文字列へのポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 左側の文字列または文字が右側の文字列または文字と等しくないかどうかをテストします。
 
@@ -1283,7 +1283,7 @@ Null で終わる比較対象の文字列へのポインター。
 *psz2*<br/>
 Null で終わる比較対象の文字列へのポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 文字列間の辞書式比較 (文字単位)。
 
@@ -1321,7 +1321,7 @@ Null で終わる比較対象の文字列へのポインター。
 *psz2*<br/>
 Null で終わる比較対象の文字列へのポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 文字列間の辞書式比較 (文字単位)。
 
@@ -1359,7 +1359,7 @@ Null で終わる比較対象の文字列へのポインター。
 *psz2*<br/>
 Null で終わる比較対象の文字列へのポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 文字列間の辞書式比較 (文字単位)。
 
@@ -1397,7 +1397,7 @@ friend bool operator>=(PCXSTR psz1, const CStringT& str2) throw();
 *psz2*<br/>
 比較対象の文字列へのポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 文字列間の辞書式比較 (文字単位)。
 
@@ -1428,7 +1428,7 @@ int Remove(XCHAR chRemove);
 
 文字列から削除された文字の数。 文字列が変更されない場合は0。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 文字の比較では大文字と小文字が区別されます。
 
@@ -1463,7 +1463,7 @@ int Replace(XCHAR chOld, XCHAR chNew);
 
 文字または部分文字列の置換されたインスタンスの数を返します。文字列が変更されていない場合は0を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `Replace` は、 *Psznew*と*psznew*が同じ長さである必要がなく、古い部分文字列の複数のコピーを新しい値に変更できるため、文字列の長さを変更できます。 関数は、大文字と小文字を区別して一致を実行します。
 
@@ -1478,7 +1478,7 @@ int Replace(XCHAR chOld, XCHAR chNew);
 |_UNICODE|ワイド文字|
 |_MBCS|複数バイト文字|
 |[Neither]|1バイト文字|
-|両方|未定義|
+|両方|未定義。|
 
 ### <a name="example"></a>例
 
@@ -1501,7 +1501,7 @@ int ReverseFind(XCHAR ch) const throw();
 
 要求された文字と一致する、この `CStringT` オブジェクトの最後の文字の0から始まるインデックス番号。文字が見つからない場合は-1。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 関数は `strrchr`ランタイム関数に似ています。
 
@@ -1526,7 +1526,7 @@ CStringT Right(int nCount) const;
 
 指定の文字範囲のコピーを含む `CStringT` オブジェクト。 返される `CStringT` オブジェクトは空にすることができます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 *NCount*が文字列の長さを超える場合は、文字列全体が抽出されます。 `Right` は基本的な `Right` 関数に似ています (ただし、Basic のインデックスは0から始まります)。
 
@@ -1553,7 +1553,7 @@ BSTR SetSysString(BSTR* pbstr) const;
 
 新しい文字列。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `CStringT` オブジェクトの内容によっては、 *pbstr*によって参照される BSTR の値が変更される可能性があります。 メモリが不足している場合は、関数によって `CMemoryException` がスローされます。
 
@@ -1580,7 +1580,7 @@ CStringT SpanExcluding(PCXSTR pszCharSet) const;
 
 文字列内の最初の文字から、 *pszcharset*にも含まれる文字列内の最初の文字 (つまり、文字列の最初の文字から始めて、 *pszcharset*が検出された文字列の最初の文字を除く) で見つかった最初の文字で終わる文字列内の*文字を格納*している部分文字列。 文字列内に*Pszcharset*内の文字が見つからない場合は、文字列全体が返されます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `SpanExcluding` は、 *pszcharset*から最初に出現する文字の前にあるすべての文字を抽出して返します (つまり、 *pszcharset*の文字と文字列内のその後のすべての文字は返されません)。 文字列に*Pszcharset*の文字が見つからない場合、`SpanExcluding` は文字列全体を返します。
 
@@ -1605,7 +1605,7 @@ CStringT SpanIncluding(PCXSTR pszCharSet) const;
 
 文字列内の最初の文字から始まり、 *pszcharset*に含まれていない文字列に文字が見つかったときに終了する、 *pszcharset*内の文字列内の文字を格納する部分文字列。 文字列の最初の文字が指定されたセットに含まれていない場合、`SpanIncluding` は空の部分文字列を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 文字列の最初の文字が文字セットに含まれていない場合、`SpanIncluding` は空の文字列を返します。 それ以外の場合は、セット内の連続する文字のシーケンスを返します。
 
@@ -1633,7 +1633,7 @@ CStringT Tokenize(PCXSTR pszTokens, int& iStart) const;
 
 現在のトークン値を格納している `CStringT` オブジェクト。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `Tokenize` 関数は、ターゲット文字列内の次のトークンを検索します。 *Psztokens*の文字セットは、検索するトークンの有効な区切り記号を指定します。 `Tokenize` を呼び出すたびに、関数は*iStart*で開始され、先頭の区切り記号をスキップし、現在のトークンを含む `CStringT` オブジェクトを返します。これは、次の区切り文字までの文字の文字列です。 *IStart*の値は、末尾の区切り文字の後の位置に更新されます。または、文字列の末尾に到達した場合は-1 になります。 IStart `Tokenize`を使用して、次のトークンが読み込まれる文字列内の位置を追跡することによって、ターゲット文字列の残りの部分よりも多くのトークンを分割できます。これには、を使用します。 トークンがこれ以上ない場合、関数は空の文字列を返し、 *iStart*は-1 に設定されます。
 
@@ -1643,7 +1643,7 @@ CStringT Tokenize(PCXSTR pszTokens, int& iStart) const;
 
 [!code-cpp[NVC_ATLMFC_Utilities#135](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_39.cpp)]
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この例の出力は次のとおりです。
 
@@ -1675,7 +1675,7 @@ CStringT& Trim();
 
 トリミングされた文字列を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 次のいずれかの先頭および末尾の出現箇所をすべて削除します。
 
@@ -1689,7 +1689,7 @@ CStringT& Trim();
 
 [!code-cpp[NVC_ATLMFC_Utilities#136](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_40.cpp)]
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この例の出力は次のとおりです。
 
@@ -1720,7 +1720,7 @@ CStringT& TrimLeft();
 
 結果のトリミングされた文字列。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 次のいずれかの先頭および末尾の出現箇所をすべて削除します。
 
@@ -1756,7 +1756,7 @@ CStringT& TrimRight();
 
 トリミングされた文字列を含む `CStringT` オブジェクトを返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 次のいずれかの後続の出現箇所を削除します。
 

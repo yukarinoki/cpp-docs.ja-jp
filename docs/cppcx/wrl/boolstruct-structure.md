@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::BoolStruct::Member data member
 ms.assetid: 666eae78-e81d-4fb7-a9e4-1ba617d6d4cd
 ms.openlocfilehash: cdec425e317585abbd9730447e2c4fbb19b8250a
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865712"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423658"
 ---
 # <a name="boolstruct-structure"></a>BoolStruct 構造体
 
@@ -26,7 +26,7 @@ ms.locfileid: "78865712"
 struct BoolStruct;
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 `BoolStruct` 構造体は、`ComPtr` がインターフェイスのオブジェクトの有効期間を管理しているかどうかを定義します。 `BoolStruct` は、[ブール型 ()](comptr-class.md#operator-microsoft-wrl-details-booltype)演算子によって内部的に使用されます。
 
@@ -34,7 +34,7 @@ struct BoolStruct;
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
-Name                          | 説明
+Name                          | Description
 ----------------------------- | ------------------------------------------------------------------------------------------------------------------
 [Bool Struct:: Member](#member) | [Comptr](comptr-class.md)がインターフェイスのオブジェクトの有効期間を管理するかどうかを指定します。
 
@@ -42,7 +42,7 @@ Name                          | 説明
 
 `BoolStruct`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** 内部 .h
 
@@ -56,6 +56,6 @@ Name                          | 説明
 int Member;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 [Comptr](comptr-class.md)がインターフェイスのオブジェクトの有効期間を管理するかどうかを指定します。

@@ -3,11 +3,11 @@ title: 単純, 標準レイアウト, POD, およびリテラル型
 ms.date: 04/05/2018
 ms.assetid: 2b23a7be-9bad-49fc-8298-31a9a7c556b0
 ms.openlocfilehash: 2745302b3ebd7927e9d839e4661e884a2bd91042
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
-ms.translationtype: HT
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865784"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423706"
 ---
 # <a name="trivial-standard-layout-pod-and-literal-types"></a>単純, 標準レイアウト, POD, およびリテラル型
 
@@ -96,7 +96,7 @@ struct Derived : public Base
 };
 ```
 
-この例では、`Base` に非静的データ メンバーが含まれないため、`Derived` は標準レイアウトです。
+この例では、`Derived` に非静的データ メンバーが含まれないため、`Base` は標準レイアウトです。
 
 ```cpp
 struct Base
@@ -193,6 +193,6 @@ int main()
 - Void の配列、スカラー型または参照
 - 自明なデストラクターを持ち、コンストラクターを移動もコピーもしない 1 つ以上の constexpr コンストラクターを持つクラス。 さらに、すべての非静的データ メンバーと基本クラスは volatile ではなくリテラル型にする必要があります。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [基本的な概念](../cpp/basic-concepts-cpp.md)

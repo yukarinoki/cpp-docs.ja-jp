@@ -46,11 +46,11 @@ helpviewer_keywords:
 - RFX (record field exchange)
 ms.assetid: 6e4c5c1c-acb7-4c18-bf51-bf7959a696cd
 ms.openlocfilehash: 491b00fe65634acf7c8805dd471fa6e3cc62acf0
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78871655"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426607"
 ---
 # <a name="record-field-exchange-functions"></a>レコード フィールド エクスチェンジ (RFX) 関数
 
@@ -143,7 +143,7 @@ void RFX_Binary(
 *nMaxLength*<br/>
 転送される文字列または配列の許容最大長。 *Nmaxlength*の既定値は255です。 有効な値は 1 ~ INT_MAX です。 フレームワークによって、データ用にこの容量の領域が割り当てられます。 最適なパフォーマンスを得るには、予想される最大のデータ項目に対応できる大きさの値を渡します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 これらの型のデータソース内のデータは、レコードセット内の型 `CByteArray` との間でマップされます。
 
@@ -151,7 +151,7 @@ void RFX_Binary(
 
 「 [RFX_Text](#rfx_text)」を参照してください。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxdb.h
 
@@ -183,7 +183,7 @@ void RFX_Bool(
 
 「 [RFX_Text](#rfx_text)」を参照してください。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxdb.h
 
@@ -215,7 +215,7 @@ void RFX_Byte(
 
 「 [RFX_Text](#rfx_text)」を参照してください。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxdb.h
 
@@ -257,7 +257,7 @@ void RFX_Date(
 
 関数の2番目のバージョンは、`TIMESTAMP_STRUCT` 構造体への参照を受け取ります。 この構造体は、呼び出しの前に自分で設定する必要があります。 このバージョンでは、ダイアログデータエクスチェンジ (DDX) のサポートもコードウィザードもサポートされていません。 関数の3番目のバージョンは、 [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)オブジェクトへの参照を受け取る点を除いて、最初のバージョンと同じように動作します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 関数の `CTime` バージョンでは、一部の中間処理のオーバーヘッドが発生し、範囲が多少制限されています。 これらのいずれかの要因が制限を超えている場合は、関数の2番目のバージョンを使用します。 しかし、コードウィザードと DDX のサポートが不足していること、および自分で構造を設定する必要があることに注意してください。
 
@@ -265,7 +265,7 @@ void RFX_Date(
 
 「 [RFX_Text](#rfx_text)」を参照してください。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxdb.h
 
@@ -297,7 +297,7 @@ void RFX_Double(
 
 「 [RFX_Text](#rfx_text)」を参照してください。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxdb.h
 
@@ -329,7 +329,7 @@ void RFX_Int(
 
 「 [RFX_Text](#rfx_text)」を参照してください。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxdb.h
 
@@ -362,7 +362,7 @@ value );
 
 「 [RFX_Text](#rfx_text)」を参照してください。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxdb.h
 
@@ -394,7 +394,7 @@ void RFX_LongBinary(
 
 「 [RFX_Text](#rfx_text)」を参照してください。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxdb.h
 
@@ -426,7 +426,7 @@ void RFX_Single(
 
 「 [RFX_Text](#rfx_text)」を参照してください。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxdb.h
 
@@ -466,7 +466,7 @@ void RFX_Text(
 *nScale*<br/>
 ODBC の種類 SQL_DECIMAL または SQL_NUMERIC の値の小数点以下桁数を指定します。 *Nscale*は、パラメーター値を設定する場合にのみ使用できます。 詳細については、 *ODBC SDK プログラマーズリファレンス*の付録 D のトピック「有効桁数、小数点以下桁数、長さ、および表示サイズ」を参照してください。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 これらのすべての種類のデータソース内のデータは、レコードセット内の `CString` との間でマップされます。
 
@@ -492,7 +492,7 @@ void CCustomer::DoFieldExchange(CFieldExchange* pFX)
 }
 ```
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxdb.h
 
@@ -528,7 +528,7 @@ void RFX_Binary_Bulk(
 *nMaxLength*<br/>
 *PrgByteVals*が指す配列に格納されている値の許容最大長。 データが切り捨てられないようにするには、予想される最も大きなデータ項目に対応できる大きさの値を渡します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 データソース列には、SQL_BINARY、SQL_VARBINARY、または SQL_LONGVARBINARY の ODBC 型を使用できます。 レコードセットでは、BYTE へのポインター型のフィールドデータメンバーを定義する必要があります。
 
@@ -543,7 +543,7 @@ void RFX_Binary_Bulk(
 
 「 [RFX_Text_Bulk](#rfx_text_bulk)」を参照してください。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxdb.h
 
@@ -575,7 +575,7 @@ void RFX_Bool_Bulk(
 *prgLengths*<br/>
 長整数の配列へのポインター。 この配列は、 *prgBoolVals*が指す配列の各値の長さをバイト単位で格納します。 対応するデータ項目に Null 値が含まれている場合は、SQL_NULL_DATA 値が格納されることに注意してください。 詳細については、 *ODBC SDK プログラマーズリファレンス*の odbc API 関数 `SQLBindCol` を参照してください。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 データソース列には SQL_BIT の ODBC 型が必要です。 レコードセットでは、BOOL へのポインター型のフィールドデータメンバーを定義する必要があります。
 
@@ -590,7 +590,7 @@ void RFX_Bool_Bulk(
 
 「 [RFX_Text_Bulk](#rfx_text_bulk)」を参照してください。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxdb.h
 
@@ -622,7 +622,7 @@ void RFX_Byte_Bulk(
 *prgLengths*<br/>
 長整数の配列へのポインター。 この配列は、 *prgByteVals*が指す配列の各値の長さをバイト単位で格納します。 対応するデータ項目に Null 値が含まれている場合は、SQL_NULL_DATA 値が格納されることに注意してください。 詳細については、 *ODBC SDK プログラマーズリファレンス*の odbc API 関数 `SQLBindCol` を参照してください。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 データソース列には SQL_TINYINT の ODBC 型が必要です。 レコードセットでは、BYTE へのポインター型のフィールドデータメンバーを定義する必要があります。
 
@@ -637,7 +637,7 @@ void RFX_Byte_Bulk(
 
 「 [RFX_Text_Bulk](#rfx_text_bulk)」を参照してください。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxdb.h
 
@@ -669,7 +669,7 @@ TIMESTAMP_STRUCT 値の配列へのポインター。 この配列には、デ�
 *prgLengths*<br/>
 長整数の配列へのポインター。 この配列は、 *prgTSVals*が指す配列の各値の長さをバイト単位で格納します。 対応するデータ項目に Null 値が含まれている場合は、SQL_NULL_DATA 値が格納されることに注意してください。 詳細については、 *ODBC SDK プログラマーズリファレンス*の odbc API 関数 `SQLBindCol` を参照してください。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 データソース列には、SQL_DATE、SQL_TIME、または SQL_TIMESTAMP の ODBC 型を使用できます。 レコードセットは、TIMESTAMP_STRUCT へのポインター型のフィールドデータメンバーを定義する必要があります。
 
@@ -684,7 +684,7 @@ TIMESTAMP_STRUCT 値の配列へのポインター。 この配列には、デ�
 
 「 [RFX_Text_Bulk](#rfx_text_bulk)」を参照してください。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxdb.h
 
@@ -716,7 +716,7 @@ void RFX_Double_Bulk(
 *prgLengths*<br/>
 長整数の配列へのポインター。 この配列は、 *prgDblVals*が指す配列の各値の長さをバイト単位で格納します。 対応するデータ項目に Null 値が含まれている場合は、SQL_NULL_DATA 値が格納されることに注意してください。 詳細については、 *ODBC SDK プログラマーズリファレンス*の odbc API 関数 `SQLBindCol` を参照してください。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 データソース列には SQL_DOUBLE の ODBC 型が必要です。 レコードセットでは、 **double**型のポインター型のフィールドデータメンバーを定義する必要があります。
 
@@ -731,7 +731,7 @@ void RFX_Double_Bulk(
 
 「 [RFX_Text_Bulk](#rfx_text_bulk)」を参照してください。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxdb.h
 
@@ -763,7 +763,7 @@ void RFX_Int(
 
 「 [RFX_Text](#rfx_text)」を参照してください。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxdb.h
 
@@ -795,7 +795,7 @@ void RFX_Long_Bulk(
 *prgLengths*<br/>
 長整数の配列へのポインター。 この配列は、 *prgLongVals*が指す配列の各値の長さをバイト単位で格納します。 対応するデータ項目に Null 値が含まれている場合は、SQL_NULL_DATA 値が格納されることに注意してください。 詳細については、 *ODBC SDK プログラマーズリファレンス*の odbc API 関数 `SQLBindCol` を参照してください。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 データソース列には SQL_INTEGER の ODBC 型が必要です。 レコードセットでは、pointer 型のフィールドデータメンバーを**long**に定義する必要があります。
 
@@ -810,7 +810,7 @@ void RFX_Long_Bulk(
 
 「 [RFX_Text_Bulk](#rfx_text_bulk)」を参照してください。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxdb.h
 
@@ -842,7 +842,7 @@ void RFX_Single_Bulk(
 *prgLengths*<br/>
 長整数の配列へのポインター。 この配列は、 *prgFltVals*が指す配列の各値の長さをバイト単位で格納します。 対応するデータ項目に Null 値が含まれている場合は、SQL_NULL_DATA 値が格納されることに注意してください。 詳細については、 *ODBC SDK プログラマーズリファレンス*の odbc API 関数 `SQLBindCol` を参照してください。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 データソース列には SQL_REAL の ODBC 型が必要です。 レコードセットでは、 **float**型ポインターのフィールドデータメンバーを定義する必要があります。
 
@@ -857,7 +857,7 @@ void RFX_Single_Bulk(
 
 「 [RFX_Text_Bulk](#rfx_text_bulk)」を参照してください。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxdb.h
 
@@ -893,7 +893,7 @@ LPSTR 値の配列へのポインター。 この配列には、データソー�
 *nMaxLength*<br/>
 *PrgStrVals*が指す配列に格納されている値の許容最大長 (null 終了文字を含む)。 データが切り捨てられないようにするには、予想される最も大きなデータ項目に対応できる大きさの値を渡します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 データソース列には、SQL_LONGVARCHAR、SQL_CHAR、SQL_VARCHAR、SQL_DECIMAL、または SQL_NUMERIC の ODBC 型を使用できます。 レコードセットでは、型 LPSTR のフィールドデータメンバーを定義する必要があります。
 
@@ -923,7 +923,7 @@ void CMultiCustomer::DoBulkFieldExchange(CFieldExchange* pFX)
 }
 ```
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxdb.h
 
@@ -962,7 +962,7 @@ void AFXAPI DFX_Binary(
 > [!NOTE]
 >  既定では、 [CDaoRecordset:: m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)を設定することにより、すべてのフィールドに対してデータをダブルバッファリングするかどうかを制御できます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 データは、DAO の型 DAO_BYTES とレコードセットの[CByteArray](cbytearray-class.md)型の間でマップされます。
 
@@ -970,7 +970,7 @@ void AFXAPI DFX_Binary(
 
 「 [DFX_Text](#dfx_text)」を参照してください。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxdao
 
@@ -1005,7 +1005,7 @@ void AFXAPI DFX_Bool(
 > [!NOTE]
 >  既定では、 [CDaoRecordset:: m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)を設定することによって、データをダブルバッファリングするかどうかを制御できます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 データは、DAO の型 DAO_BOOL とレコードセットの BOOL 型の間でマップされます。
 
@@ -1013,7 +1013,7 @@ void AFXAPI DFX_Bool(
 
 「 [DFX_Text](#dfx_text)」を参照してください。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxdao
 
@@ -1048,7 +1048,7 @@ void AFXAPI DFX_Byte(
 > [!NOTE]
 >  既定では、 [CDaoRecordset:: m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)を設定することによって、データをダブルバッファリングするかどうかを制御できます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 データは、DAO の型 DAO_BYTES とレコードセットの BYTE 型の間でマップされます。
 
@@ -1056,7 +1056,7 @@ void AFXAPI DFX_Byte(
 
 「 [DFX_Text](#dfx_text)」を参照してください。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxdao
 
@@ -1091,7 +1091,7 @@ void AFXAPI DFX_Currency(
 > [!NOTE]
 >  既定では、 [CDaoRecordset:: m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)を設定することによって、データをダブルバッファリングするかどうかを制御できます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 データは、DAO の型 DAO_CURRENCY とレコードセットの[COleCurrency](colecurrency-class.md)型の間でマップされます。
 
@@ -1099,7 +1099,7 @@ void AFXAPI DFX_Currency(
 
 「 [DFX_Text](#dfx_text)」を参照してください。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxdao
 
@@ -1134,7 +1134,7 @@ void AFXAPI DFX_DateTime(
 > [!NOTE]
 >  既定では、 [CDaoRecordset:: m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)を設定することによって、データをダブルバッファリングするかどうかを制御できます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 データは、DAO の型 DAO_DATE とレコードセットの型[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)の間でマップされます。
 
@@ -1145,7 +1145,7 @@ void AFXAPI DFX_DateTime(
 
 「 [DFX_Text](#dfx_text)」を参照してください。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxdao
 
@@ -1180,7 +1180,7 @@ void AFXAPI DFX_Double(
 > [!NOTE]
 >  既定では、 [CDaoRecordset:: m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)を設定することによって、データをダブルバッファリングするかどうかを制御できます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 データは、DAO の型 DAO_R8 とレコードセットの**double float**型の間でマップされます。
 
@@ -1188,7 +1188,7 @@ void AFXAPI DFX_Double(
 
 「 [DFX_Text](#dfx_text)」を参照してください。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxdao
 
@@ -1223,7 +1223,7 @@ void AFXAPI DFX_Long(
 > [!NOTE]
 >  既定では、 [CDaoRecordset:: m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)を設定することによって、データをダブルバッファリングするかどうかを制御できます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 データは、DAO の型 DAO_I4 とレコードセットの**long**型の間でマップされます。
 
@@ -1231,7 +1231,7 @@ void AFXAPI DFX_Long(
 
 「 [DFX_Text](#dfx_text)」を参照してください。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxdao
 
@@ -1270,7 +1270,7 @@ void AFXAPI DFX_LongBinary(
 > [!NOTE]
 >  既定では、 [CDaoRecordset:: m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)を設定することによって、データをダブルバッファリングするかどうかを制御できます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `DFX_LongBinary` は、MFC ODBC クラスとの互換性のために用意されています。 `DFX_LongBinary` 関数は、 [CDaoRecordset](cdaorecordset-class.md)オブジェクトのフィールドデータメンバーとデータソース上のレコードの列の間で、クラス `CLongBinary` を使用してバイナリラージオブジェクト (BLOB) データを転送します。 データは、DAO の型 DAO_BYTES とレコードセットの[CLongBinary](clongbinary-class.md)型の間でマップされます。
 
@@ -1278,7 +1278,7 @@ void AFXAPI DFX_LongBinary(
 
 「 [DFX_Text](#dfx_text)」を参照してください。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxdao
 
@@ -1313,7 +1313,7 @@ void AFXAPI DFX_Short(
 > [!NOTE]
 >  既定では、 [CDaoRecordset:: m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)を設定することによって、データをダブルバッファリングするかどうかを制御できます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 データは、DAO の型 DAO_I2 とレコードセットの**short**型の間でマップされます。
 
@@ -1324,7 +1324,7 @@ void AFXAPI DFX_Short(
 
 「 [DFX_Text](#dfx_text)」を参照してください。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxdao
 
@@ -1359,7 +1359,7 @@ void AFXAPI DFX_Single(
 > [!NOTE]
 >  既定では、 [CDaoRecordset:: m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)を設定することによって、データをダブルバッファリングするかどうかを制御できます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 データは、DAO の型 DAO_R4 とレコードセットの**float**型の間でマップされます。
 
@@ -1367,7 +1367,7 @@ void AFXAPI DFX_Single(
 
 「 [DFX_Text](#dfx_text)」を参照してください。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxdao
 
@@ -1406,7 +1406,7 @@ void AFXAPI DFX_Text(
 > [!NOTE]
 >  既定では、 [CDaoRecordset:: m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)を設定することによって、データをダブルバッファリングするかどうかを制御できます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 データは、DAO 内の DAO_CHAR 型の間でマップされます (または、シンボル _UNICODE が定義されている場合は DAO_WCHAR)。また、レコードセットに[CString](../../atl-mfc-shared/reference/cstringt-class.md)を入力します。  n
 
@@ -1430,7 +1430,7 @@ void CCustSet::DoFieldExchange(CDaoFieldExchange* pFX)
 }
 ```
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxdao
 

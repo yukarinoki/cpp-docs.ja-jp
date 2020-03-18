@@ -13,11 +13,11 @@ f1_keywords:
 - CONCRT/concurrency::message_status Enumeration
 ms.assetid: a40e3b2d-ad21-4229-9880-2cfa84f7ab8f
 ms.openlocfilehash: 716c2d03e6d1ff67566bd28e5931996ea2d400af
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78854180"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427453"
 ---
 # <a name="concurrency-namespace-enums"></a>コンカレンシー名前空間を持つ列挙型
 
@@ -82,7 +82,7 @@ enum Agents_EventType;
 
 ## <a name="concrt_eventtype"></a>ConcRT_EventType 列挙型
 
-同時実行ランタイムによって提供されるトレース機能を使用してトレースできるイベントの種類。
+コンカレンシー ランタイムによって提供されるトレース機能を使用してトレースできるイベントの種類。
 
 ```cpp
 enum ConcRT_EventType;

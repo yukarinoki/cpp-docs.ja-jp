@@ -11,11 +11,11 @@ helpviewer_keywords:
 - CDialogBar [MFC], Create
 ms.assetid: da2f7a30-970c-44e3-87f0-6094bd002cab
 ms.openlocfilehash: af84c5239a9cb3cbddb1ab4f0230e5b1a3373573
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883625"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425959"
 ---
 # <a name="cdialogbar-class"></a>CDialogBar クラス
 
@@ -31,17 +31,17 @@ class CDialogBar : public CControlBar
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[CDialogBar:: CDialogBar](#cdialogbar)|`CDialogBar` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[CDialogBar:: Create](#create)|Windows ダイアログバーを作成し、`CDialogBar` オブジェクトにアタッチします。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 ダイアログバーは、ユーザーが tab キーを使用できる標準の Windows コントロールが含まれているのダイアログボックスに似ています。 もう1つの類似性は、ダイアログバーを表すダイアログテンプレートを作成することです。
 
@@ -64,7 +64,7 @@ class CDialogBar : public CControlBar
 
 `CDialogBar`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxext.h
 
@@ -133,7 +133,7 @@ virtual BOOL Create(
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 CBRS_TOP または CBRS_BOTTOM の配置スタイルを指定した場合、ダイアログバーの幅はフレームウィンドウの幅、高さは*nIDTemplate*で指定されたリソースの高さになります。 CBRS_LEFT または CBRS_RIGHT の配置スタイルを指定した場合、ダイアログバーの高さはフレームウィンドウの高さ、 *nIDTemplate*で指定されたリソースの幅になります。
 

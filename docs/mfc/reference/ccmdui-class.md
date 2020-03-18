@@ -27,11 +27,11 @@ helpviewer_keywords:
 - CCmdUI [MFC], m_pSubMenu
 ms.assetid: 04eaaaf5-f510-48ab-b425-94665ba24766
 ms.openlocfilehash: 42aec2937cd81ebbb50482321b8deae001723d3a
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883624"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424567"
 ---
 # <a name="ccmdui-class"></a>CCmdUI クラス
 
@@ -47,7 +47,7 @@ class CCmdUI
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[CCmdUI:: ContinueRouting](#continuerouting)|は、現在のメッセージのルーティングをハンドラーのチェーンの下位にルーティングするようにコマンドルーティング機構に指示します。|
 |[CCmdUI:: Enable](#enable)|このコマンドのユーザーインターフェイス項目を有効または無効にします。|
@@ -57,7 +57,7 @@ class CCmdUI
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[CCmdUI:: m_nID](#m_nid)|ユーザーインターフェイスオブジェクトの ID。|
 |[CCmdUI:: m_nIndex](#m_nindex)|ユーザーインターフェイスオブジェクトのインデックス。|
@@ -65,7 +65,7 @@ class CCmdUI
 |[CCmdUI:: m_pOther](#m_pother)|通知を送信したウィンドウオブジェクトを指します。|
 |[CCmdUI:: m_pSubMenu](#m_psubmenu)|`CCmdUI` オブジェクトによって表される、含まれているサブメニューを指します。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 `CCmdUI` には基底クラスがありません。
 
@@ -91,7 +91,7 @@ class CCmdUI
 
 `CCmdUI`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxwin.h
 
@@ -103,7 +103,7 @@ class CCmdUI
 void ContinueRouting();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 これは、FALSE を返す ON_COMMAND_EX ハンドラーと組み合わせて使用する必要がある高度なメンバー関数です。 詳細については、「[テクニカルノート 6](../../mfc/tn006-message-maps.md)」を参照してください。
 
@@ -150,7 +150,7 @@ UINT m_nIndex;
 CMenu* m_pMenu;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 項目がメニューでない場合は NULL。
 
@@ -162,7 +162,7 @@ CMenu* m_pMenu;
 CMenu* m_pSubMenu;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 項目がメニューでない場合は NULL。 サブメニューがポップアップの場合、 *m_nID*には、ポップアップメニューの最初の項目の ID が含まれます。 詳細については、「[テクニカルノート 21](../../mfc/tn021-command-and-message-routing.md)」を参照してください。
 
@@ -174,7 +174,7 @@ CMenu* m_pSubMenu;
 CWnd* m_pOther;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 項目がメニューまたは非 `CWnd` オブジェクトの場合は NULL。
 
@@ -191,7 +191,7 @@ virtual void SetCheck(int nCheck = 1);
 *n*<br/>
 設定するチェック状態を指定します。 0の場合は、オフにします。1の場合、をチェックします。2の場合、は不確定を設定します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、メニュー項目とツールバーボタンに対して機能します。 不確定状態は、ツールバーボタンにのみ適用されます。
 
@@ -208,7 +208,7 @@ virtual void SetRadio(BOOL bOn = TRUE);
 *楽しい*<br/>
 項目を有効にする場合は TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、`SetCheck`のように動作しますが、オプショングループの一部として機能するユーザーインターフェイス項目に対して動作する点が異なります。 グループ内の他の項目をオフにすることは、項目自体がラジオグループの動作を維持していない限り、自動ではありません。
 

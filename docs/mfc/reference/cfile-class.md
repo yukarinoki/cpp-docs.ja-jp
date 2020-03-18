@@ -61,11 +61,11 @@ helpviewer_keywords:
 - CFile [MFC], m_pTM
 ms.assetid: b2eb5757-d499-4e67-b044-dd7d1abaa0f8
 ms.openlocfilehash: a9161764f6c8646766a73add01c25cce5619ad19
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855385"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424465"
 ---
 # <a name="cfile-class"></a>CFile クラス
 
@@ -81,13 +81,13 @@ class CFile : public CObject
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[CFile:: CFile](#cfile)|パスまたはファイルハンドルから `CFile` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[CFile:: Abort](#abort)|すべての警告とエラーを無視してファイルを閉じます。|
 |[CFile:: Close](#close)|ファイルを閉じて、オブジェクトを削除します。|
@@ -115,24 +115,24 @@ class CFile : public CObject
 
 ### <a name="public-operators"></a>パブリック演算子
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[CFile:: operator ハンドル](#operator_handle)|`CFile` オブジェクトへのハンドル。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[CFile:: hFileNull](#hfilenull)|`CFile` オブジェクトに有効なハンドルがあるかどうかを判断します。|
 |[CFile:: m_hFile](#m_hfile)|通常、にはオペレーティングシステムのファイルハンドルが含まれます。|
 
 ### <a name="protected-data-members"></a>保護されるデータ メンバー
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[CFile:: m_pTM](#m_ptm)|`CAtlTransactionManager` オブジェクトへのポインター。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 このクラスは、バッファリングされていないバイナリディスク入出力サービスを直接提供し、派生クラスを通じてテキストファイルとメモリファイルを間接的にサポートします。 `CFile` は、`CArchive` クラスと連携して、Microsoft Foundation Class オブジェクトのシリアル化をサポートします。
 
@@ -150,7 +150,7 @@ class CFile : public CObject
 
 `CFile`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afx.h
 
@@ -162,7 +162,7 @@ class CFile : public CObject
 virtual void Abort();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 オブジェクトを破棄する前にファイルを閉じていない場合は、デストラクターによってファイルが閉じられます。
 
@@ -207,13 +207,13 @@ CAtlTransactionManager* pTM);
 *pTM*<br/>
 CAtlTransactionManager オブジェクトへのポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 次の5つの表は、 *Noの flags*パラメーターで使用可能なオプションを示しています。
 
 次のファイル アクセス モード オプションから 1 つのみ選択します。 既定のファイル アクセス モードは `CFile::modeRead` であり、これは読み取り専用です。
 
-|値|説明|
+|値|Description|
 |-----------|-----------------|
 |`CFile::modeRead`|読み取りアクセスのみを要求します。|
 |`CFile::modeWrite`|書き込みアクセスのみを要求します。|
@@ -221,7 +221,7 @@ CAtlTransactionManager オブジェクトへのポインター。
 
 次の文字モード オプションのいずれかを選択します。
 
-|値|説明|
+|値|Description|
 |-----------|-----------------|
 |`CFile::typeBinary`|バイナリ モードを設定します (派生クラスのみで使用されます)。|
 |`CFile::typeText`|復帰とラインフィードのペアに対して特別な処理を行うテキストモードを設定します (派生クラスでのみ使用されます)。|
@@ -229,7 +229,7 @@ CAtlTransactionManager オブジェクトへのポインター。
 
 次のファイル共有モード オプションから 1 つのみ選択します。 既定のファイル共有モードは `CFile::shareExclusive` であり、これは排他的です。
 
-|値|説明|
+|値|Description|
 |-----------|-----------------|
 |`CFile::shareDenyNone`|共有の制限はありません。|
 |`CFile::shareDenyRead`|他のすべての読み取りアクセスを拒否します。|
@@ -238,14 +238,14 @@ CAtlTransactionManager オブジェクトへのポインター。
 
 次のファイル作成モード オプションから最初のオプションまたは両方を選択します。 既定の作成モードは `CFile::modeNoTruncate` であり、これは既存を開くです。
 
-|値|説明|
+|値|Description|
 |-----------|-----------------|
 |`CFile::modeCreate`|ファイルが存在しない場合は、新しいファイルを作成します。 ファイルが既に存在する場合は、上書きされ、最初は長さが0に設定されます。|
 |`CFile::modeNoTruncate`|ファイルが存在しない場合は、新しいファイルを作成します。それ以外の場合、ファイルが既に存在する場合は、`CFile` オブジェクトにアタッチされます。|
 
 説明に従って次のファイル キャッシュ オプションを選択します。 既定では、オプションとして使用できない汎用のキャッシュスキームがシステムによって使用されます。
 
-|値|説明|
+|値|Description|
 |-----------|-----------------|
 |`CFile::osNoBuffer`|システムは、ファイルの中間キャッシュを使用しません。 このオプションを選択すると、次の 2 つのオプションは取り消されます。|
 |`CFile::osRandomAccess`|ファイル キャッシュはランダム アクセスに対して最適化されます。 このオプションと順次スキャンオプションの両方を使用しないでください。|
@@ -254,7 +254,7 @@ CAtlTransactionManager オブジェクトへのポインター。
 
 ファイル ハンドルが継承されないようにするために、次のセキュリティ オプションを選択します。 既定では、新しい子プロセスはファイル ハンドルを使用できます。
 
-|値|説明|
+|値|Description|
 |-----------|-----------------|
 |`CFile::modeNoInherit`|子プロセスがファイル ハンドルを使用できないようにします。|
 
@@ -280,7 +280,7 @@ CAtlTransactionManager オブジェクトへのポインター。
 virtual void Close();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 オブジェクトを破棄する前にファイルを閉じていない場合は、デストラクターによってファイルが閉じられます。
 
@@ -302,7 +302,7 @@ virtual CFile* Duplicate() const;
 
 重複する `CFile` オブジェクトへのポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この関数は、C ランタイム関数 `_dup`に相当します。
 
@@ -314,7 +314,7 @@ virtual CFile* Duplicate() const;
 virtual void Flush();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `Flush` を使用すると、`CArchive` バッファーのフラッシュは保証されません。 アーカイブを使用している場合は、最初に[CArchive:: Flush](../../mfc/reference/carchive-class.md#flush)を呼び出します。
 
@@ -334,7 +334,7 @@ virtual CString GetFileName() const;
 
 ファイルの名前です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 たとえば、`GetFileName` を呼び出して、ファイル `c:\windows\write\myfile.wri`についてユーザーにメッセージを生成する場合は、ファイル名の `myfile.wri`が返されます。
 
@@ -358,7 +358,7 @@ virtual CString GetFilePath() const;
 
 指定されたファイルの完全パス。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 たとえば、`GetFilePath` を呼び出して、ファイル `c:\windows\write\myfile.wri`に関するメッセージをユーザーに生成すると、ファイルパス `c:\windows\write\myfile.wri`が返されます。
 
@@ -380,7 +380,7 @@ virtual CString GetFileTitle() const;
 
 基になるファイルのタイトル。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメソッドは、 [GetFileTitle](/windows/win32/api/commdlg/nf-commdlg-getfiletitlew)を呼び出して、ファイルのタイトルを取得します。 成功した場合、メソッドは、ユーザーにファイル名を表示するためにシステムが使用する文字列を返します。 それ以外の場合、メソッドは[Pathfindfilename](/windows/win32/api/shlwapi/nf-shlwapi-pathfindfilenamew)を呼び出して、基になるファイルのファイル名 (ファイル拡張子を含む) を取得します。 つまり、返されたファイルのタイトル文字列にファイル拡張子が必ず含まれているわけではありません。 詳細については、Windows SDK の「 [GetFileTitle](/windows/win32/api/commdlg/nf-commdlg-getfiletitlew)と[pathfindfilename](/windows/win32/api/shlwapi/nf-shlwapi-pathfindfilenamew) 」を参照してください。
 
@@ -462,7 +462,7 @@ CAtlTransactionManager オブジェクトへのポインター。
 
 指定したファイルのステータス情報が正常に取得された場合は TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 非静的バージョンの `GetStatus` は、指定された `CFile` オブジェクトに関連付けられている開いているファイルのステータス情報を取得します。  静的なバージョンの `GetStatus` は、ファイルを実際に開くことなく、指定されたファイルパスからファイルの状態を取得します。 このバージョンは、ファイルの存在とアクセス権のテストに役立ちます。
 
@@ -492,7 +492,7 @@ enum Attribute {
 static AFX_DATA const HANDLE hFileNull;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この定数は、`CFile` オブジェクトに有効なファイルハンドルがあるかどうかを判断するために使用されます。
 
@@ -518,7 +518,7 @@ virtual void LockRange(
 *dwCount*<br/>
 ロックする範囲内のバイト数。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ファイル内のバイトをロックすると、他のプロセスがそれらのバイトにアクセスできなくなります。 ファイルの複数の領域をロックすることはできますが、重複する領域は許可されません。
 
@@ -539,7 +539,7 @@ virtual void LockRange(
 HANDLE m_hFile;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `m_hFile` は UINT 型のパブリック変数です。 ハンドルが割り当てられていない場合は、オペレーティングシステムに依存しない空のファイルインジケーターである `CFile::hFileNull`が含まれます。
 
@@ -553,7 +553,7 @@ HANDLE m_hFile;
 CAtlTransactionManager* m_pTM;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ##  <a name="open"></a>CFile:: Open
 
@@ -590,7 +590,7 @@ CAtlTransactionManager オブジェクトへのポインター。
 
 開いたが成功した場合は0以外の。それ以外の場合は0です。 この*パラメーターは*、0が返された場合にのみ意味があります。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 2つの `Open` 関数は、ファイルを開くための "安全な" メソッドです。失敗は通常の予期される条件です。
 
@@ -665,7 +665,7 @@ static void PASCAL Remove(
 *pTM*<br/>
 CAtlTransactionManager オブジェクトへのポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `Remove` によってディレクトリが削除されることはありません。
 
@@ -697,7 +697,7 @@ static void PASCAL Rename(
 *pTM*<br/>
 CAtlTransactionManager オブジェクトへのポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ディレクトリの名前を変更することはできません。 この関数は、REN コマンドに相当します。
 
@@ -727,11 +727,11 @@ UINT nFrom);
 
 メソッドが正常に実行された場合は、ファイルポインターの位置。それ以外の場合、戻り値は未定義となり、`CFileException` 例外へのポインターがスローされます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 次の表に、 *Nfrom*パラメーターに使用できる値を示します。
 
-|値|説明|
+|値|Description|
 |-----------|-----------------|
 |`CFile::begin`|ファイルの先頭からシークします。|
 |`CFile::current`|ファイルポインターの現在の場所からシークします。|
@@ -755,7 +755,7 @@ UINT nFrom);
 void SeekToBegin();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `SeekToBegin()` は `Seek( 0L, CFile::begin )` に相当します。
 
@@ -775,7 +775,7 @@ ULONGLONG SeekToEnd();
 
 ファイルの長さをバイト単位で返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `SeekToEnd()` は `CFile::Seek( 0L, CFile::end )` に相当します。
 
@@ -796,7 +796,7 @@ virtual void SetFilePath(LPCTSTR lpszNewName);
 *lpszNewName*<br/>
 新しいパスを指定する文字列へのポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 > [!NOTE]
 > `SetFilePath` によってファイルが開かれたり、ファイルが作成されたりすることはありません。単に、`CFile` オブジェクトをパス名に関連付けて、そのオブジェクトを使用できます。
@@ -818,7 +818,7 @@ virtual void SetLength(ULONGLONG dwNewLen);
 *dwNewLen*<br/>
 ファイルの必要な長さ (バイト単位)。 この値は、ファイルの現在の長さより大きいか小さくすることができます。 ファイルは、必要に応じて拡張または切り捨てられます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 > [!NOTE]
 >  `CMemFile`では、この関数は `CMemoryException` オブジェクトをスローする可能性があります。
@@ -849,7 +849,7 @@ static void PASCAL SetStatus(
 *pTM*<br/>
 CAtlTransactionManager オブジェクトへのポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 時刻を設定するには、*状態*の `m_mtime` フィールドを変更します。
 
@@ -877,7 +877,7 @@ virtual void UnlockRange(
 *dwCount*<br/>
 ロックを解除する範囲内のバイト数。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 詳細については、 [LockRange](#lockrange)メンバー関数の説明を参照してください。
 
@@ -906,7 +906,7 @@ virtual void Write(
 *nCount*<br/>
 バッファーから転送されるバイト数。 テキストモードファイルの場合、キャリッジリターンラインフィードのペアは単一の文字としてカウントされます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `Write` は、ディスク全体の条件など、いくつかの条件に応じて例外をスローします。
 

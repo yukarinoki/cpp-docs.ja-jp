@@ -47,11 +47,11 @@ helpviewer_keywords:
 - CDocTemplate [MFC], SetServerInfo
 ms.assetid: 14b41a1f-bf9d-4eac-b6a8-4c54ffcc77f6
 ms.openlocfilehash: 3b2d84af9be8e5c606cde8794b51e12207dcdec9
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855521"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426073"
 ---
 # <a name="cdoctemplate-class"></a>CDocTemplate クラス
 
@@ -67,13 +67,13 @@ class CDocTemplate : public CCmdTarget
 
 ### <a name="protected-constructors"></a>プロテクト コンストラクター
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[CDocTemplate:: CDocTemplate](#cdoctemplate)|`CDocTemplate` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[CDocTemplate:: AddDocument](#adddocument)|テンプレートにドキュメントを追加します。|
 |[CDocTemplate:: CloseAllDocuments](#closealldocuments)|このテンプレートに関連付けられているすべてのドキュメントを閉じます。|
@@ -95,7 +95,7 @@ class CDocTemplate : public CCmdTarget
 |[CDocTemplate:: SetPreviewInfo](#setpreviewinfo)|プロセスプレビューハンドラーが不足しています。|
 |[CDocTemplate:: SetServerInfo](#setserverinfo)|サーバードキュメントが埋め込まれているか、埋め込み先で編集されている場合に、リソースとクラスを決定します。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 通常、アプリケーションの `InitInstance` 関数の実装には、1つまたは複数のドキュメントテンプレートを作成します。 ドキュメントテンプレートでは、次の3種類のクラス間のリレーションシップを定義します。
 
@@ -127,7 +127,7 @@ class CDocTemplate : public CCmdTarget
 
 `CDocTemplate`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxwin.h
 
@@ -144,7 +144,7 @@ virtual void AddDocument(CDocument* pDoc);
 *pDoc*<br/>
 追加するドキュメントへのポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 派生クラス[CMultiDocTemplate](../../mfc/reference/cmultidoctemplate-class.md)と[CSingleDocTemplate](../../mfc/reference/csingledoctemplate-class.md)は、この関数をオーバーライドします。 `CDocTemplate`から独自のドキュメントテンプレートクラスを派生させる場合は、派生クラスでこの関数をオーバーライドする必要があります。
 
@@ -165,7 +165,7 @@ CDocTemplate (
 *nIDResource*<br/>
 ドキュメントの種類で使用されるリソースの ID を指定します。 これには、メニュー、アイコン、アクセラレータテーブル、および文字列リソースが含まれます。
 
-文字列リソースは、' \n ' 文字で区切られた最大7つの部分文字列で構成されます (部分文字列が含まれていない場合、' \n ' 文字はプレースホルダーとして必要です)。ただし、末尾の ' \n ' 文字は必要ありません)。これらの部分文字列は、ドキュメントの種類を記述します。 部分文字列の詳細については、「 [GetDocString](#getdocstring)」を参照してください。 この文字列リソースは、アプリケーションのリソースファイルにあります。 例 :
+文字列リソースは、' \n ' 文字で区切られた最大7つの部分文字列で構成されます (部分文字列が含まれていない場合、' \n ' 文字はプレースホルダーとして必要です)。ただし、末尾の ' \n ' 文字は必要ありません)。これらの部分文字列は、ドキュメントの種類を記述します。 部分文字列の詳細については、「 [GetDocString](#getdocstring)」を参照してください。 この文字列リソースは、アプリケーションのリソースファイルにあります。 次に例を示します。
 
 ```RC
 // MYCALC.RC
@@ -186,7 +186,7 @@ END
 *pViewClass*<br/>
 ビュークラスの `CRuntimeClass` オブジェクトをポイントします。 このクラスは、ドキュメントを表示するために定義する `CView`派生クラスです。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `CDocTemplate` オブジェクトを構築するには、このメンバー関数を使用します。 `CDocTemplate` オブジェクトを動的に割り当て、アプリケーションクラスの `InitInstance` メンバー関数から[CWinApp::、adddoctemplate](../../mfc/reference/cwinapp-class.md#adddoctemplate)に渡します。
 
@@ -203,7 +203,7 @@ virtual void CloseAllDocuments(BOOL bEndSession);
 *bEndSession*<br/>
 使用されていません。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、通常、File Exit コマンドの一部として使用されます。 この関数の既定の実装では、 [CDocument::D eletecontents](../../mfc/reference/cdocument-class.md#deletecontents)メンバー関数を呼び出してドキュメントのデータを削除した後、ドキュメントに関連付けられているすべてのビューのフレームウィンドウを閉じます。
 
@@ -243,7 +243,7 @@ virtual CFrameWnd* CreateNewFrame(
 
 新しく作成されたフレームウィンドウへのポインター。エラーが発生した場合は NULL。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `CreateNewFrame` は、コンストラクターに渡された `CRuntimeClass` オブジェクトを使用して、ビューとドキュメントが添付された新しいフレームウィンドウを作成します。 *Pdoc*パラメーターが NULL の場合、フレームワークはトレースメッセージを出力します。
 
@@ -275,7 +275,7 @@ CFrameWnd* CreateOleFrame(
 
 成功した場合は、フレームウィンドウへのポインター。それ以外の場合は NULL。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 *BCreateView*が0の場合、空のフレームが作成されます。
 
@@ -315,7 +315,7 @@ virtual BOOL GetDocString(
 
 指定した部分文字列が見つかった場合は0以外の。それ以外の場合は0です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ドキュメントの種類を記述する特定の部分文字列を取得するには、この関数を呼び出します。 これらの部分文字列を含む文字列は、ドキュメントテンプレートに格納され、アプリケーションのリソースファイル内の文字列から派生します。 フレームワークは、この関数を呼び出して、アプリケーションのユーザーインターフェイスに必要な文字列を取得します。 アプリケーションのドキュメントのファイル名拡張子を指定した場合は、Windows 登録データベースにエントリを追加するときに、フレームワークによってこの関数も呼び出されます。これにより、Windows ファイルマネージャーからドキュメントを開くことができます。
 
@@ -333,7 +333,7 @@ virtual POSITION GetFirstDocPosition() const = 0;
 
 このドキュメントテンプレートに関連付けられているドキュメントの一覧を反復処理するために使用できる位置の値。リストが空の場合は NULL。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このテンプレートに関連付けられているドキュメントのリスト内の最初のドキュメントの位置を取得するには、この関数を使用します。 このテンプレートに関連付けられているドキュメントの一覧を反復処理するには、値を[CDocTemplate:: GetNextDoc](#getnextdoc)の引数として使用します。
 
@@ -356,7 +356,7 @@ virtual CDocument* GetNextDoc(POSITION& rPos) const = 0;
 *求める*<br/>
 [Getfirstdocposition](#getfirstdocposition)または `GetNextDoc`への前回の呼び出しによって返された位置の値への参照。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 取得した要素がリスト内の最後の要素である場合、 *rpo*の新しい値は NULL に設定されます。
 
@@ -386,7 +386,7 @@ virtual void InitialUpdateFrame(
 *bMakeVisible*<br/>
 フレームが表示されアクティブになるかどうかを示します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `CreateNewFrame`を使用して新しいフレームを作成した後、`IntitialUpdateFrame` を呼び出します。 この関数を呼び出すと、そのフレームウィンドウ内のビューが `OnInitialUpdate` 呼び出しを受け取るようになります。 また、以前にアクティブなビューがない場合は、フレームウィンドウのプライマリビューがアクティブになります。プライマリビューは、AFX_IDW_PANE_FIRST の子 ID を持つビューです。 最後に、 *Bmakevisible*が0以外の場合、フレームウィンドウが表示されます。 *Bmakevisible*がゼロの場合、フレームウィンドウの現在のフォーカスと可視状態は変更されません。
 
@@ -400,7 +400,7 @@ virtual void InitialUpdateFrame(
 virtual void LoadTemplate();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、指定された `CDocTemplate` または派生クラスのリソースを読み込むために、フレームワークによって呼び出されます。 通常、テンプレートがグローバルに構築されている場合を除き、構築時に呼び出されます。 この場合、`LoadTemplate` の呼び出しは、 [CWinApp::、adddoctemplate](../../mfc/reference/cwinapp-class.md#adddoctemplate)が呼び出されるまで遅延されます。
 
@@ -438,7 +438,7 @@ enum Confidence
     };
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ファイルを開くために使用するドキュメントテンプレートの種類を決定するには、この関数を使用します。 たとえば、アプリケーションで複数のファイルの種類がサポートされている場合、この関数を使用すると、各テンプレートの `MatchDocType` を呼び出し、返された信頼度に従ってテンプレートを選択することで、特定のファイルに適したドキュメントテンプレートを特定できます。
 
@@ -474,7 +474,7 @@ virtual CDocument* OpenDocumentFile(
 
 ファイル名が*Lpszpathname*; であるドキュメントへのポインター失敗した場合は NULL です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 *Lpszpathname*によって指定されたパスを持つファイルを開きます。 *Lpszpathname*が NULL の場合、このテンプレートに関連付けられている種類のドキュメントを含む新しいファイルが作成されます。
 
@@ -491,7 +491,7 @@ virtual void RemoveDocument(CDocument* pDoc);
 *pDoc*<br/>
 削除するドキュメントへのポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 派生クラス `CMultiDocTemplate` と `CSingleDocTemplate` はこの関数をオーバーライドします。 `CDocTemplate`から独自のドキュメントテンプレートクラスを派生させる場合は、派生クラスでこの関数をオーバーライドする必要があります。
 
@@ -520,7 +520,7 @@ void SetContainerInfo(UINT nIDOleInPlaceContainer);
 *nIDOleInPlaceContainer*<br/>
 埋め込みオブジェクトがアクティブになったときに使用されるリソースの ID。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 OLE オブジェクトが埋め込み先でアクティブになっているときに使用されるリソースを設定するには、この関数を呼び出します。 これらのリソースには、メニューとアクセラレータテーブルが含まれる場合があります。 この関数は、通常、アプリケーションの[CWinApp:: InitInstance](../../mfc/reference/cwinapp-class.md#initinstance)関数で呼び出されます。
 
@@ -539,7 +539,7 @@ virtual void SetDefaultTitle(CDocument* pDocument) = 0;
 *pDocument*<br/>
 タイトルが設定されるドキュメントへのポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 既定のタイトルの詳細については、「 [CDocTemplate:: GetDocString](#getdocstring)の `CDocTemplate::docName` の説明を参照してください。
 
@@ -569,7 +569,7 @@ void SetServerInfo(
 *pOleViewClass*<br/>
 インプレースアクティブ化が発生したときに作成されるビューオブジェクトのクラス情報を格納している `CRuntimeClass` 構造体へのポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ユーザーが埋め込みオブジェクトのアクティベーションを要求したときに、サーバーアプリケーションによって使用されるリソースを識別するには、このメンバー関数を呼び出します。 これらのリソースは、メニューとアクセラレータテーブルで構成されています。 この関数は、通常、アプリケーションの `InitInstance` で呼び出されます。
 
@@ -597,7 +597,7 @@ CFrameWnd* CreatePreviewFrame(
 
 `CFrameWnd` オブジェクトへの有効なポインター。作成に失敗した場合は NULL。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ##  <a name="setpreviewinfo"></a>CDocTemplate:: SetPreviewInfo
 
@@ -621,7 +621,7 @@ void SetPreviewInfo(
 *Pプレビュー Viewclass*<br/>
 プレビュービューのランタイムクラス情報構造体へのポインターを指定します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ## <a name="see-also"></a>参照
 

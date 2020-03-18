@@ -31,11 +31,11 @@ helpviewer_keywords:
 - CFtpConnection [MFC], SetCurrentDirectory
 ms.assetid: 5e3a0501-8893-49cf-a3d5-0628d8d6b936
 ms.openlocfilehash: 94ee4cb938ee061470282eb2f08a94d83c908805
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78890790"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424351"
 ---
 # <a name="cftpconnection-class"></a>CFtpConnection クラス
 
@@ -51,13 +51,13 @@ class CFtpConnection : public CInternetConnection
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[CFtpConnection:: CFtpConnection](#cftpconnection)|`CFtpConnection` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[CFtpConnection:: Command](#command)|FTP サーバーに直接コマンドを送信します。|
 |[CFtpConnection:: CreateDirectory](#createdirectory)|サーバーにディレクトリを作成します。|
@@ -71,7 +71,7 @@ class CFtpConnection : public CInternetConnection
 |[CFtpConnection:: Rename](#rename)|サーバー上のファイルの名前を変更します。|
 |[CFtpConnection:: SetCurrentDirectory](#setcurrentdirectory)|現在の FTP ディレクトリを設定します。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 FTP は、MFC WinInet クラスによって認識される3つのインターネットサービスの1つです。
 
@@ -91,7 +91,7 @@ FTP インターネットサーバーと通信するには、まず[CInternetSes
 
 `CFtpConnection`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxinet.h
 
@@ -149,7 +149,7 @@ FTP サーバー名を含む文字列へのポインターです。
 *bPassive*<br/>
 この FTP セッションのパッシブモードまたはアクティブモードを指定します。 TRUE に設定すると、Win32 API *Dwflag*が INTERNET_FLAG_PASSIVE に設定されます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `CFtpConnection` オブジェクトを直接作成することはありません。 代わりに、 [CInternetSession:: GetFtpConnection](../../mfc/reference/cinternetsession-class.md#getftpconnection)を呼び出して、`CFptConnection` オブジェクトを作成します。
 
@@ -189,7 +189,7 @@ CmdResponseType は、 *afxinet.h*で定義されている CFtpConnection のメ
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、Windows SDK で説明されているように、 [Ftpcommand](/windows/win32/api/wininet/nf-wininet-ftpcommandw)関数の機能をエミュレートします。
 
@@ -212,7 +212,7 @@ BOOL CreateDirectory(LPCTSTR pstrDirName);
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 呼び出しが失敗した場合は、Windows の関数[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)を呼び出してエラーの原因を特定することができます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `GetCurrentDirectory` を使用して、サーバーへのこの接続に対する現在の作業ディレクトリを決定します。 リモートシステムがルートディレクトリに接続していることを想定しないでください。
 
@@ -250,7 +250,7 @@ BOOL GetCurrentDirectory(
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 呼び出しが失敗した場合は、Win32 関数[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)を呼び出してエラーの原因を特定することができます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 代わりに、URL としてディレクトリ名を取得するには、 [Getcurrentdirectoryasurl](#getcurrentdirectoryasurl)を呼び出します。
 
@@ -288,7 +288,7 @@ BOOL GetCurrentDirectoryAsURL(
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 呼び出しが失敗した場合は、Win32 関数[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)を呼び出してエラーの原因を特定することができます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `GetCurrentDirectoryAsURL` は[Getcurrentdirectory](#getcurrentdirectory)と同じように動作します。
 
@@ -348,7 +348,7 @@ FTP サーバーから取得するファイルの名前を格納している、n
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 呼び出しが失敗した場合は、Win32 関数[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)を呼び出してエラーの原因を特定することができます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `GetFile` は、FTP サーバーからのファイルの読み取りおよびローカルでのファイルの保存に関連するすべてのオーバーヘッドを処理する、高レベルのルーチンです。 ファイルデータのみを取得するか、ファイル転送を制御する必要があるアプリケーションでは、代わりに `OpenFile` と[CInternetFile:: Read](../../mfc/reference/cinternetfile-class.md#read)を使用する必要があります。
 
@@ -392,7 +392,7 @@ CInternetFile* OpenFile(
 
 [CInternetFile](../../mfc/reference/cinternetfile-class.md)オブジェクトへのポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `OpenFile` は、次の状況で使用する必要があります。
 
@@ -438,7 +438,7 @@ FTP サーバー上に作成するファイルの名前を含む文字列への�
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 呼び出しが失敗した場合は、Win32 関数[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)を呼び出してエラーの原因を特定することができます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `PutFile` は、FTP サーバーへのファイルの保存に関連するすべての操作を処理する高レベルのルーチンです。 データを送信するか、ファイル転送をより細かく制御する必要があるアプリケーションは、 [OpenFile](#openfile)と[CInternetFile:: Write](../../mfc/reference/cinternetfile-class.md#write)を使用する必要があります。
 
@@ -461,7 +461,7 @@ BOOL Remove(LPCTSTR pstrFileName);
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 呼び出しが失敗した場合は、Win32 関数[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)を呼び出してエラーの原因を特定することができます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 *PstrFileName*パラメーターには、現在のディレクトリを基準とした、または完全に修飾された部分的なファイル名を指定できます。 円記号 (\\) またはスラッシュ (/) は、いずれかの名前のディレクトリ区切り記号として使用できます。 `Remove` 関数は、使用される前に、ディレクトリ名の区切り記号を適切な文字に変換します。
 
@@ -482,7 +482,7 @@ BOOL RemoveDirectory(LPCTSTR pstrDirName);
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 呼び出しが失敗した場合は、Win32 関数[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)を呼び出してエラーの原因を特定することができます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 [Getcurrentdirectory](#getcurrentdirectory)を使用して、サーバーの現在の作業ディレクトリを特定します。 リモートシステムがルートディレクトリに接続していることを想定しないでください。
 
@@ -510,7 +510,7 @@ BOOL Rename(
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 呼び出しが失敗した場合は、Win32 関数[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)を呼び出してエラーの原因を特定することができます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 *PstrExisting*パラメーターと*pstrNew*パラメーターには、現在のディレクトリを基準とした、または完全修飾されたファイル名のいずれかを指定できます。 円記号 (\\) またはスラッシュ (/) は、いずれかの名前のディレクトリ区切り記号として使用できます。 `Rename` は、ディレクトリ名の区切り記号を使用前に適切な文字に変換します。
 
@@ -531,7 +531,7 @@ BOOL SetCurrentDirectory(LPCTSTR pstrDirName);
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 呼び出しが失敗した場合は、Win32 関数[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)を呼び出してエラーの原因を特定することができます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 *PstrDirName*パラメーターには、現在のディレクトリを基準とした、部分的または完全に修飾されたファイル名を指定できます。 円記号 (\\) またはスラッシュ (/) は、いずれかの名前のディレクトリ区切り記号として使用できます。 `SetCurrentDirectory` は、ディレクトリ名の区切り記号を使用前に適切な文字に変換します。
 

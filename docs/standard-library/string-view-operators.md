@@ -18,11 +18,11 @@ helpviewer_keywords:
 - std::basic_string_view::operator&lt;&lt;
 - std::basic_string_view::operator&lt;=, std::basic_string_view::operator==
 ms.openlocfilehash: 699b1f1bddeb71ecbf03297d162a7e45ebd39609
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
-ms.translationtype: MT
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78890916"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425059"
 ---
 # <a name="ltstring_viewgt-operators"></a>&lt;string_view&gt; 演算子
 
@@ -67,7 +67,7 @@ bool operator!=(
 
 演算子の左側のオブジェクトが右側のオブジェクトと等しく辞書式ない場合は**true**を返します。それ以外の場合は**false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 *Convertible_string_type*からもう一方の側の string_view への暗黙的な変換が存在する必要があります。 
 
@@ -106,7 +106,7 @@ bool operator==(
 
 演算子の左側のオブジェクトが右側のオブジェクトと辞書式等しい場合は**true**を返します。それ以外の場合は**false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 *Convertible_string_type*からもう一方の側の string_view への暗黙的な変換が存在する必要があります。 
 
@@ -145,7 +145,7 @@ bool operator<(
 
 演算子の左側のオブジェクトが右側のオブジェクトよりも辞書式小さい場合は**true**を返します。それ以外の場合は**false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 *Convertible_string_type*からもう一方の側の string_view への暗黙的な変換が存在する必要があります。 
 
@@ -206,7 +206,7 @@ bool operator<=(
 
 演算子の左側のオブジェクトが右側のオブジェクト以下である場合は**true**を辞書式します。それ以外の場合は**false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 「 [Operator&lt;](#op_lt)」を参照してください。
 
@@ -232,7 +232,7 @@ inline basic_ostream<CharType, Traits>& operator<<(
 
 書き込み先の出力ストリーム。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この演算子を使用して、string_view の内容を出力ストリームに挿入します。たとえば、 [std:: cout](iostream.md#cout)を使用します。
 
@@ -269,7 +269,7 @@ bool operator>(
 
 演算子の左辺のオブジェクトが右辺の string_view オブジェクトよりも大きい場合は**true**を返します。それ以外の場合は**false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 「 [Operator&lt;](#op_lt)」を参照してください。
 
@@ -306,7 +306,7 @@ bool operator>=(
 
 演算子の左側のオブジェクトが右側のオブジェクト以上で辞書式場合は**true**を指定します。それ以外の場合は**false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 「 [Operator&lt;](#op_lt)」を参照してください。
 

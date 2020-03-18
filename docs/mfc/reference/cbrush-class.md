@@ -25,11 +25,11 @@ helpviewer_keywords:
 - CBrush [MFC], GetLogBrush
 ms.assetid: e5ef2c62-dd95-4973-9090-f52f605900e1
 ms.openlocfilehash: a99d8c8022d23f627320b66c3f376be803c9c839
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78876049"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426013"
 ---
 # <a name="cbrush-class"></a>CBrush クラス
 
@@ -45,13 +45,13 @@ class CBrush : public CGdiObject
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[CBrush:: CBrush](#cbrush)|`CBrush` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[CBrush:: CreateBrushIndirect](#createbrushindirect)|[Logbrush](/windows/win32/api/wingdi/ns-wingdi-logbrush)構造体で指定されたスタイル、色、およびパターンを使用してブラシを初期化します。|
 |[CBrush:: Createdibpattern ブラシ](#createdibpatternbrush)|デバイスに依存しないビットマップ (DIB) によって指定されたパターンでブラシを初期化します。|
@@ -64,11 +64,11 @@ class CBrush : public CGdiObject
 
 ### <a name="public-operators"></a>パブリック演算子
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[CBrush:: operator HBRUSH](#operator_hbrush)|`CBrush` オブジェクトにアタッチされている Windows ハンドルを返します。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 `CBrush` オブジェクトを使用するには、`CBrush` オブジェクトを構築し、ブラシを必要とする任意の `CDC` メンバー関数に渡します。
 
@@ -84,7 +84,7 @@ class CBrush : public CGdiObject
 
 `CBrush`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxwin.h
 
@@ -122,7 +122,7 @@ explicit CBrush(CBitmap* pBitmap);
 *pBitmap*<br/>
 ブラシが描画するビットマップを指定する `CBitmap` オブジェクトをポイントします。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `CBrush` には、4つのオーバーロードされたコンストラクターがあります。引数を持たないコンストラクターは、初期化されていない `CBrush` オブジェクトを構築してから、使用する前に初期化する必要があります。
 
@@ -155,7 +155,7 @@ BOOL CreateBrushIndirect(const LOGBRUSH* lpLogBrush);
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このブラシは、その後、任意のデバイスコンテキストの現在のブラシとして選択できます。
 
@@ -198,7 +198,7 @@ BOOL CreateDIBPatternBrush(
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 その後、ラスター操作をサポートする任意のデバイスコンテキストに対して、ブラシを選択できます。
 
@@ -258,7 +258,7 @@ BOOL CreateHatchBrush(
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このブラシは、その後、任意のデバイスコンテキストの現在のブラシとして選択できます。
 
@@ -283,7 +283,7 @@ BOOL CreatePatternBrush(CBitmap* pBitmap);
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 その後、ラスター操作をサポートする任意のデバイスコンテキストに対して、ブラシを選択できます。 *Pbitmap*によって識別されるビットマップは、通常、 [CBitmap:: createbitmap](../../mfc/reference/cbitmap-class.md#createbitmap)、 [CBitmap:: Createbitmapindirect](../../mfc/reference/cbitmap-class.md#createbitmapindirect)、 [CBitmap:: Loadbitmap](../../mfc/reference/cbitmap-class.md#loadbitmap)、または[CBitmap:: CreateCompatibleBitmap](../../mfc/reference/cbitmap-class.md#createcompatiblebitmap)関数を使用して初期化されます。
 
@@ -316,7 +316,7 @@ BOOL CreateSolidBrush(COLORREF crColor);
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このブラシは、その後、任意のデバイスコンテキストの現在のブラシとして選択できます。
 
@@ -343,7 +343,7 @@ BOOL CreateSysColorBrush(int nIndex);
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このブラシは、その後、任意のデバイスコンテキストの現在のブラシとして選択できます。
 
@@ -370,7 +370,7 @@ Windows GDI ブラシを処理します。
 
 成功した場合は `CBrush` オブジェクトへのポインター。それ以外の場合は NULL。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `CBrush` オブジェクトがハンドルにまだアタッチされていない場合は、一時 `CBrush` オブジェクトが作成され、アタッチされます。 この一時的な `CBrush` オブジェクトは、そのイベントループ内のアプリケーションのアイドル時間が次になるまで有効です。 この時点で、すべての一時グラフィックオブジェクトが削除されます。 つまり、一時オブジェクトは、1つのウィンドウメッセージの処理中にのみ有効です。
 
@@ -401,7 +401,7 @@ int GetLogBrush(LOGBRUSH* pLogBrush);
 
 関数が失敗した場合、戻り値は0になります。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `LOGBRUSH` 構造体は、ブラシのスタイル、色、およびパターンを定義します。
 
@@ -423,7 +423,7 @@ operator HBRUSH() const;
 
 成功した場合は、`CBrush` オブジェクトによって表される Windows GDI オブジェクトへのハンドル。それ以外の場合は NULL。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この演算子は、HBRUSH オブジェクトの直接使用をサポートするキャスト演算子です。
 

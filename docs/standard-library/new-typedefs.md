@@ -5,11 +5,11 @@ f1_keywords:
 - new/std::new_handler
 ms.assetid: aef01de1-06b5-4b6c-aebc-2c9f423d7e47
 ms.openlocfilehash: 80123bc35422984ef92bdba6da45052d3461b1d7
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78854941"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425377"
 ---
 # <a name="ltnewgt-typedefs"></a>&lt;new&gt; typedefs
 
@@ -19,7 +19,7 @@ ms.locfileid: "78854941"
 inline constexpr size_t hardware_constructive_interference_size = implementation-defined;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この数は、同時実行スレッドによって一時的な近傍性を使用してアクセスされる2つのオブジェクトによって占有される連続メモリの最大推奨サイズです。 少なくとも `alignof(max_align_t)`である必要があります。
 
@@ -46,7 +46,7 @@ static_assert(sizeof(together) <= hardware_constructive_interference_size);
 inline constexpr size_t hardware_destructive_interference_size = implementation-defined;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この数値は、同時にアクセスされる2つのオブジェクト間の最小オフセットとして、実装によって発生する競合によるパフォーマンスの低下を回避するために推奨されます。 少なくとも `alignof(max_align_t)`である必要があります。
 
@@ -67,7 +67,7 @@ struct keep_apart {
 typedef void (*new_handler)();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この種類のハンドラー関数は、追加のストレージの要求を満たすことができない場合に、 **operator new**または `operator new[]` によって呼び出されます。
 

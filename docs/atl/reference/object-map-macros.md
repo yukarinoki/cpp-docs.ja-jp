@@ -7,11 +7,11 @@ f1_keywords:
 - atlcom/ATL::OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO
 ms.assetid: 680087f4-9894-41dd-a79c-6f337e1f13c1
 ms.openlocfilehash: 73dc924527bac8499adefab3d0d6b51afa500a5a
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78863201"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423022"
 ---
 # <a name="object-map-macros"></a>オブジェクトマップマクロ
 
@@ -23,7 +23,7 @@ ms.locfileid: "78863201"
 |[OBJECT_ENTRY_AUTO](#object_entry_auto)|ATL オブジェクトをオブジェクトマップに入力し、レジストリを更新して、オブジェクトのインスタンスを作成します。|
 |[OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](#object_entry_non_createable_ex_auto)|オブジェクトを登録して初期化するように指定する一方で、`CoCreateInstance` を使用してオブジェクトを外部で作成できないように指定できます。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlcom. h
 
@@ -40,7 +40,7 @@ DECLARE_OBJECT_DESCRIPTION( x )
 *x*<br/>
 からクラスオブジェクトの説明。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ATL は、この説明を[OBJECT_ENTRY_AUTO](#object_entry_auto)マクロを使用してオブジェクトマップに入力します。
 
@@ -68,9 +68,9 @@ OBJECT_ENTRY_AUTO( clsid, class )
 から*クラスの名前付き*クラスによって実装C++されている COM クラスの CLSID。
 
 *class*<br/>
-からClsid によってC++表される COM クラスを実装するクラスの名前。
+からClsid によってC++表される COM クラスを実装する*clsid*クラスの名前。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 オブジェクトのエントリ マクロは、クラスの登録、初期化、および作成をサポートするためにプロジェクトのグローバル スコープに配置されます。
 
@@ -100,9 +100,9 @@ OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO( clsid, class )
 から*クラスの名前付き*クラスによって実装C++されている COM クラスの CLSID。
 
 *class*<br/>
-からClsid によってC++表される COM クラスを実装するクラスの名前。
+からClsid によってC++表される COM クラスを実装する*clsid*クラスの名前。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 オブジェクトのエントリ マクロは、クラスの登録、初期化、および作成をサポートするためにプロジェクトのグローバル スコープに配置されます。
 

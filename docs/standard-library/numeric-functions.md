@@ -32,11 +32,11 @@ helpviewer_keywords:
 - std::transform_inclusive_scan [C++]
 - std::transform_reduce [C++]
 ms.openlocfilehash: 88a97a3d110c684090b78570077927e32541eed7
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856362"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425365"
 ---
 # <a name="ltnumericgt-functions"></a>&lt;numeric&gt; 関数
 
@@ -77,7 +77,7 @@ Type accumulate(
 
 最初のテンプレート関数の指定した範囲内にある*初期化*とすべての要素の合計、または2番目のテンプレート関数の場合は、sum 演算ではなく*binary_op*二項演算を適用した結果、(* partialresult、 *in_iter*) が返されます。ここで、 *partialresult*は、操作の以前のアプリケーションの結果であり、 *in_iter*は範囲内の
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 初期値によって、範囲が空の場合に適切に定義された結果が得られます。この場合、 *init*が返されます。 二項演算は、結合または可換である必要はありません。 結果が初期値の*init*に初期化され、*結果* = *binary_op*(*結果*、 *in_iter*) が範囲を反復的に計算されます。ここで*in_iter*は、範囲内の連続する各要素を指す反復子です。 範囲は有効である必要があり、複雑さは範囲のサイズに比例します。 2 項演算子の戻り値の型は、反復中のクロージャを確実にするために、**Type** に変換可能である必要があります。
 
@@ -236,7 +236,7 @@ ForwardIterator2 adjacent_difference(
 
 ターゲット範囲の末尾を示す出力反復子: `result` + (`last` - `first`)。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 出力反復子の*結果*は、*最初*に入力反復子と同じ反復子になることができるため、`adjacent_difference` 値が適切に計算される可能性があります。
 
@@ -520,7 +520,7 @@ Type inner_product(
 
 *init*を*init* *binary_op1* (*a*i *binary_op2* *b*i) に繰り返し置き換える。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 初期値は、範囲が空の場合に、適切に定義された結果があることを保証します。 その場合は、 *init*が返されます。 二項演算は、結合または可換的である必要はありません。 範囲は有効である必要があり、複雑さは範囲のサイズに比例します。 2 項演算子の戻り値の型は、反復中のクロージャを確実にするために、**Type** に変換可能である必要があります。
 
@@ -720,7 +720,7 @@ OutputIterator partial_sum(
 
 ターゲット範囲の末尾を示す出力反復子: *result* + (*last* - *first*)。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 出力反復子の*結果*は、*最初*に入力反復子と同じ反復子にすることができます。そのため、部分的な合計が計算される可能性があります。
 
@@ -859,7 +859,7 @@ Type reduce(
 
 *Binary_op*または `std::plus<>()` を、指定された範囲内のすべての要素 (* partialresult、 *in_iter* *) に適用*した結果。 *partialresult*は、操作の以前のアプリケーションの結果であり、 *in_iter*は範囲内の要素を指す反復子です。 *Init*を指定しないオーバーロードでは、使用される*init*値は `typename iterator_traits<InputIterator>::value_type{}`に相当します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `reduce` の動作は、 *binary_op*が結合および可換でない限り、非決定的です。 *Binary_op*によって要素が変更された場合、または*最初*の \[の*最後*] の間隔で反復子が無効になった場合、動作は未定義になります。
 

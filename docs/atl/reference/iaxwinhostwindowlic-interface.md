@@ -10,11 +10,11 @@ helpviewer_keywords:
 - IAxWinHostWindowLic interface
 ms.assetid: 750f1520-6bce-428c-aca0-fccbe3f063c7
 ms.openlocfilehash: aca3970d13db53ffa04fe9582bbe9b8db78e820d
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78864854"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423076"
 ---
 # <a name="iaxwinhostwindowlic-interface"></a>IAxWinHostWindowLic インターフェイス
 
@@ -35,13 +35,13 @@ interface IAxWinHostWindowLic : IAxWinHostWindow
 |[CreateControlLic](#createcontrollic)|ライセンスされたコントロールを作成し、ホストオブジェクトにアタッチします。|
 |[CreateControlLicEx](#createcontrollicex)|ライセンスされたコントロールを作成し、ホストオブジェクトにアタッチし、必要に応じてイベントハンドラーを設定します。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 `IAxWinHostWindowLic` は[IAxWinHostWindow](../../atl/reference/iaxwinhostwindow-interface.md)から継承し、ライセンスされたコントロールの作成をサポートするメソッドを追加します。
 
 このインターフェイスのメンバーを使用するサンプルについては、「 [ATL AXHost を使用した ActiveX コントロールのホスト](../../atl/hosting-activex-controls-using-atl-axhost.md)」を参照してください。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 このインターフェイスの定義は、次に示すようC++に IDL またはとして使用できます。
 
@@ -67,7 +67,7 @@ STDMETHOD(CreateControlLic)(
 *bstrLic*<br/>
 からコントロールのライセンスキーを格納している BSTR。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 残りのパラメーターと戻り値の説明については、「 [IAxWinHostWindow:: CreateControl](../../atl/reference/iaxwinhostwindow-interface.md#createcontrol) 」を参照してください。
 
@@ -97,7 +97,7 @@ STDMETHOD(CreateControlLicEx)(
 *bstrLic*<br/>
 からコントロールのライセンスキーを格納している BSTR。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 残りのパラメーターと戻り値の説明については、「 [IAxWinHostWindow:: CreateControlEx](../../atl/reference/iaxwinhostwindow-interface.md#createcontrolex) 」を参照してください。
 

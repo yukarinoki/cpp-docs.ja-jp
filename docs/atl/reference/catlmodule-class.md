@@ -21,11 +21,11 @@ helpviewer_keywords:
 - CAtlModule class
 ms.assetid: 63fe02f1-4c4b-4e7c-ae97-7ad7b4252415
 ms.openlocfilehash: 798e94aed3bbd98108866ce0a1810485bd68699b
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78857149"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423424"
 ---
 # <a name="catlmodule-class"></a>CAtlModule クラス
 
@@ -41,14 +41,14 @@ class ATL_NO_VTABLE CAtlModule : public _ATL_MODULE
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[CAtlModule::CAtlModule](#catlmodule)|コンストラクターです。|
 |[CAtlModule:: ~ CAtlModule](#dtor)|デストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[CAtlModule::AddCommonRGSReplacements](#addcommonrgsreplacements)|このメソッドをオーバーライドして、ATL レジストリコンポーネント (レジストラー) の置換マップにパラメーターを追加します。|
 |[CAtlModule:: AddTermFunc](#addtermfunc)|モジュールが終了したときに呼び出される新しい関数を追加します。|
@@ -63,12 +63,12 @@ class ATL_NO_VTABLE CAtlModule : public _ATL_MODULE
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[CAtlModule:: m_libid](#m_libid)|現在のモジュールの GUID を格納します。|
 |[CAtlModule:: m_pGIT](#m_pgit)|グローバルインターフェイステーブルへのポインター。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 このクラスは、 [CAtlExeModuleT](../../atl/reference/catlexemodulet-class.md)クラスおよび[CAtlServiceModuleT クラス](../../atl/reference/catlservicemodulet-class.md)[によって](../../atl/reference/catldllmodulet-class.md)使用され、それぞれ DLL アプリケーション、EXE アプリケーション、および Windows サービスのサポートを提供します。
 
@@ -82,7 +82,7 @@ ATL のモジュールの詳細については、「 [Atl モジュールクラ�
 
 `CAtlModule`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlbase. h
 
@@ -103,7 +103,7 @@ virtual HRESULT AddCommonRGSReplacements(IRegistrarBase* /* pRegistrar*/) throw(
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 置き換え可能パラメーターを使用すると、レジストラーのクライアントは実行時のデータを指定できます。 これを行うために、レジストラーは、スクリプト内の置き換え可能パラメーターに関連付けられた値を入力する置換マップを保持します。 レジストラーは、これらのエントリを実行時に作成します。
 
@@ -137,7 +137,7 @@ HRESULT AddTermFunc(_ATL_TERMFUNC* pFunc, DWORD_PTR dw) throw();
 CAtlModule() throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 データメンバーを初期化し、モジュールのスレッドの周囲のクリティカルセクションを開始します。
 
@@ -149,7 +149,7 @@ CAtlModule() throw();
 ~CAtlModule() throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 すべてのデータメンバーを解放します。
 
@@ -170,7 +170,7 @@ virtual HRESULT GetGITPtr(IGlobalInterfaceTable** ppGIT) throw();
 
 成功した場合は S_OK を返し、失敗した場合はエラーコードを返します。 *Ppgit*が NULL と等しい場合、E_POINTER が返されます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 グローバルインターフェイステーブルオブジェクトが存在しない場合は、そのオブジェクトが作成され、そのアドレスがメンバー変数[CAtlModule:: m_pGIT](#m_pgit)に格納されます。
 
@@ -226,7 +226,7 @@ IGlobalInterfaceTable* m_pGIT;
 void Term() throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 すべてのデータメンバーを解放します。 このメソッドは、デストラクターによって呼び出されます。
 
@@ -276,7 +276,7 @@ HRESULT WINAPI UpdateRegistryFromResourceD(
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 *Lpszres または nResID*によって指定されたリソースに含まれるスクリプトを実行します。 *Bregister*が TRUE の場合、このメソッドはオブジェクトをシステムレジストリに登録します。それ以外の場合は、レジストリからオブジェクトを削除します。
 
@@ -310,7 +310,7 @@ inline HRESULT WINAPI UpdateRegistryFromResourceDHelper(
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメソッドは、 [CAtlModule:: UpdateRegistryFromResourceD](#updateregistryfromresourced)の実装を提供します。
 
@@ -348,7 +348,7 @@ HRESULT WINAPI UpdateRegistryFromResourceS(
 
 成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 [CAtlModule:: UpdateRegistryFromResourceD](#updateregistryfromresourced)を除き、ATL レジストリコンポーネント (レジストラー) への静的なリンクを作成する `CAtlModule::UpdateRegistryFromResourceS` ます。
 

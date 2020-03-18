@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::operatoroperator&lt; (forward_list)
 - std::operatoroperator&lt;= (forward_list)
 ms.openlocfilehash: 1ddfb56c7ff68ec10c7bb56af3495e4042acb83c
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78874757"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427087"
 ---
 # <a name="ltforward_listgt-operators"></a>&lt;forward_list&gt; 演算子
 
@@ -43,7 +43,7 @@ bool operator==(
 *右*\
 `forward_list` 型オブジェクト。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このテンプレート関数は、`operator==` をオーバーロードして、クラステンプレート `forward_list`の2つのオブジェクトを比較します。 `distance(left.begin(), end()) == distance(right.begin(),right.end()) && equal(left. begin(),left. end(),right.begin())`が返されます。
 
@@ -69,7 +69,7 @@ bool operator!=(
 
 リストが等しくない場合は **true**、リストが等しい場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このテンプレート関数は `!(left == right)` を返します。
 
@@ -95,7 +95,7 @@ bool operator<(
 
 演算子の左辺の list が演算子の右辺の list 未満である場合は **true**、それ以外の場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このテンプレート関数は、`operator<` をオーバーロードして、クラステンプレート `forward_list`の2つのオブジェクトを比較します。 `lexicographical_compare(lhs. begin(), lhs. end(), rhs.begin(), rhs.end())`が返されます。
 
@@ -121,7 +121,7 @@ bool operator<=(
 
 演算子の左辺の list が演算子の右辺の list 以下である場合は **true**、それ以外の場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このテンプレート関数は `!(right < left)` を返します。
 
@@ -147,7 +147,7 @@ bool operator>(
 
 演算子の左辺の list が演算子の右辺の list より大きい場合は **true**、それ以外の場合は **false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このテンプレート関数は `right < left` を返します。
 
@@ -173,6 +173,6 @@ bool operator>=(
 
 演算子の左辺の前方リストが演算子の右辺の前方リスト以上である場合は**true**を指定します。それ以外の場合は**false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このテンプレート関数は `!(left < right)` を返します。

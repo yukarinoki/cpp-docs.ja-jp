@@ -139,11 +139,11 @@ helpviewer_keywords:
 - std::unordered_map::swap
 ms.assetid: 7cf7cfa1-16e7-461c-a9b2-3b8d8ec24e0d
 ms.openlocfilehash: 6b6d907fd0f1f19c829f991a61c9d92e015c6686
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78873986"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427741"
 ---
 # <a name="unordered_map-class"></a>unordered_map クラス
 
@@ -162,7 +162,7 @@ class unordered_map;
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
+|パラメーター|Description|
 |-|-|
 |*[キー]*|キーの型。|
 |*Ty*|マップされた型。|
@@ -172,7 +172,7 @@ class unordered_map;
 
 ## <a name="members"></a>メンバー
 
-|型定義|説明|
+|型定義|Description|
 |-|-|
 |[allocator_type](#allocator_type)|ストレージを管理するためのアロケーターの型です。|
 |[const_iterator](#const_iterator)|被制御シーケンスの定数反復子の型です。|
@@ -191,7 +191,7 @@ class unordered_map;
 |[size_type](#size_type)|2 つの要素間の距離を表す、符号なしの型です。|
 |[value_type](#value_type)|要素の型。|
 
-|メンバー関数|説明|
+|メンバー関数|Description|
 |-|-|
 |[at](#at)|指定したキーを持つ要素を検索します。|
 |[begin](#begin)|被制御シーケンスの先頭を指定します。|
@@ -222,12 +222,12 @@ class unordered_map;
 |[スワップ](#swap)|2 つのコンテナーのコンテンツを交換します。|
 |[unordered_map](#unordered_map)|コンテナー オブジェクトを構築します。|
 
-|演算子|説明|
+|演算子|Description|
 |-|-|
 |[unordered_map::operator[]](#op_at)|指定したキーを持つ要素を検索または挿入します。|
 |[unordered_map::operator=](#op_eq)|ハッシュ テーブルをコピーします。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 このオブジェクトは、このオブジェクトが制御するシーケンスを、格納されている 2 つのオブジェクト ([unordered_map::key_equal](#key_equal) 型の比較関数オブジェクトと、[unordered_map::hasher](#hasher) 型のハッシュ関数オブジェクト) を呼び出すことによって並べ替えます。 格納されている 1 つ目のオブジェクトには、メンバー関数 [unordered_map::key_eq](#key_eq)`()` を呼び出すことによってアクセスします。格納されている 2 つ目のオブジェクトには、メンバー関数 [unordered_map::hash_function](#hash)`()` を呼び出すことによってアクセスします。 具体的には、`X` 型のすべての値 `Y` と `Key` について、`key_eq()(X, Y)` が呼び出され、2 つの引数値の大小関係が等しい場合は true が返されます。`hash_function()(keyval)` の呼び出しからは、`size_t` 型の値の分布が生成されます。 クラステンプレート[Unordered_multimap クラス](../standard-library/unordered-multimap-class.md)とは異なり、`unordered_map` 型のオブジェクトでは、被制御シーケンスの任意の2つの要素に対して `key_eq()(X, Y)` が常に false になります。 キーの重複は許されません。
 
@@ -237,7 +237,7 @@ class unordered_map;
 
 被制御シーケンスに対するストレージの割り当ておよび解放は、格納されている [unordered_map::allocator_type](#allocator_type) 型のアロケーター オブジェクトを介して行われます。 このようなアロケーターオブジェクトは、`allocator`型のオブジェクトと同じ外部インターフェイスを持つ必要があります。 コンテナー オブジェクトを代入しても、格納されているアロケーター オブジェクトはコピーされない点に注意してください。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<unordered_map >
 
@@ -251,7 +251,7 @@ class unordered_map;
 typedef Alloc allocator_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この型は、テンプレート パラメーター `Alloc`のシノニムです。
 
@@ -292,7 +292,7 @@ const Ty& at(const Key& key) const;
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
+|パラメーター|Description|
 |-|-|
 |*key*|検索するキー値。|
 
@@ -300,7 +300,7 @@ const Ty& at(const Key& key) const;
 
 見つかった要素のデータ値への参照。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 引数のキー値が見つからない場合、この関数は、 `out_of_range`クラスのオブジェクトをスローします。
 
@@ -344,11 +344,11 @@ const_local_iterator begin(size_type nbucket) const;
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
+|パラメーター|Description|
 |-|-|
 |*nbucket*|バケット番号。|
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 最初の 2 つのメンバー関数は、シーケンスの最初の要素 (または空のシーケンスの末尾の次の位置) を示す前方反復子を返します。 最後の2つのメンバー関数は、バケット*nbucket*の最初の要素 (または空のバケットの末尾の次の位置) を示す前方反復子を返します。
 
@@ -409,7 +409,7 @@ size_type bucket(const Key& keyval) const;
 *keyval*\
 マップするキー値。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、キー値*keyval*に現在対応しているバケット番号を返します。
 
@@ -460,7 +460,7 @@ bucket_size(7) == 1
 size_type bucket_count() const;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、現在のバケット数を返します。
 
@@ -551,7 +551,7 @@ size_type bucket_size(size_type nbucket) const;
 *nbucket*\
 バケット番号。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、バケット数*nbucket*のサイズを返します。
 
@@ -606,7 +606,7 @@ const_iterator cbegin() const;
 
 範囲の最初の要素、または空の範囲の末尾の次の位置 (空の範囲の場合は `cbegin() == cend()`) を指す、**定数**前方アクセス反復子。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `cbegin` の戻り値で範囲内の要素を変更することはできません。
 
@@ -632,7 +632,7 @@ const_iterator cend() const;
 
 範囲の末尾の次の位置を指し示す**定数**前方アクセス反復子。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `cend` は、反復子が範囲の末尾を超えたかどうかをテストするために使用されます。
 
@@ -655,7 +655,7 @@ auto i2 = Container.cend();
 void clear();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、 [unordered_map:: erase](#erase)`(` [unordered_map:: begin](#begin)`(),` [unordered_map:: end](#end)`())`を呼び出します。
 
@@ -722,7 +722,7 @@ empty() == false
 typedef T1 const_iterator;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この型は、被制御シーケンスの定数前方反復子として使用できるオブジェクトを表します。 ここでは、実装定義型 `T1`のシノニムとして記述されています。
 
@@ -765,7 +765,7 @@ int main()
 typedef T5 const_local_iterator;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この型は、バケットの定数前方反復子として使用できるオブジェクトを表します。 ここでは、実装定義型 `T5`のシノニムとして記述されています。
 
@@ -813,7 +813,7 @@ int main()
 typedef Alloc::const_pointer const_pointer;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この型は、被制御シーケンスの要素への定数ポインターとして使用できるオブジェクトを表します。
 
@@ -859,7 +859,7 @@ int main()
 typedef Alloc::const_reference const_reference;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この型は、被制御シーケンスの要素への定数参照として使用できるオブジェクトを表します。
 
@@ -910,7 +910,7 @@ size_type count(const Key& keyval) const;
 *keyval*\
 検索対象のキー値。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、[unordered_map::equal_range](#equal_range)`(keyval)` で区切られた範囲内の要素数を返します。
 
@@ -960,7 +960,7 @@ count('C') == 0
 typedef T3 difference_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 符号付き整数型は、被制御シーケンス内にある 2 つの要素のアドレスの違いを表すことのできるオブジェクトを記述します。 ここでは、実装定義型 `T3`のシノニムとして記述されています。
 
@@ -1022,7 +1022,7 @@ pair<iterator, bool>  emplace( Args&&... args);
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
+|パラメーター|Description|
 |-|-|
 |*args*|値が同じ順序付けになる要素が unordered_map にまだ含まれていない場合に、unordered_map に挿入される要素を構築するために転送される引数。|
 
@@ -1032,7 +1032,7 @@ pair<iterator, bool>  emplace( Args&&... args);
 
 このメンバー関数によって返されたペア `pr` の反復子コンポーネントにアクセスするには `pr.first` を使用し、この反復子を逆参照するには `*(pr.first)` を使用します。 このメンバー関数によって返されるペア `pr` の**bool**コンポーネントにアクセスするには、`pr.second`を使用します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この関数では、反復子や参照は無効になりません。
 
@@ -1051,7 +1051,7 @@ iterator emplace_hint(const_iterator where, Args&&... args);
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
+|パラメーター|Description|
 |-|-|
 |*args*|挿入される要素が unordered_map にまだ含まれていない場合、一般的には、キーが同じ順序付けになる要素が unordered_map にまだ含まれていない場合に、unordered_map に挿入される要素を構築するために転送される引数。|
 |*where*|正しい挿入ポイントの検索を開始する場所に関するヒント。|
@@ -1062,7 +1062,7 @@ iterator emplace_hint(const_iterator where, Args&&... args);
 
 要素が既に存在するために挿入が失敗した場合は、既存の要素を指す反復子を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この関数では、参照は無効になりません。
 
@@ -1080,7 +1080,7 @@ iterator emplace_hint(const_iterator where, Args&&... args);
 bool empty() const;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、被制御シーケンスが空の場合に true を返します。
 
@@ -1152,11 +1152,11 @@ const_local_iterator end(size_type nbucket) const;
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
+|パラメーター|Description|
 |-|-|
 |*nbucket*|バケット番号。|
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 最初の 2 つのメンバー関数は、シーケンスの末尾の次を示す前方反復子を返します。 最後の2つのメンバー関数は、バケット*nbucket*の末尾の次の位置を示す前方反復子を返します。
 
@@ -1174,7 +1174,7 @@ std::pair<const_iterator, const_iterator>  equal_range(const Key& keyval) const;
 *keyval*\
 検索対象のキー値。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `[X.first, X.second)` このメンバー関数は、 *keyval*と同等の順序付けを持つ被制御シーケンスの要素だけを区切る反復子のペア `X` を返します。 そのような要素が存在しない場合は、どちらの反復子も `end()`です。
 
@@ -1258,7 +1258,7 @@ size_type erase(const key_type& Key);
 
 3 番目のメンバー関数では、unordered_map から削除された要素の数が返されます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 コード例については、「[map::erase](../standard-library/map-class.md#erase)」を参照してください。
 
@@ -1275,7 +1275,7 @@ const_iterator find(const Key& keyval) const;
 *keyval*\
 検索対象のキー値。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、[unordered_map::equal_range](#equal_range)`(keyval).first` を返します。
 
@@ -1330,7 +1330,7 @@ find('b') == true: [b, 2]
 Alloc get_allocator() const;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、格納されているアロケーター オブジェクトを返します。
 
@@ -1368,7 +1368,7 @@ al == std::allocator() is true
 Hash hash_function() const;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、格納されているハッシュ関数オブジェクトを返します。
 
@@ -1406,7 +1406,7 @@ hfn('b') == 1647086
 typedef Hash hasher;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この型は、テンプレート パラメーター `Hash`のシノニムです。
 
@@ -1470,7 +1470,7 @@ IList);
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
+|パラメーター|Description|
 |-|-|
 |*Val*|キーが同じ順序付けになる要素が unordered_map にまだ含まれていない場合に、unordered_map に挿入される要素の値。|
 |*Where*|正しい挿入ポイントの検索を開始する場所|
@@ -1486,7 +1486,7 @@ IList);
 
 単一要素とヒントのメンバー関数 (3) と (4) は、unordered_map に挿入された新しい要素の位置を指す反復子を返します。ただし、同じキーを持つ要素が既に存在する場合、この反復子は既存の要素を指します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この関数では、反復子、ポインター、参照は無効になりません。
 
@@ -1512,7 +1512,7 @@ IList);
 typedef T0 iterator;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この型は、被制御シーケンスの前方反復子として使用できるオブジェクトを表します。 ここでは、実装定義型 `T0`のシノニムとして記述されています。
 
@@ -1555,7 +1555,7 @@ int main()
 Pred key_eq() const;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、格納されている比較関数オブジェクトを返します。
 
@@ -1595,7 +1595,7 @@ cmpfn('a', 'b') == false
 typedef Pred key_equal;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この型は、テンプレート パラメーター `Pred`のシノニムです。
 
@@ -1635,7 +1635,7 @@ cmpfn('a', 'b') == false
 typedef Key key_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この型は、テンプレート パラメーター `Key`のシノニムです。
 
@@ -1690,7 +1690,7 @@ int main()
 float load_factor() const;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、バケットごとの平均要素数 `(float)`[unordered_map::size](#size)`() / (float)`[unordered_map::bucket_count](#bucket_count)`()` を返します。
 
@@ -1776,7 +1776,7 @@ max_load_factor() == 0.1
 typedef T4 local_iterator;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この型は、バケットの前方反復子として使用できるオブジェクトを表します。 ここでは、実装定義型 `T4`のシノニムとして記述されています。
 
@@ -1824,7 +1824,7 @@ int main()
 typedef Ty mapped_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この型は、テンプレート パラメーター `Ty`のシノニムです。
 
@@ -1879,7 +1879,7 @@ int main()
 size_type max_bucket_count() const;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、現在許可されているバケットの最大数を返します。
 
@@ -1972,7 +1972,7 @@ void max_load_factor(float factor);
 *要因*\
 新しい最大テーブル占有率。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 1 つ目のメンバー関数は、格納されている最大テーブル占有率を返します。 2番目のメンバー関数は、格納されている最大占有率を*係数*に置き換えます。
 
@@ -2058,7 +2058,7 @@ max_load_factor() == 0.1
 size_type max_size() const;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、オブジェクトが制御できる最も長いシーケンスの長さを返します。
 
@@ -2097,7 +2097,7 @@ Ty& operator[](Key&& keyval);
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
+|パラメーター|Description|
 |-|-|
 |*Keyval*|検索または挿入するキー値。|
 
@@ -2105,7 +2105,7 @@ Ty& operator[](Key&& keyval);
 
 挿入される要素のデータ値への参照。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 引数のキー値が見つからない場合は、データ型の既定値と一緒に挿入されます。
 
@@ -2168,7 +2168,7 @@ c2[move(str)] == 0
 c2["abc"] == 1
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、 [unordered_map:: insert](#insert)`(` [unordered_map:: value_type](#value_type)`(keyval, Ty())`の戻り値として、反復子の `where` を決定します。 (そのような要素が存在しない場合は、指定されたキーを持つ要素を挿入します。)次に、`(*where).second`への参照を返します。
 
@@ -2184,11 +2184,11 @@ unordered_map& operator=(unordered_map&& right);
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
+|パラメーター|Description|
 |-|-|
 |*right*|演算子関数がそこからコンテンツを割り当てる unordered_map。|
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 最初のバージョンでは、*右*からこの unordered_map にすべての要素がコピーされます。
 
@@ -2241,7 +2241,7 @@ int main( )
 typedef Alloc::pointer pointer;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この型は、被制御シーケンスの要素へのポインターとして機能するオブジェクトを表します。
 
@@ -2287,7 +2287,7 @@ int main()
 typedef Alloc::reference reference;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この型は、被制御シーケンスの要素への参照として機能するオブジェクトを表します。
 
@@ -2338,7 +2338,7 @@ void rehash(size_type nbuckets);
 *nbuckets*\
 要求されたバケット数。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、バケットの数を少なくとも*nbuckets*に変更し、必要に応じてハッシュテーブルを再構築します。
 
@@ -2411,7 +2411,7 @@ max_load_factor() == 0.1
 size_type size() const;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、被制御シーケンスの長さを返します。
 
@@ -2478,7 +2478,7 @@ empty() == false
 typedef T2 size_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 符号なし整数型は、被制御シーケンスの長さを表すことができるオブジェクトを表します。 ここでは、実装定義型 `T2`のシノニムとして記述されています。
 
@@ -2519,7 +2519,7 @@ void swap(unordered_map& right);
 *右*\
 交換先のコンテナー。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、`*this` と*right*の間で被制御シーケンスを交換します。 [unordered_map::get_allocator](#get_allocator)`() == right.get_allocator()` の場合は、この処理が一定の時間内に実行されます。例外がスローされるのは、格納されている `Tr` 型の traits オブジェクトをコピーした場合のみで、2 つの被制御シーケンス内の要素を指定する反復子、参照、ポインターは一切無効化されません。 それ以外の場合、2 つの被制御シーケンス内の要素数に比例した回数、要素の割り当てとコンストラクター呼び出しが実行されます。
 
@@ -2625,7 +2625,7 @@ unordered_map(
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
+|パラメーター|Description|
 |-|-|
 |*ウムアルクラ*|格納するアロケーター オブジェクト。|
 |*コンペティション*|格納する比較関数オブジェクト。|
@@ -2636,7 +2636,7 @@ unordered_map(
 |*Last*||
 |*IList*|コピーされる要素を含む initializer_list。|
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 1 つ目のコンストラクターは、`right` によって制御されるシーケンスのコピーを指定します。 2 つ目のコンストラクターは、空の被制御シーケンスのコピーを指定します。 3 つ目のコンストラクターは、要素値 `[first, last)` のシーケンスを挿入します。 4 つ目のコンストラクターは、`right` を移動することによって、シーケンスのコピーを指定します。
 
@@ -2792,7 +2792,7 @@ int main()
 typedef std::pair<const Key, Ty> value_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この型は、被制御シーケンス内の要素を示します。
 

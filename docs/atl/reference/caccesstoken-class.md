@@ -53,11 +53,11 @@ helpviewer_keywords:
 - CAccessToken class
 ms.assetid: bb5c5945-56a5-4083-b442-76573cee83ab
 ms.openlocfilehash: 33fbaae5dafaccdf7f7e6880eaa42dd68352e840
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78864867"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423520"
 ---
 # <a name="caccesstoken-class"></a>CAccessToken クラス
 
@@ -76,13 +76,13 @@ class CAccessToken
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[CAccessToken:: ~ CAccessToken](#dtor)|デストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[CAccessToken:: Attach](#attach)|このメソッドを呼び出して、指定されたアクセストークンハンドルの所有権を取得します。|
 |[CAccessToken:: CheckTokenMembership](#checktokenmembership)|指定した SID が `CAccessToken` オブジェクトで有効になっているかどうかを確認するには、このメソッドを呼び出します。|
@@ -130,13 +130,13 @@ class CAccessToken
 |[CAccessToken:: SetOwner](#setowner)|`CAccessToken` オブジェクトの所有者を設定するには、このメソッドを呼び出します。|
 |[CAccessToken:: SetPrimaryGroup](#setprimarygroup)|`CAccessToken` オブジェクトのプライマリグループを設定するには、このメソッドを呼び出します。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 [アクセストークン](/windows/win32/SecAuthZ/access-tokens)は、プロセスまたはスレッドのセキュリティコンテキストを記述するオブジェクトで、Windows システムにログオンした各ユーザーに割り当てられます。
 
 Windows のアクセス制御モデルの概要については、Windows SDK の「 [Access Control](/windows/win32/SecAuthZ/access-control) 」を参照してください。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlsecurity .h
 
@@ -153,7 +153,7 @@ void Attach(HANDLE hToken) throw();
 *hToken*<br/>
 アクセストークンへのハンドル。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 デバッグビルドでは、`CAccessToken` オブジェクトに既にアクセストークンの所有権がある場合、アサーションエラーが発生します。
 
@@ -165,7 +165,7 @@ void Attach(HANDLE hToken) throw();
 virtual ~CAccessToken() throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 割り当てられたすべてのリソースを解放します。
 
@@ -191,7 +191,7 @@ bool CheckTokenMembership(
 
 成功した場合は TRUE、失敗した場合は FALSE を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `CheckTokenMembership` メソッドは、アクセストークンのユーザーとグループの sid に SID が存在するかどうかを確認します。 SID が存在し、SE_GROUP_ENABLED 属性を持っている場合、 *Pbismember*は TRUE に設定されます。それ以外の場合は、FALSE に設定されます。
 
@@ -222,7 +222,7 @@ bool CreateImpersonationToken(
 
 成功した場合は TRUE、失敗した場合は FALSE を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `CreateImpersonationToken` は、 [DuplicateToken](/windows/win32/api/securitybaseapi/nf-securitybaseapi-duplicatetoken)を呼び出して新しい権限借用トークンを作成します。
 
@@ -252,7 +252,7 @@ bool CreatePrimaryToken(
 
 成功した場合は TRUE、失敗した場合は FALSE を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `CreatePrimaryToken` は、 [DuplicateTokenEx](/windows/win32/api/securitybaseapi/nf-securitybaseapi-duplicatetokenex)を呼び出して新しいプライマリトークンを作成します。
 
@@ -310,7 +310,7 @@ TRUE の場合、ユーザーのプロファイルは[processmodel.loaduserprofi
 
 成功した場合は TRUE、失敗した場合は FALSE を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `CreateProcessAsUser` は、`CreateProcessAsUser` Win32 関数を使用して、`CAccessToken` オブジェクトによって表されるユーザーのセキュリティコンテキストで実行される新しいプロセスを作成します。 必要なパラメーターの詳細については、 [createprocessasuser が](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessasuserw)関数の説明を参照してください。
 
@@ -346,7 +346,7 @@ bool CreateRestrictedToken(
 
 成功した場合は TRUE、失敗した場合は FALSE を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `CreateRestrictedToken` は、 [CreateRestrictedToken](/windows/win32/api/securitybaseapi/nf-securitybaseapi-createrestrictedtoken) Win32 関数を使用して、制限付きの新しい `CAccessToken` オブジェクトを作成します。
 
@@ -365,7 +365,7 @@ HANDLE Detach() throw();
 
 デタッチされた `CAccessToken` へのハンドルを返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメソッドは、アクセストークンの `CAccessToken`の所有権を取り消します。
 
@@ -555,7 +555,7 @@ bool GetLogonSessionId(LUID* pluid) const throw(...);
 
 成功した場合は TRUE、失敗した場合は FALSE を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 デバッグビルドでは、 *pluid*が無効な値の場合、アサーションエラーが発生します。
 
@@ -576,7 +576,7 @@ bool GetLogonSid(CSid* pSid) const throw(...);
 
 成功した場合は TRUE、失敗した場合は FALSE を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 デバッグビルドでは、 *pSid*が無効な値の場合、アサーションエラーが発生します。
 
@@ -597,7 +597,7 @@ bool GetOwner(CSid* pSid) const throw(...);
 
 成功した場合は TRUE、失敗した場合は FALSE を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このアクセストークンが有効になっている間に作成されたオブジェクトには、既定で所有者が設定されます。
 
@@ -618,7 +618,7 @@ bool GetPrimaryGroup(CSid* pSid) const throw(...);
 
 成功した場合は TRUE、失敗した場合は FALSE を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このアクセストークンが有効になっている間に作成されたオブジェクトには、グループが既定で設定されます。
 
@@ -659,7 +659,7 @@ bool GetProcessToken(DWORD dwDesiredAccess, HANDLE hProcess = NULL) throw();
 
 成功した場合は TRUE、失敗した場合は FALSE を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 [OpenProcessToken](/windows/win32/api/processthreadsapi/nf-processthreadsapi-openprocesstoken) Win32 関数を呼び出します。
 
@@ -788,7 +788,7 @@ bool GetType(TOKEN_TYPE* pType) const throw(...);
 
 成功した場合は TRUE、失敗した場合は FALSE を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 TOKEN_TYPE 列挙型には、プライマリトークンと偽装トークンを区別する値が含まれています。
 
@@ -838,7 +838,7 @@ bool Impersonate(HANDLE hThread = NULL) const throw(...);
 
 成功した場合は TRUE、失敗した場合は FALSE を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 デバッグビルドでは、`CAccessToken` にトークンへの有効なポインターがない場合、アサーションエラーが発生します。
 
@@ -856,7 +856,7 @@ bool ImpersonateLoggedOnUser() const throw(...);
 
 成功した場合は TRUE、失敗した場合は FALSE を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 > [!IMPORTANT]
 >  何らかの理由で権限借用関数の呼び出しが失敗した場合、クライアントは偽装されず、クライアント要求は呼び出し元のプロセスのセキュリティコンテキストで行われます。 プロセスが高い特権を持つアカウントとして実行されている場合、または管理グループのメンバーとして実行されている場合、ユーザーは、許可されていないアクションを実行できる可能性があります。 したがって、この関数の戻り値は常に確認する必要があります。
@@ -885,7 +885,7 @@ bool LoadUserProfile() throw(...);
 
 成功した場合は TRUE、失敗した場合は FALSE を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 デバッグビルドでは、`CAccessToken` に有効なトークンが含まれていない場合、またはユーザープロファイルが既に存在する場合、アサーションエラーが発生します。
 
@@ -923,7 +923,7 @@ bool LogonUser(
 
 成功した場合は TRUE、失敗した場合は FALSE を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ログオンによって生成されるアクセストークンは、`CAccessToken`に関連付けられます。 このメソッドを成功させるには、`CAccessToken` オブジェクトは、信頼されたコンピューターベースの一部として所有者を識別する SE_TCB_NAME の特権を保持する必要があります。 必要な特権に関する詳細については、「 [LogonUser](/windows/win32/api/winbase/nf-winbase-logonuserw) 」を参照してください。
 
@@ -955,7 +955,7 @@ TRUE の場合、この呼び出しが正常に完了した場合、現在のス
 
 成功した場合は TRUE、失敗した場合は FALSE を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 [CAutoRevertImpersonation クラス](../../atl/reference/cautorevertimpersonation-class.md)を使用すると、 *BIMPERSONATE*フラグを TRUE に設定することによって作成された偽装アクセストークンを自動的に元に戻すことができます。
 
@@ -991,7 +991,7 @@ TRUE の場合、この呼び出しが正常に完了した場合、現在のス
 
 成功した場合は TRUE、失敗した場合は FALSE を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 [CAutoRevertImpersonation クラス](../../atl/reference/cautorevertimpersonation-class.md)を使用すると、 *BIMPERSONATE*フラグを TRUE に設定することによって作成された偽装アクセストークンを自動的に元に戻すことができます。
 
@@ -1027,7 +1027,7 @@ TRUE の場合、この呼び出しが正常に完了した場合、現在のス
 
 成功した場合は TRUE、失敗した場合は FALSE を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 [CAutoRevertImpersonation クラス](../../atl/reference/cautorevertimpersonation-class.md)を使用すると、 *BIMPERSONATE*フラグを TRUE に設定することによって作成された偽装アクセストークンを自動的に元に戻すことができます。
 
@@ -1063,7 +1063,7 @@ TRUE の場合、このメソッドが完了すると、スレッドは要求さ
 
 成功した場合は TRUE、失敗した場合は FALSE を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `OpenThreadToken` は[CAccessToken:: GetThreadToken](#getthreadtoken)に似ていますが、スレッドのアクセストークンから `CAccessToken` を初期化する前に偽装レベルを設定します。
 
@@ -1091,7 +1091,7 @@ bool PrivilegeCheck(
 
 成功した場合は TRUE、失敗した場合は FALSE を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `PrivilegeCheck` が返されると、対応する特権が有効になっている場合は、各[LUID_AND_ATTRIBUTES](/windows/win32/api/winnt/ns-winnt-luid_and_attributes)構造体の `Attributes` メンバーが SE_PRIVILEGE_USED_FOR_ACCESS に設定されます。 このメソッドは、 [PrivilegeCheck](/windows/win32/api/securitybaseapi/nf-securitybaseapi-privilegecheck) Win32 関数を呼び出します。
 
@@ -1112,7 +1112,7 @@ bool Revert(HANDLE hThread = NULL) const throw();
 
 成功した場合は TRUE、失敗した場合は FALSE を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 偽装トークンの再設定は、 [CAutoRevertImpersonation クラス](../../atl/reference/cautorevertimpersonation-class.md)を使用して自動的に実行できます。
 
@@ -1133,7 +1133,7 @@ bool SetDefaultDacl(const CDacl& rDacl) throw(...);
 
 成功した場合は TRUE、失敗した場合は FALSE を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 既定の DACL は、このアクセストークンを有効にして新しいオブジェクトを作成するときに既定で使用される DACL です。
 
@@ -1154,7 +1154,7 @@ bool SetOwner(const CSid& rSid) throw(...);
 
 成功した場合は TRUE、失敗した場合は FALSE を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 所有者は、このアクセストークンが有効になっている間に作成された新しいオブジェクトに使用される既定の所有者です。
 
@@ -1175,7 +1175,7 @@ bool SetPrimaryGroup(const CSid& rSid) throw(...);
 
 成功した場合は TRUE、失敗した場合は FALSE を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 プライマリグループは、このアクセストークンが有効になっている間に作成された新しいオブジェクトの既定のグループです。
 

@@ -8,11 +8,11 @@ f1_keywords:
 - atlcom/ATL::SERVICE_ENTRY_CHAIN
 ms.assetid: ca02a125-454a-4cf6-aac2-1c5585025ed4
 ms.openlocfilehash: ab130b2401dc9885f82fd5668a2d722a96dd289b
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78862515"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79422932"
 ---
 # <a name="service-map-macros"></a>Service Map マクロ
 
@@ -25,7 +25,7 @@ ms.locfileid: "78862515"
 |[SERVICE_ENTRY](#service_entry)|オブジェクトが特定のサービス ID をサポートしていることを示します。|
 |[SERVICE_ENTRY_CHAIN](#service_entry_chain)|指定されたオブジェクトにチェーンするよう[Iserviceproviderimpl:: QueryService](#queryservice)に指示します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlcom. h
 
@@ -42,7 +42,7 @@ BEGIN_SERVICE_MAP(theClass)
 *クラス*<br/>
 からサービスマップを含むクラスを指定します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 サービスプロバイダーの機能を COM オブジェクトに実装するには、サービスマップを使用します。 まず、 [Iserviceproviderimpl](../../atl/reference/iserviceproviderimpl-class.md)からクラスを派生させる必要があります。 エントリには、次の2種類があります。
 
@@ -134,13 +134,13 @@ STDMETHOD(QueryService)(
 |E_UNEXPECTED|不明なエラーが発生しました。|
 |E_NOINTERFACE|要求されたインターフェイスは、このサービスの一部ではないか、サービスが不明です。|
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `QueryService` は、指定されたサービス内の要求されたインターフェイスへの間接ポインターを返します。 呼び出し元は、不要になったときにこのポインターを解放する必要があります。
 
 `QueryService`を呼び出すと、サービス識別子 (*guidservice*) とインターフェイス識別子 (*riid*) の両方を渡すことになります。 *Guidservice*は、アクセスするサービスを指定します。また、 *riid*は、サービスの一部であるインターフェイスを識別します。 返されると、インターフェイスへの間接ポインターを受け取ります。
 
-インターフェイスを実装するオブジェクトは、他のサービスの一部であるインターフェイスも実装する場合があります。 次のような項目を考慮します。
+インターフェイスを実装するオブジェクトは、他のサービスの一部であるインターフェイスも実装する場合があります。 以下、具体例に沿って説明します。
 
 - これらのインターフェイスには、省略可能なものもあります。 サービスの説明で定義されているすべてのインターフェイスは、サービスのすべての実装または返されたすべてのオブジェクトに存在するとは限りません。
 

@@ -5,11 +5,11 @@ f1_keywords:
 - ostream/std::operator&lt;&lt;
 ms.assetid: 9282a62e-a3d1-4371-a284-fbc9515bb9a2
 ms.openlocfilehash: c80abcb08423b4bb269e7d60ac43ef97d197a0e9
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78874823"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425281"
 ---
 # <a name="ltostreamgt-operators"></a>&lt;ostream&gt; 演算子
 
@@ -87,7 +87,7 @@ basic_ostream <_Elem, _Tr>& operator<<(
 要素型。
 
 *_Ostr*\
-`basic_ostream` オブジェクトです。
+`basic_ostream` オブジェクト。
 
 *str*\
 文字列。
@@ -102,7 +102,7 @@ basic_ostream <_Elem, _Tr>& operator<<(
 
 ストリームです。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `basic_ostream`クラスもいくつかの挿入演算子を定義します。 詳細については、[basic_ostream::operator&lt;&lt;](../standard-library/basic-ostream-class.md#basic_ostream_operator_lt_lt)をご覧ください。
 

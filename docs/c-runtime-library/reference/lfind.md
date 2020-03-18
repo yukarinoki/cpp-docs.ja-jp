@@ -20,7 +20,6 @@ api_type:
 topic_type:
 - apiref
 f1_keywords:
-- lfind
 - _lfind
 helpviewer_keywords:
 - linear searching
@@ -30,12 +29,12 @@ helpviewer_keywords:
 - finding keys in arrays
 - _lfind function
 ms.assetid: a40ece70-1674-4b75-94bd-9f57cfff18f2
-ms.openlocfilehash: 8fd2141caf8311844a90a6d12226bb7797ac4734
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ec59340433b92334effa8004720e4f0756085670
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953386"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442919"
 ---
 # <a name="_lfind"></a>_lfind
 
@@ -74,15 +73,15 @@ void *_lfind(
 
 キーが見つかった場合、 **_lfind**は、*キー*に一致する*ベース*の配列の要素へのポインターを返します。 キーが見つからない場合、 **_lfind**は**NULL**を返します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
 **_Lfind**関数は、*数値*要素の配列内の値*キー*の線形検索を実行します (各*幅*バイト)。 **Bsearch**とは異なり、 **_lfind**では配列を並べ替える必要はありません。 *基本*引数は、検索する配列のベースへのポインターです。 *Compare*引数は、2つの配列要素を比較し、それらの関係を指定する値を返すユーザー指定のルーチンへのポインターです。 **_lfind**は、検索中に*比較*ルーチンを1回以上呼び出し、各呼び出しで2つの配列要素へのポインターを渡します。 *比較*ルーチンは、要素を比較し、0以外の値 (要素が異なる場合) または 0 (要素が同一であることを意味します) を返す必要があります。
 
-この関数は、パラメーターを検証します。 *Compare*、 *key* 、または*number*が**null**の場合、または*base*が**null**で、 *number*が0以外の場合、または*width*が0未満の場合は、「パラメーター」に説明されているように、無効なパラメーターハンドラーが呼び出されます。 [検証](../../c-runtime-library/parameter-validation.md)。 実行の継続が許可された場合、 **errno**は**EINVAL**に設定され、関数は**NULL**を返します。
+この関数は、パラメーターを検証します。 *Compare*、 *key* 、または*number*が**null**の場合、または*base*が**null**で*数値*が0以外の場合、または*width*がゼロ未満の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、 **errno**は**EINVAL**に設定され、関数は**NULL**を返します。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**_lfind**|\<search.h>|
 
@@ -125,7 +124,7 @@ int main( )
 Hello found
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [検索と並べ替え](../../c-runtime-library/searching-and-sorting.md)<br/>
 [_lfind_s](lfind-s.md)<br/>

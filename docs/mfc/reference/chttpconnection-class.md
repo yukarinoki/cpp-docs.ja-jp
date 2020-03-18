@@ -11,11 +11,11 @@ helpviewer_keywords:
 - CHttpConnection [MFC], OpenRequest
 ms.assetid: a402b662-c445-4988-800d-c8278551babe
 ms.openlocfilehash: 1941af1e16a897235dd90db509d6ed29c2d9a875
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78890788"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425893"
 ---
 # <a name="chttpconnection-class"></a>CHttpConnection クラス
 
@@ -31,17 +31,17 @@ class CHttpConnection : public CInternetConnection
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[CHttpConnection:: CHttpConnection](#chttpconnection)|`CHttpConnection` オブジェクトを作成します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[CHttpConnection:: OpenRequest](#openrequest)|HTTP 要求を開きます。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 HTTP は、MFC WinInet クラスによって実装される3つのインターネットサーバープロトコルのうちの1つです。
 
@@ -59,7 +59,7 @@ HTTP サーバーと通信するには、まず[CInternetSession](../../mfc/refe
 
 `CHttpConnection`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxinet.h
 
@@ -125,7 +125,7 @@ CHttpConnection(
 *dwFlags*<br/>
 `INTERNET_FLAG_*` フラグの任意の組み合わせ。 *DwFlags*値の説明については、「 [CHttpConnection:: openrequest](#openrequest) 」の「**解説**」の表を参照してください。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `CHttpConnection` を直接作成することはありません。 代わりに、 [CInternetSession:: GetHttpConnection](../../mfc/reference/cinternetsession-class.md#gethttpconnection)を呼び出してオブジェクトを作成します。
 
@@ -193,11 +193,11 @@ HTTP 要求の種類に関連付けられた番号。 以下のいずれかを�
 
 要求された[CHttpFile](../../mfc/reference/chttpfile-class.md)オブジェクトへのポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 *dwFlags*には、次のいずれかを指定できます。
 
-|インターネット フラグ|説明|
+|インターネット フラグ|Description|
 |-------------------|-----------------|
 |INTERNET_FLAG_RELOAD|要求されたファイル、オブジェクト、またはディレクトリ リストをキャッシュからではなく元のサーバーからダウンロードします。|
 |INTERNET_FLAG_DONT_CACHE|返されたエンティティをキャッシュに追加しません。|

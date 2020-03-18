@@ -12,17 +12,17 @@ f1_keywords:
 - filesystem/std::experimental::filesystem::perms
 ms.assetid: 0096c046-d101-464c-8259-b878a48280b0
 ms.openlocfilehash: f148347cd132a604622415c65bb3e0352f5308eb
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78875828"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427123"
 ---
 # <a name="ltfilesystemgt-enumerations"></a>&lt;filesystem&gt; 列挙体
 
 このトピックでは、filesystem ヘッダーの列挙体について説明します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<試験的/ファイルシステム >
 
@@ -51,7 +51,7 @@ enum class copy_options {
 
 ### <a name="values"></a>値
 
-|`Name`|説明|
+|`Name`|Description|
 |------------|-----------------|
 |`none`|演算の既定の動作を実行します。|
 |`skip_existing`|ファイルが既に存在する場合はコピーしません。エラーをレポートしません。|
@@ -79,7 +79,7 @@ enum class directory_options {
 
 ### <a name="values"></a>値
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |`none`|既定の動作: ディレクトリへのシンボリック リンクを無視します。 アクセス許可の拒否はエラーです。|
 |`follow_directory_symlink`|ディレクトリへのシンボリック リンクを実際のディレクトリとして処理します。|
@@ -107,7 +107,7 @@ enum class file_type {
 
 ### <a name="values"></a>値
 
-|Name|値|説明|
+|Name|値|Description|
 |----------|-----------|-----------------|
 |`not_found`|-1|存在しないファイルを表します。|
 |`none`|0|type 属性を持たないファイルを表します (サポートされていません)。|

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - CAtlWinModule class
 ms.assetid: 7ec844af-0f68-4a34-b0c8-9de50a025df0
 ms.openlocfilehash: d0bc98fa48f84e67ab38106dea3fe22d5ad1757d
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78857352"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423406"
 ---
 # <a name="catlwinmodule-class"></a>CAtlWinModule クラス
 
@@ -34,19 +34,19 @@ class CAtlWinModule : public _ATL_WIN_MODULE
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[CAtlWinModule::CAtlWinModule](#catlwinmodule)|コンストラクターです。|
 |[CAtlWinModule:: ~ CAtlWinModule](#dtor)|デストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[CAtlWinModule::AddCreateWndData](#addcreatewnddata)|データオブジェクトを追加します。|
 |[CAtlWinModule::ExtractCreateWndData](#extractcreatewnddata)|ウィンドウのモジュールデータオブジェクトへのポインターを返します。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 このクラスは、ウィンドウ機能を必要とするすべての ATL クラスをサポートします。
 
@@ -56,7 +56,7 @@ class CAtlWinModule : public _ATL_WIN_MODULE
 
 `CAtlWinModule`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlbase. h
 
@@ -76,7 +76,7 @@ void AddCreateWndData(_AtlCreateWndData* pData, void* pObject);
 *pObject*<br/>
 オブジェクトの**this**ポインターへのポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメソッドは、 [_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md)構造体を初期化する[AtlWinModuleAddCreateWndData](winmodule-global-functions.md#atlwinmoduleaddcreatewnddata)を呼び出します。 この構造体は、ウィンドウプロシージャでクラスインスタンスを取得するために使用される**this**ポインターを格納します。
 
@@ -88,7 +88,7 @@ void AddCreateWndData(_AtlCreateWndData* pData, void* pObject);
 CAtlWinModule();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 初期化に失敗した場合は、 **EXCEPTION_NONCONTINUABLE**例外が発生します。
 
@@ -100,7 +100,7 @@ CAtlWinModule();
 ~CAtlWinModule();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 割り当てられたすべてのリソースを解放します。
 

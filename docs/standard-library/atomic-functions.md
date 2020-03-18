@@ -63,11 +63,11 @@ helpviewer_keywords:
 - std::atomic_thread_fence [C++]
 - std::kill_dependency [C++]
 ms.openlocfilehash: 5314db43bed913e801846341309513c239216887
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78867085"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427261"
 ---
 # <a name="ltatomicgt-functions"></a>&lt;atomic&gt; 関数
 
@@ -117,7 +117,7 @@ inline bool atomic_compare_exchange_strong(
 
 値が等しい場合は**true** 、それ以外の場合は**false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメソッドは暗黙の `memory_order_seq_cst`[memory_order](../standard-library/atomic-enums.md#memory_order_enum) 引数でアトミックを比較し、交換の操作を実行します。 詳細については、「[atomic_compare_exchange_strong_explicit](../standard-library/atomic-functions.md#atomic_compare_exchange_strong_explicit)」を参照してください。
 
@@ -164,7 +164,7 @@ inline bool atomic_compare_exchange_strong_explicit(
 
 値が等しい場合は**true** 、それ以外の場合は**false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 *アトミックの比較および交換操作*では、 *Atom*が指すオブジェクトに格納されている値を、 *Exp*が指す値と比較します。値が等しい場合、 *atom*によってポイントされるオブジェクトに格納されている値は、`read-modify-write` 操作を使用し、 *Order1*によって指定されたメモリ順序制約を適用することによって*値*に置き換えられます。 値が等しくない場合、操作は*Exp*が指す値を、 *Atom*が指すオブジェクトに格納されている値に置き換え、 *Order2*で指定されたメモリ順序制約を適用します。
 
@@ -201,7 +201,7 @@ inline bool atomic_compare_exchange_strong(
 
 値が等しい場合は**true** 、それ以外の場合は**false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメソッドは、暗黙のmemory_order`memory_order_seq_cst` 引数を持つ[弱いアトミックの比較および交換の操作](../standard-library/atomic-enums.md#memory_order_enum)を実行します。 詳細については、「[atomic_compare_exchange_weak_explicit](../standard-library/atomic-functions.md#atomic_compare_exchange_weak_explicit)」を参照してください。
 
@@ -248,7 +248,7 @@ inline bool atomic_compare_exchange_weak_explicit(
 
 値が等しい場合は**true** 、それ以外の場合は**false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 *アトミックの比較および交換操作*の強いフレーバーと弱いフレーバーは、予期される値と現在の値が等しくない場合に、新しい値が格納されないことを保証します。 強いフレーバーは、予期される値と現在の値が等しい場合に、新しい値を格納することを保証します。 弱いフレーバーは、現在の値と予期される値が等しい場合でも、 **false**を返し、新しい値を格納しないことがあります。 つまり、関数は**false**を返しますが、予期された値を後で調べることによって、変更されていないことがわかる場合があるため、等しいと比較する必要があります。
 
@@ -276,7 +276,7 @@ inline T atomic_exchange(atomic<Ty>* Atom, Ty Value) noexcept;
 
 Exchange より前の*Atom*の格納された値。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `atomic_exchange` 関数は、`memory_order_seq_cst`[memory_order](../standard-library/atomic-enums.md#memory_order_enum)を使用して、 *Atom*に格納されている値を*値*と交換する `read-modify-write` 操作を実行します。
 
@@ -313,7 +313,7 @@ inline Ty atomic_exchange_explicit(
 
 Exchange より前の*Atom*の格納された値。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `atomic_exchange_explicit` 関数は、 *Order*によって指定されたメモリ制約内で、 *Atom*に格納されている値を*値*と交換する `read-modify-write` 操作を実行します。
 
@@ -340,7 +340,7 @@ T* atomic_fetch_add(atomic<T*>* Atom, ptrdiff_t Value) noexcept;
 
 操作の直前にアトミック オブジェクトによって格納されたポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `atomic_fetch_add` 関数は、`read-modify-write` 操作を実行して、`memory_order_seq_cst`[memory_order](../standard-library/atomic-enums.md#memory_order_enum)制約を使用して、 *Atom*の格納されている値に*値*をアトミックに追加します。
 
@@ -384,7 +384,7 @@ T* atomic_fetch_add_explicit(
 
 操作の直前にアトミック オブジェクトによって格納されたポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `atomic_fetch_add_explicit` 関数は、`Order`で指定された[memory_order](../standard-library/atomic-enums.md#memory_order_enum)制約内で、`read-modify-write` 操作を実行して、 *Atom*の格納されている値に*値*をアトミックに追加します。
 
@@ -427,7 +427,7 @@ inline T atomic_fetch_and(volatile atomic<T>* Atom, T Value) noexcept;
 
 操作の直前にアトミック オブジェクトによって格納された値。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `atomic_fetch_and` 関数は、`memory_order_seq_cst`[memory_order](../standard-library/atomic-enums.md#memory_order_enum)制約を使用して、 *atom*の格納されている値を*値*のビットごとの `and` と*atom*に格納されている現在の値に置換する `read-modify-write` 操作を実行します。
 
@@ -464,7 +464,7 @@ inline T atomic_fetch_and_explicit(
 
 操作の直前にアトミック オブジェクトによって格納された値。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `atomic_fetch_and_explicit` 関数は、`read-modify-write` 操作を実行*して、* 指定されたメモリ制約内で、 *atom*の格納されている値をビットごとの `and`*値*と、 *atom*に格納されている現在の値に置き換えます。
 
@@ -491,7 +491,7 @@ inline T atomic_fetch_or (volatile atomic<T>* Atom, T Value) noexcept;
 
 操作の直前にアトミック オブジェクトによって格納された値。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `atomic_fetch_or` 関数は、`memory_order_seq_cst`[memory_order](../standard-library/atomic-enums.md#memory_order_enum)を使用して、 *atom*の格納されている値を*値*のビットごとの `or` と*atom*に格納されている現在の値に置換する `read-modify-write` 操作を実行します。
 
@@ -528,7 +528,7 @@ inline T atomic_fetch_or_explicit(
 
 操作の直前にアトミック オブジェクトによって格納された値。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `atomic_fetch_or_explicit` 関数は、`read-modify-write` 操作を実行して、指定された[memory_order](../standard-library/atomic-enums.md#memory_order_enum)の制約内で、 *atom*の格納さ*れている*値をビットごとの `or`*値*および*atom*に格納されている現在の値に置き換えます。
 
@@ -560,7 +560,7 @@ T* atomic_fetch_sub(
 
 操作の直前にアトミック オブジェクトによって格納されたポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `atomic_fetch_sub` 関数は、`read-modify-write` 操作を実行して、`memory_order_seq_cst`[memory_order](../standard-library/atomic-enums.md#memory_order_enum)制約を使用して、 *Atom*の格納されている値から*値*をアトミックに減算します。
 
@@ -602,7 +602,7 @@ T* atomic_fetch_sub_explicit(
 
 操作の直前にアトミック オブジェクトによって格納されたポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `atomic_fetch_sub_explicit` 関数は、`Order`で指定された[memory_order](../standard-library/atomic-enums.md#memory_order_enum)制約内で、`read-modify-write` 操作を実行して、 *Atom*の格納されている値から*値*をアトミックに減算します。
 
@@ -646,7 +646,7 @@ inline T atomic_fetch_xor(volatile atomic<T>* Atom, T Value) noexcept;
 
 操作の直前にアトミック オブジェクトによって格納された値。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `atomic_fetch_xor` 関数は、`memory_order_seq_cst`[memory_order](../standard-library/atomic-enums.md#memory_order_enum)を使用して、 *atom*の格納されている値を*値*のビットごとの `exclusive or` と*atom*に格納されている現在の値に置換する `read-modify-write` 操作を実行します。
 
@@ -683,7 +683,7 @@ inline T atomic_fetch_xor_explicit(
 
 操作の直前にアトミック オブジェクトによって格納された値。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `atomic_fetch_xor_explicit` 関数は、`read-modify-write` 操作を実行*して、* 指定された[memory_order](../standard-library/atomic-enums.md#memory_order_enum)の制約内で、 *atom*の格納されている値をビットごとの `exclusive or`*値*と、 *atom*に格納されている現在の値に置き換えます。
 
@@ -776,7 +776,7 @@ inline void atomic_init(atomic<Ty>* Atom, Ty Value) noexcept;
 *値*\
 `Ty` 型の値。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `atomic_init` はアトミック操作ではありません。 これはスレッド セーフではありません。
 
@@ -800,7 +800,7 @@ inline bool atomic_is_lock_free(const atomic<T>* Atom) noexcept;
 
 *Atom*に対するアトミック操作がロックフリーである場合は**true** 。それ以外の場合は**false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 その型に対してロックを使用するアトミック操作がない場合、atomic 型はロック制御不要になります。 この関数が true を返す場合、その型はシグナル ハンドラーで使用しても安全です。
 
@@ -824,7 +824,7 @@ inline Ty atomic_load(const atomic<Ty>* Atom) noexcept;
 
 *Atom*に格納されている取得値。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `atomic_load` は暗黙的に `memory_order_seq_cst`[memory_order](../standard-library/atomic-enums.md#memory_order_enum) を使用します。
 
@@ -864,7 +864,7 @@ inline void atomic_signal_fence(memory_order Order) noexcept;
 \*順序*
 フェンスの種類を決定するメモリ オーダリングの制約。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 *順序*引数はフェンスの種類を決定します。
 
@@ -896,7 +896,7 @@ inline Ty atomic_store_explicit(const atomic<Ty>* Atom, T Value) noexcept;
 *値*\
 `Ty` 型の値。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `atomic_store` は、`memory_order_seq_cst`[memory_order](../standard-library/atomic-enums.md#memory_order_enum)制約内で、 *Atom*によってポイントされているオブジェクトに*値*を格納します。
 
@@ -929,7 +929,7 @@ inline Ty atomic_store_explicit(
 \*順序*
 [memory_order](../standard-library/atomic-enums.md#memory_order_enum)。 `memory_order_consume`、`memory_order_acquire`、または `memory_order_acq_rel` を使用しないでください。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `atomic_store` は、*順序*によって指定された `memory_order` 内で、 *Atom*によってポイントされるオブジェクトに*値*を格納します。
 
@@ -946,7 +946,7 @@ inline void atomic_thread_fence(memory_order Order) noexcept;
 \*順序*
 フェンスの種類を決定するメモリ オーダリングの制約。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 *順序*引数はフェンスの種類を決定します。
 

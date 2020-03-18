@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Scheduler class
 ms.assetid: 34cf7961-048d-4852-8a5c-a32f823e3506
 ms.openlocfilehash: 77ad876b8352ab1ae86fde622b05712ec5f2cea9
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78867135"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427351"
 ---
 # <a name="scheduler-class"></a>Scheduler クラス
 
-同時実行ランタイム スケジューラの抽象化を表します。
+コンカレンシー ランタイム スケジューラの抽象化を表します。
 
 ## <a name="syntax"></a>構文
 
@@ -42,14 +42,14 @@ class Scheduler;
 
 ### <a name="protected-constructors"></a>プロテクト コンストラクター
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[Scheduler](#ctor)|`Scheduler` クラスのオブジェクトは、ファクトリメソッドを使用して、または暗黙的に作成することができます。|
 |[~ Scheduler デストラクター](#dtor)|`Scheduler` クラスのオブジェクトは、すべての外部参照が存在しなくなると、暗黙的に破棄されます。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[[アタッチ]](#attach)|スケジューラを呼び出し元のコンテキストにアタッチします。 このメソッドから制御が戻った後、呼び出し元のコンテキストはスケジューラによって管理され、スケジューラは現在のスケジューラになります。|
 |[作成](#create)|`_Policy` パラメーターによって記述された動作を持つ新しいスケジューラを作成し、スケジューラに初期参照を配置し、そのスケジューラへのポインターを返します。|
@@ -65,7 +65,7 @@ class Scheduler;
 |[ScheduleTask](#scheduletask)|オーバーロードされます。 スケジューラ内の軽量タスクをスケジュールします。 軽量タスクは、ランタイムによって決定されるスケジュールグループに配置されます。 パラメーター `_Placement` を受け取るバージョンでは、指定された位置でタスクの実行がバイアスされます。|
 |[SetDefaultSchedulerPolicy](#setdefaultschedulerpolicy)|既定のスケジューラを作成するためにユーザー定義のポリシーを使用できるようにします。 このメソッドは、プロセス内に既定のスケジューラが存在しない場合にのみ呼び出すことができます。 既定のポリシーが設定されると、`SetDefaultSchedulerPolicy` または[Resetdefaultスケジューラポリシー](#resetdefaultschedulerpolicy)メソッドへの次の有効な呼び出しまで有効になります。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 同時実行ランタイム scheduler は、アプリケーションによってキューに置かれた作業を実行するために、スレッドなどのオペレーティングシステムの実行コンテキストにマップされる実行コンテキストを使用します。 スケジューラの同時実行レベルは、リソースマネージャーによって付与された仮想プロセッサの数と同じになります。 仮想プロセッサとは、処理リソースを抽象化したものであり、基になるシステムのハードウェア スレッドに対応しています。 指定された時点に 1 つの仮想プロセッサで実行できるスケジューラ コンテキストは 1 つのみです。
 
@@ -75,7 +75,7 @@ class Scheduler;
 
 `Scheduler`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** concrt .h
 
@@ -89,7 +89,7 @@ class Scheduler;
 virtual void Attach() = 0;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 スケジューラをアタッチすると、スケジューラに参照が暗黙的に配置されます。
 
@@ -116,7 +116,7 @@ static Scheduler* __cdecl Create(const SchedulerPolicy& _Policy);
 
 新しく作成されたスケジューラへのポインター。 この `Scheduler` オブジェクトには、最初の参照カウントが配置されています。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `Create` メソッドを使用してスケジューラを作成した後、最初の参照カウントを削除し、スケジューラのシャットダウンを許可するために、将来のある時点で `Release` メソッドを呼び出す必要があります。
 
@@ -143,7 +143,7 @@ virtual ScheduleGroup* CreateScheduleGroup(location& _Placement) = 0;
 
 新しく作成されたスケジュールグループへのポインター。 この `ScheduleGroup` オブジェクトには、最初の参照カウントが配置されています。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 スケジュールグループに対する作業のスケジュールが完了したら、 [Release](schedulegroup-class.md#release)メソッドを呼び出す必要があります。 スケジューラがキューに登録されているすべての作業が完了すると、スケジューラはスケジュールグループを破棄します。
 
@@ -202,7 +202,7 @@ virtual bool IsAvailableLocation(const location& _Placement) const = 0;
 
 `_Placement` 引数で指定された場所がスケジューラで使用できるかどうかを示します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 戻り値は、指定された場所が使用可能かどうかを瞬間的にサンプリングすることに注意してください。 複数のスケジューラが存在する場合、動的リソース管理によって、任意の時点でスケジューラからリソースを追加または取得できます。 このような状況が発生した場合、特定の場所で可用性を変更できます。
 
@@ -218,7 +218,7 @@ virtual unsigned int Reference() = 0 ;
 
 新しくインクリメントされた参照カウント。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 これは通常、合成のためにスケジューラの有効期間を管理するために使用されます。 スケジューラの参照カウントが0になると、スケジューラのすべての処理が完了した後に、スケジューラがシャットダウンして破棄されます。
 
@@ -249,7 +249,7 @@ virtual unsigned int Release() = 0;
 
 新しくデクリメントされた参照カウント。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 これは通常、合成のためにスケジューラの有効期間を管理するために使用されます。 スケジューラの参照カウントが0になると、スケジューラのすべての処理が完了した後に、スケジューラがシャットダウンして破棄されます。
 
@@ -261,7 +261,7 @@ virtual unsigned int Release() = 0;
 static void __cdecl ResetDefaultSchedulerPolicy();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメソッドは、既定のスケジューラがプロセス内に存在する間に呼び出すことができます。 既存の既定のスケジューラのポリシーには影響しません。 ただし、既定のスケジューラがシャットダウンされ、新しい既定値が後で作成された場合、新しいスケジューラはランタイムの既定のポリシー設定を使用します。
 
@@ -273,7 +273,7 @@ static void __cdecl ResetDefaultSchedulerPolicy();
 Scheduler();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 スケジューラを呼び出し元のコンテキストにアタッチする必要があるランタイム関数の多くを使用すると、プロセスの既定のスケジューラが暗黙的に作成されます。 `CurrentScheduler` クラス内のメソッドと PPL およびエージェントレイヤーの機能は、通常、暗黙的な添付ファイルを実行します。
 
@@ -326,7 +326,7 @@ static void __cdecl SetDefaultSchedulerPolicy(const SchedulerPolicy& _Policy);
 *_Policy*<br/>
 既定のスケジューラポリシーとして設定するポリシー。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 プロセス内に既定のスケジューラが既に存在するときに `SetDefaultSchedulerPolicy` メソッドが呼び出されると、ランタイムは[default_scheduler_exists](default-scheduler-exists-class.md)例外をスローします。
 

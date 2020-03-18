@@ -17,11 +17,11 @@ helpviewer_keywords:
 - compiler options, macros
 ms.assetid: a869adc6-b3de-4299-b040-9ae20b45f82c
 ms.openlocfilehash: 84083c696ee7bdcbb9538bf587c4aaded7a3932e
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78857172"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79423208"
 ---
 # <a name="compiler-options-macros"></a>コンパイラオプションのマクロ
 
@@ -49,7 +49,7 @@ ms.locfileid: "78857172"
 #define _ATL_ALL_WARNINGS
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Visual C++ .net 2002 より前では、ATL は多くの警告を無効にし、ユーザーコードに表示されないように無効にしました。 具体的な内容は次のとおりです。
 
@@ -85,7 +85,7 @@ Visual C++ .net 2002 より前では、ATL は多くの警告を無効にし、�
 _ATL_APARTMENT_THREADED
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 アパートメントスレッドを指定します。 ATL オブジェクトで使用できるスレッド処理モデルの説明については、「その他のスレッド処理オプションの[プロジェクトのスレッド処理モデルを指定](../../atl/specifying-the-threading-model-for-a-project-atl.md)する」および「 [Atl シンプルオブジェクトウィザード](../../atl/reference/options-atl-simple-object-wizard.md)」を参照してください。
 
@@ -97,7 +97,7 @@ _ATL_APARTMENT_THREADED
 _ATL_CSTRING_EXPLICIT_CONSTRUCTORS
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このコンストラクターが定義されている場合、1つのパラメーターを受け取るすべての CString コンストラクターは、明示的なキーワードを使用してコンパイルされます。これにより、入力引数の暗黙の型変換ができなくなります。 これは、たとえば _UNICODE が定義されている場合に、char * 文字列を CString コンストラクター引数として使用しようとすると、コンパイラエラーが発生することを意味します。 このマクロは、ナロー文字列型とワイド文字列型の間の暗黙的な変換を防止する必要がある場合に使用します。
 
@@ -111,7 +111,7 @@ _ATL_CSTRING_EXPLICIT_CONSTRUCTORS
 #define _ATL_ENABLE_PTM_WARNING
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ATL および MFC ライブラリは、Microsoft C++コンパイラの標準C++準拠の向上に合わせて変更されています。 ANSI C++規格によれば、クラスメンバー関数へのポインターの構文は `&CMyClass::MyFunc`する必要があります。
 
@@ -135,7 +135,7 @@ ATL および MFC ライブラリは、Microsoft C++コンパイラの標準C++�
 _ATL_FREE_THREADED
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 フリースレッド処理を指定します。 フリースレッドは、マルチスレッドアパートメントモデルと同じです。 ATL オブジェクトで使用できるスレッド処理モデルの説明については、「その他のスレッド処理オプションの[プロジェクトのスレッド処理モデルを指定](../../atl/specifying-the-threading-model-for-a-project-atl.md)する」および「 [Atl シンプルオブジェクトウィザード](../../atl/reference/options-atl-simple-object-wizard.md)」を参照してください。
 
@@ -147,7 +147,7 @@ _ATL_FREE_THREADED
 _ATL_MULTI_THREADED
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このシンボルが定義されている場合、ATL はグローバルデータへのアクセスを適切に同期するコードを取得します。 新しいコードでは、代わりに同等のマクロ[_ATL_FREE_THREADED](#_atl_free_threaded)を使用する必要があります。
 
@@ -159,7 +159,7 @@ _ATL_MULTI_THREADED
 _ATL_NO_AUTOMATIC_NAMESPACE
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このシンボルが定義されていない場合 (atlbase. h を含む) は、既定で**名前空間 ATL を使用し**ます。これにより、名前の競合が発生する可能性があります。 これを回避するには、このシンボルを定義します。
 
@@ -179,7 +179,7 @@ _ATL_NO_COM_SUPPORT
 ATL_NO_VTABLE
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Vtable ポインターがクラスのコンストラクターおよびデストラクターで初期化されない場合、リンカーは、その vtable と、それが指すすべての関数を削除できます。 **__Declspec (novtable)** に展開されます。
 
@@ -204,7 +204,7 @@ Vtable ポインターがクラスのコンストラクターおよびデスト�
 *myfunction*<br/>
 インライン展開しない関数。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 関数をインラインとして宣言して、ヘッダーファイルに配置できるようにする必要がある場合でも、このシンボルを使用します。 **__Declspec (noinline)** に展開されます。
 
@@ -216,7 +216,7 @@ Vtable ポインターがクラスのコンストラクターおよびデスト�
 _ATL_SINGLE_THREADED
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 オブジェクトが常にプライマリ COM スレッドで実行されることを指定します。 ATL オブジェクトで使用できるスレッド処理モデルの説明については、「その他のスレッド処理オプションの[プロジェクトのスレッド処理モデルを指定](../../atl/specifying-the-threading-model-for-a-project-atl.md)する」および「 [Atl シンプルオブジェクトウィザード](../../atl/reference/options-atl-simple-object-wizard.md)」を参照してください。
 

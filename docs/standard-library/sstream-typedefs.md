@@ -12,11 +12,11 @@ f1_keywords:
 - iosfwd/std::wstringstream
 ms.assetid: d102edd2-ecea-4a35-a398-cf96e58dd422
 ms.openlocfilehash: e8f5a20b976d196090ac9300510044e84470c462
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865921"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425137"
 ---
 # <a name="ltsstreamgt-typedefs"></a>&lt;sstream&gt; typedefs
 
@@ -34,7 +34,7 @@ ms.locfileid: "78865921"
 typedef basic_istringstream<char> istringstream;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この型は、クラステンプレート[basic_istringstream](../standard-library/basic-istringstream-class.md)のシノニムであり、 **char**型の要素に対して特殊化されています。
 
@@ -46,7 +46,7 @@ typedef basic_istringstream<char> istringstream;
 typedef basic_ostringstream<char> ostringstream;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この型は、クラステンプレート[basic_ostringstream](../standard-library/basic-ostringstream-class.md)のシノニムであり、 **char**型の要素に対して特殊化されています。
 
@@ -58,7 +58,7 @@ typedef basic_ostringstream<char> ostringstream;
 typedef basic_stringbuf<char> stringbuf;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この型は、クラステンプレート[basic_stringbuf](../standard-library/basic-stringbuf-class.md)のシノニムであり、 **char**型の要素に対して特殊化されています。
 
@@ -70,7 +70,7 @@ typedef basic_stringbuf<char> stringbuf;
 typedef basic_stringstream<char> stringstream;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この型は、クラステンプレート[basic_stringstream](../standard-library/basic-stringstream-class.md)のシノニムであり、 **char**型の要素に対して特殊化されています。
 
@@ -82,7 +82,7 @@ typedef basic_stringstream<char> stringstream;
 typedef basic_istringstream<wchar_t> wistringstream;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この型は、クラステンプレート[basic_istringstream](../standard-library/basic-istringstream-class.md)のシノニムであり、 **wchar_t**型の要素に対して特殊化されています。
 
@@ -94,7 +94,7 @@ typedef basic_istringstream<wchar_t> wistringstream;
 typedef basic_ostringstream<wchar_t> wostringstream;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この型は、クラステンプレート[basic_ostringstream](../standard-library/basic-ostringstream-class.md)のシノニムであり、 **wchar_t**型の要素に対して特殊化されています。
 
@@ -106,7 +106,7 @@ typedef basic_ostringstream<wchar_t> wostringstream;
 typedef basic_stringbuf<wchar_t> wstringbuf;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この型は、クラステンプレート[basic_stringbuf](../standard-library/basic-stringbuf-class.md)のシノニムであり、 **wchar_t**型の要素に対して特殊化されています。
 
@@ -118,7 +118,7 @@ typedef basic_stringbuf<wchar_t> wstringbuf;
 typedef basic_stringstream<wchar_t> wstringstream;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この型は、クラステンプレート[basic_stringstream](../standard-library/basic-stringstream-class.md)のシノニムであり、 **wchar_t**型の要素に対して特殊化されています。
 

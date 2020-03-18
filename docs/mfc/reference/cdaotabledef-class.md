@@ -73,11 +73,11 @@ helpviewer_keywords:
 - CDaoTableDef [MFC], m_pDatabase
 ms.assetid: 7c5d2254-8475-43c4-8a6c-2d32ead194c9
 ms.openlocfilehash: 485fe3533916e5e59bc87084f58acfb37368ac32
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883871"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424513"
 ---
 # <a name="cdaotabledef-class"></a>CDaoTableDef クラス
 
@@ -93,13 +93,13 @@ class CDaoTableDef : public CObject
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[CDaoTableDef::CDaoTableDef](#cdaotabledef)|`CDaoTableDef` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[CDaoTableDef:: Append](#append)|新しいテーブルをデータベースに追加します。|
 |[CDaoTableDef:: CanUpdate](#canupdate)|テーブルを更新できる場合は0以外の値を返します (フィールドの定義またはテーブルのプロパティを変更できます)。|
@@ -134,12 +134,12 @@ class CDaoTableDef : public CObject
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[CDaoTableDef:: m_pDAOTableDef](#m_pdaotabledef)|Tabledef オブジェクトの基になる DAO インターフェイスへのポインター。|
 |[CDaoTableDef:: m_pDatabase](#m_pdatabase)|このテーブルのソースデータベース。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 各 DAO データベースオブジェクトは、保存されているすべての DAO テーブルオブジェクトを含む、"テーブルの構成" と呼ばれるコレクションを保持します。
 
@@ -185,7 +185,7 @@ Tabledef オブジェクトの使用が終了したら、 [Close](../../mfc/refe
 
 `CDaoTableDef`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxdao
 
@@ -197,7 +197,7 @@ Tabledef オブジェクトの使用が終了したら、 [Close](../../mfc/refe
 virtual void Append();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 関数は、データベースのテーブル定義コレクションにオブジェクトを追加します。 テーブルを追加せずに一時オブジェクトとして使用することができます。ただし、このオブジェクトを保存して使用する場合は、`Append`を呼び出す必要があります。
 
@@ -218,7 +218,7 @@ BOOL CanUpdate();
 
 テーブル構造 (スキーマ) を変更できる場合は0以外 (フィールドとインデックスを追加または削除する場合)、それ以外の場合は0。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 既定では、`CDaoTableDef` オブジェクトの基になっている新しく作成されたテーブルを更新したり、`CDaoTableDef` オブジェクトの基になるテーブルを更新したりすることはできません。 結果のレコードセットが更新可能でない場合でも、`CDaoTableDef` オブジェクトは更新可能です。
 
@@ -237,7 +237,7 @@ CDaoTableDef(CDaoDatabase* pDatabase);
 *pDatabase*<br/>
 [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)オブジェクトへのポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 オブジェクトを構築した後、 [Create](#create)または[Open](#open)メンバー関数を呼び出す必要があります。 オブジェクトを終了したら、 [Close](#close)メンバー関数を呼び出して、`CDaoTableDef` オブジェクトを破棄する必要があります。
 
@@ -249,7 +249,7 @@ CDaoTableDef(CDaoDatabase* pDatabase);
 virtual void Close();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 通常、`Close`を呼び出した後、tabledef オブジェクトが**new**で割り当てられている場合は、そのオブジェクトを削除します。
 
@@ -277,7 +277,7 @@ virtual void Create(
 *lAttributes*<br/>
 Tabledef オブジェクトによって表されるテーブルの特性に対応する値。 ビットごとの OR を使用して、次の定数のいずれかを組み合わせることができます。
 
-|定数|説明|
+|常時|Description|
 |--------------|-----------------|
 |`dbAttachExclusive`|Microsoft Jet データベースエンジンを使用するデータベースの場合、テーブルは、排他的に使用するために開かれた添付テーブルであることを示します。|
 |`dbAttachSavePWD`|Microsoft Jet データベースエンジンを使用するデータベースの場合、アタッチされたテーブルのユーザー ID とパスワードが接続情報と共に保存されることを示します。|
@@ -290,7 +290,7 @@ Tabledef オブジェクトによって表されるテーブルの特性に対�
 *lpszConnect*<br/>
 既定の接続文字列を含む文字列へのポインター。 既定では、この値は NULL として初期化されます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Tabledef という名前を付けたら、 [Append](#append)を呼び出して、データベースのテーブル定義コレクションにテーブルグループを保存できます。 `Append`を呼び出すと、tabledef がオープン状態になり、それを使用して[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)オブジェクトを作成できます。
 
@@ -318,11 +318,11 @@ void CreateField(CDaoFieldInfo& fieldinfo);
 *nType*<br/>
 フィールドのデータ型を示す値です。 設定には、次のいずれかの値を指定できます。
 
-|種類|サイズ (バイト)|説明|
+|種類|サイズ (バイト)|Description|
 |----------|--------------------|-----------------|
 |`dbBoolean`|1 バイト|BOOL|
 |`dbByte`|BYTE|
-|`dbInteger`|2|int|
+|`dbInteger`|2|INT|
 |`dbLong`|4|long|
 |`dbCurrency`|8|通貨 ( [COleCurrency](../../mfc/reference/colecurrency-class.md))|
 |`dbSingle`|4|float|
@@ -338,7 +338,7 @@ void CreateField(CDaoFieldInfo& fieldinfo);
 *lAttributes*<br/>
 フィールドの特性に対応する値。ビットごとの OR を使用して組み合わせることができます。
 
-|定数|説明|
+|常時|Description|
 |--------------|-----------------|
 |`dbFixedField`|フィールドサイズは固定されています (数値フィールドの既定値)。|
 |`dbVariableField`|フィールドサイズは変数です (テキストフィールドのみ)。|
@@ -349,7 +349,7 @@ void CreateField(CDaoFieldInfo& fieldinfo);
 *fieldinfo*<br/>
 [CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md)構造体への参照。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `DAOField` (OLE) オブジェクトが作成され、`DAOTableDef` (OLE) オブジェクトの Fields コレクションに追加されます。 オブジェクトのプロパティを調べるために使用するだけでなく、`CDaoFieldInfo` を使用して、テーブルテーブルに新しいフィールドを作成するための入力パラメーターを作成することもできます。 最初のバージョンの `CreateField` は使いやすくなっていますが、さらに細かく制御する場合は、`CDaoFieldInfo` パラメーターを受け取る `CreateField`の2番目のバージョンを使用できます。
 
@@ -382,7 +382,7 @@ void CreateIndex(CDaoIndexInfo& indexinfo);
 *indexinfo*<br/>
 [CDaoIndexInfo](../../mfc/reference/cdaoindexinfo-structure.md)構造体への参照。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 インデックスは、データベーステーブルからアクセスされるレコードの順序、および重複するレコードが許容されるかどうかを指定します。 また、インデックスを使用すると、データに効率的にアクセスできます。
 
@@ -415,7 +415,7 @@ void DeleteField(int nIndex);
 *nIndex*<br/>
 インデックスによる検索のための、テーブルの0から始まるフィールドコレクション内のフィールドのインデックス。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、データベースに追加されていない新しいオブジェクトに対して使用できます。また、 [CanUpdate](#canupdate)が0以外の値を返した場合にも使用できます。
 
@@ -438,7 +438,7 @@ void DeleteIndex(int nIndex);
 *nIndex*<br/>
 インデックスによる検索のための、データベースの0から始まるインデックス作成コレクション内のインデックスオブジェクトの配列インデックス。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、データベースに追加されていない新しいオブジェクトに対して使用できます。また、 [CanUpdate](#canupdate)が0以外の値を返した場合にも使用できます。
 
@@ -456,9 +456,9 @@ long GetAttributes();
 
 `CDaoTableDef` オブジェクトの1つ以上の特性を示す値を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
-|定数|説明|
+|常時|Description|
 |--------------|-----------------|
 |`dbAttachExclusive`|Microsoft Jet データベースエンジンを使用するデータベースの場合、テーブルは、排他的に使用するために開かれた添付テーブルであることを示します。|
 |`dbAttachSavePWD`|Microsoft Jet データベースエンジンを使用するデータベースの場合、アタッチされたテーブルのユーザー ID とパスワードが接続情報と共に保存されることを示します。|
@@ -485,7 +485,7 @@ CString GetConnect();
 
 テーブルのパスとデータベースの種類を表す `CString` オブジェクトです。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 アタッチされたテーブルを表す `CDaoTableDef` オブジェクトの場合、`CString` オブジェクトは、1つまたは2つの部分 (データベース型指定子とデータベースへのパス) で構成されます。
 
@@ -511,7 +511,7 @@ COleDateTime GetDateCreated();
 
 `CDaoTableDef` オブジェクトの基になるテーブルが作成された日付と時刻を表す値です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 日付と時刻の設定は、ベーステーブルが作成されたコンピューター、または最後に更新されたコンピューターから取得されます。 マルチユーザー環境では、ユーザーはこれらの設定をファイルサーバーから直接取得して、不整合を回避する必要があります。つまり、すべてのクライアントが "標準" タイムソースを使用する必要があります。たとえば、1台のサーバーからです。
 
@@ -529,7 +529,7 @@ COleDateTime GetDateLastUpdated();
 
 `CDaoTableDef` オブジェクトの基になっているテーブルが最後に更新された日付と時刻を表す値です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 日付と時刻の設定は、ベーステーブルが作成されたコンピューター、または最後に更新されたコンピューターから取得されます。 マルチユーザー環境では、ユーザーはこれらの設定をファイルサーバーから直接取得して、不整合を回避する必要があります。つまり、すべてのクライアントが "標準" タイムソースを使用する必要があります。たとえば、1台のサーバーからです。
 
@@ -547,7 +547,7 @@ short GetFieldCount();
 
 テーブル内のフィールドの数。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 値が0の場合、コレクションにはオブジェクトが存在しません。
 
@@ -589,7 +589,7 @@ void GetFieldInfo(
 *lpszName*<br/>
 名前による検索のためのフィールドオブジェクトの名前へのポインター。 名前は、最大64文字の文字列で、フィールドに一意の名前を付けます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 関数の1つのバージョンでは、インデックスを使用してフィールドを検索できます。 もう1つのバージョンでは、名前でフィールドを検索できます。
 
@@ -609,7 +609,7 @@ short GetIndexCount();
 
 テーブルのインデックスの数。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 値が0の場合、コレクションにはインデックスがありません。
 
@@ -651,7 +651,7 @@ void GetIndexInfo(
 *lpszName*<br/>
 名前で検索するための、インデックスオブジェクトの名前へのポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 関数の1つのバージョンでは、インデックスをコレクション内の位置で検索できます。 もう1つのバージョンでは、インデックスを名前で検索できます。
 
@@ -671,7 +671,7 @@ CString GetName();
 
 テーブルのユーザー定義の名前。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この名前は文字で始まり、最大64文字まで含めることができます。 数字とアンダースコア文字を含めることはできますが、句読点やスペースは使用できません。
 
@@ -689,7 +689,7 @@ long GetRecordCount();
 
 Tabledef オブジェクトでアクセスされたレコードの数。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 テーブル型 `CDaoTableDef` オブジェクトの `GetRecordCount` を呼び出すと、テーブル内のレコードの概数が反映され、テーブルレコードが追加および削除されるとすぐに影響を受けます。 ロールバックされたトランザクションは、 [CDaoWorkSpace:: CompactDatabase](../../mfc/reference/cdaoworkspace-class.md#compactdatabase)を呼び出すまで、レコード数の一部として表示されます。 レコードのない `CDaoTableDef` オブジェクトのレコードカウントプロパティの設定が0です。 アタッチされたテーブルまたは ODBC データベースを使用する場合、`GetRecordCount` は常に-1 を返します。
 
@@ -707,7 +707,7 @@ CString GetSourceTableName();
 
 アタッチされたテーブルのソース名を指定する `CString` オブジェクト、またはネイティブデータテーブルの場合は空の文字列。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 アタッチされたテーブルは、Microsoft Jet データベースにリンクされている別のデータベース内のテーブルです。 アタッチされたテーブルのデータは、他のアプリケーションによって操作できる外部データベースに残ります。
 
@@ -725,7 +725,7 @@ CString GetValidationRule();
 
 テーブルに対して変更または追加されたときにフィールドのデータを検証する `CString` オブジェクト。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 検証規則は、更新操作との接続に使用されます。 テーブルテーブルに検証規則が含まれている場合、そのテーブルテーブルの更新は、データが変更される前に、事前に定義された条件と一致する必要があります。 変更が条件に一致しない場合は、 [Getvalidationtext](#getvalidationtext)の値を含む例外がスローされます。 `CDaoTableDef` オブジェクトの場合、この `CString` は、アタッチされたテーブルの場合は読み取り専用、ベーステーブルの場合は読み取り/書き込みです。
 
@@ -743,7 +743,7 @@ CString GetValidationText();
 
 検証規則に一致しないデータをユーザーが入力した場合に表示されるテキストを指定する `CString` オブジェクト。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `CDaoTableDef` オブジェクトの場合、この `CString` は、アタッチされたテーブルの場合は読み取り専用、ベーステーブルの場合は読み取り/書き込みです。
 
@@ -761,19 +761,19 @@ BOOL IsOpen() const;
 
 `CDaoTableDef` オブジェクトが開いている場合は0以外の。それ以外の場合は0です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ##  <a name="m_pdatabase"></a>CDaoTableDef:: m_pDatabase
 
 このテーブルの[CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)オブジェクトへのポインターが含まれています。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ##  <a name="m_pdaotabledef"></a>CDaoTableDef:: m_pDAOTableDef
 
 `CDaoTableDef` オブジェクトの基になる DAO テーブルテーブルオブジェクトの OLE インターフェイスへのポインターを格納します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 DAO インターフェイスに直接アクセスする必要がある場合は、このポインターを使用します。
 
@@ -790,7 +790,7 @@ virtual void Open(LPCTSTR lpszName);
 *lpszName*<br/>
 テーブル名を指定する文字列へのポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ##  <a name="refreshlink"></a>CDaoTableDef:: RefreshLink
 
@@ -800,7 +800,7 @@ virtual void Open(LPCTSTR lpszName);
 void RefreshLink();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 アタッチされたテーブルの接続情報を変更するには、対応する `CDaoTableDef` オブジェクトで[Setconnect](#setconnect)を呼び出し、`RefreshLink` メンバー関数を使用して情報を更新します。 `RefreshLink`を呼び出すと、アタッチされたテーブルのプロパティは変更されません。
 
@@ -821,14 +821,14 @@ void SetAttributes(long lAttributes);
 *lAttributes*<br/>
 `CDaoTableDef` オブジェクトによって表されるテーブルの特性。これらの定数を合計することができます。
 
-|定数|説明|
+|常時|Description|
 |--------------|-----------------|
 |`dbAttachExclusive`|Microsoft Jet データベースエンジンを使用するデータベースの場合、テーブルは、排他的に使用するために開かれた添付テーブルであることを示します。|
 |`dbAttachSavePWD`|Microsoft Jet データベースエンジンを使用するデータベースの場合、アタッチされたテーブルのユーザー ID とパスワードが接続情報と共に保存されることを示します。|
 |`dbSystemObject`|テーブルが Microsoft Jet データベースエンジンによって提供されるシステムテーブルであることを示します。|
 |`dbHiddenObject`|表が Microsoft Jet データベースエンジンによって提供される非表示のテーブルであることを示します。|
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 複数の属性を設定する場合は、ビットごとの OR 演算子を使用して適切な定数を合計することで、複数の属性を組み合わせることができます。 非添付テーブルに `dbAttachExclusive` を設定すると、例外が生成されます。 次の値を組み合わせると、例外も発生します。
 
@@ -851,7 +851,7 @@ void SetConnect(LPCTSTR lpszConnect);
 *lpszConnect*<br/>
 ODBC またはインストール可能な ISAM ドライバーに渡す追加パラメーターを指定する文字列式へのポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 次の表に示すパスは、データベースファイルが格納されているディレクトリの完全なパスです。前に識別子 "DATABASE =" を付ける必要があります。 場合によっては (Microsoft Jet および Microsoft Excel データベースと同様に)、データベースパス引数に特定のファイル名が含まれます。
 
@@ -903,7 +903,7 @@ void SetName(LPCTSTR lpszName);
 *lpszName*<br/>
 テーブルの名前を指定する文字列式へのポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 名前は文字で始める必要があり、最大64文字まで含めることができます。 数字とアンダースコア文字を含めることはできますが、句読点やスペースは使用できません。
 
@@ -922,7 +922,7 @@ void SetSourceTableName(LPCTSTR lpszSrcTableName);
 *lpszSrcTableName*<br/>
 外部データベース内のテーブル名を指定する文字列式へのポインター。 ベーステーブルの場合、設定は空の文字列 ("") になります。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 その後、 [Refreshlink](#refreshlink)を呼び出す必要があります。 このプロパティ設定は、ベーステーブルに対しては空で、アタッチされたテーブルまたはコレクションに追加されていないオブジェクトに対しては読み取り/書き込みが行われます。
 
@@ -941,7 +941,7 @@ void SetValidationRule(LPCTSTR lpszValidationRule);
 *lpszValidationRule*<br/>
 操作を検証する文字列式へのポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 検証規則は、更新操作との接続に使用されます。 テーブルテーブルに検証規則が含まれている場合、そのテーブルテーブルの更新は、データが変更される前に、事前に定義された条件と一致する必要があります。 変更が条件に一致しない場合は、 [Getvalidationtext](#getvalidationtext)のテキストを含む例外が表示されます。
 
@@ -966,7 +966,7 @@ void SetValidationText(LPCTSTR lpszValidationText);
 *lpszValidationText*<br/>
 入力したデータが無効な場合に表示されるテキストを指定する文字列式へのポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 アタッチされたテーブルの検証テキストを設定することはできません。
 

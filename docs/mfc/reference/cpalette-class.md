@@ -27,11 +27,11 @@ helpviewer_keywords:
 - CPalette [MFC], SetPaletteEntries
 ms.assetid: 8cd95498-53ed-4852-85e1-70e522541114
 ms.openlocfilehash: 27f4f14c9e93091728e256c890dcffee26a43de4
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855537"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79426973"
 ---
 # <a name="cpalette-class"></a>CPalette クラス
 
@@ -47,13 +47,13 @@ class CPalette : public CGdiObject
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[CPalette:: CPalette](#cpalette)|Windows パレットがアタッチされていない `CPalette` オブジェクトを構築します。 使用する前に、初期化メンバー関数のいずれかを使用して `CPalette` オブジェクトを初期化する必要があります。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[CPalette:: AnimatePalette](#animatepalette)|`CPalette` オブジェクトで識別される論理パレット内のエントリを置き換えます。 新しいエントリは、Windows によってすぐにシステムパレットにマップされるため、アプリケーションでクライアント領域を更新する必要はありません。|
 |[CPalette:: CreateHalftonePalette](#createhalftonepalette)|デバイスコンテキスト用のハーフトーンパレットを作成し、`CPalette` オブジェクトにアタッチします。|
@@ -67,11 +67,11 @@ class CPalette : public CGdiObject
 
 ### <a name="public-operators"></a>パブリック演算子
 
-|Name|説明|
+|Name|Description|
 |----------|-----------------|
 |[CPalette:: operator HPALETTE](#operator_hpalette)|`CPalette`にアタッチされている HPALETTE を返します。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 パレットには、アプリケーションとカラー出力デバイス (ディスプレイデバイスなど) との間のインターフェイスが用意されています。 インターフェイスを使用すると、アプリケーションは、他のアプリケーションによって表示される色に大きな影響を与えずに、出力デバイスの色の機能を最大限に活用することができます。 Windows では、アプリケーションの論理パレット (必要な色の一覧) とシステムパレット (使用可能な色を定義) を使用して、使用する色を決定します。
 
@@ -87,7 +87,7 @@ class CPalette : public CGdiObject
 
 `CPalette`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxwin.h
 
@@ -113,7 +113,7 @@ void AnimatePalette(
 *lpPaletteColors*<br/>
 は、palette[エントリ](/previous-versions/dd162769\(v=vs.85\))構造体の配列の最初のメンバーを指し、 *Nstartindex*および*nnumentries*によって識別されるパレットエントリを置き換えます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 アプリケーションが `AnimatePalette`を呼び出す場合、新しいエントリは、Windows によってすぐにシステムパレットにマップされるため、クライアント領域を更新する必要はありません。
 
@@ -127,7 +127,7 @@ void AnimatePalette(
 CPalette();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 オブジェクトには、`CreatePalette` を呼び出してアタッチするまで、パレットがアタッチされていません。
 
@@ -148,7 +148,7 @@ BOOL CreateHalftonePalette(CDC* pDC);
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 アプリケーションは、デバイスコンテキストの伸縮モードがハーフトーンに設定されている場合に、ハーフトーンパレットを作成する必要があります。 次に、 [CreateHalftonePalette](/windows/win32/api/wingdi/nf-wingdi-createhalftonepalette)メンバー関数によって返される論理ハーフトーンパレットを選択し、 [CDC:: StretchBlt](../../mfc/reference/cdc-class.md#stretchblt)または[StretchDIBits](/windows/win32/api/wingdi/nf-wingdi-stretchdibits)関数が呼び出される前にデバイスコンテキストに認識されるようにする必要があります。
 
@@ -171,7 +171,7 @@ BOOL CreatePalette(LPLOGPALETTE lpLogPalette);
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `LOGPALETTE` 構造の詳細については、Windows SDK を参照してください。
 
@@ -192,7 +192,7 @@ Windows GDI カラーパレットを処理するハンドル。
 
 成功した場合は `CPalette` オブジェクトへのポインター。それ以外の場合は NULL。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `CPalette` オブジェクトが Windows パレットにまだアタッチされていない場合は、一時 `CPalette` オブジェクトが作成され、アタッチされます。 この一時 `CPalette` オブジェクトは、アプリケーションが次にそのイベントループ内でアイドル状態になったときにのみ有効です。その時点で、すべての一時グラフィックオブジェクトが削除されます。 つまり、一時オブジェクトは、1つのウィンドウメッセージの処理中にのみ有効です。
 
@@ -263,7 +263,7 @@ operator HPALETTE() const;
 
 成功した場合は、`CPalette` オブジェクトによって表される Windows GDI オブジェクトへのハンドル。それ以外の場合は NULL。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この演算子は、HPALETTE オブジェクトの直接使用をサポートするキャスト演算子です。
 
@@ -286,7 +286,7 @@ BOOL ResizePalette(UINT nNumEntries);
 
 パレットのサイズが正常に変更された場合は0以外の。それ以外の場合は0です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 アプリケーションが `ResizePalette` を呼び出してパレットのサイズを小さくすると、サイズ変更されたパレットの残りのエントリは変更されません。 アプリケーションが `ResizePalette` を呼び出してパレットを拡大する場合、追加のパレットエントリは黒 (赤、緑、および青の値はすべて 0) に設定され、すべての追加エントリのフラグは0に設定されます。
 
@@ -318,7 +318,7 @@ UINT SetPaletteEntries(
 
 論理パレットに設定されているエントリの数。関数が失敗した場合は0。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 アプリケーションが `SetPaletteEntries`を呼び出したときに論理パレットがデバイスコンテキストに選択されている場合、アプリケーションが[CDC:: RealizePalette](../../mfc/reference/cdc-class.md#realizepalette)を呼び出すまで、変更は有効になりません。
 

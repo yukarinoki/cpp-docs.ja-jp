@@ -15,11 +15,11 @@ helpviewer_keywords:
 - iostream header
 ms.assetid: de5d39e1-7e77-4b55-bcd1-7c77b41515c8
 ms.openlocfilehash: 2906e802072c43a93c59ca40d15e032adeeeef97
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856542"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79424645"
 ---
 # <a name="ltiostreamgt"></a>&lt;iostream&gt;
 
@@ -34,7 +34,7 @@ ms.locfileid: "78856542"
 > [!NOTE]
 > \<iostream > ライブラリでは、`#include <ios>`、`#include <streambuf>`、`#include <istream>`、および `#include <ostream>` ステートメントを使用します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 このオブジェクトは、次の 2 つのグループに分類されます。
 
@@ -73,7 +73,7 @@ extern ostream cerr;
 
 [ostream](../standard-library/ostream-typedefs.md#ostream) オブジェクト。
 
-#### <a name="remarks"></a>コメント
+#### <a name="remarks"></a>解説
 
 このオブジェクトは、バイト ストリームとして、標準エラー出力へのバッファリングされていない挿入を制御します。 オブジェクトが構築されると、`&` [unitbuf](../standard-library/ios-functions.md#unitbuf)の式 `cerr.`[フラグ](../standard-library/ios-base-class.md#flags)が0以外になり、`cerr.tie() == &cout`ます。
 
@@ -119,7 +119,7 @@ extern istream cin;
 
 [istream](../standard-library/istream-typedefs.md#istream) オブジェクト。
 
-#### <a name="remarks"></a>コメント
+#### <a name="remarks"></a>解説
 
 オブジェクトは、バイト ストリームとして標準入力からの抽出を制御します。 オブジェクトが構築されると、`cin.`[tie](../standard-library/basic-ios-class.md#tie) の呼び出しは `&`[cout](#cout) を返します。
 
@@ -170,7 +170,7 @@ extern ostream clog;
 
 [ostream](../standard-library/ostream-typedefs.md#ostream) オブジェクト。
 
-#### <a name="remarks"></a>コメント
+#### <a name="remarks"></a>解説
 
 このオブジェクトは、バイト ストリームとして、標準エラー出力へのバッファリングされている挿入を制御します。
 
@@ -190,7 +190,7 @@ extern ostream cout;
 
 [ostream](../standard-library/ostream-typedefs.md#ostream) オブジェクト。
 
-#### <a name="remarks"></a>コメント
+#### <a name="remarks"></a>解説
 
 このオブジェクトは、バイト ストリームとして、標準出力への挿入を制御します。
 
@@ -210,7 +210,7 @@ extern wostream wcerr;
 
 [wostream](../standard-library/ostream-typedefs.md#wostream) オブジェクト。
 
-#### <a name="remarks"></a>コメント
+#### <a name="remarks"></a>解説
 
 このオブジェクトは、ワイド ストリームとして、標準エラー出力へのバッファリングされていない挿入を制御します。 オブジェクトが構築されると、`&` [unitbuf](../standard-library/ios-functions.md#unitbuf)の式 `wcerr.`[フラグ](../standard-library/ios-base-class.md#flags)が0以外になります。
 
@@ -230,7 +230,7 @@ extern wistream wcin;
 
 [wistream](../standard-library/istream-typedefs.md#wistream) オブジェクト。
 
-#### <a name="remarks"></a>コメント
+#### <a name="remarks"></a>解説
 
 オブジェクトは、ワイド ストリームとして標準入力からの抽出を制御します。 オブジェクトが構築されると、`wcin.`[tie](../standard-library/basic-ios-class.md#tie) の呼び出しは `&`[wcout](#wcout) を返します。
 
@@ -250,7 +250,7 @@ extern wostream wclog;
 
 [wostream](../standard-library/ostream-typedefs.md#wostream) オブジェクト。
 
-#### <a name="remarks"></a>コメント
+#### <a name="remarks"></a>解説
 
 このオブジェクトは、ワイド ストリームとして、標準エラー出力へのバッファリングされている挿入を制御します。
 
@@ -270,7 +270,7 @@ extern wostream wcout;
 
 [wostream](../standard-library/ostream-typedefs.md#wostream) オブジェクト。
 
-#### <a name="remarks"></a>コメント
+#### <a name="remarks"></a>解説
 
 このオブジェクトは、ワイド ストリームとして、標準出力への挿入を制御します。
 

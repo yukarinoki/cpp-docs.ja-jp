@@ -83,11 +83,11 @@ helpviewer_keywords:
 - std::regex_constants [C++], collate
 ms.assetid: 4a69c0ba-c46d-46e4-bd29-6f4efb805f26
 ms.openlocfilehash: c8abca8109db9c781d63721b795feb01161fdb40
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78876142"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425233"
 ---
 # <a name="regex_constants-namespace"></a>regex_constants 名前空間
 
@@ -103,7 +103,7 @@ namespace regex_constants {
 }
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 `regex_constants` 名前空間は、各種のフラグおよび関連するフラグ値をカプセル化します。
 
@@ -113,7 +113,7 @@ namespace regex_constants {
 |[match_flag_type](#match_flag_type)|正規表現照合オプションのフラグ。|
 |[syntax_option_type](#syntax_option_type)|構文オプションを選択するためのフラグ。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<regex >
 
@@ -144,7 +144,7 @@ enum error_type
     };
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この型は、エラー フラグを保持できるオブジェクトを表す列挙型です。 次に、それぞれのフラグ値を示します。
 
@@ -204,7 +204,7 @@ enum match_flag_type
     };
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この型は、テキスト シーケンスを正規表現に照らして照合するときに使用されるオプションと、テキストを置き換えるときに使用される書式設定フラグを表すビットマスク型です。 オプションは `|`を使用して連結できます。
 
@@ -260,7 +260,7 @@ enum syntax_option_type
     };
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この型は、正規表現をコンパイルするときに使用される言語指定子と構文修飾子を表すビットマスク型です。 オプションは `|`を使用して連結できます。 一度に使用できる言語指定子は 1 つだけです。
 

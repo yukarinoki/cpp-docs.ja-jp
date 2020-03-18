@@ -8,11 +8,11 @@ helpviewer_keywords:
 - C4996
 ms.assetid: 926c7cc2-921d-43ed-ae75-634f560dd317
 ms.openlocfilehash: 98662dc0b5439c1f8857e4f2ad259793a4d03e41
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865224"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79425041"
 ---
 # <a name="compiler-warning-level-3-c4996"></a>コンパイラの警告 (レベル 3) C4996
 
@@ -244,7 +244,7 @@ C4996 は、セキュリティ上の理由から非推奨とされた MFC 関数
 
 ## <a name="obsolete-crt-functions-and-variables"></a>廃止された CRT 関数と変数
 
-**この関数または変数は、新しいライブラリまたはオペレーティングシステムの機能に置き換えられました。代わりに new_item の使用を検討**してください **。詳細については、オンラインヘルプを参照してください。**
+**この関数または変数は、新しいライブラリまたはオペレーティングシステムの機能に置き換えられました。代わりに new_item の使用を検討** *new_item*してください **。詳細については、オンラインヘルプを参照してください。**
 
 一部のライブラリ関数およびグローバル変数は非推奨とされるため使用されていません。 これらの関数および変数は、将来のバージョンのライブラリでは削除される可能性があります。 コンパイラは、これらの項目は使用されなくなったとの警告を発行し、優先すべき代替項目を提案します。
 

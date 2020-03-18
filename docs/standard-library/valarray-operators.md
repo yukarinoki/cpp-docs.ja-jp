@@ -31,11 +31,11 @@ helpviewer_keywords:
 - std::operator&lt;&lt; (valarray)
 - std::operator&lt;= (valarray), std::operator== (valarray)
 ms.openlocfilehash: 231bad65e2af1ee2ab800890c83cc50e584a8c6a
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78875615"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79427585"
 ---
 # <a name="ltvalarraygt-operators"></a>&lt;valarray&gt; 演算子
 
@@ -79,7 +79,7 @@ operator!=(
 
 - **false**: 対応する要素が等しい場合。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 1つ目のテンプレート演算子は、[ブール >\<クラス valarray](../standard-library/valarray-bool-class.md)のオブジェクトを返します。それぞれの要素は `I` `left[I] != right[I]`です。
 
@@ -257,7 +257,7 @@ operator&(
 
 *左辺*と*右辺*のビットごとの and 演算の要素ごとの組み合わせを要素とする valarray。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ビットごとの演算は、 **char**および**int**データ型およびバリアントのビットを操作する場合にのみ使用できます。 **float**、 **double**、 **longdouble**、 **void**、 **bool**などのより複雑なデータ型では使用できません。
 
@@ -348,7 +348,7 @@ operator&&(
 
 ブール型の要素を持ち、*左辺*と*右辺*の論理 `AND` 演算の要素ごとの組み合わせである valarray。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 論理 `ANDoperator&&` は要素レベルで適用され、すべての非ゼロ値を true としてカウントし、結果はブール値の valarray になります。 対照的に、`AND`、[演算子 &](#op_amp)のビットごとのバージョンでは、ビットごとの演算の結果に応じて、0または1以外の値の valarray が発生する可能性があります。
 
@@ -441,7 +441,7 @@ operator>(
 
 - *左*の要素または値が、対応する*右*の要素または値より大きい場合は**false** 。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 2 つの valarray に含まれる要素数が異なる場合、結果は未定義です。
 
@@ -534,7 +534,7 @@ operator>=(
 
 - *左*の要素または値が、対応する*右*の要素または値より小さい場合は**false** 。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 2 つの valarray に含まれる要素数が異なる場合、結果は未定義です。
 
@@ -623,7 +623,7 @@ operator>>(
 
 指定された量だけ右にシフトした要素から成る valarray。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 符号付きの数値の符号は保持されます。
 
@@ -716,7 +716,7 @@ operator<(
 
 - *左*の要素または値が、対応する*右*の要素または値より小さい場合は**false** 。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 2 つの valarray の要素数が異なる場合、結果は未定義です。
 
@@ -809,7 +809,7 @@ operator<=(
 
 - *左*の要素または値が、対応する*右*の要素または値より大きい場合は**false** 。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 2 つの valarray の要素数が異なる場合、結果は未定義です。
 
@@ -898,7 +898,7 @@ operator<<(
 
 指定された量だけ左にシフトした要素から成る valarray。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 符号付きの数値の符号は保持されます。
 
@@ -1157,7 +1157,7 @@ operator-(
 
 *左辺*と*右辺*の要素ごとの差を要素とする valarray。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 減算の説明で使われる算術用語:
 
@@ -1248,7 +1248,7 @@ operator/(
 
 *左辺*が*right*で除算された要素ごとの商を要素とする valarray。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 除算の説明で使われる算術用語:
 
@@ -1343,7 +1343,7 @@ operator==(
 
 - **false**: 対応する要素が等しくない場合。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 1つ目のテンプレート演算子は、[ブール >\<クラス valarray](../standard-library/valarray-bool-class.md)のオブジェクトを返します。それぞれの要素は `I` `left[I] == right[I]`です。 2番目のテンプレート演算子は、要素 `I` `left[I] == right`に格納します。 3番目のテンプレート演算子は、要素 `I` `left == right[I]`に格納します。
 
@@ -1432,7 +1432,7 @@ operator^(
 
 *左辺*と*右辺*のビットごとの**XOR**演算の要素ごとの組み合わせを要素とする valarray。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ビットごとの演算は、 **char**および**int**データ型およびバリアントのビットを操作する場合にのみ使用できます。 **float**、 **double**、 **long double**、 **void**、 **bool**など、より複雑なデータ型では使用できません。
 
@@ -1527,7 +1527,7 @@ operator|(
 
 *左辺*と*右辺*のビットごとの `OR` 演算の要素ごとの組み合わせを要素とする valarray。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ビットごとの演算は、 **char**および**int**データ型およびバリアントのビットを操作する場合にのみ使用できます。 **float**、 **double**、 **longdouble**、 **void**、 **bool**などのより複雑なデータ型では使用できません。
 
@@ -1622,7 +1622,7 @@ operator||(
 
 **ブール**型の要素を持つ valarray。*左右*の論理 OR 演算の要素ごとの*組み合わせです。*
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 論理 `OR` `operator||` は要素レベルで適用され、すべての非ゼロ値を**true**と見なし、結果はブール値の valarray になります。 それに対して、ビットごとのバージョンの `OR` である [operator&#124;](../standard-library/valarray-operators.md#op_or) は、ビットごとの演算の結果に応じて、0 でも 1 でもない値を含む valarray になる場合があります。
 
