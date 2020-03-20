@@ -1,42 +1,42 @@
 ---
-title: '方法: マーシャ リング ライブラリを拡張します。'
+title: '方法: マーシャリング ライブラリを拡張する'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Marshaling Library, extending
 ms.assetid: 4c4a56d7-1d44-4118-b85f-f9686515e6e9
-ms.openlocfilehash: f289539807b1e9499cef51427d3f6a494545cc60
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ab3b17638e07a54189803c83163db67c5ebf82a5
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387306"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "79545271"
 ---
-# <a name="how-to-extend-the-marshaling-library"></a>方法: マーシャ リング ライブラリを拡張します。
+# <a name="how-to-extend-the-marshaling-library"></a>方法: マーシャリング ライブラリを拡張する
 
-このトピックでは、データ型の間での複数の変換を提供するマーシャ リング ライブラリを拡張する方法について説明します。 ユーザーは、データ変換を実行するライブラリによってサポートされていないマーシャ リング ライブラリを拡張できます。
+このトピックでは、マーシャリングライブラリを拡張して、データ型間の変換をさらに提供する方法について説明します。 ユーザーは、ライブラリで現在サポートされていないデータ変換のマーシャリングライブラリを拡張できます。
 
-有無にかかわらず 2 つの方法のいずれかでマーシャ リング ライブラリを拡張することができます、 [marshal_context クラス](../dotnet/marshal-context-class.md)します。 レビュー、 [c++ Overview of Marshaling](../dotnet/overview-of-marshaling-in-cpp.md)コンテキストを新しい変換が必要かどうかを確認するにはトピック。
+マーシャリングライブラリは、 [Marshal_context クラス](../dotnet/marshal-context-class.md)の有無にかかわらず、次の2つの方法のいずれかで拡張できます。 新しい変換にコンテキストが必要かどうかを判断するには、「」の「 [ C++マーシャリングの概要](../dotnet/overview-of-marshaling-in-cpp.md)」を参照してください。
 
-どちらの場合では、まず新しいマーシャ リング変換のファイルを作成します。 標準のマーシャ リング ライブラリ ファイルの整合性を保持するための操作を行います。 プロジェクトを別のコンピューターまたは別のプログラマに移植する場合は、プロジェクトの残りの部分と共に新しいマーシャ リング ファイルをコピーする必要があります。 この方法でプロジェクトを受信するユーザーは新しい変換を受信する保証し、すべてのライブラリ ファイルを変更する必要はありません。
+どちらの場合も、最初に新しいマーシャリング変換用のファイルを作成します。 これは、標準マーシャリングライブラリファイルの整合性を維持するために行います。 プロジェクトを別のコンピューターまたは別のプログラマに移植する場合は、新しいマーシャリングファイルをプロジェクトの残りの部分と共にコピーする必要があります。 この方法では、プロジェクトを受け取るユーザーは新しい変換を受け取ることが保証されるため、ライブラリファイルを変更する必要はありません。
 
-### <a name="to-extend-the-marshaling-library-with-a-conversion-that-does-not-require-a-context"></a>コンテキストが不要な変換でマーシャ リング ライブラリを拡張するには
+### <a name="to-extend-the-marshaling-library-with-a-conversion-that-does-not-require-a-context"></a>コンテキストを必要としない変換でマーシャリングライブラリを拡張するには
 
-1. 新しいマーシャ リング関数 MyMarshal.h などを格納するファイルを作成します。
+1. 新しいマーシャリング関数を格納するファイルを作成します (例、MyMarshal)。
 
-1. マーシャ リング ライブラリ ファイルの 1 つ以上を含めます。
+1. 1つまたは複数のマーシャリングライブラリファイルを含めます。
 
-   - 基本型 marshal.h します。
+   - 基本データ型の場合は、をマーシャリングします。
 
-   - windows のデータ型の marshal_windows.h します。
+   - windows データ型の場合は marshal_windows。
 
-   - marshal_cppstd.hC++標準ライブラリのデータ型。
+   - 標準ライブラリデータ型C++の場合は marshal_cppstd。
 
-   - ATL のデータ型の marshal_atl.h します。
+   - ATL データ型の marshal_atl。
 
-1. 次の手順の最後に、コードを使用すると、変換関数を記述できます。 このコードでは、型に変換する、FROM は、変換後の型と`from`変換されるパラメーターです。
+1. これらの手順の最後にあるコードを使用して、変換関数を記述します。 このコードでは、は変換先の型、FROM は変換元の型、`from` は変換されるパラメーターです。
 
-1. 変換ロジックに関するコメントを変換するコードに置き換えます、 `from` TO のオブジェクトにパラメーターを入力し、変換されたオブジェクトを返します。
+1. 変換ロジックに関するコメントをコードに置き換えて、`from` パラメーターをのオブジェクトに変換し、変換されたオブジェクトを返します。
 
 ```
 namespace msclr {
@@ -49,29 +49,29 @@ namespace msclr {
 }
 ```
 
-### <a name="to-extend-the-marshaling-library-with-a-conversion-that-requires-a-context"></a>コンテキストが必要な変換でマーシャ リング ライブラリを拡張するには
+### <a name="to-extend-the-marshaling-library-with-a-conversion-that-requires-a-context"></a>コンテキストを必要とする変換を使用してマーシャリングライブラリを拡張するには
 
-1. 新しいマーシャ リング関数 MyMarshal.h などを格納するファイルを作成します。
+1. 新しいマーシャリング関数を格納するファイルを作成します (例、MyMarshal)。
 
-1. マーシャ リング ライブラリ ファイルの 1 つ以上を含めます。
+1. 1つまたは複数のマーシャリングライブラリファイルを含めます。
 
-   - 基本型 marshal.h します。
+   - 基本データ型の場合は、をマーシャリングします。
 
-   - windows のデータ型の marshal_windows.h します。
+   - windows データ型の場合は marshal_windows。
 
-   - marshal_cppstd.hC++標準ライブラリのデータ型。
+   - 標準ライブラリデータ型C++の場合は marshal_cppstd。
 
-   - ATL のデータ型の marshal_atl.h します。
+   - ATL データ型の marshal_atl。
 
-1. 次の手順の最後に、コードを使用すると、変換関数を記述できます。 このコードでは、型に変換する、FROM から、変換後の型は、 `toObject` 、結果を格納するためのポインターと`fromObject`変換されるパラメーターです。
+1. これらの手順の最後にあるコードを使用して、変換関数を記述します。 このコードでは、は変換先の型、FROM は変換元の型、`toObject` は結果を格納するポインター、`fromObject` は変換されるパラメーターですが、
 
-1. コメントを初期化するコードを初期化する方法について、`toPtr`を適切な空の値。 たとえば、ポインターである場合に設定`NULL`します。
+1. 初期化に関するコメントをコードに置き換えて、`toPtr` を適切な空の値に初期化します。 たとえば、ポインターである場合は、`NULL`に設定します。
 
-1. 変換ロジックに関するコメントを変換するコードに置き換えます、`from`パラメーターのオブジェクトに*TO*型。 この変換されたオブジェクトに格納されます`toPtr`します。
+1. 変換ロジックに関するコメントをコードに置き換えて、`from` パラメーターをのオブジェクトの型*に*変換します。 この変換されたオブジェクトは `toPtr`に格納されます。
 
-1. 設定に関するコメント`toObject`を設定するコードで`toObject`変換されたオブジェクトにします。
+1. `toObject` の設定に関するコメントをコードに置き換えて、変換されたオブジェクトに `toObject` を設定します。
 
-1. によって割り当てられたメモリを解放するコードとネイティブ リソースのクリーンアップに関するコメントを`toPtr`します。 場合`toPtr`を使用してメモリを割り当てられた`new`を使用して、`delete`メモリを解放します。
+1. ネイティブリソースのクリーンアップに関するコメントをコードに置き換えて、`toPtr`によって割り当てられたメモリを解放します。 `new`を使用してメモリを割り当て `toPtr` 場合は、`delete` を使用してメモリを解放します。
 
 ```
 namespace msclr {
@@ -104,9 +104,9 @@ namespace msclr {
 
 ## <a name="example"></a>例
 
-次の例では、コンテキストが不要な変換でマーシャ リング ライブラリを拡張します。 この例では、コードは、ネイティブ データ型のマネージ データ型に従業員情報を変換します。
+次の例では、コンテキストを必要としない変換を使用して、マーシャリングライブラリを拡張します。 この例では、コードによって、従業員情報がネイティブデータ型からマネージデータ型に変換されます。
 
-```
+```cpp
 // MyMarshalNoContext.cpp
 // compile with: /clr
 #include <msclr/marshal.h>
@@ -156,7 +156,7 @@ int main() {
 }
 ```
 
-前の例では、`marshal_as`関数は、変換後のデータにハンドルを返します。 これは、データの追加のコピーが作成されないようにするために行われました。 変数を直接返すことが、不要なパフォーマンス コストに関連付けられていること。
+前の例では、`marshal_as` 関数は、変換されたデータへのハンドルを返します。 これは、データの追加コピーを作成しないようにするために行われました。 変数を直接返すと、それに関連する不要なパフォーマンスコストが発生します。
 
 ```Output
 Managed name: Jeff Smith
@@ -166,9 +166,9 @@ Managed zip code: 98111
 
 ## <a name="example"></a>例
 
-次の例は、従業員情報をマネージ データ型からネイティブ データ型に変換します。 この変換では、マーシャ リング コンテキストが必要です。
+次の例では、従業員情報をマネージデータ型からネイティブデータ型に変換します。 この変換にはマーシャリングコンテキストが必要です。
 
-```
+```cpp
 // MyMarshalContext.cpp
 // compile with: /clr
 #include <stdlib.h>
@@ -266,6 +266,6 @@ Native address: 123 Main Street
 Native zip code: 98111
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [C++ におけるマーシャリングの概要](../dotnet/overview-of-marshaling-in-cpp.md)

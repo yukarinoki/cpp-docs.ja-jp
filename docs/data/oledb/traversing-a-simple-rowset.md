@@ -8,16 +8,16 @@ helpviewer_keywords:
 - OLE DB consumers [C++], database attributes
 - accessors [C++], rowsets
 ms.assetid: b45acf16-4029-429d-ab8d-b7fba98b9740
-ms.openlocfilehash: 88a027a24f8ab817f793f101f9f128e1fc0c61c3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 874c8372074838cd614d1fe17727871ca6e5f21a
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389152"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "79545517"
 ---
 # <a name="traversing-a-simple-rowset"></a>単純な行セットの走査
 
-次の例では、コマンドに素早く簡単にデータベースへのアクセスを示します。 ATL プロジェクトで、次のコンシューマー コードという名前のテーブルからレコードを取得する*アーティスト*ODBC 用の Microsoft OLE DB プロバイダーを使用して、データベースの Microsoft Access でします。 このコードを作成、 [CTable](../../data/oledb/ctable-class.md)アクセサーを使用してテーブルのオブジェクトは、ユーザー レコード クラスに基づく`CArtists`します。 接続を開き、接続、セッションを開きますをセッションでテーブルを開きます。
+次の例では、コマンドを含まない迅速で簡単なデータベースアクセスを示します。 ATL プロジェクトの次のコンシューマーコードは、Microsoft OLE DB Provider for ODBC を使用して、Microsoft Access データベースの*アーティスト*と呼ばれるテーブルからレコードを取得します。 このコードは、`CArtists`ユーザーレコードクラスに基づくアクセサーを持つ[CTable](../../data/oledb/ctable-class.md) table オブジェクトを作成します。 接続が開かれ、接続でセッションが開かれて、セッションでテーブルが開かれます。
 
 ```cpp
 #include <atldbcli.h>
@@ -54,7 +54,7 @@ int main()
 }
 ```
 
-ユーザー レコードでは、 `CArtists`、この例のようになります。
+ユーザーレコード `CArtists`は、次の例のようになります。
 
 ```cpp
 class CArtists
@@ -74,6 +74,6 @@ END_COLUMN_MAP()
 };
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [OLE DB コンシューマー テンプレートの操作](../../data/oledb/working-with-ole-db-consumer-templates.md)

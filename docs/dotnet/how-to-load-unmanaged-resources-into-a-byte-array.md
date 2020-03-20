@@ -7,22 +7,22 @@ helpviewer_keywords:
 - unmanaged resources, loading into Byte array
 - native resources
 ms.assetid: cdada6cd-6d42-437a-a90f-44a0b18d6a93
-ms.openlocfilehash: 641bdf4429bca35800e3fbbbb7622f2651bb3fee
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 425def1cd0557298985148d7bb9f74da489643e8
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344967"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "79544959"
 ---
 # <a name="how-to-load-unmanaged-resources-into-a-byte-array"></a>方法: アンマネージ リソースをバイト配列に読み込む
 
-このトピックにアンマネージ リソースを読み込むためのいくつかの方法を説明します、<xref:System.Byte>配列。
+このトピックでは、アンマネージリソースを <xref:System.Byte> 配列に読み込むいくつかの方法について説明します。
 
 ## <a name="example"></a>例
 
-アンマネージ リソースのサイズがわかっている場合は、CLR 配列を事前に割り当てるし、CLR 配列の配列のブロックへのポインターを使用して、配列にリソースを読み込みます。
+アンマネージリソースのサイズがわかっている場合は、clr 配列を事前に割り当てると、CLR 配列の配列ブロックへのポインターを使用して、そのリソースを配列に読み込むことができます。
 
-```
+```cpp
 // load_unmanaged_resources_into_Byte_array.cpp
 // compile with: /clr
 using namespace System;
@@ -56,9 +56,9 @@ int main() {
 
 ## <a name="example"></a>例
 
-このサンプルでは、データをアンマネージ メモリ ブロックからマネージ配列にコピーする方法を示します。
+このサンプルでは、アンマネージメモリブロックからマネージ配列にデータをコピーする方法を示します。
 
-```
+```cpp
 // load_unmanaged_resources_into_Byte_array_2.cpp
 // compile with: /clr
 using namespace System;
@@ -75,6 +75,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [C++ Interop (暗黙の PInvoke) の使用](../dotnet/using-cpp-interop-implicit-pinvoke.md)

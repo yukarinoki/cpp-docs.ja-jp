@@ -1,25 +1,25 @@
 ---
-title: '方法: によって使用されるネイティブ クラスをラップします。C#'
+title: '方法: ネイティブ クラスを C# で使用できるようにラップする'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - native code [C++], Visual C# and
 - classes [C++], Visual C# and
 ms.assetid: 988819ae-cc6a-4453-8ff5-be369210d962
-ms.openlocfilehash: e58530577fdcc87f4ca168b6976a848cba29b372
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 06cb922aff4079f29b93874787a8b79ef99d75c3
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387124"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79545889"
 ---
-# <a name="how-to-wrap-native-class-for-use-by-c"></a>方法: によって使用されるネイティブ クラスをラップします。C#
+# <a name="how-to-wrap-native-class-for-use-by-c"></a>方法: ネイティブクラスを C\# で使用するためにラップする
 
-このサンプルでは、ネイティブ C++ クラスをラップして、c#、またはその他の .NET 言語で作成されたコードで使用できるようにする方法を示します。
+このサンプルでは、ネイティブC++クラスをラップして、またはその他の .net C#言語で作成されたコードで使用できるようにする方法を示します。
 
 ## <a name="example"></a>例
 
-```
+```cpp
 // wrap_native_class_for_mgd_consumption.cpp
 // compile with: /clr /LD
 #include <windows.h>
@@ -67,6 +67,6 @@ private:
 };
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [C++ Interop (暗黙の PInvoke) の使用](../dotnet/using-cpp-interop-implicit-pinvoke.md)

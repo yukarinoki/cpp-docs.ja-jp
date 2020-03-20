@@ -1,7 +1,7 @@
 ---
 title: .NET および UWP 用のコンポーネントの拡張機能
 ms.date: 10/12/2018
-ms.topic: reference
+ms.topic: overview
 helpviewer_keywords:
 - what's new [C++], keywords
 - what's new [C++], language features
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - keywords [C++]
 - Managed Extensions for C++, replacement syntax
 ms.assetid: 1e400ee6-3ac9-4910-a608-9d3d5993e423
-ms.openlocfilehash: cf123e54c633539c8e5bf8204344c842a21183ef
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
-ms.translationtype: HT
+ms.openlocfilehash: 1e47a138fece021cf015884222d8cf5c766655fd
+ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "65516717"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "79544761"
 ---
 # <a name="component-extensions-for-net-and-uwp"></a>.NET および UWP 用のコンポーネントの拡張機能
 
@@ -37,24 +37,24 @@ C++/CX 拡張機能は、C++/CLI のサブセットです。 拡張構文はほ�
 
 次の表に、C++ 言語拡張のキーワードの一覧を示します。
 
-|キーワード|状況依存|目的|関連項目|
+|Keyword|状況依存|目的|参照|
 |-------------|-----------------------|-------------|---------------|
 |**ref class**<br /><br /> **ref struct**|いいえ|クラスを宣言します。|[クラスと構造体](classes-and-structs-cpp-component-extensions.md)|
 |**value class**<br /><br /> **value struct**|いいえ|値クラスを宣言します。|[クラスと構造体](classes-and-structs-cpp-component-extensions.md)|
-|**interface class**<br /><br /> **interface struct**|いいえ|インターフェイスを宣言します。|[interface class](interface-class-cpp-component-extensions.md)|
-|**enum class**<br /><br /> **enum struct**|いいえ|列挙型を宣言します。|[enum class](enum-class-cpp-component-extensions.md)|
-|**property**|はい|プロパティを宣言します。|[プロパティ](property-cpp-component-extensions.md)|
+|**interface クラス**<br /><br /> **interface struct**|いいえ|インターフェイスを宣言します。|[interface クラス](interface-class-cpp-component-extensions.md)|
+|**enum クラス**<br /><br /> **enum struct**|いいえ|列挙型を宣言します。|[enum クラス](enum-class-cpp-component-extensions.md)|
+|**property**|はい|プロパティを宣言します。|[property](property-cpp-component-extensions.md)|
 |**delegate**|はい|デリゲートを宣言します。|[delegate (C++/CLI および C++/CX)](delegate-cpp-component-extensions.md)|
 |**event**|はい|イベントを宣言します。|[event](event-cpp-component-extensions.md)|
 
 ## <a name="override-specifiers"></a>オーバーライド指定子
 
-次のキーワードは、派生のオーバーライド動作を修飾するために使用できます。 **new** キーワードは C++ の拡張機能ではありませんが、追加のコンテキストで使用できるキーワードとしてこの一覧に含めてあります。 一部の指定子は、ネイティブのプログラミングに対しても有効です。 詳細については、「[方法 :ネイティブ コンパイルでオーバーライド指定子を宣言する (C++/CLI)](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md)」を参照してください。
+次のキーワードは、派生のオーバーライド動作を修飾するために使用できます。 **new** キーワードは C++ の拡張機能ではありませんが、追加のコンテキストで使用できるキーワードとしてこの一覧に含めてあります。 一部の指定子は、ネイティブのプログラミングに対しても有効です。 詳細については、「[方法: ネイティブコンパイルでオーバーライド指定子C++を宣言する (/cli)](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md)」を参照してください。
 
-|キーワード|状況依存|目的|関連項目|
+|Keyword|状況依存|目的|参照|
 |-------------|-----------------------|-------------|---------------|
 |**abstract**|はい|関数またはクラスが抽象型であることを示します。|[abstract](abstract-cpp-component-extensions.md)|
-|**new**|いいえ|関数が基底クラスのバージョンのオーバーライドでないことを示します。|[new (vtable の新しいスロット)](new-new-slot-in-vtable-cpp-component-extensions.md)|
+|**新規**|いいえ|関数が基底クラスのバージョンのオーバーライドでないことを示します。|[new (vtable の新しいスロット)](new-new-slot-in-vtable-cpp-component-extensions.md)|
 |**override**|はい|メソッドが基底クラスのバージョンのオーバーライドでなければならないことを示します。|[override](override-cpp-component-extensions.md)|
 |**sealed**|はい|クラスを基底クラスとして使用しないことを示します。|[sealed](sealed-cpp-component-extensions.md)|
 
@@ -62,7 +62,7 @@ C++/CX 拡張機能は、C++/CLI のサブセットです。 拡張構文はほ�
 
 ジェネリック型をサポートするために追加されたキーワードを次に示します。 詳細については、「[ジェネリック](generics-cpp-component-extensions.md)」を参照してください。
 
-|キーワード|状況依存|目的|
+|Keyword|状況依存|目的|
 |-------------|-----------------------|-------------|
 |**generic**|いいえ|ジェネリック型を宣言します。|
 |**where**|はい|ジェネリック型パラメーターに適用される制約を指定します。|
@@ -71,21 +71,21 @@ C++/CX 拡張機能は、C++/CLI のサブセットです。 拡張構文はほ�
 
 C++ 拡張に追加されたその他のキーワードを次に示します。
 
-|キーワード|状況依存|目的|関連項目|
+|Keyword|状況依存|目的|参照|
 |-------------|-----------------------|-------------|---------------|
 |**finally**|はい|例外処理の既定の動作を示します。|[例外処理](exception-handling-cpp-component-extensions.md)|
 |**for each、in**|いいえ|コレクションの要素を列挙します。|[for each、in](../dotnet/for-each-in.md)|
 |**gcnew**|いいえ|ガベージ コレクション ヒープに型を割り当てます。 **new** と **delete** の代わりに使用します。|[ref new、gcnew](ref-new-gcnew-cpp-component-extensions.md)|
 |**ref new**|はい|Windows ランタイム型を割り当てます。 **new** と **delete** の代わりに使用します。|[ref new、gcnew](ref-new-gcnew-cpp-component-extensions.md)|
 |**initonly**|はい|宣言または静的コンストラクターでしかメンバーを初期化できないことを示します。|[initonly (C++/CLI)](../dotnet/initonly-cpp-cli.md)|
-|**name**|はい|リテラル変数を作成します。|[name](literal-cpp-component-extensions.md)|
+|**literal**|はい|リテラル変数を作成します。|[literal](literal-cpp-component-extensions.md)|
 |**nullptr**|いいえ|ハンドルまたはポインターでオブジェクトを参照しないことを示します。|[nullptr](nullptr-cpp-component-extensions.md)|
 
 ## <a name="template-constructs"></a>テンプレートの構成要素
 
 次の言語構成要素は、キーワードとしてではなく、テンプレートとして実装されています。 `/ZW` コンパイラ オプションを指定した場合は `lang` 名前空間で定義され、 `/clr` コンパイラ オプションを指定した場合は `cli` 名前空間で定義され、
 
-|キーワード|目的|関連項目|
+|Keyword|目的|参照|
 |-------------|-------------|---------------|
 |**array**|配列を宣言します。|[配列](arrays-cpp-component-extensions.md)|
 |**interior_ptr**|(CLR のみ) 参照型でデータを参照します。|[interior_ptr (C++/CLI)](interior-ptr-cpp-cli.md)|
@@ -97,7 +97,7 @@ C++ 拡張に追加されたその他のキーワードを次に示します。
 
 割り当てられたオブジェクトの有効期間と削除をランタイムで自動的に管理するように指定する型の宣言子を次に示します。
 
-|演算子|目的|関連項目|
+|演算子|目的|参照|
 |--------------|-------------|---------------|
 |`^`|オブジェクトを識別するハンドル (使用できなくなったときに自動的に削除される Windows ランタイム オブジェクトまたは CLR オブジェクトへのポインター) を宣言します。|[オブジェクト演算子 (^) へのハンドル](handle-to-object-operator-hat-cpp-component-extensions.md)|
 |`%`|追跡参照 (使用できなくなったときに自動的に削除される Windows ランタイム オブジェクトまたは CLR オブジェクトへの参照) を宣言します。|[参照演算子の追跡](tracking-reference-operator-cpp-component-extensions.md)|
@@ -111,7 +111,7 @@ C++ 拡張に追加されたその他のキーワードを次に示します。
 |[__identifier (C++/CLI)](identifier-cpp-cli.md)|(Windows ランタイムおよび CLR) キーワードを識別子として使用できるようにします。|
 |[可変個引数リスト (...) (C++/CLI)](variable-argument-lists-dot-dot-dot-cpp-cli.md)|(Windows ランタイムおよび CLR) 関数で受け取ることができる引数の数を可変にします。|
 |[C++ ネイティブ型と等価な .NET Framework ネイティブ型 (C++/CLI)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md)|C++ の整数型の代わりに使用される CLR 型を示します。|
-|[appdomain](../cpp/appdomain.md) **__declspec** 修飾子|**__declspec** 修飾子は、appdomain ごとに静的変数とグローバル変数を必須にする修飾子です。|
+|[appdomain](../cpp/appdomain.md)の **__declspec**修飾子|**__declspec** 修飾子は、appdomain ごとに静的変数とグローバル変数を必須にする修飾子です。|
 |[C スタイル キャストと /clr (C++/CLI)](c-style-casts-with-clr-cpp-cli.md)|C スタイル キャストがどのように解釈されるかについて説明します。|
 |[__clrcall](../cpp/clrcall.md) 呼び出し規則|CLR 準拠の呼び出し規則を示します。|
 |`__cplusplus_cli`|[定義済みマクロ](../preprocessor/predefined-macros.md)|
@@ -122,7 +122,7 @@ C++ 拡張に追加されたその他のキーワードを次に示します。
 |[ボックス化](boxing-cpp-component-extensions.md)|値型がボックス化される条件を示します。|
 |[型の特徴のコンパイラ サポート](compiler-support-for-type-traits-cpp-component-extensions.md)|コンパイル時に型の特性を検出する方法について説明します。|
 |[マネージド、アンマネージド](../preprocessor/managed-unmanaged.md) プラグマ|同じモジュールにマネージド 関数とアンマネージド 関数を共存させる方法を示します。|
-|[process](../cpp/process.md) **__declspec** 修飾子|**__declspec** 修飾子は、プロセスごとに静的変数とグローバル変数を必須にする修飾子です。|
+|[処理](../cpp/process.md) **__declspec**修飾子|**__declspec** 修飾子は、プロセスごとに静的変数とグローバル変数を必須にする修飾子です。|
 |[リフレクションの問題 (C++/CLI)](../dotnet/reflection-cpp-cli.md)|CLR バージョンのランタイム型情報を示します。|
 |[String](string-cpp-component-extensions.md)|文字列リテラルから <xref:System.String> へのコンパイラによる変換について説明します。|
 |[型の転送 (C++/CLI)](type-forwarding-cpp-cli.md)|クライアント コードを再コンパイルしなくても済むように、出荷時のアセンブリの型を別のアセンブリに移動できるようにします。|
@@ -130,7 +130,7 @@ C++ 拡張に追加されたその他のキーワードを次に示します。
 |[#using ディレクティブ](../preprocessor/hash-using-directive-cpp.md)|外部アセンブリをインポートします。|
 |[XML に関するドキュメント](../build/reference/xml-documentation-visual-cpp.md)|[/doc (ドキュメント コメントの処理) (C/C++)](../build/reference/doc-process-documentation-comments-c-cpp.md) を使用した XML ベースのコード ドキュメントについて説明します。|
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [C++/CLI (Visual C++) による .NET プログラミング](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<br/>
 [ネイティブと .NET の相互運用性](../dotnet/native-and-dotnet-interoperability.md)

@@ -1,5 +1,5 @@
 ---
-title: '方法: C++ Interop を使用して埋め込みポインターをマーシャ リングします。'
+title: '方法: C++ Interop を使用して埋め込みポインターをマーシャリングする'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,22 +10,22 @@ helpviewer_keywords:
 - pointers [C++], marshaling
 - data marshaling [C++], embedded pointers
 ms.assetid: 05fb8858-97f2-47aa-86b2-2c0ad713bdb2
-ms.openlocfilehash: c6d622060aaf700b6ea1a3bfe797ab3190eee797
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 972d7a9c09100c35cb0bf527efbd0884c909c46d
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345738"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "79544899"
 ---
-# <a name="how-to-marshal-embedded-pointers-using-c-interop"></a>方法: C++ Interop を使用して埋め込みポインターをマーシャ リングします。
+# <a name="how-to-marshal-embedded-pointers-using-c-interop"></a>方法: C++ Interop を使用して埋め込みポインターをマーシャリングする
 
-次のコード例、[マネージ、アンマネージ](../preprocessor/managed-unmanaged.md)#pragma ディレクティブを実装するマネージ コードと同じファイル内の関数をアンマネージが個別のファイルに定義されている場合、これらの関数が同じ方法で相互運用。 アンマネージ関数のみを含むファイルを使用してコンパイルする必要はありません[/clr (共通言語ランタイムのコンパイル)](../build/reference/clr-common-language-runtime-compilation.md)します。
+次のコード例では、マネージ[、アン](../preprocessor/managed-unmanaged.md)マネージ #pragma ディレクティブを使用して、マネージ関数とアンマネージ関数を同じファイルに実装しますが、これらの関数は、別々のファイルで定義されている場合と同じ方法で相互運用します。 アンマネージ関数のみを含むファイルを[/clr (共通言語ランタイムのコンパイル)](../build/reference/clr-common-language-runtime-compilation.md)でコンパイルする必要はありません。
 
 ## <a name="example"></a>例
 
-次の例では、マネージ関数からポインターを含む構造体を受け取るアンマネージ関数を呼び出す方法を示します。 マネージ関数は、構造体のインスタンスを作成し、新しいキーワードを使用して埋め込みポインターを初期化します (の代わりに、 [ref new、gcnew](../extensions/ref-new-gcnew-cpp-component-extensions.md)キーワード)。 ネイティブ ヒープにメモリを割り当ててこのため、ガベージ コレクションを抑制する配列を固定する必要はありません。 ただし、メモリ リークを回避するために、メモリを明示的に削除する必要があります。
+次の例では、ポインターを含む構造体を受け取るアンマネージ関数をマネージ関数から呼び出す方法を示します。 マネージ関数は、構造体のインスタンスを作成し、new キーワードを使用して埋め込みポインターを初期化します ( [ref new、gcnew](../extensions/ref-new-gcnew-cpp-component-extensions.md)キーワードではありません)。 これにより、ネイティブヒープにメモリが割り当てられるため、ガベージコレクションを抑制するために配列を固定する必要はありません。 ただし、メモリの漏えいを防ぐために、メモリを明示的に削除する必要があります。
 
-```
+```cpp
 // marshal_embedded_pointer.cpp
 // compile with: /clr
 #include <iostream>
@@ -91,6 +91,6 @@ array[8] = 97.754975
 array[9] = 27.370446
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [C++ Interop (暗黙の PInvoke) の使用](../dotnet/using-cpp-interop-implicit-pinvoke.md)

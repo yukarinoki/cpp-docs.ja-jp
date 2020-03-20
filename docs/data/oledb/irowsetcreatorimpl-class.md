@@ -19,16 +19,16 @@ helpviewer_keywords:
 - IRowsetCreatorImpl class
 - SetSite method
 ms.assetid: 92cc950f-7978-4754-8d9a-defa63867d82
-ms.openlocfilehash: 3dc5cb06b3eb7f01667e4e1ec09dd60f9befae77
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8c4253d469c510f5e6eb996ed510ef836844899d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390790"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "79544580"
 ---
 # <a name="irowsetcreatorimpl-class"></a>IRowsetCreatorImpl クラス
 
-同じ機能を実行します。 `IObjectWithSite` OLE DB プロパティができますが、`DBPROPCANSCROLLBACKWARDS DBPROPCANFETCHBACKWARDS`します。
+`IObjectWithSite` と同じ機能を実行しますが、OLE DB プロパティ `DBPROPCANSCROLLBACKWARDS DBPROPCANFETCHBACKWARDS`も有効にします。
 
 ## <a name="syntax"></a>構文
 
@@ -41,9 +41,9 @@ class ATL_NO_VTABLE IRowsetCreatorImpl
 ### <a name="parameters"></a>パラメーター
 
 *T*<br/>
-派生したクラス`IRowsetCreator`します。
+`IRowsetCreator`から派生したクラス。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** atldb.h
 
@@ -53,15 +53,15 @@ class ATL_NO_VTABLE IRowsetCreatorImpl
 
 |||
 |-|-|
-|[SetSite](#setsite)|行セット オブジェクトを含むサイトを設定します。|
+|[SetSite](#setsite)|行セットオブジェクトを含むサイトを設定します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-このクラスから継承[IObjectWithSite](/windows/desktop/api/ocidl/nn-ocidl-iobjectwithsite)と上書き[IObjectWithSite::SetSite](/windows/desktop/api/ocidl/nf-ocidl-iobjectwithsite-setsite)します。 プロバイダー コマンドまたはセッション オブジェクトは、行セットを作成するときに呼び出す`QueryInterface`、行セット オブジェクトを探して`IObjectWithSite`と呼び出し`SetSite`、行セット オブジェクトの引き渡し`IUnkown`サイト インターフェイスとしてインターフェイス。
+このクラスは、 [IObjectWithSite](/windows/win32/api/ocidl/nn-ocidl-iobjectwithsite)から継承し、 [IObjectWithSite:: SetSite](/windows/win32/api/ocidl/nf-ocidl-iobjectwithsite-setsite)をオーバーライドします。 プロバイダーコマンドまたはセッションオブジェクトは、行セットを作成するときに、`IObjectWithSite` を検索する行セットオブジェクトに対して `QueryInterface` を呼び出し、行セットオブジェクトの `IUnkown` インターフェイスをサイトインターフェイスとして渡し `SetSite` を呼び出します。
 
-## <a name="setsite"></a> IRowsetCreatorImpl::SetSite
+## <a name="irowsetcreatorimplsetsite"></a><a name="setsite"></a>IRowsetCreatorImpl:: SetSite
 
-行セット オブジェクトを含むサイトを設定します。 詳細については、次を参照してください。 [IObjectWithSite::SetSite](/windows/desktop/api/ocidl/nf-ocidl-iobjectwithsite-setsite)します。
+行セットオブジェクトを含むサイトを設定します。 詳細については、「 [IObjectWithSite:: SetSite](/windows/win32/api/ocidl/nf-ocidl-iobjectwithsite-setsite)」を参照してください。
 
 ### <a name="syntax"></a>構文
 
@@ -72,17 +72,17 @@ STDMETHOD(SetSite )(IUnknown* pCreator);
 #### <a name="parameters"></a>パラメーター
 
 *pCreator*<br/>
-[in]ポインター、`IUnknown`行セット オブジェクトを管理するサイトのインターフェイス ポインター。
+から行セットオブジェクトを管理しているサイトの `IUnknown` インターフェイスポインターへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
 標準の HRESULT です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-さらに、`IRowsetCreatorImpl::SetSite`により、OLE DB`DBPROPCANSCROLLBACKWARDS DBPROPCANFETCHBACKWARDS`プロパティ。
+さらに、`IRowsetCreatorImpl::SetSite` によって OLE DB `DBPROPCANSCROLLBACKWARDS DBPROPCANFETCHBACKWARDS` プロパティが有効になります。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[OLE DB プロバイダー テンプレート](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[OLE DB プロバイダー テンプレートに関するページ](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [OLE DB プロバイダー テンプレートのアーキテクチャ](../../data/oledb/ole-db-provider-template-architecture.md)

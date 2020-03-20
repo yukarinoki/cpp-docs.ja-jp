@@ -1,21 +1,24 @@
 ---
 title: ref class と ref struct (C++/CLI および C++/CX)
-ms.date: 05/16/2019
+ms.date: 05/30/2019
 ms.topic: reference
 f1_keywords:
 - ref class
+- value class
+- ref struct
+- value struct
 helpviewer_keywords:
 - ref class keyword [C++]
 - value class keyword [C++]
 - value struct keyword [C++]
 - ref struct keyword [C++]
 ms.assetid: 5c360764-b229-49c6-9357-66213afbc372
-ms.openlocfilehash: 9c993b134d6d359d0bc756f5e79d2f9cc137c9cf
-ms.sourcegitcommit: bc1b14f29a02685f97c7ef5c098d16db6eaf369f
-ms.translationtype: HT
+ms.openlocfilehash: dd58f32d031068785cd6020549f9eea4b2182786
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65788782"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "79544664"
 ---
 # <a name="ref-class-and-ref-struct--ccli-and-ccx"></a>ref class と ref struct (C++/CLI および C++/CX)
 
@@ -54,7 +57,7 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 
 詳細については、Windows ランタイムと共通言語ランタイムに関するセクションで、このパラメーターの言語別の説明を参照してください。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 **ref class** または **value class** で宣言されたオブジェクトの既定のメンバーのアクセシビリティは **private** です。 また、**ref struct** または **value struct** で宣言されたオブジェクトの既定のメンバーのアクセシビリティは **public** です。
 
@@ -70,7 +73,7 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 
 - [クラス、構造体、および共用体](../cpp/classes-and-structs-cpp.md)
 
-- [デストラクターとファイナライザー (方法: クラスと構造体の定義と使用 (C++/CLI))](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)
+- [「方法: クラスと構造体を定義および使用する (C++/cli)」のデストラクターとファイナライザー](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)
 
 - [ユーザー定義の演算子 (C++/CLI)](../dotnet/user-defined-operators-cpp-cli.md)
 
@@ -82,9 +85,9 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 
 ## <a name="windows-runtime"></a>Windows ランタイム
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
-[Ref クラスと構造体](../cppcx/ref-classes-and-structs-c-cx.md)と「[値クラスと構造体](https://msdn.microsoft.com/library/windows/apps/hh699861.aspx)」を参照してください。
+[Ref クラスと構造体](../cppcx/ref-classes-and-structs-c-cx.md)と「[値クラスと構造体](../cppcx/value-classes-and-structs-c-cx.md)」を参照してください。
 
 ### <a name="parameters"></a>パラメーター
 
@@ -101,7 +104,7 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 
 ## <a name="common-language-runtime"></a>共通言語ランタイム
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 次の表に、「**すべてのランタイム**」セクションに示されている構文の C++/CLI に固有の違いを示します。
 
@@ -118,6 +121,6 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 
 コンパイラ オプション: `/clr`
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [.NET および UWP でのコンポーネント拡張](component-extensions-for-runtime-platforms.md)

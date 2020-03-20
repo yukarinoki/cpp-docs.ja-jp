@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - boxing, C++
 ms.assetid: b5fd2c98-c578-4f83-8257-6dd663478665
-ms.openlocfilehash: 0b41cacba8c279447e1e944cc3214ca1ba607665
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 6221087b60e76e3a2648366c4efebc4105f0ab58
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516157"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "79544670"
 ---
 # <a name="boxing--ccli-and-ccx"></a>ボックス化 (C++/CLI および C++/CX)
 
@@ -34,7 +34,7 @@ value_variable = (value_type) object_variable;
 
 コンパイラ オプション: `/ZW`
 
-### <a name="examples"></a>使用例
+### <a name="examples"></a>例
 
 次のコード例では、`DateTime` 値をボックス化およびボックス化解除します。 最初に、この例では、現在の日付と時刻を表す `DateTime` 値を取得し、それを `DateTime` 変数に代入します。 次に、`DateTime` を `Object` 変数に代入することでボックス化します。 最後に、ボックス化された値を別の `DateTime` 変数に代入することでボックス化解除します。
 
@@ -72,7 +72,7 @@ void BlankPage::OnNavigatedTo(NavigationEventArgs^ e)
 }
 ```
 
-詳細については、「[ボックス化 (C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh969554.aspx)」を参照してください。
+詳細については、「[ボックス化 (C++/CX)](../cppcx/boxing-c-cx.md)」を参照してください。
 
 ## <a name="common-language-runtime"></a>共通言語ランタイム
 
@@ -80,7 +80,7 @@ void BlankPage::OnNavigatedTo(NavigationEventArgs^ e)
 
 ボックス化とボックス化解除を利用することで、値型をオブジェクトとして扱うことができます。 値型 (構造体型や int などの組み込み型を含む) を、<xref:System.Object> 型との間で相互に変換できます。
 
-詳細については次を参照してください:
+詳細については、次を参照してください。
 
 - [方法: 明示的にボックス化を要求する](../dotnet/how-to-explicitly-request-boxing.md)
 
@@ -94,7 +94,7 @@ void BlankPage::OnNavigatedTo(NavigationEventArgs^ e)
 
 コンパイラ オプション: `/clr`
 
-### <a name="examples"></a>使用例
+### <a name="examples"></a>例
 
 次の例では、暗黙的なボックス化の動作を示します。
 
@@ -188,6 +188,6 @@ in func2(System::ValueType^)
 in func2(System::ValueType^)
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [.NET および UWP でのコンポーネント拡張](component-extensions-for-runtime-platforms.md)

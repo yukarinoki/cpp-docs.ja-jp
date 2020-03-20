@@ -37,7 +37,6 @@ f1_keywords:
 - ATL::CRowset::CRowset
 - ATL::CRowset<TAccessor>::CRowset
 - ATL.CRowset.CRowset
-- CRowset
 - CRowset<TAccessor>.CRowset
 - CRowset::CRowset
 - ATL.CRowset<TAccessor>.CRowset
@@ -84,7 +83,6 @@ f1_keywords:
 - ATL.CRowset.GetDataHere
 - ATL.CRowset<TAccessor>.GetOriginalData
 - CRowset<TAccessor>::GetOriginalData
-- GetOriginalData
 - ATL::CRowset<TAccessor>::GetOriginalData
 - ATL.CRowset.GetOriginalData
 - CRowset::GetOriginalData
@@ -98,7 +96,6 @@ f1_keywords:
 - CRowset<TAccessor>::GetRowStatus
 - ATL.CRowset.GetRowStatus
 - CRowset<TAccessor>.GetRowStatus
-- GetRowStatus
 - ATL.CRowset<TAccessor>.Insert
 - CRowset.Insert
 - CRowset<TAccessor>.Insert
@@ -109,7 +106,6 @@ f1_keywords:
 - ATL::CRowset::Insert
 - CRowset::IsSameRow
 - CRowset.IsSameRow
-- IsSameRow
 - ATL::CRowset::IsSameRow
 - ATL.CRowset.IsSameRow
 - CRowset<TAccessor>::IsSameRow
@@ -129,7 +125,6 @@ f1_keywords:
 - ATL.CRowset.MoveLast
 - ATL::CRowset::MoveLast
 - CRowset<TAccessor>.MoveLast
-- MoveLast
 - CRowset::MoveLast
 - ATL.CRowset<TAccessor>.MoveLast
 - CRowset.MoveLast
@@ -143,7 +138,6 @@ f1_keywords:
 - ATL::CRowset::MoveNext
 - CRowset<TAccessor>.MovePrev
 - CRowset.MovePrev
-- MovePrev
 - CRowset::MovePrev
 - ATL.CRowset.MovePrev
 - ATL::CRowset<TAccessor>::MovePrev
@@ -154,11 +148,9 @@ f1_keywords:
 - ATL::CRowset<TAccessor>::MoveToBookmark
 - ATL.CRowset.MoveToBookmark
 - ATL.CRowset<TAccessor>.MoveToBookmark
-- MoveToBookmark
 - CRowset::MoveToBookmark
 - CRowset.MoveToBookmark
 - CRowset<TAccessor>::MoveToBookmark
-- MoveToRatio
 - CRowset<TAccessor>::MoveToRatio
 - CRowset::MoveToRatio
 - CRowset<TAccessor>.MoveToRatio
@@ -167,7 +159,6 @@ f1_keywords:
 - CRowset.MoveToRatio
 - ATL.CRowset<TAccessor>.MoveToRatio
 - ATL::CRowset<TAccessor>::MoveToRatio
-- ReleaseRows
 - CRowset::ReleaseRows
 - ATL::CRowset<TAccessor>::ReleaseRows
 - CRowset<TAccessor>.ReleaseRows
@@ -177,7 +168,6 @@ f1_keywords:
 - CRowset<TAccessor>::ReleaseRows
 - ATL::CRowset::ReleaseRows
 - ATL.CRowset<TAccessor>.SetData
-- SetData
 - ATL::CRowset::SetData
 - CRowset<TAccessor>.SetData
 - CRowset::SetData
@@ -238,16 +228,16 @@ helpviewer_keywords:
 - Update method
 - UpdateAll method
 ms.assetid: b0228a90-b8dd-47cc-b397-8d4c15c1e7f4
-ms.openlocfilehash: dc4f619fb0dba924693682c927247e809fe2cfe9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 689cd3a1f7496ad75bf83e0b1a2a14f7bd1b1f6f
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62361969"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79545577"
 ---
 # <a name="crowset-class"></a>CRowset クラス
 
-OLE DB 行セット オブジェクトと関連するいくつかをカプセル化インターフェイスし、行セットのデータの操作メソッドを提供します。
+OLE DB 行セットオブジェクトといくつかの関連インターフェイスをカプセル化し、行セットデータの操作メソッドを提供します。
 
 ## <a name="syntax"></a>構文
 
@@ -259,9 +249,9 @@ class CRowset
 ### <a name="parameters"></a>パラメーター
 
 *TAccessor*<br/>
-アクセサー クラス。 既定値は `CAccessorBase` です。
+アクセサークラス。 既定では、 `CAccessorBase`です。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** atldbcli.h
 
@@ -272,39 +262,39 @@ class CRowset
 |||
 |-|-|
 |[AddRefRows](#addrefrows)|現在の行に関連付けられている参照カウントをインクリメントします。|
-|[閉じる](#close)|行と、現在のリリース`IRowset`インターフェイス。|
-|[Compare](#compare)|使用してをブックマーク 2 つ比較[IRowsetLocate::Compare](/previous-versions/windows/desktop/ms709539(v=vs.85))します。|
-|[CRowset](#crowset)|新たに作成`CRowset`オブジェクトし、(必要に応じて) に関連付けます、`IRowset`インターフェイスのパラメーターとして指定します。|
-|[削除](#delete)|使用して、行セットから行を削除[IRowsetChange:DeleteRows](/previous-versions/windows/desktop/ms724362(v=vs.85))します。|
-|[FindNextRow](#findnextrow)|指定されたブックマーク後に、次の一致する行を検索します。|
+|[[閉じる]](#close)|行と現在の `IRowset` インターフェイスを解放します。|
+|[比較](#compare)|[IRowsetLocate:: Compare](/previous-versions/windows/desktop/ms709539(v=vs.85))を使用して2つのブックマークを比較します。|
+|[CRowset](#crowset)|新しい `CRowset` オブジェクトを作成し、必要に応じて、パラメーターとして指定された `IRowset` インターフェイスに関連付けます。|
+|[削除](#delete)|[IRowsetChange: DeleteRows](/previous-versions/windows/desktop/ms724362(v=vs.85))を使用して行セットから行を削除します。|
+|[FindNextRow](#findnextrow)|指定されたブックマークの後に一致する次の行を検索します。|
 |[GetApproximatePosition](#getapproximateposition)|ブックマークに対応する行のおおよその位置を返します。|
-|[GetData](#getdata)|行の行セットのコピーからデータを取得します。|
-|[GetDataHere](#getdatahere)|指定したバッファーからデータを取得します。|
-|[GetOriginalData](#getoriginaldata)|最近からフェッチまたは保留中の変更を無視して、データ ソースに送信されるデータを取得します。|
+|[GetData](#getdata)|行セットの行のコピーからデータを取得します。|
+|[GetDataHere](#getdatahere)|指定されたバッファーからデータを取得します。|
+|[GetOriginalData](#getoriginaldata)|データソースから最後にフェッチまたは転送されたデータを取得します。保留中の変更は無視されます。|
 |[GetRowStatus](#getrowstatus)|すべての行の状態を返します。|
-|[[挿入]](#insert)|作成を使用して新しい行を挿入します[IRowsetChange:InsertRow](/previous-versions/windows/desktop/ms716921(v=vs.85))します。|
-|[IsSameRow](#issamerow)|現在の行に指定された行を比較します。|
-|[MoveFirst](#movefirst)|次のフェッチ位置を初期位置に移動します。|
+|[挿入](#insert)|[IRowsetChange: InsertRow](/previous-versions/windows/desktop/ms716921(v=vs.85))を使用して新しい行を作成して挿入します。|
+|[IsSameRow](#issamerow)|指定した行と現在の行を比較します。|
+|[MoveFirst](#movefirst)|次のフェッチ位置を初期位置に再配置します。|
 |[MoveLast](#movelast)|最後のレコードに移動します。|
-|[MoveNext](#movenext)|次のシーケンスの行または指定された数の次の行を超える位置からのデータをフェッチします。|
+|[MoveNext](#movenext)|次の行を超えて、次の行から指定された位置数だけデータをフェッチします。|
 |[MovePrev](#moveprev)|前のレコードに移動します。|
-|[MoveToBookmark](#movetobookmark)|ブックマークからブックマークで行または指定したオフセットの行をフェッチします。|
-|[MoveToRatio](#movetoratio)|行セット内の小数部の位置から始まる行がフェッチされます。|
-|[ReleaseRows](#releaserows)|呼び出し[::releaserows](/previous-versions/windows/desktop/ms719771(v=vs.85))を現在の行ハンドルを解放します。|
-|[SetData](#setdata)|使用して行の 1 つまたは複数の列のデータ値を設定[IRowsetChange:SetData](/previous-versions/windows/desktop/ms721232(v=vs.85))します。|
-|[元に戻す](#undo)|最後のフェッチを行に加えられた変更を元に戻しますか[Update](../../data/oledb/crowset-update.md)します。|
-|[更新](#update)|保留中の最後のフェッチまたは更新プログラム以降、現在の行に加えられた変更を送信します。|
-|[UpdateAll](#updateall)|保留中の最後のフェッチまたは更新プログラム以降のすべての行に加えられた変更を送信します。|
+|[MoveToBookmark](#movetobookmark)|ブックマークによってマークされた行、またはそのブックマークの指定したオフセット位置にある行をフェッチします。|
+|[MoveToRatio](#movetoratio)|行セット内の小数位置から始まる行をフェッチします。|
+|[ReleaseRows](#releaserows)|[IRowset:: ReleaseRows](/previous-versions/windows/desktop/ms719771(v=vs.85))を呼び出して、現在の行ハンドルを解放します。|
+|[SetData](#setdata)|[IRowsetChange: SetData](/previous-versions/windows/desktop/ms721232(v=vs.85))を使用して、行の1つ以上の列にデータ値を設定します。|
+|[元に戻す](#undo)|前回のフェッチまたは[更新](../../data/oledb/crowset-update.md)以降に行に加えられたすべての変更を元に戻します。|
+|[アップデート](#update)|前回のフェッチまたは更新以降に現在の行に加えられた保留中の変更を転送します。|
+|[UpdateAll](#updateall)|前回のフェッチまたは更新以降に行われたすべての行に対する保留中の変更を転送します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-OLE DB では、行セットは、プログラムにより設定し、データを取得オブジェクトです。
+OLE DB では、行セットは、プログラムがデータを設定および取得するために使用するオブジェクトです。
 
-このクラスがインスタンス化されますが、テンプレートのパラメーターとしてではなく渡されたものではありません`CTable`または`CCommand`(`CRowset`は既定です)。
+このクラスはインスタンス化するものではなく、`CTable` または `CCommand` にテンプレートパラメーターとして渡されます (既定値は`CRowset` です)。
 
-## <a name="addrefrows"></a> CRowset::AddRefRows
+## <a name="crowsetaddrefrows"></a><a name="addrefrows"></a>CRowset:: AddRefRows
 
-呼び出し[IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619(v=vs.85)) (1 つ) によって参照カウントをインクリメントするは、現在の行ハンドルに関連付けられています。
+[IRowset:: AddRefRows](/previous-versions/windows/desktop/ms719619(v=vs.85))を呼び出して、現在の行ハンドルに関連付けられている参照カウントを1ずつインクリメントします。
 
 ### <a name="syntax"></a>構文
 
@@ -316,13 +306,13 @@ HRESULT AddRefRows() throw();
 
 標準の HRESULT です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-このメソッドは、現在の行ハンドルの参照カウントをインクリメントします。 呼び出す[ReleaseRows](../../data/oledb/crowset-releaserows.md)カウントをデクリメントします。 Move メソッドによって返される行では、1 つの参照カウントがあります。
+このメソッドは、現在の行ハンドルの参照カウントをインクリメントします。 [ReleaseRows](../../data/oledb/crowset-releaserows.md)を呼び出して、カウントをデクリメントします。 Move メソッドによって返される行には、参照カウントが1つあります。
 
-## <a name="close"></a> Crowset::close
+## <a name="crowsetclose"></a><a name="close"></a>CRowset:: Close
 
-行と、現在のリリース[IRowset](/previous-versions/windows/desktop/ms720986(v=vs.85))インターフェイス。
+行と現在の[IRowset](/previous-versions/windows/desktop/ms720986(v=vs.85))インターフェイスを解放します。
 
 ### <a name="syntax"></a>構文
 
@@ -330,13 +320,13 @@ HRESULT AddRefRows() throw();
 void Close() throw();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-このメソッドは、現在、行セット内のすべての行を解放します。
+このメソッドは、行セット内の現在のすべての行を解放します。
 
-## <a name="compare"></a> Crowset::compare
+## <a name="crowsetcompare"></a><a name="compare"></a>CRowset:: Compare
 
-使用してをブックマーク 2 つ比較[IRowsetLocate::Compare](/previous-versions/windows/desktop/ms709539(v=vs.85))します。
+[IRowsetLocate:: Compare](/previous-versions/windows/desktop/ms709539(v=vs.85))を使用して2つのブックマークを比較します。
 
 ### <a name="syntax"></a>構文
 
@@ -349,27 +339,27 @@ HRESULT Compare(const CBookmarkBase& bookmark1,
 #### <a name="parameters"></a>パラメーター
 
 *Bookmark1*<br/>
-[in]比較する最初のブックマーク。
+から比較する最初のブックマーク。
 
 *Bookmark2*<br/>
-[in]比較する 2 番目のブックマーク。
+から比較する2番目のブックマーク。
 
 *pComparison*<br/>
-[out]比較の結果へのポインター。
+入出力比較の結果へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
 標準の HRESULT です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-このメソッドでは省略可能なインターフェイス`IRowsetLocate`、する可能性がありますでサポートされていないすべてのプロバイダー場合は、この場合、E_NOINTERFACE を返します。 設定する必要がありますも`DBPROP_IRowsetLocate`を呼び出す前に VARIANT_TRUE に`Open`テーブルまたは行セットを含むコマンド。
+このメソッドには、省略可能なインターフェイス `IRowsetLocate`が必要ですが、すべてのプロバイダーでサポートされていない可能性があります。この場合、メソッドは E_NOINTERFACE を返します。 また、行セットを含むテーブルまたはコマンドに対して `Open` を呼び出す前に、`DBPROP_IRowsetLocate` を VARIANT_TRUE に設定する必要があります。
 
-コンシューマーでのブックマークの使用方法の詳細については、次を参照してください。[ブックマークを使って](../../data/oledb/using-bookmarks.md)します。
+コンシューマーでのブックマークの使用の詳細については、「[ブックマークの使用](../../data/oledb/using-bookmarks.md)」を参照してください。
 
-## <a name="crowset"></a> Crowset::crowset
+## <a name="crowsetcrowset"></a><a name="crowset"></a>CRowset:: CRowset
 
-新たに作成`CRowset`オブジェクトし、(必要に応じて) に関連付けます、 [IRowset](/previous-versions/windows/desktop/ms720986(v=vs.85))インターフェイスのパラメーターとして指定します。
+新しい `CRowset` オブジェクトを作成し、(必要に応じて) パラメーターとして指定された[IRowset](/previous-versions/windows/desktop/ms720986(v=vs.85))インターフェイスに関連付けます。
 
 ### <a name="syntax"></a>構文
 
@@ -382,11 +372,11 @@ CRowset(IRowset* pRowset);
 #### <a name="parameters"></a>パラメーター
 
 *pRowset*<br/>
-[in]ポインター、`IRowset`このクラスに関連するインターフェイス。
+からこのクラスに関連付けられている `IRowset` インターフェイスへのポインター。
 
-## <a name="delete"></a> Crowset::delete
+## <a name="crowsetdelete"></a><a name="delete"></a>CRowset::D e)
 
-呼び出し[irowsetchange::deleterows](/previous-versions/windows/desktop/ms724362(v=vs.85))を行セットから現在の行を削除します。
+[IRowsetChange::D eleterows](/previous-versions/windows/desktop/ms724362(v=vs.85))を呼び出して、行セットから現在の行を削除します。
 
 ### <a name="syntax"></a>構文
 
@@ -398,9 +388,9 @@ HRESULT Delete() const throw();
 
 標準の HRESULT です。
 
-## <a name="findnextrow"></a> CRowset::FindNextRow
+## <a name="crowsetfindnextrow"></a><a name="findnextrow"></a>CRowset:: FindNextRow
 
-指定されたブックマーク後に、次の一致する行を検索します。
+指定されたブックマークの後に一致する次の行を検索します。
 
 ### <a name="syntax"></a>構文
 
@@ -417,41 +407,41 @@ HRESULT FindNextRow(DBCOMPAREOP op,
 
 #### <a name="parameters"></a>パラメーター
 
-*op*<br/>
-[in]行の値を比較する際に使用する操作。 値については、次を参照してください。 [:findnextrow](/previous-versions/windows/desktop/ms723091(v=vs.85))します。
+*ファンド*<br/>
+から行の値を比較するときに使用する操作。 値については、「 [IRowsetFind:: FindNextRow](/previous-versions/windows/desktop/ms723091(v=vs.85))」を参照してください。
 
 *pData*<br/>
-[in]一致する値へのポインター。
+から照合する値へのポインター。
 
 *wType*<br/>
-[in]バッファーの値の一部のデータ型を示します。 型インジケーターの詳細については、次を参照してください。[データ型](/previous-versions/windows/desktop/ms723969(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*Windows SDK に含まれています。
+からバッファーの値部分のデータ型を示します。 型インジケーターの詳細については、Windows SDK の*OLE DB プログラマーリファレンス*の「[データ型](/previous-versions/windows/desktop/ms723969(v=vs.85))」を参照してください。
 
 *nLength*<br/>
-[in]データの値として割り当てられているコンシューマー データ構造体の長さ、(バイト単位)。 詳細については、説明を参照してください。`cbMaxLen`で[DBBINDING 構造体](/previous-versions/windows/desktop/ms716845(v=vs.85))で、 *OLE DB プログラマーズ リファレンス。*
+からデータ値に割り当てられたコンシューマーデータ構造体のバイト単位の長さ。 詳細については、 *OLE DB プログラマーリファレンス*の[DBBINDING 構造体](/previous-versions/windows/desktop/ms716845(v=vs.85))に含まれる `cbMaxLen` の説明を参照してください。
 
 *bPrecision*<br/>
-[in]データを取得するときに使用される最大有効桁数。 使用されている場合にのみ*wType* DBTYPE_NUMERIC です。 詳細については、次を参照してください。 [DBTYPE_NUMERIC または DBTYPE_DECIMAL を伴う変換](/previous-versions/windows/desktop/ms719714(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
+からデータを取得するときに使用される最大有効桁数。 *Wtype*が DBTYPE_NUMERIC 場合にのみ使用されます。 詳細については、 *OLE DB プログラマーのリファレンス*で[DBTYPE_NUMERIC または DBTYPE_DECIMAL に関連する変換](/previous-versions/windows/desktop/ms719714(v=vs.85))に関する説明を参照してください。
 
 *bScale*<br/>
-[in]データの取得時に使用されるスケール。 使用されている場合にのみ*wType* DBTYPE_NUMERIC DBTYPE_DECIMAL か。 詳細については、次を参照してください。 [DBTYPE_NUMERIC または DBTYPE_DECIMAL を伴う変換](/previous-versions/windows/desktop/ms719714(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
+からデータを取得するときに使用するスケール。 *Wtype*が DBTYPE_NUMERIC または DBTYPE_DECIMAL の場合にのみ使用されます。 詳細については、 *OLE DB プログラマーのリファレンス*で[DBTYPE_NUMERIC または DBTYPE_DECIMAL に関連する変換](/previous-versions/windows/desktop/ms719714(v=vs.85))に関する説明を参照してください。
 
 *bSkipCurrent*<br/>
-[in]検索を開始する位置のブックマークからの行の数。
+から検索を開始するブックマークの行の数。
 
 *pBookmark*<br/>
-[in]検索を開始する位置をブックマークします。
+から検索を開始する位置のブックマーク。
 
 ### <a name="return-value"></a>戻り値
 
 標準の HRESULT です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-このメソッドでは省略可能なインターフェイス`IRowsetFind`、する可能性がありますでサポートされていないすべてのプロバイダー場合は、この場合、E_NOINTERFACE を返します。 設定する必要がありますも`DBPROP_IRowsetFind`を呼び出す前に VARIANT_TRUE に`Open`テーブルまたは行セットを含むコマンド。
+このメソッドには、省略可能なインターフェイス `IRowsetFind`が必要ですが、すべてのプロバイダーでサポートされていない可能性があります。この場合、メソッドは E_NOINTERFACE を返します。 また、行セットを含むテーブルまたはコマンドに対して `Open` を呼び出す前に、`DBPROP_IRowsetFind` を VARIANT_TRUE に設定する必要があります。
 
-コンシューマーでのブックマークの使用方法の詳細については、次を参照してください。[ブックマークを使って](../../data/oledb/using-bookmarks.md)します。
+コンシューマーでのブックマークの使用の詳細については、「[ブックマークの使用](../../data/oledb/using-bookmarks.md)」を参照してください。
 
-## <a name="getapproximateposition"></a> Crowset::getapproximateposition
+## <a name="crowsetgetapproximateposition"></a><a name="getapproximateposition"></a>CRowset:: GetApproximatePosition
 
 ブックマークに対応する行のおおよその位置を返します。
 
@@ -466,27 +456,27 @@ HRESULT GetApproximatePosition(const CBookmarkBase* pBookmark,
 #### <a name="parameters"></a>パラメーター
 
 *pBookmark*<br/>
-[in]位置を検索する行を識別するブックマークへのポインター。 行の数が必要なだけの場合は NULL です。
+から位置が検索される行を識別するブックマークへのポインター。 行数のみが必要な場合は NULL です。
 
 *pPosition*<br/>
-[out]場所へのポインター、`GetApproximatePosition`行の位置を返します。 位置が必要ない場合は NULL です。
+入出力`GetApproximatePosition` が行の位置を返す場所へのポインター。 位置が必要でない場合は NULL。
 
 *pcRows*<br/>
-[out]場所へのポインター、`GetApproximatePosition`行の合計数を返します。 行の数が必要ない場合は NULL です。
+入出力`GetApproximatePosition` が行の合計数を返す場所へのポインター。 行数が必要でない場合は NULL です。
 
 ### <a name="return-value"></a>戻り値
 
 標準の HRESULT です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-このメソッドでは省略可能なインターフェイス`IRowsetScroll`、する可能性がありますでサポートされていないすべてのプロバイダー場合は、この場合、E_NOINTERFACE を返します。 設定する必要がありますも`DBPROP_IRowsetScroll`を呼び出す前に VARIANT_TRUE に`Open`テーブルまたは行セットを含むコマンド。
+このメソッドには、省略可能なインターフェイス `IRowsetScroll`が必要ですが、すべてのプロバイダーでサポートされていない可能性があります。この場合、メソッドは E_NOINTERFACE を返します。 また、行セットを含むテーブルまたはコマンドに対して `Open` を呼び出す前に、`DBPROP_IRowsetScroll` を VARIANT_TRUE に設定する必要があります。
 
-コンシューマーでのブックマークの使用方法の詳細については、次を参照してください。[ブックマークを使って](../../data/oledb/using-bookmarks.md)します。
+コンシューマーでのブックマークの使用の詳細については、「[ブックマークの使用](../../data/oledb/using-bookmarks.md)」を参照してください。
 
-## <a name="getdata"></a> Crowset::getdata
+## <a name="crowsetgetdata"></a><a name="getdata"></a>CRowset:: GetData
 
-行の行セットのコピーからデータを取得します。
+行セットの行のコピーからデータを取得します。
 
 ### <a name="syntax"></a>構文
 
@@ -499,19 +489,19 @@ HRESULT GetData(int nAccessor) throw();
 #### <a name="parameters"></a>パラメーター
 
 *nAccessor*<br/>
-[in]データにアクセスするのに使用するアクセサーの (ゼロ オフセット) のインデックス番号。
+からデータへのアクセスに使用するアクセサーのインデックス番号 (0 オフセット)。
 
 ### <a name="return-value"></a>戻り値
 
 標準の HRESULT です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-自動アクセサーではないアクセサーを指定するかどうかは[BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md)、このメソッドを使用して明示的にアクセサーの数を渡すことで、データを取得します。
+[BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md)の autoaccessor ではないアクセサーを指定する場合は、このメソッドを使用して、アクセサー番号を渡してデータを明示的に取得します。
 
-## <a name="getdatahere"></a> Crowset::getdatahere
+## <a name="crowsetgetdatahere"></a><a name="getdatahere"></a>CRowset:: GetDataHere
 
-現在の行からデータを取得し、指定されたバッファーにします。
+現在の行からデータを取得し、指定したバッファーに格納します。
 
 ### <a name="syntax"></a>構文
 
@@ -523,22 +513,22 @@ HRESULT GetDataHere(int nAccessor,
 #### <a name="parameters"></a>パラメーター
 
 *nAccessor*<br/>
-[in]データにアクセスするのに使用するアクセサーのインデックス番号。
+からデータへのアクセスに使用するアクセサーのインデックス番号。
 
 *pBuffer*<br/>
-[out]現在のレコードのデータを配置するバッファー。
+入出力現在のレコードのデータを格納するバッファー。
 
 ### <a name="return-value"></a>戻り値
 
 標準の HRESULT です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-この関数を使用する方法の例は、次を参照してください。、 [MultiRead サンプル](../../overview/visual-cpp-samples.md)します。
+この関数の使用方法の例については、 [MultiRead サンプル](../../overview/visual-cpp-samples.md)を参照してください。
 
-## <a name="getoriginaldata"></a> CRowset::GetOriginalData
+## <a name="crowsetgetoriginaldata"></a><a name="getoriginaldata"></a>CRowset:: GetOriginalData
 
-呼び出し`IRowsetUpdate::GetOriginalData`最近からフェッチまたはデータ ソースに送信されるデータを取得します。
+`IRowsetUpdate::GetOriginalData` を呼び出して、データソースから最後にフェッチまたは転送されたデータを取得します。
 
 ### <a name="syntax"></a>構文
 
@@ -550,13 +540,13 @@ HRESULT GetOriginalData() throw();
 
 標準の HRESULT です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-このメソッドから最も最近フェッチまたはデータ ソースに送信されるデータを取得します保留中の変更に基づく値は取得しません。
+このメソッドは、データソースから最後にフェッチまたは転送されたデータを取得します。保留中の変更に基づいて値が取得されることはありません。
 
-このメソッドでは省略可能なインターフェイス`IRowsetUpdate`、する可能性がありますでサポートされていないすべてのプロバイダー場合は、この場合、E_NOINTERFACE を返します。 設定する必要がありますも`DBPROP_IRowsetUpdate`を呼び出す前に VARIANT_TRUE に`Open`テーブルまたは行セットを含むコマンド。
+このメソッドには、省略可能なインターフェイス `IRowsetUpdate`が必要ですが、すべてのプロバイダーでサポートされていない可能性があります。この場合、メソッドは E_NOINTERFACE を返します。 また、行セットを含むテーブルまたはコマンドに対して `Open` を呼び出す前に、`DBPROP_IRowsetUpdate` を VARIANT_TRUE に設定する必要があります。
 
-## <a name="getrowstatus"></a> Crowset::getrowstatus
+## <a name="crowsetgetrowstatus"></a><a name="getrowstatus"></a>CRowset:: GetRowStatus
 
 すべての行の状態を返します。
 
@@ -569,19 +559,19 @@ HRESULT GetRowStatus(DBPENDINGSTATUS* pStatus) const throw();
 #### <a name="parameters"></a>パラメーター
 
 *pStatus*<br/>
-[out]場所へのポインターを`GetRowStatus`ステータス値を返します。 OLE DB プログラマーズ リファレンス DBPENDINGSTATUS を参照してください。
+入出力`GetRowStatus` がステータス値を返す場所へのポインター。 OLE DB プログラマーリファレンスの DBPENDINGSTATUS を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
 標準の HRESULT です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-このメソッドでは省略可能なインターフェイス`IRowsetUpdate`、する可能性がありますでサポートされていないすべてのプロバイダー場合は、この場合、E_NOINTERFACE を返します。 設定する必要がありますも`DBPROP_IRowsetUpdate`を呼び出す前に VARIANT_TRUE に`Open`テーブルまたは行セットを含むコマンド。
+このメソッドには、省略可能なインターフェイス `IRowsetUpdate`が必要ですが、すべてのプロバイダーでサポートされていない可能性があります。この場合、メソッドは E_NOINTERFACE を返します。 また、行セットを含むテーブルまたはコマンドに対して `Open` を呼び出す前に、`DBPROP_IRowsetUpdate` を VARIANT_TRUE に設定する必要があります。
 
-## <a name="insert"></a> Crowset::insert
+## <a name="crowsetinsert"></a><a name="insert"></a>CRowset:: Insert
 
-作成し、データ アクセサーを使用して新しい行を初期化します。
+アクセサーのデータを使用して新しい行を作成し、初期化します。
 
 ### <a name="syntax"></a>構文
 
@@ -593,32 +583,32 @@ HRESULT Insert(int nAccessor = 0,
 #### <a name="parameters"></a>パラメーター
 
 *nAccessor*<br/>
-[in]データを挿入するために使用するアクセサーの数。
+からデータの挿入に使用するアクセサーの番号。
 
 *bGetHRow*<br/>
-[in]挿入された行のハンドルを取得するかどうかを示します。
+から挿入された行のハンドルを取得するかどうかを示します。
 
 ### <a name="return-value"></a>戻り値
 
 標準の HRESULT です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-このメソッドでは省略可能なインターフェイス`IRowsetChange`、する可能性がありますでサポートされていないすべてのプロバイダー場合は、この場合、E_NOINTERFACE を返します。 設定する必要がありますも`DBPROP_IRowsetChange`を呼び出す前に VARIANT_TRUE に`Open`テーブルまたは行セットを含むコマンド。
+このメソッドには、省略可能なインターフェイス `IRowsetChange`が必要ですが、すべてのプロバイダーでサポートされていない可能性があります。この場合、メソッドは E_NOINTERFACE を返します。 また、行セットを含むテーブルまたはコマンドに対して `Open` を呼び出す前に、`DBPROP_IRowsetChange` を VARIANT_TRUE に設定する必要があります。
 
-1 つまたは複数の列が書き込み可能な場合、挿入が失敗することがあります。 これを修正するにはカーソル マップを変更します。
+1つ以上の列が書き込み可能でない場合、Insert は失敗する可能性があります。 これを修正するにはカーソル マップを変更します。
 
 ### <a name="example"></a>例
 
-次の例では、データ ソースにアクセスできる行セットを使用し、その行セットのテーブルを使用して文字列を挿入する方法を示します。
+次の例では、行セットを使用してデータソースにアクセスし、その行セット内のテーブルを使用して文字列を挿入する方法を示します。
 
-最初に、プロジェクトに新しい ATL オブジェクトを挿入することで、テーブル クラスを作成します。 たとえば、ワークスペース ウィンドウでプロジェクトを右クリックし、選択**ATL オブジェクトの新しい**します。 **データ アクセス**カテゴリで、**コンシューマー**します。 型のコンシューマー オブジェクトを作成する**テーブル**します。 (選択**テーブル**テーブルから直接、行セットを作成します選択**コマンド**SQL コマンドからの行セットを作成します。)。そのデータ ソースへのアクセスに使用するテーブルを指定する、データ ソースを選択します。 コンシューマーのオブジェクトを呼び出す場合**CCustomerTable**、挿入コードを次のように、実装は。
+まず、新しい ATL オブジェクトをプロジェクトに挿入して、テーブルクラスを作成します。 たとえば、ワークスペースペインでプロジェクトを右クリックし、 **[新しい ATL オブジェクト]** を選択します。 **[データアクセス]** カテゴリで、 **[コンシューマー]** を選択します。 **Table**型のコンシューマーオブジェクトを作成します。 ( **[テーブル]** を選択すると、テーブルから直接行セットが作成されます。 [**コマンド]** を選択すると、SQL コマンドを使用して行セットが作成されます)。データソースを選択し、そのデータソースへのアクセスに使用するテーブルを指定します。 コンシューマーオブジェクトの**cb2c テーブル**を呼び出す場合は、次のように挿入コードを実装します。
 
 [!code-cpp[NVC_OLEDB_Consumer#10](../../data/oledb/codesnippet/cpp/crowset-insert_1.cpp)]
 
-## <a name="issamerow"></a> CRowset::IsSameRow
+## <a name="crowsetissamerow"></a><a name="issamerow"></a>CRowset:: IsSameRow
 
-現在の行に指定された行を比較します。
+指定した行と現在の行を比較します。
 
 ### <a name="syntax"></a>構文
 
@@ -629,15 +619,15 @@ HRESULT IsSameRow(HROW hRow) const throw();
 #### <a name="parameters"></a>パラメーター
 
 *hRow*<br/>
-[in]現在の行と比較する行へのハンドル。
+から現在の行と比較する行を処理するハンドル。
 
 ### <a name="return-value"></a>戻り値
 
-標準の HRESULT です。 S_OK では、行は、同じことを示します。 その他の値では、次を参照してください。 [IRowsetIndentity::IsSameRow](/previous-versions/windows/desktop/ms719629(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*Windows SDK にします。
+標準の HRESULT です。 S_OK は、行が同じであることを示します。 その他の値については、Windows SDK の*OLE DB プログラマーリファレンス*の「 [IRowsetIndentity:: IsSameRow](/previous-versions/windows/desktop/ms719629(v=vs.85)) 」を参照してください。
 
-## <a name="movefirst"></a> CRowset::MoveFirst
+## <a name="crowsetmovefirst"></a><a name="movefirst"></a>CRowset:: MoveFirst
 
-最初の位置にカーソルを移動し、最初の行を取得します。
+カーソルを初期位置に移動し、最初の行を取得します。
 
 ### <a name="syntax"></a>構文
 
@@ -649,13 +639,13 @@ HRESULT MoveFirst() throw();
 
 標準の HRESULT です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-呼び出し[irowset::restartposition](/previous-versions/windows/desktop/ms712877(v=vs.85))位置を初期位置 (行セットの作成時に、次のフェッチ位置が位置) に次のフェッチ位置を変更して、最初の行を取得します。
+[IRowset:: RestartPosition](/previous-versions/windows/desktop/ms712877(v=vs.85))を呼び出して、次のフェッチ位置を初期位置 (行セットが作成されたときの次のフェッチ位置) に再配置し、初期行を取得します。
 
-## <a name="movelast"></a> CRowset::MoveLast
+## <a name="crowsetmovelast"></a><a name="movelast"></a>CRowset:: MoveLast
 
-最後の行にカーソルを移動します。
+カーソルを最後の行に移動します。
 
 ### <a name="syntax"></a>構文
 
@@ -667,15 +657,15 @@ HRESULT MoveLast() throw();
 
 標準の HRESULT です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-呼び出し[irowset::restartposition](/previous-versions/windows/desktop/ms712877(v=vs.85))次のフェッチ位置を最後の位置に配置し、最後の行を取得します。
+[IRowset:: RestartPosition](/previous-versions/windows/desktop/ms712877(v=vs.85))を呼び出して、次のフェッチ位置を最後の位置に移動し、最後の行を取得します。
 
-このメソッドは、設定する必要があります`DBPROP_CANSCROLLBACKWARDS`を呼び出す前に VARIANT_TRUE に`Open`テーブルまたは行セットを含むコマンド。 (パフォーマンスの向上のため、設定することがありますも`DBPROP_QUICKRESTART`を VARIANT_TRUE に設定します)。
+このメソッドでは、行セットを含むテーブルまたはコマンドに対して `Open` を呼び出す前に、`DBPROP_CANSCROLLBACKWARDS` を VARIANT_TRUE に設定する必要があります。 (パフォーマンスを向上させるために、`DBPROP_QUICKRESTART` を VARIANT_TRUE に設定することもできます)。
 
-## <a name="movenext"></a> CRowset::MoveNext
+## <a name="crowsetmovenext"></a><a name="movenext"></a>CRowset:: MoveNext
 
-次のレコードにカーソルを移動します。
+カーソルを次のレコードに移動します。
 
 ### <a name="syntax"></a>構文
 
@@ -688,31 +678,31 @@ HRESULT MoveNext(LONG lSkip,
 
 #### <a name="parameters"></a>パラメーター
 
-*した*<br/>
-[in]フェッチする前にスキップする行の数。
+*lSkip*<br/>
+からフェッチする前にスキップする行の数。
 
 *bForward*<br/>
-[in]渡す**true**前方に次のレコードに移動する**false**後方移動します。
+から次のレコードに進むには**true**を渡し、後方に移動するには**false**を渡します。
 
 ### <a name="return-value"></a>戻り値
 
-標準の HRESULT です。 行セットの末尾に達している場合は、DB_S_ENDOFROWSET を返します。
+標準の HRESULT です。 行セットの末尾に到達すると、DB_S_ENDOFROWSET を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-次の連続した行をフェッチ、`CRowset`オブジェクトは、前の位置を記憶します。 必要に応じて、前方にスキップすることができます*した*行または旧バージョンと移動します。
+前の位置を記憶して、`CRowset` オブジェクトから次の行をフェッチします。 必要に応じて、 *lSkip*行をスキップするか、後方に移動するかを選択できます。
 
-このメソッドは、呼び出す前に、次のプロパティを設定する必要があります`Open`テーブルまたは行セットを格納しているコマンド。
+このメソッドでは、行セットを含むテーブルまたはコマンドに対して `Open` を呼び出す前に、次のプロパティを設定する必要があります。
 
-- `DBPROP_CANSCROLLBACKWARDS` 場合は VARIANT_TRUE をする必要があります*した*< 0
+- *lSkip* < 0 の場合は、`DBPROP_CANSCROLLBACKWARDS` を VARIANT_TRUE する必要があります。
 
-- `DBPROP_CANFETCHBACKWARDS` 場合は VARIANT_TRUE をする必要があります*bForward* = false
+- *Bforward* = false の場合は `DBPROP_CANFETCHBACKWARDS` を VARIANT_TRUE する必要があります
 
-それ以外の場合 (場合*した*> = 0 と*bForward* = true)、その他のプロパティを設定する必要はありません。
+それ以外 ( *lSkip* > = 0 および*bforward* = true) の場合は、追加のプロパティを設定する必要はありません。
 
-## <a name="moveprev"></a> CRowset::MovePrev
+## <a name="crowsetmoveprev"></a><a name="moveprev"></a>CRowset:: MovePrev
 
-前のレコードには、カーソルを移動します。
+カーソルを前のレコードに移動します。
 
 ### <a name="syntax"></a>構文
 
@@ -724,13 +714,13 @@ HRESULT MovePrev() throw();
 
 標準の HRESULT です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-このメソッドは、いずれかを設定することが必要です`DBPROP_CANFETCHBACKWARDS`または`DBPROP_CANSCROLLBACKWARDS`を呼び出す前に VARIANT_TRUE に`Open`テーブルまたは行セットを含むコマンド。
+この方法では、行セットを含むテーブルまたはコマンドで `Open` を呼び出す前に、`DBPROP_CANFETCHBACKWARDS` または `DBPROP_CANSCROLLBACKWARDS` を VARIANT_TRUE に設定する必要があります。
 
-## <a name="movetobookmark"></a> Crowset::movetobookmark
+## <a name="crowsetmovetobookmark"></a><a name="movetobookmark"></a>CRowset:: MoveToBookmark
 
-ブックマークまたは、指定したオフセットの行でマークされた行をフェッチ (*した*)、そのブックマークから。
+ブックマークまたは指定されたオフセット (*lSkip*) にある行を、そのブックマークからフェッチします。
 
 ### <a name="syntax"></a>構文
 
@@ -742,24 +732,24 @@ HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
 #### <a name="parameters"></a>パラメーター
 
 *ブックマーク*<br/>
-[in]データをフェッチする位置を示すブックマーク。
+からデータをフェッチする場所を示すブックマーク。
 
-*した*<br/>
-[in]対象の行にブックマークからの行の数。 場合*した*0 の場合は、フェッチされる最初の行は、ブックマークが設定された行。 場合*した*は 1 です。 最初の行がフェッチされた行の直後、行は、します。 場合*した*-1 で、フェッチされる最初の行は、ブックマークが設定された行の前に行。
+*lSkip*<br/>
+からブックマークから対象の行までの行数。 *LSkip*が0の場合、最初にフェッチされた行がブックマークが付けられた行になります。 *LSkip*が1の場合、最初にフェッチされる行は、ブックマークが付けられた行の後の行になります。 *LSkip*が-1 の場合、最初にフェッチされる行は、ブックマークが付けられた行の前の行になります。
 
 ### <a name="return-value"></a>戻り値
 
 標準の HRESULT です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-このメソッドでは省略可能なインターフェイス`IRowsetLocate`、する可能性がありますでサポートされていないすべてのプロバイダー場合は、この場合、E_NOINTERFACE を返します。 設定する必要がありますも`DBPROP_IRowsetLocate`を VARIANT_TRUE に設定し`DBPROP_CANFETCHBACKWARDS`を呼び出す前に VARIANT_TRUE に`Open`テーブルまたは行セットを含むコマンド。
+このメソッドには、省略可能なインターフェイス `IRowsetLocate`が必要ですが、すべてのプロバイダーでサポートされていない可能性があります。この場合、メソッドは E_NOINTERFACE を返します。 また、行セットを含むテーブルまたはコマンドで `Open` を呼び出す前に、`DBPROP_IRowsetLocate` を VARIANT_TRUE に設定し、`DBPROP_CANFETCHBACKWARDS` を VARIANT_TRUE に設定する必要があります。
 
-コンシューマーでのブックマークの使用方法の詳細については、次を参照してください。[ブックマークを使って](../../data/oledb/using-bookmarks.md)します。
+コンシューマーでのブックマークの使用の詳細については、「[ブックマークの使用](../../data/oledb/using-bookmarks.md)」を参照してください。
 
-## <a name="movetoratio"></a> CRowset::MoveToRatio
+## <a name="crowsetmovetoratio"></a><a name="movetoratio"></a>CRowset:: MoveToRatio
 
-行セット内の小数部の位置から始まる行がフェッチされます。
+行セット内の小数位置から始まる行をフェッチします。
 
 ### <a name="syntax"></a>構文
 
@@ -771,31 +761,31 @@ HRESULT MoveToRatio(DBCOUNTITEM nNumerator,
 #### <a name="parameters"></a>パラメーター
 
 *nNumerator*<br/>
-[in]分子の小数部を決定するために使用元となるデータをフェッチする位置を指定します。
+からデータのフェッチ元の位置を示す小数部を決定するために使用される分子。
 
 *nDenominator*<br/>
-[in]分母の小数部を決定するために使用元となるデータをフェッチする位置を指定します。
+からデータのフェッチ元の位置を示す小数点以下の桁数を決定するために使用する分母。
 
 *bForward*<br/>
-[in]前方または後方に移動するかどうかを示します。 既定では転送です。
+から前方または後方に移動するかどうかを示します。 既定値は forward です。
 
 ### <a name="return-value"></a>戻り値
 
 標準の HRESULT です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-`MoveToRatio` ほぼ次の数式に従って行がフェッチされます。
+`MoveToRatio` は、次の式に従って行をフェッチします。
 
 `(nNumerator *  RowsetSize ) / nDenominator`
 
-場所`RowsetSize`行数で指定された行セットのサイズです。 この式の精度は、特定のプロバイダーによって異なります。 詳細については、次を参照してください。 [irowsetscroll::getrowsatratio](/previous-versions/windows/desktop/ms709602(v=vs.85))します。
+ここで `RowsetSize` には行セットのサイズを指定します。 この数式の精度は、特定のプロバイダーによって異なります。 詳細については、「 [IRowsetScroll:: GetRowsAtRatio](/previous-versions/windows/desktop/ms709602(v=vs.85))」を参照してください。
 
-このメソッドでは省略可能なインターフェイス`IRowsetScroll`、する可能性がありますでサポートされていないすべてのプロバイダー場合は、この場合、E_NOINTERFACE を返します。 設定する必要がありますも`DBPROP_IRowsetScroll`を呼び出す前に VARIANT_TRUE に`Open`テーブルまたは行セットを含むコマンド。
+このメソッドには、省略可能なインターフェイス `IRowsetScroll`が必要ですが、すべてのプロバイダーでサポートされていない可能性があります。この場合、メソッドは E_NOINTERFACE を返します。 また、行セットを含むテーブルまたはコマンドに対して `Open` を呼び出す前に、`DBPROP_IRowsetScroll` を VARIANT_TRUE に設定する必要があります。
 
-## <a name="releaserows"></a> CRowset::ReleaseRows
+## <a name="crowsetreleaserows"></a><a name="releaserows"></a>CRowset:: ReleaseRows
 
-呼び出し[::releaserows](/previous-versions/windows/desktop/ms719771(v=vs.85))を現在の行ハンドルを解放します。
+[IRowset:: ReleaseRows](/previous-versions/windows/desktop/ms719771(v=vs.85))を呼び出して、現在の行ハンドルを解放します。
 
 ### <a name="syntax"></a>構文
 
@@ -807,9 +797,9 @@ HRESULT ReleaseRows() throw();
 
 標準の HRESULT です。
 
-## <a name="setdata"></a> Crowset::setdata
+## <a name="crowsetsetdata"></a><a name="setdata"></a>CRowset:: SetData
 
-行の 1 つまたは複数の列のデータ値を設定します。
+行の1つ以上の列にデータ値を設定します。
 
 ### <a name="syntax"></a>構文
 
@@ -822,23 +812,23 @@ HRESULT SetData(int nAccessor) const throw();
 #### <a name="parameters"></a>パラメーター
 
 *nAccessor*<br/>
-[in]データにアクセスするのに使用するアクセサーの数。
+からデータへのアクセスに使用するアクセサーの番号。
 
 ### <a name="return-value"></a>戻り値
 
 標準の HRESULT です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-`SetData`を引数なしですべてのアクセサーを受け入れるフォームは更新に使用します。 通常`SetData`行内の列のデータ値を設定するにし、呼び出す[更新](../../data/oledb/crowset-update.md)それらの変更を送信します。
+引数を受け取らない `SetData` フォームの場合、すべてのアクセサーが更新に使用されます。 通常は、`SetData` を呼び出して、行の列にデータ値を設定し、 [Update](../../data/oledb/crowset-update.md)を呼び出してそれらの変更を送信します。
 
-このメソッドでは省略可能なインターフェイス`IRowsetChange`、する可能性がありますでサポートされていないすべてのプロバイダー場合は、この場合、E_NOINTERFACE を返します。 設定する必要がありますも`DBPROP_IRowsetChange`を呼び出す前に VARIANT_TRUE に`Open`テーブルまたは行セットを含むコマンド。
+このメソッドには、省略可能なインターフェイス `IRowsetChange`が必要ですが、すべてのプロバイダーでサポートされていない可能性があります。この場合、メソッドは E_NOINTERFACE を返します。 また、行セットを含むテーブルまたはコマンドに対して `Open` を呼び出す前に、`DBPROP_IRowsetChange` を VARIANT_TRUE に設定する必要があります。
 
-設定操作は、1 つまたは複数の列が書き込み可能な場合に失敗する可能性があります。 これを修正するにはカーソル マップを変更します。
+1つ以上の列が書き込み可能でない場合、設定操作は失敗する可能性があります。 これを修正するにはカーソル マップを変更します。
 
-## <a name="undo"></a> Crowset::undo
+## <a name="crowsetundo"></a><a name="undo"></a>CRowset:: Undo
 
-最後のフェッチを行に加えられた変更を元に戻しますか[Update](../../data/oledb/crowset-update.md)します。
+前回のフェッチまたは[更新](../../data/oledb/crowset-update.md)以降に行に加えられたすべての変更を元に戻します。
 
 ### <a name="syntax"></a>構文
 
@@ -851,25 +841,25 @@ HRESULT Undo(DBCOUNTITEM* pcRows = NULL,
 #### <a name="parameters"></a>パラメーター
 
 *pcRows*<br/>
-[out]場所へのポインター、`Undo`しようとするために必要な場合に元に戻す行の数を返します。
+入出力必要に応じて、元に戻すことができた行の数を `Undo` が返す位置へのポインター。
 
 *phRow*<br/>
-[out]場所へのポインター、`Undo`に必要な場合に元に戻すしようとしたすべての行ハンドルの配列を返します。
+入出力必要に応じて、元に戻す処理を実行しようとしたすべての行へのハンドルの配列を `Undo` が返す位置へのポインター。
 
 *pStatus*<br/>
-[out]場所へのポインター、`Undo`行の状態値を返します。 場合の状態が返されない*pStatus*が null です。
+入出力`Undo` が行の状態の値を返す場所へのポインター。 *Pstatus*が null の場合、状態は返されません。
 
 ### <a name="return-value"></a>戻り値
 
 標準の HRESULT です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-このメソッドでは省略可能なインターフェイス`IRowsetUpdate`、する可能性がありますでサポートされていないすべてのプロバイダー場合は、この場合、E_NOINTERFACE を返します。 設定する必要がありますも`DBPROP_IRowsetUpdate`を呼び出す前に VARIANT_TRUE に`Open`テーブルまたは行セットを含むコマンド。
+このメソッドには、省略可能なインターフェイス `IRowsetUpdate`が必要ですが、すべてのプロバイダーでサポートされていない可能性があります。この場合、メソッドは E_NOINTERFACE を返します。 また、行セットを含むテーブルまたはコマンドに対して `Open` を呼び出す前に、`DBPROP_IRowsetUpdate` を VARIANT_TRUE に設定する必要があります。
 
-## <a name="update"></a> Crowset::update
+## <a name="crowsetupdate"></a><a name="update"></a>CRowset:: Update
 
-保留中の最後のフェッチ、現在の行に加えられた変更を送信または`Update`を呼び出します。
+前回のフェッチまたは `Update` 呼び出し以降に現在の行に加えられた保留中の変更を転送します。
 
 ### <a name="syntax"></a>構文
 
@@ -882,27 +872,27 @@ HRESULT Update(DBCOUNTITEM* pcRows = NULL,
 #### <a name="parameters"></a>パラメーター
 
 *pcRows*<br/>
-[out]場所へのポインター、`Update`試行されると必要な場合、更新するには行の数を返します。
+入出力必要に応じて、更新しようとした行の数を `Update` が返す場所へのポインター。
 
 *phRow*<br/>
-[out]場所へのポインター、`Update`を更新しようとした行のハンドルを返します。 場合はハンドルが返されない*phRow*が null です。
+入出力更新しようとした行のハンドルを `Update` が返す位置へのポインター。 *Phrow*が null の場合、ハンドルは返されません。
 
 *pStatus*<br/>
-[out]場所へのポインター、`Update`行の状態値を返します。 場合の状態が返されない*pStatus*が null です。
+入出力`Update` が行の状態の値を返す場所へのポインター。 *Pstatus*が null の場合、状態は返されません。
 
 ### <a name="return-value"></a>戻り値
 
 標準の HRESULT です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-保留中の行が最後にフェッチまたは更新後に、現在の行に加えられた変更を送信 (を使用して`Update`または[UpdateAll](../../data/oledb/crowset-updateall.md))。 通常[SetData](../../data/oledb/crowset-setdata.md) 、行内の列のデータ値を設定し、呼び出す`Update`をそれらの変更を送信します。
+現在の行に対して行われた保留中の変更を、その行が最後にフェッチまたは更新された後 (`Update` または[Updateall](../../data/oledb/crowset-updateall.md)を使用して) 送信します。 通常は、 [SetData](../../data/oledb/crowset-setdata.md)を呼び出して行の列のデータ値を設定し、`Update` を呼び出してそれらの変更を送信します。
 
-このメソッドでは省略可能なインターフェイス`IRowsetUpdate`、する可能性がありますでサポートされていないすべてのプロバイダー場合は、この場合、E_NOINTERFACE を返します。 設定する必要がありますも`DBPROP_IRowsetUpdate`を呼び出す前に VARIANT_TRUE に`Open`テーブルまたは行セットを含むコマンド。
+このメソッドには、省略可能なインターフェイス `IRowsetUpdate`が必要ですが、すべてのプロバイダーでサポートされていない可能性があります。この場合、メソッドは E_NOINTERFACE を返します。 また、行セットを含むテーブルまたはコマンドに対して `Open` を呼び出す前に、`DBPROP_IRowsetUpdate` を VARIANT_TRUE に設定する必要があります。
 
-## <a name="updateall"></a> Crowset::updateall
+## <a name="crowsetupdateall"></a><a name="updateall"></a>CRowset:: UpdateAll
 
-保留中の最後のフェッチで、以降のすべての行に加えられた変更を送信または`Update`を呼び出します。
+前回のフェッチまたは `Update` 呼び出し以降に行われたすべての行に対して行われた保留中の変更を転送します。
 
 ### <a name="syntax"></a>構文
 
@@ -915,30 +905,30 @@ HRESULT UpdateAll(DBCOUNTITEM* pcRows = NULL,
 #### <a name="parameters"></a>パラメーター
 
 *pcRows*<br/>
-[out]場所へのポインター、`UpdateAll`試行されると必要な場合、更新するには行の数を返します。
+入出力必要に応じて、更新しようとした行の数を `UpdateAll` が返す場所へのポインター。
 
 *pphRow*<br/>
-[out]メモリへのポインター`UpdateAll`を更新しようとした行のハンドルを返します。 場合はハンドルが返されない*pphRow*が null です。
+入出力更新しようとした行のハンドルを `UpdateAll` が返すメモリへのポインター。 *Pphrow*が null の場合、ハンドルは返されません。
 
 *ppStatus*<br/>
-[out]場所へのポインター、`Update`行の状態値を返します。 場合の状態が返されない*ppStatus*が null です。
+入出力`Update` が行の状態の値を返す場所へのポインター。 *Ppstatus*が null の場合、状態は返されません。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-保留中のこれらの行が最後にフェッチされた、またはを使用して更新後に、すべての行に加えられた変更を送信[Update](../../data/oledb/crowset-update.md)または`UpdateAll`します。 `UpdateAll` かどうかがあるハンドルに関係なく、変更されたすべての行が更新されます (を参照してください*pphRow*) かどうか。
+[更新](../../data/oledb/crowset-update.md)または `UpdateAll`を使用して行が最後にフェッチまたは更新された後に、すべての行に対して行われた保留中の変更を転送します。 `UpdateAll` によって変更されたすべての行が更新されます。ただし、ハンドルがあるかどうかは関係ありません (「 *Pphrow*」を参照)。
 
-使用した場合の例の`Insert`行セットでは、5 つの行を挿入するにはいずれかの呼び出しをでした`Update`5 回または呼び出し`UpdateAll`更新すべてを 1 回です。
+たとえば、`Insert` を使用して行セットに5つの行を挿入した場合は、`Update` を5回呼び出すか、`UpdateAll` を1回呼び出してすべての行を更新することができます。
 
-このメソッドでは省略可能なインターフェイス`IRowsetUpdate`、する可能性がありますでサポートされていないすべてのプロバイダー場合は、この場合、E_NOINTERFACE を返します。 設定する必要がありますも`DBPROP_IRowsetUpdate`を呼び出す前に VARIANT_TRUE に`Open`テーブルまたは行セットを含むコマンド。
+このメソッドには、省略可能なインターフェイス `IRowsetUpdate`が必要ですが、すべてのプロバイダーでサポートされていない可能性があります。この場合、メソッドは E_NOINTERFACE を返します。 また、行セットを含むテーブルまたはコマンドに対して `Open` を呼び出す前に、`DBPROP_IRowsetUpdate` を VARIANT_TRUE に設定する必要があります。
 
 ### <a name="return-value"></a>戻り値
 
 標準の HRESULT です。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [DBViewer サンプル](../../overview/visual-cpp-samples.md)<br/>
 [MultiRead サンプル](../../overview/visual-cpp-samples.md)<br/>
-[MultiRead 属性のサンプル](../../overview/visual-cpp-samples.md)<br/>
-[OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[MultiRead Attributes サンプル](../../overview/visual-cpp-samples.md)<br/>
+[OLE DB コンシューマー テンプレートに関するページ](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB コンシューマー テンプレート リファレンス](../../data/oledb/ole-db-consumer-templates-reference.md)

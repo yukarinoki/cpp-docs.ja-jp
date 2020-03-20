@@ -1,53 +1,53 @@
 ---
 title: 混合モードから純粋な中間言語へのプロジェクトの変換
-ms.date: 11/04/2016
+ms.date: 08/19/2019
 helpviewer_keywords:
 - intermediate language, mixed-mode applications
 - mixed-mode applications
 - mixed-mode applications, intermediate language
 - projects [C++], converting to intermediate language
 ms.assetid: 855f9e3c-4f09-4bfe-8eab-a45f68292be9
-ms.openlocfilehash: 2f63b6860157e315d44f7c050812a7f0b97f2726
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: 05ece23e6d79fc399085099deebcde0aa4a92c64
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448042"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "79544736"
 ---
-# <a name="converting-projects-from-mixed-mode-to-pure-intermediate-language"></a>混在モードから純粋な中間言語へのプロジェクトの変換
+# <a name="converting-projects-from-mixed-mode-to-pure-intermediate-language"></a>混合モードから純粋な中間言語へのプロジェクトの変換
 
-すべてのビジュアルの C++ CLR プロジェクトは、既定では、C ランタイム ライブラリにリンクします。 その結果、ネイティブ コードと共通言語ランタイム (マネージ コード) を対象とするコードを結合するために、これらのプロジェクトは、混合モード アプリケーションとして分類されます。 コンパイル時に、中間言語 (IL) とも呼ばれる Microsoft intermediate language (MSIL) にコンパイルされます。
+すべてのC++ Visual CLR プロジェクトは、既定で C ランタイムライブラリにリンクされます。 そのため、これらのプロジェクトは、共通言語ランタイム (マネージコード) を対象とするコードとネイティブコードを組み合わせるため、混合モードアプリケーションとして分類されます。 コンパイルされると、中間言語 (IL) にコンパイルされます。これは、Microsoft 中間言語 (MSIL) とも呼ばれます。
 
 > [!IMPORTANT]
-> Visual Studio 2015 で非推奨とされ、Visual Studio 2017 の作成をサポートできなく **/clr: 純粋な**または **/clr:safe** CLR アプリケーションのコード。 純粋なまたは安全なアセンブリを必要とする場合は、アプリケーションを c# に変換するをお勧めします。
+> Visual Studio 2015 では非推奨とされており、Visual Studio 2017 は CLR アプリケーションの **/clr: pure**または **/clr: safe**コードの作成をサポートしなくなりました。 純粋または安全なアセンブリが必要な場合は、アプリケーションをにC#変換することをお勧めします。
 
-Microsoft の以前のバージョンを使用しているかどうかはC++コンパイラ ツールセットをサポートする **/clr: 純粋な**または **/clr:safe**、コードを純粋 MSIL に変換するこの手順を使用することができます。
+**/Clr: pure**または **/clr: safe**をサポートC++する以前のバージョンの Microsoft コンパイラツールセットを使用している場合は、次の手順を使用してコードを純粋 MSIL に変換できます。
 
-### <a name="to-convert-your-mixed-mode-application-into-pure-intermediate-language"></a>混合モード アプリケーションを純粋な中間言語に変換するには
+### <a name="to-convert-your-mixed-mode-application-into-pure-intermediate-language"></a>混合モードアプリケーションを純粋中間言語に変換するには
 
-1. リンクを削除、 [C ランタイム ライブラリ](../c-runtime-library/crt-library-features.md)(CRT)。
+1. [C ランタイムライブラリ](../c-runtime-library/crt-library-features.md)へのリンクを削除する (CRT):
 
-   1. .Cpp ファイルで、アプリケーションのエントリ ポイントを定義するへのエントリ ポイントを変更`Main()`します。 使用して`Main()`プロジェクトは、CRT にリンクしていないことを示します。
+   1. アプリケーションのエントリポイントを定義する .cpp ファイルで、エントリポイントを `Main()`に変更します。 `Main()` を使用すると、プロジェクトが CRT にリンクしないことを示します。
 
-   2. ソリューション エクスプ ローラーでプロジェクトを右クリックし、選択**プロパティ**ショートカット メニューのアプリケーションのプロパティ ページを開きます。
+   2. ソリューションエクスプローラーで、プロジェクトを右クリックし、ショートカットメニューの **[プロパティ]** を選択して、アプリケーションのプロパティページを開きます。
 
-   3. **[詳細設定]** のプロジェクト プロパティ ページ、**リンカー**を選択します、**エントリ ポイント**し、入力**Main**このフィールドにします。
+   3. **リンカー**の **[** プロジェクトの詳細プロパティ] ページで、**エントリポイント**を選択し、このフィールドに「 **Main** 」と入力します。
 
-   4. コンソール アプリケーションで、**システム**のプロジェクト プロパティ ページ、**リンカー**を選択、**サブシステム**フィールドを変更して**コンソール (/SUBSYSTEM:CONSOLE)** します。
+   4. コンソールアプリケーションの場合は、**リンカー**の**システム**プロジェクトプロパティページで **[サブシステム]** フィールドを選択し、これを **[コンソール (/SUBSYSTEM: コンソール)]** に変更します。
 
       > [!NOTE]
-      > に、Windows フォーム アプリケーションには、このプロパティを設定する必要はありません、**サブシステム**にフィールドが設定されている**Windows (/: WINDOWS サブシステム)** 既定で。
+      > 既定では、**サブシステム**フィールドが**Windows (/SUBSYSTEM: windows)** に設定されているため Windows フォームアプリケーションに対してこのプロパティを設定する必要はありません。
 
-   5. Stdafx.h に、すべてコメント、`#include`ステートメント。 たとえば、コンソール アプリケーション: で
+   5. *Stdafx.h*で、すべての `#include` ステートメントをコメントアウトします。 たとえば、コンソールアプリケーションでは次のようになります。
 
       ```cpp
       // #include <iostream>
       // #include <tchar.h>
       ```
 
-       - または -
+       または
 
-       たとえばでは Windows フォーム アプリケーション。
+       たとえば、Windows フォームアプリケーションの場合は、次のようになります。
 
       ```cpp
       // #include <stdlib.h>
@@ -56,13 +56,13 @@ Microsoft の以前のバージョンを使用しているかどうかはC++コ�
       // #include <tchar.h>
       ```
 
-   6. Form1.cpp での Windows フォーム アプリケーションをコメント アウト用、 `#include` windows.h を参照するステートメント。 例:
+   6. Windows フォームアプリケーションの場合は、Form1 で、Windows .h を参照する `#include` ステートメントをコメントアウトします。 例 :
 
       ```cpp
       // #include <windows.h>
       ```
 
-2. Stdafx.h に、次のコードを追加します。
+2. 次のコードを stdafx.h に追加し*ます*。
 
    ```cpp
    #ifndef __FLTUSED__
@@ -73,14 +73,14 @@ Microsoft の以前のバージョンを使用しているかどうかはC++コ�
 
 3. すべてのアンマネージ型を削除します。
 
-   構造への参照にアンマネージ型を置き換える、必要に応じて、[システム](/dotnet/api/system)名前空間。 一般的なマネージ型は、次の表のとおりです。
+   必要に応じて、アンマネージ型を[System](/dotnet/api/system)名前空間の構造体への参照に置き換えます。 一般的なマネージ型を次の表に示します。
 
    |構造体|説明|
    |---------------|-----------------|
    |[Boolean](/dotnet/api/system.boolean)|ブール値を表します。|
    |[Byte](/dotnet/api/system.byte)|8 ビット符号なし整数を表します。|
    |[Char](/dotnet/api/system.char)|Unicode 文字を表します。|
-   |[DateTime](/dotnet/api/system.datetime)|通常、日付や時刻として表現される瞬間を表します。|
+   |[DateTime](/dotnet/api/system.datetime)|特定の時点を表します。通常、日時形式で表されます。|
    |[Decimal](/dotnet/api/system.decimal)|10 進数を表します。|
    |[Double](/dotnet/api/system.double)|倍精度浮動小数点数を表します。|
    |[Guid](/dotnet/api/system.guid)|グローバル一意識別子 (GUID) を表します。|
@@ -95,4 +95,4 @@ Microsoft の以前のバージョンを使用しているかどうかはC++コ�
    |[UInt32](/dotnet/api/system.uint32)|32 ビット符号なし整数を表します。|
    |[UInt64](/dotnet/api/system.uint64)|64 ビット符号なし整数を表します。|
    |[UIntPtr](/dotnet/api/system.uintptr)|ポインターまたはハンドルを表すときに使用されるプラットフォーム固有の型。|
-   |[void](/dotnet/api/system.void)|値を返さないメソッドを示しますメソッドは、void の戻り値の型。|
+   |[無効化](/dotnet/api/system.void)|値を返さないメソッドを示します。つまり、メソッドの戻り値の型は void です。|

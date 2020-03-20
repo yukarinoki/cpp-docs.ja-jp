@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - literal keyword [C++]
 ms.assetid: 6b1a1f36-2e1d-4a23-8eb6-172f4f3c477f
-ms.openlocfilehash: c0de82d0d1d102f02ea79a4245f2e393439f2e0b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: d567f8270dcb8965ed2f882c9a0c005f295fc619
+ms.sourcegitcommit: c4528a7424d35039454f17778baf1b5f98fbbee7
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515677"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "79545457"
 ---
 # <a name="literal-ccli-and-ccx"></a>literal (C++/CLI および C++/CX)
 
@@ -21,13 +21,13 @@ ms.locfileid: "65515677"
 
 ## <a name="all-platforms"></a>すべてのプラットフォーム
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 (この言語機能にはランタイムに適用される特記事項がありません。)
 
 ## <a name="windows-runtime"></a>Windows ランタイム
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 (この言語機能には Windows ランタイムのみに適用される特記事項がありません。)
 
@@ -37,7 +37,7 @@ ms.locfileid: "65515677"
 
 ## <a name="common-language-runtime"></a>共通言語ランタイム
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>コメント
 
 **literal** とマークされたデータ メンバーは宣言時に初期化される必要があり、値は constant integral、enum、または string 型である必要があります。 初期化式の型から static const 型のデータ メンバーへの変換では、ユーザー定義の変換は必要ありません。
 
@@ -78,7 +78,7 @@ public ref struct A {
 };
 ```
 
-メタデータでの `sc` と `lit` の違いに注目してください。`sc` には `modopt` ディレクティブが 適用され、他のコンパイラでは無視される可能性があることを意味します。
+メタデータでの `sc` と `lit` の違いに注目してください。`modopt` には `sc` ディレクティブが 適用され、他のコンパイラでは無視される可能性があることを意味します。
 
 ```
 .field public static int32 modopt([mscorlib]System.Runtime.CompilerServices.IsConst) sc = int32(0x0000000A)
@@ -92,7 +92,7 @@ public ref struct A {
 
 C# で作成された次の例は、前の例で作成されたメタデータを参照し、**literal** 変数と **static const** 変数の効果を示しています。
 
-```cs
+```csharp
 // mcppv2_literal3.cs
 // compile with: /reference:mcppv2_literal2.dll
 // A C# program
@@ -125,6 +125,6 @@ class B {
 
 コンパイラ オプション: `/clr`
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [.NET および UWP でのコンポーネント拡張](component-extensions-for-runtime-platforms.md)

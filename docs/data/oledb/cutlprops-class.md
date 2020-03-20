@@ -9,7 +9,6 @@ f1_keywords:
 - CUtlProps::IsValidValue
 - CUtlProps.IsValidValue
 - IsValidValue
-- CUtlProps
 - OnPropertyChanged
 - CUtlProps.OnPropertyChanged
 - CUtlProps::OnPropertyChanged
@@ -30,16 +29,16 @@ helpviewer_keywords:
 - OnPropertyChanged method
 - SetPropValue method
 ms.assetid: bb525178-765c-4e23-a110-c0fd70c05437
-ms.openlocfilehash: 3f1af90bcf454a3651dd8de65bbee7cb6b5960ca
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bbeae4faad4d650d8dc44a61a22b1fcc63a0bc15
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176123"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79545553"
 ---
 # <a name="cutlprops-class"></a>CUtlProps クラス
 
-OLE DB プロパティのインターフェイスのさまざまなプロパティを実装する (たとえば、 `IDBProperties`、 `IDBProperties`、および`IRowsetInfo`)。
+さまざまな OLE DB プロパティインターフェイス (`IDBProperties`、`IDBProperties`、`IRowsetInfo`など) のプロパティを実装します。
 
 ## <a name="syntax"></a>構文
 
@@ -51,9 +50,9 @@ class ATL_NO_VTABLE CUtlProps : public CUtlPropsBase
 ### <a name="parameters"></a>パラメーター
 
 *T*<br/>
-含むクラス、`BEGIN_PROPSET_MAP`します。
+`BEGIN_PROPSET_MAP`を格納しているクラス。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** atldb.h
 
@@ -63,23 +62,23 @@ class ATL_NO_VTABLE CUtlProps : public CUtlPropsBase
 
 |||
 |-|-|
-|[GetPropValue](#getpropvalue)|プロパティのセットからプロパティを取得します。|
-|[IsValidValue](#isvalidvalue)|プロパティを設定する前に、値を検証するために使用します。|
-|[OnInterfaceRequested](#oninterfacerequested)|コンシューマーは、オブジェクト作成インターフェイスのメソッドを呼び出すときは、省略可能なインターフェイスの要求を処理します。|
-|[OnPropertyChanged](#onpropertychanged)|チェーンされたプロパティを処理するためにプロパティを設定した後に呼び出されます。|
-|[SetPropValue](#setpropvalue)|プロパティ セットのプロパティを設定します。|
+|[GetPropValue](#getpropvalue)|プロパティセットからプロパティを取得します。|
+|[IsValidValue](#isvalidvalue)|プロパティを設定する前に値を検証するために使用されます。|
+|[OnInterfaceRequested](#oninterfacerequested)|コンシューマーがオブジェクト作成インターフェイスでメソッドを呼び出すときに、省略可能なインターフェイスの要求を処理します。|
+|[OnPropertyChanged](#onpropertychanged)|プロパティを設定した後に、チェーンプロパティを処理するために呼び出されます。|
+|[SetPropValue](#setpropvalue)|プロパティセット内のプロパティを設定します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-このクラスのほとんどは、実装の詳細です。
+このクラスのほとんどは実装の詳細です。
 
-`CUtlProps` 内部的にプロパティを設定するため、2 つのメンバーが含まれています。[GetPropValue](../../data/oledb/cutlprops-getpropvalue.md)と[SetPropValue](../../data/oledb/cutlprops-setpropvalue.md)します。
+`CUtlProps` には、内部的にプロパティを設定するための2つのメンバー ( [getpropvalue](../../data/oledb/cutlprops-getpropvalue.md)と[setpropvalue](../../data/oledb/cutlprops-setpropvalue.md)) が含まれています。
 
-プロパティ セットのマップで使用されるマクロの詳細については、次を参照してください。 [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)と[END_PROPSET_MAP](../../data/oledb/end-propset-map.md)します。
+プロパティセットマップで使用されるマクロの詳細については、「 [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md) 」および「 [END_PROPSET_MAP](../../data/oledb/end-propset-map.md)」を参照してください。
 
-## <a name="getpropvalue"></a> CUtlProps::GetPropValue
+## <a name="cutlpropsgetpropvalue"></a><a name="getpropvalue"></a>CUtlProps:: GetPropValue
 
-プロパティのセットからプロパティを取得します。
+プロパティセットからプロパティを取得します。
 
 ### <a name="syntax"></a>構文
 
@@ -92,21 +91,21 @@ OUT_OF_LINE HRESULT GetPropValue(const GUID* pguidPropSet,
 #### <a name="parameters"></a>パラメーター
 
 *pguidPropSet*<br/>
-[in]PropSet の GUID です。
+からPropSet の GUID。
 
 *dwPropId*<br/>
-[in]プロパティのインデックス。
+からプロパティインデックス。
 
 *pvValue*<br/>
-[out]新しいプロパティ値を含んでいるバリアントへのポインター。
+入出力新しいプロパティ値を格納している variant へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-`Failure` 障害と正常終了した場合。
+失敗した場合は `Failure` し、成功した場合は S_OK します。
 
-## <a name="isvalidvalue"></a> CUtlProps::IsValidValue
+## <a name="cutlpropsisvalidvalue"></a><a name="isvalidvalue"></a>CUtlProps:: IsValidValue
 
-プロパティを設定する前に、値を検証するために使用します。
+プロパティを設定する前に値を検証するために使用されます。
 
 ### <a name="syntax"></a>構文
 
@@ -118,22 +117,22 @@ virtual HRESULT CUtlPropsBase::IsValidValue(ULONG /* iCurSet */,
 #### <a name="parameters"></a>パラメーター
 
 *iCurSet*<br/>
-プロパティ セットの配列インデックス1 つのプロパティ セットがある場合は 0 します。
+プロパティセット配列へのインデックス。プロパティセットが1つしかない場合は0。
 
 *pDBProp*<br/>
-プロパティ ID と新しい値を[DBPROP](/previous-versions/windows/desktop/ms717970(v=vs.85))構造体。
+[DBPROP](/previous-versions/windows/desktop/ms717970(v=vs.85))構造体のプロパティ ID と新しい値。
 
 ### <a name="return-value"></a>戻り値
 
-標準の HRESULT です。 既定の戻り値は、S_OK です。
+標準の HRESULT です。 既定の戻り値は S_OK です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-を使用して、プロパティを設定しようとしている値で実行する検証ルーチンがある場合は、この関数をオーバーライドする必要があります。 たとえば、有効な値を決定するパスワード テーブルに対して DBPROP_AUTH_PASSWORD を検証する可能性があります。
+プロパティの設定に使用しようとしている値に対して実行する検証ルーチンがある場合は、この関数をオーバーライドする必要があります。 たとえば、パスワードテーブルに対して DBPROP_AUTH_PASSWORD を検証して、有効な値を判断することができます。
 
-## <a name="oninterfacerequested"></a> CUtlProps::OnInterfaceRequested
+## <a name="cutlpropsoninterfacerequested"></a><a name="oninterfacerequested"></a>CUtlProps:: OnInterfaceRequested
 
-コンシューマーでメソッドを呼び出し、オブジェクトのいずれかのインターフェイスの作成時に、省略可能なインターフェイスの要求を処理します。
+コンシューマーがオブジェクト作成インターフェイスの1つでメソッドを呼び出したときに、オプションのインターフェイスの要求を処理します。
 
 ### <a name="syntax"></a>構文
 
@@ -144,15 +143,15 @@ virtual HRESULT CUtlPropsBase::OnInterfaceRequested(REFIID riid);
 #### <a name="parameters"></a>パラメーター
 
 *riid*<br/>
-[in]要求されたインターフェイスの IID。 詳細については、の説明を参照して、 *riid*パラメーターの`ICommand::Execute`で、 *OLE DB プログラマーズ リファレンス*(で、 *MDAC SDK*)。
+から要求されたインターフェイスの IID。 詳細については、 *OLE DB プログラマーのリファレンス*( *MDAC SDK*) に含まれる `ICommand::Execute` の*riid*パラメーターの説明を参照してください。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-`OnInterfaceRequested` コンシューマーでメソッドを呼び出し、オブジェクトのいずれかのインターフェイスの作成時に、省略可能なインターフェイスのコンシューマーの要求を処理 (など`IDBCreateSession`、 `IDBCreateCommand`、 `IOpenRowset`、または`ICommand`)。 要求されたインターフェイスに対応する OLE DB プロパティを設定します。 たとえば、コンシューマーが要求する`IID_IRowsetLocate`、`OnInterfaceRequested`設定、`DBPROP_IRowsetLocate`インターフェイス。 これにより行セットの作成時に適切な状態を維持します。
+コンシューマーがオブジェクト作成インターフェイス (`IDBCreateSession`、`IDBCreateCommand`、`IOpenRowset`、`ICommand`など) のいずれかでメソッドを呼び出した場合、`OnInterfaceRequested` は省略可能なインターフェイスのコンシューマー要求を処理します。 これは、要求されたインターフェイスに対応する OLE DB プロパティを設定します。 たとえば、コンシューマーが `IID_IRowsetLocate`を要求した場合、`OnInterfaceRequested` `DBPROP_IRowsetLocate` インターフェイスを設定します。 これにより、行セットの作成時に適切な状態が維持されます。
 
-コンシューマーを呼び出すと、このメソッドが呼び出されます`IOpenRowset::OpenRowset`または`ICommand::Execute`します。
+コンシューマーが `IOpenRowset::OpenRowset` または `ICommand::Execute`を呼び出すと、このメソッドが呼び出されます。
 
-コンシューマーは、オブジェクトを開き、オプションのインターフェイスを要求する、プロバイダーを VARIANT_TRUE にそのインターフェイスに関連付けられたプロパティを設定する必要があります。 プロパティに固有の処理を許可する`OnInterfaceRequested`プロバイダーの前に呼び出されます`Execute`メソッドが呼び出されます。 既定では、`OnInterfaceRequested`次のインターフェイスを処理します。
+コンシューマーがオブジェクトを開き、オプションのインターフェイスを要求する場合、プロバイダーはそのインターフェイスに関連付けられたプロパティを VARIANT_TRUE に設定する必要があります。 プロパティ固有の処理を許可するには、プロバイダーの `Execute` メソッドが呼び出される前に `OnInterfaceRequested` が呼び出されます。 既定では、`OnInterfaceRequested` は次のインターフェイスを処理します。
 
 - `IRowsetLocate`
 
@@ -164,11 +163,11 @@ virtual HRESULT CUtlPropsBase::OnInterfaceRequested(REFIID riid);
 
 - `IRowsetScroll`
 
-その他のインターフェイスを処理する場合は、関数を処理するデータ ソース、セッション、コマンド、または行セット クラスでは、この関数をオーバーライドします。 オーバーライドは、プロパティを設定すると、連鎖プロパティも設定されることを確認する通常の設定/取得するプロパティのインターフェイスを通過する必要があります (を参照してください[OnPropertyChanged](../../data/oledb/cutlprops-onpropertychanged.md))。
+他のインターフェイスを処理する場合は、関数を処理するために、データソース、セッション、コマンド、または行セットクラスでこの関数をオーバーライドします。 このオーバーライドでは、通常の set/get プロパティインターフェイスを使用して、設定プロパティにチェーンプロパティも設定されていることを確認する必要があります (「 [OnPropertyChanged](../../data/oledb/cutlprops-onpropertychanged.md)」を参照してください)。
 
-## <a name="onpropertychanged"></a> CUtlProps::OnPropertyChanged
+## <a name="cutlpropsonpropertychanged"></a><a name="onpropertychanged"></a>CUtlProps:: OnPropertyChanged
 
-チェーンされたプロパティを処理するためにプロパティを設定した後に呼び出されます。
+プロパティを設定した後に、チェーンプロパティを処理するために呼び出されます。
 
 ### <a name="syntax"></a>構文
 
@@ -180,28 +179,28 @@ virtual HRESULT OnPropertyChanged(ULONG /* iCurSet */,
 #### <a name="parameters"></a>パラメーター
 
 *iCurSet*<br/>
-プロパティ セットの配列インデックス1 つのプロパティ セットがある場合は 0 します。
+プロパティセット配列へのインデックス。プロパティセットが1つしかない場合は0。
 
 *pDBProp*<br/>
-プロパティ ID と新しい値を[DBPROP](/previous-versions/windows/desktop/ms717970(v=vs.85))構造体。
+[DBPROP](/previous-versions/windows/desktop/ms717970(v=vs.85))構造体のプロパティ ID と新しい値。
 
 ### <a name="return-value"></a>戻り値
 
-標準の HRESULT です。 既定の戻り値は、S_OK です。
+標準の HRESULT です。 既定の戻り値は S_OK です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-チェーンされたプロパティ、ブックマーク、値がもう 1 つのプロパティの値に依存する更新プログラムなどを処理する場合は、この関数をオーバーライドする必要があります。
+値が別のプロパティの値に依存するブックマークや更新などの連結されたプロパティを処理する場合は、この関数をオーバーライドする必要があります。
 
 ### <a name="example"></a>例
 
-この関数で、ユーザー ID を取得しますプロパティから、`DBPROP*`パラメーター。 チェーンのプロパティに対して ID を比較することができます。 プロパティが見つかった場合`SetProperties`は他のプロパティと共に設定するプロパティを持つと呼びます。 この場合、いずれかを取得する場合、 `DBPROP_IRowsetLocate`、 `DBPROP_LITERALBOOKMARKS`、または`DBPROP_ORDEREDBOOKMARKS`プロパティ、いずれかの設定、`DBPROP_BOOKMARKS`プロパティ。
+この関数では、ユーザーは `DBPROP*` パラメーターからプロパティ ID を取得します。 これで、ID をプロパティとチェーンに比較することができます。 プロパティが見つかった場合は、他のプロパティと共に設定されるプロパティを使用して `SetProperties` が呼び出されます。 この場合、1つが `DBPROP_IRowsetLocate`、`DBPROP_LITERALBOOKMARKS`、または `DBPROP_ORDEREDBOOKMARKS` プロパティを取得すると、`DBPROP_BOOKMARKS` プロパティを設定できます。
 
 [!code-cpp[NVC_OLEDB_Provider#2](../../data/oledb/codesnippet/cpp/cutlprops-onpropertychanged_1.h)]
 
-## <a name="setpropvalue"></a> CUtlProps::SetPropValue
+## <a name="cutlpropssetpropvalue"></a><a name="setpropvalue"></a>CUtlProps:: SetPropValue
 
-プロパティ セットのプロパティを設定します。
+プロパティセット内のプロパティを設定します。
 
 ### <a name="syntax"></a>構文
 
@@ -214,19 +213,19 @@ HRESULT SetPropValue(const GUID* pguidPropSet,
 #### <a name="parameters"></a>パラメーター
 
 *pguidPropSet*<br/>
-[in]PropSet の GUID です。
+からPropSet の GUID。
 
 *dwPropId*<br/>
-[in]プロパティのインデックス。
+からプロパティインデックス。
 
 *pvValue*<br/>
-[in]新しいプロパティ値を含んでいるバリアントへのポインター。
+から新しいプロパティ値を格納している variant へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-`Failure` 障害と正常終了した場合。
+失敗した場合は `Failure` し、成功した場合は S_OK します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[OLE DB プロバイダー テンプレート](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[OLE DB プロバイダー テンプレートに関するページ](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [OLE DB プロバイダー テンプレートのアーキテクチャ](../../data/oledb/ole-db-provider-template-architecture.md)

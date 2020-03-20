@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - overriding, override [C++]
 ms.assetid: 4ec3eaf5-163b-4df8-8f16-7a2ec04c3d0f
-ms.openlocfilehash: 7d36793e4467f9454aca1eb207f3c3dfbd483bff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: b80e49489c0b0d26469ba9f8b77e80a962668e35
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516677"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "79545433"
 ---
 # <a name="explicit-overrides--ccli-and-ccx"></a>明示的なオーバーライド (C++/CLI および C++/CX)
 
@@ -39,9 +39,9 @@ overriding-function-declarator = function { overriding-function-definition }
 *overriding-function-definition*<br/>
 オーバーライドする関数を定義する関数の本体ステートメント。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
-明示的なオーバーライドを使用して、メソッドのシグネチャのエイリアスを作成するか、同じシグネチャでメソッドの異なる実装を行います。
+明示的なオーバーライドを使用して、メソッドシグネチャのエイリアスを作成するか、同じシグネチャを持つメソッドに対して異なる実装を提供します。
 
 継承された型と継承された型のメンバーの動作を変更する方法の詳細については、「[オーバーライド指定子](override-specifiers-cpp-component-extensions.md)」を参照してください。
 
@@ -53,7 +53,7 @@ overriding-function-declarator = function { overriding-function-definition }
 
 ## <a name="common-language-runtime"></a>共通言語ランタイム
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 ネイティブ コードまたは `/clr:oldSyntax` でコンパイルされたコードでの明示的なオーバーライドについては、「[明示的なオーバーライド](../cpp/explicit-overrides-cpp.md)」を参照してください。
 
@@ -61,7 +61,7 @@ overriding-function-declarator = function { overriding-function-definition }
 
 コンパイラ オプション: `/clr`
 
-### <a name="examples"></a>使用例
+### <a name="examples"></a>例
 
 次のコード例では、基本インターフェイスでの単純で暗黙的なオーバーライドとメンバーの実装を示します。ここでは明示的なオーバーライドは使用されていません。
 
@@ -172,6 +172,6 @@ public:
 };
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [.NET および UWP でのコンポーネント拡張](component-extensions-for-runtime-platforms.md)

@@ -4,28 +4,28 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - finally keyword [C++]
 ms.assetid: b55f3c8e-1af0-43e8-bcfb-99c3685d2578
-ms.openlocfilehash: f7db4320cf901412e3a9e3de682d0cfbcc9f23bc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2574ba5a10bbf5eddc68d6e0265d5dfc99c6d8fc
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223015"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "79545097"
 ---
 # <a name="finally"></a>finally
 
-ほかに`try`と`catch`句、CLR の例外処理のサポート、`finally`句。 セマンティクスは次のと同じ、`__finally`で構造化例外処理 (SEH) をブロックします。 A`__finally`次のブロックを`try`または`catch`ブロックします。
+CLR 例外処理では、`try` と `catch` の句に加え、`finally` 句もサポートしています。 セマンティクスは、構造化例外処理 (SEH) の `__finally` ブロックと同じです。 `__finally` ブロックは、`try` または `catch` ブロックの後に続くことができます。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-目的、`finally`ブロックは、例外が発生した後に残されているリソースをクリーンアップします。 なお、`finally`例外がスローされなかった場合でも、ブロックは実行常にされます。 `catch`マネージ例外がスローされた場合にのみ、ブロックが実行に関連付けられている`try`ブロックします。
+`finally` ブロックの目的は、例外が発生した後に残されたすべてのリソースをクリーンアップすることです。 例外がスローされなかった場合でも、`finally` ブロックは常に実行されることに注意してください。 `catch` ブロックは、関連付けられた `try` ブロック内でマネージ例外がスローされた場合にのみ実行されます。
 
-`finally` 状況依存のキーワードは、します。参照してください[状況依存のキーワード](../extensions/context-sensitive-keywords-cpp-component-extensions.md)詳細についてはします。
+`finally` は、状況依存のキーワードです。詳細については[、「状況依存のキーワード](../extensions/context-sensitive-keywords-cpp-component-extensions.md)」を参照してください。
 
 ## <a name="example"></a>例
 
-次の例では、単純な`finally`ブロック。
+単純な `finally` ブロックの例を次に示します。
 
-```
+```cpp
 // keyword__finally.cpp
 // compile with: /clr
 using namespace System;
@@ -56,6 +56,6 @@ MyException
 in finally
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [例外処理](../extensions/exception-handling-cpp-component-extensions.md)

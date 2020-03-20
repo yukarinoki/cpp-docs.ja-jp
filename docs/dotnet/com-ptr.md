@@ -3,20 +3,20 @@ title: com::ptr
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
-- ptr
+- msclr/com/com::ptr
 helpviewer_keywords:
 - com::ptr
 ms.assetid: ee302e3c-8fed-4875-a372-2e55003718d3
-ms.openlocfilehash: 74e168fe916b930e499a82ca3fcf5c7d0d669719
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 993511142b72bd769fe8582b2650e5d020bd6ce2
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209205"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79545859"
 ---
 # <a name="comptr"></a>com::ptr
 
-CLR クラスのメンバーとして使用できる COM オブジェクトのラッパーです。 また、ラッパーには、そのデストラクターが呼び出されたときに、オブジェクトに所有されている参照を解放し、COM オブジェクトの有効期間管理が自動化されます。 類似しています[CComPtr クラス](../atl/reference/ccomptr-class.md)します。
+CLR クラスのメンバーとして使用できる COM オブジェクトのラッパー。 ラッパーは、COM オブジェクトの有効期間の管理も自動化します。これにより、デストラクターが呼び出されたときに、オブジェクトに対して所有されている参照が解放されます。 [CComPtr クラス](../atl/reference/ccomptr-class.md)に似ています。
 
 ## <a name="syntax"></a>構文
 
@@ -24,10 +24,10 @@ CLR クラスのメンバーとして使用できる COM オブジェクトの�
 #include <msclr\com\ptr.h>
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-[com::ptr クラス](../dotnet/com-ptr-class.md)で定義されている、 \<msclr\com\ptr.h > ファイル。
+[com::p Tr クラス](../dotnet/com-ptr-class.md)は \<msclr\com\ptr.h > ファイルで定義されています。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [C++ のサポート ライブラリ](../dotnet/cpp-support-library.md)

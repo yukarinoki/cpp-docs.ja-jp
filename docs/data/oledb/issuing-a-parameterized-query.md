@@ -4,16 +4,16 @@ ms.date: 10/19/2018
 helpviewer_keywords:
 - parameter queries, running using CCommand class
 ms.assetid: aedb0fce-52a4-4c97-a5c9-b2114be6c3b0
-ms.openlocfilehash: 1ac029d954fc6cefaae6349e01af7728ca0886fd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4964d63846e14c0eaf4ff7c7fc80e14237673f69
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390660"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "79545505"
 ---
 # <a name="issuing-a-parameterized-query"></a>パラメーター クエリの実行
 
-次の例では、Microsoft Access データベース内のテーブルから (つまり、30 より大きい) 時効フィールドのレコードを取得する単純なパラメーター化されたクエリを発行します。 パラメーターをサポートするには、ユーザー レコードは、追加のマップする必要があります。 次のコードでは、ATL プロジェクトでは、`CCommand`クラスの代わりに、`CTable`前の例で使用されるクラス[単純な行セットの走査](../../data/oledb/traversing-a-simple-rowset.md)します。
+次の例では、Microsoft Access データベースのテーブルから age フィールド (30 を超える) のレコードを取得する単純なパラメーター化クエリを発行します。 パラメーターをサポートするには、ユーザーレコードにマップが追加されている必要があります。 次のコードでは、ATL プロジェクトで、[単純な行セットを走査する](../../data/oledb/traversing-a-simple-rowset.md)前の例で使用した `CTable` クラスではなく、`CCommand` クラスを使用しています。
 
 ```cpp
 #include <atldbcli.h>
@@ -51,7 +51,7 @@ int main()
 }
 ```
 
-ユーザー レコードでは、 `CArtists`、この例のようになります。
+ユーザーレコード `CArtists`は、次の例のようになります。
 
 ```cpp
 class CArtists
@@ -77,6 +77,6 @@ END_PARAM_MAP()
 };
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [OLE DB コンシューマー テンプレートの操作](../../data/oledb/working-with-ole-db-consumer-templates.md)

@@ -7,7 +7,6 @@ f1_keywords:
 - IColumnsInfoImpl
 - ATL.IColumnsInfoImpl
 - ATL::IColumnsInfoImpl<T>
-- GetColumnInfo
 - ATL::IColumnsInfoImpl::GetColumnInfo
 - ATL.IColumnsInfoImpl.GetColumnInfo
 - ATL::IColumnsInfoImpl<T>::GetColumnInfo
@@ -27,16 +26,16 @@ helpviewer_keywords:
 - GetColumnInfo method
 - MapColumnIDs method
 ms.assetid: ba74c1c5-2eda-4452-8b57-84919fa0d066
-ms.openlocfilehash: d9fbe95f87cfdf51ae9c52c7890e6f6c4075c89a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2eb7714762de8ccf810a8fdd04ee33ae24e9d431
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409149"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79545985"
 ---
 # <a name="icolumnsinfoimpl-class"></a>IColumnsInfoImpl クラス
 
-実装を提供、 [IColumnsInfo](/previous-versions/windows/desktop/ms724541(v=vs.85))インターフェイス。
+[IColumnsInfo](/previous-versions/windows/desktop/ms724541(v=vs.85))インターフェイスの実装を提供します。
 
 ## <a name="syntax"></a>構文
 
@@ -50,9 +49,9 @@ class ATL_NO_VTABLE IColumnsInfoImpl :
 ### <a name="parameters"></a>パラメーター
 
 *T*<br/>
-派生したクラス、`IColumnsInfoImpl`します。
+`IColumnsInfoImpl`から派生したクラス。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** atldb.h
 
@@ -62,16 +61,16 @@ class ATL_NO_VTABLE IColumnsInfoImpl :
 
 |||
 |-|-|
-|[GetColumnInfo](#getcolumninfo)|ほとんどのコンシューマーが必要な列のメタデータを返します。|
-|[MapColumnIDs](#mapcolumnids)|指定した列の Id によって識別される行セット内の列の序数の配列を返します。|
+|[GetColumnInfo](#getcolumninfo)|ほとんどのコンシューマーが必要とする列のメタデータを返します。|
+|[MapColumnIDs](#mapcolumnids)|列 ID で識別される行セット内の列の序数を配列で返します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-行セットとコマンドの必須のインターフェイスです。 プロバイダーの動作を変更する`IColumnsInfo`実装では、プロバイダーの列マップを変更する必要があります。
+行セットとコマンドの必須のインターフェイスです。 プロバイダーの `IColumnsInfo` 実装の動作を変更するには、プロバイダーの列マップを変更する必要があります。
 
-## <a name="getcolumninfo"></a> IColumnsInfoImpl::GetColumnInfo
+## <a name="icolumnsinfoimplgetcolumninfo"></a><a name="getcolumninfo"></a>IColumnsInfoImpl:: GetColumnInfo
 
-ほとんどのコンシューマーが必要な列のメタデータを返します。
+ほとんどのコンシューマーが必要とする列のメタデータを返します。
 
 ### <a name="syntax"></a>構文
 
@@ -83,11 +82,11 @@ STDMETHOD (GetColumnInfo)(DBORDINAL* pcColumns,
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[icolumnsinfo::getcolumninfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。
+*OLE DB プログラマーリファレンス*の「 [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) 」を参照してください。
 
-## <a name="mapcolumnids"></a> IColumnsInfoImpl::MapColumnIDs
+## <a name="icolumnsinfoimplmapcolumnids"></a><a name="mapcolumnids"></a>IColumnsInfoImpl:: MapColumnIDs
 
-指定した列の Id によって識別される行セット内の列の序数の配列を返します。
+列 ID で識別される行セット内の列の序数を配列で返します。
 
 ### <a name="syntax"></a>構文
 
@@ -99,9 +98,9 @@ STDMETHOD (MapColumnIDs)(DBORDINAL cColumnIDs,
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[IColumnsInfo::MapColumnIDs](/previous-versions/windows/desktop/ms714200(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
+*OLE DB プログラマーリファレンス*の「 [IColumnsInfo:: mapcolumnids](/previous-versions/windows/desktop/ms714200(v=vs.85)) 」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[OLE DB プロバイダー テンプレート](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[OLE DB プロバイダー テンプレートに関するページ](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [OLE DB プロバイダー テンプレートのアーキテクチャ](../../data/oledb/ole-db-provider-template-architecture.md)

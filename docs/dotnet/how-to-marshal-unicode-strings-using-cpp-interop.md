@@ -1,5 +1,5 @@
 ---
-title: '方法: C++ Interop を使用して Unicode 文字列をマーシャ リング'
+title: '方法: C++ Interop を使用して Unicode 文字列をマーシャリングする'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,20 +9,20 @@ helpviewer_keywords:
 - data marshaling [C++], strings
 - Unicode, marshaling strings
 ms.assetid: 96c2141d-6c5d-43ef-a1aa-5785afb9a9aa
-ms.openlocfilehash: 37b56834e000cff686557730252f3d425f642772
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f666e52b604e4713f02cb14744ac12a0407366a3
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400553"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "79544887"
 ---
-# <a name="how-to-marshal-unicode-strings-using-c-interop"></a>方法: C++ Interop を使用して Unicode 文字列をマーシャ リング
+# <a name="how-to-marshal-unicode-strings-using-c-interop"></a>方法: C++ Interop を使用して Unicode 文字列をマーシャリングする
 
-このトピックでは、Visual C の相互運用性の 1 つのファセットを示します。 詳細については、次を参照してください。[を使用して C++ Interop (暗黙の PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)します。
+このトピックでは、ビジュアルC++相互運用性の1つの側面を示します。 詳細については、「 [Interop (暗黙のC++ PInvoke) の使用](../dotnet/using-cpp-interop-implicit-pinvoke.md)」を参照してください。
 
-次のコード例、[マネージ、アンマネージ](../preprocessor/managed-unmanaged.md)#pragma ディレクティブを実装するマネージ コードと同じファイル内の関数をアンマネージが個別のファイルに定義されている場合、これらの関数が同じ方法で相互運用。 アンマネージ関数のみを含むファイルを使用してコンパイルする必要はありません[/clr (共通言語ランタイムのコンパイル)](../build/reference/clr-common-language-runtime-compilation.md)します。
+次のコード例では、マネージ[、アン](../preprocessor/managed-unmanaged.md)マネージ #pragma ディレクティブを使用して、マネージ関数とアンマネージ関数を同じファイルに実装しますが、これらの関数は、別々のファイルで定義されている場合と同じ方法で相互運用します。 アンマネージ関数のみを含むファイルを[/clr (共通言語ランタイムのコンパイル)](../build/reference/clr-common-language-runtime-compilation.md)でコンパイルする必要はありません。
 
-このトピックでは、Unicode 文字列をする方法を示しますマネージからアンマネージ関数では、その逆に渡されます。 他の文字列型との相互運用を次のトピックを参照してください。
+このトピックでは、Unicode 文字列をマネージ関数からアンマネージ関数に渡す方法、およびその逆を行う方法について説明します。 他の文字列型との相互運用については、次のトピックを参照してください。
 
 - [方法: C++ Interop を使用して ANSI 文字列をマーシャリングする](../dotnet/how-to-marshal-ansi-strings-using-cpp-interop.md)
 
@@ -30,9 +30,9 @@ ms.locfileid: "62400553"
 
 ## <a name="example"></a>例
 
-Unicode 文字列をマネージからアンマネージ関数に渡す、(Vcclr.h で宣言) PtrToStringChars 関数を使用するマネージ文字列が格納されているメモリにアクセスします。 このアドレスはネイティブ関数に渡される、ために、メモリを固定することが重要です[pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md)を文字列データの再配置されることを防ぐためにガベージ コレクション サイクルを実行中に、アンマネージ関数を実行します。
+マネージ関数からアンマネージ関数に Unicode 文字列を渡すには、PtrToStringChars 関数 (Vcclr .h で宣言されています) を使用して、マネージ文字列が格納されているメモリ内のにアクセスできます。 このアドレスはネイティブ関数に渡されるため、文字列データが再配置されないように[pin_ptr (C++/cli)](../extensions/pin-ptr-cpp-cli.md)で固定することが重要です。アンマネージ関数の実行中にガベージコレクションサイクルを実行する必要があります。
 
-```
+```cpp
 // MarshalUnicode1.cpp
 // compile with: /clr
 #include <iostream>
@@ -63,9 +63,9 @@ int main() {
 
 ## <a name="example"></a>例
 
-次の例では、アンマネージ関数によって呼び出されるマネージ関数で Unicode 文字列にアクセスするために必要なデータのマーシャ リングを示します。 ネイティブの Unicode 文字列を受け取ると、マネージ関数を使用して管理対象の文字列に変換、<xref:System.Runtime.InteropServices.Marshal.PtrToStringUni%2A>メソッド。
+次の例は、アンマネージ関数によって呼び出されたマネージ関数で Unicode 文字列にアクセスするために必要なデータマーシャリングを示しています。 ネイティブ Unicode 文字列を受け取るマネージ関数は、<xref:System.Runtime.InteropServices.Marshal.PtrToStringUni%2A> メソッドを使用してマネージ文字列に変換します。
 
-```
+```cpp
 // MarshalUnicode2.cpp
 // compile with: /clr
 #include <iostream>
@@ -95,6 +95,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [C++ Interop (暗黙の PInvoke) の使用](../dotnet/using-cpp-interop-implicit-pinvoke.md)

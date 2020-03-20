@@ -1,13 +1,6 @@
 ---
 title: データベース属性によるデータ アクセスの簡略化
 ms.date: 10/19/2018
-f1_keywords:
-- vc-attr.db_param
-- vc-attr.db_column
-- vc-attr.db_accessor
-- vc-attr.db_command
-- vc-attr.db_table
-- vc-attr.db_source
 helpviewer_keywords:
 - attributes [C++], database
 - attributes [C++], data access
@@ -18,54 +11,55 @@ helpviewer_keywords:
 - OLE DB consumers [C++], database attributes
 - attributes [C++], OLE DB consumer
 ms.assetid: 560d2456-e307-4cb7-ba7b-4d0ed674697f
-ms.openlocfilehash: 83519ffff7dd1f1b5f8a635f094932a1f9728193
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d22f8a25bc7bb58f72346a15edb51f062c44e1b4
+ms.sourcegitcommit: 44eeb065c3148d0484de791080a3f963109744fc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404469"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79546177"
 ---
 # <a name="simplifying-data-access-with-database-attributes"></a>データベース属性によるデータ アクセスの簡略化
 
-このトピックでは、データベース操作を簡略化するデータベースの属性の使用を示します。
+このトピックでは、データベースの属性を使用してデータベース操作を簡略化する方法について説明します。
 
-データベースの情報にアクセスする基本的な方法では、データベース内のコマンド (またはテーブル) クラスと特定のテーブルのユーザー レコード クラスを作成します。 データベースの属性は、以前行う必要があるテンプレート宣言の一部を簡略化します。
+データベースから情報にアクセスする基本的な方法は、データベース内の特定のテーブルに対して、コマンド (またはテーブル) クラスとユーザーレコードクラスを作成することです。 データベース属性を使用すると、以前に実行していたテンプレート宣言の一部が簡略化されます。
 
-次のセクションでは、データベースの属性の使用を示すためは、2 つの同等のテーブルとユーザー レコード クラスの宣言の操作を表示する: 最初の属性を使用して、2 つ目は、OLE DB テンプレートを使用します。 このような宣言コードは通常 authors.h、テーブルまたはコマンド オブジェクトのという名前のヘッダー ファイルなど。
+データベース属性の使用方法を示すために、次のセクションでは、2つの同等のテーブルとユーザーレコードクラスの宣言を示します。1つは属性を使用し、もう1つは OLE DB テンプレートを使用します。 通常、このような宣言コードは、テーブルまたはコマンドオブジェクトのという名前のヘッダーファイルに配置されます (例、Authors. h)。
 
-2 つのファイルを比較すると、属性を使用するがどれだけ単純がわかります。 相違点の一部は。
+2つのファイルを比較することで、属性をどれほど簡単に使用できるかを確認できます。 違いは次のとおりです。
 
-- 属性を使用するだけである 1 つのクラスを宣言する:`CAuthors`テンプレートで 2 つを宣言しているときに、:`CAuthorsNoAttrAccessor`と`CAuthorsNoAttr`します。
+- 属性を使用する場合、1つのクラスを宣言するだけで済みます `CAuthors`。テンプレートでは、2つの `CAuthorsNoAttrAccessor` と `CAuthorsNoAttr`を宣言する必要があります。
 
-- `db_source`属性付きのバージョンでの呼び出しは、`OpenDataSource()`テンプレートの宣言に呼び出します。
+- 属性付きバージョンでの `db_source` の呼び出しは、テンプレート宣言の `OpenDataSource()` 呼び出しに相当します。
 
-- `db_table`属性付きのバージョンでの呼び出しは次のテンプレートの宣言と同等です。
+- 属性付きバージョンでの `db_table` の呼び出しは、次のテンプレート宣言と同じです。
 
     ```cpp
     class CAuthorsNoAttr : public CTable<CAccessor<CAuthorsNoAttrAccessor>>
     ```
 
-- `db_column`属性付きのバージョンでの呼び出しは、列マップに同等です (を参照してください`BEGIN_COLUMN_MAP ... END_COLUMN_MAP`) テンプレートの宣言にします。
+- 属性付きバージョンでの `db_column` の呼び出しは、テンプレート宣言の列マップ (`BEGIN_COLUMN_MAP ... END_COLUMN_MAP`を参照) に相当します。
 
-属性は、ユーザー レコード クラスの宣言を挿入します。 ユーザー レコード クラスと等しい`CAuthorsNoAttrAccessor`テンプレート宣言のです。 場合は、テーブル クラス`CAuthors`、挿入されたユーザー レコード クラスの名前は`CAuthorsAccessor`、挿入されたコードではその宣言だけを表示できます。 詳細については、「Attribute-Injected ユーザー レコード クラス」を参照してください[ユーザー レコード](../../data/oledb/user-records.md)します。
+属性によって、ユーザーレコードクラスの宣言が挿入されます。 ユーザーレコードクラスは、テンプレート宣言内の `CAuthorsNoAttrAccessor` に相当します。 テーブルクラスが `CAuthors`場合、挿入されたユーザーレコードクラスの名前は `CAuthorsAccessor`であり、挿入されたコードでのみ宣言を表示できます。 詳細については、「[ユーザーレコード](../../data/oledb/user-records.md)」の「属性で挿入されたユーザーレコードクラス」を参照してください。
 
-属性付きおよびテンプレートを使ったコードを使用して行セット プロパティを設定する必要があります`CDBPropSet::AddProperty`します。
+属性付きコードとテンプレート化されたコードの両方で、`CDBPropSet::AddProperty`を使用して行セットプロパティを設定する必要があります。
 
-このトピックで説明する属性については、次を参照してください。 [OLE DB コンシューマー属性](../../windows/ole-db-consumer-attributes.md)します。
+このトピックで説明する属性の詳細については、「 [OLE DB コンシューマー属性](../../windows/ole-db-consumer-attributes.md)」を参照してください。
 
 > [!NOTE]
-> 次`include`ステートメントは次の例をコンパイルするために必要なもの。
+> 次の `include` ステートメントは、以下の例をコンパイルするために必要です。
+
 > ```cpp
 > #include <atlbase.h>
 > #include <atlplus.h>
 > #include <atldbcli.h>
 > ```
 
-## <a name="table-and-accessor-declaration-using-attributes"></a>テーブルおよびアクセサーの宣言属性を使用します。
+## <a name="table-and-accessor-declaration-using-attributes"></a>属性を使用したテーブルとアクセサーの宣言
 
-次のコード呼び出し`db_source`と`db_table`テーブル クラスにします。 `db_source` データ ソース、使用する接続を指定します。 `db_table` table クラスを宣言する適切なテンプレート コードを挿入します。 `db_column` 列マップを指定し、アクセサーの宣言を挿入します。 ATL をサポートするすべてのプロジェクトで、OLE DB コンシューマー属性を使用することができます。
+次のコードは、table クラスで `db_source` と `db_table` を呼び出します。 `db_source` は、使用するデータソースと接続を指定します。 `db_table` は、テーブルクラスを宣言するための適切なテンプレートコードを挿入します。 列マップを指定し、アクセサー宣言を挿入 `db_column` ます。 ATL をサポートするプロジェクトでは OLE DB コンシューマー属性を使用できます。
 
-属性を使用してテーブルおよびアクセサーの宣言を次に示します。
+属性を使用したテーブルとアクセサーの宣言を次に示します。
 
 ```cpp
 //////////////////////////////////////////////////////////////////////
@@ -100,9 +94,9 @@ public:
 };
 ```
 
-## <a name="table-and-accessor-declaration-using-templates"></a>テーブルおよびアクセサーの宣言テンプレートを使用します。
+## <a name="table-and-accessor-declaration-using-templates"></a>テンプレートを使用したテーブルとアクセサーの宣言
 
-テンプレートを使用してテーブルおよびアクセサーの宣言を次に示します。
+テンプレートを使用したテーブルとアクセサーの宣言を次に示します。
 
 ```cpp
 //////////////////////////////////////////////////////////////////////
@@ -206,6 +200,6 @@ HRESULT hr = Open(m_session, "Authors", pPropSet);
 };
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [OLE DB コンシューマー属性](../../windows/ole-db-consumer-attributes.md)

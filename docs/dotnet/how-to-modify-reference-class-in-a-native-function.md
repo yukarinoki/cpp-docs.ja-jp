@@ -1,27 +1,27 @@
 ---
-title: '方法: ネイティブ関数の参照クラスを変更します。'
+title: '方法: ネイティブ関数の参照クラスを変更する'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - platform invoke, reference class
 - reference types, modifying in a C++ native function
 ms.assetid: c701145b-62a0-4c4b-b32a-db8d69a59720
-ms.openlocfilehash: c24bca5269cc924482c727d921fd24310f016824
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b3368c8cde3d48be1c72fcc0d7b99f2d0ecb10d7
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404391"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "79544881"
 ---
-# <a name="how-to-modify-reference-class-in-a-native-function"></a>方法: ネイティブ関数の参照クラスを変更します。
+# <a name="how-to-modify-reference-class-in-a-native-function"></a>方法: ネイティブ関数の参照クラスを変更する
 
-CLR 配列を持つ参照クラスをネイティブ関数に渡すし、PInvoke サービスを使用してクラスを変更できます。
+CLR 配列を含む参照クラスをネイティブ関数に渡し、PInvoke サービスを使用してクラスを変更できます。
 
 ## <a name="example"></a>例
 
-次のネイティブ ライブラリをコンパイルします。
+次のネイティブライブラリをコンパイルします。
 
-```
+```cpp
 // modify_ref_class_in_native_function.cpp
 // compile with: /LD
 #include <stdio.h>
@@ -51,7 +51,7 @@ extern "C"  {
 
 次のアセンブリをコンパイルします。
 
-```
+```cpp
 // modify_ref_class_in_native_function_2.cpp
 // compile with: /clr
 using namespace System;
@@ -89,6 +89,6 @@ In native: intarr: 100, 200
 In managed: intarr: 300, 400
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [C++ Interop (暗黙の PInvoke) の使用](../dotnet/using-cpp-interop-implicit-pinvoke.md)

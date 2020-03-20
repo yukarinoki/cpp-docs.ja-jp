@@ -7,7 +7,6 @@ f1_keywords:
 - cliext::collection_adapter
 - cliext::collection_adapter::base
 - cliext::collection_adapter::begin
-- cliext::collection_adapter
 - cliext::collection_adapter::collection_adapter
 - cliext::collection_adapter::difference_type
 - cliext::collection_adapter::end
@@ -49,16 +48,16 @@ helpviewer_keywords:
 - operator= member [STL/CLR]
 - range_adapter member [STL/CLR]
 ms.assetid: 71ce7e51-42b6-4f70-9595-303791a97677
-ms.openlocfilehash: d5c554439d9bb418b9b62484ee10cd6917cf1777
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bdaf5e0e8e4d9620e7a55dfff84f271f0059faf3
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397680"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79545691"
 ---
 # <a name="adapter-stlclr"></a>adapter (STL/CLR)
 
-STL/CLR ヘッダー `<cliext/adapter>` 2 つのテンプレート クラスを指定します (`collection_adapter`と`range_adapter`)、およびテンプレート関数は、`make_collection`します。
+STL/CLR ヘッダー `<cliext/adapter>` は、2つのテンプレートクラス (`collection_adapter` と `range_adapter`) を指定し、テンプレート関数を `make_collection`します。
 
 ## <a name="syntax"></a>構文
 
@@ -66,28 +65,28 @@ STL/CLR ヘッダー `<cliext/adapter>` 2 つのテンプレート クラスを�
 #include <cliext/adapter>
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**ヘッダー:** \<cliext/アダプター >
+**ヘッダー:** \<cliext/adapter >
 
-**Namespace:** cliext
+**名前空間:** cliext
 
 ## <a name="declarations"></a>宣言
 
 |クラス|説明|
 |-----------|-----------------|
-|[collection_adapter (STL/CLR)](#collection_adapter)|範囲として基本クラス ライブラリ (BCL) のコレクションをラップします。|
-|[range_adapter (STL/CLR)](#range_adapter)|BCL コレクションとして範囲をラップします。|
+|[collection_adapter (STL/CLR)](#collection_adapter)|基本クラスライブラリ (BCL) コレクションを範囲としてラップします。|
+|[range_adapter (STL/CLR)](#range_adapter)|範囲を BCL コレクションとしてラップします。|
 
 |関数|説明|
 |--------------|-----------------|
-|[make_collection (STL/CLR)](#make_collection)|反復子のペアを使用して範囲アダプターを作成します。|
+|[make_collection (STL/CLR)](#make_collection)|反復子ペアを使用して範囲アダプターを作成します。|
 
 ## <a name="members"></a>メンバー
 
-## <a name="collection_adapter"></a> collection_adapter (STL/CLR)
+## <a name="collection_adapter-stlclr"></a><a name="collection_adapter"></a>collection_adapter (STL/CLR)
 
-STL/CLR コンテナーとして使用するための .NET コレクションをラップします。 A`collection_adapter`は単純な STL/CLR コンテナー オブジェクトを表すテンプレート クラスです。 基本クラス ライブラリ (BCL) インターフェイスをラップし、被制御シーケンスの操作に使用する反復子のペアを返します。
+STL/CLR コンテナーとして使用するために .NET コレクションをラップします。 `collection_adapter` は、単純な STL/CLR コンテナーオブジェクトを記述するテンプレートクラスです。 これは、基本クラスライブラリ (BCL) インターフェイスをラップし、被制御シーケンスを操作するために使用する反復子ペアを返します。
 
 ### <a name="syntax"></a>構文
 
@@ -131,14 +130,14 @@ template<typename Key,
 
 |特殊化|説明|
 |--------------------|-----------------|
-|IEnumerable|要素のシーケンス。|
+|IEnumerable|要素をシーケンス処理します。|
 |ICollection|要素のグループを保持します。|
-|IList|要素の順序付きのグループを保持します。|
-|IDictionary|{0} キー、値} の維持のペア。|
-|IEnumerable\<値 >|型指定された要素のシーケンス。|
+|IList|要素の順序付けられたグループを保持します。|
+|IDictionary|{Key, value} のペアのセットを保持します。|
+|IEnumerable\<値 >|型指定された要素を通じてシーケンス処理を行います。|
 |ICollection\<値 >|型指定された要素のグループを保持します。|
-|IList\<値 >|型指定された要素の順序付きのグループを保持します。|
-|IDictionary\<値 >|型指定された {0} キー、値} のセットを維持のペア。|
+|IList\<値 >|型指定された要素の順序付けられたグループを保持します。|
+|IDictionary\<値 >|型指定された {key, value} のペアのセットを保持します。|
 
 ### <a name="members"></a>メンバー
 
@@ -146,8 +145,8 @@ template<typename Key,
 |---------------------|-----------------|
 |[collection_adapter::difference_type (STL/CLR)](#difference_type)|2 つの要素間の距離を表す、符号付きの型です。|
 |[collection_adapter::iterator (STL/CLR)](#iterator)|被制御シーケンスの反復子の型です。|
-|[collection_adapter::key_type (STL/CLR)](#key_type)|ディクショナリのキーの型。|
-|[collection_adapter::mapped_type (STL/CLR)](#mapped_type)|ディクショナリの値の型。|
+|[collection_adapter::key_type (STL/CLR)](#key_type)|ディクショナリキーの型。|
+|[collection_adapter::mapped_type (STL/CLR)](#mapped_type)|ディクショナリ値の型。|
 |[collection_adapter::reference (STL/CLR)](#reference)|要素への参照の型です。|
 |[collection_adapter::size_type (STL/CLR)](#size_type)|2 つの要素間の距離を表す、符号付きの型です。|
 |[collection_adapter::value_type (STL/CLR)](#value_type)|要素の型。|
@@ -156,20 +155,20 @@ template<typename Key,
 |---------------------|-----------------|
 |[collection_adapter::base (STL/CLR)](#base)|ラップされた BCL インターフェイスを指定します。|
 |[collection_adapter::begin (STL/CLR)](#begin)|被制御シーケンスの先頭を指定します。|
-|[collection_adapter::collection_adapter (STL/CLR)](#collection_adapter_collection_adapter)|アダプター オブジェクトを構築します。|
+|[collection_adapter::collection_adapter (STL/CLR)](#collection_adapter_collection_adapter)|アダプターオブジェクトを構築します。|
 |[collection_adapter::end (STL/CLR)](#end)|被制御シーケンスの末尾を指定します。|
 |[collection_adapter::size (STL/CLR)](#size)|要素の数をカウントします。|
 |[collection_adapter::swap (STL/CLR)](#swap)|2 つのコンテナーのコンテンツを交換します。|
 
 |演算子|説明|
 |--------------|-----------------|
-|[collection_adapter::operator= (STL/CLR)](#op_eq)|格納された BCL ハンドルが置き換えられます。|
+|[collection_adapter::operator= (STL/CLR)](#op_eq)|格納されている BCL ハンドルを置き換えます。|
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-STL/CLR コンテナーとしての BCL のコンテナーを操作するのにには、このテンプレート クラスを使用します。 `collection_adapter`要素のシーケンスを制御、BCL のインターフェイスを識別するハンドルを格納します。 A`collection_adapter`オブジェクト`X`入力反復子のペアを返します`X.begin()`と`X.end()`の順序で、要素のアクセスに使用することです。 特化された型の一部もを記述できるように`X.size()`被制御シーケンスの長さを決定します。
+このテンプレートクラスを使用して、BCL コンテナーを STL/CLR コンテナーとして操作します。 `collection_adapter` は、要素のシーケンスを制御する BCL インターフェイスへのハンドルを格納します。 `collection_adapter` オブジェクト `X` は、要素に順番にアクセスするために使用する入力反復子 `X.begin()` と `X.end()` のペアを返します。 一部の特殊化では、被制御シーケンスの長さを決定するために `X.size()` を作成することもできます。
 
-## <a name="base"></a> collection_adapter::base (STL/CLR)
+## <a name="collection_adapterbase-stlclr"></a><a name="base"></a>collection_adapter:: base (STL/CLR)
 
 ラップされた BCL インターフェイスを指定します。
 
@@ -179,9 +178,9 @@ STL/CLR コンテナーとしての BCL のコンテナーを操作するのに�
 Coll^ base();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-メンバー関数は、ストアドの BCL インターフェイスのハンドルを返します。
+このメンバー関数は、格納されている BCL インターフェイスハンドルを返します。
 
 ### <a name="example"></a>例
 
@@ -213,7 +212,7 @@ x x x x x x
 base() same = True
 ```
 
-## <a name="begin"></a> collection_adapter::begin (STL/CLR)
+## <a name="collection_adapterbegin-stlclr"></a><a name="begin"></a>collection_adapter:: begin (STL/CLR)
 
 被制御シーケンスの先頭を指定します。
 
@@ -223,9 +222,9 @@ base() same = True
 iterator begin();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-メンバー関数は、被制御シーケンス、または空のシーケンスの末尾を越えた最初の要素を指定する入力反復子を返します。
+このメンバー関数は、被制御シーケンスの最初の要素、または空のシーケンスの末尾の次の位置を指定する入力反復子を返します。
 
 ### <a name="example"></a>例
 
@@ -264,9 +263,9 @@ a b c
 *++begin() = b
 ```
 
-## <a name="collection_adapter_collection_adapter"></a> collection_adapter::collection_adapter (STL/CLR)
+## <a name="collection_adaptercollection_adapter-stlclr"></a><a name="collection_adapter_collection_adapter"></a>collection_adapter:: collection_adapter (STL/CLR)
 
-アダプター オブジェクトを構築します。
+アダプターオブジェクトを構築します。
 
 ### <a name="syntax"></a>構文
 
@@ -280,36 +279,36 @@ collection_adapter(Coll^ collection);
 #### <a name="parameters"></a>パラメーター
 
 *collection*<br/>
-BCL をラップするハンドル。
+ラップする BCL ハンドル。
 
 *right*<br/>
 コピーするオブジェクト。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-コンス トラクター。
+コンストラクター:
 
 `collection_adapter();`
 
-格納されたハンドルを初期化します`nullptr`します。
+`nullptr`を使用して、格納されているハンドルを初期化します。
 
-コンス トラクター。
+コンストラクター:
 
 `collection_adapter(collection_adapter<Coll>% right);`
 
-格納されたハンドルを初期化します`right.` [collection_adapter::base (STL/CLR)](../dotnet/collection-adapter-base-stl-clr.md)`()`します。
+`right.`[collection_adapter:: base (STL/CLR)](../dotnet/collection-adapter-base-stl-clr.md)`()`を使用して、格納されているハンドルを初期化します。
 
-コンス トラクター。
+コンストラクター:
 
 `collection_adapter(collection_adapter<Coll>^ right);`
 
-格納されたハンドルを初期化します`right->` [collection_adapter::base (STL/CLR)](../dotnet/collection-adapter-base-stl-clr.md)`()`します。
+`right->`[collection_adapter:: base (STL/CLR)](../dotnet/collection-adapter-base-stl-clr.md)`()`を使用して、格納されているハンドルを初期化します。
 
-コンス トラクター。
+コンストラクター:
 
 `collection_adapter(Coll^ collection);`
 
-格納されたハンドルを初期化します`collection`します。
+`collection`を使用して、格納されているハンドルを初期化します。
 
 ### <a name="example"></a>例
 
@@ -358,9 +357,9 @@ x x x x x x
 x x x x x x
 ```
 
-## <a name="difference_type"></a> collection_adapter::difference_type (STL/CLR)
+## <a name="collection_adapterdifference_type-stlclr"></a><a name="difference_type"></a>collection_adapter::d ifference_type (STL/CLR)
 
-2 つの要素間の距離を符号付きの型。
+2つの要素間の符号付き距離の型。
 
 ### <a name="syntax"></a>構文
 
@@ -368,9 +367,9 @@ x x x x x x
 typedef int difference_type;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-この型は、符号付きの要素の数を表します。
+この型は、署名された要素の数を表します。
 
 ### <a name="example"></a>例
 
@@ -410,7 +409,7 @@ a b c
 end()-begin() = 3
 ```
 
-## <a name="end"></a> collection_adapter::end (STL/CLR)
+## <a name="collection_adapterend-stlclr"></a><a name="end"></a>collection_adapter:: end (STL/CLR)
 
 被制御シーケンスの末尾を指定します。
 
@@ -420,9 +419,9 @@ end()-begin() = 3
 iterator end();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-メンバー関数は、被制御シーケンスの最後の位置を指し示す入力反復子を返します。
+このメンバー関数は、被制御シーケンスの末尾の次の位置を指し示す入力反復子を返します。
 
 ### <a name="example"></a>例
 
@@ -455,7 +454,7 @@ int main()
 a b c
 ```
 
-## <a name="iterator"></a> collection_adapter::iterator (STL/CLR)
+## <a name="collection_adapteriterator-stlclr"></a><a name="iterator"></a>collection_adapter:: iterator (STL/CLR)
 
 被制御シーケンスの反復子の型です。
 
@@ -465,9 +464,9 @@ a b c
 typedef T1 iterator;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-この型が指定されていない型のオブジェクトを表します`T1`被制御シーケンスの入力反復子として機能することができます。
+この型は、被制御シーケンスの入力反復子として使用できる、未指定の型 `T1` のオブジェクトを表します。
 
 ### <a name="example"></a>例
 
@@ -500,9 +499,9 @@ int main()
 a b c
 ```
 
-## <a name="key_type"></a> collection_adapter::key_type (STL/CLR)
+## <a name="collection_adapterkey_type-stlclr"></a><a name="key_type"></a>collection_adapter:: key_type (STL/CLR)
 
-ディクショナリのキーの型。
+ディクショナリキーの型。
 
 ### <a name="syntax"></a>構文
 
@@ -510,9 +509,9 @@ a b c
 typedef Key key_type;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-型はテンプレート パラメーターのシノニム`Key`の特殊化で`IDictionary`または`IDictionary<Value>`。 それ以外の場合は定義されていません。
+この型は、テンプレートパラメーター `Key`のシノニムであり、`IDictionary` または `IDictionary<Value>`に特化されています。それ以外の場合は定義されません。
 
 ### <a name="example"></a>例
 
@@ -550,9 +549,9 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="mapped_type"></a> collection_adapter::mapped_type (STL/CLR)
+## <a name="collection_adaptermapped_type-stlclr"></a><a name="mapped_type"></a>collection_adapter:: mapped_type (STL/CLR)
 
-ディクショナリの値の型。
+ディクショナリ値の型。
 
 ### <a name="syntax"></a>構文
 
@@ -560,9 +559,9 @@ int main()
 typedef Value mapped_type;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-型はテンプレート パラメーターのシノニム`Value`の特殊化で`IDictionary`または`IDictionary<Value>`。 それ以外の場合は定義されていません。
+この型は、テンプレートパラメーター `Value`のシノニムであり、`IDictionary` または `IDictionary<Value>`に特化されています。それ以外の場合は定義されません。
 
 ### <a name="example"></a>例
 
@@ -600,9 +599,9 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="op_eq"></a> collection_adapter::operator = (STL/CLR)
+## <a name="collection_adapteroperator-stlclr"></a><a name="op_eq"></a>collection_adapter:: operator = (STL/CLR)
 
-格納された BCL ハンドルが置き換えられます。
+格納されている BCL ハンドルを置き換えます。
 
 ### <a name="syntax"></a>構文
 
@@ -615,9 +614,9 @@ collection_adapter<Coll>% operator=(collection_adapter<Coll>% right);
 *right*<br/>
 コピーするアダプター。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-メンバー演算子コピー*右*、オブジェクトを返します`*this`します。 格納された BCL ハンドルを置き換えるストアドの BCL ハンドルのコピーを使用する*右*します。
+メンバー演算子は、オブジェクトに*right*をコピーし、`*this`を返します。 このメソッドを使用して、格納されている BCL ハンドルを*右側*の格納されている bcl ハンドルのコピーで置き換えます。
 
 ### <a name="example"></a>例
 
@@ -657,7 +656,7 @@ a b c
 a b c
 ```
 
-## <a name="reference"></a> collection_adapter::reference (STL/CLR)
+## <a name="collection_adapterreference-stlclr"></a><a name="reference"></a>collection_adapter:: reference (STL/CLR)
 
 要素への参照の型です。
 
@@ -667,7 +666,7 @@ a b c
 typedef value_type% reference;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 この型は、要素への参照を表します。
 
@@ -705,7 +704,7 @@ int main()
 a b c
 ```
 
-## <a name="size"></a> collection_adapter::size (STL/CLR)
+## <a name="collection_adaptersize-stlclr"></a><a name="size"></a>collection_adapter:: size (STL/CLR)
 
 要素の数をカウントします。
 
@@ -715,9 +714,9 @@ a b c
 size_type size();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-このメンバー関数は、被制御シーケンスの長さを返します。 特殊化で定義されていない`IEnumerable`または`IEnumerable<Value>`します。
+このメンバー関数は、被制御シーケンスの長さを返します。 `IEnumerable` または `IEnumerable<Value>`の特殊化では定義されていません。
 
 ### <a name="example"></a>例
 
@@ -748,9 +747,9 @@ x x x x x x
 size() = 6
 ```
 
-## <a name="size_type"></a> collection_adapter::size_type (STL/CLR)
+## <a name="collection_adaptersize_type-stlclr"></a><a name="size_type"></a>collection_adapter:: size_type (STL/CLR)
 
-2 つの要素の間の距離を符号付きの型。
+2つの要素間の符号付き距離の型。
 
 ### <a name="syntax"></a>構文
 
@@ -758,9 +757,9 @@ size() = 6
 typedef int size_type;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-この型は、負でない要素の数を表します。
+この型は、負でない要素数を表します。
 
 ### <a name="example"></a>例
 
@@ -793,7 +792,7 @@ x x x x x x
 size() = 6
 ```
 
-## <a name="swap"></a> collection_adapter::swap (STL/CLR)
+## <a name="collection_adapterswap-stlclr"></a><a name="swap"></a>collection_adapter:: swap (STL/CLR)
 
 2 つのコンテナーのコンテンツを交換します。
 
@@ -808,9 +807,9 @@ void swap(collection_adapter<Coll>% right);
 *right*<br/>
 コンテンツを交換するコンテナー。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-メンバー関数は、交換の間で格納されている BCL ハンドル`*this`と*右*します。
+このメンバー関数は、格納されている BCL ハンドルを `*this` と*right*の間で交換します。
 
 ### <a name="example"></a>例
 
@@ -862,7 +861,7 @@ x x x x x
 a b c
 ```
 
-## <a name="value_type"></a> collection_adapter::value_type (STL/CLR)
+## <a name="collection_adaptervalue_type-stlclr"></a><a name="value_type"></a>collection_adapter:: value_type (STL/CLR)
 
 要素の型。
 
@@ -872,9 +871,9 @@ a b c
 typedef Value value_type;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-型はテンプレート パラメーターのシノニム*値*、それ以外の場合のシノニムがある特殊化; に存在する場合`System::Object^`します。
+この型は、特殊化に存在する場合は、テンプレートパラメーター*値*のシノニムです。それ以外の場合は、`System::Object^`のシノニムになります。
 
 ### <a name="example"></a>例
 
@@ -911,9 +910,9 @@ int main()
 a b c
 ```
 
-## <a name="make_collection"></a> make_collection (STL/CLR)
+## <a name="make_collection-stlclr"></a><a name="make_collection"></a>make_collection (STL/CLR)
 
-ように、`range_adapter`反復子のペアから。
+反復子ペアから `range_adapter` を作成します。
 
 ### <a name="syntax"></a>構文
 
@@ -931,11 +930,11 @@ template<typename Iter>
 ラップする最初の反復子。
 
 *last*<br/>
-ラップする 2 つ目の反復子。
+ラップする2番目の反復子。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-このテンプレート関数は `gcnew range_adapter<Iter>(first, last)` を返します。 使用して構築する、`range_adapter<Iter>`反復子のペアからオブジェクト。
+このテンプレート関数は `gcnew range_adapter<Iter>(first, last)` を返します。 これを使用して、1組の反復子から `range_adapter<Iter>` オブジェクトを構築します。
 
 ### <a name="example"></a>例
 
@@ -989,9 +988,9 @@ SyncRoot not nullptr = True
 | a b c |
 ```
 
-## <a name="range_adapter"></a> range_adapter (STL/CLR)
+## <a name="range_adapter-stlclr"></a><a name="range_adapter"></a>range_adapter (STL/CLR)
 
-いくつかの基本クラス ライブラリ (BCL) インターフェイスを実装するために使用される反復子のペアをラップするテンプレート クラス。 Range_adapter を使用すると、BCL コレクションの場合と同様に、STL/CLR の範囲を操作できます。
+複数の基本クラスライブラリ (BCL) インターフェイスを実装するために使用される反復子のペアをラップするテンプレートクラス。 Range_adapter を使用して、STL/CLR 範囲を BCL コレクションのように操作します。
 
 ### <a name="syntax"></a>構文
 
@@ -1009,34 +1008,34 @@ template<typename Iter>
 #### <a name="parameters"></a>パラメーター
 
 *Iter*<br/>
-ラップされた反復子に関連付けられている型。
+ラップされた反復子に関連付けられた型。
 
 ### <a name="members"></a>メンバー
 
 |メンバー関数|説明|
 |---------------------|-----------------|
-|[range_adapter::range_adapter (STL/CLR)](#range_adapter_range_adapter)|アダプター オブジェクトを構築します。|
+|[range_adapter::range_adapter (STL/CLR)](#range_adapter_range_adapter)|アダプターオブジェクトを構築します。|
 
 |演算子|説明|
 |--------------|-----------------|
-|[range_adapter::operator= (STL/CLR)](#range_adapter_op_eq)|格納された反復子のペアを置き換えます。|
+|[range_adapter::operator= (STL/CLR)](#range_adapter_op_eq)|格納されている反復子のペアを置き換えます。|
 
 ### <a name="interfaces"></a>インターフェイス
 
-|Interface|説明|
+|インターフェイス|説明|
 |---------------|-----------------|
 |<xref:System.Collections.IEnumerable>|コレクション内の要素を反復処理します。|
 |<xref:System.Collections.ICollection>|要素のグループを保持します。|
-|<xref:System.Collections.Generic.IEnumerable%601>|コレクション内の型指定された要素を反復処理.|
+|<xref:System.Collections.Generic.IEnumerable%601>|コレクション内の型指定された要素を反復処理します。|
 |<xref:System.Collections.Generic.ICollection%601>|型指定された要素のグループを保持します。|
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-Range_adapter、さらに要素のシーケンスを区切る反復子のペアを格納します。 オブジェクトの順序で、要素を反復処理できる 4 つの BCL インターフェイスを実装します。 BCL のコンテナーと同様に STL/CLR の範囲を操作するのにには、このテンプレート クラスを使用します。
+Range_adapter は、要素のシーケンスを区切る反復子のペアを格納します。 オブジェクトには、要素を順番に反復処理できる4つの BCL インターフェイスが実装されています。 このテンプレートクラスを使用して、BCL コンテナーと同じように STL/CLR 範囲を操作します。
 
-## <a name="range_adapter_op_eq"></a> range_adapter::operator = (STL/CLR)
+## <a name="range_adapteroperator-stlclr"></a><a name="range_adapter_op_eq"></a>range_adapter:: operator = (STL/CLR)
 
-格納された反復子のペアを置き換えます。
+格納されている反復子のペアを置き換えます。
 
 ### <a name="syntax"></a>構文
 
@@ -1049,9 +1048,9 @@ range_adapter<Iter>% operator=(range_adapter<Iter>% right);
 *right*<br/>
 コピーするアダプター。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-メンバー演算子コピー*右*、オブジェクトを返します`*this`します。 使用して格納された反復子のペアのコピーに格納された反復子のペアを置換する*右*します。
+メンバー演算子は、オブジェクトに*right*をコピーし、`*this`を返します。 このメソッドを使用して、格納されている反復子ペアを*右*の格納されている反復子ペアのコピーに置き換えることができます。
 
 ### <a name="example"></a>例
 
@@ -1091,9 +1090,9 @@ a b c
 a b c
 ```
 
-## <a name="range_adapter_range_adapter"></a> range_adapter::range_adapter (STL/CLR)
+## <a name="range_adapterrange_adapter-stlclr"></a><a name="range_adapter_range_adapter"></a>range_adapter:: range_adapter (STL/CLR)
 
-アダプター オブジェクトを構築します。
+アダプターオブジェクトを構築します。
 
 ### <a name="syntax"></a>構文
 
@@ -1110,36 +1109,36 @@ range_adapter(Iter first, Iter last);
 ラップする最初の反復子。
 
 *last*<br/>
-ラップする 2 つ目の反復子。
+ラップする2番目の反復子。
 
 *right*<br/>
 コピーするオブジェクト。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-コンス トラクター。
+コンストラクター:
 
 `range_adapter();`
 
-既定で構築される反復子で格納された反復子のペアを初期化します。
+既定の構築反復子を使用して、格納された反復子ペアを初期化します。
 
-コンス トラクター。
+コンストラクター:
 
 `range_adapter(range_adapter<Iter>% right);`
 
-格納されているペアをコピーして格納された反復子のペアを初期化します*右*します。
+*右側*に格納されているペアをコピーすることによって、格納された反復子ペアを初期化します
 
-コンス トラクター。
+コンストラクター:
 
 `range_adapter(range_adapter<Iter>^ right);`
 
-格納されているペアをコピーして格納された反復子のペアを初期化します`*right`します。
+`*right`に格納されているペアをコピーすることにより、格納された反復子ペアを初期化します。
 
-コンス トラクター。
+コンストラクター:
 
 `range_adapter(Iter^ first, last);`
 
-格納された反復子のペアを初期化します*最初*と*最後*します。
+*最初*と*最後*の、格納されている反復子のペアを初期化します。
 
 ### <a name="example"></a>例
 

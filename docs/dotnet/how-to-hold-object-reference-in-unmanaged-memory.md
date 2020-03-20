@@ -1,5 +1,5 @@
 ---
-title: '方法: アンマネージ メモリ内のオブジェクト参照を保持します。'
+title: '方法: アンマネージ メモリ内にオブジェクト参照を保持する'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,20 +8,20 @@ helpviewer_keywords:
 - references, to objects in native functions
 - gcroot keyword [C++], object reference in native function
 ms.assetid: a61eb8ce-3982-477d-8d3d-2173fd57166d
-ms.openlocfilehash: 0d8dc341d1fe2c61eba098abec9258a2c6dade79
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2f2471e36d7551cab9edb68d7babeb1419e8e20c
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387293"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "79544953"
 ---
-# <a name="how-to-hold-object-reference-in-unmanaged-memory"></a>方法: アンマネージ メモリ内のオブジェクト参照を保持します。
+# <a name="how-to-hold-object-reference-in-unmanaged-memory"></a>方法: アンマネージ メモリ内にオブジェクト参照を保持する
 
-ラップする gcroot.h を使用することができます<xref:System.Runtime.InteropServices.GCHandle>をアンマネージ メモリ内の CLR オブジェクトの参照を保持します。 また、使用することができます`GCHandle`直接します。
+<xref:System.Runtime.InteropServices.GCHandle>をラップする gcroot を使用して、アンマネージメモリに CLR オブジェクト参照を保持することができます。 または、`GCHandle` を直接使用することもできます。
 
 ## <a name="example"></a>例
 
-```
+```cpp
 // hold_object_reference.cpp
 // compile with: /clr
 #include "gcroot.h"
@@ -57,9 +57,9 @@ StringWrapper::x == ManagedString
 
 ## <a name="example"></a>例
 
-`GCHandle` アンマネージ メモリ内のマネージ オブジェクトの参照を保持するための手段が表示されます。  使用する、<xref:System.Runtime.InteropServices.GCHandle.Alloc%2A>マネージ オブジェクトへの非透過ハンドルを作成するメソッドをおよび<xref:System.Runtime.InteropServices.GCHandle.Free%2A>を解放します。 また、<xref:System.Runtime.InteropServices.GCHandle.Target%2A>メソッドでは、マネージ コードでハンドルからオブジェクト参照を取得できます。
+`GCHandle` には、アンマネージメモリにマネージオブジェクト参照を保持する手段が用意されています。  <xref:System.Runtime.InteropServices.GCHandle.Alloc%2A> メソッドを使用して、マネージオブジェクトへの非透過的ハンドルを作成し、それを解放する <xref:System.Runtime.InteropServices.GCHandle.Free%2A> します。 また、<xref:System.Runtime.InteropServices.GCHandle.Target%2A> メソッドを使用すると、マネージコードのハンドルからオブジェクト参照を取得できます。
 
-```
+```cpp
 // hold_object_reference_2.cpp
 // compile with: /clr
 using namespace System;
@@ -94,6 +94,6 @@ int main() {
 StringWrapper::m_handle == ManagedString
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [C++ Interop (暗黙の PInvoke) の使用](../dotnet/using-cpp-interop-implicit-pinvoke.md)

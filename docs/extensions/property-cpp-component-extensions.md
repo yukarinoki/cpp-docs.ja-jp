@@ -2,18 +2,15 @@
 title: property (C++/CLI および C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
-f1_keywords:
-- property_cpp
-- property
 helpviewer_keywords:
 - property keyword [C++]
 ms.assetid: cc79d2b2-f013-4d81-8252-eece97a18704
-ms.openlocfilehash: 8ec76db37cffb1b3d15447165300bedf1a8771c9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 46501717755933b2bdc11ee4ee6249bfea9f18cd
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516507"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79545757"
 ---
 # <a name="property--ccli-and-ccx"></a>property (C++/CLI および C++/CX)
 
@@ -86,7 +83,7 @@ set アクセサーまたは get アクセサーのプロパティ メソッド�
 
 ## <a name="windows-runtime"></a>Windows ランタイム
 
-詳細については、「[プロパティ (C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh755807.aspx)」を参照してください。
+詳細については、「[プロパティ (C++/CX)](../cppcx/properties-c-cx.md)」を参照してください。
 
 ### <a name="requirements"></a>要件
 
@@ -125,7 +122,7 @@ raise メソッドのパラメーター。デリゲートのシグネチャと�
 *index_list*<br/>
 1 つ以上のインデックスのリスト (コンマ区切り)。角かっこ (添字演算子 []) で囲んで指定します。 各インデックスについて型を指定し、さらに必要に応じてプロパティ メソッドの本文で使用できる識別子も指定します。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 最初の構文例では、"*シンプル プロパティ*" を示します。ここでは `set` メソッドと `get` メソッドの両方を暗黙的に宣言しています。 コンパイラは自動的にプロパティの値を格納するためのプライベート フィールドを作成します。
 
@@ -167,7 +164,7 @@ get メソッドと set メソッドのアクセシビリティが異なって�
 
 コンパイラ オプション: `/clr`
 
-### <a name="examples"></a>使用例
+### <a name="examples"></a>例
 
 次の例は、プロパティのデータ メンバーとプロパティ ブロックの宣言方法と使用方法を示しています。  これにより、プロパティ アクセサーがクラスから定義できることもわかります。
 
@@ -213,6 +210,6 @@ test
 21
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [.NET および UWP でのコンポーネント拡張](component-extensions-for-runtime-platforms.md)

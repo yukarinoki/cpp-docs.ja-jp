@@ -12,7 +12,6 @@ f1_keywords:
 - ATL.CArrayRowset.CArrayRowset
 - ATL.CArrayRowset<TAccessor>.CArrayRowset
 - CArrayRowset::CArrayRowset
-- CArrayRowset
 - CArrayRowset<TAccessor>::CArrayRowset
 - ATL::CArrayRowset<TAccessor>::CArrayRowset
 - CArrayRowset<TAccessor>.Snapshot
@@ -43,16 +42,16 @@ helpviewer_keywords:
 - operator[], arrays
 - m_nRowsRead
 ms.assetid: 511427e1-73ca-4fd8-9ba1-ae9463557cb6
-ms.openlocfilehash: b257c4e95a99bfbc8042c5935638a70deac0ea7a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 66b7607eb28392196f6b7d3790aee976a861f2b6
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176162"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79545613"
 ---
 # <a name="carrayrowset-class"></a>CArrayRowset クラス
 
-配列の構文を使用して行セットの要素をアクセスします。
+配列構文を使用して、行セットの要素にアクセスします。
 
 ## <a name="syntax"></a>構文
 
@@ -66,9 +65,9 @@ class CArrayRowset :
 ### <a name="parameters"></a>パラメーター
 
 *TAccessor*<br/>
-行セットで使用するアクセサー クラスの型。
+行セットで使用するアクセサークラスの型。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** atldbcli.h
 
@@ -85,7 +84,7 @@ class CArrayRowset :
 
 |||
 |-|-|
-|[演算子&#91;&#93;](#operator)|行セットの要素にアクセスします。|
+|[Operator&#91;&#93;](#operator)|行セットの要素にアクセスします。|
 
 ### <a name="data-members"></a>データ メンバー
 
@@ -93,7 +92,7 @@ class CArrayRowset :
 |-|-|
 |[CArrayRowset::m_nRowsRead](#nrowsread)|既に読み取られた行の数。|
 
-## <a name="carrayrowset"></a> CArrayRowset::CArrayRowset
+## <a name="carrayrowsetcarrayrowset"></a><a name="carrayrowset"></a>CArrayRowset:: CArrayRowset
 
 新しい `CArrayRowset` オブジェクトを作成します。
 
@@ -105,12 +104,12 @@ CArrayRowset(int nMax = 100000);
 
 #### <a name="parameters"></a>パラメーター
 
-*nMax*<br/>
-[in]行セットの行の最大数。
+*N1 日*<br/>
+から行セット内の行の最大数。
 
-## <a name="snapshot"></a> Carrayrowset::snapshot
+## <a name="carrayrowsetsnapshot"></a><a name="snapshot"></a>CArrayRowset:: Snapshot
 
-メモリ、イメージまたはそのスナップショットを作成するのには、行セット全体を読み取ります。
+行セット全体をメモリに読み込み、そのイメージまたはスナップショットを作成します。
 
 ### <a name="syntax"></a>構文
 
@@ -118,9 +117,9 @@ CArrayRowset(int nMax = 100000);
 HRESULT Snapshot() throw();
 ```
 
-## <a name="operator"></a> CArrayRowset::operator
+## <a name="carrayrowsetoperator"></a><a name="operator"></a>CArrayRowset:: operator
 
-行セット内の行にアクセスするためには、配列に似た構文を提供します。
+行セット内の行にアクセスするための配列のような構文を提供します。
 
 ### <a name="syntax"></a>構文
 
@@ -131,7 +130,7 @@ TAccessor & operator[](int nrow);
 #### <a name="parameters"></a>パラメーター
 
 *TAccessor*<br/>
-行セットに格納されているアクセサーの種類を指定するテンプレート パラメーター。
+行セットに格納されているアクセサーの種類を指定するテンプレートパラメーター。
 
 *nRow*<br/>
 [in] (配列) にアクセスする、行の数です。
@@ -140,13 +139,13 @@ TAccessor & operator[](int nrow);
 
 要求された行の内容。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-場合*nRow*行セットの行の数を超える、例外がスローされます。
+*Nrow*が行セット内の行の数を超えると、例外がスローされます。
 
-## <a name="nrowsread"></a> CArrayRowset::m_nRowsRead
+## <a name="carrayrowsetm_nrowsread"></a><a name="nrowsread"></a>CArrayRowset:: m_nRowsRead
 
-既に読み取られた行セット内の行の数が含まれています。
+既に読み取られた行セット内の行の数を格納します。
 
 ### <a name="syntax"></a>構文
 
@@ -154,8 +153,8 @@ TAccessor & operator[](int nrow);
 ULONG m_nRowsRead;
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB コンシューマー テンプレートに関するページ](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB コンシューマー テンプレート リファレンス](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [CRowset クラス](../../data/oledb/crowset-class.md)

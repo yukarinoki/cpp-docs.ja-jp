@@ -6,17 +6,17 @@ helpviewer_keywords:
 - classes [C++], instantiating
 ms.assetid: 1c03cb0d-1459-4b5e-af65-97d6b3094fd7
 ms.openlocfilehash: 5fe7d6876b094c84fe3d4cdbba417106edcca528
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856368"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79545541"
 ---
 # <a name="how-to-define-and-consume-classes-and-structs-ccli"></a>方法: クラスと構造体を定義および使用する (C++/CLI)
 
 この記事では、/Cli でC++ユーザー定義の参照型と値型を定義および使用する方法について説明します。
 
-##  <a name="BKMK_Contents"></a> Contents
+##  <a name="contents"></a><a name="BKMK_Contents"></a> Contents
 
 [オブジェクトのインスタンス化](#BKMK_Object_instantiation)
 
@@ -38,7 +38,7 @@ ms.locfileid: "78856368"
 
 [デストラクターとファイナライザー](#BKMK_Destructors_and_finalizers)
 
-##  <a name="BKMK_Object_instantiation"></a>オブジェクトのインスタンス化
+##  <a name="object-instantiation"></a><a name="BKMK_Object_instantiation"></a>オブジェクトのインスタンス化
 
 参照 (ref) 型は、スタックまたはネイティブヒープではなく、マネージヒープでのみインスタンス化できます。 値型は、スタックまたはマネージヒープでインスタンス化できます。
 
@@ -93,7 +93,7 @@ int main() {
 }
 ```
 
-##  <a name="BKMK_Implicitly_abstract_classes"></a>暗黙的に抽象クラス
+##  <a name="implicitly-abstract-classes"></a><a name="BKMK_Implicitly_abstract_classes"></a>暗黙的に抽象クラス
 
 *暗黙的に抽象クラス*をインスタンス化することはできません。 クラスの基本型がインターフェイスで、そのクラスによって一部のインターフェイスのメンバー関数が実装されていない場合、そのクラスは暗黙的な抽象クラスです。
 
@@ -121,7 +121,7 @@ int main() {
 }
 ```
 
-##  <a name="BKMK_Type_visibility"></a>型の可視性
+##  <a name="type-visibility"></a><a name="BKMK_Type_visibility"></a>型の可視性
 
 共通言語ランタイム (CLR: Common Language Runtime) 型の可視性を制御できるため、アセンブリが参照された場合、アセンブリ内の型は、アセンブリ外で表示または非表示にできます。
 
@@ -218,7 +218,7 @@ int main() {
 in Public_Class
 ```
 
-##  <a name="BKMK_Member_visibility"></a>メンバーの可視性
+##  <a name="member-visibility"></a><a name="BKMK_Member_visibility"></a>メンバーの可視性
 
 アセンブリ外からパブリック クラスのメンバーにアクセスするのとは別に、同じアセンブリからそのメンバーにアクセスするには、アクセス指定子のペア `public`、`protected`、および `private` を使用します
 
@@ -406,7 +406,7 @@ exiting function of derived class
 =======================
 ```
 
-##  <a name="BKMK_Public_and_private_native_classes"></a>パブリックおよびプライベートのネイティブクラス
+##  <a name="public-and-private-native-classes"></a><a name="BKMK_Public_and_private_native_classes"></a>パブリックおよびプライベートのネイティブクラス
 
 ネイティブ型はマネージド型から参照できます。  たとえば、マネージド型の関数は、型がネイティブ構造体であるパラメーターを受け取ることができます。  マネージド型と関数がアセンブリ内でパブリックの場合は、ネイティブ型もパブリックである必要があります。
 
@@ -445,7 +445,7 @@ int main() {
 }
 ```
 
-##  <a name="BKMK_Static_constructors"></a> 静的コンストラクター
+##  <a name="static-constructors"></a><a name="BKMK_Static_constructors"></a> 静的コンストラクター
 
 クラスや構造体などの CLR 型は、静的データ メンバーの初期化に使用できる静的コンストラクターを持つことができます。  静的コンストラクターが呼び出されるのは、型の静的メンバーが初めてアクセスされる前の 1 度だけです。
 
@@ -491,7 +491,7 @@ in static constructor
 11
 ```
 
-##  <a name="BKMK_Semantics_of_the_this_pointer"></a>This ポインターのセマンティクス
+##  <a name="semantics-of-the-this-pointer"></a><a name="BKMK_Semantics_of_the_this_pointer"></a>This ポインターのセマンティクス
 
 Visual C++ を使用して型を定義する場合、参照型の `this` ポインターは "ハンドル" 型です。 値型の `this` ポインターは "内部ポインター" 型です。
 
@@ -546,7 +546,7 @@ int main() {
 10.89
 ```
 
-##  <a name="BKMK_Hide_by_signature_functions"></a>シグネチャによる隠ぺい関数
+##  <a name="hide-by-signature-functions"></a><a name="BKMK_Hide_by_signature_functions"></a>シグネチャによる隠ぺい関数
 
 標準 C++ では、基底クラスの関数は、派生クラスで同じ名前を持つ関数によって、その派生クラス関数に同じ数または種類のパラメーターがない場合でも非表示になります。 これは、*名前による隠ぺい*セマンティクスと呼ばれます。 参照型では、基底クラスの関数は、名前とパラメーター リストの両方が同じ場合に、派生クラスの関数によってのみ非表示にできます。 これは、*シグネチャによる隠ぺい*セマンティクスと呼ばれます。
 
@@ -654,7 +654,7 @@ Derived::Test4
 97
 ```
 
-##  <a name="BKMK_Copy_constructors"></a>コピーコンストラクター
+##  <a name="copy-constructors"></a><a name="BKMK_Copy_constructors"></a>コピーコンストラクター
 
 C++ 標準では、オブジェクトの移動時にコピー コンストラクターが呼び出されることを通知します。このため、オブジェクトの作成と破棄が同じアドレスで行われます。
 
@@ -719,7 +719,7 @@ S object 1 being destroyed, this=0018F37C
 S object 0 being destroyed, this=0018F378
 ```
 
-##  <a name="BKMK_Destructors_and_finalizers"></a>デストラクターとファイナライザー
+##  <a name="destructors-and-finalizers"></a><a name="BKMK_Destructors_and_finalizers"></a>デストラクターとファイナライザー
 
 参照型のデストラクターでは、リソースの確定的なクリーンアップを実行します。 ファイナライザーでは、アンマネージ リソースがクリーンアップされます。また、ファイナライザーはデストラクターが確定的に呼び出すか、ガベージ コレクターが非確定的に呼び出すことができます。 標準C++のデストラクターの詳細については、「[デストラクター](../cpp/destructors-cpp.md)」を参照してください。
 

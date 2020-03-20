@@ -5,7 +5,6 @@ f1_keywords:
 - ATL::IRowsetIdentityImpl
 - ATL.IRowsetIdentityImpl
 - IRowsetIdentityImpl
-- IsSameRow
 - IRowsetIdentityImpl.IsSameRow
 - ATL.IRowsetIdentityImpl.IsSameRow
 - IRowsetIdentityImpl::IsSameRow
@@ -14,16 +13,16 @@ helpviewer_keywords:
 - IRowsetIdentityImpl class
 - IsSameRow method
 ms.assetid: 56821edf-e045-40c8-96bd-231552cd5799
-ms.openlocfilehash: 51f8d7e832476619ccec277c9d73791041d146a6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3e8c976fcb23bf41d88d88be3887db4dde52379d
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390842"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79545895"
 ---
 # <a name="irowsetidentityimpl-class"></a>IRowsetIdentityImpl クラス
 
-OLE DB 実装[IRowsetIdentity](/previous-versions/windows/desktop/ms715913(v=vs.85))インターフェイスで、行の id のテストが可能です。
+行 id のテストを可能にする OLE DB [IRowsetIdentity](/previous-versions/windows/desktop/ms715913(v=vs.85))インターフェイスを実装します。
 
 ## <a name="syntax"></a>構文
 
@@ -36,12 +35,12 @@ class ATL_NO_VTABLE IRowsetIdentityImpl
 ### <a name="parameters"></a>パラメーター
 
 *T*<br/>
-派生したクラス`IRowsetIdentityImpl`します。
+`IRowsetIdentityImpl`から派生したクラス。
 
 *RowClass*<br/>
-記憶域ユニット、`HROW`します。
+`HROW`のストレージユニット。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** atldb.h
 
@@ -51,11 +50,11 @@ class ATL_NO_VTABLE IRowsetIdentityImpl
 
 |||
 |-|-|
-|[IsSameRow](#issamerow)|同じ行を参照しているかどうかを 2 つの行ハンドルを比較します。|
+|[IsSameRow](#issamerow)|2つの行ハンドルを比較して、同じ行を参照しているかどうかを確認します。|
 
-## <a name="issamerow"></a> IRowsetIdentityImpl::IsSameRow
+## <a name="irowsetidentityimplissamerow"></a><a name="issamerow"></a>IRowsetIdentityImpl:: IsSameRow
 
-同じ行を参照しているかどうかを 2 つの行ハンドルを比較します。
+2つの行ハンドルを比較して、同じ行を参照しているかどうかを確認します。
 
 ### <a name="syntax"></a>構文
 
@@ -66,13 +65,13 @@ STDMETHOD(IsSameRow )(HROW hThisRow,
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[IRowsetIdentity::IsSameRow](/previous-versions/windows/desktop/ms719629(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
+*OLE DB プログラマーリファレンス*の「 [IRowsetIdentity:: IsSameRow](/previous-versions/windows/desktop/ms719629(v=vs.85)) 」を参照してください。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-行ハンドルを比較するには、このメソッドのキャスト、`HROW`ハンドルと`RowClass`メンバーおよび呼び出し`memcmp`ポインターにします。
+行ハンドルを比較するために、このメソッドは `HROW` ハンドルを `RowClass` メンバーにキャストし、ポインターに対して `memcmp` を呼び出します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[OLE DB プロバイダー テンプレート](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[OLE DB プロバイダー テンプレートに関するページ](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [OLE DB プロバイダー テンプレートのアーキテクチャ](../../data/oledb/ole-db-provider-template-architecture.md)
