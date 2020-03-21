@@ -2,18 +2,18 @@
 title: ファイル システムのナビゲーション
 ms.date: 11/04/2016
 ms.assetid: f7cc5f5e-a541-4e00-87c7-a3769ef6096d
-ms.openlocfilehash: ea9bf44a11087180d3bd02c5dcd5d1acfa4b9e57
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.openlocfilehash: f5fe8d29baae76b1e7fb851bf04f4c6b32215a8e
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518505"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076539"
 ---
 # <a name="file-system-navigation"></a>ファイル システムのナビゲーション
 
-\<filesystem> ヘッダーは、File System Technical Specification ISO/IEC TS 18822:2015 (最終ドラフト: [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf)) を実装し、型および関数により、ファイル システムを移動するためのプラットフォームに依存しないコードを記述できます。 それはクロス プラットフォームなので、Windows システムに関連しない API が含まれます。 たとえば、これは `is_fifo(const path&)` が Windows で常に**false**を返すことを意味します。
+\<filesystem> ヘッダーは、File System Technical Specification ISO/IEC TS 18822:2015 (最終ドラフト: [ISO/IEC JTC 1/SC 22/WG 21 N4100](https://wg21.link/n4100)) を実装し、型および関数により、ファイル システムを移動するためのプラットフォームに依存しないコードを記述できます。 それはクロス プラットフォームなので、Windows システムに関連しない API が含まれます。 たとえば、これは `is_fifo(const path&)` が Windows で常に**false**を返すことを意味します。
 
-## <a name="overview"></a>の概要
+## <a name="overview"></a>概要
 
 \<filesystem> API を次のタスクに使用します。
 
@@ -41,7 +41,7 @@ path pathToDisplay2(L"\\FileSystemTest\\SubDir3");  // Still OK as always
 path pathToDisplay3(LR"(\FileSystemTest\SubDir3)"); // Raw string literals are OK, too.
 ```
 
-2 つのパスを連結する際、オーバーロードされた `/` と `/=` 演算子を使用できますが、これは `+` および `+=` の `std::string` と `std::wstring`演算子と似ています。 `path` オブジェクトは、ユーザーが区切り文字を指定していない場合に、便利にそれを指定できます。
+2 つのパスを連結する際、オーバーロードされた `/` と `/=` 演算子を使用できますが、これは `+` および `+=` の `std::string` と `std::wstring`演算子と似ています。 `path` オブジェクトを使用すると、区切り記号を指定できます。
 
 ```cpp
 path myRoot("C:/FileSystemTest");  // no trailing separator, no problem!

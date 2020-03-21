@@ -5,12 +5,12 @@ helpviewer_keywords:
 - asynchronous agents, creating
 - agent class, example
 ms.assetid: 730f42ce-6d58-4753-b948-fd9c9ef2ce6c
-ms.openlocfilehash: 3ece04811a75fba22db447875dc6ed08c22987b5
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 25fffd018c45200571f99dc87ab8ffe29bb6667f
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142050"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80080006"
 ---
 # <a name="walkthrough-creating-an-agent-based-application"></a>チュートリアル: エージェント ベースのアプリケーションの作成
 
@@ -28,7 +28,7 @@ ms.locfileid: "77142050"
 
 - [同期データ構造](../../parallel/concrt/synchronization-data-structures.md)
 
-## <a name="top"></a> セクション
+## <a name="sections"></a><a name="top"></a> セクション
 
 このチュートリアルでは、次のタスクを実行する方法を示します。
 
@@ -38,7 +38,7 @@ ms.locfileid: "77142050"
 
 - [アプリケーションでの file_reader クラスの使用](#useagentclass)
 
-## <a name="createapplication"></a>コンソールアプリケーションの作成
+## <a name="creating-the-console-application"></a><a name="createapplication"></a>コンソールアプリケーションの作成
 
 このセクションでは、プログラムでC++使用するヘッダーファイルを参照するコンソールアプリケーションを作成する方法について説明します。 最初の手順は、使用している Visual Studio のバージョンによって異なります。 このページの左上にあるバージョンセレクターが正しく設定されていることを確認します。
 
@@ -48,7 +48,7 @@ ms.locfileid: "77142050"
 
 1. メインメニューから、[**ファイル**>**新しい**>**プロジェクト**] を選択して **[新しいプロジェクトの作成]** ダイアログボックスを開きます。
 
-1. ダイアログの上部で、 **[言語]** を **[C++]** に、 **[プラットフォーム]** を **[Windows]** に、 **[プロジェクト タイプ]** を **[コンソール]** に設定します。 
+1. ダイアログの上部で、 **[言語]** を **[C++]** に、 **[プラットフォーム]** を **[Windows]** に、 **[プロジェクト タイプ]** を **[コンソール]** に設定します。
 
 1. フィルター処理されたプロジェクト タイプの一覧から、 **[コンソール アプリ]** を選択して、 **[次へ]** を選択します。 次のページで、プロジェクトの名前として「`BasicAgent`」と入力し、必要に応じてプロジェクトの場所を指定します。
 
@@ -80,7 +80,7 @@ ms.locfileid: "77142050"
 
 [[トップ](#top)]
 
-## <a name="createagentclass"></a>File_reader クラスの作成
+## <a name="creating-the-file_reader-class"></a><a name="createagentclass"></a>File_reader クラスの作成
 
 ここでは、`file_reader` クラスの作成方法について説明します。 ランタイムは、各エージェントがそれぞれのコンテキストで処理を実行するようにスケジュールを設定します。 そのため、処理を同期的に実行する一方で、他のコンポーネントとは非同期的に通信するエージェントを作成できます。 `file_reader` クラスでは、指定された入力ファイルからデータを読み取り、そのファイルのデータを指定されたターゲット コンポーネントに送信します。
 
@@ -128,7 +128,7 @@ file_reader.h の内容全体の例を次に示します。
 
 [[トップ](#top)]
 
-## <a name="useagentclass"></a>アプリケーションでの file_reader クラスの使用
+## <a name="using-the-file_reader-class-in-the-application"></a><a name="useagentclass"></a>アプリケーションでの file_reader クラスの使用
 
 ここでは、`file_reader` クラスを使用して、テキスト ファイルの内容を読み取る方法について説明します。 また、このファイルデータを受け取り、その Adler-32 チェックサムを計算する[concurrency:: call](../../parallel/concrt/reference/call-class.md)オブジェクトを作成する方法についても説明します。
 
@@ -174,7 +174,7 @@ file_reader.h の内容全体の例を次に示します。
 
 [[トップ](#top)]
 
-## <a name="sample-input"></a>入力のサンプル
+## <a name="sample-input"></a>サンプル入力
 
 これは、入力ファイル text.txt の内容のサンプルです。
 
@@ -184,7 +184,7 @@ jumps
 over the lazy dog
 ```
 
-## <a name="sample-output"></a>出力例
+## <a name="sample-output"></a>サンプル出力
 
 入力のサンプルを使用すると、このプログラムでは、次の出力が生成されます。
 

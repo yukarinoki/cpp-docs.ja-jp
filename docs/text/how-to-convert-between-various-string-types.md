@@ -1,5 +1,5 @@
 ---
-title: '方法: さまざまな文字列型間の変換します。'
+title: '方法: さまざまな文字列型間で変換する'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,22 +7,22 @@ helpviewer_keywords:
 - string conversion [C++]
 - strings [C++], converting
 ms.assetid: e7e4f741-3c82-45f0-b8c0-1e1e343b0e77
-ms.openlocfilehash: 21006f19f7c811f87f3f75e346983f7a8e7e0bf5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3e7c83b70b4204cfc8880c968bb353b47e5b79e1
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410734"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075545"
 ---
-# <a name="how-to-convert-between-various-string-types"></a>方法: さまざまな文字列型間の変換します。
+# <a name="how-to-convert-between-various-string-types"></a>方法: さまざまな文字列型間で変換する
 
-このトピックでは、さまざまな Visual C++ 文字列型を他の文字列に変換する方法について説明します。 カバーされる文字列の種類を含める`char *`、 `wchar_t*`、 [_bstr_t](../cpp/bstr-t-class.md)、 [CComBSTR](../atl/reference/ccombstr-class.md)、 [CString](../atl-mfc-shared/using-cstring.md)、 [basic_string](../standard-library/basic-string-class.md)、および<xref:System.String?displayProperty=fullName>します。 どの場合も、新しい型に変換すると文字列のコピーが作成されます。 新しい文字列に何らかの変更を加えても元の文字列には影響しません。また、逆に、元の文字列に何らかの変更を加えても新しい文字列には影響しません。
+このトピックでは、さまざまな Visual C++ 文字列型を他の文字列に変換する方法について説明します。 対象となる文字列型には、`char *`、`wchar_t*`、 [_bstr_t](../cpp/bstr-t-class.md)、 [CComBSTR](../atl/reference/ccombstr-class.md)、 [CString](../atl-mfc-shared/using-cstring.md)、 [basic_string](../standard-library/basic-string-class.md)、および <xref:System.String?displayProperty=fullName>があります。 どの場合も、新しい型に変換すると文字列のコピーが作成されます。 新しい文字列に何らかの変更を加えても元の文字列には影響しません。また、逆に、元の文字列に何らかの変更を加えても新しい文字列には影響しません。
 
-## <a name="converting-from-char-"></a>Char からの変換 \*
+## <a name="converting-from-char-"></a>変換 (char \* から)
 
 ## <a name="example"></a>例
 
-### <a name="description"></a>説明
+### <a name="description"></a>Description
 
 このサンプルでは、`char *` から、上に示したそれ以外の文字列型に変換する方法について説明します。 `char *` 文字列 (C スタイルの文字列とも呼ばれます) では、文字列の末尾を表すために null 文字を使用します。 通常、C スタイルの文字列では 1 文字あたり 1 バイト必要ですが、2 バイト使用することもできます。 次のサンプルでは、`char *` 文字列が Unicode 文字列を変換した結果得られた文字列データであるために、マルチバイト文字列を表している場合があります。 1 バイト文字関数およびマルチバイト文字関数 (`MBCS`) では、`char *` 文字列を操作できます。
 
@@ -119,11 +119,11 @@ Hello, World! (basic_string)
 Hello, World! (System::String)
 ```
 
-## <a name="converting-from-wchart-"></a>Wchar_t からの変換 \*
+## <a name="converting-from-wchar_t-"></a>Wchar_t \* からの変換
 
 ## <a name="example"></a>例
 
-### <a name="description"></a>説明
+### <a name="description"></a>Description
 
 このサンプルでは、`wchar_t *` から、上に示したそれ以外の文字列型に変換する方法について説明します。 `wchar_t *` などの一部の文字列型では、ワイド文字形式が実装されます。 マルチバイト形式とワイド文字形式の間で文字列を変換する場合は、`mbstowcs_s` などの単一の関数呼び出しか、`CStringA` などのクラスのコンストラクター呼び出しを使用できます。
 
@@ -243,11 +243,11 @@ Hello, World! (basic_string)
 Hello, World! (System::String)
 ```
 
-## <a name="converting-from-bstrt"></a>_bstr_t からの変換
+## <a name="converting-from-_bstr_t"></a>_bstr_t からの変換
 
 ## <a name="example"></a>例
 
-### <a name="description"></a>説明
+### <a name="description"></a>Description
 
 このサンプルでは、`_bstr_t` から、上に示したそれ以外の文字列型に変換する方法について説明します。 `_bstr_t` オブジェクトは、ワイド文字 `BSTR` 文字列をカプセル化する方法です。 BSTR 文字列には長さの値があり、文字列の末尾を表すために null 文字が使用されませんが、変換後の文字列型では末尾に null 文字が必要となる場合もあります。
 
@@ -347,7 +347,7 @@ Hello, World! (System::String)
 
 ## <a name="example"></a>例
 
-### <a name="description"></a>説明
+### <a name="description"></a>Description
 
 このサンプルでは、`CComBSTR` から、上に示したそれ以外の文字列型に変換する方法について説明します。 _bstr_t と同様、`CComBSTR` オブジェクトは、ワイド文字 BSTR 文字列をカプセル化する方法です。 BSTR 文字列には長さの値があり、文字列の末尾を表すために null 文字が使用されませんが、変換後の文字列型では末尾に null 文字が必要となる場合もあります。
 
@@ -457,7 +457,7 @@ Hello, World! (System::String)
 
 ## <a name="example"></a>例
 
-### <a name="description"></a>説明
+### <a name="description"></a>Description
 
 このサンプルでは、`CString` から、上に示したそれ以外の文字列型に変換する方法について説明します。 `CString` は、TCHAR データ型に基づいています。この TCHAR データ型は、シンボル `_UNICODE` が定義されているかどうかに依存します。 `_UNICODE` が定義されていない場合、`TCHAR` は char 型として定義され、`CString` にマルチバイト文字列が格納されます。`_UNICODE` が定義されている場合、`TCHAR` は `wchar_t` 型として定義され、`CString` にワイド文字列が格納されます。
 
@@ -485,7 +485,7 @@ int main()
     // Set up a multibyte CStringA string.
     CStringA origa("Hello, World!");
     cout << origa << " (CStringA)" << endl;
-    
+
     // Set up a wide character CStringW string.
     CStringW origw("Hello, World!");
     wcout << (LPCTSTR)origw << _T(" (CStringW)") << endl;
@@ -545,7 +545,7 @@ int main()
     // Convert to a wide character CComBSTR string from
     // a wide character CStringW string.
     CComBSTR ccombstrw(origw);
-    
+
     // Append the type of string to it, and display the result.
     if (ccombstrw.Append(_T(" (CComBSTR)")) == S_OK)
     {
@@ -572,7 +572,7 @@ int main()
     systemstring += " (System::String)";
     Console::WriteLine("{0}", systemstring);
     delete systemstring;
-    
+
     // Convert a wide character CStringW to a
     // System::String.
     String ^systemstringw = gcnew String(origw);
@@ -597,11 +597,11 @@ Hello, World! (basic_string)
 Hello, World! (System::String)
 ```
 
-## <a name="converting-from-basicstring"></a>basic_string からの変換
+## <a name="converting-from-basic_string"></a>basic_string からの変換
 
 ## <a name="example"></a>例
 
-### <a name="description"></a>説明
+### <a name="description"></a>Description
 
 このサンプルでは、`basic_string` から、上に示したそれ以外の文字列型に変換する方法について説明します。
 
@@ -697,9 +697,9 @@ Hello, World! (System::String)
 
 ## <a name="example"></a>例
 
-### <a name="description"></a>説明
+### <a name="description"></a>Description
 
-この例では、ワイド文字 (Unicode) から変換[system::string](assetId:///System::String?qualifyHint=True&autoUpgrade=True)上に示したその他の文字列型。
+この例では、ワイド文字 (Unicode) [System:: string](assetId:///System::String?qualifyHint=True&autoUpgrade=True)から、上記の他の文字列型に変換する方法を示します。
 
 ### <a name="code"></a>コード
 
@@ -800,13 +800,13 @@ Hello, World! (CStringW)
 Hello, World! (basic_string)
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[ATL と MFC 文字列変換マクロ](../atl/reference/string-conversion-macros.md)<br/>
+[ATL および MFC 文字列変換マクロ](../atl/reference/string-conversion-macros.md)<br/>
 [C スタイルの文字列に関連する CString の操作方法](../atl-mfc-shared/cstring-operations-relating-to-c-style-strings.md)<br/>
 [方法: 標準文字列を System::String に変換する](../dotnet/how-to-convert-standard-string-to-system-string.md)<br/>
 [方法: System::String を標準文字列に変換する](../dotnet/how-to-convert-system-string-to-standard-string.md)<br/>
-[方法: System::string を wchar_t * または char に変換します。\*](../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)<br/>
+[方法: System:: String を wchar_t * または char\* に変換する](../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)<br/>
 [CComBSTR を使用したプログラミング](../atl/programming-with-ccombstr-atl.md)<br/>
 [mbstowcs_s、_mbstowcs_s_l](../c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l.md)<br/>
 [wcstombs_s、_wcstombs_s_l](../c-runtime-library/reference/wcstombs-s-wcstombs-s-l.md)<br/>

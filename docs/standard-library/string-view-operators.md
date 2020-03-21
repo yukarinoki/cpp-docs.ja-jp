@@ -17,16 +17,16 @@ helpviewer_keywords:
 - std::basic_string_view::operator&lt;
 - std::basic_string_view::operator&lt;&lt;
 - std::basic_string_view::operator&lt;=, std::basic_string_view::operator==
-ms.openlocfilehash: 871b7dc93f5d548897cf77e55dbacf5a104cbee9
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 1bf4fa82e10d236828059a37c639e3a3b64bc5f9
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79446760"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076402"
 ---
 # <a name="ltstring_viewgt-operators"></a>&lt;string_view&gt; 演算子
 
-これらの演算子を使用すると、暗黙的な変換が提供される2つの string_view オブジェクト、string_view とその他の文字列オブジェクト ( [std:: string](basic-string-class.md)、 **char\*** など) を比較できます。 
+これらの演算子を使用すると、暗黙的な変換が提供される2つの string_view オブジェクト、string_view とその他の文字列オブジェクト ( [std:: string](basic-string-class.md)、 **char\*** など) を比較できます。
 
 ||||
 |-|-|-|
@@ -34,7 +34,7 @@ ms.locfileid: "79446760"
 |[operator&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|[operator&lt;=](#op_lt_eq)|
 |[operator==](#op_eq_eq)|[オペレーター "" sv](#op_sv)|
 
-## <a name="op_neq"></a>operator! =
+## <a name="operator"></a><a name="op_neq"></a>operator! =
 
 演算子の左側のオブジェクトが右側のオブジェクトと等しくないかどうかを調べます。
 
@@ -67,13 +67,13 @@ bool operator!=(
 
 演算子の左側のオブジェクトが右側のオブジェクトと等しく辞書式ない場合は**true**を返します。それ以外の場合は**false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
-*Convertible_string_type*からもう一方の側の string_view への暗黙的な変換が存在する必要があります。 
+*Convertible_string_type*からもう一方の側の string_view への暗黙的な変換が存在する必要があります。
 
 比較は、文字シーケンスのペアの辞書式の比較に基づいています。 同じ数の要素を持ち、要素がすべて等しい場合、2つのオブジェクトは等しくなります。 それ以外の場合は等しくありません。
 
-## <a name="op_eq_eq"></a>operator = =
+## <a name="operator"></a><a name="op_eq_eq"></a>operator = =
 
 演算子の左辺のオブジェクトが右辺のオブジェクトと等しいかどうかを調べます。
 
@@ -106,14 +106,13 @@ bool operator==(
 
 演算子の左側のオブジェクトが右側のオブジェクトと辞書式等しい場合は**true**を返します。それ以外の場合は**false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
-*Convertible_string_type*からもう一方の側の string_view への暗黙的な変換が存在する必要があります。 
+*Convertible_string_type*からもう一方の側の string_view への暗黙的な変換が存在する必要があります。
 
 比較は、文字シーケンスのペアの辞書式の比較に基づいています。 同じ数の要素を持ち、要素がすべて等しい場合、2つのオブジェクトは等しくなります。
 
-
-## <a name="op_lt"></a> 演算子&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a> 演算子&lt;
 
 演算子の左側のオブジェクトが右側のオブジェクトより小さいかどうかをテストし sidestring_view
 
@@ -146,9 +145,9 @@ bool operator<(
 
 演算子の左側のオブジェクトが右側のオブジェクトよりも辞書式小さい場合は**true**を返します。それ以外の場合は**false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
-*Convertible_string_type*からもう一方の側の string_view への暗黙的な変換が存在する必要があります。 
+*Convertible_string_type*からもう一方の側の string_view への暗黙的な変換が存在する必要があります。
 
 比較は、文字シーケンスのペアの辞書式の比較に基づいています。 最初の等しくない文字ペアが見つかった場合は、その比較の結果が返されます。 等しくない文字が見つからなくても、1つのシーケンスが短い場合は、短いシーケンスが長い方よりも小さくなります。 言い換えると、"cat" は "猫" よりも小さくなります。
 
@@ -174,7 +173,7 @@ int main()
 }
 ```
 
-## <a name="op_lt_eq"></a>演算子&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a>演算子&lt;=
 
 演算子の左側のオブジェクトが右側のオブジェクト以下かどうかを調べます。
 
@@ -207,11 +206,11 @@ bool operator<=(
 
 演算子の左側のオブジェクトが右側のオブジェクト以下である場合は**true**を辞書式します。それ以外の場合は**false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 「 [Operator&lt;](#op_lt)」を参照してください。
 
-## <a name="op_lt_lt"></a>演算子&lt;&lt;
+## <a name="operatorltlt"></a><a name="op_lt_lt"></a>演算子&lt;&lt;
 
 String_view を出力ストリームに書き込みます。
 
@@ -233,11 +232,11 @@ inline basic_ostream<CharType, Traits>& operator<<(
 
 書き込み先の出力ストリーム。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この演算子を使用して、string_view の内容を出力ストリームに挿入します。たとえば、 [std:: cout](iostream.md#cout)を使用します。
 
-## <a name="op_gt"></a> 演算子&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a> 演算子&gt;
 
 演算子の左側のオブジェクトが右側のオブジェクトより大きいかどうかを調べます。
 
@@ -270,11 +269,11 @@ bool operator>(
 
 演算子の左辺のオブジェクトが右辺の string_view オブジェクトよりも大きい場合は**true**を返します。それ以外の場合は**false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 「 [Operator&lt;](#op_lt)」を参照してください。
 
-## <a name="op_gt_eq"></a>演算子&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a>演算子&gt;=
 
 演算子の左側のオブジェクトが右側のオブジェクト以上であるかどうかを調べます。
 
@@ -307,13 +306,13 @@ bool operator>=(
 
 演算子の左側のオブジェクトが右側のオブジェクト以上で辞書式場合は**true**を指定します。それ以外の場合は**false**。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 「 [Operator&lt;](#op_lt)」を参照してください。
 
-## <a name="op_sv"></a>演算子 "" sv (string_view リテラル)
+## <a name="operator-sv-string_view-literal"></a><a name="op_sv"></a>演算子 "" sv (string_view リテラル)
 
-文字列リテラルから string_view を構築します。 名前空間 `std::literals::string_view_literals`が必要です。 
+文字列リテラルから string_view を構築します。 名前空間 `std::literals::string_view_literals`が必要です。
 
 ### <a name="example"></a>例
 

@@ -5,18 +5,18 @@ helpviewer_keywords:
 - bookmarks [C++], dynamically determining columns
 - dynamically determining columns [C++]
 ms.assetid: 58522b7a-894e-4b7d-a605-f80e900a7f5f
-ms.openlocfilehash: 81353581d22f3d075fd19d783591ec856c21e241
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6b6061fc7da6f4c4dd53ae70a0e2d5ba7ec40023
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62175499"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079646"
 ---
 # <a name="dynamically-determining-columns-returned-to-the-consumer"></a>コンシューマーに返される列の動的な判断
 
-PROVIDER_COLUMN_ENTRY マクロの通常の処理、`IColumnsInfo::GetColumnsInfo`呼び出します。 ただし、コンシューマーは、ブックマークを使用する選択可能性があります、ため、プロバイダーは、コンシューマーがブックマークを要求するかどうかによって返される列を変更することである必要があります。
+PROVIDER_COLUMN_ENTRY マクロは通常、`IColumnsInfo::GetColumnsInfo` 呼び出しを処理します。 ただし、コンシューマーはブックマークの使用を選択することがあるため、プロバイダーは、コンシューマーがブックマークを要求したかどうかに応じて返される列を変更できる必要があります。
 
-処理するために、`IColumnsInfo::GetColumnsInfo`呼び出し、削除関数を定義すると、PROVIDER_COLUMN_MAP`GetColumnInfo`から、`CCustomWindowsFile`でユーザー レコード*カスタム*RS.h し、独自の定義に置き換えます`GetColumnInfo`関数:
+`IColumnsInfo::GetColumnsInfo` の呼び出しを処理するには、関数 `GetColumnInfo`を定義する PROVIDER_COLUMN_MAP を*カスタム*の rs-232c の `CCustomWindowsFile` ユーザーレコードから削除し、独自の `GetColumnInfo` 関数の定義に置き換えます。
 
 ```cpp
 ////////////////////////////////////////////////////////////////////////
@@ -39,11 +39,11 @@ public:
 };
 ```
 
-次に、実装、`GetColumnInfo`関数*カスタム*RS.cpp、次のコードに示すようにします。
+次に、次のコードに示すように、*カスタム*の rs-232c に `GetColumnInfo` 関数を実装します。
 
-`GetColumnInfo` かどうかをまずチェック、OLE DB プロパティ`DBPROP_BOOKMARKS`設定されます。 プロパティを取得する`GetColumnInfo`ポインターを使用して (`pRowset`)、行セット オブジェクトにします。 `pThis`ポインターは、プロパティ マップが格納されているクラスは、行セットを作成するクラスを表します。 `GetColumnInfo` 丸めない、`pThis`へのポインター、`RCustomRowset`ポインター。
+`GetColumnInfo` OLE DB プロパティ `DBPROP_BOOKMARKS` が設定されているかどうかを最初に確認します。 プロパティを取得するために、`GetColumnInfo` は、行セットオブジェクトへのポインター (`pRowset`) を使用します。 `pThis` ポインターは、行セットを作成したクラスを表します。これは、プロパティマップが格納されているクラスです。 `GetColumnInfo` は、`RCustomRowset` ポインターへの `pThis` ポインターを typecasts します。
 
-チェックする、`DBPROP_BOOKMARKS`プロパティ、`GetColumnInfo`を使用して、`IRowsetInfo`インターフェイスを呼び出すことによって取得できます`QueryInterface`上、`pRowset`インターフェイス。 ATL を使用する代わりに、 [CComQIPtr](../../atl/reference/ccomqiptr-class.md)メソッド代わりにします。
+`DBPROP_BOOKMARKS` プロパティを確認するには、`GetColumnInfo` `IRowsetInfo` インターフェイスを使用します。このインターフェイスは、`pRowset` インターフェイスで `QueryInterface` を呼び出すことによって取得できます。 代わりに、ATL [CComQIPtr](../../atl/reference/ccomqiptr-class.md)メソッドを使用することもできます。
 
 ```cpp
 ////////////////////////////////////////////////////////////////////
@@ -53,7 +53,7 @@ ATLCOLUMNINFO* CCustomWindowsFile::GetColumnInfo(void* pThis, ULONG* pcCols)
    static ATLCOLUMNINFO _rgColumns[5];
    ULONG ulCols = 0;
   
-   // Check the property flag for bookmarks; if it is set, set the zero 
+   // Check the property flag for bookmarks; if it is set, set the zero
    // ordinal entry in the column map with the bookmark information.
    CCustomRowset* pRowset = (CCustomRowset*) pThis;
    CComQIPtr<IRowsetInfo, &IID_IRowsetInfo> spRowsetProps = pRowset;
@@ -75,25 +75,25 @@ ATLCOLUMNINFO* CCustomWindowsFile::GetColumnInfo(void* pThis, ULONG* pcCols)
   
       if (SUCCEEDED(hr) && (var.boolVal == VARIANT_TRUE))
       {
-         ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Bookmark"), 0, sizeof(DWORD), 
-         DBTYPE_BYTES, 0, 0, GUID_NULL, CCustomWindowsFile, dwBookmark, 
+         ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Bookmark"), 0, sizeof(DWORD),
+         DBTYPE_BYTES, 0, 0, GUID_NULL, CCustomWindowsFile, dwBookmark,
          DBCOLUMNFLAGS_ISBOOKMARK)
          ulCols++;
       }
    }
   
    // Next, set the other columns up.
-   ADD_COLUMN_ENTRY(ulCols, OLESTR("Command"), 1, 256, DBTYPE_STR, 0xFF, 0xFF, 
+   ADD_COLUMN_ENTRY(ulCols, OLESTR("Command"), 1, 256, DBTYPE_STR, 0xFF, 0xFF,
       GUID_NULL, CCustomWindowsFile, szCommand)
    ulCols++;
-   ADD_COLUMN_ENTRY(ulCols, OLESTR("Text"), 2, 256, DBTYPE_STR, 0xFF, 0xFF, 
+   ADD_COLUMN_ENTRY(ulCols, OLESTR("Text"), 2, 256, DBTYPE_STR, 0xFF, 0xFF,
       GUID_NULL, CCustomWindowsFile, szText)
    ulCols++;
   
-   ADD_COLUMN_ENTRY(ulCols, OLESTR("Command2"), 3, 256, DBTYPE_STR, 0xFF, 0xFF, 
+   ADD_COLUMN_ENTRY(ulCols, OLESTR("Command2"), 3, 256, DBTYPE_STR, 0xFF, 0xFF,
       GUID_NULL, CCustomWindowsFile, szCommand2)
    ulCols++;
-   ADD_COLUMN_ENTRY(ulCols, OLESTR("Text2"), 4, 256, DBTYPE_STR, 0xFF, 0xFF, 
+   ADD_COLUMN_ENTRY(ulCols, OLESTR("Text2"), 4, 256, DBTYPE_STR, 0xFF, 0xFF,
       GUID_NULL, CCustomWindowsFile, szText2)
    ulCols++;
   
@@ -104,7 +104,7 @@ ATLCOLUMNINFO* CCustomWindowsFile::GetColumnInfo(void* pThis, ULONG* pcCols)
 }
 ```
 
-この例では、静的配列を使用して、列情報を保持します。 場合は、コンシューマーはブックマーク列、配列内の 1 つのエントリは使用されません。 情報を処理するには、配列の 2 つのマクロを作成します。ADD_COLUMN_ENTRY ADD_COLUMN_ENTRY_EX. ADD_COLUMN_ENTRY_EX は追加のパラメーターを受け取る*フラグ*はブックマーク列を指定する場合に必要です。
+この例では、静的配列を使用して列情報を保持します。 コンシューマーがブックマーク列を必要としない場合は、配列内の1つのエントリが使用されません。 この情報を処理するには、ADD_COLUMN_ENTRY と ADD_COLUMN_ENTRY_EX の2つの配列マクロを作成します。 ブックマーク列を指定する場合、ADD_COLUMN_ENTRY_EX には追加のパラメーター、*フラグ*が必要です。
 
 ```cpp
 ////////////////////////////////////////////////////////////////////////  
@@ -135,7 +135,7 @@ ATLCOLUMNINFO* CCustomWindowsFile::GetColumnInfo(void* pThis, ULONG* pcCols)
    _rgColumns[ulCols].columnid.uName.pwszName = (LPOLESTR)name;  
 ```
 
-`GetColumnInfo`関数、ブックマークのマクロは、次のように使用します。
+`GetColumnInfo` 関数では、bookmark マクロは次のように使用されます。
 
 ```cpp
 ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Bookmark"), 0, sizeof(DWORD),
@@ -143,8 +143,8 @@ ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Bookmark"), 0, sizeof(DWORD),
    DBCOLUMNFLAGS_ISBOOKMARK)
 ```
 
-これで、コンパイルして、拡張プロバイダーを実行することができます。 プロバイダーをテストするにはテストのコンシューマーを」の説明に従って変更[単純なコンシューマーを実装する](../../data/oledb/implementing-a-simple-consumer.md)します。 プロバイダーとテストのコンシューマーを実行し、テストのコンシューマーがプロバイダーから適切な文字列を取得することを確認します。
+これで、拡張されたプロバイダーをコンパイルして実行できるようになりました。 プロバイダーをテストするには、「[単純なコンシューマーの実装](../../data/oledb/implementing-a-simple-consumer.md)」の説明に従ってテストコンシューマーを変更します。 プロバイダーを使用してテストコンシューマーを実行し、テストコンシューマーがプロバイダーから適切な文字列を取得することを確認します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [単純な読み取り専用プロバイダーの機能の拡張](../../data/oledb/enhancing-the-simple-read-only-provider.md)<br/>

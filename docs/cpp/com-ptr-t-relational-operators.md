@@ -28,18 +28,18 @@ helpviewer_keywords:
 - operator< [C++], pointers
 - == operator [C++], with specific Visual C++ objects
 ms.assetid: 5ae4028c-33ee-485d-bbda-88d2604d6d4b
-ms.openlocfilehash: d3b1d6d1579c9f9bf5eca4f8a3f6733f27584674
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4c2c3dccb93f8e2475cdf2c7494bf4af11b65aa2
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399240"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079944"
 ---
-# <a name="comptrt-relational-operators"></a>_com_ptr_t 関係演算子
+# <a name="_com_ptr_t-relational-operators"></a>_com_ptr_t 関係演算子
 
 **Microsoft 固有の仕様**
 
-別のスマート ポインター、生のインターフェイス ポインターの場合は、スマート ポインター オブジェクトを比較または NULL。
+スマート ポインター オブジェクトを、別のスマート ポインター、生のインターフェイス ポインター、または NULL と比較します。
 
 ## <a name="syntax"></a>構文
 
@@ -47,7 +47,7 @@ ms.locfileid: "62399240"
 template<typename _OtherIID>
 bool operator==( const _com_ptr_t<_OtherIID>& p );
 
-template<typename _OtherIID> 
+template<typename _OtherIID>
 bool operator==( _com_ptr_t<_OtherIID>& p );
 
 template<typename _InterfaceType>
@@ -112,12 +112,12 @@ template<typename _InterfaceType>
 bool operator>=( _InterfaceType* p );
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-スマート ポインターがオブジェクト間の比較では、スマート ポインター、生のインターフェイス ポインター、または NULL。 NULL ポインターのテストを除くこれらの演算子を最初にクエリ両方のポインターに`IUnknown`結果を比較します。
+スマート ポインター オブジェクトを、別のスマート ポインター、生のインターフェイス ポインター、または NULL と比較します。 NULL ポインターテストを除き、これらの演算子はまず `IUnknown`の両方のポインターを照会し、結果を比較します。
 
 **Microsoft 固有の仕様はここまで**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [_com_ptr_t クラス](../cpp/com-ptr-t-class.md)

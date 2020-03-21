@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4727
 ms.assetid: 991b0087-3a50-40f5-9cdb-cdc367cd472c
-ms.openlocfilehash: 1bcc029536d2602d50178d7148332b8371db3c7f
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: 0c00ac552e525fd57f6f09b0be5655958cfce3cc
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69630831"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075142"
 ---
 # <a name="compiler-warning-level-1-c4727"></a>コンパイラの警告 (レベル 1) C4727
 
@@ -50,8 +50,7 @@ C4727 は、 **/yc**を使用して複数の compilands をコンパイルする
 
 ::: moniker-end
 
-
-詳細については、次のトピックを参照してください。
+詳細については、「
 
 - [/Yc (プリコンパイル済みヘッダー ファイルの作成)](../../build/reference/yc-create-precompiled-header-file.md)
 

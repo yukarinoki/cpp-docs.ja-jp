@@ -12,12 +12,12 @@ helpviewer_keywords:
 - GetProperties method
 - SetProperties method
 ms.assetid: ca0ba254-c7dc-4c52-abec-cf895a0c6a63
-ms.openlocfilehash: 50052e13371482fa0a8b6d66ef666b9801837501
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: c1a3539ea4ea705ad8bd1e40acda965ef66e2051
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79545703"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077712"
 ---
 # <a name="isessionpropertiesimpl-class"></a>ISessionPropertiesImpl クラス
 
@@ -28,7 +28,7 @@ ms.locfileid: "79545703"
 ```cpp
 template <class T, class PropClass = T>
 class ATL_NO_VTABLE ISessionPropertiesImpl :
-   public ISessionProperties, 
+   public ISessionProperties,
    public CUtlProps<PropClass>
 ```
 
@@ -40,7 +40,7 @@ class ATL_NO_VTABLE ISessionPropertiesImpl :
 *PropClass*<br/>
 既定で*T*に設定されているユーザー定義可能なプロパティクラス。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atldb.h
 
@@ -53,7 +53,7 @@ class ATL_NO_VTABLE ISessionPropertiesImpl :
 |[GetProperties](#getproperties)|セッションで現在設定されているセッションプロパティグループのプロパティの一覧を返します。|
 |[SetProperties](#setproperties)|セッションプロパティグループのプロパティを設定します。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 セッションの必須のインターフェイスです。 このクラスは、[プロパティセットマップ](../../data/oledb/begin-propset-map.md)によって定義された静的関数を呼び出すことによって、セッションプロパティを実装します。 プロパティセットマップは、セッションクラスで指定する必要があります。
 

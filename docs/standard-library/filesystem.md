@@ -12,12 +12,12 @@ no-loc:
 - wchar_t
 - char16_t
 - char32_t
-ms.openlocfilehash: f9e384953a4e675ad6235a274c447031976a1585
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 86be11da1e2cef2fe0ca12691aeb0ce3dbe94202
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79441712"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076509"
 ---
 # &lt;filesystem&gt;
 
@@ -32,12 +32,12 @@ using namespace std::experimental::filesystem::v1;
 ```
 
 > [!IMPORTANT]
-> Visual Studio 2017 のリリースでは、\<filesystem> ヘッダーは、まだC++標準ではありませんでした。 C++Visual Studio 2017 RTW では、 [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf)にある最終ドラフト標準が実装されています。 Visual Studio 2017 バージョン15.7 以降では、> standard filesystem新しい C++ 17 \<がサポートされています。
+> Visual Studio 2017 のリリースでは、\<filesystem> ヘッダーは、まだC++標準ではありませんでした。 C++Visual Studio 2017 RTW では、 [ISO/IEC JTC 1/SC 22/WG 21 N4100](https://wg21.link/n4100)にある最終ドラフト標準が実装されています。 Visual Studio 2017 バージョン15.7 以降では、> standard filesystem新しい C++ 17 \<がサポートされています。
 > これはまったく新しい実装であり、以前の `std::experimental` バージョンと互換性がありません。 これは、シンボリックリンクのサポート、バグの修正、標準の必須動作の変更によって必要になりました。 現時点では、\<filesystem> を含む新しい `std::filesystem` と前の `std::experimental::filesystem`が提供されています。 \<experimental/filesystem> は、古い experimental 実装のみを提供します。 experimental の実装は、ライブラリの次の ABI リリースで削除される予定です。
 
 このヘッダーは、2つの広範なホストオペレーティングシステム (Microsoft Windows と POSIX) のいずれかのファイルシステムをサポートしています。
 
-ほとんどの機能が両方のオペレーティング システムに共通していますが、このドキュメントではそれらの相違点について説明します。 例 :
+ほとんどの機能が両方のオペレーティング システムに共通していますが、このドキュメントではそれらの相違点について説明します。 次に例を示します。
 
 - Windows では、`c:` や `\\network_name`などの複数のルート名がサポートされています。 ファイルシステムは、ツリーのフォレストで構成されます。各ツリーには、`c:\` または `\\network_name\`のような独自のルートディレクトリがあり、それぞれに固有のディレクトリがあり、相対パス名 (絶対パス名ではないもの) を完了します。
 
@@ -116,11 +116,11 @@ using namespace std::experimental::filesystem::v1;
 
 [\<filesystem> 関数](../standard-library/filesystem-functions.md)
 
-## <a name="operators"></a>演算子
+## <a name="operators"></a>オペレーター
 
 [\<filesystem> 演算子](../standard-library/filesystem-operators.md)
 
-## <a name="enumerations"></a>列挙体
+## <a name="enumerations"></a>列挙型
 
 |||
 |-|-|

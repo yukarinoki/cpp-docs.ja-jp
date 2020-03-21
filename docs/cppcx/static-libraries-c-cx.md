@@ -2,12 +2,12 @@
 title: スタティック ライブラリ (C++/CX)
 ms.date: 02/03/2017
 ms.assetid: 7faf53c8-fa21-42cc-8246-d32533ef9dfa
-ms.openlocfilehash: f62ef03cfdf2f424fd4a50c2e866d73b5bdce7fc
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: 42c247650f778dcc9dbfa13d27cbb0244c0ebbc2
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74302945"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077975"
 ---
 # <a name="static-libraries-ccx"></a>スタティック ライブラリ (C++/CX)
 
@@ -15,16 +15,15 @@ ms.locfileid: "74302945"
 
 ## <a name="creating-static-libraries"></a>スタティック ライブラリの作成
 
-
 新しいプロジェクトを作成する手順は、インストールされている Visual Studio のバージョンによって異なります。 左上にあるバージョンセレクターが正しいバージョンに設定されていることを確認します。
 
 ::: moniker range="vs-2019"
 
 ### <a name="to-create-a-uwp-static-library-in-visual-studio-2019"></a>Visual Studio 2019 で UWP スタティックライブラリを作成するには
 
-1. メニューバーで、 **[ファイル]** > **[新規作成]** > **[プロジェクト]** の順に選択して、 **[新しいプロジェクトの作成]** ダイアログ ボックスを開きます。
+1. メニューバーで [**ファイル**>**新規**>**プロジェクト**] を選択し、 **[新しいプロジェクトの作成]** ダイアログボックスを開きます。
 
-1. ダイアログの上部で、 **[言語]** をに**C++** 設定し、 **[プラットフォーム]** を **[Windows]** に設定し、 **[プロジェクトの種類]** を **[UWP]** に設定します。 
+1. ダイアログの上部で、 **[言語]** をに**C++** 設定し、 **[プラットフォーム]** を **[Windows]** に設定し、 **[プロジェクトの種類]** を **[UWP]** に設定します。
 
 1. フィルター処理されたプロジェクトの種類の一覧から **[スタティックライブラリ ( C++ユニバーサル Windows-/cx)]** を選択し、 **[次へ]** を選択します。 次のページで、プロジェクトに名前を付け、必要に応じてプロジェクトの場所を指定します。
 
@@ -36,7 +35,7 @@ ms.locfileid: "74302945"
 
 ### <a name="to-create-a-uwp-static-library-in-visual-studio-2017-or-visual-studio-2015"></a>Visual Studio 2017 または Visual Studio 2015 で UWP スタティックライブラリを作成するには
 
-1. メニュー バーで、 **[ファイル]**  >  **[新規作成]**  >  **[プロジェクト]** を選択します。 [ **Visual C++**  > **Windows ユニバーサル**] で、 **[スタティックライブラリ (ユニバーサル Windows)]** を選択します。
+1. メニュー バーで、 **[ファイル]**  >  **[新規作成]**  >  **[プロジェクト]** の順に選択します。 [ **Visual C++**  > **Windows ユニバーサル**] で、 **[スタティックライブラリ (ユニバーサル Windows)]** を選択します。
 
 1. **ソリューション エクスプローラー**で、プロジェクトのショートカット メニューを開き、 **[プロパティ]** をクリックします。 **[プロパティ]** ダイアログボックスの [**構成プロパティ** > **C/C++**  page] で、 **[Windows ランタイム拡張機能の使用]** を **[はい] (/ZW)** に設定します。
 

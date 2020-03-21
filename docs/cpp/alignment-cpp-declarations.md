@@ -1,18 +1,18 @@
 ---
-title: アラインメント
+title: Alignment
 description: 最新C++のでデータの配置を指定する方法。
 ms.date: 12/11/2019
 ms.assetid: a986d510-ccb8-41f8-b905-433df9183485
-ms.openlocfilehash: 13f09366501de2482b8ae9ea430898d6c32134c2
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 45b22742394a0b1c159e8b8102a26802a2441929
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443670"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076122"
 ---
-# <a name="alignment"></a>アラインメント
+# <a name="alignment"></a>Alignment
 
-C++ の低レベルの機能の 1 つは、特定のハードウェア アーキテクチャを最大活用するために、メモリ内のオブジェクトの正確な配置を指定できる機能です。 既定では、コンパイラは、クラスと構造体のメンバーのサイズ値 (`bool` と `char` を1バイト境界に配置し、2バイト境界、`int`、`long`、4バイトの境界に `short` し、`float`、`long long`、および8バイトの境界に `double`します。`long double` 
+C++ の低レベルの機能の 1 つは、特定のハードウェア アーキテクチャを最大活用するために、メモリ内のオブジェクトの正確な配置を指定できる機能です。 既定では、コンパイラは、クラスと構造体のメンバーのサイズ値 (`bool` と `char` を1バイト境界に配置し、2バイト境界、`int`、`long`、4バイトの境界に `short` し、`float`、`long long`、および8バイトの境界に `double`します。`long double`
 
 ほとんどのシナリオでは、既定の配置が既に最適化されているため、配置について心配する必要はありません。 ただし、場合によっては、データ構造にカスタム配置を指定することで、パフォーマンスを大幅に向上させたり、メモリを節約したりすることができます。 Visual Studio 2015 より前では、Microsoft 固有のキーワード `__alignof` と `declspec(alignas)` を使用して、既定値よりも大きいアラインメントを指定できました。 Visual Studio 2015 以降では、コードの移植性を最大にするために、C++ 11 標準のキーワード**alignof**と位置指定**nas**を使用する必要があります。 新しいキーワードは、内部的には Microsoft 固有の拡張機能と同じように動作します。 これらの拡張機能のドキュメントは、新しいキーワードにも適用されます。 詳細については、「 [__Alignof 演算子](../cpp/alignof-operator.md)と[align](../cpp/align-cpp.md)」を参照してください。 標準C++では、ターゲットプラットフォームのコンパイラの既定値よりも小さい境界に対してパッキング動作が指定されていないため、その場合も Microsoft #pragma[パック](../preprocessor/pack.md)を使用する必要があります。
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /errorReport compiler option [C++]
 - -errorReport compiler option [C++]
 ms.assetid: 819828f8-b0a5-412c-9c57-bf822f17e667
-ms.openlocfilehash: afc366728e62029ffbd3993e2fdd740e3aaf3369
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 9efe96ed2611795e1fef408ad07b49d65261c3b1
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79439884"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075078"
 ---
 # <a name="errorreport-report-internal-compiler-errors"></a>/errorReport (内部コンパイラ エラーの報告)
 
@@ -24,14 +24,13 @@ ms.locfileid: "79439884"
 
 > **/errorreport:** \[**none** \| **prompt** \| **queue** \| **send** ]
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 内部コンパイラエラー (ICE) は、コンパイラがソースコードファイルを処理できない場合に発生します。 ICE が発生した場合、コンパイラは出力ファイルを生成しないか、コードの修正に使用できる有用な診断を生成しません。
 
 **/Errorreport**引数は、Windows エラー報告サービスの設定によってオーバーライドされます。 レポートが Windows エラー報告によって有効になっている場合、コンパイラは内部エラーのレポートを Microsoft に自動的に送信します。 Windows エラー報告で無効になっている場合、レポートは送信されません。
 
-
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
 
 1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳しくは、「[Visual Studio で C++ コンパイラとビルド プロパティを設定する](../working-with-project-properties.md)」をご覧ください。
 

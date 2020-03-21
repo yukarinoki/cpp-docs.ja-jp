@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - application design [C++], database applications
 ms.assetid: 0eb106b3-91b7-4c42-8c93-a8224aa9fe12
-ms.openlocfilehash: 8dcf2e4c90bd0a9a32a2cf2403ef4b4b0bf11a7b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aecb2b6d86f7c5b8093c9284d19bc3cc8cedb6c5
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395964"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079879"
 ---
 # <a name="design-and-create-an-odbc-database-application"></a>ODBC データベース アプリケーションのデザインと作成
 
-これらのトピックでは、ODBC データベース アプリケーションを設計および設定できます。
+これらのトピックは、ODBC データベースアプリケーションの設計と設定に役立ちます。
 
 ## <a name="in-this-section"></a>このセクションの内容
 
@@ -23,7 +23,6 @@ ms.locfileid: "62395964"
 
 - [ODBC の基礎](../../data/odbc/odbc-basics.md)
 
-
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ODBC (Open Database Connectivity)](../../data/odbc/open-database-connectivity-odbc.md)

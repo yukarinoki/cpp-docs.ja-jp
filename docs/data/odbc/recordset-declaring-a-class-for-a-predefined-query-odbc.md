@@ -1,5 +1,5 @@
 ---
-title: 'レコードセット: 定義済みクエリのクラスの宣言 (ODBC)'
+title: 'レコードセット: 定義済みクエリを利用したクラスの宣言 (ODBC)'
 ms.date: 05/09/2019
 helpviewer_keywords:
 - ODBC recordsets, queries
@@ -8,24 +8,24 @@ helpviewer_keywords:
 - recordsets, predefined queries
 - recordsets, stored procedures
 ms.assetid: d27c4df9-dad2-4484-ba72-92ab0c8ff928
-ms.openlocfilehash: 9ef95f4a2ebbc1bdf52e5631389f65391ce7cf8f
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: 6338de99bf9c3e19e6e15ffbe0bcf5caab066ed8
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707963"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079831"
 ---
-# <a name="recordset-declaring-a-class-for-a-predefined-query-odbc"></a>レコードセット: 定義済みクエリのクラスの宣言 (ODBC)
+# <a name="recordset-declaring-a-class-for-a-predefined-query-odbc"></a>レコードセット: 定義済みクエリを利用したクラスの宣言 (ODBC)
 
-> [!NOTE] 
-> MFC ODBC コンシューマー ウィザードは、Visual Studio 2019 以降では利用できません。 ただし、手動でコンシューマーを作成することはできます。
+> [!NOTE]
+> MFC ODBC コンシューマー ウィザードは、Visual Studio 2019 以降はご利用いただけなくなります。 ただし、手動でコンシューマーを作成することはできます。
 
 このトピックの内容は、MFC ODBC クラスに該当します。
 
 このトピックでは、定義済みクエリ (Microsoft SQL Server のように、ストアド プロシージャとも呼ばれます) のレコードセット クラスを作成する方法について説明します。
 
 > [!NOTE]
->  このトピックの内容は、バルク行フェッチが実装されていない `CRecordset` の派生オブジェクトを対象にしています。 バルク行フェッチが実装されている場合も、プロセスはとてもよく似ています。 バルク行フェッチが実装されているレコードセットとそうでないものとの違いを理解するには、「[Recordset: Fetching Records in Bulk (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)」 (レコードセット: レコードの一括フェッチ (ODBC)) を参照してください。
+>  このトピックの内容は、バルク行フェッチが実装されていない `CRecordset` の派生オブジェクトを対象にしています。 バルク行フェッチが実装されている場合も、プロセスはとてもよく似ています。 バルク行フェッチを実装するレコードセットとそうでないレコードセットの違いを理解するには、「レコード[セット: レコードを一括フェッチする (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)」を参照してください。
 
 一部のデータベース管理システム (DBMS) を使用すると、定義済みクエリを作成し、関数のようにプログラムから呼び出すことができます。 クエリは、名前を持ち、パラメーターを受け取る場合があり、レコードを返す場合があります。 このトピックの手順では、レコードを返す (そして、おそらくはパラメーターを受け取る) 定義済みクエリを呼び出す方法について説明します。
 
@@ -38,7 +38,7 @@ ms.locfileid: "65707963"
 
 #### <a name="to-create-a-class-for-calling-a-predefined-query-stored-procedure"></a>定義済みクエリ (ストアド プロシージャ) を呼び出すためのクラスを作成するには
 
-1. **[クラスの追加]** から [MFC ODBC コンシューマー ウィザード](../../mfc/reference/adding-an-mfc-odbc-consumer.md)を使って、クエリによって返される列の最も多くに関係するテーブルのレコードセット クラスを作成します。 これにより始めることができます。
+1. [[クラスの追加]](../../mfc/reference/adding-an-mfc-odbc-consumer.md) から **MFC ODBC コンシューマー ウィザード**を使って、クエリによって返される列の最も多くに関係するテーブルのレコードセット クラスを作成します。 これにより始めることができます。
 
 1. クエリによって返されますが、ウィザードで自動的には作成されなかった、すべてのテーブルのすべての列のフィールド データ メンバーを手動で追加します。
 
@@ -66,7 +66,7 @@ ms.locfileid: "65707963"
 
 1. クエリがパラメーターを受け取る場合は、各パラメーターのパラメーター データ メンバー、それぞれに対する RFX 関数呼び出し、およびそれぞれの初期化を追加します。
 
-1. この手順のステップ 4 で追加フィールドに対して `m_nFields` で行ったのと同じように、追加するパラメーターごとに `m_nParams` を増分する必要があります。 詳細については、「[Recordset: Parameterizing a Recordset (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)」 (レコードセット: レコードセットのパラメーター化 (ODBC)) を参照してください。
+1. この手順のステップ 4 で追加フィールドに対して `m_nParams` で行ったのと同じように、追加するパラメーターごとに `m_nFields` を増分する必要があります。 詳細については、「[レコードセット: レコードセットのパラメーター化 (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)」を参照してください。
 
 1. 次の形式で SQL ステートメントの文字列を手作業で記述します。
 
@@ -153,9 +153,9 @@ if( rsDel.Open( CRecordset::snapshot, strSQL ) )
 > [!TIP]
 >  ストアド プロシージャからの戻り値 (出力パラメーター) を処理することが必要な場合があります。 詳細と例については、「[CFieldExchange::SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [レコードセット (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[レコードセット: レコードセットのクエリの再実行 (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)<br/>
-[レコードセット: テーブル用のクラスの宣言 (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)<br/>
-[レコードセット: 結合の実行 (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)
+[レコードセット: クエリの再実行 (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)<br/>
+[レコードセット: テーブルにアクセスするレコードセット クラスの宣言 (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)<br/>
+[レコードセット: 結合 (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)

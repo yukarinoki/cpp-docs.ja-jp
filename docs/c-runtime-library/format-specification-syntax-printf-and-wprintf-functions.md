@@ -9,16 +9,16 @@ helpviewer_keywords:
 - width fields, printf function
 - precision fields, printf function
 ms.assetid: 664b1717-2760-4c61-bd9c-22eee618d825
-ms.openlocfilehash: 024e757f57e62ba2b30048c783798180b4da2b9a
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: c5cd93607f8e5a892d789dcb6aeef934f8936dad
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422710"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078059"
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>書式指定構文: printf 関数と wprintf 関数
 
-`printf` と `wprintf` 系のさまざまな関数では、書式設定文字列と省略可能な引数を受け取り、書式設定された文字のシーケンスを出力として生成します。 書式設定文字列には、0 個以上の*ディレクティブ*が含まれています。ディレクティブとは、出力する文字リテラル、または出力で引数を書式設定する方法を指定するためのエンコードされた*変換指定*です。 この記事では、書式設定文字列内の変換指定をエンコードするために使用する構文について説明します。 これらの関数の一覧については、「[ストリーム入出力](../c-runtime-library/stream-i-o.md)」を参照してください。 
+`printf` と `wprintf` 系のさまざまな関数では、書式設定文字列と省略可能な引数を受け取り、書式設定された文字のシーケンスを出力として生成します。 書式設定文字列には、0 個以上の*ディレクティブ*が含まれています。ディレクティブとは、出力する文字リテラル、または出力で引数を書式設定する方法を指定するためのエンコードされた*変換指定*です。 この記事では、書式設定文字列内の変換指定をエンコードするために使用する構文について説明します。 これらの関数の一覧については、「[ストリーム入出力](../c-runtime-library/stream-i-o.md)」を参照してください。
 
 変換指定は、次に示す形式のように、省略可能なフィールドと必須フィールドで構成されます。
 
@@ -39,7 +39,7 @@ ms.locfileid: "79422710"
 
 <a name="type"></a>
 
-> [!NOTE] 
+> [!NOTE]
 > Visual Studio 2015 では、`printf` および `scanf` の関数ファミリが**inline**として宣言され、`<stdio.h>` と `<conio.h>` のヘッダーに移動されました。 古いコードを移行する場合、これらの関数との接続に*LNK2019*が表示されることがあります。 詳細については、「[ビジュアルC++の変更履歴 2003-2015](../porting/visual-cpp-change-history-2003-2015.md#stdio_and_conio)」を参照してください。
 
 ## <a name="type-conversion-specifier"></a>type 変換指定子

@@ -8,20 +8,20 @@ helpviewer_keywords:
 - compiling programs [C++]
 - C program compiling [C++]
 ms.assetid: 7e74cc2d-54b1-49de-b7ad-d3ae6b39ab8d
-ms.openlocfilehash: d91ee36d26e307577aa56560eb95bef5ed03305b
-ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
+ms.openlocfilehash: 1b4e7f0f188ce7b3003f12cb7acafaf15a03d86a
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74051527"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078254"
 ---
 # <a name="walkthrough-compile-a-c-program-on-the-command-line"></a>チュートリアル: コマンドラインでの C プログラムのコンパイル
 
 Visual C++には、基本的なコンソールプログラムから、完全な Windows デスクトップアプリケーションやモバイルアプリなどに至るまで、あらゆるものを作成するために使用できる C コンパイラが含まれています。
 
-このチュートリアルでは、テキストエディターを使用して基本的な "Hello, World" スタイルの C プログラムを作成し、コマンドラインでコンパイルする方法について説明します。 コマンドラインを使用してC++作業する場合は、「[チュートリアル: コマンドラインでC++のネイティブプログラムのコンパイル](walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)」を参照してください。 コマンドラインを使用せずに visual studio ide を試す場合は、「[チュートリアル: プロジェクトとソリューションの使用 (C++)](../ide/walkthrough-working-with-projects-and-solutions-cpp.md) 」または「[デスクトップ開発用のC++ visual studio ide の使用](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)」を参照してください。
+このチュートリアルでは、テキストエディタを使用して基本的な "Hello、World"スタイルのCプログラムを作成し、それをコマンドラインでコンパイルする方法を説明します。 コマンドラインを使用してC++作業する場合は、「[チュートリアル: コマンドラインでC++のネイティブプログラムのコンパイル](walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)」を参照してください。 コマンドラインを使用せずに visual studio ide を試す場合は、「[チュートリアル: プロジェクトとソリューションの使用 (C++)](../ide/walkthrough-working-with-projects-and-solutions-cpp.md) 」または「[デスクトップ開発用のC++ visual studio ide の使用](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)」を参照してください。
 
-## <a name="prerequisites"></a>必要条件
+## <a name="prerequisites"></a>前提条件
 
 このチュートリアルを完了するには、Visual Studio とオプションのビジュアルC++コンポーネント、または visual Studio のビルドツールをインストールしておく必要があります。
 
@@ -63,9 +63,8 @@ Windows 10 に Visual Studio 2017 がインストールされている場合は�
 Windows 10 に Microsoft Visual C++ Build tools 2015 がインストールされている場合は、 **[スタート]** メニューを開き、下にスクロールして、 **[Visual C++ build tools]** フォルダーを開きます。 **[Visual C++ 2015 x86 Native Tools コマンドプロンプト]** を選択して、コマンドプロンプトウィンドウを開きます。
 
 別のバージョンの Windows を実行している場合は、[スタート] メニューまたは [スタート] ページで、開発者コマンドプロンプトのショートカットが含まれている Visual Studio tools フォルダーを探します。 また、Windows search 関数を使用して "developer command prompt" を検索し、インストールされている Visual Studio のバージョンに一致するものを選択することもできます。 ショートカットを使用して、コマンドプロンプトウィンドウを開きます。
-   
-::: moniker-end
 
+::: moniker-end
 
 次に、ビジュアルC++開発者コマンドプロンプトが正しくセットアップされていることを確認します。 コマンドプロンプトウィンドウで、「`cl`」と入力し、出力が次のようになっていることを確認します。
 
@@ -161,7 +160,7 @@ Visual C++のバージョンとインストールされている更新プログ�
 
 ## <a name="next-steps"></a>次のステップ
 
-この "Hello, World" の例は、C プログラムで取得できるのと同じように単純です。 実際のプログラムには、ヘッダーファイルやその他のソースファイルがあり、ライブラリにリンクされているので、便利な作業を行うことができます。
+この "Hello, world" の例は、 C プログラムと同じくらい簡単です。 実際のプログラムではヘッダー ファイルとより多くのソース ファイルがあり、ライブラリにリンクし、有益な処理を実行します。
 
 このチュートリアルの手順を使用すると、表示されるサンプルコードを入力する代わりに、独自の C コードを作成できます。 また、他の場所から入手できる多くの C コードサンプルプログラムをビルドすることもできます。 追加のソースコードファイルが含まれているプログラムをコンパイルするには、コマンドラインで次のように入力します。
 
@@ -183,7 +182,7 @@ C とC++言語は似ていますが、同じではありません。 Microsoft C
 
 MSVC は ISO C99 標準と互換性がありますが、厳密には準拠していません。 ほとんどの場合、ポータブル C コードは正常にコンパイルされ、実行されます。 Visual C++では、ISO C11 のほとんどの変更がサポートされていません。 特定のライブラリ関数と POSIX 関数名は、MSVC によって非推奨とされます。 関数はサポートされていますが、優先名が変更されています。 詳細については、「 [CRT のセキュリティ機能](../c-runtime-library/security-features-in-the-crt.md)」および「[コンパイラの警告 (レベル 3) C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [チュートリアル: 標準 C++ プログラム (C++) の作成](../windows/walkthrough-creating-a-standard-cpp-program-cpp.md)<br/>
 [C 言語リファレンス](../c-language/c-language-reference.md)<br/>

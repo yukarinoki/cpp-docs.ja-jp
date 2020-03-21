@@ -4,12 +4,12 @@ description: BNF x64 用 MASM の説明。
 ms.date: 12/17/2019
 helpviewer_keywords:
 - MASM (Microsoft Macro Assembler), BNF reference
-ms.openlocfilehash: 29eae0b110f99f1f417e153f18aa2ac3aff5c69b
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: 1a9577292e60db73838e5e6b850a4634db959fd6
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75322824"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075461"
 ---
 # <a name="microsoft-macro-assembler-bnf-grammar"></a>Microsoft マクロアセンブラー BNF 文法
 
@@ -80,7 +80,7 @@ BNF 文法では、再帰的な定義が許可されます。 たとえば、文
 *Bitdeflist*\
 &nbsp;&nbsp;&nbsp;&nbsp;*Bitdef* | *bitdeflist* , ⟦;;⟧ *Bitdef*
 
-*bitfieldid*
+*bitfieldid*\
 &nbsp;&nbsp;&nbsp;&nbsp;*id*
 
 *Bitfieldsize*\
@@ -142,7 +142,7 @@ BNF 文法では、再帰的な定義が許可されます。 たとえば、文
 &nbsp;&nbsp;&nbsp;&nbsp;**Popcontext** *contextItemList* ;;
 
 *contextItem*\
-&nbsp;&nbsp;&nbsp;&nbsp;**は |  | ** **CPU** | **すべて**を**一覧表**示して**い**ます。
+&nbsp;&nbsp;&nbsp;&nbsp;**は |  | ** **CPU** | **すべて**を**一覧表**示して**い**ます。 | 
 
 *contextItemList*\
 &nbsp;&nbsp;&nbsp;&nbsp;*contextItem* | *contextItemList* 、 *contextItem*
@@ -256,7 +256,7 @@ BNF 文法では、再帰的な定義が許可されます。 たとえば、文
 &nbsp;&nbsp;&nbsp;&nbsp;| **SEG** *e10*\
 &nbsp;&nbsp;&nbsp;&nbsp;| **Lroffset** *e10*\
 &nbsp;&nbsp;&nbsp;&nbsp;| **型** *e10*\
-&nbsp;&nbsp;&nbsp;&nbsp;**この** *e10* | 
+&nbsp;&nbsp;&nbsp;&nbsp;**この** *e10* | \
 &nbsp;&nbsp;&nbsp;&nbsp;| *e09* **PTR** *e10*\
 &nbsp;&nbsp;&nbsp;&nbsp;| *e09* : *e10*\
 &nbsp;&nbsp;&nbsp;&nbsp;| *e10*
@@ -278,7 +278,7 @@ BNF 文法では、再帰的な定義が許可されます。 たとえば、文
 &nbsp;&nbsp;&nbsp;&nbsp;| *Recordconst*\
 &nbsp;&nbsp;&nbsp;&nbsp;| *文字列*\
 &nbsp;&nbsp;&nbsp;&nbsp;| *定数*\
-&nbsp;&nbsp;&nbsp;&nbsp;*型*| 
+&nbsp;&nbsp;&nbsp;&nbsp;*型*| \
 &nbsp;&nbsp;&nbsp;&nbsp;| *id*\
 &nbsp;&nbsp;&nbsp;&nbsp;| **$**\
 &nbsp;&nbsp;&nbsp;&nbsp;| *segmentRegister*\
@@ -389,7 +389,7 @@ BNF 文法では、再帰的な定義が許可されます。 たとえば、文
 &nbsp;&nbsp;&nbsp;&nbsp;*区切り記号*
 
 *Filecharlist*\
-&nbsp;&nbsp;&nbsp;&nbsp;*fileChar* | *FilfileChar arlist*
+&nbsp;&nbsp;&nbsp;&nbsp;*fileChar* | *FilfileChar arlist* *fileChar*
 
 *fileSpec*\
 &nbsp;&nbsp;&nbsp;&nbsp;*Fil一括 Arlist* | *textliteral*
@@ -424,7 +424,7 @@ BNF 文法では、再帰的な定義が許可されます。 たとえば、文
 
 *一般ディレクトリ*\
 &nbsp;&nbsp;&nbsp;&nbsp;*Modeldir* | *segOrderDir* | *nameDir*\
-&nbsp;&nbsp;&nbsp; *&nbsp;| * *コメントディレクトリ* | 
+&nbsp;&nbsp;&nbsp; *&nbsp;| * *コメントディレクトリ* | \
 &nbsp;&nbsp;&nbsp;&nbsp;| *Groupdir* | *assumeDir*\
 &nbsp;&nbsp;&nbsp;&nbsp;| *structDir* | *Recorddir* | *typedefdir*\
 &nbsp;&nbsp;&nbsp;&nbsp;| *externDir* | *Publicdir* | *commdir* | *protoTypeDir*\
@@ -435,7 +435,7 @@ BNF 文法では、再帰的な定義が許可されます。 たとえば、文
 &nbsp;&nbsp;&nbsp;&nbsp;| *Crefdir* | *echoDir*\
 &nbsp;&nbsp;&nbsp;| *ifdir* | *Errordir* | *includedir*\ &nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;| *マクロ dir* | *マクロ呼び出し* | *macroRepeat* | *purgeDir*\
-&nbsp;&nbsp;&nbsp;&nbsp; *| マクロに* | *マクロにマクロ* *を* | します。
+&nbsp;&nbsp;&nbsp;&nbsp; *| マクロに* | *マクロにマクロ* *を* | します。\
 &nbsp;&nbsp;&nbsp;&nbsp;| *エイリアスディレクトリ*
 
 *gpRegister*\
@@ -554,7 +554,7 @@ BNF 文法では、再帰的な定義が許可されます。 たとえば、文
 &nbsp;&nbsp;&nbsp;&nbsp;|  **.LFCOND**\
 &nbsp;&nbsp;&nbsp;&nbsp;|  **.NOLISTIF**\
 &nbsp;&nbsp;&nbsp;&nbsp;|  **.SFCOND**\
-&nbsp;&nbsp;&nbsp;&nbsp;|  **。TFCOND**
+&nbsp;&nbsp;&nbsp;&nbsp;|  **。TFCOND**\
 &nbsp;&nbsp;&nbsp;&nbsp;|  **。LISTマクロ ALL** |  **。LALL**\
 &nbsp;&nbsp;&nbsp;&nbsp;|  **。NOLISTMACRO** |  **。SALL**\
 &nbsp;&nbsp;&nbsp;&nbsp;|  **。LISTMACRO** |  **。XALL**\
@@ -650,7 +650,7 @@ BNF 文法では、再帰的な定義が許可されます。 たとえば、文
 &nbsp;&nbsp;&nbsp;&nbsp;**すべて** | **なし** | **notpublic**
 
 *Memoption*\
-&nbsp;&nbsp; **&nbsp;&nbsp;** 小さい | **小さい** | **中** | **非常**に**大きい** | 大きな | **フラット**
+&nbsp;&nbsp; **&nbsp;&nbsp;** 小さい | **小さい** | **中** | **非常**に**大きい** | **HUGE**大きな | **フラット** | 
 
 *ニーモニック*\
 &nbsp;&nbsp;&nbsp;&nbsp;命令名を指定します。
@@ -716,7 +716,7 @@ BNF 文法では、再帰的な定義が許可されます。 たとえば、文
 &nbsp;&nbsp;&nbsp;&nbsp;| **PROC** : *ovisibility*\
 &nbsp;&nbsp;&nbsp;&nbsp;| **プロローグ**:*マクロ id*\
 &nbsp;&nbsp;&nbsp;&nbsp;| **READONLY** | **NOREADONLY**\
-&nbsp;&nbsp;&nbsp;&nbsp;**スコープ**| **noscoped** | 
+&nbsp;&nbsp;&nbsp;&nbsp;**スコープ**| **noscoped** | \
 &nbsp;&nbsp;&nbsp;&nbsp;| **セグメント**: *segSize*\
 &nbsp;&nbsp;&nbsp;&nbsp;| **SETIF2** : bool
 
@@ -853,7 +853,7 @@ BNF 文法では、再帰的な定義が許可されます。 たとえば、文
 &nbsp;&nbsp;&nbsp;&nbsp;*id*
 
 \ の*登録*
-&nbsp;&nbsp;&nbsp;&nbsp;*特殊レジスタ* | *gpRegister* | *byteRegister* | *Qwordregister* |  *fpuregister* |  *segmentRegister*
+&nbsp;&nbsp;&nbsp;&nbsp;*特殊レジスタ* | *gpRegister* | *byteRegister* | *Qwordregister* |  *fpuregister* | *SIMDRegister* *segmentRegister* | 
 
 *Reglist*\
 &nbsp;&nbsp;&nbsp;&nbsp;*登録* | *reglist* *レジスタ*
@@ -942,7 +942,7 @@ BNF 文法では、再帰的な定義が許可されます。 たとえば、文
 
 *特殊文字*\
  : | . |⟦ |⟧ |( | )|< |> |{ | }\
-&nbsp;&nbsp;&nbsp;&nbsp;|+ |- |/ |* |& |% | !\
+&nbsp;&nbsp;&nbsp;&nbsp;|+ |- |/ |* |&AMP; |% | !\
 &nbsp;&nbsp;&nbsp;&nbsp;||\ |= | ; |, |"\
 &nbsp;&nbsp;&nbsp;&nbsp;| *whiteSpaceCharacter*\
 &nbsp;&nbsp;&nbsp;&nbsp;| *Endofline*
@@ -1071,4 +1071,3 @@ BNF 文法では、再帰的な定義が許可されます。 たとえば、文
 
 *Xmmregister*\
 &nbsp;&nbsp;&nbsp;&nbsp;XMM0 |XMM1 |XMM2 |XMM3 |XMM4 |XMM5 |XMM6 |XMM7 |XMM8 |XMM9 |XMM10 |XMM11 |XMM12 |XMM13 |XMM14 |XMM15\
-

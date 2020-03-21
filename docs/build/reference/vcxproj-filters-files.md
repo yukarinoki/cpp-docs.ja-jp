@@ -1,18 +1,18 @@
 ---
-title: .vcxproj. ファイルをフィルター処理する
+title: .Vcxproj. ファイルをフィルター処理する
 ms.date: 09/25/2019
 description: Visual Studio C++プロジェクトのフィルターファイルを使用して、ソリューションエクスプローラー内のファイルのカスタム論理フォルダーを定義します
 helpviewer_keywords:
 - vcxproj.filters
 - filters file [C++]
-ms.openlocfilehash: ee44bf3d1cbe06d6c007ed8976ec384a456efca5
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.openlocfilehash: bdf40708a70d841cb3d3144fa8fa73a71e9e9ef2
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71686924"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078273"
 ---
-# <a name="vcxprojfilters-files"></a>.vcxproj. ファイルをフィルター処理する
+# <a name="vcxprojfilters-files"></a>.Vcxproj. ファイルをフィルター処理する
 
 *フィルター*ファイル (\*) は、ルートプロジェクトフォルダーに配置されている MSBuild 形式の XML ファイルです。 ここでは、**ソリューションエクスプローラー**内の論理フォルダーに入るファイルの種類を指定します。 次の図では、 *.cpp*ファイルは **[ソースファイル]** ノードにあります。 *.h*ファイルは **[ヘッダーファイル]** ノードの下にあり *、.ico*ファイルと *.rc*ファイルは **[リソースファイル]** の下にあります。 この配置は、フィルターファイルによって制御されます。
 
@@ -26,7 +26,7 @@ ms.locfileid: "71686924"
 
 次の例は、前に示した例のフィルターファイルを示しています。 これにはフラットな階層があります。つまり、入れ子になった論理フォルダーはありません。 `UniqueIdentifier` ノードは省略可能です。 これにより、Visual Studio オートメーションインターフェイスがフィルターを検索できるようになります。 `Extensions` も省略可能です。 新しいファイルがプロジェクトに追加されると、ファイル拡張子が一致する最上位のフィルターに追加されます。 特定のフィルターにファイルを追加するには、フィルターを右クリックし、 **[新しい項目の追加]** を選択します。
 
-`ClInclude` ノードが含まれている `ItemGroup` は、プロジェクトの初回起動時に作成されます。 独自の .vcxproj ファイルを生成する場合は、すべてのプロジェクト項目にフィルターファイルのエントリが含まれていることを確認してください。 `ClInclude` ノードの値は、ファイル拡張子に基づく既定のフィルター処理よりも優先されます。 Visual Studio を使用して新しい項目をプロジェクトに追加すると、IDE によってフィルターファイルに個々のファイルエントリが追加されます。 ファイルの拡張子を変更すると、フィルターは自動的に再割り当てされません。 
+`ClInclude` ノードが含まれている `ItemGroup` は、プロジェクトの初回起動時に作成されます。 独自の .vcxproj ファイルを生成する場合は、すべてのプロジェクト項目にフィルターファイルのエントリが含まれていることを確認してください。 `ClInclude` ノードの値は、ファイル拡張子に基づく既定のフィルター処理よりも優先されます。 Visual Studio を使用して新しい項目をプロジェクトに追加すると、IDE によってフィルターファイルに個々のファイルエントリが追加されます。 ファイルの拡張子を変更すると、フィルターは自動的に再割り当てされません。
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -107,4 +107,3 @@ ms.locfileid: "71686924"
     </Filter>
   </ItemGroup>
 ```
-

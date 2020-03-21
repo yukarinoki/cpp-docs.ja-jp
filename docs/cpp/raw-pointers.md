@@ -4,12 +4,12 @@ description: で生のポインターを使用する方法C++
 ms.date: 11/19/2019
 helpviewer_keywords:
 - pointers [C++]
-ms.openlocfilehash: 9ea498c254bc37dc8dc550232127cb2db3bc0886
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 2dbb4f11fc0c08578e82371e8df77e9643313879
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74250686"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077144"
 ---
 # <a name="raw-pointers-c"></a>生のポインターC++()
 
@@ -45,7 +45,7 @@ ms.locfileid: "74250686"
     const int* pconst = &c; // declare a non-const pointer to const int
     const int c2 = 2;
     pconst = &c2;  // OK pconst itself isn't const
-    const int* const pconst2 = &c; 
+    const int* const pconst2 = &c;
     // pconst2 = &c2; // Error! pconst2 is const.
 ```
 
@@ -168,7 +168,7 @@ int main()
 
 特定の算術演算を非定数ポインターに対して実行して、新しいメモリ位置を指すようにすることができます。 ポインターは、 **++** 、 **+=** 、 **-=** 、および **--** の各演算子を使用してインクリメントおよびデクリメントできます。 この手法は配列で使用でき、型指定されていないデータのバッファーで特に便利です。 **Void\*** **char** (1 バイト) のサイズによってインクリメントされます。 型指定されたポインターは、ポインターが指す型のサイズによってインクリメントされます。
 
-次の例は、ポインター演算を使用して、Windows 上のビットマップ内の個々のピクセルにアクセスする方法を示しています。 **New**と**delete**、および逆参照演算子の使用に注意してください。 
+次の例は、ポインター演算を使用して、Windows 上のビットマップ内の個々のピクセルにアクセスする方法を示しています。 **New**と**delete**、および逆参照演算子の使用に注意してください。
 
 ```cpp
 #include <Windows.h>
@@ -235,7 +235,7 @@ int main()
 
 ## <a name="void-pointers"></a>void * ポインター
 
-**Void**へのポインターは、単純に生のメモリ位置を指します。 場合によっては、コードと C 関数の間C++を渡すときなどに、 **void\*** ポインターを使用する必要があります。 
+**Void**へのポインターは、単純に生のメモリ位置を指します。 場合によっては、コードと C 関数の間C++を渡すときなどに、 **void\*** ポインターを使用する必要があります。
 
 型指定されたポインターが void ポインターにキャストされた場合、メモリ位置の内容は変更されませんが、インクリメントまたはデクリメント操作を実行できないように、型情報は失われます。 たとえば、MyClass * から void * へのメモリ位置をキャストして、再び MyClass * に戻ることができます。 このような操作は本質的にエラーが発生しやすく、エラーを回避するために細心の注意が必要です。 最新C++では、絶対に必要な場合を除き、void ポインターを使用することはできません。
 
@@ -290,7 +290,7 @@ int main()
 }
 ```
 
-## <a name="pointers_to_functions"></a>関数へのポインター
+## <a name="pointers-to-functions"></a><a name="pointers_to_functions"></a>関数へのポインター
 
 C スタイルのプログラミングでは、関数ポインターは主に他の関数に関数を渡すために使用されます。 このシナリオでは、呼び出し元は関数の動作を変更せずにカスタマイズできます。 最新C++の[ラムダ式](lambda-expressions-in-cpp.md)では、より高いタイプセーフとその他の利点により、同じ機能が提供されます。
 

@@ -33,12 +33,12 @@ helpviewer_keywords:
 - m_strCommandText
 - m_strIndexText
 ms.assetid: e97614b3-b11d-4806-a0d3-b9401331473f
-ms.openlocfilehash: 9c2e5923fe35287a7586cd4b52bc60e4a5b27b2d
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 956648babf987d156cac753f8373518a83362013
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79545571"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079673"
 ---
 # <a name="crowsetimpl-class"></a>CRowsetImpl クラス
 
@@ -55,7 +55,7 @@ template <
    class RowClass = CSimpleRow,
    class RowsetInterface = IRowsetImpl <T, IRowset>
 >
-class CRowsetImpl : 
+class CRowsetImpl :
    public CComObjectRootEx<CreatorClass::_ThreadModel>,
    public CRowsetBaseImpl<T, Storage, ArrayType, RowsetInterface>,
    public IRowsetInfoImpl<T, CreatorClass::_PropClass>
@@ -75,7 +75,7 @@ class CRowsetImpl :
 *ArrayType*<br/>
 行セットのデータのストレージとして機能するクラス。 このパラメーターの既定値は `CAtlArray`ですが、必要な機能をサポートする任意のクラスを指定できます。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atldb.h
 
@@ -104,7 +104,7 @@ class CRowsetImpl :
 |[m_strCommandText](#strcommandtext)|行セットの初期コマンドが含まれています。|
 |[m_strIndexText](#strindextext)|行セットの初期インデックスが含まれています。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 `CRowsetImpl` は、静的なアップキャストの形式でオーバーライドを提供します。 メソッドは、指定された行セットがコマンドテキストを検証する方法を制御します。 実装インターフェイスを複数継承することで、独自の `CRowsetImpl`スタイルクラスを作成できます。 実装を提供する必要があるメソッドは `Execute`だけです。 作成しようとしている行セットの種類によっては、creator メソッドでは `Execute`に対して異なるシグネチャが想定されます。 たとえば、`CRowsetImpl`派生クラスを使用してスキーマ行セットを実装している場合、`Execute` メソッドのシグネチャは次のようになります。
 
@@ -143,7 +143,7 @@ HRESULT CRowsetBaseImpl::NameFromDBID(DBID* pDBID,
 
 標準の HRESULT です。 `DBID` がテーブルとインデックスのどちらであるか ( *Bindex*によって示されます) に応じて、メソッドは DB_E_NOINDEX または DB_E_NOTABLE を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメソッドは、 [Validatecommandid](../../data/oledb/crowsetimpl-validatecommandid.md)および[Getcommandfromid](../../data/oledb/crowsetimpl-getcommandfromid.md)の `CRowsetImpl` 実装によって呼び出されます。
 
@@ -170,7 +170,7 @@ HRESULT CRowsetBaseImpl::SetCommandText(DBID* pTableID,
 
 標準の HRESULT です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `SetCommentText` メソッドは、`IOpenRowsetImpl`の静的なテンプレート化メソッド `CreateRowset`によって呼び出されます。
 
@@ -199,7 +199,7 @@ static ATLCOLUMNINFO* CRowsetBaseImpl::GetColumnInfo(T* pv,
 
 静的な `ATLCOLUMNINFO` 構造体へのポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメソッドは高度なオーバーライドです。
 
@@ -232,7 +232,7 @@ HRESULT CRowsetBaseImpl::GetCommandFromID(DBID* pTableID,
 
 標準の HRESULT です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメソッドは、`CRowsetImpl` によって静的なアップキャストを通じて呼び出され、データメンバー [m_strCommandText](../../data/oledb/crowsetimpl-m-strcommandtext.md)と[m_strIndexText](../../data/oledb/crowsetimpl-m-strindextext.md)を設定します。 既定では、このメソッドは、いずれかまたは両方のパラメーターに文字列値が含まれているかどうかを確認します。 文字列値が含まれている場合、このメソッドは文字列値をデータメンバーにコピーします。 このシグネチャを持つメソッドを `CRowsetImpl`派生クラスに配置すると、基本実装ではなく、メソッドが呼び出されます。
 
@@ -259,7 +259,7 @@ HRESULT CRowsetBaseImpl::ValidateCommandID(DBID* pTableID,
 
 標準の HRESULT です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメソッドは、`CRowsetImpl` によって静的なアップキャストを通じて呼び出され、そのデータメンバー [m_strCommandText](../../data/oledb/crowsetimpl-m-strcommandtext.md)と[m_strIndexText](../../data/oledb/crowsetimpl-m-strindextext.md)を設定します。 既定では、このメソッドは `DBID`s に文字列値が含まれているかどうかを確認し、存在する場合はそれらをデータメンバーにコピーします。 このシグネチャを持つメソッドを `CRowsetImpl`派生クラスに配置すると、基本実装ではなく、メソッドが呼び出されます。
 
@@ -273,7 +273,7 @@ HRESULT CRowsetBaseImpl::ValidateCommandID(DBID* pTableID,
 ArrayType CRowsetBaseImpl::m_rgRowData;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 *ArrayType*は、`CRowsetImpl`するテンプレートパラメーターです。
 

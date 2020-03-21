@@ -2,18 +2,18 @@
 title: Android および iOS での OpenGL ES アプリケーションのビルド
 ms.date: 10/09/2019
 ms.assetid: 76a67886-df57-4a81-accb-2e3c2eaf607b
-ms.openlocfilehash: 23dd9dbb1ff32050494e0d1d105cd55de3123fbb
-ms.sourcegitcommit: a673f6a54cc97e3d4cd032b10aa8dce7f0539d39
+ms.openlocfilehash: 3709cfcc681f265d08758f97422ae16e98a66a1c
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "79470077"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079670"
 ---
 # <a name="build-an-opengl-es-application-on-android-and-ios"></a>Android および iOS での OpenGL ES アプリケーションのビルド
 
 共通コードを共有する iOS アプリ用および Android アプリ用の Visual Studio ソリューションおよびプロジェクトを作成できます。 この記事では、結合されたソリューションテンプレートについて説明します。 IOS アプリと Android Native Activity アプリの両方が作成されます。 これらのアプリには、OpenGL ES を使用して各プラットフォームで同じアニメーション回転キューブを表示する共通の C++ コードがあります。 OpenGL ES (埋め込みシステムの OpenGL) は、2D および3D グラフィックス API です。 多くのモバイルデバイスでサポートされています。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 IOS および Android 用の OpenGL ES アプリを作成するためのすべてのシステム要件を満たしていること。 C++ によるモバイル開発ワークロードをまたインストールしていない場合は、Visual Studio インストーラーにインストールします。 OpenGL ES テンプレートを取得し、iOS 用にビルドするには、オプションの C++ iOS 開発ツールを含めます。 Android 用にビルドするにはC++ 、android 開発ツールと、必要なサードパーティ製ツール (android NDK、Apache Ant、Google Android Emulator) をインストールします。
 
@@ -109,7 +109,7 @@ IOS アプリをビルドしてテストするには、Mac コンピューター
 
    生成された Android Native Activity アプリとライブラリプロジェクトC++は、共有コードをダイナミックライブラリに配置します。 Android プラットフォームとのインターフェイスを持つ "グルー" コードが含まれています。 ほとんどのアプリコードはライブラリにあります。 マニフェスト、リソース、およびビルド手順は、パッケージプロジェクトに含まれています。 共有コードは、NativeActivity プロジェクトの main.cpp から呼び出されます。 Android Native Activity をプログラムする方法の詳細については、Android NDK Developer の「 [Concepts](https://developer.android.com/ndk/guides/concepts.html) 」ページを参照してください。
 
-   Visual Studio は、android NDK を使用して Android Native Activity プロジェクトをビルドします。 プラットフォームツールセットとして Clang を使用します。 Visual Studio は、プロジェクトのプロパティを、ターゲットプラットフォームのコンパイル、リンク、およびデバッグコマンドにマップします。 詳細については、MyOpenGLESApp.Android.NativeActivity プロジェクトの **[プロパティ ページ]** ダイアログを参照してください。 コマンド ライン スイッチの詳細については、「[Clang Compiler User's Manual](http://clang.llvm.org/docs/UsersManual.html)」 (Clang コンパイラ ユーザーズ マニュアル) を参照してください。
+   Visual Studio は、android NDK を使用して Android Native Activity プロジェクトをビルドします。 プラットフォームツールセットとして Clang を使用します。 Visual Studio は、プロジェクトのプロパティを、ターゲットプラットフォームのコンパイル、リンク、およびデバッグコマンドにマップします。 詳細については、MyOpenGLESApp.Android.NativeActivity プロジェクトの **[プロパティ ページ]** ダイアログを参照してください。 コマンド ライン スイッチの詳細については、「[Clang Compiler User's Manual](https://clang.llvm.org/docs/UsersManual.html)」 (Clang コンパイラ ユーザーズ マニュアル) を参照してください。
 
 ## <a name="build-and-run-the-ios-app-on-an-ios-device"></a>iOS デバイスで iOS アプリをビルドして実行する
 

@@ -4,12 +4,12 @@ ms.date: 11/22/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: 542a469393d3655418f69e5d51d59adfa824ad15
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: ac92d9dfa5266227fb3bd4a3749ab50f425a2d90
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422860"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078721"
 ---
 # <a name="cmakesettingsjson-schema-reference"></a>CMakeSettings.json スキーマ リファレンス
 
@@ -21,13 +21,13 @@ CMake プロジェクトは、Visual Studio 2017 以降でサポートされて�
 
 ::: moniker range=">=vs-2017"
 
-**Cmakesettings. json**ファイルには、Visual Studio が IntelliSense に使用する情報が含まれており、指定された*構成*およびコンパイラ*環境*に対して cmake に渡すコマンドライン引数を構築します。 構成では、特定のプラットフォームおよびビルドの種類 (`x86-Debug`、`Linux-Release`など) に適用されるプロパティを指定します。 各構成は、MSVC、GCC、Clang などのコンパイラツールセットに関する情報をカプセル化する環境を指定します。 CMake では、コマンドライン引数を使用して、プロジェクトのルート*cmakecache.txt*ファイルとその他のプロジェクトファイルを再生成します。 値は、 *Cmakelists .txt*ファイルでオーバーライドできます。 
+**Cmakesettings. json**ファイルには、Visual Studio が IntelliSense に使用する情報が含まれており、指定された*構成*およびコンパイラ*環境*に対して cmake に渡すコマンドライン引数を構築します。 構成では、特定のプラットフォームおよびビルドの種類 (`x86-Debug`、`Linux-Release`など) に適用されるプロパティを指定します。 各構成は、MSVC、GCC、Clang などのコンパイラツールセットに関する情報をカプセル化する環境を指定します。 CMake では、コマンドライン引数を使用して、プロジェクトのルート*cmakecache.txt*ファイルとその他のプロジェクトファイルを再生成します。 値は、 *Cmakelists .txt*ファイルでオーバーライドできます。
 
 IDE で構成を追加または削除し、JSON ファイルで直接編集するか、 **Cmake 設定エディター** (Visual Studio 2019 以降) を使用することができます。 IDE で構成を簡単に切り替えて、さまざまなプロジェクトファイルを生成することができます。 詳細については、「 [Visual Studio での CMake ビルド設定のカスタマイズ](customize-cmake-settings.md)」を参照してください。
 
 ## <a name="configurations"></a>構成
 
-`configurations` 配列には、CMake プロジェクトのすべての構成が含まれています。 定義済みの構成の詳細については、「[定義済みの構成のリファレンス](cmake-predefined-configuration-reference.md)」を参照してください。 ファイルには、任意の数の事前定義済みまたはカスタム構成を追加できます。 
+`configurations` 配列には、CMake プロジェクトのすべての構成が含まれています。 定義済みの構成の詳細については、「[定義済みの構成のリファレンス](cmake-predefined-configuration-reference.md)」を参照してください。 ファイルには、任意の数の事前定義済みまたはカスタム構成を追加できます。
 
 `configuration` には次のプロパティがあります。
 
@@ -148,7 +148,7 @@ Visual studio 2019 で Visual Studio ジェネレーターを指定するには*
 `"type"`を定義しない場合、`"STRING"` の種類は既定で想定されることに注意してください。
 - `remoteCopyOptimizations`: リモートターゲットへのソースコピーを制御するための**Visual Studio 2019 バージョン 16.5**以降のプロパティ。 既定では、最適化が有効になっています。 `remoteCopyUseOptimizations`、`rsyncSingleDirectoryCommandArgs`、および `remoteCopySourcesMaxSmallChange` を含みます。
 
-## <a name="environments"></a>下
+## <a name="environments"></a><a name="environments"></a>下
 
 *環境*には、Visual Studio が cmake .exe を呼び出すために使用するプロセスで設定された環境変数がカプセル化されています。 MSVC プロジェクトの場合、変数は、[開発者コマンドプロンプト](building-on-the-command-line.md)で特定のプラットフォーム用に設定されているものです。 たとえば、`msvc_x64_x64` 環境は、 **vs 2017 の開発者コマンドプロンプト**と、 **-arch = amd64-host_arch = amd64**引数を使用した**vs 2019 の開発者コマンドプロンプト**を実行する場合と同じです。 *Cmakesettings. json*の `env.{<variable_name>}` 構文を使用すると、フォルダーへのパスを作成するなど、個々の環境変数を参照できます。  次の定義済みの環境が用意されています。
 
@@ -175,7 +175,7 @@ CMakeLists .txt ファイルからは、すべての環境変数が `$ENV{variab
 - `namespace`: フォーム `namespace.variable` 内の構成から環境変数を参照できるように環境に名前を付けます。 既定の環境オブジェクトは `env` と呼ばれ、`%USERPROFILE%`を含む特定のシステム環境変数が設定されます。
 - `environment`: この変数グループを一意に識別します。 後で `inheritEnvironments` エントリでグループが継承できるようにします。
 - `groupPriority`: これらの変数を評価するときの優先度を指定する整数です。 数字が大きい大きい項目が最初に評価されます。
-- `inheritEnvironments`: このグループによって継承される環境のセットを指定する値の配列。 この機能を使用すると、既定の環境を継承し、実行時に CMake.exe に渡されるカスタム環境変数を作成することができます。 
+- `inheritEnvironments`: このグループによって継承される環境のセットを指定する値の配列。 この機能を使用すると、既定の環境を継承し、実行時に CMake.exe に渡されるカスタム環境変数を作成することができます。
 
 **Visual Studio 2019 バージョン16.4 以降:** デバッグターゲットは、 *Cmakesettings. json*で指定した環境で自動的に起動されます。 [Launch と json](launch-vs-schema-reference-cpp.md) [の比較に](tasks-vs-json-schema-reference-cpp.md)より、環境変数を、ターゲット単位またはタスク単位でオーバーライドまたは追加できます。
 
@@ -269,7 +269,7 @@ CMakeLists .txt ファイルからは、すべての環境変数が `$ENV{variab
 
 *Cmakesettings. json*のマクロと環境変数へのすべての参照は、cmake .exe コマンドラインに渡される前に展開されます。
 
-## <a name="ninja"></a> Ninja のコマンド ライン引数
+## <a name="ninja-command-line-arguments"></a><a name="ninja"></a> Ninja のコマンド ライン引数
 
 ターゲットを指定しないと、"default" ターゲットがビルドされます。
 

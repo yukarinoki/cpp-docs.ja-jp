@@ -1,18 +1,18 @@
 ---
-title: リンカー プロパティ ページ
+title: '[リンカー] プロパティ ページ'
 ms.date: 07/24/2019
 ms.topic: article
 ms.assetid: 7e7671e5-a35a-4e67-9bdb-661d75c4d11e
-ms.openlocfilehash: 55fcefd826ec6ecb153adad495e21ce97aa432f1
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.openlocfilehash: fd0befd7b8ed4e7a4209c3c80602be2f2a99422f
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927702"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079598"
 ---
-# <a name="linker-property-pages"></a>リンカー プロパティ ページ
+# <a name="linker-property-pages"></a>[リンカー] プロパティ ページ
 
-次のプロパティは、[**プロジェクト** > の**プロパティ** > ] [**構成プロパティ** > ] **[リンカー]** の下にあります。 リンカーの詳細については、「CL によってリンカー[オプションとリンカーオプション](linker-options.md)[が呼び出される](cl-invokes-the-linker.md)」を参照してください。
+次のプロパティは、[**プロジェクト** > の**プロパティ** > **構成プロパティ** > **リンカー**] の下にあります。 リンカーの詳細については、「CL によってリンカー[オプションとリンカーオプション](linker-options.md)[が呼び出される](cl-invokes-the-linker.md)」を参照してください。
 
 ## <a name="general-property-page"></a>[全般] プロパティページ
 
@@ -24,10 +24,10 @@ ms.locfileid: "70927702"
 
 リンカーの進行状況メッセージを出力します
 
-**いずれ**
+**Choices**
 
 - **設定されていませ**ん-詳細度はありません。
-- **すべての進行状況メッセージを表示**する: すべての進行状況メッセージを表示します。 
+- **すべての進行状況メッセージを表示**する: すべての進行状況メッセージを表示します。
 - **検索するライブラリの場合**-検索したライブラリのみを示す進行状況メッセージが表示されます。
 - 最適化された**リンク時の comdat の圧縮について**-最適化されたリンク時の comdat の圧縮に関する情報を表示します。
 - **最適化されたリンク時に削除されるデータについて**-最適化されたリンク時に削除される関数とデータに関する情報を表示します。
@@ -44,7 +44,7 @@ ms.locfileid: "70927702"
 
 ### <a name="suppress-startup-banner"></a>著作権情報の非表示
 
-[/Nologo](nologo-suppress-startup-banner-linker.md)オプションを指定すると、著作権メッセージとバージョン番号が表示されなくなります。 
+[/Nologo](nologo-suppress-startup-banner-linker.md)オプションを指定すると、著作権メッセージとバージョン番号が表示されなくなります。
 
 ### <a name="ignore-import-library"></a>インポート ライブラリの無視
 
@@ -68,13 +68,13 @@ Visual Studio の登録はこれまで、HKEY_CLASSES_ROOT (HKCR) で行われ�
 
 環境のライブラリ パスをユーザーがオーバーライドできるようにします。 ([/Libpath](libpath-additional-libpath.md): フォルダー)
 
-### <a name="link-library-dependencies"></a>ライブラリ依存関係のリンク
+### <a name="link-library-dependencies"></a>[リンク ライブラリの依存関係]
 
 依存プロジェクトによって生成された .lib ファイルをリンクするかどうかを指定します。 通常、.lib ファイルをリンクする必要がありますが、特定の Dll には当てはまりません。
 
 また、ファイル名と相対パス (たとえば "..\\..\MyLibProject\MyObjFile.obj") によって .obj ファイルを指定できます。 .Obj ファイルのソースコードがプリコンパイル済みヘッダーを #includes 場合 (.pch など)、pch ファイルは MyObjFile .obj と同じフォルダーに配置されます。また、pch を追加の依存関係として追加する必要があります。
 
-### <a name="use-library-dependency-inputs"></a>ライブラリ依存関係の入力の使用
+### <a name="use-library-dependency-inputs"></a>[ライブラリ依存関係の入力の使用]
 
 プロジェクトの依存関係のライブラリ出力にリンクするときに、ライブラリファイル自体ではなく、ライブラリアンツールへの入力を使用するかどうかを指定します。 大規模なプロジェクトでは、依存プロジェクトによって .lib ファイルが生成される場合、インクリメンタル リンクは無効にされています。 .lib ファイルを生成する依存プロジェクトが多数存在する場合、アプリケーションのビルドに長時間を要する場合があります。 このプロパティが **[はい]** に設定されている場合、プロジェクトシステムは、依存プロジェクトによって生成される .lib ファイル内の .obj ファイルにリンクし、インクリメンタルリンクを有効にします。
 
@@ -96,7 +96,7 @@ Visual Studio の登録はこれまで、HKEY_CLASSES_ROOT (HKCR) で行われ�
 
 [/Force](force-force-file-output.md)オプションは、シンボルが参照されていても定義されていない場合や、多重定義されている場合でも、.exe ファイルまたは DLL を作成するようにリンカーに指示します。 無効な .exe ファイルが作成される可能性があります。
 
-**いずれ**
+**Choices**
 
 - **有効**にします。引数を指定しない場合は、倍数と未解決の両方が示されます。
 - **定義済みのシンボルのみを乗算**する-リンクがシンボルに対して複数の定義を検出した場合でも、/FORCE: MULTIPLE を使用して出力ファイルを作成します。
@@ -106,7 +106,7 @@ Visual Studio の登録はこれまで、HKEY_CLASSES_ROOT (HKCR) で行われ�
 
 ホットパッチ用のイメージを準備します。
 
-**いずれ**
+**Choices**
 
 - **Enabled** -イメージをホットパッチ用に準備します。
 - **X86 イメージのみ**-ホットパッチ用の x86 イメージを準備します。
@@ -119,13 +119,13 @@ Visual Studio の登録はこれまで、HKEY_CLASSES_ROOT (HKCR) で行われ�
 
 ## <a name="input-property-page"></a>[入力] プロパティページ
 
-### <a name="additional-dependencies"></a>追加の依存ファイル
+### <a name="additional-dependencies"></a>[追加の依存ファイル]
 
 リンクコマンドラインに追加する追加項目を指定します (例*kernel32.dll*)。
 
 ### <a name="ignore-all-default-libraries"></a>すべての既定のライブラリを無視する
 
-[/NODEFAULTLIB](nodefaultlib-ignore-libraries.md)オプションは、外部参照を解決するときに検索するライブラリの一覧から1つ以上の既定のライブラリを削除するようにリンカーに指示します。 
+[/NODEFAULTLIB](nodefaultlib-ignore-libraries.md)オプションは、外部参照を解決するときに検索するライブラリの一覧から1つ以上の既定のライブラリを削除するようにリンカーに指示します。
 
 ### <a name="ignore-specific-default-libraries"></a>特定の既定のライブラリの無視
 
@@ -133,7 +133,7 @@ Visual Studio の登録はこれまで、HKEY_CLASSES_ROOT (HKCR) で行われ�
 
 ### <a name="module-definition-file"></a>モジュール定義ファイル
 
-[/Def](def-specify-module-definition-file.md)オプションを指定すると、モジュール定義ファイル (.def) がリンカーに渡されます。 リンク先として指定できる .def ファイルは1つだけです。 
+[/Def](def-specify-module-definition-file.md)オプションを指定すると、モジュール定義ファイル (.def) がリンカーに渡されます。 リンク先として指定できる .def ファイルは1つだけです。
 
 ### <a name="add-module-to-assembly"></a>アセンブリへのモジュールの追加
 
@@ -149,7 +149,7 @@ Visual Studio の登録はこれまで、HKEY_CLASSES_ROOT (HKCR) で行われ�
 
 ### <a name="delay-loaded-dlls"></a>Dll の遅延読み込み
 
-[/DELAYLOAD](delayload-delay-load-import.md)オプションを指定すると、dll の遅延読み込みが発生します。 Dll 名は、遅延読み込みを行う DLL を指定します。 
+[/DELAYLOAD](delayload-delay-load-import.md)オプションを指定すると、dll の遅延読み込みが発生します。 Dll 名は、遅延読み込みを行う DLL を指定します。
 
 ### <a name="assembly-link-resource"></a>アセンブリリンクリソース
 
@@ -181,7 +181,7 @@ Visual Studio の登録はこれまで、HKEY_CLASSES_ROOT (HKCR) で行われ�
 
 ユーザーアカウント制御を使用して実行する場合に、アプリケーションの要求された実行レベルを指定します。  (/MANIFESTUAC: level = [値])
 
-**いずれ**
+**Choices**
 
 - **asInvoker**は、呼び出し元としての UAC 実行レベルです。
 - **highestAvailable** -UAC の実行レベル: 最高使用可能。
@@ -197,12 +197,12 @@ Visual Studio の登録はこれまで、HKEY_CLASSES_ROOT (HKCR) で行われ�
 
 このオプションを使用すると、.exe ファイルまたは DLL のデバッグ情報を作成できます。
 
-**いずれ**
+**Choices**
 
 - **いいえ**-デバッグ情報を生成しません。
 - **デバッグ情報の生成**-Microsoft シンボルサーバーへの配布に最適なプログラムデータベース (PDB) を作成します。
-- **高速リンク用に最適化**されたデバッグ情報の生成-編集-リンク-デバッグサイクルに最適なプログラムデータベース (PDB) を生成します。 
-- **共有と発行用に最適化**されたデバッグ情報の生成-編集-リンク-デバッグサイクルに最適なプログラムデータベース (PDB) を生成します。 
+- **高速リンク用に最適化**されたデバッグ情報の生成-編集-リンク-デバッグサイクルに最適なプログラムデータベース (PDB) を生成します。
+- **共有と発行用に最適化**されたデバッグ情報の生成-編集-リンク-デバッグサイクルに最適なプログラムデータベース (PDB) を生成します。
 
 ### <a name="generate-program-database-file"></a>プログラムデータベースファイルの生成
 
@@ -234,12 +234,12 @@ Visual Studio の登録はこれまで、HKEY_CLASSES_ROOT (HKCR) で行われ�
 
 [/SUBSYSTEM](subsystem-specify-subsystem.md)オプションは、オペレーティングシステムに .exe ファイルの実行方法を指示します。 サブシステムの選択は、リンカーが選択するエントリポイントシンボル (またはエントリポイント関数) に影響します。
 
-**いずれ**
+**Choices**
 
 - **未設定**-サブシステムが設定されていません。
 - **コンソール**-Win32 文字モードアプリケーション。 コンソールアプリケーションには、オペレーティングシステムによってコンソールが付与されます。 Main または wmain が定義されている場合は、コンソールが既定値です。
 - **Windows**アプリケーションでは、ユーザーとの対話用に独自のウィンドウを作成するため、コンソールは必要ありません。 WinMain または wWinMain が定義されている場合は、WINDOWS が既定値です。
-- Windows NT 用の**ネイティブ**デバイスドライバー。 /DRIVER: WDM が指定されている場合、NATIVE が既定値です。
+- Windows NT 用の**ネイティブ**デバイスドライバー。 /DRIVER:WDM が指定されている場合、既定値は NATIVE です。
 - **Efi アプリケーション**-efi アプリケーション。
 - **Efi ブートサービスドライバー** -Efi ブートサービスドライバー。
 - **EFI ROM** -EFI ROM。
@@ -282,26 +282,26 @@ Visual Studio の登録はこれまで、HKEY_CLASSES_ROOT (HKCR) で行われ�
 
 [/Swaprun](swaprun-load-linker-output-to-swap-file.md)オプションは、最初にリンカー出力をスワップファイルにコピーしてから、そこからイメージを実行するようにオペレーティングシステムに指示します。 このオプションは、Windows NT 4.0 (およびそれ以降) の機能です。 **NET**が指定されている場合、オペレーティングシステムはまずネットワークからバイナリイメージをスワップファイルにコピーし、そこから読み込みます。 このオプションは、ネットワーク上でアプリケーションを実行する場合に便利です。
 
-### <a name="driver"></a>ドライバー
+### <a name="driver"></a>Driver
 
 Windows NT カーネルモードドライバーをビルドするには、 [/DRIVER](driver-windows-nt-kernel-mode-driver.md)リンカーオプションを使用します。
 
-**いずれ**
+**Choices**
 
 - **設定されていません**-既定のドライバー設定です。
 - **ドライバー** -ドライバー
 - **Up only** -/DRIVER: uponly を指定すると、IMAGE_FILE_UP_SYSTEM_ONLY ビットが出力ヘッダーの特性に追加され、ユニプロセッサ (UP) ドライバーであることを指定します。 オペレーティングシステムは、マルチプロセッサ (MP) システムでのアップドライバの読み込みを拒否します。
-- /DRIVER: WDM を指定**すると、** リンカーによって、省略可能なヘッダーの dllcharacteristics フィールドに IMAGE_DLLCHARACTERISTICS_WDM_DRIVER ビットが設定されます。
+- /DRIVER: WDM により、リンカーは省略**可能なヘッダー**の dllcharacteristics フィールドに IMAGE_DLLCHARACTERISTICS_WDM_DRIVER ビットを設定します。
 
 ## <a name="optimization-property-page"></a>[最適化] プロパティページ
 
-### <a name="references"></a>リファレンス
+### <a name="references"></a>References
 
 [/Opt](opt-optimizations.md): REF は、参照されない関数やデータを排除します。/OPT: noref は、参照されない関数やデータを保持します。
 
 ### <a name="enable-comdat-folding"></a>[COMDAT の圧縮]
 
-同じCOMDAT 圧縮を実行するには、[/opt](opt-optimizations.md):ICF\[=iteration] を使用します。
+同じ COMDAT 圧縮を実行するには、 [/opt](opt-optimizations.md): ICF\[= iteration] を使用します。
 
 ### <a name="function-order"></a>関数の順序
 
@@ -313,9 +313,9 @@ Windows NT カーネルモードドライバーをビルドするには、 [/DRI
 
 ### <a name="link-time-code-generation"></a>リンク時のコード生成
 
-リンク時のコード生成を指定します。 ([/LTCG](ltcg-link-time-code-generation.md))
+リンク時のコード生成を指定します。 ([/Ltcg](ltcg-link-time-code-generation.md))
 
-**いずれ**
+**Choices**
 
 - **Default** -既定の LTCG 設定。
 - **高速リンク時のコード生成を使用する**- [/FASTGENPROFILE](genprofile-fastgenprofile-generate-profiling-instrumented-build.md)でリンク時のコード生成を使用します。
@@ -352,7 +352,7 @@ MIDL コマンドラインオプションを指定します。 ([/MIDL](midl-spe
 
 Windows メタデータの生成を有効または無効にします。
 
-**いずれ**
+**Choices**
 
 - **はい**-Windows メタデータファイルの生成を有効にします。
 - **いいえ**-Windows メタデータファイルの生成を無効にします。
@@ -381,27 +381,27 @@ Windows メタデータを部分署名します。 公開キーを Windows メ�
 
 ### <a name="no-entry-point"></a>エントリポイントがありません
 
-リソースのみの DLL を作成するには、 [/NOENTRY](noentry-no-entry-point.md)オプションを指定する必要があります。このオプションを使用すると、へ`_main`の参照が DLL にリンクされないようにすることができます。
+リソースのみの DLL を作成するには、 [/NOENTRY](noentry-no-entry-point.md)オプションを指定する必要があります。このオプションを使用すると、`_main` への参照が DLL にリンクされないようにすることができます。
 
 ### <a name="set-checksum"></a>チェックサムの設定
 
 [/RELEASE](release-set-the-checksum.md)オプションは、.exe ファイルのヘッダーにチェックサムを設定します。
 
-### <a name="base-address"></a>ベースアドレス
+### <a name="base-address"></a>ベース アドレス
 
-プログラムのベース アドレスを設定します。 ([/Base](base-base-address.md): {address\[, size] |@filename, key})
+プログラムのベース アドレスを設定します。 ([/Base](base-base-address.md): {address\[, size] | @filename, key})
 
 ### <a name="randomized-base-address"></a>ランダム化ベースアドレス
 
-ランダム化したベースアドレス。 ([/DYNAMICBASE](dynamicbase-use-address-space-layout-randomization.md)\[: NO])
+ランダム化したベースアドレス。 ([/DYNAMICBASE](dynamicbase-use-address-space-layout-randomization.md)\[: no])
 
 ### <a name="fixed-base-address"></a>固定ベースアドレス
 
-指定のベース アドレスだけに読み込まれるプログラムを作成します。 ([/FIXED](fixed-fixed-base-address.md)\[: NO])
+指定のベース アドレスだけに読み込まれるプログラムを作成します。 ([/Fixed](fixed-fixed-base-address.md)\[: no])
 
 ### <a name="data-execution-prevention-dep"></a>データ実行防止 (DEP)
 
-Windows データ実行防止機能と互換性があることをテスト済みとして実行可能ファイルをマークします。 ([/NXCOMPAT](nxcompat-compatible-with-data-execution-prevention.md)\[: NO])
+Windows データ実行防止機能と互換性があることをテスト済みとして実行可能ファイルをマークします。 ([/NXCOMPAT](nxcompat-compatible-with-data-execution-prevention.md)\[: no])
 
 ### <a name="turn-off-assembly-generation"></a>アセンブリの生成をオフにする
 
@@ -415,7 +415,7 @@ Windows データ実行防止機能と互換性があることをテスト済み
 
 **Nobind**修飾子は、バインド可能な IAT を最終イメージに含めないようにリンカーに指示します。 既定では、遅延読み込みされる DLL に対してバインドできる IAT が作成されます。 ([/DELAY](delay-delay-load-import-settings.md): NOBIND)
 
-### <a name="import-library"></a>ライブラリのインポート
+### <a name="import-library"></a>インポート ライブラリ
 
 既定のインポート ライブラリ名をオーバーライドします。 ([/IMPLIB](implib-name-import-library.md): ファイル名)
 
@@ -427,7 +427,7 @@ Windows データ実行防止機能と互換性があることをテスト済み
 
 [/MACHINE](machine-specify-target-platform.md)オプションは、プログラムのターゲットプラットフォームを指定します。
 
-**いずれ**
+**Choices**
 
 - **未設定**
 - **各コネクタ**
@@ -443,15 +443,15 @@ Windows データ実行防止機能と互換性があることをテスト済み
 - **MachineX64**
 - **MachineX86**
 
-### <a name="profile"></a>Profile
+### <a name="profile"></a>プロファイル
 
-パフォーマンス ツール プロファイラーで使用できる出力ファイルを作成します。 GenerateDebugInformation (/[/debug](debug-generate-debug-info.md)) を設定する必要があります。 ([/PROFILE](profile-performance-tools-profiler.md))
+パフォーマンス ツール プロファイラーで使用できる出力ファイルを作成します。 GenerateDebugInformation (/[/debug](debug-generate-debug-info.md)) を設定する必要があります。 ([/Profile](profile-performance-tools-profiler.md))
 
 ### <a name="clr-thread-attribute"></a>CLR スレッド属性
 
 CLR プログラムのエントリポイントのスレッド属性を明示的に指定します。
 
-**いずれ**
+**Choices**
 
 - **MTA スレッド属性**-MTAThreadAttribute 属性をプログラムのエントリポイントに適用します。
 - **STA スレッド属性**-STAThreadAttribute 属性をプログラムのエントリポイントに適用します。
@@ -461,14 +461,14 @@ CLR プログラムのエントリポイントのスレッド属性を明示的�
 
 CLR イメージの種類 (IJW、純粋、または安全) を設定します。
 
-**いずれ**
+**Choices**
 
 - **IJW イメージの強制**
 - **純粋 IL イメージの強制**
 - **安全 IL イメージの強制**
 - **既定のイメージの種類**
 
-### <a name="key-file"></a>キーファイル
+### <a name="key-file"></a>キー ファイル
 
 アセンブリに署名するキーまたはキーペアを指定します。 ([/Keyfile](keyfile-specify-key-or-key-pair-to-sign-an-assembly.md): ファイル名)
 
@@ -484,11 +484,11 @@ CLR イメージの種類 (IJW、純粋、または安全) を設定します。
 
 [/CLRUNMANAGEDCODECHECK](clrunmanagedcodecheck-add-suppressunmanagedcodesecurityattribute.md)は、SuppressUnmanagedCodeSecurityAttribute を、リンカーによって生成される PInvoke 呼び出しにマネージコードからネイティブ dll に適用するかどうかを指定します。
 
-### <a name="error-reporting"></a>エラー報告
+### <a name="error-reporting"></a>[エラー報告]
 
 内部コンパイラ エラー (ICE) 情報を Visual C++ チームに直接報告できます。
 
-**いずれ**
+**Choices**
 
 - **PromptImmediately** -すぐにメッセージを表示します。
 - **次のログインのキュー** -次のログインのキューです。
@@ -503,7 +503,7 @@ CLR イメージの種類 (IJW、純粋、または安全) を設定します。
 
 既定でオンになっている[/CLRSUPPORTLASTERROR](clrsupportlasterror-preserve-last-error-code-for-pinvoke-calls.md)は、P/Invoke 機構を通じて呼び出された関数の最終エラーコードを保持します。これにより、/clr でコンパイルされたコードから dll 内のネイティブ関数を呼び出すことができます。
 
-**いずれ**
+**Choices**
 
 - **Enabled** -CLRSupportLastError を有効にします。
 - **Disabled** -CLRSupportLastError を無効にします。

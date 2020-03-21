@@ -1,5 +1,5 @@
 ---
-title: レコード セット:方法 (ODBC) 内のレコードをフェッチしています
+title: 'レコードセット: バルク行フェッチ (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - bulk row fetching, implementing
@@ -14,61 +14,61 @@ helpviewer_keywords:
 - rowsets, bulk row fetching
 - RFX (ODBC), bulk row fetching
 ms.assetid: 20d10fe9-c58a-414a-b675-cdf9aa283e4f
-ms.openlocfilehash: 2fdcbf18fcb0d97ba7b2a39aa9bbbd79e65a4112
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cd9597da7ab4c405f90a145182d63945cef48c53
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397849"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079821"
 ---
-# <a name="recordset-fetching-records-in-bulk-odbc"></a>レコード セット:方法 (ODBC) 内のレコードをフェッチしています
+# <a name="recordset-fetching-records-in-bulk-odbc"></a>レコードセット: バルク行フェッチ (ODBC)
 
 このトピックの内容は、MFC ODBC クラスに該当します。
 
-クラス`CRecordset`バルク行フェッチ、つまり、複数のレコード取得できることを一度に取得する 1 つのレコードではなく、1 回のフェッチ中に、時に、データ ソースからサポートを提供します。 派生でのみバルク行フェッチを実装する`CRecordset`クラス。 レコード セット オブジェクトにデータ ソースからデータを転送するプロセスは、バルク レコード フィールド エクス チェンジ (Bulk RFX) と呼ばれます。 バルク行フェッチを使用しない場合、 `CRecordset`-データの派生クラスは、レコード フィールド エクス (チェンジ RFX) 経由で転送します。 詳細については、次を参照してください。[レコード フィールド エクス チェンジ (RFX)](../../data/odbc/record-field-exchange-rfx.md)します。
+クラス `CRecordset` では、バルク行フェッチがサポートされています。つまり、一度に1つのレコードをデータソースから取得するのではなく、1回のフェッチ中に一度に複数のレコードを取得することができます。 バルク行フェッチは、派生 `CRecordset` クラスにのみ実装できます。 データソースからレコードセットオブジェクトにデータを転送するプロセスは、バルクレコードフィールドエクスチェンジ (Bulk RFX) と呼ばれます。 `CRecordset`派生クラスでバルク行フェッチを使用していない場合、データはレコードフィールドエクスチェンジ (RFX) を介して転送されることに注意してください。 詳細については、「[レコードフィールドエクスチェンジ (RFX)](../../data/odbc/record-field-exchange-rfx.md)」を参照してください。
 
 このトピックでは、次の内容について説明します。
 
-- [CRecordset がバルク行フェッチをサポートするどの](#_core_how_crecordset_supports_bulk_row_fetching)します。
+- [CRecordset がバルク行フェッチをサポートする方法](#_core_how_crecordset_supports_bulk_row_fetching)。
 
-- [いくつか特別な考慮事項を使用する場合はバルク行フェッチ](#_core_special_considerations)します。
+- [バルク行フェッチを使用する場合の特別な考慮事項](#_core_special_considerations)。
 
-- [バルク レコード フィールド エクス チェンジの実装方法](#_core_how_to_implement_bulk_record_field_exchange)します。
+- [バルクレコードフィールドエクスチェンジを実装する方法](#_core_how_to_implement_bulk_record_field_exchange)。
 
-##  <a name="_core_how_crecordset_supports_bulk_row_fetching"></a> CRecordset がバルク行フェッチをサポートする方法
+##  <a name="how-crecordset-supports-bulk-row-fetching"></a><a name="_core_how_crecordset_supports_bulk_row_fetching"></a>CRecordset がバルク行フェッチをサポートする方法
 
-レコード セット オブジェクトを開く前に、行セットのサイズを定義できます、`SetRowsetSize`メンバー関数。 行セットのサイズは、1 回のフェッチ中に取得するレコードの数を指定します。 バルク行フェッチが実装された場合、既定の行セットのサイズは 25 です。 バルク行フェッチが実装されていない場合、行セットのサイズは 1 に固定されたままです。
+レコードセットオブジェクトを開く前に、`SetRowsetSize` メンバー関数を使用して行セットのサイズを定義できます。 行セットサイズは、1回のフェッチ中に取得するレコード数を指定します。 バルク行フェッチが実装されている場合、既定の行セットサイズは25です。 バルク行フェッチが実装されていない場合、行セットのサイズは1で固定されたままになります。
 
-行セットのサイズを初期化した後、[オープン](../../mfc/reference/crecordset-class.md#open)メンバー関数。 ここで指定する必要があります、`CRecordset::useMultiRowFetch`のオプション、 *dwOptions*バルク行フェッチを実装するパラメーター。 さらに設定することができます、`CRecordset::userAllocMultiRowBuffers`オプション。 バルク レコード フィールドの交換機構は、複数の行のフェッチ中に取得されるデータを格納するのに配列を使用します。 これらのストレージ バッファーは、フレームワークによって自動的に割り当てることや、手動で割り当てることができます。 指定する、`CRecordset::userAllocMultiRowBuffers`オプションは、割り当てを行うことを意味します。
+行セットのサイズを初期化した後、 [Open](../../mfc/reference/crecordset-class.md#open)メンバー関数を呼び出します。 ここでは、 *dwOptions*パラメーターの `CRecordset::useMultiRowFetch` オプションを指定して、バルク行フェッチを実装する必要があります。 さらに、`CRecordset::userAllocMultiRowBuffers` オプションを設定することもできます。 バルクレコードフィールド交換メカニズムは、配列を使用して、フェッチ中に取得された複数行のデータを格納します。 これらのストレージバッファーは、フレームワークによって自動的に割り当てることも、手動で割り当てることもできます。 `CRecordset::userAllocMultiRowBuffers` オプションを指定することは、割り当てを行うことを意味します。
 
-次の表に、メンバー関数によって提供される`CRecordset`バルク行フェッチをサポートするためにします。
+次の表に、バルク行フェッチをサポートするために `CRecordset` によって提供されるメンバー関数を示します。
 
-|メンバー関数|説明|
+|メンバー関数|Description|
 |---------------------|-----------------|
-|[CheckRowsetError](../../mfc/reference/crecordset-class.md#checkrowseterror)|フェッチ中に発生するエラーを処理する仮想関数。|
-|[DoBulkFieldExchange](../../mfc/reference/crecordset-class.md#dobulkfieldexchange)|実装は一括レコード フィールド エクス チェンジです。 自動的に呼び出されます転送を複数行のデータをレコード セット オブジェクトにデータ ソースからです。|
-|[GetRowsetSize](../../mfc/reference/crecordset-class.md#getrowsetsize)|行セットのサイズの現在の設定を取得します。|
-|[GetRowsFetched](../../mfc/reference/crecordset-class.md#getrowsfetched)|行の数は指定されたフェッチ後に実際に取得されたように指示します。 ほとんどの場合、これは、行セット サイズしない限り、不完全な行セットがフェッチされました。|
-|[GetRowStatus](../../mfc/reference/crecordset-class.md#getrowstatus)|行セット内の特定の行のフェッチの状態を返します。|
-|[RefreshRowset](../../mfc/reference/crecordset-class.md#refreshrowset)|データと、行セット内の特定の行の状態を更新します。|
+|[CheckRowsetError](../../mfc/reference/crecordset-class.md#checkrowseterror)|フェッチ中に発生したすべてのエラーを処理する仮想関数。|
+|[DoBulkFieldExchange](../../mfc/reference/crecordset-class.md#dobulkfieldexchange)|バルクレコードフィールドエクスチェンジを実装します。 データソースから複数行のデータをレコードセットオブジェクトに転送するために、自動的に呼び出されます。|
+|[GetRowsetSize](../../mfc/reference/crecordset-class.md#getrowsetsize)|行セットサイズの現在の設定を取得します。|
+|[GetRowsFetched](../../mfc/reference/crecordset-class.md#getrowsfetched)|特定のフェッチの後に実際に取得された行の数を示します。 ほとんどの場合、不完全な行セットがフェッチされていない限り、これは行セットのサイズです。|
+|[GetRowStatus](../../mfc/reference/crecordset-class.md#getrowstatus)|行セット内の特定の行のフェッチ状態を返します。|
+|[RefreshRowset](../../mfc/reference/crecordset-class.md#refreshrowset)|行セット内の特定の行のデータと状態を更新します。|
 |[SetRowsetCursorPosition](../../mfc/reference/crecordset-class.md#setrowsetcursorposition)|行セット内の特定の行にカーソルを移動します。|
-|[SetRowsetSize](../../mfc/reference/crecordset-class.md#setrowsetsize)|指定した値に行セット サイズの設定を変更する仮想関数。|
+|[SetRowsetSize](../../mfc/reference/crecordset-class.md#setrowsetsize)|行セットのサイズの設定を指定した値に変更する仮想関数。|
 
-##  <a name="_core_special_considerations"></a> 特別な考慮事項
+##  <a name="special-considerations"></a><a name="_core_special_considerations"></a>特別な考慮事項
 
-バルク行フェッチはパフォーマンスの向上が、特定の機能が異なる方法で動作します。 バルク行フェッチを実装する前に、次を検討してください。
+バルク行フェッチはパフォーマンスの向上を実現しますが、機能によって動作が異なります。 バルク行フェッチを実装する場合は、次の点を考慮してください。
 
-- フレームワークが自動的に呼び出し、`DoBulkFieldExchange`メンバー関数は、データ ソースからデータをレコード セット オブジェクトを転送します。 ただし、データ ソース、データは、レコード セットからに転送されません。 呼び出す、 `AddNew`、 `Edit`、 `Delete`、または`Update`失敗したアサーション内のメンバー関数の結果。 `CRecordset`現在メカニズムが用意されていないデータの一括行を更新するには、ODBC API 関数を使用して、独自の関数を記述することができます`SQLSetPos`します。 詳細については`SQLSetPos`を参照してください、 *ODBC SDK プログラマー リファレンス*MSDN ドキュメント。
+- フレームワークは、データソースからレコードセットオブジェクトにデータを転送するために、`DoBulkFieldExchange` メンバー関数を自動的に呼び出します。 ただし、データはレコードセットからデータソースに戻されません。 `AddNew`、`Edit`、`Delete`、または `Update` のメンバー関数を呼び出すと、アサーションが失敗します。 現在 `CRecordset` は、データの一括行を更新するためのメカニズムを提供していませんが、ODBC API 関数 `SQLSetPos`を使用して独自の関数を記述することができます。 `SQLSetPos`の詳細については、MSDN ドキュメントの「 *ODBC SDK プログラマーズリファレンス*」を参照してください。
 
-- メンバー関数は、 `IsDeleted`、 `IsFieldDirty`、 `IsFieldNull`、 `IsFieldNullable`、 `SetFieldDirty`、および`SetFieldNull`バルク行フェッチを実装したレコード セットでは使用できません。 ただし、呼び出す`GetRowStatus`の代わりに`IsDeleted`、および`GetODBCFieldInfo`の代わりに`IsFieldNullable`します。
+- `IsDeleted`、`IsFieldDirty`、`IsFieldNull`、`IsFieldNullable`、`SetFieldDirty`、および `SetFieldNull` のメンバー関数は、バルク行フェッチを実装するレコードセットでは使用できません。 ただし、`IsDeleted`の代わりに `GetRowStatus` を呼び出し、`IsFieldNullable`の代わりに `GetODBCFieldInfo` を呼び出すことができます。
 
-- `Move`操作は、行セットによって、レコード セットを再配置されます。 たとえば、100 個のレコードの最初の行セット サイズは 10 を含むレコード セットを開くとします。 `Open` 1 行に配置されている 1 ~ 10 の現在のレコードでの行をフェッチします。 呼び出し`MoveNext`次へ の 次の行ではなく行セットをフェッチします。 11 行目に配置されている行 11 ~ 20 の現在のレコードに、この行セットで構成されます。 なお`MoveNext`と`Move( 1 )`はバルク行フェッチが実装された場合とは異なります。 `Move( 1 )` 現在のレコードから 1 行で始まる行セットをフェッチします。 この例では、呼び出す`Move( 1 )`呼び出した後`Open`行 2 に配置されている現在のレコードに 2 ~ 11、行で構成される行セットをフェッチします。 詳細については、次を参照してください。、[移動](../../mfc/reference/crecordset-class.md#move)メンバー関数。
+- `Move` 操作では、レコードセットが行セットによって再配置されます。 たとえば、最初の行セットサイズが10である100レコードを含むレコードセットを開くとします。 では、現在のレコードが行1に配置された行1から10をフェッチ `Open` ます。 `MoveNext` を呼び出すと、次の行ではなく次の行セットがフェッチされます。 この行セットは、11 ~ 20 行の行で構成され、現在のレコードは行11に配置されています。 バルク行フェッチが実装されている場合、`MoveNext` と `Move( 1 )` は同じではないことに注意してください。 `Move( 1 )` は、現在のレコードから1行を開始する行セットをフェッチします。 この例では、`Open` を呼び出した後に `Move( 1 )` を呼び出すと、行2に現在のレコードが配置された行 2 ~ 11 で構成される行セットがフェッチされます。 詳細については、「メンバーの[移動](../../mfc/reference/crecordset-class.md#move)関数」を参照してください。
 
-- レコード フィールド エクス チェンジとは異なり、ウィザードには、バルク レコード フィールド エクス チェンジがサポートされません。 つまり、手動でフィールド データ メンバーを宣言し、手動でオーバーライドする必要があります`DoBulkFieldExchange`バルク RFX 関数の呼び出しを記述しています。 詳細については、次を参照してください。[レコード フィールド エクス チェンジ関数](../../mfc/reference/record-field-exchange-functions.md)で、*クラス ライブラリ リファレンス*します。
+- レコードフィールドエクスチェンジとは異なり、これらのウィザードでは、一括レコードフィールドの交換はサポートされていません。 つまり、手動でフィールドデータメンバーを宣言し、Bulk RFX 関数の呼び出しを作成することによって `DoBulkFieldExchange` を手動でオーバーライドする必要があります。 詳細については、「*クラスライブラリリファレンス*」の「[レコードフィールドエクスチェンジ関数](../../mfc/reference/record-field-exchange-functions.md)」を参照してください。
 
-##  <a name="_core_how_to_implement_bulk_record_field_exchange"></a> バルク レコード フィールド エクス チェンジを実装する方法
+##  <a name="how-to-implement-bulk-record-field-exchange"></a><a name="_core_how_to_implement_bulk_record_field_exchange"></a>バルクレコードフィールドエクスチェンジを実装する方法
 
-バルク レコード フィールド エクス チェンジでは、レコード セット オブジェクトをデータ ソースからデータの行セットを転送します。 バルク RFX 関数は、行セットの各データ項目の長さを格納する配列と同様にこのデータを格納する配列を使用します。 クラスの定義には、データの配列にアクセスするへのポインターとしてフィールド データ メンバーを定義する必要があります。 さらに、長さの配列にアクセスするへのポインターのセットを定義する必要があります。 パラメーター データ メンバーは、ポインターとして宣言してはなりませんバルク レコード フィールド エクス チェンジを使用する場合は、パラメーター データ メンバーを宣言すると、レコード フィールド エクス チェンジを使用する場合、そのファイルを宣言することと同じです。 次のコードは、単純な例を示しています。
+バルクレコードフィールドエクスチェンジは、データの行セットをデータソースからレコードセットオブジェクトに転送します。 Bulk RFX 関数は、配列を使用してこのデータを格納し、各データ項目の長さを行セットに格納する配列を使用します。 クラス定義では、データの配列にアクセスするためのポインターとしてフィールドデータメンバーを定義する必要があります。 さらに、長さの配列にアクセスするためのポインターのセットを定義する必要があります。 パラメーターデータメンバーは、ポインターとして宣言しないでください。一括レコードフィールドエクスチェンジを使用する場合のパラメーターデータメンバーの宣言は、レコードフィールドエクスチェンジを使用する場合と同じです。 次のコードは、簡単な例を示しています。
 
 ```cpp
 class MultiRowSet : public CRecordset
@@ -93,7 +93,7 @@ public:
 }
 ```
 
-これらのストレージ バッファーを手動で割り当てるか、framework が、割り当てを実行します。 自分でバッファーを割り当て、指定する必要があります、`CRecordset::userAllocMultiRowBuffers`のオプション、 *dwOptions*パラメーター、`Open`メンバー関数。 行セット サイズ値以上の配列のサイズを設定することを確認します。 Framework が、割り当てを実行する場合は、NULL へのポインターを初期化する必要があります。 これは通常、レコード セット オブジェクトのコンス トラクターで行われます。
+これらのストレージバッファーは、手動で割り当てることも、割り当てを行うこともできます。 バッファーを自分で割り当てるには、`Open` メンバー関数で*dwOptions*パラメーターの `CRecordset::userAllocMultiRowBuffers` オプションを指定する必要があります。 配列のサイズは、少なくとも行セットのサイズに設定してください。 フレームワークが割り当てを行うようにするには、ポインターを NULL に初期化する必要があります。 これは通常、レコードセットオブジェクトのコンストラクターで行われます。
 
 ```cpp
 MultiRowSet::MultiRowSet( CDatabase* pDB )
@@ -114,7 +114,7 @@ MultiRowSet::MultiRowSet( CDatabase* pDB )
 }
 ```
 
-最後に、オーバーライドする必要があります、`DoBulkFieldExchange`メンバー関数。 フィールド データ メンバーの場合、バルク RFX 関数を呼び出すパラメーター データ メンバー、RFX 関数を呼び出します。 SQL ステートメントまたはストアド プロシージャに渡すことによって、レコード セットを開いた場合`Open`、レコード セット内の列順序 Bulk rfx 関数の呼び出しを行う順序に対応する必要があります同様に、、RFX の注文の問い合わせについては、パラメーターは、対応する必要があります。SQL ステートメントまたはストアド プロシージャのパラメーター順序。
+最後に、`DoBulkFieldExchange` メンバー関数をオーバーライドする必要があります。 フィールドデータメンバーの場合は、Bulk RFX 関数を呼び出します。パラメーターのデータメンバーについては、RFX 関数を呼び出します。 SQL ステートメントまたはストアドプロシージャを `Open`に渡すことによってレコードセットを開いた場合、Bulk RFX 呼び出しを行う順序は、レコードセット内の列の順序と対応している必要があります。同様に、パラメーターに対する RFX 呼び出しの順序は、SQL ステートメントまたはストアドプロシージャのパラメーターの順序に対応している必要があります。
 
 ```cpp
 void MultiRowSet::DoBulkFieldExchange( CFieldExchange* pFX )
@@ -135,13 +135,12 @@ void MultiRowSet::DoBulkFieldExchange( CFieldExchange* pFX )
 ```
 
 > [!NOTE]
->  呼び出す必要があります、`Close`メンバー関数は、派生する前に`CRecordset`クラスがスコープ外になります。 これにより、フレームワークによって割り当てられたメモリが解放されます。 常に明示的に呼び出すことをお勧め`Close`バルク行フェッチを実装するかどうかに関係なく、します。
+>  派生 `CRecordset` クラスがスコープ外に出る前に、`Close` メンバー関数を呼び出す必要があります。 これにより、フレームワークによって割り当てられたメモリがすべて解放されます。 バルク行フェッチを実装したかどうかに関係なく、常に `Close`を明示的に呼び出すことをお勧めします。
 
-レコード フィールド エクス チェンジ (RFX) の詳細については、次を参照してください。[レコード フィールド エクス チェンジ。RFX のしくみ](../../data/odbc/record-field-exchange-how-rfx-works.md)します。 詳細については、パラメーターを使用して、次を参照してください。[つ](../../mfc/reference/cfieldexchange-class.md#setfieldtype)と[レコード セット。レコード セット (ODBC) をパラメーター化](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)します。
+レコードフィールドエクスチェンジ (RFX) の詳細については、「[レコードフィールドエクスチェンジ: rfx の動作のしくみ](../../data/odbc/record-field-exchange-how-rfx-works.md)」を参照してください。 パラメーターの使用の詳細については、「 [CFieldExchange:: SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype) and [Recordset: レコードセットのパラメーター化 (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [レコードセット (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[CRecordset::m_nFields](../../mfc/reference/crecordset-class.md#m_nfields)<br/>
-[CRecordset::m_nParams](../../mfc/reference/crecordset-class.md#m_nparams)
-
+[CRecordset:: m_nFields](../../mfc/reference/crecordset-class.md#m_nfields)<br/>
+[CRecordset:: m_nParams](../../mfc/reference/crecordset-class.md#m_nparams)

@@ -124,12 +124,12 @@ helpviewer_keywords:
 - SetStatus method
 - SetValue method
 ms.assetid: 374b13b7-1f09-457d-9e6b-df260ff4d178
-ms.openlocfilehash: 08e36606ae5d8dc34b9e25dd7d8dbc6d606520da
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: a2dcb946b4161c03fe34f02608cfb3dbbca21695
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79546081"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075834"
 ---
 # <a name="cdynamicaccessor-class"></a>CDynamicAccessor クラス
 
@@ -141,7 +141,7 @@ ms.locfileid: "79546081"
 class CDynamicAccessor : public CAccessorBase
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー**: atldbcli.h
 
@@ -172,7 +172,7 @@ class CDynamicAccessor : public CAccessorBase
 |[SetStatus](#setstatus)|指定された列の状態を設定します。|
 |[SetValue](#setvalue)|データをバッファーに格納します。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 `CDynamicAccessor` メソッドを使用して、列名、列数、データ型などの列情報を取得します。 次に、この列情報を使用して、実行時にアクセサーを動的に作成します。
 
@@ -199,7 +199,7 @@ HRESULT AddBindEntry(const DBCOLUMNINFO& info) throw();
 
 標準の HRESULT 値の1つ。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `CDynamicAccessor` で作成された既定のアクセサーをオーバーライドする場合は、このメソッドを使用します (「[データをフェッチする方法](../../data/oledb/fetching-data.md)」を参照してください)。
 
@@ -222,7 +222,7 @@ CDynamicAccessor(DBBLOBHANDLINGENUM eBlobHandling = DBBLOBHANDLING_DEFAULT,
 *nBlobSize*<br/>
 BLOB の最大サイズ (バイト単位)。この値に対する列データは、BLOB として扱われます。 既定値は8000です。 詳細については、「 [Setblobsizelimit](../../data/oledb/cdynamicaccessor-setblobsizelimit.md) 」を参照してください。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 コンストラクターを使用して `CDynamicAccessor` オブジェクトを初期化する場合は、Blob のバインド方法を指定できます。 Blob には、グラフィックス、サウンド、コンパイル済みコードなどのバイナリデータを含めることができます。 既定の動作では、8000バイトを超える列を Blob として扱い、`ISequentialStream` オブジェクトにバインドしようとします。 ただし、BLOB サイズとして別の値を指定することもできます。
 
@@ -248,7 +248,7 @@ void Close() throw();
 const DBBLOBHANDLINGENUM GetBlobHandling() const;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 [Setblobhandling](../../data/oledb/cdynamicaccessor-setblobhandling.md)によって設定された、BLOB 処理値*eblobhandling*を返します。
 
@@ -262,7 +262,7 @@ BLOB の最大サイズをバイト単位で取得します。
 const DBLENGTH GetBlobSizeLimit() const;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 [Setblobsizelimit](../../data/oledb/cdynamicaccessor-setblobsizelimit.md)によって設定された、BLOB 処理の値*nblobsize*を返します。
 
@@ -285,7 +285,7 @@ HRESULT GetBookmark(CBookmark< >* pBookmark) const throw();
 
 標準の HRESULT 値の1つ。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ブックマークを取得するには、`DBPROP_IRowsetLocate` を VARIANT_TRUE に設定する必要があります。
 
@@ -326,7 +326,7 @@ bool GetColumnFlags(DBORDINAL nColumn,
 
 列の特性が正常に取得された場合は**true**を返します。 それ以外の場合は **false**を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 列番号は1からのオフセットです。 列0は特殊なケースです。使用可能な場合はブックマークです。
 
@@ -361,7 +361,7 @@ HRESULT GetColumnInfo(IRowset* pRowset,
 
 標準の HRESULT 値の1つ。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 データ型 `DBORDINAL`、`DBCOLUMNINFO`、および `OLECHAR`の詳細については、 *OLE DB プログラマーリファレンス*の「 [IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) 」を参照してください。
 
@@ -439,7 +439,7 @@ bool GetLength(const WCHAR* pColumnName,
 
 指定された列が見つかった場合は**true**を返します。 それ以外の場合、この関数は**false**を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 最初のオーバーライドは列番号を受け取り、2番目と3番目のオーバーライドは、それぞれ ANSI 形式または Unicode 形式で列名を取得します。
 
@@ -544,7 +544,7 @@ bool GetValue(const WCHAR* pColumnName, ctype* pData) const throw();
 
 他のすべてのデータ型については、テンプレート化されたバージョンの `GetValue`を使用する方が簡単です。 テンプレート化されたバージョンは、成功した**場合は true** 、失敗した場合は**false**を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 非テンプレートバージョンを使用すると、文字列を含む列と、他のデータ型を含む列のテンプレート化されたバージョンを返すことができます。
 
@@ -563,7 +563,7 @@ bool SetBlobHandling(DBBLOBHANDLINGENUM eBlobHandling);
 #### <a name="parameters"></a>パラメーター
 
 *eBlobHandling*<br/>
-BLOB データを処理する方法を指定します。 次の値を指定できます。
+BLOB データを処理する方法を指定します。 次の値を使用できます。
 
 - DBBLOBHANDLING_DEFAULT: `SetBlobSizeLimit`によって設定された、 *Nblobsize*を超える列データを BLOB データとして処理し、`ISequentialStream` または `IStream` オブジェクトを使用して取得します。 このオプションは、 *Nblobsize*より大きいデータを含むすべての列をバインドするか、BLOB データとして DBTYPE_IUNKNOWN として表示します。
 
@@ -571,7 +571,7 @@ BLOB データを処理する方法を指定します。 次の値を指定で�
 
 - DBBLOBHANDLING_SKIP: Blob を含んでいる列として修飾された列をスキップします (バインドしないでください) (アクセサーは列の値をバインドまたは取得しませんが、列の状態と長さを取得します)。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `SetBlobHandling` を呼び出してから `Open` を呼び出す必要があります。
 
@@ -592,7 +592,7 @@ void SetBlobSizeLimit(DBLENGTH nBlobSize);
 *nBlobSize*<br/>
 BLOB サイズの制限を指定します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 BLOB の最大サイズをバイト単位で設定します。この値より大きい列データは、BLOB として扱われます。 プロバイダーによっては、列のサイズが非常に大きくなる場合があります (2 GB など)。 このサイズの列にメモリを割り当てるのではなく、通常、これらの列を Blob としてバインドしようとします。 この方法では、すべてのメモリを割り当てる必要はありませんが、切り捨てをしなくてもすべてのデータを読み取ることができます。 ただし、ネイティブデータ型の大きな列をバインドする `CDynamicAccessor` を強制することが必要になる場合もあります。 これを行うには、`Open`を呼び出す前に `SetBlobSizeLimit` を呼び出します。
 
@@ -674,7 +674,7 @@ bool SetValue(
    DBORDINAL nColumn,
    constctype& data) throw( );
 
-template <class ctype> 
+template <class ctype>
 bool SetValue(
    const CHAR * pColumnName,
    const ctype& data) throw( );

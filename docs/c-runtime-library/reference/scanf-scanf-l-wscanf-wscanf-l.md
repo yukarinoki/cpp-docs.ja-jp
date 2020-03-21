@@ -43,18 +43,18 @@ helpviewer_keywords:
 - wscanf_l function
 - _wscanf_l function
 ms.assetid: 73eac607-117f-4be4-9ff0-4afd9cf3c848
-ms.openlocfilehash: acb336827a669a867b937806a6cdb9aa51d75cbe
-ms.sourcegitcommit: ea9d78dbb93bf3f8841dde93dbc12bd66f6f32ff
+ms.openlocfilehash: df63baa8ffa878a4a65c84e07f0e68aa383e79cf
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72778320"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079208"
 ---
 # <a name="scanf-_scanf_l-wscanf-_wscanf_l"></a>scanf、_scanf_l、wscanf、_wscanf_l
 
 標準入力ストリームから書式付きデータを読み取ります。 これらの関数のセキュリティを強化したバージョンを使用できます。「[scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)」をご覧ください。
 
-> [!NOTE] 
+> [!NOTE]
 > Visual Studio 2015 では、`printf` および `scanf` の関数ファミリが**inline**として宣言され、`<stdio.h>` と `<conio.h>` のヘッダーに移動されました。 古いコードを移行する場合、これらの関数との接続に*LNK2019*が表示されることがあります。 詳細については、「[ビジュアルC++の変更履歴 2003-2015](../../porting/visual-cpp-change-history-2003-2015.md#stdio_and_conio)」を参照してください。
 
 ## <a name="syntax"></a>構文
@@ -97,9 +97,9 @@ int _wscanf_l(
 
 *Format*が**NULL**ポインターの場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は**EOF**を返し、 **errno**を**EINVAL**に設定します。
 
-これらと他のエラー コードの詳細については、「[_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
+エラー コードの詳細については、「[_doserrno、errno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 **Scanf**関数は、標準入力ストリーム**stdin**からデータを読み取り、*引数*で指定された場所にデータを書き込みます。 各*引数*は、*形式*の型指定子に対応する型の変数へのポインターである必要があります。 重なり合う文字列間でコピーした場合の動作は未定義です。
 
@@ -119,14 +119,14 @@ int _wscanf_l(
 
 詳細については、「[scanf 関数と wscanf 関数の書式指定フィールド](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md)」を参照してください。
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
-|**scanf**、 **scanf_l**|\<stdio.h>|
+|**scanf**、 **_scanf_l**|\<stdio.h>|
 |**wscanf**、 **_wscanf_l**|\<stdio.h> または \<wchar.h>|
 
-コンソールは、ユニバーサル Windows プラットフォーム (UWP) アプリではサポートされていません。 コンソール、 **stdin**、 **stdout**、および**stderr**に関連付けられている標準ストリームハンドルは、C ランタイム関数が UWP アプリで使用できるようになる前にリダイレクトする必要があります。 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+コンソールは、ユニバーサル Windows プラットフォーム (UWP) アプリではサポートされていません。 コンソール、 **stdin**、 **stdout**、および**stderr**に関連付けられている標準ストリームハンドルは、C ランタイム関数が UWP アプリで使用できるようになる前にリダイレクトする必要があります。 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 
@@ -166,7 +166,7 @@ The number of fields input is 6
 The contents are: 36 92.300003 y n Wide characters
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [浮動小数点サポート](../../c-runtime-library/floating-point-support.md)<br/>
 [ストリーム入出力](../../c-runtime-library/stream-i-o.md)<br/>

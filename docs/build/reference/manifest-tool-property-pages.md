@@ -24,16 +24,16 @@ f1_keywords:
 - VC.Project.VCManifestTool.UpdateFileHashesSearchPath
 - vc.project.AdditionalOptionsPage
 ms.assetid: f33499c4-7733-42d9-80e3-8a5018786965
-ms.openlocfilehash: d9b074667614da8d83fae7b00b49bf63c9390b69
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.openlocfilehash: 20ca118b3aacb02333d49b67d13de30f11dc5d8d
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927679"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079498"
 ---
 # <a name="manifest-tool-property-pages"></a>マニフェスト ツールのプロパティ ページ
 
-これらのページを使用して、 [Mt](/windows/win32/sbscs/mt-exe)の全般オプションを指定します。 これらのページについては、「**プロジェクト** > **プロパティ** > の**構成プロパティ** > **マニフェストツール**」を参照してください。
+これらのページを使用して、 [Mt](/windows/win32/sbscs/mt-exe)の全般オプションを指定します。 これらのページは、 > **構成プロパティ** > **マニフェストツール**の [**プロジェクト** > の**プロパティ**] にあります。
 
 ## <a name="general-property-page"></a>[全般] プロパティページ
 
@@ -49,9 +49,9 @@ ms.locfileid: "70927679"
 
 [\<assemblyIdentity> 要素](/visualstudio/deployment/assemblyidentity-element-clickonce-application)の属性を ID 文字列を指定するには、/identity オプションを使用します。 ID 文字列は `name` 属性の値で始まり、後ろに*属性* = *値*のペアが続きます。 ID 文字列の属性はコンマで区切られます。
 
-Id 文字列の例を次に示します。`Microsoft.Windows.Common-Controls, processorArchitecture=x86, version=6.0.0.0, type=win32, publicKeyToken=6595b64144ccf1df`
+Id 文字列の例を次に示し `Microsoft.Windows.Common-Controls, processorArchitecture=x86, version=6.0.0.0, type=win32, publicKeyToken=6595b64144ccf1df`
 
-## <a name="input-and-output-property-page"></a>[入力および出力] プロパティページ     
+## <a name="input-and-output-property-page"></a>[入力および出力] プロパティページ
 
 ###  <a name="additional-manifest-files"></a>追加のマニフェストファイル
 
@@ -59,7 +59,7 @@ Id 文字列の例を次に示します。`Microsoft.Windows.Common-Controls, pr
 
 ###  <a name="input-resource-manifests"></a>入力リソースマニフェスト
 
-**/inputresource** オプションを使用して、マニフェスト ツールに入力される RT_MANIFEST 型のリソースの完全パスを指定します。 パスの後には、特定のリソース ID を続けることができます。 例えば:
+**/inputresource** オプションを使用して、マニフェスト ツールに入力される RT_MANIFEST 型のリソースの完全パスを指定します。 パスの後には、特定のリソース ID を続けることができます。 次に例を示します。
 
 `dll_with_manifest.dll;#1`
 
@@ -97,15 +97,15 @@ Id 文字列の例を次に示します。`Microsoft.Windows.Common-Controls, pr
 
 アプリケーションが DPI 対応かどうかを指定します。 既定では、この設定は MFC プロジェクトの場合は **[はい]** 、それ以外の場合は **[いいえ]** に指定されています。これは、MFC プロジェクトのみが DPI 認識でビルドされるためです。 別の DPI 設定を扱うコードを追加すると、この設定をオーバーライドして **[はい]** にすることができます。 DPI 対応ではないのに DPI 対応として設定すると、アプリケーションが不明瞭にまたは小さく見えることがあります。
 
-**いずれ**
+**Choices**
 
-- **None**
+- **なし**
 - **高 DPI 対応**
 - **モニターあたりの高 DPI 対応**
 
 ## <a name="isolated-com-property-page"></a>分離 COM プロパティページ
 
-分離 COM の詳細については、「[分離アプリケーション](/windows/win32/SbsCs/isolated-applications)」と[「方法:COM コンポーネント](../how-to-build-isolated-applications-to-consume-com-components.md)を使用するための分離アプリケーションをビルドします。
+分離 COM の詳細については、「[分離アプリケーション](/windows/win32/SbsCs/isolated-applications)」と「[方法: Com コンポーネントを使用する分離アプリケーションをビルドする](../how-to-build-isolated-applications-to-consume-com-components.md)」を参照してください。
 
 ###  <a name="type-library-file"></a>タイプライブラリファイル
 
@@ -137,7 +137,6 @@ File 要素で指定されたファイルのハッシュを計算し、この値
 
 追加オプション
 
-
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [C++プロジェクトプロパティページのリファレンス](property-pages-visual-cpp.md)

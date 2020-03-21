@@ -8,12 +8,12 @@ helpviewer_keywords:
 - default arguments
 - declarators, functions
 ms.assetid: 33ba01d5-75b5-48d2-8eab-5483ac7d2274
-ms.openlocfilehash: da30d647947e98146cd89f255c2e05991c1be562
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: fbc8b108ea958f526156e7f81a75a2918a0a8903
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79423754"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076160"
 ---
 # <a name="functions-c"></a>関数 (C++)
 
@@ -261,7 +261,7 @@ auto Add(const Lhs& lhs, const Rhs& rhs) -> decltype(lhs + rhs)
 
 C++ では、ローカル変数を "静的" として宣言することがあります。 変数は関数本体内でのみ認識されますが、関数のすべてのインスタンスに対して変数の 1 つのコピーが存在します。 ローカルな静的オブジェクトは、`atexit` によって指定された終了時に破棄されます。 プログラムの制御フローが宣言をバイパスしたために静的オブジェクトが構築されなかった場合、そのオブジェクトの破棄は試みられません。
 
-##  <a name="type_deduction"></a>戻り値の型の推論 (C++ 14)
+##  <a name="type-deduction-in-return-types-c14"></a><a name="type_deduction"></a>戻り値の型の推論 (C++ 14)
 
 C++ 14 では、 **auto**を使用して、後続の戻り値の型を指定することなく、関数本体から戻り値の型を推論するようにコンパイラに指示できます。 **Auto**は常に値渡しで推測することに注意してください。 `auto&&` を使用すると、参照を推測するようにコンパイラに指示できます。
 
@@ -277,7 +277,7 @@ auto Add2(const Lhs& lhs, const Rhs& rhs)
 
 **Auto**では、推測型の const 性が維持されないことに注意してください。 戻り値が引数の定数性または参照性を維持する必要がある転送関数の場合、decltype **(auto)** キーワードを使用できます。このキーワードは**decltype**型推論規則を使用し、すべての型情報を保持します。 **decltype (auto)** は、左辺の通常の戻り値として、または後続の戻り値として使用できます。
 
-次の例 ( [N3493](http://www.open-std.org/JTC1/SC22/WG21/docs/papers/2013/n3493.html)からのコードに基づく) では、 **decltype (auto)** を使用して、テンプレートがインスタンス化されるまでわからない戻り値の型の関数の引数を完全に転送できるようになっています。
+次の例 ( [N3493](https://wg21.link/n3493)からのコードに基づく) では、 **decltype (auto)** を使用して、テンプレートがインスタンス化されるまでわからない戻り値の型の関数の引数を完全に転送できるようになっています。
 
 ```cpp
 template<typename F, typename Tuple = tuple<T...>, int... I>
@@ -295,7 +295,7 @@ template<typename F, typename Tuple = tuple<T...>,
 }
 ```
 
-## <a name="multi_val"></a>関数から複数の値を返す
+## <a name="returning-multiple-values-from-a-function"></a><a name="multi_val"></a>関数から複数の値を返す
 
 関数から複数の値を返すには、さまざまな方法があります。
 

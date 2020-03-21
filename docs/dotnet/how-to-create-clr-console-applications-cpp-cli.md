@@ -1,18 +1,18 @@
 ---
-title: '方法: CLR コンソール アプリケーションを作成 (C +/cli CLI)'
+title: '方法: CLR コンソール アプリケーションを作成する (C++/CLI)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - console applications, templates
 - CLR console applications, project template
 ms.assetid: e89bce3c-706f-4ae0-8a90-cb1a0f674e70
-ms.openlocfilehash: ba0fa81aa42f946dbaf005c00380573e44312c5a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 610efc8b0780422fc89e3bf9708ba488fe7d1f47
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387481"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80080052"
 ---
-# <a name="how-to-create-clr-console-applications-ccli"></a>方法: CLR コンソール アプリケーションを作成 (C +/cli CLI)
+# <a name="how-to-create-clr-console-applications-ccli"></a>方法: CLR コンソール アプリケーションを作成する (C++/CLI)
 
 コンソール アプリケーション テンプレートを使用すると、重要なプロジェクト参照とファイルが既に含まれるコンソール アプリ プロジェクトを作成できます。
 
@@ -22,7 +22,7 @@ ms.locfileid: "62387481"
 
 - 次の .NET Framework 名前空間への参照
 
-   - <xref:System.AppDomainManager>— 基礎的なクラスと一般的に使用される値と参照データの型、イベントとイベント ハンドラー、インターフェイス、属性、および処理例外を定義する基底クラスが含まれています。
+   - <xref:System.AppDomainManager>: 一般的に使用される値と参照データ型、イベントとイベントハンドラー、インターフェイス、属性、および処理例外を定義する、基本クラスと基本クラスが含まれています。
 
    - mscorlib - .NET Framework 開発をサポートするアセンブリ DLL。
 
@@ -30,7 +30,7 @@ ms.locfileid: "62387481"
 
    - コンソール (.cpp ファイル) - 作成したアプリのエントリ ポイントへのメイン ソース ファイルとエントリ ポイント。 プロジェクトの .dll ファイルと、プロジェクトの名前空間を特定します。 このファイルには、独自のコードを記述します。
 
-   - AssemblyInfo.cpp - プロジェクトのアセンブリ メタデータの変更に使用できる属性、ファイル、リソース、型、バージョン管理情報、署名情報などが含まれます。 詳細については、次を参照してください。[アセンブリの内容を](/dotnet/framework/app-domains/assembly-contents)します。
+   - AssemblyInfo.cpp - プロジェクトのアセンブリ メタデータの変更に使用できる属性、ファイル、リソース、型、バージョン管理情報、署名情報などが含まれます。 詳細については、「[アセンブリの内容](/dotnet/framework/app-domains/assembly-contents)」を参照してください。
 
    - Stdafx.cpp - Win32.pch という名前のプリコンパイル済みヘッダー ファイルと、StdAfx.obj という名前のプリコンパイル済み型ファイルをビルドするために使用されます。
 
@@ -40,7 +40,7 @@ ms.locfileid: "62387481"
 
    - resource.h - app.rc 用に生成されるインクルード ファイル。
 
-- リソース ファイル :
+- リソース ファイル:
 
    - app.rc - プログラムのリソース スクリプト ファイル。
 
@@ -50,7 +50,7 @@ ms.locfileid: "62387481"
 
 ## <a name="to-create-a-common-language-runtime-clr-console-app-project"></a>共通言語ランタイム (CLR: Common Language Runtime) コンソール アプリ プロジェクトを作成するには
 
-1. メニュー バーで、 **[ファイル]**、 **[新規作成]**、 **[プロジェクト]** の順にクリックします。
+1. メニュー バーで、 **[ファイル]** 、 **[新規作成]** 、 **[プロジェクト]** の順に選択します。
 
 1. **[新しいプロジェクト]** ダイアログ ボックスの **[インストールされているテンプレート]** で、 **[Visual C++]** ノード、 **[CLR]** ノード、[コンソール アプリケーション] テンプレートの順に選択します。
 
@@ -58,9 +58,8 @@ ms.locfileid: "62387481"
 
    他のプロジェクトやソリューション設定を指定できますが、必須ではありません。
 
-1. **[OK]** を選択します。
+1. **[OK]** をクリックします。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [CLR プロジェクト](../build/reference/files-created-for-clr-projects.md)
-

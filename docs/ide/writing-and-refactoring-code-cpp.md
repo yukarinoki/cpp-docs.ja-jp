@@ -4,12 +4,12 @@ description: Visual Studio の C++ コード エディターを使用して、�
 ms.date: 05/31/2019
 ms.assetid: 56ffb9e9-514f-41f4-a3cf-fd9ce2daf3b6
 ms.topic: overview
-ms.openlocfilehash: da3f4e7d783561dba8250652a0715e51e71cc387
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 6d920ec302e8385d900d74152ee5ad17851fdaac
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79438155"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077847"
 ---
 # <a name="edit-and-refactor-c-code-in-visual-studio"></a>Visual Studio での C++ コードの編集とリファクター
 
@@ -70,15 +70,15 @@ Visual Studio 2017 では、IntelliCode は Visual Studio Marketplace で拡張�
 
 ## <a name="template-intellisense"></a>テンプレート IntelliSense
 
-キャレットがテンプレート定義内にある場合は、**テンプレート バー**が表示され、ここで IntelliSense 用のサンプル テンプレート引数を指定できます。 
+キャレットがテンプレート定義内にある場合は、**テンプレート バー**が表示され、ここで IntelliSense 用のサンプル テンプレート引数を指定できます。
 
 ![C&#43; &#43;テンプレート IntelliSense による既存のインスタンス化の表示](../ide/media/template-intellisense-cpp-1.png "テンプレート IntelliSense で既存のインスタンス化を表示する")
 
-**\<t >** アイコンをクリックして、**テンプレートバー**を展開/折りたたみます。 **[編集]** ウィンドウを開くには、鉛筆アイコンをクリックするか、**テンプレート バー**をダブルクリックします。 
+**\<t >** アイコンをクリックして、**テンプレートバー**を展開/折りたたみます。 **[編集]** ウィンドウを開くには、鉛筆アイコンをクリックするか、**テンプレート バー**をダブルクリックします。
 
 ![C&#43; &#43;テンプレートの IntelliSense](../ide/media/template-intellisense-cpp-3.png "テンプレート IntelliSense")
 
-ウィンドウで行った編集は、効果をリアルタイムで確認できるように、ソース コードに直接適用されます。 
+ウィンドウで行った編集は、効果をリアルタイムで確認できるように、ソース コードに直接適用されます。
 
 テンプレート バーは、コードでのインスタンス化に基づいて候補を自動設定します。 **[既存のインスタンス化をすべて追加する]** をクリックして、コード ベース全体でテンプレートのインスタンス化に使用されているすべての具体的な引数のリストを表示します。
 
@@ -94,13 +94,13 @@ Visual Studio 2017 では、IntelliCode は Visual Studio Marketplace で拡張�
 
 エディターでコードの問題が検出されると、問題の下に色付きの波線が追加されます。 赤い波線はコードがコンパイルされないことを示します。 緑の波線は、重大な影響を及ぼす可能性があるその他の問題の種類を示します。 **[エラー一覧]** ウィンドウを開いて問題に関する詳細情報を得ることができます。
 
-一部のエラーの種類と、一般的なコーディング パターンに対しては、エディターで**クイック修正**が提供されます。これは波線をポイントしたときに表示される電球の形で提供されます。 解決策を表示するには、下矢印をクリックします。 
+一部のエラーの種類と、一般的なコーディング パターンに対しては、エディターで**クイック修正**が提供されます。これは波線をポイントしたときに表示される電球の形で提供されます。 解決策を表示するには、下矢印をクリックします。
 
 次の例では、`vector` が宣言されましたが、定義が見つからなかったため、エディターによって含める必要があるヘッダー ファイルが提供されます。
 
 ![C&#43; &#43;のクイック修正](../ide/media/quick-fix-for-header-cpp.png "C++クイック修正")
 
-エディターでは、いくつかのリファクタリングの機会のためのクイック修正も提供されます。 たとえば、ヘッダー ファイルでクラスを宣言すると、Visual Studio により別の .cpp ファイルでその定義を作成することが提案されます。 
+エディターでは、いくつかのリファクタリングの機会のためのクイック修正も提供されます。 たとえば、ヘッダー ファイルでクラスを宣言すると、Visual Studio により別の .cpp ファイルでその定義を作成することが提案されます。
 
 ![C&#43; &#43;のクイック修正](../ide/media/quick-fix.png "C++クイック修正")
 
@@ -134,7 +134,7 @@ Visual Studio 2017 では、IntelliCode は Visual Studio Marketplace で拡張�
 
 ##  <a name="refactoring"></a>リファクタリング
 
-クイック操作のコンテキスト メニューから、またはエディターの[電球](/visualstudio/ide/perform-quick-actions-with-light-bulbs)をクリックすることで、リファクタリングが利用できます。  **[編集]、[リファクター]** メニューから利用できるものもあります。  次のような機能があります。
+クイック操作のコンテキスト メニューから、またはエディターの[電球](/visualstudio/ide/perform-quick-actions-with-light-bulbs)をクリックすることで、リファクタリングが利用できます。  **[編集]、[リファクター]** メニューから利用できるものもあります。  次のような機能が該当します。
 
 * [Rename](refactoring/rename.md)
 * [Extract 関数](refactoring/extract-function.md)
@@ -153,7 +153,7 @@ Visual Studio 2017 以降では、[ClangFormat](https://clang.llvm.org/docs/Clan
 - Chromium
 - Mozilla
 - WebKit
-- Visual Studio
+- Visual Studio
 
 独自の .clang-format または _clang-format ファイルを指定して、同じレベル以下のすべてのコード ファイルにカスタム ルールを適用することもできます。
 

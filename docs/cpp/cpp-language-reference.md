@@ -5,18 +5,18 @@ ms.date: 12/10/2019
 helpviewer_keywords:
 - C++, language reference
 ms.assetid: 4be9cacb-c862-4391-894a-3a118c9c93ce
-ms.openlocfilehash: 8d828c1b151e37380c123003c245f6b83243f84a
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: f00d4eb5dc69ee0ab95ea864e63091b041a1853f
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301588"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079922"
 ---
 # <a name="c-language-reference"></a>C++ 言語リファレンス
 
-このリファレンスではC++ 、Microsoft C++コンパイラに実装されているプログラミング言語について説明します。 組織は、Margaret Ellis および Bjarne Stroustrup、および ANSI/ISO C++国際標準 (ISO/IEC fdis 14882) で、[*注釈付きC++リファレンスマニュアル*](http://www.stroustrup.com/arm.html)に基づいています。 C++ 言語機能の Microsoft 固有実装が含まれます。
+このリファレンスではC++ 、Microsoft C++コンパイラに実装されているプログラミング言語について説明します。 組織は、Margaret Ellis および Bjarne Stroustrup、および ANSI/ISO C++国際標準 (ISO/IEC fdis 14882) で、*注釈付きC++リファレンスマニュアル*に基づいています。 C++ 言語機能の Microsoft 固有実装が含まれます。
 
-最新の C++ プログラミングの概要については、次を参照してください。[C++ へようこそ](welcome-back-to-cpp-modern-cpp.md)に戻ってください。
+最新C++のプログラミング手法の概要については、「[へようこそ」をC++](welcome-back-to-cpp-modern-cpp.md)参照してください。
 
 キーワードまたは演算子をすばやく見つけるには、次の表を参照してください。
 
@@ -52,16 +52,16 @@ C++ 言語の演算子。
 式、NULL、複合、選択、イテレーション、ジャンプ、および宣言ステートメント。
 
 [クラスと構造体](../cpp/classes-and-structs-cpp.md)<br/>
-クラス、構造体、および共用体の概要。 また、メンバー関数、特殊なメンバー関数では、データ メンバー、ビット フィールド、**this**ポインター、入れ子になったクラスです。
+クラス、構造体、および共用体の概要。 また、メンバー関数、特別なメンバー関数、データメンバー、ビットフィールド、**この**ポインター、入れ子になったクラスもあります。
 
 [共用体](unions.md)<br/>
 すべてのメンバーが同じメモリ位置を共有するユーザー定義型。
 
 [派生クラス](../cpp/inheritance-cpp.md)<br/>
-単一および複数の継承、**virtual**関数、複数の基底クラス**抽象**クラス、スコープ規則。 また、 **__super**キーワードと **__interface**キーワードもあります。
+単一継承と多重継承、**仮想**関数、複数の基底クラス、**抽象**クラス、スコープ規則。 また、 **__super**キーワードと **__interface**キーワードもあります。
 
 [メンバー-Access Control](../cpp/member-access-control-cpp.md)<br/>
-クラス メンバーへのアクセス制御:**public**、**private**、および**protected**キーワード。 friend 関数および friend クラス。
+クラスメンバーへのアクセスを制御するには、 **public**、 **private**、および**protected**キーワードを使用します。 friend 関数および friend クラス。
 
 [負荷](operator-overloading.md)<br/>
 オーバーロードされた演算子、演算子のオーバーロードに関するルール。
@@ -82,7 +82,7 @@ C++ 言語の演算子。
 Microsoft C++ 固有の修飾子。 メモリのアドレス指定、呼び出し規則、**生**の関数、拡張ストレージクラス属性 ( **__declspec**)、 **__w64**。
 
 [インライン アセンブラー](../assembler/inline/inline-assembler.md)<br/>
-__Asm ブロックでのC++アセンブリ言語との使用。
+__Asm ブロックでのC++アセンブリ **__asm**言語との使用。
 
 [コンパイラ COM サポート](../cpp/compiler-com-support.md)<br/>
 COM 型をサポートするために使用する Microsoft 固有のクラスとグローバル関数への参照。
@@ -96,7 +96,7 @@ Microsoft C++コンパイラの非標準動作に関する情報。
 [C++ へようこそ](welcome-back-to-cpp-modern-cpp.md)<br/>
 安全で正確でC++効率的なプログラムを作成するための最新のプログラミング手法の概要を説明します。
 
-## <a name="related-sections"></a>関連セクション
+## <a name="related-sections"></a>関連項目
 
 [ランタイム プラットフォームのコンポーネントの拡張機能](../extensions/component-extensions-for-runtime-platforms.md)<br/>
 Microsoft C++コンパイラを使用して .net を対象とする方法に関するリファレンス資料。
@@ -110,6 +110,6 @@ Microsoft C++コンパイラを使用して .net を対象とする方法に関�
 [Visual C++ ライブラリ](../standard-library/cpp-standard-library-reference.md)<br/>
 さまざまな Microsoft C++ライブラリのリファレンススタートページへのリンクの一覧です。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [C 言語リファレンス](../c-language/c-language-reference.md)

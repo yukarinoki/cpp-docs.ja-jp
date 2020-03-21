@@ -14,16 +14,16 @@ helpviewer_keywords:
 - std::make_pair [C++]
 - std::move [C++]
 - std::swap [C++]
-ms.openlocfilehash: 723b077500b9b741445efcd8574fb26cd53e5fc7
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 3e92d6dc9f6966efda0e26fb28cf14652be880c7
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79427681"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075599"
 ---
 # <a name="ltutilitygt-functions"></a>&lt;utility&gt; 関数
 
-## <a name="asconst"></a>as_const
+## <a name="as_const"></a><a name="asconst"></a>as_const
 
 ```cpp
 template <class T> constexpr add_const_t<T>& as_const(T& t) noexcept;
@@ -34,13 +34,13 @@ template <class T> void as_const(const T&&) = delete;
 
 *T*を返します。
 
-## <a name="declval"></a>declval
+## <a name="declval"></a><a name="declval"></a>declval
 
 ```cpp
 template <class T> add_rvalue_reference_t<T> declval() noexcept;  // as unevaluated operand
 ```
 
-## <a name="exchange"></a>エクスチェンジ
+## <a name="exchange"></a><a name="exchange"></a>エクスチェンジ
 
 **(C++14)** オブジェクトに新しい値を代入し、古い値を返します。
 
@@ -95,7 +95,7 @@ The old value of c1 is: 1
 The new value of c1 after exchange is: 2
 ```
 
-## <a name="forward"></a>推進
+## <a name="forward"></a><a name="forward"></a>推進
 
 引数が右辺値または右辺値参照である場合に、条件付きで引数を右辺値参照にキャストします。 これによって、完全転送をサポートする転送関数に対する引数の右辺値性が復元されます。
 
@@ -127,19 +127,19 @@ template <class Type>    // accepts everything else
 
 オーバーロードの解決を行うために、引数の元の値の右辺値性を復元することを、*完全転送*と呼びます。 完全転送によって、テンプレート関数はいずれかの参照型の引数を受け取り、正しいオーバーロードの解決に必要な場合に引数の右辺値性を復元できます。 完全転送を使用することによって、右辺値の移動セマンティクスを保持することができ、引数の参照型のみが異なる関数にオーバーロードを用意する必要がなくなります。
 
-## <a name="from_chars"></a>from_chars
+## <a name="from_chars"></a><a name="from_chars"></a>from_chars
 
 ```cpp
 from_chars_result from_chars(const char* first, const char* last, see below& value, int base = 10);
 
-from_chars_result from_chars(const char* first, const char* last, float& value, chars_format fmt = chars_format::general); 
+from_chars_result from_chars(const char* first, const char* last, float& value, chars_format fmt = chars_format::general);
 
-from_chars_result from_chars(const char* first, const char* last, double& value, chars_format fmt = chars_format::general); 
+from_chars_result from_chars(const char* first, const char* last, double& value, chars_format fmt = chars_format::general);
 
 from_chars_result from_chars(const char* first, const char* last, long double& value, chars_format fmt = chars_format::general);
 ```
 
-## <a name="get"></a>取得
+## <a name="get"></a><a name="get"></a>取得
 
 `pair` オブジェクトから、インデックスの位置または型を使用して要素を取得します。
 
@@ -235,35 +235,35 @@ int main()
 1 0.27
 ```
 
-## <a name="index_sequence"></a>index_sequence
+## <a name="index_sequence"></a><a name="index_sequence"></a>index_sequence
 
 ```cpp
 template<size_t... I>
     using index_sequence = integer_sequence<size_t, I...>;
 ```
 
-## <a name="index_sequence_for"></a>index_sequence_for
+## <a name="index_sequence_for"></a><a name="index_sequence_for"></a>index_sequence_for
 
 ```cpp
 template<class... T>
     using index_sequence_for = make_index_sequence<sizeof...(T)>;
 ```
 
-## <a name="make_index_sequence"></a>make_index_sequence
+## <a name="make_index_sequence"></a><a name="make_index_sequence"></a>make_index_sequence
 
 ```cpp
 template<size_t N>
     using make_index_sequence = make_integer_sequence<size_t, N>;
 ```
 
-## <a name="make_integer_sequence"></a>make_integer_sequence
+## <a name="make_integer_sequence"></a><a name="make_integer_sequence"></a>make_integer_sequence
 
 ```cpp
 template<class T, T N>
     using make_integer_sequence = integer_sequence<T, see below >;
 ```
 
-## <a name="make_pair"></a>make_pair
+## <a name="make_pair"></a><a name="make_pair"></a>make_pair
 
 `pair` 型のオブジェクトを作成するために使用できるテンプレート関数。コンポーネントの型は、パラメーターとして渡されるデータ型に基づいて自動的に選択されます。
 
@@ -313,7 +313,7 @@ template <class T, class U>
 
 `make_pair` ヘルパー関数を使用してペアを宣言して初期化する方法の例については、「[pair 構造体](../standard-library/pair-structure.md)」を参照してください。
 
-## <a name="move"></a>合わせ
+## <a name="move"></a><a name="move"></a>合わせ
 
 無条件に引数を右辺値参照にキャストし、型の移動が有効である場合に型が移動できることを通知します。
 
@@ -342,13 +342,13 @@ template <class Type>
 
 *Arg*で渡される値が左辺値である場合 (つまり、名前またはそのアドレスを取得できる場合)、移動が発生すると無効になります。 *引数*に渡された値を、移動後の名前またはアドレスで参照しないでください。
 
-## <a name="moveif"></a>move_if_noexcept
+## <a name="move_if_noexcept"></a><a name="moveif"></a>move_if_noexcept
 
 ```cpp
 template <class T> constexpr conditional_t< !is_nothrow_move_constructible_v<T> && is_copy_constructible_v<T>, const T&, T&&> move_if_noexcept(T& x) noexcept;
 ```
 
-## <a name="swap"></a>フォト
+## <a name="swap"></a><a name="swap"></a>フォト
 
 2つの型または[ペアの構造体](../standard-library/pair-structure.md)オブジェクトの要素を交換します。
 
@@ -373,18 +373,18 @@ template <class T, class U>
 
 `swap` の利点の1つは、格納されるオブジェクトの型がコンパイラによって自動的に決定され、明示的に指定する必要がないことです。 `swap` を使用する場合は、`swap<int, int>(1, 2)` などの明示的なテンプレート引数を使用しないでください。これは詳細で、コンパイルエラーの原因となる可能性のある複雑な右辺値参照の問題が追加されるためです。
 
-## <a name="to_chars"></a>to_chars
+## <a name="to_chars"></a><a name="to_chars"></a>to_chars
 
 ```cpp
 to_chars_result to_chars(char* first, char* last, see below value, int base = 10);
-to_chars_result to_chars(char* first, char* last, float value); 
-to_chars_result to_chars(char* first, char* last, double value); 
+to_chars_result to_chars(char* first, char* last, float value);
+to_chars_result to_chars(char* first, char* last, double value);
 to_chars_result to_chars(char* first, char* last, long double value);
-to_chars_result to_chars(char* first, char* last, float value, chars_format fmt); 
-to_chars_result to_chars(char* first, char* last, double value, chars_format fmt); 
+to_chars_result to_chars(char* first, char* last, float value, chars_format fmt);
+to_chars_result to_chars(char* first, char* last, double value, chars_format fmt);
 to_chars_result to_chars(char* first, char* last, long double value, chars_format fmt);
-to_chars_result to_chars(char* first, char* last, float value, chars_format fmt, int precision); 
-to_chars_result to_chars(char* first, char* last, double value, chars_format fmt, int precision); 
+to_chars_result to_chars(char* first, char* last, float value, chars_format fmt, int precision);
+to_chars_result to_chars(char* first, char* last, double value, chars_format fmt, int precision);
 to_chars_result to_chars(char* first, char* last, long double value, chars_format fmt, int precision);
 ```
 

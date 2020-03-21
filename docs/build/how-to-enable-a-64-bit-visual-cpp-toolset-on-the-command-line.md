@@ -12,12 +12,12 @@ helpviewer_keywords:
 - IPF, command-line compiler
 - x64 [C++], command-line compiler
 ms.assetid: 4da93a19-e20d-4778-902a-5eee9a6a90b5
-ms.openlocfilehash: 9e8a671a7fe67150e1b867c62231173429f7b6ed
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: 60399994cd5fc2f39efeadc6ffcf917138aada37
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77415927"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078540"
 ---
 # <a name="how-to-enable-a-64-bit-x64-hosted-msvc-toolset-on-the-command-line"></a>方法: コマンドラインで64ビット、x64 でホストされる MSVC ツールセットを有効にする
 
@@ -25,7 +25,7 @@ Visual Studio には C++ コンパイラ、リンカー、その他のツール�
 
 ## <a name="use-a-64-bit-hosted-developer-command-prompt-shortcut"></a>64 ビットでホストされる開発者コマンド プロンプト ショートカットを使用する
 
-Windows 10 でこれらのコマンド プロンプトにアクセスするには、 **[スタート]** メニューでお使いのバージョンの Visual Studio (**Visual Studio 2019** など) のフォルダーを開き、x64 のネイティブ ツールまたはクロス ツールの開発者コマンド プロンプトを選択します。 
+Windows 10 でこれらのコマンド プロンプトにアクセスするには、 **[スタート]** メニューでお使いのバージョンの Visual Studio (**Visual Studio 2019** など) のフォルダーを開き、x64 のネイティブ ツールまたはクロス ツールの開発者コマンド プロンプトを選択します。
 
 ![x64 Native Tools コマンド プロンプト](media/x64-native-tools-command-prompt.png "[スタート] メニューの x64 ネイティブツール")
 

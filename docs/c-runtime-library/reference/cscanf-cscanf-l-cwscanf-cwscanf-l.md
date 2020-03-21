@@ -48,18 +48,18 @@ helpviewer_keywords:
 - reading data [C++], from the console
 - _cwscanf_l function
 ms.assetid: dbfe7547-b577-4567-a1cb-893fa640e669
-ms.openlocfilehash: 8b996e510d6a8c106aa88a60a8da456d36a4b3e5
-ms.sourcegitcommit: ea9d78dbb93bf3f8841dde93dbc12bd66f6f32ff
+ms.openlocfilehash: 973642aa113c8db4174b399f22e980daba95ce41
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72778310"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079996"
 ---
 # <a name="_cscanf-_cscanf_l-_cwscanf-_cwscanf_l"></a>_cscanf、_cscanf_l、_cwscanf、_cwscanf_l
 
 コンソールから書式化されたデータを読み出します。 これらの関数のセキュリティを強化したバージョンを使用できます。「[_cscanf_s、_cscanf_s_l、_cwscanf_s、_cwscanf_s_l](cscanf-s-cscanf-s-l-cwscanf-s-cwscanf-s-l.md)」を参照してください。
 
-> [!NOTE] 
+> [!NOTE]
 > Visual Studio 2015 では、`printf` および `scanf` の関数ファミリが**inline**として宣言され、`<stdio.h>` と `<conio.h>` のヘッダーに移動されました。 古いコードを移行する場合、これらの関数との接続に*LNK2019*が表示されることがあります。 詳細については、「[ビジュアルC++の変更履歴 2003-2015](../../porting/visual-cpp-change-history-2003-2015.md#stdio_and_conio)」を参照してください。
 
 > [!IMPORTANT]
@@ -103,9 +103,9 @@ int _cwscanf_l(
 
 正常に変換され、割り当てられたフィールドの数。 戻り値には、読まれたが割り当てられなかったフィールドは含まれません。 ファイルの終端で読み取ろうとした場合、戻り値は**EOF**です。 これは、キーボード入力がオペレーティング システムのコマンド ラインのレベルでリダイレクトされる場合に発生します。 戻り値が 0 の場合は、代入されたフィールドがなかったことを意味します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**_Cscanf**関数は、*引数*によって指定された場所に、コンソールから直接データを読み取ります。 [_getche](getch-getwch.md) 関数は文字を読み取るために使用されます。 省略可能な各パラメーターは、*形式*の型指定子に対応する型を持つ変数へのポインターである必要があります。 この形式は、入力フィールドの解釈を制御し、 [scanf](scanf-scanf-l-wscanf-wscanf-l.md)関数の*format*パラメーターと同じ形式と機能を持ちます。 **_Cscanf**は通常、入力文字をエコーしますが、最後の呼び出しが **_ungetch**になった場合は無効になります。
+**_Cscanf**関数は、コンソールから、*引数*によって指定された場所にデータを直接読み取ります。 [_getche](getch-getwch.md) 関数は文字を読み取るために使用されます。 省略可能な各パラメーターは、*形式*の型指定子に対応する型を持つ変数へのポインターである必要があります。 この形式は、入力フィールドの解釈を制御し、 [scanf](scanf-scanf-l-wscanf-wscanf-l.md)関数の*format*パラメーターと同じ形式と機能を持ちます。 **_Cscanf**は通常、入力文字をエコーしますが、最後の呼び出しが **_ungetch**された場合は無効になります。
 
 この関数は、パラメーターを検証します。 Format が**NULL**の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、 **errno**は**EINVAL**に設定され、関数は**EOF**を返します。
 
@@ -118,14 +118,14 @@ int _cwscanf_l(
 |**_tcscanf**|**_cscanf**|**_cscanf**|**_cwscanf**|
 |**_tcscanf_l**|**_cscanf_l**|**_cscanf_l**|**_cwscanf_l**|
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**_cscanf**、 **_cscanf_l**|\<conio.h>|
 |**_cwscanf**、 **_cwscanf_l**|\<conio.h> または \<wchar.h>|
 
-互換性について詳しくは、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 
@@ -164,7 +164,7 @@ Enter three integers: 1 2 3
 You entered 3 2 1
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [コンソール入出力とポート入出力](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_cprintf、_cprintf_l、_cwprintf、_cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md)<br/>

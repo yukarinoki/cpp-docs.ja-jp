@@ -2,20 +2,20 @@
 title: 'チュートリアル : 行列乗算'
 ms.date: 04/23/2019
 ms.assetid: 61172e8b-da71-4200-a462-ff3a908ab0cf
-ms.openlocfilehash: 341800e258f89db340d206ebe04bc20d4763ad1a
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.openlocfilehash: a84383aa02b3f8300774e18ba2b27655d07b72ae
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518492"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075716"
 ---
 # <a name="walkthrough-matrix-multiplication"></a>チュートリアル : 行列乗算
 
 このチュートリアルでは、C++ AMP を使用して行列乗算の実行を高速化する方法を示します。 タイルを使用する場合と使用しない場合の 2 つのアルゴリズムを紹介します。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
-始める前に
+開始する前に次の操作を実行してください。
 
 - 「 [ C++ AMP の概要」](../../parallel/amp/cpp-amp-overview.md)を参照してください。
 
@@ -33,7 +33,7 @@ ms.locfileid: "76518492"
 
 1. メニューバーで [**ファイル**>**新規**>**プロジェクト**] を選択し、 **[新しいプロジェクトの作成]** ダイアログボックスを開きます。
 
-1. ダイアログの上部で、 **[言語]** を **[C++]** に、 **[プラットフォーム]** を **[Windows]** に、 **[プロジェクト タイプ]** を **[コンソール]** に設定します。 
+1. ダイアログの上部で、 **[言語]** を **[C++]** に、 **[プラットフォーム]** を **[Windows]** に、 **[プロジェクト タイプ]** を **[コンソール]** に設定します。
 
 1. フィルター処理されたプロジェクトの種類の一覧から **[空のプロジェクト]** を選択し、 **[次へ]** をクリックします。 次のページで、 **[名前]** ボックスに「 *matrixmultiply.cpp* 」と入力し、プロジェクトの名前を指定します。必要に応じて、プロジェクトの場所を指定します。
 
@@ -320,7 +320,7 @@ A と B の積は、次のように記述し、計算できます:
 
 1. アプリケーションを終了するには、**スペース**バーを押します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
 [チュートリアル: C++ AMP アプリケーションのデバッグ](../../parallel/amp/walkthrough-debugging-a-cpp-amp-application.md)

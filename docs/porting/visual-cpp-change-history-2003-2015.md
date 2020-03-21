@@ -4,12 +4,12 @@ ms.date: 10/21/2019
 helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-ms.openlocfilehash: 335db55f3b181021f4deb391358df5bbfb607815
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: d9e8778e970b6b672d6198770ad0c7ab5a4674b9
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422680"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076839"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Visual C++ 2003 ～ 2015 の変更履歴
 
@@ -36,9 +36,9 @@ COM インターフェイスまたは POD オブジェクトではないオブ�
 
 - [コンカレンシー ランタイムの互換性に影響する変更点](#BK_ConcRT)
 
-## <a name="VC_2015"></a> Visual Studio 2015 の準拠に関する変更
+## <a name="visual-studio-2015-conformance-changes"></a><a name="VC_2015"></a> Visual Studio 2015 の準拠に関する変更
 
-###  <a name="BK_CRT"></a> C ランタイム ライブラリ (CRT)
+###  <a name="c-runtime-library-crt"></a><a name="BK_CRT"></a> C ランタイム ライブラリ (CRT)
 
 #### <a name="general-changes"></a>一般的な変更
 
@@ -78,7 +78,7 @@ COM インターフェイスまたは POD オブジェクトではないオブ�
 
 - **浮動小数点の準拠**
 
-   NaNs 値や無限大値などの特殊なケースの入力に関する IEEE-754 仕様および C11 Annex F 仕様に対する準拠を改善するために、多くの変更が数値演算ライブラリに対して加えられています。 たとえば、簡易な NaN 入力 (以前のバージョンのライブラリでは、多くの場合、エラーとして扱われていた) はエラーとして扱われなくなりました。 [IEEE 754 標準](https://standards.ieee.org/standard/754-2008.html) と [C11 標準](http://www.iso-9899.info/wiki/The_Standard)の付録 F をご覧ください。
+   NaNs 値や無限大値などの特殊なケースの入力に関する IEEE-754 仕様および C11 Annex F 仕様に対する準拠を改善するために、多くの変更が数値演算ライブラリに対して加えられています。 たとえば、簡易な NaN 入力 (以前のバージョンのライブラリでは、多くの場合、エラーとして扱われていた) はエラーとして扱われなくなりました。 [IEEE 754 標準](https://standards.ieee.org/standard/754-2008.html) と [C11 標準](https://www.iso.org/standard/57853.html)の付録 F をご覧ください。
 
    これらの変更によってコンパイル時エラーが発生することはありませんが、プログラムの動作が変わる可能性はあり、標準に従ってより正確に動作するようになる可能性があります。
 
@@ -106,7 +106,7 @@ COM インターフェイスまたは POD オブジェクトではないオブ�
 
    C++ コードをコンパイルするときに、渡される引数が参照型でないことが、現在 [va_start](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md) によりコンパイル時に検証されるようになりました。 参照型の引数は、C++ 標準では禁止されています。
 
-#### <a name="stdio_and_conio"></a>\<stdio > と \<conio .h >
+#### <a name="stdioh-and-conioh"></a><a name="stdio_and_conio"></a>\<stdio > と \<conio .h >
 
 - **現在、関数の printf ファミリと scanf ファミリは、インラインで定義されています。**
 
@@ -303,7 +303,7 @@ COM インターフェイスまたは POD オブジェクトではないオブ�
 
    現在、CLOCKS_PER_SEC マクロは `clock_t` 型の整数に拡張されており、これは C 言語で必要です。
 
-####  <a name="BK_STL"></a> C++ 標準ライブラリ
+####  <a name="c-standard-library"></a><a name="BK_STL"></a> C++ 標準ライブラリ
 
 新しい最適化とデバッグのチェックを有効にするために、C++ 標準ライブラリの Visual Studio の実装では、バイナリの互換性がバージョンごとに意図的に保たれていません。 そのため、C++ 標準ライブラリを使用すると、異なるバージョンを使用してコンパイルされたオブジェクト ファイルとスタティック ライブラリは 1 つのバイナリ (EXE または DLL) に混在させることができず、C++ 標準ライブラリ オブジェクトは異なるバージョンを使用してコンパイルされたバイナリ間で渡すことができません。 混在があると、_MSC_VER の不一致に関するリンカー エラーが発生します (_MSC_VER は、コンパイラのメジャーバージョンを含むマクロです。たとえば、Visual Studio 2013 の場合は1800です)。このチェックでは、DLL の混在を検出できず、Visual Studio 2008 以前のバージョンを含む混在を検出することはできません。
 
@@ -385,7 +385,7 @@ COM インターフェイスまたは POD オブジェクトではないオブ�
 
    非標準の `launch::any` と `launch::sync` のポリシーが削除されました。 代わりに、`launch::any` に対して、`launch:async | launch:deferred` を使用します。 `launch::sync` では `launch::deferred` を使用します。 「[launch 列挙型](../standard-library/future-enums.md#launch)」を参照してください。
 
-####  <a name="BK_MFC"></a> MFC と ATL
+####  <a name="mfc-and-atl"></a><a name="BK_MFC"></a> MFC と ATL
 
 - **Microsoft Foundation Classes (MFC)**
 
@@ -393,7 +393,7 @@ COM インターフェイスまたは POD オブジェクトではないオブ�
 
    Visual C++ 再頒布可能パッケージにも、引き続きこのライブラリが含まれています。
 
-####  <a name="BK_ConcRT"></a> コンカレンシー ランタイム
+####  <a name="concurrency-runtime"></a><a name="BK_ConcRT"></a> コンカレンシー ランタイム
 
 - **concurrency::Context::Yield と競合する Windows.h の Yield マクロ**
 
@@ -421,7 +421,7 @@ Visual Studio 2015 では、コンパイラの準拠に関する継続的な強�
 
 - [更新プログラム 3 の準拠の強化](#VS_Update3)
 
-###  <a name="VS_RTM"></a> Visual Studio 2015 の準拠の強化
+###  <a name="conformance-improvements-in-visual-studio-2015"></a><a name="VS_RTM"></a> Visual Studio 2015 の準拠の強化
 
 - /Zc:forScope - オプション
 
@@ -658,11 +658,11 @@ Visual Studio 2015 では、コンパイラの準拠に関する継続的な強�
     enum class my_type : size_t {};
     ```
 
-   次に、**placement new** と **delete** の定義を変更し、`size_t` の代わりにこの型を 2 番目の引数として使用します。 placement new の呼び出しを更新して新しい型を渡したり (たとえば、`static_cast<my_type>` を使用することにより整数値から変換する)、**new** と **delete** の定義を更新して整数型にキャスト バックしたりする必要もあります。 これに対して **enum** を使用する必要はありません。`size_t` メンバーを持つクラス型も機能します。
+   次に、**placement new** と **delete** の定義を変更し、`size_t` の代わりにこの型を 2 番目の引数として使用します。 また、新しい型を渡すために、placement new の呼び出しを更新し (たとえば、`static_cast<my_type>` を使用して整数値から変換する)、 **new**と**delete**の定義を更新して、整数型にキャストバックする必要があります。 このために**列挙型**を使用する必要はありません。`size_t` メンバーを持つクラス型も機能します。
 
    代わりの方法として、**placement new** を完全に除去することもできます。 コードで **placement new** を使用してメモリ プールを実装する場合 (placement 引数が割り振られるまたは削除されるオブジェクトのサイズである)、独自のカスタム メモリ プール コードをサイズ割り当て解除機能で置き換えるほうが良い可能性があります。配置関数を削除でき、配置関数の代わりに独自の 2 つの引数 **delete** 演算子だけを使用することができます。
 
-   コードを即時に更新しない場合は、コンパイラ オプション `/Zc:sizedDealloc-` を使用して、従来の動作に戻すことができます。 このオプションを使用すると、2 つの引数を持つ delete 関数が存在せず、**placement delete** 演算子との競合は発生しません。
+   コードを即時に更新しない場合は、コンパイラ オプション `/Zc:sizedDealloc-` を使用して、従来の動作に戻すことができます。 このオプションを使用すると、2つの引数を持つ delete 関数は存在せず、 **placement delete**演算子との競合は発生しません。
 
 - **共用体データ メンバー**
 
@@ -1697,7 +1697,7 @@ Visual Studio 2015 では、コンパイラの準拠に関する継続的な強�
     C c;
     ```
 
-###  <a name="VS_Update1"></a>更新プログラム 1 の準拠の強化
+###  <a name="conformance-improvements-in-update-1"></a><a name="VS_Update1"></a>更新プログラム 1 の準拠の強化
 
 - **プライベートの仮想基底クラスと間接継承**
 
@@ -2201,7 +2201,7 @@ Visual Studio 2015 では、コンパイラの準拠に関する継続的な強�
     }
     ```
 
-###  <a name="VS_Update2"></a> 更新プログラム 2 の準拠の強化
+###  <a name="conformance-improvements-in-update-2"></a><a name="VS_Update2"></a> 更新プログラム 2 の準拠の強化
 
 - **SFINAE 式の部分的なサポートの結果として、追加の警告とエラーが発行される場合がある**
 
@@ -2463,7 +2463,7 @@ Visual Studio 2015 では、コンパイラの準拠に関する継続的な強�
 
    この方法で記述されたコードを修正するには、演算子の定義をヘッダー ファイルから対応するソース ファイルに移動することが必要な場合があります。
 
-###  <a name="VS_Update3"></a> 更新プログラム 3 の準拠の強化
+###  <a name="conformance-improvements-in-update-3"></a><a name="VS_Update3"></a> 更新プログラム 3 の準拠の強化
 
 - **std::is_convertable は self-assignment** (標準ライブラリ) を検出するようになりました
 
@@ -2854,7 +2854,7 @@ Visual Studio 2015 では、コンパイラの準拠に関する継続的な強�
 
    Visual Studio 2012 では、式 `E1` に含まれる `E1::b` は、グローバル スコープ内の `::E1` に解決されていました。 Visual Studio 2013 では、式 `E1` に含まれる `E1::b` は `typedef E2` 内で `main()` 定義に解決され、型は `::E2` になります。
 
-- オブジェクトのレイアウトが変更されました。 x64 では、クラスのオブジェクト レイアウトが以前のリリースから変更される場合があります。 **virtual** 関数が存在するものの **virtual** 関数を持つ基底クラスがない場合は、コンパイラのオブジェクト モデルは、データ メンバーのレイアウトの後で **virtual** 関数テーブルにポインターを挿入します。 これは、レイアウトがすべての場合に最適となるわけではないことを意味します。 以前のリリースでは、x64 の最適化によってレイアウトが調整されましたが、複雑なコードでは正常に機能しなかったため、Visual Studio 2013 では削除されました。 たとえば、次のコードを検討してみましょう。
+- オブジェクトのレイアウトが変更されました。 x64 では、クラスのオブジェクト レイアウトが以前のリリースから変更される場合があります。 仮想**関数が**あり **、仮想関数**を持つ基底クラスがない場合、コンパイラのオブジェクトモデルは、データメンバーのレイアウトの後に**仮想**関数テーブルへのポインターを挿入します。 これは、レイアウトがすべての場合に最適となるわけではないことを意味します。 以前のリリースでは、x64 の最適化によってレイアウトが調整されましたが、複雑なコードでは正常に機能しなかったため、Visual Studio 2013 では削除されました。 たとえば、次のコードを検討してみましょう。
 
     ```cpp
     __declspec(align(16)) struct S1 {
@@ -2932,7 +2932,7 @@ Visual Studio 2013 の C++ コンパイラは、Visual Studio 2010 で実装さ�
 
 - `#include <algorithm>` または `std::min()`を呼び出すときに、`std::max()` を使用する必要があります。
 
-- 既存のコードが、以前のリリースのシミュレートされたスコープを指定された列挙型、つまり名前空間の中でラップされている、スコープを指定されていない従来の列挙型を使用している場合は、そのコードを変更する必要があります。 たとえば、型 `std::future_status::future_status` を参照していた場合は、`std::future_status` を指定する必要があります。 ただし、ほとんどのコードは影響を受けません。たとえば、`std::future_status::ready` は引き続きコンパイルされます。
+- 既存のコードで以前のリリースのシミュレートされたスコープの列挙型を使用している場合 (名前空間にラップされた従来の対象外の列挙型)、それを変更する必要があります。 たとえば、型 `std::future_status::future_status` を参照していた場合は、`std::future_status` を指定する必要があります。 ただし、ほとんどのコードは影響を受けません。たとえば、`std::future_status::ready` は引き続きコンパイルされます。
 
 - `explicit operator bool()` は、演算子 unspecified-bool-type() よりも厳格です。 `explicit operator bool()` を使用すると、bool に明示的に変換できます。たとえば、`shared_ptr<X> sp` を使用している場合、`static_cast<bool>(sp)` と `bool b(sp)` の両方が有効です。また、`if (sp)`、`!sp`、`sp &&` などのブール値検証可能な bool への "状況依存型変換" も用意されています。 ただし、`explicit operator bool()` は bool への暗黙の変換を禁止するため、`bool b = sp;` と指定することはできません。また bool を戻り値の型として指定したり、`return sp` を指定したりすることもできません。
 
@@ -3058,7 +3058,7 @@ Visual Studio 2013 の C++ コンパイラは、Visual Studio 2010 で実装さ�
 
 ### <a name="crt"></a>CRT
 
-- C ランタイム (CRT) ヒープは new と malloc() に使用されますが、プライベートではなくなりました。 CRT はプロセス ヒープを使用するようになりました。 つまり、DLL がアンロードされてもヒープは破棄されないので、CRT に静的にリンクされている DLL は、DLL コードで割り当てられたメモリがアンロード前に確実にクリーンアップされるようにする必要があります。
+- C ランタイム (CRT) ヒープは new と malloc() に使用されますが、プライベートではなくなりました。 CRT はプロセス ヒープを使用するようになりました。 これは、DLL がアンロードされたときにヒープが破棄されないことを意味します。そのため、CRT に静的にリンクする Dll は、DLL コードによって割り当てられたメモリがアンロードされる前にクリーンアップされるようにする必要があります。
 
 - `iscsymf()` 関数は負の値でアサートします。
 

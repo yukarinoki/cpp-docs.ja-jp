@@ -11,12 +11,12 @@ helpviewer_keywords:
 - cpp.stop
 - Class View, hint file
 ms.assetid: 17194f66-cf62-4523-abec-77db0675ab65
-ms.openlocfilehash: ca111fcb8b0fc511fda3bbb3a4769ebc9fdd28bc
-ms.sourcegitcommit: 217fac22604639ebd62d366a69e6071ad5b724ac
+ms.openlocfilehash: de299f17686d68956e9847d47743d8931734d4ad
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/19/2019
-ms.locfileid: "74189003"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075205"
 ---
 # <a name="hint-files"></a>ヒント ファイル
 
@@ -39,7 +39,7 @@ C++ 参照データベース パーサーは、短時間で大量のコードを
 > - Visual Studio 2017 バージョン15.6 より前のバージョンの場合: すべての変更について、ソリューション内の .sdf ファイルまたは VC. db ファイルを削除します。
 > - Visual Studio 2017 バージョン15.6 以降: 新しいヒントファイルを追加した後、ソリューションを閉じてから再度開きます。
 
-## <a name="scenario"></a>通信の種類
+## <a name="scenario"></a>シナリオ
 
 ```cpp
 #define NOEXCEPT noexcept
@@ -104,7 +104,7 @@ Visual Studio 2017 バージョン 15.8 以降には、中断を伴うマクロ�
 
 **[プロジェクト]**  >  **[参照データベース エラーを表示]** メニュー コマンドでは、解析に失敗したすべての領域が **[エラー一覧]** に表示されます。 このコマンドは、最初のヒント ファイルの作成を効率化するためのものです。 ただし、パーサーは、エラーの原因が中断を伴うマクロかどうかを通知しないため、各エラーを自分で評価する必要があります。 **[参照データベース エラーを表示]** コマンドを実行し、各エラーに移動して、影響を受けるファイルをエディターに読み込みます。 ファイルが読み込まれ、リージョン内に何らかのマクロがある場合には、それが強調表示されます。 これをヒント ファイルに追加するためのクイック アクションを呼び出すことができます。 ヒント ファイルの更新後、エラー一覧は自動的に更新されます。 また、ヒント ファイルを手動で変更している場合には、 **[ソリューションの再スキャン]** コマンドを使用して更新をトリガーすることができます。
 
-## <a name="architecture"></a>アーキテクチャ
+## <a name="architecture"></a>Architecture
 
 論理ディレクトリではなく物理ディレクトリに関連するヒント ファイルが、**ソリューション エクスプローラー**に表示されます。 ヒント ファイルを有効にするためにヒント ファイルをプロジェクトに追加する必要はありません。 解析システムは、ソース ファイルを解析する場合にのみ、ヒント ファイルを使用します。
 
@@ -150,12 +150,12 @@ Visual Studio 2017 バージョン 15.8 以降には、中断を伴うマクロ�
 
 |構文|意味|
 |------------|-------------|
-|`#define` *hint-name* *replacement-string*<br /><br /> `#define` *hint-name* `(` *parameter*, ...`)`*replacement-string*|新しいヒントを定義または既存のヒントを再定義するプリプロセッサ ディレクティブ。 このディレクティブの後に、プリプロセッサはソース コード内で *hint-name* が出現するたび *replacement-string* と置き換えます。<br /><br /> 2 番目の構文形式は、関数に似たヒントを定義します。 関数に似たヒントがソース コード内に出現すると、プリプロセッサは最初に *replacement-string* 内に *parameter* が出現するたびにソース コード内の対応する引数と置き換えてから、*hint-name* を *replacement-string* と置き換えます。|
+|`#define`*ヒント-名前* *の置換文字列*<br /><br /> `#define`*ヒント-name* `(` *parameter*,...`)`*置換文字列*|新しいヒントを定義または既存のヒントを再定義するプリプロセッサ ディレクティブ。 このディレクティブの後に、プリプロセッサはソース コード内で *hint-name* が出現するたび *replacement-string* と置き換えます。<br /><br /> 2 番目の構文形式は、関数に似たヒントを定義します。 関数に似たヒントがソース コード内に出現すると、プリプロセッサは最初に *replacement-string* 内に *parameter* が出現するたびにソース コード内の対応する引数と置き換えてから、*hint-name* を *replacement-string* と置き換えます。|
 |`@<`|一連のマップ要素の開始を示すヒント ファイル固有の *replacement-string*。|
 |`@=`|一連のマップ要素の開始を示すヒント ファイル固有の *replacement-string*。 1 つのマップで複数のマップ要素を持つことができます。|
 |`@>`|一連のマップ要素の終了を示すヒント ファイル固有の *replacement-string*。|
-|`#undef` *hint-name*|既存のヒントを削除するプリプロセッサ ディレクティブ。 ヒントの名前は、*hint-name* 識別子によって提供されます。|
-|`//` *comment*|単一行コメント。|
+|`#undef`*ヒント-名前*|既存のヒントを削除するプリプロセッサ ディレクティブ。 ヒントの名前は、*hint-name* 識別子によって提供されます。|
+|`//`*コメント*|単一行コメント。|
 |`/*` *comment* `*/`|複数行コメント。|
 
 ## <a name="example"></a>例
@@ -248,4 +248,3 @@ Visual Studio 2017 バージョン 15.8 以降には、中断を伴うマクロ�
 [#define ディレクティブ (C/C++)](../../preprocessor/hash-define-directive-c-cpp.md)<br>
 [#undef ディレクティブ (C/C++)](../../preprocessor/hash-undef-directive-c-cpp.md)<br>
 [SAL 注釈](../../c-runtime-library/sal-annotations.md)<br>
-

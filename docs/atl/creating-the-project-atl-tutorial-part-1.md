@@ -3,12 +3,12 @@ title: プロジェクトの作成 (ATL チュートリアル、パート 1)
 ms.custom: get-started-article
 ms.date: 08/19/2019
 ms.assetid: f6b727d1-390a-4b27-b82f-daadcd9fc059
-ms.openlocfilehash: b4c18d83feb6c61b603bb1880960193cf9150f9b
-ms.sourcegitcommit: 44eeb065c3148d0484de791080a3f963109744fc
+ms.openlocfilehash: 31ecee084f620256820a685df1f0e6891046fb8f
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79509396"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075328"
 ---
 # <a name="creating-the-project-atl-tutorial-part-1"></a>プロジェクトの作成 (ATL チュートリアル、パート 1)
 
@@ -45,14 +45,14 @@ ms.locfileid: "79509396"
 
     通常、ソースコードの場所は、既定では \ ユーザー\\\<ユーザー名 > になります。新しいフォルダーが自動的に作成されます。
 
-1. Visual Studio 2019 で、既定値をそのまま使用し、[ **OK]** をクリックします。 
-   Visual Studio 2017 で **[OK]** をクリックして、 **ATL プロジェクト**ウィザードを開きます。 **[アプリケーションの設定]** をクリックして、使用可能なオプションを表示します。 このプロジェクトはコントロールを作成し、コントロールはインプロセスサーバーである必要があるため、**アプリケーションの種類**は DLL として残しておきます。 **[OK]** をクリックすると、
+1. Visual Studio 2019 で、既定値をそのまま使用し、[ **OK]** をクリックします。
+   Visual Studio 2017 で **[OK]** をクリックして、 **ATL プロジェクト**ウィザードを開きます。 **[アプリケーションの設定]** をクリックして、使用可能なオプションを表示します。 このプロジェクトはコントロールを作成し、コントロールはインプロセスサーバーである必要があるため、**アプリケーションの種類**は DLL として残しておきます。 **[OK]** をクリックします。
 
 Visual Studio では、複数のファイルを生成することでプロジェクトが作成されます。 これらのファイルを**ソリューションエクスプローラー**で表示するには、`Polygon` オブジェクトを展開します。 ファイルは次のとおりです。
 
 ::: moniker range="<=vs-2017"
 
-|ファイル|説明|
+|ファイル|Description|
 |----------|-----------------|
 |Polygon|`DllMain`、`DllCanUnloadNow`、`DllGetClassObject`、`DllRegisterServer`、および `DllUnregisterServer`の実装が含まれています。 には、プロジェクト内の ATL オブジェクトのリストであるオブジェクトマップも含まれています。 最初は空白になります。|
 |Polygon .def|このモジュール定義ファイルは、DLL で必要とされるエクスポートに関する情報をリンカーに提供します。|
@@ -68,7 +68,7 @@ Visual Studio では、複数のファイルを生成することでプロジェ
 
 ::: moniker range=">=vs-2019"
 
-|ファイル|説明|
+|ファイル|Description|
 |----------|-----------------|
 |Polygon|`DllMain`、`DllCanUnloadNow`、`DllGetClassObject`、`DllRegisterServer`、および `DllUnregisterServer`の実装が含まれています。 には、プロジェクト内の ATL オブジェクトのリストであるオブジェクトマップも含まれています。 最初は空白になります。|
 |Polygon .def|このモジュール定義ファイルは、DLL で必要とされるエクスポートに関する情報をリンカーに提供します。|
@@ -88,7 +88,7 @@ Visual Studio では、複数のファイルを生成することでプロジェ
 
 1. **[リンカー]** をクリックします。 **UserRedirection**オプションを **[はい]** に変更します。
 
-1. **[OK]** をクリックすると、
+1. **[OK]** をクリックします。
 
 次の手順では、プロジェクトにコントロールを追加します。
 

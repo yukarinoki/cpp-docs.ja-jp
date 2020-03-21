@@ -3,12 +3,12 @@ title: x64 での呼び出し規則
 description: 既定の x64 ABI 呼び出し規約の詳細。
 ms.date: 12/17/2018
 ms.assetid: 41ca3554-b2e3-4868-9a84-f1b46e6e21d9
-ms.openlocfilehash: 2cad00ac7f2cb5fe086fa262a0f512330997391f
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 5b9801eff6a9789313d083fdd6ed69c3076643ad
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422704"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078083"
 ---
 # <a name="x64-calling-convention"></a>x64 での呼び出し規則
 
@@ -147,7 +147,7 @@ Struct2 func4(int a, double b, int c, float d);
 レジスタ RBX、RBX、RDI、RSI、RSP、R12、R13、R14、R15、および XMM6-15 は不揮発性と見なされ、それらを使用する関数によって保存および復元される必要があります。
 
 ## <a name="function-pointers"></a>関数ポインター
- 
+
 関数ポインターは、それぞれの関数のラベルへのポインターです。 関数ポインターには目次 (TOC) の要件はありません。
 
 ## <a name="floating-point-support-for-older-code"></a>古いコードの浮動小数点サポート

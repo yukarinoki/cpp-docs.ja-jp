@@ -4,12 +4,12 @@ ms.date: 05/08/2019
 helpviewer_keywords:
 - ATL projects, adding components
 ms.assetid: 11670681-8671-4122-96a4-2e52f8dadce0
-ms.openlocfilehash: 24b4698ebc8dd4f61dfd88ad14e64d4f70b2ef35
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: eaecd0d4e6e2b024ce3312719e7104298d3f9a66
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707031"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075279"
 ---
 # <a name="atl-com-10-component-wizard"></a>ATL COM+ 1.0 コンポーネント ウィザード
 
@@ -55,7 +55,7 @@ Visual Studio 2008 以降、このウィザードによって生成された登�
 
 - **属性付き**
 
-   オブジェクトで属性を使用するかどうかを指示します。 属性付き ATL プロジェクトにオブジェクトを追加する場合はこのオプションが選択され、変更はできません。 つまり、属性のサポートと共に作成されたプロジェクトに追加できるのは、属性付きオブジェクトのみです。
+   オブジェクトで属性を使うかどうかを示します。 属性付き ATL プロジェクトにオブジェクトを追加する場合はこのオプションが選択され、変更はできません。 つまり、属性のサポートと共に作成されたプロジェクトに追加できるのは、属性付きオブジェクトのみです。
 
    属性をサポートしていない ATL プロジェクトに対してこのオプションを選択した場合、ウィザードによって、プロジェクトに属性のサポートを追加するかどうかを指定するように求められます。
 
@@ -63,31 +63,31 @@ Visual Studio 2008 以降、このウィザードによって生成された登�
 
    詳細については、「[アプリケーションの設定、ATL プロジェクト ウィザード](../../atl/reference/application-settings-atl-project-wizard.md)」と「[属性の基本的なしくみ](../../windows/basic-mechanics-of-attributes.md)」を参照してください。
 
-### <a name="com"></a>COM
+### <a name="com"></a>COM (COM)
 
 オブジェクトの COM 機能に関する情報を指定します。
 
 - **コクラス**
 
-   オブジェクトでサポートされるインターフェイスの一覧を含むコンポーネント クラスの名前を設定します。
+   オブジェクトでサポートされるインターフェイスの一覧を含んだコンポーネント クラスの名前を設定します。
 
 > [!NOTE]
 >  属性を使用してプロジェクトを作成するか、COM+ 1.0 コンポーネントで属性を使用することをこのウィザード ページで指定した場合、ATL には `coclass` 属性が含まれないため、このオプションを変更することはできません。
 
 - **Type**
 
-   レジストリに表示されるオブジェクトの説明を設定します。
+   レジストリに表示されるオブジェクトの説明を設定します
 
-- **Interface**
+- **インターフェイス**
 
    オブジェクト用に作成するインターフェイスを設定します。 このインターフェイスには、カスタム メソッドが含まれます。
 
 - **ProgID**
 
    オブジェクトの CLSID の代わりにコンテナーで使用できる名前を設定します。
-   
+
 ::: moniker-end
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ATL COM+ 1.0 コンポーネント](../../atl/reference/adding-an-atl-com-plus-1-0-component.md)

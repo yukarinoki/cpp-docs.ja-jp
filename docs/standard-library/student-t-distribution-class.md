@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::student_t_distribution [C++], max
 - std::student_t_distribution [C++], param_type
 ms.assetid: 87b48127-9311-4d07-95df-833ed46bf0b1
-ms.openlocfilehash: ebf9324d478a12476b548dc62455e205b9261430
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 5a4e7306dbfee4f1482ee81d3470f166697e3ab6
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72685863"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076379"
 ---
 # <a name="student_t_distribution-class"></a>student_t_distribution クラス
 
@@ -64,10 +64,10 @@ public:
 
 ### <a name="parameters"></a>パラメーター
 
-*Realtype* \
+*Realtype*\
 浮動小数点演算の結果の型。既定値は**double**です。 使用可能な型については、「[\<random>](../standard-library/random.md)」を参照してください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 クラステンプレートは、スチューデントの*t*分布に従って分布した、ユーザー指定の整数型の値、または指定されていない場合は**double**型の値を生成する分布を表します。 次の表は、個々のメンバーに関する記事にリンクしています。
 
@@ -78,9 +78,9 @@ public:
 
 プロパティ関数 `n()` は、格納されている分布パラメーター `n` の値を返します。
 
-分布クラスとそのメンバーについて詳しくは、「[\<random>](../standard-library/random.md)」をご覧ください。
+分布クラスとそのメンバーの詳細については、[\<random>](../standard-library/random.md) を参照してください。
 
-スチューデントの *t* 分布の詳細については、Wolfram MathWorld の記事「[Students t-Distribution](http://mathworld.wolfram.com/Studentst-Distribution.html)」(スチューデントの t 分布) を参照してください。
+スチューデントの *t* 分布の詳細については、Wolfram MathWorld の記事「[Students t-Distribution](https://mathworld.wolfram.com/Studentst-Distribution.html)」(スチューデントの t 分布) を参照してください。
 
 ## <a name="example"></a>例
 
@@ -157,13 +157,13 @@ Distribution for 10 samples:
     10: 92.7084335614
 ```
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<random>
+**ヘッダー:** \<ランダム >
 
 **名前空間:** std
 
-## <a name="student_t_distribution"></a>  student_t_distribution::student_t_distribution
+## <a name="student_t_distributionstudent_t_distribution"></a><a name="student_t_distribution"></a>  student_t_distribution::student_t_distribution
 
 分布を作成します。
 
@@ -177,10 +177,10 @@ explicit student_t_distribution(const param_type& parm);
 *n*\
 `n` 分布パラメーター。
 
-*parm* \
+*parm*\
 分布の作成に使用されるパラメーター パッケージ。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 **前提条件:** `0.0 < n`
 
@@ -188,7 +188,7 @@ explicit student_t_distribution(const param_type& parm);
 
 2 番目のコンストラクターは、格納されているパラメーターが *parm* から初期化されるオブジェクトを作成します。 `param()` メンバー関数を呼び出すと、既存の分布の現在のパラメーターを取得および設定できます。
 
-## <a name="param_type"></a>  student_t_distribution::param_type
+## <a name="student_t_distributionparam_type"></a><a name="param_type"></a>  student_t_distribution::param_type
 
 分布のすべてのパラメーターを格納します。
 
@@ -211,12 +211,12 @@ struct param_type {
 *右*\
 このオブジェクトと比較する `param_type` オブジェクト。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 **前提条件:** `0.0 < n`
 
 この構造体は、インスタンス化時に分布のクラス コンストラクターに渡したり、`param()` メンバー関数に渡して、既存の分布の格納されているパラメーターを設定したり、`operator()` に渡して、格納されているパラメーターの代わりに使用したりすることができます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [\<random>](../standard-library/random.md)

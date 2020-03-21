@@ -4,12 +4,12 @@ ms.date: 08/14/2018
 ms.topic: conceptual
 dev_langs:
 - CPP
-ms.openlocfilehash: 955a445fbc29fca479a64684b4b60909234a0b38
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: b9eea6dc466db202ee388a2bfb2e59632e210b7f
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "79467091"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076175"
 ---
 # <a name="use-the-c-core-guidelines-checkers"></a>C++ Core ガイドライン チェッカーの使用
 
@@ -17,7 +17,7 @@ C++コアガイドラインは、専門家や設計者によってC++ C++作成�
 
 ## <a name="the-c-core-guidelines-project"></a>C++コアガイドラインプロジェクト
 
-Bjarne Stroustrup によって作成されC++たコアガイドラインは、最新C++の安全かつ効果的に使用するためのガイドです。 このガイドラインでは、静的なタイプセーフとリソースの安全性を重視しています。 これらの例では、言語のエラーが発生しやすい部分を排除または最小化する方法を示し、信頼性の高い方法でコードをより簡単かつ効率的にする方法を提案します。 これらのガイドラインは、Standard C++ Foundation によって管理されています。 詳細については、 [GitHub](https://github.com/isocpp/CppCoreGuidelines)のドキュメントと[ C++コアガイドライン](http://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines)を参照C++し、主要ガイドラインドキュメントプロジェクトファイルにアクセスしてください。
+Bjarne Stroustrup によって作成されC++たコアガイドラインは、最新C++の安全かつ効果的に使用するためのガイドです。 このガイドラインでは、静的なタイプセーフとリソースの安全性を重視しています。 これらの例では、言語のエラーが発生しやすい部分を排除または最小化する方法を示し、信頼性の高い方法でコードをより簡単かつ効率的にする方法を提案します。 これらのガイドラインは、Standard C++ Foundation によって管理されています。 詳細については、 [GitHub](https://github.com/isocpp/CppCoreGuidelines)のドキュメントと[ C++コアガイドライン](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines)を参照C++し、主要ガイドラインドキュメントプロジェクトファイルにアクセスしてください。
 
 ## <a name="enable-the-c-core-check-guidelines-in-code-analysis"></a>コード分析C++のコアチェックガイドラインを有効にする
 

@@ -2,16 +2,16 @@
 title: C++ でプログラミングする Windows の概要
 ms.date: 09/17/2019
 ms.assetid: efc691d7-21f3-47ae-ae56-cab999ccf59d
-ms.openlocfilehash: 96a03194059f59f57780bfd70cab3065d6a1aff0
-ms.sourcegitcommit: 76cc69b482ada8ebf0837e8cdfd4459661f996dd
+ms.openlocfilehash: cd95332721f51ed2d17c3205cba5f1456a1037b9
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71127195"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075484"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>C++ でプログラミングする Windows の概要
 
-でC++作成できる Windows アプリケーションには、さまざまなカテゴリがあります。 それぞれに独自のプログラミングモデルと一連の Windows 固有のライブラリがありますC++が、標準ライブラリとサードC++パーティのライブラリはいずれのライブラリでも使用できます。 
+でC++作成できる Windows アプリケーションには、さまざまなカテゴリがあります。 それぞれに独自のプログラミングモデルと一連の Windows 固有のライブラリがありますC++が、標準ライブラリとサードC++パーティのライブラリはいずれのライブラリでも使用できます。
 
 このセクションでは、Visual Studio と MFC/ATL ラッパーライブラリを使用して Windows プログラムを作成する方法について説明します。 Windows プラットフォーム自体に関するドキュメントについては、 [windows のドキュメント](/windows/index)を参照してください。
 
@@ -21,9 +21,9 @@ C++コンソールアプリケーションは、コンソールウィンドウ�
 
 ## <a name="native-desktop-client-applications"></a>ネイティブデスクトップクライアントアプリケーション
 
-*ネイティブデスクトップクライアントアプリケーション*は、元のネイティブC++ [Windows C Api またはコンポーネントオブジェクトモデル (COM) api](/windows/win32/apiindex/windows-api-list)を使用してオペレーティングシステムにアクセスする、C またはウィンドウアプリケーションです。 これらの Api 自体は、主に C で記述されています。ネイティブデスクトップアプリを作成する方法は複数あります。オペレーティングシステムイベントを処理する C スタイルのメッセージループを使用して、Win32 Api を直接使用してプログラミングすることができます。 または、Win32 をラップする軽いオブジェクト指向C++ライブラリである Microsoft Foundation Classes (MFC) を使用してプログラミングすることもできます。 どちらの方法も、ユニバーサル Windows プラットフォーム (UWP) と比較して "現代" とは見なされませんが、どちらも完全にサポートされており、今日の世界で何百万ものコードが実行されています。 ウィンドウで実行される Win32 アプリケーションでは、開発者が Windows プロシージャ関数内で Windows メッセージを明示的に操作する必要があります。 名前にかかわらず、Win32 アプリケーションは、32ビット (x86) または64ビット (x64) のバイナリとしてコンパイルできます。 Visual Studio IDE では、x86 と Win32 という用語は同義です。
+*ネイティブデスクトップクライアントアプリケーション*は、元のネイティブC++ [Windows C Api またはコンポーネントオブジェクトモデル (COM) api](/windows/win32/apiindex/windows-api-list)を使用してオペレーティングシステムにアクセスする、C またはウィンドウアプリケーションです。 これらの Api 自体は、主に C で記述されています。ネイティブデスクトップアプリを作成する方法は複数あります。オペレーティングシステムイベントを処理する C スタイルのメッセージループを使用して、Win32 Api を直接使用してプログラミングすることができます。 または、Win32 をラップ*Microsoft Foundation Classes*する軽いオブジェクト指向C++ライブラリである Microsoft Foundation Classes (MFC) を使用してプログラミングすることもできます。 どちらの方法も、ユニバーサル Windows プラットフォーム (UWP) と比較して "現代" とは見なされませんが、どちらも完全にサポートされており、今日の世界で何百万ものコードが実行されています。 ウィンドウで実行される Win32 アプリケーションでは、開発者が Windows プロシージャ関数内で Windows メッセージを明示的に操作する必要があります。 名前にかかわらず、Win32 アプリケーションは、32ビット (x86) または64ビット (x64) のバイナリとしてコンパイルできます。 Visual Studio IDE では、x86 と Win32 という用語は同義です。
 
-従来の Windows C++プログラミングの概要については、「 [Win32 およびC++の概要](/windows/win32/LearnWin32/learn-to-program-for-windows)」を参照してください。 Win32 について理解を深めた後は、 [MFC デスクトップアプリケーション](../mfc/mfc-desktop-applications.md)について簡単に学習できます。 洗練されたグラフィックスをC++使用する従来のデスクトップアプリケーションの例[については、「hilo:C++ Windows](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx)用アプリケーションの開発。
+従来の Windows C++プログラミングの概要については、「 [Win32 およびC++の概要](/windows/win32/LearnWin32/learn-to-program-for-windows)」を参照してください。 Win32 について理解を深めた後は、 [MFC デスクトップアプリケーション](../mfc/mfc-desktop-applications.md)について簡単に学習できます。 洗練されたグラフィックスをC++使用する従来のデスクトップアプリケーションの例については、「 [Hilo: Windows 用アプリケーションの開発C++ ](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx)」を参照してください。
 
 ### <a name="c-or-net"></a>C++または .NET?
 
@@ -43,7 +43,7 @@ C++コンソールアプリケーションは、コンソールウィンドウ�
 
 ## <a name="universal-windows-platform-apps"></a>ユニバーサル Windows プラットフォーム アプリ
 
-ユニバーサル Windows プラットフォーム (UWP) は、最新の Windows API です。 UWP アプリは、任意の Windows 10 デバイスで実行され、ユーザーインターフェイスに XAML を使用し、完全にタッチ対応になっています。 UWP の詳細については、「[ユニバーサル Windows プラットフォーム (uwp) アプリとは](/windows/uwp/get-started/whats-a-uwp)」と「[ユニバーサル Windows プラットフォーム ガイド](/windows/uwp/get-started/universal-application-platform-guide)」を参照してください。
+ユニバーサル Windows プラットフォーム (UWP) は、最新の Windows API です。 UWP アプリは、任意の Windows 10 デバイスで実行され、ユーザーインターフェイスに XAML を使用し、完全にタッチ対応になっています。 UWP の詳細については、「[ユニバーサル Windows プラットフォーム (uwp) アプリとは](/windows/uwp/get-started/whats-a-uwp)」[を参照](/windows/uwp/get-started/universal-application-platform-guide)してください。
 
 UWP のC++元のサポートは、(1) C++/cx、構文拡張をC++使用した言語、または (2) 標準C++と COM に基づく Windows ランタイムライブラリ (wrl) で作成されました。 /Cx C++と wrl は両方ともサポートされています。 新しいプロジェクトの場合は、標準C++に基づいていて、より高速なパフォーマンスを提供する、 [ C++WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)をお勧めします。
 
@@ -77,13 +77,13 @@ Visual Studio には、C ランタイムライブラリ (CRT)、 C++標準ライ
 
 Microsoft ライブラリには次のものが含まれます。
 
-- Microsoft Foundation Classes (MFC):従来の Windows プログラム (特にエンタープライズアプリケーション) を作成するためのオブジェクト指向フレームワーク。機能ボタン、リストボックス、ツリービュー、およびその他のコントロールを備えた豊富なユーザーインターフェイスを備えています。 詳細については、「 [MFC Desktop Applications](../mfc/mfc-desktop-applications.md)」を参照してください。
+- Microsoft Foundation Classes (MFC): ボタン、リスト ボックス、ツリー ビュー、および他のコントロールを使用した豊富なユーザー インターフェイスを持つ従来の Windows プログラム (特にエンタープライズ アプリケーション) を作成するためのオブジェクト指向フレームワーク。 詳細については、「 [MFC Desktop Applications](../mfc/mfc-desktop-applications.md)」を参照してください。
 
-- Active Template Library (ATL):COM コンポーネントを作成するための強力なヘルパーライブラリ。 詳細については、「 [ATL COM Desktop Components](../atl/atl-com-desktop-components.md)」を参照してください。
+- Active Template Library (ATL): COM コンポーネントを作成するための強力なヘルパー ライブラリ。 詳細については、「 [ATL COM Desktop Components](../atl/atl-com-desktop-components.md)」を参照してください。
 
-- C++AMP (C++高速で大規模な並列処理):GPU での高パフォーマンスの一般的な計算作業を可能にするライブラリ。 詳細については、「 [C++ AMP (C++ Accelerated Massive Parallelism)](../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)」を参照してください。
+- C++ AMP (C++ Accelerated Massive Parallelism): GPU で一般的な計算作業のパフォーマンス向上を可能にするライブラリ。 詳細については、「 [C++ AMP (C++ Accelerated Massive Parallelism)](../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)」を参照してください。
 
-- 同時実行ランタイム:マルチコアおよび多コアデバイスの並列プログラミングと非同期プログラミングの作業を簡略化するライブラリ。 詳細については、「[コンカレンシー ランタイム](../parallel/concrt/concurrency-runtime.md)」を参照してください。
+- コンカレンシー ランタイム: マルチコア デバイスおよびメニーコア デバイス用の並列プログラミングおよび非同期プログラミング作業を簡略化するために役立つライブラリ。 詳細については、「[コンカレンシー ランタイム](../parallel/concrt/concurrency-runtime.md)」を参照してください。
 
 Windows プログラミングの多くのシナリオでは、Windows SDK も必要になります。これには、Windows オペレーティング システム コンポーネントへのアクセスを可能にするためのヘッダー ファイルが含まれています。 既定では、Visual Studio はC++デスクトップワークロードのコンポーネントとして Windows SDK をインストールします。これにより、ユニバーサル Windows アプリの開発が可能になります。 UWP アプリを開発するには、Windows SDK の Windows 10 バージョンが必要です。 詳細については、「 [Windows 10 SDK](https://dev.windows.com/downloads/windows-10-sdk)」を参照してください。 (以前のバージョンの Windows 用 Windows Sdk の詳細については、「 [Windows SDK archive](https://developer.microsoft.com/windows/downloads/sdk-archive)」を参照してください)。
 
@@ -96,9 +96,9 @@ Xbox や Azure など、他のプラットフォームには、インストー�
 Visual Studio には、ネイティブ コード用の強力なデバッガー、スタティック分析ツール、グラフィックス デバッグ ツール、フル装備のコード エディター、単体テストのサポート、その他多数のツールおよびユーティリティが含まれています。 詳細については、「 [Visual studio](/visualstudio/ide/get-started-developing-with-visual-studio)での開発の開始」と「 [visual studio での開発のC++概要](../overview/overview-of-cpp-development.md)」を参照してください。
 
 ## <a name="in-this-section"></a>このセクションの内容
-|Title|説明|
+|タイトル|Description|
 |-----------|-----------------|
-|[チュートリアル: 標準 C++ プログラムの作成](walkthrough-creating-a-standard-cpp-program-cpp.md)| Windows コンソールアプリケーションを作成します。|
+|[チュートリアル: 標準C++プログラムの作成](walkthrough-creating-a-standard-cpp-program-cpp.md)| Windows コンソールアプリケーションを作成します。|
 |[チュートリアル: Windows デスクトップ アプリケーション (C++) の作成](walkthrough-creating-windows-desktop-applications-cpp.md)|ネイティブ Windows デスクトップアプリケーションを作成します。|
 |[Windows デスクトップ ウィザード](windows-desktop-wizard.md)|ウィザードを使用して、新しい Windows プロジェクトを作成します。|
 |[Active Template Library (ATL)](../atl/atl-com-desktop-components.md)|ATL ライブラリを使用して、でC++COM コンポーネントを作成します。|
@@ -113,9 +113,9 @@ Visual Studio には、ネイティブ コード用の強力なデバッガー�
 |[方法: Windows デスクトップ アプリケーションでの Windows 10 SDK の使用](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Windows 10 SDK を使用してビルドするプロジェクトの設定手順が示されています。|
 |[ネイティブ デスクトップ アプリケーションの配置](deploying-native-desktop-applications-visual-cpp.md)|Windows でネイティブアプリケーションを展開します。|
 
-## <a name="related-articles"></a>関連トピック
+## <a name="related-articles"></a>関連記事
 
-|Title|説明|
+|タイトル|Description|
 |-----------|-----------------|
 |[Visual Studio での C++](../overview/visual-cpp-in-visual-studio.md)|ビジュアルC++開発者向けコンテンツの親トピックです。|
 [C++/CLI による .NET の開発](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)|.NET アプリケーションおよびコンポーネントC++との通信を可能にするネイティブライブラリのラッパーを作成します。|

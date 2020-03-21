@@ -3,12 +3,12 @@ title: クラス、構造体、および共用体の中かっこの初期化
 description: 任意C++のクラス、構造体、または共用体と共に中かっこの初期化を使用する
 ms.date: 11/19/2019
 ms.assetid: 3e55c3d6-1c6b-4084-b9e5-221b151402f4
-ms.openlocfilehash: a2c9db4572b0dde94c42ec6768a0f3bed7766a96
-ms.sourcegitcommit: 15677b0e4d2518847ce59b158990b25c4077e565
+ms.openlocfilehash: 2f04401c7fca417baec09fa3023e14b9b85ea63c
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75652625"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075881"
 ---
 # <a name="brace-initialization"></a>かっこ初期化
 
@@ -128,7 +128,7 @@ int main()
 }
 ```
 
-かっこ初期化を使用することができますの初期化をどこでも通常実行 — たとえば、関数パラメーターまたは戻り値として、**new**キーワード。
+かっこ初期化は、通常、初期化を行うときに使用できます。たとえば、関数パラメーターや戻り値として、または**new**キーワードを使用します。
 
 ```cpp
 class_d* cf = new class_d{4.5};
@@ -167,8 +167,7 @@ string s{ 'a', 'b', 'c' };
 regex rgx{ 'x', 'y', 'z' };
 ```
 
-
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [クラスと構造体](../cpp/classes-and-structs-cpp.md)<br/>
 [コンストラクター](../cpp/constructors-cpp.md)

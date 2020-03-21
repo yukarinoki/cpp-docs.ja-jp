@@ -7,31 +7,31 @@ helpviewer_keywords:
 - Add References Dialog Box (C++)
 - .NET Framework (C++), Add References Dialog Box
 ms.assetid: 12b8f571-0f21-40b3-9404-5318a57e9cb5
-ms.openlocfilehash: a65ad69914b14e7b8b37c321fa7d06740af57e3a
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: a8cd13e27859d09bcaaca1f5f6f1c2750b908fe6
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69493383"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078786"
 ---
 # <a name="consuming-libraries-and-components"></a>ライブラリとコンポーネントの使用
 
-多くの場合C++ 、プロジェクトは、静的ライブラリ (.lib ファイル)、DLL、Windows ランタイムコンポーネント、COM コンポーネント、.net アセンブリなどのバイナリファイル内の関数を呼び出したり、データにアクセスしたりする必要があります。 このような場合は、ビルド時にそのバイナリを見つけることができるようにプロジェクトを構成する必要があります。 具体的な手順は、プロジェクトの種類、バイナリの種類、およびバイナリがプロジェクトと同じソリューションでビルドされているかどうかによって異なります。 
+多くの場合C++ 、プロジェクトは、静的ライブラリ (.lib ファイル)、DLL、Windows ランタイムコンポーネント、COM コンポーネント、.net アセンブリなどのバイナリファイル内の関数を呼び出したり、データにアクセスしたりする必要があります。 このような場合は、ビルド時にそのバイナリを見つけることができるようにプロジェクトを構成する必要があります。 具体的な手順は、プロジェクトの種類、バイナリの種類、およびバイナリがプロジェクトと同じソリューションでビルドされているかどうかによって異なります。
 
 ## <a name="consuming-libraries-downloaded-via-vcpkg"></a>Vcpkg を使用してダウンロードされたライブラリを使用する
 
-**Vcpkg** package manager を使用してダウンロードしたライブラリを使用するには、次の手順を無視します。 「[vcpkg: 詳細C++については、Windows、Linux](vcpkg.md#integrate-with-visual-studio-windows) 、MacOS のパッケージマネージャーを参照してください。
+**Vcpkg** package manager を使用してダウンロードしたライブラリを使用するには、次の手順を無視します。 詳細については、「 [vcpkg: Windows、Linux、および MacOS 用のC++パッケージマネージャー](vcpkg.md#integrate-with-visual-studio-windows) 」を参照してください。
 
 ## <a name="consuming-static-libraries"></a>スタティックライブラリの使用
 
 スタティックライブラリプロジェクトが同じソリューション内に構築されている場合は、次のようになります。
 
-1. #<a name="include-the-header-files-for-the-static-library-using-quotation-marks-in-a-typical-solution-the-path-will-start-with-library-project-name-intellisense-will-help-you-find-it"></a>引用符を使用して、スタティックライブラリのヘッダーファイルを含めます。 一般的なソリューションでは、パスはで`../<library project name>`始まります。 IntelliSense を使用して見つけることができます。
-2. スタティックライブラリプロジェクトへの参照を追加します。 **ソリューションエクスプローラー**の アプリケーションプロジェクト ノードの下にある **参照** を右クリックし、**参照の追加** を選択します。 
+1. #<a name="include-the-header-files-for-the-static-library-using-quotation-marks-in-a-typical-solution-the-path-will-start-with-library-project-name-intellisense-will-help-you-find-it"></a>引用符を使用して、スタティックライブラリのヘッダーファイルを含めます。 一般的なソリューションでは、パスは `../<library project name>`で始まります。 IntelliSense を使用して見つけることができます。
+2. スタティックライブラリプロジェクトへの参照を追加します。 **ソリューションエクスプローラー**の アプリケーションプロジェクト ノードの下にある **参照** を右クリックし、**参照の追加** を選択します。
 
 スタティックライブラリがソリューションに含まれていない場合は、次の手順を実行します。
 
-1. **ソリューションエクスプローラー**でアプリケーションプロジェクトノードを右クリックし、 **[プロパティ]** を選択します。 
+1. **ソリューションエクスプローラー**でアプリケーションプロジェクトノードを右クリックし、 **[プロパティ]** を選択します。
 2. **[VC + + ディレクトリ]** プロパティページで、.lib ファイルがあるディレクトリへのパスを **[ライブラリパス]** に追加し、 **[インクルードディレクトリ]** のライブラリヘッダーファイルへのパスを追加します。  
 3. [**リンカー > 入力**プロパティ] ページで、**追加の依存関係**に .lib ファイルの名前を追加します。
 
@@ -46,11 +46,11 @@ DLL がアプリケーションソリューションに含まれていない場�
 
 ## <a name="com-objects"></a>COM オブジェクト
 
-ネイティブC++アプリケーションが COM オブジェクトを使用する必要があり、そのオブジェクトが*登録*されている場合は、CoCreateInstance を呼び出して、オブジェクトの CLSID を渡すだけで済みます。 システムによって Windows レジストリに検出され、読み込まれます。 /Cli プロジェクトは、同じ方法で COM オブジェクトを使用することも、**参照の追加 > com**リストから参照を追加して、[ランタイム呼び出し可能ラッパー](/dotnet/framework/interop/runtime-callable-wrapper)を介して使用することもできます。 C++ 
+ネイティブC++アプリケーションが COM オブジェクトを使用する必要があり、そのオブジェクトが*登録*されている場合は、CoCreateInstance を呼び出して、オブジェクトの CLSID を渡すだけで済みます。 システムによって Windows レジストリに検出され、読み込まれます。 /Cli プロジェクトは、同じ方法で COM オブジェクトを使用することも、**参照の追加 > com**リストから参照を追加して、[ランタイム呼び出し可能ラッパー](/dotnet/framework/interop/runtime-callable-wrapper)を介して使用することもできます。 C++
 
 ## <a name="net-assemblies-and-windows-runtime-components"></a>.NET アセンブリと Windows ランタイムコンポーネント
 
-UWP プロジェクトまたC++は/cli プロジェクトでは、アセンブリまたはコンポーネントへの*参照*を追加することによって、.net アセンブリまたは Windows ランタイムコンポーネントを使用します。 UWP またはC++/Cli プロジェクトの [参照] ノードの下には、一般的に使用されるコンポーネントへの参照が表示されます。 **ソリューションエクスプローラー**の **[参照]** ノードを右クリックして、**参照マネージャー**を表示し、システムで認識されているその他のコンポーネントを参照します。 **[参照]** ボタンをクリックして、カスタムコンポーネントが配置されているフォルダーに移動します。 .NET アセンブリおよび Windows ランタイムコンポーネントには組み込みの型情報が含まれているため、右クリックして **[オブジェクトブラウザーで表示]** を選択すると、メソッドとクラスを表示できます。 
+UWP プロジェクトまたC++は/cli プロジェクトでは、アセンブリまたはコンポーネントへの*参照*を追加することによって、.net アセンブリまたは Windows ランタイムコンポーネントを使用します。 UWP また**References**はC++/Cli プロジェクトの [参照] ノードの下には、一般的に使用されるコンポーネントへの参照が表示されます。 **ソリューションエクスプローラー**の **[参照]** ノードを右クリックして、**参照マネージャー**を表示し、システムで認識されているその他のコンポーネントを参照します。 **[参照]** ボタンをクリックして、カスタムコンポーネントが配置されているフォルダーに移動します。 .NET アセンブリおよび Windows ランタイムコンポーネントには組み込みの型情報が含まれているため、右クリックして **[オブジェクトブラウザーで表示]** を選択すると、メソッドとクラスを表示できます。
 
 ## <a name="reference-properties"></a>参照のプロパティ
 
@@ -88,7 +88,7 @@ ActiveX 参照のプロパティは、COM コンポーネントへの参照に�
 
    プロジェクト ディレクトリから参照するアセンブリへの相対パスが表示されます。
 
-### <a name="build-properties"></a>ビルド プロパティ
+### <a name="build-properties"></a>プロパティをビルドする
 
 次のプロパティは、さまざまな種類の参照で使用できます。 参照付きでビルドする方法をこれらのプロパティにより指定できます。
 
@@ -136,7 +136,7 @@ ActiveX 参照のプロパティは、COM コンポーネントへの参照に�
 
    選択された参照の説明が表示されます。
 
-- **完全パス**
+- **完全なパス**
 
    参照されたアセンブリのディレクトリ パスが表示されます。
 
@@ -144,7 +144,7 @@ ActiveX 参照のプロパティは、COM コンポーネントへの参照に�
 
    .NET Framework アセンブリでは、完全なパスが表示されます。 COM コンポーネントでは、GUID が表示されます。
 
-- **ラベル**
+- **Label**
 
    参照のラベルが表示されます。
 
@@ -160,11 +160,11 @@ ActiveX 参照のプロパティは、COM コンポーネントへの参照に�
 
    参照が厳密な名前を持つ場合は`true` です。 厳密な名前を持つアセンブリは、一意にバージョン管理されます。
 
-- **Version**
+- **バージョン**
 
    参照アセンブリのバージョンが表示されます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [C++プロジェクトプロパティページのリファレンス](reference/property-pages-visual-cpp.md)<br>
 [Visual Studio で C++ コンパイラとビルド プロパティを設定する](working-with-project-properties.md)

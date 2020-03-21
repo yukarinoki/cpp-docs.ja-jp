@@ -49,12 +49,12 @@ helpviewer_keywords:
 - IsUpdateAllowed method
 - m_mapCachedData
 ms.assetid: f85af76b-ab6f-4f8b-8f4a-337c9679d68f
-ms.openlocfilehash: dba962c761fac0408a3c68a46ec6447aa7832522
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: fdd6072f831d7bfb77673169c2ef8062cc7107a6
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79545721"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077862"
 ---
 # <a name="irowsetupdateimpl-class"></a>IRowsetUpdateImpl クラス
 
@@ -96,7 +96,7 @@ class IRowsetUpdateImpl : public IRowsetChangeImpl<
 *MapClass*<br/>
 プロバイダーによって保持されているすべての行ハンドルのストレージユニット。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atldb.h
 
@@ -130,7 +130,7 @@ class IRowsetUpdateImpl : public IRowsetChangeImpl<
 |-|-|
 |[m_mapCachedData](#mapcacheddata)|遅延操作の元のデータを格納します。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 ここに記載されているすべてのものはここにも適用されるため、まず[IRowsetChange](/previous-versions/windows/desktop/ms715790(v=vs.85))のドキュメントを読んで理解しておく必要があります。 また、データの設定に関する*OLE DB プログラマーリファレンス*の第6章も参照してください。
 
@@ -161,7 +161,7 @@ STDMETHOD (SetData )(HROW hRow,
 
 *OLE DB プログラマーリファレンス*の「 [IRowsetChange:: SetData](/previous-versions/windows/desktop/ms721232(v=vs.85)) 」を参照してください。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメソッドは[IRowsetChangeImpl:: SetData](../../data/oledb/irowsetchangeimpl-setdata.md)メソッドをオーバーライドしますが、操作の即時処理または遅延処理を許可する元のデータのキャッシュを含みます。
 
@@ -202,7 +202,7 @@ STDMETHOD (GetPendingRows )(HCHAPTER /* hReserved */,
 
 その他のパラメーターについては、 *OLE DB プログラマーリファレンス*の「 [IRowsetUpdate:: getpendingrows](/previous-versions/windows/desktop/ms719626(v=vs.85)) 」を参照してください。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 詳細については、 *OLE DB プログラマーリファレンス*の「 [IRowsetUpdate:: getpendingrows](/previous-versions/windows/desktop/ms719626(v=vs.85)) 」を参照してください。
 
@@ -276,7 +276,7 @@ STDMETHOD (Update )(HCHAPTER /* hReserved */,
 
 その他のパラメーターについては、 *OLE DB プログラマーリファレンス*の「 [IRowsetUpdate:: Update](/previous-versions/windows/desktop/ms719709(v=vs.85)) 」を参照してください。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 変更は、 [IRowsetChangeImpl:: FlushData](../../data/oledb/irowsetchangeimpl-flushdata.md)を呼び出すことによって送信されます。 変更を有効にするには、コンシューマーが[CRowset:: Update](../../data/oledb/crowset-update.md)を呼び出す必要があります。 「 *OLE DB プログラマーのリファレンス*」の「[行の状態](/previous-versions/windows/desktop/ms722752(v=vs.85))」で説明されているように、 *prgrowstatus*を適切な値に設定します。
 
@@ -303,7 +303,7 @@ HRESULT IsUpdateAllowed(DBPENDINGSTATUS /* [in] */ /* status */,
 *pRowStatus*<br/>
 入出力ユーザーに返されるステータス。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 更新を許可する必要があると判断した場合、は S_OK を返します。それ以外の場合は E_FAIL を返します。 更新を許可する場合は、 [IRowsetUpdateImpl:: update](../../data/oledb/irowsetupdateimpl-update.md)の `DBROWSTATUS` を適切な[行の状態](/previous-versions/windows/desktop/ms722752(v=vs.85))に設定する必要もあります。
 
@@ -315,7 +315,7 @@ HRESULT IsUpdateAllowed(DBPENDINGSTATUS /* [in] */ /* status */,
 
 ```cpp
 CAtlMap<
-   HROW hRow, 
+   HROW hRow,
    Storage* pData
 >
 m_mapCachedData;

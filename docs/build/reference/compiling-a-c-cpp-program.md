@@ -1,35 +1,35 @@
 ---
-title: MSVC C と C++ コンパイラ リファレンス - Visual Studio
-description: MSVC コンパイラ ツールセット オプション。
+title: MSVC C/C++コンパイラリファレンス-Visual Studio
+description: MSVC コンパイラツールセットのオプション。
 ms.date: 12/10/2018
 helpviewer_keywords:
 - cl.exe compiler
 - cl.exe compiler, setting options
 ms.assetid: f3eef5ab-d0be-4fb2-90f9-927e6ed58736
-ms.openlocfilehash: 2269ba69cea2702ff190c791eb6753acb3619f7d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c75176b139895d7b00d88aca1c58604b47386894
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294149"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077372"
 ---
-# <a name="compiling-a-cc-project"></a>C と C++ プロジェクトのコンパイル
+# <a name="compiling-a-cc-project"></a>C/C++プロジェクトのコンパイル
 
-Visual Studio IDE またはコマンドラインで、C および C++ のコンパイラ オプションを設定できます。 
+C およびC++コンパイラオプションは、VISUAL Studio IDE またはコマンドラインで設定できます。
 
-## <a name="in-visual-studio"></a>Visual Studio 内
+## <a name="in-visual-studio"></a>Visual Studio で使用する
 
-各プロジェクトのコンパイラ オプションを設定するには、Visual Studio で**プロパティ ページ** ダイアログ ボックス。 左側のウィンドウで次のように選択します。**構成プロパティ**、 **c/c++** コンパイラ オプションのカテゴリを選択するとします。 各コンパイラ オプションのトピックで、開発環境でオプションを設定する方法と、そのオプションがどこにあるかを説明します。 参照してください[MSVC コンパイラ オプション](compiler-options.md)完全な一覧についてはします。
+Visual Studio の **[プロパティページ]** ダイアログボックスで、各プロジェクトのコンパイラオプションを設定できます。 左側のウィンドウで、 **[構成プロパティ]** 、 **[C/C++ ]** の順に選択し、[コンパイラオプション] カテゴリを選択します。 各コンパイラ オプションのトピックで、開発環境でオプションを設定する方法と、そのオプションがどこにあるかを説明します。 完全な一覧については、「 [MSVC Compiler Options](compiler-options.md) 」を参照してください。
 
-## <a name="from-the-command-line"></a>コマンドラインから
+## <a name="from-the-command-line"></a>コマンド ラインから
 
 コンパイラ (CL.exe) オプションは、次のいずれかで設定できます。
 
 - [コマンドラインで](compiler-command-line-syntax.md)
 
-- [コマンド ファイル](cl-command-files.md)
+- [コマンドファイル内](cl-command-files.md)
 
-- [環境変数 CL](cl-environment-variables.md)
+- [CL 環境変数内](cl-environment-variables.md)
 
 環境変数 CL で指定したオプションは、CL を起動するたびに使用されます。 環境変数 CL またはコマンド ラインでコマンド ファイルを指定すると、そのコマンド ファイルに指定されているオプションが使用されます。 コマンド ラインまたは環境変数 CL ではオプションとファイル名を 1 行しか指定できませんが、コマンド ファイルでは複数行指定できます。
 
@@ -43,8 +43,8 @@ Visual Studio IDE またはコマンドラインで、C および C++ のコン�
 
 - [リンカーを呼び出す CL](cl-invokes-the-linker.md)
 
-コンパイラのホストとターゲット アーキテクチャを選択する方法については、次を参照してください。 [64 ビット、x64 ターゲットで構成する C++ プロジェクト](../configuring-programs-for-64-bit-visual-cpp.md)します。
+コンパイラホストとターゲットアーキテクチャの選択の詳細については、「 [64 ビット、x64 ターゲットのプロジェクトを構成するC++ ](../configuring-programs-for-64-bit-visual-cpp.md)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [C/C++ ビルドのリファレンス](c-cpp-building-reference.md)

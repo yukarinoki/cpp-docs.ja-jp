@@ -4,15 +4,14 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - user record classes in OLE DB consumer
 ms.assetid: dba0538f-2afe-4354-8cbb-f202ea8ade5a
-ms.openlocfilehash: 3442ff484876aec9b2cd3fa93e95c4d503649ee9
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: 0d3bd03fb352f2466f0ae48ec0ca99cf66fbb416
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707750"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079719"
 ---
 # <a name="consumer-wizard-generated-classes"></a>コンシューマー ウィザードで生成されたクラス
-
 
 ::: moniker range="vs-2019"
 
@@ -28,7 +27,7 @@ ATL OLE DB コンシューマー ウィザードは、Visual Studio 2019 以降�
 
 - 属性コンシューマーを選択した場合は、ユーザー レコード クラスのフォームは、"_*ClassName*Accessor" の名前で挿入されます。 つまり、テキスト エディターではコマンド クラスの表示のみが可能になり、ユーザー レコード クラスは挿入されたコードとして表示されます。 挿入されたコードを表示する方法については、「 [挿入されたコードのデバッグ](/visualstudio/debugger/how-to-debug-injected-code)」を参照してください。
 
-次の例では、`Northwind` データベースの `Products` テーブルで作成されたコマンド クラスを使用して、コマンド クラスとユーザー レコード クラスに対してウィザードで生成されたコンシューマー コードの使用例を示します。
+次の例では、`Products` データベースの `Northwind` テーブルで作成されたコマンド クラスを使用して、コマンド クラスとユーザー レコード クラスに対してウィザードで生成されたコンシューマー コードの使用例を示します。
 
 ## <a name="templated-user-record-classes"></a>テンプレート化されたユーザー レコード クラス
 
@@ -189,6 +188,6 @@ class CProducts : public CCommand<CAccessor<_CProductsAccessor>>
 
 ::: moniker-end
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ウィザードを使用した OLE DB コンシューマーの作成](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)

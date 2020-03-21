@@ -200,16 +200,16 @@ helpviewer_keywords:
 - std::count_if [C++]
 - std::partition_copy [C++]
 - std::swap [C++]
-ms.openlocfilehash: 199634997397cca0008c60843b5d977633277331
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: b9f1e5c4c5600fa07d2f9c5222bf57fb43446955
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79427369"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076837"
 ---
 # <a name="ltalgorithmgt-functions"></a>&lt;algorithm&gt; 関数
 
-## <a name="adjacent_find"></a>adjacent_find
+## <a name="adjacent_find"></a><a name="adjacent_find"></a>adjacent_find
 
 等しいか、または指定された条件を満たす 2 個の隣接する要素を検索します。
 
@@ -327,7 +327,7 @@ There are two adjacent elements where the second is twice the first.
 They have values of 10 & 20.
 ```
 
-## <a name="all_of"></a>all_of
+## <a name="all_of"></a><a name="all_of"></a>all_of
 
 指定された範囲内の各要素に条件が存在する場合に**true**を返します。
 
@@ -403,7 +403,7 @@ li = ( 50 40 10 20 20 )
 All the elements are even numbers.
 ```
 
-## <a name="any_of"></a>any_of
+## <a name="any_of"></a><a name="any_of"></a>any_of
 
 指定された要素の範囲内に条件が1回以上存在する場合に**true**を返します。
 
@@ -480,7 +480,7 @@ li = ( 51 41 11 21 20 )
 There's an even element in li.
 ```
 
-## <a name="binary_search"></a>binary_search
+## <a name="binary_search"></a><a name="binary_search"></a>binary_search
 
 並べ替えられた範囲に、指定された値と等しい要素が存在するか、または二項述語で指定された意味で、指定された値と等価の要素が存在するかどうかをテストします。
 
@@ -619,7 +619,7 @@ Ordered using mod_lesser, vector v1 = ( 0 -1 1 -2 2 3 4 )
 There is an element with a value equivalent to -3 under mod_lesser.
 ```
 
-## <a name="clamp"></a>クリップ
+## <a name="clamp"></a><a name="clamp"></a>クリップ
 
 値を上限および下限と比較し、値が境界の間にある場合はその値への参照を返します。値が上または下にある場合は下限または下限を返します。
 
@@ -660,7 +660,7 @@ constexpr const Type& clamp(
 
 *Upper*の値が*低い*場合、動作は未定義です。
 
-## <a name="copy"></a>copy
+## <a name="copy"></a><a name="copy"></a>copy
 
 要素のソース シーケンス全体を繰り返し、順方向の新しい位置を割り当てて、ソース範囲内からターゲットの範囲に要素の値を割り当てます。
 
@@ -763,7 +763,7 @@ v2 with v1 insert = ( 0 3 6 9 0 10 20 21 24 27 30 )
 v2 with shifted insert = ( 0 3 0 10 20 10 20 21 24 27 30 )
 ```
 
-## <a name="copy_backward"></a>copy_backward
+## <a name="copy_backward"></a><a name="copy_backward"></a>copy_backward
 
 要素のソース シーケンス全体を繰り返し、逆方向の新しい位置を割り当てて、ソース範囲内からターゲットの範囲に要素の値を割り当てます。
 
@@ -860,7 +860,7 @@ v2 with v1 insert = ( 0 3 6 9 0 10 20 21 24 27 30 )
 v2 with shifted insert = ( 0 3 6 9 0 10 0 10 20 27 30 )
 ```
 
-## <a name="copy_if"></a>copy_if
+## <a name="copy_if"></a><a name="copy_if"></a>copy_if
 
 要素の範囲内で、指定した条件に**該当**する要素をコピーします。
 
@@ -939,7 +939,7 @@ int main()
 
     // is_even checks if the element is even.
     auto is_even = [](int const elem) { return !(elem % 2); };
-    // use copy_if to select only even elements from li 
+    // use copy_if to select only even elements from li
     // and copy them to le, starting from le's begin position
     auto ec = copy_if(li.begin(),li.end(), le.begin(), is_even);
     le.resize(std::distance(le.begin(), ec));  // shrink le to new size
@@ -965,7 +965,7 @@ Even numbers are le = ( 46 88 72 60 40 84 )
 Odd numbers are lo = ( 59 79 71 5 )
 ```
 
-## <a name="copy_n"></a>copy_n
+## <a name="copy_n"></a><a name="copy_n"></a>copy_n
 
 指定された数の要素をコピーします。
 
@@ -1035,7 +1035,7 @@ int main()
 dandelion + badger = danger
 ```
 
-## <a name="count"></a>数
+## <a name="count"></a><a name="count"></a>数
 
 範囲内で値が指定された値と一致する要素の数を返します。
 
@@ -1116,7 +1116,7 @@ v1 = ( 10 20 10 40 10 )
 The number of 10s in v2 is: 3.
 ```
 
-## <a name="count_if"></a>count_if
+## <a name="count_if"></a><a name="count_if"></a>count_if
 
 範囲内で値が指定された条件を満たす要素の数を返します。
 
@@ -1201,7 +1201,7 @@ v1 = ( 10 20 10 40 10 )
 The number of elements in v1 greater than 10 is: 2.
 ```
 
-## <a name="equal"></a>つの
+## <a name="equal"></a><a name="equal"></a>つの
 
 二項述語によって指定された等値または等価について、2 つの範囲を要素ごとに比較します。
 
@@ -1336,7 +1336,7 @@ int main()
 }
 ```
 
-## <a name="equal_range"></a>equal_range
+## <a name="equal_range"></a><a name="equal_range"></a>equal_range
 
 順序付けられた対象範囲で、すべての要素が指定された値と等価であるサブ範囲を検索します。
 
@@ -1502,7 +1502,7 @@ int main()
 }
 ```
 
-## <a name="fill"></a>入力
+## <a name="fill"></a><a name="fill"></a>入力
 
 指定された範囲のすべての要素に同じ新しい値を割り当てます。
 
@@ -1580,7 +1580,7 @@ Vector v1 = ( 0 5 10 15 20 25 30 35 40 45 )
 Modified v1 = ( 0 5 10 15 20 2 2 2 2 2 )
 ```
 
-## <a name="fill_n"></a>fill_n
+## <a name="fill_n"></a><a name="fill_n"></a>fill_n
 
 特定の要素で始まる要素範囲で、指定された数の要素に新しい値を割り当てます。
 
@@ -1669,7 +1669,7 @@ int main()
 }
 ```
 
-## <a name="find"></a>探す
+## <a name="find"></a><a name="find"></a>探す
 
 範囲内で指定された値を持つ要素が最初に出現する位置を検索します。
 
@@ -1712,7 +1712,7 @@ ForwardIterator find(
 
 `find()` を使用したコード例については、「[find_if](../standard-library/algorithm-functions.md#find_if)」を参照してください。
 
-## <a name="find_end"></a>find_end
+## <a name="find_end"></a><a name="find_end"></a>find_end
 
 範囲内で指定されたシーケンスと等しい、つまり二項述語で指定された意味で等価である最後のサブシーケンスを検索します。
 
@@ -1876,7 +1876,7 @@ There is a sequence of elements in v1 that are equivalent to those
 in v2 under the binary predicate twice and that begins at position 8.
 ```
 
-## <a name="find_first_of"></a>find_first_of
+## <a name="find_first_of"></a><a name="find_first_of"></a>find_first_of
 
 対象範囲内で複数の値のうち最初に出現するもの、つまり二項述語で指定された意味で、指定された要素のセットと等価である複数の要素のうち最初に出現するものを検索します。
 
@@ -2043,7 +2043,7 @@ to those in v2 under the binary predicate twice
 and the first one begins at position 2.
 ```
 
-## <a name="find_if"></a>find_if
+## <a name="find_if"></a><a name="find_if"></a>find_if
 
 範囲内で指定された条件を満たす要素が最初に出現する位置を検索します。
 
@@ -2165,7 +2165,7 @@ int main()
 }
 ```
 
-## <a name="find_if_not"></a>find_if_not
+## <a name="find_if_not"></a><a name="find_if_not"></a>find_if_not
 
 指定された範囲内で条件を満たさない最初の要素を返します。
 
@@ -2204,7 +2204,7 @@ ForwardIterator find_if_not(
 
 `find_if_not()` に簡単に適用できるコード例については、「[find_if](../standard-library/algorithm-functions.md#find_if)」を参照してください。
 
-## <a name="for_each"></a>for_each
+## <a name="for_each"></a><a name="for_each"></a>for_each
 
 範囲内で順方向順序で各要素に対して指定された関数を適用し、関数オブジェクトを返します。
 
@@ -2359,7 +2359,7 @@ The average of the elements of v1 is:
 Average ( v1mod2 ) = 10.
 ```
 
-## <a name="for_each_n"></a>for_each_n
+## <a name="for_each_n"></a><a name="for_each_n"></a>for_each_n
 
 ```cpp
 template<class InputIterator, class Size, class Function>
@@ -2376,7 +2376,7 @@ ForwardIterator for_each_n(
     Function f);
 ```
 
-## <a name="generate"></a>生み
+## <a name="generate"></a><a name="generate"></a>生み
 
 範囲内の各要素に関数オブジェクトによって生成される値を割り当てます。
 
@@ -2456,7 +2456,7 @@ Vector v1 is ( 41 18467 6334 26500 19169 ).
 Deque deq1 is ( 15724 11478 29358 26962 24464 ).
 ```
 
-## <a name="generate_n"></a>generate_n
+## <a name="generate_n"></a><a name="generate_n"></a>generate_n
 
 範囲内の指定された数の要素に関数オブジェクトによって生成される値を割り当て、最後に割り当てられた値を 1 つ超えた位置を返します。
 
@@ -2542,7 +2542,7 @@ int main()
 }
 ```
 
-## <a name="includes"></a>が含まれ
+## <a name="includes"></a><a name="includes"></a>が含まれ
 
 1 つの並べ替えられた範囲に、別の並べ替えられた範囲内のすべての要素が含まれるかどうかをテストします。要素間の順序または等価の基準は二項述語によって指定できます。
 
@@ -2767,7 +2767,7 @@ At least one of the elements in vector v2b is not contained in vector v2a.
 At least one of the elements in vector v3b is not contained under mod_lesser in vector v3a.
 ```
 
-## <a name="inplace_merge"></a>inplace_merge
+## <a name="inplace_merge"></a><a name="inplace_merge"></a>inplace_merge
 
 2 つの連続する並べ替えられた範囲の要素を単一の並べ替えられた範囲として連結します。順序の基準は二項述語によって指定できます。
 
@@ -2937,7 +2937,7 @@ Merged inplace with binary predicate mod_lesser specified,
 vector v3mod = ( 0 0 1 -1 2 -2 3 -3 4 -4 5 -5 )
 ```
 
-## <a name="is_heap"></a>is_heap
+## <a name="is_heap"></a><a name="is_heap"></a>is_heap
 
 指定された範囲の要素がヒープを形成する場合に**true**を返します。
 
@@ -2993,7 +2993,7 @@ bool is_heap(
 
 [https://login.microsoftonline.com/consumers/](`is_heap_until(first, last, pred) == last`)
 
-## <a name="is_heap_until"></a>is_heap_until
+## <a name="is_heap_until"></a><a name="is_heap_until"></a>is_heap_until
 
 ヒープの順序付け条件を満たしていない範囲 [`first`、`last`) の最初の要素に配置された反復子を返します。または、範囲がヒープを形成している場合は*終了*します。
 
@@ -3047,7 +3047,7 @@ RandomAccessIterator is_heap_until(
 
 2番目のテンプレート関数は、ヒープの順序付け条件として `std::less<>` ではなく述語*pred*を使用する点を除いて、1番目の関数と同じように動作します。
 
-## <a name="is_partitioned"></a>is_partitioned
+## <a name="is_partitioned"></a><a name="is_partitioned"></a>is_partitioned
 
 条件の**true**をテストする特定の範囲のすべての要素が、 **false**をテストする要素の前にある場合に**true**を返します。
 
@@ -3088,7 +3088,7 @@ bool is_partitioned(
 
 このテンプレート関数は、`[first, last)` 内のすべての要素が*pred*によってパーティション分割されている場合にのみ**true**を返します。つまり、`pred (Y)` が**false**であるすべての要素 `Y` する前に、`pred (X)` が true である `[first, last)` に `X` すべての要素が発生します。
 
-## <a name="is_permutation"></a>is_permutation
+## <a name="is_permutation"></a><a name="is_permutation"></a>is_permutation
 
 要素が同じ順序であるかどうかに関係なく、両方の範囲に同じ要素が含まれる場合に true を返します。 C++14 コードでは 2 範囲のオーバーロードを使用します。これは、2 つ目の範囲に対して 1 つの反復子のみを受け取るオーバーロードでは、2 つ目の範囲が 1 つ目の範囲より大きい場合にその差を検出できず、2 つ目の範囲が 1 つ目の範囲より小さい場合に未定義の動作が発生するためです。
 
@@ -3208,7 +3208,7 @@ int main()
 }
 ```
 
-## <a name="is_sorted"></a>is_sorted
+## <a name="is_sorted"></a><a name="is_sorted"></a>is_sorted
 
 指定された範囲の要素が並べ替えられた順序である場合に**true**を返します。
 
@@ -3258,7 +3258,7 @@ bool is_sorted(
 
 2番目のテンプレート関数は、`is_sorted_until( first, last , pred ) == last`を返します。 *Pred*述語関数は、順序の比較を実行します。
 
-## <a name="is_sorted_until"></a>is_sorted_until
+## <a name="is_sorted_until"></a><a name="is_sorted_until"></a>is_sorted_until
 
 指定した範囲から並べ替え順序で最後の要素に設定されている `ForwardIterator` を返します。
 
@@ -3314,7 +3314,7 @@ ForwardIterator is_sorted_until(
 
 2 番目のテンプレート関数は、`operator<(X, Y)` と `pred(X, Y)` を置き換える点を除いて、同じ動作をします。
 
-## <a name="iter_swap"></a>iter_swap
+## <a name="iter_swap"></a><a name="iter_swap"></a>iter_swap
 
 指定された反復子のペアで参照される 2 個の値を交換します。
 
@@ -3470,7 +3470,7 @@ vector v1 is: v1 = ( 4 1 2 3 ).
 & deque deq2 is: deq2 = ( 0 5 ).
 ```
 
-## <a name="lexicographical_compare"></a>lexicographical_compare
+## <a name="lexicographical_compare"></a><a name="lexicographical_compare"></a>lexicographical_compare
 
 2 つのシーケンスを要素ごとに比較して、2 つのうちどちらが小さいかを判断します。
 
@@ -3637,7 +3637,7 @@ Vector v1 is lexicographically_less than L1.
 Vector v1 is not lexicographically_less than v2 under twice.
 ```
 
-## <a name="lower_bound"></a>lower_bound
+## <a name="lower_bound"></a><a name="lower_bound"></a>lower_bound
 
 順序の基準が二項述語で指定できる場合に、順序付けられた範囲内で、指定した値と等価以上の値を持つ最初の要素の位置を検索します。
 
@@ -3776,7 +3776,7 @@ int main()
 }
 ```
 
-## <a name="make_heap"></a>make_heap
+## <a name="make_heap"></a><a name="make_heap"></a>make_heap
 
 指定された範囲の要素を、最初の要素が最大であるヒープに変換します。並べ替えの基準は二項述語によって指定できます。
 
@@ -3858,7 +3858,7 @@ int main() {
 }
 ```
 
-## <a name="max"></a>制限
+## <a name="max"></a><a name="max"></a>制限
 
 2 つのオブジェクトを比較し、大きい方のオブジェクトを返します。順序の基準は、二項述語によって指定できます。
 
@@ -4071,7 +4071,7 @@ Vector v4 = max (v1,v2) is ( 0 1 2 ).
 Vector v5 = max (v1,v3) is ( 0 2 4 ).
 ```
 
-## <a name="max_element"></a>max_element
+## <a name="max_element"></a><a name="max_element"></a>max_element
 
 並べ替え基準をバイナリ述語で指定できる、指定された範囲内の最大の要素の最初の出現箇所を検索します。
 
@@ -4225,7 +4225,7 @@ int main()
 }
 ```
 
-## <a name="merge"></a>マージ
+## <a name="merge"></a><a name="merge"></a>マージ
 
 2 つの並べ替えられたソース範囲のすべての要素を、単一の並べ替えられたターゲット範囲として連結します。順序の基準は二項述語によって指定できます。
 
@@ -4420,7 +4420,7 @@ int main() {
 }
 ```
 
-## <a name="min"></a>」
+## <a name="min"></a><a name="min"></a>」
 
 2 つのオブジェクトを比較し、小さい方のオブジェクトを返します。順序の基準は、二項述語によって指定できます。
 
@@ -4635,7 +4635,7 @@ Vector v4 = min ( v1,v2 ) is ( 0 1 2 ).
 Vector v5 = min ( v1,v3 ) is ( 0 1 2 ).
 ```
 
-## <a name="min_element"></a>min_element
+## <a name="min_element"></a><a name="min_element"></a>min_element
 
 指定された範囲内の最小の要素の最初の出現箇所を検索します。順序の基準は二項述語によって指定できます。
 
@@ -4799,7 +4799,7 @@ The smallest element in v1 under the mod_lesser
 binary predicate is: 0
 ```
 
-## <a name="minmax_element"></a>minmax_element
+## <a name="minmax_element"></a><a name="minmax_element"></a>minmax_element
 
 `min_element` と `max_element` によって実行される作業を 1 回の呼び出しで実行します。
 
@@ -4859,7 +4859,7 @@ pair<ForwardIterator, ForwardIterator> minmax_element(
 
 シーケンスが空でない場合、関数は最大 `3 * (last - first - 1) / 2` の比較を実行します。
 
-## <a name="minmax"></a>minmax
+## <a name="minmax"></a><a name="minmax"></a>minmax
 
 2 つの入力パラメーターを比較し、それらを昇順のペアとして返します。
 
@@ -4909,7 +4909,7 @@ constexpr pair<Type&, Type&> minmax(
 
 関数は比較を 1 回だけ実行します。
 
-## <a name="mismatch"></a>不一致
+## <a name="mismatch"></a><a name="mismatch"></a>不一致
 
 要素ごとに 2 つの範囲を比較し、最初に違いが発生する位置を特定します。
 
@@ -5114,7 +5114,7 @@ C++14: vec_1 and list_1 are a mismatch: false
 Press a key
 ```
 
-## <a name="alg_move"></a>&lt;alg&gt; 移動
+## <a name="ltalggt-move"></a><a name="alg_move"></a>&lt;alg&gt; 移動
 
 指定された範囲に関連付けられている要素を移動します。
 
@@ -5151,7 +5151,7 @@ ForwardIterator2 move(
 
 このテンプレート関数は、`[0, last - first)`範囲内の各 `N` に対して `*(dest + N) = move(*(first + N))` を1回評価します。これにより、`N` の値が最小値から厳密に増加します。 その後で `dest + N` が返されます。 `dest` し、*最初*にストレージの領域を指定する場合は、 *dest*を `[first, last)`の範囲に指定することはできません。
 
-## <a name="move_backward"></a>move_backward
+## <a name="move_backward"></a><a name="move_backward"></a>move_backward
 
 ある反復子の要素を別の反復子に移動します。 移動は、指定した範囲の最後の要素から開始され、その範囲内の先頭の要素で終了します。
 
@@ -5180,7 +5180,7 @@ BidirectionalIterator2 move_backward(
 
 `move` と `move_backward` は、移動反復子と共に `copy` と `copy_backward` を使用するのと機能的には同じです。
 
-## <a name="next_permutation"></a>next_permutation
+## <a name="next_permutation"></a><a name="next_permutation"></a>next_permutation
 
 範囲内の要素の順序を変更し、元の順序を辞書式に次に大きい順列 (存在する場合) に置き換えます。next の意味は二項述語によって指定できます。
 
@@ -5359,7 +5359,7 @@ After another next_permutation of vector v1,
 v1 =   ( -3 -2 -1 1 0 2 3 ).
 ```
 
-## <a name="nth_element"></a>nth_element
+## <a name="nth_element"></a><a name="nth_element"></a>nth_element
 
 範囲内のシーケンスの *n* 番目の要素を正しく検索し、その要素の前にあるすべての要素がその要素以下、シーケンス内でその要素に続くすべての要素がその要素以上になるようにして、要素の範囲を分割します。
 
@@ -5486,7 +5486,7 @@ int main() {
 }
 ```
 
-## <a name="none_of"></a>none_of
+## <a name="none_of"></a><a name="none_of"></a>none_of
 
 指定された範囲内の要素間に条件が存在しない場合に**true**を返します。
 
@@ -5527,7 +5527,7 @@ bool none_of(
 
 このテンプレート関数は、`[0, last - first)`範囲の一部の `N` では、述語 `pred(*(first + N))` が常に**false**である場合にのみ**true**を返します。
 
-## <a name="partial_sort"></a>partial_sort
+## <a name="partial_sort"></a><a name="partial_sort"></a>partial_sort
 
 範囲内で指定された数の、より小さい要素を、降順以外の順序、または二項述語で指定された順序の基準に従って配置します。
 
@@ -5658,7 +5658,7 @@ Partially resorted (UDgreater) vector:
 v1 = ( 11 10 9 8 7 6 5 4 0 1 2 3 )
 ```
 
-## <a name="partial_sort_copy"></a>partial_sort_copy
+## <a name="partial_sort_copy"></a><a name="partial_sort_copy"></a>partial_sort_copy
 
 ソース範囲からターゲット範囲に要素をコピーします。ソース要素は小なりまたは指定された別の二項述語によって並べ替えられます。
 
@@ -5802,7 +5802,7 @@ int main() {
 }
 ```
 
-## <a name="partition"></a>partition
+## <a name="partition"></a><a name="partition"></a>partition
 
 範囲内の要素を 2 つの分離されたセットに分類し、単項述語を満たす要素が単項述語を満たさない要素よりも前に来るように配置します。
 
@@ -5888,7 +5888,7 @@ int main()
 }
 ```
 
-## <a name="partition_copy"></a>partition_copy
+## <a name="partition_copy"></a><a name="partition_copy"></a>partition_copy
 
 条件が**true**である要素を1つの変換先にコピーし、条件を**false**にします。 要素は指定された範囲に含まれている必要があります。
 
@@ -5935,7 +5935,7 @@ pair<ForwardIterator1, ForwardIterator2> partition_copy(
 
 このテンプレート関数は、`[first,last)` 内の各要素 `X` を `*dest1++` にコピーします (`pred(X)` が true の場合)。または、それ以外の場合は `*dest2++` します。 `pair<OutputIterator1, OutputIterator2>(dest1, dest2)` を返します。
 
-## <a name="partition_point"></a>partition_point
+## <a name="partition_point"></a><a name="partition_point"></a>partition_point
 
 特定の範囲内で条件を満たさない最初の要素を返します。 要素は、条件を満たす要素が条件を満たさない要素の前に来るように並べ替えられます。
 
@@ -5966,7 +5966,7 @@ ForwardIterator partition_point(
 
 このテンプレート関数は、`pred(*it)` が**false**である `[first, last)` 内の最初の反復子 `it` を検索します。 シーケンスは、 *pred*によって順序付けされている必要があります。
 
-## <a name="pop_heap"></a>pop_heap
+## <a name="pop_heap"></a><a name="pop_heap"></a>pop_heap
 
 ヒープの先頭と範囲内の最後から 2 番目の位置との間で最大の要素を削除し、残りの要素から新しいヒープを形成します。
 
@@ -6075,7 +6075,7 @@ int main()
 }
 ```
 
-## <a name="prev_permutation"></a>prev_permutation
+## <a name="prev_permutation"></a><a name="prev_permutation"></a>prev_permutation
 
 範囲内の要素の順序を変更し、元の順序を辞書式で前の大きい順列 (存在する場合) に置き換えます。previous の意味は二項述語によって指定できます。
 
@@ -6250,7 +6250,7 @@ After another prev_permutation of vector v1,
 v1 =   ( -3 -2 0 2 -1 1 3 ).
 ```
 
-## <a name="push_heap"></a>push_heap
+## <a name="push_heap"></a><a name="push_heap"></a>push_heap
 
 範囲の末尾にある要素を、範囲内の以前の要素で構成される既存のヒープに追加します。
 
@@ -6363,11 +6363,11 @@ int main() {
 }
 ```
 
-## <a name="random_shuffle"></a>random_shuffle
+## <a name="random_shuffle"></a><a name="random_shuffle"></a>random_shuffle
 
 Std:: random_shuffle () 関数は非推奨となり、 [std:: シャッフル](../standard-library/algorithm-functions.md#shuffle)に置き換えられました。 コード例と詳細については、「 [\<random >](../standard-library/random.md) 」と「 [std:: Random_shuffle メソッドが c++ 14 で非推奨 Stack Overflow とされる理由](https://go.microsoft.com/fwlink/p/?linkid=397954)」を参照してください。
 
-## <a name="remove"></a>から
+## <a name="remove"></a><a name="remove"></a>から
 
 特定の範囲から指定された値を除去します。残りの要素の順序に影響を及ぼすことはなく、指定された値を含まない新しい範囲の末尾を返します。
 
@@ -6463,7 +6463,7 @@ int main()
 }
 ```
 
-## <a name="remove_copy"></a>remove_copy
+## <a name="remove_copy"></a><a name="remove_copy"></a>remove_copy
 
 ソース範囲からターゲット範囲に要素をコピーしますが、指定された値の要素はコピーされません。残りの要素の順序に影響を及ぼすことはなく、新しいターゲット範囲の末尾を返します。
 
@@ -6561,7 +6561,7 @@ int main()
 }
 ```
 
-## <a name="remove_copy_if"></a>remove_copy_if
+## <a name="remove_copy_if"></a><a name="remove_copy_if"></a>remove_copy_if
 
 述語を満たす要素を除き、ソース範囲からターゲット範囲に要素をコピーします。 要素は、残りの要素の順序に支障をきたすことなくコピーされます。 新しいターゲット範囲の末尾を返します。
 
@@ -6668,7 +6668,7 @@ int main()
 }
 ```
 
-## <a name="remove_if"></a>remove_if
+## <a name="remove_if"></a><a name="remove_if"></a>remove_if
 
 特定の範囲から述語を満たす要素を除去します。残りの要素の順序に影響を及ぼすことはなく、指定された値を含まない新しい範囲の末尾を返します。
 
@@ -6769,7 +6769,7 @@ int main()
 }
 ```
 
-## <a name="replace"></a>ら
+## <a name="replace"></a><a name="replace"></a>ら
 
 範囲内の各要素が指定された値に一致するかどうかを調べ、一致する場合は置き換えます。
 
@@ -6856,7 +6856,7 @@ int main()
 }
 ```
 
-## <a name="replace_copy"></a>replace_copy
+## <a name="replace_copy"></a><a name="replace_copy"></a>replace_copy
 
 ソース範囲内の各要素が指定された値に一致するかどうかを調べ、一致する場合は置き換えて結果を新しいターゲット範囲にコピーします。
 
@@ -6971,7 +6971,7 @@ int main()
 }
 ```
 
-## <a name="replace_copy_if"></a>replace_copy_if
+## <a name="replace_copy_if"></a><a name="replace_copy_if"></a>replace_copy_if
 
 ソース範囲内の各要素が指定された述語を満たすかどうかを調べ、満たす場合は置き換えて結果を新しいターゲット範囲にコピーします。
 
@@ -7094,7 +7094,7 @@ int main()
 }
 ```
 
-## <a name="replace_if"></a>replace_if
+## <a name="replace_if"></a><a name="replace_if"></a>replace_if
 
 範囲内の各要素が指定された述語を満たすかどうかを調べ、満たす場合は置き換えます。
 
@@ -7190,7 +7190,7 @@ int main()
 }
 ```
 
-## <a name="reverse"></a>後ろ向き
+## <a name="reverse"></a><a name="reverse"></a>後ろ向き
 
 範囲内の要素の順序を反転させます。
 
@@ -7265,7 +7265,7 @@ The modified vector v1 with values reversed is:
 ( 9 8 7 6 5 4 3 2 1 0 ).
 ```
 
-## <a name="reverse_copy"></a>reverse_copy
+## <a name="reverse_copy"></a><a name="reverse_copy"></a>reverse_copy
 
 ソース範囲内の要素の順序を反転し、結果をターゲット範囲にコピーします。
 
@@ -7347,7 +7347,7 @@ int main()
 }
 ```
 
-## <a name="rotate"></a>回転
+## <a name="rotate"></a><a name="rotate"></a>回転
 
 2 つの隣接する範囲の要素を交換します。
 
@@ -7461,7 +7461,7 @@ After the rotation of a single deque element to the back,
 d1 is   ( 0 1 2 3 4 5 ).
 ```
 
-## <a name="rotate_copy"></a>rotate_copy
+## <a name="rotate_copy"></a><a name="rotate_copy"></a>rotate_copy
 
 ソース範囲内の 2 つの隣接する範囲の要素を交換し、結果をターゲット範囲にコピーします。
 
@@ -7569,7 +7569,7 @@ int main()
 }
 ```
 
-## <a name="sample"></a>サンプル
+## <a name="sample"></a><a name="sample"></a>サンプル
 
 ```cpp
 template<class PopulationIterator, class SampleIterator, class Distance, class UniformRandomBitGenerator>
@@ -7581,7 +7581,7 @@ SampleIterator sample(
     UniformRandomBitGenerator&& g);
 ```
 
-## <a name="search"></a>サーチ
+## <a name="search"></a><a name="search"></a>サーチ
 
 要素が特定の要素シーケンス内の要素と等しいか、または要素が二項述語で指定される意味において特定のシーケンス内の要素と等価であるシーケンスが、対象範囲内で最初に出現する位置を検索します。
 
@@ -7759,7 +7759,7 @@ to those in v2 under the binary predicate twice
 and the first one begins at position 2.
 ```
 
-## <a name="search_n"></a>search_n
+## <a name="search_n"></a><a name="search_n"></a>search_n
 
 特定の値を持つか、二項述語によって指定される値と関連する、指定された数の要素で構成される範囲内の最初のサブシーケンスを検索します。
 
@@ -7912,7 +7912,7 @@ There is a match of a sequence ( 5 5 5 ) under the equivalence
 predicate one_half in v1 and the first one begins at position 15.
 ```
 
-## <a name="set_difference"></a>set_difference
+## <a name="set_difference"></a><a name="set_difference"></a>set_difference
 
 1 つの並べ替えられたソース範囲内に属するが、2 番目の並べ替えられたソース範囲には属さないすべての要素を単一の並べ替えられたターゲット範囲として結合します。順序の基準は二項述語によって指定できます。
 
@@ -8114,7 +8114,7 @@ int main()
 }
 ```
 
-## <a name="set_intersection"></a>set_intersection
+## <a name="set_intersection"></a><a name="set_intersection"></a>set_intersection
 
 両方の並べ替えられたソース範囲に属するすべての要素を単一の並べ替えられたターゲット範囲として結合します。順序の基準は二項述語によって指定できます。
 
@@ -8312,7 +8312,7 @@ int main()
 }
 ```
 
-## <a name="set_symmetric_difference"></a>set_symmetric_difference
+## <a name="set_symmetric_difference"></a><a name="set_symmetric_difference"></a>set_symmetric_difference
 
 並べ替えられたソース範囲の一方には属するが、両方には属さないすべての要素を単一の並べ替えられたターゲット範囲として結合します。順序の基準は二項述語によって指定できます。
 
@@ -8514,7 +8514,7 @@ int main()
 }
 ```
 
-## <a name="set_union"></a>set_union
+## <a name="set_union"></a><a name="set_union"></a>set_union
 
 2 つの並べ替えられたソース範囲の少なくとも一方に属するすべての要素を単一の並べ替えられたターゲット範囲として結合します。順序の基準は二項述語によって指定できます。
 
@@ -8716,7 +8716,7 @@ int main()
 }
 ```
 
-## <a name="shuffle"></a>シャッフル
+## <a name="shuffle"></a><a name="shuffle"></a>シャッフル
 
 乱数ジェネレーターを使用して、指定された範囲の要素をシャッフル (再配置) します。
 
@@ -8743,7 +8743,7 @@ void shuffle(
 
 `shuffle()` を使用するコード サンプルの詳細については、「[\<random>](../standard-library/random.md)」を参照してください。
 
-## <a name="sort"></a>基づく
+## <a name="sort"></a><a name="sort"></a>基づく
 
 指定された範囲の要素を、降順以外の順序、または二項述語で指定された順序の基準に従って配置します。
 
@@ -8863,7 +8863,7 @@ Resorted (greater) vector v1 = ( 11 10 9 8 7 6 5 4 3 2 1 0 )
 Resorted (UDgreater) vector v1 = ( 11 10 9 8 7 6 5 4 3 2 1 0 )
 ```
 
-## <a name="sort_heap"></a>sort_heap
+## <a name="sort_heap"></a><a name="sort_heap"></a>sort_heap
 
 ヒープを並べ替えられた範囲に変換します。
 
@@ -8963,7 +8963,7 @@ int main()
 }
 ```
 
-## <a name="stable_partition"></a>stable_partition
+## <a name="stable_partition"></a><a name="stable_partition"></a>stable_partition
 
 範囲内の要素を 2 つの分離されたセットに分類し、等価要素の相対順序は維持して、単項述語を満たす要素が単項述語を満たさない要素よりも前に来るように配置します。
 
@@ -9053,7 +9053,7 @@ int main()
 }
 ```
 
-## <a name="stable_sort"></a>stable_sort
+## <a name="stable_sort"></a><a name="stable_sort"></a>stable_sort
 
 指定された範囲の要素を、降順以外の順序、または二項述語で指定された順序の基準に従って、等価要素の相対順序を維持して配置します。
 
@@ -9172,7 +9172,7 @@ Resorted (greater) vector v1 = ( 10 10 8 8 6 6 4 4 2 2 0 0 )
 Resorted (UDgreater) vector v1 = ( 10 10 8 8 6 6 4 4 2 2 0 0 )
 ```
 
-## <a name="swap"></a>フォト
+## <a name="swap"></a><a name="swap"></a>フォト
 
 最初のオーバーライドは 2 つのオブジェクトの値を交換します。 2 番目のオーバーライドは、オブジェクトの 2 つの配列間で値を交換します。
 
@@ -9255,7 +9255,7 @@ Vector v1 is ( 5 5 5 5 5 ).
 Vector v2 is ( 0 1 2 3 4 5 6 7 8 9 10 ).
 ```
 
-## <a name="swap_ranges"></a>swap_ranges
+## <a name="swap_ranges"></a><a name="swap_ranges"></a>swap_ranges
 
 1 つの範囲の要素を、同じサイズの別の範囲の要素と交換します。
 
@@ -9359,7 +9359,7 @@ After the swap_range, vector v1 is ( 6 6 6 6 6 6 ).
 After the swap_range deque d1 is   ( 0 1 2 3 4 5 ).
 ```
 
-## <a name="transform"></a>変換
+## <a name="transform"></a><a name="transform"></a>変換
 
 指定された関数オブジェクトをソース範囲内の各要素、または 2 つのソース範囲内の要素のペアに適用し、関数オブジェクトの戻り値をターゲット範囲にコピーします。
 
@@ -9515,7 +9515,7 @@ Multiplying elements of the vectors v1mod and v2 pairwise gives:
 v3 = ( 320 180 80 20 0 20 80 ).
 ```
 
-## <a name="unique"></a>固有
+## <a name="unique"></a><a name="unique"></a>固有
 
 指定された範囲内の互いに隣接する重複要素を削除します。
 
@@ -9664,7 +9664,7 @@ Removing adjacent elements satisfying the binary
   predicate mod_equal from vector v1 gives ( 5 7 ).
 ```
 
-## <a name="unique_copy"></a>unique_copy
+## <a name="unique_copy"></a><a name="unique_copy"></a>unique_copy
 
 互いに隣接する重複要素を除き、ソース範囲の要素をターゲット範囲にコピーします。
 
@@ -9801,7 +9801,7 @@ int main() {
 }
 ```
 
-## <a name="upper_bound"></a>upper_bound
+## <a name="upper_bound"></a><a name="upper_bound"></a>upper_bound
 
 順序の基準が二項述語で指定できる場合に、順序付けられた範囲内で、指定した値を超える値を持つ最初の要素の位置を検索します。
 
