@@ -33,12 +33,12 @@ helpviewer_keywords:
 - _fpclass function
 - _fpclassf function
 ms.assetid: 2774872d-3543-446f-bc72-db85f8b95a6b
-ms.openlocfilehash: db95453a44f6a55d4bf98638351dcda4bd8377c9
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 982bd5fb33ef2e14785c775a9b79b0adc8f3a459
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857841"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170216"
 ---
 # <a name="_fpclass-_fpclassf"></a>_fpclass、_fpclassf
 
@@ -65,7 +65,7 @@ int _fpclassf(
 
 **_Fpclass**関数と **_fpclassf**関数は、引数*x*の浮動小数点分類を示す整数値を返します。 分類には、\<float.h> で定義された次のいずれかの値が含まれる場合があります。
 
-|Value|説明|
+|値|説明|
 |-----------|-----------------|
 |**_FPCLASS_SNAN**|シグナル型 NaN|
 |**_FPCLASS_QNAN**|クワイエット型 NaN|
@@ -78,13 +78,13 @@ int _fpclassf(
 |**_FPCLASS_PN**|正規化された正の 0 以外の値|
 |**_FPCLASS_PINF**|正の無限大 (+INF)|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 **_Fpclass**関数と **_fpclassf**関数は、Microsoft 固有の関数です。 [fpclassify](fpclassify.md) によく似ていますが、引数に関するより詳細な情報を返します。 **_Fpclassf**関数は、x64 プラットフォーム用にコンパイルされた場合にのみ使用できます。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|機能|必須ヘッダー|
+|Function|必須ヘッダー|
 |--------------|---------------------|
 |**_fpclass**、 **_fpclassf**|\<float.h>|
 

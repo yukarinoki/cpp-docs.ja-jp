@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - C4251
 ms.assetid: a9992038-f0c2-4fc4-a9be-4509442cbc1e
-ms.openlocfilehash: d2fff1d2f30c4ac80af6d5b9ca452fa5f30f5a15
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8a723b7ce7fc79fb6be9c9dd2b500631098622b0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62207358"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80163220"
 ---
 # <a name="compiler-warning-level-1-c4251"></a>コンパイラの警告 (レベル 1) C4251
 
-'identifier': クラス 'type' を 'type2' のクラスのクライアントで使用される dll のインターフェイスを持っている必要があります
+' identifier ': クラス ' type ' は、クラス ' ' ' のクライアントで使用される dll インターフェイスを持つ必要があります
 
-持つクラスをエクスポートするときに、データ破損の可能性を最小限に抑える[方式](../../cpp/dllexport-dllimport.md)、いることを確認します。
+[__Declspec (dllexport)](../../cpp/dllexport-dllimport.md)を使用してクラスをエクスポートする際にデータが破損する可能性を最小限に抑えるには、次の点を確認してください。
 
-- すべての静的データは、DLL からエクスポートされた関数を使用してアクセスします。
+- すべての静的データは、DLL からエクスポートされた関数を介してアクセスされます。
 
-- クラスのインライン メソッドは静的データを変更できません。
+- クラスのインラインメソッドで静的データを変更することはできません。
 
-- クラスのメソッドがインライン展開が CRT 関数を使用しないまたはその他のライブラリ関数を使用して、静的データ (を参照してください[潜在的なエラーを渡す境界を越えて CRT オブジェクト DLL](../../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md)詳細については)。
+- クラスのインラインメソッドで CRT 関数やその他のライブラリ関数を使用しない場合は、静的データを使用します (詳細については、「 [DLL の境界を越えて Crt オブジェクトを渡すと発生する可能性のあるエラー](../../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md) 」を参照)。
 
-- クラスのメソッドがありません (に関係なくインライン展開) EXE および DLL でインスタンス化の静的データの相違点のある型を使用できます。
+- (インライン展開に関係なく) クラスのメソッドは、EXE と DLL のインスタンス化に静的なデータの相違点がある型を使用できません。
 
-クラスのインスタンスを作成する仮想関数を持つクラスを定義し、機能する DLL を呼び出すことができますを定義して、型のオブジェクトを削除してエクスポートを回避できます。  仮想関数を型でだけ呼び出すことができます、します。
+仮想関数を持つクラスを定義する DLL を定義することで、クラスのエクスポートを避けることができます。また、を呼び出して、型のオブジェクトをインスタンス化および削除することもできます。  その後、型に対して仮想関数を呼び出すことができます。
 
-内の型から派生した場合に無視できる C4251、C++標準ライブラリは、コンパイル、デバッグ リリース (**/MTd**)、コンパイラのエラー メッセージは _Container_base を指します。
+C++標準ライブラリの型から派生し、デバッグリリース ( **/MTd**) をコンパイルして、コンパイラのエラーメッセージが _Container_base を参照する場合は、C4251 を無視できます。
 
 ```cpp
 // C4251.cpp

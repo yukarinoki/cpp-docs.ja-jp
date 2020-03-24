@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4958
 ms.assetid: e79b9e9c-d572-4a3a-a3b6-60962b70864a
-ms.openlocfilehash: 96b73975f391493340dd01d85ad30a8c888b44c0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 63371d91367902c1eab539cb370e55440fcbf917
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62208072"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80164886"
 ---
 # <a name="compiler-warning-c4958"></a>コンパイラの警告 C4958
 
-> '*操作*': ポインター演算は検証可能ではありません
+> '*operation*': ポインター演算は検証可能ではありません
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 ポインター演算を使用すると、検証不能なイメージが作成されます。
 
-詳細については、次を参照してください。[純粋で検証可能なコード (C +/cli CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md)します。
+詳細については、「[ピュアおよび検証C++可能なコード (/cli)](../../dotnet/pure-and-verifiable-code-cpp-cli.md)」を参照してください。
 
-**/Clr:safe**コンパイラ オプションは Visual Studio 2015 で非推奨とされ、Visual Studio 2017 でサポートされていません。
+**/Clr: safe**コンパイラオプションは visual studio 2015 で非推奨とされており、visual studio 2017 ではサポートされていません。
 
 この警告は、エラーとして表示されます。無効にするには、 [warning](../../preprocessor/warning.md) プラグマ、または [/wd](../../build/reference/compiler-option-warning-level.md) コンパイラ オプションを使用します。
 

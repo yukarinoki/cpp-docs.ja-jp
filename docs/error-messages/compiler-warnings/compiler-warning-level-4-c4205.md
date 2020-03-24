@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4205
 ms.assetid: 39b5108c-7230-41b4-b2fe-2293eb6aae28
-ms.openlocfilehash: e46642494e55769a0676f0e33af0ca40c31939ad
-ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
+ms.openlocfilehash: 7b6e273de196f6708b92774ce5b436dc810ad3a5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74541800"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80161440"
 ---
 # <a name="compiler-warning-level-4-c4205"></a>コンパイラの警告 (レベル 4) C4205
 
@@ -19,7 +19,7 @@ ms.locfileid: "74541800"
 
 Microsoft 拡張機能 (/Ze) では、**静的**関数を別の関数内で宣言できます。 関数にはグローバルスコープが指定されています。
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 ```c
 // C4205.c
