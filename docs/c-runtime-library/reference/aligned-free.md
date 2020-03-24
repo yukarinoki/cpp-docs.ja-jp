@@ -26,12 +26,12 @@ helpviewer_keywords:
 - _aligned_free function
 - aligned_free function
 ms.assetid: ed1ce952-cdfc-4682-85cc-f75d4101603d
-ms.openlocfilehash: 44556d3f044a567f4903ef14a4b2a9b353af02ff
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 0fa28be550050a7eec2a515cfb47d98fb26591d0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943971"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170970"
 ---
 # <a name="_aligned_free"></a>_aligned_free
 
@@ -50,9 +50,9 @@ void _aligned_free (
 *memblock*<br/>
 `_aligned_malloc` または `_aligned_offset_malloc` 関数に返されたメモリ ブロックへのポインター。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**_aligned_free**はと`__declspec(noalias)`マークされています。つまり、関数はグローバル変数を変更しないことが保証されます。 詳細については、「[noalias](../../cpp/noalias.md)」を参照してください。
+**_aligned_free**は `__declspec(noalias)`としてマークされています。つまり、関数はグローバル変数を変更しないことが保証されています。 詳細については、「[noalias](../../cpp/noalias.md)」を参照してください。
 
 この関数は、他の _aligned CRT 関数とは異なり、パラメーターを検証しません。 *Memblock*が NULL ポインターの場合、この関数は単にアクションを実行しません。 この関数は `errno` を変更せず、無効なパラメーター ハンドラーを呼び出しません。 以前にメモリのブロックを割り当てるために _aligned 関数を使用しなかったために関数でエラーが発生する場合、または何らかの予期しない災害によってメモリの不整合が発生する場合、関数は [_RPT、_RPTF、_RPTW、_RPTFW のマクロ](rpt-rptf-rptw-rptfw-macros.md)からデバッグ レポートを生成します。
 
@@ -66,6 +66,6 @@ void _aligned_free (
 
 詳細については、「[_aligned_malloc](aligned-malloc.md)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [データの整列](../../c-runtime-library/data-alignment.md)

@@ -1,22 +1,22 @@
 ---
-title: コンパイラ エラー C2095
+title: コンパイラエラー C2095
 ms.date: 11/04/2016
 f1_keywords:
 - C2095
 helpviewer_keywords:
 - C2095
 ms.assetid: 44f8ada1-974f-4e81-a408-33ac6695aa53
-ms.openlocfilehash: 192e6b4de596ddffb39ba20f60217904cd335c9f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 327f4406be241f3aff89fd357fc103398401ea8f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62377034"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80207663"
 ---
-# <a name="compiler-error-c2095"></a>コンパイラ エラー C2095
+# <a name="compiler-error-c2095"></a>コンパイラエラー C2095
 
-'function': 実際のパラメーターが型 'void': パラメーター 'number'
+' function ': 実引数の型は ' void ' ですが、パラメーター ' number ' が指定されています。
 
-関数に渡されるパラメーターの型が`void`、これは許可されません。 Void へのポインターを使用して ( `void *`) 代わりにします。
+関数に渡されたパラメーターが `void`型ですが、これは許可されていません。 代わりに、void (`void *`) へのポインターを使用してください。
 
-`number`パラメーターを示します`void`します。
+`number` は、どのパラメーターが `void`かを示します。

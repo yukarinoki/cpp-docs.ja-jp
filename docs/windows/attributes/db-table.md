@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - db_table attribute
 ms.assetid: ff9eb957-4e6d-4175-afcc-fd8ea916cec0
-ms.openlocfilehash: 3ab548261d6ebcb9d3d7f7e352c8afe3b33db06f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2b3be55a4ea118ef3441d3ea93f63e19ebdb3d79
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148121"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167252"
 ---
-# <a name="dbtable"></a>db_table
+# <a name="db_table"></a>db_table
 
-OLE DB、テーブルを開きます。
+OLE DB テーブルを開きます。
 
 ## <a name="syntax"></a>構文
 
@@ -23,29 +23,29 @@ OLE DB、テーブルを開きます。
 [ db_table(db_table, name, source_name, hresult) ]
 ```
 
-#### <a name="parameters"></a>パラメーター
+### <a name="parameters"></a>パラメーター
 
 *db_table*<br/>
-("Products") などのデータベース テーブルの名前を指定する文字列。
+データベーステーブルの名前を指定する文字列 ("Products" など)。
 
 *name*<br/>
-(省略可能)テーブルを操作に使用するためのハンドルの名前。 結果の 1 つ以上の行を取得する場合は、このパラメーターを指定する必要があります。 **db_table** 、指定した変数が生成されます*名前*行セットの走査または複数のアクション クエリを実行できます。
+Optionalテーブルを操作するために使用するハンドルの名前。 複数の結果行を返す場合は、このパラメーターを指定する必要があります。 **db_table**は、指定された*名前*を持つ変数を生成します。この変数は、行セットを走査したり、複数のアクションクエリを実行したりするために使用できます。
 
 *source_name*<br/>
-(省略可能)`CSession`変数またはを持つクラスのインスタンス、`db_source`コマンドが実行されることに適用される属性。 「 [db_source](db-source.md)」をご覧ください。
+Optionalコマンドが実行される `db_source` 属性が適用されているクラスの `CSession` 変数またはインスタンス。 「 [db_source](db-source.md)」をご覧ください。
 
 *hresult*<br/>
-(省略可能)このデータベース コマンドの HRESULT を受け取る変数を識別します。 変数が存在しない場合は、属性によって自動的に挿入されます。
+Optionalこのデータベースコマンドの HRESULT を受け取る変数を指定します。 変数が存在しない場合は、属性によって自動的に挿入されます。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**db_table**作成、 [CTable](../../data/oledb/ctable-class.md)オブジェクト、テーブルを開く、OLE DB コンシューマーによって使用されます。 この属性をクラス レベルでのみ使用できます。インラインを使用することはできません。 使用して、`db_column`テーブルの列を変数にバインドするを使用して、`db_param`を区切るために (パラメーターの型などで設定) のパラメーター。
+**db_table**は、テーブルを開くために OLE DB コンシューマーによって使用される[CTable](../../data/oledb/ctable-class.md)オブジェクトを作成します。 この属性はクラスレベルでのみ使用できます。インラインで使用することはできません。 `db_column` を使用して、テーブル列を変数にバインドします。パラメーターの区切り (パラメーターの型の設定など) を行うには、`db_param` を使用します。
 
-コンパイラにクラスの名前は、コンシューマー属性プロバイダーでは、この属性をクラスに適用されます、ときに\_ *YourClassName*、アクセサーで*YourClassName*に付けた名前を指定します、クラス、さらに、コンパイラはというクラスを作成も*YourClassName*から派生した\_ *YourClassName*アクセサー。  クラス ビューでは、両方のクラスが表示されます。
+コンシューマー属性プロバイダーがこの属性をクラスに適用すると、コンパイラはクラスの名前を*classname*アクセサーに \_します。ここで、 *classname*はクラスに指定した名前になります。また、コンパイラは classname というクラスも作成します。これ*は、\_* *classname*アクセサーから派生します。  クラス ビューでは、両方のクラスが表示されます。
 
 ## <a name="example"></a>例
 
-次の例で使用するため、Products テーブルを開きます`CProducts`します。
+次の例では、`CProducts`で使用する Products テーブルを開きます。
 
 ```cpp
 // db_table.cpp
@@ -60,7 +60,7 @@ class CProducts {
 };
 ```
 
-アプリケーションで使用されるこの属性の例では、サンプルを参照してください。 [AtlAgent](https://github.com/Microsoft/VCSamples)と[MultiRead](https://github.com/Microsoft/VCSamples)します。
+アプリケーションで使用されるこの属性の例については、「 [MultiRead](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
@@ -75,6 +75,6 @@ class CProducts {
 
 属性コンテキストの詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [OLE DB コンシューマー属性](ole-db-consumer-attributes.md)

@@ -5,20 +5,20 @@ helpviewer_keywords:
 - OLE DB providers, multithreaded
 - threading [C++], providers
 ms.assetid: a91270dc-cdf9-4855-88e7-88a54be7cbe8
-ms.openlocfilehash: a2afb7354dd0447375ee6205b7c5d9a4755aa4b8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 50e05b70a782dd343031443540790697e980c994
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404495"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209548"
 ---
 # <a name="supporting-free-threading-in-your-provider"></a>プロバイダーでのフリー スレッドのサポート
 
-OLE DB プロバイダーのすべてのクラスは、スレッド セーフであると、レジストリ エントリを適宜設定されます。 高レベルのマルチ ユーザー環境でのパフォーマンスを確保するためのフリー スレッドをサポートすることをお勧めします。 スレッド セーフである、プロバイダーに保つためには、コードが正常にブロックされていることを確認する必要があります。 書き込みまたはデータを格納するたびに、クリティカル セクションを使用してアクセスをブロックする必要があります。
+OLE DB プロバイダークラスはすべてスレッドセーフであり、それに応じてレジストリエントリが設定されます。 マルチユーザーの状況で高レベルのパフォーマンスを実現するために、無料のスレッド処理をサポートすることをお勧めします。 プロバイダーをスレッドセーフに保つために、コードが適切にブロックされていることを確認する必要があります。 データを書き込んだり格納したりするたびに、重要なセクションでアクセスをブロックする必要があります。
 
-各 OLE DB プロバイダー テンプレート オブジェクトには、独自の重要なセクションがあります。 作成する新しい各クラスが親クラスのテンプレート クラスをするブロッキングを簡単にするために、引数として名前。
+各 OLE DB プロバイダーテンプレートオブジェクトには、独自のクリティカルセクションがあります。 ブロックを簡単にするために、作成する各新しいクラスは、親クラス名を引数として受け取るテンプレートクラスである必要があります。
 
-次の例では、コードをブロックする方法を示します。
+次の例は、コードをブロックする方法を示しています。
 
 ```cpp
 template <class T>
@@ -37,10 +37,10 @@ HRESULT MyObject::MyMethod(void)
 }
 ```
 
-クリティカル セクションを保護する方法の詳細についての`Lock`と`Unlock`を参照してください[マルチ スレッド。同期クラスの使用方法](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)します。
+`Lock` と `Unlock`で重要なセクションを保護する方法の詳細については、「[マルチスレッド: 同期クラスの使用方法](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)」を参照してください。
 
-オーバーライドするメソッドを確認します (など`Execute`) スレッド セーフです。
+オーバーライドするメソッド (`Execute`など) がスレッドセーフであることを確認します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [OLE DB プロバイダー テンプレートの操作](../../data/oledb/working-with-ole-db-provider-templates.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - in attribute
 ms.assetid: 7b450cc4-4d2e-4910-a195-7487c6b7c373
-ms.openlocfilehash: e97008d0399764beeca73dbbc5914e4b891df748
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: f25f15148621d7092858577825dbdd6caa1ae0be
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514592"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166797"
 ---
 # <a name="in-c"></a>in (C++)
 
@@ -23,7 +23,7 @@ ms.locfileid: "69514592"
 [in]
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 **In** C++属性には[、MIDL 属性のと](/windows/win32/Midl/in)同じ機能があります。
 
@@ -44,11 +44,11 @@ ms.locfileid: "69514592"
 
 属性コンテキストの詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [IDL 属性](idl-attributes.md)<br/>
 [パラメーター属性](parameter-attributes.md)<br/>
 [メソッド属性](method-attributes.md)<br/>
 [defaultvalue](defaultvalue.md)<br/>
-[ID](id.md)<br/>
+[id](id.md)<br/>
 [out](out-cpp.md)

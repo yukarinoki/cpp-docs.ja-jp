@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - nonbrowsable attribute
 ms.assetid: e71a98e7-4b65-454a-9829-342b9f2a84be
-ms.openlocfilehash: 8b1849aa75e61ea5e369a277cab0b1327f48a28a
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: f0aae070c1c97695180797b228178b210493b7bb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514384"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166563"
 ---
 # <a name="nonbrowsable"></a>nonbrowsable
 
@@ -23,7 +23,7 @@ ms.locfileid: "69514384"
 [nonbrowsable]
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 **非ブラウズ** C++属性には、[非](/windows/win32/Midl/nonbrowsable)参照可能な MIDL 属性と同じ機能があります。
 
@@ -56,7 +56,7 @@ __interface IMyI
 
 属性コンテキストの詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [IDL 属性](idl-attributes.md)<br/>
 [メソッド属性](method-attributes.md)

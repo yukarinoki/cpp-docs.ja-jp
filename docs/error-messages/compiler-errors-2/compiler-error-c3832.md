@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C3832
 ms.assetid: 9a41df82-42e1-4908-958c-76cff9235de0
-ms.openlocfilehash: c21c495f70b9e6f5619b6b46fe1a6ce826de9d95
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4cee6993a108a5dc006476b31042e615b8d4aa81
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390569"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165579"
 ---
 # <a name="compiler-error-c3832"></a>コンパイラ エラー C3832
 
-'type library': タイプ ライブラリが 32 ビット ポインター用にビルドされたかのようになります可能性があります' 修飾子を変更してください。
+' type library ': タイプライブラリは、32ビットポインター用にビルドされたかのように見えます。' ptrsize ' 修飾子を変更してください
 
-明示的な情報が付属、`ptrsize`の属性、 [#import](../../preprocessor/hash-import-directive-cpp.md)ディレクティブが、コンパイラがタイプ ライブラリで検出とは一致しません。
+[#Import](../../preprocessor/hash-import-directive-cpp.md)ディレクティブの `ptrsize` 属性で指定された明示的な情報が、タイプライブラリのコンパイラの内容と一致しませんでした。

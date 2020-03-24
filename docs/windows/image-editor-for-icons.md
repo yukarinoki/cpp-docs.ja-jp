@@ -39,12 +39,12 @@ helpviewer_keywords:
 - Image editor [C++], grid settings
 - grid settings, Image editor
 ms.assetid: 586d2b8b-0348-4883-a85d-1ff0ddbf14dd
-ms.openlocfilehash: 9c1c09f8ffe0ef8d4759b9242ba30e8fafaaeb01
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 47798b5d628484482dffdc963d6e8c7a809f42ee
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443767"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168017"
 ---
 # <a name="image-editor-for-icons-c"></a>アイコン用イメージエディター (C++)
 
@@ -68,7 +68,7 @@ ms.locfileid: "79443767"
 
 [**イメージ] メニューは**、**イメージエディター**がアクティブなときにのみ表示されます。イメージを編集したり、カラーパレットを管理したり、**イメージエディター**ウィンドウのオプションを設定したりするためのコマンドが用意されています。 また、デバイスイメージを使用するためのコマンドは、アイコンとカーソルを操作するときに使用できます。
 
-|コマンド|説明|
+|command|説明|
 |---|---|
 |**色の反転**|色を反転します。|
 |**[左右反転]**|イメージまたは選択領域の上下を反転させます。|
@@ -210,7 +210,7 @@ Windows アプリケーションのアイコンにテキストを追加し、テ
 
 1. グリッドを表示するには、 **[ピクセルグリッド]** チェックボックスをオンにします。グリッドを非表示にするには、このチェックボックスをオフにします。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 なし
 

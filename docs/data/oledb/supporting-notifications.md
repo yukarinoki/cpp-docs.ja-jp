@@ -9,24 +9,24 @@ helpviewer_keywords:
 - OLE DB provider templates, notifications
 - OLE DB providers, notifications
 ms.assetid: 76e875fd-2bfd-4e4e-9f43-dbe5a3fa7382
-ms.openlocfilehash: 52c4313de5017b97a193be1afebc020c9896fe6a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d29f84a0a5b33d55c0a04a4c758050cf9746f72a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62379091"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209553"
 ---
 # <a name="supporting-notifications"></a>通知のサポート
 
-## <a name="implementing-connection-point-interfaces-on-the-provider-and-consumer"></a>プロバイダーとコンシューマー接続ポイントのインターフェイスを実装します。
+## <a name="implementing-connection-point-interfaces-on-the-provider-and-consumer"></a>プロバイダーとコンシューマーでの接続ポイントインターフェイスの実装
 
-通知を実装するにはプロバイダー クラスから継承する必要があります[IRowsetNotifyCP](../../data/oledb/irowsetnotifycp-class.md)と[IConnectionPointContainer](../../atl/reference/iconnectionpointcontainerimpl-class.md)します。
+通知を実装するには、プロバイダークラスが[IRowsetNotifyCP](../../data/oledb/irowsetnotifycp-class.md)および[IConnectionPointContainer](../../atl/reference/iconnectionpointcontainerimpl-class.md)から継承する必要があります。
 
-`IRowsetNotifyCP` プロバイダーは、サイト接続ポイントのインターフェイスを実装する[IRowsetNotify](/previous-versions/windows/desktop/ms712959(v=vs.85))します。 `IRowsetNotifyCP` 実装は、接続ポイント上のリスナーに通知する関数をブロードキャスト`IID_IRowsetNotify`の行セットの内容の変更。
+`IRowsetNotifyCP` は、接続ポイントインターフェイス[IRowsetNotify](/previous-versions/windows/desktop/ms712959(v=vs.85))のプロバイダーサイトを実装します。 `IRowsetNotifyCP` は、行セットの内容に対する変更 `IID_IRowsetNotify` 接続ポイントでリスナーをアドバイズするように、ブロードキャスト関数を実装します。
 
-実装し、登録する必要がありますも`IRowsetNotify`(シンクとも呼ばれます) を使用して、コンシューマーで[IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md)コンシューマーが通知を処理できるようにします。 コンシューマーのコネクション ポイントのインターフェイスを実装する方法の詳細については、次を参照してください。[通知の受信](../../data/oledb/receiving-notifications.md)します。
+また、 [IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md)を使用してコンシューマー (シンクとも呼ばれます) に `IRowsetNotify` を実装して登録し、コンシューマーが通知を処理できるようにする必要があります。 コンシューマーに接続ポイントインターフェイスを実装する方法の詳細については、「[通知の受信](../../data/oledb/receiving-notifications.md)」を参照してください。
 
-また、クラスには、次のように、接続ポイント エントリを定義するマップが必要です。
+また、次のように、クラスには接続ポイントのエントリを定義するマップが必要です。
 
 ```cpp
 BEGIN_CONNECTION_POINT_MAP
@@ -34,14 +34,14 @@ BEGIN_CONNECTION_POINT_MAP
 END_CONNECTION_POINT_MAP
 ```
 
-## <a name="adding-irowsetnotify"></a>IRowsetNotify を追加します。
+## <a name="adding-irowsetnotify"></a>IRowsetNotify の追加
 
-追加する`IRowsetNotify`、追加する必要がある`IConnectionPointContainerImpl<rowset-name>`と`IRowsetNotifyCP<rowset-name>`継承チェーンをします。
+`IRowsetNotify`を追加するには、継承チェーンに `IConnectionPointContainerImpl<rowset-name>` と `IRowsetNotifyCP<rowset-name>` を追加する必要があります。
 
-たとえばの継承チェーンをここでは`RUpdateRowset`で[UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV):
+たとえば、 [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)の `RUpdateRowset` の継承チェーンは次のようになります。
 
 > [!NOTE]
-> サンプル コードはここでは記載されているものと異なる場合があります。サンプル コードは、最新のバージョンと見なす必要があります。
+> サンプル コードは、ここに記載されているものと異なる場合があります。サンプル コードの方を最新バージョンと見なしてください。
 
 ```cpp
 ///////////////////////////////////////////////////////////////////////////
@@ -56,20 +56,20 @@ public CRowsetImpl< RUpdateRowset, CAgentMan, CUpdateCommand,
       public IRowsetNotifyCP<RUpdateRowset>
 ```
 
-### <a name="setting-com-map-entries"></a>COM マップ エントリの設定
+### <a name="setting-com-map-entries"></a>COM マップエントリの設定
 
-また、行セット内の COM マップに、次を追加する必要があります。
+また、行セットの COM マップに次のコードを追加する必要があります。
 
 ```cpp
 COM_INTERFACE_ENTRY(IConnectionPointContainer)
 COM_INTERFACE_ENTRY_IMPL(IConnectionPointContainer)
 ```
 
-これらのマクロ呼び出しは許可`QueryInterface`接続ポイント コンテナー (の基礎`IRowsetNotify`) プロバイダーに要求されたインターフェイスが見つかりません。 接続ポイントを使用する方法の例は、ATL の多角形のサンプルとチュートリアルを参照してください。
+これらのマクロを使用すると、接続ポイントコンテナー (`IRowsetNotify`の基礎) に対して `QueryInterface` を呼び出すと、要求されたインターフェイスをプロバイダーで見つけることができます。 接続ポイントの使用方法の例については、「ATL POLYGON のサンプルとチュートリアル」を参照してください。
 
-### <a name="setting-connection-point-map-entries"></a>コネクション ポイントのマップのエントリの設定
+### <a name="setting-connection-point-map-entries"></a>接続ポイントマップエントリの設定
 
-コネクション ポイントのマップを追加する必要があります。 ようになります。
+また、接続ポイントマップを追加する必要もあります。 次のようになります。
 
 ```cpp
 BEGIN_CONNECTION_POINT_MAP(rowset-name)
@@ -77,30 +77,30 @@ BEGIN_CONNECTION_POINT_MAP(rowset-name)
 END_CONNECTION_POINT_MAP()
 ```
 
-このコネクション ポイントのマップを使用すると、探しているコンポーネント、`IRowsetNotify`インターフェイスをプロバイダーで検索します。
+この接続ポイントマップを使用すると、コンポーネントが `IRowsetNotify` インターフェイスを探してプロバイダーで検索できるようになります。
 
 ### <a name="setting-properties"></a>プロパティの設定
 
-また、プロバイダーに、次のプロパティを追加する必要があります。 のみをサポートするインターフェイスに基づくプロパティを追加する必要があります。
+また、次のプロパティをプロバイダーに追加する必要があります。 必要なのは、サポートするインターフェイスに基づいてプロパティを追加することだけです。
 
-|プロパティ|サポートします。|
+|プロパティ|サポートする場合は追加|
 |--------------|------------------------|
-|DBPROP_IConnectionPointContainer|Always|
-|DBPROP_NOTIFICATIONGRANULARITY|Always|
-|DBPROP_NOTIFICATIONPHASES|Always|
+|DBPROP_IConnectionPointContainer|Always (常に)|
+|DBPROP_NOTIFICATIONGRANULARITY|Always (常に)|
+|DBPROP_NOTIFICATIONPHASES|Always (常に)|
 |DBPROP_NOTIFYCOLUMNSET|`IRowsetChange`|
 |DBPROP_NOTIFYROWDELETE|`IRowsetChange`|
 |DBPROP_NOTIFYROWINSERT|`IRowsetChange`|
-|DBPROP_NOTIFYROWSETFETCHPOSITIONCHANGE|Always|
+|DBPROP_NOTIFYROWSETFETCHPOSITIONCHANGE|Always (常に)|
 |DBPROP_NOTIFYROWFIRSTCHANGE|`IRowsetUpdate`|
-|DBPROP_NOTIFYROWSETRELEASE|Always|
+|DBPROP_NOTIFYROWSETRELEASE|Always (常に)|
 |DBPROP_NOTIFYROWUNDOCHANGE|`IRowsetUpdate`|
 |DBPROP_NOTIFYROWUNDODELETE|`IRowsetUpdate`|
 |DBPROP_NOTIFYROWUNDOINSERT|`IRowsetUpdate`|
 |DBPROP_NOTIFYROWUPDATE|`IRowsetUpdate`|
 
-OLE DB プロバイダー テンプレートでは、通知の実装のほとんどが埋め込まれています。 追加しない場合`IRowsetNotifyCP`継承チェーンをコンパイラはそのため、コードのサイズを小さくすること、コンパイルのストリームからのコードをすべてを削除します。
+通知の実装の大部分は、既に OLE DB プロバイダーテンプレートに埋め込まれています。 継承チェーンに `IRowsetNotifyCP` を追加しない場合、コンパイラはコンパイルストリームからすべてのコードを削除するため、コードサイズが小さくなります。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [高度なプロバイダー手法](../../data/oledb/advanced-provider-techniques.md)

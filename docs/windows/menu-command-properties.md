@@ -17,18 +17,18 @@ helpviewer_keywords:
 - mnemonics [C++], uniqueness checking
 - Check Mnemonics command
 ms.assetid: 6d308205-3c9e-42f2-ab42-45e656940e45
-ms.openlocfilehash: 972478923a7c4c60d8ff949c5532b00a1de1efc0
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 33b1260d088008a94d935f7e4fd7c18b0dd249e3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80075504"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167941"
 ---
 # <a name="menu-commands-c"></a>メニューコマンド (C++)
 
 以下の情報は、メニューコマンドを選択したときに [[プロパティ] ウィンドウ](/visualstudio/ide/reference/properties-window)に表示される**メニュー**プロパティに従って整理されています。 これらはアルファベット順に表示されますが、 **[プロパティ]** ウィンドウでは、これらのプロパティをカテゴリ別に表示することもできます。
 
-|プロパティ|Description|
+|プロパティ|説明|
 |--------------|-----------------|
 |**Break**|次のいずれかの値を指定します。<br/>  - **なし**: 中断なし。 これは既定値です。<br/>  -  **[列]** : 静的なメニューの場合は、この値を選択するとメニュー コマンドが新しい行に置かれます。<br/>      ショートカット メニューの場合は、この値を選択すると、列の区切りがない新しい列にメニュー コマンドが置かれます。<br/>      このプロパティを設定した場合に影響を受けるのは、メニュー エディター内のメニューの外観ではなく、実行時のメニューの外観だけです。<br />   - **バー**: **[列]** と同じですが、ポップアップメニューでは、この値により、新しい列が古い列から縦線で区切られます。<br/>      このプロパティの設定は、メニュー**エディター**ではなく、実行時のメニューの外観にのみ影響します。|
 |**Caption**|メニュー コマンドのラベルとなるテキスト (メニュー名)。 メニュー コマンドのキャプションのうちの 1 文字をニーモニック キーにするには、その文字の前にアンパサンド (&) を付けます。|

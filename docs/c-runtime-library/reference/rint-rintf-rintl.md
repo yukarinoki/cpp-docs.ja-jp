@@ -30,12 +30,12 @@ helpviewer_keywords:
 - rint function
 - rintl function
 ms.assetid: 312ae3e6-278c-459a-9393-11b8f87d9184
-ms.openlocfilehash: 57c4dc60d6b4d29e5c46fa6f1d03d0710ed44309
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ac9db3ee5a50bb334754a8a1191638a319829b97
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949264"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170892"
 ---
 # <a name="rint-rintf-rintl"></a>rint、rintf、rintl
 
@@ -65,16 +65,16 @@ long double rint( long double x );  // C++ only
 
 |入力|SEH 例外|**_matherr**例外的|
 |-----------|-------------------|--------------------------|
-|± ∞、QNAN、IND|none|none|
-|非正規化数|EXCEPTION_FLT_UNDERFLOW|none|
+|± ∞、QNAN、IND|なし|なし|
+|非正規化数|EXCEPTION_FLT_UNDERFLOW|なし|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 でC++はオーバーロードが可能であるため、 **float 型**および**long** **double**型の値を受け取って返す**rint**のオーバーロードを呼び出すことができます。 C プログラムでは、 **rint**は常に**double**を受け取り、返します。
 
 ## <a name="requirements"></a>必要条件
 
-|関数|C ヘッダー|C++ ヘッダー|
+|Function|C ヘッダー|C++ ヘッダー|
 |--------------|--------------|------------------|
 |**rint**、 **rintf**、 **rintl**|\<math.h>|\<cmath>|
 
@@ -116,7 +116,7 @@ rintl(2.500000) is 3
 rintl(-2.500000) is -3
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [浮動小数点サポート](../../c-runtime-library/floating-point-support.md)<br/>
 [ceil、ceilf、ceill](ceil-ceilf-ceill.md)<br/>

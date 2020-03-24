@@ -5,12 +5,12 @@ helpviewer_keywords:
 - accelerator keys
 - Image editor [C++], accelerator keys
 ms.assetid: add37861-3e17-4a6f-89e8-46df12e74a90
-ms.openlocfilehash: 35aeeb7e644849d215cd4782a1d06576449746ef
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 867c7d2c217b5efb832654a7863e834a4351c126
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447205"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167577"
 ---
 # <a name="accelerator-keys-c-image-editor-for-icons"></a>アクセラレータキー (C++アイコン用イメージエディター)
 
@@ -19,7 +19,7 @@ ms.locfileid: "79447205"
 > [!NOTE]
 > 使用している設定またはエディションによっては、ダイアログ ボックスで使用可能なオプションや、メニュー コマンドの名前や位置がヘルプに記載されている内容と異なる場合があります。 設定を変更するには、メニュー **[ツール]**  >  **[設定のインポートとエクスポート]** を使用します。 詳細については、「[Visual Studio IDE のカスタマイズ](/visualstudio/ide/personalizing-the-visual-studio-ide)」を参照してください。
 
-|コマンド|[キー]|説明|
+|command|[キー]|説明|
 |-------------|----------|-----------------|
 |AirBrushTool|**Ctrl** + **A**|選択したサイズと色でエアブラシを使用して描画します。|
 |Image.BrushTool|**Ctrl** + **B**|選択された図形、サイズ、および色でブラシを使用して描画します。|
@@ -59,7 +59,7 @@ ms.locfileid: "79447205"
 |Image.ZoomIn|**Ctrl** + **Shift** + **を押します。** (ピリオド) に変更します<br /><br /> - または -<br /><br /> **Ctrl** + **上方向**キー|現在のビューの拡大率を上げます。|
 |Image.ZoomOut|**Ctrl** +  **、** (コンマ)<br /><br /> - または -<br /><br /> **Ctrl** + **↓**|現在のビューの拡大率を下げます。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 なし
 

@@ -7,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - Release method [C++]
 ms.assetid: db448b34-0efa-4f02-b701-ad1ca3ae6ca5
-ms.openlocfilehash: cf4cea35386d1f781d6d2946c1730ba2e18dacea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f455e855e782a939e79898ee46e445f65d25d37a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399227"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170593"
 ---
-# <a name="comptrtrelease"></a>_com_ptr_t::Release
+# <a name="_com_ptr_trelease"></a>_com_ptr_t::Release
 
 **Microsoft 固有の仕様**
 
-呼び出し、**リリース**のメンバー関数`IUnknown`カプセル化されたインターフェイス ポインター。
+カプセル化されたインターフェイスポインターで `IUnknown` の**リリース**メンバー関数を呼び出します。
 
 ## <a name="syntax"></a>構文
 
@@ -26,12 +26,12 @@ ms.locfileid: "62399227"
 void Release( );
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-呼び出し`IUnknown::Release`、カプセル化されたインターフェイス ポインターで発生させる、`E_POINTER`このインターフェイス ポインターが NULL の場合のエラー。
+は、カプセル化されたインターフェイスポインターに対して `IUnknown::Release` を呼び出し、このインターフェイスポインターが NULL の場合、`E_POINTER` エラーを発生させます。
 
 **Microsoft 固有の仕様はここまで**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [_com_ptr_t クラス](../cpp/com-ptr-t-class.md)

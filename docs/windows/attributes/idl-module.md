@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - idl_module attribute
 ms.assetid: 3578b337-e38a-4334-b747-15404c02dbc0
-ms.openlocfilehash: 8838a833552ae7066dbcf17b4f676d6626c069f8
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 6dd0a34d5d957838613bde2c9e05d5ef26a1f678
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514676"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168045"
 ---
 # <a name="idl_module"></a>idl_module
 
@@ -53,7 +53,7 @@ Optionalライブラリのメンバーは、任意に呼び出すことはでき
 *関数の宣言*<br/>
 定義する関数。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 **Idl_module** C++属性を使用すると、.dll ファイルのエントリポイントを指定できます。これにより、.dll ファイルからインポートできます。
 
@@ -61,7 +61,7 @@ Optionalライブラリのメンバーは、任意に呼び出すことはでき
 
 .Dll ファイルからエクスポートできる COM オブジェクトから任意のものをエクスポートするには、.idl ファイルのライブラリブロックに DLL エントリポイントを配置します。
 
-では、2つの手順で**idl_module**を使用する必要があります。 まず、名前と DLL のペアを定義する必要があります。 次に、 **idl_module**を使用してエントリポイントを指定するときに、名前と追加の属性を指定します。
+では、2つの手順で**idl_module**を使用する必要があります。 まず、名前と DLL のペアを定義する必要があります。 次に、 **idl_module**を使用してエントリポイントを指定するときに、名前とその他の属性を指定します。
 
 ## <a name="example"></a>例
 
@@ -89,7 +89,7 @@ void FuncName(int i);
 
 詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [IDL 属性](idl-attributes.md)<br/>
 [スタンドアロン属性](stand-alone-attributes.md)<br/>

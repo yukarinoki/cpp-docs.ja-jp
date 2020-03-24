@@ -1,17 +1,17 @@
 ---
-title: ドキュメント コメント (C++ のドキュメントのコメント) 用の推奨タグ
+title: ドキュメントコメント用の推奨タグC++ (ドキュメントコメント)
 ms.date: 11/04/2016
 ms.assetid: 6548e798-5235-4a38-9482-bdc7b88f40a9
-ms.openlocfilehash: 2a6a2c3983c10579a6cd96b69be81aa7df8b8ee7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4e0937b79012f65ba136e18ac81f014be23688f8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62319149"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168864"
 ---
 # <a name="recommended-tags-for-documentation-comments"></a>ドキュメント コメントとして推奨されるタグ
 
-MSVC コンパイラがコードのドキュメントのコメントを処理し、各のコンパイル単位の .xdc ファイルを作成し、xdcmake.exe は .xml ファイルに .xdc ファイルを処理します。 .xml ファイルを加工してドキュメントを作成することは、自分のサイトで実行する必要がある項目です。
+MSVC コンパイラは、コード内のドキュメントコメントを処理し、コンパイル単位ごとに .xdc ファイルを作成します。 xdcmake は、.xdc ファイルを .xml ファイルに処理します。 .xml ファイルを加工してドキュメントを作成することは、自分のサイトで実行する必要がある項目です。
 
 型や型メンバーなどのコンストラクトでタグが処理されます。
 
@@ -33,8 +33,8 @@ MSVC コンパイラがコードのドキュメントのコメントを処理し
 
 1. コンパイラによって構文が検証されます。
 
-現在のリリースでは、MSVC コンパイラがサポートされていません`<paramref>`、他の Visual Studio コンパイラでサポートされているタグ。 Visual C++ では、将来のリリースで `<paramref>` がサポートされる可能性があります。
+現在のリリースでは、MSVC コンパイラは、他の Visual Studio コンパイラでサポートされているタグ `<paramref>`をサポートしていません。 Visual C++ では、将来のリリースで `<paramref>` がサポートされる可能性があります。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [XML に関するドキュメント](xml-documentation-visual-cpp.md)

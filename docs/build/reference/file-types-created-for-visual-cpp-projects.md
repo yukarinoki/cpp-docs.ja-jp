@@ -14,12 +14,12 @@ helpviewer_keywords:
 - .def files
 - licensing ActiveX controls
 ms.assetid: 2b0ee2e0-ae81-4185-9bb9-11da3c99a283
-ms.openlocfilehash: 078c83a9c95c1b143af2037240d5cc0a16211827
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 27e15f8dec693c6b7e70f3e03f274dcbc4f04677
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69492878"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169020"
 ---
 # <a name="file-types-created-for-visual-studio-c-projects"></a>Visual Studio C++プロジェクト用に作成されたファイルの種類
 
@@ -47,21 +47,21 @@ Visual Studio プロジェクトを作成する場合は、新しいソリュー
 
 次の表は、Visual Studio プロジェクトの共通ファイルを示しています。ファイル拡張子で識別されます。
 
-|ファイル拡張子|種類|目次|
+|[ファイル拡張子]|種類|内容|
 |--------------------|----------|--------------|
-|.asmx|ソース|配置ファイル。|
-|.asp|Source|ASP (Active Server Page) ファイル。|
-|.atp|プロジェクト|アプリケーション テンプレート プロジェクト ファイル。|
+|.asmx|source|配置ファイル。|
+|.asp|source|ASP (Active Server Page) ファイル。|
+|.atp|Project|アプリケーション テンプレート プロジェクト ファイル。|
 |.bmp、.dib、.gif、.jpg、.jpe、.png|リソース|一般的なイメージ ファイル。|
 |.bsc|コンパイル|ブラウザー コード ファイル。|
-|.cpp、.c|Source|アプリケーションの主要なソース コード ファイル。|
+|.cpp、.c|source|アプリケーションの主要なソース コード ファイル。|
 |.cur|リソース|カーソルのビットマップ グラフィック ファイル。|
-|.dbp|プロジェクト|データベース プロジェクト ファイル。|
-|.disco|Source|動的探索ドキュメント ファイル。 XML Web サービス探索を処理します。|
-|.exe、.dll|プロジェクト|実行可能ファイルまたはダイナミック リンク ライブラリ ファイル。|
-|.h|Source|ヘッダー ファイルまたはインクルード ファイル。|
+|.dbp|Project|データベース プロジェクト ファイル。|
+|.disco|source|動的探索ドキュメント ファイル。 XML Web サービス探索を処理します。|
+|.exe、.dll|Project|実行可能ファイルまたはダイナミック リンク ライブラリ ファイル。|
+|.h|source|ヘッダー ファイルまたはインクルード ファイル。|
 |.htm、.html、.xsp、.asp、.htc、.hta、.xml|リソース|共通 Web ファイル。|
-|.HxC|プロジェクト|ヘルプ プロジェクト ファイル。|
+|.HxC|Project|ヘルプ プロジェクト ファイル。|
 |.ico|リソース|アイコンのビットマップ グラフィック ファイル。|
 |.idb|コンパイル|ソースファイルとクラス定義の間の依存関係情報を格納している状態ファイル。 これは、インクリメンタルコンパイル中にコンパイラによって使用されます。 .idb ファイルの名前は [/Fd](fd-program-database-file-name.md) コンパイラ オプションで指定します。|
 |.idl|コンパイル|インターフェイス定義言語ファイル。 詳細については、Windows SDK の「[Interface Definition (IDL) File](/windows/win32/Rpc/the-interface-definition-language-idl-file)」(インターフェイス定義 (IDL) ファイル) を参照してください。|
@@ -69,21 +69,21 @@ Visual Studio プロジェクトを作成する場合は、新しいソリュー
 |.map|リンク|リンカー情報を含むテキスト ファイル。 マップ ファイルの名前は、 [/Fm](fm-name-mapfile.md) コンパイラ オプションで指定します。 詳細については、「 [/map](map-generate-mapfile.md)」を参照してください。|
 |.mfcribbon-ms|リソース|リボンの MFC ボタン、コントロール、および属性を定義する XML コードを含むリソースファイル。 詳細については、「 [Ribbon Designer](../../mfc/ribbon-designer-mfc.md)」を参照してください。|
 |.obj、.o||オブジェクト ファイル。コンパイルはされますが、リンクはされません。|
-|.pch|Debug|プリコンパイル済みヘッダー ファイル。|
+|.pch|デバッグ|プリコンパイル済みヘッダー ファイル。|
 |.rc、.rc2|リソース|リソースを生成するための[リソース スクリプト ファイル](../../windows/working-with-resource-files.md) 。|
 |.sbr|コンパイル|ソース ブラウザー中間ファイル。 [BSCMAKE](bscmake-options.md)の入力ファイルです。|
-|.sln|ソリューション|[ソリューション](/visualstudio/ide/solutions-and-projects-in-visual-studio) ファイル。|
-|.suo|ソリューション|ソリューション オプション ファイル。|
+|.sln|解決策|[ソリューション](/visualstudio/ide/solutions-and-projects-in-visual-studio) ファイル。|
+|.suo|解決策|ソリューション オプション ファイル。|
 |.txt|リソース|テキスト ファイル。通常は README ファイルです。|
-|.vap|プロジェクト|Visual Studio Analyzer プロジェクト ファイル。|
-|.vbg|ソリューション|互換性のあるプロジェクト グループ ファイル。|
-|.vbp、.vip、.vbproj|プロジェクト|Visual Basic プロジェクト ファイル。|
-|.vcxitems|プロジェクト|複数の C++ プロジェクト間でコード ファイルを共有するための共有アイテム プロジェクト。 詳細については、「[プロジェクトファイルとソリューションファイル](project-and-solution-files.md)」を参照してください。|
-|.vcxproj|プロジェクト|Visual Studio プロジェクトファイル。 詳細については、「[プロジェクトファイルとソリューションファイル](project-and-solution-files.md)」を参照してください。|
-|.vcxproj.filters|プロジェクト|ソリューションエクスプローラーを使用してプロジェクトにファイルを追加するときに使用します。 フィルターファイルは、ファイル名拡張子に基づいて、ソリューションエクスプローラーツリービューでファイルを追加する場所を定義します。|
-|.vdproj|プロジェクト|Visual Studio 配置プロジェクト ファイル。|
-|.vmx|プロジェクト|マクロ プロジェクト ファイル。|
-|.vup|プロジェクト|ユーティリティ プロジェクト ファイル。|
+|.vap|Project|Visual Studio Analyzer プロジェクト ファイル。|
+|.vbg|解決策|互換性のあるプロジェクト グループ ファイル。|
+|.vbp、.vip、.vbproj|Project|Visual Basic プロジェクト ファイル。|
+|.vcxitems|Project|複数の C++ プロジェクト間でコード ファイルを共有するための共有アイテム プロジェクト。 詳細については、「[プロジェクトファイルとソリューションファイル](project-and-solution-files.md)」を参照してください。|
+|.vcxproj|Project|Visual Studio プロジェクトファイル。 詳細については、「[プロジェクトファイルとソリューションファイル](project-and-solution-files.md)」を参照してください。|
+|.vcxproj.filters|Project|ソリューションエクスプローラーを使用してプロジェクトにファイルを追加するときに使用します。 フィルターファイルは、ファイル名拡張子に基づいて、ソリューションエクスプローラーツリービューでファイルを追加する場所を定義します。|
+|.vdproj|Project|Visual Studio 配置プロジェクト ファイル。|
+|.vmx|Project|マクロ プロジェクト ファイル。|
+|.vup|Project|ユーティリティ プロジェクト ファイル。|
 
 Visual Studio に関連するその他のファイルの詳細については、「 [Visual Studio .NET のファイルの種類と拡張子](/visualstudio/ide/reference/project-and-solution-file-types)」を参照してください。
 
@@ -91,7 +91,7 @@ Visual Studio に関連するその他のファイルの詳細については、
 
 プロジェクトに項目を追加すると、そのプロジェクトのすべての構成に項目が追加されます。 ビルド可能かどうかにかかわらず、項目が追加されます。 たとえば、MyProject というプロジェクトに項目を追加すると、プロジェクトのデバッグ構成とリリース構成の両方にその項目が追加されます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [Visual Studio C++プロジェクトの作成と管理](../creating-and-managing-visual-cpp-projects.md)<br>
 [Visual Studio C++プロジェクトの種類](visual-cpp-project-types.md)<br>

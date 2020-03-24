@@ -40,12 +40,12 @@ helpviewer_keywords:
 - calculating hypotenuses
 - _hypot function
 ms.assetid: 6a13887f-bd53-43fc-9d77-5b42d6e49925
-ms.openlocfilehash: 8cee9e217b23c43a9ce5a1521b52215301b932fe
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ac481366199023e4b45467599d2c66802ff65c23
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954789"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168747"
 ---
 # <a name="hypot-hypotf-hypotl-_hypot-_hypotf-_hypotl"></a>hypot、hypotf、hypotl、_hypot、_hypotf、_hypotl
 
@@ -87,13 +87,13 @@ long double _hypotl(
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合、 **hypot**は斜辺の長さを返します。オーバーフローの場合、 **hypot**は INF (無限大) を返し、 **Errno**変数は**ERANGE**に設定されます。 **_Matherr**を使用して、エラー処理を変更することができます。
+成功した場合、 **hypot**は斜辺の長さを返します。オーバーフローの場合、 **hypot**は INF (無限大) を返し、 **Errno**変数は**ERANGE**に設定されます。 **_Matherr**を使用すると、エラー処理を変更できます。
 
-リターン コードの詳細については、「[errno、_doserrno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
+リターン コードの詳細については、「[errno、_doserrno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**Hypot**関数は、2辺の*x*と*y*の長さ (つまり、 *x*<sup>2</sup> + *y*<sup>2</sup>の平方根) を指定して、直角三角形の斜辺の長さを計算します。
+**Hypot**関数は、直角三角形の斜辺の長さを計算します。2辺*x*と*y*の長さを指定します (つまり、 *x*<sup>2</sup> + *y*<sup>2</sup>の平方根)。
 
 以前の標準との互換性のために、先頭にアンダースコアがある関数のバージョンが用意されています。 これらの動作は、先頭にアンダースコアがないバージョンと同じです。 新しいコードには、先頭にアンダースコアがないバージョンを使用することをお勧めします。
 
@@ -127,7 +127,7 @@ int main( void )
 If a right triangle has sides 3.0 and 4.0, its hypotenuse is 5.0
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [浮動小数点サポート](../../c-runtime-library/floating-point-support.md)<br/>
 [_cabs](cabs.md)<br/>

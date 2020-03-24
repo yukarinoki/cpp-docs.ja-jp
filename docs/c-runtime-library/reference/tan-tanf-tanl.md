@@ -35,12 +35,12 @@ helpviewer_keywords:
 - tanf function
 - trigonometric functions
 ms.assetid: 36cc0ce8-9c80-4653-b354-ddb3b378b6bd
-ms.openlocfilehash: c79c56555e04c865b70d52a6b1a6e3da1ce94c87
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9fc1a75bdc6fddb5134b9db17961ba3c4550bc79
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946899"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168708"
 ---
 # <a name="tan-tanf-tanl"></a>tan、tanf、tanl
 
@@ -70,10 +70,10 @@ long double tan( long double x );  // C++ only
 
 |入力|SEH 例外|**Matherr**例外的|
 |-----------|-------------------|-------------------------|
-|± QNAN、IND|none|_DOMAIN|
+|± QNAN、IND|なし|_DOMAIN|
 |± INF|**無効です**|_DOMAIN|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 でC++はオーバーロードが可能であるため、 **float**または**long** **double**値を受け取って返す**tan**のオーバーロードを呼び出すことができます。 C プログラムでは、 **tan**は常にを受け取り、 **double**を返します。
 
@@ -109,7 +109,7 @@ int main( void )
 tan( 0.785398 ) = 1.000000
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [浮動小数点サポート](../../c-runtime-library/floating-point-support.md)<br/>
 [acos、acosf、acosl](acos-acosf-acosl.md)<br/>

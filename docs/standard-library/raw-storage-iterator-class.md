@@ -10,14 +10,14 @@ helpviewer_keywords:
 - std::raw_storage_iterator [C++], element_type
 - std::raw_storage_iterator [C++], iter_type
 ms.assetid: 6f033f15-f48e-452a-a326-647ea2cf346f
-ms.openlocfilehash: eb32d1846c4e94fbd275dcc416de4f37d9bb53f1
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 9372fa884d75e10c1a0f2ec92d6cca9caa65808e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240373"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167616"
 ---
-# <a name="rawstorageiterator-class"></a>raw_storage_iterator クラス
+# <a name="raw_storage_iterator-class"></a>raw_storage_iterator クラス
 
 アルゴリズムの結果を初期化されていないメモリに格納するために用意されたアダプター クラスです。
 
@@ -33,12 +33,12 @@ template <class OutputIterator, class Type>
 *OutputIterator*\
 格納されるオブジェクトの出力反復子を指定します。
 
-*型*\
+*[種類]* \
 ストレージが割り当てられるオブジェクトの型。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-クラスは、型のオブジェクトを構築する出力反復子を表します`Type`で、生成するシーケンス。 クラスのオブジェクト`raw_storage_iterator` \< **ForwardIterator**、**型**> クラスの前方反復子オブジェクトを介してストレージにアクセス`ForwardIterator`、タイミングを指定します。オブジェクトを構築します。 オブジェクトのクラスの最初の`ForwardIterator`、式 **&\*最初**未構築のストレージを次のオブジェクトを指定する必要があります (型の`Type`) で生成されたシーケンス。
+クラスは、生成するシーケンス内の `Type` 型のオブジェクトを構築する出力反復子を記述します。 クラス `raw_storage_iterator`\< **ForwardIterator**、**型**> のオブジェクトは、オブジェクトの構築時に指定したクラス `ForwardIterator`の前方反復子オブジェクトを介してストレージにアクセスします。 クラス `ForwardIterator`の最初のオブジェクトの場合、**最初に \*&** 式では、生成されたシーケンス内の次のオブジェクト (型 `Type`) に対して構築されていないストレージを指定する必要があります。
 
 このアダプター クラスは、メモリの割り当てとオブジェクトの構築を分離する必要がある場合に使用されます。 `raw_storage_iterator` は、`malloc` 関数を使用して割り当てられたメモリなど、初期化されていないストレージにオブジェクトをコピーするために使用できます。
 
@@ -50,22 +50,22 @@ template <class OutputIterator, class Type>
 |-|-|
 |[raw_storage_iterator](#raw_storage_iterator)|指定した基になる出力反復子を使用して、生のストレージの反復子を構築します。|
 
-### <a name="typedefs"></a>Typedef
+### <a name="typedefs"></a>Typedefs
 
 |||
 |-|-|
 |[element_type](#element_type)|生のストレージ反復子によって格納される要素を記述する型を提供します。|
 |[iter_type](#iter_type)|生のストレージ反復子の基になる反復子を記述する型を提供します。|
 
-### <a name="operators"></a>演算子
+### <a name="operators"></a>オペレーター
 
 |||
 |-|-|
-|[operator*](#op_star)|出力反復子の式を実装するために使用される逆参照演算子\* `ii`  = `x`します。|
-|[operator=](#op_eq)|生のストレージ反復子式を実装するために使用される代入演算子は、 \* `i`  =  `x`メモリに格納するためです。|
+|[operator*](#op_star)|`ii` = `x`\* の出力反復子式を実装するために使用される逆参照演算子。|
+|[operator=](#op_eq)|メモリに格納するための `i` = `x` \*、生のストレージ反復子式を実装するために使用される代入演算子。|
 |[operator++](#op_add_add)|生のストレージ反復子の前置インクリメント演算子と後置インクリメント演算子。|
 
-### <a name="element_type"></a> element_type
+### <a name="element_type"></a><a name="element_type"></a>element_type
 
 生のストレージ反復子によって格納される要素を記述する型を提供します。
 
@@ -73,11 +73,11 @@ template <class OutputIterator, class Type>
 typedef Type element_type;
 ```
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>解説
 
-型は raw_storage_iterator クラス テンプレート パラメーターのシノニム`Type`します。
+この型は、raw_storage_iterator クラステンプレートパラメーター `Type`のシノニムです。
 
-### <a name="iter_type"></a> iter_type
+### <a name="iter_type"></a><a name="iter_type"></a>iter_type
 
 生のストレージ反復子の基になる反復子を記述する型を提供します。
 
@@ -85,13 +85,13 @@ typedef Type element_type;
 typedef ForwardIterator iter_type;
 ```
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>解説
 
-この型は、テンプレート パラメーター `ForwardIterator` のシノニムです。
+この型は、テンプレート パラメーター `ForwardIterator`のシノニムです。
 
-### <a name="op_star"></a> 演算子\*
+### <a name="operator"></a><a name="op_star"></a> 演算子\*
 
-生のストレージ反復子式 \* *ii* = *x* を実装するために使用される逆参照演算子。
+\* *ii* = *x*の生のストレージ反復子式を実装するために使用される逆参照演算子。
 
 ```cpp
 raw_storage_iterator<ForwardIterator, Type>& operator*();
@@ -101,9 +101,9 @@ raw_storage_iterator<ForwardIterator, Type>& operator*();
 
 生のストレージ反復子への参照
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>解説
 
-要件、`ForwardIterator`は、生のストレージ反復子の式のみを必要を満たす必要があります\* *ii* = *t*有効であるし、は何も書かれている、**演算子**または`operator=`自体にします。 メンバー演算子は、この実装で返します **\*これ**ように[演算子 =](#op_eq)(**constType**(& a)) を指定する式の実際の格納を実行できますなど\* *ptr* = `val`します。
+`ForwardIterator` の要件として、生のストレージ反復子は、式 \* *ii* = *t*だけを有効にする必要があり、**演算子**や `operator=` 自体については何も必要としないということです。 この実装のメンバー演算子は、**この\*** を返します。したがって、 [operator =](#op_eq)(**型**&) は、\* *ptr* = `val`などの式で実際のストアを実行できます。
 
 #### <a name="example"></a>例
 
@@ -157,9 +157,9 @@ Copying 5
 Constructing 5
 ```
 
-### <a name="op_eq"></a> 演算子 =
+### <a name="operator"></a><a name="op_eq"></a>operator =
 
-生のストレージ反復子式 \* *i* = *x* をメモリへの格納用に実装するために使用される代入演算子。
+メモリに格納するために*x* * = \** 、生のストレージ反復子式を実装するために使用される代入演算子。
 
 ```cpp
 raw_storage_iterator<ForwardIterator, Type>& operator=(
@@ -169,17 +169,17 @@ raw_storage_iterator<ForwardIterator, Type>& operator=(
 #### <a name="parameters"></a>パラメーター
 
 *val*\
-型のオブジェクトの値`Type`メモリに挿入します。
+メモリに挿入される `Type` 型のオブジェクトの値。
 
 #### <a name="return-value"></a>戻り値
 
 この演算子は、メモリに `val` を挿入し、生のストレージ反復子への参照を返します。
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>解説
 
-要件、`ForwardIterator`生のストレージ反復子が満たす必要がある状態は、式のみを必要と\* *ii* = *t* 、有効であること、およびについて何も書かれています。**演算子**または`operator=`自体にします。 これらのメンバー演算子は **\*this** を返します。
+生のストレージ反復子が満たす必要のある `ForwardIterator` 状態の要件では、式 \* *ii* = *t*のみが有効であること、および**演算子**や `operator=` 自体については何もしないということを前提としています。 これらのメンバー演算子は **\*this** を返します。
 
-代入演算子は、placement new 式 **new** ( ( `void` \*)&\* **first**) **Type**( `val`) を評価することによって、格納された反復子の値 first を使用して出力シーケンス内に次のオブジェクトを構築します。
+代入演算子は、最初に格納された反復子の値を使用して、出力シーケンス内の次のオブジェクトを構築します。そのためには、placement new expression **new** ((`void` \*) &\* **first**)**型**(`val`) を評価します。
 
 #### <a name="example"></a>例
 
@@ -231,7 +231,7 @@ Copying 5
 Constructing 5
 ```
 
-### <a name="op_add_add"></a> + + 演算子
+### <a name="operator"></a><a name="op_add_add"></a>+ + 演算子
 
 生のストレージ反復子の前置インクリメント演算子と後置インクリメント演算子。
 
@@ -245,15 +245,15 @@ raw_storage_iterator<ForwardIterator, Type> operator++(int);
 
 生のストレージ反復子または生のストレージ反復子への参照。
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>解説
 
-1 つ目の演算子は、最終的に抽出し、型のオブジェクトを格納を試みます`CharType`関連付けられている入力ストリームから。 2 つ目の演算子は、オブジェクトのコピーを作成して、オブジェクトをインクリメントしてから、そのコピーを返します。
+最初の演算子は、最終的に、関連付けられている入力ストリームから `CharType` 型のオブジェクトの抽出と格納を試みます。 2 つ目の演算子は、オブジェクトのコピーを作成して、オブジェクトをインクリメントしてから、そのコピーを返します。
 
 最初の preincrement 演算子は格納されている出力反復子オブジェクトをインクリメントしてから、 **\*this** を返します。
 
 2 つ目の postincrement 演算子は **\*this** のコピーを作成し、格納されている出力反復子オブジェクトをインクリメントしてからコピーを返します。
 
-コンス トラクター ストア`first`出力反復子オブジェクトとして。
+コンストラクターは `first` を出力反復子オブジェクトとして格納します。
 
 #### <a name="example"></a>例
 
@@ -288,7 +288,7 @@ array 3 = 6
 array 4 = 8
 ```
 
-### <a name="raw_storage_iterator"></a> raw_storage_iterator
+### <a name="raw_storage_iterator"></a><a name="raw_storage_iterator"></a>raw_storage_iterator
 
 指定した基になる出力反復子を使用して、生のストレージの反復子を構築します。
 
@@ -298,7 +298,7 @@ explicit raw_storage_iterator(ForwardIterator first);
 
 #### <a name="parameters"></a>パラメーター
 
-*まずは*\
+*最初*の\
 構築されている `raw_storage_iterator` オブジェクトを基にすることになる前方反復子。
 
 #### <a name="example"></a>例

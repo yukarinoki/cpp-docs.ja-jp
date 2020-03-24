@@ -27,12 +27,12 @@ helpviewer_keywords:
 - _cabs function
 - calculating absolute values
 ms.assetid: fea292ee-1a39-4a0a-b416-4a189346ff26
-ms.openlocfilehash: ba24b10fb267c9b54ec4944704de988128b4b419
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 2c2bd6b3f097095514e47b757306b4d83a990e45
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443054"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170342"
 ---
 # <a name="_cabs"></a>_cabs
 
@@ -55,13 +55,13 @@ double _cabs(
 
 **_cabs**は、成功した場合、引数の絶対値を返します。 オーバーフローの場合、 **_cabs**は**HUGE_VAL**を返し、 **errno**を**ERANGE**に設定します。 エラー処理は [_matherr](matherr.md) で変更できます。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 **_Cabs**関数は、複素数の絶対値を計算します。この値は[_complex](../../c-runtime-library/standard-types.md)型の構造体である必要があります。 構造体*z*は、実際のコンポーネント*x*と虚数成分*y*で構成されています。 **_Cabs**を呼び出すと、`sqrt( z.x * z.x + z.y * z.y )`式と等価な値が生成されます。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_cabs**|\<math.h>|
 

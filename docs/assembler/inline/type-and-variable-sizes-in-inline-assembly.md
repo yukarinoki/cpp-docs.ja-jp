@@ -13,12 +13,12 @@ helpviewer_keywords:
 - variables, type
 - variables, size
 ms.assetid: b62c2f2b-a7ad-4145-bae4-d890db86d348
-ms.openlocfilehash: cdb8bddccbea0ef711cb0be4bbac60f7457c625c
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: bc98c8561a7fd06f875781802558cdd7e71a67ec
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79441568"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169241"
 ---
 # <a name="type-and-variable-sizes-in-inline-assembly"></a>インライン アセンブリでの型と変数サイズ
 
@@ -40,7 +40,7 @@ int arr[8];
 
 次の C およびアセンブリ式は、`arr` とその要素のサイズを生成します。
 
-|__asm|C|サイズ|
+|__asm|C|Size|
 |-------------|-------|----------|
 |**長さ**arr|`sizeof`(arr)/`sizeof`(arr [0])|8|
 |**サイズ**arr|`sizeof`(arr)|32|

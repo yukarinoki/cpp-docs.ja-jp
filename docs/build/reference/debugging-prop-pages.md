@@ -35,20 +35,20 @@ f1_keywords:
 - VC.Project.IVCWebSvcDebugPageObject.HttpUrl
 - VC.Project.IVCWebSvcDebugPageObject.DebuggerType
 - VC.Project.IVCWebSvcDebugPageObject.SQLDebugging
-ms.openlocfilehash: 5f7a7bc0e2c696365daa38696fde6f1a480644b4
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.openlocfilehash: c2190c4406e165cfec1915234b688c598f228777
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927733"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169709"
 ---
 # <a name="c-debugging-property-pages"></a>C++プロパティページのデバッグ
 
-これらのプロパティページは、[**プロジェクト** > の**プロパティ** > ] [**構成プロパティ** > ] **[デバッグ]** の下にあります。 ドロップダウンコントロールでデバッガーの種類を選択します。 コードのデバッグC++の詳細について[は、「チュートリアル:Visual Studio](/visualstudio/debugger/getting-started-with-the-debugger-cpp)をC++使用してコードをデバッグし、[ネイティブコードをデバッグ](/visualstudio/debugger/debugging-native-code)する方法について説明します。
+これらのプロパティページは、 **Project** プロジェクト ** > のプロパティ > ** **構成プロパティ** の **デバッグ** >  の下にあります。 ドロップダウンコントロールでデバッガーの種類を選択します。 コードのデバッグC++の詳細については、「[チュートリアル: C++ Visual Studio を使用してコードをデバッグする方法](/visualstudio/debugger/getting-started-with-the-debugger-cpp)」および「[ネイティブコードのデバッグ](/visualstudio/debugger/debugging-native-code)」を参照してください。
 
 ## <a name="local-windows-debugger-property-page"></a>[ローカル Windows デバッガー] プロパティページ
 
-### <a name="command"></a>コマンド
+### <a name="command"></a>command
 
 実行するデバッグ コマンドです。
 
@@ -64,11 +64,11 @@ ms.locfileid: "70927733"
 
 デバッグの開始時に、デバッガーを既存のプロセスにアタッチするかどうかを指定します。
 
-### <a name="debugger-type"></a>デバッガーの種類
+### <a name="debugger-type"></a>[デバッガーのタイプ]
 
 使用するデバッガーの種類を指定します。 [自動] に設定した場合、デバッガーの種類は exe ファイルの内容に基づいて選択されます。
 
-**いずれ**
+**Choices**
 
 - **ネイティブのみ**-ネイティブのみ
 - **マネージのみ**-マネージドのみ
@@ -89,7 +89,7 @@ GPU コードのデバッグに使用するデバッグアクセラレータの�
 
 GPU デバッガーが中断する頻度を設定します。
 
-**いずれ**
+**Choices**
 
 - ワープごとに 1**回中断**-ワープごとに1回中断
 - **すべてのスレッド (cpu の動作など) の中断**-すべてのスレッドで中断 (cpu の動作など)
@@ -130,16 +130,16 @@ AMP C++の既定のアクセラレータの選択をオーバーライドしま�
 
 接続の種類を指定します。
 
-**いずれ**
+**Choices**
 
 - **Windows 認証を使用したリモート**- [windows 認証](/windows-server/security/windows-authentication/windows-authentication-overview)を使用したリモート。
 - **認証なしのリモート**-認証なし。
 
-### <a name="debugger-type"></a>デバッガーの種類
+### <a name="debugger-type"></a>[デバッガーのタイプ]
 
 使用するデバッガーの種類を指定します。 [自動] に設定した場合、デバッガーの種類は exe ファイルの内容に基づいて選択されます。
 
-**いずれ**
+**Choices**
 
 - **ネイティブのみ**-ネイティブのみ
 - **マネージのみ**-マネージドのみ
@@ -160,7 +160,7 @@ GPU コードのデバッグに使用するデバッグアクセラレータの�
 
 GPU デバッガーが中断する頻度を設定します。
 
-**いずれ**
+**Choices**
 
 - ワープごとに 1**回中断**-ワープごとに1回中断
 - **すべてのスレッド (cpu の動作など) の中断**-すべてのスレッドで中断 (cpu の動作など)
@@ -173,11 +173,11 @@ GPU デバッガーが中断する頻度を設定します。
 
 SQL デバッガーをアタッチします。
 
-### <a name="deployment-directory"></a>配置ディレクトリ
+### <a name="deployment-directory"></a>[配置ディレクトリ]
 
 リモートコンピューターでデバッグする場合、プロジェクト出力の内容 (PDB ファイルを除く) をリモートコンピューターにコピーするには、ここでパスを指定します。
 
-### <a name="additional-files-to-deploy"></a>追加の配置ファイル
+### <a name="additional-files-to-deploy"></a>[配置する追加ファイル]
 
 リモートコンピューターでデバッグする場合、ここで指定したファイルとディレクトリ (プロジェクト出力を除く) が配置ディレクトリにコピーされます (指定されている場合)。
 
@@ -195,11 +195,11 @@ AMP C++の既定のアクセラレータの選択をオーバーライドしま�
 
 プロジェクトの URL を指定します。
 
-### <a name="debugger-type"></a>デバッガーの種類
+### <a name="debugger-type"></a>[デバッガーのタイプ]
 
 使用するデバッガーの種類を指定します。 [自動] に設定した場合、デバッガーの種類は exe ファイルの内容に基づいて選択されます。
 
-**いずれ**
+**Choices**
 
 - **ネイティブのみ**-ネイティブのみ
 - **マネージのみ**-マネージドのみ
@@ -213,11 +213,11 @@ AMP C++の既定のアクセラレータの選択をオーバーライドしま�
 
 プロジェクトの URL を指定します。
 
-### <a name="debugger-type"></a>デバッガーの種類
+### <a name="debugger-type"></a>[デバッガーのタイプ]
 
 使用するデバッガーの種類を指定します。 [自動] に設定した場合、デバッガーの種類は exe ファイルの内容に基づいて選択されます。
 
-**いずれ**
+**Choices**
 
 - **ネイティブのみ**-ネイティブのみ
 - **マネージのみ**-マネージドのみ

@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - GetInterfacePtr method [C++]
 ms.assetid: 55e3e2c7-c939-48b5-a905-4b9cbefeea7e
-ms.openlocfilehash: dba5b5e2fcebf87ef196e2f33adedf88cc42b559
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f3244d59159855ff4060c944874e859cb5ec23ab
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399305"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170736"
 ---
-# <a name="comptrtgetinterfaceptr"></a>_com_ptr_t::GetInterfacePtr
+# <a name="_com_ptr_tgetinterfaceptr"></a>_com_ptr_t::GetInterfacePtr
 
 **Microsoft 固有の仕様**
 
@@ -26,12 +26,12 @@ Interface* GetInterfacePtr( ) const throw( );
 Interface*& GetInterfacePtr() throw();
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-NULL にすることがありますが、カプセル化されたインターフェイス ポインターを返します。
+カプセル化されたインターフェイス ポインターを返します。このポインターは NULL である可能性があります。
 
 **Microsoft 固有の仕様はここまで**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [_com_ptr_t クラス](../cpp/com-ptr-t-class.md)

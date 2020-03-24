@@ -33,12 +33,12 @@ helpviewer_keywords:
 - acosh function
 - acoshl function
 ms.assetid: 6985c4d7-9e2a-44ce-9a9b-5a43015f15f7
-ms.openlocfilehash: b547bc0db23f446672c8838419aeb9b0f32c16c3
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: da1d6024cc9f00ebfc7696ddedf92ea9f25728a1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944076"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170359"
 ---
 # <a name="acosh-acoshf-acoshl"></a>acosh、acoshf、acoshl
 
@@ -64,20 +64,20 @@ long double acosh( long double x );  // C++ only
 
 ## <a name="return-value"></a>戻り値
 
-**Acosh**関数は、 *x*の逆ハイパーボリックコサイン (アークハイパーボリックコサイン) を返します。 これらの関数は、ドメイン*x* ≥1で有効です。 *X*が1未満の場合、 `errno`がに`EDOM`設定され、結果は簡易な NaN になります。 *X*が簡易な NaN、無限、または無限大の場合は、同じ値が返されます。
+**Acosh**関数は、 *x*の逆ハイパーボリックコサイン (アークハイパーボリックコサイン) を返します。 これらの関数は、ドメイン*x* ≥1で有効です。 *X*が1未満の場合、`errno` は `EDOM` に設定され、結果は簡易な NaN になります。 *X*が簡易な NaN、無限、または無限大の場合は、同じ値が返されます。
 
 |入力|SEH 例外|`_matherr` 例外|
 |-----------|-------------------|--------------------------|
-|± QNAN、IND、INF|none|none|
-|*x* < 1|none|none|
+|± QNAN、IND、INF|なし|なし|
+|*x* < 1|なし|なし|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 をC++使用すると、 **float 型**または**long** **double**型の値を受け取って返す**acosh**のオーバーロードを呼び出すことができます。 C プログラムでは、 **acosh**は常にを受け取り、 **double**を返します。
 
 ## <a name="requirements"></a>必要条件
 
-|関数|C ヘッダー|C++ ヘッダー|
+|Function|C ヘッダー|C++ ヘッダー|
 |--------------|--------------|------------------|
 |**acosh**、 **acoshf**、 **acoshl**|\<math.h>|\<cmath>|
 
@@ -111,7 +111,7 @@ cosh( 0.785398 ) = 1.324609
 acosh( 1.324609 ) = 0.785398
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [浮動小数点サポート](../../c-runtime-library/floating-point-support.md)<br/>
 [asinh、asinhf、asinhl](asinh-asinhf-asinhl.md)<br/>

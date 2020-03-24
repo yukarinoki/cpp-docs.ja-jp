@@ -39,12 +39,12 @@ helpviewer_keywords:
 - Image editor [C++], Properties window
 - Properties window, image editor
 ms.assetid: 8b6ce4ad-eba1-4ece-86ba-cea92c3edff2
-ms.openlocfilehash: 6d973ad444f719b905af5a33e47ef28f4895111f
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 9324e3dc5c6691a7b50f137da1fad446b416e968
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447289"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167850"
 ---
 # <a name="how-to-edit-an-image"></a>方法: イメージを編集する
 
@@ -214,7 +214,7 @@ ms.locfileid: "79447289"
    |**SaveCompressed れた**|画像が圧縮形式かどうかを示します。 このプロパティは読み取り専用です。<br/><br/>Visual Studio では、イメージを圧縮形式で保存することはできないため、Visual Studio で作成されたイメージでは、このプロパティは**False**になります。 (別のプログラムで作成された) 圧縮イメージを Visual Studio で開くと、このプロパティは**True**になります。 Visual Studio を使用して圧縮されたイメージを保存すると、圧縮が解除され、このプロパティは**False**に戻ります。|
    |**Width**|イメージの幅をピクセル単位で設定します。 ビットマップの既定値は48です。<br/><br/>画像がトリミングされるか、既存のイメージの右側に空白が追加されます。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 なし
 
