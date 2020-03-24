@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C2555
 ms.assetid: 5e49ebb8-7c90-457a-aa12-7ca7ab6574b2
-ms.openlocfilehash: cc6c3a3a29665ccf65b77a3d9866986cb0a46b9e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ebf3e4a3aff48311edd5fb95b01a7b2d23990231
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353227"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80202425"
 ---
 # <a name="compiler-error-c2555"></a>コンパイラ エラー C2555
 
-'class1::function1': 仮想関数をオーバーライドする型の戻り値とは異なる 'class2::function2' の covariant ではありません
+' class1:: function1 ': オーバーライドする仮想関数の戻り値の型が異なり、' class2:: function2 ' からの共変ではありません
 
-仮想関数、派生のオーバーライド関数戻り値の型が同一のパラメーター リストであります。 派生クラスでオーバーライドする関数は、戻り値の型によってのみ、基本クラスの仮想関数と異なることはできません。
+仮想関数と派生オーバーライド関数のパラメーターリストが同じですが、戻り値の型が異なります。 派生クラスのオーバーライドする関数は、戻り値の型によってのみ、基底クラスの仮想関数と異なることはできません。
 
-このエラーを解決するには、仮想関数が呼び出された後、戻り値をキャストします。
+このエラーを解決するには、仮想関数が呼び出された後に戻り値をキャストします。
 
-/Clr でコンパイルする場合は、このエラーも表示可能性があります。   たとえば、Visual c 次の c# 宣言と同等です。
+また、/clr を使用してコンパイルすると、このエラーが表示されることがあります。   たとえば、次の宣言C++に相当するビジュアルC#は次のようになります。
 
 ```
 Guid[] CheckSources(Guid sourceID, Guid[] carouselIDs);
 ```
 
-is
+:
 
 ```
 Guid CheckSources(Guid sourceID, Guid carouselIDs[]) [];

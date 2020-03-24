@@ -548,12 +548,12 @@ helpviewer_keywords:
 - TABLE_NAME
 - TABLE_SCHEMA
 ms.assetid: 4bd881b3-26ca-4bdb-9226-d67560864f29
-ms.openlocfilehash: 2c47b167f12cd98a752806369df6281d5b20c696
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 82401ae88ea95d0e05659fa662a3621a27ef4531
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79545739"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209704"
 ---
 # <a name="schema-rowset-classes-and-typedef-classes"></a>スキーマ行セット クラスと Typedef クラス
 
@@ -602,7 +602,7 @@ Typedef クラスを使用して、スキーマ行セットをインスタンス
 
 Typedef クラス `CAssertions` を呼び出して、そのパラメータークラス `CAssertionInfo`を実装します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Typedef クラスの使用の詳細については[、「スキーマ行セットクラスと Typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)」を参照してください。
 
@@ -617,13 +617,13 @@ Typedef クラスの使用の詳細については[、「スキーマ行セッ�
 |m_szName|CONSTRAINT_NAME|
 |m_bIsDeferrable|IS_DEFERRABLE|
 |m_bInitiallyDeferred|INITIALLY_DEFERRED|
-|m_szDescription|説明|
+|m_szDescription|Description|
 
 ## <a name="ccatalogs-ccataloginfo"></a><a name="catalog"></a>CCatalogs、CCatalogInfo
 
 Typedef クラス `CCatalogs` を呼び出して、そのパラメータークラス `CCatalogInfo`を実装します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Typedef クラスの使用の詳細については[、「スキーマ行セットクラスと Typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)」を参照してください。
 
@@ -634,13 +634,13 @@ Typedef クラスの使用の詳細については[、「スキーマ行セッ�
 |データ メンバー|OLE DB の列|
 |------------------|--------------------|
 |m_szName|CATALOG_NAME|
-|m_szDescription|説明|
+|m_szDescription|Description|
 
 ## <a name="ccharactersets-ccharactersetinfo"></a><a name="characterset"></a>C文字セット、Cキャラクター Setinfo
 
 Typedef クラス `CCharacterSets` を呼び出して、そのパラメータークラス `CCharacterSetInfo`を実装します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Typedef クラスの使用の詳細については[、「スキーマ行セットクラスと Typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)」を参照してください。
 
@@ -663,7 +663,7 @@ Typedef クラスの使用の詳細については[、「スキーマ行セッ�
 
 Typedef クラス `CCheckConstraints` を呼び出して、そのパラメータークラス `CCheckConstraintInfo`を実装します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Typedef クラスの使用の詳細については[、「スキーマ行セットクラスと Typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)」を参照してください。
 
@@ -677,13 +677,13 @@ Typedef クラスの使用の詳細については[、「スキーマ行セッ�
 |m_szSchema|CONSTRAINT_SCHEMA|
 |m_szName|CONSTRAINT_NAME|
 |m_szCheckClause|CHECK_CLAUSE|
-|m_szDescription|説明|
+|m_szDescription|Description|
 
 ## <a name="ccollations-ccollationinfo"></a><a name="collation"></a>CCollations 順序、CCollationInfo
 
 Typedef クラス `CCollations` を呼び出して、そのパラメータークラス `CCollationInfo`を実装します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Typedef クラスの使用の詳細については[、「スキーマ行セットクラスと Typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)」を参照してください。
 
@@ -705,7 +705,7 @@ Typedef クラスの使用の詳細については[、「スキーマ行セッ�
 
 Typedef クラス `CColumnDomainUsage` を呼び出して、そのパラメータークラス `CColumnDomainUsageInfo`を実装します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Typedef クラスの使用の詳細については[、「スキーマ行セットクラスと Typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)」を参照してください。
 
@@ -729,7 +729,7 @@ Typedef クラスの使用の詳細については[、「スキーマ行セッ�
 
 Typedef クラス `CColumnPrivileges` を呼び出して、そのパラメータークラス `CColumnPrivilegeInfo`を実装します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Typedef クラスの使用の詳細については[、「スキーマ行セットクラスと Typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)」を参照してください。
 
@@ -754,7 +754,7 @@ Typedef クラスの使用の詳細については[、「スキーマ行セッ�
 
 Typedef クラス `CColumns` を呼び出して、そのパラメータークラス `CColumnsInfo`を実装します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Typedef クラスの使用の詳細については[、「スキーマ行セットクラスと Typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)」を参照してください。
 
@@ -791,13 +791,13 @@ Typedef クラスの使用の詳細については[、「スキーマ行セッ�
 |m_szDomainCatalog|DOMAIN_CATALOG|
 |m_szDomainSchema|DOMAIN_SCHEMA|
 |m_szDomainName|DOMAIN_NAME|
-|m_szDescription|説明|
+|m_szDescription|Description|
 
 ## <a name="cconstraintcolumnusage-cconstraintcolumnusageinfo"></a><a name="constraintcolumnusage"></a>CConstraintColumnUsage、CConstraintColumnUsageInfo
 
 Typedef クラス `CConstraintColumnUsage` を呼び出して、そのパラメータークラス `CConstraintColumnUsageInfo`を実装します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Typedef クラスの使用の詳細については[、「スキーマ行セットクラスと Typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)」を参照してください。
 
@@ -821,7 +821,7 @@ Typedef クラスの使用の詳細については[、「スキーマ行セッ�
 
 Typedef クラス `CConstraintTableUsage` を呼び出して、そのパラメータークラス `CConstraintTableUsageInfo`を実装します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Typedef クラスの使用の詳細については[、「スキーマ行セットクラスと Typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)」を参照してください。
 
@@ -842,7 +842,7 @@ Typedef クラスの使用の詳細については[、「スキーマ行セッ�
 
 Typedef クラス `CForeignKeys` を呼び出して、そのパラメータークラス `CForeignKeysInfo`を実装します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Typedef クラスの使用の詳細については[、「スキーマ行セットクラスと Typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)」を参照してください。
 
@@ -872,7 +872,7 @@ Typedef クラスの使用の詳細については[、「スキーマ行セッ�
 
 Typedef クラス `CIndexes` を呼び出して、そのパラメータークラス `CIndexInfo`を実装します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Typedef クラスの使用の詳細については[、「スキーマ行セットクラスと Typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)」を参照してください。
 
@@ -889,9 +889,9 @@ Typedef クラスの使用の詳細については[、「スキーマ行セッ�
 |m_szIndexSchema|INDEX_SCHEMA|
 |m_szIndexName|INDEX_NAME|
 |m_bPrimaryKey|PRIMARY_KEY|
-|m_bUnique|一意|
+|m_bUnique|UNIQUE|
 |m_bClustered|CLUSTERED|
-|m_nType|種類:|
+|m_nType|TYPE|
 |m_nFillFactor|FILL_FACTOR|
 |m_nInitialSize|INITIAL_SIZE|
 |m_nNulls|NULLS|
@@ -911,7 +911,7 @@ Typedef クラスの使用の詳細については[、「スキーマ行セッ�
 
 Typedef クラス `CKeyColumns` を呼び出して、そのパラメータークラス `CKeyColumnInfo`を実装します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Typedef クラスの使用の詳細については[、「スキーマ行セットクラスと Typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)」を参照してください。
 
@@ -936,7 +936,7 @@ Typedef クラスの使用の詳細については[、「スキーマ行セッ�
 
 Typedef クラス `CPrimaryKeys` を呼び出して、そのパラメータークラス `CPrimaryKeyInfo`を実装します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Typedef クラスの使用の詳細については[、「スキーマ行セットクラスと Typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)」を参照してください。
 
@@ -958,7 +958,7 @@ Typedef クラスの使用の詳細については[、「スキーマ行セッ�
 
 Typedef クラス `CProcedureColumns` を呼び出して、そのパラメータークラス `CProcedureColumnInfo`を実装します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Typedef クラスの使用の詳細については[、「スキーマ行セットクラスと Typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)」を参照してください。
 
@@ -983,13 +983,13 @@ Typedef クラスの使用の詳細については[、「スキーマ行セッ�
 |m_nOctetLength|CHARACTER_OCTET_LENGTH|
 |m_nPrecision|NUMERIC_PRECISION|
 |m_nScale|NUMERIC_SCALE|
-|m_szDescription|説明|
+|m_szDescription|Description|
 
 ## <a name="cprocedureparameters-cprocedureparaminfo"></a><a name="procedureparam"></a>CProcedureParameters、Cprocedureparaminfo
 
 Typedef クラス `CProcedureParameters` を呼び出して、そのパラメータークラス `CProcedureParamInfo`を実装します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Typedef クラスの使用の詳細については[、「スキーマ行セットクラスと Typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)」を参照してください。
 
@@ -1013,13 +1013,13 @@ Typedef クラスの使用の詳細については[、「スキーマ行セッ�
 |m_nOctetLength|CHARACTER_OCTET_LENGTH|
 |m_nPrecision|NUMERIC_PRECISION|
 |m_nScale|NUMERIC_SCALE|
-|m_szDescription|説明|
+|m_szDescription|Description|
 
 ## <a name="cprocedures-cprocedureinfo"></a><a name="procedure"></a>CProcedures、CProcedureInfo
 
 Typedef クラス `CProcedures` を呼び出して、そのパラメータークラス `CProcedureInfo`を実装します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Typedef クラスの使用の詳細については[、「スキーマ行セットクラスと Typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)」を参照してください。
 
@@ -1034,13 +1034,13 @@ Typedef クラスの使用の詳細については[、「スキーマ行セッ�
 |m_szName|PROCEDURE_NAME|
 |m_nType|PROCEDURE_TYPE|
 |m_szDefinition|PROCEDURE_DEFINITION|
-|m_szDescription|説明|
+|m_szDescription|Description|
 
 ## <a name="cprovidertypes-cproviderinfo"></a><a name="provider"></a>CProviderTypes、Cprovidertypes
 
 Typedef クラス `CProviderTypes` を呼び出して、そのパラメータークラス `CProviderInfo`を実装します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Typedef クラスの使用の詳細については[、「スキーマ行セットクラスと Typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)」を参照してください。
 
@@ -1075,7 +1075,7 @@ Typedef クラスの使用の詳細については[、「スキーマ行セッ�
 
 Typedef クラス `CReferentialConstraints` を呼び出して、そのパラメータークラス `CReferentialConstraintInfo`を実装します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Typedef クラスの使用の詳細については[、「スキーマ行セットクラスと Typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)」を参照してください。
 
@@ -1094,13 +1094,13 @@ Typedef クラスの使用の詳細については[、「スキーマ行セッ�
 |m_szMatchOption|MATCH_OPTION|
 |m_szUpdateRule|UPDATE_RULE|
 |m_szDeleteRule|DELETE_RULE|
-|m_szDescription|説明|
+|m_szDescription|Description|
 
 ## <a name="cschemata-cschematainfo"></a><a name="schemata"></a>CSchemata、CSchemataInfo
 
 Typedef クラス `CSchemata` を呼び出して、そのパラメータークラス `CSchemataInfo`を実装します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Typedef クラスの使用の詳細については[、「スキーマ行セットクラスと Typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)」を参照してください。
 
@@ -1121,7 +1121,7 @@ Typedef クラスの使用の詳細については[、「スキーマ行セッ�
 
 Typedef クラス `CSQLLanguages` を呼び出して、そのパラメータークラス `CSQLLanguageInfo`を実装します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Typedef クラスの使用の詳細については[、「スキーマ行セットクラスと Typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)」を参照してください。
 
@@ -1143,7 +1143,7 @@ Typedef クラスの使用の詳細については[、「スキーマ行セッ�
 
 Typedef クラス `CStatistics` を呼び出して、そのパラメータークラス `CStatisticInfo`を実装します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Typedef クラスの使用の詳細については[、「スキーマ行セットクラスと Typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)」を参照してください。
 
@@ -1162,7 +1162,7 @@ Typedef クラスの使用の詳細については[、「スキーマ行セッ�
 
 Typedef クラス `CTableConstraints` を呼び出して、そのパラメータークラス `CTableConstraintInfo`を実装します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Typedef クラスの使用の詳細については[、「スキーマ行セットクラスと Typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)」を参照してください。
 
@@ -1181,13 +1181,13 @@ Typedef クラスの使用の詳細については[、「スキーマ行セッ�
 |m_szType|CONSTRAINT_TYPE|
 |m_bIsDeferrable|IS_DEFERRABLE|
 |m_bInitiallyDeferred|INITIALLY_DEFERRED|
-|m_szDescription|説明|
+|m_szDescription|Description|
 
 ## <a name="ctableprivileges-ctableprivilegeinfo"></a><a name="tableprivilege"></a>CTablePrivileges、CTablePrivilegeInfo
 
 Typedef クラス `CTablePrivileges` を呼び出して、そのパラメータークラス `CTablePrivilegeInfo`を実装します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Typedef クラスの使用の詳細については[、「スキーマ行セットクラスと Typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)」を参照してください。
 
@@ -1209,7 +1209,7 @@ Typedef クラスの使用の詳細については[、「スキーマ行セッ�
 
 Typedef クラス `CTables` を呼び出して、そのパラメータークラス `CTableInfo`を実装します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Typedef クラスの使用の詳細については[、「スキーマ行セットクラスと Typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)」を参照してください。
 
@@ -1224,13 +1224,13 @@ Typedef クラスの使用の詳細については[、「スキーマ行セッ�
 |m_szName|TABLE_NAME|
 |m_szType|TABLE_TYPE|
 |m_guidTable|TABLE_GUID|
-|m_szDescription|説明|
+|m_szDescription|Description|
 
 ## <a name="ctranslations-ctranslationinfo"></a><a name="translation"></a>CTranslations、CTranslationInfo
 
 Typedef クラス `CTranslations` を呼び出して、そのパラメータークラス `CTranslationInfo`を実装します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Typedef クラスの使用の詳細については[、「スキーマ行セットクラスと Typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)」を参照してください。
 
@@ -1254,7 +1254,7 @@ Typedef クラスの使用の詳細については[、「スキーマ行セッ�
 
 Typedef クラス `CUsagePrivileges` を呼び出して、そのパラメータークラス `CUsagePrivilegeInfo`を実装します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Typedef クラスの使用の詳細については[、「スキーマ行セットクラスと Typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)」を参照してください。
 
@@ -1277,7 +1277,7 @@ Typedef クラスの使用の詳細については[、「スキーマ行セッ�
 
 Typedef クラス `CViewColumnUsage` を呼び出して、そのパラメータークラス `CViewColumnInfo`を実装します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Typedef クラスの使用の詳細については[、「スキーマ行セットクラスと Typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)」を参照してください。
 
@@ -1301,7 +1301,7 @@ Typedef クラスの使用の詳細については[、「スキーマ行セッ�
 
 Typedef クラス `CViews` を呼び出して、そのパラメータークラス `CViewInfo`を実装します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Typedef クラスの使用の詳細については[、「スキーマ行セットクラスと Typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)」を参照してください。
 
@@ -1317,13 +1317,13 @@ Typedef クラスの使用の詳細については[、「スキーマ行セッ�
 |m_szDefinition|VIEW_DEFINITION|
 |m_bCheckOption|CHECK_OPTION|
 |m_bIsUpdatable|IS_UPDATABLE|
-|m_szDescription|説明|
+|m_szDescription|Description|
 
 ## <a name="cviewtableusage-cviewtableinfo"></a><a name="viewtable"></a>CViewTableUsage、Cviewtableusage
 
 Typedef クラス `CViewTableUsage` を呼び出して、そのパラメータークラス `CViewTableInfo`を実装します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Typedef クラスの使用の詳細については[、「スキーマ行セットクラスと Typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)」を参照してください。
 
@@ -1340,7 +1340,7 @@ Typedef クラスの使用の詳細については[、「スキーマ行セッ�
 |m_szTableSchema|TABLE_SCHEMA|
 |m_szTableName|TABLE_NAME|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atldbsch
 

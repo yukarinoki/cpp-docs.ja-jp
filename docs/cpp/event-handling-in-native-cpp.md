@@ -4,20 +4,20 @@ ms.date: 05/07/2019
 helpviewer_keywords:
 - event handling [C++]
 ms.assetid: e4b9219a-15d8-42fb-83c8-6d2e4e087c8d
-ms.openlocfilehash: 9eb0334e3633921842fcc06155ba0300ff6192e1
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: cc9265cd3f9f400e2880405019e4d2c9a934f10a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222182"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180083"
 ---
 # <a name="event-handling-in-native-c"></a>ネイティブ C++ でのイベント処理
 
-ネイティブC++を使用してイベント ソースとイベント レシーバーを設定すると、イベント処理、 [event_source](../windows/attributes/event-source.md)と[event_receiver](../windows/attributes/event-receiver.md)指定それぞれ属性`type` =`native`. これらの属性により、適用先のクラスは、イベントを発生させ、ネイティブの非 COM コンテキストでイベントを処理できます。
+ネイティブC++イベント処理では、 [event_source](../windows/attributes/event-source.md)と[event_receiver](../windows/attributes/event-receiver.md)属性を使用して、イベントソースとイベントレシーバーをそれぞれ設定し、`type`=`native`を指定します。 これらの属性により、適用先のクラスは、イベントを発生させ、ネイティブの非 COM コンテキストでイベントを処理できます。
 
 ## <a name="declaring-events"></a>イベントの宣言
 
-イベント ソース クラスで、使用、 [_ _event](../cpp/event.md)メソッドをイベントとして宣言するメソッド宣言でキーワード。 メソッドを宣言する必要がありますが、定義はしないでください。コンパイラは、イベント内でメソッドを暗黙的に定義するため、これを定義した場合、コンパイラ エラーが発生します。 ネイティブ イベントは、ゼロ以上のパラメーターを持つメソッドにできます。 戻り値の型は void または任意の整数型です。
+イベントソースクラスでは、メソッド宣言で[__event](../cpp/event.md)キーワードを使用して、メソッドをイベントとして宣言します。 メソッドを宣言する必要がありますが、定義はしないでください。コンパイラは、イベント内でメソッドを暗黙的に定義するため、これを定義した場合、コンパイラ エラーが発生します。 ネイティブ イベントは、ゼロ以上のパラメーターを持つメソッドにできます。 戻り値の型は void または任意の整数型です。
 
 ## <a name="defining-event-handlers"></a>イベント ハンドラーの定義
 
@@ -25,7 +25,7 @@ ms.locfileid: "65222182"
 
 ## <a name="hooking-event-handlers-to-events"></a>イベントへのイベント ハンドラーのフック
 
-組み込み関数を使用する、イベント レシーバー クラスでも[_ _hook](../cpp/hook.md)にイベントをイベント ハンドラーに関連付けると[_ _unhook](../cpp/unhook.md)イベント ハンドラーからイベントの関連付けを解除します。 複数のイベントを 1 つのイベント ハンドラーにフックすることも、複数のイベント ハンドラーを 1 つのイベントにフックすることもできます。
+また、イベントレシーバークラスでは、組み込み関数[__hook](../cpp/hook.md)を使用してイベントをイベントハンドラーに関連付け[__unhook](../cpp/unhook.md)たり、イベントハンドラーからイベントの関連付けを解除したりできます。 複数のイベントを 1 つのイベント ハンドラーにフックすることも、複数のイベント ハンドラーを 1 つのイベントにフックすることもできます。
 
 ## <a name="firing-events"></a>イベントの発生
 
@@ -88,6 +88,6 @@ MyHandler2 was called with value 123.
 MyHandler1 was called with value 123.
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [イベント処理](../cpp/event-handling.md)

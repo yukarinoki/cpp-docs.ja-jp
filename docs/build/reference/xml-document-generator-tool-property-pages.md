@@ -8,12 +8,12 @@ f1_keywords:
 - VC.Project.VCXDCMakeTool.OutputDocumentFile
 - VC.Project.VCXDCMakeTool.AdditionalDocumentFiles
 ms.assetid: 645912b5-197a-4c36-ba58-64df09444ca0
-ms.openlocfilehash: c99677d7fc53ae3343e15e54997fe0101322fbcf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9f10ddf98c238120750e72644779a6ad74af2d1e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62316159"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171633"
 ---
 # <a name="xml-document-generator-tool-property-pages"></a>[XML ドキュメント ジェネレーター] プロパティ ページ
 
@@ -22,7 +22,7 @@ ms.locfileid: "62316159"
 > [!NOTE]
 >  開発環境 (プロパティ ページ) の xdcmake.exe オプションは、コマンド ラインで xdcmake.exe を使用する場合のオプションとは異なります。 コマンド ラインで xdcmake.exe を使用する詳細については、「[XDCMake リファレンス](xdcmake-reference.md)」を参照してください。
 
-## <a name="uielement-list"></a>UIElement の一覧
+## <a name="uielement-list"></a>UI 要素の一覧
 
 - **著作権情報の非表示**
 
@@ -34,12 +34,12 @@ ms.locfileid: "62316159"
 
 - **出力ドキュメント ファイル**
 
-   .xml 出力ファイルの名前とディレクトリの場所。 参照してください[用マクロの一般的なコマンドとプロパティのビルド](common-macros-for-build-commands-and-properties.md)マクロを使用してディレクトリの場所を指定する方法について。
+   .xml 出力ファイルの名前とディレクトリの場所。 マクロを使用してディレクトリの場所を指定する方法については[、「ビルドコマンドとプロパティの一般的なマクロ](common-macros-for-build-commands-and-properties.md)」を参照してください。
 
 - **ドキュメント ライブラリの依存関係**
 
    プロジェクトにソリューション内の .lib プロジェクトへの依存関係がある場合は、.lib プロジェクトから現在のプロジェクトの .xml ファイルに .xdc ファイルを処理できます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[C++ プロジェクト プロパティ ページの参照](property-pages-visual-cpp.md)
+[C++プロジェクトプロパティページのリファレンス](property-pages-visual-cpp.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - OLE DB providers, calling
 - OLE DB providers, testing
 ms.assetid: e4aa30c1-391b-41f8-ac73-5270e46fd712
-ms.openlocfilehash: a173e1466179dfb40a33d7bdb4a94eabdbf23cc0
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: dc3c4ea36aa9dac64f2aa7861fd5d51927c77ecd
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80079058"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209503"
 ---
 # <a name="testing-the-read-only-provider"></a>読み取り専用プロバイダーのテスト
 
@@ -22,7 +22,7 @@ ms.locfileid: "80079058"
 
 ## <a name="to-create-the-test-application"></a>テスト アプリケーションを作成するには
 
-1. **[ファイル]** メニューの **[新規作成]** をクリックし、 **[プロジェクト]** をクリックします。
+1. **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。
 
 1. **[プロジェクトの種類]** ペインで、[**インストールされている** > **Visual C++**  > **MFC/ATL** ] フォルダーを選択します。 **[テンプレート]** ペインで、 **[MFC アプリケーション]** を選択します。
 

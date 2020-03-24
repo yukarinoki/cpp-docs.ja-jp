@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - transmit_as attribute
 ms.assetid: 53d0b8ab-5b06-423e-83eb-3d01a10424b2
-ms.openlocfilehash: 939013e43f08aeda788e468c995f1736cf6b6928
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: cf89be12672ac77a67617b6b222f27d739db9261
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69513915"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214488"
 ---
 # <a name="transmit_as"></a>transmit_as
 
@@ -28,7 +28,7 @@ ms.locfileid: "69513915"
 *type*<br/>
 クライアントとサーバーの間で転送されるデータ型を指定します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 **Transmit_as** C++属性には、 [transmit_as](/windows/win32/Midl/transmit-as) MIDL 属性と同じ機能があります。
 
@@ -77,7 +77,7 @@ struct _TREE_NODE_TYPE * right;
 
 属性コンテキストの詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [IDL 属性](idl-attributes.md)<br/>
 [Typedef、Enum、Union、および Struct 型の属性](typedef-enum-union-and-struct-attributes.md)<br/>

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - displaybind attribute
 ms.assetid: b3d70396-78e4-43d9-9583-16ddb8c9bb1f
-ms.openlocfilehash: 168db224e7b15656308259f9507e1079744f1a73
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 9ca5c84e859d395d71b7f37a34b1158800bceed7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69490887"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168253"
 ---
 # <a name="displaybind"></a>displaybind
 
@@ -23,7 +23,7 @@ ms.locfileid: "69490887"
 [displaybind]
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 **Displaybind** C++属性には[displaybind](/windows/win32/Midl/displaybind) MIDL 属性と同じ機能があります。
 
@@ -44,7 +44,7 @@ ms.locfileid: "69490887"
 
 詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [IDL 属性](idl-attributes.md)<br/>
 [メソッド属性](method-attributes.md)<br/>

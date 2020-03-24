@@ -7,12 +7,12 @@ helpviewer_keywords:
 - property __declspec keyword
 - __declspec keyword [C++], property
 ms.assetid: f3b850ba-bf48-4df7-a1d6-8259d97309ce
-ms.openlocfilehash: ece1016b7a18873dfa477b0f8b6ae4271a0f8001
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 03f71739698fd20a01fd72567ce5b9babc176327
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301488"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179303"
 ---
 # <a name="property-c"></a>property (C++)
 
@@ -28,11 +28,11 @@ ms.locfileid: "62301488"
    __declspec( property( get=get_func_name, put=put_func_name ) ) declarator
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-コンパイラがメンバー選択演算子の右側で、この属性で宣言されたデータ メンバーを表示する場合 ("**.**「または」**->**") に変換する操作、`get`または`put`関数は、このような式は、左辺値または右辺値かどうかによって異なります。 さらに複雑なコンテキストなど"`+=`"、両方の手順を実行して、再書き込みが実行される`get`と`put`します。
+コンパイラが、メンバー選択演算子 (" **.** " または " **->** ") の右側でこの属性を使用して宣言されたデータメンバーを認識すると、その式が左辺値または右辺値のいずれであるかに応じて、操作を `get` または `put` 関数に変換します。 "`+=`" などのより複雑なコンテキストでは、`get` と `put`の両方を実行することで書き直しが実行されます。
 
-この属性は、クラスまたは構造体の定義の空の配列の宣言でも使用できます。 例えば:
+この属性は、クラスまたは構造体の定義の空の配列の宣言でも使用できます。 次に例を示します。
 
 ```cpp
 __declspec(property(get=GetX, put=PutX)) int x[];
@@ -66,7 +66,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [__declspec](../cpp/declspec.md)<br/>
 [キーワード](../cpp/keywords-cpp.md)

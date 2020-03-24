@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - templates, with CLR types
 ms.assetid: cf59d16b-5514-448b-9a95-e0b4fcb616a6
-ms.openlocfilehash: a8cc429763d042ba262d5543f4a2d85bbf8aa29a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: ce30133d9a2d1ce5a6e446093a617f3a108055c4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515967"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171828"
 ---
 # <a name="windows-runtime-and-managed-templates-ccli-and-ccx"></a>Windows ランタイムおよびマネージド テンプレート (C++/CLI および C++/CX)
 
@@ -26,7 +26,7 @@ ms.locfileid: "65515967"
 
 (この言語機能には Windows ランタイムのみに適用される特記事項がありません。)
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/ZW`
 
@@ -34,11 +34,11 @@ ms.locfileid: "65515967"
 
 マネージド型からのクラス テンプレートの作成には、次のコード例で説明するいくつかの制限があります。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/clr`
 
-### <a name="examples"></a>使用例
+### <a name="examples"></a>例
 
 マネージド型テンプレート パラメーターを使用してジェネリック型をインスタンス化できますが、ジェネリック型テンプレート パラメーターを使用してマネージド テンプレートをインスタンス化することはできません。 これは、ジェネリック型は実行時に解決されるためです。 詳細については、「[Generics and Templates (C++/CLI) (ジェネリックとテンプレート (C++/CLI))](generics-and-templates-visual-cpp.md)」を参照してください。
 
@@ -130,6 +130,6 @@ template <>
 class A <int> {};
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [.NET および UWP でのコンポーネント拡張](component-extensions-for-runtime-platforms.md)

@@ -6,81 +6,81 @@ helpviewer_keywords:
 - notifications, support in providers
 - OLE DB providers, creating
 ms.assetid: bdfd5c9f-1c6f-4098-822c-dd650e70ab82
-ms.openlocfilehash: d3f8314e7cd57617e35e50a67a4562d4055cb93a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2811cd56bdc87282b9d4395a9a79ba9b333dadee
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62361874"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211394"
 ---
 # <a name="creating-an-updatable-provider"></a>更新可能なプロバイダーの作成
 
-更新可能なプロバイダーまたはプロバイダーを更新できる visual C をサポートしています (書き込む) データ ストア。 このトピックでは、OLE DB テンプレートを使用して、更新可能なプロバイダーを作成する方法について説明します。
+ビジュアルC++では、データストアを更新 (書き込み) できる更新可能なプロバイダーまたはプロバイダーがサポートされています。 このトピックでは、OLE DB テンプレートを使用して更新可能なプロバイダーを作成する方法について説明します。
 
-このトピックでは、実行可能なプロバイダーを起動することを前提としています。 更新可能なプロバイダーを作成する 2 つの手順があります。 プロバイダーが、データ ストアに変更を加える方法をまず決定する必要があります。具体的には、変更するかどうかをすぐに実行する、更新コマンドが実行されるまで延期されます。 セクション"[プロバイダーを更新可能にする](#vchowmakingprovidersupdatable)"の変更と、プロバイダー コードで行う必要がある設定について説明します。
+このトピックでは、使用可能なプロバイダーから始めることを前提としています。 更新可能なプロバイダーを作成するには、2つの手順を実行します。 まず、プロバイダーがどのようにデータストアに変更を加えるかを決定する必要があります。具体的には、変更を直ちに実行するか、更新コマンドが発行されるまで延期するかを指定します。 「プロバイダーを[更新可能](#vchowmakingprovidersupdatable)にする」セクションでは、プロバイダーコードで実行する必要がある変更と設定について説明します。
 
-次に、ご利用のプロバイダーには、コンシューマーの要求をサポートするためのすべての機能が含まれています。 確認する必要があります。 コンシューマーは、データ ストアを更新する場合、プロバイダーをデータ ストアにデータを保存するコードが含まれる必要があります。 たとえば、C ランタイム ライブラリまたは MFC を使用、データ ソースには、このような操作を実行するのに可能性があります。 セクション"[データ ソースへの書き込み](#vchowwritingtothedatasource)"データ ソースへの書き込み、NULL、既定値の処理、および列のフラグを設定する方法について説明します。
+次に、コンシューマーが要求するすべての機能をサポートするために、プロバイダーにすべての機能が含まれていることを確認する必要があります。 コンシューマーがデータストアを更新する場合は、データストアにデータを保持するコードがプロバイダーに含まれている必要があります。 たとえば、C ランタイムライブラリまたは MFC を使用して、データソースに対してこのような操作を実行することができます。 「[データソースへの書き込み](#vchowwritingtothedatasource)」では、データソースに書き込む方法、NULL 値と既定値を処理する方法、および列フラグを設定する方法について説明します。
 
 > [!NOTE]
-> [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)更新可能なプロバイダーの例を示します。 UpdatePV インストールされている MyProv として更新をサポートしています。
+> [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)は、更新可能なプロバイダーの例です。 UpdatePV は MyProv と同じですが、更新可能なサポートがあります。
 
-##  <a name="vchowmakingprovidersupdatable"></a> 更新可能なプロバイダーを作成
+##  <a name="making-providers-updatable"></a><a name="vchowmakingprovidersupdatable"></a>プロバイダーを更新可能にする
 
-更新可能なプロバイダーを行うには、データ ストアと、プロバイダーのこれらの操作を実行する方法で実行するプロバイダーを作成操作を理解することです。 具体的には、大きな問題は、データ ストアに更新プログラムが即座に実行または遅延がかどうか (バッチ)、update コマンドが発行されるまでです。
+プロバイダーを更新可能にするための鍵は、プロバイダーがデータストアに対して実行する操作と、それらの操作をプロバイダーがどのように実行するかを理解することです。 具体的には、更新コマンドが発行されるまで、データストアの更新が直ちに行われるか、遅延 (バッチ処理) されるかという主な問題があります。
 
-継承するかどうかを決定する必要がありますまず`IRowsetChangeImpl`または`IRowsetUpdateImpl`行セット クラス。 3 つのメソッドの機能の影響を実装するために選択次のうち、に応じて: `SetData`、 `InsertRows`、および`DeleteRows`します。
+まず、行セットクラスで `IRowsetChangeImpl` または `IRowsetUpdateImpl` を継承するかどうかを決定する必要があります。 どちらを実装するかに応じて、`SetData`、`InsertRows`、および `DeleteRows`の3つの方法の機能が影響を受けます。
 
-- 継承する場合[IRowsetChangeImpl](../../data/oledb/irowsetchangeimpl-class.md)、すぐにこれら 3 つのメソッドを呼び出すデータ ストアを変更します。
+- [IRowsetChangeImpl](../../data/oledb/irowsetchangeimpl-class.md)から継承する場合、これら3つのメソッドを呼び出すと、すぐにデータストアが変更されます。
 
-- 継承する場合[IRowsetUpdateImpl](../../data/oledb/irowsetupdateimpl-class.md)を呼び出すまで、メソッドは、データ ストアへの変更を遅延`Update`、 `GetOriginalData`、または`Undo`します。 更新プログラムには、いくつかの変更が含まれている場合は、バッチ モード (変更のバッチ処理で大量のメモリ オーバーヘッドを追加できることに注意してください) で実行されます。
+- [IRowsetUpdateImpl](../../data/oledb/irowsetupdateimpl-class.md)から継承する場合、メソッドは `Update`、`GetOriginalData`、または `Undo`を呼び出すまで、データストアへの変更を延期します。 更新プログラムに複数の変更が含まれる場合は、バッチモードで実行されます (変更をバッチ処理すると、大量のメモリオーバーヘッドが発生する可能性があることに注意してください)。
 
-なお`IRowsetUpdateImpl`から派生した`IRowsetChangeImpl`します。 したがって、`IRowsetUpdateImpl`機能とバッチ機能を変更できます。
+`IRowsetUpdateImpl` は `IRowsetChangeImpl`から派生することに注意してください。 したがって、`IRowsetUpdateImpl` によって、機能とバッチ機能を変更できます。
 
-### <a name="to-support-updatability-in-your-provider"></a>プロバイダーで更新をサポートするには
+### <a name="to-support-updatability-in-your-provider"></a>プロバイダーの更新可能性をサポートするには
 
-1. 行セット クラスから継承`IRowsetChangeImpl`または`IRowsetUpdateImpl`します。 これらのクラスは、データ ストアを変更するための適切なインターフェイスを提供します。
+1. 行セットクラスで、`IRowsetChangeImpl` または `IRowsetUpdateImpl`から継承します。 これらのクラスは、データストアを変更するための適切なインターフェイスを提供します。
 
-   **IRowsetChange を追加します。**
+   **IRowsetChange の追加**
 
-   追加`IRowsetChangeImpl`継承チェーンをこの形式を使用します。
+   次の形式を使用して、継承チェーンに `IRowsetChangeImpl` を追加します。
 
     ```cpp
     IRowsetChangeImpl< rowset-name, storage-name >
     ```
 
-   追加も`COM_INTERFACE_ENTRY(IRowsetChange)`を`BEGIN_COM_MAP`行セット クラスでセクション。
+   また、行セットクラスの `BEGIN_COM_MAP` セクションに `COM_INTERFACE_ENTRY(IRowsetChange)` を追加します。
 
-   **IRowsetUpdate を追加します。**
+   **IRowsetUpdate の追加**
 
-   追加`IRowsetUpdate`継承チェーンをこの形式を使用します。
+   次の形式を使用して、継承チェーンに `IRowsetUpdate` を追加します。
 
     ```cpp
     IRowsetUpdateImpl< rowset-name, storage>
     ```
 
    > [!NOTE]
-   > 削除する必要があります、`IRowsetChangeImpl`継承チェーンからの行。 ディレクティブの前に説明したこの例外が 1 つのコードを含める必要があります`IRowsetChangeImpl`します。
+   > 継承チェーンから `IRowsetChangeImpl` 行を削除する必要があります。 前に説明したディレクティブに対するこの例外には、`IRowsetChangeImpl`用のコードが含まれている必要があります。
 
-1. 次の COM マップに追加 (`BEGIN_COM_MAP ... END_COM_MAP`)。
+1. COM マップ (`BEGIN_COM_MAP ... END_COM_MAP`) に次のコードを追加します。
 
-   |  実装する場合   |           COM マップに追加します。             |
+   |  を実装する場合   |           COM マップに追加             |
    |---------------------|--------------------------------------|
    | `IRowsetChangeImpl` | `COM_INTERFACE_ENTRY(IRowsetChange)` |
    | `IRowsetUpdateImpl` | `COM_INTERFACE_ENTRY(IRowsetUpdate)` |
 
-   | 実装する場合 | プロパティ セットのマップに追加します。 |
+   | を実装する場合 | プロパティセットマップに追加 |
    |----------------------|-----------------------------|
    | `IRowsetChangeImpl` | `PROPERTY_INFO_ENTRY_VALUE(IRowsetChange, VARIANT_FALSE)` |
    | `IRowsetUpdateImpl` | `PROPERTY_INFO_ENTRY_VALUE(IRowsetUpdate, VARIANT_FALSE)` |
 
-1. コマンドで、次のプロパティ セット マップに追加 (`BEGIN_PROPSET_MAP ... END_PROPSET_MAP`)。
+1. コマンドで、プロパティセットマップ (`BEGIN_PROPSET_MAP ... END_PROPSET_MAP`) に次のコードを追加します。
 
-   |  実装する場合   |                                             プロパティ セットのマップに追加します。                                              |
+   |  を実装する場合   |                                             プロパティセットマップに追加                                              |
    |---------------------|------------------------------------------------------------------------------------------------------------------|
    | `IRowsetChangeImpl` |                            `PROPERTY_INFO_ENTRY_VALUE(IRowsetChange, VARIANT_FALSE)`                             |
    | `IRowsetUpdateImpl` | `PROPERTY_INFO_ENTRY_VALUE(IRowsetChange, VARIANT_FALSE)PROPERTY_INFO_ENTRY_VALUE(IRowsetUpdate, VARIANT_FALSE)` |
 
-1. プロパティ セット マップにも含めますすべて、次の設定の下に表示されます。
+1. プロパティセットマップでは、以下の設定をすべて含める必要があります。
 
     ```cpp
     PROPERTY_INFO_ENTRY_VALUE(UPDATABILITY, DBPROPVAL_UP_CHANGE |
@@ -100,95 +100,95 @@ ms.locfileid: "62361874"
       DBPROPFLAGS_READ, VARIANT_FALSE, 0)
     ```
 
-   プロパティの Id と値を Atldb.h で探すことによってこれらのマクロの呼び出しで使用する値を見つけることができます (Atldb.h と異なる場合、オンライン ドキュメント、Atldb.h よりも優先されますマニュアルを参照)。
+   これらのマクロの呼び出しで使用されている値は、プロパティの Id と値について Atldb.h を調べることによって確認できます (Atldb.h がオンラインドキュメントとは異なる場合、Atldb.h はドキュメントに置き換えられます)。
 
    > [!NOTE]
-   > 多くは、`VARIANT_FALSE`と`VARIANT_TRUE`設定は、OLE DB テンプレートに必要な; OLE DB 仕様によれば、読み取り/書き込みができるが、OLE DB テンプレートは 1 つの値のみをサポートします。
+   > OLE DB テンプレートでは、`VARIANT_FALSE` と `VARIANT_TRUE` の設定の多くが必要です。OLE DB の仕様では、読み取り/書き込みが可能であることが示されていますが、OLE DB テンプレートでサポートされる値は1つだけです。
 
    **IRowsetChangeImpl を実装する場合**
 
-   実装する場合`IRowsetChangeImpl`プロバイダーに、次のプロパティを設定する必要があります。 これらのプロパティは、主にを介してインターフェイスを要求する使用`ICommandProperties::SetProperties`します。
+   `IRowsetChangeImpl`を実装する場合は、プロバイダーで次のプロパティを設定する必要があります。 これらのプロパティは、主に `ICommandProperties::SetProperties`を通じてインターフェイスを要求するために使用されます。
 
-   - `DBPROP_IRowsetChange`:自動的にこの設定`DBPROP_IRowsetChange`します。
+   - `DBPROP_IRowsetChange`: この設定を行うと、`DBPROP_IRowsetChange`が自動的に設定されます。
 
-   - `DBPROP_UPDATABILITY`:サポートされているメソッドを指定するビットマスク`IRowsetChange`: `SetData`、 `DeleteRows`、または`InsertRow`します。
+   - `DBPROP_UPDATABILITY`: `SetData`、`DeleteRows`、または `InsertRow``IRowsetChange`でサポートされているメソッドを指定するビットマスク。
 
-   - `DBPROP_CHANGEINSERTEDROWS`:コンシューマーが呼び出すことができます`IRowsetChange::DeleteRows`または`SetData`新しく挿入された行のできます。
+   - `DBPROP_CHANGEINSERTEDROWS`: コンシューマーは、新しく挿入された行に対して `IRowsetChange::DeleteRows` または `SetData` を呼び出すことができます。
 
-   - `DBPROP_IMMOBILEROWS`:行セットは、挿入または更新された行を並べ替えられません。
+   - `DBPROP_IMMOBILEROWS`: 行セットは、挿入または更新された行の順序を変更しません。
 
    **IRowsetUpdateImpl を実装する場合**
 
-   実装する場合`IRowsetUpdateImpl`、する必要があります、次プロパティを設定して、プロバイダー、さらにすべてのプロパティを設定する`IRowsetChangeImpl`上記に示した。
+   `IRowsetUpdateImpl`を実装する場合は、前に示した `IRowsetChangeImpl` のすべてのプロパティを設定するだけでなく、プロバイダーで次のプロパティを設定する必要があります。
 
-   - `DBPROP_IRowsetUpdate`。
+   - [https://login.microsoftonline.com/consumers/](`DBPROP_IRowsetUpdate`)
 
-   - `DBPROP_OWNINSERT`:READ_ONLY と VARIANT_TRUE にする必要があります。
+   - `DBPROP_OWNINSERT`: READ_ONLY と VARIANT_TRUE である必要があります。
 
-   - `DBPROP_OWNUPDATEDELETE`:READ_ONLY と VARIANT_TRUE にする必要があります。
+   - `DBPROP_OWNUPDATEDELETE`: READ_ONLY と VARIANT_TRUE である必要があります。
 
-   - `DBPROP_OTHERINSERT`:READ_ONLY と VARIANT_TRUE にする必要があります。
+   - `DBPROP_OTHERINSERT`: READ_ONLY と VARIANT_TRUE である必要があります。
 
-   - `DBPROP_OTHERUPDATEDELETE`:READ_ONLY と VARIANT_TRUE にする必要があります。
+   - `DBPROP_OTHERUPDATEDELETE`: READ_ONLY と VARIANT_TRUE である必要があります。
 
-   - `DBPROP_REMOVEDELETED`:READ_ONLY と VARIANT_TRUE にする必要があります。
+   - `DBPROP_REMOVEDELETED`: READ_ONLY と VARIANT_TRUE である必要があります。
 
-   - `DBPROP_MAXPENDINGROWS`。
+   - [https://login.microsoftonline.com/consumers/](`DBPROP_MAXPENDINGROWS`)
 
    > [!NOTE]
-   > 通知をサポートする場合は、その他のプロパティも; をもがあります。参照してください`IRowsetNotifyCP`このリスト。
+   > 通知をサポートしている場合は、他のいくつかのプロパティも必要になることがあります。この一覧については、`IRowsetNotifyCP` に関するセクションを参照してください。
 
-##  <a name="vchowwritingtothedatasource"></a> データ ソースへの書き込み
+##  <a name="writing-to-the-data-source"></a><a name="vchowwritingtothedatasource"></a>データソースへの書き込み
 
-データ ソースからの読み取り、呼び出し、`Execute`関数。 データ ソースへの書き込みを呼び出して、`FlushData`関数。 (一般的な意味では、テーブルまたはインデックスをディスクに加えた変更を保存するための手段をフラッシュします)。
+データソースから読み取るには、`Execute` 関数を呼び出します。 データソースに書き込むには、`FlushData` 関数を呼び出します。 (一般に、フラッシュとは、テーブルまたはインデックスに対して行った変更をディスクに保存することを意味します)。
 
 ```cpp
 FlushData(HROW, HACCESSOR);
 ```
 
-行ハンドル (HROW) およびアクセサーのハンドル (HACCESSOR) 引数を記述するリージョンを指定できます。 通常、一度に 1 つのデータ フィールドを作成します。
+Row handle (HROW) 引数と accessor handle (HACCESSOR) 引数を使用すると、書き込むリージョンを指定できます。 通常は、一度に1つのデータフィールドを記述します。
 
-`FlushData`メソッドは、最初に格納された形式でデータを書き込みます。 この関数を上書きしない場合、プロバイダーが正常に機能が、変更は、データ ストアにはフラッシュされません。
+`FlushData` メソッドは、データを最初に格納された形式で書き込みます。 この関数をオーバーライドしない場合、プロバイダーは正常に機能しますが、変更はデータストアにフラッシュされません。
 
-### <a name="when-to-flush"></a>フラッシュします。
+### <a name="when-to-flush"></a>フラッシュするタイミング
 
-データは、データ ストアに書き込まれる必要があるたびに、プロバイダー テンプレートは FlushData を呼び出すこれは、通常 (が常にではありません) が発生した、次の関数呼び出しの結果として。
+データがデータストアに書き込まれる必要がある場合は、プロバイダーテンプレートによって FlushData が呼び出されます。これは通常、次の関数を呼び出した結果として発生します (常にではありません)。
 
 - `IRowsetChange::DeleteRows`
 
 - `IRowsetChange::SetData`
 
-- `IRowsetChange::InsertRows` (行を挿入する新しいデータがある場合)
+- `IRowsetChange::InsertRows` (行に挿入する新しいデータがある場合)
 
 - `IRowsetUpdate::Update`
 
-### <a name="how-it-works"></a>しくみ
+### <a name="how-it-works"></a>動作のしくみ
 
-コンシューマーは、フラッシュ (更新) などを必要とする呼び出しを行い、この呼び出しは、プロバイダーは、常には、次に渡されます。
+コンシューマーは、フラッシュ (更新など) を必要とする呼び出しを行い、この呼び出しがプロバイダーに渡されます。この呼び出しは、常に次のことを実行します。
 
-- 呼び出し`SetDBStatus`バインド状態値があるたびにします。
+- 状態の値がバインドされている場合は常に `SetDBStatus` を呼び出します。
 
-- 列のフラグを確認します。
+- 列フラグをチェックします。
 
-- `IsUpdateAllowed`.
+- `IsUpdateAllowed` を呼び出します。
 
-これら 3 つの手順は、セキュリティを確保します。 その後、プロバイダーの呼び出し`FlushData`します。
+これらの3つの手順は、セキュリティを提供するのに役立ちます。 次に、プロバイダーは `FlushData`を呼び出します。
 
 ### <a name="how-to-implement-flushdata"></a>FlushData を実装する方法
 
-実装する`FlushData`、いくつかの問題を考慮する必要があります。
+`FlushData`を実装するには、いくつかの問題を考慮する必要があります。
 
-データ ストアが変更を処理できるようにします。
+データストアが変更を処理できることを確認します。
 
-NULL 値を処理します。
+NULL 値の処理。
 
-### <a name="handling-default-values"></a>既定値を処理します。
+### <a name="handling-default-values"></a>既定値の処理。
 
-独自に実装する`FlushData`メソッド、する必要があります。
+独自の `FlushData` メソッドを実装するには、次の手順を実行する必要があります。
 
-- 行セット クラスに移動します。
+- 行セットクラスにアクセスします。
 
-- 行セットでは、クラスは、宣言を配置します。
+- 行セットクラスで、次の宣言を記述します。
 
    ```cpp
    HRESULT FlushData(HROW, HACCESSOR)
@@ -197,21 +197,21 @@ NULL 値を処理します。
    }
    ```
 
-- 実装を提供`FlushData`します。
+- `FlushData`の実装を提供します。
 
-適切に実装した`FlushData`行と実際に更新される列のみを格納します。 HROW と HACCESSOR パラメーターを使用するには、現在の行と最適化のために格納されている列を決定します。
+`FlushData` の適切な実装では、実際に更新される行と列だけが格納されます。 HROW パラメーターと HACCESSOR パラメーターを使用して、最適化のために格納されている現在の行と列を特定できます。
 
-通常、独自のネイティブなデータ ストアは、最大の課題が処理します。 可能であれば、みてください。
+通常、最大の課題は、独自のネイティブデータストアを使用することです。 可能であれば、次のことを試してください。
 
-- できるだけ単純に、データ ストアへの書き込みのメソッドを保持します。
+- データストアへの書き込み方法は、できるだけ単純なものにしておいてください。
 
-- NULL 値 (推奨ですが省略可能) を処理します。
+- NULL 値を処理します (省略可能ですが、推奨)。
 
-- 既定値 (推奨ですが省略可能) を処理します。
+- 既定値を処理します (省略可能ですが、推奨)。
 
-最善の方法では、NULL と既定値のデータ ストアに指定された実際の値があります。 このデータを見積もることができますを用意することをお勧めします。 ない場合は、NULL と既定値を許可しないことをお勧めします。
+最善の方法は、NULL 値と既定値のデータストアに実際に指定された値を設定することです。 このデータを推定できる場合は、この方法をお勧めします。 それ以外の場合は、NULL 値と既定値を許可しないことをお勧めします。
 
-次の例はどのように`FlushData`で実装されて、`RUpdateRowset`クラス、`UpdatePV`サンプル (サンプル コードでを参照してください)。
+次の例は、`UpdatePV` サンプルの `RUpdateRowset` クラスで `FlushData` を実装する方法を示しています (サンプルコードの「Rowset」を参照してください)。
 
 ```cpp
 ///////////////////////////////////////////////////////////////////////////
@@ -295,25 +295,25 @@ HRESULT FlushData(HROW, HACCESSOR)
 
 ### <a name="handling-changes"></a>変更の処理
 
-変更を処理するために、プロバイダーでは、まず (テキスト ファイルまたはビデオ ファイル) など、データ ストアに変更するための機能を確認する必要があります。 そうでない場合は、プロバイダーのプロジェクトからそのコードを個別に作成してください。
+プロバイダーが変更を処理できるようにするには、まず、データストア (テキストファイルやビデオファイルなど) に変更を加えるための機能があることを確認する必要があります。 そうでない場合は、プロバイダープロジェクトとは別にそのコードを作成する必要があります。
 
 ### <a name="handling-null-data"></a>NULL データの処理
 
-エンドユーザーが NULL のデータを送信することができます。 データ ソース内のフィールドに NULL 値を記述する場合は、潜在的な問題があります。 市区町村や郵便; の値を受け取る順序が取れるアプリケーションを想像してください。いずれかまたは両方の値がどちらもないを承諾できないため、その場合は配信が可能なことでした。 そのため、特定のアプリケーションの意味のあるフィールドで NULL 値の組み合わせを制限する必要があるとします。
+エンドユーザーが NULL データを送信する可能性があります。 データソース内のフィールドに NULL 値を書き込むと、潜在的な問題が発生する可能性があります。 市区町村と郵便番号の値を受け入れる注文書作成アプリケーションを想像してください。この場合、いずれかまたは両方の値を受け入れることができますが、その場合は配信できないため、どちらも受け入れません。 そのため、アプリケーションにとって意味のあるフィールドで、NULL 値の特定の組み合わせを制限する必要があります。
 
-プロバイダー開発者は、そのデータを格納する方法や、データ ストアからのデータの読み取り方法をユーザーに指定する方法を検討する必要があります。 具体的には、データ ソースのデータを行セットのデータの状態を変更する方法を検討する必要があります (たとえば、DataStatus = NULL)。 コンシューマーが NULL 値を含むフィールドにアクセスするときに返される値を決定します。
+プロバイダー開発者は、データの格納方法、データストアからデータを読み取る方法、およびユーザーに対してそのデータを指定する方法を検討する必要があります。 具体的には、データソース内の行セットデータのデータの状態を変更する方法を検討する必要があります (DataStatus = NULL など)。 コンシューマーが NULL 値を含むフィールドにアクセスしたときに返す値を決定します。
 
-UpdatePV サンプル; でコードを見るプロバイダーが NULL のデータを処理する方法を示しています。 UpdatePV では、プロバイダーは、文字列"NULL"を記述することで、データ ストアに NULL データを格納します。 データ ストアから NULL データを読み取り、ときにその文字列を認識し、NULL 文字列を作成する、バッファーを空にします。 オーバーライドも`IRowsetImpl::GetDBStatus`でそのデータ値が空の場合、DBSTATUS_S_ISNULL を返します。
+UpdatePV サンプルのコードを確認します。これは、プロバイダーが NULL データを処理する方法を示しています。 UpdatePV では、データストアに文字列 "NULL" を記述することによって、プロバイダーは NULL データを格納します。 データストアから NULL データを読み取ると、その文字列が認識され、バッファーが空になり、NULL 文字列が作成されます。 また、データ値が空の場合に DBSTATUS_S_ISNULL を返す `IRowsetImpl::GetDBStatus` のオーバーライドもあります。
 
-### <a name="marking-nullable-columns"></a>Null 許容列をマークします。
+### <a name="marking-nullable-columns"></a>Null 値を許容する列をマークする
 
-また、スキーマ行セットを実装する場合 (を参照してください`IDBSchemaRowsetImpl`)、列が null 許容である (通常は、プロバイダーで CxxxSchemaColSchemaRowset によってマーク) DBSCHEMA_COLUMNS 行セットで指定する必要があります、実装します。
+スキーマ行セットも実装する場合は (`IDBSchemaRowsetImpl`を参照してください)、列が null 値を許容することを、DBSCHEMA_COLUMNS 行セット (通常は CxxxSchemaColSchemaRowset によってプロバイダーでマークされます) で指定する必要があります。
 
-すべての null 許容列を含むのバージョンの DBCOLUMNFLAGS_ISNULLABLE 値指定する必要があります、`GetColumnInfo`します。
+また、使用しているバージョンの `GetColumnInfo`の DBCOLUMNFLAGS_ISNULLABLE 値が、null 許容型のすべての列に含まれていることを指定する必要もあります。
 
-OLE DB テンプレートの実装、null 許容型として列をマークできなかった場合、プロバイダーで、値を含める必要がありに null 値を送信するコンシューマーは許可されません。
+OLE DB テンプレートの実装では、列を nullable としてマークできない場合、プロバイダーは値が含まれている必要があり、コンシューマーが null 値を送信することを許可しません。
 
-次の例は、どのように`CommonGetColInfo`CUpdateCommand 関数を実装 (UpProvRS.cpp を参照してください) UpdatePV で。 列はこの DBCOLUMNFLAGS_ISNULLABLE null 許容列のある方法に注意してください。
+次の例は、`CommonGetColInfo` 関数が CUpdateCommand に実装される方法を示しています (UpdatePV の「UpProvRS」を参照してください)。 列が null 値を許容する列に対してこの DBCOLUMNFLAGS_ISNULLABLE を持つことに注意してください。
 
 ```cpp
 /////////////////////////////////////////////////////////////////////////////
@@ -370,11 +370,11 @@ ATLCOLUMNINFO* CommonGetColInfo(IUnknown* pPropsUnk, ULONG* pcCols, bool bBookma
 
 ### <a name="default-values"></a>既定値
 
-NULL のデータと同様には、既定値の変更を処理する責任があります。
+NULL データと同様に、既定値の変更に対処する必要があります。
 
-既定値は`FlushData`と`Execute`S_OK を返します。 したがって、この関数を上書きしない場合、変更を正常に表示されます (S_OK が返される、データ ストアに転送されませんが。
+既定では `FlushData` と `Execute` は S_OK を返します。 このため、この関数をオーバーライドしない場合、変更は正常に表示されます (S_OK が返されます) が、データストアには送信されません。
 
-`UpdatePV` (では)、サンプル、`SetDBStatus`メソッドは、既定値を次のように処理します。
+`UpdatePV` サンプル (Rowset) では、`SetDBStatus` メソッドは次のように既定値を処理します。
 
 ```cpp
 virtual HRESULT SetDBStatus(DBSTATUS* pdbStatus, CSimpleRow* pRow,
@@ -411,13 +411,13 @@ virtual HRESULT SetDBStatus(DBSTATUS* pdbStatus, CSimpleRow* pRow,
 }
 ```
 
-### <a name="column-flags"></a>列のフラグ
+### <a name="column-flags"></a>列フラグ
 
-内のメタデータを使用して設定する必要があります、列の既定値をサポートする場合、\<プロバイダー クラス\>SchemaRowset クラス。 `m_bColumnHasDefault = VARIANT_TRUE` を設定します。
+列の既定値をサポートする場合は、\<プロバイダークラス\>SchemaRowset クラスのメタデータを使用して設定する必要があります。 `m_bColumnHasDefault = VARIANT_TRUE` を設定します。
 
-また、DBCOLUMNFLAGS を使用して列挙型指定されている列のフラグを設定する責任があります。 列のフラグには、列の特性について説明します。
+また、DBCOLUMNFLAGS 列挙型を使用して指定された列フラグを設定する必要があります。 列フラグは、列の特性を記述します。
 
-たとえば、`CUpdateSessionColSchemaRowset`クラス`UpdatePV`(で Session.h)、最初の列はこのように設定設定。
+たとえば、`UpdatePV` (セッション .h) の `CUpdateSessionColSchemaRowset` クラスでは、最初の列は次のように設定されます。
 
 ```cpp
 // Set up column 1
@@ -432,8 +432,8 @@ lstrcpyW(trData[0].m_szColumnDefault, OLESTR("0"));
 m_rgRowData.Add(trData[0]);
 ```
 
-このコードを指定します、特に、列が 0 の場合、書き込み可能であるの既定値をサポートしていると、すべてのデータ列を同じ長さであること。 可変長列のデータを表示する場合は、このフラグを設定するができません。
+このコードでは、特に、列が既定値の0をサポートし、書き込み可能であること、および列内のすべてのデータの長さが同じであることを指定します。 列のデータの長さを可変にする場合は、このフラグを設定しません。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [OLE DB プロバイダーの作成](creating-an-ole-db-provider.md)

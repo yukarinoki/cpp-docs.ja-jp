@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2487
 ms.assetid: 95d734fb-64ac-488d-b799-64f084eecb09
-ms.openlocfilehash: 8b888b46ea44af5855ad21b3e6bc16c09493e08c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 33824d6e88aa4885aa5e330f8f5c9c6ee0065860
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62361595"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80205076"
 ---
 # <a name="compiler-error-c2487"></a>コンパイラ エラー C2487
 
-'identifier': dll インターフェイス クラスのメンバーを dll インターフェイスと共に宣言することはできません
+' identifier ': dll インターフェイスクラスのメンバーを dll インターフェイスと共に宣言することはできません
 
-クラス全体、または DLL のインターフェイスを持つ、非 DLL インターフェイス クラスの特定のメンバーを宣言することができます。 DLL インターフェイスと共にクラスを宣言および DLL インターフェイスと共にそのクラスのメンバーを宣言できません。
+DLL インターフェイスを使用して、クラス全体、または DLL 以外のインターフェイスクラスの特定のメンバーを宣言できます。 DLL インターフェイスを使用してクラスを宣言し、そのクラスのメンバーを DLL インターフェイスで宣言することはできません。

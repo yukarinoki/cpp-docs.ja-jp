@@ -8,27 +8,27 @@ helpviewer_keywords:
 - conformance testing [OLE DB]
 - OLE DB providers, testing
 ms.assetid: d1a4f147-2edd-476c-b452-0e6a0ac09891
-ms.openlocfilehash: 9f78b16bc30651560137a39286460a8e5ceccd40
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eda4dccda147ddd4776bb56e649f539a7550abd1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62282817"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209782"
 ---
 # <a name="passing-ole-db-conformance-tests"></a>OLE DB 準拠合致テスト
 
-プロバイダーはより一貫性のあるは、データ アクセスの SDK は、OLE DB 準拠合致テストのセットを提供します。 テストは、プロバイダーのすべての側面を確認し、こととして、プロバイダーの関数が想定されている妥当な保証を提供します。 Microsoft Data Access SDK では、OLE DB 準拠合致テストを確認できます。 このセクションでは、必要な手順への準拠テストに合格するについて説明します。 OLE DB 準拠合致テストの実行方法の詳細については、SDK を参照してください。
+プロバイダーの一貫性を高めるために、データアクセス SDK には一連の OLE DB 準拠テストが用意されています。 テストでは、プロバイダーのすべての側面を確認し、プロバイダーが期待どおりに機能することを合理的に保証します。 OLE DB 適合テストについては、Microsoft Data Access SDK を参照してください。 このセクションでは、準拠テストに合格するために必要な作業について説明します。 OLE DB 準拠テストの実行の詳細については、SDK を参照してください。
 
-## <a name="running-the-conformance-tests"></a>準拠テストを実行します。
+## <a name="running-the-conformance-tests"></a>準拠テストの実行
 
-Visual C 6.0 では、OLE DB プロバイダー テンプレートは、多数の値とプロパティを確認するためのフック関数を追加します。 これらの関数のほとんどは、準拠合致テストへの応答に追加されました。
+Visual C++ 6.0 では、OLE DB プロバイダーテンプレートに、値とプロパティを確認できるようにするフック関数がいくつか追加されました。 これらの関数のほとんどは、準拠テストへの応答として追加されました。
 
 > [!NOTE]
-> OLE DB 準拠のテストに合格する、プロバイダーのいくつかの検証機能を追加する必要があります。
+> OLE DB 準拠テストに渡すには、プロバイダーに対していくつかの検証関数を追加する必要があります。
 
-このプロバイダーでは、2 つの検証ルーチンが必要です。 最初のルーチン`CRowsetImpl::ValidateCommandID`は、行セット クラスの一部です。 プロバイダー テンプレートによって、行セットの作成時に呼び出されます。 このサンプルでは、このルーチンを使用してインデックスをサポートしないことをコンシューマーに通知します。 最初の呼び出しが、 `CRowsetImpl::ValidateCommandID` (注、プロバイダーで使用される、`_RowsetBaseClass`に対するインターフェイス マップに追加された typedef`CCustomRowset`で[プロバイダーのブックマーク サポート](../../data/oledb/provider-support-for-bookmarks.md)テンプレートの長い行を入力する必要はありませんので、引数)。 次に、インデックス パラメーターが NULL (コンシューマーが私たちのインデックスを使用することを示します) でない場合は、DB_E_NOINDEX を返します。 コマンド Id の詳細については、OLE DB 仕様を参照してくださいし、探して`IOpenRowset::OpenRowset`します。
+このプロバイダーには、2つの検証ルーチンが必要です。 最初のルーチンである `CRowsetImpl::ValidateCommandID`は、行セットクラスの一部です。 プロバイダーテンプレートによって行セットが作成されるときに呼び出されます。 このサンプルでは、このルーチンを使用して、インデックスがサポートされていないことをコンシューマーに通知します。 最初の呼び出しは `CRowsetImpl::ValidateCommandID` します (プロバイダーは、[ブックマークをサポート](../../data/oledb/provider-support-for-bookmarks.md)する `CCustomRowset` ためにインターフェイスマップに追加された `_RowsetBaseClass` typedef を使用します。そのため、テンプレート引数の長い行を入力する必要はありません)。 次に、インデックスパラメーターが NULL でない場合に DB_E_NOINDEX を返します (これは、コンシューマーが私のためにインデックスを使用することを示します)。 コマンド Id の詳細については、OLE DB の仕様を参照して `IOpenRowset::OpenRowset`を検索してください。
 
-次のコードは、`ValidateCommandID`検証ルーチン。
+次のコードは、`ValidateCommandID` 検証ルーチンです。
 
 ```cpp
 /////////////////////////////////////////////////////////////////////
@@ -48,12 +48,12 @@ HRESULT ValidateCommandID(DBID* pTableID, DBID* pIndexID)
 }
 ```
 
-プロバイダー テンプレートの呼び出し、`OnPropertyChanged`メソッド、データ メンバーのグループのプロパティが変更されるたびにします。 適切なオブジェクトに追加の他のグループのプロパティを処理する場合は、(は、そのプロパティの移動、`CCustomSession`クラス)。
+プロバイダーテンプレートは、ユーザーが DBPROPSET_ROWSET グループのプロパティを変更するたびに、`OnPropertyChanged` メソッドを呼び出します。 他のグループのプロパティを処理する場合は、適切なオブジェクトに追加します (つまり、DBPROPSET_SESSION によって `CCustomSession` クラスにチェックインされます)。
 
-コードは、まず、プロパティを別にリンクされているかどうかを確認します。 プロパティがチェーンされている場合、DBPROP_BOOKMARKS プロパティを設定`True`します。 OLE DB 仕様の「付録 C には、プロパティに関する情報が含まれていますいます。 この情報も示しますプロパティがもう 1 つにチェーンされているかどうか。
+このコードは、まず、プロパティが別のにリンクされているかどうかを確認します。 プロパティがチェーンされている場合は、DBPROP_BOOKMARKS プロパティを `True`に設定します。 OLE DB 仕様の付録 C には、プロパティに関する情報が含まれています。 また、この情報は、プロパティが別のプロパティにチェーンされているかどうかも示します。
 
-追加することも、`IsValidValue`ルーチンをコードにします。 テンプレートの呼び出し`IsValidValue`プロパティを設定しようとしています。 プロパティ値を設定するときに、追加の処理を必要とする場合は、このメソッドをオーバーライドします。 プロパティ セットごとにこれらのメソッドのいずれかがあることができます。
+`IsValidValue` ルーチンをコードに追加することもできます。 テンプレートは、プロパティを設定しようとしたときに `IsValidValue` を呼び出します。 プロパティ値を設定するときに追加の処理が必要な場合は、このメソッドをオーバーライドします。 これらのメソッドのいずれかをプロパティセットごとに設定できます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [高度なプロバイダー手法](../../data/oledb/advanced-provider-techniques.md)

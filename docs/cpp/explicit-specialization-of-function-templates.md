@@ -8,22 +8,22 @@ helpviewer_keywords:
 - declaring functions [C++], specialization of function template
 - specialization of function templates
 ms.assetid: eb0fcb73-eaed-42a1-9b83-14b055a34bf8
-ms.openlocfilehash: 3d91383f895f1a8be983efe42f685419ca988823
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c9d77cef790bdd0a65651ffb7246e685175482b1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62184275"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179992"
 ---
 # <a name="explicit-specialization-of-function-templates"></a>関数テンプレートの明示的特殊化
 
-関数テンプレートを使用すると、特定の型のために関数テンプレートの明示的な特殊化 (オーバーライド) を提供することによって、その型の特別な動作を定義できます。 例:
+関数テンプレートを使用すると、特定の型のために関数テンプレートの明示的な特殊化 (オーバーライド) を提供することによって、その型の特別な動作を定義できます。 次に例を示します。
 
 ```cpp
 template<> void MySwap(double a, double b);
 ```
 
-この宣言では、別の関数を定義できます。**二重**変数。 などの非テンプレート関数では、標準的な型変換 (型の変数の昇格など**float**に**二重**) 適用されます。
+この宣言により、 **double**変数に対して別の関数を定義できます。 非テンプレート関数と同様に、標準型変換 ( **float**型の変数の昇格**など) が**適用されます。
 
 ## <a name="example"></a>例
 
@@ -51,6 +51,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [関数テンプレート](../cpp/function-templates.md)

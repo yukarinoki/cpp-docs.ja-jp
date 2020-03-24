@@ -14,16 +14,16 @@ f1_keywords:
 helpviewer_keywords:
 - WRL namespace
 ms.assetid: 01118a8f-f564-4859-b87e-9444848585a1
-ms.openlocfilehash: 749469c7ae2acf3a0da92d24a51bbfca9b68971d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c92251dacbfa17e8f1ac0cbdc41aa9b06118ac91
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392025"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213773"
 ---
 # <a name="microsoftwrl-namespace"></a>Microsoft::WRL 名前空間
 
-Windows ランタイム C++ テンプレート ライブラリを構成する基本的な型を定義します。
+Windows ランタイムC++テンプレートライブラリを構成する基本型を定義します。
 
 ## <a name="syntax"></a>構文
 
@@ -33,15 +33,15 @@ namespace Microsoft::WRL;
 
 ## <a name="members"></a>メンバー
 
-### <a name="typedefs"></a>Typedef
+### <a name="typedefs"></a>Typedefs
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |`InhibitWeakReferencePolicy`|`RuntimeClassFlags<WinRt | InhibitWeakReference>`|
 
 ### <a name="classes"></a>クラス
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |[ActivationFactory クラス](activationfactory-class.md)|1 つ以上のクラスを Windows ランタイムによってアクティブ化できるようにします。|
 |[AsyncBase クラス](asyncbase-class.md)|Windows ランタイムの非同期ステート マシンを実装します。|
@@ -58,38 +58,38 @@ namespace Microsoft::WRL;
 
 ### <a name="structures"></a>構造体
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |[ChainInterfaces 構造体](chaininterfaces-structure.md)|一連のインターフェイス ID に適用できる検証および初期化関数を指定します。|
-|[CloakedIid 構造体](cloakediid-structure.md)|示します、 `RuntimeClass`、`Implements`と`ChainInterfaces`テンプレートの指定したインターフェイスが IID リストにアクセスできないことです。|
-|[Implements 構造体](implements-structure.md)|実装`QueryInterface`と`GetIid`のインターフェイスで指定します。|
+|[CloakedIid 構造体](cloakediid-structure.md)|指定したインターフェイスに IID の一覧でアクセスできない `RuntimeClass`、`Implements`、および `ChainInterfaces` テンプレートを示します。|
+|[Implements 構造体](implements-structure.md)|指定されたインターフェイスの `QueryInterface` と `GetIid` を実装します。|
 |[MixIn 構造体](mixin-structure.md)|ランタイム クラスが Windows ランタイム インターフェイス (存在する場合) から派生し、次にクラシック COM インターフェイスから派生していることを確認します。|
-|[RuntimeClassFlags 構造体](runtimeclassflags-structure.md)|インスタンスの型が含まれています、 [RuntimeClass](runtimeclass-class.md)します。|
+|[RuntimeClassFlags 構造体](runtimeclassflags-structure.md)|[RuntimeClass](runtimeclass-class.md)のインスタンスの型を格納します。|
 
-### <a name="enumerations"></a>列挙
+### <a name="enumerations"></a>列挙型
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
-|[AsyncResultType 列挙型](asyncresulttype-enumeration.md)|によって返される結果の種類を指定します、`GetResults()`メソッド。|
+|[AsyncResultType 列挙型](asyncresulttype-enumeration.md)|`GetResults()` メソッドによって返される結果の種類を指定します。|
 |[ModuleType 列挙型](moduletype-enumeration.md)|モジュールがインプロセス サーバーまたはアウトプロセス サーバーをサポートするかどうかを指定します。|
-|[RuntimeClassType 列挙型](runtimeclasstype-enumeration.md)|型を指定[RuntimeClass](runtimeclass-class.md)サポートされているインスタンス。|
+|[RuntimeClassType 列挙型](runtimeclasstype-enumeration.md)|サポートされている[RuntimeClass](runtimeclass-class.md)インスタンスの種類を指定します。|
 
 ### <a name="functions"></a>関数
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
 |[AsWeak 関数](asweak-function.md)|指定されたインスタンスへの弱い参照を取得します。|
 |[Callback 関数 (WRL)](callback-function-wrl.md)|メンバー関数がコールバック メソッドであるオブジェクトを作成します。|
 |[CreateActivationFactory 関数](createactivationfactory-function.md)|Windows ランタイムによるアクティブ化が可能な、指定されたクラスのインスタンスを生成するファクトリを作成します。|
 |[CreateClassFactory 関数](createclassfactory-function.md)|指定されたクラスのインスタンスを生成するファクトリを作成します。|
-|[Make 関数](make-function.md)|指定した Windows ランタイム クラスを初期化します。|
+|[Make 関数](make-function.md)|指定した Windows ランタイムクラスを初期化します。|
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** async.h、client.h、corewrappers.h、event.h、ftm.h、implements.h、internal.h、module.h
+**Header:** async、client、corewrappers .h、event .h、ftm、およびを実装します。 .h,、内部 .h,、.h,、.h
 
-**名前空間:** Microsoft::wrl
+**名前空間:** Microsoft::WRL
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [Microsoft::WRL::Wrappers 名前空間](microsoft-wrl-wrappers-namespace.md)

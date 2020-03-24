@@ -21,16 +21,16 @@ f1_keywords:
 helpviewer_keywords:
 - __p__fmode
 ms.assetid: 1daa1394-81eb-43aa-a71b-4cc6acf3207b
-ms.openlocfilehash: 6f7676fc5c9958be3d0567e6bf22a11367094150
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
-ms.translationtype: HT
+ms.openlocfilehash: 2364a22d52c5bc418e4499a4a639c8e06559063a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939982"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171451"
 ---
 # <a name="__p__fmode"></a>__p__fmode
 
-ファイルの入出力操作に対して既定の*ファイル変換モード*を指定する `_fmode` グローバル変数を指し示します。
+ファイルの入出力操作に対して既定の`_fmode`ファイル変換モード*を指定する*  グローバル変数を指し示します。
 
 ## <a name="syntax"></a>構文
 
@@ -47,7 +47,7 @@ int* __p__fmode(
 
 `__p__fmode` 関数は内部使用専用であり、ユーザー コードから呼び出すことはできません。
 
-ファイル変換モードは、[_open](../c-runtime-library/reference/open-wopen.md) および [_pipe](../c-runtime-library/reference/pipe.md) 入出力操作に対して `binary` または `text` の変換を指定します。 詳細については、「[_fmode](../c-runtime-library/fmode.md)」をご覧ください。
+ファイル変換モードは、`binary`_open`text` および [_pipe](../c-runtime-library/reference/open-wopen.md) 入出力操作に対して [ または ](../c-runtime-library/reference/pipe.md) の変換を指定します。 詳細については、「[_fmode](../c-runtime-library/fmode.md)」をご覧ください。
 
 ## <a name="requirements"></a>必要条件
 

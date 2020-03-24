@@ -8,24 +8,24 @@ helpviewer_keywords:
 - procedure calls
 - procedure calls, stored procedures
 ms.assetid: 4f7c2700-1c2d-42f3-8c9f-7e83962b2442
-ms.openlocfilehash: 196c50ea62c3e3188b61a3b35a9e2752740c4ad5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ece626eb7fbecae9b90321ccc2569607897cf520
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62283966"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209860"
 ---
 # <a name="output-parameters"></a>出力パラメーター
 
-ストアド プロシージャの呼び出しは、SQL コマンドを実行すると似ています。 主な違いは、ストアド プロシージャが出力パラメーター (または"出力パラメーター") を使用して、戻り値です。
+ストアドプロシージャの呼び出しは、SQL コマンドの実行に似ています。 主な違いは、ストアドプロシージャでは、出力パラメーター (または "outparameters") と戻り値を使用することです。
 
-ストアド プロシージャを次のように最初の ' ですか? '戻り値 (電話) と、2 つ目は、'?' (名) の入力パラメーターです。
+次のストアドプロシージャでは、最初の '? ' は戻り値 (phone)、2番目の '? ' は入力パラメーター (name) です。
 
 ```cpp
 DEFINE_COMMAND_EX(CMySProcAccessor, _T("{ ? = SELECT phone FROM shippers WHERE name = ? }"))
 ```
 
-パラメーターのマップでは、in、out パラメーターを指定します。
+パラメーターマップで in パラメーターと out パラメーターを指定します。
 
 ```cpp
 BEGIN_PARAM_MAP(CMySProcAccessor)
@@ -36,13 +36,13 @@ BEGIN_PARAM_MAP(CMySProcAccessor)
 END_PARAM_MAP()
 ```
 
-アプリケーションでは、ストアド プロシージャから返された出力を処理する必要があります。 さまざまな OLE DB プロバイダーでは、出力パラメーターを返すし、結果の処理中にさまざまなタイミングで戻り値。 などの Microsoft OLE DB provider for SQL Server (SQLOLEDB) は、出力パラメーターを指定しないし、までコードを返す、コンシューマーが取得またはストアド プロシージャによって返される結果セットが取り消されました。 出力は、最後の TDS パケットで、サーバーから返されます。
+アプリケーションでは、ストアドプロシージャから返された出力を処理する必要があります。 結果の処理中には、さまざまな OLE DB プロバイダーからさまざまなタイミングで出力パラメーターと戻り値が返されます。 たとえば、Microsoft OLE DB provider for SQL Server (SQLOLEDB) は、ストアドプロシージャから返された結果セットをコンシューマーが取得またはキャンセルした後に、出力パラメーターとリターンコードを提供しません。 出力は、サーバーからの最後の TDS パケットで返されます。
 
 ## <a name="row-count"></a>行数
 
-出力パラメーターを持つストアド プロシージャを実行する OLE DB コンシューマー テンプレートを使用する場合、行の数は、行セットを終了するまでに設定されていません。
+OLE DB コンシューマーテンプレートを使用して、outparameters を持つストアドプロシージャを実行する場合、行セットを閉じるまで行数は設定されません。
 
-たとえば、行セットと、出力パラメーターを使用してストアド プロシージャを考えてみます。
+たとえば、行セットと outparameter を持つストアドプロシージャを考えてみます。
 
 ```sql
 create procedure sp_test
@@ -53,8 +53,8 @@ as
 return 0
 ```
 
-`@_rowcount`出力パラメーターは、テスト テーブルから返された行の数を報告します。 ただし、このストアド プロシージャは、50 行の数を制限します。 たとえば、テストでの 100 行がある場合は、(このコードでは、上位 50 行のみを取得します) ために、行数は 50 になります。 テーブルには、30 行あったのみ、行数が 30 になります。 必ず`Close`または`CloseAll`値をフェッチする前に、出力パラメーターを設定します。
+`@_rowcount` outparameter は、テストテーブルから返された行数を報告します。 ただし、このストアドプロシージャでは行の数が50に制限されます。 たとえば、テストで100行があった場合、rowcount は50になります (このコードでは上位の50行のみが取得されるため)。 テーブルに30行しかない場合、rowcount は30になります。 値をフェッチする前に、`Close` または `CloseAll` を呼び出して、outparameter を設定するようにしてください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ストアド プロシージャの使用](../../data/oledb/using-stored-procedures.md)

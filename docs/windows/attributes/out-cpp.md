@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - out attribute
 ms.assetid: 5051b1bf-4949-4bf1-b82f-35e14f0f244b
-ms.openlocfilehash: 11c8e4473f0b849fab7846a825b90da3ed9f036f
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 6ab8fdf691e2220087f5c5d64bb70c5deb27675c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514285"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214679"
 ---
 # <a name="out-c"></a>out (C++)
 
@@ -23,7 +23,7 @@ ms.locfileid: "69514285"
 [out]
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 **out** C++ 属性には、 [propput](/windows/win32/Midl/out-idl) MIDL 属性と同じ機能があります。
 
@@ -44,9 +44,9 @@ ms.locfileid: "69514285"
 
 属性コンテキストの詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [IDL 属性](idl-attributes.md)<br/>
 [パラメーター属性](parameter-attributes.md)<br/>
 [defaultvalue](defaultvalue.md)<br/>
-[ID](id.md)
+[id](id.md)

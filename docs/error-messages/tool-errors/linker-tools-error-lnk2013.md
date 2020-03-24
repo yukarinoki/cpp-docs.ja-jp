@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2013
 ms.assetid: 21408e2d-3f56-4d1f-a031-00df70785ed4
-ms.openlocfilehash: 4d932a89f1b0bde27f6de2f84b2ed103dab1b1b0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6ad3f40f06e64422b393edb457a0dcf419828b6f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62299069"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194747"
 ---
 # <a name="linker-tools-error-lnk2013"></a>リンカ ツール エラー LNK2013
 
@@ -19,7 +19,7 @@ fixup type フィックスアップのオーバーフローです。 ターゲ�
 
 ターゲット シンボルが命令の位置から離れすぎているため、リンカーは必要なアドレスまたはオフセットを指定された命令に収めることができません。
 
-この問題を解決するには、複数のイメージを作成するかを使用して、 [/order](../../build/reference/order-put-functions-in-order.md)命令とターゲットはまとめて近いはオプションです。
+この問題を解決するには、複数のイメージを作成するか、または[/order](../../build/reference/order-put-functions-in-order.md)オプションを使用します。これにより、命令とターゲットの距離が狭くなります。
 
 シンボルがユーザー定義シンボルであり、コンパイラが生成したシンボルでない場合は、次の処理を実行して、エラーを解決することもできます。
 

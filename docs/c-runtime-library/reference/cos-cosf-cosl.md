@@ -34,12 +34,12 @@ helpviewer_keywords:
 - trigonometric functions
 - cosines, calculating
 ms.assetid: ae90435e-6b68-4a47-a81f-be87d5c08f16
-ms.openlocfilehash: 4d07a8636aabc4973c7beb9725a39e98c229a098
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9ec612aa9f8c6eaf1731d62b654d45841cdfa159
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942832"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170256"
 ---
 # <a name="cos-cosf-cosl"></a>cos、cosf、cosl
 
@@ -69,16 +69,16 @@ long double cos( long double x );  // C++ only
 
 |入力|SEH 例外|Matherr 例外|
 |-----------|-------------------|-----------------------|
-|± QNAN、IND|none|**_DOMAIN**|
+|± QNAN、IND|なし|**_DOMAIN**|
 |± INF|**無効です**|**_DOMAIN**|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 でC++はオーバーロードが可能であるため、 **float 型**または**long** **double**型の値を受け取って返す**cos**のオーバーロードを呼び出すことができます。 C プログラムでは、 **cos**は常に**倍精度浮動小数点数**を取得し、double を返します。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチン|必須の C ヘッダー|必須の C++ ヘッダー|
+|ルーチンによって返される値|必須の C ヘッダー|必須の C++ ヘッダー|
 |-------------|---------------------|-|
 |**cos**、 **cosh**、 **cosf**|\<math.h>|\<cmath> または \<math.h>|
 
@@ -88,7 +88,7 @@ long double cos( long double x );  // C++ only
 
 [Sin、sinf、sinf](sin-sinf-sinl.md)の例を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [浮動小数点サポート](../../c-runtime-library/floating-point-support.md)<br/>
 [acos、acosf、acosl](acos-acosf-acosl.md)<br/>

@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - boxing, C++
 ms.assetid: b5fd2c98-c578-4f83-8257-6dd663478665
-ms.openlocfilehash: 6221087b60e76e3a2648366c4efebc4105f0ab58
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 709754e8609406f635444937af93488060167ba9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "79544670"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172608"
 ---
 # <a name="boxing--ccli-and-ccx"></a>ボックス化 (C++/CLI および C++/CX)
 
@@ -30,7 +30,7 @@ C++/CX では、値型のボックス化と参照型のボックス化解除の�
 value_variable = (value_type) object_variable;
 ```
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/ZW`
 
@@ -90,7 +90,7 @@ void BlankPage::OnNavigatedTo(NavigationEventArgs^ e)
 
 - [標準変換と暗黙のボックス化](../dotnet/standard-conversions-and-implicit-boxing.md)
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/clr`
 

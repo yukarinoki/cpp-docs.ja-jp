@@ -3,12 +3,12 @@ title: '方法: winmdidl.exe と midlrt.exe を使用して、Windows メタデ�
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 4be8ba11-c223-44ad-9256-7e1edae9a7bc
-ms.openlocfilehash: 3aa7cd28a37ec7187cc3c87927a83e45eeda2a4e
-ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
+ms.openlocfilehash: bceb4aff22f6ebba9c8705b3b5a55d0478f244c9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75791724"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213539"
 ---
 # <a name="how-to-use-winmdidlexe-and-midlrtexe-to-create-h-files-from-windows-metadata"></a>方法: winmdidl.exe と midlrt.exe を使用して、Windows メタデータから .h ファイルを作成する
 
@@ -36,13 +36,13 @@ Winmdidl.exe [/nologo] [/suppressversioncheck] [/time] [/outdir:dir] [/banner:fi
 winmdidl の著作権メッセージとバージョン番号のコンソール表示を防ぎます。
 
 **/suppressversioncheck**<br/>
-使用しません。
+使用されていません。
 
 **/時刻**<br/>
 コンソール出力に総実行時間を表示します。
 
 **/outdir:** <em>dir</em><br/>
-出力ディレクトリを指定します。 パスに空白が含まれる場合は、引用符を使用します。 既定の出力ディレクトリは *\<ドライブ >* : \Users\\ *\<ユーザー名 >* \AppData\Local\VirtualStore\Program Files (x86) \Microsoft VisualStudio 12.0\\します。
+出力ディレクトリを指定します。 パスに空白が含まれる場合は、引用符を使用します。 既定の出力ディレクトリは *\<drive >* : \ Users\\ *\<Username >* \appdata\local\virtualstore\program files Files (X86) \Microsoft Visual Studio 12.0\\です。
 
 **/バナー:** <em>ファイル</em><br/>
 生成された .idl ファイルの先頭にある既定の著作権メッセージと winmdidl のバージョン番号に付加するカスタム テキストを含むファイルを指定します。 パスに空白が含まれる場合は、引用符を使用します。
@@ -57,7 +57,7 @@ winmdidl の著作権メッセージとバージョン番号のコンソール�
 
 「 [Midlrt と Windows ランタイムコンポーネント」を](/windows/win32/Midl/midlrt-and-windows-runtime-components)参照してください。
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 次の例に、Visual Studio x86 コマンド プロンプトでの winmdidl コマンドを示します。 これは、出力ディレクトリと、生成された .idl ファイルに追加する特別な見出しテキストが含まれるファイルを指定します。
 
@@ -71,7 +71,7 @@ winmdidl の著作権メッセージとバージョン番号のコンソール�
 
 `C:\Program Files (x86)\Microsoft Visual Studio 12.0> midlrt "c:\users\username\documents\test_for_winmdidl.idl" /metadata_dir "C:\Windows\System32\WinMetadata"`
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 winmdidl 操作からの出力ファイルは入力ファイルと同じ名前ですが、ファイル名拡張子が .idl です。
 

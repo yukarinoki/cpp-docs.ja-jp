@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - GUID method [C++]
 ms.assetid: e84c2c23-d02e-48f8-b776-9bd6937296d2
-ms.openlocfilehash: 905b67577a65b81be0b4d18c7513652dd8c5f055
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d5b05cd4e26f89d42ea23b605f5e6560795a0cfa
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155060"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180642"
 ---
-# <a name="comerrorguid"></a>_com_error::GUID
+# <a name="_com_errorguid"></a>_com_error::GUID
 
 **Microsoft 固有の仕様**
 
@@ -27,14 +27,14 @@ GUID GUID( ) const throw( );
 
 ## <a name="return-value"></a>戻り値
 
-結果を返します`IErrorInfo::GetGUID`の`IErrorInfo`内オブジェクトに記録された、`_com_error`オブジェクト。 ない場合は`IErrorInfo`返しますオブジェクトが記録されて、`GUID_NULL`します。
+`_com_error` オブジェクト内に記録された `IErrorInfo` オブジェクトの `IErrorInfo::GetGUID` の結果を返します。 `IErrorInfo` オブジェクトが記録されていない場合は `GUID_NULL`を返します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-呼び出すときの失敗、`IErrorInfo::GetGUID`メソッドは無視されます。
+`IErrorInfo::GetGUID` メソッドの呼び出し中に発生したエラーは無視されます。
 
 **Microsoft 固有の仕様はここまで**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [_com_error クラス](../cpp/com-error-class.md)

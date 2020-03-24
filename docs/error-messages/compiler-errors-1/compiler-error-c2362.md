@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C2362
 ms.assetid: 7aafecbc-b3cf-45a6-9ec3-a17e3f222511
-ms.openlocfilehash: d48806982bbb6cdda4d29e47f6692e7e3601d6de
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 330932f53627f8ba09e9e089cec7809eeeb6ab1c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66503213"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80206077"
 ---
 # <a name="compiler-error-c2362"></a>コンパイラ エラー C2362
 
-> 初期化 '*識別子*' の初期化が ' goto*ラベル*'
+> '*identifier*' の初期化が ' goto *label*' によってスキップされました
 
-使用してコンパイルされるときに[/Za](../../build/reference/za-ze-disable-language-extensions.md)ラベルにジャンプ先から初期化される識別子をできないようにします。
+[/Za](../../build/reference/za-ze-disable-language-extensions.md)を使用してコンパイルした場合、ラベルへのジャンプによって識別子が初期化されないようにします。
 
-宣言が入力されていないブロックで囲まれている場合、または変数は既に初期化されている場合、初期化子を含む宣言のみ移動できます。
+宣言が入力されていないブロックで囲まれている場合、または変数が既に初期化されている場合は、初期化子を持つ宣言の後にのみジャンプできます。
 
 次の例では、C2362 が生成されます。
 

@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - property keyword [C++]
 ms.assetid: cc79d2b2-f013-4d81-8252-eece97a18704
-ms.openlocfilehash: 46501717755933b2bdc11ee4ee6249bfea9f18cd
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: b961a93628752b11cd1d147268a4947acf29f67a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79545757"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171977"
 ---
 # <a name="property--ccli-and-ccx"></a>property (C++/CLI および C++/CX)
 
@@ -85,7 +85,7 @@ set アクセサーまたは get アクセサーのプロパティ メソッド�
 
 詳細については、「[プロパティ (C++/CX)](../cppcx/properties-c-cx.md)」を参照してください。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/ZW`
 
@@ -122,7 +122,7 @@ raise メソッドのパラメーター。デリゲートのシグネチャと�
 *index_list*<br/>
 1 つ以上のインデックスのリスト (コンマ区切り)。角かっこ (添字演算子 []) で囲んで指定します。 各インデックスについて型を指定し、さらに必要に応じてプロパティ メソッドの本文で使用できる識別子も指定します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 最初の構文例では、"*シンプル プロパティ*" を示します。ここでは `set` メソッドと `get` メソッドの両方を暗黙的に宣言しています。 コンパイラは自動的にプロパティの値を格納するためのプライベート フィールドを作成します。
 
@@ -160,7 +160,7 @@ get メソッドと set メソッドのアクセシビリティが異なって�
 
 **property** は状況依存キーワードです。  詳細については、「[状況依存キーワード](context-sensitive-keywords-cpp-component-extensions.md)」を参照してください。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/clr`
 

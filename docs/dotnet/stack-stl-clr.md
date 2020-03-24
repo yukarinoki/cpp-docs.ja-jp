@@ -53,12 +53,12 @@ helpviewer_keywords:
 - top_item member [STL/CLR]
 - value_type member [STL/CLR]
 ms.assetid: 6ee96b9f-8a33-4cf7-b7e0-6535c24bdefb
-ms.openlocfilehash: 9f1ae182573ca70a6983b9cd23e253ecf30731e4
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 18c94df643371f7b645ac9658a51d133d53f3403
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79545625"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208326"
 ---
 # <a name="stack-stlclr"></a>stack (STL/CLR)
 
@@ -86,7 +86,7 @@ template<typename Value,
 *コンテナー*<br/>
 基になるコンテナーの型。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<cliext/stack >
 
@@ -138,7 +138,7 @@ template<typename Value,
 |<xref:System.ICloneable>|オブジェクトを複製します。|
 |IStack\<値、コンテナー >|汎用コンテナーアダプターを維持します。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 オブジェクトは、コンテナー型の基になるコンテナー ( *container*) によって制御されるシーケンスのストレージを割り当て、解放します。このコンテナーは、*値*要素を格納し、必要に応じて拡大します。 オブジェクトは、最後の要素だけをプッシュしてポップするアクセスを制限し、最後の先入れ先出しキュー (LIFO キューまたはスタックとも呼ばれます) を実装します。
 
@@ -159,7 +159,7 @@ void assign(stack<Value, Container>% right);
 *right*<br/>
 挿入するコンテナーアダプター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、基になるコンテナーに `right.get_container()` を割り当てます。 スタックの内容全体を変更するには、これを使用します。
 
@@ -208,7 +208,7 @@ a b c
 typedef value_type% const_reference;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この型は、要素への定数参照を表します。
 
@@ -252,7 +252,7 @@ c b a
 typedef Container value_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この型は、テンプレート パラメーター *Container* のシノニムです。
 
@@ -294,7 +294,7 @@ a b c
 typedef int difference_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この型は、要素の数が負の値になる可能性があることを示します。
 
@@ -352,7 +352,7 @@ popping 3 = 3
 bool empty();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、被制御シーケンスが空の場合に true を返します。 これは[stack:: size (STL/CLR)](../dotnet/stack-size-stl-clr.md)`() == 0`に相当します。 スタックが空であるかどうかをテストするために使用します。
 
@@ -407,7 +407,7 @@ typedef Microsoft::VisualC::StlClr::IStack<Value>
     generic_container;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この型は、このテンプレートコンテナーアダプタークラスのジェネリックインターフェイスを表します。
 
@@ -469,7 +469,7 @@ a b c d e
 typedef GValue generic_value;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この型は、このテンプレートコンテナークラスのジェネリックインターフェイスで使用する格納されている要素の値を記述する `GValue` 型のオブジェクトを表します。 (`GValue` は、`value_type` が ref 型である場合は `value_type` または `value_type^` です)。
 
@@ -527,7 +527,7 @@ c b a
 container_type^ get_container();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、基になるコンテナーのハンドルを返します。 コンテナーラッパーによって課される制限を回避するために使用します。
 
@@ -574,7 +574,7 @@ stack <Value, Container>% operator=(stack <Value, Container>% right);
 *right*<br/>
 コピーするコンテナーアダプター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 メンバー演算子は、オブジェクトに*right*をコピーし、`*this`を返します。 このメソッドを使用して、被制御シーケンスを*右側*の被制御シーケンスのコピーで置き換えます。
 
@@ -623,7 +623,7 @@ a b c
 void pop();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、被制御シーケンスの最後の要素を削除します。この要素は空にすることはできません。 これを使用して、スタックを1要素ずつ短くします。
 
@@ -671,7 +671,7 @@ a b
 void push(value_type val);
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、被制御シーケンスの末尾に `val` 値を持つ要素を挿入します。 このメソッドを使用して、別の要素をスタックに追加します。
 
@@ -712,7 +712,7 @@ a b c
 typedef value_type% reference;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この型は、要素への参照を表します。
 
@@ -761,7 +761,7 @@ a b x
 size_type size();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、被制御シーケンスの長さを返します。 このメソッドを使用して、被制御シーケンス内の現在の要素数を決定します。 シーケンスに0以外のサイズがあるかどうかについては、「 [stack:: empty (STL/CLR)](../dotnet/stack-empty-stl-clr.md)`()`」を参照してください。
 
@@ -815,7 +815,7 @@ size() = 4 after adding 2
 typedef int size_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この型は、負でない要素数を表します。
 
@@ -875,7 +875,7 @@ explicit stack(container_type% wrapped);
 *回り*<br/>
 使用するためにラップされたコンテナー。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 コンストラクター:
 
@@ -957,7 +957,7 @@ x x x x x
 cli::array<Value>^ to_array();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、被制御シーケンスを含む配列を返します。 このメソッドを使用して、被制御シーケンスのコピーを配列形式で取得します。
 
@@ -1007,7 +1007,7 @@ a b c
 reference top();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、被制御シーケンスの最後の要素への参照を返します。この要素は、空にすることはできません。 この要素が存在することがわかっている場合は、最後の要素にアクセスするために使用します。
 
@@ -1059,7 +1059,7 @@ a b x
 property value_type top_item;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 プロパティは、被制御シーケンスの最後の要素にアクセスします。この要素は、空にすることはできません。 このメソッドは、最後の要素が存在することがわかっている場合に、その要素の読み取りまたは書き込みに使用します。
 
@@ -1111,7 +1111,7 @@ a b x
 typedef Value value_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この型は、テンプレートパラメーター*値*のシノニムです。
 
@@ -1167,7 +1167,7 @@ template<typename Value,
 *right*<br/>
 比較する右のコンテナー。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 演算子関数は `!(left == right)`を返します。 このメソッドを使用して、2つのスタックが要素別に比較されるときに、 *left*が*right*と同じ順序で並んでいないかどうかをテストします。
 
@@ -1238,7 +1238,7 @@ template<typename Value,
 *right*<br/>
 比較する右のコンテナー。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Operator 関数は、`!(right[i] < left[i])` が `left[i] < right[i]`にも当てはまる `i` 最小の位置に対して true を返します。 それ以外の場合は `left->`[stack:: size (STL/CLR)](../dotnet/stack-size-stl-clr.md) `right->size()``() <` を返します。このメソッドを使用して、2つのスタックが要素別に比較されるときに、 *left*が*right*の前に並べられているかどうかをテストします。
 
@@ -1309,7 +1309,7 @@ template<typename Value,
 *right*<br/>
 比較する右のコンテナー。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 演算子関数は `!(right < left)`を返します。 このメソッドを使用して、2つのスタックが要素別に比較されたときに、 *right*の後に*left*が順序付けされていないかどうかをテストします。
 
@@ -1380,7 +1380,7 @@ template<typename Value,
 *right*<br/>
 比較する右のコンテナー。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 演算子関数は、 *left*と*right*で制御されるシーケンスの長さが同じで、`i`位置ごとに `right[i]``left[i] ==` 場合にのみ true を返します。 このメソッドを使用して、2つのスタックが要素によって比較されるときに、 *left*が*right*と同じ順序で並んでいるかどうかをテストします。
 
@@ -1451,7 +1451,7 @@ template<typename Value,
 *right*<br/>
 比較する右のコンテナー。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Operator 関数は、`left``<` `right` を返します。 このメソッドを使用して、2つのスタックが要素によって比較されたときに、 *right* *の後にあるかどう*かをテストします。
 
@@ -1522,7 +1522,7 @@ template<typename Value,
 *right*<br/>
 比較する右のコンテナー。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 演算子関数は `!(left < right)`を返します。 このメソッドを使用して、2つのスタックが要素別に比較されるときに、 *left*が*right*の前に順序付けされていないかどうかをテストします。
 

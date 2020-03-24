@@ -27,12 +27,12 @@ helpviewer_keywords:
 - FreeRecordMemory method
 - GetColumnInfo method
 ms.assetid: bd4f58ed-cebf-4d43-8985-1e5fcbf06953
-ms.openlocfilehash: 77c4eebae6ede5d74e24421cc4d3951c78e08777
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: efb5618c03b1f70a809bb2bafe9611474799e00b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79546021"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212252"
 ---
 # <a name="caccessorrowset-class"></a>CAccessorRowset クラス
 
@@ -54,7 +54,7 @@ class CAccessorRowset : public TAccessor, public TRowset<TAccessor>
 *TRowset*<br/>
 行セットクラス。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atldbcli.h
 
@@ -70,7 +70,7 @@ class CAccessorRowset : public TAccessor, public TRowset<TAccessor>
 |[FreeRecordMemory](#freerecordmemory)|解放する必要がある現在のレコード内のすべての列を解放します。|
 |[GetColumnInfo](#getcolumninfo)|[IColumnsInfo:: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\))を実装します。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 アクセサーを管理するクラス `TAccessor`。 クラス*trowset*は、行セットを管理します。
 
@@ -108,7 +108,7 @@ CAccessorRowset();
 void Close();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 関連付けられているメモリを解放します。
 
@@ -145,7 +145,7 @@ HRESULT GetColumnInfo(DBORDINAL* pColumns,
 
 標準の HRESULT です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ユーザーは、返された列情報と文字列バッファーを解放する必要があります。 [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)を使用し、バインドをオーバーライドする必要がある場合は、このメソッドの2番目のバージョンを使用します。
 

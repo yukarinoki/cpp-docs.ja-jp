@@ -1,5 +1,5 @@
 ---
-title: レコード セット:レコード セットの更新が (ODBC) を記録する方法
+title: 'レコードセット: レコード更新のしくみ (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - records, updating
@@ -8,69 +8,69 @@ helpviewer_keywords:
 - updating recordsets
 - recordsets, updating
 ms.assetid: 5ceecc06-7a86-43b1-93db-a54fb1e717c7
-ms.openlocfilehash: bf71f562714e2dacfe75540e1e532219b3eb307f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 578b3b39d90b3beb80dbd201d4982fee30dc6bce
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397810"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212876"
 ---
-# <a name="recordset-how-recordsets-update-records-odbc"></a>レコード セット:レコード セットの更新が (ODBC) を記録する方法
+# <a name="recordset-how-recordsets-update-records-odbc"></a>レコードセット: レコード更新のしくみ (ODBC)
 
 このトピックの内容は、MFC ODBC クラスに該当します。
 
-能力をデータ ソースからレコードを選択するだけでなくレコード セット (必要に応じて) を更新または選択したレコードを削除したり新しいレコードを追加できます。 3 つの要素は、レコード セットの更新を決定します。 接続されたデータ ソースが更新可能かどうか、レコード セット オブジェクトでは、および作成される SQL を作成するときに指定するオプション。
+レコードセットでは、データソースからレコードを選択するだけでなく、必要に応じて、選択したレコードを更新または削除したり、新しいレコードを追加したりできます。 レコードセットの更新可能かどうかは、接続されたデータソースが更新可能かどうか、レコードセットオブジェクトを作成するときに指定するオプション、作成される SQL など、3つの要因によって決まります。
 
 > [!NOTE]
->  SQL、`CRecordset`オブジェクトをベース レコード セットの更新に影響を与えることができます。 たとえば、SQL には、結合が含まれている場合、 **GROUP BY**を FALSE に句では、MFC の設定の更新。
+>  `CRecordset` オブジェクトの基になる SQL は、レコードセットの変更可能性に影響を与える可能性があります。 たとえば、SQL に join 句または**GROUP by**句が含まれている場合、MFC では、このようにして、の使用を FALSE に設定します。
 
 > [!NOTE]
->  このトピックの内容は、バルク行フェッチが実装されていない `CRecordset` の派生オブジェクトを対象にしています。 バルク行フェッチを使用している場合は、次を参照してください。[レコード セット。(ODBC) バルク行フェッチ](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)します。
+>  このトピックの内容は、バルク行フェッチが実装されていない `CRecordset` の派生オブジェクトを対象にしています。 バルク行フェッチを使用している場合は、「レコード[セット: レコードを一括フェッチする (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)」を参照してください。
 
 このトピックでは、次の内容について説明します。
 
-- [レコード セットを更新](#_core_your_role_in_recordset_updating)と、フレームワークが何をします。
+- [レコードセットの更新におけるロール](#_core_your_role_in_recordset_updating)とフレームワークの機能。
 
-- [レコード セットをエディット バッファーとして](#_core_the_edit_buffer)と[ダイナセットを使う場合とスナップショットの相違点](#_core_dynasets_and_snapshots)します。
+- [エディットバッファーとしてのレコードセット](#_core_the_edit_buffer)と、[ダイナセットとスナップショットの違い](#_core_dynasets_and_snapshots)。
 
-[レコードセット: どの AddNew、Edit、および作業の削除 (ODBC)](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md)レコード セットの観点からこれらの関数の動作について説明します。
+[レコードセット: AddNew、Edit、Delete Work (ODBC) で](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md)は、レコードセットの観点からこれらの関数のアクションを記述します。
 
-[レコードセット: 詳細についての更新 (ODBC)](../../data/odbc/recordset-more-about-updates-odbc.md)レコード セットの更新プログラムのストーリーを完了するには、トランザクションが更新プログラムに与える影響、レコード セットを閉じるか、またはスクロールが進行中の更新プログラムに影響し、更新プログラムが他のユーザーの更新プログラムとやり取りする方法を説明します。
+[レコードセット: 更新プログラム (ODBC) の詳細につい](../../data/odbc/recordset-more-about-updates-odbc.md)ては、トランザクションが更新に与える影響、レコードセットまたはスクロールを閉じることによって進行中の更新に影響を与える方法、および更新プログラムが他のユーザーの更新プログラムと対話する方法について説明します。
 
-##  <a name="_core_your_role_in_recordset_updating"></a> レコード セットを更新
+##  <a name="your-role-in-recordset-updating"></a><a name="_core_your_role_in_recordset_updating"></a>レコードセットの更新でのロール
 
-次の表では、追加、編集、またはフレームワークの動作をすると、レコードを削除するレコード セットを使用して、ロールを示します。
+次の表に、レコードを追加、編集、または削除するためのレコードセットを使用する場合のロールと、フレームワークの機能を示します。
 
-### <a name="recordset-updating-you-and-the-framework"></a>レコード セットを更新しています。フレームワーク
+### <a name="recordset-updating-you-and-the-framework"></a>レコードセットの更新: ユーザーとフレームワーク
 
-|プログラマの役割|フレームワークの役割|
+|あなたが|フレームワークの役割|
 |---------|-------------------|
-|データ ソースが更新可能な (または追加可能) であるかどうかを確認します。|提供[CDatabase](../../mfc/reference/cdatabase-class.md)データ ソースの更新または追加をテストするためのメンバー関数。|
-|(任意の型) の更新可能なレコード セットを開きます。||
-|呼び出すことによって、レコード セットは更新可能かどうかを判断`CRecordset`などの関数を更新`CanUpdate`または`CanAppend`します。||
-|レコード セットの追加、編集、およびレコードを削除するメンバー関数を呼び出します。|レコード セット オブジェクトとデータ ソース間でデータを交換するためのメカニズムを管理します。|
-|必要に応じて、更新プロセスを制御するのにトランザクションを使用します。|提供`CDatabase`トランザクションをサポートするメンバー関数。|
+|データソースが更新可能である (または追加可能である) かどうかを判断します。|には、データソースの使用可能性をテストするための[CDatabase](../../mfc/reference/cdatabase-class.md)メンバー関数が用意されています。|
+|更新可能なレコードセット (任意の型) を開きます。||
+|`CanUpdate` や `CanAppend`などの `CRecordset` update 関数を呼び出すことによって、レコードセットが更新可能かどうかを判断します。||
+|レコードセットのメンバー関数を呼び出して、レコードを追加、編集、および削除します。|レコードセットオブジェクトとデータソースとの間でデータを交換するメカニズムを管理します。|
+|必要に応じて、トランザクションを使用して更新プロセスを制御します。|には、トランザクションをサポートする `CDatabase` メンバー関数が用意されています。|
 
-トランザクションの詳細については、次を参照してください。[トランザクション (ODBC)](../../data/odbc/transaction-odbc.md)します。
+トランザクションの詳細については、「 [Transaction (ODBC)](../../data/odbc/transaction-odbc.md)」を参照してください。
 
-##  <a name="_core_the_edit_buffer"></a> エディット バッファー
+##  <a name="the-edit-buffer"></a><a name="_core_the_edit_buffer"></a>エディットバッファー
 
-まとめて実行されると、レコード セットのフィールド データ メンバーを 1 つのレコードを含むをエディット バッファーとして機能、現在のレコード。 更新操作では、このバッファーを使用して、現在のレコードで処理します。
+レコードセットのフィールドデータメンバーは、まとめて、1つのレコード (現在のレコード) を含む編集バッファーとして機能します。 更新操作では、このバッファーを使用して現在のレコードを操作します。
 
-- レコードを追加するときに、エディット バッファーは、新しいレコードを作成に使用されます。 レコードの追加が完了したら、以前の現在のレコードが再び現在。
+- レコードを追加すると、エディットバッファーを使用して新しいレコードが作成されます。 レコードの追加が完了すると、以前のレコードが再び最新の状態になります。
 
-- 更新するときに、レコード セットのフィールド データ メンバーを新しい値に設定する (編集)、編集、レコードのバッファーが使用されます。 更新が完了したら、更新されたレコードがまだ最新です。
+- レコードを更新 (編集) する場合、エディットバッファーを使用して、レコードセットのフィールドデータメンバーを新しい値に設定します。 更新が完了すると、更新されたレコードは最新の状態のままになります。
 
-呼び出すと[AddNew](../../mfc/reference/crecordset-class.md#addnew)または[編集](../../mfc/reference/crecordset-class.md#edit)、必要に応じて、後で復元できるように、現在のレコードが格納されます。 呼び出すと[削除](../../mfc/reference/crecordset-class.md#delete)別のレコードをスクロールする必要があります、および現在のレコードが保存されず、削除済みとしてマークされます。
+[AddNew](../../mfc/reference/crecordset-class.md#addnew)または[Edit](../../mfc/reference/crecordset-class.md#edit)を呼び出すと、現在のレコードが保存されるので、必要に応じて後で復元できます。 [Delete](../../mfc/reference/crecordset-class.md#delete)を呼び出すと、現在のレコードは格納されず、削除済みとしてマークされ、別のレコードにスクロールする必要があります。
 
 > [!NOTE]
->  エディット バッファーは、レコードの削除の役割を果たしますありません。 現在のレコードを削除して、レコードは、削除済みとしてマークされている別のレコードをスクロールするまでに、"レコード"ではなく、レコード セットが。
+>  編集バッファーは、レコードの削除時にロールを持ちません。 現在のレコードを削除すると、レコードは削除済みとしてマークされます。レコードセットは、別のレコードにスクロールするまで "レコードではありません" と表示されます。
 
-##  <a name="_core_dynasets_and_snapshots"></a> ダイナセットを使う場合とスナップショット
+##  <a name="dynasets-and-snapshots"></a><a name="_core_dynasets_and_snapshots"></a>ダイナセットとスナップショット
 
-[ダイナセットを使う場合](../../data/odbc/dynaset.md)レコードをスクロールすると、レコードの内容を更新します。 [スナップショット](../../data/odbc/snapshot.md)を呼び出さない限り、レコードの内容が更新されないため、レコードの静的な表現を[Requery](../../mfc/reference/crecordset-class.md#requery)します。 ダイナセットを使う場合のすべての機能を使用するには、ODBC API のサポートの適切なレベルに準拠している ODBC ドライバーで作業する必要があります。 詳細については、次を参照してください。 [ODBC](../../data/odbc/odbc-basics.md)と[ダイナセット](../../data/odbc/dynaset.md)します。
+レコードにスクロールすると、レコードの内容[が更新さ](../../data/odbc/dynaset.md)れます。 [スナップショット](../../data/odbc/snapshot.md)はレコードの静的な表現であるため、 [Requery](../../mfc/reference/crecordset-class.md#requery)を呼び出さない限り、レコードの内容は更新されません。 ダイナセットのすべての機能を使用するには、適切なレベルの ODBC API サポートに準拠した ODBC ドライバーを操作する必要があります。 詳細については、「 [ODBC](../../data/odbc/odbc-basics.md)および[ダイナセット](../../data/odbc/dynaset.md)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [レコードセット (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
 [レコードセット: AddNew、Edit、Delete の動作のしくみ (ODBC)](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md)
