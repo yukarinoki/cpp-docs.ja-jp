@@ -1,5 +1,5 @@
 ---
-title: '条件演算子: &quest; :'
+title: '条件演算子: &quest;:'
 ms.date: 11/04/2016
 f1_keywords:
 - '?:'
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - conditional operators [C++]
 - '? : operator'
 ms.assetid: 88643ee8-7100-4f86-880a-705ec22b6271
-ms.openlocfilehash: 0a66b82682f90345518a2d520945e3aff1f78f89
-ms.sourcegitcommit: 170f5de63b0fec8e38c252b6afdc08343f4243a6
+ms.openlocfilehash: 8c00db06ed5c0347cb9c720e35bd3e517df2a13c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72276808"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189580"
 ---
-# <a name="conditional-operator-quest-"></a>条件演算子: &quest; :
+# <a name="conditional-operator-quest-"></a>条件演算子: &quest;:
 
 ## <a name="syntax"></a>構文
 
@@ -23,7 +23,7 @@ ms.locfileid: "72276808"
 expression ? expression : expression
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 条件演算子 ( **?:** ) は三項演算子です (3 つのオペランドを受け取ります)。 条件演算子は次のように機能します。
 
@@ -70,7 +70,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [C++ の組み込み演算子、優先順位と結合規則](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
 [条件式演算子](../c-language/conditional-expression-operator.md)

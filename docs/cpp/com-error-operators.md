@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - _com_error class [C++], operators
 ms.assetid: 0c4a1532-59b7-41ea-8aeb-1c486898db4d
-ms.openlocfilehash: 76f4f16c13e0bf4cdf9b36614edc6b84bc0284a8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 86e31233bbdbf925e5b2445054436a165225c7c5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154917"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189905"
 ---
-# <a name="comerror-operators"></a>_com_error 演算子
+# <a name="_com_error-operators"></a>_com_error 演算子
 
-については、 **_com_error**演算子を参照してください[_com_error クラス](../cpp/com-error-class.md)します。
+**_Com_error**演算子の詳細については、「 [_com_error クラス](../cpp/com-error-class.md)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [_com_error クラス](../cpp/com-error-class.md)

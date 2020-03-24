@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - typeid keyword [C++]
 ms.assetid: e9706cae-e7c4-4d6d-b474-646d73df3e70
-ms.openlocfilehash: ec64388d5f71cff01207129e337cf20bb151db1a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 8b22481fecb4b7de5106921fec1c3a43fab81a48
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515987"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181747"
 ---
 # <a name="typeid--ccli-and-ccx"></a>typeid (C++/CLI および C++/CX)
 
@@ -49,7 +49,7 @@ Platform::Type^ type = T::typeid;
 
 C++/CX では、typeid は、ランタイムの型情報から構築された [Platform::Type](../cppcx/platform-type-class.md) を返します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/ZW`
 
@@ -78,11 +78,11 @@ type::typeid
 
 `typeid` ではネイティブ型も扱えますが、その場合でも System::Type を返します。  type_info 構造体を取得するには、[typeid 演算子](../cpp/typeid-operator.md)を使用します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/clr`
 
-### <a name="examples"></a>使用例
+### <a name="examples"></a>例
 
 次の例では、typeid キーワードと `GetType()` メンバーを比較します。
 
@@ -188,6 +188,6 @@ int::typeid != pointer_to_int::typeid, as expected
 int::typeid == handle_to_int::typeid, as expected
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [.NET および UWP でのコンポーネント拡張](component-extensions-for-runtime-platforms.md)

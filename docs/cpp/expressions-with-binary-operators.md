@@ -6,12 +6,12 @@ helpviewer_keywords:
 - binary operators [C++]
 - expressions [C++], binary operators
 ms.assetid: 6dea3df4-a4bd-42c3-9807-4a27c120ac9a
-ms.openlocfilehash: d3a966a7922c1888defbebf970ac409872fe18ec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2dbda1759dcb37a1f2a8cbe87f24adbb979ca085
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154309"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188988"
 ---
 # <a name="expressions-with-binary-operators"></a>二項演算子を含む式
 
@@ -33,31 +33,31 @@ ms.locfileid: "62154309"
 
 - [シフト演算子](../cpp/left-shift-and-right-shift-operators-input-and-output.md)
 
-   - 右シフト (>>)
+   - 右シフト (> >)
 
-   - 左シフト (<<)
+   - 左シフト (< <)
 
 - [関係演算子と等値演算子](../cpp/relational-operators-equal-and-equal.md)
 
    - より小さい (\<)
 
-   - 大なり (>)
+   - より大きい (>)
 
-   - 等しいまたはそれよりも小さい (\<=)
+   - 以下 (\<=)
 
-   - 以上 (> =)
+   - 以上 (>=)
 
    - 等しい (==)
 
    - 等しくない (!=)
 
-- ビット処理演算子
+- ビットごとの演算子
 
    - [ビットごとの AND (&)](../cpp/bitwise-and-operator-amp.md)
 
    - [ビットごとの排他的 OR (^)](../cpp/bitwise-exclusive-or-operator-hat.md)
 
-   - [ビット演算包含的 OR (&#124;)](../cpp/bitwise-inclusive-or-operator-pipe.md)
+   - [ビットごとの包括的&#124;or ()](../cpp/bitwise-inclusive-or-operator-pipe.md)
 
 - 論理演算子
 
@@ -71,7 +71,7 @@ ms.locfileid: "62154309"
 
    - 加算代入 (+=)
 
-   - 減算代入 (-)
+   - 減算代入 (-=)
 
    - 乗算代入 (*=)
 
@@ -81,16 +81,16 @@ ms.locfileid: "62154309"
 
    - 左シフト代入 (<\<=)
 
-   - 右シフト代入 (>> =)
+   - 右シフト代入 (> > =)
 
    - ビットごとの AND 代入 (& =)
 
    - ビットごとの排他的 OR 代入 (^=)
 
-   - ビット処理包括的 OR 代入 (&#124;=)
+   - ビットごとの包括的 OR&#124;代入 (=)
 
 - [コンマ演算子](../cpp/comma-operator.md)(,)
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [式の型](../cpp/types-of-expressions.md)

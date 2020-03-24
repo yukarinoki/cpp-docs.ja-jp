@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - C4639
 ms.assetid: f94f7392-cdbb-4bf4-8a00-20dc90d3efe9
-ms.openlocfilehash: 4419493c673cb5916be751cc95af19a779086a5b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d379b159cd7fd67629ea74c47a9e55f1167dc74a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408083"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80198251"
 ---
 # <a name="compiler-warning-level-4-c4639"></a>コンパイラの警告 (レベル 4) C4639
 
-MSXML エラーの場合は、XML ドキュメント コメントは処理されません。 理由
+MSXML エラーです。 XML ドキュメントコメントは処理されません。 reason
 
-この警告は、さまざまな理由に発生します。
+この警告は、さまざまな理由で発生する可能性があります。
 
-この警告を解決するには。
+この警告を解決するには:
 
-- 再コンパイルします。
+- Recompile.
 
-- 共通言語ランタイムを再インストールして、MSXML を再インストールします。
+- 共通言語ランタイムを再インストールして MSXML を再インストールします。
 
-- 編集や、警告を再コンパイルの原因となっているドキュメントのコメントを削除します。
+- 警告と再コンパイルの原因となっているドキュメントコメントを編集または削除します。
 
-C4639 が発行されると、さらにすべての XML コメントの処理が無効になっているし、.xdc ファイルは生成されません。
+C4639 が発行されると、それ以降のすべての XML コメント処理は無効になり、.xdc ファイルは生成されません。

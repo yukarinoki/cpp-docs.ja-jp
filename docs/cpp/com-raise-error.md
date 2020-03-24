@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - _com_raise_error function
 ms.assetid: a98226c2-c3fe-44f1-8ff5-85863de11cd6
-ms.openlocfilehash: 5790fceef26d6de4edff604270cc7108f764aced
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2012ec98d8d40d60a7f12feb68bdc371e1616223
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399253"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189794"
 ---
-# <a name="comraiseerror"></a>_com_raise_error
+# <a name="_com_raise_error"></a>_com_raise_error
 
 **Microsoft 固有の仕様**
 
-スローされます、 [_com_error](../cpp/com-error-class.md)エラーに応答します。
+エラーへの応答として[_com_error](../cpp/com-error-class.md)をスローします。
 
 ## <a name="syntax"></a>構文
 
@@ -36,13 +36,13 @@ HRESULT 情報。
 *perrinfo*<br/>
 `IErrorInfo` オブジェクト。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**_com_raise_error**、定義されている\<comdef.h >、同じ名前とプロトタイプのユーザー作成のバージョンで置き換えることができます。 `#import` を使用し、C++ 例外処理を使用しない場合は、こうすることができます。 その場合、ユーザー バージョンので **_com_raise_error**実行することがあります、`longjmp`またはメッセージ ボックスを表示し、停止します。 ユーザー バージョンで返すことはできません。コンパイラ COM サポート コードがそれを予期していないためです。
+\<comdef. h > で定義されている **_com_raise_error**は、同じ名前およびプロトタイプのユーザーが記述したバージョンに置き換えることができます。 `#import` を使用し、C++ 例外処理を使用しない場合は、こうすることができます。 この場合、 **_com_raise_error**のユーザーバージョンでは、`longjmp` を実行するか、メッセージボックスを表示して停止することがあります。 ユーザー バージョンで返すことはできません。コンパイラ COM サポート コードがそれを予期していないためです。
 
-使用することも[_set_com_error_handler](../cpp/set-com-error-handler.md)を既定のエラー処理関数を置き換えます。
+[_Set_com_error_handler](../cpp/set-com-error-handler.md)を使用して、既定のエラー処理関数を置き換えることもできます。
 
-既定では、 **_com_raise_error**が次のように定義されています。
+既定では、 **_com_raise_error**は次のように定義されます。
 
 ```cpp
 void __stdcall _com_raise_error(HRESULT hr, IErrorInfo* perrinfo) {
@@ -54,11 +54,11 @@ void __stdcall _com_raise_error(HRESULT hr, IErrorInfo* perrinfo) {
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<comdef.h >
+**ヘッダー:** \<comdef. h >
 
-**Lib:** 場合、 **wchar_t をネイティブ型**コンパイラ オプションは、comsuppw.lib または comsuppwd.lib を使用します。 場合**wchar_t をネイティブ型**オフ、comsupp.lib を使用します。 「[/Zc:wchar_t (wchar_t をネイティブ型として認識)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)」を参照してください。
+**Lib:** **Wchar_t がネイティブ型**のコンパイラオプションである場合は、comsuppw または comsuppw を使用します。 **Wchar_t がネイティブ型**である場合は、comsupp .lib を使用します。 「[/Zc:wchar_t (wchar_t をネイティブ型として認識)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [コンパイラ COM のグローバル関数](../cpp/compiler-com-global-functions.md)<br/>
 [_set_com_error_handler](../cpp/set-com-error-handler.md)

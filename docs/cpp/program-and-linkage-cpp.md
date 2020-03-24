@@ -2,12 +2,12 @@
 title: 翻訳単位とリンケージ (C++)
 ms.date: 12/11/2019
 ms.assetid: a6493ba0-24e2-4c89-956e-9da1dea660cb
-ms.openlocfilehash: dcd66b454da3758996fe827581fe4a73a641407f
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: e4e86dc15280bc7aa079f552014975b7ddc68e51
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301354"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188325"
 ---
 # <a name="translation-units-and-linkage"></a>翻訳単位とリンケージ
 
@@ -44,7 +44,7 @@ C++ 20 では、[モジュール](modules-cpp.md)はヘッダーファイルの�
 
 *Free 関数*は、グローバルまたは名前空間スコープで定義される関数です。 非 const グローバル変数と free 関数は、既定で*外部リンケージ*を持ちます。これらは、プログラム内の翻訳単位から表示されます。 そのため、その名前を持つことができるグローバルオブジェクトはありません。 *内部リンケージ*を持つシンボルまたは*リンケージがない*シンボルは、宣言されている翻訳単位内でのみ表示されます。 名前に内部リンケージがある場合、同じ名前が別の翻訳単位に存在する可能性があります。 クラス定義または関数本体で宣言された変数にはリンケージがありません。
 
-内部リンケージが明示的として宣言することである、グローバル名を強制する**static**します。 これにより、その可視性は、宣言されているのと同じ翻訳単位に限定されます。 このコンテキストでは、 **static**はローカル変数に適用される場合とは異なることを意味します。
+明示的に**静的**として宣言することで、グローバル名に内部リンケージを強制することができます。 これにより、その可視性は、宣言されているのと同じ翻訳単位に限定されます。 このコンテキストでは、 **static**はローカル変数に適用される場合とは異なることを意味します。
 
 次のオブジェクトには、内部リンケージが既定で含まれています。
 - const オブジェクト
@@ -60,6 +60,6 @@ extern const int value = 42;
 
 詳細については、「 [extern](extern-cpp.md) 」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [基本的な概念](../cpp/basic-concepts-cpp.md)

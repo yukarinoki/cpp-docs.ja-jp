@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1179
 ms.assetid: 4b1536d7-0d3d-4f29-a9c1-6fa5cf6cb665
-ms.openlocfilehash: 71aba1f20cfaf5b6b9ec33d43ebde594e381921f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a267019f1be08cc8dcffdff3b4ba0b73357cccd4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391414"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183958"
 ---
 # <a name="linker-tools-error-lnk1179"></a>リンカ ツール エラー LNK1179
 
-ファイルが無効または壊れています: COMDAT 'filename' が重複しています
+ファイルが無効であるか壊れています: COMDAT ' filename ' が重複しています
 
-オブジェクト モジュールには、同じ名前の 2 つ以上の Comdat が含まれています。
+オブジェクトモジュールに、同じ名前の複数の Comdat が含まれています。
 
-使用してこのエラーは発生する[/H](../../build/reference/h-restrict-length-of-external-names.md)、外部名の長さを制限して[/Gy](../../build/reference/gy-enable-function-level-linking.md)関数を Comdat にパッケージします。
+このエラーは、外部名の長さを制限する[/h](../../build/reference/h-restrict-length-of-external-names.md)を使用することによって発生することがあります。また、/gy に関数をパッケージ化する[/gy](../../build/reference/gy-enable-function-level-linking.md)を使用することもできます。
 
 ## <a name="example"></a>例
 
-次のコードで`function1`と`function2`最初の 8 文字でも同じです。 使用してコンパイル **/Gy**と **/H8**リンク エラーが生成されます。
+次のコードでは、`function1` と `function2` は最初の8文字と同じです。 **/Gy**と **/H8**を使用してコンパイルすると、リンクエラーが発生します。
 
 ```
 void function1(void);

@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - RC2175
 ms.assetid: 3864a371-dba8-41a7-962c-e792709774f1
-ms.openlocfilehash: d8ddd8063bc614561d5b4657df092b69d7cffe32
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 10af91f56efd2e10c9ce8ab95c2aaa2694d19d17
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396815"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190730"
 ---
 # <a name="resource-compiler-error-rc2175"></a>リソース コンパイラ エラー RC2175
 
-リソース ファイルのファイル名は 3.00 形式ではありません。
+リソースファイルのファイル名が3.00 形式ではありません
 
-指定されたリソースより前のバージョン 3.00 形式を使用します。 リソース ファイルは、変換する必要があります。 またはバージョン 3.00 以降の形式を使用して再作成します。
+指定されたリソースは、バージョン3.00 より前の形式を使用しました。 リソースファイルは、バージョン3.00 以降の形式を使用して変換または再作成する必要があります。

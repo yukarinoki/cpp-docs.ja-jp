@@ -8,20 +8,20 @@ helpviewer_keywords:
 - explicit virtual function overrides
 - explicit override of virtual function
 ms.assetid: ee583234-5cda-4e90-b55e-3f9fbf079ced
-ms.openlocfilehash: dbaf8b0d78093df522cfbc63bf20dd0acb6c477c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c3bf48b3dac9f23fd3894d7d3cdd41b7ec000ba4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62184255"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189027"
 ---
 # <a name="explicit-overrides-c"></a>明示的なオーバーライド (C++)
 
 **Microsoft 固有の仕様**
 
-2 つまたは複数の同じ仮想関数が宣言されている[インターフェイス](../cpp/interface.md)と場合、これらのインターフェイスから派生したクラスは、各仮想関数を明示的にオーバーライドすることができます。
+同じ仮想関数が2つ以上の[インターフェイス](../cpp/interface.md)で宣言されており、クラスがこれらのインターフェイスから派生している場合は、各仮想関数を明示的にオーバーライドできます。
 
-C + を使用してマネージ コードで明示的なオーバーライドについて/cli CLI を参照してください[明示的なオーバーライド](../extensions/explicit-overrides-cpp-component-extensions.md)します。
+/Cli を使用しC++たマネージコードでの明示的なオーバーライドの詳細については、「[明示的なオーバーライド](../extensions/explicit-overrides-cpp-component-extensions.md)」を参照してください。
 
 **Microsoft 固有の仕様はここまで**
 
@@ -119,6 +119,6 @@ In CMyClass::IMyInt2::mf2()
 In CMyClass::IMyInt2::mf2(int)
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [継承](../cpp/inheritance-cpp.md)

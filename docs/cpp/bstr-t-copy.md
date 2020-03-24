@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Copy method [C++]
 - BSTR object [C++], copy
 ms.assetid: 00ba7311-e82e-4a79-8106-5329fa2f869a
-ms.openlocfilehash: 13ddf57e0bdbdbcc0c5b487e879e14b000de3ad0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1fe8cfb5b644b3c7c34cf3325a91ebdf23a04946
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393936"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190327"
 ---
 # <a name="_bstr_tcopy"></a>_bstr_t::copy
 
@@ -29,9 +29,9 @@ BSTR copy( bool fCopy = true ) const;
 #### <a name="parameters"></a>パラメーター
 
 *fCopy*<br/>
-TRUE の場合、**copy**格納されているのコピーを返します`BSTR`それ以外の場合、**copy**実際の BSTR を返します。
+TRUE の場合、 **copy**は含まれている `BSTR`のコピーを返します。それ以外の場合、 **copy**は実際の BSTR を返します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 カプセル化された `BSTR` オブジェクトの新しく割り当てられたコピーを返します。
 
@@ -45,6 +45,6 @@ STDMETHODIMP CAlertMsg::get_ConnectionStr(BSTR *pVal){ //  m_bsConStr is _bstr_t
 
 **Microsoft 固有の仕様はここまで**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [_bstr_t クラス](../cpp/bstr-t-class.md)

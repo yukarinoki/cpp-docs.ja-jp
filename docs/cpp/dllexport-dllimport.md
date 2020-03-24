@@ -10,18 +10,18 @@ helpviewer_keywords:
 - dllimport __declspec keyword
 - __declspec keyword [C++], dllimport
 ms.assetid: ff95b645-ef55-4e72-b848-df44657b3208
-ms.openlocfilehash: 2ae284172828ed63b6499475df108c28aecb32ae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0a8d90770552b8b9ab9169378289108d91811216
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398928"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189456"
 ---
 # <a name="dllexport-dllimport"></a>dllexport、dllimport
 
 **Microsoft 固有の仕様**
 
-**Dllexport**と**dllimport**ストレージ クラス属性は、C および C++ 言語への Microsoft 固有の拡張機能。 それらの属性を使用すると、関数、データ、オブジェクトを DLL との間でエクスポートおよびインポートできます。
+**Dllexport**および**dllimport**ストレージクラス属性は、C とC++言語に対する Microsoft 固有の拡張機能です。 それらの属性を使用すると、関数、データ、オブジェクトを DLL との間でエクスポートおよびインポートできます。
 
 ## <a name="syntax"></a>構文
 
@@ -30,17 +30,17 @@ ms.locfileid: "62398928"
    __declspec( dllexport ) declarator
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-これらの属性は、DLL のクライアント (実行可能ファイルまたは別の DLL) に対する DLL のインターフェイスを明示的に定義します。 としての関数の宣言**dllexport**エクスポート関数の仕様は、少なくとも、モジュール定義 (.def) ファイルの必要があります。 **Dllexport**置換の属性、 **_ _export**キーワード。
+これらの属性は、DLL のクライアント (実行可能ファイルまたは別の DLL) に対する DLL のインターフェイスを明示的に定義します。 関数を**dllexport**として宣言すると、少なくともエクスポートされた関数の仕様に関して、モジュール定義 (.def) ファイルが不要になります。 **Dllexport**属性は **__export**キーワードを置き換えます。
 
 クラスを declspec(dllexport) とマークした場合、そのクラス階層内のクラス テンプレートの特殊化は暗黙的に declspec(dllexport) とマークされます。 つまり、クラス テンプレートが明示的にインスタンス化され、クラスのメンバーの定義が必要になります。
 
-**dllexport**関数の装飾名を使用して、関数を公開します。 C++ の関数の場合、この処理には名前のマングルが含まれます。 C 関数または `extern "C"` として宣言されている関数の場合、この処理には呼び出し規則に基づいたプラットフォーム固有の装飾が含まれます。 C/C++ コードで名前の装飾については、次を参照してください。[装飾名](../build/reference/decorated-names.md)します。 `__cdecl` 呼び出し規則を使用する エクスポートされた C 関数や C++ `extern "C"` 関数には、名前の装飾が適用されません。
+関数の**dllexport**は、その装飾名を使用して関数を公開します。 C++ の関数の場合、この処理には名前のマングルが含まれます。 C 関数または `extern "C"` として宣言されている関数の場合、この処理には呼び出し規則に基づいたプラットフォーム固有の装飾が含まれます。 C/C++コードでの名前の装飾の詳細については、「[装飾名](../build/reference/decorated-names.md)」を参照してください。 `extern "C"` 呼び出し規則を使用する エクスポートされた C 関数や C++ `__cdecl` 関数には、名前の装飾が適用されません。
 
-修飾されていない名前をエクスポートするには、EXPORTS セクションに非装飾名を定義したモジュール定義 (.def) ファイルを使用してリンクできます。 詳細については、次を参照してください。[エクスポート](../build/reference/exports.md)します。 非装飾の名前をエクスポートすることもできますが、使用する、`#pragma comment(linker, "/export:alias=decorated_name")`ディレクティブで、ソース コード。
+修飾されていない名前をエクスポートするには、EXPORTS セクションに非装飾名を定義したモジュール定義 (.def) ファイルを使用してリンクできます。 詳細については、「[エクスポート](../build/reference/exports.md)」を参照してください。 装飾されていない名前をエクスポートするもう1つの方法は、ソースコードで `#pragma comment(linker, "/export:alias=decorated_name")` ディレクティブを使用することです。
 
-宣言すると**dllexport**または**dllimport**、使用する必要があります[拡張属性構文](../cpp/declspec.md)と **_ _declspec**キーワード。
+**Dllexport**または**dllimport**を宣言する場合は、[拡張属性構文](../cpp/declspec.md)と **__declspec**キーワードを使用する必要があります。
 
 ## <a name="example"></a>例
 
@@ -62,7 +62,7 @@ DllImport int j;
 DllExport int n;
 ```
 
-詳細については次を参照してください:
+詳細については、次を参照してください。
 
 - [定義と宣言](../cpp/definitions-and-declarations-cpp.md)
 
@@ -74,7 +74,7 @@ DllExport int n;
 
 **Microsoft 固有の仕様はここまで**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [__declspec](../cpp/declspec.md)<br/>
 [キーワード](../cpp/keywords-cpp.md)

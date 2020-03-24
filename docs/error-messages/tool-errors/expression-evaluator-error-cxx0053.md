@@ -7,17 +7,17 @@ helpviewer_keywords:
 - CAN0053
 - CXX0053
 ms.assetid: fe74ed9e-9241-4df1-881f-104348e296c6
-ms.openlocfilehash: 4ba55e7e8f684ed0b0332be4a8f3ae9d52e9150d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ba42e0279cd7c73b575e842cada4fbf569051d19
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62299572"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80184789"
 ---
 # <a name="expression-evaluator-error-cxx0053"></a>式エバリュエーター エラー CXX0053
 
-以外のシンボルにブレークポイントのバインド中に一致します。
+ブレークポイントのバインド中に関数以外のシンボルが一致しました
 
-ブレークポイントとして使用されるシンボルは、関数ではないです。 ブレークポイントとしてデータ メンバーを指定すると、このエラーが発生することができます。
+ブレークポイントとして使用されているシンボルが関数ではありませんでした。 データメンバーをブレークポイントとして指定すると、このエラーが発生する可能性があります。
 
-このエラーは、can0053 と同じものと同じです。
+このエラーは CAN0053 と同じです。

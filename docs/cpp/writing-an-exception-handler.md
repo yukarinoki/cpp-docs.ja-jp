@@ -5,12 +5,12 @@ helpviewer_keywords:
 - structured exception handling [C++], exception handlers
 - exception handling [C++], exception handlers
 ms.assetid: 71473fee-f773-4a34-bf12-82a3af79579c
-ms.openlocfilehash: 6f1bcecf3aaed2bf2b7ebbe511f11cdb5ec1ca5e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 201dcaa6a90584d1f9535df11d5722a37bdceb89
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209404"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187285"
 ---
 # <a name="writing-an-exception-handler"></a>例外ハンドラーの記述
 
@@ -20,16 +20,16 @@ ms.locfileid: "62209404"
 
 ## <a name="what-do-you-want-to-know-more-about"></a>さらに詳しくは次のトピックをクリックしてください
 
-- [Try-ステートメントを除く](../cpp/try-except-statement.md)
+- [Try-except ステートメント](../cpp/try-except-statement.md)
 
 - [例外フィルターの記述](../cpp/writing-an-exception-filter.md)
 
 - [ソフトウェア例外の発生](../cpp/raising-software-exceptions.md)
 
-- [ハードウェア例外](../cpp/hardware-exceptions.md)
+- [ハードウェアの例外](../cpp/hardware-exceptions.md)
 
-- [例外ハンドラーに関する制約](../cpp/restrictions-on-exception-handlers.md)
+- [例外ハンドラーに関する制限事項](../cpp/restrictions-on-exception-handlers.md)
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [構造化例外処理 (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

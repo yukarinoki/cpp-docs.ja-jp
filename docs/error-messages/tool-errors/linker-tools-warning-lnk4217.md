@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4217
 ms.assetid: 280dc03e-5933-4e8d-bb8c-891fbe788738
-ms.openlocfilehash: 1301dd53f71c616d7b7af346923a54c42903c9fd
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 1ce410312493b353bb68ea7264fce9cd6a394e0d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450854"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183112"
 ---
 # <a name="linker-tools-warning-lnk4217"></a>リンカー ツールの警告 LNK4217
 
-> '*filename_1*' で定義されたシンボル '*symbol*' は、関数 '*function*' の '*filename_2*' によってインポートされています
+> '*filename_1. .obj*' で定義されたシンボル '*symbol*' は、関数 '*function*' の '*filename_2 .obj*' によってインポートされています
 
-シンボルが同じイメージ内のオブジェクトファイルで定義されているにもかかわらず、シンボルに[__declspec (dllimport)](../../cpp/dllexport-dllimport.md)が指定されました。 この警告`__declspec(dllimport)`を解決するには、修飾子を削除します。
+シンボルが同じイメージ内のオブジェクトファイルで定義されているにもかかわらず、シンボルに[__declspec (dllimport)](../../cpp/dllexport-dllimport.md)が指定されました。 この警告を解決するには、`__declspec(dllimport)` 修飾子を削除します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 *symbol*は、イメージ内で定義されているシンボル名です。 *関数*は、シンボルをインポートする関数です。
 
@@ -62,7 +62,7 @@ lib.exe tt.obj /export:func /def
 link.exe main.obj tt.lib
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [リンカーツールの警告 LNK4049](linker-tools-warning-lnk4049.md) \
 [リンカーツールの警告 LNK4286](linker-tools-warning-lnk4286.md) \

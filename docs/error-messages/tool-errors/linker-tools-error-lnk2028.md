@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2028
 ms.assetid: e2b03293-6066-464d-a050-ce747bcf7f0e
-ms.openlocfilehash: ed2dc1a95d4dd7c447b360da21b5046e20f79083
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ef9e3eae655a4fbee1c3da74f6036e5fb22434b1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62298985"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194617"
 ---
 # <a name="linker-tools-error-lnk2028"></a>リンカ ツール エラー LNK2028
 
-"*exported_function*"(*decorated_name*) 関数で参照されている"*function_containing_function_call*"(*decorated_name*)
+"*exported_function*" (*decorated_name*) が関数 "*function_containing_function_call*" で参照されています (*decorated_name*)
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-ネイティブ関数を純粋なイメージにインポートしようとすると、暗黙の呼び出し規約がネイティブと純粋なコンパイルの間で異なることに注意してください。
+ネイティブ関数を純粋なイメージにインポートしようとすると、暗黙的な呼び出し規約がネイティブコンパイルと純粋コンパイルで異なることに注意してください。
 
-**/Clr: 純粋な**コンパイラ オプションは Visual Studio 2015 で非推奨とされ、Visual Studio 2017 でサポートされていません。
+**/Clr: pure**コンパイラオプションは visual studio 2015 で非推奨とされており、visual studio 2017 ではサポートされていません。
 
 ## <a name="example"></a>例
 
-このコード サンプルには、呼び出し規約が暗黙的には、ネイティブ、エクスポートされた関数を使用したコンポーネントが生成されます[_ _cdecl](../../cpp/cdecl.md)します。
+このコードサンプルでは、エクスポートされたネイティブ関数を持つコンポーネントを生成します。この関数の呼び出し規約は、暗黙的に[__cdecl](../../cpp/cdecl.md)ます。
 
 ```cpp
 // LNK2028.cpp
@@ -37,7 +37,7 @@ __declspec(dllexport) int func() {
 
 ## <a name="example"></a>例
 
-次の例では、ネイティブ関数を使用する純粋なクライアントを作成します。 ただし、下の呼び出し規約 **/clr: 純粋な**は[_ _clrcall](../../cpp/clrcall.md)します。 次の例では、LNK2028 が生成されます。
+次の例では、ネイティブ関数を使用する純粋なクライアントを作成します。 ただし、 **/clr: pure**の呼び出し規約は[__clrcall](../../cpp/clrcall.md)。 次の例では、LNK2028 が生成されます。
 
 ```cpp
 // LNK2028_b.cpp

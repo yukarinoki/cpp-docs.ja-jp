@@ -95,12 +95,12 @@ helpviewer_keywords:
 - ReleaseRows method
 - SetRows method
 ms.assetid: c6bde426-c543-4022-a98a-9519d9e2ae59
-ms.openlocfilehash: a235a38531141f306b33093ac2546ae232830f0e
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: e66a183c7bbafa16b3aefea8da1472255b507468
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79545799"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212124"
 ---
 # <a name="cbulkrowset-class"></a>CBulkRowset クラス
 
@@ -118,7 +118,7 @@ class CBulkRowset : public CRowset<TAccessor>
 *TAccessor*<br/>
 アクセサークラス。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atldbcli.h
 
@@ -271,7 +271,7 @@ HRESULT MoveToRatio(DBCOUNTITEM nNumerator,
 
 標準の HRESULT です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `MoveToRatio` は、次の式に従って、おおよその行をフェッチします。
 
@@ -308,7 +308,7 @@ void SetRows(DBROWCOUNT nRows) throw();
 *nRows*<br/>
 から行セットの新しいサイズ (行の数)。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この関数を呼び出す場合は、行セットを開く前ににする必要があります。
 

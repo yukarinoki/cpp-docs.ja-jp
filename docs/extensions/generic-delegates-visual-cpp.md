@@ -6,12 +6,12 @@ helpviewer_keywords:
 - generic delegates
 - delegates, generic [C++]
 ms.assetid: 09d430b2-1aef-4fbc-87f9-9d7b8185d798
-ms.openlocfilehash: 449659126f52997d548ebd7785a78c1200038ee6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 4c579d0c0ab39a2ddcadfd116bdfed8ba9da2863
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515767"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182033"
 ---
 # <a name="generic-delegates-ccli"></a>汎用デリゲート (C++/CLI)
 
@@ -36,7 +36,7 @@ generic < [class | typename] type-parameter-identifiers>
 型パラメーターのコンマ区切りの識別子の一覧。
 
 *type-parameter-constraints-clauses*<br/>
-「[Constraints on Generic Type Parameters (C++/CLI) ジェネリック型パラメーターの制約 (C++/CLI)](constraints-on-generic-type-parameters-cpp-cli.md)」に指定された書式を使用します。
+「[ジェネリック型パラメーターの制約 (C++/CLI)](constraints-on-generic-type-parameters-cpp-cli.md)」に指定された書式を使用します。
 
 *accessibility-modifiers*<br/>
 (省略可能) アクセシビリティ修飾子 (例: **public**、**private**)。
@@ -107,7 +107,7 @@ int main() {
 
 ## <a name="example"></a>例
 
-次の例では、汎用デリゲート `GenDelegate<ItemType>` を宣言した後、それを型パラメーター `ItemType` を使用する `MyMethod` メソッドに関連付けることによってインスタンス化します。 デリゲートの 2 つのインスタンス (integerと double) が作成されて呼び出されます。
+次の例では、汎用デリゲート `GenDelegate<ItemType>` を宣言した後、それを型パラメーター `MyMethod` を使用する `ItemType` メソッドに関連付けることによってインスタンス化します。 デリゲートの 2 つのインスタンス (integerと double) が作成されて呼び出されます。
 
 ```cpp
 // generics_generic_delegate.cpp
@@ -162,6 +162,6 @@ Invoking the integer delegate: i = 123, j = 123
 Invoking the double delegate: m = 0.123, n = 0.123
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ジェネリック](generics-cpp-component-extensions.md)

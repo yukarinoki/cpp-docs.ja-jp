@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C4379
 ms.assetid: b23e8132-69aa-4649-9c1e-09813b9fb5b7
-ms.openlocfilehash: 110d45749bcfd219b38bf7a4e57a3263bffc5c65
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1163364778edd2dd34487fb7cd109e968006d937
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410396"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80186986"
 ---
 # <a name="compiler-warning-level-1-c4379"></a>コンパイラの警告 (レベル 1) C4379
 
-このコンパイラでは、共通言語ランタイムのバージョンがサポートされていません。 このバージョンを使用すると、予期しない結果が生じる場合があります。
+共通言語ランタイムのバージョンバージョンは、このコンパイラではサポートされていません。 このバージョンを使用すると、予期しない結果が発生する可能性があります。
 
-コンピューターには、共通言語ランタイムの以前のバージョンが現在のバージョンではなくがあります。 C4379 を解決するには、いるコンパイラに同梱されている共通言語ランタイムのバージョンをインストールします。
+コンピューターに以前のバージョンの共通言語ランタイムがありますが、現在のバージョンではありません。 C4379 を解決するには、コンパイラに付属している共通言語ランタイムのバージョンをインストールします。

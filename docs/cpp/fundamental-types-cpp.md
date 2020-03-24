@@ -46,12 +46,12 @@ helpviewer_keywords:
 - storing types [C++]
 - data types [C++], void
 ms.assetid: 58b0106a-0406-4b74-a430-7cbd315c0f89
-ms.openlocfilehash: e67d31e18ebbb6afd9d98542e4a6aa236b2d3e71
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 14d96453785a55f625b5467458f9cf79e6739acf
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79445313"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188613"
 ---
 # <a name="built-in-types-c"></a>組み込み型 (C++)
 
@@ -79,7 +79,7 @@ ms.locfileid: "79445313"
 ||**long**|**Long**型 (または**long int**) は、 **int**型のサイズ以上の整数型です。(Windows では**long**は**int**と同じサイズです)。<br /><br /> **Long**型のオブジェクトは、 **signed** long または**unsigned long**として宣言できます。 **Signed long**は、 **long 型**のシノニムです。|
 ||**long long**|符号なし**long**より大きい。<br /><br /> **Long long**型のオブジェクトは、 **signed** long long または**unsigned long long**として宣言できます。 **signed** long long は long **long**のシノニムです。|
 ||**wchar_t**、 **__wchar_t**|**Wchar_t**型の変数はワイド文字またはマルチバイト文字型を指定します。 既定では、 **wchar_t**はネイティブ型ですが、 [/zc: wchar_t-](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)を使用して、 **unsigned short**の typedef **wchar_t**することができます。 **__Wchar_t**型は、ネイティブ**Wchar_t**型の Microsoft 固有のシノニムです。<br /><br /> ワイド文字型を指定するには、文字や文字列リテラルの前に L のプレフィックスを使用します。|
-|浮動小数点|**float**|型**float**は、最小の浮動小数点型です。|
+|浮動小数点数|**float**|型**float**は、最小の浮動小数点型です。|
 ||**double**|型**double**は**float**型以上の浮動小数点型であり、 **long double**型のサイズ以下です (double 型)。<br /><br /> Microsoft 固有: **long double**と**double**の表現は同じです。 ただし、 **long double**と**double**は別個の型です。|
 ||**long double**|**Long double**型は**double**型以上の浮動小数点型です。|
 
@@ -89,7 +89,7 @@ ms.locfileid: "79445313"
 
 ### <a name="sizes-of-built-in-types"></a>組み込み型のサイズ
 
-|種類|サイズ|
+|種類|Size|
 |----------|----------|
 |**bool**、 **char**、 **unsigned char**、 **signed char**、 **__int8**|1 バイト|
 |**__int16**、 **short**、 **unsigned short**、 **wchar_t**、 **__wchar_t**|2 バイト|

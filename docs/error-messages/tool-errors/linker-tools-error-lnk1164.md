@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1164
 ms.assetid: da89765c-affa-4f88-b170-6d6b19a577cf
-ms.openlocfilehash: 8685a9e0eb356719eaab129af9df9a1cc0ebb085
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5f32fbd455faff449f57cfb9bb38009b03005913
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62254962"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80184035"
 ---
 # <a name="linker-tools-error-lnk1164"></a>リンカ ツール エラー LNK1164
 
-セクション セクション アラインメント (number)/align の指定値より大きい
+セクションセクションのアラインメント (number) が/ALIGN の値を超えています
 
-オブジェクト ファイル内の特定のセクションの配置のサイズがで指定された値を超える、 [/align](../../build/reference/align-section-alignment.md)オプション。 **/Align**値は 2 の累乗である必要がありますと等しいか、またはオブジェクト ファイルのセクションの配置を超えます。
+オブジェクトファイル内の指定されたセクションのアラインメントサイズが、 [/align](../../build/reference/align-section-alignment.md)オプションで指定された値を超えています。 **/Align**値は2の累乗でなければなりません。また、オブジェクトファイルで指定されたセクションの配置と同じかそれ以上である必要があります。
 
-小さいセクションの配置または増加のいずれかの再コンパイル、 **/align**値。
+セクションの配置を小さくして再コンパイルするか、 **/align**の値を増やしてください。

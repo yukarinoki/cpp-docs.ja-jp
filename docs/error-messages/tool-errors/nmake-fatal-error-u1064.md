@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - U1064
 ms.assetid: 7141e66e-cde6-4173-84df-a391f3ebcdd1
-ms.openlocfilehash: 71213391032989e5faf8889761b29194928125a0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bfc42c458c1932287f17f367d09c4b23c2c201a4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62367409"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182826"
 ---
 # <a name="nmake-fatal-error-u1064"></a>NMAKE の致命的なエラー U1064
 
-見つかりません。 メイクファイルと指定されたターゲットがありません。
+メイクファイルが見つからず、ターゲットが指定されていません
 
-NMAKE のコマンド ラインはメイクファイルまたはターゲットを指定しなかったし、現在のディレクトリにメイクファイルをという名前のファイルが含まれていません。
+NMAKE コマンドラインで、メイクファイルまたはターゲットが指定されませんでした。現在のディレクトリには、MAKEFILE という名前のファイルが含まれていませんでした。
 
-NMAKE では、メイクファイルまたはコマンド ライン ターゲット (または両方) が必要です。 Nmake メイクファイルを使用できるようにするには、/F オプションを指定するか、現在のディレクトリにメイクファイルをという名前のファイルを配置します。 NMAKE は、メイクファイルが指定されていない場合は、推論規則を使用して、コマンドラインのターゲットを作成できます。
+NMAKE には、メイクファイルまたはコマンドラインターゲット (またはその両方) が必要です。 メイクファイルを NMAKE で使用できるようにするには、/F オプションを指定するか、または MAKEFILE という名前のファイルを現在のディレクトリに配置します。 メイクファイルが指定されていない場合、NMAKE は推論規則を使用してコマンドラインターゲットを作成できます。

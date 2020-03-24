@@ -8,12 +8,12 @@ helpviewer_keywords:
 - bool keyword [C++]
 - __BOOL_DEFINED macro
 ms.assetid: 9abed3f2-d21c-4eb4-97c5-716342e613d8
-ms.openlocfilehash: a3384bbb118c7363a603b5b9b0c8a375cb3dd185
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: db246cda79c778f37c5afbfda4a68c191c474e12
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301640"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190496"
 ---
 # <a name="bool-c"></a>bool (C++)
 
@@ -43,14 +43,14 @@ if (condexpr1) statement1;
 
 `condexpr1` が TRUE の場合、`statement1` は常に実行されます。`condexpr1` が FALSE の場合、`statement1` は実行されません。
 
-後置または前置と **++** 型の変数に演算子を適用**bool**変数が TRUE に設定します。
+後置または前置 **++** 演算子が**bool**型の変数に適用されると、変数は TRUE に設定されます。
 **Visual Studio 2017 バージョン15.3 以降**:**ブール**値の operator + + は言語から削除されたため、サポートされなくなりました。
 
 後置または前置 **--** 演算子は、この型の変数には適用できません。
 
-**bool**型が整数の上位変換に参加します。 **Bool**型の右辺値は**int**型の r 値に変換できますが、FALSE はゼロになり、TRUE は1になります。 別個の型として、 **bool**はオーバーロードの解決に関与します。
+**Bool**型は、整数の上位変換に関与します。 **Bool**型の右辺値は**int**型の r 値に変換できますが、FALSE はゼロになり、TRUE は1になります。 別個の型として、 **bool**はオーバーロードの解決に関与します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [キーワード](../cpp/keywords-cpp.md)<br/>
 [組み込みの型](../cpp/fundamental-types-cpp.md)

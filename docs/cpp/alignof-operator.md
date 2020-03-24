@@ -13,12 +13,12 @@ helpviewer_keywords:
 - alignof [C++]
 - types [C++], alignment requirements
 ms.assetid: acb1eed7-6398-40bd-b0c5-684ceb64afbc
-ms.openlocfilehash: b3764e95846d48d293991d69d04bc71c6b3aed90
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 6bddce29dd97d965303a58cc72aa97dfe8cbd8d7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443606"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181539"
 ---
 # <a name="__alignof-operator"></a>__alignof 演算子
 
@@ -34,9 +34,9 @@ C++ 11 では、指定された型のアラインメントをバイト単位で�
   __alignof( type )
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
-例 :
+次に例を示します。
 
 |式|値|
 |----------------|-----------|
@@ -63,7 +63,7 @@ typedef struct { int a; double b; } S;
 typedef __declspec(align(32)) struct { int a; } S;
 ```
 
-`__alignof(S)` と `32`が等価です。
+`__alignof(S)` と `32` が等価です。
 
 **__Alignof**の1つの用途は、独自のメモリ割り当てルーチンの1つにパラメーターとして使用することです。 たとえば、次の定義済みの構造体 `S` を指定して、`aligned_malloc` という名前のメモリ割り当てルーチンを呼び出し、特定の配置境界にメモリを割り当てることができます。
 
