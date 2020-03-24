@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - naked functions [C++]
 ms.assetid: ff203858-2dd3-4a76-8a57-d0d06817adef
-ms.openlocfilehash: ec5c7d635dbbb63af7177395c5ad08356e1a26f0
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 1eb2875514621e567701b6197d3ad6695457506b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857308"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178952"
 ---
 # <a name="rules-and-limitations-for-naked-functions"></a>naked 関数の規則と制限
 
@@ -17,7 +17,7 @@ ms.locfileid: "74857308"
 
 次の規則と制約が naked 関数に適用されます。
 
-- **return**ステートメントは許可されていません。
+- **Return**ステートメントは許可されていません。
 
 - 構造化例外処理コンストラクトと C++ の例外処理コンストラクトは、スタック フレームを越えてアンワインドする必要があるため許可されていません。
 
@@ -33,7 +33,7 @@ ms.locfileid: "74857308"
 
 - [/Clr](../build/reference/clr-common-language-runtime-compilation.md)を使用してコンパイルする場合、**生**のキーワードは無視されます。
 
-- [__Fastcall](../cpp/fastcall.md)の生関数の場合、レジスタ引数のいずれかにC++ C/コードで参照があるたびに、プロローグコードはそのレジスタの値をその変数のスタック位置に格納する必要があります。 例:
+- [__Fastcall](../cpp/fastcall.md)の生関数の場合、レジスタ引数のいずれかにC++ C/コードで参照があるたびに、プロローグコードはそのレジスタの値をその変数のスタック位置に格納する必要があります。 次に例を示します。
 
 ```cpp
 // nkdfastcl.cpp

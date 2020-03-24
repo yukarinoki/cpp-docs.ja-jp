@@ -7,18 +7,18 @@ helpviewer_keywords:
 - __declspec keyword [C++], naked
 - naked __declspec keyword
 ms.assetid: 69723241-05e1-439b-868e-20a83a16ab6d
-ms.openlocfilehash: 951760d7f9566c084bbe3d5a574d006020576c61
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: cfe3631086515e4e31c7d4188d46e3a7440662b7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345005"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80177951"
 ---
 # <a name="naked-c"></a>naked (C++)
 
 **Microsoft 固有の仕様**
 
-宣言されている関数、 **naked**属性に、コンパイラは、プロローグおよびエピローグ コードなしのコードを生成します。 この機能を使用して、プロローグとエピローグのコード シーケンスをインライン アセンブラー コードで独自に記述できます。 naked 関数は、仮想デバイス ドライバーの記述用に特に便利です。  なお、 **naked**属性は x86 と ARM でのみ有効ですし、x64 では使用できません。
+**生**の属性を使用して宣言された関数の場合、コンパイラはプロローグコードとエピローグコードを含まないコードを生成します。 この機能を使用して、プロローグとエピローグのコード シーケンスをインライン アセンブラー コードで独自に記述できます。 naked 関数は、仮想デバイス ドライバーの記述用に特に便利です。  **生**の属性は X86 と ARM でのみ有効であり、x64 では使用できないことに注意してください。
 
 ## <a name="syntax"></a>構文
 
@@ -26,17 +26,17 @@ ms.locfileid: "64345005"
 __declspec(naked) declarator
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**Naked**属性は関数の定義に関連するのみであり、型修飾子ではない、naked 関数は、拡張属性構文を使用する必要があります、 [_ _declspec](../cpp/declspec.md)キーワード。
+**生**の属性は関数の定義のみに関連し、型修飾子ではないため、生の関数では拡張属性構文と[__declspec](../cpp/declspec.md)キーワードを使用する必要があります。
 
-関数も付いて場合でも、コンパイラが、naked 属性でマークされた関数のインライン関数を生成することはできません、 [_ _forceinline](inline-functions-cpp.md)キーワード。
+関数が[__forceinline](inline-functions-cpp.md)キーワードでマークされている場合でも、コンパイラは、生の属性でマークされた関数のインライン関数を生成できません。
 
-場合、コンパイラがエラーを発行、 **naked**属性メンバーではないメソッドの定義以外のすべてに適用されます。
+非メンバーメソッドの定義以外に**生**の属性が適用されると、コンパイラはエラーを発行します。
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
-このコードで関数を定義する、 **naked**属性。
+このコードは、次のように、**生**の属性を持つ関数を定義します。
 
 ```
 __declspec( naked ) int func( formal_parameters ) {}
@@ -49,14 +49,14 @@ __declspec( naked ) int func( formal_parameters ) {}
 Naked int func( formal_parameters ) {}
 ```
 
-**Naked**属性が、関数のプロローグとエピローグ シーケンスのコンパイラのコード生成の性質のみに影響します。 このような関数を呼び出すために生成されるコードには影響を与えません。 つまり、 **naked**属性は、関数の型の一部と見なされますしないと、関数ポインターを持つことはできません、 **naked**属性。 さらに、 **naked**属性は、データの定義に適用できません。 たとえば、次のサンプル コードはエラーになります。
+**生**の属性は、関数のプロローグとエピローグのシーケンスに対するコンパイラのコード生成の性質にのみ影響します。 このような関数を呼び出すために生成されるコードには影響を与えません。 したがって、**生**の属性は関数の型の一部とは見なされず、関数ポインターは**生**の属性を持つことができません。 さらに、**生**の属性をデータ定義に適用することはできません。 たとえば、次のサンプル コードはエラーになります。
 
 ```
 __declspec( naked ) int i;
 // Error--naked attribute not permitted on data declarations.
 ```
 
-**Naked**属性は、関数の定義のみに関連し、関数のプロトタイプでは指定できません。 たとえば、次の宣言はコンパイラ エラーになります。
+**生**の属性は関数の定義にのみ関連し、関数のプロトタイプでは指定できません。 たとえば、次の宣言はコンパイラ エラーになります。
 
 ```
 __declspec( naked ) int func();  // Error--naked attribute not permitted on function declarations
@@ -64,7 +64,7 @@ __declspec( naked ) int func();  // Error--naked attribute not permitted on func
 
 **Microsoft 固有の仕様はここまで**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [__declspec](../cpp/declspec.md)<br/>
 [キーワード](../cpp/keywords-cpp.md)<br/>

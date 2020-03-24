@@ -7,12 +7,12 @@ helpviewer_keywords:
 - __declspec keyword [C++], noreturn
 - noreturn __declspec keyword
 ms.assetid: 9c6517e5-22d7-4051-9974-3d2200ae4d1d
-ms.openlocfilehash: f9ca61c9d734ccdd6b8d8374ed3a7c4128ee3d5e
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: f37ce13e27f9b141eab928b88102813a5b6d65f8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857373"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80177886"
 ---
 # <a name="noreturn"></a>noreturn
 
@@ -25,7 +25,7 @@ ms.locfileid: "74857373"
 > [!NOTE]
 >  返されると予想される関数に **__declspec (noreturn)** を追加すると、未定義の動作が発生する可能性があります。
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 次の例では、 **else**句に return ステートメントが含まれていません。  `fatal` を **__declspec (noreturn)** として宣言すると、エラーまたは警告メッセージが表示されなくなります。
 

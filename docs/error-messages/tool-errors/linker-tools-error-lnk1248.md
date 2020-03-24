@@ -5,15 +5,15 @@ f1_keywords:
 - LNK1248
 helpviewer_keywords:
 - LNK1248
-ms.openlocfilehash: ec042251ef7cf6da5035d3d713927a46c87e3ac5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ee399a50be129c8d471bd044ff338fb0950dce9e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160641"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183775"
 ---
 # <a name="linker-tools-error-lnk1248"></a>リンカ ツール エラー LNK1248
 
-> 画像のサイズ ('*サイズ*') が最大許容サイズ (80000000) を超えています
+> イメージサイズ ('*size*') が最大許容サイズを超えています (8000万)
 
-リンカーは、出力ファイルのサイズが 32 ビット プログラム イメージの最大許容サイズを超えることを決定します。 複数の dll、プログラムにすることがあります。
+リンカーは、出力ファイルのサイズが32ビットのプログラムイメージで可能な最大サイズを超えていると判断しました。 プログラムを複数の Dll にすることができます。
