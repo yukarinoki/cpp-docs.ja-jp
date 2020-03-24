@@ -5,12 +5,12 @@ helpviewer_keywords:
 - labeled statement
 - statements, labeled
 ms.assetid: 456a26d5-0fcc-4d1a-b71f-fa9ff3d73b91
-ms.openlocfilehash: 030f1d74cf8a6c6686fcebd10559b5bd7b5d964c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d971a0e9864aeada1db5f004ef70577512e78c76
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62368748"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179693"
 ---
 # <a name="labeled-statements"></a>ラベル付きステートメント
 
@@ -24,7 +24,7 @@ default :  statement
 
 ラベルのスコープはラベルが宣言されている関数全体です。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 次の 3 種類のラベル付きステートメントがあります。 すべての種類で、そのタイプのラベルをステートメントと区切るためにコロンが使用されます。 case ラベルと default ラベルは、case ステートメントに固有です。
 
@@ -56,7 +56,7 @@ int main() {
 
 **Goto ステートメント**
 
-外観を*識別子*ソース プログラム内のラベルのラベルを宣言します。 のみ、 [goto](../cpp/goto-statement-cpp.md)ステートメントに制御を転送できる、*識別子*ラベル。 次のコード フラグメントの使用を示しています、 **goto**ステートメントおよび*識別子*ラベル。
+ソースプログラム内の*識別子*ラベルの外観によってラベルが宣言されます。 [Goto](../cpp/goto-statement-cpp.md)ステートメントのみが*識別子*ラベルに制御を転送できます。 次のコードフラグメントは、 **goto**ステートメントと*識別子*ラベルの使用方法を示しています。
 
 ラベルは単独では使用できず、常にステートメントと一緒に使用する必要があります。 ラベルのみが必要な場合は、ラベルの後に null ステートメントを置きます。
 
@@ -81,7 +81,7 @@ int main() {
 
 **Case ステートメント**
 
-後に表示されるラベル、**case**キーワードは外にも指定できません、**switch**ステートメント。 (この制限にも適用されます、**default**キーワードです)。次のコード フラグメントの正しい使用方法を示しています。**case**ラベル。
+**Case**キーワードの後に表示されるラベルは、 **switch**ステートメントの外側にも記述できません。 (この制限は、 **default**キーワードにも適用されます)。次のコードフラグメントは、 **case**ラベルの正しい使用方法を示しています。
 
 ```cpp
 // Sample Microsoft Windows message processing loop.
@@ -111,7 +111,7 @@ switch( msg )
 
 ## <a name="labels-in-the-case-statement"></a>Case ステートメント内のラベル
 
-後に表示されるラベル、**case**キーワードは外にも指定できません、**switch**ステートメント。 (この制限にも適用されます、**default**キーワードです)。次のコード フラグメントの正しい使用方法を示しています。**case**ラベル。
+**Case**キーワードの後に表示されるラベルは、 **switch**ステートメントの外側にも記述できません。 (この制限は、 **default**キーワードにも適用されます)。次のコードフラグメントは、 **case**ラベルの正しい使用方法を示しています。
 
 ```cpp
 // Sample Microsoft Windows message processing loop.
@@ -156,7 +156,7 @@ switch( msg )
 
 ## <a name="labels-in-the-goto-statement"></a>GoTo ステートメント内のラベル
 
-外観を*識別子*ソース プログラム内のラベルのラベルを宣言します。 のみ、 [goto](../cpp/goto-statement-cpp.md)ステートメントに制御を転送できる、*識別子*ラベル。 次のコード フラグメントの使用を示しています、 **goto**ステートメントおよび*識別子*ラベル。
+ソースプログラム内の*識別子*ラベルの外観によってラベルが宣言されます。 [Goto](../cpp/goto-statement-cpp.md)ステートメントのみが*識別子*ラベルに制御を転送できます。 次のコードフラグメントは、 **goto**ステートメントと*識別子*ラベルの使用方法を示しています。
 
 ラベルは単独では使用できず、常にステートメントと一緒に使用する必要があります。 ラベルのみが必要な場合は、ラベルの後に null ステートメントを置きます。
 
@@ -178,7 +178,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [C++ ステートメントの概要](../cpp/overview-of-cpp-statements.md)<br/>
 [switch ステートメント (C++)](../cpp/switch-statement-cpp.md)

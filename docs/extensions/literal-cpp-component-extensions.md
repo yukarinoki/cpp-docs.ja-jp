@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - literal keyword [C++]
 ms.assetid: 6b1a1f36-2e1d-4a23-8eb6-172f4f3c477f
-ms.openlocfilehash: d567f8270dcb8965ed2f882c9a0c005f295fc619
-ms.sourcegitcommit: c4528a7424d35039454f17778baf1b5f98fbbee7
+ms.openlocfilehash: 8c40adaed32bae23ec43cd553c3f755ac2b54cfb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "79545457"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172140"
 ---
 # <a name="literal-ccli-and-ccx"></a>literal (C++/CLI および C++/CX)
 
@@ -21,23 +21,23 @@ ms.locfileid: "79545457"
 
 ## <a name="all-platforms"></a>すべてのプラットフォーム
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 (この言語機能にはランタイムに適用される特記事項がありません。)
 
 ## <a name="windows-runtime"></a>Windows ランタイム
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 (この言語機能には Windows ランタイムのみに適用される特記事項がありません。)
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/ZW`
 
 ## <a name="common-language-runtime"></a>共通言語ランタイム
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 **literal** とマークされたデータ メンバーは宣言時に初期化される必要があり、値は constant integral、enum、または string 型である必要があります。 初期化式の型から static const 型のデータ メンバーへの変換では、ユーザー定義の変換は必要ありません。
 
@@ -121,7 +121,7 @@ class B {
 }
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/clr`
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - interface class keyword
 - interface struct keyword
 ms.assetid: 3ccea701-f50b-4da7-ad6b-f0ee1203e2b9
-ms.openlocfilehash: 60e8965e3ef2538554d8c664b35bd0849bd5e69e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: cb4566a0094db6d9e0cc97d81718a18a6df5cf18
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515707"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172166"
 ---
 # <a name="interface-class--ccli-and-ccx"></a>interface class (C++/CLI および C++/CX)
 
@@ -53,7 +53,7 @@ name :  inherit_accessbase_interface{};interface_accessinterface structname :  i
 
 インターフェイスから派生するクラスまたは構造体は、インターフェイスのすべてのメンバーを実装する必要があります。 インターフェイス *name* の実装時に、`base_interface` の一覧のインターフェイスも実装する必要があります。
 
-詳細については次を参照してください:
+詳細については、次を参照してください。
 
 - [インターフェイス静的コンストラクター](../dotnet/how-to-define-an-interface-static-constructor-cpp-cli.md)
 
@@ -71,7 +71,7 @@ name :  inherit_accessbase_interface{};interface_accessinterface structname :  i
 
 (この言語機能には Windows ランタイムのみに適用される特記事項がありません。)
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/ZW`
 
@@ -81,11 +81,11 @@ name :  inherit_accessbase_interface{};interface_accessinterface structname :  i
 
 (この言語機能には共通言語ランタイムのみに適用される特記事項がありません。)
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/clr`
 
-### <a name="examples"></a>使用例
+### <a name="examples"></a>例
 
 次のコード例では、インターフェイスで clock 関数の動作を定義する方法を示します。
 
@@ -218,6 +218,6 @@ ref struct R : I, J {
 };
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [.NET および UWP でのコンポーネント拡張](component-extensions-for-runtime-platforms.md)

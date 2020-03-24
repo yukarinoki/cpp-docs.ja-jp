@@ -3,12 +3,12 @@ title: MFC の概念
 ms.date: 01/09/2018
 f1_keywords:
 - Concepts
-ms.openlocfilehash: 5617051dc700bb1dd594a13627c9e3d01ef9caa9
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.openlocfilehash: 3273538e4fdffbf68fbe01c7f912584380505d1b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927902"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178523"
 ---
 # <a name="mfc-concepts"></a>MFC の概念
 
@@ -28,7 +28,7 @@ C++ テンプレートから作成されるコレクション クラス、およ
 [日付と時刻](../atl-mfc-shared/date-and-time.md)<br/>
 MFC での日付と時刻の使い方に関するトピックへのリンクを提供します。
 
-[ファイル](../mfc/files-in-mfc.md)<br/>
+[[ファイル]](../mfc/files-in-mfc.md)<br/>
 `CFile` および MFC でのファイルの処理方法について説明します。
 
 [メモリ管理 (MFC)](../mfc/memory-management.md)<br/>
@@ -66,5 +66,5 @@ Windows ソケットの MFC 実装について説明します。
 [MFC リファレンス](../mfc/mfc-desktop-applications.md)<br/>
 MFC ライブラリのリファレンスが用意されています。このライブラリ内のクラスのセットは、Windows API に対して作成されたアプリケーションのフレームワークであるアプリケーション フレームワークを構成します。
 
-[MFC のサンプル](../overview/visual-cpp-samples.md)<br/>
+[MFC のサンプル](../overview/visual-cpp-samples.md#mfc-samples)<br/>
 デスクトップ アプリケーション、DLL、データベース アプリケーション、コントロール、Web アプリケーションなどでの MFC の使い方を示すサンプルへのリンクが用意されています。

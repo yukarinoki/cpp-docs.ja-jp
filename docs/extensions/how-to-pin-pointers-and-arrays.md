@@ -1,19 +1,19 @@
 ---
-title: '方法: ポインターと配列を固定する'
+title: '方法 : ポインターと配列を固定する'
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
 - pointers, pinning
 - arrays [C++], pinning
 ms.assetid: ee783260-e676-46b8-a38e-11a06f1d57b0
-ms.openlocfilehash: ae8c1da79f41cf9209f2765ce5aa2f7ca3d34aea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 8dc42690f0f56b97b2af3ed54dfb17d49b081695
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515687"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172218"
 ---
-# <a name="how-to-pin-pointers-and-arrays"></a>方法: ポインターと配列を固定する
+# <a name="how-to-pin-pointers-and-arrays"></a>方法 : ポインターと配列を固定する
 
 マネージ オブジェクトに定義されているサブオブジェクトの固定には、オブジェクト全体を固定するという効果があります。  たとえば、配列の要素が固定されている場合、配列全体も固定されます。 固定された配列を宣言するための言語の拡張機能はありません。 配列を固定するには、その要素の型に対して固定ポインターを宣言し、要素の 1 つを固定します。
 
@@ -45,6 +45,6 @@ int main() {
 ++
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [pin_ptr (C++/CLI)](pin-ptr-cpp-cli.md)

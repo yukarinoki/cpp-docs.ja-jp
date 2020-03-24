@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4272
 ms.assetid: 0d6c1de4-2eef-42c4-b861-c221f8b495ef
-ms.openlocfilehash: 13c56c2261cd069e7edec63921c198e2bee56c95
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 747b9e60ad2b8b0036c6eac50d44c2d70277384f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73626692"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80163114"
 ---
 # <a name="compiler-warning-level-1-c4272"></a>コンパイラの警告 (レベル 1) C4272
 
-' function ': __declspec (dllimport) とマークされています。関数をインポートするときは、ネイティブ呼び出し規約を指定する必要があります。
+' function ': __declspec (dllimport) に設定されています。関数をインポートするときは、ネイティブ呼び出し規約を指定する必要があります。
 
-[__Clrcall](../../cpp/clrcall.md)呼び出し規約でマークされた関数をエクスポートするとエラーになります。 `__clrcall`とマークされた関数をインポートしようとすると、コンパイラはこの警告を発行します。
+[__Clrcall](../../cpp/clrcall.md)の呼び出し規約でマークされた関数をエクスポートするとエラーになります。 `__clrcall`とマークされた関数をインポートしようとすると、コンパイラはこの警告を発行します。
 
 次の例では、C4272 が生成されます。
 

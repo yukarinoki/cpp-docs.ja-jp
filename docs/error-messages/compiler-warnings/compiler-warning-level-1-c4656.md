@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - C4656
 ms.assetid: b5aaef74-2320-4345-a6ae-b813881a491c
-ms.openlocfilehash: 4285ce20f6131c2503304ed1bdb1bde02b2efcec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a78da51a99aa924eadbf5c9f458ceb0a75889141
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375250"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80175650"
 ---
 # <a name="compiler-warning-level-1-c4656"></a>コンパイラの警告 (レベル 1) C4656
 
-'symbol': データ型は、新しいがまたは前回のビルド以降に変更されたか、異なる方法では、他の場所で定義されています。
+' symbol ': データ型が新規であるか、前回のビルド以降に変更されたか、別の場所で定義されています
 
 前回成功したビルド以降に、データ型が追加されたか既存のデータ型が変更されました。これは、今までソース コードに含まれていなかったデータ型です。 エディット コンティニュは、既存のデータ型への変更をサポートしません。
 

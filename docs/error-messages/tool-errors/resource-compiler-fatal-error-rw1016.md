@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - RW1016
 ms.assetid: 7c93b6b6-3684-4b09-b71d-160c400f75a5
-ms.openlocfilehash: 46ea33fcee9ebedafe47ae944b9e8c6cb4c09d2d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 141cd509122266218d8ac5bbc676fab8a9e33e9f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62346458"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172765"
 ---
 # <a name="resource-compiler-fatal-error-rw1016"></a>リソース コンパイラの致命的なエラー RW1016
 
-RC のプリプロセッサ エラーの後に終了しています
+RC はプリプロセッサエラーの発生後に終了します
 
-リソース コンパイラは、他のエラーによって停止されました。 その他のエラーを修正して再コンパイルします。
+他のエラーにより、リソースコンパイラが停止しました。 他のエラーを修正して再コンパイルします。

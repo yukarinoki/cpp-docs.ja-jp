@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4484
 ms.assetid: 3d30e5b3-2297-45b7-a37a-1360056fdd0e
-ms.openlocfilehash: 4d3f72ddf7675ea7ad73022dc55a60fdc74d4390
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: c168c91f8259b744ed10dd72701d34fd60b98681
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73623633"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165159"
 ---
 # <a name="compiler-warning-c4484"></a>コンパイラの警告 C4484
 
@@ -19,7 +19,7 @@ ms.locfileid: "73623633"
 
 **/Clr**を指定してコンパイルする場合、コンパイラは基底クラスの関数を暗黙的にオーバーライドしません。これは、関数が vtable 内の新しいスロットを取得することを意味します。 解決するには、関数がオーバーライドであるかどうかを明示的に指定します。
 
-詳細については次を参照してください:
+詳細については、次を参照してください。
 
 - [/clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)
 

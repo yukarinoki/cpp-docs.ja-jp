@@ -7,17 +7,17 @@ helpviewer_keywords:
 - CXX0043
 - CAN0043
 ms.assetid: 5e5d55bb-0f3e-40e6-b3c3-d0dfb701a65c
-ms.openlocfilehash: 933c8ba0e5fafa3f730cde42fbad77b93709ce15
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 633b089b87eab9634b4933cfa07b78782cfb2f46
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396947"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80185075"
 ---
 # <a name="expression-evaluator-error-cxx0043"></a>式エバリュエーター エラー CXX0043
 
-このポインターは、メンバー関数の外を使用します。
+このポインターは、メンバー関数の外で使用されています。
 
-**this**ポインターは、非静的メンバー関数にのみ使用できます。
+**この**ポインターは、非静的メンバー関数に対してのみ使用できます。
 
-このエラーは、can0043 と同じものと同じです。
+このエラーは CAN0043 と同じです。

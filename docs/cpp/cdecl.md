@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - __cdecl keyword [C++]
 ms.assetid: 1ff1d03e-fb4e-4562-8be1-74f1ad6427f1
-ms.openlocfilehash: f4cca797c0bff94a54b0f3302c6c475908870a99
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 8f2b2b0cea8ff30cc450aae534fbff0d7b77f457
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857620"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190099"
 ---
 # <a name="__cdecl"></a>__cdecl
 
@@ -56,7 +56,7 @@ void __cdecl CMyClass::mymethod() { return; }
 
 以前のバージョンとの互換性のために、コンパイラオプション[/za \(無効になっている言語拡張)](../build/reference/za-ze-disable-language-extensions.md)が指定されていない限り、 **cdecl**と **_cdecl**は **__cdecl**のシノニムになります。
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 次の例では、コンパイラは、`system` 関数に対して C の命名規則と呼び出し規則を使用するように指示されます。
 

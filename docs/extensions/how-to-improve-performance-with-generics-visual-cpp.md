@@ -1,5 +1,5 @@
 ---
-title: '方法: ジェネリックを使用してパフォーマンスを改善する (C++/CLI)'
+title: '方法: ジェネリックを使用してパフォーマンスC++を向上させる (/cli)'
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - C++, generics
 - generics [C++], performance
 ms.assetid: f14a175b-301f-46cc-86e4-c82d35f9aa3e
-ms.openlocfilehash: 958da08716022bedaa8d0fe217814fa2bd86c065
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: a460456a383fcb3eb81e17c1ad5817f790f3c399
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515717"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181942"
 ---
-# <a name="how-to-improve-performance-with-generics-ccli"></a>方法: ジェネリックを使用してパフォーマンスを改善する (C++/CLI)
+# <a name="how-to-improve-performance-with-generics-ccli"></a>方法: ジェネリックを使用してパフォーマンスC++を向上させる (/cli)
 
 ジェネリックを使用して、型パラメーターに基づく再利用可能なコードを作成できます。 型パラメーターの実際の型は、クライアント コードによって呼び出されるまで遅延されます。 ジェネリックの詳細については、「 [Generics](generics-cpp-component-extensions.md)」を参照してください。
 
@@ -124,6 +124,6 @@ int main()
 14
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ジェネリック](generics-cpp-component-extensions.md)

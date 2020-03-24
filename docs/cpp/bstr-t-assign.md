@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - Assign method [C++]
 ms.assetid: 2e209bbe-77ca-4598-86d5-6c2ea213f43c
-ms.openlocfilehash: 922c29849361d3a116df32671a2c49ac3b4988fd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 09af33f4ed246c459d5c78d8d23d5316ad9c07c6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396139"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190643"
 ---
 # <a name="_bstr_tassign"></a>_bstr_t::Assign
 
 **Microsoft 固有の仕様**
 
-コピーを`BSTR`に、`BSTR`によってラップされた、 **_** `bstr_t`します。
+**_** `bstr_t`によってラップされた `BSTR` に `BSTR` をコピーします。
 
 ## <a name="syntax"></a>構文
 
@@ -32,9 +32,9 @@ void Assign(
 *s*<br/>
 `BSTR` でラップされた `BSTR` にコピーする `_bstr_t`。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**Assign**はバイナリ コピーをつまり、全体の長さ、`BSTR`コンテンツに関係なく、コピーされます。
+**Assign**はバイナリコピーを行います。これは、コンテンツに関係なく、`BSTR` の長さ全体がコピーされることを意味します。
 
 ## <a name="example"></a>例
 
@@ -111,6 +111,6 @@ bstrWrapper2 = some text
 
 **Microsoft 固有の仕様はここまで**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [_bstr_t クラス](../cpp/bstr-t-class.md)

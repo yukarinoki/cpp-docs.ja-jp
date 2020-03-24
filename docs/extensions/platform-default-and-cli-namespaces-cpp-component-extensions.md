@@ -9,12 +9,12 @@ helpviewer_keywords:
 - lang namespace
 - cli namespace
 ms.assetid: 9d38bd1e-dc78-47d1-a84b-9b4683e52c9c
-ms.openlocfilehash: db6c73d6c52bf97aea5d0fbeeeebdeef87f692cc
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: aedb8b7954eaa4bb1cf1060725103cd725c3f180
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "79544652"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181825"
 ---
 # <a name="platform-default-and-cli-namespaces--ccli-and-ccx"></a>プラットフォーム、既定、および cli 名前空間 (C++/CLI および C++/CX)
 
@@ -28,7 +28,7 @@ Visual Studio では、プロジェクトの作成時に、既定の名前空間
 
 詳細については、「[名前空間と型の参照範囲 (C++/CX)](../cppcx/namespaces-and-type-visibility-c-cx.md)」を参照してください。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/ZW`
 
@@ -40,7 +40,7 @@ Visual Studio では、プロジェクトの作成時に、既定の名前空間
 using namespace cli;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 C++CLI では、**cli** 名前空間がサポートされています。 `/clr` を指定してコンパイルする場合、Syntax セクションで **using** ステートメントが使用されているとみなされます。
 
@@ -54,7 +54,7 @@ C++CLI では、**cli** 名前空間がサポートされています。 `/clr` 
 
 - [safe_cast](safe-cast-cpp-component-extensions.md)
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/clr`
 

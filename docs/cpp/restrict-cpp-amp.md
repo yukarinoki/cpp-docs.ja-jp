@@ -7,21 +7,21 @@ f1_keywords:
 helpviewer_keywords:
 - restrict clause (C++ AMP)
 ms.assetid: 07d3291f-7edf-456b-8828-283ac8673661
-ms.openlocfilehash: 3609e3f0541cfd8a8af8559d8d49e6a77c00d91c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a100ece1a0c67be01b31f38bdca17e78c2e1b6f9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403387"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179108"
 ---
 # <a name="restrict-c-amp"></a>restrict (C++ AMP)
 
 制限指定子は、関数宣言およびラムダ宣言に適用できます。 制限は、関数のコードに適用され、また、C++ Accelerated Massive Parallelism (C++ AMP) ランタイムを使用するアプリケーションの関数の動作に適用されます。
 
 > [!NOTE]
->  については、**restrict**キーワードの一部である、 **__declspec**ストレージ クラス属性を参照してください[restrict](../cpp/restrict.md)します。
+>  **__Declspec**ストレージクラス属性の一部である**restrict**キーワードの詳細については、「 [restrict](../cpp/restrict.md)」を参照してください。
 
-**restrict**句では、次の種類。
+**Restrict**句の形式は次のとおりです。
 
 |句|説明|
 |------------|-----------------|
@@ -29,9 +29,9 @@ ms.locfileid: "62403387"
 |`restrict(amp)`|関数は C++ AMP で高速化できる C++ 言語のサブセットのみを使用できます。|
 |連続した `restrict(cpu)` と `restrict(amp)`|関数は `restrict(cpu)` と `restrict(amp)` の両方の制約に従う必要があります。 関数は `restrict(cpu)`、`restrict(amp)`、`restrict(cpu, amp)`、または `restrict(amp, cpu)` を使用して宣言した関数から呼び出すことができます。<br /><br /> `restrict(A) restrict(B)` という形式は `restrict(A,B)` と書くことができます。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**restrict**キーワードは、コンテキスト キーワードです。 制限指定子の `cpu` と `amp` は予約語ではありません。 指定子の数を増やすことはできません。 ない関数、**restrict**句がある関数と同じ、`restrict(cpu)`句。
+**Restrict**キーワードは、コンテキストキーワードです。 制限指定子の `cpu` と `amp` は予約語ではありません。 指定子の数を増やすことはできません。 **Restrict**句を持たない関数は、`restrict(cpu)` 句を持つ関数と同じです。
 
 `restrict(amp)` 句を持つ関数には次の制限があります。
 
@@ -39,7 +39,7 @@ ms.locfileid: "62403387"
 
 - 関数はインライン化できる必要があります。
 
-- 関数でのみ宣言できます**int**、**unsigned int**、 **float**、および**double**変数、およびクラスおよびのみを含む構造体これらの型。 **bool**も許可する必要があります 4 バイト境界、複合型で使用する場合。
+- 関数は、 **int**、 **unsigned int**、 **float**、および**double**の各変数、およびこれらの型のみを含むクラスと構造体のみを宣言できます。 **bool**も使用できますが、複合型で使用する場合は、4バイトでアラインする必要があります。
 
 - ラムダ関数は、参照によってキャプチャできず、また、ポインターをキャプチャできません。
 
@@ -49,7 +49,7 @@ ms.locfileid: "62403387"
 
    - 再帰
 
-   - [volatile](../cpp/volatile-cpp.md)キーワードで宣言された変数。
+   - [Volatile](../cpp/volatile-cpp.md)キーワードで宣言された変数。
 
    - 仮想関数
 
@@ -61,29 +61,29 @@ ms.locfileid: "62403387"
 
    - ポインターへのポインター
 
-   - **goto**ステートメント
+   - **goto**ステートメント。
 
    - ラベル付きステートメント
 
-   - **try**、**catch**、または**throw**ステートメント
+   - **try**、 **catch**、または**throw**ステートメントを実行します。
 
    - グローバル変数
 
-   - 静的変数 [tile_static キーワード](../cpp/tile-static-keyword.md)代わりに使用します。
+   - 静的変数 代わりに[Tile_static キーワード](../cpp/tile-static-keyword.md)を使用してください。
 
-   - **dynamic_cast**キャスト
+   - **dynamic_cast**キャスト。
 
-   - **Typeid**演算子
+   - **Typeid**演算子。
 
    - asm 宣言
 
    - 可変個引数
 
-関数の制限事項の詳細については、次を参照してください。 [restrict（amp）制限](https://blogs.msdn.microsoft.com/nativeconcurrency/2011/12/19/restrictamp-restrictions-part-0-of-n-introduction/)します。
+関数の制限事項の詳細については、「制限[(amp) 制限](https://blogs.msdn.microsoft.com/nativeconcurrency/2011/12/19/restrictamp-restrictions-part-0-of-n-introduction/)」を参照してください。
 
 ## <a name="example"></a>例
 
-次の例は、使用する方法を示します、`restrict(amp)`句。
+次の例では、`restrict(amp)`句を使用する方法を示します。
 
 ```cpp
 void functionAmp() restrict(amp) {}
@@ -104,6 +104,6 @@ void callFunctions() restrict(amp)
 }
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [C++ AMP (C++ Accelerated Massive Parallelism)](../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - multiplicative operators [C++]
 - division operator
 ms.assetid: b53ea5da-d0b4-40dc-98f3-0aa52d548293
-ms.openlocfilehash: 9a01672976703634c06724c9c655605bb433facf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bc6359d3d7d2045d44af07f80b3e101da356d4b1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301826"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179355"
 ---
 # <a name="multiplicative-operators-and-the-modulus-operator"></a>乗算演算子と剰余演算子
 
@@ -32,25 +32,25 @@ expression / expression
 expression % expression
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 乗算演算子は次のとおりです。
 
 - 乗算 (<strong>\*</strong>)
 
-- 除算 (**/**)
+- 除算 ( **/** )
 
-- 剰余 (除算の剰余) (**%**)
+- 剰余 (除算の剰余) ( **%** )
 
 これらの二項演算子の結合規則は、左から右方向です。
 
-乗算演算子は、数値型のオペランドを受け取ります。 剰余演算子 (**%**) より厳しい要件を持つことで、そのオペランドが整数型でなければなりません。 (浮動小数点除算の剰余を取得、実行時の関数を使用する[fmod](../c-runtime-library/reference/fmod-fmodf.md))。変換は、「[標準変換](standard-conversions.md)オペランドに適用され結果は変換後の型のです。
+乗算演算子は、数値型のオペランドを受け取ります。 剰余演算子 ( **%** ) は、そのオペランドが整数型である必要があるので、より厳密な要件を持ちます。 (浮動小数点除算の剰余を取得するには、ランタイム関数[fmod](../c-runtime-library/reference/fmod-fmodf.md)を使用します)。「[標準変換](standard-conversions.md)」で説明されている変換がオペランドに適用され、結果は変換後の型になります。
 
 乗算演算子は、最初のオペランドを 2 番目のオペランドで乗算した結果を生成します。
 
 除算演算子は、最初のオペランドを 2 番目のオペランドで除算した結果を生成します。
 
-剰余演算子は、次の式で指定された残りの部分を生成ここ*e1*最初のオペランドと*e2* 2 番目の: *e1* -(*e1* /  *e2*) \* *e2*両方のオペランドが整数型が、します。
+剰余演算子は、次の式によって指定された剰余を生成します。ここで、 *e1*は最初のオペランド、 *e2*は2番目のオペランド * / (e1* *) \** *e2*(両方のオペランドが整数型である *) です。*
 
 除算または剰余式における 0 での除算は未定義になり、実行時エラーが発生します。 したがって、次の式は未定義の間違った結果を生成します。
 
@@ -70,13 +70,13 @@ Microsoft C++ では、剰余式の結果は常に最初のオペランドと同
 
 **Microsoft 固有の仕様はここまで**
 
-2 つの整数の計算された除算が正確ではなく、1 つのオペランドだけが負の値の場合、結果は、除算演算で算出された正確な値未満の最大の整数 (大きさでは、符号を無視します) になります。 たとえば、-11 計算値-3.666666666 は。 整数の除算の結果は-3 です。
+2 つの整数の計算された除算が正確ではなく、1 つのオペランドだけが負の値の場合、結果は、除算演算で算出された正確な値未満の最大の整数 (大きさでは、符号を無視します) になります。 たとえば、-11/3 の計算値は-3.666666666 です。 その整数部の結果は-3 になります。
 
-乗算演算子の間のリレーションシップは、id で指定されます (*e1* / *e2*) \* *e2*  +  *e1* % *e2* == *e1*します。
+乗算演算子間のリレーションシップは、id (*e1* / *e2*) \* *e2* + *e1* % *e2* == *e1*によって指定されます。
 
 ## <a name="example"></a>例
 
-次のプログラムは乗算演算子を示します。 注意のいずれかのオペランド`10 / 3`型に明示的にキャストする必要があります**float**ように両方のオペランド型の切り捨てを回避するために**float**除算する前にします。
+次のプログラムは乗算演算子を示します。 どちら `10 / 3` のオペランドも、切り捨てを避けるために**float**型に明示的にキャストする必要があることに注意してください。これは、両方のオペランドが除算前の**float**型であるためです。
 
 ```cpp
 // expre_Multiplicative_Operators.cpp
@@ -92,7 +92,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [二項演算子を含む式](../cpp/expressions-with-binary-operators.md)<br/>
 [C++ の組み込み演算子、優先順位と結合規則](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>

@@ -6,27 +6,27 @@ f1_keywords:
 helpviewer_keywords:
 - C4274
 ms.assetid: 5a948680-7ed1-469f-978d-ae99d154e161
-ms.openlocfilehash: f73fa8e09baab127e7755ebe3def69c2fb585744
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5f2350f275f883e7bf18aa1621d08b34132e8dfb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62207208"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80175847"
 ---
 # <a name="compiler-warning-level-1-c4274"></a>コンパイラの警告 (レベル 1) C4274
 
-\#ident ignored; see documentation for #pragma comment(exestr, 'string')
+\#ident は無視されます。#pragma コメント (exestr、' string ') のドキュメントを参照してください。
 
-`#ident`ディレクティブで、ユーザー指定の文字列を挿入すると、オブジェクトまたは実行可能ファイルで、これが非推奨とされます。 その結果、コンパイラでは、ディレクティブは無視されます。
+オブジェクトまたは実行可能ファイルにユーザーが指定した文字列を挿入する `#ident` ディレクティブは、非推奨とされます。 その結果、コンパイラはディレクティブを無視します。
 
 > [!CAUTION]
->  警告 C4274 では、使用するように勧める、 [#pragma comment (exestr, 'string')](../../preprocessor/comment-c-cpp.md)ディレクティブ。 ただし、このアドバイスは非推奨し、コンパイラの将来のリリースで変更されます。 使用する場合、`#pragma`ディレクティブ、リンカー ツール (LINK.exe) ディレクティブによって生成された、このコメント レコードを無視し、警告[LNK4229](../../error-messages/tool-errors/linker-tools-warning-lnk4229.md)します。 代わりに、`#ident`ディレクティブ、お勧め、アプリケーションでは、ファイル バージョン リソース文字列を使用することです。
+>  警告 C4274 は、 [#pragma コメント (exestr, ' string ')](../../preprocessor/comment-c-cpp.md)ディレクティブを使用することをアドバイスします。 ただし、このアドバイスは非推奨とされ、コンパイラの将来のリリースで修正される予定です。 `#pragma` ディレクティブを使用する場合、リンカーツール (setup.exe) はディレクティブによって生成されたコメントレコードを無視し、警告[LNK4229](../../error-messages/tool-errors/linker-tools-warning-lnk4229.md)を発行します。 `#ident` ディレクティブの代わりに、アプリケーションでファイルバージョンリソース文字列を使用することをお勧めします。
 
 ## <a name="to-correct-this-error"></a>このエラーを解決するには
 
-- 削除、 `#ident "`*文字列*`"`ディレクティブ。
+- `#ident "`*文字列*`"` ディレクティブを削除します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [コメント (C/C++)](../../preprocessor/comment-c-cpp.md)<br/>
 [リンカー ツールの警告 LNK4229](../../error-messages/tool-errors/linker-tools-warning-lnk4229.md)<br/>

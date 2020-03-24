@@ -7,12 +7,12 @@ helpviewer_keywords:
 - namespaces [C++], unqualified names in
 - using keyword [C++]
 ms.assetid: 4184e2b1-3adc-408e-b5f3-0b3f8b554723
-ms.openlocfilehash: a158094141307acb507d5f3e873c600e89135ad7
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: d762ea36e83d2384b7bb50c2914f6a634c134d15
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301276"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187844"
 ---
 # <a name="using-declaration"></a>using 宣言
 
@@ -33,11 +33,11 @@ using declarator-list ;
 
 *宣言子リスト* **[Typename]** の*入れ子になった名前指定子* *宣言子の*コンマ区切りのリスト。オプションで省略記号を指定します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
-Using 宣言では、他の場所で宣言されたエンティティのシノニムとして非修飾名が導入されます。 これにより、特定の名前空間の単一の名前を、それが出現する宣言領域で明示的に修飾することなく使用できます。 これは、 [using ディレクティブ](../cpp/namespaces-cpp.md#using_directives)とは異なり、名前空間内の*すべて*の名前を修飾なしで使用できます。 **using**キーワードも使用[エイリアスを入力](../cpp/aliases-and-typedefs-cpp.md)します。
+Using 宣言では、他の場所で宣言されたエンティティのシノニムとして非修飾名が導入されます。 これにより、特定の名前空間の単一の名前を、それが出現する宣言領域で明示的に修飾することなく使用できます。 これは、 [using ディレクティブ](../cpp/namespaces-cpp.md#using_directives)とは異なり、名前空間内の*すべて*の名前を修飾なしで使用できます。 **Using**キーワードは、[型の別名](../cpp/aliases-and-typedefs-cpp.md)にも使用されます。
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 using 宣言は、クラス定義で使用できます。
 
@@ -83,7 +83,7 @@ In B::f()
 In B::g()
 ```
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 メンバーの宣言に使用する場合、using 宣言は基底クラスのメンバーを参照する必要があります。
 
@@ -123,7 +123,7 @@ int main() {
 In B::f()
 ```
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 Using 宣言を使用して宣言されたメンバーは、明示的な修飾を使用して参照できます。 `::` プレフィックスは、グローバル名前空間を参照します。
 
@@ -163,11 +163,11 @@ In f
 In A::g
 ```
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 using 宣言を行うと、宣言によって作成されるシノニムは、using 宣言の時点で有効である定義のみを参照します。 using 宣言の後で名前空間に追加される定義は、無効なシノニムです。
 
-によって定義された名前、**using**宣言は、元の名前のエイリアスです。 using 宣言は元の宣言の型、リンケージ、またはその他の属性には影響しません。
+**Using**宣言によって定義される名前は、元の名前のエイリアスです。 using 宣言は元の宣言の型、リンケージ、またはその他の属性には影響しません。
 
 ```cpp
 // post_declaration_namespace_additions.cpp
@@ -192,7 +192,7 @@ void b() {
 }
 ```
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 名前空間内の関数では、1 つの名前のローカル宣言と using 宣言が同じスコープ内にある場合、それらはすべて同じエンティティ、つまり関数を参照している必要があります。
 
@@ -215,9 +215,9 @@ void g() {
 
 この例では、`using B::i` ステートメントにより、2 つ目の `int i` が `g()` 関数で宣言されます。 `using B::f` 内に定義された関数名に異なるパラメーター型があるため、`f(char)` ステートメントと `B::f` 関数は競合しません。
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
-ローカル関数宣言は、using 宣言で定義された関数と同じ名前および型を含むことはできません。 例:
+ローカル関数宣言は、using 宣言で定義された関数と同じ名前および型を含むことはできません。 次に例を示します。
 
 ```cpp
 // functions_in_namespaces2.cpp
@@ -242,7 +242,7 @@ void h() {
 }
 ```
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 継承では、using 宣言で基底クラスの名前を派生クラスのスコープ内に定義すると、派生クラスのメンバー関数によって、基底クラスで同じ名前と引数の型を持つ仮想メンバー関数がオーバーライドされます。
 
@@ -300,7 +300,7 @@ In B::g
 In D::g(char)
 ```
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 using 宣言で定義された名前のすべてのインスタンスはアクセス可能である必要があります。 特に、派生クラスが基底クラスのメンバーにアクセスするために using 宣言を使用する場合は、そのメンバー名がアクセス可能である必要があります。 名前がオーバーロードされたメンバー関数の名前である場合、その名前のすべての関数にアクセス可能である必要があります。
 
@@ -325,7 +325,7 @@ public:
 };
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [名前空間](../cpp/namespaces-cpp.md)<br/>
 [キーワード](../cpp/keywords-cpp.md)

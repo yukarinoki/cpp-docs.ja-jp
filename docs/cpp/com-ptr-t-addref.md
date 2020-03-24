@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - AddRef method [C++], interface pointers
 ms.assetid: c104dac3-aad3-40bb-a298-75c6cd0e63a2
-ms.openlocfilehash: 7408b5c174f76673b56caffd56aaa87895bd08d4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 51182b461aeac83c12bb18a573a49b2d4347a190
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154943"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189934"
 ---
-# <a name="comptrtaddref"></a>_com_ptr_t::AddRef
+# <a name="_com_ptr_taddref"></a>_com_ptr_t::AddRef
 
 **Microsoft 固有の仕様**
 
-呼び出し、`AddRef`のメンバー関数`IUnknown`カプセル化されたインターフェイス ポインター。
+カプセル化されたインターフェイスポインターで `IUnknown` の `AddRef` メンバー関数を呼び出します。
 
 ## <a name="syntax"></a>構文
 
@@ -25,12 +25,12 @@ ms.locfileid: "62154943"
 void AddRef( );
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-呼び出し`IUnknown::AddRef`、カプセル化されたインターフェイス ポインターで発生させる、`E_POINTER`ポインターが NULL の場合のエラー。
+は、カプセル化されたインターフェイスポインターで `IUnknown::AddRef` を呼び出し、ポインターが NULL の場合に `E_POINTER` エラーを発生させます。
 
 **Microsoft 固有の仕様はここまで**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [_com_ptr_t クラス](../cpp/com-ptr-t-class.md)

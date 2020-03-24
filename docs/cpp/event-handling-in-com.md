@@ -16,35 +16,35 @@ helpviewer_keywords:
 - declaring events, in COM
 - declaring events, event handling in COM
 ms.assetid: 6b4617d4-a58e-440c-a8a6-1ad1c715b2bb
-ms.openlocfilehash: da255da9fb9ff7a652fa1af796568a8e50759dc4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d54470bdf4b2555b01993582a74f65505858f94b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392181"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189235"
 ---
 # <a name="event-handling-in-com"></a>COM でのイベント処理
 
-使用してイベント ソースとイベント レシーバーを設定する COM イベントの処理で、 [event_source](../windows/attributes/event-source.md)と[event_receiver](../windows/attributes/event-receiver.md)指定それぞれ属性`type` = `com`. これらの属性により、カスタム、ディスパッチ、デュアルの各インターフェイスの適切なコードが挿入され、適用先のクラスでイベントを発生させ、COM 接続ポイントを通じてイベントを処理できるようになります。
+COM イベント処理では、 [event_source](../windows/attributes/event-source.md)と[event_receiver](../windows/attributes/event-receiver.md)属性を使用して、イベントソースとイベントレシーバーをそれぞれ設定し、`type`=`com`を指定します。 これらの属性により、カスタム、ディスパッチ、デュアルの各インターフェイスの適切なコードが挿入され、適用先のクラスでイベントを発生させ、COM 接続ポイントを通じてイベントを処理できるようになります。
 
 ## <a name="declaring-events"></a>イベントの宣言
 
-イベント ソース クラスで、使用、 [_ _event](../cpp/event.md)イベントとしてインターフェイスのメソッドの宣言に、インターフェイス宣言でキーワード。 このインターフェイスのイベントは、インターフェイス メソッドとして呼び出されたときに発生します。 イベント インターフェイスのメソッドは、0 個以上のパラメーターを持つことができます (これはどれも*で*パラメーター)。 戻り値の型は void または任意の整数型です。
+イベントソースクラスでは、インターフェイス宣言で[__event](../cpp/event.md)キーワードを使用して、そのインターフェイスのメソッドをイベントとして宣言します。 このインターフェイスのイベントは、インターフェイス メソッドとして呼び出されたときに発生します。 イベントインターフェイスのメソッドには、0個以上のパラメーターを含めることができます (すべてがパラメーター*に含ま*れている必要があります)。 戻り値の型は void または任意の整数型です。
 
 ## <a name="defining-event-handlers"></a>イベント ハンドラーの定義
 
-イベント レシーバー クラスでは、イベント ハンドラーを定義します。イベント ハンドラーは、処理するイベントと一致するシグニチャ (戻り値の型、呼び出し規則、引数) を持つメソッドです。 COM のイベントの呼び出し規約する必要はありませんが一致します。参照してください[レイアウトに依存する COM イベント](#vcconeventhandlingincomanchorlayoutdependentcomevents)以下の詳細についてはします。
+イベント レシーバー クラスでは、イベント ハンドラーを定義します。イベント ハンドラーは、処理するイベントと一致するシグニチャ (戻り値の型、呼び出し規則、引数) を持つメソッドです。 COM イベントの場合、呼び出し規約が一致している必要はありません。詳細については、以下の「[レイアウトに依存する COM イベント](#vcconeventhandlingincomanchorlayoutdependentcomevents)」を参照してください。
 
 ## <a name="hooking-event-handlers-to-events"></a>イベントへのイベント ハンドラーのフック
 
-組み込み関数を使用する、イベント レシーバー クラスでも[_ _hook](../cpp/hook.md)にイベントをイベント ハンドラーに関連付けると[_ _unhook](../cpp/unhook.md)イベント ハンドラーからイベントの関連付けを解除します。 複数のイベントを 1 つのイベント ハンドラーにフックすることも、複数のイベント ハンドラーを 1 つのイベントにフックすることもできます。
+また、イベントレシーバークラスでは、組み込み関数[__hook](../cpp/hook.md)を使用してイベントをイベントハンドラーに関連付け[__unhook](../cpp/unhook.md)たり、イベントハンドラーからイベントの関連付けを解除したりできます。 複数のイベントを 1 つのイベント ハンドラーにフックすることも、複数のイベント ハンドラーを 1 つのイベントにフックすることもできます。
 
 > [!NOTE]
->  通常、COM イベント レシーバーからイベント ソース インターフェイス定義へのアクセスを許可するには、2 つの方法があります。 最初の方法は、次に示すように、共通のヘッダー ファイルを共有することです。 2 つ目は、使用する[#import](../preprocessor/hash-import-directive-cpp.md)で、`embedded_idl`修飾子をインポートして、属性が生成されたコードを保持でイベント ソースのタイプ ライブラリが .tlh ファイルに書き込まれます。
+>  通常、COM イベント レシーバーからイベント ソース インターフェイス定義へのアクセスを許可するには、2 つの方法があります。 最初の方法は、次に示すように、共通のヘッダー ファイルを共有することです。 2つ目の方法は、`embedded_idl` インポート修飾子を使用して[#import](../preprocessor/hash-import-directive-cpp.md)を使用することです。これにより、属性によって生成されたコードが保存されたファイルにイベントソースタイプライブラリが書き込まれます。
 
 ## <a name="firing-events"></a>イベントの発生
 
-イベントを発生させるのだけで宣言されたインターフェイスでメソッドを呼び出す、 **_ _event**キーワードは、イベント ソース クラス。 ハンドラーがイベントにフックされている場合は、ハンドラーが呼び出されます。
+イベントを発生させるには、イベントソースクラスの **__event**キーワードを使用して宣言されたインターフェイスのメソッドを呼び出します。 ハンドラーがイベントにフックされている場合は、ハンドラーが呼び出されます。
 
 ### <a name="com-event-code"></a>COM イベント コード
 
@@ -150,20 +150,20 @@ int main() {
 }
 ```
 
-### <a name="output"></a>出力
+### <a name="output"></a>Output
 
 ```Output
 MyHandler1 was called with value 123.
 MyHandler2 was called with value 123.
 ```
 
-##  <a name="vcconeventhandlingincomanchorlayoutdependentcomevents"></a> レイアウトに依存する COM イベント
+##  <a name="layout-dependent-com-events"></a><a name="vcconeventhandlingincomanchorlayoutdependentcomevents"></a>レイアウト依存 COM イベント
 
 レイアウトの依存関係は、COM プログラミングにおいてのみ考慮する項目です。 ネイティブおよびマネージド イベント処理では、ハンドラーのシグニチャ (戻り値の型、呼び出し規約、および引数) がイベントと一致する必要がありますが、イベント ハンドラー名はイベントと一致する必要はありません。
 
-ただし、設定すると、COM イベント処理で、 *layout_dependent*パラメーターの`event_receiver`に**true**名前とシグネチャの一致を適用します。 これは、イベント レシーバーのハンドラーの名前とシグニチャが、フックするイベントの名前とシグニチャに正確に一致する必要があることを意味します。
+ただし、COM イベント処理で、`event_receiver` の*layout_dependent*パラメーターを**true**に設定すると、名前とシグネチャの一致が適用されます。 これは、イベント レシーバーのハンドラーの名前とシグニチャが、フックするイベントの名前とシグニチャに正確に一致する必要があることを意味します。
 
-ときに*layout_dependent*に設定されている**false**、呼び出し規約とストレージ クラス (virtual、static、およびなど) を混在し、実行されている間に一致するイベント メソッドとフック メソッド (そのデリゲートの場合)。 若干効率的です*layout_dependent*=**true**します。
+*Layout_dependent*が**false**に設定されている場合、呼び出し規約とストレージクラス (virtual、static など) は、発生イベントメソッドとフックメソッド (デリゲート) との間で混在させることができます。 *Layout_dependent*=**true**にする方が少し効率的です。
 
 たとえば、次のメソッドを持つ `IEventSource` が定義されているとします。
 
@@ -213,6 +213,6 @@ public:
 };
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [イベント処理](../cpp/event-handling.md)

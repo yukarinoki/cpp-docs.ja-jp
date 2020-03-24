@@ -9,18 +9,18 @@ helpviewer_keywords:
 - operators [C++], using in __asm blocks
 - square brackets [ ]
 ms.assetid: a26ccfd4-40ae-4a61-952f-c417982aa8dd
-ms.openlocfilehash: a871c19942252bf6a1a4901f8854b7b759700cd9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b6ac9f7174baf1e0ebe41181c6a6f43e7bb3f5d1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166504"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169098"
 ---
 # <a name="using-operators-in-__asm-blocks"></a>__asm ブロックでの演算子の使用
 
 **Microsoft 固有の仕様**
 
-`__asm`ブロックがなど、C または C++ の特定の演算子を使用することはできません、 **<<** 演算子。 しかし、演算子、共有 C および MASM など、\*演算子は、アセンブリ言語の演算子として解釈されます。 たとえば、外部、`__asm`ブロック、角かっこ ( **[]** ) C は、配列内の要素のサイズを自動的にスケーリング配列の添字を囲むとして解釈されます。 内で、`__asm`ブロック、任意のデータ オブジェクトまたはラベル (配列だけでなく) から、スケールなしのバイト オフセットを生成 MASM インデックス演算子として出現します。 次のコードは、違いを示しています。
+`__asm` ブロックは、C またはC++特定の演算子 ( **<<** 演算子など) を使用できません。 ただし、C および MASM によって共有される演算子 (\* 演算子など) は、アセンブリ言語の演算子として解釈されます。 たとえば、`__asm` ブロックの外側では、角かっこ ( **[]** ) は配列添字として解釈され、C は配列内の要素のサイズに自動的にスケーリングします。 `__asm` ブロック内では、MASM の index 演算子として表示されます。これにより、配列だけでなく、任意のデータオブジェクトまたはラベルからのバイトオフセットがスケーリングされません。 次のコードはその違いを示しています。
 
 ```cpp
 int array[10];
@@ -30,7 +30,7 @@ __asm mov array[6], bx ;  Store BX at array+6 (not scaled)
 array[6] = 0;         /* Store 0 at array+24 (scaled) */
 ```
 
-最初に参照される`array`スケールされていないが、2 つ目は。 使用することに注意してください、**TYPE**定数に基づいてスケーリングを実現するために演算子。 たとえば、次のステートメントは同等です。
+`array` への最初の参照はスケーリングされませんが、2番目の参照はになります。 **型**演算子を使用すると、定数に基づいてスケーリングを実現できます。 たとえば、次のステートメントは互いに対応しています。
 
 ```cpp
 __asm mov array[6 * TYPE int], 0 ; Store 0 at array + 24
@@ -40,6 +40,6 @@ array[6] = 0;                   /* Store 0 at array + 24 */
 
 **Microsoft 固有の仕様はここまで**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [__asm ブロックでの C または C++ の使用](../../assembler/inline/using-c-or-cpp-in-asm-blocks.md)<br/>

@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB consumers, wizard-generated classes and methods
 ms.assetid: d80ee51c-8bb3-4dca-8760-5808e0fb47b4
-ms.openlocfilehash: 5d5c7aa680ca6b764e2ee9710e46cf6fa3af1c89
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: ce2442909fd318187a1508300a75ff4f634b3410
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707722"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211511"
 ---
 # <a name="consumer-wizard-generated-methods"></a>コンシューマー ウィザードで生成されたメソッド
 
@@ -43,7 +43,7 @@ HRESULT OpenAll();
 void CloseAll();
 ```
 
-次の例は、同じコマンドを繰り返し実行する場合に `OpenAll` と `CloseAll` を呼び出す方法を示しています。 `CloseAll` の代わりに `Close` と `ReleaseCommand` を呼び出すバリエーションを示す [CCommand::Close](../../data/oledb/ccommand-close.md) のコード例と比べてみてください。
+次の例は、同じコマンドを繰り返し実行する場合に `OpenAll` と `CloseAll` を呼び出す方法を示しています。 [ の代わりに ](../../data/oledb/ccommand-close.md) と `Close` を呼び出すバリエーションを示す `ReleaseCommand`CCommand::Close`CloseAll` のコード例と比べてみてください。
 
 ```cpp
 int main(int argc, char* argv[])
@@ -159,6 +159,6 @@ void CloseDataSource();
 
 ::: moniker-end
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ウィザードを使用した OLE DB コンシューマーの作成](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)

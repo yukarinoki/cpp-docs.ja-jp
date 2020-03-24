@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4437
 ms.assetid: dc07e350-20eb-474c-a7ad-f841ae7ec339
-ms.openlocfilehash: 6cd50d5c4d79b82c135ab4e84ec390dee9e906ef
-ms.sourcegitcommit: 8762a3f9b5476b4dee03f0ee8064ea606550986e
+ms.openlocfilehash: 84c6e8d09495d871b8c490a92558aaba14b0574c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74810655"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80185335"
 ---
 # <a name="compiler-warning-level-4-c4437"></a>コンパイラの警告 (レベル 4) C4437
 
@@ -31,7 +31,7 @@ ms.locfileid: "74810655"
 
 警告は、部分的に構築されたオブジェクトで動作している場合に、`dynamic_cast` が正しく実行されない可能性があることを示します。  この状況は、外側の関数が、警告で指定された派生クラスを継承するクラスのコンストラクターまたはデストラクターから呼び出された場合に発生します。  警告で指定された派生クラスがそれ以上派生しない場合、またはオブジェクトの構築時または破棄時に外側の関数が呼び出されない場合は、警告を無視できます。
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 次の例では、C4437 を生成し、不足している `vtordisp` フィールドから発生するコード生成の問題を示します。
 

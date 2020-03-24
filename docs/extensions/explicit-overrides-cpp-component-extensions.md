@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - overriding, override [C++]
 ms.assetid: 4ec3eaf5-163b-4df8-8f16-7a2ec04c3d0f
-ms.openlocfilehash: b80e49489c0b0d26469ba9f8b77e80a962668e35
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.openlocfilehash: c199301794daaa140ede2fd99b0ae755cea70f97
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "79545433"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172374"
 ---
 # <a name="explicit-overrides--ccli-and-ccx"></a>明示的なオーバーライド (C++/CLI および C++/CX)
 
@@ -39,7 +39,7 @@ overriding-function-declarator = function { overriding-function-definition }
 *overriding-function-definition*<br/>
 オーバーライドする関数を定義する関数の本体ステートメント。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 明示的なオーバーライドを使用して、メソッドシグネチャのエイリアスを作成するか、同じシグネチャを持つメソッドに対して異なる実装を提供します。
 
@@ -47,17 +47,17 @@ overriding-function-declarator = function { overriding-function-definition }
 
 ## <a name="windows-runtime"></a>Windows ランタイム
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/ZW`
 
 ## <a name="common-language-runtime"></a>共通言語ランタイム
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 ネイティブ コードまたは `/clr:oldSyntax` でコンパイルされたコードでの明示的なオーバーライドについては、「[明示的なオーバーライド](../cpp/explicit-overrides-cpp.md)」を参照してください。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/clr`
 
