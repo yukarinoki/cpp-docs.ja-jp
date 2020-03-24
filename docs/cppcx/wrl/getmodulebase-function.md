@@ -5,16 +5,16 @@ ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::GetModuleBase
 ms.assetid: 123d3b14-2eaf-4e02-8dcd-b6567917c6a6
-ms.openlocfilehash: 4d8c8467b7aeb9c21bf5f4ee19c60e6e60880688
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0d130fffa9fad9ae327d03eaa01d84742094cc67
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398395"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213968"
 ---
 # <a name="getmodulebase-function"></a>GetModuleBase 関数
 
-取得、 [ModuleBase](modulebase-class.md)の参照カウントをインクリメントおよびデクリメントするため、ポインター、 [RuntimeClass](runtimeclass-class.md)オブジェクト。
+[RuntimeClass](runtimeclass-class.md)オブジェクトの参照カウントをインクリメントおよびデクリメントできる[modulebase](modulebase-class.md)ポインターを取得します。
 
 ## <a name="syntax"></a>構文
 
@@ -24,20 +24,20 @@ inline Details::ModuleBase* GetModuleBase() throw()
 
 ## <a name="return-value"></a>戻り値
 
-`ModuleBase` オブジェクトへのポインター。
+`ModuleBase` オブジェクトを指すポインターです。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-この関数は、インクリメントおよびデクリメントを内部的に使用されますオブジェクト参照をカウントします。
+この関数は、オブジェクト参照カウントをインクリメントおよびデクリメントするために、内部的に使用されます。
 
-この関数を使用して、呼び出すことによって参照カウントを制御することができます[modulebase::incrementobjectcount](modulebase-class.md#incrementobjectcount)と[modulebase::decrementobjectcount](modulebase-class.md#decrementobjectcount)します。
+この関数を使用すると、 [modulebase:: IncrementObjectCount](modulebase-class.md#incrementobjectcount)と[modulebase::D ecrementobjectcount](modulebase-class.md#decrementobjectcount)を呼び出すことにより、参照カウントを制御できます。
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** implements.h
+**Header:** を実装します。
 
-**名前空間:** Microsoft::wrl
+**名前空間:** Microsoft::WRL
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [Microsoft::WRL 名前空間](microsoft-wrl-namespace.md)

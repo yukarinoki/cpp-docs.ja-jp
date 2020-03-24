@@ -6,12 +6,12 @@ f1_keywords:
 - event/Microsoft::WRL::AgileEventSource
 helpviewer_keywords:
 - AgileEventSource class
-ms.openlocfilehash: 7a919c0b2aa778ba1db19c3bfc3871542e8f9569
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 71a70f783d8f8967d755bb788f4aae4861340d64
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79441273"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214189"
 ---
 # <a name="agileeventsource-class"></a>AgileEventSource クラス
 
@@ -37,7 +37,7 @@ class AgileEventSource :
 *TEventSourceOptions*<br/>
 InvokeMode フィールドが `InvokeMode::StopOnFirstError` または `InvokeMode::FireAll`に設定されている[InvokeModeOptions](invokemodeoptions-structure.md)構造体。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 Windows ランタイムのコンポーネントの大部分はアジャイルコンポーネントです。 詳細については、「[スレッド処理C++とマーシャリング (/cx)](../../cppcx/threading-and-marshaling-c-cx.md)」を参照してください。
 
@@ -47,7 +47,7 @@ Windows ランタイムのコンポーネントの大部分はアジャイルコ
 
 `AgileEventSource`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** イベント .h
 
@@ -61,7 +61,7 @@ Windows ランタイムのコンポーネントの大部分はアジャイルコ
 |----------|-----------------|
 |[AgileEventSource:: Add メソッド](#add)|指定されたデリゲートインターフェイスによって表されるアジャイルイベントハンドラーを、現在の**Agileeventsource**オブジェクトのイベントハンドラーのセットに追加します。|
 
-## <a name="add"></a>AgileEventSource:: Add メソッド
+## <a name="agileeventsourceadd-method"></a><a name="add"></a>AgileEventSource:: Add メソッド
 
 指定されたデリゲートインターフェイスによって表されるイベントハンドラーを、現在の[EventSource](eventsource-class.md)オブジェクトのイベントハンドラーのセットに追加します。
 

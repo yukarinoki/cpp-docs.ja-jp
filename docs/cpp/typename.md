@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - typename template specifier
 ms.assetid: 52e1d901-220d-4f0d-ab43-dae7e05fb491
-ms.openlocfilehash: 7dbe4381465036bdd102b3be753a18451886a3d8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 789bb879922bbd96a04085159205d02fb7f495c8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166257"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160685"
 ---
 # <a name="typename"></a>typename
 
-テンプレートの定義で、不明な識別子が型であるコンパイラに対するヒントを提供します。 テンプレート パラメーター リストでは、型パラメーターを指定に使用されます。
+テンプレート定義では、不明な識別子が型であることをコンパイラにヒントとして示します。 テンプレートパラメーターリストでは、を使用して型パラメーターを指定します。
 
 ## <a name="syntax"></a>構文
 
@@ -23,11 +23,11 @@ ms.locfileid: "62166257"
 typename identifier;
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-テンプレート定義内の名前がテンプレート引数に依存する修飾名である場合、このキーワードを使用する必要があります。修飾名に依存しない場合は省略可能です。 詳細については、次を参照してください。[テンプレートと名前解決](../cpp/templates-and-name-resolution.md)します。
+テンプレート定義内の名前がテンプレート引数に依存する修飾名である場合は、このキーワードを使用する必要があります。修飾名が依存していない場合は省略可能です。 詳細については、「[テンプレートと名前解決](../cpp/templates-and-name-resolution.md)」を参照してください。
 
-**typename**任意の型定義またはテンプレート宣言の任意の場所で使用できます。 テンプレート基底クラスへのテンプレート引数として使用する場合を除いて、このキーワードを基底クラス リストで使用することはできません。
+**typename**は、テンプレート宣言または定義内の任意の型で使用できます。 テンプレート基底クラスへのテンプレート引数として使用する場合を除いて、このキーワードを基底クラス リストで使用することはできません。
 
 ```cpp
 template <class T>
@@ -38,7 +38,7 @@ class C2 : A<typename T::InnerType>  // typename OK.
 {};
 ```
 
-**typename**の代わりにキーワードを使用することも**class**テンプレート パラメーターの一覧表示されます。 たとえば、次のステートメントと同じ意味です。
+**Typename**キーワードは、テンプレートパラメーターリストの**クラス**の代わりに使用することもできます。 たとえば、次のステートメントは意味的に等価です。
 
 ```cpp
 template<class T1, class T2>...
@@ -59,7 +59,7 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [テンプレート](../cpp/templates-cpp.md)<br/>
 [キーワード](../cpp/keywords-cpp.md)

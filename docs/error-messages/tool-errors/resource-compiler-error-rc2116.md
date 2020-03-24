@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - RC2116
 ms.assetid: d9203ddf-798d-490b-be41-0dd3f7d53653
-ms.openlocfilehash: 38f500b203c0ec47743ccd76c8453ce6c9286918
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3fae25b7232425128c51625ca09319cc84064f50
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62219874"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80191419"
 ---
 # <a name="resource-compiler-error-rc2116"></a>リソース コンパイラ エラー RC2116
 
-ID の数を指定してください。
+ID には数値が必要です
 
-番号を指定してください、`id`で制御ステートメントのフィールド、**ダイアログ**ステートメント。 数値があるかどうかを確認または`#define`ステートメントのコントロール id。
+**DIALOG**ステートメント内の control ステートメントの `id` フィールドには数値が必要です。 コントロール ID に対して、数字または `#define` ステートメントがあることを確認します。

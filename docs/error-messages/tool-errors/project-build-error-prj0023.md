@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0023
 ms.assetid: ed55a320-e7c8-489f-886e-825feee0d576
-ms.openlocfilehash: 73ac5e7d4675dd9ec724a8f4c7118fe6abd663a1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7763ca1d21a13c845e9cd7277d513cca431a9900
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62359242"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80192628"
 ---
 # <a name="project-build-error-prj0023"></a>プロジェクト ビルド エラー PRJ0023
 
-> ツール '*ツール*'、不明なプロパティには、無効なファイル名が含まれています。'*ファイル*'。
+> ツール '*tool*'、不明なプロパティに無効なファイル名 '*file*' が含まれています。
 
-ファイル名*ファイル*ツールに指定された*ツール*が無効です。
+ツール*ツール*に指定されたファイル名*ファイル*が無効です。
 
-不明または無効なマクロを使用することがあります。
+不明または無効なマクロを使用している可能性があります。
 
-参照してください[Visual C プロジェクトのプロパティの設定](../../build/working-with-project-properties.md)については、プロジェクトのプロパティにアクセスする方法。
+プロジェクトのプロパティにアクセスする方法の詳細については、「 [Visual C++プロジェクトのプロパティの設定](../../build/working-with-project-properties.md)」を参照してください。

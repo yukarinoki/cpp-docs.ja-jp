@@ -6,31 +6,31 @@ f1_keywords:
 helpviewer_keywords:
 - D9024
 ms.assetid: daf4896d-223d-4af0-9b6d-89109cf3d1bb
-ms.openlocfilehash: c577aceacef748045f867a6bc253a1dd6c84aafe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5de051b9ca5c09af74b94be4b75616bce6fadf2c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62214156"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196761"
 ---
 # <a name="command-line-warning-d9024"></a>コマンド ラインの警告 D9024
 
-認識されていないソース ファイルの種類 'filename'、オブジェクト ファイルと見なされます
+認識されないソースファイルの種類 ' filename ' です。オブジェクトファイルと見なされます。
 
-指定したファイルの拡張子が認識されませんでした。 ファイルは、オブジェクト ファイルであると見なされますが、リンカーに渡されました。
+指定されたファイルの拡張子が認識されませんでした。 ファイルはオブジェクトファイルと見なされ、リンカーに渡されました。
 
 次の拡張機能が認識されます。
 
-- .c ファイル (C ソース ファイル)
+- .c (C ソースファイル)
 
-- .cxx (C++ ソース ファイル)
+- . .cxx (C++ソースファイル)
 
-- .cpp (C++ ソース ファイル)
+- .cpp (C++ソースファイル)
 
-- .obj (オブジェクト ファイル)
+- .obj (オブジェクトファイル)
 
-- .lib (ライブラリ ファイル)
+- .lib (ライブラリファイル)
 
 - .def (モジュール定義ファイル)
 
-- .exp (リンカーは、リンク/LIB によって作成されたファイルをエクスポート)
+- .exp (リンカーは、リンク/LIB で作成されたファイルをエクスポートします)

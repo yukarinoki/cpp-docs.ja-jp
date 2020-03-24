@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C4517
 ms.assetid: 87cc12b8-7331-4f3a-a863-d6a75d9599c3
-ms.openlocfilehash: 1441571a2546ae5851a952fae18a37d54c3c5cf2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9f366e143b4bade2a8be359db1a88eaaa9a15533
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62220913"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80198407"
 ---
 # <a name="compiler-warning-level-4-c4517"></a>コンパイラの警告 (レベル 4) C4517
 
-access 宣言は非推奨とされます。メンバー using 宣言が代替を提供します。
+アクセス宣言は非推奨とされます。メンバー using 宣言は、より優れた代替手段を提供します。
 
-ANSI C++ 委員会には、アクセスの宣言が宣言されている (せずに、派生クラスのメンバーのアクセスを変更して、[を使用して](../../cpp/using-declaration.md)キーワード) に期限切れであります。 Access 宣言は、C++ の将来のバージョンでサポートされていません可能性があります。
+ANSI C++委員会がアクセス宣言を宣言しました (using キーワードを[使用](../../cpp/using-declaration.md)せずに派生クラスのメンバーのアクセスを変更する)。 アクセス宣言は、今後のバージョンのC++ではサポートされない場合があります。

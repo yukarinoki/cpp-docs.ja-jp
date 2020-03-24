@@ -10,12 +10,12 @@ helpviewer_keywords:
 - distributing applications [C++]
 ms.assetid: 37f1691e-d67c-41e4-926e-528a237a9bac
 ms.topic: overview
-ms.openlocfilehash: af3141a8fd626a909de93b219bf3b6d8186f0623
-ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
+ms.openlocfilehash: e9ae5db05c0835bb65a65cdccf58ab7f7d1b789f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274756"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160191"
 ---
 # <a name="deploying-native-desktop-applications-visual-c"></a>ネイティブ デスクトップ アプリケーションの配置 (Visual C++)
 
@@ -23,7 +23,7 @@ ms.locfileid: "71274756"
 
 Visual Studio は、Windows アプリケーションを配置するためのさまざまなテクノロジを提供しています。 これには、ClickOnce による配置と Windows インストーラーによる配置が含まれます。
 
-- ClickOnce は、共通言語ランタイム (CLR) を対象とする C++ アプリケーションの配置に使用できます (混合アセンブリ、純粋アセンブリおよび検証可能アセンブリ)。 マネージド アプリケーションの配置には Windows インストーラーを使用できますが、マニフェスト署名などの .NET Framework のセキュリティ機能が利用できる ClickOnce の使用をお勧めします。 ClickOnce では、ネイティブ C++ アプリケーションの配置はサポートされていません。 詳細については、「 [Visual C++ アプリケーションの ClickOnce 配置](clickonce-deployment-for-visual-cpp-applications.md)」を参照してください。
+- ClickOnce は、共通言語ランタイム (CLR) を対象とする C++ アプリケーションの配置に使用できます (混合アセンブリ、純粋アセンブリおよび検証可能アセンブリ)。 マネージド アプリケーションの配置には Windows インストーラーを使用できますが、マニフェスト署名などの .NET Framework のセキュリティ機能が利用できる ClickOnce の使用をお勧めします。 ClickOnce では、ネイティブ C++ アプリケーションの配置はサポートされていません。 詳細については、「 [ClickOnce Deployment for Visual C++ Applications](clickonce-deployment-for-visual-cpp-applications.md)」を参照してください。
 
 - Windows インストーラー テクノロジは、ネイティブ C++ アプリケーションに使用することも、CLR を対象とする C++ アプリケーションに使用することもできます。
 
@@ -49,7 +49,7 @@ Visual Studio は、Windows アプリケーションを配置するためのさ�
 
 - [Web クライアント アプリケーションの再頒布](redistributing-web-client-applications.md)
 
-- [Visual C++ アプリケーションの ClickOnce 配置](clickonce-deployment-for-visual-cpp-applications.md)
+- [ClickOnce Deployment for Visual C++ Applications](clickonce-deployment-for-visual-cpp-applications.md)
 
 - [以前のランタイム バージョンでの C++ /clr アプリケーションの実行](running-a-cpp-clr-application-on-a-previous-runtime-version.md)
 
@@ -57,6 +57,6 @@ Visual Studio は、Windows アプリケーションを配置するためのさ�
 
 - [C/C++ 分離アプリケーションおよび side-by-side アセンブリのビルド](../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)
 
-- [配置](/dotnet/framework/deployment/index)
+- [デプロイ](/dotnet/framework/deployment/index)
 
 - [C/C++ 分離アプリケーションおよび side-by-side アセンブリのトラブルシューティング](../build/troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md)

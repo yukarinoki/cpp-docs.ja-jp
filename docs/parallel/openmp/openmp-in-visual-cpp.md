@@ -6,29 +6,29 @@ helpviewer_keywords:
 - explicit parallelization
 - explicit parallelization, OpenMP in Visual C++
 ms.assetid: 54d8d0da-1f47-4312-9f25-5875c7dc08ed
-ms.openlocfilehash: 0aff645ce9b0edd3976abf8dd77fff8a79d3c545
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c792f94e675ba3f83b4aad8c180ede46770c6856
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362648"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80215008"
 ---
 # <a name="openmp-in-visual-c"></a>Visual C++ の OpenMP
 
-OpenMP C および C++ アプリケーション プログラミング インターフェイスを使用して、複数のプロセッサを効果的に使用するアプリケーションを記述できます。 Visual C では、OpenMP 2.0 標準をサポートします。
+OpenMP C およびC++アプリケーションプログラムインターフェイスを使用すると、複数のプロセッサを効果的に使用するアプリケーションを作成できます。 Visual C++は、OpenMP 2.0 標準をサポートしています。
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-[ライブラリ リファレンス](../../parallel/openmp/reference/openmp-library-reference.md)<br/>
-OpenMP API で使用される構成要素へのリンクを提供します。
+[ライブラリリファレンス](../../parallel/openmp/reference/openmp-library-reference.md)<br/>
+OpenMP API で使用される構成要素へのリンクを示します。
 
-[C および C++ アプリケーション プログラミング インターフェイス](../../parallel/openmp/openmp-c-and-cpp-application-program-interface.md)<br/>
-OpenMP のアーキテクチャのレビュー委員会からバージョン 2.0 の仕様に記載されている OpenMP C および C++ の API をについて説明します。
+[C およびC++アプリケーションプログラムインターフェイス](../../parallel/openmp/openmp-c-and-cpp-application-program-interface.md)<br/>
+Openmp アーキテクチャレビュー委員会C++のバージョン2.0 仕様に記載されているように、openmp C と API について説明します。
 
 ## <a name="related-sections"></a>関連項目
 
 [/openmp (OpenMP 2.0 サポートの有効化)](../../build/reference/openmp-enable-openmp-2-0-support.md)<br/>
-コンパイラで処理する`#pragma omp`します。
+コンパイラが `#pragma omp`を処理するようにします。
 
 [定義済みマクロ](../../preprocessor/predefined-macros.md)<br/>
-定義済みの ANSI C と Microsoft C 実装のマクロの名前を付けます。 _OPENMP マクロを参照してください。
+では、定義済みの ANSI C++ C と Microsoft の実装マクロに名前が付いています。 _OPENMP マクロを参照してください。

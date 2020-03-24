@@ -7,12 +7,12 @@ helpviewer_keywords:
 - SQL [C++], ODBC
 - ODBC [C++], SQL implementation
 ms.assetid: e3923bc4-b317-4e0b-afd8-3cd403eb0faf
-ms.openlocfilehash: 5e31105e682e8acecbdc0da461614fc46e4ae227
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 58c0267728f2b26cf81d048fcf02edd8fc4909ec
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80079769"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212567"
 ---
 # <a name="sql"></a>SQL
 
@@ -40,7 +40,7 @@ SQL にはさまざまなバージョンが存在します。いずれも特定�
 ##  <a name="database-classes"></a><a name="_core_the_database_classes"></a> データベース クラス
 
 > [!NOTE]
-> MFC ODBC コンシューマー ウィザードは、Visual Studio 2019 以降はご利用いただけなくなります。 ただし、手動でコンシューマーを作成することはできます。
+> MFC ODBC コンシューマー ウィザードは、Visual Studio 2019 以降では利用できません。 ただし、手動でコンシューマーを作成することはできます。
 
 データベース クラスは、既存の[データ ソース](../../data/odbc/data-source-odbc.md)でデータを操作し、更新できるように設計されています。 [MFC アプリケーション ウィザード](../../mfc/reference/database-support-mfc-application-wizard.md)、[MFC ODBC コンシューマー ウィザード](../../mfc/reference/adding-an-mfc-odbc-consumer.md) ( **[クラスの追加]** 経由でアクセス)、データベース クラスでは、ほとんどの SQL ステートメントが自動的に構築されます。
 

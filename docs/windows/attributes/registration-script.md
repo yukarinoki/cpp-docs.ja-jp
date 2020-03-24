@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - registration_script attribute
 ms.assetid: 786f8072-9187-4163-a979-7a604dd4c888
-ms.openlocfilehash: 0b2c4d576a699dea7772821b5635944b2663c57c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 780f3d41676d01458f47542d6f0862a278edff6a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407316"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214579"
 ---
-# <a name="registrationscript"></a>registration_script
+# <a name="registration_script"></a>registration_script
 
-指定したカスタム登録スクリプトを実行します。
+指定されたカスタム登録スクリプトを実行します。
 
 ## <a name="syntax"></a>構文
 
@@ -25,18 +25,18 @@ ms.locfileid: "62407316"
 
 ### <a name="parameters"></a>パラメーター
 
-*スクリプト*<br/>
-カスタム登録スクリプト (.rgs) ファイルの完全パスです。 値**none**など`script = "none"`コクラスに登録要件がないことを示します。
+*小*<br/>
+カスタム登録スクリプト (.rgs) ファイルへの完全パス。 値が**none**(`script = "none"`など) の場合、コクラスに登録要件がないことを示します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**Registration_script** C++属性で指定されたカスタムの登録スクリプトを実行する*スクリプト*します。 この属性が指定されていない場合は、(コンポーネントを登録するための情報を含む) 標準 .rgs ファイルが使用されます。 .Rgs ファイルの詳細については、次を参照してください。 [、ATL レジストリ コンポーネント (レジストラー)](../../atl/atl-registry-component-registrar.md)します。
+**Registration_script** C++属性は、*スクリプト*によって指定されたカスタム登録スクリプトを実行します。 この属性が指定されていない場合は、標準の .rgs ファイル (コンポーネントを登録するための情報を含む) が使用されます。 .Rgs ファイルの詳細については、「 [ATL レジストリコンポーネント (レジストラー)](../../atl/atl-registry-component-registrar.md)」を参照してください。
 
 この属性を使用するには、 [coclass](coclass.md)、 [progid](progid.md)、または [vi_progid](vi-progid.md) 属性 (または、これらのいずれかを意味する別の属性) も同じ要素に適用する必要があります。
 
 ## <a name="example"></a>例
 
-次のコードでは、コンポーネントに cpp_attr_ref_registration_script.rgs をという名前のレジストリ スクリプトがあることを指定します。
+次のコードでは、コンポーネントに cpp_attr_ref_registration_script .rgs というレジストリスクリプトがあることを指定しています。
 
 ```cpp
 // cpp_attr_ref_registration_script.cpp
@@ -57,7 +57,7 @@ __interface IFace {};
 class CMyClass:public IFace {};
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 ### <a name="attribute-context"></a>属性コンテキスト
 
@@ -65,12 +65,12 @@ class CMyClass:public IFace {};
 |-|-|
 |**対象**|**クラス**、**構造体**|
 |**反復可能**|いいえ|
-|**必要な属性**|次のいずれかまたは: `coclass`、 `progid`、または`vi_progid`します。|
+|**必要な属性**|`coclass`、`progid`、または `vi_progid`の1つ以上。|
 |**無効な属性**|なし|
 
 属性コンテキストの詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [COM 属性](com-attributes.md)<br/>
 [クラス属性](class-attributes.md)<br/>

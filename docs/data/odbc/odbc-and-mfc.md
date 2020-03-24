@@ -10,19 +10,19 @@ helpviewer_keywords:
 - MFC [C++], ODBC and
 - database connections [C++], MFC ODBC classes
 ms.assetid: 98f02fd7-1235-437b-89a9-edfd0fc797f7
-ms.openlocfilehash: 9b7d04e2eb8bbb1adf96e05282861ef33e20434a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 94a3455324a52b789bcfcf192b698a3c42b37c00
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395873"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213183"
 ---
 # <a name="odbc-and-mfc"></a>ODBC と MFC
 
 > [!NOTE]
->  MFC データベース クラスを使用するには、データ ソースの適切な ODBC ドライバーが必要です。 最新の Microsoft ODBC driver for SQL Server は[Microsoft ODBC Driver 13 for SQL Server](https://www.microsoft.com/download/details.aspx?id=50420)します。 ほとんどのデータベース ベンダーは、Windows の ODBC ドライバーを提供します。
+>  MFC データベースクラスを使用するには、データソースに適した ODBC ドライバーが必要です。 最新 Microsoft ODBC driver for SQL Server は、 [MICROSOFT Odbc driver 13 for SQL Server](https://www.microsoft.com/download/details.aspx?id=50420)です。 ほとんどのデータベースベンダーは、Windows 用 ODBC ドライバーを提供しています。
 
-このトピックでは、Microsoft Foundation Classes (MFC) ライブラリの ODBC ベースのデータベース クラスの主な概念を説明し、クラスの機能の概要を説明します。 ODBC と MFC の詳細については、次のトピックを参照してください。
+このトピックでは、Microsoft Foundation Classes (MFC) ライブラリの ODBC ベースのデータベースクラスの主要な概念について説明し、クラスを連携させる方法の概要を示します。 ODBC と MFC の詳細については、次のトピックを参照してください。
 
 - [データ ソースへの接続](connecting-to-a-data-source.md)
 
@@ -36,8 +36,8 @@ ms.locfileid: "62395873"
 
 - [MFC ODBC クラスに関する詳細情報](further-reading-about-the-mfc-odbc-classes.md)
 
-ODBC に基づいて MFC データベース クラスは、ODBC ドライバーの使用可能な任意のデータベースにアクセスできるように設計されています。 クラスは、ODBC を使用するため、アプリケーションは多くのさまざまなデータ形式と異なるローカル/リモート構成内のデータにアクセスできます。 別のデータベース管理システム (Dbms) を処理するために特殊なコードを記述する必要はありません。 ユーザーにアクセスするデータの適切な ODBC ドライバーがある限り、プログラムを使用して格納されているテーブル内のデータを操作することができます。
+ODBC に基づく MFC データベースクラスは、ODBC ドライバーを使用できるすべてのデータベースへのアクセスを提供するように設計されています。 クラスでは ODBC が使用されるため、アプリケーションはさまざまなデータ形式とさまざまなローカル/リモート構成のデータにアクセスできます。 異なるデータベース管理システム (Dbms) を処理するために、特殊なケースコードを記述する必要はありません。 ユーザーは、アクセスするデータに適した ODBC ドライバーを持っている限り、プログラムを使用して、そこに格納されているテーブルのデータを操作できます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ODBC (Open Database Connectivity)](open-database-connectivity-odbc.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - codecvt_utf16 class
 ms.assetid: a9897f98-f84d-4db6-90ad-858b2727570c
-ms.openlocfilehash: a84ca6da22825ca3fa7ab43e43a574fb05caa1a8
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 73177985727f4da5cf3ca4eb9e3cc3fb5976f76d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689825"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80215281"
 ---
 # <a name="codecvt_utf16"></a>codecvt_utf16
 
@@ -24,22 +24,22 @@ class codecvt_utf16 : public std::codecvt<Elem, char, StateType>
 
 ## <a name="parameters"></a>パラメーター
 
-*Elem* \
+*Elem*\
 ワイド文字要素型。
 
-*Maxcode* \
+*Maxcode*\
 ロケール ファセットの文字の最大数。
 
 *モード*\
 ロケール ファセットの構成情報。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-このクラステンプレートは、UCS 2 または UCS 4 としてエンコードされたワイド文字と、16LE としてエンコードされたバイトストリームを変換します (モード & little_endian の場合)。それ以外の場合は UTF-16 を使用します。
+このクラステンプレートは、UCS 2 または UCS 4 としてエンコードされたワイド文字と、16LE としてエンコードされたバイトストリーム (モード & little_endian の場合は utf-16、それ以外の場合は utf-16 に変換します。
 
 このバイト ストリームはバイナリ ファイルに書き込む必要があります。テキスト ファイルに書き込むと、破損する場合があります。
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>必要条件
 
 ヘッダー: \<codecvt >
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data binding [C++], columns in recordsets
 - columns [C++], binding to recordsets
 ms.assetid: bff67254-d953-4ae4-9716-91c348cb840b
-ms.openlocfilehash: 5647d0fec4c2add57329ad09a2374953dcd118fe
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 456d999a056abc4c15f2dcf3b8774dfc86182272
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80079846"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212928"
 ---
 # <a name="recordset-dynamically-binding-data-columns-odbc"></a>レコードセット: データ列を動的に結びつける方法 (ODBC)
 
@@ -31,7 +31,7 @@ ms.locfileid: "80079846"
 ##  <a name="when-you-might-bind-columns-dynamically"></a><a name="_core_when_you_might_bind_columns_dynamically"></a> どのようなときに列を動的にバインドするか
 
 > [!NOTE]
-> MFC ODBC コンシューマー ウィザードは、Visual Studio 2019 以降はご利用いただけなくなります。 ただし、手動でコンシューマーを作成することはできます。
+> MFC ODBC コンシューマー ウィザードは、Visual Studio 2019 以降では利用できません。 ただし、手動でコンシューマーを作成することはできます。
 
 設計時には、MFC アプリケーション ウィザードまたは [MFC ODBC コンシューマー ウィザード](../../mfc/reference/adding-an-mfc-odbc-consumer.md) ( **[クラスの追加]** から) により、データ ソースでわかっているテーブルと列に基づいて、レコードセット クラスが作成されます。 データベースは、設計した時点から、後で実行時にアプリケーションでそれらのテーブルや列が使われるまでの間に、変更されている場合があります。 自分や他のユーザーが、アプリケーションのレコードセットが依存しているテーブルやテーブルの列を、追加または削除する可能性があります。 これはおそらくすべてのデータアクセス アプリケーションに対する問題ではないでしょうが、もし自分がその立場になったら、再設計や再コンパイル以外でデータベース スキーマの変更に対応するには、どうすればよいでしょうか。 このトピックの目的は、その質問に答えることです。
 

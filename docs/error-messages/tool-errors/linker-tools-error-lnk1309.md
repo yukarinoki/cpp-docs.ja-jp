@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1309
 ms.assetid: 10146071-883f-4849-97d1-c7468f90efbb
-ms.openlocfilehash: ea675ca835dfc3fe4881e5fabbea746a4442b10a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 88b05512fd45adb6dc96a6c130ceccb74f3ab14e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62187444"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194903"
 ---
 # <a name="linker-tools-error-lnk1309"></a>リンカ ツール エラー LNK1309
 
-> *type1*モジュールが検出されましたで無効なスイッチ/CLRIMAGETYPE:*type2。*
+> *type1*モジュールが検出されました。スイッチ/CLRIMAGETYPE: 型が*無効です。*
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-CLR イメージの種類が要求されました **/CLRIMAGETYPE**が 1 つまたは複数のモジュールは、その型と互換性がないので、リンカーはその種類のイメージを作成できませんでした。
+**/CLRIMAGETYPE**で CLR イメージ型が要求されましたが、1つ以上のモジュールがその型と互換性がないため、リンカーはその型のイメージを生成できませんでした。
 
-指定した場合に LNK1309 が表示されます、 **/CLRIMAGETYPE:safe**でビルドされたモジュールを渡す **/clr: 純粋な**します。
+たとえば、 **/CLRIMAGETYPE: safe**を指定し、 **/clr: pure**でビルドされたモジュールを渡すと、LNK1309 が表示されます。
 
-**/Clr: 純粋な**と **/clr:safe**コンパイラ オプションおよびサポート ライブラリは Visual Studio 2015 で非推奨とされ、Visual Studio 2017 でサポートされていません。
+**/Clr: pure**および **/clr: safe**コンパイラオプションとサポートライブラリは visual studio 2015 で非推奨とされており、visual studio 2017 ではサポートされていません。
 
-[D] ptrustu .lib を使用して、部分的に信頼された CLR 純粋なアプリケーションをビルドしようとした場合は、LNK1309 も表示されます。 部分的に信頼されたアプリケーションを作成する方法については、次を参照してください。[方法。CRT ライブラリ DLL への依存関係を削除することで、部分的に信頼されたアプリケーションを作成する](../../dotnet/create-a-partially-trusted-application.md)します。
+Ptrustu [d] .lib を使用して、部分的に信頼された CLR 純粋アプリケーションをビルドしようとすると、LNK1309 も表示されます。 部分的に信頼されたアプリケーションを作成する方法については、「[方法: CRT ライブラリ DLL の依存関係を削除して部分信頼アプリケーションを作成](../../dotnet/create-a-partially-trusted-application.md)する」を参照してください。
 
-詳細については、次を参照してください。 [/clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)と[/CLRIMAGETYPE (型の CLR イメージの指定)](../../build/reference/clrimagetype-specify-type-of-clr-image.md)します。
+詳細については、「 [/clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md) 」および「 [/CLRIMAGETYPE (Clr イメージの型の指定)](../../build/reference/clrimagetype-specify-type-of-clr-image.md)」を参照してください。

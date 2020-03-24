@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - RC2135
 ms.assetid: 1509a0fa-1cb7-4654-bcb3-ad5ac973e659
-ms.openlocfilehash: 0ceb6e4207142fc1f8a374ab8669475c9867a000
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a2cc1f431618cd4cf20df76f2012a212eaf63d23
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347978"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80191250"
 ---
 # <a name="resource-compiler-error-rc2135"></a>リソース コンパイラ エラー RC2135
 
 ファイル filename が見つかりません
 
-リソース コンパイラのコマンド ラインで指定されたファイルが見つかりませんでした。 ファイルが別のディレクトリに移動されているかどうかと、かどうか、ファイル名とパスが正確に入力を確認します。
+リソース コンパイラのコマンド ラインで指定されたファイルが見つかりませんでした。 ファイルが別のディレクトリに移動されたかどうか、およびファイル名とパスが正しく入力されているかどうかを確認します。
 
-ファイルを使用して、検索、 **INCLUDE**環境変数または Visual C **INCLUDE**設定します。
+ファイルは、 **include**環境変数または Visual C++ **インクルード**設定を使用して検索されます。

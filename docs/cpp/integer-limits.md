@@ -7,22 +7,22 @@ helpviewer_keywords:
 - limits.h header file
 - integer limits
 ms.assetid: 6922bdbf-0f49-443b-bc03-ee182e4cbd57
-ms.openlocfilehash: 0d14f6246dd2ec71c4e0b2286bb1f2b3325085b5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 75cd05e73aba2d2e82e8077e0a289d8b0fae7ec4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183388"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178225"
 ---
 # <a name="integer-limits"></a>整数の制限
 
 **Microsoft 固有の仕様**
 
-次の表に、整数型の制限を示します。 これらの制限が、標準ヘッダー ファイルで定義されても\<limits.h >。
+次の表に、整数型の制限を示します。 これらの制限は、標準のヘッダーファイル \<制限 .h > でも定義されています。
 
 ## <a name="limits-on-integer-constants"></a>整数定数の制限
 
-|定数|説明|[値]|
+|常時|意味|値|
 |--------------|-------------|-----------|
 |CHAR_BIT|ビット フィールドではない最小変数のビット数。|8|
 |SCHAR_MIN|**signed char** 型変数の最小値。|-128|
@@ -40,14 +40,14 @@ ms.locfileid: "62183388"
 |LONG_MIN|**long** 型変数の最小値。|-2147483648|
 |LONG_MAX|**long** 型変数の最大値。|2147483647|
 |ULONG_MAX|**unsigned long** 型変数の最大値。|4294967295 (0xffffffff)|
-|LLONG_MIN|型の変数の最小値**long**|-9223372036854775808|
-|LLONG_MAX|型の変数の最大値**long**|9223372036854775807|
-|ULLONG_MAX|型の変数の最大値**unsigned long long 型**|18446744073709551615 (0xffffffffffffffff)|
+|LLONG_MIN|**Long long**型の変数の最小値|-9223372036854775808|
+|LLONG_MAX|**Long long**型の変数の最大値|9223372036854775807|
+|ULLONG_MAX|**Unsigned long long**型の変数の最大値|18446744073709551615 (0xffffffffffffffff)|
 
 値が最大の整数表現を超えると、Microsoft コンパイラでエラーが生成されます。
 
 **Microsoft 固有の仕様はここまで**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [浮動小数点の制限](../cpp/floating-limits.md)

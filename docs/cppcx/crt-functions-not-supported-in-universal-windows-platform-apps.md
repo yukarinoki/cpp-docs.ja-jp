@@ -2,16 +2,16 @@
 title: ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数
 ms.date: 12/30/2016
 ms.assetid: cbfc957d-6c60-48f4-97e3-1ed8526743b4
-ms.openlocfilehash: 763d76dd9eb139c10f4147e5fa069a0901fe5398
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cf67cb9c0a2438ee6ac1bcc7753c0f89b63a356d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188383"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214319"
 ---
 # <a name="crt-functions-not-supported-in-universal-windows-platform-apps"></a>ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数
 
-多くの C ランタイム (CRT) 関数はユニバーサル Windows プラットフォーム (UWP) アプリをビルドする時に使用できません。 場合によっては、回避策がある--たとえば、Windows ランタイムまたは Win32 Api を使用できます。 しかし、回避策が利用できない場合には、CRT 関数は禁止されています。CRT 関数に相当する機能やサポートする API を UWP アプリに使用できないためです。 Windows ランタイムのサポートされている別の方法を探すを参照してください。 [UWP アプリでの Windows Api の代替](/uwp/win32-and-com/alternatives-to-windows-apis-uwp)します。
+多くの C ランタイム (CRT) 関数はユニバーサル Windows プラットフォーム (UWP) アプリをビルドする時に使用できません。 場合によっては、回避策を利用できます。たとえば、Windows ランタイムまたは Win32 Api を使用できます。 しかし、回避策が利用できない場合には、CRT 関数は禁止されています。CRT 関数に相当する機能やサポートする API を UWP アプリに使用できないためです。 Windows ランタイムでサポートされている別の方法を探すには、「 [UWP アプリの Windows api に代わる](/uwp/win32-and-com/alternatives-to-windows-apis-uwp)方法」を参照してください。
 
 次の一覧には UWP アプリをビルドするときに使用できない CRT 関数と、その回避策があればそれを示しています。
 
@@ -22,7 +22,7 @@ ms.locfileid: "62188383"
 |_beep _sleep _seterrormode|これらの関数は以前のバージョンの CRT で廃止されています。 また、それに対応する Win32 API は UWP アプリでは使用できません。|回避策はありません。|
 |chdir _chdrive getcwd|これらの関数は廃止されているか、またはスレッド セーフではありません。|_chdir、_getcwd、関連する関数を使用します。|
 |_cgets _cgets_s _cgetws _cgetws_s _cprintf _cprintf_l _cprintf_p _cprintf_p_l _cprintf_s _cprintf_s_l _cputs _cputws _cscanf _cscanf_l _cscanf_s _cscanf_s_l _cwait _cwprintf _cwprintf_l _cwprintf_p _cwprintf_p_l _cwprintf_s _cwprintf_s_l _cwscanf _cwscanf_l _cwscanf_s _cwscanf_s_l _vcprintf _vcprintf_l _vcprintf_p _vcprintf_p_l _vcprintf_s _vcprintf_s_l _vcwprintf _vcwprintf_l _vcwprintf_p _vcwprintf_p_l _vcwprintf_s _vcwprintf_s_l _getch _getch_nolock _getche _getche_nolock _getwch _getwch_nolock _getwche _getwche_nolock _putch _putch_nolock _putwch _putwch_nolock _ungetch _ungetch_nolock _ungetwch _ungetwch_nolock _kbhit kbhit putch cgets cprintf cputs cscanf cwait getch getche ungetch|これらの関数は、コンソールから直接読み取ったり、コンソールに直接書き込んだりするときに使用されます。 UWP アプリは GUI のみであり、コンソールをサポートしていません。|回避策はありません。|
-|getpid|これは古い関数です。|_getpid または Win32 API `GetCurrentProcessId()`を使用します。|
+|getpid|この関数は、現在使用されていません。|_getpid または Win32 API `GetCurrentProcessId()`を使用します。|
 |_getdiskfree|使用できません。|Win32 API `GetDiskFreeSpaceExW()`を使用します。|
 |_getdrive _getdrives|対応する API はUWP アプリでは使用できません。|回避策はありません。|
 |_inp _inpd _inpw _outp _outpd _outpw inp inpd inpw outp outpd outpw|ポート IO は UWP アプリではサポートされていません。|回避策はありません。|
@@ -33,13 +33,13 @@ ms.locfileid: "62188383"
 |_environ _putenv _putenv_s _searchenv _searchenv_s _dupenv_s _wputenv _wputenv_s _wsearchenv getenv getenv_s putenv _wdupenv_s _wenviron _wgetenv _wgetenv_s _wsearchenv_s tzset|UWP アプリでは環境変数を使用できません。|回避策はありません。 タイム ゾーンを設定するには、_tzset を使用します。|
 |_loaddll _getdllprocaddr _unloaddll|これらは以前のバージョンの CRT で廃止された関数です。 また、ユーザーは同じアプリケーション パッケージのものを除き、DLL を読み込むことができません。|パッケージ化された DLL を読み込んで使用するには、Win32 API `LoadPackagedLibrary`、 `GetProcAddress`、 `FreeLibrary` を使用します。|
 |_wexecl _wexecle _wexeclp _wexeclpe _wexecv _wexecve _wexecvp _wexecvpe _execl _execle _execlp _execlpe _execv _execve _execvp _execvpe _spawnl _spawnle _spawnlp _spawnlpe _spawnv _spawnve _spawnvp _spawnvpe _wspawnl _wspawnle _wspawnlp _wspawnlpe _wspawnv _wspawnve _wspawnvp _wspawnvpe _wsystem execl execle execlp execlpe execv execve execvp execvpe spawnl spawnle spawnlp spawnlpe spawnv spawnve spawnvp spawnvpe system|この機能は、UWP アプリでは使用できません。 UWP アプリから別の UWP アプリまたはデスクトップ アプリを起動することはできません。|回避策はありません。|
-|_heapwalk _heapadd _heapchk _heapset _heapused|ここに挙げた関数は通常、ヒープを使用するために使用します。 しかし、UWP アプリでは対応する Win32 API がサポートされていません。 アプリがプライベート ヒープを作成したり使用したりすることはありません。|回避策はありません。 ただし、 `_heapwalk` はデバッグを目的とする場合にのみ DEBUG CRT で使用できます。 これらは、Microsoft Store にアップロードされるアプリで使用することはできません。|
+|_heapwalk _heapadd _heapchk _heapset _heapused|ここに挙げた関数は通常、ヒープを使用するために使用します。 しかし、UWP アプリでは対応する Win32 API がサポートされていません。 アプリがプライベート ヒープを作成したり使用したりすることはありません。|回避策はありません。 ただし、 `_heapwalk` はデバッグを目的とする場合にのみ DEBUG CRT で使用できます。 これらは、Microsoft Store にアップロードされるアプリでは使用できません。|
 
-次の関数は、UWP アプリの CRT で使用できますが、対応する Win32 または Windows ランタイム Api を使用できない場合にのみ使用する必要があります: 大規模なコード ベースを移植する場合など、
+次の関数は、UWP アプリの CRT で使用できますが、対応する Win32 または Windows ランタイム Api を使用できない場合 (大規模なコードベースを移植する場合など) にのみ使用してください。
 
 |||
 |-|-|
-|1 バイト文字列関数 ( `strcat`、 `strcpy`、 `strlwr`など)。|UWP アプリには Unicode Unicode 文字セットのみを使用して、すべての Win32 Api と Windows ランタイム Api は公開されているためです。  1 バイトの関数は、大きなコード ベースを移植するときのために残されていますが、それ以外の状況では使用を避け、可能な限り対応するワイド文字関数を使用してください。|
+|1 バイト文字列関数 ( `strcat`、 `strcpy`、 `strlwr`など)。|公開されているすべての Win32 Api と Windows ランタイム Api が Unicode 文字セットのみを使用するため、UWP アプリを厳密に Unicode にしてください。  1 バイトの関数は、大きなコード ベースを移植するときのために残されていますが、それ以外の状況では使用を避け、可能な限り対応するワイド文字関数を使用してください。|
 |ストリーム IO 関数と低レベル ファイル IO 関数 ( `fopen`、 `open`など)。|ここに挙げた関数は同期的であるため、UWP アプリに使用することは勧められていません。 UWP アプリでは、UI スレッドがロックされることがないように、ファイルを開くとき、ファイルから読み取るとき、ファイルに書き込むときは非同期 API を使用します。 このような API には、 `Windows::Storage::FileIO` クラスのものなどが挙げられます。|
 
 ## <a name="windows-8x-store-apps-and-windows-phone-8x-apps"></a>Windows 8.x ストア アプリと Windows Phone 8.x アプリ

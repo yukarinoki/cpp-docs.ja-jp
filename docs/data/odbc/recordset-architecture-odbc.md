@@ -13,12 +13,12 @@ helpviewer_keywords:
 - m_nParams data member
 - m_nFields data member, recordsets
 ms.assetid: 47555ddb-11be-4b9e-9b9a-f2931764d298
-ms.openlocfilehash: e95250b5ef307eafdb334050fbace945355e0521
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: bb4b67a4c534598a8e26eb9ab5f297b108b67b6d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80079859"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212993"
 ---
 # <a name="recordset-architecture-odbc"></a>レコードセット: レコードセットの構造 (ODBC)
 
@@ -38,7 +38,7 @@ ms.locfileid: "80079859"
 ##  <a name="sample-class"></a><a name="_core_a_sample_class"></a> サンプル クラス
 
 > [!NOTE]
-> MFC ODBC コンシューマー ウィザードは、Visual Studio 2019 以降はご利用いただけなくなります。 ただし、手動でコンシューマーを作成することはできます。
+> MFC ODBC コンシューマー ウィザードは、Visual Studio 2019 以降では利用できません。 ただし、手動でコンシューマーを作成することはできます。
 
 [クラス追加](../../mfc/reference/adding-an-mfc-odbc-consumer.md)ウィザードから **MFC ODBC コンシューマー ウィザード**を使用して、`CRecordset` から派生したレコードセット クラスを宣言すると、結果として得られるクラスは、次の単純なクラスで示される一般的な構造クラスを持ちます。
 

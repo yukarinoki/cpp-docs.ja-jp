@@ -14,17 +14,17 @@ helpviewer_keywords:
 - < operator
 - operator <, valarrays
 ms.assetid: 31027dd6-53be-428b-b950-1dcb25393597
-ms.openlocfilehash: fc2a14d882b5ccfbfdaae543c76ca673f9018a59
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 6ef43fb762c4da71062fc846048f21c0112bfafc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72687334"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80215268"
 ---
 # <a name="operatorlt-ltsample-containergt"></a>operator&lt; (&lt;sample container&gt;)
 
 > [!NOTE]
-> このトピックは、 C++ C++標準ライブラリで使用されているコンテナーの非機能例として、Microsoft ドキュメントに記載されています。 詳細については、「[C++ Standard Library Containers (C++ 標準ライブラリ コンテナ―)](../standard-library/stl-containers.md)」をご覧ください。
+> このトピックは、 C++ C++標準ライブラリで使用されているコンテナーの非機能例として、Microsoft ドキュメントに記載されています。 詳しくは、「[C++ 標準ライブラリのコンテナー](../standard-library/stl-containers.md)」をご覧ください。
 
 Overloads**演算子 <** クラステンプレート[コンテナー](../standard-library/sample-container-class.md)の2つのオブジェクトを比較します。
 
@@ -39,9 +39,9 @@ bool operator<(
 
 ## <a name="return-value"></a>戻り値
 
-`lexicographical_compare(left.begin, left.end, right.begin, right.end)`を返します。
+`lexicographical_compare(left.begin, left.end, right.begin, right.end)` が返されます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [\<sample container>](../standard-library/sample-container.md)\
 [開始](../standard-library/container-class-begin.md)\

@@ -5,17 +5,17 @@ helpviewer_keywords:
 - ODBC recordsets, declaring class for tables
 - recordsets, declaring classes for tables
 ms.assetid: 3fe286c2-3f3d-493d-9d8c-762310939d08
-ms.openlocfilehash: b6e7f4456b5ff29cec854d1b4818fda965e04b96
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: ec5731e7e5058206e210c5a9a5bb1a189c940c91
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076988"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212941"
 ---
 # <a name="recordset-declaring-a-class-for-a-table-odbc"></a>レコードセット: テーブルにアクセスするレコードセット クラスの宣言 (ODBC)
 
 > [!NOTE]
-> MFC ODBC コンシューマー ウィザードは、Visual Studio 2019 以降はご利用いただけなくなります。 ただし、手動でコンシューマーを作成することはできます。
+> MFC ODBC コンシューマー ウィザードは、Visual Studio 2019 以降では利用できません。 ただし、手動でコンシューマーを作成することはできます。
 
 このトピックの内容は、MFC ODBC クラスに該当します。
 

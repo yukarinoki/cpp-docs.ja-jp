@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0024
 ms.assetid: 8bde6368-6c1b-4e04-bc5e-3c6d0b8fa1d7
-ms.openlocfilehash: 645b898bdffcc6d7b397c25eb3c41cea25cb361f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bcfdcce54618acca0e22daa54e95083cf3ee9d50
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384104"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80192615"
 ---
 # <a name="project-build-error-prj0024"></a>プロジェクト ビルド エラー PRJ0024
 
-> Unicode のパス '*パス*' ユーザーの ANSI コード ページに変換できませんでした。
+> Unicode パス '*path*' をユーザーの ANSI コードページに変換できませんでした。
 
-*パス*パス文字列の元の Unicode バージョンです。 場合にこのエラーは発生が Unicode パスを直接に変換できない ANSI の現在のシステム コード ページ。
+*path*は、パス文字列の元の Unicode バージョンです。 このエラーは、現在のシステムコードページで ANSI に直接変換できない Unicode パスがある場合に発生する可能性があります。
 
-場合は、コンピューターではないにコード ページを使用してシステムで開発されたプロジェクトに取り組んで、このエラーが発生する可能性があります。
+このエラーは、コンピューター上にないコードページを使用してシステム上で開発されたプロジェクトで作業している場合に発生する可能性があります。
 
-このエラーの解決は、ANSI テキストを使用して、または、コード ページをコンピューターにインストールし、システムの既定値として設定するパスを更新するには。
+このエラーを解決するには、ANSI テキストを使用するようにパスを更新するか、コンピューターにコードページをインストールして、システムの既定値として設定します。

@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - InvokeModeOptions structure
 - InvokeMode enum
-ms.openlocfilehash: 0e5b45042c9959b87ad5db97ab755e49de469149
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9bca49479d97ee371f6728f90a9aa96da0387f54
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386045"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213838"
 ---
 # <a name="invokemodeoptions-structure"></a>InvokeModeOptions 構造体
 
-デリゲート キュー内のすべてのイベントを発生させる、またはエラーが発生した後の発生を停止するかどうかを指定します。 許容値がで指定された、`InvokeMode`列挙型。
+デリゲートキュー内のすべてのイベントを発生させるか、エラーが発生した後に起動を停止するかを指定します。 許容される値は `InvokeMode` 列挙型で指定されます。
 
 ## <a name="syntax"></a>構文
 
@@ -35,11 +35,11 @@ struct InvokeModeOptions
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** event.h
+**ヘッダー:** イベント .h
 
-**名前空間:** Microsoft::wrl
+**名前空間:** Microsoft::WRL
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [Microsoft::WRL 名前空間](microsoft-wrl-namespace.md)<br/>
-[Microsoft::WRL::AgileEventSource クラス](agileeventsource-class.md)
+[Microsoft:: WRL:: AgileEventSource クラス](agileeventsource-class.md)

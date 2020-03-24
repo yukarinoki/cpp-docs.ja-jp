@@ -1,19 +1,19 @@
 ---
-title: '方法: 定義の移動コンス トラクターと移動代入演算子 (C++)'
+title: '方法: 移動コンストラクターと移動代入演算子を定義するC++()'
 ms.date: 03/05/2018
 helpviewer_keywords:
 - move constructor [C++]
 ms.assetid: e75efe0e-4b74-47a9-96ed-4e83cfc4378d
-ms.openlocfilehash: b601c53c01940fe110036d569e0be9d43a123a91
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 81f717162e2c7bebc62a9deeb208700380f62cb8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345023"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179368"
 ---
 # <a name="move-constructors-and-move-assignment-operators-c"></a>移動コンストラクターと移動代入演算子 (C++)
 
-このトピックでは、記述する方法を説明します、*移動コンス トラクター*と C++ のクラスの移動代入演算子。 移動コンス トラクターには、右辺値をコピーせず、左辺値に移動するオブジェクトによって所有されているリソースができます。 移動セマンティクスの詳細については、次を参照してください。[右辺値参照宣言子: & &](../cpp/rvalue-reference-declarator-amp-amp.md)します。
+このトピックでは、 C++クラスの*移動コンストラクター*と移動代入演算子を記述する方法について説明します。 Move コンストラクターを使用すると、右辺値オブジェクトによって所有されているリソースを、コピーせずに左辺値に移動できます。 移動セマンティクスの詳細については、「[右辺値参照宣言子: & &](../cpp/rvalue-reference-declarator-amp-amp.md)」を参照してください。
 
 このセクションは、メモリ バッファーを管理する次の C++ クラス、`MemoryBlock` に基づいています。
 
@@ -121,7 +121,7 @@ private:
     other._length = 0;
     ```
 
-### <a name="to-create-a-move-assignment-operator-for-a-c-class"></a>C++ クラスの移動代入演算子を作成するには
+### <a name="to-create-a-move-assignment-operator-for-a-c-class"></a>C ++ クラスの移動代入演算子を作成するには
 
 1. 次の例に示すように、パラメーターとしてクラス型への右辺値参照を受け取り、クラス型への参照を返す、空の代入演算子を定義します。
 
@@ -219,7 +219,7 @@ MemoryBlock& operator=(MemoryBlock&& other)
 
 ## <a name="example"></a>例
 
-次の例は、移動セマンティクスがアプリケーションのパフォーマンスをどのように改善するかを示します。 この例では、2 つの要素をベクター オブジェクトに追加し、2 つの既存の要素の間に新しい要素を挿入しています。 `vector`クラスは、移動セマンティクスを効率的にコピーすることではなくベクトルの要素を移動することによって、挿入操作を実行します。
+次の例は、移動セマンティクスがアプリケーションのパフォーマンスをどのように改善するかを示します。 この例では、2 つの要素をベクター オブジェクトに追加し、2 つの既存の要素の間に新しい要素を挿入しています。 `vector` クラスは、移動セマンティクスを使用して、挿入操作を効率的に実行します。そのためには、ベクターの要素をコピーするのではなく移動します。
 
 ```cpp
 // rvalue-references-move-semantics.cpp
@@ -241,7 +241,7 @@ int main()
 }
 ```
 
-この例を実行すると、次の出力が生成されます。
+この例の結果は、次のようになります。
 
 ```Output
 In MemoryBlock(size_t). length = 25.
@@ -264,7 +264,7 @@ In ~MemoryBlock(). length = 50. Deleting resource.
 In ~MemoryBlock(). length = 75. Deleting resource.
 ```
 
-Visual Studio 2010 では、以前は、この例には、次の出力が生成されます。
+この例では、Visual Studio 2010 より前に、次の出力が生成されました。
 
 ```Output
 In MemoryBlock(size_t). length = 25.
@@ -307,9 +307,9 @@ MemoryBlock(MemoryBlock&& other)
 }
 ```
 
-[Std::move](../standard-library/utility-functions.md#move)関数の rvalue プロパティを保持する、*他*パラメーター。
+[Std:: move](../standard-library/utility-functions.md#move)関数は、*もう一方*のパラメーターの rvalue プロパティを保持します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [右辺値参照宣言子: &&](../cpp/rvalue-reference-declarator-amp-amp.md)<br/>
-[std::move](../standard-library/utility-functions.md#move)
+[std:: move](../standard-library/utility-functions.md#move)

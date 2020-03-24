@@ -9,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - GetActivationFactory function
 ms.assetid: 5736d285-6beb-42aa-8788-e261c0010afe
-ms.openlocfilehash: 3e138eee9e5bc02971cd1eb34c78f2be4ad5c9a0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 430b4ed3f6a02fd3db2bcab05fbb7f21f5367b5c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398421"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213981"
 ---
 # <a name="getactivationfactory-function"></a>GetActivationFactory 関数
 
-テンプレート パラメーターで指定された型のアクティベーション ファクトリを取得します。
+テンプレートパラメーターによって指定された型のアクティベーションファクトリを取得します。
 
 ## <a name="syntax"></a>構文
 
@@ -33,24 +33,24 @@ inline HRESULT GetActivationFactory(
 ### <a name="parameters"></a>パラメーター
 
 *T*<br/>
-アクティベーション ファクトリの種類を指定するテンプレート パラメーター。
+アクティベーションファクトリの型を指定するテンプレートパラメーター。
 
 *activatableClassId*<br/>
-アクティベーション ファクトリを作成できるクラスの名前。
+アクティベーションファクトリが生成できるクラスの名前。
 
-*ファクトリ*<br/>
-ときにこの操作が完了すると、型のアクティベーション ファクトリへの参照を*T*します。
+*factory*<br/>
+この操作が完了すると、 *T*型のアクティベーションファクトリへの参照。
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合は s_ok を返します。それ以外の場合、この操作が失敗した理由を示す HRESULT エラー。
+成功した場合は S_OK。それ以外の場合は、この操作が失敗した理由を示すエラー HRESULT。
 
 ## <a name="requirements"></a>必要条件
 
 **ヘッダー:** client.h
 
-**名前空間:** Windows::Foundation
+**名前空間:** Windows:: Foundation
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [Windows::Foundation 名前空間](windows-foundation-namespace.md)

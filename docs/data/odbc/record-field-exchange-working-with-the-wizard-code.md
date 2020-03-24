@@ -15,17 +15,17 @@ helpviewer_keywords:
 - overriding, DoFieldExchange
 - m_nFields data member, initializing
 ms.assetid: f00d882a-ff1b-4a75-9717-98d8762bb237
-ms.openlocfilehash: 1149ab2b85c9cd803da0cd2d2ed6d931a020764e
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 08d58561e0fb9305ff3a8d6aa6a62eb24d9b9d25
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80077078"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213045"
 ---
 # <a name="record-field-exchange-working-with-the-wizard-code"></a>レコード フィールド エクスチェンジ: ウィザード コードの操作
 
 > [!NOTE]
-> MFC ODBC コンシューマー ウィザードは、Visual Studio 2019 以降はご利用いただけなくなります。 ただし、手動でコンシューマーを作成することはできます。
+> MFC ODBC コンシューマー ウィザードは、Visual Studio 2019 以降では利用できません。 ただし、手動でコンシューマーを作成することはできます。
 
 このトピックでは、RFX をサポートするために MFC アプリケーション ウィザードと (「**Adding an MFC ODBC Consumer**」 (MFC ODBC コンシューマーの追加) で説明した) [クラスの追加](../../mfc/reference/adding-an-mfc-odbc-consumer.md)で記述されるコードについて、およびこれらのコードを変更する方法について説明します。
 

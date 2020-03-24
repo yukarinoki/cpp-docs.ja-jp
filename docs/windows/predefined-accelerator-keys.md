@@ -8,12 +8,12 @@ helpviewer_keywords:
 - menus [C++], shortcut keys
 - keyboard shortcuts [C++], menu association
 ms.assetid: f234c5f2-4ec3-4c9e-834a-b5dd297625b9
-ms.openlocfilehash: 6753545b711ff45f79b3140b30a2edbcea81c39c
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: beb4e878138da3dc2905c86e18fedc658d7ceecf
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79445403"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80215151"
 ---
 # <a name="accelerator-keys-c"></a>アクセラレータキー (C++)
 
@@ -79,7 +79,7 @@ Windows アプリケーション プロジェクトの一部として使用で�
 
 メニュー項目とキーボードの組み合わせで同じプログラム コマンドを発行したいと思うことはよくあります。 この操作を行うには、同じリソース識別子 (ID) をメニュー項目に、アプリケーションのアクセラレータテーブルのエントリに割り当てます。 次に、メニュー項目のキャプションを編集して、アクセラレータの名前を表示します。 メニュー項目とアクセラレータキーの詳細については、「[メニューコマンド](../windows/associating-a-menu-command-with-an-accelerator-key.md)」を参照してください。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 Win32
 

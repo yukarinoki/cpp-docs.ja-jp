@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - Make function
 ms.assetid: 66704143-df99-4a95-904d-ed99607e1034
-ms.openlocfilehash: b45337ef773f93968570f62ab73c02d11fae88ff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ffd0967b741475b260eef80ec24d56874a6bcb1f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398194"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213812"
 ---
 # <a name="make-function"></a>Make 関数
 
-指定した Windows ランタイム クラスを初期化します。 同じモジュールで定義されているコンポーネントをインスタンス化するのにには、この関数を使用します。
+指定した Windows ランタイムクラスを初期化します。 同じモジュールで定義されているコンポーネントをインスタンス化するには、この関数を使用します。
 
 ## <a name="syntax"></a>構文
 
@@ -165,76 +165,76 @@ ComPtr<T> Make();
 ### <a name="parameters"></a>パラメーター
 
 *T*<br/>
-ユーザー指定のクラスから継承する`WRL::RuntimeClass`します。
+`WRL::RuntimeClass`から継承するユーザー指定のクラス。
 
 *TArg1*<br/>
-指定されたランタイム クラスに渡される引数 1 の型。
+指定されたランタイムクラスに渡される引数1の型。
 
 *TArg2*<br/>
-指定されたランタイム クラスに渡される引数 2 の型。
+指定されたランタイムクラスに渡される引数2の型。
 
 *TArg3*<br/>
-指定されたランタイム クラスに渡される引数 3 の型。
+指定されたランタイムクラスに渡される引数3の型。
 
 *TArg4*<br/>
-指定されたランタイム クラスに渡される引数 4 の型。
+指定されたランタイムクラスに渡される引数4の型。
 
 *TArg5*<br/>
-指定されたランタイム クラスに渡される 5 引数の型。
+指定されたランタイムクラスに渡される引数5の型。
 
 *TArg6*<br/>
-指定されたランタイム クラスに渡される 6 引数の型。
+指定されたランタイムクラスに渡される引数6の型。
 
 *TArg7*<br/>
-指定されたランタイム クラスに渡される 7 引数の型。
+指定されたランタイムクラスに渡される引数7の型。
 
 *TArg8*<br/>
-指定されたランタイム クラスに渡される 8 引数の型。
+指定されたランタイムクラスに渡される引数8の型。
 
 *TArg9*<br/>
-指定されたランタイム クラスに渡される 9 引数の型。
+指定されたランタイムクラスに渡される引数9の型。
 
 *arg1*<br/>
-指定されたランタイム クラスに渡される引数 1 です。
+指定されたランタイムクラスに渡される引数1。
 
-*arg2*<br/>
-指定されたランタイム クラスに渡される引数 2
+*引数*<br/>
+指定されたランタイムクラスに渡される引数2。
 
 *arg3*<br/>
-指定されたランタイム クラスに渡される引数 3 です。
+指定されたランタイムクラスに渡される引数3。
 
 *arg4*<br/>
-指定されたランタイム クラスに渡される引数 4 です。
+指定されたランタイムクラスに渡される引数4。
 
 *arg5*<br/>
-指定されたランタイム クラスに渡される引数 5 です。
+指定されたランタイムクラスに渡される引数5。
 
 *arg6*<br/>
-指定されたランタイム クラスに渡される引数 6 です。
+指定されたランタイムクラスに渡される引数6。
 
 *arg7*<br/>
-指定されたランタイム クラスに渡される引数 7 です。
+指定されたランタイムクラスに渡される引数7。
 
 *arg8*<br/>
-指定されたランタイム クラスに渡される引数 8 です。
+引数8。指定されたランタイムクラスに渡されます。
 
 *arg9*<br/>
-指定されたランタイム クラスに渡される引数 9 です。
+指定されたランタイムクラスに渡される引数9。
 
 ## <a name="return-value"></a>戻り値
 
-A`ComPtr<T>`成功。 それ以外の場合は、オブジェクト`nullptr`します。
+成功した場合は `ComPtr<T>` オブジェクト。それ以外の場合は、`nullptr`ます。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-「[方法:WRL コンポーネント直接インスタンス化](how-to-instantiate-wrl-components-directly.md)についてはこの関数の相違点と[Microsoft::WRL::Details::MakeAndInitialize](makeandinitialize-function.md)、および例についてはします。
+「[方法: Wrl コンポーネントを直接インスタンス化](how-to-instantiate-wrl-components-directly.md)する」を参照して、この関数と[Microsoft:: wrl::D Etails:: makeandinitialize](makeandinitialize-function.md)の違いを確認します。例については、「」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** implements.h
+**Header:** を実装します。
 
-**名前空間:** Microsoft::wrl
+**名前空間:** Microsoft::WRL
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [Microsoft::WRL 名前空間](microsoft-wrl-namespace.md)

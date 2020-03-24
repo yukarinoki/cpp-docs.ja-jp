@@ -3,12 +3,12 @@ title: MFC と ATL
 ms.date: 01/24/2018
 ms.assetid: 31b1a3a8-4154-4c4a-af10-fafc23ecdc5c
 ms.topic: overview
-ms.openlocfilehash: 87f4a9deb40d7c35498f5cbd66efb6bd976547c2
-ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
+ms.openlocfilehash: 3a58e68925fd77d002400bfe9d1f2bd28c60f78c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274651"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214332"
 ---
 # <a name="mfc-and-atl"></a>MFC と ATL
 
@@ -20,9 +20,9 @@ Visual Studio 2015 では、Visual C++ はオプションのコンポーネン�
 
 Visual Studio 2017 以降では、MFC と ATL は、Visual Studio インストーラープログラムのワークロード**を使用しC++たデスクトップ開発**の下にあるオプションのサブコンポーネントです。 MFC を使用せずに ATL サポートをインストールすることも、MFC と ATL のサポートを組み合わせることもできます (MFC は ATL に依存します)。 ワークロードとコンポーネントの詳細については、「 [Visual Studio のインストール](/visualstudio/install/install-visual-studio)」を参照してください。
 
-## <a name="related-articles"></a>関連トピック
+## <a name="related-articles"></a>関連記事
 
-|Title|説明|
+|タイトル|説明|
 |-----------|-----------------|
 |[MFC デスクトップ アプリケーション](../mfc/mfc-desktop-applications.md)|Microsoft Foundation Classes は Win32 上のオブジェクト指向のシン ラッパーを提供し、C++ の GUI アプリケーションの迅速な開発を可能にします。|
 |[ATL COM デスクトップ コンポーネント](../atl/atl-com-desktop-components.md)|ATL は、クラス テンプレートおよびその他の使用のためのコンストラクトを提供し、C++ の COM オブジェクトの作成が簡単にします。|

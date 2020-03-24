@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - RC2111
 ms.assetid: 118cba57-82a4-4199-acf4-9d9561946218
-ms.openlocfilehash: bf8cce125920e6506c2c37a6e840acfecd80bc5a
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 3f8626b22b10e9d1180eae2b16a9be538354978c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344403"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80191523"
 ---
 # <a name="resource-compiler-error-rc2111"></a>リソース コンパイラ エラー RC2111
 
-無効なコントロール型
+コントロールの種類が無効です
 
-内の各コントロール ステートメント、**ダイアログ**ステートメントは、次のいずれかを指定する必要があります。3STATE、AUTO3、自動チェック、AUTORADIO、BEDIT、チェック ボックス、コンボ ボックス、コントロール、CTEXT、DEFPUSHBUTTON、EDITTEXT、GROUPBOX、HEDIT、アイコン、IEDIT、LISTBOX、LTEXT、PUSHBOX、プッシュ ボタン、RADIOBUTTON、RTEXT、SCROLLBAR、USERBUTTON します。
+**DIALOG**ステートメント内の各 CONTROL ステートメントは、次のいずれかである必要があります: 3STATE、AUTO3、AUTOCHECK、AUTORADIO、BEDIT、CHECKBOX、COMBOBOX、CONTROL、ctext、DEFPUSHBUTTON、EDITTEXT、GROUPBOX、HEDIT、ICON、IEDIT、LISTBOX、LTEXT、pushbox、、RADIOBUTTON、RTEXT、SCROLLBAR、userbutton。
 
-これらのコントロール ステートメントのスペルが正しいことを確認します。
+これらのコントロールステートメントのスペルが正しいことを確認します。

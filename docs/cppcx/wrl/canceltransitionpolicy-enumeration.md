@@ -9,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - CancelTransitionPolicy Enumeration
 ms.assetid: 5de49f7d-e5e3-43e9-bbca-666caf226cef
-ms.openlocfilehash: cb07f28794d466dde08719057a21ebf62f989e85
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e820b3fffb4a00e95a1210a5c0beb3229c6d1657
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398759"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214124"
 ---
 # <a name="canceltransitionpolicy-enumeration"></a>CancelTransitionPolicy 列挙型
 
-どの非同期操作をしようと終了の状態に遷移することを示します。 完了するか、クライアントが要求の取り消し状態に関してエラーが動作する必要があります。
+クライアントから要求された取り消し状態に関して、非同期操作が完了またはエラーの状態に遷移する方法を示します。
 
 ## <a name="syntax"></a>構文
 
@@ -30,17 +30,17 @@ enum CancelTransitionPolicy;
 
 ### <a name="values"></a>値
 
-|名前|説明|
+|Name|説明|
 |----------|-----------------|
-|`RemainCanceled`|非同期操作は、クライアントが要求の取り消された状態では現在場合、は、ターミナルの完了またはエラー状態に遷移するのではなく、取り消しの状態が保持することを示します。|
-|`TransitionFromCanceled`|状態のターミナル状態に取り消された状態の完了を移行する必要があることを示しますこの場合は、非同期操作は、クライアントが要求の取り消された状態では現在、またはこのフラグを使用する呼び出しによって決定されるエラー。|
+|`RemainCanceled`|非同期操作が現在クライアントによって要求された取り消し状態にある場合、これは、ターミナルの完了状態またはエラー状態に遷移するのではなく、キャンセル状態のままになることを示します。|
+|`TransitionFromCanceled`|非同期操作が現在クライアントによって要求された取り消し状態にある場合は、このフラグを利用する呼び出しによって決定された状態が、その取り消し状態から完了またはエラーの状態に遷移することを示します。|
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** async.h
+**ヘッダー:** async .h
 
-**名前空間:** Microsoft::wrl
+**名前空間:** Microsoft::WRL
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [Microsoft::WRL 名前空間](microsoft-wrl-namespace.md)

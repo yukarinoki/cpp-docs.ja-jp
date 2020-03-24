@@ -7,19 +7,19 @@ helpviewer_keywords:
 - CAN0030
 - CXX0030
 ms.assetid: ada8b48c-09c8-49bf-ae23-313ed663c4fe
-ms.openlocfilehash: 1e52b238905fba5c310a89377b81548a1c6b5784
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 477ec31d18924e91baf2d8b7b732bc7a50eee53b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62359801"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80195618"
 ---
 # <a name="expression-evaluator-error-cxx0030"></a>式エバリュエーター エラー CXX0030
 
-評価できない式
+式が評価可能ではありません
 
-書き込まれると、デバッガーの式エバリュエーターは式の値を取得できませんでした。 1 つの原因と考えられますが、式がプログラムのアドレス空間外のメモリを指すこと (1 つの例では null ポインターの逆参照)。 Windows では、プログラムのアドレス空間の外部では、メモリにアクセスをできません。
+デバッガーの式エバリュエーターは、記述された式の値を取得できませんでした。 考えられる原因の1つは、式がプログラムのアドレス空間の外部にあるメモリを参照する (null ポインターの逆参照が1つの例) ことです。 Windows では、プログラムのアドレス空間の外部にあるメモリにアクセスすることはできません。
 
-評価の順序を制御するかっこを使用して、式を書き直してくださいたい場合があります。
+かっこを使用して式を書き直し、評価の順序を制御することもできます。
 
-このエラーは、can0030 と同じものと同じです。
+このエラーは CAN0030 と同じです。

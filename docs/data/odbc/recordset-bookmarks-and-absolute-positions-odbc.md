@@ -1,5 +1,5 @@
 ---
-title: レコード セット:ブックマークと絶対位置 (ODBC)
+title: 'レコードセット: ブックマークと絶対位置 (ODBC)'
 ms.date: 11/04/2016
 f1_keywords:
 - SetAbsolutePosition
@@ -21,34 +21,34 @@ helpviewer_keywords:
 - GetBookmark method
 - SetAbsolutePosition method, bookmarks
 ms.assetid: 189788d6-33c1-41c5-9265-97db2a5d43cc
-ms.openlocfilehash: c4a223f01b25b4c321ccfb4f4c03c3c5241381ec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9a25c0fe4c1f08d376824fbc02211d22c7c14435
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395613"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212967"
 ---
-# <a name="recordset-bookmarks-and-absolute-positions-odbc"></a>レコード セット:ブックマークと絶対位置 (ODBC)
+# <a name="recordset-bookmarks-and-absolute-positions-odbc"></a>レコードセット: ブックマークと絶対位置 (ODBC)
 
 このトピックの内容は、MFC ODBC クラスに該当します。
 
-レコード セット内の移動時に、多くの場合、特定のレコードに戻る必要があります。 レコードのブックマークと絶対位置は、このような 2 つのメソッドを提供します。
+レコードセット内を移動するときは、多くの場合、特定のレコードに戻る方法が必要になります。 レコードのブックマークと絶対位置には、このような2つのメソッドが用意されています。
 
 このトピックでは、次の内容について説明します。
 
-- [ブックマークを使用する方法](#_core_bookmarks_in_mfc_odbc)します。
+- [ブックマークの使用方法](#_core_bookmarks_in_mfc_odbc)。
 
-- [絶対位置を使用して現在のレコードを設定する方法](#_core_absolute_positions_in_mfc_odbc)します。
+- [絶対位置を使用して現在のレコードを設定する方法](#_core_absolute_positions_in_mfc_odbc)。
 
-##  <a name="_core_bookmarks_in_mfc_odbc"></a> MFC ODBC 内のブックマーク
+##  <a name="bookmarks-in-mfc-odbc"></a><a name="_core_bookmarks_in_mfc_odbc"></a>MFC ODBC でのブックマーク
 
-ブックマークには、レコードを一意に識別します。 レコード セットを移動するときに、レコード セットからレコードを削除できるため、レコードの絶対位置に常に依存することはできません。 レコードの位置を追跡する信頼性の高い方法では、そのブックマークを使用します。 クラス`CRecordset`メンバー関数を提供します。
+ブックマークは、レコードを一意に識別します。 レコードセット内を移動すると、レコードセットからレコードを削除できるため、レコードの絶対位置を常に使用することはできません。 レコードの位置を追跡する信頼できる方法は、そのブックマークを使用することです。 クラス `CRecordset` は、次のためのメンバー関数を提供します。
 
-- 変数に保存できるように、現在のレコードのブックマークの取得 ([GetBookmark](../../mfc/reference/crecordset-class.md#getbookmark))。
+- 現在のレコードのブックマークを取得して、変数 ([GetBookmark](../../mfc/reference/crecordset-class.md#getbookmark)) に保存できるようにします。
 
-- 前の変数に保存したブックマークを指定することによって、特定のレコードにすばやく移動 ([SetBookmark](../../mfc/reference/crecordset-class.md#setbookmark))。
+- 変数 ([SetBookmark](../../mfc/reference/crecordset-class.md#setbookmark)) で前に保存したブックマークを指定することにより、特定のレコードにすばやく移動します。
 
-次の例では、これらのメンバー関数を使用して、現在のレコードをマークし、後で戻す方法を示します。
+次の例では、これらのメンバー関数を使用して、現在のレコードをマークし、後でそれに戻る方法を示します。
 
 ```cpp
 // rs is a CRecordset or
@@ -63,25 +63,25 @@ rs.GetBookmark( varRecordToReturnTo );
 rs.SetBookmark( varRecordToReturnTo );
 ```
 
-基になるデータ型を抽出する必要はありません、 [CDBVariant クラス](../../mfc/reference/cdbvariant-class.md)オブジェクト。 値を割り当てる`GetBookmark`では、そのブックマークに戻って`SetBookmark`します。
+[CDBVariant クラス](../../mfc/reference/cdbvariant-class.md)オブジェクトから基になるデータ型を抽出する必要はありません。 `GetBookmark` に値を割り当て、`SetBookmark`でそのブックマークに戻ります。
 
 > [!NOTE]
->  ODBC ドライバーとレコード セットの種類によってブックマークがサポートされない可能性があります。 ブックマークは呼び出すことによってサポートされているかどうかを簡単に判断できます[値](../../mfc/reference/crecordset-class.md#canbookmark)します。 さらに、ブックマークはサポートされている場合を明示的に選択してくださいそれらを指定することによって実装、`CRecordset::useBookmarks`オプション、 [:open](../../mfc/reference/crecordset-class.md#open)メンバー関数。 レコード セットの特定の操作の後、ブックマークの永続性を確認することも必要があります。 たとえば場合、する`Requery`レコード セットは、ブックマークが無効になります。 呼び出す[CDatabase::GetBookmarkPersistence](../../mfc/reference/cdatabase-class.md#getbookmarkpersistence)を安全に呼び出すことができるかどうかを確認する`SetBookmark`します。
+>  ODBC ドライバーとレコードセットの種類によっては、ブックマークがサポートされていない場合があります。 [CRecordset:: CanBookmark](../../mfc/reference/crecordset-class.md#canbookmark)を呼び出すことで、ブックマークがサポートされているかどうかを簡単に判断できます。 さらに、ブックマークがサポートされている場合は、 [CRecordset:: Open](../../mfc/reference/crecordset-class.md#open)メンバー関数で `CRecordset::useBookmarks` オプションを指定することにより、ブックマークを実装することを明示的に選択する必要があります。 また、特定のレコードセット操作の後にブックマークが永続化されていることを確認する必要もあります。 たとえば、レコードセットを `Requery` すると、ブックマークが無効になることがあります。 `SetBookmark`を安全に呼び出すことができるかどうかを確認するには、 [CDatabase:: GetBookmarkPersistence](../../mfc/reference/cdatabase-class.md#getbookmarkpersistence)を呼び出します。
 
-##  <a name="_core_absolute_positions_in_mfc_odbc"></a> MFC ODBC での絶対位置
+##  <a name="absolute-positions-in-mfc-odbc"></a><a name="_core_absolute_positions_in_mfc_odbc"></a>絶対位置 (MFC ODBC)
 
-クラス、ブックマークのほか`CRecordset`序数の位置を指定して現在のレコードを設定することができます。 これには、絶対配置は呼び出されます。
-
-> [!NOTE]
->  絶対配置では、順方向専用のレコード セットで使用できません。 前方スクロール専用レコードの詳細については、次を参照してください。[レコード セット (ODBC)](../../data/odbc/recordset-odbc.md)します。
-
-絶対位置を使用して現在のレコード ポインターを移動するには、呼び出す[CRecordset::SetAbsolutePosition](../../mfc/reference/crecordset-class.md#setabsoluteposition)します。 値を渡す場合`SetAbsolutePosition`、序数の位置になる、現在のレコードに対応するレコード。
+クラス `CRecordset` では、ブックマークの他に、序数位置を指定することによって現在のレコードを設定できます。 これは絶対配置と呼ばれます。
 
 > [!NOTE]
->  レコードの絶対位置は、可能性のある信頼性の高いではありません。 レコード セットからレコードが削除されると、それ以降のレコードの序数位置が変更されます。 ブックマークは、現在のレコードを移動するための推奨される方法です。 詳細については、次を参照してください。 [MFC ODBC 内のブックマーク](#_core_bookmarks_in_mfc_odbc)します。
+>  順方向専用のレコードセットでは、絶対配置は使用できません。 前方参照専用レコードセットの詳細については、「[レコードセット (ODBC)](../../data/odbc/recordset-odbc.md)」を参照してください。
 
-レコード セットのナビゲーションの詳細については、次を参照してください。[レコード セット。スクロール (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)します。
+絶対位置を使用して現在のレコードポインターを移動するには、 [CRecordset:: SetAbsolutePosition](../../mfc/reference/crecordset-class.md#setabsoluteposition)を呼び出します。 `SetAbsolutePosition`に値を渡すと、その序数位置に対応するレコードが現在のレコードになります。
 
-## <a name="see-also"></a>関連項目
+> [!NOTE]
+>  レコードの絶対位置が信頼できない可能性があります。 ユーザーがレコードセットからレコードを削除した場合、後続のレコードの順序が変更されます。 ブックマークは、現在のレコードを移動するために推奨される方法です。 詳細については、「 [MFC ODBC のブックマーク](#_core_bookmarks_in_mfc_odbc)」を参照してください。
+
+レコードセットナビゲーションの詳細については、「[レコードセット: スクロール (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)」を参照してください。
+
+## <a name="see-also"></a>参照
 
 [レコードセット (ODBC)](../../data/odbc/recordset-odbc.md)

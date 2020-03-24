@@ -16,12 +16,12 @@ helpviewer_keywords:
 - _ptr64 keyword [C++]
 - __ptr32 keyword [C++]
 ms.assetid: afb563d8-7458-4fe7-9c30-bd4b5385a59f
-ms.openlocfilehash: 957e0deba31552777ef5e738afef13d74a640a18
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: c3ebe642284c6ee269dbfc39985630b7d949435f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301328"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179212"
 ---
 # <a name="__ptr32-__ptr64"></a>__ptr32、__ptr64
 
@@ -43,7 +43,7 @@ int * __ptr64 p64;
 
 以前のバージョンとの互換性を維持するために、 **_ptr32**と **_ptr64**は **__ptr32**と **__ptr64**のシノニムであり、コンパイラオプション[/za \(言語拡張を無効にする)](../build/reference/za-ze-disable-language-extensions.md)が指定されている場合を除きます。
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 次の例は、 **__ptr32**と **__ptr64**キーワードを使用してポインターを宣言して割り当てる方法を示しています。
 
@@ -73,8 +73,8 @@ int main()
 64
 ```
 
-**END Microsoft 固有の仕様**
+**Microsoft 固有の仕様はここまで**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [組み込みの型](../cpp/fundamental-types-cpp.md)

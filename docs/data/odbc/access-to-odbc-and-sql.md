@@ -9,21 +9,21 @@ helpviewer_keywords:
 - SQL [C++], calling ODBC API functions
 - ODBC [C++], API functions
 ms.assetid: 5613d7dc-00b7-4646-99ae-1116c05c52b4
-ms.openlocfilehash: 7a539d911bbf4f4d9582da0ebedaeffaa0d8fa7b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0b590ce9309cbbe95285001cc5befe70a1d1961f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396003"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213331"
 ---
 # <a name="access-to-odbc-and-sql"></a>ODBC や SQL へのアクセス
 
-Microsoft Foundation Class ライブラリでは、Windows API 呼び出しの多くをカプセル化し、まだする任意の Windows API 関数を直接呼び出すことができます。 データベース クラスでは、ODBC API に関して同様の柔軟性を提供します。 データベース クラスをシールドすると、ODBC の複雑さの多くが、中には、任意の場所から直接 ODBC API 関数を呼び出すことができます、プログラムでします。
+Microsoft Foundation Class ライブラリは多くの Windows API 呼び出しをカプセル化しますが、Windows API 関数を直接呼び出すこともできます。 データベースクラスを使用すると、ODBC API に関しても同じ柔軟性が得られます。 データベースクラスを使用すると、ODBC の複雑さの多くを防ぐことができますが、ODBC API 関数をプログラム内の任意の場所から直接呼び出すことができます。
 
-同様に、データベース クラスからも保護では多くの作業をしなくて[SQL](../../data/odbc/sql.md)、する場合は SQL を直接使用することができます。 レコード セット オブジェクトをカスタマイズするには、カスタムの SQL ステートメント (または既定のステートメントの一部を設定) を渡すことによって、レコード セットを開くとします。 使用して直接 SQL 呼び出しを行うことができます、 [ExecuteSQL](../../mfc/reference/cdatabase-class.md#executesql)クラスのメンバー関数[CDatabase](../../mfc/reference/cdatabase-class.md)します。
+同様に、データベースクラスを使用することによって[sql](../../data/odbc/sql.md)でも多くの作業を行う必要がありますが、必要に応じて sql を直接使用することもできます。 レコードセットを開くときに、レコードセットオブジェクトをカスタマイズするには、カスタム SQL ステートメント (または既定のステートメントの一部を設定する) を渡します。 また、 [CDatabase](../../mfc/reference/cdatabase-class.md)クラスの[ExecuteSQL](../../mfc/reference/cdatabase-class.md#executesql)メンバー関数を使用して、SQL 呼び出しを直接行うこともできます。
 
-詳細については、次を参照してください[ODBC:。呼び出し元の ODBC API 関数を直接](../../data/odbc/odbc-calling-odbc-api-functions-directly.md)と[SQL:SQL の直接呼び出し (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md)します。
+詳細については、「 [odbc: ODBC API 関数の直接呼び出し](../../data/odbc/odbc-calling-odbc-api-functions-directly.md)」および「 [SQL: Direct Sql 呼び出しの作成 (odbc)](../../data/odbc/sql-making-direct-sql-calls-odbc.md)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ODBC と MFC](../../data/odbc/odbc-and-mfc.md)

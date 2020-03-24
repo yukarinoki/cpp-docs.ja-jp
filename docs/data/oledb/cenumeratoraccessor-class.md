@@ -35,12 +35,12 @@ helpviewer_keywords:
 - m_szName
 - m_szParseName
 ms.assetid: 21e8e7ea-3511-4afe-b33f-d520f4ff82bb
-ms.openlocfilehash: d85f630a01ab7e2a07035a8a304a56be91eca8a9
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: f238c0b5b2a3988f08d910f605415bbe6403ea3d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79545631"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211831"
 ---
 # <a name="cenumeratoraccessor-class"></a>CEnumeratorAccessor クラス
 
@@ -52,7 +52,7 @@ ms.locfileid: "79545631"
 class CEnumeratorAccessor
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atldbcli.h
 
@@ -68,7 +68,7 @@ class CEnumeratorAccessor
 |[m_szName](#szname)|データソースまたは列挙子の名前。|
 |[m_szParseName](#szparsename)|データソースまたは列挙子のモニカーを取得するために[Iparsedisplayname](/windows/win32/api/oleidl/nn-oleidl-iparsedisplayname)に渡す文字列。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 この行セットは、現在の列挙子から参照できるデータソースと列挙子で構成されます。
 
@@ -82,7 +82,7 @@ class CEnumeratorAccessor
 VARIANT_BOOL m_bIsParent;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 詳細については、 *OLE DB プログラマーリファレンス*の「 [Isourcesrowset を:: getsourcesrowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) 」を参照してください。
 
@@ -96,7 +96,7 @@ VARIANT_BOOL m_bIsParent;
 USHORT m_nType;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 詳細については、 *OLE DB プログラマーリファレンス*の「 [Isourcesrowset を:: getsourcesrowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) 」を参照してください。
 
@@ -110,7 +110,7 @@ USHORT m_nType;
 WCHAR m_szDescription[129];
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 詳細については、 *OLE DB プログラマーリファレンス*の「 [Isourcesrowset を:: getsourcesrowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) 」を参照してください。
 
@@ -124,7 +124,7 @@ WCHAR m_szDescription[129];
 WCHAR m_szName[129];
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 詳細については、 *OLE DB プログラマーリファレンス*の「 [Isourcesrowset を:: getsourcesrowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) 」を参照してください。
 
@@ -138,7 +138,7 @@ WCHAR m_szName[129];
 WCHAR m_szParseName[129];
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 詳細については、 *OLE DB プログラマーリファレンス*の「 [Isourcesrowset を:: getsourcesrowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) 」を参照してください。
 

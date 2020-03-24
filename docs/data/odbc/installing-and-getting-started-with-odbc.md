@@ -5,23 +5,23 @@ helpviewer_keywords:
 - installing ODBC
 - ODBC, installing
 ms.assetid: 6b473481-1d68-468f-89f6-82b0fd7716fd
-ms.openlocfilehash: 112593aac74a15279f605c75a52fb3eec6750576
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7e4c9bc1e4ba418ec588e054654e544b6fd3e239
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395860"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213177"
 ---
 # <a name="installing-and-getting-started-with-odbc"></a>ODBC のインストールと起動
 
-次のトピックでは、開いているデータベースの接続 (ODBC) での作業を開始する必要があるコンポーネントをインストールできます。
+次のトピックでは、Open Database Connectivity (ODBC) を使用して作業を開始するために必要なコンポーネントをインストールする方法について説明します。
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-- [Visual C に添付されている ODBC ドライバーをインストールします。](../../data/odbc/odbc-administrator.md)
+- [ビジュアルに付属する ODBC ドライバーをインストールするC++](../../data/odbc/odbc-administrator.md)
 
-- [お客様の ODBC コンポーネントを再配布します。](../../data/odbc/odbc-basics.md)
+- [ODBC コンポーネントを顧客に再配布する](../../data/odbc/odbc-basics.md)
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ODBC (Open Database Connectivity)](../../data/odbc/open-database-connectivity-odbc.md)

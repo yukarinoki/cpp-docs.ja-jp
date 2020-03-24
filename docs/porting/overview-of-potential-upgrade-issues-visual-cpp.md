@@ -2,12 +2,12 @@
 title: アップグレード時の潜在的な問題の概要 (Visual C++)
 ms.date: 05/03/2019
 ms.assetid: 2c99a8cb-098f-4a9d-bf2c-b80fd06ace43
-ms.openlocfilehash: 2b310760b1a6623a18a00e36e3bd5378d2ebb76e
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: ef088f4881dfbd9967f90a009e4a8e397a70b134
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73627240"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214982"
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>アップグレード時の潜在的な問題の概要 (Visual C++)
 
@@ -88,7 +88,7 @@ dumpbin.exe /LINKERMEMBER somelibrary.lib
 
 ### <a name="zcwchar_t-wchar_t-is-native-type"></a>/Zc:wchar_t (wchar_t をネイティブ型として認識)
 
-(Microsoft Visual C++ 6.0 以前では、 **wchar_t**は組み込み型として実装されていませんが、unsigned short の typedef として wchar で宣言されていました)。標準C++では、 **wchar_t**が組み込み型である必要があります。 typedef バージョンを使用すると、移植性の問題が発生することがあります。 以前のバージョンの Visual Studio からアップグレードしているとき、コードが **wchar_t** を符号なし **short** に暗黙的に変換しようとしたために C2664 コンパイル エラーが発生した場合は、`/Zc:wchar_t-` を設定するのではなく、コードを変更してエラーを修正することをお勧めします。 「[/Zc:wchar_t (wchar_t をネイティブ型として認識)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)」を参照してください。
+(Microsoft Visual C++ 6.0 以前では、 **wchar_t**は組み込み型として実装されていませんが、unsigned short の typedef として wchar 形式で宣言されていました)。標準C++では、 **wchar_t**が組み込み型である必要があります。 typedef バージョンを使用すると、移植性の問題が発生することがあります。 以前のバージョンの Visual Studio からアップグレードしているとき、コードが **wchar_t** を符号なし **short** に暗黙的に変換しようとしたために C2664 コンパイル エラーが発生した場合は、`/Zc:wchar_t-` を設定するのではなく、コードを変更してエラーを修正することをお勧めします。 「[/Zc:wchar_t (wchar_t をネイティブ型として認識)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)」を参照してください。
 
 ### <a name="upgrading-with-the-linker-options-nodefaultlib-entry-and-noentry"></a>リンカー オプション /NODEFAULTLIB、/ENTRY、および /NOENTRY を使用したアップグレード
 
@@ -134,7 +134,7 @@ C ランタイムには、長年にわたり、多くの変更が加えられて
 
 エラーが CRT 関数に関係している場合は、記事に追加情報が含まれるかどうか、「[Visual C++ 2003 から 2015 の変更履歴](visual-cpp-change-history-2003-2015.md)」または [Visual Studio での C++ 準拠の改善](../overview/cpp-conformance-improvements.md)に関するページを検索してください。 エラーが LNK2019 (未解決の外部シンボル) である場合は、関数が削除されていないことを確認してください。 関数がまだ存在し、呼び出し元のコードも正しい場合は、プロジェクトで `/NODEFAULTLIB` が使用されているかどうかを確認します。 その場合は、プロジェクトで新しいユニバーサル (UCRT) ライブラリを使用するように、ライブラリのリストを更新する必要があります。 詳細については、ライブラリと依存関係に関する上記セクションを参照してください。
 
-エラーが `printf` または `scanf` 関数に関係している場合は、いずれの関数も stdio.h なしで非公開に定義されているのではないか確認してください。 そのように定義されている場合は、プライベート定義を削除するか、または legacy\_stdio\_definitions.lib へのリンクを削除します。 **[プロパティ ページ]** ダイアログの **[追加の依存関係]** プロパティで **[構成プロパティ]**  >  **[リンカー]**  >  **[入力]** の順に選択して、このライブラリを設定することができます。 Windows SDK 8.1 以前のバージョンとリンクする場合は、legacy\_stdio\_definitions.lib を追加します。
+エラーが `printf` または `scanf` 関数に関係している場合は、いずれの関数も stdio.h なしで非公開に定義されているのではないか確認してください。 そのように定義されている場合は、プライベート定義を削除するか、または legacy\_stdio\_definitions.lib へのリンクを削除します。 **[プロパティ ページ]** ダイアログの **[追加の依存関係]** プロパティで  > [構成プロパティ] > [リンカー] **[入力]** の順に選択して、このライブラリを設定することができます。 Windows SDK 8.1 以前のバージョンとリンクする場合は、legacy\_stdio\_definitions.lib を追加します。
 
 エラーが書式文字列の引数に関係している場合は、おそらく、コンパイラが標準の適用により厳格であることが原因です。 詳細については、変更履歴を参照してください。 ここでのエラーは、セキュリティ上のリスクを招く可能性があるので、十分に注意してください。
 
@@ -184,7 +184,7 @@ Unicode が標準化される前、多くのプログラムでは、ASCII 文字
 
 詳細については、「[Porting from MBCS to Unicode](porting-guide-spy-increment.md#porting_to_unicode)」 (MBCS から Unicode に移植する) を参照してください。 MBCS と Unicode に関する一般的な情報については、「[ビジュアルC++でのテキストと文字列](../text/text-and-strings-in-visual-cpp.md)」および「[国際化](../c-runtime-library/internationalization.md)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [以前のバージョンのビジュアルからのプロジェクトのアップグレードC++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [Visual Studio の C++ 準拠の強化](../overview/cpp-conformance-improvements.md)

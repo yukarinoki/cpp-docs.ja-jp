@@ -9,12 +9,12 @@ helpviewer_keywords:
 - keywords [C++]
 - Managed Extensions for C++, replacement syntax
 ms.assetid: 1e400ee6-3ac9-4910-a608-9d3d5993e423
-ms.openlocfilehash: 1e47a138fece021cf015884222d8cf5c766655fd
-ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
+ms.openlocfilehash: 6b3add1c0de8aa1f8ec66e8d220443c4a0efd704
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "79544761"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172466"
 ---
 # <a name="component-extensions-for-net-and-uwp"></a>.NET および UWP 用のコンポーネントの拡張機能
 
@@ -37,7 +37,7 @@ C++/CX 拡張機能は、C++/CLI のサブセットです。 拡張構文はほ�
 
 次の表に、C++ 言語拡張のキーワードの一覧を示します。
 
-|Keyword|状況依存|目的|参照|
+|Keyword|状況依存|目的|リファレンス|
 |-------------|-----------------------|-------------|---------------|
 |**ref class**<br /><br /> **ref struct**|いいえ|クラスを宣言します。|[クラスと構造体](classes-and-structs-cpp-component-extensions.md)|
 |**value class**<br /><br /> **value struct**|いいえ|値クラスを宣言します。|[クラスと構造体](classes-and-structs-cpp-component-extensions.md)|
@@ -51,7 +51,7 @@ C++/CX 拡張機能は、C++/CLI のサブセットです。 拡張構文はほ�
 
 次のキーワードは、派生のオーバーライド動作を修飾するために使用できます。 **new** キーワードは C++ の拡張機能ではありませんが、追加のコンテキストで使用できるキーワードとしてこの一覧に含めてあります。 一部の指定子は、ネイティブのプログラミングに対しても有効です。 詳細については、「[方法: ネイティブコンパイルでオーバーライド指定子C++を宣言する (/cli)](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md)」を参照してください。
 
-|Keyword|状況依存|目的|参照|
+|Keyword|状況依存|目的|リファレンス|
 |-------------|-----------------------|-------------|---------------|
 |**abstract**|はい|関数またはクラスが抽象型であることを示します。|[abstract](abstract-cpp-component-extensions.md)|
 |**新規**|いいえ|関数が基底クラスのバージョンのオーバーライドでないことを示します。|[new (vtable の新しいスロット)](new-new-slot-in-vtable-cpp-component-extensions.md)|
@@ -71,7 +71,7 @@ C++/CX 拡張機能は、C++/CLI のサブセットです。 拡張構文はほ�
 
 C++ 拡張に追加されたその他のキーワードを次に示します。
 
-|Keyword|状況依存|目的|参照|
+|Keyword|状況依存|目的|リファレンス|
 |-------------|-----------------------|-------------|---------------|
 |**finally**|はい|例外処理の既定の動作を示します。|[例外処理](exception-handling-cpp-component-extensions.md)|
 |**for each、in**|いいえ|コレクションの要素を列挙します。|[for each、in](../dotnet/for-each-in.md)|
@@ -85,7 +85,7 @@ C++ 拡張に追加されたその他のキーワードを次に示します。
 
 次の言語構成要素は、キーワードとしてではなく、テンプレートとして実装されています。 `/ZW` コンパイラ オプションを指定した場合は `lang` 名前空間で定義され、 `/clr` コンパイラ オプションを指定した場合は `cli` 名前空間で定義され、
 
-|Keyword|目的|参照|
+|Keyword|目的|リファレンス|
 |-------------|-------------|---------------|
 |**array**|配列を宣言します。|[配列](arrays-cpp-component-extensions.md)|
 |**interior_ptr**|(CLR のみ) 参照型でデータを参照します。|[interior_ptr (C++/CLI)](interior-ptr-cpp-cli.md)|
@@ -97,7 +97,7 @@ C++ 拡張に追加されたその他のキーワードを次に示します。
 
 割り当てられたオブジェクトの有効期間と削除をランタイムで自動的に管理するように指定する型の宣言子を次に示します。
 
-|演算子|目的|参照|
+|演算子|目的|リファレンス|
 |--------------|-------------|---------------|
 |`^`|オブジェクトを識別するハンドル (使用できなくなったときに自動的に削除される Windows ランタイム オブジェクトまたは CLR オブジェクトへのポインター) を宣言します。|[オブジェクト演算子 (^) へのハンドル](handle-to-object-operator-hat-cpp-component-extensions.md)|
 |`%`|追跡参照 (使用できなくなったときに自動的に削除される Windows ランタイム オブジェクトまたは CLR オブジェクトへの参照) を宣言します。|[参照演算子の追跡](tracking-reference-operator-cpp-component-extensions.md)|

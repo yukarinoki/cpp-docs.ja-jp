@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4237
 ms.assetid: 87bfec39-5241-464f-9feb-517b49f352ea
-ms.openlocfilehash: 62ce0a0edc7f15bc5a19e4630133976f413da35a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aaa26393f1ce76d3e1bc40e5ba4978d1bcdb4fc9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62352659"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193759"
 ---
 # <a name="linker-tools-warning-lnk4237"></a>リンカー ツールの警告 LNK4237
 
-中に/subsystem:native が 'dll' からインポートする場合の指定/SUBSYSTEM:CONSOLE か/SUBSYSTEM:WINDOWS を使用します。
+/SUBSYSTEM: ' dll ' からインポートするときにネイティブに指定されました。/SUBSYSTEM: CONSOLE または/SUBSYSTEM: WINDOWS を使用します。
 
-[中に/subsystem:native が](../../build/reference/subsystem-specify-subsystem.md)構築 (Win32) windows アプリケーションを直接使用している場合、次の 1 つ以上指定されました。
+[/SUBSYSTEM:](../../build/reference/subsystem-specify-subsystem.md)次の1つまたは複数を直接使用する Windows (Win32) アプリケーションをビルドするときに、NATIVE が指定されました。
 
 - kernel32.dll
 
-- gdi32.dll
+- gdi32
 
 - user32.dll
 
-- 1 つ、msvcrt の\*dll。
+- msvcrt.dll\* dll の1つ。
 
-指定しないでこの警告を解決する**中に/subsystem:native が**します。
+**/SUBSYSTEM: NATIVE**を指定せずに、この警告を解決してください。

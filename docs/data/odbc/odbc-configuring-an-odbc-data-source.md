@@ -1,30 +1,30 @@
 ---
-title: ODBC:ODBC データ ソースを構成します。
+title: 'ODBC: ODBC データ ソースの設定'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ODBC data sources, configuring
 - ODBC connections, configuring
 - configuring ODBC data sources
 ms.assetid: 1cd03e6a-8d59-4eca-a8c6-1010582d5e67
-ms.openlocfilehash: 259f0e2afa61096e4529a50ee2ba7de07b293c46
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 43d385bea34ba885b9ae0f8efb6109e6959c2383
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395782"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213136"
 ---
-# <a name="odbc-configuring-an-odbc-data-source"></a>ODBC:ODBC データ ソースを構成します。
+# <a name="odbc-configuring-an-odbc-data-source"></a>ODBC: ODBC データ ソースの設定
 
-使用する、[データソース](../../data/odbc/data-source-odbc.md)開発したアプリケーションには、それを構成する ODBC アドミニストレーターを使用する必要があります。 Odbc データ ソース アドミニストレーターの使用可能なデータ ソースとその接続情報を Windows レジストリの追跡。 ODBC アドミニストレーターを使用して、追加、変更、およびデータ ソースの削除、**データソース** ダイアログ ボックスを追加および ODBC ドライバーを削除します。
+開発したアプリケーションで[データソース](../../data/odbc/data-source-odbc.md)を使用するには、ODBC 管理者を使用して構成する必要があります。 ODBC 管理者は、使用可能なデータソースとその接続情報を Windows レジストリで追跡します。 ODBC 管理者を使用して、 **[データソース]** ダイアログボックスでデータソースを追加、変更、および削除したり、odbc ドライバーを追加および削除したりできます。
 
 > [!NOTE]
->  この情報は、ODBC へのアクセスの MFC データ アクセス オブジェクト (DAO) クラスを使用して MFC ODBC クラスを使用するときに適用されます。
+>  この情報は、mfc データアクセスオブジェクト (DAO) クラスを使用して ODBC アクセスを行う場合や、MFC ODBC クラスを使用する場合に適用されます。
 
-ODBC アドミニストレーターには、Microsoft Foundation Classes (MFC) ライブラリのデータベースのサポートが自動的にインストールされます。 Odbc データ ソース アドミニストレーターの詳細については、次を参照してください。 [ODBC アドミニストレーター](../../data/odbc/odbc-administrator.md)とオンラインの ODBC API リファレンスのヘルプ システムです。
+ODBC 管理者は、Microsoft Foundation Classes (MFC) ライブラリデータベースのサポートと共に自動的にインストールされます。 ODBC 管理者プログラムの詳細については、 [Odbc 管理](../../data/odbc/odbc-administrator.md)者とオンライン Odbc API リファレンスのヘルプシステムを参照してください。
 
-MFC データベース アプリケーション用の ODBC セットアップおよび管理プログラムを作成する方法については[テクニカル ノート 48:](../../mfc/tn048-writing-odbc-setup-and-administration-programs.md)します。
+MFC データベースアプリケーション用の ODBC セットアップおよび管理プログラムを作成する方法については、[テクニカルノート 48](../../mfc/tn048-writing-odbc-setup-and-administration-programs.md)を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ODBC の基礎](../../data/odbc/odbc-basics.md)<br/>
 [ODBC: ODBC API 関数の直接呼び出し](../../data/odbc/odbc-calling-odbc-api-functions-directly.md)

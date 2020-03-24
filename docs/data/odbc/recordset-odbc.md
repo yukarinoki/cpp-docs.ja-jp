@@ -13,12 +13,12 @@ helpviewer_keywords:
 - snapshots, ODBC recordsets
 - dynasets
 ms.assetid: 333337c5-575e-4d26-b5f6-47166ad7874d
-ms.openlocfilehash: b043b08e13611b87bbffbe9dfb3255d5520e3359
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: 011191b99170b8a8338b5ca1a440a32404c4d793
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707836"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212824"
 ---
 # <a name="recordset-odbc"></a>レコードセット (ODBC)
 
@@ -26,7 +26,7 @@ ms.locfileid: "65707836"
 
 [CRecordset](../../mfc/reference/crecordset-class.md) オブジェクトは、データ ソースから選択された 1 組のレコードセットです。 レコードのデータ ソース:
 
-- テーブル。
+- テーブルです。
 
 - クエリ。
 
@@ -37,7 +37,7 @@ ms.locfileid: "65707836"
 > [!NOTE]
 >  一部の ODBC ドライバーでは、データベースのビューがサポートされます。 この意味でのビューは、SQL `CREATE VIEW` ステートメントでもともと作成されたクエリです。
 
-##  <a name="_core_recordset_capabilities"></a> レコードセットの機能
+##  <a name="recordset-capabilities"></a><a name="_core_recordset_capabilities"></a> レコードセットの機能
 
 すべてのレコードセット オブジェクトに次の機能があります。
 
@@ -51,34 +51,34 @@ ms.locfileid: "65707836"
 
 - レコードセットを[パラメーター化](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)し、実行時のレコードセット選択を修正できます。
 
-##  <a name="_core_snapshots_and_dynasets"></a> スナップショットとダイナセット
+##  <a name="snapshots-and-dynasets"></a><a name="_core_snapshots_and_dynasets"></a> スナップショットとダイナセット
 
 レコードセットには、[スナップショット](../../data/odbc/snapshot.md)と[ダイナセット](../../data/odbc/dynaset.md)という 2 種類のプリンシパルがあります。 いずれもクラス `CRecordset` でサポートされています。 いずれにもすべてのレコードセットで共通の特性がありますが、さらにそれぞれのレコードセットにおいて独自の特別な方法でその共通機能が拡張されます。 スナップショットではデータが静的に表示され、レポートや、特定の時点でのデータを表示する必要がある他の状況で役に立ちます。 ダイナセットは、他のユーザーが行った更新をレコードセットに表示するときに便利です。レコードセットを再度問い合わせたり、更新したりする必要がありません。 スナップショットとダイナセットは更新可能か読み取り専用にすることができます。 他のユーザーが追加または削除したレコードを反映させるには、[CRecordset::Requery](../../mfc/reference/crecordset-class.md#requery) を呼び出します。
 
 `CRecordset` では、他にも 2 種類のレコードセット、動的レコードセットと前方スクロール専用レコードセットが許可されます。 動的レコードセットはダイナセットに似ていますが、動的レコードの場合、`CRecordset::Requery` を呼び出さなくても、追加または削除されたあらゆるレコードが反映されます。 そのため、動的レコードセットは DBMS の処理時間に関連し、一般的に高額になります。多くの ODBC ドライバーでサポートされていません。 対照的に、前方スクロール専用レコードセットの場合、更新や後方スクロールを必要としない、最も効率的な方法でレコードセットのデータにアクセスできます。 たとえば、前方スクロール専用レコードセットを使用し、データ ソース間でデータを移行します。前方にデータを動かすだけでこの移行は完了します。 前方スクロール専用レコードセットを使用するには、次の両方を行う必要があります。
 
-- [Open](../../mfc/reference/crecordset-class.md#open) メンバー関数の *nOpenType* パラメーターとしてオプション `CRecordset::forwardOnly` を渡します。
+- `CRecordset::forwardOnly`Open*メンバー関数の*nOpenType[ パラメーターとしてオプション ](../../mfc/reference/crecordset-class.md#open) を渡します。
 
-- `Open` の *dwOptions* パラメーターに `CRecordset::readOnly` を指定します。
+- `CRecordset::readOnly` の *dwOptions* パラメーターに `Open` を指定します。
 
     > [!NOTE]
     >  ダイナセット サポートの ODBC ドライバー要件については、「[ODBC](../../data/odbc/odbc-basics.md)」を参照してください。 Visual C++ のこのバージョンに含まれている ODBC ドライバー一覧、および他のドライバーを取得する方法については、「[ODBC ドライバーの一覧](../../data/odbc/odbc-driver-list.md)」を参照してください。
 
-##  <a name="_core_your_recordsets"></a> レコード セット
+##  <a name="your-recordsets"></a><a name="_core_your_recordsets"></a> レコード セット
 
-アクセスする個々のテーブル、ビュー、ストアド プロシージャごとに、通常、`CRecordset` から派生するクラスを定義します。 (例外はデータベース結合であり、その場合、1 つのレコードセットは 2 つ以上のテーブルからの列を表します。)レコードセット クラスを誘導するとき、レコード フィールド エクスチェンジ (RFX) メカニズムまたは一括レコード フィールド エクスチェンジ (一括 RFX) メカニズムを有効にします。これらのメカニズムは、ダイアログ データ エクスチェンジ (DDX) メカニズムに似ています。 RFX と一括 RFX では、データ ソースからレコードセットにデータを簡単に転送できます。RFX ではまた、レコードセットからデータ セットにデータが転送されます。 詳細については、「[レコード フィールド エクスチェンジ (RFX)](../../data/odbc/record-field-exchange-rfx.md)」と「[レコードセット:レコードの一括フェッチ (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)」を参照してください。
+アクセスする個々のテーブル、ビュー、ストアド プロシージャごとに、通常、`CRecordset` から派生するクラスを定義します。 (例外はデータベース結合であり、1つのレコードセットが2つ以上のテーブルの列を表します)。レコードセットクラスを派生させる場合は、レコードフィールドエクスチェンジ (RFX) メカニズムまたは bulk レコードフィールドエクスチェンジ (Bulk RFX) メカニズムを有効にします。これは、ダイアログデータエクスチェンジ (DDX) メカニズムに似ています。 RFX と一括 RFX では、データ ソースからレコードセットにデータを簡単に転送できます。RFX ではまた、レコードセットからデータ セットにデータが転送されます。 詳細については、「[レコードフィールドエクスチェンジ (RFX)](../../data/odbc/record-field-exchange-rfx.md) 」および「レコード[セット: レコードの一括フェッチ (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)」を参照してください。
 
-レコードセット オブジェクトからは、選択したすべてのレコードにアクセスする許可が与えられます。 `MoveNext` や `MovePrev` など、`CRecordset` メンバー関数を利用し、選択されている複数のレコードをスクロールして閲覧します。 レコードセット オブジェクトは同時に、選択されているレコードのうち 1 つだけ、現在のレコードを表します。 データベース クエリから結果的に生成されたテーブルまたはレコードの列に対応するレコードセット クラス メンバー変数を宣言することで、現在のレコードのフィールドを調べることができます。 レコードセット データ メンバーの詳細については、「[レコードセット:アーキテクチャ (ODBC)](../../data/odbc/recordset-architecture-odbc.md)」を参照してください。
+レコードセット オブジェクトからは、選択したすべてのレコードにアクセスする許可が与えられます。 `CRecordset` や `MoveNext` など、`MovePrev` メンバー関数を利用し、選択されている複数のレコードをスクロールして閲覧します。 レコードセット オブジェクトは同時に、選択されているレコードのうち 1 つだけ、現在のレコードを表します。 データベース クエリから結果的に生成されたテーブルまたはレコードの列に対応するレコードセット クラス メンバー変数を宣言することで、現在のレコードのフィールドを調べることができます。 レコードセットデータメンバーの詳細については、「[レコードセット: アーキテクチャ (ODBC)](../../data/odbc/recordset-architecture-odbc.md)」を参照してください。
 
 次のトピックでは、レコードセット オブジェクトの使用について説明しています。 トピックの一覧は機能的なカテゴリに基づいて表示されており、順を追って読めるよう、自然な閲覧順になっています。
 
 ### <a name="topics-about-the-mechanics-of-opening-reading-and-closing-recordsets"></a>レコードセットを開き、読み、閉じるためのメカニズムに関するトピック
 
-- [レコードセット: アーキテクチャ (ODBC)](../../data/odbc/recordset-architecture-odbc.md)
+- [レコードセット: レコードセットの構造 (ODBC)](../../data/odbc/recordset-architecture-odbc.md)
 
-- [レコードセット: テーブル用のクラスの宣言 (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)
+- [レコードセット: テーブルにアクセスするレコードセット クラスの宣言 (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)
 
-- [レコードセット: レコードセットの作成成と破棄 (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)
+- [レコードセット: レコードセットの生成と破棄 (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)
 
 - [レコードセット: スクロール (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)
 
@@ -88,7 +88,7 @@ ms.locfileid: "65707836"
 
 - [レコードセット: レコードの並べ替え (ODBC)](../../data/odbc/recordset-sorting-records-odbc.md)
 
-- [レコードセット: レコードセットのパラメーター化 (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)
+- [レコードセット: パラメーターを利用したレコードセット (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)
 
 ### <a name="topics-about-the-mechanics-of-modifying-recordsets"></a>レコードセットの変更メカニズムに関するトピック
 
@@ -96,29 +96,29 @@ ms.locfileid: "65707836"
 
 - [レコードセット: レコードのロック (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)
 
-- [レコードセット: レコードセットのクエリの再実行 (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)
+- [レコードセット: クエリの再実行 (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)
 
 ### <a name="topics-about-somewhat-more-advanced-techniques"></a>やや高度な手法に関するトピック
 
-- [レコードセット: 結合の実行 (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)
+- [レコードセット: 結合 (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)
 
-- [レコードセット: 定義済みクエリのクラスの宣言 (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)
+- [レコードセット: 定義済みクエリを利用したクラスの宣言 (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)
 
-- [レコードセット: データ列の動的なバインド (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)
+- [レコードセット: データ列を動的に結びつける方法 (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)
 
-- [レコードセット: レコードの一括フェッチ (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)
+- [レコードセット: バルク行フェッチ (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)
 
-- [レコードセット: 大きいデータ項目の処理 (ODBC)](../../data/odbc/recordset-working-with-large-data-items-odbc.md)
+- [レコードセット: 大量のデータの処理 (ODBC)](../../data/odbc/recordset-working-with-large-data-items-odbc.md)
 
-- [レコードセット: 合計とその他の集計結果 (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)
+- [レコードセット: 集計値の計算 (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)
 
 ### <a name="topics-about-how-recordsets-work"></a>レコード セットのしくみに関するトピック
 
-- [レコードセット: レコードセットでのレコード選択のしくみ (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)
+- [レコードセット: レコード選択のしくみ (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)
 
-- [レコードセット: レコードセットでのレコード更新のしくみ (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)
+- [レコードセット: レコード更新のしくみ (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ODBC (Open Database Connectivity)](../../data/odbc/open-database-connectivity-odbc.md)<br/>
 [MFC ODBC コンシューマー](../../mfc/reference/adding-an-mfc-odbc-consumer.md)<br/>

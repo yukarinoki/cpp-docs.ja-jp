@@ -5,16 +5,16 @@ ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::Details::RuntimeClassBase
 ms.assetid: 6ada4f81-a857-488a-ad56-8d0b11ccbfcc
-ms.openlocfilehash: 80762a7a2cfdc5c630a42627b8cfd8323f3567eb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 29bcf37ce9bd524dfe09823e00fda4d41eedaf52
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403179"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213591"
 ---
 # <a name="runtimeclassbase-structure"></a>RuntimeClassBase 構造体
 
-WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。
+は WRL インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。
 
 ## <a name="syntax"></a>構文
 
@@ -22,11 +22,11 @@ WRL インフラストラクチャをサポートし、コードから直接使�
 struct RuntimeClassBase;
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-検出するために使用される`RuntimeClass`で、[ように](make-function.md)関数。
+[Make](make-function.md)関数内の `RuntimeClass` を検出するために使用されます。
 
-**RuntimeClassBase**は空の構造です。
+**RuntimeClassBase**は空の構造体です。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -34,10 +34,10 @@ struct RuntimeClassBase;
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** implements.h
+**Header:** を実装します。
 
-**名前空間:** Microsoft::WRL::Details
+**名前空間:** Microsoft:: WRL::D etails
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [Microsoft::WRL::Details 名前空間](microsoft-wrl-details-namespace.md)

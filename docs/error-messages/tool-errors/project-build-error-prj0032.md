@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0032
 ms.assetid: bc6acbea-4041-4237-8b5a-f0434705d89f
-ms.openlocfilehash: f1f292f3979c993a8fa8cb8ff44653ac7124b121
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 62efa0e72c6fbe4bd38983ff0507923392427c04
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344356"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80192485"
 ---
 # <a name="project-build-error-prj0032"></a>プロジェクト ビルド エラー PRJ0032
 
-プロジェクト レベルのカスタム ビルド ステップに 'Outputs' プロパティには、評価を出す 'macro_expansion' の ' macro' が含まれています。
+プロジェクトレベルのカスタムビルドステップの [出力] プロパティには、' macro_expansion ' に評価される ' macro ' が含まれていました。
 
-プロジェクトでカスタム ビルド ステップでは、おそらくマクロ評価の問題により、不正な出力がありました。 このエラーにあるパス形式が正しくない、文字またはファイル パスでは無効な文字の組み合わせを含むもします。
+プロジェクトのカスタムビルドステップで、マクロの評価に問題がある可能性があるため、正しくない出力がありました。 このエラーは、パスの形式が正しくないことを意味する場合もあります。これは、ファイルパスで無効な文字または文字の組み合わせが含まれていることを意味します。
 
-このエラーを解決するのには、マクロを修正するか、パスの指定を修正します。 パスには、プロジェクト ディレクトリからの絶対パスを指定します。
+このエラーを解決するには、マクロを修正するか、パスの指定を修正します。 評価されたパスは、プロジェクトディレクトリからの絶対パスです。

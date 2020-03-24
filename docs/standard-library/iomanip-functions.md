@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::setiosflags [C++]
 - std::setprecision [C++]
 - std::setw [C++]
-ms.openlocfilehash: 944834e40a399622b5c85d95100d4ca3c3c2da93
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 7fd523dc9184ae613cf8a52969a497b6b4761cf6
+ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79426955"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80150824"
 ---
 # <a name="ltiomanipgt-functions"></a>&lt;iomanip&gt; 関数
 
@@ -42,7 +42,7 @@ ms.locfileid: "79426955"
 |[setbase](#setbase)|[setfill](#setfill)|[setiosflags](#setiosflags)|
 |[setprecision](#setprecision)|[setw](#setw)|
 
-## <a name="iomanip_get_money"></a>  get_money
+## <a name="get_money"></a><a name="iomanip_get_money"></a>  get_money
 
 目的の形式を使用して、ストリームから通貨値を抽出し、パラメーターの値を返します。
 
@@ -59,13 +59,13 @@ T7 get_money(Money& amount, bool use_intl);
 *use_intl*\
 **True**の場合は、国際対応形式を使用します。 既定値は **false** です。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 マニピュレーターは、ストリームから抽出されたときに `str`が、`str`に関連付けられたロケールファ `money_get` セットのメンバー関数 `get` を呼び出す `formatted input function` として動作するオブジェクトを返します。このオブジェクトは*use_intl*を使用して国際形式を示します。 成功した場合は、抽出された通貨値の*金額*がに格納されます。 その後、マニピュレーターが `str` を返します。
 
 `Money` は `long double` 型であるか、`basic_string` と同じ要素および特徴パラメーターを持つ `str` のインスタンス化である必要があります。
 
-## <a name="iomanip_get_time"></a>  get_time
+## <a name="get_time"></a><a name="iomanip_get_time"></a>  get_time
 
 目的の形式を使用して、ストリームから時刻値を抽出します。 時間構造体として、パラメーターの値を返します。
 
@@ -82,11 +82,11 @@ T10 put_time(struct tm *time_ptr, const Elem *time_format);
 *time_format*\
 時刻値を取得するために使用する目的の形式。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 マニピュレーターは、ストリーム `str` から抽出されたときに、時間構造体を示す `formatted input function` および null で終わる書式文字列の先頭を示す `get` を使用して、`time_get` に関連付けられているロケール ファセット `str` のメンバー関数 `tptr` を呼び出す `fmt` として動作するオブジェクトを返します。 成功した場合、この呼び出しによって、抽出された時刻フィールドに関連付けられている値が時間構造体に格納されます。 その後、マニピュレーターが `str` を返します。
 
-## <a name="iomanip_put_money"></a>  put_money
+## <a name="put_money"></a><a name="iomanip_put_money"></a>  put_money
 
 目的の形式を使用してストリームに金額を挿入します。
 
@@ -105,15 +105,15 @@ T8 put_money(const Money& amount, bool use_intl);
 
 ### <a name="return-value"></a>戻り値
 
-`str` が返されます。
+`str` を返します。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 マニピュレーターは、ストリーム `str` に挿入されたときに、`put` に関連付けられているロケール ファセット `money_put` のメンバー関数 `str` を呼び出す書式付き出力関数として動作するオブジェクトを返します。 成功した場合、呼び出しは、 *use_intl*を使用して `amount` 適切な形式で、fill 要素として国際形式と `str.fill()`を示します。 その後、マニピュレーターが `str` を返します。
 
 `Money` は `long double` 型であるか、`basic_string` と同じ要素および特徴パラメーターを持つ `str` のインスタンス化である必要があります。
 
-## <a name="iomanip_put_time"></a>  put_time
+## <a name="put_time"></a><a name="iomanip_put_time"></a>  put_time
 
 指定された形式を使用して、時間構造体内の時刻値をストリームに書き込みます。
 
@@ -130,11 +130,11 @@ T10 put_time(struct tm* time_ptr, const Elem* time_format);
 *time_format*\
 時刻値を書き込むための目的の形式。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 マニピュレーターは、ストリーム `str` に挿入されるときに、`formatted output function` として動作するオブジェクトを返します。 出力関数は、`put` に関連付けられているロケール ファセット `time_put` のメンバー関数 `str` を呼び出します。 出力関数は、 *time_ptr*を使用して時間構造を示し、 *time_format* null で終わる書式文字列の先頭を示します。 成功した場合、この呼び出しは、書式文字列からのリテラル テキストと時間構造体からの変換された値を挿入します。 その後、マニピュレーターが `str` を返します。
 
-## <a name="quoted"></a>  quoted
+## <a name="quoted"></a><a name="quoted"></a>  quoted
 
 **(C++14 の新機能)** >> 演算子と << 演算子を使用したストリームとの文字列のラウンド トリップを有効にする、便利な iostream マニピュレーター。
 
@@ -156,7 +156,7 @@ Std:: string、char\*、文字列リテラル、または未加工の文字列�
 *エスケープ*\
 文字列内のエスケープ シーケンスのエスケープ文字として使用する、ユーザー指定の文字またはワイド文字。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 「[挿入演算子と制御形式の使用](../standard-library/using-insertion-operators-and-controlling-format.md)」を参照してください。
 
@@ -301,7 +301,7 @@ Press Enter to exit
 */
 ```
 
-## <a name="resetiosflags"></a>  resetiosflags
+## <a name="resetiosflags"></a><a name="resetiosflags"></a>  resetiosflags
 
 指定したフラグをクリアします。
 
@@ -322,7 +322,7 @@ T1 resetiosflags(ios_base::fmtflags mask);
 
 [ の使用例については、「](../standard-library/iomanip-functions.md#setw)setw`resetiosflags`」を参照してください。
 
-## <a name="setbase"></a>  setbase
+## <a name="setbase"></a><a name="setbase"></a>  setbase
 
 整数の基数を設定します。
 
@@ -337,7 +337,7 @@ T3 setbase(int base);
 
 ### <a name="return-value"></a>戻り値
 
-マニピュレーターは、ストリーム `str`から抽出または挿入されるときに、`str.setf(mask, `[ios_base:: basefield](../standard-library/ios-base-class.md#fmtflags)`)`を呼び出し、`str`を返すオブジェクトを返します。 ここでは、`mask` は次のように決定されます。
+マニピュレーターは、ストリーム `str`から抽出または挿入されるときに、`str.setf(mask,` [ios_base:: basefield](../standard-library/ios-base-class.md#fmtflags)`)`を呼び出し、`str`を返すオブジェクトを返します。 ここでは、`mask` は次のように決定されます。
 
 - *Base*が8の場合、`mask` は[10 月](../standard-library/ios-functions.md#oct)`ios_base::`ます。
 
@@ -351,7 +351,7 @@ T3 setbase(int base);
 
 [ の使用例については、「](../standard-library/iomanip-functions.md#setw)setw`setbase`」を参照してください。
 
-## <a name="setfill"></a>  setfill
+## <a name="setfill"></a><a name="setfill"></a>  setfill
 
 右揃えの表示でスペースを埋めるために使用する文字を設定します。
 
@@ -373,7 +373,7 @@ T4 setfill(Elem Ch);
 
 [ の使用例については、「](../standard-library/iomanip-functions.md#setw)setw`setfill`」を参照してください。
 
-## <a name="setiosflags"></a>  setiosflags
+## <a name="setiosflags"></a><a name="setiosflags"></a>  setiosflags
 
 指定したフラグを設定します。
 
@@ -394,7 +394,7 @@ T2 setiosflags(ios_base::fmtflags mask);
 
 [ の使用例については、「](../standard-library/iomanip-functions.md#setw)setw`setiosflags`」を参照してください。
 
-## <a name="setprecision"></a>  setprecision
+## <a name="setprecision"></a><a name="setprecision"></a>  setprecision
 
 浮動小数点値の有効桁数を設定します。
 
@@ -415,7 +415,7 @@ T5 setprecision(streamsize Prec);
 
 [ の使用例については、「](../standard-library/iomanip-functions.md#setw)setw`setprecision`」を参照してください。
 
-## <a name="setw"></a>  setw
+## <a name="setw"></a><a name="setw"></a>  setw
 
 ストリーム内の次の要素に対して表示フィールドの幅を指定します。
 
@@ -432,7 +432,7 @@ T6 setw(streamsize Wide);
 
 マニピュレーターは、ストリーム `str`から抽出または挿入されるときに `str.`[width](../standard-library/ios-base-class.md#width)`(Wide)`を呼び出し、`str`を返すオブジェクトを返します。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 setw は、ストリーム内の次の要素についてのみ幅を設定します。幅を指定する各要素の前に setw を挿入する必要があります。
 

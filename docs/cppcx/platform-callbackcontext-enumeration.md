@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::CallbackContext Enumeration
 ms.assetid: 60e0c7cb-5d8f-482a-bdca-ca9335ae4899
-ms.openlocfilehash: 7f4e020ab0b1e377456c27d3b4666e15b5a4f7a1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1daa3988fcb985dab9d3083233a3703a20cc2fdb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161681"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214275"
 ---
 # <a name="platformcallbackcontext-enumeration"></a>Platform::CallbackContext 列挙型
 
@@ -28,15 +28,15 @@ enum class CallbackContext {};
 
 |型コード|説明|
 |---------------|-----------------|
-|どれでも可|コールバック関数は、任意のスレッド コンテキストで実行できます。|
-|同|コールバック関数は、非同期操作を開始したスレッド コンテキストでのみ実行できます。|
+|Any|コールバック関数は、任意のスレッド コンテキストで実行できます。|
+|同じ|コールバック関数は、非同期操作を開始したスレッド コンテキストでのみ実行できます。|
 
 ### <a name="requirements"></a>必要条件
 
-**最小値には、クライアントがサポートされています。** Windows 8
+**サポートされている最低限のクライアント:** Windows 8
 
-**最小値には、サーバーがサポートされています。** Windows Server 2012
+**サポートされる最小サーバー:** Windows Server 2012
 
-**名前空間:** プラットフォーム
+**名前空間:** Platform
 
 **メタデータ:** platform.winmd

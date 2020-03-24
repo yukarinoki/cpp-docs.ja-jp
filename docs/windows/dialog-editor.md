@@ -23,12 +23,12 @@ helpviewer_keywords:
 - Dialog Editor [C++], switching between controls and code
 - Dialog Editor [C++], shortcut keys
 ms.assetid: d94884ef-2cca-49d8-9b58-775f34848134
-ms.openlocfilehash: 40b5d8c8390c638b70bc2c0860ccf3c17872719c
-ms.sourcegitcommit: 9aab425662a66825772f091112986952f341f7c8
+ms.openlocfilehash: 9d0f9993d81c499f67a08e5401c5e56dba7b281c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72445004"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80215255"
 ---
 # <a name="dialog-editor-c"></a>ダイアログエディター (C++)
 
@@ -58,12 +58,12 @@ Visual Studio 2015 以降では、**ダイアログエディター**を使用し
 |アイコン|意味|アイコン|意味|
 |----------|-------------|----------|-------------|
 |![[テスト] ダイアログボタン](../mfc/media/vcdialogeditortestdialog.png "vcDialogEditorTestDialog")|[ダイアログのテスト]|![[間隔] ボタン](../mfc/media/vcdialogeditoracross.png "vcDialogEditorAcross")|[左右]|
-|![揃えの配置ボタン](../mfc/media/vcdialogeditoralignlefts.png "vcDialogEditorAlignLefts")|[左揃え]|![[領域の下へ移動] ボタン](../mfc/media/vcdialogeditordown.png "vcDialogEditorDown")|[下へ移動]|
+|![揃えの配置ボタン](../mfc/media/vcdialogeditoralignlefts.png "vcDialogEditorAlignLefts")|[左揃え]|![[領域の下へ移動] ボタン](../mfc/media/vcdialogeditordown.png "vcDialogEditorDown")|[下へ]|
 |![[右揃え] ボタン](../mfc/media/vcdialogeditoralignrights.png "vcDialogEditorAlignRights")|[右揃え]|![同じ幅に揃えるボタン](../mfc/media/vcdialogeditorsamewidth.png "vcDialogEditorSameWidth")|[同じ幅に揃える]|
 |![上部に揃えるボタン](../mfc/media/vcdialogeditoraligntops.png "vcDialogEditorAlignTops")|[上揃え]|![[同じ高さに揃える] ボタン](../mfc/media/vcdialogeditormakesameheight.png "vcDialogEditorMakeSameHeight")|[同じ高さに揃える]|
 |![下揃えボタン](../mfc/media/vcdialogeditoralignbottoms.png "vcDialogEditorAlignBottoms")|[下揃え]|![[同じサイズに揃える] ボタン](../mfc/media/vcdialogeditorsamesize.png "vcDialogEditorSameSize")|[同じサイズに揃える]|
 |![垂直方向の中央揃えボタン](../mfc/media/vcdialogeditorvertical.png "vcDialogEditorVertical")|Vertical|![グリッドボタンの切り替え](../mfc/media/vcdialogeditortogglegrid.png "vcDialogEditorToggleGrid")|グリッドの切り替え|
-|![水平方向の中央揃えボタン](../mfc/media/vcdialogeditorhorizontal.png "vcDialogEditorHorizontal")|[水平方向]|![ガイドの切り替えボタン](../mfc/media/vcdialogeditortoggleguides.png "vcDialogEditorToggleGuides")|[ガイドの切り替え]|
+|![水平方向の中央揃えボタン](../mfc/media/vcdialogeditorhorizontal.png "vcDialogEditorHorizontal")|水平|![ガイドの切り替えボタン](../mfc/media/vcdialogeditortoggleguides.png "vcDialogEditorToggleGuides")|[ガイドの切り替え]|
 
 - **ダイアログエディター**のツールバーを表示または非表示にするには、[メニュー**ビュー** > **ツールバー** > **ダイアログエディター]** にアクセスします。
 
@@ -92,7 +92,7 @@ MFC アプリケーションでは、ダイアログボックスコントロー�
 
 **ダイアログエディター**のコマンドの既定のアクセラレータキーを次に示します。  
 
-|コマンド|キー|説明|
+|command|[キー]|説明|
 |-------------|----------|-----------------|
 |Format.AlignBottoms|**Ctrl** + **shift** + **↓**|選択したコントロールの下端を最も優先されるコントロールに揃えます。|
 |Format.AlignCenters|**Shift** + **F9**|選択したコントロールの垂直方向の中心を、最も重要なコントロールに揃えます。|
@@ -103,14 +103,14 @@ MFC アプリケーションでは、ダイアログボックスコントロー�
 |Format.ButtonBottom|**Ctrl** + **B**|選択したボタンをダイアログボックスの下部中央に配置します。|
 |Format.ButtonRight|**Ctrl** + **R**|選択したボタンをダイアログボックスの右上隅に配置します。|
 |Format.CenterHorizontal|**Ctrl** + **Shift** + **F9**|コントロールをダイアログボックス内で水平方向に中央揃えにします。|
-|Format.CenterVertical|**Ctrl**  +  **F9**|ダイアログボックス内のコントロールを垂直方向に中央揃えで配置します。|
+|Format.CenterVertical|**Ctrl** + **F9**|ダイアログボックス内のコントロールを垂直方向に中央揃えで配置します。|
 |Format.CheckMnemonics|**Ctrl** + **M**|ニーモニックの一意性を確認します。|
 |SizeToContent のフォーマット|**Shift** + **F7**|選択したコントロールのサイズをキャプションテキストに合わせて変更します。|
-|Format.SpaceAcross|**Alt**  +  **← キー**|選択したコントロールを水平方向にスペースで並べます。|
+|Format.SpaceAcross|**Alt** + **← キー**|選択したコントロールを水平方向にスペースで並べます。|
 |Format.SpaceDown|**Alt** + **↓**|選択したコントロールを垂直方向にスペースで並べます。|
-|Format.TabOrder|**Ctrl**  +  **D**|ダイアログ内のコントロールの順序を設定します。|
-|Format.TestDialog|**Ctrl**  +  **T**|ダイアログボックスを実行して、外観と動作をテストします。|
-|Format.ToggleGuides|**Ctrl**  +  **G**|ダイアログ編集用のグリッドなし、ガイドライン、グリッドの間を切り替えます。|
+|Format.TabOrder|**Ctrl** + **D**|ダイアログ内のコントロールの順序を設定します。|
+|Format.TestDialog|**Ctrl** + **T**|ダイアログボックスを実行して、外観と動作をテストします。|
+|Format.ToggleGuides|**Ctrl** + **G**|ダイアログ編集用のグリッドなし、ガイドライン、グリッドの間を切り替えます。|
 
 - ショートカットキーを変更するには、[メニュー**ツール** > **オプション**] に移動し、 **[環境]** フォルダーの下の **[キーボード]** を選択します。
 
@@ -120,7 +120,7 @@ MFC アプリケーションでは、ダイアログボックスコントロー�
 
    ダイアログボックスで使用できるオプション、および表示されるメニューコマンドの名前と場所は、アクティブな設定またはエディションによっては、**ヘルプ**で説明されている内容と異なる場合があります。  詳細については、「[Visual Studio IDE のカスタマイズ](/visualstudio/ide/personalizing-the-visual-studio-ide)」を参照してください。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 Win32
 

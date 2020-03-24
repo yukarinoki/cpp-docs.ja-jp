@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - CloakedIid structure
 ms.assetid: 82e0e377-ca3a-46bc-b850-ae2c46c15bb5
-ms.openlocfilehash: 10dc2af1897147045382e8463b6602fa015fc899
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1cc9e79384bbf4aae44199c2f35331e3afd8fd8f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398720"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214111"
 ---
 # <a name="cloakediid-structure"></a>CloakedIid 構造体
 
-示します、 `RuntimeClass`、`Implements`と`ChainInterfaces`テンプレートの指定したインターフェイスが IID リストにアクセスできないことです。
+指定したインターフェイスに IID の一覧でアクセスできない `RuntimeClass`、`Implements`、および `ChainInterfaces` テンプレートを示します。
 
 ## <a name="syntax"></a>構文
 
@@ -28,11 +28,11 @@ struct CloakedIid : T;
 #### <a name="parameters"></a>パラメーター
 
 *T*<br/>
-インターフェイスが非表示 (クロークされています)。
+非表示 (クローク) されているインターフェイス。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-方法の例を次に**CloakedIid**使用:`struct MyRuntimeClass : RuntimeClass<CloakedIid<IMyCloakedInterface>> {}`します。
+**CloakedIid**の使用方法の例を次に示します。 `struct MyRuntimeClass : RuntimeClass<CloakedIid<IMyCloakedInterface>> {}`。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -42,10 +42,10 @@ struct CloakedIid : T;
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** implements.h
+**Header:** を実装します。
 
-**名前空間:** Microsoft::wrl
+**名前空間:** Microsoft::WRL
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [Microsoft::WRL 名前空間](microsoft-wrl-namespace.md)

@@ -9,17 +9,17 @@ helpviewer_keywords:
 - recordsets, constructing SQL statements
 - ODBC recordsets, selecting records
 ms.assetid: 343a6a91-aa4c-4ef7-b21f-2f2bfd0d3787
-ms.openlocfilehash: 4b446d69651cb3cf52bd6c15899d85ed76b319da
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 252d17fc56c13415f1068d6b16ed8b1ee663b5f1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80079808"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212889"
 ---
 # <a name="recordset-how-recordsets-select-records-odbc"></a>レコードセット: レコード選択のしくみ (ODBC)
 
 > [!NOTE]
-> MFC ODBC コンシューマー ウィザードは、Visual Studio 2019 以降はご利用いただけなくなります。 ただし、手動でコンシューマーを作成することはできます。
+> MFC ODBC コンシューマー ウィザードは、Visual Studio 2019 以降では利用できません。 ただし、手動でコンシューマーを作成することはできます。
 
 このトピックの内容は、MFC ODBC クラスに該当します。
 
@@ -39,7 +39,7 @@ ms.locfileid: "80079808"
 
 ### <a name="how-and-when-you-can-affect-a-recordset"></a>レコードセットに影響を与えることができる方法とタイミング
 
-|設定で|そのための方法は次のとおりです。|
+|次のとき|そのための方法は次のとおりです。|
 |--------------|-------------|
 |**クラスの追加**ウィザードでレコードセット クラスを宣言する|どのテーブルから選択するかを指定します。<br /><br /> どの列を含めるかを指定します。<br /><br /> 「[MFC ODBC コンシューマーの追加](../../mfc/reference/adding-an-mfc-odbc-consumer.md)」を参照してください。|
 |レコードセット クラスの実装を完了する|`OnSetOptions` (アドバンスト) などのメンバー関数をオーバーライドして、アプリケーション固有のオプションを設定するか、既定値を変更します。 パラメーター化されたレコードセットが必要な場合は、パラメーター データ メンバーを指定します。|

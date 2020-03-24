@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - RC2112
 ms.assetid: e9f29540-a90d-4989-a6e8-5f8f32015bd9
-ms.openlocfilehash: c43126f27c596cec1899ee5ac19f2337fc9b6edc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b7ab5ce14cebc77adcd8c6dbddbcbf8bbb12ceb2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395041"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80191783"
 ---
 # <a name="resource-compiler-error-rc2112"></a>リソース コンパイラ エラー RC2112
 
-BEGIN ダイアログ ボックスが必要です。
+ダイアログでの開始が必要です
 
-**開始**キーワードの直後にする必要があります、**ダイアログ**キーワード。
+**BEGIN**キーワードは、 **DIALOG**キーワードの直後に指定する必要があります。

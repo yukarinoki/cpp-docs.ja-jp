@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - MixIn structure
 ms.assetid: 47e2df9b-3a2e-4ae8-8ba3-b1fd3aa73566
-ms.openlocfilehash: 16fd6b46d616df7163a304afa7f32ac3c095d398
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b302d6e08e401a24b465508d5ddabcae8b16bd8f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62325358"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213695"
 ---
 # <a name="mixin-structure"></a>MixIn 構造体
 
@@ -31,18 +31,18 @@ struct MixIn;
 
 ### <a name="parameters"></a>パラメーター
 
-*派生*<br/>
-派生した型、[実装](implements-structure.md)構造体。
+*導出*<br/>
+[Implements](implements-structure.md)構造体から派生した型。
 
 *MixInType*<br/>
 基本型。
 
 *hasImplements*<br/>
-**true**場合*MixInType*は現在の実装から派生した基本型です。**false**それ以外の場合。
+*MixInType*が、基本型の現在の実装から派生している場合は**true** 。それ以外の場合は**false** 。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-Windows ランタイムおよびクラスの COM インターフェイスの両方から派生したクラスは、クラスの宣言リストする必要があります最初に、Windows ランタイム インターフェイスを一覧表示し、し、すべてのクラシック COM のインターフェイスします。 **MixIn**により、インターフェイスが正しい順序で指定されているようになります。
+クラスが Windows ランタイムとクラスの両方の COM インターフェイスから派生している場合は、まず、クラス宣言リストで Windows ランタイムインターフェイスを一覧表示し、次にすべてのクラシック COM インターフェイスを一覧表示する必要があります。 **MixIn**は、インターフェイスが正しい順序で指定されることを保証します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -50,10 +50,10 @@ Windows ランタイムおよびクラスの COM インターフェイスの両�
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** implements.h
+**Header:** を実装します。
 
-**名前空間:** Microsoft::wrl
+**名前空間:** Microsoft::WRL
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [Microsoft::WRL 名前空間](microsoft-wrl-namespace.md)

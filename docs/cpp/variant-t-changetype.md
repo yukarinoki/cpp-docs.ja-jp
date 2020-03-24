@@ -9,18 +9,18 @@ helpviewer_keywords:
 - VARIANT object [C++], ChangeType
 - VARIANT object
 ms.assetid: 829d2eeb-3338-4a88-9dce-0ca145f47aac
-ms.openlocfilehash: 319c4fde808932e86021ee59b051261c43ca2edd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b0692c9befaa6b7e787ada624dcbb56b074c9f9d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166205"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160464"
 ---
-# <a name="varianttchangetype"></a>_variant_t::ChangeType
+# <a name="_variant_tchangetype"></a>_variant_t::ChangeType
 
 **Microsoft 固有の仕様**
 
-型を変更、`_variant_t`オブジェクトを指定された`VARTYPE`します。
+`_variant_t` オブジェクトの型を、指定した `VARTYPE`に変更します。
 
 ## <a name="syntax"></a>構文
 
@@ -34,17 +34,17 @@ void ChangeType(
 #### <a name="parameters"></a>パラメーター
 
 *vartype*<br/>
-`VARTYPE`この`_variant_t`オブジェクト。
+この `_variant_t` オブジェクトの `VARTYPE`。
 
-*pSrc*<br/>
-変換する `_variant_t` オブジェクトへのポインター。 この値が NULL の場合は、変換が適切に実行されます。
+*.Psrc*<br/>
+変換する `_variant_t` オブジェクトへのポインター。 この値が NULL の場合は、変換が行われます。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-このメンバー関数に変換する`_variant_t`オブジェクトを指定された`VARTYPE`します。 場合*pSrc*が NULL の場合、変換が行われる場所、それ以外の場合にこの`_variant_t`からオブジェクトをコピー *pSrc*変換と。
+このメンバー関数は、`_variant_t` オブジェクトを、指定された `VARTYPE`に変換します。 *Psrc*が NULL の場合、変換は適切に行われます。それ以外の場合は、この `_variant_t` オブジェクトが*psrc*からコピーされ、変換されます。
 
 **Microsoft 固有の仕様はここまで**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [_variant_t クラス](../cpp/variant-t-class.md)

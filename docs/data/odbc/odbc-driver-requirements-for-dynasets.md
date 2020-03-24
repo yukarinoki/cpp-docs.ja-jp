@@ -9,22 +9,22 @@ helpviewer_keywords:
 - dynasets
 - ODBC drivers, dynasets
 ms.assetid: 585cc67b-4d92-404b-9903-d769cd17badc
-ms.openlocfilehash: c44e34023ecdeb994ea3a60ea3b699cd5b1488a3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3507a5ee7dcfb8bf4f4eee12ef9264c16ad904c2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395756"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213110"
 ---
 # <a name="odbc-driver-requirements-for-dynasets"></a>ダイナセットを使う場合の ODBC ドライバーの必要条件
 
-ダイナセットでは、MFC ODBC データベース クラスで、動的プロパティを持つレコード セットです。特定の方法でデータ ソースと同期されたままになります。 MFC ダイナセットを使う場合 (ただし、前方スクロール専用レコード セット) でレベル 2 API 準拠 ODBC ドライバーが必要です。 場合のドライバー、[データソース](../../data/odbc/data-source-odbc.md)レベル 1 の API に準拠している設定すると、引き続き使用できますが、更新可能なと読み取り専用のスナップショットと順方向専用のレコード セット ダイナセットは。 ただし、拡張のフェッチとキーセット ドリブン カーソルをサポートしている場合は、レベル 1 のドライバーはダイナセットを使う場合をサポートできます。
+MFC ODBC データベースクラスでは、ダイナセットは動的プロパティを持つレコードセットです。これらのファイルは、特定の方法でデータソースと同期されたままになります。 MFC のダイナセット (前方参照専用のレコードセットを除く) には、レベル2の API に準拠した ODBC ドライバーが必要です。 [データソース](../../data/odbc/data-source-odbc.md)のドライバーがレベル1の API セットに準拠している場合でも、更新可能なスナップショットと読み取り専用のスナップショットと順方向専用のレコードの両方を使用できますが、ダイナセットは使用できません。 ただし、拡張フェッチとキーセットドリブンカーソルがサポートされている場合は、レベル1のドライバーでダイナセットがサポートされることがあります。
 
-ODBC の用語でダイナセットを使う場合とスナップショットと呼びますカーソル。 カーソルは、レコード セット内の位置を追跡するために使用されるメカニズムです。 ダイナセットを使う場合のドライバーの要件の詳細については、次を参照してください。[ダイナセット](../../data/odbc/dynaset.md)します。 カーソルの詳細については、次を参照してください。、[オープン データベース コネクティビティ (ODBC)](/sql/odbc/microsoft-open-database-connectivity-odbc) MSDN ドキュメント内の SDK です。
+ODBC の用語では、ダイナセットとスナップショットはカーソルと呼ばれます。 カーソルは、レコードセット内のその位置を追跡するために使用されるメカニズムです。 ダイナセットのドライバー要件の詳細については、「[ダイナセット](../../data/odbc/dynaset.md)」を参照してください。 カーソルの詳細については、MSDN ドキュメントの[Open Database Connectivity (ODBC)](/sql/odbc/microsoft-open-database-connectivity-odbc) SDK を参照してください。
 
 > [!NOTE]
->  更新可能なレコード セットの場合、ODBC ドライバーが位置指定の update ステートメントのいずれかをサポートする必要がありますまたは`::SQLSetPos`ODBC API 関数。 MFC を使用して、両方がサポートされている場合`::SQLSetPos`効率が向上します。 また、スナップショットの場合は、更新可能なスナップショット (静的カーソルと位置指定の update ステートメント) に必要なサポートを提供するカーソル ライブラリを使用できます。
+>  更新可能なレコードセットの場合、ODBC ドライバーは、配置された update ステートメントまたは `::SQLSetPos` ODBC API 関数をサポートしている必要があります。 両方がサポートされている場合、MFC では効率を上げるために `::SQLSetPos` を使用します。 また、スナップショットの場合は、更新可能なスナップショット (静的カーソルおよび位置指定更新ステートメント) に必要なサポートを提供するカーソルライブラリを使用できます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ODBC の基礎](../../data/odbc/odbc-basics.md)

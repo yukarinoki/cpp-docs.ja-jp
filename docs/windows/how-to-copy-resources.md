@@ -30,12 +30,12 @@ helpviewer_keywords:
 - cursors [C++], importing and exporting
 - images [C++], exporting
 ms.assetid: 65f523e8-017f-4fc6-82d1-083c56d9131f
-ms.openlocfilehash: 718de310bc4fb0cb0072065bc4e7b7adadb182aa
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 0af4e8faeb3d8606fb351b193364a2748fbc944e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79426577"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80215216"
 ---
 # <a name="how-to-manage-resources-c"></a>方法: リソースを管理するC++()
 
@@ -46,7 +46,7 @@ ms.locfileid: "79426577"
 既存のリソースまたは実行可能ファイルから現在のリソースファイルにリソースを簡単にコピーできます。 リソースをコピーするには、リソースが含まれている両方のファイルを同時に開き、1つのファイルから別のファイルに項目をドラッグします。2つのファイルをコピーして貼り付けることもできます。 このメソッドは、リソーススクリプト (.rc) ファイルとリソーステンプレート (.rct) ファイル、および実行可能 (.exe) ファイルとして機能します。
 
 > [!NOTE]
-> ビジュアルC++には、独自のアプリケーションで使用できるサンプルリソースファイルが含まれています。 詳細については、「[クリップアート: 共通リソース](https://github.com/Microsoft/VCSamples)」を参照してください。
+> ビジュアルC++には、独自のアプリケーションで使用できるサンプルリソースファイルが含まれています。 詳細については、「[クリップアート: 共通リソース](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/general)」を参照してください。
 
 プロジェクト (**リソースビュー**) 内のリソースファイルと、ドキュメントウィンドウでスタンドアロンの .rc ファイルの間でドラッグアンドドロップ、コピー、切り取り、貼り付けを行うことはできません。 これは、以前のバージョンの製品で行うことができます。 プロジェクトの外部で開かれている .rc ファイル間でドラッグアンドドロップのメソッドのみを使用します。
 
@@ -130,4 +130,4 @@ Win32
 
 [リソース ファイル](../windows/resource-files-visual-studio.md)<br/>
 [方法: リソースを作成する](../windows/how-to-create-a-resource-script-file.md)<br/>
-[方法: コンパイル時にリソースをインクルードする](../windows/how-to-include-resources-at-compile-time.md)<br/>
+[方法: コンパイル時にリソースをインクルードする](../windows/how-to-include-resources-at-compile-time.md)

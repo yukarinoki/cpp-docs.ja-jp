@@ -6,16 +6,16 @@ helpviewer_keywords:
 - record scrolling [C++]
 - scrolling records
 ms.assetid: f8b13477-2a37-459e-a30c-806fb78165ac
-ms.openlocfilehash: 66944221910dbd23d78a78fc951030efbee86bd0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8bbacd6625e846381d2bafc8133e8b36efe51b1a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398046"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213448"
 ---
 # <a name="command-handlers-for-record-scrolling--mfc-data-access"></a>レコード スクロール コマンドに対するコマンド ハンドラー (MFC データ アクセス)
 
-[CRecordView](../mfc/reference/crecordview-class.md)クラスには、既定のコマンドを次の標準コマンドの処理が用意されています。
+[CRecordView](../mfc/reference/crecordview-class.md)クラスは、次の標準コマンドに対する既定のコマンド処理を提供します。
 
 - ID_RECORD_MOVE_FIRST
 
@@ -25,11 +25,11 @@ ms.locfileid: "62398046"
 
 - ID_RECORD_MOVE_PREV
 
-`OnMove`メンバー関数は、既定のコマンド レコード間を移動するすべての 4 つのコマンドの処理を提供します。 これらのコマンドが発行されると、RFX (または DFX) によってレコードセットのフィールドに新しいレコードが読み込まれ、DDX によってレコード フォームのコントロールに値が移動されます。 RFX については、次を参照してください。[レコード フィールド エクス チェンジ (RFX)](../data/odbc/record-field-exchange-rfx.md)します。
+`OnMove` メンバー関数は、レコード間を移動する4つのすべてのコマンドに対して既定のコマンド処理を提供します。 これらのコマンドが発行されると、RFX (または DFX) によってレコードセットのフィールドに新しいレコードが読み込まれ、DDX によってレコード フォームのコントロールに値が移動されます。 RFX の詳細については、「[レコードフィールドエクスチェンジ (rfx)](../data/odbc/record-field-exchange-rfx.md)」を参照してください。
 
 > [!NOTE]
 >  標準的なレコード移動コマンドに関連付けられているユーザー インターフェイス オブジェクトには、必ずこれらの標準コマンド ID を使用してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[レコード ビュー内のナビゲーションのサポート](../data/supporting-navigation-in-a-record-view-mfc-data-access.md)
+[レコードビューでのナビゲーションのサポート](../data/supporting-navigation-in-a-record-view-mfc-data-access.md)

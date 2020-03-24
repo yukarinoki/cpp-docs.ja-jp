@@ -1,5 +1,5 @@
 ---
-title: データ ソース:接続 (ODBC)
+title: 'データ ソース : 接続 (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ODBC data sources [C++], multiuser environments
@@ -18,65 +18,65 @@ helpviewer_keywords:
 - ODBC data sources [C++], connections
 - database connections [C++], MFC ODBC classes
 ms.assetid: c0adbcdd-c000-40c6-b199-09ffdc7b6ef2
-ms.openlocfilehash: 5b646ca0eb86d3addabaad59ca23f56cfe914114
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6186199ea51c1fc966783ed3c0a73496c6a307ee
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395951"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213296"
 ---
-# <a name="data-source-managing-connections-odbc"></a>データ ソース:接続 (ODBC)
+# <a name="data-source-managing-connections-odbc"></a>データ ソース : 接続 (ODBC)
 
 このトピックの内容は、MFC ODBC クラスに該当します。
 
 このトピックでは、次の内容について説明します。
 
-- [データ ソースを構成する方法](#_core_configuring_a_data_source)します。
+- [データソースを構成する方法](#_core_configuring_a_data_source)。
 
-- [データ ソースおよびそのレコード セットのマルチ ユーザー環境の影響](#_core_working_in_a_multiuser_environment)します。
+- [マルチユーザー環境がデータソースとそのレコードセットに与える影響](#_core_working_in_a_multiuser_environment)。
 
-- [データ ソースへの接続文字列の汎用](#_core_generalizing_the_connection_string)します。
+- [データソースへの接続文字列を一般化する理由](#_core_generalizing_the_connection_string)。
 
-- [データ ソースに接続する方法](#_core_connecting_to_a_specific_data_source)します。
+- [データソースに接続する方法](#_core_connecting_to_a_specific_data_source)。
 
-- [データ ソースから切断する方法](#_core_disconnecting_from_a_data_source)します。
+- [データソースから切断する方法](#_core_disconnecting_from_a_data_source)。
 
-- [CDatabase オブジェクトを再利用する方法](#_core_reusing_a_cdatabase_object)します。
+- [CDatabase オブジェクトを再利用する方法](#_core_reusing_a_cdatabase_object)。
 
 データ ソースとの接続とは、データにアクセスするために DBMS との通信を確立することです。 ODBC ドライバーを通じてデータ ソースと接続すると、データ ソースの位置がローカルでもネットワークでも、自動的に接続されます。
 
-ODBC ドライバーがあるデータ ソースならば、どのデータ ソースにでも接続できます。 アプリケーションのユーザーも、同じ ODBC ドライバーを持つ必要があります。 ODBC ドライバーの再配布の詳細については、次を参照してください。[の配布の ODBC コンポーネントの再配布](../../data/odbc/redistributing-odbc-components-to-your-customers.md)します。
+ODBC ドライバーがあるデータ ソースならば、どのデータ ソースにでも接続できます。 アプリケーションのユーザーも、同じ ODBC ドライバーを持つ必要があります。 ODBC ドライバーの再配布の詳細については、「[ユーザーへの Odbc コンポーネント](../../data/odbc/redistributing-odbc-components-to-your-customers.md)の再配布」を参照してください。
 
-##  <a name="_core_configuring_a_data_source"></a> データ ソースを構成します。
+##  <a name="configuring-a-data-source"></a><a name="_core_configuring_a_data_source"></a>データソースの構成
 
-データ ソースの設定は、ODBC データ ソース アドミニストレーターを使って行います。 データ ソースの追加や削除も行うことができます。 アプリケーションを作成する際には、ODBC データ ソース アドミニストレーターを使用してデータ ソースを追加するようにアプリケーションのユーザーに指示するか、アプリケーション内で ODBC インストール呼び出しを直接行って ODBC データ ソース アドミニストレーターの機能を組み込むことができます。 詳細については、次を参照してください。 [ODBC アドミニストレーター](../../data/odbc/odbc-administrator.md)します。
+データ ソースの設定は、ODBC データ ソース アドミニストレーターを使って行います。 データ ソースの追加や削除も行うことができます。 アプリケーションを作成する際には、ODBC データ ソース アドミニストレーターを使用してデータ ソースを追加するようにアプリケーションのユーザーに指示するか、アプリケーション内で ODBC インストール呼び出しを直接行って ODBC データ ソース アドミニストレーターの機能を組み込むことができます。 詳細については、「 [ODBC アドミニストレーター](../../data/odbc/odbc-administrator.md)」を参照してください。
 
-データ ソースとして Excel ファイルを使用してが登録されに表示されるように、ファイルを構成する必要があります、**データ ソースの選択** ダイアログ ボックス。
+Excel ファイルをデータソースとして使用することができます。また、ファイルが登録され、 **[データソースの選択**] ダイアログボックスに表示されるように構成する必要があります。
 
 #### <a name="to-use-an-excel-file-as-a-data-source"></a>Excel のファイルをデータ ソースとして使うには
 
 1. ODBC データ ソース アドミニストレーターを使ってファイルを設定します。
 
-1. **ファイル DSN** ] タブで [**追加**します。
+1. **[ファイル DSN]** タブで、 **[追加]** をクリックします。
 
-1. **データ ソースの新規作成** ダイアログ ボックスでは、Excel ドライバーを選択し、クリックして**次**。
+1. **[新しいデータソースの作成]** ダイアログボックスで、Excel ドライバーを選択し、 **[次へ]** をクリックします。
 
-1. クリックして**参照**、データ ソースとして使用するファイルの名前を選択します。
+1. **[参照]** をクリックし、日付ソースとして使用するファイルの名前を選択します。
 
 > [!NOTE]
->  選択する必要があります**すべてのファイル**.xls ファイルを表示するドロップダウン メニュー。
+>  .Xls ファイルを表示するには、ドロップダウンメニューの **[すべてのファイル]** を選択する必要がある場合があります。
 
 1. **[次へ]** をクリックし、 **[完了]** をクリックします。
 
-1. **ODBC Microsoft Excel Setup**  ダイアログ ボックスで、データベースのバージョンとブックを選択します。
+1. **[ODBC Microsoft Excel セットアップ]** ダイアログボックスで、データベースのバージョンとブックを選択します。
 
-##  <a name="_core_working_in_a_multiuser_environment"></a> マルチ ユーザー環境での作業
+##  <a name="working-in-a-multiuser-environment"></a><a name="_core_working_in_a_multiuser_environment"></a>マルチユーザー環境での作業
 
-複数のユーザーが同じデータ ソースにアクセスする場合は、自分がアクセスしているレコードセットのデータが、ほかのユーザーによって変更されてしまうおそれがあります。 同じように、自分が他のユーザーのレコードセットを変更してしまう場合もあります。 詳細については、次を参照してください。[レコード セット。レコード セットの更新プログラムによる (ODBC) の記録](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)と[トランザクション (ODBC)](../../data/odbc/transaction-odbc.md)します。
+複数のユーザーが同じデータ ソースにアクセスする場合は、自分がアクセスしているレコードセットのデータが、ほかのユーザーによって変更されてしまうおそれがあります。 同じように、自分が他のユーザーのレコードセットを変更してしまう場合もあります。 詳細については、「レコード[セット: レコード更新のしくみ (odbc)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)と[トランザクション (odbc)](../../data/odbc/transaction-odbc.md)」を参照してください。
 
-##  <a name="_core_generalizing_the_connection_string"></a> 接続文字列を汎用化します。
+##  <a name="generalizing-the-connection-string"></a><a name="_core_generalizing_the_connection_string"></a>接続文字列の一般化
 
-ウィザードは、既定の接続文字列を使ってデータ ソースとの接続を行います。 アプリケーションの開発時には、この接続を使ってテーブルや列を表示できます。 しかし、この既定の接続文字列は、アプリケーションのユーザーがデータ ソースに接続する際に適切ではない場合もあります。 たとえば、実際に使われるデータ ソースおよびその位置を表すパスは、開発時とは異なる場合があります。 その場合を再実装する必要があります、 [:getdefaultconnect](../../mfc/reference/crecordset-class.md#getdefaultconnect)メンバーより汎用的な方法で機能し、ウィザード実装を破棄します。 たとえば、次のような方法があります。
+ウィザードは、既定の接続文字列を使ってデータ ソースとの接続を行います。 アプリケーションの開発時には、この接続を使ってテーブルや列を表示できます。 しかし、この既定の接続文字列は、アプリケーションのユーザーがデータ ソースに接続する際に適切ではない場合もあります。 たとえば、実際に使われるデータ ソースおよびその位置を表すパスは、開発時とは異なる場合があります。 この場合、より汎用的な方法で[CRecordset:: GetDefaultConnect](../../mfc/reference/crecordset-class.md#getdefaultconnect)メンバー関数を再実装し、ウィザードの実装を破棄する必要があります。 たとえば、次のような方法があります。
 
 - ODBC データ ソース アドミニストレーターを使って接続文字列の登録、管理を行います。
 
@@ -91,7 +91,7 @@ ODBC ドライバーがあるデータ ソースならば、どのデータ ソ�
     }
     ```
 
-   この接続文字列には、Windows NT 統合セキュリティを使用する、信頼関係接続を指定します。 セキュリティ上の重大な弱点が生成されるため、パスワードのハードコーディングや空白のパスワードの指定は避けてください。 その代わりに、`GetDefaultConnect` に新しい接続文字列を指定して、ユーザー ID とパスワードの問い合わせができます。
+   この接続文字列は、Windows NT 統合セキュリティを使用する信頼関係接続を指定します。 セキュリティ上の重大な弱点が生成されるため、パスワードのハードコーディングや空白のパスワードの指定は避けてください。 その代わりに、`GetDefaultConnect` に新しい接続文字列を指定して、ユーザー ID とパスワードの問い合わせができます。
 
     ```cpp
     // User must select data source and supply user ID and password:
@@ -104,29 +104,29 @@ ODBC ドライバーがあるデータ ソースならば、どのデータ ソ�
         return "ODBC;DSN=mydb;UID=sa;PWD=777;";
     ```
 
-##  <a name="_core_connecting_to_a_specific_data_source"></a> 特定のデータ ソースへの接続
+##  <a name="connecting-to-a-specific-data-source"></a><a name="_core_connecting_to_a_specific_data_source"></a>特定のデータソースへの接続
 
-特定のデータ ソースに接続する場合、データ ソース必要があります既にで構成されている[ODBC アドミニストレーター](../../data/odbc/odbc-administrator.md)します。
+特定のデータソースに接続するには、データソースが[ODBC 管理者](../../data/odbc/odbc-administrator.md)によって既に構成されている必要があります。
 
 #### <a name="to-connect-to-a-specific-data-source"></a>データ ソースに接続するには
 
 1. `CDatabase` オブジェクトを構築します。
 
-1. 呼び出すその`OpenEx`または`Open`メンバー関数。
+1. `OpenEx` または `Open` メンバー関数を呼び出します。
 
-ウィザードを使用して指定されている以外のものである場合は、データ ソースを指定する方法の詳細については、次を参照してください[cdatabase::openex](../../mfc/reference/cdatabase-class.md#openex)または[cdatabase::open](../../mfc/reference/cdatabase-class.md#open)で、 *MFC。参照*します。
+ウィザードで指定したものとは異なるデータソースを指定する方法の詳細については、 *MFC リファレンス*の「 [Cdatabase:: OpenEx](../../mfc/reference/cdatabase-class.md#openex) 」または「 [cdatabase:: Open](../../mfc/reference/cdatabase-class.md#open) 」を参照してください。
 
-##  <a name="_core_disconnecting_from_a_data_source"></a> データ ソースからの切断
+##  <a name="disconnecting-from-a-data-source"></a><a name="_core_disconnecting_from_a_data_source"></a>データソースからの切断
 
-呼び出しの前に、開いているレコード セットを閉じる必要があります、`Close`のメンバー関数`CDatabase`します。 関連付けられているレコード セットでは、`CDatabase`オブジェクトを終了する場合に、保留中の`AddNew`または`Edit`ステートメントはキャンセルされ、保留中のトランザクションがすべてロールバックされます。
+`CDatabase`の `Close` メンバー関数を呼び出す前に、開いているレコードセットを閉じる必要があります。 終了する `CDatabase` オブジェクトに関連付けられているレコードセットでは、保留中の `AddNew` または `Edit` ステートメントが取り消され、すべての保留中のトランザクションがロールバックされます。
 
 #### <a name="to-disconnect-from-a-data-source"></a>データ ソースとの接続を終了するには
 
-1. 呼び出す、`CDatabase`オブジェクトの[閉じる](../../mfc/reference/cdatabase-class.md#close)メンバー関数。
+1. `CDatabase` オブジェクトの[Close](../../mfc/reference/cdatabase-class.md#close)メンバー関数を呼び出します。
 
 1. 再利用しない場合にはオブジェクトを破棄します。
 
-##  <a name="_core_reusing_a_cdatabase_object"></a> CDatabase オブジェクトを再利用
+##  <a name="reusing-a-cdatabase-object"></a><a name="_core_reusing_a_cdatabase_object"></a>CDatabase オブジェクトの再利用
 
 接続を終了した後で `CDatabase`オブジェクトを再利用できます。再利用時の接続先は、同じデータ ソースでも別のデータ ソースでもかまいません。
 
@@ -134,9 +134,9 @@ ODBC ドライバーがあるデータ ソースならば、どのデータ ソ�
 
 1. オブジェクトの元の接続を閉じます。
 
-1. 呼び出すオブジェクトを破棄せずに、その`OpenEx`または`Open`メンバー関数をもう一度です。
+1. オブジェクトを破棄するのではなく、`OpenEx` または `Open` メンバー関数を再度呼び出します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [データ ソース (ODBC)](../../data/odbc/data-source-odbc.md)<br/>
 [データ ソース: データ ソースのスキーマの判定 (ODBC)](../../data/odbc/data-source-determining-the-schema-of-the-data-source-odbc.md)<br/>
