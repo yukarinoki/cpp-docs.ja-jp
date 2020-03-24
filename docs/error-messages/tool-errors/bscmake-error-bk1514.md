@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - BK1514
 ms.assetid: 7c7e2504-a490-44ab-bb1f-47385ee2f4b0
-ms.openlocfilehash: 410c24b67e76bb2d412e1594abbb4a668c79aa1e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 14f74bba69db5bf3e02aecedd4540ef8a90d576b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324481"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80197627"
 ---
 # <a name="bscmake-error-bk1514"></a>BSCMAKE エラー BK1514
 
-すべての。SBR ファイルが切り捨てファイル名に見つかりませんでした。
+すべての.SBR ファイルが切り捨てられました。ファイル名に見つかりませんでした。
 
-指定されている更新プログラムの .sbr ファイルのいずれも、元の参照情報 (.bsc) ファイルの一部であった。 このエラーの原因となった .sbr ファイルの名前を検索するには、読み取り、 [BK4502](../../error-messages/tool-errors/bscmake-warning-bk4502.md)前に警告します。
+更新プログラムに指定された .sbr ファイルは、元のブラウザー情報 (.bsc) ファイルの一部ではありませんでした。 このエラーの原因となった .sbr ファイルの名前を確認するには、その前にある[BK4502](../../error-messages/tool-errors/bscmake-warning-bk4502.md)の警告を参照してください。
 
 ### <a name="to-fix-by-checking-the-following-possible-causes"></a>次のような原因をチェックして問題を解決するには
 
-1. .Sbr または .bsc ファイルに指定されたファイル名が間違っています。
+1. .Sbr または .bsc に指定されたファイル名が正しくありません。
 
-1. 破損した .bsc ファイルには、BSCMAKE の処理を再構築が必要です。
+1. .Bsc ファイルが破損しています。再構築するには BSCMAKE が必要です。

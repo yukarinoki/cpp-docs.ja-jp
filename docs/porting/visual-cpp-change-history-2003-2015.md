@@ -4,12 +4,12 @@ ms.date: 10/21/2019
 helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-ms.openlocfilehash: d9e8778e970b6b672d6198770ad0c7ab5a4674b9
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 6dd14bf9f53030920bb5114fb3a52499444ff10a
+ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076839"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80150759"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Visual C++ 2003 ～ 2015 の変更履歴
 
@@ -22,7 +22,7 @@ ms.locfileid: "80076839"
 
 Visual Studio の新しいバージョンにアップグレードすると、以前にコンパイルと動作が正常に行えたコードでコンパイルやランタイム エラーが発生する場合があります。 新しいバージョンでこのような問題を引き起こす変更は *互換性に影響する変更*と呼ばれ、通常は C++ 言語の基準、関数シグネチャ、またはメモリ オブジェクトのレイアウトの変更によって必要となります。
 
-検出や診断が難しいランタイム エラーを回避するには、異なるバージョンのコンパイラを使用してコンパイルされたバイナリには静的にリンクしないことをお勧めします。 また、EXE または DLL プロジェクトをアップグレードする場合、リンクするライブラリもアップグレードします。 異なるバージョンのコンパイラを使用してコンパイルされたバイナリ間 (DLL を含む) で CRT (C Runtime) または C++ 標準ライブラリ (C++ Standard Library) 型を渡さないようにしてください。 詳細については、「 [Potential Errors Passing CRT Objects Across DLL Boundaries](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md)」を参照してください。
+検出や診断が難しいランタイム エラーを回避するには、異なるバージョンのコンパイラを使用してコンパイルされたバイナリには静的にリンクしないことをお勧めします。 また、EXE または DLL プロジェクトをアップグレードする場合、リンクするライブラリもアップグレードします。 異なるバージョンのコンパイラを使用してコンパイルされたバイナリ間 (DLL を含む) で CRT (C Runtime) または C++ 標準ライブラリ (C++ Standard Library) 型を渡さないようにしてください。 詳細については、「[DLL の境界を越えて CRT オブジェクトを渡す場合に発生する可能性のあるエラー](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md)」を参照してください。
 
 COM インターフェイスまたは POD オブジェクトではないオブジェクトで、特定のレイアウトに依存するコードを記述しないでください。 このようなコードを記述している場合、アップグレード後に動作することを確認する必要があります。 詳細については、「[ABI の境界での移植性](../cpp/portability-at-abi-boundaries-modern-cpp.md)」を参照してください。
 
@@ -257,7 +257,7 @@ COM インターフェイスまたは POD オブジェクトではないオブ�
 
 - **smallheap**
 
-   `smallheap` リンク オプションは削除されました。 「 [Link Options](../c-runtime-library/link-options.md)」を参照してください。
+   `smallheap` リンク オプションは削除されました。 「[リンク オプション](../c-runtime-library/link-options.md)」を参照してください。
 
 #### <a name="stringh"></a>\<string.h>
 
@@ -359,7 +359,7 @@ COM インターフェイスまたは POD オブジェクトではないオブ�
 
    以前のバージョンの C++ ドラフト標準の型の特徴の古い名前が削除されました。 これらは C++11 で変更されており、Visual Studio 2015 では C++11 値に更新されました。 古い名前と新しい名前を次の表に示します。
 
-   |以前の名前|新しい名前|
+   |古い名前|新しい名前|
    |--------------|--------------|
    |add_reference|add_lvalue_reference|
    |has_default_constructor|is_default_constructible|
@@ -2883,7 +2883,7 @@ Visual Studio 2015 では、コンパイラの準拠に関する継続的な強�
     };
     ```
 
-   以前のリリースで最適化しようとしたコード内の場所を検索するには、そのリリースのコンパイラを `/W3` コンパイラオプションと共に使用し、警告 C4370 を有効にします。 次に例を示します。
+   以前のリリースで最適化しようとしたコード内の場所を検索するには、そのリリースのコンパイラを `/W3` コンパイラオプションと共に使用し、警告 C4370 を有効にします。 例 :
 
     ```cpp
     #pragma warning(default:4370)
@@ -3040,7 +3040,7 @@ Visual Studio 2013 の C++ コンパイラは、Visual Studio 2010 で実装さ�
 
 ### <a name="standard-library"></a>標準ライブラリ
 
-- C++98/03 標準と C++11 標準間の破壊的変更に伴い、明示的なテンプレート引数を使用して (`make_pair()` のように) `make_pair<int, int>(x, y)` を呼び出しても、一般的に Visual Studio 2012 の Visual C++ ではコンパイルされなくなりました。 この問題を解決するには、`make_pair() ` のように明示的なテンプレート引数を指定せずに常に `make_pair(x, y)` を呼び出す必要があります。 明示的なテンプレート引数を指定すると、この関数の目的を達成できません。 結果の型を正確に制御する必要がある場合は、`pair` のように `make_pair` ではなく `pair<short, short>(int1, int2)` を使用します。
+- C++98/03 標準と C++11 標準間の破壊的変更に伴い、明示的なテンプレート引数を使用して (`make_pair()` のように) `make_pair<int, int>(x, y)` を呼び出しても、一般的に Visual Studio 2012 の Visual C++ ではコンパイルされなくなりました。 解決策としては、`make_pair(x, y)`のように、明示的なテンプレート引数を指定せずに `make_pair()` を呼び出すことができます。 明示的なテンプレート引数を指定すると、この関数の目的を達成できません。 結果の型を正確に制御する必要がある場合は、`pair` のように `make_pair` ではなく `pair<short, short>(int1, int2)` を使用します。
 
 - C++ 98/03 と C++ 11 標準の間のもう1つの重大な変更: が暗黙的に B に変換可能であり、B が暗黙的に C に変換可能ではありませんが、が C に暗黙的に変換可能ではありません。 C++ 98/03 および Visual Studio 2010 は、暗黙的または明示 `pair<C, X>`的に変換でき `pair<A, X>`。 (もう1つの型である X は、ここでは重要ではなく、ペアの最初の型に固有ではありません)。Visual C++ Studio 2012 のコンパイラは、が暗黙的に C に変換できないことを検出し、オーバーロードの解決からペアの変換を削除します。 この変更は、多くのシナリオでは、よい結果になります。 たとえば、この変更で、`func(const pair<int, int>&)` と `func(const pair<string, string>&)` のオーバーロードと、`func()` を指定した `pair<const char *, const char *>` の呼び出しはコンパイルされるようになります。 ただし、積極的なペアの変換に依存するコードの場合、これは互換性に影響する変更です。 通常、このようなコードを修正するには、変換の一部を明示的に実行します。たとえば、`make_pair(static_cast<B>(a), x)` を `pair<C, X>` を受け取る関数に渡します。
 
@@ -3384,7 +3384,7 @@ Visual Studio 2013 の C++ コンパイラは、Visual Studio 2010 で実装さ�
 
 - `money_get::do_get` の動作が変更されました。 以前は、`frac_digits` で呼び出されたよりも多くの小数点以下桁数で金額を解析すると、`do_get` はすべてを使用していました。 現在は、最高でも `do_get` 文字まで使用すると、`frac_digits` は解析を停止します。
 
-### <a name="atl"></a>ATL
+### <a name="atl"></a>[ATL]
 
 - CRT に依存することなく ATL をビルドすることはできません。 以前のバージョンの Visual Studio では、#define ATL_MIN_CRT を使用して、ATL プロジェクトの CRT への依存を最小限にすることができます。 Visual Studio 2008 では、ATL_MIN_CRT が定義されているかどうかにかかわらず、すべての ATL プロジェクトの CRT への依存は最小限です。
 

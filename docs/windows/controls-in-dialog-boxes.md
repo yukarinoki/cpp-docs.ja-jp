@@ -1,5 +1,5 @@
 ---
-title: ダイアログ ボックス コントロール (C++) |Microsoft Docs
+title: ダイアログボックスコントロール (C++) |Microsoft Docs
 ms.date: 02/15/2019
 f1_keywords:
 - Custom Control
@@ -13,93 +13,93 @@ helpviewer_keywords:
 - dialog box controls [C++], custom (user) controls
 - Dialog Editor [C++], custom controls
 ms.assetid: e216c4f9-2fd4-429d-889a-8ebce7bad177
-ms.openlocfilehash: 568754bc514ae017293805fab1b25849d5ffe5f8
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
+ms.openlocfilehash: c79021387de2c8bc8f7f106a93797b7efb07d6df
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400881"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160412"
 ---
-# <a name="dialog-box-controls-c"></a>ダイアログ ボックス コントロール (C++)
+# <a name="dialog-box-controls-c"></a>ダイアログボックスコントロール (C++)
 
-コントロールを使用して、ダイアログ ボックスを追加することができます、**ダイアログ エディター**  タブで、[ツールボックス ウィンドウ](/visualstudio/ide/reference/toolbox) ダイアログ ボックスにドラッグしてコントロールを選択することができます。 既定で、**ツールボックス**ウィンドウ自動非表示に設定されます。 ソリューションの左側の余白のタブとして表示されるときに、**ダイアログ エディター**が開いています。 ただし、ピン留めできます、**ツールボックス**ウィンドウ位置を選択して、**自動的に隠す**ウィンドウの右上隅のボタンをクリックします。 このウィンドウの動作を制御する方法の詳細については、次を参照してください。[ウィンドウ管理](/visualstudio/ide/customizing-window-layouts-in-visual-studio)します。
+コントロールをダイアログボックスに追加するには、[[ツールボックス] ウィンドウ](/visualstudio/ide/reference/toolbox)の **[ダイアログエディター]** タブを使用します。このタブでは、必要なコントロールを選択してダイアログボックスにドラッグできます。 既定では、**ツールボックス** ウィンドウは 自動的に隠す に設定されています。 **ダイアログエディター**が開いているときに、ソリューションの左余白にタブとして表示されます。 ただし、ウィンドウの右上隅にある **[自動的に隠す]** ボタンを選択して、**ツールボックス**ウィンドウを位置にピン留めすることができます。 このウィンドウの動作を制御する方法の詳細については、「[ウィンドウ管理](/visualstudio/ide/customizing-window-layouts-in-visual-studio)」を参照してください。
 
-ダイアログ ボックスにコントロールを追加、既存のコントロールの位置を変更または 1 つのダイアログ ボックスから、コントロールを移動する最も簡単な方法では、ドラッグ アンド ドロップを使用します。 ダイアログ ボックスに、削除されるまで、コントロールの位置は点線で囲まれます。 ドラッグ アンド ドロップしてダイアログ ボックスにコントロールを追加すると、コントロールには、その種類のコントロールに適切な標準の高さが与えられます。
+ダイアログボックスにコントロールを追加したり、既存のコントロールの位置を変更したり、ダイアログボックスから別のダイアログボックスにコントロールを移動したりする最も簡単な方法は、ドラッグアンドドロップを使用する方法です。 コントロールの位置は、ダイアログボックスにドロップされるまで点線で囲まれています。 ドラッグアンドドロップメソッドを使用してコントロールをダイアログボックスに追加すると、コントロールには、そのコントロールの種類に適した標準の高さが与えられます。
 
-ガイドや、余白によって決定されます、最終的な配置 ダイアログ ボックスにコントロールを追加または位置を変更するときまたはレイアウト グリッドをオンにする必要があるかどうか。
+コントロールをダイアログボックスに追加したり、コントロールの位置を変更したりすると、その最終的な配置は、ガイドや余白によって決まります。または、レイアウトグリッドが有効になっているかどうかによって決まります。
 
-キャプションなどのプロパティを変更するには、ダイアログ ボックスにコントロールを追加した後、[プロパティ ウィンドウ](/visualstudio/ide/reference/properties-window)します。 複数のコントロールを選択し、それらのプロパティをすべて一度に変更できます。
+ダイアログボックスにコントロールを追加したら、[[プロパティ] ウィンドウ](/visualstudio/ide/reference/properties-window)でキャプションなどのプロパティを変更できます。 複数のコントロールを選択し、それらのプロパティをすべて一度に変更することもできます。
 
-詳細については、**ダイアログ エディター**を参照してください方法[追加、編集、または削除コントロール](adding-editing-or-deleting-controls.md)、[レイアウト コントロール](../windows/arrangement-of-controls-on-dialog-boxes.md)、および[コントロール アクセスの定義と値](../windows/defining-mnemonics-access-keys.md).
+**ダイアログエディター**の詳細については、「[コントロールを追加、編集、または削除](adding-editing-or-deleting-controls.md)する方法」、「[レイアウトコントロール](../windows/arrangement-of-controls-on-dialog-boxes.md)」、および「[コントロールのアクセスと値の定義](../windows/defining-mnemonics-access-keys.md)」を参照してください。
 
-コントロールとダイアログ ボックスの詳細については、次を参照してください。[コントロール クラス](../mfc/control-classes.md)、[ダイアログ ボックス クラス](../mfc/dialog-box-classes.md)、および[スクロール バー スタイル](../mfc/reference/styles-used-by-mfc.md#scroll-bar-styles)します。
+コントロールとダイアログの詳細については、「[コントロールクラス](../mfc/control-classes.md)」、「[ダイアログボックスのクラス](../mfc/dialog-box-classes.md)」、および「[スクロールバーのスタイル](../mfc/reference/styles-used-by-mfc.md#scroll-bar-styles)」を参照してください。
 
-使用できる標準のコントロール、**ツールボックス**イベントは、既定値。
+既定のイベントを使用して**ツールボックス**で使用できる標準コントロールは次のとおりです。
 
 |コントロール名|既定のイベント|
 |---|---|
-|[ボタン コントロール](../mfc/reference/cbutton-class.md)|BN_CLICKED|
-|[チェック ボックス コントロール](../mfc/reference/styles-used-by-mfc.md#button-styles)|BN_CLICKED|
-|[コンボ ボックス コントロール](../mfc/reference/ccombobox-class.md)|CBN_SELCHANGE|
-|[コントロールを編集します。](../mfc/reference/cedit-class.md)|EN_CHANGE|
+|[ボタンコントロール](../mfc/reference/cbutton-class.md)|BN_CLICKED|
+|[チェックボックスコントロール](../mfc/reference/styles-used-by-mfc.md#button-styles)|BN_CLICKED|
+|[コンボボックスコントロール](../mfc/reference/ccombobox-class.md)|CBN_SELCHANGE|
+|[コントロールの編集](../mfc/reference/cedit-class.md)|EN_CHANGE|
 |グループ ボックス|(該当なし)|
-|[リスト ボックス コントロール](../mfc/reference/clistbox-class.md)|LBN_SELCHANGE|
-|[ラジオ ボタン コントロール](../mfc/reference/styles-used-by-mfc.md#button-styles)|BN_CLICKED|
-|[スタティック テキスト コントロール](../mfc/reference/cstatic-class.md)|(該当なし)|
+|[リストボックスコントロール](../mfc/reference/clistbox-class.md)|LBN_SELCHANGE|
+|[ラジオボタンコントロール](../mfc/reference/styles-used-by-mfc.md#button-styles)|BN_CLICKED|
+|[静的テキストコントロール](../mfc/reference/cstatic-class.md)|(該当なし)|
 |[画像コントロール](../mfc/reference/cpictureholder-class.md)|(該当なし)|
-|[リッチ エディット 2.0 コントロール](../mfc/using-cricheditctrl.md)|EN_CHANGE|
-|[スクロール バー コントロール](../mfc/reference/cscrollbar-class.md)|NM_THEMECHANGED|
+|[リッチエディット2.0 コントロール](../mfc/using-cricheditctrl.md)|EN_CHANGE|
+|[スクロールバーコントロール](../mfc/reference/cscrollbar-class.md)|NM_THEMECHANGED|
 
 > [!NOTE]
-> 使用しての詳細については、 **RichEdit 1.0** MFC でコントロールを参照してください[MFC での RichEdit 1.0 コントロールの使用](../windows/using-the-richedit-1-0-control-with-mfc.md)と[リッチ エディット コントロールの例](../mfc/rich-edit-control-examples.md)します。
+> MFC での**richedit 1.0**コントロールの使用方法の詳細については、「mfc での[richedit 1.0 コントロールの使用](../windows/using-the-richedit-1-0-control-with-mfc.md)」および「[リッチエディットコントロールの例](../mfc/rich-edit-control-examples.md)」を参照してください。
 
-[Windows コモン コントロール](../mfc/controls-mfc.md)で使用できる、**ツールボックス**拡張機能を提供します。
+**ツールボックス**で使用できる[Windows コモンコントロール](../mfc/controls-mfc.md)は、次のような機能を提供します。
 
 |コントロール名|既定のイベント|
 |---|---|
-|[スライダー コントロール](../mfc/slider-control-styles.md)|NM_CUSTOMDRAW|
-|[スピン コントロール](../mfc/using-cspinbuttonctrl.md)|UDN_DELTAPOS|
-|[プログレス コントロール](../mfc/styles-for-the-progress-control.md)|NM_CUSTOMDRAW|
-|[ホット キー コントロール](../mfc/using-a-hot-key-control.md)|NM_OUTOFMEMORY|
-|[リスト コントロール](../mfc/list-control-and-list-view.md)|LVN_ITEMCHANGE|
-|[ツリー コントロール](../mfc/tree-control-styles.md)|TVN_SELCHANGE|
-|[タブ コントロール](../mfc/tab-controls-and-property-sheets.md)|TCN_SELCHANGE|
-|[アニメーション コントロール](../mfc/using-an-animation-control.md)|ACN_START|
-|[日時指定コントロール](../mfc/creating-the-date-and-time-picker-control.md)|DTN_DATETIMECHANGE|
-|[月間予定表コントロールします。](../mfc/month-calendar-control-examples.md)|MCN_SELCHANGE|
-|[IP アドレス コントロール](../mfc/reference/cipaddressctrl-class.md)|IPN_FIELDCHANGED|
-|[拡張コンボ ボックス コントロール](../mfc/creating-an-extended-combo-box-control.md)||
+|[スライダーコントロール](../mfc/slider-control-styles.md)|NM_CUSTOMDRAW|
+|[スピンコントロール](../mfc/using-cspinbuttonctrl.md)|UDN_DELTAPOS|
+|[プログレスコントロール](../mfc/styles-for-the-progress-control.md)|NM_CUSTOMDRAW|
+|[ホットキーコントロール](../mfc/using-a-hot-key-control.md)|NM_OUTOFMEMORY|
+|[リストコントロール](../mfc/list-control-and-list-view.md)|LVN_ITEMCHANGE|
+|[ツリーコントロール](../mfc/tree-control-styles.md)|TVN_SELCHANGE|
+|[タブコントロール](../mfc/tab-controls-and-property-sheets.md)|TCN_SELCHANGE|
+|[アニメーションコントロール](../mfc/using-an-animation-control.md)|ACN_START|
+|[日付と時刻の選択コントロール](../mfc/creating-the-date-and-time-picker-control.md)|DTN_DATETIMECHANGE|
+|[月間予定表コントロール](../mfc/month-calendar-control-examples.md)|MCN_SELCHANGE|
+|[IP アドレス制御](../mfc/reference/cipaddressctrl-class.md)|IPN_FIELDCHANGED|
+|[拡張コンボボックスコントロール](../mfc/creating-an-extended-combo-box-control.md)||
 |カスタム コントロール|TTN_GETDISPINFO|
 
 ## <a name="custom-controls"></a>カスタム コントロール
 
-**ダイアログ エディター**では、既存のカスタムまたはダイアログ ボックスのテンプレートでユーザー コントロール。
+ダイアログ**エディター**では、ダイアログボックステンプレートで既存のカスタムコントロールまたはユーザーコントロールを使用できます。
 
 > [!NOTE]
-> この意味でのカスタム コントロールでは、ActiveX コントロールと混同しないようにします。 ActiveX コントロールがカスタムの OLE コントロールとも呼ばれます。 また、Windows でオーナー描画コントロールでこれらのコントロールを混同しないでください。
+> この意味でのカスタムコントロールは、ActiveX コントロールと混同しないようにしてください。 ActiveX コントロールは、OLE カスタムコントロールとも呼ばれます。 また、これらのコントロールは、Windows のオーナー描画コントロールと混同しないようにしてください。
 
-この機能は、Windows によって提供されるもの以外のコントロールを使用することができます。 実行時に、コントロールは、ウィンドウ クラス (いないのと同じ C++ クラス) に関連付けられます。 同じタスクを実行する一般的な方法では、ダイアログ ボックスで、静的コントロールなどの任意のコントロールをインストールします。 実行時で、 [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog)機能、そのコントロールを削除し、独自のカスタム コントロールに置き換えます。
+この機能は、Windows によって提供されるコントロール以外のコントロールを使用できるようにするためのものです。 実行時に、コントロールは ( C++クラスとは異なり) ウィンドウクラスに関連付けられます。 同じタスクを実行する一般的な方法として、ダイアログボックスに静的コントロールなどのコントロールをインストールする方法があります。 次に、実行時に、 [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog)関数でそのコントロールを削除し、独自のカスタムコントロールに置き換えます。
 
 > [!NOTE]
-> これは、以前の技術です。 今すぐ ActiveX コントロールまたは Windows のコモン コントロールのサブクラスを作成するほとんどの場合に推奨します。
+> これは以前の手法です。 現在、ほとんどの場合、ActiveX コントロールを記述するか、Windows コモンコントロールをサブクラス化することをお勧めします。
 
-これらのカスタム コントロール用に限定されます。
+これらのカスタムコントロールでは、次のことに制限されています。
 
-- ダイアログ ボックスで、場所を設定します。
+- ダイアログボックス内の場所を設定します。
 
 - キャプションを入力します。
 
-- コントロールの Windows クラスの名前を識別するため、アプリケーション コードは、この名前でコントロールを登録する必要があります。
+- アプリケーションコードがこの名前によってコントロールを登録する必要があるため、コントロールの Windows クラスの名前を識別します。
 
-- コントロールのスタイルを設定する 32 ビット 16 進値を入力します。
+- コントロールのスタイルを設定する32ビットの16進値を入力します。
 
-- 拡張スタイルを設定します。
+- 拡張スタイルを設定しています。
 
 ## <a name="requirements"></a>必要条件
 
 Win32
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ダイアログ エディター](../windows/dialog-editor.md)
 

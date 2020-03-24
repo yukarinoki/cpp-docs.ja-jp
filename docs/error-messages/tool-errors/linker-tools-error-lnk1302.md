@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1302
 ms.assetid: aea3c753-c2c4-4249-bbc3-f2d4f0164b5e
-ms.openlocfilehash: c3b1117b31db4759b385943323a581da7a58f0c4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8323fa234851ce3ba12083adb74d5ee0fba0ac69
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160446"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194929"
 ---
 # <a name="linker-tools-error-lnk1302"></a>リンカ ツール エラー LNK1302
 
-安全な .netmodule は; をリンクのみをサポートします.netmodule のファイルをリンクできません。
+netmodule のリンクのみをサポートしています。ファイルをリンクできません。 .netmodule
 
-.Netmodule (でコンパイルされた **/LN**) を呼び出す MSIL リンク ユーザーの試行時に、リンカーに渡されました。  C++ モジュールは、MSIL にコンパイルする場合のリンクの有効な **/clr:safe**します。
+**/LN**を使用してコンパイルされた .netmodule が、ユーザーが MSIL リンクを呼び出そうとしたときにリンカーに渡されました。  モジュールC++は、 **/clr: safe**を使用してコンパイルされている場合、MSIL リンクに対して有効です。
 
-このエラーを修正するとコンパイル **/clr:safe** MSIL がリンクを有効にまたはパス、 **/clr**または **/clr: 純粋な**モジュールではなく、リンカーを .obj ファイル。
+このエラーを修正するには、 **/clr: safe**を使用してコンパイルして MSIL リンクを有効にするか、 **/clr**または **/clr: pure** .obj ファイルをモジュールではなくリンカーに渡します。
 
-詳細については、次のトピックを参照してください。
+詳細については、「
 
 - [/LN (MSIL モジュールの作成)](../../build/reference/ln-create-msil-module.md)
 

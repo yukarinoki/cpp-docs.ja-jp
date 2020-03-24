@@ -56,16 +56,16 @@ helpviewer_keywords:
 - std::skipws [C++]
 - std::unitbuf [C++]
 - std::uppercase [C++]
-ms.openlocfilehash: c3b1e2350d0923cbfddf95492842ae126859e29f
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 3ba2ba463bbd59bd8febccb73c37cc3b79a4c75b
+ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79426931"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80150630"
 ---
 # <a name="ltiosgt-functions"></a>&lt;ios&gt; 関数
 
-## <a name="boolalpha"></a>boolalpha
+## <a name="boolalpha"></a><a name="boolalpha"></a>boolalpha
 
 [bool](../cpp/bool-cpp.md) 型の変数をストリームで **true** または **false** として表示するように指定します。
 
@@ -82,7 +82,7 @@ ios_base& boolalpha(ios_base& str);
 
 *Str*の派生元であるオブジェクトへの参照。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 既定では、 **bool**型の変数は1または0として表示されます。
 
@@ -117,7 +117,7 @@ true
 true
 ```
 
-## <a name="dec"></a>alpha
+## <a name="dec"></a><a name="dec"></a>alpha
 
 整数変数を 10 進表記で表示するように指定します。
 
@@ -134,7 +134,7 @@ ios_base& dec(ios_base& str);
 
 *Str*の派生元であるオブジェクトへの参照。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 既定では、整数変数は、10 進表記で表示されます。
 
@@ -170,7 +170,7 @@ int main( )
 100
 ```
 
-## <a name="ios_defaultfloat"></a>&lt;ios&gt; defaultfloat
+## <a name="ltiosgt-defaultfloat"></a><a name="ios_defaultfloat"></a>&lt;ios&gt; defaultfloat
 
 浮動小数値に既定の表示形式を使用するように、`ios_base` オブジェクトのフラグを構成します。
 
@@ -183,11 +183,11 @@ ios_base& defaultfloat(ios_base& iosbase);
 *_Iosbase*\
 `ios_base` オブジェクトです。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 マニピュレーターは実質的に `iosbase.`[ios_base:: unsetf](../standard-library/ios-base-class.md#unsetf)`(ios_base::floatfield)`を呼び出し、次に*iosbase. flags*を返します。
 
-## <a name="fixed"></a>固定
+## <a name="fixed"></a><a name="fixed"></a>固定
 
 浮動小数点数を固定 10 進表記で表示するように指定します。
 
@@ -204,7 +204,7 @@ ios_base& fixed(ios_base& str);
 
 *Str*の派生元であるオブジェクトへの参照。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 `fixed` は、浮動小数点数の既定の表示表記です。 [scientific](../standard-library/ios-functions.md#scientific) は、浮動小数点数を指数表記を使用して表示します。
 
@@ -235,7 +235,7 @@ int main( )
 1.1
 ```
 
-## <a name="hex"></a>表記
+## <a name="hex"></a><a name="hex"></a>表記
 
 整数変数を 16 進表記で表示するように指定します。
 
@@ -252,7 +252,7 @@ ios_base& hex(ios_base& str);
 
 *Str*の派生元であるオブジェクトへの参照。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 既定では、整数変数は、10 進表記で表示されます。 [dec](../standard-library/ios-functions.md#dec) および [oct](../standard-library/ios-functions.md#oct) も整数変数の表示方法を変更します。
 
@@ -262,13 +262,13 @@ ios_base& hex(ios_base& str);
 
 `hex`の使用例については、「 [dec](../standard-library/ios-functions.md#dec) 」を参照してください。
 
-## <a name="hexfloat"></a>hexfloat
+## <a name="hexfloat"></a><a name="hexfloat"></a>hexfloat
 
 ```cpp
 ios_base& hexfloat (ios_base& str);
 ```
 
-## <a name="io_errc"></a>io_errc
+## <a name="io_errc"></a><a name="io_errc"></a>io_errc
 
 ```cpp
 enum class io_errc {
@@ -276,7 +276,7 @@ enum class io_errc {
 };
 ```
 
-## <a name="internal"></a>イントラネット
+## <a name="internal"></a><a name="internal"></a>イントラネット
 
 数値の符号を左揃え、数値を右揃えにします。
 
@@ -293,11 +293,11 @@ ios_base& internal(ios_base& str);
 
 *Str*の派生元であるオブジェクトへの参照。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 [showpos](../standard-library/ios-functions.md#showpos) によって、正の数値に符号が表示されます。
 
-マニピュレーターは実質的に `str.`[setf](../standard-library/ios-base-class.md#setf)`(`[ios_base:: internal](../standard-library/ios-base-class.md#fmtflags)`, `[ios_base:: adjustfield](../standard-library/ios-base-class.md#fmtflags)`)`を呼び出し、次に*str*を返します。
+マニピュレーターは実質的に `str.`[setf](../standard-library/ios-base-class.md#setf)`(`[ios_base:: internal](../standard-library/ios-base-class.md#fmtflags)`,` [ios_base:: adjustfield](../standard-library/ios-base-class.md#fmtflags)`)`を呼び出し、次に*str*を返します。
 
 ### <a name="example"></a>例
 
@@ -322,19 +322,19 @@ int main( void )
 -..123.456
 ```
 
-## <a name="is_error_code_enum"></a>is_error_code_enum
+## <a name="is_error_code_enum"></a><a name="is_error_code_enum"></a>is_error_code_enum
 
 ```cpp
 template <> struct is_error_code_enum<io_errc> : public true_type { };
 ```
 
-## <a name="iostream_category"></a>iostream_category
+## <a name="iostream_category"></a><a name="iostream_category"></a>iostream_category
 
 ```cpp
 const error_category& iostream_category() noexcept;
 ```
 
-## <a name="left"></a>左側
+## <a name="left"></a><a name="left"></a>左側
 
 出力幅に満たないテキストをストリーム フラッシュで左揃えに表示します。
 
@@ -351,7 +351,7 @@ ios_base& left(ios_base& str);
 
 *Str*の派生元であるオブジェクトへの参照。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 マニピュレーターは実質的に `str.`[setf](../standard-library/ios-base-class.md#setf)`(ios_base::left, ios_base::adjustfield)`を呼び出し、次に*str*を返します。
 
@@ -377,19 +377,19 @@ int main( )
         5
 ```
 
-## <a name="make_error_code"></a>make_error_code
+## <a name="make_error_code"></a><a name="make_error_code"></a>make_error_code
 
 ```cpp
 error_code make_error_code(io_errc e) noexcept;
 ```
 
-## <a name="make_error_condition"></a>make_error_condition
+## <a name="make_error_condition"></a><a name="make_error_condition"></a>make_error_condition
 
 ```cpp
 error_condition make_error_condition(io_errc e) noexcept;
 ```
 
-## <a name="noboolalpha"></a>noブールアルファ
+## <a name="noboolalpha"></a><a name="noboolalpha"></a>noブールアルファ
 
 [bool](../cpp/bool-cpp.md) 型の変数をストリームで 1 または 0 として表示するように指定します。
 
@@ -406,7 +406,7 @@ ios_base& noboolalpha(ios_base& str);
 
 *Str*の派生元であるオブジェクトへの参照。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 既定では、`noboolalpha` は有効です。
 
@@ -418,7 +418,7 @@ ios_base& noboolalpha(ios_base& str);
 
 [ の使用例については、「](../standard-library/ios-functions.md#boolalpha)boolalpha`noboolalpha`」を参照してください。
 
-## <a name="noshowbase"></a>noshowbase
+## <a name="noshowbase"></a><a name="noshowbase"></a>noshowbase
 
 指定している数値表記の基底の設定をオフにします。
 
@@ -435,7 +435,7 @@ ios_base& noshowbase(ios_base& str);
 
 *Str*の派生元であるオブジェクトへの参照。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 `noshowbase` は既定でオンです。 [showbase](../standard-library/ios-functions.md#showbase) を使用して、数値表記の基底を示します。
 
@@ -445,7 +445,7 @@ ios_base& noshowbase(ios_base& str);
 
 [ の使用例については、「](../standard-library/ios-functions.md#showbase)showbase`noshowbase`」を参照してください。
 
-## <a name="noshowpoint"></a>noshowpoint
+## <a name="noshowpoint"></a><a name="noshowpoint"></a>noshowpoint
 
 小数部分が 0 の浮動小数点数の整数部分のみを表示します。
 
@@ -462,7 +462,7 @@ ios_base& noshowpoint(ios_base& str);
 
 *Str*の派生元であるオブジェクトへの参照。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 `noshowpoint` は既定ではオンです。[showpoint](../standard-library/ios-functions.md#showpoint) と [precision](../standard-library/ios-base-class.md#precision) を使用して、小数点の後に 0 を表示します。
 
@@ -492,7 +492,7 @@ int main( )
 5
 ```
 
-## <a name="noshowpos"></a>noshowpos
+## <a name="noshowpos"></a><a name="noshowpos"></a>noshowpos
 
 正の数値に明示的に符号を付けないようにします。
 
@@ -509,7 +509,7 @@ ios_base& noshowpos(ios_base& str);
 
 *Str*の派生元であるオブジェクトへの参照。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 `noshowpos` は既定でオンです。
 
@@ -519,7 +519,7 @@ ios_base& noshowpos(ios_base& str);
 
 [ の使用例については、「](../standard-library/ios-functions.md#showpos)showpos`noshowpos`」を参照してください。
 
-## <a name="noskipws"></a>noskipws
+## <a name="noskipws"></a><a name="noskipws"></a>noskipws
 
 入力ストリームで空白を読み取るようにします。
 
@@ -536,7 +536,7 @@ ios_base& noskipws(ios_base& str);
 
 *Str*の派生元であるオブジェクトへの参照。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 既定では、[skipws](../standard-library/ios-functions.md#skipws) は有効です。 入力ストリームでスペースが読み込まれると、バッファーの終了を通知します。
 
@@ -561,7 +561,7 @@ int main() {
 }
 ```
 
-## <a name="nounitbuf"></a>nounitbuf
+## <a name="nounitbuf"></a><a name="nounitbuf"></a>nounitbuf
 
 出力をバッファーし、バッファーが一杯になると、出力を処理します。
 
@@ -578,13 +578,13 @@ ios_base& nounitbuf(ios_base& str);
 
 *Str*の派生元であるオブジェクトへの参照。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 [unitbuf](../standard-library/ios-functions.md#unitbuf) はバッファーが空ではないときに、バッファーを処理します。
 
 マニピュレーターは実質的に `str.`[unsetf](../standard-library/ios-base-class.md#unsetf)`(ios_base::unitbuf)`を呼び出し、次に*str*を返します。
 
-## <a name="nouppercase"></a>nouppercase
+## <a name="nouppercase"></a><a name="nouppercase"></a>nouppercase
 
 16 進数と指数表記の指数を小文字で表示します。
 
@@ -601,7 +601,7 @@ ios_base& nouppercase(ios_base& str);
 
 *Str*の派生元であるオブジェクトへの参照。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 マニピュレーターは実質的に `str.`[unsetf](../standard-library/ios-base-class.md#unsetf)`(ios_base::uppercase)`を呼び出し、次に*str*を返します。
 
@@ -609,7 +609,7 @@ ios_base& nouppercase(ios_base& str);
 
 [ の使用例については、「](../standard-library/ios-functions.md#uppercase)uppercase`nouppercase`」を参照してください。
 
-## <a name="oct"></a>シンガポール
+## <a name="oct"></a><a name="oct"></a>シンガポール
 
 整数変数を 8 進表記で表示するように指定します。
 
@@ -626,7 +626,7 @@ ios_base& oct(ios_base& str);
 
 *Str*の派生元であるオブジェクトへの参照。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 既定では、整数変数は、10 進表記で表示されます。 [dec](../standard-library/ios-functions.md#dec) および [hex](../standard-library/ios-functions.md#hex) も整数変数の表示方法を変更します。
 
@@ -636,7 +636,7 @@ ios_base& oct(ios_base& str);
 
 `oct`の使用例については、「 [dec](../standard-library/ios-functions.md#dec) 」を参照してください。
 
-## <a name="right"></a>そうです
+## <a name="right"></a><a name="right"></a>そうです
 
 出力幅に満たないテキストをストリーム フラッシュで右揃えに表示します。
 
@@ -653,7 +653,7 @@ ios_base& right(ios_base& str);
 
 *Str*の派生元であるオブジェクトへの参照。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 [left](../standard-library/ios-functions.md#left) もテキストの両端揃えを変更します。
 
@@ -693,7 +693,7 @@ int main( )
                    5
 ```
 
-## <a name="scientific"></a>学術
+## <a name="scientific"></a><a name="scientific"></a>学術
 
 浮動小数点数を指数表記を使用して表示します。
 
@@ -710,7 +710,7 @@ ios_base& scientific(ios_base& str);
 
 *Str*の派生元であるオブジェクトへの参照。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 既定では、[fixed](../standard-library/ios-functions.md#fixed) 表記は浮動小数点数に対して有効です。
 
@@ -738,7 +738,7 @@ int main( )
 1.002300e+002
 ```
 
-## <a name="showbase"></a>showbase
+## <a name="showbase"></a><a name="showbase"></a>showbase
 
 数値表記の基底を指定します。
 
@@ -755,7 +755,7 @@ ios_base& showbase(ios_base& str);
 
 *Str*の派生元であるオブジェクトへの参照。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 数値表記の基底は、[dec](../standard-library/ios-functions.md#dec)、[oct](../standard-library/ios-functions.md#oct)、または [hex](../standard-library/ios-functions.md#hex) を使用して変更できます。
 
@@ -792,7 +792,7 @@ int main( )
 144
 ```
 
-## <a name="showpoint"></a>showpoint
+## <a name="showpoint"></a><a name="showpoint"></a>showpoint
 
 小数部分が 0 のときも浮動小数点数の整数部分と小数点の右側にある数字を表示します。
 
@@ -809,7 +809,7 @@ ios_base& showpoint(ios_base& str);
 
 *Str*の派生元であるオブジェクトへの参照。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 既定では、[noshowpoint](../standard-library/ios-functions.md#noshowpoint) は有効です。
 
@@ -819,7 +819,7 @@ ios_base& showpoint(ios_base& str);
 
 [ の使用例については、「](../standard-library/ios-functions.md#noshowpoint)noshowpoint`showpoint`」を参照してください。
 
-## <a name="showpos"></a>showpos
+## <a name="showpos"></a><a name="showpos"></a>showpos
 
 正の数値に明示的に符号を付けます。
 
@@ -836,7 +836,7 @@ ios_base& showpos(ios_base& str);
 
 *Str*の派生元であるオブジェクトへの参照。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 [noshowpos](../standard-library/ios-functions.md#noshowpos) が既定の設定です。
 
@@ -864,7 +864,7 @@ int main( )
 +1
 ```
 
-## <a name="skipws"></a>skipws
+## <a name="skipws"></a><a name="skipws"></a>skipws
 
 入力ストリームで空白を読み飛ばします。
 
@@ -881,7 +881,7 @@ ios_base& skipws(ios_base& str);
 
 *Str*の派生元であるオブジェクトへの参照。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 既定では、`skipws` は有効です。 [noskipws](../standard-library/ios-functions.md#noskipws) は、入力ストリームから空白を読み取るようにします。
 
@@ -916,7 +916,7 @@ Enter three characters: 1 2 3
 .3.
 ```
 
-## <a name="unitbuf"></a>unitbuf
+## <a name="unitbuf"></a><a name="unitbuf"></a>unitbuf
 
 バッファーが空ではないときに、出力を処理します。
 
@@ -933,7 +933,7 @@ ios_base& unitbuf(ios_base& str);
 
 *Str*の派生元であるオブジェクトへの参照。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 `endl` もバッファーをフラッシュします。
 
@@ -941,7 +941,7 @@ ios_base& unitbuf(ios_base& str);
 
 マニピュレーターは実質的に `str.`[setf](../standard-library/ios-base-class.md#setf)`(`[ios_base:: unitbuf](../standard-library/ios-base-class.md#fmtflags)`)`を呼び出し、次に*str*を返します。
 
-## <a name="uppercase"></a>  uppercase
+## <a name="uppercase"></a><a name="uppercase"></a>  uppercase
 
 16 進数と指数表記の指数を大文字で表示します。
 
@@ -958,7 +958,7 @@ ios_base& uppercase(ios_base& str);
 
 *Str*の派生元であるオブジェクトへの参照。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 既定では、[nouppercase](../standard-library/ios-functions.md#nouppercase) は有効です。
 

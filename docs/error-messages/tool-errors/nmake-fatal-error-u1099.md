@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - U1099
 ms.assetid: 6688a805-43e6-4247-a2d0-14be082f0b13
-ms.openlocfilehash: 395f25d8d27bc5e9b6132c87390c8c3bc19b6cc4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c963180059a48d9aa0b09103df1ed54f82b8a2f1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62298244"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193395"
 ---
 # <a name="nmake-fatal-error-u1099"></a>NMAKE の致命的なエラー U1099
 
 スタック オーバーフロー
 
-処理中のメイクファイルが複雑すぎるため、現在のスタック割り当て (nmake の)。 NMAKE は、0x3000 (12 K) の割り当てが。
+処理中のメイクファイルは、NMAKE の現在のスタック割り当てに対して複雑すぎました。 NMAKE には 0x3000 (12K) の割り当てがあります。
 
-NMAKE のスタック割り当てを増やすには、実行、 [editbin/stack](../../build/reference/stack.md)ユーティリティをより大きなスタック オプション。
+NMAKE のスタック割り当てを増やすには、より大きなスタックオプションを使用して[editbin/stack](../../build/reference/stack.md)ユーティリティを実行します。
 
-**editbin/STACK:reserve (nmake の)。実行可能ファイル**
+**editbin/STACK: NMAKE を予約します。EXCEL.EXE**
 
-場所*予約*数値を (nmake の) 現在のスタック割り当てを超えています。
+ここで、 *reserve*は NMAKE の現在のスタック割り当てよりも大きい数値です。

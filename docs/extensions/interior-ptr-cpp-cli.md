@@ -9,14 +9,14 @@ f1_keywords:
 helpviewer_keywords:
 - interior_ptr keyword [C++]
 ms.assetid: 25160f74-569e-492d-9e3c-67ece7486baa
-ms.openlocfilehash: 0fba04efeaa634f5e21600768297aee0d999d1c6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 264ac0a56996b0dcbeeb64246623eca1a3fc73ff
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515697"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172153"
 ---
-# <a name="interiorptr-ccli"></a>interior_ptr (C++/CLI)
+# <a name="interior_ptr-ccli"></a>interior_ptr (C++/CLI)
 
 "*内部ポインター*" は、参照型の内部へのポインターを宣言しますが、オブジェクト自体へのポインターは宣言しません。 内部ポインターは、参照ハンドル、値の型、ボックス化された型のハンドル、マネージ型のメンバーまたは、マネージ配列の要素を指すことができます。
 
@@ -28,7 +28,7 @@ ms.locfileid: "65515697"
 
 (この言語機能には Windows ランタイムのみに適用される特記事項がありません。)
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/ZW`
 
@@ -54,7 +54,7 @@ cli::interior_ptr<cv_qualifier type> var = &initializer;
 **interior_ptr** 変数の名前。
 
 *initializer*<br/>
-参照型のメンバー、マネージ配列の要素、またはネイティブ ポインターに割り当てることができるその他のオブジェクト。
+参照型のメンバー、マネージド配列の要素、またはネイティブ ポインターに割り当てることができるその他のオブジェクト。
 
 ### <a name="remarks"></a>解説
 
@@ -82,11 +82,11 @@ cli::interior_ptr<cv_qualifier type> var = &initializer;
 
 - [方法: const キーワードを含む内部ポインターを宣言する (C++/CLI)](how-to-declare-interior-pointers-with-the-const-keyword-cpp-cli.md)
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/clr`
 
-### <a name="examples"></a>使用例
+### <a name="examples"></a>例
 
 次の例では、参照型への内部ポインターを宣言して使用する方法を示します。
 
@@ -122,6 +122,6 @@ int main() {
 3
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [.NET および UWP でのコンポーネント拡張](component-extensions-for-runtime-platforms.md)

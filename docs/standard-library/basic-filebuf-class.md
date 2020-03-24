@@ -40,12 +40,12 @@ helpviewer_keywords:
 - std::basic_filebuf [C++], uflow
 - std::basic_filebuf [C++], underflow
 ms.assetid: 3196ba5c-bf38-41bd-9a95-70323ddfca1a
-ms.openlocfilehash: ec6fced70a53d27fdb3312a5b349e9e653ccbd24
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 9b4492f10e2871792d8e1870fcfea37775dc7bde
+ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79427345"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80150850"
 ---
 # <a name="basic_filebuf-class"></a>basic_filebuf クラス
 
@@ -66,7 +66,7 @@ class basic_filebuf : public basic_streambuf<Char_T, Tr>
 *Tr*\
 ファイルバッファーの基本要素の特徴 (通常は `char_traits<Char_T>`)。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>コメント
 
 クラステンプレートは、 *Char_T*型の要素の転送を制御するストリームバッファーを記述します。このストリームバッファーは、文字の特徴がクラス*Tr*によって決定され、外部ファイルに格納されている要素のシーケンスとの間で送受信されます。
 
@@ -196,13 +196,13 @@ Hex Dump of wwHello.txt - note that output is wchar_t chars:
 
 ### <a name="constructors"></a>コンストラクター
 
-|Constructor|Description|
+|コンストラクター|説明|
 |-|-|
 |[basic_filebuf](#basic_filebuf)|`basic_filebuf` 型のオブジェクトを構築します。|
 
 ### <a name="typedefs"></a>Typedefs
 
-|種類の名前。|Description|
+|種類の名前。|説明|
 |-|-|
 |[char_type](#char_type)|型名を `Char_T` テンプレート パラメーターに関連付けます。|
 |[int_type](#int_type)|`basic_filebuf` のスコープ内のこの型を、`Tr` スコープ内の同じ名前の型と同等にします。|
@@ -212,7 +212,7 @@ Hex Dump of wwHello.txt - note that output is wchar_t chars:
 
 ### <a name="member-functions"></a>メンバー関数
 
-|メンバー関数|Description|
+|メンバー関数|説明|
 |-|-|
 |[close](#close)|ファイルを閉じます。|
 |[is_open](#is_open)|ファイルが開いているかどうかを示します。|
@@ -227,13 +227,13 @@ Hex Dump of wwHello.txt - note that output is wchar_t chars:
 |[uflow](../standard-library/basic-streambuf-class.md#uflow)|入力ストリームから現在の要素を抽出するプロテクト仮想関数。|
 |[underflow](#underflow)|入力ストリームから現在の要素を抽出するプロテクト仮想関数。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<fstream >
 
 **名前空間:** std
 
-## <a name="basic_filebuf"></a>  basic_filebuf::basic_filebuf
+## <a name="basic_filebufbasic_filebuf"></a><a name="basic_filebuf"></a>  basic_filebuf::basic_filebuf
 
 `basic_filebuf` 型のオブジェクトを構築します。
 
@@ -243,13 +243,13 @@ basic_filebuf();
 basic_filebuf(basic_filebuf&& right);
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 最初のコンストラクターは、入力バッファーと出力バッファーを制御するすべてのポインターに Null ポインターを格納します。 また、ファイル ポインターにも Null ポインターを格納します。
 
 2番目のコンストラクターは、右辺値参照として扱われる*right*の内容を使用してオブジェクトを初期化します。
 
-## <a name="char_type"></a>  basic_filebuf::char_type
+## <a name="basic_filebufchar_type"></a><a name="char_type"></a>  basic_filebuf::char_type
 
 型名を `Char_T` テンプレート パラメーターに関連付けます。
 
@@ -257,7 +257,7 @@ basic_filebuf(basic_filebuf&& right);
 typedef Char_T char_type;
 ```
 
-## <a name="close"></a>  basic_filebuf::close
+## <a name="basic_filebufclose"></a><a name="close"></a>  basic_filebuf::close
 
 ファイルを閉じます。
 
@@ -269,7 +269,7 @@ basic_filebuf<Char_T, Tr> *close();
 
 メンバー関数は、ファイル ポインターが Null ポインターの場合に、Null ポインターを返します。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 `close` は `fclose(fp)` を呼び出します。 その関数がゼロ以外の値を返す場合、関数は Null ポインターを返します。 それ以外の場合は、**this** を返してファイルが正常に閉じられたことを示します。
 
@@ -324,7 +324,7 @@ s
 1
 ```
 
-## <a name="int_type"></a>  basic_filebuf::int_type
+## <a name="basic_filebufint_type"></a><a name="int_type"></a>  basic_filebuf::int_type
 
 `Tr` スコープ内の同じ名前の型と同等の `basic_filebuf` スコープ内でこの型を作成します。
 
@@ -332,7 +332,7 @@ s
 typedef typename traits_type::int_type int_type;
 ```
 
-## <a name="is_open"></a>  basic_filebuf::is_open
+## <a name="basic_filebufis_open"></a><a name="is_open"></a>  basic_filebuf::is_open
 
 ファイルが開いているかどうかを示します。
 
@@ -368,7 +368,7 @@ false
 true
 ```
 
-## <a name="off_type"></a>  basic_filebuf::off_type
+## <a name="basic_filebufoff_type"></a><a name="off_type"></a>  basic_filebuf::off_type
 
 `Tr` スコープ内の同じ名前の型と同等の `basic_filebuf` スコープ内でこの型を作成します。
 
@@ -376,7 +376,7 @@ true
 typedef typename traits_type::off_type off_type;
 ```
 
-## <a name="open"></a>  basic_filebuf::open
+## <a name="basic_filebufopen"></a><a name="open"></a>  basic_filebuf::open
 
 ファイルを開きます。
 
@@ -415,9 +415,9 @@ basic_filebuf<Char_T, Tr> *open(
 
 バッファーが既に開いている場合、またはファイルポインターが null ポインターの場合、関数は null ポインターを返します。 それ以外の場合は、**this** を返します。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
-このメンバー関数は、 [`fopen`](../c-runtime-library/reference/fopen-wfopen.md)`(filename, strmode)`を呼び出すことによって、 *filename*という名前のファイルを開きます。 `strmode` は `mode & ~(`[`ate`](../standard-library/ios-base-class.md#openmode)` | `[`binary`](../standard-library/ios-base-class.md#openmode)`)`から決定されます。
+このメンバー関数は、 [`fopen`](../c-runtime-library/reference/fopen-wfopen.md)`(filename, strmode)`を呼び出すことによって、 *filename*という名前のファイルを開きます。 `strmode` は `mode & ~(`[`ate`](../standard-library/ios-base-class.md#openmode) `|` [`binary`](../standard-library/ios-base-class.md#openmode)`)`から決定されます。
 
 - `ios_base::in` が `"r"` になります (読み取り用に既存のファイルを開きます)。
 
@@ -441,7 +441,7 @@ basic_filebuf<Char_T, Tr> *open(
 
 `open`の使用例については、「 [`basic_filebuf::close`](#close) 」を参照してください。
 
-## <a name="op_eq"></a>  basic_filebuf::operator=
+## <a name="basic_filebufoperator"></a><a name="op_eq"></a>  basic_filebuf::operator=
 
 このストリーム バッファー オブジェクトの内容を割り当てます。 これは、右辺値を使用してコピーを残さない、移動代入です。
 
@@ -458,11 +458,11 @@ basic_filebuf& operator=(basic_filebuf&& right);
 
 __* This__を返します。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 メンバー演算子は、右辺値参照として扱われる*right*の内容を使用して、オブジェクトの内容を置き換えます。 詳細については、「[右辺値参照宣言子: & &](../cpp/rvalue-reference-declarator-amp-amp.md)」を参照してください。
 
-## <a name="overflow"></a>  basic_filebuf::overflow
+## <a name="basic_filebufoverflow"></a><a name="overflow"></a>  basic_filebuf::overflow
 
 いっぱいのバッファーに新しい文字が挿入されたときに呼び出されます。
 
@@ -479,7 +479,7 @@ virtual int_type overflow(int_type _Meta = traits_type::eof);
 
 関数が失敗した場合は、`traits_type::eof`を返します。 それ以外の場合は、`traits_type::`[`not_eof`](../standard-library/char-traits-struct.md#not_eof)`(_Meta)`を返します。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 [`eof`](../standard-library/char-traits-struct.md#eof)`_Meta != traits_type::`場合、保護された仮想メンバー関数は[`to_char_type`](../standard-library/char-traits-struct.md#to_char_type)`(_Meta)` `ch = traits_type::`要素を出力バッファーに挿入しようとします。 これはさまざまな方法で行うことができます。
 
@@ -489,7 +489,7 @@ virtual int_type overflow(int_type _Meta = traits_type::eof);
 
 - 必要に応じて、ファイル変換ファセット `fac` を使用して `fac.out` を呼び出すことで、出力バッファー内の保留中の出力を変換した後、`ch`を変換できます。 *Char*型の生成された各要素 `ch` は、ファイルポインターによって指定された関連付けられたストリームに書き込まれます。これは、フォーム `fputc(ch, fp)`の後続の呼び出しによって `fp` ます。 任意の変換または書き込みに失敗した場合、関数は失敗します。
 
-## <a name="pbackfail"></a>  basic_filebuf::pbackfail
+## <a name="basic_filebufpbackfail"></a><a name="pbackfail"></a>  basic_filebuf::pbackfail
 
 要素を入力ストリームに戻そうと試み、その要素を現在の要素に (ネクスト ポインターによって指されるように) します。
 
@@ -506,7 +506,7 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof);
 
 関数が失敗した場合は、`traits_type::eof`を返します。 それ以外の場合は、`traits_type::`[`not_eof`](../standard-library/char-traits-struct.md#not_eof)`(_Meta)`を返します。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 プロテクト仮想メンバー関数は要素を入力バッファーに戻してから、その要素を現在の要素に (ネクスト ポインターによって指されるように) します。 [`eof`](../standard-library/char-traits-struct.md#eof)`_Meta == traits_type::`場合、プッシュバックする要素は、実際には現在の要素の前に既にストリームにある要素です。 それ以外の場合は、その要素が `ch = traits_type::`[`to_char_type`](../standard-library/char-traits-struct.md#to_char_type)`(_Meta)`に置き換えられます。 この関数は、さまざまな方法で要素を戻すことができます。
 
@@ -516,7 +516,7 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof);
 
 - 関数が要素を入力ストリームにプッシュバックできる場合、 **char**型の要素に対して `ungetc` を呼び出すことによって、この処理を実行できます。
 
-## <a name="pos_type"></a>  basic_filebuf::pos_type
+## <a name="basic_filebufpos_type"></a><a name="pos_type"></a>  basic_filebuf::pos_type
 
 `Tr` スコープ内の同じ名前の型と同等の `basic_filebuf` スコープ内でこの型を作成します。
 
@@ -524,7 +524,7 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof);
 typedef typename traits_type::pos_type pos_type;
 ```
 
-## <a name="seekoff"></a>  basic_filebuf::seekoff
+## <a name="basic_filebufseekoff"></a><a name="seekoff"></a>  basic_filebuf::seekoff
 
 制御されているストリームの現在の位置を変更しようと試みます。
 
@@ -550,7 +550,7 @@ virtual pos_type seekoff(
 
 新しい位置または無効なストリーム位置を返します。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 プロテクト仮想メンバー関数は、制御されたストリームの現在位置を変更しようとします。 クラス[`basic_filebuf`](../standard-library/basic-filebuf-class.md)`<Char_T, Tr>`のオブジェクトの場合、ストリームの位置は `fpos_t`型のオブジェクトで表すことができます。これには、オフセットとワイドストリームを解析するために必要なすべての状態情報が格納されます。 オフセット0は、ストリームの最初の要素を参照します。 ( [`pos_type`](../standard-library/basic-streambuf-class.md#pos_type)型のオブジェクトには、少なくとも `fpos_t` オブジェクトが格納されています)。
 
@@ -558,7 +558,7 @@ virtual pos_type seekoff(
 
 `fp` ファイルポインターが null ポインターの場合、関数は失敗します。 それ以外の場合は、`fseek(fp, _Off, _Way)`を呼び出すことによってストリームの位置を変更しようとします。 その関数が成功し、結果の位置 `fposn` が `fgetpos(fp, &fposn)`を呼び出すことによって判断できる場合、関数は成功します。 関数が成功した場合は、`fposn`を含む `pos_type` 型の値を返します。 それ以外の場合は、無効なストリームの位置が返されます。
 
-## <a name="seekpos"></a>  basic_filebuf::seekpos
+## <a name="basic_filebufseekpos"></a><a name="seekpos"></a>  basic_filebuf::seekpos
 
 制御されているストリームの現在の位置を変更しようと試みます。
 
@@ -580,7 +580,7 @@ virtual pos_type seekpos(
 
 `fp` ファイルポインターが null ポインターの場合、関数は失敗します。 それ以外の場合は、`fsetpos(fp, &fposn)`を呼び出すことによってストリームの位置を変更しようとします。 `fposn` は `pos`に格納されている `fpos_t` オブジェクトです。 その関数が成功すると、関数は `pos` を返します。 それ以外の場合は、無効なストリームの位置が返されます。 ストリームの位置が無効であることを確認するには、戻り値と `pos_type(off_type(-1))` を比較します。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 プロテクト仮想メンバー関数は、制御されたストリームの現在位置を変更しようとします。 クラス[`basic_filebuf`](../standard-library/basic-filebuf-class.md)`<Char_T, Tr>`のオブジェクトの場合、ストリームの位置は `fpos_t`型のオブジェクトで表すことができます。これには、オフセットとワイドストリームを解析するために必要なすべての状態情報が格納されます。 オフセット0は、ストリームの最初の要素を参照します。 (型 `pos_type` のオブジェクトは、少なくとも `fpos_t` オブジェクトを格納します)。
 
@@ -588,7 +588,7 @@ virtual pos_type seekpos(
 
 ワイド ストリームの場合、ストリームが開いてから、または `streampos` への最後の呼び出し以降に挿入が発生した場合、関数は [overflow](#overflow) を呼び出します。 また、必要に応じて、ファイル変換ファセット `fac` を使用して `fac.unshift` を呼び出すことにより、初期の変換状態を復元するために必要なシーケンスを挿入します。 **Char**型の生成された各要素 `byte` は、ファイルポインターによって指定された関連付けられたストリームに書き込まれます。これは、フォーム `fputc(byte, fp)`の後続の呼び出しによって `fp` ます。 `fac.unshift` または書き込みに対する呼び出しが失敗した場合、関数は成功しません。
 
-## <a name="setbuf"></a>  basic_filebuf::setbuf
+## <a name="basic_filebufsetbuf"></a><a name="setbuf"></a>  basic_filebuf::setbuf
 
 各派生ストリーム バッファーに固有の操作を実行します。
 
@@ -610,11 +610,11 @@ virtual basic_streambuf<Char_T, Tr> *setbuf(
 
 プロテクト メンバー関数は、ファイル ポインター `fp` が Null ポインターの場合に、0 を返します。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 `setbuf` は `setvbuf( fp, (char*) _Buffer, _IOFBF, count * sizeof( Char_T))` を呼び出して、 *_Buffer*で始まる `count` 要素の配列をストリームのバッファーとして提供します。 その関数がゼロ以外の値を返す場合、関数は Null ポインターを返します。 それ以外の場合は、シグナルの成功に **this** を返します。
 
-## <a name="swap"></a>  basic_filebuf::swap
+## <a name="basic_filebufswap"></a><a name="swap"></a>  basic_filebuf::swap
 
 この `basic_filebuf` の内容を、指定された `basic_filebuf` の内容と交換します。
 
@@ -627,7 +627,7 @@ void swap(basic_filebuf& right);
 *右*\
 別の `basic_filebuf`への左辺値参照。
 
-## <a name="sync"></a>  basic_filebuf::sync
+## <a name="basic_filebufsync"></a><a name="sync"></a>  basic_filebuf::sync
 
 制御されているストリームと、関連付けられている外部ストリームとを同期しようと試みます。
 
@@ -639,7 +639,7 @@ virtual int sync();
 
 `fp` ファイルポインターが null ポインターの場合は0を返します。 それ以外の場合は、[オーバーフロー](#overflow)と `fflush(fp)` の両方の呼び出しが、保留中の出力をストリームにフラッシュする際に成功した場合にのみ、0を返します。
 
-## <a name="traits_type"></a>  basic_filebuf::traits_type
+## <a name="basic_filebuftraits_type"></a><a name="traits_type"></a>  basic_filebuf::traits_type
 
 型名を `Tr` テンプレート パラメーターに関連付けます。
 
@@ -647,7 +647,7 @@ virtual int sync();
 typedef Tr traits_type;
 ```
 
-## <a name="underflow"></a>  basic_filebuf::underflow
+## <a name="basic_filebufunderflow"></a><a name="underflow"></a>  basic_filebuf::underflow
 
 入力ストリームから現在の要素を抽出します。
 
@@ -659,7 +659,7 @@ virtual int_type underflow();
 
 関数が失敗した場合は、`traits_type::`[`eof`](../standard-library/char-traits-struct.md#eof)が返されます。 それ以外の場合は、「解説」の説明に従って変換された `ch`を返します。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 プロテクト仮想メンバー関数は、入力ストリームから現在の要素 `ch` の抽出を試み、要素を `traits_type::`[`to_int_type`](../standard-library/char-traits-struct.md#to_int_type)`(ch)`として返します。 これはさまざまな方法で行うことができます。
 

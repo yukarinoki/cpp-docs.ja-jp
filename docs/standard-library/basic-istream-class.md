@@ -34,12 +34,12 @@ helpviewer_keywords:
 - std::basic_istream [C++], tellg
 - std::basic_istream [C++], unget
 ms.assetid: c7c27111-de6d-42b4-95a3-a7e65259bf17
-ms.openlocfilehash: 68c7f7ffa9c32c16654e57c8249348d74cc83a5b
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: d614e00657de82b014af94df161775790ae417d3
+ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79424075"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80150786"
 ---
 # <a name="basic_istream-class"></a>basic_istream クラス
 
@@ -52,7 +52,7 @@ template <class Char_T, class Tr = char_traits<Char_T>>
 class basic_istream : virtual public basic_ios<Char_T, Tr>
 ```
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>コメント
 
 [operator>>](#op_gt_gt) をオーバーロードするメンバー関数のほとんどは、書式設定された入力関数です。 これらは以下のパターンに従います。
 
@@ -133,13 +133,13 @@ setstate(state);
 
 ### <a name="constructors"></a>コンストラクター
 
-|Constructor|Description|
+|コンストラクター|説明|
 |-|-|
 |[basic_istream](#basic_istream)|`basic_istream` 型のオブジェクトを構築します。|
 
 ### <a name="member-functions"></a>メンバー関数
 
-|メンバー関数|Description|
+|メンバー関数|説明|
 |-|-|
 |[gcount](#gcount)|書式設定されていない最後の入力中に読まれた文字数を返します。|
 |[get](#get)|入力ストリームから 1 つ以上の文字を読み取ります。|
@@ -156,20 +156,20 @@ setstate(state);
 |[tellg](#tellg)|ストリーム内の現在の読み取り位置を報告します。|
 |[unget](#unget)|最後に読み取った文字をストリームに戻します。|
 
-### <a name="operators"></a>オペレーター
+### <a name="operators"></a>演算子
 
-|演算子|Description|
+|演算子|説明|
 |-|-|
 |[operator>>](#op_gt_gt)|入力ストリームで関数を呼び出すか、または入力ストリームから書式設定されたデータを読み取ります。|
 |[operator=](#op_eq)|演算子の右辺の `basic_istream` をこのオブジェクトに代入します。 これは、コピーを残さない `rvalue` 参照を含む移動代入です。|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<istream >
 
 **名前空間:** std
 
-## <a name="basic_istream"></a>  basic_istream::basic_istream
+## <a name="basic_istreambasic_istream"></a><a name="basic_istream"></a>  basic_istream::basic_istream
 
 `basic_istream` 型のオブジェクトを構築します。
 
@@ -192,7 +192,7 @@ basic_istream(basic_istream&& right);
 *右*\
 コピーする `basic_istream` オブジェクト。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 最初のコンストラクターは、 [`init`](../standard-library/basic-ios-class.md#init)`(strbuf)`を呼び出すことによって、基本クラスを初期化します。 ゼロも抽出カウントに格納されます。 この抽出数の詳細については、 [Basic_istream クラス](../standard-library/basic-istream-class.md)の概要」の「解説」を参照してください。
 
@@ -202,7 +202,7 @@ basic_istream(basic_istream&& right);
 
 入力ストリームの詳細は、[basic_ifstream::basic_ifstream](../standard-library/basic-ifstream-class.md#basic_ifstream) の例を参照してください。
 
-## <a name="gcount"></a>  basic_istream::gcount
+## <a name="basic_istreamgcount"></a><a name="gcount"></a>  basic_istream::gcount
 
 書式設定されていない最後の入力中に読まれた文字数を返します。
 
@@ -214,7 +214,7 @@ streamsize gcount() const;
 
 抽出カウント。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 書式設定されていない文字を読み取るには、[basic_istream::get](#get) を使用します。
 
@@ -249,7 +249,7 @@ Type the letter 'a': a
 1
 ```
 
-## <a name="get"></a>  basic_istream::get
+## <a name="basic_istreamget"></a><a name="get"></a>  basic_istream::get
 
 入力ストリームから 1 つ以上の文字を読み取ります。
 
@@ -285,7 +285,7 @@ basic_istream<Char_T, Tr>& get(basic_streambuf<Char_T, Tr>& strbuf, Char_T delim
 
 get のパラメーターなしの形式は、整数またはファイルの終わりとして読み取られる要素を返します。 残りの形式はストリーム (* `this`) を返します。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 最初の書式設定されていない入力関数は、可能であれば `rdbuf->sbumpc`を返すことで、要素を抽出します。 それ以外の場合は `traits_type::`[`eof`](../standard-library/char-traits-struct.md#eof)を返します。 関数が要素を抽出しなかった場合は、 [`setstate`](../standard-library/basic-ios-class.md#setstate)`(failbit)`を呼び出します。
 
@@ -332,7 +332,7 @@ int main( )
 1111
 ```
 
-## <a name="getline"></a>  basic_istream::getline
+## <a name="basic_istreamgetline"></a><a name="getline"></a>  basic_istream::getline
 
 入力ストリームから行を取得します。
 
@@ -362,7 +362,7 @@ basic_istream<Char_T, Tr>& getline(
 
 ストリーム ( __* this__)。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 これらの書式設定されていない入力関数の1つ目は `getline(str, count, widen('\n'))`を返します。
 
@@ -397,7 +397,7 @@ int main( )
 121
 ```
 
-## <a name="ignore"></a>  basic_istream::ignore
+## <a name="basic_istreamignore"></a><a name="ignore"></a>  basic_istream::ignore
 
 複数の要素を、現在読み取った位置からスキップさせます。
 
@@ -419,7 +419,7 @@ basic_istream<Char_T, Tr>& ignore(
 
 ストリーム ( __* this__)。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 書式設定されていない入力関数は、最大*数*の要素を抽出し、それらを破棄します。 ただし、 *count*が `numeric_limits<int>::max`の場合は、任意の大きさとして取得されます。 抽出は、ファイルの終わりまたは要素 `Ch` の早い段階で停止します。これにより `traits_type::`[`to_int_type`](../standard-library/char-traits-struct.md#to_int_type)`(Ch)` は、*区切り記号*(も抽出されます) と等しいかどうかを比較します。 この関数は __* this__を返します。
 
@@ -445,7 +445,7 @@ Type 'abcdef': abcdef
 def
 ```
 
-## <a name="op_gt_gt"></a>basic\_istream:: operator > >
+## <a name="basic_istreamoperator"></a><a name="op_gt_gt"></a>basic\_istream:: operator > >
 
 入力ストリームで関数を呼び出すか、または入力ストリームから書式設定されたデータを読み取ります。
 
@@ -484,7 +484,7 @@ basic_istream& operator>>(long double& val);
 
 ストリーム ( __* this__)。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 \<istream > ヘッダーでは、いくつかのグローバル抽出演算子も定義されています。 詳細については、「[operator>> (\<istream>)](../standard-library/istream-operators.md#op_gt_gt)」を参照してください。
 
@@ -574,7 +574,7 @@ int main( )
 }
 ```
 
-## <a name="op_eq"></a>  basic_istream::operator=
+## <a name="basic_istreamoperator"></a><a name="op_eq"></a>  basic_istream::operator=
 
 演算子の右辺の `basic_istream` をこのオブジェクトに代入します。 これは、コピーを残さない `rvalue` 参照を含む移動代入です。
 
@@ -591,11 +591,11 @@ basic_istream& operator=(basic_istream&& right);
 
 __* This__を返します。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 このメンバー演算子は `swap(right)`を呼び出します。
 
-## <a name="peek"></a>  basic_istream::peek
+## <a name="basic_istreampeek"></a><a name="peek"></a>  basic_istream::peek
 
 読み取る次の文字を返します。
 
@@ -607,7 +607,7 @@ int_type peek();
 
 読み取る次の文字。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 書式設定されていない入力関数は、可能であれば `rdbuf->`[`sgetc`](../standard-library/basic-streambuf-class.md#sgetc)を返すことで、要素を抽出します。 それ以外の場合は `traits_type::`[`eof`](../standard-library/char-traits-struct.md#eof)を返します。
 
@@ -640,7 +640,7 @@ Type 'abcde': abcde
 a abcde
 ```
 
-## <a name="putback"></a>  basic_istream::putback
+## <a name="basic_istreamputback"></a><a name="putback"></a>  basic_istream::putback
 
 ストリームに指定された文字を配置します。
 
@@ -658,7 +658,7 @@ basic_istream<Char_T, Tr>& putback(
 
 ストリーム ( __* this__)。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 書式設定されていない[入力関数](../standard-library/basic-istream-class.md)は、可能であれば、 [`rdbuf`](../standard-library/basic-ios-class.md#rdbuf)`->`[`sputbackc`](../standard-library/basic-streambuf-class.md#sputbackc)を呼び出すことによって、 *Ch*を戻します。 `rdbuf` が null ポインターの場合、または `sputbackc` の呼び出しによって `traits_type::`[`eof`](../standard-library/char-traits-struct.md#eof)が返された場合、関数は[`setstate`](../standard-library/basic-ios-class.md#setstate)`(badbit)`を呼び出します。 どのような場合でも、 __* this__が返されます。
 
@@ -686,7 +686,7 @@ int main( )
 qwq
 ```
 
-## <a name="read"></a>  basic_istream::read
+## <a name="basic_istreamread"></a><a name="read"></a>  basic_istream::read
 
 指定された数の文字をストリームから読み取り、配列に保存します。
 
@@ -710,7 +710,7 @@ basic_istream<Char_T, Tr>& read(
 
 ストリーム ( `*this`)。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 書式設定されていない入力関数は、最大*数*の要素を抽出し、 *str*から始まる配列に格納します。 抽出は、ファイルの終わりの早い段階で停止します。この場合、関数は[`setstate`](../standard-library/basic-ios-class.md#setstate)`(failbit)`を呼び出します。 どのような場合でも、 __* this__が返されます。
 
@@ -747,7 +747,7 @@ Type 'abcde': abcde
 abcde
 ```
 
-## <a name="readsome"></a>  basic_istream::readsome
+## <a name="basic_istreamreadsome"></a><a name="readsome"></a>  basic_istream::readsome
 
 指定した文字の値の数を読み取ります。
 
@@ -771,7 +771,7 @@ streamsize readsome(
 
 実際に読み取った文字数 ( [`gcount`](#gcount))。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 この書式設定されていない入力関数は、入力ストリームから*数*個の要素を抽出し、配列*str*に格納します。
 
@@ -806,7 +806,7 @@ int main( )
 }
 ```
 
-## <a name="seekg"></a>  basic_istream::seekg
+## <a name="basic_istreamseekg"></a><a name="seekg"></a>  basic_istream::seekg
 
 ストリームでの読み取り位置を移動させます。
 
@@ -831,14 +831,14 @@ basic_istream<Char_T, Tr>& seekg(off_type off, ios_base::seekdir way);
 
 ストリーム ( __* this__)。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 1 つ目のメンバー関数は絶対シークを実行し、2 つ目のメンバー関数は相対シークを実行します。
 
 > [!NOTE]
 > 標準 C++ ではテキスト ファイルでの相対シークをサポートしていないため、2 つ目のメンバー関数をテキスト ファイルで使用しないでください。
 
-[`fail`](../standard-library/basic-ios-class.md#fail)が false の場合、1つ目のメンバー関数は、一部の`pubseekpos`一時オブジェクト`(pos)`に対して `newpos = `[`rdbuf`](../standard-library/basic-ios-class.md#rdbuf)`->`[`pos_type`](../standard-library/basic-streambuf-class.md#pubseekpos) `newpos`を呼び出します。 `fail` が false の場合、2番目の関数は `newpos = rdbuf->`[`pubseekoff`](../standard-library/basic-streambuf-class.md#pubseekoff)`( off, way)`を呼び出します。 どちらの場合も、`(off_type)newpos == (off_type)(-1)` (配置操作が失敗) すると、関数は `istr.`[`setstate`](../standard-library/basic-ios-class.md#setstate)`(failbit)`を呼び出します。 どちらの関数も __* this__を返します。
+[`fail`](../standard-library/basic-ios-class.md#fail)が false の場合、1つ目のメンバー関数は、一部の`pubseekpos`一時オブジェクト`(pos)`に対して `newpos =` [`rdbuf`](../standard-library/basic-ios-class.md#rdbuf)`->`[`pos_type`](../standard-library/basic-streambuf-class.md#pubseekpos) `newpos`を呼び出します。 `fail` が false の場合、2番目の関数は `newpos = rdbuf->`[`pubseekoff`](../standard-library/basic-streambuf-class.md#pubseekoff)`( off, way)`を呼び出します。 どちらの場合も、`(off_type)newpos == (off_type)(-1)` (配置操作が失敗) すると、関数は `istr.`[`setstate`](../standard-library/basic-ios-class.md#setstate)`(failbit)`を呼び出します。 どちらの関数も __* this__を返します。
 
 [`fail`](../standard-library/basic-ios-class.md#fail)が true の場合、メンバー関数は何も行いません。
 
@@ -863,7 +863,7 @@ int main ( )
 }
 ```
 
-## <a name="sentry"></a>  basic_istream::sentry
+## <a name="basic_istreamsentry"></a><a name="sentry"></a>  basic_istream::sentry
 
 この入れ子になったクラスは、オブジェクトの宣言が書式設定された入力関数と書式設定されていない入力関数を構築するオブジェクトについて記述します。
 
@@ -877,17 +877,17 @@ class sentry {
    };
 ```
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 `_Istr.`[`good`](../standard-library/basic-ios-class.md#good)が true の場合、コンストラクターは次のようになります。
 
 - `_Istr.tie` が null ポインターでない場合は、`_Istr.`[`tie`](../standard-library/basic-ios-class.md#tie)`->`[`flush`](../standard-library/basic-ostream-class.md#flush)を呼び出します。
 
-- `_Istr.`[`flags`](../standard-library/ios-base-class.md#flags) [` & ``skipws`が 0](../standard-library/ios-functions.md#skipws)以外の場合に[`ws`](../standard-library/istream-functions.md#ws)`(_Istr)` を効果的に呼び出します。
+- `_Istr.`[`flags`](../standard-library/ios-base-class.md#flags) [`&``skipws`が 0](../standard-library/ios-functions.md#skipws)以外の場合に[`ws`](../standard-library/istream-functions.md#ws)`(_Istr)` を効果的に呼び出します。
 
 このような準備の後、`_Istr.good` が false の場合、コンストラクターは `_Istr.`[`setstate`](../standard-library/basic-ios-class.md#setstate)`(failbit)`を呼び出します。 いずれの場合も、コンストラクターは、`_Istr.good` によって返された値を `status`に格納します。 後で `operator bool` を呼び出すと、この格納された値が配信されます。
 
-## <a name="swap"></a>  basic_istream::swap
+## <a name="basic_istreamswap"></a><a name="swap"></a>  basic_istream::swap
 
 2 つの `basic_istream` オブジェクトの内容を交換します。
 
@@ -900,11 +900,11 @@ void swap(basic_istream& right);
 *右*\
 `basic_istream` オブジェクトへの左辺値参照。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 このメンバー関数は[`basic_ios::swap`](../standard-library/basic-ios-class.md#swap)`(right)`を呼び出します。 また、抽出カウントを*右側*の抽出カウントと交換します。
 
-## <a name="sync"></a>  basic_istream::sync
+## <a name="basic_istreamsync"></a><a name="sync"></a>  basic_istream::sync
 
 ストリームの関連付けられた入力デバイスをストリームのバッファーと同期します。
 
@@ -916,7 +916,7 @@ int sync();
 
 [`rdbuf`](../standard-library/basic-ios-class.md#rdbuf)が null ポインターの場合、この関数は-1 を返します。 それ以外の場合は `rdbuf->`[`pubsync`](../standard-library/basic-streambuf-class.md#pubsync)を呼び出します。 この呼び出しで-1 が返された場合、関数は[`setstate`](../standard-library/basic-ios-class.md#setstate)`(badbit)` を呼び出し、-1 を返します。 それ以外の場合、関数は 0 を返します。
 
-## <a name="tellg"></a>  basic_istream::tellg
+## <a name="basic_istreamtellg"></a><a name="tellg"></a>  basic_istream::tellg
 
 ストリーム内の現在の読み取り位置を報告します。
 
@@ -928,7 +928,7 @@ pos_type tellg();
 
 ストリームの現在の位置。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 [`fail`](../standard-library/basic-ios-class.md#fail)が false の場合、メンバー関数は[`pubseekoff`](../standard-library/basic-streambuf-class.md#pubseekoff)`(0, cur, in)``->`[`rdbuf`](../standard-library/basic-ios-class.md#rdbuf)を返します。 それ以外の場合は `pos_type(-1)`を返します。
 
@@ -958,7 +958,7 @@ int main()
 }
 ```
 
-## <a name="unget"></a>  basic_istream::unget
+## <a name="basic_istreamunget"></a><a name="unget"></a>  basic_istream::unget
 
 最後に読み取った文字をストリームに戻します。
 
@@ -970,7 +970,7 @@ basic_istream<Char_T, Tr>& unget();
 
 ストリーム ( __* this__)。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 書式設定されていない[入力関数](../standard-library/basic-istream-class.md)は、可能であれば、`rdbuf->`[`sungetc`](../standard-library/basic-streambuf-class.md#sungetc)を呼び出すことによって、ストリーム内の前の要素を戻します。 [`rdbuf`](../standard-library/basic-ios-class.md#rdbuf)が null ポインターの場合、または `sungetc` の呼び出しによって `traits_type::`[`eof`](../standard-library/basic-ios-class.md#eof)が返された場合、関数は[`setstate`](../standard-library/basic-ios-class.md#setstate)`(badbit)`を呼び出します。 どのような場合でも、 __* this__が返されます。
 

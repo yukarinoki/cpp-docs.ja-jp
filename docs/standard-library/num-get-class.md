@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::num_get [C++], do_get
 - std::num_get [C++], get
 ms.assetid: 9933735d-3918-4b17-abad-5fca2adc62d7
-ms.openlocfilehash: bf6623bb61e7a217fcc18a268a583a7ecea4931d
-ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
+ms.openlocfilehash: 58ff645a381fd55c591a2566b2e698f0e9821935
+ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72889988"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80150617"
 ---
 # <a name="num_get-class"></a>num_get クラス
 
@@ -34,13 +34,13 @@ class num_get : public locale::facet;
 
 ### <a name="parameters"></a>パラメーター
 
-*Chartype* \
+*Chartype*\
 ロケールの文字をエンコードするためにプログラム内で使用される型。
 
-*InputIterator* \
+*InputIterator*\
 数値の get 関数が入力を読み取る反復子の型。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
 すべてのロケールのファセットと同様、静的オブジェクト ID に最初に格納されている値は 0 です。 格納されている値に初めてアクセスしようとすると、**id** に一意の正の値が格納されます。
 
@@ -50,9 +50,9 @@ class num_get : public locale::facet;
 |-|-|
 |[num_get](#num_get)|シーケンスから数値を抽出するために使用される `num_get` 型のオブジェクトのコンストラクター。|
 
-### <a name="typedefs"></a>Typedef
+### <a name="typedefs"></a>Typedefs
 
-|型名|説明|
+|種類の名前。|説明|
 |-|-|
 |[char_type](#char_type)|ロケールによって使用される文字を表すために使用される型。|
 |[iter_type](#iter_type)|入力反復子を表す型。|
@@ -64,13 +64,13 @@ class num_get : public locale::facet;
 |[do_get](#do_get)|文字シーケンスから数値またはブール値を抽出するために呼び出される仮想関数。|
 |[get](#get)|文字シーケンスから数値のまたはブール値を抽出します。|
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>要件
 
-**ヘッダー:** \<locale>
+**ヘッダー:** \<ロケール >
 
 **名前空間:** std
 
-## <a name="char_type"></a>  num_get::char_type
+## <a name="num_getchar_type"></a><a name="char_type"></a>  num_get::char_type
 
 ロケールによって使用される文字を表すために使用される型。
 
@@ -78,11 +78,11 @@ class num_get : public locale::facet;
 typedef CharType char_type;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 この型は、テンプレート パラメーター **CharType** のシノニムです。
 
-## <a name="do_get"></a>  num_get::do_get
+## <a name="num_getdo_get"></a><a name="do_get"></a>  num_get::do_get
 
 文字シーケンスから数値またはブール値を抽出するために呼び出される仮想関数。
 
@@ -167,26 +167,26 @@ virtual iter_type do_get(
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*の \
+*最初*の\
 数値を読み取る文字の範囲の開始位置。
 
-*最後*の \
+*最後*の\
 数値を読み取る文字の範囲の終了位置。
 
-*iosbase. flags* \
+*iosbase. flags*\
 変換で使用されるフラグが含まれる [Ios_base](../standard-library/ios-base-class.md)。
 
 *状態*\
 失敗した場合に failbit が追加される状態 (「[ios_base::iostate](../standard-library/ios-base-class.md#iostate)」を参照)。
 
-*val* \
+*val*\
 読み取られた値。
 
 ### <a name="return-value"></a>戻り値
 
 値が読み取られた後の反復子。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 1 番目のプロテクト仮想メンバー関数:
 
@@ -199,7 +199,7 @@ virtual iter_type do_get(
     long& val) const;
 ```
 
-空でない完全な整数入力フィールドを認識するまで、シーケンス `[first, last)` の*先頭*から始まる連続する要素に一致します。 成功した場合は、このフィールドを**long**型と同等の値に変換し、結果を*val*に格納します。 これは、数値入力フィールドを超える先頭の要素を指す反復子を返します。 それ以外の場合、関数は、 *val*に nothing を格納し、`state`で `ios_base::failbit` を設定します。 これは、有効な整数入力フィールドのプレフィックスを超える先頭の要素を指す反復子を返します。 いずれの場合も、戻り値が `last` と等しい場合、関数は `state` に `ios_base::eofbit` を設定します。
+空でない完全な整数入力フィールドを認識するまで、シーケンス `[first, last)` の*先頭*から始まる連続する要素に一致します。 成功した場合は、このフィールドを**long**型と同等の値に変換し、結果を*val*に格納します。 これは、数値入力フィールドを超える先頭の要素を指す反復子を返します。 それ以外の場合、関数は、 *val*に nothing を格納し、`state`で `ios_base::failbit` を設定します。 これは、有効な整数入力フィールドのプレフィックスを超える先頭の要素を指す反復子を返します。 いずれの場合も、戻り値が `last` と等しい場合、関数は `ios_base::eofbit` に `state` を設定します。
 
 整数入力フィールドは、ファイルから一連の**char**要素を照合して変換するために、スキャン機能によって使用されるのと同じ規則によって変換されます。 (このような**char**要素は、単純な一対一のマッピングによって `Elem` 型の同等の要素にマップされると想定されます)。同等のスキャン変換仕様は、次のように決定されます。
 
@@ -211,11 +211,11 @@ virtual iter_type do_get(
 
 それ以外の場合、変換仕様は `ld` です。
 
-整数入力フィールドの形式は、[ロケールファセット](../standard-library/locale-class.md#facet_class)によってさらに決定されます。これは`fac` call [use_facet](../standard-library/locale-functions.md#use_facet) `<`[numpunct](../standard-library/numpunct-class.md)`<Elem>(iosbase.`[ios_base:: getloc](../standard-library/ios-base-class.md#getloc)`())`によって返されます。 具体的には、次のように使用します。
+整数入力フィールドの形式は、[ロケールファセット](../standard-library/locale-class.md#facet_class)によってさらに決定されます。これは`fac` 呼び出し[use_facet](../standard-library/locale-functions.md#use_facet) `<`[numpunct](../standard-library/numpunct-class.md)`<Elem>(iosbase.`[ios_base:: getloc](../standard-library/ios-base-class.md#getloc)`())`によって返されます。 具体的な内容は次のとおりです。
 
-`fac.`[numpunct:: grouping](../standard-library/numpunct-class.md#grouping)`()` は、小数点の左側に桁をグループ化する方法を決定します。
+`fac.`[numpunct::grouping](../standard-library/numpunct-class.md#grouping)`()` は、小数点の左側の数字をグループ化する方法を決定します。
 
-`fac.`[numpunct:: thousands_sep](../standard-library/numpunct-class.md#thousands_sep)`()` は、小数点の左側にある数字のグループを区切るシーケンスを決定します。
+`fac.`[numpunct::thousands_sep](../standard-library/numpunct-class.md#thousands_sep)`()` は、小数点の左側にある数字のグループを区切るシーケンスを決定します。
 
 数値入力フィールドに `fac.thousands_sep()` のインスタンスがない場合、グループ化の制約は強制されません。 それ以外の場合は、`fac.grouping()` によって強制されたグループ化の制約が適用され、スキャンの変換が行われる前に区切り記号が削除されます。
 
@@ -284,7 +284,7 @@ virtual iter_type do_get(
 
 この関数の動作は 1 番目と同じですが、空でない完全な浮動小数点入力フィールドとの一致を試みる点が異なります。 `fac.`[numpunct::decimal_point](../standard-library/numpunct-class.md#decimal_point)`()` は、整数桁と小数桁を区切るシーケンスを決定します。 同等のスキャン変換指定子は `lf` です。
 
-9 番目のプロテクト仮想メンバー関数:
+10 番目のプロテクト仮想メンバー関数:
 
 ```cpp
 virtual iter_type do_get(
@@ -329,7 +329,7 @@ virtual iter_type do_get(
 
 [get](#get) の例 (仮想メンバー関数が `do_get` で呼び出される) を参照してください。
 
-## <a name="get"></a>  num_get::get
+## <a name="num_getget"></a><a name="get"></a>  num_get::get
 
 文字シーケンスから数値のまたはブール値を抽出します。
 
@@ -414,34 +414,34 @@ iter_type get(
 
 ### <a name="parameters"></a>パラメーター
 
-*最初*の \
+*最初*の\
 数値を読み取る文字の範囲の開始位置。
 
-*最後*の \
+*最後*の\
 数値を読み取る文字の範囲の終了位置。
 
-*iosbase. flags* \
+*iosbase. flags*\
 変換で使用されるフラグが含まれる [Ios_base](../standard-library/ios-base-class.md)。
 
 *状態*\
 失敗した場合に failbit が追加される状態 (「[ios_base::iostate](../standard-library/ios-base-class.md#iostate)」を参照)。
 
-*val* \
+*val*\
 読み取られた値。
 
 ### <a name="return-value"></a>戻り値
 
 値が読み取られた後の反復子。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-すべてのメンバー関数は、 [do_get](#do_get)`( first, last, iosbase, state, val)`を返します。
+すべてのメンバー関数は[do_get](#do_get)`( first, last, iosbase, state, val)`を返します。
 
 1 番目のプロテクト仮想メンバー関数は、シーケンス [ `first`, `last`) の先頭から始め、空でない完全な整数入力フィールドを認識するまで、連続した要素との一致を試みます。 成功した場合は、このフィールドを**long**型と同等の値に変換し、結果を*val*に格納します。 これは、数値入力フィールドを超える先頭の要素を指す反復子を返します。 それ以外の場合、関数は、 *val*に何も格納せず、*状態*の `ios_base::failbit` を設定します。 これは、有効な整数入力フィールドのプレフィックスを超える先頭の要素を指す反復子を返します。 どちらの場合も、戻り値が*last*と等しい場合、関数は*状態*の `ios_base::eofbit` を設定します。
 
 整数入力フィールドは、ファイルから一連の**char**要素を照合して変換するために、スキャン機能によって使用されるのと同じ規則によって変換されます。 このような**char**要素は、単純な一対一のマッピングによって `CharType` 型の同等の要素にマップされると想定されます。 同等のスキャン変換仕様は次のように決定されます。
 
-- `iosbase.`[フラグ](../standard-library/ios-base-class.md#flags)` & ios_base::basefield == ios_base::`[oct](../standard-library/ios-functions.md#oct)の場合、変換指定は `lo`ます。
+- `iosbase.`[フラグ](../standard-library/ios-base-class.md#flags)`& ios_base::basefield == ios_base::`[oct](../standard-library/ios-functions.md#oct)の場合、変換指定は `lo`ます。
 
 - `iosbase.flags & ios_base::basefield == ios_base::`[hex](../standard-library/ios-functions.md#hex) の場合、変換仕様は `lx` です。
 
@@ -449,7 +449,7 @@ iter_type get(
 
 - それ以外の場合、変換仕様は `ld` です。
 
-整数入力フィールドの形式は、 [getloc](../standard-library/ios-base-class.md#getloc)`())``<Elem>(iosbase.`[`numpunct`](../standard-library/numpunct-class.md) call [use_facet](../standard-library/locale-functions.md#use_facet)`<`によって返される[ロケールファセット](../standard-library/locale-class.md#facet_class)`fac` よってさらに決定されます。 具体的には、次のように使用します。
+整数入力フィールドの形式は、[ロケールファセット](../standard-library/locale-class.md#facet_class)によってさらに決定されます。これは、呼び出し[use_facet](../standard-library/locale-functions.md#use_facet)`<`[`numpunct`](../standard-library/numpunct-class.md)`<Elem>(iosbase.`[getloc](../standard-library/ios-base-class.md#getloc)`())`によって返さ `fac` ます。 具体的な内容は次のとおりです。
 
 - `fac.`[グループ化](../standard-library/numpunct-class.md#grouping)は、小数点の左側に桁をグループ化する方法を決定します。
 
@@ -491,7 +491,7 @@ virtual iter_type do_get(iter_type first,
     long double& val) const;
 ```
 
-同等のスキャン変換指定子が `Lf` という点を除いて、3番目と同じ動作になります。
+同等のスキャン変換指定子が `Lf`という点を除いて、3番目と同じ動作になります。
 
 5 番目のプロテクト仮想メンバー関数:
 
@@ -551,7 +551,7 @@ int main( )
 }
 ```
 
-## <a name="iter_type"></a>  num_get::iter_type
+## <a name="num_getiter_type"></a><a name="iter_type"></a>  num_get::iter_type
 
 入力反復子を表す型。
 
@@ -559,11 +559,11 @@ int main( )
 typedef InputIterator iter_type;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
-この型は、テンプレート パラメーター `InputIterator` のシノニムです。
+この型は、テンプレート パラメーター `InputIterator`のシノニムです。
 
-## <a name="num_get"></a>  num_get::num_get
+## <a name="num_getnum_get"></a><a name="num_get"></a>  num_get::num_get
 
 シーケンスから数値を抽出するために使用される `num_get` 型のオブジェクトのコンストラクター。
 
@@ -573,10 +573,10 @@ explicit num_get(size_t refs = 0);
 
 ### <a name="parameters"></a>パラメーター
 
-*refs* \
+*refs*\
 オブジェクトのメモリ管理のタイプを指定するために使用する整数値。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>コメント
 
 *Refs*パラメーターに指定できる値とその意味は次のとおりです。
 
@@ -590,7 +590,7 @@ explicit num_get(size_t refs = 0);
 
 コンストラクターは `locale::`[ファセット](../standard-library/locale-class.md#facet_class)`(refs)`を使用して、その基本オブジェクトを初期化します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [\<locale>](../standard-library/locale.md)\
 [facet クラス](../standard-library/locale-class.md#facet_class)\

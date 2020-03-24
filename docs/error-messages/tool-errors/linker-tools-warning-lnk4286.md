@@ -5,31 +5,31 @@ f1_keywords:
 - LNK4286
 helpviewer_keywords:
 - LNK4286
-ms.openlocfilehash: 43ed18808ba5ce632dd7dc7095f7bc30e4497ec9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d0205ba065f6e410383c38a0f1c2eaa0da55fe93
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62352438"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80173869"
 ---
 # <a name="linker-tools-warning-lnk4286"></a>リンカー ツールの警告 LNK4286
 
-> シンボル '*シンボル*'で定義されている'*filename_1.obj*'によってインポートされる'*filename_2.obj*'
+> '*filename_1. .obj*' で定義されたシンボル '*symbol*' は '*filename_2 .obj*' によってインポートされます
 
-[_declspec](../../cpp/dllexport-dllimport.md)が指定されました*シンボル*オブジェクト ファイルでシンボルが定義されている場合でも*filename_1.obj*で同じイメージ。 削除、`__declspec(dllimport)`修飾子をこの警告を解決します。
+シンボルが同じイメージ内のオブジェクトファイル*filename_1*で定義されている場合でも、*シンボル*に[__declspec (dllimport)](../../cpp/dllexport-dllimport.md)が指定されました。 この警告を解決するには、`__declspec(dllimport)` 修飾子を削除します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-警告 LNK4286 がより一般的なバージョンの[リンカー ツールの警告 LNK4217](linker-tools-warning-lnk4217.md)します。 リンカーでは、オブジェクト ファイルの参照、シンボルがない関数に通知されることと、警告 LNK4286 が生成されます。
+Warning LNK4286 は、より一般的なバージョンの[リンカーツールの警告 LNK4217](linker-tools-warning-lnk4217.md)です。 リンカーは、シンボルを参照しているオブジェクトファイルがどの関数であるかを判断できる場合、警告 LNK4286 を生成します。
 
-LNK4286 を解決するには、削除、`__declspec(dllimport)`の事前宣言から宣言修飾子*シンボル*で参照される*filename_2.obj*します。
+LNK4286 を解決するには、 *filename_2*で参照される*シンボル*の事前宣言から `__declspec(dllimport)` 宣言修飾子を削除します。
 
-最終的に生成されたコードが正しく動作しますが、インポートされた関数を呼び出す生成されたコードは、関数を直接呼び出すよりも非効率です。 使用してコンパイルするときに、この警告は表示されない、 [/clr](../../build/reference/clr-common-language-runtime-compilation.md)オプション。
+最終的に生成されたコードは正しく動作しますが、インポートされた関数を呼び出すために生成されるコードは、関数を直接呼び出すよりも効率が悪くなります。 この警告は、 [/clr](../../build/reference/clr-common-language-runtime-compilation.md)オプションを使用してコンパイルした場合には表示されません。
 
-詳細については、インポートし、データの宣言をエクスポートを参照してください。 [dllexport、dllimport](../../cpp/dllexport-dllimport.md)します。
+データのインポートとエクスポートの宣言の詳細については、「 [dllexport、dllimport](../../cpp/dllexport-dllimport.md)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[リンカー ツールの警告 LNK4049](linker-tools-warning-lnk4049.md) \
-[リンカー ツールの警告 LNK4217](linker-tools-warning-lnk4217.md) \
+[リンカーツールの警告 LNK4049](linker-tools-warning-lnk4049.md) \
+[リンカーツールの警告 LNK4217](linker-tools-warning-lnk4217.md) \
 [dllexport、dllimport](../../cpp/dllexport-dllimport.md)

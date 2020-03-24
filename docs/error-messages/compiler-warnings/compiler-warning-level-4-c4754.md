@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4754
 ms.assetid: e0e4606a-754a-4f42-a274-21a34978d21d
-ms.openlocfilehash: 203f2b97547c7ff8b1d68e3640e62d531b2600e9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f55d40044fef58275ad0e1fbd281b5f1af43c243
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388580"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80198134"
 ---
 # <a name="compiler-warning-level-4-c4754"></a>コンパイラの警告 (レベル 4) C4754
 
@@ -19,11 +19,11 @@ ms.locfileid: "62388580"
 
 比較の結果が常に同じであるため、C4754 警告が出力されます。 これは、条件のいずれかの分岐が実行されることがないことを示します。ほとんどの場合、関連付けられた整数式が間違っているためです。 このコードの欠陥は、多くの場合、64 ビット アーキテクチャでの間違った整数オーバーフローのチェックで発生します。
 
-整数変換の規則は複雑であり、気付きにくい落とし穴が数多くあります。 C4754 警告を修正する代わりに、使用するコードを更新することができます、 [SafeInt ライブラリ](../../safeint/safeint-library.md)します。
+整数変換の規則は複雑であり、気付きにくい落とし穴が数多くあります。 各 C4754 警告を修正する代わりに、 [SafeInt ライブラリ](../../safeint/safeint-library.md)を使用するようにコードを更新することもできます。
 
 ## <a name="example"></a>例
 
-この例では、C4754 が生成されます。
+このサンプルでは、C4754 が生成されます。
 
 ```cpp
 // C4754a.cpp
@@ -96,7 +96,7 @@ Warning C4754: Conversion rules for arithmetic operations in the comparison at C
 if (a + (unsigned long)sizeof(unsigned long) < a)
 ```
 
-**注**コンパイラの警告で参照される行番号は、ステートメントの最後の行。 複数の行にまたがる複雑な条件文に関する警告メッセージでは、コードの欠陥がある行は、報告された行の前の数行になる場合があります。 例:
+**メモ**コンパイラの警告で参照されている行番号は、ステートメントの最後の行です。 複数の行にまたがる複雑な条件文に関する警告メッセージでは、コードの欠陥がある行は、報告された行の前の数行になる場合があります。 次に例を示します。
 
 ```cpp
 unsigned long a;

@@ -2,12 +2,12 @@
 title: テンプレートと名前解決
 ms.date: 11/04/2016
 ms.assetid: 519ba7b5-cd25-4549-865a-9a7b9dffdc28
-ms.openlocfilehash: e4a53df0a192c1d7b7f376e4401eb99fcbf7d481
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 693a2e69446410531d6a02047e8f230542362033
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62266752"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160802"
 ---
 # <a name="templates-and-name-resolution"></a>テンプレートと名前解決
 
@@ -73,6 +73,6 @@ ms.locfileid: "62266752"
 
 型に依存する式と値に依存する式は、型依存または値依存である変数が関係する式です。 これらの式は、テンプレートに使用されたパラメーターに応じて異なるセマンティクスを持つことができます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [テンプレート](../cpp/templates-cpp.md)

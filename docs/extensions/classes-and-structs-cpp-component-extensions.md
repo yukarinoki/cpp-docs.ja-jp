@@ -13,12 +13,12 @@ helpviewer_keywords:
 - value struct keyword [C++]
 - ref struct keyword [C++]
 ms.assetid: 5c360764-b229-49c6-9357-66213afbc372
-ms.openlocfilehash: dd58f32d031068785cd6020549f9eea4b2182786
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 78cf7cf16c4ccf29f72038fd79c5d7a1689c05ac
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "79544664"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172569"
 ---
 # <a name="ref-class-and-ref-struct--ccli-and-ccx"></a>ref class と ref struct (C++/CLI および C++/CX)
 
@@ -57,7 +57,7 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 
 詳細については、Windows ランタイムと共通言語ランタイムに関するセクションで、このパラメーターの言語別の説明を参照してください。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 **ref class** または **value class** で宣言されたオブジェクトの既定のメンバーのアクセシビリティは **private** です。 また、**ref struct** または **value struct** で宣言されたオブジェクトの既定のメンバーのアクセシビリティは **public** です。
 
@@ -85,7 +85,7 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 
 ## <a name="windows-runtime"></a>Windows ランタイム
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 [Ref クラスと構造体](../cppcx/ref-classes-and-structs-c-cx.md)と「[値クラスと構造体](../cppcx/value-classes-and-structs-c-cx.md)」を参照してください。
 
@@ -98,13 +98,13 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 
 **value class** または **value struct** キーワードを使用してオブジェクトを宣言すると、宣言されたオブジェクトのオブジェクト有効期間は監視されません。 このオブジェクトは、C++ の他の標準のクラスや構造体と同様です。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/ZW`
 
 ## <a name="common-language-runtime"></a>共通言語ランタイム
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 次の表に、「**すべてのランタイム**」セクションに示されている構文の C++/CLI に固有の違いを示します。
 
@@ -117,7 +117,7 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 
 **value class** キーワードと **value struct** キーワードを指定すると、コンパイラは、割り当てられたクラスまたは構造体の値を関数に渡すか、メンバーに格納します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/clr`
 

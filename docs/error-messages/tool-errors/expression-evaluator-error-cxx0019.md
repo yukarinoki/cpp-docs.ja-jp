@@ -7,29 +7,29 @@ helpviewer_keywords:
 - CXX0019
 - CAN0019
 ms.assetid: 4c6431fd-3310-4a61-934d-58b070b330fe
-ms.openlocfilehash: 266e97f28cf0f27cb87e9743399c66aba87c0e8d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 61646462eeba4918a4993b23f7f4b394083296ce
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397108"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80195891"
 ---
 # <a name="expression-evaluator-error-cxx0019"></a>式エバリュエーター エラー CXX0019
 
-無効な型キャスト
+不適切な型キャスト
 
-C の式エバリュエーターでは、型キャストを実行できません。
+C 式エバリュエーターは、記述された型キャストを実行できません。
 
-このエラーは、can0019 と同じものと同じです。
+このエラーは CAN0019 と同じです。
 
 ### <a name="to-fix-by-checking-the-following-possible-causes"></a>次のような原因をチェックして問題を解決するには
 
-1. 指定した型が不明です。
+1. 指定された型は不明です。
 
-1. ポインター型のレベルが多すぎますが発生しました。 たとえば、型キャスト
+1. ポインター型のレベルが多すぎました。 たとえば、型キャストです。
 
     ```
     (char **)h_message
     ```
 
-   C の式エバリュエーターによって評価ことはできません。
+   は、C 式エバリュエーターで評価することはできません。

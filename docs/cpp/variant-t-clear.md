@@ -9,18 +9,18 @@ helpviewer_keywords:
 - Clear method [C++]
 - VARIANT object
 ms.assetid: 844d43fa-9628-4643-a877-c1e129838b4e
-ms.openlocfilehash: 698dbfe77c82ac2f0425ed1c1bff4d917ed86f4e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bd6a9ebc58845e88e5e82a4e29f5ccc2a46bebfb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165895"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160477"
 ---
-# <a name="varianttclear"></a>_variant_t::Clear
+# <a name="_variant_tclear"></a>_variant_t::Clear
 
 **Microsoft 固有の仕様**
 
-カプセル化されたクリア`VARIANT`オブジェクト。
+カプセル化された `VARIANT` オブジェクトをクリアします。
 
 ## <a name="syntax"></a>構文
 
@@ -28,12 +28,12 @@ ms.locfileid: "62165895"
 void Clear( );
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-呼び出し`VariantClear`でカプセル化された`VARIANT`オブジェクト。
+カプセル化された `VARIANT` オブジェクトで `VariantClear` を呼び出します。
 
 **Microsoft 固有の仕様はここまで**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [_variant_t クラス](../cpp/variant-t-class.md)

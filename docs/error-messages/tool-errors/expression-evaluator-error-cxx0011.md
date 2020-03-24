@@ -7,17 +7,17 @@ helpviewer_keywords:
 - CAN0011
 - CXX0011
 ms.assetid: c2252e89-ad66-43fc-93e4-b886dcbd3f19
-ms.openlocfilehash: b22b7e39fc2d7436d83bc4fa7cfec49a42ddf06a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 68b6087d28b9b3ac5dbaf833cbd544ca4ea22132
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397199"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196158"
 ---
 # <a name="expression-evaluator-error-cxx0011"></a>式エバリュエーター エラー CXX0011
 
-右角かっこがありません。
+右角かっこがありません
 
-式には、負荷が不均衡の角かっこが含まれています。 左右の角かっこを使用して式を再入力します。
+式に、不均衡のある角かっこが含まれています。 角かっこが均等になるように式を再入力します。
 
-このエラーは、can0011 と同じものと同じです。
+このエラーは CAN0011 と同じです。

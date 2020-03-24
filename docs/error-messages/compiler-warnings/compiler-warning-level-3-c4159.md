@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4159
 ms.assetid: e2cf964e-f4b8-4b2c-9569-1abb94307232
-ms.openlocfilehash: e898af8f109ed23bd1784df7b39c174bbed675f2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 20d6010cb83107946c00f2f7b00cda771b2e70b9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402282"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80199018"
 ---
 # <a name="compiler-warning-level-3-c4159"></a>コンパイラの警告 (レベル 3) C4159
 
-> #<a name="pragma-pragmapop--has-popped-previously-pushed-identifier-identifier"></a>プラグマ pragma(pop,...): 以前にプッシュされた識別子がポップ '*識別子*'
+> #<a name="pragma-pragmapop--has-popped-previously-pushed-identifier-identifier"></a>pragma pragma (pop,...): 以前にプッシュされた識別子 '*identifier*' がポップされました
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-ソース コードに含まれる、**プッシュ**プラグマの識別子で命令が続く、 **pop**識別子のない命令。 その結果、*識別子*の表示された場合は、以降の使用は、*識別子*予期しない動作が発生する可能性があります。
+ソースコードには、プラグマの識別子を持つ**プッシュ**命令と、識別子のない**pop**命令が含まれています。 その結果、*識別子*がポップされ、その後の*識別子*の使用によって予期しない動作が発生する可能性があります。
 
 ## <a name="example"></a>例
 
-この警告を回避するで識別子を指定、 **pop**命令。 例:
+この警告を回避するには、 **pop**命令で識別子を指定します。 次に例を示します。
 
 ```cpp
 // C4159.cpp

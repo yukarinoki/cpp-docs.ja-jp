@@ -1,20 +1,20 @@
 ---
-title: コンパイラ エラー C2651
+title: コンパイラエラー C2651
 ms.date: 11/04/2016
 f1_keywords:
 - C2651
 helpviewer_keywords:
 - C2651
 ms.assetid: c3524a89-47d1-43f6-9e20-2cda15f9ae8a
-ms.openlocfilehash: 5712595cf8e502df4d434478e8b44d852e60751b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9959c549c7f2d43f1f4f8aec3e73b8465c4c580c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62152560"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80177210"
 ---
-# <a name="compiler-error-c2651"></a>コンパイラ エラー C2651
+# <a name="compiler-error-c2651"></a>コンパイラエラー C2651
 
-'data type': 'operator' の左側がクラス、構造体または共用体にする必要があります
+' data type ': ' operator ' の左側はクラス、構造体、または共用体でなければなりません
 
-クラスであるかのように、テンプレート パラメーターを使用するには、整数型ではなく、クラスを使用して、クラス テンプレートを特化します。
+テンプレートパラメーターをクラスとして使用するには、クラステンプレートを整数型ではなくクラスで特殊化します。

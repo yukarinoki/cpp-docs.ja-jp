@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4580
 ms.assetid: fef6e8e0-0d6a-44fa-b22a-2fe7ba2ef379
-ms.openlocfilehash: bd2ecff5adc6538f75c61772b785acbfc89092ae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 28d8534dad5fc1b234c180b879ad0645f05cfd65
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401801"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80198615"
 ---
 # <a name="compiler-warning-level-3-c4580"></a>コンパイラの警告 (レベル 3) C4580
 
 [attribute] は非推奨とされます。System::Attribute または Platform::Metadata を基底クラスとして指定してください
 
-[[属性](../../windows/attributes/attribute.md)] がユーザー定義の属性を作成するための構文をお勧めします。 詳細については、「 [User-Defined Attributes](../../extensions/user-defined-attributes-cpp-component-extensions.md)」を参照してください。 CLR コードの場合は、`System::Attribute` から属性を派生させます。 Windows ランタイム コードの場合は、`Platform::Metadata` から属性を派生させます。
+[[attribute](../../windows/attributes/attribute.md)] は、ユーザー定義の属性を作成するための推奨される構文ではなくなりました。 詳細については、「 [User-Defined Attributes](../../extensions/user-defined-attributes-cpp-component-extensions.md)」を参照してください。 CLR コードの場合は、`System::Attribute` から属性を派生させます。 Windows ランタイム コードの場合は、`Platform::Metadata` から属性を派生させます。
 
 ## <a name="example"></a>例
 

@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - M6203
 ms.assetid: bd7fdd1c-83e4-4d6a-901e-10a0308bf5be
-ms.openlocfilehash: 4433a024d461ee1bc43aa5fa82344190377243b4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 371a6c673826c6ce71d7a0eb3b9e08d9488f53f5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400774"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193694"
 ---
 # <a name="math-error-m6203"></a>数値演算エラー M6203
 
-'function': _OVERFLOW エラー
+' function ': _OVERFLOW エラー
 
-表現するには、特定の関数の結果が大きすぎます。
+指定された関数の結果が大きすぎて表すことができませんでした。
 
-このエラーが、`_matherr`関数、関数名、引数、およびエラーの種類を使用します。 書き直すことができます、`_matherr`特定の実行時の浮動小数点数値演算エラーの処理をカスタマイズする関数。
+このエラーは、関数名、引数、およびエラーの種類を使用して `_matherr` 関数を呼び出します。 `_matherr` 関数を書き直して、特定の実行時の浮動小数点演算エラーの処理をカスタマイズすることができます。

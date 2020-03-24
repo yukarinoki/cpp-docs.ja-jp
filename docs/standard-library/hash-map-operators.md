@@ -5,12 +5,12 @@ f1_keywords:
 - hash_map/std::operator!=
 - hash_map/std::operator==
 ms.assetid: 24b9bb9e-e983-4060-bce5-2c7c8161ee61
-ms.openlocfilehash: c4cc73feb3c8163a2be9f0122f57eaa0fb8ab3b8
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 50a6c2784b4c861f7cf3bbb4d1e1c8ebd0eea72d
+ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79424729"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80150746"
 ---
 # <a name="lthash_mapgt-operators"></a>&lt;hash_map&gt; 演算子
 
@@ -19,7 +19,7 @@ ms.locfileid: "79424729"
 |[operator!=](#op_neq)|[operator!= (multimap)](#op_neq_mm)|
 |[operator==](#op_eq_eq)|[operator== (multimap)](#op_eq_eq_mm)|
 
-## <a name="op_neq"></a>  operator!=
+## <a name="operator"></a><a name="op_neq"></a>  operator!=
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_map クラス](unordered-map-class.md)を使用してください。
@@ -42,7 +42,7 @@ bool operator!=(const hash_map <Key, Type, Traits, Allocator>& left, const hash_
 
 hash_maps が等しくない場合は **true**、hash_maps が等しい場合は **false**。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 hash_map オブジェクト間の比較は、要素のペアの比較に基づいています。 2 つの hash_maps は、同じ数の要素を持ち、各要素の値が同じである場合に等しくなります。 それ以外の場合は等しくありません。
 
@@ -88,7 +88,7 @@ The hash_maps hm1 and hm2 are not equal.
 The hash_maps hm1 and hm3 are equal.
 ```
 
-## <a name="op_eq_eq"></a>  operator==
+## <a name="operator"></a><a name="op_eq_eq"></a>  operator==
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代わりに、[unordered_map クラス](unordered-map-class.md)を使用してください。
@@ -111,7 +111,7 @@ bool operator==(const hash_map <Key, Type, Traits, Allocator>& left, const hash_
 
 演算子の左辺の hash_map が演算子の右辺の hash_map と等しい場合は **true**、それ以外の場合は **false**。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 hash_map オブジェクト間の比較は、要素のペアの比較に基づいています。 2 つの hash_maps は、同じ数の要素を持ち、各要素の値が同じである場合に等しくなります。 それ以外の場合は等しくありません。
 
@@ -155,7 +155,7 @@ The hash_maps hm1 and hm2 are not equal.
 The hash_maps hm1 and hm3 are equal.
 ```
 
-## <a name="op_neq_mm"></a>operator! = (hash_multimap)
+## <a name="operator-hash_multimap"></a><a name="op_neq_mm"></a>operator! = (hash_multimap)
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代替が必要な場合は、[unordered_multimap クラス](unordered-multimap-class.md)をご使用ください。
@@ -178,7 +178,7 @@ bool operator!=(const hash_multimap <Key, Type, Traits, Allocator>& left, const 
 
 hash_multimaps が等しくない場合は **true**、hash_multimaps が等しい場合は **false**。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 hash_multimap オブジェクト間の比較は、要素のペアの比較に基づいています。 2 つの hash_multimaps は、同じ数の要素を持ち、各要素の値が同じである場合に等しくなります。 それ以外の場合は等しくありません。
 
@@ -222,7 +222,7 @@ The hash_multimaps hm1 and hm2 are not equal.
 The hash_multimaps hm1 and hm3 are equal.
 ```
 
-## <a name="op_eq_eq_mm"></a>operator = = (hash_multimap)
+## <a name="operator--hash_multimap"></a><a name="op_eq_eq_mm"></a>operator = = (hash_multimap)
 
 > [!NOTE]
 > この API は、互換性のために残されています。 代替が必要な場合は、[unordered_multimap クラス](unordered-multimap-class.md)をご使用ください。
@@ -245,7 +245,7 @@ bool operator==(const hash_multimap <Key, Type, Traits, Allocator>& left, const 
 
 演算子の左辺の hash_multimap が演算子の右辺の hash_multimap と等しい場合は **true**、それ以外の場合は **false**。
 
-### <a name="remarks"></a>解説
+### <a name="remarks"></a>コメント
 
 hash_multimap オブジェクト間の比較は、要素のペアの比較に基づいています。 2 つの hash_multimaps は、同じ数の要素を持ち、各要素の値が同じである場合に等しくなります。 それ以外の場合は等しくありません。
 

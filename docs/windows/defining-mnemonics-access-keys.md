@@ -20,12 +20,12 @@ helpviewer_keywords:
 - Data property
 - combo boxes [C++], testing values
 ms.assetid: 60a85435-aa30-4c5c-98b6-42fb045b9eb2
-ms.openlocfilehash: 8ebd8d48b68581bf00215b4ca14f5ac0a543a3c0
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: e782788832063e210356864e074c15e9ba3555f4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443902"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160321"
 ---
 # <a name="how-to-define-control-access-and-values-c"></a>方法: コントロールのアクセスおよび値を定義C++する ()
 
@@ -65,7 +65,7 @@ ms.locfileid: "79443902"
 
 1. [[プロパティ] ウィンドウ](/visualstudio/ide/reference/properties-window)の **[キャプション]** プロパティに、コントロールの新しい名前を入力し、そのコントロールのアクセスキーとして使用する文字の前にアンパサンド (`&`) を入力します。 たとえば、「 `&Radio1` 」のように入力します。
 
-1. **[Enter]** キーを押します。
+1. **Enter** キーを押します。
 
    表示されるキャプションには、 **R**adio1 などのアクセスキーを示す下線が表示されます。
 
@@ -147,7 +147,7 @@ ms.locfileid: "79443902"
 
    これで、コードを変更し、表示したときに選ばれているラジオ ボタンを指定できます。 たとえば、`m_radioBox1 = 0;` では、グループ内の最初のオプションボタンが選択されます。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 Win32
 

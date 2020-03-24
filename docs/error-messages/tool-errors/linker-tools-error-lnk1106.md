@@ -6,33 +6,33 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1106
 ms.assetid: 528f7e65-04be-4966-b8af-9276837c7cda
-ms.openlocfilehash: 7551e2f3f1efc90913981feb674f48aadb9ace51
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 091d4e173bfb2eff8ffee2b5c30647f4d5e3bc04
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62255320"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80195371"
 ---
 # <a name="linker-tools-error-lnk1106"></a>リンカ ツール エラー LNK1106
 
-無効なファイルまたはディスクがいっぱいです: の場所にシークできません。
+無効なファイルまたはディスクがいっぱいです: 場所をシークできません
 
-ツールの読み取りまたは書き込みがいない`location`メモリ マップト ファイル。
+このツールでは、メモリマップトファイル内の `location` に対して読み取りまたは書き込みを行うことができませんでした。
 
 ### <a name="to-fix-by-checking-the-following-possible-causes"></a>次のような原因をチェックして問題を解決するには
 
 1. ディスクがいっぱいです。
 
-   領域を解放し、リンクを再度クリックします。
+   空き領域を増やしてから、リンクを再度作成してください。
 
-1. ネットワーク経由でリンクしようとしています。
+1. ネットワーク経由でリンクを試行しています。
 
-   いくつかのネットワークでは、リンカーで使用されるメモリ マップト ファイルは完全にサポートしていません。 ローカル ディスクでのリンクを再試行してください。
+   一部のネットワークでは、リンカーによって使用されるメモリマップトファイルを完全にサポートしていません。 ローカルディスクでリンクを試行します。
 
-1. ディスクで不良ブロックします。
+1. ディスクのブロックが正しくありません。
 
-   オペレーティング システムとディスクのハードウェアでは、このようなエラーが検出が必要、ディスク チェックのプログラムを実行することがあります。
+   オペレーティングシステムとディスクハードウェアでこのようなエラーが検出されましたが、ディスクチェックプログラムを実行することをお勧めします。
 
-1. ヒープ領域にします。
+1. ヒープ領域が不足しています。
 
-   参照してください[C1060](../../error-messages/compiler-errors-1/fatal-error-c1060.md)詳細についてはします。
+   詳細については、「 [C1060](../../error-messages/compiler-errors-1/fatal-error-c1060.md) 」を参照してください。

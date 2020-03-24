@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4221
 ms.assetid: 8532bd68-54dc-4526-8597-f61dcb0a0129
-ms.openlocfilehash: fa87c240472df2926753781f0f14cbd69752de00
-ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
+ms.openlocfilehash: fa948865685af4cbd6a865cfbf1d8546b29ab280
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74541927"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80161140"
 ---
 # <a name="compiler-warning-level-4-c4221"></a>コンパイラの警告 (レベル 4) C4221
 
@@ -19,7 +19,7 @@ ms.locfileid: "74541927"
 
 既定の Microsoft 拡張機能 (/Ze) を使用すると、ローカル (自動) 変数のアドレスを使用して集計の種類 (**配列**、`struct`、または**共用体**) を初期化できます。
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 ```c
 // C4221.c

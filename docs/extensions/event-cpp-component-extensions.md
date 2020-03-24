@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - event keyword [C++]
 ms.assetid: c4998e42-883c-4419-bbf4-36cdc979dd27
-ms.openlocfilehash: 8b34a4f146cc7961ee1176580def6319185693e9
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 90682ba699f6316cb6b38a3b78c44e853cd5473f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "79544658"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172387"
 ---
 # <a name="event--ccli-and-ccx"></a>event (C++/CLI および C++/CX)
 
@@ -55,7 +55,7 @@ modifiereventdelegate^ event_name
 *parameters*<br/>
 (省略可能) `raise`delegate *パラメーターのシグネチャと一致する、* メソッドのパラメーター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 イベントとは、イベントのトリガーに応答する、デリゲートとメンバー関数 (イベント ハンドラー) の間の関連付けです。イベントによって、任意のクラスのクライアントが、基になるデリゲートのシグネチャおよび戻り値の型に準拠したメソッドを登録できます。
 
@@ -73,13 +73,13 @@ modifiereventdelegate^ event_name
 
 ## <a name="windows-runtime"></a>Windows ランタイム
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 詳細については、「[イベント (C++/CX)](../cppcx/events-c-cx.md)」を参照してください。
 
 イベント ハンドラーを追加した後で削除する場合は、追加操作で返される EventRegistrationToken 構造体を保存する必要があります。 その後の削除操作で、削除するイベント ハンドラーを識別するために、保存しておいた EventRegistrationToken 構造体を使用します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/ZW`
 
@@ -119,7 +119,7 @@ modifiereventdelegate^ event_name
 *parameters*<br/>
 (省略可能) `raise`delegate *パラメーターのシグネチャと一致する、* メソッドのパラメーター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 イベントとは、イベントのトリガーに応答する、デリゲートとメンバー関数 (イベント ハンドラー) の間の関連付けです。イベントによって、任意のクラスのクライアントが、基になるデリゲートのシグネチャおよび戻り値の型に準拠したメソッドを登録できます。
 
@@ -165,7 +165,7 @@ C++/CLI イベントの詳細については、次を参照してください。
 
 - [インターフェイス内のイベント](../dotnet/how-to-use-events-in-cpp-cli.md)
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/clr`
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3550
 ms.assetid: 9f2d5ffc-e429-41a1-89e3-7acc4fd47e14
-ms.openlocfilehash: 106ac93496eebb25ee603251d84680053e1310b7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 17c90aa68b29c9490deb8d49895162e8a6bdefec
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375913"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80200773"
 ---
 # <a name="compiler-error-c3550"></a>コンパイラ エラー C3550
 
@@ -19,6 +19,6 @@ ms.locfileid: "62375913"
 
 `decltype(auto)` を関数の戻り値の型のプレースホルダーとして使用する場合は、単独で使用する必要があります。 ポインターの宣言 (`decltype(auto*)`)、参照の宣言 (`decltype(auto&)`)、またはその他の修飾の一部として使用することはできません。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [auto](../../cpp/auto-cpp.md)

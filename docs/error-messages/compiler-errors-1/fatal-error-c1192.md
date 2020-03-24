@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C1192
 ms.assetid: 54cff717-a3eb-471d-9bd4-1c2e673dbbef
-ms.openlocfilehash: 5fc5e0a17fb3fedca5719065ae426ac8c05db61f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1a15a808c1aff46ba6e63b3e86c0745c8ed7711a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62228957"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80203670"
 ---
 # <a name="fatal-error-c1192"></a>致命的なエラー C1192
 
-\#'file' で失敗しました
+' file ' で \#を使用することができませんでした
 
-Microsoft Intermediate Language (MSIL) の形式のファイルのみに渡すことができます、 [#using](../../preprocessor/hash-using-directive-cpp.md)ディレクティブ。 [/Clr](../../build/reference/clr-common-language-runtime-compilation.md)コンパイラ オプションを使用して、MSIL 出力ファイルを作成できます。 その他の Visual Studio の言語では、MSIL ファイルも生成します。
+[#Using](../../preprocessor/hash-using-directive-cpp.md)ディレクティブには、Microsoft 中間言語 (MSIL) 形式のファイルのみを渡すことができます。 [/Clr](../../build/reference/clr-common-language-runtime-compilation.md)コンパイラオプションを使用すると、MSIL 出力ファイルを作成できます。 他の Visual Studio 言語でも MSIL ファイルが生成されます。

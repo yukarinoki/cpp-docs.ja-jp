@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data [C++], data access technologies
 - data access [C++], class libraries for databases
 ms.assetid: 95da6237-bbe2-480a-ae50-3a520051ceff
-ms.openlocfilehash: e9222f16ef6356c2d89401690bda7e6d27f8aba6
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: a1645c1116daa66c578a6d6e697ab168e4006af9
+ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65708027"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80150954"
 ---
 # <a name="data-access-in-visual-c"></a>Visual C++ でのデータ アクセス
 
@@ -49,12 +49,12 @@ C または C++ アプリケーションから Azure SQL Database に接続し�
 [Microsoft Azure C および C++ デベロッパー センター](https://azure.microsoft.com/develop/cpp/)<br/>
 Azure を使用すると、柔軟性、スケーラビリティ、信頼性の高い C++ アプリケーションを好みのツールで容易に構築できます。
 
-[C++ から Blob Storage を使用する方法](https://docs.microsoft.com/azure/storage/storage-c-plus-plus-how-to-use-blobs)<br/>
-Azure BLOB Storage は、非構造化データをオブジェクト/BLOB としてクラウドに格納するサービスです。 Blob Storage は、ドキュメント、メディア ファイル、アプリケーション インストーラーなど、任意の種類のテキストまたはバイナリ データを格納できます。 Blob Storage は、オブジェクト ストレージとも呼ばれます。
+[C++ から BLOB ストレージを使用する方法](https://docs.microsoft.com/azure/storage/storage-c-plus-plus-how-to-use-blobs)<br/>
+Azure Blob Storage は、非構造化データをクラウド内にオブジェクト/BLOB として格納するサービスです。 Blob Storage は、ドキュメント、メディア ファイル、アプリケーション インストーラーなど、任意の種類のテキスト データやバイナリ データを格納できます。 Blob Storage は、オブジェクト ストレージとも呼ばれます。
 
-[ODBC プログラマーズ リファレンス](https://docs.microsoft.com/sql/odbc/reference/odbc-programmer-s-reference)<br/>
-ODBC インターフェイスは、C プログラミング言語で使用するために設計されています。 ODBC インターフェイスの使用は、次の 3 つの領域にまたがります。SQL ステートメント、ODBC 関数呼び出し、C プログラミングです。
+[ODBC プログラマー リファレンス](https://docs.microsoft.com/sql/odbc/reference/odbc-programmer-s-reference)<br/>
+ODBC インターフェイスは、C プログラミング言語で使用するために設計されています。 ODBC インターフェイスは、SQL ステートメント、ODBC 関数呼び出し、C プログラミングという 3 つの領域で使用されます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [Visual Studio での C++](../overview/visual-cpp-in-visual-studio.md)

@@ -79,12 +79,12 @@ helpviewer_keywords:
 - graphics [C++], converting formats
 - images [C++], converting formats
 ms.assetid: 66db3fb2-cfc1-48a2-9bdd-53f61eb7ee30
-ms.openlocfilehash: 046b7e0070d95f5d17b3240884db76533f1c6ccd
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 931d84f16b46ea8fe21ecc0a63d20dac958ce960
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443913"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160439"
 ---
 # <a name="how-to-create-an-icon-or-other-image"></a>方法: アイコンまたはその他のイメージを作成する
 
@@ -98,13 +98,13 @@ ms.locfileid: "79443913"
 
 既定では、**イメージエディター**は、次の表に示すデバイス用の追加イメージの作成をサポートしています。 **[カスタムイメージ]** ダイアログボックスに幅、高さ、および色の数のパラメーターを入力して、他のデバイス用のイメージを作成できます。
 
-|色|幅 (ピクセル単位)|高さ (ピクセル単位)|
+|Color|幅 (ピクセル単位)|高さ (ピクセル単位)|
 |-----------|----------------------|-----------------------|
-|モノクロ|16|16|
-|モノクロ|32|32|
-|モノクロ|48|48|
-|モノクロ|64|64|
-|モノクロ|96|96|
+|白黒|16|16|
+|白黒|32|32|
+|白黒|48|48|
+|白黒|64|64|
+|白黒|96|96|
 |16|16|16|
 |16|32|32|
 |16|64|64|
@@ -305,7 +305,7 @@ ms.locfileid: "79443913"
 
    リソースが**ソリューションエクスプローラー**でプロジェクトに追加され、[イメージエディター](../windows/image-editor-for-icons.md)でリソースが開きます。 イメージ**エディター**で使用できるすべてのツールを使用して、イメージを変更できるようになりました。 マネージプロジェクトにイメージを追加する方法の詳細については、「[デザイン時の画像の読み込み](/dotnet/framework/winforms/controls/how-to-load-a-picture-using-the-designer-windows-forms)」を参照してください。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 なし
 

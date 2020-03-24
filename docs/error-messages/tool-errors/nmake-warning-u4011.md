@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - U4011
 ms.assetid: e8244514-eba6-4285-8853-7baeefdcd8a4
-ms.openlocfilehash: 3b73e92c929b3dd5924584ab732f731d565d0430
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6b1701ffc83f849d2482bd14b25d65c04c496899
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62359775"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193148"
 ---
 # <a name="nmake-warning-u4011"></a>NMAKE の警告 U4011
 
-'target': 依存ファイルの一部が使用できます。ターゲットはビルドされません。
+' target ': すべての依存を使用できるわけではありません。ビルドされていないターゲット
 
-指定されたターゲットの依存が存在していなかったか、最新でし、の依存を更新するためのコマンドには 0 以外の終了コードが返されます。 /K オプションでは、NMAKE (nmake の) セッションが終了すると、終了コード 1 を発行して、ビルドの関連付けられていない部分の処理を続行するように指示します。
+指定されたターゲットの依存が存在しないか、古くなっています。また、依存関係を更新するためのコマンドが、0以外の終了コードを返しました。 /K オプションは、ビルドの関連しない部分の処理を続行し、NMAKE セッションが終了したときに終了コード1を発行するように NMAKE に指示しました。
 
-この警告は、前に警告[U4010](../../error-messages/tool-errors/nmake-warning-u4010.md)に作成または更新に失敗した依存します。
+この警告の前には、作成または更新に失敗した依存関係について、警告[U4010](../../error-messages/tool-errors/nmake-warning-u4010.md)が付きます。
