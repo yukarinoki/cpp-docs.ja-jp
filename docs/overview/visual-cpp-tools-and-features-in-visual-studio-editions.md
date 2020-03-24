@@ -4,18 +4,16 @@ ms.date: 05/21/2019
 helpviewer_keywords:
 - tools and platforms [C++]
 ms.assetid: 3d88607b-9cc4-490a-8d4c-31ee7610a26f
-ms.openlocfilehash: a7514e5cc52b24740b82cc067e77955c4784c9f0
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
+ms.openlocfilehash: 03a28c87bd0a122229a7e93b7077b1d6e3fea53f
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400639"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079250"
 ---
 # <a name="c-tools-and-features-in-visual-studio-editions"></a>さまざまな Visual Studio エディションの C++ ツールと機能
 
-
 ::: moniker range=">=vs-2019"
-
 
 次の C++ 機能を Visual Studio 2019 で使用できます。 特に示されていない限り、すべての機能をすべてのエディションで使用できます。Visual Studio Community、Visual Studio Professional、Visual Studio Enterprise。 一部の機能には、特定のワークロードまたはオプション コンポーネントが必要です。これは、Visual Studio インストーラーを使ってインストールできます。
 
@@ -35,7 +33,7 @@ ms.locfileid: "67400639"
 - Clang/LLVM
   - Windows 上の x86 または x64 を対象とする Clang/LLVM 7.0 (CMake サポートのみ)。 その他の Clang バージョンは機能しますが、公式にはサポートされません。
   - Linux 上で配布によってサポートされる任意の Clang/LLVM インストール。
- 
+
 ## <a name="c-workloads"></a>C++ ワークロード
 
 Visual Studio には C++ 開発に対して次のワークロードが含まれます。 .NET デスクトップ開発、Python 開発、Azure の開発、Visual Studio 拡張機能の開発など、その他のワークロードと共に、これらの一部またはすべてをインストールできます。
@@ -136,7 +134,6 @@ Visual Studio には C++ 開発に対して次のワークロードが含まれ�
 - C++ iOS 開発ツール
 - IncrediBuild - ビルド アクセラレーション
 
-
 ## <a name="individual-components"></a>個々のコンポーネント
 
 任意のワークロードからこれらのコンポーネントを個別にインストールできます。
@@ -198,11 +195,11 @@ Windows デスクトップ:
 - 空のアプリケーション
 - DirectX 11 および XAML アプリ
 - DirectX 11 アプリ
-- DirectX 12 アプリ 
-- 単体テスト アプリ 
-- [DLL] 
-- Windows ランタイム コンポーネント 
-- スタティック ライブラリ 
+- DirectX 12 アプリ
+- 単体テスト アプリ
+- [DLL]
+- Windows ランタイム コンポーネント
+- スタティック ライブラリ
 - Windows アプリケーション パッケージ プロジェクト
 
 Linux の場合:

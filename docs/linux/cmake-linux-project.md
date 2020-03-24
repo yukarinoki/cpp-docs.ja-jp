@@ -3,12 +3,12 @@ title: Visual Studio で Linux CMake プロジェクトを作成および構成�
 description: Visual Studio で Linux CMake プロジェクトを作成、構成、編集、コンパイルする方法
 ms.date: 10/04/2019
 ms.assetid: f8707b32-f90d-494d-ae0b-1d44425fdc25
-ms.openlocfilehash: 9c6a60162c2dbbab8e348b27d1987d7f1001bee0
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: d781d1995a4c9a60932d498d2ad7cfea97ee023f
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79429188"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077661"
 ---
 # <a name="create-and-configure-a-linux-cmake-project"></a>Linux CMake プロジェクトの作成と構成
 
@@ -37,14 +37,14 @@ Visual Studio での CMake のサポートに関する一般的な情報につ�
 
 ## <a name="before-you-begin"></a>始める前に
 
-まず、CMake コンポーネントを含む **C++ による Linux 開発** ワークロードがインストールされていることを確認します。 [Visual Studio での C++ Linux ワークロードのインストール](download-install-and-setup-the-linux-development-workload.md)に関するページを参照してください。 
+まず、CMake コンポーネントを含む **C++ による Linux 開発** ワークロードがインストールされていることを確認します。 [Visual Studio での C++ Linux ワークロードのインストール](download-install-and-setup-the-linux-development-workload.md)に関するページを参照してください。
 
-Linux システムに次のものがインストールされていることを確認してください。 
+Linux システムに次のものがインストールされていることを確認してください。
 
 - gcc
 - gdb
 - rsync
-- zip 
+- zip
 
 ::: moniker range="vs-2019"
 
@@ -92,7 +92,7 @@ add_executable(hello-cmake hello.cpp)
 
 ::: moniker range="vs-2019"
 
-Windows Subsystem for Linux をターゲットにするには、メイン ツールバーの構成ドロップダウンの **[構成の管理]** をクリックします。 次に、 **[構成の追加]** ボタンを押し、GCC を使用する場合は **[WSL-Debug]** または **[WSL-Release]** を選択し、Clang/LLVM ツールセットを使用する場合は [Clang バリアント] を選択します。 
+Windows Subsystem for Linux をターゲットにするには、メイン ツールバーの構成ドロップダウンの **[構成の管理]** をクリックします。 次に、 **[構成の追加]** ボタンを押し、GCC を使用する場合は **[WSL-Debug]** または **[WSL-Release]** を選択し、Clang/LLVM ツールセットを使用する場合は [Clang バリアント] を選択します。
 
 **Visual Studio 2019 バージョン 16.1** では、WSL をターゲットにする場合、ソース ファイルが配置されている Windows ファイル システムに Linux 上のコンパイラが直接アクセスできるため、ソースやヘッダーをコピーする必要はありません (Windows バージョン 1903 以降では、Windows アプリケーションも Linux のヘッダー ファイルに直接アクセスできますが、Visual Studio ではこの機能はまだ活用されていません)。
 
@@ -102,13 +102,13 @@ Windows Subsystem for Linux をターゲットにするには、メイン ツー
 
 リモートの Linux を対象に指定した場合、ソースはリモート システムにコピーされます。
 
-対象を選択したら、CMake は Linux システム上で自動実行され、プロジェクト用の CMake キャッシュを生成します。 
+対象を選択したら、CMake は Linux システム上で自動実行され、プロジェクト用の CMake キャッシュを生成します。
 
 ![Linux での CMake キャッシュの生成](media/cmake-linux-1.png "Linux で CMake キャッシュを生成する")
 
 Visual Studio は、これらを Linux マシンからローカルの Windows コンピューター上のディレクトリに自動的にコピーして、リモートの Linux システムのヘッダーに IntelliSense のサポートを提供します。 詳細については、[リモート ヘッダーの IntelliSense](configure-a-linux-project.md#remote_intellisense) のセクションを参照してください。
 
-## <a name="debug_cmake_project"></a> CMake プロジェクトをデバッグする
+## <a name="debug-the-cmake-project"></a><a name="debug_cmake_project"></a> CMake プロジェクトをデバッグする
 
 指定したデバッグ対象のシステムでコードをデバッグするには、ブレークポイントを設定し、プロジェクト設定の隣にあるツール バー メニューのスタートアップ項目として CMake ターゲットを選び、ツール バーの **[&#x23f5; 実行]** を選択するか、F5 キーを押します。
 
@@ -125,13 +125,13 @@ Visual Studio は、これらを Linux マシンからローカルの Windows �
 
 追加の引数を指定するには、`args` JSON 配列に引数を追加します。 詳細については、[C++ の [フォルダーを開く]](../build/open-folder-projects-cpp.md) プロジェクトに関するページ、および [CMake デバッグ セッションの構成](../build/configure-cmake-debugging-sessions.md)に関するページを参照してください。
 
-## <a name="configure_cmake_linux"></a>Linux 用の CMake 設定を構成する
+## <a name="configure-cmake-settings-for-linux"></a><a name="configure_cmake_linux"></a>Linux 用の CMake 設定を構成する
 
-CMake Linux プロジェクト内の CMakeSettings.json ファイルで、[CMake 設定のカスタマイズ](../build/customize-cmake-settings.md)に関するページで一覧表示されているすべてのプロパティに加え、リモートの Linux コンピューター上のビルド設定を制御する追加のプロパティを指定できます。 
+CMake Linux プロジェクト内の CMakeSettings.json ファイルで、[CMake 設定のカスタマイズ](../build/customize-cmake-settings.md)に関するページで一覧表示されているすべてのプロパティに加え、リモートの Linux コンピューター上のビルド設定を制御する追加のプロパティを指定できます。
 
 ::: moniker range="vs-2019"
 
-Visual Studio 2019 の CMake の既定の設定を変更するには、メイン ツールバーから **[構成]** ドロップダウンを開き、 **[構成の管理]** を選択します。 
+Visual Studio 2019 の CMake の既定の設定を変更するには、メイン ツールバーから **[構成]** ドロップダウンを開き、 **[構成の管理]** を選択します。
 
 ![CMake の [構成の管理]](../build/media/vs2019-cmake-manage-configurations.png "CMake 構成ドロップダウン")
 
@@ -202,10 +202,10 @@ Visual Studio 2019 バージョン 16.1 以降での既定の Linux-Debug 構成
   ]
 }
 ```
+
 ::: moniker-end
 
 これらの設定の詳細については、[CMakeSettings.json リファレンス](../build/cmakesettings-reference.md)に関するページを参照してください。
-
 
 ## <a name="optional-settings"></a>オプション設定
 
@@ -220,8 +220,6 @@ Visual Studio 2019 バージョン 16.1 以降での既定の Linux-Debug 構成
 ```
 
 これらのオプションでは、ビルドの前後や CMake 生成の前に Linux システムでコマンドを実行できます。 値は、リモート システムで有効な任意のコマンドを指定できます。 出力はパイプで Visual Studio に戻されます。
-
-
 
 ## <a name="see-also"></a>関連項目
 

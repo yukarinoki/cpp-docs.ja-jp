@@ -2,12 +2,12 @@
 title: VC++ ディレクトリ (Linux C++)
 ms.date: 06/07/2019
 ms.assetid: 12d45b93-0a5c-455e-b12a-9b9aad9a6d6c
-ms.openlocfilehash: 26f30163b81c672795a14820f6e95ca5a315cfbb
-ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
+ms.openlocfilehash: c32c706f314b4ed57350f359ba44ace5eeb458e4
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66821371"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441289"
 ---
 # <a name="vc-directories-linux-c"></a>VC++ ディレクトリ (Linux C++)
 
@@ -19,12 +19,11 @@ Linux サポートは Visual Studio 2017 以降で使用できます。
 
 ::: moniker range=">=vs-2017"
 
-プロパティ | 説明
---- | ---
-[インクルード ディレクトリ] | VC++ プロジェクトのビルド時にインクルード ファイルを検索するときに使用するパスです。  環境変数 INCLUDE と一致します。
-[ライブラリ ディレクトリ] | VC++ プロジェクトのビルド時にライブラリ ファイルを検索するときに使用するパスです。  環境変数 LIB と一致します。
-ソース ディレクトリ | IntelliSense で使用するソース ファイルの検索時に使用するパスです。
-ディレクトリを除外 | スキャンの依存関係を探すときにスキップされるパスです。
+| プロパティ | 説明 |
+|--|--|
+| [インクルード ディレクトリ] | VC++ プロジェクトのビルド時にインクルード ファイルを検索するときに使用するパスです。  環境変数 INCLUDE と一致します。 |
+| [ライブラリ ディレクトリ] | VC++ プロジェクトのビルド時にライブラリ ファイルを検索するときに使用するパスです。  環境変数 LIB と一致します。 |
+| ソース ディレクトリ | IntelliSense で使用するソース ファイルの検索時に使用するパスです。 |
+| ディレクトリを除外 | スキャンの依存関係を探すときにスキップされるパスです。 |
 
 ::: moniker-end
-

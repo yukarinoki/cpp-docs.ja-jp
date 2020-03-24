@@ -3,12 +3,12 @@ title: Visual Studio で C++ の Linux ワークロードをインストール�
 description: Visual Studio で C++ の Linux ワークロードをダウンロード、インストール、セットアップする方法について説明します。
 ms.date: 06/11/2019
 ms.assetid: e11b40b2-f3a4-4f06-b788-73334d58dfd9
-ms.openlocfilehash: 1dad17756cbc12fdf65250b7c54314ff2a645287
-ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
+ms.openlocfilehash: 719fb9a04c3b0090a1ae5442f881ba6b7d2136c5
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73966211"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077639"
 ---
 # <a name="download-install-and-set-up-the-linux-workload"></a>Linux ワークロードのダウンロード、インストール、セットアップ
 
@@ -20,11 +20,11 @@ Linux プロジェクトは Visual Studio 2017 以降でサポートされます
 
 ::: moniker range=">=vs-2017"
 
-Windows 上の Visual Studio IDE を使って、リモートの Linux システムや、仮想マシン、または [Windows Subsystem for Linux](/windows/wsl/about) 上で実行される C++ プロジェクトの作成、編集、およびデバッグを行うことができます。 
+Windows 上の Visual Studio IDE を使って、リモートの Linux システムや、仮想マシン、または [Windows Subsystem for Linux](/windows/wsl/about) 上で実行される C++ プロジェクトの作成、編集、およびデバッグを行うことができます。
 
-Visual Studio プロジェクトに変換しなくても、CMake を使用する既存のコード ベースで作業できます。 コード ベースがクロス プラットフォームの場合、Visual Studio 内から Windows と Linux の両方をターゲット設定できます。 たとえば、Windows 上で Visual Studio を使ってコードの編集、ビルド、デバッグを行った後、すぐにそのプロジェクトのターゲットを Linux に変更して Linux 環境内でビルドとデバッグを行うことができます。 Linux 用のヘッダー ファイルがローカル コンピューターに自動的にコピーされます。そこで Visual Studio によってそれらが使用され、IntelliSense の完全なサポート (ステートメント入力候補、定義へ移動など) が提供されます。 
- 
-これらのどのシナリオについても、**C++ による Linux 開発**ワークロードが必要です。 
+Visual Studio プロジェクトに変換しなくても、CMake を使用する既存のコード ベースで作業できます。 コード ベースがクロス プラットフォームの場合、Visual Studio 内から Windows と Linux の両方をターゲット設定できます。 たとえば、Windows 上で Visual Studio を使ってコードの編集、ビルド、デバッグを行った後、すぐにそのプロジェクトのターゲットを Linux に変更して Linux 環境内でビルドとデバッグを行うことができます。 Linux 用のヘッダー ファイルがローカル コンピューターに自動的にコピーされます。そこで Visual Studio によってそれらが使用され、IntelliSense の完全なサポート (ステートメント入力候補、定義へ移動など) が提供されます。
+
+これらのどのシナリオについても、**C++ による Linux 開発**ワークロードが必要です。
 
 ::: moniker-end
 
@@ -46,7 +46,7 @@ Visual Studio プロジェクトに変換しなくても、CMake を使用する
 
 ## <a name="options-for-creating-a-linux-environment"></a>Linux 環境を作成するためのオプション
 
-Linux マシンがまだない場合は、Azure で Linux 仮想マシンを作成できます。 詳細については、「[クイック スタート: Azure portal で Linux 仮想マシンを作成する](/azure/virtual-machines/linux/quick-create-portal)」を参照してください。
+Linux マシンがまだない場合は、Azure で Linux 仮想マシンを作成できます。 詳細については、[クイック スタート: Azure portal で Linux 仮想マシンを作成する](/azure/virtual-machines/linux/quick-create-portal)」を参照してください。
 
 Windows 10 の Windows Subsystem for Linux (WSL) では、お好みの Linux ディストリビューションをインストールして、対象とすることができます。 詳細については、「[Windows Subsystem for Linux Installation Guide for Windows 10](/windows/wsl/install-win10)」 (Windows 10 用の Windows Subsystem for Linux のインストール ガイド) を参照してください。 Windows ストアにアクセスできない場合は、[WSL ディストリビューション パッケージを手動でダウンロードする](/windows/wsl/install-manual)ことができます。 WSL は便利なコンソール環境ですが、グラフィック アプリケーション用には推奨されません。
 
