@@ -8,12 +8,12 @@ helpviewer_keywords:
 - attributes [C#], default attribute
 - defaults, default attribute
 ms.assetid: 0cdca716-1ba8-46d7-9399-167e55492870
-ms.openlocfilehash: 291e16ad0967acd1869874fcc9fa6eb5529e4b44
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b789f82f4b5a09b86d72dfde5d783665cf2e918a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501682"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167187"
 ---
 # <a name="default-c"></a>default (C++)
 
@@ -37,13 +37,13 @@ Optional既定のソースインターフェイス。 このインターフェ�
 
 既定のソース インターフェイスが指定されていない場合は、最初のソース インターフェイスが既定値として使用されます。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 **default** C++ 属性には、 [default](/windows/win32/Midl/default) MIDL 属性と同じ機能があります。 また、 **default** 属性は、 [case](case-cpp.md) 属性と共に使用されます。
 
 ## <a name="example"></a>例
 
-次のコードは、既定のプログラミングインターフェイスとしてを指定`ICustomDispatch`するために、コクラスの定義で default を使用する方法を示しています。
+次のコードは、コクラスの定義で**default**を使用して、既定のプログラミングインターフェイスとして `ICustomDispatch` を指定する方法を示しています。
 
 ```cpp
 // cpp_attr_ref_default.cpp
@@ -101,12 +101,12 @@ int main() {
 |-|-|
 |**対象**|**クラス**、**構造体**、データメンバー|
 |**反復可能**|いいえ|
-|**必要な属性**|**コクラス**(**クラス**または**構造体**に適用される場合)|
+|**必要な属性**|**coclass** (**クラス**または**構造体**に適用される場合)|
 |**無効な属性**|なし|
 
 詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [IDL 属性](idl-attributes.md)<br/>
 [クラス属性](class-attributes.md)<br/>

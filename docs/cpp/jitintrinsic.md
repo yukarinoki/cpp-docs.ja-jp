@@ -8,12 +8,12 @@ helpviewer_keywords:
 - __declspec keyword [C++], jitintrinsic
 - jitintrinsic __declspec modifier
 ms.assetid: 23dbe416-7ef6-442b-b16d-9a81aab04fa6
-ms.openlocfilehash: 9e726413f0bbfbd9d6affa348777c995c51283a5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4626ba82d1d24582951bbffd8e6be687007d390f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245519"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178188"
 ---
 # <a name="jitintrinsic"></a>jitintrinsic
 
@@ -25,13 +25,13 @@ ms.locfileid: "62245519"
 __declspec(jitintrinsic)
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**jitintrinsic** MODOPT を追加します (<xref:System.Runtime.CompilerServices.IsJitIntrinsic>) 関数のシグネチャにします。
+**jitintrinsic**は、関数シグネチャに MODOPT (<xref:System.Runtime.CompilerServices.IsJitIntrinsic>) を追加します。
 
-ユーザーはこれを使用してから推奨されません **_ _declspec**修飾子は、予期しない結果として発生することができます。
+予期しない結果が発生する可能性があるため、ユーザーはこの **__declspec**修飾子を使用しないことをお勧めします。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [__declspec](../cpp/declspec.md)<br/>
 [キーワード](../cpp/keywords-cpp.md)

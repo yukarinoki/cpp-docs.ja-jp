@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4291
 ms.assetid: c2b95dea-38f2-4609-9104-707c30798da4
-ms.openlocfilehash: c8dc35a58d40d2619f6e035e07b4ad0b3351c45d
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: cd161a37683703fd67b4c682558a51121c130816
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73626638"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80175715"
 ---
 # <a name="compiler-warning-level-1-c4291"></a>コンパイラの警告 (レベル 1) C4291
 
@@ -23,7 +23,7 @@ Operator **new**を使用してオブジェクトにメモリが割り当てら�
 
 追加の引数を指定せずに**new**演算子を使用し、 [/gx](../../build/reference/gx-enable-exception-handling.md)、 [/ehs](../../build/reference/eh-exception-handling-model.md)、または/eha オプションでコンパイルして例外処理を有効にすると、コンパイラは、コンストラクターが例外をスローした場合に operator **delete**を呼び出すためのコードを生成します。
 
-**New**演算子の placement 形式 (割り当てのサイズに加えて引数を持つフォーム) を使用し、オブジェクトのコンストラクターが例外をスローした場合でも、コンパイラは operator **delete**を呼び出すコードを生成します。ただし、これが行われるのは、メモリを割り当てた**new**演算子の配置形式と演算子の**削除**の配置形式が一致する場合だけです。 (例:
+**New**演算子の placement 形式 (割り当てのサイズに加えて引数を持つフォーム) を使用し、オブジェクトのコンストラクターが例外をスローした場合でも、コンパイラは operator **delete**を呼び出すコードを生成します。ただし、これが行われるのは、メモリを割り当てた**new**演算子の配置形式と演算子の**削除**の配置形式が一致する場合だけです。 次に例を示します。
 
 ```cpp
 // C4291.cpp

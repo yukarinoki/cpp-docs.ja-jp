@@ -34,12 +34,12 @@ helpviewer_keywords:
 - trigonometric functions
 - arccosine function
 ms.assetid: 00b89c48-8faf-4824-aa95-fa4349a4975d
-ms.openlocfilehash: 9e8aba1104af5855db9cb4f3cbb989d182b2c78e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 4933e4b3757161621676133ea8b9725ce140e80c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939990"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171295"
 ---
 # <a name="acos-acosf-acosl"></a>acos、acosf、acosl
 
@@ -72,10 +72,10 @@ long double acos( long double x );   // C++ only
 |入力|SEH 例外|Matherr 例外|
 |-----------|-------------------|-----------------------|
 |± ∞|INVALID|_DOMAIN|
-|± QNAN、IND|none|_DOMAIN|
+|± QNAN、IND|なし|_DOMAIN|
 |&#124;x&#124;>1|INVALID|_DOMAIN|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 でC++はオーバーロードが可能であるため、**浮動小数点**型および**long** **double**型を受け取って返す**acos**のオーバーロードを呼び出すことができます。 C プログラムでは、 **acos**は常に**倍精度浮動小数点数**を取得して返します。
 
@@ -135,7 +135,7 @@ Arcsine of 0.000000 = 0.000000
 Arccosine of 0.000000 = 1.570796
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [浮動小数点サポート](../../c-runtime-library/floating-point-support.md)<br/>
 [asin、asinf、asinl](asin-asinf-asinl.md)<br/>

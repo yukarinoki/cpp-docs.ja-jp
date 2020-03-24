@@ -1,25 +1,25 @@
 ---
-title: コンパイラ エラー C2668
+title: コンパイラエラー C2668
 ms.date: 03/28/2017
 f1_keywords:
 - C2668
 helpviewer_keywords:
 - C2668
 ms.assetid: 041e9627-1c76-420e-a653-cfc83f933bd3
-ms.openlocfilehash: 1920af8873578c63ab768dae4bcdf4d91fe7cd57
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f59cb33bed15847ed1a7a2dbe99ea030babf3337
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62164814"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80177158"
 ---
-# <a name="compiler-error-c2668"></a>コンパイラ エラー C2668
+# <a name="compiler-error-c2668"></a>コンパイラエラー C2668
 
-'function': オーバー ロードされた関数のあいまいな呼び出し
+' function ': オーバーロードされた関数の呼び出しがあいまいです
 
-指定されたオーバー ロードされた関数の呼び出しを解決できませんでした。 1 つ以上の実際のパラメーターを明示的にキャストすることがあります。
+指定されたオーバーロードされた関数呼び出しを解決できませんでした。 1つ以上の実際のパラメーターを明示的にキャストすることもできます。
 
-このエラーは、テンプレートを使用して取得することもできます。 同じクラスでは、通常のメンバー関数と同じシグネチャを持つ template 宣言されたメンバー関数がある場合、テンプレート化された 1 つは先にする必要があります。 これは、Visual C の現在の実装の制限です。
+このエラーは、テンプレートを使用して取得することもできます。 同じクラス内に、同じシグネチャを持つ通常のメンバー関数とテンプレート化されたメンバー関数がある場合、テンプレート化されたメンバー関数は最初に記述する必要があります。 これは、現在のビジュアルC++の実装の制限です。
 
 ## <a name="example"></a>例
 
@@ -43,7 +43,7 @@ int main() {
 
 ## <a name="example"></a>例
 
-このエラーを解決するのには別の方法は、[宣言を使用して](../../cpp/using-declaration.md):
+このエラーを解決するもう1つの方法は、 [using 宣言を使用](../../cpp/using-declaration.md)することです。
 
 ```cpp
 // C2668b.cpp
@@ -86,9 +86,9 @@ class MyTestCase : public AppTestCase {
 
 ## <a name="example"></a>例
 
-このエラーは、Visual Studio .NET 2003 で行ったコンパイラ準拠作業の結果として生成することもできます。 あいまいな変換定数 0 のキャスト。
+このエラーは、Visual Studio .NET 2003 で実行されたコンパイラ準拠作業の結果として生成されることもあります。定数0のキャストであいまいな変換が発生しました。
 
-Long 型と void * int の両方への変換が必要なために、0 の定数を使用してキャストの変換はあいまいです。 このエラーを解決するには、0 が使用されている (このコードが Visual Studio .NET 2003 と Visual Studio .NET のバージョンの Visual C で有効になります) 実行する変換が必要ないように、関数のパラメーターの正確な型にキャストします。
+Int は long 型と void 型の両方の変換を必要とするため、定数0を使用したキャストでの変換はあいまいです。 このエラーを解決するには、0を、使用されている関数パラメーターの正確な型にキャストします。これにより、変換を実行する必要がありません (このコードは visual Studio C++.net 2003 および visual studio .net バージョンの visual で有効になります)。
 
 ```cpp
 // C2668c.cpp
@@ -110,7 +110,7 @@ int main() {
 
 ## <a name="example"></a>例
 
-CRT は float 型とすべての数値演算関数の 2 つのフォームを持つために、このエラーが発生することができます。
+このエラーは、CRT にすべての数値演算関数の float 型と double 型が含まれるようになったために発生する可能性があります。
 
 ```cpp
 // C2668d.cpp
@@ -125,7 +125,7 @@ int main() {
 
 ## <a name="example"></a>例
 
-Pow (int, int) は、crt <math.h> から削除されたために、このエラーが発生することができます。
+このエラーは、CRT の pow (int, int) が削除されたことが原因で発生する可能性があります。
 
 ```cpp
 // C2668e.cpp
@@ -138,7 +138,7 @@ int main() {
 
 ## <a name="example"></a>例
 
-このコードでは、Visual Studio 2015 で成功しますが、失敗した Visual Studio 2017 と C2668 で後で。 Visual Studio 2015 では、コンパイラは、誤って copy-list-initialization を通常の copy-initialization と同じ方法で処理しました。これは、単なるオーバーロードの解決のためのコンストラクターの変換と見なされます。
+このコードは Visual Studio 2015 で成功しますが、Visual Studio 2017 以降の C2668 では失敗します。 Visual Studio 2015 では、コンパイラは、誤って copy-list-initialization を通常の copy-initialization と同じ方法で処理しました。これは、単なるオーバーロードの解決のためのコンストラクターの変換と見なされます。
 
 ```cpp
 struct A {

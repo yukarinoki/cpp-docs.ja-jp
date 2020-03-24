@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - wire_marshal attribute
 ms.assetid: 244f9d72-776d-4ebd-b60a-cee600a126b5
-ms.openlocfilehash: e1067b74191dcde98dd9c85a246db2acd26eff9c
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 0bf6b2ab353b8ad8866de5b2c7c79959306ee954
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514847"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80215229"
 ---
 # <a name="wire_marshal"></a>wire_marshal
 
@@ -23,7 +23,7 @@ ms.locfileid: "69514847"
 [wire_marshal]
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 **Wire_marshal** C++属性には、 [wire_marshal](/windows/win32/Midl/wire-marshal) MIDL 属性と同じ機能があります。
 
@@ -60,7 +60,7 @@ ms.locfileid: "69514847"
 
 属性コンテキストの詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [IDL 属性](idl-attributes.md)<br/>
 [Typedef、Enum、Union、および Struct 型の属性](typedef-enum-union-and-struct-attributes.md)

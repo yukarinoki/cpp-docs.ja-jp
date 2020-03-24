@@ -8,12 +8,12 @@ helpviewer_keywords:
 - class libraries, MFC
 - MFC, about MFC
 ms.assetid: 7101cb18-a681-495c-8f2b-069ad20c72f7
-ms.openlocfilehash: e9921d18e9ec060f61959278b68906338f02b5b7
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: d26cf1e92717d2925edf3730e1ae4ec935365321
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447709"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178458"
 ---
 # <a name="mfc-desktop-applications"></a>MFC デスクトップ アプリケーション
 
@@ -70,7 +70,7 @@ Visual Studio の MFC アプリケーションを作成するための機能の�
 [リソース ファイルの操作](../windows/working-with-resource-files.md)<br/>
 リソース ファイルを使用して、UI の文字列やダイアログ ボックスのレイアウトなどの静的ユーザー インターフェイスのデータを管理する方法。
 
-## <a name="related-sections"></a>関連セクション
+## <a name="related-sections"></a>関連項目
 
 [階層図カテゴリ](hierarchy-chart-categories.md)<br/>
 カテゴリ別の MFC 階層図を示します。
@@ -78,7 +78,7 @@ Visual Studio の MFC アプリケーションを作成するための機能の�
 [ATL/MFC 共有クラス](../atl-mfc-shared/atl-mfc-shared-classes.md)<br/>
 MFC と ATL で共有されるクラスへのリンクを提供します。
 
-[MFC のサンプル](../overview/visual-cpp-samples.md)<br/>
+[MFC のサンプル](../overview/visual-cpp-samples.md#mfc-samples)<br/>
 MFC の使い方を示すサンプルへのリンクを提供します。
 
 [Visual C++ ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)<br/>

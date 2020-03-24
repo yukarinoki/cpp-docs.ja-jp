@@ -1,5 +1,5 @@
 ---
-title: スレッド
+title: スレッド (thread)
 ms.date: 05/07/2019
 f1_keywords:
 - thread_cpp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - TLS (thread local storage), compiler implementation
 - __declspec keyword [C++], thread
 ms.assetid: 667f2a77-6d1f-4b41-bee8-05e67324fab8
-ms.openlocfilehash: cc21602764a9a3c2584bdd7da62c75974ffdd5fb
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 30972b5668d3eab9ec2118f3d90d7ced1e087275
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301289"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160698"
 ---
-# <a name="thread"></a>スレッド
+# <a name="thread"></a>スレッド (thread)
 
 **Microsoft 固有の仕様**
 
@@ -26,7 +26,7 @@ ms.locfileid: "75301289"
 
 **__declspec (スレッド)** *宣言子*
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 スレッド ローカル ストレージ (TLS) は、特定のマルチスレッド プロセスの各スレッドが、スレッド固有のデータを格納するための場所を割り当てる機能です。 標準のマルチスレッド プログラムでは、データは特定のプロセスのすべてのスレッド間で共有されますが、スレッド ローカル ストレージはスレッドごとのデータを割り当てるための機能です。 スレッドの詳細については、「[マルチスレッド](../parallel/multithreading-support-for-older-code-visual-cpp.md)」を参照してください。
 
@@ -48,7 +48,7 @@ __declspec( thread ) int tls_i = 1;
 
 - **Thread**属性は、クラスおよびデータの宣言と定義にのみ適用できます。**スレッド**を関数の宣言または定義で使用することはできません。
 
-- 指定することができます、**thread**静的ストレージ存続期間のデータ項目にのみ属性。 これには、グローバルなデータ オブジェクトが含まれます (どちらも**static**と**extern**)、ローカルな静的オブジェクト、およびクラスの静的データ メンバー。 **Thread**属性を使用して自動データオブジェクトを宣言することはできません。
+- **Thread**属性は、静的ストレージ存続期間を持つデータアイテムに対してのみ指定できます。 これには、グローバルデータオブジェクト (**静的**および**extern**の両方)、ローカルの静的オブジェクト、およびクラスの静的データメンバーが含まれます。 **Thread**属性を使用して自動データオブジェクトを宣言することはできません。
 
 - 宣言と定義が同じファイルと個別のファイルのどちらで発生するかにかかわらず、スレッドローカルオブジェクトの宣言と定義には**thread**属性を使用する必要があります。
 
@@ -71,7 +71,7 @@ __declspec( thread ) int tls_i = 1;
     __declspec( thread ) B2 BObject2;   // BObject2 declared thread local.
     ```
 
-- 標準 C では、オブジェクトまたは変数を、それ自体への参照を含む式で初期化することができますが、非静的オブジェクトに対してのみ使用できます。 C++通常、このようなオブジェクトは、それ自体への参照を含む式を使用して動的に初期化できますが、この種の初期化はスレッドローカルオブジェクトでは許可されません。 例:
+- 標準 C では、オブジェクトまたは変数を、それ自体への参照を含む式で初期化することができますが、非静的オブジェクトに対してのみ使用できます。 C++通常、このようなオブジェクトは、それ自体への参照を含む式を使用して動的に初期化できますが、この種の初期化はスレッドローカルオブジェクトでは許可されません。 次に例を示します。
 
    ```cpp
    // declspec_thread_3.cpp
@@ -83,9 +83,9 @@ __declspec( thread ) int tls_i = 1;
 
    初期化されるオブジェクトを含む**sizeof**式は、それ自体への参照を構成せず、C C++およびでも使用できます。
 
-**END Microsoft 固有の仕様**
+**Microsoft 固有の仕様はここまで**
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [__declspec](../cpp/declspec.md)<br/>
 [キーワード](../cpp/keywords-cpp.md)<br/>

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - combo boxes [C++], filling from second recordset
 - CListCtrl class, filling from second recordset
 ms.assetid: 360c0834-da6b-4dc0-bcea-80e9acd611f0
-ms.openlocfilehash: 9428f8a59dca021a1bd0e00a7970f4d19bab46be
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8eb2525ef8b749f58303cae13b87b21d7df73d1b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397927"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213409"
 ---
 # <a name="filling-a-list-box-from-a-second-recordset--mfc-data-access"></a>セカンド レコードセットを利用してリスト ボックスを表示する方法 (MFC データ アクセス)
 
@@ -28,13 +28,13 @@ ms.locfileid: "62397927"
 
 #### <a name="to-fill-a-combo-box-or-list-box-from-a-second-recordset"></a>セカンド レコードセットからコンボ ボックスまたはリスト ボックスの値を設定するには
 
-1. レコード セット オブジェクトを作成 ([CRecordset](../mfc/reference/crecordset-class.md)します。
+1. レコードセットオブジェクト ([CRecordset](../mfc/reference/crecordset-class.md)) を作成します。
 
-1. ポインターを取得、 [CComboBox](../mfc/reference/ccombobox-class.md)コンボ ボックス コントロールのオブジェクト。
+1. コンボボックスコントロールの[CComboBox](../mfc/reference/ccombobox-class.md)オブジェクトへのポインターを取得します。
 
 1. コンボ ボックスの以前の内容をすべて空にします。
 
-1. 移動、レコード セット内のすべてのレコードを呼び出す[ccombobox:](../mfc/reference/ccombobox-class.md#addstring)コンボ ボックスに追加する現在のレコードから各文字列の。
+1. レコードセット内のすべてのレコードを移動し、コンボボックスに追加する現在のレコードの各文字列に対して、 [CComboBox:: AddString](../mfc/reference/ccombobox-class.md#addstring)を呼び出します。
 
 1. コンボ ボックスの選択内容を初期化します。
 
@@ -68,7 +68,7 @@ void CSectionForm::OnInitialUpdate()
 
 この関数は、ドキュメントから `m_courseSet` を取得して開きます。 次に、`m_ctlCourseList` を空にして、`m_courseSet` を 1 レコードずつ処理します。 各レコードに対してコンボ ボックスの `AddString` メンバー関数が呼び出されて、レコードからコース ID 値が追加されます。 最後に、コンボ ボックスの選択内容が設定されます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [レコード ビュー (MFC データ アクセス)](../data/record-views-mfc-data-access.md)<br/>
 [ODBC ドライバーの一覧](../data/odbc/odbc-driver-list.md)

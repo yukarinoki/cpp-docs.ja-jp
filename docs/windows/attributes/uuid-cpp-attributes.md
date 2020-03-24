@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - uuid attribute
 ms.assetid: 90562a94-5e28-451b-a4b0-cadda7f66efe
-ms.openlocfilehash: d644f59ac92bf4e39f191c291dd4fef626411c3d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: c507a9ae42afc5081c290d38464aa7f24c277d15
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514953"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166121"
 ---
 # <a name="uuid-c-attributes"></a>uuid (C++ 属性)
 
@@ -30,7 +30,7 @@ ms.locfileid: "69514953"
 *uuid*<br/>
 128ビットの一意の識別子。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 インターフェイスまたはクラスの定義で**uuid** C++属性が指定されていない場合はC++ 、Microsoft コンパイラによって指定されます。 **Uuid**を指定する場合は、引用符を含める必要があります。
 
@@ -38,7 +38,7 @@ ms.locfileid: "69514953"
 
 Uuidgen.exe または Guidgen.exe を使用して、独自の一意の Id を生成できます。 (これらのツールのいずれかを実行するには、 **[スタート]** ボタンをクリックし、メニューの **[実行]** をクリックします。 次に、必要なツールの名前を入力します)。
 
-ATL を使用しないプロジェクトで使用する場合、 **uuid**属性を指定することは、 [uuid](../../cpp/uuid-cpp.md) **__declspec**修飾子を指定することと同じです。 クラスの**uuid**を取得するには、 [__uuidof](../../cpp/uuidof-operator.md)を使用します。
+ATL を使用しないプロジェクトで使用する場合、 **uuid**属性を指定することは、 [uuid](../../cpp/uuid-cpp.md) **__declspec**修飾子を指定することと同じです。 クラスの**uuid**を取得するには、を使用し[__uuidof](../../cpp/uuidof-operator.md)
 
 ## <a name="example"></a>例
 
@@ -57,7 +57,7 @@ ATL を使用しないプロジェクトで使用する場合、 **uuid**属性�
 
 属性コンテキストの詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [IDL 属性](idl-attributes.md)<br/>
 [インターフェイス属性](interface-attributes.md)<br/>

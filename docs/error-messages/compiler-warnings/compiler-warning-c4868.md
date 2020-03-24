@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4868
 ms.assetid: fc6aa7e5-34dd-4ec2-88bd-16e430361dc7
-ms.openlocfilehash: c1d49eb61a5c7c47fa83dacb39ed50f42e0fb147
-ms.sourcegitcommit: 8762a3f9b5476b4dee03f0ee8064ea606550986e
+ms.openlocfilehash: 00c3e01f46bc98baff1b266bb8ee445b0f868522
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74810486"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165016"
 ---
 # <a name="compiler-warning-level-4-c4868"></a>コンパイラの警告 (レベル 4) C4868
 
@@ -27,7 +27,7 @@ ms.locfileid: "74810486"
 
 評価の順序を左から右へとする必要がある場合は、代わりに `const` 参照によって要素を渡すことができるかどうかを検討してください。 たとえば、次のコードサンプルでは、このような変更によって警告が除去されます。
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 このサンプルでは、C4868 を生成し、その修正方法を示しています。
 

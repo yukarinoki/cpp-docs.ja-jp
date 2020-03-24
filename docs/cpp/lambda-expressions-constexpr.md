@@ -1,19 +1,19 @@
 ---
-title: C++ では constexpr ラムダ式
+title: での constexpr ラムダ式C++
 ms.date: 04/08/2019
 helpviewer_keywords:
 - lambda expressions [C++], constexpr
 ms.assetid: b56346cd-fbff-475f-aeaa-ed2010c6d6f7
-ms.openlocfilehash: d1bc60a6da813e54c857da38b0164f544216be00
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9467d9e404204012df6461adacd5dc4cdbdfe71d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62368696"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179576"
 ---
-# <a name="constexpr-lambda-expressions-in-c"></a>C++ では constexpr ラムダ式
+# <a name="constexpr-lambda-expressions-in-c"></a>での constexpr ラムダ式C++
 
-**Visual Studio 2017 バージョン 15.3 以降**(で使用可能な[/std:c++17](../build/reference/std-specify-language-standard-version.md))。ラムダ式として宣言することがあります**constexpr**または定数式の中でキャプチャまたは導入される各データ メンバーの初期化が許可されている場合、定数式で使用します。
+**Visual Studio 2017 バージョン15.3 以降**( [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)で利用可能): ラムダ式は、キャプチャまたは導入される各データメンバーの初期化が定数式内で許可されている場合、 **constexpr**として宣言するか、定数式で使用できます。
 
 ```cpp
     int y = 32;
@@ -29,7 +29,7 @@ ms.locfileid: "62368696"
     }
 ```
 
-ラムダは暗黙的に**constexpr**その結果の要件を満たしている場合、 **constexpr**関数。
+ラムダは、結果が**constexpr**関数の要件を満たす場合、暗黙的に**constexpr**になります。
 
 ```cpp
     auto answer = [](int n)
@@ -40,7 +40,7 @@ ms.locfileid: "62368696"
     constexpr int response = answer(10);
 ```
 
-ラムダが暗黙的または明示的に場合**constexpr**、および関数ポインターに変換する、結果として得られる関数も**constexpr**:
+ラムダが暗黙的または明示的に**constexpr**の場合、関数ポインターに変換すると、結果として得られる関数も**constexpr**になります。
 
 ```cpp
     auto Increment = [](int n)
@@ -51,7 +51,7 @@ ms.locfileid: "62368696"
     constexpr int(*inc)(int) = Increment;
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [C++ 言語リファレンス](../cpp/cpp-language-reference.md)<br/>
 [C++ 標準ライブラリの関数オブジェクト](../standard-library/function-objects-in-the-stl.md)<br/>

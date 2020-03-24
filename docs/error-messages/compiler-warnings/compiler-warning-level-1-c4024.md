@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C4024
 ms.assetid: f6cb1b70-686a-4747-a01c-de673208209a
-ms.openlocfilehash: 140ec0de3650e2fed1a79958f9d75b49083ac801
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4eee180b4582efe7ac3ba2ecd8540a6b2149b05f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62152086"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80164535"
 ---
 # <a name="compiler-warning-level-1-c4024"></a>コンパイラの警告 (レベル 1) C4024
 
-'function': 仮引数および実パラメーター 'number' のさまざまな種類
+' function ': 仮引数と実際のパラメーター ' number ' の型が異なります。
 
-正式な実際の対応するパラメーターでは、種類があります。 コンパイラは、変更しなくても、実際のパラメーターを渡します。 受信側の関数では、パラメーターの型を型に変換します。
+対応する仮パラメーターと実パラメーターの型は異なります。 コンパイラは、変更せずに実際のパラメーターを渡します。 受信側の関数は、パラメーターの型を必要な型に変換します。

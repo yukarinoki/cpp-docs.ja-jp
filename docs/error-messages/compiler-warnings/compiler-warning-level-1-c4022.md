@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C4022
 ms.assetid: 9586ca84-4b40-4602-91a4-2e2415b1ab63
-ms.openlocfilehash: 87ebba68c6663d0e3bcd5ede464b881f7442656b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: da024024112718c4577e658540fbe76360d0d8a0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400059"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80164561"
 ---
 # <a name="compiler-warning-level-1-c4022"></a>コンパイラの警告 (レベル 1) C4022
 
-'function': 実パラメーター 'number' のポインターが一致しません
+' function ': 実際のパラメーター ' number ' とポインターが一致していません。
 
-実際のパラメーターのポインターの型は、対応する仮パラメーターのポインターの型によって異なります。 実際のパラメーターは、変更せずに渡されます。
+実際のパラメーターのポインター型は、対応する仮パラメーターのポインター型と異なります。 実際のパラメーターは変更なしで渡されます。

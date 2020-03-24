@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - type forwarding, C++
 ms.assetid: ae730b69-0c27-41cc-84e1-3132783866ea
-ms.openlocfilehash: c5148c05e5580942d885b310e35f3b629224a654
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 0803ecc2ffb2da2748b1ef063481aa2571f27f50
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515977"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171932"
 ---
 # <a name="type-forwarding-ccli"></a>型の転送 (C++/CLI)
 
@@ -33,7 +33,7 @@ Windows ランタイムでは、この機能はサポートされていません
 
 ### <a name="parameters"></a>パラメーター
 
-*new*<br/>
+*新規*<br/>
 型定義の移動先となるアセンブリ。
 
 *type*<br/>
@@ -88,6 +88,6 @@ Windows ランタイムでは、この機能はサポートされていません
 
 5. クライアント アプリケーションの再コンパイルなしで、A.dll を使用します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/clr`

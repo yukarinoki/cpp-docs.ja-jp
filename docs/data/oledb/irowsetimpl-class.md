@@ -88,12 +88,12 @@ helpviewer_keywords:
 - m_iRowset
 - m_rgRowHandles
 ms.assetid: 6a9189af-7556-45b1-adcb-9d62bb36704c
-ms.openlocfilehash: 2fbe461bfc812c5ac9b9a09aa3ed31c0a2a638e1
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: db12af1aecc094e6c04ab37b5a70a0acd97e39e9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79546045"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210419"
 ---
 # <a name="irowsetimpl-class"></a>IRowsetImpl クラス
 
@@ -126,7 +126,7 @@ class ATL_NO_VTABLE IRowsetImpl : public RowsetInterface
 *MapClass*<br/>
 プロバイダーによって保持されているすべての行ハンドルのストレージユニット。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atldb.h
 
@@ -157,7 +157,7 @@ class ATL_NO_VTABLE IRowsetImpl : public RowsetInterface
 |[m_iRowset](#irowset)|カーソルを表す行セットへのインデックス。|
 |[m_rgRowHandles](#rgrowhandles)|行ハンドルの一覧。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 [IRowset](/previous-versions/windows/desktop/ms720986(v=vs.85))は、基本の行セットインターフェイスです。
 
@@ -201,7 +201,7 @@ HRESULT CreateRow(DBROWOFFSET lRowsOffset,
 *rgRows*<br/>
 新しく作成された行ハンドルを使用して、`HROW`の配列が呼び出し元に返されます。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 行が存在する場合、このメソッドは[Addrefrows](../../data/oledb/irowsetimpl-addrefrows.md)を呼び出し、を返します。 それ以外の場合は、RowClass テンプレート変数の新しいインスタンスを割り当て、それを[m_rgRowHandles](../../data/oledb/irowsetimpl-m-rgrowhandles.md)に追加します。
 
@@ -227,7 +227,7 @@ STDMETHOD(GetData )(HROW hRow,
 |--------------------------------|------------------------------------------------|
 |*pDstData*|*pData*|
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 では、OLE DB データ変換 DLL を使用したデータ変換も処理されます。
 
@@ -282,7 +282,7 @@ STDMETHOD(GetNextRows )(HCHAPTER hReserved,
 IRowsetImpl();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 通常、このメソッドを直接呼び出す必要はありません。
 
@@ -340,7 +340,7 @@ STDMETHOD(RestartPosition )(HCHAPTER /* hReserved */);
 
 *OLE DB プログラマーリファレンス*の「 [IRowset:: RestartPosition](/previous-versions/windows/desktop/ms712877(v=vs.85)) 」を参照してください。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 行セットの位置は、`GetNextRow` が呼び出されるまで未定義です。 `RestartPosition` を呼び出し、後方にフェッチまたはスクロールすることによって、rowet の後方に移動できます。
 
@@ -371,7 +371,7 @@ virtual HRESULT SetDBStatus(DBSTATUS* statusFlags,
 
 標準の HRESULT 値。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 プロバイダーは、この関数をオーバーライドして DBSTATUS_S_ISNULL および DBSTATUS_S_DEFAULT の特別な処理を提供します。
 
@@ -385,7 +385,7 @@ virtual HRESULT SetDBStatus(DBSTATUS* statusFlags,
 unsigned m_bCanFetchBack:1;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `DBPROPSET_ROWSET` グループの `DBPROP_CANFETCHBACKWARDS` プロパティにリンクされています。 `m_bCanFetchBackwards` を**true**にするには、プロバイダーが `DBPROP_CANFETCHBACKWARDS` をサポートしている必要があります。
 
@@ -399,7 +399,7 @@ unsigned m_bCanFetchBack:1;
 unsigned  m_bCanScrollBack:1;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `DBPROPSET_ROWSET` グループの `DBPROP_CANSCROLLBACKWARDS` プロパティにリンクされています。 `m_bCanFetchBackwards` を**true**にするには、プロバイダーが `DBPROP_CANSCROLLBACKWARDS` をサポートしている必要があります。
 
@@ -413,7 +413,7 @@ unsigned  m_bCanScrollBack:1;
 unsigned m_bReset:1;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 コンシューマーが負の `lOffset` または*cRows*を使用して[GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md)を呼び出し、`m_bReset` が true の場合、`GetNextRows` は行セットの末尾に移動します。 `m_bReset` が false の場合、コンシューマーは OLE DB 仕様に準拠したエラーコードを受け取ります。 `m_bReset` フラグは、行セットが最初に作成されたときと、コンシューマーが[IRowsetImpl:: RestartPosition](../../data/oledb/irowsetimpl-restartposition.md)を呼び出すときに**true**に設定されます。 `GetNextRows`を呼び出すと、 **false**に設定されます。
 
@@ -437,7 +437,7 @@ DBROWOFFSET m_iRowset;
 MapClass m_rgRowHandles;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 行ハンドルは `ReleaseRows`を呼び出すことによって削除されます。 *Mapclass*の定義については、「 [IRowsetImpl の概要](../../data/oledb/irowsetimpl-class.md)」を参照してください。
 

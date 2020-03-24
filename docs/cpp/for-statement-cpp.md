@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - for keyword [C++]
 ms.assetid: 6c7d01b3-c4c1-4c6a-aa58-e2d198f33d4a
-ms.openlocfilehash: a6b1823fe93c45abd8dabbd22116924e0a64f19a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e3dfdb45bdf8a508eca9d29e90b3f7c05e7b147d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154218"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179914"
 ---
 # <a name="for-statement-c"></a>for ステートメント (C++)
 
-条件が偽 (false) になるまでステートメントを繰り返し実行します。 範囲ベースの for ステートメントについては、次を参照してください。[ステートメント (C++) の範囲に基づく](../cpp/range-based-for-statement-cpp.md)します。
+条件が偽 (false) になるまでステートメントを繰り返し実行します。 範囲ベースの for ステートメントの詳細については、「[範囲ベースの ForC++ステートメント ()](../cpp/range-based-for-statement-cpp.md)」を参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -22,21 +22,21 @@ for ( init-expression ; cond-expression ; loop-expression )
     statement;
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-使用して、**for**ステートメントを指定した回数だけを実行する必要がありますのあるループを構築します。
+**For**ステートメントを使用して、指定された回数だけ実行する必要があるループを構築します。
 
-**for**次の表に示すように、次の 3 つの省略可能な部分のステートメントで構成されます。
+**For**ステートメントは、次の表に示すように、3つの省略可能な部分で構成されています。
 
 ### <a name="for-loop-elements"></a>for ループ要素
 
 |構文の名前|実行タイミング|説明|
 |-----------------|-------------------|-----------------|
-|`init-expression`|他の要素の前に、**for**ステートメントでは、`init-expression`は一度だけ実行します。 その後、制御は `cond-expression` に渡されます。|ループ インデックスを初期化するためによく使用されます。 式または宣言を含めることができます。|
+|`init-expression`|**For**ステートメントの他の要素の前には、`init-expression` が1回だけ実行されます。 その後、制御は `cond-expression` に渡されます。|ループ インデックスを初期化するためによく使用されます。 式または宣言を含めることができます。|
 |`cond-expression`|最初のイテレーションを含む `statement` の各イテレーションの実行前。 `statement` は、`cond-expression` が true (0 以外) に評価された場合にのみ実行されます。|整数型に評価される式、または整数型へのあいまいでない変換が行われるクラス型。 通常、for ループの終了条件をテストするために使用します。|
 |`loop-expression`|`statement` の各イテレーションの終了時。 `loop-expression` の実行後に `cond-expression` が実行されます。|通常、ループ インデックスのインクリメントに使用します。|
 
-次の例では、さまざまな方法を使用する、**for**ステートメント。
+次の例では、 **for**ステートメントを使用するさまざまな方法を示します。
 
 ```cpp
 #include <iostream>
@@ -63,7 +63,7 @@ int main() {
     // Output: 012
 ```
 
-`init-expression` と `loop-expression` には、コンマで区切った複数のステートメントを含めることができます。 例えば:
+`init-expression` と `loop-expression` には、コンマで区切った複数のステートメントを含めることができます。 次に例を示します。
 
 ```cpp
 #include <iostream>
@@ -98,11 +98,11 @@ for (int i = 10; i > 0; i--) {
     // Output: 10 12 14 16 18
 ```
 
-**for**ループが終了したときに、 [break](../cpp/break-statement-cpp.md)、[return](../cpp/return-statement-cpp.md)、または[goto](../cpp/goto-statement-cpp.md) (外側のラベルの付いたステートメントに対する、 **for**ループ) 内で`statement`を実行します。 A[continue](../cpp/continue-statement-cpp.md)内のステートメントを**for**ループは、現在のイテレーションのみを終了します。
+**For**ループは、`statement` 内の[break](../cpp/break-statement-cpp.md)、 [return](../cpp/return-statement-cpp.md)、または[goto](../cpp/goto-statement-cpp.md) (for ループの外側**の**ラベル付きステートメントに対する) が実行されると終了します。 **For**ループ内の[continue](../cpp/continue-statement-cpp.md)ステートメントは、現在のイテレーションのみを終了します。
 
-`cond-expression`を省略すると true と見なされ、`statement` 内で **break**、**return**、または**goto** をしない限り **for** ループは終了しません。
+`cond-expression` を省略すると、true と見なされ、 **for**ループは、 **break**、 **return**、または**goto**を使用せずに `statement`内に終了しません。
 
-3 つのフィールドの**for**ステートメントは通常、終了のテストの初期化を使用し、インクリメントはこれらの用途に制限します。 たとえば、次のコードは、数値 0 ～ 4 を出力します。 この場合、`statement` は null ステートメントです。
+通常、 **for**ステートメントの3つのフィールドは初期化、終了のテスト、および増分のために使用されますが、これらのフィールドはこれらの使用に限定されません。 たとえば、次のコードは、数値 0 ～ 4 を出力します。 この場合、`statement` は null ステートメントです。
 
 ```cpp
 #include <iostream>
@@ -119,7 +119,7 @@ int main()
 
 ## <a name="for-loops-and-the-c-standard"></a>for ループおよび C++ 標準
 
-C++ 標準で宣言された変数を**for**後にスコープ外に出るループ、**for**ループが終了します。 例えば:
+標準C++では、 **for ループで**宣言された変数が**for**ループの終了後にスコープ外に出るということが示されています。 次に例を示します。
 
 ```cpp
 for (int i = 0 ; i < 5 ; i++) {
@@ -128,11 +128,11 @@ for (int i = 0 ; i < 5 ; i++) {
 // i is now out of scope under /Za or /Zc:forScope
 ```
 
-既定では、 [/Ze](../build/reference/za-ze-disable-language-extensions.md)で宣言された変数を**の**までスコープ内にループが残り、**の**ループの外側のスコープが終了します。
+既定では、 [/ze](../build/reference/za-ze-disable-language-extensions.md)では**for ループで**宣言された変数は、 **for**ループの外側のスコープが終了するまでスコープ内に残ります。
 
-[/Zc:forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md)を指定せずに for ループで宣言された変数の標準動作を有効に`/Za`します。
+[/Zc: forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md)は、for ループで宣言された変数の標準動作を有効にします。 `/Za`を指定する必要はありません。
 
-スコープの相違点を使用することも、**for**ループの下で変数を再宣言を`/Ze`次のようにします。
+For ループのスコープの違いを使用して、次**の**ように `/Ze` で変数を再宣言することもできます。
 
 ```cpp
 // for_statement5.cpp
@@ -144,9 +144,9 @@ int main(){
 }
 ```
 
-宣言された変数の標準の動作をより正確に模倣これを**for**ループで宣言された変数が必要です、**for**ループを使用して、ループが完了した後にスコープ外に移動します。 変数が宣言されている場合、**for**ループ コンパイラ内部的に引き上げますでローカル変数を**for**ループの外側のスコープと同じ名前のローカル変数が既にある場合でもです。
+これは、for ループで宣言された変数の標準動作をよりよく模倣しています。**そのために**は、ループの完了後に**for**ループで宣言された変数がスコープ外に出る必要があります。 変数が**for**ループで宣言されている場合、同じ名前を持つローカル変数が既に存在する場合でも、コンパイラは内部**的に for ループの**外側のスコープ内のローカル変数にその変数を昇格させます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [繰り返しステートメント](../cpp/iteration-statements-cpp.md)<br/>
 [キーワード](../cpp/keywords-cpp.md)<br/>

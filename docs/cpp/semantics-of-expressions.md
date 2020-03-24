@@ -7,12 +7,12 @@ helpviewer_keywords:
 - expression evaluation
 - expression evaluation, about expression evaluation
 ms.assetid: 4a792154-533b-48b9-8709-31bfc170f0a7
-ms.openlocfilehash: 6770d3fb314222c7c58b6b97fa42d74cbc1e9b33
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 5213fc7972f3a2590ceac5038a7b5e07495df594
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857321"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178850"
 ---
 # <a name="semantics-of-expressions"></a>式のセマンティクス
 
@@ -20,7 +20,7 @@ ms.locfileid: "74857321"
 
 ## <a name="order-of-evaluation"></a>評価の順序
 
-次の例について考えます。
+次の例を考えてみましょう。
 
 ```cpp
 // Order_of_Evaluation.cpp
@@ -69,16 +69,16 @@ C++ 言語では、オペランドを指定するときに、特定の互換性�
 
 |想定される型|許可される型|
 |-------------------|-------------------|
-|*type*|`const` *type*<br /> `volatile` *type*<br /> *type*&<br /> `const` *type*&<br /> `volatile` *type*&<br /> `volatile const` *type*<br /> `volatile const` *type*&|
-|*型*\*|*型*\*<br /> `const` *type* \*<br /> `volatile` *type* \*<br /> `volatile const` *type* \*|
-|`const` *type*|*type*<br /> `const` *type*<br />`const` *type*&|
-|`volatile` *type*|*type*<br /> `volatile` *type*<br /> `volatile` *type*&|
+|*type*|`const` の*種類*<br /> `volatile` の*種類*<br /> *type*&<br /> `const` の*種類*&<br /> `volatile` の*種類*&<br /> `volatile const` の*種類*<br /> `volatile const` の*種類*&|
+|*型*\*|*型*\*<br /> `const` の*種類*\*<br /> `volatile` の*種類*\*<br /> `volatile const` の*種類*\*|
+|`const` の*種類*|*type*<br /> `const` の*種類*<br />`const` の*種類*&|
+|`volatile` の*種類*|*type*<br /> `volatile` の*種類*<br /> `volatile` の*種類*&|
 
 前の規則はいつでも組み合わせて使用できるため、volatile オブジェクトへの const ポインターは、ポインターが想定される場所で指定できます。
 
 ## <a name="ambiguous-expressions"></a>あいまいな式
 
-状況によっては、式の意味があいまいになる場合があります。 通常、オブジェクトの値が同じ式で複数回変更されると、このような式が発生します。 これらの式は、評価の特定の順序に依存します (言語が定義しない場合)。 次に例を示します。
+状況によっては、式の意味があいまいになる場合があります。 通常、オブジェクトの値が同じ式で複数回変更されると、このような式が発生します。 これらの式は、評価の特定の順序に依存します (言語が定義しない場合)。 次の例を確認してください。
 
 ```
 int i = 7;

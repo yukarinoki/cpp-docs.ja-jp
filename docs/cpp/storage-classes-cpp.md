@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - storage classes [C++], basic concepts
 ms.assetid: f10e1c56-6249-4eb6-b08f-09ab1eef1992
-ms.openlocfilehash: 5b30fe7bc6665da9172f093f8ea6a2130cb900b2
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: d4fe1e7f14ef2a11e5e7ac32b4ffb0247aab3c84
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447320"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178548"
 ---
 # <a name="storage-classes"></a>ストレージ クラス
 
@@ -30,7 +30,7 @@ ms.locfileid: "79447320"
    register int val; // warning C5033: 'register' is no longer a supported storage class
 ```
 
-## <a name="static"></a>雑音
+## <a name="static"></a><a name="static"></a>雑音
 
 **Static**キーワードを使用すると、グローバルスコープ、名前空間スコープ、およびクラススコープで変数と関数を宣言できます。 静的変数は、ローカル スコープでも宣言できます。
 
@@ -155,11 +155,11 @@ var == value
 
 C++11 以降では、静的ローカル変数の初期化はスレッド セーフであることが保証されています。 この機能は、*マジックスタティック*と呼ばれることもあります。 ただし、マルチスレッド アプリケーションでは、後続の割り当てはすべて同期する必要があります。 CRT に依存しないようにするには、 [/zc: threadSafeInit-](../build/reference/zc-threadsafeinit-thread-safe-local-static-initialization.md)フラグを使用して、スレッドセーフな静的初期化機能を無効にすることができます。
 
-## <a name="extern"></a>不十分
+## <a name="extern"></a><a name="extern"></a>不十分
 
 **Extern**として宣言されたオブジェクトと変数は、別の翻訳単位または外側のスコープで定義されているオブジェクトを外部リンケージとして宣言します。 詳細については、「 [extern](extern-cpp.md)および[Translation の単位とリンケージ](program-and-linkage-cpp.md)」を参照してください。
 
-## <a name="thread_local"></a>thread_local (C++ 11)
+## <a name="thread_local-c11"></a><a name="thread_local"></a>thread_local (C++ 11)
 
 **Thread_local**指定子を使用して宣言された変数は、その変数が作成されたスレッドでのみアクセスできます。 変数は、スレッドが作成されるときに作成され、スレッドが破棄されるときに破棄されます。 各スレッドには、それ自体の変数のコピーがあります。 Windows では、 **thread_local**は Microsoft 固有の[__declspec (スレッド)](../cpp/thread.md)属性と機能的に等価です。
 
@@ -194,7 +194,7 @@ void DoSomething()
 
 Windows では、 **thread_local**は[__declspec (thread)](../cpp/thread.md)と機能的に等価ですが、 **__declspec (thread)** は型定義に適用でき、C コードでは有効である点が異なります。 可能な限り、 **thread_local**を使用します。これC++は標準の一部であるため、移植性が高くなります。
 
-##  <a name="register"></a>取引
+##  <a name="register"></a><a name="register"></a>取引
 
 **Visual Studio 2017 バージョン15.3 以降**( [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)で利用可能): **register**キーワードはサポートされているストレージクラスではなくなりました。 キーワードは、将来使用するために標準で予約されています。
 

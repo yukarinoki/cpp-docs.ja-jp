@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - C4018
 ms.assetid: 6e8cbb04-d914-4319-b431-cbc2fbe40eb1
-ms.openlocfilehash: e136a82f8a0ecb3f5375d3a486dd017df7edb6e0
-ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
+ms.openlocfilehash: f5708a9f52b6fc8206094454c352710199437f27
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74051982"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80161699"
 ---
 # <a name="compiler-warning-level-3-c4018"></a>コンパイラの警告 (レベル 3) C4018 由来
 
-' expression ': 符号付きまたは符号なしの不一致です。
+'expression' : signed/unsigned mismatch
 
 符号付きと符号なしの数値を比較するには、コンパイラが符号付きの値を符号なしに変換する必要がありました。
 

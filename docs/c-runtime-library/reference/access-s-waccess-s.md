@@ -33,16 +33,16 @@ helpviewer_keywords:
 - _access_s function
 - _waccess_s function
 ms.assetid: fb3004fc-dcd3-4569-8b27-d817546e947e
-ms.openlocfilehash: 0550b8fb42cb62d1a175960d6b0d4ed4dbecdcac
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: e7e61369635a1a59ef16aa6262650d9648277eb0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939899"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171321"
 ---
 # <a name="_access_s-_waccess_s"></a>_access_s、_waccess_s
 
-ファイルの読み取り/書き込みアクセス許可を決定します。 これは、「[CRT のセキュリティ機能](../../c-runtime-library/security-features-in-the-crt.md)」の説明にあるとおり、セキュリティが強化されたバージョンの [_access, _waccess](access-waccess.md) です。
+ファイルの読み取り/書き込みアクセス許可を決定します。 これは、「[CRT のセキュリティ機能](access-waccess.md)」の説明にあるとおり、セキュリティが強化されたバージョンの [_access, _waccess](../../c-runtime-library/security-features-in-the-crt.md) です。
 
 ## <a name="syntax"></a>構文
 
@@ -62,7 +62,7 @@ errno_t _waccess_s(
 *path*<br/>
 ファイルまたはディレクトリ パス。
 
-*モード*<br/>
+*mode*<br/>
 アクセス許可の設定。
 
 ## <a name="return-value"></a>戻り値
@@ -77,9 +77,9 @@ errno_t _waccess_s(
 
 詳細については、「[errno、_doserrno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-ファイルと共に使用する場合、 **_access_s**関数は、指定されたファイルが存在し、*モード*の値によって指定されたとおりにアクセスできるかどうかを判断します。 ディレクトリと共に使用すると、 **_access_s**は指定されたディレクトリが存在するかどうかのみを判断します。 Windows 2000 以降のオペレーティングシステムでは、すべてのディレクトリに読み取りと書き込みのアクセス権があります。
+ファイルと共に使用する場合、 **_access_s**関数は、指定されたファイルが存在し、*モード*の値によって指定されたとおりにアクセスできるかどうかを判断します。 ディレクトリと共に使用する場合、 **_access_s**は指定したディレクトリが存在するかどうかのみを判断します。 Windows 2000 以降のオペレーティングシステムでは、すべてのディレクトリに読み取りと書き込みのアクセス権があります。
 
 |モード値|ファイル チェックの目的|
 |----------------|---------------------|
@@ -88,9 +88,9 @@ errno_t _waccess_s(
 |04|読み取りアクセス許可|
 |06|読み取りおよび書き込みアクセス許可|
 
-ファイルの読み取りおよび書き込みアクセス許可では、ファイルを開く権限を確認するには不十分です。 たとえば、ファイルが別のプロセスによってロックされている場合、 **_access_s**から0が返されても、ファイルにアクセスできない可能性があります。
+ファイルの読み取りおよび書き込みアクセス許可では、ファイルを開く権限を確認するには不十分です。 たとえば、ファイルが別のプロセスによってロックされている場合、 **_access_s**が0を返す場合でも、ファイルにアクセスできない可能性があります。
 
-**_waccess_s**は、 **_access_s**のワイド文字バージョンです。 **_waccess_s**への*パス*引数はワイド文字列です。 それ以外の場合、 **_waccess_s**と **_access_s**は同じように動作します。
+**_waccess_s**は **_access_s**のワイド文字バージョンであり、 **_waccess_s**の*パス*引数はワイド文字列です。 それ以外の場合、 **_waccess_s**と **_access_s**は同じように動作します。
 
 これらの関数では、パラメーターの検証が行われます。 *Path*が NULL であるか、*モード*で有効なモードが指定されていない場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は `errno` を `EINVAL` に設定し、`EINVAL` を返します。
 
@@ -151,7 +151,7 @@ File crt_access_s.c exists.
 File crt_access_s.c does not have write permission.
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [ファイル処理](../../c-runtime-library/file-handling.md)<br/>
 [_access、_waccess](access-waccess.md)<br/>

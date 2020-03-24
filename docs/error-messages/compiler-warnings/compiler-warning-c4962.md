@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - C4962
 ms.assetid: 62b156fe-04e5-4a6e-9339-6ab148185f87
-ms.openlocfilehash: e3f7b715da3774d8289fdd526cf1fa0b5bdddba6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a600c1875040e1076978bb80c467e6232303cd82
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62280803"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80164847"
 ---
 # <a name="compiler-warning-c4962"></a>コンパイラの警告 C4962
 
-' function':プロファイル ガイド付き最適化の最適化によってプロファイル データに矛盾が生じたために無効です"
+'function' : 最適化によってプロファイル データに矛盾が生じたため、ガイド付き最適化のプロファイルを無効にします。
 
 関数のカウント (プロファイル) データの信頼性が低かったため、この関数は /LTCG:PGO を指定してコンパイルされませんでした。 その関数の信頼性の低いプロファイル データを格納している .pgc ファイルを再生成するためにプロファイリングを再実行します。
 

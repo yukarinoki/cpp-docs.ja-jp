@@ -1,20 +1,20 @@
 ---
-title: コンパイラ エラー C2773
+title: コンパイラエラー C2773
 ms.date: 11/04/2016
 f1_keywords:
 - C2773
 helpviewer_keywords:
 - C2773
 ms.assetid: 8d564b26-1623-4d92-aabc-dff33f7b1145
-ms.openlocfilehash: dc4ff7174f6a801f0e1759ce8b4b306e74ec798a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 661c607183697b0ace12291d9d1305b262a80c6f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62257206"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80176989"
 ---
-# <a name="compiler-error-c2773"></a>コンパイラ エラー C2773
+# <a name="compiler-error-c2773"></a>コンパイラエラー C2773
 
-\#インポートと #using C コンパイラでのみ使用できます
+\#インポートと #using コンパイラでC++のみ使用できます
 
-C コンパイラが認識されない、`#import`プリプロセッサ ディレクティブです。 ソースは、C++ としてコンパイルします。 使用[/TP](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md)必要な場合。
+C コンパイラでは、`#import` プリプロセッサディレクティブが認識されません。 ソースをとしC++てコンパイルします。 必要に応じて、 [/tp](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md)を使用します。

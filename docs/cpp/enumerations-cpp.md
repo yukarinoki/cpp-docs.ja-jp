@@ -10,12 +10,12 @@ helpviewer_keywords:
 - named constants, enumeration declarations
 - declaring enumerations
 ms.assetid: 081829db-5dca-411e-a53c-bffef315bcb3
-ms.openlocfilehash: caec9ea7ac5482ff23b73676a3fd7b3d25ad293f
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 67b03256390d5447ae5accc28dd450a7f60f485c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79423760"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180187"
 ---
 # <a name="enumerations-c"></a>列挙型 [C++]
 
@@ -143,7 +143,7 @@ namespace ScopedEnumConversions
 
 `hand = account_num;` 行では、前に示したように、スコープを持たない列挙型に関連するエラーが発生することに注意してください。 これは、明示的にキャストすることでエラーを回避できます。 ただし、スコープを持つ列挙型を使用しても、次のステートメント、`account_num = Suit::Hearts;` での変換の試みは、明示的なキャストなしではエラーが発生します。
 
-## <a name="no_enumerators"></a>列挙子のない列挙型
+## <a name="enums-with-no-enumerators"></a><a name="no_enumerators"></a>列挙子のない列挙型
 
 **Visual Studio 2017 バージョン15.3 以降**( [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)で利用可能): 明示的な基になる型と列挙子がない列挙型 (regular またはスコープ) を定義することで、他の型への暗黙の型変換を持たない新しい整数型が導入されます。 組み込みの基になる型の代わりにこの型を使用することにより、誤った暗黙的な変換によって発生する軽度のエラーの可能性を排除できます。
 

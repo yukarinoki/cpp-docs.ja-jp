@@ -12,16 +12,16 @@ helpviewer_keywords:
 - GetString method
 - SetString method
 ms.assetid: 138dc4de-c7c3-478c-863e-431e48249027
-ms.openlocfilehash: 6ba56143beb3411734899839a46ab42992dfa4d8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a0590bc015c5487315b8cbd38f0baf91eb3082cc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62230996"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211868"
 ---
 # <a name="cdynamicstringaccessor-class"></a>CDynamicStringAccessor クラス
 
-データベース スキーマ (データベースの基になる構造) の知識があるない場合にデータ ソースにアクセスすることができます。
+データベーススキーマ (データベースの基になる構造) に関する知識がない場合に、データソースにアクセスできるようにします。
 
 ## <a name="syntax"></a>構文
 
@@ -40,24 +40,24 @@ class CDynamicStringAccessorT : public CDynamicAccessor
 
 |||
 |-|-|
-|[GetString](#getstring)|指定された列のデータを文字列として取得します。|
-|[SetString](#setstring)|文字列として指定された列のデータを設定します。|
+|[GetString](#getstring)|指定された列データを文字列として取得します。|
+|[SetString](#setstring)|指定された列データを文字列として設定します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-中に[CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) 、プロバイダーによって報告されたネイティブ形式でデータを要求`CDynamicStringAccessor`要求プロバイダーが文字列データとしてデータ ストアからすべてのデータをフェッチします。 これは、表示またはデータ ストアの内容を印刷するなど、データ ストア内の値の計算を必要としない単純なタスクに特に便利です。
+[CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)はプロバイダーによって報告されたネイティブ形式のデータを要求しますが、`CDynamicStringAccessor` は、データストアからアクセスされるすべてのデータを文字列データとして取得するようにプロバイダーに要求します。 これは、データストアの内容の表示や印刷など、データストアの値の計算を必要としない単純なタスクに特に便利です。
 
-データ ストア内の列のデータのネイティブな型は問題になりません。プロバイダーがデータ変換をサポートできる限りの文字列形式のデータが供給されます。 プロバイダーが、ネイティブ データ型から (これは一般的ではない) 文字列への変換をサポートしていない場合、要求側の呼び出しは DB_S_ERRORSOCCURED、成功の値を返しに対応する列のステータスには、変換の問題によって示されますDBSTATUS_E_CANTCONVERTVALUE します。
+データストア内の列データのネイティブな型は関係ありません。プロバイダーがデータ変換をサポートできる限り、データは文字列形式で提供されます。 プロバイダーがネイティブデータ型から文字列への変換をサポートしていない場合 (これは一般的ではありません)、要求を呼び出すと DB_S_ERRORSOCCURED 成功値が返され、対応する列の状態は、の変換の問題を示します。DBSTATUS_E_CANTCONVERTVALUE。
 
-使用`CDynamicStringAccessor`列情報を取得するメソッド。 実行時に動的にアクセサーを作成するのにには、この列の情報を使用します。
+`CDynamicStringAccessor` メソッドを使用して、列情報を取得します。 この列情報は、実行時にアクセサーを動的に作成するために使用します。
 
-列の情報は、このクラスによって作成および管理のバッファーに格納されます。 使用してバッファーからデータを取得[GetString](../../data/oledb/cdynamicstringaccessor-getstring.md)を使用して、バッファーに格納または[SetString](../../data/oledb/cdynamicstringaccessor-setstring.md)します。
+列情報は、このクラスによって作成および管理されるバッファーに格納されます。 [GetString](../../data/oledb/cdynamicstringaccessor-getstring.md)を使用してバッファーからデータを取得するか、 [setstring](../../data/oledb/cdynamicstringaccessor-setstring.md)を使用してバッファーに格納します。
 
-動的アクセサー クラスの使用例とについては、次を参照してください。[動的アクセサーの使用](../../data/oledb/using-dynamic-accessors.md)します。
+動的アクセサークラスの使用例については、「[動的アクセサーの使用](../../data/oledb/using-dynamic-accessors.md)」を参照してください。
 
-## <a name="getstring"></a> CDynamicStringAccessor::GetString
+## <a name="cdynamicstringaccessorgetstring"></a><a name="getstring"></a>CDynamicStringAccessor:: GetString
 
-指定された列のデータを文字列として取得します。
+指定された列データを文字列として取得します。
 
 ### <a name="syntax"></a>構文
 
@@ -71,23 +71,23 @@ BaseType* GetString(const WCHAR* pColumnName) const throw();
 
 #### <a name="parameters"></a>パラメーター
 
-*nColumn*<br/>
-[in]列の番号。 列番号 1 から始まります。 値 0 は、存在する場合、ブックマーク列を参照します。
+*n 列*<br/>
+から列番号。 列番号は1から始まります。 値が0の場合は、ブックマーク列 (存在する場合) を参照します。
 
 *pColumnName*<br/>
-[in]列名を含む文字列へのポインター。
+から列名を含む文字列へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-文字列値へのポインターは、指定された列から取得されます。 型の値は、`BaseType`は**CHAR**または**WCHAR** _UNICODE が定義されているかどうかどうかによって異なります。 指定された列が見つからない場合は、NULL を返します。
+指定した列から取得した文字列値へのポインター。 値は `BaseType`型で、_UNICODE が定義されているかどうかに応じて**CHAR**または**WCHAR**になります。 指定された列が見つからない場合は NULL を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-2 番目のオーバーライド フォームは、ANSI 文字列として列名を取得します。 3 番目のオーバーライド フォームは、Unicode 文字列として列名を取得します。
+2番目のオーバーライド形式では、列名が ANSI 文字列として取得されます。 3番目のオーバーライド形式では、列名が Unicode 文字列として取得されます。
 
-## <a name="setstring"></a> CDynamicStringAccessor::SetString
+## <a name="cdynamicstringaccessorsetstring"></a><a name="setstring"></a>CDynamicStringAccessor:: SetString
 
-文字列として指定された列のデータを設定します。
+指定された列データを文字列として設定します。
 
 ### <a name="syntax"></a>構文
 
@@ -104,28 +104,28 @@ HRESULT SetString(const WCHAR* pColumnName,
 
 #### <a name="parameters"></a>パラメーター
 
-*nColumn*<br/>
-[in]列の番号。 列番号 1 から始まります。 0 の特殊な値は、存在する場合、ブックマーク列を参照します。
+*n 列*<br/>
+から列番号。 列番号は1から始まります。 特別な値0は、ブックマーク列 (存在する場合) を参照します。
 
 *pColumnName*<br/>
-[in]列名を含む文字列へのポインター。
+から列名を含む文字列へのポインター。
 
 *data*<br/>
-[in]指定された列に書き込まれる文字列のデータへのポインター。
+から指定された列に書き込まれる文字列データへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-指定された列を設定する文字列値へのポインター。 型の値は、`BaseType`は**CHAR**または**WCHAR** _UNICODE が定義されているかどうかどうかによって異なります。
+指定された列を設定する文字列値へのポインター。 値は `BaseType`型で、_UNICODE が定義されているかどうかに応じて**CHAR**または**WCHAR**になります。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-オーバーライド フォームは、ANSI 文字列として列名、2 番目と 3 番目のオーバーライド フォームは Unicode 文字列として列名。
+2番目のオーバーライド形式では、列名が ANSI 文字列として取得され、3番目のオーバーライド形式では列名が Unicode 文字列として取得されます。
 
-場合、ランタイム アサーション エラーが生成されます _SECURE_ATL の 0 以外の値を持つが定義されている場合、入力*データ*文字列が参照されるデータ列の最大許容長を超えています。 それ以外の場合、許容される最大長よりも長い場合に、入力文字列が切り捨てられます。
+_SECURE_ATL が0以外の値を持つように定義されている場合、入力*データ*文字列が参照されるデータ列の許容最大長を超えると、ランタイムアサーションエラーが生成されます。 それ以外の場合、入力文字列は許容される最大長を超えた場合に切り捨てられます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB コンシューマー テンプレートに関するページ](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB コンシューマー テンプレート リファレンス](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [CAccessor クラス](../../data/oledb/caccessor-class.md)<br/>
 [CDynamicParameterAccessor クラス](../../data/oledb/cdynamicparameteraccessor-class.md)<br/>

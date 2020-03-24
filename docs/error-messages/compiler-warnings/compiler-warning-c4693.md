@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4693
 ms.assetid: 72d8db01-5e6f-4794-8731-76107e8f064a
-ms.openlocfilehash: cac5918eb4a1689fd215e07272958eeca48247ad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 71c3db18b400ce94bff3c643d6728a6613061039
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62311320"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165133"
 ---
 # <a name="compiler-warning-c4693"></a>コンパイラの警告 C4693
 
 > 'class': シールされた抽象クラスにインスタンス メンバー 'Test' を含めることはできません
 
-型がマークされている場合[シール](../../extensions/sealed-cpp-component-extensions.md)と[抽象](../../extensions/abstract-cpp-component-extensions.md)、静的メンバーをのみがあることができます。
+型が[sealed](../../extensions/sealed-cpp-component-extensions.md)および[abstract](../../extensions/abstract-cpp-component-extensions.md)としてマークされている場合は、静的メンバーのみを持つことができます。
 
-この警告は、自動的にエラーになります。 この動作を変更する場合を使用して、 [#pragma warning](../../preprocessor/warning.md)します。
+この警告は、自動的にエラーになります。 この動作を変更する場合は、 [#pragma 警告](../../preprocessor/warning.md)を使用します。
 
 ## <a name="example"></a>例
 

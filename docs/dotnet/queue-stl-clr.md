@@ -57,12 +57,12 @@ helpviewer_keywords:
 - to_array member [STL/CLR]
 - value_type member [STL/CLR]
 ms.assetid: 9ea7dec3-ea98-48ff-87d0-a5afc924aaf2
-ms.openlocfilehash: 08f90ef6be7a5eeb560add9c60a6578057fbb310
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 5339472574bced99d833a0b60e8b72b10b0fa989
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79546159"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208365"
 ---
 # <a name="queue-stlclr"></a>queue (STL/CLR)
 
@@ -90,7 +90,7 @@ template<typename Value,
 *コンテナー*<br/>
 基になるコンテナーの型。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<cliext/queue >
 
@@ -144,7 +144,7 @@ template<typename Value,
 |<xref:System.ICloneable>|オブジェクトを複製します。|
 |IQueue\<値、コンテナー >|汎用コンテナーアダプターを維持します。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 オブジェクトは、`Value` 要素を格納し、必要に応じて拡張する、`Container`型の基になるコンテナーによって制御されるシーケンスに対して、ストレージの割り当てと解放を行います。 オブジェクトは、最初の要素をプッシュして最後の要素をポップするだけにアクセスを制限し、先入れ先出しのキュー (FIFO キューとも呼ばれます) または単なるキューを実装します。
 
@@ -165,7 +165,7 @@ void assign(queue<Value, Container>% right);
 *right*<br/>
 挿入するコンテナーアダプター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、基になるコンテナーに `right.get_container()` を割り当てます。 キューの内容全体を変更するには、これを使用します。
 
@@ -214,7 +214,7 @@ a b c
 reference back();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、被制御シーケンスの最後の要素への参照を返します。この要素は、空にすることはできません。 この要素が存在することがわかっている場合は、最後の要素にアクセスするために使用します。
 
@@ -266,7 +266,7 @@ a b x
 property value_type back_item;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 プロパティは、被制御シーケンスの最後の要素にアクセスします。この要素は、空にすることはできません。 このメソッドは、最後の要素が存在することがわかっている場合に、その要素の読み取りまたは書き込みに使用します。
 
@@ -318,7 +318,7 @@ a b x
 typedef value_type% const_reference;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この型は、要素への定数参照を表します。
 
@@ -362,7 +362,7 @@ a b c
 typedef Container value_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この型は、テンプレート パラメーター `Container`のシノニムです。
 
@@ -404,7 +404,7 @@ a b c
 typedef int difference_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この型は、要素の数が負の値になる可能性があることを示します。
 
@@ -462,7 +462,7 @@ popping 3 = 3
 bool empty();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、被制御シーケンスが空の場合に true を返します。 これは[queue:: size (STL/CLR)](../dotnet/queue-size-stl-clr.md)`() == 0`に相当します。 このメソッドを使用して、キューが空かどうかをテストします。
 
@@ -516,7 +516,7 @@ empty() = True
 reference front();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、被制御シーケンスの最初の要素への参照を返します。この要素は、空にすることはできません。 この要素が存在することがわかっている場合は、最初の要素にアクセスするために使用します。
 
@@ -568,7 +568,7 @@ x b c
 property value_type front_item;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 プロパティは、被制御シーケンスの最初の要素にアクセスします。この要素は、空にすることはできません。 これは、最初の要素が存在することがわかっている場合に、その要素の読み取りまたは書き込みに使用します。
 
@@ -621,7 +621,7 @@ typedef Microsoft::VisualC::StlClr::IQueue<Value>
     generic_container;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この型は、このテンプレートコンテナーアダプタークラスのジェネリックインターフェイスを表します。
 
@@ -683,7 +683,7 @@ a b c d e
 typedef GValue generic_value;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この型は、このテンプレートコンテナークラスのジェネリックインターフェイスで使用する格納されている要素の値を記述する `GValue` 型のオブジェクトを表します。 (`GValue` は、`value_type` が ref 型である場合は `value_type` または `value_type^` です)。
 
@@ -741,7 +741,7 @@ a b c
 container_type^ get_container();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、基になるコンテナーを返します。 コンテナーラッパーによって課される制限を回避するために使用します。
 
@@ -787,7 +787,7 @@ queue <Value, Container>% operator=(queue <Value, Container>% right);
 *right*<br/>
 コピーするコンテナーアダプター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 メンバー演算子は、オブジェクトに*right*をコピーし、`*this`を返します。 このメソッドを使用して、被制御シーケンスを*右側*の被制御シーケンスのコピーで置き換えます。
 
@@ -836,7 +836,7 @@ a b c
 void pop();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、被制御シーケンスの最後の要素を削除します。この要素は空にすることはできません。 これを使用して、キューを1つ前の要素で短くします。
 
@@ -884,7 +884,7 @@ b c
 void push(value_type val);
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、キューの末尾に `val` 値を持つ要素を追加します。 これを使用して、キューに要素を追加します。
 
@@ -936,7 +936,7 @@ explicit queue(container_type% wrapped);
 *回り*<br/>
 使用するためにラップされたコンテナー。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 コンストラクター:
 
@@ -1018,7 +1018,7 @@ x x x x x
 typedef value_type% reference;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この型は、要素への参照を表します。
 
@@ -1067,7 +1067,7 @@ a b x
 size_type size();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、被制御シーケンスの長さを返します。 このメソッドを使用して、被制御シーケンス内の現在の要素数を決定します。 シーケンスのサイズが0以外であるかどうかに注意する必要がある場合は、「 [queue:: empty (STL/CLR)](../dotnet/queue-empty-stl-clr.md)`()`」を参照してください。
 
@@ -1121,7 +1121,7 @@ size() = 4 after adding 2
 typedef int size_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この型は、負でない要素数を表します。
 
@@ -1170,7 +1170,7 @@ size difference = 2
 cli::array<Value>^ to_array();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、被制御シーケンスを含む配列を返します。 このメソッドを使用して、被制御シーケンスのコピーを配列形式で取得します。
 
@@ -1220,7 +1220,7 @@ a b c
 typedef Value value_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この型は、テンプレートパラメーター*値*のシノニムです。
 
@@ -1276,7 +1276,7 @@ template<typename Value,
 *right*<br/>
 比較する右のコンテナー。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 演算子関数は `!(left == right)`を返します。 このメソッドを使用して、2つのキューが要素別に比較されるときに、 *left*が*right*と同じ順序で並んでいないかどうかをテストします。
 
@@ -1347,7 +1347,7 @@ template<typename Value,
 *right*<br/>
 比較する右のコンテナー。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Operator 関数は、`!(right[i] < left[i])` が `left[i] < right[i]`にも当てはまる `i` 最小の位置に対して true を返します。 それ以外の場合は `left->`[queue:: size (STL/CLR)](../dotnet/queue-size-stl-clr.md) `right->size()``() <` を返します。このメソッドを使用して、2つのキューが要素別に比較されるときに、 *left*が*右*に並べられているかどうかをテストします。
 
@@ -1418,7 +1418,7 @@ template<typename Value,
 *right*<br/>
 比較する右のコンテナー。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 演算子関数は `!(right < left)`を返します。 このメソッドを使用して、2つのキューが要素別に比較されるときに、 *right*の後に*left*が順序付けされていないかどうかをテストします。
 
@@ -1489,7 +1489,7 @@ template<typename Value,
 *right*<br/>
 比較する右のコンテナー。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 演算子関数は、 *left*と*right*で制御されるシーケンスの長さが同じで、`i`位置ごとに `right[i]``left[i] ==` 場合にのみ true を返します。 このメソッドを使用して、2つのキューが要素別に比較されるときに、 *left*が*right*と同じ順序で並んでいるかどうかをテストします。
 
@@ -1560,7 +1560,7 @@ template<typename Value,
 *right*<br/>
 比較する右のコンテナー。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Operator 関数は、`left``<` `right` を返します。 このメソッドを使用して、2つのキューが要素別に比較されたときに、 *right*の後にある*かどうか*をテストします。
 
@@ -1631,7 +1631,7 @@ template<typename Value,
 *right*<br/>
 比較する右のコンテナー。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 演算子関数は `!(left < right)`を返します。 このメソッドを使用して、2つのキューが要素別に比較されるときに、 *left*が*right*の前に順序付けされていないかどうかをテストします。
 

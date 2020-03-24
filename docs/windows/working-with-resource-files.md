@@ -1,24 +1,24 @@
 ---
-title: リソースファイル (C++) の操作
+title: リソース ファイルの操作 (C++)
 ms.date: 02/14/2019
 helpviewer_keywords:
 - resources [C++], about resources
 - resources [C++], about resource files
 - resource files [C++], about resource files
 ms.assetid: 2699a539-b369-4b78-80f0-df03eb7b6780
-ms.openlocfilehash: d9f6c6b9798bc708bb5334eafc0585471f25c059
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 142a9120e0b6b95e659fcb47c275653fbefd8cbe
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69513593"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165887"
 ---
 # <a name="working-with-resource-files"></a>リソース ファイルの操作
 
 > [!WARNING]
 > このセクションは、C++ で記述された Windows デスクトップ アプリケーションに適用されます。
 >
-> C++ で記述された ユニバーサル Windows プラットフォーム アプリのリソースの詳細については「[アプリ リソースの定義](/windows/uwp/app-resources/)」を、C++/CLI (マネージド) プロジェクトへのリソースの追加については、.NET Framework 開発者ガイドの「[デスクトップ アプリケーションのリソース](/dotnet/framework/resources/index)」を参照してください。
+> でC++記述され .NET Framework たユニバーサル Windows プラットフォームアプリのリソースの詳細についてはC++、「開発者ガイド[」の「](/windows/uwp/app-resources/)[デスクトップアプリのリソース](/dotnet/framework/resources/index)」を参照してください。
 
 リソースは、次のようなさまざまな要素で構成できます。
 
@@ -55,7 +55,7 @@ Visual C++ のドキュメントへのリンクを示します。
 [ご意見](/visualstudio/ide/talk-to-us)<br/>
 ドキュメント セットの使用方法、製品サポートへの連絡、アクセシビリティ機能の使用に関する情報へのリンクを示します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [Windows デスクトップアプリケーション](../windows/windows-desktop-applications-cpp.md)<br/>
 [メニューとその他のリソース](/windows/win32/menurc/resources)

@@ -2,12 +2,12 @@
 title: Visual Studio での Live Share for C++ による共同作業
 description: Visual Studio で Live Share for C++ を使用して、リアルタイムで共同作業とコードの共有を行います。
 ms.date: 05/24/2019
-ms.openlocfilehash: e6e983c6acb56dffd12756d8bbaccef32dd57f38
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: e8202cefb7f7d762e2736edcd5fa3c6127b4affa
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80077782"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171919"
 ---
 # <a name="collaborate-using-live-share-for-c"></a>Live Share for C++ を使用しての共同作業
 
@@ -28,7 +28,7 @@ Live Share セッションでは、ホストと 1 人以上のゲストが存在
 - クイック ヒント
 - デバッグ/ブレークポイント
 - [すべての参照の検索]
-- 定義へ移動
+- [定義へ移動]
 - シンボル検索 (Ctrl + T)
 - 参照の強調表示
 - 診断/エラー/波線

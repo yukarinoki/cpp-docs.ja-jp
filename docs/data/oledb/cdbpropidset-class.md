@@ -31,12 +31,12 @@ helpviewer_keywords:
 - operator=, property sets
 - SetGUID method
 ms.assetid: 52bb806c-9581-494d-9af7-50d8a4834805
-ms.openlocfilehash: e2fced2ed0e32af15e75c7290733fdc2b4b34dc9
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: a52d7443ab335e8546a4bcce03cf68c3b1d60e3d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79546123"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212027"
 ---
 # <a name="cdbpropidset-class"></a>CDBPropIDSet クラス
 
@@ -48,7 +48,7 @@ ms.locfileid: "79546123"
 class CDBPropIDSet : public tagDBPROPIDSET
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atldbcli.h
 
@@ -62,13 +62,13 @@ class CDBPropIDSet : public tagDBPROPIDSET
 |[CDBPropIDSet](#cdbpropidset)|コンストラクターです。|
 |[SetGUID](#setguid)|プロパティ ID セットの GUID を設定します。|
 
-### <a name="operators"></a>演算子
+### <a name="operators"></a>オペレーター
 
 |||
 |-|-|
 |[operator =](#op_equal)|あるプロパティ ID の内容を別のプロパティ ID に設定します。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 OLE DB コンシューマーは、`DBPROPIDSET` 構造体を使用して、コンシューマーがプロパティ情報を取得するプロパティ Id の配列を渡します。 1つの[Dbpropidset](/previous-versions/windows/desktop/ms717981(v=vs.85))構造体で識別されるプロパティは、1つのプロパティセットに属します。
 
@@ -124,7 +124,7 @@ void SetGUID(const GUID& guid) throw();
 *guid*<br/>
 から[Dbpropidset](/previous-versions/windows/desktop/ms717981(v=vs.85))構造体の `guidPropertySet` フィールドを設定するために使用される GUID です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このフィールドは、[コンストラクター](../../data/oledb/cdbpropidset-cdbpropidset.md)でも設定できます。 このクラスの既定のコンストラクターを使用する場合は、この関数を呼び出します。
 
