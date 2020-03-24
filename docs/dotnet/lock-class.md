@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - msclr::lock class
 ms.assetid: 5123edd9-6aed-497d-9a0b-f4b6d6c0d666
-ms.openlocfilehash: b2ae1be31233e55aa34d6f3046d90fb2127348c0
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: c8056146998443f4e24169a4464b834d8eff29b0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80080040"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208525"
 ---
 # <a name="lock-class"></a>lock クラス
 
@@ -41,14 +41,14 @@ ref class lock;
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|Description|
+|Name|説明|
 |---------|-----------|
 |[lock::lock](#lock)|`lock` オブジェクトを構築し、必要に応じて、ロックの取得を無期限に、指定した時間だけ待機するか、まったく使用しないかを待機します。|
 |[lock::~lock](#tilde-lock)|`lock` オブジェクトを Destructs します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|Description|
+|Name|説明|
 |---------|-----------|
 |[lock::acquire](#acquire)|オブジェクトのロックを取得します。また、必要に応じて、ロックの取得を無期限に、指定した時間だけ待機するか、まったく使用しないかを待機します。|
 |[lock::is_locked](#is-locked)|ロックが保持されているかどうかを示します。|
@@ -57,7 +57,7 @@ ref class lock;
 
 ### <a name="public-operators"></a>パブリック演算子
 
-|Name|Description|
+|Name|説明|
 |---------|-----------|
 |[lock:: operator&nbsp;bool](#operator-bool)|条件式で `lock` を使用するための演算子。|
 |[lock::operator==](#operator-equality)|等値演算子。|

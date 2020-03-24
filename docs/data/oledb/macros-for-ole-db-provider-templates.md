@@ -50,12 +50,12 @@ helpviewer_keywords:
 - END_SCHEMA_MAP macro
 - SCHEMA_ENTRY macro
 ms.assetid: 909482c5-64ab-4e52-84a9-1c07091db183
-ms.openlocfilehash: b11455c1de13321bce52fbc3be906014b2844aee
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 2fda4d9f003e84247527d964685e631532d4c366
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79545649"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210146"
 ---
 # <a name="macros-for-ole-db-provider-templates"></a>OLE DB プロバイダー テンプレート用マクロ
 
@@ -97,7 +97,7 @@ OLE DB テンプレートプロバイダーマクロは、次のカテゴリの�
 |[END_SCHEMA_MAP](#end_schema_map)|スキーママップの終了をマークします。|
 |[SCHEMA_ENTRY](#schema_entry)|GUID をクラスに関連付けます。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atldb.h
 
@@ -184,7 +184,7 @@ CHAIN_PROPERTY_SET(ChainClass)
 *ChainClass*<br/>
 からプロパティを連結するクラスの名前。 これは、既にマップ (セッション、コマンド、データソースオブジェクトクラスなど) が含まれている ATL プロジェクトウィザードによって生成されるクラスです。
 
-#### <a name="remarks"></a>コメント
+#### <a name="remarks"></a>解説
 
 別のクラスのプロパティセットを独自のクラスにチェーンし、クラスから直接プロパティにアクセスすることができます。
 
@@ -239,7 +239,7 @@ PROPERTY_INFO_ENTRY(dwPropID)
 *dwPropID*<br/>
 [入力] プロパティ セット GUID と組み合わせて使用してプロパティを特定する [DBPROPID](/previous-versions/windows/desktop/ms723882(v=vs.85)) 値。
 
-#### <a name="remarks"></a>コメント
+#### <a name="remarks"></a>解説
 
 このマクロは、 `DWORD` 型のプロパティ値を、ATLDB.H で定義された既定値に設定します。 選択した値にプロパティを設定するには、 [PROPERTY_INFO_ENTRY_VALUE](../../data/oledb/property-info-entry-value.md)を使用します。 プロパティの `VARTYPE` と[Dbpropflags](/previous-versions/windows/desktop/ms724342(v=vs.85))を同時に設定するには、 [PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md)を使用します。
 
@@ -274,7 +274,7 @@ PROPERTY_INFO_ENTRY_EX(dwPropID, vt, dwFlags, value, options)
 *options*<br/>
 DBPROPOPTIONS_REQUIRED または DBPROPOPTIONS_SETIFCHEAP。 通常、プロバイダーはコンシューマーによって設定されているため、*オプション*を設定する必要はありません。
 
-#### <a name="remarks"></a>コメント
+#### <a name="remarks"></a>解説
 
 このマクロでは、オプションとフラグだけでなく、 `DWORD` 型のプロパティの値を直接指定できます。 単にプロパティを ATLDB.H に定義されている既定値に設定するには、 [PROPERTY_INFO_ENTRY](../../data/oledb/property-info-entry.md)を使用します。 オプションやフラグを設定せずに任意の値にプロパティを設定するには、 [PROPERTY_INFO_ENTRY_VALUE](../../data/oledb/property-info-entry-value.md)を使用します。
 
@@ -300,7 +300,7 @@ PROPERTY_INFO_ENTRY_VALUE(dwPropID, value)
 *value*<br/>
 [入力] `DWORD`型のプロパティ値。
 
-#### <a name="remarks"></a>コメント
+#### <a name="remarks"></a>解説
 
 このマクロを使用すると、`DWORD`型のプロパティ値を直接指定できます。 ATLDB.H で定義されている既定値にプロパティを設定します。H では、 [PROPERTY_INFO_ENTRY](../../data/oledb/property-info-entry.md)を使用します。 プロパティの値、フラグ、およびオプションを設定するには、 [PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md)を使用します。
 
@@ -388,7 +388,7 @@ PROVIDER_COLUMN_ENTRY_FIXED(name, ordinal, dbtype, member)
 *member*<br/>
 からデータを格納する `dataClass` のメンバー変数。
 
-#### <a name="remarks"></a>コメント
+#### <a name="remarks"></a>解説
 
 列のデータ型を指定できます。
 
@@ -432,7 +432,7 @@ PROVIDER_COLUMN_ENTRY_GN (name, ordinal, flags, colSize, dbtype, precision, scal
 *guid*<br/>
 スキーマ行セットの GUID。 スキーマ行セットとその Guid の一覧については、 *OLE DB プログラマーリファレンス*の「 [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) 」を参照してください。
 
-#### <a name="remarks"></a>コメント
+#### <a name="remarks"></a>解説
 
 列のサイズ、データ型、有効桁数、小数点以下桁数、およびスキーマ行セット GUID を指定できます。
 
@@ -460,7 +460,7 @@ PROVIDER_COLUMN_ENTRY_LENGTH(name, ordinal, size, member)
 *member*<br/>
 から列データを格納する `dataClass` のメンバー変数。
 
-#### <a name="remarks"></a>コメント
+#### <a name="remarks"></a>解説
 
 列のサイズを指定できます。
 
@@ -489,7 +489,7 @@ PROVIDER_COLUMN_ENTRY_STR(name, ordinal, member)
 *member*<br/>
 からデータを格納するデータクラスのメンバー変数。
 
-#### <a name="remarks"></a>コメント
+#### <a name="remarks"></a>解説
 
 列データを[DBTYPE_STR](/previous-versions/windows/desktop/ms711251(v=vs.85))と想定する場合は、このマクロを使用します。
 
@@ -524,7 +524,7 @@ PROVIDER_COLUMN_ENTRY_TYPE_LENGTH(name, ordinal, dbtype, size, member)
 *member*<br/>
 からデータを格納するデータクラスのメンバー変数。
 
-#### <a name="remarks"></a>コメント
+#### <a name="remarks"></a>解説
 
 [PROVIDER_COLUMN_ENTRY_LENGTH](../../data/oledb/provider-column-entry-length.md)に似ていますが、列のデータ型やサイズを指定することもできます。
 
@@ -549,7 +549,7 @@ PROVIDER_COLUMN_ENTRY_WSTR(name, ordinal, member)
 *member*<br/>
 からデータを格納するデータクラスのメンバー変数。
 
-#### <a name="remarks"></a>コメント
+#### <a name="remarks"></a>解説
 
 このマクロは、列のデータが null で終了した Unicode 文字列 ( [DBTYPE_WSTR](/previous-versions/windows/desktop/ms711251(v=vs.85))) の場合に使用します。
 
@@ -568,7 +568,7 @@ BEGIN_SCHEMA_MAP(SchemaClass);
 *SchemaClass*<br/>
 MAP を含むクラスです。 通常、これは session クラスになります。
 
-#### <a name="remarks"></a>コメント
+#### <a name="remarks"></a>解説
 
 スキーマ行セットの詳細については、Windows SDK の「 [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) 」を参照してください。
 
@@ -582,7 +582,7 @@ MAP を含むクラスです。 通常、これは session クラスになりま
 END_SCHEMA_MAP()
 ```
 
-#### <a name="remarks"></a>コメント
+#### <a name="remarks"></a>解説
 
 詳細については、「 [IDBSchemaRowsetImpl クラス](../../data/oledb/idbschemarowsetimpl-class.md)」を参照してください。
 
@@ -605,7 +605,7 @@ SCHEMA_ENTRY(guid,
 *rowsetClass*<br/>
 スキーマ行セットを表すために作成されるクラス。
 
-#### <a name="remarks"></a>コメント
+#### <a name="remarks"></a>解説
 
 [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md)は、guid のリストについてマップを照会できます。また、guid が指定されている場合は、行セットを作成することもできます。 `IDBSchemaRowsetImpl` 作成されるスキーマ行セットは、標準の `CRowsetImpl`派生クラスに似ていますが、次のシグネチャを持つ `Execute` メソッドを提供する必要があります。
 

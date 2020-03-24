@@ -15,17 +15,17 @@ helpviewer_keywords:
 - accessors [C++], static
 - BEGIN_ACCESSOR macro, example
 ms.assetid: 2de9e5eb-53ce-42b1-80fa-57d46600a80c
-ms.openlocfilehash: c9c1126f0e8248f31ac739bb1d939f811bda678d
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
-ms.translationtype: HT
+ms.openlocfilehash: 94a70b48793d44eda4fd76d9b59460418cfbc032
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525283"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209444"
 ---
 # <a name="user-records"></a>ユーザー レコード
 
 > [!NOTE]
-> ATL OLE DB コンシューマー ウィザードは、Visual Studio 2019 以降では使用できません。 ただし、この機能を手動で追加することは可能です。 詳細については、「[ウィザードを使用しないコンシューマーの作成](creating-a-consumer-without-using-a-wizard.md)」をご覧ください。
+> ATL OLE DB コンシューマー ウィザードは、Visual Studio 2019 以降では使用できません。 ただし、この機能を手動で追加することは可能です。 詳細については、「[ウィザードを使用しないコンシューマーの作成](creating-a-consumer-without-using-a-wizard.md)」を参照してください。
 
 静的アクセサー ( `CAccessor` から派生したアクセサー) を使用するには、コンシューマーにユーザー レコードが必要です。 ユーザー レコードは、入力や出力を処理するためのデータ要素を含む C++ クラスです。 **ATL OLE DB コンシューマー ウィザード**では、コンシューマーのユーザー レコードが生成されます。 ユーザー レコードにメソッドを追加して、コマンドの処理などのオプションのタスクを実行できます。
 
@@ -64,7 +64,7 @@ END_PARAM_MAP()
 
 複数のアクセサーを使用する必要があるシナリオの詳細については、「[行セットでの複数アクセサーの使用](../../data/oledb/using-multiple-accessors-on-a-rowset.md)」をご覧ください。
 
-以下は、ユーザー レコードを変更し、行セットに対して複数のアクセサーがサポートされるようにする例を示しています。 BEGIN_COLUMN_MAP と END_COLUMN_MAP の代わりに、[BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md) と [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) が各アクセサーで使用されています。 BEGIN_ACCESSOR マクロでは、アクセサーの数 (ゼロからのオフセット) と、アクセサーが自動アクセサーであるかどうかが指定されます。 [MoveNext](../../data/oledb/crowset-movenext.md) が呼び出されると、自動アクセサーは、`GetData` を呼び出して、データを自動的に取得します。 非自動アクセサーでは、データを明示的に取得する必要があります。 すべてのレコードで取得しない大きなデータ フィールド (ビットマップ イメージなど) をバインド先にする場合は、非自動アクセサーを使用します。
+以下は、ユーザー レコードを変更し、行セットに対して複数のアクセサーがサポートされるようにする例を示しています。 BEGIN_COLUMN_MAP と END_COLUMN_MAP の代わりに、[BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md) と [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) が各アクセサーで使用されています。 BEGIN_ACCESSOR マクロでは、アクセサーの数 (ゼロからのオフセット) と、アクセサーが自動アクセサーであるかどうかが指定されます。 `GetData`MoveNext[ が呼び出されると、自動アクセサーは、](../../data/oledb/crowset-movenext.md) を呼び出して、データを自動的に取得します。 非自動アクセサーでは、データを明示的に取得する必要があります。 すべてのレコードで取得しない大きなデータ フィールド (ビットマップ イメージなど) をバインド先にする場合は、非自動アクセサーを使用します。
 
 ```cpp
 class CMultiArtists
@@ -88,6 +88,6 @@ END_ACCESSOR_MAP()
 };
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [OLE DB コンシューマー テンプレートに関するページ](../../data/oledb/ole-db-consumer-templates-cpp.md)

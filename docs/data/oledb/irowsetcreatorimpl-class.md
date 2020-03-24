@@ -19,12 +19,12 @@ helpviewer_keywords:
 - IRowsetCreatorImpl class
 - SetSite method
 ms.assetid: 92cc950f-7978-4754-8d9a-defa63867d82
-ms.openlocfilehash: 8c4253d469c510f5e6eb996ed510ef836844899d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: a53cd653258980d21e9dd297ae61c458732b7250
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "79544580"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210549"
 ---
 # <a name="irowsetcreatorimpl-class"></a>IRowsetCreatorImpl クラス
 
@@ -43,7 +43,7 @@ class ATL_NO_VTABLE IRowsetCreatorImpl
 *T*<br/>
 `IRowsetCreator`から派生したクラス。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atldb.h
 
@@ -55,7 +55,7 @@ class ATL_NO_VTABLE IRowsetCreatorImpl
 |-|-|
 |[SetSite](#setsite)|行セットオブジェクトを含むサイトを設定します。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 このクラスは、 [IObjectWithSite](/windows/win32/api/ocidl/nn-ocidl-iobjectwithsite)から継承し、 [IObjectWithSite:: SetSite](/windows/win32/api/ocidl/nf-ocidl-iobjectwithsite-setsite)をオーバーライドします。 プロバイダーコマンドまたはセッションオブジェクトは、行セットを作成するときに、`IObjectWithSite` を検索する行セットオブジェクトに対して `QueryInterface` を呼び出し、行セットオブジェクトの `IUnkown` インターフェイスをサイトインターフェイスとして渡し `SetSite` を呼び出します。
 
@@ -78,7 +78,7 @@ STDMETHOD(SetSite )(IUnknown* pCreator);
 
 標準の HRESULT です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 さらに、`IRowsetCreatorImpl::SetSite` によって OLE DB `DBPROPCANSCROLLBACKWARDS DBPROPCANFETCHBACKWARDS` プロパティが有効になります。
 

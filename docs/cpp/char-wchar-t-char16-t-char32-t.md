@@ -2,12 +2,12 @@
 title: char、wchar_t、char16_t、char32_t
 ms.date: 02/14/2018
 ms.assetid: 6b33e9f5-455b-4e49-8f12-a150cbfe2e5b
-ms.openlocfilehash: a518f24973aaddff59b97f104d9d912e4a2bedce
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 8d109ec452df33b774848229837ed3e2eae80dc4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447158"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181019"
 ---
 # <a name="char-wchar_t-char16_t-char32_t"></a>char、wchar_t、char16_t、char32_t
 
@@ -22,7 +22,7 @@ char16_t ch3{ u'a' };
 char32_t ch4{ U'a' };
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 **Char**型は、C およびC++の元の文字型でした。 **Unsigned char**型は、のC++組み込み型ではない*バイト*を表すためによく使用されます。 **Char**型を使用して、ASCII 文字セットの文字、または ISO-8859 文字セットの文字を格納できます。また、シフト JIS や Unicode 文字セットの utf-8 エンコードなど、マルチバイト文字の個々のバイトを格納することもできます。 **Char**型の文字列は、マルチバイト文字をエンコードするために使用される場合でも、*ナロー*文字列と呼ばれます。 Microsoft コンパイラでは、 **char**は8ビット型です。
 

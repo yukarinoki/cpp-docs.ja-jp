@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4326
 ms.assetid: d44d2c4e-9456-42d3-b35b-4ba4b2d42ec7
-ms.openlocfilehash: d14a1902db4dcf2224ce6a58db120a81ebb5620f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 32bcd85b1cd1bb6c89678daae02f4f31a9318b6d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62327354"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80162973"
 ---
 # <a name="compiler-warning-level-1-c4326"></a>コンパイラの警告 (レベル 1) C4326
 
-> 型を返す '*関数*'は'*type1*' の代わりに '*type2*'
+> '*function*' の戻り値の型*は ' type1 ' で*はなく '*type1*' でなければなりません
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-返される型を以外の関数*type1*します。 たとえばを使用して[/Za](../../build/reference/za-ze-disable-language-extensions.md)、**メイン**を返しませんでした、 **int**。
+関数が*type1*以外の型を返しました。 たとえば、 [/za](../../build/reference/za-ze-disable-language-extensions.md)を使用すると、 **main**は**int**を返しませんでした。
 
 ## <a name="example"></a>例
 
