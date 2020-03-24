@@ -36,12 +36,12 @@ helpviewer_keywords:
 - GetBindings method
 - ReleaseAccessor method
 ms.assetid: 768606da-8b71-417c-a62c-88069ce7730d
-ms.openlocfilehash: f1865089100ac7f60e8c011e72eedb3d0a3f8470
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 6b9830ac2b6f1eacedd1b59184292f2148087093
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79545991"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210864"
 ---
 # <a name="iaccessorimpl-class"></a>IAccessorImpl クラス
 
@@ -67,7 +67,7 @@ class ATL_NO_VTABLE IAccessorImpl : public IAccessorImplBase<BindType>
 *BindingVector*<br/>
 列情報の格納単位。 既定値は、キー要素が HACCESSOR 値、value 要素が `BindType` 構造体へのポインターである、 [CAtlMap](../../atl/reference/catlmap-class.md)です。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atldb.h
 
@@ -88,7 +88,7 @@ class ATL_NO_VTABLE IAccessorImpl : public IAccessorImplBase<BindType>
 |[GetBindings](#getbindings)|アクセサーのバインディングを返します。|
 |[ReleaseAccessor](#releaseaccessor)|アクセサーを解放します。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 これは、行セットとコマンドに対して必須です。 OLE DB には、 [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85))構造体の配列へのタグである haccessor を実装するプロバイダーが必要です。 `IAccessorImpl` によって提供される HACCESSORs は、`BindType` 構造体のアドレスです。 既定では、`BindType` は `IAccessorImpl`のテンプレート定義で `ATLBINDINGS` として定義されます。 `BindType` は、`IAccessorImpl` が `DBBINDING` 配列内の要素の数と参照カウントおよびアクセサーフラグを追跡するために使用する機構を提供します。
 

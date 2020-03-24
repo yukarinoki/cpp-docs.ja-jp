@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - C1002
 ms.assetid: bd6d274a-c7b4-43af-8bf2-23c5e442aa22
-ms.openlocfilehash: 0588da99994be547742cc530ba435002a2d73359
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 78edf886f34665f996497abe323a0ea5d3800c2d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344846"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80204933"
 ---
 # <a name="fatal-error-c1002"></a>致命的なエラー C1002
 
 パス 2 の実行中に、ヒープ領域を使い果たしました。
 
-コンパイラは、可能性がありますが多すぎるのシンボルまたは複雑な式を使用してプログラムの 2 つ目のパスの中に動的メモリ領域が不足しています。
+コンパイラは、2番目のパス中に動的メモリ空間を使い果たしました。これは、シンボルや複雑な式が多すぎるプログラムが原因である可能性があります。
 
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>以下の可能性がある解決策を使って修正するには
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>修復の可能性がある解決策
 
-1. ソース ファイルを複数の小さいファイルに分割します。
+1. ソースファイルを複数の小さなファイルに分割します。
 
-1. 式を小さな部分に分割します。
+1. 式を小さな部分式に分割します。
 
-1. その他のプログラムまたはメモリを消費するドライバーを削除します。
+1. メモリを使用する他のプログラムやドライバーを削除します。

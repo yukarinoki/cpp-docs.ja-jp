@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - msclr::auto_handle class
 ms.assetid: a65604d1-ecbb-44fd-ae2f-696ddeeed9d6
-ms.openlocfilehash: 44b18304aa8030e4230d78a3579cdba601888faf
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 3c098b558941630e5c989e5a1b5c0fc1e2c8e10a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80078974"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208828"
 ---
 # <a name="auto_handle-class"></a>auto_handle クラス
 
@@ -42,14 +42,14 @@ ref class auto_handle;
 
 ### <a name="public-constructors"></a>パブリック コンストラクター  
 
-|Name|Description|  
+|Name|説明|  
 |---------|-----------|  
 |[auto_handle::auto_handle](#auto-handle)|`auto_handle` コンストラクター。|  
 |[auto_handle::~auto_handle](#tilde-auto-handle)|`auto_handle` デストラクター。|  
 
 ### <a name="public-methods"></a>パブリック メソッド  
 
-|Name|Description|  
+|Name|説明|  
 |---------|-----------|  
 |[auto_handle::get](#get)|格納されているオブジェクトを取得します。|  
 |[auto_handle::release](#release)|オブジェクトを `auto_handle` 管理から解放します。|
@@ -58,7 +58,7 @@ ref class auto_handle;
 
 ### <a name="public-operators"></a>パブリック演算子
 
-|Name|Description|  
+|Name|説明|  
 |---------|-----------|
 |[auto_handle:: operator-&gt;](#operator-arrow)|メンバーアクセス演算子。|
 |[auto_handle::operator=](#operator-assign)|代入演算子。|

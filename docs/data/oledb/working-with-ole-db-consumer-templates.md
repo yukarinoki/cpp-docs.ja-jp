@@ -5,16 +5,16 @@ helpviewer_keywords:
 - sample applications [C++], OLE DB Templates
 - OLE DB consumer templates, about consumer templates
 ms.assetid: 526aa897-5961-4396-85cb-c84f77113551
-ms.openlocfilehash: 81bb80446ef3df09eaed7a8728e789de67c27122
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f1cc18d2192a42d22e31ee346f1e233cd7615ac0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395548"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209262"
 ---
 # <a name="working-with-ole-db-consumer-templates"></a>OLE DB コンシューマー テンプレートの操作
 
-次のトピックでは、一般的なシナリオでの OLE DB コンシューマー テンプレートを使用する方法の例をいくつかを説明します。
+次のトピックでは、一般的なシナリオで OLE DB コンシューマーテンプレートを使用する方法の例をいくつか紹介します。
 
 - [データベース属性によるデータ アクセスの簡略化](../../data/oledb/simplifying-data-access-with-database-attributes.md)
 
@@ -42,22 +42,22 @@ ms.locfileid: "62395548"
 
 - [行への参照が別のテーブルにある場合に列を更新する方法](../../data/oledb/updating-a-column-when-another-table-contains-a-reference-to-the-row.md)
 
-- [ブックマークの使用](../../data/oledb/using-bookmarks.md)
+- [ブックマークを使用する](../../data/oledb/using-bookmarks.md)
 
 - [BLOB の取得](../../data/oledb/retrieving-a-blob.md)
 
 - [通知の受信](../../data/oledb/receiving-notifications.md)
 
-作成して、OLE DB コンシューマーの実装の例は、次を参照してください。[単純なコンシューマーを作成する](../../data/oledb/creating-an-ole-db-consumer.md)します。
+OLE DB コンシューマーの作成と実装の例については、「[単純なコンシューマーの作成](../../data/oledb/creating-an-ole-db-consumer.md)」を参照してください。
 
-次の例では、OLE DB コンシューマー テンプレートを使用する方法の例を検索することもできます。
+OLE DB コンシューマーテンプレートの使用方法の例については、次のサンプルを参照してください。
 
-- [CatDB](https://github.com/Microsoft/VCSamples)
+- [CatDB](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer)
 
-- [DBViewer](https://github.com/Microsoft/VCSamples)
+- [DBViewer](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer)
 
-- [MultiRead](https://github.com/Microsoft/VCSamples)
+- [MultiRead](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer)
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)
+[OLE DB コンシューマー テンプレートに関するページ](../../data/oledb/ole-db-consumer-templates-cpp.md)

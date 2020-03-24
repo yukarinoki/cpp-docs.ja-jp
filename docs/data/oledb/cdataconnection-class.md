@@ -61,12 +61,12 @@ helpviewer_keywords:
 - operator CSession*
 - CSession* operator
 ms.assetid: 77432d85-4e20-49ec-a0b0-142137828471
-ms.openlocfilehash: e966ce8d0f8b277c0edde2b0b9b345a11c6a964c
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 385445081f84f65ff7030466a238a5a96abd63be
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79545655"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212065"
 ---
 # <a name="cdataconnection-class"></a>CDataConnection クラス
 
@@ -78,7 +78,7 @@ ms.locfileid: "79545655"
 class CDataConnection
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atldbcli.h
 
@@ -93,7 +93,7 @@ class CDataConnection
 |[[ファイル]](#open)|初期化文字列を使用して、データソースへの接続を開きます。|
 |[OpenNewSession](#opennewsession)|現在の接続で新しいセッションを開きます。|
 
-### <a name="operators"></a>演算子
+### <a name="operators"></a>オペレーター
 
 |||
 |-|-|
@@ -104,7 +104,7 @@ class CDataConnection
 |[operator CSession &](#op_csession_amp)|格納されている `CSession` オブジェクトへの参照を返します。|
 |[operator CSession *](#op_csession_star)|格納されている `CSession` オブジェクトへのポインターを返します。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 `CDataConnection` は、必要なオブジェクト (データソースとセッション) とデータソースへの接続時に実行する必要がある作業の一部をカプセル化するため、クライアントを作成するのに便利なクラスです。
 
@@ -131,7 +131,7 @@ CDataConnection(const CDataConnection &ds);
 *ds*<br/>
 から既存のデータ接続への参照。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 最初のオーバーライドでは、既定の設定を使用して新しい `CDataConnection` オブジェクトを作成します。
 
@@ -186,7 +186,7 @@ HRESULT OpenNewSession(CSession & session) throw();
 *セッション*<br/>
 [入力/出力]新しいセッションオブジェクトへの参照。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 新しいセッションでは、現在の接続オブジェクトに含まれているデータソースオブジェクトを親として使用し、データソースと同じすべての情報にアクセスできます。
 
@@ -204,7 +204,7 @@ HRESULT OpenNewSession(CSession & session) throw();
 operator BOOL() throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 **BOOL** (MFC typedef) 値を返します。 **TRUE**は、現在のセッションが開いていることを示します。**FALSE**は、現在のセッションが閉じられていることを示します。
 
@@ -218,7 +218,7 @@ operator BOOL() throw();
 operator bool() throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 **ブール**値 (C++データ型) を返します。 **true**は、現在のセッションが開いていることを示します。**false**は、現在のセッションが閉じられていることを示します。
 
@@ -232,7 +232,7 @@ operator bool() throw();
 operator const CDataSource&() throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この演算子は、含まれている `CDataSource` オブジェクトへの参照を返します。これにより、`CDataSource` 参照が想定される `CDataConnection` オブジェクトを渡すことができます。
 
@@ -254,7 +254,7 @@ operator const CDataSource&() throw();
 operator const CDataSource*() throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この演算子は、含まれている `CDataSource` オブジェクトへのポインターを返します。これにより、`CDataSource` ポインターが必要な `CDataConnection` オブジェクトを渡すことができます。
 
@@ -270,7 +270,7 @@ operator const CDataSource*() throw();
 operator const CSession&();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この演算子は、含まれている `CSession` オブジェクトへの参照を返します。これにより、`CSession` 参照が想定される `CDataConnection` オブジェクトを渡すことができます。
 
@@ -292,7 +292,7 @@ operator const CSession&();
 operator const CSession*() throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この演算子は、含まれている `CSession` オブジェクトへのポインターを返します。これにより、`CSession` ポインターが必要な `CDataConnection` オブジェクトを渡すことができます。
 

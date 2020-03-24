@@ -14,16 +14,16 @@ helpviewer_keywords:
 - IConvertTypeImpl class
 - CanConvert method
 ms.assetid: 7f81e79e-7d3f-4cbe-b93c-d632a94b15f6
-ms.openlocfilehash: 546a5a007f9e4c1c2a0e581eff2e7984947bdbb5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e3b76be2a1f1edfcdc1139a3dd396835923c2b4a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408993"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210692"
 ---
 # <a name="iconverttypeimpl-class"></a>IConvertTypeImpl クラス
 
-実装を提供、 [IConvertType](/previous-versions/windows/desktop/ms715926(v=vs.85))インターフェイス。
+[Iconverttype](/previous-versions/windows/desktop/ms715926(v=vs.85))インターフェイスの実装を提供します。
 
 ## <a name="syntax"></a>構文
 
@@ -36,7 +36,7 @@ class ATL_NO_VTABLE IConvertTypeImpl
 ### <a name="parameters"></a>パラメーター
 
 *T*<br/>
-派生したクラス、`IConvertTypeImpl`します。
+`IConvertTypeImpl`から派生したクラス。
 
 ## <a name="requirements"></a>必要条件
 
@@ -48,15 +48,15 @@ class ATL_NO_VTABLE IConvertTypeImpl
 
 |||
 |-|-|
-|[CanConvert](#canconvert)|コマンドまたは行セットでは、型変換の可用性に関する情報を示します。|
+|[CanConvert](#canconvert)|コマンドまたは行セットでの型変換の可用性に関する情報を提供します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-このインターフェイスは、コマンド、行セット、およびインデックスの行セットでは必須です。 `IConvertTypeImpl` OLE DB によって指定されている変換オブジェクトに委任することで、インターフェイスを実装します。
+コマンド、行セット、およびインデックス行セットでは、このインターフェイスは必須です。 `IConvertTypeImpl` は、OLE DB によって提供される変換オブジェクトにを委任することによって、インターフェイスを実装します。
 
-## <a name="canconvert"></a> IConvertTypeImpl::CanConvert
+## <a name="iconverttypeimplcanconvert"></a><a name="canconvert"></a>IConvertTypeImpl:: CanConvert
 
-コマンドまたは行セットでは、型変換の可用性に関する情報を示します。
+コマンドまたは行セットでの型変換の可用性に関する情報を提供します。
 
 ### <a name="syntax"></a>構文
 
@@ -68,13 +68,13 @@ STDMETHOD(CanConvert)(DBTYPE wFromType,
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[IConvertType::CanConvert](/previous-versions/windows/desktop/ms711224(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
+*OLE DB プログラマーリファレンス*の「 [Iconverttype:: canconvert](/previous-versions/windows/desktop/ms711224(v=vs.85)) 」を参照してください。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-OLE DB データ変換を使用して`MSADC.DLL`します。
+`MSADC.DLL`で OLE DB データ変換を使用します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[OLE DB プロバイダー テンプレート](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[OLE DB プロバイダー テンプレートに関するページ](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [OLE DB プロバイダー テンプレートのアーキテクチャ](../../data/oledb/ole-db-provider-template-architecture.md)

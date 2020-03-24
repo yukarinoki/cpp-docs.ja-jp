@@ -5,12 +5,12 @@ helpviewer_keywords:
 - rowsets [C++], data types
 - accessors [C++], types
 ms.assetid: 22483dd2-f4e0-4dcb-8e4d-cd43a9c1a3db
-ms.openlocfilehash: d729e2cf5b08ae227d0cc2e4d5ab7f8ac865cdc4
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 31efa36bcd61caa154cd3e4c147ad5ed8728b04c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80079651"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210991"
 ---
 # <a name="determining-which-type-of-accessor-to-use"></a>使用するアクセサーの種類の決定
 
@@ -28,7 +28,7 @@ ms.locfileid: "80079651"
 |`CDynamicAccessor`|自動。|いいえ。|行セット内のデータ型がわからない場合に役立ちます。|
 |`CDynamicParameterAccessor`|自動 ([オーバーライド](../../data/oledb/overriding-a-dynamic-accessor.md)可)。|必要 (プロバイダーが `ICommandWithParameters` をサポートしている場合)。 パラメーターは自動的にバインドされます。|`CDynamicAccessor` よりも低速ですが、汎用ストアド プロシージャの呼び出しに便利です。|
 |`CDynamicStringAccessor[A,W]`|自動。|いいえ。|文字列データとしてデータ ストアからアクセスされるデータを取得します。|
-|`CManualAccessor`|手動 (`AddBindEntry` を使用)。|手動 (`AddParameterEntry` を使用)。|高速。パラメーターと列は 1 回だけバインドされます。 使用するデータ型はユーザーが決定します (例については、 [DBVIEWER](https://github.com/Microsoft/VCSamples)サンプルを参照してください)。`CDynamicAccessor` または `CAccessor`よりも多くのコードが必要です。 OLE DB の直接呼び出しに似ています。|
+|`CManualAccessor`|手動 (`AddBindEntry` を使用)。|手動 (`AddParameterEntry` を使用)。|高速。パラメーターと列は 1 回だけバインドされます。 使用するデータ型はユーザーが決定します (例については、 [DBVIEWER](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer)サンプルを参照してください)。`CDynamicAccessor` または `CAccessor`よりも多くのコードが必要です。 OLE DB の直接呼び出しに似ています。|
 |`CXMLAccessor`|自動。|いいえ。|文字列データとしてデータ ストアからアクセスされるデータを取得し、それを XML タグ付けデータとして書式設定します。|
 
 ## <a name="see-also"></a>参照

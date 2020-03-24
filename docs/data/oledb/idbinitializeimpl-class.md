@@ -38,12 +38,12 @@ helpviewer_keywords:
 - m_dwStatus
 - m_pCUtlPropInfo
 ms.assetid: e4182f81-0443-44f5-a0d3-e7e075d6f883
-ms.openlocfilehash: 1fc60db6db341d0667e24a81ae0f1394f54497ff
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: ff74ae93f01c7e8588a0eff1f48d3f6f0e6d5e81
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79546063"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210770"
 ---
 # <a name="idbinitializeimpl-class"></a>IDBInitializeImpl クラス
 
@@ -61,7 +61,7 @@ class ATL_NO_VTABLE IDBInitializeImpl : public IDBInitialize
 *T*<br/>
 `IDBInitializeImpl`から派生したクラス。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atldb.h
 
@@ -87,7 +87,7 @@ class ATL_NO_VTABLE IDBInitializeImpl : public IDBInitialize
 |[m_dwStatus](#dwstatus)|データソースフラグ。|
 |[m_pCUtlPropInfo](#pcutlpropinfo)|DB プロパティ情報の実装へのポインター。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 データソースオブジェクトの必須インターフェイスであり、列挙子のオプションのインターフェイスです。
 
@@ -101,7 +101,7 @@ class ATL_NO_VTABLE IDBInitializeImpl : public IDBInitialize
 IDBInitializeImpl();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 すべてのデータメンバーを初期化します。
 
@@ -115,7 +115,7 @@ IDBInitializeImpl();
 STDMETHOD(Initialize)(void);
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 *OLE DB プログラマーリファレンス*の「 [IDBInitialize:: Initialize](/previous-versions/windows/desktop/ms718026(v=vs.85)) 」を参照してください。
 
@@ -129,7 +129,7 @@ STDMETHOD(Initialize)(void);
 STDMETHOD(Uninitialize)(void);
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 *OLE DB プログラマーのリファレンス*にある「 [IDBInitialize:: の初期化](/previous-versions/windows/desktop/ms719648(v=vs.85))を解除する」を参照してください。
 
@@ -143,7 +143,7 @@ STDMETHOD(Uninitialize)(void);
 DWORD m_dwStatus;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 これらのフラグは、データソースオブジェクトのさまざまな属性の状態を指定または示します。 には、次の**列挙**値が1つ以上含まれています。
 

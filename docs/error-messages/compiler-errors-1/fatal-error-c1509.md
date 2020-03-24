@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - C1509
 ms.assetid: 40dd100d-c6ba-451c-bd26-2c99ec1c36d6
-ms.openlocfilehash: efd5b9dd5cdd7ee174bc786c38d9dd841e2ad6ce
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0d1d7255dd64239a6a76bb15a1f309b43eac0d4b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397485"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80202957"
 ---
 # <a name="fatal-error-c1509"></a>致命的なエラー C1509
 
-コンパイラの制限: 関数 'function' の例外ハンドラが多すぎます。 関数を簡略化します。
+コンパイラの制限: 関数 ' function ' の例外ハンドラーの状態が多すぎます。 関数の簡略化
 
-コードは、例外ハンドラーの状態 (32,768 状態) での内部制限値を超えています。
+このコードは、例外ハンドラーの状態 (32768 状態) の内部制限を超えています。
 
-最も一般的な原因は、関数がクラスのユーザー定義変数および算術演算子の複雑な式が含まれています。
+最も一般的な原因は、関数にユーザー定義のクラス変数と算術演算子の複雑な式が含まれていることです。
 
-### <a name="to-fix-by-using-the-following-possible-solutions"></a>以下の可能性がある解決策を使って修正するには
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>修復の可能性がある解決策
 
-1. 一時変数に共通部分式を割り当てることで式を簡略化します。
+1. 一時変数に共通の部分式を割り当てることにより、式を簡略化します。
 
 1. 関数を小さな関数に分割します。

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2461
 ms.assetid: e64ba651-f441-4fdb-b5cb-4209bbbe4db4
-ms.openlocfilehash: e8f82ed4ce8ad77a22961a42c8e9a256e6f647db
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3d290bd2288f76d0ddefa2057e3e01c9edc3cbc7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62368033"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80205323"
 ---
 # <a name="compiler-error-c2461"></a>コンパイラ エラー C2461
 
-> '*クラス*': コンス トラクター構文の正式なパラメーターがありません
+> '*class*': コンストラクターの構文に仮パラメーターがありません。
 
-クラスのコンス トラクターは、仮パラメーターを指定しません。 コンス トラクターの宣言には、仮パラメーター リストを指定する必要があります。 一覧を空にすることができます。
+クラスのコンストラクターに、仮引数が指定されていません。 コンストラクターの宣言では、仮パラメーターリストを指定する必要があります。 一覧は空にすることができます。
 
-この問題を解決するには、宣言の後に 1 組のかっこを追加*クラス*:: **クラス*します。
+この問題を解決するには、 *class*::**クラス*の宣言の後にかっこのペアを追加します。
 
 ## <a name="example"></a>例
 
-次の例では、C2461 を修正する方法を示します。
+次の例は、C2461 を修正する方法を示しています。
 
 ```cpp
 // C2461.cpp

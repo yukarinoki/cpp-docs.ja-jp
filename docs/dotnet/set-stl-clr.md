@@ -89,12 +89,12 @@ helpviewer_keywords:
 - value_compare member [STL/CLR]
 - value_type member [STL/CLR]
 ms.assetid: 27d3628c-741a-43a7-bef1-5085536f679e
-ms.openlocfilehash: fd23b26b910a8cc8767b4f456cc3bde9f9a40199
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: a5e98a9fe32c71e87f80c2cfc2e733a5d0fe5c94
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79546153"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208339"
 ---
 # <a name="set-stlclr"></a>set (STL/CLR)
 
@@ -123,7 +123,7 @@ template<typename Key>
 *[キー]*<br/>
 被制御シーケンス内の要素のキー コンポーネントの型。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<cliext/set >
 
@@ -194,7 +194,7 @@ template<typename Key>
 |<xref:System.Collections.Generic.ICollection%601>|型指定された要素のグループを保持します。|
 |ITree キー、値 >\<|ジェネリックコンテナーを管理します。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 オブジェクトは、制御するシーケンスのストレージを個々のノードとして割り当て、解放します。 要素は、ノード間のリンクを変更することによって、ノード間のリンクを変更することによって順序を維持する、(ほぼ) 均衡ツリーに挿入されます。ノード間でのコンテンツのコピーは行われません。 つまり、要素を自由に挿入および削除できます。
 
@@ -234,7 +234,7 @@ template<typename Key>
 iterator begin();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、被制御シーケンスの最初の要素、または空のシーケンスの末尾の次の位置を指定する双方向反復子を返します。 これを使用して被制御シーケンスの現在の先頭 (`current`) を指定する反復子を取得しますが、このステータスは被制御シーケンスの長さが変わると変化することがあります。
 
@@ -282,7 +282,7 @@ a b c
 void clear();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、 [set:](../dotnet/set-erase-stl-clr.md) : begin (stl/clr)`(` set:: [begin](../dotnet/set-begin-stl-clr.md) (stl/clr)`(),` set:: [end](../dotnet/set-end-stl-clr.md) (stl/clr)`())`を実際に呼び出します。 このメソッドを使用して、被制御シーケンスが空であることを確認します。
 
@@ -340,7 +340,7 @@ size() = 0
 typedef T2 const_iterator;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この型は、被制御シーケンスの定数双方向反復子として使用できる、未指定の型 `T2` のオブジェクトを表します。
 
@@ -382,7 +382,7 @@ a b c
 typedef value_type% const_reference;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この型は、要素への定数参照を表します。
 
@@ -427,7 +427,7 @@ a b c
 typedef T4 const_reverse_iterator;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この型は、被制御シーケンスの定数反転反復子として使用できる、指定されていない型 `T4` のオブジェクトを表します。
 
@@ -474,7 +474,7 @@ size_type count(key_type key);
 *key*<br/>
 検索対象のキー値。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、*キー*と同じ順序付けを持つ被制御シーケンス内の要素の数を返します。 被制御シーケンス内の指定したキーに一致する現在の要素の数を確認する場合に、これを使用します。
 
@@ -522,7 +522,7 @@ count(L'C') = 0
 typedef int difference_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この型は、要素の数が負の値になる可能性があることを示します。
 
@@ -577,7 +577,7 @@ begin()-end() = -3
 bool empty();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、被制御シーケンスが空の場合に true を返します。 これは、 [set:: size (STL/CLR)](../dotnet/set-size-stl-clr.md)`() == 0`に相当します。 このメソッドを使用して、セットが空かどうかをテストします。
 
@@ -629,7 +629,7 @@ empty() = True
 iterator end();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、被制御シーケンスの末尾の次の位置を指し示す双方向反復子を返します。 このメソッドを使用して、被制御シーケンスの末尾を指定する反復子を取得します。被制御シーケンスの長さが変更されている場合、その状態は変わりません。
 
@@ -683,7 +683,7 @@ cliext::pair<iterator, iterator> equal_range(key_type key);
 *key*<br/>
 検索対象のキー値。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、set:: [lower_bound (stl/clr)](../dotnet/set-lower-bound-stl-clr.md)`(key),` [set:: upper_bound (stl/clr)](../dotnet/set-upper-bound-stl-clr.md)`(key))``cliext::pair<iterator, iterator>(` の反復子のペアを返します。 このメソッドを使用して、被制御シーケンス内の指定したキーに一致する要素の範囲を特定します。
 
@@ -754,7 +754,7 @@ size_type erase(key_type key)
 *where*<br/>
 消去する要素。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 最初のメンバー関数*は、が*指す被制御シーケンスの要素を削除し、削除された要素の後に残っている最初の要素を指定する反復子を返します。そのような要素が存在しない場合は、 [set:: end (STL/CLR)](../dotnet/set-end-stl-clr.md)`()` を返します。 このメソッドを使用して、1つの要素を削除します。
 
@@ -827,7 +827,7 @@ iterator find(key_type key);
 *key*<br/>
 検索対象のキー値。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 被制御シーケンス内の少なくとも1つの要素の順序が同じである*場合、メンバー*関数は、これらの要素のいずれかを指定する反復子を返します。それ以外の場合は、 [set:: end (STL/CLR)](../dotnet/set-end-stl-clr.md)`()`を返します。 このメソッドを使用して、被制御シーケンス内で、指定したキーに一致する要素を検索します。
 
@@ -880,7 +880,7 @@ typedef Microsoft::VisualC::StlClr::
     generic_container;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この型は、このテンプレートコンテナークラスのジェネリックインターフェイスを表します。
 
@@ -944,7 +944,7 @@ typedef Microsoft::VisualC::StlClr::Generic::
     generic_iterator;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この型は、このテンプレートコンテナークラスのジェネリックインターフェイスで使用できる汎用反復子を表します。
 
@@ -1000,7 +1000,7 @@ typedef Microsoft::VisualC::StlClr::Generic::
     generic_reverse_iterator;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この型は、このテンプレートコンテナークラスのジェネリックインターフェイスで使用できる汎用反転反復子を表します。
 
@@ -1054,7 +1054,7 @@ c
 typedef GValue generic_value;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この型は、このテンプレートコンテナークラスのジェネリックインターフェイスで使用する格納されている要素の値を記述する `GValue` 型のオブジェクトを表します。
 
@@ -1129,7 +1129,7 @@ void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
 *where*<br/>
 コンテナー内の挿入位置 (ヒントのみ)。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 各メンバー関数は、残りのオペランドによって指定されたシーケンスを挿入します。
 
@@ -1224,7 +1224,7 @@ a b c x y
 typedef T1 iterator;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この型は、被制御シーケンスの双方向反復子として使用できる、未指定の型 `T1` のオブジェクトを表します。
 
@@ -1266,7 +1266,7 @@ a b c
 key_compare^key_comp();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、被制御シーケンスの順序付けに使用される順序付けデリゲートを返します。 2 つのキーを比較する場合にこれを使用します。
 
@@ -1326,7 +1326,7 @@ Microsoft::VisualC::StlClr::BinaryDelegate<GKey, GKey, bool>
     key_compare;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この型は、キー引数の順序を決定するデリゲートのシノニムです。
 
@@ -1385,7 +1385,7 @@ compare(L'b', L'a') = True
 typedef Key key_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この型は、テンプレートパラメーター*キー*のシノニムです。
 
@@ -1435,7 +1435,7 @@ iterator lower_bound(key_type key);
 *key*<br/>
 検索対象のキー値。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、*キー*への順序が同じである被制御シーケンス内の最初の要素 `X` を決定します。 そのような要素が存在しない場合は、 [set:: end (STL/CLR)](../dotnet/set-end-stl-clr.md)`()`; を返します。それ以外の場合は、`X`を指定する反復子を返します。 このメソッドを使用して、被制御シーケンスの中で、指定したキーに一致する要素のシーケンスの先頭を検索します。
 
@@ -1492,7 +1492,7 @@ static value_type make_value(key_type key);
 *key*<br/>
 使用するキー値。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、キーが*キー*である `value_type` オブジェクトを返します。 これを使用して、他のいくつかのメンバー関数との使用に適したオブジェクトを作成します。
 
@@ -1538,7 +1538,7 @@ set<Key>% operator=(set<Key>% right);
 *right*<br/>
 コピーするコンテナー。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 メンバー演算子は、オブジェクトに*right*をコピーし、`*this`を返します。 このメソッドを使用して、被制御シーケンスを*右側*の被制御シーケンスのコピーで置き換えます。
 
@@ -1588,7 +1588,7 @@ a b c
 reverse_iterator rbegin();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、被制御シーケンスの最後の要素、または空のシーケンスの先頭の次の位置を指定する反転反復子を返します。 したがって、これは反転シーケンスの `beginning` を指定します。 これを使用して被制御シーケンスの逆順に見た現在の (`current`) 先頭を指定する反復子を取得しますが、このステータスは被制御シーケンスの長さが変わると変化することがあります。
 
@@ -1636,7 +1636,7 @@ a b c
 typedef value_type% reference;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この型は、要素への参照を表します。
 
@@ -1681,7 +1681,7 @@ a b c
 reverse_iterator rend();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、被制御シーケンスの先頭を越えた位置を示す反転反復子を返します。 したがって、これは反転シーケンスの `end` を指定します。 これを使用して被制御シーケンスの逆順に見た現在の末尾 (`current`) を指定する反復子を取得しますが、このステータスは被制御シーケンスの長さが変わると変化することがあります。
 
@@ -1730,7 +1730,7 @@ a b c
 typedef T3 reverse_iterator;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この型は、被制御シーケンスの反転反復子として使用できる、未指定の型 `T3` のオブジェクトを表します。
 
@@ -1797,7 +1797,7 @@ set(System::Collections::Generic::IEnumerable<GValue>^ right,
 *right*<br/>
 挿入するオブジェクトまたは範囲。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 コンストラクター:
 
@@ -1943,7 +1943,7 @@ a b c
 size_type size();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、被制御シーケンスの長さを返します。 このメソッドを使用して、被制御シーケンス内の現在の要素数を決定します。 シーケンスにゼロ以外のサイズがあるかどうかについては、「 [set:: empty (STL/CLR)](../dotnet/set-empty-stl-clr.md)`()`」を参照してください。
 
@@ -1997,7 +1997,7 @@ size() = 2 after adding 2
 typedef int size_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この型は、負でない要素数を表します。
 
@@ -2050,7 +2050,7 @@ void swap(set<Key>% right);
 *right*<br/>
 コンテンツを交換するコンテナー。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、`this` と*right*の間で被制御シーケンスを交換します。 この処理は一定時間に実行され、例外はスローされません。 2つのコンテナーの内容を簡単に交換する方法として使用します。
 
@@ -2113,7 +2113,7 @@ a b c
 cli::array<value_type>^ to_array();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、被制御シーケンスを含む配列を返します。 このメソッドを使用して、被制御シーケンスのコピーを配列形式で取得します。
 
@@ -2168,7 +2168,7 @@ iterator upper_bound(key_type key);
 *key*<br/>
 検索対象のキー値。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、*キー*への順序が同じである被制御シーケンス内の `X` 最後の要素を決定します。 そのような要素が存在しない場合、または被制御シーケンスの最後の要素が `X` の場合は、 [set:: end (STL/CLR)](../dotnet/set-end-stl-clr.md)`()`; を返します。それ以外の場合は、`X`を超えて最初の要素を指定する反復子を返します。 このメソッドを使用して、被制御シーケンスの中で、指定したキーに一致する要素のシーケンスの末尾を検索します。
 
@@ -2220,7 +2220,7 @@ upper_bound(L'x')==end() = True
 value_compare^ value_comp();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメンバー関数は、被制御シーケンスの順序付けに使用される順序付けデリゲートを返します。 これを使用して、2つの要素の値を比較します。
 
@@ -2265,7 +2265,7 @@ Microsoft::VisualC::StlClr::BinaryDelegate<generic_value, generic_value, bool>
     value_compare;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この型は、値引数の順序を決定するデリゲートのシノニムです。
 
@@ -2309,7 +2309,7 @@ compare(L'b', L'a') = False
 typedef generic_value value_type;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この型は `generic_value`の同意語です。
 
@@ -2364,7 +2364,7 @@ template<typename Key>
 *right*<br/>
 比較する右のコンテナー。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 演算子関数は `!(left == right)`を返します。 このメソッドを使用して、2つのセットが要素によって比較されるときに、 *left*が*right*と同じ順序で並んでいないかどうかをテストします。
 
@@ -2434,7 +2434,7 @@ template<typename Key>
 *right*<br/>
 比較する右のコンテナー。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Operator 関数は、`!(right[i] < left[i])` が `left[i] < right[i]`にも当てはまる `i` 最小の位置に対して true を返します。 それ以外の場合は、このメソッドを使用して、2つのセットが要素ごとに比較されるときに、 *left*が*right*の前に並べられているかどうかをテストする `left->size() < right->size()` を返します。
 
@@ -2504,7 +2504,7 @@ template<typename Key>
 *right*<br/>
 比較する右のコンテナー。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 演算子関数は `!(right < left)`を返します。 このメソッドを使用して、2つのセットが要素別に比較されるときに、 *right*の後に*left*が順序付けされていないかどうかをテストします。
 
@@ -2574,7 +2574,7 @@ template<typename Key>
 *right*<br/>
 比較する右のコンテナー。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 演算子関数は、 *left*と*right*で制御されるシーケンスの長さが同じで、`i`位置ごとに `right[i]``left[i] ==` 場合にのみ true を返します。 このメソッドを使用して、2つのセットが要素によって比較されるときに、 *left*が*right*と同じ順序で並んでいるかどうかをテストします。
 
@@ -2644,7 +2644,7 @@ template<typename Key>
 *right*<br/>
 比較する右のコンテナー。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Operator 関数は、`left``<` `right` を返します。 このメソッドを使用して、2つのセットが要素によって比較されるときに、 *left*が*right*の後に並べられているかどうかをテストします。
 
@@ -2714,7 +2714,7 @@ template<typename Key>
 *right*<br/>
 比較する右のコンテナー。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 演算子関数は `!(left < right)`を返します。 このメソッドを使用して、2つのセットが要素別に比較されるときに、 *left*が*right*の前に順序付けされていないかどうかをテストします。
 

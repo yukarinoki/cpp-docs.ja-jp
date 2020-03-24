@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2219
 ms.assetid: 2cfe9a75-6890-46a1-a127-79a7def78e94
-ms.openlocfilehash: 8ba5bfbd6db370e65055a2de680da5fcdf13371f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d11fe4961407a29d965220106b53994b0076e856
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395509"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80206683"
 ---
 # <a name="compiler-error-c2219"></a>コンパイラ エラー C2219
 
-構文エラー: 型修飾子は、後にある必要があります ' *'
+構文エラー: 型修飾子は ' * ' の後になければなりません
 
-型修飾子 (`const`または`volatile`) 許可されていないが表示されます。
+型修飾子 (`const` または `volatile`) は、許可されていない場所で表示されます。

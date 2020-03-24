@@ -34,12 +34,12 @@ helpviewer_keywords:
 - m_dwRef
 - m_iRowset
 ms.assetid: 06d9621d-60cc-4508-8b0c-528d1b1a809b
-ms.openlocfilehash: 00d8164425ada573020971f66312b2282cc72c45
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 2b08e0e8f3b5b43f79019c70e3fe32ae9064dee9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79545565"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211121"
 ---
 # <a name="csimplerow-class"></a>CSimpleRow クラス
 
@@ -51,7 +51,7 @@ ms.locfileid: "79545565"
 class CSimpleRow
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atldb.h
 
@@ -73,7 +73,7 @@ class CSimpleRow
 |[m_dwRef](#dwref)|既存の行ハンドルに対する参照カウント。|
 |[m_iRowset](#irowset)|カーソルを表す行セットへのインデックス。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 行ハンドルは、論理的には結果行の一意のタグです。 `IRowsetImpl` は、 [IRowsetImpl:: GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md)で要求されたすべての行に対して新しい `CSimpleRow` を作成します。 `CSimpleRow` は、`IRowsetImpl`の既定のテンプレート引数であるため、行ハンドルの独自の実装に置き換えることもできます。 このクラスを置き換える唯一の要件は、置換クラスに**LONG**型の1つのパラメーターを受け取るコンストラクターを提供させることです。
 
@@ -121,7 +121,7 @@ CSimpleRow(DBCOUNTITEM iRowsetCur);
 *iRowsetCur*<br/>
 から現在の行セットへのインデックス。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 [M_iRowset](../../data/oledb/csimplerow-m-irowset.md)を*iRowsetCur*に設定します。
 

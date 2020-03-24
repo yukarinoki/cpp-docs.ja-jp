@@ -22,16 +22,16 @@ helpviewer_keywords:
 - m_strCommandText
 - SetCommandText method
 ms.assetid: 9c2715cc-1e55-4468-8327-85341617ed46
-ms.openlocfilehash: de9e930056db7b91968ca1ce471a87809693376a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d91221dd509122ebbd6490c2de7fab1ce51eb2f8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408980"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210731"
 ---
 # <a name="icommandtextimpl-class"></a>ICommandTextImpl クラス
 
-実装を提供、 [ICommandText](/previous-versions/windows/desktop/ms714914(v=vs.85))インターフェイス。
+[ICommandText](/previous-versions/windows/desktop/ms714914(v=vs.85))インターフェイスの実装を提供します。
 
 ## <a name="syntax"></a>構文
 
@@ -44,11 +44,11 @@ class ATL_NO_VTABLE ICommandTextImpl
 ### <a name="parameters"></a>パラメーター
 
 *T*<br/>
-コマンド クラスから派生した`ICommandTextImpl`します。
+`ICommandTextImpl`から派生したコマンドクラス。
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** altdb.h
+**ヘッダー:** altdb .h
 
 ## <a name="members"></a>メンバー
 
@@ -56,22 +56,22 @@ class ATL_NO_VTABLE ICommandTextImpl
 
 |||
 |-|-|
-|[GetCommandText](#getcommandtext)|テキスト コマンドの最後の呼び出しでセットを返します[SetCommandText](../../data/oledb/icommandtextimpl-setcommandtext.md)します。|
-|[SetCommandText](#setcommandtext)|既存のコマンド テキストを置き換えて、コマンド テキストを設定します。|
+|[GetCommandText](#getcommandtext)|[Setcommandtext](../../data/oledb/icommandtextimpl-setcommandtext.md)の最後の呼び出しで設定されたテキストコマンドを返します。|
+|[SetCommandText](#setcommandtext)|既存のコマンドテキストを置き換えて、コマンドテキストを設定します。|
 
 ### <a name="data-members"></a>データ メンバー
 
 |||
 |-|-|
-|[m_strCommandText](#strcommandtext)|コマンド テキストを格納します。|
+|[m_strCommandText](#strcommandtext)|コマンドテキストを格納します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-コマンドの必須インターフェイス。
+コマンドの必須のインターフェイスです。
 
-## <a name="getcommandtext"></a> ICommandTextImpl::GetCommandText
+## <a name="icommandtextimplgetcommandtext"></a><a name="getcommandtext"></a>ICommandTextImpl:: GetCommandText
 
-テキスト コマンドの最後の呼び出しでセットを返します[SetCommandText](../../data/oledb/icommandtextimpl-setcommandtext.md)します。
+[Setcommandtext](../../data/oledb/icommandtextimpl-setcommandtext.md)の最後の呼び出しで設定されたテキストコマンドを返します。
 
 ### <a name="syntax"></a>構文
 
@@ -82,11 +82,11 @@ STDMETHOD(GetCommandText)(GUID * pguidDialect,
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[ICommandText::GetCommandText](/previous-versions/windows/desktop/ms709825(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。 *既定で*パラメーターは既定では無視されます。
+*OLE DB プログラマーリファレンス*の「 [ICommandText:: getcommandtext](/previous-versions/windows/desktop/ms709825(v=vs.85)) 」を参照してください。 既定では、 *Pguiddialect*パラメーターは無視されます。
 
-## <a name="setcommandtext"></a> ICommandTextImpl::SetCommandText
+## <a name="icommandtextimplsetcommandtext"></a><a name="setcommandtext"></a>ICommandTextImpl:: SetCommandText
 
-既存のコマンド テキストを置き換えて、コマンド テキストを設定します。
+既存のコマンドテキストを置き換えて、コマンドテキストを設定します。
 
 ### <a name="syntax"></a>構文
 
@@ -97,11 +97,11 @@ STDMETHOD(SetCommandText)(REFGUID rguidDialect,
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[icommandtext::setcommandtext](/previous-versions/windows/desktop/ms709757(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
+*OLE DB プログラマーリファレンス*の「 [ICommandText:: setcommandtext](/previous-versions/windows/desktop/ms709757(v=vs.85)) 」を参照してください。
 
-## <a name="strcommandtext"></a> ICommandTextImpl::m_strCommandText
+## <a name="icommandtextimplm_strcommandtext"></a><a name="strcommandtext"></a>ICommandTextImpl:: m_strCommandText
 
-コマンド テキストの文字列を格納します。
+コマンドテキスト文字列を格納します。
 
 ### <a name="syntax"></a>構文
 
@@ -109,7 +109,7 @@ STDMETHOD(SetCommandText)(REFGUID rguidDialect,
 CComBSTR m_strCommandText;
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[OLE DB プロバイダー テンプレート](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[OLE DB プロバイダー テンプレートに関するページ](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [OLE DB プロバイダー テンプレートのアーキテクチャ](../../data/oledb/ole-db-provider-template-architecture.md)

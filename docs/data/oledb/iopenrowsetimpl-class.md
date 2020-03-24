@@ -13,12 +13,12 @@ helpviewer_keywords:
 - CreateRowset method
 - OpenRowset method
 ms.assetid: d259cedc-1db4-41cf-bc9f-5030907ab486
-ms.openlocfilehash: 66fce9d2ffe63798738be1658a5328e907395a54
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 8ecbcd46e534baa73574f0930e1cbac4dbc49dfb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79545907"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210536"
 ---
 # <a name="iopenrowsetimpl-class"></a>IOpenRowsetImpl クラス
 
@@ -36,7 +36,7 @@ class IOpenRowsetImpl : public IOpenRowset
 *SessionClass*<br/>
 `IOpenRowsetImpl`から派生したクラス。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atldb.h
 
@@ -49,7 +49,7 @@ class IOpenRowsetImpl : public IOpenRowset
 |[CreateRowset](#createrowset)|行セットオブジェクトを作成します。 ユーザーによって直接呼び出されることはありません。|
 |[OpenRowset](#openrowset)|を開き、1つのベーステーブルまたはインデックスのすべての行を含む行セットを返します。 (ATLDB.H ではありません。始め|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 セッションオブジェクトの場合、 [IOpenRowset](/previous-versions/windows/desktop/ms716946(v=vs.85))インターフェイスは必須です。 これにより、1つのベーステーブルまたはインデックスのすべての行を含む行セットが開かれて返されます。
 
@@ -101,7 +101,7 @@ HRESULT OpenRowset(IUnknown* pUnkOuter,
 
 *OLE DB プログラマーリファレンス*の「 [IOpenRowset:: OpenRowset](/previous-versions/windows/desktop/ms716724(v=vs.85)) 」を参照してください。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメソッドは ATLDB.H で見つかりません。始め. これは、プロバイダーを作成するときに ATL オブジェクトウィザードによって作成されます。
 

@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C4089
 ms.assetid: 7c8f929b-9bf9-4063-9b7e-4affd98c1acc
-ms.openlocfilehash: 62dc060876145e7d2f8652fefe1738d149d1cf4a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3758326ef6e3574b54c858031b8041d8f57cd350
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62280530"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80163950"
 ---
 # <a name="compiler-warning-level-1-c4089"></a>コンパイラの警告 (レベル 1) C4089
 
-'function': 実パラメーター 'number'、仮パラメーター 'number' でのさまざまな種類
+' function ': 実際のパラメーター ' number '、仮パラメーター ' number ' の型が異なります。
 
-対応する仮引数および実パラメーターでは、種類があります。 実際のパラメーターは、変更せずに渡されます。 関数は、関数定義で指定された型には、実際のパラメーターをキャストします。
+対応する仮パラメーターと実パラメーターの型が異なります。 実際のパラメーターは変更なしで渡されます。 関数は、実際のパラメーターを関数定義で指定された型にキャストします。

@@ -98,18 +98,18 @@ helpviewer_keywords:
 - operator> member [STL/CLR]
 - operator>= member [STL/CLR]
 ms.assetid: dd669da3-3c0e-45e9-8596-f6b483720941
-ms.openlocfilehash: ff5ddcfa101baf4c85145d1c6d64a6a3b9e7df58
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 74fb98d99e0aba94c40dce9ad1bcd6af83394231
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393767"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208770"
 ---
 # <a name="deque-stlclr"></a>deque (STL/CLR)
 
-テンプレート クラスは、ランダムなアクセス権を持つ要素の可変長シーケンスを制御するオブジェクトについて説明します。 コンテナーを使用する`deque`、記憶域の連続するブロックのようですが、拡大またはいずれかの残りの要素をコピーする必要はありません側縮小することができますの要素のシーケンスを管理します。 効率的に、実装できるため、`double-ended queue`します。 (したがって名前です)。
+このテンプレートクラスは、ランダムアクセスを持つ要素の可変長シーケンスを制御するオブジェクトを表します。 コンテナー `deque` を使用すると、連続したストレージのブロックのように見える要素のシーケンスを管理できますが、その他の要素をコピーしなくても、いずれかの端で拡大または縮小することができます。 そのため、`double-ended queue`を効率的に実装できます。 (したがって、という名前になります)。
 
-下記の説明で`GValue`と同じ`Value`しない限り、後者の場合は、ref 型である場合は`Value^`します。
+次の説明では、`GValue` は `Value` と同じですが、後者が ref 型である場合は `Value^`ます。
 
 ## <a name="syntax"></a>構文
 
@@ -132,14 +132,14 @@ template<typename Value>
 *GValue*<br/>
 被制御シーケンス内の要素のジェネリック型。
 
-*[値]*<br/>
+*Value*<br/>
 被制御シーケンス内の要素の型。
 
 ## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<cliext/deque >
 
-**Namespace:** cliext
+**名前空間:** cliext
 
 ## <a name="declarations"></a>宣言
 
@@ -149,10 +149,10 @@ template<typename Value>
 |[deque::const_reference (STL/CLR)](#const_reference)|要素への定数参照の型です。|
 |[deque::const_reverse_iterator (STL/CLR)](#const_reverse_iterator)|被制御シーケンスの定数反転反復子の型です。|
 |[deque::difference_type (STL/CLR)](#difference_type)|2 つの要素間の距離を表す、符号付きの型です。|
-|[deque::generic_container (STL/CLR)](#generic_container)|コンテナーのジェネリック インターフェイスの型。|
-|[deque::generic_iterator (STL/CLR)](#generic_iterator)|コンテナーのジェネリック インターフェイスの反復子の型。|
-|[deque::generic_reverse_iterator (STL/CLR)](#generic_reverse_iterator)|コンテナーのジェネリック インターフェイスの反転反復子の型。|
-|[deque::generic_value (STL/CLR)](#generic_value)|コンテナーのジェネリック インターフェイスの要素の型。|
+|[deque::generic_container (STL/CLR)](#generic_container)|コンテナーのジェネリックインターフェイスの型。|
+|[deque::generic_iterator (STL/CLR)](#generic_iterator)|コンテナーのジェネリックインターフェイスの反復子の型。|
+|[deque::generic_reverse_iterator (STL/CLR)](#generic_reverse_iterator)|コンテナーのジェネリックインターフェイスの反転反復子の型。|
+|[deque::generic_value (STL/CLR)](#generic_value)|コンテナーのジェネリックインターフェイスの要素の型。|
 |[deque::iterator (STL/CLR)](#iterator)|被制御シーケンスの反復子の型です。|
 |[deque::reference (STL/CLR)](#reference)|要素への参照の型です。|
 |[deque::reverse_iterator (STL/CLR)](#reverse_iterator)|被制御シーケンスの反転反復子の型です。|
@@ -171,7 +171,7 @@ template<typename Value>
 |[deque::end (STL/CLR)](#end)|被制御シーケンスの末尾を指定します。|
 |[deque::erase (STL/CLR)](#erase)|指定した位置にある要素を削除します。|
 |[deque::front (STL/CLR)](#front)|最初の要素にアクセスします。|
-|[deque::insert (STL/CLR)](#insert)|指定した位置にある要素を追加します。|
+|[deque::insert (STL/CLR)](#insert)|指定した位置に要素を追加します。|
 |[deque::pop_back (STL/CLR)](#pop_back)|最後の要素を削除します。|
 |[deque::pop_front (STL/CLR)](#pop_front)|最初の要素を削除します。|
 |[deque::push_back (STL/CLR)](#push_back)|新しい最後の要素を追加します。|
@@ -190,42 +190,42 @@ template<typename Value>
 
 |演算子|説明|
 |--------------|-----------------|
-|[deque::operator!= (STL/CLR)](#op_neq)|2 つの場合を決定します`deque`オブジェクトが等しくないです。|
+|[deque::operator!= (STL/CLR)](#op_neq)|2つの `deque` オブジェクトが等しくないかどうかを判断します。|
 |[deque::operator(STL/CLR)](#operator)|指定した位置にある要素にアクセスします。|
-|[operator< (deque) (STL/CLR)](#op_lt)|かどうかを`deque`オブジェクトが他よりも小さい`deque`オブジェクト。|
-|[operator<= (deque) (STL/CLR)](#op_lteq)|かどうかを`deque`オブジェクトが別に小さい`deque`オブジェクト。|
+|[operator< (deque) (STL/CLR)](#op_lt)|`deque` オブジェクトが、別の `deque` オブジェクトより小さいかどうかを判断します。|
+|[operator<= (deque) (STL/CLR)](#op_lteq)|`deque` オブジェクトが、別の `deque` オブジェクト以下かどうかを判断します。|
 |[operator= (deque) (STL/CLR)](#op_as)|被制御シーケンスを置き換えます。|
-|[operator== (deque) (STL/CLR)](#op_eq)|かどうかを`deque`オブジェクトが相互に等しい`deque`オブジェクト。|
-|[operator> (deque) (STL/CLR)](#op_gt)|かどうかを`deque`オブジェクトが他よりも大きい`deque`オブジェクト。|
-|[operator>= (deque) (STL/CLR)](#op_gteq)|かどうかを`deque`オブジェクトより大きいまたは相互に等しい`deque`オブジェクト。|
+|[operator== (deque) (STL/CLR)](#op_eq)|`deque` オブジェクトが別の `deque` オブジェクトと等しいかどうかを判断します。|
+|[operator> (deque) (STL/CLR)](#op_gt)|`deque` オブジェクトが、別の `deque` オブジェクトより大きいかどうかを判断します。|
+|[operator>= (deque) (STL/CLR)](#op_gteq)|`deque` オブジェクトが、別の `deque` オブジェクト以上かどうかを判断します。|
 
 ## <a name="interfaces"></a>インターフェイス
 
-|Interface|説明|
+|インターフェイス|説明|
 |---------------|-----------------|
-|<xref:System.ICloneable>|オブジェクトが重複しています。|
-|<xref:System.Collections.IEnumerable>|要素をシーケンス処理します。|
-|<xref:System.Collections.ICollection>|要素のグループを管理します。|
-|<xref:System.Collections.Generic.IEnumerable%601>|型指定された要素をシーケンス処理します。|
-|<xref:System.Collections.Generic.ICollection%601>|型指定された要素のグループを管理します。|
-|<xref:System.Collections.Generic.IList%601>|型指定された要素の順序付きのグループを管理します。|
-|IDeque < 値\>|ジェネリックなコンテナーを管理します。|
+|<xref:System.ICloneable>|オブジェクトを複製します。|
+|<xref:System.Collections.IEnumerable>|要素を順番に処理します。|
+|<xref:System.Collections.ICollection>|要素のグループを維持します。|
+|<xref:System.Collections.Generic.IEnumerable%601>|型指定された要素を順番に処理します。|
+|<xref:System.Collections.Generic.ICollection%601>|型指定された要素のグループを保持します。|
+|<xref:System.Collections.Generic.IList%601>|型指定された要素の順序付けされたグループを維持します。|
+|IDeque < 値\>|ジェネリックコンテナーを管理します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-割り当ておよび解放のブロックを指定しているハンドルの保存されている配列を通じて制御してシーケンスに対するストレージの`Value`要素。 配列は、必要に応じて大きくなります。 前に付加するか、新しい要素を追加することのコストは一定の時間、残りの要素が乱されることはない方法で拡張が発生します。 一定の時間内と残りの要素を中断することがなくいずれかの端にある要素を削除することもできます。 したがって、基になるコンテナー テンプレート クラスの候補は、deque[キュー (STL/CLR)](../dotnet/queue-stl-clr.md)またはテンプレート クラス[スタック (STL/CLR)](../dotnet/stack-stl-clr.md)します。
+オブジェクトは、`Value` 要素のブロックを指定するハンドルの格納された配列を通じて、制御するシーケンスのストレージを割り当てて解放します。 配列は必要に応じて拡張されます。 増加は、新しい要素の前または後にかかるコストが一定時間で、残りの要素が影響を受けないようにするために発生します。 また、いずれかの端にある要素を一定の時間で削除し、残りの要素を中断せずに削除することもできます。 このため、deque は、テンプレートクラス[キュー (stl/clr)](../dotnet/queue-stl-clr.md)またはテンプレートクラス[スタック (stl/clr)](../dotnet/stack-stl-clr.md)の基になるコンテナーに適しています。
 
-A`deque`オブジェクトに、(フロント) の最初の要素の 0 からカウントの位置を直接指定された要素を参照できますつまりランダム アクセス反復子をサポートしている[deque::size (STL/CLR)](#size) `() - 1`最後 (戻る) の要素。 Deque が基になるコンテナー テンプレート クラスに適した候補であることも意味[priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)します。
+`deque` オブジェクトはランダムアクセス反復子をサポートしています。つまり、要素を、最初の (front) 要素の場合は0から、last (back) 要素の場合は[deque:: size (STL/CLR)](#size)`() - 1` に、数値位置を指定して直接参照できます。 また、deque がテンプレートクラス[priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)の基になるコンテナーの候補として適していることも意味します。
 
-Deque の反復子は、要素の指定のバイアスとその関連の deque オブジェクトを識別するハンドルを格納します。 関連付けられているコンテナー オブジェクトでのみ、反復子を使用することができます。 Deque の要素のバイアスが*いない*の位置と同じとは限りません。 最初の要素がゼロのバイアス、追加された次の要素が 1 のバイアスが先頭に追加された次の要素が-1 のバイアス。
+Deque iterator は、関連付けられている deque オブジェクトへのハンドルを、指定する要素のバイアスと共に格納します。 反復子は、関連付けられているコンテナーオブジェクトと共にのみ使用できます。 Deque 要素のバイアスは、必ずしもその位置と同じである必要は*ありません*。 挿入された最初の要素はバイアスゼロを持ち、次に追加される要素はバイアス1を持ちますが、次の先頭の要素にはバイアス-1 があります。
 
-挿入またはいずれかの端にある要素を消去するには*いない*任意の有効なバイアスに格納されている要素の値を変更します。 挿入またはただし、内部要素を消去する*できます*反復子によって指定された値は変更もできるように、指定のバイアスに格納されている要素の値を変更します。 (コンテナーを要素にコピーまたはスケール ダウンまたは穴を消去した後に挿入する前に穴を作成する必要があります)。それにもかかわらず、有効な要素を指定のバイアス限りは、deque の反復子は有効です。 さらに、有効な反復子は dereferencable--これを使用するにはアクセスまたはそのバイアスがによって返される反復子のバイアスと等しくない場合に限り指定 - 要素の値を変更する`end()`します。
+いずれかの端に要素を挿入または消去しても、有効なバイアスで格納されている要素の値は変更*されません*。 ただし、内部要素を挿入または消去*する*と、指定したバイアスで格納されている要素の値を変更できるため、反復子によって指定された値も変更される可能性があります。 (コンテナーは、挿入の前に穴を作成したり、消去後に穴を埋めるために、要素を上下にコピーすることが必要になる場合があります)。ただし、そのバイアスによって有効な要素が指定されていれば、deque iterator は有効なままです。 さらに、有効な反復子は dereferencable のままです。これを使用すると、指定した要素の値にアクセスしたり変更したりすることができます。ただし、バイアスは、`end()`によって返される反復子のバイアスと等しくありません。
 
-消去、または要素を削除する、格納されている値のデストラクターを呼び出します。 コンテナーを破棄するには、すべての要素が消去されます。 したがって、要素型を持つ ref クラスは、コンテナーによりする要素よりも長く保持しないコンテナーです。 ただし、ハンドルのコンテナーは*いない*その要素を破棄します。
+要素を消去または削除すると、格納されている値のデストラクターが呼び出されます。 コンテナーを破棄すると、すべての要素が消去されます。 したがって、要素の型が ref クラスであるコンテナーは、コンテナーの直後要素が存在しないことを保証します。 ただし、ハンドルのコンテナーが要素を破棄し*ない*ことに注意してください。
 
 ## <a name="members"></a>メンバー
 
-## <a name="assign"></a> deque::assign (STL/CLR)
+## <a name="dequeassign-stlclr"></a><a name="assign"></a>deque:: assign (STL/CLR)
 
 すべての要素を置換します。
 
@@ -247,21 +247,21 @@ void assign(System::Collections::Generic::IEnumerable<Value>^ right);
 挿入する範囲の先頭。
 
 *last*<br/>
-挿入する範囲の終了。
+挿入する範囲の末尾。
 
 *right*<br/>
-挿入する列挙です。
+挿入する列挙体。
 
 *val*<br/>
 挿入する要素の値。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-最初のメンバー関数は、被制御シーケンスの繰り返しを置き換えます*カウント*値の要素*val*します。 使用する要素をコンテナーと同じ値を持ちます。
+最初のメンバー関数は、被制御シーケンスを、値*val*の*count*要素の繰り返しで置き換えます。 このメソッドを使用して、すべての要素が同じ値を持つコンテナーを塗りつぶします。
 
-場合`InIt`整数型の場合は、2 番目のメンバー関数の動作と同じ`assign((size_type)first, (value_type)last)`します。 それ以外の場合、被制御シーケンスのシーケンスを置き換えます [`first`、 `last`)。 使用することを被制御シーケンスのコピーを別のシーケンス。
+`InIt` が整数型の場合、2番目のメンバー関数は `assign((size_type)first, (value_type)last)`と同じように動作します。 それ以外の場合は、被制御シーケンスを [`first`, `last`) のシーケンスに置き換えます。 このメソッドを使用して、被制御シーケンスを別のシーケンスにコピーします。
 
-3 番目のメンバー関数は、被制御シーケンスを列挙子によって指定されたシーケンスに置き換えます*右*します。 これを使用するには、被制御シーケンスの列挙子によって説明されているシーケンスのコピーを作成します。
+3番目のメンバー関数は、被制御シーケンスを列挙子*権限*によって指定されたシーケンスに置き換えます。 このメソッドを使用して、被制御シーケンスを列挙子によって記述されたシーケンスのコピーにします。
 
 ### <a name="example"></a>例
 
@@ -306,7 +306,7 @@ a b
 a b c
 ```
 
-## <a name="at"></a> deque::at (STL/CLR)
+## <a name="dequeat-stlclr"></a><a name="at"></a>deque:: at (STL/CLR)
 
 指定した位置にある要素にアクセスします。
 
@@ -321,9 +321,9 @@ reference at(size_type pos);
 *pos*<br/>
 アクセスする要素の位置。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメンバー関数は、位置にある、被制御シーケンスの要素への参照を返します*pos*します。読み取りまたは要素の位置を記述するために使用がわかっています。
+このメンバー関数は、被制御シーケンスの要素への参照を位置*pos*に返します。このメソッドを使用して、既知の位置を持つ要素の読み取りまたは書き込みを行います。
 
 ### <a name="example"></a>例
 
@@ -358,7 +358,7 @@ a b c
 a x c
 ```
 
-## <a name="back"></a> deque::back (STL/CLR)
+## <a name="dequeback-stlclr"></a><a name="back"></a>deque:: back (STL/CLR)
 
 最後の要素にアクセスします。
 
@@ -368,9 +368,9 @@ a x c
 reference back();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-メンバー関数は、空でない必要があります、被制御シーケンスの最後の要素への参照を返します。 最後の要素へのアクセスが存在することがわかっている場合に使用するとします。
+このメンバー関数は、被制御シーケンスの最後の要素への参照を返します。この要素は、空にすることはできません。 この要素が存在することがわかっている場合は、最後の要素にアクセスするために使用します。
 
 ### <a name="example"></a>例
 
@@ -409,7 +409,7 @@ back() = c
 a b x
 ```
 
-## <a name="back_item"></a> deque::back_item (STL/CLR)
+## <a name="dequeback_item-stlclr"></a><a name="back_item"></a>deque:: back_item (STL/CLR)
 
 最後の要素にアクセスします。
 
@@ -419,9 +419,9 @@ a b x
 property value_type back_item;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-プロパティでは、空でない必要があります、被制御シーケンスの最後の要素にアクセスします。 存在することがわかっている場合、最後の要素の読み書きに使用するとします。
+プロパティは、被制御シーケンスの最後の要素にアクセスします。この要素は、空にすることはできません。 このメソッドは、最後の要素が存在することがわかっている場合に、その要素の読み取りまたは書き込みに使用します。
 
 ### <a name="example"></a>例
 
@@ -460,7 +460,7 @@ back_item = c
 a b x
 ```
 
-## <a name="begin"></a> deque::begin (STL/CLR)
+## <a name="dequebegin-stlclr"></a><a name="begin"></a>deque:: begin (STL/CLR)
 
 被制御シーケンスの先頭を指定します。
 
@@ -470,9 +470,9 @@ a b x
 iterator begin();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-メンバー関数は、被制御シーケンス、または空のシーケンスの末尾を越えた最初の要素を指定するランダム アクセス反復子を返します。 指定する反復子を取得するために使用、`current`被制御シーケンスの長さが変更された場合、被制御シーケンスが、そのステータスの先頭を変更できます。
+このメンバー関数は、被制御シーケンスの最初の要素、または空のシーケンスの末尾の次の位置を指定するランダムアクセス反復子を返します。 これを使用して被制御シーケンスの現在の先頭 (`current`) を指定する反復子を取得しますが、このステータスは被制御シーケンスの長さが変わると変化することがあります。
 
 ### <a name="example"></a>例
 
@@ -515,7 +515,7 @@ a b c
 x y c
 ```
 
-## <a name="clear"></a> deque::clear (STL/CLR)
+## <a name="dequeclear-stlclr"></a><a name="clear"></a>deque:: clear (STL/CLR)
 
 すべての要素を削除します。
 
@@ -525,9 +525,9 @@ x y c
 void clear();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-メンバー関数は、効果的に呼び出す[deque::erase (STL/CLR)](#erase) `(` [deque::begin (STL/CLR)](#begin) `(),` [deque::end (STL/CLR)](#end) `())`. これを使用するには、被制御シーケンスが空であることを確認します。
+このメンバー関数は、実質的に[deque:: erase](#erase) (stl/clr)`(` [deque:: begin](#begin) (stl/clr)`(),` [deque:: end (stl/](#end) clr)`())`を呼び出します。 このメソッドを使用して、被制御シーケンスが空であることを確認します。
 
 ### <a name="example"></a>例
 
@@ -572,7 +572,7 @@ a b
 size() = 0
 ```
 
-## <a name="const_iterator"></a> deque::const_iterator (STL/CLR)
+## <a name="dequeconst_iterator-stlclr"></a><a name="const_iterator"></a>deque:: const_iterator (STL/CLR)
 
 被制御シーケンスの定数反復子の型です。
 
@@ -582,9 +582,9 @@ size() = 0
 typedef T2 const_iterator;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この型が指定されていない型のオブジェクトを表します`T2`被制御シーケンスの定数ランダム アクセス反復子として機能することができます。
+この型は、被制御シーケンスの定数ランダムアクセス反復子として使用できる、指定されていない型 `T2` のオブジェクトを表します。
 
 ### <a name="example"></a>例
 
@@ -613,7 +613,7 @@ int main()
 a b c
 ```
 
-## <a name="const_reference"></a> deque::const_reference (STL/CLR)
+## <a name="dequeconst_reference-stlclr"></a><a name="const_reference"></a>deque:: const_reference (STL/CLR)
 
 要素への定数参照の型です。
 
@@ -623,7 +623,7 @@ a b c
 typedef value_type% const_reference;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 この型は、要素への定数参照を表します。
 
@@ -657,9 +657,9 @@ int main()
 a b c
 ```
 
-## <a name="const_reverse_iterator"></a> deque::const_reverse_iterator (STL/CLR)
+## <a name="dequeconst_reverse_iterator-stlclr"></a><a name="const_reverse_iterator"></a>deque:: const_reverse_iterator (STL/CLR)
 
-被制御シーケンスの定数反転反復子の種類.
+被制御シーケンスの定数反転反復子の型。
 
 ### <a name="syntax"></a>構文
 
@@ -667,9 +667,9 @@ a b c
 typedef T4 const_reverse_iterator;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この型が指定されていない型のオブジェクトを表します`T4`被制御シーケンスの定数反転反復子として機能することができます。
+この型は、被制御シーケンスの定数反転反復子として使用できる、指定されていない型 `T4` のオブジェクトを表します。
 
 ### <a name="example"></a>例
 
@@ -699,7 +699,7 @@ int main()
 c b a
 ```
 
-## <a name="deque"></a> deque::deque (STL/CLR)
+## <a name="dequedeque-stlclr"></a><a name="deque"></a>deque::d の場合 (STL/CLR)
 
 コンテナー オブジェクトを構築します。
 
@@ -725,7 +725,7 @@ deque(System::Collections::Generic::IEnumerable<Value>^ right);
 挿入する範囲の先頭。
 
 *last*<br/>
-挿入する範囲の終了。
+挿入する範囲の末尾。
 
 *right*<br/>
 挿入するオブジェクトまたは範囲。
@@ -733,51 +733,51 @@ deque(System::Collections::Generic::IEnumerable<Value>^ right);
 *val*<br/>
 挿入する要素の値。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-コンス トラクター。
+コンストラクター:
 
 `deque();`
 
-要素のない、被制御シーケンスを初期化します。 空の初期被制御シーケンスの指定に使用するとします。
+要素を含まない被制御シーケンスを初期化します。 このメソッドを使用して、空の初期被制御シーケンスを指定します。
 
-コンス トラクター。
+コンストラクター:
 
 `deque(deque<Value>% right);`
 
-シーケンスが被制御シーケンスを初期化します [`right.begin()`、 `right.end()`)。 Deque オブジェクトによって制御されるシーケンスのコピーである初期被制御シーケンスを指定するために使用*右*します。 反復子の詳細については、次を参照してください。 [deque::begin (STL/CLR)](#begin)と[deque::end (STL/CLR)](#end)します。
+シーケンス [`right.begin()`、`right.end()`) を使用して被制御シーケンスを初期化します。 このメソッドを使用して、deque オブジェクト*権限*によって制御されるシーケンスのコピーである最初の被制御シーケンスを指定します。 反復子の詳細については、「 [deque:: begin (stl/clr)](#begin) 」および「 [deque:: end (stl/clr)](#end)」を参照してください。
 
-コンス トラクター。
+コンストラクター:
 
 `deque(deque<Value>^ right);`
 
-シーケンスが被制御シーケンスを初期化します [`right->begin()`、 `right->end()`)。 ハンドルがある、deque オブジェクトによって制御されるシーケンスのコピーである初期被制御シーケンスを指定するために使用*右*します。
+シーケンス [`right->begin()`、`right->end()`) を使用して被制御シーケンスを初期化します。 このメソッドを使用して、ハンドルが*right*である deque オブジェクトによって制御されるシーケンスのコピーである、最初の被制御シーケンスを指定します。
 
-コンス トラクター。
+コンストラクター:
 
 `explicit deque(size_type count);`
 
-被制御シーケンスを初期化します*カウント*値を持つ要素各`value_type()`します。 使用する要素をコンテナーを格納するのに既定値を持ちます。
+値 `value_type()`を持つ*カウント*要素を使用して、被制御シーケンスを初期化します。 このメソッドを使用して、すべての要素に既定値が設定されたコンテナーにデータを格納します。
 
-コンス トラクター。
+コンストラクター:
 
 `deque(size_type count, value_type val);`
 
-被制御シーケンスを初期化します*カウント*値を持つ要素各*val*します。 使用する要素をコンテナーと同じ値を持ちます。
+値*val*を持つ*カウント*要素を使用して被制御シーケンスを初期化します。 このメソッドを使用して、すべての要素が同じ値を持つコンテナーを塗りつぶします。
 
-コンス トラクター。
+コンストラクター:
 
 `template<typename InIt>`
 
 `deque(InIt first, InIt last);`
 
-シーケンスが被制御シーケンスを初期化します [`first`、 `last`)。 これを使用するには、被制御シーケンスの別のシーケンスのコピーを作成します。
+シーケンス [`first`、`last`) を使用して被制御シーケンスを初期化します。 このメソッドを使用して、被制御シーケンスを別のシーケンスのコピーにします。
 
-コンス トラクター。
+コンストラクター:
 
 `deque(System::Collections::Generic::IEnumerable<Value>^ right);`
 
-列挙子によって指定されたシーケンスの被制御シーケンスを初期化します*右*します。 これを使用するには、被制御シーケンスの列挙子によって説明されているもう 1 つのシーケンスのコピーを作成します。
+列挙子*権限*によって指定されたシーケンスを使用して、被制御シーケンスを初期化します。 このメソッドを使用して、被制御シーケンスを、列挙子によって記述された別のシーケンスのコピーとして作成します。
 
 ### <a name="example"></a>例
 
@@ -844,9 +844,9 @@ x x x x x x
 x x x x x x
 ```
 
-## <a name="difference_type"></a> deque::difference_type (STL/CLR)
+## <a name="dequedifference_type-stlclr"></a><a name="difference_type"></a>deque::d ifference_type (STL/CLR)
 
-2 つの要素間の距離を符号付きの型。
+2つの要素間の符号付き距離の型。
 
 ### <a name="syntax"></a>構文
 
@@ -854,9 +854,9 @@ x x x x x x
 typedef int difference_type;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この型は、符号付きの要素の数を表します。
+この型は、署名された要素の数を表します。
 
 ### <a name="example"></a>例
 
@@ -898,7 +898,7 @@ end()-begin() = 3
 begin()-end() = -3
 ```
 
-## <a name="empty"></a> deque::empty (STL/CLR)
+## <a name="dequeempty-stlclr"></a><a name="empty"></a>deque:: empty (STL/CLR)
 
 要素が存在しないかどうかをテストします。
 
@@ -908,9 +908,9 @@ begin()-end() = -3
 bool empty();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメンバー関数は、被制御シーケンスが空の場合に true を返します。 同じになります[deque::size (STL/CLR)](#size)`() == 0`します。 Deque が空かどうかをテストに使用するとします。
+このメンバー関数は、被制御シーケンスが空の場合に true を返します。 これは、 [deque:: size (STL/CLR)](#size)`() == 0`に相当します。 このメソッドを使用して、deque が空かどうかをテストします。
 
 ### <a name="example"></a>例
 
@@ -949,7 +949,7 @@ size() = 0
 empty() = True
 ```
 
-## <a name="end"></a> deque::end (STL/CLR)
+## <a name="dequeend-stlclr"></a><a name="end"></a>deque:: end (STL/CLR)
 
 被制御シーケンスの末尾を指定します。
 
@@ -959,9 +959,9 @@ empty() = True
 iterator end();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-メンバー関数では、被制御シーケンスの最後の位置を指し示すランダム アクセス反復子を返します。 指定する反復子を取得するために使用、`current`被制御シーケンスの長さが変更された場合、被制御シーケンスが、そのステータスの末尾を変更できます。
+このメンバー関数は、被制御シーケンスの末尾の次の位置を指し示すランダムアクセス反復子を返します。 これを使用して被制御シーケンスの現在の (`current`) 末尾を指定する反復子を取得しますが、このステータスは被制御シーケンスの長さが変わると変化することがあります。
 
 ### <a name="example"></a>例
 
@@ -1005,7 +1005,7 @@ a b c
 a x y
 ```
 
-## <a name="erase"></a> deque::erase (STL/CLR)
+## <a name="dequeerase-stlclr"></a><a name="erase"></a>deque:: erase (STL/CLR)
 
 指定した位置にある要素を削除します。
 
@@ -1022,20 +1022,20 @@ iterator erase(iterator first, iterator last);
 消去する範囲の先頭。
 
 *last*<br/>
-消去する範囲の終了。
+消去する範囲の末尾。
 
 *where*<br/>
 消去する要素。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-最初のメンバー関数が指す被制御シーケンスの要素を削除する*場所*します。 これを使用するには 1 つの要素を削除します。
+最初のメンバー関数は、によって示さ*れる*被制御シーケンスの要素を削除します。 このメソッドを使用して、1つの要素を削除します。
 
-2 番目のメンバー関数は、範囲 [`first`, `last`) の被制御シーケンスの要素を削除します。 これを使用するには 0 個以上の連続する要素を削除します。
+2 番目のメンバー関数は、範囲 [`first`, `last`) の被制御シーケンスの要素を削除します。 これを使用して、0個以上の連続する要素を削除します。
 
-両方のメンバー関数は、削除された要素の後に残る最初の要素を指定する反復子を返しますまたは[deque::end (STL/CLR)](#end) `()`そのような要素が存在しない場合。
+両方のメンバー関数は、削除された要素の後に残った最初の要素を指定する反復子を返します。そのような要素が存在しない場合は、 [deque:: end (STL/CLR)](#end)`()` します。
 
-要素を消去するときに要素のコピーの数が消去の末尾と、シーケンスの最も近い最後の要素の数に比例します。 (シーケンスのいずれかの側の 1 つまたは複数の要素を消去するときに要素のコピーは発生しません。)
+要素が消去されるときに、要素のコピー数は、消去の終了位置とシーケンスの一番近い方の要素の数で線形になります。 (シーケンスの両端で1つ以上の要素を消去すると、要素のコピーは行われません)。
 
 ### <a name="example"></a>例
 
@@ -1084,7 +1084,7 @@ erase(begin(), end()-1) = e
 size() = 1
 ```
 
-## <a name="front"></a> deque::front (STL/CLR)
+## <a name="dequefront-stlclr"></a><a name="front"></a>deque:: front (STL/CLR)
 
 最初の要素にアクセスします。
 
@@ -1094,9 +1094,9 @@ size() = 1
 reference front();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-メンバー関数は、空でない必要があります、被制御シーケンスの最初の要素への参照を返します。 存在することがわかっている場合、最初の要素の読み書きに使用するとします。
+このメンバー関数は、被制御シーケンスの最初の要素への参照を返します。この要素は、空にすることはできません。 これは、最初の要素が存在することがわかっている場合に、その要素の読み取りまたは書き込みに使用します。
 
 ### <a name="example"></a>例
 
@@ -1135,7 +1135,7 @@ front() = a
 x b c
 ```
 
-## <a name="front_item"></a> deque::front_item (STL/CLR)
+## <a name="dequefront_item-stlclr"></a><a name="front_item"></a>deque:: front_item (STL/CLR)
 
 最初の要素にアクセスします。
 
@@ -1145,9 +1145,9 @@ x b c
 property value_type front_item;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-プロパティでは、空でない必要があります、被制御シーケンスの最初の要素にアクセスします。 存在することがわかっている場合、最初の要素の読み書きに使用するとします。
+プロパティは、被制御シーケンスの最初の要素にアクセスします。この要素は、空にすることはできません。 これは、最初の要素が存在することがわかっている場合に、その要素の読み取りまたは書き込みに使用します。
 
 ### <a name="example"></a>例
 
@@ -1186,9 +1186,9 @@ front_item = a
 x b c
 ```
 
-## <a name="generic_container"></a> deque::generic_container (STL/CLR)
+## <a name="dequegeneric_container-stlclr"></a><a name="generic_container"></a>deque:: generic_container (STL/CLR)
 
-コンテナーのジェネリック インターフェイスの型。
+コンテナーのジェネリックインターフェイスの型。
 
 ### <a name="syntax"></a>構文
 
@@ -1198,9 +1198,9 @@ typedef Microsoft::VisualC::StlClr::
     generic_container;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この型は、このテンプレートのコンテナー クラスのジェネリック インターフェイスを表します。
+この型は、このテンプレートコンテナークラスのジェネリックインターフェイスを表します。
 
 ### <a name="example"></a>例
 
@@ -1252,9 +1252,9 @@ a b c d
 a b c d e
 ```
 
-## <a name="generic_iterator"></a> deque::generic_iterator (STL/CLR)
+## <a name="dequegeneric_iterator-stlclr"></a><a name="generic_iterator"></a>deque:: generic_iterator (STL/CLR)
 
-コンテナーのジェネリック インターフェイスを使用するため、反復子の型。
+コンテナーのジェネリックインターフェイスで使用する反復子の型。
 
 ### <a name="syntax"></a>構文
 
@@ -1263,9 +1263,9 @@ typedef Microsoft::VisualC::StlClr::Generic::
     ContainerRandomAccessIterator<generic_value> generic_iterator;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この型は、このテンプレートのコンテナー クラスのジェネリック インターフェイスで使用できる汎用的な反復子を表します。
+この型は、このテンプレートコンテナークラスのジェネリックインターフェイスで使用できる汎用反復子を表します。
 
 ### <a name="example"></a>例
 
@@ -1309,9 +1309,9 @@ a b c
 a a c
 ```
 
-## <a name="generic_reverse_iterator"></a> deque::generic_reverse_iterator (STL/CLR)
+## <a name="dequegeneric_reverse_iterator-stlclr"></a><a name="generic_reverse_iterator"></a>deque:: generic_reverse_iterator (STL/CLR)
 
-コンテナーのジェネリック インターフェイスを使用する反転反復子の型。
+コンテナーのジェネリックインターフェイスで使用する逆順反復子の型。
 
 ### <a name="syntax"></a>構文
 
@@ -1320,9 +1320,9 @@ typedef Microsoft::VisualC::StlClr::Generic::
     ReverseRandomAccessIterator<generic_value> generic_reverse_iterator;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この型は、このテンプレートのコンテナー クラスのジェネリック インターフェイスで使用できる汎用の反転反復子を表します。
+この型は、このテンプレートコンテナークラスのジェネリックインターフェイスで使用できる汎用反転反復子を表します。
 
 ### <a name="example"></a>例
 
@@ -1366,9 +1366,9 @@ a b c
 a c c
 ```
 
-## <a name="generic_value"></a> deque::generic_value (STL/CLR)
+## <a name="dequegeneric_value-stlclr"></a><a name="generic_value"></a>deque:: generic_value (STL/CLR)
 
-コンテナーのジェネリック インターフェイスを使用するための要素の型。
+コンテナーのジェネリックインターフェイスで使用する要素の型。
 
 ### <a name="syntax"></a>構文
 
@@ -1376,9 +1376,9 @@ a c c
 typedef GValue generic_value;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この型は、型のオブジェクトを表します。`GValue`ストアド要素の値をこのテンプレートのコンテナー クラスのジェネリック インターフェイスを使用するについて説明します。
+この型は、このテンプレートコンテナークラスのジェネリックインターフェイスで使用する格納されている要素の値を記述する `GValue` 型のオブジェクトを表します。
 
 ### <a name="example"></a>例
 
@@ -1422,9 +1422,9 @@ a b c
 a a c
 ```
 
-## <a name="insert"></a> deque::insert (STL/CLR)
+## <a name="dequeinsert-stlclr"></a><a name="insert"></a>deque:: insert (STL/CLR)
 
-指定した位置にある要素を追加します。
+指定した位置に要素を追加します。
 
 ### <a name="syntax"></a>構文
 
@@ -1446,30 +1446,30 @@ void insert(iterator where,
 挿入する範囲の先頭。
 
 *last*<br/>
-挿入する範囲の終了。
+挿入する範囲の末尾。
 
 *right*<br/>
-挿入する列挙です。
+挿入する列挙体。
 
 *val*<br/>
 挿入する要素の値。
 
 *where*<br/>
-前に挿入するコンテナー内の場所。
+コンテナー内のの前に挿入する場所。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-メンバーの関数が指す要素の前に、挿入、*場所*で、被制御シーケンスのシーケンスは、残りのオペランドで指定します。
+各メンバー関数は、被制御シーケンス内の*where*が指す要素の前に、残りのオペランドによって指定されたシーケンスを挿入します。
 
-最初のメンバー関数は、値を持つ要素を挿入*val*し、新しく挿入された要素を指定する反復子を返します。 これを使用して、反復子によって指定された場所の前に 1 つの要素を挿入します。
+1つ目のメンバー関数は、値*val*を持つ要素を挿入し、新しく挿入された要素を指定する反復子を返します。 反復子によって指定された場所の前に1つの要素を挿入する場合に使用します。
 
-2 番目のメンバー関数は、挿入の繰り返しを*カウント*値の要素*val*します。 同じ値のすべてのコピーである 0 個以上の連続する要素を挿入するのに使用するとします。
+2番目のメンバー関数は、値*val*の*count*要素の繰り返しを挿入します。 これを使用して、同じ値のすべてのコピーである0個以上の連続する要素を挿入します。
 
-`InIt` が整数型である場合、3 番目のメンバー関数は `insert(where, (size_type)first, (value_type)last)` と同じように動作します。 シーケンスを挿入する場合は、[`first`、 `last`)。 これを使用するには 0 個以上の連続する要素を使用して、別のシーケンスからコピーを挿入します。
+`InIt` が整数型である場合、3 番目のメンバー関数は `insert(where, (size_type)first, (value_type)last)` と同じように動作します。 それ以外の場合は、シーケンス [`first`、`last`) を挿入します。 このメソッドを使用して、別のシーケンスからコピーされた0個以上の連続する要素を挿入します。
 
-4 番目のメンバー関数で指定されたシーケンスを挿入する、*右*します。 これを使用して、列挙子によって説明されているシーケンスを挿入します。
+4番目のメンバー関数は、*右側*に指定されたシーケンスを挿入します。 このメソッドを使用して、列挙子によって記述されたシーケンスを挿入します。
 
-1 つの要素を挿入するときに、要素のコピーの数を挿入ポイントと、シーケンスの最も近い最後の要素の数に比例します。 (一方の端のシーケンスの 1 つまたは複数の要素を挿入するときに要素のコピーは発生しません。)場合`InIt`、入力反復子は、3 番目のメンバー関数は、シーケンス内の各要素の 1 つの挿入を効果的に実行します。 それ以外の場合、挿入するときに`N`要素、要素のコピーの数が線形に`N`カーソルと最も近いシーケンスの最後の要素の数。
+1つの要素を挿入する場合、要素のコピー数は、挿入ポイントとそれに近いシーケンスの末尾との間の要素の数で線形になります。 (シーケンスの両端に1つ以上の要素を挿入する場合、要素のコピーは行われません)。`InIt` が入力反復子である場合、3番目のメンバー関数は、シーケンス内の各要素に対して1つの挿入を効果的に実行します。 それ以外の場合、`N` 要素を挿入するときに、要素のコピーの数には、挿入ポイントとそれに近いシーケンスの末尾との間の要素数を加算した値が `N` になります。
 
 ### <a name="example"></a>例
 
@@ -1531,7 +1531,7 @@ y y a x b
 a x b c y y a x b
 ```
 
-## <a name="iterator"></a> deque::iterator (STL/CLR)
+## <a name="dequeiterator-stlclr"></a><a name="iterator"></a>deque:: iterator (STL/CLR)
 
 被制御シーケンスの反復子の型です。
 
@@ -1541,9 +1541,9 @@ a x b c y y a x b
 typedef T1 iterator;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この型が指定されていない型のオブジェクトを表します`T1`被制御シーケンスのランダム アクセス反復子として機能することができます。
+この型は、被制御シーケンスのランダムアクセス反復子として使用できる、指定されていない型 `T1` のオブジェクトを表します。
 
 ### <a name="example"></a>例
 
@@ -1580,9 +1580,9 @@ a b c
 x b c
 ```
 
-## <a name="op_neq"></a> deque::operator! = (STL/CLR)
+## <a name="dequeoperator-stlclr"></a><a name="op_neq"></a>deque:: operator! = (STL/CLR)
 
-Deque には、比較と等しくありません。
+Deque が等しくないかどうかの比較。
 
 ### <a name="syntax"></a>構文
 
@@ -1600,9 +1600,9 @@ template<typename Value>
 *right*<br/>
 比較する右のコンテナー。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-演算子関数を返します`!(left == right)`します。 テストに使用するかどうか*左*順序付けされていないと同じ*右*2 つの deque が比較対象の要素ごとの場合。
+演算子関数は `!(left == right)`を返します。 このメソッドを使用して、2つの要素が要素によって比較されるときに、 *left*が*right*と同じ順序で並んでいないかどうかをテストします。
 
 ### <a name="example"></a>例
 
@@ -1649,7 +1649,7 @@ a b d
 [a b c] != [a b d] is True
 ```
 
-## <a name="operator"></a> deque::operator(STL/CLR)
+## <a name="dequeoperatorstlclr"></a><a name="operator"></a>deque:: operator (STL/CLR)
 
 指定した位置にある要素にアクセスします。
 
@@ -1664,9 +1664,9 @@ reference operator[](size_type pos);
 *pos*<br/>
 アクセスする要素の位置。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-メンバー演算子は、位置にある要素を referene を返します*pos*します。要素がわかっている位置へのアクセスに使用します。
+このメンバー演算子は、 *pos*の位置にある要素に referene を返します。このメソッドを使用して、既知の位置にある要素にアクセスします。
 
 ### <a name="example"></a>例
 
@@ -1701,7 +1701,7 @@ a b c
 a x c
 ```
 
-## <a name="pop_back"></a> deque::pop_back (STL/CLR)
+## <a name="dequepop_back-stlclr"></a><a name="pop_back"></a>deque::p op_back (STL/CLR)
 
 最後の要素を削除します。
 
@@ -1711,9 +1711,9 @@ a x c
 void pop_back();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-メンバー関数は、空でない必要があります、被制御シーケンスの最後の要素を削除します。 後ろに 1 つの要素が deque を短縮するのに使用するとします。
+このメンバー関数は、被制御シーケンスの最後の要素を削除します。この要素は空にすることはできません。 これを使用して、deque を1つ後ろの要素で短くします。
 
 ### <a name="example"></a>例
 
@@ -1748,7 +1748,7 @@ a b c
 a b
 ```
 
-## <a name="pop_front"></a> deque::pop_front (STL/CLR)
+## <a name="dequepop_front-stlclr"></a><a name="pop_front"></a>deque::p op_front (STL/CLR)
 
 最初の要素を削除します。
 
@@ -1758,9 +1758,9 @@ a b
 void pop_front();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-メンバー関数は、空でない必要があります、被制御シーケンスの最初の要素を削除します。 これを使用して、先頭にある 1 つの要素が deque を短縮します。
+このメンバー関数は、被制御シーケンスの最初の要素を削除します。この要素は空でない必要があります。 このメソッドを使用して、前に1つの要素で deque を短縮します。
 
 ### <a name="example"></a>例
 
@@ -1795,7 +1795,7 @@ a b c
 b c
 ```
 
-## <a name="push_back"></a> deque::push_back (STL/CLR)
+## <a name="dequepush_back-stlclr"></a><a name="push_back"></a>deque::p ush_back (STL/CLR)
 
 新しい最後の要素を追加します。
 
@@ -1805,9 +1805,9 @@ b c
 void push_back(value_type val);
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-メンバー関数は、値を持つ要素を挿入する`val`被制御シーケンスの最後にします。 それを使用するには、deque に別の要素を追加します。
+このメンバー関数は、被制御シーケンスの末尾に `val` 値を持つ要素を挿入します。 このメソッドを使用して、deque に別の要素を追加します。
 
 ### <a name="example"></a>例
 
@@ -1835,7 +1835,7 @@ int main()
 a b c
 ```
 
-## <a name="push_front"></a> deque::push_front (STL/CLR)
+## <a name="dequepush_front-stlclr"></a><a name="push_front"></a>deque::p ush_front (STL/CLR)
 
 新しい最初の要素を追加します。
 
@@ -1845,9 +1845,9 @@ a b c
 void push_front(value_type val);
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-メンバー関数は、値を持つ要素を挿入する`val`被制御シーケンスの先頭にします。 もう 1 つの要素を deque の先頭に使用するとします。
+このメンバー関数は、被制御シーケンスの先頭に `val` 値を持つ要素を挿入します。 このメソッドを使用して、deque に別の要素の前に付加します。
 
 ### <a name="example"></a>例
 
@@ -1875,7 +1875,7 @@ int main()
 c b a
 ```
 
-## <a name="rbegin"></a> deque::rbegin (STL/CLR)
+## <a name="dequerbegin-stlclr"></a><a name="rbegin"></a>deque:: rbegin (STL/CLR)
 
 反転被制御シーケンスの先頭を指定します。
 
@@ -1885,9 +1885,9 @@ c b a
 reverse_iterator rbegin();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメンバー関数は、または空のシーケンスの先頭を越えた、被制御シーケンスの最後の要素を指定する反転反復子を返します。 したがって、指定、`beginning`反転シーケンスの。 指定する反復子を取得するために使用、`current`被制御シーケンスの長さが変更された場合、逆の順序で見た被制御シーケンスが、そのステータスの先頭は変更できます。
+このメンバー関数は、被制御シーケンスの最後の要素、または空のシーケンスの先頭の次の位置を指定する反転反復子を返します。 したがって、これは反転シーケンスの `beginning` を指定します。 これを使用して被制御シーケンスの逆順に見た現在の (`current`) 先頭を指定する反復子を取得しますが、このステータスは被制御シーケンスの長さが変わると変化することがあります。
 
 ### <a name="example"></a>例
 
@@ -1930,7 +1930,7 @@ a b c
 a y x
 ```
 
-## <a name="reference"></a> deque::reference (STL/CLR)
+## <a name="dequereference-stlclr"></a><a name="reference"></a>deque:: reference (STL/CLR)
 
 要素への参照の型です。
 
@@ -1940,7 +1940,7 @@ a y x
 typedef value_type% reference;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 この型は、要素への参照を表します。
 
@@ -1985,7 +1985,7 @@ a b c
 A B C
 ```
 
-## <a name="rend"></a> deque::rend (STL/CLR)
+## <a name="dequerend-stlclr"></a><a name="rend"></a>deque:: rend (STL/CLR)
 
 反転被制御シーケンスの末尾を指定します。
 
@@ -1995,9 +1995,9 @@ A B C
 reverse_iterator rend();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-メンバー関数は、被制御シーケンスの先頭を越えたを指す、逆順反復子を返します。 したがって、指定、`end`反転シーケンスの。 指定する反復子を取得するために使用、`current`被制御シーケンスの長さが変更された場合、逆の順序で見た被制御シーケンスが、そのステータスの末尾は変更できます。
+このメンバー関数は、被制御シーケンスの先頭を越えた位置を示す反転反復子を返します。 したがって、これは反転シーケンスの `end` を指定します。 これを使用して被制御シーケンスの逆順に見た現在の末尾 (`current`) を指定する反復子を取得しますが、このステータスは被制御シーケンスの長さが変わると変化することがあります。
 
 ### <a name="example"></a>例
 
@@ -2041,7 +2041,7 @@ a b c
 y x c
 ```
 
-## <a name="resize"></a> deque::resize (STL/CLR)
+## <a name="dequeresize-stlclr"></a><a name="resize"></a>deque:: resize (STL/CLR)
 
 要素の数を変更します。
 
@@ -2060,9 +2060,9 @@ void resize(size_type new_size, value_type val);
 *val*<br/>
 埋め込み要素の値。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-メンバー関数の両方が必ず[deque::size (STL/CLR)](#size) `()`以後返します*new_size*。 最初のメンバー関数が値で要素を追加する場合は、被制御シーケンスを長くするには、する必要があります、 `value_type()`2 番目のメンバー関数は、値を持つ要素を追加します。 一方、 *val*します。 被制御シーケンスを短くするために、両方のメンバー関数効果的に消去する最後の要素[deque::size (STL/CLR)](#size) `() -` `new_size`時間。 被制御シーケンスは、サイズを持つようにするために使用する*new_size*トリミングまたは現在の被制御シーケンス内のスペースでは、します。
+メンバー関数は、 [deque:: size (STL/CLR)](#size)`()` その後が*new_size*を返すことを保証します。 被制御シーケンスを長くする必要がある場合、最初のメンバー関数は値 `value_type()`を持つ要素を追加し、2番目のメンバー関数は値*val*を持つ要素を追加します。 被制御シーケンスを短くするために、両方のメンバー関数は、最後の要素[deque:: size (STL/CLR)](#size)`() -` `new_size` の時刻を効果的に消去します。 このメソッドを使用すると、現在の被制御シーケンスのトリミングまたは埋め込みによって、被制御シーケンスのサイズが*new_size*になるようにすることができます。
 
 ### <a name="example"></a>例
 
@@ -2101,7 +2101,7 @@ size() = 0
 x x x x x
 ```
 
-## <a name="reverse_iterator"></a> deque::reverse_iterator (STL/CLR)
+## <a name="dequereverse_iterator-stlclr"></a><a name="reverse_iterator"></a>deque:: reverse_iterator (STL/CLR)
 
 被制御シーケンスの反転反復子の型です。
 
@@ -2111,9 +2111,9 @@ x x x x x
 typedef T3 reverse_iterator;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この型が指定されていない型のオブジェクトを表します`T3`被制御シーケンスの反転反復子として機能することができます。
+この型は、被制御シーケンスの反転反復子として使用できる、未指定の型 `T3` のオブジェクトを表します。
 
 ### <a name="example"></a>例
 
@@ -2150,7 +2150,7 @@ c b a
 x b a
 ```
 
-## <a name="size"></a> deque::size (STL/CLR)
+## <a name="dequesize-stlclr"></a><a name="size"></a>deque:: size (STL/CLR)
 
 要素の数をカウントします。
 
@@ -2160,9 +2160,9 @@ x b a
 size_type size();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメンバー関数は、被制御シーケンスの長さを返します。 それを使用するには、被制御シーケンス内の現在の要素の数を決定します。 シーケンスを参照してください、0 以外のサイズがかどうかが関心のあるすべての場合[deque::empty (STL/CLR)](#empty)`()`します。
+このメンバー関数は、被制御シーケンスの長さを返します。 このメソッドを使用して、被制御シーケンス内の現在の要素数を決定します。 シーケンスにゼロ以外のサイズがあるかどうかについては、「 [deque:: empty (STL/CLR)](#empty)`()`」を参照してください。
 
 ### <a name="example"></a>例
 
@@ -2203,9 +2203,9 @@ size() = 0 after clearing
 size() = 2 after adding 2
 ```
 
-## <a name="size_type"></a> deque::size_type (STL/CLR)
+## <a name="dequesize_type-stlclr"></a><a name="size_type"></a>deque:: size_type (STL/CLR)
 
-2 つの要素の間の距離を符号付きの型。
+2つの要素間の符号付き距離の型。
 
 ### <a name="syntax"></a>構文
 
@@ -2213,9 +2213,9 @@ size() = 2 after adding 2
 typedef int size_type;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この型は、負でない要素の数を表します。
+この型は、負でない要素数を表します。
 
 ### <a name="example"></a>例
 
@@ -2248,7 +2248,7 @@ a b c
 end()-begin() = 3
 ```
 
-## <a name="swap"></a> deque::swap (STL/CLR)
+## <a name="dequeswap-stlclr"></a><a name="swap"></a>deque:: swap (STL/CLR)
 
 2 つのコンテナーのコンテンツを交換します。
 
@@ -2263,9 +2263,9 @@ void swap(deque<Value>% right);
 *right*<br/>
 コンテンツを交換するコンテナー。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-メンバー関数は、交換の間で被制御シーケンス`*this`と*右*します。 これは一定の時間内と、例外をスローしません。 2 つのコンテナーの内容を交換する簡単な方法として使用するとします。
+このメンバー関数は、`*this` と*right*の間で被制御シーケンスを交換します。 この処理は一定時間に実行され、例外はスローされません。 2つのコンテナーの内容を簡単に交換する方法として使用します。
 
 ### <a name="example"></a>例
 
@@ -2312,7 +2312,7 @@ x x x x x
 a b c
 ```
 
-## <a name="to_array"></a> deque::to_array (STL/CLR)
+## <a name="dequeto_array-stlclr"></a><a name="to_array"></a>deque:: to_array (STL/CLR)
 
 被制御シーケンスを新しい配列にコピーします。
 
@@ -2322,9 +2322,9 @@ a b c
 cli::array<Value>^ to_array();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-メンバー関数は、被制御シーケンスを含む配列を返します。 配列の形式で被制御シーケンスのコピーを取得して使用するとします。
+このメンバー関数は、被制御シーケンスを含む配列を返します。 このメソッドを使用して、被制御シーケンスのコピーを配列形式で取得します。
 
 ### <a name="example"></a>例
 
@@ -2361,7 +2361,7 @@ a b c d
 a b c
 ```
 
-## <a name="value_type"></a> deque::value_type (STL/CLR)
+## <a name="dequevalue_type-stlclr"></a><a name="value_type"></a>deque:: value_type (STL/CLR)
 
 要素の型。
 
@@ -2371,9 +2371,9 @@ a b c
 typedef Value value_type;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-型はテンプレート パラメーターのシノニム*値*します。
+この型は、テンプレートパラメーター*値*のシノニムです。
 
 ### <a name="example"></a>例
 
@@ -2406,9 +2406,9 @@ int main()
 a b c
 ```
 
-## <a name="op_lt"></a> 演算子&lt;(deque) (STL/CLR)
+## <a name="operatorlt-deque-stlclr"></a><a name="op_lt"></a>operator&lt; (deque) (STL/CLR)
 
-Deque の比較よりも小さい。
+Deque 未満の比較。
 
 ### <a name="syntax"></a>構文
 
@@ -2426,9 +2426,9 @@ template<typename Value>
 *right*<br/>
 比較する右のコンテナー。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-演算子関数を返します。 場合は true、最下位の位置の`i`を`!(right[i] < left[i])`も真であることをお勧め`left[i] < right[i]`します。 返しますそれ以外の場合、`left->size() < right->size()`テストに使用するかどうか*左*前に順序付けは*右*2 つの deque が比較対象の要素ごとの場合。
+Operator 関数は、`!(right[i] < left[i])` が `left[i] < right[i]`にも当てはまる `i` 最小の位置に対して true を返します。 それ以外の場合は `left->size() < right->size()` を返します。2つの要素が要素によって比較されたときに、 *left*が*right*の前に配置されているかどうかをテストするために使用します。
 
 ### <a name="example"></a>例
 
@@ -2475,9 +2475,9 @@ a b d
 [a b c] < [a b d] is True
 ```
 
-## <a name="op_lteq"></a> 演算子&lt;= (deque) (STL/CLR)
+## <a name="operatorlt-deque-stlclr"></a><a name="op_lteq"></a>operator&lt;= (deque) (STL/CLR)
 
-Deque 以下と等しいかそれよりも比較します。
+Deque 以下の比較。
 
 ### <a name="syntax"></a>構文
 
@@ -2495,9 +2495,9 @@ template<typename Value>
 *right*<br/>
 比較する右のコンテナー。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-演算子関数を返します`!(right < left)`します。 テストに使用するかどうか*左*後に順序付けされていない*右*2 つの deque が比較対象の要素ごとの場合。
+演算子関数は `!(right < left)`を返します。 このメソッドを使用して、2つの要素が要素別に比較されるときに、 *right*の後に*left*が順序付けされていないかどうかをテストします。
 
 ### <a name="example"></a>例
 
@@ -2544,7 +2544,7 @@ a b d
 [a b d] <= [a b c] is False
 ```
 
-## <a name="op_as"></a> operator = (deque) (STL/CLR)
+## <a name="operator-deque-stlclr"></a><a name="op_as"></a>operator = (deque) (STL/CLR)
 
 被制御シーケンスを置き換えます。
 
@@ -2559,9 +2559,9 @@ deque<Value>% operator=(deque<Value>% right);
 *right*<br/>
 コピーするコンテナー。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-メンバー演算子コピー*右*、オブジェクトを返します`*this`します。 使用して、被制御シーケンス内のコピーを持つ、被制御シーケンスを置換する*右*します。
+メンバー演算子は、オブジェクトに*right*をコピーし、`*this`を返します。 このメソッドを使用して、被制御シーケンスを*右側*の被制御シーケンスのコピーで置き換えます。
 
 ### <a name="example"></a>例
 
@@ -2597,9 +2597,9 @@ a b c
 a b c
 ```
 
-## <a name="op_eq"></a> 演算子 (deque) (STL/CLR) = =
+## <a name="operator-deque-stlclr"></a><a name="op_eq"></a>operator = = (deque) (STL/CLR)
 
-Deque 比較します。
+Deque 等値比較。
 
 ### <a name="syntax"></a>構文
 
@@ -2617,9 +2617,9 @@ template<typename Value>
 *right*<br/>
 比較する右のコンテナー。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-演算子の関数によって制御されるシーケンスの場合にのみ true を返します*左*と*右*同じ長さであると、各位置`i`、 `left[i] ==` `right[i]`します。 テストに使用するかどうか*左*が同じ順序付け*右*2 つの deque が比較対象の要素ごとの場合。
+演算子関数は、 *left*と*right*で制御されるシーケンスの長さが同じで、`i`位置ごとに `right[i]``left[i] ==` 場合にのみ true を返します。 このメソッドを使用して、2つの要素が要素によって比較されるときに、 *left*が*right*と同じ順序で並んでいるかどうかをテストします。
 
 ### <a name="example"></a>例
 
@@ -2666,9 +2666,9 @@ a b d
 [a b c] == [a b d] is False
 ```
 
-## <a name="op_gt"></a> 演算子&gt;(deque) (STL/CLR)
+## <a name="operatorgt-deque-stlclr"></a><a name="op_gt"></a>operator&gt; (deque) (STL/CLR)
 
-Deque の比較よりも大きい。
+Deque は比較よりも大きくなります。
 
 ### <a name="syntax"></a>構文
 
@@ -2686,9 +2686,9 @@ template<typename Value>
 *right*<br/>
 比較する右のコンテナー。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-演算子関数を返します`right` `<` `left`します。 テストに使用するかどうか*左*が後に順序付け*右*2 つの deque が比較対象の要素ごとの場合。
+Operator 関数は、`left``<` `right` を返します。 このメソッドを使用して、2つの要素が要素によって比較されたときに、 *left*が*right*の後に配置されているかどうかをテストします。
 
 ### <a name="example"></a>例
 
@@ -2735,9 +2735,9 @@ a b d
 [a b d] > [a b c] is True
 ```
 
-## <a name="op_gteq"></a> 演算子&gt;= (deque) (STL/CLR)
+## <a name="operatorgt-deque-stlclr"></a><a name="op_gteq"></a>operator&gt;= (deque) (STL/CLR)
 
-Deque より大きいか等しい比較します。
+Deque 以上の比較。
 
 ### <a name="syntax"></a>構文
 
@@ -2755,9 +2755,9 @@ template<typename Value>
 *right*<br/>
 比較する右のコンテナー。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-演算子関数を返します`!(left` `<` `right)`します。 テストに使用するかどうか*左*する前に順序付けされていない*右*2 つの deque が比較対象の要素ごとの場合。
+Operator 関数は、`right)``<` `!(left` を返します。 このメソッドを使用して、2つの要素が要素別に比較されるときに、 *left*が*right*の前に順序付けされていないかどうかをテストします。
 
 ### <a name="example"></a>例
 

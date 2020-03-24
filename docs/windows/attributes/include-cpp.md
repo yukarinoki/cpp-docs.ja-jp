@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - include attribute
 ms.assetid: d23f8b91-fe5b-48fa-9371-8bd73af7b8e3
-ms.openlocfilehash: ece88ebd7b5d9d81beb871427b58a72b2cf02022
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 39f991bb036dce1c50a9d2ee800d3fec65af7c55
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514556"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166784"
 ---
 # <a name="include-c"></a>include (C++)
 
@@ -28,15 +28,15 @@ ms.locfileid: "69514556"
 *header_file*<br/>
 生成された .idl ファイルに追加するファイルの名前。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**Include** C++ `import "docobj.idl"`属性を指定すると、ステートメントが生成された.idlファイル内のステートメントの下に配置されます。`#include`
+**Include** C++属性を指定すると、生成された .idl ファイルの `import "docobj.idl"` ステートメントの下に `#include` ステートメントが配置されます。
 
 **Include** C++属性には、 [include](/windows/win32/Midl/include) MIDL 属性と同じ機能があります。
 
 ## <a name="example"></a>例
 
-次のコードは、 **include**を使用する方法の例を示しています。 この例では、ファイルには`#include`ステートメントだけが含まれています。
+次のコードは、 **include**を使用する方法の例を示しています。 この例では、ファイルには、`#include` ステートメントだけが含まれています。
 
 ```cpp
 // cpp_attr_ref_include.cpp
@@ -58,7 +58,7 @@ ms.locfileid: "69514556"
 
 詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [IDL 属性](idl-attributes.md)<br/>
 [スタンドアロン属性](stand-alone-attributes.md)<br/>

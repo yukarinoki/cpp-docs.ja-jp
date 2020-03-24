@@ -5,16 +5,16 @@ ms.topic: reference
 f1_keywords:
 - internal/Microsoft::WRL::Details::Swap
 ms.assetid: ed134a08-ceb7-4279-aa02-a183c3a426ea
-ms.openlocfilehash: 97d24f1f4453e948c621651e029254db1b0de712
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e665dbca025da56ba81c3fdf1749b2d653b78c00
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398148"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213565"
 ---
 # <a name="swap-function-wrl"></a>Swap 関数 (WRL)
 
-WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。
+は WRL インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。
 
 ## <a name="syntax"></a>構文
 
@@ -35,16 +35,16 @@ WRL_NOTHROW inline void Swap(
 
 ## <a name="return-value"></a>戻り値
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-指定された 2 つの引数の値を交換します。
+指定した2つの引数の値を交換します。
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** internal.h
+**ヘッダー:** 内部 .h
 
-**名前空間:** Microsoft::WRL::Details
+**名前空間:** Microsoft:: WRL::D etails
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [Microsoft::WRL::Details 名前空間](microsoft-wrl-details-namespace.md)

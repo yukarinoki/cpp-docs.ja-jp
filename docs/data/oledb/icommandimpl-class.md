@@ -51,12 +51,12 @@ helpviewer_keywords:
 - m_bCancelWhenExecuting
 - m_bIsExecuting
 ms.assetid: ef285fef-0d66-45e6-a762-b03357098e3b
-ms.openlocfilehash: 6e095e01d3131f98b44935705b2564291fb13844
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: f04885ef61841ac20f87ab07ce73d3c9342fe39c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79545979"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212163"
 ---
 # <a name="icommandimpl-class"></a>ICommandImpl クラス
 
@@ -77,7 +77,7 @@ class ATL_NO_VTABLE ICommandImpl : public CommandBase
 *CommandBase*<br/>
 コマンドインターフェイス。 既定では、 `ICommand`です。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atldb.h
 
@@ -102,7 +102,7 @@ class ATL_NO_VTABLE ICommandImpl : public CommandBase
 |[m_bCancelWhenExecuting](#bcancelwhenexecuting)|実行時にコマンドをキャンセルするかどうかを示します。|
 |[m_bIsExecuting](#bisexecuting)|コマンドが現在実行されているかどうかを示します。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 Command オブジェクトの必須のインターフェイスです。
 
@@ -116,7 +116,7 @@ Command オブジェクトの必須のインターフェイスです。
 STDMETHOD(Cancel)();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 *OLE DB プログラマーリファレンス*の「 [ICommand:: Cancel](/previous-versions/windows/desktop/ms714402(v=vs.85)) 」を参照してください。
 
@@ -173,7 +173,7 @@ HRESULT CreateRowset(IUnknown* pUnkOuter,
 
 標準の HRESULT 値。 一般的な値の一覧については、「`ICommand::Execute`」を参照してください。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 複数の行セットを作成する場合、または異なる行セットを作成するための独自の条件を指定する場合は、`Execute`内から `CreateRowset` の呼び出しを別々に配置します。
 
@@ -197,7 +197,7 @@ HRESULT Execute(IUnknown* pUnkOuter,
 
 *OLE DB プログラマーリファレンス*の「 [ICommand:: Execute](/previous-versions/windows/desktop/ms718095(v=vs.85)) 」を参照してください。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 要求される送信インターフェイスは、この関数によって作成される行セットオブジェクトから取得されたインターフェイスになります。
 
@@ -218,7 +218,7 @@ STDMETHOD (GetDBSession) (REFIID riid,
 
 *OLE DB プログラマーリファレンス*の「 [ICommand:: getdbsession](/previous-versions/windows/desktop/ms719622(v=vs.85)) 」を参照してください。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 セッションからプロパティを取得する場合に便利です。
 
@@ -242,7 +242,7 @@ ICommandImpl();
 unsigned m_bCancel:1;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この変数は、command クラスの `Execute` メソッドで取得し、必要に応じて取り消すことができます。
 
@@ -256,7 +256,7 @@ unsigned m_bCancel:1;
 unsigned m_bCancelWhenExecuting:1;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 既定値は**true**です (取り消すことができます)。
 
@@ -270,7 +270,7 @@ unsigned m_bCancelWhenExecuting:1;
 unsigned m_bIsExecuting:1;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 Command クラスの `Execute` メソッドで、この変数を**true**に設定できます。
 

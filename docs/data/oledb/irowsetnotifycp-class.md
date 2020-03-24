@@ -24,12 +24,12 @@ helpviewer_keywords:
 - Fire_OnRowChange method
 - Fire_OnRowsetChange method
 ms.assetid: ccef402b-94a0-4c2e-9a13-7e854ef82390
-ms.openlocfilehash: 481c2c0ec28972e9cef8d1103e49afa2037c2393
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: fa85bc7947b3b446ec7c6d3fdb0d7b62d308fb53
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "79544568"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210328"
 ---
 # <a name="irowsetnotifycp-class"></a>IRowsetNotifyCP クラス
 
@@ -61,7 +61,7 @@ class IRowsetNotifyCP :
 *DynamicUnkArray*<br/>
 [CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md)型の配列。クライアントシンクインターフェイスへの `IUnknown` ポインターの動的に割り当てられた配列です。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atldb.h
 
@@ -75,7 +75,7 @@ class IRowsetNotifyCP :
 |[Fire_OnRowChange](#onrowchange)|行に影響する変更をコンシューマーに通知します。|
 |[Fire_OnRowsetChange](#onrowsetchange)|行セット全体に影響を与える変更をコンシューマーに通知します。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 `IRowsetNotifyCP` は、行セットの内容に対する変更 `IID_IRowsetNotify` 接続ポイントでリスナーをアドバイズするように、ブロードキャスト関数を実装します。
 

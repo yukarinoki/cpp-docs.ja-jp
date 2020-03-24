@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CStreamRowset class, constructor
 - Close method
 ms.assetid: a106e953-a38a-464e-8ea5-28963d9e4811
-ms.openlocfilehash: 4a0e67ff1e800ff0f838b863eaaf839d4456ed82
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 300933fd6d10f5da39d9276db746ab789851a9a1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79545559"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211173"
 ---
 # <a name="cstreamrowset-class"></a>CStreamRowset クラス
 
@@ -49,7 +49,7 @@ class CStreamRowset
 *TAccessor*<br/>
 アクセサークラス。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atldbcli.h
 
@@ -62,7 +62,7 @@ class CStreamRowset
 |[CStreamRowset](#cstreamrowset)|コンストラクターです。 `CStreamRowset` オブジェクトをインスタンス化し、初期化します。|
 |[[閉じる]](#close)|クラスの[ISequentialStream](/previous-versions/windows/desktop/ms718035(v=vs.85))インターフェイスポインターを解放します。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 `CCommand` または `CTable` の宣言で `CStreamRowset` を使用します。次に例を示します。
 
@@ -72,7 +72,7 @@ or
 
 [!code-cpp[NVC_OLEDB_Consumer#12](../../data/oledb/codesnippet/cpp/cstreamrowset-class_2.cpp)]
 
-`ICommand::Execute` は、`m_spStream`に格納されている `ISequentialStream` ポインターを返します。 次に、`Read` メソッドを使用して、XML 形式の (Unicode 文字列) データを取得します。 例 :
+`ICommand::Execute` は、`m_spStream`に格納されている `ISequentialStream` ポインターを返します。 次に、`Read` メソッドを使用して、XML 形式の (Unicode 文字列) データを取得します。 次に例を示します。
 
 [!code-cpp[NVC_OLEDB_Consumer#13](../../data/oledb/codesnippet/cpp/cstreamrowset-class_3.cpp)]
 

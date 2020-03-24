@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CreateAccessor method
 - CreateParameterAccessor method
 ms.assetid: a0088074-7135-465c-b228-69097a50b8cc
-ms.openlocfilehash: 80c8f94a417c700f86159de53bd53e4011f78d71
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 4d9fb79bbf5203fa959672faec8c3b076c17f1ca
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79546069"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211849"
 ---
 # <a name="cmanualaccessor-class"></a>CManualAccessor クラス
 
@@ -47,7 +47,7 @@ ms.locfileid: "79546069"
 class CManualAccessor : public CAccessorBase
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atldbcli.h
 
@@ -62,7 +62,7 @@ class CManualAccessor : public CAccessorBase
 |[CreateAccessor](#createaccessor)|列バインド構造にメモリを割り当て、列データメンバーを初期化します。|
 |[CreateParameterAccessor](#createparameteraccessor)|パラメーターバインド構造体にメモリを割り当て、パラメーターデータメンバーを初期化します。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 `CManualAccessor`を使用すると、実行時の関数呼び出しによってパラメーターと出力列のバインドを指定できます。
 
@@ -102,7 +102,7 @@ void AddBindEntry(DBORDINAL nOrdinal,
 *pStatus*<br/>
 から必要に応じて、列の状態にバインドする変数へのポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この関数を使用するには、最初に[Createaccessor](../../data/oledb/cmanualaccessor-createaccessor.md)を呼び出す必要があります。 `CreateAccessor`で指定された列数よりも多くのエントリを追加することはできません。
 
@@ -146,7 +146,7 @@ void AddParameterEntry(DBORDINAL nOrdinal,
 *eParamIO*<br/>
 からバインドが関連付けられているパラメーターが入力、入力、出力、または出力パラメーターであるかどうかを指定します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この関数を使用するには、最初に[Createparameteraccessor](../../data/oledb/cmanualaccessor-createparameteraccessor.md)を呼び出す必要があります。
 
@@ -177,7 +177,7 @@ HRESULT CreateAccessor(int nBindEntries,
 
 標準の HRESULT 値の1つ。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `CManualAccessor::AddBindEntry` 関数を呼び出す前に、この関数を呼び出します。
 
@@ -208,7 +208,7 @@ HRESULT CreateParameterAccessor(int nBindEntries,
 
 標準の HRESULT 値の1つ。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 [Addparameterentry](../../data/oledb/cmanualaccessor-addparameterentry.md)を呼び出す前に、この関数を呼び出す必要があります。
 

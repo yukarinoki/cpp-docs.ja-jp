@@ -228,12 +228,12 @@ helpviewer_keywords:
 - Update method
 - UpdateAll method
 ms.assetid: b0228a90-b8dd-47cc-b397-8d4c15c1e7f4
-ms.openlocfilehash: 689cd3a1f7496ad75bf83e0b1a2a14f7bd1b1f6f
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: e67e385a8ce0eb9a6b041d4a4f0d43e2db551c79
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79545577"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211290"
 ---
 # <a name="crowset-class"></a>CRowset クラス
 
@@ -251,7 +251,7 @@ class CRowset
 *TAccessor*<br/>
 アクセサークラス。 既定では、 `CAccessorBase`です。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atldbcli.h
 
@@ -286,7 +286,7 @@ class CRowset
 |[アップデート](#update)|前回のフェッチまたは更新以降に現在の行に加えられた保留中の変更を転送します。|
 |[UpdateAll](#updateall)|前回のフェッチまたは更新以降に行われたすべての行に対する保留中の変更を転送します。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 OLE DB では、行セットは、プログラムがデータを設定および取得するために使用するオブジェクトです。
 
@@ -306,7 +306,7 @@ HRESULT AddRefRows() throw();
 
 標準の HRESULT です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメソッドは、現在の行ハンドルの参照カウントをインクリメントします。 [ReleaseRows](../../data/oledb/crowset-releaserows.md)を呼び出して、カウントをデクリメントします。 Move メソッドによって返される行には、参照カウントが1つあります。
 
@@ -320,7 +320,7 @@ HRESULT AddRefRows() throw();
 void Close() throw();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメソッドは、行セット内の現在のすべての行を解放します。
 
@@ -351,7 +351,7 @@ HRESULT Compare(const CBookmarkBase& bookmark1,
 
 標準の HRESULT です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメソッドには、省略可能なインターフェイス `IRowsetLocate`が必要ですが、すべてのプロバイダーでサポートされていない可能性があります。この場合、メソッドは E_NOINTERFACE を返します。 また、行セットを含むテーブルまたはコマンドに対して `Open` を呼び出す前に、`DBPROP_IRowsetLocate` を VARIANT_TRUE に設定する必要があります。
 
@@ -435,7 +435,7 @@ HRESULT FindNextRow(DBCOMPAREOP op,
 
 標準の HRESULT です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメソッドには、省略可能なインターフェイス `IRowsetFind`が必要ですが、すべてのプロバイダーでサポートされていない可能性があります。この場合、メソッドは E_NOINTERFACE を返します。 また、行セットを含むテーブルまたはコマンドに対して `Open` を呼び出す前に、`DBPROP_IRowsetFind` を VARIANT_TRUE に設定する必要があります。
 
@@ -468,7 +468,7 @@ HRESULT GetApproximatePosition(const CBookmarkBase* pBookmark,
 
 標準の HRESULT です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメソッドには、省略可能なインターフェイス `IRowsetScroll`が必要ですが、すべてのプロバイダーでサポートされていない可能性があります。この場合、メソッドは E_NOINTERFACE を返します。 また、行セットを含むテーブルまたはコマンドに対して `Open` を呼び出す前に、`DBPROP_IRowsetScroll` を VARIANT_TRUE に設定する必要があります。
 
@@ -495,7 +495,7 @@ HRESULT GetData(int nAccessor) throw();
 
 標準の HRESULT です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md)の autoaccessor ではないアクセサーを指定する場合は、このメソッドを使用して、アクセサー番号を渡してデータを明示的に取得します。
 
@@ -522,7 +522,7 @@ HRESULT GetDataHere(int nAccessor,
 
 標準の HRESULT です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この関数の使用方法の例については、 [MultiRead サンプル](../../overview/visual-cpp-samples.md)を参照してください。
 
@@ -540,7 +540,7 @@ HRESULT GetOriginalData() throw();
 
 標準の HRESULT です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメソッドは、データソースから最後にフェッチまたは転送されたデータを取得します。保留中の変更に基づいて値が取得されることはありません。
 
@@ -565,7 +565,7 @@ HRESULT GetRowStatus(DBPENDINGSTATUS* pStatus) const throw();
 
 標準の HRESULT です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメソッドには、省略可能なインターフェイス `IRowsetUpdate`が必要ですが、すべてのプロバイダーでサポートされていない可能性があります。この場合、メソッドは E_NOINTERFACE を返します。 また、行セットを含むテーブルまたはコマンドに対して `Open` を呼び出す前に、`DBPROP_IRowsetUpdate` を VARIANT_TRUE に設定する必要があります。
 
@@ -592,7 +592,7 @@ HRESULT Insert(int nAccessor = 0,
 
 標準の HRESULT です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメソッドには、省略可能なインターフェイス `IRowsetChange`が必要ですが、すべてのプロバイダーでサポートされていない可能性があります。この場合、メソッドは E_NOINTERFACE を返します。 また、行セットを含むテーブルまたはコマンドに対して `Open` を呼び出す前に、`DBPROP_IRowsetChange` を VARIANT_TRUE に設定する必要があります。
 
@@ -639,7 +639,7 @@ HRESULT MoveFirst() throw();
 
 標準の HRESULT です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 [IRowset:: RestartPosition](/previous-versions/windows/desktop/ms712877(v=vs.85))を呼び出して、次のフェッチ位置を初期位置 (行セットが作成されたときの次のフェッチ位置) に再配置し、初期行を取得します。
 
@@ -657,7 +657,7 @@ HRESULT MoveLast() throw();
 
 標準の HRESULT です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 [IRowset:: RestartPosition](/previous-versions/windows/desktop/ms712877(v=vs.85))を呼び出して、次のフェッチ位置を最後の位置に移動し、最後の行を取得します。
 
@@ -688,7 +688,7 @@ HRESULT MoveNext(LONG lSkip,
 
 標準の HRESULT です。 行セットの末尾に到達すると、DB_S_ENDOFROWSET を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 前の位置を記憶して、`CRowset` オブジェクトから次の行をフェッチします。 必要に応じて、 *lSkip*行をスキップするか、後方に移動するかを選択できます。
 
@@ -714,7 +714,7 @@ HRESULT MovePrev() throw();
 
 標準の HRESULT です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 この方法では、行セットを含むテーブルまたはコマンドで `Open` を呼び出す前に、`DBPROP_CANFETCHBACKWARDS` または `DBPROP_CANSCROLLBACKWARDS` を VARIANT_TRUE に設定する必要があります。
 
@@ -741,7 +741,7 @@ HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
 
 標準の HRESULT です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメソッドには、省略可能なインターフェイス `IRowsetLocate`が必要ですが、すべてのプロバイダーでサポートされていない可能性があります。この場合、メソッドは E_NOINTERFACE を返します。 また、行セットを含むテーブルまたはコマンドで `Open` を呼び出す前に、`DBPROP_IRowsetLocate` を VARIANT_TRUE に設定し、`DBPROP_CANFETCHBACKWARDS` を VARIANT_TRUE に設定する必要があります。
 
@@ -773,7 +773,7 @@ HRESULT MoveToRatio(DBCOUNTITEM nNumerator,
 
 標準の HRESULT です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 `MoveToRatio` は、次の式に従って行をフェッチします。
 
@@ -818,7 +818,7 @@ HRESULT SetData(int nAccessor) const throw();
 
 標準の HRESULT です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 引数を受け取らない `SetData` フォームの場合、すべてのアクセサーが更新に使用されます。 通常は、`SetData` を呼び出して、行の列にデータ値を設定し、 [Update](../../data/oledb/crowset-update.md)を呼び出してそれらの変更を送信します。
 
@@ -853,7 +853,7 @@ HRESULT Undo(DBCOUNTITEM* pcRows = NULL,
 
 標準の HRESULT です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメソッドには、省略可能なインターフェイス `IRowsetUpdate`が必要ですが、すべてのプロバイダーでサポートされていない可能性があります。この場合、メソッドは E_NOINTERFACE を返します。 また、行セットを含むテーブルまたはコマンドに対して `Open` を呼び出す前に、`DBPROP_IRowsetUpdate` を VARIANT_TRUE に設定する必要があります。
 
@@ -884,7 +884,7 @@ HRESULT Update(DBCOUNTITEM* pcRows = NULL,
 
 標準の HRESULT です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 現在の行に対して行われた保留中の変更を、その行が最後にフェッチまたは更新された後 (`Update` または[Updateall](../../data/oledb/crowset-updateall.md)を使用して) 送信します。 通常は、 [SetData](../../data/oledb/crowset-setdata.md)を呼び出して行の列のデータ値を設定し、`Update` を呼び出してそれらの変更を送信します。
 
@@ -913,7 +913,7 @@ HRESULT UpdateAll(DBCOUNTITEM* pcRows = NULL,
 *ppStatus*<br/>
 入出力`Update` が行の状態の値を返す場所へのポインター。 *Ppstatus*が null の場合、状態は返されません。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 [更新](../../data/oledb/crowset-update.md)または `UpdateAll`を使用して行が最後にフェッチまたは更新された後に、すべての行に対して行われた保留中の変更を転送します。 `UpdateAll` によって変更されたすべての行が更新されます。ただし、ハンドルがあるかどうかは関係ありません (「 *Pphrow*」を参照)。
 

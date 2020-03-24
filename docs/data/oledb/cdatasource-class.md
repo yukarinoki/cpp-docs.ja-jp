@@ -56,12 +56,12 @@ helpviewer_keywords:
 - OpenWithPromptFileName method
 - OpenWithServiceComponents method
 ms.assetid: 99bf862c-9d5c-4117-9501-aa0e2672085c
-ms.openlocfilehash: d97138b548a3e303898ee2bafde88af38aa78f40
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 646d4b3548a1c5ee1bdfaf64f7823fa584abaac5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79545769"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212026"
 ---
 # <a name="cdatasource-class"></a>CDataSource クラス
 
@@ -73,7 +73,7 @@ ms.locfileid: "79545769"
 class CDataSource
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atldbcli.h
 
@@ -93,7 +93,7 @@ class CDataSource
 |[OpenWithPromptFileName](#openwithpromptfilename)|ユーザーは、以前に作成したデータリンクファイルを選択して、対応するデータソースを開くことができます。|
 |[OpenWithServiceComponents](#openwithservicecomponents)|[データリンク] ダイアログボックスを使用して、データソースオブジェクトを開きます。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 1つの接続に対して1つ以上のデータベースセッションを作成できます。 これらのセッションは、`CSession`によって表されます。 `CSession::Open`でセッションを作成する前に、 [CDataSource:: open](../../data/oledb/cdatasource-open.md)を呼び出して接続を開く必要があります。
 
@@ -132,7 +132,7 @@ HRESULT GetInitializationString(BSTR* pInitializationString,
 
 標準の HRESULT です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 結果の初期化文字列を使用して、後でこのデータソース接続を再び開くことができます。
 
@@ -157,7 +157,7 @@ Windows SDK の*OLE DB プログラマーリファレンス*の「 [IDBPropertie
 
 標準の HRESULT です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 1つのプロパティを取得するには、 [GetProperty](../../data/oledb/cdatasource-getproperty.md)を使用します。
 
@@ -188,7 +188,7 @@ HRESULT GetProperty(const GUID& guid,
 
 標準の HRESULT です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 複数のプロパティを取得するには、 [GetProperties](../../data/oledb/cdatasource-getproperties.md)を使用します。
 
@@ -276,7 +276,7 @@ HRESULT Open(LPCSTR szProgID,
 
 標準の HRESULT です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 *HWnd*パラメーターを使用するメソッドオーバーロードは、oledb32.dll 内のサービスコンポーネントを使用してデータソースオブジェクトを開きます。この DLL には、リソースプーリング、自動トランザクション参加などのサービスコンポーネント機能の実装が含まれています。 詳細については、『 [OLE DB プログラマーズガイド』](/previous-versions/windows/desktop/ms713643(v=vs.85))の OLE DB リファレンスを参照してください。
 
@@ -309,7 +309,7 @@ HRESULT OpenFromFileName(LPCOLESTR szFileName) throw();
 
 標準の HRESULT です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメソッドは、oledb32.dll 内のサービス コンポーネントを使ってデータ ソース オブジェクトを開きます。この DLL には、リソース共有や自動トランザクション登録などのサービス コンポーネント機能の実装が含まれています。 詳細については、『 [OLE DB プログラマーズガイド』](/previous-versions/windows/desktop/ms713643(v=vs.85))の OLE DB リファレンスを参照してください。
 
@@ -338,7 +338,7 @@ HRESULT OpenFromInitializationString(LPCOLESTR szInitializationString,
 
 標準の HRESULT です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメソッドは、oledb32.dll 内のサービス コンポーネントを使ってデータ ソース オブジェクトを開きます。この DLL には、リソース共有や自動トランザクション登録などのサービス コンポーネント機能の実装が含まれています。
 
@@ -369,7 +369,7 @@ HRESULT OpenWithPromptFileName(HWND hWnd = GetActiveWindow(   ),
 
 標準の HRESULT です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメソッドは、oledb32.dll 内のサービス コンポーネントを使ってデータ ソース オブジェクトを開きます。この DLL には、リソース共有や自動トランザクション登録などのサービス コンポーネント機能の実装が含まれています。 詳細については、『 [OLE DB プログラマーズガイド』](/previous-versions/windows/desktop/ms713643(v=vs.85))の OLE DB リファレンスを参照してください。
 
@@ -407,7 +407,7 @@ HRESULT OpenWithServiceComponents (LPCSTR szProgID,
 
 標準の HRESULT です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 このメソッドは、oledb32.dll 内のサービス コンポーネントを使ってデータ ソース オブジェクトを開きます。この DLL には、リソース共有や自動トランザクション登録などのサービス コンポーネント機能の実装が含まれています。 詳細については、『 [OLE DB プログラマーズガイド』](/previous-versions/windows/desktop/ms713643(v=vs.85))の OLE DB リファレンスを参照してください。
 

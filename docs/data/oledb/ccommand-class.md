@@ -49,16 +49,16 @@ helpviewer_keywords:
 - SetParameterInfo method
 - Unprepare method
 ms.assetid: 0760bfc5-b9ee-4aee-8e54-31bd78714d3a
-ms.openlocfilehash: 406a78ff1958d565fcc74781f6a63d4784f48bfc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5da843405cfec4d1d571a3140f132513d8b068ae
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176097"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212083"
 ---
 # <a name="ccommand-class"></a>CCommand クラス
 
-設定およびコマンドを実行するメソッドを提供します。
+コマンドを設定して実行するためのメソッドを提供します。
 
 ## <a name="syntax"></a>構文
 
@@ -75,13 +75,13 @@ class CCommand :
 ### <a name="parameters"></a>パラメーター
 
 *TAccessor*<br/>
-アクセサー クラスの型 (など`CDynamicParameterAccessor`、 `CDynamicStringAccessor`、または`CEnumeratorAccessor`) コマンドで使用します。 既定値は`CNoAccessor`クラスは、こと、いないパラメーターをサポートまたは出力列を指定します。
+コマンドで使用するアクセサークラスの型 (`CDynamicParameterAccessor`、`CDynamicStringAccessor`、`CEnumeratorAccessor`など)。 既定値は `CNoAccessor`です。これは、クラスがパラメーターまたは出力列をサポートしていないことを指定します。
 
 *TRowset*<br/>
-行セット クラスの型 (など`CArrayRowset`または`CNoRowset`) コマンドで使用します。 既定値は `CRowset` です。
+コマンドで使用する行セットクラスの型 (`CArrayRowset` や `CNoRowset`など)。 既定では、 `CRowset`です。
 
 *TMultiple*<br/>
-複数の結果を返すことができる OLE DB コマンドを使用する指定[CMultipleResults](../../data/oledb/cmultipleresults-class.md)します。 それ以外の場合、使用[CNoMultipleResults](../../data/oledb/cnomultipleresults-class.md)します。 詳細については、次を参照してください。 [IMultipleResults](/previous-versions/windows/desktop/ms721289(v=vs.85))します。
+複数の結果を返すことができる OLE DB コマンドを使用するには、 [C乗数 Eresults](../../data/oledb/cmultipleresults-class.md)を指定します。 それ以外の場合は、 [Cno乗数 Eresults](../../data/oledb/cnomultipleresults-class.md)を使用します。 詳細については、「 [IMultipleResults](/previous-versions/windows/desktop/ms721289(v=vs.85))」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
@@ -93,33 +93,33 @@ class CCommand :
 
 |||
 |-|-|
-|[閉じる](#close)|現在のコマンドを閉じます。|
-|[GetNextResult](#getnextresult)|複数の結果セットを使用する場合は、次の結果をフェッチします。|
-|[開く](#open)|実行し、必要に応じて、コマンドをバインドします。|
+|[[閉じる]](#close)|現在のコマンドを閉じます。|
+|[GetNextResult](#getnextresult)|複数の結果セットを使用するときに、次の結果をフェッチします。|
+|[[ファイル]](#open)|コマンドを実行し、必要に応じてバインドします。|
 
 ### <a name="inherited-methods"></a>継承されたメソッド
 
 |||
 |-|-|
-|[作成](#create)|指定したセッションの新しいコマンドを作成し、コマンド テキストを設定します。|
+|[作成](#create)|指定されたセッションに対して新しいコマンドを作成し、コマンドテキストを設定します。|
 |[CreateCommand](#createcommand)|新しいコマンドを作成します。|
-|[GetParameterInfo](#getparameterinfo)|コマンドのパラメーター、その名前とその型の一覧を取得します。|
-|[準備します。](#prepare)|検証し、現在のコマンドを最適化します。|
-|[ReleaseCommand](#releasecommand)|必要に応じて、パラメーター アクセサーを解放し、コマンドを解放します。|
-|[SetParameterInfo](#setparameterinfo)|各コマンドのパラメーターのネイティブな型を指定します。|
-|[Unprepare](#unprepare)|現在のコマンドの実行プランを破棄します。|
+|[GetParameterInfo](#getparameterinfo)|コマンドのパラメーターとその名前、およびその型の一覧を取得します。|
+|[準備](#prepare)|現在のコマンドを検証して最適化します。|
+|[ReleaseCommand](#releasecommand)|必要に応じてパラメーターアクセサーを解放してから、コマンドを解放します。|
+|[SetParameterInfo](#setparameterinfo)|各コマンドパラメーターのネイティブな型を指定します。|
+|[Unprepare](#unprepare)|現在のコマンド実行プランを破棄します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-パラメーターに基づく操作を実行またはコマンドを実行する必要がある場合は、このクラスを使用します。 単なる単純な行セットを開く必要がある場合を使用して、 [CTable](../../data/oledb/ctable-class.md)代わりにします。
+このクラスは、パラメーターベースの操作を実行したり、コマンドを実行したりする必要がある場合に使用します。 単純な行セットを開く必要があるだけの場合は、代わりに[CTable](../../data/oledb/ctable-class.md)を使用します。
 
-使用するアクセサー クラスは、パラメーターおよびデータを連結する方法を決定します。
+使用しているアクセサークラスによって、パラメーターとデータをバインドする方法が決まります。
 
-できませんを使用するストアド プロシージャの OLE DB Provider for Jet そのプロバイダーがサポートされていないためには、(クエリ文字列で定数のみを使用) の手順が格納されています。
+OLE DB Provider for Jet でストアドプロシージャを使用することはできません。このプロバイダーではストアドプロシージャがサポートされていないためです (クエリ文字列では定数のみが許可されます)。
 
-## <a name="close"></a> Ccommand::close
+## <a name="ccommandclose"></a><a name="close"></a>CCommand:: Close
 
-コマンドに関連付けられているアクセサーの行セットを解放します。
+コマンドに関連付けられているアクセサー行セットを解放します。
 
 ### <a name="syntax"></a>構文
 
@@ -127,23 +127,23 @@ class CCommand :
 void Close();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-コマンドは、行セット、結果セットのアクセサー、および (必要に応じて) (テーブル、パラメーターをサポートしており、パラメーター アクセサー必要はありません) とは異なり、パラメーター アクセサーを使用します。
+コマンドは、行セット、結果セットアクセサー、および (必要に応じて) パラメーターアクセサーを使用します。これは、パラメーターをサポートせず、パラメーターアクセサーを必要としないテーブルとは異なります。
 
-コマンドを実行するときに、両方を呼び出す必要があります`Close`と[ReleaseCommand](../../data/oledb/ccommand-releasecommand.md)コマンドの後にします。
+コマンドを実行するときは、コマンドの後に `Close` と[ReleaseCommand](../../data/oledb/ccommand-releasecommand.md)の両方を呼び出す必要があります。
 
-同じコマンドを繰り返し実行するときに呼び出すことによって各結果セットのアクセサーを解除する必要が`Close`呼び出す前に`Execute`します。 系列の末尾には、呼び出すことによってパラメーター アクセサーを解放する必要があります`ReleaseCommand`します。 もう 1 つの一般的なシナリオが出力パラメーターを持つストアド プロシージャを呼び出すことです。 (SQL Server 用の OLE DB プロバイダー) などの多くのプロバイダーでは、結果セットのアクセサーを終了するまで、出力パラメーター値をアクセスできません。 呼び出す`Close`返された行セットと結果セットのアクセサーは、パラメーター アクセサーを閉じるできるので、出力パラメーターの値を取得します。
+同じコマンドを繰り返し実行する場合は、`Execute`を呼び出す前に `Close` を呼び出すことによって、各結果セットアクセサーを解放する必要があります。 シリーズの最後に、`ReleaseCommand`を呼び出すことによってパラメーターアクセサーを解放する必要があります。 もう1つの一般的なシナリオは、出力パラメーターを持つストアドプロシージャを呼び出すことです。 多くのプロバイダー (SQL Server の OLE DB プロバイダーなど) では、結果セットのアクセサーを閉じるまで、出力パラメーターの値にはアクセスできません。 `Close` を呼び出して、返された行セットと結果セットアクセサーを閉じますが、パラメーターアクセサーは終了します。これにより、出力パラメーターの値を取得できます。
 
 ### <a name="example"></a>例
 
-次の例は、呼び出す方法を示しています。`Close`と`ReleaseCommand`繰り返し、同じコマンドを実行するとします。
+次の例は、同じコマンドを繰り返し実行する場合に `Close` と `ReleaseCommand` を呼び出す方法を示しています。
 
 [!code-cpp[NVC_OLEDB_Consumer#2](../../data/oledb/codesnippet/cpp/ccommand-close_1.cpp)]
 
-## <a name="getnextresult"></a> CCommand::GetNextResult
+## <a name="ccommandgetnextresult"></a><a name="getnextresult"></a>CCommand:: GetNextResult
 
-次の結果セットがある場合をフェッチします。
+使用できる場合は、次の結果セットをフェッチします。
 
 ### <a name="syntax"></a>構文
 
@@ -155,24 +155,24 @@ HRESULT GetNextResult(DBROWCOUNT* pulRowsAffected,
 #### <a name="parameters"></a>パラメーター
 
 *pulRowsAffected*<br/>
-[入力/出力]コマンドによって影響を受ける行の数が返されるメモリへのポインター。
+[入力/出力]コマンドの影響を受ける行の数を返すメモリへのポインターが返されます。
 
 *bBind*<br/>
-[in]実行されている後に、コマンドを自動的にバインドするかどうかを指定します。 既定値は**true**、それが原因で、コマンドを自動的に連結されます。 設定*bBind*に**false**手動でバインドできるように、コマンドの自動に連結します。 (手動バインドは、OLAP ユーザーにとって特に重要ですが) です。
+から実行後にコマンドを自動的にバインドするかどうかを指定します。 既定値は**true**です。これにより、コマンドが自動的にバインドされます。 *Bbind*を**false**に設定すると、コマンドが自動的にバインドされ、手動でバインドできるようになります。 (手動バインドは OLAP ユーザーにとって特に重要です)。
 
 ### <a name="return-value"></a>戻り値
 
 標準の HRESULT です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-結果セットが既にフェッチされている場合、この関数は前の結果セットを解放し、列をバインド解除します。 場合*bBind*は**true**、新しい列をバインドします。
+結果セットが既にフェッチされている場合、この関数は前の結果セットを解放し、列をバインド解除します。 *Bbind*が**true**の場合、新しい列がバインドされます。
 
-複数の結果を設定して指定した場合にのみ、この関数を呼び出す必要があります、`CCommand`テンプレート パラメーター *TMultiple*=`CMultipleResults`します。
+`CCommand` テンプレートパラメーター *Tmultiple*=`CMultipleResults`を設定して複数の結果を指定した場合にのみ、この関数を呼び出す必要があります。
 
-## <a name="open"></a> CCommand::Open
+## <a name="ccommandopen"></a><a name="open"></a>CCommand:: Open
 
-実行し、必要に応じて、コマンドをバインドします。
+コマンドを実行し、必要に応じてバインドします。
 
 ### <a name="syntax"></a>構文
 
@@ -209,58 +209,58 @@ HRESULT Open(DBPROPSET *pPropSet = NULL,
 
 #### <a name="parameters"></a>パラメーター
 
-*session*<br/>
-[in]コマンドを実行するためのセッションです。
+*セッション*<br/>
+からコマンドを実行するセッション。
 
 *wszCommand*<br/>
-[in]を実行するコマンドは、Unicode 文字列として渡されます。 使用する場合、NULL を指定できます`CAccessor`に渡された値からのコマンドは、取得した場合、 [DEFINE_COMMAND](../../data/oledb/define-command.md)マクロ。 参照してください[icommand::execute](/previous-versions/windows/desktop/ms718095(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*詳細についてはします。
+から実行するコマンド。 Unicode 文字列として渡されます。 `CAccessor`を使用する場合は NULL を指定できます。この場合、コマンドは[DEFINE_COMMAND](../../data/oledb/define-command.md)マクロに渡された値から取得されます。 詳細については、 *OLE DB プログラマーリファレンス*の「 [ICommand:: Execute](/previous-versions/windows/desktop/ms718095(v=vs.85)) 」を参照してください。
 
 *szCommand*<br/>
-[in]同じ*wszCommand*する点を除いて、このパラメーターは、ANSI コマンド文字列を取得します。 このメソッドの 4 番目の形式は、NULL 値をとることができます。 詳細については、このトピックの後半の「解説」を参照してください。
+から*WszCommand*と同じですが、このパラメーターは ANSI コマンド文字列を受け取る点が異なります。 このメソッドの4番目の形式は、NULL 値を受け取ることができます。 詳細については、このトピックで後述する「解説」を参照してください。
 
 *pPropSet*<br/>
-[in]配列へのポインター [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85))プロパティおよび設定する値を含む構造体。 参照してください[プロパティ セットとプロパティ グループ](/previous-versions/windows/desktop/ms713696(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*Windows SDK にします。
+から設定するプロパティと値を格納している[DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85))構造体の配列へのポインター。 Windows SDK の*OLE DB プログラマーリファレンス*の「[プロパティセットとプロパティグループ](/previous-versions/windows/desktop/ms713696(v=vs.85))」を参照してください。
 
-*pRowsAffected*<br/>
-[入力/出力]コマンドによって影響を受ける行の数が返されるメモリへのポインター。 場合 *\*pRowsAffected*が null の場合、行カウントは返されません。 それ以外の場合、`Open`設定 *\*pRowsAffected*に従って、次の条件。
+*pRowsAffected 影響を受けた*<br/>
+[入力/出力]コマンドの影響を受ける行の数を返すメモリへのポインターが返されます。 *影響を受けた\*pRowsAffected* NULL の場合、行数は返されません。 それ以外の場合は、次の条件に従って、*影響を受ける\*pRowsAffected*設定します。`Open`
 
-|If|Then|
+|状況|THEN|
 |--------|----------|
-|`cParamSets`要素の`pParams`が 1 より大きい|*\*pRowsAffected*実行で指定されたパラメーター セットの影響を受けた行の合計数を表します。|
-|影響を受けた行の数がご利用いただけません|*\*pRowsAffected*が-1 に設定します。|
-|コマンドが更新されない、削除、または行を挿入|*\*pRowsAffected*が定義されていません。|
+|`pParams` の `cParamSets` 要素が1を超えています。|*\*pRowsAffected* 、実行時に指定されたすべてのパラメーターセットの影響を受ける行の合計数を表します。|
+|影響を受ける行の数は使用できません|*\*pRowsAffected* -1 に設定されています。|
+|このコマンドでは、行の更新、削除、または挿入は行われません。|*影響を受けた\*pRowsAffected*定義されていません。|
 
 *guidCommand*<br/>
-[in]コマンド テキストを解析中に、構文と使用するプロバイダーの一般的な規則を指定する GUID。 参照してください[ICommandText::GetCommandText](/previous-versions/windows/desktop/ms709825(v=vs.85))と[icommandtext::setcommandtext](/previous-versions/windows/desktop/ms709757(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*詳細についてはします。
+からコマンドテキストの解析に使用するプロバイダーの構文と一般的な規則を指定する GUID。 詳細については*OLE DB プログラマーリファレンス*の「 [ICommandText:: Getcommandtext](/previous-versions/windows/desktop/ms709825(v=vs.85)) And [ICommandText:: setcommandtext](/previous-versions/windows/desktop/ms709757(v=vs.85)) 」を参照してください。
 
 *bBind*<br/>
-[in]実行されている後に、コマンドを自動的にバインドするかどうかを指定します。 既定値は**true**、それが原因で、コマンドを自動的に連結されます。 設定*bBind*に**false**手動でバインドできるように、コマンドの自動に連結します。 (手動バインドは、OLAP ユーザーにとって特に重要ですが) です。
+から実行後にコマンドを自動的にバインドするかどうかを指定します。 既定値は**true**です。これにより、コマンドが自動的にバインドされます。 *Bbind*を**false**に設定すると、コマンドが自動的にバインドされ、手動でバインドできるようになります。 (手動バインドは OLAP ユーザーにとって特に重要です)。
 
 *ulPropSets*<br/>
-[in]数[DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85))構造体が渡された、 *pPropSet*引数。
+から*PPropSet*引数で渡される[DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85))構造体の数。
 
 ### <a name="return-value"></a>戻り値
 
 標準の HRESULT です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-最初の 3 つのフォーム`Open`セッションをとり、コマンドを作成し、必要に応じて、任意のパラメーターのバインドのコマンドを実行します。
+最初の3つの形式の `Open` では、セッションを取得し、コマンドを作成し、必要に応じてパラメーターをバインドしてコマンドを実行します。
 
-最初のフォーム`Open`は Unicode コマンド文字列を受け取り、既定値はありません。
+`Open` の最初の形式は Unicode コマンド文字列を受け取り、既定値はありません。
 
-2 番目の形式の`Open`ANSI コマンド文字列を受け取り (ANSI の既存のアプリケーションの旧バージョンと互換性のために提供される) 既定値はありません。
+2番目の形式の `Open` は ANSI コマンド文字列を受け取り、既定値はありません (既存の ANSI アプリケーションとの旧バージョンとの互換性のために用意されています)。
 
-3 番目の形式`Open`により、null の場合、型のためにコマンド文字列**int**既定値は NULL です。 呼び出し元に提供されている`Open(session, NULL);`または`Open(session);`型の NULL であるため**int**します。このバージョンが必要ですし、あることをアサート、 **int**パラメーターを NULL にします。
+3番目の形式の `Open` では、コマンド文字列を NULL にすることができます。 **int**型の場合、既定値は null です。 NULL は**int**型であるため、`Open(session, NULL);` または `Open(session);` を呼び出すために用意されています。このバージョンでは、 **int**パラメーターが NULL であることを要求し、アサートします。
 
-4 番目の形式を使用して、`Open`コマンドを既に作成しているし、1 つを実行する[準備](../../data/oledb/ccommand-prepare.md)と複数回実行します。
+コマンドが既に作成されていて、1回の[準備](../../data/oledb/ccommand-prepare.md)と複数の実行を実行する場合は、4番目の形式の `Open` を使用します。
 
 > [!NOTE]
->  `Open` 呼び出し`Execute`、この`GetNextResult`します。
+>  `Open` は `Execute`を呼び出し、その後 `GetNextResult`を呼び出します。
 
-## <a name="create"></a> Ccommand::create
+## <a name="ccommandcreate"></a><a name="create"></a>CCommand:: Create
 
-呼び出し[ccommand::createcommand](../../data/oledb/ccommand-createcommand.md)指定したセッションのコマンドを作成するを呼び出して[icommandtext::setcommandtext](/previous-versions/windows/desktop/ms709825(v=vs.85))コマンド テキストを指定します。
+[CCommand:: CreateCommand](../../data/oledb/ccommand-createcommand.md)を呼び出して、指定されたセッションのコマンドを作成し、 [ICommandText:: setcommandtext](/previous-versions/windows/desktop/ms709825(v=vs.85))を呼び出してコマンドテキストを指定します。
 
 ### <a name="syntax"></a>構文
 
@@ -276,27 +276,27 @@ HRESULT CCommandBase::Create(const CSession& session,
 
 #### <a name="parameters"></a>パラメーター
 
-*session*<br/>
-[in]コマンドを作成するセッションです。
+*セッション*<br/>
+からコマンドを作成するセッション。
 
 *wszCommand*<br/>
-[in]コマンド文字列の Unicode テキストへのポインター。
+からコマンド文字列の Unicode テキストへのポインター。
 
 *szCommand*<br/>
-[in]コマンド文字列の ANSI テキストへのポインター。
+からコマンド文字列の ANSI テキストへのポインター。
 
 *guidCommand*<br/>
-[in]コマンド テキストを解析中に、構文と使用するプロバイダーの一般的な規則を指定する GUID。 言語については、次を参照してください。 [ICommandText::GetCommandText](/previous-versions/windows/desktop/ms709825(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
+からコマンドテキストの解析に使用するプロバイダーの構文と一般的な規則を指定する GUID。 ダイアレクトの詳細については、 *OLE DB プログラマーリファレンス*の「 [ICommandText:: getcommandtext](/previous-versions/windows/desktop/ms709825(v=vs.85)) 」を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
 標準の HRESULT です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-最初のフォーム`Create`Unicode コマンド文字列を受け取ります。 2 番目の形式の`Create`(ANSI の既存のアプリケーションの旧バージョンと互換性のための提供)、ANSI コマンド文字列を取得します。
+`Create` の最初の形式は Unicode コマンド文字列を受け取ります。 2番目の形式の `Create` では、ANSI コマンド文字列を使用します (既存の ANSI アプリケーションとの下位互換性のために用意されています)。
 
-## <a name="createcommand"></a> CCommand::CreateCommand
+## <a name="ccommandcreatecommand"></a><a name="createcommand"></a>CCommand:: CreateCommand
 
 新しいコマンドを作成します。
 
@@ -308,20 +308,20 @@ HRESULT CCommandBase::CreateCommand(const CSession& session) throw ();
 
 #### <a name="parameters"></a>パラメーター
 
-*session*<br/>
-[in]A`CSession`新しいコマンドに関連するオブジェクト。
+*セッション*<br/>
+から新しいコマンドに関連付けられる `CSession` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
 標準の HRESULT です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、指定したセッション オブジェクトを使用してコマンドを作成します。
+このメソッドは、指定されたセッションオブジェクトを使用してコマンドを作成します。
 
-## <a name="getparameterinfo"></a> CCommand::GetParameterInfo
+## <a name="ccommandgetparameterinfo"></a><a name="getparameterinfo"></a>CCommand:: GetParameterInfo
 
-コマンドのパラメーター、その名前とその型の一覧を取得します。
+コマンドのパラメーターとその名前、およびその型の一覧を取得します。
 
 ### <a name="syntax"></a>構文
 
@@ -333,15 +333,15 @@ HRESULT CCommandBase::GetParameterInfo(DB_UPARAMS* pParams,
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[icommandwithparameters::getparameterinfo](/previous-versions/windows/desktop/ms714917(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
+*OLE DB プログラマーリファレンス*の「 [ICommandWithParameters:: getparameterinfo](/previous-versions/windows/desktop/ms714917(v=vs.85)) 」を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
 標準の HRESULT です。
 
-## <a name="prepare"></a> Ccommand::prepare
+## <a name="ccommandprepare"></a><a name="prepare"></a>CCommand::P repare
 
-検証し、現在のコマンドを最適化します。
+現在のコマンドを検証して最適化します。
 
 ### <a name="syntax"></a>構文
 
@@ -352,19 +352,19 @@ HRESULT CCommandBase::Prepare(ULONG cExpectedRuns = 0) throw();
 #### <a name="parameters"></a>パラメーター
 
 *cExpectedRuns*<br/>
-[in]コマンドを実行する回数。
+からコマンドの実行に予想される回数。
 
 ### <a name="return-value"></a>戻り値
 
 標準の HRESULT です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、OLE DB メソッドをラップします。 [icommandprepare::prepare](/previous-versions/windows/desktop/ms718370(v=vs.85))します。
+このメソッドは、OLE DB メソッド[ICommandPrepare::P repare](/previous-versions/windows/desktop/ms718370(v=vs.85))をラップします。
 
-## <a name="releasecommand"></a> CCommand::ReleaseCommand
+## <a name="ccommandreleasecommand"></a><a name="releasecommand"></a>CCommand:: ReleaseCommand
 
-パラメーターのアクセサーを解放し、コマンド自体を解放します。
+パラメーターアクセサーを解放してから、コマンド自体を解放します。
 
 ### <a name="syntax"></a>構文
 
@@ -372,13 +372,13 @@ HRESULT CCommandBase::Prepare(ULONG cExpectedRuns = 0) throw();
 void CCommandBase::ReleaseCommand() throw();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`ReleaseCommand` 組み合わせて使用が`Close`します。 参照してください[閉じる](../../data/oledb/ccommand-close.md)使用方法の詳細。
+`ReleaseCommand` は `Close`と組み合わせて使用されます。 詳細については、「 [Close](../../data/oledb/ccommand-close.md) 」を参照してください。
 
-## <a name="setparameterinfo"></a> CCommand::SetParameterInfo
+## <a name="ccommandsetparameterinfo"></a><a name="setparameterinfo"></a>CCommand:: SetParameterInfo
 
-各コマンドのパラメーターのネイティブな型を指定します。
+各コマンドパラメーターのネイティブな型を指定します。
 
 ### <a name="syntax"></a>構文
 
@@ -390,15 +390,15 @@ HRESULT CCommandBase::SetParameterInfo(DB_UPARAMS ulParams,
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[icommandwithparameters::setparameterinfo](/previous-versions/windows/desktop/ms725393(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
+*OLE DB プログラマーリファレンス*の「 [ICommandWithParameters:: setparameterinfo](/previous-versions/windows/desktop/ms725393(v=vs.85)) 」を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
 標準の HRESULT です。
 
-## <a name="unprepare"></a> Ccommand::unprepare
+## <a name="ccommandunprepare"></a><a name="unprepare"></a>CCommand:: Unprepare
 
-現在のコマンドの実行プランを破棄します。
+現在のコマンド実行プランを破棄します。
 
 ### <a name="syntax"></a>構文
 
@@ -410,11 +410,11 @@ HRESULT CCommandBase::Unprepare() throw();
 
 標準の HRESULT です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、OLE DB メソッドをラップします。 [ICommandPrepare::Unprepare](/previous-versions/windows/desktop/ms719635(v=vs.85))します。
+このメソッドは、OLE DB メソッド[ICommandPrepare:: Unprepare](/previous-versions/windows/desktop/ms719635(v=vs.85))をラップします。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB コンシューマー テンプレートに関するページ](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB コンシューマー テンプレート リファレンス](../../data/oledb/ole-db-consumer-templates-reference.md)

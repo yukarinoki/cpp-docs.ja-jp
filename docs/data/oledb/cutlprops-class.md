@@ -29,12 +29,12 @@ helpviewer_keywords:
 - OnPropertyChanged method
 - SetPropValue method
 ms.assetid: bb525178-765c-4e23-a110-c0fd70c05437
-ms.openlocfilehash: bbeae4faad4d650d8dc44a61a22b1fcc63a0bc15
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 3498ec1250d9443007acb3b12ec25983a71587d0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79545553"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211108"
 ---
 # <a name="cutlprops-class"></a>CUtlProps クラス
 
@@ -52,7 +52,7 @@ class ATL_NO_VTABLE CUtlProps : public CUtlPropsBase
 *T*<br/>
 `BEGIN_PROPSET_MAP`を格納しているクラス。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atldb.h
 
@@ -68,7 +68,7 @@ class ATL_NO_VTABLE CUtlProps : public CUtlPropsBase
 |[OnPropertyChanged](#onpropertychanged)|プロパティを設定した後に、チェーンプロパティを処理するために呼び出されます。|
 |[SetPropValue](#setpropvalue)|プロパティセット内のプロパティを設定します。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 このクラスのほとんどは実装の詳細です。
 
@@ -126,7 +126,7 @@ virtual HRESULT CUtlPropsBase::IsValidValue(ULONG /* iCurSet */,
 
 標準の HRESULT です。 既定の戻り値は S_OK です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 プロパティの設定に使用しようとしている値に対して実行する検証ルーチンがある場合は、この関数をオーバーライドする必要があります。 たとえば、パスワードテーブルに対して DBPROP_AUTH_PASSWORD を検証して、有効な値を判断することができます。
 
@@ -145,7 +145,7 @@ virtual HRESULT CUtlPropsBase::OnInterfaceRequested(REFIID riid);
 *riid*<br/>
 から要求されたインターフェイスの IID。 詳細については、 *OLE DB プログラマーのリファレンス*( *MDAC SDK*) に含まれる `ICommand::Execute` の*riid*パラメーターの説明を参照してください。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 コンシューマーがオブジェクト作成インターフェイス (`IDBCreateSession`、`IDBCreateCommand`、`IOpenRowset`、`ICommand`など) のいずれかでメソッドを呼び出した場合、`OnInterfaceRequested` は省略可能なインターフェイスのコンシューマー要求を処理します。 これは、要求されたインターフェイスに対応する OLE DB プロパティを設定します。 たとえば、コンシューマーが `IID_IRowsetLocate`を要求した場合、`OnInterfaceRequested` `DBPROP_IRowsetLocate` インターフェイスを設定します。 これにより、行セットの作成時に適切な状態が維持されます。
 
@@ -188,7 +188,7 @@ virtual HRESULT OnPropertyChanged(ULONG /* iCurSet */,
 
 標準の HRESULT です。 既定の戻り値は S_OK です。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
 値が別のプロパティの値に依存するブックマークや更新などの連結されたプロパティを処理する場合は、この関数をオーバーライドする必要があります。
 

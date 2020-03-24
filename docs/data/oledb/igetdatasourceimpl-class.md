@@ -14,16 +14,16 @@ helpviewer_keywords:
 - IGetDataSourceImpl class
 - GetDataSource method
 ms.assetid: d63f3178-d663-4f01-8c09-8aab2dd6805a
-ms.openlocfilehash: 2056b93fd6c1d32b72996970352e87670ff406de
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 596dd2ea7f65040ae526662974d210c1f99a0cf2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408941"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210614"
 ---
 # <a name="igetdatasourceimpl-class"></a>IGetDataSourceImpl クラス
 
-実装を提供、 [IGetDataSource](/previous-versions/windows/desktop/ms709721(v=vs.85))オブジェクト。
+[Igetdatasource](/previous-versions/windows/desktop/ms709721(v=vs.85))オブジェクトの実装を提供します。
 
 ## <a name="syntax"></a>構文
 
@@ -35,7 +35,7 @@ class ATL_NO_VTABLE IGetDataSourceImpl : public IGetDataSource
 ### <a name="parameters"></a>パラメーター
 
 *T*<br/>
-派生したクラス、`IGetDataSourceImpl`します。
+`IGetDataSourceImpl`から派生したクラス。
 
 ## <a name="requirements"></a>必要条件
 
@@ -47,15 +47,15 @@ class ATL_NO_VTABLE IGetDataSourceImpl : public IGetDataSource
 
 |||
 |-|-|
-|[GetDataSource](#getdatasource)|セッションを作成したデータ ソース オブジェクトのインターフェイス ポインターを返します。|
+|[GetDataSource](#getdatasource)|セッションを作成したデータソースオブジェクトのインターフェイスポインターを返します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-これは、データ ソース オブジェクトへのインターフェイス ポインターを取得するためのセッションで、必須のインターフェイスです。
+これは、データソースオブジェクトへのインターフェイスポインターを取得するための、セッションでの必須のインターフェイスです。
 
-## <a name="getdatasource"></a> IGetDataSourceImpl::GetDataSource
+## <a name="igetdatasourceimplgetdatasource"></a><a name="getdatasource"></a>IGetDataSourceImpl:: GetDataSource
 
-セッションを作成したデータ ソース オブジェクトのインターフェイス ポインターを返します。
+セッションを作成したデータソースオブジェクトのインターフェイスポインターを返します。
 
 ### <a name="syntax"></a>構文
 
@@ -66,13 +66,13 @@ STDMETHOD(GetDataSource)(REFIID riid,
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[IGetDataSource::GetDataSource](/previous-versions/windows/desktop/ms725443(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
+*OLE DB プログラマーリファレンス*の「 [igetdatasource:: getdatasource](/previous-versions/windows/desktop/ms725443(v=vs.85)) 」を参照してください。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-データ ソース オブジェクトのプロパティにアクセスする必要がある場合に役立ちます。
+データソースオブジェクトのプロパティにアクセスする必要がある場合に便利です。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[OLE DB プロバイダー テンプレート](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[OLE DB プロバイダー テンプレートに関するページ](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [OLE DB プロバイダー テンプレートのアーキテクチャ](../../data/oledb/ole-db-provider-template-architecture.md)

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3268
 ms.assetid: d74a630c-daea-4e29-9759-83efef7fb184
-ms.openlocfilehash: d9954c12fb1065a4aa5e7afbdecd1f96758acaf9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 191456a1e290b568897ba76cd5bdccb8f83c310b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62365664"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201462"
 ---
 # <a name="compiler-error-c3268"></a>コンパイラ エラー C3268
 
-> '*関数*': ジェネリック関数またはジェネリック クラスのメンバー関数は、変数パラメーター リストを含めることはできません
+> '*function*': ジェネリッククラスのジェネリック関数またはメンバー関数に、変数パラメーターリストを指定することはできません
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**/Clr: 純粋な**と **/clr:safe**コンパイラ オプションは Visual Studio 2015 で非推奨とされ、Visual Studio 2017 でサポートされていません。
+**/Clr: pure**および **/clr: safe**コンパイラオプションは visual studio 2015 で非推奨とされており、visual studio 2017 ではサポートされていません。
 
-参照してください[ジェネリック](../../extensions/generics-cpp-component-extensions.md)詳細についてはします。
+詳細については、「[ジェネリック](../../extensions/generics-cpp-component-extensions.md)」を参照してください。
 
 ## <a name="example"></a>例
 

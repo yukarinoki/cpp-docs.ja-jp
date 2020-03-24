@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2175
 ms.assetid: 3a8fa90b-2b29-414a-bb55-cf27c2bf989a
-ms.openlocfilehash: 4c4af877d771d4e45c9336f1eb4a29fd45fa79fd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c7d045accae170f4f7f17835ff535a044ff91219
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62175486"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80206922"
 ---
 # <a name="compiler-error-c2175"></a>コンパイラ エラー C2175
 
-'ロケール': 無効なロケール
+' locale ': ロケールが無効です
 
-指定されたロケールが無効です。 参照してください[言語と国/地域識別文字列](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)で、*ランタイム ライブラリ リファレンス*のロケールをサポートします。
+指定されたロケールが無効です。 サポートされているロケールについては、「*ランタイムライブラリリファレンス*」の「[言語および国/地域識別文字列](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)」を参照してください。

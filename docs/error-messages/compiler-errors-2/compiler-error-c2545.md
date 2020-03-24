@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - C2545
 ms.assetid: 51598eb9-0c57-4306-a0cd-3862980f3672
-ms.openlocfilehash: 7f43ecfa74667c8cc6562bf1feaf4e8d0927f690
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c5150bbf36813ad7319830736b25cc55bec21f33
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397472"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80202472"
 ---
 # <a name="compiler-error-c2545"></a>コンパイラ エラー C2545
 
-'operator': 演算子のオーバー ロードを検索することができません
+' operator ': オーバーロードされた演算子が見つかりません
 
-演算子は、提供されるオペランドでは使用できません。 必要なオペランドを持つオーバー ロードされた演算子を指定する必要があります。
+演算子は、指定されたオペランドと共に使用することはできません。 必要なオペランドを持つオーバーロードされた演算子を指定する必要があります。
 
-このエラーは、オペランドの型が正しくない場合に発生することができます。
+このエラーは、オペランドの型が正しくない場合に発生する可能性があります。
 
-変換演算子または 1 つのパラメーターを受け取るコンス トラクターを定義する場合、このエラーを解決する可能性があります。
+1つのパラメーターを受け取る変換演算子またはコンストラクターを定義すると、このエラーが修正されることがあります。

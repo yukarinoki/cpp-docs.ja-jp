@@ -7,12 +7,12 @@ helpviewer_keywords:
 - templates, C++
 - templates [C++]
 ms.assetid: 90fcc14a-2092-47af-9d2e-dba26d25b872
-ms.openlocfilehash: 36ada3cc3b933e99e9b29b3b58463f6bc526fc7d
-ms.sourcegitcommit: 00f50ff242031d6069aa63c81bc013e432cae0cd
+ms.openlocfilehash: 5f8322d850084ca53e946dcff1b67dc81b493fe3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/30/2019
-ms.locfileid: "75546407"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160776"
 ---
 # <a name="templates-c"></a>テンプレート (C++)
 
@@ -57,7 +57,7 @@ int minimum(const int& lhs, const int& rhs)
 
 コンパイラが関数テンプレートで型推論を実行する方法に関する規則は、通常の関数の規則に基づいています。 詳細については、「[関数テンプレート呼び出しのオーバーロードの解決](../cpp/overload-resolution-of-function-template-calls.md)」を参照してください。
 
-## <a id="type_parameters"></a>型パラメーター
+## <a name="type-parameters"></a><a id="type_parameters"></a>型パラメーター
 
 上の `minimum` テンプレートでは、型パラメーター *t*は、const および参照修飾子が追加される関数呼び出しパラメーターで使用されるまで、どのような方法でも修飾されていないことに注意してください。
 
@@ -67,7 +67,7 @@ int minimum(const int& lhs, const int& rhs)
 template <typename T, typename U, typename V> class Foo{};
 ```
 
-キーワード**class**と等価**typename**このコンテキストでします。 前の例を次のように表すことができます。
+キーワード**クラス**は、このコンテキストでは**typename**に相当します。 前の例を次のように表すことができます。
 
 ```cpp
 template <class T, class U, class V> class Foo{};
@@ -151,7 +151,7 @@ auto v2 = constant<true>;   // v2 == true, decltype(v2) is bool
 auto v3 = constant<'a'>;    // v3 == 'a', decltype(v3) is char
 ```
 
-## <a id="template_parameters"></a>テンプレートパラメーターとしてのテンプレート
+## <a name="templates-as-template-parameters"></a><a id="template_parameters"></a>テンプレートパラメーターとしてのテンプレート
 
 テンプレートは、テンプレートパラメーターにすることができます。 この例では、MyClass2 には、typename パラメーター *T*とテンプレートパラメーター *Arr*の2つのテンプレートパラメーターがあります。
 

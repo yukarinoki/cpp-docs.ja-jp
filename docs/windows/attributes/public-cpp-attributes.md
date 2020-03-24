@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - public attribute
 ms.assetid: c42e1fd5-6cb1-48fe-8a03-95f2a2e0137c
-ms.openlocfilehash: 274af011f2d61521885e93d4ce1eddad149748ad
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 6912117ad05d6b608c45425ebec27cd49c0e5dc4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514166"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214721"
 ---
 # <a name="public-c-attributes"></a>public (C++ 属性)
 
@@ -23,7 +23,7 @@ ms.locfileid: "69514166"
 [public]
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 **Public** C++属性には、 [public](/windows/win32/Midl/public) MIDL 属性と同じ機能があります。
 
@@ -58,7 +58,7 @@ __interface IFireTabCtrl : IDispatch
 
 属性コンテキストの詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 [IDL 属性](idl-attributes.md)<br/>
 [Typedef、Enum、Union、および Struct 型の属性](typedef-enum-union-and-struct-attributes.md)

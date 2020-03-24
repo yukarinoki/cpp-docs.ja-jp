@@ -7,12 +7,12 @@ helpviewer_keywords:
 - compatibility, C run-time libraries
 - compatibility
 ms.assetid: 346709cb-edda-4909-9a19-3d253eddb6b7
-ms.openlocfilehash: fba85462218d0cc2ba1d52caa4e59b2cfb9f4fd6
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 39b936acc43243973c2f66ef6fc7306026cc3259
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443484"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171048"
 ---
 # <a name="compatibility"></a>互換性
 
@@ -22,7 +22,7 @@ Visual C++ の Microsoft による実装に固有の関数は vcruntime ライ�
 
 C++ 標準では、グローバル名前空間のアンダースコアで始まる名前は、実装用に予約されています。 POSIX 関数と Microsoft 固有のランタイムライブラリ関数はどちらもグローバル名前空間にありますが、標準の C ランタイムライブラリの一部ではありません。 そのため、これらの関数の Microsoft の優先実装には、先頭にアンダースコアが付いています。 移植性の目的で、UCRT では既定の名前もサポートされていますが、それらを使用するコードがコンパイルされると、非推奨の警告が Microsoft C++ コンパイラから出されます。 既定の名前のみが非推奨とされます。関数自体ではありません。 この警告を表示しないようにするには、元の POSIX 名を使用するコードでヘッダーをインクルードする前に `_CRT_NONSTDC_NO_WARNINGS` を定義します。
 
-標準 C ライブラリの関数の中には、パラメーターを誤用した場合やバッファーのチェックを行わない場合、安全に使用できないものがありました。 これらの関数は、多くの場合、コードのセキュリティ問題の発生源になります。 Microsoft では、パラメーターの使用法を確認するために、これらの関数の安全なバージョンのセットを作成しました。 実行時に問題が検出された場合は、無効なパラメーターハンドラーを呼び出します。  既定では、より安全で利用可能なバリアントが含まれる関数が使用されると、Microsoft C++ コンパイラから非推奨の警告が出されます。 としてC++コードをコンパイルするときに、ほとんどの警告を除去するために `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` を1として定義できます。 このマクロは、移植可能なソースコードを維持しながら、テンプレートのオーバーロードがより安全なバリアントを呼び出すことができるようにします。 この警告を表示しないようにするには、これらの関数を使用するコードでヘッダーをインクルードする前に `_CRT_SECURE_NO_WARNINGS` を定義します。 詳細については、「 [Security Features in the CRT](../c-runtime-library/security-features-in-the-crt.md)」を参照してください。
+標準 C ライブラリの関数の中には、パラメーターを誤用した場合やバッファーのチェックを行わない場合、安全に使用できないものがありました。 これらの関数は、多くの場合、コードのセキュリティ問題の発生源になります。 Microsoft では、パラメーターの使用法を確認するために、これらの関数の安全なバージョンのセットを作成しました。 実行時に問題が検出された場合は、無効なパラメーターハンドラーを呼び出します。  既定では、より安全で利用可能なバリアントが含まれる関数が使用されると、Microsoft C++ コンパイラから非推奨の警告が出されます。 としてC++コードをコンパイルするときに、ほとんどの警告を除去するために `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` を1として定義できます。 このマクロは、移植可能なソースコードを維持しながら、テンプレートのオーバーロードがより安全なバリアントを呼び出すことができるようにします。 この警告を表示しないようにするには、これらの関数を使用するコードでヘッダーをインクルードする前に `_CRT_SECURE_NO_WARNINGS` を定義します。 詳細については、「[CRT のセキュリティ機能](../c-runtime-library/security-features-in-the-crt.md)」を参照してください。
 
 特定の関数に関するドキュメントで別途説明されている場合を除き、UCRT は Windows API と互換性があります。  Windows ストアアプリまたはユニバーサル Windows プラットフォーム ([UWP](/uwp)) アプリでは、一部の関数はサポートされていません。 これらの関数は、「[ユニバーサル Windows プラットフォームアプリでサポートされていない CRT 関数](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」に記載されています。
 

@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C3506
 ms.assetid: d382c067-5fad-42ca-acf3-9e6d8cbdb2c5
-ms.openlocfilehash: c4ec9b740d6be224f261873edc1efd2b79d1db6c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 85e3e5208e4943cf276a6b14f9482045df77737b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386656"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80200799"
 ---
 # <a name="compiler-error-c3506"></a>コンパイラ エラー C3506
 
-LIBID 'id' の登録された typelib はありません。
+LIBID ' id ' に登録されている typelib はありません
 
-タイプ ライブラリが正しく登録されていません。 Regsvr32.exe を使用すると、タイプ ライブラリを登録できます。
+Typelib が正しく登録されていません。 Regsvr32 を使用してタイプライブラリを登録します。
