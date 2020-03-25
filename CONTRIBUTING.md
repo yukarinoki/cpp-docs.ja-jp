@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: e2b88bb1c60c97c9f63caacfb98ba87e0443e799
+ms.sourcegitcommit: 44eeb065c3148d0484de791080a3f963109744fc
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79509441"
+---
 # <a name="contributing"></a>コントリビューション
 
 Visual C++ ドキュメントへの貢献に関心をお寄せいただきありがとうございます。
@@ -19,7 +27,7 @@ Visual C++ ドキュメントへの貢献に関心をお寄せいただきあり
 
 小さな変更の場合はこの最初の手順をスキップできます。
 
-**手順 2:** `MicrosoftDocs/cpp-docs` リポジトリをフォークします。
+**手順 2:**`MicrosoftDocs/cpp-docs` リポジトリをフォークします。
 
 **手順 3:** 記事の `branch` を作成します。
 
@@ -36,13 +44,15 @@ Visual C++ ドキュメントへの貢献に関心をお寄せいただきあり
 
 ### <a name="example-structure"></a>構造の例
 
-    docs
-        /standard-library
-            wstring-convert-class.md
-            /media
-                wstring-conversion.png
+```
+docs
+    /standard-library
+        wstring-convert-class.md
+        /media
+            wstring-conversion.png
+```
 
-**手順 5:**  ご自分のブランチから `MicrosoftDocs/cpp-docs/master` にプル要求 (PR) を送信します。
+**手順 5:** ご自分のブランチから `MicrosoftDocs/cpp-docs/master` に Pull Request (PR) を送信します。
 
 PR が既存の問題に対処している場合は、コミット メッセージまたは PR の説明に `Fixes #Issue_Number` キーワードを追加すると、PR がマージされたときに問題が自動的に閉じられます。 詳細については、[コミット メッセージによって問題を閉じる](https://help.github.com/articles/closing-issues-via-commit-messages/)方法についての記事を参照してください。
 
@@ -58,7 +68,7 @@ Visual Studio チームが PR を確認し、変更が適切であるか、ま�
 
 .NET ドキュメントに投稿する際に注意する必要があるガイド ルールの簡単な一覧を次に示します。
 
-- 突然に、巨大なプル要求を送信**しないでください**。 代わりに、問題を提出し、ディスカッションを開始して、大量の時間を費やす前に方向について同意が得られるようにしてください。
+- 突然に、巨大な pull requests を送信**しないでください**。 代わりに、問題を提出し、ディスカッションを開始して、大量の時間を費やす前に方向について同意が得られるようにしてください。
 - [スタイル ガイド](./styleguide/template.md)と[スタイルとトーン](./styleguide/voice-tone.md)のガイドラインを**お読みください**。
 - [テンプレート](./styleguide/template.md) ファイルを作業の開始点として**使用してください**。
 - 記事に取り掛かる前に、フォークに個別のブランチを**作成してください**。

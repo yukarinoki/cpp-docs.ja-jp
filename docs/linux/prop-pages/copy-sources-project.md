@@ -2,12 +2,12 @@
 title: ソースのプロジェクト プロパティのコピー (Linux C++)
 ms.date: 10/16/2019
 ms.assetid: 1a44230d-5dd8-4d33-93b4-e77e03e00150
-ms.openlocfilehash: bc99814e825cda091b6a0b00256ca2d8269ecdd3
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: 732a13520a223f1aa73733cd4098c247052f8d3b
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74305394"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441387"
 ---
 # <a name="copy-sources-project-properties-linux-c"></a>ソースのプロジェクト プロパティのコピー (Linux C++)
 
@@ -21,13 +21,13 @@ Linux サポートは Visual Studio 2017 以降で使用できます。
 
 このプロパティ ページで設定されたプロパティは、ファイルレベル プロパティが設定されているファイルを除き、プロジェクト内の全ファイルに適用されます。
 
-プロパティ | 説明
---- | ---
-コピーするソース | リモート システムにコピーするソースを指定します。 この一覧を変更すると、リモート システム上でファイルのコピー先のディレクトリ構造がシフトするか、それ以外の場合は影響を受ける可能性があります。
-ソースのコピー | ソースをリモート システムにコピーするかどうか指定します。
-コピーする追加ソース | リモート システムにコピーする追加ソースを指定します。 オプションで、次のような構文を使用して、一覧をリモート マッピング ペアにローカルとして指定することができます: fulllocalpath1:=fullremotepath1;fulllocalpath2:=fullremotepath2。ここで、ローカル ファイルをリモート システム上の指定したリモートの場所にコピーできます。
+| プロパティ | 説明 |
+|--|--|
+| コピーするソース | リモート システムにコピーするソースを指定します。 この一覧を変更すると、リモート システム上でファイルのコピー先のディレクトリ構造がシフトするか、それ以外の場合は影響を受ける可能性があります。 |
+| ソースのコピー | ソースをリモート システムにコピーするかどうか指定します。 |
+| コピーする追加ソース | リモート システムにコピーする追加ソースを指定します。 オプションで、次のような構文を使用して、リモート マッピング ペアにローカルとして指定します: fulllocalpath1:=fullremotepath1;fulllocalpath2:=fullremotepath2。ここで、ローカル ファイルをリモート システム上の指定したリモートの場所にコピーできます。 |
 
-@SourcesToCopyRemotely および @DataFilesToCopyRemotely は、プロジェクト ファイル内の項目グループを参照します。 リモートでコピーするソースまたはデータ ファイルを変更するには、次のように *vcxproj*  ファイルを編集します。
+@SourcesToCopyRemotely および @DataFilesToCopyRemotely は、プロジェクト ファイル内の項目グループを参照します。 リモートでコピーするソースまたはデータ ファイルを変更するには、次のように *vcxproj* ファイルを編集します。
 
 ```xml
 <ItemGroup>
