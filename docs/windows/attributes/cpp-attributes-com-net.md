@@ -6,12 +6,12 @@ ms.topic: conceptual
 helpviewer_keywords:
 - attributes [C++/CLI], reference topics
 ms.assetid: 613a3611-b3eb-4347-aa38-99b654600e1c
-ms.openlocfilehash: 4885edf57988d5f83b56ba6a71da85877354d3ce
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 734d82a30df3e143a6f47cb1b3eca2cd778830bd
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79426679"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214930"
 ---
 # <a name="c-attributes-for-com-and-net"></a>COM および .NET 用の C++ の属性
 
@@ -78,7 +78,7 @@ class CMyReceiver
 
 さらに、Visual C++リンカーは、すべての IDL 関連の属性情報を1つの MIDL ファイルに出力します。 1つのプロジェクトから2つのタイプライブラリを生成する方法はありません。
 
-## <a name="contexts"></a>属性コンテキスト
+## <a name="attribute-contexts"></a><a name="contexts"></a>属性コンテキスト
 
 C++属性を記述するには、4つの基本的なフィールドを使用します。これらのフィールドは、適用先 **(適用先)、** 反復可能かどうか (**反復**可能)、他の属性の存在が必要である (**必須属性**)、および他の属性との非互換性 (**無効な属性**) です。 これらのフィールドは、各属性のリファレンストピックの関連するテーブルに一覧表示されます。 これらの各フィールドについて以下に説明します。
 
