@@ -1,9 +1,11 @@
 ---
 title: _mktemp_s、_wmktemp_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mktemp_s
 - _wmktemp_s
+- _o__mktemp_s
+- _o__wmktemp_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +38,12 @@ helpviewer_keywords:
 - wmktemp_s function
 - temporary files [C++]
 ms.assetid: 92a7e269-7f3d-4c71-bad6-14bc827a451d
-ms.openlocfilehash: 464f0dfbdb0b84e1fd29ec650e53f5c2543c4403
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 061c5647b2c5a5e79b017cf93989f62ad19cfc0a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73624212"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81338751"
 ---
 # <a name="_mktemp_s-_wmktemp_s"></a>_mktemp_s、_wmktemp_s
 
@@ -69,11 +72,11 @@ errno_t _wmktemp_s(
 
 ### <a name="parameters"></a>パラメーター
 
-*nameTemplate*<br/>
+*名前テンプレート*<br/>
 ファイル名のパターン。
 
-*sizeInChars*<br/>
-**_Mktemp_s**の1バイト文字のバッファーサイズnull ターミネータを含む、 **_wmktemp_s**のワイド文字。
+*サイズインチャーズ*<br/>
+**_mktemp_s**の 1 バイト文字でのバッファーのサイズ。**_wmktemp_s**のワイド文字 (ヌル終端文字を含む)
 
 ## <a name="return-value"></a>戻り値
 
@@ -81,19 +84,21 @@ errno_t _wmktemp_s(
 
 ### <a name="error-conditions"></a>エラー条件
 
-|*nameTemplate*|*sizeInChars*|戻り値|*Nametemplate*の新しい値|
+|*名前テンプレート*|*サイズインチャーズ*|戻り値|名前の新しい値*テンプレート*|
 |----------------|-------------------|----------------------|-------------------------------|
-|**NULL**|任意|**EINVAL**|**NULL**|
-|形式が正しくありません (正しい形式については、「解説」を参照してください)|任意|**EINVAL**|空の文字列|
-|任意|X の数以下|**EINVAL**|空の文字列|
+|**NULL**|any|**Einval**|**NULL**|
+|形式が正しくありません (正しい形式については、「解説」を参照してください)|any|**Einval**|空の文字列|
+|any|X の数以下|**Einval**|空の文字列|
 
-上記のいずれかのエラー条件が発生すると、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」に説明されているように、無効なパラメーター ハンドラーが呼び出されます。 実行の継続が許可された場合、 **errno**は**einval**に設定され、関数は**einval**を返します。
+上記のいずれかのエラー条件が発生すると、「[パラメータの検証](../../c-runtime-library/parameter-validation.md)」に説明されているように、無効なパラメーター ハンドラ―が呼び出されます。 実行を続行できる場合 **、errno**は**EINVAL**に設定され、関数は**EINVAL**を返します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**_Mktemp_s**関数は、 *nametemplate*引数を変更することで一意のファイル名を作成します。これにより、呼び出しの後に、 *nametemplate*ポインターは、新しいファイル名を含む文字列を指します。 **_mktemp_s**は、現在ランタイムシステムによって使用されているマルチバイトコードページに従ってマルチバイト文字シーケンスを認識し、マルチバイト文字列の引数を適切な方法で自動的に処理します。 **_wmktemp_s**は、 **_mktemp_s**のワイド文字バージョンです。 **_wmktemp_s**の引数はワイド文字列です。 **_wmktemp_s**と **_mktemp_s**は、 **_wmktemp_s**がマルチバイト文字列を処理しない点を除いて、同じように動作します。
+**_mktemp_s**関数は *、nameTemplate*引数を変更して一意のファイル名を作成し、呼び出し後に*nameTemplate*ポインターが新しいファイル名を含む文字列を指します。 **_mktemp_s**は、マルチバイト文字の文字列引数を適切に処理し、ランタイム システムで現在使用されているマルチバイト コード ページに従ってマルチバイト文字シーケンスを認識します。 **_wmktemp_s**はワイド文字の **_mktemp_s**です。**_wmktemp_s**の引数はワイド文字列です。 **_wmktemp_s**と **_mktemp_s**は **、_wmktemp_s**がマルチバイト文字文字列を処理しないことを除いて、他の方法で同様に動作します。
 
-これらの関数のデバッグライブラリバージョンは、最初にバッファーを0xFE で埋めます。 この動作を無効にするには、[_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md) を使用します。
+これらの関数のデバッグ ライブラリ バージョンは、まずバッファーに 0xFE を設定します。 この動作を無効にするには、[_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md) を使用します。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -101,17 +106,17 @@ errno_t _wmktemp_s(
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tmktemp_s**|**_mktemp_s**|**_mktemp_s**|**_wmktemp_s**|
 
-*Nametemplate*引数の形式は**basexxxxxx**です。ここで、 *base*は指定する新しいファイル名の一部で、各 X は **_mktemp_s**によって提供される文字のプレースホルダーです。 *Nametemplate*内の各プレースホルダー文字は、 **_mktemp_s** *を保持し、先頭*の x を英字で置き換える必要があります。 **_mktemp_s**は、次の末尾の X を5桁の値に置き換えます。この値は、呼び出し元のプロセスを識別する一意の番号、またはマルチスレッドプログラムでの呼び出し元のスレッドを示します。
+*nameTemplate*引数には**baseXXXXXX**という形式があり *、base*は指定した新しいファイル名の一部であり、各 X は **_mktemp_s**によって提供される文字のプレースホルダーです。 *nameTemplate*の各プレースホルダ文字は大文字の**X.** である必要_mktemp_s*ベース*を保持し、最初の末尾の X をアルファベット文字に置き換えます。 **_mktemp_s**は、後続の X を 5 桁の値に置き換えます。この値は、呼び出し元のプロセス、またはマルチスレッド・プログラムの呼び出しスレッドを識別する固有の番号です。
 
-**_Mktemp_s**への呼び出しが成功するたびに、 *nametemplate*が変更されます。 同じ*Nametemplate*引数を持つ同じプロセスまたはスレッドからの後続の呼び出しでは、 **_mktemp_s**は、前の呼び出しで **_mktemp_s**によって返された名前と一致するファイル名を確認します。 指定された名前のファイルが存在しない場合、 **_mktemp_s**はその名前を返します。 以前に返されたすべての名前のファイルが存在する場合、 **_mktemp_s**は、以前に返された名前で使用されていた英字を ' a ' ~ ' z ' の順に使用可能な次の小文字で置き換えることによって、新しい名前を作成します。 たとえば、 *base*がの場合は次のようになります。
+**_mktemp_s**への成功した呼び出しは *、名前を変更します。* 同じプロセスまたは同じスレッドからの同じ*nameTemplate*引数からの呼び出しでは **、_mktemp_s**以前の呼び出しで **_mktemp_s**によって返された名前と一致するファイル名をチェックします。 指定された名前のファイルが存在しない場合 **、_mktemp_s**はその名前を返します。 以前に返されたすべての名前にファイルが存在する場合 **、_mktemp_s**は、前に返された名前で使用した英字を、'a' から 'z' までの順に、次の使用可能な小文字に置き換えることによって、新しい名前を作成します。 たとえば、*ベース*が次の場合です。
 
-> **1億**
+> **Fn**
 
-**_mktemp_s**によって指定された5桁の値は12345で、最初に返される名前は次のようになります。
+**_mktemp_s**によって提供される 5 桁の値は 12345 で、戻される最初の名前は次のようになります。
 
 > **fna12345**
 
-この名前を使用してファイル FNA12345 を作成しても、このファイルがまだ存在する場合、 *Nametemplate*の同じ*ベース*を持つ同じプロセスまたはスレッドから次の名前が返されます。
+この名前を使用してファイル FNA12345 を作成しても、このファイルがまだ存在する場合、name の*同じベース*を持つ同じプロセスまたはスレッドからの呼び出しで返される次の名前は次のようになります*テンプレート:*
 
 > **fnb12345**
 
@@ -119,18 +124,18 @@ FNA12345 が存在しない場合、次に返される名前はもう一度次�
 
 > **fna12345**
 
-**_mktemp_s**では、 *Base*と*nametemplate*の値の任意の組み合わせに対して一意のファイル名を最大26個作成できます。 したがって、FNZ12345 は、この例で使用される*base*および*nametemplate*の値に対して **_mktemp_s**が作成できる最後の一意のファイル名です。
+**_mktemp_s、base**と*nameTemplate*の値の任意の組み*base*合わせに対して最大 26 個の一意のファイル名を作成できます。 したがって、FNZ12345 は、この例で使用 **_mktemp_s***基本*と*nameTemplate*値に対して作成できる最後の一意のファイル名です。
 
 C++ では、これらの関数の使用はテンプレートのオーバーロードによって簡素化されます。オーバーロードでは、バッファー長を自動的に推論できる (サイズの引数を指定する必要がなくなる) だけでなく、古くてセキュリティが万全ではない関数を新しく安全な関数に自動的に置き換えることができます。 詳細については、「[セキュリティ保護されたテンプレート オーバーロード](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**_mktemp_s**|\<io.h>|
 |**_wmktemp_s**|\<io.h> または \<wchar.h>|
 
-互換性について詳しくは、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="example"></a>例
 
@@ -176,7 +181,7 @@ int main()
 }
 ```
 
-### <a name="sample-output"></a>出力例
+### <a name="sample-output"></a>サンプル出力
 
 ```Output
 Unique filename is fna03188

@@ -1,6 +1,6 @@
 ---
-title: EventGroup クラス
-description: C++ビルドインサイト SDK eventgroup クラス参照。
+title: イベントグループクラス
+description: C++ ビルド インサイト SDK イベントグループ クラスリファレンス。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: ac8ac70f3fc160714b86dd0c483808a4d06e7699
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 596c18ca0e9b4d7b26c4ed5209b16871952c4af2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78334920"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81324989"
 ---
-# <a name="eventgroup-class"></a>EventGroup クラス
+# <a name="eventgroup-class"></a>イベントグループクラス
 
 ::: moniker range="<=vs-2015"
 
-Build C++ Insights SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを表示するには、この記事の Visual Studio バージョンセレクターコントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。
+C++ ビルド インサイト SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを参照するには、この記事の Visual Studio**バージョン**セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の上部に表示されます。
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-`EventGroup` クラステンプレートは、すべてのグループキャプチャクラスの基本クラスです。
+クラス`EventGroup`テンプレートは、すべてのグループ キャプチャ クラスの基本クラスです。
 
 ## <a name="syntax"></a>構文
 
@@ -47,20 +47,20 @@ public:
 
 ### <a name="parameters"></a>パラメーター
 
-*Tactivity*グループに含まれるアクティビティの種類。
+*活動*グループに含まれる活動タイプ。
 
 ## <a name="members"></a>メンバー
 
 ### <a name="functions"></a>関数
 
 [バック](#back)
-[begin](#begin)
-[end](#end)
-[Front](#front)
-[operator []](#subscript-operator)
-[Size](#size)
+[・始](#begin)
+[めのフロントエンド](#end)
+[Front](#front)[operator[]](#subscript-operator)
+[Size](#size)・オペレーター [] サイズ
 
-## <a name="back"></a>戻る
+
+## <a name="back"></a><a name="back"></a>戻る
 
 ```cpp
 const TActivity& Back() const;
@@ -68,9 +68,9 @@ const TActivity& Back() const;
 
 ### <a name="return-value"></a>戻り値
 
-グループ内の最後のアクティビティイベントへの参照。
+グループ内の最後のアクティビティ イベントへの参照。
 
-## <a name="begin"></a>初め
+## <a name="begin"></a><a name="begin"></a>開始
 
 ```cpp
 std::deque<TActivity>::const_iterator begin() const;
@@ -78,9 +78,9 @@ std::deque<TActivity>::const_iterator begin() const;
 
 ### <a name="return-value"></a>戻り値
 
-アクティビティイベントグループの先頭を指す反復子。
+アクティビティ イベント グループの先頭を指す反復器。
 
-## <a name="end"></a>終わり
+## <a name="end"></a><a name="end"></a>終わり
 
 ```cpp
 std::deque<TActivity>::const_iterator end() const;
@@ -88,9 +88,9 @@ std::deque<TActivity>::const_iterator end() const;
 
 ### <a name="return-value"></a>戻り値
 
-アクティビティイベントグループの末尾の1つ後ろの位置を指す反復子。
+アクティビティ イベント グループの末尾を 1 つ越えて 1 つ上の位置を指す反復器。
 
-## <a name="front"></a>外側
+## <a name="front"></a><a name="front"></a>フロント
 
 ```cpp
 const TActivity& Front() const;
@@ -98,9 +98,9 @@ const TActivity& Front() const;
 
 ### <a name="return-value"></a>戻り値
 
-グループ内の最初のアクティビティイベントへの参照。
+グループ内の最初のアクティビティ イベントへの参照。
 
-## <a name="subscript-operator"></a>演算子 []
+## <a name="operator"></a><a name="subscript-operator"></a>演算子[]
 
 ```cpp
 const TActivity& operator[](size_t index) const;
@@ -109,13 +109,13 @@ const TActivity& operator[](size_t index) const;
 ### <a name="parameters"></a>パラメーター
 
 *インデックス*\
-アクティビティイベントグループ内のアクセスする要素のインデックス。
+アクティビティ イベント グループ内でアクセスする要素のインデックス。
 
 ### <a name="return-value"></a>戻り値
 
-*インデックス*によって示される位置に格納されているイベントスタックからのイベント。
+*index*で示された位置に格納されているイベント スタックからのイベント。
 
-## <a name="size"></a>幅
+## <a name="size"></a><a name="size"></a> サイズ
 
 ```cpp
 size_t Size() const;
@@ -123,6 +123,6 @@ size_t Size() const;
 
 ### <a name="return-value"></a>戻り値
 
-イベントグループのサイズ。
+イベント グループのサイズ。
 
 ::: moniker-end

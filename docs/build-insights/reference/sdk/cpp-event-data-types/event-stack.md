@@ -1,6 +1,6 @@
 ---
-title: EventStack クラス
-description: C++ビルドインサイト SDK eventstack クラス参照。
+title: イベントスタッククラス
+description: C++ ビルド インサイト SDK イベントスタック クラスリファレンス。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 6da2fd25082399b82d788c5d119a39e2f7388714
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: eaaaedcbf57fdaf8e437a80a7823488febac3e1d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78334896"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81324974"
 ---
-# <a name="eventstack-class"></a>EventStack クラス
+# <a name="eventstack-class"></a>イベントスタッククラス
 
 ::: moniker range="<=vs-2015"
 
-Build C++ Insights SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを表示するには、この記事の Visual Studio バージョンセレクターコントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。
+C++ ビルド インサイト SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを参照するには、この記事の Visual Studio**バージョン**セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の上部に表示されます。
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-`EventStack` クラスは、[イベント](event.md)オブジェクトのコレクションです。 C++ BUILD Insights SDK から受信したすべてのイベントは、`EventStack` オブジェクトの形式で取得されます。 このスタックの最後のエントリは、現在処理中のイベントです。 最後のエントリの前にあるエントリは、現在のイベントの親階層です。 ビルドインサイトでC++使用されるイベントモデルの詳細については、「 [event table](../event-table.md)」を参照してください。
+クラス`EventStack`は[Event](event.md)オブジェクトのコレクションです。 C++ ビルドインサイト SDK から受信したすべてのイベントは、オブジェクトの`EventStack`形式で取得されます。 このスタックの最後のエントリは、現在処理中のイベントです。 最後のエントリの前にあるエントリは、現在のイベントの親階層です。 C++ ビルドインサイトで使用されるイベント モデルの詳細については、[イベントテーブル](../event-table.md)を参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -45,15 +45,15 @@ public:
 
 ### <a name="constructors"></a>コンストラクター
 
-[EventStack](#event-stack)
+[イベントスタック](#event-stack)
 
 ### <a name="functions"></a>関数
 
-[Back](#back)
-[operator []](#subscript-operator)
+[バック](#back)
+[演算子[]](#subscript-operator)
 [サイズ](#size)
 
-## <a name="back"></a>戻る
+## <a name="back"></a><a name="back"></a>戻る
 
 ```cpp
 RawEvent Back() const;
@@ -61,9 +61,9 @@ RawEvent Back() const;
 
 ### <a name="return-value"></a>戻り値
 
-スタックの最後のエントリを表す[Rawevent](raw-event.md)オブジェクト。 イベントスタックの最後のエントリは、トリガーされたイベントです。
+スタックの最後のエントリを表す[RawEvent](raw-event.md)オブジェクト。 イベント スタックの最後のエントリは、トリガーされたイベントです。
 
-## <a name="event-stack"></a>EventStack
+## <a name="eventstack"></a><a name="event-stack"></a>イベントスタック
 
 ```cpp
 EventStack(const EVENT_COLLECTION_DATA& data);
@@ -72,13 +72,13 @@ EventStack(const EVENT_COLLECTION_DATA& data);
 ### <a name="parameters"></a>パラメーター
 
 *データ*\
-`EventStack` の作成元の生データ。
+が作成`EventStack`される生データ。
 
 ### <a name="remarks"></a>解説
 
-通常、`EventStack` オブジェクトを作成する必要はありません。 これらは、分析または再C++ログセッション中にイベントが処理されるときに、BUILD Insights SDK によって提供されます。
+通常、オブジェクトを自分で構築`EventStack`する必要はありません。 分析または再ログ セッション中にイベントが処理されるときに、C++ ビルドインサイト SDK によって提供されます。
 
-## <a name="subscript-operator"></a>演算子 []
+## <a name="operator"></a><a name="subscript-operator"></a>演算子[]
 
 ```cpp
 RawEvent operator[] (size_t index) const;
@@ -87,13 +87,13 @@ RawEvent operator[] (size_t index) const;
 ### <a name="parameters"></a>パラメーター
 
 *インデックス*\
-イベントスタック内でアクセスする要素のインデックス。
+イベント スタックでアクセスする要素のインデックス。
 
 ### <a name="return-value"></a>戻り値
 
-イベントスタック内の*インデックス*によって示される位置に格納されているイベントを表す[rawevent](raw-event.md)オブジェクト。
+イベント スタック内の*インデックス*で示される位置に格納されているイベントを表す[RawEvent](raw-event.md)オブジェクト。
 
-## <a name="size"></a>幅
+## <a name="size"></a><a name="size"></a> サイズ
 
 ```cpp
 size_t Size() const;
@@ -101,6 +101,6 @@ size_t Size() const;
 
 ### <a name="return-value"></a>戻り値
 
-イベントスタックのサイズ。
+イベント スタックのサイズ。
 
 ::: moniker-end

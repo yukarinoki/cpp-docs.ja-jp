@@ -4,12 +4,12 @@ ms.description: Visual Studio provides several predefined build configurations f
 ms.date: 06/12/2019
 helpviewer_keywords:
 - CMake redefined configurations
-ms.openlocfilehash: c403f788b5a7941876ecafeb2fe0539f8bcc993a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a88b5ebbf05e11dc05e012c5bfbcc718d3742fb3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80169839"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81323013"
 ---
 # <a name="cmake-predefined-build-configurations"></a>CMake 定義済みビルド構成
 
@@ -22,6 +22,7 @@ CMake プロジェクトは、Visual Studio 2017 以降でサポートされて�
 ::: moniker range=">=vs-2017"
 
 CMake プロジェクトでは、ビルド構成は CMakeSettings.json ファイルに格納されます。 メイン ツールバーで [ビルド構成] ドロップダウンから **[構成の管理]** を選択すると、Visual Studio で使用できる既定の CMake 構成を示すダイアログが表示されます。
+
 - x86 デバッグ
 - x86 リリース
 - x64 デバッグ
@@ -33,7 +34,7 @@ CMake プロジェクトでは、ビルド構成は CMakeSettings.json ファイ
 - MinGW デバッグ
 - MinGW リリース
 
-構成を選択すると、プロジェクトのルートフォルダーにある*Cmakesettings. json*ファイルに追加されます。 その後、それを使用してプロジェクトをビルドすることができます。 構成プロパティの詳細については、「 [Cmakesettings reference](cmakesettings-reference.md)」を参照してください。
+構成を選択すると、プロジェクトのルート フォルダーの*CMakeSettings.json*ファイルに追加されます。 その後、それを使用してプロジェクトをビルドすることができます。 構成プロパティの詳細については、「 [CMakeSettings リファレンス 」を参照してください](cmakesettings-reference.md)。
 
 ## <a name="linux-predefined-build-configurations"></a>Linux 定義済みビルド構成:
 
@@ -358,25 +359,25 @@ You can use these optional settings for more control:
 CMake プロジェクトでは、ビルド構成は CMakeSettings.json ファイルに格納されます。 メイン ツールバーで [ビルド構成] ドロップダウンから **[構成の管理]** を選択すると、Visual Studio で使用できる既定の CMake 構成を示すダイアログが表示されます。
 
 - x86 デバッグ
-- x86 Clang デバッグ
+- x86 クランデバッグ
 - x86 リリース
-- x86 Clang リリース
+- x86 クランリリース
 - x64 デバッグ
 - x64 Clang デバッグ
 - x64 リリース
-- x64 Clang リリース
+- x64 クランリリース
 - Linux デバッグ
 - Linux リリース
-- Linux-Clang-Debug
-- Linux-Clang-Release
+- Linux-クランデバッグ
+- Linux-クランリリース
 - 既存のキャッシュ (リモート)
 - 既存のキャッシュ
 - MinGW デバッグ
 - MinGW リリース
 - WSL デバッグ
 - WSL リリース
-- WSL Clang デバッグ
-- WSL Clang リリース
+- WSL クラン デバッグ
+- WSL クラン リリース
 - Clang
 
 構成を選択すると、それがプロジェクトのルート フォルダー内の CMakeSettings.json ファイルに追加されます。 その後、それを使用してプロジェクトをビルドすることができます。
@@ -694,9 +695,10 @@ CMake プロジェクトでは、ビルド構成は CMakeSettings.json ファイ
 ```
 
 ::: moniker-end
-## <a name="see-also"></a>参照
 
-[Visual Studio の CMake プロジェクト](cmake-projects-in-visual-studio.md)<br/>
+## <a name="see-also"></a>関連項目
+
+[C メイク プロジェクトのビジュアル スタジオ](cmake-projects-in-visual-studio.md)<br/>
 [Linux CMake プロジェクトを構成する](../linux/cmake-linux-project.md)<br/>
 [リモートの Linux コンピューターに接続する](../linux/connect-to-your-remote-linux-computer.md)<br/>
 [CMake デバッグ セッションを構成する](configure-cmake-debugging-sessions.md)<br/>

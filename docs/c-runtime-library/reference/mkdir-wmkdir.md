@@ -1,9 +1,11 @@
 ---
 title: _mkdir、_wmkdir
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wmkdir
 - _mkdir
+- _o__mkdir
+- _o__wmkdir
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +39,12 @@ helpviewer_keywords:
 - _mkdir function
 - _tmkdir function
 ms.assetid: 7f22d01d-63a5-4712-a6e7-d34878b2d840
-ms.openlocfilehash: 0d2fd45b566909a61a04a5cabb34c74b9b253430
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 56e525dd765ff2594eebcfe9a0aed37670b12e3e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951716"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81338784"
 ---
 # <a name="_mkdir-_wmkdir"></a>_mkdir、_wmkdir
 
@@ -61,24 +64,26 @@ int _wmkdir(
 
 ### <a name="parameters"></a>パラメーター
 
-*dirname*<br/>
+*Dirname*<br/>
 新しいディレクトリのパス。
 
 ## <a name="return-value"></a>戻り値
 
-新しいディレクトリが作成された場合、これらの各関数は値 0 を返します。 エラーが発生した場合、この関数は-1 を返し、 **errno**を次のように設定します。
+新しいディレクトリが作成された場合、これらの各関数は値 0 を返します。 エラーの場合、関数は -1 を返し **、errno**を次のように設定します。
 
-**Eexist** *Dirname*が既存のファイル、ディレクトリ、またはデバイスの名前であるため、ディレクトリは作成されませんでした。
+**Eexist***Dirname*が既存のファイル、ディレクトリ、またはデバイスの名前であるため、ディレクトリは作成されませんでした。
 
-**ENOENT**パスが見つかりませんでした。
+**エノエント**パスが見つかりませんでした。
 
-リターン コードの詳細については、「 [_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
+リターン コードの詳細については、「[_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**Mkdir**関数は、指定された dirname を持つ新しいディレクトリを作成し*ます。* **mkdir**は呼び出しごとに1つの新しいディレクトリを作成できます。そのため、 *dirname*の最後のコンポーネントのみが新しいディレクトリに名前を指定できます。 mkdir はパス区切り記号を変換しません **(_l)** Windows NT では、バックスラッシュ (\\) とスラッシュ (/) のどちらもランタイム ルーチンの文字列内の有効なパス区切り記号です。
+**_mkdir**関数は、指定された dirname を持つ新しいディレクトリを作成*します。* **_mkdir**呼び出しごとに新しいディレクトリを 1 つだけ作成できるため *、dirname*の最後のコンポーネントだけが新しいディレクトリに名前を付けることができます。 **_mkdir**はパス区切り文字を変換しません。 Windows NT では、バックスラッシュ (\\) とスラッシュ (/) のどちらもランタイム ルーチンの文字列内の有効なパス区切り記号です。
 
-**_wmkdir**のワイド文字バージョン**です。** **_wmkdir**への*dirname*引数は、ワイド文字列です。 それ以外では、 **_wmkdir**と**mkdir**は同じように動作します。
+**_wmkdir**は **_mkdir**のワイド文字バージョンです。**_wmkdir**の*dirname*引数はワイド文字列です。 **_wmkdir**と **_mkdir**は同じように動作します。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -88,12 +93,12 @@ int _wmkdir(
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**_mkdir**|\<direct.h>|
 |**_wmkdir**|\<direct.h> または \<wchar.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="libraries"></a>ライブラリ
 
@@ -124,7 +129,7 @@ int main( void )
 }
 ```
 
-### <a name="sample-output"></a>出力例
+### <a name="sample-output"></a>サンプル出力
 
 ```Output
 Directory '\testtmp' was successfully created

@@ -1,8 +1,9 @@
 ---
 title: _getdrive
-ms.date: 09/19/2019
+ms.date: 4/2/2020
 api_name:
 - _getdrive
+- _o__getdrive
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +30,12 @@ helpviewer_keywords:
 - disk drives
 - _getdrive function
 ms.assetid: e40631a0-8f1a-4897-90ac-e1037ff30bca
-ms.openlocfilehash: 94d6c15270827cf61ec6086de8fa11251b435e2c
-ms.sourcegitcommit: f907b15f50a6b945d0b87c03af0050946157d701
+ms.openlocfilehash: 239bad8ef492396d713d81611e8d4c00da1697af
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71158758"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81344332"
 ---
 # <a name="_getdrive"></a>_getdrive
 
@@ -50,15 +52,19 @@ int _getdrive( void );
 
 ## <a name="return-value"></a>戻り値
 
-現在の (既定の) ドライブ (1=A、2=B など) を返します。 戻り値が0の場合は、現在のパスの先頭が文字のドライブ名ではないことを意味します (UNC パスなど)。 または、内部バッファーの割り当てに失敗したことを意味します。 内部割り当てが失敗した`errno`場合、は ENOMEM に設定されます。
+現在の (既定の) ドライブ (1=A、2=B など) を返します。 戻り値が 0 の場合、現在のパスは、UNC パスなどの文字ドライブ名で始まりません。 または、内部バッファ割り当てが失敗したことを意味します。 内部割り振りが`errno`失敗した場合は、ENOMEM に設定されます。
 
-## <a name="requirements"></a>要件
+## <a name="remarks"></a>解説
 
-|ルーチンによって返される値|必須ヘッダー|
+既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+
+## <a name="requirements"></a>必要条件
+
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**_getdrive**|\<direct.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="example"></a>例
 

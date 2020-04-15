@@ -13,16 +13,16 @@ helpviewer_keywords:
 - J compiler option [C++]
 - default char type is unsigned
 ms.assetid: 50973667-6638-491e-9c41-bff73acae19f
-ms.openlocfilehash: ed296d339949814dbd796bb5d8e23a406be71c69
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7bcf0f2eb2bef08757250999d0a6696b256fb15c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62269402"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81322195"
 ---
 # <a name="j-default-char-type-is-unsigned"></a>/J (既定の char 型の unsigned への変更)
 
-既定値が変更`char`から入力`signed char`に`unsigned char`、および`char`型ゼロ拡張は、上位変換するときに、`int`型。
+`char`既定の`signed char`型を から`unsigned char`に変更`char`し、型が`int`拡張されると、その型は 0 拡張されます。
 
 ## <a name="syntax"></a>構文
 
@@ -30,28 +30,28 @@ ms.locfileid: "62269402"
 /J
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-場合、`char`として値を明示的に宣言`signed`、 **/J**オプションには影響しません、および値が符号拡張され、上位変換するときに、`int`型。
+として`char``signed`明示的に宣言されている場合 **、/J**オプションは`int`、その値に影響を与えません。
 
-**/J**オプション定義`_CHAR_UNSIGNED`で使用される`#ifndef`で既定値の範囲を定義しており、LIMITS.h ファイル`char`型。
+**/J**オプションは`_CHAR_UNSIGNED`、LIMITS.h`#ifndef`ファイルで使用`char`される 、 既定の型の範囲を定義するために定義します。
 
-ANSI C および C++ での特定の実装が必要ありません、`char`型。 このオプションは、文字データ、最終的に英語以外の言語に翻訳されますを使用している場合に便利です。
+ANSI C および C++ では、型の`char`特定の実装は必要ありません。 このオプションは、最終的に英語以外の言語に翻訳される文字データを操作する場合に便利です。
 
 > [!NOTE]
->  ATL と MFC でこのコンパイラ オプションを使用する場合は、エラーを生成する可能性があります。 定義することによってこのエラーを無効にすることが`_ATL_ALLOW_CHAR_UNSIGNED`、この回避策はサポートされていないとが常に機能しません。
+> ATL/MFC でこのコンパイラ オプションを使用すると、エラーが生成されることがあります。 このエラーを定義することで無効に`_ATL_ALLOW_CHAR_UNSIGNED`できますが、この回避策はサポートされておらず、常に機能するとは限りません。
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
 
-1. **ソリューション エクスプローラー**で、プロジェクトのショートカット メニューを開き、 **[プロパティ]** をクリックします。
+1. **ソリューション エクスプローラ**で、プロジェクトのショートカット メニューを開き、[**プロパティ]** をクリックします。
 
-1. プロジェクトで**プロパティ ページ**] ダイアログ ボックスで、下の左ペインで**構成プロパティ**、展開**C/C++** し、[**コマンドライン**.
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスの左側のウィンドウで、[**構成プロパティ]** の下の **[C/C++]** を展開し、[**コマンド ライン**] を選択します。
 
-1. **追加オプション**ウィンドウで、指定、 **/J**コンパイラ オプション。
+1. [**追加オプション]** ペインで **、/J**コンパイラ オプションを指定します。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには
 
-- 以下を参照してください。<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.DefaultCharIsUnsigned%2A>
+- 「<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.DefaultCharIsUnsigned%2A>」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

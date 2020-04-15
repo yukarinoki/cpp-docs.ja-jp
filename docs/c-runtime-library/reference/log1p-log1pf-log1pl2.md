@@ -1,10 +1,13 @@
 ---
 title: log1p、log1pf、log1pl2
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - log1p
 - log1pf
 - log1pl
+- _o_log1p
+- _o_log1pf
+- _o_log1pl
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +37,12 @@ helpviewer_keywords:
 - log1pf function
 - log1pl function
 ms.assetid: a40d965d-b4f6-42f4-ba27-2395546f7c12
-ms.openlocfilehash: aad6675a832e1715c505026fe11ffe77f1f6d275
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b4e077f5b806dbe38ed4a4f4e8eef0259170cb7e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953216"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81341811"
 ---
 # <a name="log1p-log1pf-log1pl"></a>log1p、log1pf、log1pl
 
@@ -70,43 +74,45 @@ long double log1pl(
 
 ### <a name="parameters"></a>パラメーター
 
-*x*<br/>
+*X*<br/>
 浮動小数点引数。
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合は、(*x* + 1) の自然 (底*e*) ログを返します。
+成功した場合は、自然 ( 底*e*) のログ (*x* + 1 ) を返します。
 
 それ以外の場合は、次の値のいずれかを返します。
 
 |入力|結果|SEH 例外|errno|
 |-----------|------------|-------------------|-----------|
 |+inf|+inf|||
-|非正規化数|入力と同じ値。|UNDERFLOW||
-|±0|入力と同じ値。|||
+|非正規化数|入力と同じ|UNDERFLOW||
+|±0|入力と同じ|||
 |-1|-inf|DIVBYZERO|ERANGE|
 |< -1|nan|INVALID|EDOM|
 |-inf|nan|INVALID|EDOM|
-|±SNaN|入力と同じ値。|INVALID||
-|± QNaN、不定|入力と同じ値。|||
+|±SNaN|入力と同じ|INVALID||
+|±QNaN、無期限|入力と同じ|||
 
-*X* =-1 の場合、 **ERRNO**値は ERANGE に設定されます。 *X* <-1 の場合、 **Errno**値は**EDOM**に設定されます。
+*x* = -1 の場合 **、errno**値は ERANGE に設定されます。 *x*が -1 の場合 **、errno**値は**EDOM**に設定<。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-*X*が0に近い場合、 **log1p**関数`log(x + 1)`はを使用するよりも正確な場合があります。
+**log1p**関数は`log(x + 1)`*、x*が 0 に近い場合よりも正確である可能性があります。
 
-オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **log1p** を受け取って返す **float** と **long** **double**型。 C プログラムでは、 **log1p**は常に**double**を受け取り、返します。
+C++ ではオーバーロードが可能なため **、float**型と**長い****ダブル**型を取得および戻す**log1p**のオーバーロードを呼び出すことができます。 C プログラムでは **、log1p**は常に二**重**を受け取って返します。
 
-*X*が自然数の場合、この関数は (*x* -1) の階乗の対数を返します。
+*x*が自然数の場合、この関数は *、(x* - 1) の階乗の対数を返します。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|関数|C ヘッダー|C++ ヘッダー|
+|機能|C ヘッダー|C++ ヘッダー|
 |--------------|--------------|------------------|
-|**log1p**、 **log1pf**、 **log1pl**|\<math.h>|\<cmath>|
+|**ログ 1p**,**ログ1pf**,**ログ1pl**|\<math.h>|\<cmath>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
