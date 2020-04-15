@@ -6,25 +6,25 @@ helpviewer_keywords:
 - status bars [MFC], tool tips
 - CStatusBarCtrl class [MFC], tool tips
 ms.assetid: a77597a7-43ef-4b8f-87bc-a8ea1dc63dc3
-ms.openlocfilehash: a607a5fb8c9470df42d12c771865b924891b2dac
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 29d326c708743424686d616bbaf172ccd72481ce
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442541"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374695"
 ---
 # <a name="using-tooltips-in-a-cstatusbarctrl-object"></a>CStatusBarCtrl オブジェクトでのツール ヒントの使い方
 
-ステータスバーコントロールのツールヒントを有効にするには、SBT_TOOLTIPS スタイルを使用して `CStatusBarCtrl` オブジェクトを作成します。
+ステータス バー コントロールのツールヒントを有効にするには、SBT_TOOLTIPS スタイルを使用して`CStatusBarCtrl`オブジェクトを作成します。
 
 > [!NOTE]
->  `CStatusBar` オブジェクトを使用してステータスバーを実装している場合は、`CStatusBar::CreateEx` 関数を使用します。 埋め込み `CStatusBarCtrl` オブジェクトの追加のスタイルを指定できます。
+> オブジェクトを使用してステータス`CStatusBar`バーを実装する場合は、この`CStatusBar::CreateEx`関数を使用します。 このダイアログ ボックスでは、埋め込み`CStatusBarCtrl`オブジェクトの追加のスタイルを指定できます。
 
-`CStatusBarCtrl` オブジェクトが正常に作成されたら、 [CStatusBarCtrl:: SetTipText](../mfc/reference/cstatusbarctrl-class.md#settiptext)と[CStatusBarCtrl:: GetTipText](../mfc/reference/cstatusbarctrl-class.md#gettiptext)を使用して、特定のペインのヒントテキストを設定および取得します。
+オブジェクトが`CStatusBarCtrl`正常に作成されたら、特定のペインのヒント テキストを設定および取得するには[、CStatusBarCtrl:::セットヒント](../mfc/reference/cstatusbarctrl-class.md#settiptext)テキストと[CStatusBarCtrl を](../mfc/reference/cstatusbarctrl-class.md#gettiptext)使用します。
 
-ツールヒントが設定されると、パーツにアイコンが表示され、テキストがない場合、またはすべてのテキストがそのパーツ内に表示されない場合にのみ表示されます。 ツールヒントは、簡易モードではサポートされていません。
+ツール ヒントを設定すると、パーツにアイコンが付いており、テキストが表示されていない場合、またはすべてのテキストをパーツ内に表示できない場合にのみ表示されます。 ツール ヒントは、単純モードではサポートされていません。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [CStatusBarCtrl の使い方](../mfc/using-cstatusbarctrl.md)<br/>
 [コントロール](../mfc/controls-mfc.md)

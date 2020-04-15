@@ -1,5 +1,5 @@
 ---
-title: CHeapPtrBase クラス
+title: クラス
 ms.date: 11/04/2016
 f1_keywords:
 - CHeapPtrBase
@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - CHeapPtrBase class
 ms.assetid: 501ac1b2-fb34-4c72-b7e6-a4f1fc8fda21
-ms.openlocfilehash: 558c9bd78257a06e123d47a0110375e7f448f90d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 62cabf281473cdf21fe260fa23082bc55f339849
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245609"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81326901"
 ---
-# <a name="cheapptrbase-class"></a>CHeapPtrBase クラス
+# <a name="cheapptrbase-class"></a>クラス
 
-このクラスは、いくつかのヒープのスマート ポインター クラスの基礎を形成します。
+このクラスは、いくつかのスマート ヒープ ポインター クラスの基礎を形成します。
 
 > [!IMPORTANT]
->  このクラスとそのメンバーは、Windows ランタイムで実行するアプリケーションでは使用できません。
+> このクラスとそのメンバーは、Windows ランタイムで実行されるアプリケーションでは使用できません。
 
 ## <a name="syntax"></a>構文
 
@@ -37,10 +37,10 @@ class CHeapPtrBase
 #### <a name="parameters"></a>パラメーター
 
 *T*<br/>
-ヒープに格納されるオブジェクトの種類。
+ヒープに格納されるオブジェクト型。
 
 *アロケーター*<br/>
-メモリの割り当ては、使用するクラス。 既定では、CRT ルーチンは割り当てし、メモリの解放に使用されます。
+使用するメモリ割り当てクラス。 デフォルトでは、CRT ルーチンは、メモリの割り当てと解放に使用されます。
 
 ## <a name="members"></a>メンバー
 
@@ -48,41 +48,41 @@ class CHeapPtrBase
 
 |名前|説明|
 |----------|-----------------|
-|[CHeapPtrBase:: ~ CHeapPtrBase](#dtor)|デストラクターです。|
+|[ヒーププターベース::~Cヒーププターベース](#dtor)|デストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CHeapPtrBase::AllocateBytes](#allocatebytes)|メモリを割り当てるには、このメソッドを呼び出します。|
-|[CHeapPtrBase::Attach](#attach)|既存のポインターの所有権を取得するには、このメソッドを呼び出します。|
-|[CHeapPtrBase::Detach](#detach)|ポインターの所有権を解放するには、このメソッドを呼び出します。|
-|[CHeapPtrBase::Free](#free)|指すオブジェクトを削除するには、このメソッドを呼び出して、`CHeapPtrBase`します。|
-|[CHeapPtrBase::ReallocateBytes](#reallocatebytes)|メモリを再割り当てするには、このメソッドを呼び出します。|
+|[バイト数の割り当て](#allocatebytes)|メモリを割り当てるには、このメソッドを呼び出します。|
+|[Cヒーププターベース::アタッチ](#attach)|既存のポインターの所有権を取得します。|
+|[クヒーププターベース::Dエタッハ](#detach)|ポインターの所有権を解放します。|
+|[ヒーププターベース::無料](#free)|によって指されているオブジェクトを削除`CHeapPtrBase`します。|
+|[バイトの再割り当て](#reallocatebytes)|メモリを再割り当てします。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
 |名前|説明|
 |----------|-----------------|
-|[CHeapPtrBase::operator T *](#operator_t_star)|キャスト演算子です。|
-|[CHeapPtrBase::operator (& a)](#operator_amp)|& 演算子。|
-|[CHeapPtrBase::operator -> します。](#operator_ptr)|メンバーへのポインター演算子。|
+|[Cヒーププターベース::演算子 T*](#operator_t_star)|キャスト演算子。|
+|[cヒーププターベース::演算子&](#operator_amp)|&amp; 演算子。|
+|[クヒーププターベース::演算子 ->](#operator_ptr)|メンバーへのポインター演算子。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
 |名前|説明|
 |----------|-----------------|
-|[CHeapPtrBase::m_pData](#m_pdata)|ポインターのデータ メンバー変数です。|
+|[ヒーププターベース::m_pData](#m_pdata)|ポインター データ メンバー変数。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-このクラスは、いくつかのヒープのスマート ポインター クラスの基礎を形成します。 たとえば、派生クラス[CHeapPtr](../../atl/reference/cheapptr-class.md)と[CComHeapPtr](../../atl/reference/ccomheapptr-class.md)、独自のコンス トラクターと演算子を追加します。 これらのクラスの実装例を参照してください。
+このクラスは、いくつかのスマート ヒープ ポインター クラスの基礎を形成します。 派生クラスは、[たとえば CHeapPtr や CComHeapPtr](../../atl/reference/cheapptr-class.md)に独自のコンストラクターと演算子を追加します。 [CComHeapPtr](../../atl/reference/ccomheapptr-class.md) 実装例については、これらのクラスを参照してください。
 
 ## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlcore.h
 
-##  <a name="allocatebytes"></a>  CHeapPtrBase::AllocateBytes
+## <a name="cheapptrbaseallocatebytes"></a><a name="allocatebytes"></a>バイト数の割り当て
 
 メモリを割り当てるには、このメソッドを呼び出します。
 
@@ -92,20 +92,20 @@ bool AllocateBytes(size_t nBytes) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*nBytes*<br/>
+*Nbytes*<br/>
 割り当てるメモリのバイト数。
 
 ### <a name="return-value"></a>戻り値
 
-True を返します、メモリが正常に割り当てられたそれ以外の場合。
+メモリが正常に割り当てられた場合は true、それ以外の場合は false を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-場合、デバッグ ビルドで、アサーション エラーが発生、 [CHeapPtrBase::m_pData](#m_pdata)メンバー変数は、現在は既存の値を指します。 つまり、NULL と等しくはありません。
+デバッグ ビルドでは[、CHeapPtrBase::m_pData](#m_pdata)メンバー変数が現在既存の値を指している場合、アサーション エラーが発生します。つまり、NULL と等しくありません。
 
-##  <a name="attach"></a>  CHeapPtrBase::Attach
+## <a name="cheapptrbaseattach"></a><a name="attach"></a>Cヒーププターベース::アタッチ
 
-既存のポインターの所有権を取得するには、このメソッドを呼び出します。
+既存のポインターの所有権を取得します。
 
 ```
 void Attach(T* pData) throw();
@@ -113,16 +113,16 @@ void Attach(T* pData) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*pData*<br/>
-`CHeapPtrBase` This ポインターの所有権を持つオブジェクト。
+*Pdata*<br/>
+オブジェクト`CHeapPtrBase`は、このポインターの所有権を取得します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-ときに、`CHeapPtrBase`オブジェクト ポインターの所有権を取得する、自動的に削除されますポインターと割り当てられたデータ スコープ外になったときにします。
+オブジェクトが`CHeapPtrBase`ポインターの所有権を取得すると、ポインターと割り当てられたデータがスコープ外に出ると、そのオブジェクトは自動的に削除されます。
 
-場合、デバッグ ビルドで、アサーション エラーが発生、 [CHeapPtrBase::m_pData](#m_pdata)メンバー変数は、現在は既存の値を指します。 つまり、NULL と等しくはありません。
+デバッグ ビルドでは[、CHeapPtrBase::m_pData](#m_pdata)メンバー変数が現在既存の値を指している場合、アサーション エラーが発生します。つまり、NULL と等しくありません。
 
-##  <a name="dtor"></a>  CHeapPtrBase::~CHeapPtrBase
+## <a name="cheapptrbasecheapptrbase"></a><a name="dtor"></a>ヒーププターベース::~Cヒーププターベース
 
 デストラクターです。
 
@@ -130,13 +130,13 @@ void Attach(T* pData) throw();
 ~CHeapPtrBase() throw();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-割り当てられているすべてのリソースを解放します。
+割り当てられたすべてのリソースを解放します。
 
-##  <a name="detach"></a>  CHeapPtrBase::Detach
+## <a name="cheapptrbasedetach"></a><a name="detach"></a>クヒーププターベース::Dエタッハ
 
-ポインターの所有権を解放するには、このメソッドを呼び出します。
+ポインターの所有権を解放します。
 
 ```
 T* Detach() throw();
@@ -146,37 +146,37 @@ T* Detach() throw();
 
 ポインターのコピーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-ポインターの所有権を解放、 [CHeapPtrBase::m_pData](#m_pdata)メンバー変数に NULL ポインターのコピーを返します。
+ポインターの所有権を解放し[、CHeapPtrBase::m_pData](#m_pdata)メンバー変数を NULL に設定し、ポインターのコピーを返します。
 
-##  <a name="free"></a>  CHeapPtrBase::Free
+## <a name="cheapptrbasefree"></a><a name="free"></a>ヒーププターベース::無料
 
-指すオブジェクトを削除するには、このメソッドを呼び出して、`CHeapPtrBase`します。
+によって指されているオブジェクトを削除`CHeapPtrBase`します。
 
 ```
 void Free() throw();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-によって指される、オブジェクト、`CHeapPtrBase`が解放されると、 [CHeapPtrBase::m_pData](#m_pdata)メンバー変数が NULL に設定されます。
+が指すオブジェクト`CHeapPtrBase`が解放され[、CHeapPtrBase::m_pData](#m_pdata)メンバー変数が NULL に設定されます。
 
-##  <a name="m_pdata"></a>  CHeapPtrBase::m_pData
+## <a name="cheapptrbasem_pdata"></a><a name="m_pdata"></a>ヒーププターベース::m_pData
 
-ポインターのデータ メンバー変数です。
+ポインター データ メンバー変数。
 
 ```
 T* m_pData;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメンバー変数は、ポインターの情報を保持します。
+このメンバー変数は、ポインター情報を保持します。
 
-##  <a name="operator_amp"></a>  CHeapPtrBase::operator &amp;
+## <a name="cheapptrbaseoperator-amp"></a><a name="operator_amp"></a>Cヒーププターベース::演算子&amp;
 
-& 演算子。
+&amp; 演算子。
 
 ```
 T** operator&() throw();
@@ -184,9 +184,9 @@ T** operator&() throw();
 
 ### <a name="return-value"></a>戻り値
 
-指すオブジェクトのアドレスを返して、`CHeapPtrBase`オブジェクト。
+オブジェクトが指すオブジェクトのアドレスを`CHeapPtrBase`返します。
 
-##  <a name="operator_ptr"></a>  CHeapPtrBase::operator -&gt;
+## <a name="cheapptrbaseoperator--gt"></a><a name="operator_ptr"></a>Cヒーププターベース::演算子 -&gt;
 
 メンバーへのポインター演算子。
 
@@ -196,27 +196,27 @@ T* operator->() const throw();
 
 ### <a name="return-value"></a>戻り値
 
-値を返します、 [CHeapPtrBase::m_pData](#m_pdata)メンバー変数。
+メンバー変数の値[m_pDataを](#m_pdata)返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この演算子によって示されるクラスのメソッドを呼び出すを使用して、`CHeapPtrBase`オブジェクト。 場合、デバッグ ビルドで、アサーション エラーが発生、 `CHeapPtrBase` NULL を指します。
+この演算子は、オブジェクトが指すクラスのメソッドを`CHeapPtrBase`呼び出すために使います。 デバッグ ビルドでは、NULL を指すとアサーション`CHeapPtrBase`エラーが発生します。
 
-##  <a name="operator_t_star"></a>  CHeapPtrBase::operator T *
+## <a name="cheapptrbaseoperator-t"></a><a name="operator_t_star"></a>Cヒーププターベース::演算子 T*
 
-キャスト演算子です。
+キャスト演算子。
 
 ```
 operator T*() const throw();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-返します[CHeapPtrBase::m_pData](#m_pdata)します。
+を返します[m_pData。](#m_pdata)
 
-##  <a name="reallocatebytes"></a>  CHeapPtrBase::ReallocateBytes
+## <a name="cheapptrbasereallocatebytes"></a><a name="reallocatebytes"></a>バイトの再割り当て
 
-メモリを再割り当てするには、このメソッドを呼び出します。
+メモリを再割り当てします。
 
 ```
 bool ReallocateBytes(size_t nBytes) throw();
@@ -224,15 +224,15 @@ bool ReallocateBytes(size_t nBytes) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*nBytes*<br/>
-新しいバイトで、割り当てるメモリ量。
+*Nbytes*<br/>
+割り当てるメモリの新しい量 (バイト単位)。
 
 ### <a name="return-value"></a>戻り値
 
-True を返します、メモリが正常に割り当てられたそれ以外の場合。
+メモリが正常に割り当てられた場合は true、それ以外の場合は false を返します。
 
 ## <a name="see-also"></a>関連項目
 
-[CHeapPtr クラス](../../atl/reference/cheapptr-class.md)<br/>
-[CComHeapPtr クラス](../../atl/reference/ccomheapptr-class.md)<br/>
+[Cヒーププタークラス](../../atl/reference/cheapptr-class.md)<br/>
+[クラス](../../atl/reference/ccomheapptr-class.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

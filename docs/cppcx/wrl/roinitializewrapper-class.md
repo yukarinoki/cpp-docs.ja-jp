@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::RoInitializeWrapper::RoInitializeWrapper, constructor
 - Microsoft::WRL::Wrappers::RoInitializeWrapper::~RoInitializeWrapper, destructor
 ms.assetid: 4055fbe0-63a7-4c06-b5a0-414fda5640e5
-ms.openlocfilehash: b43d5bb2f553d298584ab2ae497c22637d3beb0d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eba9162f17b98d13a9caf956b4f110b89dd81c37
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403205"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371229"
 ---
 # <a name="roinitializewrapper-class"></a>RoInitializeWrapper クラス
 
@@ -30,9 +30,9 @@ Windows ランタイムを初期化します。
 class RoInitializeWrapper;
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-`RoInitializeWrapper` Windows ランタイムを初期化し、操作が成功したかどうかを示す HRESULT を返す便利です。 クラスのデストラクターを呼び出すため、 `::Windows::Foundation::Uninitialize`、インスタンスの`RoInitializeWrapper`グローバルまたは最上位のスコープで宣言する必要があります。
+`RoInitializeWrapper`は、Windows ランタイムを初期化し、操作が成功したかどうかを示す HRESULT を返す便利な方法です。 クラスデストラクターは を`::Windows::Foundation::Uninitialize`呼び出す`RoInitializeWrapper`ため、 のインスタンスは、グローバルスコープまたは最上位のスコープで宣言する必要があります。
 
 ## <a name="members"></a>メンバー
 
@@ -40,14 +40,14 @@ class RoInitializeWrapper;
 
 名前                                                                    | 説明
 ----------------------------------------------------------------------- | -----------------------------------------------------------------
-[RoInitializeWrapper::RoInitializeWrapper](#roinitializewrapper)        | `RoInitializeWrapper` クラスの新しいインスタンスを初期化します。
-[RoInitializeWrapper:: ~ RoInitializeWrapper](#tilde-roinitializewrapper) | 現在のインスタンスを破棄、`RoInitializeWrapper`クラス。
+[ロ初期化ラッパー::ロ初期化ラッパー](#roinitializewrapper)        | `RoInitializeWrapper` クラスの新しいインスタンスを初期化します。
+[ロ初期化ラッパー::~ロ初期化ラッパー](#tilde-roinitializewrapper) | クラスの現在のインスタンスを破棄`RoInitializeWrapper`します。
 
 ### <a name="public-operators"></a>パブリック演算子
 
 名前                                       | 説明
 ------------------------------------------ | ------------------------------------------------------------------------
-[Roinitializewrapper::hresult()](#hresult) | によって生成された HRESULT を取得、`RoInitializeWrapper`コンス トラクター。
+[ラ初期化ラッパー::HRESULT()](#hresult) | コンストラクターによって生成された HRESULT`RoInitializeWrapper`を取得します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -55,19 +55,19 @@ class RoInitializeWrapper;
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** corewrappers.h
+**ヘッダー:** コアラッパー.h
 
-**名前空間:** Microsoft::WRL::Wrappers
+**名前空間:** マイクロソフト::WRL::ラッパー
 
-## <a name="hresult"></a>Roinitializewrapper::hresult()
+## <a name="roinitializewrapperhresult"></a><a name="hresult"></a>ラ初期化ラッパー::HRESULT()
 
-最後のによって生成された HRESULT 値を取得します`RoInitializeWrapper`コンス トラクター。
+最後`RoInitializeWrapper`のコンストラクターによって生成された HRESULT 値を取得します。
 
 ```cpp
 operator HRESULT()
 ```
 
-## <a name="roinitializewrapper"></a>RoInitializeWrapper::RoInitializeWrapper
+## <a name="roinitializewrapperroinitializewrapper"></a><a name="roinitializewrapper"></a>ロ初期化ラッパー::ロ初期化ラッパー
 
 `RoInitializeWrapper` クラスの新しいインスタンスを初期化します。
 
@@ -77,14 +77,14 @@ RoInitializeWrapper(RO_INIT_TYPE flags)
 
 ### <a name="parameters"></a>パラメーター
 
-*flags*<br/>
-RO_INIT_TYPE の列挙体は、Windows ランタイムによって提供されるサポートの 1 つ。
+*フラグ*<br/>
+Windows ランタイムによって提供されるサポートを指定する、RO_INIT_TYPE列挙の 1 つ。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`RoInitializeWrapper`クラスを呼び出す`Windows::Foundation::Initialize(flags)`します。
+クラス`RoInitializeWrapper`が を`Windows::Foundation::Initialize(flags)`呼び出します。
 
-## <a name="tilde-roinitializewrapper"></a>RoInitializeWrapper:: ~ RoInitializeWrapper
+## <a name="roinitializewrapperroinitializewrapper"></a><a name="tilde-roinitializewrapper"></a>ロ初期化ラッパー::~ロ初期化ラッパー
 
 Windows ランタイムの初期化を解除します。
 
@@ -92,6 +92,6 @@ Windows ランタイムの初期化を解除します。
 ~RoInitializeWrapper()
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`RoInitializeWrapper`クラスを呼び出す`Windows::Foundation::Uninitialize()`します。
+クラス`RoInitializeWrapper`が を`Windows::Foundation::Uninitialize()`呼び出します。

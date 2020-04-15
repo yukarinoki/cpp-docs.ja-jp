@@ -1,5 +1,5 @@
 ---
-title: CComCritSecLock クラス
+title: クラス
 ms.date: 11/04/2016
 f1_keywords:
 - CComCritSecLock
@@ -10,16 +10,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComCritSecLock class
 ms.assetid: 223152a1-86c3-4ef9-89a7-f455fe791b0e
-ms.openlocfilehash: 045e64504707fa8978c8236b376037d9f57bf12c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 24d141c5b0ec703feadcd7db96da33f9de940dda
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62259808"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81327949"
 ---
-# <a name="ccomcritseclock-class"></a>CComCritSecLock クラス
+# <a name="ccomcritseclock-class"></a>クラス
 
-このクラスは、ロックとクリティカル セクション オブジェクトをロック解除のためのメソッドを提供します。
+このクラスには、クリティカル セクション オブジェクトをロックおよびロック解除するためのメソッドが用意されています。
 
 ## <a name="syntax"></a>構文
 
@@ -29,7 +29,7 @@ template<class TLock> class CComCritSecLock
 
 #### <a name="parameters"></a>パラメーター
 
-*TLock*<br/>
+*トロック*<br/>
 ロックおよびロック解除するオブジェクト。
 
 ## <a name="members"></a>メンバー
@@ -38,25 +38,25 @@ template<class TLock> class CComCritSecLock
 
 |名前|説明|
 |----------|-----------------|
-|[CComCritSecLock::CComCritSecLock](#ctor)|コンストラクターです。|
-|[CComCritSecLock:: ~ CComCritSecLock](#dtor)|デストラクターです。|
+|[クコムクリットセックロック::CComクリットセックロック](#ctor)|コンストラクターです。|
+|[クコムクリットセックロック::~Cコムクリットセックロック](#dtor)|デストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CComCritSecLock::Lock](#lock)|クリティカル セクション オブジェクトをロックするには、このメソッドを呼び出します。|
-|[CComCritSecLock::Unlock](#unlock)|クリティカル セクション オブジェクトのロックを解除するには、このメソッドを呼び出します。|
+|[クコムクリットセックロック::ロック](#lock)|クリティカル セクション オブジェクトをロックします。|
+|[クコムクリットセックロック::ロック解除](#unlock)|クリティカル セクション オブジェクトのロックを解除します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-ロックおよびより安全な方法でオブジェクトをロック解除をこのクラスを使用して、 [CComCriticalSection クラス](../../atl/reference/ccomcriticalsection-class.md)または[CComAutoCriticalSection クラス](../../atl/reference/ccomautocriticalsection-class.md)します。
+このクラスを使用して[、CComCriticalSection クラスまたは CComAutoCriticalSection](../../atl/reference/ccomcriticalsection-class.md)クラス[CComAutoCriticalSection Class](../../atl/reference/ccomautocriticalsection-class.md)よりも安全な方法でオブジェクトをロックおよびロック解除します。
 
 ## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlbase.h
 
-##  <a name="ctor"></a>  CComCritSecLock::CComCritSecLock
+## <a name="ccomcritseclockccomcritseclock"></a><a name="ctor"></a>クコムクリットセックロック::CComクリットセックロック
 
 コンストラクターです。
 
@@ -69,14 +69,14 @@ CComCritSecLock(TLock& cs, bool bInitialLock = true);
 *cs*<br/>
 クリティカル セクション オブジェクト。
 
-*bInitialLock*<br/>
-最初のロックの状態: **true**ロックされていることを意味します。
+*b イニシャルロック*<br/>
+初期ロック状態: **true**はロックされていることを意味します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 クリティカル セクション オブジェクトを初期化します。
 
-##  <a name="dtor"></a>  CComCritSecLock:: ~ CComCritSecLock
+## <a name="ccomcritseclockccomcritseclock"></a><a name="dtor"></a>クコムクリットセックロック::~Cコムクリットセックロック
 
 デストラクターです。
 
@@ -84,13 +84,13 @@ CComCritSecLock(TLock& cs, bool bInitialLock = true);
 ~CComCritSecLock() throw();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 クリティカル セクション オブジェクトのロックを解除します。
 
-##  <a name="lock"></a>  CComCritSecLock::Lock
+## <a name="ccomcritseclocklock"></a><a name="lock"></a>クコムクリットセックロック::ロック
 
-クリティカル セクション オブジェクトをロックするには、このメソッドを呼び出します。
+クリティカル セクション オブジェクトをロックします。
 
 ```
 HRESULT Lock() throw();
@@ -98,25 +98,25 @@ HRESULT Lock() throw();
 
 ### <a name="return-value"></a>戻り値
 
-オブジェクトが正常にロックされた場合、S_OK またはエラーの hresult 値を返します。
+オブジェクトが正常にロックされたかどうかS_OK、またはエラー HRESULT エラーが発生した場合に返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-オブジェクトが既にロックされているデバッグ ビルドでアサート エラーが発生します。
+オブジェクトが既にロックされている場合は、デバッグ ビルドで ASSERT エラーが発生します。
 
-##  <a name="unlock"></a>  CComCritSecLock::Unlock
+## <a name="ccomcritseclockunlock"></a><a name="unlock"></a>クコムクリットセックロック::ロック解除
 
-クリティカル セクション オブジェクトのロックを解除するには、このメソッドを呼び出します。
+クリティカル セクション オブジェクトのロックを解除します。
 
 ```
 void Unlock() throw();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-オブジェクトは、既にロックされているが、デバッグ ビルドでアサート エラーが発生します。
+オブジェクトが既にロック解除されている場合は、デバッグ ビルドで ASSERT エラーが発生します。
 
 ## <a name="see-also"></a>関連項目
 
-[CComCriticalSection クラス](../../atl/reference/ccomcriticalsection-class.md)<br/>
-[CComAutoCriticalSection クラス](../../atl/reference/ccomautocriticalsection-class.md)
+[クラス](../../atl/reference/ccomcriticalsection-class.md)<br/>
+[クラスの自動変換クラス](../../atl/reference/ccomautocriticalsection-class.md)

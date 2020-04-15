@@ -16,16 +16,16 @@ helpviewer_keywords:
 - std::operator&lt; (map)
 - std::operator&lt;= (map)
 - std::operator== (map)
-ms.openlocfilehash: deb442d0ba1fbd180fdb41b66de73df92bee7fc9
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 1b16028ea4be5303df5c6337260de5098e9c6ed6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79425521"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371035"
 ---
 # <a name="ltmapgt-operators"></a>&lt;map&gt; 演算子
 
-## <a name="op_neq"></a>  operator!=
+## <a name="operator"></a><a name="op_neq"></a>演算子!=
 
 演算子の左辺の map オブジェクトが右辺の map オブジェクトと等しくないかどうかを調べます。
 
@@ -40,7 +40,7 @@ bool operator!=(
 *左*\
 `map` 型オブジェクト。
 
-*右*\
+*そうです*\
 `map` 型オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -90,7 +90,7 @@ The maps m1 and m2 are not equal.
 The maps m1 and m3 are equal.
 ```
 
-## <a name="op_lt"></a> 演算子&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a>演算子&lt;
 
 演算子の左辺の map オブジェクトが右辺の map オブジェクトより小さいかどうかを調べます。
 
@@ -105,7 +105,7 @@ bool operator<(
 *左*\
 `map` 型オブジェクト。
 
-*右*\
+*そうです*\
 `map` 型オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -155,7 +155,7 @@ The map m1 is less than the map m2.
 The map m1 is not less than the map m3.
 ```
 
-## <a name="op_lt_eq"></a>演算子&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a>演算子&lt;=
 
 演算子の左辺の map オブジェクトが右辺の map オブジェクト以下かどうかを調べます。
 
@@ -170,7 +170,7 @@ bool operator<=(
 *左*\
 `map` 型オブジェクト。
 
-*右*\
+*そうです*\
 `map` 型オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -223,7 +223,7 @@ The map m1 is greater than the map m3.
 The map m1 is less than or equal to the map m4.
 ```
 
-## <a name="op_eq_eq"></a>operator = =
+## <a name="operator"></a><a name="op_eq_eq"></a>演算子==
 
 演算子の左辺の map オブジェクトが右辺の map オブジェクトと等しいかどうかを調べます。
 
@@ -238,7 +238,7 @@ bool operator==(
 *左*\
 `map` 型オブジェクト。
 
-*右*\
+*そうです*\
 `map` 型オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -288,7 +288,7 @@ The maps m1 and m2 are not equal.
 The maps m1 and m3 are equal.
 ```
 
-## <a name="op_gt"></a> 演算子&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a>演算子&gt;
 
 演算子の左辺の map オブジェクトが右辺の map オブジェクトより大きいかどうかを調べます。
 
@@ -303,7 +303,7 @@ bool operator>(
 *左*\
 `map` 型オブジェクト。
 
-*右*\
+*そうです*\
 `map` 型オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -352,7 +352,7 @@ The map m1 is greater than the map m3.
 */
 ```
 
-## <a name="op_gt_eq"></a>  演算子&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a>演算子&gt;=
 
 演算子の左辺の map オブジェクトが右辺の map オブジェクト以上かどうかを調べます。
 
@@ -367,7 +367,7 @@ bool operator>=(
 *左*\
 `map` 型オブジェクト。
 
-*右*\
+*そうです*\
 `map` 型オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -420,7 +420,7 @@ Map m1 is greater than or equal to map m3.
 Map m1 is greater than or equal to map m4.
 ```
 
-## <a name="op_neq_multimap"></a>operator! = (multimap)
+## <a name="operator-multimap"></a><a name="op_neq_multimap"></a>演算子!= (マルチマップ)
 
 演算子の左辺の multimap オブジェクトが右辺の multimap オブジェクトと等しくないかどうかをテストします。
 
@@ -435,7 +435,7 @@ bool operator!=(
 *左*\
 `multimap` 型オブジェクト。
 
-*右*\
+*そうです*\
 `multimap` 型オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -485,7 +485,7 @@ The multimaps m1 and m2 are not equal.
 The multimaps m1 and m3 are equal.
 ```
 
-## <a name="op_lt_multimap"></a> 演算子&lt;
+## <a name="operatorlt"></a><a name="op_lt_multimap"></a>演算子&lt;
 
 演算子の左辺の multimap オブジェクトが右辺の multimap オブジェクトより小さいかどうかをテストします。
 
@@ -500,7 +500,7 @@ bool operator<(
 *左*\
 `multimap` 型オブジェクト。
 
-*右*\
+*そうです*\
 `multimap` 型オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -550,7 +550,7 @@ The multimap m1 is less than the multimap m2.
 The multimap m1 is not less than the multimap m3.
 ```
 
-## <a name="op_lt_eq_multimap"></a>  演算子&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq_multimap"></a>演算子&lt;=
 
 演算子の左辺の multimap オブジェクトが右辺の multimap オブジェクト以下かどうかをテストします。
 
@@ -565,7 +565,7 @@ bool operator<=(
 *左*\
 `multimap` 型オブジェクト。
 
-*右*\
+*そうです*\
 `multimap` 型オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -618,7 +618,7 @@ m1 is greater than m3
 m1 is less than or equal to m4
 ```
 
-## <a name="op_eq_eq_multimap"></a>operator = =
+## <a name="operator"></a><a name="op_eq_eq_multimap"></a>演算子==
 
 演算子の左辺の multimap オブジェクトが右辺の multimap オブジェクトと等しいかどうかをテストします。
 
@@ -633,7 +633,7 @@ bool operator==(
 *左*\
 `multimap` 型オブジェクト。
 
-*右*\
+*そうです*\
 `multimap` 型オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -683,7 +683,7 @@ m1 and m2 are not equal
 m1 and m3 are equal
 ```
 
-## <a name="op_gt_multimap"></a> 演算子&gt;
+## <a name="operatorgt"></a><a name="op_gt_multimap"></a>演算子&gt;
 
 演算子の左辺の multimap オブジェクトが右辺の multimap オブジェクトより大きいかどうかをテストします。
 
@@ -698,7 +698,7 @@ bool operator>(
 *左*\
 `multimap` 型オブジェクト。
 
-*右*\
+*そうです*\
 `multimap` 型オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -748,7 +748,7 @@ Multimap m1 is not greater than multimap m2.
 The multimap m1 is greater than the multimap m3.
 ```
 
-## <a name="op_gt_eq_multimap"></a>演算子&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq_multimap"></a>演算子&gt;=
 
 演算子の左辺の multimap オブジェクトが右辺の multimap オブジェクト以上かどうかをテストします。
 
@@ -763,7 +763,7 @@ bool operator>=(
 *左*\
 `multimap` 型オブジェクト。
 
-*右*\
+*そうです*\
 `multimap` 型オブジェクト。
 
 ### <a name="return-value"></a>戻り値

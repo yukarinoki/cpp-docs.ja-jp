@@ -8,22 +8,22 @@ helpviewer_keywords:
 - Visual C, Windows API calls
 - Windows API [MFC], and MFC
 ms.assetid: 334e8efc-f3cc-4018-bc2e-02908b2a39fe
-ms.openlocfilehash: c52b11a7395e3972f8bf9d83501fbafb61e6f4a6
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 1fbd4d332f5ade1cb9415448b138ac5bc838307d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79446377"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372827"
 ---
 # <a name="relationship-to-the-c-language-api"></a>C 言語 API との関係
 
-Microsoft Foundation Class (MFC) ライブラリを Windows の他のクラスライブラリとは別に設定する1つの特性は、C 言語で記述された Windows API に非常に近いマッピングです。 さらに、一般に、Windows API を直接呼び出すことで、クラスライブラリへの呼び出しを自由に混在させることができます。 ただし、この直接アクセスでは、クラスがその API の完全な置換であることを意味します。 開発者は、 [SetCursor](/windows/win32/api/winuser/nf-winuser-setcursor)や[GetSystemMetrics](/windows/win32/api/winuser/nf-winuser-getsystemmetrics)など、一部の Windows 関数に対して直接呼び出しを行う必要がある場合もあります。 Windows 関数は、そのための明確な利点がある場合にのみ、クラスメンバー関数によってラップされます。
+Windows の他のクラス ライブラリとは別に Mfc (MFC) ライブラリを設定する単一の特性は、C 言語で記述された Windows API に非常に近いマッピングです。 また、通常は、クラス ライブラリへの呼び出しを、Windows API への直接呼び出しと自由に混在させることができます。 ただし、この直接アクセスは、クラスがその API の完全な置き換えであることを意味するものではありません。 開発者は[、SetCursor](/windows/win32/api/winuser/nf-winuser-setcursor)や[GetSystemMetrics](/windows/win32/api/winuser/nf-winuser-getsystemmetrics)などの一部の Windows 関数を直接呼び出す必要があります。 Windows 関数は、明確な利点がある場合にのみ、クラス メンバー関数でラップされます。
 
-Windows のネイティブ関数呼び出しを行うことが必要になる場合があるため、C 言語の Windows API ドキュメントにアクセスできる必要があります。 このドキュメントは、Microsoft Visual C++に含まれています。
+ネイティブの Windows 関数呼び出しを行う必要がある場合もあるため、C 言語の Windows API ドキュメントにアクセスする必要があります。 このドキュメントは、Visual C++ に付属しています。
 
 > [!NOTE]
->  MFC ライブラリフレームワークの動作の概要については、「 [Windows 用のアプリケーションを記述するためのクラスの使用](../mfc/using-the-classes-to-write-applications-for-windows.md)」を参照してください。
+> MFC ライブラリ フレームワークの動作の概要については、「[クラスを使用して Windows 用アプリケーションを記述する](../mfc/using-the-classes-to-write-applications-for-windows.md)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[一般的なクラス デザインの考え方](../mfc/general-class-design-philosophy.md)
+[一般クラスデザイン哲学](../mfc/general-class-design-philosophy.md)

@@ -5,32 +5,32 @@ helpviewer_keywords:
 - C++ Standard Library, class template containers
 - containers, C++ Standard Library
 ms.assetid: 8e915ca1-19ba-4f0d-93c8-e2c3bfd638eb
-ms.openlocfilehash: 1119947534c030afaad64e4905e58365ffffd05e
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 01be754dd7b418f64cf495d7563f65b323265df8
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79425077"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376699"
 ---
 # <a name="c-standard-library-containers"></a>C++ 標準ライブラリのコンテナー
 
-標準ライブラリには、関連するオブジェクトのコレクションを格納するさまざまなタイプ セーフ コンテナーが用意されています。 このコンテナーはクラス テンプレートです。コンテナーの変数を宣言する場合は、コンテナーが保持する要素の型を指定します。 コンテナーは、初期化子リストを使用して構築できます。 要素の追加と削除やその他の操作を実行するためのメンバー関数があります。
+標準ライブラリには、関連するオブジェクトのコレクションを格納するさまざまなタイプ セーフ コンテナーが用意されています。 コンテナーはクラス テンプレートです。 コンテナー変数を宣言するときは、コンテナーが保持する要素の型を指定します。 コンテナーは、初期化子リストを使用して構築できます。 要素の追加と削除、およびその他の操作を行うためのメンバー関数があります。
 
-[反復子](../standard-library/iterators.md)を使用して、コンテナー内の要素を反復処理し、個々の要素にアクセスします。 反復子を明示的に使用するには、反復子のメンバー関数、演算子、およびグローバル関数を使用します。 また、range-for ループなどを使用して暗黙的に反復子を使用することもできます。 すべての C++ 標準ライブラリのコンテナーは共通のインターフェイスを持っていますが、各コンテナーには固有の特殊化された反復子が定義されます。
+[反復子](../standard-library/iterators.md)を使用して、コンテナー内の要素を反復処理し、個々の要素にアクセスします。 イテレータは、メンバー関数、演算子、グローバル関数を使用して明示的に使用できます。 また、range-for ループなどを使用して暗黙的に反復子を使用することもできます。 すべての C++ 標準ライブラリのコンテナーは共通のインターフェイスを持っていますが、各コンテナーには固有の特殊化された反復子が定義されます。
 
 コンテナーは、シーケンス コンテナー、連想コンテナー、およびコンテナー アダプターの 3 種類に分けることができます。
 
-## <a name="sequence_containers"></a> シーケンス コンテナー
+## <a name="sequence-containers"></a><a name="sequence_containers"></a> シーケンス コンテナー
 
 シーケンス コンテナーは、挿入された要素の、指定された順序を維持します。
 
 `vector` コンテナーは配列のように動作しますが、必要に応じて自動的に拡張されます。 ランダム アクセスが可能で連続して格納され、長さに関しては高い柔軟性があります。 こうした理由などから、`vector` はほとんどのアプリケーションに推奨されるシーケンス コンテナーです。 使用するシーケンス コンテナーの種類が不明な場合は、ベクターを使用して開始します。 詳細については、「[vector クラス](../standard-library/vector-class.md)」をご覧ください。
 
-`array` コンテナーは `vector` の長所の一部を備えていますが、長さに関する柔軟性は高くありません。 詳細については、[array クラス](../standard-library/array-class-stl.md)に関する記事をご覧ください。
+コンテナー`array`には の長所`vector`がいくつかありますが、長さはそれほど柔軟ではありません。 詳細については、[array クラス](../standard-library/array-class-stl.md)に関する記事をご覧ください。
 
-`deque` (両端キュー) コンテナーは、コンテナーの先頭と末尾で、すばやい挿入および削除を行うことができます。 `vector` のランダム アクセスと長さの柔軟性という利点を備えていますが、連続的ではありません。 詳細については、「[deque クラス](../standard-library/deque-class.md)」をご覧ください。
+`deque` (両端キュー) コンテナーは、コンテナーの先頭と末尾で、すばやい挿入および削除を行うことができます。 ランダム アクセスと柔軟な長さの利点を`vector`共有しますが、連続していません。 詳細については、「[deque クラス](../standard-library/deque-class.md)」をご覧ください。
 
-`list` コンテナーはダブルリンク リストであり、双方向アクセスや、コンテナー内の任意の場所での高速な挿入および削除が可能ですが、コンテナー内の要素にランダムにアクセスすることはできません。 詳細については、「[list クラス](../standard-library/list-class.md)」をご覧ください。
+コンテナ`list`は双方向のリンクリストで、コンテナ内の任意の場所で双方向アクセス、高速挿入、および高速削除を可能にしますが、コンテナ内の要素にランダムにアクセスすることはできません。 詳細については、「[list クラス](../standard-library/list-class.md)」をご覧ください。
 
 `forward_list` コンテナーはシングルリンク リストであり、`list` の前方アクセス バージョンです。 詳細については、「[forward_list クラス](../standard-library/forward-list-class.md)」をご覧ください。
 
@@ -44,11 +44,11 @@ ms.locfileid: "79425077"
 
 `map` と `set` のどちらでも、キーまたは要素の 1 つのインスタンスだけをコンテナーに挿入できます。 要素の複数のインスタンスが必要な場合は、`multimap` または `multiset` を使用します。 順序なしのバージョンは `unordered_multimap` と `unordered_multiset` です。 詳細については、「[multimap クラス](../standard-library/multimap-class.md)」、「[unordered_multimap クラス](../standard-library/unordered-multimap-class.md)」、「[multiset クラス](../standard-library/multiset-class.md)」、および「[unordered_multiset クラス](../standard-library/unordered-multiset-class.md)」をご覧ください。
 
-順序ありのマップおよびセットは双方向反復子をサポートしており、順序なしのバージョンは前方反復子をサポートしています。 詳細については、「 [反復子](../standard-library/iterators.md)」を参照してください。
+順序ありのマップおよびセットは双方向反復子をサポートしており、順序なしのバージョンは前方反復子をサポートしています。 詳細については、「[イテレータ](../standard-library/iterators.md)」を参照してください。
 
 ### <a name="heterogeneous-lookup-in-associative-containers-c14"></a>連想コンテナーの異種ルックアップ (C++14)
 
-順序指定された連想コンテナー (map、multimap、set、multiset) で、異種ルックアップがサポートされるようになりました。これにより、`find()` や `lower_bound()` などのメンバー関数内のキーまたは要素とまったく同じオブジェクト型を渡す必要がなくなりました。 代わりに、オーバーロードされた `operator<` が定義されてキーの型の比較が可能になっている任意の型を渡すことができます。
+順序付けされた連想コンテナ (マップ、マルチマップ、セット、マルチセット) が異種検索を`find()`サポートするようになりました。 `lower_bound()` 代わりに、オーバーロードされた `operator<` が定義されてキーの型の比較が可能になっている任意の型を渡すことができます。
 
 異種ルックアップは、次に示すように、コンテナー変数の宣言時に `std::less<>` または `std::greater<>` の "ダイヤモンド ファンクター" 比較子を指定した場合に、オプトインで有効化されます。
 
@@ -58,7 +58,7 @@ std::set<BigObject, std::less<>> myNewSet;
 
 既定の比較子を使用すると、コンテナーは c++ 11 以前と同じように正確に動作します。
 
-次の例では、`operator<` のユーザーが、各オブジェクトの `std::set` メンバーと比較できる短い文字列を渡すだけでルックアップを実行できるようにするために `BigObject::id` をオーバーロードする方法を示しています。
+次の例では、各オブジェクト`operator<`の`BigObject::id`メンバーと比較できる`std::set`小さな文字列を渡すだけで、a のユーザーがルックアップを実行できるようにするオーバーロード方法を示します。
 
 ```cpp
 #include <set>
@@ -119,7 +119,7 @@ int main()
 //Output: myNewSet element = 62F
 ```
 
-map、multimap、set、multiset 内の次のメンバー関数は、異種ルックアップをサポートするように、あらかじめオーバーロードされています。
+マップ、マルチマップ、セット、およびマルチセットの次のメンバー関数は、異種検索をサポートするためにオーバーロードされています。
 
 1. 検索
 
@@ -141,13 +141,13 @@ map、multimap、set、multiset 内の次のメンバー関数は、異種ルッ
 
 `stack` コンテナーは、LIFO (後入れ先出し) のセマンティクスに従います。 スタックに最後にプッシュされた要素が最初にポップされます。 詳細については、「[stack Class (stack クラス)](../standard-library/stack-class.md)」をご覧ください。
 
-コンテナー アダプターは反復子をサポートしていないため、C++ 標準ライブラリ アルゴリズムでは使用できません。 詳細については、「[アルゴリズム](../standard-library/algorithms.md)」を参照してください。
+コンテナー アダプターは反復子をサポートしていないため、C++ 標準ライブラリ アルゴリズムでは使用できません。 詳細については、「[アルゴリズム](../standard-library/algorithms.md)」をご覧ください。
 
 ## <a name="requirements-for-container-elements"></a>コンテナー要素の要件
 
 一般に、C++ 標準ライブラリ コンテナーに挿入される要素は、コピー可能なものであれば、ほぼどのオブジェクト型でもかまいません。 移動のみ可能な要素 (たとえば、`vector<unique_ptr<T>>` を使用して作成される `unique_ptr<>` など) は、要素をコピーしようとするメンバー関数を呼び出さなければ正常に動作します。
 
-デストラクターは例外のスローを許可されていません。
+デストラクターは例外をスローできません。
 
 この記事の前の方で説明した順序ありの連想コンテナーでは、パブリックな比較演算子が定義されている必要があります。 既定では、演算子は `operator<` ですが、`operator<` とでは動作しない型もサポートされます。
 
@@ -155,22 +155,21 @@ map、multimap、set、multiset 内の次のメンバー関数は、異種ルッ
 
 ## <a name="accessing-container-elements"></a>コンテナー要素へのアクセス
 
-コンテナーの要素には、反復子を使用してアクセスします。 詳細については、「 [反復子](../standard-library/iterators.md)」を参照してください。
+コンテナーの要素には、反復子を使用してアクセスします。 詳細については、「[イテレータ](../standard-library/iterators.md)」を参照してください。
 
 > [!NOTE]
 > また、C++ 標準ライブラリ コレクションに対する反復処理には[範囲ベースの for ループ](../cpp/range-based-for-statement-cpp.md)を使用できます。
 
 ## <a name="comparing-containers"></a>コンテナーの比較
 
-すべてのコンテナーは、同じ要素型を含み、型が同じである 2 つのコンテナーを比較するために、演算子 == をオーバーロードします。 == を使用すると、vector\<string> を別の vector\<string> と比較できますが、vector\<string> を list\<string> と比較することや、vector\<string> を vector\<char*> と比較することはできません。  C++98/03 では、[std::equal](algorithm-functions.md#equal) または [std::mismatch](algorithm-functions.md#mismatch) を使用して、異なるコンテナー型や要素型を比較できます。 C++11 では、[std::is_permutation](algorithm-functions.md#is_permutation) も使用できます。 ただし、このようなケースでは常に、関数は、コンテナーが同じ長さであることを前提としています。 2 つ目の範囲が 1 つ目の範囲より短いと、未定義の動作が発生します。 また、2 番目の範囲が長い場合も、比較は 1 つ目の範囲の末尾を越えて続行されないため、不正確になる可能性があります。
+すべてのコンテナーは、同じ要素型を含み、型が同じである 2 つのコンテナーを比較するために、演算子 == をオーバーロードします。 ==\<を使用すると、ベクトル文字列>を別のベクトル\<文字列>と比較できますが、それを使用して、ベクター\<文字列>をリスト\<文字列>またはベクトル char*>\<と>ベクトル\<文字列と比較することはできません。  C++98/03 では[、std::equal](algorithm-functions.md#equal)または[std:mismatch](algorithm-functions.md#mismatch)を使用して、異なるコンテナー型や要素型を比較できます。 C++ 11 では[、std::is_permutation](algorithm-functions.md#is_permutation)を使用することもできます。 しかし、これらのすべての場合において、関数はコンテナが同じ長さであると仮定します。 2 つ目の範囲が 1 つ目の範囲より短いと、未定義の動作が発生します。 また、2 番目の範囲が長い場合も、比較は 1 つ目の範囲の末尾を越えて続行されないため、不正確になる可能性があります。
 
 ### <a name="comparing-dissimilar-containers-c14"></a>異なるコンテナーの比較 (C++ 14)
 
-C++ 14 以降では、2つの完全な範囲を受け取る `std::equal`、`std::mismatch`、または `std::is_permutation` 関数のオーバーロードのいずれかを使用して、異なるコンテナーや要素の種類を比較できます。 これらのオーバーロードを使用すると、長さが異なるコンテナーを比較できます。 これらのオーバーロードは、ユーザー エラーの影響を受けにくく、長さが異なるコンテナーを比較しているときに一定の時間で false を返すように最適化されています。 そのため、(1) 使用しない明確な理由があるか (2) [std::list](../standard-library/list-class.md) コンテナーを使用している (2 つの範囲の最適化を行うメリットがありません) のでない限り、これらのオーバーロードを使用することをお勧めします。
+C++14 以降では、2 つの完全な範囲を使用する`std::equal`、、または関数のオーバーロードのいずれかを使用して、`std::mismatch`異なるコンテナー`std::is_permutation`や異なる要素の型を比較できます。 これらのオーバーロードを使用すると、長さが異なるコンテナーを比較できます。 これらのオーバーロードは、ユーザー エラーの影響を受けにくく、長さが異なるコンテナーを比較しているときに一定の時間で false を返すように最適化されています。 したがって、明確な理由がない場合、または二重範囲の最適化の恩恵を受けないように[std::list](../standard-library/list-class.md)コンテナーを使用している場合を除き、これらのオーバーロードを使用することをお勧めします。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[Containers](../cpp/containers-modern-cpp.md)\
-[C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)\
-[\<sample container>](../standard-library/sample-container.md)\
+[並列コンテナ](../parallel/concrt/parallel-containers-and-objects.md)\
+[\<サンプルコンテナー>](../standard-library/sample-container.md)\
 [C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)

@@ -15,16 +15,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::ModuleBase::ModuleBase, constructor
 - Microsoft::WRL::Details::ModuleBase::~ModuleBase, destructor
 ms.assetid: edce7591-6893-46f7-94a7-382827775548
-ms.openlocfilehash: 254796c03d25a77da22c48881c086a41ffbfeb82
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 13a8ceef3133e9946524e1fcd02e96535eccd7fc
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403218"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371271"
 ---
 # <a name="modulebase-class"></a>ModuleBase クラス
 
-WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。
+WRL インフラストラクチャをサポートし、コードから直接使用するためのものではありません。
 
 ## <a name="syntax"></a>構文
 
@@ -32,9 +32,9 @@ WRL インフラストラクチャをサポートし、コードから直接使�
 class ModuleBase;
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-基本クラスを表します、[モジュール](module-class.md)クラス。
+[Module](module-class.md)クラスの基本クラスを表します。
 
 ## <a name="members"></a>メンバー
 
@@ -42,15 +42,15 @@ class ModuleBase;
 
 名前                                         | 説明
 -------------------------------------------- | ---------------------------------------------------------
-[Modulebase::modulebase](#modulebase)        | `Module` クラスのインスタンスを初期化します。
-[ModuleBase:: ~ ModuleBase](#tilde-modulebase) | 現在のインスタンスの初期化を解除、`Module`クラス。
+[モジュールベース::モジュールベース](#modulebase)        | `Module` クラスのインスタンスを初期化します。
+[モジュールベース:~モジュールベース](#tilde-modulebase) | クラスの現在のインスタンスを初期化解除`Module`します。
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 名前                                                      | 説明
 --------------------------------------------------------- | -------------------------------------------------------------------------
-[Modulebase::decrementobjectcount](#decrementobjectcount) | 実装された場合、デクリメント オブジェクトの数によって追跡モジュール。
-[ModuleBase::IncrementObjectCount](#incrementobjectcount) | 実装された場合、モジュールによって追跡されるオブジェクトの数をインクリメントします。
+[:Dオブジェクト数](#decrementobjectcount) | 実装されると、モジュールによって追跡されるオブジェクトの数が減ります。
+[オブジェクト数を増やす](#incrementobjectcount) | 実装されると、モジュールによって追跡されるオブジェクトの数が増加します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -58,25 +58,25 @@ class ModuleBase;
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** implements.h
+**ヘッダー:** 実装.h
 
-**名前空間:** Microsoft::WRL::Details
+**名前空間:** マイクロソフト::WRL::Dのテール
 
-## <a name="tilde-modulebase"></a>ModuleBase:: ~ ModuleBase
+## <a name="modulebasemodulebase"></a><a name="tilde-modulebase"></a>モジュールベース:~モジュールベース
 
-WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。
+WRL インフラストラクチャをサポートし、コードから直接使用するためのものではありません。
 
 ```cpp
 virtual ~ModuleBase();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-現在のインスタンスの初期化を解除、`ModuleBase`クラス。
+クラスの現在のインスタンスを初期化解除`ModuleBase`します。
 
-## <a name="decrementobjectcount"></a>Modulebase::decrementobjectcount
+## <a name="modulebasedecrementobjectcount"></a><a name="decrementobjectcount"></a>:Dオブジェクト数
 
-WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。
+WRL インフラストラクチャをサポートし、コードから直接使用するためのものではありません。
 
 ```cpp
 virtual long DecrementObjectCount() = 0;
@@ -84,15 +84,15 @@ virtual long DecrementObjectCount() = 0;
 
 ### <a name="return-value"></a>戻り値
 
-デクリメント操作の前にカウントします。
+減分演算の前のカウント。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-実装された場合、デクリメント オブジェクトの数によって追跡モジュール。
+実装されると、モジュールによって追跡されるオブジェクトの数が減ります。
 
-## <a name="incrementobjectcount"></a>Modulebase::incrementobjectcount
+## <a name="modulebaseincrementobjectcount"></a><a name="incrementobjectcount"></a>オブジェクト数を増やす
 
-WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。
+WRL インフラストラクチャをサポートし、コードから直接使用するためのものではありません。
 
 ```cpp
 virtual long IncrementObjectCount() = 0;
@@ -100,20 +100,20 @@ virtual long IncrementObjectCount() = 0;
 
 ### <a name="return-value"></a>戻り値
 
-インクリメント操作の前にカウントします。
+インクリメント操作の前のカウント。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-実装された場合、モジュールによって追跡されるオブジェクトの数をインクリメントします。
+実装されると、モジュールによって追跡されるオブジェクトの数が増加します。
 
-## <a name="modulebase"></a>Modulebase::modulebase
+## <a name="modulebasemodulebase"></a><a name="modulebase"></a>モジュールベース::モジュールベース
 
-WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。
+WRL インフラストラクチャをサポートし、コードから直接使用するためのものではありません。
 
 ```cpp
 ModuleBase();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 `Module` クラスのインスタンスを初期化します。

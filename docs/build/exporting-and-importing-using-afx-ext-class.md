@@ -11,18 +11,18 @@ helpviewer_keywords:
 - executable files [C++], importing classes
 - exporting DLLs [C++], AFX_EXT_CLASS macro
 ms.assetid: 6b72cb2b-e92e-4ecd-bcab-c335e1d1cfde
-ms.openlocfilehash: bcfdc94e8db80daec227d77c20ecec6b14d5af11
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 95c72f8251a8a59833483eb948709c80a69d03d7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62195330"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81328607"
 ---
-# <a name="exporting-and-importing-using-afxextclass"></a>AFX_EXT_CLASS を使ったエクスポート/インポート
+# <a name="exporting-and-importing-using-afx_ext_class"></a>AFX_EXT_CLASS を使ったエクスポート/インポート
 
-[MFC 拡張 Dll](extension-dlls-overview.md)マクロを使用して**AFX_EXT_CLASS**クラスをエクスポートするには、MFC 拡張 DLL にリンクする実行可能ファイルは、クラスをインポートするマクロを使用します。 **AFX_EXT_CLASS**マクロ、同じヘッダー ファイル、DLL、DLL にリンクする実行可能ファイルで使用できる MFC の拡張機能を構築するために使用します。
+[MFC 拡張 DLL は](extension-dlls-overview.md)、マクロ**AFX_EXT_CLASS**を使用してクラスをエクスポートします。MFC 拡張 DLL にリンクする実行可能ファイルは、マクロを使用してクラスをインポートします。 **AFX_EXT_CLASS**マクロでは、MFC 拡張 DLL のビルドに使用されるヘッダー ファイルと同じヘッダー ファイルを、DLL にリンクする実行可能ファイルと共に使用できます。
 
-DLL のヘッダー ファイルで追加、 **AFX_EXT_CLASS**キーワードを次のように、クラスの宣言に。
+DLL のヘッダー ファイルで、次のようにクラスの宣言に**AFX_EXT_CLASS**キーワードを追加します。
 
 ```cpp
 class AFX_EXT_CLASS CMyClass : public CDocument
@@ -31,11 +31,11 @@ class AFX_EXT_CLASS CMyClass : public CDocument
 };
 ```
 
-としての MFC でこのマクロが定義されている`__declspec(dllexport)`とプリプロセッサ シンボル`_AFXDLL`と`_AFXEXT`定義されます。 としてマクロが定義されているが、`__declspec(dllimport)`とき`_AFXDLL`が定義されていると`_AFXEXT`が定義されていません。 プリプロセッサ シンボルの定義と`_AFXDLL`MFC の共有バージョンがターゲット実行可能ファイル (DLL またはアプリケーション) によって使用されていることを示します。 ときに両方`_AFXDLL`と`_AFXEXT`は実行可能ファイルのターゲットが MFC 拡張 DLL であるは定義されている場合、これを示します。
+このマクロは、プリプロセッサシンボル`__declspec(dllexport)``_AFXDLL`と`_AFXEXT`定義時に MFC によって定義されます。 しかし、マクロはいつ`__declspec(dllimport)``_AFXDLL`定義され、定義されていない`_AFXEXT`として定義されます。 プリプロセッサ シンボル`_AFXDLL`を定義すると、共有バージョンの MFC がターゲット実行可能ファイル (DLL またはアプリケーション) によって使用されていることを示します。 両方`_AFXDLL`を定義`_AFXEXT`すると、ターゲット実行可能ファイルが MFC 拡張 DLL であることを示します。
 
-`AFX_EXT_CLASS`として定義されます`__declspec(dllexport)`MFC 拡張 DLL からエクスポートするときは、.def ファイル内のすべてにそのクラスのシンボルの装飾名をかけることがなくクラス全体をエクスポートすることができます。
+MFC`AFX_EXT_CLASS`拡張`__declspec(dllexport)`DLL からエクスポートする場合と定義されているため、.def ファイル内のクラスのすべてのシンボルに装飾された名前を付けずに、クラス全体をエクスポートできます。
 
-.Def ファイルとすべてのクラスの修飾名をこのメソッドを使用して作成を避けることができます、.def ファイルの作成がより効率的ですので名前を序数でエクスポートできます。 エクスポートの .def ファイル メソッドを使用するには、ヘッダー ファイルの末尾、先頭にある次のコードを配置します。
+このメソッドを使用して、.def ファイルとクラスのすべての装飾名を作成することは避けることができますが、名前を序数でエクスポートできるため、.def ファイルの作成の方が効率的です。 .def ファイルのエクスポート方法を使用するには、ヘッダー ファイルの先頭と末尾に次のコードを記述します。
 
 ```cpp
 #undef AFX_DATA
@@ -46,13 +46,13 @@ class AFX_EXT_CLASS CMyClass : public CDocument
 ```
 
 > [!CAUTION]
->  バージョン間の競合の可能性があるために、インライン関数をエクスポートするときに注意が必要ですが。 インライン関数は、アプリケーション コードに展開されます。そのため、後で、関数を書き直して場合に、も更新されないアプリケーション自体が再コンパイルしない限り、します。 通常、DLL 関数は、それらを使用するアプリケーションをリビルドせずに更新できます。
+> インライン関数をエクスポートする場合は、バージョンの競合が発生する可能性があるため、注意が必要です。 インライン関数はアプリケーション コードに展開されます。したがって、後で関数を書き直しても、アプリケーション自体が再コンパイルされない限り、関数は更新されません。 通常、DLL 関数は、DLL 関数を使用するアプリケーションを再構築せずに更新できます。
 
-## <a name="exporting-individual-members-in-a-class"></a>クラスで個々 のメンバーをエクスポートします。
+## <a name="exporting-individual-members-in-a-class"></a>クラス内の個々のメンバーのエクスポート
 
-場合によってクラスの個々 のメンバーをエクスポートする可能性があります。 エクスポートする場合など、 `CDialog`-派生クラスでコンス トラクターをエクスポートする必要がありますのみ、`DoModal`を呼び出します。 使用することができます`AFX_EXT_CLASS`で個々 のメンバーをエクスポートする必要があります。
+クラスの個々のメンバをエクスポートする場合があります。 たとえば、派生クラスを`CDialog`エクスポートする場合は、コンストラクターと`DoModal`呼び出しのみをエクスポートする必要があります。 エクスポートする必要`AFX_EXT_CLASS`がある個々のメンバーで使用できます。
 
-例えば:
+次に例を示します。
 
 ```cpp
 class CExampleDialog : public CDialog
@@ -66,9 +66,9 @@ public:
 };
 ```
 
-クラスのすべてのメンバーをエクスポートしないため、実行すると、その他の問題に方法が原因 MFC マクロの動作。 MFC のヘルパー マクロのいくつか実際に宣言またはデータ メンバーを定義します。 そのため、これらのデータ メンバーは、また DLL からエクスポートする必要があります。
+クラスのすべてのメンバーをエクスポートする必要がなくなったため、MFC マクロの動作方法により、追加の問題が発生する可能性があります。 MFC のヘルパー マクロのいくつかは、実際にはデータ メンバーを宣言または定義します。 したがって、これらのデータ メンバーも DLL からエクスポートする必要があります。
 
-たとえば、 `DECLARE_DYNAMIC` MFC 拡張 DLL を作成するときに、マクロが次のように定義されます。
+たとえば、MFC`DECLARE_DYNAMIC`拡張 DLL をビルドする場合、マクロは次のように定義されます。
 
 ```cpp
 #define DECLARE_DYNAMIC(class_name) \
@@ -79,9 +79,9 @@ public: \
    virtual CRuntimeClass* GetRuntimeClass() const; \
 ```
 
-静的で始まる行`AFX_DATA`クラスの内部静的オブジェクトを宣言しています。 でこのクラスを正しくエクスポートして、クライアントの実行可能ファイルの実行時情報にアクセスするには、この静的オブジェクトをエクスポートする必要があります。 静的オブジェクトは、修飾子で宣言されているため`AFX_DATA`、のみを定義する必要があります`AFX_DATA`する`__declspec(dllexport)`、DLL のビルド時として定義し、`__declspec(dllimport)`クライアント実行可能ファイルを作成するときにします。 `AFX_EXT_CLASS`は既に定義されて、この方法でだけを再定義する`AFX_DATA`と同じである`AFX_EXT_CLASS`クラス定義をします。
+static`AFX_DATA`で始まる行は、クラス内で静的オブジェクトを宣言しています。 このクラスを正しくエクスポートし、クライアント実行可能ファイルからランタイム情報にアクセスするには、この静的オブジェクトをエクスポートする必要があります。 静的オブジェクトは`AFX_DATA`修飾子 で宣言されるため、DLL をビルドするときに定義`AFX_DATA``__declspec(dllexport)`し、クライアント実行可能ファイルをビルドするときにそれを定義`__declspec(dllimport)`する必要があります。 既`AFX_EXT_CLASS`にこのように定義されているため、クラス定義の周囲と`AFX_DATA``AFX_EXT_CLASS`同じに再定義する必要があります。
 
-例えば:
+次に例を示します。
 
 ```cpp
 #undef  AFX_DATA
@@ -97,26 +97,26 @@ class CExampleView : public CView
 #define AFX_DATA
 ```
 
-MFC は常に使用されるため、`AFX_DATA`このようなシナリオの場合は、この方法は、マクロ、内で定義するデータ項目のシンボルです。 動作など、`DECLARE_MESSAGE_MAP`します。
+MFC はマクロ内`AFX_DATA`で定義するデータ項目に常にシンボルを使用するため、この手法はこのようなすべてのシナリオに対して機能します。 たとえば、この機能は`DECLARE_MESSAGE_MAP`.
 
 > [!NOTE]
->  クラスの選択したメンバーではなく、クラス全体をエクスポートする場合は、静的データ メンバーが自動的にエクスポートします。
+> クラスの選択されたメンバーではなく、クラス全体をエクスポートする場合、静的データ メンバーは自動的にエクスポートされます。
 
-### <a name="what-do-you-want-to-do"></a>実行する操作
+### <a name="what-do-you-want-to-do"></a>目的に合ったトピックをクリックしてください
 
-- [.Def ファイルを使った DLL からエクスポートします。](exporting-from-a-dll-using-def-files.md)
+- [.def ファイルを使った DLL からのエクスポート](exporting-from-a-dll-using-def-files.md)
 
-- [関数を使った DLL からエクスポートします。](exporting-from-a-dll-using-declspec-dllexport.md)
+- [__declspec(dllexport) を使った DLL からのエクスポート](exporting-from-a-dll-using-declspec-dllexport.md)
 
-- [C 言語の実行可能ファイルで使用するための C++ 関数をエクスポートします。](exporting-cpp-functions-for-use-in-c-language-executables.md)
+- [C 言語の実行形式で使う C++ 関数のエクスポート](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
-- [C または C++ 言語の実行可能ファイルで使用するための C 関数をエクスポートします。](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
+- [C/C++ 言語の実行形式で使う C 関数のエクスポート](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
 
-- [エクスポート方式の使用](determining-which-exporting-method-to-use.md)
+- [使用するエクスポート方法を決定する](determining-which-exporting-method-to-use.md)
 
 - [__declspec(dllimport) を使用してアプリケーションにインポートする](importing-into-an-application-using-declspec-dllimport.md)
 
-- [DLL を初期化します。](run-time-library-behavior.md#initializing-a-dll)
+- [DLL の初期化](run-time-library-behavior.md#initializing-a-dll)
 
 ### <a name="what-do-you-want-to-know-more-about"></a>さらに詳しくは次のトピックをクリックしてください
 
@@ -124,7 +124,7 @@ MFC は常に使用されるため、`AFX_DATA`このようなシナリオの場
 
 - [インライン関数のインポートとエクスポート](importing-and-exporting-inline-functions.md)
 
-- [相互インポート](mutual-imports.md)
+- [相互輸入](mutual-imports.md)
 
 ## <a name="see-also"></a>関連項目
 

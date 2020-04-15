@@ -1,5 +1,5 @@
 ---
-title: CRTThreadTraits クラス
+title: クラス
 ms.date: 11/04/2016
 f1_keywords:
 - CRTThreadTraits
@@ -10,19 +10,19 @@ helpviewer_keywords:
 - threading [ATL], creation functions
 - threading [ATL], CRT threads
 ms.assetid: eb6e20b0-c2aa-4170-8e34-aaeeacc86343
-ms.openlocfilehash: 9e12e64041e38b8fa014815870132a75885014bf
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: a7cfddc64e8c1b4e192e718d05812e385fbe08ed
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69496563"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81331023"
 ---
-# <a name="crtthreadtraits-class"></a>CRTThreadTraits クラス
+# <a name="crtthreadtraits-class"></a>クラス
 
-このクラスは、CRT スレッドの作成関数を提供します。 スレッドが CRT 関数を使用する場合は、このクラスを使用します。
+このクラスは CRT スレッドの作成関数を提供します。 スレッドが CRT 関数を使用する場合は、このクラスを使用します。
 
 > [!IMPORTANT]
->  このクラスとそのメンバーは、Windows ランタイムで実行されるアプリケーションでは使用できません。
+> このクラスとそのメンバーは、Windows ランタイムで実行されるアプリケーションでは使用できません。
 
 ## <a name="syntax"></a>構文
 
@@ -36,27 +36,27 @@ class CRTThreadTraits
 
 |名前|説明|
 |----------|-----------------|
-|[CRTThreadTraits:: CreateThread](#createthread)|雑音CRT 関数を使用できるスレッドを作成するには、この関数を呼び出します。|
+|[スレッドトレイト::スレッドの作成](#createthread)|(静的)CRT 関数を使用できるスレッドを作成します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-スレッド特性は、特定の種類のスレッドに対して作成関数を提供するクラスです。 作成関数には、Windows の[CreateThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread)関数と同じシグネチャとセマンティクスがあります。
+スレッドの特徴は、特定の種類のスレッドの作成関数を提供するクラスです。 作成関数には、Windows [CreateThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread)関数と同じシグネチャとセマンティクスがあります。
 
-スレッドの特徴は、次のクラスによって使用されます。
+スレッドの特徴は、次のクラスで使用されます。
 
 - [CThreadPool](../../atl/reference/cthreadpool-class.md)
 
-- [CWorkerThread](../../atl/reference/cworkerthread-class.md)
+- [を行う](../../atl/reference/cworkerthread-class.md)
 
-スレッドが CRT 関数を使用しない場合は、代わりに[Win32ThreadTraits](../../atl/reference/win32threadtraits-class.md)を使用します。
+スレッドが CRT 関数を使用しない場合は、代わりに[Win32ThreadTraits を使用します](../../atl/reference/win32threadtraits-class.md)。
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlbase. h
+**ヘッダー:** atlbase.h
 
-##  <a name="createthread"></a>  CRTThreadTraits::CreateThread
+## <a name="crtthreadtraitscreatethread"></a><a name="createthread"></a>スレッドトレイト::スレッドの作成
 
-CRT 関数を使用できるスレッドを作成するには、この関数を呼び出します。
+CRT 関数を使用できるスレッドを作成します。
 
 ```
 static HANDLE CreateThread(
@@ -73,30 +73,30 @@ static HANDLE CreateThread(
 *lpsa*<br/>
 新しいスレッドのセキュリティ属性。
 
-*dwStackSize*<br/>
-新しいスレッドのスタックサイズ。
+*サイズを変更します。*<br/>
+新しいスレッドのスタック サイズ。
 
-*pfnThreadProc*<br/>
-新しいスレッドのスレッドプロシージャ。
+*を実行します。*<br/>
+新しいスレッドのスレッド プロシージャ。
 
-*pvParam*<br/>
-スレッドプロシージャに渡されるパラメーター。
+*pvパラム*<br/>
+スレッド プロシージャに渡すパラメーター。
 
-*Dwのフラグ*<br/>
-作成フラグ (0 または CREATE_SUSPENDED)。
+*フラグを作成します。*<br/>
+作成フラグ (0 またはCREATE_SUSPENDED)。
 
-*pdwThreadId*<br/>
-入出力成功した場合は、新しく作成されたスレッドのスレッド ID を受け取る DWORD 変数のアドレス。
+*をクリックします。*<br/>
+[アウト]成功した場合に、新しく作成されたスレッドのスレッド ID を受け取る DWORD 変数のアドレス。
 
 ### <a name="return-value"></a>戻り値
 
-新しく作成されたスレッドへのハンドル、または失敗した場合は NULL を返します。 エラーの詳細情報を取得するには、 [GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)を呼び出してください。
+新しく作成されたスレッドへのハンドルを返すか、失敗した場合は NULL を返します。 拡張エラー情報を取得するには[、GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)を呼び出します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この関数のパラメーターの詳細については、「 [CreateThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread) 」を参照してください。
+この関数のパラメーターの詳細については[、CreateThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread)を参照してください。
 
-この関数は、 [_beginthreadex](../../c-runtime-library/reference/beginthread-beginthreadex.md)を呼び出してスレッドを作成します。
+この関数は[、_beginthreadex](../../c-runtime-library/reference/beginthread-beginthreadex.md)を呼び出してスレッドを作成します。
 
 ## <a name="see-also"></a>関連項目
 

@@ -1,9 +1,10 @@
 ---
 title: memmove_s、wmemmove_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - wmemmove_s
 - memmove_s
+- _o_wmemmove_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +30,12 @@ helpviewer_keywords:
 - wmemmove_s function
 - memmove_s function
 ms.assetid: a17619e4-1307-4bb0-98c6-77f8c68dab2d
-ms.openlocfilehash: bc932bb0b13289349543d042e02ead884921d00a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: baec33046f891f64c04adeccf21f41d3eec7b814
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951791"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81333152"
 ---
 # <a name="memmove_s-wmemmove_s"></a>memmove_s、wmemmove_s
 
@@ -61,14 +63,14 @@ errno_t wmemmove_s(
 *dest*<br/>
 コピー先のオブジェクト。
 
-*numberOfElements*<br/>
+*要素の数*<br/>
 コピー先のバッファーのサイズ。
 
 *src*<br/>
 コピー元のオブジェクト。
 
 *count*<br/>
-コピーするバイト数 (**memmove_s**) または文字 (**wmemmove_s**)。
+コピーするバイト数 (**memmove_s**) または文字 (**wmemmove_s**) の数。
 
 ## <a name="return-value"></a>戻り値
 
@@ -76,26 +78,28 @@ errno_t wmemmove_s(
 
 ### <a name="error-conditions"></a>エラー条件
 
-|*dest*|*numberOfElements*|*src*|戻り値|*Dest*の内容|
+|*dest*|*要素の数*|*src*|戻り値|*デスト*の内容|
 |------------|------------------------|-----------|------------------|------------------------|
-|**NULL**|任意|任意|**EINVAL**|変更されない|
-|任意|任意|**NULL**|**EINVAL**|変更されない|
-|任意|< *数*|任意|**ERANGE**|変更されない|
+|**NULL**|any|any|**Einval**|変更されない|
+|any|any|**NULL**|**Einval**|変更されない|
+|any|< *カウント*|any|**ERANGE**|変更されない|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-*Src*から*dest*に文字*のバイト数*をコピーします。 コピー元とコピー先の領域の一部が重複する場合、 **memmove_s**は、重複する領域の元のソースバイトが上書きされる前にコピーされることを保証します。
+文字数*の*バイト数を*src*から*dest*にコピーします。 ソース領域とコピー先の領域の一部が重複している場合 **、memmove_s**は、オーバーラップ領域内の元のソース バイトが上書きされる前にコピーされることを確認します。
 
-*Dest*または*src*が null ポインターの場合、またはコピー先の文字列が小さすぎる場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、これらの関数は無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、これらの関数は**einval**を返し、 **errno**を**einval**に設定します。
+*dest*または*src*が null ポインターの場合、または変換先文字列が小さすぎる場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、これらの関数は無効なパラメーター ハンドラーを呼び出します。 実行を続行できる場合、これらの関数は**EINVAL**を返し **、errno**を**EINVAL**に設定します。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**memmove_s**|\<string.h>|
 |**wmemmove_s**|\<wchar.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 
@@ -126,7 +130,7 @@ int main()
 }
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>出力
 
 ```Output
 Before: 0123456789

@@ -15,16 +15,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::MakeAllocator::MakeAllocator, constructor
 - Microsoft::WRL::Details::MakeAllocator::~MakeAllocator, destructor
 ms.assetid: a1114615-abd7-4a56-9bc3-750c118f0fa1
-ms.openlocfilehash: 805f0c09b0490d8cec1a0be96dcb1fc99a051371
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dc0d83f2550646572a4eff2bec7850037c6dbf6a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161239"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371335"
 ---
 # <a name="makeallocator-class"></a>MakeAllocator クラス
 
-WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。
+WRL インフラストラクチャをサポートし、コードから直接使用するためのものではありません。
 
 ## <a name="syntax"></a>構文
 
@@ -49,16 +49,16 @@ class MakeAllocator<T, true>;
 *T*<br/>
 型の名前。
 
-*hasWeakReferenceSupport*<br/>
-**true**弱い参照は; をサポートするオブジェクトのメモリを割り当てられません。**false**弱い参照をサポートしていないオブジェクトのメモリを割り当てられません。
+*サポート*<br/>
+弱い参照をサポートするオブジェクトにメモリを割り当てる場合は true、それより後の場合は**true。** 弱い参照をサポートしないオブジェクトにメモリを割り当てる場合は**false。**
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-弱い参照のサポートの有無のアクティブ化可能なクラスのメモリを割り当てます。
+弱い参照サポートの有無にかかわらず、アクティブ化可能なクラスにメモリを割り当てます。
 
-上書き、`MakeAllocator`ユーザー定義のメモリ割り当てモデルを実装するクラス。
+クラスを`MakeAllocator`オーバーライドして、ユーザー定義のメモリ割り当てモデルを実装します。
 
-`MakeAllocator` 通常の構築時にオブジェクトをスローした場合は、メモリ リークを防ぐために使用されます。
+`MakeAllocator`通常は、構築中にオブジェクトがスローした場合にメモリ リークを防ぐために使用されます。
 
 ## <a name="members"></a>メンバー
 
@@ -66,15 +66,15 @@ class MakeAllocator<T, true>;
 
 名前                                                  | 説明
 ----------------------------------------------------- | ----------------------------------------------------------------
-[MakeAllocator::MakeAllocator](#makeallocator)        | `MakeAllocator` クラスの新しいインスタンスを初期化します。
-[MakeAllocator::~MakeAllocator](#tilde-makeallocator) | 現在のインスタンスの初期化を解除、`MakeAllocator`クラス。
+[メイクアロケーター::メイクアロケーター](#makeallocator)        | `MakeAllocator` クラスの新しいインスタンスを初期化します。
+[メイクアロケーター::~メイクアロケーター](#tilde-makeallocator) | クラスの現在のインスタンスを初期化解除`MakeAllocator`します。
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 名前                                 | 説明
 ------------------------------------ | -----------------------------------------------------------------------------------------------------------
-[MakeAllocator::Allocate](#allocate) | メモリを割り当て、現在のそれに`MakeAllocator`オブジェクト。
-[MakeAllocator::Detach](#detach)     | によって割り当てられたメモリの関連付けを解除、 [Allocate](#allocate)メソッドは、現在から`MakeAllocator`オブジェクト。
+[メイクアロケーター::割り当て](#allocate) | メモリを割り当て、現在`MakeAllocator`のオブジェクトに関連付けます。
+[メイクアロケーター::Dエタッハ](#detach)     | [Allocate](#allocate)メソッドによって割り当てられたメモリと現在`MakeAllocator`のオブジェクトの関連付けを解除します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -82,13 +82,13 @@ class MakeAllocator<T, true>;
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** implements.h
+**ヘッダー:** 実装.h
 
-**名前空間:** Microsoft::WRL::Details
+**名前空間:** マイクロソフト::WRL::Dのテール
 
-## <a name="allocate"></a>MakeAllocator::Allocate
+## <a name="makeallocatorallocate"></a><a name="allocate"></a>メイクアロケーター::割り当て
 
-WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。
+WRL インフラストラクチャをサポートし、コードから直接使用するためのものではありません。
 
 ```cpp
 __forceinline void* Allocate();
@@ -96,52 +96,52 @@ __forceinline void* Allocate();
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合、割り当てられたメモリ; へのポインターそれ以外の場合、`nullptr`します。
+成功した場合は、割り当てられたメモリへのポインタ。それ以外`nullptr`の場合は、 .
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-メモリを割り当て、現在のそれに`MakeAllocator`オブジェクト。
+メモリを割り当て、現在`MakeAllocator`のオブジェクトに関連付けます。
 
-割り当てられたメモリのサイズは、現在指定された型のサイズ`MakeAllocator`テンプレート パラメーター。
+割り当てられたメモリのサイズは、現在`MakeAllocator`のテンプレート パラメーターで指定された型のサイズです。
 
-だけをオーバーライドする必要がある開発者、`Allocate()`さまざまなメモリの割り当てモデルを実装するメソッド。
+開発者は、別のメモリ割`Allocate()`り当てモデルを実装するメソッドだけをオーバーライドする必要があります。
 
-## <a name="detach"></a>MakeAllocator::Detach
+## <a name="makeallocatordetach"></a><a name="detach"></a>メイクアロケーター::Dエタッハ
 
-WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。
+WRL インフラストラクチャをサポートし、コードから直接使用するためのものではありません。
 
 ```cpp
 __forceinline void Detach();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-によって割り当てられたメモリの関連付けを解除、 [Allocate](#allocate)メソッドは、現在から`MakeAllocator`オブジェクト。
+[Allocate](#allocate)メソッドによって割り当てられたメモリと現在`MakeAllocator`のオブジェクトの関連付けを解除します。
 
-呼び出す場合`Detach()`、によって提供されるメモリの削除を担当、`Allocate`メソッド。
+を呼び`Detach()`出す場合は、`Allocate`メソッドによって提供されるメモリを削除する必要があります。
 
-## <a name="makeallocator"></a>MakeAllocator::MakeAllocator
+## <a name="makeallocatormakeallocator"></a><a name="makeallocator"></a>メイクアロケーター::メイクアロケーター
 
-WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。
+WRL インフラストラクチャをサポートし、コードから直接使用するためのものではありません。
 
 ```cpp
 MakeAllocator();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 `MakeAllocator` クラスの新しいインスタンスを初期化します。
 
-## <a name="tilde-makeallocator"></a>MakeAllocator:: ~ MakeAllocator
+## <a name="makeallocatormakeallocator"></a><a name="tilde-makeallocator"></a>メイクアロケーター::~メイクアロケーター
 
-WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。
+WRL インフラストラクチャをサポートし、コードから直接使用するためのものではありません。
 
 ```cpp
 ~MakeAllocator();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-現在のインスタンスの初期化を解除、`MakeAllocator`クラス。
+クラスの現在のインスタンスを初期化解除`MakeAllocator`します。
 
-このデストラクターは必要な場合も、基になる割り当てられたメモリを削除します。
+このデストラクターは、必要に応じて、基になる割り当て済みメモリも削除します。

@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - templates, with CLR types
 ms.assetid: cf59d16b-5514-448b-9a95-e0b4fcb616a6
-ms.openlocfilehash: ce30133d9a2d1ce5a6e446093a617f3a108055c4
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 5765370e611e5822b3b2d156d2eee5d21e5b453d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171828"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376304"
 ---
 # <a name="windows-runtime-and-managed-templates-ccli-and-ccx"></a>Windows ランタイムおよびマネージド テンプレート (C++/CLI および C++/CX)
 
@@ -73,7 +73,7 @@ template<class T> public ref class R {
 };
 ```
 
-C++/CLI 言語の構文では参照アセンブリに定義されているテンプレートにアクセスできませんが、リフレクションは使用できます。 テンプレートがインスタンス化されない場合、メタデータは生成されません。 テンプレートがインスタンス化される場合は、参照されているメンバー関数のみがメタデータ内に出現します。
+C++/CLI 言語の構文では参照アセンブリに定義されているテンプレートにアクセスできませんが、リフレクションは使用できます。 テンプレートがインスタンス化されていない場合、メタデータには出力されません。 テンプレートがインスタンス化される場合は、参照されているメンバー関数のみがメタデータ内に出現します。
 
 ```cpp
 // managed_templates_3.cpp
@@ -130,6 +130,6 @@ template <>
 class A <int> {};
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[.NET および UWP でのコンポーネント拡張](component-extensions-for-runtime-platforms.md)
+[NET および UWP 用のコンポーネント拡張機能](component-extensions-for-runtime-platforms.md)

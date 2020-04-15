@@ -1,5 +1,5 @@
 ---
-title: CPagerCtrl クラス
+title: クラス
 ms.date: 11/04/2016
 f1_keywords:
 - CPagerCtrl
@@ -48,14 +48,14 @@ helpviewer_keywords:
 - CPagerCtrl [MFC], SetChild
 - CPagerCtrl [MFC], SetScrollPos
 ms.assetid: 65ac58dd-4f5e-4b7e-b15c-e0d435a7e884
-ms.openlocfilehash: 519a376bdecc488a94eab65973e33d960ca50c8d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b2c4f1ac99735953f4832226b840ced4ea4c509a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69503029"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376977"
 ---
-# <a name="cpagerctrl-class"></a>CPagerCtrl クラス
+# <a name="cpagerctrl-class"></a>クラス
 
 `CPagerCtrl` クラスは、Windows のページャー コントロールをラップします。ページャー コントロールには、外側のウィンドウに収まらない内側のウィンドウをスクロールによって表示する機能があります。
 
@@ -71,40 +71,40 @@ class CPagerCtrl : public CWnd
 
 |名前|説明|
 |----------|-----------------|
-|[CPagerCtrl:: CPagerCtrl](#cpagerctrl)|`CPagerCtrl` オブジェクトを構築します。|
+|[CページCtrl::CページCtrl](#cpagerctrl)|`CPagerCtrl` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CPagerCtrl:: Create](#create)|指定されたスタイルを使用してページャーコントロールを作成`CPagerCtrl`し、現在のオブジェクトに添付します。|
-|[CPagerCtrl:: CreateEx](#createex)|指定した拡張スタイルを使用してページャーコントロールを作成し`CPagerCtrl` 、現在のオブジェクトに添付します。|
-|[CPagerCtrl:: ForwardMouse](#forwardmouse)|現在のページャーコントロールに含まれているウィンドウへの[WM_MOUSEMOVE](/windows/win32/inputdev/wm-mousemove)メッセージの転送を有効または無効にします。|
-|[CPagerCtrl:: GetBkColor](#getbkcolor)|現在のページャーコントロールの背景色を取得します。|
-|[CPagerCtrl::GetBorder](#getborder)|現在のページャーコントロールの境界線のサイズを取得します。|
-|[CPagerCtrl:: GetButtonSize](#getbuttonsize)|現在のページャーコントロールのボタンのサイズを取得します。|
-|[CPagerCtrl:: GetButtonState](#getbuttonstate)|現在のページャーコントロール内の指定されたボタンの状態を取得します。|
-|[CPagerCtrl:: GetDropTarget](#getdroptarget)|現在のページャーコントロールの[IDropTarget](/windows/win32/api/oleidl/nn-oleidl-idroptarget)インターフェイスを取得します。|
-|[CPagerCtrl:: GetScrollPos](#getscrollpos)|現在のページャーコントロールのスクロール位置を取得します。|
-|[CPagerCtrl::IsButtonDepressed](#isbuttondepressed)|現在のページャーコントロールの指定されたボタンが状態`pressed`であるかどうかを示します。|
-|[CPagerCtrl::IsButtonGrayed](#isbuttongrayed)|現在のページャーコントロールの指定されたボタンが状態`grayed`であるかどうかを示します。|
-|[CPagerCtrl::IsButtonHot](#isbuttonhot)|現在のページャーコントロールの指定されたボタンが状態`hot`であるかどうかを示します。|
-|[CPagerCtrl::IsButtonInvisible](#isbuttoninvisible)|現在のページャーコントロールの指定されたボタンが状態`invisible`であるかどうかを示します。|
-|[CPagerCtrl::IsButtonNormal](#isbuttonnormal)|現在のページャーコントロールの指定されたボタンが状態`normal`であるかどうかを示します。|
-|[CPagerCtrl::RecalcSize](#recalcsize)|現在のページャーコントロールが、格納されているウィンドウのサイズを再計算します。|
-|[CPagerCtrl:: SetBkColor](#setbkcolor)|現在のページャーコントロールの背景色を設定します。|
-|[CPagerCtrl::SetBorder](#setborder)|現在のページャーコントロールの境界線のサイズを設定します。|
-|[CPagerCtrl:: SetButtonSize](#setbuttonsize)|現在のページャーコントロールのボタンのサイズを設定します。|
-|[CPagerCtrl:: SetChild](#setchild)|現在のページャーコントロールに含まれるウィンドウを設定します。|
-|[CPagerCtrl:: SetScrollPos](#setscrollpos)|現在のページャーコントロールのスクロール位置を設定します。|
+|[CPagerCtrl::作成](#create)|指定したスタイルを持つページャー コントロールを作成し、現在`CPagerCtrl`のオブジェクトにアタッチします。|
+|[CPagerCtrl::作成します。](#createex)|指定した拡張スタイルを持つページャー コントロールを作成し、現在`CPagerCtrl`のオブジェクトにアタッチします。|
+|[CPagerCtrl::フォワードマウス](#forwardmouse)|現在のページャー コントロールに含まれるウィンドウへの[WM_MOUSEMOVE](/windows/win32/inputdev/wm-mousemove)メッセージの転送を有効または無効にします。|
+|[CPagerCtrl::ゲットブレクカラー](#getbkcolor)|現在のページャー コントロールの背景色を取得します。|
+|[CPagerCtrl::ゲットボーダー](#getborder)|現在のページャー コントロールの境界線のサイズを取得します。|
+|[コントロール::ボタンサイズを取得します。](#getbuttonsize)|現在のページャー コントロールのボタン サイズを取得します。|
+|[ボタン状態を取得します。](#getbuttonstate)|現在のページャー コントロール内の指定したボタンの状態を取得します。|
+|[CPagerCtrl::ゲットドロップターゲット](#getdroptarget)|現在のページャー コントロールの[IDropTarget](/windows/win32/api/oleidl/nn-oleidl-idroptarget)インターフェイスを取得します。|
+|[をクリックします。](#getscrollpos)|現在のページャー コントロールのスクロール位置を取得します。|
+|[CPagerCtrl::イスタボタンが落ち込んだ](#isbuttondepressed)|現在のページャー コントロールの指定されたボタンが`pressed`状態かどうかを示します。|
+|[CPagerCtrl::イスタボタングレイド](#isbuttongrayed)|現在のページャー コントロールの指定されたボタンが`grayed`状態かどうかを示します。|
+|[CPagerCtrl::イスタテホット](#isbuttonhot)|現在のページャー コントロールの指定されたボタンが`hot`状態かどうかを示します。|
+|[CPagerCtrl::アイズボタンインビジブル](#isbuttoninvisible)|現在のページャー コントロールの指定されたボタンが`invisible`状態かどうかを示します。|
+|[CPagerCtrl::イスタノーマル](#isbuttonnormal)|現在のページャー コントロールの指定されたボタンが`normal`状態かどうかを示します。|
+|[CPagerCtrl::レカルクサイズ](#recalcsize)|現在のページャー コントロールに、含まれているウィンドウのサイズを再計算します。|
+|[CページCtrl::セットBkカラー](#setbkcolor)|現在のページャー コントロールの背景色を設定します。|
+|[CPagerCtrl::セットボーダー](#setborder)|現在のページャー コントロールの境界線のサイズを設定します。|
+|[コントロール::セットボタンサイズ](#setbuttonsize)|現在のページャー コントロールのボタン サイズを設定します。|
+|[CPagerCtrl::セットチャイルド](#setchild)|現在のページャー コントロールのウィンドウを設定します。|
+|[をクリックします。](#setscrollpos)|現在のページャー コントロールのスクロール位置を設定します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-ページャーコントロールとは、ウィンドウを含んでいるウィンドウのことです。このウィンドウには、ウィンドウの上にあるウィンドウをドラッグしたときに、ウィンドウをスクロールして表示することができます。 ページャーコントロールは、含まれているウィンドウが最も遠い範囲にスクロールされたときに自動的に非表示になる2つのスクロールボタンを表示し、それ以外の場合は再表示します。 水平方向または垂直方向にスクロールするページャーコントロールを作成できます。
+ページャー コントロールは、格納ウィンドウよりも線形で大きい別のウィンドウを含むウィンドウです。 ページャー コントロールは、含まれているウィンドウが最も遠い範囲までスクロールされたときに自動的に非表示になる 2 つのスクロール ボタンを表示し、それ以外の場合は再表示します。 水平または垂直にスクロールするページャー コントロールを作成できます。
 
-たとえば、アプリケーションのすべてのアイテムを表示するのに十分な幅ではないツールバーがある場合は、ツールバーをページャーコントロールに割り当てると、ユーザーはツールバーを左または右にスクロールしてすべてのアイテムにアクセスできるようになります。 Microsoft Internet Explorer バージョン 4.0 (commctrl .dll バージョン 4.71) では、ページャーコントロールが導入されています。
+たとえば、アプリケーションにツールバーの幅が小さい場合は、ツールバーをページャー コントロールに割り当てることができ、ユーザーはツールバーを左または右にスクロールしてすべての項目にアクセスできます。 インターネット エクスプローラ バージョン 4.0 (commctrl.dll バージョン 4.71) では、ページャー コントロールが導入されています。
 
-クラスは、[CWnd](../../mfc/reference/cwnd-class.md) クラスから派生します。`CPagerCtrl` ページャーコントロールの詳細と図については、「[ページャーコントロール](/windows/win32/Controls/pager-controls)」を参照してください。
+クラス`CPagerCtrl`は[、CWnd](../../mfc/reference/cwnd-class.md)クラスから派生します。 詳細とページャー コントロールの図については、「[ポケットベル コントロール](/windows/win32/Controls/pager-controls)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -120,7 +120,7 @@ class CPagerCtrl : public CWnd
 
 **ヘッダー:** afxcmn.h
 
-##  <a name="cpagerctrl"></a>CPagerCtrl:: CPagerCtrl
+## <a name="cpagerctrlcpagerctrl"></a><a name="cpagerctrl"></a>CページCtrl::CページCtrl
 
 `CPagerCtrl` オブジェクトを構築します。
 
@@ -128,13 +128,13 @@ class CPagerCtrl : public CWnd
 CPagerCtrl();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-[Cpagerctrl:: Create](#create)メソッドまたは[cpagerctrl:: CreateEx](#createex)メソッドを使用して、ページャーコントロールを作成し`CPagerCtrl` 、オブジェクトにアタッチします。
+[CPagerCtrl::作成](#create)または[CPagerCtrl::CreateEx](#createex)メソッドを使用して、ページャー コントロールを作成し`CPagerCtrl`、オブジェクトにアタッチします。
 
-##  <a name="create"></a>  CPagerCtrl::Create
+## <a name="cpagerctrlcreate"></a><a name="create"></a>CPagerCtrl::作成
 
-指定されたスタイルを使用してページャーコントロールを作成`CPagerCtrl`し、現在のオブジェクトに添付します。
+指定したスタイルを持つページャー コントロールを作成し、現在`CPagerCtrl`のオブジェクトにアタッチします。
 
 ```
 virtual BOOL Create(
@@ -148,28 +148,28 @@ virtual BOOL Create(
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*dwStyle*|からコントロールに適用される[ウィンドウスタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)および[ページャーコントロールスタイル](/windows/win32/Controls/pager-control-styles)のビットごとの組み合わせ (または)。|
-|*rect*|からクライアント座標でのコントロールの位置とサイズを格納している[RECT](/previous-versions/dd162897\(v=vs.85\))構造体への参照。|
-|*pParentWnd*|からコントロールの親ウィンドウである[CWnd](../../mfc/reference/cwnd-class.md)オブジェクトへのポインター。 このパラメーターを NULL にすることはできません。|
-|*nID*|からコントロールの ID。|
+|*Dwstyle*|[in]コントロールに適用する[ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)と[ページャー コントロール スタイル](/windows/win32/Controls/pager-control-styles)のビットごとの組み合わせ (OR)。|
+|*Rect*|[in]クライアント座標でのコントロールの位置とサイズを格納する[RECT](/previous-versions/dd162897\(v=vs.85\))構造体への参照。|
+|*pParentWnd*|[in]コントロールの親ウィンドウである[CWnd](../../mfc/reference/cwnd-class.md)オブジェクトへのポインター。 このパラメーターは NULL にはできません。|
+|*nID*|[in]コントロールの ID。|
 
 ### <a name="return-value"></a>戻り値
 
 このメソッドが成功した場合は TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-ページャーコントロールを作成するには、 `CPagerCtrl`変数を宣言し、その変数に対して[cpagerctrl:: create](#create)メソッドまたは[cpagerctrl:: CreateEx](#createex)メソッドを呼び出します。
+ページャー コントロールを作成するには、変数`CPagerCtrl`を宣言し、その変数に対して[CPagerCtrl::作成](#create)または[CPagerCtrl::CreateEx](#createex)メソッドを呼び出します。
 
 ### <a name="example"></a>例
 
-次の例では、ページャーコントロールを作成し、 [Cpagerctrl:: SetChild](#setchild)メソッドを使用して、非常に長いボタンコントロールをページャーコントロールに関連付けます。 この例では、 [Cpagerctrl:: SetButtonSize](#setbuttonsize)メソッドを使用して、ページャーコントロールの高さを20ピクセルに設定し、 [Cpagerctrl:: setborder](#setborder)メソッドを使用して境界線の太さを1ピクセルに設定しています。
+次の例では、ページャー コントロールを作成し[、CPagerCtrl::SetChild](#setchild)メソッドを使用して、非常に長いボタン コントロールをページャー コントロールに関連付けます。 次に[、CPagerCtrl::SetButtonSize](#setbuttonsize)メソッドを使用してページャー コントロールの高さを 20 ピクセルに設定し[、CPagerCtrl::SetBorder](#setborder)メソッドを使用して境界線の太さを 1 ピクセルに設定します。
 
 [!code-cpp[NVC_MFC_CSplitButton_s2#1](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_1.cpp)]
 
-##  <a name="createex"></a>CPagerCtrl:: CreateEx
+## <a name="cpagerctrlcreateex"></a><a name="createex"></a>CPagerCtrl::作成します。
 
-指定した拡張スタイルを使用してページャーコントロールを作成し`CPagerCtrl` 、現在のオブジェクトに添付します。
+指定した拡張スタイルを持つページャー コントロールを作成し、現在`CPagerCtrl`のオブジェクトにアタッチします。
 
 ```
 virtual BOOL CreateEx(
@@ -184,23 +184,23 @@ virtual BOOL CreateEx(
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*dwExStyle*|からコントロールに適用される拡張スタイルのビットごとの組み合わせ。 詳細については、 [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)関数の*dwexstyle*パラメーターを参照してください。|
-|*dwStyle*|からコントロールに適用される[ウィンドウスタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)および[ページャーコントロールスタイル](/windows/win32/Controls/pager-control-styles)のビットごとの組み合わせ (または)。|
-|*rect*|からクライアント座標でのコントロールの位置とサイズを格納している[RECT](/previous-versions/dd162897\(v=vs.85\))構造体への参照。|
-|*pParentWnd*|からコントロールの親ウィンドウである[CWnd](../../mfc/reference/cwnd-class.md)オブジェクトへのポインター。 このパラメーターを NULL にすることはできません。|
-|*nID*|からコントロールの ID。|
+|*ドウェエクススタイル*|[in]コントロールに適用する拡張スタイルのビットごとの組み合わせ。 詳細については、関数の*dwExStyle*パラメーターを参照[してください](/windows/win32/api/winuser/nf-winuser-createwindowexw)。|
+|*Dwstyle*|[in]コントロールに適用する[ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)と[ページャー コントロール スタイル](/windows/win32/Controls/pager-control-styles)のビットごとの組み合わせ (OR)。|
+|*Rect*|[in]クライアント座標でのコントロールの位置とサイズを格納する[RECT](/previous-versions/dd162897\(v=vs.85\))構造体への参照。|
+|*pParentWnd*|[in]コントロールの親ウィンドウである[CWnd](../../mfc/reference/cwnd-class.md)オブジェクトへのポインター。 このパラメーターは NULL にはできません。|
+|*nID*|[in]コントロールの ID。|
 
 ### <a name="return-value"></a>戻り値
 
 このメソッドが成功した場合は TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-ページャーコントロールを作成するには、 `CPagerCtrl`変数を宣言し、その変数に対して[cpagerctrl:: create](#create)メソッドまたは[cpagerctrl:: CreateEx](#createex)メソッドを呼び出します。
+ページャー コントロールを作成するには、変数`CPagerCtrl`を宣言し、その変数に対して[CPagerCtrl::作成](#create)または[CPagerCtrl::CreateEx](#createex)メソッドを呼び出します。
 
-##  <a name="forwardmouse"></a>CPagerCtrl:: ForwardMouse
+## <a name="cpagerctrlforwardmouse"></a><a name="forwardmouse"></a>CPagerCtrl::フォワードマウス
 
-現在のページャーコントロールに含まれているウィンドウへの[WM_MOUSEMOVE](/windows/win32/inputdev/wm-mousemove)メッセージの転送を有効または無効にします。
+現在のページャー コントロールに含まれるウィンドウへの[WM_MOUSEMOVE](/windows/win32/inputdev/wm-mousemove)メッセージの転送を有効または無効にします。
 
 ```
 void ForwardMouse(BOOL bForward);
@@ -210,15 +210,15 @@ void ForwardMouse(BOOL bForward);
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*bForward*|からマウスメッセージを転送する場合は TRUE、マウスメッセージを転送しない場合は FALSE。|
+|*bフォワード*|[in]マウス メッセージを転送する場合は TRUE、マウス メッセージを転送しない場合は FALSE。|
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、Windows SDK で説明されている[PGM_FORWARDMOUSE](/windows/win32/Controls/pgm-forwardmouse)メッセージを送信します。
+このメソッドは、Windows SDK に記載されている[PGM_FORWARDMOUSE](/windows/win32/Controls/pgm-forwardmouse)メッセージを送信します。
 
-##  <a name="getborder"></a>  CPagerCtrl::GetBorder
+## <a name="cpagerctrlgetborder"></a><a name="getborder"></a>CPagerCtrl::ゲットボーダー
 
-現在のページャーコントロールの境界線のサイズを取得します。
+現在のページャー コントロールの境界線のサイズを取得します。
 
 ```
 int GetBorder() const;
@@ -226,21 +226,21 @@ int GetBorder() const;
 
 ### <a name="return-value"></a>戻り値
 
-現在の境界線のサイズ (ピクセル単位)。
+現在の境界線のサイズをピクセル単位で指定します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このメソッドは、Windows SDK で説明されている[PGM_GETBORDER](/windows/win32/Controls/pgm-getborder)メッセージを送信します。
 
 ### <a name="example"></a>例
 
-次の例では、 [Cpagerctrl:: GetBorder](#getborder)メソッドを使用して、ページャーコントロールの境界線の太さを取得します。
+次の例では[、CPagerCtrl::GetBorder](#getborder)メソッドを使用して、ページャー コントロールの境界線の太さを取得します。
 
 [!code-cpp[NVC_MFC_CSplitButton_s2#5](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_2.cpp)]
 
-##  <a name="getbkcolor"></a>CPagerCtrl:: GetBkColor
+## <a name="cpagerctrlgetbkcolor"></a><a name="getbkcolor"></a>CPagerCtrl::ゲットブレクカラー
 
-現在のページャーコントロールの背景色を取得します。
+現在のページャー コントロールの背景色を取得します。
 
 ```
 COLORREF GetBkColor() const;
@@ -248,21 +248,21 @@ COLORREF GetBkColor() const;
 
 ### <a name="return-value"></a>戻り値
 
-ページャーコントロールの現在の背景色を格納している[COLORREF](/windows/win32/gdi/colorref)値。
+ページャー コントロールの現在の背景色を含む[COLORREF](/windows/win32/gdi/colorref)値。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、Windows SDK で説明されている[PGM_GETBKCOLOR](/windows/win32/Controls/pgm-getbkcolor)メッセージを送信します。
+このメソッドは、Windows SDK に記載されている[PGM_GETBKCOLOR](/windows/win32/Controls/pgm-getbkcolor)メッセージを送信します。
 
 ### <a name="example"></a>例
 
-次の例では、 [Cpagerctrl:: SetBkColor](#setbkcolor)メソッドを使用して、ページャーコントロールの背景色を赤に設定し、 [Cpagerctrl:: GetBkColor](#getbkcolor)メソッドを使用して変更が行われたことを確認します。
+次の例では[、CPagerCtrl::SetBkColor](#setbkcolor)メソッドを使用して、ページャー コントロールの背景色を赤に設定し[、CPagerCtrl::GetBkColor](#getbkcolor)メソッドを使用して変更が行われたことを確認します。
 
 [!code-cpp[NVC_MFC_CSplitButton_s2#4](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_3.cpp)]
 
-##  <a name="getbuttonsize"></a>CPagerCtrl:: GetButtonSize
+## <a name="cpagerctrlgetbuttonsize"></a><a name="getbuttonsize"></a>コントロール::ボタンサイズを取得します。
 
-現在のページャーコントロールのボタンのサイズを取得します。
+現在のページャー コントロールのボタン サイズを取得します。
 
 ```
 int GetButtonSize() const;
@@ -272,15 +272,15 @@ int GetButtonSize() const;
 
 現在のボタンのサイズ (ピクセル単位)。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このメソッドは、Windows SDK で説明されている[PGM_GETBUTTONSIZE](/windows/win32/Controls/pgm-getbuttonsize)メッセージを送信します。
 
-ページャーコントロールに PGS_HORZ スタイルが設定されている場合、ボタンのサイズによってページャーボタンの幅が決まります。ページャーコントロールに PGS_VERT スタイルが設定されている場合は、ボタンのサイズによってページャーボタンの高さが決まります。 詳細については、「[ページャーコントロールスタイル](/windows/win32/Controls/pager-control-styles)」を参照してください。
+ページャー コントロールにPGS_HORZスタイルがある場合、ボタンのサイズによってページャー ボタンの幅が決まり、ページャー コントロールにPGS_VERTスタイルがある場合は、ボタンのサイズによってページャー ボタンの高さが決まります。 詳細については、「[ポケットベル コントロール のスタイル](/windows/win32/Controls/pager-control-styles)」を参照してください。
 
-##  <a name="getbuttonstate"></a>  CPagerCtrl::GetButtonState
+## <a name="cpagerctrlgetbuttonstate"></a><a name="getbuttonstate"></a>ボタン状態を取得します。
 
-現在のページャーコントロールの指定されたスクロールボタンの状態を取得します。
+現在のページャー コントロール内の指定したスクロール ボタンの状態を取得します。
 
 ```
 DWORD GetButtonState(int iButton) const;
@@ -290,19 +290,19 @@ DWORD GetButtonState(int iButton) const;
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*iButton*|から状態を取得するボタンを示します。 ページャーコントロールスタイルが PGS_HORZ の場合は、左側のボタンに PGB_TOPORLEFT を、右のボタンに PGB_BOTTOMORRIGHT を指定します。 ページャーコントロールスタイルが PGS_VERT の場合は、一番上のボタンに PGB_TOPORLEFT を、下部ボタンに PGB_BOTTOMORRIGHT を指定します。 詳細については、「[ページャーコントロールスタイル](/windows/win32/Controls/pager-control-styles)」を参照してください。|
+|*Ibutton*|[in]状態を取得するボタンを示します。 ページャー コントロールのスタイルがPGS_HORZ場合は、左側のボタンのPGB_TOPORLEFTを指定し、右ボタンにPGB_BOTTOMORRIGHTします。 ページャー コントロールのスタイルがPGS_VERT場合は、上ボタンのPGB_TOPORLEFTを指定し、下ボタンにPGB_BOTTOMORRIGHTを指定します。 詳細については、「[ポケットベル コントロール のスタイル](/windows/win32/Controls/pager-control-styles)」を参照してください。|
 
 ### <a name="return-value"></a>戻り値
 
-*Ibutton*パラメーターによって指定されたボタンの状態。 状態は、PGF_INVISIBLE、PGF_NORMAL、PGF_GRAYED、PGF_DEPRESSED、または PGF_HOT のいずれかです。 詳細については、 [PGM_GETBUTTONSTATE](/windows/win32/Controls/pgm-getbuttonstate)メッセージの「戻り値」セクションを参照してください。
+*iButton*パラメーターで指定されたボタンの状態。 状態は、PGF_INVISIBLE、PGF_NORMAL、PGF_GRAYED、PGF_DEPRESSED、またはPGF_HOTのいずれかです。 詳細については[、PGM_GETBUTTONSTATE](/windows/win32/Controls/pgm-getbuttonstate)メッセージの「戻り値」セクションを参照してください。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このメソッドは、Windows SDK で説明されている[PGM_GETBUTTONSTATE](/windows/win32/Controls/pgm-getbuttonstate)メッセージを送信します。
 
-##  <a name="getdroptarget"></a>CPagerCtrl:: GetDropTarget
+## <a name="cpagerctrlgetdroptarget"></a><a name="getdroptarget"></a>CPagerCtrl::ゲットドロップターゲット
 
-現在のページャーコントロールの[IDropTarget](/windows/win32/api/oleidl/nn-oleidl-idroptarget)インターフェイスを取得します。
+現在のページャー コントロールの[IDropTarget](/windows/win32/api/oleidl/nn-oleidl-idroptarget)インターフェイスを取得します。
 
 ```
 IDropTarget* GetDropTarget() const;
@@ -310,17 +310,17 @@ IDropTarget* GetDropTarget() const;
 
 ### <a name="return-value"></a>戻り値
 
-現在のページャーコントロール`IDropTarget`のインターフェイスへのポインター。
+現在のページャー`IDropTarget`コントロールのインターフェイスへのポインター。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`IDropTarget`は、アプリケーションでドラッグアンドドロップ操作をサポートするために実装するインターフェイスの1つです。
+`IDropTarget`は、アプリケーションでドラッグ アンド ドロップ操作をサポートするために実装するインターフェイスの 1 つです。
 
-このメソッドは、Windows SDK で説明されている[PGM_GETDROPTARGET](/windows/win32/Controls/pgm-getdroptarget)メッセージを送信します。 このメソッドの呼び出し元は、インターフェイスが不要`Release`になったときに、 [IDropTarget](/windows/win32/api/oleidl/nn-oleidl-idroptarget)インターフェイスのメンバーを呼び出す必要があります。
+このメソッドは、Windows SDK で説明されている[PGM_GETDROPTARGET](/windows/win32/Controls/pgm-getdroptarget)メッセージを送信します。 このメソッドの呼び出し元は、`Release`インターフェイスが不要になったときに[IDropTarget](/windows/win32/api/oleidl/nn-oleidl-idroptarget)インターフェイスのメンバーを呼び出します。
 
-##  <a name="getscrollpos"></a>CPagerCtrl:: GetScrollPos
+## <a name="cpagerctrlgetscrollpos"></a><a name="getscrollpos"></a>をクリックします。
 
-現在のページャーコントロールのスクロール位置を取得します。
+現在のページャー コントロールのスクロール位置を取得します。
 
 ```
 int GetScrollPos() const;
@@ -330,19 +330,19 @@ int GetScrollPos() const;
 
 現在のスクロール位置 (ピクセル単位)。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、Windows SDK で説明されている[PGM_GETPOS](/windows/win32/Controls/pgm-getpos)メッセージを送信します。
+このメソッドは、Windows SDK に記載されている[PGM_GETPOS](/windows/win32/Controls/pgm-getpos)メッセージを送信します。
 
 ### <a name="example"></a>例
 
-次の例では、 [Cpagerctrl:: GetScrollPos](#getscrollpos)メソッドを使用して、ページャーコントロールの現在のスクロール位置を取得します。 ページャーコントロールが、左端の位置からまだ0にスクロールしていない場合、この例では、 [Cpagerctrl:: SetScrollPos](#setscrollpos)メソッドを使用して、スクロール位置を0に設定しています。
+次の例では[、CPagerCtrl::GetScrollPos](#getscrollpos)メソッドを使用して、ページャー コントロールの現在のスクロール位置を取得します。 ページャー コントロールが、左端の位置であるゼロにスクロールされていない場合、この例では[CPagerCtrl::SetScrollPos](#setscrollpos)メソッドを使用してスクロール位置を 0 に設定します。
 
 [!code-cpp[NVC_MFC_CSplitButton_s2#7](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_4.cpp)]
 
-##  <a name="isbuttondepressed"></a>  CPagerCtrl::IsButtonDepressed
+## <a name="cpagerctrlisbuttondepressed"></a><a name="isbuttondepressed"></a>CPagerCtrl::イスタボタンが落ち込んだ
 
-現在のページャーコントロールの指定されたスクロールボタンが押された状態かどうかを示します。
+現在のページャー コントロールの指定されたスクロール ボタンが押された状態かどうかを示します。
 
 ```
 BOOL IsButtonDepressed(int iButton) const;
@@ -352,19 +352,19 @@ BOOL IsButtonDepressed(int iButton) const;
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*iButton*|から状態を取得するボタンを示します。 ページャーコントロールスタイルが PGS_HORZ の場合は、左側のボタンに PGB_TOPORLEFT を、右のボタンに PGB_BOTTOMORRIGHT を指定します。 ページャーコントロールスタイルが PGS_VERT の場合は、一番上のボタンに PGB_TOPORLEFT を、下部ボタンに PGB_BOTTOMORRIGHT を指定します。 詳細については、「[ページャーコントロールスタイル](/windows/win32/Controls/pager-control-styles)」を参照してください。|
+|*Ibutton*|[in]状態を取得するボタンを示します。 ページャー コントロールのスタイルがPGS_HORZ場合は、左側のボタンのPGB_TOPORLEFTを指定し、右ボタンにPGB_BOTTOMORRIGHTします。 ページャー コントロールのスタイルがPGS_VERT場合は、上ボタンのPGB_TOPORLEFTを指定し、下ボタンにPGB_BOTTOMORRIGHTを指定します。 詳細については、「[ポケットベル コントロール のスタイル](/windows/win32/Controls/pager-control-styles)」を参照してください。|
 
 ### <a name="return-value"></a>戻り値
 
-指定したボタンが押された状態の場合は TRUE。それ以外の場合は FALSE。
+指定されたボタンが押された状態の場合は TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、Windows SDK で説明されている[PGM_GETBUTTONSTATE](/windows/win32/Controls/pgm-getbuttonstate)メッセージを送信します。 次に、返される状態が PGF_DEPRESSED であるかどうかをテストします。 詳細については、 [PGM_GETBUTTONSTATE](/windows/win32/Controls/pgm-getbuttonstate)メッセージの「戻り値」セクションを参照してください。
+このメソッドは、Windows SDK で説明されている[PGM_GETBUTTONSTATE](/windows/win32/Controls/pgm-getbuttonstate)メッセージを送信します。 次に、返される状態がPGF_DEPRESSEDかどうかをテストします。 詳細については[、PGM_GETBUTTONSTATE](/windows/win32/Controls/pgm-getbuttonstate)メッセージの「戻り値」セクションを参照してください。
 
-##  <a name="isbuttongrayed"></a>  CPagerCtrl::IsButtonGrayed
+## <a name="cpagerctrlisbuttongrayed"></a><a name="isbuttongrayed"></a>CPagerCtrl::イスタボタングレイド
 
-現在のページャーコントロールの指定されたスクロールボタンが淡色表示になっているかどうかを示します。
+現在のページャー コントロールの指定されたスクロール ボタンが灰色表示かどうかを示します。
 
 ```
 BOOL IsButtonGrayed(int iButton) const;
@@ -374,19 +374,19 @@ BOOL IsButtonGrayed(int iButton) const;
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*iButton*|から状態を取得するボタンを示します。 ページャーコントロールスタイルが PGS_HORZ の場合は、左側のボタンに PGB_TOPORLEFT を、右のボタンに PGB_BOTTOMORRIGHT を指定します。 ページャーコントロールスタイルが PGS_VERT の場合は、一番上のボタンに PGB_TOPORLEFT を、下部ボタンに PGB_BOTTOMORRIGHT を指定します。 詳細については、「[ページャーコントロールスタイル](/windows/win32/Controls/pager-control-styles)」を参照してください。|
+|*Ibutton*|[in]状態を取得するボタンを示します。 ページャー コントロールのスタイルがPGS_HORZ場合は、左側のボタンのPGB_TOPORLEFTを指定し、右ボタンにPGB_BOTTOMORRIGHTします。 ページャー コントロールのスタイルがPGS_VERT場合は、上ボタンのPGB_TOPORLEFTを指定し、下ボタンにPGB_BOTTOMORRIGHTを指定します。 詳細については、「[ポケットベル コントロール のスタイル](/windows/win32/Controls/pager-control-styles)」を参照してください。|
 
 ### <a name="return-value"></a>戻り値
 
-指定されたボタンがグレーで表示されている場合は TRUE。それ以外の場合は FALSE。
+指定したボタンが灰色の状態の場合は TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、Windows SDK で説明されている[PGM_GETBUTTONSTATE](/windows/win32/Controls/pgm-getbuttonstate)メッセージを送信します。 次に、返される状態が PGF_GRAYED であるかどうかをテストします。 詳細については、 [PGM_GETBUTTONSTATE](/windows/win32/Controls/pgm-getbuttonstate)メッセージの「戻り値」セクションを参照してください。
+このメソッドは、Windows SDK で説明されている[PGM_GETBUTTONSTATE](/windows/win32/Controls/pgm-getbuttonstate)メッセージを送信します。 次に、返される状態がPGF_GRAYEDかどうかをテストします。 詳細については[、PGM_GETBUTTONSTATE](/windows/win32/Controls/pgm-getbuttonstate)メッセージの「戻り値」セクションを参照してください。
 
-##  <a name="isbuttonhot"></a>  CPagerCtrl::IsButtonHot
+## <a name="cpagerctrlisbuttonhot"></a><a name="isbuttonhot"></a>CPagerCtrl::イスタテホット
 
-現在のページャーコントロールの指定されたスクロールボタンがホットな状態であるかどうかを示します。
+現在のページャー コントロールの指定されたスクロール ボタンがホット状態かどうかを示します。
 
 ```
 BOOL IsButtonHot(int iButton) const;
@@ -396,19 +396,19 @@ BOOL IsButtonHot(int iButton) const;
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*iButton*|から状態を取得するボタンを示します。 ページャーコントロールスタイルが PGS_HORZ の場合は、左側のボタンに PGB_TOPORLEFT を、右のボタンに PGB_BOTTOMORRIGHT を指定します。 ページャーコントロールスタイルが PGS_VERT の場合は、一番上のボタンに PGB_TOPORLEFT を、下部ボタンに PGB_BOTTOMORRIGHT を指定します。 詳細については、「[ページャーコントロールスタイル](/windows/win32/Controls/pager-control-styles)」を参照してください。|
+|*Ibutton*|[in]状態を取得するボタンを示します。 ページャー コントロールのスタイルがPGS_HORZ場合は、左側のボタンのPGB_TOPORLEFTを指定し、右ボタンにPGB_BOTTOMORRIGHTします。 ページャー コントロールのスタイルがPGS_VERT場合は、上ボタンのPGB_TOPORLEFTを指定し、下ボタンにPGB_BOTTOMORRIGHTを指定します。 詳細については、「[ポケットベル コントロール のスタイル](/windows/win32/Controls/pager-control-styles)」を参照してください。|
 
 ### <a name="return-value"></a>戻り値
 
-指定されたボタンがホットな状態である場合は TRUE。それ以外の場合は FALSE。
+指定されたボタンがホット状態の場合は TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、Windows SDK で説明されている[PGM_GETBUTTONSTATE](/windows/win32/Controls/pgm-getbuttonstate)メッセージを送信します。 次に、返される状態が PGF_HOT であるかどうかをテストします。 詳細については、 [PGM_GETBUTTONSTATE](/windows/win32/Controls/pgm-getbuttonstate)メッセージの「戻り値」セクションを参照してください。
+このメソッドは、Windows SDK で説明されている[PGM_GETBUTTONSTATE](/windows/win32/Controls/pgm-getbuttonstate)メッセージを送信します。 次に、返される状態がPGF_HOTかどうかをテストします。 詳細については[、PGM_GETBUTTONSTATE](/windows/win32/Controls/pgm-getbuttonstate)メッセージの「戻り値」セクションを参照してください。
 
-##  <a name="isbuttoninvisible"></a>  CPagerCtrl::IsButtonInvisible
+## <a name="cpagerctrlisbuttoninvisible"></a><a name="isbuttoninvisible"></a>CPagerCtrl::アイズボタンインビジブル
 
-現在のページャーコントロールの指定されたスクロールボタンが非表示状態であるかどうかを示します。
+現在のページャー コントロールの指定されたスクロール ボタンが非表示の状態かどうかを示します。
 
 ```
 BOOL IsButtonInvisible(int iButton) const;
@@ -418,27 +418,27 @@ BOOL IsButtonInvisible(int iButton) const;
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*iButton*|から状態を取得するボタンを示します。 ページャーコントロールスタイルが PGS_HORZ の場合は、左側のボタンに PGB_TOPORLEFT を、右のボタンに PGB_BOTTOMORRIGHT を指定します。 ページャーコントロールスタイルが PGS_VERT の場合は、一番上のボタンに PGB_TOPORLEFT を、下部ボタンに PGB_BOTTOMORRIGHT を指定します。 詳細については、「[ページャーコントロールスタイル](/windows/win32/Controls/pager-control-styles)」を参照してください。|
+|*Ibutton*|[in]状態を取得するボタンを示します。 ページャー コントロールのスタイルがPGS_HORZ場合は、左側のボタンのPGB_TOPORLEFTを指定し、右ボタンにPGB_BOTTOMORRIGHTします。 ページャー コントロールのスタイルがPGS_VERT場合は、上ボタンのPGB_TOPORLEFTを指定し、下ボタンにPGB_BOTTOMORRIGHTを指定します。 詳細については、「[ポケットベル コントロール のスタイル](/windows/win32/Controls/pager-control-styles)」を参照してください。|
 
 ### <a name="return-value"></a>戻り値
 
-指定したボタンが非表示の状態にある場合は TRUE。それ以外の場合は FALSE。
+指定されたボタンが非表示状態の場合は TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-ウィンドウを使用すると、ウィンドウが一番遠い範囲にスクロールされたときに、スクロールボタンが非表示になります。これは、ボタンをクリックしても、含まれているウィンドウを表示することができないためです。
+Windows では、ウィンドウをクリックすると、さらに含まれているウィンドウの多くを表示できないため、ウィンドウが最も遠い範囲にスクロールされると、特定の方向のスクロール ボタンが非表示になります。
 
-このメソッドは、Windows SDK で説明されている[PGM_GETBUTTONSTATE](/windows/win32/Controls/pgm-getbuttonstate)メッセージを送信します。 次に、返される状態が PGF_INVISIBLE であるかどうかをテストします。 詳細については、 [PGM_GETBUTTONSTATE](/windows/win32/Controls/pgm-getbuttonstate)メッセージの「戻り値」セクションを参照してください。
+このメソッドは、Windows SDK で説明されている[PGM_GETBUTTONSTATE](/windows/win32/Controls/pgm-getbuttonstate)メッセージを送信します。 次に、返される状態がPGF_INVISIBLEかどうかをテストします。 詳細については[、PGM_GETBUTTONSTATE](/windows/win32/Controls/pgm-getbuttonstate)メッセージの「戻り値」セクションを参照してください。
 
 ### <a name="example"></a>例
 
-次の例では、 [Cpagerctrl:: IsButtonInvisible](#isbuttoninvisible)メソッドを使用して、ページャーコントロールの左右のスクロールボタンが表示されるかどうかを確認します。
+次の例では[、CPagerCtrl::IsButtonInvisible](#isbuttoninvisible)メソッドを使用して、ページャー コントロールの左右のスクロール ボタンが表示されているかどうかを確認します。
 
 [!code-cpp[NVC_MFC_CSplitButton_s2#6](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_5.cpp)]
 
-##  <a name="isbuttonnormal"></a>  CPagerCtrl::IsButtonNormal
+## <a name="cpagerctrlisbuttonnormal"></a><a name="isbuttonnormal"></a>CPagerCtrl::イスタノーマル
 
-現在のページャーコントロールの指定されたスクロールボタンが通常の状態であるかどうかを示します。
+現在のページャー コントロールの指定されたスクロール ボタンが通常の状態かどうかを示します。
 
 ```
 BOOL IsButtonNormal(int iButton) const;
@@ -448,43 +448,43 @@ BOOL IsButtonNormal(int iButton) const;
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*iButton*|から状態を取得するボタンを示します。 ページャーコントロールスタイルが PGS_HORZ の場合は、左側のボタンに PGB_TOPORLEFT を、右のボタンに PGB_BOTTOMORRIGHT を指定します。 ページャーコントロールスタイルが PGS_VERT の場合は、一番上のボタンに PGB_TOPORLEFT を、下部ボタンに PGB_BOTTOMORRIGHT を指定します。 詳細については、「[ページャーコントロールスタイル](/windows/win32/Controls/pager-control-styles)」を参照してください。|
+|*Ibutton*|[in]状態を取得するボタンを示します。 ページャー コントロールのスタイルがPGS_HORZ場合は、左側のボタンのPGB_TOPORLEFTを指定し、右ボタンにPGB_BOTTOMORRIGHTします。 ページャー コントロールのスタイルがPGS_VERT場合は、上ボタンのPGB_TOPORLEFTを指定し、下ボタンにPGB_BOTTOMORRIGHTを指定します。 詳細については、「[ポケットベル コントロール のスタイル](/windows/win32/Controls/pager-control-styles)」を参照してください。|
 
 ### <a name="return-value"></a>戻り値
 
-指定されたボタンが通常の状態である場合は TRUE。それ以外の場合は FALSE。
+指定されたボタンが通常の状態の場合は TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、Windows SDK で説明されている[PGM_GETBUTTONSTATE](/windows/win32/Controls/pgm-getbuttonstate)メッセージを送信します。 次に、返される状態が PGF_NORMAL であるかどうかをテストします。 詳細については、 [PGM_GETBUTTONSTATE](/windows/win32/Controls/pgm-getbuttonstate)メッセージの「戻り値」セクションを参照してください。
+このメソッドは、Windows SDK で説明されている[PGM_GETBUTTONSTATE](/windows/win32/Controls/pgm-getbuttonstate)メッセージを送信します。 次に、返される状態がPGF_NORMALかどうかをテストします。 詳細については[、PGM_GETBUTTONSTATE](/windows/win32/Controls/pgm-getbuttonstate)メッセージの「戻り値」セクションを参照してください。
 
-##  <a name="recalcsize"></a>  CPagerCtrl::RecalcSize
+## <a name="cpagerctrlrecalcsize"></a><a name="recalcsize"></a>CPagerCtrl::レカルクサイズ
 
-現在のページャーコントロールが、格納されているウィンドウのサイズを再計算します。
+現在のページャー コントロールに、含まれているウィンドウのサイズを再計算します。
 
 ```
 void RecalcSize();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、Windows SDK で説明されている[PGM_RECALCSIZE](/windows/win32/Controls/pgm-recalcsize)メッセージを送信します。 その結果、ページャーコントロールは、 [PGN_CALCSIZE](/windows/win32/Controls/pgn-calcsize)通知を送信して、含まれているウィンドウのスクロール可能なディメンションを取得します。
+このメソッドは、Windows SDK で説明されている[PGM_RECALCSIZE](/windows/win32/Controls/pgm-recalcsize)メッセージを送信します。 その結果、ページャー コントロールは、PGN_CALCSIZE[通知を](/windows/win32/Controls/pgn-calcsize)送信して、含まれているウィンドウのスクロール可能なサイズを取得します。
 
 ### <a name="example"></a>例
 
-次の例では、 [Cpagerctrl:: RecalcSize](#recalcsize)メソッドを使用して、現在のページャーコントロールのサイズを再計算するように要求します。
+次の例では[、CPagerCtrl::RecalcSize](#recalcsize)メソッドを使用して、現在のページャー コントロールにサイズを再計算するよう要求します。
 
 [!code-cpp[NVC_MFC_CSplitButton_s2#3](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_6.cpp)]
 
 ### <a name="example"></a>例
 
-次の例では、[メッセージリフレクション](../../mfc/tn062-message-reflection-for-windows-controls.md)を使用して、ページャーコントロールが、計算を実行するためにコントロールの親ダイアログを要求する代わりに、独自のサイズを再計算できるようにします。 この例では`MyPagerCtrl` 、 [cpagerctrl クラス](../../mfc/reference/cpagerctrl-class.md)からクラスを派生させると共に、メッセージ マップを使用し`OnCalcsize`て [PGN_CALCSIZE](/windows/win32/Controls/pgn-calcsize) 通知を通知ハンドラーに関連付けます。 この例では、通知ハンドラーによってページャーコントロールの幅と高さが固定値に設定されています。
+次の例では[、メッセージ リフレクション](../../mfc/tn062-message-reflection-for-windows-controls.md)を使用して、コントロールの親ダイアログで計算を実行する代わりに、独自のサイズをページャー コントロールが再計算できるようにします。 この例では`MyPagerCtrl`[、CPagerCtrl クラス](../../mfc/reference/cpagerctrl-class.md)からクラスを派生し、メッセージ マップを使用して[、通知](/windows/win32/Controls/pgn-calcsize)ハンドラーに`OnCalcsize`PGN_CALCSIZE通知を関連付けます。 この例では、通知ハンドラーは、ページャー コントロールの幅と高さを固定値に設定します。
 
 [!code-cpp[NVC_MFC_CSplitButton_s2#8](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_7.cpp)]
 
-##  <a name="setbkcolor"></a>CPagerCtrl:: SetBkColor
+## <a name="cpagerctrlsetbkcolor"></a><a name="setbkcolor"></a>CページCtrl::セットBkカラー
 
-現在のページャーコントロールの背景色を設定します。
+現在のページャー コントロールの背景色を設定します。
 
 ```
 COLORREF SetBkColor(COLORREF clrBk);
@@ -494,25 +494,25 @@ COLORREF SetBkColor(COLORREF clrBk);
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*clrBk*|からページャーコントロールの新しい背景色を格納している[COLORREF](/windows/win32/gdi/colorref)値。|
+|*clrBk*|[in]ページャー コントロールの新しい背景色を含む[COLORREF](/windows/win32/gdi/colorref)値。|
 
 ### <a name="return-value"></a>戻り値
 
-ページャーコントロールの前の背景色を格納している[COLORREF](/windows/win32/gdi/colorref)値。
+ページャー コントロールの前の背景色を含む[COLORREF](/windows/win32/gdi/colorref)値。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このメソッドは、Windows SDK で説明されている[PGM_SETBKCOLOR](/windows/win32/Controls/pgm-setbkcolor)メッセージを送信します。
 
 ### <a name="example"></a>例
 
-次の例では、 [Cpagerctrl:: SetBkColor](#setbkcolor)メソッドを使用して、ページャーコントロールの背景色を赤に設定し、 [Cpagerctrl:: GetBkColor](#getbkcolor)メソッドを使用して変更が行われたことを確認します。
+次の例では[、CPagerCtrl::SetBkColor](#setbkcolor)メソッドを使用して、ページャー コントロールの背景色を赤に設定し[、CPagerCtrl::GetBkColor](#getbkcolor)メソッドを使用して変更が行われたことを確認します。
 
 [!code-cpp[NVC_MFC_CSplitButton_s2#4](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_3.cpp)]
 
-##  <a name="setborder"></a>  CPagerCtrl::SetBorder
+## <a name="cpagerctrlsetborder"></a><a name="setborder"></a>CPagerCtrl::セットボーダー
 
-現在のページャーコントロールの境界線のサイズを設定します。
+現在のページャー コントロールの境界線のサイズを設定します。
 
 ```
 int SetBorder(int iBorder);
@@ -522,25 +522,25 @@ int SetBorder(int iBorder);
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*iBorder*|から新しい境界線のサイズ (ピクセル単位)。 *Iborder*パラメーターが負の値の場合、境界線のサイズは0に設定されます。|
+|*アイボーダー*|[in]新しい境界線のサイズ (ピクセル単位)。 *iBorder*パラメーターが負の場合、境界線のサイズはゼロに設定されます。|
 
 ### <a name="return-value"></a>戻り値
 
-前の境界線のサイズ (ピクセル単位)。
+直前の境界線のサイズをピクセル単位で指定します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、Windows SDK で説明されている[PGM_SETBORDER](/windows/win32/Controls/pgm-setborder)メッセージを送信します。
+このメソッドは、Windows SDK に記載されている[PGM_SETBORDER](/windows/win32/Controls/pgm-setborder)メッセージを送信します。
 
 ### <a name="example"></a>例
 
-次の例では、ページャーコントロールを作成し、 [Cpagerctrl:: SetChild](#setchild)メソッドを使用して、非常に長いボタンコントロールをページャーコントロールに関連付けます。 この例では、 [Cpagerctrl:: SetButtonSize](#setbuttonsize)メソッドを使用して、ページャーコントロールの高さを20ピクセルに設定し、 [Cpagerctrl:: setborder](#setborder)メソッドを使用して境界線の太さを1ピクセルに設定しています。
+次の例では、ページャー コントロールを作成し[、CPagerCtrl::SetChild](#setchild)メソッドを使用して、非常に長いボタン コントロールをページャー コントロールに関連付けます。 次に[、CPagerCtrl::SetButtonSize](#setbuttonsize)メソッドを使用してページャー コントロールの高さを 20 ピクセルに設定し[、CPagerCtrl::SetBorder](#setborder)メソッドを使用して境界線の太さを 1 ピクセルに設定します。
 
 [!code-cpp[NVC_MFC_CSplitButton_s2#1](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_1.cpp)]
 
-##  <a name="setbuttonsize"></a>CPagerCtrl:: SetButtonSize
+## <a name="cpagerctrlsetbuttonsize"></a><a name="setbuttonsize"></a>コントロール::セットボタンサイズ
 
-現在のページャーコントロールのボタンのサイズを設定します。
+現在のページャー コントロールのボタン サイズを設定します。
 
 ```
 int SetButtonSize(int iButtonSize);
@@ -550,27 +550,27 @@ int SetButtonSize(int iButtonSize);
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*iButtonSize*|から新しいボタンのサイズ (ピクセル単位)。|
+|*ボタンサイズ*|[in]新しいボタンのサイズ (ピクセル単位)。|
 
 ### <a name="return-value"></a>戻り値
 
 前のボタンのサイズ (ピクセル単位)。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このメソッドは、Windows SDK で説明されている[PGM_SETBUTTONSIZE](/windows/win32/Controls/pgm-setpos)メッセージを送信します。
 
-ページャーコントロールに PGS_HORZ スタイルが設定されている場合、ボタンのサイズによってページャーボタンの幅が決まります。ページャーコントロールに PGS_VERT スタイルが設定されている場合は、ボタンのサイズによってページャーボタンの高さが決まります。 既定のボタンサイズは、スクロールバーの幅の 3 3/4 で、ボタンの最小サイズは12ピクセルです。 詳細については、「[ページャーコントロールスタイル](/windows/win32/Controls/pager-control-styles)」を参照してください。
+ページャー コントロールにPGS_HORZスタイルがある場合、ボタンのサイズによってページャー ボタンの幅が決まり、ページャー コントロールにPGS_VERTスタイルがある場合は、ボタンのサイズによってページャー ボタンの高さが決まります。 既定のボタン サイズはスクロール バーの幅の 4 分の 3 で、ボタンの最小サイズは 12 ピクセルです。 詳細については、「[ポケットベル コントロール のスタイル](/windows/win32/Controls/pager-control-styles)」を参照してください。
 
 ### <a name="example"></a>例
 
-次の例では、ページャーコントロールを作成し、 [Cpagerctrl:: SetChild](#setchild)メソッドを使用して、非常に長いボタンコントロールをページャーコントロールに関連付けます。 この例では、 [Cpagerctrl:: SetButtonSize](#setbuttonsize)メソッドを使用して、ページャーコントロールの高さを20ピクセルに設定し、 [Cpagerctrl:: setborder](#setborder)メソッドを使用して境界線の太さを1ピクセルに設定しています。
+次の例では、ページャー コントロールを作成し[、CPagerCtrl::SetChild](#setchild)メソッドを使用して、非常に長いボタン コントロールをページャー コントロールに関連付けます。 次に[、CPagerCtrl::SetButtonSize](#setbuttonsize)メソッドを使用してページャー コントロールの高さを 20 ピクセルに設定し[、CPagerCtrl::SetBorder](#setborder)メソッドを使用して境界線の太さを 1 ピクセルに設定します。
 
 [!code-cpp[NVC_MFC_CSplitButton_s2#1](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_1.cpp)]
 
-##  <a name="setchild"></a>  CPagerCtrl::SetChild
+## <a name="cpagerctrlsetchild"></a><a name="setchild"></a>CPagerCtrl::セットチャイルド
 
-現在のページャーコントロールに含まれるウィンドウを設定します。
+現在のページャー コントロールのウィンドウを設定します。
 
 ```
 void SetChild(HWND hwndChild);
@@ -580,23 +580,23 @@ void SetChild(HWND hwndChild);
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*hwndChild*|から格納されるウィンドウへのハンドル。|
+|*フルンドチャイルド*|[in]格納するウィンドウへのハンドル。|
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このメソッドは、Windows SDK で説明されている[PGM_SETCHILD](/windows/win32/Controls/pgm-setchild)メッセージを送信します。
 
-このメソッドは、含まれているウィンドウの親を変更しません。ウィンドウハンドルは、スクロール用のページャーコントロールにのみ割り当てられます。 ほとんどの場合、含まれているウィンドウはページャーコントロールの子ウィンドウになります。
+このメソッドは、含まれているウィンドウの親を変更しません。スクロール用のページャー コントロールにウィンドウ ハンドルを割り当てるだけです。 ほとんどの場合、含まれているウィンドウは、ページャー コントロールの子ウィンドウになります。
 
 ### <a name="example"></a>例
 
-次の例では、ページャーコントロールを作成し、 [Cpagerctrl:: SetChild](#setchild)メソッドを使用して、非常に長いボタンコントロールをページャーコントロールに関連付けます。 この例では、 [Cpagerctrl:: SetButtonSize](#setbuttonsize)メソッドを使用して、ページャーコントロールの高さを20ピクセルに設定し、 [Cpagerctrl:: setborder](#setborder)メソッドを使用して境界線の太さを1ピクセルに設定しています。
+次の例では、ページャー コントロールを作成し[、CPagerCtrl::SetChild](#setchild)メソッドを使用して、非常に長いボタン コントロールをページャー コントロールに関連付けます。 次に[、CPagerCtrl::SetButtonSize](#setbuttonsize)メソッドを使用してページャー コントロールの高さを 20 ピクセルに設定し[、CPagerCtrl::SetBorder](#setborder)メソッドを使用して境界線の太さを 1 ピクセルに設定します。
 
 [!code-cpp[NVC_MFC_CSplitButton_s2#1](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_1.cpp)]
 
-##  <a name="setscrollpos"></a>CPagerCtrl:: SetScrollPos
+## <a name="cpagerctrlsetscrollpos"></a><a name="setscrollpos"></a>をクリックします。
 
-現在のページャーコントロールのスクロール位置を設定します。
+現在のページャー コントロールのスクロール位置を設定します。
 
 ```
 void SetScrollPos(int iPos);
@@ -606,14 +606,14 @@ void SetScrollPos(int iPos);
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*iPos*|から新しいスクロール位置 (ピクセル単位)。|
+|*Ipo*|[in]新しいスクロール位置 (ピクセル単位)。|
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このメソッドは、Windows SDK で説明されている[PGM_SETPOS](/windows/win32/Controls/pgm-setpos)メッセージを送信します。
 
 ## <a name="see-also"></a>関連項目
 
-[CPagerCtrl クラス](../../mfc/reference/cpagerctrl-class.md)<br/>
-[階層図](../../mfc/hierarchy-chart.md)<br/>
-[ページャーコントロール](/windows/win32/Controls/pager-controls)
+[クラス](../../mfc/reference/cpagerctrl-class.md)<br/>
+[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
+[ポケットベル コントロール](/windows/win32/Controls/pager-controls)

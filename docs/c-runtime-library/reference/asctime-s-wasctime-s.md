@@ -1,9 +1,11 @@
 ---
 title: asctime_s、_wasctime_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wasctime_s
 - asctime_s
+- _o__wasctime_s
+- _o_asctime_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -33,16 +36,16 @@ helpviewer_keywords:
 - _wasctime_s function
 - asctime_s function
 ms.assetid: 17ad9b2b-a459-465d-976a-42822897688a
-ms.openlocfilehash: 1cd2a15db0a27dedd88b9abf24b98d338515c949
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 52391eb1237e4c1d7ef320dacd211b603a21ab8b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73624782"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81334222"
 ---
 # <a name="asctime_s-_wasctime_s"></a>asctime_s、_wasctime_s
 
-**Tm**時間構造体を文字列に変換します。 これらの関数は、「[CRT のセキュリティ機能](../../c-runtime-library/security-features-in-the-crt.md)」の説明にあるとおり、[asctime、_wasctime](asctime-wasctime.md) のセキュリティが強化されたバージョンです。
+**tm**時間構造体を文字列に変換します。 これらの関数は、「[CRT のセキュリティ機能](../../c-runtime-library/security-features-in-the-crt.md)」の説明にあるとおり、[asctime、_wasctime](asctime-wasctime.md) のセキュリティが強化されたバージョンです。
 
 ## <a name="syntax"></a>構文
 
@@ -72,13 +75,13 @@ errno_t _wasctime_s(
 ### <a name="parameters"></a>パラメーター
 
 *バッファー*<br/>
-文字列の結果を格納するバッファーへのポインター。 この関数は、 *Numberofelements*によって指定されたサイズの有効なメモリ位置を指すポインターを想定しています。
+文字列の結果を格納するバッファーへのポインター。 この関数は *、numberOfElements*で指定されたサイズの有効なメモリ位置へのポインターを想定しています。
 
-*numberOfElements*<br/>
+*要素の数*<br/>
 結果を格納するために使用されるバッファーのサイズ。
 
-*tmSource*<br/>
-時刻/日付の構造体。 この関数は、有効な**struct** **tm**オブジェクトへのポインターを想定しています。
+*tmソース*<br/>
+時刻/日付の構造体。 この関数は、有効な**構造体****の tm**オブジェクトへのポインターを想定しています。
 
 ## <a name="return-value"></a>戻り値
 
@@ -86,40 +89,42 @@ errno_t _wasctime_s(
 
 ### <a name="error-conditions"></a>エラー条件
 
-|*バッファー*|*numberOfElements*|*tmSource*|Return|*バッファー*内の値|
+|*バッファー*|*要素の数*|*tmソース*|戻り値|*バッファ*内の値|
 |--------------|------------------------|----------|------------|-----------------------|
-|**NULL**|どれでも可|どれでも可|**EINVAL**|変更されない|
-|Not **NULL** (有効なメモリを指す)|0|どれでも可|**EINVAL**|変更されない|
-|**NULL**以外|0< size < 26|どれでも可|**EINVAL**|空の文字列|
-|**NULL**以外|>= 26|**NULL**|**EINVAL**|空の文字列|
-|**NULL**以外|>= 26|無効な時間構造体または時間のコンポーネントの値が範囲外|**EINVAL**|空の文字列|
+|**NULL**|Any|Any|**Einval**|変更されない|
+|**NULL**でない (有効なメモリを指す)|0|Any|**Einval**|変更されない|
+|**NULL**ではありません|0< サイズ < 26|Any|**Einval**|空の文字列|
+|**NULL**ではありません|>= 26|**NULL**|**Einval**|空の文字列|
+|**NULL**ではありません|>= 26|無効な時間構造体または時間のコンポーネントの値が範囲外|**Einval**|空の文字列|
 
 > [!NOTE]
-> **Wasctime_s**のエラー条件は**asctime_s**に似ていますが、サイズ制限は単語単位で測定されます。
+> **wasctime_s**のエラー条件は **、asctime_s**と似ていますが、サイズ制限が単語単位で測定される点が異なっています。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**Asctime**関数は、構造体として格納されている時刻を文字列に変換します。 *Tmsource*値は通常、 **gmtime**または**localtime**の呼び出しから取得されます。 これらの関数を使用すると、TIME で定義されているように、 **tm**構造体を入力できます。始め.
+**asctime**関数は、構造体として格納された時刻を文字列に変換します。 *tmSource*値は通常 **、gmtime**または**ローカル時間**の呼び出しから取得されます。 両方の関数は、TIME で定義されている**tm**構造体を埋めるために使用できます。H。
 
 |timeptr メンバー|[値]|
 |--------------------|-----------|
-|**tm_hour**|深夜からの時間 (0-23)|
+|**tm_hour**|深夜から経過した時間 (0~23)|
 |**tm_isdst**|夏時間が有効な場合は正、夏時間が無効な場合は 0、夏時間かどうかが不明な場合は負。 C ランタイム ライブラリでは、アメリカ合衆国の規則を前提に夏時間 (DST) を計算します。|
-|**tm_mday**|月の通算日 (1-31)|
-|**tm_min**|分後 (分) (0-59)|
-|**tm_mon**|月 (0-11;1月 = 0)|
-|**tm_sec**|秒後の秒数 (0-59)|
+|**tm_mday**|月の日 (1-31)|
+|**tm_min**|時間経過後の分 (0-59)|
+|**tm_mon**|月 (0-11;1 月 = 0)|
+|**tm_sec**|分の後の秒 (0-59)|
 |**tm_wday**|曜日 (0-6;日曜日 = 0)|
-|**tm_yday**|年の通算日 (0-365;1月1日 = 0)|
+|**tm_yday**|年の日 (0-365;1月1日 = 0)|
 |**tm_year**|年 (実際の西暦から 1900 を引いた数)|
 
 変換された文字列も、ローカル タイム ゾーンの設定に従って調整されます。 ローカル タイムの設定の詳細については、[time、_time32、_time64](time-time32-time64.md)、[_ftime、_ftime32、_ftime64](ftime-ftime32-ftime64.md)、および [localtime_s、_localtime32_s、_localtime64_s](localtime-s-localtime32-s-localtime64-s.md) の関数を参照してください。また、タイム ゾーン環境とグローバル変数の定義の詳細については、[_tzset](tzset.md) 関数を参照してください。
 
-**Asctime_s**によって生成される文字列の結果には、26文字が含まれており、`Wed Jan 02 02:03:55 1980\n\0`という形式になっています。 24 時間制が使用されます。 すべてのフィールドには一定の幅があります。 文字列の最後の 2 つの位置には、改行文字と null 文字が入ります。 2 番目のパラメーターとして渡される値は、この大きさ以上にする必要があります。 小さい場合は、エラーコード**EINVAL**が返されます。
+**asctime_s**によって生成される文字列の結果は、正確に 26`Wed Jan 02 02:03:55 1980\n\0`文字を含み、 という形式を持つ。 24 時間制が使用されます。 すべてのフィールドには一定の幅があります。 文字列の最後の 2 つの位置には、改行文字と null 文字が入ります。 2 番目のパラメーターとして渡される値は、この大きさ以上にする必要があります。 それ以下の場合は、エラー・コード**EINVAL**が戻されます。
 
-**_wasctime_s**は、 **asctime_s**のワイド文字バージョンです。 それ以外では、 **_wasctime_s**と**asctime_s**は同じように動作します。
+**_wasctime_s**はワイド文字の**asctime_s**です。 **_wasctime_s**と**asctime_s**は、他の方法で同じように動作します。
 
-これらの関数のデバッグライブラリバージョンは、最初にバッファーを0xFE で埋めます。 この動作を無効にするには、[_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md) を使用します。
+これらの関数のデバッグ ライブラリ バージョンは、まずバッファーに 0xFE を設定します。 この動作を無効にするには、[_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md) を使用します。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
 
 ### <a name="generic-text-routine-mapping"></a>汎用テキスト ルーチンのマップ
 
@@ -129,22 +134,22 @@ errno_t _wasctime_s(
 
 C++ では、テンプレートのオーバーロードによってこれらの関数を簡単に使用できます。オーバーロードでは、バッファー長を自動的に推論できるため、サイズ引数を指定する必要がなくなります。 詳細については、「[セキュリティ保護されたテンプレート オーバーロード](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**asctime_s**|\<time.h>|
 |**_wasctime_s**|\<time.h> または \<wchar.h>|
 
-## <a name="security"></a>セキュリティ
+## <a name="security"></a>Security
 
-バッファーポインターが**NULL**ではなく、ポインターが有効なバッファーを指していない場合、関数はその位置にあるものをすべて上書きします。 これによりアクセス違反が発生することもあります。
+バッファー ポインターが**NULL**ではなく、ポインターが有効なバッファーを指していない場合、関数はその位置にあるものを上書きします。 これによりアクセス違反が発生することもあります。
 
 渡されるサイズ引数がバッファーの実際のサイズより大きい場合、[バッファー オーバーラン](/windows/win32/SecBP/avoiding-buffer-overruns)が発生する場合があります。
 
 ## <a name="example"></a>例
 
-このプログラムは、システム時刻を長整数の**aclock**に配置し、それを構造体の**newtime**に変換した後、 **asctime_s**関数を使用して出力用の文字列形式に変換します。
+このプログラムは、システム時刻を長整数**時計**に入れ、それを構造体**newtime**に変換し **、asctime_s**関数を使用して、出力用に文字列形式に変換します。
 
 ```C
 // crt_asctime_s.c

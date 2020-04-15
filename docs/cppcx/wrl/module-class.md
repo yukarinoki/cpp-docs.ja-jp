@@ -43,12 +43,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Module::UnregisterObjects method
 - Microsoft::WRL::Module::UnregisterWinRTObject method
 ms.assetid: dd67e3b8-c2e1-4f53-8c0f-565a140ba649
-ms.openlocfilehash: db3eb123382ac70f6198d094c5eb3fe44d3bbcd9
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: afd2edacefdf5d62b50a03c0a8c37f13ee5d9c9f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345786"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371318"
 ---
 # <a name="module-class"></a>Module クラス
 
@@ -69,68 +69,70 @@ class Module<OutOfProc> : public Module<InProc>;
 
 ### <a name="parameters"></a>パラメーター
 
-*moduleType*<br/>
-1 つ以上を組み合わせた[ModuleType](moduletype-enumeration.md)列挙値。
+*モジュールタイプ*<br/>
+1 つ以上の[ModuleType](moduletype-enumeration.md)列挙値の組み合わせ。
 
 ## <a name="members"></a>メンバー
 
-### <a name="protected-classes"></a>保護されているクラス
+### <a name="protected-classes"></a>保護されたクラス
 
 名前                                                                                | 説明
 ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------
-[Module::GenericReleaseNotifier](module-genericreleasenotifier-class.md) | 現在のモジュールの最後のオブジェクトがリリースされたときに、イベント ハンドラーを呼び出します。 イベント ハンドラーは、ラムダをファンクター、または関数へのポインターによって指定されます。
-[Module::methodreleasenotifier](module-methodreleasenotifier-class.md)   | 現在のモジュールの最後のオブジェクトがリリースされたときに、イベント ハンドラーを呼び出します。 イベント ハンドラーは、オブジェクトとそのメソッドへのポインター メンバーによって指定されます。
-[Module::ReleaseNotifier](module-releasenotifier-class.md)               | モジュールの最後のオブジェクトがリリースされたときに、イベント ハンドラーを呼び出します。
+[モジュール::ジェネリックリリースNotifier](module-genericreleasenotifier-class.md) | 現在のモジュールの最後のオブジェクトが解放されたときに、イベント ハンドラーを呼び出します。 イベント ハンドラーは、ラムダ、ファンクタ、または関数へのポインターで指定します。
+[モジュール::メソッドリリースNotifier](module-methodreleasenotifier-class.md)   | 現在のモジュールの最後のオブジェクトが解放されたときに、イベント ハンドラーを呼び出します。 イベント ハンドラーは、オブジェクトとそのポインターからメソッドへのメンバーによって指定されます。
+[モジュール::リリースNotifier](module-releasenotifier-class.md)               | モジュール内の最後のオブジェクトが解放されたときに、イベント ハンドラーを呼び出します。
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
 名前                             | 説明
 -------------------------------- | -----------------------------------------------------------
-[モジュール:: ~ モジュール](#tilde-module) | 現在のインスタンスの初期化を解除、`Module`クラス。
+[モジュール::~モジュール](#tilde-module) | クラスの現在のインスタンスを初期化解除`Module`します。
 
 ### <a name="protected-constructors"></a>プロテクト コンストラクター
 
 名前                      | 説明
 ------------------------- | ---------------------------------------------------
-[Module::module](#module) | `Module` クラスの新しいインスタンスを初期化します。
+[モジュール::モジュール](#module) | `Module` クラスの新しいインスタンスを初期化します。
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 名前                                                    | 説明
 ------------------------------------------------------- | --------------------------------------------------------------------------------------------------
-[Module::create](#create)                               | モジュールのインスタンスを作成します。
-[Module::DecrementObjectCount](#decrementobjectcount)   | モジュールによって追跡されるオブジェクトの数をデクリメントします。
-[Module::GetActivationFactory](#getactivationfactory)   | モジュールのアクティベーション ファクトリを取得します。
-[Module::getclassobject](#getclassobject)               | クラス ファクトリのキャッシュを取得します。
-[Module::GetModule](#getmodule)                         | モジュールのインスタンスを作成します。
-[Module::GetObjectCount](#getobjectcount)               | このモジュールによって管理されるオブジェクトの数を取得します。
-[Module::IncrementObjectCount](#incrementobjectcount)   | モジュールによって追跡されるオブジェクトの数をインクリメントします。
-[Module::RegisterCOMObject](#registercomobject)         | 他のアプリケーションがそれらに接続できるように、1 つまたは複数の COM オブジェクトを登録します。
-[Module::registerobjects](#registerobjects)             | 他のアプリケーションがそれらに接続できるように、COM または Windows ランタイムのオブジェクトを登録します。
-[Module::RegisterWinRTObject](#registerwinrtobject)     | 他のアプリケーションがそれらに接続できるように、1 つまたは複数の Windows ランタイム オブジェクトを登録します。
-[Module::terminate](#terminate)                         | シャット ダウンするモジュールによってインスタンス化されるすべてのファクトリをによりします。
-[Module::UnregisterCOMObject](#unregistercomobject)     | 他のアプリケーションが接続することが原因の 1 つまたは複数の COM オブジェクトを解除します。
-[Module::unregisterobjects](#unregisterobjects)         | 他のアプリケーションがそれらに接続できないように、指定したモジュール内のオブジェクトを登録解除します。
-[Module::UnregisterWinRTObject](#unregisterwinrtobject) | 他のアプリケーションがそれらに接続できないように、1 つまたは複数の Windows ランタイム オブジェクトを登録解除します。
+[モジュール::作成](#create)                               | モジュールのインスタンスを作成します。
+[モジュール::Dオブジェクトカウント](#decrementobjectcount)   | モジュールによって追跡されるオブジェクトの数を減分します。
+[モジュール::取得アクティベーションファクトリー](#getactivationfactory)   | モジュールのアクティベーション ファクトリを取得します。
+[モジュール::Getクラスオブジェクト](#getclassobject)               | クラス ファクトリのキャッシュを取得します。
+[モジュール::ゲットモジュール](#getmodule)                         | モジュールのインスタンスを作成します。
+[モジュール::オブジェクト数](#getobjectcount)               | このモジュールによって管理されるオブジェクトの数を取得します。
+[モジュール::インクリメントオブジェクトカウント](#incrementobjectcount)   | モジュールによって追跡されるオブジェクトの数をインクリメントします。
+[モジュール::レジスタCOMオブジェクト](#registercomobject)         | 他のアプリケーションが COM オブジェクトに接続できるように、1 つ以上の COM オブジェクトを登録します。
+[モジュール::レジスタオブジェクト](#registerobjects)             | COM オブジェクトまたは Windows ランタイム オブジェクトを登録し、他のアプリケーションが接続できるようにします。
+[モジュール::レジスタウィンRTオブジェクト](#registerwinrtobject)     | 他のアプリケーションが接続できるように、1 つ以上の Windows ランタイム オブジェクトを登録します。
+[モジュール::終了](#terminate)                         | モジュールによってインスタンス化されたすべてのファクトリをシャットダウンします。
+[モジュール::COMオブジェクトの登録解除](#unregistercomobject)     | 1 つ以上の COM オブジェクトの登録を解除します。
+[モジュール::オブジェクトの登録解除](#unregisterobjects)         | 指定したモジュール内のオブジェクトの登録を解除し、他のアプリケーションがオブジェクトに接続できないようにします。
+[モジュール::登録解除WinRTオブジェクト](#unregisterwinrtobject) | 1 つ以上の Windows ランタイム オブジェクトの登録を解除して、他のアプリケーションがオブジェクトに接続できないようにします。
 
 ### <a name="protected-methods"></a>プロテクト メソッド
 
 名前                      | 説明
 ------------------------- | --------------------------------
-[Module::create](#create) | モジュールのインスタンスを作成します。
+[モジュール::作成](#create) | モジュールのインスタンスを作成します。
 
 ### <a name="protected-data-members"></a>プロテクト データ メンバー
 
 名前                                         | 説明
 -------------------------------------------- | --------------------------------------------------------------------------------------------------------
-[Module::objectcount _](#objectcount)         | 多くのクラスが作成されたの追跡、[ように](make-function.md)関数。
-[Module::releaseNotifier_](#releasenotifier) | ポインターを保持する`ReleaseNotifier`オブジェクト。
+[モジュール::objectCount_](#objectcount)         | [Make](make-function.md)関数を使用して作成されたクラスの数を追跡します。
+[モジュール::releaseNotifier_](#releasenotifier) | オブジェクトへのポインターを`ReleaseNotifier`保持します。
 
-### <a name="macros"></a>[マクロ]
+### <a name="macros"></a>マクロ
 
-名 |説明-----|--- [ActivatableClass](activatableclass-macros.md) | 指定したクラスのインスタンスを作成できるファクトリを含む内部キャッシュを設定します。 このマクロは、既定のファクトリとグループの ID パラメーターを指定します。
-[ActivatableClassWithFactory](activatableclass-macros.md) |指定したクラスのインスタンスを作成できるファクトリを含む内部キャッシュを設定します。 このマクロでは、特定の工場出荷時のパラメーターを指定することができます。
-[ActivatableClassWithFactoryEx](activatableclass-macros.md) |指定したクラスのインスタンスを作成できるファクトリを含む内部キャッシュを設定します。 このマクロでは、特定のファクトリとグループの ID パラメーターを指定することができます。
+名前                                                                   | 説明
+---------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+[ActivatableClass](activatableclass-macros.md)              | 指定したクラスのインスタンスを作成できるファクトリを含む内部キャッシュを設定します。 このマクロは、デフォルトのファクトリパラメータとグループ ID パラメータを指定します。
+[ActivatableClassWithFactory](activatableclass-macros.md)   | 指定したクラスのインスタンスを作成できるファクトリを含む内部キャッシュを設定します。 このマクロを使用すると、特定のファクトリ パラメータを指定できます。
+[ActivatableClassWithFactoryEx](activatableclass-macros.md) | 指定したクラスのインスタンスを作成できるファクトリを含む内部キャッシュを設定します。 このマクロを使用すると、特定のファクトリおよびグループ ID パラメータを指定できます。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -142,19 +144,19 @@ class Module<OutOfProc> : public Module<InProc>;
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** module.h
+**ヘッダー:** モジュール.h
 
-**名前空間:** Microsoft::wrl
+**名前空間:** Microsoft::WRL
 
-## <a name="tilde-module"></a>モジュール:: ~ モジュール
+## <a name="modulemodule"></a><a name="tilde-module"></a>モジュール::~モジュール
 
-現在のインスタンスの初期化を解除、`Module`クラス。
+クラスの現在のインスタンスを初期化解除`Module`します。
 
 ```cpp
 virtual ~Module();
 ```
 
-## <a name="create"></a>Module::create
+## <a name="modulecreate"></a><a name="create"></a>モジュール::作成
 
 モジュールのインスタンスを作成します。
 
@@ -176,22 +178,22 @@ WRL_NOTHROW static Module& Create(
 *T*<br/>
 モジュールの種類。
 
-*callback*<br/>
-モジュールの最後のインスタンス オブジェクトを解放するときに呼び出されます。
+*コールバック*<br/>
+モジュールの最後のインスタンス オブジェクトが解放されたときに呼び出されます。
 
-*object*<br/>
-*オブジェクト*と*メソッド*パラメーターの組み合わせで使用されます。 ポイント最後のインスタンス オブジェクト、モジュールの最後のインスタンスのオブジェクトがリリースされたときにします。
+*オブジェクト*<br/>
+*オブジェクト*と*メソッド*のパラメータは組み合わせて使用されます。 モジュール内の最後のインスタンス オブジェクトが解放されたときの最後のインスタンス オブジェクトを指します。
 
 *method*<br/>
-*オブジェクト*と*メソッド*パラメーターの組み合わせで使用されます。 モジュールの最後のインスタンスのオブジェクトがリリースされたときに、最後のインスタンス オブジェクトのメソッドを指します。
+*オブジェクト*と*メソッド*のパラメータは組み合わせて使用されます。 モジュール内の最後のインスタンス オブジェクトが解放されたときの最後のインスタンス オブジェクトのメソッドへのポイント。
 
 ### <a name="return-value"></a>戻り値
 
 モジュールへの参照。
 
-## <a name="decrementobjectcount"></a>Module::decrementobjectcount
+## <a name="moduledecrementobjectcount"></a><a name="decrementobjectcount"></a>モジュール::Dオブジェクトカウント
 
-モジュールによって追跡されるオブジェクトの数をデクリメントします。
+モジュールによって追跡されるオブジェクトの数を減分します。
 
 ```cpp
 virtual long DecrementObjectCount();
@@ -199,9 +201,9 @@ virtual long DecrementObjectCount();
 
 ### <a name="return-value"></a>戻り値
 
-デクリメント操作の前にカウントします。
+減分演算の前のカウント。
 
-## <a name="getactivationfactory"></a>Module::GetActivationFactory
+## <a name="modulegetactivationfactory"></a><a name="getactivationfactory"></a>モジュール::取得アクティベーションファクトリー
 
 モジュールのアクティベーション ファクトリを取得します。
 
@@ -215,22 +217,22 @@ WRL_NOTHROW HRESULT GetActivationFactory(
 
 ### <a name="parameters"></a>パラメーター
 
-*pActivatibleClassId*<br/>
+*をクリックします。*<br/>
 ランタイム クラスの IID。
 
 *ppIFactory*<br/>
-指定されたランタイム クラスの IActivationFactory します。
+指定したランタイム クラスの IActivationFactory。
 
-*serverName*<br/>
-現在のモジュールでクラス ファクトリのサブセットの名前。 使用されるサーバー名を指定、 [ActivatableClassWithFactoryEx](activatableclass-macros.md)マクロ、または指定`nullptr`を既定のサーバー名を取得します。
+*Servername*<br/>
+現在のモジュール内のクラス ファクトリのサブセットの名前。 アクティブ`nullptr`[に使用](activatableclass-macros.md)されるサーバー名を指定します。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は s_ok を返します。GetActivationFactory によってそれ以外の場合、HRESULT が返されます。
+成功した場合はS_OK。それ以外の場合は、GetActivationFactory によって返される HRESULT。
 
-## <a name="getclassobject"></a>Module::getclassobject
+## <a name="modulegetclassobject"></a><a name="getclassobject"></a>モジュール::Getクラスオブジェクト
 
-クラス ファクトリのキャッシュを取得します。
+クラス ファクトリのキャッシュを取り返します。
 
 ```cpp
 HRESULT GetClassObject(
@@ -243,25 +245,25 @@ HRESULT GetClassObject(
 
 ### <a name="parameters"></a>パラメーター
 
-*clsid*<br/>
-クラスの id。
+*Clsid*<br/>
+クラス ID。
 
 *riid*<br/>
-要求したインターフェイス ID です。
+要求するインターフェイス ID。
 
-*ppv*<br/>
-返されるオブジェクトへのポインター。
+*Ppv*<br/>
+返されたオブジェクトへのポインター。
 
-*serverName*<br/>
-いずれかで指定されているサーバー名、 `ActivatableClassWithFactory`、 `ActivatableClassWithFactoryEx`、または`ActivatableClass`マクロ; または`nullptr`を既定のサーバー名を取得します。
+*Servername*<br/>
+`ActivatableClassWithFactory`マクロ 、 、 または`ActivatableClassWithFactoryEx``ActivatableClass`マクロのいずれかで指定されるサーバー名。または`nullptr`、既定のサーバー名を取得します。
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、Windows ランタイムではなく COM にのみ使用します。 このメソッドを公開のみ`IClassFactory`メソッド。
+このメソッドは、Windows ランタイムではなく、COM に対してのみ使用します。 このメソッドはメソッドのみを`IClassFactory`公開します。
 
-## <a name="getmodule"></a>Module::GetModule
+## <a name="modulegetmodule"></a><a name="getmodule"></a>モジュール::ゲットモジュール
 
 モジュールのインスタンスを作成します。
 
@@ -274,7 +276,7 @@ WRL_NOTHROW static Module& GetModule();
 
 モジュールへの参照。
 
-## <a name="getobjectcount"></a>Module::GetObjectCount
+## <a name="modulegetobjectcount"></a><a name="getobjectcount"></a>モジュール::オブジェクト数
 
 このモジュールによって管理されるオブジェクトの数を取得します。
 
@@ -284,9 +286,9 @@ virtual long GetObjectCount() const;
 
 ### <a name="return-value"></a>戻り値
 
-このモジュールによって管理されるオブジェクトの現在数。
+このモジュールによって管理されているオブジェクトの現在の数。
 
-## <a name="incrementobjectcount"></a>Module::IncrementObjectCount
+## <a name="moduleincrementobjectcount"></a><a name="incrementobjectcount"></a>モジュール::インクリメントオブジェクトカウント
 
 モジュールによって追跡されるオブジェクトの数をインクリメントします。
 
@@ -296,9 +298,9 @@ virtual long IncrementObjectCount();
 
 ### <a name="return-value"></a>戻り値
 
-インクリメント操作の前にカウントします。
+インクリメント操作の前のカウント。
 
-## <a name="module"></a>Module::module
+## <a name="modulemodule"></a><a name="module"></a>モジュール::モジュール
 
 `Module` クラスの新しいインスタンスを初期化します。
 
@@ -306,21 +308,21 @@ virtual long IncrementObjectCount();
 Module();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このコンス トラクターは保護され、ということはできません、`new`キーワード。 代わりに、いずれかを呼び出す[module::getmodule](#getmodule)または[module::create](#create)します。
+このコンストラクターは保護されており、`new`キーワードを使用して呼び出すことはできません。 代わりに、[モジュール::GetModule](#getmodule)または[モジュール::作成](#create)のいずれかを呼び出します。
 
-## <a name="objectcount"></a>Module::objectcount _
+## <a name="moduleobjectcount_"></a><a name="objectcount"></a>モジュール::objectCount_
 
-多くのクラスが作成されたの追跡、[ように](make-function.md)関数。
+[Make](make-function.md)関数を使用して作成されたクラスの数を追跡します。
 
 ```cpp
 volatile long objectCount_;
 ```
 
-## <a name="registercomobject"></a>Module::RegisterCOMObject
+## <a name="moduleregistercomobject"></a><a name="registercomobject"></a>モジュール::レジスタCOMオブジェクト
 
-他のアプリケーションがそれらに接続できるように、1 つまたは複数の COM オブジェクトを登録します。
+他のアプリケーションが COM オブジェクトに接続できるように、1 つ以上の COM オブジェクトを登録します。
 
 ```cpp
 WRL_NOTHROW virtual HRESULT RegisterCOMObject(
@@ -333,34 +335,34 @@ WRL_NOTHROW virtual HRESULT RegisterCOMObject(
 
 ### <a name="parameters"></a>パラメーター
 
-*serverName*<br/>
+*Servername*<br/>
 サーバーの完全修飾名。
 
-*clsid*<br/>
-登録する Clsid の配列。
+*Clsid*<br/>
+登録する CLID の配列。
 
-*ファクトリ*<br/>
-パブリッシュされるかどうかをクラスのオブジェクトの IUnknown インターフェイスの配列。
+*factories*<br/>
+可用性が公開されているクラス オブジェクトの IUnknown インターフェイスの配列。
 
-*Cookie*<br/>
-操作が完了したらは、登録され、そのオブジェクト クラスを識別する値へのポインターの配列。 これらの値は使用後で登録を取り消します。
+*cookies*<br/>
+操作が完了すると、登録されたクラス オブジェクトを識別する値へのポインターの配列。 これらの値は、後で登録を取り消して使用されます。
 
 *count*<br/>
-登録する Clsid の数。
+登録する CLSID の数。
 
 ### <a name="return-value"></a>戻り値
 
-S_OK 場合成功します。それ以外の場合、HRESULT を理由を示す CO_E_OBJISREG など、操作に失敗しました。
+S_OK成功の場合。それ以外の場合は、操作が失敗した理由を示す CO_E_OBJISREGなどの HRESULT。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-COM オブジェクトは、CLSCTX 列挙型の別個の列挙子に登録されます。
+COM オブジェクトは、CLSCTX 列挙体のCLSCTX_LOCAL_SERVER列挙子に登録されます。
 
-登録済みのオブジェクトへの接続の種類が現在の組み合わせで指定された*comflag*テンプレート パラメーターと REGCLS 列挙体の REGCLS_SUSPENDED 列挙子。
+登録されたオブジェクトへの接続の種類は、現在の*comflag*テンプレート パラメーターと REGCLS 列挙体のREGCLS_SUSPENDED列挙子の組み合わせによって指定されます。
 
-## <a name="registerobjects"></a>Module::registerobjects
+## <a name="moduleregisterobjects"></a><a name="registerobjects"></a>モジュール::レジスタオブジェクト
 
-他のアプリケーションがそれらに接続できるように、COM または Windows ランタイムのオブジェクトを登録します。
+COM オブジェクトまたは Windows ランタイム オブジェクトを登録し、他のアプリケーションが接続できるようにします。
 
 ```cpp
 HRESULT RegisterObjects(
@@ -370,19 +372,19 @@ HRESULT RegisterObjects(
 
 ### <a name="parameters"></a>パラメーター
 
-*module*<br/>
+*モジュール*<br/>
 COM または Windows ランタイム オブジェクトの配列。
 
-*serverName*<br/>
-オブジェクトを作成したサーバーの名前です。
+*Servername*<br/>
+オブジェクトを作成したサーバーの名前。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は s_ok を返します。それ以外の場合、理由を示す HRESULT 操作に失敗しました。
+成功した場合はS_OK。それ以外の場合は、操作が失敗した理由を示す HRESULT。
 
-## <a name="registerwinrtobject"></a>Module::RegisterWinRTObject
+## <a name="moduleregisterwinrtobject"></a><a name="registerwinrtobject"></a>モジュール::レジスタウィンRTオブジェクト
 
-他のアプリケーションがそれらに接続できるように、1 つまたは複数の Windows ランタイム オブジェクトを登録します。
+他のアプリケーションが接続できるように、1 つ以上の Windows ランタイム オブジェクトを登録します。
 
 ```cpp
 HRESULT RegisterWinRTObject(const wchar_t* serverName,
@@ -393,45 +395,45 @@ HRESULT RegisterWinRTObject(const wchar_t* serverName,
 
 ### <a name="parameters"></a>パラメーター
 
-*serverName*<br/>
-この操作によって影響を受けるオブジェクトのサブセットを指定する名前。
+*Servername*<br/>
+この操作の影響を受けるオブジェクトのサブセットを指定する名前。
 
-*activatableClassIds*<br/>
-登録のアクティブ化可能な Clsid の配列。
+*アクティブ化可能なクラスId*<br/>
+登録するアクティブ化可能な CLID の配列。
 
-*cookie*<br/>
-登録済みのクラス オブジェクトを識別する値。 この値は、登録を取り消すに後で使用されます。
+*クッキー*<br/>
+登録されたクラス オブジェクトを識別する値。 この値は、後で登録を取り消すために使用されます。
 
 *count*<br/>
 登録するオブジェクトの数。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は s_ok を返します。それ以外の場合、エラーの hresult 値理由を示す CO_E_OBJISREG など、操作に失敗しました。
+成功した場合はS_OK。それ以外の場合は、操作が失敗した理由を示すエラー HRESULT (CO_E_OBJISREGなど)。
 
-## <a name="releasenotifier"></a>Module::releasenotifier _
+## <a name="modulereleasenotifier_"></a><a name="releasenotifier"></a>モジュール::releaseNotifier_
 
-ポインターを保持する`ReleaseNotifier`オブジェクト。
+オブジェクトへのポインターを`ReleaseNotifier`保持します。
 
 ```cpp
 ReleaseNotifier *releaseNotifier_;
 ```
 
-## <a name="terminate"></a>Module::terminate
+## <a name="moduleterminate"></a><a name="terminate"></a>モジュール::終了
 
-シャット ダウンするモジュールによってインスタンス化されるすべてのファクトリをによりします。
+モジュールによってインスタンス化されたすべてのファクトリをシャットダウンします。
 
 ```cpp
 void Terminate();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-キャッシュのファクトリを解放します。
+キャッシュ内のファクトリを解放します。
 
-## <a name="unregistercomobject"></a>Module::unregistercomobject
+## <a name="moduleunregistercomobject"></a><a name="unregistercomobject"></a>モジュール::COMオブジェクトの登録解除
 
-他のアプリケーションが接続することが原因の 1 つまたは複数の COM オブジェクトを解除します。
+1 つ以上の COM オブジェクトの登録を解除します。
 
 ```cpp
 virtual HRESULT UnregisterCOMObject(
@@ -442,22 +444,22 @@ virtual HRESULT UnregisterCOMObject(
 
 ### <a name="parameters"></a>パラメーター
 
-*serverName*<br/>
+*Servername*<br/>
 (未使用)
 
-*Cookie*<br/>
-登録するクラスのオブジェクトを識別する値へのポインターの配列。 配列がによって作成された、 [RegisterCOMObject](#registercomobject)メソッド。
+*cookies*<br/>
+登録解除するクラス オブジェクトを識別する値へのポインターの配列。 配列は[、RegisterCOMObject](#registercomobject)メソッドによって作成されました。
 
 *count*<br/>
 登録を解除するクラスの数。
 
 ### <a name="return-value"></a>戻り値
 
-この操作が成功した場合は s_ok を返します。それ以外の場合、エラーの理由を示す hresult 値の操作に失敗しました。
+この操作が成功した場合はS_OK。それ以外の場合は、操作が失敗した理由を示すエラー HRESULT。
 
-## <a name="unregisterobjects"></a>Module::unregisterobjects
+## <a name="moduleunregisterobjects"></a><a name="unregisterobjects"></a>モジュール::オブジェクトの登録解除
 
-他のアプリケーションがそれらに接続できないように、指定したモジュール内のオブジェクトを登録解除します。
+指定したモジュール内のオブジェクトの登録を解除し、他のアプリケーションがオブジェクトに接続できないようにします。
 
 ```cpp
 HRESULT UnregisterObjects(
@@ -467,19 +469,19 @@ HRESULT UnregisterObjects(
 
 ### <a name="parameters"></a>パラメーター
 
-*module*<br/>
+*モジュール*<br/>
 モジュールへのポインター。
 
-*serverName*<br/>
-この操作によって影響を受けるオブジェクトのサブセットを指定する修飾名。
+*Servername*<br/>
+この操作の影響を受けるオブジェクトのサブセットを指定する修飾名。
 
 ### <a name="return-value"></a>戻り値
 
-この操作が成功した場合は s_ok を返します。それ以外の場合、エラー理由を示す HRESULT がこの操作に失敗しました。
+この操作が成功した場合はS_OK。それ以外の場合は、この操作が失敗した理由を示すエラー HRESULT。
 
-## <a name="unregisterwinrtobject"></a>Module::unregisterwinrtobject
+## <a name="moduleunregisterwinrtobject"></a><a name="unregisterwinrtobject"></a>モジュール::登録解除WinRTオブジェクト
 
-他のアプリケーションがそれらに接続できないように、1 つまたは複数の Windows ランタイム オブジェクトを登録解除します。
+1 つ以上の Windows ランタイム オブジェクトの登録を解除して、他のアプリケーションがオブジェクトに接続できないようにします。
 
 ```cpp
 virtual HRESULT UnregisterWinRTObject(
@@ -490,5 +492,5 @@ virtual HRESULT UnregisterWinRTObject(
 
 ### <a name="parameters"></a>パラメーター
 
-*cookie*<br/>
-登録を取り消すことは、クラス オブジェクトを識別する値へのポインター。
+*クッキー*<br/>
+登録を取り消すクラス オブジェクトを識別する値へのポインター。

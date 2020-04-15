@@ -1,5 +1,5 @@
 ---
-title: CFileFind クラス
+title: クラスを検索します。
 ms.date: 11/04/2016
 f1_keywords:
 - CFileFind
@@ -56,16 +56,16 @@ helpviewer_keywords:
 - CFileFind [MFC], CloseContext
 - CFileFind [MFC], m_pTM
 ms.assetid: 9990068c-b023-4114-9580-a50182d15240
-ms.openlocfilehash: 2ec8c50a317a09e97a212e8cd7b9be1b58272af9
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: f01aa84593afed5a4f2f102da7d161ad42917080
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69506571"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373873"
 ---
-# <a name="cfilefind-class"></a>CFileFind クラス
+# <a name="cfilefind-class"></a>クラスを検索します。
 
-ローカルファイル検索を実行します。これは、インターネットファイル検索を実行する[CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md)と[CFtpFileFind](../../mfc/reference/cftpfilefind-class.md)の基本クラスです。
+ローカル ファイル検索を実行し、インターネット ファイル検索を実行する[CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md)および[CFtpFileFind](../../mfc/reference/cftpfilefind-class.md)の基本クラスです。
 
 ## <a name="syntax"></a>構文
 
@@ -79,60 +79,60 @@ class CFileFind : public CObject
 
 |名前|説明|
 |----------|-----------------|
-|[CFileFind::CFileFind](#cfilefind)|`CFileFind` オブジェクトを構築します。|
+|[ファイル検索::Cファイル検索](#cfilefind)|`CFileFind` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CFileFind::Close](#close)|検索要求を閉じます。|
-|[CFileFind::FindFile](#findfile)|指定されたファイル名をディレクトリで検索します。|
-|[CFileFind::FindNextFile](#findnextfile)|以前の[FindFile](#findfile)の呼び出しからファイル検索を続行します。|
-|[CFileFind::GetCreationTime](#getcreationtime)|ファイルが作成された時刻を取得します。|
-|[CFileFind::GetFileName](#getfilename)|検出されたファイルの名前 (拡張子を含む) を取得します。|
-|[CFileFind::GetFilePath](#getfilepath)|検出されたファイルの完全なパスを取得します。|
-|[CFileFind::GetFileTitle](#getfiletitle)|検出されたファイルのタイトルを取得します。 タイトルには、拡張子は含まれません。|
-|[CFileFind::GetFileURL](#getfileurl)|検出されたファイルの URL (ファイルパスを含む) を取得します。|
-|[CFileFind::GetLastAccessTime](#getlastaccesstime)|ファイルが最後にアクセスされた時刻を取得します。|
-|[CFileFind::GetLastWriteTime](#getlastwritetime)|ファイルが最後に変更されて保存された時刻を取得します。|
-|[CFileFind::GetLength](#getlength)|検出されたファイルの長さをバイト単位で取得します。|
-|[CFileFind::GetRoot](#getroot)|検出されたファイルのルートディレクトリを取得します。|
-|[CFileFind::IsArchived](#isarchived)|検出されたファイルがアーカイブされているかどうかを判断します。|
-|[CFileFind::IsCompressed](#iscompressed)|検出されたファイルが圧縮されているかどうかを判断します。|
-|[CFileFind::IsDirectory](#isdirectory)|見つかったファイルがディレクトリであるかどうかを判断します。|
-|[CFileFind::IsDots](#isdots)|見つかったファイルの名前の名前が "." または ".." であるかどうかを判断します。これは、が実際にはディレクトリであることを示します。|
-|[CFileFind::IsHidden](#ishidden)|検出されたファイルが非表示かどうかを判断します。|
-|[CFileFind::IsNormal](#isnormal)|検出されたファイルが正常であるかどうかを判断します (つまり、に他の属性はありません)。|
-|[CFileFind::IsReadOnly](#isreadonly)|検出されたファイルが読み取り専用かどうかを判断します。|
-|[CFileFind::IsSystem](#issystem)|検出されたファイルがシステムファイルであるかどうかを判断します。|
-|[CFileFind::IsTemporary](#istemporary)|見つかったファイルが一時的なものかどうかを判断します。|
-|[CFileFind::MatchesMask](#matchesmask)|検索するファイルの必要なファイル属性を示します。|
+|[ファイル検索::閉じる](#close)|検索要求を閉じます。|
+|[ファイル検索::ファイルを検索します。](#findfile)|指定したファイル名をディレクトリで検索します。|
+|[ファイル検索:次のファイルを検索します。](#findnextfile)|[FindFile](#findfile)への以前の呼び出しからファイル検索を続行します。|
+|[ファイル検索::取得作成時間](#getcreationtime)|ファイルが作成された時刻を取得します。|
+|[ファイル検索::ファイル名を取得します。](#getfilename)|見つかったファイルの名前 (拡張子を含む) を取得します。|
+|[ファイル検索::ファイルパスを取得します。](#getfilepath)|見つかったファイルのパス全体を取得します。|
+|[ファイル検索::ファイルタイトルを取得します。](#getfiletitle)|見つかったファイルのタイトルを取得します。 タイトルには拡張子は含まれません。|
+|[ファイル検索::ファイルのURLを取得します。](#getfileurl)|見つかったファイルの URL (ファイル パスを含む) を取得します。|
+|[ファイル検索::取得ラストアクセスタイム](#getlastaccesstime)|ファイルが最後にアクセスされた時刻を取得します。|
+|[ファイル検索::取得ラストライトタイム](#getlastwritetime)|ファイルが最後に変更され、保存された時刻を取得します。|
+|[ファイル検索::取得長](#getlength)|見つかったファイルの長さ (バイト単位) を取得します。|
+|[ファイル検索::ゲットルート](#getroot)|見つかったファイルのルート ディレクトリを取得します。|
+|[ファイル検索::アーカイブ](#isarchived)|見つかったファイルをアーカイブするかどうかを決定します。|
+|[ファイル検索::IsCompress](#iscompressed)|見つかったファイルを圧縮するかどうかを指定します。|
+|[ファイル検索::IsDirectory](#isdirectory)|見つかったファイルがディレクトリかどうかを判断します。|
+|[ファイル検索::イズドット](#isdots)|見つかったファイルの名前が、実際にディレクトリであることを示す "." または "." の名前かどうかを判断します。|
+|[ファイル検索::IsHidden](#ishidden)|見つかったファイルが非表示かどうかを判断します。|
+|[ファイル検索::IsNormal](#isnormal)|見つかったファイルが通常のファイルであるかどうかを判断します (つまり、他の属性はありません)。|
+|[ファイル検索::読み取り専用](#isreadonly)|見つかったファイルが読み取り専用かどうかを判断します。|
+|[ファイル検索::システム](#issystem)|見つかったファイルがシステム ファイルかどうかを判断します。|
+|[ファイル検索::一時的](#istemporary)|見つかったファイルが一時的なものかどうかを判断します。|
+|[ファイル検索::マッチマスク](#matchesmask)|検出するファイルの必要なファイル属性を示します。|
 
 ### <a name="protected-methods"></a>プロテクト メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CFileFind::CloseContext](#closecontext)|現在の検索ハンドルによって指定されたファイルを閉じます。|
+|[ファイル検索::クローズコンテキスト](#closecontext)|現在の検索ハンドルで指定されたファイルを閉じます。|
 
 ### <a name="protected-data-members"></a>プロテクト データ メンバー
 
 |名前|説明|
 |----------|-----------------|
-|[CFileFind::m_pTM](#m_ptm)|オブジェクトへの`CAtlTransactionManager`ポインター。|
+|[ファイル検索::m_pTM](#m_ptm)|`CAtlTransactionManager`オブジェクトへのポインター。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-`CFileFind`には、検索を開始し、ファイルを検索し、ファイルのタイトル、名前、またはパスを返すメンバー関数が含まれています。 インターネット検索の場合、メンバー関数[GetFileURL](#getfileurl)はファイルの URL を返します。
+`CFileFind`には、検索を開始し、ファイルを検索し、ファイルのタイトル、名前、またはパスを返すメンバー関数が含まれます。 インターネット検索の場合、メンバー関数[GetFileURL は](#getfileurl)ファイルの URL を返します。
 
-`CFileFind`は、特定のサーバーの種類を検索するように設計された`CGopherFileFind` 、他の2つの MFC `CFtpFileFind`クラスの基本クラスです。これは、特に gopher サーバーで機能し、FTP サーバーで特に機能します。 これら3つのクラスは、サーバープロトコル、ファイルの種類、場所など、ローカルコンピューターまたはリモートサーバー上のファイルを検索するためのシームレスなメカニズムを提供します。
+`CFileFind`は、特定のサーバーの種類を検索するために設計された他の 2`CGopherFileFind`つの MFC クラスの基本クラス`CFtpFileFind`です。 これらの 3 つのクラスを組み合わせることで、サーバー プロトコル、ファイルの種類、または場所に関係なく、ローカル マシンまたはリモート サーバー上で、クライアントがシームレスにファイルを検索できます。
 
-次のコードでは、現在のディレクトリにあるすべてのファイルを列挙し、各ファイルの名前を出力します。
+次のコードは、現在のディレクトリにあるすべてのファイルを列挙し、各ファイルの名前を出力します。
 
 [!code-cpp[NVC_MFCFiles#31](../../atl-mfc-shared/reference/codesnippet/cpp/cfilefind-class_1.cpp)]
 
-例を単純にするために、このコードC++では`cout`標準ライブラリクラスを使用しています。 この`cout`行は`CListBox::AddString`、グラフィカルユーザーインターフェイスを備えたプログラムで、などの呼び出しに置き換えることができます。
+このコードでは、この例を単純にするために、C++ 標準`cout`ライブラリ クラスを使用します。 この`cout`行は、 グラフィカル ユーザー`CListBox::AddString`インターフェイスを持つプログラムなどでの 呼び出しに置き換えることができます。
 
-とその他の wininet クラスの`CFileFind`使用方法の詳細については、「 [wininet を使用したインターネットプログラミング](../../mfc/win32-internet-extensions-wininet.md)」を参照してください。
+その他の WinInet`CFileFind`クラスの使用方法の詳細については[、「WinInet を使用したインターネット プログラミング](../../mfc/win32-internet-extensions-wininet.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -144,9 +144,9 @@ class CFileFind : public CObject
 
 **ヘッダー:** afx.h
 
-##  <a name="cfilefind"></a>  CFileFind::CFileFind
+## <a name="cfilefindcfilefind"></a><a name="cfilefind"></a>ファイル検索::Cファイル検索
 
-このメンバー関数は、 `CFileFind`オブジェクトが構築されるときに呼び出されます。
+このメンバー関数は、オブジェクトが`CFileFind`構築されるときに呼び出されます。
 
 ```
 CFileFind();
@@ -155,14 +155,14 @@ CFileFind(CAtlTransactionManager* pTM);
 
 ### <a name="parameters"></a>パラメーター
 
-*pTM*<br/>
+*Ptm*<br/>
 CAtlTransactionManager オブジェクトへのポインター。
 
 ### <a name="example"></a>例
 
-  [CFileFind:: GetFileName](#getfilename)の例を参照してください。
+  [ファイル検索::GetFileName](#getfilename)の例を参照してください。
 
-##  <a name="close"></a>  CFileFind::Close
+## <a name="cfilefindclose"></a><a name="close"></a>ファイル検索::閉じる
 
 検索を終了し、コンテキストをリセットし、すべてのリソースを解放するには、このメンバー関数を呼び出します。
 
@@ -170,29 +170,29 @@ CAtlTransactionManager オブジェクトへのポインター。
 void Close();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-を呼び出し`Close`た後、 [FindFile](#findfile)を呼び出して新しい検索`CFileFind`を開始する前に、新しいインスタンスを作成する必要はありません。
+を呼`Close`び出した後は[、FindFile](#findfile) `CFileFind`を呼び出す前に新しいインスタンスを作成する必要はありません。
 
 ### <a name="example"></a>例
 
-  [CFileFind:: GetFileName](#getfilename)の例を参照してください。
+  [ファイル検索::GetFileName](#getfilename)の例を参照してください。
 
-##  <a name="closecontext"></a>  CFileFind::CloseContext
+## <a name="cfilefindclosecontext"></a><a name="closecontext"></a>ファイル検索::クローズコンテキスト
 
-現在の検索ハンドルによって指定されたファイルを閉じます。
+現在の検索ハンドルで指定されたファイルを閉じます。
 
 ```
 virtual void CloseContext();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-検索ハンドルの現在の値によって指定されたファイルを閉じます。 既定の動作を変更するには、この関数をオーバーライドします。
+検索ハンドルの現在の値で指定されたファイルを閉じます。 既定の動作を変更するには、この関数をオーバーライドします。
 
-有効な検索ハンドルを取得するには、少なくとも1回は[FindFile](#findfile)関数または[FindNextFile](#findnextfile)関数を呼び出す必要があります。 関数`FindFile` と`FindNextFile`関数は、検索ハンドルを使用して、指定された名前に一致する名前を持つファイルを検索します。
+有効な検索ハンドルを取得するには、少なくとも 1 回は[FindFile](#findfile)関数または[FindNextFile](#findnextfile)関数を呼び出す必要があります。 および`FindFile``FindNextFile`関数は、検索ハンドルを使用して、指定された名前と一致する名前のファイルを検索します。
 
-##  <a name="findfile"></a>  CFileFind::FindFile
+## <a name="cfilefindfindfile"></a><a name="findfile"></a>ファイル検索::ファイルを検索します。
 
 ファイル検索を開くには、このメンバー関数を呼び出します。
 
@@ -204,65 +204,65 @@ virtual BOOL FindFile(
 
 ### <a name="parameters"></a>パラメーター
 
-*pstrName*<br/>
-検索するファイルの名前を格納している文字列へのポインター。 *Pstrname*に NULL を渡すと、 `FindFile`はワイルドカード (*.\*) 検索を行います。
+*名前*<br/>
+検索するファイルの名前を含む文字列へのポインター。 *に*NULL を`FindFile`渡すと、ワイルドカード (*.\*) 検索が行われます。
 
-*dwUnused*<br/>
+*dw未使用*<br/>
 派生クラスで`FindFile`ポリモーフィックにするために予約されています。 0 を指定する必要があります。
 
 ### <a name="return-value"></a>戻り値
 
-正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 拡張されたエラー情報を取得するには、Win32 関数[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)を呼び出します。
+正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 拡張エラー情報を取得するには、Win32 関数[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)を呼び出します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-を呼び出し`FindFile`てファイル検索を開始した後、 [FindNextFile](#findnextfile)を呼び出して後続のファイルを取得します。 次の属性`FindNextFile`メンバー関数のいずれかを呼び出す前に、を少なくとも1回呼び出す必要があります。
+ファイル検索`FindFile`を開始するために呼び出した後[、FindNextFile](#findnextfile)を呼び出して後続のファイルを取得します。 次のいずれかの属性`FindNextFile`メンバー関数を呼び出す前に、少なくとも 1 回は呼び出す必要があります。
 
 - [GetCreationTime](#getcreationtime)
 
 - [GetFileName](#getfilename)
 
-- [GetFileTitle](#getfiletitle)
+- [ファイルタイトルを取得します。](#getfiletitle)
 
-- [GetFilePath](#getfilepath)
+- [ファイルパスを取得します。](#getfilepath)
 
-- [GetFileURL](#getfileurl)
+- [ファイルの URL を取得します。](#getfileurl)
 
-- [GetLastAccessTime](#getlastaccesstime)
+- [ラストアクセスタイム](#getlastaccesstime)
 
-- [GetLastWriteTime](#getlastwritetime)
+- [書き込み時間](#getlastwritetime)
 
-- [GetLength](#getlength)
+- [長さを取得します。](#getlength)
 
 - [GetRoot](#getroot)
 
-- [IsArchived](#isarchived)
+- [アーカイブ済み](#isarchived)
 
 - [IsCompressed](#iscompressed)
 
-- [IsDirectory](#isdirectory)
+- [ディレクトリ](#isdirectory)
 
-- [IsDots](#isdots)
+- [イスドット](#isdots)
 
 - [IsHidden](#ishidden)
 
-- [IsNormal](#isnormal)
+- [正常](#isnormal)
 
 - [IsReadOnly](#isreadonly)
 
 - [IsSystem](#issystem)
 
-- [IsTemporary](#istemporary)
+- [一時的な](#istemporary)
 
-- [MatchesMask](#matchesmask)
+- [マッチマスク](#matchesmask)
 
 ### <a name="example"></a>例
 
-  [CFileFind:: IsDirectory](#isdirectory)の例を参照してください。
+  [CFileFind::IsDirectory](#isdirectory)の例を参照してください。
 
-##  <a name="findnextfile"></a>  CFileFind::FindNextFile
+## <a name="cfilefindfindnextfile"></a><a name="findnextfile"></a>ファイル検索:次のファイルを検索します。
 
-以前の[FindFile](#findfile)の呼び出しからファイル検索を続行するには、このメンバー関数を呼び出します。
+FindFile への前回の呼び出しからファイル検索を[FindFile](#findfile)続行するには、このメンバー関数を呼び出します。
 
 ```
 virtual BOOL FindNextFile();
@@ -270,59 +270,59 @@ virtual BOOL FindNextFile();
 
 ### <a name="return-value"></a>戻り値
 
-他のファイルがある場合は0以外。見つかったファイルがディレクトリ内の最後のファイルであるか、エラーが発生した場合は0。 拡張されたエラー情報を取得するには、Win32 関数[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)を呼び出します。 見つかったファイルがディレクトリ内の最後のファイルである場合、または一致するファイルが見つからない`GetLastError`場合、関数は ERROR_NO_MORE_FILES を返します。
+ファイルが多い場合は 0 以外。見つかったファイルがディレクトリ内の最後のファイルである場合、またはエラーが発生した場合は 0。 拡張エラー情報を取得するには、Win32 関数[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)を呼び出します。 見つかったファイルがディレクトリ内の最後のファイルである場合、または一致するファイルが見つからない場合`GetLastError`、関数はERROR_NO_MORE_FILESを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-次の属性`FindNextFile`メンバー関数のいずれかを呼び出す前に、を少なくとも1回呼び出す必要があります。
+次のいずれかの属性`FindNextFile`メンバー関数を呼び出す前に、少なくとも 1 回は呼び出す必要があります。
 
 - [GetCreationTime](#getcreationtime)
 
 - [GetFileName](#getfilename)
 
-- [GetFileTitle](#getfiletitle)
+- [ファイルタイトルを取得します。](#getfiletitle)
 
-- [GetFilePath](#getfilepath)
+- [ファイルパスを取得します。](#getfilepath)
 
-- [GetFileURL](#getfileurl)
+- [ファイルの URL を取得します。](#getfileurl)
 
-- [GetLastAccessTime](#getlastaccesstime)
+- [ラストアクセスタイム](#getlastaccesstime)
 
-- [GetLastWriteTime](#getlastwritetime)
+- [書き込み時間](#getlastwritetime)
 
-- [GetLength](#getlength)
+- [長さを取得します。](#getlength)
 
 - [GetRoot](#getroot)
 
-- [IsArchived](#isarchived)
+- [アーカイブ済み](#isarchived)
 
 - [IsCompressed](#iscompressed)
 
-- [IsDirectory](#isdirectory)
+- [ディレクトリ](#isdirectory)
 
-- [IsDots](#isdots)
+- [イスドット](#isdots)
 
 - [IsHidden](#ishidden)
 
-- [IsNormal](#isnormal)
+- [正常](#isnormal)
 
 - [IsReadOnly](#isreadonly)
 
 - [IsSystem](#issystem)
 
-- [IsTemporary](#istemporary)
+- [一時的な](#istemporary)
 
-- [MatchesMask](#matchesmask)
+- [マッチマスク](#matchesmask)
 
-`FindNextFile`Win32 関数[FindNextFile](/windows/win32/api/fileapi/nf-fileapi-findnextfilew)をラップします。
+`FindNextFile`関数をラップ[します。](/windows/win32/api/fileapi/nf-fileapi-findnextfilew)
 
 ### <a name="example"></a>例
 
-  [CFileFind:: IsDirectory](#isdirectory)の例を参照してください。
+  [CFileFind::IsDirectory](#isdirectory)の例を参照してください。
 
-##  <a name="getcreationtime"></a>  CFileFind::GetCreationTime
+## <a name="cfilefindgetcreationtime"></a><a name="getcreationtime"></a>ファイル検索::取得作成時間
 
-このメンバー関数を呼び出して、指定したファイルが作成された時刻を取得します。
+指定したファイルが作成された時刻を取得します。
 
 ```
 virtual BOOL GetCreationTime(FILETIME* pTimeStamp) const;
@@ -331,30 +331,30 @@ virtual BOOL GetCreationTime(CTime& refTime) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*pTimeStamp*<br/>
-ファイルが作成された時刻を格納している[FILETIME](/windows/win32/api/minwinbase/ns-minwinbase-filetime)構造体へのポインター。
+*スタンプ*<br/>
+ファイルが作成された時刻を含む[FILETIME](/windows/win32/api/minwinbase/ns-minwinbase-filetime)構造体へのポインター。
 
-*refTime*<br/>
+*時間*<br/>
 [CTime](../../atl-mfc-shared/reference/ctime-class.md)オブジェクトへの参照。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は0以外の。失敗した場合は0。 `GetCreationTime`この`CFileFind`オブジェクトで[FindNextFile](#findnextfile)が呼び出されたことがない場合にのみ、0を返します。
+成功した場合は 0 以外。失敗した場合は 0。 `GetCreationTime`この`CFileFind`オブジェクトで[FindNextFile](#findnextfile)が呼び出されていない場合にのみ 0 を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-を呼び出す`GetCreationTime`前に、 [FindNextFile](#findnextfile)を少なくとも1回呼び出す必要があります。
+を呼び出す前に、少なくとも`GetCreationTime`1 回[は FindNextFile](#findnextfile)を呼び出す必要があります。
 
 > [!NOTE]
->  すべてのファイルシステムで同じセマンティクスを使用して、この関数によって返されるタイムスタンプが実装されるわけではありません。 基になるファイルシステムまたはサーバーが time 属性の保持をサポートしていない場合、この関数は、他のタイムスタンプ関数から返される値と同じ値を返すことがあります。 時刻形式の詳細については、 [WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw)構造体を参照してください。 一部のオペレーティングシステムでは、返された時間は、コンピューターのローカルのタイムゾーンのファイルの場所にあります。 詳細については、Win32 [FileTimeToLocalFileTime](/windows/win32/api/fileapi/nf-fileapi-filetimetolocalfiletime) API に関する説明を参照してください。
+> すべてのファイルシステムが同じセマンティクスを使用して、この関数によって返されるタイム・スタンプを実装するわけではありません。 この関数は、基礎となるファイルシステムまたはサーバが time 属性の保持をサポートしていない場合、他のタイム・スタンプ関数から戻される値と同じ値を返す場合があります。 時刻形式については[、WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw)の構造を参照してください。 一部のオペレーティング・システムでは、戻り時刻は、ファイルが置かれたマシンに対してローカルな時間帯にあります。 詳細については、Win32[ファイルタイムをローカルファイル時間](/windows/win32/api/fileapi/nf-fileapi-filetimetolocalfiletime)API を参照してください。
 
 ### <a name="example"></a>例
 
-  [CFileFind:: GetLength](#getlength)の例を参照してください。
+  [CFileFind::GetLength](#getlength)の例を参照してください。
 
-##  <a name="getfilename"></a>  CFileFind::GetFileName
+## <a name="cfilefindgetfilename"></a><a name="getfilename"></a>ファイル検索::ファイル名を取得します。
 
-検出されたファイルの名前を取得するには、このメンバー関数を呼び出します。
+見つかったファイルの名前を取得します。
 
 ```
 virtual CString GetFileName() const;
@@ -362,27 +362,27 @@ virtual CString GetFileName() const;
 
 ### <a name="return-value"></a>戻り値
 
-最近検出されたファイルの名前。
+最近見つかったファイルの名前。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-GetFileName を呼び出す前に、 [FindNextFile](#findnextfile)を少なくとも1回呼び出す必要があります。
+GetFileName を呼び出す前に、少なくとも 1 回は[FindNextFile](#findnextfile)を呼び出す必要があります。
 
-`GetFileName`は、何らか`CFileFind`の形式のファイル名を返す3つのメンバー関数のうちの1つです。 次の一覧では、3つの方法とそれらの違いについて説明します。
+`GetFileName`は、ファイル名`CFileFind`の形式を返す 3 つのメンバー関数のうちの 1 つです。 次のリストでは、3 つの内容とその違いについて説明します。
 
-- `GetFileName`拡張子を含むファイル名を返します。 たとえば、 *c:\myhtml\myfile.txt*ファイル`GetFileName`についてのユーザーメッセージを生成するためにを呼び出すと、 *myfile.txt*というファイル名が返されます。
+- `GetFileName`は、拡張子を含むファイル名を返します。 たとえば`GetFileName`*、c:\myhtml\myfile.txt*ファイルに関するユーザー メッセージを生成する呼び出しは、ファイル名*myfile.txt*を返します。
 
-- [Getfilepath](#getfilepath)は、ファイルのパス全体を返します。 たとえば、 *c:\myhtml\myfile.txt*ファイル`GetFilePath`についてのユーザーメッセージを生成するためにを呼び出すと、ファイルパス*c:\myhtml\myfile.txt*が返されます。
+- [ファイルの](#getfilepath)パス全体を返します。 たとえば`GetFilePath`*、c:\myhtml\myfile.txt*ファイルに関するユーザー メッセージを生成するために呼び出すと、ファイル パス*c:\myhtml\myfile.txt*が返されます。
 
-- [GetFileTitle](#getfiletitle)はファイル名を返します (ファイル拡張子は除く)。 たとえば、 *c:\myhtml\myfile.txt*ファイル`GetFileTitle`についてのユーザーメッセージを生成するためにを呼び出すと、ファイルタイトルのファイル名が返されます。
+- [ファイル](#getfiletitle)名を返します。 たとえば`GetFileTitle`*、c:\myhtml\myfile.txt*ファイルに関するユーザー メッセージを生成する呼び出しは、ファイル タイトル*myfile*を返します。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFCFiles#32](../../atl-mfc-shared/reference/codesnippet/cpp/cfilefind-class_2.cpp)]
 
-##  <a name="getfilepath"></a>  CFileFind::GetFilePath
+## <a name="cfilefindgetfilepath"></a><a name="getfilepath"></a>ファイル検索::ファイルパスを取得します。
 
-このメンバー関数を呼び出して、指定したファイルの完全なパスを取得します。
+指定したファイルの完全パスを取得します。
 
 ```
 virtual CString GetFilePath() const;
@@ -392,25 +392,25 @@ virtual CString GetFilePath() const;
 
 指定したファイルのパス。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-を呼び出す`GetFilePath`前に、 [FindNextFile](#findnextfile)を少なくとも1回呼び出す必要があります。
+を呼び出す前に、少なくとも`GetFilePath`1 回[は FindNextFile](#findnextfile)を呼び出す必要があります。
 
-`GetFilePath`は、何らか`CFileFind`の形式のファイル名を返す3つのメンバー関数のうちの1つです。 次の一覧では、3つの方法とそれらの違いについて説明します。
+`GetFilePath`は、ファイル名`CFileFind`の形式を返す 3 つのメンバー関数のうちの 1 つです。 次のリストでは、3 つの内容とその違いについて説明します。
 
-- [Getfilename](#getfilename)は、拡張子を含むファイル名を返します。 たとえば、 *c:\myhtml\myfile.txt*ファイル`GetFileName`についてのユーザーメッセージを生成するためにを呼び出すと、 *myfile.txt*というファイル名が返されます。
+- [ファイル名を](#getfilename)返します。 たとえば`GetFileName`*、c:\myhtml\myfile.txt*ファイルに関するユーザー メッセージを生成する呼び出しは、ファイル名*myfile.txt*を返します。
 
-- `GetFilePath`ファイルのパス全体を返します。 たとえば、ファイル`c:\myhtml\myfile.txt`に`GetFilePath`関するユーザーメッセージを生成するためにを呼び出すと`c:\myhtml\myfile.txt`、ファイルパスが返されます。
+- `GetFilePath`は、ファイルのパス全体を返します。 たとえば、ファイルに`GetFilePath`関するユーザー メッセージを生成する`c:\myhtml\myfile.txt`呼び出し`c:\myhtml\myfile.txt`は、ファイル パスを返します。
 
-- [GetFileTitle](#getfiletitle)はファイル名を返します (ファイル拡張子は除く)。 たとえば、 *c:\myhtml\myfile.txt*ファイル`GetFileTitle`についてのユーザーメッセージを生成するためにを呼び出すと、ファイルタイトルのファイル名が返されます。
+- [ファイル](#getfiletitle)名を返します。 たとえば`GetFileTitle`*、c:\myhtml\myfile.txt*ファイルに関するユーザー メッセージを生成する呼び出しは、ファイル タイトル*myfile*を返します。
 
 ### <a name="example"></a>例
 
-  [CFileFind:: GetFileName](#getfilename)の例を参照してください。
+  [ファイル検索::GetFileName](#getfilename)の例を参照してください。
 
-##  <a name="getfiletitle"></a>  CFileFind::GetFileTitle
+## <a name="cfilefindgetfiletitle"></a><a name="getfiletitle"></a>ファイル検索::ファイルタイトルを取得します。
 
-検出されたファイルのタイトルを取得するには、このメンバー関数を呼び出します。
+見つかったファイルのタイトルを取得します。
 
 ```
 virtual CString GetFileTitle() const;
@@ -420,23 +420,23 @@ virtual CString GetFileTitle() const;
 
 ファイルのタイトル。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-を呼び出す`GetFileTitle`前に、 [FindNextFile](#findnextfile)を少なくとも1回呼び出す必要があります。
+を呼び出す前に、少なくとも`GetFileTitle`1 回[は FindNextFile](#findnextfile)を呼び出す必要があります。
 
-`GetFileTitle`は、何らか`CFileFind`の形式のファイル名を返す3つのメンバー関数のうちの1つです。 次の一覧では、3つの方法とそれらの違いについて説明します。
+`GetFileTitle`は、ファイル名`CFileFind`の形式を返す 3 つのメンバー関数のうちの 1 つです。 次のリストでは、3 つの内容とその違いについて説明します。
 
-- [Getfilename](#getfilename)は、拡張子を含むファイル名を返します。 たとえば、 *c:\myhtml\myfile.txt*ファイル`GetFileName`についてのユーザーメッセージを生成するためにを呼び出すと、 *myfile.txt*というファイル名が返されます。
+- [ファイル名を](#getfilename)返します。 たとえば`GetFileName`*、c:\myhtml\myfile.txt*ファイルに関するユーザー メッセージを生成する呼び出しは、ファイル名*myfile.txt*を返します。
 
-- [Getfilepath](#getfilepath)は、ファイルのパス全体を返します。 たとえば、 *c:\myhtml\myfile.txt*ファイル`GetFilePath`についてのユーザーメッセージを生成するためにを呼び出すと、ファイルパス*c:\myhtml\myfile.txt*が返されます。
+- [ファイルの](#getfilepath)パス全体を返します。 たとえば`GetFilePath`*、c:\myhtml\myfile.txt*ファイルに関するユーザー メッセージを生成するために呼び出すと、ファイル パス*c:\myhtml\myfile.txt*が返されます。
 
-- `GetFileTitle`ファイル名を返します (ファイル拡張子は除く)。 たとえば、 *c:\myhtml\myfile.txt*ファイル`GetFileTitle`についてのユーザーメッセージを生成するためにを呼び出すと、ファイルタイトルのファイル名が返されます。
+- `GetFileTitle`は、ファイル拡張子を除くファイル名を返します。 たとえば`GetFileTitle`*、c:\myhtml\myfile.txt*ファイルに関するユーザー メッセージを生成する呼び出しは、ファイル タイトル*myfile*を返します。
 
 ### <a name="example"></a>例
 
-  [CFileFind:: GetFileName](#getfilename)の例を参照してください。
+  [ファイル検索::GetFileName](#getfilename)の例を参照してください。
 
-##  <a name="getfileurl"></a>  CFileFind::GetFileURL
+## <a name="cfilefindgetfileurl"></a><a name="getfileurl"></a>ファイル検索::ファイルのURLを取得します。
 
 指定した URL を取得するには、このメンバー関数を呼び出します。
 
@@ -448,19 +448,19 @@ virtual CString GetFileURL() const;
 
 完全な URL。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-を呼び出す`GetFileURL`前に、 [FindNextFile](#findnextfile)を少なくとも1回呼び出す必要があります。
+を呼び出す前に、少なくとも`GetFileURL`1 回[は FindNextFile](#findnextfile)を呼び出す必要があります。
 
-`GetFileURL`は、という形式`file://path`の URL を返す点を除けば、メンバー関数[getfilepath](#getfilepath)に似ています。 たとえば、 *myfile.txt*の`GetFileURL`完全な url を取得するためにを呼び出すと`file://c:\myhtml\myfile.txt`、url が返されます。
+`GetFileURL`はメンバー関数[GetFilePath](#getfilepath)に似ていますが、URL がフォームで返`file://path`される点が異なっています。 たとえば *、myfile.txt*の完全な URL を取得するために呼`file://c:\myhtml\myfile.txt`び出すと`GetFileURL`、URL が返されます。
 
 ### <a name="example"></a>例
 
-  [CFileFind:: GetFileName](#getfilename)の例を参照してください。
+  [ファイル検索::GetFileName](#getfilename)の例を参照してください。
 
-##  <a name="getlastaccesstime"></a>  CFileFind::GetLastAccessTime
+## <a name="cfilefindgetlastaccesstime"></a><a name="getlastaccesstime"></a>ファイル検索::取得ラストアクセスタイム
 
-このメンバー関数を呼び出して、指定したファイルに最後にアクセスした時刻を取得します。
+指定したファイルが最後にアクセスされた時刻を取得します。
 
 ```
 virtual BOOL GetLastAccessTime(CTime& refTime) const;
@@ -469,30 +469,30 @@ virtual BOOL GetLastAccessTime(FILETIME* pTimeStamp) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*refTime*<br/>
+*時間*<br/>
 [CTime](../../atl-mfc-shared/reference/ctime-class.md)オブジェクトへの参照。
 
-*pTimeStamp*<br/>
-ファイルが最後にアクセスされた時刻を格納している[FILETIME](/windows/win32/api/minwinbase/ns-minwinbase-filetime)構造体へのポインター。
+*スタンプ*<br/>
+ファイルが最後にアクセスされた時刻を含む[FILETIME](/windows/win32/api/minwinbase/ns-minwinbase-filetime)構造体へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は0以外の。失敗した場合は0。 `GetLastAccessTime`この`CFileFind`オブジェクトで[FindNextFile](#findnextfile)が呼び出されたことがない場合にのみ、0を返します。
+成功した場合は 0 以外。失敗した場合は 0。 `GetLastAccessTime`この`CFileFind`オブジェクトで[FindNextFile](#findnextfile)が呼び出されていない場合にのみ 0 を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-を呼び出す`GetLastAccessTime`前に、 [FindNextFile](#findnextfile)を少なくとも1回呼び出す必要があります。
+を呼び出す前に、少なくとも`GetLastAccessTime`1 回[は FindNextFile](#findnextfile)を呼び出す必要があります。
 
 > [!NOTE]
->  すべてのファイルシステムで同じセマンティクスを使用して、この関数によって返されるタイムスタンプが実装されるわけではありません。 基になるファイルシステムまたはサーバーが time 属性の保持をサポートしていない場合、この関数は、他のタイムスタンプ関数から返される値と同じ値を返すことがあります。 時刻形式の詳細については、 [WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw)構造体を参照してください。 一部のオペレーティングシステムでは、返された時間は、コンピューターのローカルのタイムゾーンのファイルの場所にあります。 詳細については、Win32 [FileTimeToLocalFileTime](/windows/win32/api/fileapi/nf-fileapi-filetimetolocalfiletime) API に関する説明を参照してください。
+> すべてのファイルシステムが同じセマンティクスを使用して、この関数によって返されるタイム・スタンプを実装するわけではありません。 この関数は、基礎となるファイルシステムまたはサーバが time 属性の保持をサポートしていない場合、他のタイム・スタンプ関数から戻される値と同じ値を返す場合があります。 時刻形式については[、WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw)の構造を参照してください。 一部のオペレーティング・システムでは、戻り時刻は、ファイルが置かれたマシンに対してローカルな時間帯にあります。 詳細については、Win32[ファイルタイムをローカルファイル時間](/windows/win32/api/fileapi/nf-fileapi-filetimetolocalfiletime)API を参照してください。
 
 ### <a name="example"></a>例
 
-  [CFileFind:: GetLength](#getlength)の例を参照してください。
+  [CFileFind::GetLength](#getlength)の例を参照してください。
 
-##  <a name="getlastwritetime"></a>  CFileFind::GetLastWriteTime
+## <a name="cfilefindgetlastwritetime"></a><a name="getlastwritetime"></a>ファイル検索::取得ラストライトタイム
 
-ファイルが最後に変更された時刻を取得するには、このメンバー関数を呼び出します。
+ファイルが最後に変更された時刻を取得します。
 
 ```
 virtual BOOL GetLastWriteTime(FILETIME* pTimeStamp) const;
@@ -501,30 +501,30 @@ virtual BOOL GetLastWriteTime(CTime& refTime) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*pTimeStamp*<br/>
-ファイルが最後に書き込まれた時刻を格納している[FILETIME](/windows/win32/api/minwinbase/ns-minwinbase-filetime)構造体へのポインター。
+*スタンプ*<br/>
+ファイルが最後に書き込まれた時刻を含む[FILETIME](/windows/win32/api/minwinbase/ns-minwinbase-filetime)構造体へのポインター。
 
-*refTime*<br/>
+*時間*<br/>
 [CTime](../../atl-mfc-shared/reference/ctime-class.md)オブジェクトへの参照。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は0以外の。失敗した場合は0。 `GetLastWriteTime`この`CFileFind`オブジェクトで[FindNextFile](#findnextfile)が呼び出されたことがない場合にのみ、0を返します。
+成功した場合は 0 以外。失敗した場合は 0。 `GetLastWriteTime`この`CFileFind`オブジェクトで[FindNextFile](#findnextfile)が呼び出されていない場合にのみ 0 を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-を呼び出す`GetLastWriteTime`前に、 [FindNextFile](#findnextfile)を少なくとも1回呼び出す必要があります。
+を呼び出す前に、少なくとも`GetLastWriteTime`1 回[は FindNextFile](#findnextfile)を呼び出す必要があります。
 
 > [!NOTE]
->  すべてのファイルシステムで同じセマンティクスを使用して、この関数によって返されるタイムスタンプが実装されるわけではありません。 基になるファイルシステムまたはサーバーが time 属性の保持をサポートしていない場合、この関数は、他のタイムスタンプ関数から返される値と同じ値を返すことがあります。 時刻形式の詳細については、 [WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw)構造体を参照してください。 一部のオペレーティングシステムでは、返された時間は、コンピューターのローカルのタイムゾーンのファイルの場所にあります。 詳細については、Win32 [FileTimeToLocalFileTime](/windows/win32/api/fileapi/nf-fileapi-filetimetolocalfiletime) API に関する説明を参照してください。
+> すべてのファイルシステムが同じセマンティクスを使用して、この関数によって返されるタイム・スタンプを実装するわけではありません。 この関数は、基礎となるファイルシステムまたはサーバが time 属性の保持をサポートしていない場合、他のタイム・スタンプ関数から戻される値と同じ値を返す場合があります。 時刻形式については[、WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw)の構造を参照してください。 一部のオペレーティング・システムでは、戻り時刻は、ファイルが置かれたマシンに対してローカルな時間帯にあります。 詳細については、Win32[ファイルタイムをローカルファイル時間](/windows/win32/api/fileapi/nf-fileapi-filetimetolocalfiletime)API を参照してください。
 
 ### <a name="example"></a>例
 
-  [CFileFind:: GetLength](#getlength)の例を参照してください。
+  [CFileFind::GetLength](#getlength)の例を参照してください。
 
-##  <a name="getlength"></a>  CFileFind::GetLength
+## <a name="cfilefindgetlength"></a><a name="getlength"></a>ファイル検索::取得長
 
-このメンバー関数を呼び出して、検出されたファイルの長さをバイト単位で取得します。
+見つかったファイルの長さをバイト単位で取得します。
 
 ```
 ULONGLONG GetLength() const;
@@ -532,24 +532,24 @@ ULONGLONG GetLength() const;
 
 ### <a name="return-value"></a>戻り値
 
-検出されたファイルの長さ (バイト単位)。
+見つかったファイルの長さ (バイト単位)。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-を呼び出す`GetLength`前に、 [FindNextFile](#findnextfile)を少なくとも1回呼び出す必要があります。
+を呼び出す前に、少なくとも`GetLength`1 回[は FindNextFile](#findnextfile)を呼び出す必要があります。
 
-`GetLength`Win32 構造体[WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw)を使用して、ファイルサイズの値を取得し、バイト単位で返します。
+`GetLength`Win32 構造体[WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw)を使用して、ファイル サイズの値をバイト単位で取得および返します。
 
 > [!NOTE]
->  MFC 7.0 の As で`GetLength`は、は64ビットの整数型をサポートしています。 この新しいバージョンのライブラリでビルドされた既存のコードでは、切り捨ての警告が発生する可能性があります。
+> MFC 7.0 では`GetLength`、64 ビット整数型をサポートしています。 以前にこの新しいバージョンのライブラリでビルドされた既存のコードは、切り捨ての警告を発生する可能性があります。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFCFiles#33](../../atl-mfc-shared/reference/codesnippet/cpp/cfilefind-class_3.cpp)]
 
-##  <a name="getroot"></a>  CFileFind::GetRoot
+## <a name="cfilefindgetroot"></a><a name="getroot"></a>ファイル検索::ゲットルート
 
-検出されたファイルのルートを取得するには、このメンバー関数を呼び出します。
+見つかったファイルのルートを取得します。
 
 ```
 virtual CString GetRoot() const;
@@ -559,19 +559,19 @@ virtual CString GetRoot() const;
 
 アクティブな検索のルート。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-を呼び出す`GetRoot`前に、 [FindNextFile](#findnextfile)を少なくとも1回呼び出す必要があります。
+を呼び出す前に、少なくとも`GetRoot`1 回[は FindNextFile](#findnextfile)を呼び出す必要があります。
 
-このメンバー関数は、検索を開始するために使用されるドライブ指定子とパス名を返します。 たとえば、`*.dat` を指定して [FindFile](#findfile) を呼び出すと、`GetRoot` によって空の文字列が返されます。 などのパス`c:\windows\system\*.dll`を`GetRoot`結果`FindFile`に渡す。 `c:\windows\system\`
+このメンバー関数は、検索を開始するために使用されるドライブ指定子とパス名を返します。 たとえば[、FindFile](#findfile)を呼`*.dat`び出`GetRoot`すと、空の文字列が返されます。 などの`c:\windows\system\*.dll`パスを返す結果`FindFile``GetRoot`に渡す。 `c:\windows\system\`
 
 ### <a name="example"></a>例
 
-  [CFileFind:: GetFileName](#getfilename)の例を参照してください。
+  [ファイル検索::GetFileName](#getfilename)の例を参照してください。
 
-##  <a name="isarchived"></a>  CFileFind::IsArchived
+## <a name="cfilefindisarchived"></a><a name="isarchived"></a>ファイル検索::アーカイブ
 
-見つかったファイルがアーカイブされているかどうかを判断するには、このメンバー関数を呼び出します。
+見つかったファイルがアーカイブされているかどうかを確認します。
 
 ```
 BOOL IsArchived() const;
@@ -581,21 +581,21 @@ BOOL IsArchived() const;
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-アプリケーションは、バックアップまたは削除されるアーカイブファイルを、 [WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw)構造体で指定されたファイル属性 FILE_ATTRIBUTE_ARCHIVE を使用してマークします。
+アプリケーションは、アーカイブ・ファイル (バックアップまたは削除) を[、WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw)構造で識別されるファイル属性でFILE_ATTRIBUTE_ARCHIVEにマークします。
 
-を呼び出す`IsArchived`前に、 [FindNextFile](#findnextfile)を少なくとも1回呼び出す必要があります。
+を呼び出す前に、少なくとも`IsArchived`1 回[は FindNextFile](#findnextfile)を呼び出す必要があります。
 
-ファイル属性の完全な一覧については、「メンバー関数[MatchesMask](#matchesmask) 」を参照してください。
+ファイル属性の完全なリストについては、メンバー関数[MatchesMask](#matchesmask)を参照してください。
 
 ### <a name="example"></a>例
 
-  [CFileFind:: GetLength](#getlength)の例を参照してください。
+  [CFileFind::GetLength](#getlength)の例を参照してください。
 
-##  <a name="iscompressed"></a>  CFileFind::IsCompressed
+## <a name="cfilefindiscompressed"></a><a name="iscompressed"></a>ファイル検索::IsCompress
 
-見つかったファイルが圧縮されているかどうかを判断するには、このメンバー関数を呼び出します。
+見つかったファイルが圧縮されているかどうかを調べます。
 
 ```
 BOOL IsCompressed() const;
@@ -605,21 +605,21 @@ BOOL IsCompressed() const;
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-圧縮ファイルは、 [WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw)構造体で識別されたファイル属性である FILE_ATTRIBUTE_COMPRESSED でマークされます。 ファイルの場合、この属性はファイル内のすべてのデータが圧縮されていることを示します。 ディレクトリの場合、この属性は、新しく作成されたファイルおよびサブディレクトリの圧縮が既定値であることを示します。
+圧縮ファイルは[、WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw)構造で識別されるファイル属性であるFILE_ATTRIBUTE_COMPRESSEDでマークされます。 ファイルの場合、この属性は、ファイル内のすべてのデータが圧縮されていることを示します。 ディレクトリの場合、この属性は、圧縮が新しく作成されたファイルおよびサブディレクトリのデフォルトであることを示します。
 
-を呼び出す`IsCompressed`前に、 [FindNextFile](#findnextfile)を少なくとも1回呼び出す必要があります。
+を呼び出す前に、少なくとも`IsCompressed`1 回[は FindNextFile](#findnextfile)を呼び出す必要があります。
 
-ファイル属性の完全な一覧については、「メンバー関数[MatchesMask](#matchesmask) 」を参照してください。
+ファイル属性の完全なリストについては、メンバー関数[MatchesMask](#matchesmask)を参照してください。
 
 ### <a name="example"></a>例
 
-  [CFileFind:: GetLength](#getlength)の例を参照してください。
+  [CFileFind::GetLength](#getlength)の例を参照してください。
 
-##  <a name="isdirectory"></a>  CFileFind::IsDirectory
+## <a name="cfilefindisdirectory"></a><a name="isdirectory"></a>ファイル検索::IsDirectory
 
-見つかったファイルがディレクトリであるかどうかを判断するには、このメンバー関数を呼び出します。
+見つかったファイルがディレクトリかどうかを調べます。
 
 ```
 BOOL IsDirectory() const;
@@ -629,23 +629,23 @@ BOOL IsDirectory() const;
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-ディレクトリであるファイルは、 [WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw)構造体で識別されたファイル属性を FILE_ATTRIBUTE_DIRECTORY でマークします。
+ディレクトリーであるファイルには[、WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw)構造で指定されたファイル属性FILE_ATTRIBUTE_DIRECTORYマークが付けられます。
 
-を呼び出す`IsDirectory`前に、 [FindNextFile](#findnextfile)を少なくとも1回呼び出す必要があります。
+を呼び出す前に、少なくとも`IsDirectory`1 回[は FindNextFile](#findnextfile)を呼び出す必要があります。
 
-ファイル属性の完全な一覧については、「メンバー関数[MatchesMask](#matchesmask) 」を参照してください。
+ファイル属性の完全なリストについては、メンバー関数[MatchesMask](#matchesmask)を参照してください。
 
 ### <a name="example"></a>例
 
-この小さなプログラムは、C:\ 上のすべてのディレクトリを繰り返しします。ディレクトリの名前をドライブに出力します。
+この小さなプログラムは、C:\ のすべてのディレクトリを再帰的に行います。ドライブを作成し、ディレクトリの名前を出力します。
 
 [!code-cpp[NVC_MFCFiles#34](../../atl-mfc-shared/reference/codesnippet/cpp/cfilefind-class_4.cpp)]
 
-##  <a name="isdots"></a>  CFileFind::IsDots
+## <a name="cfilefindisdots"></a><a name="isdots"></a>ファイル検索::イズドット
 
-ファイルの反復処理中に現在のディレクトリマーカーと親ディレクトリマーカーをテストするには、このメンバー関数を呼び出します。
+ファイルを反復処理しながら、現在のディレクトリと親ディレクトリ マーカーをテストします。
 
 ```
 virtual BOOL IsDots() const;
@@ -653,19 +653,19 @@ virtual BOOL IsDots() const;
 
 ### <a name="return-value"></a>戻り値
 
-見つかったファイルの名前が "." または ".." である場合は0以外の値。見つかったファイルが実際にはディレクトリであることを示します。 それ以外の場合は0です。
+見つかったファイルの名前が "." または ".." の場合は 0 以外の値を指定します。 それ以外の場合は 0。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-を呼び出す`IsDots`前に、 [FindNextFile](#findnextfile)を少なくとも1回呼び出す必要があります。
+を呼び出す前に、少なくとも`IsDots`1 回[は FindNextFile](#findnextfile)を呼び出す必要があります。
 
 ### <a name="example"></a>例
 
-  [CFileFind:: IsDirectory](#isdirectory)の例を参照してください。
+  [CFileFind::IsDirectory](#isdirectory)の例を参照してください。
 
-##  <a name="ishidden"></a>  CFileFind::IsHidden
+## <a name="cfilefindishidden"></a><a name="ishidden"></a>ファイル検索::IsHidden
 
-検出されたファイルが非表示かどうかを判断するには、このメンバー関数を呼び出します。
+見つかったファイルが隠ぺいされているかどうかを調べます。
 
 ```
 BOOL IsHidden() const;
@@ -675,21 +675,21 @@ BOOL IsHidden() const;
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-FILE_ATTRIBUTE_HIDDEN でマークされた隠しファイル。 [WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw)構造体で識別されるファイル属性です。 隠しファイルは、通常のディレクトリの一覧には含まれません。
+隠しファイルは、FILE_ATTRIBUTE_HIDDENでマークされ[、WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw)構造で識別されるファイル属性です。 隠しファイルは、通常のディレクトリ一覧には含まれません。
 
-を呼び出す`IsHidden`前に、 [FindNextFile](#findnextfile)を少なくとも1回呼び出す必要があります。
+を呼び出す前に、少なくとも`IsHidden`1 回[は FindNextFile](#findnextfile)を呼び出す必要があります。
 
-ファイル属性の完全な一覧については、「メンバー関数[MatchesMask](#matchesmask) 」を参照してください。
+ファイル属性の完全なリストについては、メンバー関数[MatchesMask](#matchesmask)を参照してください。
 
 ### <a name="example"></a>例
 
-  [CFileFind:: GetLength](#getlength)の例を参照してください。
+  [CFileFind::GetLength](#getlength)の例を参照してください。
 
-##  <a name="isnormal"></a>  CFileFind::IsNormal
+## <a name="cfilefindisnormal"></a><a name="isnormal"></a>ファイル検索::IsNormal
 
-見つかったファイルが通常のファイルであるかどうかを判断するには、このメンバー関数を呼び出します。
+見つかったファイルが通常のファイルかどうかを確認します。
 
 ```
 BOOL IsNormal() const;
@@ -699,21 +699,21 @@ BOOL IsNormal() const;
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-FILE_ATTRIBUTE_NORMAL でマークされたファイル。 [WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw)構造体で識別されるファイル属性です。 通常のファイルには、他の属性は設定されていません。 他のすべてのファイル属性は、この属性をオーバーライドします。
+FILE_ATTRIBUTE_NORMALでマークされたファイル[、WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw)構造で識別されるファイル属性。 通常のファイルには、他の属性は設定されません。 その他のファイル属性はすべて、この属性をオーバーライドします。
 
-を呼び出す`IsNormal`前に、 [FindNextFile](#findnextfile)を少なくとも1回呼び出す必要があります。
+を呼び出す前に、少なくとも`IsNormal`1 回[は FindNextFile](#findnextfile)を呼び出す必要があります。
 
-ファイル属性の完全な一覧については、「メンバー関数[MatchesMask](#matchesmask) 」を参照してください。
+ファイル属性の完全なリストについては、メンバー関数[MatchesMask](#matchesmask)を参照してください。
 
 ### <a name="example"></a>例
 
-  [CFileFind:: GetLength](#getlength)の例を参照してください。
+  [CFileFind::GetLength](#getlength)の例を参照してください。
 
-##  <a name="isreadonly"></a>  CFileFind::IsReadOnly
+## <a name="cfilefindisreadonly"></a><a name="isreadonly"></a>ファイル検索::読み取り専用
 
-検出されたファイルが読み取り専用かどうかを判断するには、このメンバー関数を呼び出します。
+見つかったファイルが読み取り専用かどうかを調べます。
 
 ```
 BOOL IsReadOnly() const;
@@ -723,21 +723,21 @@ BOOL IsReadOnly() const;
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-読み取り専用ファイルは、 [WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw)構造体で識別されたファイル属性である FILE_ATTRIBUTE_READONLY でマークされます。 アプリケーションはこのようなファイルを読み取ることができますが、書き込みや削除を行うことはできません。
+読み取り専用ファイルは[、WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw)構造で指定されたファイル属性であるFILE_ATTRIBUTE_READONLYでマークされます。 アプリケーションはこのようなファイルを読み取ることができますが、書き込みや削除はできません。
 
-を呼び出す`IsReadOnly`前に、 [FindNextFile](#findnextfile)を少なくとも1回呼び出す必要があります。
+を呼び出す前に、少なくとも`IsReadOnly`1 回[は FindNextFile](#findnextfile)を呼び出す必要があります。
 
-ファイル属性の完全な一覧については、「メンバー関数[MatchesMask](#matchesmask) 」を参照してください。
+ファイル属性の完全なリストについては、メンバー関数[MatchesMask](#matchesmask)を参照してください。
 
 ### <a name="example"></a>例
 
-  [CFileFind:: GetLength](#getlength)の例を参照してください。
+  [CFileFind::GetLength](#getlength)の例を参照してください。
 
-##  <a name="issystem"></a>  CFileFind::IsSystem
+## <a name="cfilefindissystem"></a><a name="issystem"></a>ファイル検索::システム
 
-検出されたファイルがシステムファイルであるかどうかを判断するには、このメンバー関数を呼び出します。
+見つかったファイルがシステム ファイルかどうかを調べます。
 
 ```
 BOOL IsSystem() const;
@@ -747,21 +747,21 @@ BOOL IsSystem() const;
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-システムファイルは、FILE_ATTRIBUTE_SYSTEM でマークされます。これは、 [WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw)構造体で識別されるファイル属性です。 システムファイルは、オペレーティングシステムの一部であるか、オペレーティングシステムによって排他的に使用されます。
+システム ファイルは[、WIN32_FIND_DATA FILE_ATTRIBUTE_SYSTEM](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw)でマークされます。 システム ファイルは、オペレーティング システムの一部であるか、またはオペレーティング システムによって排他的に使用されます。
 
-を呼び出す`IsSystem`前に、 [FindNextFile](#findnextfile)を少なくとも1回呼び出す必要があります。
+を呼び出す前に、少なくとも`IsSystem`1 回[は FindNextFile](#findnextfile)を呼び出す必要があります。
 
-ファイル属性の完全な一覧については、「メンバー関数[MatchesMask](#matchesmask) 」を参照してください。
+ファイル属性の完全なリストについては、メンバー関数[MatchesMask](#matchesmask)を参照してください。
 
 ### <a name="example"></a>例
 
-  [CFileFind:: GetLength](#getlength)の例を参照してください。
+  [CFileFind::GetLength](#getlength)の例を参照してください。
 
-##  <a name="istemporary"></a>  CFileFind::IsTemporary
+## <a name="cfilefindistemporary"></a><a name="istemporary"></a>ファイル検索::一時的
 
-このメンバー関数を呼び出して、見つかったファイルが一時ファイルであるかどうかを確認します。
+見つかったファイルが一時ファイルかどうかを調べます。
 
 ```
 BOOL IsTemporary() const;
@@ -771,31 +771,31 @@ BOOL IsTemporary() const;
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-一時ファイルは、 [WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw)構造体で識別されたファイル属性である FILE_ATTRIBUTE_TEMPORARY でマークされます。 一時ストレージには一時ファイルが使用されます。 アプリケーションは、絶対に必要な場合にのみファイルに書き込む必要があります。 ファイルはすぐに削除されるため、ファイルのデータのほとんどは、メディアにフラッシュされることなくメモリに残ります。
+一時ファイルは、FILE_ATTRIBUTE_TEMPORARYでマークされ[、WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw)構造で指定されたファイル属性です。 一時ファイルは、一時記憶域に使用されます。 アプリケーションは、絶対に必要な場合にのみファイルに書き込む必要があります。 ファイルのデータのほとんどは、メディアにフラッシュされずにメモリに残ります。
 
-を呼び出す`IsTemporary`前に、 [FindNextFile](#findnextfile)を少なくとも1回呼び出す必要があります。
+を呼び出す前に、少なくとも`IsTemporary`1 回[は FindNextFile](#findnextfile)を呼び出す必要があります。
 
-ファイル属性の完全な一覧については、「メンバー関数[MatchesMask](#matchesmask) 」を参照してください。
+ファイル属性の完全なリストについては、メンバー関数[MatchesMask](#matchesmask)を参照してください。
 
 ### <a name="example"></a>例
 
-  [CFileFind:: GetLength](#getlength)の例を参照してください。
+  [CFileFind::GetLength](#getlength)の例を参照してください。
 
-##  <a name="m_ptm"></a>  CFileFind::m_pTM
+## <a name="cfilefindm_ptm"></a><a name="m_ptm"></a>ファイル検索::m_pTM
 
-オブジェクトへの`CAtlTransactionManager`ポインター。
+`CAtlTransactionManager`オブジェクトへのポインター。
 
 ```
 CAtlTransactionManager* m_pTM;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="matchesmask"></a>  CFileFind::MatchesMask
+## <a name="cfilefindmatchesmask"></a><a name="matchesmask"></a>ファイル検索::マッチマスク
 
-検出されたファイルのファイル属性をテストするには、このメンバー関数を呼び出します。
+見つかったファイルのファイル属性をテストします。
 
 ```
 virtual BOOL MatchesMask(DWORD dwMask) const;
@@ -803,32 +803,32 @@ virtual BOOL MatchesMask(DWORD dwMask) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*dwMask*<br/>
-検出されたファイルについて、 [WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw)構造体で識別される1つ以上のファイル属性を指定します。 複数の属性を検索するには、ビットごと&#124;の or () 演算子を使用します。 次の属性の任意の組み合わせを使用できます。
+*Dwmask*<br/>
+見つかったファイルの[WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw)構造で識別される 1 つ以上のファイル属性を指定します。 複数の属性を検索するには、ビットごとの OR (&#124;) 演算子を使用します。 以下の属性の任意の組み合わせが可能です。
 
-- FILE_ATTRIBUTE_ARCHIVE ファイルはアーカイブファイルです。 アプリケーションでは、この属性を使用して、バックアップまたは削除するファイルをマークします。
+- FILE_ATTRIBUTE_ARCHIVE ファイルがアーカイブ ファイルです。 アプリケーションは、この属性を使用して、バックアップまたは削除用のファイルをマークします。
 
-- FILE_ATTRIBUTE_COMPRESSED ファイルまたはディレクトリが圧縮されていることを示します。 ファイルの場合、これはファイル内のすべてのデータが圧縮されることを意味します。 ディレクトリの場合、これは、新しく作成されたファイルおよびサブディレクトリの既定の圧縮であることを意味します。
+- FILE_ATTRIBUTE_COMPRESSED ファイルまたはディレクトリが圧縮されます。 ファイルの場合、ファイル内のすべてのデータが圧縮されます。 ディレクトリの場合、新しく作成されたファイルとサブディレクトリの圧縮がデフォルトになります。
 
 - FILE_ATTRIBUTE_DIRECTORY ファイルはディレクトリです。
 
-- FILE_ATTRIBUTE_NORMAL ファイルに他の属性が設定されていません。 この属性は、単独で使用した場合にのみ有効です。 他のすべてのファイル属性は、この属性をオーバーライドします。
+- FILE_ATTRIBUTE_NORMAL ファイルに他の属性が設定されていない。 この属性は、単独で使用する場合にのみ有効です。 その他のファイル属性はすべて、この属性をオーバーライドします。
 
-- FILE_ATTRIBUTE_HIDDEN ファイルが非表示になっています。 通常のディレクトリの一覧に含めることはできません。
+- FILE_ATTRIBUTE_HIDDEN ファイルが非表示になっています。 通常のディレクトリリストには含まれません。
 
-- FILE_ATTRIBUTE_READONLY ファイルは読み取り専用です。 アプリケーションはファイルを読み取ることができますが、書き込むことや削除することはできません。
+- FILE_ATTRIBUTE_READONLY ファイルは読み取り専用です。 アプリケーションはファイルを読み取ることができますが、書き込みや削除はできません。
 
-- FILE_ATTRIBUTE_SYSTEM ファイルがの一部であるか、オペレーティングシステムによって排他的に使用されています。
+- FILE_ATTRIBUTE_SYSTEM ファイルはオペレーティング システムの一部であるか、オペレーティング システムによって排他的に使用されます。
 
-- FILE_ATTRIBUTE_TEMPORARY ファイルが一時ストレージに使用されています。 アプリケーションは、絶対に必要な場合にのみファイルに書き込む必要があります。 ファイルはすぐに削除されるため、ファイルのデータのほとんどは、メディアにフラッシュされることなくメモリに残ります。
+- FILE_ATTRIBUTE_TEMPORARY ファイルは一時記憶域に使用されています。 アプリケーションは、絶対に必要な場合にのみファイルに書き込む必要があります。 ファイルのデータのほとんどは、メディアにフラッシュされずにメモリに残ります。
 
 ### <a name="return-value"></a>戻り値
 
-正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 拡張されたエラー情報を取得するには、Win32 関数[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)を呼び出します。
+正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。 拡張エラー情報を取得するには、Win32 関数[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)を呼び出します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-を呼び出す`MatchesMask`前に、 [FindNextFile](#findnextfile)を少なくとも1回呼び出す必要があります。
+を呼び出す前に、少なくとも`MatchesMask`1 回[は FindNextFile](#findnextfile)を呼び出す必要があります。
 
 ### <a name="example"></a>例
 
@@ -836,10 +836,10 @@ virtual BOOL MatchesMask(DWORD dwMask) const;
 
 ## <a name="see-also"></a>関連項目
 
-[CObject クラス](../../mfc/reference/cobject-class.md)<br/>
-[階層図](../../mfc/hierarchy-chart.md)<br/>
+[Cオブジェクトクラス](../../mfc/reference/cobject-class.md)<br/>
+[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
 [CFtpFileFind クラス](../../mfc/reference/cftpfilefind-class.md)<br/>
 [CGopherFileFind クラス](../../mfc/reference/cgopherfilefind-class.md)<br/>
-[CInternetFile クラス](../../mfc/reference/cinternetfile-class.md)<br/>
-[CGopherFile クラス](../../mfc/reference/cgopherfile-class.md)<br/>
-[CHttpFile クラス](../../mfc/reference/chttpfile-class.md)
+[クラス](../../mfc/reference/cinternetfile-class.md)<br/>
+[クラス](../../mfc/reference/cgopherfile-class.md)<br/>
+[クラス](../../mfc/reference/chttpfile-class.md)

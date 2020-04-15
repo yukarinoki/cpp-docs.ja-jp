@@ -1,8 +1,9 @@
 ---
 title: _aligned_malloc
-ms.date: 12/11/2019
+ms.date: 4/2/2020
 api_name:
 - _aligned_malloc
+- _o__aligned_malloc
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - aligned_malloc function
 - _aligned_malloc function
 ms.assetid: fb788d40-ee94-4039-aa4d-97d73dab1ca0
-ms.openlocfilehash: c06c822ae4e7584a172c260a5c06e25019a1ce5e
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: b7d7f29f50b28ff713de94cc3304014e96d45b70
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75300132"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81350611"
 ---
 # <a name="_aligned_malloc"></a>_aligned_malloc
 
@@ -48,33 +50,35 @@ void * _aligned_malloc(
 
 ### <a name="parameters"></a>パラメーター
 
-*size*<br/>
+*サイズ*<br/>
 要求されたメモリ割り当てのサイズ。
 
-*alignment*<br/>
+*配置*<br/>
 アラインメント値。2 の整数乗である必要があります。
 
 ## <a name="return-value"></a>戻り値
 
-割り当てられたメモリブロックへのポインター。操作が失敗した場合は NULL。 ポインターは、*アラインメント*の倍数です。
+割り当てられたメモリ ブロックへのポインター。 ポインターは整列の倍数*です*。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 **_aligned_malloc**は[malloc](malloc.md)に基づいています。
 
-**_aligned_malloc**は `__declspec(noalias)` および `__declspec(restrict)`としてマークされています。つまり、関数は、グローバル変数を変更せず、返されるポインターがエイリアス化されていないことが保証されます。 詳細については、「[noalias](../../cpp/noalias.md)」、および「[restrict](../../cpp/restrict.md)」を参照してください。
+**_aligned_malloc**マークが`__declspec(noalias)`付`__declspec(restrict)`き、 とは、関数がグローバル変数を変更しないことが保証されており、返されたポインターが別名として使用されないことを意味します。 詳細については、「[noalias](../../cpp/noalias.md)」、および「[restrict](../../cpp/restrict.md)」を参照してください。
 
-この関数は、メモリ割り当てが失敗するか、要求されたサイズが `errno` より大きかった場合に、`ENOMEM` を `_HEAP_MAXREQ` に設定します。 `errno` に関する詳細については、「[errno、_doserrno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。 また、 **_aligned_malloc**パラメーターを検証します。 *Alignment*が2の累乗でない場合、または*size*が0の場合、この関数は「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、この関数は NULL を返し、`errno` を `EINVAL`に設定します。
+この関数は、メモリ割り当てが失敗するか、要求されたサイズが `errno` より大きかった場合に、`ENOMEM` を `_HEAP_MAXREQ` に設定します。 `errno` に関する詳細については、「[errno、_doserrno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。 また **、_aligned_malloc**はパラメータを検証します。 *アライメント*が 2 の累乗でない場合、または*size*がゼロの場合、この関数は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーター ハンドラーを呼び出します。 実行を続行できる場合、この関数は NULL を`errno`返`EINVAL`し、 に設定します。
 
-**_Aligned_malloc**と `_aligned_offset_malloc`の両方によって取得されたメモリの割り当てを解除するには、 [_aligned_free](aligned-free.md)を使用します。 `free`を使用しないでください。これにより、適切に調整されたメモリが再利用できなくなり、バグの診断が困難になる可能性があります。
+[_aligned_free](aligned-free.md)を使用して **、_aligned_malloc**と`_aligned_offset_malloc`. を使用`free`しないでください、 は、位置合わせされたメモリを正しく再利用せず、診断が困難なバグにつながる可能性があります。
 
-## <a name="requirements"></a>要件
+既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
 
-|ルーチンによって返される値|必須ヘッダー|
+## <a name="requirements"></a>必要条件
+
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**_aligned_malloc**|\<malloc.h>|
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 ```C
 // crt_aligned_malloc.c
@@ -158,4 +162,4 @@ This pointer, 3280891, is offset by 5 on alignment of 16
 
 ## <a name="see-also"></a>関連項目
 
-[データの整列](../../c-runtime-library/data-alignment.md)
+[データの配置](../../c-runtime-library/data-alignment.md)

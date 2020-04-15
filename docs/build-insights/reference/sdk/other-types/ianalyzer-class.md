@@ -1,6 +1,6 @@
 ---
-title: IAnalyzer クラス
-description: C++ビルドインサイト SDK ianalyzer クラスリファレンス。
+title: Iアナライザクラス
+description: C++ ビルド インサイト SDK IAnalyzer クラスリファレンス。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 53f7b36695bb24d96ccfe88afbb56ff717c94dc9
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: be9d80bb94450458c73fd6ce8d908985ba6f293d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78334080"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81329170"
 ---
-# <a name="ianalyzer-class"></a>IAnalyzer クラス
+# <a name="ianalyzer-class"></a>Iアナライザクラス
 
 ::: moniker range="<=vs-2015"
 
-Build C++ Insights SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを表示するには、この記事の Visual Studio バージョンセレクターコントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。
+C++ ビルド インサイト SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを参照するには、この記事の Visual Studio**バージョン**セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の上部に表示されます。
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-`IAnalyzer` クラスは、Windows イベントトレーシング (ETW) トレースを分析するためのインターフェイスを提供します。 これは、 [MakeDynamicAnalyzerGroup](../functions/make-dynamic-analyzer-group.md)、 [MakeDynamicReloggerGroup](../functions/make-dynamic-relogger-group.md)、 [MakeStaticAnalyzerGroup](../functions/make-dynamic-analyzer-group.md)、 [MakeStaticReloggerGroup](../functions/make-static-analyzer-group.md)の各関数で使用されます。 Analyzer または relogger グループの一部として使用できる独自のアナライザーを作成するには、基本クラスとして `IAnalyzer` を使用します。
+この`IAnalyzer`クラスは、Windows (ETW) トレースのイベント トレースを分析するためのインターフェイスを提供します。 これは、関数、ダイナミック[アナライザグループ](../functions/make-dynamic-analyzer-group.md)、[メイクダイナミックリロガーグループ](../functions/make-dynamic-relogger-group.md)、[メイクスタティックアナライザグループ](../functions/make-dynamic-analyzer-group.md)、および[メイクスタティックリロガーグループ](../functions/make-static-analyzer-group.md)関数で使用されます。 アナライザ`IAnalyzer`ーまたはリロガー グループの一部にすることができる独自のアナライザーを作成する基本クラスとして使用します。
 
 ## <a name="syntax"></a>構文
 
@@ -61,33 +61,33 @@ public:
 
 ## <a name="remarks"></a>解説
 
-`IAnalyzer` から派生したクラスは、アナライザーと reloggers の両方として使用できます。 Reloggers として使用すると、reloggers 固有の関数は、同等のアナライザーにリダイレクトされます。 逆は true ではありません。 `IRelogger` から派生したクラスをアナライザーとして使用することはできません。 Relogger グループでアナライザーを使用するのは、一般的なパターンです。 Analyzer は、relogger グループの初期位置に配置された場合、情報を事前に計算し、後で再ロガーに使用できるようにすることができます。
+派生`IAnalyzer`元のクラスは、アナライザーとリロガーの両方として使用できます。 リロガーとして使用する場合, リロガー固有の関数は、同等のアナライザーにリダイレクトします。 その逆は真実ではなく、派生`IRelogger`元のクラスをアナライザーとして使用することはできません。 リロガー グループでアナライザーを使用することは一般的なパターンです。 リロガーグループの早期位置に置かれた場合、アナライザーは情報を事前に計算し、後の位置でリロガーに利用できるようにします。
 
-オーバーライドされていないすべての関数の既定の戻り値は `AnalysisControl::CONTINUE`です。 詳細については、「 [AnalysisControl](analysis-control-enum-class.md)」を参照してください。
+オーバーライドされないすべての関数の既定の戻り値は`AnalysisControl::CONTINUE`です。 詳細については、「[分析コントロール](analysis-control-enum-class.md)」を参照してください。
 
 ## <a name="members"></a>メンバー
 
-`IRelogger` インターフェイスの[Ontraceinfo](irelogger-class.md#on-trace-info)メンバーに加えて、`IAnalyzer` クラスには次のメンバーが含まれています。
+インターフェイスの[OnTraceInfo](irelogger-class.md#on-trace-info)メンバーに加えて、`IAnalyzer`クラスには次のメンバーが含まれています。 `IRelogger`
 
-### <a name="destructor"></a>デストラクター
+### <a name="destructor"></a>デストラクターです。
 
-[~ IAnalyzer](#ianalyzer-destructor)
+[~Iアナライザ](#ianalyzer-destructor)
 
 ### <a name="functions"></a>関数
 
-[OnBeginAnalysis](#on-begin-analysis)\
-[OnBeginAnalysisPass](#on-begin-analysis-pass)\
-[OnBeginRelogging](#on-begin-relogging)\
-[OnBeginReloggingPass](#on-begin-relogging-pass)\
-[OnEndAnalysis](#on-end-analysis)\
-[OnEndAnalysisPass](#on-end-analysis-pass)\
-[OnEndRelogging](#on-end-relogging)\
-[OnEndReloggingPass](#on-end-relogging-pass)\
-[Onsimpleevent](#on-simple-event)\
-[Onstartactivity](#on-start-activity)\
-[OnStopActivity](#on-stop-activity)
+[分析の開始](#on-begin-analysis)\
+[オンビギン分析パス](#on-begin-analysis-pass)\
+[オンビギンリロギング](#on-begin-relogging)\
+[オンビギンリロギングパス](#on-begin-relogging-pass)\
+[オンエンド分析](#on-end-analysis)\
+[オンエンド分析パス](#on-end-analysis-pass)\
+[オンエンドリロギング](#on-end-relogging)\
+[オンエンドレロギングパス](#on-end-relogging-pass)\
+[オンシンプルイベント](#on-simple-event)\
+[オンスタートアクティビティ](#on-start-activity)\
+[オンストップアクティビティ](#on-stop-activity)
 
-## <a name="ianalyzer-destructor"></a>~ IAnalyzer
+## <a name="ianalyzer"></a><a name="ianalyzer-destructor"></a>~Iアナライザ
 
 IAnalyzer クラスを破棄します。
 
@@ -95,9 +95,9 @@ IAnalyzer クラスを破棄します。
 virtual ~IAnalyzer();
 ```
 
-## <a name="on-begin-analysis"></a>OnBeginAnalysis
+## <a name="onbeginanalysis"></a><a name="on-begin-analysis"></a>分析の開始
 
-Analyzer グループのアナライザーの一部では、最初の分析パスが開始される前に、この関数が呼び出されます。 アナライザーが relogger グループの一部である場合、この関数は、再ログパスが開始される前に呼び出されます。 同じ再ログセッションのアナライザーと relogger グループの両方に含まれるアナライザーの場合、この関数は最初の分析パスが開始される前に2回呼び出されます。
+アナライザ グループのアナライザーの一部の場合、この関数は最初の分析パスが開始される前に呼び出されます。 リロガー グループのアナライザーの一部の場合、この関数は再ロギングパスが開始する前に呼び出されます。 アナライザーと同じ再ロギングセッションのリロガーグループの両方の部分のアナライザーの場合、この関数は最初の分析パスが開始される前に2回呼び出されます。
 
 ```cpp
 virtual AnalysisControl OnBeginAnalysis();
@@ -105,11 +105,11 @@ virtual AnalysisControl OnBeginAnalysis();
 
 ### <a name="return-value"></a>戻り値
 
-次に何が行われるかを説明する[AnalysisControl](analysis-control-enum-class.md)コード。
+次に何が起こるかを記述する[分析コントロール](analysis-control-enum-class.md)コード。
 
-## <a name="on-begin-analysis-pass"></a>OnBeginAnalysisPass
+## <a name="onbeginanalysispass"></a><a name="on-begin-analysis-pass"></a>オンビギン分析パス
 
-アナライザーグループの一部のアナライザーでは、この関数はすべての分析パスの先頭で呼び出されます。 アナライザーが relogger グループの一部である場合、この関数は relogger パスの先頭で呼び出されます。 同じ再ログセッションのアナライザーと relogger グループの両方に含まれるアナライザーの場合、この関数は、すべての分析パスの先頭と、relogger パスの先頭で呼び出されます。
+アナライザ グループのアナライザーの一部の場合、この関数は、すべての分析パスの先頭で呼び出されます。 リロガー グループのアナライザーの一部の場合、この関数はリロガー パスの先頭で呼び出されます。 アナライザーのアナライザーと同じ再ロギングセッションのリロガーグループの両方の部分の場合、この関数は、すべての分析パスの先頭に、リロガーパスの先頭に呼び出されます。
 
 ```cpp
 virtual AnalysisControl OnBeginAnalysisPass();
@@ -117,23 +117,23 @@ virtual AnalysisControl OnBeginAnalysisPass();
 
 ### <a name="return-value"></a>戻り値
 
-次に何が行われるかを説明する[AnalysisControl](analysis-control-enum-class.md)コード。
+次に何が起こるかを記述する[分析コントロール](analysis-control-enum-class.md)コード。
 
-## <a name="on-begin-relogging"></a>OnBeginRelogging
+## <a name="onbeginrelogging"></a><a name="on-begin-relogging"></a>オンビギンリロギング
 
 ```cpp
 AnalysisControl OnBeginRelogging() final;
 ```
 
-この関数をオーバーライドすることはできません。 Analyzer が relogger グループC++の一部である場合、これは BUILD Insights SDK によって呼び出されます。 この関数は、 [OnBeginAnalysis](#on-begin-analysis)への呼び出しをリダイレクトします。
+この関数はオーバーライドできません。 アナライザーがリロガー グループの一部である場合、C++ ビルド インサイト SDK によって呼び出されます。 この関数は、呼び出しを[OnBeginAnalysis](#on-begin-analysis)にリダイレクトします。
 
 ### <a name="return-value"></a>戻り値
 
-[OnBeginAnalysis](#on-begin-analysis)呼び出しの結果。
+呼び出し[の](#on-begin-analysis)結果。
 
-## <a name="on-begin-relogging-pass"></a>OnBeginReloggingPass
+## <a name="onbeginreloggingpass"></a><a name="on-begin-relogging-pass"></a>オンビギンリロギングパス
 
-この関数をオーバーライドすることはできません。 Analyzer が relogger グループC++の一部である場合、これは BUILD Insights SDK によって呼び出されます。 この関数は、 [OnBeginAnalysisPass](#on-begin-analysis-pass)への呼び出しをリダイレクトします。
+この関数はオーバーライドできません。 アナライザーがリロガー グループの一部である場合、C++ ビルド インサイト SDK によって呼び出されます。 この関数は、呼び出しを[OnBeginAnalysisPass](#on-begin-analysis-pass)にリダイレクトします。
 
 ```cpp
 AnalysisControl OnBeginReloggingPass() final;
@@ -141,14 +141,14 @@ AnalysisControl OnBeginReloggingPass() final;
 
 ### <a name="return-value"></a>戻り値
 
-[OnBeginAnalysisPass](#on-begin-analysis-pass)呼び出しの結果。
+呼び出し[の](#on-begin-analysis-pass)結果。
 
-## <a name="on-end-analysis"></a>OnEndAnalysis
+## <a name="onendanalysis"></a><a name="on-end-analysis"></a>オンエンド分析
 
-アナライザーグループに含まれるアナライザーの場合、この関数は最後の分析パスが終了した後に呼び出されます。 Relogger グループに含まれるアナライザーの場合、この関数は、再ログパスが終了した後に呼び出されます。 同じ再ログセッションのアナライザーと relogger グループの両方に含まれるアナライザーの場合、この関数は2回呼び出されます。
+アナライザー グループの一部であるアナライザーの場合、この関数は最後の分析パスが終了した後に呼び出されます。 リロガー グループの一部であるアナライザーの場合、この関数は、再ロギング パスが終了した後に呼び出されます。 同じ再ロギング セッションのアナライザーとリロガー グループの両方の一部であるアナライザーの場合、この関数は 2 回呼び出されます。
 
-1. すべての分析が終了した後、再ログパスが開始される前に、
-1. 再ログパスが終了した後。
+1. すべての解析パスが終了した後、再ロギングパスが開始される前に、
+1. 再ロギングパスが終了した後。
 
 ```cpp
 virtual AnalysisControl OnEndAnalysis();
@@ -156,11 +156,11 @@ virtual AnalysisControl OnEndAnalysis();
 
 ### <a name="return-value"></a>戻り値
 
-次に何が行われるかを説明する[AnalysisControl](analysis-control-enum-class.md)コード。
+次に何が起こるかを記述する[分析コントロール](analysis-control-enum-class.md)コード。
 
-## <a name="on-end-analysis-pass"></a>OnEndAnalysisPass
+## <a name="onendanalysispass"></a><a name="on-end-analysis-pass"></a>オンエンド分析パス
 
-アナライザーグループの一部のアナライザーでは、この関数はすべての分析パスの最後に呼び出されます。 アナライザーが relogger グループの一部である場合、この関数は relogger パスの最後に呼び出されます。 同じ再ログセッションのアナライザーと relogger グループの両方に含まれるアナライザーの場合、この関数は、すべての分析パスの最後と、relogger パスの最後に呼び出されます。
+アナライザ グループのアナライザーの一部の場合、この関数は、すべての分析パスの最後に呼び出されます。 リロガー グループのアナライザーの一部の場合、この関数はリロガー パスの最後に呼び出されます。 アナライザーのアナライザーと同じ再ロギングセッションのリロガーグループの両方の部分の場合、この関数は、すべての分析パスの最後に、リロガーパスの最後に呼び出されます。
 
 ```cpp
 virtual AnalysisControl OnEndAnalysisPass();
@@ -168,11 +168,11 @@ virtual AnalysisControl OnEndAnalysisPass();
 
 ### <a name="return-value"></a>戻り値
 
-次に何が行われるかを説明する[AnalysisControl](analysis-control-enum-class.md)コード。
+次に何が起こるかを記述する[分析コントロール](analysis-control-enum-class.md)コード。
 
-## <a name="on-end-relogging"></a>OnEndRelogging
+## <a name="onendrelogging"></a><a name="on-end-relogging"></a>オンエンドリロギング
 
-この関数をオーバーライドすることはできません。 Analyzer が relogger グループC++の一部である場合、これは BUILD Insights SDK によって呼び出されます。 この関数は、 [OnEndAnalysis](#on-end-analysis)への呼び出しをリダイレクトします。
+この関数はオーバーライドできません。 アナライザーがリロガー グループの一部である場合、C++ ビルド インサイト SDK によって呼び出されます。 この関数は、呼び出しを[OnEndAnalysis](#on-end-analysis)にリダイレクトします。
 
 ```cpp
 AnalysisControl OnEndRelogging() final;
@@ -180,11 +180,11 @@ AnalysisControl OnEndRelogging() final;
 
 ### <a name="return-value"></a>戻り値
 
-[OnEndAnalysis](#on-end-analysis)呼び出しの結果。
+[OnEnd 分析](#on-end-analysis)呼び出しの結果。
 
-## <a name="on-end-relogging-pass"></a>OnEndReloggingPass
+## <a name="onendreloggingpass"></a><a name="on-end-relogging-pass"></a>オンエンドレロギングパス
 
-この関数をオーバーライドすることはできません。 Analyzer が relogger グループC++の一部である場合、これは BUILD Insights SDK によって呼び出されます。 この関数は、 [OnEndAnalysisPass](#on-end-analysis-pass)への呼び出しをリダイレクトします。
+この関数はオーバーライドできません。 アナライザーがリロガー グループの一部である場合、C++ ビルド インサイト SDK によって呼び出されます。 この関数は、呼び出しを[OnEndAnalysisPass](#on-end-analysis-pass)にリダイレクトします。
 
 ```cpp
 AnalysisControl OnEndReloggingPass() final;
@@ -192,11 +192,11 @@ AnalysisControl OnEndReloggingPass() final;
 
 ### <a name="return-value"></a>戻り値
 
-[OnEndAnalysisPass](#on-end-analysis-pass)呼び出しの結果。
+[オンエンド分析パス](#on-end-analysis-pass)呼び出しの結果。
 
-## <a name="on-simple-event"></a>OnSimpleEvent
+## <a name="onsimpleevent"></a><a name="on-simple-event"></a>オンシンプルイベント
 
-この関数は、単純なイベントが処理されるときに呼び出されます。 この関数の2番目のバージョンをオーバーライドすることはできません。 Analyzer が relogger グループC++の一部である場合、これは BUILD Insights SDK によって呼び出されます。 バージョン2へのすべての呼び出しは、バージョン1にリダイレクトされます。
+この関数は、単純なイベントが処理されるときに呼び出されます。 この関数の 2 番目のバージョンはオーバーライドできません。 アナライザーがリロガー グループの一部である場合、C++ ビルド インサイト SDK によって呼び出されます。 バージョン 2 へのすべての呼び出しはバージョン 1 にリダイレクトされます。
 
 ### <a name="version-1"></a>Version 1
 
@@ -213,19 +213,19 @@ AnalysisControl OnSimpleEvent(const EventStack& eventStack,
 
 ### <a name="parameters"></a>パラメーター
 
-*Eventstack*\
-この単純なイベントのイベントスタック。 イベントスタックの詳細については、「 [Events](../event-table.md)」を参照してください。
+*イベントスタック*\
+この単純なイベントのイベント スタック。 イベント スタックの詳細については、「[イベント](../event-table.md)」を参照してください。
 
-*Relogsession*\
+*セッションを再ログします。*\
 このパラメーターは使用されません。
 
 ### <a name="return-value"></a>戻り値
 
-次に何が行われるかを説明する[AnalysisControl](analysis-control-enum-class.md)コード。
+次に何が起こるかを記述する[分析コントロール](analysis-control-enum-class.md)コード。
 
-## <a name="on-start-activity"></a>OnStartActivity
+## <a name="onstartactivity"></a><a name="on-start-activity"></a>オンスタートアクティビティ
 
-この関数は、アクティビティ開始イベントが処理されるときに呼び出されます。 この関数の2番目のバージョンをオーバーライドすることはできません。 Analyzer が relogger グループC++の一部である場合、これは BUILD Insights SDK によって呼び出されます。 バージョン2へのすべての呼び出しは、バージョン1にリダイレクトされます。
+この関数は、アクティビティ開始イベントが処理されるときに呼び出されます。 この関数の 2 番目のバージョンはオーバーライドできません。 アナライザーがリロガー グループの一部である場合、C++ ビルド インサイト SDK によって呼び出されます。 バージョン 2 へのすべての呼び出しはバージョン 1 にリダイレクトされます。
 
 ### <a name="version-1"></a>Version 1
 
@@ -242,19 +242,19 @@ AnalysisControl OnStartActivity(const EventStack& eventStack,
 
 ### <a name="parameters"></a>パラメーター
 
-*Eventstack*\
-このアクティビティ開始イベントのイベントスタック。 イベントスタックの詳細については、「 [Events](../event-table.md)」を参照してください。
+*イベントスタック*\
+このアクティビティ開始イベントのイベント スタック。 イベント スタックの詳細については、「[イベント](../event-table.md)」を参照してください。
 
-*Relogsession*\
+*セッションを再ログします。*\
 このパラメーターは使用されません。
 
 ### <a name="return-value"></a>戻り値
 
-次に何が行われるかを説明する[AnalysisControl](analysis-control-enum-class.md)コード。
+次に何が起こるかを記述する[分析コントロール](analysis-control-enum-class.md)コード。
 
-## <a name="on-stop-activity"></a>OnStopActivity
+## <a name="onstopactivity"></a><a name="on-stop-activity"></a>オンストップアクティビティ
 
-この関数は、アクティビティ停止イベントの処理中に呼び出されます。 この関数の2番目のバージョンをオーバーライドすることはできません。 Analyzer が relogger グループC++の一部である場合、これは BUILD Insights SDK によって呼び出されます。 バージョン2へのすべての呼び出しは、バージョン1にリダイレクトされます。
+この関数は、アクティビティ停止イベントが処理されるときに呼び出されます。 この関数の 2 番目のバージョンはオーバーライドできません。 アナライザーがリロガー グループの一部である場合、C++ ビルド インサイト SDK によって呼び出されます。 バージョン 2 へのすべての呼び出しはバージョン 1 にリダイレクトされます。
 
 ### <a name="version-1"></a>Version 1
 
@@ -271,14 +271,14 @@ AnalysisControl OnStopActivity(const EventStack& eventStack,
 
 ### <a name="parameters"></a>パラメーター
 
-*Eventstack*\
-このアクティビティ停止イベントのイベントスタック。 イベントスタックの詳細については、「 [Events](../event-table.md)」を参照してください。
+*イベントスタック*\
+このアクティビティ停止イベントのイベント スタック。 イベント スタックの詳細については、「[イベント](../event-table.md)」を参照してください。
 
-*Relogsession*\
+*セッションを再ログします。*\
 このパラメーターは使用されません。
 
 ### <a name="return-value"></a>戻り値
 
-次に何が行われるかを説明する[AnalysisControl](analysis-control-enum-class.md)コード。
+次に何が起こるかを記述する[分析コントロール](analysis-control-enum-class.md)コード。
 
 ::: moniker-end

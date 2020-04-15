@@ -1,8 +1,9 @@
 ---
 title: bsearch
-ms.date: 10/22/2019
+ms.date: 4/2/2020
 api_name:
 - bsearch
+- _o_bsearch
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +17,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -26,16 +28,16 @@ helpviewer_keywords:
 - arrays [CRT], binary search
 - bsearch function
 ms.assetid: e0ad2f47-e7dd-49ed-8288-870457a14a2c
-ms.openlocfilehash: 6b476cbdd5e9c072cae03ad1091a96e2d0b7422b
-ms.sourcegitcommit: 0a5518fdb9d87fcc326a8507ac755936285fcb94
+ms.openlocfilehash: efad391eb2512cfa59cc3597430a84727676f27e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72811091"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81333800"
 ---
 # <a name="bsearch"></a>bsearch
 
-並べ替えられた配列のバイナリ検索を実行します。 この関数のセキュリティが強化されたバージョンについては、「 [bsearch_s](bsearch-s.md)」を参照してください。
+並べ替えられた配列のバイナリ検索を実行します。 この関数のセキュリティが強化されたバージョンについては、「[bsearch_s](bsearch-s.md)」を参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -51,28 +53,28 @@ void *bsearch(
 
 ### <a name="parameters"></a>パラメーター
 
-*キー* \
+*キー*\
 検索するキーへのポインター。
 
-*base*\
+*ベース*\
 検索データのベースへのポインター。
 
-*数値*\
+*数*\
 要素の数。
 
 *幅*\
 要素の幅。
 
-\ の*比較*
-2 つの要素を比較するコールバック関数。 1つ目は検索対象のキーへのポインターであり、2つ目はキーと比較する配列要素へのポインターです。
+*比較*\
+2 つの要素を比較するコールバック関数。 1 つ目は検索用のキーへのポインターで、2 つ目はキーと比較する配列要素へのポインターです。
 
 ## <a name="return-value"></a>戻り値
 
-**bsearch**は、 *base*が指す配列内の*キー*の出現箇所へのポインターを返します。 *Key*が見つからない場合、関数は**NULL**を返します。 配列が昇順でないか、同一キーで重複するレコードがある場合、結果は予測不可能になります。
+**bsearch**は *、base*が指す配列内の*キー*の出現を指すポインタを返します。 *key*が見つからない場合、関数は**NULL**を返します。 配列が昇順でないか、同一キーで重複するレコードがある場合、結果は予測不可能になります。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**Bsearch**関数は、*数値*要素の並べ替えられた配列のバイナリ検索を実行します。これらの要素のサイズは、それぞれ*幅*バイトです。 *ベース*値は、検索対象の配列のベースへのポインターであり、*キー*は検索対象の値です。 *Compare*パラメーターは、要求されたキーを配列要素と比較するユーザー指定のルーチンへのポインターです。 リレーションシップを指定する次のいずれかの値が返されます。
+**bsearch**関数は、ソートされた*数値*要素の配列 (サイズの*幅*の各バイト) のバイナリ検索を実行します。 *基本*値は、検索対象の配列のベースへのポインタであり、*キー*は求められている値です。 *compare*パラメーターは、要求されたキーと配列要素を比較するユーザー指定ルーチンへのポインターです。 このメソッドは、リレーションシップを指定する次のいずれかの値を返します。
 
 |*比較*ルーチンによって返される値|説明|
 |-----------------------------------------|-----------------|
@@ -80,13 +82,15 @@ void *bsearch(
 |0|キーは配列要素と等しい。|
 |> 0|キーは配列要素より大きい。|
 
-この関数は、パラメーターを検証します。 *Compare*、 *key* 、または*number*が**null**の場合、または*base*が**null**で*数値*が0以外の場合、または*width*が0の場合は、「パラメーター」で説明されているように、関数は無効なパラメーターハンドラーを呼び出します。 [検証](../../c-runtime-library/parameter-validation.md)。 実行の継続が許可された場合、 **errno**が `EINVAL` に設定され、関数は**NULL**を返します。
+この関数は、パラメーターを検証します。 *比較*、*キー*または*数値*が**NULL**の場合、*または base*が**NULL で数値***が*0 以外の場合、または*幅*が 0 の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーター ハンドラーが呼び出されます。 実行を続行できる場合は**errno**がに`EINVAL`設定され、関数は**NULL**を返します。
 
-## <a name="requirements"></a>［要件］
+既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
 
-|ルーチンによって返される値|必須ヘッダー|
+## <a name="requirements"></a>必要条件
+
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
-|**bsearch**|\<stdlib.h> および \<search.h>|
+|**bsearch**|\<stdlib.h > と \<search.h >|
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 

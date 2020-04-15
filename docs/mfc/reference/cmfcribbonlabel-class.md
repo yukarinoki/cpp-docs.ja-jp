@@ -1,5 +1,5 @@
 ---
-title: CMFCRibbonLabel クラス
+title: クラス
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCRibbonLabel
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - CMFCRibbonLabel [MFC], CMFCRibbonLabel
 - CMFCRibbonLabel [MFC], SetACCData
 ms.assetid: 0346c891-83bf-4f20-b8a1-c84cf2aadced
-ms.openlocfilehash: b79d6191d2deb0a295e81da1150cc7b38fd81232
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cd30e374441661368d3ea7abf5177424f8dffb3c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388411"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375124"
 ---
-# <a name="cmfcribbonlabel-class"></a>CMFCRibbonLabel クラス
+# <a name="cmfcribbonlabel-class"></a>クラス
 
 リボンのクリックできないテキスト ラベルを実装します。
 
@@ -33,7 +33,7 @@ class CMFCRibbonLabel : public CMFCRibbonButton
 
 |名前|説明|
 |----------|-----------------|
-|[CMFCRibbonLabel::CMFCRibbonLabel](#cmfcribbonlabel)|構築し、初期化、`CMFCRibbonLabel`指定したテキスト文字列を持つオブジェクト。|
+|[CMFCリボンラベル::CMFCリボンラベル](#cmfcribbonlabel)|指定したテキスト文字列を使用`CMFCRibbonLabel`してオブジェクトを構築および初期化します。|
 |`CMFCRibbonLabel::~CMFCRibbonLabel`|デストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
@@ -41,14 +41,14 @@ class CMFCRibbonLabel : public CMFCRibbonButton
 |名前|説明|
 |----------|-----------------|
 |`CMFCRibbonLabel::CreateObject`|このクラス型の動的インスタンスを作成するために、フレームワークで使用されます。|
-|`CMFCRibbonLabel::GetThisClass`|ポインターを取得する、framework によって使用される、 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)このクラス型に関連付けられているオブジェクト。|
-|[CMFCRibbonLabel::SetACCData](#setaccdata)|現在のリボンのラベル要素のアクセシビリティ データを決定します。 (上書き[cmfcribbonbutton::setaccdata](../../mfc/reference/cmfcribbonbutton-class.md#setaccdata))。|
+|`CMFCRibbonLabel::GetThisClass`|このクラス型に関連付けられている[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)オブジェクトへのポインターを取得するために、フレームワークによって使用されます。|
+|[を設定します。](#setaccdata)|現在のリボン ラベル要素のアクセシビリティ データを決定します。 (オーバーライド[CMFCリボンボタン:::セットアックデータ](../../mfc/reference/cmfcribbonbutton-class.md#setaccdata).)|
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-リボンのラベルを作成した後に追加パネルを呼び出すことによって[cmfcribbonpanel::add](../../mfc/reference/cmfcribbonpanel-class.md#add)します。
+リボン ラベルを作成したら[、CMFCRibbonPanel::Add](../../mfc/reference/cmfcribbonpanel-class.md#add)を呼び出してパネルに追加します。
 
-クイック アクセス ツールバーには、リボンのラベルを追加することはできません。
+クイック アクセス ツールバーにリボン ラベルを追加することはできません。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -64,9 +64,9 @@ class CMFCRibbonLabel : public CMFCRibbonButton
 
 **ヘッダー:** afxRibbonLabel.h
 
-##  <a name="cmfcribbonlabel"></a>  CMFCRibbonLabel::CMFCRibbonLabel
+## <a name="cmfcribbonlabelcmfcribbonlabel"></a><a name="cmfcribbonlabel"></a>CMFCリボンラベル::CMFCリボンラベル
 
-構築し、初期化、 [CMFCRibbonLabel](../../mfc/reference/cmfcribbonlabel-class.md)指定したテキスト文字列を表示するオブジェクト。
+指定したテキスト文字列を表示する[CMFCRibbonLabel](../../mfc/reference/cmfcribbonlabel-class.md)オブジェクトを構築および初期化します。
 
 ```
 CMFCRibbonLabel(
@@ -77,14 +77,14 @@ CMFCRibbonLabel(
 ### <a name="parameters"></a>パラメーター
 
 *lpszText*<br/>
-[in]ラベルに表示されるテキスト。
+[in]ラベルに表示するテキスト。
 
-*bIsMultiLine*<br/>
-[in]ラベルが、複数行のラベルであることを指定する場合は TRUEそれ以外の場合、FALSE です。
+*ビスマルチライン*<br/>
+[in]ラベルが複数行ラベルであることを指定する場合は TRUE。それ以外の場合は FALSE。
 
-##  <a name="setaccdata"></a>  CMFCRibbonLabel::SetACCData
+## <a name="cmfcribbonlabelsetaccdata"></a><a name="setaccdata"></a>を設定します。
 
-現在のリボンのラベル要素のアクセシビリティ データを決定します。
+現在のリボン ラベル要素のアクセシビリティ データを決定します。
 
 ```
 virtual BOOL SetACCData(
@@ -94,18 +94,18 @@ virtual BOOL SetACCData(
 
 ### <a name="parameters"></a>パラメーター
 
-*pParent*<br/>
-[in]現在のリボンのラベルの親ウィンドウを表します。
+*親*<br/>
+[in]現在のリボン ラベルの親ウィンドウを表します。
 
-*data*<br/>
-[out]型のオブジェクト`CAccessibilityData`リボンのラベルを現在のユーザー補助データに設定されます。
+*データ*<br/>
+[アウト]現在のリボン`CAccessibilityData`ラベルのアクセシビリティ データが設定されている型のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-TRUE の場合、*データ*パラメーターが正常にリボンのラベルを現在のユーザー補助データと共に設定されている場合は FALSE。
+現在のリボン ラベルのアクセシビリティ データが*データ*パラメーターに正常に設定された場合は TRUE。それ以外の場合は FALSE。
 
 ## <a name="see-also"></a>関連項目
 
-[階層図](../../mfc/hierarchy-chart.md)<br/>
+[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
 [クラス](../../mfc/reference/mfc-classes.md)<br/>
 [CMFCRibbonButton クラス](../../mfc/reference/cmfcribbonbutton-class.md)

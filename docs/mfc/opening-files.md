@@ -16,40 +16,40 @@ helpviewer_keywords:
 - opening files [MFC]
 - exception handling [MFC], opening files
 ms.assetid: a991b8ec-b04a-4766-b47e-7485b5dd0b01
-ms.openlocfilehash: dab7a680d9b33a6e334da99a045b709fe00f215c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6119bf922b05c30a14d8421800e3931c4a038779
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394482"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375957"
 ---
 # <a name="opening-files"></a>ファイルを開く
 
-Mfc では、ファイルを開く最も一般的な方法は、2 段階プロセスです。
+MFC では、ファイルを開く最も一般的な方法は、2 段階のプロセスです。
 
-#### <a name="to-open-a-file"></a>ファイルを開く
+#### <a name="to-open-a-file"></a>ファイルを開くには
 
-1. パスまたはアクセス許可フラグを指定せず、ファイル オブジェクトを作成します。
+1. パスまたはアクセス許可フラグを指定せずにファイル オブジェクトを作成します。
 
-   宣言することで、通常、ファイル オブジェクトを作成する、 [CFile](../mfc/reference/cfile-class.md)スタック フレームで変数。
+   通常、スタック フレームで[CFile](../mfc/reference/cfile-class.md)変数を宣言してファイル オブジェクトを作成します。
 
-1. 呼び出す、[オープン](../mfc/reference/cfile-class.md#open)パスとアクセス許可フラグを指定して、ファイル オブジェクトのメンバー関数。
+1. パスとアクセス許可フラグを指定して、ファイル オブジェクトの[Open](../mfc/reference/cfile-class.md#open)メンバー関数を呼び出します。
 
-   戻り値`Open`ファイルが正常に開かれている場合、0 以外の値または 0 になる場合は、指定したファイルを開くことができませんでした。 `Open`メンバー関数は、次のようにプロトタイプ宣言。
+   ファイル`Open`が正常に開かれた場合は 0 以外の値、指定されたファイルを開けない場合は 0 になります。 メンバー`Open`関数は、次のようにプロトタイプ化されます。
 
    `virtual BOOL Open( LPCTSTR lpszFileName, UINT nOpenFlags, CFileException* pError = NULL );`
 
-   フラグがなど、アクセス許可を指定するファイルの読み取り専用です。 内の列挙型定数として可能なフラグの値が定義されている、`CFile`で修飾されるため、クラス"`CFile::`"うに`CFile::modeRead`します。 使用して、`CFile::modeCreate`ファイルを作成する場合にフラグを設定します。
+   オープン フラグは、ファイルに対するアクセス許可 (読み取り専用など) を指定します。 可能なフラグ値は`CFile`クラス内の列挙定数として定義されるため、 のように " "`CFile::`で修飾されます`CFile::modeRead`。 ファイルを`CFile::modeCreate`作成する場合は、フラグを使用します。
 
-次の例では、(前のファイルはすべて同じパスに置き換えて)、読み取り/書き込み権限を持つ新しいファイルを作成する方法を示します。
+次の例は、読み取り/書き込み権限を持つ新しいファイルを作成する方法を示しています (前のファイルを同じパスに置き換えます)。
 
 [!code-cpp[NVC_MFCFiles#1](../atl-mfc-shared/reference/codesnippet/cpp/opening-files_1.cpp)]
 
 > [!NOTE]
->  この例では、作成し、ファイルを開きます。 問題がある場合、`Open`呼び出しを返すことができます、`CFileException`次に示すように、最後のパラメーター オブジェクトします。 TRACE マクロは、ファイル名とエラーの理由を示すコードの両方を出力します。 呼び出すことができます、`AfxThrowFileException`エラー報告の詳細が必要な場合に機能します。
+> この例では、ファイルを作成して開きます。 問題がある場合、次に`Open`示すように、呼`CFileException`び出しは最後のパラメータにオブジェクトを返すことができます。 TRACE マクロは、ファイル名と、失敗の理由を示すコードの両方を出力します。 より詳細なエラー`AfxThrowFileException`報告が必要な場合は、この関数を呼び出すことができます。
 
 ## <a name="see-also"></a>関連項目
 
 [CFile クラス](../mfc/reference/cfile-class.md)<br/>
-[CFile::Open](../mfc/reference/cfile-class.md#open)<br/>
-[ファイル](../mfc/files-in-mfc.md)
+[ファイル::開く](../mfc/reference/cfile-class.md#open)<br/>
+[[ファイル]](../mfc/files-in-mfc.md)

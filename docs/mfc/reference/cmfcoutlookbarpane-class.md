@@ -1,5 +1,5 @@
 ---
-title: CMFCOutlookBarPane クラス
+title: クラス
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCOutlookBarPane
@@ -40,18 +40,18 @@ helpviewer_keywords:
 - CMFCOutlookBarPane [MFC], EnableContextMenuItems
 - CMFCOutlookBarPane [MFC], RemoveAllButtons
 ms.assetid: 094e2ef3-a118-487e-a4cc-27626108fe08
-ms.openlocfilehash: 9ef6a06a4889119e39e72a9e495e5d4f9e17cf56
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 82d8f1da0640e5b487a06585c72279e7d7ffdf99
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69505161"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369637"
 ---
-# <a name="cmfcoutlookbarpane-class"></a>CMFCOutlookBarPane クラス
+# <a name="cmfcoutlookbarpane-class"></a>クラス
 
-詳細については、Visual Studio のインストール**の\\VC atlmfc\\\\src mfc**フォルダーにあるソースコードを参照してください。
+詳細については、Visual Studio のインストールの**\\VC\\atlmfc\\src mfc**フォルダーにあるソース コードを参照してください。
 
-Outlook バー ( [Cmfcoutlookbar クラス](../../mfc/reference/cmfcoutlookbar-class.md)) に挿入できる、 [cmfctoolbar クラス](../../mfc/reference/cmfctoolbar-class.md)から派生したコントロール。 Outlook バー ペインには、大きいボタンの列があります。 ボタンのリストがペインより長い場合、ユーザーはリストを上下にスクロールできます。 ユーザーが Outlook バー ペインを Outlook バーから切り離すと、そのペインをフローティング状態にするかメイン フレーム ウィンドウにドッキングできます。
+Outlook バー ( [CMFCOutlookBar クラス](../../mfc/reference/cmfctoolbar-class.md)) に挿入できる[CMFC](../../mfc/reference/cmfcoutlookbar-class.md)ツール バー クラスから派生したコントロール。 Outlook バー ペインには、大きいボタンの列があります。 ボタンのリストがペインより長い場合、ユーザーはリストを上下にスクロールできます。 ユーザーが Outlook バー ペインを Outlook バーから切り離すと、そのペインをフローティング状態にするかメイン フレーム ウィンドウにドッキングできます。
 
 ## <a name="syntax"></a>構文
 
@@ -72,46 +72,46 @@ class CMFCOutlookBarPane : public CMFCToolBar
 
 |名前|説明|
 |----------|-----------------|
-|[CMFCOutlookBarPane:: AddButton](#addbutton)|Outlook バーペインにボタンを追加します。|
-|[CMFCOutlookBarPane:: CanBeAttached](#canbeattached)|ペインを別のペインまたはフレームウィンドウにドッキングできるかどうかを決定します。 ( [Cbasepane:: CanBeAttached](../../mfc/reference/cbasepane-class.md#canbeattached)をオーバーライドします)。|
-|`CMFCOutlookBarPane::CanBeRestored`|カスタマイズ後にツールバーを元の状態に戻すことができるかどうかを決定します。 ( [Cmfctoolbar:: CanBeRestored](../../mfc/reference/cmfctoolbar-class.md#canberestored)をオーバーライドします)。|
-|[CMFCOutlookBarPane:: ClearAll](#clearall)|Outlook バーウィンドウのイメージによって使用されているリソースを解放します。|
-|[CMFCOutlookBarPane:: Create](#create)|Outlook バーペインを作成します。|
+|[ボタンの追加](#addbutton)|Outlook バー ペインにボタンを追加します。|
+|[をクリックします。](#canbeattached)|ペインを別のペインまたはフレーム ウィンドウにドッキングできるかどうかを決定します。 [(CBasePane をオーバーライドします::CanBe添付.)](../../mfc/reference/cbasepane-class.md#canbeattached)|
+|`CMFCOutlookBarPane::CanBeRestored`|カスタマイズ後に、システムがツール バーを元の状態に復元できるかどうかを決定します。 [(CMFCツールバーをオーバーライドします::缶詰復元](../../mfc/reference/cmfctoolbar-class.md#canberestored).)|
+|[ウィンドウすべて](#clearall)|Outlook バー ウィンドウのイメージで使用されているリソースを解放します。|
+|[を作成します。](#create)|Outlook バー ペインを作成します。|
 |`CMFCOutlookBarPane::CreateObject`|このクラス型の動的インスタンスを作成するために、フレームワークで使用されます。|
-|`CMFCOutlookBarPane::Dock`|Outlook バーペインをドッキングするためにフレームワークによって呼び出されます。 ( `CPane::Dock`をオーバーライドします)。|
-|[CMFCOutlookBarPane::EnablePageScrollMode](#enablepagescrollmode)|Outlook バーペインのスクロール矢印がボタンの一覧をページごとに、またはボタンごとに進めるかどうかを指定します。|
-|[CMFCOutlookBarPane:: GetRegularColor](#getregularcolor)|Outlook バーペインの標準 (選択されていない) テキストの色を返します。|
+|`CMFCOutlookBarPane::Dock`|フレームワークが Outlook バー ペインをドッキングするために呼び出します。 ( `CPane::Dock`をオーバーライドします)。|
+|[をクリックします。](#enablepagescrollmode)|Outlook バー ウィンドウのスクロール バーの矢印ボタンを、ボタンの一覧をページごとに進めるか、ボタンごとに進めるかを指定します。|
+|[コントロール バー ペイン::取得レギュラーカラー](#getregularcolor)|Outlook バー ペインの通常の (選択されていない) テキストの色を返します。|
 |`CMFCOutlookBarPane::GetThisClass`|このクラス型に関連付けられている[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)オブジェクトへのポインターを取得するために、フレームワークによって使用されます。|
-|[CMFCOutlookBarPane::IsBackgroundTexture](#isbackgroundtexture)|Outlook バーペインに背景画像が読み込まれているかどうかを判断します。|
-|`CMFCOutlookBarPane::IsChangeState`|フローティングペインがドッキング可能かどうかを決定します。 ( `CPane::IsChangeState`をオーバーライドします)。|
-|[CMFCOutlookBarPane:: IsDrawShadedHighlight](#isdrawshadedhighlight)|ボタンが強調表示され、背景イメージが表示されたときにボタンの境界線を影付きにするかどうかを決定します。|
-|`CMFCOutlookBarPane::OnBeforeFloat`|ペインがフローティングしようとしているときに、フレームワークによって呼び出されます。 ( [CPane:: OnBeforeFloat](../../mfc/reference/cpane-class.md#onbeforefloat)をオーバーライドします。)|
-|[CMFCOutlookBarPane:: RemoveButton](#removebutton)|指定したコマンド ID を持つボタンを削除します。|
-|`CMFCOutlookBarPane::RestoreOriginalstate`|ツール バーを元の状態に戻します。 ( [Cmfctoolbar:: RestoreOriginalState](../../mfc/reference/cmfctoolbar-class.md#restoreoriginalstate)をオーバーライドします)。|
-|[CMFCOutlookBarPane:: SetBackColor](#setbackcolor)|背景色を設定します。|
-|[CMFCOutlookBarPane:: SetBackImage](#setbackimage)|背景イメージを設定します。|
-|[CMFCOutlookBarPane:: SetDefaultState](#setdefaultstate)|Outlook バーペインを元のボタンのセットにリセットします。|
-|[CMFCOutlookBarPane:: SetExtraSpace](#setextraspace)|Outlook バーペインのボタンの周囲で使用される余白のピクセル数を設定します。|
-|[CMFCOutlookBarPane:: SetTextColor](#settextcolor)|Outlook バーペインで、標準および強調表示されているテキストの色を設定します。|
-|[CMFCOutlookBarPane:: SetTransparentColor](#settransparentcolor)|Outlook バーペインの透明色を設定します。|
+|[テクスチャーを表示します。](#isbackgroundtexture)|Outlook バー ペインにバックグラウンド イメージが読み込まれているかどうかを判断します。|
+|`CMFCOutlookBarPane::IsChangeState`|フローティング ペインをドッキングできるかどうかを判断します。 ( `CPane::IsChangeState`をオーバーライドします)。|
+|[をクリックします。](#isdrawshadedhighlight)|ボタンが強調表示され、背景イメージが表示されるときに、ボタンの境界線をシェーディングするかどうかを指定します。|
+|`CMFCOutlookBarPane::OnBeforeFloat`|ペインがフロートされるときに、フレームワークによって呼び出されます。 (CPane をオーバーライド[します::オン事前フロート](../../mfc/reference/cpane-class.md#onbeforefloat).)|
+|[ボタンの削除](#removebutton)|指定したコマンド ID を持つボタンを削除します。|
+|`CMFCOutlookBarPane::RestoreOriginalstate`|ツール バーを元の状態に戻します。 (CMFC ツールバーをオーバーライド[します。:元に戻します](../../mfc/reference/cmfctoolbar-class.md#restoreoriginalstate)。|
+|[を切り開く](#setbackcolor)|背景色を設定します。|
+|[を切り開く](#setbackimage)|背景イメージを設定します。|
+|[を設定します。](#setdefaultstate)|Outlook バー ペインを元のボタンのセットにリセットします。|
+|[を設定します。](#setextraspace)|Outlook バー ペインのボタンの周囲に使用されるパディングのピクセル数を設定します。|
+|[ウィンドウ::テキストの色を設定します。](#settextcolor)|Outlook バー ペインで、標準テキストと強調表示されたテキストの色を設定します。|
+|[ウィンドウ::透明な色を設定します。](#settransparentcolor)|Outlook バー ペインの透明色を設定します。|
 |`CMFCOutlookBarPane::SmartUpdate`|Outlook バーを更新するために内部的に使用されます。 ( `CMFCToolBar::SmartUpdate`をオーバーライドします)。|
 
 ### <a name="protected-methods"></a>プロテクト メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CMFCOutlookBarPane:: EnableContextMenuItems](#enablecontextmenuitems)|カスタマイズモードで表示するショートカットメニュー項目を指定します。|
-|[CMFCOutlookBarPane::RemoveAllButtons](#removeallbuttons)|Outlook バーペインからすべてのボタンを削除します。 ( [Cmfctoolbar:: RemoveAllButtons](../../mfc/reference/cmfctoolbar-class.md#removeallbuttons)をオーバーライドします)。|
+|[メニュー項目を有効にする](#enablecontextmenuitems)|カスタマイズ モードで表示するショートカット メニュー項目を指定します。|
+|[ボタンの削除](#removeallbuttons)|Outlook バー ペインからすべてのボタンを削除します。 (CMFC ツールバーをオーバーライド[します::すべてのボタンを削除](../../mfc/reference/cmfctoolbar-class.md#removeallbuttons)します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-Outlook バーを実装する方法の詳細については、「 [Cmfcoutlookbar クラス](../../mfc/reference/cmfcoutlookbar-class.md)」を参照してください。
+Outlook バーを実装する方法の詳細については[、「CMFCOutlookBar クラス](../../mfc/reference/cmfcoutlookbar-class.md)」を参照してください。
 
-Outlook バーの例については、OutlookDemo サンプルプロジェクトを参照してください。
+Outlook バーの例については、OutlookDemo サンプル プロジェクトを参照してください。
 
 ## <a name="example"></a>例
 
-`CMFCOutlookBarPane`クラスのさまざまなメソッドを使用する方法を次の例に示します。 この例では、Outlook バーペインを作成する方法、ページスクロールモードを有効にする方法、ドッキングを有効にする方法、および Outlook バーの背景色を設定する方法を示します。 このコードスニペットは、 [Outlook マルチビューサンプル](../../overview/visual-cpp-samples.md)の一部です。
+クラスのさまざまなメソッドを使用する方法を次の例に`CMFCOutlookBarPane`示します。 この例では、Outlook バー ペインを作成し、ページスクロール モードを有効にし、ドッキングを有効にし、Outlook バーの背景色を設定する方法を示します。 このコード スニペットは[、Outlook マルチ ビュー サンプル](../../overview/visual-cpp-samples.md)の一部です。
 
 [!code-cpp[NVC_MFC_OutlookMultiViews#3](../../mfc/reference/codesnippet/cpp/cmfcoutlookbarpane-class_1.h)]
 [!code-cpp[NVC_MFC_OutlookMultiViews#4](../../mfc/reference/codesnippet/cpp/cmfcoutlookbarpane-class_2.cpp)]
@@ -128,7 +128,7 @@ Outlook バーの例については、OutlookDemo サンプルプロジェクト
 
 [CPane](../../mfc/reference/cpane-class.md)
 
-[CMFCBaseToolBar](../../mfc/reference/cmfcbasetoolbar-class.md)
+[ツールバー](../../mfc/reference/cmfcbasetoolbar-class.md)
 
 [CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md)
 
@@ -136,11 +136,11 @@ Outlook バーの例については、OutlookDemo サンプルプロジェクト
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** afxoutlookbarpane
+**ヘッダー:** afxoutlookバーペイン.h
 
-##  <a name="addbutton"></a>CMFCOutlookBarPane:: AddButton
+## <a name="cmfcoutlookbarpaneaddbutton"></a><a name="addbutton"></a>ボタンの追加
 
-Outlook バーペインにボタンを追加します。
+Outlook バー ペインにボタンを追加します。
 
 ```
 BOOL AddButton(
@@ -177,48 +177,48 @@ BOOL AddButton(
 
 ### <a name="parameters"></a>パラメーター
 
-*uiImage*<br/>
-からビットマップのリソース識別子を指定します。
+*uiイメージ*<br/>
+[in]ビットマップのリソース識別子を指定します。
 
-*lpszLabel*<br/>
-からボタンのテキストを指定します。
+*ラベル*<br/>
+[in]ボタンのテキストを指定します。
 
-*iIdCommand*<br/>
-からボタンコントロールの ID を指定します。
+*コマンド*<br/>
+[in]ボタン コントロールの ID を指定します。
 
-*iInsertAt*<br/>
-からボタンを挿入する outlook バーのページの0から始まるインデックスを指定します。
+*挿入*<br/>
+[in]ボタンを挿入する Outlook バーのページの 0 から始まるインデックスを指定します。
 
-*uiLabel*<br/>
-から文字列リソース ID。
+*uiラベル*<br/>
+[in]文字列リソース ID。
 
-*szBmpFileName*<br/>
-から読み込むディスクイメージファイルの名前を指定します。
+*ファイル名*<br/>
+[in]ロードするディスク イメージ ファイルの名前を指定します。
 
-*szLabel*<br/>
-からボタンのテキストを指定します。
+*szラベル*<br/>
+[in]ボタンのテキストを指定します。
 
 *hBmp*<br/>
-からボタンのビットマップを処理するハンドル。
+[in]ボタンのビットマップへのハンドル。
 
-*hIcon*<br/>
-からボタンのアイコンを示すハンドル。
+*Hicon*<br/>
+[in]ボタンのアイコンへのハンドル。
 
 ### <a name="return-value"></a>戻り値
 
 ボタンが正常に追加された場合は TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-Outlook バーのページに新しいボタンを挿入するには、このメソッドを使用します。 ボタンのイメージは、アプリケーションリソースから、またはディスクファイルから読み込むことができます。
+このメソッドは、Outlook バーのページに新しいボタンを挿入するために使います。 ボタンのイメージは、アプリケーションリソースまたはディスクファイルからロードできます。
 
-*UiPageID*によって指定されたページ ID が-1 の場合、ボタンは最初のページに挿入されます。
+*uiPageID*で指定されたページ ID が -1 の場合、ボタンは最初のページに挿入されます。
 
-*IInsertAt*によって指定されたインデックスが-1 の場合、ボタンはページの最後に追加されます。
+*iInsertAt*で指定されたインデックスが -1 の場合、ボタンはページの最後に追加されます。
 
-##  <a name="canbeattached"></a>CMFCOutlookBarPane:: CanBeAttached
+## <a name="cmfcoutlookbarpanecanbeattached"></a><a name="canbeattached"></a>をクリックします。
 
-詳細については、Visual Studio のインストール**の\\VC atlmfc\\\\src mfc**フォルダーにあるソースコードを参照してください。
+詳細については、Visual Studio のインストールの**\\VC\\atlmfc\\src mfc**フォルダーにあるソース コードを参照してください。
 
 ```
 virtual BOOL CanBeAttached() const;
@@ -226,23 +226,23 @@ virtual BOOL CanBeAttached() const;
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="clearall"></a>CMFCOutlookBarPane:: ClearAll
+## <a name="cmfcoutlookbarpaneclearall"></a><a name="clearall"></a>ウィンドウすべて
 
-Outlook バーウィンドウのイメージによって使用されているリソースを解放します。
+Outlook バー ウィンドウのイメージで使用されているリソースを解放します。
 
 ```
 void ClearAll();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、Outlook バーペインで使用されるイメージに対して呼び出される[Cmfctoolbarimages:: Clear](../../mfc/reference/cmfctoolbarimages-class.md#clear)を直接呼び出します。
+このメソッドは、Outlook バー ペインで使用されるイメージで呼び出される[CMFCToolBarImages::Clear](../../mfc/reference/cmfctoolbarimages-class.md#clear)を直接呼び出します。
 
-##  <a name="create"></a>CMFCOutlookBarPane:: Create
+## <a name="cmfcoutlookbarpanecreate"></a><a name="create"></a>を作成します。
 
-Outlook バーペインを作成します。
+Outlook バー ペインを作成します。
 
 ```
 virtual BOOL Create(
@@ -255,30 +255,30 @@ virtual BOOL Create(
 ### <a name="parameters"></a>パラメーター
 
 *pParentWnd*<br/>
-からOutlook バーペインコントロールの親ウィンドウを指定します。 NULL にすることはできません。
+[in]Outlook バー ペイン コントロールの親ウィンドウを指定します。 NULL にすることはできません。
 
-*dwStyle*<br/>
-からウィンドウスタイル。  ウィンドウスタイルの一覧については、「[ウィンドウスタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)」を参照してください。
+*Dwstyle*<br/>
+[in]ウィンドウ スタイル。  ウィンドウ スタイルの一覧については、「[ウィンドウ](../../mfc/reference/styles-used-by-mfc.md#window-styles)スタイル」を参照してください。
 
-*uiID*<br/>
-からコントロール ID。 コントロールの状態を保存できるようにするには、一意である必要があります。
+*Uiid*<br/>
+[in]コントロール ID。 コントロールの状態の保存を有効にするには、一意である必要があります。
 
-*dwControlBarStyle*<br/>
-からOutlook バーから切断されたときの Outlook バーペインコントロールの動作を定義する特殊なスタイルを指定します。
+*コントロール バースタイル*<br/>
+[in]Outlook バーから切り離したときの Outlook バー ペイン コントロールの動作を定義する特殊なスタイルを指定します。
 
 ### <a name="return-value"></a>戻り値
 
 メソッドが成功した場合は TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`CMFCOutlookBarPane`オブジェクトを構築するには、まずコンストラクターを呼び出し、次`Create`にを呼び出します。これにより、Outlook バーペインコントロール`CMFCOutlookBarPane`が作成され、オブジェクトにアタッチされます。
+オブジェクトを`CMFCOutlookBarPane`構築するには、まずコンストラクターを呼び出し、`Create`を`CMFCOutlookBarPane`呼び出します。
 
-詳細`dwControlBarStyle`については、「 [cbasepane:: CreateEx](../../mfc/reference/cbasepane-class.md#createex)」を参照してください。
+詳細については`dwControlBarStyle`[、「CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex)」を参照してください。
 
-##  <a name="enablecontextmenuitems"></a>CMFCOutlookBarPane:: EnableContextMenuItems
+## <a name="cmfcoutlookbarpaneenablecontextmenuitems"></a><a name="enablecontextmenuitems"></a>メニュー項目を有効にする
 
-カスタマイズモードで表示するショートカットメニュー項目を指定します。
+カスタマイズ モードで表示するショートカット メニュー項目を指定します。
 
 ```
 virtual BOOL EnableContextMenuItems(
@@ -288,28 +288,28 @@ virtual BOOL EnableContextMenuItems(
 
 ### <a name="parameters"></a>パラメーター
 
-*pButton*<br/>
-からユーザーがクリックしたツールバーボタンへのポインター。
+*ボタン*<br/>
+[in]ユーザーがクリックしたツール バー ボタンへのポインター。
 
 *pPopup*<br/>
-からショートカットメニューへのポインター。
+[in]ショートカット メニューへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-ショートカットメニューを表示する必要がある場合は TRUE を返します。それ以外の場合は FALSE。
+ショートカット メニューを表示する必要がある場合は TRUE を返します。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-フレームワークによってカスタマイズモードで表示されるフレームワークの標準のショートカットメニューを変更するには、このメソッドをオーバーライドします。
+フレームワークがカスタマイズ モードで表示するフレームワーク標準のショートカット メニューを変更するには、このメソッドをオーバーライドします。
 
-既定の実装はカスタマイズモード ( [Cmfctoolbar:: Iscustomization emode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode)) を確認し、TRUE に設定されている場合は、 **[削除]** を除くすべてのショートカットメニュー項目を無効にします。 次に、入力パラメーターをに`CMFCToolBar::EnableContextMenuItems`渡します。
+既定の実装では、カスタマイズ モード ( [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode)) がチェックされ、TRUE に設定されている場合は **、削除**以外のすべてのショートカット メニュー項目が無効になります。 次に、入力パラメータを に渡す`CMFCToolBar::EnableContextMenuItems`だけです。
 
 > [!NOTE]
-> *コンテキストメニュー*は、ショートカットメニューのシノニムです。
+> *コンテキスト メニュー*は、ショートカット メニューの同義語です。
 
-##  <a name="enablepagescrollmode"></a>  CMFCOutlookBarPane::EnablePageScrollMode
+## <a name="cmfcoutlookbarpaneenablepagescrollmode"></a><a name="enablepagescrollmode"></a>をクリックします。
 
-Outlook バーペインのスクロールバーの矢印がページごとにボタンの一覧を表示するかボタンをクリックするかを指定します。
+Outlook バー ウィンドウのスクロール バーの矢印ボタンをクリックして、ボタンの一覧をページごとに進めるか、ボタンごとに進めるかを指定します。
 
 ```
 void EnablePageScrollMode(BOOL bPageScroll=TRUE);
@@ -317,12 +317,12 @@ void EnablePageScrollMode(BOOL bPageScroll=TRUE);
 
 ### <a name="parameters"></a>パラメーター
 
-*bPageScroll*<br/>
-からTRUE の場合は、ページのスクロールモードを有効にします。 FALSE の場合は、ページのスクロールモードを無効にします。
+*ページスクロール*<br/>
+[in]TRUE の場合は、ページスクロールモードを有効にします。 FALSE の場合は、ページスクロールモードを無効にします。
 
-##  <a name="getregularcolor"></a>CMFCOutlookBarPane:: GetRegularColor
+## <a name="cmfcoutlookbarpanegetregularcolor"></a><a name="getregularcolor"></a>コントロール バー ペイン::取得レギュラーカラー
 
-Outlook バーペインの標準 (つまり、選択されていない) テキストの色を返します。
+Outlook バー ペインの標準 (選択されていない) テキストの色を返します。
 
 ```
 DECLARE_MESSAGE_MAPCOLORREF GetRegularColor() const;
@@ -330,15 +330,15 @@ DECLARE_MESSAGE_MAPCOLORREF GetRegularColor() const;
 
 ### <a name="return-value"></a>戻り値
 
-現在のテキストの色を RGB カラー値として指定します。
+RGB カラー値としての現在のテキストの色。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-[Cmfcoutlookbarpane:: SetTextColor](#settextcolor)を使用して、Outlook バーの現在の (標準および選択されている) テキストの色を設定します。 COLOR_WINDOW インデックスを使用して[Getsyscolor](/windows/win32/api/winuser/nf-winuser-getsyscolor)関数を呼び出すと、既定のテキストの色を取得できます。
+Outlook バーの現在の (通常および選択された) テキストの色を設定するには[、CMFCOutlook バー ペイン](#settextcolor)を使用します。 既定のテキストの色を取得するには、COLOR_WINDOWインデックスを使用して[GetSysColor](/windows/win32/api/winuser/nf-winuser-getsyscolor)関数を呼び出します。
 
-##  <a name="isbackgroundtexture"></a>  CMFCOutlookBarPane::IsBackgroundTexture
+## <a name="cmfcoutlookbarpaneisbackgroundtexture"></a><a name="isbackgroundtexture"></a>テクスチャーを表示します。
 
-Outlook バーペインに背景画像が読み込まれているかどうかを判断します。
+Outlook バー ペインにバックグラウンド イメージが読み込まれているかどうかを判断します。
 
 ```
 BOOL IsBackgroundTexture() const;
@@ -346,17 +346,17 @@ BOOL IsBackgroundTexture() const;
 
 ### <a name="return-value"></a>戻り値
 
-表示する背景イメージが存在する場合は TRUE。それ以外の場合は FALSE。
+表示する背景イメージがある場合は TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-[Cmfcoutlookbarpane:: SetBackImage](#setbackimage)関数を呼び出すことで、背景画像を追加できます。
+関数を呼び出して、背景イメージ[を](#setbackimage)追加できます。
 
-背景画像がない場合は、 [Cmfcoutlookbarpane:: SetBackColor](#setbackcolor)を使用して指定された色で背景が描画されます。
+背景イメージがない場合は[、CMFCOutlookBarPane::SetBackColor](#setbackcolor)を使用して指定された色で背景が描画されます。
 
-##  <a name="isdrawshadedhighlight"></a>CMFCOutlookBarPane:: IsDrawShadedHighlight
+## <a name="cmfcoutlookbarpaneisdrawshadedhighlight"></a><a name="isdrawshadedhighlight"></a>をクリックします。
 
-ボタンが強調表示され、背景イメージが表示されたときにボタンの境界線を影付きにするかどうかを決定します。
+ボタンが強調表示され、背景イメージが表示されるときに、ボタンの境界線をシェーディングするかどうかを指定します。
 
 ```
 BOOL IsDrawShadedHighlight() const;
@@ -364,17 +364,17 @@ BOOL IsDrawShadedHighlight() const;
 
 ### <a name="return-value"></a>戻り値
 
-ボタンの境界線が網掛けされている場合は TRUE。それ以外の場合は FALSE。
+TRUE ボタンの境界線がシェーディングされている場合は TRUE。それ以外の場合は FALSE。
 
-##  <a name="removeallbuttons"></a>  CMFCOutlookBarPane::RemoveAllButtons
+## <a name="cmfcoutlookbarpaneremoveallbuttons"></a><a name="removeallbuttons"></a>ボタンの削除
 
-Outlook バーペインからすべてのボタンを削除します。
+Outlook バー ペインからすべてのボタンを削除します。
 
 ```
 virtual void RemoveAllButtons();
 ```
 
-##  <a name="removebutton"></a>  CMFCOutlookBarPane::RemoveButton
+## <a name="cmfcoutlookbarpaneremovebutton"></a><a name="removebutton"></a>ボタンの削除
 
 指定したコマンド ID を持つボタンを削除します。
 
@@ -384,14 +384,14 @@ BOOL RemoveButton(UINT iIdCommand);
 
 ### <a name="parameters"></a>パラメーター
 
-*iIdCommand*<br/>
-から削除するボタンのコマンド ID を指定します。
+*コマンド*<br/>
+[in]削除するボタンのコマンド ID を指定します。
 
 ### <a name="return-value"></a>戻り値
 
-ボタンが正常に削除された場合は TRUE。指定されたコマンド ID が有効でない場合は FALSE。
+ボタンが正常に削除された場合は TRUE。指定されたコマンド ID が無効な場合は FALSE。
 
-##  <a name="setbackcolor"></a>CMFCOutlookBarPane:: SetBackColor
+## <a name="cmfcoutlookbarpanesetbackcolor"></a><a name="setbackcolor"></a>を切り開く
 
 Outlook バーの背景色を設定します。
 
@@ -402,13 +402,13 @@ void SetBackColor(COLORREF color);
 ### <a name="parameters"></a>パラメーター
 
 *色*<br/>
-から新しい背景色を指定します。
+[in]新しい背景色を指定します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-Outlook バーの現在の背景色を設定するには、この関数を呼び出します。 背景色は、背景画像がない場合にのみ使用されます。
+Outlook バーの現在の背景色を設定します。 背景色は、背景画像がない場合にのみ使用されます。
 
-##  <a name="setbackimage"></a>CMFCOutlookBarPane:: SetBackImage
+## <a name="cmfcoutlookbarpanesetbackimage"></a><a name="setbackimage"></a>を切り開く
 
 背景イメージを設定します。
 
@@ -418,36 +418,36 @@ void SetBackImage(UINT uiImageID);
 
 ### <a name="parameters"></a>パラメーター
 
-*uiImageID*<br/>
-からイメージリソース ID を指定します。
+*イメージID*<br/>
+[in]イメージ リソース ID を指定します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-Outlook バーの背景画像を設定するには、このメソッドを呼び出します。 背景イメージの一覧は、埋め込み[Cmfctoolbarimages クラス](../../mfc/reference/cmfctoolbarimages-class.md)オブジェクトによって管理されます。
+Outlook バーの背景イメージを設定します。 背景イメージの一覧は、埋め込まれた[CMFCToolBarImages クラス オブジェクト](../../mfc/reference/cmfctoolbarimages-class.md)によって管理されます。
 
-##  <a name="setdefaultstate"></a>CMFCOutlookBarPane:: SetDefaultState
+## <a name="cmfcoutlookbarpanesetdefaultstate"></a><a name="setdefaultstate"></a>を設定します。
 
-Outlook バーペインを元のボタンのセットにリセットします。
+Outlook バー ペインを元のボタンのセットにリセットします。
 
 ```
 void SetDefaultState();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、Outlook バーボタンを元のセットに復元します。 このメソッドはと`CMFCOutlookBarPane::RestoreOriginalstate`似ていますが、Outlook バーペインの再描画をトリガーしない点が異なります。
+このメソッドは、Outlook バーのボタンを元のセットに戻します。 このメソッドは、`CMFCOutlookBarPane::RestoreOriginalstate`に似ていますが、Outlook バー ペインの再描画は行われません。
 
-##  <a name="setextraspace"></a>CMFCOutlookBarPane:: SetExtraSpace
+## <a name="cmfcoutlookbarpanesetextraspace"></a><a name="setextraspace"></a>を設定します。
 
-Outlook バーペインのボタンの周囲で使用される余白のピクセル数を設定します。
+Outlook バー ペインのボタンの周囲に使用されるパディングのピクセル数を設定します。
 
 ```
 void SetExtraSpace()
 ```
 
-##  <a name="settextcolor"></a>  CMFCOutlookBarPane::SetTextColor
+## <a name="cmfcoutlookbarpanesettextcolor"></a><a name="settextcolor"></a>ウィンドウ::テキストの色を設定します。
 
-Outlook バーペインで、標準および強調表示されているテキストの色を設定します。
+Outlook バー ペインで、標準テキストと強調表示されたテキストの色を設定します。
 
 ```
 void SetTextColor(
@@ -457,15 +457,15 @@ void SetTextColor(
 
 ### <a name="parameters"></a>パラメーター
 
-*clrRegText*<br/>
-から選択されていないテキストの新しい色を指定します。
+*テキスト*<br/>
+[in]選択されていないテキストの新しい色を指定します。
 
-*clrSelText*<br/>
-から選択したテキストの新しい色を指定します。
+*テキスト*<br/>
+[in]選択したテキストの新しい色を指定します。
 
-##  <a name="settransparentcolor"></a>  CMFCOutlookBarPane::SetTransparentColor
+## <a name="cmfcoutlookbarpanesettransparentcolor"></a><a name="settransparentcolor"></a>ウィンドウ::透明な色を設定します。
 
-Outlook バーペインの透明色を設定します。
+Outlook バー ペインの透明色を設定します。
 
 ```
 void SetTransparentColor(COLORREF color);
@@ -476,14 +476,14 @@ void SetTransparentColor(COLORREF color);
 *色*<br/>
 新しい透明色を指定します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-透明な画像を表示するには、透明色が必要です。 画像内でこの色が発生した場合は、代わりに背景色で塗りつぶされます。  背景画像と前景イメージはブレンドされません。
+透明な画像を表示するには、透明な色が必要です。 イメージ内でこの色が出現する場合は、背景色で描画されます。  背景画像と前景画像のブレンドはありません。
 
 ## <a name="see-also"></a>関連項目
 
-[階層図](../../mfc/hierarchy-chart.md)<br/>
+[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
 [クラス](../../mfc/reference/mfc-classes.md)<br/>
-[CMFCToolBar クラス](../../mfc/reference/cmfctoolbar-class.md)<br/>
-[CMFCOutlookBar クラス](../../mfc/reference/cmfcoutlookbar-class.md)<br/>
+[クラス](../../mfc/reference/cmfctoolbar-class.md)<br/>
+[クラス](../../mfc/reference/cmfcoutlookbar-class.md)<br/>
 [CMFCOutlookBarTabCtrl クラス](../../mfc/reference/cmfcoutlookbartabctrl-class.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CMFCRibbonContextCaption [MFC], GetColor
 - CMFCRibbonContextCaption [MFC], GetRightTabX
 ms.assetid: cce2c0a2-8370-4266-997e-f8d0eeb3d616
-ms.openlocfilehash: 26cc509db55bc95688123a7c6e673dcfc87c975b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7aacbe23684914c91129d9962ae847d442cc411b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62237326"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375214"
 ---
 # <a name="cmfcribboncontextcaption-class"></a>CMFCRibbonContextCaption クラス
 
@@ -36,13 +36,13 @@ class CMFCRibbonContextCaption : public CMFCRibbonButton
 |`CMFCRibbonContextCaption::CreateObject`|このクラス型の動的インスタンスを作成するために、フレームワークで使用されます。|
 |[CMFCRibbonContextCaption::GetColor](#getcolor)|キャプションの色を返します。|
 |[CMFCRibbonContextCaption::GetRightTabX](#getrighttabx)||
-|`CMFCRibbonContextCaption::GetThisClass`|ポインターを取得する、framework によって使用される、 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)このクラス型に関連付けられているオブジェクト。|
+|`CMFCRibbonContextCaption::GetThisClass`|このクラス型に関連付けられている[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)オブジェクトへのポインターを取得するために、フレームワークによって使用されます。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-このクラスを直接インスタンス化することはできません。 [CMFCRibbonBar クラス](../../mfc/reference/cmfcribbonbar-class.md)クラスを使用してこのクラス内部でのリボン カテゴリに色を追加します。
+このクラスを直接インスタンス化することはできません。 [CMFCRibbonBar クラスクラス](../../mfc/reference/cmfcribbonbar-class.md)は、リボン カテゴリに色を追加するために、内部的にこのクラスを使用します。
 
-リボン カテゴリの色を設定するには、呼び出す[cmfcribboncategory::settabcolor](../../mfc/reference/cmfcribboncategory-class.md#settabcolor)します。 コンテキスト カテゴリの色を設定するには、呼び出す[cmfcribbonbar::addcontextcategory](../../mfc/reference/cmfcribbonbar-class.md#addcontextcategory)します。
+リボン カテゴリの色を設定するには[、CMFC リボン カテゴリ::セットタブカラー](../../mfc/reference/cmfcribboncategory-class.md#settabcolor)を呼び出します。 コンテキスト カテゴリの色を設定するには[、CMFC リボン バー::AddContextCategory](../../mfc/reference/cmfcribbonbar-class.md#addcontextcategory)を呼び出します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -58,7 +58,7 @@ class CMFCRibbonContextCaption : public CMFCRibbonButton
 
 **ヘッダー:** afxRibbonBar.h
 
-##  <a name="getcolor"></a>  CMFCRibbonContextCaption::GetColor
+## <a name="cmfcribboncontextcaptiongetcolor"></a><a name="getcolor"></a>コンテキストキャプション::取得カラー
 
 キャプションの背景色を返します。
 
@@ -68,7 +68,7 @@ AFX_RibbonCategoryColor GetColor() const;
 
 ### <a name="return-value"></a>戻り値
 
-返される値には、次の列挙値のいずれかを指定できます。
+返される値は、次の列挙値のいずれかです。
 
 - `AFX_CategoryColor_None`
 
@@ -86,13 +86,13 @@ AFX_RibbonCategoryColor GetColor() const;
 
 - `AFX_CategoryColor_Violet`
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-キャプションの色を呼び出すことによって設定できる[cmfcribboncategory::settabcolor](../../mfc/reference/cmfcribboncategory-class.md#settabcolor)または[cmfcribbonbar::addcontextcategory](../../mfc/reference/cmfcribbonbar-class.md#addcontextcategory)します。
+キャプションの色は、呼び出すことによって設定することができます[。](../../mfc/reference/cmfcribboncategory-class.md#settabcolor) [CMFCRibbonBar::AddContextCategory](../../mfc/reference/cmfcribbonbar-class.md#addcontextcategory)
 
-##  <a name="getrighttabx"></a>  CMFCRibbonContextCaption::GetRightTabX
+## <a name="cmfcribboncontextcaptiongetrighttabx"></a><a name="getrighttabx"></a>コンテキストキャプション::右タブ
 
-カテゴリのリボン タブの右側の端の位置を取得します。
+カテゴリのリボン タブの右端の位置を取得します。
 
 ```
 int GetRightTabX() const;
@@ -100,14 +100,14 @@ int GetRightTabX() const;
 
 ### <a name="return-value"></a>戻り値
 
-それを囲む四角形の右辺の X 値を返します、`CMFCRibbonCategory`オブジェクトのリボン タブまたはタブが切り捨てられる場合は-1 の値。
+`CMFCRibbonCategory`オブジェクトのリボン タブの囲む四角形の右側の X 値を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 ## <a name="see-also"></a>関連項目
 
-[階層図](../../mfc/hierarchy-chart.md)<br/>
+[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
 [クラス](../../mfc/reference/mfc-classes.md)<br/>
 [CMFCRibbonButton クラス](../../mfc/reference/cmfcribbonbutton-class.md)<br/>
-[CMFCRibbonCategory クラス](../../mfc/reference/cmfcribboncategory-class.md)<br/>
-[CMFCRibbonBar クラス](../../mfc/reference/cmfcribbonbar-class.md)
+[クラス](../../mfc/reference/cmfcribboncategory-class.md)<br/>
+[クラス](../../mfc/reference/cmfcribbonbar-class.md)

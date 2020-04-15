@@ -1,8 +1,9 @@
 ---
 title: _chdrive
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _chdrive
+- _o__chdrive
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -27,12 +29,12 @@ helpviewer_keywords:
 - _chdrive function
 - chdrive function
 ms.assetid: 212a1a4b-4fa8-444e-9677-7fca4c8c47e3
-ms.openlocfilehash: 3ee292c03c9d31944e0a555c2159d7a5dd2cd0eb
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 0c19fefcf6a766842ee2e25cbe6bdb61bbf48e7d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939240"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81333344"
 ---
 # <a name="_chdrive"></a>_chdrive
 
@@ -51,24 +53,26 @@ int _chdrive(
 
 ### <a name="parameters"></a>パラメーター
 
-*駆動*<br/>
+*ドライブ*<br/>
 現在の作業ドライブを指定する 1 ～ 26 の整数 (1 = A、2 = B など)。
 
 ## <a name="return-value"></a>戻り値
 
 現在の作業ドライブが正常に変更された場合はゼロ (0)、それ以外の場合は -1。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-*Drive*が 1 ~ 26 の範囲内にない場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、 **_chdrive**関数は-1 を返し、 **errno**は**EACCES**に設定され、 **_doserrno**は**ERROR_INVALID_DRIVE**に設定されます。
+*ドライブ*が 1 から 26 までの範囲にない場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」の説明に従って、無効なパラメーター ハンドラーが呼び出されます。 実行が続行できる場合 **、_chdrive**関数は -1 を返し **、errno**は**EACCES**に設定され **、_doserrno**は**ERROR_INVALID_DRIVE**に設定されます。
 
-**_chdrive** 関数は、スレッド セーフではない **SetCurrentDirectory** 関数に依存するため、スレッド セーフではありません。 マルチスレッド アプリケーションで **_chdrive** を安全に使用するには、独自のスレッド同期を用意する必要があります。 詳細については、「 [SetCurrentDirectory](/windows/win32/api/winbase/nf-winbase-setcurrentdirectory)」を参照してください。
+**_chdrive** 関数は、スレッド セーフではない **SetCurrentDirectory** 関数に依存するため、スレッド セーフではありません。 マルチスレッド アプリケーションで **_chdrive** を安全に使用するには、独自のスレッド同期を用意する必要があります。 詳細については、「[を参照してください。](/windows/win32/api/winbase/nf-winbase-setcurrentdirectory)
 
-**_chdrive** 関数は現在の作業ドライブのみを変更します。 **_chdir** は現在の作業ディレクトリを変更します。
+**_chdrive** 関数は現在の作業ドライブのみを変更します。**_chdir** は現在の作業ディレクトリを変更します。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**_chdrive**|\<direct.h>|
 

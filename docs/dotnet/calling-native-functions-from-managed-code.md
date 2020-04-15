@@ -9,12 +9,12 @@ helpviewer_keywords:
 - calling native functions from managed code
 - interop [C++], calling native functions from managed code
 ms.assetid: 982cef18-20d9-42b4-8242-a77fa65f2e36
-ms.openlocfilehash: 50f40cc147daaa26a7fa4e607f0d4dd42cf22d61
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 0cdd5db4fae8d9167fa9ab1aeb6a4e8cbfe76ded
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "79545367"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372507"
 ---
 # <a name="calling-native-functions-from-managed-code"></a>マネージド コードからのネイティブ関数の呼び出し
 
@@ -29,7 +29,7 @@ ms.locfileid: "79545367"
 このセクションのサンプルで、`PInvoke` の使い方を示します。 `PInvoke` を使用すると、マーシャリング情報を手続き的なコードで書く代わりに属性として宣言できるため、データ マーシャリングを簡単にカスタマイズできます。
 
 > [!NOTE]
->  マーシャリング ライブラリにより、最適化された方法でネイティブ環境とマネージド環境との間でデータ変換を行うことができるようになります。 マーシャリングライブラリの詳細については、の[ C++マーシャリングの概要](../dotnet/overview-of-marshaling-in-cpp.md)に関するトピックを参照してください。 マーシャリング ライブラリは関数には使用できず、データにしか使用できません。
+> マーシャリング ライブラリにより、最適化された方法でネイティブ環境とマネージド環境との間でデータ変換を行うことができるようになります。 マーシャリング ライブラリの詳細については[、「C++ での](../dotnet/overview-of-marshaling-in-cpp.md)マーシャリングの概要」を参照してください。 マーシャリング ライブラリは関数には使用できず、データにしか使用できません。
 
 ## <a name="pinvoke-and-the-dllimport-attribute"></a>PInvoke と DllImport 属性
 
@@ -172,22 +172,22 @@ int main() {
 
 しかし、フォームが異なる場合はマーシャリングが必要です。 フォームが異なる型とは、char、string、struct などの型です。 次の表は、マーシャラーが各型に使用するマップを示します。
 
-|wtypes.h|Visual C++|/clr を指定した Visual C++|共通言語ランタイム|
+|wtypes.h|Visual C++|/clr を指定した Visual C++|共通言語ランタイム|
 |--------------|------------------|-----------------------------|-----------------------------|
-|HANDLE|void \*|void \*|IntPtr、UIntPtr|
+|HANDLE|無効\*|無効\*|IntPtr、UIntPtr|
 |BYTE|unsigned char|unsigned char|Byte|
 |SHORT|short|short|Int16|
 |WORD|unsigned short|unsigned short|UInt16|
-|INT|int|int|Int32|
+|INT|INT|INT|Int32|
 |UINT|unsigned int|unsigned int|UInt32|
 |LONG|long|long|Int32|
-|BOOL|long|bool|Boolean|
+|BOOL|long|[bool]|Boolean|
 |DWORD|unsigned long|unsigned long|UInt32|
 |ULONG|unsigned long|unsigned long|UInt32|
 |CHAR|char|char|Char|
-|LPCSTR|char \*|String ^ [in], StringBuilder ^ [in, out]|String ^ [in], StringBuilder ^ [in, out]|
-|LPCSTR|const char \*|String ^|String|
-|LPWSTR|wchar_t \*|String ^ [in], StringBuilder ^ [in, out]|String ^ [in], StringBuilder ^ [in, out]|
+|LPSTR|Char\*|String ^ [in], StringBuilder ^ [in, out]|String ^ [in], StringBuilder ^ [in, out]|
+|LPCSTR|定数文字\*|String ^|String|
+|LPWSTR|Wchar_t\*|String ^ [in], StringBuilder ^ [in, out]|String ^ [in], StringBuilder ^ [in, out]|
 |LPCWSTR|const wchar_t \*|String ^|String|
 |FLOAT|float|float|Single|
 |DOUBLE|double|double|Double|
@@ -196,9 +196,9 @@ int main() {
 
 このトピックの最初に示した例では、DllImport の CharSet パラメーターでマネージド型の String をマーシャリングする方法を示しています。この場合、マネージド型の String をネイティブ側で使用できるように ANSI 文字列にマーシャリングしています。
 
-ネイティブ関数で使用する各引数のマーシャリング情報については、MarshalAs 属性で指定できます。 文字列 \* 引数のマーシャリングには、BStr、ANSIBStr、TBStr、LPStr、LPWStr、および LPTStr のいくつかの選択肢があります。 既定値は LPStr です。
+ネイティブ関数で使用する各引数のマーシャリング情報については、MarshalAs 属性で指定できます。 文字列\*引数をマーシャリングする方法として、BStr、ANSIBStr、TBStr、LPStr、LPWStr、および LPTStr といういくつかの選択肢があります。 既定値は LPStr です。
 
-この例では、文字列を 2 バイトの Unicode 文字列 LPWStr としてマーシャリングしています。 出力は Hello World の最初の文字です。 マーシャリングされた文字列の2番目のバイトが null であるため、put はこれを文字列の末尾のマーカーとして解釈します。
+この例では、文字列を 2 バイトの Unicode 文字列 LPWStr としてマーシャリングしています。 出力はハローワールドの最初の文字です! マーシャリングされた文字列の 2 番目のバイトは null であるため、このバイトは文字列の終わりマーカーとして解釈されます。
 
 ```cpp
 // platform_invocation_services_3.cpp
@@ -217,7 +217,7 @@ int main() {
 
 MarshalAs 属性は System::Runtime::InteropServices 名前空間にあります。 この属性は、配列などのほかのデータ型にも使用できます。
 
-このトピックで既に述べたように、マーシャリング ライブラリにより、最適化された新しい方法でネイティブ環境とマネージド環境との間でデータ変換を行うことができます。 詳細については、「 [」 C++の「マーシャリングの概要](../dotnet/overview-of-marshaling-in-cpp.md)」を参照してください。
+このトピックで既に述べたように、マーシャリング ライブラリにより、最適化された新しい方法でネイティブ環境とマネージド環境との間でデータ変換を行うことができます。 詳細については、「 [C++ でのマーシャリングの概要](../dotnet/overview-of-marshaling-in-cpp.md)」を参照してください。
 
 ## <a name="performance-considerations"></a>パフォーマンスに関する考慮事項
 
@@ -225,6 +225,6 @@ PInvoke は、1 回の呼び出しで 10 ～ 30 個分の x86 命令のオーバ
 
 パフォーマンスを上げるには、マーシャリングするデータが少ない PInvoke 呼び出しを何度も行うより、できるだけ多くのデータを少ない PInvoke 呼び出しでマーシャリングすることをお勧めします。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [ネイティブと .NET の相互運用性](../dotnet/native-and-dotnet-interoperability.md)
