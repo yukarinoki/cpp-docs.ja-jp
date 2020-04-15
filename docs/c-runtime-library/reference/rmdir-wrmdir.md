@@ -1,9 +1,11 @@
 ---
 title: _rmdir、_wrmdir
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wrmdir
 - _rmdir
+- _o__rmdir
+- _o__wrmdir
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +39,12 @@ helpviewer_keywords:
 - _wrmdir function
 - wrmdir function
 ms.assetid: 652c2a5a-b0ac-4493-864e-1edf484333c5
-ms.openlocfilehash: 396e620bfabe240638dc070ff87582b16287ff60
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: dc9406371da950eb76207d8ddb4a1be8c732098e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949214"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81338065"
 ---
 # <a name="_rmdir-_wrmdir"></a>_rmdir、_wrmdir
 
@@ -60,26 +63,28 @@ int _wrmdir(
 
 ### <a name="parameters"></a>パラメーター
 
-*dirname*<br/>
+*Dirname*<br/>
 削除されるディレクトリのパス。
 
 ## <a name="return-value"></a>戻り値
 
-ディレクトリが正常に削除された場合、これらの関数はそれぞれ 0 を返します。 戻り値-1 はエラーを示し、 **errno**は次のいずれかの値に設定されます。
+ディレクトリが正常に削除された場合、これらの関数はそれぞれ 0 を返します。 戻り値 -1 はエラーを示し **、errno**は次のいずれかの値に設定されます。
 
 |errno の値|条件|
 |-|-|
 | **ENOTEMPTY** | 指定されたパスがディレクトリではないか、ディレクトリが空でない、またはディレクトリが現在の作業ディレクトリかルート ディレクトリのいずれかです。 |
-| **ENOENT** | パスが無効です。 |
-| **EACCES** | プログラムに、ディレクトリに対して開いているハンドルがあります。 |
+| **エノエント** | パスが無効です。 |
+| **エアッケ** | プログラムに、ディレクトリに対して開いているハンドルがあります。 |
 
-リターン コードの詳細については、「 [_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
+リターン コードの詳細については、「[_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-Dirname**関数は、** *dirname*によって指定されたディレクトリを削除します。 ディレクトリは空である必要があり、現在の作業ディレクトリまたはルート ディレクトリではないことが必要です。
+**_rmdir**関数は*dirname*で指定されたディレクトリを削除します。 ディレクトリは空である必要があり、現在の作業ディレクトリまたはルート ディレクトリではないことが必要です。
 
-**_wrmdir**のワイド文字バージョン**です。** **_wrmdir**への*dirname*引数は、ワイド文字列です。 **_wrmdir**と**rmdir**は同じように動作します。
+**_wrmdir**はワイド文字の **_rmdir**です。**_wrmdir**の*dirname*引数はワイド文字列です。 **_wrmdir**と **_rmdir**は、他の方法で同じように動作します。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -89,12 +94,12 @@ Dirname**関数は、** *dirname*によって指定されたディレクトリ�
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**_rmdir**|\<direct.h>|
 |**_wrmdir**|\<direct.h> または \<wchar.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="libraries"></a>ライブラリ
 

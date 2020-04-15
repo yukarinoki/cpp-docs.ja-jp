@@ -1,8 +1,9 @@
 ---
 title: _rmtmp
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _rmtmp
+- _o__rmtmp
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +31,12 @@ helpviewer_keywords:
 - files [C++], removing
 - temporary files [C++], removing
 ms.assetid: 7419501e-2587-4f2a-b469-0dca07f84736
-ms.openlocfilehash: de28768f479df00eae315c99b80103c5319b38af
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 1dc95d0f77528c26bad796ab6166998fca20a8ac
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442786"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81338033"
 ---
 # <a name="_rmtmp"></a>_rmtmp
 
@@ -49,19 +51,21 @@ int _rmtmp( void );
 
 ## <a name="return-value"></a>戻り値
 
-**_rmtmp**は、終了して削除された一時ファイルの数を返します。
+**_rmtmp**は、閉じた一時ファイルと削除された一時ファイルの数を返します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
-**_Rmtmp**関数は、現在のディレクトリ内のすべての一時ファイルをクリーンアップします。 関数は、 **tmpfile**によって作成されたファイルのみを削除します。一時ファイルが作成されたディレクトリと同じディレクトリ内でのみ使用してください。
+**_rmtmp**関数は、現在のディレクトリ内のすべての一時ファイルをクリーンアップします。 この関数は**tmpfile**によって作成されたファイルのみを削除します。一時ファイルが作成されたディレクトリと同じディレクトリでのみ使用してください。
 
-## <a name="requirements"></a>要件
+既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+
+## <a name="requirements"></a>必要条件
 
 |ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**_rmtmp**|\<stdio.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="libraries"></a>ライブラリ
 
@@ -71,7 +75,7 @@ int _rmtmp( void );
 
 「[tmpfile](tmpfile.md)」の例をご覧ください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [ストリーム入出力](../../c-runtime-library/stream-i-o.md)<br/>
 [_flushall](flushall.md)<br/>

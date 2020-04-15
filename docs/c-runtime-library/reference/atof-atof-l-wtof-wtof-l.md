@@ -1,11 +1,15 @@
 ---
 title: atof、_atof_l、_wtof、_wtof_l
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - _wtof_l
 - atof
 - _atof_l
 - _wtof
+- _o__atof_l
+- _o__wtof
+- _o__wtof_l
+- _o_atof
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -49,12 +54,12 @@ helpviewer_keywords:
 - _wtof function
 - string conversion, to floating point values
 ms.assetid: eb513241-c9a9-4f5c-b7e7-a49b14abfb75
-ms.openlocfilehash: a624ae9f900395ed2117ed2bb89e2768c64daba9
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 492719a0cc0f8ac079b257ec8d7aa1014c5b2a86
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939566"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81348920"
 ---
 # <a name="atof-_atof_l-_wtof-_wtof_l"></a>atof、_atof_l、_wtof、_wtof_l
 
@@ -81,33 +86,35 @@ double _wtof_l(
 
 ## <a name="parameters"></a>パラメーター
 
-*str*<br/>
+*Str*<br/>
 変換対象の文字列。
 
-*locale*<br/>
+*ロケール*<br/>
 使用するロケール。
 
 ## <a name="return-value"></a>戻り値
 
-各関数は、入力文字を数値として解釈することによって生成される**double**値を返します。 入力をその型の値に変換できない場合、戻り値は 0.0 になります。
+各関数は、入力文字を数値として解釈することによって生成された**倍精度**値を返します。 入力をその型の値に変換できない場合、戻り値は 0.0 になります。
 
-範囲外のすべての場合、 **errno**は**ERANGE**に設定されます。 渡されたパラメーターが**NULL**の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は**errno**を**EINVAL**に設定し、0を返します。
+範囲外の場合は **、errno**が**ERANGE**に設定されます。 渡されたパラメーターが**NULL**の場合は、「パラメーター[の検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーター ハンドラーが呼び出されます。 実行を続行できる場合、これらの関数は**errno**を**EINVAL**に設定し、0 を返します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 これらの関数は文字列を倍精度浮動小数点値に変換します。
 
 入力文字列は、指定された型の数値として解釈できる文字シーケンスです。 関数は、数値の一部として認識できない文字に最初に遭遇した時点で入力文字列の読み取りを停止します。 この文字は、文字列を終了する null 文字 ('\0' または L'\0') である場合があります。
 
-**Atof**と **_wtof**の*str*引数の形式は次のとおりです。
+**atof**および **_wtof**への*str*引数は、次の形式になります。
 
-[*whitespace*] [*sign*] [*digits*] [ __.__ *digits*] [ {**e** &#124; **E** }[*sign*]*digits*]
+[*空白*][*記号*][*数字*][__.__*]*[ {**e** &#124; **E** } [*符号*]*の数字*]
 
-*空白*はスペースまたはタブ文字で構成され、無視されます。*sign*は正符号 (+) またはマイナス記号 (-) です。と*数字*は、1桁以上の10進数です。 小数点の前に数字がない場合は、少なくとも 1 つの数字が小数点の後に必要です。 10進数の後には指数部を指定できます。指数部は、指数部の先頭文字 (**e**または**e**) と、必要に応じて符号付き10進整数で構成されます。
+*空白は*空白文字またはタブ文字で構成され、無視されます。*符号*はプラス (+) またはマイナス (-) のいずれかです。数字*は*1 桁以上の 10 進数です。 小数点の前に数字がない場合は、少なくとも 1 つの数字が小数点の後に必要です。 10 進数の後には、入門文字 (**e**、 または**E**) と、オプションで符号付き 10 進整数で構成される指数が続く場合があります。
 
-これらの関数の UCRT バージョンは、Fortran スタイル (**d**または**d**) の指数文字の変換をサポートしていません。 この非標準の拡張機能は、CRT の以前のバージョンでサポートされており、コードの互換性に影響する変更点がある可能性があります。
+これらの関数の UCRT バージョンでは、Fortran スタイル (**d**または**D**) の指数文字の変換はサポートされていません。 この非標準の拡張機能は、CRT の以前のバージョンでサポートされており、コードの互換性に影響する変更点がある可能性があります。
 
-**_L**サフィックスを持つこれらの関数のバージョンは、現在のロケールの代わりに渡された*ロケール*パラメーターを使用する点を除いて同じです。
+**_l**サフィックスを持つこれらの関数のバージョンは、現在のロケールの代わりに渡された*ロケール*パラメーターを使用する点を除いて同じです。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -120,12 +127,12 @@ double _wtof_l(
 
 |ルーチン|必須ヘッダー|
 |------------------|---------------------|
-|**atof**、 **_l**|C: \<math.h> または \<stdlib.h> C++: \<cstdlib>、\<stdlib.h>、\<cmath> または \<math.h>|
-|**_wtof**、 **_wtof_l**|C: \<stdlib.h > または \<wchar.h > C++: \<cstdlib >、\<stdlib.h > または \<wchar.h >|
+|**アットフ** **,_atof_l**|C: \<math.h> または \<stdlib.h> C++: \<cstdlib>、\<stdlib.h>、\<cmath> または \<math.h>|
+|**_wtof**, **_wtof_l**|C: \<stdlib.h > または \<wchar.h > C++: \<cstdlib >、\<stdlib.h > または \<wchar.h >|
 
 ## <a name="example"></a>例
 
-このプログラムは、 **atof**関数と **_b**関数を使用して、文字列として格納されている数値を数値に変換する方法を示します。
+このプログラムは **、atof**関数と **_atof_l**関数を使用して、文字列として格納された数値を数値に変換する方法を示します。
 
 ```C
 // crt_atof.c

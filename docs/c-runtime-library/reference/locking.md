@@ -1,8 +1,9 @@
 ---
 title: _locking
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _locking
+- _o__locking
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +30,12 @@ helpviewer_keywords:
 - files [C++], locking
 - _locking function
 ms.assetid: 099aaac1-d4ca-4827-aed6-24dff9844150
-ms.openlocfilehash: 4450c511b9d98c31b7e6a777f54f3bd8e0affbb7
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 2c6ee763a1491a744b25cbb517886e9354ca6152
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953268"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81342059"
 ---
 # <a name="_locking"></a>_locking
 
@@ -51,7 +53,7 @@ int _locking(
 
 ### <a name="parameters"></a>パラメーター
 
-*fd*<br/>
+*Fd*<br/>
 ファイル記述子。
 
 *モード*<br/>
@@ -62,20 +64,20 @@ int _locking(
 
 ## <a name="return-value"></a>戻り値
 
-正常終了した場合は**0 を返します。** 戻り値-1 はエラーを示します。この場合、 [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)は次のいずれかの値に設定されます。
+**_locking**成功した場合は 0 を返します。 戻り値 -1 は失敗を示し、その場合[errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)は次のいずれかの値に設定されます。
 
 |errno の値|条件|
 |-|-|
-| **EACCES** | ロック違反 (ファイルはすでにロックされている場合もロック解除されている場合もある)。 |
+| **エアッケ** | ロック違反 (ファイルはすでにロックされている場合もロック解除されている場合もある)。 |
 | **EBADF** | 無効なファイル記述子。 |
-| **EDEADLOCK** | ロック違反。 **_LK_LOCK**または **_LK_RLCK**フラグが指定され、10回試行した後にファイルをロックできない場合に返されます。 |
-| **EINVAL** | **ロック**に無効な引数が指定されました。 |
+| **EDEADLOCK** | ロック違反。 **_LK_LOCK**または **_LK_RLCK**フラグが指定され、10 回試行した後にファイルをロックできない場合に戻されます。 |
+| **Einval** | **_locking**に無効な引数が与えられました。 |
 
 エラーの原因が無効なファイル記述子などの無効なパラメーターである場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」に説明されているように、無効なパラメーター ハンドラーが呼び出されます。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**ロック**関数は、 *fd*によって指定されたファイルの*nbytes*バイトをロックまたはロック解除します。 ファイル内のバイトをロックすると、他のプロセスがそれらのバイトにアクセスできなくなります。 すべてのロックまたはロック解除は、ファイル ポインターの現在の位置から開始され、次の *nbytes* バイトに進みます。 ファイルの終わりを超えてバイトをロックできます。
+**_locking**関数は *、fd*で指定されたファイルの*n バイト*をロックまたはロック解除します。 ファイル内のバイトをロックすると、他のプロセスがそれらのバイトにアクセスできなくなります。 すべてのロックまたはロック解除は、ファイル ポインターの現在の位置から開始され、次の *nbytes* バイトに進みます。 ファイルの終わりを超えてバイトをロックできます。
 
 *mode* は、Locking.h で定義されている、次のマニフェスト定数のいずれかである必要があります。
 
@@ -87,15 +89,17 @@ int _locking(
 | **_LK_RLCK** | **_LK_LOCK**と同じです。 |
 | **_LK_UNLCK** | 指定したバイトのロックを解除します。バイトは既にロックされている必要があります。 |
 
-重複しない、ファイルの複数の領域をロックできます。 ロック解除の対象領域は、既にロックされている必要があります。 隣接する領域はロックしません **(_r)** 2つのロックされた領域が隣接している場合は、各領域を個別にロック解除する必要があります。 領域は短期間だけロックされ、ファイルを閉じる前またはプログラムを終了する前にはロックを解除する必要があります。
+重複しない、ファイルの複数の領域をロックできます。 ロック解除の対象領域は、既にロックされている必要があります。 **_locking**隣接する領域はマージされません。2 つのロックされた領域が隣接している場合は、各領域を個別にアンロックする必要があります。 領域は短期間だけロックされ、ファイルを閉じる前またはプログラムを終了する前にはロックを解除する必要があります。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|オプション ヘッダー|
+|ルーチン|必須ヘッダー|オプション ヘッダー|
 |-------------|---------------------|---------------------|
 |**_locking**|\<io.h> と \<sys/locking.h>|\<errno.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="libraries"></a>ライブラリ
 
@@ -158,7 +162,7 @@ int main( void )
 The first thirty bytes of this file will be locked.
 ```
 
-## <a name="sample-output"></a>出力例
+## <a name="sample-output"></a>サンプル出力
 
 ```Output
 No one can change these bytes while I'm reading them

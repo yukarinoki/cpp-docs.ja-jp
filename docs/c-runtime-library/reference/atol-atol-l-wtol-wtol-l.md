@@ -1,11 +1,15 @@
 ---
 title: atol、_atol_l、_wtol、_wtol_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - atol
 - _wtol_l
 - _wtol
 - _atol_l
+- _o__atol_l
+- _o__wtol
+- _o__wtol_l
+- _o_atol
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -46,12 +51,12 @@ helpviewer_keywords:
 - wtol function
 - _wtol function
 ms.assetid: cedfc21c-2d64-4e9c-bd04-bdf60b12db46
-ms.openlocfilehash: 04a2951a48e6dd2c3820551e0fc603ad4ed81086
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 30f8375814259cac8c3d7216c636b69acbc7e90a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943579"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81348756"
 ---
 # <a name="atol-_atol_l-_wtol-_wtol_l"></a>atol、_atol_l、_wtol、_wtol_l
 
@@ -78,33 +83,35 @@ long _wtol_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*str*<br/>
+*Str*<br/>
 変換対象の文字列。
 
-*locale*<br/>
+*ロケール*<br/>
 使用するロケール。
 
 ## <a name="return-value"></a>戻り値
 
-各関数は、入力文字を数値として解釈することによって生成される**long 型**の値を返します。 入力をその型の値に変換できない場合、戻り値は**atol**の0L になります。
+各関数は、入力文字を数値として解釈することによって生成された**long**値を返します。 入力をその型の値に変換できない場合 **、atol**の戻り値は 0L です。
 
-大きな正の整数値によるオーバーフローの場合、 **atol**は**LONG_MAX**を返します。大きな負の整数値によるオーバーフローの場合、 **LONG_MIN**が返されます。 範囲外のすべての場合、 **errno**は**ERANGE**に設定されます。 渡されたパラメーターが**NULL**の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は**errno**を**EINVAL**に設定し、0を返します。
+大きな正の整数値を持つオーバーフローの場合 **、atol**は**LONG_MAX**返します。大きな負の整数値でオーバーフローした場合 **、LONG_MIN**返されます。 範囲外の場合は **、errno**が**ERANGE**に設定されます。 渡されたパラメーターが**NULL**の場合は、「パラメーター[の検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーター ハンドラーが呼び出されます。 実行を続行できる場合、これらの関数は**errno**を**EINVAL**に設定し、0 を返します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-これらの関数は、文字列を長整数値 (**atol**) に変換します。
+これらの関数は、文字列を長整数 **(atol)** に変換します。
 
 入力文字列は、指定された型の数値として解釈できる文字シーケンスです。 関数は、数値の一部として認識できない文字に最初に遭遇した時点で入力文字列の読み取りを停止します。 この文字は、文字列を終了する null 文字 ('\0' または L'\0') である場合があります。
 
-**Atol**の*str*引数の形式は次のとおりです。
+**atol**の*str*引数は、次の形式になります。
 
-> [*空白*][*sign*][*数字*]]
+> [*空白*][*記号*][*数字*] ]
 
-*空白*はスペースまたはタブ文字で構成され、無視されます。*sign*は正符号 (+) またはマイナス記号 (-) です。と*数字*は、1桁以上の数字です。
+*空白は*空白文字またはタブ文字で構成され、無視されます。*符号*はプラス (+) またはマイナス (-) のいずれかです。*数字*は 1 桁以上です。
 
-**_wtol**は、ワイド文字列を受け取る点を除いて、 **atol**と同じです。
+**_wtol**は、ワイド文字列を取ることを除いて **、atol**と同じです。
 
-**_L**サフィックスを持つこれらの関数のバージョンは、現在のロケールの代わりに渡されたロケールパラメーターを使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+**_l**サフィックスを持つこれらの関数のバージョンは、現在のロケールの代わりに渡された locale パラメーターを使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -118,11 +125,11 @@ long _wtol_l(
 |ルーチン|必須ヘッダー|
 |--------------|---------------------|
 |**atol**|\<stdlib.h>|
-|**atol_l**、 **_wtol**、 **_wtol_l**|\<stdlib.h> と \<wchar.h>|
+|**_atol_l**, **_wtol**, **_wtol_l**|\<stdlib.h> と \<wchar.h>|
 
 ## <a name="example"></a>例
 
-このプログラムは、 **atol**関数を使用して、文字列として格納されている数値を数値に変換する方法を示しています。
+このプログラムは **、atol**関数を使用して、文字列として格納された数値を数値に変換する方法を示します。
 
 ```C
 // crt_atol.c

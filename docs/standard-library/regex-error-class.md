@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - regex_error class
 ms.assetid: 3333a1a3-ca6f-4612-84b2-1b4c7e3db5a4
-ms.openlocfilehash: 52b6bfd74a08200f7d924d2601b85718a941dd85
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: f8f3c88c1b203ed7fcea148843fa99590e27b888
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451647"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81331866"
 ---
-# <a name="regexerror-class"></a>regex_error クラス
+# <a name="regex_error-class"></a>regex_error クラス
 
 正しくない basic_regex オブジェクトを報告します。
 
@@ -25,13 +25,13 @@ class regex_error
 : public std::runtime_error
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 このクラスは、 `basic_regex` オブジェクトの構築時または使用時に発生したエラーを報告するためにスローされる例外オブジェクトを表します。
 
 ### <a name="constructors"></a>コンストラクター
 
-|コンストラクター|説明|
+|Constructor|説明|
 |-|-|
 |[regex_error](#regex_error)|オブジェクトを構築します。|
 
@@ -82,7 +82,7 @@ int main()
 regex error: unbalanced parentheses
 ```
 
-## <a name="code"></a>  regex_error::code
+## <a name="regex_errorcode"></a><a name="code"></a>regex_error::コード
 
 エラー コードを返します。
 
@@ -90,11 +90,11 @@ regex error: unbalanced parentheses
 regex_constants::error_code code() const;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このメンバー関数は、オブジェクトのコンストラクターに渡された値を返します。
 
-## <a name="regex_error"></a>  regex_error::regex_error
+## <a name="regex_errorregex_error"></a><a name="regex_error"></a>regex_error::regex_error
 
 オブジェクトを構築します。
 
@@ -107,17 +107,17 @@ regex_error(regex_constants::error_code error);
 *エラー*\
 エラー コード。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-コンストラクターは、値*error*を保持するオブジェクトを構築します。
+このコンストラクターは、値*error*を保持するオブジェクトを構築します。
 
 ## <a name="see-also"></a>関連項目
 
-[\<regex>](../standard-library/regex.md)\
-[regex_constants クラス](../standard-library/regex-constants-class.md)\
-[\<regex > 関数](../standard-library/regex-functions.md)\
-[regex_iterator クラス](../standard-library/regex-iterator-class.md)\
-[\<regex > 演算子](../standard-library/regex-operators.md)\
-[regex_token_iterator クラス](../standard-library/regex-token-iterator-class.md)\
-[regex_traits クラス](../standard-library/regex-traits-class.md)\
-[\<regex> typedefs](../standard-library/regex-typedefs.md)
+[\<正規表現>](../standard-library/regex.md)\
+[regex_constantsクラス](../standard-library/regex-constants-class.md)\
+[\<正規表現>関数](../standard-library/regex-functions.md)\
+[regex_iteratorクラス](../standard-library/regex-iterator-class.md)\
+[\<正規表現>演算子](../standard-library/regex-operators.md)\
+[regex_token_iteratorクラス](../standard-library/regex-token-iterator-class.md)\
+[regex_traitsクラス](../standard-library/regex-traits-class.md)\
+[\<正規表現>のタイプ定義](../standard-library/regex-typedefs.md)

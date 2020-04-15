@@ -1,11 +1,13 @@
 ---
 title: isgraph、iswgraph、_isgraph_l、_iswgraph_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - isgraph
 - iswgraph
 - _iswgraph_l
 - _isgraph_l
+- _o_isgraph
+- _o_iswgraph
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -39,12 +42,12 @@ helpviewer_keywords:
 - _istgraph function
 - _ismbcgraph_l function
 ms.assetid: 531a5f34-4302-4d0a-8a4f-b7ea150ad941
-ms.openlocfilehash: 282f11dfa6a4545b672419d42fe960c0e5001fbf
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: b10038a783f05512f12f25a231dd553a1863c143
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442963"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81343826"
 ---
 # <a name="isgraph-iswgraph-_isgraph_l-_iswgraph_l"></a>isgraph、iswgraph、_isgraph_l、_iswgraph_l
 
@@ -71,16 +74,16 @@ int _iswgraph_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*c*<br/>
+*C*<br/>
 テストする整数。
 
 ## <a name="return-value"></a>戻り値
 
-*C*がスペース以外の印刷可能な文字の特殊表現である場合、これらの各ルーチンは0以外の値を返します。 *c*がスペース以外の印刷可能な文字である場合、 **isgraph**は0以外の値を返します。 *c*がワイド文字のスペース以外の印刷可能なワイド文字である場合、 **iswgraph**は0以外の値を返します。 これらの各ルーチンは、 *c*がテスト条件を満たしていない場合は0を返します。
+*c*がスペース以外の印刷可能文字の特定の表現である場合、これらのルーチンは、それぞれゼロ以外を返します。 *c が*空白以外の印刷可能文字である場合 **、isgraph**は 0 以外の値を返します。 *c*がワイド文字スペース以外の印刷可能ワイド文字である場合 **、iswgraph**はゼロ以外の値を戻します。 c がテスト条件を満た*さない場合*、これらのルーチンはそれぞれ 0 を返します。
 
-**_L**サフィックスを持つこれらの関数のバージョンでは、ロケールに依存する動作に現在のロケールではなく渡されたロケールが使用されます。 詳細については、「[ロケール](../../c-runtime-library/locale.md)」をご覧ください。
+**_l**サフィックスを持つこれらの関数のバージョンでは、ロケールに依存する動作の現在のロケールの代わりに渡されたロケールが使用されます。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-*C*が EOF でない場合、または 0 ~ 0xff の範囲内にある場合、 **isgraph**と **_isgraph_l**の動作は未定義です。 デバッグ CRT ライブラリが使用され、 *c*がこれらの値のいずれでもない場合、関数はアサーションを発生させます。
+*c*が EOF でない場合、または 0 から 0xFF の範囲内である場合 **、isgraph**および **_isgraph_l**の動作は未定義です。 デバッグ CRT ライブラリが使用され *、c*がこれらの値の 1 つではない場合、関数はアサーションを発生させます。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -89,7 +92,11 @@ int _iswgraph_l(
 |**_istgraph**|**isgraph**|[_ismbcgraph](ismbcgraph-functions.md)|**iswgraph**|
 |**_istgraph_l**|**_isgraph_l**|[_ismbcgraph_l](ismbcgraph-functions.md)|**_iswgraph_l**|
 
-## <a name="requirements"></a>要件
+## <a name="remarks"></a>解説
+
+既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+
+## <a name="requirements"></a>必要条件
 
 |ルーチン|必須ヘッダー|
 |-------------|---------------------|
@@ -98,9 +105,9 @@ int _iswgraph_l(
 |**_isgraph_l**|\<ctype.h>|
 |**_iswgraph_l**|\<ctype.h> または \<wchar.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [文字分類](../../c-runtime-library/character-classification.md)<br/>
 [ロケール](../../c-runtime-library/locale.md)<br/>

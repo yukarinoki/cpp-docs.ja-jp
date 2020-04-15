@@ -1,9 +1,11 @@
 ---
 title: ftell、_ftelli64
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _ftelli64
 - ftell
+- _o__ftelli64
+- _o_ftell
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - file pointers [C++], getting current position
 - file pointers [C++]
 ms.assetid: 40149cd8-65f2-42ff-b70c-68e3e918cdd7
-ms.openlocfilehash: fda309420e6ae241d3c8ed73c3d41c8ae50de662
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: bfe79610161a7f4032517d9f7eaa0de50be18e50
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956451"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81345623"
 ---
 # <a name="ftell-_ftelli64"></a>ftell、_ftelli64
 
@@ -54,33 +57,35 @@ __int64 _ftelli64(
 
 ### <a name="parameters"></a>パラメーター
 
-*一連*<br/>
-ターゲット**ファイル**の構造。
+*ストリーム*<br/>
+ターゲット**ファイル**構造。
 
 ## <a name="return-value"></a>戻り値
 
-**ftell**と **_ftelli64**は、現在のファイルの位置を返します。 テキストモードでは復帰と改行の変換が行われるため、 **ftell**と **_ftelli64**によって返される値には、テキストモードで開かれたストリームの物理バイトオフセットが反映されない場合があります。 **Ftell**または **_ftelli64**を[_fseeki64](fseek-fseeki64.md)と共に使用して、[ファイルの場所](fseek-fseeki64.md)に適切に戻ります。 エラーが発生した場合、 **ftell**と **_ftelli64**は、「パラメーターの[検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、これらの関数は-1L を返し、errno に指定されている2つの定数のいずれかに errno**を設定し**ます。始め. **EBADF**定数は、*ストリーム*引数が有効なファイルポインター値ではないか、開いているファイルを参照していないことを意味します。 **EINVAL**は、無効な*ストリーム*引数が関数に渡されたことを意味します。 (端末やプリンターなどの) シークが不可能なデバイス、または*ストリーム*が開いているファイルを参照していない場合、戻り値は未定義になります。
+**ftell**と **_ftelli64**現在のファイル位置を返します。 テキスト モードでは復帰改行の変換が行われるため **、ftell**および **_ftelli64**によって返される値は、テキスト モードで開かれたストリームの物理バイト オフセットを反映しない場合があります。 fseek と[fseek](fseek-fseeki64.md) **ftell**を使用するか[、_fseeki64](fseek-fseeki64.md)を指定して **_ftelli64**を使用して、ファイルの場所に正しく戻ります。 エラーが発生すると **、ftell**と **_ftelli64**は、パラメーター[の検証](../../c-runtime-library/parameter-validation.md)で説明されているように、無効なパラメーター ハンドラーを呼び出します。 実行を続行できる場合、これらの関数は -1L を返し、ERRNO で定義された 2 つの定数のいずれかに**errno**を設定します。H。 **EBADF**定数は、*ストリーム*引数が有効なファイル・ポインター値でないか、オープン・ファイルを参照していないことを示します。 **EINVAL**は、無効な*ストリーム*引数が関数に渡されたことを意味します。 シークできないデバイス (端末やプリンターなど) で、または*ストリーム*がオープン・ファイルを参照していない場合、戻り値は未定義です。
 
-リターン コードの詳細については、「[_doserrno、errno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
+リターン コードの詳細については、「[_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**Ftell**関数と **_ftelli64**関数は、*ストリーム*に関連付けられているファイルポインターの現在位置 (存在する場合) を取得します。 位置は、ストリームの先頭を基準としたオフセットとして表されます。
+**ftell**関数と **_ftelli64**関数は、 *stream*に関連付けられているファイル ポインタの現在位置を取得します。 位置は、ストリームの先頭を基準としたオフセットとして表されます。
 
-データを追加するためにファイルを開く場合、現在のファイルの位置は、次の書き込みが発生する場所ではなく最後の I/O 操作によって決まります。 たとえば、追加のためにファイルが開かれ、最後の操作が読み取りだった場合、ファイルの位置は、次の書き込みが開始される位置ではなく、次の読み取り操作が開始される位置になります (追加のためにファイルが開かれるときには、ファイルの位置は書き込み操作が開始される前にファイルの末尾に移動されます)。追加のために開かれたファイルで I/O 操作がまだ発生していない場合、ファイルの位置はファイルの先頭です。
+データを追加するためにファイルを開く場合、現在のファイルの位置は、次の書き込みが発生する場所ではなく最後の I/O 操作によって決まります。 たとえば、追加のためにファイルが開かれ、最後の操作が読み取りだった場合、ファイルの位置は、次の書き込みが開始される位置ではなく、次の読み取り操作が開始される位置になります  (ファイルを追加用に開くと、ファイル位置は書き込み操作の前にファイルの末尾に移動されます。追加用に開かれたファイルに対して I/O 操作がまだ発生していない場合、ファイル位置はファイルの先頭になります。
 
-テキスト モードでは、Ctrl + Z は入力時に EOF (end-of-file) 文字として解釈されます。 読み取り/書き込み用に開かれたファイルでは、 **fopen**と関連するすべてのルーチンで、ファイルの末尾に CTRL + Z があるかどうかを確認し、可能であれば削除します。 この処理が行われる理由は、 **ftell**と[fseek](fseek-fseeki64.md)または **_ftelli64**と[_fseeki64](fseek-fseeki64.md)の組み合わせを使用して、CTRL + Z で終わるファイル内を移動すると、の末尾付近で**ftell**または **_ftelli64**が正しく動作しなくなる可能性があるためです。拡張子.
+テキスト モードでは、Ctrl + Z は入力時に EOF (end-of-file) 文字として解釈されます。 読み取り/書き込み用に開かれたファイルでは **、fopen**と関連するすべてのルーチンがファイルの末尾に Ctrl + Z があるかどうかをチェックし、可能であれば削除します。 これは **、ftell**と[fseek](fseek-fseeki64.md)または **_ftelli64**と[_fseeki64](fseek-fseeki64.md)の組み合わせを使用して、Ctrl + Z で終わるファイル内を移動すると **、ftell**または **_ftelli64**がファイルの末尾付近で不適切に動作する可能性があるためです。
 
-この関数は実行中に呼び出し元スレッドをロックするため、スレッド セーフです。 非ロックバージョンについては、「 **_ftell_nolock**」を参照してください。
+この関数は実行中に呼び出し元スレッドをロックするため、スレッド セーフです。 ロックされていないバージョンについては **、「_ftell_nolock」** を参照してください。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|関数|必須ヘッダー|省略可能なヘッダー|
+|機能|必須ヘッダー|省略可能なヘッダー|
 |--------------|---------------------|----------------------|
 |**ftell**|\<stdio.h>|\<errno.h>|
 |**_ftelli64**|\<stdio.h>|\<errno.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 

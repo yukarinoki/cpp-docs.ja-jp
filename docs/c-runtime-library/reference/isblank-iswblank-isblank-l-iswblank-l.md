@@ -1,11 +1,13 @@
 ---
 title: isblank、iswblank、_isblank_l、_iswblank_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - isblank
 - _isblank_l
 - iswblank
 - _iswblank_l
+- _o_isblank
+- _o_iswblank
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +33,12 @@ f1_keywords:
 - _isblank_l
 - iswblank
 ms.assetid: 33ce96c0-f387-411a-8283-c3d2a69e56bd
-ms.openlocfilehash: 022eba0335facc597f0608d63cfb58e0146e0f23
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 736a0791f1e5ee4b11e61164861cc6dc0c7a9c87
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954516"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81343894"
 ---
 # <a name="isblank-iswblank-_isblank_l-_iswblank_l"></a>isblank、iswblank、_isblank_l、_iswblank_l
 
@@ -62,37 +65,41 @@ int _iswblank_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*c*<br/>
+*C*<br/>
 テストする整数。
 
-*locale*<br/>
+*ロケール*<br/>
 使用するロケール。
 
 ## <a name="return-value"></a>戻り値
 
-これらのルーチンは、 *c*が空白文字または水平タブ文字の特殊表現である場合、またはテキスト行内で単語を区切るために使用されるロケール固有の文字セットの1つである場合、0以外の値を返します。 *c*が空白文字 (0x20) または水平タブ文字 (0x09) の場合、 **isblank**は0以外の値を返します。 **Isblank**関数のテスト条件の結果は、ロケールの**LC_CTYPE**カテゴリの設定によって異なります。詳細については、「 [setlocale、_wsetlocale](setlocale-wsetlocale.md)」を参照してください。 **_L**サフィックスが付いていないこれらの関数のバージョンは、ロケールに依存する動作に現在のロケールを使用します。 **_l**サフィックスが付いているバージョンは、渡されたロケールを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+c がスペースまたは水平タブ文字の特定の*表現である場合*、またはテキスト行内の単語を区切るために使用されるロケール固有の文字セットの 1 つである場合、これらのルーチンはそれぞれ 0 以外を返します。 **isblank は***、c*がスペース文字 (0x20) または水平タブ文字 (0x09) の場合、ゼロ以外の値を返します。 **isblank**関数のテスト条件の結果は、ロケールの**LC_CTYPE**カテゴリ設定によって異なります。詳細については、「 [setlocale , _wsetlocale](setlocale-wsetlocale.md)」を参照してください。 **_l**サフィックスを持たないこれらの関数のバージョンでは、ロケールに依存する動作に対して現在のロケールが使用されます。**_l**サフィックスを持つバージョンは、代わりに渡されたロケールを使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-*c*が標準の空白文字または水平タブ文字に対応するワイド文字である場合、 **iswblank**は0以外の値を返します。
+*c*が標準の空白文字または水平タブ文字に対応するワイド文字である場合 **、iswblank**はゼロ以外の値を返します。
 
-*C*が EOF でない場合、または 0 ~ 0xff の範囲内にある場合、 **isblank**と **_isblank_l**の動作は未定義です。 デバッグ CRT ライブラリが使用され、 *c*がこれらの値のいずれでもない場合、関数はアサーションを発生させます。
+*c*が EOF でない場合、または 0 から 0xFF の範囲内である場合 **、isblank**および **_isblank_l**の動作は未定義です。 デバッグ CRT ライブラリが使用され *、c*がこれらの値の 1 つではない場合、関数はアサーションを発生させます。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
 |TCHAR.H のルーチン|_UNICODE および _MBCS が未定義の場合|_MBCS が定義されている場合|_UNICODE が定義されている場合|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**istblank (_t)**|**isblank**|[_ismbcblank](ismbcgraph-functions.md)|**iswblank**|
+|**_istblank**|**空白**|[_ismbcblank](ismbcgraph-functions.md)|**iswblank**|
 |**_istblank_l**|**_isblank_l**|[_ismbcblank_l](ismbcgraph-functions.md)|**_iswblank_l**|
+
+## <a name="remarks"></a>解説
+
+既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
-|**isblank**|\<ctype.h>|
+|**空白**|\<ctype.h>|
 |**iswblank**|\<ctype.h> または \<wchar.h>|
 |**_isblank_l**|\<ctype.h>|
 |**_iswblank_l**|\<ctype.h> または \<wchar.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

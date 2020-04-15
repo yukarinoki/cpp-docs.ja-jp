@@ -1,8 +1,9 @@
 ---
 title: _fread_nolock_s2
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _fread_nolock_s
+- _o__fread_nolock_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -23,12 +25,12 @@ f1_keywords:
 - _fread_nolock_s
 - stdio/_fread_nolock_s
 ms.assetid: 5badb9ab-11df-4e17-8162-30bda2a4572e
-ms.openlocfilehash: e7fded9860b7a1364841d5f9b8a7e3aa478a8420
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 3fb34a75a0281058a1d70ce41e1ce33b4b1bbb59
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956889"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81346137"
 ---
 # <a name="_fread_nolock_s"></a>_fread_nolock_s
 
@@ -51,33 +53,35 @@ size_t _fread_nolock_s(
 *バッファー*<br/>
 データの格納場所。
 
-*bufferSize*<br/>
+*Buffersize*<br/>
 ターゲット バッファーのサイズ (バイト単位)。
 
-*elementSize*<br/>
+*要素サイズ*<br/>
 読み取る項目のサイズ (バイト単位)。
 
-*elementCount*<br/>
+*要素数*<br/>
 読み取る項目の最大数。
 
-*一連*<br/>
+*ストリーム*<br/>
 **FILE** 構造体へのポインター。
 
 ## <a name="return-value"></a>戻り値
 
 「[fread_s](fread-s.md)」を参照してください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-この関数は、 **fread_s**のロックされていないバージョンです。 他のスレッドによる干渉から保護されない点を除いて、 **fread_s**と同じです。 他のスレッドをロックするオーバーヘッドが発生しないため、処理が速くなる場合があります。 この関数は、シングルスレッド アプリケーション、呼び出し元のスコープで既にスレッド分離を処理している場合などのスレッドセーフなコンテキストでのみご使用ください。
+この関数はロックされていないバージョンの**fread_s**です。 他のスレッドによる干渉から保護されていない点を除いて **、fread_s**と同じです。 他のスレッドをロックするオーバーヘッドが発生しないため、処理が速くなる場合があります。 この関数は、シングルスレッド アプリケーション、呼び出し元のスコープで既にスレッド分離を処理している場合などのスレッドセーフなコンテキストでのみご使用ください。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|関数|必須ヘッダー|
+|機能|必須ヘッダー|
 |--------------|---------------------|
 |**_fread_nolock_s**|C: \<stdio.h>、C++: \<cstdio>、または \<stdio.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="see-also"></a>関連項目
 

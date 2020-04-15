@@ -1,9 +1,11 @@
 ---
 title: _get_daylight
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - __daylight
 - _get_daylight
+- _o___daylight
+- _o__get_daylight
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +31,12 @@ helpviewer_keywords:
 - daylight saving time offset
 - _get_daylight function
 ms.assetid: f85a6ba3-e187-4ca7-aed7-ffc694c8ac4c
-ms.openlocfilehash: 9f63d3baa1e9411039d1482b4cbfbf4bce4e9872
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 0abab77b1429b263c7e5d84a6d395f0411ebf8a4
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956044"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81345308"
 ---
 # <a name="_get_daylight"></a>_get_daylight
 
@@ -47,24 +50,26 @@ error_t _get_daylight( int* hours );
 
 ### <a name="parameters"></a>パラメーター
 
-*まで*<br/>
+*hours*<br/>
 夏時間のオフセット (時間単位)。
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合は0、エラーが発生した場合は**errno**値。
+成功した場合は 0、エラーが発生した場合は**errno**値。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**_Get_daylight**関数は、夏時間の時間数を整数として取得します。 夏時間が有効な場合、既定のオフセットは 1 時間です (ただし、一部の地域は 2 時間のオフセットを実施しています)。
+**_get_daylight**関数は、夏時間の時間数を整数として取得します。 夏時間が有効な場合、既定のオフセットは 1 時間です (ただし、一部の地域は 2 時間のオフセットを実施しています)。
 
-*Hours*が**NULL**の場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、この関数は**errno**を**einval**に設定し、 **einval**を返します。
+*時間*が**NULL**の場合は、「パラメーター[の検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーター ハンドラーが呼び出されます。 実行を続行できる場合、この関数は**errno**を**EINVAL**に設定し **、EINVAL**を返します。
 
-**マクロの**代わりにこの関数を使用することをお勧めします。または、非推奨の関数 **__** を使用することをお勧めします。
+マクロ **_daylight**や廃止された関数 **__daylight**ではなく、この関数を使用することをお勧めします。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**_get_daylight**|\<time.h>|
 

@@ -1,11 +1,15 @@
 ---
 title: _mbctolower、_mbctolower_l、_mbctoupper、_mbctoupper_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbctolower_l
 - _mbctoupper_l
 - _mbctoupper
 - _mbctolower
+- _o__mbctolower
+- _o__mbctolower_l
+- _o__mbctoupper
+- _o__mbctoupper_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -45,12 +50,12 @@ helpviewer_keywords:
 - _totlower function
 - mbctoupper function
 ms.assetid: 787fab71-3224-4ed7-bc93-4dcd8023fc54
-ms.openlocfilehash: 75b3926ea294fd6fe66b4e6865ac0c7df6d1b596
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 49915a4017040200afca950cee5e1ac31184c589
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952538"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81341059"
 ---
 # <a name="_mbctolower-_mbctolower_l-_mbctoupper-_mbctoupper_l"></a>_mbctolower、_mbctolower_l、_mbctoupper、_mbctoupper_l
 
@@ -80,46 +85,48 @@ unsigned int _mbctoupper_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*c*<br/>
+*C*<br/>
 変換するマルチバイト文字。
 
-*locale*<br/>
+*ロケール*<br/>
 使用するロケール。
 
 ## <a name="return-value"></a>戻り値
 
-これらの関数は、可能であれば、変換された文字*c*を返します。 それ以外の場合は、文字*c*を変更せずに返します。
+これらの関数は、変換された文字*c*を返します (可能な場合)。 それ以外の場合は、文字*c*を変更せずに返します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-関数は*c*文字をテストし、可能であれば、次の変換のいずれか1つを適用します。
+関数は文字*c*をテストし、可能であれば、次のいずれかの変換を適用します。
 
 |ルーチン|変換|
 |--------------|--------------|
-|**_mbctolower**、 **_mbctolower_l**|大文字を小文字に変換します。|
-|**_mbctoupper**、 **_mbctoupper_l**|小文字を大文字に変換します。|
+|**_mbctolower**, **_mbctolower_l**|大文字を小文字に変換します。|
+|**_mbctoupper**, **_mbctoupper_l**|小文字を大文字に変換します。|
 
-出力値は、ロケールの **LC_CTYPE** カテゴリの設定に影響されます。詳細については、「[setlocale](setlocale-wsetlocale.md)」を参照してください。 **_L**サフィックスが付いていないこの関数のバージョンは、このロケールに依存する動作に現在のロケールを使用します。 **_l**サフィックスが付いているバージョンは、渡されたロケールパラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+出力値は、ロケールの **LC_CTYPE** カテゴリの設定に影響されます。詳細については、「[setlocale](setlocale-wsetlocale.md)」を参照してください。 **_l**サフィックスを持たないこの関数のバージョンでは、このロケール依存の動作に現在のロケールが使用されます。**_l**サフィックスを持つバージョンは、代わりに渡されたロケールパラメータを使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-以前のバージョンでは、 **_mbctolower**は**jtolower**と呼ばれており、 **_mbctoupper**は**jtoupper**と呼ばれていました。 新しいコードでは、代わりに新しい名前を使用します。
+以前のバージョンでは **、_mbctolower** **jtolower**と呼ばれ **、_mbctoupper**は**jtoupper**と呼ばれます。 新しいコードでは、代わりに新しい名前を使用します。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
 |Tchar.h のルーチン|_UNICODE および _MBCS が未定義の場合|_MBCS が定義されている場合|_UNICODE が定義されている場合|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|**_totlower**|**tolower**|**_mbctolower**|**towlower**|
+|**_totlower**|**トローワー**|**_mbctolower**|**towlower**|
 |**_totlower_l**|**_tolower_l**|**_mbctolower_l**|**_towlower_t**|
-|**上に移動 (_c)**|**toupper**|**_mbctoupper**|**towupper**|
+|**_totupper**|**Toupper**|**_mbctoupper**|**towupper**|
 |**_totupper_l**|**toupper_l**|**_mbctoupper_l**|**_towupper_l**|
 
 ## <a name="requirements"></a>必要条件
 
 |ルーチン|必須ヘッダー|
 |--------------|---------------------|
-|**_mbctolower**、 **_mbctolower_l**|\<mbstring.h>|
-|**_mbctoupper**、 **_mbctoupper_l**|\<mbstring.h>|
+|**_mbctolower**, **_mbctolower_l**|\<mbstring.h>|
+|**_mbctoupper**, **_mbctoupper_l**|\<mbstring.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="see-also"></a>関連項目
 

@@ -1,8 +1,9 @@
 ---
 title: _get_fmode
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _get_fmode
+- _o__get_fmode
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -27,12 +29,12 @@ helpviewer_keywords:
 - file translation [C++], default mode
 - get_fmode function
 ms.assetid: 22ea70e2-b9b5-422d-b514-64f4beaea45c
-ms.openlocfilehash: 03e07ea44aadec7c15352bb63fd25aa777ee9bfb
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: fbaa30d0842400037f37508df94726f3e7fd7090
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955881"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81345169"
 ---
 # <a name="_get_fmode"></a>_get_fmode
 
@@ -48,24 +50,26 @@ errno_t _get_fmode(
 
 ### <a name="parameters"></a>パラメーター
 
-*pmode*<br/>
-現在の既定のモード ( **_O_TEXT**または **_O_BINARY**) で塗りつぶされる整数へのポインター。
+*Pmode*<br/>
+現在の既定モード **(_O_TEXT**または **_O_BINARY)** で入力される整数へのポインター。
 
 ## <a name="return-value"></a>戻り値
 
-正常終了した場合は 0 を返します。失敗した場合はエラー コードを返します。 *Pmode*が**NULL**の場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、 **errno**は**einval**に設定され、関数は**einval**を返します。
+正常終了した場合は 0 を返します。失敗した場合はエラー コードを返します。 *pmode*が**NULL**の場合は、「パラメータ[の検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメータ ハンドラが呼び出されます。 実行が続行できる場合 **、errno**は**EINVAL**に設定され、関数は**EINVAL**を返します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-この関数は、[_fmode](../../c-runtime-library/fmode.md) グローバル変数の値を取得します。 この変数は、低レベルおよびストリームファイル i/o 操作 ( **_open**、 **_pipe**、 **fopen**、 [freopen](freopen-wfreopen.md)など) の既定のファイル変換モードを指定します。
+この関数は、[_fmode](../../c-runtime-library/fmode.md) グローバル変数の値を取得します。 この変数は **、_open**、 **_pipe**、 **fopen**、 [freopen](freopen-wfreopen.md)などの低レベルおよびストリーム・ファイル入出力操作のデフォルト・ファイル変換モードを指定します。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|オプション ヘッダー|
+|ルーチン|必須ヘッダー|オプション ヘッダー|
 |-------------|---------------------|---------------------|
 |**_get_fmode**|\<stdlib.h>|\<fcntl.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="example"></a>例
 
@@ -76,4 +80,4 @@ errno_t _get_fmode(
 [_fmode](../../c-runtime-library/fmode.md)<br/>
 [_set_fmode](set-fmode.md)<br/>
 [_setmode](setmode.md)<br/>
-[テキスト モードとバイナリ モードのファイル入出力](../../c-runtime-library/text-and-binary-mode-file-i-o.md)<br/>
+[テキストおよびバイナリ モード ファイル I/O](../../c-runtime-library/text-and-binary-mode-file-i-o.md)<br/>

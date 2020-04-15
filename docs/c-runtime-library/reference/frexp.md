@@ -1,8 +1,9 @@
 ---
-title: frexp、frexpf、frexpf
-ms.date: 04/05/2018
+title: frexp、frexpf、frexpl
+ms.date: 4/2/2020
 api_name:
 - frexp
+- _o_frexp
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -30,14 +32,14 @@ helpviewer_keywords:
 - frexp function
 - floating-point functions, mantissa and exponent
 ms.assetid: 9b020f2e-3967-45ec-a6a8-d467a071aa55
-ms.openlocfilehash: 3a67ced9bd6653a7c40c98a8cf015663c37457bb
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 79fe70341f0d6fef1dc7fe00f872456a11972876
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956634"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81345798"
 ---
-# <a name="frexp-frexpf-frexpl"></a>frexp、frexpf、frexpf
+# <a name="frexp-frexpf-frexpl"></a>frexp、frexpf、frexpl
 
 浮動小数点数の仮数と指数を取得します。
 
@@ -68,29 +70,31 @@ long double frexp(
 
 ### <a name="parameters"></a>パラメーター
 
-*x*<br/>
+*X*<br/>
 浮動小数点値。
 
-*すべての ptr*<br/>
+*エクスプトル*<br/>
 格納された整数の指数へのポインター。
 
 ## <a name="return-value"></a>戻り値
 
-**frexp**は仮数を返します。 *X*が0の場合、関数は仮数と指数の両方に対して0を返します。 **値が NULL**の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明され*ているよう*に、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、この関数は**errno**を**EINVAL**に設定し、0を返します。
+**frexp は**カマシを返します。 *x*が 0 の場合、関数は仮数と指数の両方について 0 を返します。 *expptr*が**NULL**の場合は、「パラメーター[の検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーター ハンドラーが呼び出されます。 実行を続行できる場合、この関数は**errno**を**EINVAL**に設定し、0 を返します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**Frexp**関数は、浮動小数点値 (*x*) を仮数 (*m*) と指数 (*n*) に分割します。これは、 *m*の絶対値が0.5 以上1.0 より小さく、 *x*  = であることを示します。*m* * 2<sup>*n*</sup> 整数の指数*n*は、によって示される位置に格納*されます*。
+**frexp**関数は、浮動小数点値 (*x*) をマンティッサ (*m*) と指数 (*n*) に分解し、 *m*の絶対値が 0.5 以上で 1.0 未満 *、x* = *m* * 2<sup>*n*</sup>になります。 整数指数*n*は*expptr*が指す位置に格納されます。
 
-C++ではオーバーロードが可能であるため、 **frexp**のオーバーロードを呼び出すことができます。 C プログラムでは、 **frexp**は常に**double**と**int**ポインターを受け取り、 **double**を返します。
+C++ ではオーバーロードが可能なので **、frexp**のオーバーロードを呼び出すことができます。 C プログラムでは **、frexp**は常に**倍精度**浮動小数点型と**int**ポインターを受け取り、 **double**を返します。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|関数|必須ヘッダー|
+|機能|必須ヘッダー|
 |--------------|---------------------|
-|**frexp**、 **frexpf**、 **frexpf**|\<math.h>|
+|**フレエクス ,****フラックス**,**フレックスプル**|\<math.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 

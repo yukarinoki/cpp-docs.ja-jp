@@ -1,6 +1,6 @@
 ---
-title: log、logf、logf、log10、log10f、log10l
-ms.date: 04/05/2018
+title: log、logf、logl、log10、log10f、log10l
+ms.date: 4/2/2020
 api_name:
 - log10f
 - logf
@@ -8,6 +8,8 @@ api_name:
 - log
 - log10l
 - logl
+- _o_log
+- _o_log10
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -43,14 +46,14 @@ helpviewer_keywords:
 - logf function
 - logarithms
 ms.assetid: 7adc77c2-04f7-4245-a980-21215563cfae
-ms.openlocfilehash: f610ead4d71a877051fdec8df2a1564089141eea
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ab6f2654e9e647f140d5c579087b76001b317887
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953224"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81341874"
 ---
-# <a name="log-logf-logl-log10-log10f-log10l"></a>log、logf、logf、log10、log10f、log10l
+# <a name="log-logf-logl-log10-log10f-log10l"></a>log、logf、logl、log10、log10f、log10l
 
 対数を計算します。
 
@@ -74,32 +77,34 @@ long double log10( long double x );  // C++ only
 
 ### <a name="parameters"></a>パラメーター
 
-*x*<br/>
+*X*<br/>
 対数を検索する対象の値。
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合、 **log**関数は*x*の自然対数 (底*e*) を返します。 **Log10**関数は、10を底とする対数を返します。 *X*が負の場合、これらの関数は既定で不定 (IND) を返します。 *X*が0の場合、無限大 (INF) が返されます。
+**ログ**関数は、成功した場合は*x*の自然対数 (底*e)* を返します。 **log10**関数は、底 10 の対数を返します。 *x*が負の場合、デフォルトでは、これらの関数は不定 (IND) を返します。 *x*が 0 の場合、無限大 (INF) を返します。
 
 |入力|SEH 例外|Matherr 例外|
 |-----------|-------------------|-----------------------|
-|± QNAN、IND|none|_DOMAIN|
+|± QNAN,IND|none|_DOMAIN|
 |± 0|ZERODIVIDE|_SING|
 |*x* < 0|INVALID|_DOMAIN|
 
-**log**と**log10**には、ストリーミング SIMD 拡張命令 2 (SSE2) を使用する実装があります。 SSE2 実装の使い方の詳細および制約については、「[_set_SSE2_enable](set-sse2-enable.md)」をご覧ください。
+**ログ**と**log10**には、ストリーミング SIMD 拡張 2 (SSE2) を使用する実装があります。 SSE2 実装の使い方の詳細および制約については、「[_set_SSE2_enable](set-sse2-enable.md)」をご覧ください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-C++ではオーバーロードが可能であるため、 **float**または**long double**値を受け取って返す**log**および**log10**のオーバーロードを呼び出すことができます。 C プログラムでは、 **log**と**log10**は常に**double**を受け取り、返します。
+C++ ではオーバーロードが可能なので **、float**または**long double**値を受け取って返す**log**と**log10**のオーバーロードを呼び出すことができます。 C プログラムでは **、log**と**log10**は常に**二重**を取り、返します。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
-|**log**、 **logf**、 **logf**、 **log10**、 **log10f**、 **log10l**|\<math.h>|
+|**ログ**,**ログ ,****ログル**,**ログ10**, **log10f**, **log10l**|\<math.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 

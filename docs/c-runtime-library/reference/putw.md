@@ -1,8 +1,9 @@
 ---
 title: _putw
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _putw
+- _o__putw
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -27,12 +29,12 @@ helpviewer_keywords:
 - streams, writing integers to
 - _putw function
 ms.assetid: 83d63644-249d-4a39-87e5-3b7aa313968d
-ms.openlocfilehash: be2ee5c1b3706b1f2a0847415ab4a82a6a4bbe4f
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 1dd506ed1b99867e3bc61324d9d02a542718770d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443722"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81338327"
 ---
 # <a name="_putw"></a>_putw
 
@@ -52,26 +54,28 @@ int _putw(
 *binint*<br/>
 出力されるバイナリ整数。
 
-*一連*<br/>
+*ストリーム*<br/>
 **FILE** 構造体へのポインター。
 
 ## <a name="return-value"></a>戻り値
 
-書き込まれた値を返します。 **EOF**の戻り値は、エラーを示している可能性があります。 **EOF**も正当な整数値であるため、 **ferror**を使用してエラーを確認します。 *Stream*が null ポインターの場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、この関数は**errno**を**EINVAL**に設定し、 **EOF**を返します。
+書き込まれた値を返します。 **EOF**の戻り値は、エラーを示している可能性があります。 **EOF**は正規の整数値でもあるので、エラーを確認するには**ferror**を使用します。 *ストリーム*が null ポインターの場合は、「パラメーター[の検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーター ハンドラーが呼び出されます。 実行を続行できる場合、この関数は**errno**を**EINVAL**に設定し **、EOF**を返します。
 
-エラー コードの詳細については、「[_doserrno、errno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
+これらと他のエラー コードの詳細については、「[_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
-**_Putw**関数は、 **int**型のバイナリ値をストリームの現在位置に書き込み*ます。* **_putw**は、ストリーム内の項目の配置には影響しません。また、特別な配置を想定していません。 **_putw**は、主に以前のライブラリとの互換性を維持するためのものです。 **_Putw**で移植性の問題が発生する可能性があります。これは **、int のサイズと** **int**内のバイトの順序がシステム間で異なるためです。
+**_putw**関数は **、int**型のバイナリ値をストリームの現在位置に書き込*みます。* **_putw**ストリーム内の項目の配置には影響しませんし、特別な配置を想定しません。 **_putw**は、主に以前のライブラリとの互換性を保つために使用されます。 int のサイズと**int**内のバイトの順序がシステム**によって異な**るため **、_putw**で移植性の問題が発生する可能性があります。
 
-## <a name="requirements"></a>要件
+既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+
+## <a name="requirements"></a>必要条件
 
 |ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**_putw**|\<stdio.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="libraries"></a>ライブラリ
 
@@ -115,7 +119,7 @@ int main( void )
 Wrote ten words
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [ストリーム入出力](../../c-runtime-library/stream-i-o.md)<br/>
 [_getw](getw.md)<br/>

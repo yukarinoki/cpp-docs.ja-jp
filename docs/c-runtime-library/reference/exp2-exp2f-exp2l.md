@@ -1,10 +1,13 @@
 ---
 title: exp2、exp2f、exp2l
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - exp2
 - exp2f
 - exp2l
+- _o_exp2
+- _o_exp2f
+- _o_exp2l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -33,16 +37,16 @@ helpviewer_keywords:
 - exp2f function
 - exp2l function
 ms.assetid: 526e3e10-201a-4610-a886-533f44ece344
-ms.openlocfilehash: 89e0448501cbd423278607bb22959c6cd1ed9464
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a5df1a216b4565f013a4c42b4ef4369b5b7f9b04
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941562"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81347579"
 ---
 # <a name="exp2-exp2f-exp2l"></a>exp2、exp2f、exp2l
 
-指定された値に2を計算します。
+指定した値に 2 を計算します。
 
 ## <a name="syntax"></a>構文
 
@@ -70,35 +74,37 @@ long double exp2l(
 
 ### <a name="parameters"></a>パラメーター
 
-*x*<br/>
+*X*<br/>
 指数部の値です。
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合は、 *x*の底2の指数、つまり 2<sup>x</sup>を返します。 それ以外の場合は、次のいずれかの値が返されます。
+成功した場合は *、x*の底 2 部数 、つまり 2<sup>x</sup>を返します。 それ以外の場合は、次のいずれかの値を返します。
 
-|問題|Return|
+|問題|戻り値|
 |-----------|------------|
 |*x* = ±0|1|
-|*x* =-無限大|+0|
-|*x* = + 無限大|+INFINITY|
-|*x* = NaN|NaN|
+|*x* = -無限大|+0|
+|*x* = +無限大|+INFINITY|
+|*x* = NaN|(NaN)|
 |オーバーフロー範囲エラー|+HUGE_VAL、+HUGE_VALF、または +HUGE_VALL|
-|アンダーフロー範囲エラー|丸めた後の正しい結果|
+|アンダーフロー範囲エラー|丸め後の正しい結果|
 
 エラーは、[_matherr](matherr.md) で指定されたとおりに報告されます。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-でC++はオーバーロードが可能であるため、 **float**型および**long double**型を受け取って返す**exp2**のオーバーロードを呼び出すことができます。 C プログラムでは、 **exp2**は常に**double**を受け取り、返します。
+C++ ではオーバーロードが可能なため **、float**型と**長いダブル**型を取得および戻す**exp2**のオーバーロードを呼び出すことができます。 C プログラムでは **、exp2**は常に二**重**を受け取って返します。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
 
 ## <a name="requirements"></a>必要条件
 
 |ルーチン|C ヘッダー|C++ ヘッダー|
 |-------------|--------------|------------------|
-|**exp**, **、**|\<math.h>|\<cmath>|
+|**exp**, **expf**, **expl**|\<math.h>|\<cmath>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

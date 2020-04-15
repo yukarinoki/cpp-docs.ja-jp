@@ -1,8 +1,9 @@
 ---
 title: _fclose_nolock
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _fclose_nolock
+- _o__fclose_nolock
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -27,12 +29,12 @@ helpviewer_keywords:
 - fclose_nolock function
 - _fclose_nolock function
 ms.assetid: b4af4392-5fc8-49bb-9fe2-ca7293d3ce04
-ms.openlocfilehash: 2e19604f09cdb3ac2a5bfc1635c2b98a8d5218c5
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 5ec1db740ae27bca81237bda43d47d51576243f1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941428"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81347458"
 ---
 # <a name="_fclose_nolock"></a>_fclose_nolock
 
@@ -48,24 +50,26 @@ int _fclose_nolock(
 
 ### <a name="parameters"></a>パラメーター
 
-*一連*<br/>
+*ストリーム*<br/>
 **FILE** 構造体へのポインター。
 
 ## <a name="return-value"></a>戻り値
 
-ストリームが正常に閉じられた場合、 **fclose**は0を返します。 エラーを示す**EOF**を返します。
+**fclose**は、ストリームが正常に閉じられた場合は 0 を返します。 **EOF**を返してエラーを示します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-この関数は、 **fclose**の非ロックバージョンです。 他のスレッドによる干渉から保護されないことを除けば、fclose 関数と同じです。 他のスレッドをロックするオーバーヘッドが発生しないため、処理が速くなる場合があります。 この関数は、シングルスレッド アプリケーション、呼び出し元のスコープで既にスレッド分離を処理している場合などのスレッドセーフなコンテキストでのみご使用ください。
+この関数は**fclose**のロックなしのバージョンです。 他のスレッドによる干渉から保護されないことを除けば、fclose 関数と同じです。 他のスレッドをロックするオーバーヘッドが発生しないため、処理が速くなる場合があります。 この関数は、シングルスレッド アプリケーション、呼び出し元のスコープで既にスレッド分離を処理している場合などのスレッドセーフなコンテキストでのみご使用ください。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|関数|必須ヘッダー|
+|機能|必須ヘッダー|
 |--------------|---------------------|
 |**_fclose_nolock**|\<stdio.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="see-also"></a>関連項目
 

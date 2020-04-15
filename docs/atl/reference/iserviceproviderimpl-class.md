@@ -1,5 +1,5 @@
 ---
-title: IServiceProviderImpl クラス
+title: クラスを提供します。
 ms.date: 11/04/2016
 f1_keywords:
 - IServiceProviderImpl
@@ -9,16 +9,16 @@ helpviewer_keywords:
 - IServiceProviderImpl class
 - IServiceProvider interface, ATL implementation
 ms.assetid: 251254d3-c4ce-40d7-aee0-3d676d1d72f2
-ms.openlocfilehash: e52c28d528e187713d2d0925fed23bd8cd4493d5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ef0ee4f77441cb8d19ea2d6dcada1fed9faf2782
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62276005"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81329426"
 ---
-# <a name="iserviceproviderimpl-class"></a>IServiceProviderImpl クラス
+# <a name="iserviceproviderimpl-class"></a>クラスを提供します。
 
-このクラスの既定の実装を提供する、`IServiceProvider`インターフェイス。
+このクラスは、インターフェイスの既定の`IServiceProvider`実装を提供します。
 
 ## <a name="syntax"></a>構文
 
@@ -30,7 +30,7 @@ class ATL_NO_VTABLE IServiceProviderImpl : public IServiceProvider
 #### <a name="parameters"></a>パラメーター
 
 *T*<br/>
-派生したクラス、`IServiceProviderImpl`します。
+から派生したクラス`IServiceProviderImpl`。
 
 ## <a name="members"></a>メンバー
 
@@ -38,17 +38,17 @@ class ATL_NO_VTABLE IServiceProviderImpl : public IServiceProvider
 
 |名前|説明|
 |----------|-----------------|
-|[IServiceProviderImpl::QueryService](#queryservice)|作成または指定したサービスにアクセスし、サービスの指定したインターフェイスにインターフェイス ポインターを返します。|
+|[サービスプロバイダーインプル::クエリサービス](#queryservice)|指定したサービスを作成またはアクセスし、サービスの指定されたインターフェイスへのインターフェイス ポインターを返します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-`IServiceProvider`インターフェイスの GUID で指定されたサービスを検索し、サービスに要求されたインターフェイスのインターフェイス ポインターを返します。 クラス`IServiceProviderImpl`このインターフェイスの既定の実装を提供します。
+インターフェイス`IServiceProvider`は、GUID で指定されたサービスを検索し、サービスで要求されたインターフェイスのインターフェイス ポインターを返します。 クラス`IServiceProviderImpl`は、このインターフェイスの既定の実装を提供します。
 
-`IServiceProviderImpl` 1 つのメソッドを指定します。[QueryService](#queryservice)が作成または指定したサービスにアクセスし、サービスの指定したインターフェイスにインターフェイス ポインターを返します。
+`IServiceProviderImpl`1 つのメソッドを指定します: [QueryService](#queryservice)は、指定されたサービスを作成またはアクセスし、サービスの指定されたインターフェイスへのインターフェイス ポインターを返します。
 
-`IServiceProviderImpl` 以降では、サービス マップを使用して[BEGIN_SERVICE_MAP](service-map-macros.md#begin_service_map)で終わる[END_SERVICE_MAP](service-map-macros.md#end_service_map)します。
+`IServiceProviderImpl`は、サービス マップを使用して[、BEGIN_SERVICE_MAP](service-map-macros.md#begin_service_map)から始まり[、END_SERVICE_MAP](service-map-macros.md#end_service_map)で終わります。
 
-サービス マップには、2 つのエントリが含まれています。[SERVICE_ENTRY](service-map-macros.md#service_entry)、オブジェクトでサポートされている指定したサービス id (SID) を示すと[SERVICE_ENTRY_CHAIN](service-map-macros.md#service_entry_chain)、呼び出す`QueryService`を別のオブジェクトのチェーンにします。
+サービス マップには、オブジェクトでサポートされている指定されたサービス ID (SID) を示す[SERVICE_ENTRY](service-map-macros.md#service_entry)と、別`QueryService`のオブジェクトへのチェーンを呼び出す[SERVICE_ENTRY_CHAIN](service-map-macros.md#service_entry_chain)の 2 つのエントリが含まれています。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -60,9 +60,9 @@ class ATL_NO_VTABLE IServiceProviderImpl : public IServiceProvider
 
 **ヘッダー:** atlcom.h
 
-##  <a name="queryservice"></a>  IServiceProviderImpl::QueryService
+## <a name="iserviceproviderimplqueryservice"></a><a name="queryservice"></a>サービスプロバイダーインプル::クエリサービス
 
-作成または指定したサービスにアクセスし、サービスの指定したインターフェイスにインターフェイス ポインターを返します。
+指定したサービスを作成またはアクセスし、サービスの指定されたインターフェイスへのインターフェイス ポインターを返します。
 
 ```
 STDMETHOD(QueryService)(
@@ -73,42 +73,42 @@ STDMETHOD(QueryService)(
 
 ### <a name="parameters"></a>パラメーター
 
-*guidService*<br/>
-[in]サービス id (SID) へのポインター。
+*サービス*<br/>
+[in]サービス識別子 (SID) へのポインター。
 
 *riid*<br/>
-[in]呼び出し元がアクセスできるインターフェイスの識別子です。
+[in]呼び出し元がアクセスを取得するインターフェイスの識別子。
 
-*ppvObj*<br/>
-[out]要求されたインターフェイスへの間接ポインター。
+*Ppvobj*<br/>
+[アウト]要求されたインターフェイスへの間接ポインター。
 
 ### <a name="return-value"></a>戻り値
 
-返された HRESULT の値は、次のいずれか。
+返される HRESULT 値は、次のいずれかです。
 
-|戻り値|説明|
+|戻り値|意味|
 |------------------|-------------|
-|S_OK|サービスが正常に作成または取得します。|
+|S_OK|サービスが正常に作成または取得されました。|
 |E_INVALIDARG|1 つ以上の引数が無効です。|
-|E_OUTOFMEMORY|メモリは、サービスを作成するには不十分です。|
+|E_OUTOFMEMORY|メモリ不足のため、サービスを作成できませんでした。|
 |E_UNEXPECTED|不明なエラーが発生しました。|
-|E_NOINTERFACE|要求されたインターフェイスは、このサービスの一部ではないか、サービスが既知です。|
+|E_NOINTERFACE|要求されたインターフェイスがこのサービスの一部ではないか、またはサービスが不明です。|
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`QueryService` 指定されたサービスで要求されたインターフェイスへの間接ポインターを返します。 呼び出し元が必要でなくなったときにこのポインターを解放します。
+`QueryService`指定されたサービス内の要求されたインターフェイスへの間接ポインターを返します。 呼び出し元は、不要になった場合にこのポインターを解放する必要があります。
 
-呼び出すと`QueryService`、両方のサービスの識別子を渡す (*guidService*) とインターフェイス識別子 (*riid*)。 *GuidService* 、アクセス サービスを指定します、 *riid*サービスの一部であるインターフェイスを識別します。 代わりに、インターフェイスへの間接ポインターが表示されます。
+を呼び`QueryService`出すときは、サービス識別子 (*guidService*) とインターフェイス識別子 (*riid*) の両方を渡します。 *guidService*は、アクセスするサービスを指定し *、riid*は、サービスの一部であるインターフェイスを識別します。 その代わりに、インターフェイスへの間接ポインターを受け取ります。
 
-インターフェイスを実装するオブジェクトは、他のサービスの一部であるインターフェイスを実装も可能性があります。 次に例を示します。
+インターフェイスを実装するオブジェクトは、他のサービスの一部であるインターフェイスも実装する場合があります。 以下、具体例に沿って説明します。
 
-- これらのインターフェイスの一部は、省略可能な可能性があります。 サービスの説明で定義されているすべてのインターフェイスは、サービスのすべての実装またはすべての返されたオブジェクトに必ずしも存在します。
+- これらのインターフェイスの一部は省略可能な場合があります。 サービスの説明で定義されているすべてのインターフェイスが、サービスのすべての実装または返されたすべてのオブジェクトに必ずしも存在するとは限りません。
 
-- 呼び出しとは異なり`QueryInterface`、さまざまなサービス識別子を渡すことが必ずしもその別のコンポーネント オブジェクト モデル (COM) オブジェクトが返されます。
+- の`QueryInterface`呼び出しとは異なり、異なるサービス識別子を渡しても、必ずしも別のコンポーネント オブジェクト モデル (COM) オブジェクトが返されるとは限りません。
 
-- 返されるオブジェクトは、サービスの定義の一部ではない追加のインターフェイスがあります。
+- 返されるオブジェクトには、サービスの定義の一部ではない追加のインターフェイスが含まれている場合があります。
 
-SID_SMyService SID_SYourService などの 2 つの異なるサービス両方を指定できます、同じインターフェイスの使用場合でも、何も 2 つのサービスで共通のインターフェイスの実装があります。 この動作を呼び出す`QueryService`よりも、別のオブジェクトを返すことができます (SID_SMyService、IID_IDispatch) `QueryService` (SID_SYourService、IID_IDispatch)。 オブジェクト id が異なるサービスの識別子を指定する場合とは見なされません。
+SID_SMyServiceとSID_SYourServiceなど、2 つの異なるサービスは、インターフェイスの実装に共通点がない場合でも、同じインターフェイスの使用を指定できます。 これは、(SID_SMyService、IID_IDispatch)`QueryService`の呼び出しが (SID_SYourService、IID_IDispatch) とは`QueryService`異なるオブジェクトを返すことができるため、機能します。 異なるサービス ID を指定する場合、オブジェクト ID は想定されません。
 
 ## <a name="see-also"></a>関連項目
 

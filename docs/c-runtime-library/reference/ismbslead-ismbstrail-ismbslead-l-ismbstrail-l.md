@@ -1,11 +1,15 @@
 ---
 title: _ismbslead、_ismbstrail、_ismbslead_l、_ismbstrail_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _ismbstrail
 - _ismbslead_l
 - _ismbslead
 - _ismbstrail_l
+- _o__ismbslead
+- _o__ismbslead_l
+- _o__ismbstrail
+- _o__ismbstrail_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -43,12 +48,12 @@ helpviewer_keywords:
 - ismbstrail_l function
 - _ismbstrail_l function
 ms.assetid: 86d2cd7a-3cff-443a-b713-14cc17a231e9
-ms.openlocfilehash: 71a5d2a82c01a41f945ef3fa8c7652f846f05103
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d4c9bfcec1deab8c00eb490dc044e62a6124aba3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953778"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81342916"
 ---
 # <a name="_ismbslead-_ismbstrail-_ismbslead_l-_ismbstrail_l"></a>_ismbslead、_ismbstrail、_ismbslead_l、_ismbstrail_l
 
@@ -82,28 +87,30 @@ int _ismbstrail_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*str*<br/>
+*Str*<br/>
 文字列の先頭、または直前の既知の先頭バイトを指すポインター。
 
-*current*<br/>
+*現在の*<br/>
 テストする、文字列内の位置を指すポインター。
 
-*locale*<br/>
+*ロケール*<br/>
 使用するロケール。
 
 ## <a name="return-value"></a>戻り値
 
-文字が先行バイトの場合、 **_ismbslead**は-1 を返し、 **_ismbstrail**は、文字が末尾バイトの場合は-1 を返します。 入力文字列が有効であるものの、その文字が先頭バイトでも末尾バイトでもない場合、これらの関数は 0 を返します。 どちらかの引数が**NULL**の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は**NULL**を返し、 **errno**を**EINVAL**に設定します。
+**_ismbslead**文字が先頭バイトの場合は -1 を返し、文字が後ろバイトの場合は -1 を返 **_ismbstrail。** 入力文字列が有効であるものの、その文字が先頭バイトでも末尾バイトでもない場合、これらの関数は 0 を返します。 いずれかの引数が**NULL**の場合は、「パラメーター[の検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーター ハンドラーが呼び出されます。 実行を続行できる場合、これらの関数は**NULL を**返し **、errno**を**EINVAL**に設定します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**_ismbslead**と **_ismbstrail**は、文字列のコンテキストを考慮に入れるため、 **_ismbblead**と **_ismbbtrail**のバージョンよりも遅くなります。
+**_ismbslead**と **_ismbstrail**は、文字列コンテキストを考慮に入れるため **、_ismbblead**および **_ismbbtrail**バージョンよりも低速です。
 
-これらの関数のうち、 **_l**サフィックスが付いているバージョンは、ロケールに依存する動作の場合、現在のロケールの代わりに渡されたロケールを使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+**_l**サフィックスを持つこれらの関数のバージョンは、ロケールに依存する動作では、現在のロケールの代わりに渡されたロケールを使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|オプション ヘッダー|
+|ルーチン|必須ヘッダー|オプション ヘッダー|
 |-------------|---------------------|---------------------|
 |**_ismbslead**|\<mbctype.h> または \<mbstring.h>|\<ctype.h>、* \<limits.h>、\<stdlib.h>|
 |**_ismbstrail**|\<mbctype.h> または \<mbstring.h>|\<ctype.h>、* \<limits.h>、\<stdlib.h>|
@@ -112,11 +119,11 @@ int _ismbstrail_l(
 
 \* テスト条件のマニフェスト定数の場合。
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="see-also"></a>関連項目
 
 [文字分類](../../c-runtime-library/character-classification.md)<br/>
 [_ismbc 系ルーチン](../../c-runtime-library/ismbc-routines.md)<br/>
 [is、isw 系ルーチン](../../c-runtime-library/is-isw-routines.md)<br/>
-[_ismbb 系ルーチン](../../c-runtime-library/ismbb-routines.md)<br/>
+[_ismbbルーチン](../../c-runtime-library/ismbb-routines.md)<br/>

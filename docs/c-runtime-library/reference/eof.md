@@ -1,8 +1,9 @@
 ---
 title: _eof
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _eof
+- _o__eof
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +31,12 @@ helpviewer_keywords:
 - testing, for end-of-file
 - end of file
 ms.assetid: 265703f4-d07e-4005-abf3-b1d0cdd9e0b0
-ms.openlocfilehash: 5b5c27f1de3369369776dd030df21be05cf20b7a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 3218969c603e771ee6d2cdbf9baeed1728934be6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941986"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81347932"
 ---
 # <a name="_eof"></a>_eof
 
@@ -50,24 +52,26 @@ int _eof(
 
 ### <a name="parameters"></a>パラメーター
 
-*fd*<br/>
+*Fd*<br/>
 開いているファイルを参照するファイル記述子。
 
 ## <a name="return-value"></a>戻り値
 
-**eof**は、現在の位置がファイルの末尾である場合は1を返し、そうでない場合は0を返します。 戻り値-1 はエラーを示します。この場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、 **errno**は、無効なファイル記述子を示す**EBADF**に設定されます。
+**_eof**現在の位置がファイルの終わりである場合は 1 を返し、ファイルが終了していない場合は 0 を返します。 戻り値 -1 はエラーを示します。この場合は、「パラメーター[の検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーター ハンドラーが呼び出されます。 実行が続行できる場合 **、errno**は**EBADF**に設定され、無効なファイル記述子を示します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**Eof**関数は、 *fd*に関連付けられたファイルの末尾に到達したかどうかを判断します。
+**_eof**関数は *、fd*に関連付けられたファイルの終わりに達したかどうかを判別します。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|関数|必須ヘッダー|オプション ヘッダー|
+|機能|必須ヘッダー|オプション ヘッダー|
 |--------------|---------------------|---------------------|
 |**_eof**|\<io.h>|\<errno.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="example"></a>例
 
@@ -115,7 +119,7 @@ int main( void )
 This file contains some text.
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>出力
 
 ```Output
 Number of bytes read = 29

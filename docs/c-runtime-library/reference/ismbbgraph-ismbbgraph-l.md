@@ -1,9 +1,11 @@
 ---
 title: _ismbbgraph、_ismbbgraph_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _ismbbgraph_l
 - _ismbbgraph
+- _o__ismbbgraph
+- _o__ismbbgraph_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +34,12 @@ helpviewer_keywords:
 - _ismbbgraph function
 - ismbbgraph function
 ms.assetid: b60db718-134f-4796-acc1-592d0b9efbb7
-ms.openlocfilehash: 096450869f9a150585b3102cea155ecd948c5751
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 28e52c564bb554df1bd2228691034db5a13a2300
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954185"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81343722"
 ---
 # <a name="_ismbbgraph-_ismbbgraph_l"></a>_ismbbgraph、_ismbbgraph_l
 
@@ -56,10 +59,10 @@ int _ismbbgraph_l (
 
 ### <a name="parameters"></a>パラメーター
 
-*c*<br/>
+*C*<br/>
 テストする整数。
 
-*locale*<br/>
+*ロケール*<br/>
 使用するロケール。
 
 ## <a name="return-value"></a>戻り値
@@ -68,16 +71,20 @@ int _ismbbgraph_l (
 
 `isctype(c, ( _PUNCT | _UPPER | _LOWER | _DIGIT )) || _ismbbkprint(c)`
 
-*c*の場合は0以外の。それ以外の場合は0。 **_ismbbgraph**は、ロケールに依存する動作に現在のロケールを使用します。 **_ismbbgraph_l**は、渡されたロケールを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+*c*の場合は 0 以外の値、それ以外の場合は 0 です。 **_ismbbgraph**は、ロケールに依存するすべての動作に対して現在のロケールを使用します。 **_ismbbgraph_l**は、渡されたロケールを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+
+## <a name="remarks"></a>解説
+
+既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**_ismbbgraph**|\<mbctype.h>|
 |**_ismbbgraph_l**|\<mbctype.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="libraries"></a>ライブラリ
 
@@ -86,4 +93,4 @@ int _ismbbgraph_l (
 ## <a name="see-also"></a>関連項目
 
 [バイト分類](../../c-runtime-library/byte-classification.md)<br/>
-[_ismbb 系ルーチン](../../c-runtime-library/ismbb-routines.md)<br/>
+[_ismbbルーチン](../../c-runtime-library/ismbb-routines.md)<br/>

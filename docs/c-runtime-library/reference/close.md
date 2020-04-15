@@ -1,8 +1,9 @@
 ---
 title: _close
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _close
+- _o__close
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - close function
 - files [C++], closing
 ms.assetid: 4708a329-8acf-4cd9-b7b0-a952e1897247
-ms.openlocfilehash: e274cd45c42a5cf49430ecce69e111cbbf6fe88b
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 4d8b702a10624ae80629b4ce4644c428322500cb
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942928"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81348641"
 ---
 # <a name="_close"></a>_close
 
@@ -47,28 +49,30 @@ int _close(
 
 ### <a name="parameters"></a>パラメーター
 
-*fd*<br/>
+*Fd*<br/>
 開いているファイルを参照するファイル記述子。
 
 ## <a name="return-value"></a>戻り値
 
-ファイルが正常に閉じられた場合、 **_close**は0を返します。 戻り値-1 はエラーを示します。
+**_close**ファイルが正常に閉じられた場合は 0 を返します。 戻り値 -1 はエラーを示します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**_Close**関数は、 *fd*に関連付けられているファイルを閉じます。
+**_close**関数は *、fd*に関連付けられたファイルを閉じます。
 
-ファイル記述子と基になる OS ファイル ハンドルは閉じられます。 したがって、ファイルが最初に Win32 関数**CreateFile**を使用して開かれ、 **_open_osfhandle**を使用してファイル記述子に変換された場合、 **CloseHandle**を呼び出す必要はありません。
+ファイル記述子と基になる OS ファイル ハンドルは閉じられます。 したがって、ファイルが最初に Win32 関数**CreateFile**を使用して開かれ **、_open_osfhandle**を使用してファイル記述子に変換された場合は **、CloseHandle**を呼び出す必要はありません。
 
-この関数は、パラメーターを検証します。 *Fd*が無効なファイル記述子である場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は-1 を返し、 **errno**は**EBADF**に設定されます。
+この関数は、パラメーターを検証します。 *fd*が不正なファイル記述子である場合は、「パラメーター[の検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーター ハンドラーが呼び出されます。 実行を続行できる場合、関数は -1 を返し **、errno**は**EBADF**に設定されます。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|オプション ヘッダー|
+|ルーチン|必須ヘッダー|オプション ヘッダー|
 |-------------|---------------------|---------------------|
 |**_close**|\<io.h>|\<errno.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="example"></a>例
 

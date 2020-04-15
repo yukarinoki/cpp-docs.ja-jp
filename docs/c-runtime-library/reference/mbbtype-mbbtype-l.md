@@ -1,9 +1,11 @@
 ---
 title: _mbbtype、_mbbtype_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbbtype
 - _mbbtype_l
+- _o__mbbtype
+- _o__mbbtype_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +34,12 @@ helpviewer_keywords:
 - mbbtype function
 - mbbtype_l function
 ms.assetid: b8e34b40-842a-4298-aa39-0bd2d8e51c2a
-ms.openlocfilehash: ba4311921a0924d3f447feb1929a81ae1d816604
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 7e2e818ed70ec393e4f81008f76ca9efe9cfa7e7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952723"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81341410"
 ---
 # <a name="_mbbtype-_mbbtype_l"></a>_mbbtype、_mbbtype_l
 
@@ -61,45 +64,47 @@ int _mbbtype_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*c*<br/>
+*C*<br/>
 テスト対象の文字。
 
 *type*<br/>
 テストするバイトの種類。
 
-*locale*<br/>
+*ロケール*<br/>
 使用するロケール。
 
 ## <a name="return-value"></a>戻り値
 
-**_mbbtype**は、文字列内のバイトの型を返します。 この決定は、コントロールのテスト条件を提供する*型*の値によって指定された、状況に依存します。 *type*は、文字列内の前のバイトの型です。 次の表のマニフェスト定数は、Mbctype.h で定義されています。
+**_mbbtype**文字列のバイトの型を返します。 この決定は、コントロールテスト条件を提供する*type*の値で指定された状況依存です。 *type*は、文字列内の前のバイトの型です。 次の表のマニフェスト定数は、Mbctype.h で定義されています。
 
-|*型*の値|**_mbbtype**のテスト|戻り値|*c*|
+|*型*の値|**_mbbtype**テスト|戻り値|*C*|
 |---------------------|--------------------------|------------------|---------|
-|1 以外の値|有効な 1 バイトまたは先頭バイト|**_MBC_SINGLE**0|1バイト (0x20-0x7E、0xA1-0xDF)|
-|1 以外の値|有効な 1 バイトまたは先頭バイト|**_MBC_LEAD**スナップショット|マルチバイト文字の先頭バイト (0x81-0x9F、0xE0-0xFC)|
-|1 以外の値|有効な 1 バイトまたは先頭バイト|**_MBC_ILLEGAL**<br /><br /> ( -1)|無効な文字 (0x20-0x7E、0xA1-0xDF、0x81-0x9F、0xE0-0xFC を除く)|
-|1|有効な末尾バイト|**_MBC_TRAIL**3|マルチバイト文字の末尾バイト (0x40-0x7E、0x80-0xFC)|
-|1|有効な末尾バイト|**_MBC_ILLEGAL**<br /><br /> ( -1)|無効な文字 (0x20-0x7E、0xA1-0xDF、0x81-0x9F、0xE0-0xFC を除く)|
+|1 以外の値|有効な 1 バイトまたは先頭バイト|**_MBC_SINGLE** (0)|1 バイト (0x20 - 0x7E、0xA1 - 0xDF)|
+|1 以外の値|有効な 1 バイトまたは先頭バイト|**_MBC_LEAD** (1)|マルチバイト文字の先頭バイト (0x81 - 0x9F、0xE0 - 0xFC)|
+|1 以外の値|有効な 1 バイトまたは先頭バイト|**_MBC_ILLEGAL**<br /><br /> ( -1)|無効な文字 (0x20 - 0x7E,0xA1 - 0xDF, 0x81 - 0x9F, 0xE0 - 0xFC を除く任意の値|
+|1|有効な末尾バイト|**_MBC_TRAIL** (2)|マルチバイト文字の末尾バイト (0x40 - 0x7E、 0x80 - 0xFC)|
+|1|有効な末尾バイト|**_MBC_ILLEGAL**<br /><br /> ( -1)|無効な文字 (0x20 - 0x7E,0xA1 - 0xDF, 0x81 - 0x9F, 0xE0 - 0xFC を除く任意の値|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**_Mbbtype**関数は、マルチバイト文字のバイトの種類を決定します。 *Type*の値が1以外の任意の値の場合、 **_mbbtype**は、有効な1バイト文字、またはマルチバイト文字の先頭バイトをテストします。 *Type*の値が1の場合、 **_mbbtype**はマルチバイト文字の有効な末尾バイトをテストします。
+**_mbbtype**関数は、マルチバイト文字のバイトの型を決定します。 *型*の値が 1 を除く任意の値である場合 **、_mbbtypeは**、マルチバイト文字の有効な 1 バイトまたは先頭バイトをテストします。 *型*の値が 1 の場合 **、_mbbtype**はマルチバイト文字の有効な後部バイトをテストします。
 
-出力値は、ロケールの**LC_CTYPE**カテゴリの設定に影響されます。詳細については[、「setlocale、_wsetlocale](setlocale-wsetlocale.md) 」を参照してください。 この関数の **_mbbtype**バージョンは、このロケールに依存する動作に現在のロケールを使用します。 **_mbbtype_l**バージョンは、渡されたロケールパラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+出力値は、ロケールの**LC_CTYPE**カテゴリ設定の設定によって影響されます。詳細については[、setlocale を参照_wsetlocale。](setlocale-wsetlocale.md) この関数の **_mbbtype**バージョンでは、このロケールに依存する動作に現在のロケールが使用されます。**_mbbtype_l**バージョンは、代わりに渡されたロケールパラメータを使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-以前のバージョンでは、 **_mbbtype**には**chkctype**という名前が付けられていました。 新しいコードの場合は、代わりに **_mbbtype**を使用してください。
+以前のバージョンでは **、_mbbtype**は**chkctype**という名前でした。 新しいコードの場合は、代わりに **_mbbtype**を使用します。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|オプション ヘッダー|
+|ルーチン|必須ヘッダー|オプション ヘッダー|
 |-------------|---------------------|---------------------|
 |**_mbbtype**|\<mbstring.h>|\<mbctype.h>*|
 |**_mbbtype_l**|\<mbstring.h>|\<mbctype.h>*|
 
 \* 戻り値として使用されるマニフェスト定数の定義。
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="see-also"></a>関連項目
 

@@ -1,8 +1,9 @@
 ---
 title: mbrtowc
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - mbrtowc
+- _o_mbrtowc
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -24,12 +26,12 @@ f1_keywords:
 helpviewer_keywords:
 - mbrtowc function
 ms.assetid: a1e87fcc-6de0-4ca1-bf26-508d28490286
-ms.openlocfilehash: b4c68ae8df9821d862b9f742d8a8ef7ace19c981
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: be46c3f3c728b70c7cbf060572acc24662637a81
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952443"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81340927"
 ---
 # <a name="mbrtowc"></a>mbrtowc
 
@@ -48,8 +50,8 @@ size_t mbrtowc(
 
 ### <a name="parameters"></a>パラメーター
 
-*wchar*<br/>
-変換されたワイド文字の文字列を受け取るワイド文字のアドレス ( **wchar_t**型)。 ワイド文字を返す必要がない場合、この値は null ポインターを指定できます。
+*Wchar*<br/>
+変換されたワイド文字列を受け取るワイド文字のアドレス ( **wchar_t**と入力します ) 。 ワイド文字を返す必要がない場合、この値は null ポインターを指定できます。
 
 *mbchar*<br/>
 バイト シーケンスのアドレス (マルチバイト文字)。
@@ -58,31 +60,33 @@ size_t mbrtowc(
 チェックするバイト数。
 
 *mbstate*<br/>
-変換状態のオブジェクトへのポインター。 この値が null ポインターの場合、関数は静的な内部変換状態オブジェクトを使用します。 内部**mbstate_t**オブジェクトはスレッドセーフではないため、常に独自の*mbstate*引数を渡すことをお勧めします。
+変換状態のオブジェクトへのポインター。 この値が null ポインターの場合、関数は静的な内部変換状態オブジェクトを使用します。 内部**mbstate_t**オブジェクトはスレッド セーフではないため、常に独自の*mbstate*引数を渡すことをお勧めします。
 
 ## <a name="return-value"></a>戻り値
 
-次のいずれかの値です。
+次のいずれかの値:
 
-0次の*数*以下では、 *wchar*が null ポインターではない場合、 *wchar*に格納されている null ワイド文字を表すマルチバイト文字が完成します。
+0 次の*カウント*以下のバイト数は *、wchar*に格納されている null ワイド文字を表すマルチバイト文字を完了します *(wchar*が null ポインターでない場合)。
 
-1が*カウント*されます。次の*カウント*を含むか、有効なマルチバイト文字を入力します。 返される値は、マルチバイト文字を完成するのに必要なバイト数です。 *Wchar*が null ポインターでない場合、それに相当するワイド文字は*wchar*に格納されます。
+count*に*1 を含む 次の*カウント*以下のバイト数は、有効なマルチバイト文字を完了します。 返される値は、マルチバイト文字を完成するのに必要なバイト数です。 ワイド文字に相当する値は *、wchar*が null ポインタでない場合は*wchar*に格納されます。
 
-(size_t)(-1)エンコードエラーが発生しました。 次の*数*以下のバイトは、完全かつ有効なマルチバイト文字に寄与しません。 この場合、 **errno**は EILSEQ に設定され、 *mbstate*の変換のシフト状態は指定されていません。
+(size_t)(-1)エンコード エラーが発生しました。 次の*カウント*数以下のバイト数は、完全で有効なマルチバイト文字に影響しません。 この場合 **、errno**は EILSEQ に設定され、変換シフト状態は*mbstate*で指定されていません。
 
-(size_t)(-2)次の*カウント*バイトは不完全である可能性があるマルチバイト文字に寄与し、すべての*カウント*バイトが処理されています。 *Wchar*に値は格納されませんが、 *mbstate*が更新されて関数が再起動されます。
+(size_t)(-2)次の*カウント*バイトは、不完全だが有効な可能性のあるマルチバイト文字に影響し、すべての*カウント*バイトが処理されています。 *wchar*には値は格納されませんが、関数を再起動するために*mbstate*が更新されます。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-*Mbchar*が null ポインターの場合、関数は呼び出しに相当します。
+*mbchar*が null ポインターの場合、関数は呼び出しと等価です。
 
 `mbrtowc(NULL, "", 1, &mbstate)`
 
-この場合、引数*wchar*および*count*の値は無視されます。
+この場合、引数*wchar*と*count*の値は無視されます。
 
-*Mbchar*が null ポインターでない場合、関数は、 *mbchar*から*count*バイトを調べて、次のマルチバイト文字を完成させるために必要なバイト数を調べます。 次の文字が有効な場合は、対応するマルチバイト文字が*wchar*に格納されます (null ポインターではない場合)。 文字が対応するワイド null 文字の場合、結果の*mbstate*の状態は初期の変換状態になります。
+*mbchar*が null ポインタでない場合、関数は*mbchar*からの*カウント*バイトを調べ、次のマルチバイト文字を完了するために必要なバイト数を判別します。 次の文字が有効な場合、対応するマルチバイト文字が null ポインターでない場合は *、wchar*に格納されます。 文字が対応するワイドヌル文字である場合 *、mbstate*の結果の状態は初期変換状態になります。
 
-**Mbrtowc**関数は、 [mbtowc、_mbtowc_l](mbtowc-mbtowc-l.md)の再起動によって異なります。 変換状態は、同じまたはその他の再開可能な関数への後続の呼び出しのために*mbstate*に格納されます。 再開可能な関数と再開不可能な関数を混用した場合、結果は未定義です。  たとえば、 **wcstombs**ではなく**wcsrtombs**の後続の呼び出しが使用される場合、アプリケーションでは**wcslen**ではなく**wcsrlen**を使用する必要があります。
+**mbrtowc**関数は、その再始動可能性によって[_mbtowc_lmbtowc](mbtowc-mbtowc-l.md)とは異なります。 変換状態は、同じ関数または他の再開可能な関数を呼び出す後続の呼び出しの場合は*mbstate*に格納されます。 再開可能な関数と再開不可能な関数を混用した場合、結果は未定義です。  たとえば、wcstombs の代わりに**wcsrtombs**への後続の呼び出しを使用する場合、アプリケーションは**wcslen**ではなく**wcsrlen**を使用**する**必要があります。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
 
 ## <a name="example"></a>例
 
@@ -194,7 +198,7 @@ int main(int argc, char* argv[])
 }
 ```
 
-### <a name="sample-output"></a>出力例
+### <a name="sample-output"></a>サンプル出力
 
 ```Output
 Locale set to: "French_Canada.1252"
@@ -205,7 +209,7 @@ WC String: AaBbCcÜïα∩≡xXyYzZ
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**mbrtowc**|\<wchar.h>|
 
@@ -213,4 +217,4 @@ WC String: AaBbCcÜïα∩≡xXyYzZ
 
 [データ変換](../../c-runtime-library/data-conversion.md)<br/>
 [ロケール](../../c-runtime-library/locale.md)<br/>
-[マルチバイト文字のシーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[マルチバイト文字シーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>

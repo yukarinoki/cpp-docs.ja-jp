@@ -1,9 +1,11 @@
 ---
 title: _makepath、_wmakepath
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _makepath
 - _wmakepath
+- _o__makepath
+- _o__wmakepath
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +39,12 @@ helpviewer_keywords:
 - _wmakepath function
 - tmakepath function
 ms.assetid: 5930b197-a7b8-46eb-8519-2841a58cd026
-ms.openlocfilehash: aafde0aeeebb7b773d3f96ca66ae65762dcdebdf
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b92e056816183b4bbb07edb3efec4415655d655e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952924"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81341594"
 ---
 # <a name="_makepath-_wmakepath"></a>_makepath、_wmakepath
 
@@ -71,23 +74,25 @@ void _wmakepath(
 *path*<br/>
 完全なパスのバッファー。
 
-*駆動*<br/>
-必要なドライブに対応する文字 (A、B など) と、省略可能である後続のコロンを含んでいます。 **_makepath**がない場合は、複合パスに自動的にコロンが挿入されます。 *ドライブ*が**NULL**であるか、空の文字列を指している場合、複合*パス*文字列にドライブ文字は表示されません。
+*ドライブ*<br/>
+必要なドライブに対応する文字 (A、B など) と、この後に続くオプションのコロンを含んでいます。 **_makepath**は、コロンが存在しない場合は、自動的に複合パスに挿入されます。 *ドライブ*が**NULL**の場合、または空の文字列を指す場合、複合*パス*文字列にはドライブ文字は表示されません。
 
-*エイリアス*<br/>
-ドライブ指定子も実際のファイル名も含まない、ディレクトリのパスを含んでいます。 末尾のスラッシュは省略可能であり、スラッシュ (/) または円記号 (\\) のいずれかまたは両方を1つの*dir*引数で使用できます。 末尾のスラッシュ (/ と \\ のいずれも) を指定していない場合は、スラッシュが自動的に挿入されます。 *Dir*が**NULL**であるか、空の文字列を指している場合、複合*パス*文字列にディレクトリパスは挿入されません。
+*Dir*<br/>
+ドライブ指定子も実際のファイル名も含まない、ディレクトリのパスを含んでいます。 末尾のスラッシュは省略可能で、スラッシュ (/) または円記号 (\\) のいずれかまたは両方を単一*の dir*引数で使用できます。 末尾のスラッシュ (/ と \\ のいずれも) を指定していない場合は、スラッシュが自動的に挿入されます。 *dir*が**NULL の**場合、または空の文字列を指す場合、複合*パス*文字列にディレクトリ パスは挿入されません。
 
-*fname*<br/>
-ファイル名拡張子がないベース ファイル名が含まれています。 *Fname*が**NULL**の場合、または空の文字列を指している場合は、複合*パス*文字列にファイル名は挿入されません。
+*Fname*<br/>
+ファイル名拡張子がないベース ファイル名が含まれています。 *fname*が**NULL の**場合、または空の文字列を指す場合、複合*パス*文字列にファイル名は挿入されません。
 
-*ext*<br/>
-先行するピリオド (.) の有無を問わず、実際のファイル名拡張子が含まれています。 **_makepath**は、 *ext*に表示されない場合、自動的に期間を挿入します。*Ext*が**NULL**の場合、または空の文字列を指している場合は、複合*パス*文字列に拡張子は挿入されません。
+*内線*<br/>
+実際のファイル名拡張子が含まれており、先頭のピリオド (.) の有無は問いません。 **_makepath**は *、ext*に表示されない場合は、自動的に挿入されます。*ext*が**NULL の**場合、または空の文字列を指す場合、複合*パス*文字列に拡張子は挿入されません。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**_Makepath**関数は、個々のコンポーネントからの複合パス文字列を作成し、結果を*パス*に格納します。 *パス*には、ドライブ文字、ディレクトリパス、ファイル名、およびファイル名拡張子を含めることができます。 **_wmakepath**は、 **_makepath**のワイド文字バージョンです。 **_wmakepath**の引数はワイド文字列です。 それ以外では、 **_wmakepath**と **_makepath**は同じように動作します。
+**_makepath**関数は、個々のコンポーネントから複合パス文字列を作成し、結果を*path*に格納します。 *パス*には、ドライブ文字、ディレクトリ パス、ファイル名、およびファイル名拡張子が含まれる場合があります。 **_wmakepath**はワイド文字の **_makepath**です。**_wmakepath**の引数はワイド文字列です。 **_wmakepath**と **_makepath**は同じように動作します。
 
-**セキュリティに関するメモ** null で終わる文字列をご使用ください。 バッファーオーバーランを回避するには、null で終わる文字列が*パス*バッファーのサイズを超えないようにする必要があります。 **_makepath**では、複合パス文字列の長さが **_max_path**を超えないことは保証されません。 詳しくは、「 [バッファー オーバーランの回避](/windows/win32/SecBP/avoiding-buffer-overruns)」をご覧ください。
+**セキュリティに関するメモ** null で終わる文字列を使用してください。 バッファ オーバーランを回避するには、null で終わる文字列が*パス*バッファのサイズを超えないようにする必要があります。 **_makepath**では、複合パス文字列の長さが **_MAX_PATH**を超えていないことを保証しません。 詳しくは、「 [バッファー オーバーランの回避](/windows/win32/SecBP/avoiding-buffer-overruns)」をご覧ください。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -95,18 +100,18 @@ void _wmakepath(
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tmakepath**|**_makepath**|**_makepath**|**_wmakepath**|
 
-*パス*引数は、完全なパスを保持するのに十分な大きさの空のバッファーを指す必要があります。 複合*パス*は、stdlib.h> で定義されている、 **_max_path**定数よりも大きくすることはできません。
+*path*引数は、完全なパスを保持するのに十分な大きさの空のバッファを指している必要があります。 複合*パス*は、Stdlib.h で定義されている **_MAX_PATH**定数より大きくすることはできません。
 
-Path が**NULL**の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 さらに、 **errno**は**EINVAL**に設定されています。 他のすべてのパラメーターには**NULL**値を使用できます。
+path が**NULL**の場合は、「パラメーター[の検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーター ハンドラーが呼び出されます。 さらに **、errno**は**EINVAL**に設定されます。 **NULL**値は、他のすべてのパラメーターに許可されます。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**_makepath**|\<stdlib.h>|
 |**_wmakepath**|\<stdlib.h> または \<wchar.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="example"></a>例
 

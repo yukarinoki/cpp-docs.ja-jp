@@ -1,8 +1,9 @@
 ---
 title: _heapchk
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _heapchk
+- _o__heapchk
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +31,12 @@ helpviewer_keywords:
 - heaps, checking consistency
 - _heapchk function
 ms.assetid: 859619a5-1e35-4f02-9e09-11d9fa266ec0
-ms.openlocfilehash: 857feb66d89d5dc406042478156483ecb86a2474
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 21c7f9e22728109676d3fc611405ccd43ac773f8
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954819"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81344052"
 ---
 # <a name="_heapchk"></a>_heapchk
 
@@ -48,7 +50,7 @@ int _heapchk( void );
 
 ## <a name="return-value"></a>戻り値
 
-**_heapchk**は、次のいずれかの整数マニフェスト定数を返します Malloc. h です。
+**_heapchk**は、Malloc.h で定義されている次の整数マニフェスト定数のいずれかを返します。
 
 |戻り値|条件|
 |-|-|
@@ -58,19 +60,21 @@ int _heapchk( void );
 | **_HEAPEMPTY** | ヒープが初期化されていません。 |
 | **_HEAPOK** | ヒープは一貫性があると思われます。 |
 
-さらに、エラーが発生した場合、 **_heapchk**は**errno**をに設定**します。**
+また、エラーが発生した場合 **、_heapchk**は**errno**を**ENOSYS**に設定します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**_Heapchk**関数は、ヒープの最小限の一貫性をチェックすることにより、ヒープ関連の問題をデバッグするのに役立ちます。 オペレーティングシステムが **_heapchk**(Windows 98 など) をサポートしていない場合、関数は **_HEAPOK**を返し、 **errno**を**に設定**します。
+**_heapchk**関数は、ヒープの最小限の整合性をチェックすることで、ヒープ関連の問題をデバッグするのに役立ちます。 オペレーティング システムが **_heapchk**(Windows 98 など) をサポートしていない場合、関数は **_HEAPOK**を返し **、errno**を**ENOSYS**に設定します。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|オプション ヘッダー|
+|ルーチン|必須ヘッダー|オプション ヘッダー|
 |-------------|---------------------|---------------------|
 |**_heapchk**|\<malloc.h>|\<errno.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="example"></a>例
 
