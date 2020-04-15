@@ -12,16 +12,16 @@ helpviewer_keywords:
 - CSharedFile [MFC], Detach
 - CSharedFile [MFC], SetHandle
 ms.assetid: 5d000422-9ede-4318-a8c9-f7412b674f39
-ms.openlocfilehash: 74a34ec169868d3e28f78f33da38dbda21ef23b3
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: e6a713ac9d9e906ec204d4a52b43ed51c08fd99c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69502612"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81318428"
 ---
 # <a name="csharedfile-class"></a>CSharedFile クラス
 
-共有メモリファイルをサポートする[CMemFile](../../mfc/reference/cmemfile-class.md)の派生クラス。
+共有メモリ ファイルをサポートする[CMemFile](../../mfc/reference/cmemfile-class.md)派生クラス。
 
 ## <a name="syntax"></a>構文
 
@@ -35,28 +35,28 @@ class CSharedFile : public CMemFile
 
 |名前|説明|
 |----------|-----------------|
-|[CSharedFile::CSharedFile](#csharedfile)|`CSharedFile` オブジェクトを構築します。|
+|[ファイルを共有します。](#csharedfile)|`CSharedFile` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CSharedFile::Detach](#detach)|共有メモリファイルを閉じ、そのメモリブロックのハンドルを返します。|
-|[CSharedFile:: SetHandle](#sethandle)|共有メモリファイルをメモリブロックにアタッチします。|
+|[ファイル::Dエタッハ](#detach)|共有メモリ ファイルを閉じ、そのメモリ ブロックのハンドルを返します。|
+|[ファイルを共有します。](#sethandle)|共有メモリ ファイルをメモリ ブロックにアタッチします。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-メモリファイルは、ディスクファイルのように動作します。 違いは、メモリファイルがディスク上ではなく RAM に格納されていることです。 メモリファイルは、高速一時ストレージ、または生バイトまたはシリアル化されたオブジェクトを独立したプロセス間で転送する場合に役立ちます。
+メモリファイルはディスクファイルのように動作します。 違いは、メモリファイルはディスクではなくRAMに格納される点です。 メモリ ファイルは、高速な一時記憶域、または独立したプロセス間で生のバイトまたはシリアル化されたオブジェクトを転送する場合に便利です。
 
-共有メモリファイルは、そのメモリ内の他のメモリファイルとは異なり、 [GlobalAlloc](/windows/win32/api/winbase/nf-winbase-globalalloc) Windows 関数で割り当てられます。 クラス`CSharedFile`は、を使用して`GlobalAlloc`作成されたグローバルに割り当てられたメモリブロックにデータを格納します。このメモリブロックは、を使用`IDataObject`するなど、DDE、クリップボード、またはその他の OLE/COM の一様なデータ転送操作を使用して共有できます。
+共有メモリ ファイルは、そのメモリ内の他のメモリ ファイルとは異なり、そのメモリは[GlobalAlloc](/windows/win32/api/winbase/nf-winbase-globalalloc) Windows 関数で割り当てられます。 クラス`CSharedFile`はグローバルに割り当てられたメモリ ブロック (を使用`GlobalAlloc`して作成) にデータを格納し、このメモリ ブロックは DDE、クリップボード、または他の OLE/COM`IDataObject`の統一されたデータ転送操作を使用して共有できます。
 
-`GlobalAlloc`[malloc](../../c-runtime-library/reference/malloc.md)によって返されたポインターなど、メモリへのポインターではなく、HGLOBAL ハンドルを返します。 特定のアプリケーションでは、HGLOBAL ハンドルが必要です。 たとえば、クリップボードにデータを格納するには、HGLOBAL ハンドルが必要です。
+`GlobalAlloc`[は、malloc](../../c-runtime-library/reference/malloc.md)によって返されるポインターなどのメモリへのポインターではなく、HGLOBAL ハンドルを返します。 HGLOBAL ハンドルは、特定のアプリケーションで必要とされます。 たとえば、クリップボードにデータを格納するには、HGLOBAL ハンドルが必要です。
 
-`CSharedFile`では、メモリマップトファイルを使用せず、プロセス間でデータを直接共有することはできません。
+`CSharedFile`メモリマップファイルを使用せず、データをプロセス間で直接共有することはできません。
 
-`CSharedFile`オブジェクトは、独自のメモリを自動的に割り当てることができます。 または、 [csharedfile:: SetHandle](#sethandle)を呼び出し`CSharedFile`て、オブジェクトに独自のメモリブロックをアタッチすることもできます。 どちらの場合も、メモリファイルを自動的に拡張するための`nGrowBytes`メモリは、が`nGrowBytes` 0 でない場合、サイズの増加した単位で割り当てられます。
+`CSharedFile`オブジェクトは、自動的に独自のメモリを割り当てることができます。 または[、CSharedFile::SetHandle](#sethandle)を`CSharedFile`呼び出すことによって、独自のメモリ ブロックをオブジェクトにアタッチできます。 いずれの場合も、メモリ ファイルを自動的に拡張するためのメモリは、0 でない場合`nGrowBytes``nGrowBytes`は -サイズの増分で割り当てられます。
 
-詳細については、「 [MFC のファイル](../../mfc/files-in-mfc.md)」と「*ランタイムライブラリリファレンス*」の「[ファイル処理](../../c-runtime-library/file-handling.md)」を参照してください。
+詳細については、『ランタイム ライブラリ リファレンス[』の「MFC ファイル](../../mfc/files-in-mfc.md)と[ファイル処理](../../c-runtime-library/file-handling.md)」を*参照してください*。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -70,11 +70,11 @@ class CSharedFile : public CMemFile
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** afxadv
+**ヘッダー:** afxadv.h
 
-##  <a name="csharedfile"></a>  CSharedFile::CSharedFile
+## <a name="csharedfilecsharedfile"></a><a name="csharedfile"></a>ファイルを共有します。
 
-`CSharedFile`オブジェクトを構築し、そのオブジェクトにメモリを割り当てます。
+オブジェクトを`CSharedFile`構築し、そのオブジェクトにメモリを割り当てます。
 
 ```
 CSharedFile(
@@ -84,15 +84,15 @@ CSharedFile(
 
 ### <a name="parameters"></a>パラメーター
 
-*nAllocFlags*<br/>
-メモリを割り当てる方法を示すフラグ。 有効なフラグ値の一覧については、「 [GlobalAlloc](/windows/win32/api/winbase/nf-winbase-globalalloc) 」を参照してください。
+*フラグ*<br/>
+メモリの割り当て方法を示すフラグ。 有効なフラグ値のリストについては[、GlobalAlloc](/windows/win32/api/winbase/nf-winbase-globalalloc)を参照してください。
 
-*nGrowBytes*<br/>
-メモリ割り当ての増分値 (バイト単位)。
+*nグローバイト*<br/>
+メモリ割り当てのインクリメント (バイト単位)。
 
-##  <a name="detach"></a>  CSharedFile::Detach
+## <a name="csharedfiledetach"></a><a name="detach"></a>ファイル::Dエタッハ
 
-メモリファイルを閉じてメモリブロックからデタッチするには、この関数を呼び出します。
+メモリ ファイルを閉じ、メモリ ブロックからデタッチします。
 
 ```
 HGLOBAL Detach();
@@ -100,15 +100,15 @@ HGLOBAL Detach();
 
 ### <a name="return-value"></a>戻り値
 
-メモリファイルの内容を格納しているメモリブロックのハンドル。
+メモリ ファイルの内容を格納するメモリ ブロックのハンドル。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-**Detach**によって返されたハンドルを使用して[SetHandle](#sethandle)を呼び出すことで、再度開くことができます。
+**を**呼び出すことによって、再び開くことができます[。](#sethandle)
 
-##  <a name="sethandle"></a>  CSharedFile::SetHandle
+## <a name="csharedfilesethandle"></a><a name="sethandle"></a>ファイルを共有します。
 
-グローバルメモリのブロックを`CSharedFile`オブジェクトにアタッチするには、この関数を呼び出します。
+`CSharedFile`オブジェクトにグローバル メモリのブロックをアタッチします。
 
 ```
 void SetHandle(
@@ -118,18 +118,18 @@ void SetHandle(
 
 ### <a name="parameters"></a>パラメーター
 
-*hGlobalMemory*<br/>
-にアタッチするグローバルメモリへのハンドル`CSharedFile`。
+*を大きくるメモリ*<br/>
+に接続するグローバル メモリへのハンドル`CSharedFile`。
 
-*bAllowGrow*<br/>
-メモリブロックの拡張を許可するかどうかを指定します。
+*成長を許可する*<br/>
+メモリ ブロックの拡張を許可するかどうかを指定します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-*Ballowgrow*が0以外の場合は、メモリブロックのサイズよりも多くのバイトをファイルに書き込もうとするなど、必要に応じてメモリブロックのサイズが増加します。
+*bAllowGrow*が 0 以外の場合、メモリ ブロックのサイズよりも多くのバイトをファイルに書き込もうとした場合など、必要に応じてメモリ ブロックのサイズが増加します。
 
 ## <a name="see-also"></a>関連項目
 
-[CMemFile クラス](../../mfc/reference/cmemfile-class.md)<br/>
-[階層図](../../mfc/hierarchy-chart.md)<br/>
-[CMemFile クラス](../../mfc/reference/cmemfile-class.md)
+[CMemファイルクラス](../../mfc/reference/cmemfile-class.md)<br/>
+[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
+[CMemファイルクラス](../../mfc/reference/cmemfile-class.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - run-time libraries
 - CRT, reference
 ms.assetid: a503e11c-8dca-4846-84fb-025a826c32b8
-ms.openlocfilehash: 4e45194e5dc5fcd3dc9e13ec3da4cd1c76980c2f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.openlocfilehash: 9193e5c38c01f9dddcf0a8cd324d07f5dd90cb5e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50589463"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81334433"
 ---
 # <a name="c-run-time-library-reference"></a>C ランタイム ライブラリ リファレンス
 
@@ -35,10 +35,13 @@ C ランタイム ライブラリを構成する .lib ファイルについて�
 [グローバル定数](../c-runtime-library/global-constants.md)<br/>
 ランタイム ライブラリによって定義されるグローバル定数へのリンクがあります。
 
+[グローバル状態](../c-runtime-library/global-state.md)<br/>
+C ランタイム ライブラリのグローバル状態のスコープについて説明します。
+
 [関数リファレンス (アルファベット順)](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
 すべての C ランタイム ライブラリ関数をアルファベット順に一覧したエントリポイントの目次があります。
 
-[汎用テキスト マップ](../c-runtime-library/generic-text-mappings.md)<br/>
+[汎用テキスト マッピング](../c-runtime-library/generic-text-mappings.md)<br/>
 Tchar.h で定義されている汎用テキスト マップへのリンクがあります。
 
 [言語および国/地域識別文字列](../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>

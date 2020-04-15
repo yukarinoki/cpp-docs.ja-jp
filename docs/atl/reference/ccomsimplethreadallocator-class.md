@@ -1,5 +1,5 @@
 ---
-title: CComSimpleThreadAllocator クラス
+title: クラスを単純にスレッド化クラス
 ms.date: 11/04/2016
 f1_keywords:
 - CComSimpleThreadAllocator
@@ -11,16 +11,16 @@ helpviewer_keywords:
 - CComSimpleThreadAllocator class
 - ATL threads, allocating
 ms.assetid: 66b2166a-8c50-49fd-b8e4-7f293470327d
-ms.openlocfilehash: ef1f86ca832674ba5710083b08b67f0a775a7a33
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4a3cce492db4db9f46aeb4efe738ee6a594ddcfc
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62246154"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81327345"
 ---
-# <a name="ccomsimplethreadallocator-class"></a>CComSimpleThreadAllocator クラス
+# <a name="ccomsimplethreadallocator-class"></a>クラスを単純にスレッド化クラス
 
-このクラスは、クラスのスレッドの選択を管理`CComAutoThreadModule`します。
+このクラスは、 クラス`CComAutoThreadModule`のスレッド選択を管理します。
 
 ## <a name="syntax"></a>構文
 
@@ -34,19 +34,19 @@ class CComSimpleThreadAllocator
 
 |名前|説明|
 |----------|-----------------|
-|[CComSimpleThreadAllocator::GetThread](#getthread)|スレッドを選択します。|
+|[をクリックします。](#getthread)|スレッドを選択します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-`CComSimpleThreadAllocator` スレッドの選択を管理[CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md)します。 `CComSimpleThreadAllocator::GetThread` 単に各スレッドが繰り返しし、シーケンス内の次の 1 つ返されます。
+`CComSimpleThreadAllocator`のスレッドの選択[を管理します](../../atl/reference/ccomautothreadmodule-class.md)。 `CComSimpleThreadAllocator::GetThread`各スレッドを循環して、シーケンス内の次のスレッドを返すだけです。
 
 ## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlbase.h
 
-##  <a name="getthread"></a>  CComSimpleThreadAllocator::GetThread
+## <a name="ccomsimplethreadallocatorgetthread"></a><a name="getthread"></a>をクリックします。
 
-シーケンス内の次のスレッドを指定することによって、スレッドを選択します。
+シーケンス内の次のスレッドを指定して、スレッドを選択します。
 
 ```
 int GetThread(CComApartment* /* pApt */, int nThreads);
@@ -54,23 +54,23 @@ int GetThread(CComApartment* /* pApt */, int nThreads);
 
 ### <a name="parameters"></a>パラメーター
 
-*pApt*<br/>
+*プアプト*<br/>
 ATL の既定の実装では使用されません。
 
-*nThreads*<br/>
+*nスレッド*<br/>
 EXE モジュール内のスレッドの最大数。
 
 ### <a name="return-value"></a>戻り値
 
-0 までの整数と (*nThreads* - 1)。 EXE モジュール内のスレッドのいずれかを識別します。
+0 と (*nThreads* - 1) の間の整数。 EXE モジュール内のスレッドの 1 つを識別します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-オーバーライドできます`GetThread`選択範囲のさまざまなメソッドを提供したりの使用、 *pApt*パラメーター。
+オーバーライド`GetThread`して、異なる選択方法を提供したり *、pApt*パラメーターを使用したりできます。
 
-`GetThread` によって呼び出される[CComAutoThreadModule::CreateInstance](../../atl/reference/ccomautothreadmodule-class.md#createinstance)します。
+`GetThread`によって呼び出[されます](../../atl/reference/ccomautothreadmodule-class.md#createinstance)。
 
 ## <a name="see-also"></a>関連項目
 
-[CComApartment クラス](../../atl/reference/ccomapartment-class.md)<br/>
+[コムアパートメント クラス](../../atl/reference/ccomapartment-class.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

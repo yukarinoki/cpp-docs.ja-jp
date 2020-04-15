@@ -1,8 +1,9 @@
 ---
 title: _purecall
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _purecall
+- _o__purecall
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ntoskrnl.exe
 - ucrtbase.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - _purecall function
 - purecall function
 ms.assetid: 56135d9b-3403-4e22-822d-e714523801cc
-ms.openlocfilehash: 5d62ec30731ce26c4683afc88474d4bddb63a697
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: f841bc70a4a5365bb9cc6086dd752bd2a1b583ed
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70950166"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81338483"
 ---
 # <a name="_purecall"></a>_purecall
 
@@ -43,15 +45,17 @@ ms.locfileid: "70950166"
 extern "C" int __cdecl _purecall();
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-この**関数は、microsoft** C++コンパイラの microsoft 固有の実装の詳細を示しています。 この関数はコードで直接呼び出されるものではなく、パブリック ヘッダー宣言がありません。 C ランタイム ライブラリのパブリック エクスポートであるため、ここで説明しています。
+**_purecall**関数は、マイクロソフト固有の実装の詳細です。 この関数はコードで直接呼び出されるものではなく、パブリック ヘッダー宣言がありません。 C ランタイム ライブラリのパブリック エクスポートであるため、ここで説明しています。
 
-純粋仮想関数には実装がないため、この関数への呼び出しはエラーになります。 純粋仮想関数が呼び出されたときに、コンパイラによって、 **_ puリコール**エラーハンドラー関数を呼び出すコードが生成されます。 既定**では、プログラムが終了し**ます。 プロセスに対して設定されている場合、この関数は、終了する前に、**すべてのハンドラー**関数を呼び出し**ます (_a** )。 純粋仮想関数の呼び出し用に独自のエラー ハンドラー関数をインストールして呼び出しをキャッチし、デバッグまたはレポート作成に使用することができます。 独自のエラーハンドラーを使用するには、**ハンドラー**シグネチャを持つ関数を作成し、 [_set_purecall_handler](get-purecall-handler-set-purecall-handler.md)を使用してそれを現在のハンドラーにします。
+純粋仮想関数には実装がないため、この関数への呼び出しはエラーになります。 コンパイラは、純粋仮想関数が呼び出されたときに **_purecall**エラー ハンドラ関数を呼び出すコードを生成します。 既定では **、_purecall**プログラムを終了します。 終了する前に **、_purecall**関数は、プロセスに対して設定されている場合 **、_purecall_handler**関数を呼び出します。 純粋仮想関数の呼び出し用に独自のエラー ハンドラーの関数をインストールして呼び出しをキャッチし、デバッグまたはレポート作成に使用することができます。 独自のエラー ハンドラを使用するには **、_purecall_handler**シグネチャを持つ関数を作成し[、_set_purecall_handler](get-purecall-handler-set-purecall-handler.md)を使用して現在のハンドラにします。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-**_ Puリコール**関数には、ヘッダー宣言がありません。 Stdlib.h>**の typedef は**、> で\<定義されています。
+**_purecall**関数にヘッダー宣言がありません。 **_purecall_handler**の型定義は stdlib.h>で\<定義されます。
 
 ## <a name="see-also"></a>関連項目
 

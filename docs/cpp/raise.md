@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - __raise keyword [C++]
 ms.assetid: 6f1ae418-5f0f-48b6-9f6e-8ea7e66b239a
-ms.openlocfilehash: 9238e8e3e2fcd2c2f8b6431cfb0a79d452c5adf3
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: eb3ab24378071663b2a6a1abab700b81c3172419
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80179173"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81317233"
 ---
 # <a name="__raise"></a>__raise
 
@@ -26,12 +26,12 @@ __raise method-declarator;
 
 ## <a name="remarks"></a>解説
 
-マネージド コードからは、イベントが定義されたクラス内からのみイベントを発生させることができます。 詳細については、[イベント](../extensions/event-cpp-component-extensions.md)を参照してください。
+マネージド コードからは、イベントが定義されたクラス内からのみイベントを発生させることができます。 詳細については[、イベント](../extensions/event-cpp-component-extensions.md)を参照してください。
 
-キーワード **__raise**を指定すると、以外のイベントを呼び出すとエラーが発生します。
+キーワード **__raise**を呼び出すと、非イベントを呼び出すとエラーが生成されます。
 
 > [!NOTE]
->  テンプレート クラスまたは構造体にイベントを含めることはできません。
+> テンプレート クラスまたは構造体にイベントを含めることはできません。
 
 ## <a name="example"></a>例
 
@@ -59,8 +59,8 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[キーワード](../cpp/keywords-cpp.md)<br/>
+[Keywords](../cpp/keywords-cpp.md)<br/>
 [イベント処理](../cpp/event-handling.md)<br/>
 [ランタイム プラットフォームのコンポーネントの拡張機能](../extensions/component-extensions-for-runtime-platforms.md)

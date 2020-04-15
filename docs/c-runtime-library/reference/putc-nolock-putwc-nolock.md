@@ -1,9 +1,11 @@
 ---
 title: _putc_nolock、_putwc_nolock
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _putc_nolock
 - _putwc_nolock
+- _o__putc_nolock
+- _o__putwc_nolock
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -37,12 +40,12 @@ helpviewer_keywords:
 - _puttc_nolock function
 - _putwc_nolock function
 ms.assetid: 3cfc7f21-c9e8-4b7f-b0fb-af0d4d85e7e1
-ms.openlocfilehash: fdec6373f79fd711b371014fc58e17c190a26e95
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: aa96275b29d2510400622f52fa34c58ae251ff6c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70950119"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81338470"
 ---
 # <a name="_putc_nolock-_putwc_nolock"></a>_putc_nolock、_putwc_nolock
 
@@ -63,21 +66,23 @@ wint_t _putwc_nolock(
 
 ### <a name="parameters"></a>パラメーター
 
-*c*<br/>
+*C*<br/>
 書き込む文字。
 
-*一連*<br/>
+*ストリーム*<br/>
 **FILE** 構造体へのポインター。
 
 ## <a name="return-value"></a>戻り値
 
 「**putc、putwc**」をご覧ください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**_putc_nolock**と **_putwc_nolock** **は、他**のスレッドによる干渉から保護されないことを除いて、サフィックスなしのバージョンと同じです。 他のスレッドをロックアウトするオーバーヘッドが発生しないため、処理が速くなる場合があります。 これらの関数は、シングルスレッド アプリケーション、呼び出し元のスコープで既にスレッド分離を処理している場合などのスレッドセーフなコンテキストでのみ使用してください。
+**_putc_nolock**と **_putwc_nolock**は、他のスレッドによる干渉から保護されない点を除いて **、_nolock**サフィックスのないバージョンと同じです。 他のスレッドをロックアウトするオーバーヘッドが発生しないため、処理が速くなる場合があります。 これらの関数は、シングルスレッド アプリケーション、呼び出し元のスコープで既にスレッド分離を処理している場合などのスレッドセーフなコンテキストでのみ使用してください。
 
-**_putwc_nolock**は、 **_putc_nolock**のワイド文字バージョンです。ストリームが ANSI モードで開かれている場合、2つの関数の動作は同じになります。 **_putc_nolock**は、現在 UNICODE ストリームへの出力をサポートしていません。
+**_putwc_nolock**はワイド文字の **_putc_nolock**です。この 2 つの関数は、ANSI モードでストリームが開かれた場合に同じように動作します。 **_putc_nolock**は現在 UNICODE ストリームへの出力をサポートしていません。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -87,12 +92,12 @@ wint_t _putwc_nolock(
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**_putc_nolock**|\<stdio.h>|
 |**_putwc_nolock**|\<stdio.h> または \<wchar.h>|
 
-コンソールは、ユニバーサル Windows プラットフォーム (UWP) アプリではサポートされていません。 コンソール、 **stdin**、 **stdout**、および**stderr**に関連付けられている標準ストリームハンドルは、C ランタイム関数が UWP アプリで使用できるようになる前にリダイレクトする必要があります。 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+ユニバーサル Windows プラットフォーム (UWP) アプリでは、コンソールはサポートされていません。 コンソール **、stdin 、stdout**、および**stdout****stderr**に関連付けられている標準ストリーム ハンドルは、C ランタイム関数が UWP アプリで使用する前にリダイレクトする必要があります。 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="libraries"></a>ライブラリ
 
@@ -123,7 +128,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>出力
 
 ```Output
 This is the line of output

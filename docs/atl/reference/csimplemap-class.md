@@ -1,5 +1,5 @@
 ---
-title: CSimpleMap クラス
+title: クラス
 ms.date: 11/04/2016
 f1_keywords:
 - CSimpleMap
@@ -23,16 +23,16 @@ f1_keywords:
 helpviewer_keywords:
 - CSimpleMap class
 ms.assetid: 61b06eb4-ae73-44b0-a305-0afb5a33e8b1
-ms.openlocfilehash: afd9f017bb0fb9a95a0ed4fd135dcbd5ea4ddba2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b8650f36ac3d190207870616754dcd596cb7cc45
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62277943"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81330802"
 ---
-# <a name="csimplemap-class"></a>CSimpleMap クラス
+# <a name="csimplemap-class"></a>クラス
 
-このクラスは、単純なマッピングの配列のサポートを提供します。
+このクラスは、単純なマッピング配列をサポートします。
 
 ## <a name="syntax"></a>構文
 
@@ -43,14 +43,14 @@ class CSimpleMap
 
 #### <a name="parameters"></a>パラメーター
 
-*TKey*<br/>
-キーの要素の型。
+*Tkey*<br/>
+キー要素の型。
 
 *TVal*<br/>
-要素の値の型。
+値要素の型。
 
 *TEqual*<br/>
-型の要素に対して等値テストを定義する、特徴オブジェクト`T`します。
+型の要素の等価性テストを定義する特性オブジェクト`T`。
 
 ## <a name="members"></a>メンバー
 
@@ -58,43 +58,43 @@ class CSimpleMap
 
 |名前|説明|
 |----------|-----------------|
-|[CSimpleMap::_ArrayElementType](#_arrayelementtype)|値の型の Typedef。|
-|[CSimpleMap::_ArrayKeyType](#_arraykeytype)|キーの種類の Typedef。|
+|[シンプルマップ::_ArrayElementType](#_arrayelementtype)|値型の Typedef。|
+|[シンプルマップ::_ArrayKeyType](#_arraykeytype)|キーの型の型定義。|
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
 |名前|説明|
 |----------|-----------------|
-|[CSimpleMap::CSimpleMap](#csimplemap)|コンストラクターです。|
-|[CSimpleMap::~CSimpleMap](#dtor)|デストラクターです。|
+|[シンプルマップ::Cシンプルマップ](#csimplemap)|コンストラクターです。|
+|[シンプルマップ::~シンプルマップ](#dtor)|デストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CSimpleMap::Add](#add)|マップの配列には、キーと関連付けられている値を追加します。|
-|[CSimpleMap::FindKey](#findkey)|特定のキーを検索します。|
-|[CSimpleMap::FindVal](#findval)|特定の値を検索します。|
-|[CSimpleMap::GetKeyAt](#getkeyat)|指定したキーを取得します。|
-|[CSimpleMap::GetSize](#getsize)|マッピングの配列内のエントリの数を返します。|
-|[CSimpleMap::GetValueAt](#getvalueat)|指定した値を取得します。|
-|[CSimpleMap::Lookup](#lookup)|指定したキーに関連付けられている値を返します。|
-|[CSimpleMap::Remove](#remove)|キーと一致する値を削除します。|
-|[CSimpleMap::RemoveAll](#removeall)|すべてのキーと値を削除します。|
-|[CSimpleMap::RemoveAt](#removeat)|特定のキーと一致する値を削除します。|
-|[CSimpleMap::ReverseLookup](#reverselookup)|指定された値に関連付けられているキーを返します。|
-|[CSimpleMap::SetAt](#setat)|指定したキーに関連付けられている値を設定します。|
-|[CSimpleMap::SetAtIndex](#setatindex)|特定のキーと値を設定します。|
+|[シンプルマップ::追加](#add)|マップ配列にキーと関連する値を追加します。|
+|[シンプルマップ::キーを検索](#findkey)|特定のキーを検索します。|
+|[シンプルマップ::FindVal](#findval)|特定の値を検索します。|
+|[シンプルマップ::ゲットキーアット](#getkeyat)|指定したキーを取得します。|
+|[シンプルマップ::ゲットサイズ](#getsize)|マッピング配列のエントリ数を返します。|
+|[を使用します。](#getvalueat)|指定した値を取得します。|
+|[単一のマップ::ルックアップ](#lookup)|指定されたキーに関連付けられた値を返します。|
+|[シンプルマップ::削除](#remove)|キーと一致する値を削除します。|
+|[シンプルマップ::すべて削除](#removeall)|すべてのキーと値を削除します。|
+|[シンプルマップ::削除アット](#removeat)|特定のキーと一致する値を削除します。|
+|[単一のマップ::逆ルックアップ](#reverselookup)|指定された値に関連付けられたキーを返します。|
+|[シンプルマップ::セットアット](#setat)|指定したキーに関連付けられた値を設定します。|
+|[シンプルマップ::セットアインデックス](#setatindex)|特定のキーと値を設定します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-`CSimpleMap` 指定された型の単純なマッピングの配列をサポート`T`、順序付けられていない主な要素と関連付けられた値の配列を管理します。
+`CSimpleMap`は、任意の型`T`の単純なマッピング配列をサポートします。
 
-パラメーター`TEqual`型の 2 つの要素に対して等値関数を定義する手段を提供します`T`します。 ようなクラスを作成して[CSimpleMapEqualHelper](../../atl/reference/csimplemapequalhelper-class.md)、すべての指定された配列の等値テストの動作を変更することはできます。 たとえば、ポインターの配列を扱う場合、ポインターが参照値に応じてとして等価性を定義すると便利ですがあります。 既定の実装を利用**operator==()** します。
+このパラメーター`TEqual`は、型の 2 つの要素に対して等価関数を`T`定義する手段を提供します。 [CSimpleMapEqualHelper](../../atl/reference/csimplemapequalhelper-class.md)に似たクラスを作成することで、任意の配列の等価性テストの動作を変更できます。 たとえば、ポインターの配列を扱う場合、ポインターが参照する値に応じて等値を定義すると便利です。 デフォルトの実装では **、operator==() を**使用します。
 
-両方`CSimpleMap`と[CSimpleArray](../../atl/reference/csimplearray-class.md)以前の ATL との互換性をリリースするより完全かつ効率的なコレクションの実装が提供される[CAtlArray](../../atl/reference/catlarray-class.md)と[CAtlMap](../../atl/reference/catlmap-class.md)します。
+CSimpleArray と`CSimpleMap` [CSimpleArray](../../atl/reference/csimplearray-class.md)の両方が以前の ATL リリースとの互換性のために提供されており、より完全で効率的なコレクションの実装は[、CAtlArray](../../atl/reference/catlarray-class.md)と[CAtlMap](../../atl/reference/catlmap-class.md)によって提供されます。
 
-ATL と MFC での他のマップ コレクションとは異なりこのクラスは単純な配列と検索順次検索が必要です。 `CAtlMap` 配列には、多数の要素が含まれている場合に使用する必要があります。
+ATL および MFC の他のマップ コレクションとは異なり、このクラスは単純な配列で実装され、検索検索には線形検索が必要です。 `CAtlMap`配列に多数の要素が含まれている場合に使用する必要があります。
 
 ## <a name="requirements"></a>必要条件
 
@@ -104,9 +104,9 @@ ATL と MFC での他のマップ コレクションとは異なりこのクラ�
 
 [!code-cpp[NVC_ATL_Utilities#91](../../atl/codesnippet/cpp/csimplemap-class_1.cpp)]
 
-##  <a name="add"></a>  CSimpleMap::Add
+## <a name="csimplemapadd"></a><a name="add"></a>シンプルマップ::追加
 
-マップの配列には、キーと関連付けられている値を追加します。
+マップ配列にキーと関連する値を追加します。
 
 ```
 BOOL Add(const TKey& key, const TVal& val);
@@ -115,36 +115,36 @@ BOOL Add(const TKey& key, const TVal& val);
 ### <a name="parameters"></a>パラメーター
 
 *key*<br/>
-キー。
+キーです。
 
-*val*<br/>
-関連する値。
+*ヴァル*<br/>
+関連付けられた値。
 
 ### <a name="return-value"></a>戻り値
 
-かどうか、キーと値が正常に追加されたそれ以外の場合は TRUE を返します。
+キーと値が正常に追加された場合は TRUE を返し、それ以外の場合は FALSE を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-各キーと値のペアは、マップ配列のメモリが解放され、再割り当て、各データは常に連続して格納することを確認するにはエラーの原因を追加します。 2 番目のキー要素常に直接依存してメモリ内の最初のキー要素など。
+キーと値のペアを追加するたびに、マッピング配列のメモリが解放され、再割り当てされ、それぞれのデータが常に連続して格納されるようにします。 つまり、2 番目のキー要素は常にメモリ内の最初のキー要素に直接従います。
 
-##  <a name="_arrayelementtype"></a>  CSimpleMap::_ArrayElementType
+## <a name="csimplemap_arrayelementtype"></a><a name="_arrayelementtype"></a>シンプルマップ::_ArrayElementType
 
-キーの種類の typedef。
+キーの型の型定義。
 
 ```
 typedef TVal _ArrayElementType;
 ```
 
-##  <a name="_arraykeytype"></a>  CSimpleMap::_ArrayKeyType
+## <a name="csimplemap_arraykeytype"></a><a name="_arraykeytype"></a>シンプルマップ::_ArrayKeyType
 
-値の型の typedef。
+値型の型定義。
 
 ```
 typedef TKey _ArrayKeyType;
 ```
 
-##  <a name="csimplemap"></a>  CSimpleMap::CSimpleMap
+## <a name="csimplemapcsimplemap"></a><a name="csimplemap"></a>シンプルマップ::Cシンプルマップ
 
 コンストラクターです。
 
@@ -152,11 +152,11 @@ typedef TKey _ArrayKeyType;
 CSimpleMap();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 データ メンバーを初期化します。
 
-##  <a name="dtor"></a>  CSimpleMap::~CSimpleMap
+## <a name="csimplemapcsimplemap"></a><a name="dtor"></a>シンプルマップ::~シンプルマップ
 
 デストラクターです。
 
@@ -164,11 +164,11 @@ CSimpleMap();
 ~CSimpleMap();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-割り当てられているすべてのリソースを解放します。
+割り当てられたすべてのリソースを解放します。
 
-##  <a name="findkey"></a>  CSimpleMap::FindKey
+## <a name="csimplemapfindkey"></a><a name="findkey"></a>シンプルマップ::キーを検索
 
 特定のキーを検索します。
 
@@ -183,9 +183,9 @@ int FindKey(const TKey& key) const;
 
 ### <a name="return-value"></a>戻り値
 
-存在する場合は、キーのインデックスを返しますそれ以外の場合は-1 を返します。
+見つかった場合はキーのインデックスを返し、それ以外の場合は -1 を返します。
 
-##  <a name="findval"></a>  CSimpleMap::FindVal
+## <a name="csimplemapfindval"></a><a name="findval"></a>シンプルマップ::FindVal
 
 特定の値を検索します。
 
@@ -195,14 +195,14 @@ int FindVal(const TVal& val) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*val*<br/>
-検索対象の値。
+*ヴァル*<br/>
+検索する値。
 
 ### <a name="return-value"></a>戻り値
 
-値のインデックスが見つかった場合は、それ以外の場合は-1 を返しますを返します。
+見つかった場合は値のインデックスを返し、それ以外の場合は -1 を返します。
 
-##  <a name="getkeyat"></a>  CSimpleMap::GetKeyAt
+## <a name="csimplemapgetkeyat"></a><a name="getkeyat"></a>シンプルマップ::ゲットキーアット
 
 指定したインデックス位置にあるキーを取得します。
 
@@ -217,15 +217,15 @@ TKey& GetKeyAt(int nIndex) const;
 
 ### <a name="return-value"></a>戻り値
 
-によって参照されるキーを返します*nIndex*します。
+*nIndex*によって参照されるキーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-渡されたインデックス*nIndex*に意味のある戻り値に対して有効である必要があります。
+*nIndex*によって渡されるインデックスは、戻り値を意味のあるものにするために有効である必要があります。
 
-##  <a name="getsize"></a>  CSimpleMap::GetSize
+## <a name="csimplemapgetsize"></a><a name="getsize"></a>シンプルマップ::ゲットサイズ
 
-マッピングの配列内のエントリの数を返します。
+マッピング配列のエントリ数を返します。
 
 ```
 int GetSize() const;
@@ -233,9 +233,9 @@ int GetSize() const;
 
 ### <a name="return-value"></a>戻り値
 
-マッピングの配列 (キーと値は 1 つのエントリ) のエントリの数を返します。
+マッピング配列内のエントリ数 (キーと値は 1 エントリ) を返します。
 
-##  <a name="getvalueat"></a>  CSimpleMap::GetValueAt
+## <a name="csimplemapgetvalueat"></a><a name="getvalueat"></a>を使用します。
 
 特定のインデックス位置にある値を取得します。
 
@@ -246,19 +246,19 @@ TVal& GetValueAt(int nIndex) const;
 ### <a name="parameters"></a>パラメーター
 
 *nIndex*<br/>
-戻り値のインデックス。
+返す値のインデックス。
 
 ### <a name="return-value"></a>戻り値
 
-によって参照される値を返します*nIndex*します。
+*nIndex*によって参照される値を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-渡されたインデックス*nIndex*に意味のある戻り値に対して有効である必要があります。
+*nIndex*によって渡されるインデックスは、戻り値を意味のあるものにするために有効である必要があります。
 
-##  <a name="lookup"></a>  CSimpleMap::Lookup
+## <a name="csimplemaplookup"></a><a name="lookup"></a>単一のマップ::ルックアップ
 
-指定したキーに関連付けられている値を返します。
+指定されたキーに関連付けられた値を返します。
 
 ```
 TVal Lookup(const TKey& key) const;
@@ -267,13 +267,13 @@ TVal Lookup(const TKey& key) const;
 ### <a name="parameters"></a>パラメーター
 
 *key*<br/>
-キー。
+キーです。
 
 ### <a name="return-value"></a>戻り値
 
-関連付けられている値を返します。 一致するキーが存在すると、NULL がない場合が返されます。
+関連付けられた値を返します。 一致するキーが見つからない場合は、NULL が返されます。
 
-##  <a name="remove"></a>  CSimpleMap::Remove
+## <a name="csimplemapremove"></a><a name="remove"></a>シンプルマップ::削除
 
 キーと一致する値を削除します。
 
@@ -284,13 +284,13 @@ BOOL Remove(const TKey& key);
 ### <a name="parameters"></a>パラメーター
 
 *key*<br/>
-キー。
+キーです。
 
 ### <a name="return-value"></a>戻り値
 
-かどうか、キーと一致する値は、正常に削除された場合は FALSE それ以外の場合は TRUE を返します。
+キーと一致する値が正常に削除された場合は TRUE を返し、それ以外の場合は FALSE を返します。
 
-##  <a name="removeall"></a>  CSimpleMap::RemoveAll
+## <a name="csimplemapremoveall"></a><a name="removeall"></a>シンプルマップ::すべて削除
 
 すべてのキーと値を削除します。
 
@@ -298,13 +298,13 @@ BOOL Remove(const TKey& key);
 void RemoveAll();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-マッピングの配列オブジェクトからすべてのキーと値を削除します。
+マッピング配列オブジェクトからすべてのキーと値を削除します。
 
-##  <a name="removeat"></a>  CSimpleMap::RemoveAt
+## <a name="csimplemapremoveat"></a><a name="removeat"></a>シンプルマップ::削除アット
 
-キーと指定したインデックスに関連付けられている値を削除します。
+指定したインデックス位置にあるキーと関連付けられた値を削除します。
 
 ```
 BOOL RemoveAt(int nIndex);
@@ -313,15 +313,15 @@ BOOL RemoveAt(int nIndex);
 ### <a name="parameters"></a>パラメーター
 
 *nIndex*<br/>
-キーと関連付けられている値を削除するインデックス。
+削除するキーと関連付けられた値のインデックス。
 
 ### <a name="return-value"></a>戻り値
 
-指定されたインデックスが無効なインデックスの場合は、成功した場合、FALSE の TRUE を返します。
+指定されたインデックスが無効なインデックスの場合は、成功時に TRUE を返します。
 
-##  <a name="reverselookup"></a>  CSimpleMap::ReverseLookup
+## <a name="csimplemapreverselookup"></a><a name="reverselookup"></a>単一のマップ::逆ルックアップ
 
-指定された値に関連付けられているキーを返します。
+指定された値に関連付けられたキーを返します。
 
 ```
 TKey ReverseLookup(const TVal& val) const;
@@ -329,16 +329,16 @@ TKey ReverseLookup(const TVal& val) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*val*<br/>
+*ヴァル*<br/>
 値。
 
 ### <a name="return-value"></a>戻り値
 
-関連付けられたキーを返します。 一致するキーが存在すると、NULL がない場合が返されます。
+関連付けられたキーを返します。 一致するキーが見つからない場合は、NULL が返されます。
 
-##  <a name="setat"></a>  CSimpleMap::SetAt
+## <a name="csimplemapsetat"></a><a name="setat"></a>シンプルマップ::セットアット
 
-指定したキーに関連付けられている値を設定します。
+指定したキーに関連付けられた値を設定します。
 
 ```
 BOOL SetAt(const TKey& key, const TVal& val);
@@ -347,18 +347,18 @@ BOOL SetAt(const TKey& key, const TVal& val);
 ### <a name="parameters"></a>パラメーター
 
 *key*<br/>
-キー。
+キーです。
 
-*val*<br/>
+*ヴァル*<br/>
 割り当てる新しい値。
 
 ### <a name="return-value"></a>戻り値
 
-キーが検出されましたが、いて、値が正常に変更はそれ以外の場合は TRUE を返します。
+キーが見つかり、値が正常に変更された場合は TRUE を返します。
 
-##  <a name="setatindex"></a>  CSimpleMap::SetAtIndex
+## <a name="csimplemapsetatindex"></a><a name="setatindex"></a>シンプルマップ::セットアインデックス
 
-指定したインデックス位置にあるキーと値を設定します。
+指定したインデックス位置にキーと値を設定します。
 
 ```
 BOOL SetAtIndex(
@@ -370,21 +370,21 @@ BOOL SetAtIndex(
 ### <a name="parameters"></a>パラメーター
 
 *nIndex*<br/>
-キーと値のペアを変更するを参照するインデックス。
+変更するキーと値の組み合わせを参照するインデックス。
 
 *key*<br/>
-新しいキー。
+新しいキーです。
 
-*val*<br/>
-新しい値。
+*ヴァル*<br/>
+新しい値です。
 
 ### <a name="return-value"></a>戻り値
 
-TRUE を返します正常に終了したかどうか、インデックスが無効です。
+成功した場合は TRUE を返し、インデックスが有効でない場合は FALSE を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-キーと値によって示される更新*nIndex*します。
+*nIndex*が指すキーと値の両方を更新します。
 
 ## <a name="see-also"></a>関連項目
 

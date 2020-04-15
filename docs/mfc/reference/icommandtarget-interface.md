@@ -1,5 +1,5 @@
 ---
-title: ICommandTarget インターフェイス
+title: インターフェイス
 ms.date: 11/04/2016
 f1_keywords:
 - ICommandTarget
@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - ICommandTarget interface [MFC]
 ms.assetid: dd9927f6-3479-4e7c-8ef9-13206cf901f3
-ms.openlocfilehash: a224b868ea1923bb4f84b0d682c71fadb63da572
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 865a8a27d96f84f536e40ec5a7bbbbdd9837dfcd
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62322070"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81356908"
 ---
-# <a name="icommandtarget-interface"></a>ICommandTarget インターフェイス
+# <a name="icommandtarget-interface"></a>インターフェイス
 
-コマンド ソース オブジェクトからのコマンドを受信するインターフェイスを使用するユーザー コントロールを提供します。
+コマンド ソース オブジェクトからコマンドを受け取るインターフェイスを持つユーザー コントロールを提供します。
 
 ## <a name="syntax"></a>構文
 
@@ -31,21 +31,21 @@ interface class ICommandTarget
 
 |名前|説明|
 |----------|-----------------|
-|[ICommandTarget::Initialize](#initialize)|コマンド ターゲット オブジェクトを初期化します。|
+|[I コマンドターゲット::初期化](#initialize)|コマンド ターゲット オブジェクトを初期化します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-MFC ビューでユーザー コントロールをホストするときに[CWinFormsView](../../mfc/reference/cwinformsview-class.md)ルート コマンドおよび更新コマンド UI メッセージをユーザー コントロールを MFC のコマンド (たとえば、フレームのメニュー項目やツールバーのボタン) を処理できるようにします。 実装することによって`ICommandTarget`、ユーザー コントロールへの参照を提供する、 [ICommandSource](../../mfc/reference/icommandsource-interface.md)オブジェクト。
+MFC ビューでユーザー コントロールをホストすると[、CWinFormsView](../../mfc/reference/cwinformsview-class.md)コマンドをルーティングし、コマンド UI メッセージをユーザー コントロールに更新して、MFC コマンド (フレーム メニュー項目やツール バー ボタンなど) を処理できるようにします。 を実装`ICommandTarget`すると、ユーザー コントロールに[ICommandSource](../../mfc/reference/icommandsource-interface.md)オブジェクトへの参照を与えます。
 
-「[方法:Windows フォーム コントロールにコマンド ルーティングを追加](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)を使用する方法の例については`ICommandTarget`します。
+の使用方法`ICommandTarget`の例については、「[方法 : Windows フォーム コントロールへのコマンド ルーティングの追加](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)」を参照してください。
 
-Windows フォームの使用に関する詳細については、次を参照してください。 [MFC における Windows フォーム ユーザー コントロールを使用して](../../dotnet/using-a-windows-form-user-control-in-mfc.md)します。
+Windows フォームの使用方法の詳細については、「 [MFC での Windows フォーム ユーザー コントロールの使用](../../dotnet/using-a-windows-form-user-control-in-mfc.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxwinforms.h (アセンブリ atlmfc\lib\mfcmifc80.dll で定義)
 
-##  <a name="initialize"></a> ICommandTarget::Initialize
+## <a name="icommandtargetinitialize"></a><a name="initialize"></a>I コマンドターゲット::初期化
 
 コマンド ターゲット オブジェクトを初期化します。
 
@@ -55,16 +55,16 @@ void Initialize(ICommandSource^ cmdSource);
 
 ### <a name="parameters"></a>パラメーター
 
-*cmdSource*<br/>
+*コマンドソース*<br/>
 コマンド ソース オブジェクトへのハンドル。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-MFC ビューでユーザー コントロールをホストする場合、CWinFormsView は MFC のコマンドを処理することを許可するユーザー コントロールにコマンドおよび更新コマンド UI メッセージをルーティングします。
+MFC ビューでユーザー コントロールをホストすると、コマンドが CWinFormsView によってコマンドのルーティングと更新コマンド UI メッセージがユーザー コントロールに転送され、MFC コマンドを処理できるようになります。
 
-このメソッドは、コマンド ターゲット オブジェクトを初期化し、指定したコマンドのソース オブジェクト cmdSource に関連付けます。 ユーザー コントロール クラスの実装で呼び出す必要があります。 初期化時に、呼び出し元の ICommandSource::AddCommandHandler Initialize 実装では、コマンド ソース オブジェクトとコマンド ハンドラーを登録してください。 表示する方法。これを実行する初期化を使用する方法の例については、Windows フォーム コントロールにコマンド ルーティングを追加します。
+このメソッドは、コマンド ターゲット オブジェクトを初期化し、指定したコマンド ソース オブジェクト cmdSource に関連付けます。 これは、ユーザー コントロール クラスの実装で呼び出す必要があります。 初期化時に、Initialize 実装で ICommandSource::AddCommandHandler を呼び出してコマンド ソース オブジェクトにコマンド ハンドラーを登録する必要があります。 初期化を使用してこれを行う方法の例については、「方法: Windows フォーム コントロールへのコマンド ルーティングの追加」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
 [方法: Windows フォーム コントロールにコマンド ルーティングを追加する](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)<br/>
-[ICommandSource インターフェイス](../../mfc/reference/icommandsource-interface.md)
+[インターフェイス](../../mfc/reference/icommandsource-interface.md)

@@ -5,16 +5,16 @@ ms.topic: reference
 helpviewer_keywords:
 - ^ handle to object [C++]
 ms.assetid: 70c411e6-be57-4468-a944-6ea7be89f392
-ms.openlocfilehash: bdf19b6b472cd4d224d749f59c75ca77d11c34f8
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
-ms.translationtype: HT
+ms.openlocfilehash: 3d08b2294da1599282feeb1739331c31d64a9e59
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "65516697"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81358330"
 ---
 # <a name="handle-to-object-operator---ccli-and-ccx"></a>オブジェクト演算子 (^) へのハンドル (C++/CLI および C++/CX)
 
-*ハンドル宣言子* (`^`、"ハット" と読みます) は、[指定子](../cpp/overview-of-declarators.md)の型を変更します。この指定子の型は、宣言されたオブジェクトがアクセス不能になったとシステムが判断すると、そのオブジェクトが自動的に削除されることを意味します。
+*ハンドル宣言子*(`^`,"hat" と発音) は、オブジェクトがアクセスできなくなったと判断したときに、宣言されたオブジェクトが自動的に削除されるように型[指定子](../cpp/overview-of-declarators.md)を変更します。
 
 ## <a name="accessing-the-declared-object"></a>宣言されたオブジェクトへのアクセス
 
@@ -28,7 +28,7 @@ ms.locfileid: "65516697"
 
 オブジェクトをインスタンス化する方法の詳細については、「[ref new](ref-new-gcnew-cpp-component-extensions.md)」を参照してください。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/ZW`
 
@@ -38,9 +38,9 @@ ms.locfileid: "65516697"
 
 ネイティブ C++ ポインター (`*`) と参照 (`&`) は、マネージド参照ではないため、それらが指し示すアドレスをガベージ コレクターは自動的に更新できません。 この問題を解決するには、ガベージ コレクターが認識しており自動的に更新できる変数を、ハンドル宣言子を使用して指定します。
 
-詳細については、「[方法 :ネイティブ型のハンドルを宣言する](../dotnet/how-to-declare-handles-in-native-types.md)」を参照してください。
+詳細については、「[方法 : ネイティブ型でハンドルを宣言](../dotnet/how-to-declare-handles-in-native-types.md)する 」を参照してください。
 
-### <a name="examples"></a>使用例
+### <a name="examples"></a>例
 
 このサンプルは、マネージド ヒープ上で参照型のインスタンスを作成する方法を示しています。  また、このサンプルでは、1 つのハンドルを別のハンドルで初期化することができ、その結果、ガベージ コレクトされたマネージド ヒープ上で同じオブジェクトへの参照が 2 つ作成されることも示しています。 1 つのハンドルに [nullptr](nullptr-cpp-component-extensions.md) を割り当てても、オブジェクトはガベージ コレクションの対象としてマークされないことに注意してください。
 
@@ -195,7 +195,7 @@ Array value: 7
 Cannot access array element 11, size is 10
 ```
 
-このサンプルでは、ネイティブ参照 (`&`) をマネージド型の **int** メンバーにバインドできないことを示しています。これは、ガベージ コレクトされたヒープに **int** が格納される可能性があり、またネイティブ参照がマネージド ヒープ上のオブジェクトの移動を追跡しないためです。 解決策は、ローカル変数を使用すること、または、`&` を `%` に変更して、追跡参照にすることです。
+このサンプルでは、int が`&`ガベージ コレクション ヒープに格納され、ネイティブ参照がマネージ ヒープ内のオブジェクトの移動を追跡しない場合があるため、ネイティブ参照 ( ) がマネージ型の**int**メンバーにバインドできない場合を示します。 **int** 解決策は、ローカル変数を使用すること、または、`&` を `%` に変更して、追跡参照にすることです。
 
 ```cpp
 // mcppv2_handle_5.cpp
@@ -217,11 +217,11 @@ int main() {
 }
 ```
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/clr`
 
 ## <a name="see-also"></a>関連項目
 
-[.NET および UWP でのコンポーネント拡張](component-extensions-for-runtime-platforms.md)<br/>
+[NET および UWP 用のコンポーネント拡張機能](component-extensions-for-runtime-platforms.md)<br/>
 [参照演算子の追跡](tracking-reference-operator-cpp-component-extensions.md)

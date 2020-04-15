@@ -1,10 +1,13 @@
 ---
 title: rint、rintf、rintl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - rintf
 - rintl
 - rint
+- _o_rint
+- _o_rintf
+- _o_rintl
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +34,12 @@ helpviewer_keywords:
 - rint function
 - rintl function
 ms.assetid: 312ae3e6-278c-459a-9393-11b8f87d9184
-ms.openlocfilehash: ac9db3ee5a50bb334754a8a1191638a319829b97
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 6489b7ebed5246738fb660dffd07a0b8f8ed9743
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80170892"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81332768"
 ---
 # <a name="rint-rintf-rintl"></a>rint、rintf、rintl
 
@@ -56,29 +60,31 @@ long double rint( long double x );  // C++ only
 
 ### <a name="parameters"></a>パラメーター
 
-*x*<br/>
+*X*<br/>
 丸める浮動小数点値。
 
 ## <a name="return-value"></a>戻り値
 
-**Rint**関数は、最も近い整数を表す浮動小数点値を*x*に返します。 中間の値は、浮動小数点丸めモードの現在の設定に従って丸められます。これは、 **nearbyint**関数と同じです。 **Nearbyint**関数とは異なり、 **rint**関数は、結果が引数の値と異なる場合に**FE_INEXACT**浮動小数点例外を発生させる可能性があります。 エラーの戻り値はありません。
+**rint**関数は *、x*に最も近い整数を表す浮動小数点値を返します。 中間値は、**浮動小数点**丸めモードの現在の設定に従って丸められます。 **近辺**の関数とは異なり **、rint**関数は、結果が引数と値が異なる場合に **、FE_INEXACT**浮動小数点例外を発生させる可能性があります。 エラーの戻り値はありません。
 
-|入力|SEH 例外|**_matherr**例外的|
+|入力|SEH 例外|**_matherr**例外|
 |-----------|-------------------|--------------------------|
-|± ∞、QNAN、IND|なし|なし|
-|非正規化数|EXCEPTION_FLT_UNDERFLOW|なし|
+|± ∞、QNAN、IND|none|none|
+|非正規化数|EXCEPTION_FLT_UNDERFLOW|none|
 
 ## <a name="remarks"></a>解説
 
-でC++はオーバーロードが可能であるため、 **float 型**および**long** **double**型の値を受け取って返す**rint**のオーバーロードを呼び出すことができます。 C プログラムでは、 **rint**は常に**double**を受け取り、返します。
+C++ ではオーバーロードが可能なため **、float**値と**長****い倍精度**浮動小数点値を取得および戻す**rint**のオーバーロードを呼び出すことができます。 C プログラムでは **、rint**は常に二**重**を受け取って返します。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|Function|C ヘッダー|C++ ヘッダー|
+|機能|C ヘッダー|C++ ヘッダー|
 |--------------|--------------|------------------|
-|**rint**、 **rintf**、 **rintl**|\<math.h>|\<cmath>|
+|**リント**,**リンtf**,**リントル**|\<math.h>|\<cmath>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 
@@ -116,7 +122,7 @@ rintl(2.500000) is 3
 rintl(-2.500000) is -3
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [浮動小数点サポート](../../c-runtime-library/floating-point-support.md)<br/>
 [ceil、ceilf、ceill](ceil-ceilf-ceill.md)<br/>

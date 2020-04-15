@@ -1,9 +1,11 @@
 ---
 title: _searchenv_s、_wsearchenv_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wsearchenv_s
 - _searchenv_s
+- _o__searchenv_s
+- _o__wsearchenv_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-environment-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -39,12 +42,12 @@ helpviewer_keywords:
 - _searchenv_s function
 - environment paths
 ms.assetid: 47f9fc29-250e-4c09-b52e-9e9f0ef395ca
-ms.openlocfilehash: 606215fb7a2cce7929b29e2035f8e03556ca25e0
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 3d526c546e1496b3b13b14a12c9025cbd0347cd2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948801"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81332395"
 ---
 # <a name="_searchenv_s-_wsearchenv_s"></a>_searchenv_s、_wsearchenv_s
 
@@ -84,45 +87,47 @@ errno_t _wsearchenv_s(
 
 ### <a name="parameters"></a>パラメーター
 
-*ファイル名*<br/>
+*Filename*<br/>
 検索するファイルの名前。
 
-*varname*<br/>
+*ヴァルネーム*<br/>
 検索する環境。
 
-*pathname*<br/>
+*パス*<br/>
 完全パスを格納するバッファー。
 
-*numberOfElements*<br/>
+*要素の数*<br/>
 *パス名*バッファーのサイズ。
 
 ## <a name="return-value"></a>戻り値
 
 正常終了した場合は 0 を返します。失敗した場合はエラー コードを返します。
 
-*Filename*が空の文字列の場合、戻り値は**ENOENT**です。
+*filename*が空の文字列の場合、戻り値は**ENOENT**です。
 
 ### <a name="error-conditions"></a>エラー条件
 
-|*ファイル名*|*varname*|*pathname*|*numberOfElements*|戻り値|*パス名*の内容|
+|*Filename*|*ヴァルネーム*|*パス*|*要素の数*|戻り値|*パス名*の内容|
 |----------------|---------------|----------------|------------------------|------------------|----------------------------|
-|任意|任意|**NULL**|任意|**EINVAL**|N/A|
-|**NULL**|任意|任意|任意|**EINVAL**|変更されない|
-|任意|任意|任意|<= 0|**EINVAL**|変更されない|
+|any|any|**NULL**|any|**Einval**|該当なし|
+|**NULL**|any|any|any|**Einval**|変更されない|
+|any|any|any|<= 0|**Einval**|変更されない|
 
-上記のいずれかのエラー条件が発生すると、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように無効なパラメーター ハンドラ―が呼び出されます。 実行の継続が許可された場合、これらの関数は**errno**を**einval**に設定し、 **einval**を返します。
+上記のいずれかのエラー条件が発生すると、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように無効なパラメーター ハンドラ―が呼び出されます。 実行を続行できる場合、これらの関数は**errno**を**EINVAL**に設定し **、EINVAL**を返します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**_Searchenv_s**ルーチンは、指定されたドメインでターゲットファイルを検索します。 *Varname*変数には、 **PATH**、 **LIB**、 **INCLUDE**などのディレクトリパスのリストを指定する任意の環境変数またはユーザー定義変数を指定できます。 **_Searchenv_s**では大文字と小文字が区別されるため、 *varname*は環境変数の場合と一致している必要があります。 *Varname*がプロセスの環境で定義されている環境変数の名前と一致しない場合、この関数は0を返し、 *pathname*変数は変更されません。
+**_searchenv_s**ルーチンは、指定されたドメイン内のターゲット・ファイルを検索します。 *varname*変数は **、PATH**、 **LIB**、 **INCLUDE**などのディレクトリ パスのリストを指定する任意の環境変数またはユーザー定義変数です。 **_searchenv_s**では大文字と小文字が区別されるため *、varname*は環境変数の大文字と小文字を区別する必要があります。 *varname*がプロセスの環境で定義されている環境変数の名前と一致しない場合、関数はゼロを返し、*パス名*変数は変更されません。
 
-このルーチンは最初に現在の作業ディレクトリでファイルを検索します。 ファイルが見つからなかった場合、環境変数で指定されている次のディレクトリを検索します。 ターゲットファイルがこれらのディレクトリのいずれかにある場合は、新しく作成されたパスが*pathname*にコピーされます。 *Filename*ファイルが見つからない場合、 *pathname*には null で終わる空の文字列が含まれます。
+このルーチンは最初に現在の作業ディレクトリでファイルを検索します。 ファイルが見つからなかった場合、環境変数で指定されている次のディレクトリを検索します。 ターゲット ファイルがそれらのディレクトリの 1 つに含まれる場合、新しく作成されたパスが*pathname*にコピーされます。 *ファイル名*ファイルが見つからない場合、*パス名*には空の null で終わる文字列が含まれます。
 
-作成されたパス名の完全な長さを格納するには、*パス*名バッファーは、少なくとも **_max_path**文字である必要があります。 そうしないと、 **_searchenv_s**が*パス名*バッファーをオーバーランし、予期しない動作が発生する可能性があります。
+*パス名*バッファーは、構築されたパス名の全長を収容するために、少なくとも **_MAX_PATH**文字でなければなりません。 そうしないと **、_searchenv_s**パス*名*バッファがオーバーランし、予期しない動作が発生する可能性があります。
 
-**_wsearchenv_s**は、 **_searchenv_s**のワイド文字バージョンです。 **_wsearchenv_s**の引数はワイド文字列です。 それ以外では、 **_wsearchenv_s**と **_searchenv_s**は同じように動作します。
+**_wsearchenv_s**は **、_searchenv_s**のワイド文字バージョンです。**_wsearchenv_s**する引数はワイド文字列です。 **_wsearchenv_s**と **_searchenv_s**は、そうでなければ同じように動作します。
 
-C++ では、これらの関数の使用はテンプレートのオーバーロードによって簡素化されます。オーバーロードでは、バッファー長を自動的に推論できる (サイズの引数を指定する必要がなくなる) だけでなく、古くてセキュリティが万全ではない関数を新しく安全な関数に自動的に置き換えることができます。 詳細については、「 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
+C++ では、これらの関数の使用はテンプレートのオーバーロードによって簡素化されます。オーバーロードでは、バッファー長を自動的に推論できる (サイズの引数を指定する必要がなくなる) だけでなく、古くてセキュリティが万全ではない関数を新しく安全な関数に自動的に置き換えることができます。 詳細については、「[セキュリティ保護されたテンプレート オーバーロード](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -132,12 +137,12 @@ C++ では、これらの関数の使用はテンプレートのオーバーロ�
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**_searchenv_s**|\<stdlib.h>|
 |**_wsearchenv_s**|\<stdlib.h> または \<wchar.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="example"></a>例
 

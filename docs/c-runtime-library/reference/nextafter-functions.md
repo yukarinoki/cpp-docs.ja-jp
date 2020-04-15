@@ -1,6 +1,6 @@
 ---
 title: nextafter、nextafterf、nextafterl、_nextafter、_nextafterf、nexttoward、nexttowardf、nexttowardl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - nextafterf
 - _nextafterf
@@ -10,6 +10,13 @@ api_name:
 - nexttoward
 - nexttowardf
 - nexttowardl
+- _o__nextafter
+- _o_nextafter
+- _o_nextafterf
+- _o_nextafterl
+- _o_nexttoward
+- _o_nexttowardf
+- _o_nexttowardl
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -22,6 +29,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -51,12 +59,12 @@ helpviewer_keywords:
 - nexttowardf function
 - nexttowardl function
 ms.assetid: 9785bfb9-de53-4bd0-9637-f05fa0c1f6ab
-ms.openlocfilehash: c6b100fb24d879a16780650d8a374ec26f28c048
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 7b1416147ed000dd3dd9a13bd52e41a474a8e9d5
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857724"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81338561"
 ---
 # <a name="nextafter-nextafterf-nextafterl-_nextafter-_nextafterf-nexttoward-nexttowardf-nexttowardl"></a>nextafter、nextafterf、nextafterl、_nextafter、_nextafterf、nexttoward、nexttowardf、nexttowardl
 
@@ -87,34 +95,36 @@ long double nexttoward( long double x, long double y ); /* C++ only, requires <c
 
 ### <a name="parameters"></a>パラメーター
 
-*x*<br/>
+*X*<br/>
 開始する浮動小数点値。
 
-*y*<br/>
+*Y*<br/>
 移動する浮動小数点値。
 
 ## <a name="return-value"></a>戻り値
 
-*Y*方向の*x*の後に戻り値の型の次の表現可能な浮動小数点値を返します。 *X*と*y*が等しい場合、関数は、戻り値の型に変換された*y*を返します。例外は発生しません。 *X*が*y*と等しくなく、結果が denormal または0の場合は、 **FE_UNDERFLOW**と**FE_INEXACT**の浮動小数点例外の状態が設定され、正しい結果が返されます。 *X*または*y*が NAN の場合、戻り値は入力 nan のいずれかになります。 *X*が有限で、結果が無限であるか、または型で表現できない場合、正しく署名された無限大または NAN が返され、 **FE_OVERFLOW**と**FE_INEXACT**浮動小数点例外の状態が設定され、 **errno**が**ERANGE**に設定されます。
+*y*の方向の*x*の後の戻り値型の次の表現可能な浮動小数点値を返します。 *x*と*y*が等しい場合、関数は*y*を返し、戻り値の型に変換され、例外は発生しません。 *x*が*y*と等しくならず、結果が非正規値またはゼロの場合 **、FE_UNDERFLOW**と**FE_INEXACT**浮動小数点例外状態が設定され、正しい結果が返されます。 *x*または*y*が NAN である場合、戻り値は入力 NAN のいずれかになります。 *x*が有限であり、その結果が無限であるか、その型で表現できない場合、正しく符号付きの無限大または NAN が返され **、FE_OVERFLOW**と**FE_INEXACT**浮動小数点例外状態が設定され **、errno**が**ERANGE**に設定されます。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-パラメーターの型が*y*の場合を除き、 **nextafter**関数と**nextafter**関数ファミリは同等です。 *X*と*y*が等しい場合、返される値は、戻り値の型に変換された*y*になります。
+関数ファミリの**次**と**次の**方は *、y*のパラメータタイプを除いて同じです。 *x*と*y*が等しい場合、返される値は*戻*り値の型に変換されます。
 
-でC++はオーバーロードが可能であるため \<cmath > を含めた場合は、 **float**型および**long** **double**型を返す**nextafter**と**nextafter**のオーバーロードを呼び出すことができます。 C プログラムでは、 **nextafter**と**nextafter**は常に**double**を返します。
+C++ ではオーバーロードが可能なので、cmath>を\<含める場合は、その戻り値**float**型と**long** **double**型**に対して****次**のオーバーロードを呼び出すことができます。 Cプログラムでは、**次の次**と**次の方は**常に**二重**を返します。
 
-**_Nextafter**関数と **_nextafterf**関数は、Microsoft 固有の関数です。 **_Nextafterf**関数は、x64 用にコンパイルする場合にのみ使用できます。
+**_nextafter**および **_nextafterf**機能は、マイクロソフト固有のものです。 **_nextafterf**関数は、x64 用にコンパイルする場合にのみ使用できます。
 
-## <a name="requirements"></a>要件
+既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
 
-|ルーチンによって返される値|必須ヘッダー (C)|必須ヘッダー (C++)|
+## <a name="requirements"></a>必要条件
+
+|ルーチン|必須ヘッダー (C)|必須ヘッダー (C++)|
 |-------------|---------------------------|-------------------------------|
-|**nextafter**、 **nextafterf**、 **nextafterl**、 **_nextafterf**、 **nextafter**、 **nexttowardf**、 **nexttowardl**|\<math.h>|\<math.h> または \<cmath>|
+|**次に**,**次のアフターフ**,**次の後に**, **_nextafterf**,**次へ ,** 次**へ方へ ,****次へ方へ**|\<math.h>|\<math.h> または \<cmath>|
 |**_nextafter**|\<float.h>|\<float.h> または \<cfloat>|
 
-互換性について詳しくは、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [浮動小数点サポート](../../c-runtime-library/floating-point-support.md)<br/>
 [isnan、_isnan、_isnanf](isnan-isnan-isnanf.md)<br/>

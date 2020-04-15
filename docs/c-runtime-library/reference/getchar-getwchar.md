@@ -1,9 +1,11 @@
 ---
 title: getchar、getwchar
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - getchar
 - getwchar
+- _o_getchar
+- _o_getwchar
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - _gettchar function
 - standard input, reading from
 ms.assetid: 19fda588-3e33-415c-bb60-dd73c028086a
-ms.openlocfilehash: b969dc48e949efa02b807ec0ea442da7cb793e15
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 4311b5b896a5a406ebe14f09e7bb525cb47951b9
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955416"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81344614"
 ---
 # <a name="getchar-getwchar"></a>getchar、getwchar
 
@@ -50,28 +53,30 @@ wint_t getwchar();
 
 ## <a name="return-value"></a>戻り値
 
-読み取られた文字を返します。 読み取りエラーまたはファイルの終端状態を示すために、 **getchar**は**EOF**を返し、 **getwchar**は**WEOF**を返します。 **Getchar**の場合は、 **ferror**または**feof**を使用して、エラーまたはファイルの終端を確認します。
+読み取られた文字を返します。 読み取りエラーまたはファイルの終わりの条件を示すには **、getchar は** **EOF**を返し **、getwchar は** **WEOF**を返します。 **getchar**の場合は **、ferror**または**feof**を使用して、エラーまたはファイルの終わりをチェックします。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-各ルーチンは、 **stdin**から1文字を読み取り、関連付けられているファイルポインターが次の文字を指すようにインクリメントします。 **getchar**は[_fgetchar](fgetc-fgetwc.md)と同じですが、関数およびマクロとして実装されます。
+各ルーチンは **、stdin**から 1 文字を読み取り、関連するファイル ポインタをインクリメントして次の文字を指します。 **getchar**は[_fgetchar](fgetc-fgetwc.md)と同じですが、関数およびマクロとして実装されます。
 
 これらの関数は呼び出し元スレッドをロックするため、スレッド セーフです。 ロックしないバージョンについては、「[_getchar_nolock、_getwchar_nolock](getchar-nolock-getwchar-nolock.md)」をご覧ください。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
 |TCHAR.H のルーチン|_UNICODE および _MBCS が未定義の場合|_MBCS が定義されている場合|_UNICODE が定義されている場合|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_gettchar**|**getchar**|**getchar**|**getwchar**|
+|**_gettchar**|**Getchar**|**Getchar**|**getwchar**|
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
-|**getchar**|\<stdio.h>|
+|**Getchar**|\<stdio.h>|
 |**getwchar**|\<stdio.h> または \<wchar.h>|
 
-コンソールは、ユニバーサル Windows プラットフォーム (UWP) アプリではサポートされていません。 コンソール、 **stdin**、 **stdout**、および**stderr**に関連付けられている標準ストリームハンドルは、C ランタイム関数が UWP アプリで使用できるようになる前にリダイレクトする必要があります。 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+ユニバーサル Windows プラットフォーム (UWP) アプリでは、コンソールはサポートされていません。 コンソール **、stdin 、stdout**、および**stdout****stderr**に関連付けられている標準ストリーム ハンドルは、C ランタイム関数が UWP アプリで使用する前にリダイレクトする必要があります。 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 

@@ -1,5 +1,5 @@
 ---
-title: CInterfaceArray クラス
+title: クラス
 ms.date: 11/04/2016
 f1_keywords:
 - CInterfaceArray
@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CInterfaceArray class
 ms.assetid: 1f29cf66-a086-4a7b-b6a8-64f73da39f79
-ms.openlocfilehash: 2e8714bf40e99a1014d7cd6de82cddb13cbbb9cf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e6efe31989b06f0977ecff156a8f64053dc64ad1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62258872"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81326796"
 ---
-# <a name="cinterfacearray-class"></a>CInterfaceArray クラス
+# <a name="cinterfacearray-class"></a>クラス
 
-このクラスは、COM インターフェイス ポインターの配列を構築するときに役立つメソッドを提供します。
+このクラスには、COM インターフェイス ポインターの配列を構築するときに役立つメソッドが用意されています。
 
 ## <a name="syntax"></a>構文
 
@@ -30,11 +30,11 @@ class CInterfaceArray :
 
 #### <a name="parameters"></a>パラメーター
 
-*I*<br/>
-COM インターフェイスを格納するポインターの種類を指定します。
+*私*<br/>
+格納するポインターの型を指定する COM インターフェイス。
 
-*piid*<br/>
-ポインターの IID を*は*します。
+*ピッド*<br/>
+I の IID への*ポインタ。*
 
 ## <a name="members"></a>メンバー
 
@@ -42,13 +42,13 @@ COM インターフェイスを格納するポインターの種類を指定し�
 
 |名前|説明|
 |----------|-----------------|
-|[CInterfaceArray::CInterfaceArray](#cinterfacearray)|インターフェイスの配列のコンス トラクター。|
+|[次の手順を実行します。](#cinterfacearray)|インターフェイス配列のコンストラクター。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-このクラスは、コンス トラクターおよび COM インターフェイス ポインターの配列を作成するための派生メソッドを提供します。 使用[CInterfaceList](../../atl/reference/cinterfacelist-class.md)一覧が必要な場合。
+このクラスは、COM インターフェイス ポインターの配列を作成するためのコンストラクターと派生メソッドを提供します。 リストが必要な場合は[、CInterfaceList](../../atl/reference/cinterfacelist-class.md)を使用します。
 
-詳細については、次を参照してください。 [ATL コレクション クラス](../../atl/atl-collection-classes.md)します。
+詳細については、「 [ATL コレクション クラス](../../atl/atl-collection-classes.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -60,7 +60,7 @@ COM インターフェイスを格納するポインターの種類を指定し�
 
 **ヘッダー:** atlcoll.h
 
-##  <a name="cinterfacearray"></a>  CInterfaceArray::CInterfaceArray
+## <a name="cinterfacearraycinterfacearray"></a><a name="cinterfacearray"></a>次の手順を実行します。
 
 コンストラクターです。
 
@@ -68,13 +68,13 @@ COM インターフェイスを格納するポインターの種類を指定し�
 CInterfaceArray() throw();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-スマート ポインターの配列を初期化します。
+スマート ポインター配列を初期化します。
 
 ## <a name="see-also"></a>関連項目
 
-[CAtlArray クラス](../../atl/reference/catlarray-class.md)<br/>
-[CComQIPtr クラス](../../atl/reference/ccomqiptr-class.md)<br/>
-[CComQIPtrElementTraits クラス](../../atl/reference/ccomqiptrelementtraits-class.md)<br/>
+[クラス](../../atl/reference/catlarray-class.md)<br/>
+[CComQIPtrクラス](../../atl/reference/ccomqiptr-class.md)<br/>
+[クラスをクラス](../../atl/reference/ccomqiptrelementtraits-class.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

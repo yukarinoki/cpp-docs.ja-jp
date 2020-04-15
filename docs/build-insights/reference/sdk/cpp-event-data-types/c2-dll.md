@@ -1,6 +1,6 @@
 ---
 title: C2DLL クラス
-description: C++ BUILD INSIGHTS SDK C2DLL クラスリファレンス。
+description: C++ ビルド インサイト SDK C2DLL クラスリファレンス。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 9a8ae7e8cd2d4d379865a9a7a388a6204eb9f173
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 7711acf800999d4e97c3ae56fa2100a632a245b2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78334974"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81325078"
 ---
 # <a name="c2dll-class"></a>C2DLL クラス
 
 ::: moniker range="<=vs-2015"
 
-Build C++ Insights SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを表示するには、この記事の Visual Studio バージョンセレクターコントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。
+C++ ビルド インサイト SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを参照するには、この記事の Visual Studio**バージョン**セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の上部に表示されます。
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-`C2DLL` クラスは、 [Matchevent](../functions/match-event.md)、 [matcheventinmemberfunction](../functions/match-event-in-member-function.md)、 [Matcheventstack](../functions/match-event-stack.md)、および[matcheventstackinmemberfunction](../functions/match-event-stack-in-member-function.md)関数と共に使用されます。 [C2_DLL](../event-table.md#c2-dll)イベントと一致させるには、これを使用します。
+クラス`C2DLL`[は、](../functions/match-event-in-member-function.md)[関数](../functions/match-event.md)で使用されます。 [MatchEventStack](../functions/match-event-stack.md) [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) [C2_DLL](../event-table.md#c2-dll)イベントに一致させるために使用します。
 
 ## <a name="syntax"></a>構文
 
@@ -39,13 +39,13 @@ public:
 
 ## <a name="members"></a>メンバー
 
-[アクティビティ](activity.md)基本クラスから継承されたメンバーと共に、`C2DLL` クラスには次のメンバーが含まれます。
+クラスには、[その Activity](activity.md)基本クラスから継承された`C2DLL`メンバーと共に、次のメンバーが含まれます。
 
 ### <a name="constructors"></a>コンストラクター
 
 [C2DLL](#c2-dll)
 
-## <a name="c2-dll"></a>C2DLL
+## <a name="c2dll"></a><a name="c2-dll"></a>C2DLL
 
 ```cpp
 C2DLL(const RawEvent& event);
@@ -53,7 +53,7 @@ C2DLL(const RawEvent& event);
 
 ### <a name="parameters"></a>パラメーター
 
-*event*\
-[C2_DLL](../event-table.md#c2-dll)イベントです。
+*イベント*\
+[C2_DLL](../event-table.md#c2-dll)イベント。
 
 ::: moniker-end

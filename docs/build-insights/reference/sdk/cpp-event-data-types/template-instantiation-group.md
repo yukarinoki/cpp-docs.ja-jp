@@ -1,6 +1,6 @@
 ---
-title: TemplateInstantiationGroup クラス
-description: C++ BUILD Insights SDK TemplateInstantiationGroup クラスリファレンス。
+title: クラスをインスタンス化する
+description: C++ ビルド インサイト SDK テンプレートインスタンス化グループ クラスリファレンス。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 281088b4c6cbd39b2fb7677180a7966b490ec3ac
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 18dd48219c7c68ce152c381eb505fe37b19ec8dd
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78334542"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81324261"
 ---
-# <a name="templateinstantiationgroup-class"></a>TemplateInstantiationGroup クラス
+# <a name="templateinstantiationgroup-class"></a>クラスをインスタンス化する
 
 ::: moniker range="<=vs-2015"
 
-Build C++ Insights SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを表示するには、この記事の Visual Studio バージョンセレクターコントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。
+C++ ビルド インサイト SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを参照するには、この記事の Visual Studio**バージョン**セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の上部に表示されます。
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-`TemplateInstantiationGroup` クラスは、 [Matcheventstack](../functions/match-event-stack.md)関数および[Matcheventstackinmemberfunction](../functions/match-event-stack-in-member-function.md)関数と共に使用されます。 これを使用して[TEMPLATE_INSTANTIATION](../event-table.md#template-instantiation)イベントのグループを照合します。
+クラス`TemplateInstantiationGroup`は、[関数と一致イベント スタック](../functions/match-event-stack.md)と一致イベント[スタックInメンバー関数](../functions/match-event-stack-in-member-function.md)で使用されます。 この値は[、TEMPLATE_INSTANTIATION](../event-table.md#template-instantiation)イベントのグループと一致させるために使用します。
 
 ## <a name="syntax"></a>構文
 
@@ -39,13 +39,13 @@ public:
 
 ## <a name="members"></a>メンバー
 
-`TemplateInstantiationGroup` クラスには、 [Eventgroup\<TemplateInstantiation\>](event-group.md)の基底クラスから継承されたメンバーと共に、次のメンバーが含まれています。
+クラスには、継承されたメンバーが[EventGroup\<Template\>インスタンス化](event-group.md)基本クラス`TemplateInstantiationGroup`から継承されたメンバーと共に、次のメンバーが含まれています。
 
 ### <a name="constructors"></a>コンストラクター
 
-[TemplateInstantiationGroup](#template-instantiation-group)
+[テンプレートインスタンス化グループ](#template-instantiation-group)
 
-## <a name="template-instantiation-group"></a>TemplateInstantiationGroup
+## <a name="templateinstantiationgroup"></a><a name="template-instantiation-group"></a>テンプレートインスタンス化グループ
 
 ```cpp
 TemplateInstantiationGroup(std::deque<TemplateInstantiation>&& group);

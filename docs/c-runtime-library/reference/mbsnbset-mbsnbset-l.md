@@ -1,9 +1,11 @@
 ---
 title: _mbsnbset、_mbsnbset_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbsnbset
 - _mbsnbset_l
+- _o__mbsnbset
+- _o__mbsnbset_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -35,16 +38,16 @@ helpviewer_keywords:
 - tcsnset_l function
 - mbsnbset function
 ms.assetid: 8e46ef75-9a56-42d2-a522-a08450c67c19
-ms.openlocfilehash: 8ba619dba07f102387d70c3bb3a2af729e44b495
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 57c6d1a81c9aac817b0028e8eccad38d03b0eef7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952160"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81340551"
 ---
 # <a name="_mbsnbset-_mbsnbset_l"></a>_mbsnbset、_mbsnbset_l
 
-マルチバイト文字列の最初の**n**バイトを、指定した文字に設定します。 これらの関数にはセキュリティを強化したバージョンがあります。「[_mbsnbset_s、_mbsnbset_s_l](mbsnbset-s-mbsnbset-s-l.md)」を参照してください。
+マルチバイト文字ストリングの最初の**n**バイトを、指定した文字に設定します。 これらの関数にはセキュリティを強化したバージョンがあります。「[_mbsnbset_s、_mbsnbset_s_l](mbsnbset-s-mbsnbset-s-l.md)」を参照してください。
 
 > [!IMPORTANT]
 > この API は、Windows ランタイムで実行するアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
@@ -67,33 +70,35 @@ unsigned char *_mbsnbset_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*str*<br/>
+*Str*<br/>
 変更対象の文字列。
 
-*c*<br/>
+*C*<br/>
 1 バイトまたはマルチバイト文字の設定。
 
 *count*<br/>
 設定対象のバイト数。
 
-*locale*<br/>
+*ロケール*<br/>
 使用するロケール。
 
 ## <a name="return-value"></a>戻り値
 
-**_mbsnbset**は、変更された文字列へのポインターを返します。
+**_mbsnbset**変更された文字列へのポインターを返します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**_Mbsnbset**関数と **_mbsnbset_l**関数は、最大で*str*の最初の*count*バイトを*c*に設定します。 *Count*が*str*の長さよりも大きい場合、 *count*の代わりに*str*の長さが使用されます。 *C*がマルチバイト文字で、 *count*で指定された最後のバイトに完全に設定できない場合、最後のバイトは空白文字で埋められます。 **_mbsnbset**と **_mbsnbset_l**は、 *str*の最後に終端の null を配置しません。
+**_mbsnbset**関数と **_mbsnbset_l**関数は、最大で*str*の最初の*カウント*バイトを c に設定*します*。 *count*が*str*の長さより大きい場合は *、count*の代わりに*str*の長さが使用されます。 *c*がマルチバイト文字で *、count*で指定された最後のバイトに完全に設定できない場合、最後のバイトにはブランク文字が埋め込まれます。 **_mbsnbset**と **_mbsnbset_l**は*str*の末尾に終端の null を置かない。
 
-**_mbsnbset**と **_mbsnbset_l**は **_mbsnset**に似ていますが、count 文字*c*の*代わりに* *count* bytes を設定する点が異なります。
+**_mbsnbset**と **_mbsnbset_l**は、 *c*のカウント文字ではなく*カウント*バイトを*count*設定する点を除いて **、 _mbsnset**に似ています。
 
-*Str*が**NULL**または*count*が0の場合、この関数は「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーター例外を生成します。 実行の継続が許可された場合、 **errno**は**EINVAL**に設定され、関数は**NULL**を返します。 また、 *c*が有効なマルチバイト文字でない場合は、 **errno**が**EINVAL**に設定され、代わりにスペースが使用されます。
+*str*が**NULL**または*カウント*がゼロの場合、この関数は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーター例外を生成します。 実行を続行できる場合 **、errno**は**EINVAL**に設定され、関数は**NULL**を返します。 また *、c*が有効なマルチバイト文字でない場合は **、errno**が**EINVAL**に設定され、代わりにスペースが使用されます。
 
-出力値は、ロケールの **LC_CTYPE** カテゴリの設定に影響されます。詳細については、「[setlocale](setlocale-wsetlocale.md)」を参照してください。 この関数の **_mbsnbset**バージョンは、このロケールに依存する動作に現在のロケールを使用します。 **_mbsnbset_l**バージョンは、渡されたロケールパラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+出力値は、ロケールの **LC_CTYPE** カテゴリの設定に影響されます。詳細については、「[setlocale](setlocale-wsetlocale.md)」を参照してください。 この関数の **_mbsnbset**バージョンでは、このロケールに依存する動作に現在のロケールが使用されます。**_mbsnbset_l**バージョンは、代わりに渡されたロケールパラメータを使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-**セキュリティに関するメモ** この API は、バッファー オーバーランが原因で発生する可能性のある問題の影響を受けます。 バッファー オーバーランは、システムを攻撃するときによく使用される方法であり、その結果、認められていない権限が昇格されます。 詳しくは、「 [バッファー オーバーランの回避](/windows/win32/SecBP/avoiding-buffer-overruns)」をご覧ください。
+**セキュリティに関するメモ** この API は、バッファー オーバーランが原因で発生する潜在的な脅威の影響を受けます。 バッファー オーバーランは、システムを攻撃するときによく使用される方法であり、その結果、認められていない権限が昇格されます。 詳しくは、「 [バッファー オーバーランの回避](/windows/win32/SecBP/avoiding-buffer-overruns)」をご覧ください。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -104,12 +109,12 @@ unsigned char *_mbsnbset_l(
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**_mbsnbset**|\<mbstring.h>|
 |**_mbsnbset_l**|\<mbstring.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="example"></a>例
 
@@ -130,7 +135,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>Output
+### <a name="output"></a>出力
 
 ```Output
 Before: This is a test

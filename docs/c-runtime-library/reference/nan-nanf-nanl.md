@@ -1,10 +1,13 @@
 ---
 title: nan、nanf、nanl
-ms.date: 01/31/2019
+ms.date: 4/2/2020
 api_name:
 - nanf
 - nan
 - nanl
+- _o_nan
+- _o_nanf
+- _o_nanl
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +34,12 @@ helpviewer_keywords:
 - nanf function
 - nanl function
 ms.assetid: 790e9158-80ab-43e0-8f5a-096198553fd9
-ms.openlocfilehash: 9574eb0382f3bb7fc3c51d504aba9e29d0692c09
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d8f0db5020f274de27f7f1bbf3a76659eae568e4
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951418"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81338642"
 ---
 # <a name="nan-nanf-nanl"></a>nan、nanf、nanl
 
@@ -52,21 +56,23 @@ long double nanl( const char* input );
 ### <a name="parameters"></a>パラメーター
 
 *input*<br/>
-文字列値。
+文字列値です。
 
 ## <a name="return-value"></a>戻り値
 
-**Nan**関数は、簡易な nan 値を返します。
+**nan**関数は、静かな NaN 値を返します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**Nan**関数は、非表示の (非シグナル) nan に対応する浮動小数点値を返します。 *入力*値は無視されます。 出力で NaN が表現される方法の詳細については、「[printf、_printf_l、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)」をご覧ください。
+**nan**関数は、静かな (非シグナルリング) NaN に対応する浮動小数点値を返します。 *入力*値は無視されます。 出力で NaN が表現される方法の詳細については、「[printf、_printf_l、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)」をご覧ください。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|関数|C ヘッダー|C++ ヘッダー|
+|機能|C ヘッダー|C++ ヘッダー|
 |--------------|--------------|------------------|
-|**nan**、 **nanf**、 **nanl**|\<math.h>|\<cmath> または \<math.h>|
+|**ナン**,**ナンフ**,**ナンル**|\<math.h>|\<cmath> または \<math.h>|
 
 ## <a name="see-also"></a>関連項目
 
@@ -74,6 +80,6 @@ long double nanl( const char* input );
 [fpclassify](fpclassify.md)<br/>
 [_fpclass、_fpclassf](fpclass-fpclassf.md)<br/>
 [isfinite、_finite、_finitef](finite-finitef.md)<br/>
-[isinf](isinf.md)<br/>
+[イシンフ](isinf.md)<br/>
 [isnan、_isnan、_isnanf](isnan-isnan-isnanf.md)<br/>
 [isnormal](isnormal.md)<br/>

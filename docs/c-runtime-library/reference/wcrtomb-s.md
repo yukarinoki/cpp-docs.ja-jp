@@ -1,8 +1,9 @@
 ---
 title: wcrtomb_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - wcrtomb_s
+- _o_wcrtomb_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -27,12 +29,12 @@ helpviewer_keywords:
 - multibyte characters
 - characters, converting
 ms.assetid: 9a8a1bd0-1d60-463d-a3a2-d83525eaf656
-ms.openlocfilehash: c1612e7fc4e40e05c46f06d8a29b69534c359421
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ee25b18bfbb86b34e46c8c6776e8ab83157613e8
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70945845"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81328179"
 ---
 # <a name="wcrtomb_s"></a>wcrtomb_s
 
@@ -59,38 +61,40 @@ errno_t wcrtomb_s(
 
 ### <a name="parameters"></a>パラメーター
 
-*pReturnValue*<br/>
+*値を返します。*<br/>
 書き込まれたバイト数を返します。エラーが発生した場合は -1 を返します。
 
 *mbchar*<br/>
 結果として得られるマルチバイトに変換された文字。
 
-*sizeOfmbchar*<br/>
-*Mbchar*変数のサイズ (バイト単位)。
+*サイズオブムチャル*<br/>
+*mbchar*変数のサイズ (バイト単位)。
 
-*wchar*<br/>
+*Wchar*<br/>
 変換するワイド文字。
 
 *mbstate*<br/>
-**Mbstate_t**オブジェクトへのポインター。
+**mbstate_t**オブジェクトへのポインター。
 
 ## <a name="return-value"></a>戻り値
 
-エラーが発生した場合は、0または**errno**値を返します。
+エラーが発生した場合は、ゼロまたは**errno**値を返します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**Wcrtomb_s**関数は、 *mbstate*に含まれる指定された変換状態から始まるワイド文字を、 *wchar*に含まれる値から*mbchar*で表されるアドレスに変換します。 *Preturnvalue*値は、変換されたバイト数になりますが、 **MB_CUR_MAX**バイト以下で、エラーが発生した場合は-1 になります。
+**wcrtomb_s**関数は、 *mbstate*に含まれる指定された変換状態から始まるワイド文字を *、 wchar*に含まれる値から*mbchar*で表されるアドレスに変換します。 *pReturnValue*値は、変換されたバイト数ですが **、MB_CUR_MAX**バイト以下、エラーが発生した場合は -1 です。
 
-*Mbstate*が null の場合、内部**mbstate_t**の変換状態が使用されます。 *Wchar*に含まれる文字に対応するマルチバイト文字がない場合、 *preturnvalue*値は-1 になり、関数は**EILSEQ**の**errno**値を返します。
+*mbstate*が null の場合、内部**mbstate_t**変換状態が使用されます。 *wchar*に含まれる文字に対応するマルチバイト文字がない場合 *、pReturnValue*の値は -1 になり、関数は**EILSEQ**の**errno**値を返します。
 
-**Wcrtomb_s**関数は、 [wctomb_s、_wctomb_s_l](wctomb-s-wctomb-s-l.md)の再起動によって異なります。 変換状態は、同じまたはその他の再開可能な関数への後続の呼び出しのために*mbstate*に格納されます。 再開可能な関数と再開不可能な関数を混用した場合、結果は未定義です。 たとえば、 **wcstombs_s**ではなく**wcsrtombs_s**の後続の呼び出しが使用された場合、アプリケーションは**wcslen**ではなく**wcsrlen**を使用します。
+**wcrtomb_s**関数は[、wctomb_s](wctomb-s-wctomb-s-l.md)とは_wctomb_s_l、再起動可能性によって異なります。 変換状態は、同じ関数または他の再開可能な関数を呼び出す後続の呼び出しの場合は*mbstate*に格納されます。 再開可能な関数と再開不可能な関数を混用した場合、結果は未定義です。 たとえば、wcsrtombs_sへの後続の呼び出しが**wcstombs_s**ではなく **、wcslen**ではなく**wcsrlen**を**使用するとします**。
 
-C++ では、この関数の使用はテンプレートのオーバーロードによって簡素化されます。オーバーロードでは、バッファー長を自動的に推論できる (サイズの引数を指定する必要がなくなる) だけでなく、古くてセキュリティが万全ではない関数を新しく安全な関数に自動的に置き換えることができます。 詳細については、「 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
+C++ では、この関数の使用はテンプレートのオーバーロードによって簡素化されます。オーバーロードでは、バッファー長を自動的に推論できる (サイズの引数を指定する必要がなくなる) だけでなく、古くてセキュリティが万全ではない関数を新しく安全な関数に自動的に置き換えることができます。 詳細については、「[セキュリティ保護されたテンプレート オーバーロード](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
 
 ## <a name="exceptions"></a>例外
 
-**Wcrtomb_s**関数は、この関数の実行中に現在のスレッドの関数が**setlocale**を呼び出し、 *mbstate*が null の場合は、マルチスレッドセーフです。
+この関数が実行中で *、mbstate*が null である間、現在のスレッドで**setlocale**を呼び出す関数がない限り **、wcrtomb_s**関数はマルチスレッド セーフです。
 
 ## <a name="example"></a>例
 
@@ -138,7 +142,7 @@ The corresponding wide character "Q" was converted to a the "Q" multibyte charac
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**wcrtomb_s**|\<wchar.h>|
 
@@ -146,5 +150,5 @@ The corresponding wide character "Q" was converted to a the "Q" multibyte charac
 
 [データ変換](../../c-runtime-library/data-conversion.md)<br/>
 [ロケール](../../c-runtime-library/locale.md)<br/>
-[マルチバイト文字のシーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[マルチバイト文字シーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [mbsinit](mbsinit.md)<br/>

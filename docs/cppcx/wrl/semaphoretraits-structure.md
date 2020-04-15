@@ -9,16 +9,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HandleTraits::SemaphoreTraits structure
 - Microsoft::WRL::Wrappers::HandleTraits::SemaphoreTraits::Unlock method
 ms.assetid: eddb8576-d063-409b-9201-cc87ca5d111e
-ms.openlocfilehash: e7bd2e5d0993c8e4be7223d98ffb1dbec14cbb74
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 11719576c9fc7b23f4cd318ee1b3ed9ca3f5edaa
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403114"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81360736"
 ---
 # <a name="semaphoretraits-structure"></a>SemaphoreTraits 構造体
 
-一般的な特性を定義、`Semaphore`オブジェクト。
+オブジェクトの共通の特性`Semaphore`を定義します。
 
 ## <a name="syntax"></a>構文
 
@@ -32,7 +32,7 @@ struct SemaphoreTraits : HANDLENullTraits;
 
 名前                               | 説明
 ---------------------------------- | --------------------------------------
-[Semaphoretraits::unlock](#unlock) | 共有リソースのコントロールをリリースします。
+[セマフォ海峡::ロック解除](#unlock) | 共有リソースの制御を解放します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -42,13 +42,13 @@ struct SemaphoreTraits : HANDLENullTraits;
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** corewrappers.h
+**ヘッダー:** コアラッパー.h
 
-**名前空間:** Microsoft::WRL::Wrappers::HandleTraits
+**名前空間:** マイクロソフト::WRL::ラッパー::ハンドルトレイツ
 
-## <a name="unlock"></a>Semaphoretraits::unlock
+## <a name="semaphoretraitsunlock"></a><a name="unlock"></a>セマフォ海峡::ロック解除
 
-共有リソースのコントロールをリリースします。
+共有リソースの制御を解放します。
 
 ```cpp
 inline static void Unlock(
@@ -58,9 +58,9 @@ inline static void Unlock(
 
 ### <a name="parameters"></a>パラメーター
 
-*h*<br/>
-ハンドルを`Semaphore`オブジェクト。
+*H*<br/>
+`Semaphore`オブジェクトへのハンドル。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-場合は、ロック解除操作が成功すると、`Unlock()`エラーの原因を示すエラーを出力します。
+ロック解除操作が失敗した場合`Unlock()`は、失敗の原因を示すエラーを出力します。

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - msclr::marshal_context class [C++]
 ms.assetid: 241b0cf6-4ca4-4812-aaee-d671c11dc034
-ms.openlocfilehash: 146a0f7a7cc1402f7c28e6bf09fead1914c7c6be
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 110fe4abf7eb90b05e7feef563efa4882bed0fc6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80208526"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81332009"
 ---
 # <a name="marshal_context-class"></a>marshal_context クラス
 
@@ -27,34 +27,34 @@ class marshal_context
 
 ## <a name="remarks"></a>解説
 
-コンテキストを必要とするデータ変換には、`marshal_context` クラスを使用します。 コンテキストを必要とする変換と、どのマーシャリングファイルを含める必要があるかの詳細については、「 [」 C++の「マーシャリングの概要](../dotnet/overview-of-marshaling-in-cpp.md)」を参照してください。 コンテキストを使用する場合のマーシャリングの結果は、`marshal_context` オブジェクトが破棄されるまで有効です。 結果を保持するには、データをコピーする必要があります。
+コンテキストを`marshal_context`必要とするデータ変換のクラスを使用します。 コンテキストを必要とする変換と、どのマーシャリング ファイルを含める必要があるかについては、「 [C++ でのマーシャリングの概要](../dotnet/overview-of-marshaling-in-cpp.md)」を参照してください。 コンテキストを使用した場合のマーシャリングの結果は、オブジェクトが破棄されるまで`marshal_context`有効です。 結果を保存するには、データをコピーする必要があります。
 
-同じ `marshal_context` を多数のデータ変換に使用できます。 この方法でコンテキストを再利用しても、以前のマーシャリング呼び出しの結果には影響しません。
+同じ`marshal_context`数のデータ変換にも使用できます。 この方法でコンテキストを再利用しても、以前のマーシャリング呼び出しの結果には影響しません。
 
 ## <a name="members"></a>メンバー
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|説明|
+|名前|説明|
 |---------|-----------|
-|[marshal_context::marshal_context](#marshal-context)|マネージデータ型とネイティブデータ型の間のデータ変換に使用する `marshal_context` オブジェクトを構築します。|
+|[marshal_context::marshal_context](#marshal-context)|マネージ データ`marshal_context`型とネイティブ データ型の間のデータ変換に使用するオブジェクトを構築します。|
 |[marshal_context::~marshal_context](#tilde-marshal-context)|`marshal_context` オブジェクトを破棄します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|説明|
+|名前|説明|
 |---------|-----------|
-|[marshal_context::marshal_as](#marshal-as)|特定のデータオブジェクトに対してマーシャリングを実行し、マネージデータ型とネイティブデータ型との間で変換を実行します。|
+|[marshal_context::marshal_as](#marshal-as)|特定のデータ オブジェクトにマーシャリングを実行して、マネージ データ型とネイティブ データ型の間でマーシャリングを行います。|
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダーファイル:** \<msclr\ marshal? h >、\<msclr \ marshal_windows >、\<msclr \ marshal_cppstd >、または \<msclr \ marshal_atl >
+**ヘッダー ファイル:** \<msclr\marshal.h \<>、msclr\marshal_windows.h>、msclr\marshal_cppstd.h \<>、または\<msclr\marshal_atl.h>
 
-**名前空間:** msclr:: interop
+**名前空間:** msclr::相互運用機能
 
-## <a name="marshal_contextmarshal_context"></a><a name="marshal-context"></a>marshal_context:: marshal_context
+## <a name="marshal_contextmarshal_context"></a><a name="marshal-context"></a>marshal_context::marshal_context
 
-マネージデータ型とネイティブデータ型の間のデータ変換に使用する `marshal_context` オブジェクトを構築します。
+マネージ データ`marshal_context`型とネイティブ データ型の間のデータ変換に使用するオブジェクトを構築します。
 
 ```cpp
 marshal_context();
@@ -62,13 +62,13 @@ marshal_context();
 
 ### <a name="remarks"></a>解説
 
-一部のデータ変換にはマーシャリングコンテキストが必要です。 コンテキストを必要とする翻訳と、アプリケーションに含める必要のあるマーシャリングファイルの詳細については、「 [」 C++の「マーシャリングの概要](../dotnet/overview-of-marshaling-in-cpp.md)」を参照してください。
+データ変換によっては、マーシャリング コンテキストが必要なものもあります。 コンテキストを必要とする変換と、アプリケーションに含める必要があるマーシャリング ファイルの詳細については、「 [C++ でのマーシャリングの概要](../dotnet/overview-of-marshaling-in-cpp.md)」を参照してください。
 
 ### <a name="example"></a>例
 
-[Marshal_context:: marshal_as](../dotnet/marshal-context-marshal-as.md)の例を参照してください。
+[marshal_context::marshal_as](../dotnet/marshal-context-marshal-as.md)の例を参照してください。
 
-## <a name="marshal_contextmarshal_context"></a><a name="tilde-marshal-context"></a>marshal_context:: ~ marshal_context
+## <a name="marshal_contextmarshal_context"></a><a name="tilde-marshal-context"></a>marshal_context::~marshal_context
 
 `marshal_context` オブジェクトを破棄します。
 
@@ -78,13 +78,13 @@ marshal_context();
 
 ### <a name="remarks"></a>解説
 
-一部のデータ変換にはマーシャリングコンテキストが必要です。 コンテキストを必要とする翻訳と、アプリケーションに含めるマーシャリングファイルの詳細については、「 [ C++マーシャリングの概要](../dotnet/overview-of-marshaling-in-cpp.md)」を参照してください。
+データ変換によっては、マーシャリング コンテキストが必要なものもあります。 どの変換でコンテキストが必要か、どのマーシャリング ファイルをアプリケーションに含める必要があるかについて詳しくは[、「C++](../dotnet/overview-of-marshaling-in-cpp.md)でのマーシャリングの概要」をご覧ください。
 
-`marshal_context` オブジェクトを削除すると、そのコンテキストによって変換されたデータが無効になります。 `marshal_context` オブジェクトが破棄された後にデータを保持する場合は、保持される変数にデータを手動でコピーする必要があります。
+オブジェクトを`marshal_context`削除すると、そのコンテキストによって変換されたデータが無効になります。 オブジェクトが破棄された後にデータを`marshal_context`保持する場合は、データを保持する変数に手動でコピーする必要があります。
 
-## <a name="marshal_contextmarshal_as"></a><a name="marshal-as"></a>marshal_context:: marshal_as
+## <a name="marshal_contextmarshal_as"></a><a name="marshal-as"></a>marshal_context::marshal_as
 
-特定のデータオブジェクトに対してマーシャリングを実行し、マネージデータ型とネイティブデータ型との間で変換を実行します。
+特定のデータ オブジェクトにマーシャリングを実行して、マネージ データ型とネイティブ データ型の間でマーシャリングを行います。
 
 ```cpp
 To_Type marshal_as<To_Type>(
@@ -95,23 +95,23 @@ To_Type marshal_as<To_Type>(
 ### <a name="parameters"></a>パラメーター
 
 *input*<br/>
-から`To_Type` 変数にマーシャリングする値です。
+[in]変数にマーシャリングする値。 `To_Type`
 
 ### <a name="return-value"></a>戻り値
 
-`input`の変換後の値 `To_Type` 型の変数。
+変換された値である`To_Type`型の`input`変数。
 
 ### <a name="remarks"></a>解説
 
-この関数は、特定のデータオブジェクトに対してマーシャリングを実行します。 この関数は、[のC++マーシャリングの概要](../dotnet/overview-of-marshaling-in-cpp.md)に関する表に示されている変換でのみ使用してください。
+この関数は、特定のデータ オブジェクトに対してマーシャリングを実行します。 この関数は、「 C++ での[マーシャリングの概要](../dotnet/overview-of-marshaling-in-cpp.md)」の表で示されている変換でのみ使用します。
 
-サポートされていないデータ型のペアをマーシャリングしようとすると、コンパイル時に `marshal_as` によってエラー [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)が生成されます。 詳細については、このエラーと共に提供されるメッセージを参照してください。 `C4996` エラーは、非推奨の関数の場合に加えて、他の状況で生成される可能性もあります。 このエラーを生成する2つの条件では、サポートされていないデータ型のペアをマーシャリングしようとして、コンテキストを必要とする変換に `marshal_as` を使用しようとしています。
+サポートされていないデータ型のペアをマーシャリングしようとすると、`marshal_as`コンパイル時にエラー [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)が生成されます。 詳細については、このエラーと共に提供されるメッセージを参照してください。 `C4996` エラーは、非推奨の関数の場合に加えて、他の状況で生成される可能性もあります。 このエラーを生成する 2 つの条件は、サポートされていないデータ型のペアをマーシャリングしようとし、コンテキスト`marshal_as`を必要とする変換に使用しようとしています。
 
-マーシャリング ライブラリは、複数のヘッダー ファイルで構成されます。 どの変換でもただ 1 つのファイルが必要ですが、他の変換で必要とされる追加ファイルをインクルードすることもできます。 `Marshaling Overview in C++` の表は、各変換に含めるマーシャリングファイルを示しています。
+マーシャリング ライブラリは、複数のヘッダー ファイルで構成されます。 どの変換でもただ 1 つのファイルが必要ですが、他の変換で必要とされる追加ファイルをインクルードすることもできます。 の表は`Marshaling Overview in C++`、変換ごとにどのマーシャリング ファイルを含める必要があるかを示しています。
 
 ### <a name="example"></a>例
 
-この例では、`System::String` から `const char *` 変数型にマーシャリングするためのコンテキストを作成します。 変換されたデータは、コンテキストを削除する行の後で有効になりません。
+この例では、 から`System::String`変数型へのマーシャリングの`const char *`コンテキストを作成します。 変換されたデータは、コンテキストを削除する行の後には有効ではありません。
 
 ```cpp
 // marshal_context_test.cpp

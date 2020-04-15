@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - gray and dithered bitmap functions [MFC]
 ms.assetid: cb139a77-b85e-4504-9d93-24156ad77a41
-ms.openlocfilehash: fb764dbd71d89ae3317816df3539c2881b9695b6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bbc64aad0d65c0430ad23b96f635be8fe2b396e0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62322321"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81357039"
 ---
 # <a name="gray-and-dithered-bitmap-functions"></a>淡色表示 (灰色) ビットマップ関数とディザリングされたビットマップ関数
 
@@ -22,7 +22,7 @@ ms.locfileid: "62322321"
 
 MFC には、ビットマップのコントロールが無効になっていることを示すための 2 つの関数が用意されています。
 
-![灰色と元のアイコンの比較](../../mfc/reference/media/vcgraybitmap.gif "灰色と元のアイコンの比較")
+![グレー アイコンと元のアイコンの比較](../../mfc/reference/media/vcgraybitmap.gif "グレー アイコンと元のアイコンの比較")
 
 |||
 |-|-|
@@ -33,14 +33,14 @@ MFC には、ビットマップのコントロールが無効になっている�
 
 MFC には、ビットマップの背景をディザリングされたパターンに置き換える 2 つの関数も用意されています。
 
-![ディザリングされたと元のアイコンの比較](../../mfc/reference/media/vcditheredbitmap.gif "ディザリングされたと元のアイコンの比較")
+![ディザー アイコンと元のアイコンの比較](../../mfc/reference/media/vcditheredbitmap.gif "ディザー アイコンと元のアイコンの比較")
 
 |||
 |-|-|
 |[AfxDrawDitheredBitmap](#afxdrawditheredbitmap)|背景がディザリングされたビットマップを描画します。|
 |[AfxGetDitheredBitmap](#afxgetditheredbitmap)|背景がディザリングされたビットマップをコピーします。|
 
-##  <a name="afxdrawgraybitmap"></a>  AfxDrawGrayBitmap
+## <a name="afxdrawgraybitmap"></a><a name="afxdrawgraybitmap"></a>Afxドローグレイビットマップ
 
 灰色のバージョンのビットマップを描画します。
 
@@ -58,23 +58,23 @@ void AFXAPI AfxDrawGrayBitmap(
 *pDC*<br/>
 宛先 DC を示します。
 
-*x*<br/>
+*X*<br/>
 宛先の x 座標。
 
-*y*<br/>
+*Y*<br/>
 宛先の y 座標。
 
 *rSrc*<br/>
 元のビットマップ。
 
-*crBackground*<br/>
+*cr背景*<br/>
 新しい背景色 (通常は COLOR_MENU などの灰色)。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 `AfxDrawGrayBitmap` で描画されるビットマップの外観は、無効なコントロールになります。
 
-![灰色と元のアイコンの比較](../../mfc/reference/media/vcgraybitmap.gif "灰色と元のアイコンの比較")
+![グレー アイコンと元のアイコンの比較](../../mfc/reference/media/vcgraybitmap.gif "グレー アイコンと元のアイコンの比較")
 
 ### <a name="example"></a>例
 
@@ -84,7 +84,7 @@ void AFXAPI AfxDrawGrayBitmap(
 
 **ヘッダー:** afxwin.h
 
-##  <a name="afxgetgraybitmap"></a>  AfxGetGrayBitmap
+## <a name="afxgetgraybitmap"></a><a name="afxgetgraybitmap"></a>ビットマップ
 
 灰色のバージョンのビットマップをコピーします。
 
@@ -103,14 +103,14 @@ void AFXAPI AfxGetGrayBitmap(
 *pDest*<br/>
 コピー先のビットマップ。
 
-*crBackground*<br/>
+*cr背景*<br/>
 新しい背景色 (通常は COLOR_MENU などの灰色)。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 `AfxGetGrayBitmap` でコピーされるビットマップの外観は、無効なコントロールのようになります。
 
-![灰色と元のアイコンの比較](../../mfc/reference/media/vcgraybitmap.gif "灰色と元のアイコンの比較")
+![グレー アイコンと元のアイコンの比較](../../mfc/reference/media/vcgraybitmap.gif "グレー アイコンと元のアイコンの比較")
 
 ### <a name="example"></a>例
 
@@ -120,9 +120,9 @@ void AFXAPI AfxGetGrayBitmap(
 
 **ヘッダー:** afxwin.h
 
-##  <a name="afxdrawditheredbitmap"></a>  AfxDrawDitheredBitmap
+## <a name="afxdrawditheredbitmap"></a><a name="afxdrawditheredbitmap"></a>ビットマップを描画します。
 
-その背景をディザリングされた (チェッカー) パターンに置き換えて、ビットマップを描画します。
+ビットマップを描画し、背景をディザ (チェッカ) パターンに置き換えます。
 
 ```
 void AFXAPI AfxDrawDitheredBitmap(
@@ -139,26 +139,26 @@ void AFXAPI AfxDrawDitheredBitmap(
 *pDC*<br/>
 宛先 DC を示します。
 
-*x*<br/>
+*X*<br/>
 宛先の x 座標。
 
-*y*<br/>
+*Y*<br/>
 宛先の y 座標。
 
 *rSrc*<br/>
 元のビットマップ。
 
 *cr1*<br/>
-2 つのディザー カラーのいずれかの通常白します。
+2 つのディザ カラーのうちの 1 つ(通常は白)。
 
 *cr2*<br/>
-その他のディザー色、通常は明るい灰色 (COLOR_MENU)。
+他のディザ カラーは、通常は明るいグレー (COLOR_MENU)。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-2 色でレプリケート先 DC に元のビットマップが描画されます (*cr1*と*cr2*) 格子模様のパターン ビットマップの背景を置換します。 ソース ビットマップの背景は、その白いピクセル、左上隅にあるビットマップのピクセルの色と一致するすべてのピクセルとして定義されます。
+ソース ビットマップは、ビットマップの背景を置き換える 2 色 (*cr1*および*cr2*) のチェッカー パターンで、ターゲット DC に描画されます。 ソース ビットマップの背景は、白いピクセルと、ビットマップの左上隅のピクセルの色に一致するすべてのピクセルとして定義されます。
 
-![ディザリングされたと元のアイコンの比較](../../mfc/reference/media/vcditheredbitmap.gif "ディザリングされたと元のアイコンの比較")
+![ディザー アイコンと元のアイコンの比較](../../mfc/reference/media/vcditheredbitmap.gif "ディザー アイコンと元のアイコンの比較")
 
 ### <a name="example"></a>例
 
@@ -168,9 +168,9 @@ void AFXAPI AfxDrawDitheredBitmap(
 
 **ヘッダー:** afxwin.h
 
-##  <a name="afxgetditheredbitmap"></a>  AfxGetDitheredBitmap
+## <a name="afxgetditheredbitmap"></a><a name="afxgetditheredbitmap"></a>ビットマップ
 
-その背景をディザリングされた (チェッカー) パターンに置き換えて、ビットマップをコピーします。
+ビットマップをコピーし、背景をディザ(チェッカ)パターンに置き換えます。
 
 ```
 void AFXAPI AfxGetDitheredBitmap(
@@ -189,16 +189,16 @@ void AFXAPI AfxGetDitheredBitmap(
 コピー先のビットマップ。
 
 *cr1*<br/>
-2 つのディザー カラーのいずれかの通常白します。
+2 つのディザ カラーのうちの 1 つ(通常は白)。
 
 *cr2*<br/>
-その他のディザー色、通常は明るい灰色 (COLOR_MENU)。
+他のディザ カラーは、通常は明るいグレー (COLOR_MENU)。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-ソース ビットマップは 2 色でコピー先ビットマップにコピー (*cr1*と*cr2*) ソース ビットマップの背景を置き換える格子模様のパターン。 ソース ビットマップの背景は、その白いピクセル、左上隅にあるビットマップのピクセルの色と一致するすべてのピクセルとして定義されます。
+ソース ビットマップの背景を置き換える 2 色 (*cr1*と*cr2*) のチェッカー パターンを使用して、コピー先のビットマップにコピーされます。 ソース ビットマップの背景は、白いピクセルと、ビットマップの左上隅のピクセルの色に一致するすべてのピクセルとして定義されます。
 
-![ディザリングされたと元のアイコンの比較](../../mfc/reference/media/vcditheredbitmap.gif "vcditheredbitmap")
+![ディザー アイコンと元のアイコンの比較](../../mfc/reference/media/vcditheredbitmap.gif "ビットマップ")
 
 ### <a name="example"></a>例
 

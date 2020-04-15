@@ -1,10 +1,13 @@
 ---
 title: remainder、remainderf、remainderl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - remainderl
 - remainder
 - remainderf
+- _o_remainder
+- _o_remainderf
+- _o_remainderl
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +34,12 @@ helpviewer_keywords:
 - remainderl
 - remainder
 ms.assetid: 5f721fb3-8b78-4597-9bc0-ca9bcd1f1d0e
-ms.openlocfilehash: 851f022325bb617cb2b0ae9a331b680b9d9fd303
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 4b70d3175a125d72ff67710c83899c44dbf72015
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949423"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81332865"
 ---
 # <a name="remainder-remainderf-remainderl"></a>remainder、remainderf、remainderl
 
@@ -56,29 +60,31 @@ long double remainder( long double x, long double y ); /* C++ only */
 
 ### <a name="parameters"></a>パラメーター
 
-*x*<br/>
+*X*<br/>
 分子。
 
-*y*<br/>
+*Y*<br/>
 分母。
 
 ## <a name="return-value"></a>戻り値
 
-*X* / *y*の浮動小数点の剰余。 *Y*の値が0.0 の場合、**剰余**は簡易な NaN を返します。 **Printf**ファミリによる簡易な NaN の表現については、「 [printf、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)」を参照してください。
+*x* / *y*の浮動小数点の剰余。 *y*の値が 0.0 の場合、**残りは**静止 NaN を返します。 printf ファミリによる静かな NaN の表現については[、「printf、_printf_l、wprintf、_wprintf_l」](printf-printf-l-wprintf-wprintf-l.md)を参照してください。 **printf**
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-\* **剰余**関数は、x*y* *y* /  =  の浮動小数点の剰余rを計算します(n +  *)。* *x* /  &#124; &#124;  - y の値に最も近い整数を指定します。 n x y = 1/2 の場合は、n になります。 /  *R* = 0 の場合、 *r*は*x*と同じ符号を持ちます。
+**剰余**関数は*x* /  *x* / *x* / *y*の浮動小数点剰余*r*を計算し *、x* = *n* \* *y* + *r*、n x y &#124; = 1/2 &#124;*n* - 場合でも n が x*y に*最も近い*整数である。* *n**y* *r* = 0 の場合 *、r*は x と同じ符号を*持*つ。
 
-オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、**remainder**を受け取って返す**float**または**long** **double**値。 C プログラムでは、**remainder**は常に2つの**double**引数を受け取り、 **double**を返します。
+C++ ではオーバーロードが可能なため **、float**値または**長倍**精度浮動小数点値を取得して返す**剰余**のオーバーロード**を**呼び出すことができます。 C プログラムでは、**剰余**は常に 2 つの**二重**引数を取り、**倍精度浮動小数点数**を返します。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|関数|必須ヘッダー (C)|必須ヘッダー (C++)|
+|機能|必須ヘッダー (C)|必須ヘッダー (C++)|
 |--------------|---------------------|-|
-|**残り、残りの部分**は **、** 残って**います。**|\<math.h>|\<cmath> または \<math.h>|
+|**剰余**,**剰余 ,****剰余**|\<math.h>|\<cmath> または \<math.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 
