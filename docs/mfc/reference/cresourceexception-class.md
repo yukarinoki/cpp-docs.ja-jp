@@ -1,5 +1,5 @@
 ---
-title: CResourceException クラス
+title: クラス
 ms.date: 11/04/2016
 f1_keywords:
 - CResourceException
@@ -8,14 +8,14 @@ f1_keywords:
 helpviewer_keywords:
 - CResourceException [MFC], CResourceException
 ms.assetid: af6ae043-d124-4bfd-b35e-7bb0db67d289
-ms.openlocfilehash: b29112b4901a1fecac37aa7ae61496e874959370
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 557bfe1cc41c3dda65bd95d7d687820c0b9862b7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62372199"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368329"
 ---
-# <a name="cresourceexception-class"></a>CResourceException クラス
+# <a name="cresourceexception-class"></a>クラス
 
 Windows が要求されたリソースを見つけられないか、割り当てられないときに生成されます。
 
@@ -31,13 +31,13 @@ class CResourceException : public CSimpleException
 
 |名前|説明|
 |----------|-----------------|
-|[CResourceException::CResourceException](#cresourceexception)|`CResourceException` オブジェクトを構築します。|
+|[次の処理を行います。](#cresourceexception)|`CResourceException` オブジェクトを構築します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-さらに認定には、必要なまたはことはありません。
+これ以上の資格は必要ありません。
 
-使用しての詳細については`CResourceException`、記事をご覧ください[例外処理 (MFC)](../../mfc/exception-handling-in-mfc.md)します。
+の使用方法`CResourceException`の詳細については、「[例外処理 (MFC) 」](../../mfc/exception-handling-in-mfc.md)を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -53,7 +53,7 @@ class CResourceException : public CSimpleException
 
 **ヘッダー:** afxwin.h
 
-##  <a name="cresourceexception"></a>  CResourceException::CResourceException
+## <a name="cresourceexceptioncresourceexception"></a><a name="cresourceexception"></a>次の処理を行います。
 
 `CResourceException` オブジェクトを構築します。
 
@@ -61,11 +61,11 @@ class CResourceException : public CSimpleException
 CResourceException();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このコンス トラクターを直接使用されませんではなく、グローバル関数を呼び出す[AfxThrowResourceException](exception-processing.md#afxthrowresourceexception)します。 例外の詳細については、記事を参照してください。[例外処理 (mfc)](../exception-handling-in-mfc.md)します。
+このコンストラクターを直接使用するのではなく、グローバル関数[AfxThrowResourceException](exception-processing.md#afxthrowresourceexception)を呼び出してください。 例外の詳細については[、「MFC での例外処理」を](../exception-handling-in-mfc.md)参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[CException クラス](cexception-class.md)<br/>
-[階層図](../hierarchy-chart.md)
+[クラスの例外](cexception-class.md)<br/>
+[階層グラフ](../hierarchy-chart.md)

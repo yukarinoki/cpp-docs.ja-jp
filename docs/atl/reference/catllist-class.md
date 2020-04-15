@@ -1,5 +1,5 @@
 ---
-title: CAtlList クラス
+title: クラスを表します。
 ms.date: 11/04/2016
 f1_keywords:
 - CAtlList
@@ -37,16 +37,16 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlList class
 ms.assetid: 09e98053-64b2-4efa-99ab-d0542caaf981
-ms.openlocfilehash: faed99197eb14da8ea095bef81d0d1a9845b18ad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 91b1841423fe159bb5fdd0f06a112c601b1dbc83
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62247015"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81318926"
 ---
-# <a name="catllist-class"></a>CAtlList クラス
+# <a name="catllist-class"></a>クラスを表します。
 
-このクラスは、作成およびリスト オブジェクトを管理するためのメソッドを提供します。
+このクラスには、リスト オブジェクトを作成および管理するためのメソッドが用意されています。
 
 ## <a name="syntax"></a>構文
 
@@ -60,8 +60,8 @@ class CAtlList
 *E*<br/>
 要素型。
 
-*ETraits*<br/>
-コピーまたは要素を移動するために使用するコードです。 参照してください[CElementTraits クラス](../../atl/reference/celementtraits-class.md)の詳細。
+*海峡*<br/>
+要素をコピーまたは移動するために使用するコード。 詳細については[、「CElementTraits クラス](../../atl/reference/celementtraits-class.md)」を参照してください。
 
 ## <a name="members"></a>メンバー
 
@@ -69,63 +69,63 @@ class CAtlList
 
 |名前|説明|
 |----------|-----------------|
-|[CAtlList::INARGTYPE](#inargtype)||
+|[カトルリスト::イナルグタイプ](#inargtype)||
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
 |名前|説明|
 |----------|-----------------|
-|[CAtlList::CAtlList](#catllist)|コンストラクターです。|
-|[CAtlList::~CAtlList](#dtor)|デストラクターです。|
+|[カトルリスト::カトルリスト](#catllist)|コンストラクターです。|
+|[カトルリスト::~カトルリスト](#dtor)|デストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CAtlList::AddHead](#addhead)|リストの先頭に要素を追加するには、このメソッドを呼び出します。|
-|[CAtlList::AddHeadList](#addheadlist)|既存のリストをリストの先頭に追加するには、このメソッドを呼び出します。|
-|[CAtlList::AddTail](#addtail)|このリストの末尾に要素を追加するには、このメソッドを呼び出します。|
-|[CAtlList::AddTailList](#addtaillist)|既存のリストをこのリストの末尾に追加するには、このメソッドを呼び出します。|
-|[CAtlList::AssertValid](#assertvalid)|リストが有効であることを確認するには、このメソッドを呼び出します。|
-|[CAtlList::Find](#find)|指定した要素の一覧を検索するには、このメソッドを呼び出します。|
-|[CAtlList::FindIndex](#findindex)|インデックス値を指定して要素の位置を取得するには、このメソッドを呼び出します。|
-|[CAtlList::GetAt](#getat)|一覧で指定した位置にある要素を返すには、このメソッドを呼び出します。|
-|[CAtlList::GetCount](#getcount)|このメソッドを呼び出して、一覧にオブジェクトの数を返します。|
-|[CAtlList::GetHead](#gethead)|一覧の先頭の要素を返すには、このメソッドを呼び出します。|
-|[CAtlList::GetHeadPosition](#getheadposition)|リストの先頭の位置を取得するには、このメソッドを呼び出します。|
-|[CAtlList::GetNext](#getnext)|リストから次の要素を取得するには、このメソッドを呼び出します。|
-|[CAtlList::GetPrev](#getprev)|リストから直前の要素を取得するには、このメソッドを呼び出します。|
-|[CAtlList::GetTail](#gettail)|リストの末尾に要素を返すには、このメソッドを呼び出します。|
-|[CAtlList::GetTailPosition](#gettailposition)|リストの末尾の位置を取得するには、このメソッドを呼び出します。|
-|[CAtlList::InsertAfter](#insertafter)|指定した位置より後に、リストに新しい要素を挿入するには、このメソッドを呼び出します。|
-|[CAtlList::InsertBefore](#insertbefore)|指定した位置の前にリストに新しい要素を挿入するには、このメソッドを呼び出します。|
-|[CAtlList::IsEmpty](#isempty)|リストが空であるかを判断するには、このメソッドを呼び出します。|
-|[CAtlList::MoveToHead](#movetohead)|指定した要素をリストの先頭に移動するには、このメソッドを呼び出します。|
-|[CAtlList::MoveToTail](#movetotail)|指定した要素をリストの末尾に移動するには、このメソッドを呼び出します。|
-|[CAtlList::RemoveAll](#removeall)|すべての要素をリストから削除するには、このメソッドを呼び出します。|
-|[CAtlList::RemoveAt](#removeat)|一覧から 1 つの要素を削除するには、このメソッドを呼び出します。|
-|[CAtlList::RemoveHead](#removehead)|リストの先頭にある要素を削除するには、このメソッドを呼び出します。|
-|[CAtlList::RemoveHeadNoReturn](#removeheadnoreturn)|値を返さずに、リストの先頭にある要素を削除するには、このメソッドを呼び出します。|
-|[CAtlList::RemoveTail](#removetail)|リストの末尾にある要素を削除するには、このメソッドを呼び出します。|
-|[CAtlList::RemoveTailNoReturn](#removetailnoreturn)|値を返さずに、リストの末尾にある要素を削除するには、このメソッドを呼び出します。|
-|[CAtlList::SetAt](#setat)|一覧で指定した位置にある要素の値を設定するには、このメソッドを呼び出します。|
-|[CAtlList::SwapElements](#swapelements)|リスト内の要素を交換するには、このメソッドを呼び出します。|
+|[カトルリスト::アドヘッド](#addhead)|リストの先頭に要素を追加します。|
+|[カトルリスト::追加ヘッドリスト](#addheadlist)|リストの先頭に既存のリストを追加します。|
+|[カトルリスト::追加テール](#addtail)|このリストの末尾に要素を追加します。|
+|[カトルリスト::追加テールリスト](#addtaillist)|このリストの末尾に既存のリストを追加します。|
+|[カトルリスト::アサートValid](#assertvalid)|リストが有効であることを確認します。|
+|[カトルリスト::検索](#find)|指定した要素のリストを検索します。|
+|[インデックスを検索します。](#findindex)|インデックス値を指定して要素の位置を取得します。|
+|[カトルリスト::ゲットアット](#getat)|リスト内の指定した位置にある要素を返します。|
+|[カトルリスト::取得カウント](#getcount)|リスト内のオブジェクトの数を返します。|
+|[カトルリスト::ゲットヘッド](#gethead)|リストの先頭にある要素を返します。|
+|[カトルリスト::ゲットヘッドポジション](#getheadposition)|リストの先頭の位置を取得します。|
+|[カトルリスト::次に取得](#getnext)|リストから次の要素を返します。|
+|[カトルリスト::ゲットプレフ](#getprev)|リストから前の要素を返します。|
+|[カトルリスト::ゲットテール](#gettail)|リストの末尾にある要素を返します。|
+|[カトルリスト::ゲットテールポジション](#gettailposition)|リストの末尾の位置を取得します。|
+|[CAtlList::後に挿入](#insertafter)|指定した位置の後に新しい要素をリストに挿入します。|
+|[CAtlList::前に挿入](#insertbefore)|指定した位置の前に新しい要素をリストに挿入します。|
+|[カトルリスト::IsEmpty](#isempty)|リストが空かどうかを調べます。|
+|[カトルリスト::移動ヘッド](#movetohead)|指定した要素をリストの先頭に移動します。|
+|[カトルリスト:::ムーブトテール](#movetotail)|指定した要素をリストの末尾に移動します。|
+|[一覧::すべて削除](#removeall)|リストからすべての要素を削除します。|
+|[カトルリスト::削除アット](#removeat)|リストから 1 つの要素を削除します。|
+|[キャップルリスト::削除ヘッド](#removehead)|リストの先頭にある要素を削除します。|
+|[CAtlリスト::リムートヘッドノーリターン](#removeheadnoreturn)|値を返さずに、リストの先頭にある要素を削除します。|
+|[カトルリスト::リムートテール](#removetail)|リストの末尾にある要素を削除します。|
+|[カトルリスト::リムープテールノーリターン](#removetailnoreturn)|値を返さずに、リストの末尾にある要素を削除します。|
+|[カトルリスト::セットアット](#setat)|リスト内の指定した位置にある要素の値を設定します。|
+|[要素を指定します。](#swapelements)|リスト内の要素を交換します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-`CAtlList`クラス順番にまたは値にアクセスできる一意でないオブジェクトの一覧を順序付けがサポートされます。 `CAtlList` リストはダブルリンク リストのように動作します。 各リストには、先頭と末尾、および新しい要素 (または場合によってはリスト) を一覧のいずれかの末尾に追加または特定の要素の前後に挿入します。
+この`CAtlList`クラスは、一意でないオブジェクトの順序付きリストを順次または値でアクセス可能にサポートします。 `CAtlList`リストは、二重にリンクされたリストのように動作します。 各リストには頭と尾があり、新しい要素 (または場合によってはリスト) をリストの最後に追加したり、特定の要素の前後に挿入したりできます。
 
-ほとんどの`CAtlList`メソッドを使用する位置の値を使用します。 この値は、実際のメモリ位置、要素が格納されているとする必要がありますいない計算または予測を直接参照するメソッドによって使用されます。 アクセスする必要がある場合、 *n*番目の要素、メソッドの一覧で[CAtlList::FindIndex](#findindex)は指定されたインデックスの対応する位置の値を返します。 メソッド[CAtlList::GetNext](#getnext)と[CAtlList::GetPrev](#getprev)リスト内のオブジェクトを反復処理するために使用できます。
+ほとんどの方法では`CAtlList`、位置値を使用します。 この値は、要素が格納されている実際のメモリ位置を参照するためにメソッドによって使用され、計算または直接予測すべきではありません。 リストの*n*番目の要素にアクセスする必要がある場合、メソッド[CAtlList::FindIndex](#findindex)は、指定されたインデックスの対応する位置の値を返します。 メソッド[CAtlList::GetNext](#getnext)と[CAtlList::GetPrev](#getprev)は、リスト内のオブジェクトを反復処理するために使用できます。
 
-ATL で使用可能なコレクション クラスの詳細については、次を参照してください。 [ATL コレクション クラス](../../atl/atl-collection-classes.md)します。
+ATL で使用できるコレクション クラスの詳細については、「 [ATL コレクション クラス](../../atl/atl-collection-classes.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlcoll.h
 
-##  <a name="addhead"></a>  CAtlList::AddHead
+## <a name="catllistaddhead"></a><a name="addhead"></a>カトルリスト::アドヘッド
 
-リストの先頭に要素を追加するには、このメソッドを呼び出します。
+リストの先頭に要素を追加します。
 
 ```
 POSITION AddHead();
@@ -141,17 +141,17 @@ POSITION AddHead(INARGTYPE element);
 
 新しく追加された要素の位置を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-最初のバージョンを使用する場合、コピー コンス トラクターではなく、既定のコンス トラクターを使用して、空の要素が作成されます。
+最初のバージョンを使用する場合、コピー コンストラクターではなく、既定のコンストラクターを使用して空の要素が作成されます。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Utilities#13](../../atl/codesnippet/cpp/catllist-class_1.cpp)]
 
-##  <a name="addheadlist"></a>  CAtlList::AddHeadList
+## <a name="catllistaddheadlist"></a><a name="addheadlist"></a>カトルリスト::追加ヘッドリスト
 
-既存のリストをリストの先頭に追加するには、このメソッドを呼び出します。
+リストの先頭に既存のリストを追加します。
 
 ```
 void AddHeadList(const CAtlList<E, ETraits>* plNew);
@@ -162,17 +162,17 @@ void AddHeadList(const CAtlList<E, ETraits>* plNew);
 *plNew*<br/>
 追加するリスト。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-によって示されるリスト*plNew*は既存のリストの先頭に挿入されます。 場合、デバッグ ビルドで、アサーション エラーが発生*plNew*が NULL です。
+*plNew*が指すリストは、既存のリストの先頭に挿入されます。 デバッグ ビルドでは *、plNew*が NULL に等しい場合にアサーション エラーが発生します。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Utilities#14](../../atl/codesnippet/cpp/catllist-class_2.cpp)]
 
-##  <a name="addtail"></a>  CAtlList::AddTail
+## <a name="catllistaddtail"></a><a name="addtail"></a>カトルリスト::追加テール
 
-このリストの末尾に要素を追加するには、このメソッドを呼び出します。
+このリストの末尾に要素を追加します。
 
 ```
 POSITION AddTail();
@@ -188,17 +188,17 @@ POSITION AddTail(INARGTYPE element);
 
 新しく追加された要素の位置を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-最初のバージョンを使用する場合、コピー コンス トラクターではなく、既定のコンス トラクターを使用して、空の要素が作成されます。 要素が、リストの末尾に追加され、ので、末尾になります。 このメソッドは、空のリストで使用できます。
+最初のバージョンを使用する場合、コピー コンストラクターではなく、既定のコンストラクターを使用して空の要素が作成されます。 要素がリストの末尾に追加され、末尾になります。 このメソッドは、空のリストと共に使用できます。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Utilities#15](../../atl/codesnippet/cpp/catllist-class_3.cpp)]
 
-##  <a name="addtaillist"></a>  CAtlList::AddTailList
+## <a name="catllistaddtaillist"></a><a name="addtaillist"></a>カトルリスト::追加テールリスト
 
-既存のリストをこのリストの末尾に追加するには、このメソッドを呼び出します。
+このリストの末尾に既存のリストを追加します。
 
 ```
 void AddTailList(const CAtlList<E, ETraits>* plNew);
@@ -209,31 +209,31 @@ void AddTailList(const CAtlList<E, ETraits>* plNew);
 *plNew*<br/>
 追加するリスト。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-によって示されるリスト*plNew*最後の要素の後に (ある場合) に挿入、リスト オブジェクト。 最後の要素、 *plNew*リストが末尾。 場合、デバッグ ビルドで、アサーション エラーが発生*plNew*が NULL です。
+*plNew*が指すリストは、リストオブジェクトの最後の要素 (存在する場合) の後に挿入されます。 したがって *、plNew*リストの最後の要素は末尾になります。 デバッグ ビルドでは *、plNew*が NULL に等しい場合にアサーション エラーが発生します。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Utilities#16](../../atl/codesnippet/cpp/catllist-class_4.cpp)]
 
-##  <a name="assertvalid"></a>  CAtlList::AssertValid
+## <a name="catllistassertvalid"></a><a name="assertvalid"></a>カトルリスト::アサートValid
 
-リストが有効であることを確認するには、このメソッドを呼び出します。
+リストが有効であることを確認します。
 
 ```
 void AssertValid() const;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-デバッグ ビルドでは、リスト オブジェクトが有効でない場合に、アサーション エラーが発生します。 空でない一覧があります、先頭と末尾の有効なアドレスを指すと、先頭と末尾の null の場合、 をポイントを有効にするには、空のリストがあります。
+デバッグ ビルドでは、リスト オブジェクトが有効でない場合にアサーション エラーが発生します。 有効にするには、空のリストに、NULL を指す頭と尾の両方が必要です。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Utilities#17](../../atl/codesnippet/cpp/catllist-class_5.cpp)]
 
-##  <a name="catllist"></a>  CAtlList::CAtlList
+## <a name="catllistcatllist"></a><a name="catllist"></a>カトルリスト::カトルリスト
 
 コンストラクターです。
 
@@ -243,18 +243,18 @@ CAtlList(UINT nBlockSize = 10) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*nBlockSize*<br/>
-ブロック サイズ。
+*ブロックサイズ*<br/>
+ブロックのサイズです。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-コンス トラクター、`CAtlList`オブジェクト。 ブロック サイズは、新しい要素が必要なときに割り当てられたメモリ量の測定です。 ブロック サイズの増加はメモリ割り当てルーチンの呼び出しを減らすためがより多くのリソースを使用します。
+オブジェクトの`CAtlList`コンストラクター。 ブロック サイズは、新しい要素が必要なときに割り当てられるメモリの量を測定します。 ブロック サイズが大きくなると、メモリ割り当てルーチンの呼び出しは減りますが、使用するリソースは多くなります。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Utilities#18](../../atl/codesnippet/cpp/catllist-class_6.cpp)]
 
-##  <a name="dtor"></a>  CAtlList::~CAtlList
+## <a name="catllistcatllist"></a><a name="dtor"></a>カトルリスト::~カトルリスト
 
 デストラクターです。
 
@@ -262,15 +262,15 @@ CAtlList(UINT nBlockSize = 10) throw();
 ~CAtlList() throw();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-呼び出しを含む、割り当てられているすべてのリソースを解放[CAtlList::RemoveAll](#removeall)リストからすべての要素を削除します。
+[CAtlList::RemoveAll](#removeall)の呼び出しを含むすべての割り当て済みリソースを解放し、リストからすべての要素を削除します。
 
-一覧への呼び出し後にいくつかの要素もが含まれている場合、デバッグ ビルドで、アサーション エラーが発生`RemoveAll`します。
+デバッグ ビルドでは、リストに呼び出し後に要素が含まれている場合にアサーション`RemoveAll`エラーが発生します。
 
-##  <a name="find"></a>  CAtlList::Find
+## <a name="catllistfind"></a><a name="find"></a>カトルリスト::検索
 
-指定した要素の一覧を検索するには、このメソッドを呼び出します。
+指定した要素のリストを検索します。
 
 ```
 POSITION Find(INARGTYPE element, POSITION posStartAfter = NULL) const throw();
@@ -279,26 +279,26 @@ POSITION Find(INARGTYPE element, POSITION posStartAfter = NULL) const throw();
 ### <a name="parameters"></a>パラメーター
 
 *要素*<br/>
-一覧で検索する要素。
+リスト内で見つかる要素。
 
-*posStartAfter*<br/>
-検索の開始位置。 値が指定されていない場合は、head 要素で、検索が始まります。
+*後に開始する*<br/>
+検索の開始位置。 値を指定しない場合、検索は head 要素から開始されます。
 
 ### <a name="return-value"></a>戻り値
 
-場合、要素の位置を表す値を返しますが見つかると、それ以外の場合は NULL を返します。
+見つかった場合は要素の POSITION 値を返し、それ以外の場合は NULL を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-リスト オブジェクトが有効でない場合、または場合、デバッグ ビルドで、アサーション エラーが発生、 *posStartAfter*値が範囲外です。
+デバッグ ビルドでは、リスト オブジェクトが有効でない場合、または*posStartAfter*値が範囲外の場合にアサーション エラーが発生します。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Utilities#19](../../atl/codesnippet/cpp/catllist-class_7.cpp)]
 
-##  <a name="findindex"></a>  CAtlList::FindIndex
+## <a name="catllistfindindex"></a><a name="findindex"></a>インデックスを検索します。
 
-インデックス値を指定して要素の位置を取得するには、このメソッドを呼び出します。
+インデックス値を指定して要素の位置を取得します。
 
 ```
 POSITION FindIndex(size_t iElement) const throw();
@@ -306,26 +306,26 @@ POSITION FindIndex(size_t iElement) const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*iElement*<br/>
-必要なリストの要素の 0 から始まるインデックス。
+*i要素*<br/>
+必要なリスト要素の 0 から始まるインデックス。
 
 ### <a name="return-value"></a>戻り値
 
-場合に、対応する位置の値または NULL を返します*iElement*が範囲外です。
+対応する POSITION 値を返します*iElement*。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドへのアクセス許可を指定したインデックス値に対応する位置を返します、 *n*番目の要素の一覧でします。
+このメソッドは、指定されたインデックス値に対応する POSITION を返し、リスト内の*n*番目の要素にアクセスできるようにします。
 
-デバッグ ビルドでは、リスト オブジェクトが有効でない場合に、アサーション エラーが発生します。
+デバッグ ビルドでは、リスト オブジェクトが有効でない場合にアサーション エラーが発生します。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Utilities#20](../../atl/codesnippet/cpp/catllist-class_8.cpp)]
 
-##  <a name="getat"></a>  CAtlList::GetAt
+## <a name="catllistgetat"></a><a name="getat"></a>カトルリスト::ゲットアット
 
-一覧で指定した位置にある要素を返すには、このメソッドを呼び出します。
+リスト内の指定した位置にある要素を返します。
 
 ```
 E& GetAt(POSITION pos) throw();
@@ -335,27 +335,27 @@ const E& GetAt(POSITION pos) const throw();
 ### <a name="parameters"></a>パラメーター
 
 *pos*<br/>
-特定の要素を指定する位置の値。
+特定の要素を指定する POSITION 値。
 
 ### <a name="return-value"></a>戻り値
 
-参照または要素のコピー。
+要素への参照または要素のコピー。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-リストの場合**const**、`GetAt`要素のコピーを返します。 これにより、メソッドは、代入ステートメントの右側にあるでのみ使用し、変更から一覧を保護します。
+リストが**const**の`GetAt`場合は、要素のコピーを返します。 これにより、メソッドは代入ステートメントの右側でのみ使用でき、リストが変更されないように保護されます。
 
-リストがない場合**const**、`GetAt`要素への参照を返します。 これは、メソッドは、代入ステートメントの右辺でも左辺でも使用してできるので、リスト エントリを変更できます。
+リストが**const**でない場合`GetAt`は、要素への参照を返します。 これにより、メソッドは代入ステートメントの両側で使用され、リストエントリを変更することができます。
 
-場合、デバッグ ビルドで、アサーション エラーが発生*pos*が NULL です。
+デバッグ ビルドでは *、pos*が NULL に等しい場合、アサーション エラーが発生します。
 
 ### <a name="example"></a>例
 
-例をご覧ください[CAtlList::FindIndex](#findindex)します。
+[次](#findindex)の例を参照してください。
 
-##  <a name="getcount"></a>  CAtlList::GetCount
+## <a name="catllistgetcount"></a><a name="getcount"></a>カトルリスト::取得カウント
 
-このメソッドを呼び出して、一覧にオブジェクトの数を返します。
+リスト内のオブジェクトの数を返します。
 
 ```
 size_t GetCount() const throw();
@@ -367,11 +367,11 @@ size_t GetCount() const throw();
 
 ### <a name="example"></a>例
 
-例をご覧ください[CAtlList::Find](#find)します。
+[「CAtlList::Find」](#find)の例を参照してください。
 
-##  <a name="gethead"></a>  CAtlList::GetHead
+## <a name="catllistgethead"></a><a name="gethead"></a>カトルリスト::ゲットヘッド
 
-一覧の先頭の要素を返すには、このメソッドを呼び出します。
+リストの先頭にある要素を返します。
 
 ```
 E& GetHead() throw();
@@ -380,23 +380,23 @@ const E& GetHead() const throw();
 
 ### <a name="return-value"></a>戻り値
 
-参照またはリストの先頭にある要素のコピーを返します。
+リストの先頭にある要素への参照または要素のコピーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-リストの場合**const**、`GetHead`リストの先頭にある要素のコピーを返します。 これにより、メソッドは、代入ステートメントの右側にあるでのみ使用し、変更から一覧を保護します。
+リストが**const**の`GetHead`場合は、リストの先頭にある要素のコピーを返します。 これにより、メソッドは代入ステートメントの右側でのみ使用でき、リストが変更されないように保護されます。
 
-リストがない場合**const**、`GetHead`リストの先頭にある要素への参照を返します。 これは、メソッドは、代入ステートメントの右辺でも左辺でも使用してできるので、リスト エントリを変更できます。
+リストが**const**でない場合`GetHead`は、リストの先頭にある要素への参照を返します。 これにより、メソッドは代入ステートメントの両側で使用され、リストエントリを変更することができます。
 
-デバッグ ビルドでは、NULL をリストの先頭を指す場合に、アサーション エラーが発生します。
+デバッグ ビルドでは、リストの先頭が NULL を指すとアサーション エラーが発生します。
 
 ### <a name="example"></a>例
 
-例をご覧ください[CAtlList::AddHead](#addhead)します。
+[次](#addhead)の例を参照してください。
 
-##  <a name="getheadposition"></a>  CAtlList::GetHeadPosition
+## <a name="catllistgetheadposition"></a><a name="getheadposition"></a>カトルリスト::ゲットヘッドポジション
 
-リストの先頭の位置を取得するには、このメソッドを呼び出します。
+リストの先頭の位置を取得します。
 
 ```
 POSITION GetHeadPosition() const throw();
@@ -404,19 +404,19 @@ POSITION GetHeadPosition() const throw();
 
 ### <a name="return-value"></a>戻り値
 
-一覧の先頭の要素に対応する位置の値を返します。
+リストの先頭にある要素に対応する POSITION 値を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-リストが空の場合は、返される値は NULL です。
+リストが空の場合、返される値は NULL です。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Utilities#21](../../atl/codesnippet/cpp/catllist-class_9.cpp)]
 
-##  <a name="getnext"></a>  CAtlList::GetNext
+## <a name="catllistgetnext"></a><a name="getnext"></a>カトルリスト::次に取得
 
-リストから次の要素を取得するには、このメソッドを呼び出します。
+リストから次の要素を返します。
 
 ```
 E& GetNext(POSITION& pos) throw();
@@ -426,25 +426,25 @@ const E& GetNext(POSITION& pos) const throw();
 ### <a name="parameters"></a>パラメーター
 
 *pos*<br/>
-位置の値、以前の呼び出しによって返される`GetNext`、 [CAtlList::GetHeadPosition](#getheadposition)、またはその他の`CAtlList`メソッド。
+以前の呼び出し`GetNext`によって返される POSITION 値 、 [CAtlList::GetHeadPosition](#getheadposition)、またはその他の`CAtlList`メソッド。
 
 ### <a name="return-value"></a>戻り値
 
-リストの場合**const**、`GetNext`一覧の次の要素のコピーを返します。 これにより、メソッドは、代入ステートメントの右側にあるでのみ使用し、変更から一覧を保護します。
+リストが**const**の`GetNext`場合は、リストの次の要素のコピーを返します。 これにより、メソッドは代入ステートメントの右側でのみ使用でき、リストが変更されないように保護されます。
 
-リストがない場合**const**、`GetNext`一覧の次の要素への参照を返します。 これは、メソッドは、代入ステートメントの右辺でも左辺でも使用してできるので、リスト エントリを変更できます。
+リストが**const**でない場合`GetNext`は、リストの次の要素への参照を返します。 これにより、メソッドは代入ステートメントの両側で使用され、リストエントリを変更することができます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-位置カウンター *pos*一覧で、次の要素をポイントするか、または要素のない場合は NULL に更新されます。 場合、デバッグ ビルドで、アサーション エラーが発生*pos*が NULL です。
+POSITION カウンタ*pos*は、リスト内の次の要素を指すために更新され、要素がなくなった場合は NULL になります。 デバッグ ビルドでは *、pos*が NULL に等しい場合、アサーション エラーが発生します。
 
 ### <a name="example"></a>例
 
-例をご覧ください[CAtlList::GetHeadPosition](#getheadposition)します。
+[の](#getheadposition)例を参照してください。
 
-##  <a name="getprev"></a>  CAtlList::GetPrev
+## <a name="catllistgetprev"></a><a name="getprev"></a>カトルリスト::ゲットプレフ
 
-リストから直前の要素を取得するには、このメソッドを呼び出します。
+リストから前の要素を返します。
 
 ```
 E& GetPrev(POSITION& pos) throw();
@@ -454,25 +454,25 @@ const E& GetPrev(POSITION& pos) const throw();
 ### <a name="parameters"></a>パラメーター
 
 *pos*<br/>
-位置の値、以前の呼び出しによって返される`GetPrev`、 [CAtlList::GetTailPosition](#gettailposition)、またはその他の`CAtlList`メソッド。
+以前の呼び出し`GetPrev`によって返される POSITION 値 、 [CAtlList::GetTailPosition](#gettailposition)、またはその他の`CAtlList`メソッド。
 
 ### <a name="return-value"></a>戻り値
 
-リストの場合**const**、`GetPrev`リストの要素のコピーを返します。 これにより、メソッドは、代入ステートメントの右側にあるでのみ使用し、変更から一覧を保護します。
+リストが**const**の`GetPrev`場合は、リストの要素のコピーを返します。 これにより、メソッドは代入ステートメントの右側でのみ使用でき、リストが変更されないように保護されます。
 
-リストがない場合**const**、`GetPrev`リストの要素への参照を返します。 これは、メソッドは、代入ステートメントの右辺でも左辺でも使用してできるので、リスト エントリを変更できます。
+リストが**const**でない場合`GetPrev`は、リストの要素への参照を返します。 これにより、メソッドは代入ステートメントの両側で使用され、リストエントリを変更することができます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-位置カウンター *pos*一覧で、直前の要素をポイントするか、または要素のない場合は NULL に更新されます。 場合、デバッグ ビルドで、アサーション エラーが発生*pos*が NULL です。
+POSITION カウンタ*pos*は、リスト内の前の要素を指すために更新され、要素がなくなった場合は NULL になります。 デバッグ ビルドでは *、pos*が NULL に等しい場合、アサーション エラーが発生します。
 
 ### <a name="example"></a>例
 
-例をご覧ください[CAtlList::GetTailPosition](#gettailposition)します。
+[の](#gettailposition)例を参照してください。
 
-##  <a name="gettail"></a>  CAtlList::GetTail
+## <a name="catllistgettail"></a><a name="gettail"></a>カトルリスト::ゲットテール
 
-リストの末尾に要素を返すには、このメソッドを呼び出します。
+リストの末尾にある要素を返します。
 
 ```
 E& GetTail() throw();
@@ -481,23 +481,23 @@ const E& GetTail() const throw();
 
 ### <a name="return-value"></a>戻り値
 
-参照またはリストの末尾にある要素のコピーを返します。
+リストの末尾にある要素への参照または要素のコピーを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-リストの場合**const**、`GetTail`リストの先頭にある要素のコピーを返します。 これにより、メソッドは、代入ステートメントの右側にあるでのみ使用し、変更から一覧を保護します。
+リストが**const**の`GetTail`場合は、リストの先頭にある要素のコピーを返します。 これにより、メソッドは代入ステートメントの右側でのみ使用でき、リストが変更されないように保護されます。
 
-リストがない場合**const**、`GetTail`リストの先頭にある要素への参照を返します。 これは、メソッドは、代入ステートメントの右辺でも左辺でも使用してできるので、リスト エントリを変更できます。
+リストが**const**でない場合`GetTail`は、リストの先頭にある要素への参照を返します。 これにより、メソッドは代入ステートメントの両側で使用され、リストエントリを変更することができます。
 
-デバッグ ビルドでは、リストの末尾が NULL を指している場合に、アサーション エラーが発生します。
+デバッグ ビルドでは、リストの末尾が NULL を指している場合、アサーション エラーが発生します。
 
 ### <a name="example"></a>例
 
-例をご覧ください[CAtlList::AddTail](#addtail)します。
+[次](#addtail)の例を参照してください。
 
-##  <a name="gettailposition"></a>  CAtlList::GetTailPosition
+## <a name="catllistgettailposition"></a><a name="gettailposition"></a>カトルリスト::ゲットテールポジション
 
-リストの末尾の位置を取得するには、このメソッドを呼び出します。
+リストの末尾の位置を取得します。
 
 ```
 POSITION GetTailPosition() const throw();
@@ -505,27 +505,27 @@ POSITION GetTailPosition() const throw();
 
 ### <a name="return-value"></a>戻り値
 
-リストの末尾にある要素に対応する位置の値を返します。
+リストの末尾にある要素に対応する POSITION 値を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-リストが空の場合は、返される値は NULL です。
+リストが空の場合、返される値は NULL です。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Utilities#22](../../atl/codesnippet/cpp/catllist-class_10.cpp)]
 
-##  <a name="inargtype"></a>  CAtlList::INARGTYPE
+## <a name="catllistinargtype"></a><a name="inargtype"></a>カトルリスト::イナルグタイプ
 
-要素は、入力引数として渡されるときに使用する型。
+要素が入力引数として渡されるときに使用される型。
 
 ```
 typedef ETraits::INARGTYPE INARGTYPE;
 ```
 
-##  <a name="insertafter"></a>  CAtlList::InsertAfter
+## <a name="catllistinsertafter"></a><a name="insertafter"></a>CAtlList::後に挿入
 
-指定した位置より後に、リストに新しい要素を挿入するには、このメソッドを呼び出します。
+指定した位置の後に新しい要素をリストに挿入します。
 
 ```
 POSITION InsertAfter(POSITION pos, INARGTYPE element);
@@ -534,26 +534,26 @@ POSITION InsertAfter(POSITION pos, INARGTYPE element);
 ### <a name="parameters"></a>パラメーター
 
 *pos*<br/>
-その後、新しい要素を挿入する位置の値。
+新しい要素が挿入される位置の値。
 
 *要素*<br/>
 挿入する要素。
 
 ### <a name="return-value"></a>戻り値
 
-新しい要素の位置を表す値を返します。
+新しい要素の位置値を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-デバッグ ビルドでは、リストが有効ではない場合は、末尾の後に、要素を挿入しようとしましたが、挿入が失敗した場合、または場合に、アサーション エラーが発生します。
+デバッグ ビルドでは、リストが有効でない場合、挿入に失敗した場合、または末尾の後に要素を挿入しようとした場合、アサーション エラーが発生します。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Utilities#23](../../atl/codesnippet/cpp/catllist-class_11.cpp)]
 
-##  <a name="insertbefore"></a>  CAtlList::InsertBefore
+## <a name="catllistinsertbefore"></a><a name="insertbefore"></a>CAtlList::前に挿入
 
-指定した位置の前にリストに新しい要素を挿入するには、このメソッドを呼び出します。
+指定した位置の前に新しい要素をリストに挿入します。
 
 ```
 POSITION InsertBefore(POSITION pos, INARGTYPE element);
@@ -562,26 +562,26 @@ POSITION InsertBefore(POSITION pos, INARGTYPE element);
 ### <a name="parameters"></a>パラメーター
 
 *pos*<br/>
-新しい要素は、この位置の値の前に、の一覧に挿入されます。
+新しい要素は、この POSITION 値の前にリストに挿入されます。
 
 *要素*<br/>
 挿入する要素。
 
 ### <a name="return-value"></a>戻り値
 
-新しい要素の位置を表す値を返します。
+新しい要素の位置値を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-デバッグ ビルドでは、リストが有効ではない、挿入が失敗した場合、または先頭の前に要素を挿入する試みられた場合場合、アサーション エラーが発生します。
+デバッグ ビルドでは、リストが有効でない場合、挿入に失敗した場合、または要素を先頭の前に挿入しようとした場合、アサーション エラーが発生します。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Utilities#24](../../atl/codesnippet/cpp/catllist-class_12.cpp)]
 
-##  <a name="isempty"></a>  CAtlList::IsEmpty
+## <a name="catllistisempty"></a><a name="isempty"></a>カトルリスト::IsEmpty
 
-リストが空であるかを判断するには、このメソッドを呼び出します。
+リストが空かどうかを調べます。
 
 ```
 bool IsEmpty() const throw();
@@ -589,15 +589,15 @@ bool IsEmpty() const throw();
 
 ### <a name="return-value"></a>戻り値
 
-一覧にオブジェクト、それ以外の場合は false が含まれていない場合は true を返します。
+リストにオブジェクトが含まれている場合は true を返し、それ以外の場合は false を返します。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Utilities#25](../../atl/codesnippet/cpp/catllist-class_13.cpp)]
 
-##  <a name="movetohead"></a>  CAtlList::MoveToHead
+## <a name="catllistmovetohead"></a><a name="movetohead"></a>カトルリスト::移動ヘッド
 
-指定した要素をリストの先頭に移動するには、このメソッドを呼び出します。
+指定した要素をリストの先頭に移動します。
 
 ```
 void MoveToHead(POSITION pos) throw();
@@ -606,19 +606,19 @@ void MoveToHead(POSITION pos) throw();
 ### <a name="parameters"></a>パラメーター
 
 *pos*<br/>
-移動先の要素の位置の値。
+移動する要素の POSITION 値。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-指定した要素は、現在の位置から、リストの先頭に移動されます。 場合、デバッグ ビルドで、アサーション エラーが発生*pos*が NULL です。
+指定した要素は、現在の位置からリストの先頭に移動します。 デバッグ ビルドでは *、pos*が NULL に等しい場合、アサーション エラーが発生します。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Utilities#26](../../atl/codesnippet/cpp/catllist-class_14.cpp)]
 
-##  <a name="movetotail"></a>  CAtlList::MoveToTail
+## <a name="catllistmovetotail"></a><a name="movetotail"></a>カトルリスト:::ムーブトテール
 
-指定した要素をリストの末尾に移動するには、このメソッドを呼び出します。
+指定した要素をリストの末尾に移動します。
 
 ```
 void MoveToTail(POSITION pos) throw();
@@ -627,35 +627,35 @@ void MoveToTail(POSITION pos) throw();
 ### <a name="parameters"></a>パラメーター
 
 *pos*<br/>
-移動先の要素の位置の値。
+移動する要素の POSITION 値。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-指定した要素は、現在の位置からリストの末尾に移動されます。 場合、デバッグ ビルドで、アサーション エラーが発生*pos*が NULL です。
+指定した要素は、現在の位置からリストの末尾に移動されます。 デバッグ ビルドでは *、pos*が NULL に等しい場合、アサーション エラーが発生します。
 
 ### <a name="example"></a>例
 
-例をご覧ください[CAtlList::MoveToHead](#movetohead)します。
+[次](#movetohead)の例を参照してください。
 
-##  <a name="removeall"></a>  CAtlList::RemoveAll
+## <a name="catllistremoveall"></a><a name="removeall"></a>一覧::すべて削除
 
-すべての要素をリストから削除するには、このメソッドを呼び出します。
+リストからすべての要素を削除します。
 
 ```
 void RemoveAll() throw();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、一覧からのすべての要素を削除し、割り当てられたメモリを解放します。 デバッグ ビルドではすべての要素が削除されない場合、またはリスト構造が破損した場合、atlassert されます。
+このメソッドは、リストからすべての要素を削除し、割り当てられたメモリを解放します。 デバッグ ビルドでは、すべての要素が削除されていない場合、またはリスト構造が破損した場合に ATLASSERT が発生します。
 
 ### <a name="example"></a>例
 
-例をご覧ください[CAtlList::IsEmpty](#isempty)します。
+[次](#isempty)の例を参照してください。
 
-##  <a name="removeat"></a>  CAtlList::RemoveAt
+## <a name="catllistremoveat"></a><a name="removeat"></a>カトルリスト::削除アット
 
-一覧から 1 つの要素を削除するには、このメソッドを呼び出します。
+リストから 1 つの要素を削除します。
 
 ```
 void RemoveAt(POSITION pos) throw();
@@ -664,21 +664,21 @@ void RemoveAt(POSITION pos) throw();
 ### <a name="parameters"></a>パラメーター
 
 *pos*<br/>
-削除する要素の位置の値。
+削除する要素の POSITION 値。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-によって参照される要素*pos*が削除され、メモリが解放されます。 使用することができます`RemoveAt`ヘッドまたはリストの末尾を削除します。
+*pos*によって参照される要素が削除され、メモリが解放されます。 リストの頭または尾`RemoveAt`部を取り除くために使用しても構いません。
 
-デバッグ ビルドでは、リストが有効でない場合、またはメモリ リスト構造に含まれていないにアクセスするリストの要素を削除すると場合、アサーション エラーが発生します。
+デバッグ ビルドでは、リストが有効でない場合、または要素を削除すると、リスト構造の一部ではないメモリにアクセスするアサーション エラーが発生します。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Utilities#27](../../atl/codesnippet/cpp/catllist-class_15.cpp)]
 
-##  <a name="removehead"></a>  CAtlList::RemoveHead
+## <a name="catllistremovehead"></a><a name="removehead"></a>キャップルリスト::削除ヘッド
 
-リストの先頭にある要素を削除するには、このメソッドを呼び出します。
+リストの先頭にある要素を削除します。
 
 ```
 E RemoveHead();
@@ -686,35 +686,35 @@ E RemoveHead();
 
 ### <a name="return-value"></a>戻り値
 
-一覧の先頭の要素を返します。
+リストの先頭にある要素を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-Head 要素が、一覧から削除され、メモリが解放されます。 要素のコピーが返されます。 デバッグ ビルドでは、リストが空の場合に、アサーション エラーが発生します。
+head 要素がリストから削除され、メモリが解放されます。 要素のコピーが返されます。 デバッグ ビルドでは、リストが空の場合にアサーション エラーが発生します。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Utilities#28](../../atl/codesnippet/cpp/catllist-class_16.cpp)]
 
-##  <a name="removeheadnoreturn"></a>  CAtlList::RemoveHeadNoReturn
+## <a name="catllistremoveheadnoreturn"></a><a name="removeheadnoreturn"></a>CAtlリスト::リムートヘッドノーリターン
 
-値を返さずに、リストの先頭にある要素を削除するには、このメソッドを呼び出します。
+値を返さずに、リストの先頭にある要素を削除します。
 
 ```
 void RemoveHeadNoReturn() throw();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-Head 要素が、一覧から削除され、メモリが解放されます。 デバッグ ビルドでは、リストが空の場合に、アサーション エラーが発生します。
+head 要素がリストから削除され、メモリが解放されます。 デバッグ ビルドでは、リストが空の場合にアサーション エラーが発生します。
 
 ### <a name="example"></a>例
 
-例をご覧ください[CAtlList::IsEmpty](#isempty)します。
+[次](#isempty)の例を参照してください。
 
-##  <a name="removetail"></a>  CAtlList::RemoveTail
+## <a name="catllistremovetail"></a><a name="removetail"></a>カトルリスト::リムートテール
 
-リストの末尾にある要素を削除するには、このメソッドを呼び出します。
+リストの末尾にある要素を削除します。
 
 ```
 E RemoveTail();
@@ -724,33 +724,33 @@ E RemoveTail();
 
 リストの末尾にある要素を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-末尾の要素が、一覧から削除され、メモリが解放されます。 要素のコピーが返されます。 デバッグ ビルドでは、リストが空の場合に、アサーション エラーが発生します。
+tail 要素がリストから削除され、メモリが解放されます。 要素のコピーが返されます。 デバッグ ビルドでは、リストが空の場合にアサーション エラーが発生します。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Utilities#29](../../atl/codesnippet/cpp/catllist-class_17.cpp)]
 
-##  <a name="removetailnoreturn"></a>  CAtlList::RemoveTailNoReturn
+## <a name="catllistremovetailnoreturn"></a><a name="removetailnoreturn"></a>カトルリスト::リムープテールノーリターン
 
-値を返さずに、リストの末尾にある要素を削除するには、このメソッドを呼び出します。
+値を返さずに、リストの末尾にある要素を削除します。
 
 ```
 void RemoveTailNoReturn() throw();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-末尾の要素が、一覧から削除され、メモリが解放されます。 デバッグ ビルドでは、リストが空の場合に、アサーション エラーが発生します。
+tail 要素がリストから削除され、メモリが解放されます。 デバッグ ビルドでは、リストが空の場合にアサーション エラーが発生します。
 
 ### <a name="example"></a>例
 
-例をご覧ください[CAtlList::IsEmpty](#isempty)します。
+[次](#isempty)の例を参照してください。
 
-##  <a name="setat"></a>  CAtlList::SetAt
+## <a name="catllistsetat"></a><a name="setat"></a>カトルリスト::セットアット
 
-一覧で指定した位置にある要素の値を設定するには、このメソッドを呼び出します。
+リスト内の指定した位置にある要素の値を設定します。
 
 ```
 void SetAt(POSITION pos, INARGTYPE element);
@@ -759,22 +759,22 @@ void SetAt(POSITION pos, INARGTYPE element);
 ### <a name="parameters"></a>パラメーター
 
 *pos*<br/>
-変更する要素に対応する位置の値。
+変更する要素に対応する POSITION 値。
 
 *要素*<br/>
 新しい要素の値。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-既存の値を置き換えます*要素*します。 場合、デバッグ ビルドで、アサーション エラーが発生*pos*が NULL です。
+既存の値を*要素*で置き換えます。 デバッグ ビルドでは *、pos*が NULL に等しい場合、アサーション エラーが発生します。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATL_Utilities#30](../../atl/codesnippet/cpp/catllist-class_18.cpp)]
 
-##  <a name="swapelements"></a>  CAtlList::SwapElements
+## <a name="catllistswapelements"></a><a name="swapelements"></a>要素を指定します。
 
-リスト内の要素を交換するには、このメソッドを呼び出します。
+リスト内の要素を交換します。
 
 ```
 void SwapElements(POSITION pos1, POSITION pos2) throw();
@@ -782,15 +782,15 @@ void SwapElements(POSITION pos1, POSITION pos2) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*/pos 1*<br/>
-最初の位置の値。
+*pos1*<br/>
+最初の POSITION 値。
 
 *pos2*<br/>
-2 番目の位置の値。
+2 番目の位置値。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-指定された 2 つの位置にある要素を交換します。 デバッグ ビルドでは、いずれかの位置の値が NULL と等しい場合に、アサーション エラーが発生します。
+指定した 2 つの位置で要素を入れ替えます。 デバッグ ビルドでは、いずれかの位置値が NULL に等しい場合にアサーション エラーが発生します。
 
 ### <a name="example"></a>例
 

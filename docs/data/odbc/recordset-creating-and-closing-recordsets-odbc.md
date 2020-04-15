@@ -9,17 +9,17 @@ helpviewer_keywords:
 - ODBC recordsets, closing
 - ODBC recordsets, opening
 ms.assetid: 8d2aac23-4396-4ce2-8c60-5ecf1b360d3d
-ms.openlocfilehash: 155b51debfb6eacd3cbdd3293875274ca2dc4ab5
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 41b1c11e2c820b6e5777e1af426c5e1253ed5468
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212980"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367076"
 ---
 # <a name="recordset-creating-and-closing-recordsets-odbc"></a>レコードセット: レコードセットの生成と破棄 (ODBC)
 
 > [!NOTE]
-> MFC ODBC コンシューマー ウィザードは、Visual Studio 2019 以降では利用できません。 ただし、手動でコンシューマーを作成することはできます。
+> MFC ODBC コンシューマー ウィザードは、Visual Studio 2019 以降はご利用いただけなくなります。 引き続き、コンシューマーを手動で作成することはできます。
 
 このトピックの内容は、MFC ODBC クラスに該当します。
 
@@ -33,7 +33,7 @@ ms.locfileid: "80212980"
 
 - [レコードセット オブジェクトを閉じるタイミングと方法](#_core_closing_a_recordset)。
 
-##  <a name="creating-recordsets-at-run-time"></a><a name="_core_creating_recordsets_at_run_time"></a> 実行時にレコードセットを作成する
+## <a name="creating-recordsets-at-run-time"></a><a name="_core_creating_recordsets_at_run_time"></a> 実行時にレコードセットを作成する
 
 プログラムでレコードセット オブジェクトを作成するには、通常、事前にアプリケーション固有のレコードセット クラスを記述します。 この準備手順の詳細については、「[Adding an MFC ODBC Consumer](../../mfc/reference/adding-an-mfc-odbc-consumer.md)」 (MFC ODBC コンシューマーの追加) を参照してください。
 
@@ -74,12 +74,12 @@ if(!rsStudent.Open(CRecordset::snapshot, NULL, CRecordset::readOnly))
 // Use the snapshot to operate on its records...
 ```
 
-`Open` を呼び出した後、オブジェクトのメンバー関数とデータ メンバーを使用してレコードを処理します。 場合によっては、データ ソースで発生した変更を含めるために、クエリを再実行またはレコードセットを更新することをお勧めします。 詳細については、「[レコードセット: レコードセットの再クエリ (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)」を参照してください。
+`Open` を呼び出した後、オブジェクトのメンバー関数とデータ メンバーを使用してレコードを処理します。 場合によっては、データ ソースで発生した変更を含めるために、クエリを再実行またはレコードセットを更新することをお勧めします。 詳細については、「[レコードセット : レコードセットの再クエリ (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)」を参照してください。
 
 > [!TIP]
->  開発時に使用する接続文字列は、最終的にユーザーが必要とする接続文字列とは異なる場合があります。 この点でアプリケーションを一般化する方法については、「[データソース: 接続の管理 (ODBC)](../../data/odbc/data-source-managing-connections-odbc.md)」を参照してください。
+> 開発時に使用する接続文字列は、最終的にユーザーが必要とする接続文字列とは異なる場合があります。 この点に関するアプリケーションの一般化の方法については、「[データ ソース : 接続の管理 (ODBC)」](../../data/odbc/data-source-managing-connections-odbc.md)を参照してください。
 
-##  <a name="setting-recordset-options"></a><a name="_core_setting_recordset_options"></a> レコードセットのオプションを設定する
+## <a name="setting-recordset-options"></a><a name="_core_setting_recordset_options"></a> レコードセットのオプションを設定する
 
 レコードセット オブジェクトを構築してから、`Open` を呼び出してレコードを選択する前に、レコードセットの動作を制御するためのオプションをいくつか設定することができます。 すべてのレコードセットに対して、次の操作を実行できます。
 
@@ -94,9 +94,9 @@ if(!rsStudent.Open(CRecordset::snapshot, NULL, CRecordset::readOnly))
 - レコードセットが更新可能でロック オプションがサポートされている場合は、更新に使用する[ロック](../../data/odbc/recordset-locking-records-odbc.md)方法を指定します。
 
 > [!NOTE]
->  レコードの選択に影響を及ぼすには、メンバー関数 `Open` を呼び出す前にこれらのオプションを設定する必要があります。
+> レコードの選択に影響を及ぼすには、メンバー関数 `Open` を呼び出す前にこれらのオプションを設定する必要があります。
 
-##  <a name="closing-a-recordset"></a><a name="_core_closing_a_recordset"></a> レコードセットを閉じる
+## <a name="closing-a-recordset"></a><a name="_core_closing_a_recordset"></a> レコードセットを閉じる
 
 レコードセットを使用し終えたら、それを破棄してそのメモリの割り当てを解除する必要があります。
 
@@ -110,7 +110,7 @@ if(!rsStudent.Open(CRecordset::snapshot, NULL, CRecordset::readOnly))
 
 `Close` によってレコードセットの `HSTMT` ハンドルが解放されます。 C++ オブジェクトは破棄されません。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [レコードセット (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
 [レコードセット: スクロール (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)<br/>

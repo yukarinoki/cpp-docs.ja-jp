@@ -26,16 +26,16 @@ helpviewer_keywords:
 - CD2DPathGeometry [MFC], Stream
 - CD2DPathGeometry [MFC], m_pPathGeometry
 ms.assetid: 686216eb-5080-4242-ace5-8fa1ce96307c
-ms.openlocfilehash: 8657421e67239cdeb782cffbbd42e0c50f6c0e96
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 59ef82151983720b654502ccf3ca647e55366268
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396354"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369170"
 ---
 # <a name="cd2dpathgeometry-class"></a>CD2DPathGeometry クラス
 
-ID2D1PathGeometry のラッパーです。
+ID2D1PathGeometry のラッパー。
 
 ## <a name="syntax"></a>構文
 
@@ -49,34 +49,34 @@ class CD2DPathGeometry : public CD2DGeometry;
 
 |名前|説明|
 |----------|-----------------|
-|[CD2DPathGeometry::CD2DPathGeometry](#cd2dpathgeometry)|CD2DPathGeometry オブジェクトを構築します。|
+|[ジオメトリ::CD2Dパスジオメトリ](#cd2dpathgeometry)|オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CD2DPathGeometry::Attach](#attach)|既存のリソース インターフェイス オブジェクトにアタッチします|
-|[CD2DPathGeometry::Create](#create)|CD2DPathGeometry を作成します。 (上書き[CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create))。|
-|[CD2DPathGeometry::Destroy](#destroy)|CD2DPathGeometry オブジェクトを破棄します。 (上書き[CD2DGeometry::Destroy](../../mfc/reference/cd2dgeometry-class.md#destroy))。|
-|[CD2DPathGeometry::Detach](#detach)|オブジェクトからリソースのインターフェイスをデタッチします。|
-|[CD2DPathGeometry::GetFigureCount](#getfigurecount)|パス ジオメトリの数値の数を取得します。|
-|[CD2DPathGeometry::GetSegmentCount](#getsegmentcount)|パス ジオメトリのセグメントの数を取得します。|
-|[CD2DPathGeometry::Open](#open)|図形とセグメント パス ジオメトリを作成するために使用するジオメトリ シンクを取得します。|
-|[CD2DPathGeometry::Stream](#stream)|指定した ID2D1GeometrySink には、パス ジオメトリの内容をコピーします。|
+|[ジオメトリ::アタッチ](#attach)|既存のリソース インターフェイスをオブジェクトにアタッチします。|
+|[ジオメトリ::作成](#create)|を作成します。 [(CD2D リソースをオーバーライドします::作成](../../mfc/reference/cd2dresource-class.md#create).)|
+|[ジオメトリ::Dエストロイ](#destroy)|オブジェクトを破棄します。 [(CD2D ジオメトリ::Dエストロイ](../../mfc/reference/cd2dgeometry-class.md#destroy)をオーバーライドします。|
+|[CD2Dパスジオメトリ::Dエタッハ](#detach)|オブジェクトからリソース インターフェイスを切り離します。|
+|[ジオメトリ::ゲットフィギュアカウント](#getfigurecount)|パス ジオメトリ内の図形の数を取得します。|
+|[ジオメトリ::セグメントカウントを取得します。](#getsegmentcount)|パス ジオメトリ内のセグメント数を取得します。|
+|[ジオメトリ::オープン](#open)|パス ジオメトリに図形とセグメントを設定するために使用されるジオメトリ シンクを取得します。|
+|[ソースのジオメトリ::ストリーム](#stream)|パス ジオメトリの内容を指定した ID2D1Geometry シンクにコピーします。|
 
 ### <a name="protected-data-members"></a>プロテクト データ メンバー
 
 |名前|説明|
 |----------|-----------------|
-|[CD2DPathGeometry::m_pPathGeometry](#m_ppathgeometry)|ID2D1PathGeometry へのポインター。|
+|[ジオメトリ:m_pPathGeometry](#m_ppathgeometry)|ID2D1PathGeometry へのポインター。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[CD2DResource](../../mfc/reference/cd2dresource-class.md)
+[リソース](../../mfc/reference/cd2dresource-class.md)
 
-[CD2DGeometry](../../mfc/reference/cd2dgeometry-class.md)
+[CD2Dジオメトリ](../../mfc/reference/cd2dgeometry-class.md)
 
 `CD2DPathGeometry`
 
@@ -84,9 +84,9 @@ class CD2DPathGeometry : public CD2DGeometry;
 
 **ヘッダー:** afxrendertarget.h
 
-##  <a name="attach"></a>  CD2DPathGeometry::Attach
+## <a name="cd2dpathgeometryattach"></a><a name="attach"></a>ジオメトリ::アタッチ
 
-既存のリソース インターフェイス オブジェクトにアタッチします
+既存のリソース インターフェイスをオブジェクトにアタッチします。
 
 ```
 void Attach(ID2D1PathGeometry* pResource);
@@ -94,12 +94,12 @@ void Attach(ID2D1PathGeometry* pResource);
 
 ### <a name="parameters"></a>パラメーター
 
-*pResource*<br/>
-既存のリソース インターフェイスです。 NULL にすることはできません。
+*リソース*<br/>
+既存のリソース インターフェイス。 NULL にすることはできません。
 
-##  <a name="cd2dpathgeometry"></a>  CD2DPathGeometry::CD2DPathGeometry
+## <a name="cd2dpathgeometrycd2dpathgeometry"></a><a name="cd2dpathgeometry"></a>ジオメトリ::CD2Dパスジオメトリ
 
-CD2DPathGeometry オブジェクトを構築します。
+オブジェクトを構築します。
 
 ```
 CD2DPathGeometry(
@@ -109,15 +109,15 @@ CD2DPathGeometry(
 
 ### <a name="parameters"></a>パラメーター
 
-*pParentTarget*<br/>
+*ターゲット*<br/>
 レンダー ターゲットへのポインター。
 
-*bAutoDestroy*<br/>
-所有者 (pParentTarget) によって、オブジェクトが破棄されることを示します。
+*b自動破壊*<br/>
+オブジェクトが所有者 (pParentTarget) によって破棄されることを示します。
 
-##  <a name="create"></a>  CD2DPathGeometry::Create
+## <a name="cd2dpathgeometrycreate"></a><a name="create"></a>ジオメトリ::作成
 
-CD2DPathGeometry を作成します。
+を作成します。
 
 ```
 virtual HRESULT Create(CRenderTarget* pRenderTarget);
@@ -125,24 +125,24 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 
 ### <a name="parameters"></a>パラメーター
 
-*pRenderTarget*<br/>
+*ターゲットをレンダリングします。*<br/>
 レンダー ターゲットへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが成功すると、S_OK を返します。 それ以外の場合、HRESULT エラー コードを返します。
+メソッドが成功した場合は、S_OK を返します。 それ以外の場合は、HRESULT エラー コードを返します。
 
-##  <a name="destroy"></a>  CD2DPathGeometry::Destroy
+## <a name="cd2dpathgeometrydestroy"></a><a name="destroy"></a>ジオメトリ::Dエストロイ
 
-CD2DPathGeometry オブジェクトを破棄します。
+オブジェクトを破棄します。
 
 ```
 virtual void Destroy();
 ```
 
-##  <a name="detach"></a>  CD2DPathGeometry::Detach
+## <a name="cd2dpathgeometrydetach"></a><a name="detach"></a>CD2Dパスジオメトリ::Dエタッハ
 
-オブジェクトからリソースのインターフェイスをデタッチします。
+オブジェクトからリソース インターフェイスを切り離します。
 
 ```
 ID2D1PathGeometry* Detach();
@@ -150,11 +150,11 @@ ID2D1PathGeometry* Detach();
 
 ### <a name="return-value"></a>戻り値
 
-インターフェイスのデタッチされたリソースへのポインター。
+デタッチされたリソース インターフェイスへのポインター。
 
-##  <a name="getfigurecount"></a>  CD2DPathGeometry::GetFigureCount
+## <a name="cd2dpathgeometrygetfigurecount"></a><a name="getfigurecount"></a>ジオメトリ::ゲットフィギュアカウント
 
-パス ジオメトリの数値の数を取得します。
+パス ジオメトリ内の図形の数を取得します。
 
 ```
 int GetFigureCount() const;
@@ -162,11 +162,11 @@ int GetFigureCount() const;
 
 ### <a name="return-value"></a>戻り値
 
-パス ジオメトリに数値の数を返します。
+パス ジオメトリ内の図形の数を返します。
 
-##  <a name="getsegmentcount"></a>  CD2DPathGeometry::GetSegmentCount
+## <a name="cd2dpathgeometrygetsegmentcount"></a><a name="getsegmentcount"></a>ジオメトリ::セグメントカウントを取得します。
 
-パス ジオメトリのセグメントの数を取得します。
+パス ジオメトリ内のセグメント数を取得します。
 
 ```
 int GetSegmentCount() const;
@@ -174,9 +174,9 @@ int GetSegmentCount() const;
 
 ### <a name="return-value"></a>戻り値
 
-パス ジオメトリには、セグメントの数を返します。
+パス ジオメトリ内のセグメント数を返します。
 
-##  <a name="m_ppathgeometry"></a>  CD2DPathGeometry::m_pPathGeometry
+## <a name="cd2dpathgeometrym_ppathgeometry"></a><a name="m_ppathgeometry"></a>ジオメトリ:m_pPathGeometry
 
 ID2D1PathGeometry へのポインター。
 
@@ -184,9 +184,9 @@ ID2D1PathGeometry へのポインター。
 ID2D1PathGeometry* m_pPathGeometry;
 ```
 
-##  <a name="open"></a>  CD2DPathGeometry::Open
+## <a name="cd2dpathgeometryopen"></a><a name="open"></a>ジオメトリ::オープン
 
-図形とセグメント パス ジオメトリを作成するために使用するジオメトリ シンクを取得します。
+パス ジオメトリに図形とセグメントを設定するために使用されるジオメトリ シンクを取得します。
 
 ```
 ID2D1GeometrySink* Open();
@@ -194,11 +194,11 @@ ID2D1GeometrySink* Open();
 
 ### <a name="return-value"></a>戻り値
 
-図形とセグメント パス ジオメトリを作成するために使用される ID2D1GeometrySink へのポインター。
+図形とセグメントを含むパス ジオメトリを設定するために使用される ID2D1GeometrySink へのポインター。
 
-##  <a name="stream"></a>  CD2DPathGeometry::Stream
+## <a name="cd2dpathgeometrystream"></a><a name="stream"></a>ソースのジオメトリ::ストリーム
 
-指定した ID2D1GeometrySink には、パス ジオメトリの内容をコピーします。
+パス ジオメトリの内容を指定した ID2D1Geometry シンクにコピーします。
 
 ```
 BOOL Stream(ID2D1GeometrySink* geometrySink);
@@ -206,12 +206,12 @@ BOOL Stream(ID2D1GeometrySink* geometrySink);
 
 ### <a name="parameters"></a>パラメーター
 
-*geometrySink*<br/>
-パス ジオメトリの内容のコピー先となるシンク。 このシンクを変更しても、このパス ジオメトリの内容は変わりません。
+*ジオメトリシンク*<br/>
+パス ジオメトリの内容のコピー先シンク。 このシンクを修正しても、このパス ジオメトリの内容は変更されません。
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが成功した場合は、TRUE を返します。 それ以外の場合、FALSE を返します。
+メソッドが成功すると、TRUE が返されます。 それ以外の場合は FALSE を返します。
 
 ## <a name="see-also"></a>関連項目
 

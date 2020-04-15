@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CMFCRibbonProgressBar [MFC], SetPos
 - CMFCRibbonProgressBar [MFC], SetRange
 ms.assetid: de3d9f2e-ed59-480e-aa7d-08a33ab36c67
-ms.openlocfilehash: 7c16217378cb8825ca4605687770de177e720c1d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 063f8ce560af84d350abc0114644f6a63f969f95
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391115"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368861"
 ---
 # <a name="cmfcribbonprogressbar-class"></a>CMFCRibbonProgressBar クラス
 
@@ -49,29 +49,29 @@ class CMFCRibbonProgressBar : public CMFCRibbonBaseElement
 
 |名前|説明|
 |----------|-----------------|
-|[CMFCRibbonProgressBar::CMFCRibbonProgressBar](#cmfcribbonprogressbar)|`CMFCRibbonProgressBar` オブジェクトを構築して初期化します。|
+|[バー::CMFCリボンプログレスバー](#cmfcribbonprogressbar)|`CMFCRibbonProgressBar` オブジェクトを構築して初期化します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CMFCRibbonProgressBar::GetPos](#getpos)|現在の進行状況を返します。|
-|[CMFCRibbonProgressBar::GetRangeMax](#getrangemax)|現在の範囲の最大値を返します。|
-|[CMFCRibbonProgressBar::GetRangeMin](#getrangemin)|現在の範囲の最小値を返します。|
-|[CMFCRibbonProgressBar::GetRegularSize](#getregularsize)|リボン要素の標準サイズを返します。 (上書き[cmfcribbonbaseelement::getregularsize](../../mfc/reference/cmfcribbonbaseelement-class.md#getregularsize))。|
-|[CMFCRibbonProgressBar::IsInfiniteMode](#isinfinitemode)|進行状況バーが無限のモードで動作しているかどうかを指定します。|
-|[CMFCRibbonProgressBar::OnDraw](#ondraw)|リボン要素を描画するために、フレームワークによって呼び出されます。 (上書き[cmfcribbonbaseelement::ondraw](../../mfc/reference/cmfcribbonbaseelement-class.md#ondraw))。|
-|[CMFCRibbonProgressBar::SetInfiniteMode](#setinfinitemode)|無限のモードで動作する進行状況バーを設定します。|
-|[CMFCRibbonProgressBar::SetPos](#setpos)|現在の進行状況を設定します。|
-|[CMFCRibbonProgressBar::SetRange](#setrange)|最小値と最大値を設定します。|
+|[バー::ゲットポス](#getpos)|現在の進行状況を返します。|
+|[バー::ゲットレンジマックス](#getrangemax)|現在の範囲の最大値を返します。|
+|[バー::ゲットレンジミン](#getrangemin)|現在の範囲の最小値を返します。|
+|[バー::一般化](#getregularsize)|リボン要素の標準サイズを返します。 (オーバーライドします[。](../../mfc/reference/cmfcribbonbaseelement-class.md#getregularsize)|
+|[バー::イズインフィニットモード](#isinfinitemode)|プログレス バーが無限モードで動作しているかどうかを指定します。|
+|[バー::オンドロー](#ondraw)|リボン要素を描画するために、フレームワークによって呼び出されます。 (オーバーライド[CMFCリボンベース要素::オンドロー](../../mfc/reference/cmfcribbonbaseelement-class.md#ondraw).)|
+|[バー::設定無限モード](#setinfinitemode)|プログレス バーを無限モードで動作するように設定します。|
+|[バー::セットポス](#setpos)|現在の進行状況を設定します。|
+|[バー::セットレンジ](#setrange)|最小値と最大値を設定します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-A`CMFCRibbonProgressBar`は 2 つのモードで動作します。 正規表現と無限。 通常モードで進行状況バーが左から右に入力され、最大値に達すると停止します。 無限のモードでは、進行状況バーが繰り返し最小値から最大値に入力されます。 無限のモードを使用して、操作が進行中であるが、完了時間が不明である可能性があります。
+A`CMFCRibbonProgressBar`は、標準モードと無限モードの 2 つのモードで動作できます。 通常モードでは、プログレスバーは左から右に塗りつぶされ、最大値に達すると停止します。 無限モードでは、進行状況バーは最小値から最大値まで繰り返し塗りつぶされます。 無限モードを使用して、操作が進行中であるが、完了時間が不明であることを示すことができます。
 
 ## <a name="example"></a>例
 
-`CMFCRibbonProgressBar` クラスのさまざまなメソッドの使用方法を次の例に示します。 例は、進行状況バーの最小値と最大値を設定し、進行状況バーの現在の位置を設定 (操作の完了時間はない既知) 無限のモードで動作する進行状況バーを設定する方法を示します。 このコード スニペットの一部、 [MS Office 2007 のデモ サンプル](../../overview/visual-cpp-samples.md)します。
+`CMFCRibbonProgressBar` クラスのさまざまなメソッドの使用方法を次の例に示します。 この例では、進行状況バーを無限モード (操作の完了時間が不明) で動作するように設定し、進行状況バーの最小値と最大値を設定し、進行状況バーの現在位置を設定する方法を示します。 このコード スニペットは、 [MS Office 2007 デモ サンプル](../../overview/visual-cpp-samples.md)の一部です。
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#11](../../mfc/reference/codesnippet/cpp/cmfcribbonprogressbar-class_1.cpp)]
 
@@ -85,11 +85,11 @@ A`CMFCRibbonProgressBar`は 2 つのモードで動作します。 正規表現�
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** afxRibbonProgressBar.h
+**ヘッダー:** afxRibbon プログレスバー.h
 
-##  <a name="cmfcribbonprogressbar"></a>  CMFCRibbonProgressBar::CMFCRibbonProgressBar
+## <a name="cmfcribbonprogressbarcmfcribbonprogressbar"></a><a name="cmfcribbonprogressbar"></a>バー::CMFCリボンプログレスバー
 
-構築し、初期化、 [CMFCRibbonProgressBar](../../mfc/reference/cmfcribbonprogressbar-class.md)オブジェクト。
+[オブジェクトを](../../mfc/reference/cmfcribbonprogressbar-class.md)構築して初期化します。
 
 ```
 CMFCRibbonProgressBar();
@@ -103,17 +103,17 @@ CMFCRibbonProgressBar(
 ### <a name="parameters"></a>パラメーター
 
 *nID*<br/>
-[in]リボンの進行状況バーのコマンド ID を指定します。
+[in]リボン プログレス バーのコマンド ID を指定します。
 
-*nWidth*<br/>
-[in]リボンの進行状況バーのピクセル単位の幅を指定します。
+*n幅*<br/>
+[in]リボンプログレス バーの幅をピクセル単位で指定します。
 
 *nHeight*<br/>
-[in]リボンの進行状況バーのピクセル、高さを指定します。
+[in]リボンプログレス バーの高さをピクセル単位で指定します。
 
-##  <a name="getpos"></a>  CMFCRibbonProgressBar::GetPos
+## <a name="cmfcribbonprogressbargetpos"></a><a name="getpos"></a>バー::ゲットポス
 
-進行状況バーの現在位置を返します。
+プログレス バーの現在位置を返します。
 
 ```
 int GetPos () const;
@@ -121,15 +121,15 @@ int GetPos () const;
 
 ### <a name="return-value"></a>戻り値
 
-進行状況バーの現在の位置を表す値。
+プログレス バーの現在位置を表す値。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-指定された範囲内で、範囲が設定されている必要があります、 [CMFCRibbonProgressBar::SetRange](#setrange)メソッド。
+設定される範囲は[、CMFCRibbonProgressBar::SetRange](#setrange)メソッドで指定された範囲内になければなりません。
 
-##  <a name="getrangemax"></a>  CMFCRibbonProgressBar::GetRangeMax
+## <a name="cmfcribbonprogressbargetrangemax"></a><a name="getrangemax"></a>バー::ゲットレンジマックス
 
-返します、進行状況バーの現在の最大値。
+プログレス バーの現在の最大値を返します。
 
 ```
 int GetRangeMax() const;
@@ -139,11 +139,11 @@ int GetRangeMax() const;
 
 現在の範囲の最大値。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="getrangemin"></a>  CMFCRibbonProgressBar::GetRangeMin
+## <a name="cmfcribbonprogressbargetrangemin"></a><a name="getrangemin"></a>バー::ゲットレンジミン
 
-進行状況バーの現在の返します範囲の最小値。
+プログレス バーの現在の最小範囲の値を返します。
 
 ```
 int GetRangeMin() const;
@@ -153,9 +153,9 @@ int GetRangeMin() const;
 
 現在の範囲の最小値。
 
-##  <a name="getregularsize"></a>  CMFCRibbonProgressBar::GetRegularSize
+## <a name="cmfcribbonprogressbargetregularsize"></a><a name="getregularsize"></a>バー::一般化
 
-詳細についてにあるソース コードを参照してください、 **VC\\atlmfc\\src\\mfc** Visual Studio のインストールのフォルダー。
+詳細については、Visual Studio のインストールの**\\VC\\atlmfc\\src mfc**フォルダーにあるソース コードを参照してください。
 
 ```
 virtual CSize GetRegularSize(CDC* pDC);
@@ -167,11 +167,11 @@ virtual CSize GetRegularSize(CDC* pDC);
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="isinfinitemode"></a>  CMFCRibbonProgressBar::IsInfiniteMode
+## <a name="cmfcribbonprogressbarisinfinitemode"></a><a name="isinfinitemode"></a>バー::イズインフィニットモード
 
-進行状況バーが無限のモードで動作しているかどうかを指定します。
+プログレス バーが無限モードで動作しているかどうかを指定します。
 
 ```
 BOOL IsInfiniteMode() const;
@@ -179,15 +179,15 @@ BOOL IsInfiniteMode() const;
 
 ### <a name="return-value"></a>戻り値
 
-進行状況バーが無限モードでは、TRUE を返します。それ以外の場合、FALSE です。
+プログレス バーが無限モードの場合は TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-無限のモードでは、進行状況バーは最小値から最大値に繰り返し塗りつぶされます。 無限のモードを使用して、操作が進行中であるが、完了時間が不明である可能性があります。
+無限モードでは、進行状況バーは最小値から最大値まで繰り返し塗りつぶされます。 無限モードを使用して、操作が進行中であるが、完了時間が不明であることを示すことができます。
 
-##  <a name="ondraw"></a>  CMFCRibbonProgressBar::OnDraw
+## <a name="cmfcribbonprogressbarondraw"></a><a name="ondraw"></a>バー::オンドロー
 
-詳細についてにあるソース コードを参照してください、 **VC\\atlmfc\\src\\mfc** Visual Studio のインストールのフォルダー。
+詳細については、Visual Studio のインストールの**\\VC\\atlmfc\\src mfc**フォルダーにあるソース コードを参照してください。
 
 ```
 virtual void OnDraw(CDC* pDC);
@@ -197,11 +197,11 @@ virtual void OnDraw(CDC* pDC);
 
 [in]*pDC*<br/>
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="setinfinitemode"></a>  CMFCRibbonProgressBar::SetInfiniteMode
+## <a name="cmfcribbonprogressbarsetinfinitemode"></a><a name="setinfinitemode"></a>バー::設定無限モード
 
-無限のモードで動作する進行状況バーを設定します。
+プログレス バーを無限モードで動作するように設定します。
 
 ```
 void SetInfiniteMode(BOOL bSet = TRUE);
@@ -209,16 +209,16 @@ void SetInfiniteMode(BOOL bSet = TRUE);
 
 ### <a name="parameters"></a>パラメーター
 
-*bSet*<br/>
-[in]進行状況バーが、無限モードを指定する場合は TRUEそれ以外の場合、FALSE です。
+*bセット*<br/>
+[in]プログレス バーが無限モードであることを指定する場合は TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-通常は、進行状況バーが無限のモードである場合は、それをユーザーに通知操作が進行中であるが、完了時間が不明であります。 したがって、進行状況バー繰り返し塗りつぶさ最小値から最大値にします。
+通常、プログレス バーが無限モードの場合、操作は進行中ですが、完了時間は不明であることをユーザーに伝えています。 したがって、進行状況バーは最小値から最大値まで繰り返し塗りつぶされます。
 
-##  <a name="setpos"></a>  CMFCRibbonProgressBar::SetPos
+## <a name="cmfcribbonprogressbarsetpos"></a><a name="setpos"></a>バー::セットポス
 
-進行状況バーの現在の位置を設定します。
+プログレス バーの現在位置を設定します。
 
 ```
 void SetPos(
@@ -228,19 +228,19 @@ void SetPos(
 
 ### <a name="parameters"></a>パラメーター
 
-*nPos*<br/>
-[in]進行状況バーを設定する位置を指定します。
+*Npo*<br/>
+[in]プログレス バーを設定する位置を指定します。
 
-*bRedraw*<br/>
-[in]進行状況バーが再描画が必要かどうかを指定します。
+*引き出し*<br/>
+[in]プログレス バーを再描画するかどうかを指定します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-指定された範囲内で、範囲が設定されている必要があります、 [CMFCRibbonProgressBar::SetRange](#setrange)メソッド。
+設定される範囲は[、CMFCRibbonProgressBar::SetRange](#setrange)メソッドで指定された範囲内になければなりません。
 
-##  <a name="setrange"></a>  CMFCRibbonProgressBar::SetRange
+## <a name="cmfcribbonprogressbarsetrange"></a><a name="setrange"></a>バー::セットレンジ
 
-進行状況バーの最小値と最大値を設定します。
+プログレス バーの最小値と最大値を設定します。
 
 ```
 void SetRange(
@@ -256,13 +256,13 @@ void SetRange(
 *nMax*<br/>
 [in]範囲の最大値を指定します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-最小値と最大値を設定して、進行状況バーの範囲を定義するのにには、このメソッドを使用します。
+このメソッドは、最小値と最大値を設定してプログレス バーの範囲を定義するために使います。
 
 ## <a name="see-also"></a>関連項目
 
-[階層図](../../mfc/hierarchy-chart.md)<br/>
+[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
 [クラス](../../mfc/reference/mfc-classes.md)<br/>
-[CMFCRibbonBaseElement クラス](../../mfc/reference/cmfcribbonbaseelement-class.md)<br/>
-[CMFCRibbonBar クラス](../../mfc/reference/cmfcribbonbar-class.md)
+[クラス](../../mfc/reference/cmfcribbonbaseelement-class.md)<br/>
+[クラス](../../mfc/reference/cmfcribbonbar-class.md)

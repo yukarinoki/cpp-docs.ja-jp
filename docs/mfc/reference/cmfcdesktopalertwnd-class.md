@@ -44,18 +44,19 @@ helpviewer_keywords:
 - CMFCDesktopAlertWnd [MFC], SetSmallCaption
 - CMFCDesktopAlertWnd [MFC], SetTransparency
 ms.assetid: 73a2dd7b-ea84-4ae2-9830-7cf6e8dd2425
-ms.openlocfilehash: 3ff74f5025d888077b51f8191f043237597dfdbe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f9c59258cf757b5468985a954640ccec1543512b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403673"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367635"
 ---
 # <a name="cmfcdesktopalertwnd-class"></a>CMFCDesktopAlertWnd Class
 
-`CMFCDesktopAlertWnd`クラスは、イベントについてユーザーに通知する画面に表示されるモードレス ダイアログ ボックスの機能を実装します。
+この`CMFCDesktopAlertWnd`クラスは、イベントをユーザーに通知するために画面に表示されるモードレス ダイアログ ボックスの機能を実装します。
 
-詳細についてにあるソース コードを参照してください、 **VC\\atlmfc\\src\\mfc** Visual Studio のインストールのフォルダー。
+詳細については、Visual Studio のインストールの**\\VC\\atlmfc\\src mfc**フォルダーにあるソース コードを参照してください。
+
 ## <a name="syntax"></a>構文
 
 ```
@@ -68,59 +69,59 @@ class CMFCDesktopAlertWnd : public CWnd
 
 |名前|説明|
 |----------|-----------------|
-|[CMFCDesktopAlertWnd::Create](#create)|作成して、デスクトップの通知ウィンドウを初期化します。|
-|[CMFCDesktopAlertWnd::GetAnimationSpeed](#getanimationspeed)|アニメーションの速度を返します。|
-|[CMFCDesktopAlertWnd::GetAnimationType](#getanimationtype)|アニメーションの種類を返します。|
-|[CMFCDesktopAlertWnd::GetAutoCloseTime](#getautoclosetime)|自動終了時間帯を返します。|
-|[CMFCDesktopAlertWnd::GetCaptionHeight](#getcaptionheight)|キャプションの高さを返します。|
-|[CMFCDesktopAlertWnd::GetDialogSize](#getdialogsize)||
-|[CMFCDesktopAlertWnd::GetLastPos](#getlastpos)|画面のデスクトップ通知ウィンドウの最後の有効な位置を返します。|
-|[CMFCDesktopAlertWnd::GetTransparency](#gettransparency)|透過性レベルを返します。|
-|[CMFCDesktopAlertWnd::HasSmallCaption](#hassmallcaption)|デスクトップ通知ウィンドウが小規模のキャプションで表示されるかどうかを判断します。|
-|[CMFCDesktopAlertWnd::OnBeforeShow](#onbeforeshow)||
-|[CMFCDesktopAlertWnd::OnClickLinkButton](#onclicklinkbutton)|ユーザーがデスクトップのアラート メニューにあるリンク ボタンをクリックすると、フレームワークによって呼び出されます。|
-|[CMFCDesktopAlertWnd::OnCommand](#oncommand)|フレームワークは、ユーザーは、子コントロールは、通知メッセージを送信するとき、またはアクセラレータのキーストロークを変換するとき、メニューから項目を選択すると、このメンバー関数を呼び出します。 (上書き[CWnd::OnCommand](../../mfc/reference/cwnd-class.md#oncommand))。|
-|[CMFCDesktopAlertWnd::OnDraw](#ondraw)||
-|[CMFCDesktopAlertWnd::ProcessCommand](#processcommand)||
-|[CMFCDesktopAlertWnd::SetAnimationSpeed](#setanimationspeed)|新しいアニメーション速度を設定します。|
-|[CMFCDesktopAlertWnd::SetAnimationType](#setanimationtype)|アニメーションの種類を設定します。|
-|[CMFCDesktopAlertWnd::SetAutoCloseTime](#setautoclosetime)|自動終了時間帯を設定します。|
-|[CMFCDesktopAlertWnd::SetSmallCaption](#setsmallcaption)|小規模で、通常のキャプションを切り替えます。|
-|[CMFCDesktopAlertWnd::SetTransparency](#settransparency)|透過性レベルを設定します。|
+|[をクリックします。](#create)|デスクトップ通知ウィンドウを作成および初期化します。|
+|[をクリックします。](#getanimationspeed)|アニメーションの速度を返します。|
+|[次のコマンドを実行します。](#getanimationtype)|アニメーションの種類を返します。|
+|[をクリックします。](#getautoclosetime)|自動終了タイムアウトを返します。|
+|[ウィンドウの種類::キャプションの高さ](#getcaptionheight)|キャプションの高さを返します。|
+|[ウィンドウの種類::取得ダイアログ サイズ](#getdialogsize)||
+|[をクリックします。](#getlastpos)|画面上のデスクトップ通知ウィンドウの最後の有効な位置を返します。|
+|[を取得します。](#gettransparency)|透明度レベルを返します。|
+|[ウィンドウの種類::小さなキャプション](#hassmallcaption)|デスクトップ通知ウィンドウを小さいキャプションで表示するかどうかを指定します。|
+|[ショーの前に次のメッセージが表示されます。](#onbeforeshow)||
+|[ウィンドウの種類::クリックリンクボタン](#onclicklinkbutton)|ユーザーがデスクトップ通知メニューにあるリンク ボタンをクリックしたときに、フレームワークによって呼び出されます。|
+|[を切り取った](#oncommand)|フレームワークは、ユーザーがメニューから項目を選択したとき、子コントロールが通知メッセージを送信するとき、またはアクセラレータ キーストロークが変換されたときに、このメンバー関数を呼び出します。 [(CWnd をオーバーライドします::コマンドの実行](../../mfc/reference/cwnd-class.md#oncommand)|
+|[を切り取る](#ondraw)||
+|[を:Pロセスコマンド](#processcommand)||
+|[を設定します。](#setanimationspeed)|新しいアニメーション速度を設定します。|
+|[を切り取る::アニメーションタイプを設定します。](#setanimationtype)|アニメーションの種類を設定します。|
+|[を切り取る::自動閉じる時間を設定します。](#setautoclosetime)|自動クローズ タイムアウトを設定します。|
+|[ウィンドウの種類::セットスモールキャプション](#setsmallcaption)|小さいキャプションと標準キャプションを切り替えます。|
+|[を切り取る::透過性を設定します。](#settransparency)|透明度レベルを設定します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-デスクトップ通知ウィンドウを透明にすることができます、アニメーションの効果が表示されます (指定された遅延の後または閉じるボタンをクリックして、ユーザーが閉じるときに) が表示されなくなることができます。
+デスクトップ通知ウィンドウは、透明にすることができ、アニメーション効果で表示され、(指定した遅延の後、またはユーザーが閉じるボタンをクリックして閉じたときに)消える可能性があります。
 
-デスクトップ通知ウィンドウは、アイコン、メッセージ テキスト (ラベル)、およびリンクを含む既定 ダイアログ ボックスを含めることもできます。 また、アプリケーションのリソースからのカスタム ダイアログ ボックスがデスクトップ通知ウィンドウに含めることができます。
+デスクトップ通知ウィンドウには、アイコン、メッセージ テキスト (ラベル)、およびリンクを含む既定のダイアログ ボックスを含めることもできます。 または、デスクトップ通知ウィンドウにアプリケーションのリソースからのカスタム ダイアログを含めることができます。
 
-2 つの手順では、デスクトップの通知ウィンドウを作成します。 最初に、構築するコンス トラクターを呼び出し、`CMFCDesktopAlertWnd`オブジェクト。 次に、呼び出し、 [cmfcdesktopalertwnd::create](#create)メンバー関数は、ウィンドウを作成し、アタッチ先、`CMFCDesktopAlertWnd`オブジェクト。
+デスクトップ通知ウィンドウは、2 つの手順で作成します。 まず、コンストラクタを呼び出して`CMFCDesktopAlertWnd`オブジェクトを構築します。 次に[、CMFCDesktopAlertWnd::メンバー](#create)関数を呼び出してウィンドウを作成し、`CMFCDesktopAlertWnd`オブジェクトにアタッチします。
 
-`CMFCDesktopAlertWnd`オブジェクトがデスクトップ通知ウィンドウのクライアント領域を塗りつぶす特殊な子ダイアログ ボックスを作成します。 ダイアログ ボックスでは、それに位置しているすべてのコントロールを所有します。
+この`CMFCDesktopAlertWnd`オブジェクトは、デスクトップ通知ウィンドウのクライアント領域を埋める特別な子ダイアログ ボックスを作成します。 ダイアログボックスは、その上に配置されているすべてのコントロールを所有します。
 
-カスタム ダイアログ ボックスをポップアップ ウィンドウに表示するには、次の手順に従います。
+ポップアップ ウィンドウにカスタム ダイアログ ボックスを表示するには、次の手順を実行します。
 
 1. `CMFCDesktopAlertDialog` の派生クラスを作成します。
 
-1. リソースに子ダイアログ ボックスのテンプレートを作成します。
+1. リソースに子ダイアログ ボックス テンプレートを作成します。
 
-1. 呼び出す[cmfcdesktopalertwnd::create](#create)  ダイアログ ボックスのテンプレートと、派生クラスのランタイム クラス情報へのポインターのリソース ID を使用します。
+1. 呼び出し[CMFCDesktopAlertWnd::](#create)ダイアログ ボックス テンプレートのリソース ID と派生クラスのランタイム クラス情報へのポインターを使用して作成します。
 
-1. ホスト型のコントロールから送信されるすべての通知を処理するためにカスタム ダイアログ ボックスをプログラムするか、これらの通知を直接処理するためにホストされるコントロールをプログラムします。
+1. ホストされたコントロールから送信されるすべての通知を処理するようにカスタム ダイアログ ボックスをプログラムするか、ホストされたコントロールがこれらの通知を直接処理するようにプログラムします。
 
-デスクトップ通知ウィンドウの動作を制御するのにには、次の関数を使用します。
+デスクトップ通知ウィンドウの動作を制御するには、次の関数を使用します。
 
-- アニメーションの種類を呼び出すことによって設定[CMFCDesktopAlertWnd::SetAnimationType](#setanimationtype)します。 有効なオプションに広げて、スライド、およびフェードインします。
+- を呼び出すことによってアニメーションの種類[を設定します](#setanimationtype)。 有効なオプションには、展開、スライド、フェードがあります。
 
-- アニメーション フレームの速度を呼び出すことによって設定[CMFCDesktopAlertWnd::SetAnimationSpeed](#setanimationspeed)します。
+- アニメーション フレームの速度を設定するには[、CMFCDesktopAlertWnd:::アニメーションスピードを呼び](#setanimationspeed)出します。
 
-- 呼び出すことによって、透過性レベルを設定[CMFCDesktopAlertWnd::SetTransparency](#settransparency)します。
+- を呼び出すことによって、透過性[レベルを設定します](#settransparency)。
 
-- 小規模に呼び出すことによって、キャプションのサイズを変更[CMFCDesktopAlertWnd::SetSmallCaption](#setsmallcaption)します。 小さいキャプションは、高 7 ピクセルです。
+- キャプションのサイズを小さくに変更するには[、CMFCDesktopAlertWnd::SetSmallCaption](#setsmallcaption)を呼び出します。 小さいキャプションは高さ 7 ピクセルです。
 
 ## <a name="example"></a>例
 
-次の例では、さまざまなメソッドを使用する方法を示しています、`CMFCDesktopAlertWnd`を構成するクラス、`CMFCDesktopAlertWnd`オブジェクト。 この例では、アニメーションの種類の設定、ポップアップ ウィンドウの透明度を設定、通知ウィンドウが小さいキャプションを表示することを指定、および通知ウィンドウを自動的に終了する前に経過した時間を設定する方法を示します。 例では、作成し、デスクトップの通知ウィンドウを初期化する方法も示します。 このコード スニペットの一部、[デスクトップ アラート デモ サンプル](../../overview/visual-cpp-samples.md)します。
+次の例は、クラスのさまざまなメソッドを使用してオブジェクト`CMFCDesktopAlertWnd`を構成する方法`CMFCDesktopAlertWnd`を示しています。 この例では、アニメーションの種類の設定、ポップアップ ウィンドウの透過表示の設定、警告ウィンドウに小さなキャプションの表示を指定する方法、および警告ウィンドウが自動的に閉じるまでの時間を設定する方法を示します。 この例では、デスクトップ通知ウィンドウを作成して初期化する方法も示します。 このコード スニペットは[、デスクトップ警告デモのサンプル](../../overview/visual-cpp-samples.md)の一部です。
 
 [!code-cpp[NVC_MFC_DesktopAlertDemo#1](../../mfc/reference/codesnippet/cpp/cmfcdesktopalertwnd-class_1.cpp)]
 
@@ -136,11 +137,11 @@ class CMFCDesktopAlertWnd : public CWnd
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** afxDesktopAlertWnd.h
+**ヘッダー:** afxDesktop アラート Wnd.h
 
-##  <a name="create"></a>  CMFCDesktopAlertWnd::Create
+## <a name="cmfcdesktopalertwndcreate"></a><a name="create"></a>をクリックします。
 
-作成して、デスクトップの通知ウィンドウを初期化します。
+デスクトップ通知ウィンドウを作成および初期化します。
 
 ```
 virtual BOOL Create(
@@ -159,37 +160,37 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>パラメーター
 
-*pWndOwner*<br/>
-[入力、出力]通知ウィンドウの所有者を指定します。 その所有者しデスクトップ通知ウィンドウのすべての通知を受け取ります。 この値は NULL をすることはできません。
+*オーナー*<br/>
+[イン、アウト]警告ウィンドウの所有者を指定します。 その所有者は、デスクトップ通知ウィンドウのすべての通知を受信します。 この値を NULL にすることはできません。
 
-*uiDlgResID*<br/>
-[in]通知ウィンドウのリソース ID を指定します。
+*ウイドグルレスID*<br/>
+[in]警告ウィンドウのリソース ID を指定します。
 
-*hMenu*<br/>
+*Hmenu*<br/>
 [in]ユーザーがメニュー ボタンをクリックしたときに表示されるメニューを指定します。 NULL の場合、メニュー ボタンは表示されません。
 
 *ptPos*<br/>
-[in]通知ウィンドウが表示される初期位置を指定、画面座標を使用します。 このパラメーターは、(-1,-1) には、画面の右下隅で、[アラート] ウィンドウが表示されます。
+[in]画面座標を使用して、警告ウィンドウが表示される初期位置を指定します。 このパラメーターが (-1, -1) の場合は、画面の右下隅に警告ウィンドウが表示されます。
 
-*pRTIDlgBar*<br/>
-[in]アラートのウィンドウのクライアント領域を網羅するカスタム ダイアログ ボックス クラスのランタイム クラス情報。
+*バール*<br/>
+[in]通知ウィンドウのクライアント領域をカバーするカスタム ダイアログ ボックス クラスのランタイム クラス情報。
 
 *params*<br/>
-[in]通知ウィンドウの作成に使用されるパラメーターを指定します。
+[in]警告ウィンドウの作成に使用するパラメータを指定します。
 
 ### <a name="return-value"></a>戻り値
 
-通知ウィンドウが正常に作成された場合は TRUE。それ以外の場合、FALSE です。
+警告ウィンドウが正常に作成された場合は TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-通知ウィンドウを作成するには、このメソッドを呼び出します。 アラートのウィンドウのクライアント領域には、ユーザーに表示されるすべてのコントロールをホストする子ダイアログ ボックスが含まれています。
+このメソッドを呼び出して、警告ウィンドウを作成します。 警告ウィンドウのクライアント領域には、ユーザーに表示されるすべてのコントロールをホストする子ダイアログ ボックスが含まれています。
 
-最初のメソッドのオーバー ロードは、アプリケーションのリソースから読み込まれた子ダイアログ ボックスを含むアラート ウィンドウを作成します。 最初のメソッドのオーバー ロードでは、カスタム ダイアログ ボックスのクラスのランタイム クラス情報も指定できます。
+1 つ目のメソッド オーバーロードは、アプリケーションのリソースから読み込まれる子ダイアログ ボックスを含む警告ウィンドウを作成します。 最初のメソッド オーバーロードでは、カスタム ダイアログ ボックス クラスのランタイム クラス情報を指定することもできます。
 
-2 番目のメソッドのオーバー ロードは、既定のコントロールを含むアラート ウィンドウを作成します。 変更することで表示するコントロールを指定することができます、 [CMFCDesktopAlertWndInfo クラス](../../mfc/reference/cmfcdesktopalertwndinfo-class.md)します。
+2 番目のメソッド オーバーロードは、既定のコントロールを含む警告ウィンドウを作成します。 表示するコントロールを指定するには、[クラス](../../mfc/reference/cmfcdesktopalertwndinfo-class.md)を変更します。
 
-##  <a name="getanimationspeed"></a>  CMFCDesktopAlertWnd::GetAnimationSpeed
+## <a name="cmfcdesktopalertwndgetanimationspeed"></a><a name="getanimationspeed"></a>をクリックします。
 
 アニメーションの速度を返します。
 
@@ -199,13 +200,13 @@ UINT GetAnimationSpeed() const;
 
 ### <a name="return-value"></a>戻り値
 
-ミリ秒単位での通知ウィンドウのアニメーションの速度。
+警告ウィンドウのアニメーション速度 (ミリ秒単位)。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-アニメーションの速度は、アラートのウィンドウが開き、終了する速度について説明します。
+アニメーション速度は、警告ウィンドウの開閉速度を示します。
 
-##  <a name="getanimationtype"></a>  CMFCDesktopAlertWnd::GetAnimationType
+## <a name="cmfcdesktopalertwndgetanimationtype"></a><a name="getanimationtype"></a>次のコマンドを実行します。
 
 アニメーションの種類を返します。
 
@@ -215,11 +216,11 @@ CMFCPopupMenu::ANIMATION_TYPE GetAnimationType();
 
 ### <a name="return-value"></a>戻り値
 
-次のアニメーションの種類のいずれか:
+次のいずれかのアニメーションの種類。
 
 - NO_ANIMATION
 
-- 展開します。
+- 展開
 
 - スライド
 
@@ -227,9 +228,9 @@ CMFCPopupMenu::ANIMATION_TYPE GetAnimationType();
 
 - SYSTEM_DEFAULT_ANIMATION
 
-##  <a name="getautoclosetime"></a>  CMFCDesktopAlertWnd::GetAutoCloseTime
+## <a name="cmfcdesktopalertwndgetautoclosetime"></a><a name="getautoclosetime"></a>をクリックします。
 
-自動終了時間帯を返します。
+自動終了タイムアウトを返します。
 
 ```
 int GetAutoCloseTime() const;
@@ -237,13 +238,13 @@ int GetAutoCloseTime() const;
 
 ### <a name="return-value"></a>戻り値
 
-時間 (ミリ秒)、その後、[アラート] ウィンドウを自動的に閉じます。
+警告ウィンドウが自動的に閉じるまでの時間 (ミリ秒単位)。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドを使用すると、特定のアラート ウィンドウは自動的に閉じる前にどれ時間だけが経過する必要があります。
+このメソッドを使用して、警告ウィンドウが自動的に閉じるまでの時間を決定します。
 
-##  <a name="getcaptionheight"></a>  CMFCDesktopAlertWnd::GetCaptionHeight
+## <a name="cmfcdesktopalertwndgetcaptionheight"></a><a name="getcaptionheight"></a>ウィンドウの種類::キャプションの高さ
 
 キャプションの高さを返します。
 
@@ -253,13 +254,13 @@ virtual int GetCaptionHeight();
 
 ### <a name="return-value"></a>戻り値
 
-キャプションのピクセル単位の高さ。
+キャプションの高さ (ピクセル単位)。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、派生クラスでオーバーライドできます。 既定の実装で、いずれか: ポップアップ ウィンドウには、小さいキャプション、または Windows API 関数から取得した値を表示する場合は、小さいキャプションの高さの値 (7 ピクセル単位) を返します`GetSystemMetrics(SM_CYSMCAPTION)`します。
+このメソッドは、派生クラスでオーバーライドできます。 ポップアップ ウィンドウに小さいキャプションが表示される場合は、小さいキャプションの高さ (7 ピクセル) を返すか、または Windows API`GetSystemMetrics(SM_CYSMCAPTION)`関数から取得した値を既定の実装で返します。
 
-##  <a name="getlastpos"></a>  CMFCDesktopAlertWnd::GetLastPos
+## <a name="cmfcdesktopalertwndgetlastpos"></a><a name="getlastpos"></a>をクリックします。
 
 画面のデスクトップ通知ウィンドウの最後の位置を返します。
 
@@ -269,15 +270,15 @@ CPoint GetLastPos() const;
 
 ### <a name="return-value"></a>戻り値
 
-画面座標にポイントします。
+画面座標で示した点。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、画面の通知ウィンドウの最後の有効な位置を返します。
+このメソッドは、画面上の警告ウィンドウの最後の有効な位置を返します。
 
-##  <a name="gettransparency"></a>  CMFCDesktopAlertWnd::GetTransparency
+## <a name="cmfcdesktopalertwndgettransparency"></a><a name="gettransparency"></a>を取得します。
 
-透過性レベルを返します。
+透明度レベルを返します。
 
 ```
 BYTE GetTransparency() const;
@@ -285,15 +286,15 @@ BYTE GetTransparency() const;
 
 ### <a name="return-value"></a>戻り値
 
-0 ~ 255 の範囲の透明度レベル。 この値が大きい、不透明度を高くウィンドウ。
+0 ~ 255 の透明度レベル。. 値が大きいほど、ウィンドウは不透明になります。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドを使用すると、アラートのウィンドウの現在の透明度を取得できます。
+このメソッドは、警告ウィンドウの現在の透過性レベルを取得するために使います。
 
-##  <a name="hassmallcaption"></a>  CMFCDesktopAlertWnd::HasSmallCaption
+## <a name="cmfcdesktopalertwndhassmallcaption"></a><a name="hassmallcaption"></a>ウィンドウの種類::小さなキャプション
 
-デスクトップ通知ウィンドウが小さいキャプションまたは標準サイズのキャプションにあるかどうかを判断します。
+デスクトップ通知ウィンドウに小さいキャプションまたは標準サイズのキャプションがあるかどうかを指定します。
 
 ```
 BOOL HasSmallCaption() const;
@@ -301,13 +302,13 @@ BOOL HasSmallCaption() const;
 
 ### <a name="return-value"></a>戻り値
 
-小さいキャプションのポップアップ ウィンドウが表示されている場合は TRUE。通常のサイズのキャプションを含むポップアップ ウィンドウが表示されている場合は FALSE です。
+ポップアップ ウィンドウが小さいキャプションで表示される場合は TRUE。ポップアップ ウィンドウが標準サイズのキャプション付きで表示される場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-小さいキャプションまたは標準サイズのキャプション、ポップアップ ウィンドウがあるかどうかを確認するのにには、このメソッドを使用します。 既定では、小さいキャプションは、高 7 ピクセルです。 標準サイズのキャプションの高さを取得するには、Windows API 関数を呼び出すことによって`GetSystemMetrics(SM_CYCAPTION)`します。
+このメソッドは、ポップアップ ウィンドウに小さいキャプションまたは標準サイズのキャプションがあるかどうかを判断するために使います。 既定では、小さいキャプションは 7 ピクセルの高さです。 通常サイズのキャプションの高さは、 Windows API 関数`GetSystemMetrics(SM_CYCAPTION)`を呼び出すことで取得できます。
 
-##  <a name="onbeforeshow"></a>  CMFCDesktopAlertWnd::OnBeforeShow
+## <a name="cmfcdesktopalertwndonbeforeshow"></a><a name="onbeforeshow"></a>ショーの前に次のメッセージが表示されます。
 
 ```
 virtual BOOL OnBeforeShow(CPoint&);
@@ -315,15 +316,15 @@ virtual BOOL OnBeforeShow(CPoint&);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*CPoint (& a)*<br/>
+[in]*CPoint&*<br/>
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="onclicklinkbutton"></a>  CMFCDesktopAlertWnd::OnClickLinkButton
+## <a name="cmfcdesktopalertwndonclicklinkbutton"></a><a name="onclicklinkbutton"></a>ウィンドウの種類::クリックリンクボタン
 
-ユーザーがデスクトップのアラート メニューにあるリンク ボタンをクリックすると、フレームワークによって呼び出されます。
+ユーザーがデスクトップ通知メニューにあるリンク ボタンをクリックしたときに、フレームワークによって呼び出されます。
 
 ```
 virtual BOOL OnClickLinkButton(UINT uiCmdID);
@@ -331,18 +332,18 @@ virtual BOOL OnClickLinkButton(UINT uiCmdID);
 
 ### <a name="parameters"></a>パラメーター
 
-*uiCmdID*<br/>
+*UICmdID*<br/>
 [in]このパラメーターは使用されません。
 
 ### <a name="return-value"></a>戻り値
 
 常に FALSE です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-ユーザーが通知ウィンドウのリンクをクリックしたときに通知する場合は、派生クラスでこのメソッドをオーバーライドします。
+ユーザーが通知ウィンドウのリンクをクリックしたときに通知を受け取る場合は、派生クラスでこのメソッドをオーバーライドします。
 
-##  <a name="oncommand"></a>  CMFCDesktopAlertWnd::OnCommand
+## <a name="cmfcdesktopalertwndoncommand"></a><a name="oncommand"></a>を切り取った
 
 ```
 virtual BOOL OnCommand(
@@ -352,15 +353,15 @@ virtual BOOL OnCommand(
 
 ### <a name="parameters"></a>パラメーター
 
-[in] *wParam*<br/>
+[in]*wパラム*<br/>
 
-[in] *lParam*<br/>
+[in]*lパラム*<br/>
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="ondraw"></a>  CMFCDesktopAlertWnd::OnDraw
+## <a name="cmfcdesktopalertwndondraw"></a><a name="ondraw"></a>を切り取る
 
 ```
 virtual void OnDraw(CDC* pDC);
@@ -370,9 +371,9 @@ virtual void OnDraw(CDC* pDC);
 
 [in]*pDC*<br/>
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="processcommand"></a>  CMFCDesktopAlertWnd::ProcessCommand
+## <a name="cmfcdesktopalertwndprocesscommand"></a><a name="processcommand"></a>を:Pロセスコマンド
 
 ```
 BOOL ProcessCommand(HWND hwnd);
@@ -384,9 +385,9 @@ BOOL ProcessCommand(HWND hwnd);
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="setanimationspeed"></a>  CMFCDesktopAlertWnd::SetAnimationSpeed
+## <a name="cmfcdesktopalertwndsetanimationspeed"></a><a name="setanimationspeed"></a>を設定します。
 
 新しいアニメーション速度を設定します。
 
@@ -396,14 +397,14 @@ void SetAnimationSpeed(UINT nSpeed);
 
 ### <a name="parameters"></a>パラメーター
 
-*nSpeed*<br/>
-[in]新しいアニメーションの速度をミリ秒単位で指定します。
+*nスピード*<br/>
+[in]新しいアニメーション速度をミリ秒単位で指定します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-アラートのウィンドウのアニメーションの速度を設定するには、このメソッドを呼び出します。 既定のアニメーションの速度は、30 ミリ秒です。
+警告ウィンドウのアニメーション速度を設定します。 既定のアニメーション速度は 30 ミリ秒です。
 
-##  <a name="setanimationtype"></a>  CMFCDesktopAlertWnd::SetAnimationType
+## <a name="cmfcdesktopalertwndsetanimationtype"></a><a name="setanimationtype"></a>を切り取る::アニメーションタイプを設定します。
 
 アニメーションの種類を設定します。
 
@@ -416,13 +417,13 @@ void SetAnimationType(CMFCPopupMenu::ANIMATION_TYPE type);
 *type*<br/>
 [in]アニメーションの種類を指定します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-アニメーションの種類を設定するには、このメソッドを呼び出します。 次のいずれかの値を指定できます。
+アニメーションの種類を設定します。 次のいずれかの値を指定できます。
 
 - NO_ANIMATION
 
-- 展開します。
+- 展開
 
 - スライド
 
@@ -430,9 +431,9 @@ void SetAnimationType(CMFCPopupMenu::ANIMATION_TYPE type);
 
 - SYSTEM_DEFAULT_ANIMATION
 
-##  <a name="setautoclosetime"></a>  CMFCDesktopAlertWnd::SetAutoCloseTime
+## <a name="cmfcdesktopalertwndsetautoclosetime"></a><a name="setautoclosetime"></a>を切り取る::自動閉じる時間を設定します。
 
-自動終了時間帯を設定します。
+自動クローズ タイムアウトを設定します。
 
 ```
 void SetAutoCloseTime(int nTime);
@@ -440,16 +441,16 @@ void SetAutoCloseTime(int nTime);
 
 ### <a name="parameters"></a>パラメーター
 
-*nTime*<br/>
-[in]通知ウィンドウが自動的に閉じるまでの経過する時間 (ミリ秒単位)。
+*n時間*<br/>
+[in]警告ウィンドウが自動的に閉じるまでの時間 (ミリ秒単位)。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-ユーザーは、ウィンドウと対話しない場合、指定時間後に、[アラート] ウィンドウが自動的に閉じます。
+ユーザーがウィンドウを操作しない場合、指定した時間が経過すると、警告ウィンドウは自動的に閉じられます。
 
-##  <a name="setsmallcaption"></a>  CMFCDesktopAlertWnd::SetSmallCaption
+## <a name="cmfcdesktopalertwndsetsmallcaption"></a><a name="setsmallcaption"></a>ウィンドウの種類::セットスモールキャプション
 
-および標準サイズの小さいキャプションを切り替えます。
+小さいサイズと標準サイズのキャプションを切り替えます。
 
 ```
 void SetSmallCaption(BOOL bSmallCaption = TRUE);
@@ -457,16 +458,16 @@ void SetSmallCaption(BOOL bSmallCaption = TRUE);
 
 ### <a name="parameters"></a>パラメーター
 
-*bSmallCaption*<br/>
-[in]通知ウィンドウが小さいキャプションを表示することを指定する場合は TRUEそれ以外の場合、通知ウィンドウが標準サイズのキャプションを表示することを指定する場合は FALSE。
+*小さなキャプション*<br/>
+[in]警告ウィンドウに小さいキャプションを表示するように指定する場合は TRUE。それ以外の場合は FALSE を指定して、警告ウィンドウに標準サイズのキャプションを表示するように指定します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-小規模または標準サイズのキャプションを表示するには、このメソッドを呼び出します。 既定では、小さいキャプションは、高 7 ピクセルです。 通常のキャプションのサイズを取得するには、Windows API 関数を呼び出すことによって`GetSystemMetrics(SM_CYCAPTION)`します。
+小さいサイズまたは標準サイズのキャプションを表示します。 既定では、小さいキャプションは 7 ピクセルの高さです。 通常のキャプションのサイズは、 Windows API 関数`GetSystemMetrics(SM_CYCAPTION)`を呼び出して取得できます。
 
-##  <a name="settransparency"></a>  CMFCDesktopAlertWnd::SetTransparency
+## <a name="cmfcdesktopalertwndsettransparency"></a><a name="settransparency"></a>を切り取る::透過性を設定します。
 
-ポップアップ ウィンドウの透明度を設定します。
+ポップアップ ウィンドウの透明度レベルを設定します。
 
 ```
 void SetTransparency(BYTE nTransparency);
@@ -474,14 +475,14 @@ void SetTransparency(BYTE nTransparency);
 
 ### <a name="parameters"></a>パラメーター
 
-*nTransparency*<br/>
-[in]透過性レベルを指定します。 この値は、0 から 255 までの間である必要があります。 この値が大きい、不透明度を高くウィンドウ。
+*n透明性*<br/>
+[in]透明度レベルを指定します。 この値は 0 ~ 255 の範囲で指定する必要があります。 値が大きいほど、ウィンドウは不透明になります。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-ポップアップ ウィンドウの透明度レベルを設定するには、この関数を呼び出します。
+ポップアップ ウィンドウの透明度レベルを設定します。
 
-##  <a name="getdialogsize"></a>  CMFCDesktopAlertWnd::GetDialogSize
+## <a name="cmfcdesktopalertwndgetdialogsize"></a><a name="getdialogsize"></a>ウィンドウの種類::取得ダイアログ サイズ
 
 ```
 virtual CSize GetDialogSize();
@@ -489,12 +490,12 @@ virtual CSize GetDialogSize();
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 ## <a name="see-also"></a>関連項目
 
-[階層図](../../mfc/hierarchy-chart.md)<br/>
+[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
 [クラス](../../mfc/reference/mfc-classes.md)<br/>
-[CMFCDesktopAlertWndInfo クラス](../../mfc/reference/cmfcdesktopalertwndinfo-class.md)<br/>
+[クラス](../../mfc/reference/cmfcdesktopalertwndinfo-class.md)<br/>
 [CMFCDesktopAlertDialog クラス](../../mfc/reference/cmfcdesktopalertdialog-class.md)<br/>
 [CWnd クラス](../../mfc/reference/cwnd-class.md)

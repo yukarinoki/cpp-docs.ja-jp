@@ -23,14 +23,14 @@ helpviewer_keywords:
 - std::discrete_distribution [C++], param_type
 - std::discrete_distribution [C++], param_type
 ms.assetid: 8c8ba8f8-c06f-4f07-b354-f53950142fcf
-ms.openlocfilehash: ce668ebfdafc4a53bfc71ecf1f2fa76abb1c7532
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 83d69df399d556025d0f7d4a8ccd714ff43a76ec
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454379"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368774"
 ---
-# <a name="discretedistribution-class"></a>discrete_distribution クラス
+# <a name="discrete_distribution-class"></a>discrete_distribution クラス
 
 均等幅の区間を含み、各区間に一様確率を含む整数の離散分布を生成します。
 
@@ -72,10 +72,10 @@ public:
 
 ### <a name="parameters"></a>パラメーター
 
-*IntType*\
-整数の結果型、既定値は**int**です。使用可能な型については、[\<random>](../standard-library/random.md) をご覧ください。
+*Int タイプ*\
+整数の結果の型は、既定**では int**になります。可能な型については、「[\<ランダム>」](../standard-library/random.md)を参照してください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 この標本分布には均等幅の区間が含まれ、各区間には一様確率が含まれます。 他のサンプリング分布の詳細については、「[piecewise_linear_distribution クラス](../standard-library/piecewise-linear-distribution-class.md)」および「[piecewise_constant_distribution クラス](../standard-library/piecewise-constant-distribution-class.md)」をご覧ください。
 
@@ -88,7 +88,7 @@ public:
 
 プロパティ関数 `vector<double> probabilities()` は、生成される整数ごとに個別の確率を返します。
 
-分布クラスとそのメンバーについて詳しくは、「[\<random>](../standard-library/random.md)」をご覧ください。
+分布クラスとそのメンバーの詳細については、「 ランダム[\<>](../standard-library/random.md)」を参照してください。
 
 ## <a name="example"></a>例
 
@@ -175,7 +175,7 @@ Distribution for 100 samples:
 
 **名前空間:** std
 
-## <a name="discrete_distribution"></a>  discrete_distribution::discrete_distribution
+## <a name="discrete_distributiondiscrete_distribution"></a><a name="discrete_distribution"></a>discrete_distribution::dクレテ分布
 
 分布を作成します。
 
@@ -200,46 +200,46 @@ explicit discrete_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>パラメーター
 
-*firstW*\
+*最初のW*\
 分布の作成元となるリストの最初の反復子。
 
-*lastW*\
+*ラストW*\
 分布の作成元となるリストの最後の反復子 (反復子は最後に空の要素を使用するため、非包含的)。
 
-*weightlist*\
+*ウェイトリスト*\
 分布の作成元となる [initializer_list](../cpp/initializers.md)。
 
-*数*\
+*カウント*\
 分布範囲内にある要素の数。 `count==0` の場合は、既定のコンストラクターと同じです (常に 0 を生成します)。
 
-*低画質*\
+*低*\
 分布範囲内の最小値。
 
-*高い*\
+*高*\
 分布範囲内の最大値。
 
-*weightfunc*\
-分布の確率関数を表すオブジェクト。 パラメーターと戻り値の両方が**double**型に変換可能である必要があります。
+*重量Func*\
+分布の確率関数を表すオブジェクト。 パラメータと戻り値の両方を**double**に変換できる必要があります。
 
-*parm*\
+*Parm*\
 分布の作成に使用される `param_type` の構造体。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 既定のコンストラクターは、格納された確率値が値 1 である 1 つの要素を持つオブジェクトを構築します。 この結果、常に 0 を生成する分布になります。
 
 パラメーター *firstW* と *lastW* のある反復子範囲コンストラクターは、区間シーケンス [*firstW*, *lastW*) 全体にわたる反復子から取得された重み値を使って分布オブジェクトを作成します。
 
-*Weightlist*パラメーターを持つ初期化子リストコンストラクターは、初期化子リスト*weightlist*の重みを持つ分布オブジェクトを構築します。
+*weightlist*パラメーターを持つ初期化子リスト コンストラクターは、初期化子リストの*重みリスト*から重み付けされた配布オブジェクトを構築します。
 
 *count*、*low*、*high*、*weightfunc* パラメーターを持つコンストラクターは、以下のルールに基づいて初期化された分布オブジェクトを作成します。
 
 - *count* < 1 の場合、**n** = 1 で、このような場合は既定のコンストラクターと同じで、常に 0 を生成します。
-- *count* > 0 の場合、**n** = *count* です。 指定された**d** = (*高* - *低*)/ **n**が0より大きく、 **d**の uniform 部分範囲を使用して`weight[k] = weightfunc(x)`いる場合、各重みは次のように割り当てられます ( **x** = *low*  + )。 **k d**    d/2 (k = 0、...、n-1)。 +  * 
+- *count* > 0 の場合、**n** = *count* です。 提供**されたd=(***高低* - *low*)/nはゼロより大きく **、d**均一な部分範囲を使用して、各重量`weight[k] = weightfunc(x)`は次のように割り当てられる**n**:、x**x** = *低* + **k** * **d d** + **/** **2、k** = 0、..、n - 1。 **n**
 
 `param_type` パラメーター *parm* を持つコンストラクターは、格納されたパラメーター構造体として *parm* を使う分布オブジェクトを作成します。
 
-## <a name="param_type"></a>  discrete_distribution::param_type
+## <a name="discrete_distributionparam_type"></a><a name="param_type"></a>discrete_distribution::pアラム_タイプ
 
 分布のすべてのパラメーターを格納します。
 
@@ -268,34 +268,34 @@ struct param_type {
 
 ### <a name="parameters"></a>パラメーター
 
-*firstW*\
+*最初のW*\
 分布の作成元となるリストの最初の反復子。
 
-*lastW*\
+*ラストW*\
 分布の作成元となるリストの最後の反復子 (反復子は最後に空の要素を使用するため、非包含的)。
 
-*weightlist*\
+*ウェイトリスト*\
 分布の作成元となる [initializer_list](../cpp/initializers.md)。
 
-*数*\
+*カウント*\
 分布範囲内にある要素の数。 *count* が 0 の場合は、既定のコンストラクターと同じです (常に 0 を生成します)。
 
-*低画質*\
+*低*\
 分布範囲内の最小値。
 
-*高い*\
+*高*\
 分布範囲内の最大値。
 
-*weightfunc*\
-分布の確率関数を表すオブジェクト。 パラメーターと戻り値の両方が**double**型に変換可能である必要があります。
+*重量Func*\
+分布の確率関数を表すオブジェクト。 パラメータと戻り値の両方を**double**に変換できる必要があります。
 
 *そうです*\
 このオブジェクトと比較する `param_type` オブジェクト。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このパラメーター パッケージを `operator()` に渡して、戻り値を生成できます。
 
 ## <a name="see-also"></a>関連項目
 
-[\<random>](../standard-library/random.md)
+[\<ランダム>](../standard-library/random.md)

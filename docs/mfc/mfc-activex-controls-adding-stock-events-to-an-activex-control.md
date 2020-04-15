@@ -1,5 +1,5 @@
 ---
-title: MFC ActiveX コントロール:ActiveX コントロールへのストック イベントの追加
+title: 'MFC ActiveX コントロール : ActiveX コントロールへのストック イベントの追加'
 ms.date: 11/04/2016
 f1_keywords:
 - EVENT__STOCK_ERROR
@@ -42,67 +42,67 @@ helpviewer_keywords:
 - EVENT_STOCK_READYSTATECHANGE event
 - EVENT_STOCK_KEYPRESS event
 ms.assetid: 3eeadc67-4b3d-4444-8caa-53054073988a
-ms.openlocfilehash: 9f6f3c63f0436296791df428c704bce96eca3ec0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 79cd4fc572e55c67cc5a2cfe3a00e04f2a4a7850
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392727"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364687"
 ---
-# <a name="mfc-activex-controls-adding-stock-events-to-an-activex-control"></a>MFC ActiveX コントロール:ActiveX コントロールへのストック イベントの追加
+# <a name="mfc-activex-controls-adding-stock-events-to-an-activex-control"></a>MFC ActiveX コントロール : ActiveX コントロールへのストック イベントの追加
 
-ストック イベントは、クラスによって自動的に呼び出される点で、カスタム イベントとは異なります。 [COleControl](../mfc/reference/colecontrol-class.md)します。 `COleControl` 定義済みのメンバー関数の一般的なアクションの結果イベントを発生させることがあります。 一般的なアクションによって実装される`COleControl`に含める 1 つのシングル クリックやダブルクリック コントロール、キーボード イベント、および変更のマウス ボタンの状態。 イベントは、ストック イベントの前に必ず EVENT_STOCK プレフィックスのエントリをマップします。
+ストック イベントは、クラス[COleControl](../mfc/reference/colecontrol-class.md)によって自動的に発生するという点で、カスタム イベントとは異なります。 `COleControl`には、一般的なアクションから発生するイベントを発生させる定義済みのメンバー関数が含まれています。 実装される`COleControl`一般的なアクションには、コントロールのシングル クリックとダブルクリック、キーボード イベント、マウス ボタンの状態の変更などがあります。 ストック イベントのイベント マップ エントリには、常に EVENT_STOCK プレフィックスが付きます。
 
-##  <a name="_core_stock_events_supported_by_classwizard"></a> サポートされているイベントのイベント追加ウィザード
+## <a name="stock-events-supported-by-the-add-event-wizard"></a><a name="_core_stock_events_supported_by_classwizard"></a>イベント追加ウィザードでサポートされるストックイベント
 
-`COleControl`クラスには、次の表に、10 個のストック イベントが用意されています。 コントロールを使用して、必要なイベントを指定することができます、[イベント追加ウィザード](../ide/add-event-wizard.md)します。
+この`COleControl`クラスは、次の表に示す 10 個のストック イベントを提供します。 イベント追加ウィザード を使用して、コントロールに必要な[イベント](../ide/add-event-wizard.md)を指定できます。
 
-### <a name="stock-events"></a>ストック イベント
+### <a name="stock-events"></a>ストックイベント
 
-|event|発生させる関数|コメント|
+|Event|焼成機能|説明|
 |-----------|---------------------|--------------|
-|ここを|**void FireClick( )**|コントロールが、マウスをキャプチャするときに発生**BUTTONUP** (左、中央、または右) のメッセージを受信し、コントロールの上のボタンが離されました。 株価 MouseDown、MouseUp イベントは、このイベントの前に発生します。<br /><br /> イベント マップ エントリ:**EVENT_STOCK_CLICK( )**|
-|DblClick|**void FireDblClick( )**|クリックすると似ていますが、ときに発生する、 **BUTTONDBLCLK**メッセージを受信します。<br /><br /> イベント マップ エントリ:**EVENT_STOCK_DBLCLICK( )**|
-|Error|**void FireError( SCODE**  *scode* **, LPCSTR**  `lpszDescription` **, UINT**  `nHelpID`  **= 0 )**|メソッドの呼び出しまたはプロパティ アクセスのスコープの外部で ActiveX コントロール内でエラーが発生したときに発生します。<br /><br /> イベント マップ エントリ:**EVENT_STOCK_ERROREVENT( )**|
-|KeyDown|**void FireKeyDown( short**  `nChar` **, short**  `nShiftState`  **)**|ときに発生する、`WM_SYSKEYDOWN`または`WM_KEYDOWN`メッセージを受信します。<br /><br /> イベント マップ エントリ:**EVENT_STOCK_KEYDOWN( )**|
-|Keypress イベント|**void FireKeyPress( short** <strong>\*</strong>  `pnChar`  **)**|ときに発生する、`WM_CHAR`メッセージを受信します。<br /><br /> イベント マップ エントリ:**EVENT_STOCK_KEYPRESS( )**|
-|KeyUp|**FireKeyUp を無効にする (短い**`nChar` **、短い**`nShiftState`**)**|ときに発生する、`WM_SYSKEYUP`または`WM_KEYUP`メッセージを受信します。<br /><br /> イベント マップ エントリ:**EVENT_STOCK_KEYUP( )**|
-|MouseDown|**void FireMouseDown( short**  `nButton` **, short**  `nShiftState` **, float**  *x* **, float**  *y*  **)**|存在する場合に発生した**BUTTONDOWN** (左、中央、または右) を受信します。 このイベントが発生する直前に、マウスがキャプチャされます。<br /><br /> イベント マップ エントリ:**EVENT_STOCK_MOUSEDOWN( )**|
-|MouseMove|**void FireMouseMove( short**  `nButton` **, short**  `nShiftState` **, float**  *x* **, float**  *y*  **)**|WM_MOUSEMOVE メッセージを受信したときに発生します。<br /><br /> イベント マップ エントリ:**EVENT_STOCK_MOUSEMOVE( )**|
-|MouseUp|**FireMouseUp を無効にする (短い**`nButton` **、短い**`nShiftState` **、float** *x* **、float** *y*  **)**|存在する場合に発生した**BUTTONUP** (左、中央、または右) を受信します。 このイベントが発生する前に、マウス キャプチャが解放されます。<br /><br /> イベント マップ エントリ:**EVENT_STOCK_MOUSEUP( )**|
-|ReadyStateChange|**void FireReadyStateChange( )**|受信データの量のための次の準備完了状態にコントロールの遷移するときに発生します。<br /><br /> イベント マップ エントリ:**EVENT_STOCK_READYSTATECHANGE( )**|
+|Click|**ボイドファイアクリック( )**|コントロールがマウスをキャプチャしたときに発生し **、BUTTONUP** (左、中央、または右) メッセージが受信され、ボタンがコントロール上で離されます。 このイベントの前に、ストックの MouseDown イベントと MouseUp イベントが発生します。<br /><br /> イベント マップ エントリ: **EVENT_STOCK_CLICK( )**|
+|Dblclick|**ボイドファイアドブルクリック( )**|クリックと同様ですが **、BUTTONDBLCLK**メッセージを受信したときに発生します。<br /><br /> イベント マップ エントリ: **EVENT_STOCK_DBLCLICK( )**|
+|エラー|**無効火災エラー(***SCODE スコード 、* **LPCSTR** `lpszDescription` **、UINT**`nHelpID`= 0 **)**        |メソッド呼び出しまたはプロパティ アクセスのスコープ外で ActiveX コントロール内でエラーが発生したときに発生します。<br /><br /> イベント マップ エントリ: **EVENT_STOCK_ERROREVENT( )**|
+|KeyDown|**ボイドファイアキーダウン(短い**`nChar`**、短い**`nShiftState`**)**      |または`WM_KEYDOWN`メッセージ`WM_SYSKEYDOWN`を受信したときに発生します。<br /><br /> イベント マップ エントリ: **EVENT_STOCK_KEYDOWN( )**|
+|Keypress|**ボイドファイアキープレス( ショート**<strong>\*</strong>`pnChar`**)**    |メッセージを`WM_CHAR`受信したときに発生します。<br /><br /> イベント マップ エントリ: **EVENT_STOCK_KEYPRESS( )**|
+|KeyUp|**ボイドファイアキーアップ(短い**`nChar`**、短い**`nShiftState`**)**      |または`WM_KEYUP`メッセージ`WM_SYSKEYUP`を受信したときに発生します。<br /><br /> イベント マップ エントリ: **EVENT_STOCK_KEYUP( )**|
+|Mousedown|**ボイド FireMouseDown(**`nButton`**短い 、 短い**`nShiftState`,**フロート***x* **, フロート***y***)**          |**ボタンダウン**(左、中央、または右)が受信された場合に発生します。 マウスは、このイベントが発生する直前にキャプチャされます。<br /><br /> イベント マップ エントリ: **EVENT_STOCK_MOUSEDOWN( )**|
+|Mousemove|**ボイド FireMouseMove(**`nButton`**短い 、 短い**`nShiftState`,**フロート***x* **, フロート***y***)**          |WM_MOUSEMOVE メッセージを受信したときに発生します。<br /><br /> イベント マップ エントリ: **EVENT_STOCK_MOUSEMOVE( )**|
+|Mouseup|**ボイド FireMouseUp(短い**  `nButton` **、 ショート**  `nShiftState` **、 フロート**  *x* **、 フロート**  *y*  **)**|**BUTTONUP** (左、中央、または右) が受信された場合に発生します。 マウス キャプチャは、このイベントが発生する前に解放されます。<br /><br /> イベント マップ エントリ: **EVENT_STOCK_MOUSEUP( )**|
+|レディステートチェンジ|**ボイドファイアレディステートチェンジ/ )**|受信したデータ量が原因でコントロールが次の準備完了状態に遷移したときに発生します。<br /><br /> イベント マップ エントリ: **EVENT_STOCK_READYSTATECHANGE( )**|
 
-##  <a name="_core_adding_a_stock_event_using_classwizard"></a> ストック イベントを使用して追加のイベント追加ウィザード
+## <a name="adding-a-stock-event-using-the-add-event-wizard"></a><a name="_core_adding_a_stock_event_using_classwizard"></a>イベント追加ウィザードを使用したストックイベントの追加
 
-実際のイベントの発生は、基本クラスによって自動的に処理されるので、カスタム イベントを追加するよりも処理量が少ないストック イベントの追加が必要です`COleControl`します。 次の手順では、ストック イベントを追加するコントロールを使用して開発された[MFC ActiveX コントロール ウィザード](../mfc/reference/mfc-activex-control-wizard.md)します。 キーが押され、コントロールがアクティブなときに、KeyPress と呼ばれる、イベントが発生します。 この手順は、その他のストック イベントを追加することも使用できます。 KeyPress のストック イベントの選択した名前に置き換えます。
+実際のイベントの発生は基本クラス によって自動的に処理されるため、ストック イベントの追加はカスタム イベントの`COleControl`追加よりも少ない作業が必要です。 次の手順では[、MFC ActiveX](../mfc/reference/mfc-activex-control-wizard.md)コントロール ウィザードを使用して開発されたコントロールにストック イベントを追加します。 KeyPress と呼ばれるイベントは、キーが押され、コントロールがアクティブなときに発生します。 この手順は、他のストックイベントを追加するためにも使用できます。 選択したストックイベント名を KeyPress に置き換えます。
 
-#### <a name="to-add-the-keypress-stock-event-using-the-add-event-wizard"></a>イベントの追加ウィザードを使用して KeyPress ストック イベントを追加するには
+#### <a name="to-add-the-keypress-stock-event-using-the-add-event-wizard"></a>イベント追加ウィザードを使用して KeyPress ストックイベントを追加するには
 
 1. コントロールのプロジェクトを読み込みます。
 
-1. クラス ビューでは、ショートカット メニューを開き、ActiveX コントロール クラスを右クリックします。
+1. クラス ビューで、ActiveX コントロール クラスを右クリックしてショートカット メニューを開きます。
 
-1. ショートカット メニューでは、次のようにクリックします。**追加** をクリックし、**イベントの追加**します。
+1. ショートカット メニューの [**追加**] をクリックし、[**イベントの追加**] をクリックします。
 
-   イベントの追加ウィザードが開きます。
+   これにより、イベントの追加ウィザードが開きます。
 
-1. **イベント名**ドロップダウン リストで、`KeyPress`します。
+1. [**イベント名]** ドロップダウン リストで、[ `KeyPress`] を選択します。
 
 1. **[完了]** をクリックします。
 
-##  <a name="_core_classwizard_changes_for_stock_events"></a> ストック イベントのイベント ウィザードによる変更を追加します。
+## <a name="add-event-wizard-changes-for-stock-events"></a><a name="_core_classwizard_changes_for_stock_events"></a>ストック イベントのイベント ウィザードの変更の追加
 
-ストック イベントは、コントロールの基本クラスによって処理される、ので、イベントの追加ウィザードには任意の方法でクラスの宣言は変わりません。 コントロールのイベントのマップにイベントを追加し、内のエントリは、そのします。IDL ファイルです。 次の行は、コントロール クラスの実装である、コントロールのイベントのマップに追加されます (します。CPP) ファイル:
+ストック イベントはコントロールの基本クラスによって処理されるため、イベントの追加ウィザードではクラス宣言が変更されることはありません。 コントロールのイベント マップにイベントを追加し、そのイベント マップにエントリを作成します。IDL ファイル。 コントロールのイベント マップに次の行が追加され、コントロール クラスの実装 () に配置されます。CPP) ファイル:
 
 [!code-cpp[NVC_MFC_AxUI#5](../mfc/codesnippet/cpp/mfc-activex-controls-adding-stock-events-to-an-activex-control_1.cpp)]
 
-このコードを追加すると、WM_CHAR メッセージを受信し、コントロールがアクティブでは、KeyPress イベントが発生します。 KeyPress イベントは、起動処理関数を呼び出すことによって他のタイミングで起動できる (たとえば、 `FireKeyPress`) から、コントロール コード内で。
+このコードを追加すると、WM_CHAR メッセージが受信され、コントロールがアクティブな場合に、KeyPress イベントが発生します。 KeyPress イベントは、コントロール コード内からその起動関数 (たとえば)`FireKeyPress`を呼び出すことによって、他の時間に発生させることができます。
 
-イベントの追加ウィザードでは、コントロールの次のコード行を追加します。IDL ファイル:
+イベントの追加ウィザードは、コントロールの コードの次の行を追加します。IDL ファイル:
 
 [!code-cpp[NVC_MFC_AxUI#6](../mfc/codesnippet/cpp/mfc-activex-controls-adding-stock-events-to-an-activex-control_2.idl)]
 
-この行は、標準のディスパッチ ID を持つ KeyPress イベントを関連付けますでき、KeyPress イベントを予測するコンテナーです。
+この行は、KeyPress イベントを標準ディスパッチ ID に関連付け、コンテナが KeyPress イベントを予測できるようにします。
 
 ## <a name="see-also"></a>関連項目
 

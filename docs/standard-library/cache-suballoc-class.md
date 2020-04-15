@@ -10,12 +10,12 @@ helpviewer_keywords:
 - stdext::cache_suballoc [C++], allocate
 - stdext::cache_suballoc [C++], deallocate
 ms.assetid: 9ea9c5e9-1dcc-45d0-b3a7-a56a93d88898
-ms.openlocfilehash: 7a21f0c4f81277200ff069baf751fa013a3c0cea
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 55860a65fc77f834ed699f3a5114768b7efdde6f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688345"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366733"
 ---
 # <a name="cache_suballoc-class"></a>cache_suballoc クラス
 
@@ -34,15 +34,15 @@ class cache_suballoc
 |---------------|-----------------|
 |*Sz*|割り当てられる配列内の要素の数。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-Cache_suballoc クラステンプレートは、割り当てが解除されたメモリブロックを、長さが無制限のフリーリストに格納します。また、`freelist<sizeof(Type), max_unbounded>` を使用し、フリーリストが空の場合に**operator new**で割り当てられた大きなチャンクからメモリブロックを割り当てます。
+cache_suballoc クラス テンプレートは、割り当て解除されたメモリ ブロックを、 を`freelist<sizeof(Type), max_unbounded>`使用して非制限長の空きリストに格納し、空のリストが空の場合に **、演算子 new**で割り当てられた大きなチャンクからメモリ ブロックを suballocate します。
 
-各チャンクは `Sz * Nelts` バイトの使用可能なメモリと、 **operator new**および**operator delete**に必要なデータを保持します。 割り当てたチャンクが解放されることはありません。
+各チャンクは`Sz * Nelts`、使用できるメモリのバイトと **、演算子 new**および operator **delete**が必要とするデータを保持します。 割り当てたチャンクが解放されることはありません。
 
 ### <a name="constructors"></a>コンストラクター
 
-|コンストラクター|説明|
+|Constructor|説明|
 |-|-|
 |[cache_suballoc](#cache_suballoc)|`cache_suballoc` 型のオブジェクトを構築します。|
 
@@ -50,16 +50,16 @@ Cache_suballoc クラステンプレートは、割り当てが解除された�
 
 |メンバー関数|説明|
 |-|-|
-|[allocate](#allocate)|メモリのブロックを割り当てます。|
-|[deallocate](#deallocate)|指定した位置で始まるストレージから、指定された数のオブジェクトを解放します。|
+|[割り当てる](#allocate)|メモリのブロックを割り当てます。|
+|[解放](#deallocate)|指定した位置で始まるストレージから、指定された数のオブジェクトを解放します。|
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<allocators>
 
 **名前空間:** stdext
 
-## <a name="allocate"></a>  cache_suballoc::allocate
+## <a name="cache_suballocallocate"></a><a name="allocate"></a>cache_suballoc:割り当て
 
 メモリのブロックを割り当てます。
 
@@ -77,9 +77,9 @@ void *allocate(std::size_t count);
 
 割り当てられたオブジェクトへのポインター。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-## <a name="cache_suballoc"></a>  cache_suballoc::cache_suballoc
+## <a name="cache_suballoccache_suballoc"></a><a name="cache_suballoc"></a>cache_suballoc::cache_suballoc
 
 `cache_suballoc` 型のオブジェクトを構築します。
 
@@ -87,9 +87,9 @@ void *allocate(std::size_t count);
 cache_suballoc();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-## <a name="deallocate"></a>  cache_suballoc::deallocate
+## <a name="cache_suballocdeallocate"></a><a name="deallocate"></a>cache_suballoc::d割り当て
 
 指定した位置で始まるストレージから、指定された数のオブジェクトを解放します。
 
@@ -101,11 +101,11 @@ void deallocate(void* ptr, std::size_t count);
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*ptr*|記憶域から割り当てを解除される最初のオブジェクトへのポインター。|
+|*Ptr*|記憶域から割り当てを解除される最初のオブジェクトへのポインター。|
 |*count*|記憶域から割り当てを解除されるオブジェクトの数。|
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 ## <a name="see-also"></a>関連項目
 
-[\<allocators>](../standard-library/allocators-header.md)
+[\<アロケーター>](../standard-library/allocators-header.md)

@@ -1,10 +1,13 @@
 ---
 title: tgamma、tgammaf、tgammal
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - tgamma
 - tgammaf
 - tgammal
+- _o_tgamma
+- _o_tgammaf
+- _o_tgammal
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +37,12 @@ helpviewer_keywords:
 - tgammaf function
 - tgammal function
 ms.assetid: f1bd2681-8af2-48a9-919d-5358fd068acd
-ms.openlocfilehash: 02926fa49bbabeb9cf532f53cfa6e30a77805e70
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d7e27e8b818a16cb0c18f58e2f40c0090dd13ecf
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946208"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81362502"
 ---
 # <a name="tgamma-tgammaf-tgammal"></a>tgamma、tgammaf、tgammal
 
@@ -70,42 +74,44 @@ long double tgammal(
 
 ### <a name="parameters"></a>パラメーター
 
-*x*<br/>
+*X*<br/>
 ガンマを検索する値。
 
 ## <a name="return-value"></a>戻り値
 
 成功した場合は、 *x*のガンマを返します。
 
-*X*の大きさがデータ型に対して大きすぎるか小さすぎる場合、範囲エラーが発生することがあります。 *X* < = 0 の場合は、ドメインエラーまたは範囲エラーが発生する可能性があります。
+*x*の大きさがデータ型に対して大きすぎるか小さすぎる場合は、範囲エラーが発生することがあります。 *x* <= 0 の場合、ドメイン エラーまたは範囲エラーが発生することがあります。
 
-|問題|Return|
+|問題|戻り値|
 |-----------|------------|
 |x = ±0|±無限大|
-|x = 負の整数|NaN|
-|x =-無限大|NaN|
+|x = 負の整数|(NaN)|
+|x = -無限大|(NaN)|
 |x = +INFINITY|+INFINITY|
-|x = NaN|NaN|
-|ドメイン エラー|NaN|
-|極エラー|± HUGE_VAL、± HUGE_VALF、または± HUGE_VALL|
-|オーバーフロー範囲エラー|± HUGE_VAL、± HUGE_VALF、または± HUGE_VALL|
+|x = NaN|(NaN)|
+|ドメイン エラー|(NaN)|
+|極エラー|±HUGE_VAL、±HUGE_VALF、±HUGE_VALL|
+|オーバーフロー範囲エラー|±HUGE_VAL、±HUGE_VALF、±HUGE_VALL|
 |アンダーフロー範囲エラー|丸めた後の正確な値。|
 
 エラーは、[_matherr](matherr.md) で指定されたとおりに報告されます。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **tgamma**を受け取って返す**float**と**long** **double**型。 C プログラムでは、 **tgamma**は常に**double**を取得し、double を返します。
+C++ ではオーバーロードが可能なため **、float**型と**長倍****double**精度浮動小数点型を取得および戻す**tgamma**のオーバーロードを呼び出すことができます。 C プログラムでは **、tgamma**は常に二**重**を取り、返します。
 
 x が自然数の場合、この関数は (x-1) の階乗を返します。
 
+既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+
 ## <a name="requirements"></a>必要条件
 
-|関数|C ヘッダー|C++ ヘッダー|
+|機能|C ヘッダー|C++ ヘッダー|
 |--------------|--------------|------------------|
-|**tgamma**、 **tgammaf**、 **tgammal**|\<math.h>|\<cmath>|
+|**tgamma**,**ガンマフ**,**ガンマル**|\<math.h>|\<cmath>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

@@ -5,46 +5,46 @@ helpviewer_keywords:
 - IDispatchImpl class, implementing dual interfaces
 - dual interfaces, implementing
 ms.assetid: d1da3633-b445-4dcd-8a0a-3efdafada3ea
-ms.openlocfilehash: ecd6a0cc90ca4175c4ae898f2e9aa8bf00508a3e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a85597adad045bee3edb5cc3ed63c72a22fa08fe
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262230"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81319465"
 ---
-# <a name="implementing-a-dual-interface"></a>デュアル インターフェイスを実装します。
+# <a name="implementing-a-dual-interface"></a>デュアル インターフェイスの実装
 
-使用して、デュアル インターフェイスを実装することができます、 [IDispatchImpl](../atl/reference/idispatchimpl-class.md)の既定の実装を提供するクラス、`IDispatch`デュアル インターフェイスのメソッド。 詳細については、「 [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)」を参照してください。
+デュアル インターフェイスでは、メソッドの既定の実装を提供する[クラス、IDispatchImpl](../atl/reference/idispatchimpl-class.md)クラス`IDispatch`を使用してデュアル インターフェイスを実装できます。 詳細については、「 [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)」を参照してください。
 
-このクラスを使用します。
+このクラスを使用するには、次の手順に従います。
 
-- タイプ ライブラリにデュアル インターフェイスを定義します。
+- タイプ ライブラリでデュアル インターフェイスを定義します。
 
-- 特殊化クラスを派生`IDispatchImpl`(テンプレート引数として、インターフェイスとタイプ ライブラリに関する情報を渡す)。
+- クラスを派生させる (`IDispatchImpl`インターフェイスとタイプ ライブラリに関する情報をテンプレート引数として渡す)。
 
-- デュアル インターフェイスを介して公開する COM マップのエントリ (またはエントリ) 追加`QueryInterface`します。
+- を通じて`QueryInterface`デュアル インターフェイスを公開するエントリ (または複数のエントリ) を COM マップに追加します。
 
-- クラスでインターフェイスの vtable の一部を実装します。
+- クラスにインターフェイスの vtable 部分を実装します。
 
-- 実行時にインターフェイス定義を含むタイプ ライブラリは、オブジェクトで使用できることを確認します。
+- インターフェイス定義を含むタイプ ライブラリが実行時にオブジェクトで使用できることを確認します。
 
 ## <a name="atl-simple-object-wizard"></a>ATL シンプル オブジェクト ウィザード
 
-新しいインターフェイスとそれを実装する新しいクラスを作成する場合は、使用、[クラスの追加 ダイアログ ボックス](../ide/add-class-dialog-box.md)をクリックし、 [ATL シンプル オブジェクト ウィザード](../atl/reference/atl-simple-object-wizard.md)します。
+新しいインターフェイスと実装する新しいクラスを作成する場合は[、[ATL クラスの追加] ダイアログ ボックス](../ide/add-class-dialog-box.md)、および[ATL シンプル オブジェクト ウィザード](../atl/reference/atl-simple-object-wizard.md)を使用します。
 
 ## <a name="implement-interface-wizard"></a>インターフェイス実装ウィザード
 
-既存のインターフェイスがある場合を使用できます、[インターフェイス実装ウィザード](../atl/reference/adding-a-new-interface-in-an-atl-project.md)既存のクラスに必要な基本クラス、COM マップ エントリ、およびメソッドのスケルトンの実装を追加します。
+既存のインターフェイスがある場合は、[インターフェイス実装ウィザード](../atl/reference/adding-a-new-interface-in-an-atl-project.md)を使用して、必要な基本クラス、COM マップ エントリ、およびスケルトン メソッドの実装を既存のクラスに追加できます。
 
 > [!NOTE]
->  タイプ ライブラリのメジャーおよびマイナー バージョン番号は、テンプレート引数として渡されるように、生成された基本クラスを調整する必要があります、`IDispatchImpl`基本クラス。 インターフェイス実装ウィザードでは、タイプ ライブラリのバージョン番号をするについて確認します。
+> 生成された基本クラスを調整して、タイプ ライブラリのメジャー バージョン番号とマイナー バージョン番号をテンプレート引数として基本クラスに`IDispatchImpl`渡す必要がある場合があります。 インターフェイスの実装ウィザードでは、タイプ ライブラリのバージョン番号はチェックされません。
 
-## <a name="implementing-idispatch"></a>IDispatch を実装します。
+## <a name="implementing-idispatch"></a>IDispatch の実装
 
-使用することができます、`IDispatchImpl`基本 COM マップに適切なエントリを指定するだけでディスパッチ インターフェイスの実装を提供するクラス (を使用して、 [COM_INTERFACE_ENTRY2](reference/com-interface-entry-macros.md#com_interface_entry2)または[COM_INTERFACE_ENTRY_IID](reference/com-interface-entry-macros.md#com_interface_entry_iid)マクロ) 対応するデュアル インターフェイスを記述するタイプ ライブラリがある限り、します。 実装するために非常に一般的、`IDispatch`インターフェイス、この方法の例です。 ATL シンプル オブジェクト ウィザードとインターフェイス実装ウィザードを実装することを前提としています両方`IDispatch`これで、そのためは適切なエントリ マップに追加します。
+対応する`IDispatchImpl`デュアル インターフェイスを記述するタイプ ライブラリがある限り、COM マップで適切なエントリを指定するだけで 、基本クラスを使用して、COM_INTERFACE_ENTRY2[または](reference/com-interface-entry-macros.md#com_interface_entry2)[COM_INTERFACE_ENTRY_IID](reference/com-interface-entry-macros.md#com_interface_entry_iid)マクロを使用して、dispinterface の実装を提供できます。 たとえば、この方法でインターフェイスを`IDispatch`実装することは非常に一般的です。 ATL シンプル オブジェクト ウィザードとインターフェイス実装ウィザードは、この方法で`IDispatch`実装することを前提としているため、適切なエントリがマップに追加されます。
 
 > [!NOTE]
->  ATL は、 [IDispEventImpl](../atl/reference/idispeventimpl-class.md)と[IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md)互換性のあるデュアル インターフェイスの定義を含むタイプ ライブラリを必要とせず、ディスパッチ インターフェイスを実装するクラスが用意します。
+> ATL には、互換性のあるデュアル インターフェイスの定義を含むタイプ ライブラリを必要とせずに、disp インターフェイスを実装するのに役立つ[IDispEventImpl](../atl/reference/idispeventimpl-class.md)クラスと[IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md)クラスが用意されています。
 
 ## <a name="see-also"></a>関連項目
 

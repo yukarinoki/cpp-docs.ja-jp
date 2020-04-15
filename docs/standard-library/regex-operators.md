@@ -10,22 +10,22 @@ f1_keywords:
 - regex/std::operator==
 - regex/std::operator<<
 ms.assetid: ec623e65-c186-491f-aa18-6b12b47e1127
-ms.openlocfilehash: 8795d0f1c387fb87c44f2d68c45aa27d1edbfb79
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: ebed98daaea895fa88dc654189fb3c3068d2b508
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689075"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366417"
 ---
 # <a name="ltregexgt-operators"></a>&lt;regex&gt; 演算子
 
 ||||
 |-|-|-|
-|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
-|[operator&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|[operator&lt;=](#op_lt_eq)|
-|[operator==](#op_eq_eq)|
+|[演算子!=](#op_neq)|[演算子&gt;](#op_gt)|[演算子&gt;=](#op_gt_eq)|
+|[演算子&lt;](#op_lt)|[演算子&lt;&lt;](#op_lt_lt)|[演算子&lt;=](#op_lt_eq)|
+|[演算子==](#op_eq_eq)|
 
-## <a name="op_neq"></a>  operator!=
+## <a name="operator"></a><a name="op_neq"></a>演算子!=
 
 さまざまなオブジェクトが等しくないかどうかの比較。
 
@@ -66,22 +66,22 @@ bool operator!=(const match_results<BidIt, Alloc>& left,
 
 ### <a name="parameters"></a>パラメーター
 
-*Bidit* \
+*ビッドイット*\
 反復子の型。
 
-*Iotraits* \
+*イオトシツ*\
 文字列の特徴 (traits) クラス。
 
-*Alloc* \
+*Alloc*\
 アロケーター クラス。
 
 *左*\
 比較する左のオブジェクト。
 
-*右*\
+*そうです*\
 比較する右のオブジェクト。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 各々のテンプレート演算子は `!(left == right)` を返します。
 
@@ -144,7 +144,7 @@ sub != "aab" == true
 sub != 'a' == true
 ```
 
-## <a name="op_lt"></a> 演算子&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a>演算子&lt;
 
 さまざまなオブジェクトが他方より小さいかどうかの比較。
 
@@ -181,24 +181,24 @@ bool operator<(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>パラメーター
 
-*Bidit* \
+*ビッドイット*\
 反復子の型。
 
-*Iotraits* \
+*イオトシツ*\
 文字列の特徴 (traits) クラス。
 
-*Alloc* \
+*Alloc*\
 アロケーター クラス。
 
 *左*\
 比較する左のオブジェクト。
 
-*右*\
+*そうです*\
 比較する右のオブジェクト。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-各テンプレート演算子は引数を文字列型に変換し、 *left*の変換後の値が*right*の変換された値より小さい場合にのみ true を返します。
+各テンプレート演算子は、引数を文字列型に変換し、*左*の変換された値が*right*の変換後の値より小さい場合にのみ true を返します。
 
 ### <a name="example"></a>例
 
@@ -254,7 +254,7 @@ sub < "aab" == true
 sub < 'a' == false
 ```
 
-## <a name="op_lt_lt"></a>  operator&lt;&lt;
+## <a name="operatorltlt"></a><a name="op_lt_lt"></a>演算子&lt;&lt;
 
 ストリームに sub_match を挿入します。
 
@@ -266,25 +266,25 @@ basic_ostream<Elem, IOtraits>& operator<<(basic_ostream<Elem, IOtraits>& os,
 
 ### <a name="parameters"></a>パラメーター
 
-*Elem* \
+*Elem*\
 要素型。
 
-*Iotraits* \
+*イオトシツ*\
 文字列の特徴 (traits) クラス。
 
-*Alloc* \
+*Alloc*\
 アロケーター クラス。
 
-*Bidit* \
+*ビッドイット*\
 反復子の型。
 
-*os* \
+*Os*\
 出力ストリーム。
 
-*右*\
-挿入するオブジェクト。
+*そうです*\
+挿入するオブジェクトです。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このテンプレート演算子は `os << right.str()` を返します。
 
@@ -314,7 +314,7 @@ int main()
 whole match: caaa
 ```
 
-## <a name="op_lt_eq"></a>  operator&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a>演算子&lt;=
 
 さまざまなオブジェクトが他方以下かどうかの比較。
 
@@ -351,22 +351,22 @@ bool operator<=(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>パラメーター
 
-*Bidit* \
+*ビッドイット*\
 反復子の型。
 
-*Iotraits* \
+*イオトシツ*\
 文字列の特徴 (traits) クラス。
 
-*Alloc* \
+*Alloc*\
 アロケーター クラス。
 
 *左*\
 比較する左のオブジェクト。
 
-*右*\
+*そうです*\
 比較する右のオブジェクト。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 各々のテンプレート演算子は `!(right < left)` を返します。
 
@@ -424,7 +424,7 @@ sub <= "aab" == true
 sub <= 'a' == false
 ```
 
-## <a name="op_eq_eq"></a>  operator==
+## <a name="operator"></a><a name="op_eq_eq"></a>演算子==
 
 さまざまなオブジェクトが等しいかどうかの比較。
 
@@ -465,32 +465,32 @@ bool operator==(const match_results<BidIt, Alloc>& left,
 
 ### <a name="parameters"></a>パラメーター
 
-*Bidit* \
+*ビッドイット*\
 反復子の型。
 
-*Iotraits* \
+*イオトシツ*\
 文字列の特徴 (traits) クラス。
 
-*Alloc* \
+*Alloc*\
 アロケーター クラス。
 
 *左*\
 比較する左のオブジェクト。
 
-*右*\
+*そうです*\
 比較する右のオブジェクト。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 各テンプレート演算子はそれぞれの引数を文字列型に変換し、変換後のオブジェクトが等しいかどうかを比較した結果を返します。
 
 テンプレート演算子は、その引数を文字列型に変換するとき、次の変換のうち最初に当てはまるものを使用します。
 
-型がクラステンプレート `match_results` または `sub_match` の特殊化である引数は、`str` メンバー関数を呼び出すことによって変換されます。
+型がクラス テンプレート`match_results`の特殊化であるか、または`sub_match`メンバー関数を`str`呼び出すことによって変換される引数。
 
-クラステンプレート `basic_string` の特殊化である型の引数は変更されません。
+型がクラス テンプレート`basic_string`の特殊化である引数は変更されません。
 
-その他のすべての引数の型は、クラステンプレート `basic_string` の適切な特殊化のために引数値をコンストラクターに渡すことによって変換されます。
+その他の引数の型はすべて、クラス テンプレートの適切な特殊化のために引数の値をコンストラクターに`basic_string`渡すことによって変換されます。
 
 ### <a name="example"></a>例
 
@@ -551,7 +551,7 @@ sub == "aab" == false
 sub == 'a' == false
 ```
 
-## <a name="op_gt"></a> 演算子&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a>演算子&gt;
 
 さまざまなオブジェクトが他方より大きいかどうかの比較。
 
@@ -588,22 +588,22 @@ bool operator>(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>パラメーター
 
-*Bidit* \
+*ビッドイット*\
 反復子の型。
 
-*Iotraits* \
+*イオトシツ*\
 文字列の特徴 (traits) クラス。
 
-*Alloc* \
+*Alloc*\
 アロケーター クラス。
 
 *左*\
 比較する左のオブジェクト。
 
-*右*\
+*そうです*\
 比較する右のオブジェクト。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 各々のテンプレート演算子は `right < left` を返します。
 
@@ -661,7 +661,7 @@ sub > "aab" == false
 sub > 'a' == true
 ```
 
-## <a name="op_gt_eq"></a>  operator&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a>演算子&gt;=
 
 さまざまなオブジェクトが他方以上かどうかの比較。
 
@@ -698,22 +698,22 @@ bool operator>=(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>パラメーター
 
-*Bidit* \
+*ビッドイット*\
 反復子の型。
 
-*Iotraits* \
+*イオトシツ*\
 文字列の特徴 (traits) クラス。
 
-*Alloc* \
+*Alloc*\
 アロケーター クラス。
 
 *左*\
 比較する左のオブジェクト。
 
-*右*\
+*そうです*\
 比較する右のオブジェクト。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 各々のテンプレート演算子は `!(left < right)` を返します。
 
@@ -773,11 +773,11 @@ sub >= 'a' == true
 
 ## <a name="see-also"></a>関連項目
 
-[\<regex>](../standard-library/regex.md)\
-[Regex_constants クラス](../standard-library/regex-constants-class.md)\
-[Regex_error クラス](../standard-library/regex-error-class.md)\
-[\<regex > 関数](../standard-library/regex-functions.md)\
-[Regex_iterator クラス](../standard-library/regex-iterator-class.md)\
-[Regex_token_iterator クラス](../standard-library/regex-token-iterator-class.md)\
-[Regex_traits クラス](../standard-library/regex-traits-class.md)\
-[\<regex> typedefs](../standard-library/regex-typedefs.md)
+[\<正規表現>](../standard-library/regex.md)\
+[regex_constantsクラス](../standard-library/regex-constants-class.md)\
+[regex_errorクラス](../standard-library/regex-error-class.md)\
+[\<正規表現>関数](../standard-library/regex-functions.md)\
+[regex_iteratorクラス](../standard-library/regex-iterator-class.md)\
+[regex_token_iteratorクラス](../standard-library/regex-token-iterator-class.md)\
+[regex_traitsクラス](../standard-library/regex-traits-class.md)\
+[\<正規表現>のタイプ定義](../standard-library/regex-typedefs.md)

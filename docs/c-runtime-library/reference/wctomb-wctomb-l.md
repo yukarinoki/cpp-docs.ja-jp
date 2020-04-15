@@ -1,9 +1,11 @@
 ---
 title: wctomb、_wctomb_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wctomb_l
 - wctomb
+- _o__wctomb_l
+- _o_wctomb
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +19,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +35,12 @@ helpviewer_keywords:
 - characters, converting
 - string conversion, multibyte character strings
 ms.assetid: 4a543f0e-5516-4d81-8ff2-3c5206f02ed5
-ms.openlocfilehash: 195105618c75bd2a3a493f169fca4c2d3d4ebd62
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 162585ea866b4fb26cfaae3bc94345dadaba0baa
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70945000"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367398"
 ---
 # <a name="wctomb-_wctomb_l"></a>wctomb、_wctomb_l
 
@@ -62,26 +65,28 @@ int _wctomb_l(
 *mbchar*<br/>
 マルチバイト文字のアドレス。
 
-*wchar*<br/>
+*Wchar*<br/>
 ワイド文字。
 
 ## <a name="return-value"></a>戻り値
 
-**Wctomb**がワイド文字をマルチバイト文字に変換する場合、ワイド文字のバイト数 ( **MB_CUR_MAX**を超えることはありません) が返されます。 *Wchar*がワイド文字の null 文字 (L ' \ 0 ') の場合、 **wctomb**は1を返します。 ターゲットポインター *mbchar*が**NULL**の場合、 **wctomb**は0を返します。 現在のロケールで変換できない場合、 **wctomb**は-1 を返し、 **errno**は**EILSEQ**に設定されます。
+ワイド文字をマルチバイト文字に変換する場合、**ワイド**文字のバイト数 **(MB_CUR_MAX**より大きくは決してない) を返します。 *wchar*がワイド文字のヌル文字 (L'\0') の場合 **、wctomb**は 1 を返します。 ターゲット ポインター *mbchar*が**NULL**の場合 **、wctomb**は 0 を返します。 現行ロケールで変換が不可能な場合、 **wctomb**は -1 を戻し **、errno**は**EILSEQ**に設定されます。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**Wctomb**関数は、 *wchar*引数を対応するマルチバイト文字に変換し、その結果を*mbchar*に格納します。 任意のプログラムの任意のポイントからこの関数を呼び出すことができます。 **wctomb**は、ロケールに依存する動作に現在のロケールを使用します。 **_wctomb_l**は、渡されたロケールを代わりに使用する点を除いて、 **wctomb**と同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+**wctomb**関数は *、wchar*引数を対応するマルチバイト文字に変換し、その結果を*mbchar*に格納します。 任意のプログラムの任意のポイントからこの関数を呼び出すことができます。 **wctomb**はロケールに依存する動作に現在のロケールを使用します。**_wctomb_l**は、渡されたロケールを代わりに使用する点を除いて **、wctomb**と同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-**wctomb**は、そのパラメーターを検証します。 *Mbchar*が**NULL**の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、 **errno**は**EINVAL**に設定され、この関数は-1 を返します。
+**wctomb**は、そのパラメーターを検証します。 *mbchar*が**NULL**の場合は、「パラメーター[の検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーター ハンドラーが呼び出されます。 実行を続行できる場合 **、errno**は**EINVAL**に設定され、関数は -1 を戻します。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**wctomb**|\<stdlib.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 

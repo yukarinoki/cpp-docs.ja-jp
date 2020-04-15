@@ -7,55 +7,55 @@ helpviewer_keywords:
 - CToolBarCtrl class [MFC], accessing toolbar
 - toolbar controls [MFC], accessing
 ms.assetid: b19409d5-3831-42c7-80ae-195c49dc9085
-ms.openlocfilehash: 60cc527493e2a68751c201b998ab171c564d6c1f
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 371f1944fae655556bbc9f89d7ffcce7cc326e5e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69510581"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365249"
 ---
 # <a name="working-with-the-toolbar-control"></a>ToolBar コントロールの操作
 
-この記事では、 [CToolBar](../mfc/reference/ctoolbar-class.md)の基になっている[CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)オブジェクトにアクセスして、ツールバーをより細かく制御する方法について説明します。 これは高度なトピックです。
+この記事では、CToolBar の基になる[CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)オブジェクトにアクセスして、ツール バーをより詳細に制御する方法について説明します。 [CToolBar](../mfc/reference/ctoolbar-class.md) これは高度なトピックです。
 
 ## <a name="procedures"></a>手順
 
-#### <a name="to-access-the-toolbar-common-control-underlying-your-ctoolbar-object"></a>CToolBar オブジェクトの基になるツールバーコモンコントロールにアクセスするには
+#### <a name="to-access-the-toolbar-common-control-underlying-your-ctoolbar-object"></a>CToolBar オブジェクトの基になるツール バーコモン コントロールにアクセスするには
 
-1. [CToolBar:: GetToolBarCtrl](../mfc/reference/ctoolbar-class.md#gettoolbarctrl)を呼び出します。
+1. 呼び出し[C ツールバー::GetToolBarCtrl](../mfc/reference/ctoolbar-class.md#gettoolbarctrl).
 
-`GetToolBarCtrl`[CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)オブジェクトへの参照を返します。 この参照を使用して、toolbar コントロールクラスのメンバー関数を呼び出すことができます。
+`GetToolBarCtrl`オブジェクトへの[参照を返](../mfc/reference/ctoolbarctrl-class.md)します。 参照を使用して、ツール バー コントロール クラスのメンバー関数を呼び出すことができます。
 
 > [!CAUTION]
->  **Get**関数`CToolBarCtrl`の呼び出しは安全ですが、 **Set**関数を呼び出す場合は注意が必要です。 これは高度なトピックです。 通常、基になるツールバーコントロールにアクセスする必要はありません。
+> `CToolBarCtrl` **Get**関数を呼び出すことは安全ですが **、Set**関数を呼び出す場合は注意が必要です。 これは高度なトピックです。 通常は、基になるツール バー コントロールにアクセスする必要はありません。
 
-### <a name="what-do-you-want-to-know-more-about"></a>詳細については、次を参照してください。
+### <a name="what-do-you-want-to-know-more-about"></a>何についてもっと知りたいのですか?
 
-- [コントロール (Windows コモンコントロール)](../mfc/controls-mfc.md)
+- [コントロール (Windows コモン コントロール)](../mfc/controls-mfc.md)
 
-- [ツールバーの基礎](../mfc/toolbar-fundamentals.md)
+- [ツールバーの基本](../mfc/toolbar-fundamentals.md)
 
-- [ドッキングツールバーとフローティングツールバー](../mfc/docking-and-floating-toolbars.md)
+- [ツール バーのフローティングとドッキング](../mfc/docking-and-floating-toolbars.md)
 
-- [ツールバーのサイズを動的に変更する](../mfc/docking-and-floating-toolbars.md)
+- [ツール バーの動的なサイズ変更](../mfc/docking-and-floating-toolbars.md)
 
 - [ツールバーのツールヒント](../mfc/toolbar-tool-tips.md)
 
-- [Flyby ステータスバーの更新](../mfc/toolbar-tool-tips.md)
+- [フライバイステータスバーの更新](../mfc/toolbar-tool-tips.md)
 
-- [ツールヒントの通知の処理](../mfc/handling-tool-tip-notifications.md)
+- [ツール ヒントの通知の処理](../mfc/handling-tool-tip-notifications.md)
 
-- [CToolBar](../mfc/reference/ctoolbar-class.md)クラスと[CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)クラス
+- [クラス](../mfc/reference/ctoolbar-class.md)[CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)
 
 - [カスタマイズ通知の処理](../mfc/handling-customization-notifications.md)
 
 - [複数のツールバー](../mfc/toolbar-fundamentals.md)
 
-- [以前のツールバーの使用](../mfc/using-your-old-toolbars.md)
+- [古い形式のツール バーの使用](../mfc/using-your-old-toolbars.md)
 
 - [コントロールバー](../mfc/control-bars.md)
 
-Windows コモンコントロールの使用に関する一般的な情報については、「[コモンコントロール](/windows/win32/Controls/common-controls-intro)」を参照してください。
+Windows コモン コントロールの一般的な使用方法については、「[コモン コントロール](/windows/win32/Controls/common-controls-intro)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CHotKeyCtrl [MFC], SetHotKey
 - CHotKeyCtrl [MFC], SetRules
 ms.assetid: 896f9766-0718-4f58-aab2-20325e118ca6
-ms.openlocfilehash: 9818c32a7779d646ca5a9485a1331dfa393408ba
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 758fb78fbd4e25a0e2fb8cea300c5371ece04fb4
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69506147"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366878"
 ---
 # <a name="chotkeyctrl-class"></a>CHotKeyCtrl クラス
 
@@ -45,31 +45,31 @@ class CHotKeyCtrl : public CWnd
 
 |名前|説明|
 |----------|-----------------|
-|[CHotKeyCtrl:: CHotKeyCtrl](#chotkeyctrl)|`CHotKeyCtrl` オブジェクトを構築します。|
+|[コッキーCtrl::CHotKeyCtrl](#chotkeyctrl)|`CHotKeyCtrl` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CHotKeyCtrl:: Create](#create)|ホットキーコントロールを作成し、 `CHotKeyCtrl`オブジェクトにアタッチします。|
-|[CHotKeyCtrl:: CreateEx](#createex)|指定した Windows 拡張スタイルを使用してホットキーコントロールを作成し`CHotKeyCtrl` 、それをオブジェクトにアタッチします。|
-|[CHotKeyCtrl:: GetHotKey](#gethotkey)|ホットキーコントロールからホットキーの仮想キーコードと修飾子フラグを取得します。|
-|[CHotKeyCtrl:: GetHotKeyName](#gethotkeyname)|ホットキーに割り当てられたローカル文字セット内のキー名を取得します。|
-|[CHotKeyCtrl:: GetKeyName](#getkeyname)|指定した仮想キーコードに割り当てられた、ローカル文字セット内のキー名を取得します。|
-|[CHotKeyCtrl:: SetHotKey](#sethotkey)|ホットキーコントロールのホットキーの組み合わせを設定します。|
-|[CHotKeyCtrl::SetRules](#setrules)|無効な組み合わせと、ホットキーコントロールの既定の修飾子の組み合わせを定義します。|
+|[作成](#create)|ホット キー コントロールを作成し、`CHotKeyCtrl`オブジェクトにアタッチします。|
+|[コトキーCtrl::作成Ex](#createex)|指定した Windows 拡張スタイルを使用してホット キー コントロールを作成`CHotKeyCtrl`し、オブジェクトにアタッチします。|
+|[キーキーを取得します。](#gethotkey)|ホット キー コントロールから、ホット キーの仮想キー コードと修飾子フラグを取得します。|
+|[キーキー名を取得します。](#gethotkeyname)|ホット キーに割り当てられたローカル文字セット内のキー名を取得します。|
+|[キーネームを取得します。](#getkeyname)|指定した仮想キー コードに割り当てられたローカル文字セット内のキー名を取得します。|
+|[セットキーキー](#sethotkey)|ホット キー コントロールのホット キーの組み合わせを設定します。|
+|[次のルールを設定します。](#setrules)|ホット キー コントロールの無効な組み合わせと既定の修飾子の組み合わせを定義します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-"ホットキーコントロール" は、ユーザーがホットキーを作成できるウィンドウです。 "ホットキー" とは、ユーザーが操作を迅速に実行するために押すキーの組み合わせです。 (たとえば、ユーザーは、特定のウィンドウをアクティブにして Z オーダーの最上部に表示するホットキーを作成できます)。ホットキーコントロールはユーザーの選択肢を表示し、ユーザーが有効なキーの組み合わせを選択するようにします。
+"ホット キー コントロール" は、ユーザーがホット キーを作成できるようにするウィンドウです。 "ホットキー" は、ユーザーが操作を迅速に実行するために押すことができるキーの組み合わせです。 (たとえば、ユーザーは、特定のウィンドウをアクティブにし、Z オーダーの先頭に移動するホット キーを作成できます)。ホット キー コントロールは、ユーザーの選択内容を表示し、ユーザーが有効なキーの組み合わせを選択することを確認します。
 
-このコントロール (および`CHotKeyCtrl`クラス) は、windows 95/98 および windows NT バージョン3.51 以降で実行されているプログラムに対してのみ使用できます。
+このコントロール (および`CHotKeyCtrl`クラス) は、Windows 95/98 および Windows NT バージョン 3.51 以降で実行されているプログラムでのみ使用できます。
 
-ユーザーがキーの組み合わせを選択すると、アプリケーションは指定されたキーの組み合わせをコントロールから取得し、WM_SETHOTKEY メッセージを使用してシステムのホットキーを設定できます。 ユーザーがその後、システムの任意の部分からホットキーを押すたびに、WM_SETHOTKEY メッセージに指定されたウィンドウに SC_HOTKEY を指定する WM_SYSCOMMAND メッセージが渡されます。 このメッセージは、それを受信するウィンドウをアクティブにします。 ホットキーは、WM_SETHOTKEY を呼び出したアプリケーションが終了するまで有効なままです。
+ユーザーがキーの組み合わせを選択すると、アプリケーションは、指定されたキーの組み合わせをコントロールから取得し、WM_SETHOTKEYメッセージを使用してシステムのホットキーを設定できます。 ユーザーがホット キーを押すと、システムの任意の部分から、WM_SETHOTKEY メッセージに指定されたウィンドウがSC_HOTKEYを指定するWM_SYSCOMMAND メッセージを受け取ります。 このメッセージは、受信するウィンドウをアクティブにします。 ホット キーは、WM_SETHOTKEYを呼び出したアプリケーションが終了するまで有効です。
 
-このメカニズムは、WM_HOTKEY メッセージ、Windows [Registerhotkey](/windows/win32/api/winuser/nf-winuser-registerhotkey)キー、および[unregisterhotkey](/windows/win32/api/winuser/nf-winuser-unregisterhotkey)キー関数に依存するホットキーのサポートとは異なります。
+このメカニズムは、WM_HOTKEY メッセージと Windows [RegisterHotKey](/windows/win32/api/winuser/nf-winuser-registerhotkey)関数と[登録解除ホットキー](/windows/win32/api/winuser/nf-winuser-unregisterhotkey)関数に依存するホット キーのサポートとは異なります。
 
-の使用方法`CHotKeyCtrl`の詳細については、「 [Controls](../../mfc/controls-mfc.md) and [using CHotKeyCtrl](../../mfc/using-chotkeyctrl.md)」を参照してください。
+の詳細`CHotKeyCtrl`については、「[コントロール](../../mfc/controls-mfc.md)」および[「CHotKeyCtrl](../../mfc/using-chotkeyctrl.md)の使用」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -85,7 +85,7 @@ class CHotKeyCtrl : public CWnd
 
 **ヘッダー:** afxcmn.h
 
-##  <a name="chotkeyctrl"></a>CHotKeyCtrl:: CHotKeyCtrl
+## <a name="chotkeyctrlchotkeyctrl"></a><a name="chotkeyctrl"></a>コッキーCtrl::CHotKeyCtrl
 
 `CHotKeyCtrl` オブジェクトを構築します。
 
@@ -93,9 +93,9 @@ class CHotKeyCtrl : public CWnd
 CHotKeyCtrl();
 ```
 
-##  <a name="create"></a>CHotKeyCtrl:: Create
+## <a name="chotkeyctrlcreate"></a><a name="create"></a>作成
 
-ホットキーコントロールを作成し、 `CHotKeyCtrl`オブジェクトにアタッチします。
+ホット キー コントロールを作成し、`CHotKeyCtrl`オブジェクトにアタッチします。
 
 ```
 virtual BOOL Create(
@@ -107,31 +107,31 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>パラメーター
 
-*dwStyle*<br/>
-ホットキーコントロールのスタイルを指定します。 コントロールスタイルの任意の組み合わせを適用します。 詳細については、「Windows SDK の[一般的なコントロールスタイル](/windows/win32/Controls/common-control-styles)」を参照してください。
+*Dwstyle*<br/>
+ホット キー コントロールのスタイルを指定します。 コントロール スタイルの任意の組み合わせを適用します。 詳細については、Windows SDK の[「共通のコントロール スタイル](/windows/win32/Controls/common-control-styles)」を参照してください。
 
-*rect*<br/>
-ホットキーコントロールのサイズと位置を指定します。 これは、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT 構造体](/windows/win32/api/windef/ns-windef-rect)のいずれかになります。
+*Rect*<br/>
+ホット キー コントロールのサイズと位置を指定します。 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT 構造体](/windows/win32/api/windef/ns-windef-rect)のいずれかを指定できます。
 
 *pParentWnd*<br/>
-ホットキーコントロールの親ウィンドウ (通常は、 [CDialog](../../mfc/reference/cdialog-class.md)) を指定します。 NULL にすることはできません。
+ホット キー コントロールの親ウィンドウを指定[します。](../../mfc/reference/cdialog-class.md) NULL にすることはできません。
 
 *nID*<br/>
-ホットキーコントロールの ID を指定します。
+ホット キー コントロールの ID を指定します。
 
 ### <a name="return-value"></a>戻り値
 
-初期化が成功した場合は0以外の。それ以外の場合は0です。
+初期化が成功した場合は 0 以外。それ以外の場合は 0。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-オブジェクトを構築`CHotKeyCtrl`するには、2つの手順を実行します。 まず、コンストラクターを呼び出し、次に`Create`を呼び出します。これにより、ホットキーコントロールが`CHotKeyCtrl`作成され、オブジェクトにアタッチされます。
+オブジェクトは`CHotKeyCtrl`2 つの手順で作成します。 まず、コンストラクタを呼び出し`Create`、次にホット キー コントロールを作成して`CHotKeyCtrl`オブジェクトにアタッチする を呼び出します。
 
-拡張 windows スタイルをコントロールで使用する場合は、ではなく`Create` [CreateEx](#createex) を呼び出します。
+コントロールで拡張ウィンドウ スタイルを使用する場合は、 ではなく[CreateEx](#createex)を`Create`呼び出します。
 
-##  <a name="createex"></a>  CHotKeyCtrl::CreateEx
+## <a name="chotkeyctrlcreateex"></a><a name="createex"></a>コトキーCtrl::作成Ex
 
-この関数を呼び出して、コントロール (子ウィンドウ) を作成し、 `CHotKeyCtrl`オブジェクトに関連付けます。
+コントロール (子ウィンドウ) を作成し、`CHotKeyCtrl`オブジェクトに関連付けます。
 
 ```
 virtual BOOL CreateEx(
@@ -144,14 +144,14 @@ virtual BOOL CreateEx(
 
 ### <a name="parameters"></a>パラメーター
 
-*dwExStyle*<br/>
-作成するコントロールの拡張スタイルを指定します。 拡張 Windows スタイルの一覧については、Windows SDK の[CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)の*dwexstyle*パラメーターを参照してください。
+*ドウェエクススタイル*<br/>
+作成するコントロールの拡張スタイルを指定します。 拡張 Windows スタイルの一覧については、Windows SDK の*DwExStyle*パラメーター[を](/windows/win32/api/winuser/nf-winuser-createwindowexw)参照してください。
 
-*dwStyle*<br/>
-ホットキーコントロールのスタイルを指定します。 コントロールスタイルの任意の組み合わせを適用します。 詳細については、「Windows SDK の[コモンコントロールスタイル](/windows/win32/Controls/common-control-styles)」を参照してください。
+*Dwstyle*<br/>
+ホット キー コントロールのスタイルを指定します。 コントロール スタイルの任意の組み合わせを適用します。 詳細については、Windows SDK[の「コモン コントロール スタイル](/windows/win32/Controls/common-control-styles)」を参照してください。
 
-*rect*<br/>
-*PParentWnd*のクライアント座標で、作成されるウィンドウのサイズと位置を記述する[RECT](/previous-versions/dd162897\(v=vs.85\))構造体への参照。
+*Rect*<br/>
+作成するウィンドウのサイズと位置を記述する[RECT](/previous-versions/dd162897\(v=vs.85\))構造体への参照を *、 pParentWnd*のクライアント座標で指定します。
 
 *pParentWnd*<br/>
 コントロールの親であるウィンドウへのポインター。
@@ -163,13 +163,13 @@ virtual BOOL CreateEx(
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-Windows `CreateEx`拡張スタイルの先頭**WS_EX_** によって指定された拡張 windows スタイルを適用するには、[[作成](#create)] ではなくを使用します。
+[`CreateEx`[作成]](#create)の代わりに、Windows 拡張スタイルの序文で指定された拡張 Windows スタイル**を適用WS_EX_。**
 
-##  <a name="gethotkey"></a>  CHotKeyCtrl::GetHotKey
+## <a name="chotkeyctrlgethotkey"></a><a name="gethotkey"></a>キーキーを取得します。
 
-ホットキーコントロールからキーボードショートカットの仮想キーコードと修飾子フラグを取得します。
+ホット キー コントロールから、キーボード ショートカットの仮想キー コードと修飾子フラグを取得します。
 
 ```
 DWORD GetHotKey() const;
@@ -181,32 +181,32 @@ void GetHotKey(
 
 ### <a name="parameters"></a>パラメーター
 
-*wVirtualKeyCode*<br/>
-入出力キーボードショートカットの仮想キーコード。 標準の仮想キーコードの一覧については、「Winuser. h」を参照してください。
+*キーコード*<br/>
+[アウト]キーボード ショートカットの仮想キー コード。 標準の仮想キー コードの一覧については、Winuser.h を参照してください。
 
-*wModifiers*<br/>
-入出力キーボードショートカットの修飾キーを示すフラグのビットごとの組み合わせ (or)。
+*w修飾子*<br/>
+[アウト]キーボード ショートカットの修飾キーを示すフラグのビットごとの組み合わせ (OR)。
 
 修飾子フラグは次のとおりです。
 
 |フラグ|対応するキー|
 |----------|-----------------------|
 |HOTKEYF_ALT|ALT キー|
-|HOTKEYF_CONTROL|CTRL キー|
+|HOTKEYF_CONTROL|Ctrl キー|
 |HOTKEYF_EXT|拡張キー|
-|HOTKEYF_SHIFT|SHIFT キー|
+|HOTKEYF_SHIFT|Shift キー|
 
 ### <a name="return-value"></a>戻り値
 
-最初のオーバーロードされたメソッドで、仮想キーコードと修飾子フラグを含む DWORD。 下位ワードの下位バイトには、仮想キーコード、下位ワードの上位バイトに修飾子フラグ、および上位ワードがゼロであることが含まれています。
+最初のオーバーロードされたメソッドで、仮想キー コードと修飾子フラグを含む DWORD。 下位ワードの下位バイトには仮想キー・コードが含まれ、下位ワードの上位バイトには修飾子フラグが含まれ、上位ワードはゼロです。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-仮想キーコードと修飾子キーを一緒に押すと、ショートカットキーが定義されます。
+仮想キー コードと修飾子キーを組み合わせて、キーボード ショートカットを定義します。
 
-##  <a name="gethotkeyname"></a>  CHotKeyCtrl::GetHotKeyName
+## <a name="chotkeyctrlgethotkeyname"></a><a name="gethotkeyname"></a>キーキー名を取得します。
 
-このメンバー関数を呼び出して、ホットキーのローカライズされた名前を取得します。
+ホット キーのローカライズされた名前を取得します。
 
 ```
 CString GetHotKeyName() const;
@@ -214,15 +214,15 @@ CString GetHotKeyName() const;
 
 ### <a name="return-value"></a>戻り値
 
-現在選択されているホットキーのローカライズされた名前。 ホットキーが選択されてい`GetHotKeyName`ない場合は、空の文字列を返します。
+現在選択されているホット キーのローカライズされた名前。 ホット キーが選択されていない場合は`GetHotKeyName`、空の文字列を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメンバー関数が返す名前は、キーボードドライバーから取得されます。 ローカライズされていないキーボードドライバーは、ローカライズ版の Windows にインストールできます。また、その逆も可能です。
+このメンバー関数が返す名前は、キーボード ドライバーから取得されます。 ローカライズされていないキーボード ドライバーは、ローカライズ版の Windows にインストールできます。
 
-##  <a name="getkeyname"></a>  CHotKeyCtrl::GetKeyName
+## <a name="chotkeyctrlgetkeyname"></a><a name="getkeyname"></a>キーネームを取得します。
 
-指定した仮想キーコードに割り当てられているキーのローカライズされた名前を取得するには、このメンバー関数を呼び出します。
+指定した仮想キー コードに割り当てられたキーのローカライズされた名前を取得します。
 
 ```
 static CString GetKeyName(
@@ -232,27 +232,27 @@ static CString GetKeyName(
 
 ### <a name="parameters"></a>パラメーター
 
-*vk*<br/>
-仮想キーコード。
+*Vk*<br/>
+仮想キー コード。
 
-*fExtended*<br/>
-仮想キーコードが拡張キーの場合、TRUE になります。それ以外の場合は FALSE。
+*f 拡張*<br/>
+仮想キー コードが拡張キーの場合は TRUE。それ以外の場合は FALSE。
 
 ### <a name="return-value"></a>戻り値
 
-*Vk*パラメーターで指定したキーのローカライズされた名前。 キーにマップされた名前が`GetKeyName`ない場合、は空の文字列を返します。
+*vk*パラメーターで指定されたキーのローカライズされた名前。 キーにマップされた名前がない場合は、`GetKeyName`空の文字列を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この関数が返すキー名はキーボードドライバーから取得されるため、ローカライズされていないキーボードドライバーを Windows のローカライズ版にインストールできます。また、その逆も可能です。
+この関数が返すキー名はキーボード ドライバーから取得されるため、ローカライズされていないキーボード ドライバーをローカライズ版の Windows にインストールできます。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFCControlLadenDialog#69](../../mfc/codesnippet/cpp/chotkeyctrl-class_1.cpp)]
 
-##  <a name="sethotkey"></a>  CHotKeyCtrl::SetHotKey
+## <a name="chotkeyctrlsethotkey"></a><a name="sethotkey"></a>セットキーキー
 
-ホットキーコントロールのキーボードショートカットを設定します。
+ホット キー コントロールのキーボード ショートカットを設定します。
 
 ```
 void SetHotKey(
@@ -262,28 +262,28 @@ void SetHotKey(
 
 ### <a name="parameters"></a>パラメーター
 
-*wVirtualKeyCode*<br/>
-からキーボードショートカットの仮想キーコード。 標準の仮想キーコードの一覧については、「Winuser. h」を参照してください。
+*キーコード*<br/>
+[in]キーボード ショートカットの仮想キー コード。 標準の仮想キー コードの一覧については、Winuser.h を参照してください。
 
-*wModifiers*<br/>
-からキーボードショートカットの修飾キーを示すフラグのビットごとの組み合わせ (or)。
+*w修飾子*<br/>
+[in]キーボード ショートカットの修飾キーを示すフラグのビットごとの組み合わせ (OR)。
 
 修飾子フラグは次のとおりです。
 
 |フラグ|対応するキー|
 |----------|-----------------------|
 |HOTKEYF_ALT|ALT キー|
-|HOTKEYF_CONTROL|CTRL キー|
+|HOTKEYF_CONTROL|Ctrl キー|
 |HOTKEYF_EXT|拡張キー|
-|HOTKEYF_SHIFT|SHIFT キー|
+|HOTKEYF_SHIFT|Shift キー|
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-仮想キーコードと修飾子キーを一緒に押すと、ショートカットキーが定義されます。
+仮想キー コードと修飾子キーを組み合わせて、キーボード ショートカットを定義します。
 
-##  <a name="setrules"></a>  CHotKeyCtrl::SetRules
+## <a name="chotkeyctrlsetrules"></a><a name="setrules"></a>次のルールを設定します。
 
-この関数を呼び出して、ホットキーコントロールの無効な組み合わせと既定の修飾子の組み合わせを定義します。
+ホット キー コントロールの無効な組み合わせと既定の修飾子の組み合わせを定義します。
 
 ```
 void SetRules(
@@ -293,33 +293,33 @@ void SetRules(
 
 ### <a name="parameters"></a>パラメーター
 
-*wInvalidComb 目*<br/>
-無効なキーの組み合わせを指定するフラグの配列。 次の値の組み合わせを指定できます。
+*w無効なコーム*<br/>
+無効なキーの組み合わせを指定するフラグの配列。 次の値を組み合わせて使用できます。
 
-- HKCOMB_A ALT
+- alt をHKCOMB_A
 
-- HKCOMB_C CTRL
+- ctrl をHKCOMB_C
 
-- HKCOMB_CA CTRL + ALT
+- ctrl キーを押しながら Alt キーを押HKCOMB_CA
 
-- 未変更のキーの HKCOMB_NONE
+- 変更されていないキーをHKCOMB_NONE
 
-- HKCOMB_S SHIFT
+- シフトHKCOMB_S
 
-- HKCOMB_SA SHIFT + ALT
+- HKCOMB_SA SHIFT キーを押しながら ALT キーを押す
 
-- HKCOMB_SC SHIFT + CTRL
+- HKCOMB_SC Shift キーを押しながら Ctrl キーを押す
 
-- HKCOMB_SCA SHIFT + CTRL + ALT
+- HKCOMB_SCA シフト + Ctrl + Alt キー
 
-*wModifiers*<br/>
+*w修飾子*<br/>
 ユーザーが無効な組み合わせを入力したときに使用するキーの組み合わせを指定するフラグの配列。 修飾子フラグの詳細については、「 [GetHotKey](#gethotkey)」を参照してください。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-*Winvalidcomb*目に指定されているフラグで定義されているように、ユーザーが無効なキーの組み合わせを入力すると、システムは or 演算子を使用して、ユーザーが入力したキーと*wmodifiers*に指定されたフラグを結合します。 結果として得られるキーの組み合わせは文字列に変換され、ホットキーコントロールに表示されます。
+ユーザーが*wInvalidComb*で指定されたフラグで定義されている無効なキーの組み合わせを入力すると、システムは OR 演算子を使用して、ユーザーが入力したキーと*wModifiers*で指定されたフラグを結合します。 結果のキーの組み合わせは、文字列に変換され、ホット キー コントロールに表示されます。
 
 ## <a name="see-also"></a>関連項目
 
 [CWnd クラス](../../mfc/reference/cwnd-class.md)<br/>
-[階層図](../../mfc/hierarchy-chart.md)
+[階層グラフ](../../mfc/hierarchy-chart.md)

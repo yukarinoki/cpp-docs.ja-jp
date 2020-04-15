@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CNetAddressCtrl [MFC], GetAllowType
 - CNetAddressCtrl [MFC], SetAllowType
 ms.assetid: cb4c6aca-3f49-4b52-b76c-65f57096155b
-ms.openlocfilehash: 5e485c22bcc4bf35f61226d84345102052689f89
-ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
+ms.openlocfilehash: 71e3b1a9fde84f96696d26c891ab6688f246d575
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "69504533"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81363309"
 ---
 # <a name="cnetaddressctrl-class"></a>CNetAddressCtrl クラス
 
@@ -43,38 +43,38 @@ class CNetAddressCtrl : public CEdit
 
 |名前|説明|
 |----------|-----------------|
-|[CNetAddressCtrl::CNetAddressCtrl](#cnetaddressctrl)|`CNetAddressCtrl` オブジェクトを構築します。|
+|[CNet アドレスCtrl::CネットアドレスCtrl](#cnetaddressctrl)|`CNetAddressCtrl` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CNetAddressCtrl::Create](#create)|指定されたスタイルを使用してネットワークアドレスコントロールを作成`CNetAddressCtrl`し、現在のオブジェクトに添付します。|
-|[CNetAddressCtrl::CreateEx](#createex)|指定した拡張スタイルを使用してネットワークアドレスコントロールを作成し`CNetAddressCtrl` 、現在のオブジェクトにアタッチします。|
-|[CNetAddressCtrl::DisplayErrorTip](#displayerrortip)|現在のネットワークアドレスコントロールでサポートされていないネットワークアドレスをユーザーが入力したときに、エラーバルーンヒントを表示します。|
-|[CNetAddressCtrl::GetAddress](#getaddress)|現在のネットワークアドレスコントロールに関連付けられているネットワークアドレスの検証および解析された表現を取得します。|
-|[CNetAddressCtrl::GetAllowType](#getallowtype)|現在のネットワークアドレスコントロールがサポートできるネットワークアドレスの種類を取得します。|
-|[CNetAddressCtrl::SetAllowType](#setallowtype)|現在のネットワークアドレスコントロールがサポートできるネットワークアドレスの種類を設定します。|
+|[作成](#create)|指定したスタイルを使用してネットワーク アドレス コントロールを作成し、`CNetAddressCtrl`現在のオブジェクトにアタッチします。|
+|[CNet アドレスCtrl::作成します。](#createex)|指定した拡張スタイルを使用してネットワーク アドレス コントロールを作成し、`CNetAddressCtrl`現在のオブジェクトにアタッチします。|
+|[エラーヒントを:D](#displayerrortip)|現在のネットワーク アドレス コントロールでサポートされていないネットワーク アドレスをユーザーが入力すると、エラー バルーン ヒントが表示されます。|
+|[をクリックします。](#getaddress)|現在のネットワーク アドレス コントロールに関連付けられているネットワーク アドレスの検証済みおよび解析済みの表現を取得します。|
+|[次の値を取得します。](#getallowtype)|現在のネットワーク アドレス コントロールがサポートできるネットワーク アドレスの種類を取得します。|
+|[次の値を指定します。](#setallowtype)|現在のネットワーク アドレス コントロールがサポートできるネットワーク アドレスの種類を設定します。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
-ネットワークアドレスコントロールは、ユーザーが入力したアドレスの形式が正しいことを確認します。 コントロールは実際にはネットワークアドレスに接続していません。 [CNetAddressCtrl:: SetAllowType](#setallowtype)メソッドは、 [CNetAddressCtrl:: getaddress](#getaddress)メソッドが解析および検証できるアドレスの1つ以上の型を指定します。 アドレスは、サーバー、ネットワーク、ホスト、またはブロードキャストメッセージ送信先の IPv4、IPv6、または名前付きアドレスの形式にすることができます。 アドレスの形式が正しくない場合は、 [CNetAddressCtrl::D isplayErrorTip](#displayerrortip)メソッドを使用して、ネットワークアドレスコントロールのテキストボックスをグラフィカルに示すヒントメッセージボックスを表示し、定義済みのエラーメッセージを表示することができます。
+ネットワーク アドレス コントロールは、ユーザーが入力したアドレスの形式が正しいことを確認します。 コントロールは実際にはネットワーク アドレスに接続しません。 メソッドは、メソッドが解析および検証できる 1 つ以上の種類のアドレスを指定[CNetAddressCtrl::GetAddress](#getaddress)[します](#setallowtype)。 アドレスは、サーバー、ネットワーク、ホスト、またはブロードキャスト メッセージの宛先の IPv4、IPv6、または名前付きアドレスの形式で指定できます。 アドレスの形式が正しくない場合は[、CNetAddressCtrl::DisplayErrorTip](#displayerrortip)メソッドを使用して、ネットワーク アドレス コントロールのテキスト ボックスをグラフィカルにポイントし、定義済みのエラー メッセージを表示する情報ヒント メッセージ ボックスを表示できます。
 
-クラスは、[CEdit](../../mfc/reference/cedit-class.md) クラスから派生します。`CNetAddressCtrl` その結果、ネットワークアドレス制御によって、すべての Windows エディットコントロールメッセージにアクセスできるようになります。
+クラス`CNetAddressCtrl`は[CEdit](../../mfc/reference/cedit-class.md)クラスから派生します。 したがって、ネットワーク アドレス コントロールは、すべての Windows 編集コントロール メッセージにアクセスできます。
 
-次の図は、ネットワークアドレスコントロールを含むダイアログを示しています。 ネットワークアドレスコントロールのテキストボックス (1) に無効なネットワークアドレスが含まれています。 ネットワークアドレスが無効な場合は、ヒントメッセージ (2) が表示されます。
+次の図は、ネットワーク アドレス コントロールを含むダイアログを示しています。 ネットワーク アドレス コントロールのテキスト ボックス (1) に無効なネットワーク アドレスが含まれています。 ネットワーク アドレスが無効な場合は、情報ヒント メッセージ (2) が表示されます。
 
-![ネットワークアドレスコントロールとヒントを含むダイアログ。](../../mfc/reference/media/cnetaddctrl.png "ネットワークアドレスコントロールとヒントを含むダイアログ。")
+![ネットワーク アドレス コントロールおよび infotip を含むダイアログ。](../../mfc/reference/media/cnetaddctrl.png "ネットワーク アドレス コントロールおよび infotip を含むダイアログ。")
 
 ## <a name="example"></a>例
 
-次のコード例は、ネットワークアドレスを検証するダイアログの一部です。 3つのオプションボタンのイベントハンドラーでは、ネットワークアドレスが3つのアドレスの種類のいずれかであることを指定します。 ユーザーは、ネットワークコントロールのテキストボックスにアドレスを入力し、ボタンを押してアドレスを検証します。 アドレスが有効な場合は、成功メッセージが表示されます。それ以外の場合は、定義済みのヒントエラーメッセージが表示されます。
+次のコード例は、ネットワーク アドレスを検証するダイアログの一部です。 3 つのラジオ ボタンのイベント ハンドラーは、ネットワーク アドレスが 3 つのアドレスの種類のいずれかであることを指定します。 ユーザーは、ネットワーク コントロールのテキスト ボックスにアドレスを入力し、ボタンを押してアドレスを検証します。 アドレスが有効な場合は、成功メッセージが表示されます。それ以外の場合は、定義済みの情報ヒントのエラー メッセージが表示されます。
 
 [!code-cpp[NVC_MFC_CNetAddressCtrl_s1#1](../../mfc/reference/codesnippet/cpp/cnetaddressctrl-class_1.cpp)]
 
 ## <a name="example"></a>例
 
-ダイアログヘッダーファイルの次のコード例では、 [CNetAddressCtrl:: GetAddress](#getaddress)メソッドで必要とされる[NC_ADDRESS](/windows/win32/api/shellapi/ns-shellapi-nc_address)変数と[NET_ADDRESS_INFO](/windows/win32/shell/hkey-type)変数を定義しています。
+ダイアログ ヘッダー ファイルの次のコード例では[、CNetAddressCtrl::GetAddress](#getaddress)メソッドで必要な[NC_ADDRESS](/windows/win32/api/shellapi/ns-shellapi-nc_address)と[NET_ADDRESS_INFO](/windows/win32/shell/hkey-type)変数を定義します。
 
 [!code-cpp[NVC_MFC_CNetAddressCtrl_s1#2](../../mfc/reference/codesnippet/cpp/cnetaddressctrl-class_2.h)]
 
@@ -90,15 +90,15 @@ class CNetAddressCtrl : public CEdit
 
 `CNetAddressCtrl`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxcmn.h
 
 このクラスは、Windows Vista 以降でサポートされています。
 
-このクラスの追加要件については、「 [Windows Vista コモンコントロールのビルド要件](../../mfc/build-requirements-for-windows-vista-common-controls.md)」を参照してください。
+このクラスの追加要件については、「 [Windows Vista コモン コントロールのビルド要件](../../mfc/build-requirements-for-windows-vista-common-controls.md)」を参照してください。
 
-##  <a name="cnetaddressctrl"></a>  CNetAddressCtrl::CNetAddressCtrl
+## <a name="cnetaddressctrlcnetaddressctrl"></a><a name="cnetaddressctrl"></a>CNet アドレスCtrl::CネットアドレスCtrl
 
 `CNetAddressCtrl` オブジェクトを構築します。
 
@@ -106,13 +106,13 @@ class CNetAddressCtrl : public CEdit
 CNetAddressCtrl();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
-[CNetAddressCtrl:: Create](#create)メソッドまたは[CNetAddressCtrl:: CreateEx](#createex)メソッドを使用して、ネットワークコントロールを作成し`CNetAddressCtrl` 、オブジェクトにアタッチします。
+ネットワーク コントロールを作成し、オブジェクトにアタッチするには[、CNetAddressCtrl::作成](#create)または[CNetAddressCtrl::CreateEx](#createex)メソッドを使用します`CNetAddressCtrl`。
 
-##  <a name="create"></a>  CNetAddressCtrl::Create
+## <a name="cnetaddressctrlcreate"></a><a name="create"></a>作成
 
-指定されたスタイルを使用してネットワークアドレスコントロールを作成`CNetAddressCtrl`し、現在のオブジェクトに添付します。
+指定したスタイルを使用してネットワーク アドレス コントロールを作成し、`CNetAddressCtrl`現在のオブジェクトにアタッチします。
 
 ```
 virtual BOOL Create(
@@ -126,18 +126,18 @@ virtual BOOL Create(
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*dwStyle*|からコントロールに適用されるスタイルのビットごとの組み合わせ。 詳細については、「[スタイルの編集](../../mfc/reference/styles-used-by-mfc.md#edit-styles)」を参照してください。|
-|*rect*|からコントロールの位置とサイズを格納している[RECT](/previous-versions/dd162897\(v=vs.85\))構造体への参照。|
-|*pParentWnd*|からコントロールの親ウィンドウである[CWnd](../../mfc/reference/cwnd-class.md)オブジェクトへの null 以外のポインター。|
-|*nID*|からコントロールの ID。|
+|*Dwstyle*|[in]コントロールに適用するスタイルのビットごとの組み合わせ。 詳細については、「[スタイルの編集](../../mfc/reference/styles-used-by-mfc.md#edit-styles)」を参照してください。|
+|*Rect*|[in]コントロールの位置とサイズを格納する[RECT](/previous-versions/dd162897\(v=vs.85\))構造体への参照。|
+|*pParentWnd*|[in]コントロールの親ウィンドウである[CWnd](../../mfc/reference/cwnd-class.md)オブジェクトへの非 null ポインター。|
+|*nID*|[in]コントロールの ID。|
 
 ### <a name="return-value"></a>戻り値
 
 このメソッドが成功した場合は TRUE。それ以外の場合は FALSE。
 
-##  <a name="createex"></a>  CNetAddressCtrl::CreateEx
+## <a name="cnetaddressctrlcreateex"></a><a name="createex"></a>CNet アドレスCtrl::作成します。
 
-指定した拡張スタイルを使用してネットワークアドレスコントロールを作成し`CNetAddressCtrl` 、現在のオブジェクトにアタッチします。
+指定した拡張スタイルを使用してネットワーク アドレス コントロールを作成し、`CNetAddressCtrl`現在のオブジェクトにアタッチします。
 
 ```
 virtual BOOL CreateEx(
@@ -152,19 +152,19 @@ virtual BOOL CreateEx(
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*dwExStyle*|からコントロールに適用される拡張スタイルのビットごとの組み合わせ (または)。 詳細については、 [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)関数の*dwexstyle*パラメーターを参照してください。|
-|*dwStyle*|からコントロールに適用されるスタイルのビットごとの組み合わせ (または)。 詳細については、「[スタイルの編集](../../mfc/reference/styles-used-by-mfc.md#edit-styles)」を参照してください。|
-|*rect*|からコントロールの位置とサイズを格納している[RECT](/previous-versions/dd162897\(v=vs.85\))構造体への参照。|
-|*pParentWnd*|からコントロールの親ウィンドウである[CWnd](../../mfc/reference/cwnd-class.md)オブジェクトへの null 以外のポインター。|
-|*nID*|からコントロールの ID。|
+|*ドウェエクススタイル*|[in]コントロールに適用する拡張スタイルのビットごとの組み合わせ (OR)。 詳細については、関数の*dwExStyle*パラメーターを参照[してください](/windows/win32/api/winuser/nf-winuser-createwindowexw)。|
+|*Dwstyle*|[in]コントロールに適用するスタイルのビットごとの組み合わせ (OR)。 詳細については、「[スタイルの編集](../../mfc/reference/styles-used-by-mfc.md#edit-styles)」を参照してください。|
+|*Rect*|[in]コントロールの位置とサイズを格納する[RECT](/previous-versions/dd162897\(v=vs.85\))構造体への参照。|
+|*pParentWnd*|[in]コントロールの親ウィンドウである[CWnd](../../mfc/reference/cwnd-class.md)オブジェクトへの非 null ポインター。|
+|*nID*|[in]コントロールの ID。|
 
 ### <a name="return-value"></a>戻り値
 
 このメソッドが成功した場合は TRUE。それ以外の場合は FALSE。
 
-##  <a name="displayerrortip"></a>  CNetAddressCtrl::DisplayErrorTip
+## <a name="cnetaddressctrldisplayerrortip"></a><a name="displayerrortip"></a>エラーヒントを:D
 
-現在のネットワークアドレスコントロールに関連付けられているバルーンヒントにエラーメッセージを表示します。
+現在のネットワーク アドレス コントロールに関連付けられているバルーン ヒントにエラー メッセージを表示します。
 
 ```
 HRESULT DisplayErrorTip();
@@ -172,17 +172,17 @@ HRESULT DisplayErrorTip();
 
 ### <a name="return-value"></a>戻り値
 
-このメソッド`S_OK`が正常に実行された場合は値。それ以外の場合はエラーコード。
+このメソッド`S_OK`が成功した場合は値を返します。それ以外の場合はエラー コード。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
-[CNetAddressCtrl:: SetAllowType](#setallowtype)メソッドを使用して、現在のネットワークアドレスコントロールがサポートできるアドレスの種類を指定します。 [CNetAddressCtrl:: GetAddress](#getaddress)メソッドを使用して、ユーザーが入力したネットワークアドレスを検証し、解析します。 [CNetAddressCtrl:: GetAddress](#getaddress)メソッドが失敗した場合にエラーメッセージヒントを表示するには、 [CNetAddressCtrl::D isplayErrorTip](#displayerrortip)メソッドを使用します。
+現在のネットワーク アドレス コントロールでサポートできるアドレスの種類を指定するには[、CNetAddressCtrl::SetAllowType](#setallowtype)メソッドを使用します。 ユーザーが入力したネットワーク アドレスを検証および解析するには[、CNetAddressCtrl::GetAddress](#getaddress)メソッドを使用します。 メソッドが失敗した場合にエラー メッセージ情報ヒントを表示するには[、CNetAddressCtrl::DisplayErrorTip](#getaddress)メソッドを使用します。 [CNetAddressCtrl::DisplayErrorTip](#displayerrortip)
 
-このメッセージは、Windows SDK で説明されている[NetAddr_DisplayErrorTip](/windows/win32/api/shellapi/nf-shellapi-netaddr_displayerrortip)マクロを呼び出します。 そのマクロによっ`NCM_DISPLAYERRORTIP`てメッセージが送信されます。
+このメッセージは、Windows SDK で説明されている[NetAddr_DisplayErrorTip](/windows/win32/api/shellapi/nf-shellapi-netaddr_displayerrortip)マクロを呼び出します。 そのマクロはメッセージ`NCM_DISPLAYERRORTIP`を送信します。
 
-##  <a name="getaddress"></a>  CNetAddressCtrl::GetAddress
+## <a name="cnetaddressctrlgetaddress"></a><a name="getaddress"></a>をクリックします。
 
-現在のネットワークアドレスコントロールに関連付けられているネットワークアドレスの検証および解析された表現を取得します。
+現在のネットワーク アドレス コントロールに関連付けられているネットワーク アドレスの検証済みおよび解析済みの表現を取得します。
 
 ```
 HRESULT GetAddress(PNC_ADDRESS pAddress) const;
@@ -190,24 +190,24 @@ HRESULT GetAddress(PNC_ADDRESS pAddress) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*pAddress*<br/>
-[入力、出力][NC_ADDRESS](/windows/win32/api/shellapi/ns-shellapi-nc_address)構造体へのポインター。  GetAddress メソッドを呼び出す前に、この構造体の*Paddrinfo*メンバーを[NET_ADDRESS_INFO](/windows/win32/shell/hkey-type)構造体のアドレスに設定します。
+*をクリックします。*<br/>
+[イン、アウト][NC_ADDRESS](/windows/win32/api/shellapi/ns-shellapi-nc_address)構造体へのポインター。  GetAddress メソッドを呼び出す前に、この構造体の*pAddrInfo*メンバーを[NET_ADDRESS_INFO](/windows/win32/shell/hkey-type)構造体のアドレスに設定します。
 
 ### <a name="return-value"></a>戻り値
 
-このメソッドが成功した場合は、値 S_OK。それ以外の場合は、COM エラーコード。 考えられるエラーコードの詳細については、 [NetAddr_GetAddress](/windows/win32/api/shellapi/nf-shellapi-netaddr_getaddress)マクロの「戻り値」セクションを参照してください。
+このメソッドが成功した場合は、値がS_OK。それ以外の場合は、COM エラー コード。 考えられるエラー コードの詳細については[、NetAddr_GetAddress](/windows/win32/api/shellapi/nf-shellapi-netaddr_getaddress)マクロの戻り値セクションを参照してください。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
-このメソッドが成功した場合、 [NET_ADDRESS_INFO](/windows/win32/shell/hkey-type)構造体にはネットワークアドレスに関する追加情報が含まれます。
+このメソッドが成功した場合[、NET_ADDRESS_INFO](/windows/win32/shell/hkey-type)構造体には、ネットワーク アドレスに関する追加情報が含まれます。
 
-[CNetAddressCtrl:: SetAllowType](#setallowtype)メソッドを使用して、現在のネットワークアドレスコントロールがサポートできるアドレスの種類を指定します。 [CNetAddressCtrl:: GetAddress](#getaddress)メソッドを使用して、ユーザーが入力したネットワークアドレスを検証し、解析します。 [CNetAddressCtrl:: GetAddress](#getaddress)メソッドが失敗した場合にエラーメッセージヒントを表示するには、 [CNetAddressCtrl::D isplayErrorTip](#displayerrortip)メソッドを使用します。
+現在のネットワーク アドレス コントロールがサポートできるアドレスの種類を指定するには[、CNetAddressCtrl::SetAllowType](#setallowtype)メソッドを使用します。 ユーザーが入力したネットワーク アドレスを検証および解析するには[、CNetAddressCtrl::GetAddress](#getaddress)メソッドを使用します。 メソッドが失敗した場合にエラー メッセージ情報ヒントを表示するには[、CNetAddressCtrl::DisplayErrorTip](#getaddress)メソッドを使用します。 [CNetAddressCtrl::DisplayErrorTip](#displayerrortip)
 
-このメソッドは、Windows SDK で説明されている[NetAddr_GetAddress](/windows/win32/api/shellapi/nf-shellapi-netaddr_getaddress)マクロを呼び出します。 このマクロは、NCM_GETADDRESS メッセージを送信します。
+このメソッドは、Windows SDK で説明されている[NetAddr_GetAddress](/windows/win32/api/shellapi/nf-shellapi-netaddr_getaddress)マクロを呼び出します。 そのマクロはNCM_GETADDRESSメッセージを送信します。
 
-##  <a name="getallowtype"></a>  CNetAddressCtrl::GetAllowType
+## <a name="cnetaddressctrlgetallowtype"></a><a name="getallowtype"></a>次の値を取得します。
 
-現在のネットワークアドレスコントロールがサポートできるネットワークアドレスの種類を取得します。
+現在のネットワーク アドレス コントロールがサポートできるネットワーク アドレスの種類を取得します。
 
 ```
 DWORD GetAllowType() const;
@@ -215,15 +215,15 @@ DWORD GetAllowType() const;
 
 ### <a name="return-value"></a>戻り値
 
-ネットワークアドレスコントロールがサポートできるアドレスの種類を指定するフラグのビットごとの組み合わせ (or)。 詳細については、「 [NET_STRING](/windows/win32/shell/net-string)」を参照してください。
+ネットワーク アドレス コントロールがサポートできるアドレスの種類を指定するフラグのビットごとの組み合わせ (OR)。 詳細については、「 [NET_STRING](/windows/win32/shell/net-string)」を参照してください。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
-このメッセージは、Windows SDK で説明されている[NetAddr_GetAllowType](/windows/win32/api/shellapi/nf-shellapi-netaddr_getallowtype)マクロを呼び出します。 このマクロは、NCM_GETALLOWTYPE メッセージを送信します。
+このメッセージは、Windows SDK で説明されている[NetAddr_GetAllowType](/windows/win32/api/shellapi/nf-shellapi-netaddr_getallowtype)マクロを呼び出します。 そのマクロはNCM_GETALLOWTYPEメッセージを送信します。
 
-##  <a name="setallowtype"></a>  CNetAddressCtrl::SetAllowType
+## <a name="cnetaddressctrlsetallowtype"></a><a name="setallowtype"></a>次の値を指定します。
 
-現在のネットワークアドレスコントロールがサポートできるネットワークアドレスの種類を設定します。
+現在のネットワーク アドレス コントロールがサポートできるネットワーク アドレスの種類を設定します。
 
 ```
 HRESULT SetAllowType(DWORD dwAddrMask);
@@ -233,20 +233,20 @@ HRESULT SetAllowType(DWORD dwAddrMask);
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*dwAddrMask*|からネットワークアドレスコントロールがサポートできるアドレスの種類を指定するフラグのビットごとの組み合わせ (or)。 詳細については、「 [NET_STRING](/windows/win32/shell/net-string)」を参照してください。|
+|*ドワッドマスク*|[in]ネットワーク アドレス コントロールがサポートできるアドレスの種類を指定するフラグのビットごとの組み合わせ (OR)。 詳細については、「 [NET_STRING](/windows/win32/shell/net-string)」を参照してください。|
 
 ### <a name="return-value"></a>戻り値
 
-このメソッドが成功した場合は S_OK。それ以外の場合は、COM エラーコード。
+このメソッドが成功した場合はS_OK。それ以外の場合は、COM エラー コード。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
-[CNetAddressCtrl:: SetAllowType](#setallowtype)メソッドを使用して、現在のネットワークアドレスコントロールがサポートできるアドレスの種類を指定します。 [CNetAddressCtrl:: GetAddress](#getaddress)メソッドを使用して、ユーザーが入力したネットワークアドレスを検証し、解析します。 [CNetAddressCtrl:: GetAddress](#getaddress)メソッドが失敗した場合にエラーメッセージヒントを表示するには、 [CNetAddressCtrl::D isplayErrorTip](#displayerrortip)メソッドを使用します。
+現在のネットワーク アドレス コントロールでサポートできるアドレスの種類を指定するには[、CNetAddressCtrl::SetAllowType](#setallowtype)メソッドを使用します。 ユーザーが入力したネットワーク アドレスを検証および解析するには[、CNetAddressCtrl::GetAddress](#getaddress)メソッドを使用します。 メソッドが失敗した場合にエラー メッセージ情報ヒントを表示するには[、CNetAddressCtrl::DisplayErrorTip](#getaddress)メソッドを使用します。 [CNetAddressCtrl::DisplayErrorTip](#displayerrortip)
 
-このメッセージは、Windows SDK で説明されている[NetAddr_SetAllowType](/windows/win32/api/shellapi/nf-shellapi-netaddr_setallowtype)マクロを呼び出します。 このマクロは、NCM_SETALLOWTYPE メッセージを送信します。
+このメッセージは、Windows SDK で説明されている[NetAddr_SetAllowType](/windows/win32/api/shellapi/nf-shellapi-netaddr_setallowtype)マクロを呼び出します。 そのマクロはNCM_SETALLOWTYPEメッセージを送信します。
 
 ## <a name="see-also"></a>関連項目
 
-[CNetAddressCtrl クラス](../../mfc/reference/cnetaddressctrl-class.md)<br/>
-[階層図](../../mfc/hierarchy-chart.md)<br/>
-[CEdit クラス](../../mfc/reference/cedit-class.md)
+[クラス](../../mfc/reference/cnetaddressctrl-class.md)<br/>
+[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
+[CEdit Class](../../mfc/reference/cedit-class.md)

@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CRT_REPORT_HOOK type
 - _finddata_t type
 ms.assetid: 23312dd2-4a6a-4d70-9b48-2a5d0d8c9f28
-ms.openlocfilehash: c93cf4bf138fc6bc648d33c180edbed0dbe5014e
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
-ms.translationtype: HT
+ms.openlocfilehash: d8d7abe0f5562250e51e011014a8f9587bc7636e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500640"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367936"
 ---
 # <a name="standard-types"></a>基本データ型
 
@@ -173,7 +173,7 @@ Microsoft ランタイム ライブラリには、次の基本データ型およ
 
 ### <a name="fixed-width-integral-types-stdinth"></a>固定長整数型 (stdint.h)
 
-|name|同等の組み込み型|
+|名前|同等の組み込み型|
 |----------|-------------------------------|
 |int8\_t, uint8\_t|signed char、unsigned char|
 |int16\_t, uint16\_t|short、unsigned short|
@@ -189,14 +189,14 @@ Microsoft ランタイム ライブラリには、次の基本データ型およ
 |int_fast64_t、uint_fast64_t|long long、unsigned long long|
 |intmax_t、uintmax_t|long long、unsigned long long|
 
-|型|説明|ヘッダー ファイル|
+|Type|説明|ヘッダー ファイル|
 |----------|-----------------|-----------------|
 |`clock_t` (long 型)|[clock](../c-runtime-library/reference/clock.md) で使用される時刻値を格納します。|TIME.H|
 |`_complex` 構造体|[_cabs](../c-runtime-library/reference/cabs.md) で使用される複素数の実数部および虚数部を格納します。|MATH.H|
 |`_CRT_ALLOC_HOOK`|ユーザー定義フック関数の型定義。 [_CrtSetAllocHook](../c-runtime-library/reference/crtsetallochook.md) で使用します。|CRTDBG.H|
-|`_CRT_DUMP_CLIENT`、<br /><br /> `_CRT_DUMP_CLIENT_M`|[_CrtMemDumpAllObjectsSince](../c-runtime-library/reference/crtmemdumpallobjectssince.md) で呼び出されるコールバック関数の型定義。|CRTDBG.H|
+|`_CRT_DUMP_CLIENT`,<br /><br /> `_CRT_DUMP_CLIENT_M`|[_CrtMemDumpAllObjectsSince](../c-runtime-library/reference/crtmemdumpallobjectssince.md) で呼び出されるコールバック関数の型定義。|CRTDBG.H|
 |`_CrtMemState` 構造体|C ランタイム デバッグ ヒープの現在の状態に関する情報を提供します。|CRTDBG.H|
-|`_CRT_REPORT_HOOK`、<br /><br /> `_CRT_REPORT_HOOKW`、<br /><br /> `_CRT_REPORT_HOOKW_M`|[_CrtDbgReport](../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md) で呼び出されるコールバック関数の型定義。<br /><br /> この関数のパラメーターは、レポートの種類、出力メッセージ、およびコールバック関数の戻り値です。|CRTDBG.H|
+|`_CRT_REPORT_HOOK`,<br /><br /> `_CRT_REPORT_HOOKW`,<br /><br /> `_CRT_REPORT_HOOKW_M`|[_CrtDbgReport](../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md) で呼び出されるコールバック関数の型定義。<br /><br /> この関数のパラメーターは、レポートの種類、出力メッセージ、およびコールバック関数の戻り値です。|CRTDBG.H|
 |`dev_t`、`_dev_t` の短整数または符号なし整数|デバイス ハンドルを表します。|SYS\TYPES.H|
 |`_diskfree_t` 構造体|ディスク ドライブに関する情報を格納します。 [_getdiskfree](../c-runtime-library/reference/getdiskfree.md) で使用します **。**|DOS.H および DIRECT.H|
 |`div_t`、`ldiv_t`、および `lldiv_t` の各構造体|それぞれ [div](../c-runtime-library/reference/div.md)、[ldiv](../c-runtime-library/reference/ldiv-lldiv.md)、および [lldiv](../c-runtime-library/reference/ldiv-lldiv.md) によって返される値を格納します。|STDLIB.H|
@@ -216,14 +216,14 @@ Microsoft ランタイム ライブラリには、次の基本データ型およ
 |`intptr_t` (対象のプラットフォームによって、長整数または `__int64`)|Win32 および Win64 の両方のプラットフォームにポインター (または HANDLE) を格納します。|STDDEF.H およびその他のインクルード ファイル|
 |`jmp_buf` 配列|[setjmp](../c-runtime-library/reference/setjmp.md) および[longjmp](../c-runtime-library/reference/longjmp.md) によって、プログラム環境を保存および復元するために使用されます。|SETJMP.H|
 |`lconv` 構造体|各国/地域の数値形式に関する規則を格納しています。 [localeconv](../c-runtime-library/reference/localeconv.md) によって使用されます。|LOCALE.H|
-|`_LDOUBLE`、<br /><br /> `_LONGDOUBLE`、<br /><br /> `_LDBL12` (long double 型または unsigned char 配列)|long double 型の値を表すために使用します。|STDLIB.H|
-|`_locale_t` 構造体|現在のロケール値を格納します。ロケール固有のすべての C ランタイム ライブラリで使用します。|CRTDEF.H|
+|`_LDOUBLE`,<br /><br /> `_LONGDOUBLE`,<br /><br /> `_LDBL12` (long double 型または unsigned char 配列)|long double 型の値を表すために使用します。|STDLIB.H|
+|`_locale_t` 構造体|現在のロケール値を格納します。ロケール固有のすべての C ランタイム ライブラリで使用します。|CRTDEFS.H|
 |`mbstate_t`|マルチバイト文字の変換状態を追跡します。|WCHAR.H|
 |`off_t` 長整数、`_off_t` 長整数|ファイル オフセット値を表します。|WCHAR.H、SYS\TYPES.H|
-|`_onexit_t`、<br /><br /> `_onexit_m_t` ポインター|[_onexit、_onexit_m](../c-runtime-library/reference/onexit-onexit-m.md) によって返されます。|STDLIB.H|
+|`_onexit_t`,<br /><br /> `_onexit_m_t` ポインター|[_onexit、_onexit_m](../c-runtime-library/reference/onexit-onexit-m.md) によって返されます。|STDLIB.H|
 |関数への `_PNH` ポインター|[_set_new_handler](../c-runtime-library/reference/set-new-handler.md) に対する引数の型。|NEW.H|
 |`ptrdiff_t` (対象のプラットフォームによって、長整数または `__int64`)|2 つのポインターの減算結果。|CRTDEFS.H|
-|`_purecall_handler`、<br /><br /> `_purecall_handler_m`|純粋仮想関数を呼び出したときに呼び出されるコールバック関数の型定義。 [_get_purecall_handler、_set_purecall_handler](../c-runtime-library/reference/get-purecall-handler-set-purecall-handler.md) によって使用されます。 `_purecall_handler` 関数の戻り値は void 型です。|STDLIB.H|
+|`_purecall_handler`,<br /><br /> `_purecall_handler_m`|純粋仮想関数を呼び出したときに呼び出されるコールバック関数の型定義。 [_get_purecall_handler、_set_purecall_handler](../c-runtime-library/reference/get-purecall-handler-set-purecall-handler.md) によって使用されます。 `_purecall_handler` 関数の戻り値は void 型です。|STDLIB.H|
 |`_RTC_error_fn` の型定義|ランタイム エラー チェックを処理する関数の型定義。 [_RTC_SetErrorFunc](../c-runtime-library/reference/rtc-seterrorfunc.md) で使用します。|RTCAPI.H|
 |`_RTC_error_fnW` の型定義|ランタイム エラー チェックを処理する関数の型定義。 [_RTC_SetErrorFuncW](../c-runtime-library/reference/rtc-seterrorfuncw.md) で使用します。|RTCAPI.H|
 |`_RTC_ErrorNumber` 列挙体|[_RTC_GetErrDesc](../c-runtime-library/reference/rtc-geterrdesc.md) および [_RTC_SetErrorType](../c-runtime-library/reference/rtc-seterrortype.md) のエラー条件を定義します。|RTCAPI.H|

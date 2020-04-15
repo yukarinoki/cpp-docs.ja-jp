@@ -1,11 +1,15 @@
 ---
 title: strtof、_strtof_l、wcstof、_wcstof_l
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - _strtof_l
 - wcstof
 - strtof
 - _wcstof_l
+- _o__strtof_l
+- _o__wcstof_l
+- _o_strtof
+- _o_wcstof
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -41,12 +46,12 @@ helpviewer_keywords:
 - _tcstof_l function
 - strtof function
 ms.assetid: 52221b46-876d-4fcc-afb1-97512c17a43b
-ms.openlocfilehash: b2b2e7d230074b5a464260d36b41c28b9951d65b
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: f61aa0edeadd74a254f906dd745e18b059da7f24
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957753"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365144"
 ---
 # <a name="strtof-_strtof_l-wcstof-_wcstof_l"></a>strtof、_strtof_l、wcstof、_wcstof_l
 
@@ -77,26 +82,28 @@ float wcstof_l(
 
 ## <a name="parameters"></a>パラメーター
 
-*strSource*<br/>
+*ストソース*<br/>
 NULL で終わる変換対象の文字列。
 
-*endptr*<br/>
+*エンドプター*<br/>
 スキャンの終了位置を示す文字へのポインター。
 
-*locale*<br/>
+*ロケール*<br/>
 使用するロケール。
 
 ## <a name="return-value"></a>戻り値
 
-**strtof**は、表現がオーバーフローを引き起こす場合を除き、浮動小数点数の値を返します。この場合、関数は +/-**HUGE_VALF**を返します。 **HUGE_VALF**の符号は、表現できない値の符号と一致します。 変換を実行できない場合、またはアンダーフローが発生した場合、 **strtof**は0を返します。
+**strtof**は浮動小数点数の値を返しますが、表現がオーバーフローを引き起こす場合を除き、関数は +/-**HUGE_VALF**を返します。 **HUGE_VALF**の符号は、表すことができない値の符号と一致します。 **strtof は**、変換が実行できない場合、またはアンダーフローが発生した場合は 0 を返します。
 
-**wcstof**は、 **strtof**にと同様値を返します。 どちらの関数でも、オーバーフローまたはアンダーフローが発生して、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されると、 **errno**は**ERANGE**に設定されます。
+**wcstof は** **strtof**に類似した値を返します。 どちらの関数でも、オーバーフローまたはアンダーフローが発生し、無効なパラメータ ハンドラが呼び出された場合 **、errno**は**ERANGE**[に設定](../../c-runtime-library/parameter-validation.md)されます。
 
 リターン コードの詳細については、「[errno、_doserrno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-各関数は、入力文字列の*Strsource*を**float**に変換します。 **Strtof**関数は、 *strsource*を単精度値に変換します。 **strtof**は、数値の一部として認識できない最初の文字で文字列*strsource*の読み取りを停止します。 数値として認識できない最初の文字が、終端の NULL 文字の場合もあります。 **wcstof**は**strtof**のワイド文字バージョンです。*Strsource*引数はワイド文字列です。 それ以外では、これらの関数の動作は同じです。
+各関数は、入力文字列*strSource*を**浮動小数点に**変換します。 **strtof**関数は*strSource*を単精度値に変換します。 **strtof は**、文字列*strSource*の読み取りを、数値の一部として認識できない最初の文字で停止します。 数値として認識できない最初の文字が、終端の NULL 文字の場合もあります。 **wcstof**は **、strtof**のワイド文字バージョンです。*strSource*引数はワイド文字列です。 それ以外では、これらの関数の動作は同じです。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -105,26 +112,26 @@ NULL で終わる変換対象の文字列。
 |**_tcstof**|**strtof**|**strtof**|**wcstof**|
 |**_tcstof_l**|**_strtof_l**|**_strtof_l**|**_wcstof_l**|
 
-現在のロケールの**LC_NUMERIC** category 設定によって、 *strsource*の小数点文字が認識されます。詳細については、「 [setlocale、_wsetlocale](setlocale-wsetlocale.md)」を参照してください。 **_L**サフィックスが付いていない関数は、現在のロケールを使用します。サフィックスが付いているものは、代わりに渡されたロケールを使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+現在のロケールの**LC_NUMERIC**カテゴリ設定によって *、strSource*の基数文字の認識が決まります。詳細については、「 [setlocale , _wsetlocale](setlocale-wsetlocale.md)」を参照してください。 **_l**サフィックスを持たない関数は、現在のロケールを使用します。サフィックスを持つものは、代わりに渡されたロケールを使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-*Endptr*が**NULL**でない場合は、スキャンを停止した文字へのポインターが*endptr*が指す位置に格納されます。 変換を実行できない場合 (有効な数字が見つからなかった場合、または無効な base を指定した場合)、 *Strsource*の値は*endptr*が指す位置に格納されます。
+*endptr*が**NULL**でない場合は、スキャンを停止した文字へのポインタが*endptr*によって指されている位置に格納されます。 変換が実行できない場合 (有効な数字が見つからなかったか、無効なベースが指定されている場合 *)、strSource*の値は*endptr*が指す場所に格納されます。
 
-**strtof**は、 *strsource*が次の形式の文字列を指すことを想定しています。
+**strtof**は*strSource*が次の形式の文字列を指すことを想定しています。
 
-[*空白*][*sign*][*数字*][ __.__ *数字*][{**e** &#124; **e}** [*sign*]*数字*]
+[*空白*][*記号*][*数字*][__.__*]*[{**e** &#124; **E**} [*符号*]*の数字*]
 
-*空白*は空白文字とタブ文字で構成される場合があり、これらは無視されます。*sign*は、正符号 **+** () または **-** 負符号 () です。*数字*は1桁以上の10進数です。 小数点文字の前に数字がない場合は、少なくとも 1 つの数字が小数点文字の後に必要です。 10進数の後には指数部を指定できます。指数部は、指数部の最初の文字 (**e**または**e**) と、必要に応じて符号付き整数で構成されます。 指数部と小数点文字のいずれも指定されない場合は、文字列の最後の数字の後に小数点文字が続くと想定されます。 この形式に一致しない文字を見つけるとスキャンを停止します。
+*空白*は空白文字とタブ文字で構成され、無視されます。*符号*はプラス (**+**) または**-** マイナス ( ) のいずれかです。数字*は*1 桁以上の 10 進数です。 小数点文字の前に数字がない場合は、少なくとも 1 つの数字が小数点文字の後に必要です。 10 進数の後には、入門文字 (**e**または**E**) とオプションで符号付き整数で構成される指数が続きます。 指数部と小数点文字のいずれも指定されない場合は、文字列の最後の数字の後に小数点文字が続くと想定されます。 この形式に一致しない文字を見つけるとスキャンを停止します。
 
-これらの関数の UCRT バージョンは、Fortran スタイル (**d**または**d**) の指数文字の変換をサポートしていません。 この非標準の拡張機能は、CRT の以前のバージョンでサポートされており、コードの互換性に影響する変更点がある可能性があります。
+これらの関数の UCRT バージョンでは、Fortran スタイル (**d**または**D**) の指数文字の変換はサポートされていません。 この非標準の拡張機能は、CRT の以前のバージョンでサポートされており、コードの互換性に影響する変更点がある可能性があります。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
-|**strtof**、 **_strtof_l**|C: \<stdlib.h> C++: &lt;cstdlib> または \<stdlib.h>|
-|**wcstof**、 **_wcstof_l**|C: \<stdlib.h > または \<wchar.h > C++: &lt;cstdlib >、\<stdlib.h > または \<wchar.h >|
+|**ストルトフ**, **_strtof_l**|C: \<stdlib.h> C++: &lt;cstdlib> または \<stdlib.h>|
+|**wcstof**, **_wcstof_l**|C: \<stdlib.h > または \<wchar.h > C++: &lt;cstdlib >、\<stdlib.h > または \<wchar.h >|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 
@@ -160,7 +167,7 @@ string = 3.14159This stopped it
 
 [データ変換](../../c-runtime-library/data-conversion.md)<br/>
 [浮動小数点サポート](../../c-runtime-library/floating-point-support.md)<br/>
-[マルチバイト文字のシーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[マルチバイト文字シーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [ロケール](../../c-runtime-library/locale.md)<br/>
 [文字列を数値に変換する関数](../../c-runtime-library/string-to-numeric-value-functions.md)<br/>
 [strtod、_strtod_l、wcstod、_wcstod_l](strtod-strtod-l-wcstod-wcstod-l.md)<br/>

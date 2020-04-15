@@ -28,18 +28,18 @@ helpviewer_keywords:
 - CTabbedPane [MFC], m_bTabsAlwaysTop
 - CTabbedPane [MFC], m_pTabWndRTC
 ms.assetid: f4dc5215-b789-4f2d-8c62-477aceda3578
-ms.openlocfilehash: af9c65e51f7230b0fc6a59d0eed42eca08d24837
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 17351eaed585ec34117a2ef825964fd51bd0d86b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324286"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365945"
 ---
 # <a name="ctabbedpane-class"></a>CTabbedPane クラス
 
 切り離し可能なタブを持つペインの機能を実装します。
 
-詳細についてにあるソース コードを参照してください。 または、 **VC\\atlmfc\\src\\mfc** Visual Studio のインストールのフォルダー。
+詳細については、Visual Studio のインストールの**\\VC\\atlmfc\\src mfc**フォルダーにあるソース コードを参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -59,12 +59,12 @@ class CTabbedPane : public CBaseTabbedPane
 
 |名前|説明|
 |----------|-----------------|
-|[CTabbedPane::DetachPane](#detachpane)|(上書き[cbasetabbedpane::detachpane](../../mfc/reference/cbasetabbedpane-class.md#detachpane))。|
+|[CTabbedPane::DetachPane](#detachpane)|[(CBaseTabbedPane::Dエタッハペイン](../../mfc/reference/cbasetabbedpane-class.md#detachpane)をオーバーライドします。|
 |[CTabbedPane::EnableTabAutoColor](#enabletabautocolor)|タブの色の自動設定を有効または無効にします。|
-|[CTabbedPane::FloatTab](#floattab)|現在ペインが切り離し可能なタブに存在する場合のみ、そのペインを切り離して表示します。(上書き[cbasetabbedpane::floattab](../../mfc/reference/cbasetabbedpane-class.md#floattab))。|
+|[CTabbedPane::FloatTab](#floattab)|ペインをフロートしますが、ペインが現在取り外し可能なタブにある場合に限ります[(CBaseTabbedPane::FloatTab.](../../mfc/reference/cbasetabbedpane-class.md#floattab)をオーバーライドします)。|
 |[CTabbedPane::GetTabArea](#gettabarea)|タブ付きウィンドウ内のタブ領域のサイズと位置を返します。|
 |[CTabbedPane::GetTabWnd](#gettabwnd)||
-|[CTabbedPane::HasAutoHideMode](#hasautohidemode)|タブ付きペインを AutoHide モードに切り替えられるかどうかを判断します。 (上書き[cbasetabbedpane::hasautohidemode](../../mfc/reference/cbasetabbedpane-class.md#hasautohidemode))。|
+|[CTabbedPane::HasAutoHideMode](#hasautohidemode)|タブ付きペインを AutoHide モードに切り替えられるかどうかを判断します。 [(CBaseTabbedPane をオーバーライドします::HasAutoHideMode](../../mfc/reference/cbasetabbedpane-class.md#hasautohidemode).)|
 |[CTabbedPane::IsTabLocationBottom](#istablocationbottom)|タブがウィンドウの下部にあるかどうかを判断します。|
 |[CTabbedPane::ResetTabs](#resettabs)|すべてのタブ付きペインを既定の状態にリセットします。|
 |[CTabbedPane::SetTabAutoColors](#settabautocolors)|色の自動設定機能が有効になっているときに使用できるカスタム色の一覧を設定します。|
@@ -76,17 +76,17 @@ class CTabbedPane : public CBaseTabbedPane
 |[CTabbedPane::m_bTabsAlwaysTop](#m_btabsalwaystop)|アプリケーション内のタブの既定の場所。|
 |[CTabbedPane::m_pTabWndRTC](#m_ptabwndrtc)|カスタムの `CMFCTabCtrl` から派生したオブジェクトに関するランタイム クラス情報。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 2 つ目のペインのキャプションをポイントして、ユーザーがあるペインを別のペインにアタッチすると、フレームワークにより自動的にこのクラスのインスタンスが作成されます。 -1 の ID を持つフレームワークにより作成される、すべてのタブ付きペイン。
 
-Outlook スタイルのタブではなく通常のタブを指定するには、渡す AFX_CBRS_REGULAR_TABS スタイルを[cdockablepane::createex](../../mfc/reference/cdockablepane-class.md#createex)メソッド。
+Outlook スタイルのタブの代わりに通常のタブを指定するには[、cDockablePane::CreateEx](../../mfc/reference/cdockablepane-class.md#createex)メソッドにAFX_CBRS_REGULAR_TABSスタイルを渡します。
 
 切り離し可能なタブを持つタブ付きペインを作成すると、フレームワークによってペインが自動的に破棄される可能性があるため、ポインターを格納しないでください。 タブ付きペインへのポインターを取得するには、`CBasePane::GetParentTabbedPane` メソッドを呼び出します。
 
 ## <a name="example"></a>例
 
-この例では `CTabbedPane` オブジェクトを作成します。 次に、 [cbasetabbedpane::addtab](../../mfc/reference/cbasetabbedpane-class.md#addtab)追加のタブをアタッチします。
+この例では `CTabbedPane` オブジェクトを作成します。 次に[、CBaseTabbedPane::AddTab](../../mfc/reference/cbasetabbedpane-class.md#addtab)を使用して追加のタブをアタッチします。
 
 ```cpp
 CTabbedPane* pTabbededBar = new CTabbedPane (TRUE);
@@ -119,7 +119,7 @@ DockPane(pTabbededBar);
 
 ## <a name="example"></a>例
 
-タブ形式のコントロール バー オブジェクトを作成する別の方法は、使用することです。 [cdockablepane::attachtotabwnd](../../mfc/reference/cdockablepane-class.md#attachtotabwnd)します。 `AttachToTabWnd`メソッドによって設定するランタイム クラス情報を使用して、タブ付きペインのオブジェクトを動的に作成する[:settabbedpanertc](../../mfc/reference/cdockablepane-class.md#settabbedpanertc)します。
+タブ付きコントロール バー オブジェクトを作成するもう 1 つの方法は[、CDockablePane::AttachToTabWnd](../../mfc/reference/cdockablepane-class.md#attachtotabwnd)を使用することです。 この`AttachToTabWnd`メソッドは[、CDockablePane](../../mfc/reference/cdockablepane-class.md#settabbedpanertc)によって設定されたランタイム クラス情報を使用して、タブ付きペイン オブジェクトを動的に作成します。
 
 この例では、タブ付きペインを動的に作成し、2 つのタブをアタッチし、2 番目のタブを切り離し不可能にします。
 
@@ -163,7 +163,7 @@ pTabbedBar->GetUnderlyingWindow ()->EnableTabDetach (1,
 
 **ヘッダー:** afxTabbedPane.h
 
-##  <a name="detachpane"></a>  CTabbedPane::DetachPane
+## <a name="ctabbedpanedetachpane"></a><a name="detachpane"></a>タブ付きペイン::Dエタッハペイン
 
 ```
 virtual BOOL DetachPane(
@@ -173,15 +173,15 @@ virtual BOOL DetachPane(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pBar*<br/>
+[in]*pバー*<br/>
 
 [in]*bHide*<br/>
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="enabletabautocolor"></a>  CTabbedPane::EnableTabAutoColor
+## <a name="ctabbedpaneenabletabautocolor"></a><a name="enabletabautocolor"></a>タブ付きペイン::タブ自動カラーを有効にする
 
 タブの色の自動設定を有効または無効にします。
 
@@ -191,18 +191,18 @@ static void EnableTabAutoColor(BOOL bEnable = TRUE);
 
 ### <a name="parameters"></a>パラメーター
 
-*bEnable*<br/>
-[in]タブの自動の色分け表示を有効にする場合は TRUEそれ以外の場合、FALSE です。
+*b 有効にする*<br/>
+[in]タブの自動色分けを有効にする場合は TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この静的メソッドを使用して、有効または、アプリケーション内のすべてのタブ付きペイン内のタブの色の自動設定を無効にします。 この機能を有効にすると、各タブは、独自の色で塗りつぶされます。 呼び出すことによって、タブの色に使用される色の一覧を見つけることができます、 [CMFCBaseTabCtrl::GetAutoColors](../../mfc/reference/cmfcbasetabctrl-class.md#getautocolors)メソッド。
+この静的メソッドを使用して、アプリケーション内のすべてのタブ付きペインでタブの自動色付けを有効または無効にします。 この機能が有効になっている場合、各タブは独自の色で塗りつぶされます。 タブの色付けに使用される色の一覧を見つけるには、[メソッド](../../mfc/reference/cmfcbasetabctrl-class.md#getautocolors)を呼び出します。
 
-タブを呼び出すことによって使用される色の一覧を指定する[CTabbedPane::SetTabAutoColors](#settabautocolors)します。
+タブに使用する色のリストを指定するには[、CTabbedPane::SetTabAutoColors](#settabautocolors)を呼び出します。
 
-既定では、このオプションは無効です。
+既定では、このオプションは無効になっています。
 
-##  <a name="floattab"></a>  CTabbedPane::FloatTab
+## <a name="ctabbedpanefloattab"></a><a name="floattab"></a>タブ付きペイン::フロートタブ
 
 ```
 virtual BOOL FloatTab(
@@ -214,18 +214,18 @@ virtual BOOL FloatTab(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pBar*<br/>
-[in] *nTabID*<br/>
-[in]*dockMethod*<br/>
+[in]*pバー*<br/>
+[in]*タブID*<br/>
+[in]*ドックメソッド*<br/>
 [in]*bHide*<br/>
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="gettabarea"></a>  CTabbedPane::GetTabArea
+## <a name="ctabbedpanegettabarea"></a><a name="gettabarea"></a>タブ付きペイン::ゲットタブエリア
 
-タブ付きウィンドウのサイズとタブ領域の位置を返します。
+タブ付きウィンドウのタブ領域のサイズと位置を返します。
 
 ```
 virtual void GetTabArea(
@@ -235,19 +235,19 @@ virtual void GetTabArea(
 
 ### <a name="parameters"></a>パラメーター
 
-*rectTabAreaTop*<br/>
-[out]上部のタブ領域の画面座標での位置とサイズが含まれています。
+*レクトタブエリアトップ*<br/>
+[アウト]上部タブ領域のサイズと位置を画面座標で指定します。
 
-*rectTabAreaBottom*<br/>
-[out]下のタブ領域の画面座標での位置とサイズが含まれています。
+*タブエリア下部*<br/>
+[アウト]下部タブ領域のサイズと位置を画面座標で指定します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-フレームワークは、ユーザーがドラッグしてペインをドッキングする方法を決定するには、このメソッドを呼び出します。 ユーザーは、[ターゲット] ウィンドウのタブ領域に、ウィンドウをドラッグ、フレームワークは、[ターゲット] ウィンドウの新しいタブとして追加しようとします。 それ以外の場合、ウィンドウの区分線を 2 つのペインを区切るに新しいウィンドウでコンテナーの作成は、対象のペインの横にペインをドッキングしようとします。
+フレームワークは、ユーザーがドラッグしているペインをドッキングする方法を決定するために、このメソッドを呼び出します。 ユーザーがペインをターゲット ペインのタブ領域にドラッグすると、フレームワークはペインをターゲット ペインの新しいタブとして追加しようとします。 それ以外の場合は、ペインをターゲット ペインの側にドッキングしようとします。
 
-このメソッドをオーバーライド、 `CTabbedPane`-この動作を変更するクラスを派生します。
+この動作を変更するには`CTabbedPane`、-derived クラスでこのメソッドをオーバーライドします。
 
-##  <a name="gettabwnd"></a>  CTabbedPane::GetTabWnd
+## <a name="ctabbedpanegettabwnd"></a><a name="gettabwnd"></a>タブ付きペイン::ゲットタブンド
 
 ```
 CMFCTabCtrl* GetTabWnd() const;
@@ -255,9 +255,9 @@ CMFCTabCtrl* GetTabWnd() const;
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="hasautohidemode"></a>  CTabbedPane::HasAutoHideMode
+## <a name="ctabbedpanehasautohidemode"></a><a name="hasautohidemode"></a>タブ付きペイン::ハズオートハイドモード
 
 ```
 virtual BOOL HasAutoHideMode() const;
@@ -265,9 +265,9 @@ virtual BOOL HasAutoHideMode() const;
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="istablocationbottom"></a>  CTabbedPane::IsTabLocationBottom
+## <a name="ctabbedpaneistablocationbottom"></a><a name="istablocationbottom"></a>タブ付きペイン::IsTabLocationボトム
 
 タブがウィンドウの下部にあるかどうかを判断します。
 
@@ -277,11 +277,11 @@ virtual BOOL IsTabLocationBottom() const;
 
 ### <a name="return-value"></a>戻り値
 
-タブ付きウィンドウの下部にあるタブ領域がある場合は TRUE。それ以外の場合、FALSE です。
+タブ領域がタブ付きウィンドウの下部にある場合は TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="m_btabsalwaystop"></a>  CTabbedPane::m_bTabsAlwaysTop
+## <a name="ctabbedpanem_btabsalwaystop"></a><a name="m_btabsalwaystop"></a>タブ付きペイン::m_bTabsAlwaysTop
 
 アプリケーション内のタブの既定の場所。
 
@@ -289,15 +289,15 @@ virtual BOOL IsTabLocationBottom() const;
 AFX_IMPORT_DATA static BOOL m_bTabsAlwaysTop;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-タブ付きウィンドウの上部に表示されるアプリケーションでは、この静的なメンバーをすべてのタブが強制する場合は true を設定します。
+この静的メンバーを TRUE に設定すると、アプリケーション内のすべてのタブがタブ付きペインの上部に表示されます。
 
-タブ付きペインが作成される前に、この値を設定する必要があります。
+タブ付きペインを作成する前に、この値を設定する必要があります。
 
 既定値は FALSE です。
 
-##  <a name="m_ptabwndrtc"></a>  CTabbedPane::m_pTabWndRTC
+## <a name="ctabbedpanem_ptabwndrtc"></a><a name="m_ptabwndrtc"></a>タブ付きペイン::m_pTabWndRTC
 
 カスタムの `CMFCTabCtrl` から派生したオブジェクトに関するランタイム クラス情報。
 
@@ -305,11 +305,11 @@ AFX_IMPORT_DATA static BOOL m_bTabsAlwaysTop;
 AFX_IMPORT_DATA static CRuntimeClass* m_pTabWndRTC;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この静的メンバー変数のランタイム クラス情報へのポインターを設定、`CMFCTabCtrl`のタブ付きペイン内のカスタム タブ付きウィンドウを使用している場合、派生オブジェクト。
+タブ付きペイン内でカスタムタブ付きウィンドウを使用している場合`CMFCTabCtrl`は、この静的メンバー変数を-derived オブジェクトのランタイム クラス情報へのポインターに設定します。
 
-##  <a name="resettabs"></a>  CTabbedPane::ResetTabs
+## <a name="ctabbedpaneresettabs"></a><a name="resettabs"></a>タブ付きペイン::リセットタブ
 
 すべてのタブ付きペインを既定の状態にリセットします。
 
@@ -317,13 +317,13 @@ AFX_IMPORT_DATA static CRuntimeClass* m_pTabWndRTC;
 static void ResetTabs();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-すべてのタブ付きペインを既定の状態を元に戻すには、このメソッドを呼び出します。 呼び出されると、このメソッドは、境界線のサイズとすべてのタブ付きペインの自動の色の状態をリセットします。
+すべてのタブ付きペインを既定の状態に戻します。 このメソッドを呼び出すと、すべてのタブ付きペインの境界線サイズと自動色の状態がリセットされます。
 
-##  <a name="settabautocolors"></a>  CTabbedPane::SetTabAutoColors
+## <a name="ctabbedpanesettabautocolors"></a><a name="settabautocolors"></a>タブ付きペイン::セットタブオートカラー
 
-自動設定機能が有効になっているときに使用されるカスタムの色の一覧を設定します。
+自動カラー機能が有効な場合に使用されるカスタムカラーのリストを設定します。
 
 ```
 static void SetTabAutoColors(const CArray<COLORREF, COLORREF>& arColors);
@@ -331,19 +331,19 @@ static void SetTabAutoColors(const CArray<COLORREF, COLORREF>& arColors);
 
 ### <a name="parameters"></a>パラメーター
 
-*arColors*<br/>
-[in]設定する色の配列が含まれています。
+*アカラーズ*<br/>
+[in]設定する色の配列を格納します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドを使用すると、自動設定機能が有効になっているときに使用される色の一覧をカスタマイズできます。 これは静的関数であり、アプリケーションのすべてのタブ付きペインに影響します。
+このメソッドは、自動カラー機能が有効な場合に使用される色のリストをカスタマイズするために使います。 これは静的な関数であり、アプリケーションのすべてのタブ付きペインに影響します。
 
-使用[CTabbedPane::EnableTabAutoColor](#enabletabautocolor)有効または色の自動機能を無効にします。
+[自動カラー機能を有効または無効にするには、CTabbedPane を使用します::タブオートカラーを有効](#enabletabautocolor)または無効にします。
 
 ## <a name="see-also"></a>関連項目
 
-[階層図](../../mfc/hierarchy-chart.md)<br/>
+[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
 [クラス](../../mfc/reference/mfc-classes.md)<br/>
 [CDockablePane クラス](../../mfc/reference/cdockablepane-class.md)<br/>
 [CBaseTabbedPane クラス](../../mfc/reference/cbasetabbedpane-class.md)<br/>
-[CMFCOutlookBar クラス](../../mfc/reference/cmfcoutlookbar-class.md)
+[クラス](../../mfc/reference/cmfcoutlookbar-class.md)

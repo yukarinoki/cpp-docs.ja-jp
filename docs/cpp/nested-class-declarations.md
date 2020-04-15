@@ -9,12 +9,12 @@ helpviewer_keywords:
 - declaring classes [C++]
 - declarations, nested classes
 ms.assetid: c02e471d-b7f9-41b8-8ef6-2323f006dbd5
-ms.openlocfilehash: a1464ce9ca8349550160c768265c1c4eada93209
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8ace21e3c8ced72b34898a716eae882a3750c8ef
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80161166"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367900"
 ---
 # <a name="nested-class-declarations"></a>入れ子にされたクラス宣言
 
@@ -54,14 +54,14 @@ int main()
 }
 ```
 
-`BufferedIO::BufferedInput` と `BufferedIO::BufferedOutput` は `BufferedIO`内で宣言されています。 `BufferedIO` クラスのスコープ外ではこれらのクラス名が表示されません。 ただし、`BufferedIO` 型のオブジェクトには、`BufferedInput` 型または `BufferedOutput` 型のオブジェクトが含まれません。
+`BufferedIO::BufferedInput`で`BufferedIO::BufferedOutput`宣言され、`BufferedIO`内で宣言されます。 `BufferedIO` クラスのスコープ外ではこれらのクラス名が表示されません。 ただし、`BufferedIO` 型のオブジェクトには、`BufferedInput` 型または `BufferedOutput` 型のオブジェクトが含まれません。
 
 入れ子になったクラスは、外側のクラスからのみ、名前、型名、静的メンバー名、および列挙子を直接使用できます。 他のクラス メンバーの名前を使用するには、ポインター、参照、またはオブジェクト名を使用する必要があります。
 
 前の `BufferedIO` 例では、列挙体 `IOError` には、入れ子になったクラス `BufferedIO::BufferedInput` または `BufferedIO::BufferedOutput` のメンバー関数によって直接アクセスできます (`good` 関数を参照)。
 
 > [!NOTE]
->  入れ子のクラスは、クラス スコープ内の型のみ宣言します。 入れ子のクラスに含まれるオブジェクトは作成されません。 前の例では、入れ子になった 2 つのクラスを宣言していますが、これらのクラス型のオブジェクトは宣言していません。
+> 入れ子のクラスは、クラス スコープ内の型のみ宣言します。 入れ子のクラスに含まれるオブジェクトは作成されません。 前の例では、入れ子になった 2 つのクラスを宣言していますが、これらのクラス型のオブジェクトは宣言していません。
 
 入れ子になったクラス宣言のスコープの参照可能範囲の例外は、型名が事前宣言と共に宣言されている場合です。  この場合、事前宣言によって宣言されたクラス名は、それを囲んでいるクラス (そのスコープは、最も小さく囲んでいる非クラス スコープと定義される) の外部から参照可能です。  次に例を示します。
 
@@ -134,13 +134,13 @@ int main()
 }
 ```
 
-前の例では、関数名を宣言するために、*修飾型名*の構文が使用されています。 宣言:
+前の例では、*修飾型名*構文を使用して関数名を宣言しています。 宣言:
 
 ```cpp
 BufferedIO::BufferedInput::read()
 ```
 
-"`read` クラスのスコープ内の `BufferedInput` クラスのメンバーである `BufferedIO` 関数" という意味です。 この宣言では、*修飾型名*の構文が使用されるため、次の形式の構造が可能です。
+"`read` クラスのスコープ内の `BufferedInput` クラスのメンバーである `BufferedIO` 関数" という意味です。 この宣言では*修飾型名*構文が使用されるため、次の形式の構文を使用できます。
 
 ```cpp
 typedef BufferedIO::BufferedInput BIO_INPUT;
@@ -206,6 +206,6 @@ int GetExtendedErrorStatus( char *message )
 
 前のインターフェイスを使用すると、いくつかのクラスは、エラー メッセージのコピー先のメモリ位置を渡すことによって、この関数のサービスを使用できます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [クラスと構造体](../cpp/classes-and-structs-cpp.md)

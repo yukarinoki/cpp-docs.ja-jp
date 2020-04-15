@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CToolTipCtrl [MFC], Update
 - CToolTipCtrl [MFC], UpdateTipText
 ms.assetid: 8973f70c-b73a-46c7-908d-758f364b9a97
-ms.openlocfilehash: bf32671eb3535de1bf072e24bc642145e87c84ee
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: fdf91549fd1b911de3af82bb940b92fe5e220b92
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79426325"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365103"
 ---
 # <a name="ctooltipctrl-class"></a>CToolTipCtrl Class
 
@@ -95,56 +95,56 @@ class CToolTipCtrl : public CWnd
 
 |名前|説明|
 |----------|-----------------|
-|[CToolTipCtrl:: CToolTipCtrl](#ctooltipctrl)|`CToolTipCtrl` オブジェクトを構築します。|
+|[CツールチップCtrl::CツールチップCtrl](#ctooltipctrl)|`CToolTipCtrl` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CToolTipCtrl:: Activate](#activate)|ツールヒントコントロールをアクティブにし、非アクティブにします。|
-|[CToolTipCtrl:: AddTool](#addtool)|ツールをツールヒントコントロールに登録します。|
-|[CToolTipCtrl:: AdjustRect](#adjustrect)|ツールヒントコントロールのテキスト表示の四角形とそのウィンドウの四角形との間で変換を行います。|
-|[CToolTipCtrl:: Create](#create)|ツールヒントコントロールを作成し、`CToolTipCtrl` オブジェクトにアタッチします。|
-|[CToolTipCtrl:: CreateEx](#createex)|指定した Windows 拡張スタイルを使用してツールヒントコントロールを作成し、`CToolTipCtrl` オブジェクトにアタッチします。|
-|[CToolTipCtrl::D elTool](#deltool)|ツールヒントコントロールからツールを削除します。|
-|[CToolTipCtrl:: GetBubbleSize](#getbubblesize)|ツールヒントのサイズを取得します。|
-|[CToolTipCtrl:: GetCurrentTool](#getcurrenttool)|現在のツールヒントコントロールに表示されるツールヒントウィンドウのサイズ、位置、テキストなどの情報を取得します。|
-|[CToolTipCtrl:: GetDelayTime](#getdelaytime)|ツールヒントコントロールに現在設定されている、初期、ポップアップ、および再表示の期間を取得します。|
-|[CToolTipCtrl:: GetMargin](#getmargin)|ツールヒントウィンドウに設定されている上下左右の余白を取得します。|
-|[CToolTipCtrl:: Getmaxヒントの幅](#getmaxtipwidth)|ツールヒントウィンドウの最大の幅を取得します。|
-|[CToolTipCtrl:: GetText](#gettext)|ツールヒントコントロールがツールに対して保持するテキストを取得します。|
-|[CToolTipCtrl:: GetTipBkColor](#gettipbkcolor)|ツールヒントウィンドウの背景色を取得します。|
-|[CToolTipCtrl::GetTipTextColor](#gettiptextcolor)|ツールヒントウィンドウのテキストの色を取得します。|
-|[CToolTipCtrl:: GetTitle](#gettitle)|現在のツールヒントコントロールのタイトルを取得します。|
-|[CToolTipCtrl::GetToolCount](#gettoolcount)|ツールヒントコントロールによって保持されているツールの数を取得します。|
-|[CToolTipCtrl:: GetToolInfo](#gettoolinfo)|ツールヒントコントロールがツールに関して保持する情報を取得します。|
-|[CToolTipCtrl:: System.windows.media.visualtreehelper.hittest](#hittest)|指定したツールの外接する四角形内にあるかどうかを判断するポイントをテストします。 存在する場合は、ツールに関する情報を取得します。|
-|[CToolTipCtrl::P op](#pop)|表示されているツールヒントウィンドウを表示から削除します。|
-|[CToolTipCtrl::P opup](#popup)|現在のツールヒントコントロールを最後のマウスメッセージの座標に表示します。|
-|[CToolTipCtrl:: RelayEvent](#relayevent)|処理のためのツールヒントコントロールにマウスメッセージを渡します。|
-|[CToolTipCtrl:: SetDelayTime](#setdelaytime)|ツールヒントコントロールの初期、ポップアップ、および再表示の継続時間を設定します。|
-|[CToolTipCtrl:: SetMargin](#setmargin)|ツールヒントウィンドウの上下左右の余白を設定します。|
-|[CToolTipCtrl:: SetMaxTipWidth](#setmaxtipwidth)|ツールヒントウィンドウの最大幅を設定します。|
-|[CToolTipCtrl:: SetTipBkColor](#settipbkcolor)|ツールヒントウィンドウの背景色を設定します。|
-|[CToolTipCtrl:: Set? Textcolor](#settiptextcolor)|ツールヒントウィンドウのテキストの色を設定します。|
-|[CToolTipCtrl:: SetTitle](#settitle)|標準アイコンとタイトル文字列をツールヒントに追加します。|
-|[CToolTipCtrl:: SetToolInfo](#settoolinfo)|ツールのツールヒントによって保持される情報を設定します。|
-|[CToolTipCtrl::SetToolRect](#settoolrect)|ツールの新しい外接する四角形を設定します。|
-|[CToolTipCtrl:: SetWindowTheme](#setwindowtheme)|ツールヒントウィンドウの視覚スタイルを設定します。|
-|[CToolTipCtrl:: Update](#update)|現在のツールを強制的に再描画します。|
-|[CToolTipCtrl:: UpdateTipText](#updatetiptext)|ツールのツールヒントテキストを設定します。|
+|[CツールチップCtrl::アクティブ化](#activate)|ツール ヒント コントロールをアクティブまたは非アクティブにします。|
+|[CツールチップCtrl::ツールの追加](#addtool)|ツール ヒント コントロールにツールを登録します。|
+|[CツールチップCtrl::アジャストレック](#adjustrect)|ツール ヒント コントロールのテキスト表示四角形とそのウィンドウ四角形の間で変換します。|
+|[CツールチップCtrl::作成](#create)|ツール ヒント コントロールを作成し、`CToolTipCtrl`オブジェクトにアタッチします。|
+|[CツールチップCtrl::作成します。](#createex)|指定した Windows 拡張スタイルを使用してツール ヒント コントロールを作成`CToolTipCtrl`し、オブジェクトにアタッチします。|
+|[CツールチップCtrl::Dエルツール](#deltool)|ツール ヒント コントロールからツールを削除します。|
+|[CツールチップCtrl:::ゲットバブルサイズ](#getbubblesize)|ツール ヒントのサイズを取得します。|
+|[次のツールヒントCtrl::現在のツールを取得します。](#getcurrenttool)|現在のツールヒント コントロールが表示するツールヒント ウィンドウのサイズ、位置、テキストなどの情報を取得します。|
+|[次の値を取得します。](#getdelaytime)|ツール ヒント コントロールに現在設定されている初期、ポップアップ、および再表示の期間を取得します。|
+|[CツールチップCtrl::ゲットマージン](#getmargin)|ツール ヒント ウィンドウに設定されている上余白、左余白、下余白、および右余白を取得します。|
+|[ウィンドウヒントCtrl::取得最大ヒント幅](#getmaxtipwidth)|ツール ヒント ウィンドウの最大幅を取得します。|
+|[次のテキストを取得します。](#gettext)|ツール ヒント コントロールがツールに保持するテキストを取得します。|
+|[CツールチップCtrl::ゲットチップBkカラー](#gettipbkcolor)|ツール ヒント ウィンドウの背景色を取得します。|
+|[次の文字列を取得します。](#gettiptextcolor)|ツール ヒント ウィンドウのテキストの色を取得します。|
+|[CツールチップCtrl::タイトルを取得します。](#gettitle)|現在のツールヒント コントロールのタイトルを取得します。|
+|[ツールヒントCtrl::GetToolCount](#gettoolcount)|ツール ヒント コントロールによって管理されるツールの数を取得します。|
+|[ツールヒントCtrl::GetToolInfo](#gettoolinfo)|ツール ヒント コントロールがツールに関して保持する情報を取得します。|
+|[CツールチップCtrl::ヒットテスト](#hittest)|ポイントが、指定されたツールの外接する四角形内にあるかどうかを判断します。 その場合は、ツールに関する情報を取得します。|
+|[CツールチップCtrl::Pop](#pop)|表示されたツール ヒント ウィンドウをビューから削除します。|
+|[CツールチップCtrl::Pオップアップ](#popup)|現在のツール ヒント コントロールを、最後のマウス メッセージの座標で表示します。|
+|[CツールチップCtrl::リレーイベント](#relayevent)|マウス メッセージをツール ヒント コントロールに渡して処理します。|
+|[CツールチップCtrl::セットディレイタイム](#setdelaytime)|ツール ヒント コントロールの初期、ポップアップ、および再表示の継続時間を設定します。|
+|[CツールチップCtrl::セットマージン](#setmargin)|ツール ヒント ウィンドウの上下左右の余白を設定します。|
+|[CツールチップCtrl::セットマックスチップ幅](#setmaxtipwidth)|ツール ヒント ウィンドウの最大幅を設定します。|
+|[CツールチップCtrl::セットチップBkカラー](#settipbkcolor)|ツール ヒント ウィンドウの背景色を設定します。|
+|[C ツールヒントCtrl::テキストの色を設定します。](#settiptextcolor)|ツール ヒント ウィンドウのテキストの色を設定します。|
+|[CツールチップCtrl::セットタイトル](#settitle)|ツール ヒントに標準アイコンとタイトル文字列を追加します。|
+|[CツールチップCtrl::セットツールインフォ](#settoolinfo)|ツールヒントがツールに保持する情報を設定します。|
+|[CツールチップCtrl::セットツールレクト](#settoolrect)|ツールの新しい外接する四角形を設定します。|
+|[CツールチップCtrl::セットウィンドウテーマ](#setwindowtheme)|ツール ヒント ウィンドウの表示スタイルを設定します。|
+|[CツールチップCtrl::更新](#update)|現在のツールを強制的に再描画します。|
+|[次のテキストを表示します。](#updatetiptext)|ツールのツール ヒント テキストを設定します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-"ツール" は、子ウィンドウやコントロールなどのウィンドウ、またはウィンドウのクライアント領域内のアプリケーション定義の四角形領域のいずれかです。 ツールヒントは、ほとんどの場合は非表示になります。ユーザーがカーソルをツールに置いて、約1分の1秒間に移動した場合にのみ表示されます。 ツールヒントはカーソルの近くに表示され、ユーザーがマウスボタンをクリックするか、カーソルをツールから移動すると消えます。
+"ツール" とは、子ウィンドウやコントロールなどのウィンドウ、またはウィンドウのクライアント領域内のアプリケーション定義の四角形領域です。 ツール ヒントは、ほとんどの場合、ツールにカーソルを置いて約 2 分の 1 の時間そこに残したときにのみ表示されます。 ツール ヒントはカーソルの近くに表示され、ユーザーがマウス ボタンをクリックするか、ツールの外にカーソルを移動すると表示されなくなります。
 
-`CToolTipCtrl` には、ツールヒントの初期時間と期間、ツールヒントのテキストを囲む余白の幅、ツールヒントウィンドウの幅、ツールヒントの背景とテキストの色を制御する機能が用意されています。 1つのツールヒントコントロールで、複数のツールに関する情報を提供できます。
+`CToolTipCtrl`ツール ヒントの初期時間と期間、ツール ヒント テキストの周囲の余白の幅、ツール ヒント ウィンドウ自体の幅、およびツール ヒントの背景色とテキストの色を制御する機能が提供されます。 1 つのツール ヒント コントロールは、複数のツールに情報を提供できます。
 
-`CToolTipCtrl` クラスは、Windows コモンツールヒントコントロールの機能を提供します。 このコントロール (および `CToolTipCtrl` クラス) は、Windows 95/98 および Windows NT バージョン3.51 以降で実行されているプログラムに対してのみ使用できます。
+この`CToolTipCtrl`クラスは、Windows 共通ツール ヒント コントロールの機能を提供します。 このコントロール (および`CToolTipCtrl`クラス) は、Windows 95/98 および Windows NT バージョン 3.51 以降で実行されているプログラムでのみ使用できます。
 
-ツールヒントを有効にする方法の詳細については、「 [CFrameWnd から派生していない Windows のツールヒント](../../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)」を参照してください。
+ツール ヒントを有効にする方法の詳細については、「 [CFrameWnd から派生していない Windows のツール ヒント](../../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)」を参照してください。
 
-`CToolTipCtrl`の使用方法の詳細については、「 [Controls](../../mfc/controls-mfc.md) And [using CToolTipCtrl](../../mfc/using-ctooltipctrl.md)」を参照してください。
+の詳細`CToolTipCtrl`については、「[コントロール](../../mfc/controls-mfc.md)と[CToolTipCtrl を使用する](../../mfc/using-ctooltipctrl.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -160,9 +160,9 @@ class CToolTipCtrl : public CWnd
 
 **ヘッダー:** afxcmn.h
 
-##  <a name="activate"></a>CToolTipCtrl:: Activate
+## <a name="ctooltipctrlactivate"></a><a name="activate"></a>CツールチップCtrl::アクティブ化
 
-ツールヒントコントロールをアクティブ化または非アクティブ化するには、この関数を呼び出します。
+ツール ヒント コントロールをアクティブまたは非アクティブ化します。
 
 ```
 void Activate(BOOL bActivate);
@@ -170,22 +170,22 @@ void Activate(BOOL bActivate);
 
 ### <a name="parameters"></a>パラメーター
 
-*bActivate*<br/>
-ツールヒントコントロールをアクティブまたは非アクティブにするかどうかを指定します。
+*bアクティブ化*<br/>
+ツール ヒント コントロールをアクティブにするか非アクティブにするかを指定します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-*Bactivate*が TRUE の場合、コントロールはアクティブになります。FALSE の場合、非アクティブ化されます。
+*bActivate*が TRUE の場合、コントロールはアクティブになります。FALSE の場合は、非アクティブになります。
 
-ツールヒントコントロールがアクティブになると、コントロールに登録されているツール上にカーソルがあるときにツールヒント情報が表示されます。非アクティブになると、カーソルがツール上にある場合でも、ツールヒントの情報は表示されません。
+ツール ヒント コントロールがアクティブな場合、コントロールに登録されているツール上にカーソルが置かれたときは、ツール ヒント情報が表示されます。非アクティブの場合、カーソルがツール上にある場合でも、ツール ヒント情報は表示されません。
 
 ### <a name="example"></a>例
 
-  [CPropertySheet:: GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol)の例を参照してください。
+  次の例[を](../../mfc/reference/cpropertysheet-class.md#gettabcontrol)参照してください。
 
-##  <a name="addtool"></a>  CToolTipCtrl::AddTool
+## <a name="ctooltipctrladdtool"></a><a name="addtool"></a>CツールチップCtrl::ツールの追加
 
-ツールをツールヒントコントロールに登録します。
+ツール ヒント コントロールにツールを登録します。
 
 ```
 BOOL AddTool(
@@ -203,41 +203,41 @@ BOOL AddTool(
 
 ### <a name="parameters"></a>パラメーター
 
-*pWnd*<br/>
-ツールが格納されているウィンドウへのポインター。
+*Pwnd*<br/>
+ツールを含むウィンドウへのポインター。
 
-*nIDText*<br/>
+*テキスト*<br/>
 ツールのテキストを含む文字列リソースの ID。
 
-*lpRectTool*<br/>
-ツールの外接する四角形の座標を格納している[RECT](/previous-versions/dd162897\(v=vs.85\))構造体へのポインター。 座標は、 *pWnd*によって識別されるウィンドウのクライアント領域の左上隅を基準としています。
+*ツール*<br/>
+ツールの外接する四角形の座標を格納する[RECT](/previous-versions/dd162897\(v=vs.85\))構造体へのポインター。 座標は *、pWnd*で識別されるウィンドウのクライアント領域の左上隅を基準にしています。
 
-*nIDTool*<br/>
+*NIDツール*<br/>
 ツールの ID。
 
 *lpszText*<br/>
-ツールのテキストへのポインター。 このパラメーターに LPSTR_TEXTCALLBACK 値が含まれている場合、TTN_NEEDTEXT 通知メッセージは、 *pWnd*が指すウィンドウの親に送られます。
+ツールのテキストへのポインター。 このパラメーターにLPSTR_TEXTCALLBACK値が含まれている場合、通知メッセージTTN_NEEDTEXT *pWnd*が指すウィンドウの親に送られます。
 
 ### <a name="return-value"></a>戻り値
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-*LpRectTool*パラメーターと*nIDTool*パラメーターの両方が有効であるか、 *lpRectTool*が NULL の場合、 *nIDTool*は0である必要があります。
+*lpRectTool*パラメーターと*nIDTool*パラメーターは両方とも有効*lpRectTool*である必要があります。 *nIDTool*
 
-ツールヒントコントロールは、複数のツールに関連付けることができます。 ツールをツールヒントコントロールに登録するには、この関数を呼び出します。これにより、ツールヒントに格納されている情報が、カーソルがツール上にあるときに表示されます。
+ツール ヒント コントロールは、複数のツールに関連付けることができます。 ツール ヒント コントロールにツールを登録し、ツール上にカーソルが置いたときにツール ヒントに格納されている情報が表示されるようにします。
 
 > [!NOTE]
->  `AddTool`を使用して、ツールヒントを静的コントロールに設定することはできません。
+> ツール ヒントをを使用して`AddTool`静的コントロールに設定することはできません。
 
 ### <a name="example"></a>例
 
-  [CPropertySheet:: GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol)の例を参照してください。
+  次の例[を](../../mfc/reference/cpropertysheet-class.md#gettabcontrol)参照してください。
 
-##  <a name="adjustrect"></a>  CToolTipCtrl::AdjustRect
+## <a name="ctooltipctrladjustrect"></a><a name="adjustrect"></a>CツールチップCtrl::アジャストレック
 
-ツールヒントコントロールのテキスト表示の四角形とそのウィンドウの四角形との間で変換を行います。
+ツールヒント コントロールのテキスト表示四角形とそのウィンドウ四角形の間で変換します。
 
 ```
 BOOL AdjustRect(
@@ -247,25 +247,25 @@ BOOL AdjustRect(
 
 ### <a name="parameters"></a>パラメーター
 
-*lprc*<br/>
-ツールヒントウィンドウの四角形またはテキスト表示の四角形のいずれかを保持する[RECT](/previous-versions/dd162897\(v=vs.85\))構造体へのポインター。
+*Lprc*<br/>
+ツール ヒント ウィンドウの四角形またはテキスト表示の四角形を保持する[RECT](/previous-versions/dd162897\(v=vs.85\))構造体へのポインター。
 
-*bLarger*<br/>
-TRUE の場合、 *lprc*はテキスト表示の四角形を指定するために使用され、対応するウィンドウの四角形を受け取ります。 FALSE の場合、 *lprc*はウィンドウの四角形を指定するために使用され、対応するテキスト表示の四角形を受け取ります。
+*大きく*<br/>
+TRUE の場合 *、lprc*を使用してテキスト表示の四角形を指定し、対応するウィンドウ四角形を受け取ります。 FALSE の場合 *、lprc*を使用してウィンドウの四角形を指定し、対応するテキスト表示四角形を受け取ります。
 
 ### <a name="return-value"></a>戻り値
 
-四角形が正常に調整された場合は0以外の。それ以外の場合は0です。
+四角形が正常に調整された場合は 0 以外の値を返します。それ以外の場合は 0。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメンバー関数は、ウィンドウの四角形からツールヒントコントロールのテキスト表示の四角形を計算します。または、指定したテキスト表示の四角形を表示するために必要なツールヒントウィンドウの四角形を計算します。
+このメンバー関数は、ツール ヒント コントロールのテキスト表示四角形を、そのウィンドウの四角形から計算するか、指定したテキスト表示四角形を表示するために必要なツール ヒント ウィンドウの四角形を計算します。
 
 このメンバー関数は、Windows SDK で説明されているように、Win32 メッセージ[TTM_ADJUSTRECT](/windows/win32/Controls/ttm-adjustrect)の動作を実装します。
 
-##  <a name="create"></a>  CToolTipCtrl::Create
+## <a name="ctooltipctrlcreate"></a><a name="create"></a>CツールチップCtrl::作成
 
-ツールヒントコントロールを作成し、`CToolTipCtrl` オブジェクトにアタッチします。
+ツール ヒント コントロールを作成し、`CToolTipCtrl`オブジェクトにアタッチします。
 
 ```
 virtual BOOL Create(CWnd* pParentWnd, DWORD dwStyle = 0);
@@ -274,37 +274,37 @@ virtual BOOL Create(CWnd* pParentWnd, DWORD dwStyle = 0);
 ### <a name="parameters"></a>パラメーター
 
 *pParentWnd*<br/>
-ツールヒントコントロールの親ウィンドウ (通常は `CDialog`) を指定します。 NULL にすることはできません。
+ツール ヒント コントロールの親ウィンドウを指定`CDialog`します。 NULL にすることはできません。
 
-*dwStyle*<br/>
-ツールヒントコントロールのスタイルを指定します。 詳細については、「**解説**」を参照してください。
+*Dwstyle*<br/>
+ツール ヒント コントロールのスタイルを指定します。 詳細**については、「解説」** を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
-`CToolTipCtrl` オブジェクトが正常に作成された場合は0以外の。それ以外の場合は0です。
+オブジェクトが正常に`CToolTipCtrl`作成された場合は 0 以外の値を返します。それ以外の場合は 0。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`CToolTipCtrl` を作成するには、2つの手順を実行します。 まず、コンストラクターを呼び出して `CToolTipCtrl` オブジェクトを作成し、次に `Create` を呼び出してツールヒントコントロールを作成し、それを `CToolTipCtrl` オブジェクトにアタッチします。
+を`CToolTipCtrl`2 つの手順で作成します。 まず、オブジェクトを構築するコンストラクターを`CToolTipCtrl`呼び出し、`Create`ツール ヒント コントロールを作成してオブジェクトにアタッチ`CToolTipCtrl`する呼び出しを行います。
 
-*DwStyle*パラメーターには、[ウィンドウスタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)の任意の組み合わせを指定できます。 さらに、ツールヒントコントロールには、次の2つのクラス固有のスタイルがあります。TTS_ALWAYSTIP と TTS_NOPREFIX。
+*dwStyle*パラメーターは、[ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)の任意の組み合わせにすることができます。 さらに、ツール ヒント コントロールには、TTS_ALWAYSTIP と TTS_NOPREFIX というクラス固有のスタイルが 2 つ用意されています。
 
-|スタイル|説明|
+|スタイル|意味|
 |-----------|-------------|
-|TTS_ALWAYSTIP|ツールヒントコントロールのオーナーウィンドウがアクティブか非アクティブかに関係なく、カーソルがツール上にあるときにツールヒントが表示されるように指定します。 このスタイルがないと、ツールのオーナーウィンドウがアクティブなときにツールヒントコントロールが表示されますが、非アクティブになっているときは表示されません。|
-|TTS_NOPREFIX|このスタイルは、システムが文字列からアンパサンド (&) 文字を削除しないようにします。 ツールヒントコントロールに TTS_NOPREFIX スタイルが設定されていない場合、アンパサンド文字が自動的に除去されます。これにより、アプリケーションは、メニュー項目としても、ツールヒントコントロールのテキストとしても、同じ文字列を使用できます。|
+|TTS_ALWAYSTIP|ツール ヒント コントロールのオーナー ウィンドウがアクティブか非アクティブかにかかわらず、ツール上にカーソルが置かれるときツール ヒントが表示されるように指定します。 このスタイルを使用しない場合、ツールヒントコントロールは、ツールのオーナー ウィンドウがアクティブな場合には表示されますが、非アクティブの場合は表示されません。|
+|TTS_NOPREFIX|このスタイルは、システムがアンパサンド (&) 文字を文字列から取り除くのを防ぎます。 ツール ヒント コントロールにTTS_NOPREFIXスタイルがない場合、システムはアンパサンド文字を自動的に取り除き、アプリケーションがメニュー項目とテキストの両方としてツール ヒント コントロール内の文字列として同じ文字列を使用できるようにします。|
 
-ツールヒントコントロールには、コントロールの作成時に指定するかどうかに関係なく、WS_POPUP と WS_EX_TOOLWINDOW のウィンドウスタイルがあります。
+ツール ヒント コントロールには、コントロールの作成時に指定するかどうかに関係なく、WS_POPUPとWS_EX_TOOLWINDOWウィンドウ スタイルがあります。
 
-拡張 windows スタイルを使用してツールヒントコントロールを作成するには、`Create`ではなく[CToolTipCtrl:: CreateEx](#createex)を呼び出します。
+拡張ウィンドウ スタイルを使用してツール ヒント コントロールを作成するには、代わりに[CToolTipCtrl::CreateEx](#createex)を呼び出`Create`します。
 
 ### <a name="example"></a>例
 
-  [CPropertySheet:: GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol)の例を参照してください。
+  次の例[を](../../mfc/reference/cpropertysheet-class.md#gettabcontrol)参照してください。
 
-##  <a name="createex"></a>CToolTipCtrl:: CreateEx
+## <a name="ctooltipctrlcreateex"></a><a name="createex"></a>CツールチップCtrl::作成します。
 
-コントロール (子ウィンドウ) を作成し、`CToolTipCtrl` オブジェクトに関連付けます。
+コントロール (子ウィンドウ) を作成し、`CToolTipCtrl`オブジェクトに関連付けます。
 
 ```
 virtual BOOL CreateEx(
@@ -318,21 +318,21 @@ virtual BOOL CreateEx(
 *pParentWnd*<br/>
 コントロールの親であるウィンドウへのポインター。
 
-*dwStyle*<br/>
-ツールヒントコントロールのスタイルを指定します。 詳細については、「[作成](#create)」の「**解説**」を参照してください。
+*Dwstyle*<br/>
+ツール ヒント コントロールのスタイルを指定します。 詳細については、[作成](#create)の **「解説**」セクションを参照してください。
 
-*Dwスタイル Ex*<br/>
-作成するコントロールの拡張スタイルを指定します。 拡張 Windows スタイルの一覧については、Windows SDK の[CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)の*dwexstyle*パラメーターを参照してください。
+*ドウスタイルエックス*<br/>
+作成するコントロールの拡張スタイルを指定します。 拡張 Windows スタイルの一覧については、Windows SDK の*DwExStyle*パラメーター[を](/windows/win32/api/winuser/nf-winuser-createwindowexw)参照してください。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は0以外。それ以外の場合は0。
+成功した場合は 0 以外の場合は 0 以外の値を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-Windows の拡張スタイルの先頭**WS_EX_** によって指定された拡張 Windows スタイルを適用するには、`Create` ではなく `CreateEx` を使用します。
+Windows`CreateEx`拡張`Create`スタイルの序文で指定された拡張 Windows スタイルを適用**する代わりに使用WS_EX_。**
 
-##  <a name="ctooltipctrl"></a>  CToolTipCtrl::CToolTipCtrl
+## <a name="ctooltipctrlctooltipctrl"></a><a name="ctooltipctrl"></a>CツールチップCtrl::CツールチップCtrl
 
 `CToolTipCtrl` オブジェクトを構築します。
 
@@ -340,17 +340,17 @@ Windows の拡張スタイルの先頭**WS_EX_** によって指定された拡�
 CToolTipCtrl();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-オブジェクトを構築した後、`Create` を呼び出す必要があります。
+オブジェクトを構築`Create`した後に呼び出す必要があります。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFCControlLadenDialog#74](../../mfc/codesnippet/cpp/ctooltipctrl-class_1.h)]
 
-##  <a name="deltool"></a>  CToolTipCtrl::DelTool
+## <a name="ctooltipctrldeltool"></a><a name="deltool"></a>CツールチップCtrl::Dエルツール
 
-ツールヒントコントロールでサポートされているツールのコレクションから、 *pWnd*および*nIDTool*によって指定されたツールを削除します。
+ツール ヒント コントロールでサポートされているツールのコレクションから *、pWnd*および*nIDTool*で指定されたツールを削除します。
 
 ```
 void DelTool(
@@ -360,15 +360,15 @@ void DelTool(
 
 ### <a name="parameters"></a>パラメーター
 
-*pWnd*<br/>
-ツールが格納されているウィンドウへのポインター。
+*Pwnd*<br/>
+ツールを含むウィンドウへのポインター。
 
-*nIDTool*<br/>
+*NIDツール*<br/>
 ツールの ID。
 
-##  <a name="getbubblesize"></a>CToolTipCtrl:: GetBubbleSize
+## <a name="ctooltipctrlgetbubblesize"></a><a name="getbubblesize"></a>CツールチップCtrl:::ゲットバブルサイズ
 
-ツールヒントのサイズを取得します。
+ツール ヒントのサイズを取得します。
 
 ```
 CSize GetBubbleSize(LPTOOLINFO lpToolInfo) const;
@@ -376,20 +376,20 @@ CSize GetBubbleSize(LPTOOLINFO lpToolInfo) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*lpToolInfo*<br/>
-ツールヒントの[TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa)構造体へのポインター。
+*ツール情報*<br/>
+ツール ヒントの[TOOLINFO 構造体](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa)へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-ツールヒントのサイズ。
+ツール ヒントのサイズ。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このメンバー関数は、Windows SDK で説明されているように、Win32 メッセージ[TTM_GETBUBBLESIZE](/windows/win32/Controls/ttm-getbubblesize)の動作を実装します。
 
-##  <a name="getcurrenttool"></a>  CToolTipCtrl::GetCurrentTool
+## <a name="ctooltipctrlgetcurrenttool"></a><a name="getcurrenttool"></a>次のツールヒントCtrl::現在のツールを取得します。
 
-現在のツールヒントコントロールによって表示されるツールヒントウィンドウのサイズ、位置、テキストなどの情報を取得します。
+現在のツールヒント コントロールによって表示されるツールヒント ウィンドウのサイズ、位置、テキストなどの情報を取得します。
 
 ```
 BOOL GetCurrentTool(LPTOOLINFO lpToolInfo) const;
@@ -399,25 +399,25 @@ BOOL GetCurrentTool(LPTOOLINFO lpToolInfo) const;
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*lpToolInfo*|入出力現在のツールヒントウィンドウに関する情報を受け取る[TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa)構造体へのポインター。|
+|*ツール情報*|[アウト]現在のツールヒント ウィンドウに関する情報を受け取る[TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa)構造体へのポインター。|
 
 ### <a name="return-value"></a>戻り値
 
 情報が正常に取得された場合は TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、Windows SDK で説明されている[TTM_GETCURRENTTOOL](/windows/win32/Controls/ttm-getcurrenttool)メッセージを送信します。
+このメソッドは、Windows SDK に記載されている[TTM_GETCURRENTTOOL](/windows/win32/Controls/ttm-getcurrenttool)メッセージを送信します。
 
 ### <a name="example"></a>例
 
-次のコード例では、現在のツールヒントウィンドウに関する情報を取得します。
+現在のツールヒント ウィンドウに関する情報を取得するコード例を次に示します。
 
 [!code-cpp[NVC_MFC_CToolBarCtrl_s1#6](../../mfc/reference/codesnippet/cpp/ctooltipctrl-class_2.cpp)]
 
-##  <a name="getdelaytime"></a>  CToolTipCtrl::GetDelayTime
+## <a name="ctooltipctrlgetdelaytime"></a><a name="getdelaytime"></a>次の値を取得します。
 
-ツールヒントコントロールに対して現在設定されている、初期、ポップアップ、および再表示の期間を取得します。
+ツール ヒント コントロールに現在設定されている初期、ポップアップ、および再表示の期間を取得します。
 
 ```
 int GetDelayTime(DWORD dwDuration) const;
@@ -426,25 +426,25 @@ int GetDelayTime(DWORD dwDuration) const;
 ### <a name="parameters"></a>パラメーター
 
 *dwDuration*<br/>
-取得する duration 値を指定するフラグ。 このパラメーターには、次のいずれかの値を指定できます。
+取得する期間の値を指定するフラグ。 このパラメーターには、次のいずれかの値を指定できます。
 
-- ポインターがツールの外接する四角形内で静止している場合、ツールヒントウィンドウが表示されたままになる時間の長さを取得 TTDT_AUTOPOP ます。
+- TTDT_AUTOPOP ツールの外接する四角形内でポインタが静止している場合に、ツール ヒント ウィンドウが表示される時間の長さを取得します。
 
-- ツールヒントウィンドウが表示される前に、ツールの外接する四角形内でポインターが静止している必要がある時間の長さを取得 TTDT_INITIAL します。
+- TTDT_INITIAL ツール ヒント ウィンドウが表示されるまでに、ツールの外接する四角形内でポインターが固定された状態を維持する必要がある時間を取得します。
 
-- ポインターがツール間を移動したときに、後続のツールヒントウィンドウが表示されるまでにかかる時間を TTDT_RESHOW 取得します。
+- TTDT_RESHOW ポインターが 1 つのツールから別のツールに移動するときに、後続のツール ヒント ウィンドウが表示されるまでにかかる時間を取得します。
 
 ### <a name="return-value"></a>戻り値
 
-指定された遅延時間 (ミリ秒単位)。
+指定された遅延時間 (ミリ秒)
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このメンバー関数は、Windows SDK で説明されているように、Win32 メッセージ[TTM_GETDELAYTIME](/windows/win32/Controls/ttm-getdelaytime)の動作を実装します。
 
-##  <a name="getmargin"></a>CToolTipCtrl:: GetMargin
+## <a name="ctooltipctrlgetmargin"></a><a name="getmargin"></a>CツールチップCtrl::ゲットマージン
 
-ツールヒントウィンドウに対して設定されている上下左右の余白を取得します。
+ツール ヒント ウィンドウに設定されている上余白、左余白、下余白、および右余白を取得します。
 
 ```
 void GetMargin(LPRECT lprc) const;
@@ -452,23 +452,23 @@ void GetMargin(LPRECT lprc) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*lprc*<br/>
-余白情報を受け取る `RECT` 構造体のアドレス。 [RECT](/previous-versions/dd162897\(v=vs.85\))構造体のメンバーは、外接する四角形を定義していません。 このメッセージのために、構造体のメンバーは次のように解釈されます。
+*Lprc*<br/>
+マージン情報を`RECT`受け取る構造体のアドレス。 [RECT](/previous-versions/dd162897\(v=vs.85\))構造体のメンバーは、外接する四角形を定義しません。 このメッセージの目的のために、構造体メンバーは次のように解釈されます。
 
-|メンバー|表現|
+|メンバー|[表記]|
 |------------|--------------------|
-|`top`|上罫線とツールヒントテキストの上端の間の距離 (ピクセル単位)。|
-|`left`|左罫線と先端テキストの左端の間の距離 (ピクセル単位)。|
-|`bottom`|下罫線と先端テキストの下端との間の距離 (ピクセル単位)。|
-|`right`|右罫線と先端テキストの右端の間の距離 (ピクセル単位)。|
+|`top`|上の境界線とツール ヒントテキストの上端の間の距離 (ピクセル単位)。|
+|`left`|ヒント テキストの左の境界線と左端の間の距離 (ピクセル単位)。|
+|`bottom`|下の境界線と先端テキストの下部の距離 (ピクセル単位)。|
+|`right`|右の境界線とヒントテキストの右端の間の距離 (ピクセル単位)。|
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このメンバー関数は、Windows SDK で説明されているように、Win32 メッセージ[TTM_GETMARGIN](/windows/win32/Controls/ttm-getmargin)の動作を実装します。
 
-##  <a name="getmaxtipwidth"></a>  CToolTipCtrl::GetMaxTipWidth
+## <a name="ctooltipctrlgetmaxtipwidth"></a><a name="getmaxtipwidth"></a>ウィンドウヒントCtrl::取得最大ヒント幅
 
-ツールヒントウィンドウの最大の幅を取得します。
+ツール ヒント ウィンドウの最大幅を取得します。
 
 ```
 int GetMaxTipWidth() const;
@@ -476,15 +476,15 @@ int GetMaxTipWidth() const;
 
 ### <a name="return-value"></a>戻り値
 
-ツールヒントウィンドウの最大幅。
+ツール ヒント ウィンドウの最大幅。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このメンバー関数は、Windows SDK で説明されているように、Win32 メッセージ[TTM_GETMAXTIPWIDTH](/windows/win32/Controls/ttm-getmaxtipwidth)の動作を実装します。
 
-##  <a name="gettext"></a>CToolTipCtrl:: GetText
+## <a name="ctooltipctrlgettext"></a><a name="gettext"></a>次のテキストを取得します。
 
-ツールヒントコントロールがツールに対して保持するテキストを取得します。
+ツール ヒント コントロールがツールに保持するテキストを取得します。
 
 ```
 void GetText(
@@ -495,22 +495,22 @@ void GetText(
 
 ### <a name="parameters"></a>パラメーター
 
-*str*<br/>
-ツールのテキストを受け取る `CString` オブジェクトへの参照。
+*Str*<br/>
+ツールのテキスト`CString`を受け取るオブジェクトへの参照。
 
-*pWnd*<br/>
-ツールが格納されているウィンドウへのポインター。
+*Pwnd*<br/>
+ツールを含むウィンドウへのポインター。
 
-*nIDTool*<br/>
+*NIDツール*<br/>
 ツールの ID。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このツールは、 *pWnd*パラメーターと*nIDTool*パラメーターによって識別されます。 以前に `CToolTipCtrl::AddTool`を呼び出して、ツールヒントコントロールにそのツールが既に登録されている場合、 *str*パラメーターによって参照されるオブジェクトには、ツールのテキストが割り当てられます。
+*pWnd*および*nIDTool*パラメーターは、ツールを識別します。 そのツールが以前の呼び出しを通じてツール ヒント コントロール`CToolTipCtrl::AddTool`に登録されている場合 *、str*パラメーターによって参照されるオブジェクトには、ツールのテキストが割り当てられます。
 
-##  <a name="gettipbkcolor"></a>CToolTipCtrl:: GetTipBkColor
+## <a name="ctooltipctrlgettipbkcolor"></a><a name="gettipbkcolor"></a>CツールチップCtrl::ゲットチップBkカラー
 
-ツールヒントウィンドウの背景色を取得します。
+ツール ヒント ウィンドウの背景色を取得します。
 
 ```
 COLORREF GetTipBkColor() const;
@@ -520,13 +520,13 @@ COLORREF GetTipBkColor() const;
 
 背景色を表す[COLORREF](/windows/win32/gdi/colorref)値。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このメンバー関数は、Windows SDK で説明されているように、Win32 メッセージ[TTM_GETTIPBKCOLOR](/windows/win32/Controls/ttm-gettipbkcolor)の動作を実装します。
 
-##  <a name="gettiptextcolor"></a>  CToolTipCtrl::GetTipTextColor
+## <a name="ctooltipctrlgettiptextcolor"></a><a name="gettiptextcolor"></a>次の文字列を取得します。
 
-ツールヒントウィンドウのテキストの色を取得します。
+ツール ヒント ウィンドウのテキストの色を取得します。
 
 ```
 COLORREF GetTipTextColor() const;
@@ -536,13 +536,13 @@ COLORREF GetTipTextColor() const;
 
 テキストの色を表す[COLORREF](/windows/win32/gdi/colorref)値。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このメンバー関数は、Windows SDK で説明されているように、Win32 メッセージ[TTM_GETTIPTEXTCOLOR](/windows/win32/Controls/ttm-gettiptextcolor)の動作を実装します。
 
-##  <a name="gettitle"></a>  CToolTipCtrl::GetTitle
+## <a name="ctooltipctrlgettitle"></a><a name="gettitle"></a>CツールチップCtrl::タイトルを取得します。
 
-現在のツールヒントコントロールのタイトルを取得します。
+現在のツールヒント コントロールのタイトルを取得します。
 
 ```
 void GetTitle(PTTGETTITLE pttgt) const;
@@ -552,15 +552,15 @@ void GetTitle(PTTGETTITLE pttgt) const;
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*pttgt*|入出力ツールヒントコントロールに関する情報を格納している[TTGETTITLE](/windows/win32/api/commctrl/ns-commctrl-ttgettitle)構造体へのポインター。 このメソッドから制御が戻るときに、 [TTGETTITLE](/windows/win32/api/commctrl/ns-commctrl-ttgettitle)構造体の*psztitle*メンバーはタイトルのテキストを指します。|
+|*pttgt*|[アウト]ツールヒント コントロールに関する情報を含む[TTGETTITLE](/windows/win32/api/commctrl/ns-commctrl-ttgettitle)構造体へのポインター。 このメソッドが返されるときに[、TTGETTITLE](/windows/win32/api/commctrl/ns-commctrl-ttgettitle)構造体の*pszTitle*メンバーはタイトルのテキストを指します。|
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、Windows SDK で説明されている[TTM_GETTITLE](/windows/win32/Controls/ttm-gettitle)メッセージを送信します。
+このメソッドは、Windows SDK に記載されている[TTM_GETTITLE](/windows/win32/Controls/ttm-gettitle)メッセージを送信します。
 
-##  <a name="gettoolcount"></a>  CToolTipCtrl::GetToolCount
+## <a name="ctooltipctrlgettoolcount"></a><a name="gettoolcount"></a>ツールヒントCtrl::GetToolCount
 
-ツールヒントコントロールに登録されているツールの数を取得します。
+ツール ヒント コントロールに登録されているツールの数を取得します。
 
 ```
 int GetToolCount() const;
@@ -568,11 +568,11 @@ int GetToolCount() const;
 
 ### <a name="return-value"></a>戻り値
 
-ツールヒントコントロールに登録されているツールの数。
+ツール ヒント コントロールに登録されているツールの数。
 
-##  <a name="gettoolinfo"></a>  CToolTipCtrl::GetToolInfo
+## <a name="ctooltipctrlgettoolinfo"></a><a name="gettoolinfo"></a>ツールヒントCtrl::GetToolInfo
 
-ツールヒントコントロールがツールに関して保持する情報を取得します。
+ツール ヒント コントロールがツールに関して保持する情報を取得します。
 
 ```
 BOOL GetToolInfo(
@@ -583,26 +583,26 @@ BOOL GetToolInfo(
 
 ### <a name="parameters"></a>パラメーター
 
-*ToolInfo*<br/>
-ツールのテキストを受け取る `TOOLINFO` オブジェクトへの参照。
+*ツール情報*<br/>
+ツールのテキスト`TOOLINFO`を受け取るオブジェクトへの参照。
 
-*pWnd*<br/>
-ツールが格納されているウィンドウへのポインター。
+*Pwnd*<br/>
+ツールを含むウィンドウへのポインター。
 
-*nIDTool*<br/>
+*NIDツール*<br/>
 ツールの ID。
 
 ### <a name="return-value"></a>戻り値
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-*CToolInfo*によって参照される[TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa)構造体の `hwnd` および `uId` のメンバーは、ツールを識別します。 以前の `AddTool`の呼び出しによってツールヒントコントロールにそのツールが登録されている場合、`TOOLINFO` 構造体には、ツールに関する情報が格納されます。
+`hwnd` `uId` *CToolInfo*によって参照される[TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa)構造体の と のメンバーは、ツールを識別します。 ツールがツール ヒント コントロールに登録されている場合は、前の呼`AddTool`び出`TOOLINFO`しを使用して、ツールに関する情報が構造体に格納されます。
 
-##  <a name="hittest"></a>  CToolTipCtrl::HitTest
+## <a name="ctooltipctrlhittest"></a><a name="hittest"></a>CツールチップCtrl::ヒットテスト
 
-指定したツールの外接する四角形内にあるかどうかを判断するポイントをテストします。存在する場合は、ツールに関する情報を取得します。
+ポイントが指定されたツールの外接する四角形内にあるかどうかを判断し、その場合はツールに関する情報を取得するかどうかをテストします。
 
 ```
 BOOL HitTest(
@@ -613,24 +613,24 @@ BOOL HitTest(
 
 ### <a name="parameters"></a>パラメーター
 
-*pWnd*<br/>
-ツールが格納されているウィンドウへのポインター。
+*Pwnd*<br/>
+ツールを含むウィンドウへのポインター。
 
-*pt*<br/>
-テストする点の座標を格納している `CPoint` オブジェクトへのポインター。
+*Pt*<br/>
+テスト対象の`CPoint`ポイントの座標を含むオブジェクトへのポインター。
 
-*lpToolInfo*<br/>
-ツールに関する情報を格納している[TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa)構造体へのポインター。
+*ツール情報*<br/>
+ツールに関する情報を含む[TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa)構造体へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-ヒットテスト情報によって指定された点がツールの外接する四角形内にある場合は0以外。それ以外の場合は0です。
+ヒット テスト情報で指定されたポイントがツールの外接する四角形内にある場合は 0 以外の値を返します。それ以外の場合は 0。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この関数が0以外の値を返す場合、 *lpToolInfo*が指す構造体には、そのポイントがある四角形を含むツールの情報が格納されます。
+この関数が 0 以外の値を返す場合 *、lpToolInfo*によって指す構造体には、そのポイントがある四角形内のツールに関する情報が格納されます。
 
-`TTHITTESTINFO` 構造体は次のように定義されています。
+構造`TTHITTESTINFO`は次のように定義されます。
 
 ```cpp
 typedef struct _TT_HITTESTINFO { // tthti
@@ -646,45 +646,45 @@ typedef struct _TT_HITTESTINFO { // tthti
 
 - `pt`
 
-   ポイントがツールの外接する四角形内にある場合の点の座標を指定します。
+   点がツールの外接する四角形にある場合に、点の座標を指定します。
 
 - `ti`
 
-   ツールに関する情報。 `TOOLINFO` 構造体の詳細については、「 [CToolTipCtrl:: GetToolInfo](#gettoolinfo)」を参照してください。
+   ツールに関する情報。 構造の`TOOLINFO`詳細については[、「CToolTipCtrl::GetToolInfo](#gettoolinfo)」を参照してください。
 
-##  <a name="pop"></a>  CToolTipCtrl::Pop
+## <a name="ctooltipctrlpop"></a><a name="pop"></a>CツールチップCtrl::Pop
 
-表示されているツールヒントウィンドウをビューから削除します。
+表示されたツール ヒント ウィンドウをビューから削除します。
 
 ```
 void Pop();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このメンバー関数は、Windows SDK で説明されているように、Win32 メッセージ[TTM_POP](/windows/win32/Controls/ttm-pop)の動作を実装します。
 
-##  <a name="popup"></a>  CToolTipCtrl::Popup
+## <a name="ctooltipctrlpopup"></a><a name="popup"></a>CツールチップCtrl::Pオップアップ
 
-現在のツールヒントコントロールを最後のマウスメッセージの座標に表示します。
+現在のツールヒント コントロールを、最後のマウス メッセージの座標で表示します。
 
 ```
 void Popup();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、Windows SDK で説明されている[TTM_POPUP](/windows/win32/Controls/ttm-popup)メッセージを送信します。
+このメソッドは、Windows SDK に記載されている[TTM_POPUP](/windows/win32/Controls/ttm-popup)メッセージを送信します。
 
 ### <a name="example"></a>例
 
-次のコード例では、ツールヒントウィンドウを表示します。
+ツールヒント ウィンドウを表示するコード例を次に示します。
 
 [!code-cpp[NVC_MFC_CToolBarCtrl_s1#7](../../mfc/reference/codesnippet/cpp/ctooltipctrl-class_3.cpp)]
 
-##  <a name="relayevent"></a>  CToolTipCtrl::RelayEvent
+## <a name="ctooltipctrlrelayevent"></a><a name="relayevent"></a>CツールチップCtrl::リレーイベント
 
-処理のためのツールヒントコントロールにマウスメッセージを渡します。
+マウス メッセージをツール ヒント コントロールに渡して処理します。
 
 ```
 void RelayEvent(LPMSG lpMsg);
@@ -692,14 +692,14 @@ void RelayEvent(LPMSG lpMsg);
 
 ### <a name="parameters"></a>パラメーター
 
-*lpMsg*<br/>
-リレーするメッセージが格納されている[MSG](/windows/win32/api/winuser/ns-winuser-msg)構造体へのポインター。
+*をクリックします。*<br/>
+中継するメッセージを含む[MSG](/windows/win32/api/winuser/ns-winuser-msg)構造体へのポインター。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-ツールヒントコントロールは、`RelayEvent`によって送信される次のメッセージのみを処理します。
+ツール ヒント コントロールは、次のメッセージのみを処理します`RelayEvent`。
 
-|WM_LBUTTONDOWN|WM_MOUSEMOVE|
+|WM_LBUTTONDOWN|Wm_mousemove|
 |---------------------|-------------------|
 |WM_LBUTTONUP|WM_RBUTTONDOWN|
 |WM_MBUTTONDOWN|WM_RBUTTONUP|
@@ -707,11 +707,11 @@ void RelayEvent(LPMSG lpMsg);
 
 ### <a name="example"></a>例
 
-  [CPropertySheet:: GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol)の例を参照してください。
+  次の例[を](../../mfc/reference/cpropertysheet-class.md#gettabcontrol)参照してください。
 
-##  <a name="setdelaytime"></a>  CToolTipCtrl::SetDelayTime
+## <a name="ctooltipctrlsetdelaytime"></a><a name="setdelaytime"></a>CツールチップCtrl::セットディレイタイム
 
-ツールヒントコントロールの遅延時間を設定します。
+ツール ヒント コントロールの遅延時間を設定します。
 
 ```
 void SetDelayTime(UINT nDelay);
@@ -723,22 +723,22 @@ void SetDelayTime(
 
 ### <a name="parameters"></a>パラメーター
 
-*nDelay*<br/>
+*nディレイ*<br/>
 新しい遅延時間をミリ秒単位で指定します。
 
 *dwDuration*<br/>
-取得する duration 値を指定するフラグ。 有効な値の説明については、「 [CToolTipCtrl:: GetDelayTime](#getdelaytime) 」を参照してください。
+取得する期間の値を指定するフラグ。 有効な値の説明については[、CToolTipCtrl::GetDelayTime](#getdelaytime)を参照してください。
 
 *iTime*<br/>
 指定された遅延時間 (ミリ秒単位)。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-遅延時間は、ツールヒントウィンドウが表示される前に、ツール上にカーソルを残しておく必要がある時間の長さです。 既定の遅延時間は500ミリ秒です。
+遅延時間とは、ツール ヒント ウィンドウが表示されるまでのカーソルがツールに残る時間の長さです。 デフォルトの遅延時間は 500 ミリ秒です。
 
-##  <a name="setmargin"></a>CToolTipCtrl:: SetMargin
+## <a name="ctooltipctrlsetmargin"></a><a name="setmargin"></a>CツールチップCtrl::セットマージン
 
-ツールヒントウィンドウの上下左右の余白を設定します。
+ツール ヒント ウィンドウの上下左右の余白を設定します。
 
 ```
 void SetMargin(LPRECT lprc);
@@ -746,16 +746,16 @@ void SetMargin(LPRECT lprc);
 
 ### <a name="parameters"></a>パラメーター
 
-*lprc*<br/>
-設定する余白情報を含む `RECT` 構造体のアドレス。 `RECT` 構造体のメンバーは、外接する四角形を定義しません。 余白情報の説明については、「 [CToolTipCtrl:: GetMargin](#getmargin) 」を参照してください。
+*Lprc*<br/>
+設定する`RECT`余白情報を含む構造体のアドレス。 構造体の`RECT`メンバーは、外接する四角形を定義しません。 マージン情報の説明については[、CToolTipCtrl::GetMargin](#getmargin)を参照してください。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このメンバー関数は、Windows SDK で説明されているように、Win32 メッセージ[TTM_SETMARGIN](/windows/win32/Controls/ttm-setmargin)の動作を実装します。
 
-##  <a name="setmaxtipwidth"></a>CToolTipCtrl:: SetMaxTipWidth
+## <a name="ctooltipctrlsetmaxtipwidth"></a><a name="setmaxtipwidth"></a>CツールチップCtrl::セットマックスチップ幅
 
-ツールヒントウィンドウの最大幅を設定します。
+ツール ヒント ウィンドウの最大幅を設定します。
 
 ```
 int SetMaxTipWidth(int iWidth);
@@ -763,20 +763,20 @@ int SetMaxTipWidth(int iWidth);
 
 ### <a name="parameters"></a>パラメーター
 
-*iWidth*<br/>
-設定するツールヒントウィンドウの最大幅。
+*幅*<br/>
+設定するツール ヒント ウィンドウの最大幅。
 
 ### <a name="return-value"></a>戻り値
 
-前の最大の先端の幅。
+直前の最大チップ幅。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このメンバー関数は、Windows SDK で説明されているように、Win32 メッセージ[TTM_SETMAXTIPWIDTH](/windows/win32/Controls/ttm-setmaxtipwidth)の動作を実装します。
 
-##  <a name="settipbkcolor"></a>CToolTipCtrl:: SetTipBkColor
+## <a name="ctooltipctrlsettipbkcolor"></a><a name="settipbkcolor"></a>CツールチップCtrl::セットチップBkカラー
 
-ツールヒントウィンドウの背景色を設定します。
+ツール ヒント ウィンドウの背景色を設定します。
 
 ```
 void SetTipBkColor(COLORREF clr);
@@ -784,16 +784,16 @@ void SetTipBkColor(COLORREF clr);
 
 ### <a name="parameters"></a>パラメーター
 
-*/clr*<br/>
+*Clr*<br/>
 新しい背景色。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このメンバー関数は、Windows SDK で説明されているように、Win32 メッセージ[TTM_SETTIPBKCOLOR](/windows/win32/Controls/ttm-settipbkcolor)の動作を実装します。
 
-##  <a name="settiptextcolor"></a>  CToolTipCtrl::SetTipTextColor
+## <a name="ctooltipctrlsettiptextcolor"></a><a name="settiptextcolor"></a>C ツールヒントCtrl::テキストの色を設定します。
 
-ツールヒントウィンドウのテキストの色を設定します。
+ツール ヒント ウィンドウのテキストの色を設定します。
 
 ```
 void SetTipTextColor(COLORREF clr);
@@ -801,16 +801,16 @@ void SetTipTextColor(COLORREF clr);
 
 ### <a name="parameters"></a>パラメーター
 
-*/clr*<br/>
+*Clr*<br/>
 新しいテキストの色。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このメンバー関数は、Windows SDK で説明されているように、Win32 メッセージ[TTM_SETTIPTEXTCOLOR](/windows/win32/Controls/ttm-settiptextcolor)の動作を実装します。
 
-##  <a name="settitle"></a>  CToolTipCtrl::SetTitle
+## <a name="ctooltipctrlsettitle"></a><a name="settitle"></a>CツールチップCtrl::セットタイトル
 
-標準アイコンとタイトル文字列をツールヒントに追加します。
+ツール ヒントに標準アイコンとタイトル文字列を追加します。
 
 ```
 BOOL SetTitle(
@@ -820,23 +820,23 @@ BOOL SetTitle(
 
 ### <a name="parameters"></a>パラメーター
 
-*uIcon*<br/>
+*uアイコン*<br/>
 Windows SDK の[TTM_SETTITLE](/windows/win32/Controls/ttm-settitle)の*アイコン*を参照してください。
 
-*lpstrTitle*<br/>
+*タイトル*<br/>
 タイトル文字列へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 このメンバー関数は、Windows SDK で説明されているように、Win32 メッセージ[TTM_SETTITLE](/windows/win32/Controls/ttm-settitle)の動作を実装します。
 
-##  <a name="settoolinfo"></a>  CToolTipCtrl::SetToolInfo
+## <a name="ctooltipctrlsettoolinfo"></a><a name="settoolinfo"></a>CツールチップCtrl::セットツールインフォ
 
-ツールのツールヒントによって保持される情報を設定します。
+ツールヒントがツールに保持する情報を設定します。
 
 ```
 void SetToolInfo(LPTOOLINFO lpToolInfo);
@@ -844,10 +844,10 @@ void SetToolInfo(LPTOOLINFO lpToolInfo);
 
 ### <a name="parameters"></a>パラメーター
 
-*lpToolInfo*<br/>
+*ツール情報*<br/>
 設定する情報を指定する[TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa)構造体へのポインター。
 
-##  <a name="settoolrect"></a>  CToolTipCtrl::SetToolRect
+## <a name="ctooltipctrlsettoolrect"></a><a name="settoolrect"></a>CツールチップCtrl::セットツールレクト
 
 ツールの新しい外接する四角形を設定します。
 
@@ -860,18 +860,18 @@ void SetToolRect(
 
 ### <a name="parameters"></a>パラメーター
 
-*pWnd*<br/>
-ツールが格納されているウィンドウへのポインター。
+*Pwnd*<br/>
+ツールを含むウィンドウへのポインター。
 
-*nIDTool*<br/>
+*NIDツール*<br/>
 ツールの ID。
 
-*lpRect*<br/>
+*Lprect*<br/>
 新しい外接する四角形を指定する[RECT](/previous-versions/dd162897\(v=vs.85\))構造体へのポインター。
 
-##  <a name="setwindowtheme"></a>CToolTipCtrl:: SetWindowTheme
+## <a name="ctooltipctrlsetwindowtheme"></a><a name="setwindowtheme"></a>CツールチップCtrl::セットウィンドウテーマ
 
-ツールヒントウィンドウの視覚スタイルを設定します。
+ツール ヒント ウィンドウの表示スタイルを設定します。
 
 ```
 HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
@@ -879,18 +879,18 @@ HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 
 ### <a name="parameters"></a>パラメーター
 
-*pszSubAppName*<br/>
-設定する visual スタイルを含む Unicode 文字列へのポインター。
+*を使用します。*<br/>
+設定する表示スタイルを含む Unicode 文字列へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
 戻り値は使用されません。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメンバー関数は、Windows SDK で説明されているように、 [TTM_SETWINDOWTHEME](/windows/win32/Controls/ttm-setwindowtheme)メッセージの機能をエミュレートします。
+このメンバー関数は、Windows SDK で説明されているように[、TTM_SETWINDOWTHEME](/windows/win32/Controls/ttm-setwindowtheme)メッセージの機能をエミュレートします。
 
-##  <a name="update"></a>CToolTipCtrl:: Update
+## <a name="ctooltipctrlupdate"></a><a name="update"></a>CツールチップCtrl::更新
 
 現在のツールを強制的に再描画します。
 
@@ -898,9 +898,9 @@ HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 void Update();
 ```
 
-##  <a name="updatetiptext"></a>CToolTipCtrl:: UpdateTipText
+## <a name="ctooltipctrlupdatetiptext"></a><a name="updatetiptext"></a>次のテキストを表示します。
 
-このコントロールのツールのツールヒントテキストを更新します。
+このコントロールのツールのツール ヒント テキストを更新します。
 
 ```
 void UpdateTipText(
@@ -919,17 +919,17 @@ void UpdateTipText(
 *lpszText*<br/>
 ツールのテキストへのポインター。
 
-*pWnd*<br/>
-ツールが格納されているウィンドウへのポインター。
+*Pwnd*<br/>
+ツールを含むウィンドウへのポインター。
 
-*nIDTool*<br/>
+*NIDツール*<br/>
 ツールの ID。
 
-*nIDText*<br/>
+*テキスト*<br/>
 ツールのテキストを含む文字列リソースの ID。
 
 ## <a name="see-also"></a>関連項目
 
 [CWnd クラス](../../mfc/reference/cwnd-class.md)<br/>
-[階層図](../../mfc/hierarchy-chart.md)<br/>
+[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
 [CToolBar クラス](../../mfc/reference/ctoolbar-class.md)

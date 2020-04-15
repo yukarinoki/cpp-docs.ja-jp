@@ -6,62 +6,62 @@ helpviewer_keywords:
 - WinInet classes [MFC], displaying progress
 - WinInet classes [MFC], about WinInet classes
 ms.assetid: 665de5ac-e80d-427d-8d91-2ae466885940
-ms.openlocfilehash: 79ec102aa27440c64f03c6e22b9f2fe959cac6b9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b989e5c3df63ee7b5129d01468a0f869772ed286
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399552"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367321"
 ---
 # <a name="wininet-basics"></a>WinInet の基礎
 
-WinInet を使用して、ダウンロードしてから、アプリケーション内のファイルをアップロードする FTP サポートを追加することができます。 オーバーライドできます[OnStatusCallback](../mfc/reference/cinternetsession-class.md#onstatuscallback)を使用して、*独自*検索ファイルをダウンロードすると、ユーザーに進行状況に関する情報を提供するパラメーター。
+WinInet を使用して、FTP サポートを追加して、アプリケーション内からファイルをダウンロードおよびアップロードできます。 [OnStatusCallback](../mfc/reference/cinternetsession-class.md#onstatuscallback)をオーバーライドし *、dwContext*パラメーターを使用して、ファイルを検索およびダウンロードするときにユーザーに進行状況情報を提供できます。
 
-この記事には、次のトピックが含まれています。
+この記事では、次のトピックを取り上げます。
 
-- [非常にシンプルなブラウザーを作成します。](#_core_create_a_very_simple_browser)
+- [非常に単純なブラウザを作成する](#_core_create_a_very_simple_browser)
 
-- [Web ページをダウンロードします。](#_core_download_a_web_page)
+- [Web ページのダウンロード](#_core_download_a_web_page)
 
-- [FTP ファイル](#_core_ftp_a_file)
+- [ファイルの FTP](#_core_ftp_a_file)
 
-- [Gopher ディレクトリを取得します。](#_core_retrieve_a_gopher_directory)
+- [Gopher ディレクトリを取得する](#_core_retrieve_a_gopher_directory)
 
-- [ファイルの転送中に進行状況に関する情報を表示します。](#_core_display_progress_information_while_transferring_files)
+- [ファイル転送時の進行状況情報の表示](#_core_display_progress_information_while_transferring_files)
 
-次のコードの抜粋では、単純なブラウザーを作成、Web ページでは、FTP、ファイルをダウンロードして gopher ファイルを検索する方法を示します。 完全な例としてはないし、例外処理が含まれていません。
+以下のコードの抜粋では、単純なブラウザの作成方法、Web ページのダウンロード方法、ファイル FTP ファイルのダウンロード方法、gopher ファイルの検索方法を示します。 これらは完全な例としては意味されず、すべて例外処理が含まれているわけではありません。
 
-WinInet の詳細については、次を参照してください。 [Win32 インターネット拡張機能 (WinInet)](../mfc/win32-internet-extensions-wininet.md)します。
+WinInet の詳細については、「 [Win32 インターネット拡張機能 (WinInet)」](../mfc/win32-internet-extensions-wininet.md)を参照してください。
 
-##  <a name="_core_create_a_very_simple_browser"></a> 非常にシンプルなブラウザーを作成します。
+## <a name="create-a-very-simple-browser"></a><a name="_core_create_a_very_simple_browser"></a>非常に単純なブラウザを作成する
 
 [!code-cpp[NVC_MFCWinInet#1](../mfc/codesnippet/cpp/wininet-basics_1.cpp)]
 
-##  <a name="_core_download_a_web_page"></a> Web ページをダウンロードします。
+## <a name="download-a-web-page"></a><a name="_core_download_a_web_page"></a>Web ページのダウンロード
 
 [!code-cpp[NVC_MFCWinInet#2](../mfc/codesnippet/cpp/wininet-basics_2.cpp)]
 
-##  <a name="_core_ftp_a_file"></a> FTP ファイル
+## <a name="ftp-a-file"></a><a name="_core_ftp_a_file"></a>ファイルの FTP
 
 [!code-cpp[NVC_MFCWinInet#3](../mfc/codesnippet/cpp/wininet-basics_3.cpp)]
 
-##  <a name="_core_retrieve_a_gopher_directory"></a> Gopher ディレクトリを取得します。
+## <a name="retrieve-a-gopher-directory"></a><a name="_core_retrieve_a_gopher_directory"></a>Gopher ディレクトリを取得する
 
 [!code-cpp[NVC_MFCWinInet#4](../mfc/codesnippet/cpp/wininet-basics_4.cpp)]
 
-## <a name="use-onstatuscallback"></a>OnStatusCallback を使用します。
+## <a name="use-onstatuscallback"></a>オンステータスコールバックを使用する
 
-WinInet クラスを使用するには、する場合は、使用、 [OnStatusCallback](../mfc/reference/cinternetsession-class.md#onstatuscallback)のアプリケーションのメンバー [CInternetSession](../mfc/reference/cinternetsession-class.md)ステータス情報を取得するオブジェクト。 独自を派生させる場合`CInternetSession`オブジェクト、オーバーライド`OnStatusCallback`、状態のコールバックを有効にして MFC が呼び出す、`OnStatusCallback`進行状況が、インターネット、そのセッションで、すべてのアクティビティに関する情報を持つ関数。
+WinInet クラスを使用する場合は、アプリケーションの[CInternetSession](../mfc/reference/cinternetsession-class.md)オブジェクトの[OnStatusCallback](../mfc/reference/cinternetsession-class.md#onstatuscallback)メンバーを使用して、状態情報を取得できます。 独自の`CInternetSession`オブジェクトを派生させ、`OnStatusCallback`をオーバーライドし、状態のコールバックを有効にした`OnStatusCallback`場合、MFC はそのインターネット セッションのすべてのアクティビティに関する進行状況情報を使用して関数を呼び出します。
 
-1 つのセッションはいくつかの接続 (、有効期間、多くの異なる個別の操作を実行可能性があります)、サポート可能性があるため`OnStatusCallback`特定の接続またはトランザクションを使用して各状態の変更を識別するためのメカニズムを必要があります。 このメカニズムは、WinInet のサポート クラスのメンバー関数の多くに指定されたコンテキストの ID パラメーターによって提供されます。 このパラメーターは常に型**DWORD**名前は常に*独自*します。
+1 つのセッションが複数の接続をサポートする場合があるため (有効期間中に、さまざまな異なる`OnStatusCallback`操作を実行する可能性があります)、特定の接続またはトランザクションで各状況変更を識別するメカニズムが必要です。 このメカニズムは、WinInet サポート クラスの多くのメンバー関数に与えられたコンテキスト ID パラメーターによって提供されます。 このパラメーターは常に**DWORD**型であり、常に*dwContext*という名前になります。
 
-オブジェクトによって発生するアクティビティを識別するためにのみ、特定のインターネット オブジェクトに割り当てられているコンテキストが使用される、`OnStatusCallback`のメンバー、`CInternetSession`オブジェクト。 呼び出し`OnStatusCallback`いくつかのパラメーターを受け取るこれらのパラメーターが連携するトランザクションと接続はどのような進行状況をアプリケーションに指示します。
+特定のインターネット オブジェクトに割り当てられたコンテキストは、オブジェクトがオブジェクトのメンバーで発生`OnStatusCallback`するアクティビティを`CInternetSession`識別するためにのみ使用されます。 呼び出`OnStatusCallback`しは、いくつかのパラメーターを受け取ります。これらのパラメータは連携して、どのトランザクションと接続の進行状況がアプリケーションに対して行われたかを示します。
 
-作成するときに、`CInternetSession`オブジェクトを指定できます、*独自*コンス トラクターのパラメーター。 `CInternetSession` 自体、コンテキスト ID を使用しません。代わりに、どのコンテキスト ID を渡します**インターネット**-派生した独自のコンテキスト ID を明示的に取得されないオブジェクト。 さらに、その`CInternetConnection`オブジェクトはに沿ってコンテキスト ID を渡す`CInternetFile`オブジェクトを別のコンテキスト ID を明示的に指定しない場合に作成します。 場合、独自の特定のコンテキスト ID、オブジェクト、およびその動作はコンテキスト ID に関連付けられる指定した一方で、 コンテキスト Id を使用するにはどのようなステータス情報で渡さを識別するために、`OnStatusCallback`関数。
+オブジェクトを`CInternetSession`作成するときに、コンストラクターに*dwContext*パラメーターを指定できます。 `CInternetSession`それ自体はコンテキスト ID を使用しません。代わりに、コンテキスト ID は、独自のコンテキスト ID を明示的に取得しない任意の**InternetConnection**派生オブジェクトに渡されます。 さらに、異なる`CInternetConnection`コンテキスト ID を明示的に指定`CInternetFile`しない場合、これらのオブジェクトは、作成したオブジェクトにコンテキスト ID を渡します。 一方、独自のコンテキスト ID を指定した場合、オブジェクトと、そのコンテキスト ID に関連付けられた作業がオブジェクトと作業に関連付けられます。 コンテキスト ID を使用して、関数内で与えられているステータス情報を識別できます`OnStatusCallback`。
 
-##  <a name="_core_display_progress_information_while_transferring_files"></a> ファイルの転送中に進行状況に関する情報を表示します。
+## <a name="display-progress-information-while-transferring-files"></a><a name="_core_display_progress_information_while_transferring_files"></a>ファイル転送時の進行状況情報の表示
 
-たとえば、ある場合はファイルの読み取りに FTP サーバーとの接続を作成しても Web ページを取得する HTTP サーバーに接続するアプリケーションを記述する、`CInternetSession`オブジェクト、2 つ`CInternetConnection`オブジェクト (1 つになります、`CFtpSession`あり、その他`CHttpSession`)、2 つと`CInternetFile`オブジェクト (接続ごとに 1 つ)。 既定値を使用している場合、*独自*パラメーター、しないことができますを区別する、 `OnStatusCallback` FTP 接続と呼び出しの進行状況を示す進行状況を示す呼び出し、HTTP 接続です。 指定した場合、*独自*ID で、後でのテストできる`OnStatusCallback`、どの操作には、コールバックが生成されることがわかります。
+たとえば、FTP サーバーとの接続を作成してファイルを読み取り、HTTP サーバーに接続して Web ページを取得するアプリケーションを作成する場合、`CInternetSession`オブジェクト、2`CInternetConnection`つのオブジェクト (1`CFtpSession`つは a、もう`CHttpSession`1 つは`CInternetFile`a)、2 つのオブジェクト (各接続に 1 つ) を作成します。 *dwContext*パラメーターにデフォルト値を使用した場合、FTP 接続の`OnStatusCallback`進行状況を示す呼び出しと HTTP 接続の進行状況を示す呼び出しを区別することはできません。 *dwContext* ID を指定すると、後で`OnStatusCallback`でテストできます。
 
 ## <a name="see-also"></a>関連項目
 

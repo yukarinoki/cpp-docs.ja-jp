@@ -1,6 +1,6 @@
 ---
 title: strncpy_s、_strncpy_s_l、wcsncpy_s、_wcsncpy_s_l、_mbsncpy_s、_mbsncpy_s_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbsncpy_s_l
 - wcsncpy_s
@@ -8,6 +8,10 @@ api_name:
 - strncpy_s
 - _mbsncpy_s
 - _wcsncpy_s_l
+- _o__mbsncpy_s
+- _o__mbsncpy_s_l
+- _o_strncpy_s
+- _o_wcsncpy_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -22,6 +26,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -49,19 +54,19 @@ helpviewer_keywords:
 - _tcsncpy_s function
 - wcsncpy_s_l function
 ms.assetid: a971c800-94d1-4d88-92f3-a2fe236a4546
-ms.openlocfilehash: 2ccfde34d12dadb76bc8b4058a3f9b52c3d1f4bc
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 81932aa3ca6af01ecc5f6ff353db76185d027838
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73626147"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364508"
 ---
 # <a name="strncpy_s-_strncpy_s_l-wcsncpy_s-_wcsncpy_s_l-_mbsncpy_s-_mbsncpy_s_l"></a>strncpy_s、_strncpy_s_l、wcsncpy_s、_wcsncpy_s_l、_mbsncpy_s、_mbsncpy_s_l
 
 文字列の文字を他の文字列にコピーします。  これらの [strncpy、_strncpy_l、wcsncpy、_wcsncpy_l、_mbsncpy、_mbsncpy_l](strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md) のバージョンは、「[CRT のセキュリティ機能](../../c-runtime-library/security-features-in-the-crt.md)」で説明されているように、セキュリティが強化されています。
 
 > [!IMPORTANT]
-> **_mbsncpy_s**と **_mbsncpy_s_l**は、Windows ランタイムで実行されるアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
+> **_mbsncpy_s**と **_mbsncpy_s_l**は、Windows ランタイムで実行するアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -148,69 +153,71 @@ errno_t _mbsncpy_s_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*strDest*<br/>
+*最も多くの人*<br/>
 対象文字列。
 
-*numberOfElements*<br/>
+*要素の数*<br/>
 対象文字列のサイズ (文字数)。
 
-*strSource*<br/>
+*ストソース*<br/>
 ソース文字列。
 
 *count*<br/>
 コピーする文字数または [_TRUNCATE](../../c-runtime-library/truncate.md)。
 
-*locale*<br/>
+*ロケール*<br/>
 使用するロケール。
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合は0、切り捨てが発生した場合は、それ以外**の場合は**エラーコード。
+成功した場合は 0、切り捨てが発生した場合**は切り**捨て、それ以外の場合はエラー コード。
 
 ### <a name="error-conditions"></a>エラー条件
 
-|*strDest*|*numberOfElements*|*strSource*|戻り値|*Strdest*の内容|
+|*最も多くの人*|*要素の数*|*ストソース*|戻り値|*ストジェスト*の内容|
 |---------------|------------------------|-----------------|------------------|---------------------------|
-|**NULL**|任意|任意|**EINVAL**|変更されない|
-|任意|任意|**NULL**|**EINVAL**|*Strdest*[0] を0に設定します。|
-|任意|0|任意|**EINVAL**|変更されない|
-|**NULL**以外|小さすぎる|任意|**ERANGE**|*Strdest*[0] を0に設定します。|
+|**NULL**|any|any|**Einval**|変更されない|
+|any|any|**NULL**|**Einval**|*strDest*[0] は 0 に設定されています|
+|any|0|any|**Einval**|変更されない|
+|**NULL**ではありません|小さすぎる|any|**ERANGE**|*strDest*[0] は 0 に設定されています|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-これらの関数は、 *Strsource*の最初の*D*文字を*strsource*にコピーしようとします。ここで、 *d*は、 *count*の小さい方、および*strsource*の長さです。 これらの*D*文字が*strdest* (サイズが*numberofelements*として指定されている) 内に収まり、null 終端文字のための空き領域が残っている場合は、それらの文字がコピーされ、終端の null が追加されます。それ以外の場合、 *Strdest*[0] は null 文字に設定され、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。
+これらの関数は*strSource*の*strSource*最初の*D*文字を*strDest*にコピーしようとします*count**。* これらの*D*文字が*strDest* (サイズは*numberOfElements*として指定される) 内に収まり、null 終端文字の空き領域が残っている場合、それらの文字はコピーされ、終端の null が追加されます。それ以外の場合は *、strDest*[0] が null 文字に設定され、無効なパラメータ ハンドラが呼び出されます[。](../../c-runtime-library/parameter-validation.md)
 
-これには例外があります。 *Count*が**TRUNCATE**の場合、 *Strsource*に適合する*strsource*の大半がコピーされ、常に追加される終端の null 用の空き領域が残ります。
+これには例外があります。 *count*が **_TRUNCATE**場合は *、strDest*に収まるのと同じくらい多くの*strSource*がコピーされ、終端の null が常に追加されます。
 
-たとえば、オブジェクトに適用された
+たとえば、次のように入力します。
 
 ```C
 char dst[5];
 strncpy_s(dst, 5, "a long string", 5);
 ```
 
-は、5文字をバッファーに5バイト長としてコピーするように**strncpy_s**に要求していることを意味します。この場合、null 終端文字にはスペースが残されないため、 **strncpy_s**は文字列をゼロにして、無効なパラメーターハンドラーを呼び出します。
+これは **、5**バイト長のバッファに 5 文字をコピーstrncpy_sを要求していることを意味します。これにより、null ターミネータのスペースが残らないため **、strncpy_s**文字列をゼロにして無効なパラメータ ハンドラを呼び出します。
 
-切り捨て動作が必要な場合は、 **TRUNCATE**または (*size* -1) を使用します。
+切り捨て動作が必要な場合は **、_TRUNCATE**または (*サイズ*- 1) を使用します。
 
 ```C
 strncpy_s(dst, 5, "a long string", _TRUNCATE);
 strncpy_s(dst, 5, "a long string", 4);
 ```
 
-**Strncpy**とは異なり、 *Count*が*strsource*の長さよりも大きい場合は、コピー先の文字列に null 文字が埋め込まれていないことに*注意してください。*
+**strncpy**とは異なり *、count*が*strSource*の長さより大きい場合、宛先文字列には長さ*カウント*まで null 文字が埋め込まれません。
 
-コピー元とコピー先の文字列が重なり合っている場合、 **strncpy_s**の動作は未定義です。
+strncpy_s**の動作**は、ソース文字列とコピー先文字列が重複している場合は定義されません。
 
-*Strdest*または*Strdest*が**NULL**の場合、または*numberofelements*が0の場合は、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、関数は**einval**を返し、 **errno**を**einval**に設定します。
+*strDest*または*strSource*が**NULL**の場合、または*数の要素*が 0 の場合は、無効なパラメーター ハンドラーが呼び出されます。 実行を続行できる場合、関数は**EINVAL**を返し **、errno**を**EINVAL**に設定します。
 
-**wcsncpy_s**と **_mbsncpy_s**は、 **strncpy_s**のワイド文字バージョンとマルチバイト文字バージョンです。 **Wcsncpy_s**と**mbsncpy_s**の引数と戻り値は、それに応じて異なります。 それ以外では、これらの関数の動作は同じです。
+**wcsncpy_s**と **_mbsncpy_s**は、ワイド文字とマルチバイト文字の**strncpy_s**のバージョンです。 **wcsncpy_s**と**mbsncpy_s**の引数と戻り値は、それに応じて異なります。 それ以外では、これらの関数の動作は同じです。
 
-出力値は、ロケールの **LC_CTYPE** カテゴリの設定に影響されます。詳細については、「[setlocale](setlocale-wsetlocale.md)」を参照してください。 **_l** サフィックスが付いていないこれらの関数のバージョンでは、このロケールに依存する動作に現在のロケールを使用します。 **_l** サフィックスが付いているバージョンは、渡されたロケール パラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+出力値は、ロケールの **LC_CTYPE** カテゴリの設定に影響されます。詳細については、「[setlocale](setlocale-wsetlocale.md)」を参照してください。 **_l** サフィックスが付いていないこれらの関数のバージョンでは、このロケールに依存する動作に現在のロケールを使用します。**_l** サフィックスが付いているバージョンは、渡されたロケール パラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
 C++ では、これらの関数の使用はテンプレートのオーバーロードによって簡素化されます。オーバーロードでは、バッファー長を自動的に推論できる (サイズの引数を指定する必要がなくなる) だけでなく、古くてセキュリティが万全ではない関数を新しく安全な関数に自動的に置き換えることができます。 詳細については、「[セキュリティ保護されたテンプレート オーバーロード](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
-これらの関数のデバッグライブラリバージョンは、最初にバッファーを0xFE で埋めます。 この動作を無効にするには、[_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md) を使用します。
+これらの関数のデバッグ ライブラリ バージョンは、まずバッファーに 0xFE を設定します。 この動作を無効にするには、[_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md) を使用します。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -220,15 +227,15 @@ C++ では、これらの関数の使用はテンプレートのオーバーロ�
 |**_tcsncpy_s_l**|**_strncpy_s_l**|**_mbsnbcpy_s_l**|**_wcsncpy_s_l**|
 
 > [!NOTE]
-> **_strncpy_s_l**、 **_wcsncpy_s_l** 、および **_mbsncpy_s_l**は、ロケールに依存せず、 **_tcsncpy_s_l**のためだけに提供されており、直接呼び出すためのものではありません。
+> **_strncpy_s_l** **_strncpy_s_l、_wcsncpy_s_l、_mbsncpy_s_l**はロケール依存性がなく **、_tcsncpy_s_l**のためだけに提供され、直接呼び出されることを意図していません。 **_mbsncpy_s_l**
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
-|**strncpy_s**、 **_strncpy_s_l**|\<string.h>|
-|**wcsncpy_s**、 **_wcsncpy_s_l**|\<string.h> または \<wchar.h>|
-|**_mbsncpy_s**、 **_mbsncpy_s_l**|\<mbstring.h>|
+|**strncpy_s**, **_strncpy_s_l**|\<string.h>|
+|**wcsncpy_s**, **_wcsncpy_s_l**|\<string.h> または \<wchar.h>|
+|**_mbsncpy_s**, **_mbsncpy_s_l**|\<mbstring.h>|
 
 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
@@ -407,7 +414,7 @@ After strncpy_s (with null-termination):
 
 [文字列操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [ロケール](../../c-runtime-library/locale.md)<br/>
-[マルチバイト文字のシーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[マルチバイト文字シーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbsnbcpy、_mbsnbcpy_l](mbsnbcpy-mbsnbcpy-l.md)<br/>
 [strcat_s、wcscat_s、_mbscat_s](strcat-s-wcscat-s-mbscat-s.md)<br/>
 [strcmp、wcscmp、_mbscmp](strcmp-wcscmp-mbscmp.md)<br/>
