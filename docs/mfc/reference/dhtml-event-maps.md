@@ -10,97 +10,97 @@ helpviewer_keywords:
 - DHTML events [MFC], event map
 - DHTML events [MFC]
 ms.assetid: 9a2c8ae7-7216-4a5e-bc60-6b98695be0c6
-ms.openlocfilehash: 5ae37acd3e0b0c2636e6a3e985490a2feab8fa34
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 30c755b2901374cffab3ce91d0683811ef6624b6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62322814"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365805"
 ---
 # <a name="dhtml-event-maps"></a>DHTML イベント マップ
 
-DHTML イベントを処理するためには、次のマクロを使用できます。
+次のマクロを使用して DHTML イベントを処理できます。
 
 ## <a name="dhtml-event-map-macros"></a>DHTML イベント マップ マクロ
 
-DHTML イベントを処理するために、次のマクロを使用できます[CDHtmlDialog](../../mfc/reference/cdhtmldialog-class.md)-クラスを派生します。
+次のマクロを使用して[、CDHtmlDialog](../../mfc/reference/cdhtmldialog-class.md)派生クラスの DHTML イベントを処理できます。
 
 |||
 |-|-|
-|[BEGIN_DHTML_EVENT_MAP](#begin_dhtml_event_map)|DHTML イベント マップの開始をマークします。|
-|[BEGIN_DHTML_EVENT_MAP_INLINE](#begin_dhtml_event_map_inline)|DHTML イベント マップの開始をマークします。|
+|[BEGIN_DHTML_EVENT_MAP](#begin_dhtml_event_map)|DHTML イベント マップの開始位置を示します。|
+|[BEGIN_DHTML_EVENT_MAP_INLINE](#begin_dhtml_event_map_inline)|DHTML イベント マップの開始位置を示します。|
 |[DECLARE_DHTML_EVENT_MAP](#declare_dhtml_event_map)|DHTML イベント マップを宣言します。|
 |[DHTML_EVENT](#dhtml_event)|1 つの HTML 要素のドキュメント レベルでイベントを処理するために使用します。|
-|[DHTML_EVENT_AXCONTROL](#dhtml_event_axcontrol)|ActiveX コントロールが発生するイベントを処理するために使用します。|
-|[DHTML_EVENT_CLASS](#dhtml_event_class)|特定の CSS クラスを使用してすべての HTML 要素のドキュメント レベルでイベントを処理するために使用します。|
+|[DHTML_EVENT_AXCONTROL](#dhtml_event_axcontrol)|ActiveX コントロールによって発生したイベントを処理するために使用します。|
+|[DHTML_EVENT_CLASS](#dhtml_event_class)|特定の CSS クラスを持つすべての HTML 要素のドキュメント レベルでイベントを処理するために使用します。|
 |[DHTML_EVENT_ELEMENT](#dhtml_event_element)|要素レベルでイベントを処理するために使用します。|
-|[DHTML_EVENT_ONAFTERUPDATE](#dhtml_event_onafterupdate)|処理するために使用される、 `onafterupdate` HTML 要素からのイベント。|
-|[DHTML_EVENT_ONBEFOREUPDATE](#dhtml_event_onbeforeupdate)|処理するために使用される、 `onbeforeupdate` HTML 要素からのイベント。|
-|[DHTML_EVENT_ONBLUR](#dhtml_event_onblur)|処理するために使用される、 `onblur` HTML 要素からのイベント。|
-|[DHTML_EVENT_ONCHANGE](#dhtml_event_onchange)|処理するために使用される、 `onchange` HTML 要素からのイベント。|
-|[DHTML_EVENT_ONCLICK](#dhtml_event_onclick)|処理するために使用される、 `onclick` HTML 要素からのイベント。|
-|[DHTML_EVENT_ONDATAAVAILABLE](#dhtml_event_ondataavailable)|処理するために使用される、 `ondataavailable` HTML 要素からのイベント。|
-|[DHTML_EVENT_ONDATASETCHANGED](#dhtml_event_ondatasetchanged)|処理するために使用される、 `ondatasetchanged` HTML 要素からのイベント。|
-|[DHTML_EVENT_ONDATASETCOMPLETE](#dhtml_event_ondatasetcomplete)|処理するために使用される、 `ondatasetcomplete` HTML 要素からのイベント。|
-|[DHTML_EVENT_ONDBLCLICK](#dhtml_event_ondblclick)|処理するために使用される、 `ondblclick` HTML 要素からのイベント。|
-|[DHTML_EVENT_ONDRAGSTART](#dhtml_event_ondragstart)|処理するために使用される、 `ondragstart` HTML 要素からのイベント。|
-|[DHTML_EVENT_ONERRORUPDATE](#dhtml_event_onerrorupdate)|処理するために使用される、 `onerrorupdate` HTML 要素からのイベント。|
-|[DHTML_EVENT_ONFILTERCHANGE](#dhtml_event_onfilterchange)|処理するために使用される、 `onfilterchange` HTML 要素からのイベント。|
-|[DHTML_EVENT_ONFOCUS](#dhtml_event_onfocus)|処理するために使用される、 `onfocus` HTML 要素からのイベント。|
-|[DHTML_EVENT_ONHELP](#dhtml_event_onhelp)|処理するために使用される、 `onhelp` HTML 要素からのイベント。|
-|[DHTML_EVENT_ONKEYDOWN](#dhtml_event_onkeydown)|処理するために使用される、 `onkeydown` HTML 要素からのイベント。|
-|[DHTML_EVENT_ONKEYPRESS](#dhtml_event_onkeypress)|処理するために使用される、 `onkeypress` HTML 要素からのイベント。|
-|[DHTML_EVENT_ONKEYUP](#dhtml_event_onkeyup)|処理するために使用される、 `onkeyup` HTML 要素からのイベント。|
-|[DHTML_EVENT_ONMOUSEDOWN](#dhtml_event_onmousedown)|処理するために使用される、 `onmousedown` HTML 要素からのイベント。|
-|[DHTML_EVENT_ONMOUSEMOVE](#dhtml_event_onmousemove)|処理するために使用される、 `onmousemove` HTML 要素からのイベント。|
-|[DHTML_EVENT_ONMOUSEOUT](#dhtml_event_onmouseout)|処理するために使用される、 `onmouseout` HTML 要素からのイベント。|
-|[DHTML_EVENT_ONMOUSEOVER](#dhtml_event_onmouseover)|処理するために使用される、 `onmouseover` HTML 要素からのイベント。|
-|[DHTML_EVENT_ONMOUSEUP](#dhtml_event_onmouseup)|処理するために使用される、 `onmouseup` HTML 要素からのイベント。|
-|[DHTML_EVENT_ONRESIZE](#dhtml_event_onresize)|処理するために使用される、 `onresize` HTML 要素からのイベント。|
-|[DHTML_EVENT_ONROWENTER](#dhtml_event_onrowenter)|処理するために使用される、 `onrowenter` HTML 要素からのイベント。|
-|[DHTML_EVENT_ONROWEXIT](#dhtml_event_onrowexit)|処理するために使用される、 `onrowexit` HTML 要素からのイベント。|
-|[DHTML_EVENT_ONSELECTSTART](#dhtml_event_onselectstart)|処理するために使用される、 `onselectstart` HTML 要素からのイベント。|
-|[DHTML_EVENT_TAG](#dhtml_event_tag)|特定の HTML タグを持つすべての要素のドキュメント レベルでイベントを処理するために使用します。|
+|[DHTML_EVENT_ONAFTERUPDATE](#dhtml_event_onafterupdate)|HTML 要素から`onafterupdate`イベントを処理するために使用します。|
+|[DHTML_EVENT_ONBEFOREUPDATE](#dhtml_event_onbeforeupdate)|HTML 要素から`onbeforeupdate`イベントを処理するために使用します。|
+|[DHTML_EVENT_ONBLUR](#dhtml_event_onblur)|HTML 要素から`onblur`イベントを処理するために使用します。|
+|[DHTML_EVENT_ONCHANGE](#dhtml_event_onchange)|HTML 要素から`onchange`イベントを処理するために使用します。|
+|[DHTML_EVENT_ONCLICK](#dhtml_event_onclick)|HTML 要素から`onclick`イベントを処理するために使用します。|
+|[DHTML_EVENT_ONDATAAVAILABLE](#dhtml_event_ondataavailable)|HTML 要素から`ondataavailable`イベントを処理するために使用します。|
+|[DHTML_EVENT_ONDATASETCHANGED](#dhtml_event_ondatasetchanged)|HTML 要素から`ondatasetchanged`イベントを処理するために使用します。|
+|[DHTML_EVENT_ONDATASETCOMPLETE](#dhtml_event_ondatasetcomplete)|HTML 要素から`ondatasetcomplete`イベントを処理するために使用します。|
+|[DHTML_EVENT_ONDBLCLICK](#dhtml_event_ondblclick)|HTML 要素から`ondblclick`イベントを処理するために使用します。|
+|[DHTML_EVENT_ONDRAGSTART](#dhtml_event_ondragstart)|HTML 要素から`ondragstart`イベントを処理するために使用します。|
+|[DHTML_EVENT_ONERRORUPDATE](#dhtml_event_onerrorupdate)|HTML 要素から`onerrorupdate`イベントを処理するために使用します。|
+|[DHTML_EVENT_ONFILTERCHANGE](#dhtml_event_onfilterchange)|HTML 要素から`onfilterchange`イベントを処理するために使用します。|
+|[DHTML_EVENT_ONFOCUS](#dhtml_event_onfocus)|HTML 要素から`onfocus`イベントを処理するために使用します。|
+|[DHTML_EVENT_ONHELP](#dhtml_event_onhelp)|HTML 要素から`onhelp`イベントを処理するために使用します。|
+|[DHTML_EVENT_ONKEYDOWN](#dhtml_event_onkeydown)|HTML 要素から`onkeydown`イベントを処理するために使用します。|
+|[DHTML_EVENT_ONKEYPRESS](#dhtml_event_onkeypress)|HTML 要素から`onkeypress`イベントを処理するために使用します。|
+|[DHTML_EVENT_ONKEYUP](#dhtml_event_onkeyup)|HTML 要素から`onkeyup`イベントを処理するために使用します。|
+|[DHTML_EVENT_ONMOUSEDOWN](#dhtml_event_onmousedown)|HTML 要素から`onmousedown`イベントを処理するために使用します。|
+|[DHTML_EVENT_ONMOUSEMOVE](#dhtml_event_onmousemove)|HTML 要素から`onmousemove`イベントを処理するために使用します。|
+|[DHTML_EVENT_ONMOUSEOUT](#dhtml_event_onmouseout)|HTML 要素から`onmouseout`イベントを処理するために使用します。|
+|[DHTML_EVENT_ONMOUSEOVER](#dhtml_event_onmouseover)|HTML 要素から`onmouseover`イベントを処理するために使用します。|
+|[DHTML_EVENT_ONMOUSEUP](#dhtml_event_onmouseup)|HTML 要素から`onmouseup`イベントを処理するために使用します。|
+|[DHTML_EVENT_ONRESIZE](#dhtml_event_onresize)|HTML 要素から`onresize`イベントを処理するために使用します。|
+|[DHTML_EVENT_ONROWENTER](#dhtml_event_onrowenter)|HTML 要素から`onrowenter`イベントを処理するために使用します。|
+|[DHTML_EVENT_ONROWEXIT](#dhtml_event_onrowexit)|HTML 要素から`onrowexit`イベントを処理するために使用します。|
+|[DHTML_EVENT_ONSELECTSTART](#dhtml_event_onselectstart)|HTML 要素から`onselectstart`イベントを処理するために使用します。|
+|[DHTML_EVENT_TAG](#dhtml_event_tag)|特定の HTML タグを持つすべての要素について、ドキュメント レベルでイベントを処理するために使用します。|
 |[END_DHTML_EVENT_MAP](#end_dhtml_event_map)|DHTML イベント マップの末尾をマークします。|
 |[END_DHTML_EVENT_MAP_INLINE](#end_dhtml_event_map_inline)|DHTML イベント マップの末尾をマークします。 |
 
 ## <a name="url-event-map-macros"></a>URL イベント マップ マクロ
 
-DHTML イベントを処理するために、次のマクロを使用できます[CMultiPageDHtmlDialog](../../mfc/reference/cmultipagedhtmldialog-class.md)-クラスを派生します。
+次のマクロを使用して[、派生](../../mfc/reference/cmultipagedhtmldialog-class.md)クラスの DHTML イベントを処理できます。
 
 |||
 |-|-|
-|[BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map)|複数ページの DHTML および URL のイベント マップの開始をマークします。|
-|[BEGIN_EMBED_DHTML_EVENT_MAP](#begin_embed_dhtml_event_map)|埋め込みの DHTML イベント マップの開始をマークします。|
-|[BEGIN_URL_ENTRIES](#begin_url_entries)|URL のイベント エントリ マップの開始をマークします。|
-|[DECLARE_DHTML_URL_EVENT_MAP](#declare_dhtml_url_event_map)|複数ページの DHTML および URL のイベント マップを宣言します。|
-|[END_DHTML_URL_EVENT_MAP](#end_dhtml_url_event_map)|複数ページの DHTML および URL のイベント マップの最後をマークします。|
-|[END_EMBED_DHTML_EVENT_MAP](#end_embed_dhtml_event_map)|埋め込みの DHTML イベント マップの末尾をマークします。|
-|[END_URL_ENTRIES](#end_url_entries)|URL のイベント エントリのマップの終了を示します。|
-|[URL_EVENT_ENTRY](#url_event_entry)|マルチページ ダイアログ内のページには、URL または HTML リソースをマップします。|
+|[BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map)|マルチページ DHTML および URL イベント マップの開始を示します。|
+|[BEGIN_EMBED_DHTML_EVENT_MAP](#begin_embed_dhtml_event_map)|埋め込まれた DHTML イベント マップの開始位置を示します。|
+|[BEGIN_URL_ENTRIES](#begin_url_entries)|URL イベントエントリマップの開始位置を示します。|
+|[DECLARE_DHTML_URL_EVENT_MAP](#declare_dhtml_url_event_map)|複数ページの DHTML と URL イベント マップを宣言します。|
+|[END_DHTML_URL_EVENT_MAP](#end_dhtml_url_event_map)|マルチページ DHTML と URL イベント マップの末尾を示します。|
+|[END_EMBED_DHTML_EVENT_MAP](#end_embed_dhtml_event_map)|埋め込まれた DHTML イベント マップの末尾をマークします。|
+|[END_URL_ENTRIES](#end_url_entries)|URL イベントエントリマップの終わりを示します。|
+|[URL_EVENT_ENTRY](#url_event_entry)|URL または HTML リソースを複数ページのダイアログ内のページにマップします。|
 
 ### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdhtml.h
 
-##  <a name="begin_dhtml_event_map"></a>  BEGIN_DHTML_EVENT_MAP
+## <a name="begin_dhtml_event_map"></a><a name="begin_dhtml_event_map"></a>BEGIN_DHTML_EVENT_MAP
 
-DHTML イベント マップで識別されるクラスのソース ファイルに配置した場合の開始をマーク`className`します。
+で`className`識別されるクラスのソース ファイルに配置された場合、DHTML イベント マップの先頭をマークします。
 
-```
+```cpp
 BEGIN_DHTML_EVENT_MAP(className)
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*className*<br/>
-DHTML イベント マップを含むクラスの名前。 このクラスから直接または間接的に派生する必要があります[CDHtmlDialog](../../mfc/reference/cdhtmldialog-class.md)を含めると、 [DECLARE_DHTML_EVENT_MAP](#declare_dhtml_event_map)マクロをそのクラス定義内で。
+*Classname*<br/>
+DHTML イベント マップを含むクラスの名前。 このクラスは[、CDHtmlDialog](../../mfc/reference/cdhtmldialog-class.md)から直接または間接的に派生し、クラス定義内に[DECLARE_DHTML_EVENT_MAP](#declare_dhtml_event_map)マクロを含める必要があります。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-DHTML イベント マップの追加情報を提供するクラスに`CDHtmlDialog`HTML 要素や、クラスのハンドラー関数を web ページでの ActiveX コントロールによって発生したイベントのルーティングに使用できます。
+クラスに DHTML イベント マップを追加して、WEB ページ内の HTML 要素または ActiveX コントロールによって発生`CDHtmlDialog`するイベントをクラス内のハンドラー関数にルーティングするために使用できる情報を提供します。
 
-クラスの実装 (.cpp) ファイルが処理するために、クラスは、イベントの DHTML_EVENT マクロに続く (たとえば、mouseover イベント DHTML_EVENT_ONMOUSEOVER) BEGIN_DHTML_EVENT_MAP マクロを配置します。 使用して、 [END_DHTML_EVENT_MAP](#end_dhtml_event_map)マクロ イベント マップの終わりをマークします。 これらのマクロは、次の関数を実装します。
+クラスの実装 (.cpp) ファイルにBEGIN_DHTML_EVENT_MAPマクロを配置し、そのクラスが処理するイベントに対してDHTML_EVENTマクロを配置します (マウスオーバー イベントのDHTML_EVENT_ONMOUSEOVERなど)。 [END_DHTML_EVENT_MAP](#end_dhtml_event_map)マクロを使用して、イベント マップの終了をマークします。 これらのマクロは、次の関数を実装します。
 
 `virtual const DHtmlEventMapEntry* GetDHtmlEventMap();`
 
@@ -108,24 +108,24 @@ DHTML イベント マップの追加情報を提供するクラスに`CDHtmlDia
 
   **ヘッダー** afxdhtml.h
 
-##  <a name="begin_dhtml_event_map_inline"></a>  BEGIN_DHTML_EVENT_MAP_INLINE
+## <a name="begin_dhtml_event_map_inline"></a><a name="begin_dhtml_event_map_inline"></a>BEGIN_DHTML_EVENT_MAP_INLINE
 
-DHTML イベント マップ内のクラス定義の開始をマーク*className*します。
+クラス定義内の DHTML イベント マップの先頭を*示*します。
 
-```
+```cpp
 BEGIN_DHTML_EVENT_MAP_INLINE(className)
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*className*<br/>
-DHTML イベント マップを含むクラスの名前。 このクラスから直接または間接的に派生する必要があります[CDHtmlDialog](../../mfc/reference/cdhtmldialog-class.md)を含めると、 [DECLARE_DHTML_EVENT_MAP](#declare_dhtml_event_map)マクロをそのクラス定義内で。
+*Classname*<br/>
+DHTML イベント マップを含むクラスの名前。 このクラスは[、CDHtmlDialog](../../mfc/reference/cdhtmldialog-class.md)から直接または間接的に派生し、クラス定義内に[DECLARE_DHTML_EVENT_MAP](#declare_dhtml_event_map)マクロを含める必要があります。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-DHTML イベント マップの追加情報を提供するクラスに`CDHtmlDialog`HTML 要素や、クラスのハンドラー関数を web ページでの ActiveX コントロールによって発生したイベントのルーティングに使用できます。
+クラスに DHTML イベント マップを追加して、WEB ページ内の HTML 要素または ActiveX コントロールによって発生`CDHtmlDialog`するイベントをクラス内のハンドラー関数にルーティングするために使用できる情報を提供します。
 
-クラスの定義 (.h) ファイルが処理するために、クラスは、イベントの DHTML_EVENT マクロに続く (たとえば、mouseover イベント DHTML_EVENT_ONMOUSEOVER) BEGIN_DHTML_EVENT_MAP マクロを配置します。 使用して、 [END_DHTML_EVENT_MAP_INLINE](#end_dhtml_event_map_inline)マクロ イベント マップの終わりをマークします。 これらのマクロは、次の関数を実装します。
+BEGIN_DHTML_EVENT_MAPマクロをクラスの定義 (.h) ファイルに置き、そのクラスが処理するイベントのDHTML_EVENTマクロ (たとえば、マウスオーバー イベントのDHTML_EVENT_ONMOUSEOVER) を指定します。 [END_DHTML_EVENT_MAP_INLINE](#end_dhtml_event_map_inline)マクロを使用して、イベント マップの終了をマークします。 これらのマクロは、次の関数を実装します。
 
 `virtual const DHtmlEventMapEntry* GetDHtmlEventMap();`
 
@@ -133,21 +133,21 @@ DHTML イベント マップの追加情報を提供するクラスに`CDHtmlDia
 
   **ヘッダー** afxdhtml.h
 
-##  <a name="declare_dhtml_event_map"></a>  DECLARE_DHTML_EVENT_MAP
+## <a name="declare_dhtml_event_map"></a><a name="declare_dhtml_event_map"></a>DECLARE_DHTML_EVENT_MAP
 
-DHTML イベント マップ、クラス定義で宣言します。
+クラス定義で DHTML イベント マップを宣言します。
 
-```
+```cpp
 DECLARE_DHTML_EVENT_MAP()
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このマクロは、の定義で使用される[CDHtmlDialog](../../mfc/reference/cdhtmldialog-class.md)-クラスを派生します。
+このマクロは[、CDHtmlDialog](../../mfc/reference/cdhtmldialog-class.md)派生クラスの定義で使用されます。
 
-使用[BEGIN_DHTML_EVENT_MAP](#begin_dhtml_event_map)または[BEGIN_DHTML_EVENT_MAP_INLINE](#begin_dhtml_event_map_inline)マップを実装します。
+[BEGIN_DHTML_EVENT_MAP](#begin_dhtml_event_map)または[BEGIN_DHTML_EVENT_MAP_INLINE](#begin_dhtml_event_map_inline)を使用してマップを実装します。
 
-[DECLARE_DHTML_EVENT_MAP](#declare_dhtml_event_map)次の関数を宣言します。
+[DECLARE_DHTML_EVENT_MAP](#declare_dhtml_event_map)は、次の関数を宣言します。
 
 `virtual const DHtmlEventMapEntry* GetDHtmlEventMap( );`
 
@@ -155,811 +155,796 @@ DECLARE_DHTML_EVENT_MAP()
 
   **ヘッダー** afxdhtml.h
 
-##  <a name="dhtml_event"></a>  DHTML_EVENT
+## <a name="dhtml_event"></a><a name="dhtml_event"></a>DHTML_EVENT
 
-識別されるイベントを (ドキュメント レベル) で処理*dispid*で識別される HTML 要素で発生した*した*します。
+(ドキュメント レベルで) *dispid*によって識別されるイベントを*処理*します。
 
-```
+```cpp
 DHTML_EVENT(dispid, elemName,  memberFxn)
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*dispid*<br/>
-イベントを処理の DISPID。
+*Dispid*<br/>
+処理するイベントの DISPID。
 
 *elemName*<br/>
-イベント ソーシングの HTML 要素の ID を保持している、LPCWSTR またはドキュメント イベントを処理する場合は NULL です。
+イベントをソースする HTML 要素の ID を保持する LPCWSTR、またはドキュメント イベントを処理する NULL。
 
-*memberFxn*<br/>
+*メンバーFxn*<br/>
 イベントのハンドラー関数。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-エントリを追加するこのマクロを使用して、 [DHTML イベント マップ](#begin_dhtml_event_map_inline)クラスにします。
+このマクロを使用して、クラスの[DHTML イベント マップ](#begin_dhtml_event_map_inline)にエントリを追加します。
 
 ### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdhtml.h
 
-##  <a name="dhtml_event_axcontrol"></a>  DHTML_EVENT_AXCONTROL
+## <a name="dhtml_event_axcontrol"></a><a name="dhtml_event_axcontrol"></a>DHTML_EVENT_AXCONTROL
 
-識別されるイベントを処理する*dispid*で指定された ActiveX コントロールによって発生した*controlName*します。
+*controlName*によって識別される ActiveX コントロールによって発生した*dispid*によって識別されるイベントを処理します。
 
-```
+```cpp
 DHTML_EVENT_AXCONTROL(dispid, controlName,  memberFxn)
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*dispid*<br/>
+*Dispid*<br/>
 処理するイベントのディスパッチ ID。
 
-*controlName*<br/>
-イベントを発生させるコントロールの HTML ID を保持している LPCWSTR します。
+*コントロール名*<br/>
+イベントを発生するコントロールの HTML ID を保持する LPCWSTR です。
 
-*memberFxn*<br/>
+*メンバーFxn*<br/>
 イベントのハンドラー関数。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-エントリを追加するこのマクロを使用して、 [DHTML イベント マップ](#begin_dhtml_event_map_inline)クラスにします。
+このマクロを使用して、クラスの[DHTML イベント マップ](#begin_dhtml_event_map_inline)にエントリを追加します。
 
 ### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdhtml.h
 
-##  <a name="dhtml_event_class"></a>  DHTML_EVENT_CLASS
+## <a name="dhtml_event_class"></a><a name="dhtml_event_class"></a>DHTML_EVENT_CLASS
 
-識別されるイベントを (ドキュメント レベル) で処理*dispid*で識別される CSS クラスを使用して、任意の HTML 要素で発生した*した*します。
+(ドキュメント レベルで) *dispid*によって識別されるイベントを*処理*します。
 
-```
+```cpp
 DHTML_EVENT_CLASS(dispid, elemName,  memberFxn)
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*dispid*<br/>
+*Dispid*<br/>
 処理するイベントのディスパッチ ID。
 
 *elemName*<br/>
-イベント ソーシングの HTML 要素の CSS クラスを保持している LPCWSTR します。
+イベントをソースとする HTML 要素の CSS クラスを保持する LPCWSTR です。
 
-*memberFxn*<br/>
+*メンバーFxn*<br/>
 イベントのハンドラー関数。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-エントリを追加するこのマクロを使用して、 [DHTML イベント マップ](#begin_dhtml_event_map_inline)クラスにします。
+このマクロを使用して、クラスの[DHTML イベント マップ](#begin_dhtml_event_map_inline)にエントリを追加します。
 
 ### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdhtml.h
 
-##  <a name="dhtml_event_element"></a>  DHTML_EVENT_ELEMENT
+## <a name="dhtml_event_element"></a><a name="dhtml_event_element"></a>DHTML_EVENT_ELEMENT
 
-処理 (によって識別された要素に*した*) で識別されるイベント*dispid*します。
+*(ememName*で識別される要素) で *、dispid*によって識別されるイベントを処理します。
 
-```
+```cpp
 DHTML_EVENT_ELEMENT(dispid, elemName,  memberFxn)
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*dispid*<br/>
+*Dispid*<br/>
 処理するイベントのディスパッチ ID。
 
 *elemName*<br/>
-イベント ソーシングの HTML 要素の ID を保持している LPCWSTR します。
+イベントをソースする HTML 要素の ID を保持する LPCWSTR です。
 
-*memberFxn*<br/>
+*メンバーFxn*<br/>
 イベントのハンドラー関数。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-エントリを追加するこのマクロを使用して、 [DHTML イベント マップ](#begin_dhtml_event_map_inline)クラスにします。
+このマクロを使用して、クラスの[DHTML イベント マップ](#begin_dhtml_event_map_inline)にエントリを追加します。
 
-イベントのソースがで識別される要素になる非バブル イベントを処理するためにこのマクロを使用する場合*した*します。
+このマクロを使用して非バブル イベントを処理する場合、イベントのソースは*elemName*で識別される要素になります。
 
-バブル イベントを処理するためにこのマクロを使用する場合は、要素が付いて*した*イベントのソースができない可能性があります (ソースの任意の要素に含まれている可能性があります*した*)。
+このマクロを使用してバブル イベントを処理する場合 *、elemName*によって識別される要素がイベントのソースでない可能性があります (ソースは*elemName*に含まれる要素である可能性があります)。
 
 ### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdhtml.h
 
-##  <a name="dhtml_event_onafterupdate"></a>  DHTML_EVENT_ONAFTERUPDATE
+## <a name="dhtml_event_onafterupdate"></a><a name="dhtml_event_onafterupdate"></a>DHTML_EVENT_ONAFTERUPDATE
 
-(ドキュメント レベル) で処理、`onafterupdate`で識別される HTML 要素によってイベントの発生元*した*します。
+`onafterupdate` *elemName*で識別される HTML 要素によって発生したイベントをドキュメント レベルで処理します。
 
-```
+```cpp
 DHTML_EVENT_ONAFTERUPDATE(elemName, memberFxn)
 ```
 
 ### <a name="parameters"></a>パラメーター
 
 *elemName*<br/>
-イベント ソーシングの HTML 要素の ID を保持している LPCWSTR します。
+イベントをソースする HTML 要素の ID を保持する LPCWSTR です。
 
-*memberFxn*<br/>
+*メンバーFxn*<br/>
 イベントのハンドラー関数。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-エントリを追加するこのマクロを使用して、 [DHTML イベント マップ](#begin_dhtml_event_map_inline)クラスにします。
+このマクロを使用して、クラスの[DHTML イベント マップ](#begin_dhtml_event_map_inline)にエントリを追加します。
 
 ### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdhtml.h
 
-##  <a name="dhtml_event_onbeforeupdate"></a>  DHTML_EVENT_ONBEFOREUPDATE
+## <a name="dhtml_event_onbeforeupdate"></a><a name="dhtml_event_onbeforeupdate"></a>DHTML_EVENT_ONBEFOREUPDATE
 
-(ドキュメント レベル) で処理、`onbeforeupdate`で識別される HTML 要素によってイベントの発生元*した*します。
+`onbeforeupdate` *elemName*で識別される HTML 要素によって発生したイベントをドキュメント レベルで処理します。
 
-```
+```cpp
 DHTML_EVENT_ONBEFOREUPDATE(elemName, memberFxn)
 ```
 
 ### <a name="parameters"></a>パラメーター
 
 *elemName*<br/>
-イベント ソーシングの HTML 要素の ID を保持している LPCWSTR します。
+イベントをソースする HTML 要素の ID を保持する LPCWSTR です。
 
-*memberFxn*<br/>
+*メンバーFxn*<br/>
 イベントのハンドラー関数。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-エントリを追加するこのマクロを使用して、 [DHTML イベント マップ](#begin_dhtml_event_map_inline)クラスにします。
+このマクロを使用して、クラスの[DHTML イベント マップ](#begin_dhtml_event_map_inline)にエントリを追加します。
 
 ### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdhtml.h
 
-##  <a name="dhtml_event_onblur"></a>  DHTML_EVENT_ONBLUR
+## <a name="dhtml_event_onblur"></a><a name="dhtml_event_onblur"></a>DHTML_EVENT_ONBLUR
 
-(レベル要素) を処理、`onblur`イベント。 これは、非バブル イベントです。
+イベントを (要素レベルで)`onblur`処理します。 これは非バブルイベントです。
 
-```
+```cpp
 DHTML_EVENT_ONBLUR(elemName, memberFxn)
 ```
 
 ### <a name="parameters"></a>パラメーター
 
 *elemName*<br/>
-イベント ソーシングの HTML 要素の ID を保持している LPCWSTR します。
+イベントをソースする HTML 要素の ID を保持する LPCWSTR です。
 
-*memberFxn*<br/>
+*メンバーFxn*<br/>
 イベントのハンドラー関数。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-エントリを追加するこのマクロを使用して、 [DHTML イベント マップ](#begin_dhtml_event_map_inline)クラスにします。
+このマクロを使用して、クラスの[DHTML イベント マップ](#begin_dhtml_event_map_inline)にエントリを追加します。
 
 ### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdhtml.h
 
-##  <a name="dhtml_event_onchange"></a>  DHTML_EVENT_ONCHANGE
+## <a name="dhtml_event_onchange"></a><a name="dhtml_event_onchange"></a>DHTML_EVENT_ONCHANGE
 
-(レベル要素) を処理、`onchange`イベント。 これは、非バブル イベントです。
+イベントを (要素レベルで)`onchange`処理します。 これは非バブルイベントです。
 
-```
+```cpp
 DHTML_EVENT_ONCHANGE(elemName, memberFxn)
 ```
 
 ### <a name="parameters"></a>パラメーター
 
 *elemName*<br/>
-イベント ソーシングの HTML 要素の ID を保持している LPCWSTR します。
+イベントをソースする HTML 要素の ID を保持する LPCWSTR です。
 
-*memberFxn*<br/>
+*メンバーFxn*<br/>
 イベントのハンドラー関数。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-エントリを追加するこのマクロを使用して、 [DHTML イベント マップ](#begin_dhtml_event_map_inline)クラスにします。
+このマクロを使用して、クラスの[DHTML イベント マップ](#begin_dhtml_event_map_inline)にエントリを追加します。
 
 ### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdhtml.h
 
-##  <a name="dhtml_event_onclick"></a>  DHTML_EVENT_ONCLICK
+## <a name="dhtml_event_onclick"></a><a name="dhtml_event_onclick"></a>DHTML_EVENT_ONCLICK
 
-(ドキュメント レベル) で処理、`onclick`で識別される HTML 要素によってイベントの発生元*した*します。
+`onclick` *elemName*で識別される HTML 要素によって発生したイベントをドキュメント レベルで処理します。
 
-```
+```cpp
 DHTML_EVENT_ONCLICK(elemName, memberFxn)
 ```
 
 ### <a name="parameters"></a>パラメーター
 
 *elemName*<br/>
-イベント ソーシングの HTML 要素の ID を保持している LPCWSTR します。
+イベントをソースする HTML 要素の ID を保持する LPCWSTR です。
 
-*memberFxn*<br/>
+*メンバーFxn*<br/>
 イベントのハンドラー関数。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-エントリを追加するこのマクロを使用して、 [DHTML イベント マップ](#begin_dhtml_event_map_inline)クラスにします。
+このマクロを使用して、クラスの[DHTML イベント マップ](#begin_dhtml_event_map_inline)にエントリを追加します。
 
 ### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdhtml.h
 
-##  <a name="dhtml_event_ondataavailable"></a>  DHTML_EVENT_ONDATAAVAILABLE
+## <a name="dhtml_event_ondataavailable"></a><a name="dhtml_event_ondataavailable"></a>DHTML_EVENT_ONDATAAVAILABLE
 
-(ドキュメント レベル) で処理、`ondataavailable`で識別される HTML 要素によってイベントの発生元*した*します。
+`ondataavailable` *elemName*で識別される HTML 要素によって発生したイベントをドキュメント レベルで処理します。
 
-```
+```cpp
 DHTML_EVENT_ONDATAAVAILABLE(elemName, memberFxn)
 ```
 
 ### <a name="parameters"></a>パラメーター
 
 *elemName*<br/>
-イベント ソーシングの HTML 要素の ID を保持している LPCWSTR します。
+イベントをソースする HTML 要素の ID を保持する LPCWSTR です。
 
-*memberFxn*<br/>
+*メンバーFxn*<br/>
 イベントのハンドラー関数。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-エントリを追加するこのマクロを使用して、 [DHTML イベント マップ](#begin_dhtml_event_map_inline)クラスにします。
+このマクロを使用して、クラスの[DHTML イベント マップ](#begin_dhtml_event_map_inline)にエントリを追加します。
 
 ### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdhtml.h
 
-##  <a name="dhtml_event_ondatasetchanged"></a>  DHTML_EVENT_ONDATASETCHANGED
+## <a name="dhtml_event_ondatasetchanged"></a><a name="dhtml_event_ondatasetchanged"></a>DHTML_EVENT_ONDATASETCHANGED
 
-(ドキュメント レベル) で処理、`ondatasetchanged`で識別される HTML 要素によってイベントの発生元*した*します。
+`ondatasetchanged` *elemName*で識別される HTML 要素によって発生したイベントをドキュメント レベルで処理します。
 
-```
+```cpp
 DHTML_EVENT_ONDATASETCHANGED(elemName, memberFxn)
 ```
 
 ### <a name="parameters"></a>パラメーター
 
 *elemName*<br/>
-イベント ソーシングの HTML 要素の ID を保持している LPCWSTR します。
+イベントをソースする HTML 要素の ID を保持する LPCWSTR です。
 
-*memberFxn*<br/>
+*メンバーFxn*<br/>
 イベントのハンドラー関数。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-エントリを追加するこのマクロを使用して、 [DHTML イベント マップ](#begin_dhtml_event_map_inline)クラスにします。
+このマクロを使用して、クラスの[DHTML イベント マップ](#begin_dhtml_event_map_inline)にエントリを追加します。
 
 ### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdhtml.h
 
-##  <a name="dhtml_event_ondatasetcomplete"></a>  DHTML_EVENT_ONDATASETCOMPLETE
+## <a name="dhtml_event_ondatasetcomplete"></a><a name="dhtml_event_ondatasetcomplete"></a>DHTML_EVENT_ONDATASETCOMPLETE
 
-(ドキュメント レベル) で処理、`ondatasetcomplete`で識別される HTML 要素によってイベントの発生元`elemName`します。
+によって識別される HTML 要素によって`ondatasetcomplete`発生したイベントをドキュメント レベルで`elemName`処理します。
 
-```
+```cpp
 DHTML_EVENT_ONDATASETCOMPLETE(elemName, memberFxn)
 ```
 
 ### <a name="parameters"></a>パラメーター
 
 *elemName*<br/>
-イベント ソーシングの HTML 要素の ID を保持している LPCWSTR します。
+イベントをソースする HTML 要素の ID を保持する LPCWSTR です。
 
-*memberFxn*<br/>
+*メンバーFxn*<br/>
 イベントのハンドラー関数。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-エントリを追加するこのマクロを使用して、 [DHTML イベント マップ](#begin_dhtml_event_map_inline)クラスにします。
+このマクロを使用して、クラスの[DHTML イベント マップ](#begin_dhtml_event_map_inline)にエントリを追加します。
 
 ### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdhtml.h
 
-##  <a name="dhtml_event_ondblclick"></a>  DHTML_EVENT_ONDBLCLICK
+## <a name="dhtml_event_ondblclick"></a><a name="dhtml_event_ondblclick"></a>DHTML_EVENT_ONDBLCLICK
 
-(ドキュメント レベル) で処理、`ondblclick`で識別される HTML 要素によってイベントの発生元*した*します。
+`ondblclick` *elemName*で識別される HTML 要素によって発生したイベントをドキュメント レベルで処理します。
 
-```
+```cpp
 DHTML_EVENT_ONDBLCLICK(elemName, memberFxn)
 ```
 
 ### <a name="parameters"></a>パラメーター
 
 *elemName*<br/>
-イベント ソーシングの HTML 要素の ID を保持している LPCWSTR します。
+イベントをソースする HTML 要素の ID を保持する LPCWSTR です。
 
-*memberFxn*<br/>
+*メンバーFxn*<br/>
 イベントのハンドラー関数。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-エントリを追加するこのマクロを使用して、 [DHTML イベント マップ](#begin_dhtml_event_map_inline)クラスにします。
+このマクロを使用して、クラスの[DHTML イベント マップ](#begin_dhtml_event_map_inline)にエントリを追加します。
 
 ### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdhtml.h
 
-##  <a name="dhtml_event_ondragstart"></a>  DHTML_EVENT_ONDRAGSTART
+## <a name="dhtml_event_ondragstart"></a><a name="dhtml_event_ondragstart"></a>DHTML_EVENT_ONDRAGSTART
 
-(ドキュメント レベル) で処理、`ondragstart`で識別される HTML 要素によってイベントの発生元*した*します。
+`ondragstart` *elemName*で識別される HTML 要素によって発生したイベントをドキュメント レベルで処理します。
 
-```
+```cpp
 DHTML_EVENT_ONDRAGSTART(elemName, memberFxn)
 ```
 
 ### <a name="parameters"></a>パラメーター
 
 *elemName*<br/>
-イベント ソーシングの HTML 要素の ID を保持している LPCWSTR します。
+イベントをソースする HTML 要素の ID を保持する LPCWSTR です。
 
-*memberFxn*<br/>
+*メンバーFxn*<br/>
 イベントのハンドラー関数。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-エントリを追加するこのマクロを使用して、 [DHTML イベント マップ](#begin_dhtml_event_map_inline)クラスにします。
+このマクロを使用して、クラスの[DHTML イベント マップ](#begin_dhtml_event_map_inline)にエントリを追加します。
 
 ### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdhtml.h
 
-##  <a name="dhtml_event_onerrorupdate"></a>  DHTML_EVENT_ONERRORUPDATE
+## <a name="dhtml_event_onerrorupdate"></a><a name="dhtml_event_onerrorupdate"></a>DHTML_EVENT_ONERRORUPDATE
 
-(ドキュメント レベル) で処理、`onerrorupdate`で識別される HTML 要素によってイベントの発生元*した*します。
+`onerrorupdate` *elemName*で識別される HTML 要素によって発生したイベントをドキュメント レベルで処理します。
 
-```
+```cpp
 DHTML_EVENT_ONERRORUPDATE(elemName, memberFxn)
 ```
 
 ### <a name="parameters"></a>パラメーター
 
 *elemName*<br/>
-イベント ソーシングの HTML 要素の ID を保持している LPCWSTR します。
+イベントをソースする HTML 要素の ID を保持する LPCWSTR です。
 
-*memberFxn*<br/>
+*メンバーFxn*<br/>
 イベントのハンドラー関数。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-エントリを追加するこのマクロを使用して、 [DHTML イベント マップ](#begin_dhtml_event_map_inline)クラスにします。
+このマクロを使用して、クラスの[DHTML イベント マップ](#begin_dhtml_event_map_inline)にエントリを追加します。
 
 ### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdhtml.h
 
-##  <a name="dhtml_event_onfilterchange"></a>  DHTML_EVENT_ONFILTERCHANGE
+## <a name="dhtml_event_onfilterchange"></a><a name="dhtml_event_onfilterchange"></a>DHTML_EVENT_ONFILTERCHANGE
 
-(ドキュメント レベル) で処理、`onfilterchange`で識別される HTML 要素によってイベントの発生元*した*します。
+`onfilterchange` *elemName*で識別される HTML 要素によって発生したイベントをドキュメント レベルで処理します。
 
-```
-
+```cpp
 DHTML_EVENT_ONFILTERCHANGE(elemName, memberFxn)
 ```
 
 ### <a name="parameters"></a>パラメーター
 
 *elemName*<br/>
-イベント ソーシングの HTML 要素の ID を保持している LPCWSTR します。
+イベントをソースする HTML 要素の ID を保持する LPCWSTR です。
 
-*memberFxn*<br/>
+*メンバーFxn*<br/>
 イベントのハンドラー関数。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-エントリを追加するこのマクロを使用して、 [DHTML イベント マップ](#begin_dhtml_event_map_inline)クラスにします。
+このマクロを使用して、クラスの[DHTML イベント マップ](#begin_dhtml_event_map_inline)にエントリを追加します。
 
 ### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdhtml.h
 
-##  <a name="dhtml_event_onfocus"></a>  DHTML_EVENT_ONFOCUS
+## <a name="dhtml_event_onfocus"></a><a name="dhtml_event_onfocus"></a>DHTML_EVENT_ONFOCUS
 
-(レベル要素) を処理、`onfocus`イベント。 これは、非バブル イベントです。
+イベントを (要素レベルで)`onfocus`処理します。 これは非バブルイベントです。
 
-```
-
+```cpp
 DHTML_EVENT_ONFOCUS(elemName, memberFxn)
 ```
 
 ### <a name="parameters"></a>パラメーター
 
 *elemName*<br/>
-イベント ソーシングの HTML 要素の ID を保持している LPCWSTR します。
+イベントをソースする HTML 要素の ID を保持する LPCWSTR です。
 
-*memberFxn*<br/>
+*メンバーFxn*<br/>
 イベントのハンドラー関数。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-エントリを追加するこのマクロを使用して、 [DHTML イベント マップ](#begin_dhtml_event_map_inline)クラスにします。
+このマクロを使用して、クラスの[DHTML イベント マップ](#begin_dhtml_event_map_inline)にエントリを追加します。
 
 ### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdhtml.h
 
-##  <a name="dhtml_event_onhelp"></a>  DHTML_EVENT_ONHELP
+## <a name="dhtml_event_onhelp"></a><a name="dhtml_event_onhelp"></a>DHTML_EVENT_ONHELP
 
-(ドキュメント レベル) で処理、`onhelp`で識別される HTML 要素によってイベントの発生元*した*します。
+`onhelp` *elemName*で識別される HTML 要素によって発生したイベントをドキュメント レベルで処理します。
 
-```
-
+```cpp
 DHTML_EVENT_ONHELP(elemName, memberFxn)
 ```
 
 ### <a name="parameters"></a>パラメーター
 
 *elemName*<br/>
-イベント ソーシングの HTML 要素の ID を保持している LPCWSTR します。
+イベントをソースする HTML 要素の ID を保持する LPCWSTR です。
 
-*memberFxn*<br/>
+*メンバーFxn*<br/>
 イベントのハンドラー関数。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-エントリを追加するこのマクロを使用して、 [DHTML イベント マップ](#begin_dhtml_event_map_inline)クラスにします。
+このマクロを使用して、クラスの[DHTML イベント マップ](#begin_dhtml_event_map_inline)にエントリを追加します。
 
 ### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdhtml.h
 
-##  <a name="dhtml_event_onkeydown"></a>  DHTML_EVENT_ONKEYDOWN
+## <a name="dhtml_event_onkeydown"></a><a name="dhtml_event_onkeydown"></a>DHTML_EVENT_ONKEYDOWN
 
-(ドキュメント レベル) で処理、`onkeydown`で識別される HTML 要素によってイベントの発生元*した*します。
+`onkeydown` *elemName*で識別される HTML 要素によって発生したイベントをドキュメント レベルで処理します。
 
-```
-
+```cpp
 DHTML_EVENT_ONKEYDOWN(elemName, memberFxn)
 ```
 
 ### <a name="parameters"></a>パラメーター
 
 *elemName*<br/>
-イベント ソーシングの HTML 要素の ID を保持している LPCWSTR します。
+イベントをソースする HTML 要素の ID を保持する LPCWSTR です。
 
-*memberFxn*<br/>
+*メンバーFxn*<br/>
 イベントのハンドラー関数。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-エントリを追加するこのマクロを使用して、 [DHTML イベント マップ](#begin_dhtml_event_map_inline)クラスにします。
+このマクロを使用して、クラスの[DHTML イベント マップ](#begin_dhtml_event_map_inline)にエントリを追加します。
 
 ### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdhtml.h
 
-##  <a name="dhtml_event_onkeypress"></a>  DHTML_EVENT_ONKEYPRESS
+## <a name="dhtml_event_onkeypress"></a><a name="dhtml_event_onkeypress"></a>DHTML_EVENT_ONKEYPRESS
 
-(ドキュメント レベル) で処理、`onkeypress`で識別される HTML 要素によってイベントの発生元*した*します。
+`onkeypress` *elemName*で識別される HTML 要素によって発生したイベントをドキュメント レベルで処理します。
 
-```
-
+```cpp
 DHTML_EVENT_ONKEYPRESS(elemName, memberFxn)
 ```
 
 ### <a name="parameters"></a>パラメーター
 
 *elemName*<br/>
-イベント ソーシングの HTML 要素の ID を保持している LPCWSTR します。
+イベントをソースする HTML 要素の ID を保持する LPCWSTR です。
 
-*memberFxn*<br/>
+*メンバーFxn*<br/>
 イベントのハンドラー関数。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-エントリを追加するこのマクロを使用して、 [DHTML イベント マップ](#begin_dhtml_event_map_inline)クラスにします。
+このマクロを使用して、クラスの[DHTML イベント マップ](#begin_dhtml_event_map_inline)にエントリを追加します。
 
 ### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdhtml.h
 
-##  <a name="dhtml_event_onkeyup"></a>  DHTML_EVENT_ONKEYUP
+## <a name="dhtml_event_onkeyup"></a><a name="dhtml_event_onkeyup"></a>DHTML_EVENT_ONKEYUP
 
-(ドキュメント レベル) で処理、`onkeyup`で識別される HTML 要素によってイベントの発生元*した*します。
+`onkeyup` *elemName*で識別される HTML 要素によって発生したイベントをドキュメント レベルで処理します。
 
-```
-
+```cpp
 DHTML_EVENT_ONKEYUP(elemName, memberFxn)
 ```
 
 ### <a name="parameters"></a>パラメーター
 
 *elemName*<br/>
-イベント ソーシングの HTML 要素の ID を保持している LPCWSTR します。
+イベントをソースする HTML 要素の ID を保持する LPCWSTR です。
 
-*memberFxn*<br/>
+*メンバーFxn*<br/>
 イベントのハンドラー関数。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-エントリを追加するこのマクロを使用して、 [DHTML イベント マップ](#begin_dhtml_event_map_inline)クラスにします。
+このマクロを使用して、クラスの[DHTML イベント マップ](#begin_dhtml_event_map_inline)にエントリを追加します。
 
 ### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdhtml.h
 
-##  <a name="dhtml_event_onmousedown"></a>  DHTML_EVENT_ONMOUSEDOWN
+## <a name="dhtml_event_onmousedown"></a><a name="dhtml_event_onmousedown"></a>DHTML_EVENT_ONMOUSEDOWN
 
-(ドキュメント レベル) で処理、`onmousedown`で識別される HTML 要素によってイベントの発生元*した*します。
+`onmousedown` *elemName*で識別される HTML 要素によって発生したイベントをドキュメント レベルで処理します。
 
-```
-
+```cpp
 DHTML_EVENT_ONMOUSEDOWN(elemName, memberFxn)
 ```
 
 ### <a name="parameters"></a>パラメーター
 
 *elemName*<br/>
-イベント ソーシングの HTML 要素の ID を保持している LPCWSTR します。
+イベントをソースする HTML 要素の ID を保持する LPCWSTR です。
 
-*memberFxn*<br/>
+*メンバーFxn*<br/>
 イベントのハンドラー関数。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-エントリを追加するこのマクロを使用して、 [DHTML イベント マップ](#begin_dhtml_event_map_inline)クラスにします。
+このマクロを使用して、クラスの[DHTML イベント マップ](#begin_dhtml_event_map_inline)にエントリを追加します。
 
 ### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdhtml.h
 
-##  <a name="dhtml_event_onmousemove"></a>  DHTML_EVENT_ONMOUSEMOVE
+## <a name="dhtml_event_onmousemove"></a><a name="dhtml_event_onmousemove"></a>DHTML_EVENT_ONMOUSEMOVE
 
-(ドキュメント レベル) で処理、`onmousemove`で識別される HTML 要素によってイベントの発生元*した*します。
+`onmousemove` *elemName*で識別される HTML 要素によって発生したイベントをドキュメント レベルで処理します。
 
-```
-
+```cpp
 DHTML_EVENT_ONMOUSEMOVE(elemName, memberFxn)
 ```
 
 ### <a name="parameters"></a>パラメーター
 
 *elemName*<br/>
-イベント ソーシングの HTML 要素の ID を保持している LPCWSTR します。
+イベントをソースする HTML 要素の ID を保持する LPCWSTR です。
 
-*memberFxn*<br/>
+*メンバーFxn*<br/>
 イベントのハンドラー関数。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-エントリを追加するこのマクロを使用して、 [DHTML イベント マップ](#begin_dhtml_event_map_inline)クラスにします。
+このマクロを使用して、クラスの[DHTML イベント マップ](#begin_dhtml_event_map_inline)にエントリを追加します。
 
 ### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdhtml.h
 
-##  <a name="dhtml_event_onmouseout"></a>  DHTML_EVENT_ONMOUSEOUT
+## <a name="dhtml_event_onmouseout"></a><a name="dhtml_event_onmouseout"></a>DHTML_EVENT_ONMOUSEOUT
 
-(ドキュメント レベル) で処理、`onmouseout`で識別される HTML 要素によってイベントの発生元*した*します。
+`onmouseout` *elemName*で識別される HTML 要素によって発生したイベントをドキュメント レベルで処理します。
 
-```
-
+```cpp
 DHTML_EVENT_ONMOUSEOUT(elemName, memberFxn)
 ```
 
 ### <a name="parameters"></a>パラメーター
 
 *elemName*<br/>
-イベント ソーシングの HTML 要素の ID を保持している LPCWSTR します。
+イベントをソースする HTML 要素の ID を保持する LPCWSTR です。
 
-*memberFxn*<br/>
+*メンバーFxn*<br/>
 イベントのハンドラー関数。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-エントリを追加するこのマクロを使用して、 [DHTML イベント マップ](#begin_dhtml_event_map_inline)クラスにします。
+このマクロを使用して、クラスの[DHTML イベント マップ](#begin_dhtml_event_map_inline)にエントリを追加します。
 
 ### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdhtml.h
 
-##  <a name="dhtml_event_onmouseover"></a>  DHTML_EVENT_ONMOUSEOVER
+## <a name="dhtml_event_onmouseover"></a><a name="dhtml_event_onmouseover"></a>DHTML_EVENT_ONMOUSEOVER
 
-(ドキュメント レベル) で処理、`onmouseover`で識別される HTML 要素によってイベントの発生元*した*します。
+`onmouseover` *elemName*で識別される HTML 要素によって発生したイベントをドキュメント レベルで処理します。
 
-```
-
+```cpp
 DHTML_EVENT_ONMOUSEOVER(elemName, memberFxn)
 ```
 
 ### <a name="parameters"></a>パラメーター
 
 *elemName*<br/>
-イベント ソーシングの HTML 要素の ID を保持している LPCWSTR します。
+イベントをソースする HTML 要素の ID を保持する LPCWSTR です。
 
-*memberFxn*<br/>
+*メンバーFxn*<br/>
 イベントのハンドラー関数。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-エントリを追加するこのマクロを使用して、 [DHTML イベント マップ](#begin_dhtml_event_map_inline)クラスにします。
+このマクロを使用して、クラスの[DHTML イベント マップ](#begin_dhtml_event_map_inline)にエントリを追加します。
 
 ### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdhtml.h
 
-##  <a name="dhtml_event_onmouseup"></a>  DHTML_EVENT_ONMOUSEUP
+## <a name="dhtml_event_onmouseup"></a><a name="dhtml_event_onmouseup"></a>DHTML_EVENT_ONMOUSEUP
 
-(ドキュメント レベル) で処理、`onmouseup`で識別される HTML 要素によってイベントの発生元*した*します。
+`onmouseup` *elemName*で識別される HTML 要素によって発生したイベントをドキュメント レベルで処理します。
 
-```
-
+```cpp
 DHTML_EVENT_ONMOUSEUP(elemName, memberFxn)
 ```
 
 ### <a name="parameters"></a>パラメーター
 
 *elemName*<br/>
-イベント ソーシングの HTML 要素の ID を保持している LPCWSTR します。
+イベントをソースする HTML 要素の ID を保持する LPCWSTR です。
 
-*memberFxn*<br/>
+*メンバーFxn*<br/>
 イベントのハンドラー関数。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-エントリを追加するこのマクロを使用して、 [DHTML イベント マップ](#begin_dhtml_event_map_inline)クラスにします。
+このマクロを使用して、クラスの[DHTML イベント マップ](#begin_dhtml_event_map_inline)にエントリを追加します。
 
 ### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdhtml.h
 
-##  <a name="dhtml_event_onresize"></a>  DHTML_EVENT_ONRESIZE
+## <a name="dhtml_event_onresize"></a><a name="dhtml_event_onresize"></a>DHTML_EVENT_ONRESIZE
 
-(レベル要素) を処理、`onresize`イベント。 これは、非バブル イベントです。
+イベントを (要素レベルで)`onresize`処理します。 これは非バブルイベントです。
 
-```
-
+```cpp
 DHTML_EVENT_ONRESIZE(elemName, memberFxn)
 ```
 
 ### <a name="parameters"></a>パラメーター
 
 *elemName*<br/>
-イベント ソーシングの HTML 要素の ID を保持している LPCWSTR します。
+イベントをソースする HTML 要素の ID を保持する LPCWSTR です。
 
-*memberFxn*<br/>
+*メンバーFxn*<br/>
 イベントのハンドラー関数。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-エントリを追加するこのマクロを使用して、 [DHTML イベント マップ](#begin_dhtml_event_map_inline)クラスにします。
+このマクロを使用して、クラスの[DHTML イベント マップ](#begin_dhtml_event_map_inline)にエントリを追加します。
 
 ### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdhtml.h
 
-##  <a name="dhtml_event_onrowenter"></a>  DHTML_EVENT_ONROWENTER
+## <a name="dhtml_event_onrowenter"></a><a name="dhtml_event_onrowenter"></a>DHTML_EVENT_ONROWENTER
 
-(ドキュメント レベル) で処理、`onrowenter`で識別される HTML 要素によってイベントの発生元*した*します。
+`onrowenter` *elemName*で識別される HTML 要素によって発生したイベントをドキュメント レベルで処理します。
 
-```
-
+```cpp
 DHTML_EVENT_ONROWENTER(elemName, memberFxn)
 ```
 
 ### <a name="parameters"></a>パラメーター
 
 *elemName*<br/>
-イベント ソーシングの HTML 要素の ID を保持している LPCWSTR します。
+イベントをソースする HTML 要素の ID を保持する LPCWSTR です。
 
-*memberFxn*<br/>
+*メンバーFxn*<br/>
 イベントのハンドラー関数。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-エントリを追加するこのマクロを使用して、 [DHTML イベント マップ](#begin_dhtml_event_map_inline)クラスにします。
+このマクロを使用して、クラスの[DHTML イベント マップ](#begin_dhtml_event_map_inline)にエントリを追加します。
 
 ### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdhtml.h
 
-##  <a name="dhtml_event_onrowexit"></a>  DHTML_EVENT_ONROWEXIT
+## <a name="dhtml_event_onrowexit"></a><a name="dhtml_event_onrowexit"></a>DHTML_EVENT_ONROWEXIT
 
-(ドキュメント レベル) で処理、`onrowexit`で識別される HTML 要素によってイベントの発生元*した*します。
+`onrowexit` *elemName*で識別される HTML 要素によって発生したイベントをドキュメント レベルで処理します。
 
-```
-
+```cpp
 DHTML_EVENT_ONROWEXIT(elemName, memberFxn)
 ```
 
 ### <a name="parameters"></a>パラメーター
 
 *elemName*<br/>
-イベント ソーシングの HTML 要素の ID を保持している LPCWSTR します。
+イベントをソースする HTML 要素の ID を保持する LPCWSTR です。
 
-*memberFxn*<br/>
+*メンバーFxn*<br/>
 イベントのハンドラー関数。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-エントリを追加するこのマクロを使用して、 [DHTML イベント マップ](#begin_dhtml_event_map_inline)クラスにします。
+このマクロを使用して、クラスの[DHTML イベント マップ](#begin_dhtml_event_map_inline)にエントリを追加します。
 
 ### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdhtml.h
 
-##  <a name="dhtml_event_onselectstart"></a>  DHTML_EVENT_ONSELECTSTART
+## <a name="dhtml_event_onselectstart"></a><a name="dhtml_event_onselectstart"></a>DHTML_EVENT_ONSELECTSTART
 
-(ドキュメント レベル) で処理、`onselectstart`で識別される HTML 要素によってイベントの発生元*した*します。
+`onselectstart` *elemName*で識別される HTML 要素によって発生したイベントをドキュメント レベルで処理します。
 
-```
-
+```cpp
 DHTML_EVENT_ONSELECTSTART(elemName, memberFxn)
 ```
 
 ### <a name="parameters"></a>パラメーター
 
 *elemName*<br/>
-イベント ソーシングの HTML 要素の ID を保持している LPCWSTR します。
+イベントをソースする HTML 要素の ID を保持する LPCWSTR です。
 
-*memberFxn*<br/>
+*メンバーFxn*<br/>
 イベントのハンドラー関数。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-エントリを追加するこのマクロを使用して、 [DHTML イベント マップ](#begin_dhtml_event_map_inline)クラスにします。
+このマクロを使用して、クラスの[DHTML イベント マップ](#begin_dhtml_event_map_inline)にエントリを追加します。
 
 ### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdhtml.h
 
-##  <a name="dhtml_event_tag"></a>  DHTML_EVENT_TAG
+## <a name="dhtml_event_tag"></a><a name="dhtml_event_tag"></a>DHTML_EVENT_TAG
 
-識別されるイベントを (ドキュメント レベル) で処理`dispid`で識別される HTML タグを持つ、HTML 要素で発生した*した*します。
+*elemName*で識別される HTML タグ`dispid`を持つ HTML 要素によって発生したイベントを (ドキュメント レベルで) 処理します。
 
-```
+```cpp
 DHTML_EVENT_TAG(dispid, elemName,  memberFxn)
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*dispid*<br/>
+*Dispid*<br/>
 処理するイベントのディスパッチ ID。
 
 *elemName*<br/>
-イベント ソーシングの HTML 要素の HTML タグ。
+イベントをソースする HTML 要素の HTML タグ。
 
-*memberFxn*<br/>
+*メンバーFxn*<br/>
 イベントのハンドラー関数。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-エントリを追加するこのマクロを使用して、 [DHTML イベント マップ](#begin_dhtml_event_map_inline)クラスにします。
+このマクロを使用して、クラスの[DHTML イベント マップ](#begin_dhtml_event_map_inline)にエントリを追加します。
 
 ### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdhtml.h
 
-##  <a name="end_dhtml_event_map"></a>  END_DHTML_EVENT_MAP
+## <a name="end_dhtml_event_map"></a><a name="end_dhtml_event_map"></a>END_DHTML_EVENT_MAP
 
 DHTML イベント マップの末尾をマークします。
 
-```
+```cpp
 END_DHTML_EVENT_MAP()
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-組み合わせて使用する必要があります[BEGIN_DHTML_EVENT_MAP](#begin_dhtml_event_map)します。
+[BEGIN_DHTML_EVENT_MAP](#begin_dhtml_event_map)と組み合わせて使用する必要があります。
 
 ### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdhtml.h
 
-##  <a name="begin_dhtml_url_event_map"></a>  BEGIN_DHTML_URL_EVENT_MAP
+## <a name="begin_dhtml_url_event_map"></a><a name="begin_dhtml_url_event_map"></a>BEGIN_DHTML_URL_EVENT_MAP
 
-マルチページ ダイアログ内、および URL DHTML イベント マップの定義を開始します。
+複数ページのダイアログで DHTML と URL イベント マップの定義を開始します。
 
-```
+```cpp
 BEGIN_DHTML_URL_EVENT_MAP()
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-実装ファイルに BEGIN_DHTML_URL_EVENT_MAP を配置、 [CMultiPageDHtmlDialog](../../mfc/reference/cmultipagedhtmldialog-class.md)-クラスを派生します。 それに続く[DHTML イベント マップの埋め込み](#begin_embed_dhtml_event_map)と[URL エントリ](#begin_url_entries)、それを閉じると[END_DHTML_URL_EVENT_MAP](#end_dhtml_url_event_map)します。 含める、 [DECLARE_DHTML_URL_EVENT_MAP](#declare_dhtml_url_event_map)クラス定義内でのマクロ。
+BEGIN_DHTML_URL_EVENT_MAPを[、派生](../../mfc/reference/cmultipagedhtmldialog-class.md)クラスの実装ファイルに配置します。 DHTML イベント マップと[URL エントリ](#begin_url_entries)を[埋め込んで](#begin_embed_dhtml_event_map)その後[、END_DHTML_URL_EVENT_MAP](#end_dhtml_url_event_map)で閉じます。 クラス定義内に[DECLARE_DHTML_URL_EVENT_MAP](#declare_dhtml_url_event_map)マクロを含めます。
 
 ### <a name="example"></a>例
 
@@ -969,180 +954,180 @@ BEGIN_DHTML_URL_EVENT_MAP()
 
   **ヘッダー** afxdhtml.h
 
-##  <a name="begin_embed_dhtml_event_map"></a>  BEGIN_EMBED_DHTML_EVENT_MAP
+## <a name="begin_embed_dhtml_event_map"></a><a name="begin_embed_dhtml_event_map"></a>BEGIN_EMBED_DHTML_EVENT_MAP
 
-マルチページのダイアログでは、埋め込みの DHTML イベント マップの定義を開始します。
+マルチページ ダイアログで埋め込まれた DHTML イベント マップの定義を開始します。
 
-```
+```cpp
 BEGIN_EMBED_DHTML_EVENT_MAP(className, mapName)
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*className*<br/>
-イベント マップを含むクラスの名前。 このクラスから直接または間接的に派生する必要があります[CMultiPageDHtmlDialog](../../mfc/reference/cmultipagedhtmldialog-class.md)します。 埋め込みの DHTML イベント マップは内である必要があります、 [DHTML および URL イベント マップ](#begin_dhtml_url_event_map))。
+*Classname*<br/>
+イベント マップを含むクラスの名前。 このクラスは、直接または間接的に[派生](../../mfc/reference/cmultipagedhtmldialog-class.md)する必要があります。 埋め込まれた DHTML イベント マップは[、DHTML および URL イベント マップ](#begin_dhtml_url_event_map)内になければなりません。
 
-*mapName*<br/>
-イベント マップを持つページを指定します。 これと一致する*mapName*で、 [URL_EVENT_ENTRY](#url_event_entry)マクロが実際に URL または HTML リソースを定義します。
+*マップ名*<br/>
+イベント マップが表示されるページを指定します。 これは、実際に URL または HTML リソースを定義する[URL_EVENT_ENTRY](#url_event_entry)マクロ内の*mapName*と一致します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-DHTML マルチページ ダイアログは複数の HTML ページ、DHTML イベントを発生させることがあり、いずれのイベントをページごとのハンドラーにマップするマップの埋め込みイベントが使用されます。
+複数ページの DHTML ダイアログは複数の HTML ページで構成され、各ページが DHTML イベントを発生させることができるため、埋め込みイベント マップは、ページごとにイベントをハンドラーにマップするために使用されます。
 
-DHTML と URL のイベント マップ内のマップの埋め込みイベントは、続く BEGIN_EMBED_DHTML_EVENT_MAP マクロで構成されている[DHTML_EVENT](#dhtml_event)マクロと[END_EMBED_DHTML_EVENT_MAP](#end_embed_dhtml_event_map)マクロ。
+DHTML および URL イベント マップ内の埋め込みイベント マップは、BEGIN_EMBED_DHTML_EVENT_MAP マクロとそれに続く[DHTML_EVENT](#dhtml_event)マクロと[END_EMBED_DHTML_EVENT_MAP](#end_embed_dhtml_event_map)マクロで構成されます。
 
-各イベントの埋め込みマップでは、対応する必要があります[URL イベント エントリ](#url_event_entry)にマップする*mapName* (BEGIN_EMBED_DHTML_EVENT_MAP で指定された) URL または HTML リソース。
+埋め込まれた各イベント マップでは、対応する*mapName* [URL イベント エントリ](#url_event_entry)が必要 BEGIN_EMBED_DHTML_EVENT_MAPです。
 
 ### <a name="example"></a>例
 
-例を参照してください。 [BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map)します。
+[BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map)の例を参照してください。
 
 ### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdhtml.h
 
-##  <a name="begin_url_entries"></a>  BEGIN_URL_ENTRIES
+## <a name="begin_url_entries"></a><a name="begin_url_entries"></a>BEGIN_URL_ENTRIES
 
-マルチページのダイアログで、URL のイベント エントリのマップの定義を開始します。
+複数ページのダイアログで URL イベント入力マップの定義を開始します。
 
-```
+```cpp
 BEGIN_URL_ENTRIES(className)
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*className*<br/>
-URL のイベント エントリのマップを含むクラスの名前。 このクラスから直接または間接的に派生する必要があります[CMultiPageDHtmlDialog](../../mfc/reference/cmultipagedhtmldialog-class.md)します。 内部 URL イベント エントリのマップがある必要があります、 [DHTML および URL イベント マップ](#begin_dhtml_url_event_map))。
+*Classname*<br/>
+URL イベントエントリマップを含むクラスの名前。 このクラスは、直接または間接的に[派生](../../mfc/reference/cmultipagedhtmldialog-class.md)する必要があります。 URL イベントエントリマップは[、DHTML および URL イベントマップ](#begin_dhtml_url_event_map)内になければなりません。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-イベント エントリの URL を使用して Url または HTML をマップ DHTML マルチページ ダイアログは、複数の HTML ページから構成されているため、対応するリソース[DHTML イベント マップの埋め込み](#begin_embed_dhtml_event_map)します。 BEGIN_URL_ENTRIES 間 URL_EVENT_ENTRY マクロを配置し、 [END_URL_ENTRIES](#end_url_entries)マクロ。
+複数ページの DHTML ダイアログは複数の HTML ページで構成されているため、URL イベント エントリを使用して、URL または HTML リソースを対応する[埋め込み DHTML イベント マップ](#begin_embed_dhtml_event_map)にマップします。 BEGIN_URL_ENTRIESマクロと[END_URL_ENTRIES](#end_url_entries)マクロの間にURL_EVENT_ENTRYマクロを配置します。
 
 ### <a name="example"></a>例
 
-例を参照してください。 [BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map)します。
+[BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map)の例を参照してください。
 
 ### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdhtml.h
 
-##  <a name="declare_dhtml_url_event_map"></a>  DECLARE_DHTML_URL_EVENT_MAP
+## <a name="declare_dhtml_url_event_map"></a><a name="declare_dhtml_url_event_map"></a>DECLARE_DHTML_URL_EVENT_MAP
 
-DHTML と URL イベント クラスの定義でマップを宣言します。
+クラス定義で DHTML と URL イベント マップを宣言します。
 
-```
+```cpp
 DECLARE_DHTML_URL_EVENT_MAP()
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このマクロは、の定義で使用される[CMultiPageDHtmlDialog](../../mfc/reference/cmultipagedhtmldialog-class.md)-クラスを派生します。
+このマクロは、[派生](../../mfc/reference/cmultipagedhtmldialog-class.md)クラスの定義で使用されます。
 
-イベント マップ DHTML と URL に含まれる[DHTML イベント マップの埋め込み](#begin_embed_dhtml_event_map)と[URL イベント エントリ](#begin_url_entries)DHTML イベントをページごとのハンドラーにマップします。 使用[BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map)マップを実装します。
+DHTML および URL イベント マップには[、埋め込まれた DHTML イベント マップ](#begin_embed_dhtml_event_map)と[URL イベント エントリ](#begin_url_entries)が含まれ、DHTML イベントをページ単位でハンドラーにマップします。 [BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map)を使用してマップを実装します。
 
 ### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdhtml.h
 
-##  <a name="end_dhtml_url_event_map"></a>  END_DHTML_URL_EVENT_MAP
+## <a name="end_dhtml_url_event_map"></a><a name="end_dhtml_url_event_map"></a>END_DHTML_URL_EVENT_MAP
 
-イベント マップ DHTML および URL の末尾をマークします。
+DHTML と URL イベント マップの末尾を示します。
 
-```
+```cpp
 END_DHTML_URL_EVENT_MAP(className)
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*className*<br/>
-イベント マップを含むクラスの名前。 このクラスから直接または間接的に派生する必要があります[CMultiPageDHtmlDialog](../../mfc/reference/cmultipagedhtmldialog-class.md)します。 これに一致する必要があります*className* 、対応する[BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map)マクロ。
+*Classname*<br/>
+イベント マップを含むクラスの名前。 このクラスは、直接または間接的に[派生](../../mfc/reference/cmultipagedhtmldialog-class.md)する必要があります。 これは、対応する[BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map)マクロの*className*と一致する必要があります。
 
 ### <a name="example"></a>例
 
-例を参照してください。 [BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map)します。
+[BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map)の例を参照してください。
 
 ### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdhtml.h
 
-##  <a name="end_embed_dhtml_event_map"></a>  END_EMBED_DHTML_EVENT_MAP
+## <a name="end_embed_dhtml_event_map"></a><a name="end_embed_dhtml_event_map"></a>END_EMBED_DHTML_EVENT_MAP
 
-埋め込みの DHTML イベント マップの末尾をマークします。
+埋め込まれた DHTML イベント マップの末尾をマークします。
 
-```
+```cpp
 END_EMBED_DHTML_EVENT_MAP()
 ```
 
 ### <a name="example"></a>例
 
-例を参照してください。 [BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map)します。
+[BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map)の例を参照してください。
 
 ### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdhtml.h
 
-##  <a name="end_url_entries"></a>  END_URL_ENTRIES
+## <a name="end_url_entries"></a><a name="end_url_entries"></a>END_URL_ENTRIES
 
-URL のイベント エントリのマップの終了を示します。
+URL イベントエントリマップの終わりを示します。
 
-```
+```cpp
 END_URL_ENTRIES()
 ```
 
 ### <a name="example"></a>例
 
-例を参照してください。 [BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map)します。
+[BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map)の例を参照してください。
 
 ### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdhtml.h
 
-##  <a name="url_event_entry"></a>  URL_EVENT_ENTRY
+## <a name="url_event_entry"></a><a name="url_event_entry"></a>URL_EVENT_ENTRY
 
-マルチページ ダイアログ内のページには、URL または HTML リソースをマップします。
+URL または HTML リソースを複数ページのダイアログ内のページにマップします。
 
-```
+```cpp
 URL_EVENT_ENTRY(className, url,  mapName)
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*className*<br/>
-URL のイベント エントリのマップを含むクラスの名前。 このクラスから直接または間接的に派生する必要があります[CMultiPageDHtmlDialog](../../mfc/reference/cmultipagedhtmldialog-class.md)します。 内部 URL イベント エントリのマップがある必要があります、 [DHTML および URL イベント マップ](#begin_dhtml_url_event_map))。
+*Classname*<br/>
+URL イベントエントリマップを含むクラスの名前。 このクラスは、直接または間接的に[派生](../../mfc/reference/cmultipagedhtmldialog-class.md)する必要があります。 URL イベントエントリマップは[、DHTML および URL イベントマップ](#begin_dhtml_url_event_map)内になければなりません。
 
 *url*<br/>
-ページの URL または HTML リソースです。
+ページの URL または HTML リソース。
 
-*mapName*<br/>
-URL がページを指定します*url*します。 これと一致する*mapName*で、 [BEGIN_EMBED_DHTML_EVENT_MAP](#begin_embed_dhtml_event_map)このページからのイベントをマップするマクロ。
+*マップ名*<br/>
+URL が*url*であるページを指定します。 これは、このページのイベントをマップする[BEGIN_EMBED_DHTML_EVENT_MAP](#begin_embed_dhtml_event_map)マクロ内の*mapName*と一致します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-場合は、ページは、次のような HTML リソース*url*リソースの ID 番号 (つまり、「123」の 123 いないまたは ID_HTMLRES1) の文字列形式を指定する必要があります。
+ページが HTML リソースの場合 *、url*はリソースの ID 番号 (123 または ID_HTMLRES1 ではなく"123" という文字列表現である必要があります)。
 
-ページ識別子、 *mapName*が埋め込まれた URL イベント エントリのマップに DHTML イベント マップを任意のシンボルにリンクするために使用します。 DHTML と URL のイベントのマップをスコープに制限されます。
+ページ識別子*mapName*は、埋め込まれた DHTML イベント マップを URL イベント エントリ マップにリンクするために使用される任意のシンボルです。 DHTML と URL イベント マップに限定されます。
 
 ### <a name="example"></a>例
 
-例を参照してください。 [BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map)します。
+[BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map)の例を参照してください。
 
 ### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdhtml.h
 
-##  <a name="end_dhtml_event_map_inline"></a>END_DHTML_EVENT_MAP_INLINE
+## <a name="end_dhtml_event_map_inline"></a><a name="end_dhtml_event_map_inline"></a>END_DHTML_EVENT_MAP_INLINE
 
 DHTML イベント マップの末尾をマークします。
 
 ### <a name="syntax"></a>構文
 
-```
+```cpp
 END_DHTML_EVENT_MAP_INLINE( )
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-組み合わせて使用する必要があります[BEGIN_DHTML_EVENT_MAP_INLINE](#begin_dhtml_event_map_inline)します。
+[BEGIN_DHTML_EVENT_MAP_INLINE](#begin_dhtml_event_map_inline)と組み合わせて使用する必要があります。
 
 ### <a name="requirements"></a>必要条件
 

@@ -1,6 +1,6 @@
 ---
 title: _strnset、_strnset_l、_wcsnset、_wcsnset_l、_mbsnset、_mbsnset_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbsnset
 - _strnset
@@ -8,6 +8,9 @@ api_name:
 - _wcsnset_l
 - _wcsnset
 - _strnset_l
+- _o__mbsnset
+- _o__mbsnset_l
+- _o__wcsnset
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -22,6 +25,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -69,19 +73,19 @@ helpviewer_keywords:
 - strings [C++], initializing
 - tcsnset_l function
 ms.assetid: 3f306489-5763-48e5-b939-aefee7c94ef5
-ms.openlocfilehash: bb2365684f9c35e1523b34aaad30c9ae6875b5c1
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 50b1a5157bd2a60d9819c92103a380ca1005be56
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946972"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364425"
 ---
 # <a name="_strnset-_strnset_l-_wcsnset-_wcsnset_l-_mbsnset-_mbsnset_l"></a>_strnset、_strnset_l、_wcsnset、_wcsnset_l、_mbsnset、_mbsnset_l
 
 文字列の文字を所定の書式に初期化します。 これらの関数のセキュリティを強化したバージョンを使用できます。「[_strnset_s、_strnset_s_l、_wcsnset_s、_wcsnset_s_l、_mbsnset_s、_mbsnset_s_l](strnset-s-strnset-s-l-wcsnset-s-wcsnset-s-l-mbsnset-s-mbsnset-s-l.md)」をご覧ください。
 
 > [!IMPORTANT]
-> **_mbsnset**と **_mbsnset_l**は、Windows ランタイムで実行されるアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
+> **_mbsnset**と **_mbsnset_l**は、Windows ランタイムで実行するアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -123,31 +127,33 @@ unsigned char *_mbsnset_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*str*<br/>
+*Str*<br/>
 変更対象の文字列。
 
-*c*<br/>
+*C*<br/>
 文字設定。
 
 *count*<br/>
 設定する文字数。
 
-*locale*<br/>
+*ロケール*<br/>
 使用するロケール。
 
 ## <a name="return-value"></a>戻り値
 
 変更された文字列へのポインターを返します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**_Strnset**関数は、 *str*の最初の最大文字*数*を*c* ( **char**に変換) に設定します。 *Count*が*str*の長さよりも大きい場合、 *count*の代わりに*str*の長さが使用されます。
+**_strnset**関数は *、str*の最初の*文字数*を*c* **(char**に変換) に設定します。 *count*が*str*の長さより大きい場合は *、count*の代わりに*str*の長さが使用されます。
 
-**_wcsnset**と **_mbsnset**は、 **_strnset**のワイド文字バージョンとマルチバイト文字バージョンです。 **_Wcsnset**の文字列引数と戻り値はワイド文字列です。これらの **_mbsnset**はマルチバイト文字列です。 それ以外では、これらの関数の動作は同じです。
+**_wcsnset**と **_mbsnset**は、ワイド文字とマルチバイト文字のバージョンの **_strnset**です。 **_wcsnset**の文字列引数と戻り値はワイド文字列です。**_mbsnset**の文字列はマルチバイト文字文字列です。 それ以外では、これらの関数の動作は同じです。
 
-**_mbsnset**は、そのパラメーターを検証します。*str*が null ポインターの場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、 **_mbsnset**は**NULL**を返し、 **errno**を**EINVAL**に設定します。 **_strnset**と **_wcsnset**では、パラメーターは検証されません。
+**_mbsnset**はパラメータを検証します。*str*が null ポインターの場合は、「パラメーター[の検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーター ハンドラーが呼び出されます。 実行を続行できる場合 **、_mbsnset**は**NULL を**返し **、errno**を**EINVAL**に設定します。 **_strnset**と **_wcsnset**は、パラメーターを検証しません。
 
-出力値は、ロケールの **LC_CTYPE** カテゴリの設定に影響されます。詳細については、「[setlocale](setlocale-wsetlocale.md)」を参照してください。 **_l** サフィックスが付いていないこれらの関数のバージョンでは、このロケールに依存する動作に現在のロケールを使用します。 **_l** サフィックスが付いているバージョンは、渡されたロケール パラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+出力値は、ロケールの **LC_CTYPE** カテゴリの設定に影響されます。詳細については、「[setlocale](setlocale-wsetlocale.md)」を参照してください。 **_l** サフィックスが付いていないこれらの関数のバージョンでは、このロケールに依存する動作に現在のロケールを使用します。**_l** サフィックスが付いているバージョンは、渡されたロケール パラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -158,15 +164,15 @@ unsigned char *_mbsnset_l(
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**_strnset**|\<string.h>|
 |**_strnset_l**|\<tchar.h>|
 |**_wcsnset**|\<string.h> または \<wchar.h>|
 |**_wcsnset_l**|\<tchar.h>|
-|**_mbsnset**、 **_mbsnset_l**|\<mbstring.h>|
+|**_mbsnset**, **_mbsnset_l**|\<mbstring.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 
@@ -196,7 +202,7 @@ After:  **** is a test
 
 [文字列操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [ロケール](../../c-runtime-library/locale.md)<br/>
-[マルチバイト文字のシーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[マルチバイト文字シーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strcat、wcscat、_mbscat](strcat-wcscat-mbscat.md)<br/>
 [strcmp、wcscmp、_mbscmp](strcmp-wcscmp-mbscmp.md)<br/>
 [strcpy、wcscpy、_mbscpy](strcpy-wcscpy-mbscpy.md)<br/>

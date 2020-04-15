@@ -1,5 +1,5 @@
 ---
-title: CPaneDivider クラス
+title: Cペインディバイダークラス
 ms.date: 11/04/2016
 f1_keywords:
 - CPaneDivider
@@ -84,18 +84,18 @@ helpviewer_keywords:
 - CPaneDivider [MFC], m_nDefaultWidth
 - CPaneDivider [MFC], m_pSliderRTC
 ms.assetid: 8e828a5d-232f-4127-b8e3-7fa45a7a476e
-ms.openlocfilehash: d4888fbf2a95652b0a38adc8ecd059a7515636cb
-ms.sourcegitcommit: bd7ddc044f9083246614b602ef6a758775313214
+ms.openlocfilehash: 41fa3204712749a3b1123a20d31b01ba8b5fbaa4
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68866114"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364115"
 ---
-# <a name="cpanedivider-class"></a>CPaneDivider クラス
+# <a name="cpanedivider-class"></a>Cペインディバイダークラス
 
-詳細については、Visual Studio のインストール**の\\VC atlmfc\\\\src mfc**フォルダーにあるソースコードを参照してください。
+詳細については、Visual Studio のインストールの**\\VC\\atlmfc\\src mfc**フォルダーにあるソース コードを参照してください。
 
-クラス`CPaneDivider`は、2つのペインを分割するか、ペインの2つのグループを分割するか、メインフレームウィンドウのクライアント領域からペインのグループを分離します。
+この`CPaneDivider`クラスは、2 つのペインを分割したり、ペインのグループを 2 つ分割したり、ペインのグループをメイン フレーム ウィンドウのクライアント領域から分離したりします。
 
 ## <a name="syntax"></a>構文
 
@@ -109,90 +109,90 @@ class CPaneDivider : public CBasePane
 
 |名前|説明|
 |----------|-----------------|
-|[CPaneDivider:: CPaneDivider](#cpanedivider)||
+|[Cペインディバイダー::Cペインディバイダー](#cpanedivider)||
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CPaneDivider:: AddPaneContainer](#addpanecontainer)||
-|[CPaneDivider:: AddPane](#addpane)||
-|[CPaneDivider:: AddRecentPane](#addrecentpane)||
-|[CPaneDivider:: CalcExpectedDockedRect](#calcexpecteddockedrect)||
-|[CPaneDivider:: CalcFixedLayout](#calcfixedlayout)|( [Cbasepane:: CalcFixedLayout](../../mfc/reference/cbasepane-class.md#calcfixedlayout)をオーバーライドします)。|
-|[CPaneDivider:: CheckVisibility](#checkvisibility)||
-|[CPaneDivider:: CreateEx](#createex)|( [Cbasepane:: CreateEx](../../mfc/reference/cbasepane-class.md#createex)をオーバーライドします)。|
-|[CPaneDivider::D oesAllowDynInsertBefore](#doesallowdyninsertbefore)|( [Cbasepane::D oesallowdyninsertbefore](../../mfc/reference/cbasepane-class.md#doesallowdyninsertbefore)をオーバーライドします)。|
-|[CPaneDivider::D oesContainFloatingPane](#doescontainfloatingpane)||
-|[CPaneDivider:: FindPaneContainer](#findpanecontainer)||
-|[CPaneDivider:: FindTabbedPane](#findtabbedpane)||
-|[CPaneDivider:: GetDefaultWidth](#getdefaultwidth)||
-|[CPaneDivider:: GetFirstPane](#getfirstpane)||
-|[CPaneDivider:: GetPaneDividerStyle](#getpanedividerstyle)||
-|[CPaneDivider:: GetRootContainerRect](#getrootcontainerrect)||
-|[CPaneDivider:: GetWidth](#getwidth)||
-|[CPaneDivider:: Init](#init)||
-|[CPaneDivider::InsertPane](#insertpane)||
-|[CPaneDivider:: IsAutoHideMode](#isautohidemode)|( [Cbasepane:: IsAutoHideMode](../../mfc/reference/cbasepane-class.md#isautohidemode)をオーバーライドします)。|
-|[CPaneDivider:: IsDefault](#isdefault)||
-|[CPaneDivider:: IsHorizontal](#ishorizontal)|( [Cbasepane:: IsHorizontal](../../mfc/reference/cbasepane-class.md#ishorizontal)をオーバーライドします)。|
-|[CPaneDivider:: Move](#move)||
-|[CPaneDivider:: Notifyのリリース](#notifyaboutrelease)||
-|[CPaneDivider:: OnShowPane](#onshowpane)||
-|[CPaneDivider:: ReleaseEmptyPaneContainers](#releaseemptypanecontainers)||
-|[CPaneDivider::RemovePane](#removepane)||
-|[CPaneDivider:: ReplacePane](#replacepane)||
-|[CPaneDivider:: RepositionPanes](#repositionpanes)||
-|[CPaneDivider:: Serialize](#serialize)|( `CBasePane::Serialize`をオーバーライドします)。|
-|[CPaneDivider:: SetAutoHideMode](#setautohidemode)||
-|[CPaneDivider:: SetPaneContainerManager](#setpanecontainermanager)||
-|[CPaneDivider:: ShowWindow](#showwindow)||
-|[CPaneDivider:: StoreRecentDockSiteInfo](#storerecentdocksiteinfo)||
-|[CPaneDivider:: StoreRecentTabRelatedInfo](#storerecenttabrelatedinfo)||
+|[Cペインディバイダー::ペインコンテナの追加](#addpanecontainer)||
+|[Cペインディバイダー::ペインの追加](#addpane)||
+|[Cペインディバイダー::最近のペインを追加](#addrecentpane)||
+|[CPane ディバイダー::カルク予期しないドッキングレクト](#calcexpecteddockedrect)||
+|[CPane ディバイダー::計算固定レイアウト](#calcfixedlayout)|(CBase ペインをオーバーライド[します::計算固定レイアウト](../../mfc/reference/cbasepane-class.md#calcfixedlayout).)|
+|[CPaneディバイダー::チェックビジビリティ](#checkvisibility)||
+|[Cペインディバイダー::作成します。](#createex)|(CBasePane をオーバーライド[します。::CreateEx](../../mfc/reference/cbasepane-class.md#createex).)|
+|[前に挿入:D](#doesallowdyninsertbefore)|[(CBase ペインをオーバーライドします::DoesAllowDynInsert前に](../../mfc/reference/cbasepane-class.md#doesallowdyninsertbefore).)|
+|[Cパネディバイダー::Doesフローティングペインを含む](#doescontainfloatingpane)||
+|[Cペインディバイダー::ペインコンテナを検索](#findpanecontainer)||
+|[Cペインディバイダー::タブベッドペインを見つける](#findtabbedpane)||
+|[クパネディバイダー::取得既定の幅](#getdefaultwidth)||
+|[Cパネディバイダー::ゲットファーストペイン](#getfirstpane)||
+|[クパネディバイダー::ゲパディバースタイル](#getpanedividerstyle)||
+|[クネパディバイダー::ゲットルートコンテナレクト](#getrootcontainerrect)||
+|[クパネディバイダー::取得幅](#getwidth)||
+|[CPaneディバイダー::イニト](#init)||
+|[Cペインディバイダー::ペインの挿入](#insertpane)||
+|[CPane ディバイダー::IsAutoHideMode](#isautohidemode)|(CBase ペインをオーバーライド[します::IsAutoHideMode](../../mfc/reference/cbasepane-class.md#isautohidemode).)|
+|[CPane ディバイダー::IsDefault](#isdefault)||
+|[CPane ディバイダー::イス水平](#ishorizontal)|[(CBasePane をオーバーライドします::IsHorizontal](../../mfc/reference/cbasepane-class.md#ishorizontal).)|
+|[CPaneディバイダー::移動](#move)||
+|[CPane ディバイダー::リリースについて通知](#notifyaboutrelease)||
+|[Cペインディバイダー::オンショーペイン](#onshowpane)||
+|[Cペインディバイダー::リリース空のペインコンテナ](#releaseemptypanecontainers)||
+|[Cペインディバイダー::ウィンドウの削除](#removepane)||
+|[Cペインディバイダー::交換ペイン](#replacepane)||
+|[CPane ディバイダー::ペインの位置変更](#repositionpanes)||
+|[CPaneディバイダー::シリアライズ](#serialize)|( `CBasePane::Serialize`をオーバーライドします)。|
+|[CPane ディバイダー::セットオートハイドモード](#setautohidemode)||
+|[Cペインディバイダー::セットペインコンテナマネージャー](#setpanecontainermanager)||
+|[Cペインディバイダー::ショーウィンドウ](#showwindow)||
+|[クネパディバイダー::ストア最近ドックサイト情報](#storerecentdocksiteinfo)||
+|[CPane ディバイダー::ストア最近タブ関連情報](#storerecenttabrelatedinfo)||
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CPaneDivider:: GetPanes](#getpanes)|[Cpanecontainer クラス](../../mfc/reference/cpanecontainer-class.md)に存在するペインの一覧を返します。 このメソッドは、既定のペインの区分線に対してのみ呼び出す必要があります。|
-|[Cpanedivider:: getpanedivitransport](#getpanedividers)|[Cpanecontainer クラス](../../mfc/reference/cpanecontainer-class.md)に存在するペインの区切り線の一覧を返します。 このメソッドは、既定のペインの区分線に対してのみ呼び出す必要があります。|
+|[Cペインディバイダー::ゲパネ](#getpanes)|[CPaneContainer クラス](../../mfc/reference/cpanecontainer-class.md)に存在するペインの一覧を返します。 このメソッドは、既定のペイン区分線に対してのみ呼び出す必要があります。|
+|[CPane ディバイダー::ゲパネディバイダー](#getpanedividers)|[CPaneContainer クラス](../../mfc/reference/cpanecontainer-class.md)に存在するペイン区分線の一覧を返します。 このメソッドは、既定のペイン区分線に対してのみ呼び出す必要があります。|
 
 ### <a name="data-members"></a>データ メンバー
 
 |名前|説明|
 |----------|-----------------|
-|[CPaneDivider:: m_nDefaultWidth](#m_ndefaultwidth)|アプリケーションのすべてのペインの区切り線の既定の幅 (ピクセル単位) を指定します。|
-|[CPaneDivider:: m_pSliderRTC](#m_psliderrtc)|派生オブジェクトに関する`CPaneDivider`ランタイムクラス情報へのポインターを保持します。|
+|[Cペインディバイダー::m_nDefaultWidth](#m_ndefaultwidth)|アプリケーション内のすべてのペイン分割線の既定の幅をピクセル単位で指定します。|
+|[Cペインディバイダー::m_pSliderRTC](#m_psliderrtc)|派生オブジェクトに関するランタイム クラス情報への`CPaneDivider`ポインターを保持します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-ペインがドッキング`CPaneDivider`されると、フレームワークによってオブジェクトが自動的に作成されます。
+フレームワークは、`CPaneDivider`ペインがドッキングされると自動的にオブジェクトを作成します。
 
-ペインの区切り線には、次の2種類があります。
+ペイン区切りには、次の 2 種類があります。
 
-- ペインのグループをメインフレームウィンドウの横にドッキングすると、既定のペインの区分線が作成されます。 既定のペインの区分線は、 [CPaneContainerManager クラス](../../mfc/reference/cpanecontainermanager-class.md)へのポインターを保持し、ペインのサイズを変更したり、他のウィンドウやコンテナーをドッキングしたりするなど、ウィンドウのグループに対するほとんどの操作をコンテナーマネージャーにリダイレクトします。 各ドッキングペインは、既定のペイン区分線へのポインターを保持します。
+- ペインのグループがメイン フレーム ウィンドウの側面にドッキングされると、既定のペイン分割線が作成されます。 既定のペイン区分線は[、CPaneContainerManager クラス](../../mfc/reference/cpanecontainermanager-class.md)へのポインターを保持し、ペインのグループに対するほとんどの操作 (ペインのサイズ変更、別のペインまたはコンテナーのドッキングなど) をコンテナー マネージャーにリダイレクトします。 各ドッキング ペインは、既定のペイン分割線へのポインターを保持します。
 
-- 標準ペインの区切り線は、コンテナー内の2つのペインを分割するだけです。 詳細については、「 [Cpanecontainer クラス](../../mfc/reference/cpanecontainer-class.md)」を参照してください。
+- 通常のペイン分割は、コンテナー内の 2 つのペインを分割するだけです。 詳細については[、「CPane コンテナ クラス」を](../../mfc/reference/cpanecontainer-class.md)参照してください。
 
 ## <a name="example"></a>例
 
-`CWorkspaceBar` オブジェクトから `CPaneDivider` オブジェクトを取得する方法を次の例に示します。 このコードスニペットは、 [MDI タブのデモサンプル](../../overview/visual-cpp-samples.md)に含まれています。
+`CWorkspaceBar` オブジェクトから `CPaneDivider` オブジェクトを取得する方法を次の例に示します。 このコード スニペットは[、MDI タブデモサンプル](../../overview/visual-cpp-samples.md)の一部です。
 
 [!code-cpp[NVC_MFC_MDITabsDemo#5](../../mfc/reference/codesnippet/cpp/cpanedivider-class_1.cpp)]
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
-[CObject](../../mfc/reference/cobject-class.md)\
-└&nbsp;[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)\
+[Cobject](../../mfc/reference/cobject-class.md)\
+└&nbsp;[CCmdターゲット](../../mfc/reference/ccmdtarget-class.md)\
 &nbsp;&nbsp;&nbsp;&nbsp;└&nbsp;[CWnd](../../mfc/reference/cwnd-class.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp;[Cbasepane](../../mfc/reference/cbasepane-class.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp;[Cpanedivider](../../mfc/reference/cpanedivider-class.md)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp;[CBasePane](../../mfc/reference/cbasepane-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp;[Cペインディバイダ](../../mfc/reference/cpanedivider-class.md)
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** afxPaneDivider
+**ヘッダー:** afxPane ディバイダー.h
 
-##  <a name="setautohidemode"></a>CPaneDivider:: SetAutoHideMode
+## <a name="cpanedividersetautohidemode"></a><a name="setautohidemode"></a>CPane ディバイダー::セットオートハイドモード
 
 ```
 void SetAutoHideMode(BOOL bMode);
@@ -200,11 +200,11 @@ void SetAutoHideMode(BOOL bMode);
 
 ### <a name="parameters"></a>パラメーター
 
-から*Bmode*<br/>
+[in]*bモード*<br/>
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="setpanecontainermanager"></a>CPaneDivider:: SetPaneContainerManager
+## <a name="cpanedividersetpanecontainermanager"></a><a name="setpanecontainermanager"></a>Cペインディバイダー::セットペインコンテナマネージャー
 
 ```
 void SetPaneContainerManager(CPaneContainerManager* p);
@@ -212,11 +212,11 @@ void SetPaneContainerManager(CPaneContainerManager* p);
 
 ### <a name="parameters"></a>パラメーター
 
-から*p*<br/>
+[in]*p*<br/>
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="addpane"></a>  CPaneDivider::AddPane
+## <a name="cpanedivideraddpane"></a><a name="addpane"></a>Cペインディバイダー::ペインの追加
 
 ```
 virtual void AddPane(CDockablePane* pBar);
@@ -224,11 +224,11 @@ virtual void AddPane(CDockablePane* pBar);
 
 ### <a name="parameters"></a>パラメーター
 
-から*Pbar*<br/>
+[in]*pバー*<br/>
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="addpanecontainer"></a>  CPaneDivider::AddPaneContainer
+## <a name="cpanedivideraddpanecontainer"></a><a name="addpanecontainer"></a>Cペインディバイダー::ペインコンテナの追加
 
 ```
 virtual BOOL AddPaneContainer(
@@ -243,16 +243,16 @@ virtual BOOL AddPaneContainer(
 
 ### <a name="parameters"></a>パラメーター
 
-から*barContainerManager*<br/>
-から*Bouteredge*<br/>
-から*Ptargetbar*<br/>
-から*dwAlignment*<br/>
+[in]*バーコンテナマネージャー*<br/>
+[in]*ボターエッジ*<br/>
+[in]*をクリックします。*<br/>
+[in]*dw配置*<br/>
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="addrecentpane"></a>  CPaneDivider::AddRecentPane
+## <a name="cpanedivideraddrecentpane"></a><a name="addrecentpane"></a>Cペインディバイダー::最近のペインを追加
 
 ```
 virtual CDockablePane* AddRecentPane(CDockablePane* pBar);
@@ -260,13 +260,13 @@ virtual CDockablePane* AddRecentPane(CDockablePane* pBar);
 
 ### <a name="parameters"></a>パラメーター
 
-から*Pbar*<br/>
+[in]*pバー*<br/>
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="calcexpecteddockedrect"></a>CPaneDivider:: CalcExpectedDockedRect
+## <a name="cpanedividercalcexpecteddockedrect"></a><a name="calcexpecteddockedrect"></a>CPane ディバイダー::カルク予期しないドッキングレクト
 
 ```
 virtual void CalcExpectedDockedRect(
@@ -279,15 +279,15 @@ virtual void CalcExpectedDockedRect(
 
 ### <a name="parameters"></a>パラメーター
 
-から*pWndToDock*<br/>
-から*Ptmouse*<br/>
-から*rectResult*<br/>
-から *[Bdrawtab タブ*<br/>
-から*Pptargetbar*<br/>
+[in]*ドック*<br/>
+[in]*ptマウス*<br/>
+[in]*レクト結果*<br/>
+[in]*タブを描く*<br/>
+[in]*ターゲットバー*<br/>
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="calcfixedlayout"></a>  CPaneDivider::CalcFixedLayout
+## <a name="cpanedividercalcfixedlayout"></a><a name="calcfixedlayout"></a>CPane ディバイダー::計算固定レイアウト
 
 ```
 virtual CSize CalcFixedLayout(
@@ -297,14 +297,14 @@ virtual CSize CalcFixedLayout(
 
 ### <a name="parameters"></a>パラメーター
 
-から*Bstretch*<br/>
-から*bHorz*<br/>
+[in]*bストレッチ*<br/>
+[in]*bHorz*<br/>
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="checkvisibility"></a>CPaneDivider:: CheckVisibility
+## <a name="cpanedividercheckvisibility"></a><a name="checkvisibility"></a>CPaneディバイダー::チェックビジビリティ
 
 ```
 virtual BOOL CheckVisibility();
@@ -312,9 +312,9 @@ virtual BOOL CheckVisibility();
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="cpanedivider"></a>CPaneDivider:: CPaneDivider
+## <a name="cpanedividercpanedivider"></a><a name="cpanedivider"></a>Cペインディバイダー::Cペインディバイダー
 
 ```
 CPaneDivider();
@@ -326,14 +326,14 @@ CPaneDivider(
 
 ### <a name="parameters"></a>パラメーター
 
-から*Bdefaultslider*<br/>
-から*Pparent*<br/>
+[in]*ビデフォルトスライダー*<br/>
+[in]*親*<br/>
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="createex"></a>CPaneDivider:: CreateEx
+## <a name="cpanedividercreateex"></a><a name="createex"></a>Cペインディバイダー::作成します。
 
 ```
 virtual BOOL CreateEx(
@@ -347,18 +347,18 @@ virtual BOOL CreateEx(
 
 ### <a name="parameters"></a>パラメーター
 
-から*Dwスタイル ex*<br/>
-から*dwStyle*<br/>
-から*rect*<br/>
-から*pParentWnd*<br/>
-から*nID*<br/>
-から*pContext*<br/>
+[in]*ドウスタイルエックス*<br/>
+[in]*ドウスタイル*<br/>
+[in]*レクト*<br/>
+[in]*親子*<br/>
+[in]*nID*<br/>
+[in]*コンテキスト*<br/>
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="doesallowdyninsertbefore"></a>  CPaneDivider::DoesAllowDynInsertBefore
+## <a name="cpanedividerdoesallowdyninsertbefore"></a><a name="doesallowdyninsertbefore"></a>前に挿入:D
 
 ```
 virtual BOOL DoesAllowDynInsertBefore() const;
@@ -366,9 +366,9 @@ virtual BOOL DoesAllowDynInsertBefore() const;
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="doescontainfloatingpane"></a>CPaneDivider::D oesContainFloatingPane
+## <a name="cpanedividerdoescontainfloatingpane"></a><a name="doescontainfloatingpane"></a>Cパネディバイダー::Doesフローティングペインを含む
 
 ```
 virtual BOOL DoesContainFloatingPane();
@@ -376,9 +376,9 @@ virtual BOOL DoesContainFloatingPane();
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="findpanecontainer"></a>  CPaneDivider::FindPaneContainer
+## <a name="cpanedividerfindpanecontainer"></a><a name="findpanecontainer"></a>Cペインディバイダー::ペインコンテナを検索
 
 ```
 CPaneContainer* FindPaneContainer(
@@ -388,14 +388,14 @@ CPaneContainer* FindPaneContainer(
 
 ### <a name="parameters"></a>パラメーター
 
-から*Pbar*<br/>
-から*bLeftBar*<br/>
+[in]*pバー*<br/>
+[in]*バー*<br/>
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="findtabbedpane"></a>  CPaneDivider::FindTabbedPane
+## <a name="cpanedividerfindtabbedpane"></a><a name="findtabbedpane"></a>Cペインディバイダー::タブベッドペインを見つける
 
 ```
 CDockablePane* FindTabbedPane(UINT nID);
@@ -403,13 +403,13 @@ CDockablePane* FindTabbedPane(UINT nID);
 
 ### <a name="parameters"></a>パラメーター
 
-から*nID*<br/>
+[in]*nID*<br/>
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="getdefaultwidth"></a>  CPaneDivider::GetDefaultWidth
+## <a name="cpanedividergetdefaultwidth"></a><a name="getdefaultwidth"></a>クパネディバイダー::取得既定の幅
 
 ```
 static int __stdcall GetDefaultWidth();
@@ -417,9 +417,9 @@ static int __stdcall GetDefaultWidth();
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="getfirstpane"></a>  CPaneDivider::GetFirstPane
+## <a name="cpanedividergetfirstpane"></a><a name="getfirstpane"></a>Cパネディバイダー::ゲットファーストペイン
 
 ```
 const CBasePane* GetFirstPane() const;
@@ -427,11 +427,11 @@ const CBasePane* GetFirstPane() const;
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="getpanedividers"></a>  CPaneDivider::GetPaneDividers
+## <a name="cpanedividergetpanedividers"></a><a name="getpanedividers"></a>CPane ディバイダー::ゲパネディバイダー
 
-[Cpanecontainer クラス](../../mfc/reference/cpanecontainer-class.md)に存在するペインの区切り線の一覧を返します。 このメソッドは、既定のペインの区分線に対してのみ呼び出す必要があります。
+[CPaneContainer クラス](../../mfc/reference/cpanecontainer-class.md)に存在するペイン区分線の一覧を返します。 このメソッドは、既定のペイン区分線に対してのみ呼び出す必要があります。
 
 ```
 void GetPaneDividers(CObList& lstSliders);
@@ -439,14 +439,14 @@ void GetPaneDividers(CObList& lstSliders);
 
 ### <a name="parameters"></a>パラメーター
 
-*lstSliders*<br/>
-入出力ペインコンテナーに存在するペインの区分線の一覧が含まれています。
+*lstスライダー*<br/>
+[アウト]ペイン コンテナーに存在するペイン区分線の一覧が含まれています。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、既定のペインの区分線に対してのみ呼び出す必要があります。 既定のペインの区分線は、ペイン全体のサイズを変更するための区分線です。
+このメソッドは、既定のペイン区分線に対してのみ呼び出す必要があります。 既定のペイン区分線は、ペイン コンテナー全体のサイズを変更する区分線です。
 
-##  <a name="getpanedividerstyle"></a>CPaneDivider:: GetPaneDividerStyle
+## <a name="cpanedividergetpanedividerstyle"></a><a name="getpanedividerstyle"></a>クパネディバイダー::ゲパディバースタイル
 
 ```
 DWORD GetPaneDividerStyle() const;
@@ -454,11 +454,11 @@ DWORD GetPaneDividerStyle() const;
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="getpanes"></a>  CPaneDivider::GetPanes
+## <a name="cpanedividergetpanes"></a><a name="getpanes"></a>Cペインディバイダー::ゲパネ
 
-[Cpanecontainer クラス](../../mfc/reference/cpanecontainer-class.md)に存在するペインの一覧を返します。 このメソッドは、既定のペインの区切り線を取得するためにのみ呼び出す必要があります。
+[CPaneContainer クラス](../../mfc/reference/cpanecontainer-class.md)に存在するペインの一覧を返します。 このメソッドは、既定のペインの区分線を取得するためだけに呼び出す必要があります。
 
 ```
 void GetPanes(CObList& lstBars);
@@ -466,14 +466,14 @@ void GetPanes(CObList& lstBars);
 
 ### <a name="parameters"></a>パラメーター
 
-*lstBars*<br/>
-入出力ペインコンテナーに存在するペインの一覧が含まれます。
+*lstバー*<br/>
+[アウト]ペイン コンテナーに存在するペインの一覧が含まれています。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、既定のペインの区分線に対してのみ呼び出す必要があります。 既定のペインの区分線は、ペイン全体のサイズを変更するための区分線です。
+このメソッドは、既定のペイン区分線に対してのみ呼び出す必要があります。 既定のペイン区分線は、ペイン コンテナー全体のサイズを変更する区分線です。
 
-##  <a name="getrootcontainerrect"></a>  CPaneDivider::GetRootContainerRect
+## <a name="cpanedividergetrootcontainerrect"></a><a name="getrootcontainerrect"></a>クネパディバイダー::ゲットルートコンテナレクト
 
 ```
 CRect GetRootContainerRect();
@@ -481,9 +481,9 @@ CRect GetRootContainerRect();
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="getwidth"></a>  CPaneDivider::GetWidth
+## <a name="cpanedividergetwidth"></a><a name="getwidth"></a>クパネディバイダー::取得幅
 
 ```
 int GetWidth() const;
@@ -491,9 +491,9 @@ int GetWidth() const;
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="init"></a>  CPaneDivider::Init
+## <a name="cpanedividerinit"></a><a name="init"></a>CPaneディバイダー::イニト
 
 ```
 void Init(
@@ -503,12 +503,12 @@ void Init(
 
 ### <a name="parameters"></a>パラメーター
 
-から*Bdefaultslider*<br/>
-から*Pparent*<br/>
+[in]*ビデフォルトスライダー*<br/>
+[in]*親*<br/>
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="insertpane"></a>  CPaneDivider::InsertPane
+## <a name="cpanedividerinsertpane"></a><a name="insertpane"></a>Cペインディバイダー::ペインの挿入
 
 ```
 virtual BOOL InsertPane(
@@ -520,16 +520,16 @@ virtual BOOL InsertPane(
 
 ### <a name="parameters"></a>パラメーター
 
-から*pBarToInsert*<br/>
-から*Ptargetbar*<br/>
-から*dwAlignment*<br/>
-から*lpRect*<br/>
+[in]*挿入する*<br/>
+[in]*をクリックします。*<br/>
+[in]*dw配置*<br/>
+[in]*lpRect*<br/>
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="isautohidemode"></a>  CPaneDivider::IsAutoHideMode
+## <a name="cpanedividerisautohidemode"></a><a name="isautohidemode"></a>CPane ディバイダー::IsAutoHideMode
 
 ```
 BOOL IsAutoHideMode() const;
@@ -537,9 +537,9 @@ BOOL IsAutoHideMode() const;
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="isdefault"></a>  CPaneDivider::IsDefault
+## <a name="cpanedividerisdefault"></a><a name="isdefault"></a>CPane ディバイダー::IsDefault
 
 ```
 BOOL IsDefault() const;
@@ -547,9 +547,9 @@ BOOL IsDefault() const;
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="ishorizontal"></a>  CPaneDivider::IsHorizontal
+## <a name="cpanedividerishorizontal"></a><a name="ishorizontal"></a>CPane ディバイダー::イス水平
 
 ```
 BOOL IsHorizontal() const;
@@ -557,17 +557,17 @@ BOOL IsHorizontal() const;
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="m_ndefaultwidth"></a>CPaneDivider:: m_nDefaultWidth
+## <a name="cpanedividerm_ndefaultwidth"></a><a name="m_ndefaultwidth"></a>Cペインディバイダー::m_nDefaultWidth
 
-アプリケーション内のすべてのペインの区切り線の既定の幅をピクセル単位で指定します。
+アプリケーション内のすべてのペイン分割線の既定の幅をピクセル単位で指定します。
 
 ```
 AFX_IMPORT_DATA static int m_nDefaultWidth;
 ```
 
-##  <a name="move"></a>  CPaneDivider::Move
+## <a name="cpanedividermove"></a><a name="move"></a>CPaneディバイダー::移動
 
 ```
 virtual void Move(
@@ -577,26 +577,26 @@ virtual void Move(
 
 ### <a name="parameters"></a>パラメーター
 
-から*ptOffset*<br/>
-から*bAdjustLayout*<br/>
+[in]*ptオフセット*<br/>
+[in]*レイアウトを調整する*<br/>
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="m_psliderrtc"></a>CPaneDivider:: m_pSliderRTC
+## <a name="cpanedividerm_psliderrtc"></a><a name="m_psliderrtc"></a>Cペインディバイダー::m_pSliderRTC
 
-派生オブジェクトに関する`CPaneDivider`ランタイムクラス情報へのポインターを保持します。
+派生オブジェクトに関するランタイム クラス情報`CPaneDivider`へのポインターを保持します。
 
 ```
 AFX_IMPORT_DATA static CRuntimeClass* m_pSliderRTC;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-カスタムペインの区切り線を作成する場合は、このメンバー変数を設定します。 これにより、ペインが描画されたときにフレームワークがペインの区分線を作成できるようになります。
+カスタム ペインの区分線を作成する場合は、このメンバー変数を設定します。 これにより、ペインが描画されるときに、フレームワークでペインの区分線を作成できます。
 
 ### <a name="example"></a>例
 
-次の例では、メンバー変数`m_pSliderRTC`を設定する方法を示します。
+次の例は、メンバー変数を`m_pSliderRTC`設定する方法を示しています。
 
 ```
 class CMySplitter : public CPaneDivider
@@ -607,15 +607,15 @@ class CMySplitter : public CPaneDivider
 CPaneDivider::m_pSliderRTC = RUNTIME_CLASS(CMySpliter);
 ```
 
-##  <a name="notifyaboutrelease"></a>CPaneDivider:: Notifyのリリース
+## <a name="cpanedividernotifyaboutrelease"></a><a name="notifyaboutrelease"></a>CPane ディバイダー::リリースについて通知
 
 ```
 virtual void NotifyAboutRelease();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="onshowpane"></a>  CPaneDivider::OnShowPane
+## <a name="cpanedivideronshowpane"></a><a name="onshowpane"></a>Cペインディバイダー::オンショーペイン
 
 ```
 virtual void OnShowPane(
@@ -625,20 +625,20 @@ virtual void OnShowPane(
 
 ### <a name="parameters"></a>パラメーター
 
-から*Pbar*<br/>
-から*bShow*<br/>
+[in]*pバー*<br/>
+[in]*bショー*<br/>
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="releaseemptypanecontainers"></a>  CPaneDivider::ReleaseEmptyPaneContainers
+## <a name="cpanedividerreleaseemptypanecontainers"></a><a name="releaseemptypanecontainers"></a>Cペインディバイダー::リリース空のペインコンテナ
 
 ```
 void ReleaseEmptyPaneContainers();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="removepane"></a>  CPaneDivider::RemovePane
+## <a name="cpanedividerremovepane"></a><a name="removepane"></a>Cペインディバイダー::ウィンドウの削除
 
 ```
 virtual void RemovePane(CDockablePane* pBar);
@@ -646,11 +646,11 @@ virtual void RemovePane(CDockablePane* pBar);
 
 ### <a name="parameters"></a>パラメーター
 
-から*Pbar*<br/>
+[in]*pバー*<br/>
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="replacepane"></a>  CPaneDivider::ReplacePane
+## <a name="cpanedividerreplacepane"></a><a name="replacepane"></a>Cペインディバイダー::交換ペイン
 
 ```
 virtual BOOL ReplacePane(
@@ -660,14 +660,14 @@ virtual BOOL ReplacePane(
 
 ### <a name="parameters"></a>パラメーター
 
-から*pBarToReplace*<br/>
-から*pBarToReplaceWith*<br/>
+[in]*置き換える*<br/>
+[in]*置き換える*<br/>
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="repositionpanes"></a>CPaneDivider:: RepositionPanes
+## <a name="cpanedividerrepositionpanes"></a><a name="repositionpanes"></a>CPane ディバイダー::ペインの位置変更
 
 ```
 virtual void RepositionPanes(
@@ -677,12 +677,12 @@ virtual void RepositionPanes(
 
 ### <a name="parameters"></a>パラメーター
 
-から*rectNew*<br/>
-から*hdwp*<br/>
+[in]*レクト新しい*<br/>
+[in]*hdwp*<br/>
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="serialize"></a>CPaneDivider:: Serialize
+## <a name="cpanedividerserialize"></a><a name="serialize"></a>CPaneディバイダー::シリアライズ
 
 ```
 void Serialize(CArchive& ar);
@@ -690,11 +690,11 @@ void Serialize(CArchive& ar);
 
 ### <a name="parameters"></a>パラメーター
 
-から*ar*<br/>
+[in]*ar*<br/>
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="showwindow"></a>CPaneDivider:: ShowWindow
+## <a name="cpanedividershowwindow"></a><a name="showwindow"></a>Cペインディバイダー::ショーウィンドウ
 
 ```
 void ShowWindow(int nCmdShow);
@@ -702,11 +702,11 @@ void ShowWindow(int nCmdShow);
 
 ### <a name="parameters"></a>パラメーター
 
-から*Ncmdshow*<br/>
+[in]*をクリックします。*<br/>
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="storerecentdocksiteinfo"></a>  CPaneDivider::StoreRecentDockSiteInfo
+## <a name="cpanedividerstorerecentdocksiteinfo"></a><a name="storerecentdocksiteinfo"></a>クネパディバイダー::ストア最近ドックサイト情報
 
 ```
 void StoreRecentDockSiteInfo(CDockablePane* pBar);
@@ -714,11 +714,11 @@ void StoreRecentDockSiteInfo(CDockablePane* pBar);
 
 ### <a name="parameters"></a>パラメーター
 
-から*Pbar*<br/>
+[in]*pバー*<br/>
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="storerecenttabrelatedinfo"></a>CPaneDivider:: StoreRecentTabRelatedInfo
+## <a name="cpanedividerstorerecenttabrelatedinfo"></a><a name="storerecenttabrelatedinfo"></a>CPane ディバイダー::ストア最近タブ関連情報
 
 ```
 void StoreRecentTabRelatedInfo(
@@ -728,16 +728,16 @@ void StoreRecentTabRelatedInfo(
 
 ### <a name="parameters"></a>パラメーター
 
-から*Pdocのボタン*<br/>
-から*pTabbedBar*<br/>
+[in]*pドッキングバー*<br/>
+[in]*pタブ付きバー*<br/>
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 ## <a name="see-also"></a>関連項目
 
-[階層図](../../mfc/hierarchy-chart.md)<br/>
+[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
 [クラス](../../mfc/reference/mfc-classes.md)<br/>
 [CPaneContainerManager クラス](../../mfc/reference/cpanecontainermanager-class.md)<br/>
 [CPaneContainer クラス](../../mfc/reference/cpanecontainer-class.md)<br/>
 [CDockingManager クラス](../../mfc/reference/cdockingmanager-class.md)<br/>
-[CBasePane クラス](../../mfc/reference/cbasepane-class.md)
+[Cベースウィンドウクラス](../../mfc/reference/cbasepane-class.md)

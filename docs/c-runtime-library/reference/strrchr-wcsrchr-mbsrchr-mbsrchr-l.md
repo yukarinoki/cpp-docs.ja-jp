@@ -1,11 +1,13 @@
 ---
 title: strrchr、wcsrchr、_mbsrchr、_mbsrchr_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - strrchr
 - wcsrchr
 - _mbsrchr
 - _mbsrchr_l
+- _o__mbsrchr
+- _o__mbsrchr_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +22,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -45,12 +48,12 @@ helpviewer_keywords:
 - _ftcsrchr function
 - _mbsrchr_l function
 ms.assetid: 75cf2664-758e-49bb-bf6b-8a139cd474d2
-ms.openlocfilehash: 0b5ce46f43f8bf6801882e1a86b57c22fd4f2ab5
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b0aaa670cb6aa5af9e6f8a28234ba5c442d2f633
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946844"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365054"
 ---
 # <a name="strrchr-wcsrchr-_mbsrchr-_mbsrchr_l"></a>strrchr、wcsrchr、_mbsrchr、_mbsrchr_l
 
@@ -117,30 +120,32 @@ const unsigned char *_mbsrchr_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*str*<br/>
+*Str*<br/>
 NULL で終わる検索対象の文字列。
 
-*c*<br/>
+*C*<br/>
 検索する文字。
 
-*locale*<br/>
+*ロケール*<br/>
 使用するロケール。
 
 ## <a name="return-value"></a>戻り値
 
-*Str*で*c*が最後に出現する位置へのポインターを返すか、 *c*が見つからない場合は NULL を返します。
+*str*内の*c*の最後の出現箇所へのポインターを返し *、c*が見つからない場合は NULL を返します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-関数`strrchr`は、 *str*で最後に出現した*c* ( **char**型に変換) を検索します。 検索には、終端の null 文字が含まれます。
+関数`strrchr`は *、str*で*c* ( **char**に変換 ) の最後の出現を検索します。 検索には、終端の null 文字が含まれます。
 
 `wcsrchr` 関数と `_mbsrchr` 関数は、 `strrchr`関数のワイド文字バージョンとマルチバイト文字バージョンです。 `wcsrchr` 関数の引数と戻り値はワイド文字列で、`_mbsrchr` 関数の引数と戻り値はマルチバイト文字列です。
 
-C では、これらの関数は、最初の引数の**定数**ポインターを受け取ります。 C++ では、2 つのオーバーロードを使用できます。 **Const**へのポインターを受け取るオーバーロードは、 **const**へのポインターを返します。非**const**へのポインターを受け取るバージョンは、非**const**へのポインターを返します。 マクロ _CRT_CONST_CORRECT_OVERLOADS は、これらの関数の**const**と**const**以外の両方のバージョンが使用できる場合に定義されます。 両方C++のオーバーロードに非**定数**の動作が必要な場合は、を定義します。
+C では、これらの関数は最初の引数の**const**ポインターを受け取ります。 C++ では、2 つのオーバーロードを使用できます。 **const**へのポインタを受け取るオーバーロードは **、const**へのポインタを返します。非**const**へのポインターを受け取るバージョンは、非**const**へのポインターを返します。 これらの関数の**const**バージョンと非**const**バージョンの両方が使用可能な場合、マクロ _CRT_CONST_CORRECT_OVERLOADSが定義されます。 両方の C++ オーバーロードに対して非**const**動作が必要な場合は、シンボル _CONST_RETURNを定義します。
 
-`_mbsrchr` はそのパラメーターを検証します。 *Str*が NULL の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可され`errno`た場合、は`_mbsrchr` EINVAL に設定され、0を返します。 `strrchr` および `wcsrchr` は、パラメーターを検証しません。 それ以外では、これらの関数の動作は同じです。
+`_mbsrchr` はそのパラメーターを検証します。 *str*が NULL の場合は、「パラメーター[の検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーター ハンドラーが呼び出されます。 実行が続行できる場合は、EINVAL`errno`に設定され`_mbsrchr`、0 を返します。 `strrchr` および `wcsrchr` は、パラメーターを検証しません。 それ以外では、これらの関数の動作は同じです。
 
-出力値は、ロケールの LC_CTYPE カテゴリの設定に影響されます。詳細については、「 [setlocale](setlocale-wsetlocale.md)」を参照してください。 **_l** サフィックスが付いていないこれらの関数のバージョンでは、このロケールに依存する動作に現在のロケールを使用します。 **_l** サフィックスが付いているバージョンは、渡されたロケール パラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+出力値は、ロケールのLC_CTYPEカテゴリ設定の設定によって影響されます。詳細については、 [setlocale](setlocale-wsetlocale.md)を参照してください。 **_l** サフィックスが付いていないこれらの関数のバージョンでは、このロケールに依存する動作に現在のロケールを使用します。**_l** サフィックスが付いているバージョンは、渡されたロケール パラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -151,7 +156,7 @@ C では、これらの関数は、最初の引数の**定数**ポインター�
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |`strrchr`|\<string.h>|
 |`wcsrchr`|\<string.h> または \<wchar.h>|
@@ -167,7 +172,7 @@ C では、これらの関数は、最初の引数の**定数**ポインター�
 
 [文字列操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [ロケール](../../c-runtime-library/locale.md)<br/>
-[マルチバイト文字のシーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[マルチバイト文字シーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strchr、wcschr、_mbschr、_mbschr_l](strchr-wcschr-mbschr-mbschr-l.md)<br/>
 [strcspn、wcscspn、_mbscspn、_mbscspn_l](strcspn-wcscspn-mbscspn-mbscspn-l.md)<br/>
 [_strnicmp、_wcsnicmp、_mbsnicmp、_strnicmp_l、_wcsnicmp_l、_mbsnicmp_l](strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)<br/>

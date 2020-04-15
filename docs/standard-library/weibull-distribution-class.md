@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::weibull_distribution [C++], param_type
 - std::weibull_distribution [C++], param_type
 ms.assetid: f20b49d3-1b9a-41af-8db4-baf800eaa02b
-ms.openlocfilehash: 8524ec61f1d785c8ab4a7b3dbef76bba69ddb6d6
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 01640cd700f54facba06f65f63e172abc668a5be
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80075526"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366374"
 ---
 # <a name="weibull_distribution-class"></a>weibull_distribution クラス
 
@@ -70,12 +70,12 @@ class weibull_distribution
 
 ### <a name="parameters"></a>パラメーター
 
-*Realtype*\
-浮動小数点演算の結果の型。既定値は**double**です。 使用可能な型については、「[\<random>](../standard-library/random.md)」を参照してください。
+*リアルタイプ*\
+浮動小数点の結果の種類は、デフォルトで**double**になります。 可能な型については、「[\<ランダム>」](../standard-library/random.md)を参照してください。
 
 ## <a name="remarks"></a>解説
 
-クラステンプレートは、ワイブル分布に従って分布した、ユーザー指定の浮動小数点型の値、または none を指定した場合は**double**型の値を生成する分布を表します。 次の表は、個々のメンバーに関する記事にリンクしています。
+クラス テンプレートは、ユーザー指定の浮動小数点型の値を生成する分布を表します。 **double** 次の表は、個々のメンバーに関する記事にリンクしています。
 
 ||||
 |-|-|-|
@@ -84,7 +84,7 @@ class weibull_distribution
 
 プロパティ関数 `a()` と `b()` はそれぞれ、格納されている分布パラメーター *a* と *b* の値を返します。
 
-プロパティ メンバー `param()` は、格納されている分布パラメーター パッケージ `param_type` を設定または返します。
+プロパティ メンバー関数 `param()` は、格納されている分布パラメーター パッケージ `param_type` を設定または返します。
 
 メンバー関数の `min()` と `max()` はそれぞれ、考えられる結果の最小値と最大値を返します。
 
@@ -92,7 +92,7 @@ class weibull_distribution
 
 `operator()` メンバー関数は、現在のパラメーター パッケージと指定したパラメーター パッケージのいずれかから、URNG エンジンに基づいて次に生成された値を返します。
 
-分布クラスとそのメンバーの詳細については、[\<random>](../standard-library/random.md) を参照してください。
+分布クラスとそのメンバーの詳細については、「 ランダム[\<>](../standard-library/random.md)」を参照してください。
 
 Weibull 分布の詳細については、Wolfram MathWorld の記事「[Weibull Distribution (Weibull 分布)](https://mathworld.wolfram.com/WeibullDistribution.html)」を参照してください。
 
@@ -155,7 +155,7 @@ int main()
 }
 ```
 
-## <a name="output"></a>Output
+## <a name="output"></a>出力
 
 最初の実行:
 
@@ -209,11 +209,11 @@ Distribution for 10 samples:
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<ランダム >
+**ヘッダー:** \<random>
 
 **名前空間:** std
 
-## <a name="weibull_distributionweibull_distribution"></a><a name="weibull_distribution"></a>  weibull_distribution::weibull_distribution
+## <a name="weibull_distributionweibull_distribution"></a><a name="weibull_distribution"></a>weibull_distribution::weibull_distribution
 
 ```cpp
 explicit weibull_distribution(result_type a = 1.0, result_type b = 1.0);
@@ -222,24 +222,24 @@ explicit weibull_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>パラメーター
 
-*\*
+*A*\
 `a` 分布パラメーター。
 
-*b*\
+*B*\
 `b` 分布パラメーター。
 
-*parm*\
+*Parm*\
 分布の作成に使用される `param_type` の構造体。
 
 ### <a name="remarks"></a>解説
 
 **前提条件:** `0.0 < a` および `0.0 < b`
 
-1 つ目のコンストラクターは、格納されている値 `a` と *にそれぞれ*a`b` と *b* の値を保持するオブジェクトを作成します。
+1 つ目のコンストラクターは、格納されている値 `a` と `b` にそれぞれ *a* と *b* の値を保持するオブジェクトを作成します。
 
-2 番目のコンストラクターは、格納されているパラメーターが *parm* から初期化されるオブジェクトを作成します。 `param()` メンバー関数を呼び出すと、既存の分布の現在のパラメーターを取得および設定できます。
+2 つ目のコンストラクターは、格納されているパラメーターが *parm* から初期化されるオブジェクトを作成します。 `param()` メンバー関数を呼び出すと、既存の分布の現在のパラメーターを取得および設定できます。
 
-## <a name="weibull_distributionparam_type"></a><a name="param_type"></a>  weibull_distribution::param_type
+## <a name="weibull_distributionparam_type"></a><a name="param_type"></a>weibull_distribution::pアラム_タイプ
 
 分布のパラメーターを格納します。
 
@@ -257,13 +257,13 @@ struct param_type {
 
 ### <a name="parameters"></a>パラメーター
 
-*\*
+*A*\
 `a` 分布パラメーター。
 
-*b*\
+*B*\
 `b` 分布パラメーター。
 
-*右*\
+*そうです*\
 このオブジェクトと比較する `param_type` オブジェクト。
 
 ### <a name="remarks"></a>解説
@@ -272,6 +272,6 @@ struct param_type {
 
 この構造体は、インスタンス化時に分布のクラス コンストラクターに渡したり、`param()` メンバー関数に渡して、既存の分布の格納されているパラメーターを設定したり、`operator()` に渡して、格納されているパラメーターの代わりに使用したりすることができます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[\<random>](../standard-library/random.md)
+[\<ランダム>](../standard-library/random.md)

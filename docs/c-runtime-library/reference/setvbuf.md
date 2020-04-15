@@ -1,8 +1,9 @@
 ---
 title: setvbuf
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - setvbuf
+- _o_setvbuf
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - stream buffering
 - setvbuf function
 ms.assetid: 6aa5aa37-3408-4fa0-992f-87f9f9c4baea
-ms.openlocfilehash: 38b6474f550107a8edd941c7112ba98891ab3c12
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 203265a8dd85854bcedd737359b856fdc4cce04d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948179"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81316259"
 ---
 # <a name="setvbuf"></a>setvbuf
 
@@ -50,7 +52,7 @@ int setvbuf(
 
 ### <a name="parameters"></a>パラメーター
 
-*一連*<br/>
+*ストリーム*<br/>
 **FILE** 構造体へのポインター。
 
 *バッファー*<br/>
@@ -59,36 +61,38 @@ int setvbuf(
 *モード*<br/>
 バッファリングのモード。
 
-*size*<br/>
-バイト単位のバッファー サイズ。 許容範囲:2 < = *size* < = INT_MAX (2147483647)。 内部的には、 *size*に指定された値は、最も近い2の倍数に丸められます。
+*サイズ*<br/>
+バイト単位のバッファー サイズ。 許容範囲: 2 <=*サイズ*<= INT_MAX (2147483647)。 内部的には、*サイズ*に対して指定された値は、最も近い 2 の倍数に切り捨てられます。
 
 ## <a name="return-value"></a>戻り値
 
 処理が正常に終了した場合は 0 を返します。
 
-*Stream*が**NULL**の場合、または*モード*または*サイズ*が有効な変更の範囲内にない場合は、「パラメーターの[検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、この関数は -1 を返し、**errno** を **EINVAL** に設定します。
+*stream*が**NULL**の場合、または*モード*または*サイズ*が有効な変更の範囲内にない場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーター ハンドラーが呼び出されます。 実行の継続が許可された場合、この関数は -1 を返し、**errno** を **EINVAL** に設定します。
 
-エラー コードの詳細については、「[_doserrno、errno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
+これらと他のエラー コードの詳細については、「[_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**Setvbuf**関数を使用すると、プログラムは*ストリーム*のバッファリングとバッファーサイズの両方を制御できます。 *ストリーム*は、開いた後に i/o 操作を実行していない開いているファイルを参照する必要があります。 *Buffer*が指す配列は、 **NULL**でない限り、バッファーとして使用されます。この場合、 **setvbuf**は、自動的に割り当てられ\*た長さ*サイズ*/2 2 バイトのバッファーを使用します。
+**setvbuf**関数を使用すると、プログラムは *、ストリーム*のバッファリングとバッファ サイズの両方を制御できます。 *ストリーム*は、開かれた後に I/O 操作を行っていないオープン・ファイルを参照する必要があります。 *buffer*によって指される配列は **、NULL**でない限りバッファとして使用され、その場合**setvbuf**は長*さサイズ*/2 2\*バイトのバッファを自動的に割り当てます。
 
-モードは **_IOFBF**、 **_IOLBF**、または **_IONBF**である必要があります。 *Mode*が **_IOFBF**または **_IOLBF**の場合、*サイズ*はバッファーのサイズとして使用されます。 *Mode*が **_IONBF**の場合、ストリームはバッファーされません。*サイズ*と*バッファー*は無視されます。 *モード*とその意味の値は次のとおりです。
+モードは、 **_IOFBF**、 **_IOLBF**、または **_IONBF**である必要があります。 *mode*が **_IOFBF**または **_IOLBF**の場合 *、size*がバッファーのサイズとして使用されます。 *mode*が **_IONBF**の場合、ストリームはバッファリングされず、*サイズ*と*バッファー*は無視されます。 *モード*の値とその意味は次のとおりです。
 
-|*モード*値|説明|
+|*モード*値|意味|
 |-|-|
-| **_IOFBF** | フルバッファリングつまり、バッファーがバッファーとして使用さ*れ、* *サイズ*がバッファーのサイズとして使用されます。 *Buffer*が**NULL**の場合、自動的に割り当てられたバッファー*サイズ*のバイト長が使用されます。 |
-| **_IOLBF** | 一部のシステムでは、行バッファリングします。 ただし、Win32 の場合、動作は **_IOFBF**フルバッファリングと同じです。 |
-| **_IONBF** | *バッファーまたは* *サイズ*に関係なく、バッファーは使用されません。 |
+| **_IOFBF** | フル バッファリング。つまり、*バッファー*はバッファーとして使用され、*サイズ*はバッファーのサイズとして使用されます。 *buffer*が**NULL**の場合は、自動的に割り当てられたバッファー *・サイズ*のバイト長が使用されます。 |
+| **_IOLBF** | 一部のシステムでは、行バッファリングします。 ただし、Win32 の場合、動作は **_IOFBF** - フル バッファリングと同じです。 |
+| **_IONBF** | バッファや*サイズ*に関係なく、*バッファ*は使用されません。 |
+
+既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**setvbuf**|\<stdio.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="libraries"></a>ライブラリ
 

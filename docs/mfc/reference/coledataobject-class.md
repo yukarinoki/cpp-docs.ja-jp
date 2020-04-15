@@ -28,12 +28,12 @@ helpviewer_keywords:
 - COleDataObject [MFC], IsDataAvailable
 - COleDataObject [MFC], Release
 ms.assetid: d1cc84be-2e1c-4bb3-a8a0-565eb08aaa34
-ms.openlocfilehash: e706489a84ad564949e2c2d3d193173fc19b9828
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 5e1545a033ab482e838fbc944b0ca9b3e543d651
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79426541"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366129"
 ---
 # <a name="coledataobject-class"></a>COleDataObject クラス
 
@@ -49,36 +49,36 @@ class COleDataObject
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|Description|
+|名前|説明|
 |----------|-----------------|
-|[COleDataObject:: COleDataObject](#coledataobject)|`COleDataObject` オブジェクトを構築します。|
+|[オブジェクト:::オブジェクト](#coledataobject)|`COleDataObject` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|Description|
+|名前|説明|
 |----------|-----------------|
-|[COleDataObject:: Attach](#attach)|指定した OLE データオブジェクトを `COleDataObject`にアタッチします。|
-|[COleDataObject:: AttachClipboard](#attachclipboard)|クリップボードにあるデータオブジェクトをアタッチします。|
-|[COleDataObject:: BeginEnumFormats](#beginenumformats)|1つ以上の後続の `GetNextFormat` 呼び出しを準備します。|
-|[COleDataObject::D etach](#detach)|関連付けられている `IDataObject` オブジェクトをデタッチします。|
-|[COleDataObject:: GetData](#getdata)|アタッチされた OLE データオブジェクトから、指定した形式でデータをコピーします。|
-|[COleDataObject:: GetFileData](#getfiledata)|アタッチされた OLE データオブジェクトのデータを、指定した形式で `CFile` ポインターにコピーします。|
-|[COleDataObject:: GetGlobalData](#getglobaldata)|アタッチされた OLE データオブジェクトから、指定した形式で `HGLOBAL` にデータをコピーします。|
-|[COleDataObject:: GetNextFormat](#getnextformat)|使用可能な次のデータ形式を返します。|
-|[COleDataObject:: IsDataAvailable](#isdataavailable)|指定された形式でデータを使用できるかどうかを確認します。|
-|[COleDataObject:: Release](#release)|関連付けられている `IDataObject` オブジェクトをデタッチして解放します。|
+|[オブジェクト::アタッチ](#attach)|指定した OLE データ オブジェクトを`COleDataObject`にアタッチします。|
+|[クリップボードをアタッチします。](#attachclipboard)|クリップボードにあるデータ オブジェクトをアタッチします。|
+|[オブジェクト::ビギン列挙形式](#beginenumformats)|1 つ以上の後続の`GetNextFormat`呼び出しの準備をします。|
+|[コレデータオブジェクト::Dエタッハ](#detach)|関連付けられた`IDataObject`オブジェクトをデタッチします。|
+|[オブジェクトを取得します。](#getdata)|アタッチされた OLE データ オブジェクトのデータを指定した形式でコピーします。|
+|[オブジェクト::ファイルデータを取得します。](#getfiledata)|アタッチされた OLE データ オブジェクトのデータ`CFile`を、指定した形式のポインターにコピーします。|
+|[オブジェクト::取得グローバルデータ](#getglobaldata)|アタッチされた OLE データ オブジェクトのデータ`HGLOBAL`を、指定した形式で にコピーします。|
+|[次の書式を取得します。](#getnextformat)|次に使用可能なデータ形式を返します。|
+|[オブジェクト::IsDataAvailable](#isdataavailable)|データが指定された形式で使用可能かどうかをチェックします。|
+|[オブジェクト::リリース](#release)|関連付けられた`IDataObject`オブジェクトをデタッチして解放します。|
 
 ## <a name="remarks"></a>解説
 
-`COleDataObject` には基底クラスがありません。
+`COleDataObject`は基本クラスを持っていません。
 
-この種類のデータ転送には、変換元と変換先が含まれます。 データソースは、 [COleDataSource](../../mfc/reference/coledatasource-class.md)クラスのオブジェクトとして実装されます。 変換先アプリケーションにデータがドロップされている場合、またはクリップボードから貼り付け操作を実行するように求められた場合は、`COleDataObject` クラスのオブジェクトを作成する必要があります。
+この種のデータ転送には、転送元と転送先が含まれます。 データ ソースは、[クラス](../../mfc/reference/coledatasource-class.md)のオブジェクトとして実装されます。 コピー先のアプリケーションでデータがドロップされたり、クリップボードから貼り付け操作を行うよう求められたりするたびに、`COleDataObject`クラスのオブジェクトを作成する必要があります。
 
-このクラスを使用すると、指定した形式のデータが存在するかどうかを判断できます。 また、使用可能なデータ形式を列挙したり、特定の形式が使用可能かどうかを確認してから、適切な形式でデータを取得することもできます。 オブジェクトの取得は、 [CFile](../../mfc/reference/cfile-class.md)、HGLOBAL、`STGMEDIUM` 構造体の使用など、いくつかの方法で実現できます。
+このクラスを使用すると、データが指定された形式で存在するかどうかを確認できます。 また、使用可能なデータ形式を列挙したり、特定の形式が使用可能かどうかを確認して、優先形式でデータを取得することもできます。 オブジェクトの取得は[、CFile](../../mfc/reference/cfile-class.md)、HGLOBAL、または構造体の使用を含む、いくつかの異なる方法`STGMEDIUM`で行うことができます。
 
-詳細については、Windows SDK の[STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1)構造体を参照してください。
+詳細については、Windows SDK の[STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1)構造を参照してください。
 
-アプリケーションでのデータオブジェクトの使用の詳細については、「[データオブジェクトとデータソース (OLE)](../../mfc/data-objects-and-data-sources-ole.md)」を参照してください。
+アプリケーションでデータ オブジェクトを使用する方法の詳細については、「[データ オブジェクトとデータ ソース (OLE)」](../../mfc/data-objects-and-data-sources-ole.md)を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -86,11 +86,11 @@ class COleDataObject
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** afxole
+**ヘッダー:** afxole.h
 
-##  <a name="attach"></a>COleDataObject:: Attach
+## <a name="coledataobjectattach"></a><a name="attach"></a>オブジェクト::アタッチ
 
-この関数を呼び出して、`COleDataObject` オブジェクトを OLE データオブジェクトに関連付けます。
+オブジェクトを OLE データ`COleDataObject`オブジェクトに関連付けます。
 
 ```
 void Attach(
@@ -100,19 +100,19 @@ void Attach(
 
 ### <a name="parameters"></a>パラメーター
 
-*lpDataObject*<br/>
-OLE データオブジェクトをポイントします。
+*オブジェクト*<br/>
+OLE データ オブジェクトへのポイント。
 
-*bAutoRelease*<br/>
-`COleDataObject` オブジェクトが破棄されたときに OLE データオブジェクトを解放する必要がある場合は TRUE。それ以外の場合は FALSE。
+*b自動リリース*<br/>
+オブジェクトが破棄されたときに OLE データ オブジェクトを`COleDataObject`解放する場合は TRUE。それ以外の場合は FALSE。
 
 ### <a name="remarks"></a>解説
 
-詳細については、Windows SDK の「 [IDataObject](/windows/win32/api/objidl/nn-objidl-idataobject) 」を参照してください。
+詳細については、Windows SDK[の「IDataObject」](/windows/win32/api/objidl/nn-objidl-idataobject)を参照してください。
 
-##  <a name="attachclipboard"></a>COleDataObject:: AttachClipboard
+## <a name="coledataobjectattachclipboard"></a><a name="attachclipboard"></a>クリップボードをアタッチします。
 
-現在クリップボードにあるデータオブジェクトを `COleDataObject` オブジェクトにアタッチするには、この関数を呼び出します。
+クリップボードに現在置かれているデータ オブジェクトを`COleDataObject`オブジェクトにアタッチします。
 
 ```
 BOOL AttachClipboard();
@@ -125,11 +125,11 @@ BOOL AttachClipboard();
 ### <a name="remarks"></a>解説
 
 > [!NOTE]
->  この関数を呼び出すと、このデータオブジェクトが解放されるまでクリップボードがロックされます。 データオブジェクトは、`COleDataObject`のデストラクターで解放されます。 詳細については、「Win32 置かの[Openclipboard](/windows/win32/api/winuser/nf-winuser-openclipboard)と[CloseClipboard](/windows/win32/api/winuser/nf-winuser-closeclipboard) 」を参照してください。
+> この関数を呼び出すと、このデータ オブジェクトが解放されるまでクリップボードがロックされます。 データ オブジェクトは、 のデストラクターで解放`COleDataObject`されます。 詳細については、Win32 ドキュメントの[「クリップボードを開く](/windows/win32/api/winuser/nf-winuser-openclipboard)」および「[クリップボードを閉じる](/windows/win32/api/winuser/nf-winuser-closeclipboard)」を参照してください。
 
-##  <a name="beginenumformats"></a>COleDataObject:: BeginEnumFormats
+## <a name="coledataobjectbeginenumformats"></a><a name="beginenumformats"></a>オブジェクト::ビギン列挙形式
 
-この関数を呼び出して、項目からデータ形式の一覧を取得するために `GetNextFormat` への後続の呼び出しを準備します。
+アイテムからデータ形式の一覧を取得`GetNextFormat`するための後続の呼び出しを準備します。
 
 ```
 void BeginEnumFormats();
@@ -137,13 +137,13 @@ void BeginEnumFormats();
 
 ### <a name="remarks"></a>解説
 
-`BeginEnumFormats`を呼び出すと、このデータオブジェクトでサポートされている最初の形式の位置が格納されます。 `GetNextFormat` を連続して呼び出すと、データオブジェクト内の使用可能な形式の一覧が列挙されます。
+を`BeginEnumFormats`呼び出した後、このデータ オブジェクトでサポートされる最初の形式の位置が格納されます。 の`GetNextFormat`連続呼び出しは、データ オブジェクトで使用可能な形式の一覧を列挙します。
 
-指定された形式でデータが使用可能かどうかを確認するには、 [COleDataObject:: IsDataAvailable](#isdataavailable)を使用します。
+指定された形式でデータが使用できるかどうか確認するには[、COleDataObject::IsDataAvailable](#isdataavailable)を使用します。
 
-詳細については、Windows SDK の「 [IDataObject:: EnumFormatEtc](/windows/win32/api/objidl/nf-objidl-idataobject-enumformatetc) 」を参照してください。
+詳細については、Windows SDK[の「IDataObject::列挙形式の問題](/windows/win32/api/objidl/nf-objidl-idataobject-enumformatetc)」を参照してください。
 
-##  <a name="coledataobject"></a>COleDataObject:: COleDataObject
+## <a name="coledataobjectcoledataobject"></a><a name="coledataobject"></a>オブジェクト:::オブジェクト
 
 `COleDataObject` オブジェクトを構築します。
 
@@ -153,14 +153,14 @@ COleDataObject();
 
 ### <a name="remarks"></a>解説
 
-他の `COleDataObject` 関数を呼び出す前に、 [COleDataObject:: Attach](#attach)または[COleDataObject:: attachclipboard](#attachclipboard)の呼び出しを行う必要があります。
+他`COleDataObject`の関数を呼び出す前に[、COleDataObject::アタッチ](#attach)または[COleDataObject::アタッチクリップボード](#attachclipboard)の呼び出しを行う必要があります。
 
 > [!NOTE]
->  ドラッグアンドドロップハンドラーのパラメーターの1つは `COleDataObject`へのポインターであるため、ドラッグアンドドロップをサポートするためにこのコンストラクターを呼び出す必要はありません。
+> ドラッグ アンド ドロップ ハンドラへのパラメータの 1 つは`COleDataObject`へのポインタであるため、ドラッグ アンド ドロップをサポートするためにこのコンストラクタを呼び出す必要はありません。
 
-##  <a name="detach"></a>COleDataObject::D etach
+## <a name="coledataobjectdetach"></a><a name="detach"></a>コレデータオブジェクト::Dエタッハ
 
-この関数を呼び出して、データオブジェクトを解放せずに、関連付けられている OLE データオブジェクトから `COleDataObject` オブジェクトをデタッチします。
+データ`COleDataObject`オブジェクトを解放せずに、関連付けられた OLE データ オブジェクトからオブジェクトをデタッチします。
 
 ```
 LPDATAOBJECT Detach();
@@ -168,13 +168,13 @@ LPDATAOBJECT Detach();
 
 ### <a name="return-value"></a>戻り値
 
-デタッチされた OLE データオブジェクトへのポインター。
+デタッチされた OLE データ オブジェクトへのポインター。
 
 ### <a name="remarks"></a>解説
 
-##  <a name="getdata"></a>COleDataObject:: GetData
+## <a name="coledataobjectgetdata"></a><a name="getdata"></a>オブジェクトを取得します。
 
-指定した書式で項目からデータを取得するには、この関数を呼び出します。
+指定した形式のアイテムからデータを取得します。
 
 ```
 BOOL GetData(
@@ -185,14 +185,14 @@ BOOL GetData(
 
 ### <a name="parameters"></a>パラメーター
 
-*cfFormat*<br/>
-データが返される形式。 このパラメーターには、定義済みのクリップボード形式、またはネイティブ Windows [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw)関数によって返される値のいずれかを指定できます。
+*cf フォーマット*<br/>
+データが返される形式。 このパラメーターには、定義済みのクリップボード形式の 1 つ、またはネイティブの Windows[の登録クリップボード形式](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw)関数によって返される値を指定できます。
 
-*lpStgMedium*<br/>
-データを受け取る[STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1)構造体を指します。
+*中程度*<br/>
+データを受信する[STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1)構造体へのポイント。
 
-*lpFormatEtc*<br/>
-データが返される形式を記述する[FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)構造体を指します。 *CfFormat*で指定されたクリップボード形式以外の追加の書式情報を指定する場合は、このパラメーターの値を指定します。 NULL の場合は、`FORMATETC` 構造内の他のフィールドに既定値が使用されます。
+*フォーマットの問題*<br/>
+データが返される形式を記述する[FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)構造体へのポイント。 *cfFormat*で指定されたクリップボード形式以外の追加の書式情報を指定する場合は、このパラメータの値を指定します。 NULL の場合、デフォルト値は構造体の他のフィールドに`FORMATETC`使用されます。
 
 ### <a name="return-value"></a>戻り値
 
@@ -200,13 +200,13 @@ BOOL GetData(
 
 ### <a name="remarks"></a>解説
 
-詳細については、Windows SDK の「 [IDataObject:: GetData](/windows/win32/api/objidl/nf-objidl-idataobject-getdata)、 [STGMEDIUM](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1)、および[FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) 」を参照してください。
+詳細については、Windows SDK[の「IDataObject::GetData](/windows/win32/api/objidl/nf-objidl-idataobject-getdata) [、STGMEDIUM、](/windows/win32/api/objidl/ns-objidl-ustgmedium~r1)および[フォーマット」](/windows/win32/api/objidl/ns-objidl-formatetc)を参照してください。
 
-詳細については、Windows SDK の「 [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) 」を参照してください。
+詳細については、「Windows SDK で[クリップボードの書式を登録](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw)する」を参照してください。
 
-##  <a name="getfiledata"></a>COleDataObject:: GetFileData
+## <a name="coledataobjectgetfiledata"></a><a name="getfiledata"></a>オブジェクト::ファイルデータを取得します。
 
-この関数を呼び出して、`CFile` または `CFile`派生オブジェクトを作成し、指定した形式のデータを `CFile` ポインターに取得します。
+この関数を呼び出`CFile`して`CFile`、派生オブジェクトまたは派生オブジェクトを作成し、指定した形式`CFile`のデータをポインターに取得します。
 
 ```
 CFile* GetFileData(
@@ -216,30 +216,30 @@ CFile* GetFileData(
 
 ### <a name="parameters"></a>パラメーター
 
-*cfFormat*<br/>
-データが返される形式。 このパラメーターには、定義済みのクリップボード形式、またはネイティブ Windows [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw)関数によって返される値のいずれかを指定できます。
+*cf フォーマット*<br/>
+データが返される形式。 このパラメーターには、定義済みのクリップボード形式の 1 つ、またはネイティブの Windows[の登録クリップボード形式](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw)関数によって返される値を指定できます。
 
-*lpFormatEtc*<br/>
-データが返される形式を記述する[FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)構造体を指します。 *CfFormat*で指定されたクリップボード形式以外の追加の書式情報を指定する場合は、このパラメーターの値を指定します。 NULL の場合は、`FORMATETC` 構造内の他のフィールドに既定値が使用されます。
+*フォーマットの問題*<br/>
+データが返される形式を記述する[FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)構造体へのポイント。 *cfFormat*で指定されたクリップボード形式以外の追加の書式情報を指定する場合は、このパラメータの値を指定します。 NULL の場合、デフォルト値は構造体の他のフィールドに`FORMATETC`使用されます。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は、データを格納している新しい `CFile` または `CFile`派生オブジェクトへのポインター。それ以外の場合は NULL。
+成功した場合は`CFile`、`CFile`データを含む新規または派生オブジェクトへのポインター。それ以外の場合は NULL。
 
 ### <a name="remarks"></a>解説
 
-データが格納されているメディアによっては、戻り値が指す実際の型が `CFile`、`CSharedFile`、または `COleStreamFile`になることがあります。
+データが格納されるメディアに応じて、戻り値によって示される実際の型は`CFile`、 `CSharedFile`、または`COleStreamFile`である場合があります。
 
 > [!NOTE]
->  この関数の戻り値によってアクセスされる `CFile` オブジェクトは、呼び出し元が所有します。 `CFile` オブジェクトを**削除**してファイルを閉じるのは、呼び出し元の役割です。
+> この`CFile`関数の戻り値によってアクセスされるオブジェクトは、呼び出し元によって所有されます。 オブジェクトを**削除**し、それによってファイルを`CFile`閉じるのは、呼び出し元の責任です。
 
-詳細については、Windows SDK の「 [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) 」を参照してください。
+詳細については、Windows SDK[の「FORMATETC」](/windows/win32/api/objidl/ns-objidl-formatetc)を参照してください。
 
-詳細については、Windows SDK の「 [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) 」を参照してください。
+詳細については、「Windows SDK で[クリップボードの書式を登録](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw)する」を参照してください。
 
-##  <a name="getglobaldata"></a>COleDataObject:: GetGlobalData
+## <a name="coledataobjectgetglobaldata"></a><a name="getglobaldata"></a>オブジェクト::取得グローバルデータ
 
-グローバルメモリブロックを割り当て、指定した形式のデータを HGLOBAL に取得するには、この関数を呼び出します。
+グローバル メモリ ブロックを割り当て、指定した形式のデータを取得して HGLOBAL に変換します。
 
 ```
 HGLOBAL GetGlobalData(
@@ -249,25 +249,25 @@ HGLOBAL GetGlobalData(
 
 ### <a name="parameters"></a>パラメーター
 
-*cfFormat*<br/>
-データが返される形式。 このパラメーターには、定義済みのクリップボード形式、またはネイティブ Windows [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw)関数によって返される値のいずれかを指定できます。
+*cf フォーマット*<br/>
+データが返される形式。 このパラメーターには、定義済みのクリップボード形式の 1 つ、またはネイティブの Windows[の登録クリップボード形式](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw)関数によって返される値を指定できます。
 
-*lpFormatEtc*<br/>
-データが返される形式を記述する[FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)構造体を指します。 *CfFormat*で指定されたクリップボード形式以外の追加の書式情報を指定する場合は、このパラメーターの値を指定します。 NULL の場合は、`FORMATETC` 構造内の他のフィールドに既定値が使用されます。
+*フォーマットの問題*<br/>
+データが返される形式を記述する[FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)構造体へのポイント。 *cfFormat*で指定されたクリップボード形式以外の追加の書式情報を指定する場合は、このパラメータの値を指定します。 NULL の場合、デフォルト値は構造体の他のフィールドに`FORMATETC`使用されます。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は、データを格納しているグローバルメモリブロックのハンドル。それ以外の場合は NULL。
+成功した場合は、データを含むグローバル メモリ ブロックのハンドル。それ以外の場合は NULL。
 
 ### <a name="remarks"></a>解説
 
-詳細については、Windows SDK の「 [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) 」を参照してください。
+詳細については、Windows SDK[の「FORMATETC」](/windows/win32/api/objidl/ns-objidl-formatetc)を参照してください。
 
-詳細については、Windows SDK の「 [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) 」を参照してください。
+詳細については、「Windows SDK で[クリップボードの書式を登録](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw)する」を参照してください。
 
-##  <a name="getnextformat"></a>COleDataObject:: GetNextFormat
+## <a name="coledataobjectgetnextformat"></a><a name="getnextformat"></a>次の書式を取得します。
 
-項目からデータを取得するために使用できるすべての形式を取得するには、この関数を繰り返し呼び出します。
+この関数を繰り返し呼び出して、アイテムからデータを取得するために使用できるすべての形式を取得します。
 
 ```
 BOOL GetNextFormat(LPFORMATETC lpFormatEtc);
@@ -275,24 +275,24 @@ BOOL GetNextFormat(LPFORMATETC lpFormatEtc);
 
 ### <a name="parameters"></a>パラメーター
 
-*lpFormatEtc*<br/>
-関数呼び出しが返されたときに書式情報を受け取る[FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)構造体を指します。
+*フォーマットの問題*<br/>
+関数呼び出しが戻るときにフォーマット情報を受け取る[FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)構造体を指します。
 
 ### <a name="return-value"></a>戻り値
 
-別の形式が使用可能な場合は0以外の。それ以外の場合は0です。
+別の形式が使用可能な場合は 0 以外の値を返します。それ以外の場合は 0。
 
 ### <a name="remarks"></a>解説
 
-[COleDataObject:: BeginEnumFormats](#beginenumformats)を呼び出した後、このデータオブジェクトでサポートされている最初の形式の位置が格納されます。 `GetNextFormat` を連続して呼び出すと、データオブジェクト内の使用可能な形式の一覧が列挙されます。 使用可能な形式の一覧を表示するには、これらの関数を使用します。
+[呼](#beginenumformats)び出しの後、このデータ オブジェクトでサポートされる最初の形式の位置が格納されます。 の`GetNextFormat`連続呼び出しは、データ オブジェクトで使用可能な形式の一覧を列挙します。 これらの関数を使用して、使用可能な形式をリストします。
 
-指定された形式が使用可能かどうかを確認するには、 [COleDataObject:: IsDataAvailable](#isdataavailable)を呼び出します。
+特定の形式が使用できるかどうか確認するには[、COleDataObject::IsDataAvailable](#isdataavailable)を呼び出します。
 
-詳細については、Windows SDK の「 [IEnumXXXX:: Next](/previous-versions//ms695273\(v=vs.85\)) 」を参照してください。
+詳細については、Windows SDK の[IEnumXXXX::次](/previous-versions//ms695273\(v=vs.85\))を参照してください。
 
-##  <a name="isdataavailable"></a>COleDataObject:: IsDataAvailable
+## <a name="coledataobjectisdataavailable"></a><a name="isdataavailable"></a>オブジェクト::IsDataAvailable
 
-OLE 項目からデータを取得するために特定の形式が使用可能かどうかを判断するには、この関数を呼び出します。
+OLE アイテムからデータを取得するために特定の形式が使用できるかどうかを調べます。
 
 ```
 BOOL IsDataAvailable(
@@ -302,31 +302,31 @@ BOOL IsDataAvailable(
 
 ### <a name="parameters"></a>パラメーター
 
-*cfFormat*<br/>
-*LpFormatEtc*が指す構造体で使用されるクリップボードのデータ形式。 このパラメーターには、定義済みのクリップボード形式、またはネイティブ Windows [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw)関数によって返される値のいずれかを指定できます。
+*cf フォーマット*<br/>
+*lpFormatEtc*が指す構造体で使用されるクリップボード データ形式。 このパラメーターには、定義済みのクリップボード形式の 1 つ、またはネイティブの Windows[の登録クリップボード形式](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw)関数によって返される値を指定できます。
 
-*lpFormatEtc*<br/>
-目的の形式を記述する[FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)構造体を指します。 *CfFormat*で指定されたクリップボード形式以外の追加の書式情報を指定する場合にのみ、このパラメーターの値を指定してください。 NULL の場合は、`FORMATETC` 構造内の他のフィールドに既定値が使用されます。
+*フォーマットの問題*<br/>
+目的の形式を記述する[FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)構造体へのポイント。 *cfFormat*で指定されたクリップボード形式以外の追加の書式情報を指定する場合にのみ、このパラメーターの値を指定します。 NULL の場合、デフォルト値は構造体の他のフィールドに`FORMATETC`使用されます。
 
 ### <a name="return-value"></a>戻り値
 
-指定された形式でデータを使用できる場合は0以外の。それ以外の場合は0です。
+データが指定された形式で使用可能な場合は 0 以外の値を指定します。それ以外の場合は 0。
 
 ### <a name="remarks"></a>解説
 
-この関数は、`GetData`、`GetFileData`、または `GetGlobalData`を呼び出す前に便利です。
+この関数は、 、 `GetData` `GetFileData`、または`GetGlobalData`を呼び出す前に便利です。
 
-詳細については、Windows SDK の「 [IDataObject:: QueryGetData](/windows/win32/api/objidl/nf-objidl-idataobject-querygetdata) and [FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc) 」を参照してください。
+詳細については、Windows SDK[の「IDataObject::クエリGetData](/windows/win32/api/objidl/nf-objidl-idataobject-querygetdata)と[フォーマット」](/windows/win32/api/objidl/ns-objidl-formatetc)を参照してください。
 
-詳細については、Windows SDK の「 [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) 」を参照してください。
+詳細については、「Windows SDK で[クリップボードの書式を登録](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw)する」を参照してください。
 
 ### <a name="example"></a>例
 
-  [CRichEditView:: QueryAcceptData](../../mfc/reference/cricheditview-class.md#queryacceptdata)の例を参照してください。
+  の[例を参照](../../mfc/reference/cricheditview-class.md#queryacceptdata)してください。
 
-##  <a name="release"></a>COleDataObject:: Release
+## <a name="coledataobjectrelease"></a><a name="release"></a>オブジェクト::リリース
 
-以前に `COleDataObject` オブジェクトに関連付けられていた[IDataObject](/windows/win32/api/objidl/nn-objidl-idataobject)オブジェクトの所有権を解放するには、この関数を呼び出します。
+この関数を呼び出して、オブジェクトに以前に関連付けられていた[IDataObject](/windows/win32/api/objidl/nn-objidl-idataobject)オブジェクトの所有権を`COleDataObject`解放します。
 
 ```
 void Release();
@@ -334,13 +334,13 @@ void Release();
 
 ### <a name="remarks"></a>解説
 
-`IDataObject` は、`Attach` または `AttachClipboard` を明示的にまたはフレームワークによって呼び出すことによって、`COleDataObject` に関連付けられていました。 `Attach` の*bAutoRelease*パラメーターが FALSE の場合、`IDataObject` オブジェクトは解放されません。 この場合、呼び出し元は、 [IUnknown:: Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release)を呼び出すことによって、`IDataObject` を解放する必要があります。
+呼`IDataObject`び出し`COleDataObject``Attach`によって、または明示的`AttachClipboard`に、またはフレームワークによってに関連付けられていた。 *bAutoRelease*パラメータ`Attach`が FALSE の場合`IDataObject`、オブジェクトは解放されません。 この場合、呼び出し元は、呼び`IDataObject`出すことによってを解放する必要[があります: リリース](/windows/win32/api/unknwn/nf-unknwn-iunknown-release).
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[MFC サンプル HIERSVR](../../overview/visual-cpp-samples.md)<br/>
-[MFC サンプル OCLIENT](../../overview/visual-cpp-samples.md)<br/>
-[階層図](../../mfc/hierarchy-chart.md)<br/>
+[MFC サンプル ヒエルスヴル](../../overview/visual-cpp-samples.md)<br/>
+[サンプル O クライアント](../../overview/visual-cpp-samples.md)<br/>
+[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
 [COleDataSource クラス](../../mfc/reference/coledatasource-class.md)<br/>
-[COleClientItem クラス](../../mfc/reference/coleclientitem-class.md)<br/>
+[クラス](../../mfc/reference/coleclientitem-class.md)<br/>
 [COleServerItem クラス](../../mfc/reference/coleserveritem-class.md)

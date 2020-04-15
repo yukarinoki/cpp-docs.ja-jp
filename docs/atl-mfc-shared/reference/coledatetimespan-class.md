@@ -1,5 +1,5 @@
 ---
-title: COleDateTimeSpan クラス
+title: クラス
 ms.date: 03/27/2019
 f1_keywords:
 - COleDateTimeSpan
@@ -26,16 +26,16 @@ helpviewer_keywords:
 - Date data type, MFC encapsulation of
 - COleDateTimeSpan class
 ms.assetid: 7441526d-a30a-4019-8fb3-3fee6f897cbe
-ms.openlocfilehash: b68a984488f37326f3b0c1249a5f17a3eb76548b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7173fa0b6261ea718a02d399d944a1b5bb98b9f6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62198201"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81317738"
 ---
-# <a name="coledatetimespan-class"></a>COleDateTimeSpan クラス
+# <a name="coledatetimespan-class"></a>クラス
 
-時間間隔の相対的な時間を表します。
+相対時間、期間を表します。
 
 ## <a name="syntax"></a>構文
 
@@ -49,57 +49,57 @@ class COleDateTimeSpan
 
 |名前|説明|
 |----------|-----------------|
-|[COleDateTimeSpan::COleDateTimeSpan](#coledatetimespan)|`COleDateTimeSpan` オブジェクトを構築します。|
+|[を使用します。](#coledatetimespan)|`COleDateTimeSpan` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[COleDateTimeSpan::Format](#format)|書式設定された文字列表現を生成、`COleDateTimeSpan`オブジェクト。|
-|[COleDateTimeSpan::GetDays](#getdays)|このスパンの日の部分を返します`COleDateTimeSpan`オブジェクトが表す。|
-|[COleDateTimeSpan::GetHours](#gethours)|このスパンの時間部分を返します`COleDateTimeSpan`オブジェクトが表す。|
-|[COleDateTimeSpan::GetMinutes](#getminutes)|このスパンの分部分を返します`COleDateTimeSpan`オブジェクトが表す。|
-|[COleDateTimeSpan::GetSeconds](#getseconds)|このスパンの 2 番目の部分を返します`COleDateTimeSpan`オブジェクトが表す。|
-|[COleDateTimeSpan::GetStatus](#getstatus)|この状態 (有効) を取得`COleDateTimeSpan`オブジェクト。|
-|[COleDateTimeSpan::GetTotalDays](#gettotaldays)|この日数を返します`COleDateTimeSpan`オブジェクトが表す。|
-|[COleDateTimeSpan::GetTotalHours](#gettotalhours)|この時間数を返します`COleDateTimeSpan`オブジェクトが表す。|
-|[COleDateTimeSpan::GetTotalMinutes](#gettotalminutes)|この分の数を返します`COleDateTimeSpan`オブジェクトが表す。|
-|[COleDateTimeSpan::GetTotalSeconds](#gettotalseconds)|この秒数を返します`COleDateTimeSpan`オブジェクトが表す。|
-|[COleDateTimeSpan::SetDateTimeSpan](#setdatetimespan)|この値を設定`COleDateTimeSpan`オブジェクト。|
-|[COleDateTimeSpan::SetStatus](#setstatus)|これのステータス (有効) を設定`COleDateTimeSpan`オブジェクト。|
+|[を指定します。](#format)|オブジェクトの書式付き文字列形式を`COleDateTimeSpan`生成します。|
+|[を見る](#getdays)|このオブジェクトが表す範囲の日`COleDateTimeSpan`の部分を返します。|
+|[時間数を取得します。](#gethours)|このオブジェクトが表す範囲の時間`COleDateTimeSpan`の部分を返します。|
+|[を切り取る](#getminutes)|この`COleDateTimeSpan`オブジェクトが表す範囲の分の部分を返します。|
+|[を切り取る](#getseconds)|この`COleDateTimeSpan`オブジェクトが表す範囲の 2 番目の部分を返します。|
+|[を使用します。](#getstatus)|この`COleDateTimeSpan`オブジェクトの状態 (有効性) を取得します。|
+|[を見る](#gettotaldays)|このオブジェクトが表す日数`COleDateTimeSpan`を返します。|
+|[時間数を取得します。](#gettotalhours)|このオブジェクトが表す時間`COleDateTimeSpan`数を返します。|
+|[を使用します。](#gettotalminutes)|このオブジェクトが表す分`COleDateTimeSpan`数を返します。|
+|[を切り取る](#gettotalseconds)|このオブジェクトが表す秒`COleDateTimeSpan`数を返します。|
+|[を切り取る](#setdatetimespan)|この`COleDateTimeSpan`オブジェクトの値を設定します。|
+|[を設定します。](#setstatus)|この`COleDateTimeSpan`オブジェクトのステータス (有効性) を設定します。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
 |||
 |-|-|
-|[operator +、-](#operator_add_-)|`COleDateTimeSpan`の値の加算、減算、および符号の変更。|
-|[operator +=, -=](#operator_add_eq_-_eq)|加算および減算、`COleDateTimeSpan`値からこの`COleDateTimeSpan`値。|
-|[operator=](#operator_eq)|コピーを`COleDateTimeSpan`値。|
-|[演算子 = =、<、< =](#coledatetimespan_relational_operators)|比較する 2 つ`COleDateTimeSpan`値。|
-|[operator double](#operator_double)|この`COleDateTimeSpan`の値を**double**に変換。|
+|[演算子 +、 -](#operator_add_-)|値の符号を加算、減算`COleDateTimeSpan`、および変更します。|
+|[演算子 +=、-=](#operator_add_eq_-_eq)|この`COleDateTimeSpan`値から値`COleDateTimeSpan`を加算および減算します。|
+|[演算子 =](#operator_eq)|値を`COleDateTimeSpan`コピーします。|
+|[演算子 ==,<,<=](#coledatetimespan_relational_operators)|2`COleDateTimeSpan`つの値を比較します。|
+|[演算子 double](#operator_double)|この`COleDateTimeSpan`値を**倍精度浮動小数点数**に変換します。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
 |名前|説明|
 |----------|-----------------|
-|[COleDateTimeSpan::m_span](#m_span)|この`COleDateTimeSpan`オブジェクトの基になる**double**を含んでいます。|
-|[COleDateTimeSpan::m_status](#m_status)|この状態を含む`COleDateTimeSpan`オブジェクト。|
+|[を使用 m_spanします。](#m_span)|この`COleDateTimeSpan`オブジェクトの基になる**double**が含まれます。|
+|[を使用 m_statusします。](#m_status)|このオブジェクトの状態を`COleDateTimeSpan`格納します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-`COleDateTimeSpan` 基本クラスはありません。
+`COleDateTimeSpan`は基本クラスを持っていません。
 
-A`COleDateTimeSpan`日で時間を保持します。
+A`COleDateTimeSpan`は数日で時間を守ります。
 
-`COleDateTimeSpan` そのコンパニオン クラスと共に使用[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)します。 `COleDateTime` カプセル化、 `DATE` OLE オートメーションのデータ型。 `COleDateTime` 絶対時刻値を表します。 すべて`COleDateTime`計算が含まれる`COleDateTimeSpan`値。 これらのクラス間の関係は、間に 1 つに似ています[CTime](../../atl-mfc-shared/reference/ctime-class.md)と[CTimeSpan](../../atl-mfc-shared/reference/ctimespan-class.md)します。
+`COleDateTimeSpan`は、コンパニオン クラス[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)と共に使用されます。 `COleDateTime`は、OLE`DATE`オートメーションのデータ型をカプセル化します。 `COleDateTime`は絶対時間値を表します。 すべての`COleDateTime`計算には値`COleDateTimeSpan`が含まれます。 これらのクラス間の関係は[、CTime](../../atl-mfc-shared/reference/ctime-class.md)と[CTimeSpan](../../atl-mfc-shared/reference/ctimespan-class.md)の間の関係に似ています。
 
-詳細については、`COleDateTime`と`COleDateTimeSpan`クラスは、記事をご覧ください。[日付と時刻。オートメーションのサポート](../../atl-mfc-shared/date-and-time-automation-support.md)します。
+クラスと クラスの`COleDateTime`詳細`COleDateTimeSpan`については、「[日付と時刻: オートメーションサポート](../../atl-mfc-shared/date-and-time-automation-support.md)」を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** ATLComTime.h
+**ヘッダー:** アトルコムタイム.h
 
-##  <a name="coledatetimespan_relational_operators"></a>  COleDateTimeSpan 関係演算子
+## <a name="coledatetimespan-relational-operators"></a><a name="coledatetimespan_relational_operators"></a>関係演算子
 
 比較演算子。
 
@@ -114,17 +114,17 @@ bool operator>=(const COleDateTimeSpan& dateSpan) const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*dateSpan*<br/>
+*日付スパン*<br/>
 比較対象の `COleDateTimeSpan`。
 
 ### <a name="return-value"></a>戻り値
 
-これらの演算子は 2 つの日付/時間値と戻り値は TRUE を比較条件が true である場合それ以外の場合は FALSE です。
+これらの演算子は、2 つの日付/期間の値を比較し、条件が true の場合は TRUE を返します。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 > [!NOTE]
->  ATLASSERT がいずれかのオペランドが有効でない場合に発生します。
+> いずれかのオペランドが無効な場合は、ATLASSERT が発生します。
 
 ### <a name="example"></a>例
 
@@ -132,7 +132,7 @@ bool operator>=(const COleDateTimeSpan& dateSpan) const throw();
 
 [!code-cpp[NVC_ATLMFC_Utilities#26](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_2.cpp)]
 
-##  <a name="coledatetimespan"></a>  COleDateTimeSpan::COleDateTimeSpan
+## <a name="coledatetimespancoledatetimespan"></a><a name="coledatetimespan"></a>を使用します。
 
 `COleDateTimeSpan` オブジェクトを構築します。
 
@@ -144,33 +144,33 @@ COleDateTimeSpan(LONG lDays, int nHours, int nMins, int nSecs) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*dblSpanSrc*<br/>
-新しいにコピーされる日数`COleDateTimeSpan`オブジェクト。
+*ドブルスパンスrc*<br/>
+新しい`COleDateTimeSpan`オブジェクトにコピーされる日数。
 
-*lDays*、 *nHours*、 *nMins*、 *nSecs*<br/>
-新しいにコピーされる日付と時刻の値を示す`COleDateTimeSpan`オブジェクト。
+*lDays*, *nHours*, *nMins*, *nSecs*<br/>
+新しい`COleDateTimeSpan`オブジェクトにコピーする曜日と時刻の値を指定します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-これらのコンス トラクターのすべてが新規作成`COleDateTimeSpan`オブジェクトが、指定した値に初期化します。 これらのコンス トラクターのそれぞれの簡単な説明に従います。
+これらのコンストラクターは、すべて、指定`COleDateTimeSpan`された値に初期化された新しいオブジェクトを作成します。 これらの各コンストラクターの簡単な説明を次に示します。
 
-- **COleDateTimeSpan ()** を構築、`COleDateTimeSpan`を 0 に初期化されるオブジェクト。
+- **を使用します。** 0 に`COleDateTimeSpan`初期化されたオブジェクトを構築します。
 
-- **COleDateTimeSpan (** `dblSpanSrc` **)** を構築、`COleDateTimeSpan`浮動小数点値からのオブジェクト。
+- **を使用します**`dblSpanSrc`**。** 浮動小数点値から`COleDateTimeSpan`オブジェクトを構築します。
 
-- **COleDateTimeSpan (** `lDays` **、** `nHours` **、** `nMins` **、** `nSecs` **)** 構築、`COleDateTimeSpan`オブジェクトの指定した数値の値に初期化します。
+- **COleDateTimeSpan(** `lDays` **,** `nHours` **,** `nMins` **, )** `nSecs` **)** 指定した`COleDateTimeSpan`数値に初期化されたオブジェクトを構築します。
 
-新しいステータス`COleDateTimeSpan`オブジェクトが有効に設定されます。
+新しい`COleDateTimeSpan`オブジェクトのステータスが有効に設定されます。
 
-境界の詳細については`COleDateTimeSpan`、値は、記事をご覧ください。[日付と時刻。オートメーションのサポート](../../atl-mfc-shared/date-and-time-automation-support.md)します。
+`COleDateTimeSpan`値の境界の詳細については、「[日付と時刻: オートメーションのサポート](../../atl-mfc-shared/date-and-time-automation-support.md)」を参照してください。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATLMFC_Utilities#14](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_3.cpp)]
 
-##  <a name="format"></a>  COleDateTimeSpan::Format
+## <a name="coledatetimespanformat"></a><a name="format"></a>を指定します。
 
-書式設定された文字列表現を生成、`COleDateTimeSpan`オブジェクト。
+オブジェクトの書式付き文字列形式を`COleDateTimeSpan`生成します。
 
 ```
 CString Format(LPCTSTR pFormat) const;
@@ -179,47 +179,47 @@ CString Format(UINT nID) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*pFormat*<br/>
-ような文字列を書式設定、`printf`文字列の書式設定します。 割合に続くコードの書式設定 (`%`) 署名は、対応する置き換え`COleDateTimeSpan`コンポーネント。 その他の文字書式指定文字列では、返される文字列をそのままコピーされます。 値との書式設定コードの意味`Format`を以下に示します。
+*pフォーマット*<br/>
+書式指定文字列に似た`printf`書式指定文字列。 フォーマット コードの前にパーセント記号`%`() が付いた書式コード`COleDateTimeSpan`は、対応するコンポーネントに置き換えられます。 書式指定文字列内の他の文字は、変更されずに返された文字列にコピーされます。 フォーマットコードの値と意味`Format`を以下に示します。
 
-- **%H**は現在の日の時間
+- **%H**現在の日の時間
 
-- **%M**現在の 1 時間分
+- **%M**現在の時間の分
 
-- **%S**現在の時間 (秒)
+- **%S**現在の分の秒数
 
 - **%%** パーセント記号
 
-上に示した 4 つの形式は、形式が受け入れる唯一のコードです。
+上記の 4 つの形式コードは、Format が受け入れる唯一のコードです。
 
 -
 
 *nID*<br/>
-コントロールの書式設定文字列のリソース ID。
+書式制御文字列のリソース ID。
 
 ### <a name="return-value"></a>戻り値
 
-A`CString`書式設定された日付/時間値を格納しています。
+書式設定`CString`された日付/時間範囲の値を含む A。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-時間間隔の値の書式設定された表現を作成するこれらの関数を呼び出します。 場合のこの状態`COleDateTimeSpan`オブジェクトが null、戻り値は空の文字列。 状態が有効でない場合は、戻り値の文字列が設定されている文字列リソースによって指定されます。
+これらの関数を呼び出して、期間値の書式化された表現を作成します。 この`COleDateTimeSpan`オブジェクトの状態が null の場合、戻り値は空の文字列です。 状態が無効な場合、戻り値の文字列は文字列リソース IDS_INVALID_DATETIMESPANによって指定されます。
 
-この関数の形式の簡単な説明に従います。
+この関数のフォームの簡単な説明を次に示します。
 
-**Format(** *pFormat* **)**<br/>
-この形式でパーセント記号 (%) が付いている特殊な書式設定コードを含む書式指定文字列を使用して値を書式化`printf`します。 書式指定文字列は、関数にパラメーターとして渡されます。
+**フォーマット(** *p フォーマット***)**<br/>
+このフォームでは、パーセント記号 (%)の前に付いた特殊な書式指定コードを含む書式指定文字列を使用`printf`して、値の書式を設定します。 書式指定文字列は、関数にパラメーターとして渡されます。
 
-**Format(** *nID* **)**<br/>
-この形式でパーセント記号 (%) が付いている特殊な書式設定コードを含む書式指定文字列を使用して値を書式化`printf`します。 書式指定文字列は、リソースです。 この文字列リソースの ID は、パラメーターとして渡されます。
+**フォーマット(** *nID* **)**<br/>
+このフォームでは、パーセント記号 (%)の前に付いた特殊な書式指定コードを含む書式指定文字列を使用`printf`して、値の書式を設定します。 書式指定文字列はリソースです。 この文字列リソースの ID は、パラメーターとして渡されます。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATLMFC_Utilities#15](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_4.cpp)]
 
-##  <a name="getdays"></a>  COleDateTimeSpan::GetDays
+## <a name="coledatetimespangetdays"></a><a name="getdays"></a>を見る
 
-この日付/時間値の日の部分を取得します。
+この日付/期間値の日の部分を取得します。
 
 ```
 LONG GetDays() const throw();
@@ -227,35 +227,35 @@ LONG GetDays() const throw();
 
 ### <a name="return-value"></a>戻り値
 
-この日付/時間値の日付の部分。
+この日付/期間値の日部分。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-戻り値は、約 - この関数の範囲から 3,615,000 と 3,615,000 します。
+この関数からの戻り値の範囲は約 - 3,615,000 から 3,615,000 です。
 
-その他の関数の値をクエリで、`COleDateTimeSpan`オブジェクト、メンバー関数は、次を参照してください。
+`COleDateTimeSpan`オブジェクトの値を照会するその他の関数については、次のメンバー関数を参照してください。
 
 - [GetHours](#gethours)
 
-- [GetMinutes](#getminutes)
+- [ゲットミニッツ](#getminutes)
 
-- [GetSeconds](#getseconds)
+- [秒を取得します。](#getseconds)
 
-- [GetTotalDays](#gettotaldays)
+- [合計日数を取得する](#gettotaldays)
 
-- [従来](#gettotalhours)
+- [合計時間を取得します。](#gettotalhours)
 
-- [GetTotalMinutes](#gettotalminutes)
+- [合計分を取得します。](#gettotalminutes)
 
-- [GetTotalSeconds](#gettotalseconds)
+- [合計秒数を取得します。](#gettotalseconds)
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATLMFC_Utilities#16](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_5.cpp)]
 
-##  <a name="gethours"></a>  COleDateTimeSpan::GetHours
+## <a name="coledatetimespangethours"></a><a name="gethours"></a>時間数を取得します。
 
-この日付/時間値の時間部分を取得します。
+この日付/期間値の時間部分を取得します。
 
 ```
 LONG GetHours() const throw();
@@ -263,35 +263,35 @@ LONG GetHours() const throw();
 
 ### <a name="return-value"></a>戻り値
 
-この日付/時間値の時間部分。
+この日付/時間範囲の値の時間部分。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この関数の範囲 - 23 23 ~ からの戻り値。
+この関数からの戻り値は、- 23 から 23 の範囲です。
 
-その他の関数の値をクエリで、`COleDateTimeSpan`オブジェクト、メンバー関数は、次を参照してください。
+`COleDateTimeSpan`オブジェクトの値を照会するその他の関数については、次のメンバー関数を参照してください。
 
-- [GetDays](#getdays)
+- [ゲットデイズ](#getdays)
 
-- [GetMinutes](#getminutes)
+- [ゲットミニッツ](#getminutes)
 
-- [GetSeconds](#getseconds)
+- [秒を取得します。](#getseconds)
 
-- [GetTotalDays](#gettotaldays)
+- [合計日数を取得する](#gettotaldays)
 
-- [従来](#gettotalhours)
+- [合計時間を取得します。](#gettotalhours)
 
-- [GetTotalMinutes](#gettotalminutes)
+- [合計分を取得します。](#gettotalminutes)
 
-- [GetTotalSeconds](#gettotalseconds)
+- [合計秒数を取得します。](#gettotalseconds)
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATLMFC_Utilities#17](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_6.cpp)]
 
-##  <a name="getminutes"></a>  COleDateTimeSpan::GetMinutes
+## <a name="coledatetimespangetminutes"></a><a name="getminutes"></a>を切り取る
 
-この日付/時間値の分の部分を取得します。
+この日付/時間範囲の値の分の部分を取得します。
 
 ```
 LONG GetMinutes() const throw();
@@ -299,35 +299,35 @@ LONG GetMinutes() const throw();
 
 ### <a name="return-value"></a>戻り値
 
-この日付/時間値の分の部分。
+この日付/時間範囲の値の分の部分。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この関数の範囲 - 59 59 ~ からの戻り値。
+この関数の戻り値の範囲は 59 ~ 59 です。
 
-その他の関数の値をクエリで、`COleDateTimeSpan`オブジェクト、メンバー関数は、次を参照してください。
+`COleDateTimeSpan`オブジェクトの値を照会するその他の関数については、次のメンバー関数を参照してください。
 
-- [GetDays](#getdays)
+- [ゲットデイズ](#getdays)
 
 - [GetHours](#gethours)
 
-- [GetSeconds](#getseconds)
+- [秒を取得します。](#getseconds)
 
-- [GetTotalDays](#gettotaldays)
+- [合計日数を取得する](#gettotaldays)
 
-- [従来](#gettotalhours)
+- [合計時間を取得します。](#gettotalhours)
 
-- [GetTotalMinutes](#gettotalminutes)
+- [合計分を取得します。](#gettotalminutes)
 
-- [GetTotalSeconds](#gettotalseconds)
+- [合計秒数を取得します。](#gettotalseconds)
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATLMFC_Utilities#18](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_7.cpp)]
 
-##  <a name="getseconds"></a>  COleDateTimeSpan::GetSeconds
+## <a name="coledatetimespangetseconds"></a><a name="getseconds"></a>を切り取る
 
-この日付/時間値の 2 番目の部分を取得します。
+この日付/時間範囲の値の 2 番目の部分を取得します。
 
 ```
 LONG GetSeconds() const throw();
@@ -335,35 +335,35 @@ LONG GetSeconds() const throw();
 
 ### <a name="return-value"></a>戻り値
 
-この日付/時間値の秒の部分。
+この日付/時間範囲の値の秒部分。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この関数の範囲 - 59 59 ~ からの戻り値。
+この関数の戻り値の範囲は 59 ~ 59 です。
 
-その他の関数の値をクエリで、`COleDateTimeSpan`オブジェクト、メンバー関数は、次を参照してください。
+`COleDateTimeSpan`オブジェクトの値を照会するその他の関数については、次のメンバー関数を参照してください。
 
-- [GetDays](#getdays)
+- [ゲットデイズ](#getdays)
 
 - [GetHours](#gethours)
 
-- [GetMinutes](#getminutes)
+- [ゲットミニッツ](#getminutes)
 
-- [GetTotalDays](#gettotaldays)
+- [合計日数を取得する](#gettotaldays)
 
-- [従来](#gettotalhours)
+- [合計時間を取得します。](#gettotalhours)
 
-- [GetTotalMinutes](#gettotalminutes)
+- [合計分を取得します。](#gettotalminutes)
 
-- [GetTotalSeconds](#gettotalseconds)
+- [合計秒数を取得します。](#gettotalseconds)
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATLMFC_Utilities#19](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_8.cpp)]
 
-##  <a name="getstatus"></a>  COleDateTimeSpan::GetStatus
+## <a name="coledatetimespangetstatus"></a><a name="getstatus"></a>を使用します。
 
-この状態 (有効) を取得`COleDateTimeSpan`オブジェクト。
+この`COleDateTimeSpan`オブジェクトの状態 (有効性) を取得します。
 
 ```
 DateTimeSpanStatus GetStatus() const throw();
@@ -371,11 +371,11 @@ DateTimeSpanStatus GetStatus() const throw();
 
 ### <a name="return-value"></a>戻り値
 
-この状態`COleDateTimeSpan`値。
+この`COleDateTimeSpan`値の状態。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-戻り値は、`DateTimeSpanStatus`列挙型内で定義されている、`COleDateTimeSpan`クラス。
+戻り値は、クラス内`DateTimeSpanStatus`で定義される列挙型によって定義されます`COleDateTimeSpan`。
 
 ```
 enum DateTimeSpanStatus{
@@ -385,29 +385,29 @@ enum DateTimeSpanStatus{
 };
 ```
 
-これらのステータス値の簡単な説明は、次の一覧を参照してください。
+これらの状態値の簡単な説明については、次の一覧を参照してください。
 
-- `COleDateTimeSpan::valid` 示しますこの`COleDateTimeSpan`オブジェクトが無効です。
+- `COleDateTimeSpan::valid`この`COleDateTimeSpan`オブジェクトが有効であることを示します。
 
-- `COleDateTimeSpan::invalid` 示しますこの`COleDateTimeSpan`オブジェクトは無効です。 つまり、その値誤りがあります。
+- `COleDateTimeSpan::invalid`この`COleDateTimeSpan`オブジェクトが無効であることを示します。つまり、その値が正しくない可能性があります。
 
-- `COleDateTimeSpan::null` 示しますこの`COleDateTimeSpan`オブジェクトが null の場合は、このオブジェクトの値が指定されていないこと。 (これは"使用しない場合の値、"C++ の NULL ではなくデータベースという意味で"null")。
+- `COleDateTimeSpan::null`この`COleDateTimeSpan`オブジェクトが null、つまり、このオブジェクトに値が指定されていない場合を示します。 (これは、C++ の NULL とは対照的に、"値を持たない" というデータベースの意味での "null" です。
 
-状態、`COleDateTimeSpan`オブジェクトが無効で、次の場合。
+オブジェクトの`COleDateTimeSpan`ステータスは、次の場合無効です。
 
-- このオブジェクトが、オーバーフローまたはアンダー フロー、代入演算操作中に具体的には場合、`+=`または`-=`します。
+- このオブジェクトが算術代入操作中にオーバーフローまたはアンダーフローを経験した場合、`+=`すなわち、 または`-=`.
 
-- 場合は、無効な値は、このオブジェクトに割り当てられました。
+- 無効な値がこのオブジェクトに割り当てられていた場合。
 
-- このオブジェクトの状態が明示的に設定を使用して無効に`SetStatus`します。
+- このオブジェクトの状態が、 を使用して`SetStatus`明示的に無効に設定されている場合。
 
-無効な状態を設定することがありますのある操作の詳細については、次を参照してください。 [COleDateTimeSpan::operator +、-](../../atl-mfc-shared/reference/coledatetime-class.md#operator_add_-)と[COleDateTimeSpan::operator + =、-=](../../atl-mfc-shared/reference/coledatetime-class.md#operator_add_eq_-_eq)します。
+ステータスを無効に設定できる操作の詳細については[、「COleDateTimeSpan::演算子 +、および](../../atl-mfc-shared/reference/coledatetime-class.md#operator_add_-) [COleDateTimeSpan:演算子 +=、-=](../../atl-mfc-shared/reference/coledatetime-class.md#operator_add_eq_-_eq)」を参照してください。
 
-境界の詳細については`COleDateTimeSpan`、値は、記事をご覧ください。[日付と時刻。オートメーションのサポート](../../atl-mfc-shared/date-and-time-automation-support.md)します。
+`COleDateTimeSpan`値の境界の詳細については、「[日付と時刻: オートメーションのサポート](../../atl-mfc-shared/date-and-time-automation-support.md)」を参照してください。
 
-##  <a name="gettotaldays"></a>  COleDateTimeSpan::GetTotalDays
+## <a name="coledatetimespangettotaldays"></a><a name="gettotaldays"></a>を見る
 
-日数で表されるこの日付/時間値を取得します。
+日付/期間の値を取得します。
 
 ```
 double GetTotalDays() const throw();
@@ -415,35 +415,35 @@ double GetTotalDays() const throw();
 
 ### <a name="return-value"></a>戻り値
 
-この日付/時間間隔は、日数で表される値。 この関数は、double 型の値を返すようにプロトタイプ宣言は、常に整数値を返します。
+この日付/期間の値は日単位で表されます。 この関数はプロトタイプで倍精度浮動小数点数を返しますが、常に整数値を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-3\.65e6 と 3.65e6 約 - この関数の範囲からの戻り値。
+この関数からの戻り値の範囲は約 - 3.65e6 から 3.65e6 です。
 
-その他の関数の値をクエリで、`COleDateTimeSpan`オブジェクト、メンバー関数は、次を参照してください。
+`COleDateTimeSpan`オブジェクトの値を照会するその他の関数については、次のメンバー関数を参照してください。
 
-- [GetDays](#getdays)
+- [ゲットデイズ](#getdays)
 
 - [GetHours](#gethours)
 
-- [GetMinutes](#getminutes)
+- [ゲットミニッツ](#getminutes)
 
-- [GetSeconds](#getseconds)
+- [秒を取得します。](#getseconds)
 
-- [従来](#gettotalhours)
+- [合計時間を取得します。](#gettotalhours)
 
-- [GetTotalMinutes](#gettotalminutes)
+- [合計分を取得します。](#gettotalminutes)
 
-- [GetTotalSeconds](#gettotalseconds)
+- [合計秒数を取得します。](#gettotalseconds)
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATLMFC_Utilities#20](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_9.cpp)]
 
-##  <a name="gettotalhours"></a>  COleDateTimeSpan::GetTotalHours
+## <a name="coledatetimespangettotalhours"></a><a name="gettotalhours"></a>時間数を取得します。
 
-時間単位で表すこの日付/時間値を取得します。
+この日付/時間範囲の値を時間単位で取得します。
 
 ```
 double GetTotalHours() const throw();
@@ -451,35 +451,35 @@ double GetTotalHours() const throw();
 
 ### <a name="return-value"></a>戻り値
 
-この日付/時間間隔は、時間単位で表す値。 この関数は、double 型の値を返すようにプロトタイプ宣言は、常に整数値を返します。
+この日付/期間の値は、時間単位で表されます。 この関数はプロトタイプで倍精度浮動小数点数を返しますが、常に整数値を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-8\.77e7 と 8.77e7 約 - この関数の範囲からの戻り値。
+この関数からの戻り値は、約 - 8.77e7 から 8.77e7 の範囲です。
 
-その他の関数の値をクエリで、`COleDateTimeSpan`オブジェクト、メンバー関数は、次を参照してください。
+`COleDateTimeSpan`オブジェクトの値を照会するその他の関数については、次のメンバー関数を参照してください。
 
-- [GetDays](#getdays)
+- [ゲットデイズ](#getdays)
 
 - [GetHours](#gethours)
 
-- [GetMinutes](#getminutes)
+- [ゲットミニッツ](#getminutes)
 
-- [GetSeconds](#getseconds)
+- [秒を取得します。](#getseconds)
 
-- [GetTotalDays](#gettotaldays)
+- [合計日数を取得する](#gettotaldays)
 
-- [GetTotalMinutes](#gettotalminutes)
+- [合計分を取得します。](#gettotalminutes)
 
-- [GetTotalSeconds](#gettotalseconds)
+- [合計秒数を取得します。](#gettotalseconds)
 
 ### <a name="example"></a>例
 
-例をご覧ください[誤差](#gettotaldays)します。
+[「合計日数の取得](#gettotaldays)」の例を参照してください。
 
-##  <a name="gettotalminutes"></a>  COleDateTimeSpan::GetTotalMinutes
+## <a name="coledatetimespangettotalminutes"></a><a name="gettotalminutes"></a>を使用します。
 
-この日付/時間値を分単位で表現を取得します。
+この日付/時間範囲の値を分単位で取得します。
 
 ```
 double GetTotalMinutes() const throw();
@@ -487,35 +487,35 @@ double GetTotalMinutes() const throw();
 
 ### <a name="return-value"></a>戻り値
 
-この日付/時間値が分単位で表現します。 この関数は、double 型の値を返すようにプロトタイプ宣言は、常に整数値を返します。
+この日付/時間範囲の値は分単位で表されます。 この関数はプロトタイプで倍精度浮動小数点数を返しますが、常に整数値を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-5\.26e9 と 5.26e9 約 - この関数の範囲からの戻り値。
+この関数からの戻り値の範囲は、約 - 5.26e9 から 5.26e9 です。
 
-その他の関数の値をクエリで、`COleDateTimeSpan`オブジェクト、メンバー関数は、次を参照してください。
+`COleDateTimeSpan`オブジェクトの値を照会するその他の関数については、次のメンバー関数を参照してください。
 
-- [GetDays](#getdays)
+- [ゲットデイズ](#getdays)
 
 - [GetHours](#gethours)
 
-- [GetMinutes](#getminutes)
+- [ゲットミニッツ](#getminutes)
 
-- [GetSeconds](#getseconds)
+- [秒を取得します。](#getseconds)
 
-- [GetTotalDays](#gettotaldays)
+- [合計日数を取得する](#gettotaldays)
 
-- [従来](#gettotalhours)
+- [合計時間を取得します。](#gettotalhours)
 
-- [GetTotalSeconds](#gettotalseconds)
+- [合計秒数を取得します。](#gettotalseconds)
 
 ### <a name="example"></a>例
 
-例をご覧ください[誤差](#gettotaldays)します。
+[「合計日数の取得](#gettotaldays)」の例を参照してください。
 
-##  <a name="gettotalseconds"></a>  COleDateTimeSpan::GetTotalSeconds
+## <a name="coledatetimespangettotalseconds"></a><a name="gettotalseconds"></a>を切り取る
 
-秒単位で表すこの日付/時間値を取得します。
+この日付/時間範囲の値を秒単位で取得します。
 
 ```
 double GetTotalSeconds() const throw();
@@ -523,56 +523,56 @@ double GetTotalSeconds() const throw();
 
 ### <a name="return-value"></a>戻り値
 
-この日付/時間は、秒単位で表す値。 この関数は、double 型の値を返すようにプロトタイプ宣言は、常に整数値を返します。
+この日付/時間範囲の値は秒で表されます。 この関数はプロトタイプで倍精度浮動小数点数を返しますが、常に整数値を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この関数からの戻り値の範囲の間で約 - 3.16e11 に 3.16e11 です。
+この関数からの戻り値の範囲は約 - 3.16e11 から 3.16e11 です。
 
-その他の関数の値をクエリで、`COleDateTimeSpan`オブジェクト、メンバー関数は、次を参照してください。
+`COleDateTimeSpan`オブジェクトの値を照会するその他の関数については、次のメンバー関数を参照してください。
 
-- [GetDays](#getdays)
+- [ゲットデイズ](#getdays)
 
 - [GetHours](#gethours)
 
-- [GetMinutes](#getminutes)
+- [ゲットミニッツ](#getminutes)
 
-- [GetSeconds](#getseconds)
+- [秒を取得します。](#getseconds)
 
-- [GetTotalDays](#gettotaldays)
+- [合計日数を取得する](#gettotaldays)
 
-- [従来](#gettotalhours)
+- [合計時間を取得します。](#gettotalhours)
 
-- [GetTotalMinutes](#gettotalminutes)
+- [合計分を取得します。](#gettotalminutes)
 
 ### <a name="example"></a>例
 
-例をご覧ください[誤差](#gettotaldays)します。
+[「合計日数の取得](#gettotaldays)」の例を参照してください。
 
-##  <a name="m_span"></a>  COleDateTimeSpan::m_span
+## <a name="coledatetimespanm_span"></a><a name="m_span"></a>を使用 m_spanします。
 
-この**オブジェクトの基になる**double**を含んでいます。
+この`COleDateTime`オブジェクトの基になる**double**値。
 
 ```
 double m_span;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この値は日の日付/時間を表します。
+この値は、日付/期間を日数で表します。
 
 > [!CAUTION]
->  値を変更、**double**データ メンバーはこの値を変更`COleDateTimeSpan`オブジェクト。 この状態は変更されません`COleDateTimeSpan`オブジェクト。
+> **double**データ メンバーの値を変更すると、この`COleDateTimeSpan`オブジェクトの値が変更されます。 この`COleDateTimeSpan`オブジェクトのステータスは変更されません。
 
-##  <a name="m_status"></a>  COleDateTimeSpan::m_status
+## <a name="coledatetimespanm_status"></a><a name="m_status"></a>を使用 m_statusします。
 
-このデータ メンバーの型は、列挙型`DateTimeSpanStatus`、内で定義されている、`COleDateTimeSpan`クラス。
+このデータ メンバの型は、`DateTimeSpanStatus``COleDateTimeSpan`クラス内で定義されている列挙型です。
 
 ```
 DateTimeSpanStatus m_status;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 ```
 enum DateTimeSpanStatus{
@@ -582,44 +582,44 @@ enum DateTimeSpanStatus{
    };
 ```
 
-これらのステータス値の簡単な説明は、次の一覧を参照してください。
+これらの状態値の簡単な説明については、次の一覧を参照してください。
 
-- `COleDateTimeSpan::valid` 示しますこの`COleDateTimeSpan`オブジェクトが無効です。
+- `COleDateTimeSpan::valid`この`COleDateTimeSpan`オブジェクトが有効であることを示します。
 
-- `COleDateTimeSpan::invalid` 示しますこの`COleDateTimeSpan`オブジェクトは無効です。 つまり、その値誤りがあります。
+- `COleDateTimeSpan::invalid`この`COleDateTimeSpan`オブジェクトが無効であることを示します。つまり、その値が正しくない可能性があります。
 
-- `COleDateTimeSpan::null` 示しますこの`COleDateTimeSpan`オブジェクトが null の場合は、このオブジェクトの値が指定されていないこと。 (これは"使用しない場合の値、"C++ の NULL ではなくデータベースという意味で"null")。
+- `COleDateTimeSpan::null`この`COleDateTimeSpan`オブジェクトが null、つまり、このオブジェクトに値が指定されていない場合を示します。 (これは、C++ の NULL とは対照的に、"値を持たない" というデータベースの意味での "null" です。
 
-状態、`COleDateTimeSpan`オブジェクトが無効で、次の場合。
+オブジェクトの`COleDateTimeSpan`ステータスは、次の場合無効です。
 
-- このオブジェクトが、オーバーフローまたはアンダー フロー、代入演算操作中に具体的には場合、`+=`または`-=`します。
+- このオブジェクトが算術代入操作中にオーバーフローまたはアンダーフローを経験した場合、`+=`すなわち、 または`-=`.
 
-- 場合は、無効な値は、このオブジェクトに割り当てられました。
+- 無効な値がこのオブジェクトに割り当てられていた場合。
 
-- このオブジェクトの状態が明示的に設定を使用して無効に[SetStatus](#setstatus)します。
+- このオブジェクトの状態が[SetStatus](#setstatus)を使用して明示的に無効に設定されている場合。
 
-無効な状態を設定することがありますのある操作の詳細については、次を参照してください。 [COleDateTimeSpan::operator +、-](../../atl-mfc-shared/reference/coledatetime-class.md#operator_add_-)と[COleDateTimeSpan::operator + =、-=](../../atl-mfc-shared/reference/coledatetime-class.md#operator_add_eq_-_eq)します。
+ステータスを無効に設定できる操作の詳細については[、「COleDateTimeSpan::演算子 +、および](../../atl-mfc-shared/reference/coledatetime-class.md#operator_add_-) [COleDateTimeSpan:演算子 +=、-=](../../atl-mfc-shared/reference/coledatetime-class.md#operator_add_eq_-_eq)」を参照してください。
 
 > [!CAUTION]
->  このデータ メンバーは、高度なプログラミングに適しています。 インライン メンバー関数を使用する必要があります[GetStatus](#getstatus)と[SetStatus](#setstatus)します。 参照してください`SetStatus`の他の注意に関するこのデータ メンバーを明示的に設定します。
+> このデータ メンバーは、高度なプログラミングの状況に適しています。 インライン メンバー関数[GetStatus](#getstatus)と[SetStatus](#setstatus)を使用する必要があります。 この`SetStatus`データ メンバーの明示的な設定に関する詳細な注意については、「」を参照してください。
 
-境界の詳細については`COleDateTimeSpan`、値は、記事をご覧ください。[日付と時刻。オートメーションのサポート](../../atl-mfc-shared/date-and-time-automation-support.md)します。
+`COleDateTimeSpan`値の境界の詳細については、「[日付と時刻: オートメーションのサポート](../../atl-mfc-shared/date-and-time-automation-support.md)」を参照してください。
 
-##  <a name="operator_eq"></a>  COleDateTimeSpan::operator =
+## <a name="coledatetimespanoperator-"></a><a name="operator_eq"></a>を指定します。
 
-コピーを`COleDateTimeSpan`値。
+値を`COleDateTimeSpan`コピーします。
 
 ```
 COleDateTimeSpan& operator=(double dblSpanSrc) throw();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このオーバー ロードされた代入演算子は、このソースの日付/時間値をコピー`COleDateTimeSpan`オブジェクト。
+このオーバーロードされた代入演算子は、ソースの日付/期間値をこの`COleDateTimeSpan`オブジェクトにコピーします。
 
-##  <a name="operator_add_-"></a>  COleDateTimeSpan::operator +, -
+## <a name="coledatetimespanoperator---"></a><a name="operator_add_-"></a>:演算子 +、 -
 
-`COleDateTimeSpan`の値の加算、減算、および符号の変更。
+値の符号を加算、減算`COleDateTimeSpan`、および変更します。
 
 ```
 COleDateTimeSpan operator+(const COleDateTimeSpan& dateSpan) const throw();
@@ -627,56 +627,56 @@ COleDateTimeSpan operator-(const COleDateTimeSpan& dateSpan) const throw();
 COleDateTimeSpan operator-() const throw();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-最初の 2 つの演算子を追加し、日付/時間値を減算できます。 3 つ目では、日付/時間間隔の値の符号を変更できます。
+最初の 2 つの演算子では、日付/期間の値を加算および減算できます。 3 つ目は、日付/期間値の符号を変更できます。
 
-結果の状態は null オペランドのいずれかの場合`COleDateTimeSpan`値は null です。
+オペランドのどちらかが null の場合、結果`COleDateTimeSpan`の値の状況は NULL になります。
 
-オペランドのいずれかが有効ではないと、もう一方が null でない場合、結果の状態`COleDateTimeSpan`値が無効です。
+どちらかのオペランドが無効で、もう一方が NULL でない場合、結果の`COleDateTimeSpan`値の状況は無効です。
 
-有効、無効、および null 状態の値の詳細については、次を参照してください。、[ついて](#m_status)メンバー変数。
+有効、無効、および NULL の状態値の詳細については[、m_status](#m_status)メンバー変数を参照してください。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATLMFC_Utilities#23](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_10.cpp)]
 
-##  <a name="operator_add_eq_-_eq"></a>  COleDateTimeSpan::operator +=, -=
+## <a name="coledatetimespanoperator---"></a><a name="operator_add_eq_-_eq"></a>:演算子 +=、-=
 
-加算および減算、`COleDateTimeSpan`値からこの`COleDateTimeSpan`値。
+この`COleDateTimeSpan`値から値`COleDateTimeSpan`を加算および減算します。
 
 ```
 COleDateTimeSpan& operator+=(const COleDateTimeSpan dateSpan) throw();
 COleDateTimeSpan& operator-=(const COleDateTimeSpan dateSpan) throw();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-これらの演算子では、追加し、これから日付/時間値を減算できます。`COleDateTimeSpan`オブジェクト。 結果の状態は null オペランドのいずれかの場合`COleDateTimeSpan`値は null です。
+これらの演算子を使用すると、この`COleDateTimeSpan`オブジェクトの日付/期間値を加算および減算できます。 オペランドのどちらかが null の場合、結果`COleDateTimeSpan`の値の状況は NULL になります。
 
-オペランドのいずれかが有効ではないと、もう一方が null でない場合、結果の状態`COleDateTimeSpan`値が無効です。
+どちらかのオペランドが無効で、もう一方が NULL でない場合、結果の`COleDateTimeSpan`値の状況は無効です。
 
-有効、無効、および null 状態の値の詳細については、次を参照してください。、[ついて](#m_status)メンバー変数。
+有効、無効、および NULL の状態値の詳細については[、m_status](#m_status)メンバー変数を参照してください。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATLMFC_Utilities#24](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_11.cpp)]
 
-##  <a name="operator_double"></a>  COleDateTimeSpan::operator double
+## <a name="coledatetimespanoperator-double"></a><a name="operator_double"></a>2 倍の演算子
 
-この`COleDateTimeSpan`の値を**double**に変換。
+この`COleDateTimeSpan`値を**倍精度浮動小数点数**に変換します。
 
 ```
 operator double() const throw();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この演算子は、この値を返します`COleDateTimeSpan`日間の浮動小数点数としての値。
+この演算子は、この`COleDateTimeSpan`値の値を浮動小数点数の日数として返します。
 
-##  <a name="setdatetimespan"></a>  COleDateTimeSpan::SetDateTimeSpan
+## <a name="coledatetimespansetdatetimespan"></a><a name="setdatetimespan"></a>を切り取る
 
-この日付/時間値の値を設定します。
+この日付/時間範囲の値を設定します。
 
 ```
 void SetDateTimeSpan(LONG lDays, int nHours, int nMins, int nSecs) throw();
@@ -684,36 +684,36 @@ void SetDateTimeSpan(LONG lDays, int nHours, int nMins, int nSecs) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*lDays*、 *nHours*、 *nMins*、 *nSecs*<br/>
-これにコピーされる日付範囲と時間範囲の値を示す`COleDateTimeSpan`オブジェクト。
+*lDays*, *nHours*, *nMins*, *nSecs*<br/>
+この`COleDateTimeSpan`オブジェクトにコピーする日付範囲と期間の値を示します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-関数の値をクエリで、`COleDateTimeSpan`オブジェクト、メンバー関数は、次を参照してください。
+`COleDateTimeSpan`オブジェクトの値を照会する関数については、次のメンバー関数を参照してください。
 
-- [GetDays](#getdays)
+- [ゲットデイズ](#getdays)
 
 - [GetHours](#gethours)
 
-- [GetMinutes](#getminutes)
+- [ゲットミニッツ](#getminutes)
 
-- [GetSeconds](#getseconds)
+- [秒を取得します。](#getseconds)
 
-- [GetTotalDays](#gettotaldays)
+- [合計日数を取得する](#gettotaldays)
 
-- [従来](#gettotalhours)
+- [合計時間を取得します。](#gettotalhours)
 
-- [GetTotalMinutes](#gettotalminutes)
+- [合計分を取得します。](#gettotalminutes)
 
-- [GetTotalSeconds](#gettotalseconds)
+- [合計秒数を取得します。](#gettotalseconds)
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATLMFC_Utilities#21](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_12.cpp)]
 
-##  <a name="setstatus"></a>  COleDateTimeSpan::SetStatus
+## <a name="coledatetimespansetstatus"></a><a name="setstatus"></a>を設定します。
 
-これのステータス (有効) を設定`COleDateTimeSpan`オブジェクト。
+この`COleDateTimeSpan`オブジェクトのステータス (有効性) を設定します。
 
 ```
 void SetStatus(DateTimeSpanStatus status) throw();
@@ -722,11 +722,11 @@ void SetStatus(DateTimeSpanStatus status) throw();
 ### <a name="parameters"></a>パラメーター
 
 *status*<br/>
-この新しいステータス値`COleDateTimeSpan`オブジェクト。
+この`COleDateTimeSpan`オブジェクトの新しいステータス値。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-*状態*パラメーターの値によって定義されます、`DateTimeSpanStatus`列挙型内で定義されている、`COleDateTimeSpan`クラス。
+*Status*パラメーターの値は、クラス`DateTimeSpanStatus`内で定義される列挙型によって定義されます`COleDateTimeSpan`。
 
 ```
 enum DateTimeSpanStatus{
@@ -736,16 +736,16 @@ enum DateTimeSpanStatus{
    };
 ```
 
-これらのステータス値の簡単な説明は、次の一覧を参照してください。
+これらの状態値の簡単な説明については、次の一覧を参照してください。
 
-- `COleDateTimeSpan::valid` 示しますこの`COleDateTimeSpan`オブジェクトが無効です。
+- `COleDateTimeSpan::valid`この`COleDateTimeSpan`オブジェクトが有効であることを示します。
 
-- `COleDateTimeSpan::invalid` 示しますこの`COleDateTimeSpan`オブジェクトは無効です。 つまり、その値誤りがあります。
+- `COleDateTimeSpan::invalid`この`COleDateTimeSpan`オブジェクトが無効であることを示します。つまり、その値が正しくない可能性があります。
 
-- `COleDateTimeSpan::null` 示しますこの`COleDateTimeSpan`オブジェクトが null の場合は、このオブジェクトの値が指定されていないこと。 (これは"使用しない場合の値、"C++ の NULL ではなくデータベースという意味で"null")。
+- `COleDateTimeSpan::null`この`COleDateTimeSpan`オブジェクトが null、つまり、このオブジェクトに値が指定されていない場合を示します。 (これは、C++ の NULL とは対照的に、"値を持たない" というデータベースの意味での "null" です。
 
    > [!CAUTION]
-   > この関数は、高度なプログラミングに適しています。 この関数では、このオブジェクトのデータは変更されません。 状態を設定に使用されるほとんどの場合、 **null**または**無効な**します。 なお、代入演算子 ([operator =](#operator_eq)) と[SetDateTimeSpan](#setdatetimespan)ソース値に基づいて、オブジェクトの状態を設定しないでください。
+   > この関数は、高度なプログラミングの状況に対応します。 この関数は、このオブジェクトのデータを変更しません。 ほとんどの場合、この状態を**null**または**無効**に設定するために使用されます。 代入演算子 ([演算子 =](#operator_eq)) と[SetDateTimeSpan](#setdatetimespan)は、ソース値に基づいてオブジェクトのステータスを設定します。
 
 ### <a name="example"></a>例
 
@@ -753,8 +753,8 @@ enum DateTimeSpanStatus{
 
 ## <a name="see-also"></a>関連項目
 
-[COleDateTime クラス](../../atl-mfc-shared/reference/coledatetime-class.md)<br/>
-[CTime クラス](../../atl-mfc-shared/reference/ctime-class.md)<br/>
-[CTimeSpan クラス](../../atl-mfc-shared/reference/ctimespan-class.md)<br/>
-[階層図](../../mfc/hierarchy-chart.md)<br/>
+[クラス](../../atl-mfc-shared/reference/coledatetime-class.md)<br/>
+[CTimeクラス](../../atl-mfc-shared/reference/ctime-class.md)<br/>
+[クラス](../../atl-mfc-shared/reference/ctimespan-class.md)<br/>
+[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
 [ATL/MFC 共有クラス](../../atl-mfc-shared/atl-mfc-shared-classes.md)

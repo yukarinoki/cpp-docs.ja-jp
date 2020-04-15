@@ -9,118 +9,118 @@ helpviewer_keywords:
 - GetLicenseKey method [MFC]
 - licensing ActiveX controls
 ms.assetid: cacd9e45-701a-4a1f-8f1f-b0b39f6ac303
-ms.openlocfilehash: b08abdc0e2c17cb61c0c6a14cd712ec32ea816bd
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: aaab4ae3bb13790784a66d53b41dbc3a7cdaec89
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79438022"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364612"
 ---
 # <a name="mfc-activex-controls-licensing-an-activex-control"></a>MFC ActiveX コントロール : ActiveX コントロールのライセンス
 
-ActiveX コントロールのオプション機能であるライセンスサポートを使用すると、コントロールを使用または配布できるユーザーを制御できます。 (ライセンスに関する問題の詳細については、「[既存の ActiveX コントロールのアップグレード](../mfc/upgrading-an-existing-activex-control.md)に関する問題」を参照してください)。
+ActiveX コントロールのオプション機能であるライセンス サポートでは、コントロールを使用または配布できるユーザーを制御できます。 (ライセンスに関するその他の説明については、既存の[ActiveX コントロールのアップグレード](../mfc/upgrading-an-existing-activex-control.md)のライセンスに関する問題を参照してください)。
 
 > [!IMPORTANT]
-> ActiveX は、新しい開発には使用しない従来のテクノロジです。 ActiveX を置き換える最新テクノロジの詳細については、「 [Activex コントロール](activex-controls.md)」を参照してください。
+> ActiveX は、新しい開発には使用しない従来のテクノロジです。 ActiveX に取って代わる最新テクノロジの詳細については、「 [ActiveX コントロール](activex-controls.md)」を参照してください。
 
 この記事では、次のトピックについて説明します。
 
-- [ActiveX コントロールのライセンスの概要](#_core_overview_of_activex_control_licensing)
+- [ActiveX コントロール ライセンスの概要](#_core_overview_of_activex_control_licensing)
 
-- [ライセンスされたコントロールの作成](#_core_creating_a_licensed_control)
+- [ライセンスコントロールの作成](#_core_creating_a_licensed_control)
 
 - [ライセンスサポート](#_core_licensing_support)
 
 - [ActiveX コントロールのライセンスのカスタマイズ](#_core_customizing_the_licensing_of_an_activex_control)
 
-ライセンスを実装する ActiveX コントロールでは、コントロール開発者は、他のユーザーが ActiveX コントロールを使用する方法を決定できます。 コントロールの購入者には、コントロールとを指定します。契約書を使用する LIC ファイル。購入者がコントロールを配布することはできますが、は含まれません。LIC ファイル。コントロールを使用するアプリケーションが含まれています。 これにより、そのアプリケーションのユーザーは、最初にコントロールをライセンス認証することなく、コントロールを使用する新しいアプリケーションを作成できなくなります。
+ライセンスを実装する ActiveX コントロールを使用すると、コントロール開発者は、他のユーザーが ActiveX コントロールをどのように使用するかを決定できます。 コントロールの購入者に コントロールと を提供します。LIC ファイルは、購入者がコントロールを配布する可能性がありますが、 は配布しないことを同意します。LIC ファイルで、コントロールを使用するアプリケーションを含みます。 これにより、コントロールを最初にライセンスを取得せずに、そのアプリケーションのユーザーがコントロールを使用する新しいアプリケーションを作成できなくなります。
 
-##  <a name="_core_overview_of_activex_control_licensing"></a>ActiveX コントロールのライセンスの概要
+## <a name="overview-of-activex-control-licensing"></a><a name="_core_overview_of_activex_control_licensing"></a>ActiveX コントロール ライセンスの概要
 
-ActiveX コントロールのライセンスサポートを提供するために、 [COleObjectFactory](../mfc/reference/coleobjectfactory-class.md)クラスは、`IClassFactory2::RequestLicKey`、`IClassFactory2::GetLicInfo`、および `IClassFactory2::CreateInstanceLic`の `IClassFactory2` インターフェイス内のいくつかの関数の実装を提供します。 コンテナーアプリケーションの開発者がコントロールのインスタンスを作成するように要求すると、そのコントロールを確認するための `GetLicInfo` の呼び出しが行われます。LIC ファイルが存在します。 コントロールがライセンスされている場合は、コントロールのインスタンスを作成し、コンテナーに配置できます。 開発者がコンテナーアプリケーションの構築を完了すると、もう1つの関数呼び出しが行われます。この時間は `RequestLicKey`になります。 この関数は、ライセンスキー (単純な文字列) をコンテナーアプリケーションに返します。 返されたキーは、アプリケーションに埋め込まれます。
+ActiveX コントロールのライセンス サポートを提供するために[、COleObjectFactory](../mfc/reference/coleobjectfactory-class.md)クラスは`IClassFactory2`、インターフェイス内のいくつかの関数の実装`IClassFactory2::RequestLicKey``IClassFactory2::GetLicInfo`を提供`IClassFactory2::CreateInstanceLic`します。 コンテナー アプリケーションの開発者がコントロールのインスタンスを作成する要求を行うと、 コントロール`GetLicInfo`の呼び出しが行われ、コントロール が呼び出されます。LIC ファイルが存在します。 コントロールがライセンスされている場合、コントロールのインスタンスを作成してコンテナーに配置できます。 開発者がコンテナアプリケーションの構築を終了すると、今度`RequestLicKey`は別の関数呼び出しが行われます。 この関数は、コンテナ アプリケーションにライセンス キー (単純な文字列) を返します。 返されたキーは、アプリケーションに埋め込まれます。
 
-次の図は、コンテナーアプリケーションの開発中に使用される ActiveX コントロールのライセンス検証を示しています。 既に説明したように、コンテナーアプリケーションの開発者には適切なが必要です。コントロールのインスタンスを作成するために開発用コンピューターにインストールされた LIC ファイル。
+次の図は、コンテナ アプリケーションの開発中に使用される ActiveX コントロールのライセンス検証を示しています。 前述のように、コンテナ アプリケーション開発者は適切な .コントロールのインスタンスを作成するために開発マシンにインストールされた LIC ファイル。
 
-![開発時に検証されたライセンスされた ActiveX コントロール](../mfc/media/vc374d1.gif "開発時で検証された、ライセンスされた ActiveX コントロール") <br/>
+![開発時で検証された、ライセンスされた ActiveX コントロール](../mfc/media/vc374d1.gif "開発時で検証された、ライセンスされた ActiveX コントロール") <br/>
 開発時の ActiveX コントロールのライセンス検査
 
-次の図に示すように、エンドユーザーがコンテナーアプリケーションを実行すると、次のプロセスが発生します。
+次のプロセスは、次の図に示すように、エンド ユーザーがコンテナー アプリケーションを実行するときに発生します。
 
-アプリケーションが開始されると、通常、コントロールのインスタンスを作成する必要があります。 コンテナーは、`CreateInstanceLic`を呼び出して、埋め込みライセンスキーをパラメーターとして渡すことによってこれを実現します。 次に、埋め込みライセンスキーと、ライセンスキーのコントロール独自のコピーとの間で文字列比較が行われます。 一致が成功した場合、コントロールのインスタンスが作成され、アプリケーションは正常に実行され続けます。 であることに注意してください。LIC ファイルがコントロールユーザーのコンピューターに存在していない必要があります。
+アプリケーションが起動されると、通常はコントロールのインスタンスを作成する必要があります。 コンテナーは、 に`CreateInstanceLic`呼び出しを行うことでこれを実現し、埋め込みライセンス キーをパラメーターとして渡します。 次に、埋め込みライセンス キーとコントロール自身のライセンス キーのコピーとの間で文字列比較が行われます。 一致が成功すると、コントロールのインスタンスが作成され、アプリケーションは正常に実行されます。 に注意してください。LIC ファイルは、制御ユーザーのマシン上に存在する必要はありません。
 
-![実行時に検証されたライセンスされた ActiveX コントロール](../mfc/media/vc374d2.gif "実行時に検証された、ライセンスされた ActiveX コントロール") <br/>
+![実行時に検証された、ライセンスされた ActiveX コントロール](../mfc/media/vc374d2.gif "実行時に検証された、ライセンスされた ActiveX コントロール") <br/>
 実行時の ActiveX コントロールのライセンス検査
 
-コントロールのライセンスは、コントロール実装 DLL 内の特定のコードとライセンスファイルの2つの基本的なコンポーネントで構成されています。 このコードは、2つ (または 3) の関数呼び出しと、著作権に関する通知を含む "ライセンス文字列" と呼ばれる文字列で構成されます。 これらの呼び出しとライセンス文字列は、コントロールの実装にあります (「」を参照してください。CPP) ファイル。 ActiveX コントロールウィザードによって生成されるライセンスファイルは、著作権に関する声明を含むテキストファイルです。 これには、プロジェクト名とを使用して名前が付けられます。LIC extension (例)。LIC. デザイン時の使用が必要な場合は、ライセンスされたコントロールにライセンスファイルを添付する必要があります。
+コントロール ライセンスは、コントロール実装 DLL の特定のコードとライセンス ファイルの 2 つの基本コンポーネントで構成されます。 コードは、2 つの (または 3 つ) の関数呼び出しと文字列で構成され、次に「ライセンス文字列」と呼ばれ、著作権表示が含まれます。 これらの呼び出しとライセンス文字列は、コントロールの実装 (.CPP) ファイル。 ActiveX コントロール ウィザードによって生成されるライセンス ファイルは、著作権に関する記述を含むテキスト ファイルです。 プロジェクト名を使用して、 という名前が付けられます。LIC 拡張例として、サンプル。Lic。 デザイン時の使用が必要な場合は、ライセンス・コントロールにライセンス・ファイルを伴う必要があります。
 
-##  <a name="_core_creating_a_licensed_control"></a>ライセンスされたコントロールの作成
+## <a name="creating-a-licensed-control"></a><a name="_core_creating_a_licensed_control"></a>ライセンスコントロールの作成
 
-ActiveX コントロールウィザードを使用してコントロールフレームワークを作成する場合、ライセンスサポートを簡単に含めることができます。 コントロールにランタイムライセンスが必要であることを指定すると、ActiveX コントロールウィザードによって、ライセンスをサポートするためのコードがコントロールクラスに追加されます。 このコードは、ライセンス認証のためにキーとライセンスファイルを使用する関数で構成されています。 これらの関数を変更して、コントロールのライセンスをカスタマイズすることもできます。 ライセンスのカスタマイズの詳細については、この記事で後述する「 [ActiveX コントロールのライセンスのカスタマイズ](#_core_customizing_the_licensing_of_an_activex_control)」を参照してください。
+ActiveX コントロール ウィザードを使用してコントロール フレームワークを作成すると、ライセンスサポートを簡単に含めることができます。 コントロールにランタイム ライセンスを付与するように指定すると、ActiveX コントロール ウィザードは、ライセンスをサポートするコードをコントロール クラスに追加します。 コードは、ライセンス検証にキーとライセンスファイルを使用する機能で構成されています。 これらの機能は、コントロール ライセンスをカスタマイズするために変更することもできます。 ライセンスのカスタマイズの詳細については、この記事[の「ActiveX コントロールのライセンスのカスタマイズ](#_core_customizing_the_licensing_of_an_activex_control)」を参照してください。
 
-#### <a name="to-add-support-for-licensing-with-the-activex-control-wizard-when-you-create-your-control-project"></a>ActiveX コントロールウィザードを使用して、コントロールプロジェクトを作成するときにライセンスのサポートを追加するには
+#### <a name="to-add-support-for-licensing-with-the-activex-control-wizard-when-you-create-your-control-project"></a>コントロール プロジェクトの作成時に ActiveX コントロール ウィザードを使用してライセンスのサポートを追加するには
 
-1. 「 [MFC ActiveX コントロールの作成](../mfc/reference/creating-an-mfc-activex-control.md)」の手順を使用します。 ActiveX コントロールウィザードの **[アプリケーションの設定]** ページには、ランタイムライセンスを持つコントロールを作成するオプションがあります。
+1. [MFC ActiveX コントロールの作成](../mfc/reference/creating-an-mfc-activex-control.md)の手順を使用します。 ActiveX コントロール ウィザードの **[アプリケーションの設定]** ページには、ランタイム ライセンスを使用してコントロールを作成するオプションがあります。
 
-ActiveX コントロールウィザードで、基本的なライセンスサポートを含む ActiveX コントロールフレームワークが生成されるようになりました。 ライセンスコードの詳細については、次のトピックを参照してください。
+ActiveX コントロール ウィザードは、基本的なライセンス サポートを含む ActiveX コントロール フレームワークを生成するようになりました。 ライセンス コードの詳細については、次のトピックを参照してください。
 
-##  <a name="_core_licensing_support"></a>ライセンスサポート
+## <a name="licensing-support"></a><a name="_core_licensing_support"></a>ライセンスサポート
 
-Activex コントロールウィザードを使用して ActiveX コントロールにライセンスサポートを追加すると、ActiveX コントロールウィザードによって、ライセンス機能を宣言して実装するコードが追加され、コントロールのヘッダーおよび実装ファイルに追加されます。 このコードは、`VerifyUserLicense` のメンバー関数と、 [COleObjectFactory](../mfc/reference/coleobjectfactory-class.md)の既定の実装をオーバーライドする `GetLicenseKey` メンバー関数で構成されています。 これらの関数は、コントロールのライセンスを取得して確認します。
+ActiveX コントロール ウィザードを使用して ActiveX コントロールにライセンス サポートを追加すると、ActiveX コントロール ウィザードによって、ライセンス機能を宣言および実装するコードがコントロール ヘッダー ファイルと実装ファイルに追加されます。 このコードは、`VerifyUserLicense`メンバー関数と`GetLicenseKey`メンバー関数で構成され[、COleObjectFactory](../mfc/reference/coleobjectfactory-class.md)の既定の実装をオーバーライドします。 これらの関数は、制御ライセンスを取得して検証します。
 
 > [!NOTE]
->  3番目のメンバー関数 `VerifyLicenseKey` は ActiveX コントロールウィザードでは生成されませんが、オーバーライドしてライセンスキーの検証動作をカスタマイズできます。
+> 3 つ目の`VerifyLicenseKey`メンバー関数は ActiveX コントロール ウィザードによって生成されませんが、ライセンス キーの検証動作をカスタマイズするためにオーバーライドできます。
 
 これらのメンバー関数は次のとおりです。
 
-- [VerifyUserLicense](../mfc/reference/coleobjectfactory-class.md#verifyuserlicense)
+- [ユーザーライセンスの確認](../mfc/reference/coleobjectfactory-class.md#verifyuserlicense)
 
-   コントロールで、コントロールのライセンスファイルが存在するかどうかを確認することによって、デザイン時の使用を許可するかどうかを確認します。 この関数は、`IClassFactory2::GetLicInfo` と `IClassFactory::CreateInstanceLic`の処理の一部としてフレームワークによって呼び出されます。
+   コントロールがコントロール ライセンス ファイルの存在をシステムでチェックすることによって、コントロールがデザイン時の使用を許可していることを確認します。 この関数は、フレームワークによって処理`IClassFactory2::GetLicInfo`の一部として呼`IClassFactory::CreateInstanceLic`び出されます。
 
-- [GetLicenseKey](../mfc/reference/coleobjectfactory-class.md#getlicensekey)
+- [ライセンスキーを取得します。](../mfc/reference/coleobjectfactory-class.md#getlicensekey)
 
-   コントロール DLL から一意のキーを要求します。 このキーはコンテナーアプリケーションに埋め込まれ、後で `VerifyLicenseKey`と組み合わせて使用して、コントロールのインスタンスを作成します。 この関数は、`IClassFactory2::RequestLicKey`の処理の一部としてフレームワークによって呼び出されます。
+   コントロール DLL に一意のキーを要求します。 このキーはコンテナー アプリケーションに埋め込まれ、後で`VerifyLicenseKey`と組み合わせて使用され、コントロールのインスタンスを作成します。 この関数は、処理`IClassFactory2::RequestLicKey`の一部としてフレームワークによって呼び出されます。
 
-- [VerifyLicenseKey](../mfc/reference/coleobjectfactory-class.md#verifylicensekey)
+- [ライセンスキーの確認](../mfc/reference/coleobjectfactory-class.md#verifylicensekey)
 
-   埋め込まれたキーとコントロールの一意のキーが同じであることを確認します。 これにより、コンテナーは使用するコントロールのインスタンスを作成できます。 この関数は、`IClassFactory2::CreateInstanceLic` の処理の一部としてフレームワークによって呼び出され、ライセンスキーのカスタマイズされた検証を行うためにオーバーライドできます。 既定の実装では、文字列比較が実行されます。 詳細については、この記事で後述する「 [ActiveX コントロールのライセンスのカスタマイズ](#_core_customizing_the_licensing_of_an_activex_control)」を参照してください。
+   埋め込みキーとコントロールの一意のキーが同じであることを確認します。 これにより、コンテナーは、その使用するコントロールのインスタンスを作成できます。 この関数は、フレームワークによって処理`IClassFactory2::CreateInstanceLic`の一部として呼び出され、ライセンス キーのカスタマイズされた検証を提供するためにオーバーライドできます。 既定の実装では、文字列比較を実行します。 詳細については、この記事[の「 ActiveX コントロールのライセンスのカスタマイズ](#_core_customizing_the_licensing_of_an_activex_control)」を参照してください。
 
-###  <a name="_core_header_file_modifications"></a>ヘッダーファイルの変更
+### <a name="header-file-modifications"></a><a name="_core_header_file_modifications"></a>ヘッダー ファイルの変更
 
-ActiveX コントロールウィザードでは、次のコードがコントロールヘッダーファイルに配置されます。 この例では、`CSampleCtrl`のオブジェクト `factory` の2つのメンバー関数が宣言されています。1つはコントロールの存在を検証する関数です。LIC ファイルと、コントロールを含むアプリケーションで使用されるライセンスキーを取得する別のファイル。
+ActiveX コントロール ウィザードは、コントロール ヘッダー ファイルに次のコードを配置します。 この例では、 ' の`CSampleCtrl`オブジェクト`factory`の 2 つのメンバー関数が宣言されています。LIC ファイルと、コントロールを含むアプリケーションで使用するライセンス キーを取得するファイル:
 
 [!code-cpp[NVC_MFC_AxUI#39](../mfc/codesnippet/cpp/mfc-activex-controls-licensing-an-activex-control_1.h)]
 
-###  <a name="_core_implementation_file_modifications"></a>実装ファイルの変更
+### <a name="implementation-file-modifications"></a><a name="_core_implementation_file_modifications"></a>実装ファイルの変更
 
-ActiveX コントロールウィザードでは、ライセンスファイル名とライセンス文字列を宣言するために、コントロール実装ファイルに次の2つのステートメントが配置されます。
+ActiveX コントロール ウィザードでは、次の 2 つのステートメントをコントロール実装ファイルに配置して、ライセンス ファイル名とライセンス文字列を宣言します。
 
 [!code-cpp[NVC_MFC_AxUI#40](../mfc/codesnippet/cpp/mfc-activex-controls-licensing-an-activex-control_2.cpp)]
 
 > [!NOTE]
->  何らかの方法で `szLicString` を変更する場合は、コントロールの最初の行も変更する必要があります。LIC ファイルまたはライセンスは正常に機能しません。
+> 何らかの方法`szLicString`で変更する場合は、コントロールの最初の行も変更する必要があります。LICファイルまたはライセンスは正しく機能しません。
 
-ActiveX コントロールウィザードでは、コントロールクラス ' `VerifyUserLicense` および `GetLicenseKey` 関数を定義するために、コントロール実装ファイルに次のコードを配置します。
+ActiveX コントロール ウィザードは、コントロールの実装ファイルに次のコードを配置して、`VerifyUserLicense`コントロール`GetLicenseKey`クラスと関数を定義します。
 
 [!code-cpp[NVC_MFC_AxUI#41](../mfc/codesnippet/cpp/mfc-activex-controls-licensing-an-activex-control_3.cpp)]
 
-最後に、 **ActiveX コントロールウィザード**によって、コントロールプロジェクトが変更されます。IDL ファイル。 **ライセンス**されたキーワードは、次の例のように、コントロールのコクラス宣言に追加されます。
+最後に **、ActiveX コントロール ウィザード**によってコントロール プロジェクトが変更されます。IDL ファイル。 次の例のように、**ライセンスされた**キーワードがコントロールのコクラス宣言に追加されます。
 
 [!code-cpp[NVC_MFC_AxUI#42](../mfc/codesnippet/cpp/mfc-activex-controls-licensing-an-activex-control_4.idl)]
 
-##  <a name="_core_customizing_the_licensing_of_an_activex_control"></a>ActiveX コントロールのライセンスのカスタマイズ
+## <a name="customizing-the-licensing-of-an-activex-control"></a><a name="_core_customizing_the_licensing_of_an_activex_control"></a>ActiveX コントロールのライセンスのカスタマイズ
 
-`VerifyUserLicense`、`GetLicenseKey`、および `VerifyLicenseKey` は、コントロールファクトリクラスの仮想メンバー関数として宣言されているため、コントロールのライセンスの動作をカスタマイズできます。
+、`VerifyUserLicense``GetLicenseKey`および`VerifyLicenseKey`はコントロール ファクトリ クラスの仮想メンバー関数として宣言されているため、コントロールのライセンス動作をカスタマイズできます。
 
-たとえば、`VerifyUserLicense` または `VerifyLicenseKey` のメンバー関数をオーバーライドすることによって、コントロールに複数のレベルのライセンスを提供できます。 この関数内では、検出されたライセンスレベルに従って、ユーザーに公開されるプロパティまたはメソッドを調整できます。
+たとえば、`VerifyUserLicense`または`VerifyLicenseKey`メンバー関数をオーバーライドすることによって、コントロールに対して複数のレベルのライセンスを提供できます。 この関数の内部では、検出したライセンス レベルに応じて、ユーザーに公開するプロパティまたはメソッドを調整できます。
 
-また、コントロールの作成が失敗したことをユーザーに通知するためのカスタマイズされたメソッドを提供する、`VerifyLicenseKey` 関数にコードを追加することもできます。 たとえば、`VerifyLicenseKey` メンバー関数では、コントロールの初期化に失敗したこととその理由を示すメッセージボックスを表示できます。
+また、コントロールの作成が`VerifyLicenseKey`失敗したことをユーザーに通知するカスタマイズされたメソッドを提供するコードを関数に追加することもできます。 たとえば、`VerifyLicenseKey`メンバ関数では、コントロールが初期化に失敗した理由とその理由を示すメッセージ ボックスを表示できます。
 
 > [!NOTE]
->  ActiveX コントロールライセンスの検証をカスタマイズするもう1つの方法は、`AfxVerifyLicFile`を呼び出すのではなく、特定のレジストリキーの登録データベースをチェックすることです。 既定の実装の例については、この記事の「[実装ファイルの変更](#_core_implementation_file_modifications)」セクションを参照してください。
+> ActiveX コントロール ライセンスの検証をカスタマイズするもう 1 つの方法は、 を呼び出`AfxVerifyLicFile`す代わりに、特定のレジストリ キーの登録データベースをチェックすることです。 既定の実装の例については、この記事の[「実装ファイルの変更](#_core_implementation_file_modifications)」セクションを参照してください。
 
-ライセンスに関する問題の詳細については、「[既存の ActiveX コントロールのアップグレード](../mfc/upgrading-an-existing-activex-control.md)に関する問題」を参照してください。
+ライセンスに関するその他の問題については、既存の[ActiveX コントロールのアップグレード](../mfc/upgrading-an-existing-activex-control.md)のライセンスに関する問題を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [MFC ActiveX コントロール](../mfc/mfc-activex-controls.md)<br/>
 [MFC ActiveX コントロール ウィザード](../mfc/reference/mfc-activex-control-wizard.md)

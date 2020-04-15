@@ -7,31 +7,31 @@ helpviewer_keywords:
 - windows [MFC], creating
 - sequence [MFC]
 ms.assetid: 9cd8c7ea-5e24-429e-b6d9-d7b6041d8ba6
-ms.openlocfilehash: 949cf72910654b502ca4b57be72bedc2db63c315
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fb10ced78e230316a6e2982f24c1fb6e2e52ed8d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62219566"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364266"
 ---
 # <a name="general-window-creation-sequence"></a>一般的なウィンドウ作成順序
 
-フレームワークではるかのと同じプロセスを使用して、説明した子などの独自のウィンドウのウィンドウを作成するときに[ドキュメント/ビューの作成](../mfc/document-view-creation.md)です。
+子ウィンドウなどの独自のウィンドウを作成する場合、フレームワークは[ドキュメント/ビュー作成](../mfc/document-view-creation.md)で説明したものとほぼ同じプロセスを使用します。
 
-MFC の採用によって提供されるすべてのウィンドウ クラス[2 段階構築](../mfc/one-stage-and-two-stage-construction-of-objects.md)します。 つまり、C++ の呼び出し中に**新しい**演算子、コンス トラクターは、割り当てと C++ オブジェクトを初期化しますが、対応する Windows ウィンドウを作成できません。 後で呼び出すことによって実現されます、[作成](../mfc/reference/cwnd-class.md#create)ウィンドウ オブジェクトのメンバー関数。
+MFC で提供されるすべてのウィンドウ クラスは[、2 段階の構築](../mfc/one-stage-and-two-stage-construction-of-objects.md)を採用しています。 つまり、C++ **new**演算子の呼び出し中に、コンストラクターは C++ オブジェクトを割り当てて初期化しますが、対応するウィンドウは作成しません。 これは、ウィンドウ オブジェクトの[Create](../mfc/reference/cwnd-class.md#create)メンバー関数を呼び出すことで、後で行われます。
 
-`Create`メンバー関数は、Windows のウィンドウを格納してその`HWND`で、C++オブジェクトのパブリック データ メンバー [m_hWnd](../mfc/reference/cwnd-class.md#m_hwnd)します。 `Create` 完全な作成パラメーターの柔軟性。 呼び出しの前に`Create`、グローバル関数をウィンドウ クラスを登録する[AfxRegisterWndClass](../mfc/reference/application-information-and-management.md#afxregisterwndclass)フレームのアイコンとクラスのスタイルを設定するためにします。
+メンバー`Create`関数は Windows ウィンドウを作成し`HWND`、C++ オブジェクトのパブリック データ メンバー [m_hWnd](../mfc/reference/cwnd-class.md#m_hwnd)に格納します。 `Create`作成パラメータに対して完全な柔軟性を提供します。 を呼`Create`び出す前に、フレームのアイコンとクラス スタイルを設定するために、グローバル関数[AfxRegisterWndClass](../mfc/reference/application-information-and-management.md#afxregisterwndclass)を使用してウィンドウ クラスを登録する必要があります。
 
-フレーム ウィンドウを使用することができます、 [LoadFrame](../mfc/reference/cframewnd-class.md#loadframe)メンバー関数の代わりに`Create`します。 `LoadFrame` 少ないパラメーターを使用して Windows のウィンドウになります。 フレームのキャプション、アイコン、アクセラレータ テーブル、およびメニューなどのリソースから多くの既定値を取得します。
+フレーム ウィンドウの場合は、 の代わりに[LoadFrame](../mfc/reference/cframewnd-class.md#loadframe)メンバー関数を`Create`使用できます。 `LoadFrame`を使用すると、ウィンドウの使用するパラメータが少なくなります。 フレームのキャプション、アイコン、アクセラレータ テーブル、メニューなど、リソースから多くの既定値を取得します。
 
 > [!NOTE]
->  アイコン、アクセラレータ テーブル、およびメニュー リソースが必要、共通のリソース ID など**IDR_MAINFRAME**、LoadFrame によって読み込まれることにします。
+> LoadFrame によって読み込まれるには、アイコン、アクセラレータ テーブル、およびメニュー リソースに**IDR_MAINFRAME**などの共通リソース ID が必要です。
 
-## <a name="what-do-you-want-to-know-more-about"></a>方法については、するして操作を行います
+## <a name="what-do-you-want-to-know-more-about"></a>何についてもっと知りたいのですか?
 
 - [ウィンドウ オブジェクト](../mfc/window-objects.md)
 
-- [ウィンドウ「クラス」の登録](../mfc/registering-window-classes.md)
+- [ウィンドウの "クラス" を登録する](../mfc/registering-window-classes.md)
 
 - [ウィンドウ オブジェクトの破棄](../mfc/destroying-window-objects.md)
 

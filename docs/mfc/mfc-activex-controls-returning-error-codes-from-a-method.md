@@ -1,5 +1,5 @@
 ---
-title: MFC ActiveX コントロール:メソッドから返されるエラー コード
+title: 'MFC ActiveX コントロール : メソッドからのエラー コードのリターン'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], error codes
@@ -10,27 +10,27 @@ helpviewer_keywords:
 - SCODE, MFC ActiveX controls
 - ThrowError method [MFC]
 ms.assetid: 771fb9c9-2413-4dcc-b386-7bc4c4adeafd
-ms.openlocfilehash: 0800c1827c636dd81e2928e33c0ee2afde4c94ac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5314545a3a903158362dbfa65c4a9a1b2143e86b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324273"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364563"
 ---
-# <a name="mfc-activex-controls-returning-error-codes-from-a-method"></a>MFC ActiveX コントロール:メソッドから返されるエラー コード
+# <a name="mfc-activex-controls-returning-error-codes-from-a-method"></a>MFC ActiveX コントロール : メソッドからのエラー コードのリターン
 
-この記事では、ActiveX コントロールのメソッドからエラー コードを返す方法について説明します。
+この資料では、ActiveX コントロール メソッドからエラー コードを返す方法について説明します。
 
-メソッド内でエラーが発生したことを示す、使用する必要があります、 [COleControl::ThrowError](../mfc/reference/colecontrol-class.md#throwerror)メンバー関数は、パラメーターとして SCODE (状態コード) をとります。 定義済み SCODE を使用したり、独自のいずれかを定義することができます。
+メソッド内でエラーが発生したことを示すには、パラメーターとして SCODE (状態コード) を受け取る[COleControl::ThrowError](../mfc/reference/colecontrol-class.md#throwerror)メンバー関数を使用する必要があります。 事前定義された SCODE を使用することも、独自の SCODE を定義することもできます。
 
 > [!NOTE]
->  `ThrowError` プロパティの Get または Set 内からのエラーを返すための手段としてのみ使用するものでは関数またはメソッドを自動化します。 これらは、唯一のスタックの適切な例外ハンドラーとなる時間を表示します。
+> `ThrowError`プロパティの Get 関数または Set 関数またはオートメーション メソッド内からエラーを返す手段としてのみ使用されます。 これらは、スタック上に適切な例外ハンドラーが存在する唯一の時間です。
 
-定義済み SCODEs などを最も一般的なのヘルパー関数が存在[COleControl::SetNotSupported](../mfc/reference/colecontrol-class.md#setnotsupported)、 [COleControl::GetNotSupported](../mfc/reference/colecontrol-class.md#getnotsupported)、および[COleControl::SetNotPermitted](../mfc/reference/colecontrol-class.md#setnotpermitted).
+ヘルパー関数は[、COleControl::SetNotSupported、COleControl::GetNotSupported、](../mfc/reference/colecontrol-class.md#setnotsupported)[および COleControl::SetNot許可](../mfc/reference/colecontrol-class.md#setnotpermitted)されたなどの最も一般的な定義済みの SCODEs に対して存在します。 [COleControl::GetNotSupported](../mfc/reference/colecontrol-class.md#getnotsupported)
 
-一連の定義済みの SCODEs とカスタム SCODEs を定義する手順については、セクションを参照してください。[エラーを処理する、ActiveX コントロールで](../mfc/mfc-activex-controls-advanced-topics.md)で ActiveX コントロール。高度なトピックです。
+定義済みの SCOD の一覧とカスタム SCOD の定義手順については[、「ActiveX コントロールでの ActiveX コントロールのエラーの処理](../mfc/mfc-activex-controls-advanced-topics.md): 詳細トピック」を参照してください。
 
-コードの他の領域で例外をレポートの詳細については、次を参照してください。 [COleControl::FireError](../mfc/reference/colecontrol-class.md#fireerror) 」、および[エラーを処理する、ActiveX コントロールで](../mfc/mfc-activex-controls-advanced-topics.md)で ActiveX コントロール。高度なトピックです。
+コードの他の領域での例外の報告の詳細については[、「COleControl::FireError」](../mfc/reference/colecontrol-class.md#fireerror)と「ActiveX コントロールの[ActiveX コントロールでのエラーの処理](../mfc/mfc-activex-controls-advanced-topics.md): 詳細トピック」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

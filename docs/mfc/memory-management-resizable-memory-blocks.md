@@ -1,5 +1,5 @@
 ---
-title: メモリ管理:サイズ変更可能なメモリ ブロック
+title: 'メモリ管理 : サイズ変更可能なメモリ ブロック'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - memory blocks [MFC], resizable
@@ -9,20 +9,20 @@ helpviewer_keywords:
 - blocks [MFC], memory allocation
 - resizable memory blocks [MFC]
 ms.assetid: f0efe6f4-a3ed-4541-9195-51ec1291967a
-ms.openlocfilehash: 124a2599e1523d5393fcf6255c88de0fd8cd72cd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b048b60a5512ecc54750cb980ca67e2373e2c837
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62219143"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364773"
 ---
-# <a name="memory-management-resizable-memory-blocks"></a>メモリ管理:サイズ変更可能なメモリ ブロック
+# <a name="memory-management-resizable-memory-blocks"></a>メモリ管理 : サイズ変更可能なメモリ ブロック
 
-**新しい**と**削除**演算子は、この記事で説明されている[メモリ管理。例](../mfc/memory-management-examples.md)はの割り当てと解放の固定サイズのメモリ ブロックとオブジェクトによって適しています。 場合によっては、アプリケーションには、サイズ変更可能なメモリ ブロックが必要があります。 標準の C ランタイム ライブラリ関数を使用する必要があります[malloc](../c-runtime-library/reference/malloc.md)、 [realloc](../c-runtime-library/reference/realloc.md)、および[無料](../c-runtime-library/reference/free.md)ヒープ上のサイズ変更可能なメモリ ブロックを管理します。
+「[メモリ管理: 例](../mfc/memory-management-examples.md)」で説明されている**新しい**演算子と**削除**演算子は、固定サイズのメモリ ブロックとオブジェクトの割り当てと割り当てを解除する場合に適しています。 アプリケーションでサイズ変更可能なメモリ ブロックが必要になる場合があります。 ヒープ上のサイズ変更可能なメモリ ブロックを管理するには、標準の C ランタイム ライブラリ関数[malloc](../c-runtime-library/reference/malloc.md) [、realloc、](../c-runtime-library/reference/realloc.md)[および自由](../c-runtime-library/reference/free.md)なメモリ ブロックを自由に使用する必要があります。
 
 > [!IMPORTANT]
->  混合、**新しい**と**削除**MFC のデバッグ バージョンで、破損したメモリ内と同じメモリ ブロックのサイズ変更可能なメモリ割り当て関数と演算子になります。 使用しないようにする**realloc**で割り当てられたメモリ ブロックに**新しい**します。 同様に、割り当てる必要がありますいないメモリ ブロックを**新しい**演算子の削除と**無料**を使用して、または、**削除**で割り当てられたメモリブロックの演算子**malloc**します。
+> **新しい**演算子と**削除**演算子を同じメモリ ブロック上でサイズ変更可能なメモリ割り当て関数と混合すると、MFC のデバッグ バージョンでメモリが破損します。 **新しい**. で割り当てられたメモリ ブロックに**realloc**を使用しないでください。 同様に **、new**演算子を使用してメモリ ブロックを割り当てて削除する必要**があります**。 **delete** **malloc**
 
 ## <a name="see-also"></a>関連項目
 
-[メモリ管理: ヒープの割り当て](../mfc/memory-management-heap-allocation.md)
+[メモリ管理 : ヒープ割り当て](../mfc/memory-management-heap-allocation.md)

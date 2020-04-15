@@ -1,34 +1,34 @@
 ---
-title: MFC ActiveX コントロール:高度なプロパティの実装
+title: 'MFC ActiveX コントロール : 高度なプロパティの実装'
 ms.date: 09/12/2018
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], error codes
 - properties [MFC], ActiveX controls
 - MFC ActiveX controls [MFC], properties
 ms.assetid: ec2e6759-5a8e-41d8-a275-99af8ff6f32e
-ms.openlocfilehash: 438c95c56961cc587b64e494678ade191f18ab6b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d4f1265e6540e9f84bdb680e7948a4e308d31bb0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392805"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364650"
 ---
-# <a name="mfc-activex-controls-advanced-property-implementation"></a>MFC ActiveX コントロール:高度なプロパティの実装
+# <a name="mfc-activex-controls-advanced-property-implementation"></a>MFC ActiveX コントロール : 高度なプロパティの実装
 
-この記事では、ActiveX コントロールのプロパティを高度な実装に関連するトピックについて説明します。
+この資料では、ActiveX コントロールでの詳細プロパティの実装に関連するトピックについて説明します。
 
 >[!IMPORTANT]
-> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の置き換えの最新のテクノロジの詳細については、次を参照してください。 [ActiveX コントロール](activex-controls.md)します。
+> ActiveX は、新しい開発には使用しない従来のテクノロジです。 ActiveX に取って代わる最新テクノロジの詳細については、「 [ActiveX コントロール](activex-controls.md)」を参照してください。
 
-- [読み取り専用であり、書き込み専用のプロパティ](#_core_read2donly_and_write2donly_properties)
+- [読み取り専用および書き込み専用プロパティ](#_core_read2donly_and_write2donly_properties)
 
-- [プロパティから返されるエラー コード](#_core_returning_error_codes_from_a_property)
+- [プロパティからエラー コードを返す](#_core_returning_error_codes_from_a_property)
 
-##  <a name="_core_read2donly_and_write2donly_properties"></a> 読み取り専用であり、書き込み専用のプロパティ
+## <a name="read-only-and-write-only-properties"></a><a name="_core_read2donly_and_write2donly_properties"></a>読み取り専用および書き込み専用プロパティ
 
-プロパティの追加ウィザードでは、コントロールの読み取り専用または書き込み専用のプロパティを実装するために素早く簡単にメソッドを提供します。
+プロパティの追加ウィザードには、コントロールの読み取り専用プロパティまたは書き込み専用プロパティを簡単に実装する方法が用意されています。
 
-#### <a name="to-implement-a-read-only-or-write-only-property"></a>読み取り専用または書き込み専用プロパティを実装するには
+#### <a name="to-implement-a-read-only-or-write-only-property"></a>読み取り専用または書き込み専用のプロパティを実装するには
 
 1. コントロールのプロジェクトを読み込みます。
 
@@ -36,44 +36,44 @@ ms.locfileid: "62392805"
 
 1. コントロールのインターフェイス ノード (ライブラリ ノードの 2 番目のノード) を右クリックし、ショートカット メニューを開きます。
 
-1. ショートカット メニューでは、次のようにクリックします。**追加** をクリックし、**プロパティの追加**します。
+1. ショートカット メニューの [**追加**] をクリックし、[**プロパティの追加**] をクリックします。
 
-   開き、[プロパティの追加ウィザード](../ide/names-add-property-wizard.md)します。
+   これにより、[プロパティの追加ウィザードが](../ide/names-add-property-wizard.md)開きます。
 
-1. **プロパティ名**ボックス、プロパティの名前を入力します。
+1. [**プロパティ名]** ボックスに、プロパティの名前を入力します。
 
 1. **[実装型]** として、 **[Get/Set メソッド]** をクリックします。
 
-1. **プロパティ型**ボックスで、プロパティの適切な型を選択します。
+1. [**プロパティの種類]** ボックスで、プロパティに適切な型を選択します。
 
-1. 読み取り専用プロパティを設定する場合は、セット関数名を削除します。 書き込み専用プロパティを設定する場合は、Get 関数名を削除します。
+1. 読み取り専用プロパティを使用する場合は、Set 関数名をクリアします。 書き込み専用プロパティが必要な場合は、Get 関数名をクリアします。
 
-9. **[完了]** をクリックします。
+1. **[完了]** をクリックします。
 
-プロパティの追加ウィザードが、関数を挿入するときに、これを行うと、`SetNotSupported`または`GetNotSupported`通常の代わりにディスパッチ マップ エントリの次のように設定します。 または関数を取得します。
+これを行うと、プロパティの追加ウィザードは、通常の`SetNotSupported`Set`GetNotSupported`関数または Get 関数の代わりに、関数またはディスパッチ マップ エントリに関数を挿入します。
 
-読み取り専用または書き込み専用にする既存のプロパティを変更する場合は、ディスパッチ マップを手動で編集し、コントロール クラスから不要な設定または取得関数を削除します。
+既存のプロパティを読み取り専用または書き込み専用に変更する場合は、ディスパッチ マップを手動で編集し、不要な Set 関数または Get 関数をコントロール クラスから削除できます。
 
-プロパティを読み取り専用または書き込み専用 (たとえば、コントロールが特定のモードで動作している場合のみ) では条件付きでを実行する場合に、通常どおり、Set または Get 関数を提供および呼び出し、`SetNotSupported`または`GetNotSupported`適切な場所に機能します。 例:
+プロパティを条件付きで読み取り専用または書き込み専用にする場合 (たとえば、コントロールが特定のモードで動作している場合)、Set 関数または Get 関数を通常どおりに提供し`SetNotSupported`、`GetNotSupported`必要に応じて Or 関数を呼び出すことができます。 次に例を示します。
 
 [!code-cpp[NVC_MFC_AxUI#29](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-property-implementation_1.cpp)]
 
-このサンプル コードを呼び出す`SetNotSupported`場合、`m_bReadOnlyMode`データ メンバーが**TRUE**します。 場合**FALSE**プロパティが新しい値に設定されます。
+このコード サンプル`SetNotSupported`は、`m_bReadOnlyMode`データ メンバーが**TRUE の**場合に呼び出します。 **FALSE**の場合、プロパティは新しい値に設定されます。
 
-##  <a name="_core_returning_error_codes_from_a_property"></a> プロパティから返されるエラー コード
+## <a name="returning-error-codes-from-a-property"></a><a name="_core_returning_error_codes_from_a_property"></a>プロパティからエラー コードを返す
 
-プロパティを取得または設定しようとしています。 中にエラーが発生したことを示す、を使用して、`COleControl::ThrowError`関数は、パラメーターとして SCODE (状態コード) をとります。 定義済み SCODE を使用したり、独自のいずれかを定義することができます。 定義済みの SCODEs とカスタム SCODEs を定義するための手順の一覧は、次を参照してください。[エラーを処理する、ActiveX コントロールで](../mfc/mfc-activex-controls-advanced-topics.md)、記事の ActiveX コントロール。高度なトピックです。
+プロパティの取得または設定を試みている間にエラーが発生したことを示すには、SCODE `COleControl::ThrowError` (ステータス コード) をパラメータとして受け取る関数を使用します。 事前定義された SCODE を使用することも、独自の SCODE を定義することもできます。 定義済みの SCOD の一覧とカスタム SCOD を定義する手順については、「ActiveX コントロール: 詳細トピック」の[「ActiveX コントロールのエラーの処理](../mfc/mfc-activex-controls-advanced-topics.md)」を参照してください。
 
-定義済み SCODEs などを最も一般的なのヘルパー関数が存在[COleControl::SetNotSupported](../mfc/reference/colecontrol-class.md#setnotsupported)、 [COleControl::GetNotSupported](../mfc/reference/colecontrol-class.md#getnotsupported)、および[COleControl::SetNotPermitted](../mfc/reference/colecontrol-class.md#setnotpermitted).
+ヘルパー関数は[、COleControl::SetNotSupported、COleControl::GetNotSupported、](../mfc/reference/colecontrol-class.md#setnotsupported)[および COleControl::SetNot許可](../mfc/reference/colecontrol-class.md#setnotpermitted)されたなどの最も一般的な定義済みの SCODEs に対して存在します。 [COleControl::GetNotSupported](../mfc/reference/colecontrol-class.md#getnotsupported)
 
 > [!NOTE]
->  `ThrowError` プロパティの Get または Set 内からのエラーを返すための手段としてのみ使用するものでは関数またはオートメーション メソッド。 これらは、唯一のスタックの適切な例外ハンドラーとなる時間を表示します。
+> `ThrowError`プロパティの Get 関数または Set 関数またはオートメーション メソッドからエラーを返す手段としてのみ使用されます。 これらは、スタック上に適切な例外ハンドラーが存在する唯一の時間です。
 
-コードの他の領域で例外をレポートの詳細については、次を参照してください。 [COleControl::FireError](../mfc/reference/colecontrol-class.md#fireerror) 」、および[エラーを処理する、ActiveX コントロールで](../mfc/mfc-activex-controls-advanced-topics.md)ActiveX コントロールの記事。高度なトピックです。
+コードの他の領域での例外の報告の詳細については、「ActiveX コントロール: 詳細トピック」の[「COleControl::FireError」](../mfc/reference/colecontrol-class.md#fireerror)と[「ActiveX コントロールのエラーの処理](../mfc/mfc-activex-controls-advanced-topics.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
 [MFC ActiveX コントロール](../mfc/mfc-activex-controls.md)<br/>
-[MFC ActiveX コントロール: プロパティ](../mfc/mfc-activex-controls-properties.md)<br/>
+[MFC ActiveX コントロール : プロパティ](../mfc/mfc-activex-controls-properties.md)<br/>
 [MFC ActiveX コントロール: メソッド](../mfc/mfc-activex-controls-methods.md)<br/>
 [COleControl クラス](../mfc/reference/colecontrol-class.md)

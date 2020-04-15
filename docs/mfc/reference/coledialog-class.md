@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - COleDialog [MFC], GetLastError
 ms.assetid: b1ed0aca-3914-4b00-af34-4a4fb491aec7
-ms.openlocfilehash: 353e2ed312fa7dbb9ef7bdfabc2b174abf8e1e1d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6a1983d426e97dd8063aee2857dc36557aa20677
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375718"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366092"
 ---
 # <a name="coledialog-class"></a>COleDialog クラス
 
@@ -31,11 +31,11 @@ class COleDialog : public CCommonDialog
 
 |名前|説明|
 |----------|-----------------|
-|[COleDialog::GetLastError](#getlasterror)|ダイアログ ボックスによって返されたエラー コードを取得します。|
+|[を返します。](#getlasterror)|ダイアログ ボックスによって返されるエラー コードを取得します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-Microsoft Foundation Class ライブラリは、いくつかのクラスから派生した`COleDialog`:
+Microsoft ファウンデーション クラス ライブラリ`COleDialog`には、 から派生したクラスがいくつか用意されています。
 
 - [COleInsertDialog](../../mfc/reference/coleinsertdialog-class.md)
 
@@ -55,7 +55,7 @@ Microsoft Foundation Class ライブラリは、いくつかのクラスから�
 
 - [COleChangeSourceDialog](../../mfc/reference/colechangesourcedialog-class.md)
 
-OLE に固有のダイアログ ボックスの詳細については、記事を参照してください。 [OLE のダイアログ ボックス](../../mfc/dialog-boxes-in-ole.md)します。
+OLE 固有のダイアログ ボックスの詳細については[、「OLE](../../mfc/dialog-boxes-in-ole.md)のダイアログ ボックス」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -75,9 +75,9 @@ OLE に固有のダイアログ ボックスの詳細については、記事を
 
 **ヘッダー:** afxodlgs.h
 
-##  <a name="getlasterror"></a>  COleDialog::GetLastError
+## <a name="coledialoggetlasterror"></a><a name="getlasterror"></a>を返します。
 
-呼び出す、`GetLastError`メンバー関数は、追加のエラー情報を取得するときに`DoModal`IDABORT を返します。
+IDABORT`GetLastError`を返すときに、追加の`DoModal`エラー情報を取得するメンバー関数を呼び出します。
 
 ```
 UINT GetLastError() const;
@@ -85,13 +85,13 @@ UINT GetLastError() const;
 
 ### <a name="return-value"></a>戻り値
 
-によって返されるエラー コード`GetLastError`表示される特定のダイアログ ボックスに依存します。
+返される`GetLastError`エラー コードは、表示されるダイアログ ボックスによって異なります。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-参照してください、`DoModal`特定のエラー メッセージについては、派生クラスでメンバー関数。
+特定の`DoModal`エラー メッセージについては、派生クラスのメンバー関数を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[CCommonDialog クラス](../../mfc/reference/ccommondialog-class.md)<br/>
-[階層図](../../mfc/hierarchy-chart.md)
+[クラス](../../mfc/reference/ccommondialog-class.md)<br/>
+[階層グラフ](../../mfc/hierarchy-chart.md)

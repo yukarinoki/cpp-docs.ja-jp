@@ -9,23 +9,23 @@ f1_keywords:
 - array/std::array::operator>=
 - array/std::array::operator==
 ms.assetid: c8f46282-f179-4909-9a01-639cb8e18c27
-ms.openlocfilehash: 3d65cd6b6b8549fd9964f6c5bb6d8b2d3c0a27b6
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 531ad2936322f90a38631a9450e0ad8a210fdd87
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79427303"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364907"
 ---
 # <a name="ltarraygt-operators"></a>&lt;array&gt; 演算子
 
-\<array > ヘッダーには、これらの**配列**非メンバー比較テンプレート関数が含まれています。
+配列\<>ヘッダーには、これらの**配列**非メンバー比較テンプレート関数が含まれます。
 
 ||||
 |-|-|-|
-|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
-|[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|
+|[演算子!=](#op_neq)|[演算子&gt;](#op_gt)|[演算子&gt;=](#op_gt_eq)|
+|[演算子&lt;](#op_lt)|[演算子&lt;=](#op_lt_eq)|[演算子==](#op_eq_eq)|
 
-## <a name="op_neq"></a>  operator!=
+## <a name="operator"></a><a name="op_neq"></a>演算子!=
 
 配列の比較 (等しくない)。
 
@@ -47,7 +47,7 @@ bool operator!=(
 *左*\
 比較する左のコンテナー。
 
-*右*\
+*そうです*\
 比較する右のコンテナー。
 
 ### <a name="remarks"></a>解説
@@ -98,7 +98,7 @@ false
 true
 ```
 
-## <a name="op_lt"></a> 演算子&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a>演算子&lt;
 
 配列の比較 (より小さい)。
 
@@ -120,12 +120,12 @@ bool operator<(
 *左*\
 比較する左のコンテナー。
 
-*右*\
+*そうです*\
 比較する右のコンテナー。
 
 ### <a name="remarks"></a>解説
 
-このテンプレート関数は、`operator<` をオーバーロードして、クラステンプレート[配列クラス](../standard-library/array-class-stl.md)の2つのオブジェクトを比較します。 `lexicographical_compare(left.begin(), left.end(), right.begin())`が返されます。
+テンプレート関数は、クラス`operator<`テンプレート[配列 Class](../standard-library/array-class-stl.md)の 2 つのオブジェクトを比較するためにオーバーロードします。 `lexicographical_compare(left.begin(), left.end(), right.begin())` が返されます。
 
 ### <a name="example"></a>例
 
@@ -171,7 +171,7 @@ false
 true
 ```
 
-## <a name="op_lt_eq"></a>  演算子&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a>演算子&lt;=
 
 配列の比較 (以下)。
 
@@ -193,7 +193,7 @@ bool operator<=(
 *左*\
 比較する左のコンテナー。
 
-*右*\
+*そうです*\
 比較する右のコンテナー。
 
 ### <a name="remarks"></a>解説
@@ -244,7 +244,7 @@ true
 false
 ```
 
-## <a name="op_eq_eq"></a>  operator==
+## <a name="operator"></a><a name="op_eq_eq"></a>演算子==
 
 配列の比較 (等しい)。
 
@@ -266,12 +266,12 @@ bool operator==(
 *左*\
 比較する左のコンテナー。
 
-*右*\
+*そうです*\
 比較する右のコンテナー。
 
 ### <a name="remarks"></a>解説
 
-このテンプレート関数は、`operator==` をオーバーロードして、クラステンプレート[配列クラス](../standard-library/array-class-stl.md)の2つのオブジェクトを比較します。 `equal(left.begin(), left.end(), right.begin())`が返されます。
+テンプレート関数は、クラス`operator==`テンプレート[配列 Class](../standard-library/array-class-stl.md)の 2 つのオブジェクトを比較するためにオーバーロードします。 `equal(left.begin(), left.end(), right.begin())` が返されます。
 
 ### <a name="example"></a>例
 
@@ -317,7 +317,7 @@ true
 false
 ```
 
-## <a name="op_gt"></a> 演算子&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a>演算子&gt;
 
 配列の比較 (より大きい)。
 
@@ -339,7 +339,7 @@ bool operator>(
 *左*\
 比較する左のコンテナー。
 
-*右*\
+*そうです*\
 比較する右のコンテナー。
 
 ### <a name="remarks"></a>解説
@@ -390,7 +390,7 @@ false
 true
 ```
 
-## <a name="op_gt_eq"></a>  演算子&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a>演算子&gt;=
 
 配列の比較 (以上)。
 
@@ -412,7 +412,7 @@ bool operator>=(
 *左*\
 比較する左のコンテナー。
 
-*右*\
+*そうです*\
 比較する右のコンテナー。
 
 ### <a name="remarks"></a>解説
@@ -463,6 +463,6 @@ true
 false
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[\<array>](../standard-library/array.md)
+[\<配列>](../standard-library/array.md)
