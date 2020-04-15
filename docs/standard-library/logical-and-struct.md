@@ -7,12 +7,12 @@ helpviewer_keywords:
 - logical_and class
 - logical_and struct
 ms.assetid: 1a375cc2-0592-4d57-a553-78009c7ad610
-ms.openlocfilehash: cc75c93d5173ceb7fa12b9722a797499b4225a53
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.openlocfilehash: 7036ebf9fed3877a395e44d8383776002b9afcae
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821617"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81351690"
 ---
 # <a name="logical_and-struct"></a>logical_and 構造体
 
@@ -20,7 +20,7 @@ ms.locfileid: "76821617"
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 template <class Type = void>
 struct logical_and : public binary_function<Type, Type, bool>
 {
@@ -39,24 +39,24 @@ struct logical_and<void>
 
 ### <a name="parameters"></a>パラメーター
 
-*型*、 *T*、 *U*\
+*タイプ*, *T*, *U*\
 指定または推論された型のオペランドを受け取る `operator&&` をサポートする任意の型。
 
 *左*\
-論理積演算の左オペランド。 非特殊テンプレートは、type*型*の左辺値参照引数を受け取ります。 特殊化されたテンプレートは、推論された型*T*の左辺値および右辺値参照引数の完全転送を行います。
+論理積演算の左オペランド。 特殊化されていないテンプレートは、*型 Type*の左辺値参照引数を受け取ります。 特殊なテンプレートは、推定型*T*の左辺値と右辺値参照引数を完全に転送します。
 
-*右*\
-論理積演算の右オペランド。 非特殊テンプレートは、type*型*の左辺値参照引数を受け取ります。 特殊化されたテンプレートは、推論された型*U*の左辺値および右辺値参照引数の完全転送を行います。
+*そうです*\
+論理積演算の右オペランド。 特殊化されていないテンプレートは、*型 Type*の左辺値参照引数を受け取ります。 特殊なテンプレートは、推定型*U*の左辺値と右辺値参照引数を完全に転送します。
 
 ## <a name="return-value"></a>戻り値
 
 `Left && Right` の結果。 特殊化されたテンプレートは、結果の完全転送を行います。結果には `operator&&` によって返された型が含まれます。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 ユーザー定義型の場合、オペランドの評価のショートサーキットはありません。 どちらの引数も `operator&&` によって評価されます。
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 ```cpp
 // functional_logical_and.cpp

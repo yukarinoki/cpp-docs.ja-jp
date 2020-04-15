@@ -7,16 +7,16 @@ helpviewer_keywords:
 - __finally keyword [C]
 - structured exception handling, try-finally
 ms.assetid: 514400c1-c322-4bf3-9e48-3047240b8a82
-ms.openlocfilehash: 82cc5ffa3f50196fc5f518b8bb5b2080ff14fd8d
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: 61a6a9edd9faaf8afb06bb7bfdc619cddde3e6fc
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151833"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81349615"
 ---
 # <a name="try-finally-statement-c"></a>try-finally ステートメント (C)
 
-**Microsoft 固有の仕様**
+**マイクロソフト固有**
 
 `try-finally` ステートメントは C 言語に対する Microsoft の拡張機能であり、コードのブロックの実行が中断されたときに、アプリケーションがクリーンアップ コードの実行を保証できるようにします。 クリーンアップは、メモリを解放する、ファイルを閉じる、ファイル ハンドルを解放するなどのタスクで構成されます。 `try-finally` ステートメントは、ルーチンからの不完全な戻りが発生する可能性のあるエラーを複数の場所でチェックするルーチンに特に便利です。
 
@@ -41,14 +41,14 @@ ms.locfileid: "56151833"
 終了ハンドラーは、`try-finally` ステートメントの実行中にプロセスが中止された場合は呼び出されません。
 
 > [!NOTE]
->  構造化例外処理は、C および C++ のソース ファイルに機能します。 ただし、特に C++ 用にデザインされたものではありません。 C++ 例外処理を使用して、コードの移植性を高めることができます。 また、C++ 例外処理メカニズムは、任意の型の例外を処理できるという点で、より柔軟です。
+> 構造化例外処理は、C および C++ のソース ファイルに機能します。 ただし、特に C++ 用にデザインされたものではありません。 C++ 例外処理を使用して、コードの移植性を高めることができます。 また、C++ 例外処理メカニズムは、任意の型の例外を処理できるという点で、より柔軟です。
 
 > [!NOTE]
->  C++ プログラムでは、構造化例外処理ではなく、C++ 例外処理を使用する必要があります。 詳細については、『*C++ 言語リファレンス*』の「[例外処理](../cpp/exception-handling-in-visual-cpp.md)」を参照してください。
+> C++ プログラムでは、構造化例外処理ではなく、C++ 例外処理を使用する必要があります。 詳細については、『*C++ 言語リファレンス*』の「[例外処理](../cpp/exception-handling-in-visual-cpp.md)」を参照してください。
 
 [try-except ステートメント](../c-language/try-except-statement-c.md)の動作を確認するには、`try-finally` の例をご覧ください。
 
-**Microsoft 固有の仕様はここまで**
+**エンド マイクロソフト 固有**
 
 ## <a name="see-also"></a>関連項目
 

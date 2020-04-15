@@ -1,10 +1,11 @@
 ---
 title: acos、acosf、acosl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - acosf
 - acos
 - acosl
+- _o_acos
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +36,12 @@ helpviewer_keywords:
 - trigonometric functions
 - arccosine function
 ms.assetid: 00b89c48-8faf-4824-aa95-fa4349a4975d
-ms.openlocfilehash: 4933e4b3757161621676133ea8b9725ce140e80c
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 4dd467ab807875dcf4236e4fbb744c77ec47880d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171295"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81348970"
 ---
 # <a name="acos-acosf-acosl"></a>acos、acosf、acosl
 
@@ -60,30 +62,32 @@ long double acos( long double x );   // C++ only
 
 ### <a name="parameters"></a>パラメーター
 
-*x*<br/>
-アークコサイン (逆余弦) を計算する-1 ~ 1 の範囲の値。
+*X*<br/>
+アークコサイン (逆コサイン) を計算する -1 ~ 1 の間の値。
 
 ## <a name="return-value"></a>戻り値
 
-**Acos**関数は、0 ~ πラジアンの範囲の*x*のアークコサインを返します。
+**acos**関数は、0 から π ラジアンの範囲内の*x*のアークコサインを戻します。
 
-既定では、 *x*が-1 より小さいか、または1より大きい場合、 **acos**は不定を返します。
+デフォルトでは *、x*が -1 より小さいか 1 より大きい場合 **、acos は**無期限を返します。
 
 |入力|SEH 例外|Matherr 例外|
 |-----------|-------------------|-----------------------|
 |± ∞|INVALID|_DOMAIN|
-|± QNAN、IND|なし|_DOMAIN|
+|± QNAN、IND|none|_DOMAIN|
 |&#124;x&#124;>1|INVALID|_DOMAIN|
 
 ## <a name="remarks"></a>解説
 
-でC++はオーバーロードが可能であるため、**浮動小数点**型および**long** **double**型を受け取って返す**acos**のオーバーロードを呼び出すことができます。 C プログラムでは、 **acos**は常に**倍精度浮動小数点数**を取得して返します。
+C++ ではオーバーロードが可能なため **、float**型と**long** **double**型を取得して返す**acos**のオーバーロードを呼び出すことができます。 C プログラムでは **、acos は**常に二**重**を取り、返します。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|省略可能なヘッダー|
+|ルーチン|必須ヘッダー|省略可能なヘッダー|
 |-------------|---------------------|----------------------|
-|**acos**、 **acosf**、 **acosl**|\<math.h>|\<errno.h>|
+|**アコス**,**アコスフ**,**アコスル**|\<math.h>|\<errno.h>|
 
 ## <a name="example"></a>例
 
@@ -135,7 +139,7 @@ Arcsine of 0.000000 = 0.000000
 Arccosine of 0.000000 = 1.570796
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [浮動小数点サポート](../../c-runtime-library/floating-point-support.md)<br/>
 [asin、asinf、asinl](asin-asinf-asinl.md)<br/>

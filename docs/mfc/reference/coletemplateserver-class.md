@@ -14,12 +14,12 @@ helpviewer_keywords:
 - COleTemplateServer [MFC], Unregister
 - COleTemplateServer [MFC], UpdateRegistry
 ms.assetid: 47a2887d-8162-4993-a842-a784177c7f5c
-ms.openlocfilehash: 4a1997497f3bddb405b712b5534f76e577dabfa8
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: ddd7a8ce70fe49e66e1175e413418fd59a89c917
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69503092"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374850"
 ---
 # <a name="coletemplateserver-class"></a>COleTemplateServer クラス
 
@@ -37,23 +37,23 @@ class COleTemplateServer : public COleObjectFactory
 
 |名前|説明|
 |----------|-----------------|
-|[COleTemplateServer:: COleTemplateServer](#coletemplateserver)|`COleTemplateServer` オブジェクトを構築します。|
+|[サーバーを使用します。](#coletemplateserver)|`COleTemplateServer` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[COleTemplateServer:: ConnectTemplate](#connecttemplate)|ドキュメントテンプレートを基になる`COleObjectFactory`オブジェクトに接続します。|
-|[COleTemplateServer:: 登録解除](#unregister)|関連付けられたドキュメントテンプレートの登録を解除します。|
-|[COleTemplateServer:: UpdateRegistry](#updateregistry)|ドキュメントの種類を OLE システムレジストリに登録します。|
+|[を使用します。](#connecttemplate)|基になる`COleObjectFactory`オブジェクトにドキュメント テンプレートを接続します。|
+|[を使用します。](#unregister)|関連付けられたドキュメント テンプレートの登録を解除します。|
+|[を使用します。](#updateregistry)|OLE システム レジストリにドキュメントの種類を登録します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-このクラスは、クラス[COleObjectFactory](../../mfc/reference/coleobjectfactory-class.md)から派生します。通常は、独自の`COleTemplateServer`クラスを派生するのではなく、直接を使用できます。 `COleTemplateServer`は、 [CDocTemplate](../../mfc/reference/cdoctemplate-class.md)オブジェクトを使用してサーバードキュメントを管理します。 完全`COleTemplateServer`なサーバー (スタンドアロンアプリケーションとして実行できるサーバー) を実装する場合は、を使用します。 フルサーバーは通常、マルチドキュメントインターフェイス (MDI) アプリケーションですが、シングルドキュメントインターフェイス (SDI) アプリケーションはサポートされています。 アプリケーション`COleTemplateServer`でサポートされているサーバードキュメントの種類ごとに1つのオブジェクトが必要です。つまり、サーバーアプリケーションでワークシートとグラフの`COleTemplateServer`両方がサポートされている場合は、2つのオブジェクトが必要です。
+このクラスは、クラス[から](../../mfc/reference/coleobjectfactory-class.md)派生します。通常は、独自の`COleTemplateServer`クラスを派生させるのではなく、直接使用できます。 `COleTemplateServer`は、サーバードキュメントを管理するために[CDocTemplate](../../mfc/reference/cdoctemplate-class.md)オブジェクトを使用します。 完全`COleTemplateServer`なサーバー、つまりスタンドアロン アプリケーションとして実行できるサーバーを実装する場合に使用します。 通常、フル サーバーはマルチ ドキュメント インターフェイス (MDI) アプリケーションですが、単一のドキュメント インターフェイス (SDI) アプリケーションがサポートされています。 アプリケーション`COleTemplateServer`がサポートするサーバー ドキュメントの種類ごとに 1 つのオブジェクトが必要です。つまり、サーバー アプリケーションがワークシートとグラフの両方をサポートしている場合は、2`COleTemplateServer`つのオブジェクトが必要です。
 
-`COleTemplateServer`によっ`OnCreateInstance` `COleObjectFactory`て定義されたメンバー関数をオーバーライドします。 このメンバー関数は、適切な型のオブジェクトをC++作成するためにフレームワークによって呼び出されます。
+`COleTemplateServer`によって定義された`OnCreateInstance`メンバー関数がオーバーライド`COleObjectFactory`されます。 このメンバー関数は、適切な型の C++ オブジェクトを作成するために、フレームワークによって呼び出されます。
 
-サーバーの詳細については、「 [サーバー:サーバー](../../mfc/servers-implementing-a-server.md)の実装。
+サーバーの詳細については、「[サーバー : サーバーの実装](../../mfc/servers-implementing-a-server.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -69,7 +69,7 @@ class COleTemplateServer : public COleObjectFactory
 
 **ヘッダー :** afxdisp.h
 
-##  <a name="coletemplateserver"></a>COleTemplateServer:: COleTemplateServer
+## <a name="coletemplateservercoletemplateserver"></a><a name="coletemplateserver"></a>サーバーを使用します。
 
 `COleTemplateServer` オブジェクトを構築します。
 
@@ -77,13 +77,13 @@ class COleTemplateServer : public COleObjectFactory
 COleTemplateServer();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`COleTemplateServer`クラスの使用方法の簡単な説明については、「 [COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md)クラスの概要」を参照してください。
+クラスの使用方法の簡単な説明については、クラスの概要を参照してください。 [COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md) `COleTemplateServer`
 
-##  <a name="connecttemplate"></a>COleTemplateServer:: ConnectTemplate
+## <a name="coletemplateserverconnecttemplate"></a><a name="connecttemplate"></a>を使用します。
 
-*PDocTemplate*が指すドキュメントテンプレートを、基になる[COleObjectFactory](../../mfc/reference/coleobjectfactory-class.md)オブジェクトに接続します。
+*参照*先のドキュメント テンプレートを基になる[オブジェクト](../../mfc/reference/coleobjectfactory-class.md)に接続します。
 
 ```
 void ConnectTemplate(
@@ -94,22 +94,22 @@ void ConnectTemplate(
 
 ### <a name="parameters"></a>パラメーター
 
-*clsid*<br/>
+*Clsid*<br/>
 テンプレートが要求する OLE クラス ID への参照。
 
-*pDocTemplate*<br/>
-ドキュメントテンプレートへのポインター。
+*テンプレート*<br/>
+ドキュメント テンプレートへのポインター。
 
-*渡し*<br/>
+*を使用します。*<br/>
 アプリケーションの単一のインスタンスが複数のインスタンス化をサポートできるかどうかを示します。 TRUE の場合、オブジェクトを作成する要求ごとに、アプリケーションの複数のインスタンスが起動されます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-詳細については、Windows SDK の「 [CLSID キー](/windows/win32/com/clsid-key-hklm) 」を参照してください。
+詳細については、Windows SDK[の CLSID キー](/windows/win32/com/clsid-key-hklm)を参照してください。
 
-##  <a name="unregister"></a>COleTemplateServer:: 登録解除
+## <a name="coletemplateserverunregister"></a><a name="unregister"></a>を使用します。
 
-関連付けられたドキュメントテンプレートの登録を解除します。
+関連付けられたドキュメント テンプレートの登録を解除します。
 
 ```
 BOOL Unregister();
@@ -119,13 +119,13 @@ BOOL Unregister();
 
 成功した場合は TRUE、それ以外の場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-EnterRemarks
+注釈を入力します。
 
-##  <a name="updateregistry"></a>COleTemplateServer:: UpdateRegistry
+## <a name="coletemplateserverupdateregistry"></a><a name="updateregistry"></a>を使用します。
 
-ドキュメントテンプレート文字列からファイル型情報を読み込み、その情報を OLE システムレジストリに配置します。
+ドキュメント テンプレート文字列からファイルの種類の情報を読み込み、その情報を OLE システム レジストリに格納します。
 
 ```
 void UpdateRegistry(
@@ -137,42 +137,42 @@ void UpdateRegistry(
 
 ### <a name="parameters"></a>パラメーター
 
-*nAppType*<br/>
-AFXDISP.H で定義されている OLE_APPTYPE 列挙子の値。始め. 次のいずれかの値を指定できます。
+*アプリの種類*<br/>
+AFXDISP で定義されているOLE_APPTYPE列挙体の値。H。 次のいずれかの値を指定できます。
 
-- OAT_INPLACE_SERVER サーバーには、サーバーの完全なユーザーインターフェイスがあります。
+- OAT_INPLACE_SERVER サーバーには、サーバーのユーザー インターフェイスが完全に含まれています。
 
-- OAT_SERVER Server では、埋め込みのみがサポートされます。
+- OAT_SERVER サーバーは埋め込みのみをサポートしています。
 
-- OAT_CONTAINER コンテナーは、埋め込みオブジェクトへのリンクをサポートしています。
+- OAT_CONTAINERコンテナは埋め込みオブジェクトへのリンクをサポートします。
 
-- OAT_DISPATCH_OBJECT オブジェクトは`IDispatch`対応しています。
+- OAT_DISPATCH_OBJECT オブジェクト`IDispatch`は -対応です。
 
-- OAT_DOC_OBJECT_SERVER サーバーでは、埋め込みとドキュメントオブジェクトコンポーネントモデルの両方がサポートされています。
+- OAT_DOC_OBJECT_SERVER サーバーは、埋め込みとドキュメント オブジェクト コンポーネント モデルの両方をサポートします。
 
-*rglpszRegister*<br/>
-エントリが存在しない場合にのみ、レジストリに書き込まれるエントリの一覧。
+*ルグルプスレジスタ*<br/>
+エントリが存在しない場合にのみレジストリに書き込まれるエントリの一覧。
 
-*rglpszOverwrite*<br/>
-前のエントリが存在するかどうかに関係なく、レジストリに書き込まれるエントリの一覧。
+*上書き*<br/>
+先行するエントリが存在するかどうかに関係なく、レジストリに書き込まれるエントリの一覧。
 
-*bRegister*<br/>
-クラスを登録するかどうかを決定します。 *Bregister*が TRUE の場合、クラスはシステムレジストリに登録されます。 それ以外の場合は、クラスの登録を解除します。
+*b登録*<br/>
+クラスを登録するかどうかを決定します。 *bRegister*が TRUE の場合、クラスはシステム レジストリに登録されます。 それ以外の場合は、クラスの登録を解除します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-登録情報は、 [CDocTemplate:: GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring)を呼び出すことによって読み込まれます。 取得される部分文字列`regFileTypeId`は、 `GetDocString`リファレンスページで`regFileTypeName`説明さ`fileNewName`れているように、インデックス、、およびによって識別されます。
+登録情報は、[呼](../../mfc/reference/cdoctemplate-class.md#getdocstring)び出しによって読み込まれます。 取得される部分文字列は、参照ページで`regFileTypeId`説明されているように、 `regFileTypeName`、 `fileNewName`、 、 によって`GetDocString`識別される部分文字列です。
 
-部分文字列が空の場合、またはの`GetDocString`呼び出しがその他の理由で失敗した場合、この関数は失敗し、ファイル情報はレジストリに入力されません。 `regFileTypeId`
+部分文字列`regFileTypeId`が空の場合、または呼び出`GetDocString`しが失敗した場合、この関数は失敗し、ファイル情報はレジストリに入力されません。
 
-引数*Rglpszregister*および*Rglpszregister*の情報は、 [AfxOleRegisterServerClass](application-control.md#afxoleregisterserverclass)を呼び出すことによってレジストリに書き込まれます。 既定の情報は、2つの引数が NULL の場合に登録され、ほとんどのアプリケーションに適しています。 これらの引数の情報の構造については、「 `AfxOleRegisterServerClass`」を参照してください。
+引数*rglpszRegister および rglpszOverwrite*の情報は[、AfxOleRegisterServerClass](application-control.md#afxoleregisterserverclass)への呼び出しを通じてレジストリに書き込まれます。 *rglpszOverwrite* 2 つの引数が NULL の場合に登録されるデフォルト情報は、ほとんどのアプリケーションに適しています。 これらの引数の情報の構造については、を参照してください`AfxOleRegisterServerClass`。
 
 詳細については、「 [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[MFC サンプル HIERSVR](../../overview/visual-cpp-samples.md)<br/>
+[MFC サンプル ヒエルスヴル](../../overview/visual-cpp-samples.md)<br/>
 [COleObjectFactory クラス](../../mfc/reference/coleobjectfactory-class.md)<br/>
-[階層図](../../mfc/hierarchy-chart.md)<br/>
+[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
 [COleServerDoc クラス](../../mfc/reference/coleserverdoc-class.md)<br/>
 [COleServerItem クラス](../../mfc/reference/coleserveritem-class.md)
