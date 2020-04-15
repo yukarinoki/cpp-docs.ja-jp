@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - __assume keyword [C++]
 ms.assetid: d8565123-b132-44b1-8235-5a8c8bff85a7
-ms.openlocfilehash: f3f847b5268605bdc5df90a8bbc6a88c78431864
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 06189405703a7cc34f3bd807ec79612394ee899f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70216966"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368197"
 ---
 # <a name="__assume"></a>__assume
 
-**Microsoft 固有の仕様**
+**マイクロソフト固有**
 
 オプティマイザーにヒントを渡します。
 
@@ -31,31 +31,31 @@ __assume(
 
 ### <a name="parameters"></a>パラメーター
 
-*条件*\
+*式*\
 評価が true になると想定される式。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 オプティマイザーでは、`expression` で表される条件は、このキーワードが指定された時点で true であり、`expression` が変更されるまで (変数への代入などにより) true のままであると想定します。 `__assume` がオプティマイザーに渡すヒントを選択的に使用することで、より優れた最適化を行うことができます。
 
 `__assume` ステートメントが否定 (常に false に評価される式) として記述された場合は、常に `__assume(0)` として処理されます。 コードが期待どおりに動作しない場合は、前述のとおり、定義した `expression` が有効かつ true であることを確認してください。 想定される `__assume(0)` の動作の詳細については、以降の解説を参照してください。
 
 > [!WARNING]
->  プログラムの到達可能なパスには、無効な `__assume` ステートメントを含めないでください。 コンパイラが無効な `__assume` ステートメントに到達することがあると、予測できない、悪影響のある動作がプログラムで発生するおそれがあります。
+> プログラムの到達可能なパスには、無効な `__assume` ステートメントを含めないでください。 コンパイラが無効な `__assume` ステートメントに到達することがあると、予測できない、悪影響のある動作がプログラムで発生するおそれがあります。
 
 `__assume` は正規の組み込みではありません。 これは関数として宣言する必要がなく、また `#pragma intrinsic` ディレクティブ内では使用できません。 コードは生成されませんが、オプティマイザーが生成するコードには影響を与えます。
 
-アサート`__assume`が復旧できない場合にのみ、[アサート](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)でを使用します。 コンパイラがエラー処理コードを最適化する場合があるため、後続のエラー回復コードを含むアサートに `__assume` を使用しないでください。
+`__assume`[アサート](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)が回復できない場合にのみ、ASSERT で使用します。 コンパイラがエラー処理コードを最適化する場合があるため、後続のエラー回復コードを含むアサートに `__assume` を使用しないでください。
 
 `__assume(0)` このステートメントは特殊なケースです。 到達できないコード パスを示すために `__assume(0)` を使用します。 次の例では、switch ステートメントの default ケースに到達できないことを示すために `__assume(0)` を使用します。 これは、`__assume(0)` の最も一般的な使用方法です。
 
-以前のバージョンとの互換性を維持するために、 [ \(コンパイラオプションである [言語拡張機能を無効にする](../build/reference/za-ze-disable-language-extensions.md)] が指定されていない場合は、__assume のシノニムであると仮定します。
+以前のバージョンとの互換性を保つために **、_assume**コンパイラオプション[/Za\(無効化言語拡張) が](../build/reference/za-ze-disable-language-extensions.md)指定されていない限り **、__assume**の同義語です。
 
 ## <a name="requirements"></a>必要条件
 
-|組み込み|アーキテクチャ|
+|Intrinsic|Architecture|
 |---------------|------------------|
-|`__assume`|x86、ARM、x64、ARM64|
+|`__assume`|x86, アーム, x64, ARM64|
 
 ## <a name="example"></a>例
 
@@ -114,9 +114,9 @@ int main(int p)
       NODEFAULT;
 ```
 
-**Microsoft 固有の仕様はここまで**
+**エンド マイクロソフト 固有**
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)\
-[キーワード](../cpp/keywords-cpp.md)
+[コンパイラ組み込み](../intrinsics/compiler-intrinsics.md)\
+[Keywords](../cpp/keywords-cpp.md)

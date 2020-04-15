@@ -10,22 +10,22 @@ helpviewer_keywords:
 - std::array [C++], get
 - std::get [C++]
 - std::swap [C++]
-ms.openlocfilehash: 61b5404d0f22cd902e35f6bee680df3c719804f2
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: d54e430853959c77b4042092409a8640a169e4c8
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79424069"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364940"
 ---
 # <a name="ltarraygt-functions"></a>&lt;array&gt; 関数
 
-\<array > ヘッダーには、**配列**オブジェクトを操作する、`get` と `swap`の2つの非メンバー関数が含まれています。
+配列\<>ヘッダーには、2 つの非メンバー関数`get`と`swap`**、配列**オブジェクトを操作する が含まれます。
 
 |||
 |-|-|
 |[get](#get)|[スワップ](#swap)|
 
-## <a name="get"></a>  get
+## <a name="get"></a><a name="get"></a>取得
 
 配列の指定した要素への参照を返します。
 
@@ -42,7 +42,7 @@ constexpr T&& get(array<T, N>&& arr) noexcept;
 
 ### <a name="parameters"></a>パラメーター
 
-*[インデックス]* \
+*インデックス*\
 要素のオフセット。
 
 *T*\
@@ -51,7 +51,7 @@ constexpr T&& get(array<T, N>&& arr) noexcept;
 *N*\
 配列の要素数。
 
-*arr*\
+*Arr*\
 選択する配列。
 
 ### <a name="example"></a>例
@@ -86,9 +86,9 @@ int main()
 1 3
 ```
 
-## <a name="swap"></a>  swap
+## <a name="swap"></a><a name="swap"></a>スワップ
 
-2つの**配列**オブジェクトを交換する `std::swap` の非メンバーテンプレートの特殊化。
+非メンバー・テンプレート特殊`std::swap`化は、2 つの**配列**オブジェクトを入れ替えます。
 
 ```cpp
 template <class Ty, std::size_t N>
@@ -106,7 +106,7 @@ void swap(array<Ty, N>& left, array<Ty, N>& right);
 *左*\
 交換する最初の配列。
 
-*右*\
+*そうです*\
 交換する 2 番目の配列。
 
 ### <a name="remarks"></a>解説
@@ -159,6 +159,6 @@ int main()
 0 1 2 3
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[\<array>](../standard-library/array.md)
+[\<配列>](../standard-library/array.md)

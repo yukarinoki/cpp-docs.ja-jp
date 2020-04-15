@@ -50,16 +50,16 @@ helpviewer_keywords:
 - CMFCRibbonStatusBar [MFC], SetInformation
 - CMFCRibbonStatusBar [MFC], OnDrawInformation
 ms.assetid: 921eb57f-3b40-49fa-a38c-3f2fb6dc2893
-ms.openlocfilehash: b927012f241c30b1beec23ff7e0bbc9e8302d8da
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f76c2014cd3f6ed6e479fb66436224e675c69569
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62296606"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368818"
 ---
 # <a name="cmfcribbonstatusbar-class"></a>CMFCRibbonStatusBar クラス
 
-`CMFCRibbonStatusBar`クラスは、リボン要素を表示できるステータス バー コントロールを実装します。
+この`CMFCRibbonStatusBar`クラスは、リボン要素を表示できるステータス バー コントロールを実装します。
 
 ## <a name="syntax"></a>構文
 
@@ -73,45 +73,45 @@ class CMFCRibbonStatusBar : public CMFCRibbonBar
 
 |名前|説明|
 |----------|-----------------|
-|[CMFCRibbonStatusBar::AddDynamicElement](#adddynamicelement)|リボン ステータス バーには、動的な要素を追加します。|
-|[CMFCRibbonStatusBar::AddElement](#addelement)|リボン ステータス バーに新しいリボン要素を追加します。|
-|[CMFCRibbonStatusBar::AddExtendedElement](#addextendedelement)|リボン ステータス バーの拡張領域には、リボン要素を追加します。|
-|[CMFCRibbonStatusBar::AddSeparator](#addseparator)|リボン ステータス バーに、区切り記号を追加します。|
-|[CMFCRibbonStatusBar::Create](#create)|リボン ステータス バーを作成します。|
-|[CMFCRibbonStatusBar::CreateEx](#createex)|拡張スタイルを持つリボン ステータス バーを作成します。|
-|[CMFCRibbonStatusBar::FindByID](#findbyid)||
-|[CMFCRibbonStatusBar::FindElement](#findelement)|指定したコマンド ID を持つ要素へのポインターを返します|
-|[CMFCRibbonStatusBar::GetCount](#getcount)|リボン ステータス バーの主な領域に配置されている要素の数を返します。|
-|[CMFCRibbonStatusBar::GetElement](#getelement)|指定したインデックス位置にある要素へのポインターを返します。|
-|[CMFCRibbonStatusBar::GetExCount](#getexcount)|リボン ステータス バーの拡張領域内にある要素の数を返します。|
-|[CMFCRibbonStatusBar::GetExElement](#getexelement)|リボン ステータス バーの拡張領域内の指定されたインデックスにある要素へのポインターを返します。|
-|[CMFCRibbonStatusBar::GetExtendedArea](#getextendedarea)||
-|[CMFCRibbonStatusBar::GetSpace](#getspace)||
-|[CMFCRibbonStatusBar::IsBottomFrame](#isbottomframe)||
-|[CMFCRibbonStatusBar::IsExtendedElement](#isextendedelement)||
-|[CMFCRibbonStatusBar::IsInformationMode](#isinformationmode)|リボン ステータス バーの情報のモードが有効になっているかどうかを判断します。|
-|[CMFCRibbonStatusBar::RecalcLayout](#recalclayout)|(上書き[CMFCRibbonBar::RecalcLayout](../../mfc/reference/cmfcribbonbar-class.md#recalclayout))。|
-|[CMFCRibbonStatusBar::RemoveAll](#removeall)|リボン ステータス バーからすべての要素を削除します。|
-|[CMFCRibbonStatusBar::RemoveElement](#removeelement)|リボン ステータス バーから、指定したコマンド ID を持つ要素を削除します。|
-|[CMFCRibbonStatusBar::SetInformation](#setinformation)|有効またはリボン ステータス バーの情報モードを無効にします。|
+|[ステータスバー::ダイナミックエレメントの追加](#adddynamicelement)|リボン ステータス バーに動的要素を追加します。|
+|[ステータスバー::要素の追加](#addelement)|リボン ステータス バーに新しいリボン要素を追加します。|
+|[状態バー::拡張要素の追加](#addextendedelement)|リボン ステータス バーの拡張領域にリボン要素を追加します。|
+|[ステータスバー::セパレータの追加](#addseparator)|リボンステータス バーに区切り記号を追加します。|
+|[ステータスバー::作成](#create)|リボン ステータス バーを作成します。|
+|[ステータスバー::作成します。](#createex)|拡張スタイルを持つリボン ステータス バーを作成します。|
+|[ステータスバーを検索します。](#findbyid)||
+|[ステータスバー::要素を検索します。](#findelement)|指定したコマンド ID を持つ要素へのポインターを返します。|
+|[ステータスバーを取得します。](#getcount)|リボン ステータス バーのメイン領域にある要素の数を返します。|
+|[ステータスバー::取得要素](#getelement)|指定したインデックス位置にある要素へのポインターを返します。|
+|[ステータスバー::取得します。](#getexcount)|リボン ステータス バーの拡張領域にある要素の数を返します。|
+|[ステータスバー::要素](#getexelement)|リボン ステータス バーの拡張領域内の指定されたインデックスにある要素へのポインターを返します。|
+|[状態バー::拡張エリア](#getextendedarea)||
+|[ステータスバーを取得します。](#getspace)||
+|[ステータスバー::Isボトムフレーム](#isbottomframe)||
+|[ステータス バー::拡張要素](#isextendedelement)||
+|[ステータス バー::情報モード](#isinformationmode)|リボン ステータス バーの情報モードを有効にするかどうかを指定します。|
+|[ステータスバー::再計算レイアウト](#recalclayout)|[(CMFCリボンバーをオーバーライドします::再計算レイアウト](../../mfc/reference/cmfcribbonbar-class.md#recalclayout).)|
+|[ステータスバー::すべて削除](#removeall)|リボン ステータス バーからすべての要素を削除します。|
+|[ステータスバー::要素の削除](#removeelement)|リボン ステータス バーから、指定したコマンド ID を持つ要素を削除します。|
+|[ステータスバー::セット情報](#setinformation)|リボン ステータス バーの情報モードを有効または無効にします。|
 
 ### <a name="protected-methods"></a>プロテクト メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CMFCRibbonStatusBar::OnDrawInformation](#ondrawinformation)|リボン ステータス バー情報モードが有効な場合に表示される情報の文字列が表示されます。|
+|[ステータスバー::オンドロー情報](#ondrawinformation)|情報モードが有効な場合に、リボン ステータス バーに表示される情報文字列を表示します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-ユーザーは、リボン ステータス バーの組み込みのコンテキスト メニューを使用して、リボン ステータス バーにあるリボン要素の可視性を変更できます。 追加したり、動的に要素を削除することができます。
+リボン ステータス バーの組み込みコンテキスト メニューを使用して、リボン ステータス バーのリボン要素の表示を変更できます。 要素を動的に追加または削除できます。
 
-リボン ステータス バーが 2 つの領域。 主要な領域と拡張領域。 拡張領域は、リボン ステータス バーの右側に表示され、主な領域よりも、異なる色で表示されます。
+リボン ステータス バーには、メイン領域と拡張領域の 2 つの領域があります。 拡張領域は、リボン ステータス バーの右側に表示され、メイン領域とは異なる色で表示されます。
 
-通常、ステータス バーの主な領域には、状態の通知が表示されます。 し、拡張領域がビュー コントロールを表示します。 拡張領域は、表示可能な限り、ユーザーがリボン ステータス バーをサイズ変更時にします。
+通常、ステータス バーのメイン領域にはステータス通知が表示され、拡張領域にはビュー コントロールが表示されます。 ユーザーがリボン ステータス バーのサイズを変更しても、拡張領域は可能な限り長く表示されます。
 
 ## <a name="example"></a>例
 
-`CMFCRibbonStatusBar` クラスのさまざまなメソッドの使用方法を次の例に示します。 、区切り記号を追加する例では、リボン ステータス バーに新しいリボン要素を追加、リボン ステータス バーの拡張領域にリボン要素を追加する方法を示していて、リボン ステータス バーの通常モードを有効にします。
+`CMFCRibbonStatusBar` クラスのさまざまなメソッドの使用方法を次の例に示します。 この例では、リボン ステータス バーに新しいリボン要素を追加し、リボン ステータス バーの拡張領域にリボン要素を追加し、区分線を追加し、リボン ステータス バーの通常モードを有効にする方法を示します。
 
 [!code-cpp[NVC_MFC_RibbonApp#15](../../mfc/reference/codesnippet/cpp/cmfcribbonstatusbar-class_1.cpp)]
 [!code-cpp[NVC_MFC_RibbonApp#16](../../mfc/reference/codesnippet/cpp/cmfcribbonstatusbar-class_2.cpp)]
@@ -134,11 +134,11 @@ class CMFCRibbonStatusBar : public CMFCRibbonBar
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** afxribbonstatusbar.h
+**ヘッダー:** afxribbon ステータスバー.h
 
-##  <a name="adddynamicelement"></a>  CMFCRibbonStatusBar::AddDynamicElement
+## <a name="cmfcribbonstatusbaradddynamicelement"></a><a name="adddynamicelement"></a>ステータスバー::ダイナミックエレメントの追加
 
-リボン ステータス バーには、動的な要素を追加します。
+リボン ステータス バーに動的要素を追加します。
 
 ```
 void AddDynamicElement(CMFCRibbonBaseElement* pElement);
@@ -146,14 +146,14 @@ void AddDynamicElement(CMFCRibbonBaseElement* pElement);
 
 ### <a name="parameters"></a>パラメーター
 
-*pElement*<br/>
-[in]動的な要素へのポインター。
+*要素*<br/>
+[in]動的要素へのポインター。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-正規表現の要素とは異なり、動的な要素はカスタマイズできず、ステータス バーの [カスタマイズ] メニューは表示されません。
+通常の要素とは異なり、動的要素はカスタマイズ可能ではなく、ステータス バーのカスタマイズ メニューには表示されません。
 
-##  <a name="addelement"></a>  CMFCRibbonStatusBar::AddElement
+## <a name="cmfcribbonstatusbaraddelement"></a><a name="addelement"></a>ステータスバー::要素の追加
 
 リボン ステータス バーに新しいリボン要素を追加します。
 
@@ -166,18 +166,18 @@ void AddElement(
 
 ### <a name="parameters"></a>パラメーター
 
-*pElement*<br/>
+*要素*<br/>
 [in]追加された要素へのポインター。
 
-*lpszLabel*<br/>
+*ラベル*<br/>
 [in]要素のテキスト ラベル。
 
-*bIsVisible*<br/>
-[in]非表示として、要素を追加する場合に表示、として要素を FALSE 追加する場合は TRUE。
+*ビズブル*<br/>
+[in]表示可能な要素を追加する場合は TRUE、非表示として要素を追加する場合は FALSE。
 
-##  <a name="addextendedelement"></a>  CMFCRibbonStatusBar::AddExtendedElement
+## <a name="cmfcribbonstatusbaraddextendedelement"></a><a name="addextendedelement"></a>状態バー::拡張要素の追加
 
-リボン ステータス バーの拡張領域には、リボン要素を追加します。
+リボン ステータス バーの拡張領域にリボン要素を追加します。
 
 ```
 void AddExtendedElement(
@@ -188,32 +188,32 @@ void AddExtendedElement(
 
 ### <a name="parameters"></a>パラメーター
 
-*pElement*<br/>
+*要素*<br/>
 [in]追加された要素へのポインター。
 
-*lpszLabel*<br/>
+*ラベル*<br/>
 [in]要素のテキスト ラベル。
 
-*bIsVisible*<br/>
-[in]非表示として、要素を追加する場合に表示、として要素を FALSE 追加する場合は TRUE。
+*ビズブル*<br/>
+[in]表示可能な要素を追加する場合は TRUE、非表示として要素を追加する場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 拡張領域は、ステータス バー コントロールの右側にあります。
 
-##  <a name="addseparator"></a>  CMFCRibbonStatusBar::AddSeparator
+## <a name="cmfcribbonstatusbaraddseparator"></a><a name="addseparator"></a>ステータスバー::セパレータの追加
 
-リボン ステータス バーに、区切り記号を追加します。
+リボンステータス バーに区切り記号を追加します。
 
 ```
 void AddSeparator();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-フレームワークでは、区切り記号を追加、メソッドの後[CMFCRibbonStatusBar::AddElement](#addelement)します。 最後の要素を挿入します。
+フレームワークは、メソッド[CMFCRibbon ステータスバー::AddElement](#addelement)の後に区切り記号を追加します。 最後の要素を挿入します。
 
-##  <a name="create"></a>  CMFCRibbonStatusBar::Create
+## <a name="cmfcribbonstatusbarcreate"></a><a name="create"></a>ステータスバー::作成
 
 リボン ステータス バーを作成します。
 
@@ -229,19 +229,19 @@ BOOL Create(
 *pParentWnd*<br/>
 [in]親ウィンドウへのポインター。
 
-*dwStyle*<br/>
-[in]コントロールのスタイルの論理 OR の組み合わせ。
+*Dwstyle*<br/>
+[in]コントロール スタイルの論理 OR の組み合わせ。
 
 *nID*<br/>
 [in]ステータス バーのコントロール ID。
 
 ### <a name="return-value"></a>戻り値
 
-TRUE の場合、ステータス バーが正常に作成、FALSE それ以外の場合。
+ステータス バーが正常に作成された場合は TRUE、それ以外の場合は FALSE。
 
-##  <a name="createex"></a>  CMFCRibbonStatusBar::CreateEx
+## <a name="cmfcribbonstatusbarcreateex"></a><a name="createex"></a>ステータスバー::作成します。
 
-拡張スタイルを含むリボン ステータス バーを作成します。
+拡張スタイルを持つリボン ステータス バーを作成します。
 
 ```
 BOOL CreateEx(
@@ -256,22 +256,22 @@ BOOL CreateEx(
 *pParentWnd*<br/>
 親ウィンドウへのポインター。
 
-*dwCtrlStyle*<br/>
-ステータス バーのオブジェクトを作成するための追加のスタイルの論理 OR の組み合わせ。
+*スタイル*<br/>
+ステータス バー オブジェクトを作成するための追加のスタイルの論理 OR の組み合わせ。
 
-*dwStyle*<br/>
-ステータス バーのコントロールのスタイル。
+*Dwstyle*<br/>
+ステータス バーのコントロール スタイル。
 
 *nID*<br/>
 ステータス バーのコントロール ID。
 
 ### <a name="return-value"></a>戻り値
 
-TRUE の場合、ステータス バーが正常に作成、FALSE それ以外の場合。
+ステータス バーが正常に作成された場合は TRUE、それ以外の場合は FALSE。
 
-##  <a name="findbyid"></a>  CMFCRibbonStatusBar::FindByID
+## <a name="cmfcribbonstatusbarfindbyid"></a><a name="findbyid"></a>ステータスバーを検索します。
 
-詳細についてにあるソース コードを参照してください、 **VC\\atlmfc\\src\\mfc** Visual Studio のインストールのフォルダー。
+詳細については、Visual Studio のインストールの**\\VC\\atlmfc\\src mfc**フォルダーにあるソース コードを参照してください。
 
 ```
 CMFCRibbonBaseElement* FindByID(UINT uiCmdID, BOOL = TRUE);
@@ -279,16 +279,16 @@ CMFCRibbonBaseElement* FindByID(UINT uiCmdID, BOOL = TRUE);
 
 ### <a name="parameters"></a>パラメーター
 
-[in] *uiCmdID*<br/>
-[in]*BOOL*<br/>
+[in]*UICmdID*<br/>
+[in]*ブール*<br/>
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="findelement"></a>  CMFCRibbonStatusBar::FindElement
+## <a name="cmfcribbonstatusbarfindelement"></a><a name="findelement"></a>ステータスバー::要素を検索します。
 
-指定したコマンド ID を持つ要素へのポインターを返します
+指定したコマンド ID を持つ要素へのポインターを返します。
 
 ```
 CMFCRibbonBaseElement* FindElement(UINT uiID);
@@ -296,16 +296,16 @@ CMFCRibbonBaseElement* FindElement(UINT uiID);
 
 ### <a name="parameters"></a>パラメーター
 
-*uiID*<br/>
+*Uiid*<br/>
 [in]要素の ID。
 
 ### <a name="return-value"></a>戻り値
 
-指定したコマンド ID を持つ要素へのポインター このような要素が存在しない場合は NULL です。
+指定したコマンド ID を持つ要素へのポインター。 そのような要素がない場合は NULL。
 
-##  <a name="getcount"></a>  CMFCRibbonStatusBar::GetCount
+## <a name="cmfcribbonstatusbargetcount"></a><a name="getcount"></a>ステータスバーを取得します。
 
-リボン ステータス バーの主な領域に配置されている要素の数を返します。
+リボン ステータス バーのメイン領域にある要素の数を返します。
 
 ```
 int GetCount() const;
@@ -313,9 +313,9 @@ int GetCount() const;
 
 ### <a name="return-value"></a>戻り値
 
-リボン ステータス バーの主な領域に配置されている要素の数。
+リボン ステータス バーのメイン領域にある要素の数。
 
-##  <a name="getelement"></a>  CMFCRibbonStatusBar::GetElement
+## <a name="cmfcribbonstatusbargetelement"></a><a name="getelement"></a>ステータスバー::取得要素
 
 指定したインデックス位置にある要素へのポインターを返します。
 
@@ -326,17 +326,17 @@ CMFCRibbonBaseElement* GetElement(int nIndex);
 ### <a name="parameters"></a>パラメーター
 
 *nIndex*<br/>
-[in]ステータス バー コントロールのメイン領域に配置されている要素の 0 から始まるインデックスを指定します。
+[in]ステータス バー コントロールのメイン領域にある要素の 0 から始まるインデックスを指定します。
 
 ### <a name="return-value"></a>戻り値
 
-指定したインデックス位置にある要素へのポインター。 インデックスが負の値またはステータス バー内の要素の数を超える場合は NULL です。
+指定したインデックス位置にある要素へのポインター。 インデックスが負の場合、またはステータス バーの要素数を超える場合は NULL。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="getexcount"></a>  CMFCRibbonStatusBar::GetExCount
+## <a name="cmfcribbonstatusbargetexcount"></a><a name="getexcount"></a>ステータスバー::取得します。
 
-リボン ステータス バーの拡張領域内にある要素の数を返します。
+リボン ステータス バーの拡張領域にある要素の数を返します。
 
 ```
 int GetExCount() const;
@@ -344,9 +344,9 @@ int GetExCount() const;
 
 ### <a name="return-value"></a>戻り値
 
-リボン ステータス バーの拡張領域内にある要素の数。
+リボン ステータス バーの拡張領域にある要素の数。
 
-##  <a name="getexelement"></a>  CMFCRibbonStatusBar::GetExElement
+## <a name="cmfcribbonstatusbargetexelement"></a><a name="getexelement"></a>ステータスバー::要素
 
 リボン ステータス バーの拡張領域内の指定されたインデックスにある要素へのポインターを返します。 拡張領域は、ステータス バー コントロールの右側にあります。
 
@@ -357,17 +357,17 @@ CMFCRibbonBaseElement* GetExElement(int nIndex);
 ### <a name="parameters"></a>パラメーター
 
 *nIndex*<br/>
-[in]ステータス バー コントロールの拡張領域に配置されている要素の 0 から始まるインデックスを指定します。
+[in]ステータス バー コントロールの拡張領域にある要素の 0 から始まるインデックスを指定します。
 
 ### <a name="return-value"></a>戻り値
 
-リボン ステータス バーの拡張領域内の指定されたインデックスにある要素へのポインター。 場合は NULL *nIndex*が負の値またはリボン ステータス バーの拡張領域内の要素の数を超えています。
+リボン ステータス バーの拡張領域内の指定されたインデックスにある要素へのポインター。 *nIndex*が負の値であるか、リボン ステータス バーの拡張領域内の要素数を超える場合は NULL。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="getextendedarea"></a>  CMFCRibbonStatusBar::GetExtendedArea
+## <a name="cmfcribbonstatusbargetextendedarea"></a><a name="getextendedarea"></a>状態バー::拡張エリア
 
-詳細についてにあるソース コードを参照してください、 **VC\\atlmfc\\src\\mfc** Visual Studio のインストールのフォルダー。
+詳細については、Visual Studio のインストールの**\\VC\\atlmfc\\src mfc**フォルダーにあるソース コードを参照してください。
 
 ```
 virtual BOOL GetExtendedArea(CRect& rect) const;
@@ -375,15 +375,15 @@ virtual BOOL GetExtendedArea(CRect& rect) const;
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*rect*<br/>
+[in]*レクト*<br/>
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="getspace"></a>  CMFCRibbonStatusBar::GetSpace
+## <a name="cmfcribbonstatusbargetspace"></a><a name="getspace"></a>ステータスバーを取得します。
 
-詳細についてにあるソース コードを参照してください、 **VC\\atlmfc\\src\\mfc** Visual Studio のインストールのフォルダー。
+詳細については、Visual Studio のインストールの**\\VC\\atlmfc\\src mfc**フォルダーにあるソース コードを参照してください。
 
 ```
 int GetSpace() const;
@@ -391,11 +391,11 @@ int GetSpace() const;
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="isbottomframe"></a>  CMFCRibbonStatusBar::IsBottomFrame
+## <a name="cmfcribbonstatusbarisbottomframe"></a><a name="isbottomframe"></a>ステータスバー::Isボトムフレーム
 
-詳細についてにあるソース コードを参照してください、 **VC\\atlmfc\\src\\mfc** Visual Studio のインストールのフォルダー。
+詳細については、Visual Studio のインストールの**\\VC\\atlmfc\\src mfc**フォルダーにあるソース コードを参照してください。
 
 ```
 BOOL IsBottomFrame() const;
@@ -403,11 +403,11 @@ BOOL IsBottomFrame() const;
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="isextendedelement"></a>  CMFCRibbonStatusBar::IsExtendedElement
+## <a name="cmfcribbonstatusbarisextendedelement"></a><a name="isextendedelement"></a>ステータス バー::拡張要素
 
-詳細についてにあるソース コードを参照してください、 **VC\\atlmfc\\src\\mfc** Visual Studio のインストールのフォルダー。
+詳細については、Visual Studio のインストールの**\\VC\\atlmfc\\src mfc**フォルダーにあるソース コードを参照してください。
 
 ```
 BOOL IsExtendedElement(CMFCRibbonBaseElement* pElement) const;
@@ -415,15 +415,15 @@ BOOL IsExtendedElement(CMFCRibbonBaseElement* pElement) const;
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pElement*<br/>
+[in]*要素*<br/>
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="isinformationmode"></a>  CMFCRibbonStatusBar::IsInformationMode
+## <a name="cmfcribbonstatusbarisinformationmode"></a><a name="isinformationmode"></a>ステータス バー::情報モード
 
-リボン ステータス バーの情報のモードが有効になっているかどうかを判断します。
+リボン ステータス バーの情報モードを有効にするかどうかを指定します。
 
 ```
 BOOL IsInformationMode() const;
@@ -431,15 +431,15 @@ BOOL IsInformationMode() const;
 
 ### <a name="return-value"></a>戻り値
 
-ステータス バーは、情報モードで動作できる場合は TRUE。それ以外の場合は FALSE です。
+ステータス バーが情報モードで動作する場合は TRUE。それ以外の場合は FALSE。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-情報モードでは、ステータス バーは、正規表現のすべてのペインを非表示にし、メッセージ文字列を表示します。
+情報モードでは、ステータス バーはすべての通常のペインを非表示にし、メッセージ文字列を表示します。
 
-##  <a name="ondrawinformation"></a>  CMFCRibbonStatusBar::OnDrawInformation
+## <a name="cmfcribbonstatusbarondrawinformation"></a><a name="ondrawinformation"></a>ステータスバー::オンドロー情報
 
-リボン ステータス バー情報モードが有効な場合に表示される文字列を表示します。
+情報モードが有効な場合にリボン ステータス バーに表示される文字列を表示します。
 
 ```
 virtual void OnDrawInformation(
@@ -453,27 +453,27 @@ virtual void OnDrawInformation(
 *pDC*<br/>
 [in]デバイス コンテキストへのポインター。
 
-*strInfo*<br/>
-[in]情報の文字列。
+*の情報*<br/>
+[in]情報文字列。
 
-*rectInfo*<br/>
+*レクト情報*<br/>
 [in]外接する四角形。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-ステータス バー情報の文字列の外観をカスタマイズする場合は、派生クラスでこのメソッドをオーバーライドします。 使用して、 [CMFCRibbonStatusBar::SetInformation](#setinformation)情報モードで、ステータス バーを配置するメソッド。 このモードで、ステータス バーはすべてのペインを非表示にしで指定された情報文字列を表示します*strInfo*します。
+ステータス バーの情報文字列の外観をカスタマイズする場合は、派生クラスでこのメソッドをオーバーライドします。 ステータス バーを情報モードにするには[、CMFCRibbonStatusBar::SetInformation](#setinformation)メソッドを使用します。 このモードでは、ステータス バーはすべてのペインを非表示にし *、strInfo*で指定された情報文字列を表示します。
 
-##  <a name="recalclayout"></a>  CMFCRibbonStatusBar::RecalcLayout
+## <a name="cmfcribbonstatusbarrecalclayout"></a><a name="recalclayout"></a>ステータスバー::再計算レイアウト
 
-詳細についてにあるソース コードを参照してください、 **VC\\atlmfc\\src\\mfc** Visual Studio のインストールのフォルダー。
+詳細については、Visual Studio のインストールの**\\VC\\atlmfc\\src mfc**フォルダーにあるソース コードを参照してください。
 
 ```
 virtual void RecalcLayout();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="removeall"></a>  CMFCRibbonStatusBar::RemoveAll
+## <a name="cmfcribbonstatusbarremoveall"></a><a name="removeall"></a>ステータスバー::すべて削除
 
 リボン ステータス バーからすべての要素を削除します。
 
@@ -481,7 +481,7 @@ virtual void RecalcLayout();
 void RemoveAll();
 ```
 
-##  <a name="removeelement"></a>  CMFCRibbonStatusBar::RemoveElement
+## <a name="cmfcribbonstatusbarremoveelement"></a><a name="removeelement"></a>ステータスバー::要素の削除
 
 リボン ステータス バーから、指定したコマンド ID を持つ要素を削除します。
 
@@ -491,16 +491,16 @@ BOOL RemoveElement(UINT uiID);
 
 ### <a name="parameters"></a>パラメーター
 
-*uiID*<br/>
+*Uiid*<br/>
 [in]ステータス バーから削除する要素の ID。
 
 ### <a name="return-value"></a>戻り値
 
-TRUE の場合、指定した要素*uiID*が削除されます。 FALSE それ以外の場合。
+指定された*uiID*を持つ要素が削除された場合は TRUE。 それ以外の場合は FALSE。
 
-##  <a name="setinformation"></a>  CMFCRibbonStatusBar::SetInformation
+## <a name="cmfcribbonstatusbarsetinformation"></a><a name="setinformation"></a>ステータスバー::セット情報
 
-有効またはリボン ステータス バーの情報モードを無効にします。
+リボン ステータス バーの情報モードを有効または無効にします。
 
 ```
 void SetInformation(LPCTSTR lpszInfo);
@@ -508,19 +508,19 @@ void SetInformation(LPCTSTR lpszInfo);
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszInfo*<br/>
-[in]情報の文字列。
+*情報を提供します。*<br/>
+[in]情報文字列。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-情報のモードで、ステータス バーを配置するのにには、このメソッドを使用します。 このモードで、ステータス バーはすべてのペインを非表示にしで指定された情報文字列を表示します*lpszInfo*します。
+このメソッドは、ステータス バーを情報モードにする場合に使用します。 このモードでは、ステータス バーはすべてのペインを非表示にし、 *lpszInfo*で指定された情報文字列を表示します。
 
-LpszInfo が NULL の場合、ステータス バーは通常モードに戻ります。
+lpszInfo が NULL の場合、ステータス バーは通常モードに戻ります。
 
 ## <a name="see-also"></a>関連項目
 
-[階層図](../../mfc/hierarchy-chart.md)<br/>
+[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
 [クラス](../../mfc/reference/mfc-classes.md)<br/>
-[CMFCRibbonBar クラス](../../mfc/reference/cmfcribbonbar-class.md)<br/>
-[CMFCRibbonBaseElement クラス](../../mfc/reference/cmfcribbonbaseelement-class.md)<br/>
-[CMFCRibbonBar クラス](../../mfc/reference/cmfcribbonbar-class.md)
+[クラス](../../mfc/reference/cmfcribbonbar-class.md)<br/>
+[クラス](../../mfc/reference/cmfcribbonbaseelement-class.md)<br/>
+[クラス](../../mfc/reference/cmfcribbonbar-class.md)

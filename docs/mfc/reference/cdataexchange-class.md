@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CDataExchange [MFC], m_bSaveAndValidate
 - CDataExchange [MFC], m_pDlgWnd
 ms.assetid: 84ed6113-325d-493e-a75d-223f03a992b8
-ms.openlocfilehash: 0e7a9d429acb1acd72942e5f10ac0815232ddc69
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 73319ad898bfebf4caf191954ebb3935bd4ebce9
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62253570"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81321965"
 ---
 # <a name="cdataexchange-class"></a>CDataExchange クラス
 
@@ -43,31 +43,31 @@ class CDataExchange
 
 |名前|説明|
 |----------|-----------------|
-|[CDataExchange::CDataExchange](#cdataexchange)|`CDataExchange` オブジェクトを構築します。|
+|[次のデータ交換を行います。](#cdataexchange)|`CDataExchange` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CDataExchange::Fail](#fail)|検証が失敗したときに呼び出されます。 前のコントロールにフォーカスをリセットし、例外をスローします。|
-|[CDataExchange::PrepareCtrl](#preparectrl)|データ交換または検証用に、指定したコントロールを準備します。 非エディット コントロールに使用してください。|
-|[CDataExchange::PrepareEditCtrl](#prepareeditctrl)|データ交換または検証用に、指定したエディット コントロールを準備します。|
-|[CDataExchange::PrepareOleCtrl](#prepareolectrl)|データ交換または検証用には、指定した OLE コントロールを準備します。 非エディット コントロールに使用してください。|
+|[次の手順を実行します。](#fail)|検証が失敗したときに呼び出されます。 フォーカスを前のコントロールにリセットし、例外をスローします。|
+|[:PアレCtrl](#preparectrl)|指定されたコントロールをデータ交換または検証用に準備します。 エディット以外のコントロールに使用します。|
+|[:Pアレ編集](#prepareeditctrl)|指定されたエディット コントロールをデータ交換または検証用に準備します。|
+|[:Pレパレレレク](#prepareolectrl)|指定された OLE コントロールをデータ交換または検証用に準備します。 エディット以外のコントロールに使用します。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
 |名前|説明|
 |----------|-----------------|
-|[CDataExchange::m_bSaveAndValidate](#m_bsaveandvalidate)|DDX ルーチンおよび DDV の方向を示すフラグです。|
-|[CDataExchange::m_pDlgWnd](#m_pdlgwnd)|データ交換がダイアログ ボックスまたはウィンドウが行われます。|
+|[m_bSaveAndValidate](#m_bsaveandvalidate)|DDX および DDV の方向のフラグ。|
+|[m_pDlgWnd](#m_pdlgwnd)|データ交換が行われるダイアログ ボックスまたはウィンドウ。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-`CDataExchange` 基本クラスはありません。
+`CDataExchange`は基本クラスを持っていません。
 
-カスタム データ型またはコントロールに対してデータ エクス チェンジ ルーチンを記述する場合は、このクラスを使用して、独自のデータ検証ルーチンを記述する場合またはします。 DDX ルーチンおよび DDV ルーチンを記述の詳細については、次を参照してください。[テクニカル ノート 26](../../mfc/tn026-ddx-and-ddv-routines.md)します。 DDX ルーチンおよび DDV の概要については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)と[ ダイアログ ボックス](../../mfc/dialog-boxes.md)します。
+このクラスは、カスタム データ型またはカスタム コントロールのデータ交換ルーチンを記述する場合、または独自のデータ検証ルーチンを記述する場合に使用します。 独自の DDX ルーチンおよび DDV ルーチンの記述の詳細については、[テクニカル ノート 26](../../mfc/tn026-ddx-and-ddv-routines.md)を参照してください。 DDX および DDV の概要については、「[ダイアログ データ エクスチェンジ」および「検証と](../../mfc/dialog-data-exchange-and-validation.md)[ダイアログ ボックス](../../mfc/dialog-boxes.md)」を参照してください。
 
-A`CDataExchange`オブジェクト DDX ルーチンおよび DDV を配置するために必要なコンテキスト情報を提供します。 フラグ*m_bSaveAndValidate* DDX を使用してデータ メンバーからダイアログ コントロールの初期値を入力する場合に、FALSE です。 フラグ*m_bSaveAndValidate* DDX を使用して、データ メンバーおよび DDV をデータ値の検証に使用するときにダイアログ コントロールの現在の値を設定する場合は TRUE になります。 DDV 検証が失敗した場合、ddv 入力エラーを示すメッセージ ボックスが表示されます。 Ddv を呼び出して`Fail`に問題が発生したコントロールにフォーカスをリセットし、検証プロセスを停止する例外をスローします。
+オブジェクト`CDataExchange`は、DDX および DDV が実行するために必要なコンテキスト情報を提供します。 DDX*を使用*してデータ メンバーのダイアログ コントロールの初期値を入力する場合、フラグ m_bSaveAndValidateは FALSE です。 *DDX*を使用してダイアログ コントロールの現在の値をデータ メンバーに設定する場合、および DDV を使用してデータ値を検証する場合、フラグ m_bSaveAndValidateは TRUE です。 DDV 検証が失敗した場合、DDV プロシージャは入力エラーを説明するメッセージ ボックスを表示します。 DDV プロシージャは、フォーカス`Fail`を問題のあるコントロールにリセットし、検証プロセスを停止する例外をスローするために呼び出します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -77,9 +77,9 @@ A`CDataExchange`オブジェクト DDX ルーチンおよび DDV を配置する
 
 **ヘッダー:** afxwin.h
 
-##  <a name="cdataexchange"></a>  CDataExchange::CDataExchange
+## <a name="cdataexchangecdataexchange"></a><a name="cdataexchange"></a>次のデータ交換を行います。
 
-作成するには、このメンバー関数を呼び出す、`CDataExchange`オブジェクト。
+オブジェクトを構築するには、このメンバー`CDataExchange`関数を呼び出します。
 
 ```
 CDataExchange(
@@ -90,68 +90,68 @@ CDataExchange(
 ### <a name="parameters"></a>パラメーター
 
 *pDlgWnd*<br/>
-コントロールを格納する親ウィンドウへのポインター。 通常、これは、 [CDialog](../../mfc/reference/cdialog-class.md)の派生オブジェクト。
+コントロールを含む親ウィンドウへのポインター。 通常、これは[CDialog](../../mfc/reference/cdialog-class.md)派生オブジェクトです。
 
-*bSaveAndValidate*<br/>
-TRUE の場合、このオブジェクトは、データを検証し、メンバーに、コントロールからデータを書き込みます。 FALSE の場合、このオブジェクトはデータをコントロールにメンバーを移動します。
+*を保存して検証する*<br/>
+TRUE の場合、このオブジェクトはデータを検証し、コントロールからメンバーにデータを書き込みます。 FALSE の場合、このオブジェクトは、データをメンバからコントロールに移動します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-構築、`CDataExchange`オブジェクトに渡す、ウィンドウのデータの exchange オブジェクトに追加情報を格納する自分で[CWnd::DoDataExchange](../../mfc/reference/cwnd-class.md#dodataexchange)メンバー関数。
+ウィンドウの`CDataExchange` [CWnd::DoDataExchange](../../mfc/reference/cwnd-class.md#dodataexchange)メンバー関数に渡すデータ交換オブジェクトに余分な情報を格納するオブジェクトを自分で構築します。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFCControlLadenDialog#70](../../mfc/codesnippet/cpp/cdataexchange-class_1.cpp)]
 
-##  <a name="fail"></a>  CDataExchange::Fail
+## <a name="cdataexchangefail"></a><a name="fail"></a>次の手順を実行します。
 
-ダイアログ データ検証 (DDV) 操作が失敗したときに、フレームワークはこのメンバー関数を呼び出します。
+フレームワークは、ダイアログ データ検証 (DDV) 操作が失敗した場合に、このメンバー関数を呼び出します。
 
 ```
 void Fail();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`Fail` 検証には、(復元するコントロールがある場合) が失敗しました。 コントロールにフォーカスと選択を復元します。 `Fail` 型の例外がスロー [CUserException](../../mfc/reference/cuserexception-class.md)検証プロセスを停止します。 例外により、メッセージ ボックスが表示されるエラーを説明します。 DDV 検証が失敗した後、ユーザーは、問題のあるコントロールのデータの再入力できます。
+`Fail`検証に失敗したコントロールにフォーカスと選択を復元します (復元するコントロールがある場合)。 `Fail`その後[、CUserException](../../mfc/reference/cuserexception-class.md)型の例外をスローして、検証プロセスを停止します。 例外は、エラーを説明するメッセージ ボックスが表示されます。 DDV の検証が失敗した後、ユーザーは問題のあるコントロールにデータを再入力できます。
 
-DDV ルーチンのカスタム実装を呼び出すことができます`Fail`検証が失敗したときに、ルーチンから。
+カスタム DDV ルーチンの実装者は、`Fail`検証が失敗したときにルーチンから呼び出すことができます。
 
-DDX ルーチンおよび DDV ルーチンを記述の詳細については、次を参照してください。[テクニカル ノート 26](../../mfc/tn026-ddx-and-ddv-routines.md)します。 DDX ルーチンおよび DDV の概要については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)と[ダイアログ ボックスに関するトピック](../../mfc/dialog-boxes.md)します。
+独自の DDX ルーチンおよび DDV ルーチンの記述の詳細については、[テクニカル ノート 26](../../mfc/tn026-ddx-and-ddv-routines.md)を参照してください。 DDX および DDV の概要については、「[ダイアログ データ エクスチェンジとダイアログ](../../mfc/dialog-data-exchange-and-validation.md)[ボックスのトピック」を参照してください](../../mfc/dialog-boxes.md)。
 
-##  <a name="m_bsaveandvalidate"></a>  CDataExchange::m_bSaveAndValidate
+## <a name="cdataexchangem_bsaveandvalidate"></a><a name="m_bsaveandvalidate"></a>m_bSaveAndValidate
 
-このフラグは、ダイアログ データ エクス (チェンジ DDX) 操作の方向を示します。
+このフラグは、ダイアログ データ エクスチェンジ (DDX) 操作の方向を示します。
 
 ```
 BOOL m_bSaveAndValidate;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-フラグが 0 以外の値が場合、`CDataExchange`オブジェクトは、ユーザーがコントロールを編集した後は、ダイアログ クラスのデータ メンバーにダイアログのコントロールからデータを移動に使用されています。 ダイアログ クラスのデータ メンバーからダイアログ コントロールを初期化するために使用されている場合、フラグは 0 を使用します。
+ユーザーがコントロールを編集した後`CDataExchange`で、ダイアログ コントロールからダイアログ クラスのデータ メンバーにデータを移動するためにオブジェクトを使用する場合、フラグは 0 以外です。 ダイアログ クラスのデータ メンバーからダイアログ コントロールを初期化するためにオブジェクトを使用する場合、フラグは 0 です。
 
-ダイアログ データ検証 (DDV) 中には、フラグを 0 以外の場合もします。
+ダイアログ データの検証 (DDV) の間も、フラグは 0 以外です。
 
-DDX ルーチンおよび DDV ルーチンを記述の詳細については、次を参照してください。[テクニカル ノート 26](../../mfc/tn026-ddx-and-ddv-routines.md)します。 DDX ルーチンおよび DDV の概要については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)と[ダイアログ ボックスに関するトピック](../../mfc/dialog-boxes.md)します。
+独自の DDX ルーチンおよび DDV ルーチンの記述の詳細については、[テクニカル ノート 26](../../mfc/tn026-ddx-and-ddv-routines.md)を参照してください。 DDX および DDV の概要については、「[ダイアログ データ エクスチェンジとダイアログ](../../mfc/dialog-data-exchange-and-validation.md)[ボックスのトピック」を参照してください](../../mfc/dialog-boxes.md)。
 
-##  <a name="m_pdlgwnd"></a>  CDataExchange::m_pDlgWnd
+## <a name="cdataexchangem_pdlgwnd"></a><a name="m_pdlgwnd"></a>m_pDlgWnd
 
-ポインターが含まれています、 [CWnd](../../mfc/reference/cwnd-class.md)オブジェクト ダイアログ データ エクス (チェンジ DDX) または検証 (DDV) が行われています。
+ダイアログ データ エクスチェンジ (DDX) または検証 (DDV) が行われる[CWnd](../../mfc/reference/cwnd-class.md)オブジェクトへのポインターを含みます。
 
 ```
 CWnd* m_pDlgWnd;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このオブジェクトは、通常、 [CDialog](../../mfc/reference/cdialog-class.md)オブジェクト。 DDX または DDV ルーチンのカスタム実装する場合は、このポインターを使用して、操作するコントロールを格納しているダイアログ ウィンドウにアクセス権を取得します。
+通常、このオブジェクトは[CDialog](../../mfc/reference/cdialog-class.md)オブジェクトです。 カスタム DDX または DDV ルーチンの実装では、このポインターを使用して、操作しているコントロールを含むダイアログ ウィンドウへのアクセスを取得できます。
 
-DDX ルーチンおよび DDV ルーチンを記述の詳細については、次を参照してください。[テクニカル ノート 26](../../mfc/tn026-ddx-and-ddv-routines.md)します。 DDX ルーチンおよび DDV の概要については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)と[ダイアログ ボックスに関するトピック](../../mfc/dialog-boxes.md)します。
+独自の DDX ルーチンおよび DDV ルーチンの記述の詳細については、[テクニカル ノート 26](../../mfc/tn026-ddx-and-ddv-routines.md)を参照してください。 DDX および DDV の概要については、「[ダイアログ データ エクスチェンジとダイアログ](../../mfc/dialog-data-exchange-and-validation.md)[ボックスのトピック」を参照してください](../../mfc/dialog-boxes.md)。
 
-##  <a name="preparectrl"></a>  CDataExchange::PrepareCtrl
+## <a name="cdataexchangepreparectrl"></a><a name="preparectrl"></a>:PアレCtrl
 
-フレームワークは、ダイアログ データ エクス (チェンジ DDX) と検証 (DDV) の指定したコントロールを準備するには、このメンバー関数を呼び出します。
+フレームワークは、ダイアログ データ エクスチェンジ (DDX) と検証 (DDV) の指定されたコントロールを準備するために、このメンバー関数を呼び出します。
 
 ```
 HWND PrepareCtrl(int nIDC);
@@ -160,25 +160,25 @@ HWND PrepareCtrl(int nIDC);
 ### <a name="parameters"></a>パラメーター
 
 *nIDC*<br/>
-DDX DDV 用に準備するコントロールの ID。
+DDX または DDV 用に準備するコントロールの ID。
 
 ### <a name="return-value"></a>戻り値
 
-DDX DDV 用に準備されているコントロールの HWND。
+DDX または DDV 用に準備されているコントロールの HWND。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-使用して、[性チェックされる](#prepareeditctrl)代わりにエディット コントロールを他のすべてのコントロールのこのメンバー関数を使用します。
+代わりに編集コントロールに[対して PrepareEditCtrl](#prepareeditctrl)を使用します。このメンバー関数は、他のすべてのコントロールに使用します。
 
-コントロールの HWND を格納するは、準備、`CDataExchange`クラス。 フレームワークでは、このハンドルを使用して、DDX または DDV 障害以前フォーカスされたコントロールにフォーカスを復元します。
+準備は、クラスにコントロールの HWND を`CDataExchange`格納することで構成されます。 フレームワークは、このハンドルを使用して、DDX または DDV の障害が発生した場合に、フォーカスを以前フォーカスされたコントロールに復元します。
 
-カスタムの DDX または DDV ルーチンの実装を呼び出す必要があります`PrepareCtrl`を DDX を使用してデータを交換するまたは DDV を使用してデータを検証していますが、すべての非編集コントロール。
+カスタム DDX ルーチンまたは DDV ルーチンの実装`PrepareCtrl`者は、DDX を介してデータを交換したり、DDV を介してデータを検証したりする非編集コントロールをすべて呼び出す必要があります。
 
-DDX ルーチンおよび DDV ルーチンを記述の詳細については、次を参照してください。[テクニカル ノート 26](../../mfc/tn026-ddx-and-ddv-routines.md)します。 DDX ルーチンおよび DDV の概要については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)と[ダイアログ ボックスに関するトピック](../../mfc/dialog-boxes.md)します。
+独自の DDX ルーチンおよび DDV ルーチンの記述の詳細については、[テクニカル ノート 26](../../mfc/tn026-ddx-and-ddv-routines.md)を参照してください。 DDX および DDV の概要については、「[ダイアログ データ エクスチェンジとダイアログ](../../mfc/dialog-data-exchange-and-validation.md)[ボックスのトピック」を参照してください](../../mfc/dialog-boxes.md)。
 
-##  <a name="prepareeditctrl"></a>  CDataExchange::PrepareEditCtrl
+## <a name="cdataexchangeprepareeditctrl"></a><a name="prepareeditctrl"></a>:Pアレ編集
 
-フレームワークは、ダイアログ データ エクス (チェンジ DDX) と検証 (DDV) を指定した編集コントロールを準備するには、このメンバー関数を呼び出します。
+フレームワークは、ダイアログ データ エクスチェンジ (DDX) と検証 (DDV) の指定されたエディット コントロールを準備するために、このメンバー関数を呼び出します。
 
 ```
 HWND PrepareEditCtrl(int nIDC);
@@ -187,25 +187,25 @@ HWND PrepareEditCtrl(int nIDC);
 ### <a name="parameters"></a>パラメーター
 
 *nIDC*<br/>
-DDX または DDV を準備するエディット コントロールの ID。
+DDX または DDV 用に準備するエディット コントロールの ID。
 
 ### <a name="return-value"></a>戻り値
 
-DDX DDV 用に準備されているエディット コントロールの HWND。
+DDX または DDV 用に準備されているエディット コントロールの HWND。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-使用[記述](#preparectrl)代わりにすべての非編集コントロール。
+すべての非編集コントロールに対して[PrepareCtrl を](#preparectrl)使用します。
 
-準備は、次の 2 つで構成されます。 まず、`PrepareEditCtrl`でコントロールの HWND を格納、`CDataExchange`クラス。 フレームワークでは、このハンドルを使用して、DDX または DDV 障害以前フォーカスされたコントロールにフォーカスを復元します。 2 番目、`PrepareEditCtrl`にフラグを設定、`CDataExchange`ことを示すデータが交換または編集コントロールは、検証コントロール。
+準備は2つのことから成り立っている。 まず、`PrepareEditCtrl`コントロールの HWND をクラスに`CDataExchange`格納します。 フレームワークは、このハンドルを使用して、DDX または DDV の障害が発生した場合に、フォーカスを以前フォーカスされたコントロールに復元します。 次に`PrepareEditCtrl`、データの`CDataExchange`交換または検証が行われるコントロールがエディット コントロールであることを示すフラグをクラスに設定します。
 
-カスタムの DDX または DDV ルーチンの実装を呼び出す必要があります`PrepareEditCtrl`のすべての編集コントロールは DDX を使用してデータを交換する、または DDV を使用してデータを検証しています。
+カスタム DDX ルーチンまたは DDV ルーチンの実装`PrepareEditCtrl`者は、DDX を介してデータを交換したり、DDV を介してデータを検証したりするすべてのエディット コントロールを呼び出す必要があります。
 
-DDX ルーチンおよび DDV ルーチンを記述の詳細については、次を参照してください。[テクニカル ノート 26](../../mfc/tn026-ddx-and-ddv-routines.md)します。 DDX ルーチンおよび DDV の概要については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)と[ダイアログ ボックスに関するトピック](../../mfc/dialog-boxes.md)します。
+独自の DDX ルーチンおよび DDV ルーチンの記述の詳細については、[テクニカル ノート 26](../../mfc/tn026-ddx-and-ddv-routines.md)を参照してください。 DDX および DDV の概要については、「[ダイアログ データ エクスチェンジとダイアログ](../../mfc/dialog-data-exchange-and-validation.md)[ボックスのトピック」を参照してください](../../mfc/dialog-boxes.md)。
 
-##  <a name="prepareolectrl"></a>  CDataExchange::PrepareOleCtrl
+## <a name="cdataexchangeprepareolectrl"></a><a name="prepareolectrl"></a>:Pレパレレレク
 
-フレームワークは、指定の OLE コントロール ダイアログ データ エクス (チェンジ DDX) と検証 (DDV) を準備するには、このメンバー関数を呼び出します。
+フレームワークは、ダイアログ データ エクスチェンジ (DDX) と検証 (DDV) の指定された OLE コントロールを準備するために、このメンバー関数を呼び出します。
 
 ```
 COleControlSite* PrepareOleCtrl(int nIDC);
@@ -214,23 +214,23 @@ COleControlSite* PrepareOleCtrl(int nIDC);
 ### <a name="parameters"></a>パラメーター
 
 *nIDC*<br/>
-DDX または DDV を準備する OLE コントロールの ID。
+DDX または DDV 用に準備する OLE コントロールの ID。
 
 ### <a name="return-value"></a>戻り値
 
 OLE コントロール サイトへのポインター。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-使用[性チェックされる](#prepareeditctrl)代わりに編集コントロールのまたは[記述](#preparectrl)他のすべての非 OLE コントロール。
+代わりに編集コントロールに対[して PrepareEditCtrl](#prepareeditctrl)を使用するか、他のすべての OLE コントロール以外のコントロールに対して[PrepareCtrl](#preparectrl)を使用します。
 
-カスタムの DDX または DDV ルーチンの実装を呼び出す必要があります`PrepareOleCtrl`を DDX を使用してデータを交換するまたは DDV を使用してデータを検証していますが、すべての OLE コントロール。
+カスタム DDX ルーチンまたは DDV ルーチンの実装`PrepareOleCtrl`者は、DDX を介してデータを交換したり、DDV を介してデータを検証したりするすべての OLE コントロールを呼び出す必要があります。
 
-DDX ルーチンおよび DDV ルーチンを記述の詳細については、次を参照してください。[テクニカル ノート 26](../../mfc/tn026-ddx-and-ddv-routines.md)します。 DDX ルーチンおよび DDV の概要については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)と[ダイアログ ボックスに関するトピック](../../mfc/dialog-boxes.md)します。
+独自の DDX ルーチンおよび DDV ルーチンの記述の詳細については、[テクニカル ノート 26](../../mfc/tn026-ddx-and-ddv-routines.md)を参照してください。 DDX および DDV の概要については、「[ダイアログ データ エクスチェンジとダイアログ](../../mfc/dialog-data-exchange-and-validation.md)[ボックスのトピック」を参照してください](../../mfc/dialog-boxes.md)。
 
 ## <a name="see-also"></a>関連項目
 
-[MFC サンプル VIEWEX](../../overview/visual-cpp-samples.md)<br/>
-[階層図](../../mfc/hierarchy-chart.md)<br/>
+[MFC サンプル ビューレックス](../../overview/visual-cpp-samples.md)<br/>
+[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
 [CWnd::DoDataExchange](../../mfc/reference/cwnd-class.md#dodataexchange)<br/>
 [CWnd::UpdateData](../../mfc/reference/cwnd-class.md#updatedata)

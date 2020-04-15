@@ -5,12 +5,12 @@ helpviewer_keywords:
 - IDE [C++]
 - Visual Studio IDE [C++]
 ms.assetid: d985c230-8e81-49d6-92be-2db9cac8d023
-ms.openlocfilehash: 2cf2844fd4247c3c69648823302a6ad56ff5fd45
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 082aa353d3046d9c9b20669e075e200c96017bce
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171777"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371762"
 ---
 # <a name="using-the-visual-studio-ide-for-c-desktop-development"></a>C++ デスクトップ開発のための Visual Studio IDE の使用
 
@@ -30,7 +30,7 @@ Visual Studio 2019 は [Visual Studio のダウンロード](https://www.visuals
 
 **Visual Studio 2017 のインストール**
 
-Visual Studio 2017 は [以前の Visual Studio のダウンロード](https://www.visualstudio.com/vs/older-downloads/)からダウンロードできます。 Visual Studio をインストールするときは、C++ 開発ツールを必ず含めてください。既定ではインストールされません。 Visual Studio のインストール方法に関する詳細については、[Visual Studio のインストール](/visualstudio/install/install-visual-studio)に関するページを参照し、ページ上にあるバージョン セレクターを **[Visual Studio 2017]** に設定してください。
+Visual Studio 2017 は [以前の Visual Studio のダウンロード](https://www.visualstudio.com/vs/older-downloads/)からダウンロードできます。 Visual Studio をインストールするときは、C++ 開発ツールを必ず含めてください。既定ではインストールされません。 Visual Studio のインストール方法に関する詳細については、[Visual Studio のインストール](/visualstudio/install/install-visual-studio)に関するページを参照してください。 Visual Studio 2017 の手順を表示するには、Visual Studio**バージョン**セレクター コントロールを Visual Studio 2017 に設定します。 ページの目次の上部に表示されます。
 
 **Visual Studio 2015 のインストール**
 
@@ -56,6 +56,6 @@ Visual Studio IDE を利用して C++ アプリのビルドを始めるには、
 
 以上のチュートリアルを完了したら、独自のプロジェクトの構築を始められます。 C++ 開発に関する情報とリソースが必要であれば、[Visual Studio での Visual C++](../overview/visual-cpp-in-visual-studio.md)に関するページを参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [Visual Studio を使用した開発の開始](/visualstudio/ide/get-started-developing-with-visual-studio)

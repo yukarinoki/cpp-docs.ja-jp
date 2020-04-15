@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CHtmlEditCtrl [MFC], GetDHtmlDocument
 - CHtmlEditCtrl [MFC], GetStartDocument
 ms.assetid: 0fc4a238-b05f-4874-9edc-6a6701f064d9
-ms.openlocfilehash: 6f5c465a8ec9c8f54af5545e66fb849a08d241af
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 05063c62e9f7a5d88d3fecde842f979725200f98
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389412"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366842"
 ---
 # <a name="chtmleditctrl-class"></a>CHtmlEditCtrl クラス
 
@@ -38,19 +38,19 @@ class CHtmlEditCtrl: public CWnd,
 
 |名前|説明|
 |----------|-----------------|
-|[CHtmlEditCtrl::CHtmlEditCtrl](#chtmleditctrl)|`CHtmlEditCtrl` オブジェクトを構築します。|
+|[次の行](#chtmleditctrl)|`CHtmlEditCtrl` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CHtmlEditCtrl::Create](#create)|WebBrowser ActiveX コントロールを作成しにアタッチします、`CHtmlEditCtrl`オブジェクト。 この関数では、WebBrowser ActiveX コントロールが編集モードに自動的に保存されます。|
-|[CHtmlEditCtrl::GetDHtmlDocument](#getdhtmldocument)|取得、 [IHTMLDocument2](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752574\(v=vs.85\))ドキュメント上のインターフェイスは、コンテナー内の WebBrowser コントロールに現在読み込まれています。|
-|[CHtmlEditCtrl::GetStartDocument](#getstartdocument)|内の WebBrowser コントロールでのロードに既定のドキュメントの URL を取得します。|
+|[作成](#create)|ActiveX コントロールを作成し、オブジェクトに`CHtmlEditCtrl`アタッチします。 この関数は、自動的に WebBrowser ActiveX コントロールを編集モードにします。|
+|[ドキュメントを編集します。](#getdhtmldocument)|現在含まれている WebBrowser コントロールに読み込まれているドキュメントの[IHTMLDocument2](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752574\(v=vs.85\))インターフェイスを取得します。|
+|[ドキュメントを取得します。](#getstartdocument)|含まれている WebBrowser コントロールに読み込む既定のドキュメントの URL を取得します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-ホスト型の WebBrowser コントロールが自動的には、作成後にモードを編集します。
+ホストされた WebBrowser コントロールは、作成後に自動的に編集モードに移行します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -68,7 +68,7 @@ class CHtmlEditCtrl: public CWnd,
 
 **ヘッダー:** afxhtml.h
 
-##  <a name="chtmleditctrl"></a>  CHtmlEditCtrl::CHtmlEditCtrl
+## <a name="chtmleditctrlchtmleditctrl"></a><a name="chtmleditctrl"></a>次の行
 
 `CHtmlEditCtrl` オブジェクトを構築します。
 
@@ -76,9 +76,9 @@ class CHtmlEditCtrl: public CWnd,
 CHtmlEditCtrl();
 ```
 
-##  <a name="create"></a>  CHtmlEditCtrl::Create
+## <a name="chtmleditctrlcreate"></a><a name="create"></a>作成
 
-WebBrowser ActiveX コントロールを作成しにアタッチします、`CHtmlEditCtrl`オブジェクト。 WebBrowser ActiveX コントロールが自動的に既定のドキュメントに移動しに配置し、編集モードを使用してこの関数です。
+ActiveX コントロールを作成し、オブジェクトに`CHtmlEditCtrl`アタッチします。 WebBrowser ActiveX コントロールは、既定のドキュメントに自動的に移動し、この関数によって編集モードに設定されます。
 
 ```
 virtual BOOL Create(
@@ -92,31 +92,31 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszWindowName*<br/>
+*名前をクリックします。*<br/>
 このパラメーターは使用されません。
 
-*dwStyle*<br/>
+*Dwstyle*<br/>
 このパラメーターは使用されません。
 
-*rect*<br/>
+*Rect*<br/>
 コントロールのサイズと位置を指定します。
 
 *pParentWnd*<br/>
-コントロールの親ウィンドウを指定します。 NULL は指定できません。
+コントロールの親ウィンドウを指定します。 NULL にすることはできません。
 
 *nID*<br/>
-コントロールの ID を指定します
+コントロールの ID を指定します。
 
 *pContext*<br/>
 このパラメーターは使用されません。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合、true を返します。
+成功した場合は TRUE を返し、失敗した場合は FALSE を返します。
 
-##  <a name="getdhtmldocument"></a>  CHtmlEditCtrl::GetDHtmlDocument
+## <a name="chtmleditctrlgetdhtmldocument"></a><a name="getdhtmldocument"></a>ドキュメントを編集します。
 
-取得、 [IHTMLDocument2](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752574\(v=vs.85\))ドキュメント上のインターフェイスは、コンテナー内の WebBrowser コントロールに現在読み込まれて
+現在含まれている WebBrowser コントロールに読み込まれているドキュメントの[IHTMLDocument2](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752574\(v=vs.85\))インターフェイスを取得します。
 
 ```
 BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;
@@ -125,11 +125,11 @@ BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;
 ### <a name="parameters"></a>パラメーター
 
 *ppDocument*<br/>
-ドキュメントのインターフェイスです。
+ドキュメント インターフェイス。
 
-##  <a name="getstartdocument"></a>  CHtmlEditCtrl::GetStartDocument
+## <a name="chtmleditctrlgetstartdocument"></a><a name="getstartdocument"></a>ドキュメントを取得します。
 
-内の WebBrowser コントロールでのロードに既定のドキュメントの URL を取得します。
+含まれている WebBrowser コントロールに読み込む既定のドキュメントの URL を取得します。
 
 ```
 virtual LPCTSTR GetStartDocument();
@@ -137,4 +137,4 @@ virtual LPCTSTR GetStartDocument();
 
 ## <a name="see-also"></a>関連項目
 
-[階層図](../../mfc/hierarchy-chart.md)
+[階層グラフ](../../mfc/hierarchy-chart.md)

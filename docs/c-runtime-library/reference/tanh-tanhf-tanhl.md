@@ -1,10 +1,11 @@
 ---
 title: tanh、tanhf、tanhl
-ms.date: 04/10/2018
+ms.date: 4/2/2020
 api_name:
 - tanh
 - tanhf
 - tanhl
+- _o_tanh
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -33,16 +35,16 @@ helpviewer_keywords:
 - tanhf function
 - trigonometric functions
 - hyperbolic functions
-ms.openlocfilehash: 0d249768ed26a55e639cced55bae6b923dbf521b
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 626252285a11ae4cbcb8bd2e5658512b85bfd3d3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957532"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81362626"
 ---
 # <a name="tanh-tanhf-tanhl"></a>tanh、tanhf、tanhl
 
-ハイパーボリックタンジェントを計算します。
+双曲線正接を計算します。
 
 ## <a name="syntax"></a>構文
 
@@ -59,28 +61,30 @@ long double tanh( long double x );  // C++ only
 
 ### <a name="parameters"></a>パラメーター
 
-*x*<br/>
+*X*<br/>
 角度 (ラジアン)。
 
 ## <a name="return-value"></a>戻り値
 
-**Tanh**関数は、 *x*のハイパーボリックタンジェントを返します。 エラーの戻り値はありません。
+**タン関数**は*x*の双曲線正接を返します。 エラーの戻り値はありません。
 
-|入力|SEH 例外|**Matherr**例外的|
+|入力|SEH 例外|**マエラー**例外|
 |-----------|-------------------|-------------------------|
 |± QNAN、IND|none|_DOMAIN|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-でC++はオーバーロードが可能であるため、 **float**または**long** **double**値を受け取って返す**tanh**のオーバーロードを呼び出すことができます。 C プログラムでは、 **tanh**は常にを受け取り、 **double**を返します。
+C++ ではオーバーロードが可能なため **、float**値または**長い****倍精度**浮動小数点値を取得して返す**tanh**のオーバーロードを呼び出すことができます。 C プログラムでは、**タンは**常に二**重**を取り、返します。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー (C)|必須ヘッダー (C)|
+|ルーチン|必須ヘッダー (C)|必須ヘッダー (C)|
 |-------------|---------------------|-|
-|**tanh**、 **tanhf**、 **tanhl**|\<math.h>|\<cmath> または \<math.h>|
+|**タン**、**タンフ**、**タペン**|\<math.h>|\<cmath> または \<math.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 

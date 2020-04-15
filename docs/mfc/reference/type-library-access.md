@@ -4,29 +4,29 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - type libraries [MFC], accessing
 ms.assetid: a03fa7f0-86c2-4119-bf81-202916fb74b3
-ms.openlocfilehash: 23d4675bd3638d2effd1b967f0729f9e70dac6de
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 1794e16489ab48d919bbd4116588fba4b74b88d9
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79426193"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372875"
 ---
 # <a name="type-library-access"></a>タイプ ライブラリ アクセス
 
-タイプライブラリは、OLE コントロールのインターフェイスを他の OLE 対応アプリケーションに公開します。 1つ以上のインターフェイスを公開する場合は、各 OLE コントロールにタイプライブラリが必要です。
+タイプ ライブラリは、OLE コントロールのインターフェイスを他の OLE 対応アプリケーションに公開します。 1 つ以上のインターフェイスを公開する場合は、各 OLE コントロールにタイプ ライブラリが必要です。
 
-次のマクロを使用すると、OLE コントロールは独自のタイプライブラリへのアクセスを提供できます。
+次のマクロを使用すると、OLE コントロールは独自のタイプ ライブラリにアクセスできます。
 
 ### <a name="type-library-access"></a>タイプ ライブラリ アクセス
 
 |||
 |-|-|
-|[DECLARE_OLETYPELIB](#declare_oletypelib)|OLE コントロールの `GetTypeLib` メンバー関数を宣言します (クラス宣言で使用する必要があります)。|
-|[IMPLEMENT_OLETYPELIB](#implement_oletypelib)|OLE コントロールの `GetTypeLib` メンバー関数を実装します (クラスの実装で使用する必要があります)。|
+|[DECLARE_OLETYPELIB](#declare_oletypelib)|OLE コントロール`GetTypeLib`のメンバー関数を宣言します 。|
+|[IMPLEMENT_OLETYPELIB](#implement_oletypelib)|OLE コントロール`GetTypeLib`のメンバー関数を実装します 。|
 
-##  <a name="declare_oletypelib"></a>DECLARE_OLETYPELIB
+## <a name="declare_oletypelib"></a><a name="declare_oletypelib"></a>DECLARE_OLETYPELIB
 
-コントロールクラスの `GetTypeLib` メンバー関数を宣言します。
+コントロール クラス`GetTypeLib`のメンバー関数を宣言します。
 
 ```
 DECLARE_OLETYPELIB(class_name)
@@ -35,19 +35,19 @@ DECLARE_OLETYPELIB(class_name)
 ### <a name="parameters"></a>パラメーター
 
 *class_name*<br/>
-タイプライブラリに関連するコントロールクラスの名前。
+タイプ ライブラリに関連するコントロール クラスの名前。
 
 ### <a name="remarks"></a>解説
 
-このマクロは、コントロールクラスのヘッダーファイルで使用します。
+このマクロは、コントロール クラスヘッダー ファイルで使用します。
 
 ### <a name="requirements"></a>必要条件
 
 **ヘッダー :** afxdisp.h
 
-##  <a name="implement_oletypelib"></a>IMPLEMENT_OLETYPELIB
+## <a name="implement_oletypelib"></a><a name="implement_oletypelib"></a>IMPLEMENT_OLETYPELIB
 
-コントロールの `GetTypeLib` メンバー関数を実装します。
+コントロールのメンバー関数を`GetTypeLib`実装します。
 
 ```
 IMPLEMENT_OLETYPELIB(class_name, tlid, wVerMajor,  wVerMinor)
@@ -56,25 +56,25 @@ IMPLEMENT_OLETYPELIB(class_name, tlid, wVerMajor,  wVerMinor)
 ### <a name="parameters"></a>パラメーター
 
 *class_name*<br/>
-タイプライブラリに関連するコントロールクラスの名前。
+タイプ ライブラリに関連するコントロール クラスの名前。
 
-*tlid*<br/>
-タイプライブラリの ID 番号。
+*トリッド*<br/>
+タイプ ライブラリの ID 番号。
 
-*wVerMajor*<br/>
-タイプライブラリのメジャーバージョン番号。
+*wVerメジャー*<br/>
+タイプ ライブラリのメジャー バージョン番号。
 
 *wVerMinor*<br/>
-タイプライブラリのマイナーバージョン番号。
+タイプ ライブラリのマイナー バージョン番号。
 
 ### <a name="remarks"></a>解説
 
-このマクロは、DECLARE_OLETYPELIB マクロを使用するコントロールクラスの実装ファイルに記述されている必要があります。
+このマクロは、DECLARE_OLETYPELIB マクロを使用するコントロール クラスの実装ファイルに含める必要があります。
 
 ### <a name="requirements"></a>必要条件
 
 **ヘッダー :** afxdisp.h
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [マクロとグローバル](../../mfc/reference/mfc-macros-and-globals.md)

@@ -1,5 +1,5 @@
 ---
-title: CMFCDropDownToolbarButton クラス
+title: クラスをドロップダウンダウンツール バーボタン
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCDropDownToolbarButton
@@ -42,16 +42,16 @@ helpviewer_keywords:
 - CMFCDropDownToolbarButton [MFC], SetDefaultCommand
 - CMFCDropDownToolbarButton [MFC], m_uiShowBarDelay
 ms.assetid: bc9d69e6-bd3e-4c15-9368-e80a504a0ba7
-ms.openlocfilehash: fcfb521e309463da81d0064451297b3b73610d2f
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: d62d5ecb0962f74a5dac1658c207cfb08cf12588
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69505329"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367609"
 ---
-# <a name="cmfcdropdowntoolbarbutton-class"></a>CMFCDropDownToolbarButton クラス
+# <a name="cmfcdropdowntoolbarbutton-class"></a>クラスをドロップダウンダウンツール バーボタン
 
-ツール バー ボタンの一種で、クリックされたときは標準ボタンと同じように動作します。 ただし、ユーザーがツールバーボタンを押したままにしている場合は、ドロップダウンツールバー ( [Cmfcdropdowntoolbar クラス](../../mfc/reference/cmfcdropdowntoolbar-class.md)) が開きます。
+ツール バー ボタンの一種で、クリックされたときは標準ボタンと同じように動作します。 ただし、ドロップダウン ツール バー (ユーザーがツール バー ボタンを押し下げたり押し下げたりすると[、CMFCDropDownToolBar クラス](../../mfc/reference/cmfcdropdowntoolbar-class.md)) が開きます。
 
 ## <a name="syntax"></a>構文
 
@@ -65,46 +65,46 @@ class CMFCDropDownToolbarButton : public CMFCToolBarButton
 
 |名前|説明|
 |----------|-----------------|
-|[CMFCDropDownToolbarButton::CMFCDropDownToolbarButton](#cmfcdropdowntoolbarbutton)|`CMFCDropDownToolbarButton` オブジェクトを構築します。|
+|[ツールバーボタン::CMFCドロップダウンツールバーボタン](#cmfcdropdowntoolbarbutton)|`CMFCDropDownToolbarButton` オブジェクトを構築します。|
 |`CMFCDropDownToolbarButton::~CMFCDropDownToolbarButton`|デストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CMFCDropDownToolbarButton:: CopyFrom](#copyfrom)|別のツールバーボタンのプロパティを現在のボタンにコピーします。 ( [CMFCToolBarButton:: CopyFrom を](../../mfc/reference/cmfctoolbarbutton-class.md#copyfrom)オーバーライドします)。|
+|[ツールバーボタン::コピーフロイン](#copyfrom)|別のツール バー ボタンのプロパティを現在のボタンにコピーします。 [(CMFCツールバーボタンをオーバーライドします。.](../../mfc/reference/cmfctoolbarbutton-class.md#copyfrom)|
 |`CMFCDropDownToolbarButton::CreateObject`|このクラス型の動的インスタンスを作成するために、フレームワークで使用されます。|
-|[CMFCDropDownToolbarButton::D ropDownToolbar](#dropdowntoolbar)|ドロップダウンツールバーを開きます。|
-|[CMFCDropDownToolbarButton:: ExportToMenuButton](#exporttomenubutton)|ツールバーボタンのテキストをメニューにコピーします。 ( [CMFCToolBarButton:: ExportToMenuButton](../../mfc/reference/cmfctoolbarbutton-class.md#exporttomenubutton)をオーバーライドします)。|
-|[CMFCDropDownToolbarButton:: GetDropDownToolBar](#getdropdowntoolbar)|ボタンに関連付けられているドロップダウンツールバーを取得します。|
+|[ツールバーボタン::Dロップダウンツールバー](#dropdowntoolbar)|ドロップダウン ツールバーを開きます。|
+|[ボタン::メニューへ移動](#exporttomenubutton)|ツールバー ボタンからメニューにテキストをコピーします。 ([オーバーライドします。](../../mfc/reference/cmfctoolbarbutton-class.md#exporttomenubutton)|
+|[ツールバーボタン::GetDropDownツールバー](#getdropdowntoolbar)|ボタンに関連付けられているドロップダウン ツール バーを取得します。|
 |`CMFCDropDownToolbarButton::GetThisClass`|このクラス型に関連付けられている[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)オブジェクトへのポインターを取得するために、フレームワークによって使用されます。|
-|[CMFCDropDownToolbarButton::IsDropDown](#isdropdown)|ドロップダウンツールバーが現在開いているかどうかを判断します。|
-|[CMFCDropDownToolbarButton::IsExtraSize](#isextrasize)|拡張された境界線でボタンを表示できるかどうかを決定します。 ( [CMFCToolBarButton:: IsExtraSize](../../mfc/reference/cmfctoolbarbutton-class.md#isextrasize)をオーバーライドします。)|
-|[CMFCDropDownToolbarButton:: On電卓 Atesize](#oncalculatesize)|指定されたデバイスコンテキストとドッキング状態のボタンのサイズを計算するために、フレームワークによって呼び出されます。 ( [CMFCToolBarButton:: On電卓 Atesize](../../mfc/reference/cmfctoolbarbutton-class.md#oncalculatesize)をオーバーライドします)。|
-|`CMFCDropDownToolbarButton::OnCancelMode`|[WM_CANCELMODE](/windows/win32/winmsg/wm-cancelmode)メッセージを処理するためにフレームワークによって呼び出されます。 ( `CMCToolBarButton::OnCancelMode`をオーバーライドします)。|
-|[CMFCDropDownToolbarButton::OnChangeParentWnd](#onchangeparentwnd)|新しいツールバーにボタンが挿入されたときにフレームワークによって呼び出されます。 ( [CMFCToolBarButton:: OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd)をオーバーライドします。)|
-|[CMFCDropDownToolbarButton:: OnClick](#onclick)|ユーザーがマウスボタンをクリックしたときにフレームワークによって呼び出されます。 ( [CMFCToolBarButton:: OnClick](../../mfc/reference/cmfctoolbarbutton-class.md#onclick)をオーバーライドします)。|
-|[CMFCDropDownToolbarButton::OnClickUp](#onclickup)|ユーザーがマウスボタンを離したときにフレームワークによって呼び出されます。 ( [CMFCToolBarButton:: OnClickUp](../../mfc/reference/cmfctoolbarbutton-class.md#onclickup)をオーバーライドします。)|
-|[CMFCDropDownToolbarButton::OnContextHelp](#oncontexthelp)|親ツールバーが WM_HELPHITTEST メッセージを処理するときに、フレームワークによって呼び出されます。 ( [CMFCToolBarButton:: OnContextHelp](../../mfc/reference/cmfctoolbarbutton-class.md#oncontexthelp)をオーバーライドします。)|
-|[CMFCDropDownToolbarButton:: Onカスタマイズ Emenu](#oncustomizemenu)|アプリケーションが親ツールバーにショートカットメニューを表示するときに、指定されたメニューを変更します。 ( [CMFCToolBarButton:: Onカスタマイズ Emenu](../../mfc/reference/cmfctoolbarbutton-class.md#oncustomizemenu)をオーバーライドします)。|
-|[CMFCDropDownToolbarButton:: OnDraw](#ondraw)|指定されたスタイルとオプションを使用してボタンを描画するために、フレームワークによって呼び出されます。 ( [CMFCToolBarButton:: OnDraw](../../mfc/reference/cmfctoolbarbutton-class.md#ondraw)をオーバーライドします)。|
-|[CMFCDropDownToolbarButton::OnDrawOnCustomizeList](#ondrawoncustomizelist)|**[カスタマイズ]** ダイアログボックスの **[コマンド]** ウィンドウにボタンを描画するために、フレームワークによって呼び出されます。 ( [CMFCToolBarButton:: OnDrawOnCustomizeList](../../mfc/reference/cmfctoolbarbutton-class.md#ondrawoncustomizelist)をオーバーライドします。)|
-|[CMFCDropDownToolbarButton:: Serialize](#serialize)|アーカイブからこのオブジェクトを読み取るか、アーカイブに書き込みます。 ( [CMFCToolBarButton:: Serialize](../../mfc/reference/cmfctoolbarbutton-class.md#serialize)をオーバーライドします)。|
-|[CMFCDropDownToolbarButton:: SetDefaultCommand](#setdefaultcommand)|ユーザーがボタンをクリックしたときにフレームワークが使用する既定のコマンドを設定します。|
+|[ツールバーボタン::IsDropDown](#isdropdown)|ドロップダウン ツール バーが現在開いているかどうかを判断します。|
+|[ツールバーボタン::アイスエクストラサイズ](#isextrasize)|ボタンを拡張枠線で表示できるかどうかを指定します。 ([オーバーライドします。](../../mfc/reference/cmfctoolbarbutton-class.md#isextrasize)|
+|[ツールバーボタン::計算サイズ](#oncalculatesize)|指定したデバイス コンテキストとドッキング状態のボタンのサイズを計算するために、フレームワークによって呼び出されます。 [(CMFCツールバーボタンをオーバーライドします::計算サイズ](../../mfc/reference/cmfctoolbarbutton-class.md#oncalculatesize).)|
+|`CMFCDropDownToolbarButton::OnCancelMode`|[WM_CANCELMODE](/windows/win32/winmsg/wm-cancelmode)メッセージを処理するために、フレームワークによって呼び出されます。 ( `CMCToolBarButton::OnCancelMode`をオーバーライドします)。|
+|[ツールバーボタン::オンチェンジペアレント](#onchangeparentwnd)|ボタンが新しいツール バーに挿入されたときに、フレームワークによって呼び出されます。 (オーバーライド[CMFCツールバーボタン::オンチェンジペアレントウンド](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd).)|
+|[クリック時ボタン::クリック時](#onclick)|ユーザーがマウス ボタンをクリックしたときに、フレームワークによって呼び出されます。 [(CMFCツールバーボタンをオーバーライドします。:クリック時](../../mfc/reference/cmfctoolbarbutton-class.md#onclick).)|
+|[ツールバーボタン::クリックアップ時](#onclickup)|ユーザーがマウス ボタンを離したときに、フレームワークによって呼び出されます。 [(CMFCツールバーボタンをオーバーライドします。.)](../../mfc/reference/cmfctoolbarbutton-class.md#onclickup)|
+|[ツールバーボタン::オンコンテキストヘルプ](#oncontexthelp)|親ツール バーがWM_HELPHITTEST メッセージを処理するときに、フレームワークによって呼び出されます。 ([オーバーライドします。](../../mfc/reference/cmfctoolbarbutton-class.md#oncontexthelp)|
+|[メニューボタン::メニューのオン](#oncustomizemenu)|アプリケーションが親ツール バーにショートカット メニューを表示するときに、指定されたメニューを変更します。 (オーバーライド[CMFCツールバーボタン::オンカスタマアメメニュー](../../mfc/reference/cmfctoolbarbutton-class.md#oncustomizemenu).)|
+|[ツールバーボタン::ドロー上げ](#ondraw)|指定したスタイルとオプションを使用してボタンを描画するために、フレームワークによって呼び出されます。 (オーバーライド[CMFCツールバーボタン::OnDraw](../../mfc/reference/cmfctoolbarbutton-class.md#ondraw).)|
+|[ツールバーボタン::オンドローオンカスタマイプリスト](#ondrawoncustomizelist)|[**カスタマイズ**] ダイアログ ボックスの **[コマンド**] ウィンドウにボタンを描画するために、フレームワークによって呼び出されます。 ([オーバーライドします。](../../mfc/reference/cmfctoolbarbutton-class.md#ondrawoncustomizelist)|
+|[ツールバーボタン::シリアル化](#serialize)|このオブジェクトをアーカイブから読み取るか、アーカイブに書き込みます。 (オーバーライド[CMFCツールバーボタン::シリアル化](../../mfc/reference/cmfctoolbarbutton-class.md#serialize).)|
+|[ツールバーボタン::既定のコマンド](#setdefaultcommand)|ユーザーがボタンをクリックしたときにフレームワークが使用する既定のコマンドを設定します。|
 
 ### <a name="data-members"></a>データ メンバー
 
 |名前|説明|
 |----------|-----------------|
-|[CMFCDropDownToolbarButton::m_uiShowBarDelay](#m_uishowbardelay)|ドロップダウンツールバーが表示される前に、ユーザーがマウスボタンを押したままにする必要がある時間の長さを指定します。|
+|[ツールバーボタン::m_uiShowBarDelay](#m_uishowbardelay)|ドロップダウン ツール バーが表示されるまでにマウス ボタンを押したままにする必要がある時間の長さを指定します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-は`CMFCDropDownToolBarButton` 、ボタンの右下隅に小さな矢印があるという点で、通常のボタンとは異なります。 ユーザーがドロップダウンツールバーからボタンを選択すると、フレームワークは最上位レベルのツールバーボタン (右下隅に小さな矢印が付いたボタン) にアイコンを表示します。
+A`CMFCDropDownToolBarButton`は通常のボタンとは異なり、ボタンの右下隅に小さな矢印が表示されます。 ユーザーがドロップダウン ツールバーからボタンを選択すると、フレームワークは最上位のツールバー ボタン (右下隅に小さい矢印が付いたボタン) にアイコンを表示します。
 
-ドロップダウンツールバーを実装する方法の詳細については、「 [Cmfcdropdowntoolbar クラス](../../mfc/reference/cmfcdropdowntoolbar-class.md)」を参照してください。
+ドロップダウン ツール バーを実装する方法については、「 [CMFCDropDownToolBar クラス](../../mfc/reference/cmfcdropdowntoolbar-class.md)」を参照してください。
 
-オブジェクトを[cmfctoolbarmenubutton クラス](../../mfc/reference/cmfctoolbarmenubutton-class.md)オブジェクトにエクスポートし、ポップアップメニューを含むメニューボタンとして表示できます。 `CMFCDropDownToolBarButton`
+オブジェクト`CMFCDropDownToolBarButton`は[、CMFCToolBarMenuButton クラス オブジェクト](../../mfc/reference/cmfctoolbarmenubutton-class.md)にエクスポートでき、ポップアップ メニューを持つメニュー ボタンとして表示されます。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -118,9 +118,9 @@ class CMFCDropDownToolbarButton : public CMFCToolBarButton
 
 **ヘッダー:** afxdropdowntoolbar.h
 
-##  <a name="copyfrom"></a>CMFCDropDownToolbarButton:: CopyFrom
+## <a name="cmfcdropdowntoolbarbuttoncopyfrom"></a><a name="copyfrom"></a>ツールバーボタン::コピーフロイン
 
-別のツールバーボタンのプロパティを現在のボタンにコピーします。
+別のツール バー ボタンのプロパティを現在のボタンにコピーします。
 
 ```
 virtual void CopyFrom(const CMFCToolBarButton& src);
@@ -129,13 +129,13 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 ### <a name="parameters"></a>パラメーター
 
 *src*<br/>
-[in]コピー元のソースボタンへの参照。
+[in]コピー元のボタンへの参照。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このツールバーボタンに別のツールバーボタンをコピーするには、このメソッドを呼び出します。 *src*の型`CMFCDropDownToolbarButton`はである必要があります。
+このツール バー ボタンに別のツール バー ボタンをコピーします。 *src*は 型`CMFCDropDownToolbarButton`でなければなりません。
 
-##  <a name="cmfcdropdowntoolbarbutton"></a>CMFCDropDownToolbarButton::CMFCDropDownToolbarButton
+## <a name="cmfcdropdowntoolbarbuttoncmfcdropdowntoolbarbutton"></a><a name="cmfcdropdowntoolbarbutton"></a>ツールバーボタン::CMFCドロップダウンツールバーボタン
 
 `CMFCDropDownToolbarButton` オブジェクトを構築します。
 
@@ -149,27 +149,27 @@ CMFCDropDownToolbarButton(
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszName*<br/>
-からボタンの既定のテキスト。
+*名前を指定します。*<br/>
+[in]ボタンの既定のテキスト。
 
-*pToolBar*<br/>
-からユーザーがボタンを`CMFCDropDownToolBar`押したときに表示されるオブジェクトへのポインター。
+*をクリックします。*<br/>
+[in]ユーザーがボタンを`CMFCDropDownToolBar`押したときに表示されるオブジェクトへのポインター。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-コンストラクターの2番目のオーバーロードは、 *Ptoolbar*が指定したツールバーの最初のボタンをドロップダウンボタンにコピーします。
+コンストラクターの 2 番目のオーバーロードは *、pToolBar*が指定するツール バーの最初のボタンをドロップダウン ボタンにコピーします。
 
-通常、ドロップダウンツールバーボタンは、 *Ptoolbar*によって指定されたツールバーの、最近使用したボタンのテキストを使用します。 このメソッドは、ボタンがメニューボタンに変換されるか、または **[カスタマイズ]** ダイアログボックスの **[コマンド]** タブに表示されるときに、 *lpszname*で指定されたテキストを使用します。 **[ユーザー設定]** ダイアログボックスの詳細については、「 [Cmfctoolbarscustomizedialog クラス](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)」を参照してください。
+通常、ドロップダウン ツール バー ボタンは *、pToolBar*で指定したツール バーの最近使用したボタンのテキストを使用します。 ボタンがメニュー ボタンに変換されるか、[**カスタマイズ**] ダイアログ ボックスの [**コマンド**] タブに表示されるときに*lpszName*で指定されたテキストが使用されます。 **[カスタマイズ**] ダイアログ ボックスの詳細については、「 [CMFCToolBarsCustomizeDialog クラス](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)」を参照してください。
 
 ### <a name="example"></a>例
 
-`CMFCDropDownToolbarButton`クラスのオブジェクトを構築する方法を次の例に示します。 このコードスニペットは、 [Visual Studio のデモサンプル](../../overview/visual-cpp-samples.md)に含まれています。
+クラスのオブジェクトを構築する方法を次の例に`CMFCDropDownToolbarButton`示します。 このコード スニペットは[、Visual Studio のデモ のサンプル](../../overview/visual-cpp-samples.md)の一部です。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#31](../../mfc/codesnippet/cpp/cmfcdropdowntoolbarbutton-class_1.cpp)]
 
-##  <a name="dropdowntoolbar"></a>CMFCDropDownToolbarButton::D ropDownToolbar
+## <a name="cmfcdropdowntoolbarbuttondropdowntoolbar"></a><a name="dropdowntoolbar"></a>ツールバーボタン::Dロップダウンツールバー
 
-ドロップダウンツールバーを開きます。
+ドロップダウン ツールバーを開きます。
 
 ```
 BOOL DropDownToolbar(CWnd* pWnd);
@@ -177,24 +177,24 @@ BOOL DropDownToolbar(CWnd* pWnd);
 
 ### <a name="parameters"></a>パラメーター
 
-*pWnd*<br/>
-からドロップダウンボックスの親ウィンドウ。または、ドロップダウンツールバーボタンの親ウィンドウを使用する場合は NULL。
+*Pwnd*<br/>
+[in]ドロップダウン フレームの親ウィンドウ、またはドロップダウン ツール バー ボタンの親ウィンドウを使用する場合は NULL。
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが成功した場合は0以外の。それ以外の場合は0です。
+メソッドが成功した場合は 0 以外の値を返します。それ以外の場合は 0。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-[CMFCDropDownToolbarButton:: OnClick](#onclick)メソッドは、このメソッドを呼び出して、ユーザーがツールバーボタンを押したときにドロップダウンツールバーを開きます。
+[CMFCDropDownToolbarButton::OnClick](#onclick)メソッドは、ユーザーがツール バー ボタンを押しながら押したときにドロップダウン ツール バーを開くために、このメソッドを呼び出します。
 
-このメソッドは、 [Cmfcdropdownframe:: Create](../../mfc/reference/cmfcdropdownframe-class.md#create)メソッドを使用して、ドロップダウンツールバーを作成します。 親ツールバーが垂直方向にドッキングされている場合、このメソッドは、適合に応じて、親ツールバーの左側または右側にドロップダウンツールバーを配置します。 それ以外の場合、このメソッドは、親ツールバーの下にドロップダウンツールバーを配置します。
+このメソッドは[、CMFCDropDownFrame::Create](../../mfc/reference/cmfcdropdownframe-class.md#create)メソッドを使用してドロップダウン ツール バーを作成します。 親ツールバーが垂直にドッキングされている場合、このメソッドは、ドロップダウン ツールバーを親ツール バーの左側または右側に配置します。 それ以外の場合、このメソッドは、親ツール バーの下にドロップダウン ツール バーを配置します。
 
-*PWnd*が NULL で、ドロップダウンツールバーボタンに親ウィンドウがない場合、このメソッドは失敗します。
+このメソッドは *、pWnd*が NULL で、ドロップダウン ツール バー ボタンに親ウィンドウがない場合に失敗します。
 
-##  <a name="exporttomenubutton"></a>  CMFCDropDownToolbarButton::ExportToMenuButton
+## <a name="cmfcdropdowntoolbarbuttonexporttomenubutton"></a><a name="exporttomenubutton"></a>ボタン::メニューへ移動
 
-ツールバーボタンのテキストをメニューにコピーします。
+ツールバー ボタンからメニューにテキストをコピーします。
 
 ```
 virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
@@ -202,22 +202,22 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*menuButton*<br/>
-からターゲットメニューボタンへの参照。
+*メニューボタン*<br/>
+[in]ターゲット メニュー ボタンへの参照。
 
 ### <a name="return-value"></a>戻り値
 
 メソッドが成功した場合は 0 以外。それ以外の場合は 0。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、基本クラスの実装 ( [CMFCToolBarButton:: ExportToMenuButton](../../mfc/reference/cmfctoolbarbutton-class.md#exporttomenubutton)) を呼び出した後、このボタンの各ツールバーメニュー項目を含むポップアップメニューをターゲットメニューボタンに追加します。 このメソッドは、ポップアップメニューにサブメニューを追加しません。
+このメソッドは、基本クラスの実装 ( [CMFCToolBarButton::ExportToMenuButton](../../mfc/reference/cmfctoolbarbutton-class.md#exporttomenubutton)) を呼び出し、このボタンの各ツール バー メニュー項目を含むポップアップ メニューをターゲット メニュー ボタンに追加します。 このメソッドは、サブメニューをポップアップ メニューに追加しません。
 
-親ツールバー、 `m_pToolBar`、が NULL の場合、または基底クラスの実装が FALSE を返す場合、このメソッドは失敗します。
+親ツール バーが NULL`m_pToolBar`の場合、または基本クラスの実装が FALSE を返した場合、このメソッドは失敗します。
 
-##  <a name="getdropdowntoolbar"></a>CMFCDropDownToolbarButton:: GetDropDownToolBar
+## <a name="cmfcdropdowntoolbarbuttongetdropdowntoolbar"></a><a name="getdropdowntoolbar"></a>ツールバーボタン::GetDropDownツールバー
 
-ボタンに関連付けられているドロップダウンツールバーを取得します。
+ボタンに関連付けられているドロップダウン ツール バーを取得します。
 
 ```
 CMFCToolBar* GetDropDownToolBar() const;
@@ -225,15 +225,15 @@ CMFCToolBar* GetDropDownToolBar() const;
 
 ### <a name="return-value"></a>戻り値
 
-ボタンに関連付けられているドロップダウンツールバー。
+ボタンに関連付けられているドロップダウン ツール バー。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、 `m_pToolBar`データメンバーを返します。
+このメソッドは、`m_pToolBar`データ メンバーを返します。
 
-##  <a name="isdropdown"></a>  CMFCDropDownToolbarButton::IsDropDown
+## <a name="cmfcdropdowntoolbarbuttonisdropdown"></a><a name="isdropdown"></a>ツールバーボタン::IsDropDown
 
-ドロップダウンツールバーが現在開いているかどうかを判断します。
+ドロップダウン ツール バーが現在開いているかどうかを判断します。
 
 ```
 BOOL IsDropDown() const;
@@ -241,15 +241,15 @@ BOOL IsDropDown() const;
 
 ### <a name="return-value"></a>戻り値
 
-ドロップダウンツールバーが現在開いている場合は0以外。それ以外の場合は0です。
+ドロップダウン ツールバーが現在開いている場合は 0 以外の値を返します。それ以外の場合は 0。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-[CMFCDropDownToolbarButton::D ropdowntoolbar](#dropdowntoolbar)メソッドを使用して、フレームワークによってドロップダウンツールバーが開きます。 ドロップダウンツールバーの非クライアント領域でマウスの左ボタンを押すと、フレームワークによってドロップダウンツールバーが閉じます。
+フレームワークは、メソッドを使用してドロップダウン ツール バー [:D](#dropdowntoolbar)開きます。 ユーザーがドロップダウン ツールバーの非クライアント領域でマウスの左ボタンを押すと、フレームワークはドロップダウン ツール バーを閉じます。
 
-##  <a name="isextrasize"></a>CMFCDropDownToolbarButton::IsExtraSize
+## <a name="cmfcdropdowntoolbarbuttonisextrasize"></a><a name="isextrasize"></a>ツールバーボタン::アイスエクストラサイズ
 
-拡張された境界線でボタンを表示できるかどうかを決定します。
+ボタンを拡張枠線で表示できるかどうかを指定します。
 
 ```
 virtual BOOL IsExtraSize() const;
@@ -257,27 +257,27 @@ virtual BOOL IsExtraSize() const;
 
 ### <a name="return-value"></a>戻り値
 
-拡張境界線を使用してツールバーボタンを表示できる場合は0以外。それ以外の場合は0です。
+ツール バー ボタンを拡張枠線で表示できる場合は 0 以外の値を返します。それ以外の場合は 0。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-拡張境界線の詳細については、「 [CMFCToolBarButton:: IsExtraSize](../../mfc/reference/cmfctoolbarbutton-class.md#isextrasize)」を参照してください。
+拡張境界線の詳細については[、「CMFC ツール バー ボタン::IsExtraSize](../../mfc/reference/cmfctoolbarbutton-class.md#isextrasize)」を参照してください。
 
-##  <a name="m_uishowbardelay"></a>CMFCDropDownToolbarButton::m_uiShowBarDelay
+## <a name="cmfcdropdowntoolbarbuttonm_uishowbardelay"></a><a name="m_uishowbardelay"></a>ツールバーボタン::m_uiShowBarDelay
 
-ドロップダウンツールバーが表示される前に、ユーザーがマウスボタンを押したままにする必要がある時間の長さを指定します。
+ドロップダウン ツール バーが表示されるまでにマウス ボタンを押したままにする必要がある時間の長さを指定します。
 
 ```
 static UINT m_uiShowBarDelay;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-遅延時間はミリ秒単位で計測されます。 既定値は 500 です。 この共有データメンバーの値を変更することで、別の遅延を設定できます。
+遅延時間はミリ秒単位で測定されます。 既定値は 500 です。 この共有データ メンバーの値を変更することで、別の遅延を設定できます。
 
-##  <a name="oncalculatesize"></a>CMFCDropDownToolbarButton:: On電卓 Atesize
+## <a name="cmfcdropdowntoolbarbuttononcalculatesize"></a><a name="oncalculatesize"></a>ツールバーボタン::計算サイズ
 
-指定されたデバイスコンテキストとドッキング状態のボタンのサイズを計算するために、フレームワークによって呼び出されます。
+指定したデバイス コンテキストとドッキング状態のボタンのサイズを計算するために、フレームワークによって呼び出されます。
 
 ```
 virtual SIZE OnCalculateSize(
@@ -289,25 +289,25 @@ virtual SIZE OnCalculateSize(
 ### <a name="parameters"></a>パラメーター
 
 *pDC*<br/>
-からボタンを表示するデバイスコンテキスト。
+[in]ボタンを表示するデバイス コンテキスト。
 
-*既定値の設定*<br/>
-からボタンの既定のサイズ。
+*サイズデフォルト*<br/>
+[in]ボタンの既定のサイズ。
 
 *bHorz*<br/>
-から親ツールバーのドッキング状態。 このパラメーターは、ツールバーが水平方向にドッキングされている場合、またはフローティング状態の場合は TRUE、ツールバーが垂直方向にドッキングされている場合は FALSE です。
+[in]親ツール バーのドッキング状態。 このパラメーターは、ツール バーが水平にドッキングされている場合、またはフローティング状態の場合は TRUE、ツール バーが垂直方向にドッキングされている場合は FALSE です。
 
 ### <a name="return-value"></a>戻り値
 
-ボタンの大きさをピクセル単位で格納する構造体。`SIZE`
+ボタン`SIZE`のサイズをピクセル単位で格納する構造体。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、ボタンサイズの水平方向の寸法にドロップダウン矢印の幅を追加することによって、基本クラスの実装 ( [CMFCToolBarButton:: On電卓 Atesize](../../mfc/reference/cmfctoolbarbutton-class.md#oncalculatesize)) を拡張します。
+このメソッドは、ボタン サイズの水平ディメンションにドロップダウン矢印の幅を追加することで、基本クラスの実装 ( [CMFCToolBarButton::OnCalculateSize](../../mfc/reference/cmfctoolbarbutton-class.md#oncalculatesize)) を拡張します。
 
-##  <a name="onchangeparentwnd"></a>CMFCDropDownToolbarButton::OnChangeParentWnd
+## <a name="cmfcdropdowntoolbarbuttononchangeparentwnd"></a><a name="onchangeparentwnd"></a>ツールバーボタン::オンチェンジペアレント
 
-新しいツールバーにボタンが挿入されたときにフレームワークによって呼び出されます。
+ボタンが新しいツール バーに挿入されたときに、フレームワークによって呼び出されます。
 
 ```
 virtual void OnChangeParentWnd(CWnd* pWndParent);
@@ -315,16 +315,16 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
 
 ### <a name="parameters"></a>パラメーター
 
-*pWndParent*<br/>
-から新しい親ウィンドウ。
+*親の子*<br/>
+[in]新しい親ウィンドウ。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、テキストラベル ( [CMFCToolBarButton:: m_strText](../../mfc/reference/cmfctoolbarbutton-class.md#m_strtext)) をクリアし、 [CMFCToolBarButton:: m_bText](../../mfc/reference/cmfctoolbarbutton-class.md#m_btext)および CMFCToolBarButton を設定することによって、基底クラスの実装 ( [CMFCToolBarButton:: OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd)) をオーバーライドします。 [:: m_bUserButton](../../mfc/reference/cmfctoolbarbutton-class.md#m_buserbutton)データメンバーを FALSE にします。
+このメソッドは、テキスト ラベル (CMFCツールバーボタン::m_strText) をクリアし[、CMFC ツールバー ボタン::m_bTextと CMFC ツールバー ボタン::m_bUserButton](../../mfc/reference/cmfctoolbarbutton-class.md#m_btext)データ メンバーを FALSE[CMFCToolBarButton::m_bUserButton](../../mfc/reference/cmfctoolbarbutton-class.md#m_buserbutton)に設定することで、基本クラスの実装 ( [CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd)) をオーバーライドします。 [CMFCToolBarButton::m_strText](../../mfc/reference/cmfctoolbarbutton-class.md#m_strtext)
 
-##  <a name="onclick"></a>CMFCDropDownToolbarButton:: OnClick
+## <a name="cmfcdropdowntoolbarbuttononclick"></a><a name="onclick"></a>クリック時ボタン::クリック時
 
-ユーザーがマウスボタンをクリックしたときにフレームワークによって呼び出されます。
+ユーザーがマウス ボタンをクリックしたときに、フレームワークによって呼び出されます。
 
 ```
 virtual BOOL OnClick(
@@ -334,25 +334,25 @@ virtual BOOL OnClick(
 
 ### <a name="parameters"></a>パラメーター
 
-*pWnd*<br/>
-からツールバーボタンの親ウィンドウ。
+*Pwnd*<br/>
+[in]ツール バー ボタンの親ウィンドウ。
 
-*bDelay*<br/>
-からメッセージを遅延で処理する必要がある場合は TRUE。
+*bディレイ*<br/>
+[in]メッセージを遅延で処理する必要がある場合は TRUE。
 
 ### <a name="return-value"></a>戻り値
 
-ボタンがクリックメッセージを処理する場合は0以外。それ以外の場合は0です。
+ボタンがクリック メッセージを処理する場合は 0 以外の値を返します。それ以外の場合は 0。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、ドロップダウンツールバーの状態を更新することによって、基底クラスの実装である[CMFCToolBarButton:: OnClick](../../mfc/reference/cmfctoolbarbutton-class.md#onclick)を拡張します。
+このメソッドは、ドロップダウン ツール バーの状態を更新することにより、基本クラスの実装[CMFCToolBarButton::OnClick](../../mfc/reference/cmfctoolbarbutton-class.md#onclick)を拡張します。
 
-ユーザーがツールバーボタンをクリックすると、このメソッドは、 [CMFCDropDownToolbarButton:: m_uiShowBarDelay](#m_uishowbardelay)データメンバーによって指定された時間を待機し、CMFCDropDownToolbarButton を使用してドロップダウンツールバーを開くタイマーを作成します。 [::D ropDownToolbar](#dropdowntoolbar)メソッド。 このメソッドは、ユーザーがツールバーボタンをクリックしたときに、ドロップダウンツールバーを閉じます。
+ユーザーがツール バー ボタンをクリックすると、このメソッドは[、CMFCDropDownToolbarButton::m_uiShowBarDelay](#m_uishowbardelay)データ メンバーで指定された時間を待機するタイマーを作成し[、CMFCDropDownToolbarButton::DropDownToolbar](#dropdowntoolbar)メソッドを使用してドロップダウン ツール バーを開きます。 このメソッドは、ユーザーがツール バー ボタンを 2 回目にクリックすると、ドロップダウン ツール バーを閉じます。
 
-##  <a name="onclickup"></a>CMFCDropDownToolbarButton::OnClickUp
+## <a name="cmfcdropdowntoolbarbuttononclickup"></a><a name="onclickup"></a>ツールバーボタン::クリックアップ時
 
-ユーザーがマウスボタンを離したときにフレームワークによって呼び出されます。
+ユーザーがマウス ボタンを離したときに、フレームワークによって呼び出されます。
 
 ```
 virtual BOOL OnClickUp();
@@ -360,19 +360,19 @@ virtual BOOL OnClickUp();
 
 ### <a name="return-value"></a>戻り値
 
-ボタンがクリックメッセージを処理する場合は0以外。それ以外の場合は0です。
+ボタンがクリック メッセージを処理する場合は 0 以外の値を返します。それ以外の場合は 0。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、ドロップダウンツールバーの状態を更新することによって、基底クラスの実装である[CMFCToolBarButton:: OnClickUp](../../mfc/reference/cmfctoolbarbutton-class.md#onclickup)を拡張します。
+このメソッドは、ドロップダウン ツール バーの状態を更新することで、基本クラスの実装である[CMFCToolBarButton::OnClickUp](../../mfc/reference/cmfctoolbarbutton-class.md#onclickup)を拡張します。
 
-このメソッドは、アクティブな場合、ドロップダウンツールバータイマーを停止します。 ドロップダウンツールバーが開いている場合は閉じます。
+このメソッドは、ドロップダウン ツール バー タイマーがアクティブな場合は停止します。 ドロップダウン ツールバーが開いている場合は、そのツールバーが閉じます。
 
-ドロップダウンツールバーとドロップダウンツールバーのタイマーの詳細については、「 [CMFCDropDownToolbarButton:: OnClick](#onclick)」を参照してください。
+ドロップダウン ツール バーとドロップダウン ツール バー タイマーの詳細については[、「CMFCDropDownToolbarButton::OnClick](#onclick)」を参照してください。
 
-##  <a name="oncontexthelp"></a>CMFCDropDownToolbarButton::OnContextHelp
+## <a name="cmfcdropdowntoolbarbuttononcontexthelp"></a><a name="oncontexthelp"></a>ツールバーボタン::オンコンテキストヘルプ
 
-親ツールバーが WM_HELPHITTEST メッセージを処理するときに、フレームワークによって呼び出されます。
+親ツール バーがWM_HELPHITTEST メッセージを処理するときに、フレームワークによって呼び出されます。
 
 ```
 virtual BOOL OnContextHelp(CWnd* pWnd);
@@ -380,22 +380,22 @@ virtual BOOL OnContextHelp(CWnd* pWnd);
 
 ### <a name="parameters"></a>パラメーター
 
-*pWnd*<br/>
-からツールバーボタンの親ウィンドウ。
+*Pwnd*<br/>
+[in]ツール バー ボタンの親ウィンドウ。
 
 ### <a name="return-value"></a>戻り値
 
-ボタンがヘルプメッセージを処理する場合は0以外の。それ以外の場合は0です。
+ボタンがヘルプ メッセージを処理する場合は 0 以外の値を返します。それ以外の場合は 0。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、 *Bdelay*を FALSE に設定して[CMFCDropDownToolbarButton:: OnClick](#onclick)メソッドを呼び出すことによって、基底クラスの実装 ( [CMFCToolBarButton:: OnContextHelp](../../mfc/reference/cmfctoolbarbutton-class.md#oncontexthelp)) を拡張します。 このメソッドは、 [CMFCDropDownToolbarButton:: OnClick](#onclick)によって返される値を返します。
+このメソッドは、基本クラスの実装を拡張します ( [CMFCツールバーボタン::OnContextHelp](../../mfc/reference/cmfctoolbarbutton-class.md#oncontexthelp)) を呼び出すことによって、 *bDelay*を FALSE に設定してメソッド[を呼び](#onclick)出します。 このメソッドは[、CMFCDropDownToolbarButton::OnClick](#onclick)によって返される値を返します。
 
-WM_HELPHITTEST メッセージの詳細については、 [テクニカルノート28を参照してください。状況依存のヘルプの](../../mfc/tn028-context-sensitive-help-support.md)サポート。
+WM_HELPHITTEST メッセージの詳細については、「 [TN028: 状況依存ヘルプのサポート](../../mfc/tn028-context-sensitive-help-support.md)」を参照してください。
 
-##  <a name="oncustomizemenu"></a>CMFCDropDownToolbarButton:: Onカスタマイズ Emenu
+## <a name="cmfcdropdowntoolbarbuttononcustomizemenu"></a><a name="oncustomizemenu"></a>メニューボタン::メニューのオン
 
-アプリケーションが親ツールバーにショートカットメニューを表示するときに、指定されたメニューを変更します。
+アプリケーションが親ツール バーにショートカット メニューを表示するときに、指定されたメニューを変更します。
 
 ```
 virtual BOOL OnCustomizeMenu(CMenu* pMenu);
@@ -403,16 +403,16 @@ virtual BOOL OnCustomizeMenu(CMenu* pMenu);
 
 ### <a name="parameters"></a>パラメーター
 
-*pMenu*<br/>
-からカスタマイズするメニュー。
+*メニュー*<br/>
+[in]カスタマイズするメニュー。
 
 ### <a name="return-value"></a>戻り値
 
 このメソッドは TRUE を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、次のメニュー項目を無効にすることによって、基本クラスの実装 ( [CMFCToolBarButton:: Onカスタマイズ Emenu](../../mfc/reference/cmfctoolbarbutton-class.md#oncustomizemenu)) を拡張します。
+このメソッドは、次のメニュー項目を無効にすることで、基本クラスの実装 ( [CMFCToolBarButton::OnCustomizeMenu](../../mfc/reference/cmfctoolbarbutton-class.md#oncustomizemenu)) を拡張します。
 
 - **ボタンイメージのコピー**
 
@@ -420,15 +420,15 @@ virtual BOOL OnCustomizeMenu(CMenu* pMenu);
 
 - **イメージ**
 
-- **Text**
+- **[テキスト]**
 
 - **画像とテキスト**
 
-フレームワークがカスタマイズモードで表示するショートカットメニューを変更するには、このメソッドをオーバーライドします。
+フレームワークがカスタマイズ モードで表示するショートカット メニューを変更するには、このメソッドをオーバーライドします。
 
-##  <a name="ondraw"></a>CMFCDropDownToolbarButton:: OnDraw
+## <a name="cmfcdropdowntoolbarbuttonondraw"></a><a name="ondraw"></a>ツールバーボタン::ドロー上げ
 
-指定されたスタイルとオプションを使用してボタンを描画するために、フレームワークによって呼び出されます。
+指定したスタイルとオプションを使用してボタンを描画するために、フレームワークによって呼び出されます。
 
 ```
 virtual void OnDraw(
@@ -445,36 +445,36 @@ virtual void OnDraw(
 ### <a name="parameters"></a>パラメーター
 
 *pDC*<br/>
-からボタンを表示するデバイスコンテキスト。
+[in]ボタンを表示するデバイス コンテキスト。
 
-*rect*<br/>
-からボタンの外接する四角形。
+*Rect*<br/>
+[in]ボタンの外接する四角形。
 
-*pImages*<br/>
-からボタンに関連付けられているツールバーイメージのコレクション。
+*pイメージズ*<br/>
+[in]ボタンに関連付けられているツール バー イメージのコレクション。
 
 *bHorz*<br/>
-から親ツールバーのドッキング状態。 このパラメーターは、ボタンが水平方向にドッキングされている場合は TRUE、ボタンが垂直方向にドッキングされている場合は FALSE です。
+[in]親ツール バーのドッキング状態。 このパラメーターは、ボタンが水平方向にドッキングされている場合は TRUE、ボタンが垂直方向にドッキングされている場合は FALSE です。
 
-*Bカスタマイズの Emode*<br/>
-からツールバーがカスタマイズモードであるかどうかを指定します。 このパラメーターは、ツールバーがカスタマイズモードの場合は TRUE、ツールバーがカスタマイズモードでない場合は FALSE です。
+*モードをカスタマイズする*<br/>
+[in]ツール バーがカスタマイズ モードかどうかを指定します。 このパラメーターは、ツール バーがカスタマイズ モードの場合は TRUE、ツール バーがカスタマイズ モードでない場合は FALSE です。
 
-*bHighlight 表示*<br/>
-からボタンを強調表示するかどうかを指定します。 このパラメーターは、ボタンが強調表示されている場合は TRUE、ボタンが強調表示されていない場合は FALSE になります。
+*bハイライト*<br/>
+[in]ボタンを強調表示するかどうかを指定します。 このパラメーターは、ボタンが強調表示されている場合は TRUE、ボタンが強調表示されていない場合は FALSE です。
 
-*bDrawBorder*<br/>
-からボタンの境界線を表示するかどうかを指定します。 このパラメーターは、ボタンの境界線を表示する場合は TRUE、ボタンの境界線を表示しない場合は FALSE になります。
+*ボーダーを描く*<br/>
+[in]ボタンに境界線を表示するかどうかを指定します。 このパラメーターは、ボタンに境界線を表示する場合は TRUE、ボタンに境界線を表示しない場合は FALSE です。
 
-*bGrayDisabledButtons*<br/>
-から無効なボタンを網掛けするか、無効になっているイメージのコレクションを使用するかどうかを指定します。 このパラメーターは、無効にしたボタンを網掛けする場合に TRUE になり、無効になったイメージのコレクションをこのメソッドで使用する必要がある場合は FALSE になります。
+*ボタン*<br/>
+[in]無効なボタンを網かけにするか、無効なイメージ コレクションを使用するかを指定します。 無効なボタンをシェーディングする場合は TRUE、無効なイメージ コレクションを使用する必要がある場合は FALSE です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-ツールバーボタンの描画をカスタマイズするには、このメソッドをオーバーライドします。
+ツール バー ボタンの描画をカスタマイズするには、このメソッドをオーバーライドします。
 
-##  <a name="ondrawoncustomizelist"></a>CMFCDropDownToolbarButton::OnDrawOnCustomizeList
+## <a name="cmfcdropdowntoolbarbuttonondrawoncustomizelist"></a><a name="ondrawoncustomizelist"></a>ツールバーボタン::オンドローオンカスタマイプリスト
 
-**[カスタマイズ]** ダイアログボックスの **[コマンド]** ウィンドウにボタンを描画するために、フレームワークによって呼び出されます。
+[**カスタマイズ**] ダイアログ ボックスの **[コマンド**] ウィンドウにボタンを描画するために、フレームワークによって呼び出されます。
 
 ```
 virtual int OnDrawOnCustomizeList(
@@ -486,27 +486,27 @@ virtual int OnDrawOnCustomizeList(
 ### <a name="parameters"></a>パラメーター
 
 *pDC*<br/>
-からボタンを表示するデバイスコンテキスト。
+[in]ボタンを表示するデバイス コンテキスト。
 
-*rect*<br/>
-からボタンの外接する四角形。
+*Rect*<br/>
+[in]ボタンの外接する四角形。
 
-*選択された bSelected*<br/>
-からボタンが選択されているかどうか。 このパラメーターが TRUE の場合、ボタンが選択されます。 このパラメーターが FALSE の場合、ボタンは選択されません。
+*b選択済み*<br/>
+[in]ボタンが選択されているかどうか。 このパラメーターが TRUE の場合、ボタンが選択されます。 このパラメーターが FALSE の場合、ボタンは選択されません。
 
 ### <a name="return-value"></a>戻り値
 
-指定したデバイスコンテキストのボタンの幅 (ピクセル単位)。
+指定したデバイス コンテキストのボタンの幅 (ピクセル単位)。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、ボタンがオーナー描画リストボックスに表示される必要がある場合に、カスタマイズ ダイアログボックス (**コマンド** タブ) によって呼び出されます。
+このメソッドは、オーナー描画リスト ボックスにボタンを表示する必要がある場合に、カスタマイズ ダイアログ ボックス **([コマンド**]タブ) によって呼び出されます。
 
-このメソッドは、ボタンのテキストラベルをボタンの名前 (つまり、コンストラクターに渡された*lpszname*パラメーターの値) に変更することによって、基本クラスの実装 ( [CMFCToolBarButton:: OnDrawOnCustomizeList](../../mfc/reference/cmfctoolbarbutton-class.md#ondrawoncustomizelist)) を拡張します。).
+このメソッドは、ボタンのテキスト ラベルをボタンの名前 (つまり、コンストラクターに渡した*lpszName*パラメーターの値) に変更することで、基本クラスの実装 ( [CMFCToolBarButton::OnDrawOnCustomizeList](../../mfc/reference/cmfctoolbarbutton-class.md#ondrawoncustomizelist)) を拡張します。
 
-##  <a name="serialize"></a>CMFCDropDownToolbarButton:: Serialize
+## <a name="cmfcdropdowntoolbarbuttonserialize"></a><a name="serialize"></a>ツールバーボタン::シリアル化
 
-アーカイブからこのオブジェクトを読み取るか、アーカイブに書き込みます。
+このオブジェクトをアーカイブから読み取るか、アーカイブに書き込みます。
 
 ```
 virtual void Serialize(CArchive& ar);
@@ -514,14 +514,14 @@ virtual void Serialize(CArchive& ar);
 
 ### <a name="parameters"></a>パラメーター
 
-*金*<br/>
-からまたはのシリアル化元のオブジェクト。`CArchive`
+*ar*<br/>
+[in]シリアル`CArchive`化の対象またはシリアル化先のオブジェクト。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメソッドは、親ツールバーのリソース ID をシリアル化することによって、基本クラスの実装 ( [CMFCToolBarButton:: Serialize](../../mfc/reference/cmfctoolbarbutton-class.md#serialize)) を拡張します。 アーカイブが読み込まれるとき ( [CArchive:: isloading](../../mfc/reference/carchive-class.md#isloading)は0以外の値を返します) `m_pToolBar` 、このメソッドは、シリアル化されたリソース ID を含むツールバーにデータメンバーを設定します。
+このメソッドは、親ツール バーのリソース ID をシリアル化することによって、基本クラスの実装 ( [CMFCToolBarButton::シリアル化](../../mfc/reference/cmfctoolbarbutton-class.md#serialize)) を拡張します。 アーカイブの読み込み中[(CArchive::IsLoading](../../mfc/reference/carchive-class.md#isloading)は 0 以外の`m_pToolBar`値を返します) 場合、このメソッドは、シリアル化されたリソース ID を含むツール バーにデータ メンバーを設定します。
 
-##  <a name="setdefaultcommand"></a>CMFCDropDownToolbarButton:: SetDefaultCommand
+## <a name="cmfcdropdowntoolbarbuttonsetdefaultcommand"></a><a name="setdefaultcommand"></a>ツールバーボタン::既定のコマンド
 
 ユーザーがボタンをクリックしたときにフレームワークが使用する既定のコマンドを設定します。
 
@@ -531,18 +531,18 @@ void SetDefaultCommand(UINT uiCmd);
 
 ### <a name="parameters"></a>パラメーター
 
-*uiCmd*<br/>
-から既定のコマンドの ID。
+*Uicmd*<br/>
+[in]既定のコマンドの ID。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-ユーザーがボタンをクリックしたときにフレームワークが実行する既定のコマンドを指定するには、このメソッドを呼び出します。 *UiCmd*によって指定されたコマンド ID を持つ項目は、親のドロップダウンツールバーに配置する必要があります。
+ユーザーがボタンをクリックしたときにフレームワークが実行する既定のコマンドを指定します。 *uiCmd*で指定されたコマンド ID を持つ項目は、親ドロップダウン ツールバーに配置する必要があります。
 
 ## <a name="see-also"></a>関連項目
 
-[階層図](../../mfc/hierarchy-chart.md)<br/>
+[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
 [クラス](../../mfc/reference/mfc-classes.md)<br/>
-[CMFCDropDownToolBar クラス](../../mfc/reference/cmfcdropdowntoolbar-class.md)<br/>
-[CMFCToolBar クラス](../../mfc/reference/cmfctoolbar-class.md)<br/>
+[クラスをドロップダウンメニューバー](../../mfc/reference/cmfcdropdowntoolbar-class.md)<br/>
+[クラス](../../mfc/reference/cmfctoolbar-class.md)<br/>
 [CMFCToolBarMenuButton クラス](../../mfc/reference/cmfctoolbarmenubutton-class.md)<br/>
 [チュートリアル: ツール バーへのコントロールの追加](../../mfc/walkthrough-putting-controls-on-toolbars.md)

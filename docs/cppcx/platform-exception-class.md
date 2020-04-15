@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Exception Class
 ms.assetid: ca1d5a67-3a5a-48fe-8099-f9c38a2d2dce
-ms.openlocfilehash: d37d55c56e3c23d8d9129c985cb4272d2e3ee47a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4604769d9d1bc5fa848d15459327dc87d82f7016
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62368735"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81363780"
 ---
 # <a name="platformexception-class"></a>Platform::Exception クラス
 
@@ -37,15 +37,15 @@ public ref class Exception : Object,    IException,    IPrintable,    IEquatable
 
 |メンバー|説明|
 |------------|-----------------|
-|[Exception::Exception](#ctor)|`Exception` クラスの新しいインスタンスを初期化します。|
+|[例外::例外](#ctor)|`Exception` クラスの新しいインスタンスを初期化します。|
 
 ### <a name="methods"></a>メソッド
 
-`Exception`クラスの継承、 `Equals()`、 `Finalize()`、`GetHashCode()`、`GetType()`、`MemberwiseClose()`、および`ToString()`からメソッド、 [platform::object Class](../cppcx/platform-object-class.md)します。 `Exception` クラスには、次のメソッドもあります。
+この`Exception`クラスは`Equals()`、 、 `Finalize()``GetHashCode()`、`GetType()``MemberwiseClose()`、 `ToString()` 、 、 、 の各メソッドを[プラットフォーム : :Object クラス](../cppcx/platform-object-class.md)から継承します。 `Exception` クラスには、次のメソッドもあります。
 
 |メンバー|説明|
 |------------|-----------------|
-|[Exception::CreateException](#createexception)|指定された HRESULT 値を表す例外を作成します。|
+|[例外::例外を作成します。](#createexception)|指定された HRESULT 値を表す例外を作成します。|
 
 ### <a name="properties"></a>プロパティ
 
@@ -53,20 +53,20 @@ Exception クラスには、次のプロパティもあります。
 
 |メンバー|説明|
 |------------|-----------------|
-|[Exception::HResult](#hresult)|例外に対応する HRESULT。|
-|[Exception::Message](#message)|例外について説明するメッセージ。 この値は読み取り専用で、 `Exception` が構築された後は変更できません。|
+|[例外::HResult](#hresult)|例外に対応する HRESULT。|
+|[例外::メッセージ](#message)|例外を説明するメッセージ。 この値は読み取り専用で、 `Exception` が構築された後は変更できません。|
 
 ### <a name="requirements"></a>必要条件
 
-**最小値には、クライアントがサポートされています。** Windows 8
+**サポートされる最小クライアント:** ウィンドウズ 8
 
-**最小値には、サーバーがサポートされています。** Windows Server 2012
+**サポートされる最小サーバー:** ウィンドウズ サーバー 2012
 
-**名前空間:** プラットフォーム
+**名前空間:** Platform
 
-**メタデータ:** platform.winmd
+**メタデータ:** プラットフォーム.winmd
 
-## <a name="createexception"></a> Exception::createexception メソッド
+## <a name="exceptioncreateexception-method"></a><a name="createexception"></a>例外::メソッドを作成します。
 
 指定した HRESULT 値から Platform::Exception^ を作成します。
 
@@ -79,23 +79,23 @@ Exception^ CreateException(int32 hr, Platform::String^ message);
 
 ### <a name="parameters"></a>パラメーター
 
-*hr*<br/>
-通常は COM メソッドを呼び出すことによって取得した HRESULT 値。 このメソッドがスローする場合は、値は 0 で、S_OK と等しい場合は、 [platform::invalidargumentexception](../cppcx/platform-invalidargumentexception-class.md)のため、成功する COM メソッドが例外をスローする必要があります。
+*人事*<br/>
+通常は COM メソッドを呼び出すことによって取得した HRESULT 値。 値が 0 の場合、S_OKに等しい場合、このメソッドは、成功する COM メソッドが例外をスローしてはならないため[、Platform::InvalidArgumentException](../cppcx/platform-invalidargumentexception-class.md)をスローします。
 
-*message*<br/>
+*メッセージ*<br/>
 エラーを説明する文字列。
 
 ### <a name="return-value"></a>戻り値
 
 エラー HRESULT を表す例外。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 COM インターフェイスのメソッドに対する呼び出しなどから、返された HRESULT から例外を作成するには、このメソッドを使用します。 カスタム メッセージを表示するために、String^ パラメーターを受け取るオーバーロードを使用することもできます。
 
-厳密に厳密に型指定された例外を作成する CreateException を使用する推奨ではなく作成が、 [platform::comexception](../cppcx/platform-comexception-class.md)だけで、HRESULT を格納しています。
+HRESULT を含むプラットフォーム[::COMException](../cppcx/platform-comexception-class.md)を作成するのではなく、CreateException を使用して厳密に型指定された例外を作成することを強くお勧めします。
 
-## <a name="ctor"></a>  Exception::exception コンス トラクター
+## <a name="exceptionexception-constructor"></a><a name="ctor"></a>例外::例外コンストラクタ
 
 Exception クラスの新しいインスタンスを初期化します。
 
@@ -108,13 +108,13 @@ Exception(int32 hresult, ::Platform::String^ message);
 
 ### <a name="parameters"></a>パラメーター
 
-*hresult*<br/>
+*Hresult*<br/>
 例外で表されるエラー HRESULT。
 
-*message*<br/>
+*メッセージ*<br/>
 例外に関連付けられているユーザー指定のメッセージ (規範的テキストなど)。 一般に、エラーが発生した方法と理由についてできるだけ具体的に説明するメッセージを提供する、2 番目のオーバーロードを優先する必要があります。
 
-## <a name="hresult"></a>  Exception::hresult プロパティ
+## <a name="exceptionhresult-property"></a><a name="hresult"></a>例外::HResult プロパティ
 
 例外に対応する HRESULT。
 
@@ -129,11 +129,11 @@ public:
 
 HRESULT 値。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 ほとんどの例外は、HRESULT 値の形で返される COM エラーとして開始されます。 C++/CX はこれらの値を Platform::Exception^ オブジェクトに変換し、このプロパティは元のエラー コードの値を格納します。
 
-## <a name="message"></a> Exception::message プロパティ
+## <a name="exceptionmessage-property"></a><a name="message"></a>例外::メッセージプロパティ
 
 エラーを説明するメッセージです。
 
@@ -147,9 +147,9 @@ public:property String^ Message;
 
 Windows ランタイムで発生する例外では、システムで用意されているエラーの説明になります。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-Windows 8 で、このプロパティは読み取り専用ため、そのバージョンの Windows ランタイムで例外が HRESULT として ABI 間で転送されます。 Windows 8.1 では、豊富な例外情報が ABI 経由で伝達され、開発者はカスタム メッセージを提供し、他のコンポーネントにはプログラムでそのメッセージにアクセスすることができます。 詳細については、次を参照してください。[例外 (C++/CX)](../cppcx/exceptions-c-cx.md)します。
+Windows 8 では、このバージョンの Windows ランタイムの例外は HRESULTS としてのみ ABI を介して転送されるため、このプロパティは読み取り専用です。 Windows 8.1 では、豊富な例外情報が ABI 経由で伝達され、開発者はカスタム メッセージを提供し、他のコンポーネントにはプログラムでそのメッセージにアクセスすることができます。 詳細については、「例外[(C++/CX)」](../cppcx/exceptions-c-cx.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

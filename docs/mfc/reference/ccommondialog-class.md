@@ -1,5 +1,5 @@
 ---
-title: CCommonDialog クラス
+title: クラス
 ms.date: 11/04/2016
 f1_keywords:
 - CCommonDialog
@@ -8,14 +8,14 @@ f1_keywords:
 helpviewer_keywords:
 - CCommonDialog [MFC], CCommonDialog
 ms.assetid: 1f68d65f-a0fd-4778-be22-ebbe51a95f95
-ms.openlocfilehash: 4fa7aa51d1ce482e00f68365045cd35c3fb7939b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 853a4756df3b70f4f33deb7159b4d1aee610092c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182268"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369446"
 ---
-# <a name="ccommondialog-class"></a>CCommonDialog クラス
+# <a name="ccommondialog-class"></a>クラス
 
 Windows コモン ダイアログの機能をカプセル化したクラスの基底クラスです。
 
@@ -31,11 +31,11 @@ class CCommonDialog : public CDialog
 
 |名前|説明|
 |----------|-----------------|
-|[CCommonDialog::CCommonDialog](#ccommondialog)|`CCommonDialog` オブジェクトを構築します。|
+|[ダイアログ::Cコモンダイアログ](#ccommondialog)|`CCommonDialog` オブジェクトを構築します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-次のクラスは、Windows のコモン ダイアログの機能をカプセル化します。
+次のクラスは、Windows コモン ダイアログの機能をカプセル化します。
 
 - [CFileDialog](../../mfc/reference/cfiledialog-class.md)
 
@@ -69,7 +69,7 @@ class CCommonDialog : public CDialog
 
 **ヘッダー:** afxdlgs.h
 
-##  <a name="ccommondialog"></a>  CCommonDialog::CCommonDialog
+## <a name="ccommondialogccommondialog"></a><a name="ccommondialog"></a>ダイアログ::Cコモンダイアログ
 
 `CCommonDialog` オブジェクトを構築します。
 
@@ -80,20 +80,20 @@ explicit CCommonDialog(CWnd* pParentWnd);
 ### <a name="parameters"></a>パラメーター
 
 *pParentWnd*<br/>
-親またはオーナー ウィンドウのオブジェクトを指し示す (型の[CWnd](../../mfc/reference/cwnd-class.md)) ダイアログ オブジェクトが属しています。 NULL の場合、ダイアログ オブジェクトの親ウィンドウは、アプリケーションのメイン ウィンドウに設定されます。
+ダイアログ オブジェクトが属する親ウィンドウ オブジェクトまたはオーナー ウィンドウ オブジェクト ( [CWnd](../../mfc/reference/cwnd-class.md)型 ) へのポインター。 NULL の場合、ダイアログ オブジェクトの親ウィンドウはメイン アプリケーション ウィンドウに設定されます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-参照してください[詳細](../../mfc/reference/cdialog-class.md#cdialog)の完全な情報。
+完全な情報については[、CDialog::CDialog](../../mfc/reference/cdialog-class.md#cdialog)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[CDialog クラス](../../mfc/reference/cdialog-class.md)<br/>
-[階層図](../../mfc/hierarchy-chart.md)<br/>
+[クラス](../../mfc/reference/cdialog-class.md)<br/>
+[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
 [CFileDialog クラス](../../mfc/reference/cfiledialog-class.md)<br/>
-[CFontDialog クラス](../../mfc/reference/cfontdialog-class.md)<br/>
+[クラス](../../mfc/reference/cfontdialog-class.md)<br/>
 [CColorDialog クラス](../../mfc/reference/ccolordialog-class.md)<br/>
-[CPageSetupDialog クラス](../../mfc/reference/cpagesetupdialog-class.md)<br/>
+[クラスを設定します。](../../mfc/reference/cpagesetupdialog-class.md)<br/>
 [CPrintDialog クラス](../../mfc/reference/cprintdialog-class.md)<br/>
-[CFindReplaceDialog クラス](../../mfc/reference/cfindreplacedialog-class.md)<br/>
+[クラスを検索します。](../../mfc/reference/cfindreplacedialog-class.md)<br/>
 [COleDialog クラス](../../mfc/reference/coledialog-class.md)
