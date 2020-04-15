@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: e2b88bb1c60c97c9f63caacfb98ba87e0443e799
-ms.sourcegitcommit: 44eeb065c3148d0484de791080a3f963109744fc
+ms.openlocfilehash: b15a09fa450995c55cc6e7313c51db4a3ba3f48a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79509441"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81316623"
 ---
 # <a name="contributing"></a>コントリビューション
 
@@ -14,11 +14,11 @@ Visual C++ ドキュメントへの貢献に関心をお寄せいただきあり
 
 このトピックの内容:
 
-* [投稿のプロセス](#process-for-contributing)
-* [注意事項](#dos-and-donts)
-* [ドキュメントの構築](#building-the-docs)
-* [サンプルへの投稿](#contributing-to-samples)
-* [共同作成者ライセンス条項](#contributor-license-agreement)
+- [投稿のプロセス](#process-for-contributing)
+- [注意事項](#dos-and-donts)
+- [ドキュメントの構築](#building-the-docs)
+- [サンプルへの投稿](#contributing-to-samples)
+- [共同作成者ライセンス条項](#contributor-license-agreement)
 
 ## <a name="process-for-contributing"></a>投稿のプロセス
 
@@ -27,7 +27,7 @@ Visual C++ ドキュメントへの貢献に関心をお寄せいただきあり
 
 小さな変更の場合はこの最初の手順をスキップできます。
 
-**手順 2:**`MicrosoftDocs/cpp-docs` リポジトリをフォークします。
+**手順 2:** `MicrosoftDocs/cpp-docs` リポジトリをフォークします。
 
 **手順 3:** 記事の `branch` を作成します。
 
