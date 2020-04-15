@@ -1,10 +1,11 @@
 ---
 title: exp、expf、expl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - expf
 - expl
 - exp
+- _o_exp
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +35,12 @@ helpviewer_keywords:
 - calculating exponentials
 - exp function
 ms.assetid: 7070016d-1143-407e-9e9a-6b059bb88867
-ms.openlocfilehash: 380f3e861b3ae1ba2f57aa781c32829771612b9f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: cbf303b2b92afd83a1c3181dc98a1dbdcd639c1b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941635"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81347594"
 ---
 # <a name="exp-expf-expl"></a>exp、expf、expl
 
@@ -66,33 +68,35 @@ long double expl(
 
 ### <a name="parameters"></a>パラメーター
 
-*x*<br/>
-自然対数*の底を*exponentiate する浮動小数点値。
+*X*<br/>
+自然対数を指数化する浮動小数点*値。*
 
 ## <a name="return-value"></a>戻り値
 
-**Exp**関数は、成功した場合は、浮動小数点パラメーター *x*の指数値を返します。 つまり、結果は*e*<sup>*x*</sup>になります。ここで、 *e*は自然対数の底です。 オーバーフローの場合、関数は INF (無限大) を返し、アンダーフローでは 0**を返します**。
+**exp**関数は、浮動小数点パラメーター *x*の指数値を返します (成功した場合)。 つまり、結果は*e*<sup>*x*</sup>で *、e*は自然対数の基底になります。 オーバーフロー時には、関数は INF (無限大) を返し、アンダーフローでは**exp**は 0 を返します。
 
 |入力|SEH 例外|Matherr 例外|
 |-----------|-------------------|-----------------------|
-|± Quiet NaN、不確定|なし|_DOMAIN|
-|±無限大|INVALID|_DOMAIN|
+|±静かなNaN、不確定|なし|_DOMAIN|
+|± 無限大|INVALID|_DOMAIN|
 |x ≥ 7.097827e+002|INEXACT+OVERFLOW|OVERFLOW|
 |X ≤ -7.083964e+002|INEXACT+UNDERFLOW|UNDERFLOW|
 
-**Exp**関数には、ストリーミング SIMD 拡張命令 2 (SSE2) を使用する実装があります。 SSE2 実装の使い方の詳細および制約については、「[_set_SSE2_enable](set-sse2-enable.md)」をご覧ください。
+**exp**関数には、ストリーミング SIMD 拡張 2 (SSE2) を使用する実装があります。 SSE2 実装の使い方の詳細および制約については、「[_set_SSE2_enable](set-sse2-enable.md)」をご覧ください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-C++ではオーバーロードが可能であるため、 **float**または**long double**引数を受け取る**exp**のオーバーロードを呼び出すことができます。 C プログラムでは、 **exp**は常に**倍精度浮動小数点数**を取得し、double を返します。
+C++ ではオーバーロードが可能なので **、float**引数または**長い二重**引数を使用する**exp**のオーバーロードを呼び出すことができます。 C プログラムでは **、exp**は常に二**重**を受け取り、返します。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|関数|必須の C ヘッダー|必須の C++ ヘッダー|
+|機能|必須の C ヘッダー|必須の C++ ヘッダー|
 |--------------|---------------------|---|
-|**exp**, **、**|\<math.h>|\<cmath> または \<math.h>|
+|**exp**, **expf**, **expl**|\<math.h>|\<cmath> または \<math.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 

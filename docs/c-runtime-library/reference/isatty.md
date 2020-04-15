@@ -1,8 +1,9 @@
 ---
 title: _isatty
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _isatty
+- _o__isatty
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -27,12 +29,12 @@ helpviewer_keywords:
 - _isatty function
 - checking character devices
 ms.assetid: 9f1b2e87-0cd7-4079-b187-f2b7ca15fcbe
-ms.openlocfilehash: 2d2ba2fdfeb1c8bffe47b0953f0629746d2eb599
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c9611c2bd55ebc1602a73e4c71518716ea100420
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954553"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81343900"
 ---
 # <a name="_isatty"></a>_isatty
 
@@ -46,26 +48,28 @@ int _isatty( int fd );
 
 ### <a name="parameters"></a>パラメーター
 
-*fd*<br/>
+*Fd*<br/>
 調べるデバイスを参照するファイル記述子。
 
 ## <a name="return-value"></a>戻り値
 
-**_isatty**は、記述子が文字デバイスに関連付けられている場合、0以外の値を返します。 それ以外の場合、 **_isatty**は0を返します。
+記述子が文字デバイスに関連付けられている場合 **、_isatty**は 0 以外の値を返します。 それ以外の場合 **、_isatty**は 0 を返します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**_Isatty**関数は、 *fd*がキャラクターデバイス (端末、コンソール、プリンター、またはシリアルポート) に関連付けられているかどうかを判断します。
+**_isatty**機能は *、fd*が文字装置 (端末、コンソール、プリンター、またはシリアル・ポート) に関連付けられているかどうかを判別します。
 
-この関数は、 *fd*パラメーターを検証します。 *Fd*が無効なファイルポインターの場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、この関数は0を返し、 **errno**を**EBADF**に設定します。
+この関数は *、fd*パラメータを検証します。 *fd*が不正なファイル ポインタである場合は、「パラメータ[の検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメータ ハンドラが呼び出されます。 実行を続行できる場合、関数は 0 を返し **、errno**を**EBADF**に設定します。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**_isatty**|\<io.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="libraries"></a>ライブラリ
 
@@ -91,7 +95,7 @@ int main( void )
 }
 ```
 
-### <a name="sample-output"></a>出力例
+### <a name="sample-output"></a>サンプル出力
 
 ```Output
 stdout has not been redirected to a file

@@ -1,9 +1,11 @@
 ---
 title: _ismbbalnum、_ismbbalnum_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _ismbbalnum
 - _ismbbalnum_l
+- _o__ismbbalnum
+- _o__ismbbalnum_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +34,12 @@ helpviewer_keywords:
 - ismbbalnum_l function
 - _ismbbalnum function
 ms.assetid: 8025de50-a871-49fd-9ae6-f437b47aa987
-ms.openlocfilehash: d817ea6875149f9342854b0c22b27b0c93d29636
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 3a200415571498c25ce5aacc6271004125ef16d2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954299"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81343691"
 ---
 # <a name="_ismbbalnum-_ismbbalnum_l"></a>_ismbbalnum、_ismbbalnum_l
 
@@ -55,30 +58,34 @@ int _ismbbalnum_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*c*<br/>
+*C*<br/>
 テストする整数。
 
-*locale*<br/>
+*ロケール*<br/>
 使用するロケール。
 
 ## <a name="return-value"></a>戻り値
 
-次の式の場合、 **_ismbbalnum**は0以外の値を返します。
+**_ismbbalnum**式の場合は、0 以外の値を返します。
 
 `isalnum(c) || _ismbbkalnum(c)`
 
-*c*の場合は0以外の。それ以外の場合は0。
+*c*の場合は 0 以外の値、それ以外の場合は 0 です。
 
-**_L**サフィックスが付いたこの関数のバージョンは、ロケールに依存する動作に現在のロケールではなく渡されたロケールを使用する点を除いて同じです。
+**_l**サフィックスを持つこの関数のバージョンは、ロケール依存の動作に現在のロケールの代わりに渡されたロケールを使用する点を除いて同じです。
+
+## <a name="remarks"></a>解説
+
+既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**_ismbbalnum**|\<mbctype.h>|
 |**_ismbbalnum_l**|\<mbctype.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="libraries"></a>ライブラリ
 
@@ -87,4 +94,4 @@ int _ismbbalnum_l(
 ## <a name="see-also"></a>関連項目
 
 [バイト分類](../../c-runtime-library/byte-classification.md)<br/>
-[_ismbb 系ルーチン](../../c-runtime-library/ismbb-routines.md)<br/>
+[_ismbbルーチン](../../c-runtime-library/ismbb-routines.md)<br/>

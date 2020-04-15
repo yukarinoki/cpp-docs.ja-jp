@@ -1,9 +1,11 @@
 ---
 title: _filelength、_filelengthi64
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _filelengthi64
 - _filelength
+- _o__filelength
+- _o__filelengthi64
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +35,12 @@ helpviewer_keywords:
 - files [C++], length
 - _filelengthi64 function
 ms.assetid: 3ab83d5a-543c-4079-b9d9-0abfc7da0275
-ms.openlocfilehash: d7cf7f5bea5ed8964ec1a714a2a70d289daf085f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 1a830bedc8dca65410a2df49b96c6e3bf6e11b4a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957219"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81346884"
 ---
 # <a name="_filelength-_filelengthi64"></a>_filelength、_filelengthi64
 
@@ -56,21 +59,25 @@ __int64 _filelengthi64(
 
 ### <a name="parameters"></a>パラメーター
 
-*fd*<br/>
+*Fd*<br/>
 ファイル記述子をターゲットにします。
 
 ## <a name="return-value"></a>戻り値
 
-**_Filelength**と **_filelengthi64**はどちらも、 *fd*に関連付けられているターゲットファイルのファイル長をバイト単位で返します。 *Fd*が無効なファイル記述子の場合、この関数は「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、どちらの関数もエラーを示す-1L を返し、 **errno**を**EBADF**に設定します。
+**_filelength**と **_filelengthi64**の両方が *、fd*に関連付けられたターゲット・ファイルのファイル長をバイト単位で返します。 *fd*が無効なファイル記述子である場合、この関数は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーター ハンドラーを呼び出します。 実行を続行できる場合、両方の関数は -1L を返してエラーを示し **、errno**を**EBADF**に設定します。
+
+## <a name="remarks"></a>解説
+
+既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|関数|必須ヘッダー|
+|機能|必須ヘッダー|
 |--------------|---------------------|
 |**_filelength**|\<io.h>|
 |**_filelengthi64**|\<io.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="example"></a>例
 
