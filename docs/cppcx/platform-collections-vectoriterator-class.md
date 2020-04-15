@@ -7,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - VectorIterator Class
 ms.assetid: d531cb42-27e0-48a6-bf5e-c265891a18ff
-ms.openlocfilehash: 55f4e7f1d9367779d131796fdf29e6098eb6aa0f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e649027c2ba3f637c42765af691f4d321913fb28
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161628"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81354368"
 ---
 # <a name="platformcollectionsvectoriterator-class"></a>Platform::Collections::VectorIterator クラス
 
-Windows ランタイム IVector インターフェイスから派生したオブジェクトの標準テンプレート ライブラリ反復子を提供します。
+Windows ランタイム IVector インターフェイスから派生したオブジェクトの標準テンプレート ライブラリ反復器を提供します。
 
-VectorIterator の型 VectorProxy 要素を格納するプロキシ反復子は、\<T >。 ただし、プロキシ オブジェクトは、ユーザー コードにはほとんどは表示されません。 詳細については、「 [Collections (C++/CX) (コレクション (C++/CX))](../cppcx/collections-c-cx.md)」を参照してください。
+ベクターイテレータは、型 VectorProxy\<T>の要素を格納するプロキシ反復子です。 ただし、プロキシ オブジェクトは、ユーザー コードにはほとんどは表示されません。 詳細については、「 [Collections (C++/CX) (コレクション (C++/CX))](../cppcx/collections-c-cx.md)」を参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -40,35 +40,35 @@ VectorIterator テンプレート クラスの型名。
 |----------|-----------------|
 |`difference_type`|ポインターの相違点 (ptrdiff_t)。|
 |`iterator_category`|ランダム アクセス反復子 (::std::random_access_iterator_tag) のカテゴリ。|
-|`pointer`|Platform::Collections::Details::VectorProxy 内部型へのポインター\<T > は、VectorIterator の実装に必要な。|
-|`reference`|Platform::Collections::Details::VectorProxy 内部型への参照を\<T >、つまり、VectorIterator の実装に必要な。|
+|`pointer`|VectorIterator の実装に必要な内部型へのポインター、 プラットフォーム:コレクション::Details::VectorProxy\<T>。|
+|`reference`|VectorIterator の実装に必要な内部型への参照、 プラットフォーム:コレクション::D:VectorProxy\<T>、。|
 |`value_type`|`T` 型名。|
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
 |名前|説明|
 |----------|-----------------|
-|[VectorIterator::VectorIterator](#ctor)|VectorIterator クラスの新しいインスタンスを初期化します。|
+|[ベクトル反復器::ベクトル反復器](#ctor)|VectorIterator クラスの新しいインスタンスを初期化します。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
 |名前|説明|
 |----------|-----------------|
-|[VectorIterator::operator- 演算子](#operator-minus)|現在の反復子から指定した数の要素を減算して新しい反復子を生成するか、現在の反復子から指定した反復子を減算して反復子間の要素数を生成します。|
-|[VectorIterator::operator-- 演算子](#operator-decrement)|現在の VectorIterator をデクリメントします。|
-|[VectorIterator::operator!= 演算子](#operator-inequality)|現在の VectorIterator が、指定された VectorIterator と等しくないかどうかを示します。|
-|[VectorIterator::operator* 演算子](#operator-dereference)|現在の VectorIterator により指定された要素への参照を取得します。|
-|[VectorIterator::operator\[\]](#operator-at)|現在の VectorIterator から指定された転置にある要素への参照を取得します。|
-|[VectorIterator::operator+ 演算子](#operator-plus)|指定された VectorIterator から指定された転置にある要素を参照する VectorIterator を返します。|
-|[VectorIterator::operator++ 演算子](#operator-increment)|現在の VectorIterator をインクリメントします。|
-|[VectorIterator::operator+= 演算子](#operator-plus-assign)|指定されたディスプレイスメントだけ現在の VectorIterator をインクリメントします。|
-|[VectorIterator::operator< 演算子](#operator-less-than)|現在の VectorIterator が、指定された VectorIterator より小さいかどうかを示します。|
-|[Vectoriterator::operator\<= 演算子](#operator-less-than-or-equals)|現在の VectorIterator が、指定された VectorIterator 以下かどうかを示します。|
-|[VectorIterator::operator-= 演算子](#operator-minus-equals)|指定されたディスプレイスメントだけ現在の VectorIterator をデクリメントします。|
-|[VectorIterator::operator== 演算子](#operator-equality)|現在の VectorIterator が、指定された VectorIterator と等しいかどうかを示します。|
+|[ベクトル反復器::演算子 - 演算子](#operator-minus)|現在の反復子から指定した数の要素を減算して新しい反復子を生成するか、現在の反復子から指定した反復子を減算して反復子間の要素数を生成します。|
+|[ベクトル反復器::演算子 -- 演算子](#operator-decrement)|現在の VectorIterator をデクリメントします。|
+|[ベクトル反復器::演算子!= 演算子](#operator-inequality)|現在の VectorIterator が、指定された VectorIterator と等しくないかどうかを示します。|
+|[ベクトル反復器::演算子* 演算子](#operator-dereference)|現在の VectorIterator により指定された要素への参照を取得します。|
+|[ベクトル反復器::演算子\[\]](#operator-at)|現在の VectorIterator から指定された転置にある要素への参照を取得します。|
+|[ベクトル反復器::演算子+ 演算子](#operator-plus)|指定された VectorIterator から指定された転置にある要素を参照する VectorIterator を返します。|
+|[ベクトル反復器::演算子++ 演算子](#operator-increment)|現在の VectorIterator をインクリメントします。|
+|[ベクトル反復器::演算子+=演算子](#operator-plus-assign)|指定されたディスプレイスメントだけ現在の VectorIterator をインクリメントします。|
+|[ベクトル反復器::演算子<演算子](#operator-less-than)|現在の VectorIterator が、指定された VectorIterator より小さいかどうかを示します。|
+|[ベクトル反復器::演算子\<= 演算子](#operator-less-than-or-equals)|現在の VectorIterator が、指定された VectorIterator 以下かどうかを示します。|
+|[ベクトル反復器::演算子- = 演算子](#operator-minus-equals)|指定されたディスプレイスメントだけ現在の VectorIterator をデクリメントします。|
+|[ベクトル反復器::演算子==演算子](#operator-equality)|現在の VectorIterator が、指定された VectorIterator と等しいかどうかを示します。|
 |[VectorIterator::operator> 演算子](#operator-greater-than)|現在の VectorIterator が、指定された VectorIterator より大きいかどうかを示します。|
-|[VectorIterator::operator-> 演算子](#operator-arrow)|現在の VectorIterator により参照される要素のアドレスを取得します。|
-|[VectorIterator::operator>= 演算子](#operator-greater-than-or-equals)|現在の VectorIterator が、指定された VectorIterator 以上であるかどうかを示します。|
+|[ベクトル反復器::演算子>演算子](#operator-arrow)|現在の VectorIterator により参照される要素のアドレスを取得します。|
+|[ベクトル反復器::演算子>= 演算子](#operator-greater-than-or-equals)|現在の VectorIterator が、指定された VectorIterator 以上であるかどうかを示します。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -80,7 +80,7 @@ VectorIterator テンプレート クラスの型名。
 
 **名前空間:** Platform::Collections
 
-## <a name="operator-arrow"></a>  Vectoriterator::operator-&gt;演算子
+## <a name="vectoriteratoroperator-gt-operator"></a><a name="operator-arrow"></a>ベクトル反復器::演算子 -&gt;演算子
 
 現在の VectorIterator により参照される要素のアドレスを取得します。
 
@@ -96,7 +96,7 @@ Detail::ArrowProxy<T> operator->() const;
 
 戻り値の型は、この演算子の実装に必要な、指定されていない内部型です。
 
-## <a name="operator-decrement"></a>  Vectoriterator::operator - 演算子
+## <a name="vectoriteratoroperator---operator"></a><a name="operator-decrement"></a>ベクトル反復器::演算子 -- 演算子
 
 現在の VectorIterator をデクリメントします。
 
@@ -112,13 +112,13 @@ VectorIterator operator--(int);
 
 最初の構文は、現在の VectorIterator をデクリメントしてから返します。 2 番目の構文は、現在の VectorIterator のコピーを返し、現在の VectorIterator をデクリメントします。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 最初の VectorIterator 構文は、現在の VectorIterator の前置デクリメントを実行します。
 
 2 番目の構文は、現在の VectorIterator に後置デクリメントを実行します。 2 つ目の構文の `int` 型は、実際の整数オペランドではなく後置デクリメント演算を示します。
 
-## <a name="operator-dereference"></a>  Vectoriterator::operator\*演算子
+## <a name="vectoriteratoroperator-operator"></a><a name="operator-dereference"></a>ベクトル反復器::演算子\*
 
 現在の VectorIterator により指定される要素のアドレスを取得します。
 
@@ -132,7 +132,7 @@ reference operator*() const;
 
 現在の VectorIterator により指定される要素。
 
-## <a name="operator-equality"></a>  Vectoriterator::operator = 演算子
+## <a name="vectoriteratoroperator-operator"></a><a name="operator-equality"></a>ベクトル反復器::演算子==演算子
 
 現在の VectorIterator が、指定された VectorIterator と等しいかどうかを示します。
 
@@ -144,14 +144,14 @@ bool operator==(const VectorIterator& other) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*other*<br/>
+*他*<br/>
 別の VectorIterator。
 
 ### <a name="return-value"></a>戻り値
 
-**true** 、現在の VectorIterator と等しい場合*他*、それ以外の**false**します。
+現在の VectorIterator が*他*の値と等しい場合は**true。** それ以外の場合**は false。**
 
-## <a name="operator-greater-than"></a>  Vectoriterator::operator&gt;演算子
+## <a name="vectoriteratoroperatorgt-operator"></a><a name="operator-greater-than"></a>ベクトル反復器::演算子&gt;
 
 現在の VectorIterator が、指定された VectorIterator より大きいかどうかを示します。
 
@@ -163,14 +163,14 @@ bool operator>(const VectorIterator& other) const
 
 ### <a name="parameters"></a>パラメーター
 
-*other*<br/>
+*他*<br/>
 別の VectorIterator。
 
 ### <a name="return-value"></a>戻り値
 
-**true**よりも大きい場合は、現在の VectorIterator*他*、それ以外の**false**します。
+現在の VectorIterator が*他*のベクターよりも大きい場合は**true。** それ以外の場合**は false。**
 
-## <a name="operator-greater-than-or-equals"></a>  Vectoriterator::operator&gt;= 演算子
+## <a name="vectoriteratoroperatorgt-operator"></a><a name="operator-greater-than-or-equals"></a>ベクトル反復器::演算子&gt;= 演算子
 
 現在の VectorIterator が、指定された VectorIterator 以上であるかどうかを示します。
 
@@ -182,14 +182,14 @@ bool operator>=(const VectorIterator& other) const
 
 ### <a name="parameters"></a>パラメーター
 
-*other*<br/>
+*他*<br/>
 別の VectorIterator。
 
 ### <a name="return-value"></a>戻り値
 
-**true**より大きいまたは等しいかどうか、現在の VectorIterator は*他*、それ以外の**false**します。
+現在の VectorIterator が*他*の値以上の場合は**true。** それ以外の場合**は false。**
 
-## <a name="operator-increment"></a>  Vectoriterator::operator++ 演算子
+## <a name="vectoriteratoroperator-operator"></a><a name="operator-increment"></a>ベクトル反復器::演算子++ 演算子
 
 現在の VectorIterator をインクリメントします。
 
@@ -204,13 +204,13 @@ VectorIterator operator++(int);
 
 最初の構文は、現在の VectorIterator をインクリメントしてから返します。 2 番目の構文は、現在の VectorIterator のコピーを返し、現在の VectorIterator をインクリメントします。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 最初の VectorIterator 構文は、現在の VectorIterator の前置インクリメントを実行します。
 
 2 番目の構文は、現在の VectorIterator に後置インクリメントを実行します。 2 つ目の構文の `int` 型は、実際の整数オペランドではなく後置インクリメント演算を示します。
 
-## <a name="operator-inequality"></a>  Vectoriterator::operator! = 演算子
+## <a name="vectoriteratoroperator-operator"></a><a name="operator-inequality"></a>ベクトル反復器::演算子!= 演算子
 
 現在の VectorIterator が、指定された VectorIterator と等しくないかどうかを示します。
 
@@ -222,14 +222,14 @@ bool operator!=(const VectorIterator& other) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*other*<br/>
+*他*<br/>
 別の VectorIterator。
 
 ### <a name="return-value"></a>戻り値
 
-**true** 、現在の VectorIterator が等しくない場合*他*、それ以外の**false**します。
+現在の VectorIterator が*他*の値と等しくない場合は**true。** それ以外の場合**は false。**
 
-## <a name="operator-less-than"></a>  Vectoriterator::operator&lt;演算子
+## <a name="vectoriteratoroperatorlt-operator"></a><a name="operator-less-than"></a>ベクトル反復器::演算子&lt;
 
 現在の VectorIterator が、指定された VectorIterator より小さいかどうかを示します。
 
@@ -241,14 +241,14 @@ bool operator<(const VectorIterator& other) const
 
 ### <a name="parameters"></a>パラメーター
 
-*other*<br/>
+*他*<br/>
 別の VectorIterator。
 
 ### <a name="return-value"></a>戻り値
 
-**true**場合は、現在の VectorIterator より小さい*他*、それ以外の**false**します。
+現在の VectorIterator が*他*のベクトルよりも小さい場合は**true。** それ以外の場合**は false。**
 
-## <a name="operator-less-than-or-equals"></a>  Vectoriterator::operator&lt;= 演算子
+## <a name="vectoriteratoroperatorlt-operator"></a><a name="operator-less-than-or-equals"></a>ベクトル反復器::演算子&lt;= 演算子
 
 現在の VectorIterator が、指定された VectorIterator 以下かどうかを示します。
 
@@ -260,14 +260,14 @@ bool operator<=(const VectorIterator& other) const
 
 ### <a name="parameters"></a>パラメーター
 
-*other*<br/>
+*他*<br/>
 別の VectorIterator。
 
 ### <a name="return-value"></a>戻り値
 
-**true**かどうか、現在の VectorIterator と等しいまたはそれよりも小さく*他*、それ以外の**false**します。
+現在の VectorIterator が*他*の値以下の場合は**true。** それ以外の場合**は false。**
 
-## <a name="operator-minus"></a>  Vectoriterator::operator-演算子
+## <a name="vectoriteratoroperator--operator"></a><a name="operator-minus"></a>ベクトル反復器::演算子 - 演算子
 
 現在の反復子から指定した数の要素を減算して新しい反復子を生成するか、現在の反復子から指定した反復子を減算して反復子間の要素数を生成します。
 
@@ -285,14 +285,14 @@ difference_type operator-(const VectorIterator& other) const;
 *n*<br/>
 要素の数。
 
-*other*<br/>
+*他*<br/>
 別の VectorIterator。
 
 ### <a name="return-value"></a>戻り値
 
 最初の演算子構文は、現在の VectorIterator より `n` 要素少ない VectorIterator オブジェクトを返します。 2 番目の演算子構文は、現在の VectorIterator と `other` VectorIterator の間の要素の数を返します。
 
-## <a name="operator-plus-assign"></a>  Vectoriterator::operator + = 演算子
+## <a name="vectoriteratoroperator-operator"></a><a name="operator-plus-assign"></a>ベクトル反復器::演算子+=演算子
 
 指定されたディスプレイスメントだけ現在の VectorIterator をインクリメントします。
 
@@ -311,7 +311,7 @@ VectorIterator& operator+=(difference_type n);
 
 更新された VectorIterator。
 
-## <a name="operator-plus"></a>  Vectoriterator::operator + 演算子
+## <a name="vectoriteratoroperator-operator"></a><a name="operator-plus"></a>ベクトル反復器::演算子+ 演算子
 
 指定された VectorIterator から指定された転置にある要素を参照する VectorIterator を返します。
 
@@ -335,7 +335,7 @@ inline VectorIterator<T> operator+(
 *n*<br/>
 整数のディスプレイスメント。
 
-*i*<br/>
+*私*<br/>
 2 番目の構文では、VectorIterator。
 
 ### <a name="return-value"></a>戻り値
@@ -344,11 +344,11 @@ inline VectorIterator<T> operator+(
 
 2 番目の構文では、`i` パラメーターの先頭から指定された転置にある要素を参照する VectorIterator。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 最初の構文例
 
-## <a name="operator-minus-equals"></a>  Vectoriterator::operator-= 演算子
+## <a name="vectoriteratoroperator--operator"></a><a name="operator-minus-equals"></a>ベクトル反復器::演算子- = 演算子
 
 指定されたディスプレイスメントだけ現在の VectorIterator をデクリメントします。
 
@@ -367,7 +367,7 @@ VectorIterator& operator-=(difference_type n);
 
 更新された VectorIterator。
 
-## <a name="operator-at"></a>  VectorIterator::operator\[\]
+## <a name="vectoriteratoroperator"></a><a name="operator-at"></a>ベクトル反復器::演算子\[\]
 
 現在の VectorIterator から指定された転置にある要素への参照を取得します。
 
@@ -386,7 +386,7 @@ reference operator[](difference_type n) const;
 
 現在の VectorIterator からの `n` 個の要素によって転置される要素。
 
-## <a name="ctor"></a>  Vectoriterator::vectoriterator コンス トラクター
+## <a name="vectoriteratorvectoriterator-constructor"></a><a name="ctor"></a>ベクトル反復器::ベクトル反復器コンストラクタ
 
 VectorIterator クラスの新しいインスタンスを初期化します。
 
@@ -401,13 +401,13 @@ explicit VectorIterator(
 
 ### <a name="parameters"></a>パラメーター
 
-*v*<br/>
-IVector\<T > オブジェクト。
+*V*<br/>
+IVector\<T>オブジェクト。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-最初の構文例は既定のコンストラクターです。 2 番目の構文例は、IVector から VectorIterator を構築するために使用する明示的なコンス トラクター\<T > オブジェクト。
+最初の構文例は既定のコンストラクターです。 2 番目の構文例は、IVector\<T> オブジェクトから VectorIterator を構築するために使用される明示的なコンストラクターです。
 
 ## <a name="see-also"></a>関連項目
 
-[プラットフォーム Namespace](platform-namespace-c-cx.md)
+[プラットフォーム名前空間](platform-namespace-c-cx.md)

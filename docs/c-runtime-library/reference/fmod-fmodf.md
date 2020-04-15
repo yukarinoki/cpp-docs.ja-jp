@@ -1,10 +1,11 @@
 ---
 title: fmod、fmodf、fmodl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - fmod
 - fmodf
 - fmodl
+- _o_fmod
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +34,12 @@ helpviewer_keywords:
 - fmod function
 - floating-point numbers, calculating remainders
 ms.assetid: 6962d369-d11f-40b1-a6d7-6f67239f8a23
-ms.openlocfilehash: e98432a73df8b872593d4cd610139bdfa72a25c4
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 0cf25e2029f06c2e02a24ca84926e1a8b8f30159
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957078"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81346555"
 ---
 # <a name="fmod-fmodf-fmodl"></a>fmod、fmodf、fmodl
 
@@ -70,26 +72,28 @@ long double fmodl(
 
 ### <a name="parameters"></a>パラメーター
 
-*x*、 *y*<br/>
+*x*, *y*<br/>
 浮動小数点値。
 
 ## <a name="return-value"></a>戻り値
 
-**fmod**は、 *x* / *y*の浮動小数点の剰余を返します。 *Y*の値が0.0 の場合、 **fmod**は簡易な NaN を返します。 **Printf**ファミリによる簡易な NaN の表現については、「 [printf](printf-printf-l-wprintf-wprintf-l.md)」を参照してください。
+**fmod は** *x* / *y*の浮動小数点の剰余を返します。 *y*の値が 0.0 の場合 **、fmod**は静止 NaN を返します。 **printf**ファミリによる静かな NaN の表現については、 [printf](printf-printf-l-wprintf-wprintf-l.md)を参照してください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**Fmod**関数は x*y* *の* / 浮動小数点の剰余*f*を計算*します (* *x* = *i* \* *y* + *f*)。は整数で、 *f*は*x*と同じ符号を持ち、 *f*の絶対値は*y*の絶対値より小さい値です。
+**fmod**関数は*i*\**y* +  *x* / *y の*浮動小数点剰余*f**を計算*し、ここで*i**x* = は整数 *、f*は x と同じ*符号を持*ち *、f*の絶対値は*y*の絶対値より小さい。
 
-C++ではオーバーロードが可能であるため、 **float 型**および**long** **double**型の値を受け取って返す**fmod**のオーバーロードを呼び出すことができます。 C プログラムでは、 **fmod**は常に2つの**double**引数を受け取り、 **double**を返します。
+C++ ではオーバーロードが可能なので、**浮動小数点**値と**長****倍**数の値を取得および戻す**fmod**のオーバーロードを呼び出すことができます。 C プログラムでは **、fmod**は常に 2 つの**二重**引数を取り、**倍精度浮動小数点数**を返します。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|関数|必須ヘッダー|
+|機能|必須ヘッダー|
 |--------------|---------------------|
-|**fmod**、 **fmodf**、 **fmodl**|\<math.h>|
+|**フモド**,**フモドフ**,**フモドル**|\<math.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 

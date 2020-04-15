@@ -9,16 +9,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::ArgTraitsHelper structure
 - Microsoft::WRL::Details::ArgTraitsHelper::args constant
 ms.assetid: e3f798da-0aef-4a57-95d3-d38c34c47d72
-ms.openlocfilehash: fbba6d96106cc95910ccd9d0029cb3e9c254d7d3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4acbd9fa660f29bbaf209282ff0e90f43621574d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398837"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81360779"
 ---
 # <a name="argtraitshelper-structure"></a>ArgTraitsHelper 構造体
 
-WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。
+WRL インフラストラクチャをサポートし、コードから直接使用するためのものではありません。
 
 ## <a name="syntax"></a>構文
 
@@ -29,12 +29,12 @@ struct ArgTraitsHelper;
 
 ### <a name="parameters"></a>パラメーター
 
-*TDelegateInterface*<br/>
-デリゲートのインターフェイスです。
+*インターフェイス*<br/>
+デリゲート インターフェイス。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-定義のデリゲート引数の一般的な特性に役立ちます。
+デリゲート引数の共通の特性を定義するのに役立ちます。
 
 ## <a name="members"></a>メンバー
 
@@ -49,7 +49,7 @@ struct ArgTraitsHelper;
 
 名前                           | 説明
 ------------------------------ | ---------------------------------------------------------------------------------------------------------------------
-[Argtraitshelper::args](#args) | により、 [argtraits::args](#args)パラメーターの数のカウントを保持、`Invoke`デリゲート インターフェイスのメソッド。
+[アルストレイトヘルパー::args](#args) | [ArgTraits::args は](#args)、デリゲート インターフェイスのメソッドのパラメーター`Invoke`数を保持するのに役立ちます。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -57,18 +57,18 @@ struct ArgTraitsHelper;
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** event.h
+**ヘッダー:** イベント.h
 
-**名前空間:** Microsoft::WRL::Details
+**名前空間:** マイクロソフト::WRL::Dのテール
 
-## <a name="args"></a>Argtraitshelper::args
+## <a name="argtraitshelperargs"></a><a name="args"></a>アルストレイトヘルパー::args
 
-WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。
+WRL インフラストラクチャをサポートし、コードから直接使用するためのものではありません。
 
 ```cpp
 static const int args = Traits::args;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-により、`ArgTraitsHelper::args`パラメーターの数のカウントを保持、`Invoke`デリゲート インターフェイスのメソッド。
+デリゲート`ArgTraitsHelper::args`インターフェイスのメソッドのパラメーター数を`Invoke`保持するのに役立ちます。

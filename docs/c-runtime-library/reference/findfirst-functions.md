@@ -1,6 +1,6 @@
 ---
 title: _findfirst、_findfirst32、_findfirst32i64、_findfirst64、_findfirst64i32、_findfirsti64、_wfindfirst、_wfindfirst32、_wfindfirst32i64、_wfindfirst64、_wfindfirst64i32、_wfindfirsti64
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _findfirst
 - _wfindfirst
@@ -14,6 +14,14 @@ api_name:
 - _wfindfirst64i32
 - _findfirsti64
 - _wfindfirsti64
+- _o__findfirst32
+- _o__findfirst32i64
+- _o__findfirst64
+- _o__findfirst64i32
+- _o__wfindfirst32
+- _o__wfindfirst32i64
+- _o__wfindfirst64
+- _o__wfindfirst64i32
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,6 +34,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -103,16 +112,16 @@ helpviewer_keywords:
 - wfindfirst64i32 function
 - _wfindfirst64 function
 ms.assetid: 9bb46d1a-b946-47de-845a-a0b109a33ead
-ms.openlocfilehash: f84c70a6b2d9e6f7adf862bdb1622a603c1fdc4c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d83cc0913584618897cbc4aec45cb137388674b7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957197"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81346812"
 ---
 # <a name="_findfirst-_findfirst32-_findfirst32i64-_findfirst64-_findfirst64i32-_findfirsti64-_wfindfirst-_wfindfirst32-_wfindfirst32i64-_wfindfirst64-_wfindfirst64i32-_wfindfirsti64"></a>_findfirst、_findfirst32、_findfirst32i64、_findfirst64、_findfirst64i32、_findfirsti64、_wfindfirst、_wfindfirst32、_wfindfirst32i64、_wfindfirst64、_wfindfirst64i32、_wfindfirsti64
 
-*Filespec*引数で指定されたファイルと一致するファイル名の最初のインスタンスに関する情報を指定します。
+*filespec*引数で指定されたファイルと一致するファイル名の最初のインスタンスに関する情報を提供します。
 
 ## <a name="syntax"></a>構文
 
@@ -169,53 +178,55 @@ intptr_t _wfindfirst64i32(
 
 ### <a name="parameters"></a>パラメーター
 
-*側*<br/>
+*Filespec*<br/>
 ターゲット ファイルの指定 (ワイルドカード文字を含めることができます)。
 
-*fileinfo*<br/>
+*Fileinfo*<br/>
 ファイル情報バッファー。
 
 ## <a name="return-value"></a>戻り値
 
-正常に実行*された*場合、そのファイルまたはファイルのグループを識別する**固有の検索ハンドルが返され**[ます。この](findclose.md)ファイルは、その後、次[のような](findnext-functions.md)呼び出しで使用できます。 それ以外の場合は、-1**を返し、** **errno**を次のいずれかの値に設定します。
+成功した場合 **、_findfirst**は[、_findnext filespec](findnext-functions.md)仕様に一致するファイルまたは*filespec*ファイルのグループを識別する一意の検索ハンドル[_findclose](findclose.md)を返します。 それ以外の場合 **、_findfirst**は -1 を返し **、errno**を次のいずれかの値に設定します。
 
 | errno の値 | 条件 |
 |-|-|
-| **EINVAL** | 無効なパラメーター: *filespec*または*fileinfo*が**NULL**でした。 または、オペレーティング システムが予期しないエラーを返しました。 |
-| **ENOENT** | 一致しないファイルの指定。 |
-| **ENOMEM** | メモリ不足です。 |
-| **EINVAL** | ファイル名の指定が無効であるか、指定されたファイル名が**MAX_PATH**を超えています。 |
+| **Einval** | 無効なパラメータ:*ファイルの指定*または*ファイル情報*が**NULL**です。 または、オペレーティング システムが予期しないエラーを返しました。 |
+| **エノエント** | 一致しないファイルの指定。 |
+| **エノメム** | メモリ不足です。 |
+| **Einval** | 指定されたファイル名が無効であるか、指定されたファイル名が**MAX_PATH**より大きかった。 |
 
-リターン コードの詳細については、「 [_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
+リターン コードの詳細については、「[_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
-無効なパラメーターが渡されると、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、これらの関数は無効なパラメーター ハンドラーを呼び出します。
+無効なパラメーターが渡されると、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、これらの関数は無効パラメーター ハンドラーを呼び出します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-完了後に、([または](findnext-functions.md)**任意の variant) 関数のいずれ**かを使用した後に[findclose](findclose.md)を呼び出す必要があります。 呼び出すと、アプリケーション内でこれらの関数が使用しているリソースが解放されます。
+**_findfirst**関数または[_findnext](findnext-functions.md)関数 (またはバリアント) を使用した後[、_findclose](findclose.md)を呼び出す必要があります。 呼び出すと、アプリケーション内でこれらの関数が使用しているリソースが解放されます。
 
-**W**プレフィックスを持つこれらの関数のバリエーションは、ワイド文字バージョンです。それ以外の場合は、対応する1バイト関数と同じです。
+**w**接頭辞を持つこれらの関数のバリエーションはワイド文字バージョンです。それ以外の場合、それらは対応する 1 バイト関数と同じです。
 
-これらの関数のバリエーションは、32 ビットや 64 ビットの時刻型と、32 ビットや 64 ビットのファイル サイズをサポートします。 最初の数値サフィックス (**32**または**64**) は、時刻型のサイズを示します。2番目のサフィックスは、 **i32**または**i64**のいずれかで、ファイルサイズが32ビットまたは64ビットの整数として表されるかどうかを示します。 32 ビットと 64 ビットの時刻型とファイル サイズをサポートするバージョンについては、次の表を参照してください。 **I32**または**i64**サフィックスは、time 型のサイズと同じ場合は省略されます。したがって、 **findfirst64**は64ビットのファイル長もサポートし、は32ビットのファイルの長さのみを**サポートします**。
+これらの関数のバリエーションは、32 ビットや 64 ビットの時刻型と、32 ビットや 64 ビットのファイル サイズをサポートします。 最初の数値サフィックス (**32**または**64**) は時刻型のサイズを示します。2 番目の接尾部は**i32**または**i64**で、ファイル・サイズが 32 ビットまたは 64 ビット整数のどちらで表されるかを示します。 32 ビットと 64 ビットの時刻型とファイル サイズをサポートするバージョンについては、次の表を参照してください。 **i32**または**i64**サフィックスは、時刻型のサイズと同じ場合は省略されるため **、_findfirst64**は 64 ビット・ファイル長もサポートし **、_findfirst32**は 32 ビット・ファイル長のみをサポートします。
 
-これらの関数は、 *fileinfo*パラメーターに **_finddata_t**構造体のさまざまな形式を使用します。 構造体の詳細については、「[ファイル名検索関数](../../c-runtime-library/filename-search-functions.md)」を参照してください。
+これらの関数は *、fileinfo*パラメーターにさまざまな形式の **_finddata_t**構造を使用します。 構造体の詳細については、「[ファイル名検索関数](../../c-runtime-library/filename-search-functions.md)」を参照してください。
 
 64 ビットの時刻型を使用するバリエーションでは、3000 年 12 月 31 日 23:59:59 (UTC) までのファイルの作成日を表現できます。 32 ビットの時刻型を使用するバリエーションでは、2038 年 1 月 18 日 23:59:59 (UTC) までの日付のみを表現できます。 これらの関数の日付範囲の下限は、いずれも 1970 年 1 月 1 日の午前 0 時です。
 
-時間のサイズを明示的に指定するバージョンを使用する特定の理由がない限り、 **_wfindfirst** **またはを使用する**か、3 GB を超えるファイルサイズをサポートする必要がある場合は、 **_wfindfirsti64** **またはを使用し**ます。 これらの関数はすべて 64 ビットの時刻型です。 以前のバージョンでは、これらの関数は 32 ビットの時刻型を使用していました。 これがアプリケーションの互換性に影響する変更である場合は、以前の動作に戻すように **_USE_32BIT_TIME_T**を定義できます。 _USE_32BIT_TIME_T が定義されている場合、は**64** **で、対応**する Unicode バージョンは32ビットの時刻を使用します。
+時間サイズを明示的に指定するバージョンを使用する特定の理由がない限り **、_findfirst**または **_wfindfirst**を使用するか、3 GB を超えるファイル サイズをサポートする必要がある場合は **、_findfirsti64**または **_wfindfirsti64**を使用します。 これらの関数はすべて 64 ビットの時刻型です。 以前のバージョンでは、これらの関数は 32 ビットの時刻型を使用していました。 これがアプリケーションの変更点である場合は、古い動作に戻す **_USE_32BIT_TIME_T**を定義できます。 **_USE_32BIT_TIME_T**が定義されている場合は、 **_finfirsti64**を **_findfirst**し、対応する Unicode バージョンは 32 ビット時間を使用します。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
 
 ### <a name="time-type-and-file-length-type-variations-of-_findfirst"></a>_findfirst の時刻型とファイル長型のバリエーション
 
-|関数|**_USE_32BIT_TIME_T**は定義されていますか?|時刻型|ファイル長型|
+|関数|**_USE_32BIT_TIME_T**定義されていますか?|時刻型|ファイル長型|
 |---------------|----------------------------------|---------------|----------------------|
-|**_wfindfirst**|未定義|64 ビット|32 ビット|
-|**_wfindfirst**|定義済み|32 ビット|32 ビット|
-|**findfirst32**, **_wfindfirst32**|マクロ定義の影響を受けない|32 ビット|32 ビット|
-|**findfirst64**、 **_wfindfirst64**|マクロ定義の影響を受けない|64 ビット|64 ビット|
-|**_wfindfirsti64** ( **_t)**|未定義|64 ビット|64 ビット|
-|**_wfindfirsti64** ( **_t)**|定義済み|32 ビット|64 ビット|
-|**_findfirst32i64**、 **_wfindfirst32i64**|マクロ定義の影響を受けない|32 ビット|64 ビット|
-|**findfirst64i32**, **_wfindfirst64i32**|マクロ定義の影響を受けない|64 ビット|32 ビット|
+|**_findfirst**, **_wfindfirst**|未定義|64 ビット|32 ビット|
+|**_findfirst**, **_wfindfirst**|定義済み|32 ビット|32 ビット|
+|**_findfirst32**, **_wfindfirst32**|マクロ定義の影響を受けない|32 ビット|32 ビット|
+|**_findfirst64**, **_wfindfirst64**|マクロ定義の影響を受けない|64 ビット|64 ビット|
+|**_findfirsti64**, **_wfindfirsti64**|未定義|64 ビット|64 ビット|
+|**_findfirsti64**, **_wfindfirsti64**|定義済み|32 ビット|64 ビット|
+|**_findfirst32i64**, **_wfindfirst32i64**|マクロ定義の影響を受けない|32 ビット|64 ビット|
+|**_findfirst64i32**、 **_wfindfirst64i32**|マクロ定義の影響を受けない|64 ビット|32 ビット|
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -230,7 +241,7 @@ intptr_t _wfindfirst64i32(
 
 ## <a name="requirements"></a>必要条件
 
-|関数|必須ヘッダー|
+|機能|必須ヘッダー|
 |--------------|---------------------|
 |**_findfirst**|\<io.h>|
 |**_findfirst32**|\<io.h>|
@@ -245,7 +256,7 @@ intptr_t _wfindfirst64i32(
 |**_wfindfirst32i64**|\<io.h> または \<wchar.h>|
 |**_wfindfirst64i32**|\<io.h> または \<wchar.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="see-also"></a>関連項目
 

@@ -1,6 +1,6 @@
 ---
 title: 'Bessel 系関数: _j0、_j1、_jn、_y0、_y1、_yn'
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - _j0
 - _j1
@@ -8,6 +8,12 @@ api_name:
 - _y0
 - _y1
 - _yn
+- _o__j0
+- _o__j1
+- _o__jn
+- _o__y0
+- _o__y1
+- _o__yn
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +26,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -41,12 +48,12 @@ helpviewer_keywords:
 - _y1 function
 - _yn function
 ms.assetid: a21a8bf1-df9d-4ba0-a8c2-e7ef71921d96
-ms.openlocfilehash: 5420b34846998cdbcb4814d8319274f1a3516d91
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: cdf722c9c6f6055ac918d1bede59345a9ef8d90d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939459"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81348661"
 ---
 # <a name="bessel-functions-_j0-_j1-_jn-_y0-_y1-_yn"></a>Bessel 系関数: _j0、_j1、_jn、_y0、_y1、_yn
 
@@ -79,7 +86,7 @@ double _yn(
 
 ### <a name="parameters"></a>パラメーター
 
-*x*<br/>
+*X*<br/>
 浮動小数点値。
 
 *n*<br/>
@@ -87,31 +94,33 @@ Bessel 系関数の整数順序。
 
 ## <a name="return-value"></a>戻り値
 
-これらの各ルーチンは、値が*x*のベッセル関数を返します。 *X*が**負の値**に設定さ**れている**場合、このルーチン**は** **errno**を**EDOM**に設定し、 **_DOMAIN**エラーメッセージを**stderr**に出力して、 **_HUGE_VAL**を返します。 **_Matherr**を使用して、エラー処理を変更できます。
+これらのルーチンは、*それぞれ x*の Bessel 関数を返します。 **_y0**、 **_y1**、または **_yn**関数で*x*が負の値の場合、ルーチンは**errno**を**EDOM**に設定し **、_DOMAIN**エラー メッセージを**stderr**に出力し、 **_HUGE_VAL**を返します。 エラー処理は **、_matherr**を使用して変更できます。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**J0**、 **j1**、および **_** の各ルーチンは、最初の種類のベッセル関数を返します: orders 0、1、および n。
-
-|入力|SEH 例外|Matherr 例外|
-|-----------|-------------------|-----------------------|
-|± **QNAN**、 **IND**|**無効です**|**_DOMAIN**|
-
-**1 番** **目のルーチンでは、** 2 番目の種類のベッセル関数 (orders 0、1、 **n) が**返されます。
+**_j0** **、_j1、****および_jn**ルーチンは、最初の種類の Bessel 関数を返します。
 
 |入力|SEH 例外|Matherr 例外|
 |-----------|-------------------|-----------------------|
-|± **QNAN**、 **IND**|**無効です**|**_DOMAIN**|
-|± 0|**ゼロ除算**|**通知 (_R)**|
+|± **QNAN,IND** **IND**|**無効です**|**_DOMAIN**|
+
+**_y0**、 **_y1**、および **_yn**ルーチンは、2 番目の種類の Bessel 関数を返します。
+
+|入力|SEH 例外|Matherr 例外|
+|-----------|-------------------|-----------------------|
+|± **QNAN,IND** **IND**|**無効です**|**_DOMAIN**|
+|± 0|**ZERODIVIDE**|**_SING**|
 |&#124;x&#124; < 0.0|**無効です**|**_DOMAIN**|
+
+既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
-|**j0**、 **j1** **、_、&** **y0**、_ **y1** **、(** _d)|\<cmath> (C++), \<math.h> (C, C++)|
+|**_j0**, **_j1**, **_jn**, **_y0**, **_y1**, **_yn**|\<cmath> (C++), \<math.h> (C, C++)|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 

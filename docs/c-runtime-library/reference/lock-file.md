@@ -1,8 +1,9 @@
 ---
 title: _lock_file
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _lock_file
+- _o__lock_file
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -27,16 +29,16 @@ helpviewer_keywords:
 - _lock_file function
 - lock_file function
 ms.assetid: 75c7e0e6-efff-4747-b6ed-9bcf2b0894c3
-ms.openlocfilehash: 43030030d1674cfba24c1300487f576b7a2085ea
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9f7016f873dc9b159aab677615ff88a24628072c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953313"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81342108"
 ---
 # <a name="_lock_file"></a>_lock_file
 
-**ファイルオブジェクト**に同時にアクセスするスレッドの一貫性を確保するために、**ファイル**オブジェクトをロックします。
+FILE オブジェクトをロックして **、FILE**オブジェクトに同時にアクセスするスレッドの**整合性を確保**します。
 
 ## <a name="syntax"></a>構文
 
@@ -46,20 +48,22 @@ void _lock_file( FILE* file );
 
 ### <a name="parameters"></a>パラメーター
 
-*file*<br/>
+*ファイル*<br/>
 ファイル ハンドルです。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-*ファイル*によって指定された**ファイル**オブジェクトをロックする **(_f)** 関数。 基になるファイルがロックされていません **(_f)** 。 ファイルのロックを解除するには、[_unlock_file](unlock-file.md) を使用します。 スレッドでは、 **lock_unlock_file**との呼び出しを一致させる必要があります。
+**_lock_file**関数は file*で指定*された**FILE**オブジェクトをロックします。 基になるファイルは **、**_lock_file によってロックされていません。 ファイルのロックを解除するには、[_unlock_file](unlock-file.md) を使用します。 **_lock_file**と **_unlock_file**への呼び出しは、スレッド内で一致する必要があります。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**_lock_file**|\<stdio.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="example"></a>例
 

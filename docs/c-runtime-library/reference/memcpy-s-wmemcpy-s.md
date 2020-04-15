@@ -1,9 +1,11 @@
 ---
 title: memcpy_s、wmemcpy_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - memcpy_s
 - wmemcpy_s
+- _o_memcpy_s
+- _o_wmemcpy_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +19,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +31,12 @@ helpviewer_keywords:
 - memcpy_s function
 - wmemcpy_s function
 ms.assetid: 5504e20a-83d9-4063-91fc-3f55f7dabe99
-ms.openlocfilehash: 8078590df6950201ef81356ba6c28173e80572ee
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: dc5e49115b65b6883e55df13d0610231a87c1c55
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952800"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81333335"
 ---
 # <a name="memcpy_s-wmemcpy_s"></a>memcpy_s、wmemcpy_s
 
@@ -61,7 +64,7 @@ errno_t wmemcpy_s(
 *dest*<br/>
 コピー先のバッファー。
 
-*destSize*<br/>
+*デストサイズ*<br/>
 コピー先バッファーのサイズ。memcpy_s の場合はバイト単位、wmemcpy_s の場合はワイド文字列 (wchar_t) 単位です。
 
 *src*<br/>
@@ -76,27 +79,29 @@ errno_t wmemcpy_s(
 
 ### <a name="error-conditions"></a>エラー条件
 
-|*dest*|*destSize*|*src*|*count*|戻り値|*Dest*の内容|
+|*dest*|*デストサイズ*|*src*|*count*|戻り値|*デスト*の内容|
 |------------|----------------|-----------|---|------------------|------------------------|
-|任意|任意|任意|0|0|変更されない|
-|**NULL**|任意|任意|0 以外|**EINVAL**|変更されない|
-|任意|任意|**NULL**|0 以外|**EINVAL**|*dest*はゼロになります|
-|任意|< *数*|任意|0 以外|**ERANGE**|*dest*はゼロになります|
+|any|any|any|0|0|変更されない|
+|**NULL**|any|any|0 以外|**Einval**|変更されない|
+|any|any|**NULL**|0 以外|**Einval**|*dest*がゼロに設定されている|
+|any|< *カウント*|any|0 以外|**ERANGE**|*dest*がゼロに設定されている|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**memcpy_s**は、 *src*から*dest*に*カウント*バイトをコピーします。**wmemcpy_s**は、*数*のワイド文字 (2 バイト) をコピーします。 コピー元とコピー先が重複する場合、 **memcpy_s**の動作は未定義です。 重複する領域を処理するには、 **memmove_s**を使用します。
+**memcpy_s**は *、カウント*バイトを*src*から*dest*にコピーします。**コピーwmemcpy_s**は、ワイド文字 (2 バイト) を*カウント*します。 ソースと宛先が重複している場合 **、memcpy_s**の動作は未定義です。 memmove_s**を使用**して、重複する領域を処理します。
 
-これらの関数では、パラメーターの検証が行われます。 *Count*が0以外で、 *dest*または*src*が null ポインターであるか、または*destsize*が*count*より小さい場合、これらの関数は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、これらの関数は**EINVAL**または**ERANGE**を返し、 **errno**を戻り値に設定します。
+これらの関数では、パラメーターの検証が行われます。 *count*が 0 以外*で、dest*または*drc*が null ポインターである場合、または*destSize*が*count*より小さい場合、これらの関数は、パラメーター[の検証](../../c-runtime-library/parameter-validation.md)で説明されているように、無効なパラメーター ハンドラーを呼び出します。 実行を続行できる場合、これらの関数は**EINVAL**または**ERANGE**を戻し **、errno**を戻り値に設定します。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**memcpy_s**|\<memory.h> または \<string.h>|
 |**wmemcpy_s**|\<wchar.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 

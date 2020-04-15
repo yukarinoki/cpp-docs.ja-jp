@@ -1,5 +1,5 @@
 ---
-title: CObject クラス
+title: Cオブジェクトクラス
 ms.date: 11/04/2016
 f1_keywords:
 - CObject
@@ -20,14 +20,14 @@ helpviewer_keywords:
 - CObject [MFC], IsSerializable
 - CObject [MFC], Serialize
 ms.assetid: 95e9acd3-d9eb-4ac0-b52b-ca4a501a7a3a
-ms.openlocfilehash: 515c4e90ee6ab77a6c7c1ae108393ea1aafb7c17
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: cea4d09a1c1a4680b095a40fa0619287959ff4ce
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79424021"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81360424"
 ---
-# <a name="cobject-class"></a>CObject クラス
+# <a name="cobject-class"></a>Cオブジェクトクラス
 
 MFC ライブラリの重要な基底クラスです。
 
@@ -41,49 +41,49 @@ class AFX_NOVTABLE CObject
 
 ### <a name="protected-constructors"></a>プロテクト コンストラクター
 
-|Name|Description|
+|名前|説明|
 |----------|-----------------|
-|[CObject:: CObject](#cobject)|既定のコンストラクターです。|
+|[Cオブジェクト::Cオブジェクト](#cobject)|既定のコンストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|Description|
+|名前|説明|
 |----------|-----------------|
-|[CObject:: AssertValid](#assertvalid)|このオブジェクトの整合性を検証します。|
-|[CObject::D ump](#dump)|このオブジェクトの診断ダンプを生成します。|
-|[CObject:: GetRuntimeClass](#getruntimeclass)|このオブジェクトのクラスに対応する `CRuntimeClass` 構造体を返します。|
-|[CObject:: IsKindOf](#iskindof)|このオブジェクトと特定のクラスとの関係をテストします。|
-|[CObject:: IsSerializable](#isserializable)|このオブジェクトをシリアル化できるかどうかをテストします。|
-|[CObject:: Serialize](#serialize)|アーカイブからのオブジェクトの読み込みまたは保存を行います。|
+|[Cオブジェクト::アサートValid](#assertvalid)|このオブジェクトの整合性を検証します。|
+|[オブジェクト::Dウンプ](#dump)|このオブジェクトの診断ダンプを生成します。|
+|[クラスを取得します。](#getruntimeclass)|このオブジェクト`CRuntimeClass`のクラスに対応する構造体を返します。|
+|[オブジェクト::イズキンドフ](#iskindof)|このオブジェクトと特定のクラスとの関係をテストします。|
+|[Cオブジェクト::シリアル化可能](#isserializable)|このオブジェクトをシリアル化できるかどうかをテストします。|
+|[Cオブジェクト::シリアライズ](#serialize)|アーカイブからオブジェクトを読み込むか、アーカイブに格納します。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
-|Name|Description|
+|名前|説明|
 |----------|-----------------|
-|[CObject:: operator delete](#operator_delete)|特別な**delete**演算子です。|
-|[CObject:: operator new](#operator_new)|特別な**新しい**演算子。|
+|[Cオブジェクト::オペレータ削除](#operator_delete)|特殊な**削除**演算子。|
+|[Cオブジェクト::オペレータ新しい](#operator_new)|特別な**新しい**オペレータ。|
 
 ## <a name="remarks"></a>解説
 
-`CFile` や `CObList`などのライブラリクラスだけでなく、記述するクラスのルートとしても機能します。 `CObject` には、
+これは、 などの`CFile`ライブラリ クラスだけでなく、`CObList`作成するクラスのルートとしても機能します。 `CObject`を含む基本的なサービスを提供します。
 
 - シリアル化のサポート
 
-- ランタイムクラス情報
+- ランタイム クラス情報
 
-- オブジェクトの診断出力
+- オブジェクト診断出力
 
-- コレクションクラスとの互換性
+- コレクション クラスとの互換性
 
-`CObject` は複数の継承をサポートしていないことに注意してください。 派生クラスは、1つの `CObject` 基底クラスのみを持つことができ、`CObject` は階層内の最上位にある必要があります。 ただし、構造体と非 `CObject`派生クラスを右側の複数継承分岐に含めることは許可されています。
+多重`CObject`継承はサポートされていません。 派生クラスは 1 つの`CObject`基本クラスしか持て`CObject`ず、階層内で一番左にする必要があります。 ただし、右側の多重継承分岐に構造体と非`CObject`派生クラスを持つことは許されます。
 
-クラスの実装と宣言で省略可能なマクロの一部を使用する場合、`CObject` 派生によって大きなメリットが得られます。
+クラスの実装と宣言で`CObject`オプションのマクロを使用すると、派生から大きなメリットが得られます。
 
-第1レベルのマクロ、 [DECLARE_DYNAMIC](run-time-object-model-services.md#declare_dynamic)および[IMPLEMENT_DYNAMIC](run-time-object-model-services.md#implement_dynamic)では、階層内のクラス名とその位置への実行時アクセスが許可されます。 これにより、意味のある診断ダンプを行うことができます。
+第 1 レベルのマクロ[(DECLARE_DYNAMIC](run-time-object-model-services.md#declare_dynamic)と[IMPLEMENT_DYNAMIC)](run-time-object-model-services.md#implement_dynamic)では、クラス名と階層内での位置へのランタイム アクセスが許可されます。 これにより、意味のある診断ダンプが可能になります。
 
-第2レベルのマクロである[DECLARE_SERIAL](run-time-object-model-services.md#declare_serial)と[IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial)には、第1レベルのマクロのすべての機能が含まれています。また、"archive" との間でオブジェクトを "シリアル化" できるようにします。
+第 2 レベルのマクロ[(DECLARE_SERIAL](run-time-object-model-services.md#declare_serial)と[IMPLEMENT_SERIAL)](run-time-object-model-services.md#implement_serial)には、第 1 レベルのマクロのすべての機能が含まれ、オブジェクトを "アーカイブ" との間で "シリアル化" できます。
 
-Microsoft Foundation クラスおよびC++クラスの一般的な派生と `CObject`の使用の詳細については、「CObject と[シリアル化](../../mfc/serialization-in-mfc.md)の[使用](../../mfc/using-cobject.md)」を参照してください。
+Microsoft Foundation クラスと C++ クラスの一般的な派生`CObject`方法と を使用する方法については、「 [CObject](../../mfc/using-cobject.md)と[シリアル化](../../mfc/serialization-in-mfc.md)の使用 」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -93,7 +93,7 @@ Microsoft Foundation クラスおよびC++クラスの一般的な派生と `COb
 
 **ヘッダー:** afx.h
 
-##  <a name="assertvalid"></a>CObject:: AssertValid
+## <a name="cobjectassertvalid"></a><a name="assertvalid"></a>Cオブジェクト::アサートValid
 
 このオブジェクトの整合性を検証します。
 
@@ -103,25 +103,25 @@ virtual void AssertValid() const;
 
 ### <a name="remarks"></a>解説
 
-`AssertValid` は、内部状態を確認することによって、このオブジェクトの有効性チェックを実行します。 ライブラリのデバッグバージョンでは、`AssertValid` によってアサートされ、アサーションが失敗した行番号とファイル名を示すメッセージが表示されてプログラムが終了する場合があります。
+`AssertValid`内部状態をチェックすることによって、このオブジェクトの妥当性検査を実行します。 ライブラリのデバッグ バージョンでは、`AssertValid`アサーションが失敗した行番号とファイル名を示すメッセージを使用してプログラムをアサートし、終了する場合があります。
 
-独自のクラスを記述する場合は、`AssertValid` 関数をオーバーライドして、自分やクラスの他のユーザーのために診断サービスを提供する必要があります。 通常、オーバーライドされた `AssertValid` は、派生クラスに固有のデータメンバーをチェックする前に、基本クラスの `AssertValid` 関数を呼び出します。
+独自のクラスを作成する場合は、関数を`AssertValid`オーバーライドして、自分自身およびクラスの他のユーザーに診断サービスを提供する必要があります。 オーバーライドは`AssertValid`、通常、派生`AssertValid`クラスに固有のデータ メンバーをチェックする前に、基本クラスの関数を呼び出します。
 
-`AssertValid` は**const**関数なので、テスト中にオブジェクトの状態を変更することは許可されません。 独自の派生クラス `AssertValid` 関数は、例外をスローするのではなく、無効なオブジェクトデータを検出するかどうかをアサートする必要があります。
+const`AssertValid`関数**const**であるため、テスト中にオブジェクトの状態を変更することはできません。 独自の派生クラス`AssertValid`関数は、例外をスローするのではなく、無効なオブジェクト データを検出するかどうかをアサートする必要があります。
 
-"有効性" の定義は、オブジェクトのクラスによって異なります。 ルールとして、関数は "浅いチェック" を実行する必要があります。 つまり、オブジェクトに他のオブジェクトへのポインターが含まれている場合は、ポインターが null でないかどうかを確認する必要がありますが、ポインターによって参照されるオブジェクトに対して有効性テストを実行する必要はありません。
+「有効性」の定義は、オブジェクトのクラスによって異なります。 原則として、関数は「浅いチェック」を実行する必要があります。 つまり、オブジェクトに他のオブジェクトへのポインターが含まれている場合、ポインターが null でないかどうかをチェックする必要がありますが、ポインターによって参照されるオブジェクトに対して妥当性検査を実行すべきではありません。
 
 ### <a name="example"></a>例
 
-すべての `CObject` 例で使用される `CAge` クラスの一覧については、「 [coblist:: coblist](../../mfc/reference/coblist-class.md#coblist) 」を参照してください。
+すべての`CObject`例で使用されるクラスのリストについては[、CObList::CObList](../../mfc/reference/coblist-class.md#coblist)を`CAge`参照してください。
 
 [!code-cpp[NVC_MFCCObjectSample#7](../../mfc/codesnippet/cpp/cobject-class_1.cpp)]
 
 別の例については、「 [AfxDoForAllObjects](diagnostic-services.md#afxdoforallobjects)」を参照してください。
 
-##  <a name="cobject"></a>CObject:: CObject
+## <a name="cobjectcobject"></a><a name="cobject"></a>Cオブジェクト::Cオブジェクト
 
-これらの関数は、標準の `CObject` コンストラクターです。
+これらの関数は、標準`CObject`のコンストラクターです。
 
 ```
 CObject();
@@ -130,24 +130,24 @@ CObject(const CObject& objectSrc);
 
 ### <a name="parameters"></a>パラメーター
 
-*objectSrc*<br/>
-別の `CObject` への参照
+*オブジェクトSrc*<br/>
+別の参照への参照`CObject`
 
 ### <a name="remarks"></a>解説
 
 既定のバージョンは、派生クラスのコンストラクターによって自動的に呼び出されます。
 
-クラスがシリアル化可能な場合 (IMPLEMENT_SERIAL マクロが組み込まれている場合)、クラス宣言に既定のコンス トラクター (引数なしのコンス トラクター) が必要です。 既定のコンス トラクターが必要ない場合、private を宣言または「空」のコンス トラクターを宣言します。 詳細については、「 [CObject の使用](../../mfc/using-cobject.md)」を参照してください。
+クラスがシリアル化可能な場合 (IMPLEMENT_SERIAL マクロが組み込まれています)、クラス宣言に既定のコンストラクター (引数のないコンストラクター) が必要です。 既定のコンストラクターが必要ない場合は、プライベート コンストラクターまたは保護された "空" コンストラクターを宣言します。 詳細については、「 [CObject](../../mfc/using-cobject.md)の使用 」を参照してください。
 
-標準C++の既定のクラスコピーコンストラクターは、メンバーごとのコピーを行います。 プライベート `CObject` コピーコンストラクターが存在することは、クラスのコピーコンストラクターが必要であるが使用できない場合に、コンパイラエラーメッセージを保証します。 したがって、クラスにこの機能が必要な場合は、コピーコンストラクターを指定する必要があります。
+標準の C++ クラス コピー コンストラクターは、メンバーごとのコピーを行います。 プライベート`CObject`コピー コンストラクターが存在すると、クラスのコピー コンストラクターが必要だが使用できない場合に、コンパイラ エラー メッセージが保証されます。 したがって、クラスがこの機能を必要とする場合は、コピー コンストラクターを指定する必要があります。
 
 ### <a name="example"></a>例
 
-`CObject` の例で使用されている `CAge` クラスの一覧については、「 [coblist:: coblist](../../mfc/reference/coblist-class.md#coblist) 」を参照してください。
+例で使用されているクラスの一覧については[、CObList::CObList](../../mfc/reference/coblist-class.md#coblist)を`CAge``CObject`参照してください。
 
 [!code-cpp[NVC_MFCCObjectSample#8](../../mfc/codesnippet/cpp/cobject-class_2.cpp)]
 
-##  <a name="dump"></a>CObject::D ump
+## <a name="cobjectdump"></a><a name="dump"></a>オブジェクト::Dウンプ
 
 オブジェクトの内容を[CDumpContext](../../mfc/reference/cdumpcontext-class.md)オブジェクトにダンプします。
 
@@ -157,33 +157,33 @@ virtual void Dump(CDumpContext& dc) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*dc*<br/>
-ダンプの診断ダンプコンテキスト (通常は `afxDump`)。
+*Dc*<br/>
+ダンプの診断ダンプ コンテキスト (通常`afxDump`.
 
 ### <a name="remarks"></a>解説
 
-独自のクラスを記述する場合は、`Dump` 関数をオーバーライドして、自分やクラスの他のユーザーのために診断サービスを提供する必要があります。 通常、オーバーライドされた `Dump` は、派生クラスに固有のデータメンバーを出力する前に、基本クラスの `Dump` 関数を呼び出します。 クラスで `IMPLEMENT_DYNAMIC` または IMPLEMENT_SERIAL マクロが使用されている場合、`CObject::Dump` はクラス名を出力します。
+独自のクラスを作成する場合は、関数を`Dump`オーバーライドして、自分自身およびクラスの他のユーザーに診断サービスを提供する必要があります。 オーバーライドは`Dump`、通常、派生`Dump`クラスに固有のデータ メンバーを印刷する前に、基本クラスの関数を呼び出します。 `CObject::Dump`クラスが マクロまたは IMPLEMENT_SERIAL マクロ`IMPLEMENT_DYNAMIC`を使用している場合は、クラス名を出力します。
 
 > [!NOTE]
->  `Dump` 関数は、出力の最後に改行文字を出力しません。
+> 関数`Dump`は、出力の最後に改行文字を出力しないでください。
 
-`Dump` の呼び出しは、Microsoft Foundation Class ライブラリのデバッグバージョンでのみ意味があります。 呼び出し、関数宣言、および関数の実装は、条件付きコンパイルの/ `#endif` ステートメントで **#ifdef _DEBUG**を使用して、かっこで囲む必要があります。
+`Dump`呼び出しは、Microsoft Foundation クラス ライブラリのデバッグ バージョンでのみ意味をなします。 条件付きコンパイルの_DEBUG/ `#endif`ステートメント**を使用**して、呼び出し、関数宣言、関数の実装#ifdef角かっこで囲む必要があります。
 
-`Dump` は**const**関数であるため、ダンプ中にオブジェクトの状態を変更することはできません。
+const`Dump`関数**const**なので、ダンプ中にオブジェクトの状態を変更することはできません。
 
-[CDumpContext 挿入 (< <) 演算子](../../mfc/reference/cdumpcontext-class.md#operator_lt_lt)は、`CObject` ポインターが挿入されたときに `Dump` を呼び出します。
+[CDumpContext 挿入 (<<)](../../mfc/reference/cdumpcontext-class.md#operator_lt_lt) `Dump`演算子は`CObject`、ポインターが挿入されたときに呼び出します。
 
-`Dump` は、オブジェクトの "非循環" ダンプのみを許可します。 たとえば、オブジェクトの一覧をダンプできますが、オブジェクトの1つがリスト自体の場合は、最終的にスタックをオーバーフローします。
+`Dump`は、オブジェクトの「非循環」ダンプのみを許可します。 たとえば、オブジェクトのリストをダンプできますが、オブジェクトの 1 つがリスト自体である場合、最終的にはスタックをオーバーフローします。
 
 ### <a name="example"></a>例
 
-すべての `CObject` 例で使用される `CAge` クラスの一覧については、「 [coblist:: coblist](../../mfc/reference/coblist-class.md#coblist) 」を参照してください。
+すべての`CObject`例で使用されるクラスのリストについては[、CObList::CObList](../../mfc/reference/coblist-class.md#coblist)を`CAge`参照してください。
 
 [!code-cpp[NVC_MFCCObjectSample#9](../../mfc/codesnippet/cpp/cobject-class_3.cpp)]
 
-##  <a name="getruntimeclass"></a>CObject:: GetRuntimeClass
+## <a name="cobjectgetruntimeclass"></a><a name="getruntimeclass"></a>クラスを取得します。
 
-このオブジェクトのクラスに対応する `CRuntimeClass` 構造体を返します。
+このオブジェクト`CRuntimeClass`のクラスに対応する構造体を返します。
 
 ```
 virtual CRuntimeClass* GetRuntimeClass() const;
@@ -191,33 +191,33 @@ virtual CRuntimeClass* GetRuntimeClass() const;
 
 ### <a name="return-value"></a>戻り値
 
-このオブジェクトのクラスに対応する[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)構造体へのポインター。**NULL**にしないでください。
+このオブジェクトのクラスに対応する[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)構造体へのポインター。決して**NULL .**
 
 ### <a name="remarks"></a>解説
 
-`CObject`派生クラスごとに1つの `CRuntimeClass` 構造があります。 構造体のメンバーは次のとおりです。
+派生クラスごとに`CRuntimeClass``CObject`1 つの構造体があります。 構造体のメンバーは次のとおりです。
 
-- **LPCSTR m_lpszClassName**ASCII クラス名を格納している null で終わる文字列。
+- **m_lpszClassName**ASCII クラス名を含む NULL で終わる文字列。
 
-- **int m_nObjectSize**オブジェクトのサイズ (バイト単位)。 オブジェクトに割り当てられたメモリを指すデータメンバーがある場合、そのメモリのサイズは含まれません。
+- **int m_nObjectSize**オブジェクトのサイズ (バイト単位)。 割り当てられたメモリを指すデータ メンバーがオブジェクトにある場合、そのメモリのサイズは含まれません。
 
-- **UINT m_wSchema**スキーマ番号 (シリアル化クラスの場合は-1)。 スキーマ番号の説明については、 [IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial)マクロを参照してください。
+- **ウイントm_wSchema**スキーマ番号 ( - 1 シリアル化できないクラスの場合) スキーマ番号の説明については[、IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial)マクロを参照してください。
 
-- **CObject\* (PASCAL\* m_pfnCreateObject) ()** クラスのオブジェクトを作成する既定のコンストラクターへの関数ポインター (クラスが動的作成をサポートしている場合にのみ有効)。それ以外の場合は**NULL**を返します。
+- **CObject\* (\* PASCAL m_pfnCreateObject ) ( )** クラスのオブジェクトを作成するデフォルトのコンストラクタへの関数ポインタ (クラスが動的作成をサポート**NULL**している場合にのみ有効です。
 
-- **CRuntimeClass\* (PASCAL\* m_pfn_GetBaseClass) ()** アプリケーションが AFXDLL バージョンの MFC に動的にリンクされている場合は、基底クラスの `CRuntimeClass` 構造体を返す関数へのポインター。
+- **CRuntimeClass\* (\* PASCAL m_pfn_GetBaseClass ) ) アプリケーション**が AFXDLL バージョンの MFC に動的にリンクされている場合は、基本クラスの構造体を`CRuntimeClass`返す関数へのポインター。
 
-- **CRuntimeClass\* m_pBaseClass**アプリケーションが MFC に静的にリンクされている場合は、基本クラスの `CRuntimeClass` 構造体へのポインター。
+- **CRuntimeClass\* m_pBaseClass**アプリケーションが MFC に静的にリンクされている場合は、`CRuntimeClass`基本クラスの構造体へのポインター。
 
-この関数では、クラスの実装で[IMPLEMENT_DYNAMIC](run-time-object-model-services.md#implement_dynamic)、 [IMPLEMENT_DYNCREATE](run-time-object-model-services.md#implement_dyncreate)、または[IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial)マクロを使用する必要があります。 それ以外の場合は、正しくない結果が返されます。
+この関数では、クラス実装で[IMPLEMENT_DYNAMIC](run-time-object-model-services.md#implement_dynamic)、 [IMPLEMENT_DYNCREATE](run-time-object-model-services.md#implement_dyncreate)、または[マクロIMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial)使用する必要があります。 そうでなければ、正しくない結果が得られます。
 
 ### <a name="example"></a>例
 
-すべての `CObject` 例で使用される `CAge` クラスの一覧については、「 [coblist:: coblist](../../mfc/reference/coblist-class.md#coblist) 」を参照してください。
+すべての`CObject`例で使用されるクラスのリストについては[、CObList::CObList](../../mfc/reference/coblist-class.md#coblist)を`CAge`参照してください。
 
 [!code-cpp[NVC_MFCCObjectSample#10](../../mfc/codesnippet/cpp/cobject-class_4.cpp)]
 
-##  <a name="iskindof"></a>CObject:: IsKindOf
+## <a name="cobjectiskindof"></a><a name="iskindof"></a>オブジェクト::イズキンドフ
 
 このオブジェクトと特定のクラスとの関係をテストします。
 
@@ -227,28 +227,28 @@ BOOL IsKindOf(const CRuntimeClass* pClass) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*pClass*<br/>
-`CObject`派生クラスに関連付けられている[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)構造体へのポインター。
+*Pclass*<br/>
+派生クラスに関連付けられた[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) `CObject`構造体へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-オブジェクトがクラスに対応している場合は0以外の。それ以外の場合は0です。
+オブジェクトがクラスに対応する場合は 0 以外の値を返します。それ以外の場合は 0。
 
 ### <a name="remarks"></a>解説
 
-この関数は、 *pClass*をテストして、(1) これが指定されたクラスのオブジェクトであるか (2)、指定されたクラスから派生したクラスのオブジェクトであるかを確認します。 この関数は、 [DECLARE_DYNAMIC](run-time-object-model-services.md#declare_dynamic)、 [DECLARE_DYNCREATE](run-time-object-model-services.md#declare_dyncreate)、または[DECLARE_SERIAL](run-time-object-model-services.md#declare_serial)マクロで宣言されたクラスに対してのみ機能します。
+この関数は *、(1)* 指定したクラスのオブジェクトであるか 、(2) 指定されたクラスから派生したクラスのオブジェクトであるかどうかを調べたい pClass をテストします。 この関数は、 [、](run-time-object-model-services.md#declare_dyncreate)DECLARE_DYNCREATE マクロ 、または マクロ[DECLARE_DYNAMIC](run-time-object-model-services.md#declare_dynamic)で宣言されたクラスでのみ機能[DECLARE_SERIAL。](run-time-object-model-services.md#declare_serial)
 
-ポリモーフィズム機能をC++損なうため、この関数は広く使用しないでください。 代わりに仮想関数を使用してください。
+この関数は C++ ポリモーフィズム機能を使用しないため、広範囲に使用しないでください。 代わりに仮想関数を使用してください。
 
 ### <a name="example"></a>例
 
-すべての `CObject` 例で使用される `CAge` クラスの一覧については、「 [coblist:: coblist](../../mfc/reference/coblist-class.md#coblist) 」を参照してください。
+すべての`CObject`例で使用されるクラスのリストについては[、CObList::CObList](../../mfc/reference/coblist-class.md#coblist)を`CAge`参照してください。
 
 [!code-cpp[NVC_MFCCObjectSample#11](../../mfc/codesnippet/cpp/cobject-class_5.cpp)]
 
-##  <a name="isserializable"></a>CObject:: IsSerializable
+## <a name="cobjectisserializable"></a><a name="isserializable"></a>Cオブジェクト::シリアル化可能
 
-このオブジェクトがシリアル化の対象であるかどうかをテストします。
+このオブジェクトがシリアル化に適しているかどうかをテストします。
 
 ```
 BOOL IsSerializable() const;
@@ -256,24 +256,24 @@ BOOL IsSerializable() const;
 
 ### <a name="return-value"></a>戻り値
 
-このオブジェクトをシリアル化できる場合は0以外の。それ以外の場合は0です。
+このオブジェクトをシリアル化できる場合は 0 以外の値を返します。それ以外の場合は 0。
 
 ### <a name="remarks"></a>解説
 
-クラスをシリアル化できるようにするには、その宣言に[DECLARE_SERIAL](run-time-object-model-services.md#declare_serial)マクロを含める必要があります。また、実装には[IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial)マクロが含まれている必要があります。
+クラスをシリアル化できるようにするには、その宣言に[DECLARE_SERIAL](run-time-object-model-services.md#declare_serial)マクロが含まれ、実装に[IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial)マクロが含まれている必要があります。
 
 > [!NOTE]
->  この関数をオーバーライドしないでください。
+> この関数をオーバーライドしないでください。
 
 ### <a name="example"></a>例
 
-すべての `CObject` 例で使用される `CAge` クラスの一覧については、「 [coblist:: coblist](../../mfc/reference/coblist-class.md#coblist) 」を参照してください。
+すべての`CObject`例で使用されるクラスのリストについては[、CObList::CObList](../../mfc/reference/coblist-class.md#coblist)を`CAge`参照してください。
 
 [!code-cpp[NVC_MFCCObjectSample#12](../../mfc/codesnippet/cpp/cobject-class_6.cpp)]
 
-##  <a name="operator_delete"></a>CObject:: operator delete
+## <a name="cobjectoperator-delete"></a><a name="operator_delete"></a>Cオブジェクト::オペレータ削除
 
-ライブラリのリリースバージョンでは、operator **delete**は operator **new**によって割り当てられたメモリを解放します。
+ライブラリのリリース バージョンの場合、演算子**delete**は、演算子**new**によって割り当てられたメモリを解放します。
 
 ```
 void PASCAL operator delete(void* p);
@@ -290,27 +290,27 @@ void PASCAL operator delete(
 
 ### <a name="remarks"></a>解説
 
-デバッグバージョンでは、operator **delete**はメモリリークを検出するように設計された割り当て監視スキームに関与します。
+デバッグ バージョンでは、オペレーター**の delete**は、メモリ リークを検出するために設計された割り当て監視スキームに参加します。
 
 コード行を使用する場合
 
 [!code-cpp[NVC_MFCCObjectSample#14](../../mfc/codesnippet/cpp/cobject-class_7.cpp)]
 
-の実装の前。CPP ファイルを使用すると、3番目のバージョンの**delete**が使用され、後でレポートを作成するために、割り当てられたブロックにファイル名と行番号が格納されます。 追加のパラメーターを指定する必要はありません。マクロがそれを対処します。
+での実装の前に.CPP ファイルを使用すると、削除**の**3 番目のバージョンが使用され、後でレポートするために割り当てられたブロックにファイル名と行番号が格納されます。 余分なパラメータを指定する心配はありません。マクロがあなたのためにそれを処理します。
 
-デバッグモードで DEBUG_NEW を使用しない場合でも、前に説明したソースファイルの行番号レポートがなくても、リーク検出は発生します。
+デバッグ モードでDEBUG_NEWを使用しない場合でも、リーク検出は行われますが、上記のソース ファイル行番号レポートは表示されません。
 
-Operator **new**と**delete**をオーバーライドすると、この診断機能がプランます。
+演算子を**新規**にオーバーライドして**削除**すると、この診断機能は失われます。
 
 ### <a name="example"></a>例
 
-`CObject` の例で使用されている `CAge` クラスの一覧については、「 [coblist:: coblist](../../mfc/reference/coblist-class.md#coblist) 」を参照してください。
+例で使用されているクラスの一覧については[、CObList::CObList](../../mfc/reference/coblist-class.md#coblist)を`CAge``CObject`参照してください。
 
 [!code-cpp[NVC_MFCCObjectSample#15](../../mfc/codesnippet/cpp/cobject-class_8.cpp)]
 
-##  <a name="operator_new"></a>CObject:: operator new
+## <a name="cobjectoperator-new"></a><a name="operator_new"></a>Cオブジェクト::オペレータ新しい
 
-ライブラリのリリースバージョンでは、operator **new**は `malloc`と同様の方法で最適なメモリ割り当てを実行します。
+ライブラリのリリース バージョンでは、演算子**new**は、次のような方法で最適なメモリ`malloc`割り当てを実行します。
 
 ```
 void* PASCAL operator new(size_t nSize);
@@ -324,26 +324,26 @@ void* PASCAL operator new(
 
 ### <a name="remarks"></a>解説
 
-デバッグバージョンでは、operator **new**はメモリリークを検出するように設計された割り当て監視スキームに参加します。
+デバッグ バージョンでは、オペレータ**new**はメモリ リークを検出するために設計された割り当て監視スキームに参加します。
 
 コード行を使用する場合
 
 [!code-cpp[NVC_MFCCObjectSample#14](../../mfc/codesnippet/cpp/cobject-class_7.cpp)]
 
-の実装の前。CPP ファイルを使用すると、**新しい**の2番目のバージョンが使用され、後でレポートを作成するために、割り当てられたブロックにファイル名と行番号が格納されます。 追加のパラメーターを指定する必要はありません。マクロがそれを対処します。
+での実装の前に.CPP ファイルを使用すると、新**しい**の 2 番目のバージョンが使用され、後でレポートするために割り当てられたブロックにファイル名と行番号が格納されます。 余分なパラメータを指定する心配はありません。マクロがあなたのためにそれを処理します。
 
-デバッグモードで DEBUG_NEW を使用しない場合でも、前に説明したソースファイルの行番号レポートがなくても、リーク検出は発生します。
+デバッグ モードでDEBUG_NEWを使用しない場合でも、リーク検出は行われますが、上記のソース ファイル行番号レポートは表示されません。
 
 > [!NOTE]
->  この演算子をオーバーライドする場合は、 **delete**もオーバーライドする必要があります。 標準ライブラリ `_new_handler` 関数は使用しないでください。
+> この演算子をオーバーライドする場合は、 **delete**もオーバーライドする必要があります。 標準ライブラリ`_new_handler`関数は使用しないでください。
 
 ### <a name="example"></a>例
 
-`CObject` の例で使用されている `CAge` クラスの一覧については、「 [coblist:: coblist](../../mfc/reference/coblist-class.md#coblist) 」を参照してください。
+例で使用されているクラスの一覧については[、CObList::CObList](../../mfc/reference/coblist-class.md#coblist)を`CAge``CObject`参照してください。
 
 [!code-cpp[NVC_MFCCObjectSample#16](../../mfc/codesnippet/cpp/cobject-class_9.h)]
 
-##  <a name="serialize"></a>CObject:: Serialize
+## <a name="cobjectserialize"></a><a name="serialize"></a>Cオブジェクト::シリアライズ
 
 アーカイブに対して、このオブジェクトの読み取りまたは書き込みを行います。
 
@@ -353,27 +353,27 @@ virtual void Serialize(CArchive& ar);
 
 ### <a name="parameters"></a>パラメーター
 
-*金*<br/>
-シリアル化またはシリアル化を行う `CArchive` オブジェクト。
+*ar*<br/>
+シリアル`CArchive`化するオブジェクトまたはシリアル化するオブジェクト。
 
 ### <a name="remarks"></a>解説
 
-シリアル化する各クラスの `Serialize` をオーバーライドする必要があります。 オーバーライドされた `Serialize` は、まず基本クラスの `Serialize` 関数を呼び出す必要があります。
+シリアル化する`Serialize`クラスごとにオーバーライドする必要があります。 オーバーライドされた場合`Serialize`は、まずその`Serialize`基本クラスの関数を呼び出す必要があります。
 
-また、クラス宣言で[DECLARE_SERIAL](run-time-object-model-services.md#declare_serial)マクロを使用する必要があります。また、実装では、 [IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial)マクロを使用する必要があります。
+クラス宣言で[DECLARE_SERIAL](run-time-object-model-services.md#declare_serial)マクロも使用し、実装で[IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial)マクロを使用する必要があります。
 
-[Carchive:: IsLoading](../../mfc/reference/carchive-class.md#isloading)または[Carchive:: isloading](../../mfc/reference/carchive-class.md#isstoring)を使用して、アーカイブが読み込み中であるか格納されているかを判断します。
+[アーカイブが読み込みまたは保存されているかどうかを判断するには、CArchive::IsLoading](../../mfc/reference/carchive-class.md#isloading)または[CArchive::Is格納](../../mfc/reference/carchive-class.md#isstoring)を使用します。
 
-`Serialize` は、 [carchive:: ReadObject](../../mfc/reference/carchive-class.md#readobject)および[Carchive:: WriteObject](../../mfc/reference/carchive-class.md#writeobject)によって呼び出されます。 これらの関数は、`CArchive` 挿入演算子 ( **<\<** ) と抽出演算子 ( **>>** ) に関連付けられています。
+`Serialize`は、C アーカイブによって呼び出されます:[読み取りオブジェクト](../../mfc/reference/carchive-class.md#readobject)と[C アーカイブ::書き込みオブジェクト](../../mfc/reference/carchive-class.md#writeobject). これらの関数は`CArchive`、挿入演算子 ( ** < **) と抽出演算子**>>**( ) に関連付けられます。
 
-シリアル化の例については、「[シリアル化: オブジェクト](../../mfc/serialization-serializing-an-object.md)のシリアル化」を参照してください。
+シリアル化の例については、「[シリアル化: オブジェクトのシリアル化](../../mfc/serialization-serializing-an-object.md)」を参照してください。
 
 ### <a name="example"></a>例
 
-すべての `CObject` 例で使用される `CAge` クラスの一覧については、「 [coblist:: coblist](../../mfc/reference/coblist-class.md#coblist) 」を参照してください。
+すべての`CObject`例で使用されるクラスのリストについては[、CObList::CObList](../../mfc/reference/coblist-class.md#coblist)を`CAge`参照してください。
 
 [!code-cpp[NVC_MFCCObjectSample#13](../../mfc/codesnippet/cpp/cobject-class_10.cpp)]
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[階層図](../../mfc/hierarchy-chart.md)
+[階層グラフ](../../mfc/hierarchy-chart.md)

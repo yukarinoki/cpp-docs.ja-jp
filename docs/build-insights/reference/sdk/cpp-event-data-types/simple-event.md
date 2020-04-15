@@ -1,6 +1,6 @@
 ---
-title: SimpleEvent クラス
-description: Build C++ Insights SDK simpleevent クラスの参照。
+title: クラス
+description: C++ ビルド インサイト SDK SimpleEvent クラスリファレンス。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 4c30f81236138328322d8c870d4ad69d9988b49a
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 414ff5c1af99acc612384c1ae39f6e12ab051275
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78334590"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81324360"
 ---
-# <a name="simpleevent-class"></a>SimpleEvent クラス
+# <a name="simpleevent-class"></a>クラス
 
 ::: moniker range="<=vs-2015"
 
-Build C++ Insights SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを表示するには、この記事の Visual Studio バージョンセレクターコントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。
+C++ ビルド インサイト SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを参照するには、この記事の Visual Studio**バージョン**セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の上部に表示されます。
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-`SimpleEvent` クラスは、 [Matchevent](../functions/match-event.md)、 [matcheventinmemberfunction](../functions/match-event-in-member-function.md)、 [Matcheventstack](../functions/match-event-stack.md)、および[matcheventstackinmemberfunction](../functions/match-event-stack-in-member-function.md)関数と共に使用されます。 任意の単純なイベントと一致させるために使用します。 `SimpleEvent` クラスによって照合できるすべてのイベントを表示するには、[イベントテーブル](../event-table.md)を参照してください。
+クラス`SimpleEvent`[は、](../functions/match-event-in-member-function.md)[関数](../functions/match-event.md)で使用されます。 [MatchEventStack](../functions/match-event-stack.md) [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) この機能を使用して、任意の単純なイベントに一致させます。 [イベント テーブル](../event-table.md)を参照して、クラスで一致できるすべてのイベントを`SimpleEvent`確認します。
 
 ## <a name="syntax"></a>構文
 
@@ -39,13 +39,13 @@ public:
 
 ## <a name="members"></a>メンバー
 
-[イベント](event.md)基本クラスから継承されたメンバーと共に、`SimpleEvent` クラスには次のメンバーが含まれます。
+[クラスには、Event](event.md)基本クラスから継承されたメンバーと`SimpleEvent`共に、次のメンバーが含まれます。
 
 ### <a name="constructors"></a>コンストラクター
 
-[SimpleEvent](#simple-event)
+[シンプルイベント](#simple-event)
 
-## <a name="simple-event"></a>SimpleEvent
+## <a name="simpleevent"></a><a name="simple-event"></a>シンプルイベント
 
 ```cpp
 SimpleEvent(const RawEvent& event);
@@ -53,7 +53,7 @@ SimpleEvent(const RawEvent& event);
 
 ### <a name="parameters"></a>パラメーター
 
-*event*\
+*イベント*\
 任意の単純なイベント。
 
 ::: moniker-end

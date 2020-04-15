@@ -1,8 +1,9 @@
 ---
 title: _kbhit
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _kbhit
+- _o__kbhit
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +34,12 @@ helpviewer_keywords:
 - _kbhit function
 - keyboards, checking input
 ms.assetid: e82a1cc9-bbec-4150-b678-a7e433220fe4
-ms.openlocfilehash: 972b060dd98b5d267fa1f529c898573d4b82bb61
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: c49a924a38aed3ff2d7953e150c4f3f1f3a5a25c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79438093"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81342246"
 ---
 # <a name="_kbhit"></a>_kbhit
 
@@ -55,19 +57,21 @@ int _kbhit( void );
 
 ## <a name="return-value"></a>戻り値
 
-キーが押されている場合、 **_kbhit**は0以外の値を返します。 それ以外の場合は 0 を返します。
+**_kbhit**キーが押された場合は、0 以外の値を返します。 それ以外の場合は 0 を返します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
-**_Kbhit**関数は、最近のキー入力をコンソールで確認します。 関数がゼロ以外の値を返した場合、キーストロークがバッファー内で待機しています。 プログラムは **_getch**または **_getche**を呼び出して、キーストロークを取得できます。
+**_kbhit**関数は、最近のキーストロークをコンソールでチェックします。 関数がゼロ以外の値を返した場合、キーストロークがバッファー内で待機しています。 その後、プログラムは **_getch**または **_getche**を呼び出してキーストロークを取得できます。
 
-## <a name="requirements"></a>要件
+既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+
+## <a name="requirements"></a>必要条件
 
 |ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**_kbhit**|\<conio.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="libraries"></a>ライブラリ
 
@@ -105,6 +109,6 @@ Hit me!! Hit me!! Hit me!! Hit me!! Hit me!! Hit me!! Hit me!!
 Key struck was 'q'
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [コンソール入出力とポート入出力](../../c-runtime-library/console-and-port-i-o.md)<br/>

@@ -1,9 +1,11 @@
 ---
 title: isleadbyte、_isleadbyte_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _isleadbyte_l
 - isleadbyte
+- _o__isleadbyte_l
+- _o_isleadbyte
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +34,12 @@ helpviewer_keywords:
 - istleadbyte function
 - isleadbyte function
 ms.assetid: 3b2bcf09-d82b-4803-9e80-59d04942802a
-ms.openlocfilehash: 6b853dcea82c2afea91b2e0545d253786c88ae5e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: dddf1d669f77805df8e00f506b6427603ac8fd9f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954309"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81343836"
 ---
 # <a name="isleadbyte-_isleadbyte_l"></a>isleadbyte、_isleadbyte_l
 
@@ -54,20 +57,22 @@ int _isleadbyte_l( int c );
 
 ### <a name="parameters"></a>パラメーター
 
-*c*<br/>
+*C*<br/>
 テストする整数。
 
 ## <a name="return-value"></a>戻り値
 
-引数がテスト条件を満たしている場合、 **isリードバイト**は0以外の値を返します。そうでない場合は0を返します。 "C" ロケールと1バイト文字セット (SBCS) のロケールでは、 **isリードバイト**は常に0を返します。
+**引数**がテスト条件を満たす場合は 0 以外の値を返し、満たない場合は 0 を返します。 "C" ロケールおよび 1 バイト文字セット (SBCS) ロケールでは **、isleadbyte**は常に 0 を返します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**Isリードバイト**マクロは、引数がマルチバイト文字の最初のバイトの場合、0以外の値を返します。 **isリードバイト**は、-1 (**EOF**) から**UCHAR_MAX** (0xff) までの任意の整数引数に対して意味のある結果を生成します。
+引数がマルチバイト文字の最初のバイトの場合 **、isleadbyte**マクロは 0 以外の値を返します。 **isleadbyte は**、-1 (**EOF**) から**UCHAR_MAX** (0xFF) までの整数引数に対して意味のある結果を生成します。
 
-**Isリードバイト**の予期される引数の型は**int**です。符号付き文字が渡された場合、コンパイラはそれを符号拡張によって整数に変換することで、予測できない結果が発生する可能性があります。
+想定される引数の型**は** **int**です。符号付き文字が渡されると、コンパイラは符号拡張によって整数に変換し、予測できない結果を生じる可能性があります。
 
-**_L**サフィックスが付いたこの関数のバージョンは、ロケールに依存する動作に現在のロケールではなく渡されたロケールを使用する点を除いて同じです。
+**_l**サフィックスを持つこの関数のバージョンは、ロケール依存の動作に現在のロケールの代わりに渡されたロケールを使用する点を除いて同じです。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -77,15 +82,15 @@ int _isleadbyte_l( int c );
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**isleadbyte**|\<ctype.h>|
 |**_isleadbyte_l**|\<ctype.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
 [バイト分類](../../c-runtime-library/byte-classification.md)<br/>
 [ロケール](../../c-runtime-library/locale.md)<br/>
-[_ismbb 系ルーチン](../../c-runtime-library/ismbb-routines.md)<br/>
+[_ismbbルーチン](../../c-runtime-library/ismbb-routines.md)<br/>

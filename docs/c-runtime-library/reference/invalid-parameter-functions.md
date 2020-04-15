@@ -1,13 +1,16 @@
 ---
 title: _invalid_parameter、_invalid_parameter_noinfo、_invalid_parameter_noinfo_noreturn、_invoke_watson
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _invalid_parameter
 - _invalid_parameter_noinfo
 - _invalid_parameter_noinfo_noreturn
 - _invoke_watson
+- _o__invalid_parameter_noinfo
+- _o__invalid_parameter_noinfo_noreturn
 api_location:
 - api-ms-win-crt-runtime-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -22,12 +25,12 @@ f1_keywords:
 - CORECRT/_invoke_watson
 - _invoke_watson
 ms.assetid: a4d6f1fd-ce56-4783-8719-927151a7a814
-ms.openlocfilehash: b2714c140a2396d88c700689244c6ec04e12169c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 0f0a3ea3e1f2e43d53650b4017905c696269ce20
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954607"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81343940"
 ---
 # <a name="_invalid_parameter-_invalid_parameter_noinfo-_invalid_parameter_noinfo_noreturn-_invoke_watson"></a>_invalid_parameter、_invalid_parameter_noinfo、_invalid_parameter_noinfo_noreturn、_invoke_watson
 
@@ -61,7 +64,7 @@ _invoke_watson(
 
 ## <a name="parameters"></a>パラメーター
 
-*式 (expression)*<br/>
+*式*<br/>
 有効でないソース コード パラメーターの式を表す文字列。
 
 *function_name*<br/>
@@ -73,30 +76,32 @@ _invoke_watson(
 *line_number*<br/>
 ハンドラーが呼び出されたソース コードの行番号。
 
-*reserved*<br/>
-使用されません。
+*予約*<br/>
+未使用。
 
 ## <a name="return-value"></a>戻り値
 
-これらの関数は値を返しません。 _Invalid_parameter_noinfo_noreturn 関数と関数は呼び出し元に戻りません **。また、** 場合によっては、呼び出し元に戻ら**ないこともあります** **(_t)** 。
+これらの関数は値を返しません。 **_invalid_parameter_noinfo_noreturn**関数と **_invoke_watson**関数は呼び出し元に戻らないので、場合によっては **、_invalid_parameter**と **_invalid_parameter_noinfo**が呼び出し元に戻らない場合があります。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-有効でないパラメーターが C ランタイム ライブラリ関数に渡された場合、ライブラリ関数は、*無効なパラメーター ハンドラー*を呼び出します。これは、いくつかの作業のうちのいずれかを行うためにプログラマによって指定された関数です。 たとえば、問題をユーザーにレポートする、ログに書き込む、デバッガーで中断する、プログラムを終了する、または何も行わない、などです。 プログラマによって関数が指定されていない場合**は、既定のハンドラーである**"既定のハンドラー" が呼び出されます。
+有効でないパラメーターが C ランタイム ライブラリ関数に渡された場合、ライブラリ関数は、*無効なパラメーター ハンドラー*を呼び出します。これは、いくつかの作業のうちのいずれかを行うためにプログラマによって指定された関数です。 たとえば、問題をユーザーにレポートする、ログに書き込む、デバッガーで中断する、プログラムを終了する、または何も行わない、などです。 プログラマが関数を指定しない場合は、既定のハンドラ **_invoke_watson**が呼び出されます。
 
-既定では、有効でないパラメーターがデバッグコードで識別されると、CRT ライブラリ関数は verbose パラメーターを使用して関数の**パラメーター**を呼び出します。 非デバッグコードでは、空**のパラメーター**を使用して、**パラメーター**の関数を呼び出す (_t) 関数が呼び出されます。 非デバッグ CRT ライブラリ関数でプログラムの終了が必要な場合は、 **_invalid_parameter_noinfo_noreturn**関数が呼び出されます。この関数は、空のパラメーターを使用して**パラメーター**関数を呼び出し、その後に、次のように指定します。プログラムの終了を強制する watson 関数。
+既定では、デバッグ コードで無効なパラメーターが識別されると、CRT ライブラリ関数は詳細パラメーター**を使用して関数_invalid_parameter**呼び出します。 非デバッグ コードでは **、_invalid_parameter_noinfo**関数が呼び出され、空のパラメーターを使用して **_invalid_parameter**関数が呼び出されます。 非デバッグ CRT ライブラリ関数がプログラムの終了を必要とする場合は **、_invalid_parameter_noinfo_noreturn**関数が呼び出され、空のパラメーターを使用して **_invalid_parameter**関数を呼び出し、その後**に _invoke_watson**関数を呼び出してプログラムの終了を強制します。
 
-**パラメーター**関数は、ユーザー定義の無効なパラメーターハンドラーが設定されているかどうかを確認し、存在する場合はそれを呼び出します。 たとえば、現在のスレッドで [set_thread_local_invalid_parameter_handler](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md) の呼び出しでユーザー定義のスレッド ローカル ハンドラーが設定されている場合、それを呼び出し、次いでその関数は戻ります。 それ以外の場合、[set_invalid_parameter_handler](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md) の呼び出しでユーザー定義の無効なグローバル パラメーター ハンドラーが設定されているなら、それを呼び出し、次いでその関数は戻ります。 それ以外の**場合は、既定のハンドラーが**呼び出されます。 既定**の動作では**、プログラムを終了します。 ユーザー定義のハンドラーは終了するか、戻るかのいずれかです。 確実に回復できるのでない限り、ユーザー定義のハンドラーでプログラムを終了することをお勧めします。
+**_invalid_parameter**関数は、ユーザー定義の無効なパラメーター ハンドラーが設定されているかどうかを確認し、設定されている場合はそれを呼び出します。 たとえば、現在のスレッドで [set_thread_local_invalid_parameter_handler](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md) の呼び出しでユーザー定義のスレッド ローカル ハンドラーが設定されている場合、それを呼び出し、次いでその関数は戻ります。 それ以外の場合、[set_invalid_parameter_handler](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md) の呼び出しでユーザー定義の無効なグローバル パラメーター ハンドラーが設定されているなら、それを呼び出し、次いでその関数は戻ります。 それ以外の場合は、既定のハンドラー **_invoke_watson**が呼び出されます。 **_invoke_watson**の既定の動作は、プログラムを終了することです。 ユーザー定義のハンドラーは終了するか、戻るかのいずれかです。 確実に回復できるのでない限り、ユーザー定義のハンドラーでプログラムを終了することをお勧めします。
 
-既定**のハンドラーが呼び出された**ときに、プロセッサが[__ fastfail](../../intrinsics/fastfail.md)操作をサポートしている場合は、 **FAST_FAIL_INVALID_ARG**のパラメーターを使用して呼び出され、プロセスが終了します。 それ以外の場合、Fail Fast 例外が発生します。これは、アタッチされているデバッガーでキャッチできます。 プロセスの継続が許可された場合、例外コードの状態**STATUS_INVALID_CRUNTIME_PARAMETER**を使用して、Windows **TerminateProcess**関数の呼び出しによって終了されます。
+既定のハンドラー **_invoke_watson**が呼び出されると、プロセッサが[__fastfail](../../intrinsics/fastfail.md)操作をサポートしている場合、FAST_FAIL_INVALID_ARG**のパラメーター**を使用して呼び出され、プロセスが終了します。 それ以外の場合、Fail Fast 例外が発生します。これは、アタッチされているデバッガーでキャッチできます。 プロセスの続行が許可されている場合は、例外コードの状態を使用して Windows **TerminateProcess**関数を呼び出すことによって終了**STATUS_INVALID_CRUNTIME_PARAMETER。**
+
+既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|関数|必須ヘッダー|
+|機能|必須ヘッダー|
 |--------------|------------------|
-|**invalidparameter**、 **_invalid_parameter_noinfo_noreturn**、または**watson** (_d)、(_d)|\<corecrt.h >|
+|**_invalid_parameter**, **_invalid_parameter_noinfo**, **_invalid_parameter_noinfo_noreturn**, **_invoke_watson**|\<corecrt.h >|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

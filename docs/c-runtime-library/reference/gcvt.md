@@ -1,8 +1,9 @@
 ---
 title: _gcvt
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - _gcvt
+- _o__gcvt
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +33,12 @@ helpviewer_keywords:
 - strings [C++], converting from floating point
 - CVTBUFSIZE
 ms.assetid: 5761411e-c06b-409a-912f-810fe7f4bcb5
-ms.openlocfilehash: 3618f5571275783131c74c89f29218f89023f70e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: f161256c6dc86a045f49111cde3651bea08ead11
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956103"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81345320"
 ---
 # <a name="_gcvt"></a>_gcvt
 
@@ -57,8 +59,8 @@ char *_gcvt(
 *value*<br/>
 変換する値。
 
-*数字*<br/>
-格納される有効桁数。
+*数値*<br/>
+格納されている有効桁数。
 
 *バッファー*<br/>
 結果の格納場所。
@@ -67,21 +69,23 @@ char *_gcvt(
 
 **_gcvt**は、数字の文字列へのポインターを返します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**_Gcvt**関数は、浮動小数点*値*を文字列に変換します。これには、小数点と可能な符号バイトが含まれています。また、*バッファー*に文字列を格納します。 *バッファー*は、変換後の値と、自動的に追加される終端の null 文字を格納するのに十分な大きさにする必要があります。 *数字*+ 1 のバッファーサイズが使用されている場合、関数はバッファーの末尾を上書きします。 これは、変換後の文字列に小数点が含まれており、符号と指数の情報が含まれている可能性があるためです。 オーバーフローに対するプロビジョニングはありません。 **_gcvt**は、10進数形式で*桁*を生成しようとします。 そうでない場合は、指数形式*で数字が生成さ*れます。 後続のゼロは、変換時に非表示になる可能性があります。
+**_gcvt**関数は、浮動小数点*値*を文字列 (小数点と可能な符号バイトを含む) に変換し、その文字列を*buffer*に格納します。 *バッファー*は、変換された値に、自動的に追加される終端の NULL 文字を格納するのに十分な大きさである必要があります。 バッファ サイズが *+* 1 の場合、関数はバッファの終端を上書きします。 これは、変換後の文字列に小数点が含まれており、符号と指数の情報が含まれている可能性があるためです。 オーバーフローに対するプロビジョニングはありません。 **_gcvt**は、10 進形式の*数字*を生成しようとします。 できない場合は、指数形式で*数字*を生成します。 後続のゼロは、変換時に非表示になる可能性があります。
 
-長さ **_CVTBUFSIZE**の*バッファー*は、任意の浮動小数点値に対して十分です。
+長さ **_CVTBUFSIZE**の*バッファー*は、浮動小数点値に対して十分です。
 
-この関数は、パラメーターを検証します。 *Buffer*が**NULL**の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、この関数は**errno**を**EINVAL**に設定し、 **NULL**を返します。
+この関数は、パラメーターを検証します。 *buffer*が**NULL**の場合は、「パラメーター[の検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーター ハンドラーが呼び出されます。 実行を続行できる場合、この関数は**errno**を**EINVAL**に設定し **、NULL**を返します。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**_gcvt**|\<stdlib.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="example"></a>例
 

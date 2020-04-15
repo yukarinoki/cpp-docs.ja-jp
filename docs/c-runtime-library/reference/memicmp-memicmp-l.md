@@ -1,9 +1,11 @@
 ---
 title: _memicmp、_memicmp_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _memicmp_l
 - _memicmp
+- _o__memicmp
+- _o__memicmp_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - memicmp_l function
 - _memicmp_l function
 ms.assetid: 0a6eb945-4077-4f84-935d-1aaebe8db8cb
-ms.openlocfilehash: a463b9c79a76879311bb811b38e4aabcfd6e7226
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 5ad22f2107695b14d4a8361d4532d6e250b5af6f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951835"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81333237"
 ---
 # <a name="_memicmp-_memicmp_l"></a>_memicmp、_memicmp_l
 
@@ -59,16 +62,16 @@ int _memicmp_l(
 
 ### <a name="parameters"></a>パラメーター
 
-*buffer1*<br/>
+*バッファ1*<br/>
 最初のバッファー。
 
-*buffer2*<br/>
+*バッファ2*<br/>
 2 番目のバッファー。
 
 *count*<br/>
 文字数。
 
-*locale*<br/>
+*ロケール*<br/>
 使用するロケール。
 
 ## <a name="return-value"></a>戻り値
@@ -77,27 +80,29 @@ int _memicmp_l(
 
 |戻り値|buf1 と buf2 の最初の count バイトの関係|
 |------------------|--------------------------------------------------------|
-|< 0|*buffer1*未満*buffer2*。|
-|0|*buffer1*は*buffer2*と同じです。|
-|> 0|*buffer1*が*buffer2*を超えています。|
+|< 0|*バッファ1*よりバッファ*2*より小さい。|
+|0|*バッファ2*と同じ*バッファ1。*|
+|> 0|*バッファ1*より大きい*バッファ2。*|
 |**_NLSCMPERROR**|エラーが発生しました。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-Buffer1**関数は、2**つのバッファーの最初の文字*数*をバイト単位で比較します。 比較では、大文字と小文字を区別しません。
+**_memicmp**関数は、2 つの*バッファー buffer1*と*buffer2*バイトの最初の*カウント*文字をバイト単位で比較します。 比較では、大文字と小文字を区別しません。
 
-*Buffer1*または*buffer2*のいずれかが null ポインターの場合、この関数は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、関数は **_NLSCMPERROR**を返し、 **errno**を**EINVAL**に設定します。
+*buffer1*または*buffer2*のいずれかが null ポインターの場合、この関数は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーター ハンドラーを呼び出します。 実行を続行できる場合、関数は **_NLSCMPERROR**を返し **、errno**を**EINVAL**に設定します。
 
-memicmp は、ロケールに依存する動作に現在のロケールを使用します **(_d)** 代わりに渡されたロケールを使用することを除いて、% **_l**は同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+**_memicmp**は、ロケール依存の動作に現在のロケールを使用します。**_memicmp_l**は、渡されたロケールを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**_memicmp**|\<memory.h> または \<string.h>|
 |**_memicmp_l**|\<memory.h> または \<string.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="example"></a>例
 

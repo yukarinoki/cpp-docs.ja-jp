@@ -1,10 +1,13 @@
 ---
 title: fma、fmaf、fmal
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - fma
 - fmaf
 - fmal
+- _o_fma
+- _o_fmaf
+- _o_fmal
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +37,12 @@ helpviewer_keywords:
 - fmaf function
 - fmal function
 ms.assetid: 584a6037-da1e-4e86-9f0c-97aae86de0c0
-ms.openlocfilehash: 4ddc4061e5a24ee3b5176aedc569d134d85e0002
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 993ca4d57202b3789929161a964b3e41d48fd98f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957102"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81346567"
 ---
 # <a name="fma-fmaf-fmal"></a>fma、fmaf、fmal
 
@@ -80,45 +84,47 @@ long double fmal(
 
 ### <a name="parameters"></a>パラメーター
 
-*x*<br/>
+*X*<br/>
 乗算する 1 番目の値。
 
-*y*<br/>
+*Y*<br/>
 乗算する 2 番目の値。
 
-*z*<br/>
+*Z*<br/>
 加算する値。
 
 ## <a name="return-value"></a>戻り値
 
-`(x * y) + z` を返します。 さらに戻り値は、現在の丸めの形式を使用して丸められます。
+`(x * y) + z` が返されます。 さらに戻り値は、現在の丸めの形式を使用して丸められます。
 
 それ以外の場合は、次の値のいずれかを返します。
 
-|問題|Return|
+|問題|戻り値|
 |-----------|------------|
-|*x* = 無限大、 *y* = 0 または<br /><br /> *x* = 0、 *y* = 無限大|NaN|
-|*x*または*y* = 正確な±無限大、 *z* = 無限大と逆の符号|NaN|
-|*x*または*y* = NaN|NaN|
-|not (*x* = 0、 *y*= 不定)、 *z* = NaN<br /><br /> not (*x*= 不定, *y*= 0) および*z* = NaN|NaN|
-|オーバーフロー範囲エラー|± HUGE_VAL、± HUGE_VALF、または± HUGE_VALL|
+|*x* = 無限大 *、y* = 0 または<br /><br /> *x* = 0、 *y* = 無限大|(NaN)|
+|*x*または*y* = 正確な ± INFINITY、 *z* = 反対の符号を持つ INFINITY|(NaN)|
+|*x*または*y* = NaN|(NaN)|
+|ない *(x* = *0、y*= 無期限) および*z* = NaN<br /><br /> ない (*x*= 無期限、 *y*= 0) および*z* = NaN|(NaN)|
+|オーバーフロー範囲エラー|±HUGE_VAL、±HUGE_VALF、±HUGE_VALL|
 |アンダーフロー範囲エラー|丸めた後の正確な値。|
 
 エラーは、[_matherr](matherr.md) で指定されたとおりに報告されます。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-でC++はオーバーロードが可能であるため、**浮動小数点**型および**long** **double**型を受け取って返す**fma**のオーバーロードを呼び出すことができます。 C プログラムでは、 **fma**は常に**倍精度浮動小数点数**を取得し、double を返します。
+C++ ではオーバーロードが可能なため **、float**型と**長い****ダブル**型を受け取り、戻す**fma**のオーバーロードを呼び出すことができます。 C プログラムでは **、fma**は常に二**重**を取り、返します。
 
 この関数は、値を無限の精度とするかのように計算し、最終的な結果を丸めます。
 
+既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
+
 ## <a name="requirements"></a>必要条件
 
-|関数|C ヘッダー|C++ ヘッダー|
+|機能|C ヘッダー|C++ ヘッダー|
 |--------------|--------------|------------------|
-|**fma**、 **fmaf**、 **fマル**|\<math.h>|\<cmath>|
+|**fma**, **fmaf**,**フマル**|\<math.h>|\<cmath>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

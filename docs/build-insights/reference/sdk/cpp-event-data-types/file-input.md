@@ -1,6 +1,6 @@
 ---
-title: FileInput クラス
-description: C++ビルドインサイト SDK fileinput クラス参照。
+title: ファイル入力クラス
+description: C++ ビルド インサイト SDK ファイル入力クラスリファレンス。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: bea2cf72ca2a83a9cd630f8a9ccefb87dd4b7ff1
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 642236d3e67465ed38508cb24c8cd698ae880065
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78334848"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81324793"
 ---
-# <a name="fileinput-class"></a>FileInput クラス
+# <a name="fileinput-class"></a>ファイル入力クラス
 
 ::: moniker range="<=vs-2015"
 
-Build C++ Insights SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを表示するには、この記事の Visual Studio バージョンセレクターコントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。
+C++ ビルド インサイト SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを参照するには、この記事の Visual Studio**バージョン**セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の上部に表示されます。
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-`FileInput` クラスは、 [Matchevent](../functions/match-event.md)、 [matcheventinmemberfunction](../functions/match-event-in-member-function.md)、 [Matcheventstack](../functions/match-event-stack.md)、および[matcheventstackinmemberfunction](../functions/match-event-stack-in-member-function.md)関数と共に使用されます。 [FILE_INPUT](../event-table.md#file-input)イベントと一致させるには、これを使用します。
+クラス`FileInput`[は、](../functions/match-event-in-member-function.md)[関数](../functions/match-event.md)で使用されます。 [MatchEventStack](../functions/match-event-stack.md) [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) [FILE_INPUT](../event-table.md#file-input)イベントに一致させるために使用します。
 
 ## <a name="syntax"></a>構文
 
@@ -52,18 +52,18 @@ public:
 
 ## <a name="members"></a>メンバー
 
-[Simpleevent](simple-event.md)基本クラスから継承されたメンバーと共に、`FileInput` クラスには次のメンバーが含まれます。
+[クラスには、SimpleEvent](simple-event.md)基本クラスから継承されたメンバーと`FileInput`共に、次のメンバーが含まれます。
 
 ### <a name="constructors"></a>コンストラクター
 
-[FileInput](#file-input)
+[ファイル入力](#file-input)
 
 ### <a name="functions"></a>関数
 
 [パス](#path)
-の[種類](#type)
+[の種類](#type)
 
-## <a name="file-input"></a>FileInput
+## <a name="fileinput"></a><a name="file-input"></a>ファイル入力
 
 ```cpp
 FileInput(const RawEvent& event);
@@ -71,10 +71,10 @@ FileInput(const RawEvent& event);
 
 ### <a name="parameters"></a>パラメーター
 
-*event*\
-[FILE_INPUT](../event-table.md#file-input)イベントです。
+*イベント*\
+[FILE_INPUT](../event-table.md#file-input)イベント。
 
-## <a name="path"></a> Path
+## <a name="path"></a><a name="path"></a>パス
 
 ```cpp
 const wchar_t Path() const;
@@ -84,7 +84,7 @@ const wchar_t Path() const;
 
 入力ファイルへの絶対パス。
 
-## <a name="type"></a>各種
+## <a name="type"></a><a name="type"></a> の型
 
 ```cpp
 Type Type() const;

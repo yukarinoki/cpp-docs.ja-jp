@@ -10,16 +10,16 @@ helpviewer_keywords:
 - CD2DSizeU [MFC], CD2DSizeU
 - CD2DSizeU [MFC], IsNull
 ms.assetid: 6e679ba8-2112-43c3-8275-70b660856f02
-ms.openlocfilehash: 45625331d0c1be8ca7c663d12c53516dc7bd77c7
-ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
+ms.openlocfilehash: a5b87fe2ddd8fb32ddbbb2884c630952afdb079c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70177189"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81359294"
 ---
 # <a name="cd2dsizeu-class"></a>CD2DSizeU クラス
 
-D2D1_SIZE_U のラッパー。
+D2D1_SIZE_Uのラッパー。
 
 ## <a name="syntax"></a>構文
 
@@ -33,33 +33,33 @@ class CD2DSizeU : public D2D1_SIZE_U;
 
 |名前|説明|
 |----------|-----------------|
-|[CD2DSizeU:: CD2DSizeU](#cd2dsizeu)|オーバーロードされます。 オブジェクトから`CD2DSizeU` `D2D1_SIZE_U`オブジェクトを構築します。|
+|[CD2Dサイズ::CD2Dサイズ](#cd2dsizeu)|オーバーロードされます。 オブジェクトから`D2D1_SIZE_U`オブジェクト`CD2DSizeU`を構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CD2DSizeU:: IsNull](#isnull)|式に有効なデータが含まれていない (NULL) かどうかを示す**ブール**値を返します。|
+|[を使用します。](#isnull)|式に有効なデータ (NULL) が含まれているかどうかを示す**ブール**値を返します。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
 |名前|説明|
 |----------|-----------------|
-|[CD2DSizeU:: operator CSize](#operator_csize)|を`CD2DSizeU`オブジェクト`CSize`に変換します。|
+|[キー・ク・サイズ](#operator_csize)|オブジェクトに`CD2DSizeU``CSize`変換します。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
 `D2D1_SIZE_U`
 
-[CD2DSizeU](../../mfc/reference/cd2dsizeu-class.md)
+[CD2Dサイズ](../../mfc/reference/cd2dsizeu-class.md)
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** afxrendertarget
+**ヘッダー:** afxrendertarget.h
 
-##  <a name="cd2dsizeu"></a>CD2DSizeU:: CD2DSizeU
+## <a name="cd2dsizeucd2dsizeu"></a><a name="cd2dsizeu"></a>CD2Dサイズ::CD2Dサイズ
 
-CD2DSizeU オブジェクトを CSize オブジェクトから構築します。
+CSize オブジェクトから CD2DSizeU オブジェクトを構築します。
 
 ```
 CD2DSizeU(const CSize& size);
@@ -73,18 +73,18 @@ CD2DSizeU(
 
 ### <a name="parameters"></a>パラメーター
 
-*size*<br/>
-ソースサイズ
+*サイズ*<br/>
+ソース サイズ
 
-*cx*<br/>
-ソースの幅
+*Cx*<br/>
+ソース幅
 
-*暦年*<br/>
+*Cy*<br/>
 ソースの高さ
 
-##  <a name="isnull"></a>  CD2DSizeU::IsNull
+## <a name="cd2dsizeuisnull"></a><a name="isnull"></a>を使用します。
 
-式に有効なデータが含まれていない (Null) かどうかを示すブール値を返します。
+式に有効なデータが含まれているかどうかを示すブール値を返します (Null)。
 
 ```
 BOOL IsNull() const;
@@ -94,7 +94,7 @@ BOOL IsNull() const;
 
 幅と高さが空の場合は TRUE。それ以外の場合は FALSE。
 
-##  <a name="operator_csize"></a>CD2DSizeU:: operator CSize
+## <a name="cd2dsizeuoperator-csize"></a><a name="operator_csize"></a>キー・ク・サイズ
 
 CD2DSizeU を CSize オブジェクトに変換します。
 

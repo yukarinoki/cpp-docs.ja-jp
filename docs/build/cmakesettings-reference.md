@@ -4,12 +4,12 @@ ms.date: 11/22/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: ac92d9dfa5266227fb3bd4a3749ab50f425a2d90
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: f9c864b66df86165090b7d6d6fc9c4fc51d65a5e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80078721"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81328891"
 ---
 # <a name="cmakesettingsjson-schema-reference"></a>CMakeSettings.json スキーマ リファレンス
 
@@ -21,24 +21,24 @@ CMake プロジェクトは、Visual Studio 2017 以降でサポートされて�
 
 ::: moniker range=">=vs-2017"
 
-**Cmakesettings. json**ファイルには、Visual Studio が IntelliSense に使用する情報が含まれており、指定された*構成*およびコンパイラ*環境*に対して cmake に渡すコマンドライン引数を構築します。 構成では、特定のプラットフォームおよびビルドの種類 (`x86-Debug`、`Linux-Release`など) に適用されるプロパティを指定します。 各構成は、MSVC、GCC、Clang などのコンパイラツールセットに関する情報をカプセル化する環境を指定します。 CMake では、コマンドライン引数を使用して、プロジェクトのルート*cmakecache.txt*ファイルとその他のプロジェクトファイルを再生成します。 値は、 *Cmakelists .txt*ファイルでオーバーライドできます。
+**CMakeSettings.json**ファイルには、指定された*構成*およびコンパイラ*環境*の cmake.exe に渡されるコマンド ライン引数を作成するために、Visual Studio が IntelliSense に使用する情報が含まれています。 構成では、特定のプラットフォームやビルドの種類に適用されるプロパティ`x86-Debug`を指定します。 `Linux-Release` 各構成では、コンパイラ ツールセットに関する情報 (MSVC、GCC、Clang など) をカプセル化する環境を指定します。 CMake は、コマンド ライン引数を使用して、プロジェクトのルート*CMakeCache.txt*ファイルおよびその他のプロジェクト ファイルを再生成します。 値は*CMakeLists.txt*ファイルでオーバーライドできます。
 
-IDE で構成を追加または削除し、JSON ファイルで直接編集するか、 **Cmake 設定エディター** (Visual Studio 2019 以降) を使用することができます。 IDE で構成を簡単に切り替えて、さまざまなプロジェクトファイルを生成することができます。 詳細については、「 [Visual Studio での CMake ビルド設定のカスタマイズ](customize-cmake-settings.md)」を参照してください。
+IDE で構成を追加または削除し、JSON ファイルで直接編集するか **、CMake 設定エディター** (Visual Studio 2019 以降) を使用できます。 IDE で構成を簡単に切り替えて、さまざまなプロジェクトファイルを生成できます。 詳細については[、「Visual Studio で CMake ビルド設定をカスタマイズ](customize-cmake-settings.md)する」を参照してください。
 
 ## <a name="configurations"></a>構成
 
-`configurations` 配列には、CMake プロジェクトのすべての構成が含まれています。 定義済みの構成の詳細については、「[定義済みの構成のリファレンス](cmake-predefined-configuration-reference.md)」を参照してください。 ファイルには、任意の数の事前定義済みまたはカスタム構成を追加できます。
+配列`configurations`には、CMake プロジェクトのすべての構成が含まれています。 事前[定義された構成の詳細については、「CMake の定義済み構成リファレンス](cmake-predefined-configuration-reference.md)」を参照してください。 事前定義された構成またはカスタム構成をいくつでもファイルに追加できます。
 
 `configuration` には次のプロパティがあります。
 
-- `addressSanitizerEnabled`: `true` は、アドレスサニタイザー (Windows の試験段階) でプログラムをコンパイルします。 Linux では、最適な結果を得るために、-fno-frame-ポインターとコンパイラの最適化レベル Os または-Oo を使用してコンパイルします。
-- `addressSanitizerRuntimeFlags`: ASAN_OPTIONS 環境変数を介して AddressSanitizer に渡されるランタイムフラグ。 形式: フラグ 1 = 値: フラグ 2 = value2。
+- `addressSanitizerEnabled`:`true`アドレスサニタイザー (Windowsの実験) でプログラムをコンパイルする場合。 Linux では、-fno-omit-frame-pointer およびコンパイラ最適化レベル -Os または -Oo を使用してコンパイルすると、最良の結果が得られます。
+- `addressSanitizerRuntimeFlags`: ASAN_OPTIONS環境変数を介して AddressSanitizer に渡されるランタイム フラグ。 形式: フラグ1=値:フラグ2=値2。
 - `buildCommandArgs`: --ビルド-- の後に CMake に渡されるネイティブ ビルド スイッチを指定します。 たとえば、Ninja ジェネレーターの使用時に -v を渡すと、コマンド ラインの出力が Ninja に強制されます。 Ninja コマンドの詳細については、「[Ninja のコマンド ライン引数](#ninja)」参照してください。
-- `buildRoot`: 選択したジェネレーターに CMake がビルド スクリプトを生成するディレクトリを指定します。  **-DCMAKE_BINARY_DIR**スイッチにマップし、 *cmakecache.txt*が作成される場所を指定します。 フォルダーが存在しない場合は、作成されます。 サポートされているマクロには、`${workspaceRoot}`、`${workspaceHash}`、`${projectFile}`、`${projectDir}`、`${thisFile}`、`${thisFileDir}`、`${name}`、`${generator}`、`${env.VARIABLE}` などがあります。
-- `cacheGenerationCommand`: コマンドラインツールと引数を指定します。たとえば、 *gencache*を使用してキャッシュを生成します。 コマンドは、ユーザーが明示的に再生成を要求したとき、または CMakeLists .txt または Cmakelists. json ファイルが変更されたときに、指定した環境のシェルから実行されます。
-- `cacheRoot`: CMake キャッシュへのパスを指定します。 このディレクトリには、既存の*cmakecache.txt*ファイルが含まれている必要があります。
-- `clangTidyChecks`: clang-tidy に渡される警告のコンマ区切りの一覧です。ワイルドカードを使用できます。 '-' プレフィックスによってチェックが削除されます。
-- `cmakeCommandArgs`: プロジェクトファイルを生成するために呼び出されたときに CMake に渡される追加のコマンドラインオプションを指定します。
+- `buildRoot`: 選択したジェネレーターに CMake がビルド スクリプトを生成するディレクトリを指定します。  **DCMAKE_BINARY_DIR**スイッチにマップし *、CMakeCache.txt*を作成する場所を指定します。 フォルダーが存在しない場合は、作成されます。 サポートされているマクロには、`${workspaceRoot}`、`${workspaceHash}`、`${projectFile}`、`${projectDir}`、`${thisFile}`、`${thisFileDir}`、`${name}`、`${generator}`、`${env.VARIABLE}` などがあります。
+- `cacheGenerationCommand`: コマンドラインツールと引数を指定します。 *gencache.bat debug* コマンドは、ユーザーが明示的に再生成を要求するか、CMakeLists.txt または CMakeSettings.json ファイルが変更されたときに、指定された環境でシェルから実行されます。
+- `cacheRoot`: CMake キャッシュへのパスを指定します。 このディレクトリには、既存の*CMakeCache.txt*ファイルが含まれている必要があります。
+- `clangTidyChecks`: clang-tidy に渡される警告のコンマ区切りリスト。ワイルドカードが使用でき、'-' プレフィックスはチェックを削除します。
+- `cmakeCommandArgs`: プロジェクト ファイルを生成するために CMake を呼び出したときに、追加のコマンド ライン オプションを指定します。
 - `cmakeToolchain`: toolchain ファイルを指定します。 これは、-DCMAKE_TOOLCHAIN_FILE を使用して CMake に渡されます。
 - `codeAnalysisRuleset`: コード分析を実行しているときに使用するルールセットを指定します。 Visual Studio によってインストールされたルールセット ファイルの完全なパスまたはファイル名を指定できます。
 - `configurationType`: 選択したジェネレーターにビルドの種類の構成を指定します。 次のいずれかを指定できます。
@@ -51,7 +51,7 @@ IDE で構成を追加または削除し、JSON ファイルで直接編集す�
 - `ctestCommandArgs`: テストの実行中に CTest に渡す追加のコマンド ライン オプションを指定します。
 - `description`: メニューに表示されるこの構成の説明。
 - `enableClangTidyCodeAnalysis`: コード分析には Clang-Tidy を使用します。
-- `enableMicrosoftCodeAnalysis`: コード分析に Microsoft コード分析ツールを使用します。
+- `enableMicrosoftCodeAnalysis`: コード分析用に Microsoft コード分析ツールを使用します。
 - `generator`: この構成に使用する CMake ジェネレーターを指定します。 次のいずれかを指定できます。
   
   **Visual Studio 2019 のみ:**
@@ -69,13 +69,13 @@ IDE で構成を追加または削除し、JSON ファイルで直接編集す�
   - UNIX メイクファイル
   - Ninja
 
-Ninja は柔軟性や機能ではなく、ビルド速度が速いことを目的に設計されているため、既定値としてこれが設定されます。 ただし、CMake プロジェクトによっては、Ninja を使うと正しくビルドできないことがあります。 この問題が発生した場合は、代わりに Visual Studio プロジェクトを生成するように CMake に指示できます。
+Ninja は柔軟性や機能ではなく、ビルド速度が速いことを目的に設計されているため、既定値としてこれが設定されます。 ただし、CMake プロジェクトによっては、Ninja を使うと正しくビルドできないことがあります。 この場合は、代わりに Visual Studio プロジェクトを生成するように CMake に指示できます。
 
-Visual studio 2017 で Visual Studio ジェネレーターを指定するには、[Cmake] を選択してメインメニューからを開きます。 **CMake の設定を変更**します。 "Ninja" を削除し、「V」と入力します。 これにより IntelliSense がアクティブになり、必要なジェネレーターを選択できます。
+Visual Studio 2017 で Visual Studio ジェネレーターを指定するには **、CMake |CMake の設定を変更する** 「忍者」を削除し、「V」と入力します。 これにより IntelliSense がアクティブになり、必要なジェネレーターを選択できます。
 
-Visual studio 2019 で Visual Studio ジェネレーターを指定するには**ソリューションエクスプローラー**で*cmakelists .txt*ファイルを右クリックし、 **[プロジェクトの cmake の設定]** を選択し > **[詳細設定の表示]** を選択します。 **cmake ジェネレーター**> ます。
+Visual Studio 2019 で Visual Studio ジェネレーターを指定するには、**ソリューション エクスプローラー**で*CMakeLists.txt*ファイルを右クリックし、[**高度な設定を表示**>するプロジェクトの> **CMake 設定]** を**選択します。**
 
-アクティブな構成で Visual Studio ジェネレーターを指定すると、`-m -v:minimal` 引数を指定して MSBuild.exe が既定で呼び出されます。 ビルドをカスタマイズするには、 *Cmakesettings. json*ファイル内で、`buildCommandArgs` プロパティを使用してビルドシステムに渡す追加の[MSBuild コマンドライン引数](../build/reference/msbuild-visual-cpp-overview.md)を指定します。
+アクティブな構成で Visual Studio ジェネレーターを指定すると、`-m -v:minimal` 引数を指定して MSBuild.exe が既定で呼び出されます。 ビルドをカスタマイズするには *、CMakeSettings.json*ファイル内で、プロパティを使用してビルド システムに渡す追加[の MSBuild コマンド ライン引数](../build/reference/msbuild-visual-cpp-overview.md)を`buildCommandArgs`指定できます。
 
    ```json
    "buildCommandArgs": "-m:8 -v:minimal -p:PreferredToolArchitecture=x64"
@@ -105,30 +105,30 @@ Visual studio 2019 で Visual Studio ジェネレーターを指定するには*
   - linux-gcc-x64
   - linux-gcc-arm
 
-- `name`: 構成に名前を付けます。  定義済みの構成の詳細については、「[定義済みの構成のリファレンス](cmake-predefined-configuration-reference.md)」を参照してください。
-- `wslPath`: Windows Subsystem for Linux のインスタンスのランチャーへのパス。
+- `name`: 構成に名前を付けます。  事前[定義された構成の詳細については、「CMake の定義済み構成リファレンス](cmake-predefined-configuration-reference.md)」を参照してください。
+- `wslPath`: Linux 用 Windows サブシステムのインスタンスの起動ツールへのパス。
 
 ### <a name="additional-settings-for-cmake-linux-projects"></a>CMake Linux プロジェクトの追加設定
 
 - `remoteMachineName`: CMake、ビルド、およびデバッガーをホストするリモートの Linux マシンの名前を指定します。 新しい Linux マシンを追加するには、接続マネージャーを使用します。 サポートされているマクロには、`${defaultRemoteMachineName}` が含まれます。
 - `remoteCopySourcesOutputVerbosity`: リモート マシンへのソース コピー操作の詳細レベルを指定します。 "ノーマル"、"詳細"、"診断" のいずれかを指定できます。
-- `remoteCopySourcesConcurrentCopies`: リモートコンピューターへのソースの同期中に使用される同時コピー数を指定します (sftp のみ)。
+- `remoteCopySourcesConcurrentCopies`: リモート マシンへのソースの同期中に使用される同時コピーの数を指定します (sftp のみ)。
 - `remoteCopySourcesMethod`: リモート マシンにファイルをコピーするメソッドを指定します。 "rsync" または "sftp" のいずれかを指定できます。
 - `remoteCMakeListsRoot`: CMake プロジェクトを含むリモート マシン上のディレクトリを指定します。 サポートされているマクロには、`${workspaceRoot}`、`${workspaceHash}`、`${projectFile}`、`${projectDir}`、`${thisFile}`、`${thisFileDir}`、`${name}`、`${generator}`、`${env.VARIABLE}` などがあります。
 - `remoteBuildRoot`: 選択したジェネレーターに CMake がビルド スクリプトを生成するリモート マシン上のディレクトリを指定します。 サポートされているマクロには、`${workspaceRoot}`、`${workspaceHash}`、`${projectFile}`、`${projectDir}`、`${thisFile}`、`${thisFileDir}`、`${name}`、`${generator}`、`${env.VARIABLE}` などがあります。
 - `remoteInstallRoot`: 選択したジェネレーターに CMake がインストール ターゲットを生成するリモート マシン上のディレクトリを指定します。 サポートされているマクロには、`${workspaceRoot}`、`${workspaceHash}`、`${projectFile}`、`${projectDir}`、`${thisFile}`、`${thisFileDir}`、`${name}`、`${generator}`、`${env.VARIABLE}` などがあります。`VARIABLE` は、システム、ユーザー、またはセッション レベルで定義されている変数です。
-- `remoteCopySources`: Visual Studio がソースファイルをリモートコンピューターにコピーする必要があるかどうかを指定する `boolean`。 既定値は true です。 自分でファイルの同期を管理する場合は、false に設定します。
-- `remoteCopyBuildOutput`: リモートシステムからビルド出力をコピーするかどうかを指定する `boolean`。
-- `remoteCopyAdditionalIncludeDirectories`: 追加のインクルードディレクトリをリモートコンピューターからコピーして、IntelliSense をサポートします。 "/Path1;/path2" の形式で指定します。
-- `remoteCopyExcludeDirectories`: リモートコンピューターからコピーするディレクトリを含めません。 "/Path1;/path2" の形式で指定します。
-- `remoteCopyUseCompilerDefaults`: コンパイラの既定の定義を使用し、IntelliSense のパスを含めるかどうかを指定します。 のコンパイラが gcc スタイルの引数をサポートしていない場合にのみ、false にする必要があります。
+- `remoteCopySources`: `boolean` Visual Studio でソース ファイルをリモート コンピューターにコピーするかどうかを指定する A。 既定値は true です。 自分でファイルの同期を管理する場合は、false に設定します。
+- `remoteCopyBuildOutput`:`boolean`リモート システムからビルド出力をコピーするかどうかを指定する A。
+- `remoteCopyAdditionalIncludeDirectories`: IntelliSense をサポートするためにリモート コンピューターからコピーする追加インクルード ディレクトリ。 "/パス1;/パス2...." として書式設定します。
+- `remoteCopyExcludeDirectories`: リモートコンピュータからコピーするディレクトリを含まない。 "/パス1;/パス2...." として書式設定します。
+- `remoteCopyUseCompilerDefaults`: IntelliSense の既定の定義とインクルード パスを使用するかどうかを指定します。 gcc スタイルの引数をサポートしないコンパイラが使用している場合にのみ、false にする必要があります。
 - `rsyncCommandArgs`: rsync に渡される追加のコマンド ライン オプションのセットを指定します。
-- `remoteCopySourcesExclusionList`: ソースファイルをコピーするときに除外するパスの一覧を指定する `array` です。パスには、ファイルまたはディレクトリの名前、またはコピーのルートを基準とした相対パスを指定できます。 glob パターン マッチング用のワイルドカード \\\"*\\\" および \\\"?\\\" を使用できます。
+- `remoteCopySourcesExclusionList`:`array`ソース ファイルをコピーするときに除外するパスのリストを指定する A: パスは、ファイル/ディレクトリの名前、またはコピーのルートを基準とする相対パスです。 glob パターン マッチング用のワイルドカード \\\"*\\\" および \\\"?\\\" を使用できます。
 - `cmakeExecutable`: CMake プログラムの実行可能ファイルへの完全なパスを指定します。ファイル名と拡張子を含めます。
-- `remotePreGenerateCommand`: CMake を実行して*Cmakelists .txt*ファイルを解析する前に実行するコマンドを指定します。
+- `remotePreGenerateCommand`: CMake を実行して*CMakeLists.txt*ファイルを解析する前に実行するコマンドを指定します。
 - `remotePrebuildCommand`: ビルド前にリモート マシン上で実行するコマンドを指定します。
 - `remotePostbuildCommand`: ビルド後にリモート マシン上で実行するコマンドを指定します。
-- `variables`: cmake 変数の名前と値のペアが含まれています。これは **、D の** *_名前_=_値_* として cmake に渡されます。 CMake プロジェクトのビルド手順で、 *cmakecache.txt*ファイルに変数を直接追加することを指定する場合は、ここで追加することをお勧めします。 次の例は、14.14.26428 MSVC ツールセットに名前と値のペアを指定する方法を示しています。
+- `variables`: **-D** *_name_=_value_* として CMake に渡される、CMake 変数の名前と値のペアを含みます。 CMake プロジェクトのビルド命令で*CMakeCache.txt*ファイルに直接変数を追加する方法を指定する場合は、代わりにここで追加することをお勧めします。 次の例は、14.14.26428 MSVC ツールセットに名前と値のペアを指定する方法を示しています。
 
 ```json
 "variables": [
@@ -145,39 +145,40 @@ Visual studio 2019 で Visual Studio ジェネレーターを指定するには*
   ]
 ```
 
-`"type"`を定義しない場合、`"STRING"` の種類は既定で想定されることに注意してください。
-- `remoteCopyOptimizations`: リモートターゲットへのソースコピーを制御するための**Visual Studio 2019 バージョン 16.5**以降のプロパティ。 既定では、最適化が有効になっています。 `remoteCopyUseOptimizations`、`rsyncSingleDirectoryCommandArgs`、および `remoteCopySourcesMaxSmallChange` を含みます。
+`"type"`を定義しない場合、`"STRING"`型は既定で使用されます。
 
-## <a name="environments"></a><a name="environments"></a>下
+- `remoteCopyOptimizations`: リモート ターゲットへのソース コピーを制御するための**Visual Studio 2019 バージョン 16.5 以降**のプロパティ。 最適化は既定で有効になっています。 `remoteCopyUseOptimizations`、`rsyncSingleDirectoryCommandArgs`、および `remoteCopySourcesMaxSmallChange` を含みます。
 
-*環境*には、Visual Studio が cmake .exe を呼び出すために使用するプロセスで設定された環境変数がカプセル化されています。 MSVC プロジェクトの場合、変数は、[開発者コマンドプロンプト](building-on-the-command-line.md)で特定のプラットフォーム用に設定されているものです。 たとえば、`msvc_x64_x64` 環境は、 **vs 2017 の開発者コマンドプロンプト**と、 **-arch = amd64-host_arch = amd64**引数を使用した**vs 2019 の開発者コマンドプロンプト**を実行する場合と同じです。 *Cmakesettings. json*の `env.{<variable_name>}` 構文を使用すると、フォルダーへのパスを作成するなど、個々の環境変数を参照できます。  次の定義済みの環境が用意されています。
+## <a name="environments"></a><a name="environments"></a>環境
 
-- linux_arm: ARM Linux をリモートでターゲットにします。
-- linux_x64: x64 Linux をリモートでターゲットにします。
-- linux_x86: リモートで x86 Linux をターゲットとします。
-- msvc_arm: MSVC コンパイラを使用して ARM Windows をターゲットにします。
-- msvc_arm_x64:64 ビットの MSVC コンパイラを使用して ARM Windows をターゲットにします。
-- msvc_arm64: MSVC コンパイラを使用して ARM64 Windows をターゲットにします。
-- msvc_arm64_x64:64 ビットの MSVC コンパイラを使用して ARM64 Windows をターゲットにします。
-- msvc_x64: MSVC コンパイラを使用して x64 Windows をターゲットにします。
-- msvc_x64_x64:64 ビットの MSVC コンパイラを使用して x64 Windows をターゲットにします。
-- msvc_x86: MSVC コンパイラを使用して x86 Windows をターゲットにします。
-- msvc_x86_x64:64 ビットの MSVC コンパイラを使用して x86 Windows をターゲットにします。
+*環境*は、Visual Studio が cmake.exe を呼び出すために使用するプロセスで設定されている環境変数をカプセル化します。 MSVC プロジェクトの場合、変数は、特定のプラットフォームの[開発者コマンド プロンプト](building-on-the-command-line.md)で設定された変数です。 `msvc_x64_x64`たとえば、環境は VS **2017 の開発者コマンド プロンプト**を実行する場合と同じ **、VS 2019 の開発者コマンド プロンプト** **-arch=amd64 -host_arch=amd64**引数を使用します。 `env.{<variable_name>}` *CMakeSettings.json*の構文を使用して、フォルダーへのパスを構築する場合など、個々の環境変数を参照できます。  以下の定義済み環境が用意されています。
 
-### <a name="accessing-environment-variables-from-cmakeliststxt"></a>CMakeLists から環境変数にアクセスする
+- linux_arm: リモートで ARM Linux をターゲットにします。
+- linux_x64: リモートで x64 Linux をターゲットにします。
+- linux_x86: リモートで x86 Linux をターゲットにします。
+- msvc_arm: MSVC コンパイラを使用して ARM ウィンドウをターゲットにします。
+- msvc_arm_x64: 64 ビット MSVC コンパイラを使用して ARM ウィンドウをターゲットにします。
+- msvc_arm64: MSVC コンパイラを使用して ARM64 ウィンドウをターゲットにします。
+- msvc_arm64_x64: 64 ビット MSVC コンパイラを使用して ARM64 Windows をターゲットにします。
+- msvc_x64: MSVC コンパイラを使用して x64 ウィンドウをターゲットにします。
+- msvc_x64_x64: 64 ビット MSVC コンパイラを使用して x64 Windows をターゲットにします。
+- msvc_x86: MSVC コンパイラを使用して x86 の Windows をターゲットにします。
+- msvc_x86_x64: 64 ビット MSVC コンパイラを使用して x86 Windows をターゲットにします。
 
-CMakeLists .txt ファイルからは、すべての環境変数が `$ENV{variable_name}`構文によって参照されます。 環境で使用可能な変数を表示するには、対応するコマンドプロンプトを開き、「`SET`」と入力します。 環境変数の一部の情報は、CMake システムのイントロスペクション変数でも使用できますが、環境変数を使用する方が便利な場合があります。 たとえば、MSVC コンパイラバージョンまたは Windows SDK バージョンは、環境変数を介して簡単に取得できます。
+### <a name="accessing-environment-variables-from-cmakeliststxt"></a>CMakeLists.txt から環境変数にアクセスする
+
+CMakeLists.txt ファイルから、すべての環境変数は構文`$ENV{variable_name}`で参照されます。 環境で使用できる変数を表示するには、対応するコマンド プロンプトを開`SET`いて、「 」と入力します。 環境変数の情報の一部は、CMake システムイントロスペクション変数でも利用できますが、環境変数を使用すると便利な場合があります。 たとえば、MSVC コンパイラバージョンや Windows SDK バージョンは、環境変数を使用して簡単に取得できます。
 
 ### <a name="custom-environment-variables"></a>カスタム環境変数
 
-`CMakeSettings.json`では、`environments` 配列でグローバルまたは構成ごとにカスタム環境変数を定義できます。 カスタム環境は、定義済みの環境の代わりに使用できる一連のプロパティをグループ化したり、定義済みの環境を拡張または変更したりするための便利な方法です。 `environments` 配列内の各項目は以下で構成されています。
+では`CMakeSettings.json`、カスタム環境変数をグローバルに定義することも、`environments`アレイ内の構成ごとに定義することもできます。 カスタム環境は、事前定義された環境の代わりに使用できる一連のプロパティをグループ化したり、定義済み環境を拡張または変更したりするための便利な方法です。 `environments` 配列内の各項目は以下で構成されています。
 
-- `namespace`: フォーム `namespace.variable` 内の構成から環境変数を参照できるように環境に名前を付けます。 既定の環境オブジェクトは `env` と呼ばれ、`%USERPROFILE%`を含む特定のシステム環境変数が設定されます。
+- `namespace`: フォーム `namespace.variable` 内の構成から環境変数を参照できるように環境に名前を付けます。 既定の環境オブジェクトが呼`env`び出され、 を含む`%USERPROFILE%`特定のシステム環境変数が設定されます。
 - `environment`: この変数グループを一意に識別します。 後で `inheritEnvironments` エントリでグループが継承できるようにします。
-- `groupPriority`: これらの変数を評価するときの優先度を指定する整数です。 数字が大きい大きい項目が最初に評価されます。
+- `groupPriority`: これらの変数を評価するときに、これらの変数の優先順位を指定する整数。 数字が大きい大きい項目が最初に評価されます。
 - `inheritEnvironments`: このグループによって継承される環境のセットを指定する値の配列。 この機能を使用すると、既定の環境を継承し、実行時に CMake.exe に渡されるカスタム環境変数を作成することができます。
 
-**Visual Studio 2019 バージョン16.4 以降:** デバッグターゲットは、 *Cmakesettings. json*で指定した環境で自動的に起動されます。 [Launch と json](launch-vs-schema-reference-cpp.md) [の比較に](tasks-vs-json-schema-reference-cpp.md)より、環境変数を、ターゲット単位またはタスク単位でオーバーライドまたは追加できます。
+**Visual Studio 2019 バージョン 16.4 以降:** デバッグ ターゲットは *、CMakeSettings.json*で指定した環境で自動的に起動されます。 [launch.vs.json](launch-vs-schema-reference-cpp.md)および[tasks.vs.json](tasks-vs-json-schema-reference-cpp.md)では、ターゲット単位またはタスク単位で環境変数をオーバーライドまたは追加できます。
 
 次の例では、1 つのグローバル変数 **BuildDir** を定義します。これは、x86-Debug と x64-Debug の両方の構成で継承されます。 各構成は、この変数を使って、その構成の **buildRoot** プロパティの値を指定します。 各構成が **inheritEnvironments** プロパティを使ってその構成のみに適用される変数を指定する方法にも注意してください。
 
@@ -211,7 +212,7 @@ CMakeLists .txt ファイルからは、すべての環境変数が `$ENV{variab
 }
 ```
 
-次の例では、x86 デバッグ構成が **BuildDir** プロパティに対して独自の値を定義します。 この値は、**BuildRoot** が **に評価されるように、グローバル**BuildDir`D:\custom-builddir\x86-Debug` プロパティによって設定される値をオーバーライドします。
+次の例では、x86 デバッグ構成が **BuildDir** プロパティに対して独自の値を定義します。 この値は、**BuildRoot** が `D:\custom-builddir\x86-Debug` に評価されるように、グローバル **BuildDir** プロパティによって設定される値をオーバーライドします。
 
 ```json
 {
@@ -257,9 +258,9 @@ CMakeLists .txt ファイルからは、すべての環境変数が `$ENV{variab
 
 ## <a name="macros"></a>マクロ
 
-*Cmakesettings. json*では、次のマクロを使用できます。
+次のマクロは *、CMakeSettings.json*で使用できます。
 
-- `${workspaceRoot}` –ワークスペースフォルダーの完全なパス
+- `${workspaceRoot}`– ワークスペースフォルダの完全パス
 - `${workspaceHash}` – ワークスペースの場所のハッシュです。現在のワークスペースの一意識別子を作成するのに便利です (たとえば、フォルダーのパスで使用する場合)
 - `${projectFile}` – ルート CMakeLists.txt ファイルの完全なパスです
 - `${projectDir}` – ルート CMakeLists.txt ファイルのフォルダーの完全なパスです
@@ -267,7 +268,7 @@ CMakeLists .txt ファイルからは、すべての環境変数が `$ENV{variab
 - `${name}` – 構成の名前です
 - `${generator}` – この構成で使用される CMake ジェネレーターの名前です
 
-*Cmakesettings. json*のマクロと環境変数へのすべての参照は、cmake .exe コマンドラインに渡される前に展開されます。
+*CMakeSettings.json*のマクロと環境変数へのすべての参照は、cmake.exe コマンド ラインに渡される前に展開されます。
 
 ## <a name="ninja-command-line-arguments"></a><a name="ninja"></a> Ninja のコマンド ライン引数
 
@@ -279,7 +280,7 @@ ninja: invalid option -- `-?'
 usage: ninja [options] [targets...]
 ```
 
-|オプション|Description|
+|オプション|説明|
 |--------------|------------|
 | --version  | Ninja のバージョンを書き出します ("1.7.1")|
 |   -C DIR   | 何かを実行する前に、DIR (ディレクトリ) に変更します|
