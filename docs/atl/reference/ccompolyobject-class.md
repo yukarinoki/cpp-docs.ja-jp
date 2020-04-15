@@ -1,5 +1,5 @@
 ---
-title: CComPolyObject クラス
+title: クラス
 ms.date: 11/04/2016
 f1_keywords:
 - CComPolyObject
@@ -17,16 +17,16 @@ helpviewer_keywords:
 - aggregation [C++], ATL objects
 - CComPolyObject class
 ms.assetid: eaf67c18-e855-48ca-9b15-f1df3106121b
-ms.openlocfilehash: deed29b5fb80ea8bbd06b3d50f45e38740b1619f
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: e30afef455db5f83afca8ff9e515f39f015c3b8a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497151"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81327570"
 ---
-# <a name="ccompolyobject-class"></a>CComPolyObject クラス
+# <a name="ccompolyobject-class"></a>クラス
 
-このクラスは`IUnknown` 、集計または非集計オブジェクトに対してを実装します。
+このクラスは、`IUnknown`集約オブジェクトまたは非集約オブジェクトを実装します。
 
 ## <a name="syntax"></a>構文
 
@@ -38,8 +38,8 @@ class CComPolyObject : public IUnknown,
 
 #### <a name="parameters"></a>パラメーター
 
-*格納*<br/>
-[CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)または[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)から派生したクラス、およびオブジェクトでサポートする他のインターフェイスから派生したクラス。
+*含ま れる*<br/>
+[CComObjectRoot または CComObjectRootEx](../../atl/reference/ccomobjectroot-class.md)から派生したクラス、およびオブジェクトでサポートするその他のインターフェイスから派生したクラス。 [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)
 
 ## <a name="members"></a>メンバー
 
@@ -47,45 +47,45 @@ class CComPolyObject : public IUnknown,
 
 |名前|説明|
 |----------|-----------------|
-|[CComPolyObject::CComPolyObject](#ccompolyobject)|コンストラクターです。|
-|[CComPolyObject::~CComPolyObject](#dtor)|デストラクターです。|
+|[::CComポリオブジェクト](#ccompolyobject)|コンストラクターです。|
+|[オブジェクト::~CComポリオブジェクト](#dtor)|デストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CComPolyObject::AddRef](#addref)|オブジェクトの参照カウントをインクリメントします。|
-|[CComPolyObject::CreateInstance](#createinstance)|雑音[CoCreateInstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance)のオーバーヘッドを発生させずに、新しい**CComPolyObject <** `contained` **>** オブジェクトを作成できます。|
-|[CComPolyObject::FinalConstruct](#finalconstruct)|の最終初期化を`m_contained`実行します。|
-|[CComPolyObject::FinalRelease](#finalrelease)|の最終的な破棄`m_contained`を実行します。|
-|[CComPolyObject::QueryInterface](#queryinterface)|要求されたインターフェイスへのポインターを取得します。|
-|[CComPolyObject::Release](#release)|オブジェクトの参照カウントをデクリメントします。|
+|[オブジェクトの追加](#addref)|オブジェクトの参照カウントをインクリメントします。|
+|[オブジェクトを作成します。](#createinstance)|(静的)[新](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance)しい**CComPolyObject<**`contained`**>** オブジェクトを作成できます。|
+|[CComPolyオブジェクト::ファイナルコンストラクト](#finalconstruct)|の最終初期化を`m_contained`実行します。|
+|[CComPolyオブジェクト::最終リリース](#finalrelease)|の最終破棄を`m_contained`実行します。|
+|[次のオブジェクトを使用します。](#queryinterface)|要求されたインターフェイスへのポインターを取得します。|
+|[CComポリオブジェクト::リリース](#release)|オブジェクトの参照カウントをデクリメントします。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
 |名前|説明|
 |----------|-----------------|
-|[CComPolyObject::m_contained](#m_contained)|オブジェクト`IUnknown`が集計されている場合、またはオブジェクトが集計`IUnknown`されていない場合にオブジェクトのに対して、外側の unknown への呼び出しをデリゲートします。|
+|[オブジェクト::m_contained](#m_contained)|オブジェクト`IUnknown`が集約されていない場合は、オブジェクトが不明な外部への呼び`IUnknown`出しをデリゲートします。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-`CComPolyObject`集計または非集計オブジェクトの[IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)を実装します。
+`CComPolyObject`は、集約オブジェクトまたは非集約オブジェクトに対して[IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)を実装します。
 
-の`CComPolyObject`インスタンスが作成されると、[外側の不明] の値がチェックされます。 NULL の場合は、 `IUnknown`非集計オブジェクトに対してが実装されます。 外側の unknown が NULL でない場合`IUnknown` 、は集計オブジェクトに対して実装されます。
+のインスタンス`CComPolyObject`が作成されると、外部不明の値がチェックされます。 NULL の場合`IUnknown`、非集約オブジェクトに対して実装されます。 外側の不明な値が NULL`IUnknown`でない場合は、集約オブジェクトに対して実装されます。
 
-を使用`CComPolyObject`する利点は、集計されたケースと非集計ケースを処理するために、 [CComAggObject](../../atl/reference/ccomaggobject-class.md)と[CComObject](../../atl/reference/ccomobject-class.md)の両方がモジュールに存在しないことです。 1つ`CComPolyObject`のオブジェクトが両方のケースを処理します。 つまり、モジュールには vtable のコピーと関数のコピーが1つだけ存在します。 Vtable が大きい場合は、モジュールのサイズを大幅に減らすことができます。 ただし、vtable が小さい場合、を使用`CComPolyObject`する`CComAggObject`と、と`CComObject`のように集計または非集計オブジェクトに対して最適化されていないため、モジュールサイズが少し大きくなります。
+使用`CComPolyObject`の利点は、集約されたケースと非集約型のケースを処理するために[、CComAggObject](../../atl/reference/ccomaggobject-class.md)と[CComObject](../../atl/reference/ccomobject-class.md)の両方をモジュールに含めないようにすることです。 1`CComPolyObject`つのオブジェクトが両方のケースを処理します。 つまり、モジュール内に vtable のコピーが 1 つだけ、関数のコピーが 1 つだけ存在します。 vtable が大きい場合、モジュールのサイズが大幅に減少する可能性があります。 ただし、vtable が小さい場合は`CComPolyObject`、モジュールサイズが少し大きくなる可能性があります`CComAggObject``CComObject`。
 
-DECLARE_POLY_AGGREGATABLE マクロがオブジェクトのクラス定義で指定されている`CComPolyObject`場合は、がオブジェクトの作成に使用されます。 ATL プロジェクトウィザードを使用してフルコントロールまたは Internet Explorer コントロールを作成すると、DECLARE_POLY_AGGREGATABLE が自動的に宣言されます。
+DECLARE_POLY_AGGREGATABLEマクロがオブジェクトのクラス定義で指定されている場合は、`CComPolyObject`オブジェクトの作成に使用されます。 ATL プロジェクト ウィザードを使用してフル コントロールまたは Internet Explorer コントロールを作成すると、DECLARE_POLY_AGGREGATABLEが自動的に宣言されます。
 
-集計された`CComPolyObject`場合、オブジェクトは`IUnknown`、外側のオブジェクトの`IUnknown`とは別に独自のを持ち、独自の参照カウントを保持します。 `CComPolyObject`[CComContainedObject](../../atl/reference/ccomcontainedobject-class.md)を使用して、外側の不明なに委任します。
+集約された場合、オブジェクト`CComPolyObject`は外側のオブジェクト`IUnknown`とは別に独自の を`IUnknown`持ち、それ自体の参照カウントを保持します。 `CComPolyObject`[は、外部不明](../../atl/reference/ccomcontainedobject-class.md)にデリゲートするために CComContained オブジェクトを使用します。
 
-集計の詳細については、「 [ATL COM オブジェクトの基礎](../../atl/fundamentals-of-atl-com-objects.md)」を参照してください。
+集約の詳細については[、「ATL COM オブジェクトの基礎](../../atl/fundamentals-of-atl-com-objects.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
 `CComObjectRootBase`
 
-[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)
+[ココムオブジェクトルート](../../atl/reference/ccomobjectrootex-class.md)
 
 `IUnknown`
 
@@ -93,9 +93,9 @@ DECLARE_POLY_AGGREGATABLE マクロがオブジェクトのクラス定義で指
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlcom. h
+**ヘッダー:** atlcom.h
 
-##  <a name="addref"></a>  CComPolyObject::AddRef
+## <a name="ccompolyobjectaddref"></a><a name="addref"></a>オブジェクトの追加
 
 オブジェクトの参照カウントをインクリメントします。
 
@@ -105,9 +105,9 @@ STDMETHOD_(ULONG, AddRef)();
 
 ### <a name="return-value"></a>戻り値
 
-診断またはテストに役立つ可能性のある値。
+診断やテストに役立つ値。
 
-##  <a name="ccompolyobject"></a>  CComPolyObject::CComPolyObject
+## <a name="ccompolyobjectccompolyobject"></a><a name="ccompolyobject"></a>::CComポリオブジェクト
 
 コンストラクターです。
 
@@ -118,15 +118,15 @@ CComPolyObject(void* pv);
 ### <a name="parameters"></a>パラメーター
 
 *pv*<br/>
-からオブジェクトが集計される場合は、外側の unknown へのポインター。オブジェクトが集計されない場合は NULL。オブジェクトの場合は NULL。
+[in]オブジェクトが集約される場合は外部不明へのポインター、 オブジェクトが集約されていない場合は NULL。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-データメンバー [m_contained](#m_contained) を初期化し、モジュールのロックカウントをインクリメントします。`CComContainedObject`
+データ メンバ`CComContainedObject`を初期化し[、m_contained](#m_contained)し、モジュール ロックカウントをインクリメントします。
 
 デストラクターは、モジュールのロックカウントをデクリメントします。
 
-##  <a name="dtor"></a>CComPolyObject:: ~ CComPolyObject
+## <a name="ccompolyobjectccompolyobject"></a><a name="dtor"></a>オブジェクト::~CComポリオブジェクト
 
 デストラクターです。
 
@@ -134,13 +134,13 @@ CComPolyObject(void* pv);
 ~CComPolyObject();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-割り当てられたすべてのリソースを解放し、 [FinalRelease](#finalrelease)を呼び出して、モジュールのロックカウントをデクリメントします。
+割り当てられたすべてのリソースを解放し[、FinalRelease](#finalrelease)を呼び出し、モジュールロックカウントをデクリメントします。
 
-##  <a name="createinstance"></a>  CComPolyObject::CreateInstance
+## <a name="ccompolyobjectcreateinstance"></a><a name="createinstance"></a>オブジェクトを作成します。
 
-[CoCreateInstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance)のオーバーヘッドを発生させずに、新しい**CComPolyObject <** `contained` **>** オブジェクトを作成できます。
+[新](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance)しい**CComPolyObject<**`contained`**>** オブジェクトを作成できます。
 
 ```
 static HRESULT WINAPI CreateInstance(
@@ -150,22 +150,22 @@ static HRESULT WINAPI CreateInstance(
 
 ### <a name="parameters"></a>パラメーター
 
-*ページ*<br/>
-入出力**CComPolyObject <** `contained` **ポインターへのポインター。>** が`CreateInstance`失敗した場合、 *pp*は NULL に設定されます。
+*頁*<br/>
+[アウト]ポインターを<する**CComPolyObject**`contained`**>** へのポインター。 失敗`CreateInstance`した場合 *、pp*は NULL に設定されます。
 
 ### <a name="return-value"></a>戻り値
 
 標準の HRESULT 値。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-返されるオブジェクトは、参照カウントが0であるため`AddRef` 、をすぐに`Release`呼び出し、を使用してオブジェクトポインターの参照を解放します。
+返されるオブジェクトの参照カウントは 0 なので、`AddRef`すぐに呼び出`Release`し、完了したらオブジェクト ポインターの参照を解放するために使用します。
 
-オブジェクトへの直接アクセスが不要でも、の`CoCreateInstance`オーバーヘッドなしで新しいオブジェクトを作成する場合は、代わりに[CComCoClass:: CreateInstance](../../atl/reference/ccomcoclass-class.md#createinstance)を使用します。
+オブジェクトに直接アクセスする必要がなく、`CoCreateInstance`のオーバーヘッドを伴わずに新しいオブジェクトを作成する必要がある場合は、代わりに[CComCoClass::CreateInstance](../../atl/reference/ccomcoclass-class.md#createinstance)を使用します。
 
-##  <a name="finalconstruct"></a>  CComPolyObject::FinalConstruct
+## <a name="ccompolyobjectfinalconstruct"></a><a name="finalconstruct"></a>CComPolyオブジェクト::ファイナルコンストラクト
 
-オブジェクト構築の最終段階で呼び出されます。このメソッドは、 [m_contained](#m_contained)データメンバーに対して最終的な初期化を実行します。
+オブジェクト構築の最終段階で呼び出されたこのメソッドは[、m_contained](#m_contained)データ メンバーに対して最終的な初期化を実行します。
 
 ```
 HRESULT FinalConstruct();
@@ -175,17 +175,17 @@ HRESULT FinalConstruct();
 
 標準の HRESULT 値。
 
-##  <a name="finalrelease"></a>  CComPolyObject::FinalRelease
+## <a name="ccompolyobjectfinalrelease"></a><a name="finalrelease"></a>CComPolyオブジェクト::最終リリース
 
-オブジェクトの破棄中に呼び出されます。このメソッドは、 [m_contained](#m_contained)データメンバーを解放します。
+オブジェクトの破棄中に呼び出されるこのメソッドは[、m_contained](#m_contained)データ メンバーを解放します。
 
 ```
 void FinalRelease();
 ```
 
-##  <a name="m_contained"></a>  CComPolyObject::m_contained
+## <a name="ccompolyobjectm_contained"></a><a name="m_contained"></a>オブジェクト::m_contained
 
-クラスから派生した[CComContainedObject](../../atl/reference/ccomcontainedobject-class.md)オブジェクト。
+クラスから派生[したオブジェクト。](../../atl/reference/ccomcontainedobject-class.md)
 
 ```
 CComContainedObject<contained> m_contained;
@@ -193,14 +193,14 @@ CComContainedObject<contained> m_contained;
 
 ### <a name="parameters"></a>パラメーター
 
-*格納*<br/>
-から[CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)または[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)から派生したクラス、およびオブジェクトでサポートする他のインターフェイスから派生したクラス。
+*含ま れる*<br/>
+[in][CComObjectRoot または CComObjectRootEx](../../atl/reference/ccomobjectroot-class.md)から派生したクラス、およびオブジェクトでサポートするその他のインターフェイスから派生したクラス。 [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`IUnknown`オブジェクトが`m_contained`集計されている場合、またはオブジェクトが集計されて`IUnknown`いない場合は、このオブジェクトのに対して、による呼び出しがデリゲートされます。
+`IUnknown`オブジェクト`m_contained`が集約されている場合は、呼び出しが外部不明に、オブジェクトが集約`IUnknown`されていない場合はこのオブジェクトの に委譲されます。
 
-##  <a name="queryinterface"></a>  CComPolyObject::QueryInterface
+## <a name="ccompolyobjectqueryinterface"></a><a name="queryinterface"></a>次のオブジェクトを使用します。
 
 要求されたインターフェイスへのポインターを取得します。
 
@@ -215,26 +215,26 @@ HRESULT QueryInterface(Q** pp);
 *Q*<br/>
 COM インターフェイス。
 
-*iid*<br/>
-から要求されているインターフェイスの識別子。
+*Iid*<br/>
+[in]要求されているインターフェイスの識別子。
 
-*ppvObject*<br/>
-入出力*Iid*によって識別されるインターフェイスポインターへのポインター。 オブジェクトがこのインターフェイスをサポートしていない場合、 *ppvObject*は NULL に設定されます。
+*オブジェクト*<br/>
+[アウト]*iid*で識別されるインターフェイス ポインタへのポインタ。 オブジェクトがこのインターフェイスをサポートしていない場合 *、ppvObject*は NULL に設定されます。
 
-*ページ*<br/>
-入出力によって`__uuidof(Q)`識別されるインターフェイスへのポインター。
+*頁*<br/>
+[アウト]によって`__uuidof(Q)`識別されるインターフェイスへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
 標準の HRESULT 値。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-集計オブジェクトの場合、要求されたインターフェイス`IUnknown`が`QueryInterface`の場合は、集計されたオブジェクト`IUnknown`自体へのポインターを返し、参照カウントをインクリメントします。 それ以外の場合、このメソッドは`CComContainedObject`データメンバー [m_contained](#m_contained)を通じてインターフェイスを照会します。
+集約オブジェクトの場合、要求されたインターフェイスが が`IUnknown``QueryInterface`の場合、集約オブジェクト自身`IUnknown`へのポインターを返し、参照カウントをインクリメントします。 それ以外の場合、このメソッドは、データ`CComContainedObject`メンバーを介してインターフェイスを照会[m_contained。](#m_contained)
 
-##  <a name="release"></a>  CComPolyObject::Release
+## <a name="ccompolyobjectrelease"></a><a name="release"></a>CComポリオブジェクト::リリース
 
-オブジェクトの参照カウントをデクリメントします。
+オブジェクトの参照カウントを減算します。
 
 ```
 STDMETHOD_(ULONG, Release)();
@@ -242,10 +242,10 @@ STDMETHOD_(ULONG, Release)();
 
 ### <a name="return-value"></a>戻り値
 
-デバッグビルドでは`Release` 、診断またはテストに役立つ値が返されます。 Nondebug のビルドで`Release`は、は常に0を返します。
+デバッグ ビルドでは`Release`、診断やテストに役立つ値を返します。 非デバッグ ビルドでは`Release`、常に 0 を返します。
 
 ## <a name="see-also"></a>関連項目
 
-[CComObjectRootEx クラス](../../atl/reference/ccomobjectrootex-class.md)<br/>
+[クラス](../../atl/reference/ccomobjectrootex-class.md)<br/>
 [DECLARE_POLY_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_poly_aggregatable)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

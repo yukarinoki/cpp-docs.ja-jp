@@ -1,8 +1,9 @@
 ---
 title: _get_doserrno
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _get_doserrno
+- _o__get_doserrno
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -26,16 +28,16 @@ helpviewer_keywords:
 - get_doserrno function
 - _get_doserrno function
 ms.assetid: 7fec7be3-6e39-4181-846b-8ef24489361c
-ms.openlocfilehash: 2810ead8bdd7d6c77cb2b55f4f97371bfc9751e6
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 2d5d4e224b39e9fa597e12975d27fa5720fbfbc7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956038"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81345255"
 ---
 # <a name="_get_doserrno"></a>_get_doserrno
 
-**Errno**値に変換される前に、オペレーティングシステムによって返されたエラー値を取得します。
+オペレーティング システムが**errno**値に変換される前に返されたエラー値を取得します。
 
 ## <a name="syntax"></a>構文
 
@@ -48,27 +50,29 @@ errno_t _get_doserrno(
 ### <a name="parameters"></a>パラメーター
 
 *pValue*<br/>
-**_Doserrno**グローバルマクロの現在の値を格納する整数へのポインター。
+**_doserrno**グローバル マクロの現在の値を格納する整数へのポインター。
 
 ## <a name="return-value"></a>戻り値
 
-**_Get_doserrno**が成功した場合、0を返します。失敗した場合は、エラーコードを返します。 *PValue*が**NULL**の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーターハンドラーが呼び出されます。 実行の継続が許可された場合、この関数は**errno**を**einval**に設定し、 **einval**を返します。
+**_get_doserrno**成功すると、ゼロが返されます。失敗した場合は、エラー コードを返します。 *pValue*が**NULL**の場合は、「パラメータ[の検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメータ ハンドラが呼び出されます。 実行を続行できる場合、この関数は**errno**を**EINVAL**に設定し **、EINVAL**を返します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**_Doserrno**グローバルマクロは、プロセスの実行が開始される前に、CRT の初期化中に0に設定されます。 オペレーティング システム エラーを返すシステム レベルの関数呼び出しによって返されたオペレーティング システム エラー値に設定され、実行中に 0 にリセットされることはありません。 関数によって返されたエラー値をチェックするコードを記述する場合は、関数呼び出しの前に[_set_doserrno](set-doserrno.md)を使用して、常に **_doserrno**をクリアします。 別の関数呼び出しによって **_doserrno**が上書きされる可能性があるため、関数呼び出しの直後に **_get_doserrno**を使用して値を確認してください。
+**_doserrno**グローバル・マクロは、CRT の初期化時に、プロセスの実行が開始される前にゼロに設定されます。 オペレーティング システム エラーを返すシステム レベルの関数呼び出しによって返されたオペレーティング システム エラー値に設定され、実行中に 0 にリセットされることはありません。 関数から返されるエラー値をチェックするコードを記述する場合は、関数呼び出しの前に[_set_doserrno](set-doserrno.md)を使用して **、常に_doserrno**をオフにします。 別の関数呼び出しによって_doserrnoが上書きされる可能性があるため **、** 関数呼び出しの直後に **_get_doserrno**を使用して値を確認します。
 
-移植可能なエラーコードについては、 **_get_doserrno**の代わりに[_get_errno](get-errno.md)を使用することをお勧めします。
+移植性[_get_errno](get-errno.md)の高いエラー コードの代わりに **_get_errnoを_get_doserrno**することをお勧めします。
 
-**_Doserrno**の使用可能な値は\<、errno > で定義されています。
+**_doserrno**の値は errno.h>で\<定義されます。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|オプション ヘッダー|
+|ルーチン|必須ヘッダー|オプション ヘッダー|
 |-------------|---------------------|---------------------|
 |**_get_doserrno**|\<stdlib.h>、\<cstdlib> (C++)|\<errno.h>、\<cerrno> (C++)|
 
-**_get_doserrno**は Microsoft の拡張機能です。 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+**_get_doserrno**はマイクロソフトの拡張機能です。 互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="see-also"></a>関連項目
 

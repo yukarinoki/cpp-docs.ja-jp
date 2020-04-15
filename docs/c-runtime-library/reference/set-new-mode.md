@@ -1,8 +1,9 @@
 ---
 title: _set_new_mode
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _set_new_mode
+- _o__set_new_mode
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -27,16 +29,16 @@ helpviewer_keywords:
 - _set_new_mode function
 - set_new_mode function
 ms.assetid: 4d14039a-e54e-4689-8c70-74a4b9834768
-ms.openlocfilehash: b248f1c97b1ec334b7441f33862b90473e08993f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 3a27717d65714de54f477e4e2b3f243c4631fd8c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948439"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81332319"
 ---
 # <a name="_set_new_mode"></a>_set_new_mode
 
-**Malloc**の新しいハンドラーモードを設定します。
+**malloc**の新しいハンドラモードを設定します。
 
 ## <a name="syntax"></a>構文
 
@@ -46,38 +48,40 @@ int _set_new_mode( int newhandlermode );
 
 ### <a name="parameters"></a>パラメーター
 
-*newhandlermode*<br/>
-**Malloc**の新しいハンドラーモード有効な値は0または1です。
+*ニューハンドラーモード*<br/>
+**malloc**の新しいハンドラモード ;有効な値は 0 または 1 です。
 
 ## <a name="return-value"></a>戻り値
 
-**Malloc**に対して設定された以前のハンドラーモードを返します。 戻り値1は、メモリの割り当てが失敗したときに **、以前に**新しいハンドラールーチンを呼び出したことを示します。戻り値が0の場合は、返されなかったことを示します。 *Newhandlermode*引数が0または1と等しくない場合、は-1 を返します。
+**malloc**に対して設定された前のハンドラ モードを返します。 戻り値が 1 の場合、メモリの割り当てが失敗した場合 **、malloc**は以前に new ハンドラー ルーチンと呼ばれ、その後は新しいハンドラー ルーチンが呼び出されていました。戻り値が 0 の場合は、その値が返されなかったことを示します。 *newhandlermode*引数が 0 または 1 でない場合は、-1 を返します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-C++ の **_set_new_mode** 関数は、[malloc](malloc.md) 用の新しいハンドラー モードを設定します。 新しいハンドラーモードは、エラー発生時に、 **malloc**が、 [_set_new_handler](set-new-handler.md)によって設定された新しいハンドラールーチンを呼び出すかどうかを示します。 既定では、 **malloc**は、メモリの割り当てに失敗したときに新しいハンドラールーチンを呼び出しません。 この既定の動作を無効にすると、 **malloc**がメモリの割り当てに失敗したときに、 **new**演算子が同じ理由で失敗したときと同じ方法で新しいハンドラールーチン**を呼び出す**ことができます。 詳細については、*C++ 言語リファレンス*の「[new](../../cpp/new-operator-cpp.md) および [delete](../../cpp/delete-operator-cpp.md) 演算子」の説明をご覧ください。 既定の動作をオーバーライドするには、次の関数を呼び出します。
+C++ の **_set_new_mode** 関数は、[malloc](malloc.md) 用の新しいハンドラー モードを設定します。 新しいハンドラ モードは、失敗時に**malloc**が[_set_new_handler](set-new-handler.md)で設定された新しいハンドラ ルーチンを呼び出すかどうかを示します。 既定では **、malloc**はメモリの割り当てに失敗した場合に新しいハンドラー ルーチンを呼び出しません。 **malloc**がメモリの割り当てに失敗した場合に **、malloc**が new ハンドラールーチンを呼び出すのと同じ理由で失敗した場合と同じ方法で、malloc が**新しい**ハンドラー・ルーチンを呼び出すようになります。 詳細については、*C++ 言語リファレンス*の「[new](../../cpp/new-operator-cpp.md) および [delete](../../cpp/delete-operator-cpp.md) 演算子」の説明をご覧ください。 既定の動作をオーバーライドするには、次の関数を呼び出します。
 
 ```cpp
 _set_new_mode(1);
 ```
 
-この呼び出しはプログラムの最初の方で指定するか、Newmode.obj にリンクします (「[リンク オプション](../../c-runtime-library/link-options.md)」を参照してください)。
+プログラムの早い段階で、または Newmode.obj とリンクします (「[リンク オプション](../../c-runtime-library/link-options.md)」を参照)。
 
-この関数は、そのパラメーターを検証します。 *Newhandlermode*が0または1以外の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、関数は無効なパラメーターハンドラーを呼び出します。 実行の継続が許可された場合、 <strong>_set_new_mode</strong>は-1 を`EINVAL`返し、 **errno**をに設定します。
+この関数は、そのパラメーターを検証します。 *newhandlermode*が 0 または 1 以外の場合、この関数は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーター ハンドラーを呼び出します。 実行を続行できる場合<strong>、_set_new_mode</strong>は -1 を返し **、errno**を に設定します`EINVAL`。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**_set_new_mode**|\<new.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="see-also"></a>関連項目
 
 [メモリ割り当て](../../c-runtime-library/memory-allocation.md)<br/>
 [calloc](calloc.md)<br/>
-[free](free.md)<br/>
+[無料](free.md)<br/>
 [realloc](realloc.md)<br/>
 [_query_new_handler](query-new-handler.md)<br/>
 [_query_new_mode](query-new-mode.md)<br/>

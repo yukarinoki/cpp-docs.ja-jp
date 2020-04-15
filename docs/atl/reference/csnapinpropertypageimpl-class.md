@@ -1,5 +1,5 @@
 ---
-title: CSnapInPropertyPageImpl クラス
+title: クラスをプロパティページインプルします。
 ms.date: 11/04/2016
 f1_keywords:
 - CSnapInPropertyPageImpl
@@ -25,19 +25,19 @@ helpviewer_keywords:
 - property pages, ATL
 - CSnapInPropertyPageImpl class
 ms.assetid: 75bdce5a-985e-4166-bd44-493132e023c4
-ms.openlocfilehash: abf4cf5804f6ef7335192feb298f1a4a06f841e4
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: ae64c212520510a443fbb2b8adc99243e8f8843a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69496392"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81330699"
 ---
-# <a name="csnapinpropertypageimpl-class"></a>CSnapInPropertyPageImpl クラス
+# <a name="csnapinpropertypageimpl-class"></a>クラスをプロパティページインプルします。
 
-このクラスには、スナップインプロパティページオブジェクトを実装するためのメソッドが用意されています。
+このクラスには、スナップイン プロパティ ページ オブジェクトを実装するためのメソッドが用意されています。
 
 > [!IMPORTANT]
->  このクラスとそのメンバーは、Windows ランタイムで実行されるアプリケーションでは使用できません。
+> このクラスとそのメンバーは、Windows ランタイムで実行されるアプリケーションでは使用できません。
 
 ## <a name="syntax"></a>構文
 
@@ -51,35 +51,35 @@ CSnapInPropertyPageImpl : public CDialogImplBase
 
 |名前|説明|
 |----------|-----------------|
-|[CSnapInPropertyPageImpl::CSnapInPropertyPageImpl](#csnapinpropertypageimpl)|コンストラクターです。|
+|[プロパティ ページ インプル::C スナップインプロパティ ページ インビプ](#csnapinpropertypageimpl)|コンストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CSnapInPropertyPageImpl::CancelToClose](#canceltoclose)|**[OK]** ボタンと **[キャンセル**] ボタンの状態を変更します。|
-|[CSnapInPropertyPageImpl::Create](#create)|新しく作成され`CSnapInPropertyPageImpl`たオブジェクトを初期化します。|
-|[CSnapInPropertyPageImpl:: OnApply](#onapply)|ウィザード型のプロパティシートを使用しているときに、ユーザーが **[今すぐ適用]** ボタンをクリックしたときにフレームワークによって呼び出されます。|
-|[CSnapInPropertyPageImpl::OnHelp](#onhelp)|ウィザード型のプロパティシートを使用しているときにユーザーが **[ヘルプ]** ボタンをクリックしたときに、フレームワークによって呼び出されます。|
-|[CSnapInPropertyPageImpl::OnKillActive](#onkillactive)|現在のページがアクティブでなくなったときにフレームワークによって呼び出されます。|
-|[CSnapInPropertyPageImpl::OnQueryCancel](#onquerycancel)|キャンセルが行われる前に、ユーザーが **[キャンセル**] ボタンをクリックしたときにフレームワークによって呼び出されます。|
-|[CSnapInPropertyPageImpl:: OnReset](#onreset)|ウィザード型のプロパティシートを使用しているときに、ユーザーが **[リセット]** ボタンをクリックしたときにフレームワークによって呼び出されます。|
-|[CSnapInPropertyPageImpl::OnSetActive](#onsetactive)|現在のページがアクティブになったときにフレームワークによって呼び出されます。|
-|[CSnapInPropertyPageImpl:: OnWizardBack](#onwizardback)|ウィザード型のプロパティシートを使用しているときに、ユーザーが **[戻る]** ボタンをクリックしたときにフレームワークによって呼び出されます。|
-|[CSnapInPropertyPageImpl:: OnWizardFinish](#onwizardfinish)|ウィザード型のプロパティシートを使用しているときに、ユーザーが **[完了**] ボタンをクリックしたときにフレームワークによって呼び出されます。|
-|[CSnapInPropertyPageImpl:: OnWizardNext](#onwizardnext)|ウィザード型のプロパティシートを使用しているときに、ユーザーが **[次へ**] ボタンをクリックしたときにフレームワークによって呼び出されます。|
-|[CSnapInPropertyPageImpl::QuerySiblings](#querysiblings)|現在のメッセージをプロパティシートのすべてのページに転送します。|
-|[CSnapInPropertyPageImpl::SetModified](#setmodified)|を呼び出して、 **[今すぐ適用]** ボタンをアクティブまたは非アクティブにします。|
+|[閉じるには](#canceltoclose)|**[OK] ボタン**と [**キャンセル]** ボタンの状態を変更します。|
+|[プロパティページインプル::作成](#create)|新しく作成`CSnapInPropertyPageImpl`されたオブジェクトを初期化します。|
+|[プロパティページインプル::オンApply](#onapply)|ユーザーがウィザード型のプロパティ シートを使用しているときに [**今すぐ適用**] ボタンをクリックしたときに、フレームワークによって呼び出されます。|
+|[プロパティページインプル::オンヘルプ](#onhelp)|ユーザーがウィザード型のプロパティ シートを使用しているときに **[ヘルプ**] ボタンをクリックしたときに、フレームワークによって呼び出されます。|
+|[プロパティページインプル::オンキルアクティブ](#onkillactive)|現在のページがアクティブでなくなったときに、フレームワークによって呼び出されます。|
+|[ページインプル::クエリキャンセル](#onquerycancel)|ユーザーが **[キャンセル]** ボタンをクリックしたとき、およびキャンセルが行われる前に、フレームワークによって呼び出されます。|
+|[プロパティページインプル::オンリセット](#onreset)|ユーザーがウィザード型のプロパティ シートを使用しているときに [**リセット**] ボタンをクリックしたときに、フレームワークによって呼び出されます。|
+|[プロパティページインプル::オンセットアクティブ](#onsetactive)|現在のページがアクティブになったときに、フレームワークによって呼び出されます。|
+|[CSnapInプロパティページインプル::ウィザードバック](#onwizardback)|ユーザーがウィザード型のプロパティ シートを使用しているときに [**戻る**] ボタンをクリックしたときに、フレームワークによって呼び出されます。|
+|[CSnapIn プロパティページインプル::ウィザード完了](#onwizardfinish)|ユーザーがウィザード型のプロパティ シートを使用しているときに **[完了]** ボタンをクリックしたときに、フレームワークによって呼び出されます。|
+|[次のページインプジェクスト](#onwizardnext)|ユーザーがウィザード型のプロパティ シートを使用しているときに **[Next]** ボタンをクリックしたときに、フレームワークによって呼び出されます。|
+|[プロパティページインプル::クエリ兄弟](#querysiblings)|現在のメッセージをプロパティ シートのすべてのページに転送します。|
+|[プロパティページインプラクプッター::セット修正](#setmodified)|[**今すぐ適用**] ボタンをアクティブまたは非アクティブ化する場合に呼び出します。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
 |名前|説明|
 |----------|-----------------|
-|[CSnapInPropertyPageImpl::m_psp](#m_psp)|オブジェクトによって使用される Windows `PROPSHEETPAGE`構造体。 `CSnapInPropertyPageImpl`|
+|[プロパティページインプル::m_psp](#m_psp)|オブジェクトによって`PROPSHEETPAGE`使用される Windows`CSnapInPropertyPageImpl`構造体。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-`CSnapInPropertyPageImpl`スナップインプロパティページオブジェクトの基本的な実装を提供します。 スナップインのプロパティページの基本的な機能は、いくつかの異なるインターフェイスとマップの種類を使用して実装されます。
+`CSnapInPropertyPageImpl`では、スナップイン プロパティ ページ オブジェクトの基本的な実装を提供します。 スナップイン プロパティ ページの基本的な機能は、いくつかの異なるインターフェイスとマップの種類を使用して実装されます。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -89,23 +89,23 @@ CSnapInPropertyPageImpl : public CDialogImplBase
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlsnap. h
+**ヘッダー:** atlsnap.h
 
-##  <a name="canceltoclose"></a>CSnapInPropertyPageImpl::CancelToClose
+## <a name="csnapinpropertypageimplcanceltoclose"></a><a name="canceltoclose"></a>閉じるには
 
-モーダルプロパティシートのページ内のデータに回復不可能な変更が加えられた後に、この関数を呼び出します。
+モーダル プロパティ シートのページ内のデータに対して、回復不可能な変更が行われた後にこの関数を呼び出します。
 
 ```
 void CancelToClose();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この関数は、 **[OK** ] ボタンを**閉じ**て **[キャンセル**] ボタンを無効にします。 この変更により、変更が永続的であり、変更を取り消すことができないことがユーザーに通知されます。
+この機能は **、[OK]** ボタンを **[閉じる**] に変更し、[**キャンセル**] ボタンを無効にします。 この変更により、変更が永続的であり、変更を取り消すことができないことがユーザーに警告されます。
 
-この`CancelToClose`メンバー関数は、モードレスプロパティシートでは何も実行しません。既定では、モードレスプロパティシートに **[キャンセル**] ボタンがないためです。
+モード`CancelToClose`レス プロパティ シートには既定で **[キャンセル]** ボタンがないため、メンバ関数はモードレス プロパティ シートでは何も行いません。
 
-##  <a name="csnapinpropertypageimpl"></a>CSnapInPropertyPageImpl::CSnapInPropertyPageImpl
+## <a name="csnapinpropertypageimplcsnapinpropertypageimpl"></a><a name="csnapinpropertypageimpl"></a>プロパティ ページ インプル::C スナップインプロパティ ページ インビプ
 
 `CSnapInPropertyPageImpl` オブジェクトを構築します。
 
@@ -115,16 +115,16 @@ CSnapInPropertyPageImpl(LPCTSTR lpszTitle = NULL);
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszTitle*<br/>
-からプロパティページのタイトル。
+*lpszタイトル*<br/>
+[in]プロパティ ページのタイトル。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-基になる構造体を初期化するには、 [CSnapInPropertyPageImpl:: Create](#create)を呼び出します。
+基になる構造を初期化するには[、CSnapInPropertyPageImpl::作成](#create)を呼び出します。
 
-##  <a name="create"></a>  CSnapInPropertyPageImpl::Create
+## <a name="csnapinpropertypageimplcreate"></a><a name="create"></a>プロパティページインプル::作成
 
-この関数を呼び出して、プロパティページの基になる構造を初期化します。
+プロパティ ページの基になる構造を初期化します。
 
 ```
 HPROPSHEETPAGE Create();
@@ -132,29 +132,29 @@ HPROPSHEETPAGE Create();
 
 ### <a name="return-value"></a>戻り値
 
-新しく作成され`PROPSHEETPAGE`たプロパティシートの属性を格納している構造体へのハンドル。
+新しく作成された`PROPSHEETPAGE`プロパティ シートの属性を含む構造体へのハンドル。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この関数を呼び出す前に、まず[CSnapInPropertyPageImpl:: CSnapInPropertyPageImpl](#csnapinpropertypageimpl)を呼び出してください。
+この関数を呼び出す前に、最初に[CSnapInPropertyPageImpl::CSnapInPropertyPageImpl](#csnapinpropertypageimpl)を呼び出す必要があります。
 
-##  <a name="m_psp"></a>  CSnapInPropertyPageImpl::m_psp
+## <a name="csnapinpropertypageimplm_psp"></a><a name="m_psp"></a>プロパティページインプル::m_psp
 
-`m_psp`は、の`PROPSHEETPAGE`特性を格納するメンバーを持つ構造体です。
+`m_psp`は、 の特性をメンバーが格納`PROPSHEETPAGE`する構造体です。
 
 ```
 PROPSHEETPAGE m_psp;
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この構造体を使用して、プロパティページの構築後に外観を初期化します。
+この構造体を使用して、プロパティ ページの構築後の外観を初期化します。
 
-メンバーの一覧など、この構造の詳細については、Windows SDK の「 [Propsheet ページ](/windows/win32/api/prsht/ns-prsht-propsheetpagea_v3)」を参照してください。
+メンバーの一覧を含む、この構造体の詳細については、Windows SDK の[「PROPSHEETPAGE」](/windows/win32/api/prsht/ns-prsht-propsheetpagea_v3)を参照してください。
 
-##  <a name="onapply"></a>CSnapInPropertyPageImpl:: OnApply
+## <a name="csnapinpropertypageimplonapply"></a><a name="onapply"></a>プロパティページインプル::オンApply
 
-このメンバー関数は、ユーザーが **[OK]** または **[今すぐ適用]** ボタンをクリックしたときに呼び出されます。
+このメンバー関数は、ユーザーが **[OK]** または [**今すぐ適用**] ボタンをクリックしたときに呼び出されます。
 
 ```
 BOOL OnApply();
@@ -162,31 +162,31 @@ BOOL OnApply();
 
 ### <a name="return-value"></a>戻り値
 
-変更が受け入れられた場合は0以外の。それ以外の場合は0です。
+変更が受け入れられる場合は 0 以外。それ以外の場合は 0。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-が`OnApply`フレームワークによって呼び出されるようにするには`SetModified` 、を呼び出し、そのパラメーターを TRUE に設定する必要があります。 これにより、ユーザーがプロパティページを変更するとすぐに **[今すぐ適用]** ボタンがアクティブになります。
+フレームワーク`OnApply`から呼び出す前に、そのパラメータを`SetModified`TRUE に呼び出して設定しておく必要があります。 これにより、ユーザーがプロパティ ページで変更を行うとすぐに [**今すぐ適用**] ボタンがアクティブになります。
 
-このメンバー関数をオーバーライドして、ユーザーが **[今すぐ適用]** ボタンをクリックしたときにプログラムが実行するアクションを指定します。 オーバーライドする場合、関数は変更を受け入れるには TRUE を返し、変更が有効にならないように FALSE を返します。
+ユーザーが **[今すぐ適用**] ボタンをクリックしたときにプログラムが実行する動作を指定するには、このメンバー関数をオーバーライドします。 オーバーライドする場合、関数は TRUE を返して変更を受け入れ、変更が有効にならないように FALSE を返します。
 
-の既定の`OnApply`実装では、TRUE が返されます。
+既定の実装では`OnApply`TRUE が返されます。
 
-##  <a name="onhelp"></a>CSnapInPropertyPageImpl::OnHelp
+## <a name="csnapinpropertypageimplonhelp"></a><a name="onhelp"></a>プロパティページインプル::オンヘルプ
 
-このメンバー関数は、ユーザーがプロパティページの **[ヘルプ]** ボタンをクリックしたときに呼び出されます。
+このメンバー関数は、ユーザーがプロパティ ページの **[ヘルプ**] ボタンをクリックしたときに呼び出されます。
 
 ```
 void OnHelp();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-プロパティページのヘルプを表示するには、このメンバー関数をオーバーライドします。
+プロパティ ページのヘルプを表示するには、このメンバー関数をオーバーライドします。
 
-##  <a name="onkillactive"></a>  CSnapInPropertyPageImpl::OnKillActive
+## <a name="csnapinpropertypageimplonkillactive"></a><a name="onkillactive"></a>プロパティページインプル::オンキルアクティブ
 
-このメンバー関数は、ページがアクティブページでなくなったときに呼び出されます。
+このメンバー関数は、ページがアクティブ ページでなくなったときに呼び出されます。
 
 ```
 BOOL OnKillActive();
@@ -194,15 +194,15 @@ BOOL OnKillActive();
 
 ### <a name="return-value"></a>戻り値
 
-データが正常に更新された場合は0以外の。それ以外の場合は0です。
+データが正常に更新された場合は 0 以外の値を返します。それ以外の場合は 0。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-特別なデータ検証タスクを実行するには、このメンバー関数をオーバーライドします。
+特殊なデータ検証タスクを実行するには、このメンバー関数をオーバーライドします。
 
-##  <a name="onquerycancel"></a>  CSnapInPropertyPageImpl::OnQueryCancel
+## <a name="csnapinpropertypageimplonquerycancel"></a><a name="onquerycancel"></a>ページインプル::クエリキャンセル
 
-このメンバー関数は、ユーザーが **[キャンセル]** をクリックしたときと、キャンセル操作が行われる前に呼び出されます。
+このメンバー関数は、ユーザーが **[キャンセル]** ボタンをクリックしたとき、およびキャンセル操作が行われる前に呼び出されます。
 
 ```
 BOOL OnQueryCancel();
@@ -210,31 +210,31 @@ BOOL OnQueryCancel();
 
 ### <a name="return-value"></a>戻り値
 
-取り消し操作を許可する場合は0以外。それ以外の場合は0です。
+キャンセル操作を許可する場合は 0 以外の値を指定します。それ以外の場合は 0。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメンバー関数をオーバーライドして、ユーザーが **[キャンセル**] ボタンをクリックしたときにプログラムが実行するアクションを指定します。
+ユーザーが **[キャンセル]** ボタンをクリックしたときにプログラムが実行するアクションを指定するには、このメンバー関数をオーバーライドします。
 
-の既定の`OnQueryCancel`実装では、TRUE が返されます。
+既定の実装では`OnQueryCancel`TRUE が返されます。
 
-##  <a name="onreset"></a>CSnapInPropertyPageImpl:: OnReset
+## <a name="csnapinpropertypageimplonreset"></a><a name="onreset"></a>プロパティページインプル::オンリセット
 
-このメンバー関数は、ユーザーが **[キャンセル**] ボタンをクリックしたときに呼び出されます。
+このメンバー関数は、ユーザーが **[キャンセル]** ボタンをクリックしたときに呼び出されます。
 
 ```
 void OnReset();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この関数を呼び出すと、ユーザーが **[今すぐ適用]** ボタンをクリックしたときに行われたすべてのプロパティページへの変更が破棄され、プロパティシートがフォーカスを保持します。
+この関数が呼び出されると、ユーザーが [**今すぐ適用**] ボタンをクリックして行ったすべてのプロパティ ページへの変更は破棄され、プロパティ シートはフォーカスを保持します。
 
-このメンバー関数をオーバーライドして、ユーザーが **[キャンセル**] ボタンをクリックしたときにプログラムが実行するアクションを指定します。
+ユーザーが **[キャンセル]** ボタンをクリックしたときにプログラムが実行する動作を指定するには、このメンバー関数をオーバーライドします。
 
-##  <a name="onsetactive"></a>  CSnapInPropertyPageImpl::OnSetActive
+## <a name="csnapinpropertypageimplonsetactive"></a><a name="onsetactive"></a>プロパティページインプル::オンセットアクティブ
 
-このメンバー関数は、ページがユーザーによって選択され、アクティブページになると呼び出されます。
+このメンバー関数は、ユーザーがページを選択し、アクティブ ページになったときに呼び出されます。
 
 ```
 BOOL OnSetActive();
@@ -242,17 +242,17 @@ BOOL OnSetActive();
 
 ### <a name="return-value"></a>戻り値
 
-ページが正常にアクティブに設定された場合は0以外の。それ以外の場合は0です。
+ページが正常にアクティブに設定された場合は 0 以外の値を返します。それ以外の場合は 0。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-ページがアクティブになったときにタスクを実行するには、このメンバー関数をオーバーライドします。 このメンバー関数のオーバーライドでは、他の処理が行われる前に、既定のバージョンを呼び出す必要があります。
+ページがアクティブになったときにタスクを実行するには、このメンバー関数をオーバーライドします。 このメンバー関数をオーバーライドする場合は、他の処理が行われる前に、既定のバージョンを呼び出す必要があります。
 
-既定の実装では、TRUE が返されます。
+既定の実装では TRUE が返されます。
 
-##  <a name="onwizardback"></a>CSnapInPropertyPageImpl:: OnWizardBack
+## <a name="csnapinpropertypageimplonwizardback"></a><a name="onwizardback"></a>CSnapInプロパティページインプル::ウィザードバック
 
-このメンバー関数は、ユーザーがウィザードの **[戻る]** ボタンをクリックしたときに呼び出されます。
+このメンバー関数は、ユーザーがウィザードの [**戻る**] ボタンをクリックしたときに呼び出されます。
 
 ```
 BOOL OnWizardBack();
@@ -260,17 +260,17 @@ BOOL OnWizardBack();
 
 ### <a name="return-value"></a>戻り値
 
-- 0を設定すると、前のページに自動的に進みます。
+- 0 を指定すると、自動的に前のページに進みます。
 
-- ページが変更されないようにする場合は-1。
+- -1 ページが変更されないようにします。
 
-次のページ以外のページにジャンプするには、表示されるダイアログボックスの識別子を返します。
+次のページ以外のページにジャンプするには、表示するダイアログ ボックスの識別子を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメンバー関数をオーバーライドして、 **[戻る]** ボタンがクリックされたときにユーザーが実行する必要のあるアクションを指定します。
+このメンバー関数をオーバーライドして、戻**る**ボタンがクリックされたときにユーザーが実行する必要のあるアクションを指定します。
 
-##  <a name="onwizardfinish"></a>CSnapInPropertyPageImpl:: OnWizardFinish
+## <a name="csnapinpropertypageimplonwizardfinish"></a><a name="onwizardfinish"></a>CSnapIn プロパティページインプル::ウィザード完了
 
 このメンバー関数は、ユーザーがウィザードの **[完了**] ボタンをクリックしたときに呼び出されます。
 
@@ -280,15 +280,15 @@ BOOL OnWizardFinish();
 
 ### <a name="return-value"></a>戻り値
 
-ウィザードの終了時にプロパティシートが破棄される場合は0以外。それ以外の場合は0。
+ウィザードの終了時にプロパティ シートが破棄された場合は 0 以外の値を指定します。それ以外の場合は 0。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメンバー関数をオーバーライドして、 **[完了**] ボタンをクリックしたときにユーザーが実行する必要のあるアクションを指定します。
+このメンバー関数をオーバーライドして、ユーザーが **[完了]** ボタンをクリックしたときに実行する必要のある操作を指定します。
 
-##  <a name="onwizardnext"></a>CSnapInPropertyPageImpl:: OnWizardNext
+## <a name="csnapinpropertypageimplonwizardnext"></a><a name="onwizardnext"></a>次のページインプジェクスト
 
-このメンバー関数は、ユーザーがウィザードの **[次へ]** ボタンをクリックしたときに呼び出されます。
+このメンバー関数は、ユーザーがウィザードの [**次へ**] をクリックしたときに呼び出されます。
 
 ```
 BOOL OnWizardNext();
@@ -296,19 +296,19 @@ BOOL OnWizardNext();
 
 ### <a name="return-value"></a>戻り値
 
-- 0を設定すると、次のページに自動的に進みます。
+- 自動的に次のページに進むには 0 を指定します。
 
-- ページが変更されないようにする場合は-1。
+- -1 ページが変更されないようにします。
 
-次のページ以外のページにジャンプするには、表示されるダイアログボックスの識別子を返します。
+次のページ以外のページにジャンプするには、表示するダイアログ ボックスの識別子を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このメンバー関数をオーバーライドして、 **[次へ**] ボタンをクリックしたときにユーザーが実行する必要のあるアクションを指定します。
+このメンバー関数をオーバーライドして、ユーザーが [**次へ**] ボタンをクリックしたときに実行する必要のあるアクションを指定します。
 
-##  <a name="querysiblings"></a>  CSnapInPropertyPageImpl::QuerySiblings
+## <a name="csnapinpropertypageimplquerysiblings"></a><a name="querysiblings"></a>プロパティページインプル::クエリ兄弟
 
-このメンバー関数を呼び出して、プロパティシート内の各ページにメッセージを転送します。
+プロパティ シートの各ページにメッセージを転送するには、このメンバー関数を呼び出します。
 
 ```
 LRESULT QuerySiblings(WPARAM wParam, LPARAM lParam);
@@ -317,22 +317,22 @@ LRESULT QuerySiblings(WPARAM wParam, LPARAM lParam);
 ### <a name="parameters"></a>パラメーター
 
 *wParam*<br/>
-から追加のメッセージに依存する情報を指定します。
+[in]メッセージに依存する追加情報を指定します。
 
 *lParam*<br/>
-から追加のメッセージに依存する情報を指定します。
+[in]メッセージに依存する追加情報を指定します。
 
 ### <a name="return-value"></a>戻り値
 
-メッセージを次のプロパティページに転送しない場合は0以外の値。それ以外の場合は0。
+メッセージを次のプロパティ ページに転送しない場合は 0 以外の値を返します。それ以外の場合は 0。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-ページから0以外の値が返された場合、プロパティシートは後続のページにメッセージを送信しません。
+ページが 0 以外の値を返す場合、プロパティ シートはメッセージを後続のページに送信しません。
 
-##  <a name="setmodified"></a>CSnapInPropertyPageImpl::SetModified
+## <a name="csnapinpropertypageimplsetmodified"></a><a name="setmodified"></a>プロパティページインプラクプッター::セット修正
 
-このメンバー関数を呼び出して、プロパティページの設定を適切な外部オブジェクトに適用するかどうかに基づいて **[今すぐ適用]** ボタンを有効または無効にします。
+プロパティ ページの設定を適切な外部オブジェクトに適用するかどうかを基に **、[Apply Now]** ボタンを有効または無効にするには、このメンバー関数を呼び出します。
 
 ```
 void SetModified(BOOL bChanged = TRUE);
@@ -340,12 +340,12 @@ void SetModified(BOOL bChanged = TRUE);
 
 ### <a name="parameters"></a>パラメーター
 
-*bChanged*<br/>
-からプロパティページの設定が最後に適用されてから変更されたことを示す場合は TRUE。プロパティページの設定が適用されていることを示す場合は FALSE、無視する場合はです。
+*b変更*<br/>
+[in]プロパティ ページの設定が最後に適用されてから変更されたことを示す場合は TRUE。プロパティ ページの設定が適用されたことを示す場合は FALSE、または無視する必要があることを示します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-プロパティシートは、どのページが "ダーティ" であるかを追跡します。これは、を呼び出し`SetModified( TRUE )`たときのプロパティページです。 いずれかのページに対してを呼び出し`SetModified( TRUE )`た場合、 **[今すぐ適用]** ボタンは常に有効になります。 **[今すぐ適用]** ボタンは、いずれかの`SetModified( FALSE )`ページに対してを呼び出すと無効になりますが、他のどのページも "ダーティ" になっている場合のみです。
+プロパティ シートは、どのページが "ダーティ" か、つまり呼び出した`SetModified( TRUE )`プロパティ ページを追跡します。 いずれかのページを呼び出`SetModified( TRUE )`すと、[**今すぐ適用**] ボタンが常に有効になります。 [**今すぐ適用]** ボタンは、いずれかの`SetModified( FALSE )`ページを呼び出すときに無効になりますが、他のどのページも "ダーティ" ではない場合のみです。
 
 ## <a name="see-also"></a>関連項目
 

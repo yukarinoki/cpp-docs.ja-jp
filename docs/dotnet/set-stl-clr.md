@@ -89,18 +89,18 @@ helpviewer_keywords:
 - value_compare member [STL/CLR]
 - value_type member [STL/CLR]
 ms.assetid: 27d3628c-741a-43a7-bef1-5085536f679e
-ms.openlocfilehash: a5e98a9fe32c71e87f80c2cfc2e733a5d0fe5c94
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 38b0a3278efd10ef5cc989a5fc900bf82d377eae
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80208339"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81320306"
 ---
 # <a name="set-stlclr"></a>set (STL/CLR)
 
-このテンプレートクラスは、双方向アクセスを持つ要素の可変長シーケンスを制御するオブジェクトを表します。 コンテナー `set` を使用して、要素のシーケンスを (ほぼ) バランスのとれたノードのツリーとして管理します。各ノードには1つの要素が格納されます。
+テンプレート クラスは、双方向アクセスを持つ要素の可変長シーケンスを制御するオブジェクトを表します。 コンテナー`set`を使用して、(ほぼ) バランスの取れた順序付けられたノードツリーとして要素のシーケンスを管理し、それぞれが 1 つの要素を格納します。
 
-以下の説明では、`GValue` は `GKey`と同じですが、後者が ref 型である場合を除き、*キー*と同じです。この場合、`Key^`します。
+以下の説明では、`GValue`は と同`GKey`じですが、後者が ref 型でない限り *、キー*と同じです`Key^`。
 
 ## <a name="syntax"></a>構文
 
@@ -120,14 +120,14 @@ template<typename Key>
 
 ### <a name="parameters"></a>パラメーター
 
-*[キー]*<br/>
+*キー*<br/>
 被制御シーケンス内の要素のキー コンポーネントの型。
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<cliext/set >
+**ヘッダー:**\<クライト/セット>
 
-**名前空間:** cliext
+**名前空間:** クエクスキ
 
 ## <a name="declarations"></a>宣言
 
@@ -136,95 +136,95 @@ template<typename Key>
 |[set::const_iterator (STL/CLR)](#const_iterator)|被制御シーケンスの定数反復子の型です。|
 |[set::const_reference (STL/CLR)](#const_reference)|要素への定数参照の型です。|
 |[set::const_reverse_iterator (STL/CLR)](#const_reverse_iterator)|被制御シーケンスの定数反転反復子の型です。|
-|[set::difference_type (STL/CLR)](#difference_type)|2つの要素間の (符号付きの) 距離の型。|
-|[set::generic_container (STL/CLR)](#generic_container)|コンテナーのジェネリックインターフェイスの型。|
-|[set::generic_iterator (STL/CLR)](#generic_iterator)|コンテナーのジェネリックインターフェイスの反復子の型。|
-|[set::generic_reverse_iterator (STL/CLR)](#generic_reverse_iterator)|コンテナーのジェネリックインターフェイスの反転反復子の型。|
-|[set::generic_value (STL/CLR)](#generic_value)|コンテナーのジェネリックインターフェイスの要素の型。|
+|[set::difference_type (STL/CLR)](#difference_type)|2 つの要素間の (符号付きの可能性がある) 距離の型。|
+|[set::generic_container (STL/CLR)](#generic_container)|コンテナーのジェネリック インターフェイスの型。|
+|[set::generic_iterator (STL/CLR)](#generic_iterator)|コンテナーのジェネリック インターフェイスの反復器の型。|
+|[set::generic_reverse_iterator (STL/CLR)](#generic_reverse_iterator)|コンテナーのジェネリック インターフェイスの逆反復器の型。|
+|[set::generic_value (STL/CLR)](#generic_value)|コンテナーのジェネリック インターフェイスの要素の型。|
 |[set::iterator (STL/CLR)](#iterator)|被制御シーケンスの反復子の型です。|
-|[set::key_compare (STL/CLR)](#key_compare)|2つのキーの順序付けデリゲート。|
+|[set::key_compare (STL/CLR)](#key_compare)|2 つのキーの順序付けデリゲート。|
 |[set::key_type (STL/CLR)](#key_type)|順序付けキーの型です。|
 |[set::reference (STL/CLR)](#reference)|要素への参照の型です。|
 |[set::reverse_iterator (STL/CLR)](#reverse_iterator)|被制御シーケンスの反転反復子の型です。|
-|[set::size_type (STL/CLR)](#size_type)|2つの要素間の (負ではない) 距離の型。|
-|[set::value_compare (STL/CLR)](#value_compare)|2つの要素の値の順序付けデリゲート。|
+|[set::size_type (STL/CLR)](#size_type)|2 つの要素間の (負でない) 距離の型。|
+|[set::value_compare (STL/CLR)](#value_compare)|2 つの要素値の順序付けデリゲート。|
 |[set::value_type (STL/CLR)](#value_type)|要素の型。|
 
 |メンバー関数|説明|
 |---------------------|-----------------|
 |[set::begin (STL/CLR)](#begin)|被制御シーケンスの先頭を指定します。|
 |[set::clear (STL/CLR)](#clear)|すべての要素を削除します。|
-|[set::count (STL/CLR)](#count)|指定されたキーに一致する要素をカウントします。|
+|[set::count (STL/CLR)](#count)|指定したキーに一致する要素をカウントします。|
 |[set::empty (STL/CLR)](#empty)|要素が存在しないかどうかをテストします。|
 |[set::end (STL/CLR)](#end)|被制御シーケンスの末尾を指定します。|
 |[set::equal_range (STL/CLR)](#equal_range)|指定したキーに一致する範囲を検索します。|
 |[set::erase (STL/CLR)](#erase)|指定した位置にある要素を削除します。|
 |[set::find (STL/CLR)](#find)|指定したキーに一致する要素を検索します。|
 |[set::insert (STL/CLR)](#insert)|要素を追加します。|
-|[set::key_comp (STL/CLR)](#key_comp)|2つのキーの順序付けデリゲートをコピーします。|
-|[set::lower_bound (STL/CLR)](#lower_bound)|指定されたキーに一致する範囲の先頭を検索します。|
+|[set::key_comp (STL/CLR)](#key_comp)|2 つのキーの順序付けデリゲートをコピーします。|
+|[set::lower_bound (STL/CLR)](#lower_bound)|指定したキーに一致する範囲の先頭を検索します。|
 |[set::make_value (STL/CLR)](#make_value)|値オブジェクトを構築します。|
 |[set::rbegin (STL/CLR)](#rbegin)|反転被制御シーケンスの先頭を指定します。|
 |[set::rend (STL/CLR)](#rend)|反転被制御シーケンスの末尾を指定します。|
 |[set::set (STL/CLR)](#set)|コンテナー オブジェクトを構築します。|
 |[set::size (STL/CLR)](#size)|要素の数をカウントします。|
 |[set::swap (STL/CLR)](#swap)|2 つのコンテナーのコンテンツを交換します。|
-|[set::to_array (STL/CLR)](#to_array)|被制御シーケンスを新しい配列にコピーします。|
-|[set::upper_bound (STL/CLR)](#upper_bound)|指定されたキーに一致する範囲の末尾を検索します。|
-|[set::value_comp (STL/CLR)](#value_comp)|2つの要素の値の順序付けデリゲートをコピーします。|
+|[set::to_array (STL/CLR)](#to_array)|制御されたシーケンスを新しい配列にコピーします。|
+|[set::upper_bound (STL/CLR)](#upper_bound)|指定したキーに一致する範囲の末尾を検索します。|
+|[set::value_comp (STL/CLR)](#value_comp)|2 つの要素値の順序付けデリゲートをコピーします。|
 
 |演算子|説明|
 |--------------|-----------------|
 |[set::operator= (STL/CLR)](#op_as)|被制御シーケンスを置き換えます。|
-|[operator!= (set) (STL/CLR)](#op_neq)|`set` オブジェクトが別の `set` オブジェクトと等しくないかどうかを判断します。|
-|[operator< (set) (STL/CLR)](#op_lt)|`set` オブジェクトが、別の `set` オブジェクトより小さいかどうかを判断します。|
-|[operator<= (set) (STL/CLR)](#op_lteq)|`set` オブジェクトが、別の `set` オブジェクト以下かどうかを判断します。|
-|[operator== (set) (STL/CLR)](#op_eq)|`set` オブジェクトが別の `set` オブジェクトと等しいかどうかを判断します。|
-|[operator> (set) (STL/CLR)](#op_gt)|`set` オブジェクトが、別の `set` オブジェクトより大きいかどうかを判断します。|
-|[operator>= (set) (STL/CLR)](#op_gteq)|`set` オブジェクトが、別の `set` オブジェクト以上かどうかを判断します。|
+|[演算子!= (セット) (STL/CLR)](#op_neq)|オブジェクトが別`set``set`のオブジェクトと等しくないかどうかを判断します。|
+|[演算子< (セット) (STL/CLR)](#op_lt)|オブジェクトが別`set``set`のオブジェクトより小さいかどうかを判断します。|
+|[演算子<= (セット) (STL/CLR)](#op_lteq)|オブジェクトが別`set``set`のオブジェクト以下かどうかを判断します。|
+|[operator== (set) (STL/CLR)](#op_eq)|オブジェクトが別`set``set`のオブジェクトと等しいかどうかを判断します。|
+|[演算子> (セット) (STL/CLR)](#op_gt)|オブジェクトが別`set``set`のオブジェクトより大きいかどうかを判断します。|
+|[演算子>= (セット) (STL/CLR)](#op_gteq)|オブジェクトが別`set``set`のオブジェクト以上かどうかを判断します。|
 
 ## <a name="interfaces"></a>インターフェイス
 
 |インターフェイス|説明|
 |---------------|-----------------|
-|<xref:System.ICloneable>|オブジェクトを複製します。|
-|<xref:System.Collections.IEnumerable>|要素を順番に処理します。|
-|<xref:System.Collections.ICollection>|要素のグループを維持します。|
-|<xref:System.Collections.Generic.IEnumerable%601>|型指定された要素を順番に処理します。|
-|<xref:System.Collections.Generic.ICollection%601>|型指定された要素のグループを保持します。|
-|ITree キー、値 >\<|ジェネリックコンテナーを管理します。|
+|<xref:System.ICloneable>|オブジェクトを複製する。|
+|<xref:System.Collections.IEnumerable>|要素を通してシーケンスします。|
+|<xref:System.Collections.ICollection>|要素のグループを管理します。|
+|<xref:System.Collections.Generic.IEnumerable%601>|型指定された要素を通してシーケンスします。|
+|<xref:System.Collections.Generic.ICollection%601>|型指定された要素のグループを管理します。|
+|ITree\<キー、値>|汎用コンテナーを管理します。|
 
 ## <a name="remarks"></a>解説
 
-オブジェクトは、制御するシーケンスのストレージを個々のノードとして割り当て、解放します。 要素は、ノード間のリンクを変更することによって、ノード間のリンクを変更することによって順序を維持する、(ほぼ) 均衡ツリーに挿入されます。ノード間でのコンテンツのコピーは行われません。 つまり、要素を自由に挿入および削除できます。
+オブジェクトは、個別のノードとして制御するシーケンスのストレージを割り当てて解放します。 要素を (ほぼ) バランスの取れたツリーに挿入し、ノード間のリンクを変更して順序を保ち、あるノードの内容を別のノードにコピーすることはありません。 つまり、残りの要素を邪魔することなく、自由に要素を挿入したり削除したりできます。
 
-オブジェクトは、 [set:: key_compare (STL/CLR)](../dotnet/set-key-compare-stl-clr.md)型の格納されたデリゲートオブジェクトを呼び出すことによって、制御するシーケンスを並べ替えます。 Set を構築するときに、格納されているデリゲートオブジェクトを指定できます。delegate オブジェクトを指定しない場合、既定では `operator<(key_type, key_type)`の比較が行われます。 この格納されているオブジェクトにアクセスするには、メンバー関数[set:: key_comp (STL/CLR)](../dotnet/set-key-comp-stl-clr.md)`()`を呼び出します。
+オブジェクトは[、set::key_compare (STL/CLR)](../dotnet/set-key-compare-stl-clr.md)型の格納されたデリゲート オブジェクトを呼び出すことによって、制御するシーケンスを順序付けます。 セットを構築するときに、格納されているデリゲート オブジェクトを指定できます。デリゲート オブジェクトを指定しない場合、既定の比較は`operator<(key_type, key_type)`比較です。 このストアド オブジェクトにアクセスする場合は、メンバー関数[set::key_comp (STL/CLR)](../dotnet/set-key-comp-stl-clr.md)`()`を呼び出します。
 
-このようなデリゲートオブジェクトは、 [set:: key_type (STL/CLR)](../dotnet/set-key-type-stl-clr.md)型のキーに対して厳密弱順序を強制する必要があります。 つまり、`X` と `Y`の2つのキーについては、次のようになります。
+このようなデリゲート オブジェクトは[、set::key_type (STL/CLR)](../dotnet/set-key-type-stl-clr.md)の型のキーに厳密な弱い順序を課す必要があります。 つまり、任意の 2`X`つの`Y`キーと :
 
-`key_comp()(X, Y)` は、すべての呼び出しで同じブール値を返します。
+`key_comp()(X, Y)`は、呼び出しごとに同じブール値の結果を返します。
 
-`key_comp()(X, Y)` が true の場合、`key_comp()(Y, X)` は false である必要があります。
+true`key_comp()(X, Y)`の場合`key_comp()(Y, X)`は、false にする必要があります。
 
-`key_comp()(X, Y)` が true の場合、`Y`前に `X` が順序付けられていると言います。
+true`key_comp()(X, Y)`の場合`X`は、 の前に注文`Y`されると言われます。
 
-`!key_comp()(X, Y) && !key_comp()(Y, X)` が true の場合、`X` と `Y` は等価の順序付けと呼ばれます。
+もし`!key_comp()(X, Y) && !key_comp()(Y, X)`真であれば、`X`同等`Y`の順序を持っていると言われます。
 
-被制御シーケンスの `Y` の前にある要素 `X` の場合、`key_comp()(Y, X)` は false になります。 (既定のデリゲートオブジェクトの場合、キーの値が減少することはありません)。テンプレートクラス[セット](../dotnet/set-stl-clr.md)とは異なり、テンプレートクラス `set` のオブジェクトでは、すべての要素のキーが一意である必要はありません。 (2 つ以上のキーが同等の順序を持つことができます)。
+制御シーケンス`X``Y`の前にある要素の場合は false`key_comp()(Y, X)`です。 (既定のデリゲート オブジェクトの場合、キーの値は減少しません)。テンプレート クラス[セット](../dotnet/set-stl-clr.md)とは異なり、`set`テンプレート クラスのオブジェクトでは、すべての要素のキーが一意である必要はありません。 (2 つ以上のキーの順序は同等です)。
 
-各要素は、"値" と "値" の両方として機能します。 シーケンスは、シーケンス内の要素数の対数に比例した数の操作で、任意の要素の検索、挿入、および削除を許可する方法で表現されます (対数時間)。 要素を挿入しても反復子の有効性は失われません。また、要素を削除した場合は、削除された要素を指す反復子だけが無効化されます。
+各要素は、ey と値の両方として機能します。 シーケンスは、シーケンス内の要素の数の対数に比例した操作の数 (対数時間) を使用して任意の要素の参照、挿入、および削除を可能にする方法で表されます。 要素を挿入しても反復子の有効性は失われません。また、要素を削除した場合は、削除された要素を指す反復子だけが無効化されます。
 
-セットは双方向反復子をサポートします。したがって、被制御シーケンス内の要素を指定する反復子によって隣接する要素にステップインすることができます。 特殊なヘッドノードは、 [set:: end (STL/CLR)](../dotnet/set-end-stl-clr.md)`()`によって返される反復子に対応します。 この反復子をデクリメントして、被制御シーケンスの最後の要素 (存在する場合) に移動することができます。 セット反復子をインクリメントしてヘッドノードに移動できます。これにより、`end()`と等しいかどうかが比較されます。 ただし、`end()`によって返される反復子を逆参照することはできません。
+セットは双方向反復子をサポートするため、制御シーケンス内の要素を指定する反復子を指定して、隣接する要素にステップインできます。 特殊なヘッド ノードは[、set::end (STL/CLR)](../dotnet/set-end-stl-clr.md)`()`によって返される反復器に対応します。 この反復子をデクリメントして、被制御シーケンス内の最後の要素に到達できます (存在する場合)。 セット反復器をインクリメントしてヘッド ノードに到達すると、次に`end()`と等しくなります。 しかし、 によって返された`end()`反復器を逆参照することはできません。
 
-ランダムアクセス反復子を必要とする数値の位置を指定して、set 要素を直接参照することはできないことに注意してください。
+ランダム アクセス反復子を必要とする数値位置を指定して、set 要素を直接参照することはできません。
 
-セット反復子は、関連付けられているセットノードへのハンドルを格納します。このノードは、関連付けられているコンテナーへのハンドルを格納します。 反復子は、関連付けられているコンテナーオブジェクトと共にのみ使用できます。 Set 反復子は、関連付けられている set ノードがなんらかのセットに関連付けられている限り、有効なままです。 さらに、有効な反復子は dereferencable です。これを使用すると、指定した要素の値にアクセスしたり変更したりすることができます。これは、`end()`と等しくない場合に限ります。
+セット反復器は、関連付けられたセット ノードへのハンドルを格納し、それに関連付けられたコンテナーへのハンドルを格納します。 反復子は、関連付けられたコンテナー オブジェクトでのみ使用できます。 セット反復器は、関連付けられたセットノードが一部のセットに関連付けられている限り有効です。 さらに、有効な反復子は逆参照可能であり、指定した要素値にアクセスしたり変更したりするために使用できます`end()`。
 
-要素を消去または削除すると、格納されている値のデストラクターが呼び出されます。 コンテナーを破棄すると、すべての要素が消去されます。 したがって、要素の型が ref クラスであるコンテナーは、コンテナーの直後要素が存在しないことを保証します。 ただし、ハンドルのコンテナーが要素を破棄し*ない*ことに注意してください。
+要素を削除または削除すると、格納されている値のデストラクターが呼び出されます。 コンテナを破棄すると、すべての要素が消去されます。 したがって、要素型が ref クラスであるコンテナーは、コンテナーより長い要素が存在することを保証します。 ただし、ハンドルのコンテナーは要素を破棄*しないこと*に注意してください。
 
 ## <a name="members"></a>メンバー
 
-## <a name="setbegin-stlclr"></a><a name="begin"></a>set:: begin (STL/CLR)
+## <a name="setbegin-stlclr"></a><a name="begin"></a>セット::開始(STL/CLR)
 
 被制御シーケンスの先頭を指定します。
 
@@ -236,7 +236,7 @@ iterator begin();
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、被制御シーケンスの最初の要素、または空のシーケンスの末尾の次の位置を指定する双方向反復子を返します。 これを使用して被制御シーケンスの現在の先頭 (`current`) を指定する反復子を取得しますが、このステータスは被制御シーケンスの長さが変わると変化することがあります。
+メンバー関数は、制御されたシーケンスの最初の要素を指定する双方向反復子を返します。 これを使用して被制御シーケンスの現在の先頭 (`current`) を指定する反復子を取得しますが、このステータスは被制御シーケンスの長さが変わると変化することがあります。
 
 ### <a name="example"></a>例
 
@@ -272,7 +272,7 @@ a b c
 *++begin() = b
 ```
 
-## <a name="setclear-stlclr"></a><a name="clear"></a>set:: clear (STL/CLR)
+## <a name="setclear-stlclr"></a><a name="clear"></a>セット::クリア(STL/CLR)
 
 すべての要素を削除します。
 
@@ -284,7 +284,7 @@ void clear();
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、 [set:](../dotnet/set-erase-stl-clr.md) : begin (stl/clr)`(` set:: [begin](../dotnet/set-begin-stl-clr.md) (stl/clr)`(),` set:: [end](../dotnet/set-end-stl-clr.md) (stl/clr)`())`を実際に呼び出します。 このメソッドを使用して、被制御シーケンスが空であることを確認します。
+メンバー関数は効果的に[set::消去 (STL/CLR)](../dotnet/set-erase-stl-clr.md)`(`セットを呼び出します[: 開始 (STL/CLR)](../dotnet/set-begin-stl-clr.md) `(),` [セット::終了 (STL/CLR)](../dotnet/set-end-stl-clr.md)`())`. これを使用して、制御されたシーケンスが空であることを確認します。
 
 ### <a name="example"></a>例
 
@@ -330,7 +330,7 @@ a b
 size() = 0
 ```
 
-## <a name="setconst_iterator-stlclr"></a><a name="const_iterator"></a>set:: const_iterator (STL/CLR)
+## <a name="setconst_iterator-stlclr"></a><a name="const_iterator"></a>セット::const_iterator (STL/CLR)
 
 被制御シーケンスの定数反復子の型です。
 
@@ -342,7 +342,7 @@ typedef T2 const_iterator;
 
 ### <a name="remarks"></a>解説
 
-この型は、被制御シーケンスの定数双方向反復子として使用できる、未指定の型 `T2` のオブジェクトを表します。
+この型は、被制御シーケンスの一定`T2`の双方向反復器として使用できる、不特定の型のオブジェクトを表します。
 
 ### <a name="example"></a>例
 
@@ -372,7 +372,7 @@ int main()
 a b c
 ```
 
-## <a name="setconst_reference-stlclr"></a><a name="const_reference"></a>set:: const_reference (STL/CLR)
+## <a name="setconst_reference-stlclr"></a><a name="const_reference"></a>セット::const_reference (STL/CLR)
 
 要素への定数参照の型です。
 
@@ -417,9 +417,9 @@ int main()
 a b c
 ```
 
-## <a name="setconst_reverse_iterator-stlclr"></a><a name="const_reverse_iterator"></a>set:: const_reverse_iterator (STL/CLR)
+## <a name="setconst_reverse_iterator-stlclr"></a><a name="const_reverse_iterator"></a>セット::const_reverse_iterator (STL/CLR)
 
-被制御シーケンスの定数反転反復子の型。
+制御シーケンスの定数逆反復器の型。
 
 ### <a name="syntax"></a>構文
 
@@ -429,7 +429,7 @@ typedef T4 const_reverse_iterator;
 
 ### <a name="remarks"></a>解説
 
-この型は、被制御シーケンスの定数反転反復子として使用できる、指定されていない型 `T4` のオブジェクトを表します。
+この型は、被制御シーケンスの定数逆`T4`反復器として使用できる、不特定の型のオブジェクトを表します。
 
 ### <a name="example"></a>例
 
@@ -459,7 +459,7 @@ int main()
 c b a
 ```
 
-## <a name="setcount-stlclr"></a><a name="count"></a>set:: count (STL/CLR)
+## <a name="setcount-stlclr"></a><a name="count"></a>セット::カウント (STL/CLR)
 
 指定したキーに一致する要素の数を検索します。
 
@@ -476,7 +476,7 @@ size_type count(key_type key);
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、*キー*と同じ順序付けを持つ被制御シーケンス内の要素の数を返します。 被制御シーケンス内の指定したキーに一致する現在の要素の数を確認する場合に、これを使用します。
+メンバー関数は *、key*と同等の順序を持つ、制御されたシーケンス内の要素の数を返します。 被制御シーケンス内の指定したキーに一致する現在の要素の数を確認する場合に、これを使用します。
 
 ### <a name="example"></a>例
 
@@ -512,9 +512,9 @@ count(L'b') = 1
 count(L'C') = 0
 ```
 
-## <a name="setdifference_type-stlclr"></a><a name="difference_type"></a>set::d ifference_type (STL/CLR)
+## <a name="setdifference_type-stlclr"></a><a name="difference_type"></a>セット::difference_type (STL/CLR)
 
-2つの要素間の符号付き距離の型。
+2 つの要素間の符号付き距離の型。
 
 ### <a name="syntax"></a>構文
 
@@ -524,7 +524,7 @@ typedef int difference_type;
 
 ### <a name="remarks"></a>解説
 
-この型は、要素の数が負の値になる可能性があることを示します。
+型は、負の要素数を表します。
 
 ### <a name="example"></a>例
 
@@ -567,7 +567,7 @@ end()-begin() = 3
 begin()-end() = -3
 ```
 
-## <a name="setempty-stlclr"></a><a name="empty"></a>set:: empty (STL/CLR)
+## <a name="setempty-stlclr"></a><a name="empty"></a>セット::空(STL/CLR)
 
 要素が存在しないかどうかをテストします。
 
@@ -579,7 +579,7 @@ bool empty();
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、被制御シーケンスが空の場合に true を返します。 これは、 [set:: size (STL/CLR)](../dotnet/set-size-stl-clr.md)`() == 0`に相当します。 このメソッドを使用して、セットが空かどうかをテストします。
+このメンバー関数は、被制御シーケンスが空の場合に true を返します。 これは[、設定と同等です::サイズ(STL/CLR)](../dotnet/set-size-stl-clr.md)`() == 0` セットが空かどうかをテストするために使用します。
 
 ### <a name="example"></a>例
 
@@ -619,7 +619,7 @@ size() = 0
 empty() = True
 ```
 
-## <a name="setend-stlclr"></a><a name="end"></a>set:: end (STL/CLR)
+## <a name="setend-stlclr"></a><a name="end"></a>セット::終了 (STL/CLR)
 
 被制御シーケンスの末尾を指定します。
 
@@ -631,7 +631,7 @@ iterator end();
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、被制御シーケンスの末尾の次の位置を指し示す双方向反復子を返します。 このメソッドを使用して、被制御シーケンスの末尾を指定する反復子を取得します。被制御シーケンスの長さが変更されている場合、その状態は変わりません。
+メンバー関数は、制御されたシーケンスの末尾を越えた方向反復器を返します。 これを使用して、制御シーケンスの終了を指定する反復器を取得します。制御シーケンスの長さが変更された場合、そのステータスは変更されません。
 
 ### <a name="example"></a>例
 
@@ -668,7 +668,7 @@ a b c
 *--end() = c
 ```
 
-## <a name="setequal_range-stlclr"></a><a name="equal_range"></a>set:: equal_range (STL/CLR)
+## <a name="setequal_range-stlclr"></a><a name="equal_range"></a>セット::equal_range (STL/CLR)
 
 指定したキーに一致する範囲を検索します。
 
@@ -685,7 +685,7 @@ cliext::pair<iterator, iterator> equal_range(key_type key);
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、set:: [lower_bound (stl/clr)](../dotnet/set-lower-bound-stl-clr.md)`(key),` [set:: upper_bound (stl/clr)](../dotnet/set-upper-bound-stl-clr.md)`(key))``cliext::pair<iterator, iterator>(` の反復子のペアを返します。 このメソッドを使用して、被制御シーケンス内の指定したキーに一致する要素の範囲を特定します。
+メンバー`cliext::pair<iterator, iterator>(`関数は、反復子セットのペアを返します[:::lower_bound (STL/CLR)](../dotnet/set-lower-bound-stl-clr.md) `(key),` [セット::upper_bound (STL/CLR)](../dotnet/set-upper-bound-stl-clr.md)`(key))`。 このキーを使用して、指定したキーに一致する、現在の制御シーケンス内の要素の範囲を決定します。
 
 ### <a name="example"></a>例
 
@@ -728,7 +728,7 @@ equal_range(L'x') empty = True
 b
 ```
 
-## <a name="seterase-stlclr"></a><a name="erase"></a>set:: erase (STL/CLR)
+## <a name="seterase-stlclr"></a><a name="erase"></a>セット::消去(STL /CLR)
 
 指定した位置にある要素を削除します。
 
@@ -749,20 +749,20 @@ size_type erase(key_type key)
 消去するキー値。
 
 *last*<br/>
-消去する範囲の末尾。
+消去する範囲の終わり。
 
 *where*<br/>
 消去する要素。
 
 ### <a name="remarks"></a>解説
 
-最初のメンバー関数*は、が*指す被制御シーケンスの要素を削除し、削除された要素の後に残っている最初の要素を指定する反復子を返します。そのような要素が存在しない場合は、 [set:: end (STL/CLR)](../dotnet/set-end-stl-clr.md)`()` を返します。 このメソッドを使用して、1つの要素を削除します。
+最初のメンバー関数は、 が指す制御シーケンスの要素を*削除*し、削除された要素を超えて残っている最初の要素を示す反復[子を返](../dotnet/set-end-stl-clr.md)`()`します。 1 つの要素を削除する場合に使用します。
 
-2番目のメンバー関数は、被制御シーケンスの要素を [`first`、`last`) の範囲で削除し、削除された要素の後に残っている最初の要素を指定する反復子を返します。そのような要素が存在しない場合は `end()` します。 これを使用して、0個以上の連続する要素を削除します。
+2 番目のメンバー関数は、範囲 [`first`, )`last`の制御シーケンスの要素を削除し、削除された要素を超えて残っている最初の要素を指定`end()`する反復子を返します。 この値を使用して、連続する要素を 0 個以上削除します。
 
-3番目のメンバー関数は、キーの順序が同じ*キーを持つ*被制御シーケンスの要素を削除し、削除された要素の数を返します。 これを使用して、指定されたキーに一致するすべての要素を削除およびカウントします。
+3 番目のメンバー関数は、key と同等の順序を持つ、制御されたシーケンスの*要素を削除*し、削除された要素の数を返します。 これを使用して、指定したキーに一致するすべての要素を削除し、カウントします。
 
-各要素の消去では、被制御シーケンス内の要素数の対数に比例して時間がかかります。
+各要素消去は、被制御シーケンス内の要素数の対数に比例して時間がかかります。
 
 ### <a name="example"></a>例
 
@@ -812,7 +812,7 @@ erase(begin(), end()-1) = e
 size() = 1
 ```
 
-## <a name="setfind-stlclr"></a><a name="find"></a>set:: find (STL/CLR)
+## <a name="setfind-stlclr"></a><a name="find"></a>設定::検索(STL/CLR)
 
 指定したキーに一致する要素を検索します。
 
@@ -829,7 +829,7 @@ iterator find(key_type key);
 
 ### <a name="remarks"></a>解説
 
-被制御シーケンス内の少なくとも1つの要素の順序が同じである*場合、メンバー*関数は、これらの要素のいずれかを指定する反復子を返します。それ以外の場合は、 [set:: end (STL/CLR)](../dotnet/set-end-stl-clr.md)`()`を返します。 このメソッドを使用して、被制御シーケンス内で、指定したキーに一致する要素を検索します。
+制御シーケンス内の少なくとも 1 つの要素が*key*と同等の順序を持つ場合、メンバー関数は、それらの要素の 1 つを指定する反復子を返します。それ以外の場合は[、set::end (STL/CLR) を](../dotnet/set-end-stl-clr.md)`()`返します。 このキーを使用して、指定したキーに一致する、現在の制御シーケンス内の要素を検索します。
 
 ### <a name="example"></a>例
 
@@ -868,9 +868,9 @@ find b = b
 find C = False
 ```
 
-## <a name="setgeneric_container-stlclr"></a><a name="generic_container"></a>set:: generic_container (STL/CLR)
+## <a name="setgeneric_container-stlclr"></a><a name="generic_container"></a>セット::generic_container (STL/CLR)
 
-コンテナーのジェネリックインターフェイスの型。
+コンテナーのジェネリック インターフェイスの型。
 
 ### <a name="syntax"></a>構文
 
@@ -882,7 +882,7 @@ typedef Microsoft::VisualC::StlClr::
 
 ### <a name="remarks"></a>解説
 
-この型は、このテンプレートコンテナークラスのジェネリックインターフェイスを表します。
+この型は、このテンプレート コンテナー クラスのジェネリック インターフェイスを表します。
 
 ### <a name="example"></a>例
 
@@ -932,9 +932,9 @@ a b c d
 a b c d e
 ```
 
-## <a name="setgeneric_iterator-stlclr"></a><a name="generic_iterator"></a>set:: generic_iterator (STL/CLR)
+## <a name="setgeneric_iterator-stlclr"></a><a name="generic_iterator"></a>設定::generic_iterator (STL/CLR)
 
-コンテナーのジェネリックインターフェイスで使用する反復子の型。
+コンテナーのジェネリック インターフェイスで使用する反復器の型。
 
 ### <a name="syntax"></a>構文
 
@@ -946,7 +946,7 @@ typedef Microsoft::VisualC::StlClr::Generic::
 
 ### <a name="remarks"></a>解説
 
-この型は、このテンプレートコンテナークラスのジェネリックインターフェイスで使用できる汎用反復子を表します。
+この型は、このテンプレート コンテナー クラスのジェネリック インターフェイスで使用できるジェネリック反復器を表します。
 
 ### <a name="example"></a>例
 
@@ -988,9 +988,9 @@ a b c
 a
 ```
 
-## <a name="setgeneric_reverse_iterator-stlclr"></a><a name="generic_reverse_iterator"></a>set:: generic_reverse_iterator (STL/CLR)
+## <a name="setgeneric_reverse_iterator-stlclr"></a><a name="generic_reverse_iterator"></a>設定::generic_reverse_iterator (STL/CLR)
 
-コンテナーのジェネリックインターフェイスで使用する逆順反復子の型。
+コンテナのジェネリック インターフェイスで使用するリバース反復器の型。
 
 ### <a name="syntax"></a>構文
 
@@ -1002,7 +1002,7 @@ typedef Microsoft::VisualC::StlClr::Generic::
 
 ### <a name="remarks"></a>解説
 
-この型は、このテンプレートコンテナークラスのジェネリックインターフェイスで使用できる汎用反転反復子を表します。
+この型は、このテンプレート コンテナー クラスのジェネリック インターフェイスで使用できる汎用リバース 反復処理を表します。
 
 ### <a name="example"></a>例
 
@@ -1044,9 +1044,9 @@ a b c
 c
 ```
 
-## <a name="setgeneric_value-stlclr"></a><a name="generic_value"></a>set:: generic_value (STL/CLR)
+## <a name="setgeneric_value-stlclr"></a><a name="generic_value"></a>セット::generic_value (STL/CLR)
 
-コンテナーのジェネリックインターフェイスで使用する要素の型。
+コンテナーのジェネリック インターフェイスで使用する要素の型。
 
 ### <a name="syntax"></a>構文
 
@@ -1056,7 +1056,7 @@ typedef GValue generic_value;
 
 ### <a name="remarks"></a>解説
 
-この型は、このテンプレートコンテナークラスのジェネリックインターフェイスで使用する格納されている要素の値を記述する `GValue` 型のオブジェクトを表します。
+この型は、このテンプレート コンテナー`GValue`クラスのジェネリック インターフェイスで使用する格納された要素の値を記述する型のオブジェクトを表します。
 
 ### <a name="example"></a>例
 
@@ -1098,7 +1098,7 @@ a b c
 a
 ```
 
-## <a name="setinsert-stlclr"></a><a name="insert"></a>set:: insert (STL/CLR)
+## <a name="setinsert-stlclr"></a><a name="insert"></a>セット::挿入(STL/CLR)
 
 要素を追加します。
 
@@ -1120,28 +1120,28 @@ void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
 *last*<br/>
 挿入する範囲の末尾。
 
-*right*<br/>
+*そうです*<br/>
 挿入する列挙体。
 
-*val*<br/>
+*ヴァル*<br/>
 挿入するキー値。
 
 *where*<br/>
-コンテナー内の挿入位置 (ヒントのみ)。
+挿入するコンテナー内の場所 (ヒントのみ)。
 
 ### <a name="remarks"></a>解説
 
-各メンバー関数は、残りのオペランドによって指定されたシーケンスを挿入します。
+各メンバー関数は、残りのオペランドで指定されたシーケンスを挿入します。
 
-最初のメンバー関数は、値*val*を持つ要素を挿入し、`X`値のペアを返します。 `X.second` が true の場合、`X.first` は新しく挿入された要素を指定します。それ以外の場合 `X.first` は、既に存在し、新しい要素が挿入されていない、同じ順序の要素を指定します。 1つの要素を挿入するために使用します。
+最初のメンバー関数は、value *val*を持つ要素を挿入しようと試み、`X`値のペアを返します。 true`X.second`の場合`X.first`は、新しく挿入された要素を指定します。それ`X.first`以外の場合は、既に存在し、新しい要素が挿入されていない、同等の順序を持つ要素を指定します。 この要素を使用して、1 つの要素を挿入します。
 
-2番目のメンバー関数は、(パフォーマンスを向上させるために) ヒントと*してを使用し*て、値*val*を持つ要素を挿入し、新しく挿入された要素を指定する反復子を返します。 これを使用して、既知の要素に隣接している可能性のある単一の要素を挿入します。
+2 番目のメンバー関数は *、value* *val*を使用して要素をヒントとして (パフォーマンスを向上させるために) 挿入し、新しく挿入された要素を指定する反復子を返します。 このコードを使用して、知っている要素に隣接する可能性のある単一の要素を挿入します。
 
-3番目のメンバー関数は、シーケンス [`first`、`last`) を挿入します。 このメソッドを使用して、別のシーケンスからコピーされた0個以上の要素を挿入します。
+3 番目のメンバー関数はシーケンス`first`[ `last`, を挿入します。 別のシーケンスからコピーした要素を 0 個以上挿入する場合に使用します。
 
-4番目のメンバー関数は、*右側*に指定されたシーケンスを挿入します。 このメソッドを使用して、列挙子によって記述されたシーケンスを挿入します。
+4 番目のメンバー関数は、*右*で指定されたシーケンスを挿入します。 列挙子によって記述されたシーケンスを挿入する場合に使用します。
 
-各要素の挿入には、被制御シーケンス内の要素数の対数に比例した時間がかかります。 挿入ポイントに隣接する要素を指定するヒントを指定すると、挿入は償却定数時間で実行できます。
+各要素の挿入は、制御されたシーケンス内の要素数の対数に比例します。 ただし、挿入ポイントに隣接する要素を指定するヒントを指定すると、固定定数時間内に挿入が発生する可能性があります。
 
 ### <a name="example"></a>例
 
@@ -1214,7 +1214,7 @@ a b c x
 a b c x y
 ```
 
-## <a name="setiterator-stlclr"></a><a name="iterator"></a>set:: iterator (STL/CLR)
+## <a name="setiterator-stlclr"></a><a name="iterator"></a>セット::反復器(STL/CLR)
 
 被制御シーケンスの反復子の型です。
 
@@ -1226,7 +1226,7 @@ typedef T1 iterator;
 
 ### <a name="remarks"></a>解説
 
-この型は、被制御シーケンスの双方向反復子として使用できる、未指定の型 `T1` のオブジェクトを表します。
+この型は、被制御シーケンスの双方向反復`T1`器として使用できる、不特定の型のオブジェクトを表します。
 
 ### <a name="example"></a>例
 
@@ -1256,9 +1256,9 @@ int main()
 a b c
 ```
 
-## <a name="setkey_comp-stlclr"></a><a name="key_comp"></a>set:: key_comp (STL/CLR)
+## <a name="setkey_comp-stlclr"></a><a name="key_comp"></a>セット::key_comp (STL/CLR)
 
-2つのキーの順序付けデリゲートをコピーします。
+2 つのキーの順序付けデリゲートをコピーします。
 
 ### <a name="syntax"></a>構文
 
@@ -1268,7 +1268,7 @@ key_compare^key_comp();
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、被制御シーケンスの順序付けに使用される順序付けデリゲートを返します。 2 つのキーを比較する場合にこれを使用します。
+このメンバー関数は、制御されたシーケンスの順序付けに使用される順序付けデリゲートを返します。 2 つのキーを比較する場合にこれを使用します。
 
 ### <a name="example"></a>例
 
@@ -1315,9 +1315,9 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="setkey_compare-stlclr"></a><a name="key_compare"></a>set:: key_compare (STL/CLR)
+## <a name="setkey_compare-stlclr"></a><a name="key_compare"></a>セット::key_compare (STL/CLR)
 
-2つのキーの順序付けデリゲート。
+2 つのキーの順序付けデリゲート。
 
 ### <a name="syntax"></a>構文
 
@@ -1328,7 +1328,7 @@ Microsoft::VisualC::StlClr::BinaryDelegate<GKey, GKey, bool>
 
 ### <a name="remarks"></a>解説
 
-この型は、キー引数の順序を決定するデリゲートのシノニムです。
+型は、キー引数の順序を決定するデリゲートのシノニムです。
 
 ### <a name="example"></a>例
 
@@ -1375,7 +1375,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="setkey_type-stlclr"></a><a name="key_type"></a>set:: key_type (STL/CLR)
+## <a name="setkey_type-stlclr"></a><a name="key_type"></a>セット::key_type (STL/CLR)
 
 順序付けキーの型です。
 
@@ -1387,7 +1387,7 @@ typedef Key key_type;
 
 ### <a name="remarks"></a>解説
 
-この型は、テンプレートパラメーター*キー*のシノニムです。
+この型は、テンプレート パラメータ Key のシノニム*です*。
 
 ### <a name="example"></a>例
 
@@ -1420,9 +1420,9 @@ int main()
 a b c
 ```
 
-## <a name="setlower_bound-stlclr"></a><a name="lower_bound"></a>set:: lower_bound (STL/CLR)
+## <a name="setlower_bound-stlclr"></a><a name="lower_bound"></a>セット::lower_bound (STL/CLR)
 
-指定されたキーに一致する範囲の先頭を検索します。
+指定したキーに一致する範囲の先頭を検索します。
 
 ### <a name="syntax"></a>構文
 
@@ -1437,7 +1437,7 @@ iterator lower_bound(key_type key);
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、*キー*への順序が同じである被制御シーケンス内の最初の要素 `X` を決定します。 そのような要素が存在しない場合は、 [set:: end (STL/CLR)](../dotnet/set-end-stl-clr.md)`()`; を返します。それ以外の場合は、`X`を指定する反復子を返します。 このメソッドを使用して、被制御シーケンスの中で、指定したキーに一致する要素のシーケンスの先頭を検索します。
+メンバー関数は、key と`X`同等の順序を持つ、制御されたシーケンス内の*最初の要素*を決定します。 そのような要素が存在しない場合は[、set::end (STL/CLR) を](../dotnet/set-end-stl-clr.md)`()`返します。それ以外の場合は、を指定する反復器`X`を返します。 このキーを使用して、指定したキーに一致する、現在の制御シーケンス内の要素のシーケンスの先頭を検索します。
 
 ### <a name="example"></a>例
 
@@ -1477,7 +1477,7 @@ lower_bound(L'x')==end() = True
 *lower_bound(L'b') = b
 ```
 
-## <a name="setmake_value-stlclr"></a><a name="make_value"></a>set:: make_value (STL/CLR)
+## <a name="setmake_value-stlclr"></a><a name="make_value"></a>セット::make_value (STL/CLR)
 
 値オブジェクトを構築します。
 
@@ -1494,7 +1494,7 @@ static value_type make_value(key_type key);
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、キーが*キー*である `value_type` オブジェクトを返します。 これを使用して、他のいくつかのメンバー関数との使用に適したオブジェクトを作成します。
+メンバー関数は、key`value_type`が key である*オブジェクトを返*します。 この関数を使用して、他のいくつかのメンバー関数で使用するのに適したオブジェクトを構成します。
 
 ### <a name="example"></a>例
 
@@ -1523,7 +1523,7 @@ int main()
 a b c
 ```
 
-## <a name="setoperator-stlclr"></a><a name="op_as"></a>set:: operator = (STL/CLR)
+## <a name="setoperator-stlclr"></a><a name="op_as"></a>セット::演算子=(STL/CLR)
 
 被制御シーケンスを置き換えます。
 
@@ -1535,12 +1535,12 @@ set<Key>% operator=(set<Key>% right);
 
 #### <a name="parameters"></a>パラメーター
 
-*right*<br/>
+*そうです*<br/>
 コピーするコンテナー。
 
 ### <a name="remarks"></a>解説
 
-メンバー演算子は、オブジェクトに*right*をコピーし、`*this`を返します。 このメソッドを使用して、被制御シーケンスを*右側*の被制御シーケンスのコピーで置き換えます。
+メンバ オペレータは*オブジェクトに右*をコピーし、`*this`を返します。 これを使用して、制御されたシーケンスを*右側*の制御シーケンスのコピーに置き換えます。
 
 ### <a name="example"></a>例
 
@@ -1578,7 +1578,7 @@ a b c
 a b c
 ```
 
-## <a name="setrbegin-stlclr"></a><a name="rbegin"></a>set:: rbegin (STL/CLR)
+## <a name="setrbegin-stlclr"></a><a name="rbegin"></a>セット::開始(STL/CLR)
 
 反転被制御シーケンスの先頭を指定します。
 
@@ -1590,7 +1590,7 @@ reverse_iterator rbegin();
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、被制御シーケンスの最後の要素、または空のシーケンスの先頭の次の位置を指定する反転反復子を返します。 したがって、これは反転シーケンスの `beginning` を指定します。 これを使用して被制御シーケンスの逆順に見た現在の (`current`) 先頭を指定する反復子を取得しますが、このステータスは被制御シーケンスの長さが変わると変化することがあります。
+メンバー関数は、制御されたシーケンスの最後の要素を指定する逆の反復子を返します。 したがって、これは反転シーケンスの `beginning` を指定します。 これを使用して被制御シーケンスの逆順に見た現在の (`current`) 先頭を指定する反復子を取得しますが、このステータスは被制御シーケンスの長さが変わると変化することがあります。
 
 ### <a name="example"></a>例
 
@@ -1626,7 +1626,7 @@ a b c
 *++rbegin() = b
 ```
 
-## <a name="setreference-stlclr"></a><a name="reference"></a>set:: reference (STL/CLR)
+## <a name="setreference-stlclr"></a><a name="reference"></a>セット::リファレンス(STL/CLR)
 
 要素への参照の型です。
 
@@ -1671,7 +1671,7 @@ int main()
 a b c
 ```
 
-## <a name="setrend-stlclr"></a><a name="rend"></a>set:: rend (STL/CLR)
+## <a name="setrend-stlclr"></a><a name="rend"></a>セット::レンド(STL /CLR)
 
 反転被制御シーケンスの末尾を指定します。
 
@@ -1683,7 +1683,7 @@ reverse_iterator rend();
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、被制御シーケンスの先頭を越えた位置を示す反転反復子を返します。 したがって、これは反転シーケンスの `end` を指定します。 これを使用して被制御シーケンスの逆順に見た現在の末尾 (`current`) を指定する反復子を取得しますが、このステータスは被制御シーケンスの長さが変わると変化することがあります。
+メンバー関数は、制御されたシーケンスの先頭を越えた位置を指す逆反復器を返します。 したがって、これは反転シーケンスの `end` を指定します。 これを使用して被制御シーケンスの逆順に見た現在の末尾 (`current`) を指定する反復子を取得しますが、このステータスは被制御シーケンスの長さが変わると変化することがあります。
 
 ### <a name="example"></a>例
 
@@ -1720,7 +1720,7 @@ a b c
 *--rend() = a
 ```
 
-## <a name="setreverse_iterator-stlclr"></a><a name="reverse_iterator"></a>set:: reverse_iterator (STL/CLR)
+## <a name="setreverse_iterator-stlclr"></a><a name="reverse_iterator"></a>セット::reverse_iterator (STL/CLR)
 
 被制御シーケンスの反転反復子の型です。
 
@@ -1732,7 +1732,7 @@ typedef T3 reverse_iterator;
 
 ### <a name="remarks"></a>解説
 
-この型は、被制御シーケンスの反転反復子として使用できる、未指定の型 `T3` のオブジェクトを表します。
+この型は、被制御シーケンスの反転反復`T3`器として使用できる、不特定の型のオブジェクトを表します。
 
 ### <a name="example"></a>例
 
@@ -1762,7 +1762,7 @@ int main()
 c b a
 ```
 
-## <a name="setset-stlclr"></a><a name="set"></a>set:: set (STL/CLR)
+## <a name="setset-stlclr"></a><a name="set"></a>セット::セット(STL/CLR)
 
 コンテナー オブジェクトを構築します。
 
@@ -1791,10 +1791,10 @@ set(System::Collections::Generic::IEnumerable<GValue>^ right,
 *last*<br/>
 挿入する範囲の末尾。
 
-*pred*<br/>
-被制御シーケンスの順序付け述語。
+*Pred*<br/>
+制御シーケンスの順序付け述語。
 
-*right*<br/>
+*そうです*<br/>
 挿入するオブジェクトまたは範囲。
 
 ### <a name="remarks"></a>解説
@@ -1803,49 +1803,49 @@ set(System::Collections::Generic::IEnumerable<GValue>^ right,
 
 `set();`
 
-既定の順序述語 `key_compare()`を使用して、要素を含まない被制御シーケンスを初期化します。 このメソッドを使用して、既定の順序述語を使用して、空の初期被制御シーケンスを指定します。
+は、既定の順序付け述語`key_compare()`を使用して、要素を持たない制御シーケンスを初期化します。 既定の順序付け述語を使用して、空の初期制御シーケンスを指定するために使用します。
 
 コンストラクター:
 
 `explicit set(key_compare^ pred);`
 
-順序述語*pred*を使用して、要素を含まない被制御シーケンスを初期化します。 このメソッドを使用して、指定された順序述語を使用して、空の初期被制御シーケンスを指定します。
+は、順序付け述語*pred*を使用して、要素を持たない制御シーケンスを初期化します。 このプロパティを使用して、指定された順序付け述語を使用して、空の初期制御シーケンスを指定します。
 
 コンストラクター:
 
 `set(set<Key>% right);`
 
-既定の順序述語を使用して、シーケンス [`right.begin()`、`right.end()`) を使用して被制御シーケンスを初期化します。 このメソッドを使用して、既定の順序述語を使用して、オブジェクトの設定*権限*によって制御されるシーケンスのコピーである最初の被制御シーケンスを指定します。
+は、シーケンス [`right.begin()`, )`right.end()`で、既定の順序付け述語で制御シーケンスを初期化します。 このクラスを使用して、デフォルトの順序付け述語を使用して、set オブジェクト*right*によって制御されるシーケンスのコピーである初期被制御シーケンスを指定します。
 
 コンストラクター:
 
 `set(set<Key>^ right);`
 
-既定の順序述語を使用して、シーケンス [`right->begin()`、`right->end()`) を使用して被制御シーケンスを初期化します。 このメソッドを使用して、既定の順序述語を使用して、オブジェクトの設定*権限*によって制御されるシーケンスのコピーである最初の被制御シーケンスを指定します。
+は、シーケンス [`right->begin()`, )`right->end()`で、既定の順序付け述語で制御シーケンスを初期化します。 このクラスを使用して、デフォルトの順序付け述語を使用して、set オブジェクト*right*によって制御されるシーケンスのコピーである初期被制御シーケンスを指定します。
 
 コンストラクター:
 
 `template<typename InIter> set(InIter first, InIter last);`
 
-既定の順序述語を使用して、シーケンス [`first`、`last`) を使用して被制御シーケンスを初期化します。 このメソッドを使用して、被制御シーケンスを別のシーケンスのコピーにし、既定の順序述語を使用します。
+は、シーケンス [`first`, )`last`で、既定の順序付け述語で制御シーケンスを初期化します。 この機能を使用すると、制御シーケンスを、デフォルトの順序付け述部を持つ別のシーケンスのコピーにします。
 
 コンストラクター:
 
 `template<typename InIter> set(InIter first, InIter last, key_compare^ pred);`
 
-順序述語*pred*を使用して、被制御シーケンスを [`first`、`last`) のシーケンスで初期化します。 このメソッドを使用して、被制御シーケンスを、指定した順序述語を使用して別のシーケンスのコピーにします。
+順序付け述語*pred*`first`を`last`使用して、順序 [ , ) で制御シーケンスを初期化します。 これを使用して、指定された順序付け述部を持つ、制御シーケンスを別のシーケンスのコピーにします。
 
 コンストラクター:
 
 `set(System::Collections::Generic::IEnumerable<Key>^ right);`
 
-既定の順序述語を使用して、列挙子*権限*によって指定されたシーケンスを使用して被制御シーケンスを初期化します。 このメソッドは、既定の順序述語を使用して、被制御シーケンスを、列挙子によって記述された別のシーケンスのコピーにするために使用します。
+は、既定の順序述語で、列挙子*right*で指定されたシーケンスで、制御シーケンスを初期化します。 これを使用して、制御シーケンスを列挙子によって記述された別のシーケンスのコピーに、既定の順序付け述語を使用します。
 
 コンストラクター:
 
 `set(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred);`
 
-順序付け述語*pred*を使用して、列挙子*権限*によって指定されたシーケンスを使用して被制御シーケンスを初期化します。 このメソッドを使用して、被制御シーケンスを、指定した順序述語を使用して、列挙子によって記述された別のシーケンスのコピーを作成します。
+は、順序付け述語*pred*を使用して、列挙子*right*で指定されたシーケンスで制御シーケンスを初期化します。 これを使用して、指定された順序付け述語を持つ、列挙子によって記述された別のシーケンスのコピーを、制御シーケンスにします。
 
 ### <a name="example"></a>例
 
@@ -1933,7 +1933,7 @@ c b a
 a b c
 ```
 
-## <a name="setsize-stlclr"></a><a name="size"></a>set:: size (STL/CLR)
+## <a name="setsize-stlclr"></a><a name="size"></a>セット::サイズ(STL/CLR)
 
 要素の数をカウントします。
 
@@ -1945,7 +1945,7 @@ size_type size();
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、被制御シーケンスの長さを返します。 このメソッドを使用して、被制御シーケンス内の現在の要素数を決定します。 シーケンスにゼロ以外のサイズがあるかどうかについては、「 [set:: empty (STL/CLR)](../dotnet/set-empty-stl-clr.md)`()`」を参照してください。
+このメンバー関数は、被制御シーケンスの長さを返します。 この値を使用して、現在の制御シーケンス内の要素の数を決定します。 シーケンスのサイズが 0 以外であるかどうかが重要な場合は[、「set::empty (STL/CLR)」](../dotnet/set-empty-stl-clr.md)`()`を参照してください。
 
 ### <a name="example"></a>例
 
@@ -1987,9 +1987,9 @@ size() = 0 after clearing
 size() = 2 after adding 2
 ```
 
-## <a name="setsize_type-stlclr"></a><a name="size_type"></a>set:: size_type (STL/CLR)
+## <a name="setsize_type-stlclr"></a><a name="size_type"></a>セット::size_type (STL/CLR)
 
-2つの要素間の符号付き距離の型。
+2 つの要素間の符号付き距離の型。
 
 ### <a name="syntax"></a>構文
 
@@ -2035,7 +2035,7 @@ a b c
 end()-begin() = 3
 ```
 
-## <a name="setswap-stlclr"></a><a name="swap"></a>set:: swap (STL/CLR)
+## <a name="setswap-stlclr"></a><a name="swap"></a>セット::スワップ(STL/CLR)
 
 2 つのコンテナーのコンテンツを交換します。
 
@@ -2047,12 +2047,12 @@ void swap(set<Key>% right);
 
 #### <a name="parameters"></a>パラメーター
 
-*right*<br/>
+*そうです*<br/>
 コンテンツを交換するコンテナー。
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、`this` と*right*の間で被制御シーケンスを交換します。 この処理は一定時間に実行され、例外はスローされません。 2つのコンテナーの内容を簡単に交換する方法として使用します。
+メンバー関数は、 と*の*間`this`で制御されたシーケンスを入れ替えます。 これは一定の時間で行われ、例外はスローされません。 2 つのコンテナーの内容を交換する簡単な方法として使用します。
 
 ### <a name="example"></a>例
 
@@ -2103,9 +2103,9 @@ d e f
 a b c
 ```
 
-## <a name="setto_array-stlclr"></a><a name="to_array"></a>set:: to_array (STL/CLR)
+## <a name="setto_array-stlclr"></a><a name="to_array"></a>設定::to_array (STL/CLR)
 
-被制御シーケンスを新しい配列にコピーします。
+制御されたシーケンスを新しい配列にコピーします。
 
 ### <a name="syntax"></a>構文
 
@@ -2115,7 +2115,7 @@ cli::array<value_type>^ to_array();
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、被制御シーケンスを含む配列を返します。 このメソッドを使用して、被制御シーケンスのコピーを配列形式で取得します。
+メンバー関数は、制御されたシーケンスを含む配列を返します。 配列形式で制御シーケンスのコピーを取得するために使用します。
 
 ### <a name="example"></a>例
 
@@ -2153,9 +2153,9 @@ a b c d
 a b c
 ```
 
-## <a name="setupper_bound-stlclr"></a><a name="upper_bound"></a>set:: upper_bound (STL/CLR)
+## <a name="setupper_bound-stlclr"></a><a name="upper_bound"></a>セット::upper_bound (STL/CLR)
 
-指定されたキーに一致する範囲の末尾を検索します。
+指定したキーに一致する範囲の末尾を検索します。
 
 ### <a name="syntax"></a>構文
 
@@ -2170,7 +2170,7 @@ iterator upper_bound(key_type key);
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、*キー*への順序が同じである被制御シーケンス内の `X` 最後の要素を決定します。 そのような要素が存在しない場合、または被制御シーケンスの最後の要素が `X` の場合は、 [set:: end (STL/CLR)](../dotnet/set-end-stl-clr.md)`()`; を返します。それ以外の場合は、`X`を超えて最初の要素を指定する反復子を返します。 このメソッドを使用して、被制御シーケンスの中で、指定したキーに一致する要素のシーケンスの末尾を検索します。
+メンバー関数は、key と`X`同等の順序を持つ、制御されたシーケンスの*最後の要素*を決定します。 そのような要素が存在しない場合、または`X`制御されたシーケンスの最後の要素である場合は[、set::end (STL/CLR) を](../dotnet/set-end-stl-clr.md)`()`返します。それ以外の場合は、先頭の要素を指定する反復子を`X`返します。 このキーを使用して、指定したキーに一致する、現在の制御シーケンス内の要素のシーケンスの末尾を検索します。
 
 ### <a name="example"></a>例
 
@@ -2210,9 +2210,9 @@ upper_bound(L'x')==end() = True
 *upper_bound(L'b') = c
 ```
 
-## <a name="setvalue_comp-stlclr"></a><a name="value_comp"></a>set:: value_comp (STL/CLR)
+## <a name="setvalue_comp-stlclr"></a><a name="value_comp"></a>セット::value_comp (STL/CLR)
 
-2つの要素の値の順序付けデリゲートをコピーします。
+2 つの要素値の順序付けデリゲートをコピーします。
 
 ### <a name="syntax"></a>構文
 
@@ -2222,7 +2222,7 @@ value_compare^ value_comp();
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、被制御シーケンスの順序付けに使用される順序付けデリゲートを返します。 これを使用して、2つの要素の値を比較します。
+このメンバー関数は、制御されたシーケンスの順序付けに使用される順序付けデリゲートを返します。 この値を使用して、2 つの要素値を比較します。
 
 ### <a name="example"></a>例
 
@@ -2254,9 +2254,9 @@ compare(L'a', L'b') = True
 compare(L'b', L'a') = False
 ```
 
-## <a name="setvalue_compare-stlclr"></a><a name="value_compare"></a>set:: value_compare (STL/CLR)
+## <a name="setvalue_compare-stlclr"></a><a name="value_compare"></a>セット::value_compare (STL/CLR)
 
-2つの要素の値の順序付けデリゲート。
+2 つの要素値の順序付けデリゲート。
 
 ### <a name="syntax"></a>構文
 
@@ -2267,7 +2267,7 @@ Microsoft::VisualC::StlClr::BinaryDelegate<generic_value, generic_value, bool>
 
 ### <a name="remarks"></a>解説
 
-この型は、値引数の順序を決定するデリゲートのシノニムです。
+型は、値の引数の順序を決定するデリゲートのシノニムです。
 
 ### <a name="example"></a>例
 
@@ -2299,7 +2299,7 @@ compare(L'a', L'b') = True
 compare(L'b', L'a') = False
 ```
 
-## <a name="setvalue_type-stlclr"></a><a name="value_type"></a>set:: value_type (STL/CLR)
+## <a name="setvalue_type-stlclr"></a><a name="value_type"></a>セット::value_type (STL/CLR)
 
 要素の型。
 
@@ -2311,7 +2311,7 @@ typedef generic_value value_type;
 
 ### <a name="remarks"></a>解説
 
-この型は `generic_value`の同意語です。
+この型は `generic_value` の同意語です。
 
 ### <a name="example"></a>例
 
@@ -2344,9 +2344,9 @@ int main()
 a b c
 ```
 
-## <a name="operator-set-stlclr"></a><a name="op_neq"></a>operator! = (set) (STL/CLR)
+## <a name="operator-set-stlclr"></a><a name="op_neq"></a>演算子!= (セット) (STL/CLR)
 
-リストが等しくないかどうかの比較。
+リストが比較に等しくありません。
 
 ### <a name="syntax"></a>構文
 
@@ -2358,15 +2358,15 @@ template<typename Key>
 
 #### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左*<br/>
 比較する左のコンテナー。
 
-*right*<br/>
+*そうです*<br/>
 比較する右のコンテナー。
 
 ### <a name="remarks"></a>解説
 
-演算子関数は `!(left == right)`を返します。 このメソッドを使用して、2つのセットが要素によって比較されるときに、 *left*が*right*と同じ順序で並んでいないかどうかをテストします。
+演算子関数は、`!(left == right)`を返します。 2 つのセットが要素ごとに比較される場合、*左*が*右*と同じ順序で並べられていないかどうかをテストするために使用します。
 
 ### <a name="example"></a>例
 
@@ -2414,9 +2414,9 @@ a b d
 [a b c] != [a b d] is True
 ```
 
-## <a name="operatorlt-set-stlclr"></a><a name="op_lt"></a>operator&lt; (set) (STL/CLR)
+## <a name="operatorlt-set-stlclr"></a><a name="op_lt"></a>演算子&lt;(セット) (STL/CLR)
 
-比較より小さいリスト。
+比較より小さいリストを指定します。
 
 ### <a name="syntax"></a>構文
 
@@ -2428,15 +2428,15 @@ template<typename Key>
 
 #### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左*<br/>
 比較する左のコンテナー。
 
-*right*<br/>
+*そうです*<br/>
 比較する右のコンテナー。
 
 ### <a name="remarks"></a>解説
 
-Operator 関数は、`!(right[i] < left[i])` が `left[i] < right[i]`にも当てはまる `i` 最小の位置に対して true を返します。 それ以外の場合は、このメソッドを使用して、2つのセットが要素ごとに比較されるときに、 *left*が*right*の前に並べられているかどうかをテストする `left->size() < right->size()` を返します。
+演算子関数は、その値も true である`i`最下位の`!(right[i] < left[i])`位置に対して`left[i] < right[i]`true を返します。 それ以外の場合`left->size() < right->size()`は、2 つのセットが要素ごとに比較されるときに *、左*が*右*より前に並べられるかどうかをテストするために使用します。
 
 ### <a name="example"></a>例
 
@@ -2484,9 +2484,9 @@ a b d
 [a b c] < [a b d] is True
 ```
 
-## <a name="operatorlt-set-stlclr"></a><a name="op_lteq"></a>operator&lt;= (set) (STL/CLR)
+## <a name="operatorlt-set-stlclr"></a><a name="op_lteq"></a>演算子&lt;= (セット) (STL/CLR)
 
-以下を比較します。
+比較を一覧表示します。
 
 ### <a name="syntax"></a>構文
 
@@ -2498,15 +2498,15 @@ template<typename Key>
 
 #### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左*<br/>
 比較する左のコンテナー。
 
-*right*<br/>
+*そうです*<br/>
 比較する右のコンテナー。
 
 ### <a name="remarks"></a>解説
 
-演算子関数は `!(right < left)`を返します。 このメソッドを使用して、2つのセットが要素別に比較されるときに、 *right*の後に*left*が順序付けされていないかどうかをテストします。
+演算子関数は、`!(right < left)`を返します。 2 つのセットが要素*left*ごとに比較される場合、*左が右*の後に並べられていないかどうかをテストするために使用します。
 
 ### <a name="example"></a>例
 
@@ -2554,9 +2554,9 @@ a b d
 [a b d] <= [a b c] is False
 ```
 
-## <a name="operator-set-stlclr"></a><a name="op_eq"></a>operator = = (set) (STL/CLR)
+## <a name="operator-set-stlclr"></a><a name="op_eq"></a>演算子== (セット) (STL/CLR)
 
-同じ比較を一覧表示します。
+等しい比較をリストします。
 
 ### <a name="syntax"></a>構文
 
@@ -2568,15 +2568,15 @@ template<typename Key>
 
 #### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左*<br/>
 比較する左のコンテナー。
 
-*right*<br/>
+*そうです*<br/>
 比較する右のコンテナー。
 
 ### <a name="remarks"></a>解説
 
-演算子関数は、 *left*と*right*で制御されるシーケンスの長さが同じで、`i`位置ごとに `right[i]``left[i] ==` 場合にのみ true を返します。 このメソッドを使用して、2つのセットが要素によって比較されるときに、 *left*が*right*と同じ順序で並んでいるかどうかをテストします。
+演算子関数は、*左右*で制御されるシーケンスの長さが同*right*じ場合にのみ true を返し、`i`各`left[i] ==``right[i]`位置に対して true を返します。 2 つのセットが要素ごとに比較される場合、*左*が*右*と同じ順序で並べられるかどうかをテストするために使用します。
 
 ### <a name="example"></a>例
 
@@ -2624,9 +2624,9 @@ a b d
 [a b c] == [a b d] is False
 ```
 
-## <a name="operatorgt-set-stlclr"></a><a name="op_gt"></a>operator&gt; (set) (STL/CLR)
+## <a name="operatorgt-set-stlclr"></a><a name="op_gt"></a>演算子&gt;(セット) (STL/CLR)
 
-比較よりも大きいリストです。
+比較より大きいリストを指定します。
 
 ### <a name="syntax"></a>構文
 
@@ -2638,15 +2638,15 @@ template<typename Key>
 
 #### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左*<br/>
 比較する左のコンテナー。
 
-*right*<br/>
+*そうです*<br/>
 比較する右のコンテナー。
 
 ### <a name="remarks"></a>解説
 
-Operator 関数は、`left``<` `right` を返します。 このメソッドを使用して、2つのセットが要素によって比較されるときに、 *left*が*right*の後に並べられているかどうかをテストします。
+演算子関数は、`right``<``left`を返します。 2 つのセットが要素ごとに比較されるときに *、左*が*右*の後に並べ替えられたかどうかをテストするために使用します。
 
 ### <a name="example"></a>例
 
@@ -2694,9 +2694,9 @@ a b d
 [a b d] > [a b c] is True
 ```
 
-## <a name="operatorgt-set-stlclr"></a><a name="op_gteq"></a>operator&gt;= (set) (STL/CLR)
+## <a name="operatorgt-set-stlclr"></a><a name="op_gteq"></a>演算子&gt;= (セット) (STL/CLR)
 
-以上の比較を一覧表示します。
+比較の値が大きいか等しいかのリストを指定します。
 
 ### <a name="syntax"></a>構文
 
@@ -2708,15 +2708,15 @@ template<typename Key>
 
 #### <a name="parameters"></a>パラメーター
 
-*left*<br/>
+*左*<br/>
 比較する左のコンテナー。
 
-*right*<br/>
+*そうです*<br/>
 比較する右のコンテナー。
 
 ### <a name="remarks"></a>解説
 
-演算子関数は `!(left < right)`を返します。 このメソッドを使用して、2つのセットが要素別に比較されるときに、 *left*が*right*の前に順序付けされていないかどうかをテストします。
+演算子関数は、`!(left < right)`を返します。 2 つのセットが要素*left*ごとに比較される場合、*左が右*より前に並べられていないかどうかをテストするために使用します。
 
 ### <a name="example"></a>例
 

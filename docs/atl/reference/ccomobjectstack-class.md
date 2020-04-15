@@ -1,5 +1,5 @@
 ---
-title: CComObjectStack クラス
+title: クラス
 ms.date: 11/04/2016
 f1_keywords:
 - CComObjectStack
@@ -12,16 +12,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComObjectStack class
 ms.assetid: 3da72c40-c834-45f6-bb76-6ac204028d80
-ms.openlocfilehash: 19fd226e617e4cdb1bba8a113b8984c36bf28d59
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8c3fd56635da8b80c84f6151009586b7bd2b4341
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62259587"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81327572"
 ---
-# <a name="ccomobjectstack-class"></a>CComObjectStack クラス
+# <a name="ccomobjectstack-class"></a>クラス
 
-このクラスは、一時的な COM オブジェクトを作成し、スケルトンの実装が提供されます`IUnknown`します。
+このクラスは、一時的な COM オブジェクトを作成し、 のスケルトン`IUnknown`実装を提供します。
 
 ## <a name="syntax"></a>構文
 
@@ -33,7 +33,7 @@ class CComObjectStack : public Base
 #### <a name="parameters"></a>パラメーター
 
 *ベース*<br/>
-派生したクラス、 [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)または[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)オブジェクトでサポートするその他のインターフェイスからも、します。
+[CComObjectRoot または CComObjectRootEx](../../atl/reference/ccomobjectroot-class.md)から派生したクラス、およびオブジェクトでサポートする他のインターフェイスから派生したクラス。 [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)
 
 ## <a name="members"></a>メンバー
 
@@ -41,32 +41,32 @@ class CComObjectStack : public Base
 
 |名前|説明|
 |----------|-----------------|
-|[CComObjectStack::CComObjectStack](#ccomobjectstack)|コンストラクターです。|
-|[CComObjectStack::~CComObjectStack](#dtor)|デストラクターです。|
+|[スタック::CComオブジェクトスタック](#ccomobjectstack)|コンストラクターです。|
+|[スタック:~CComオブジェクトスタック](#dtor)|デストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CComObjectStack::AddRef](#addref)|0 を返します。 デバッグ モードで呼び出して`_ASSERTE`します。|
-|[CComObjectStack::QueryInterface](#queryinterface)|E_NOINTERFACE を返します。 デバッグ モードで呼び出して`_ASSERTE`します。|
-|[CComObjectStack::Release](#release)|0 を返します。 デバッグ モードで呼び出して`_ASSERTE`します。 ~|
+|[スタック::AddRef](#addref)|ゼロを返します。 デバッグ モードでは、`_ASSERTE`を呼び出します。|
+|[クエリインターフェイス](#queryinterface)|E_NOINTERFACEを返します。 デバッグ モードでは、`_ASSERTE`を呼び出します。|
+|[CComオブジェクトスタック::リリース](#release)|ゼロを返します。 デバッグ モードでは、`_ASSERTE`を呼び出します。 ~|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
 |名前|説明|
 |----------|-----------------|
-|[CComObjectStack::m_hResFinalConstruct](#m_hresfinalconstruct)|構築時に返される HRESULT を含む、`CComObjectStack`オブジェクト。|
+|[スタック:m_hResFinalConstruct](#m_hresfinalconstruct)|オブジェクトの構築中に返される HRESULT を`CComObjectStack`格納します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-`CComObjectStack` 一時的な COM オブジェクトを作成し、オブジェクトのスケルトンの実装を提供するために使用`IUnknown`します。 通常、オブジェクトは、1 つの関数は、スタックにプッシュ) 内のローカル変数として使用されます。 関数が終了するときに、オブジェクトが破棄されるため、効率を向上させる参照カウントが実行されませんが。
+`CComObjectStack`は、一時的な COM オブジェクトを作成し、オブジェクトに`IUnknown`のスケルトン実装を提供するために使用されます。 通常、オブジェクトは 1 つの関数内のローカル変数として使用されます (つまり、スタックにプッシュされます)。 関数が終了するとオブジェクトが破棄されるため、参照カウントは実行されず、効率が向上します。
 
-次の例では、関数内で使用される COM オブジェクトを作成する方法を示します。
+関数内で使用される COM オブジェクトを作成する方法を次の例に示します。
 
 [!code-cpp[NVC_ATL_COM#42](../../atl/codesnippet/cpp/ccomobjectstack-class_1.cpp)]
 
-一時オブジェクト`Tempobj`がスタックにプッシュされ、自動的には、関数が終了したときに表示されなくなります。
+一時オブジェクト`Tempobj`はスタックにプッシュされ、関数が終了すると自動的に消えます。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -78,9 +78,9 @@ class CComObjectStack : public Base
 
 **ヘッダー:** atlcom.h
 
-##  <a name="addref"></a>  CComObjectStack::AddRef
+## <a name="ccomobjectstackaddref"></a><a name="addref"></a>スタック::AddRef
 
-0 を返します。
+ゼロを返します。
 
 ```
 STDMETHOD_(ULONG, AddRef)();
@@ -88,13 +88,13 @@ STDMETHOD_(ULONG, AddRef)();
 
 ### <a name="return-value"></a>戻り値
 
-0 を返します。
+ゼロを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-デバッグ モードで呼び出して`_ASSERTE`します。
+デバッグ モードでは、`_ASSERTE`を呼び出します。
 
-##  <a name="ccomobjectstack"></a>  CComObjectStack::CComObjectStack
+## <a name="ccomobjectstackccomobjectstack"></a><a name="ccomobjectstack"></a>スタック::CComオブジェクトスタック
 
 コンストラクターです。
 
@@ -102,11 +102,11 @@ STDMETHOD_(ULONG, AddRef)();
 CComObjectStack(void* = NULL);
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-呼び出し`FinalConstruct`し、設定[m_hResFinalConstruct](#m_hresfinalconstruct)によって返される HRESULT に`FinalConstruct`します。 基底クラスを派生していない場合[CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)、独自に指定する必要があります`FinalConstruct`メソッド。 このデストラクターは `FinalRelease` を呼び出します。
+m_hResFinalConstruct`FinalConstruct`を呼び出し、その後、m_hResFinalConstruct`FinalConstruct`が返す HRESULT[に設定](#m_hresfinalconstruct)します。 [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)から基本クラスを派生していない場合は、独自`FinalConstruct`のメソッドを指定する必要があります。 このデストラクターは `FinalRelease` を呼び出します。
 
-##  <a name="dtor"></a>  CComObjectStack:: ~ CComObjectStack
+## <a name="ccomobjectstackccomobjectstack"></a><a name="dtor"></a>スタック:~CComオブジェクトスタック
 
 デストラクターです。
 
@@ -114,21 +114,21 @@ CComObjectStack(void* = NULL);
 CComObjectStack();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-割り当てられているすべてのリソースを解放[FinalRelease](ccomobjectrootex-class.md#finalrelease)します。
+割り当てられたすべてのリソースを解放し[、FinalRelease](ccomobjectrootex-class.md#finalrelease)を呼び出します。
 
-##  <a name="m_hresfinalconstruct"></a>  CComObjectStack::m_hResFinalConstruct
+## <a name="ccomobjectstackm_hresfinalconstruct"></a><a name="m_hresfinalconstruct"></a>スタック:m_hResFinalConstruct
 
-呼び出しから返される HRESULT を含む`FinalConstruct`の構築時に、`CComObjectStack`オブジェクト。
+オブジェクトの構築中に呼び`FinalConstruct`出しから返`CComObjectStack`される HRESULT を格納します。
 
 ```
 HRESULT    m_hResFinalConstruct;
 ```
 
-##  <a name="queryinterface"></a>  CComObjectStack::QueryInterface
+## <a name="ccomobjectstackqueryinterface"></a><a name="queryinterface"></a>クエリインターフェイス
 
-E_NOINTERFACE を返します。
+E_NOINTERFACEを返します。
 
 ```
 HRESULT    QueryInterface(REFIID, void**);
@@ -136,15 +136,15 @@ HRESULT    QueryInterface(REFIID, void**);
 
 ### <a name="return-value"></a>戻り値
 
-E_NOINTERFACE を返します。
+E_NOINTERFACEを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-デバッグ モードで呼び出して`_ASSERTE`します。
+デバッグ モードでは、`_ASSERTE`を呼び出します。
 
-##  <a name="release"></a>  CComObjectStack::Release
+## <a name="ccomobjectstackrelease"></a><a name="release"></a>CComオブジェクトスタック::リリース
 
-0 を返します。
+ゼロを返します。
 
 ```
 STDMETHOD_(ULONG, Release)();
@@ -152,15 +152,15 @@ STDMETHOD_(ULONG, Release)();
 
 ### <a name="return-value"></a>戻り値
 
-0 を返します。
+ゼロを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-デバッグ モードで呼び出して`_ASSERTE`します。
+デバッグ モードでは、`_ASSERTE`を呼び出します。
 
 ## <a name="see-also"></a>関連項目
 
-[CComAggObject クラス](../../atl/reference/ccomaggobject-class.md)<br/>
-[CComObject クラス](../../atl/reference/ccomobject-class.md)<br/>
-[CComObjectGlobal クラス](../../atl/reference/ccomobjectglobal-class.md)<br/>
+[クラス](../../atl/reference/ccomaggobject-class.md)<br/>
+[クラス](../../atl/reference/ccomobject-class.md)<br/>
+[クラスの数](../../atl/reference/ccomobjectglobal-class.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

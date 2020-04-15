@@ -1,6 +1,6 @@
 ---
-title: FUNCTION_FORCE_INLINEE_DATA 構造体
-description: C++ BUILD Insights SDK FUNCTION_FORCE_INLINEE_DATA 構造体リファレンス。
+title: FUNCTION_FORCE_INLINEE_DATA構造
+description: C++ ビルド インサイト SDK FUNCTION_FORCE_INLINEE_DATA構造リファレンスです。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 3d6929f2f16e9b1bd79b7fb8b383b40e031268bf
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: a4781c9157130cb46e92906017af98710f5637b2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78335148"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81325494"
 ---
-# <a name="function_force_inlinee_data-structure"></a>FUNCTION_FORCE_INLINEE_DATA 構造体
+# <a name="function_force_inlinee_data-structure"></a>FUNCTION_FORCE_INLINEE_DATA構造
 
 ::: moniker range="<=vs-2015"
 
-Build C++ Insights SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを表示するには、この記事の Visual Studio バージョンセレクターコントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。
+C++ ビルド インサイト SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを参照するには、この記事の Visual Studio**バージョン**セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の上部に表示されます。
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-`FUNCTION_FORCE_INLINEE_DATA` 構造体は、強制インライン関数を記述します。
+この`FUNCTION_FORCE_INLINEE_DATA`構造体は、強制インライン関数を記述します。
 
 ## <a name="syntax"></a>構文
 
@@ -43,6 +43,6 @@ typedef struct FUNCTION_FORCE_INLINEE_DATA_TAG
 |  |  |
 |--|--|
 | `Name` | UTF-8 でエンコードされた関数の名前。 |
-| `Size` | 中間命令の数としての関数のサイズ。 |
+| `Size` | 関数のサイズを、中間命令の数として指定します。 |
 
 ::: moniker-end

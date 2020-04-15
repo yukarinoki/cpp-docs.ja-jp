@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMultiPageDHtmlDialog [MFC], CMultiPageDHtmlDialog
 ms.assetid: 971accc1-824d-4df4-b4c1-b1a20e0f7e4f
-ms.openlocfilehash: 404b1b8bb1c96c2b244a6cfaee7f2f2c77800f31
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 89e4830c3b5c6cb663ca2d2935adaaae3f356958
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62366902"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81319665"
 ---
 # <a name="cmultipagedhtmldialog-class"></a>CMultiPageDHtmlDialog クラス
 
@@ -31,22 +31,22 @@ class CMultiPageDHtmlDialog : public CDHtmlDialog
 
 |名前|説明|
 |----------|-----------------|
-|[CMultiPageDHtmlDialog::CMultiPageDHtmlDialog](#cmultipagedhtmldialog)|マルチページ (ウィザード スタイル) DHTML ダイアログ オブジェクトを構築します。|
-|[CMultiPageDHtmlDialog::~CMultiPageDHtmlDialog](#_dtorcmultipagedhtmldialog)|マルチページ DHTML ダイアログ オブジェクトを破棄します。|
+|[ダイアログボックス:::ページドHtmlダイアログ](#cmultipagedhtmldialog)|マルチページ (ウィザード スタイルの) DHTML ダイアログ オブジェクトを構築します。|
+|[ダイアログボックス::~CMultiページドHtmlダイアログ](#_dtorcmultipagedhtmldialog)|複数ページの DHTML ダイアログ オブジェクトを破棄します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-これを行うためのメカニズムは、 [DHTML および URL イベント マップ](dhtml-event-maps.md)イベントのマップ ページごとに埋め込みが含まれています。
+これを行うためのメカニズムは、各ページの埋め込みイベント マップを含む[DHTML と URL](dhtml-event-maps.md)イベント マップです。
 
 ## <a name="example"></a>例
 
-このマルチページのダイアログ ボックスは、簡単なウィザードのような機能を定義する 3 つの HTML リソースを想定しています。 最初のページには、 **[次へ]** ボタンをクリックし、2 番目、 **Prev**と **[次へ]** ボタン、および 3 番目、 **Prev**ボタン。 ハンドラー関数を呼び出すボタンが押されたとき[CDHtmlDialog::LoadFromResource](../../mfc/reference/cdhtmldialog-class.md#loadfromresource)適切な新しいページを読み込みます。
+この複数ページのダイアログでは、ウィザードのような単純な機能を定義する 3 つの HTML リソースを想定しています。 最初のページには **[次へ**]ボタン、2 番目の[**前へ**]ボタンと **[次へ**]ボタン、3 番目の[**前**へ]ボタンがあります。 ボタンの 1 つが押されると、ハンドラー関数が[CDHtmlDialog::LoadFromResource](../../mfc/reference/cdhtmldialog-class.md#loadfromresource)を呼び出して、適切な新しいページを読み込みます。
 
-(CMyMultiPageDlg.h) で、クラス宣言の関連部分:
+クラス宣言の関連部分 (CMyMultiPageDlg.h)
 
 [!code-cpp[NVC_MFCDocView#181](../../mfc/codesnippet/cpp/cmultipagedhtmldialog-class_1.h)]
 
-クラスの実装 (CMyMultipageDlg.cpp) 内の関連部分:
+クラス実装の関連部分 (CMyMultipageDlg.cpp で):
 
 [!code-cpp[NVC_MFCDocView#182](../../mfc/codesnippet/cpp/cmultipagedhtmldialog-class_2.cpp)]
 
@@ -76,9 +76,9 @@ class CMultiPageDHtmlDialog : public CDHtmlDialog
 
 **ヘッダー:** afxdhtml.h
 
-##  <a name="cmultipagedhtmldialog"></a>  CMultiPageDHtmlDialog::CMultiPageDHtmlDialog
+## <a name="cmultipagedhtmldialogcmultipagedhtmldialog"></a><a name="cmultipagedhtmldialog"></a>ダイアログボックス:::ページドHtmlダイアログ
 
-マルチページ (ウィザード スタイル) DHTML ダイアログ オブジェクトを構築します。
+マルチページ (ウィザード スタイルの) DHTML ダイアログ オブジェクトを構築します。
 
 ```
 CMultiPageDHtmlDialog(
@@ -96,24 +96,24 @@ CMultiPageDHtmlDialog();
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszTemplateName*<br/>
-ダイアログ ボックスのテンプレート リソースの名前を表す null で終わる文字列。
+*テンプレート名*<br/>
+ダイアログ ボックス テンプレート リソースの名前である null で終わる文字列。
 
-*szHtmlResID*<br/>
-HTML のリソースの名前を表す null で終わる文字列。
+*を返します。*<br/>
+HTML リソースの名前である null で終わる文字列。
 
 *pParentWnd*<br/>
-親またはオーナー ウィンドウ オブジェクトへのポインター (型の[CWnd](../../mfc/reference/cwnd-class.md)) ダイアログ オブジェクトが属しています。 NULL の場合、ダイアログ オブジェクトの親ウィンドウは、アプリケーションのメイン ウィンドウに設定されます。
+ダイアログ オブジェクトが属する親ウィンドウ オブジェクトまたはオーナー ウィンドウ オブジェクト ( [CWnd](../../mfc/reference/cwnd-class.md)型 ) へのポインター。 NULL の場合、ダイアログ オブジェクトの親ウィンドウはメイン アプリケーション ウィンドウに設定されます。
 
-*nIDTemplate*<br/>
-ダイアログ ボックスのテンプレート リソースの ID 番号が含まれています。
+*テンプレート*<br/>
+ダイアログ ボックス テンプレート リソースの ID 番号を格納します。
 
-*nHtmlResID*<br/>
-HTML リソースの ID 番号が含まれています。
+*を返します。*<br/>
+HTML リソースの ID 番号を格納します。
 
-##  <a name="_dtorcmultipagedhtmldialog"></a>  CMultiPageDHtmlDialog::~CMultiPageDHtmlDialog
+## <a name="cmultipagedhtmldialogcmultipagedhtmldialog"></a><a name="_dtorcmultipagedhtmldialog"></a>ダイアログボックス::~CMultiページドHtmlダイアログ
 
-マルチページ DHTML ダイアログ オブジェクトを破棄します。
+複数ページの DHTML ダイアログ オブジェクトを破棄します。
 
 ```
 virtual ~CMultiPageDHtmlDialog();

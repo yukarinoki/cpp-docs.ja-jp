@@ -6,29 +6,29 @@ helpviewer_keywords:
 - composite controls, handling events
 - ActiveX controls [C++], events
 ms.assetid: 98f85681-9564-480d-af38-03f9733fe58b
-ms.openlocfilehash: 9ad7ef3d80579804ac614fbefac1a042a9cf2fba
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5de18f863831973af384d2456adb5b2214f0dd68
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62252495"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81317421"
 ---
 # <a name="adding-functionality-to-the-composite-control"></a>複合コントロールへの機能の追加
 
-複合コントロールに必要なコントロールを挿入した後、次の手順では、新しい機能を追加する必要があります。 この新しい機能は、通常は 2 つのカテゴリに分類されます。
+必要なコントロールを複合コントロールに挿入したら、次の手順では新しい機能を追加します。 この新しい機能は、通常、2 つのカテゴリに分類されます。
 
-- 追加のインターフェイスをサポートしていると、特定の機能による複合コントロールの動作をカスタマイズします。
+- 追加のインターフェイスをサポートし、追加の特定の機能を使用して複合コントロールの動作をカスタマイズします。
 
-- 格納されている ActiveX コントロール (またはコントロール) からのイベントを処理します。
+- 含まれている ActiveX コントロール (またはコントロール) からのイベントを処理します。
 
-目的とこの記事の範囲は、このセクションの残りの部分は、ActiveX コントロールからのイベントの処理についてのみ説明します。
+この資料の目的と説明については、このセクションの残りの部分では、ActiveX コントロールからのイベントの処理だけを中心に説明します。
 
 > [!NOTE]
->  Windows のコントロールからのメッセージを処理する必要がある場合は、次を参照してください[ウィンドウの実装](../atl/implementing-a-window.md)atl で処理するメッセージの詳細については。
+> Windows コントロールからのメッセージを処理する必要がある場合は、ATL でのメッセージ処理の詳細については[、「ウィンドウの実装](../atl/implementing-a-window.md)」を参照してください。
 
-ダイアログ リソースの ActiveX コントロールを挿入すると、コントロールを右クリックし、をクリックして**イベント ハンドラーの追加**します。 イベントを処理し、をクリックする選択**の追加し、編集**します。 イベント ハンドラーのコードは、コントロールの .h ファイルに追加されます。
+ダイアログ リソースに ActiveX コントロールを挿入した後、そのコントロールを右クリックし、[**イベント ハンドラの追加**] をクリックします。 処理するイベントを選択し、[**追加および編集**] をクリックします。 イベント ハンドラー コードは、コントロールの .h ファイルに追加されます。
 
-複合コントロールの ActiveX コントロールの接続ポイントが自動的に接続されているしへの呼び出しを使用して切断[CComCompositeControl::AdviseSinkMap](../atl/reference/ccomcompositecontrol-class.md#advisesinkmap)します。
+複合コントロールの ActiveX コントロールの接続ポイントは[、CCom コンポジット コントロール::AdviseSinkMap](../atl/reference/ccomcompositecontrol-class.md#advisesinkmap)への呼び出しを介して自動的に接続および切断されます。
 
 ## <a name="see-also"></a>関連項目
 

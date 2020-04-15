@@ -1,9 +1,11 @@
 ---
 title: gets_s、_getws_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _getws_s
 - gets_s
+- _o__getws_s
+- _o_gets_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -34,16 +37,16 @@ helpviewer_keywords:
 - gets_s function
 - standard input, reading from
 ms.assetid: 5880c36f-122c-4061-a1a5-aeeced6fe58c
-ms.openlocfilehash: f282b4e8de12185a19e07374cf565788dc549136
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: aac64a42a2979623f4314f7bf28d7e4917eaee18
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954972"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81344217"
 ---
 # <a name="gets_s-_getws_s"></a>gets_s、_getws_s
 
-**Stdin**ストリームから行を取得します。 これらの [gets および _getws](../../c-runtime-library/gets-getws.md) のバージョンは、「[Security Features in the CRT](../../c-runtime-library/security-features-in-the-crt.md)」(CRT のセキュリティ機能) で説明されているように、セキュリティが強化されています。
+**stdin**ストリームから行を取得します。 これらの [gets および _getws](../../c-runtime-library/gets-getws.md) のバージョンは、「[Security Features in the CRT](../../c-runtime-library/security-features-in-the-crt.md)」(CRT のセキュリティ機能) で説明されているように、セキュリティが強化されています。
 
 ## <a name="syntax"></a>構文
 
@@ -76,19 +79,21 @@ wchar_t *_getws_s( wchar_t (&buffer)[size] ); // C++ only
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合は、*バッファー*を返します。 エラーが発生した場合またはファイルの終端に達した場合は、**NULL** ポインターを返します。 どちらが発生したかを確認するには、 [ferror](ferror.md) または [feof](feof.md) を使用します。
+成功した場合*はバッファを*返します。 エラーが発生した場合またはファイルの終端に達した場合は、**NULL** ポインターを返します。 どちらが発生したかを確認するには、 [ferror](ferror.md) または [feof](feof.md) を使用します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**Gets_s**関数は、標準入力ストリーム**stdin**から行を読み取り、*バッファー*に格納します。 行は、最初の改行文字 ('\n') までのすべての文字 (改行文字を含む) で構成されます。 その後、 **gets_s**は改行文字を null 文字 (' \ 0 ') に置換してから、行を返します。 これに対し、 **fgets_s**関数は改行文字を保持します。
+**gets_s**関数は、標準入力ストリーム**stdin**から行を読み取り、*それを buffer*に格納します。 行は、最初の改行文字 ('\n') までのすべての文字 (改行文字を含む) で構成されます。 **gets_s**改行文字を null 文字 ('\0') に置き換えた後、行を返します。 これに対し **、fgets_s**関数は改行文字を保持します。
 
-最初に読み取られた文字がファイルの終端文字である場合は、null 文字が*バッファー*の先頭に格納され、 **null**が返されます。
+最初の文字読み込み文字がファイルの終わり文字の場合は、*バッファー*の先頭に NULL 文字が格納され **、NULL**が戻されます。
 
-**_getws_s**は、 **gets_s**のワイド文字バージョンです。引数と戻り値はワイド文字列です。
+**_getws_s**は **、gets_s**のワイド文字バージョンです。引数と戻り値はワイド文字列です。
 
-*Buffer*が**NULL**であるか、 *sizeincharacters*が0以下の場合、またはバッファーが小さすぎて入力行と NULL ターミネータを含むことがない場合、「パラメーター」に説明されているように、これらの関数は無効なパラメーターハンドラーを呼び出します。 [検証](../../c-runtime-library/parameter-validation.md)。 実行の継続が許可された場合、これらの関数は**NULL**を返し、Errno を**ERANGE**に設定します。
+*バッファー*が**NULL**または*sizeInCharacters*が 0 以下の場合、またはバッファーが小さすぎて入力行と NULL 終端文字を含めることができなか、これらの関数は、[パラメーターの検証](../../c-runtime-library/parameter-validation.md)で説明されているように無効なパラメーター ハンドラーを呼び出します。 実行を続行できる場合、これらの関数は**NULL を**返し、errno を**ERANGE**に設定します。
 
-C++ では、これらの関数の使用はテンプレートのオーバーロードによって簡素化されます。オーバーロードでは、バッファー長を自動的に推論できる (サイズの引数を指定する必要がなくなる) だけでなく、古くてセキュリティが万全ではない関数を新しく安全な関数に自動的に置き換えることができます。 詳細については、「 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
+C++ では、これらの関数の使用はテンプレートのオーバーロードによって簡素化されます。オーバーロードでは、バッファー長を自動的に推論できる (サイズの引数を指定する必要がなくなる) だけでなく、古くてセキュリティが万全ではない関数を新しく安全な関数に自動的に置き換えることができます。 詳細については、「[セキュリティ保護されたテンプレート オーバーロード](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -98,12 +103,12 @@ C++ では、これらの関数の使用はテンプレートのオーバーロ�
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**gets_s**|\<stdio.h>|
 |**_getws_s**|\<stdio.h> または \<wchar.h>|
 
-コンソールは、ユニバーサル Windows プラットフォーム (UWP) アプリではサポートされていません。 コンソール、 **stdin**、 **stdout**、および**stderr**に関連付けられている標準ストリームハンドルは、C ランタイム関数が UWP アプリで使用できるようになる前にリダイレクトする必要があります。 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+ユニバーサル Windows プラットフォーム (UWP) アプリでは、コンソールはサポートされていません。 コンソール **、stdin 、stdout**、および**stdout****stderr**に関連付けられている標準ストリーム ハンドルは、C ランタイム関数が UWP アプリで使用する前にリダイレクトする必要があります。 互換性の詳細については、「[互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 
@@ -133,7 +138,7 @@ The line entered was: Hello there!
 ## <a name="see-also"></a>関連項目
 
 [ストリーム入出力](../../c-runtime-library/stream-i-o.md)<br/>
-[gets、_getws](../../c-runtime-library/gets-getws.md)<br/>
+[取得, _getws](../../c-runtime-library/gets-getws.md)<br/>
 [fgets、fgetws](fgets-fgetws.md)<br/>
 [fputs、fputws](fputs-fputws.md)<br/>
 [puts、_putws](puts-putws.md)<br/>

@@ -1,5 +1,5 @@
 ---
-title: CAtlServiceModuleT クラス
+title: クラス
 ms.date: 05/06/2019
 f1_keywords:
 - CAtlServiceModuleT
@@ -35,19 +35,19 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlServiceModuleT class
 ms.assetid: 8fc753ce-4a50-402b-9b4a-0a4ce5dd496c
-ms.openlocfilehash: 2854d0902700b268383eca094bed35843ea73272
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 5d87eada997d0bbfe44cd07a819f6b012a7a3a20
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79423412"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81321338"
 ---
-# <a name="catlservicemodulet-class"></a>CAtlServiceModuleT クラス
+# <a name="catlservicemodulet-class"></a>クラス
 
-このクラスは、サービスを実装します。
+このクラスはサービスを実装します。
 
 > [!IMPORTANT]
->  このクラスとそのメンバーは、Windows ランタイムで実行されるアプリケーションでは使用できません。
+> このクラスとそのメンバーは、Windows ランタイムで実行されるアプリケーションでは使用できません。
 
 ## <a name="syntax"></a>構文
 
@@ -59,79 +59,79 @@ class ATL_NO_VTABLE CAtlServiceModuleT : public CAtlExeModuleT<T>
 #### <a name="parameters"></a>パラメーター
 
 *T*<br/>
-`CAtlServiceModuleT`から派生したクラス。
+クラスから派生`CAtlServiceModuleT`したクラス。
 
-*nServiceNameID*<br/>
+*サービス名ID*<br/>
 サービスのリソース識別子。
 
 ## <a name="members"></a>メンバー
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|Description|
+|名前|説明|
 |----------|-----------------|
-|[CAtlServiceModuleT:: CAtlServiceModuleT](#catlservicemodulet)|コンストラクターです。|
+|[サービスサービスモジュール](#catlservicemodulet)|コンストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|Description|
+|名前|説明|
 |----------|-----------------|
-|[CAtlServiceModuleT:: Handler](#handler)|サービスのハンドラールーチン。|
-|[CAtlServiceModuleT:: InitializeSecurity](#initializesecurity)|サービスの既定のセキュリティ設定を提供します。|
-|[CAtlServiceModuleT:: Install](#install)|サービスをインストールして作成します。|
-|[CAtlServiceModuleT:: IsInstalled](#isinstalled)|サービスがインストールされていることを確認します。|
-|[CAtlServiceModuleT:: LogEvent](#logevent)|イベントログに書き込みます。|
-|[CAtlServiceModuleT:: OnContinue](#oncontinue)|サービスを続行するには、このメソッドをオーバーライドします。|
-|[CAtlServiceModuleT:: OnInterrogate](#oninterrogate)|サービスを照会するには、このメソッドをオーバーライドします。|
-|[CAtlServiceModuleT:: OnPause](#onpause)|サービスを一時停止するには、このメソッドをオーバーライドします。|
-|[CAtlServiceModuleT:: OnShutdown](#onshutdown)|サービスをシャットダウンするには、このメソッドをオーバーライドします|
-|[CAtlServiceModuleT:: OnStop](#onstop)|サービスを停止するには、このメソッドをオーバーライドします|
-|[CAtlServiceModuleT:: OnUnknownRequest](#onunknownrequest)|サービスに対する不明な要求を処理するには、このメソッドをオーバーライドします|
-|[CAtlServiceModuleT::P arseCommandLine](#parsecommandline)|コマンドラインを解析し、必要に応じて登録を実行します。|
-|[CAtlServiceModuleT::P 再実行します。](#premessageloop)|このメソッドは、メッセージループを開始する直前に呼び出されます。|
-|[CAtlServiceModuleT:: RegisterAppId](#registerappid)|レジストリにサービスを登録します。|
-|[CAtlServiceModuleT:: Run](#run)|サービスを実行します。|
-|[CAtlServiceModuleT:: ServiceMain](#servicemain)|サービスコントロールマネージャーによって呼び出されるメソッド。|
-|[CAtlServiceModuleT:: SetServiceStatus](#setservicestatus)|サービスの状態を更新します。|
-|[CAtlServiceModuleT:: Start](#start)|サービスの開始時に `CAtlServiceModuleT::WinMain` によって呼び出されます。|
-|[CAtlServiceModuleT:: Uninstall](#uninstall)|サービスを停止して削除します。|
-|[CAtlServiceModuleT:: Unlock](#unlock)|サービスのロックカウントをデクリメントします。|
-|[CAtlServiceModuleT:: UnregisterAppId](#unregisterappid)|レジストリからサービスを削除します。|
-|[CAtlServiceModuleT:: WinMain](#winmain)|このメソッドは、サービスを実行するために必要なコードを実装します。|
+|[ハンドラーサービスモジュールT::ハンドラー](#handler)|サービスのハンドラー ルーチン。|
+|[サービスモジュールT::初期化セキュリティ](#initializesecurity)|サービスの既定のセキュリティ設定を提供します。|
+|[サービスモジュール::インストール](#install)|サービスをインストールして作成します。|
+|[サービスモジュールを使用します。](#isinstalled)|サービスがインストールされたことを確認します。|
+|[イベントを発生させます。](#logevent)|イベント ログに書き込みます。|
+|[サービスモジュール::オンコニュ](#oncontinue)|サービスを続行するには、このメソッドをオーバーライドします。|
+|[サービスモジュールT::オンアセアフェデ](#oninterrogate)|サービスを問い取るために、このメソッドをオーバーライドします。|
+|[サービスモジュール::オンポーズ](#onpause)|サービスを一時停止するには、このメソッドをオーバーライドします。|
+|[サービスモジュールT::シャットダウン時](#onshutdown)|サービスをシャットダウンするには、このメソッドをオーバーライドします|
+|[サービスモジュール::オンストップ](#onstop)|サービスを停止するには、このメソッドをオーバーライドします|
+|[サービスサービスモジュール::オンUnknownリクエスト](#onunknownrequest)|サービスに対する不明な要求を処理するには、このメソッドをオーバーライドします|
+|[サービスモジュールT::Pアルセストライン](#parsecommandline)|コマンド ラインを解析し、必要に応じて登録を実行します。|
+|[サービスサービスモジュール::Pメッセージループ](#premessageloop)|このメソッドは、メッセージ ループに入る直前に呼び出されます。|
+|[をクリックします。](#registerappid)|サービスをレジストリに登録します。|
+|[実行](#run)|サービスを実行します。|
+|[サービスサービスモジュール](#servicemain)|サービス コントロール マネージャによって呼び出されるメソッド。|
+|[サービス状況を設定します。](#setservicestatus)|サービスの状態を更新します。|
+|[開始](#start)|サービスの`CAtlServiceModuleT::WinMain`開始時に呼び出されます。|
+|[をクリックします。](#uninstall)|サービスを停止および削除します。|
+|[サービスモジュールT::ロック解除](#unlock)|サービスのロックカウントを減算します。|
+|[を登録解除します。](#unregisterappid)|レジストリからサービスを削除します。|
+|[サービスモジュール::ウィンメイン](#winmain)|このメソッドは、サービスの実行に必要なコードを実装します。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
-|Name|Description|
+|名前|説明|
 |----------|-----------------|
-|[CAtlServiceModuleT:: m_bService](#m_bservice)|プログラムがサービスとして実行されていることを示すフラグ。|
-|[CAtlServiceModuleT:: m_dwThreadID](#m_dwthreadid)|スレッド識別子を格納しているメンバー変数。|
-|[CAtlServiceModuleT:: m_hServiceStatus](#m_hservicestatus)|現在のサービスの状態情報構造体へのハンドルを格納しているメンバー変数。|
-|[CAtlServiceModuleT:: m_status](#m_status)|現在のサービスの状態情報構造を格納しているメンバー変数。|
-|[CAtlServiceModuleT:: m_szServiceName](#m_szservicename)|登録するサービスの名前。|
+|[サービスサービスモジュール::m_bService](#m_bservice)|プログラムがサービスとして実行されていることを示すフラグ。|
+|[サービスサービスモジュール::m_dwThreadID](#m_dwthreadid)|スレッド識別子を格納するメンバー変数。|
+|[サービスモジュール::m_hServiceStatus](#m_hservicestatus)|現在のサービスの状態情報構造体へのハンドルを格納するメンバー変数。|
+|[m_status](#m_status)|現在のサービスの状態情報構造体を格納するメンバー変数。|
+|[サービスモジュール::m_szServiceName](#m_szservicename)|登録するサービスの名前。|
 
 ## <a name="remarks"></a>解説
 
-[CAtlExeModuleT](../../atl/reference/catlexemodulet-class.md)から派生した `CAtlServiceModuleT`は、ATL サービスモジュールを実装します。 `CAtlServiceModuleT` には、コマンドライン処理、インストール、登録、および削除のためのメソッドが用意されています。 追加の機能が必要な場合は、これらのメソッドとその他のメソッドをオーバーライドできます。
+`CAtlServiceModuleT`から派生した[、ATL](../../atl/reference/catlexemodulet-class.md)サービス モジュールを実装します。 `CAtlServiceModuleT`には、コマンド ライン処理、インストール、登録、および削除のメソッドが用意されています。 追加の機能が必要な場合は、これらのメソッドおよびその他のメソッドをオーバーライドできます。
 
-このクラスは、以前のバージョンの ATL で使用されていた古い[CComModule クラス](../../atl/reference/ccommodule-class.md)に代わるものです。 詳細については、「 [ATL モジュールクラス](../../atl/atl-module-classes.md)」を参照してください。
+このクラスは、以前のバージョンの ATL で使用された、古い[CComModule クラス](../../atl/reference/ccommodule-class.md)を置き換えます。 詳細については[、「ATL モジュール クラス](../../atl/atl-module-classes.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
 [_ATL_MODULE](atl-typedefs.md#_atl_module)
 
-[CAtlModule](../../atl/reference/catlmodule-class.md)
+[カトルモジュール](../../atl/reference/catlmodule-class.md)
 
-[CAtlModuleT](../../atl/reference/catlmodulet-class.md)
+[カトルモジュール](../../atl/reference/catlmodulet-class.md)
 
-[CAtlExeModuleT](../../atl/reference/catlexemodulet-class.md)
+[カトルエクセスト](../../atl/reference/catlexemodulet-class.md)
 
 `CAtlServiceModuleT`
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlbase. h
+**ヘッダー:** atlbase.h
 
-##  <a name="catlservicemodulet"></a>CAtlServiceModuleT:: CAtlServiceModuleT
+## <a name="catlservicemoduletcatlservicemodulet"></a><a name="catlservicemodulet"></a>サービスサービスモジュール
 
 コンストラクターです。
 
@@ -141,11 +141,11 @@ CAtlServiceModuleT() throw();
 
 ### <a name="remarks"></a>解説
 
-データメンバーを初期化し、初期サービスの状態を設定します。
+データ メンバーを初期化し、初期サービスの状態を設定します。
 
-##  <a name="handler"></a>CAtlServiceModuleT:: Handler
+## <a name="catlservicemodulethandler"></a><a name="handler"></a>ハンドラーサービスモジュールT::ハンドラー
 
-サービスのハンドラールーチン。
+サービスのハンドラー ルーチン。
 
 ```
 void Handler(DWORD dwOpcode) throw();
@@ -153,26 +153,26 @@ void Handler(DWORD dwOpcode) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*dwOpcode*<br/>
+*ドウオプコード*<br/>
 ハンドラー操作を定義するスイッチ。 詳細については、「解説」を参照してください。
 
 ### <a name="remarks"></a>解説
 
-これは、サービスコントロールマネージャー (SCM) がサービスの状態を取得して、停止や一時停止などの命令を発行するために呼び出すコードです。 SCM は、次に示す操作コードを `Handler` に渡して、サービスが実行する内容を示します。
+これは、サービス コントロール マネージャー (SCM) がサービスの状態を取得し、停止または一時停止などの命令を発行するために呼び出すコードです。 SCM は、サービスが実行する操作を示すために`Handler`、次に示すオペレーション コードを渡します。
 
-|操作コード|意味|
+|作業コード|意味|
 |--------------------|-------------|
-|SERVICE_CONTROL_STOP|サービスを停止します。 Atlbase. h のメソッド[CAtlServiceModuleT:: OnStop](#onstop)をオーバーライドして動作を変更します。|
-|SERVICE_CONTROL_PAUSE|ユーザー実装済み。 Atlbase. h で空のメソッド[CAtlServiceModuleT:: OnPause](#onpause)をオーバーライドして、サービスを一時停止します。|
-|SERVICE_CONTROL_CONTINUE|ユーザー実装済み。 Atlbase. h で空のメソッド[CAtlServiceModuleT:: OnContinue](#oncontinue)をオーバーライドしてサービスを続行します。|
-|SERVICE_CONTROL_INTERROGATE|ユーザー実装済み。 Atlbase. h で空のメソッド[CAtlServiceModuleT:: Oninterrogate](#oninterrogate)をオーバーライドして、サービスを問い合わせます。|
-|SERVICE_CONTROL_SHUTDOWN|ユーザー実装済み。 Atlbase. h で空のメソッド[CAtlServiceModuleT:: OnShutdown](#onshutdown)をオーバーライドして、サービスをシャットダウンします。|
+|SERVICE_CONTROL_STOP|サービスを停止します。 動作を変更するには、atlbase.h のメソッド[CAtlServiceModuleT::OnStop](#onstop)をオーバーライドします。|
+|SERVICE_CONTROL_PAUSE|ユーザーが実装されました。 サービスを一時停止するには、atlbase.h の空のメソッド[CAtlServiceModuleT::OnPause](#onpause)をオーバーライドします。|
+|SERVICE_CONTROL_CONTINUE|ユーザーが実装されました。 サービスを継続するには、atlbase.h の空のメソッド[CAtlServiceModuleT::OnContinue](#oncontinue)をオーバーライドします。|
+|SERVICE_CONTROL_INTERROGATE|ユーザーが実装されました。 サービスを問い換えるために、atlbase.h の空のメソッド[CAtlServiceModuleT::On尋問](#oninterrogate)をオーバーライドします。|
+|SERVICE_CONTROL_SHUTDOWN|ユーザーが実装されました。 サービスをシャットダウンするには、atlbase.h の空のメソッド[CAtlServiceModuleT::OnShutdown](#onshutdown)をオーバーライドします。|
 
-操作コードが認識されない場合は、 [CAtlServiceModuleT:: OnUnknownRequest](#onunknownrequest)メソッドが呼び出されます。
+操作コードが認識されない場合は、メソッド[CAtlServiceModuleT::OnUnknownRequest](#onunknownrequest)が呼び出されます。
 
-既定の ATL によって生成されるサービスは、stop 命令のみを処理します。 SCM が stop 命令を渡した場合、サービスはプログラムが停止しようとしていることを SCM に通知します。 次に、サービスは `PostThreadMessage` を呼び出して、終了メッセージをそれ自体にポストします。 これにより、メッセージループが終了し、サービスは最終的に終了します。
+ATL によって生成された既定のサービスは、停止命令のみを処理します。 SCM が停止命令を渡した場合、サービスは SCM にプログラムが停止しようとしていることを通知します。 その後、サービス`PostThreadMessage`は終了メッセージを自身に投稿する呼び出しを行います。 これにより、メッセージ ループが終了し、サービスは最終的に終了します。
 
-##  <a name="initializesecurity"></a>CAtlServiceModuleT:: InitializeSecurity
+## <a name="catlservicemoduletinitializesecurity"></a><a name="initializesecurity"></a>サービスモジュールT::初期化セキュリティ
 
 サービスの既定のセキュリティ設定を提供します。
 
@@ -182,23 +182,23 @@ HRESULT InitializeSecurity() throw();
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
 ### <a name="remarks"></a>解説
 
-`CAtlServiceModuleT` から派生したクラスは、派生クラスでこのメソッドを実装する必要があります。
+派生`CAtlServiceModuleT`元のクラスは、派生クラスでこのメソッドを実装する必要があります。
 
-`CoInitializeSecurity`への呼び出しで、RPC_C_IMP_LEVEL_IDENTIFY の PKT レベルの認証、偽装レベル、および null 以外の適切なセキュリティ記述子を使用します。
+PKT レベルの認証、RPC_C_IMP_LEVEL_IDENTIFYの偽装レベル、および適切な null 以外のセキュリティ記述子を`CoInitializeSecurity`呼び出しで使用します。
 
-ウィザードで生成された属性なしサービスプロジェクトの場合、次のようになります。
+ウィザードで生成された属性なしサービス プロジェクトの場合は、
 
 [!code-cpp[NVC_ATL_Service#1](../../atl/reference/codesnippet/cpp/catlservicemodulet-class_1.cpp)]
 
-属性付きサービスプロジェクトの場合、次のようになります。
+属性付きサービス プロジェクトの場合は、
 
 [!code-cpp[NVC_ATL_ServiceAttrib#1](../../atl/reference/codesnippet/cpp/catlservicemodulet-class_2.cpp)]
 
-##  <a name="install"></a>CAtlServiceModuleT:: Install
+## <a name="catlservicemoduletinstall"></a><a name="install"></a>サービスモジュール::インストール
 
 サービスをインストールして作成します。
 
@@ -208,15 +208,15 @@ BOOL Install() throw();
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は TRUE、失敗した場合は FALSE を返します。
+成功した場合は TRUE を返し、失敗した場合は FALSE を返します。
 
 ### <a name="remarks"></a>解説
 
-サービスをサービスコントロールマネージャー (SCM) データベースにインストールし、サービスオブジェクトを作成します。 サービスを作成できなかった場合は、メッセージボックスが表示され、メソッドは FALSE を返します。
+サービス コントロール マネージャー (SCM) データベースにサービスをインストールし、サービス オブジェクトを作成します。 サービスを作成できなかった場合は、メッセージ ボックスが表示され、メソッドは FALSE を返します。
 
-##  <a name="isinstalled"></a>CAtlServiceModuleT:: IsInstalled
+## <a name="catlservicemoduletisinstalled"></a><a name="isinstalled"></a>サービスモジュールを使用します。
 
-サービスがインストールされていることを確認します。
+サービスがインストールされたことを確認します。
 
 ```
 BOOL IsInstalled() throw();
@@ -224,11 +224,11 @@ BOOL IsInstalled() throw();
 
 ### <a name="return-value"></a>戻り値
 
-サービスがインストールされている場合は TRUE、それ以外の場合は FALSE を返します。
+サービスがインストールされている場合は TRUE を返し、それ以外の場合は FALSE を返します。
 
-##  <a name="logevent"></a>CAtlServiceModuleT:: LogEvent
+## <a name="catlservicemoduletlogevent"></a><a name="logevent"></a>イベントを発生させます。
 
-イベントログに書き込みます。
+イベント ログに書き込みます。
 
 ```
 void __cdecl LogEvent(LPCTSTR pszFormat, ...) throw();
@@ -236,17 +236,17 @@ void __cdecl LogEvent(LPCTSTR pszFormat, ...) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*pszFormat*<br/>
+*フォーマット*<br/>
 イベント ログに書き込む文字列。
 
-*[...]*<br/>
-イベントログに書き込まれる追加文字列 (省略可能)。
+*...*<br/>
+イベント ログに書き込む追加の文字列 (省略可能)。
 
 ### <a name="remarks"></a>解説
 
-このメソッドは、関数[Reportevent](/windows/win32/api/winbase/nf-winbase-reporteventw)を使用して、詳細情報をイベントログに書き込みます。 サービスが実行されていない場合は、文字列がコンソールに送信されます。
+このメソッドは、関数[ReportEvent](/windows/win32/api/winbase/nf-winbase-reporteventw)を使用して、イベント ログに詳細を書き込みます。 サービスが実行されていない場合、文字列はコンソールに送信されます。
 
-##  <a name="m_bservice"></a>CAtlServiceModuleT:: m_bService
+## <a name="catlservicemoduletm_bservice"></a><a name="m_bservice"></a>サービスサービスモジュール::m_bService
 
 プログラムがサービスとして実行されていることを示すフラグ。
 
@@ -256,11 +256,11 @@ BOOL m_bService;
 
 ### <a name="remarks"></a>解説
 
-サービス EXE をアプリケーション EXE と区別するために使用されます。
+サービス EXE とアプリケーション EXE を区別するために使用します。
 
-##  <a name="m_dwthreadid"></a>CAtlServiceModuleT:: m_dwThreadID
+## <a name="catlservicemoduletm_dwthreadid"></a><a name="m_dwthreadid"></a>サービスサービスモジュール::m_dwThreadID
 
-サービスのスレッド識別子を格納しているメンバー変数。
+サービスのスレッド識別子を格納するメンバー変数。
 
 ```
 DWORD m_dwThreadID;
@@ -268,11 +268,11 @@ DWORD m_dwThreadID;
 
 ### <a name="remarks"></a>解説
 
-この変数には、現在のスレッドのスレッド識別子が格納されます。
+この変数は、現在のスレッドのスレッド ID を格納します。
 
-##  <a name="m_hservicestatus"></a>CAtlServiceModuleT:: m_hServiceStatus
+## <a name="catlservicemoduletm_hservicestatus"></a><a name="m_hservicestatus"></a>サービスモジュール::m_hServiceStatus
 
-現在のサービスの状態情報構造体へのハンドルを格納しているメンバー変数。
+現在のサービスの状態情報構造体へのハンドルを格納するメンバー変数。
 
 ```
 SERVICE_STATUS_HANDLE m_hServiceStatus;
@@ -282,9 +282,9 @@ SERVICE_STATUS_HANDLE m_hServiceStatus;
 
 [SERVICE_STATUS](/windows/win32/api/winsvc/ns-winsvc-service_status)構造体には、サービスに関する情報が含まれています。
 
-##  <a name="m_status"></a>CAtlServiceModuleT:: m_status
+## <a name="catlservicemoduletm_status"></a><a name="m_status"></a>m_status
 
-現在のサービスの状態情報構造を格納しているメンバー変数。
+現在のサービスの状態情報構造体を格納するメンバー変数。
 
 ```
 SERVICE_STATUS m_status;
@@ -294,7 +294,7 @@ SERVICE_STATUS m_status;
 
 [SERVICE_STATUS](/windows/win32/api/winsvc/ns-winsvc-service_status)構造体には、サービスに関する情報が含まれています。
 
-##  <a name="m_szservicename"></a>CAtlServiceModuleT:: m_szServiceName
+## <a name="catlservicemoduletm_szservicename"></a><a name="m_szservicename"></a>サービスモジュール::m_szServiceName
 
 登録するサービスの名前。
 
@@ -304,9 +304,9 @@ TCHAR [256] m_szServiceName;
 
 ### <a name="remarks"></a>解説
 
-サービスの名前を格納する、null で終わる文字列。
+サービスの名前を格納する null で終わる文字列。
 
-##  <a name="oncontinue"></a>CAtlServiceModuleT:: OnContinue
+## <a name="catlservicemoduletoncontinue"></a><a name="oncontinue"></a>サービスモジュール::オンコニュ
 
 サービスを続行するには、このメソッドをオーバーライドします。
 
@@ -314,15 +314,15 @@ TCHAR [256] m_szServiceName;
 void OnContinue() throw();
 ```
 
-##  <a name="oninterrogate"></a>CAtlServiceModuleT:: OnInterrogate
+## <a name="catlservicemoduletoninterrogate"></a><a name="oninterrogate"></a>サービスモジュールT::オンアセアフェデ
 
-サービスを照会するには、このメソッドをオーバーライドします。
+サービスを問い取るために、このメソッドをオーバーライドします。
 
 ```
 void OnInterrogate() throw();
 ```
 
-##  <a name="onpause"></a>CAtlServiceModuleT:: OnPause
+## <a name="catlservicemoduletonpause"></a><a name="onpause"></a>サービスモジュール::オンポーズ
 
 サービスを一時停止するには、このメソッドをオーバーライドします。
 
@@ -330,7 +330,7 @@ void OnInterrogate() throw();
 void OnPause() throw();
 ```
 
-##  <a name="onshutdown"></a>CAtlServiceModuleT:: OnShutdown
+## <a name="catlservicemoduletonshutdown"></a><a name="onshutdown"></a>サービスモジュールT::シャットダウン時
 
 サービスをシャットダウンするには、このメソッドをオーバーライドします。
 
@@ -338,7 +338,7 @@ void OnPause() throw();
 void OnShutdown() throw();
 ```
 
-##  <a name="onstop"></a>CAtlServiceModuleT:: OnStop
+## <a name="catlservicemoduletonstop"></a><a name="onstop"></a>サービスモジュール::オンストップ
 
 サービスを停止するには、このメソッドをオーバーライドします。
 
@@ -346,7 +346,7 @@ void OnShutdown() throw();
 void OnStop() throw();
 ```
 
-##  <a name="onunknownrequest"></a>CAtlServiceModuleT:: OnUnknownRequest
+## <a name="catlservicemoduletonunknownrequest"></a><a name="onunknownrequest"></a>サービスサービスモジュール::オンUnknownリクエスト
 
 サービスに対する不明な要求を処理するには、このメソッドをオーバーライドします。
 
@@ -356,12 +356,12 @@ void OnUnknownRequest(DWORD /* dwOpcode*/) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*dwOpcode*<br/>
+*ドウオプコード*<br/>
 予約済み。
 
-##  <a name="parsecommandline"></a>CAtlServiceModuleT::P arseCommandLine
+## <a name="catlservicemoduletparsecommandline"></a><a name="parsecommandline"></a>サービスモジュールT::Pアルセストライン
 
-コマンドラインを解析し、必要に応じて登録を実行します。
+コマンド ラインを解析し、必要に応じて登録を実行します。
 
 ```
 bool ParseCommandLine(LPCTSTR lpCmdLine, HRESULT* pnRetCode) throw();
@@ -369,23 +369,23 @@ bool ParseCommandLine(LPCTSTR lpCmdLine, HRESULT* pnRetCode) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*lpCmdLine*<br/>
+*ライン*<br/>
 コマンド ライン。
 
-*pnRetCode*<br/>
-登録に対応する HRESULT (行われた場合)。
+*コード*<br/>
+登録に対応する HRESULT (発生した場合)。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は true、コマンドラインで指定された RGS ファイルを登録できなかった場合は false を返します。
+成功した場合は true を返し、コマンド ラインに指定された RG ファイルを登録できなかった場合は false を返します。
 
 ### <a name="remarks"></a>解説
 
-必要に応じて、コマンドラインを解析し、指定された RGS ファイルを登録または登録解除します。 このメソッドは、 [CAtlExeModuleT::P arsecommandline](../../atl/reference/catlexemodulet-class.md#parsecommandline)を呼び出し**て、** と **/UnregServer**を確認します。 引数/**サービス**を追加すると、サービスが登録されます。
+コマンド ラインを解析し、必要に応じて、指定された RGS ファイルを登録または登録解除します。 このメソッドは **、/RegServer**と **/アンレグサーバー**をチェックするために[CAtlExeModuleT::Parse コマンド ライン](../../atl/reference/catlexemodulet-class.md#parsecommandline)を呼び出します。 引数を追加**する -/サービス**は、サービスを登録します。
 
-##  <a name="premessageloop"></a>CAtlServiceModuleT::P 再実行します。
+## <a name="catlservicemoduletpremessageloop"></a><a name="premessageloop"></a>サービスサービスモジュール::Pメッセージループ
 
-このメソッドは、メッセージループを開始する直前に呼び出されます。
+このメソッドは、メッセージ ループに入る直前に呼び出されます。
 
 ```
 HRESULT PreMessageLoop(int nShowCmd) throw();
@@ -393,20 +393,20 @@ HRESULT PreMessageLoop(int nShowCmd) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*nShowCmd*<br/>
-このパラメーターは、 [CAtlExeModuleT::P](../../atl/reference/catlexemodulet-class.md#premessageloop)に渡されます。
+*を表示します。*<br/>
+このパラメーターは[、CAtlExeModuleT::Pメッセージループに渡されます](../../atl/reference/catlexemodulet-class.md#premessageloop)。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
 ### <a name="remarks"></a>解説
 
 サービスのカスタム初期化コードを追加するには、このメソッドをオーバーライドします。
 
-##  <a name="registerappid"></a>CAtlServiceModuleT:: RegisterAppId
+## <a name="catlservicemoduletregisterappid"></a><a name="registerappid"></a>をクリックします。
 
-レジストリにサービスを登録します。
+サービスをレジストリに登録します。
 
 ```
 inline HRESULT RegisterAppId(bool bService = false) throw();
@@ -414,14 +414,14 @@ inline HRESULT RegisterAppId(bool bService = false) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*bService*<br/>
-をサービスとして登録するには、true である必要があります。
+*bサービス*<br/>
+サービスとして登録するには true にする必要があります。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-##  <a name="run"></a>CAtlServiceModuleT:: Run
+## <a name="catlservicemoduletrun"></a><a name="run"></a>実行
 
 サービスを実行します。
 
@@ -431,20 +431,20 @@ HRESULT Run(int nShowCmd = SW_HIDE) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*nShowCmd*<br/>
-ウィンドウの表示方法を指定します。 このパラメーターには、 [WinMain](/windows/win32/api/winbase/nf-winbase-winmain)セクションで説明されている値のいずれかを指定できます。 既定値は SW_HIDE です。
+*を表示します。*<br/>
+ウィンドウの表示方法を指定します。 このパラメーターは[、WinMain](/windows/win32/api/winbase/nf-winbase-winmain)セクションで説明されている値のいずれかです。 既定値は SW_HIDE です。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
 ### <a name="remarks"></a>解説
 
-呼び出された後、`Run` は、 [CAtlServiceModuleT::P remessagCAtlExeModuleT](#premessageloop) [:](../../atl/reference/catlexemodulet-class.md#runmessageloop) [CAtlExeModuleT::P ostmessagop](../../atl/reference/catlexemodulet-class.md#postmessageloop)op を呼び出します。
+呼び出された`Run`後、呼び出し[、CAtlServiceModuleT::Pメッセージループ](#premessageloop)[、CAtlExeModuleT::および](../../atl/reference/catlexemodulet-class.md#runmessageloop)[CAtlExeModuleT::PostMessageLoop](../../atl/reference/catlexemodulet-class.md#postmessageloop)を呼び出します。
 
-##  <a name="servicemain"></a>CAtlServiceModuleT:: ServiceMain
+## <a name="catlservicemoduletservicemain"></a><a name="servicemain"></a>サービスサービスモジュール
 
-このメソッドは、サービスコントロールマネージャーによって呼び出されます。
+このメソッドは、サービス コントロール マネージャによって呼び出されます。
 
 ```
 void ServiceMain(DWORD dwArgc, LPTSTR* lpszArgv) throw();
@@ -452,19 +452,19 @@ void ServiceMain(DWORD dwArgc, LPTSTR* lpszArgv) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*dwArgc*<br/>
-Argc 引数。
+*ドウアーク*<br/>
+引数 argc。
 
 *lpszArgv*<br/>
-Argv 引数。
+引数 argv。
 
 ### <a name="remarks"></a>解説
 
-サービスコントロールマネージャー (SCM) は、コントロールパネルの [サービス] アプリケーションを開いてサービスを選択し、[開始] をクリックすると `ServiceMain` を呼び出します。
+コントロール パネルの [サービス]`ServiceMain`アプリケーションを開き、サービスを選択して [開始] をクリックすると、サービス コントロール マネージャー (SCM) が呼び出されます。
 
-SCM が `ServiceMain`を呼び出した後、サービスは SCM にハンドラー関数を与える必要があります。 この関数を使用すると、SCM はサービスの状態を取得し、特定の命令 (一時停止や停止など) を渡すことができます。 その後、 [CAtlServiceModuleT:: Run](#run)が呼び出され、サービスの主要な作業が実行されます。 `Run` は、サービスが停止するまで継続して実行されます。
+SCM が呼`ServiceMain`び出された後、サービスは SCM にハンドラー関数を与える必要があります。 この機能により、SCM はサービスのステータスを取得し、特定の命令 (一時停止や停止など) を渡すことができます。 その後、[サービス](#run)の主な処理を実行するために呼び出されます。 `Run`サービスが停止するまで実行を継続します。
 
-##  <a name="setservicestatus"></a>CAtlServiceModuleT:: SetServiceStatus
+## <a name="catlservicemoduletsetservicestatus"></a><a name="setservicestatus"></a>サービス状況を設定します。
 
 このメソッドは、サービスの状態を更新します。
 
@@ -474,16 +474,16 @@ void SetServiceStatus(DWORD dwState) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*dwState*<br/>
-新しいステータス。 使用可能な値については、 [SetServiceStatus](/windows/win32/api/winsvc/nf-winsvc-setservicestatus)を参照してください。
+*dwステート*<br/>
+新しいステータス。 可能な値については[、サービスステータス](/windows/win32/api/winsvc/nf-winsvc-setservicestatus)の設定を参照してください。
 
 ### <a name="remarks"></a>解説
 
-サービスのサービスコントロールマネージャーのステータス情報を更新します。 [CAtlServiceModuleT:: Run](#run)、 [CAtlServiceModuleT:: ServiceMain](#servicemain) 、およびその他のハンドラーメソッドによって呼び出されます。 状態は、メンバー変数[CAtlServiceModuleT:: m_status](#m_status)にも格納されます。
+サービス コントロール マネージャのサービスのステータス情報を更新します。 これは[、CAtlServiceModuleT::実行](#run)[、CAtlServiceModuleT::サービスメイン](#servicemain)および他のハンドラーメソッドによって呼び出されます。 ステータスは、メンバー変数[CAtlServiceModuleT::m_status](#m_status)にも格納されます。
 
-##  <a name="start"></a>CAtlServiceModuleT:: Start
+## <a name="catlservicemoduletstart"></a><a name="start"></a>開始
 
-サービスの開始時に `CAtlServiceModuleT::WinMain` によって呼び出されます。
+サービスの`CAtlServiceModuleT::WinMain`開始時に呼び出されます。
 
 ```
 HRESULT Start(int nShowCmd) throw();
@@ -491,20 +491,20 @@ HRESULT Start(int nShowCmd) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*nShowCmd*<br/>
-ウィンドウの表示方法を指定します。 このパラメーターには、 [WinMain](/windows/win32/api/winbase/nf-winbase-winmain)セクションで説明されている値のいずれかを指定できます。
+*を表示します。*<br/>
+ウィンドウの表示方法を指定します。 このパラメーターは[、WinMain](/windows/win32/api/winbase/nf-winbase-winmain)セクションで説明されている値のいずれかです。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
 ### <a name="remarks"></a>解説
 
-[CAtlServiceModuleT:: WinMain](#winmain)メソッドは、登録とインストールの両方を処理します。また、レジストリエントリの削除やモジュールのアンインストールに関連するタスクも行います。 サービスを実行すると、`WinMain` が `Start`を呼び出します。
+[CAtlServiceModuleT::WinMain](#winmain)メソッドは、登録とインストールの両方を処理するだけでなく、レジストリ エントリの削除とモジュールのアンインストールに関連するタスクも処理します。 サービスが実行されると、`WinMain`が`Start`呼び出されます。
 
-##  <a name="uninstall"></a>CAtlServiceModuleT:: Uninstall
+## <a name="catlservicemoduletuninstall"></a><a name="uninstall"></a>をクリックします。
 
-サービスを停止して削除します。
+サービスを停止および削除します。
 
 ```
 BOOL Uninstall() throw();
@@ -512,15 +512,15 @@ BOOL Uninstall() throw();
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は TRUE、失敗した場合は FALSE を返します。
+成功した場合は TRUE を返し、失敗した場合は FALSE を返します。
 
 ### <a name="remarks"></a>解説
 
-サービスの実行を停止し、サービスコントロールマネージャーデータベースから削除します。
+サービスの実行を停止し、サービス コントロール マネージャー データベースから削除します。
 
-##  <a name="unlock"></a>CAtlServiceModuleT:: Unlock
+## <a name="catlservicemoduletunlock"></a><a name="unlock"></a>サービスモジュールT::ロック解除
 
-サービスのロックカウントをデクリメントします。
+サービスのロックカウントを減算します。
 
 ```
 LONG Unlock() throw();
@@ -528,9 +528,9 @@ LONG Unlock() throw();
 
 ### <a name="return-value"></a>戻り値
 
-ロックカウントを返します。これは、診断およびデバッグに便利な場合があります。
+ロックカウントを返します。
 
-##  <a name="unregisterappid"></a>CAtlServiceModuleT:: UnregisterAppId
+## <a name="catlservicemoduletunregisterappid"></a><a name="unregisterappid"></a>を登録解除します。
 
 レジストリからサービスを削除します。
 
@@ -540,9 +540,9 @@ HRESULT UnregisterAppId() throw();
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
-##  <a name="winmain"></a>CAtlServiceModuleT:: WinMain
+## <a name="catlservicemoduletwinmain"></a><a name="winmain"></a>サービスモジュール::ウィンメイン
 
 このメソッドは、サービスを開始するために必要なコードを実装します。
 
@@ -552,8 +552,8 @@ int WinMain(int nShowCmd) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*nShowCmd*<br/>
-ウィンドウの表示方法を指定します。 このパラメーターには、 [WinMain](/windows/win32/api/winbase/nf-winbase-winmain)セクションで説明されている値のいずれかを指定できます。
+*を表示します。*<br/>
+ウィンドウの表示方法を指定します。 このパラメーターは[、WinMain](/windows/win32/api/winbase/nf-winbase-winmain)セクションで説明されている値のいずれかです。
 
 ### <a name="return-value"></a>戻り値
 
@@ -561,9 +561,9 @@ int WinMain(int nShowCmd) throw();
 
 ### <a name="remarks"></a>解説
 
-このメソッドは、( [CAtlServiceModuleT::P arsecommandline](#parsecommandline)を使用して) コマンドラインを処理した後、( [CAtlServiceModuleT:: Start](#start)を使用して) サービスを開始します。
+このメソッドは、コマンド ラインを処理し[(CAtlServiceModuleT::Parse コマンドライン](#parsecommandline)) を処理し、サービスを開始します ( [CAtlServiceModuleT::Start](#start)を使用して )。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[CAtlExeModuleT クラス](../../atl/reference/catlexemodulet-class.md)<br/>
+[クラス](../../atl/reference/catlexemodulet-class.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

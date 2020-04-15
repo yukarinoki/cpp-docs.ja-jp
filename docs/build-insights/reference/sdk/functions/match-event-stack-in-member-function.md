@@ -1,6 +1,6 @@
 ---
-title: MatchEventStackInMemberFunction
-description: C++ビルドインサイト SDK MatchEventStackInMemberFunction 関数リファレンス。
+title: 関数を一致させます。
+description: 関数リファレンスを構築します。
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 2a966ea5209a25a62c08cb0873d0565299a15d27
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 28842a02e7edc2e00266d8c7941798f4ce714ded
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78334368"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81323880"
 ---
-# <a name="matcheventstackinmemberfunction"></a>MatchEventStackInMemberFunction
+# <a name="matcheventstackinmemberfunction"></a>関数を一致させます。
 
 ::: moniker range="<=vs-2015"
 
-Build C++ Insights SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを表示するには、この記事の Visual Studio バージョンセレクターコントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。
+C++ ビルド インサイト SDK は、Visual Studio 2017 以降と互換性があります。 これらのバージョンのドキュメントを参照するには、この記事の Visual Studio**バージョン**セレクター コントロールを Visual Studio 2017 または Visual Studio 2019 に設定します。 このページの目次の上部に表示されます。
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-`MatchEventStackInMemberFunction` 関数は、メンバー関数のパラメーターリストによって記述される特定のイベント階層に対してイベントスタックを照合するために使用されます。 一致する階層は、後続の処理のためにメンバー関数に転送されます。 イベント、イベントスタック、および階層の詳細については、「 [event table](../event-table.md)」を参照してください。
+この`MatchEventStackInMemberFunction`関数は、メンバー関数のパラメーター リストで記述された特定のイベント階層に対してイベント スタックを照合するために使用されます。 一致した階層は、さらに処理するためにメンバー関数に転送されます。 イベント、イベント スタック、および階層の詳細については、[イベント テーブル](../event-table.md)を参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -81,42 +81,42 @@ bool MatchEventStackInMemberFunction(
 
 ### <a name="parameters"></a>パラメーター
 
-*Tinterface*\
-メンバー関数を格納している型。
+*インターフェイス*\
+メンバー関数を含む型。
 
-*Treturn*\
+*Tリターン*\
 メンバー関数の戻り値の型。
 
-*T1*、...、 *T10*\
-照合するイベント階層を記述する型。
+*T1*, .., *T10*\
+一致するイベント階層を記述する型。
 
-*TExtraParams*\
-メンバー関数によって受け入れられる追加パラメーターの型、およびイベント階層型。
+*Tエクストラパラム*\
+メンバー関数によって受け入れられる追加のパラメーターの型、およびイベント階層型。
 
-*TExtraArgs*\
-`MatchEventStackInMemberFunction`に渡された余分な引数の型。
+*Tエクストラアルグ*\
+に渡された追加の引数の`MatchEventStackInMemberFunction`型。
 
-*Eventstack*\
-*T1*によって*T10*によって記述されるイベントの種類の階層と照合するイベントスタック。
+*イベントスタック*\
+T1 から*T10*で記述されたイベント タイプ*T10*階層に一致するイベント スタック。
 
-*Objectptr*\
-*Memberfunc*が呼び出されるオブジェクトへのポインター。
+*オブジェクトPtr*\
+*メンバーFunc*が呼び出されるオブジェクトへのポインター。
 
-*Memberfunc*\
-照合するイベントの種類の階層を記述するメンバー関数。
+*メンバーファンク*\
+一致するイベントの種類の階層を記述するメンバー関数。
 
-*extraArgs*\
-イベントの種類の階層のパラメーターと共に*Memberfunc*に完全に転送される引数。
+*エクストラ引数*\
+イベント型階層パラメーターと共に*memberFunc*に完全に転送される引数。
 
 ### <a name="return-value"></a>戻り値
 
-一致が成功した場合は**true** 、それ以外の場合は**false**の**ブール**値。
+一致が成功した場合は**true、** それ以外の場合は**false**の**ブール**値。
 
 ## <a name="remarks"></a>解説
 
-*Eventstack*の最後のイベントは、一致するイベントの種類の階層の最後のエントリと常に一致します。 イベントの種類の階層内の他のすべての型は、同じ順序で指定されていれば、最後のイベントを除く、 *Eventstack*内の任意の位置と一致させることができます。
+*eventStack*の最後のイベントは、常にイベントタイプ階層内の最後のエントリと照合されます。 イベントタイプ階層内の他のすべてのタイプは、同じ順序である場合、最後のタイプを除く*eventStack*内の任意の位置と一致することができます。
 
-*T1*によって*T10*パラメーターに使用するイベントの種類は、*キャプチャクラス*の一覧から選択されます。 イベントとそれらを照合するために使用できるキャプチャクラスの一覧については、「 [event table](../event-table.md)」を参照してください。
+T1 から*T10* *T10*パラメータに使用するイベント タイプは *、キャプチャ クラス*の一覧から選択されます。 イベントの一覧と、イベントの照合に使用できるキャプチャ クラスについては、[イベント テーブル](../event-table.md)を参照してください。
 
 ## <a name="example"></a>例
 

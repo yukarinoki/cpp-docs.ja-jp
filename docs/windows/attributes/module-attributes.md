@@ -5,20 +5,21 @@ helpviewer_keywords:
 - module attributes
 - attributes [C++/CLI], reference topics
 ms.assetid: 46d135dc-613f-4810-90a4-e155ab8ed91a
-ms.openlocfilehash: c71fd4bf007d1a74d9cf959388fdfe37922c60fc
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 70c6c135f61ef1771acc7e0e6c6ab6398ba16a01
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166745"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81321860"
 ---
 # <a name="module-attributes"></a>モジュール属性
-次の属性は、 [module](module-cpp.md)属性にのみ適用できます。
 
-|Attribute|説明|
+次の属性は[、モジュール](module-cpp.md)属性にのみ適用できます。
+
+|属性|説明|
 |---------------|-----------------|
-|[helpstringdll](helpstringdll.md)|ドキュメント文字列参照 (ローカライズ) を実行するために使用する DLL の名前を指定します。|
+|[typelib](helpstringdll.md)|ドキュメント文字列の参照 (ローカリゼーション) の実行に使用する DLL の名前を指定します。|
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [使用法別の属性](attributes-by-usage.md)

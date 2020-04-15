@@ -1,16 +1,16 @@
 ---
-title: '方法: プロジェクト ファイルを変更することがなく、C++ プロジェクトのプロパティとターゲットを変更します。'
+title: '方法: プロジェクト ファイルを変更せずに C++ プロジェクトのプロパティとターゲットを変更する'
 ms.date: 11/28/2018
 helpviewer_keywords:
 - project properties [C++], modifying outside project file
-ms.openlocfilehash: ad527d8ee69a1786be7d325571f9c9ac4f9a8574
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 72107b572e35f222c0b03959e0edd2d23bd0130a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273340"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81328456"
 ---
-# <a name="how-to-modify-c-project-properties-and-targets-without-changing-the-project-file"></a>方法: プロジェクト ファイルを変更することがなく、C++ プロジェクトのプロパティとターゲットを変更します。
+# <a name="how-to-modify-c-project-properties-and-targets-without-changing-the-project-file"></a>方法: プロジェクト ファイルを変更せずに C++ プロジェクトのプロパティとターゲットを変更する
 
 プロジェクト ファイルを変更することなく、MSBuild のコマンド プロンプトからプロジェクトのプロパティとターゲットをオーバーライドできます。 これは、一時的に、またはときどき一部のプロパティを適用する場合に便利です。 MSBuild のある程度の知識が必要です。 詳しくは、「[MSBuild](https://docs.microsoft.com/visualstudio/msbuild/msbuild)」をご覧ください。
 

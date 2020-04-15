@@ -1,31 +1,31 @@
 ---
-title: Windows メッセージに関するマクロ
+title: ウィンドウズメッセージマクロ
 ms.date: 11/04/2016
 f1_keywords:
 - atlbase/ATL::WM_FORWARDMSG
 ms.assetid: 63abd22c-372d-4148-bb04-c605950ae64f
-ms.openlocfilehash: 7bb5e2fa265c3a5dcabcc16d8343d5b86a4aaf42
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a5a6d45c64d6123128ae362c1ef5643392439f41
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62275926"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81329410"
 ---
-# <a name="windows-messages-macros"></a>Windows メッセージに関するマクロ
+# <a name="windows-messages-macros"></a>ウィンドウズメッセージマクロ
 
-このマクロは、ウィンドウ メッセージを転送します。
+このマクロはウィンドウ メッセージを転送します。
 
 |||
 |-|-|
-|[WM_FORWARDMSG](#wm_forwardmsg)|処理するための別のウィンドウのウィンドウで受信メッセージの転送を使用します。|
+|[WM_FORWARDMSG](#wm_forwardmsg)|ウィンドウが受信したメッセージを別のウィンドウに転送して処理するために使用します。|
 
 ## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlbase.h
 
-##  <a name="wm_forwardmsg"></a>  WM_FORWARDMSG
+## <a name="wm_forwardmsg"></a><a name="wm_forwardmsg"></a>WM_FORWARDMSG
 
-このマクロは、処理のための別のウィンドウのウィンドウで受信したメッセージを転送します。
+このマクロは、ウィンドウが受信したメッセージを別のウィンドウに転送して処理します。
 
 ```
 WM_FORWARDMSG
@@ -33,16 +33,16 @@ WM_FORWARDMSG
 
 ### <a name="return-value"></a>戻り値
 
-0 以外の場合、メッセージが処理された場合しない場合は 0。
+メッセージが処理された場合は 0 以外、処理されない場合は 0 以外の値を返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-処理のための別のウィンドウのウィンドウで受信したメッセージを転送するのに WM_FORWARDMSG を使用します。 LPARAM および WPARAM パラメーターは、次のように使用されます。
+WM_FORWARDMSGを使用して、ウィンドウが受信したメッセージを別のウィンドウに転送して処理します。 LPARAM および WPARAM パラメーターは、次のように使用されます。
 
 |パラメーター|使用法|
 |---------------|-----------|
-|WPARAM|ユーザーによって定義されたデータ|
-|LPARAM|ポインターを`MSG`メッセージに関する情報を含む構造体|
+|Wparam|ユーザーが定義するデータ|
+|Lparam|メッセージに関する`MSG`情報を含む構造体へのポインター|
 
 ### <a name="example"></a>例
 
@@ -52,4 +52,4 @@ WM_FORWARDMSG
 
 ## <a name="see-also"></a>関連項目
 
-[[マクロ]](../../atl/reference/atl-macros.md)
+[マクロ](../../atl/reference/atl-macros.md)

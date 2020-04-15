@@ -17,48 +17,48 @@ f1_keywords:
 helpviewer_keywords:
 - RegistryDataExchange function, global functions
 ms.assetid: d58b8a4e-975c-4417-8b34-d3c847f679b3
-ms.openlocfilehash: c5fdaceb47b6cd09dd9d66f26af1337a8dc6bbae
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 69df927ddd04c19d10703854aa8c8948894309d1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422950"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81326087"
 ---
 # <a name="registry-and-typelib-global-functions"></a>レジストリとタイプ ライブラリに関するグローバル関数
 
-これらの関数は、タイプライブラリの読み込みと登録をサポートしています。
+これらの関数は、タイプ ライブラリの読み込みと登録をサポートします。
 
 > [!IMPORTANT]
->  次の表に示す関数は、Windows ランタイムで実行するアプリケーションでは使用できません。
+> 次の表に示す関数は、Windows ランタイムで実行されるアプリケーションでは使用できません。
 
 |||
 |-|-|
-|[AfxRegCreateKey](#afxregcreatekey)|指定されたレジストリキーを作成します。|
-|[AfxRegDeleteKey](#afxregdeletekey)|指定されたレジストリキーを削除します。|
-|[AfxRegisterPreviewHandler](#afxregisterpreviewhandler)|プレビューハンドラーを登録するヘルパー。|
-|[AfxUnregisterPreviewHandler](#afxunregisterpreviewhandler)| プレビューハンドラーの登録を解除するヘルパー。 |
+|[AfxRegCreateKey](#afxregcreatekey)|指定したレジストリ キーを作成します。|
+|[AfxRegDeleteKey](#afxregdeletekey)|指定したレジストリ キーを削除します。|
+|[AfxRegisterPreviewHandler](#afxregisterpreviewhandler)|プレビュー ハンドラを登録するヘルパー。|
+|[AfxUnレジスタプレビューハンドラ](#afxunregisterpreviewhandler)| プレビュー ハンドラの登録を解除するヘルパー。 |
 |[AtlRegisterTypeLib](#atlregistertypelib)|この関数は、タイプ ライブラリを登録するために呼び出されます。|
-|[AtlUnRegisterTypeLib](#atlunregistertypelib)|この関数は、タイプライブラリの登録を解除するために呼び出されます。|
-|[AfxRegOpenKey](#afxregopenkey)|指定されたレジストリキーを開きます。|
-|[AfxRegOpenKeyEx](#afxregopenkeyex)|指定されたレジストリキーを開きます。|
+|[AtlUnRegisterTypeLib](#atlunregistertypelib)|この関数は、タイプ ライブラリの登録を解除するために呼び出されます。|
+|[AfxRegOpenKey](#afxregopenkey)|指定したレジストリ キーを開きます。|
+|[AfxRegOpenKeyEx](#afxregopenkeyex)|指定したレジストリ キーを開きます。|
 |[AtlLoadTypeLib](#atlloadtypelib)|この関数は、タイプ ライブラリを読み込むために呼び出されます。|
 |[AtlUpdateRegistryFromResourceD](#atlupdateregistryfromresourced)|この関数は、提供されたリソースのレジストリを更新するために呼び出されます。|
-|[RegistryDataExchange](#registrydataexchange)|システム レジストリのデータの読み取り/書き込みを行います。 [レジストリデータ交換マクロ](../../atl/reference/registry-data-exchange-macros.md)によって呼び出されます。|
+|[RegistryDataExchange](#registrydataexchange)|システム レジストリのデータの読み取り/書き込みを行います。 [レジストリ データ エクスチェンジ マクロ](../../atl/reference/registry-data-exchange-macros.md)によって呼び出されます。|
 
 これらの関数は、プログラムが情報を格納するために使用するレジストリ内のノードを制御します。
 
 |||
 |-|-|
-|[AtlGetPerUserRegistration](#atlgetperuserregistration)|アプリケーションがレジストリアクセスを**HKEY_CURRENT_USER** ( **HKCU**) ノードにリダイレクトするかどうかを取得します。|
-|[AtlSetPerUserRegistration](#atlsetperuserregistration)|アプリケーションがレジストリアクセスを**HKEY_CURRENT_USER** ( **HKCU**) ノードにリダイレクトするかどうかを設定します。|
+|[AtlGetPerUserRegistration](#atlgetperuserregistration)|アプリケーションがレジストリ へのアクセスを**HKEY_CURRENT_USER** ( **HKCU**) ノードにリダイレクトするかどうかを取得します。|
+|[AtlSetPerUserRegistration](#atlsetperuserregistration)|アプリケーションがレジストリへのアクセスを**HKEY_CURRENT_USER** ( **HKCU**) ノードにリダイレクトするかどうかを設定します。|
 
 ### <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlbase. h
+**ヘッダー:** atlbase.h
 
-## <a name="atlgetperuserregistration"></a>AtlGetPerUserRegistration
+## <a name="atlgetperuserregistration"></a><a name="atlgetperuserregistration"></a>ユーザー登録
 
-アプリケーションがレジストリアクセスを**HKEY_CURRENT_USER** (**HKCU**) ノードにリダイレクトするかどうかを判断するには、この関数を使用します。
+この関数を使用して、アプリケーションがレジストリアクセスを**HKEY_CURRENT_USER** (**HKCU**) ノードにリダイレクトするかどうかを決定します。
 
 ### <a name="syntax"></a>構文
 
@@ -68,26 +68,26 @@ ATLINLINE ATLAPI AtlGetPerUserRegistration(bool* pEnabled);
 
 ### <a name="parameters"></a>パラメーター
 
-*pEnabled*<br/>
-入出力TRUE は、レジストリ情報が**HKCU**ノードに送られることを示します。FALSE は、アプリケーションがレジストリ情報を既定のノードに書き込むことを示します。 既定のノードは**HKEY_CLASSES_ROOT** (**HKCR**) です。
+*p 有効*<br/>
+[アウト]TRUE は、レジストリ情報が**HKCU**ノードに送信されることを示します。FALSE は、アプリケーションがレジストリ情報を既定のノードに書き込むということを示します。 デフォルトのノードは**HKEY_CLASSES_ROOT** (**HKCR**) です。
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが正常に実行された場合は S_OK。それ以外の場合は、エラーが発生した場合は HRESULT エラーコード。
+メソッドが成功した場合はS_OKし、エラーが発生した場合は HRESULT エラー コードを返します。
 
 ### <a name="remarks"></a>解説
 
-レジストリリダイレクトは、既定では有効になっていません。 このオプションを有効にすると、レジストリへのアクセスは**HKEY_CURRENT_USER の \ ソフトウェアクラス**にリダイレクトされます。
+レジストリ リダイレクトは既定では有効になっていません。 このオプションを有効にすると、レジストリへのアクセスは**HKEY_CURRENT_USER\ソフトウェア\クラス**にリダイレクトされます。
 
-リダイレクトはグローバルではありません。 このレジストリのリダイレクトによって影響を受けるのは、MFC フレームワークと ATL フレームワークだけです。
+リダイレクトはグローバルではありません。 このレジストリ リダイレクトの影響を受けるのは、MFC および ATL フレームワークだけです。
 
 ### <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlbase. h
+**ヘッダー:** atlbase.h
 
-## <a name="afxregcreatekey"></a>AfxRegCreateKey
+## <a name="afxregcreatekey"></a><a name="afxregcreatekey"></a>キーを作成します。
 
-指定されたレジストリキーを作成します。
+指定したレジストリ キーを作成します。
 
 ### <a name="syntax"></a>構文
 
@@ -97,29 +97,29 @@ LONG AFXAPI AfxRegCreateKey(HKEY hKey, LPCTSTR lpSubKey, PHKEY phkResult, CAtlTr
 
 ### <a name="parameters"></a>パラメーター
 
-*hKey*<br/>
-開いているレジストリキーを処理するハンドル。
+*Hkey*<br/>
+開いているレジストリ キーへのハンドル。
 
-*lpSubKey*<br/>
-この関数が開いたり作成したりするキーの名前。
+*サブキー*<br/>
+この関数が開くキーまたは作成するキーの名前。
 
-*phkResult*<br/>
+*フク結果*<br/>
 開かれたキーまたは作成されたキーへのハンドルを受け取る変数へのポインター。
 
-*pTM*<br/>
-`CAtlTransactionManager` オブジェクトへのポインター。
+*Ptm*<br/>
+`CAtlTransactionManager`オブジェクトへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-関数が成功した場合、戻り値は ERROR_SUCCESS になります。 関数が失敗した場合、戻り値は Winerror.h で定義されている0以外のエラーコードになります。
+関数が成功した場合、戻り値はERROR_SUCCESS。 関数が失敗した場合、戻り値は Winerror.h で定義された 0 以外のエラー コードです。
 
 ### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxpriv.h
 
-## <a name="afxregdeletekey"></a>AfxRegDeleteKey
+## <a name="afxregdeletekey"></a><a name="afxregdeletekey"></a>アックスレグレガネキー
 
-指定されたレジストリキーを削除します。
+指定したレジストリ キーを削除します。
 
 ### <a name="syntax"></a>構文
 
@@ -129,18 +129,18 @@ LONG AFXAPI AfxRegDeleteKey(HKEY hKey, LPCTSTR lpSubKey, CAtlTransactionManager*
 
 ### <a name="parameters"></a>パラメーター
 
-*hKey*<br/>
-開いているレジストリキーを処理するハンドル。
+*Hkey*<br/>
+開いているレジストリ キーへのハンドル。
 
-*lpSubKey*<br/>
+*サブキー*<br/>
 削除するキーの名前。
 
-*pTM*<br/>
-`CAtlTransactionManager` オブジェクトへのポインター。
+*Ptm*<br/>
+`CAtlTransactionManager`オブジェクトへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-関数が成功した場合、戻り値は ERROR_SUCCESS になります。 関数が失敗した場合、戻り値は Winerror.h で定義されている0以外のエラーコードになります。
+関数が成功した場合、戻り値はERROR_SUCCESS。 関数が失敗した場合、戻り値は Winerror.h で定義された 0 以外のエラー コードです。
 
 ### <a name="requirements"></a>必要条件
 
@@ -148,7 +148,7 @@ LONG AFXAPI AfxRegDeleteKey(HKEY hKey, LPCTSTR lpSubKey, CAtlTransactionManager*
 
 ## <a name="afxregisterpreviewhandler"></a>
 
-プレビューハンドラーを登録するヘルパー。
+プレビュー ハンドラを登録するヘルパー。
 
 ### <a name="syntax"></a>構文
 
@@ -158,20 +158,20 @@ BOOL AFXAPI AfxRegisterPreviewHandler(LPCTSTR lpszCLSID, LPCTSTR lpszShortTypeNa
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszCLSID*<br/>
+*を行う*<br/>
 ハンドラーの CLSID を指定します。
 
-*Lpsz短い Typename*<br/>
+*名前を指定します。*<br/>
 ハンドラーの ProgID を指定します。
 
-*lpszFilterExt*<br/>
+*を使用します。*<br/>
 このハンドラーに登録されているファイル拡張子を指定します。
 
 ### <a name="requirements"></a>必要条件
 
 **ヘッダー :** afxdisp.h
 
-##  <a name="atlregistertypelib"></a>AtlRegisterTypeLib
+## <a name="atlregistertypelib"></a><a name="atlregistertypelib"></a>を使用します。
 
 この関数は、タイプ ライブラリを登録するために呼び出されます。
 
@@ -181,27 +181,27 @@ ATLAPI AtlRegisterTypeLib(HINSTANCE hInstTypeLib, LPCOLESTR lpszIndex);
 
 ### <a name="parameters"></a>パラメーター
 
-*hInstTypeLib*<br/>
-モジュールインスタンスへのハンドル。
+*を使用します。*<br/>
+モジュール インスタンスへのハンドル。
 
-*lpszIndex*<br/>
-"\\\N" 形式の文字列。ここで、N はタイプライブラリリソースの整数インデックスです。 インデックスが不要な場合は NULL を指定できます。
+*インデックスを使用します。*<br/>
+"\N"\\形式の文字列は、N はタイプ ライブラリ リソースの整数インデックスです。 インデックスが不要な場合は NULL を指定できます。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
 ### <a name="remarks"></a>解説
 
-このヘルパー関数は、 [AtlComModuleUnregisterServer](server-registration-global-functions.md#atlcommoduleunregisterserver)と[CAtlComModule:: RegisterTypeLib](../../atl/reference/catlcommodule-class.md#registertypelib)によって使用されます。
+このヘルパー関数は、[アトルコムモジュールアンレジスタサーバー](server-registration-global-functions.md#atlcommoduleunregisterserver)と[CAtlComModule::レジスタタイプライブラリ](../../atl/reference/catlcommodule-class.md#registertypelib)によって利用されます。
 
 ### <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlbase. h
+**ヘッダー:** atlbase.h
 
-## <a name="afxregopenkey"></a>AfxRegOpenKey
+## <a name="afxregopenkey"></a><a name="afxregopenkey"></a>キーを開く
 
-指定されたレジストリキーを開きます。
+指定したレジストリ キーを開きます。
 
 ### <a name="syntax"></a>構文
 
@@ -211,29 +211,29 @@ LONG AFXAPI AfxRegOpenKey(HKEY hKey, LPCTSTR lpSubKey, PHKEY phkResult, CAtlTran
 
 ### <a name="parameters"></a>パラメーター
 
-*hKey*<br/>
-開いているレジストリキーを処理するハンドル。
+*Hkey*<br/>
+開いているレジストリ キーへのハンドル。
 
-*lpSubKey*<br/>
-この関数が開いたり作成したりするキーの名前。
+*サブキー*<br/>
+この関数が開くキーまたは作成するキーの名前。
 
-*phkResult*<br/>
+*フク結果*<br/>
 作成されたキーへのハンドルを受け取る変数へのポインター。
 
-*pTM*<br/>
-`CAtlTransactionManager` オブジェクトへのポインター。
+*Ptm*<br/>
+`CAtlTransactionManager`オブジェクトへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-関数が成功した場合、戻り値は ERROR_SUCCESS になります。 関数が失敗した場合、戻り値は Winerror.h で定義されている0以外のエラーコードになります。
+関数が成功した場合、戻り値はERROR_SUCCESS。 関数が失敗した場合、戻り値は Winerror.h で定義された 0 以外のエラー コードです。
 
 ### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxpriv.h
 
-## <a name="afxregopenkeyex"></a>AfxRegOpenKeyEx
+## <a name="afxregopenkeyex"></a><a name="afxregopenkeyex"></a>キーエックス
 
-指定されたレジストリキーを開きます。
+指定したレジストリ キーを開きます。
 
 ### <a name="syntax"></a>構文
 
@@ -243,35 +243,35 @@ LONG AFXAPI AfxRegOpenKeyEx(HKEY hKey, LPCTSTR lpSubKey, DWORD ulOptions, REGSAM
 
 ### <a name="parameters"></a>パラメーター
 
-*hKey*<br/>
-開いているレジストリキーを処理するハンドル。
+*Hkey*<br/>
+開いているレジストリ キーへのハンドル。
 
-*lpSubKey*<br/>
-この関数が開いたり作成したりするキーの名前。
+*サブキー*<br/>
+この関数が開くキーまたは作成するキーの名前。
 
-*ulOptions*<br/>
-このパラメーターは予約されており、ゼロにする必要があります。
+*ウルオプション*<br/>
+このパラメーターは予約済みで、0 である必要があります。
 
-*samDesired*<br/>
+*サム必要に応じて*<br/>
 キーに対する必要なアクセス権を指定するマスク。
 
-*phkResult*<br/>
-開かれているキーへのハンドルを受け取る変数へのポインター。
+*フク結果*<br/>
+開いているキーへのハンドルを受け取る変数へのポインター。
 
-*pTM*<br/>
-`CAtlTransactionManager` オブジェクトへのポインター。
+*Ptm*<br/>
+`CAtlTransactionManager`オブジェクトへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-関数が成功した場合、戻り値は ERROR_SUCCESS になります。 関数が失敗した場合、戻り値は Winerror.h で定義されている0以外のエラーコードになります。
+関数が成功した場合、戻り値はERROR_SUCCESS。 関数が失敗した場合、戻り値は Winerror.h で定義された 0 以外のエラー コードです。
 
 ### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxpriv.h
 
-## <a name="afxunregisterpreviewhandler"></a>AfxUnregisterPreviewHandler
+## <a name="afxunregisterpreviewhandler"></a><a name="afxunregisterpreviewhandler"></a>AfxUnレジスタプレビューハンドラ
 
-プレビューハンドラーの登録を解除するヘルパー。
+プレビュー ハンドラの登録を解除するヘルパー。
 
 ### <a name="syntax"></a>構文
 
@@ -281,16 +281,16 @@ BOOL AFXAPI AfxUnRegisterPreviewHandler(LPCTSTR lpszCLSID);
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszCLSID*<br/>
-登録を解除するハンドラーの CLSID を指定します。
+*を行う*<br/>
+登録解除するハンドラの CLSID を指定します。
 
 ### <a name="requirements"></a>必要条件
 
 **ヘッダー :** afxdisp.h
 
-## <a name="atlsetperuserregistration"></a>AtlSetPerUserRegistration
+## <a name="atlsetperuserregistration"></a><a name="atlsetperuserregistration"></a>ユーザー登録
 
-アプリケーションがレジストリアクセスを**HKEY_CURRENT_USER** (**HKCU**) ノードにリダイレクトするかどうかを設定します。
+アプリケーションがレジストリへのアクセスを**HKEY_CURRENT_USER** (**HKCU**) ノードにリダイレクトするかどうかを設定します。
 
 ### <a name="syntax"></a>構文
 
@@ -300,24 +300,24 @@ ATLINLINE ATLAPI AtlSetPerUserRegistration(bool bEnable);
 
 ### <a name="parameters"></a>パラメーター
 
-*bEnable*<br/>
-からTRUE は、レジストリ情報が**HKCU**ノードに送られることを示します。FALSE は、アプリケーションがレジストリ情報を既定のノードに書き込むことを示します。 既定のノードは**HKEY_CLASSES_ROOT** (**HKCR**) です。
+*b 有効にする*<br/>
+[in]TRUE は、レジストリ情報が**HKCU**ノードに送信されることを示します。FALSE は、アプリケーションがレジストリ情報を既定のノードに書き込むということを示します。 デフォルトのノードは**HKEY_CLASSES_ROOT** (**HKCR**) です。
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが正常に実行された場合は S_OK。それ以外の場合は、エラーが発生した場合は HRESULT エラーコード。
+メソッドが成功した場合はS_OKし、エラーが発生した場合は HRESULT エラー コードを返します。
 
 ### <a name="remarks"></a>解説
 
-レジストリリダイレクトは、既定では有効になっていません。 このオプションを有効にすると、レジストリへのアクセスは**HKEY_CURRENT_USER の \ ソフトウェアクラス**にリダイレクトされます。
+レジストリ リダイレクトは既定では有効になっていません。 このオプションを有効にすると、レジストリへのアクセスは**HKEY_CURRENT_USER\ソフトウェア\クラス**にリダイレクトされます。
 
-リダイレクトはグローバルではありません。 このレジストリのリダイレクトによって影響を受けるのは、MFC フレームワークと ATL フレームワークだけです。
+リダイレクトはグローバルではありません。 このレジストリ リダイレクトの影響を受けるのは、MFC および ATL フレームワークだけです。
 
 ### <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlbase. h
+**ヘッダー:** atlbase.h
 
-##  <a name="atlunregistertypelib"></a>AtlUnRegisterTypeLib
+## <a name="atlunregistertypelib"></a><a name="atlunregistertypelib"></a>アトルンレジスタタイプリブ
 
 この関数は、タイプ ライブラリの登録を解除するために呼び出されます。
 
@@ -331,25 +331,25 @@ ATLAPI AtlUnRegisterTypeLib(
 
 ### <a name="parameters"></a>パラメーター
 
-*hInstTypeLib*<br/>
-モジュールインスタンスへのハンドル。
+*を使用します。*<br/>
+モジュール インスタンスへのハンドル。
 
-*lpszIndex*<br/>
-"\\\N" 形式の文字列。ここで、N はタイプライブラリリソースの整数インデックスです。 インデックスが不要な場合は NULL を指定できます。
+*インデックスを使用します。*<br/>
+"\N"\\形式の文字列は、N はタイプ ライブラリ リソースの整数インデックスです。 インデックスが不要な場合は NULL を指定できます。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
 ### <a name="remarks"></a>解説
 
-このヘルパー関数は、 [CAtlComModule:: UnRegisterTypeLib](../../atl/reference/catlcommodule-class.md#unregistertypelib)と[AtlComModuleUnregisterServer](server-registration-global-functions.md#atlcommoduleunregisterserver)によって使用されます。
+このヘルパー関数は[、CAtlCom モジュールによって利用されます::アンレジスタタイプリブ](../../atl/reference/catlcommodule-class.md#unregistertypelib)と[アトルコムモジュールアンレジスタサーバー](server-registration-global-functions.md#atlcommoduleunregisterserver).
 
 ### <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlbase. h
+**ヘッダー:** atlbase.h
 
-##  <a name="atlloadtypelib"></a>AtlLoadTypeLib
+## <a name="atlloadtypelib"></a><a name="atlloadtypelib"></a>を使用します。
 
 この関数は、タイプ ライブラリを読み込むために呼び出されます。
 
@@ -365,27 +365,27 @@ ATLINLINE ATLAPI AtlLoadTypeLib(
 
 ### <a name="parameters"></a>パラメーター
 
-*hInstTypeLib*<br/>
-タイプライブラリに関連付けられているモジュールへのハンドル。
+*を使用します。*<br/>
+タイプ ライブラリに関連付けられているモジュールへのハンドル。
 
-*lpszIndex*<br/>
-"\\\N" 形式の文字列。ここで、N はタイプライブラリリソースの整数インデックスです。 インデックスが不要な場合は NULL を指定できます。
+*インデックスを使用します。*<br/>
+"\N"\\形式の文字列は、N はタイプ ライブラリ リソースの整数インデックスです。 インデックスが不要な場合は NULL を指定できます。
 
-*pbstrPath*<br/>
-正常に返された場合は、タイプライブラリに関連付けられているモジュールの完全パスを格納します。
+*パス*<br/>
+正常に戻った場合は、タイプ ライブラリに関連付けられたモジュールの完全パスを格納します。
 
-*ppTypeLib*<br/>
-正常に返された場合は、読み込まれたタイプライブラリへのポインターへのポインターを格納します。
+*をクリックします。*<br/>
+正常に戻った場合は、読み込まれたタイプ ライブラリへのポインターへのポインターを格納します。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
 ### <a name="remarks"></a>解説
 
-このヘルパー関数は、 [AtlRegisterTypeLib](#atlregistertypelib)と[AtlUnRegisterTypeLib](#atlunregistertypelib)によって使用されます。
+このヘルパー関数は、[アトルレジスタタイプリブ](#atlregistertypelib)と[アトルウンレジスタタイプリブ](#atlunregistertypelib)によって使用されます。
 
-##  <a name="atlupdateregistryfromresourced"></a>AtlUpdateRegistryFromResourceD
+## <a name="atlupdateregistryfromresourced"></a><a name="atlupdateregistryfromresourced"></a>リソースから更新プログラムを作成します。
 
 この関数は Visual Studio 2013 で非推奨とされ、Visual Studio 2015 で削除されます。
 
@@ -393,7 +393,7 @@ ATLINLINE ATLAPI AtlLoadTypeLib(
 <removed>
 ```
 
-##  <a name="registrydataexchange"></a>RegistryDataExchange
+## <a name="registrydataexchange"></a><a name="registrydataexchange"></a>レジストリデータエクスチェンジ
 
 システム レジストリのデータの読み取り/書き込みを行います。
 
@@ -408,36 +408,36 @@ HRESULT RegistryDataExchange(
 
 ### <a name="parameters"></a>パラメーター
 
-*未満*<br/>
+*Pt*<br/>
 現在のオブジェクトへのポインター。
 
-*rdxOp*<br/>
-関数が実行する必要がある操作を示す列挙値。 使用できる値については、「解説」の表を参照してください。
+*をクリックします。*<br/>
+関数が実行する操作を示す列挙値。 許可される値については、「解説」の表を参照してください。
 
-*pItem*<br/>
-レジストリから読み取られる、またはレジストリに書き込まれるデータへのポインター。 データは、レジストリから削除するキーを表すこともできます。 既定値は NULL です。
+*Pitem*<br/>
+レジストリから読み取る、またはレジストリに書き込むデータへのポインター。 データは、レジストリから削除するキーを表すこともできます。 既定値は NULL です。
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は S_OK を返し、失敗した場合はエラー HRESULT を返します。
+成功時にS_OKを返すか、失敗した場合に HRESULT エラーを返します。
 
 ### <a name="remarks"></a>解説
 
-マクロ[BEGIN_RDX_MAP](registry-data-exchange-macros.md#begin_rdx_map)および[END_RDX_MAP](registry-data-exchange-macros.md#end_rdx_map) 、`RegistryDataExchange`を呼び出す関数に展開されます。
+マクロ[はBEGIN_RDX_MAP](registry-data-exchange-macros.md#begin_rdx_map)され[、END_RDX_MAP](registry-data-exchange-macros.md#end_rdx_map)を呼び出`RegistryDataExchange`す関数に展開されます。
 
-関数によって実行される操作を示す列挙値には、次の表を参照してください。
+関数が実行する操作を示す列挙値を次の表に示します。
 
-|列挙値|操作|
+|列挙値|Operation|
 |----------------|---------------|
-|eReadFromReg|レジストリからデータを読み取ります。|
-|eWriteToReg|レジストリにデータを書き込みます。|
-|eDeleteFromReg|レジストリからキーを削除します。|
+|を読み取る|レジストリからデータを読み取ります。|
+|を書き込む|レジストリにデータを書き込みます。|
+|を使用します。|レジストリからキーを削除します。|
 
 ### <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlbase. h
+**ヘッダー:** atlbase.h
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [関数](atl-functions.md)<br/>
-[レジストリ データ エクスチェンジに関するマクロ](registry-data-exchange-macros.md)
+[レジストリ データエクスチェンジ マクロ](registry-data-exchange-macros.md)

@@ -1,5 +1,5 @@
 ---
-title: CAutoPtrArray クラス
+title: クラスを指定します。
 ms.date: 11/04/2016
 f1_keywords:
 - CAutoPtrArray
@@ -8,19 +8,19 @@ f1_keywords:
 helpviewer_keywords:
 - CAutoPtrArray class
 ms.assetid: 880a70da-8c81-4427-8ac6-49aa8d424244
-ms.openlocfilehash: beb0184a9945990b8d92efe03d4f54baa76ca380
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 93fc5cfea4ea655e57e785ca234df59fe10d6570
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62246812"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81318891"
 ---
-# <a name="cautoptrarray-class"></a>CAutoPtrArray クラス
+# <a name="cautoptrarray-class"></a>クラスを指定します。
 
 このクラスは、スマート ポインターの配列を構築するときに役立つメソッドを提供します。
 
 > [!IMPORTANT]
->  このクラスとそのメンバーは、Windows ランタイムで実行するアプリケーションでは使用できません。
+> このクラスとそのメンバーは、Windows ランタイムで実行されるアプリケーションでは使用できません。
 
 ## <a name="syntax"></a>構文
 
@@ -42,13 +42,13 @@ class CAutoPtrArray : public CAtlArray<
 
 |名前|説明|
 |----------|-----------------|
-|[CAutoPtrArray::CAutoPtrArray](#cautoptrarray)|コンストラクターです。|
+|[を指定します。](#cautoptrarray)|コンストラクターです。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-このクラスは、コンス トラクターを提供し、メソッドからの派生[CAtlArray](../../atl/reference/catlarray-class.md)と[CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md)スマート ポインターを格納するコレクション クラスのオブジェクトの作成を支援します。
+このクラスは、コンストラクターを提供し、スマート ポインターを格納するコレクション クラス オブジェクトの作成を支援するために[、CAtlArray](../../atl/reference/catlarray-class.md)および[CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md)からメソッドを派生させます。
 
-詳細については、次を参照してください。 [ATL コレクション クラス](../../atl/atl-collection-classes.md)します。
+詳細については、「 [ATL コレクション クラス](../../atl/atl-collection-classes.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -60,7 +60,7 @@ class CAutoPtrArray : public CAtlArray<
 
 **ヘッダー:** atlcoll.h
 
-##  <a name="cautoptrarray"></a>  CAutoPtrArray::CAutoPtrArray
+## <a name="cautoptrarraycautoptrarray"></a><a name="cautoptrarray"></a>を指定します。
 
 コンストラクターです。
 
@@ -68,13 +68,13 @@ class CAutoPtrArray : public CAtlArray<
 CAutoPtrArray() throw();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-スマート ポインターの配列を初期化します。
+スマート ポインター配列を初期化します。
 
 ## <a name="see-also"></a>関連項目
 
-[CAtlArray クラス](../../atl/reference/catlarray-class.md)<br/>
-[CAutoPtrElementTraits クラス](../../atl/reference/cautoptrelementtraits-class.md)<br/>
-[CAutoPtrList クラス](../../atl/reference/cautoptrlist-class.md)<br/>
+[クラス](../../atl/reference/catlarray-class.md)<br/>
+[クラスを示します。](../../atl/reference/cautoptrelementtraits-class.md)<br/>
+[クラスを実行します。](../../atl/reference/cautoptrlist-class.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)
