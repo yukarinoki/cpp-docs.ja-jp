@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CMFCRibbonCheckBox [MFC], OnDrawOnList
 - CMFCRibbonCheckBox [MFC], SetACCData
 ms.assetid: 3a6c3891-c8d1-4af0-b954-7b9ab048782a
-ms.openlocfilehash: a8048f860a2cce75c37a065cfdd2751141054f1b
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 089c8056afebef31ff98a435bf145566ae64fe1e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79446232"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375250"
 ---
 # <a name="cmfcribboncheckbox-class"></a>CMFCRibbonCheckBox クラス
 
@@ -45,24 +45,24 @@ class CMFCRibbonCheckBox : public CMFCRibbonButton
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
 |[CMFCRibbonCheckBox::CMFCRibbonCheckBox](#cmfcribboncheckbox)|コンストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|説明|
+|名前|説明|
 |----------|-----------------|
-|[CMFCRibbonCheckBox:: GetCompactSize](#getcompactsize)|( [CMFCRibbonButton:: GetCompactSize](../../mfc/reference/cmfcribbonbutton-class.md#getcompactsize)をオーバーライドします。)|
-|[CMFCRibbonCheckBox:: GetIntermediateSize](#getintermediatesize)|( [CMFCRibbonButton:: GetIntermediateSize](../../mfc/reference/cmfcribbonbutton-class.md#getintermediatesize)をオーバーライドします。)|
-|[CMFCRibbonCheckBox:: GetRegularSize](#getregularsize)|( [CMFCRibbonButton:: GetRegularSize](../../mfc/reference/cmfcribbonbutton-class.md#getregularsize)をオーバーライドします。)|
-|[CMFCRibbonCheckBox::IsDrawTooltipImage](#isdrawtooltipimage)|(`CMFCRibbonButton::IsDrawTooltipImage` をオーバーライドします。)|
-|[CMFCRibbonCheckBox:: OnDraw](#ondraw)|( [CMFCRibbonButton:: OnDraw](../../mfc/reference/cmfcribbonbutton-class.md#ondraw)をオーバーライドします)。|
-|[CMFCRibbonCheckBox:: OnDrawMenuImage](#ondrawmenuimage)|( [CMFCRibbonBaseElement:: OnDrawMenuImage](../../mfc/reference/cmfcribbonbaseelement-class.md#ondrawmenuimage)をオーバーライドします。)|
-|[CMFCRibbonCheckBox::OnDrawOnList](#ondrawonlist)|(`CMFCRibbonButton::OnDrawOnList` をオーバーライドします。)|
-|[CMFCRibbonCheckBox:: Setのデータ](#setaccdata)|( [CMFCRibbonButton:: setのデータ](../../mfc/reference/cmfcribbonbutton-class.md#setaccdata)をオーバーライドします)。|
+|[CMFCRibbonCheckBox::GetCompactSize](#getcompactsize)|(オーバーライド[CMFCリボンボタン::GetCompactSize](../../mfc/reference/cmfcribbonbutton-class.md#getcompactsize).)|
+|[CMFCRibbonCheckBox::GetIntermediateSize](#getintermediatesize)|(オーバーライド[CMFC リボンボタン::取得中間サイズ](../../mfc/reference/cmfcribbonbutton-class.md#getintermediatesize).)|
+|[CMFCRibbonCheckBox::GetRegularSize](#getregularsize)|(オーバーライド[CMFCリボンボタン::取得レギュラーサイズ](../../mfc/reference/cmfcribbonbutton-class.md#getregularsize).)|
+|[CMFCRibbonCheckBox::IsDrawTooltipImage](#isdrawtooltipimage)|( `CMFCRibbonButton::IsDrawTooltipImage`をオーバーライドします)。|
+|[CMFCRibbonCheckBox::OnDraw](#ondraw)|(オーバーライド[CMFCリボンボタン::OnDraw](../../mfc/reference/cmfcribbonbutton-class.md#ondraw).)|
+|[CMFCRibbonCheckBox::OnDrawMenuImage](#ondrawmenuimage)|(オーバーライドします[。](../../mfc/reference/cmfcribbonbaseelement-class.md#ondrawmenuimage)|
+|[CMFCRibbonCheckBox::OnDrawOnList](#ondrawonlist)|( `CMFCRibbonButton::OnDrawOnList`をオーバーライドします)。|
+|[CMFCRibbonCheckBox::SetACCData](#setaccdata)|(オーバーライド[CMFCリボンボタン:::セットアックデータ](../../mfc/reference/cmfcribbonbutton-class.md#setaccdata).)|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 `CMFCRibbonCheckBox` をアプリケーションで使用するには、次のコンストラクターをコードに追加します。
 
@@ -70,9 +70,9 @@ class CMFCRibbonCheckBox : public CMFCRibbonButton
 CMFCRibbonCheckBox (UINT nID, LPCTSTR lpszText)
 ```
 
-ここで、 *nID*はチェックボックスのコマンド ID で、 *lpszText*はチェックボックスのテキストラベルです。
+*ここで nID*はチェック ボックス コマンド ID、lpszText はチェック ボックスのテキスト ラベルです。 *lpszText*
 
-[CMFCRibbonPanel:: add](../../mfc/reference/cmfcribbonpanel-class.md#add)を使用して、リボンパネルにチェックボックスを追加できます。
+チェック ボックスをリボン パネルに追加するには[、CMFCRibbonPanel::Add](../../mfc/reference/cmfcribbonpanel-class.md#add)を使用します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -84,13 +84,13 @@ CMFCRibbonCheckBox (UINT nID, LPCTSTR lpszText)
 
 [CMFCRibbonCheckBox](../../mfc/reference/cmfcribboncheckbox-class.md)
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-**ヘッダー:** afxribboncheckbox
+**ヘッダー:** afxribboncheckbox.h
 
-##  <a name="cmfcribboncheckbox"></a>CMFCRibbonCheckBox::CMFCRibbonCheckBox
+## <a name="cmfcribboncheckboxcmfcribboncheckbox"></a><a name="cmfcribboncheckbox"></a>CMFCリボンチェックボックス::CMFCリボンチェックボックス
 
-リボンのチェックボックスオブジェクトのコンストラクター
+リボン チェック ボックス オブジェクトのコンストラクター
 
 ```
 CMFCRibbonCheckBox(
@@ -101,24 +101,24 @@ CMFCRibbonCheckBox(
 ### <a name="parameters"></a>パラメーター
 
 *nID*<br/>
-からコマンド ID を指定します。
+[in]コマンド ID を指定します。
 
 *lpszText*<br/>
-からテキストラベルを指定します。
+[in]テキスト ラベルを指定します。
 
 ### <a name="return-value"></a>戻り値
 
-リボンのチェックボックスオブジェクトを構築します。
+リボン チェック ボックス オブジェクトを作成します。
 
 ### <a name="example"></a>例
 
-次の例は、`CMFCRibbonCheckBox` クラスのオブジェクトを構築する方法を示しています。
+クラスのオブジェクトを構築する方法を次の例に`CMFCRibbonCheckBox`示します。
 
 [!code-cpp[NVC_MFC_RibbonApp#17](../../mfc/reference/codesnippet/cpp/cmfcribboncheckbox-class_1.cpp)]
 
-##  <a name="getcompactsize"></a>CMFCRibbonCheckBox:: GetCompactSize
+## <a name="cmfcribboncheckboxgetcompactsize"></a><a name="getcompactsize"></a>チェック ボックス::ゲットコンパクトサイズ
 
-オーバーライドされると、チェックボックスのコンパクトなサイズを取得します。
+オーバーライドされた場合、チェック ボックスのコンパクト サイズを取得します。
 
 ```
 virtual CSize GetCompactSize(CDC* pDC);
@@ -127,19 +127,19 @@ virtual CSize GetCompactSize(CDC* pDC);
 ### <a name="parameters"></a>パラメーター
 
 *pDC*<br/>
-からチェックボックスに関連付けられている CDC へのポインター。
+[in]チェック ボックスに関連付けられている CDC へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-チェックボックスのコンパクトサイズを格納している `CSize` オブジェクトを返します。
+チェック`CSize`ボックスのコンパクト サイズを含むオブジェクトを返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
-オーバーライドされていない場合は、チェックボックスの中間サイズを返します。
+オーバーライドされていない場合は、チェック ボックスの中間サイズを返します。
 
-##  <a name="getintermediatesize"></a>CMFCRibbonCheckBox:: GetIntermediateSize
+## <a name="cmfcribboncheckboxgetintermediatesize"></a><a name="getintermediatesize"></a>チェック ボックス::取得中間サイズ
 
-チェックボックスの中間サイズを取得します。
+チェック ボックスの中間サイズを取得します。
 
 ```
 virtual CSize GetIntermediateSize(CDC* pDC);
@@ -148,19 +148,19 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ### <a name="parameters"></a>パラメーター
 
 *pDC*<br/>
-からこのチェックボックスに関連付けられている CDC へのポインター。
+[in]このチェック ボックスに関連付けられている CDC へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-チェックボックスの中間サイズを格納している `CSize` オブジェクト。
+チェック`CSize`ボックスの中間サイズを格納しているオブジェクト。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
-オーバーライドされていない場合、は既定のチェックボックスのサイズ (`AFX_CHECK_BOX_DEFAULT_SIZE`) とテキストサイズ、および余白を組み合わせて中間サイズを計算します。
+オーバーライドされない場合は、中間サイズを既定のチェック ボックス サイズ ( `AFX_CHECK_BOX_DEFAULT_SIZE`) にテキスト サイズと余白を加えた値として計算します。
 
-##  <a name="getregularsize"></a>CMFCRibbonCheckBox:: GetRegularSize
+## <a name="cmfcribboncheckboxgetregularsize"></a><a name="getregularsize"></a>チェック ボックス::ゲットレギュラーサイズ
 
-チェックボックスの標準のサイズを取得します。
+チェック ボックスの標準サイズを取得します。
 
 ```
 virtual CSize GetRegularSize(CDC* pDC);
@@ -169,19 +169,19 @@ virtual CSize GetRegularSize(CDC* pDC);
 ### <a name="parameters"></a>パラメーター
 
 *pDC*<br/>
-からこのチェックボックスに関連付けられている CDC オブジェクトへのポインター。
+[in]このチェック ボックスに関連付けられている CDC オブジェクトへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-チェックボックスの標準サイズを格納している `CSize` オブジェクトを返します。
+チェック`CSize`ボックスの標準サイズを含むオブジェクトを返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
-オーバーライドされていない場合は、チェックボックスの中間サイズを返します。
+オーバーライドされていない場合は、チェック ボックスの中間サイズを返します。
 
-##  <a name="isdrawtooltipimage"></a>CMFCRibbonCheckBox::IsDrawTooltipImage
+## <a name="cmfcribboncheckboxisdrawtooltipimage"></a><a name="isdrawtooltipimage"></a>チェック ボックス::イドロー ツールヒントイメージ
 
-チェックボックスに関連付けられているツールヒントイメージがあるかどうかを示します。
+チェック ボックスに関連付けられているツールヒント イメージがあるかどうかを示します。
 
 ```
 virtual BOOL IsDrawTooltipImage() const;
@@ -189,13 +189,13 @@ virtual BOOL IsDrawTooltipImage() const;
 
 ### <a name="return-value"></a>戻り値
 
-チェックボックスに関連付けられているツールヒントイメージがある場合は TRUE を返し、そうでない場合は FALSE を返します。
+チェック ボックスに関連付けられているツールヒントイメージがある場合は TRUE を返し、関連付けられていない場合は FALSE を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
-##  <a name="ondraw"></a>CMFCRibbonCheckBox:: OnDraw
+## <a name="cmfcribboncheckboxondraw"></a><a name="ondraw"></a>CMFCリボンチェックボックス::オンドロー
 
-指定されたデバイスコンテキストを使用してチェックボックスを描画するために、フレームワークによって呼び出されます。
+指定したデバイス コンテキストを使用してチェック ボックスを描画するために、フレームワークによって呼び出されます。
 
 ```
 virtual void OnDraw(CDC* pDC);
@@ -204,13 +204,13 @@ virtual void OnDraw(CDC* pDC);
 ### <a name="parameters"></a>パラメーター
 
 *pDC*<br/>
-からチェックボックスの描画先となる CDC へのポインター。
+[in]チェック ボックスを描画する CDC へのポインター。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
-##  <a name="ondrawmenuimage"></a>CMFCRibbonCheckBox:: OnDrawMenuImage
+## <a name="cmfcribboncheckboxondrawmenuimage"></a><a name="ondrawmenuimage"></a>チェック ボックス::オンドローメニューイメージ
 
-チェックボックスのメニューイメージを描画するためにフレームワークによって呼び出されます。
+チェック ボックスのメニュー イメージを描画するために、フレームワークによって呼び出されます。
 
 ```
 virtual BOOL OnDrawMenuImage(CDC*, CRect);
@@ -218,23 +218,23 @@ virtual BOOL OnDrawMenuImage(CDC*, CRect);
 
 ### <a name="parameters"></a>パラメーター
 
-から*CDC&#42;*<br/>
-チェックボックスに関連付けられている CDC へのポインター。
+[in]*CDC&#42;*<br/>
+チェック ボックスに関連付けられている CDC へのポインター。
 
 *CRect*<br/>
-からメニューイメージを描画する四角形を指定する `CRect` オブジェクト。
+[in]メニュー`CRect`イメージを描画する四角形を指定するオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-イメージが描画された場合は TRUE、それ以外の場合は FALSE を返します。
+イメージが描画された場合は TRUE を返し、描画されなかった場合は FALSE を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
-オーバーライドされていない場合、は FALSE を返します。
+オーバーライドされない場合は FALSE を返します。
 
-##  <a name="ondrawonlist"></a>CMFCRibbonCheckBox::OnDrawOnList
+## <a name="cmfcribboncheckboxondrawonlist"></a><a name="ondrawonlist"></a>チェック ボックス::オンドローオンリスト
 
-コマンドリストボックスにチェックボックスを描画するために、フレームワークによって呼び出されます。
+コマンド リスト ボックスにチェック ボックスを描画するために、フレームワークによって呼び出されます。
 
 ```
 virtual void OnDrawOnList(
@@ -249,28 +249,28 @@ virtual void OnDrawOnList(
 ### <a name="parameters"></a>パラメーター
 
 *pDC*<br/>
-からチェックボックスを描画するデバイスコンテキストへのポインター。
+[in]チェック ボックスを描画するデバイス コンテキストへのポインター。
 
-*strText*<br/>
-から表示テキスト。
+*str テキスト*<br/>
+[in]表示テキスト。
 
-*nTextOffset*<br/>
-からリストボックスの左側から表示テキストまでの距離 (ピクセル単位)。
+*オフセット*<br/>
+[in]リスト ボックスの左側から表示テキストまでの距離 (ピクセル単位)。
 
-*rect*<br/>
-からチェックボックスの表示四角形。
+*Rect*<br/>
+[in]チェック ボックスの表示四角形。
 
 *bIsSelected*<br/>
-からチェックボックスがオンの場合は TRUE、それ以外の場合は FALSE。
+[in]チェック ボックスがオンの場合は TRUE、オンでない場合は FALSE。
 
-*bHighlighted 表示*<br/>
-からチェックボックスが強調表示されている場合は TRUE、それ以外の場合は FALSE。
+*b強調表示*<br/>
+[in]チェック ボックスが強調表示されている場合は TRUE、強調表示されていない場合は FALSE。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
-##  <a name="setaccdata"></a>CMFCRibbonCheckBox:: Setのデータ
+## <a name="cmfcribboncheckboxsetaccdata"></a><a name="setaccdata"></a>チェック ボックス::セットアックデータ
 
-チェックボックスのアクセシビリティデータを設定します。
+チェック ボックスのアクセシビリティ データを設定します。
 
 ```
 virtual BOOL SetACCData(
@@ -280,22 +280,22 @@ virtual BOOL SetACCData(
 
 ### <a name="parameters"></a>パラメーター
 
-*pParent*<br/>
-チェックボックスの親ウィンドウ。
+*親*<br/>
+チェック ボックスの親ウィンドウ。
 
-*data*<br/>
-チェックボックスのアクセシビリティデータ。
+*データ*<br/>
+チェック ボックスのアクセシビリティ データ。
 
 ### <a name="return-value"></a>戻り値
 
 常に TRUE を返します。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
-既定では、このメソッドはチェックボックスのアクセシビリティデータを設定し、常に TRUE を返します。 アクセシビリティ データを設定し、成功または失敗を示す値を返すようにするには、このメソッドをオーバーライドします。
+既定では、このメソッドはチェック ボックスのアクセシビリティ データを設定し、常に TRUE を返します。 アクセシビリティ データを設定し、成功または失敗を示す値を返すようにするには、このメソッドをオーバーライドします。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[階層図](../../mfc/hierarchy-chart.md)<br/>
+[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
 [クラス](../../mfc/reference/mfc-classes.md)<br/>
-[CMFCRibbonPanel クラス](../../mfc/reference/cmfcribbonpanel-class.md)
+[クラス](../../mfc/reference/cmfcribbonpanel-class.md)

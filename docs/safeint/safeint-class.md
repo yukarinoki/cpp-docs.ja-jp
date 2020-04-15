@@ -10,19 +10,19 @@ helpviewer_keywords:
 - SafeInt class
 - SafeInt class, constructor
 ms.assetid: 27a8f087-2511-46f9-8d76-2aeb66ca272f
-ms.openlocfilehash: c69dc7ed5e34d98d5acff8f2bc28c34761bd31c6
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: c365b5cab5814d3992e6570949a69fc5d39c1dd3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076821"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373468"
 ---
 # <a name="safeint-class"></a>SafeInt クラス
 
 整数オーバーフローを防ぐことができるように整数のプリミティブを拡張し、さまざまな種類の整数を比較してみましょう。
 
 > [!NOTE]
-> このライブラリの最新バージョンは [https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt) にあります。
+> このライブラリの最新バージョンは に[https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt)にあります。
 
 ## <a name="syntax"></a>構文
 
@@ -33,29 +33,29 @@ class SafeInt;
 
 ### <a name="parameters"></a>パラメーター
 
-| Template  |  Description |
+| Template  |  説明 |
 |--------|------------|
 | T         |  `SafeInt` で置き換えられる整数またはブール値パラメーターの型。 |
 | E         |  エラー処理ポリシーを定義する列挙データ型。 |
 | U         |  第 2 オペランドの整数またはブール値パラメーターの型。 |
 
-| パラメーター  |  Description |
+| パラメーター  |  説明 |
 |---------|-----------------|
 | *rhs*      |  [in] いくつかのスタンドアロン関数で演算子の右側にある値を表す入力パラメーター。 |
-| *i*        |  [in] いくつかのスタンドアロン関数で演算子の右側にある値を表す入力パラメーター。 |
-| *bits*     |  [in] いくつかのスタンドアロン関数で演算子の右側にある値を表す入力パラメーター。 |
+| *私*        |  [in] いくつかのスタンドアロン関数で演算子の右側にある値を表す入力パラメーター。 |
+| *ビット*     |  [in] いくつかのスタンドアロン関数で演算子の右側にある値を表す入力パラメーター。 |
 
 ## <a name="members"></a>メンバー
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-| Name                          |  Description |
+| 名前                          |  説明 |
 |---------------------------|--------------------|
-| [SafeInt::SafeInt](#safeint)  |  既定のコンストラクターです。 |
+| [セーフイント::セーフイント](#safeint)  |  既定のコンストラクターです。 |
 
 ### <a name="assignment-operators"></a>代入演算子
 
-| Name  |  構文 |
+| 名前  |  構文 |
 |----|---------|
 | =     |  `template<typename U>`<br />`SafeInt<T,E>& operator= (const U& rhs)` |
 | =     |  `SafeInt<T,E>& operator= (const T& rhs) throw()` |
@@ -64,11 +64,11 @@ class SafeInt;
 
 ### <a name="casting-operators"></a>キャスト演算子
 
-| Name              |  構文 |
+| 名前              |  構文 |
 |------|---------------------------------|
-| [bool]              |  `operator bool() throw()` |
+| bool              |  `operator bool() throw()` |
 | char              |  `operator char() const` |
-| signedchar       |  `operator signed char() const` |
+| signed char       |  `operator signed char() const` |
 | unsigned char     |  `operator unsigned char() const` |
 | __int16           |  `operator __int16() const` |
 | unsigned __int16  |  `operator unsigned __int16() const` |
@@ -82,7 +82,7 @@ class SafeInt;
 
 ### <a name="comparison-operators"></a>比較演算子
 
-| Name  |  構文 |
+| 名前  |  構文 |
 |----|----------------|
 | \<     |  `template<typename U>`<br /><br /> `bool operator< (U rhs) const throw()` |
 | \<     |  `bool operator< (SafeInt<T,E> rhs) const throw()` |
@@ -101,7 +101,7 @@ class SafeInt;
 
 ### <a name="arithmetic-operators"></a>算術演算子
 
-| Name  |  構文 |
+| 名前  |  構文 |
 |----|--------------|
 | +     |  `const SafeInt<T,E>& operator+ () const throw()` |
 | -     |  `SafeInt<T,E> operator- () const` |
@@ -134,7 +134,7 @@ class SafeInt;
 
 ### <a name="logical-operators"></a>論理演算子
 
-| Name     |  構文 |
+| 名前     |  構文 |
 |------|--------------|
 | !        |  `bool operator !() const throw()` |
 | ~        |  `SafeInt<T,E> operator~ () const throw()` |
@@ -170,7 +170,7 @@ class SafeInt;
 
 このクラスを使用すると、`SafeInt` オブジェクトである限り、2 種類の整数を比較することもできます。 通常、比較を実行するときは、最初に数値を同じ型に変換する必要があります。 ある数値を別の型にキャストするには、多くの場合、データの損失がないことを確認するチェックが必要です。
 
-このトピックの「演算子」一覧には、`SafeInt` クラスでサポートされている数学演算子と比較演算子がまとめられています。 ほとんどの数学演算子からは、型が `SafeInt` の `T` オブジェクトが返されます。
+このトピックの「演算子」一覧には、`SafeInt` クラスでサポートされている数学演算子と比較演算子がまとめられています。 ほとんどの数学演算子からは、型が `T` の `SafeInt` オブジェクトが返されます。
 
 `SafeInt` と整数型との比較演算は、いずれの方向でも実行できます。 たとえば、`SafeInt<int>(x) < y` と `y> SafeInt<int>(x)` はどちらも有効であり、同じ結果が返されます。
 
@@ -214,7 +214,7 @@ Int x = flag ? (int) SafeInt<unsigned int>(y) : -1;
 
 `E` は、`SafeInt` で使用されるエラー処理メカニズムです。 SafeInt ライブラリには、2 つのエラー処理メカニズムが用意されています。 既定のポリシーは `SafeIntErrorPolicy_SafeIntException` であり、エラーが発生したときに [SafeIntException クラス](../safeint/safeintexception-class.md)例外がスローされます。 もう 1 つのポリシーは `SafeIntErrorPolicy_InvalidParameter` であり、エラーが発生した場合にプログラムが停止されます。
 
-エラー ポリシーをカスタマイズするオプションは 2 つあります。 1 つ目のオプションは、`E` を作成するときにパラメーター `SafeInt` を設定することです。 エラー処理ポリシーを 1 つの `SafeInt` のみに変更する場合は、このオプションを使用します。 もう 1 つのオプションは、`SafeInt` ライブラリを組み込む前に、カスタマイズされたエラー処理クラスとして _SAFEINT_DEFAULT_ERROR_POLICY を定義することです。 コード内の `SafeInt` クラスのすべてのインスタンスで既定のエラー処理ポリシーを変更する場合は、このオプションを使用します。
+エラー ポリシーをカスタマイズするオプションは 2 つあります。 1 つ目のオプションは、`SafeInt` を作成するときにパラメーター `E` を設定することです。 エラー処理ポリシーを 1 つの `SafeInt` のみに変更する場合は、このオプションを使用します。 もう 1 つのオプションは、`SafeInt` ライブラリを組み込む前に、カスタマイズされたエラー処理クラスとして _SAFEINT_DEFAULT_ERROR_POLICY を定義することです。 コード内の `SafeInt` クラスのすべてのインスタンスで既定のエラー処理ポリシーを変更する場合は、このオプションを使用します。
 
 > [!NOTE]
 > SafeInt ライブラリからのエラーを処理するカスタマイズされたクラスでは、エラー ハンドラーを呼び出したコードに制御が返されません。 エラー ハンドラーが呼び出された後の `SafeInt` 演算の結果は信頼できません。
@@ -229,7 +229,7 @@ Int x = flag ? (int) SafeInt<unsigned int>(y) : -1;
 
 **名前空間:** msl::utilities
 
-## <a name="safeintsafeint"></a><a name="safeint"></a>SafeInt::SafeInt
+## <a name="safeintsafeint"></a><a name="safeint"></a>セーフイント::セーフイント
 
 `SafeInt` オブジェクトを構築します。
 
@@ -257,13 +257,13 @@ SafeInt (
 
 ### <a name="parameters"></a>パラメーター
 
-*i*<br/>
+*私*<br/>
 [in] 新しい `SafeInt` オブジェクトの値。 これは、コンストラクターに応じて、型 T または U のパラメーターにする必要があります。
 
-*b*<br/>
+*B*<br/>
 [in] 新しい `SafeInt` オブジェクトのブール値。
 
-*u*<br/>
+*U*<br/>
 [in] 型 U の `SafeInt`。新しい `SafeInt` オブジェクトは、*u* と同じ値になりますが、型は T になります。
 
 U `SafeInt` に格納されているデータの型。 ブール型、文字型、または整数型のいずれかを使用できます。 整数型の場合は、符号付きまたは符号なしの 8 ビットから 64 ビットを使用できます。
@@ -272,6 +272,6 @@ U `SafeInt` に格納されているデータの型。 ブール型、文字型�
 
 コンストラクターの入力パラメーター *i* または *u* は、ブール型、文字型、または整数型にする必要があります。 これが異なる型のパラメーターの場合、`SafeInt` クラスから [static_assert](../cpp/static-assert.md) が呼び出され、無効な入力パラメーターが示されます。
 
-テンプレート型 `U` を使用するコンストラクターでは、入力パラメーターが `T` に指定された型に自動的に変換されます。 `SafeInt` クラスでは、データの損失なしでデータが変換されます。 データの損失なしでデータを型 `E` に変換できない場合、エラー ハンドラーに `T` が報告されます。
+テンプレート型 `U` を使用するコンストラクターでは、入力パラメーターが `T` に指定された型に自動的に変換されます。 `SafeInt` クラスでは、データの損失なしでデータが変換されます。 データの損失なしでデータを型 `T` に変換できない場合、エラー ハンドラーに `E` が報告されます。
 
-ブール値パラメーターから `SafeInt` を作成した場合は、すぐに値を初期化する必要があります。 コード `SafeInt` を使用して `SafeInt<bool> sb;` を構築することはできません。 その結果、コンパイル エラーが発生します。
+ブール値パラメーターから `SafeInt` を作成した場合は、すぐに値を初期化する必要があります。 コード `SafeInt<bool> sb;` を使用して `SafeInt` を構築することはできません。 その結果、コンパイル エラーが発生します。

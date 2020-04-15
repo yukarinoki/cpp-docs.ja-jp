@@ -5,20 +5,20 @@ f1_keywords:
 - unordered_map/std::operator!=
 - unordered_map/std::operator==
 ms.assetid: 9d5add0b-84bd-4a79-bd82-3f58b55145ed
-ms.openlocfilehash: fe4877bc5b371a2570c18950bac36a003078ccc7
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: f062c4fd0332525a8b8940d2d93df41df56d2baa
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79427723"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373118"
 ---
 # <a name="ltunordered_mapgt-operators"></a>&lt;unordered_map&gt; 演算子
 
 |||||
 |-|-|-|-|
-|[operator!=](#op_neq)|[operator==](#op_eq_eq)|[operator!=](#op_neq_multimap)|[operator==](#op_eq_eq_multimap)|
+|[演算子!=](#op_neq)|[演算子==](#op_eq_eq)|[演算子!=](#op_neq_multimap)|[演算子==](#op_eq_eq_multimap)|
 
-## <a name="op_neq"></a>  operator!=
+## <a name="operator"></a><a name="op_neq"></a>演算子!=
 
 演算子の左側の [unordered_map](../standard-library/unordered-map-class.md) オブジェクトが右側の unordered_map オブジェクトと等しくないかどうかをテストします。
 
@@ -31,12 +31,12 @@ bool operator!=(const unordered_map <Key, Type, Hash, Pred, Allocator>& left, co
 *左*\
 `unordered_map` 型オブジェクト。
 
-*右*\
+*そうです*\
 `unordered_map` 型オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-unordered_maps が等しくない場合は**true** 。等しい場合は**false** 。
+unordered_mapsが等しくない場合は**true。** 等しい場合は**false。**
 
 ### <a name="remarks"></a>解説
 
@@ -74,7 +74,7 @@ int main( )
 }
 ```
 
-**出力:**
+**出力：**
 
 `um1 != um2: true`
 
@@ -82,7 +82,7 @@ int main( )
 
 `um2 != um3: true`
 
-## <a name="op_eq_eq"></a>  operator==
+## <a name="operator"></a><a name="op_eq_eq"></a>演算子==
 
 演算子の左側の [unordered_map](../standard-library/unordered-map-class.md) オブジェクトが右側の unordered_map オブジェクトと等しいかどうかをテストします。
 
@@ -95,12 +95,12 @@ bool operator==(const unordered_map <Key, Type, Hash, Pred, Allocator>& left, co
 *左*\
 `unordered_map` 型オブジェクト。
 
-*右*\
+*そうです*\
 `unordered_map` 型オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-unordered_maps が等しい場合は**true** 。等しくない場合は**false** 。
+unordered_mapsが等しい場合は**true。** 等しくない場合は**false。**
 
 ### <a name="remarks"></a>解説
 
@@ -138,7 +138,7 @@ int main( )
 }
 ```
 
-**出力:**
+**出力：**
 
 `um1 == um2: false`
 
@@ -146,7 +146,7 @@ int main( )
 
 `um2 == um3: false`
 
-## <a name="op_neq_multimap"></a>  operator!=
+## <a name="operator"></a><a name="op_neq_multimap"></a>演算子!=
 
 演算子の左側の [unordered_multimap](../standard-library/unordered-multimap-class.md) オブジェクトが右側の unordered_multimap オブジェクトと等しくないかどうかをテストします。
 
@@ -159,12 +159,12 @@ bool operator!=(const unordered_multimap <Key, Type, Hash, Pred, Allocator>& lef
 *左*\
 `unordered_multimap` 型オブジェクト。
 
-*右*\
+*そうです*\
 `unordered_multimap` 型オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-unordered_multimaps が等しくない場合は**true** 。等しい場合は**false** 。
+unordered_multimapsが等しくない場合は**true。** 等しい場合は**false。**
 
 ### <a name="remarks"></a>解説
 
@@ -203,7 +203,7 @@ int main( )
 }
 ```
 
-**出力:**
+**出力：**
 
 `um1 != um2: true`
 
@@ -211,7 +211,7 @@ int main( )
 
 `um2 != um3: true`
 
-## <a name="op_eq_eq_multimap"></a>  operator==
+## <a name="operator"></a><a name="op_eq_eq_multimap"></a>演算子==
 
 演算子の左側の [unordered_multimap](../standard-library/unordered-multimap-class.md) オブジェクトが右側の unordered_multimap オブジェクトと等しいかどうかをテストします。
 
@@ -224,12 +224,12 @@ bool operator==(const unordered_multimap <Key, Type, Hash, Pred, Allocator>& lef
 *左*\
 `unordered_multimap` 型オブジェクト。
 
-*右*\
+*そうです*\
 `unordered_multimap` 型オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-unordered_multimaps が等しい場合は**true** 。等しくない場合は**false** 。
+unordered_multimapsが等しい場合は**true。** 等しくない場合は**false。**
 
 ### <a name="remarks"></a>解説
 
@@ -268,7 +268,7 @@ int main( )
 }
 ```
 
-**出力:**
+**出力：**
 
 `um1 == um2: false`
 
@@ -276,6 +276,6 @@ int main( )
 
 `um2 == um3: false`
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [<unordered_map>](../standard-library/unordered-map.md)

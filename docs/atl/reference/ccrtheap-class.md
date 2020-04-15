@@ -1,5 +1,5 @@
 ---
-title: CCRTHeap クラス
+title: クラス
 ms.date: 11/04/2016
 f1_keywords:
 - CCRTHeap
@@ -11,16 +11,16 @@ f1_keywords:
 helpviewer_keywords:
 - CCRTHeap class
 ms.assetid: 321bd6c5-1856-4ff7-8590-95044a1209f7
-ms.openlocfilehash: 3c5030b9cfbfd636a783d27bcc8f9469f8348acb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: caf5508079332689c2fff42f130951375dc35512
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62246063"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81327161"
 ---
-# <a name="ccrtheap-class"></a>CCRTHeap クラス
+# <a name="ccrtheap-class"></a>クラス
 
-このクラスは実装[IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) CRT ヒープ関数を使用します。
+このクラスは、CRT ヒープ関数を使用して[IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)を実装します。
 
 ## <a name="syntax"></a>構文
 
@@ -34,18 +34,18 @@ class CCRTHeap : public IAtlMemMgr
 
 |名前|説明|
 |----------|-----------------|
-|[CCRTHeap::Allocate](#allocate)|メモリ ブロックを割り当てるには、このメソッドを呼び出します。|
-|[Ccrtheap::free](#free)|このメモリ マネージャーによって割り当てられたメモリ ブロックを解放するには、このメソッドを呼び出します。|
-|[CCRTHeap::GetSize](#getsize)|このメモリ マネージャーによって割り当てられたメモリ ブロックの割り当てサイズを取得するには、このメソッドを呼び出します。|
-|[CCRTHeap::Reallocate](#reallocate)|このメソッドを呼び出し、このメモリ マネージャーによって割り当てられたメモリの再割り当てを行います。|
+|[割り当て](#allocate)|メモリ ブロックを割り当てるには、このメソッドを呼び出します。|
+|[CCRTヒープ::無料](#free)|このメモリ マネージャによって割り当てられたメモリ ブロックを解放します。|
+|[を返します。](#getsize)|このメモリ マネージャーによって割り当てられたメモリ ブロックの割り当てサイズを取得します。|
+|[再割り当て](#reallocate)|このメソッドを呼び出し、このメモリ マネージャーによって割り当てられたメモリの再割り当てを行います。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-`CCRTHeap` メモリ割り当て関数が CRT を使用するヒープなど、機能を実装する[malloc](../../c-runtime-library/reference/malloc.md)、[無料](../../c-runtime-library/reference/free.md)、 [realloc](../../c-runtime-library/reference/realloc.md)、および[_msize](../../c-runtime-library/reference/msize.md)します。
+`CCRTHeap`[malloc](../../c-runtime-library/reference/malloc.md)、 free 、 [realloc](../../c-runtime-library/reference/free.md)、 [_msize](../../c-runtime-library/reference/msize.md)などの[realloc](../../c-runtime-library/reference/realloc.md)CRT ヒープ関数を使用して、メモリ割り当て関数を実装します。
 
 ## <a name="example"></a>例
 
-例をご覧ください[IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)します。
+[IAtlMemgr](../../atl/reference/iatlmemmgr-class.md)の例を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -57,7 +57,7 @@ class CCRTHeap : public IAtlMemMgr
 
 **ヘッダー:** atlmem.h
 
-##  <a name="allocate"></a>  CCRTHeap::Allocate
+## <a name="ccrtheapallocate"></a><a name="allocate"></a>割り当て
 
 メモリ ブロックを割り当てるには、このメソッドを呼び出します。
 
@@ -67,22 +67,22 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*nBytes*<br/>
+*Nbytes*<br/>
 新しいメモリ ブロック内の要求されたバイト数。
 
 ### <a name="return-value"></a>戻り値
 
 新しく割り当てられたメモリ ブロックの先頭へのポインターを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-呼び出す[ccrtheap::free](#free)または[ccrtheap::reallocate](#reallocate)このメソッドによって割り当てられたメモリを解放します。
+呼び出し[CCRTHeap::Free](#free)または[CCRTHeap::このメソッドによって割り当てられたメモリを解放するために再割り当て](#reallocate)します。
 
-使用して実装[malloc](../../c-runtime-library/reference/malloc.md)します。
+[malloc](../../c-runtime-library/reference/malloc.md)を使用して実装されます。
 
-##  <a name="free"></a>  CCRTHeap::Free
+## <a name="ccrtheapfree"></a><a name="free"></a>CCRTヒープ::無料
 
-このメモリ マネージャーによって割り当てられたメモリ ブロックを解放するには、このメソッドを呼び出します。
+このメモリ マネージャによって割り当てられたメモリ ブロックを解放します。
 
 ```
 virtual void Free(void* p) throw();
@@ -90,16 +90,16 @@ virtual void Free(void* p) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*p*<br/>
-このメモリ マネージャーによって以前に割り当てられたメモリへのポインター。 NULL は有効な値を何も行われません。
+*P*<br/>
+このメモリ マネージャーによって以前に割り当てられたメモリへのポインター。 NULL は有効な値であり、何も実行しません。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-使用して実装[無料](../../c-runtime-library/reference/free.md)します。
+[無料](../../c-runtime-library/reference/free.md)を使用して実装.
 
-##  <a name="getsize"></a>  CCRTHeap::GetSize
+## <a name="ccrtheapgetsize"></a><a name="getsize"></a>を返します。
 
-このメモリ マネージャーによって割り当てられたメモリ ブロックの割り当てサイズを取得するには、このメソッドを呼び出します。
+このメモリ マネージャーによって割り当てられたメモリ ブロックの割り当てサイズを取得します。
 
 ```
 virtual size_t GetSize(void* p) throw();
@@ -107,18 +107,18 @@ virtual size_t GetSize(void* p) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*p*<br/>
+*P*<br/>
 このメモリ マネージャーによって以前に割り当てられたメモリへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
 割り当てられたメモリ ブロックのサイズをバイト単位で返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-使用して実装[_msize](../../c-runtime-library/reference/msize.md)します。
+[_msize](../../c-runtime-library/reference/msize.md)を使用して実装されます。
 
-##  <a name="reallocate"></a>  CCRTHeap::Reallocate
+## <a name="ccrtheapreallocate"></a><a name="reallocate"></a>再割り当て
 
 このメソッドを呼び出し、このメモリ マネージャーによって割り当てられたメモリの再割り当てを行います。
 
@@ -128,25 +128,25 @@ virtual __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*p*<br/>
+*P*<br/>
 このメモリ マネージャーによって以前に割り当てられたメモリへのポインター。
 
-*nBytes*<br/>
+*Nbytes*<br/>
 新しいメモリ ブロック内の要求されたバイト数。
 
 ### <a name="return-value"></a>戻り値
 
 新しく割り当てられたメモリ ブロックの先頭へのポインターを返します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-呼び出す[ccrtheap::free](#free)このメソッドによって割り当てられたメモリを解放します。 使用して実装[realloc](../../c-runtime-library/reference/realloc.md)します。
+[CCRTHeap::この](#free)メソッドによって割り当てられたメモリを解放するフリーを呼び出します。 [realloc](../../c-runtime-library/reference/realloc.md)を使用して実装されます。
 
 ## <a name="see-also"></a>関連項目
 
 [クラスの概要](../../atl/atl-class-overview.md)<br/>
-[CComHeap クラス](../../atl/reference/ccomheap-class.md)<br/>
-[CWin32Heap クラス](../../atl/reference/cwin32heap-class.md)<br/>
-[CLocalHeap クラス](../../atl/reference/clocalheap-class.md)<br/>
-[CGlobalHeap クラス](../../atl/reference/cglobalheap-class.md)<br/>
-[IAtlMemMgr クラス](../../atl/reference/iatlmemmgr-class.md)
+[クラス](../../atl/reference/ccomheap-class.md)<br/>
+[クラスを使用します。](../../atl/reference/cwin32heap-class.md)<br/>
+[クラス](../../atl/reference/clocalheap-class.md)<br/>
+[クラス](../../atl/reference/cglobalheap-class.md)<br/>
+[イアトルメムグラムクラス](../../atl/reference/iatlmemmgr-class.md)

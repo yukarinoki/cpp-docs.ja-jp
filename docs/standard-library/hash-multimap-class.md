@@ -86,17 +86,17 @@ helpviewer_keywords:
 - stdext::hash_multimap::upper_bound
 - stdext::hash_multimap::value_comp
 ms.assetid: f41a6db9-67aa-43a3-a3c5-dbfe9ec3ae7d
-ms.openlocfilehash: b42dd5ba4aa3df12e3ef1aba930b2214dde19756
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 2fe9056996876d24fba285c0c7aaec8607b2509c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79424735"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375434"
 ---
 # <a name="hash_multimap-class"></a>hash_multimap クラス
 
 > [!NOTE]
-> この API は、互換性のために残されています。 代替が必要な場合は、[unordered_multimap クラス](../standard-library/unordered-multimap-class.md)をご使用ください。
+> この API は、互換性のために残されています。 代替が必要な場合は、 [unordered_multimap Class](../standard-library/unordered-multimap-class.md)をご使用ください。
 
 コンテナー クラスの hash_multimap は、C++ 標準ライブラリの拡張機能であり、並べ替えキーとデータ値のペアを要素として持つコレクションのデータを格納したり迅速に取得したりするために使用されます。キーの値は、一意である必要も関連するデータ値である必要もありません。
 
@@ -115,11 +115,11 @@ class hash_multimap
 *キー*\
 hash_multimap に格納されるキーのデータ型。
 
-*[種類]* \
+*型*\
 hash_multimap に格納される要素のデータ型。
 
 *特徴*\
-2つの関数オブジェクトを含む型。2つの要素の値を並べ替えキーとして比較してそれらの相対順序を決定できるクラスの*特徴*の1つであり、要素のキー値を `size_t`型の符号なし整数にマッピングする単項述語であるハッシュ関数です。 この引数は省略可能であり、既定値は `hash_compare<Key, less<Key>>` です。
+2 つの関数オブジェクトを含む型、 2 つの要素値を並べ替えキーとして比較して相対的な順序を決定できるクラス*Traits*と、要素のキー値を符号`size_t`なし整数型にマッピングする単項述語であるハッシュ関数 。 この引数は省略可能であり、既定値は `hash_compare<Key, less<Key>>` です。
 
 *アロケーター*\
 メモリの hash_multimap の割り当てと解放に関する詳細をカプセル化する、格納されたアロケーター オブジェクトを表す型。 この引数は省略可能であり、既定値は `allocator<pair <const Key, Type>>` です。
@@ -138,7 +138,7 @@ hash_multimap の特徴を次に示します。
 
 - ペアを保持する連想コンテナーです。これは、要素値とキー値が分かれているためです。
 
-- クラステンプレート。提供される機能はジェネリックであり、要素またはキーとして含まれる特定のデータ型には依存しません。 要素やキーに使用されているデータ型は、クラス テンプレートで比較関数やアロケーターと共にパラメーターとして指定されます。
+- クラス テンプレートは、提供される機能はジェネリックであり、要素またはキーとして含まれるデータの特定の型とは無関係であるためです。 要素やキーに使用されているデータ型は、クラス テンプレートで比較関数やアロケーターと共にパラメーターとして指定されます。
 
 並べ替えでのハッシュの主な利点は、効率に優れていることです。コンテナー内にある要素を並べ替えるとき、その時間は要素の数の対数に比例しますが、適切なハッシュを実行すると、挿入、削除、検索にかかる平均時間は一定しています。 hash_multimap の要素の値 (関連するキー値ではありません) は、直接変更できます。 この場合、変更前の要素に関連付けられていたキー値を削除し、新しい要素に関連付けられる新しいキー値を挿入する必要があります。
 
@@ -146,9 +146,9 @@ hash_multimap の特徴を次に示します。
 
 hash_multimap は、値とキーを関連付ける条件をアプリケーションが満たしている場合、最適な連想コンテナーです。 この種類の構造体のモデルとなるのは、キー ワードとそれに関連する文字列値 (たとえば定義) の順序付きリストです。キー ワードは常に一意に定義されるわけではありません。 そうでなくて、キー ワードが一意に定義され、キーが一意になる場合は、hash_map が最適なコンテナーです。 また、キーワードのリストだけが格納される場合は、hash_set が適切なコンテナーとなります。 キーワードを複数設定できる場合は、hash_multiset が適切なコンテナー構造体となります。
 
-hash_multimap は、格納されているハッシュ `Traits` オブジェクト ([value_compare](../standard-library/value-compare-class.md) 型) を呼び出すことによって、制御するシーケンスを並べ替えます。 格納されているこのオブジェクトには、メンバー関数 [key_comp](../standard-library/hash-map-class.md#key_comp) を呼び出すことによってアクセスできます。 このような関数オブジェクトは、[hash_compare](../standard-library/hash-compare-class.md)`<Key, less<Key>>` クラスのオブジェクトと同様に動作する必要があります。 具体的には、`Key` 型のすべての `Key` の値に対して、`Traits (Key)` を呼び出すことにより、`size_t` 型の値を配布します。
+hash_multimap は、格納されているハッシュ `Traits` オブジェクト ([value_compare](../standard-library/value-compare-class.md) 型) を呼び出すことによって、制御するシーケンスを並べ替えます。 格納されているこのオブジェクトには、メンバー関数 [key_comp](../standard-library/hash-map-class.md#key_comp) を呼び出すことによってアクセスできます。 このような関数オブジェクトは、クラス[hash_compare](../standard-library/hash-compare-class.md)`<Key, less<Key>>`のオブジェクトと同じ動作をする必要があります。 具体的には、`Key` 型のすべての `Key` の値に対して、`Traits (Key)` を呼び出すことにより、`size_t` 型の値を配布します。
 
-通常、要素は、この順序を確立するために小なり比較だけを実行できる必要があります。これにより、2 つの要素が指定されたときに、それらの要素が等しいか (どちらか一方が小さくはない)、または一方が他方より小さいかを判断できます。 この結果、等価でない複数の要素間で順序が付けられます。 テクニカル ノートでは、比較関数は、数学上の標準的な意味で厳密弱順序を発生させる二項述語であると示されています。 二項述語 f (x, y) は、2つの引数オブジェクト `x` および `y` と、戻り値 ( **true**または**false**) を持つ関数オブジェクトです。 Hash_multimap に適用される順序付けは、二項述語が反対称、アンチ対称、および推移的であり、等価性が推移的である (2 つのオブジェクト `x` と `y` が、f (x, y) と f (y, x) が**false**の場合に等価になるように定義されている) 場合に厳密弱順序になります。 2 つのキーの等値に関する条件が等価性の条件よりも厳しく、優先される場合、順序付けは完全な順序付け (すべての要素が相互の値に基づいて並べ替えられる) となり、一致するそれぞれのキーを識別するのが難しくなります。
+通常、要素は、この順序を確立するために小なり比較だけを実行できる必要があります。これにより、2 つの要素が指定されたときに、それらの要素が等しいか (どちらか一方が小さくはない)、または一方が他方より小さいかを判断できます。 この結果、等価でない複数の要素間で順序が付けられます。 テクニカル ノートでは、比較関数は、数学上の標準的な意味で厳密弱順序を発生させる二項述語であると示されています。 二項述語 f(x, y) は、2 つの`x`引数`y`オブジェクトと戻り値が**true**または false を持つ関数オブジェクト**です**。 二項述語が非屈折、非対称、および推移的であり、かつ等価が推移的である場合、f(x, y) と f(y, `x` x) の両方が`y`**偽**の場合に 2 つのオブジェクトと同等であると定義される場合、hash_multimapに課せられる順序は厳密な弱い順序です。 2 つのキーの等値に関する条件が等価性の条件よりも厳しく、優先される場合、順序付けは完全な順序付け (すべての要素が相互の値に基づいて並べ替えられる) となり、一致するそれぞれのキーを識別するのが難しくなります。
 
 被制御シーケンスにおける要素の実際の順序は、ハッシュ関数、順序関数、コンテナー オブジェクトに格納されるハッシュ テーブルの現在のサイズによって異なります。 ハッシュ テーブルの現在のサイズは特定できないため、通常は、被制御シーケンス内の要素の順序を予測することはできません。 要素を挿入しても反復子の有効性は失われません。また、要素を削除した場合は、削除された要素を具体的に指す反復子だけが無効化されます。
 
@@ -156,38 +156,38 @@ hash_multimap クラスに用意されている反復子は双方向反復子で
 
 ### <a name="constructors"></a>コンストラクター
 
-|Constructor|Description|
+|Constructor|説明|
 |-|-|
 |[hash_multimap](#hash_multimap)|特定のサイズのリスト、特定の値の要素を持つリスト、または特定の `allocator` を持つリストを構築します。あるいは他の `hash_multimap` のコピーとして構築します。|
 
 ### <a name="typedefs"></a>Typedefs
 
-|種類の名前。|Description|
+|種類の名前。|説明|
 |-|-|
 |[allocator_type](#allocator_type)|`allocator` オブジェクトの `hash_multimap` クラスを表す型。|
 |[const_iterator](#const_iterator)|`const` 内の 1 つの `hash_multimap` 要素を読み取ることができる双方向反復子を提供する型。|
-|[const_pointer](#const_pointer)|`hash_multimap`内の**const**要素へのポインターを提供する型。|
-|[const_reference](#const_reference)|読み取りと**const**操作の実行のために `hash_multimap` に格納されている**const**要素への参照を提供する型。|
-|[const_reverse_iterator](#const_reverse_iterator)|`hash_multimap`内の任意の**const**要素を読み取ることができる双方向反復子を提供する型。|
+|[const_pointer](#const_pointer)|内の**const**要素へのポインターを提供する型`hash_multimap`。|
+|[const_reference](#const_reference)|に格納されている**const**要素への参照を提供`hash_multimap`する型。 **const**|
+|[const_reverse_iterator](#const_reverse_iterator)|内の任意の**const**要素を読み取ることができる双方向反復子を提供する`hash_multimap`型。|
 |[difference_type](#difference_type)|`hash_multimap` の要素の数を、反復子が指す要素の範囲に基づいて表すために使用できる符号付き整数型。|
-|[Iterator](#iterator)|`hash_multimap` 内の任意の要素を読み取り、または変更できる双方向反復子を提供する型。|
+|[反復 子](#iterator)|`hash_multimap` 内の任意の要素を読み取り、または変更できる双方向反復子を提供する型。|
 |[key_compare](#key_compare)|2 つの並べ替えキーを比較して、`hash_multimap` 内の 2 つの要素の相対順序を決定できる関数オブジェクトを提供する型。|
 |[key_type](#key_type)|`hash_multimap` の各要素の一部である並べ替えキー オブジェクトを表す型。|
 |[mapped_type](#mapped_type)|`hash_multimap` に格納されているデータ型を表す型。|
-|[pointer](#pointer)|`hash_multimap` 内の要素へのポインターを提供する型。|
-|[reference](#reference)|`hash_multimap` に格納されている要素への参照を提供する型。|
+|[ポインター (pointer)](#pointer)|`hash_multimap` 内の要素へのポインターを提供する型。|
+|[参照](#reference)|`hash_multimap` に格納されている要素への参照を提供する型。|
 |[reverse_iterator](#reverse_iterator)|反転された `hash_multimap` 内の 1 つの要素を読み取り、または変更できる双方向反復子を提供する型。|
-|[size_type](#size_type)|`hash_multimap` 内の要素の数を表すことができる符号なし整数型。|
-|[value_type](#value_type)|2 つの要素を並べ替えキーとして比較して、`hash_multimap` 内の要素の相対順序を決定できる関数オブジェクトを提供する型。|
+|[Size_type](#size_type)|`hash_multimap` 内の要素の数を表すことができる符号なし整数型。|
+|[Value_type](#value_type)|2 つの要素を並べ替えキーとして比較して、`hash_multimap` 内の要素の相対順序を決定できる関数オブジェクトを提供する型。|
 
 ### <a name="member-functions"></a>メンバー関数
 
-|メンバー関数|Description|
+|メンバー関数|説明|
 |-|-|
-|[begin](#begin)|`hash_multimap` 内の最初の要素を指す反復子を返します。|
+|[開始](#begin)|`hash_multimap` 内の最初の要素を指す反復子を返します。|
 |[cbegin](#cbegin)|`hash_multimap` 内の最初の要素を指す定数反復子を返します。|
-|[cend](#cend)|`hash_multimap` 内の最後の要素の次の位置を指す定数反復子を返します。|
-|[オフ](#clear)|`hash_multimap` のすべての要素を消去します。|
+|[クエンド](#cend)|`hash_multimap` 内の最後の要素の次の位置を指す定数反復子を返します。|
+|[クリア](#clear)|`hash_multimap` のすべての要素を消去します。|
 |[count](#count)|パラメーター指定したキーに一致するキーを持つ、`hash_multimap` 内の要素の数を返します。|
 |[crbegin](#crbegin)|反転された `hash_multimap` 内の最初の要素を指す定数反復子を返します。|
 |[crend](#crend)|反転された `hash_multimap` 内の最後の要素の次の位置を指す定数反復子を返します。|
@@ -199,33 +199,33 @@ hash_multimap クラスに用意されている反復子は双方向反復子で
 |[erase](#erase)|指定した位置から `hash_multimap` 内の要素または要素範囲を削除します。|
 |[find](#find)|指定したキーと同じキーを持つ、`hash_multimap` 内の要素の位置を指す反復子を返します。|
 |[get_allocator](#get_allocator)|`allocator` の構築に使用される `hash_multimap` オブジェクトのコピーを返します。|
-|[insert](#insert)|指定した位置において、`hash_multimap` に単一の要素または要素の範囲を挿入します。|
+|[挿入](#insert)|指定した位置において、`hash_multimap` に単一の要素または要素の範囲を挿入します。|
 |[key_comp](#key_comp)|`hash_multimap` 内のキーを並べ替えるために使用される比較オブジェクトのコピーを取得します。|
 |[lower_bound](#lower_bound)|指定したキー以上のキー値を持つ、`hash_multimap` 内の最初の要素を指す反復子を返します。|
 |[max_size](#max_size)|`hash_multimap` の最大長を返します。|
 |[rbegin](#rbegin)|反転された `hash_multimap` 内の最初の要素を指す反復子を返します。|
 |[rend](#rend)|反転された `hash_multimap` 内の最後の要素の次の位置を指す反復子を返します。|
-|[size](#size)|`hash_multimap` の新しいサイズを指定します。|
+|[サイズ](#size)|`hash_multimap` の新しいサイズを指定します。|
 |[スワップ](#swap)|2 つの `hash_multimap` の要素を交換します。|
 |[upper_bound](#upper_bound)|指定したキーよりも大きいキー値を持つ、`hash_multimap` 内の最初の要素を指す反復子を返します。|
 |[value_comp](#value_comp)|`hash_multimap` 内の要素の値を並べ替えるために使用される比較オブジェクトのコピーを取得します。|
 
 ### <a name="operators"></a>オペレーター
 
-|演算子|Description|
+|演算子|説明|
 |-|-|
 |[hash_multimap::operator=](#op_eq)|別の `hash_multimap` のコピーで `hash_multimap` の要素を置き換えます。|
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<hash_map >
+**ヘッダー:** \<hash_map>
 
 **名前空間:** stdext
 
-## <a name="allocator_type"></a>  hash_multimap::allocator_type
+## <a name="hash_multimapallocator_type"></a><a name="allocator_type"></a>hash_multimap::allocator_type
 
 > [!NOTE]
-> この API は、互換性のために残されています。 代替が必要な場合は、[unordered_multimap クラス](../standard-library/unordered-multimap-class.md)をご使用ください。
+> この API は、互換性のために残されています。 代替が必要な場合は、 [unordered_multimap Class](../standard-library/unordered-multimap-class.md)をご使用ください。
 
 hash_multimap オブジェクトのアロケーター クラスを表す型。
 
@@ -235,18 +235,18 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::allo
 
 ### <a name="remarks"></a>解説
 
-`allocator_type` は、テンプレート パラメーター `Allocator` のシノニムです。
+`allocator_type` はテンプレート パラメーター `Allocator` のシノニムです。
 
 `Allocator` の詳細については、[hash_multimap クラス](../standard-library/hash-multimap-class.md)のトピックのコメントに関するセクションをご覧ください。
 
 ### <a name="example"></a>例
 
-[ の使用例については、](#get_allocator)get_allocator`allocator_type` の例をご覧ください。
+`allocator_type` の使用例については、[get_allocator](#get_allocator) の例をご覧ください。
 
-## <a name="begin"></a>hash_multimap::begin
+## <a name="hash_multimapbegin"></a><a name="begin"></a>hash_multimap::開始
 
 > [!NOTE]
-> この API は、互換性のために残されています。 代替が必要な場合は、[unordered_multimap クラス](../standard-library/unordered-multimap-class.md)をご使用ください。
+> この API は、互換性のために残されています。 代替が必要な場合は、 [unordered_multimap Class](../standard-library/unordered-multimap-class.md)をご使用ください。
 
 hash_multimap の 1 つ目の要素を示す反復子を返します。
 
@@ -262,7 +262,7 @@ hash_multimap 内の最初の要素、または空の hash_multimap の次の位
 
 ### <a name="remarks"></a>解説
 
-`begin` の戻り値が `const_iterator`に割り当てられている場合、hash_multimap オブジェクト内の要素は変更できません。 `begin` の戻り値が `iterator`に割り当てられている場合は、hash_multimap オブジェクト内の要素を変更できます。
+の戻り値`begin`が に`const_iterator`代入されている場合、hash_multimap オブジェクトの要素は変更できません。 の戻り値`begin`が に`iterator`代入されている場合、hash_multimap オブジェクトの要素を変更できます。
 
 ### <a name="example"></a>例
 
@@ -308,10 +308,10 @@ The first element of hm1 is 0.
 The first element of hm1 is now 1.
 ```
 
-## <a name="cbegin"></a>  hash_multimap::cbegin
+## <a name="hash_multimapcbegin"></a><a name="cbegin"></a>hash_multimap::cbegin
 
 > [!NOTE]
-> この API は、互換性のために残されています。 代替が必要な場合は、[unordered_multimap クラス](../standard-library/unordered-multimap-class.md)をご使用ください。
+> この API は、互換性のために残されています。 代替が必要な場合は、 [unordered_multimap Class](../standard-library/unordered-multimap-class.md)をご使用ください。
 
 hash_multimap の 1 つ目の要素を示す定数反復子を返します。
 
@@ -352,10 +352,10 @@ int main( )
 The first element of hm1 is 2.
 ```
 
-## <a name="cend"></a>  hash_multimap::cend
+## <a name="hash_multimapcend"></a><a name="cend"></a>hash_multimap::cend
 
 > [!NOTE]
-> この API は、互換性のために残されています。 代替が必要な場合は、[unordered_multimap クラス](../standard-library/unordered-multimap-class.md)をご使用ください。
+> この API は、互換性のために残されています。 代替が必要な場合は、 [unordered_multimap Class](../standard-library/unordered-multimap-class.md)をご使用ください。
 
 hash_multimap 内の最後の要素の次の位置を指す定数反復子を返します。
 
@@ -403,10 +403,10 @@ int main( )
 The value of last element of hm1 is 30.
 ```
 
-## <a name="clear"></a>  hash_multimap::clear
+## <a name="hash_multimapclear"></a><a name="clear"></a>hash_multimap::クリア
 
 > [!NOTE]
-> この API は、互換性のために残されています。 代替が必要な場合は、[unordered_multimap クラス](../standard-library/unordered-multimap-class.md)をご使用ください。
+> この API は、互換性のために残されています。 代替が必要な場合は、 [unordered_multimap Class](../standard-library/unordered-multimap-class.md)をご使用ください。
 
 hash_multimap のすべての要素を消去します。
 
@@ -453,10 +453,10 @@ The size of the hash_multimap is initially 2.
 The size of the hash_multimap after clearing is 0.
 ```
 
-## <a name="const_iterator"></a>  hash_multimap::const_iterator
+## <a name="hash_multimapconst_iterator"></a><a name="const_iterator"></a>hash_multimap::const_iterator
 
 > [!NOTE]
-> この API は、互換性のために残されています。 代替が必要な場合は、[unordered_multimap クラス](../standard-library/unordered-multimap-class.md)をご使用ください。
+> この API は、互換性のために残されています。 代替が必要な場合は、 [unordered_multimap Class](../standard-library/unordered-multimap-class.md)をご使用ください。
 
 hash_multimap の 1 つの **const** 要素を読み取ることができる双方向反復子を提供する型。
 
@@ -468,20 +468,20 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 
 `const_iterator` 型で要素の値を変更することはできません。
 
-Hash_multimap によって定義された `const_iterator` は、`pair<const Key, Type>`型の[value_type](#value_type)のオブジェクトを指します。 キーの値はペアの 1 番目のメンバー、マップされた要素の値はペアの 2 番目のメンバーを介して取得できます。
+hash_multimap`const_iterator`で定義されるオブジェクトは、 型である[value_type](#value_type)を`pair<const Key, Type>`指しています。 キーの値はペアの 1 番目のメンバー、マップされた要素の値はペアの 2 番目のメンバーを介して取得できます。
 
-Hash_multimap 内の要素を指す `const_iterator` `cIter` を逆参照するには、`->` 演算子を使用します。
+hash_multimap内の`const_iterator``cIter`要素を指し示す場合に逆参照するには`->`、演算子を使用します。
 
-要素のキーの値にアクセスするには、`cIter->first`を使用します。これは `(*cIter).first`と同じです。 要素のマップされた datum の値にアクセスするには、`cIter->second`を使用します。これは `(*cIter).second`と同じです。
+要素のキーの値にアクセスするには、 と同等`cIter->first`の を使用`(*cIter).first`します。 要素のマップされたデータムの値にアクセスするには、 と同等の`cIter->second`を使用`(*cIter).second`します。
 
 ### <a name="example"></a>例
 
-[ の使用例については、](#begin)begin`const_iterator` の例をご覧ください。
+`const_iterator` の使用例については、[begin](#begin) の例をご覧ください。
 
-## <a name="const_pointer"></a>  hash_multimap::const_pointer
+## <a name="hash_multimapconst_pointer"></a><a name="const_pointer"></a>hash_multimap::const_pointer
 
 > [!NOTE]
-> この API は、互換性のために残されています。 代替が必要な場合は、[unordered_multimap クラス](../standard-library/unordered-multimap-class.md)をご使用ください。
+> この API は、互換性のために残されています。 代替が必要な場合は、 [unordered_multimap Class](../standard-library/unordered-multimap-class.md)をご使用ください。
 
 hash_multimap 内の **const** 要素へのポインターを提供する型。
 
@@ -495,10 +495,10 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::co
 
 ほとんどの場合、hash_multimap オブジェクト内の要素にアクセスするには、[反復子](#iterator)を使用する必要があります。
 
-## <a name="const_reference"></a>  hash_multimap::const_reference
+## <a name="hash_multimapconst_reference"></a><a name="const_reference"></a>hash_multimap::const_reference
 
 > [!NOTE]
-> この API は、互換性のために残されています。 代替が必要な場合は、[unordered_multimap クラス](../standard-library/unordered-multimap-class.md)をご使用ください。
+> この API は、互換性のために残されています。 代替が必要な場合は、 [unordered_multimap Class](../standard-library/unordered-multimap-class.md)をご使用ください。
 
 読み取りと **const** 操作の実行のために hash_multimap に格納された **const** 要素への参照を提供する型。
 
@@ -551,10 +551,10 @@ The key of first element in the hash_multimap is 1.
 The data value of 1st element in the hash_multimap is 10.
 ```
 
-## <a name="const_reverse_iterator"></a>  hash_multimap::const_reverse_iterator
+## <a name="hash_multimapconst_reverse_iterator"></a><a name="const_reverse_iterator"></a>hash_multimap::const_reverse_iterator
 
 > [!NOTE]
-> この API は、互換性のために残されています。 代替が必要な場合は、[unordered_multimap クラス](../standard-library/unordered-multimap-class.md)をご使用ください。
+> この API は、互換性のために残されています。 代替が必要な場合は、 [unordered_multimap Class](../standard-library/unordered-multimap-class.md)をご使用ください。
 
 hash_multimap の任意の **const** 要素を読み取ることができる双方向反復子を提供する型。
 
@@ -566,20 +566,20 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 
 `const_reverse_iterator` 型は要素の値を変更できず、逆の順序で hash_multimap を反復処理するために使用します。
 
-Hash_multimap によって定義される `const_reverse_iterator` は、`pair<const Key, Type>`型の[value_type](#value_type)のオブジェクトを指します。このオブジェクトの最初のメンバーは要素のキーであり、2番目のメンバーは要素が保持するマップされた datum です。
+hash_multimap`const_reverse_iterator`で定義されるオブジェクトは、要素[value_type](#value_type)のキーである最初`pair<const Key, Type>`のメンバーであり、2 番目のメンバーが要素によって保持されているマップされたデータムである type のオブジェクトを指します。
 
-Hash_multimap 内の要素を指す `const_reverse_iterator` `crIter` を逆参照するには、`->` 演算子を使用します。
+hash_multimap内の`const_reverse_iterator``crIter`要素を指し示す場合に逆参照するには`->`、演算子を使用します。
 
-要素のキーの値にアクセスするには、`crIter->first`を使用します。これは `(*crIter).first`と同じです。 要素のマップされた datum の値にアクセスするには、`crIter->second`を使用します。これは `(*crIter).second`と同じです。
+要素のキーの値にアクセスするには、 と同等`crIter->first`の を使用`(*crIter).first`します。 要素のマップされたデータムの値にアクセスするには、 と同等の`crIter->second`を使用`(*crIter).second`します。
 
 ### <a name="example"></a>例
 
-[ の宣言方法や使用方法の例については、](#rend)rend`const_reverse_iterator` の例をご覧ください。
+`const_reverse_iterator` の宣言方法や使用方法の例については、[rend](#rend) の例を参照してください。
 
-## <a name="count"></a>  hash_multimap::count
+## <a name="hash_multimapcount"></a><a name="count"></a>hash_multimap::カウント
 
 > [!NOTE]
-> この API は、互換性のために残されています。 代替が必要な場合は、[unordered_multimap クラス](../standard-library/unordered-multimap-class.md)をご使用ください。
+> この API は、互換性のために残されています。 代替が必要な場合は、 [unordered_multimap Class](../standard-library/unordered-multimap-class.md)をご使用ください。
 
 パラメーター指定したキーと一致するキーを持つ、hash_multimap 内の要素の数を返します。
 
@@ -600,9 +600,9 @@ hash_multimap に、並べ替えキーがパラメーター キーと一致す�
 
 メンバー関数は、
 
-**[lower_bound (** `key` **)、upper_bound (** `key` **))**
+**[lower_bound (** `key` **), upper_bound (** `key` **) )**
 
-キー値*キー*を持つ。
+キー値*キー*を持つ .
 
 ### <a name="example"></a>例
 
@@ -649,10 +649,10 @@ The number of elements in hm1 with a sort key of 2 is: 2.
 The number of elements in hm1 with a sort key of 3 is: 0.
 ```
 
-## <a name="crbegin"></a>  hash_multimap::crbegin
+## <a name="hash_multimapcrbegin"></a><a name="crbegin"></a>hash_multimap::クリbegin
 
 > [!NOTE]
-> この API は、互換性のために残されています。 代替が必要な場合は、[unordered_multimap クラス](../standard-library/unordered-multimap-class.md)をご使用ください。
+> この API は、互換性のために残されています。 代替が必要な場合は、 [unordered_multimap Class](../standard-library/unordered-multimap-class.md)をご使用ください。
 
 反転された hash_multimap 内の最初の要素を指す定数反復子を返します。
 
@@ -701,10 +701,10 @@ int main( )
 The first element of the reversed hash_multimap hm1 is 3.
 ```
 
-## <a name="crend"></a>  hash_multimap::crend
+## <a name="hash_multimapcrend"></a><a name="crend"></a>hash_multimap::クレンド
 
 > [!NOTE]
-> この API は、互換性のために残されています。 代替が必要な場合は、[unordered_multimap クラス](../standard-library/unordered-multimap-class.md)をご使用ください。
+> この API は、互換性のために残されています。 代替が必要な場合は、 [unordered_multimap Class](../standard-library/unordered-multimap-class.md)をご使用ください。
 
 反転された hash_multimap 内の最後の要素の次の位置を指す定数反復子を返します。
 
@@ -756,10 +756,10 @@ int main( )
 The last element of the reversed hash_multimap hm1 is 3.
 ```
 
-## <a name="difference_type"></a>  hash_multimap::difference_type
+## <a name="hash_multimapdifference_type"></a><a name="difference_type"></a>hash_multimap::difference_type
 
 > [!NOTE]
-> この API は、互換性のために残されています。 代替が必要な場合は、[unordered_multimap クラス](../standard-library/unordered-multimap-class.md)をご使用ください。
+> この API は、互換性のために残されています。 代替が必要な場合は、 [unordered_multimap Class](../standard-library/unordered-multimap-class.md)をご使用ください。
 
 hash_multimap の要素の数を、反復子が指す要素の範囲に基づいて表すために使用できる符号付き整数型。
 
@@ -769,7 +769,7 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::di
 
 ### <a name="remarks"></a>解説
 
-`difference_type` は、コンテナーの反復子を減算またはインクリメントするときに返される型です。 通常、`difference_type` は、 *[ first,  last)*  の範囲内で、反復子 `first` と `last` の間にある要素の数を表すために使用され、`first` が指す要素と、`last` が指す要素の 1 つ前までの範囲の要素を含みます。
+`difference_type` は、コンテナーの反復子を減算またはインクリメントするときに返される型です。 通常 `difference_type` は、*[ first,  last)* の範囲内で、反復子 `first` と `last` の間にある要素の数を表すために使用され、`first` が指す要素と、`last` が指す要素の 1 つ前までの範囲の要素を含みます。
 
 `difference_type` は、入力反復子の要件を満たすすべての反復子 (set などの反転可能なコンテナーによってサポートされる双方向反復子のクラスを含む) に対して使用できますが、反復子間の減算は、vector などのランダム アクセス コンテナーによって提供される、ランダム アクセス反復子によってのみサポートされます。
 
@@ -833,10 +833,10 @@ The keys of the mapped elements are: 1 2 2 3.
 The values of the mapped elements are: 10 20 30 20.
 ```
 
-## <a name="emplace"></a>  hash_multimap::emplace
+## <a name="hash_multimapemplace"></a><a name="emplace"></a>hash_multimap::emplace
 
 > [!NOTE]
-> この API は、互換性のために残されています。 代替が必要な場合は、[unordered_multimap クラス](../standard-library/unordered-multimap-class.md)をご使用ください。
+> この API は、互換性のために残されています。 代替が必要な場合は、 [unordered_multimap Class](../standard-library/unordered-multimap-class.md)をご使用ください。
 
 インプレースで構築された要素を hash_multimap に挿入します。
 
@@ -847,9 +847,9 @@ iterator emplace(ValTy&& val);
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|Description|
+|パラメーター|説明|
 |-|-|
-|*val*|[hash_multimap](../standard-library/hash-multimap-class.md) に挿入される要素の移動コンストラクトに使用する値。|
+|*ヴァル*|[hash_multimap](../standard-library/hash-multimap-class.md) に挿入される要素の移動コンストラクトに使用する値。|
 
 ### <a name="return-value"></a>戻り値
 
@@ -888,10 +888,10 @@ After the emplace insertion, hm1 contains:
 1 => a
 ```
 
-## <a name="emplace_hint"></a>  hash_multimap::emplace_hint
+## <a name="hash_multimapemplace_hint"></a><a name="emplace_hint"></a>hash_multimap::emplace_hint
 
 > [!NOTE]
-> この API は、互換性のために残されています。 代替が必要な場合は、[unordered_multimap クラス](../standard-library/unordered-multimap-class.md)をご使用ください。
+> この API は、互換性のために残されています。 代替が必要な場合は、 [unordered_multimap Class](../standard-library/unordered-multimap-class.md)をご使用ください。
 
 インプレースで構築された要素を、配置ヒントと共に hash_multimap に挿入します。
 
@@ -904,10 +904,10 @@ iterator emplace_hint(
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|Description|
+|パラメーター|説明|
 |-|-|
-|*val*|挿入される要素 (一般的には、キーが同じ順序付けになる要素) が [ にまだ含まれていない場合に、](../standard-library/hash-multimap-class.md)hash_multimap`hash_multimap` に挿入される要素の移動コンストラクトに使用する値。|
-|*_Where*|正しい挿入ポイントの検索を開始する場所に関するヒント。|
+|*ヴァル*|挿入される要素 (一般的には、キーが同じ順序付けになる要素) が `hash_multimap` にまだ含まれていない場合に、[hash_multimap](../standard-library/hash-multimap-class.md) に挿入される要素の移動コンストラクトに使用する値。|
+|*_where*|正しい挿入ポイントの検索を開始する場所に関するヒント。|
 
 ### <a name="return-value"></a>戻り値
 
@@ -917,7 +917,7 @@ iterator emplace_hint(
 
 要素の [hash_multimap::value_type](#value_type) はペアを表します。これにより、要素の値は順序付けされたペアになり、このペアの最初のコンポーネントはキー値と同じで、2 番目のコンポーネントは要素のデータ値と同じになります。
 
-挿入ポイントが *_Where*の直後にある場合、挿入は対数時間ではなく償却定数時間で実行できます。
+挿入ポイントが *_Where*の直後にある場合、挿入は対数時間ではなく償却定数時間で発生する可能性があります。
 
 ### <a name="example"></a>例
 
@@ -948,10 +948,10 @@ After the emplace insertion, hm1 contains:
 1 => a
 ```
 
-## <a name="empty"></a>  hash_multimap::empty
+## <a name="hash_multimapempty"></a><a name="empty"></a>hash_multimap::空
 
 > [!NOTE]
-> この API は、互換性のために残されています。 代替が必要な場合は、[unordered_multimap クラス](../standard-library/unordered-multimap-class.md)をご使用ください。
+> この API は、互換性のために残されています。 代替が必要な場合は、 [unordered_multimap Class](../standard-library/unordered-multimap-class.md)をご使用ください。
 
 hash_multimap が空かどうかをテストします。
 
@@ -999,10 +999,10 @@ The hash_multimap hm1 is not empty.
 The hash_multimap hm2 is empty.
 ```
 
-## <a name="end"></a>  hash_multimap::end
+## <a name="hash_multimapend"></a><a name="end"></a>hash_multimap::終了
 
 > [!NOTE]
-> この API は、互換性のために残されています。 代替が必要な場合は、[unordered_multimap クラス](../standard-library/unordered-multimap-class.md)をご使用ください。
+> この API は、互換性のために残されています。 代替が必要な場合は、 [unordered_multimap Class](../standard-library/unordered-multimap-class.md)をご使用ください。
 
 hash_multimap 内の最後の要素の次の位置を指す反復子を返します。
 
@@ -1070,10 +1070,10 @@ The value of last element of hm1 is 30.
 The value of last element of hm1 is now 20.
 ```
 
-## <a name="equal_range"></a>  hash_multimap::equal_range
+## <a name="hash_multimapequal_range"></a><a name="equal_range"></a>hash_multimap::equal_range
 
 > [!NOTE]
-> この API は、互換性のために残されています。 代替が必要な場合は、[unordered_multimap クラス](../standard-library/unordered-multimap-class.md)をご使用ください。
+> この API は、互換性のために残されています。 代替が必要な場合は、 [unordered_multimap Class](../standard-library/unordered-multimap-class.md)をご使用ください。
 
 指定したキーよりも大きいキーを持つ、hash_multimap 内の最初の要素を指す反復子と、そのキー以上のキーを持つ、hash_multimap 内の最初の要素を指す反復子のペアを返します。
 
@@ -1092,7 +1092,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 1 番目がそのキーの [lower_bound](#lower_bound)、2 番目がそのキーの [upper_bound](#upper_bound) である、反復子のペア。
 
-メンバー関数によって返されるペア `pr` 最初の反復子にアクセスするには、`pr`を使用します。 **最初**に、下限の反復子を逆参照するには、\*(`pr`を使用します。 **最初**)。 メンバー関数によって返さ `pr` ペアの2番目の反復子にアクセスするには、`pr`を使用します。 **次**に、上限の反復子を逆参照するには、\*(`pr`を使用します。 **2 番目**)。
+メンバー関数によって返されるペア`pr`の最初の反復器にアクセスするには、 を使用`pr`します。 **まず**、下限の反復器を逆参照するには、 \*( `pr`. **最初**に). メンバー関数によって返されるペア`pr`の 2 番目の反復器にアクセスするには、`pr`を使用します。 **2 番目**に、上限の反復器を逆参照するには、 \* `pr`( . **2 番目**)。
 
 ### <a name="remarks"></a>解説
 
@@ -1159,10 +1159,10 @@ matching the 2nd element of the pair returned by equal_range( 2 ).
 The hash_multimap hm1 doesn't have an element with a key less than 4.
 ```
 
-## <a name="erase"></a>  hash_multimap::erase
+## <a name="hash_multimaperase"></a><a name="erase"></a>hash_multimap::消去
 
 > [!NOTE]
-> この API は、互換性のために残されています。 代替が必要な場合は、[unordered_multimap クラス](../standard-library/unordered-multimap-class.md)をご使用ください。
+> この API は、互換性のために残されています。 代替が必要な場合は、 [unordered_multimap Class](../standard-library/unordered-multimap-class.md)をご使用ください。
 
 hash_multimap 内の要素または要素の範囲を指定した位置から削除するか、または指定したキーと一致する要素を削除します。
 
@@ -1176,13 +1176,13 @@ size_type erase(const key_type& key);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Where*\
+*_where*\
 hash_multimap から削除する要素の位置。
 
-*最初*の\
+*まずは*\
 hash_multimap から削除する最初の要素の位置。
 
-*最後*の\
+*前の*\
 hash_multimap から削除する最後の要素の次の位置。
 
 *キー*\
@@ -1285,10 +1285,10 @@ After another element with a key equal to that of the
 2nd element is deleted, the hash_multimap hm3 is: 0 3.
 ```
 
-## <a name="find"></a>  hash_multimap::find
+## <a name="hash_multimapfind"></a><a name="find"></a>hash_multimap::検索
 
 > [!NOTE]
-> この API は、互換性のために残されています。 代替が必要な場合は、[unordered_multimap クラス](../standard-library/unordered-multimap-class.md)をご使用ください。
+> この API は、互換性のために残されています。 代替が必要な場合は、 [unordered_multimap Class](../standard-library/unordered-multimap-class.md)をご使用ください。
 
 指定したキーと同じキーを持つ、hash_multimap 内の要素の最初の位置を指す反復子を返します。
 
@@ -1309,9 +1309,9 @@ const_iterator find(const Key& key) const;
 
 ### <a name="remarks"></a>解説
 
-このメンバー関数は、小なり比較関係に基づいて順序を誘発する二項述語の下で、並べ替えキーが引数キーに `equivalent` される hash_multimap 内の要素を指す反復子を返します。
+メンバー関数は、比較可能度の関係に基づいて順序付けを誘導`equivalent`する二項述語の下で、引数キーに対するソートキーを持つhash_multimap内の要素をアドレス指定する反復子を返します。
 
-`find` の戻り値が `const_iterator` に割り当てられている場合、hash_multimap オブジェクトは変更できません。 `find` の戻り値が `iterator`に割り当てられている場合は、hash_multimap オブジェクトを変更できます。
+`find` の戻り値が `const_iterator` に割り当てられている場合、hash_multimap オブジェクトは変更できません。 の戻り値`find`が`iterator`に代入されている場合、hash_multimapオブジェクトを変更できます。
 
 ### <a name="example"></a>例
 
@@ -1381,10 +1381,10 @@ that of the last element is: 20.
 This is not the last element of hash_multimap hm1.
 ```
 
-## <a name="get_allocator"></a>  hash_multimap::get_allocator
+## <a name="hash_multimapget_allocator"></a><a name="get_allocator"></a>hash_multimap:get_allocator
 
 > [!NOTE]
-> この API は、互換性のために残されています。 代替が必要な場合は、[unordered_multimap クラス](../standard-library/unordered-multimap-class.md)をご使用ください。
+> この API は、互換性のために残されています。 代替が必要な場合は、 [unordered_multimap Class](../standard-library/unordered-multimap-class.md)をご使用ください。
 
 hash_multimap の構築に使用されるアロケーター オブジェクトのコピーを返します。
 
@@ -1457,10 +1457,10 @@ int main( )
 }
 ```
 
-## <a name="hash_multimap"></a>  hash_multimap::hash_multimap
+## <a name="hash_multimaphash_multimap"></a><a name="hash_multimap"></a>hash_multimap::hash_multimap
 
 > [!NOTE]
-> この API は、互換性のために残されています。 代替が必要な場合は、[unordered_multimap クラス](../standard-library/unordered-multimap-class.md)をご使用ください。
+> この API は、互換性のために残されています。 代替が必要な場合は、 [unordered_multimap Class](../standard-library/unordered-multimap-class.md)をご使用ください。
 
 空の hash_multimap を構築するか、他の hash_multimap の全体または一部のコピーである hash_multimap を構築します。
 
@@ -1513,13 +1513,13 @@ hash_multimap(
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|Description|
+|パラメーター|説明|
 |-|-|
-|*ウムアルクラ*|この hash_multimap オブジェクトに使用するストレージ アロケーター クラス。既定では、`Allocator` です。|
-|*コンペティション*|マップ内の要素の並べ替えに使用される、型 `const Traits` の比較関数。既定では `Traits` です。|
-|*Right*|構築される map のコピー元となる map。|
-|*First*|コピーする要素範囲内の最初の要素の位置。|
-|*Last*|コピーする要素範囲を超える最初の要素の位置。|
+|*アル*|この hash_multimap オブジェクトに使用するストレージ アロケーター クラス。既定では、`Allocator` です。|
+|*作曲*|マップ内の要素の並べ替えに使用される、型 `const Traits` の比較関数。既定では `Traits` です。|
+|*そうです*|構築される map のコピー元となる map。|
+|*まずは*|コピーする要素範囲内の最初の要素の位置。|
+|*前の*|コピーする要素範囲を超える最初の要素の位置。|
 |*IList*|コピー元の initializer_list。|
 
 ### <a name="remarks"></a>解説
@@ -1530,7 +1530,7 @@ hash_multimap(
 
 すべてのコンストラクターは、`Traits` 型の関数オブジェクトを格納します。このオブジェクトは hash_multimap のキーの順序を確立するために使用され、後で [key_comp](#key_comp) を呼び出して取得することができます。
 
-最初の3つのコンストラクターは、空の初期 hash_multimap を指定します。2番目の関数は、要素の順序を確立するために使用する比較関数 (*Comp*) の種類を指定し、3番目の関数は、使用するアロケーターの型 (`_Al`) を明示的に指定します。 キーワード `explicit` は、特定の種類の自動型変換が実行されないようにします。
+最初の 3 つのコンストラクターは空の初期hash_multimapを指定します。2 番目の要素は、要素の順序を確立するときに使用する比較関数 (*Comp*) の型を指定し、3 つ`_Al`目は使用するアロケーターの型 ( ) を明示的に指定します。 キーワード `explicit` は、特定の種類の自動型変換が実行されないようにします。
 
 4 番目のコンストラクターは、hash_multimap `Right` のコピーを指定します。
 
@@ -1540,10 +1540,10 @@ hash_multimap(
 
 最後の 3 つのコンストラクターは、initializer_list を使用します。
 
-## <a name="insert"></a>  hash_multimap::insert
+## <a name="hash_multimapinsert"></a><a name="insert"></a>hash_multimap::挿入
 
 > [!NOTE]
-> この API は、互換性のために残されています。 代替が必要な場合は、[unordered_multimap クラス](../standard-library/unordered-multimap-class.md)をご使用ください。
+> この API は、互換性のために残されています。 代替が必要な場合は、 [unordered_multimap Class](../standard-library/unordered-multimap-class.md)をご使用ください。
 
 hash_multimap に要素や要素範囲を挿入します。
 
@@ -1573,12 +1573,12 @@ iterator insert(
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|Description|
+|パラメーター|説明|
 |-|-|
 |*Val*|挿入される要素が hash_multimap にまだ含まれていない場合、より一般的には、キーが同じ順序付けになる要素がまだ含まれていない場合に、hash_multimap に挿入される要素の値。|
 |*Where*|正しい挿入ポイントの検索を開始する場所に関するヒント。|
-|*First*|マップからコピーされる最初の要素の位置。|
-|*Last*|マップからコピーされる最後の要素の次の位置。|
+|*まずは*|マップからコピーされる最初の要素の位置。|
+|*前の*|マップからコピーされる最後の要素の次の位置。|
 
 ### <a name="return-value"></a>戻り値
 
@@ -1594,12 +1594,12 @@ iterator insert(
 
 要素の [value_type](#value_type) はペアを表します。これにより、要素の値は順序付けされたペアになり、このペアの最初のコンポーネントはキー値と同じで、2 番目のコンポーネントは要素のデータ値と同じになります。
 
-挿入ポイントが*位置*の直後にある場合は、対数時間ではなく、`insert`のヒントバージョンに対して、償却定数時間で挿入することができます。
+挿入ポイントが*Where*の直後にある場合、カーソルは、`insert`対数時間ではなく、 のヒント バージョンの償却定数時間で発生する可能性があります。
 
-## <a name="iterator"></a>  hash_multimap::iterator
+## <a name="hash_multimapiterator"></a><a name="iterator"></a>hash_multimap::反復器
 
 > [!NOTE]
-> この API は、互換性のために残されています。 代替が必要な場合は、[unordered_multimap クラス](../standard-library/unordered-multimap-class.md)をご使用ください。
+> この API は、互換性のために残されています。 代替が必要な場合は、 [unordered_multimap Class](../standard-library/unordered-multimap-class.md)をご使用ください。
 
 hash_multimap 内の任意の要素の読み取りまたは変更ができる双方向反復子を提供する型。
 
@@ -1609,22 +1609,22 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::iter
 
 ### <a name="remarks"></a>解説
 
-Hash_multimap によって定義される `iterator` は[value_type](#value_type)のオブジェクトを指します。このオブジェクトの最初 \< `pair`のメンバーは**要素のキー**であり、2番目のメンバーは要素が保持するマップされた datum です。
+hash_multimap`iterator`で定義されたオブジェクトは[value_type、const](#value_type) `pair` \< **Key、Type**>型で、最初のメンバーが要素のキーであり、2 番目のメンバーが要素によって保持されているマップされたデータムです。
 
-Hash_multimap 内の要素を指す**反復子**`Iter` 逆参照するには、`->` 演算子を使用します。
+hash_multimap内の要素を指す**反復子**`Iter`を逆参照するには、演算子を使用します`->`。
 
-要素のキーの値にアクセスするには、**最初**に  -> `Iter`を使用します。これは、(\* `Iter`) に相当します。 **最初**に。 要素のマップされた datum の値にアクセスするには、`Iter` -> **second**を使用します。これは、(\* `Iter`) に相当します。 **最初**に。
+要素のキーの値にアクセスするには、 ( `Iter`  ->  **first**\* `Iter`) と同等の値を最初に使用します。 **最初**の . 要素のマップされたデータムの値にアクセスするには、 ( `Iter`  ->  **second**\* `Iter`) と等価の 2 番目の を使用します。 **最初**の .
 
-`iterator` 型を使用して、要素の値を変更できます。
+型`iterator`を使用して、要素の値を変更できます。
 
 ### <a name="example"></a>例
 
-[ の宣言方法や使用方法の例については、](#begin)begin`iterator` の例をご覧ください。
+`iterator` の宣言方法や使用方法の例については、[begin](#begin) の例をご覧ください。
 
-## <a name="key_comp"></a>  hash_multimap::key_comp
+## <a name="hash_multimapkey_comp"></a><a name="key_comp"></a>hash_multimap::key_comp
 
 > [!NOTE]
-> この API は、互換性のために残されています。 代替が必要な場合は、[unordered_multimap クラス](../standard-library/unordered-multimap-class.md)をご使用ください。
+> この API は、互換性のために残されています。 代替が必要な場合は、 [unordered_multimap Class](../standard-library/unordered-multimap-class.md)をご使用ください。
 
 hash_multimap 内のキーを並べ替えるために使用される比較オブジェクトのコピーを取得します。
 
@@ -1640,9 +1640,9 @@ hash_multimap が要素の並べ替えに使用する関数オブジェクトを
 
 格納されているオブジェクトは以下のメンバー関数を定義します。
 
-**bool operator (Const key &** `left` **、const key &** `right` **);**
+**bool operator(const Key&** `left` **, const Key&** `right` **);**
 
-これは、並べ替え順で **が** に先行しかつ等しくない場合に `left`true`right` を返します。
+これは、**true**並べ`left`替え順序`right`の前に、並べ替え順序と等しくない場合に true を返します。
 
 ### <a name="example"></a>例
 
@@ -1693,10 +1693,10 @@ int main( )
 }
 ```
 
-## <a name="key_compare"></a>  hash_multimap::key_compare
+## <a name="hash_multimapkey_compare"></a><a name="key_compare"></a>hash_multimap::key_compare
 
 > [!NOTE]
-> この API は、互換性のために残されています。 代替が必要な場合は、[unordered_multimap クラス](../standard-library/unordered-multimap-class.md)をご使用ください。
+> この API は、互換性のために残されています。 代替が必要な場合は、 [unordered_multimap Class](../standard-library/unordered-multimap-class.md)をご使用ください。
 
 2 つの並べ替えキーを比較して、hash_multimap 内の 2 つの要素の相対順序を決定できる関数オブジェクトを提供する型。
 
@@ -1706,18 +1706,18 @@ typedef Traits key_compare;
 
 ### <a name="remarks"></a>解説
 
-`key_compare` は、テンプレートパラメーターの*特徴*のシノニムです。
+`key_compare`はテンプレート パラメータ*Traits*の同義語です。
 
-*特徴*の詳細については、 [hash_multimap クラス](../standard-library/hash-multimap-class.md)に関するトピックを参照してください。
+*トレイト*の詳細については[、「hash_multimapクラス](../standard-library/hash-multimap-class.md)」のトピックを参照してください。
 
 ### <a name="example"></a>例
 
-[ の宣言方法や使用方法の例については、](#key_comp)key_comp`key_compare` の例をご覧ください。
+`key_compare` の宣言方法や使用方法の例については、[key_comp](#key_comp) の例を参照してください。
 
-## <a name="key_type"></a>  hash_multimap::key_type
+## <a name="hash_multimapkey_type"></a><a name="key_type"></a>hash_multimap::key_type
 
 > [!NOTE]
-> この API は、互換性のために残されています。 代替が必要な場合は、[unordered_multimap クラス](../standard-library/unordered-multimap-class.md)をご使用ください。
+> この API は、互換性のために残されています。 代替が必要な場合は、 [unordered_multimap Class](../standard-library/unordered-multimap-class.md)をご使用ください。
 
 hash_multimap の各要素の一部である並べ替えキー オブジェクトを表す型。
 
@@ -1727,18 +1727,18 @@ typedef Key key_type;
 
 ### <a name="remarks"></a>解説
 
-`key_type` は、テンプレートパラメーター*キー*のシノニムです。
+`key_type`はテンプレート パラメータ Key の同義語*です*。
 
-*キー*の詳細については、 [hash_multimap クラス](../standard-library/hash-multimap-class.md)のトピックの「解説」を参照してください。
+*Key*の詳細については[、「hash_multimap クラス](../standard-library/hash-multimap-class.md)」の「解説」を参照してください。
 
 ### <a name="example"></a>例
 
-[ の宣言方法や使用方法の例については、](#value_type)value_type`key_compare` の例をご覧ください。
+`key_compare` の宣言方法や使用方法の例については、[value_type](#value_type) の例を参照してください。
 
-## <a name="lower_bound"></a>  hash_multimap::lower_bound
+## <a name="hash_multimaplower_bound"></a><a name="lower_bound"></a>hash_multimap::lower_bound
 
 > [!NOTE]
-> この API は、互換性のために残されています。 代替が必要な場合は、[unordered_multimap クラス](../standard-library/unordered-multimap-class.md)をご使用ください。
+> この API は、互換性のために残されています。 代替が必要な場合は、 [unordered_multimap Class](../standard-library/unordered-multimap-class.md)をご使用ください。
 
 指定したキー以上のキーを持つ、hash_multimap 内の最初の要素を指す反復子を返します。
 
@@ -1757,7 +1757,7 @@ const_iterator lower_bound(const Key& key) const;
 
 引数キー以上のキーを持つ hash_multimap 内の要素の位置を指す、または、キーの一致が検出されない場合は hash_multimap 内の最後の要素の次の位置を指す、[反復子](#iterator)または [const_iterator](#const_iterator)。
 
-`lower_bound` の戻り値が `const_iterator` に割り当てられている場合、hash_multimap オブジェクトは変更できません。 `lower_bound` の戻り値が `iterator`に割り当てられている場合は、hash_multimap オブジェクトを変更できます。
+`lower_bound` の戻り値が `const_iterator` に割り当てられている場合、hash_multimap オブジェクトは変更できません。 の戻り値`lower_bound`が`iterator`に代入されている場合、hash_multimapオブジェクトを変更できます。
 
 ### <a name="remarks"></a>解説
 
@@ -1830,10 +1830,10 @@ that of the last element is: 20.
 This is not the last element of hash_multimap hm1.
 ```
 
-## <a name="mapped_type"></a>  hash_multimap::mapped_type
+## <a name="hash_multimapmapped_type"></a><a name="mapped_type"></a>hash_multimap::mapped_type
 
 > [!NOTE]
-> この API は、互換性のために残されています。 代替が必要な場合は、[unordered_multimap クラス](../standard-library/unordered-multimap-class.md)をご使用ください。
+> この API は、互換性のために残されています。 代替が必要な場合は、 [unordered_multimap Class](../standard-library/unordered-multimap-class.md)をご使用ください。
 
 hash_multimap 内に格納されているデータ型を表す型。
 
@@ -1845,16 +1845,16 @@ typedef Type mapped_type;
 
 `mapped_type` は、テンプレート パラメーター *Type* のシノニムです。
 
-*型*の詳細については、 [hash_multimap クラス](../standard-library/hash-multimap-class.md)に関するトピックを参照してください。
+*タイプ*の詳細については[、「hash_multimapクラス](../standard-library/hash-multimap-class.md)」トピックを参照してください。
 
 ### <a name="example"></a>例
 
-[ の宣言方法や使用方法の例については、](#value_type)value_type`key_type` の例をご覧ください。
+`key_type` の宣言方法や使用方法の例については、[value_type](#value_type) の例を参照してください。
 
-## <a name="max_size"></a>  hash_multimap::max_size
+## <a name="hash_multimapmax_size"></a><a name="max_size"></a>hash_multimap::max_size
 
 > [!NOTE]
-> この API は、互換性のために残されています。 代替が必要な場合は、[unordered_multimap クラス](../standard-library/unordered-multimap-class.md)をご使用ください。
+> この API は、互換性のために残されています。 代替が必要な場合は、 [unordered_multimap Class](../standard-library/unordered-multimap-class.md)をご使用ください。
 
 hash_multimap の最大長を返します。
 
@@ -1889,10 +1889,10 @@ int main( )
 }
 ```
 
-## <a name="op_eq"></a>  hash_multimap::operator=
+## <a name="hash_multimapoperator"></a><a name="op_eq"></a>hash_multimap::演算子=
 
 > [!NOTE]
-> この API は、互換性のために残されています。 代替が必要な場合は、[unordered_multimap クラス](../standard-library/unordered-multimap-class.md)をご使用ください。
+> この API は、互換性のために残されています。 代替が必要な場合は、 [unordered_multimap Class](../standard-library/unordered-multimap-class.md)をご使用ください。
 
 hash_multimap の要素を、別の hash_multimap のコピーで置き換えます。
 
@@ -1904,13 +1904,13 @@ hash_multimap& operator=(hash_multimap&& right);
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|Description|
+|パラメーター|説明|
 |-|-|
-|*right*|[ にコピーする ](../standard-library/hash-multimap-class.md)hash_multimap`hash_multimap`。|
+|*そうです*|`hash_multimap` にコピーする [hash_multimap](../standard-library/hash-multimap-class.md)。|
 
 ### <a name="remarks"></a>解説
 
-`hash_multimap`内の既存の要素を消去した後、 *`operator=` の内容*を `hash_multimap`にコピーまたは移動します。
+の既存の要素を削除した後、`hash_multimap``operator=`*右*の要素を コピーするか、または の`hash_multimap`内容を に移動します。
 
 ### <a name="example"></a>例
 
@@ -1950,10 +1950,10 @@ int main( )
 }
 ```
 
-## <a name="pointer"></a>  hash_multimap::pointer
+## <a name="hash_multimappointer"></a><a name="pointer"></a>hash_multimap::pオインター
 
 > [!NOTE]
-> この API は、互換性のために残されています。 代替が必要な場合は、[unordered_multimap クラス](../standard-library/unordered-multimap-class.md)をご使用ください。
+> この API は、互換性のために残されています。 代替が必要な場合は、 [unordered_multimap Class](../standard-library/unordered-multimap-class.md)をご使用ください。
 
 hash_multimap 内の要素へのポインターを提供する型。
 
@@ -1963,14 +1963,14 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::po
 
 ### <a name="remarks"></a>解説
 
-`pointer` 型を使用して、要素の値を変更できます。
+型`pointer`を使用して、要素の値を変更できます。
 
 ほとんどの場合、hash_multimap オブジェクト内の要素にアクセスするには、[反復子](#iterator)を使用する必要があります。
 
-## <a name="rbegin"></a>  hash_multimap::rbegin
+## <a name="hash_multimaprbegin"></a><a name="rbegin"></a>hash_multimap::始まり
 
 > [!NOTE]
-> この API は、互換性のために残されています。 代替が必要な場合は、[unordered_multimap クラス](../standard-library/unordered-multimap-class.md)をご使用ください。
+> この API は、互換性のために残されています。 代替が必要な場合は、 [unordered_multimap Class](../standard-library/unordered-multimap-class.md)をご使用ください。
 
 反転された hash_multimap 内の最初の要素を指す反復子を返します。
 
@@ -2052,10 +2052,10 @@ After the erasure, the first element
 in the reversed hash_multimap is 2.
 ```
 
-## <a name="reference"></a>  hash_multimap::reference
+## <a name="hash_multimapreference"></a><a name="reference"></a>hash_multimap::参照
 
 > [!NOTE]
-> この API は、互換性のために残されています。 代替が必要な場合は、[unordered_multimap クラス](../standard-library/unordered-multimap-class.md)をご使用ください。
+> この API は、互換性のために残されています。 代替が必要な場合は、 [unordered_multimap Class](../standard-library/unordered-multimap-class.md)をご使用ください。
 
 hash_multimap に格納されている要素への参照を提供する型。
 
@@ -2115,10 +2115,10 @@ The data value of first element in the hash_multimap is 10.
 The modified data value of first element is 15.
 ```
 
-## <a name="rend"></a>  hash_multimap::rend
+## <a name="hash_multimaprend"></a><a name="rend"></a>hash_multimap::レンド
 
 > [!NOTE]
-> この API は、互換性のために残されています。 代替が必要な場合は、[unordered_multimap クラス](../standard-library/unordered-multimap-class.md)をご使用ください。
+> この API は、互換性のために残されています。 代替が必要な場合は、 [unordered_multimap Class](../standard-library/unordered-multimap-class.md)をご使用ください。
 
 反転された hash_multimap 内の最後の要素の次の位置を指す反復子を返します。
 
@@ -2203,10 +2203,10 @@ The reversed hash_multimap is: 3 2 1 .
 After the erasure, the last element in the reversed hash_multimap is 2.
 ```
 
-## <a name="reverse_iterator"></a>  hash_multimap::reverse_iterator
+## <a name="hash_multimapreverse_iterator"></a><a name="reverse_iterator"></a>hash_multimap::reverse_iterator
 
 > [!NOTE]
-> この API は、互換性のために残されています。 代替が必要な場合は、[unordered_multimap クラス](../standard-library/unordered-multimap-class.md)をご使用ください。
+> この API は、互換性のために残されています。 代替が必要な場合は、 [unordered_multimap Class](../standard-library/unordered-multimap-class.md)をご使用ください。
 
 反転された hash_multimap 内の 1 つの要素の読み取りまたは変更ができる双方向反復子を提供する型。
 
@@ -2218,16 +2218,16 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::reve
 
 型 `reverse_iterator` は、逆の順序で hash_multimap を反復処理するために使用します。
 
-Hash_multimap によって定義された `reverse_iterator` は、 [value_type](#value_type)のオブジェクトを指します。これは、型 `pair`\< **Const Key、型**> です。 キーの値はペアの 1 番目のメンバー、マップされた要素の値はペアの 2 番目のメンバーを介して取得できます。
+hash_multimap によって定義される `reverse_iterator` は、[value_type](#value_type) のオブジェクトを指します。これは `pair`\< **const Key, Type**> 型です。 キーの値はペアの 1 番目のメンバー、マップされた要素の値はペアの 2 番目のメンバーを介して取得できます。
 
 ### <a name="example"></a>例
 
-[ の宣言方法や使用方法の例については、](#rbegin)rbegin`reverse_iterator` の例をご覧ください。
+`reverse_iterator` の宣言方法や使用方法の例については、[rbegin](#rbegin) の例を参照してください。
 
-## <a name="size"></a>  hash_multimap::size
+## <a name="hash_multimapsize"></a><a name="size"></a>hash_multimap::サイズ
 
 > [!NOTE]
-> この API は、互換性のために残されています。 代替が必要な場合は、[unordered_multimap クラス](../standard-library/unordered-multimap-class.md)をご使用ください。
+> この API は、互換性のために残されています。 代替が必要な場合は、 [unordered_multimap Class](../standard-library/unordered-multimap-class.md)をご使用ください。
 
 hash_multimap 内の要素の数を返します。
 
@@ -2274,10 +2274,10 @@ The hash_multimap length is 1.
 The hash_multimap length is now 2.
 ```
 
-## <a name="size_type"></a>  hash_multimap::size_type
+## <a name="hash_multimapsize_type"></a><a name="size_type"></a>hash_multimap::size_type
 
 > [!NOTE]
-> この API は、互換性のために残されています。 代替が必要な場合は、[unordered_multimap クラス](../standard-library/unordered-multimap-class.md)をご使用ください。
+> この API は、互換性のために残されています。 代替が必要な場合は、 [unordered_multimap Class](../standard-library/unordered-multimap-class.md)をご使用ください。
 
 hash_multimap 内の要素の数をカウントする符号なし整数型。
 
@@ -2289,12 +2289,12 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::si
 
 ### <a name="example"></a>例
 
-[ の宣言方法や使用方法の例については、](#size)size`size_type` の例をご覧ください。
+`size_type` の宣言方法や使用方法の例については、[size](#size) の例を参照してください。
 
-## <a name="swap"></a>  hash_multimap::swap
+## <a name="hash_multimapswap"></a><a name="swap"></a>hash_multimap::スワップ
 
 > [!NOTE]
-> この API は、互換性のために残されています。 代替が必要な場合は、[unordered_multimap クラス](../standard-library/unordered-multimap-class.md)をご使用ください。
+> この API は、互換性のために残されています。 代替が必要な場合は、 [unordered_multimap Class](../standard-library/unordered-multimap-class.md)をご使用ください。
 
 2 つの hash_multimap の要素を交換します。
 
@@ -2304,7 +2304,7 @@ void swap(hash_multimap& right);
 
 ### <a name="parameters"></a>パラメーター
 
-*右*\
+*そうです*\
 交換する要素を提供する hash_multimap (hash_multimap の要素と要素を交換する hash_multimap)。
 
 ### <a name="remarks"></a>解説
@@ -2363,10 +2363,10 @@ After swapping with hm2, hash_multimap hm1 is: 100 200.
 After swapping with hm3, hash_multimap hm1 is: 300.
 ```
 
-## <a name="upper_bound"></a>  hash_multimap::upper_bound
+## <a name="hash_multimapupper_bound"></a><a name="upper_bound"></a>hash_multimap::upper_bound
 
 > [!NOTE]
-> この API は、互換性のために残されています。 代替が必要な場合は、[unordered_multimap クラス](../standard-library/unordered-multimap-class.md)をご使用ください。
+> この API は、互換性のために残されています。 代替が必要な場合は、 [unordered_multimap Class](../standard-library/unordered-multimap-class.md)をご使用ください。
 
 指定したキーよりも大きいキーを持つ、hash_multimap 内の最初の要素を指す反復子を返します。
 
@@ -2385,7 +2385,7 @@ const_iterator upper_bound(const Key& key) const;
 
 引数キーより大きいキーを持つ hash_multimap 内の要素の位置を指す、または、キーの一致が検出されない場合は hash_multimap 内の最後の要素の次の位置を指す、[反復子](#iterator)または [const_iterator](#const_iterator)。
 
-`upper_bound` の戻り値が `const_iterator` に割り当てられている場合、hash_multimap オブジェクトは変更できません。 `upper_bound` の戻り値が `iterator`に割り当てられている場合は、hash_multimap オブジェクトを変更できます。
+`upper_bound` の戻り値が `const_iterator` に割り当てられている場合、hash_multimap オブジェクトは変更できません。 の戻り値`upper_bound`が`iterator`に代入されている場合、hash_multimapオブジェクトを変更できます。
 
 ### <a name="remarks"></a>解説
 
@@ -2449,10 +2449,10 @@ The first element of hm1 with a key greater than
 that of the initial element of hm1 is: 20.
 ```
 
-## <a name="value_comp"></a>  hash_multimap::value_comp
+## <a name="hash_multimapvalue_comp"></a><a name="value_comp"></a>hash_multimap::value_comp
 
 > [!NOTE]
-> この API は、互換性のために残されています。 代替が必要な場合は、[unordered_multimap クラス](../standard-library/unordered-multimap-class.md)をご使用ください。
+> この API は、互換性のために残されています。 代替が必要な場合は、 [unordered_multimap Class](../standard-library/unordered-multimap-class.md)をご使用ください。
 
 このメンバー関数は、キー値の比較によって hash_multimap の要素の順序を決定する関数オブジェクトを返します。
 
@@ -2466,11 +2466,11 @@ hash_multimap が要素の並べ替えに使用する比較関数オブジェク
 
 ### <a name="remarks"></a>解説
 
-Hash_multimap *m*の場合、2つの要素*e1* (*k1*、 *d1*) と*e2*(*k2*、 *d2*) が型の[value_type](#value_type)オブジェクトである場合 ( *k1*と*k2*は型[key_type](#key_type)のキーであり、 *d1*と*d2*は[mapped_type](#mapped_type)型のデータ)、`m.value_comp()(e1, e2)` は `m.key_comp()(k1, k2)`と同じです。 格納されているオブジェクトは以下のメンバー関数を定義します。
+hash_multimap *m*の場合 *、e1* (*k1*、 *d1*) と*e2*(*k2*、 *d2*) の 2 つの要素が[value_type](#value_type)型のオブジェクトである場合 *、k1*と`m.value_comp()(e1, e2)`k2`m.key_comp()(k1, k2)`は型[key_type mapped_type](#key_type)のキーであり *、d2*は型のデータです。 *k2* *d2* [mapped_type](#mapped_type) 格納されているオブジェクトは以下のメンバー関数を定義します。
 
 `bool operator( value_type& left, value_type& right);`
 
-これは、並べ替え順で **のキー値が** のキー値に先行しかつ等しくない場合に、`left`true`right` を返します。
+これは、並べ替え順で `left` のキー値が `right` のキー値に先行しかつ等しくない場合に、**true** を返します。
 
 ### <a name="example"></a>例
 
@@ -2519,10 +2519,10 @@ int main( )
 }
 ```
 
-## <a name="value_type"></a>  hash_multimap::value_type
+## <a name="hash_multimapvalue_type"></a><a name="value_type"></a>hash_multimap::value_type
 
 > [!NOTE]
-> この API は、互換性のために残されています。 代替が必要な場合は、[unordered_multimap クラス](../standard-library/unordered-multimap-class.md)をご使用ください。
+> この API は、互換性のために残されています。 代替が必要な場合は、 [unordered_multimap Class](../standard-library/unordered-multimap-class.md)をご使用ください。
 
 hash_multimap 内に格納されているオブジェクトの型を表す型。
 
@@ -2532,7 +2532,7 @@ typedef pair<const Key, Type> value_type;
 
 ### <a name="remarks"></a>解説
 
-`value_type` は、const [mapped_type](#mapped_type) [key_type](#key_type)\<組として宣言されています。また、>\<key_type のペアではなく、非定数反復子または参照を使用して連想コンテナーのキーが変更されない可能性があります。
+`value_type`は、非定数反復\<器または参照[mapped_type](#mapped_type)を使用して連想\<コンテナーのキーを変更できない場合があるため、mapped_type>mapped_type、key_type>でなく、[ペアの](#key_type)const key_type mapped_type、ペアとして宣言されます。
 
 ### <a name="example"></a>例
 
@@ -2593,7 +2593,7 @@ The keys of the mapped elements are: 1 2.
 The values of the mapped elements are: 10 20.
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[C++ 標準ライブラリ内のスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 標準ライブラリにおけるスレッド セーフ](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)

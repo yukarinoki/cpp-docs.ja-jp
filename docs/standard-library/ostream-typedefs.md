@@ -5,22 +5,22 @@ f1_keywords:
 - iosfwd/std::ostream
 - iosfwd/std::wostream
 ms.assetid: 2ec4dc52-a01f-4654-bd65-dd5288777c48
-ms.openlocfilehash: d0ceae12069712c7a124990d0f81968c21bc683a
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 82539a3fdadf10d340ca957756e235e8ae00b267
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79425305"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373579"
 ---
 # <a name="ltostreamgt-typedefs"></a>&lt;ostream&gt; typedef
 
 |||
 |-|-|
-|[ostream](#ostream)|[wostream](#wostream)|
+|[オストリーム](#ostream)|[ウォストリーム](#wostream)|
 
-## <a name="ostream"></a>  ostream
+## <a name="ostream"></a><a name="ostream"></a>オストリーム
 
-**Char で**特殊化された basic_ostream から型を作成し、 **char**に特化した `char_traits` します。
+char に特化し **、char**に`char_traits`特化したbasic_ostreamから**型を作成**します。
 
 ```cpp
 typedef basic_ostream<char, char_traits<char>> ostream;
@@ -28,11 +28,11 @@ typedef basic_ostream<char, char_traits<char>> ostream;
 
 ### <a name="remarks"></a>解説
 
-この型は、クラステンプレート[basic_ostream](../standard-library/basic-ostream-class.md)のシノニムであり、既定の文字の特性を持つ**char**型の要素に対して特殊化されています。
+型は、既定の文字特性を持つ**char**型の要素に特化したクラス テンプレート[basic_ostream](../standard-library/basic-ostream-class.md)のシノニムです。
 
-## <a name="wostream"></a>  wostream
+## <a name="wostream"></a><a name="wostream"></a>ウォストリーム
 
-`char_traits` **wchar_t**に特化し、 **wchar_t**で特殊化された basic_ostream から型を作成します。
+**wchar_t**に特化し`char_traits`**、wchar_t**に特化したbasic_ostreamから型を作成します。
 
 ```cpp
 typedef basic_ostream<wchar_t, char_traits<wchar_t>> wostream;
@@ -40,8 +40,8 @@ typedef basic_ostream<wchar_t, char_traits<wchar_t>> wostream;
 
 ### <a name="remarks"></a>解説
 
-この型は、クラステンプレート[basic_ostream](../standard-library/basic-ostream-class.md)のシノニムであり、既定の文字の特性を持つ**wchar_t**型の要素に対して特殊化されています。
+型は、既定の文字特性を持つ型**wchar_t**要素に特化したクラス テンプレート[basic_ostream](../standard-library/basic-ostream-class.md)のシノニムです。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[\<ostream>](../standard-library/ostream.md)
+[\<oストリーム>](../standard-library/ostream.md)

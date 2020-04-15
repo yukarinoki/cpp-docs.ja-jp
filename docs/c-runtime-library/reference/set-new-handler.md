@@ -1,8 +1,9 @@
 ---
 title: _set_new_handler
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _set_new_handler
+- _o__set_new_handler
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +30,12 @@ helpviewer_keywords:
 - error handling
 - transferring control to error handler
 ms.assetid: 1d1781b6-5cf8-486a-b430-f365e0bb023f
-ms.openlocfilehash: a1f340887efd657dd9ff9bf219534d77fdd90aa3
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c3f1b9bd8bf2a4404e2239858e4c3c59b755bacd
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948472"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81332378"
 ---
 # <a name="_set_new_handler"></a>_set_new_handler
 
@@ -47,25 +49,27 @@ _PNH _set_new_handler( _PNH pNewHandler );
 
 ### <a name="parameters"></a>パラメーター
 
-*pNewHandler*<br/>
+*pニューハンドラー*<br/>
 アプリケーションによって提供されたメモリ処理関数へのポインター。 引数が 0 の場合、新しいハンドラーは削除されます。
 
 ## <a name="return-value"></a>戻り値
 
-前の関数を後で復元できるように、 **_set_new_handler**によって登録された前の例外処理関数へのポインターを返します。 前の関数が設定されていない場合は、戻り値を使用して既定の動作を復元できます。この値には**NULL**を指定できます。
+**_set_new_handler**で登録された前の例外処理関数へのポインターを返し、前の関数を後で復元できるようにします。 以前の関数が設定されていない場合は、戻り値を使用して既定の動作を復元できます。この値は**NULL にすることができます**。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-C++ **_Set_new_handler**関数は、 **new**演算子がメモリの割り当てに失敗した場合に制御を取得する例外処理関数を指定します。 **新しい**エラーが発生した場合は、 **_set_new_handler**に引数として渡された例外処理関数がランタイムシステムによって自動的に呼び出されます。 New .h で定義された**Pnh**は、型**int**を返す関数へのポインターであり、 **size_t**型の引数を受け取ります。 **Size_t**を使用して、割り当てる領域のサイズを指定します。
+C++ **_set_new_handler**関数は **、new**演算子がメモリの割り当てに失敗した場合に制御を取得する例外処理関数を指定します。 **new が**失敗すると、ランタイム システムは引数として渡された例外処理関数を自動的に呼び出 **_set_new_handler。** New.h で定義**されている_PNH**は、int 型を返し**int**、size_t型の引数を受け取る関数へのポインター**です**。 **size_t**を使用して、割り振るスペースの量を指定します。
 
 既定のハンドラーはありません。
 
-**_set_new_handler**は、基本的にはガベージコレクションスキームです。 ランタイム システムは、関数がゼロ以外の値を返すたびに割り当てを再試行し、関数がゼロを返すと失敗します。
+**_set_new_handler**は、基本的にはガベージ コレクションスキームです。 ランタイム システムは、関数がゼロ以外の値を返すたびに割り当てを再試行し、関数がゼロを返すと失敗します。
 
-プログラムで **_set_new_handler**関数が発生すると、引数リストで指定された例外処理関数がランタイムシステムに登録されます。
+プログラム内の **_set_new_handler**関数が発生すると、引数リストで指定された例外処理関数が、ランタイム・システムに登録されます。
 
 ```cpp
 // set_new_handler1.cpp
+By default, this function's global state is scoped to the application. To change this, see [Global state in the CRT](../global-state.md).
+
 #include <new.h>
 
 int handle_program_memory_depletion( size_t )
@@ -80,7 +84,7 @@ int main( void )
 }
 ```
 
-最後に **_set_new_handler**関数に渡された関数のアドレスを保存し、後で再開することができます。
+**_set_new_handler**関数に最後に渡された関数アドレスを保存し、後で復元することができます。
 
 ```cpp
    _PNH old_handler = _set_new_handler( my_handler );
@@ -91,7 +95,7 @@ int main( void )
    // . . .
 ```
 
-C++ の [_set_new_mode](set-new-mode.md) 関数は、[malloc](malloc.md) 用の新しいハンドラー モードを設定します。 新しいハンドラーモードは、エラー発生時に、 **malloc**が、 **_set_new_handler**によって設定された新しいハンドラールーチンを呼び出すかどうかを示します。 既定では、 **malloc**は、メモリの割り当てに失敗したときに新しいハンドラールーチンを呼び出しません。 この既定の動作を無効にすると、 **malloc**がメモリの割り当てに失敗したときに、 **new**演算子が同じ理由で失敗したときと同じ方法で新しいハンドラールーチン**を呼び出す**ことができます。 既定の動作をオーバーライドするには、次の関数を呼び出します。
+C++ の [_set_new_mode](set-new-mode.md) 関数は、[malloc](malloc.md) 用の新しいハンドラー モードを設定します。 新しいハンドラ モードは、失敗時に**malloc**が **_set_new_handler**で設定された新しいハンドラ ルーチンを呼び出すかどうかを示します。 既定では **、malloc**はメモリの割り当てに失敗した場合に新しいハンドラー ルーチンを呼び出しません。 **malloc**がメモリの割り当てに失敗した場合に **、malloc**が new ハンドラールーチンを呼び出すのと同じ理由で失敗した場合と同じ方法で、malloc が**新しい**ハンドラー・ルーチンを呼び出すようになります。 既定の動作をオーバーライドするには、次の関数を呼び出します。
 
 ```cpp
 _set_new_mode(1);
@@ -99,19 +103,19 @@ _set_new_mode(1);
 
 この呼び出しはプログラムの最初の方で指定するか、Newmode.obj にリンクします。
 
-ユーザー定義`operator new`が指定されている場合、新しいハンドラー関数は失敗時に自動的には呼び出されません。
+ユーザー定義`operator new`が指定されている場合、新しいハンドラー関数は、失敗時に自動的に呼び出されません。
 
 詳細については、「*C++ 言語リファレンス*」の「[new](../../cpp/new-operator-cpp.md)」および「[delete](../../cpp/delete-operator-cpp.md)」を参照してください。
 
-動的にリンクされたすべての Dll または実行可能ファイルに対して1つの **_set_new_handler**ハンドラーがあります。 **_set_new_handler**を呼び出す場合でも、ハンドラーは別のハンドラーに置き換えられるか、または別の DLL または実行可能ファイルで設定されたハンドラーを置き換えることができます。
+動的にリンクされるすべての DLL または実行可能ファイルに対して **、単**一の_set_new_handler ハンドラーがあります。_set_new_handler**呼び**出した場合でも、ハンドラーが別のハンドラーに置き換えられるか、別の DLL または実行可能ファイルによって設定されたハンドラーを置き換える場合があります。
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**_set_new_handler**|\<new.h>|
 
-互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+互換性について詳しくは、「 [Compatibility](../../c-runtime-library/compatibility.md)」をご覧ください。
 
 ## <a name="example"></a>例
 
@@ -167,5 +171,5 @@ Please contact the application's support team for more information.
 
 [メモリ割り当て](../../c-runtime-library/memory-allocation.md)<br/>
 [calloc](calloc.md)<br/>
-[free](free.md)<br/>
+[無料](free.md)<br/>
 [realloc](realloc.md)<br/>

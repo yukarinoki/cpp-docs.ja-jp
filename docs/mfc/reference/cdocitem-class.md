@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CDocItem [MFC], GetDocument
 - CDocItem [MFC], IsBlank
 ms.assetid: 84fb8610-a4c8-4211-adc0-e70e8d002c11
-ms.openlocfilehash: 6c1c1da14d732b6aff6ae07f86ae7b9c1b690b84
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 438bc2a03239946dbfca53d5f2989c731b682ab0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62168194"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375619"
 ---
 # <a name="cdocitem-class"></a>CDocItem クラス
 
@@ -33,14 +33,14 @@ class CDocItem : public CCmdTarget
 
 |名前|説明|
 |----------|-----------------|
-|[CDocItem::GetDocument](#getdocument)|項目を含むドキュメントを返します。|
-|[CDocItem::IsBlank](#isblank)|アイテムにすべての情報が含まれるかどうかを判断します。|
+|[ドキュメントを取得します。](#getdocument)|アイテムを含むドキュメントを返します。|
+|[CDocItem::イブランク](#isblank)|アイテムに情報が含まれているかどうかを判断します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-`CDocItem` オブジェクトは、クライアントとサーバーの両方の文書で OLE 項目を表すために使用されます。
+`CDocItem`オブジェクトは、クライアントとサーバーの両方のドキュメントで OLE アイテムを表すために使用されます。
 
-詳細については、この記事を参照してください。[コンテナー。コンテナーの実装](../../mfc/containers-implementing-a-container.md)します。
+詳細については、「コンテナ :[コンテナの実装 」を参照してください](../../mfc/containers-implementing-a-container.md)。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -54,9 +54,9 @@ class CDocItem : public CCmdTarget
 
 **ヘッダー:** afxole.h
 
-##  <a name="getdocument"></a>  CDocItem::GetDocument
+## <a name="cdocitemgetdocument"></a><a name="getdocument"></a>ドキュメントを取得します。
 
-項目を含むドキュメントを取得するには、この関数を呼び出します。
+アイテムを含むドキュメントを取得します。
 
 ```
 CDocument* GetDocument() const;
@@ -64,13 +64,13 @@ CDocument* GetDocument() const;
 
 ### <a name="return-value"></a>戻り値
 
-項目を含むドキュメントへのポインターアイテム、ドキュメントの一部でない場合は NULL です。
+アイテムを含むドキュメントへのポインター。アイテムがドキュメントの一部でない場合は NULL。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-この関数は、派生クラスでオーバーライドされる[COleClientItem](../../mfc/reference/coleclientitem-class.md)と[COleServerItem](../../mfc/reference/coleserveritem-class.md)、いずれかにポインターを返す、 [COleDocument](../../mfc/reference/coledocument-class.md)、 [COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md)、または[COleServerDoc](../../mfc/reference/coleserverdoc-class.md)オブジェクト。
+この関数は、派生クラスでオーバーライドされ[、COle](../../mfc/reference/coleclientitem-class.md)ドキュメント[COleServerItem](../../mfc/reference/coleserveritem-class.md)[、COleリングドック](../../mfc/reference/colelinkingdoc-class.md)、または[COleServerDoc](../../mfc/reference/coleserverdoc-class.md)オブジェクトへのポインターを返します。 [COleDocument](../../mfc/reference/coledocument-class.md)
 
-##  <a name="isblank"></a>  CDocItem::IsBlank
+## <a name="cdocitemisblank"></a><a name="isblank"></a>CDocItem::イブランク
 
 既定のシリアル化が発生したときに、フレームワークによって呼び出されます。
 
@@ -80,18 +80,18 @@ virtual BOOL IsBlank() const;
 
 ### <a name="return-value"></a>戻り値
 
-アイテムに情報が含まれていない場合は 0 以外それ以外の場合 0 を返します。
+項目に情報が含まれなかった場合は 0 以外の値を返します。それ以外の場合は 0。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-既定では、`CDocItem`オブジェクトは空ではありません。 [COleClientItem](../../mfc/reference/coleclientitem-class.md)オブジェクトから直接派生するためにも空白`CDocItem`します。 ただし、 [COleServerItem](../../mfc/reference/coleserveritem-class.md)オブジェクトが空では常にします。 既定で含まれている OLE アプリケーション`COleClientItem`x または y を持たないオブジェクト エクステントがシリアル化します。 これでのオーバーライドから TRUE が返された`IsBlank`ときに、項目がない x または y エクステント。
+デフォルトでは、`CDocItem`オブジェクトは空白ではありません。 [オブジェクトは](../../mfc/reference/coleclientitem-class.md)から直接派生するため、空白になることがあります`CDocItem`。 ただし、[オブジェクト](../../mfc/reference/coleserveritem-class.md)は常に空白です。 既定では、x または`COleClientItem`y のエクステントを持たないオブジェクトを含む OLE アプリケーションはシリアル化されます。 これは、項目に x または y`IsBlank`のエクステントがない場合のオーバーライドから TRUE を返すことによって行われます。
 
 シリアル化中に他のアクションを実装する場合は、この関数をオーバーライドします。
 
 ## <a name="see-also"></a>関連項目
 
 [CCmdTarget クラス](../../mfc/reference/ccmdtarget-class.md)<br/>
-[階層図](../../mfc/hierarchy-chart.md)<br/>
+[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
 [COleDocument クラス](../../mfc/reference/coledocument-class.md)<br/>
 [COleServerItem クラス](../../mfc/reference/coleserveritem-class.md)<br/>
-[COleClientItem クラス](../../mfc/reference/coleclientitem-class.md)
+[クラス](../../mfc/reference/coleclientitem-class.md)

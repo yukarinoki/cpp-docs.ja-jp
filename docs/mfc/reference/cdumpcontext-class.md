@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CDumpContext [MFC], HexDump
 - CDumpContext [MFC], SetDepth
 ms.assetid: 98c52b2d-14b5-48ed-b423-479a4d1c60fa
-ms.openlocfilehash: a5b53ced4e20c920aab8e7ebcda3e3f6f8798ba5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aa549e5347bf2bd357fa3c28e81a0309ea4f4aff
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62164099"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374006"
 ---
 # <a name="cdumpcontext-class"></a>CDumpContext クラス
 
@@ -41,45 +41,45 @@ class CDumpContext
 
 |名前|説明|
 |----------|-----------------|
-|[CDumpContext::CDumpContext](#cdumpcontext)|`CDumpContext` オブジェクトを構築します。|
+|[コンテキストを指定します。](#cdumpcontext)|`CDumpContext` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CDumpContext::DumpAsHex](#dumpashex)|16 進形式で指定したアイテムをダンプします。|
-|[CDumpContext::Flush](#flush)|ダンプ コンテキスト バッファー内のデータをフラッシュします。|
-|[CDumpContext::GetDepth](#getdepth)|ダンプの深さに対応する整数値を取得します。|
-|[CDumpContext::HexDump](#hexdump)|16 進数形式で、配列内に含まれるバイトをダンプします。|
-|[CDumpContext::SetDepth](#setdepth)|ダンプの深さを設定します。|
+|[コンテキスト::D](#dumpashex)|指定された項目を 16 進形式でダンプします。|
+|[コンテキスト::フラッシュ](#flush)|ダンプ コンテキスト バッファー内のデータをフラッシュします。|
+|[コンテキストを取得します。](#getdepth)|ダンプの深さに対応する整数を取得します。|
+|[コンテキスト::ヘックスダンプ](#hexdump)|配列に含まれるバイトを 16 進形式でダンプします。|
+|[コンテキスト::セットデプス](#setdepth)|ダンプの深さを設定します。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
 |名前|説明|
 |----------|-----------------|
-|[CDumpContext::operator &lt;&lt;](#operator_lt_lt)|ダンプ コンテキストには、変数およびオブジェクトを挿入します。|
+|[コンテキスト::演算子&lt;&lt;](#operator_lt_lt)|変数とオブジェクトをダンプ コンテキストに挿入します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-`CDumpContext` 基本クラスはありません。
+`CDumpContext`は基本クラスを持っていません。
 
-使用することができます[afxDump](diagnostic-services.md#afxdump)を事前に宣言された`CDumpContext`ダンプのほとんどのオブジェクト。 `afxDump`オブジェクトは、Microsoft Foundation Class ライブラリのデバッグ バージョンでのみ使用できます。
+ダンプの大部分では、宣言済`CDumpContext`みのオブジェクトである[afxDump](diagnostic-services.md#afxdump)を使用できます。 この`afxDump`オブジェクトは、デバッグ バージョンの Microsoft Foundation クラス ライブラリでのみ使用できます。
 
-メモリのいくつか[診断サービス](../../mfc/reference/diagnostic-services.md)使用`afxDump`出力にします。
+メモリ[診断サービス](../../mfc/reference/diagnostic-services.md)の中には、`afxDump`その出力に使用するいくつかのサービスがあります。
 
-定義済みの出力である Windows 環境`afxDump`オブジェクト、概念的に似ています、 `cerr` stream, Windows 関数を使用して、デバッガーにルーティングされます`OutputDebugString`します。
+Windows 環境では、定義済`afxDump`みのオブジェクトからの出力は、概念的には`cerr`ストリームに似ていて、Windows 関数`OutputDebugString`を介してデバッガにルーティングされます。
 
-`CDumpContext`クラスには、オーバー ロードされた挿入 ( **<<**) 演算子を`CObject`オブジェクトのデータをダンプするポインター。 カスタムのダンプ形式の派生オブジェクトが必要な場合は、オーバーライド[CObject::Dump](../../mfc/reference/cobject-class.md#dump)します。 ほとんどの Microsoft Foundation classes のオーバーライドされた実装`Dump`メンバー関数。
+このクラスには、オブジェクトのデータを**<<** ダンプするポインター`CObject`に対して、オーバーロードされた挿入 ( ) 演算子があります。 `CDumpContext` 派生オブジェクトのカスタム ダンプ形式が必要な場合は[、CObject::Dump](../../mfc/reference/cobject-class.md#dump)をオーバーライドします。 ほとんどの Microsoft Foundation クラスは`Dump`、オーバーライドされたメンバー関数を実装します。
 
-クラスから派生していない`CObject`など`CString`、 `CTime`、および`CTimeSpan`、独自のオーバー ロードがある`CDumpContext`などの操作が頻繁に使用される構造体として、挿入演算子`CFileStatus`、`CPoint`と`CRect`.
+など`CObject``CString`から派生していないクラスには、 `CTime`、 など`CTimeSpan`、頻繁に使用される構造体`CDumpContext``CFileStatus``CPoint`と同様に、独自のオーバーロードされた挿入演算子があります。 `CRect`
 
-使用する場合、 [IMPLEMENT_DYNAMIC](../../mfc/reference/run-time-object-model-services.md#implement_dynamic)または[IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial)マクロ、クラスの実装で`CObject::Dump`の名前を表示、 `CObject`-クラスを派生します。 それ以外の場合は印刷`CObject`します。
+クラスの実装で[IMPLEMENT_DYNAMIC](../../mfc/reference/run-time-object-model-services.md#implement_dynamic)または[IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial)マクロを使用する`CObject::Dump`場合は、派生クラスの名前を出力します。 `CObject` それ以外の場合は`CObject`、 が印刷されます。
 
-`CDumpContext`クラスは、ライブラリのデバッグとリリースの両方のバージョンで使用できますが、`Dump`メンバー関数は、デバッグ バージョンでのみ定義します。 使用 **#ifdef _DEBUG**  /  `#endif`ステートメントなど、カスタム、診断コードを角かっこを`Dump`メンバー関数。
+この`CDumpContext`クラスは、ライブラリのデバッグ バージョンとリリース バージョンの両方で使用`Dump`できますが、メンバー関数はデバッグ バージョンでのみ定義されます。 **#ifdef_DEBUG** / `#endif`ステートメントを使用して、カスタム`Dump`メンバー関数を含む診断コードを囲みます。
 
-独自に作成する前に`CDumpContext`オブジェクトを作成する必要があります、`CFile`ダンプ先として機能するオブジェクト。
+独自`CDumpContext`のオブジェクトを作成する前に`CFile`、ダンプ先として機能するオブジェクトを作成する必要があります。
 
-詳細については`CDumpContext`を参照してください[MFC アプリケーションのデバッグ](/visualstudio/debugger/mfc-debugging-techniques)します。
+の詳細については、「 `CDumpContext` [MFC アプリケーションのデバッグ](/visualstudio/debugger/mfc-debugging-techniques)」を参照してください。
 
 **#define _DEBUG**
 
@@ -91,9 +91,9 @@ class CDumpContext
 
 **ヘッダー:** afx.h
 
-##  <a name="cdumpcontext"></a>  CDumpContext::CDumpContext
+## <a name="cdumpcontextcdumpcontext"></a><a name="cdumpcontext"></a>コンテキストを指定します。
 
-クラスのオブジェクトを構築`CDumpContext`します。
+クラス`CDumpContext`のオブジェクトを構築します。
 
 ```
 CDumpContext(CFile* pFile = NULL);
@@ -101,22 +101,22 @@ CDumpContext(CFile* pFile = NULL);
 
 ### <a name="parameters"></a>パラメーター
 
-*pFile*<br/>
-ポインター、`CFile`ダンプ先であるオブジェクト。
+*ファイル*<br/>
+ダンプ先である`CFile`オブジェクトへのポインター。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-`afxDump`オブジェクトが自動的に構築されます。
+オブジェクト`afxDump`は自動的に構築されます。
 
-基になるにも書き込まれない`CFile`ダンプと干渉するダンプ コンテキストは、active 以外の場合は、します。 Windows 環境では、出力が Windows 関数を使用して、デバッガーにルーティングされる`OutputDebugString`します。
+ダンプ コンテキストがアクティブな`CFile`間は、基になるコンテキストに書き込まないでください。そうしないと、ダンプに干渉します。 Windows 環境では、出力は Windows 関数`OutputDebugString`を介してデバッガーにルーティングされます。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFC_Utilities#12](../../mfc/codesnippet/cpp/cdumpcontext-class_1.cpp)]
 
-##  <a name="dumpashex"></a>  CDumpContext::DumpAsHex
+## <a name="cdumpcontextdumpashex"></a><a name="dumpashex"></a>コンテキスト::D
 
-指定した型の 16 進数値として書式設定をダンプします。
+指定した型を 16 進数でダンプします。
 
 ```
 CDumpContext& DumpAsHex(BYTE b);
@@ -131,19 +131,19 @@ CDumpContext& DumpAsHex(WORD w);
 
 ### <a name="return-value"></a>戻り値
 
-`CDumpContext` オブジェクトへの参照。
+`CDumpContext` オブジェクトへの参照です。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-16 進数として指定した型の項目をダンプする場合は、このメンバー関数を呼び出します。 配列をダンプする[に](#hexdump)します。
+指定した型の項目を 16 進数としてダンプします。 配列をダンプするには[、CDumpContext::HexDump](#hexdump)を呼び出します。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFC_Utilities#13](../../mfc/codesnippet/cpp/cdumpcontext-class_2.cpp)]
 
-##  <a name="flush"></a>  CDumpContext::Flush
+## <a name="cdumpcontextflush"></a><a name="flush"></a>コンテキスト::フラッシュ
 
-強制的に、ファイルに書き込まれるバッファーの残りの部分は、ダンプ コンテキストにアタッチします。
+バッファーに残っているデータをダンプ コンテキストに添付されたファイルに強制的に書き込みます。
 
 ```
 void Flush();
@@ -153,9 +153,9 @@ void Flush();
 
 [!code-cpp[NVC_MFC_Utilities#14](../../mfc/codesnippet/cpp/cdumpcontext-class_3.cpp)]
 
-##  <a name="getdepth"></a>  CDumpContext::GetDepth
+## <a name="cdumpcontextgetdepth"></a><a name="getdepth"></a>コンテキストを取得します。
 
-Deep または shallow ダンプが進行中であるかどうかを判断します。
+深いダンプと浅いダンプのどちらが処理中であるかを判断します。
 
 ```
 int GetDepth() const;
@@ -163,15 +163,15 @@ int GetDepth() const;
 
 ### <a name="return-value"></a>戻り値
 
-によって設定されたダンプの深さ`SetDepth`します。
+によって設定された`SetDepth`ダンプの深さ。
 
 ### <a name="example"></a>例
 
-  例をご覧ください[SetDepth](#setdepth)します。
+  [「詳細](#setdepth)」の例を参照してください。
 
-##  <a name="hexdump"></a>  CDumpContext::HexDump
+## <a name="cdumpcontexthexdump"></a><a name="hexdump"></a>コンテキスト::ヘックスダンプ
 
-16 進数として書式設定されたバイトの配列をダンプします。
+16 進数としてフォーマットされたバイト配列をダンプします。
 
 ```
 void HexDump(
@@ -187,25 +187,25 @@ void HexDump(
 新しい行の先頭に出力する文字列。
 
 *pby*<br/>
-ダンプするバイトを格納するバッファーへのポインター。
+ダンプするバイトを含むバッファーへのポインター。
 
-*nBytes*<br/>
+*Nbytes*<br/>
 ダンプするバイト数。
 
-*nWidth*<br/>
-バイトの最大数は、1 行 (出力行の幅は) にダンプします。
+*n幅*<br/>
+1 行にダンプされる最大バイト数 (出力行の幅ではありません)。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-16 進数として、特定の 1 つの項目の種類をダンプするには、呼び出す[CDumpContext::DumpAsHex](#dumpashex)します。
+16 進数として特定の単一の項目の種類をダンプするには[、CDumpContext::DumpAsHex](#dumpashex)を呼び出します。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFC_Utilities#15](../../mfc/codesnippet/cpp/cdumpcontext-class_4.cpp)]
 
-##  <a name="operator_lt_lt"></a>  CDumpContext::operator &lt;&lt;
+## <a name="cdumpcontextoperator-ltlt"></a><a name="operator_lt_lt"></a>コンテキスト::演算子&lt;&lt;
 
-ダンプ コンテキストに指定されたデータを出力します。
+指定したデータをダンプ コンテキストに出力します。
 
 ```
 CDumpContext& operator<<(const CObject* pOb);
@@ -233,19 +233,19 @@ CDumpContext& operator<<(HFONT h);
 
 ### <a name="return-value"></a>戻り値
 
-A`CDumpContext`参照。 戻り値を使用して、ソース コードの 1 行に複数の挿入を記述できます。
+`CDumpContext` 参照。 戻り値を使用すると、ソース コードの 1 行に複数の挿入を記述できます。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-に対して、挿入演算子がオーバー ロード`CObject`ほとんどのプリミティブ型の場合と同様のポインター。 文字列の内容のダンプに文字結果へのポインターポインター **void**のみアドレスの 16 進ダンプになります。 64 ビット符号付き整数のダンプの結果、LONGLONG64 ビット符号なし整数のダンプを ULONGLONG になります。
+挿入演算子は、ポインターとほとんどの`CObject`プリミティブ型に対してオーバーロードされます。 文字へのポインターは、文字列の内容のダンプになります。**void**へのポインタは、アドレスの 16 進ダンプのみになります。 LONGLONG を指定すると、64 ビット符号付き整数がダンプされます。ULONG は、64 ビット符号なし整数のダンプになります。
 
-を通じて、クラス、挿入演算子の実装では、新規クラスまたは IMPLEMENT_SERIAL マクロを使用する場合`CObject::Dump`の名前を表示、 `CObject`-クラスを派生します。 それ以外の場合は印刷`CObject`します。 オーバーライドする場合、`Dump`クラスの関数は、16 進ダンプの代わりに、オブジェクトの内容のわかりやすい出力を提供できます。
+クラスの実装で IMPLEMENT_DYNAMIC またはIMPLEMENT_SERIAL マクロを使用する場合、挿入演算子は、`CObject::Dump`を通じて派生クラスの名前`CObject`を出力します。 それ以外の場合は`CObject`、 が印刷されます。 クラスの関数を`Dump`オーバーライドする場合は、16 進ダンプではなく、オブジェクトの内容をより意味のある出力で出力できます。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFC_Utilities#17](../../mfc/codesnippet/cpp/cdumpcontext-class_5.cpp)]
 
-##  <a name="setdepth"></a>  CDumpContext::SetDepth
+## <a name="cdumpcontextsetdepth"></a><a name="setdepth"></a>コンテキスト::セットデプス
 
 ダンプの深さを設定します。
 
@@ -255,15 +255,15 @@ void SetDepth(int nNewDepth);
 
 ### <a name="parameters"></a>パラメーター
 
-*nNewDepth*<br/>
+*新しい深さ*<br/>
 新しい深さの値。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-プリミティブ型または単純なをダンプする場合`CObject`、他のオブジェクトへのポインターが含まれていないし、0 の値で十分です。 0 = すべてのオブジェクトが深いダンプよりも大きい値では、再帰的にダンプします。 たとえば、コレクションのすべての要素をコレクションの深いダンプがダンプされます。 派生クラスで他の特定の深さの値を使用することがあります。
+他のオブジェクトへのポインターを含たないプリミティブ型`CObject`または単純な型をダンプする場合は、値 0 で十分です。 0 より大きい値は、すべてのオブジェクトが再帰的にダンプされる深いダンプを指定します。 たとえば、コレクションの詳細なダンプでは、コレクションのすべての要素がダンプされます。 派生クラスでは、他の特定の深度値を使用できます。
 
 > [!NOTE]
->  循環参照を使用して、深いダンプでは検出されず、無限ループになることができます。
+> 循環参照は深いダンプでは検出されず、無限ループが発生する可能性があります。
 
 ### <a name="example"></a>例
 
@@ -271,6 +271,6 @@ void SetDepth(int nNewDepth);
 
 ## <a name="see-also"></a>関連項目
 
-[階層図](../../mfc/hierarchy-chart.md)<br/>
+[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
 [CFile クラス](../../mfc/reference/cfile-class.md)<br/>
-[CObject クラス](../../mfc/reference/cobject-class.md)
+[Cオブジェクトクラス](../../mfc/reference/cobject-class.md)

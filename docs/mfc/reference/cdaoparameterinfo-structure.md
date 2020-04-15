@@ -7,16 +7,16 @@ helpviewer_keywords:
 - CDaoParameterInfo structure [MFC]
 - DAO (Data Access Objects), Parameters collection
 ms.assetid: 45fd53cd-cb84-4e12-b48d-7f2979f898ad
-ms.openlocfilehash: 9f96cba8ea43db7e24e834b1de4ffb593b2c6e0d
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: 6d594bbeec34e400eb074c136e3467e78b35c4ee
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303489"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368982"
 ---
 # <a name="cdaoparameterinfo-structure"></a>CDaoParameterInfo 構造体
 
-`CDaoParameterInfo` 構造体には、データアクセスオブジェクト (DAO) 用に定義されたパラメーターオブジェクトに関する情報が含まれています。 DAO 3.6 は最終バージョンであり、互換性のために残されているものと見なされます。
+構造体`CDaoParameterInfo`には、データ アクセス オブジェクト (DAO) に定義されたパラメーター オブジェクトに関する情報が含まれています。 DAO 3.6 は最終バージョンであり、廃止と見なされます。
 
 ## <a name="syntax"></a>構文
 
@@ -32,32 +32,32 @@ struct CDaoParameterInfo
 #### <a name="parameters"></a>パラメーター
 
 *m_strName*<br/>
-パラメーターオブジェクトに一意の名前を指定します。 詳細については、DAO ヘルプの「Name プロパティ」を参照してください。
+パラメータ オブジェクトに一意の名前を付けます。 詳細については、DAO ヘルプの「プロパティ名」を参照してください。
 
 *m_nType*<br/>
-パラメーターオブジェクトのデータ型を示す値です。 使用可能な値の一覧については、 [CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md)構造体の*m_nType*メンバーを参照してください。 詳細については、DAO ヘルプの「Type プロパティ」を参照してください。
+パラメーター オブジェクトのデータ型を示す値。 使用可能な値のリストについては[、CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md)構造体の*m_nType*メンバーを参照してください。 詳細については、DAO ヘルプの「型プロパティ」を参照してください。
 
 *m_varValue*<br/>
-[COleVariant](../../mfc/reference/colevariant-class.md)オブジェクトに格納されているパラメーターの値。
+[オブジェクトに](../../mfc/reference/colevariant-class.md)格納されているパラメーターの値。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
-上のプライマリとセカンダリへの参照は、`CDaoQueryDef`クラスの[Getparameterinfo](../../mfc/reference/cdaoquerydef-class.md#getparameterinfo)メンバー関数によって情報がどのように返されるかを示します。
+上のプライマリおよびセカンダリへの参照は、クラス`CDaoQueryDef`の[GetParameterInfo](../../mfc/reference/cdaoquerydef-class.md#getparameterinfo)メンバー関数によって情報がどのように返されるか示しています。
 
-MFC では、DAO パラメーターオブジェクトはクラスにカプセル化されません。 MFC `CDaoQueryDef` オブジェクトの基になる DAO querydef オブジェクトは、パラメーターコレクションにパラメーターを格納します。 [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md)オブジェクト内のパラメーターオブジェクトにアクセスするには、特定のパラメーター名またはインデックスをパラメーターコレクションに対して、querydef オブジェクトの `GetParameterInfo` メンバー関数を呼び出します。 [CDaoQueryDef:: GetParameterCount](../../mfc/reference/cdaoquerydef-class.md#getparametercount)メンバー関数を `GetParameterInfo` と組み合わせて使用して、Parameters コレクションをループ処理することができます。
+MFC では、DAO パラメータ オブジェクトはクラスにカプセル化されません。 MFC`CDaoQueryDef`オブジェクトの基になる DAO クエリ定義オブジェクトは、パラメーターをパラメーター コレクションに格納します。 [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md)オブジェクト内のパラメーター オブジェクトにアクセスするには、特定のパラメーター名に`GetParameterInfo`対するクエリ定義オブジェクトのメンバー関数を呼び出すか、または Parameters コレクションのインデックスを呼び出します。 [メンバー関数](../../mfc/reference/cdaoquerydef-class.md#getparametercount)を使用して、パラメーター コレクション`GetParameterInfo`をループできます。
 
-[CDaoQueryDef:: GetParameterInfo](../../mfc/reference/cdaoquerydef-class.md#getparameterinfo)メンバー関数によって取得された情報は `CDaoParameterInfo` 構造体に格納されます。 パラメーターオブジェクトが格納されているパラメーターコレクションを持つ、の querydef オブジェクトの `GetParameterInfo` を呼び出します。
+メンバー[関数によって取得](../../mfc/reference/cdaoquerydef-class.md#getparameterinfo)される情報は、`CDaoParameterInfo`構造体に格納されます。 パラメーター`GetParameterInfo`オブジェクトが格納されている Parameters コレクション内の querydef オブジェクトを呼び出します。
 
 > [!NOTE]
->  パラメーターの値のみを取得または設定する場合は、`CDaoRecordset`クラスの[GetParamValue](../../mfc/reference/cdaorecordset-class.md#getparamvalue)および[SetParamValue](../../mfc/reference/cdaorecordset-class.md#setparamvalue)メンバー関数を使用します。
+> パラメーターの値のみを取得または設定する場合は、クラス`CDaoRecordset`の[GetParamValue および SetParamValue](../../mfc/reference/cdaorecordset-class.md#getparamvalue)メンバー関数を使用します。 [SetParamValue](../../mfc/reference/cdaorecordset-class.md#setparamvalue)
 
-`CDaoParameterInfo` は、デバッグビルドで `Dump` メンバー関数も定義します。 `Dump` を使用すると、`CDaoParameterInfo` オブジェクトの内容をダンプできます。
+`CDaoParameterInfo`また、デバッグ`Dump`ビルドでメンバー関数を定義します。 を使用`Dump`して、オブジェクトの内容を`CDaoParameterInfo`ダンプできます。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-**ヘッダー:** afxdao
+**ヘッダー:** afxdao.h
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [構造体、スタイル、コールバック関数とメッセージ マップ](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
-[CDaoQueryDef クラス](../../mfc/reference/cdaoquerydef-class.md)
+[クラス](../../mfc/reference/cdaoquerydef-class.md)

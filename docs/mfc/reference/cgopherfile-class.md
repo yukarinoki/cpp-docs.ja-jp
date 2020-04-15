@@ -1,5 +1,5 @@
 ---
-title: CGopherFile クラス
+title: クラス
 ms.date: 11/04/2016
 f1_keywords:
 - CGopherFile
@@ -8,19 +8,19 @@ f1_keywords:
 helpviewer_keywords:
 - CGopherFile [MFC], CGopherFile
 ms.assetid: 3ca9898f-8cdb-4495-bbde-46d40100feda
-ms.openlocfilehash: 9bb242cb53593862cb51e0c193eb739625127adc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e157a4509fe30b814a1834690a675906ac82afe7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380287"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373693"
 ---
-# <a name="cgopherfile-class"></a>CGopherFile クラス
+# <a name="cgopherfile-class"></a>クラス
 
 gopher サーバー上のファイルを検索し、読み込む機能が用意されています。
 
 > [!NOTE]
->  クラスは、 `CGopherConnection`、 `CGopherFile`、 `CGopherFileFind`、`CGopherLocator`と Windows XP のプラットフォームで機能しませんが、引き続き以前のプラットフォームで動作するため、そのメンバーが使用されなくなりました。
+> クラス`CGopherConnection` `CGopherFile`、、`CGopherFileFind``CGopherLocator`およびメンバーは Windows XP プラットフォームでは動作しないため、非推奨になりましたが、以前のプラットフォームでは引き続き動作します。
 
 ## <a name="syntax"></a>構文
 
@@ -34,13 +34,13 @@ class CGopherFile : public CInternetFile
 
 |名前|説明|
 |----------|-----------------|
-|[CGopherFile::CGopherFile](#cgopherfile)|`CGopherFile` オブジェクトを構築します。|
+|[CGopherファイル::CGopherファイル](#cgopherfile)|`CGopherFile` オブジェクトを構築します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-Gopher サービスには、ユーザーがこのサービスは、主に情報を検索するためのメニュー方式のインターフェイスとして機能するため、gopher ファイルにデータを書き込むことはできません。 `CGopherFile`メンバー関数`Write`、 `WriteString`、および`Flush`に実装されていない`CGopherFile`します。 これらの関数を呼び出すことで、`CGopherFile`オブジェクトを返します、 [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md)します。
+gopher サービスは、主に情報を検索するためのメニュー駆動型インターフェイスとして機能するため、ユーザーが gopher ファイルにデータを書き込むことを許可しません。 メンバー`CGopherFile`関数`Write`、 `WriteString`、 `Flush` 、 の実装`CGopherFile`は行いません。 オブジェクトに対してこれらの`CGopherFile`関数を呼び出すと[、CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md)を返します。
 
-方法の詳細については、`CGopherFile`クラスでは、その他の MFC インターネット機能は、記事をご覧ください。[インターネットが WinInet を使用したプログラミング](../../mfc/win32-internet-extensions-wininet.md)します。
+他の MFC`CGopherFile`インターネット クラスとの動作の詳細については[、「WinInet を使用したインターネット プログラミング](../../mfc/win32-internet-extensions-wininet.md)」を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -58,9 +58,9 @@ Gopher サービスには、ユーザーがこのサービスは、主に情報�
 
 **ヘッダー:** afxinet.h
 
-##  <a name="cgopherfile"></a>  CGopherFile::CGopherFile
+## <a name="cgopherfilecgopherfile"></a><a name="cgopherfile"></a>CGopherファイル::CGopherファイル
 
-このメンバー関数が構築すると呼ばれる、`CGopherFile`オブジェクト。
+このメンバー関数は、`CGopherFile`オブジェクトを構築するために呼び出されます。
 
 ```
 CGopherFile(
@@ -78,38 +78,38 @@ CGopherFile(
 
 ### <a name="parameters"></a>パラメーター
 
-*hFile*<br/>
+*hファイル*<br/>
 HINTERNET ファイルへのハンドル。
 
-*refLocator*<br/>
-参照を[CGopherLocator](../../mfc/reference/cgopherlocator-class.md)オブジェクト。
+*リロケータ*<br/>
+[CGopherLocator](../../mfc/reference/cgopherlocator-class.md)オブジェクトへの参照。
 
 *pConnection*<br/>
-ポインターを[CGopherConnection](../../mfc/reference/cgopherconnection-class.md)オブジェクト。
+[オブジェクト](../../mfc/reference/cgopherconnection-class.md)へのポインター。
 
-*hSession*<br/>
+*hセッション*<br/>
 現在のインターネット セッションへのハンドル。
 
-*pstrLocator*<br/>
-Gopher サーバーを検索に使用する文字列へのポインター。 参照してください[Gopher セッション](cgopherlocator-class.md)gopher ロケーターの詳細についてはします。
+*プストルロケーター*<br/>
+gopher サーバーを検索するために使用される文字列へのポインター。 [gopher](cgopherlocator-class.md)ロケーターの詳細については、「Gopher セッション」を参照してください。
 
-*dwLocLen*<br/>
-内のバイト数を含む DWORD *pstrLocator*します。
+*ドロークレン*<br/>
+*pstrLocator*のバイト数を含む DWORD。
 
-*dwContext*<br/>
-開いているファイルのコンテキスト識別子へのポインター。
+*dw コンテキスト*<br/>
+開かれているファイルのコンテキスト識別子へのポインター。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-必要があります、 `CGopherFile` gopher インターネット セッション中に、ファイルから読み取るオブジェクト。
+gopher`CGopherFile`インターネット セッション中にファイルから読み取るオブジェクトが必要です。
 
-作成することはありません、`CGopherFile`オブジェクトに直接します。 代わりに、 [CGopherConnection::OpenFile](../../mfc/reference/cgopherconnection-class.md#openfile)を gopher サーバー上のファイルを開きます。
+オブジェクトを`CGopherFile`直接作成することはありません。 代わりに[、CGopherConnection::OpenFile](../../mfc/reference/cgopherconnection-class.md#openfile)を呼び出して、gopher サーバー上のファイルを開きます。
 
 ## <a name="see-also"></a>関連項目
 
-[CInternetFile クラス](../../mfc/reference/cinternetfile-class.md)<br/>
-[階層図](../../mfc/hierarchy-chart.md)<br/>
-[CInternetFile クラス](../../mfc/reference/cinternetfile-class.md)<br/>
+[クラス](../../mfc/reference/cinternetfile-class.md)<br/>
+[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
+[クラス](../../mfc/reference/cinternetfile-class.md)<br/>
 [CGopherLocator クラス](../../mfc/reference/cgopherlocator-class.md)<br/>
 [CGopherFileFind クラス](../../mfc/reference/cgopherfilefind-class.md)<br/>
 [CGopherConnection クラス](../../mfc/reference/cgopherconnection-class.md)

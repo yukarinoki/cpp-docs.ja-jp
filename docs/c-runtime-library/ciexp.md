@@ -1,8 +1,9 @@
 ---
 title: _CIexp
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _CIexp
+- _o__CIexp
 api_location:
 - msvcr120.dll
 - msvcr80.dll
@@ -12,6 +13,7 @@ api_location:
 - msvcr110_clr0400.dll
 - msvcr90.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -23,12 +25,12 @@ helpviewer_keywords:
 - CIexp intrinsic
 - _CIexp intrinsic
 ms.assetid: f8a3e3b7-fa57-41a3-9983-6c81914cbb55
-ms.openlocfilehash: c901442bc7874e75dc0be03c72953dbacb67add3
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
-ms.translationtype: HT
+ms.openlocfilehash: b694479c7a69ec2c4da82a584e55398771536df6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944699"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81334237"
 ---
 # <a name="_ciexp"></a>_CIexp
 
@@ -45,6 +47,8 @@ void __cdecl _CIexp();
 このバージョンの `exp` 関数には、コンパイラで認識される特殊な呼び出し規則があります。 コピーの生成を防ぎ、レジスタ割り当てが容易になるため、実行時間が短縮されます。
 
 結果の値は、スタックのトップにプッシュされます。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](global-state.md)参照してください。
 
 ## <a name="requirements"></a>必要条件
 

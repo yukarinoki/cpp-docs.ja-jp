@@ -140,17 +140,18 @@ helpviewer_keywords:
 - CMFCToolBarImages [MFC], PreMultiplyAlpha
 - CMFCToolBarImages [MFC], m_bDisableTrueColorAlpha
 ms.assetid: d4e50518-9ffc-406f-9996-f79e5cd38155
-ms.openlocfilehash: 210432b8ec193efccc0bf2338089dbccca310726
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 90a12badc90bfcb74e873180b5f887e37cd47fd5
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79425749"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376205"
 ---
 # <a name="cmfctoolbarimages-class"></a>CMFCToolBarImages クラス
 
-ツールバー上の画像。 `CMFCToolBarImages` クラスは、アプリケーションリソースまたはファイルから読み込まれたツールバーイメージを管理します。
-詳細については、Visual Studio インストールの**VC\\atlmfc\\src\\mfc**フォルダーにあるソースコードを参照してください。
+ツール バー上のイメージ。 この`CMFCToolBarImages`クラスは、アプリケーション リソースまたはファイルから読み込まれたツール バー イメージを管理します。
+詳細については、Visual Studio のインストールの**\\VC\\atlmfc\\src mfc**フォルダーにあるソース コードを参照してください。
+
 ## <a name="syntax"></a>構文
 
 ```
@@ -161,98 +162,98 @@ class CMFCToolBarImages : public CObject
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|Name|Description|
+|名前|説明|
 |----------|-----------------|
-|[CMFCToolBarImages:: CMFCToolBarImages](#cmfctoolbarimages)|`CMFCToolBarImages` オブジェクトを構築します。|
+|[CMFCツールバーイメージ:::CMFCツールバー画像](#cmfctoolbarimages)|`CMFCToolBarImages` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|Name|Description|
+|名前|説明|
 |----------|-----------------|
-|[CMFCToolBarImages:: AdaptColors](#adaptcolors)||
-|[CMFCToolBarImages:: AddIcon](#addicon)|ツールバーイメージにアイコンを追加します。|
-|[CMFCToolBarImages:: AddImage](#addimage)|ツールバーイメージにビットマップを追加します。|
-|[CMFCToolBarImages:: クリーンアップ](#cleanup)||
-|[CMFCToolBarImages:: Clear](#clear)|このオブジェクトに割り当てられたシステムリソースを解放します。|
-|[CMFCToolBarImages:: ConvertTo32Bits](#convertto32bits)|下線付きビットマップを 32 bpp イメージに変換します。|
-|[CMFCToolBarImages:: CopyImageToClipboard](#copyimagetoclipboard)||
-|[CMFCToolBarImages:: CopyTo](#copyto)||
-|[CMFCToolBarImages:: CreateFromImageList](#createfromimagelist)|イメージリスト ( [CImageList クラス](../../mfc/reference/cimagelist-class.md)) からツールバーイメージを初期化します。|
-|[CMFCToolBarImages:: CreateRegionFromImage](#createregionfromimage)||
-|[CMFCToolBarImages::D eleteImage](#deleteimage)|ツールバーイメージのセットにユーザー定義のイメージが含まれている場合は、指定したインデックスを持つイメージをツールバーイメージから削除します。|
-|[CMFCToolBarImages::D raw](#draw)|1つのツールバーイメージ (ボタン) を描画します。|
-|[CMFCToolBarImages::D rawEx](#drawex)||
-|[CMFCToolBarImages:: EnableRTL](#enablertl)||
-|[CMFCToolBarImages:: EndDrawImage](#enddrawimage)|ツールバーイメージが描画された後に、システムリソースを解放します。|
-|[CMFCToolBarImages:: ExtractIcon](#extracticon)|ツールバーイメージの指定されたイメージインデックスを持つアイコンを返します。|
-|[CMFCToolBarImages:: Filldiruncommand Edrect](#fillditheredrect)|ツールバーの背景色を持つブラシを使用して四角形を塗りつぶします。|
-|[CMFCToolBarImages:: GetAlwaysLight](#getalwayslight)||
-|[CMFCToolBarImages:: GetBitsPerPixel](#getbitsperpixel)|下線付きの画像の現在の解像度を返します。|
-|[CMFCToolBarImages:: GetCount](#getcount)|ツールバーのイメージの数を返します。|
-|[CMFCToolBarImages:: GetDisabledImageAlpha](#getdisabledimagealpha)|無効な画像に使用されるアルファチャネル値を返します。|
-|[CMFCToolBarImages:: GetFadedImageAlpha](#getfadedimagealpha)||
-|[CMFCToolBarImages:: GetImageSize](#getimagesize)|メモリに格納されているツールバーイメージのサイズ (ソースサイズ)、または画面に描画されるツールバーイメージのサイズ (変換先のサイズ) のいずれかを取得します。|
-|[CMFCToolBarImages:: GetImageWell](#getimagewell)|すべてのツールバーイメージを格納しているビットマップへのハンドルを返します。|
-|[CMFCToolBarImages:: GetImageWellLight](#getimagewelllight)||
-|[CMFCToolBarImages:: GetLastImageRect](#getlastimagerect)||
-|[CMFCToolBarImages:: Get電球の割合](#getlightpercentage)||
-|[CMFCToolBarImages:: GetMapTo3DColors](#getmapto3dcolors)||
-|[CMFCToolBarImages:: GetMask](#getmask)||
-|[CMFCToolBarImages:: GetResourceOffset](#getresourceoffset)|指定されたリソース ID のイメージインデックスを返します。|
-|[CMFCToolBarImages:: GetScale](#getscale)|下線付きの画像の現在のスケール比率を返します。|
-|[CMFCToolBarImages:: GetTransparentColor](#gettransparentcolor)||
-|[CMFCToolBarImages:: グレーの画像](#grayimages)|ツールバーのイメージを淡色表示にして、無効にします。|
-|[CMFCToolBarImages:: Is32BitTransparencySupported](#is32bittransparencysupported)|オペレーティングシステムが32ビットのアルファブレンドをサポートするかどうかを判断します。|
-|[CMFCToolBarImages:: IsPreMultiplyAutoCheck](#ispremultiplyautocheck)||
-|[CMFCToolBarImages:: IsRTL](#isrtl)|右から左 (RTL) のサポートが有効かどうかを決定します。|
-|[CMFCToolBarImages:: IsReadOnly](#isreadonly)|ツールバーイメージが読み取り専用かどうかを判断します。|
-|[CMFCToolBarImages:: IsScaled](#isscaled)|下線付きの画像が拡大縮小されているかどうかを示します。|
-|[CMFCToolBarImages:: IsUserImagesList](#isuserimageslist)|このツールバーイメージのセットにユーザー定義のイメージが含まれているかどうかを判断します。|
-|[CMFCToolBarImages:: IsValid](#isvalid)|このツールバーイメージのセットに、有効なツールバーイメージが含まれているかどうかを判断します。|
-|[CMFCToolBarImages:: Load](#load)|システムリソースまたはファイルからツールバーイメージを読み込みます。|
-|[CMFCToolBarImages:: LoadStr](#loadstr)||
-|[CMFCToolBarImages:: MapFromSysColor](#mapfromsyscolor)||
-|[CMFCToolBarImages:: MapTo3dColors](#mapto3dcolors)||
-|[CMFCToolBarImages:: MapToSysColor](#maptosyscolor)||
-|[CMFCToolBarImages:: MapToSysColorAlpha](#maptosyscoloralpha)||
-|[CMFCToolBarImages:: Mirror](#mirror)|水平方向にすべてのツールバーイメージを反転します。|
-|[CMFCToolBarImages:: MirrorBitmap](#mirrorbitmap)|ビットマップを水平方向にミラー化します。|
-|[CMFCToolBarImages:: MirrorBitmapVert](#mirrorbitmapvert)||
-|[CMFCToolBarImages:: MirrorVert](#mirrorvert)||
-|[CMFCToolBarImages:: OnSysColorChange](#onsyscolorchange)||
-|[CMFCToolBarImages::P repareDrawImage](#preparedrawimage)|指定されたサイズでツールバーイメージを描画するために必要なリソースを割り当てます。|
-|[CMFCToolBarImages:: 保存](#save)|このツールバーイメージのセットにユーザー定義のイメージが含まれている場合、ツールバーイメージをファイルに格納します。|
-|[CMFCToolBarImages:: SetAlwaysLight](#setalwayslight)||
-|[CMFCToolBarImages:: SetDisabledImageAlpha](#setdisabledimagealpha)|無効な画像に使用されるアルファチャネル値を設定します。|
-|[CMFCToolBarImages:: SetFadedImageAlpha](#setfadedimagealpha)||
-|[CMFCToolBarImages:: SetImageSize](#setimagesize)|ツールバーイメージ (ソースサイズ) のサイズを設定します。|
-|[CMFCToolBarImages:: Set電球の割合](#setlightpercentage)||
-|[CMFCToolBarImages:: SetMapTo3DColors](#setmapto3dcolors)||
-|[CMFCToolBarImages:: SetPreMultiplyAutoCheck](#setpremultiplyautocheck)||
-|[CMFCToolBarImages:: SetSingleImage](#setsingleimage)||
-|[CMFCToolBarImages:: SetTransparentColor](#settransparentcolor)|ツールバーイメージの透明色を設定します。|
-|[CMFCToolBarImages:: SmoothResize](#smoothresize)|下線付きの画像のサイズを滑らかに変更します。|
-|[CMFCToolBarImages:: UpdateImage](#updateimage)|ユーザー定義のツールバーイメージをビットマップから更新します。|
+|[CMFCツールバーイメージズ::適応色](#adaptcolors)||
+|[CMFCツールバーイメージ::追加アイコン](#addicon)|ツール バー イメージにアイコンを追加します。|
+|[イメージを追加します。](#addimage)|ツール バー イメージにビットマップを追加します。|
+|[CMFCツールバーイメージズ::クリーンアップ](#cleanup)||
+|[CMFCツールバーイメージズ::クリア](#clear)|このオブジェクトに割り当てられたシステム リソースを解放します。|
+|[32ビットを変換します。](#convertto32bits)|下線付きのビットマップを 32 bpp イメージに変換します。|
+|[CMFCツールバーイメージ::コピーイメージクリップボードへ](#copyimagetoclipboard)||
+|[CMFCツールバーイメージズ::コピート](#copyto)||
+|[イメージを作成します。](#createfromimagelist)|イメージ リスト ( [CImageList クラス](../../mfc/reference/cimagelist-class.md)) からツール バー イメージを初期化します。|
+|[イメージからイメージを作成します。](#createregionfromimage)||
+|[CMFCツールバーイメージ::Dエレテイメージ](#deleteimage)|ツール バー イメージのセットにユーザー定義のイメージが含まれている場合、指定したインデックスを持つイメージをツール バー イメージから削除します。|
+|[CMFCツールバーイメージズ::Dロー](#draw)|単一のツール バー イメージ (ボタン) を描画します。|
+|[CMFCツールバーイメージズ::Dローエックス](#drawex)||
+|[CMFCツールバーイメージ::イネーブルRTL](#enablertl)||
+|[をクリックします。](#enddrawimage)|ツール バー イメージが描画された後にシステム リソースを解放します。|
+|[CMFCツールバーイメージ::抽出アイコン](#extracticon)|ツール バー イメージから、指定したイメージ インデックスを持つアイコンを返します。|
+|[CMFCツールバーイメージズ::フィルディザレッドレック](#fillditheredrect)|ツール バーの背景色を持つブラシを使用して四角形を塗りつぶします。|
+|[CMFCツールバーイメージ::ゲットバールライト](#getalwayslight)||
+|[をクリックします。](#getbitsperpixel)|下線付きイメージの現在の解像度を返します。|
+|[をクリックします。](#getcount)|ツール バーのイメージの数を返します。|
+|[を使用します。](#getdisabledimagealpha)|無効なイメージに使用されるアルファ チャネル値を返します。|
+|[を見る](#getfadedimagealpha)||
+|[をクリックします。](#getimagesize)|メモリに格納されているツール バー イメージのサイズ (ソース サイズ) または画面上に描画されるツール バー イメージのサイズ (コピー先のサイズ) を取得します。|
+|[をクリックします。](#getimagewell)|すべてのツール バー イメージを含むビットマップへのハンドルを返します。|
+|[をクリックします。](#getimagewelllight)||
+|[をクリックします。](#getlastimagerect)||
+|[コントロール バーイメージ:::ライトのパーセンテージ](#getlightpercentage)||
+|[CMFCツールバーイメージズ:::ゲットマップト3Dカラー](#getmapto3dcolors)||
+|[コントロールバーイメージ::ゲットマスク](#getmask)||
+|[をクリックします。](#getresourceoffset)|指定したリソース ID のイメージ インデックスを返します。|
+|[CMFCツールバーイメージ::ゲットスケール](#getscale)|下線付きイメージの現在のスケール比を返します。|
+|[CMFCツールバーイメージ:::透明な色を取得します](#gettransparentcolor)||
+|[CMFCツールバーイメージズ::グレーイメージズ](#grayimages)|ツール バー イメージをグレー表示して、無効にします。|
+|[をサポートしています。](#is32bittransparencysupported)|オペレーティング システムが 32 ビット アルファ ブレンディングをサポートするかどうかを決定します。|
+|[CMFCツールバーイメージ::IsPreMultiplyオートチェック](#ispremultiplyautocheck)||
+|[CMFCツールバーイメージズ::イズル](#isrtl)|右から左 (RTL) サポートが有効かどうかを判断します。|
+|[を読み取る](#isreadonly)|ツール バー イメージが読み取り専用かどうかを判断します。|
+|[CMFCツールバーイメージズ::イズスケーリング](#isscaled)|下線付きのイメージを拡大/縮小するかどうかを示します。|
+|[一覧::イスユーザーイメージリスト](#isuserimageslist)|このツール バー イメージのセットにユーザー定義のイメージが含まれているかどうかを判断します。|
+|[CMFCツールバーイメージ::イズバリ](#isvalid)|このツール バー イメージのセットに有効なツール バー イメージが含まれているかどうかを判断します。|
+|[読み込み](#load)|システム リソースまたはファイルからツール バー イメージを読み込みます。|
+|[を使用します。](#loadstr)||
+|[をクリックします。](#mapfromsyscolor)||
+|[色彩](#mapto3dcolors)||
+|[CMFCツールバーイメージズ::マップスシスカラー](#maptosyscolor)||
+|[CMFCツールバーイメージズ::マップトシスカラーアルファ](#maptosyscoloralpha)||
+|[CMFCツールバーイメージズ::ミラー](#mirror)|すべてのツール バー イメージを水平方向にミラーします。|
+|[イメージ::ミラービットマップ](#mirrorbitmap)|ビットマップを水平方向にミラーします。|
+|[イメージ::ミラービットマップバー](#mirrorbitmapvert)||
+|[CMFCツールバーイメージズ::ミラーバート](#mirrorvert)||
+|[CMFCツールバーイメージ::オンシスカラーチェンジ](#onsyscolorchange)||
+|[を見 :Pる](#preparedrawimage)|ツール バー イメージを指定したサイズで描画するために必要なリソースを割り当てます。|
+|[CMFCツールバーイメージ::保存](#save)|ツール バー イメージのセットにユーザー定義イメージが含まれている場合は、ツール バー イメージをファイルに保存します。|
+|[CMFCツールバーイメージ::セット常に光](#setalwayslight)||
+|[をイメージします。](#setdisabledimagealpha)|無効なイメージに使用されるアルファ チャネル値を設定します。|
+|[をイメージ:::セットフェードイメージアルファ](#setfadedimagealpha)||
+|[イメージを設定します。](#setimagesize)|ツール バー イメージのサイズ (ソース サイズ) を設定します。|
+|[コントロール バーイメージ:::ライトパーセンテージ](#setlightpercentage)||
+|[CMFCツールバーイメージズ:::セットマップ3Dカラー](#setmapto3dcolors)||
+|[CMFCツールバーイメージ:::セットプレ乗算オートチェック](#setpremultiplyautocheck)||
+|[をクリックします。](#setsingleimage)||
+|[CMFCツールバーイメージ::設定透明な色](#settransparentcolor)|ツール バー イメージの透明色を設定します。|
+|[CMFCツールバーイメージ:::スムーズサイズ変更](#smoothresize)|下線付きイメージのサイズをスムーズに変更します。|
+|[をクリックします。](#updateimage)|ビットマップからユーザー定義のツール バー イメージを更新します。|
 
 ### <a name="protected-methods"></a>プロテクト メソッド
 
-|Name|Description|
+|名前|説明|
 |----------|-----------------|
-|[CMFCToolBarImages::P 再乗算 Yalpha](#premultiplyalpha)||
+|[CMFCツールバーイメージ::P再乗算アルファ](#premultiplyalpha)||
 
 ### <a name="data-members"></a>データ メンバー
 
-|Name|Description|
+|名前|説明|
 |----------|-----------------|
-|[CMFCToolBarImages:: m_bDisableTrueColorAlpha](#m_bdisabletruecoloralpha)|Truecolor アルファブレンド (32 ビットカラー) が無効な場合は TRUE。|
+|[CMFCツールバーイメージズ::m_bDisableTrueColorAlpha](#m_bdisabletruecoloralpha)|truecolor アルファ ブレンディング (32 ビットカラー) が無効になっている場合は TRUE。|
 
 ## <a name="remarks"></a>解説
 
-`CMFCToolbarImages` によって管理されるツールバーイメージの完全なビットマップは、固定サイズの1つ以上の小さいツールバーイメージ (ボタン) で構成されます。
+で管理される`CMFCToolbarImages`ツール バー イメージの完全なビットマップは、固定サイズの 1 つまたは複数の小さなツール バー イメージ (ボタン) で構成されます。
 
 ## <a name="example"></a>例
 
-次の例は、`CMFCToolBarImages` クラスのさまざまなメソッドを使用して `CMFCToolBarImages` オブジェクトを構成する方法を示しています。 この例では、ツールバーイメージのサイズを設定し、画像を読み込んで、画像の透明色を設定する方法を示します。 このコードスニペットは、 [Visual Studio のデモサンプル](../../overview/visual-cpp-samples.md)に含まれています。
+クラスのさまざまなメソッドを使用してオブジェクトを構成`CMFCToolBarImages`する方法を次の例に`CMFCToolBarImages`示します。 この例では、ツール バー イメージのサイズの設定、イメージの読み込み、イメージの透明色の設定方法を示します。 このコード スニペットは[、Visual Studio のデモ のサンプル](../../overview/visual-cpp-samples.md)の一部です。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#32](../../mfc/codesnippet/cpp/cmfctoolbarimages-class_1.h)]
 [!code-cpp[NVC_MFC_VisualStudioDemo#33](../../mfc/codesnippet/cpp/cmfctoolbarimages-class_2.cpp)]
@@ -265,9 +266,9 @@ class CMFCToolBarImages : public CObject
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** afxtoolbarimages
+**ヘッダー:** afxツールバーイメージズ.h
 
-##  <a name="adaptcolors"></a>CMFCToolBarImages:: AdaptColors
+## <a name="cmfctoolbarimagesadaptcolors"></a><a name="adaptcolors"></a>CMFCツールバーイメージズ::適応色
 
 ```
 void AdaptColors(
@@ -277,14 +278,14 @@ void AdaptColors(
 
 ### <a name="parameters"></a>パラメーター
 
-から*Clrbase*<br/>
-から*Clrtone*<br/>
+[in]*clrベース*<br/>
+[in]*clrTone*<br/>
 
 ### <a name="remarks"></a>解説
 
-##  <a name="addicon"></a>CMFCToolBarImages:: AddIcon
+## <a name="cmfctoolbarimagesaddicon"></a><a name="addicon"></a>CMFCツールバーイメージ::追加アイコン
 
-ツールバーイメージの一覧にアイコンを追加します。
+ツール バー イメージの一覧にアイコンを追加します。
 
 ```
 int AddIcon(
@@ -294,19 +295,19 @@ int AddIcon(
 
 ### <a name="parameters"></a>パラメーター
 
-*hIcon*<br/>
-から追加するアイコンへのハンドル。
+*Hicon*<br/>
+[in]追加するアイコンへのハンドル。
 
-*Phablend*<br/>
-からこのアイコンがアルファブレンドで使用される場合は TRUE。それ以外の場合は FALSE。
+*をブレンド*<br/>
+[in]このアイコンがアルファ ブレンディングで使用される場合は TRUE。それ以外の場合は FALSE。
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが正常に終了した場合に追加されたツールバーイメージの0から始まるインデックス。それ以外の場合は-1。
+メソッドが成功した場合に追加されたツール バー イメージの 0 から始まるインデックス。それ以外の場合は -1。
 
-##  <a name="addimage"></a>CMFCToolBarImages:: AddImage
+## <a name="cmfctoolbarimagesaddimage"></a><a name="addimage"></a>イメージを追加します。
 
-ツールバーイメージにビットマップを追加します。
+ツール バー イメージにビットマップを追加します。
 
 ```
 int AddImage(
@@ -321,22 +322,22 @@ int AddImage(
 ### <a name="parameters"></a>パラメーター
 
 *hbmp*<br/>
-から追加するビットマップへのハンドル。
+[in]追加するビットマップのハンドル。
 
-*bSetBitPerPixel*<br/>
-から`CMFCToolBarImages` オブジェクトが新しいイメージの色深度 (ピクセルあたりのビット数) を使用する場合は TRUE。`CMFCToolbarImages` オブジェクトが現在の色深度を保持する場合は FALSE。
+*ビットパーピクセルを設定します。*<br/>
+[in]オブジェクトが`CMFCToolBarImages`新しいイメージの色深度 (ピクセルあたりのビット数) を使用する場合は TRUE。FALSE の`CMFCToolbarImages`場合、オブジェクトは、現在の色深度を保持します。
 
-*リスト*<br/>
-から追加するイメージを格納している `CMFCToolbarImages` オブジェクトへの参照。
+*Imagelist*<br/>
+[in]追加するイメージを`CMFCToolbarImages`含むオブジェクトへの参照。
 
 *nIndex*<br/>
-から追加するイメージのソース `CMFCToolbarImages` オブジェクト内のインデックス。
+[in]追加するイメージのソース`CMFCToolbarImages`オブジェクト内のインデックス。
 
 ### <a name="return-value"></a>戻り値
 
-新しいビットマップが正常に追加された後に `CMFCToolBarImages` オブジェクトが保持するツールバーイメージの数。操作が失敗した場合は-1。
+新しいビットマップが正常に追加`CMFCToolBarImages`された後にオブジェクトが保持するツール バー イメージの数。操作が失敗した場合は -1。
 
-##  <a name="cleanup"></a>CMFCToolBarImages:: クリーンアップ
+## <a name="cmfctoolbarimagescleanup"></a><a name="cleanup"></a>CMFCツールバーイメージズ::クリーンアップ
 
 ```
 static void __stdcall CleanUp();
@@ -344,15 +345,15 @@ static void __stdcall CleanUp();
 
 ### <a name="remarks"></a>解説
 
-##  <a name="clear"></a>CMFCToolBarImages:: Clear
+## <a name="cmfctoolbarimagesclear"></a><a name="clear"></a>CMFCツールバーイメージズ::クリア
 
-[Cmfctoolbarimages](../../mfc/reference/cmfctoolbarimages-class.md)オブジェクトが割り当てたシステムリソースを解放します。
+オブジェクトが割り当てたシステム リソース[を](../../mfc/reference/cmfctoolbarimages-class.md)解放します。
 
 ```
 void Clear();
 ```
 
-##  <a name="cmfctoolbarimages"></a>CMFCToolBarImages:: CMFCToolBarImages
+## <a name="cmfctoolbarimagescmfctoolbarimages"></a><a name="cmfctoolbarimages"></a>CMFCツールバーイメージ:::CMFCツールバー画像
 
 `CMFCToolBarImages` オブジェクトを構築します。
 
@@ -362,9 +363,9 @@ CMFCToolBarImages();
 
 ### <a name="remarks"></a>解説
 
-`CMFCToolBarImages` オブジェクトを構築し、そのレンダリングエンジンを初期化して、イメージのサイズを既定値の 16 x 15 ピクセルに設定します。 イメージを追加する前に、 [Cmfctoolbarimages:: SetImageSize](#setimagesize)を使用してイメージのサイズを変更します。
+オブジェクトを`CMFCToolBarImages`構築し、そのレンダリング エンジンを初期化し、イメージのサイズを既定値の 16 x 15 ピクセルに設定します。 イメージを追加する前にイメージサイズを変更するには[、CMFCToolBarImages::SetImageSize](#setimagesize)を使用します。
 
-##  <a name="copyimagetoclipboard"></a>CMFCToolBarImages:: CopyImageToClipboard
+## <a name="cmfctoolbarimagescopyimagetoclipboard"></a><a name="copyimagetoclipboard"></a>CMFCツールバーイメージ::コピーイメージクリップボードへ
 
 ```
 BOOL CopyImageToClipboard(int iImage);
@@ -372,13 +373,13 @@ BOOL CopyImageToClipboard(int iImage);
 
 ### <a name="parameters"></a>パラメーター
 
-から*iImage*<br/>
+[in]*iイメージ*<br/>
 
 ### <a name="return-value"></a>戻り値
 
 ### <a name="remarks"></a>解説
 
-##  <a name="copyto"></a>CMFCToolBarImages:: CopyTo
+## <a name="cmfctoolbarimagescopyto"></a><a name="copyto"></a>CMFCツールバーイメージズ::コピート
 
 ```
 BOOL CopyTo(CMFCToolBarImages& imageList);
@@ -386,15 +387,15 @@ BOOL CopyTo(CMFCToolBarImages& imageList);
 
 ### <a name="parameters"></a>パラメーター
 
-から*imageList*<br/>
+[in]*イメージリスト*<br/>
 
 ### <a name="return-value"></a>戻り値
 
 ### <a name="remarks"></a>解説
 
-##  <a name="createfromimagelist"></a>CMFCToolBarImages:: CreateFromImageList
+## <a name="cmfctoolbarimagescreatefromimagelist"></a><a name="createfromimagelist"></a>イメージを作成します。
 
-[CImageList クラス](../../mfc/reference/cimagelist-class.md)オブジェクトからツールバーイメージを初期化します。
+[CImageList クラス](../../mfc/reference/cimagelist-class.md)オブジェクトからツール バー イメージを初期化します。
 
 ```
 BOOL CreateFromImageList(const CImageList& imageList);
@@ -402,8 +403,8 @@ BOOL CreateFromImageList(const CImageList& imageList);
 
 ### <a name="parameters"></a>パラメーター
 
-*リスト*<br/>
-からツールバーイメージのソースとして使用されるイメージリスト。
+*Imagelist*<br/>
+[in]ツール バー イメージのソースとして使用されるイメージ リスト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -411,9 +412,9 @@ BOOL CreateFromImageList(const CImageList& imageList);
 
 ### <a name="remarks"></a>解説
 
-この関数を使用すると、外部イメージリストからツールバーイメージリストをすばやく初期化できます。
+この関数を使用すると、外部イメージ リストからツール バー イメージ リストをすばやく初期化できます。
 
-##  <a name="createregionfromimage"></a>CMFCToolBarImages:: CreateRegionFromImage
+## <a name="cmfctoolbarimagescreateregionfromimage"></a><a name="createregionfromimage"></a>イメージからイメージを作成します。
 
 ```
 static HRGN __stdcall CreateRegionFromImage(
@@ -423,16 +424,16 @@ static HRGN __stdcall CreateRegionFromImage(
 
 ### <a name="parameters"></a>パラメーター
 
-から*bmp*<br/>
-から*Clrtransparent*<br/>
+[in]*bmp*<br/>
+[in]*clr透明*<br/>
 
 ### <a name="return-value"></a>戻り値
 
 ### <a name="remarks"></a>解説
 
-##  <a name="deleteimage"></a>CMFCToolBarImages::D eleteImage
+## <a name="cmfctoolbarimagesdeleteimage"></a><a name="deleteimage"></a>CMFCツールバーイメージ::Dエレテイメージ
 
-指定したインデックスを持つユーザー定義イメージをツールバーイメージから削除します。
+指定したインデックスを持つユーザー定義イメージをツール バー イメージから削除します。
 
 ```
 BOOL DeleteImage(int iImage);
@@ -440,16 +441,16 @@ BOOL DeleteImage(int iImage);
 
 ### <a name="parameters"></a>パラメーター
 
-*iImage*<br/>
-から削除するイメージの0から始まるインデックスを指定します。
+*iイメージ*<br/>
+[in]削除するイメージの 0 から始まるインデックスを指定します。
 
 ### <a name="return-value"></a>戻り値
 
-イメージが正常に削除された場合は TRUE。FALSE イメージインデックスが無効な場合、`CMFCToolbarImages` オブジェクトが一時的な場合、`CMFCToolbarImages` オブジェクトにユーザー定義イメージが含まれていない場合、または他のエラーが発生した場合は FALSE。
+イメージが正常に削除された場合は TRUE。イメージインデックスが無効、`CMFCToolbarImages`オブジェクトが一時的な場合、オブジェクトに`CMFCToolbarImages`ユーザー定義イメージが含まれていない場合、またはその他のエラーが発生した場合は FALSE。
 
-##  <a name="draw"></a>CMFCToolBarImages::D raw
+## <a name="cmfctoolbarimagesdraw"></a><a name="draw"></a>CMFCツールバーイメージズ::Dロー
 
-単一のツールバーイメージを描画します。
+単一のツール バー イメージを描画します。
 
 ```
 BOOL Draw(
@@ -468,40 +469,40 @@ BOOL Draw(
 ### <a name="parameters"></a>パラメーター
 
 *pDC*<br/>
-からデバイスコンテキストへのポインター。
+[in]デバイス コンテキストへのポインター。
 
-*x*<br/>
-からイメージが描画される四角形の左辺の X 座標です。
+*X*<br/>
+[in]イメージを描画する四角形の左側の X 座標。
 
-*y*<br/>
-からイメージが描画される四角形の上辺の Y 座標。
+*Y*<br/>
+[in]イメージを描画する四角形の上部の Y 座標。
 
-*iImageIndex*<br/>
-から表示されるイメージの0から始まるインデックス。
+*イメージインデックス*<br/>
+[in]表示されるイメージの 0 から始まるインデックス。
 
-*bHilite*<br/>
-からイメージを強調表示する場合は TRUE。それ以外の場合は FALSE。
+*ビヒライト*<br/>
+[in]イメージが強調表示される場合は TRUE。それ以外の場合は FALSE。
 
-*bDisabled*<br/>
-からイメージが無効のスタイルで描画される場合は TRUE。それ以外の場合は FALSE。
+*b無効*<br/>
+[in]イメージを無効なスタイルで描画する場合は TRUE。それ以外の場合は FALSE。
 
-*ビン分割*<br/>
-からイメージを中間状態スタイルで描画する場合は TRUE。それ以外の場合は FALSE。
+*bインデミター*<br/>
+[in]イメージが不確定状態スタイルで描画される場合は TRUE。それ以外の場合は FALSE。
 
-*bShadow*<br/>
-からイメージをドロップシャドウで描画する場合は TRUE。それ以外の場合は FALSE。
+*bシャドウ*<br/>
+[in]イメージをドロップ シャドウで描画する場合は TRUE。それ以外の場合は FALSE。
 
-*ビンアクティブ*<br/>
-からイメージが非アクティブな状態のスタイルで描画される場合は TRUE。それ以外の場合は FALSE。
+*b非アクティブ*<br/>
+[in]イメージが非アクティブ状態スタイルで描画される場合は TRUE。それ以外の場合は FALSE。
 
-*alphaSrc*<br/>
-からアルファチャネル (不透明度) の値。 値255は、画像が不透明に描画されることを意味します。 値が0の場合は、画像が透明に描画されることを意味します。 この値は、32ビットのカラーイメージと、Windows Vista のガラススタイルを表示したイメージに対してのみ使用されます。
+*アルファスル*<br/>
+[in]アルファ チャネル (不透明度) の値。 値が 255 の場合は、イメージが不透明に描画されます。 値が 0 の場合は、イメージが透明に描画されます。 この値は、32 ビットカラーイメージと、Windows Vista のガラススタイルを表示するイメージにのみ使用されます。
 
 ### <a name="return-value"></a>戻り値
 
-指定したイメージが正常に表示された場合は TRUE。イメージインデックスが無効であるか、他のエラーが発生した場合は FALSE。
+指定したイメージが正常に表示された場合は TRUE。イメージ インデックスが無効であったり、他のエラーが発生した場合は FALSE。
 
-##  <a name="drawex"></a>CMFCToolBarImages::D rawEx
+## <a name="cmfctoolbarimagesdrawex"></a><a name="drawex"></a>CMFCツールバーイメージズ::Dローエックス
 
 ```
 BOOL DrawEx(
@@ -516,19 +517,19 @@ BOOL DrawEx(
 
 ### <a name="parameters"></a>パラメーター
 
-から*pDC*<br/>
-から*rect*<br/>
-から*iImageIndex*<br/>
-から*horzAlign*<br/>
-から*Vertalign*<br/>
-から*rectSrc*<br/>
-から*alphaSrc*<br/>
+[in]*pDC*<br/>
+[in]*レクト*<br/>
+[in]*イメージインデックス*<br/>
+[in]*ホルズアライン*<br/>
+[in]*ヴェルトライン*<br/>
+[in]*レクトスrc*<br/>
+[in]*アルファスル*<br/>
 
 ### <a name="return-value"></a>戻り値
 
 ### <a name="remarks"></a>解説
 
-##  <a name="enablertl"></a>CMFCToolBarImages:: EnableRTL
+## <a name="cmfctoolbarimagesenablertl"></a><a name="enablertl"></a>CMFCツールバーイメージ::イネーブルRTL
 
 ```
 static void __stdcall EnableRTL(BOOL bIsRTL = TRUE);
@@ -536,13 +537,13 @@ static void __stdcall EnableRTL(BOOL bIsRTL = TRUE);
 
 ### <a name="parameters"></a>パラメーター
 
-から*bIsRTL*<br/>
+[in]*ビストルトル*<br/>
 
 ### <a name="remarks"></a>解説
 
-##  <a name="enddrawimage"></a>CMFCToolBarImages:: EndDrawImage
+## <a name="cmfctoolbarimagesenddrawimage"></a><a name="enddrawimage"></a>をクリックします。
 
-[Cmfctoolbarimages images](#draw)を呼び出して、ツールバーのイメージを描画した後に割り当てられた[:P reparedrawimage](#preparedrawimage)のシステムリソースを解放します。
+ツール バー イメージを描画した後[:Pに割](#preparedrawimage)り当てられたシステム リソース[:Dを解放](#draw)します。
 
 ```
 void EndDrawImage(CAfxDrawState& ds);
@@ -550,12 +551,12 @@ void EndDrawImage(CAfxDrawState& ds);
 
 ### <a name="parameters"></a>パラメーター
 
-*ds*<br/>
-から`PrepareDrawImage` メソッドに渡された `CAfxDrawState` オブジェクトへの参照。
+*Ds*<br/>
+[in]メソッドに渡された`CAfxDrawState`オブジェクトへの参照。 `PrepareDrawImage`
 
-##  <a name="extracticon"></a>CMFCToolBarImages:: ExtractIcon
+## <a name="cmfctoolbarimagesextracticon"></a><a name="extracticon"></a>CMFCツールバーイメージ::抽出アイコン
 
-ツールバーイメージの指定されたイメージインデックスを持つアイコンを返します。
+ツール バー イメージから、指定したイメージ インデックスを持つアイコンを返します。
 
 ```
 HICON ExtractIcon(int nIndex);
@@ -564,15 +565,15 @@ HICON ExtractIcon(int nIndex);
 ### <a name="parameters"></a>パラメーター
 
 *nIndex*<br/>
-からアイコンとして展開されるイメージが配置されているイメージリストの0から始まるインデックス。
+[in]イメージをアイコンとして抽出する位置にあるイメージ リスト内の 0 から始まるインデックス。
 
 ### <a name="return-value"></a>戻り値
 
-抽出されたアイコンへのハンドル。または、 *nIndex*が範囲外の場合は NULL。
+抽出されたアイコンへのハンドル。 *nIndex*
 
-##  <a name="fillditheredrect"></a>CMFCToolBarImages:: Filldiruncommand Edrect
+## <a name="cmfctoolbarimagesfillditheredrect"></a><a name="fillditheredrect"></a>CMFCツールバーイメージズ::フィルディザレッドレック
 
-四角形にツールバーの背景色を設定します。
+ツール バーの背景色で四角形を塗りつぶします。
 
 ```
 static void FillDitheredRect(
@@ -583,16 +584,16 @@ static void FillDitheredRect(
 ### <a name="parameters"></a>パラメーター
 
 *pDC*<br/>
-からデバイスコンテキストへのポインター。
+[in]デバイス コンテキストへのポインター。
 
-*rect*<br/>
-から塗りつぶす四角形の座標。
+*Rect*<br/>
+[in]塗りつぶす四角形の座標。
 
 ### <a name="remarks"></a>解説
 
-このメソッドを使用して、COLOR_BTNFACE と COLOR_BTNHIGHLIGHT のシステムカラーの平均である色を四角形に塗りつぶします。 システムで256以下の色が使用されている場合、その四角形には、その2色のディザーパターンが挿入されます。
+このメソッドは、システム カラーの平均値をCOLOR_BTNFACEし、COLOR_BTNHIGHLIGHT色で四角形を塗りつぶすために使います。 システムが 256 色以下の色を使用している場合、四角形は、代わりにこれらの 2 つの色のディザパターンで塗りつぶされます。
 
-##  <a name="getalwayslight"></a>CMFCToolBarImages:: GetAlwaysLight
+## <a name="cmfctoolbarimagesgetalwayslight"></a><a name="getalwayslight"></a>CMFCツールバーイメージ::ゲットバールライト
 
 ```
 BOOL GetAlwaysLight() const;
@@ -602,9 +603,9 @@ BOOL GetAlwaysLight() const;
 
 ### <a name="remarks"></a>解説
 
-##  <a name="getcount"></a>CMFCToolBarImages:: GetCount
+## <a name="cmfctoolbarimagesgetcount"></a><a name="getcount"></a>をクリックします。
 
-ツールバーイメージの一覧にあるイメージの数を返します。
+ツール バー イメージ リスト内のイメージの数を返します。
 
 ```
 int GetCount() const;
@@ -612,11 +613,11 @@ int GetCount() const;
 
 ### <a name="return-value"></a>戻り値
 
-`CMFCToolBarImages` オブジェクト内のイメージの数。
+オブジェクト内のイメージの`CMFCToolBarImages`数。
 
-##  <a name="getdisabledimagealpha"></a>CMFCToolBarImages:: GetDisabledImageAlpha
+## <a name="cmfctoolbarimagesgetdisabledimagealpha"></a><a name="getdisabledimagealpha"></a>を使用します。
 
-無効な画像に使用されるアルファチャネル (不透明度) の値を返します。
+無効なイメージに使用されるアルファ チャネル (不透明度) 値を返します。
 
 ```
 static BYTE GetDisabledImageAlpha();
@@ -624,13 +625,13 @@ static BYTE GetDisabledImageAlpha();
 
 ### <a name="return-value"></a>戻り値
 
-現在のアルファチャネル値。
+現在のアルファ チャネル値。
 
 ### <a name="remarks"></a>解説
 
-[Cmfctoolbarimages:: SetDisabledImageAlpha](#setdisabledimagealpha)を呼び出して、アルファチャネルの値を変更できます。
+アルファ チャネル値を変更するには[、CMFC ツール バー イメージズ::セット無効イメージアルファ](#setdisabledimagealpha)を呼び出すことができます。
 
-##  <a name="getfadedimagealpha"></a>CMFCToolBarImages:: GetFadedImageAlpha
+## <a name="cmfctoolbarimagesgetfadedimagealpha"></a><a name="getfadedimagealpha"></a>を見る
 
 ```
 static BYTE __stdcall GetFadedImageAlpha();
@@ -640,9 +641,9 @@ static BYTE __stdcall GetFadedImageAlpha();
 
 ### <a name="remarks"></a>解説
 
-##  <a name="getimagesize"></a>CMFCToolBarImages:: GetImageSize
+## <a name="cmfctoolbarimagesgetimagesize"></a><a name="getimagesize"></a>をクリックします。
 
-メモリに格納されているツールバーイメージのサイズ (ソースサイズ)、または画面に描画されるツールバーイメージのサイズ (変換先のサイズ) のいずれかを取得します。
+メモリに格納されているツール バー イメージのサイズ (ソース サイズ) または画面上に描画されるツール バー イメージのサイズ (コピー先のサイズ) を取得します。
 
 ```
 SIZE GetImageSize(BOOL bDest=FALSE) const;
@@ -650,22 +651,22 @@ SIZE GetImageSize(BOOL bDest=FALSE) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*bDest*<br/>
-からコピー先のサイズを取得する場合は TRUE。ソースイメージのサイズを取得する場合は FALSE。
+*最も多い*<br/>
+[in]宛先サイズを取得する場合は TRUE。ソース イメージのサイズを取得する場合は FALSE。
 
 ### <a name="return-value"></a>戻り値
 
-イメージのサイズをピクセル単位で指定する `SIZE` 構造体。
+イメージ`SIZE`のサイズをピクセル単位で指定する構造体。
 
 ### <a name="remarks"></a>解説
 
-ソースイメージのサイズは、 [Cmfctoolbarimages](../../mfc/reference/cmfctoolbarimages-class.md)オブジェクトに格納されているイメージのサイズです。 [Cmfctoolbarimages:: SetImageSize](#setimagesize)を呼び出して、ソースのサイズを設定できます。 既定値は 16 x 15 ピクセルです。
+ソース イメージのサイズは[、CMFCToolbarImages](../../mfc/reference/cmfctoolbarimages-class.md)オブジェクトに格納されているイメージのサイズです。 ソース サイズを設定するには[、CMFC ツール バー イメージズ::セットイメージサイズ](#setimagesize)を呼び出します。 既定値は 16 x 15 ピクセルです。
 
-既定では、コピー先のイメージサイズは0x0 です。 [Cmfctoolbarimages](#preparedrawimage)を呼び出すときに、宛先のサイズを指定します。:P reparedrawimage です。 [Cmfctoolbarimages:: EndDrawImage](#enddrawimage)メソッドは、変換先のサイズを既定値にリセットします。
+デフォルトでは、出力先のイメージサイズは 0x0 です。 変換先のサイズは、呼び出し先のサイズ[:Pを](#preparedrawimage)指定します。 メソッドは[、](#enddrawimage)変換先のサイズを既定値にリセットします。
 
-##  <a name="getimagewell"></a>CMFCToolBarImages:: GetImageWell
+## <a name="cmfctoolbarimagesgetimagewell"></a><a name="getimagewell"></a>をクリックします。
 
-すべてのツールバーイメージを格納しているビットマップへのハンドルを返します。
+すべてのツール バー イメージを含むビットマップへのハンドルを返します。
 
 ```
 HBITMAP GetImageWell() const;
@@ -673,13 +674,13 @@ HBITMAP GetImageWell() const;
 
 ### <a name="return-value"></a>戻り値
 
-ツールバーイメージを格納しているビットマップへのハンドル。
+ツール バー イメージを含むビットマップへのハンドル。
 
 ### <a name="remarks"></a>解説
 
-ツールバーイメージは、*イメージウェル*と呼ばれる1つのビットマップ内の行に格納されます。 イメージウェルのツールバーイメージを検索するには、イメージのインデックスをツールバーイメージの幅 (「 [Cmfctoolbarimages:: GetImageSize](#getimagesize)」を参照) で乗算し、イメージ内のイメージの横方向のオフセットを取得します。
+ツール バー イメージは、*イメージ ウェル*と呼ばれる単一のビットマップに 1 行に格納されます。 イメージウェルでツール バー イメージを検索するには、イメージのインデックスにツール バー イメージの幅を掛け合わせて[(CMFCToolBarImages::GetImageSize](#getimagesize)を参照)、イメージ内のイメージの水平方向のオフセットを取得します。
 
-##  <a name="getimagewelllight"></a>CMFCToolBarImages:: GetImageWellLight
+## <a name="cmfctoolbarimagesgetimagewelllight"></a><a name="getimagewelllight"></a>をクリックします。
 
 ```
 HBITMAP GetImageWellLight() const;
@@ -689,7 +690,7 @@ HBITMAP GetImageWellLight() const;
 
 ### <a name="remarks"></a>解説
 
-##  <a name="getlastimagerect"></a>CMFCToolBarImages:: GetLastImageRect
+## <a name="cmfctoolbarimagesgetlastimagerect"></a><a name="getlastimagerect"></a>をクリックします。
 
 ```
 CRect GetLastImageRect() const;
@@ -699,7 +700,7 @@ CRect GetLastImageRect() const;
 
 ### <a name="remarks"></a>解説
 
-##  <a name="getlightpercentage"></a>CMFCToolBarImages:: Get電球の割合
+## <a name="cmfctoolbarimagesgetlightpercentage"></a><a name="getlightpercentage"></a>コントロール バーイメージ:::ライトのパーセンテージ
 
 ```
 int GetLightPercentage() const;
@@ -709,7 +710,7 @@ int GetLightPercentage() const;
 
 ### <a name="remarks"></a>解説
 
-##  <a name="getmapto3dcolors"></a>CMFCToolBarImages:: GetMapTo3DColors
+## <a name="cmfctoolbarimagesgetmapto3dcolors"></a><a name="getmapto3dcolors"></a>CMFCツールバーイメージズ:::ゲットマップト3Dカラー
 
 ```
 BOOL GetMapTo3DColors() const;
@@ -719,7 +720,7 @@ BOOL GetMapTo3DColors() const;
 
 ### <a name="remarks"></a>解説
 
-##  <a name="getmask"></a>CMFCToolBarImages:: GetMask
+## <a name="cmfctoolbarimagesgetmask"></a><a name="getmask"></a>コントロールバーイメージ::ゲットマスク
 
 ```
 HBITMAP GetMask(int iImage);
@@ -727,15 +728,15 @@ HBITMAP GetMask(int iImage);
 
 ### <a name="parameters"></a>パラメーター
 
-から*iImage*<br/>
+[in]*iイメージ*<br/>
 
 ### <a name="return-value"></a>戻り値
 
 ### <a name="remarks"></a>解説
 
-##  <a name="getresourceoffset"></a>CMFCToolBarImages:: GetResourceOffset
+## <a name="cmfctoolbarimagesgetresourceoffset"></a><a name="getresourceoffset"></a>をクリックします。
 
-指定されたリソース ID のイメージインデックスを返します。
+指定したリソース ID のイメージ インデックスを返します。
 
 ```
 int GetResourceOffset(UINT uiResId) const;
@@ -744,13 +745,13 @@ int GetResourceOffset(UINT uiResId) const;
 ### <a name="parameters"></a>パラメーター
 
 *uiResId*<br/>
-からイメージのリソース ID。
+[in]イメージ リソース ID。
 
 ### <a name="return-value"></a>戻り値
 
-メソッドが正常に実行された場合はイメージインデックス。指定されたリソース ID を持つイメージが存在しない場合は-1。
+メソッドが成功した場合はイメージ インデックス。指定されたリソース ID を持つイメージが存在しない場合は -1。
 
-##  <a name="gettransparentcolor"></a>CMFCToolBarImages:: GetTransparentColor
+## <a name="cmfctoolbarimagesgettransparentcolor"></a><a name="gettransparentcolor"></a>CMFCツールバーイメージ:::透明な色を取得します
 
 ```
 COLORREF GetTransparentColor() const;
@@ -760,9 +761,9 @@ COLORREF GetTransparentColor() const;
 
 ### <a name="remarks"></a>解説
 
-##  <a name="grayimages"></a>CMFCToolBarImages:: グレーの画像
+## <a name="cmfctoolbarimagesgrayimages"></a><a name="grayimages"></a>CMFCツールバーイメージズ::グレーイメージズ
 
-ツールバーのイメージを淡色表示にして、無効にします。
+ツール バー イメージをグレー表示して、無効にします。
 
 ```
 BOOL GrayImages(int nGrayImageLuminancePercentage);
@@ -770,8 +771,8 @@ BOOL GrayImages(int nGrayImageLuminancePercentage);
 
 ### <a name="parameters"></a>パラメーター
 
-*nGrayImageLuminancePercentage*<br/>
-から輝度比率。
+*イメージルミナンス率*<br/>
+[in]輝度のパーセンテージ。
 
 ### <a name="return-value"></a>戻り値
 
@@ -779,14 +780,14 @@ BOOL GrayImages(int nGrayImageLuminancePercentage);
 
 ### <a name="remarks"></a>解説
 
-このメソッドは、各ピクセルの赤、緑、および青のコンポーネントを平均し、結果を100で割って*nGrayImageLuminancePercentage*を乗算することによって、ツールバーのイメージを変更します。 *NGrayImageLuminancePercentage*が0または負の場合は、既定値の130が代わりに使用されます。
+このメソッドは、各ピクセルの赤、緑、青の各要素を平均化し *、nGrayImageLuminancePercentage で*除算した値を乗算することで、ツール バーイメージを変更します。 *0*または負の値の場合は、既定値の 130 が代わりに使用されます。
 
 > [!NOTE]
->  変更を元に戻すには、ソースからイメージを再読み込みする必要があります。 これを行うには、 [Cmfctoolbarimages:: Load](#load)または[Cmfctoolbarimages:: updateimage](#updateimage)を呼び出します (ユーザー定義のイメージの場合のみ)。または、Cmfctoolbarimages:: [Addicon](#addicon)または[cmfctoolbarimages:: addimage](#addimage)を呼び出して、もう一度[cmfctoolbarimages:: clear](#clear)を呼び出してイメージを追加します。
+> 変更を元に戻す場合は、ソースからイメージを再ロードする必要があります。 これを行うには[、CMFCツールバーイメージ::読み込み](#load)または[CMFCツールバーイメージ::UpdateImage](#updateimage) (ユーザー定義のイメージの場合のみ)を呼び出すか[、CMFCToolBarImages:::クリア](#clear)を呼び出し[、CMFCツールバーイメージ:::AddIcon](#addicon)または[CMFCツールバーイメージを](#addimage)呼び出すことによって、イメージを再び追加します。
 
-##  <a name="is32bittransparencysupported"></a>CMFCToolBarImages:: Is32BitTransparencySupported
+## <a name="cmfctoolbarimagesis32bittransparencysupported"></a><a name="is32bittransparencysupported"></a>をサポートしています。
 
-オペレーティングシステムが32ビットのアルファブレンドをサポートするかどうかを指定します。
+オペレーティング システムが 32 ビット アルファ ブレンディングをサポートするかどうかを指定します。
 
 ```
 static BOOL Is32BitTransparencySupported();
@@ -794,13 +795,13 @@ static BOOL Is32BitTransparencySupported();
 
 ### <a name="return-value"></a>戻り値
 
-32ビットのアルファブレンドがサポートされている場合は TRUE。それ以外の場合は FALSE。
+32 ビット アルファ ブレンディングがサポートされている場合は TRUE。それ以外の場合は FALSE。
 
 ### <a name="remarks"></a>解説
 
-この静的メソッドを使用して、オペレーティングシステムが32ビットのアルファブレンドをサポートするかどうかを実行時に決定します。 この機能は、Windows 2000 以降のバージョンでサポートされています。
+この静的メソッドを使用して、オペレーティング システムが 32 ビット アルファ ブレンディングをサポートしているかどうかを実行時に確認します。 この機能は、Windows 2000 以降のバージョンでサポートされています。
 
-##  <a name="ispremultiplyautocheck"></a>CMFCToolBarImages:: IsPreMultiplyAutoCheck
+## <a name="cmfctoolbarimagesispremultiplyautocheck"></a><a name="ispremultiplyautocheck"></a>CMFCツールバーイメージ::IsPreMultiplyオートチェック
 
 ```
 BOOL IsPreMultiplyAutoCheck() const;
@@ -810,9 +811,9 @@ BOOL IsPreMultiplyAutoCheck() const;
 
 ### <a name="remarks"></a>解説
 
-##  <a name="isreadonly"></a>CMFCToolBarImages:: IsReadOnly
+## <a name="cmfctoolbarimagesisreadonly"></a><a name="isreadonly"></a>を読み取る
 
-ツールバーイメージが読み取り専用かどうかを指定します。
+ツール バー イメージが読み取り専用かどうかを指定します。
 
 ```
 BOOL IsReadOnly() const;
@@ -820,15 +821,15 @@ BOOL IsReadOnly() const;
 
 ### <a name="return-value"></a>戻り値
 
-ツールバーイメージが読み取り専用の場合は TRUE。それ以外の場合は FALSE。
+ツール バー イメージが読み取り専用の場合は TRUE、それ以外の場合は FALSE。
 
 ### <a name="remarks"></a>解説
 
-`CMFCToolbarImages` オブジェクトは、ツールバーイメージを含むビットマップが読み取り専用ファイルから読み込まれた場合、または、`CMFCToolBarImages::CopyTemp` メソッドを使用してビットマップがコピーされた場合に読み取り専用になります。
+この`CMFCToolbarImages`オブジェクトは、ツール バー イメージを含むビットマップが読み取り専用ファイルから読み込まれた場合、または`CMFCToolBarImages::CopyTemp`メソッドを使用してビットマップがコピーされた場合に、読み取り専用になります。
 
-##  <a name="isrtl"></a>CMFCToolBarImages:: IsRTL
+## <a name="cmfctoolbarimagesisrtl"></a><a name="isrtl"></a>CMFCツールバーイメージズ::イズル
 
-右から左 (RTL) のサポートを有効にするかどうかを指定します。
+右から左 (RTL) サポートが有効かどうかを指定します。
 
 ```
 static BOOL IsRTL();
@@ -836,15 +837,15 @@ static BOOL IsRTL();
 
 ### <a name="return-value"></a>戻り値
 
-RTL サポートが有効な場合は TRUE。それ以外の場合は FALSE。
+RTL サポートが有効になっている場合は TRUE。それ以外の場合は FALSE。
 
 ### <a name="remarks"></a>解説
 
-RTL サポートは、アラビア語、ヘブライ語、ペルシャ語、ウルドゥ語など、アプリケーションが右から左に読む言語にローカライズされている場合に使用されます。
+RTL サポートは、アプリケーションがアラビア語、ヘブライ語、ペルシャ語、ウルドゥー語など、右から左に読み取られる言語にローカライズされている場合に使用されます。
 
-##  <a name="isuserimageslist"></a>CMFCToolBarImages:: IsUserImagesList
+## <a name="cmfctoolbarimagesisuserimageslist"></a><a name="isuserimageslist"></a>一覧::イスユーザーイメージリスト
 
-このツールバーイメージのセットにユーザー定義のイメージが含まれるかどうかを指定します。
+このツール バー イメージのセットにユーザー定義イメージが含まれるかどうかを指定します。
 
 ```
 BOOL IsUserImagesList() const;
@@ -852,11 +853,11 @@ BOOL IsUserImagesList() const;
 
 ### <a name="return-value"></a>戻り値
 
-`CMFCToolBarImages` オブジェクトにユーザー定義のツールバーイメージが含まれている場合は TRUE。それ以外の場合は FALSE。
+オブジェクトにユーザー`CMFCToolBarImages`定義のツール バー イメージが含まれている場合は TRUE。それ以外の場合は FALSE。
 
-##  <a name="isvalid"></a>CMFCToolBarImages:: IsValid
+## <a name="cmfctoolbarimagesisvalid"></a><a name="isvalid"></a>CMFCツールバーイメージ::イズバリ
 
-このツールバーイメージのセットに、有効なツールバーイメージが含まれているかどうかを示します。
+このツール バー イメージのセットに有効なツール バー イメージが含まれているかどうかを示します。
 
 ```
 BOOL IsValid() const;
@@ -864,15 +865,15 @@ BOOL IsValid() const;
 
 ### <a name="return-value"></a>戻り値
 
-`CMFCToolBarImages` オブジェクトが有効な場合は TRUE。それ以外の場合は FALSE。
+オブジェクトが有効`CMFCToolBarImages`な場合は TRUE。それ以外の場合は FALSE。
 
 ### <a name="remarks"></a>解説
 
-`CMFCToolBarImages` オブジェクトは、ツールバーイメージを含むビットマップへのハンドルが NULL の場合は無効です。
+ツール`CMFCToolBarImages`バー イメージを持つビットマップへのハンドルが NULL の場合、オブジェクトは無効です。
 
-##  <a name="load"></a>CMFCToolBarImages:: Load
+## <a name="cmfctoolbarimagesload"></a><a name="load"></a>読み込み
 
-システムリソースまたはファイルからツールバーイメージを読み込みます。
+システム リソースまたはファイルからツール バー イメージを読み込みます。
 
 ```
 BOOL Load(
@@ -887,20 +888,20 @@ BOOL Load(
 
 ### <a name="parameters"></a>パラメーター
 
-*uiResID*<br/>
-からビットマップリソースの ID。
+*UIResID*<br/>
+[in]ビットマップ リソースの ID。
 
-*hinstRes*<br/>
-からリソース DLL のインスタンス。
+*ヒンストレス*<br/>
+[in]リソース DLL のインスタンス。
 
-*bAdd*<br/>
-から読み込まれたビットマップを既存のビットマップに追加する場合は TRUE、既存のビットマップを置き換える場合は FALSE。
+*b追加*<br/>
+[in]TRUE を指定すると、読み込まれたビットマップが既存のビットマップに追加され、既存のビットマップを置き換えるには FALSE になります。
 
-*lpszBmpFileName*<br/>
-からビットマップの読み込み元となるディスクファイルへのパス。
+*ファイル名*<br/>
+[in]ビットマップの読み込み元となるディスク ファイルへのパス。
 
-*nMaxFileSize*<br/>
-からビットマップファイル内の最大バイト数。または、ファイルサイズに関係なく、ビットマップを読み込む場合は0になります。 ファイルのサイズがこの最大サイズを超えた場合、メソッドは FALSE を返し、ビットマップを読み込みません。
+*ファイルサイズ*<br/>
+[in]ビットマップ ファイル内の最大バイト数。ファイル サイズに関係なくビットマップを読み込む場合は 0。 ファイルのサイズがこの最大サイズを超える場合、メソッドは FALSE を返し、ビットマップを読み込みません。
 
 ### <a name="return-value"></a>戻り値
 
@@ -908,9 +909,9 @@ BOOL Load(
 
 ### <a name="remarks"></a>解説
 
-ファイルに読み取り専用属性が設定されている場合、イメージリストは読み取り専用としてマークされます。
+ファイルに読み取り専用属性がある場合、イメージ リストは読み取り専用としてマークされます。
 
-##  <a name="loadstr"></a>CMFCToolBarImages:: LoadStr
+## <a name="cmfctoolbarimagesloadstr"></a><a name="loadstr"></a>を使用します。
 
 ```
 BOOL LoadStr(
@@ -921,15 +922,15 @@ BOOL LoadStr(
 
 ### <a name="parameters"></a>パラメーター
 
-から*lpszresourcename*<br/>
-から*Hinstres*<br/>
-から*Badd*<br/>
+[in]*リソース名*<br/>
+[in]*ヒンストレス*<br/>
+[in]*b追加*<br/>
 
 ### <a name="return-value"></a>戻り値
 
 ### <a name="remarks"></a>解説
 
-##  <a name="mapfromsyscolor"></a>CMFCToolBarImages:: MapFromSysColor
+## <a name="cmfctoolbarimagesmapfromsyscolor"></a><a name="mapfromsyscolor"></a>をクリックします。
 
 ```
 static COLORREF __stdcall MapFromSysColor(
@@ -939,14 +940,14 @@ static COLORREF __stdcall MapFromSysColor(
 
 ### <a name="parameters"></a>パラメーター
 
-から*色*<br/>
-から*bUseRGBQUAD*<br/>
+[in]*色*<br/>
+[in]*を使用します。*<br/>
 
 ### <a name="return-value"></a>戻り値
 
 ### <a name="remarks"></a>解説
 
-##  <a name="mapto3dcolors"></a>CMFCToolBarImages:: MapTo3dColors
+## <a name="cmfctoolbarimagesmapto3dcolors"></a><a name="mapto3dcolors"></a>色彩
 
 ```
 BOOL MapTo3dColors(
@@ -957,15 +958,15 @@ BOOL MapTo3dColors(
 
 ### <a name="parameters"></a>パラメーター
 
-から*bUseRGBQUAD*<br/>
-から*Clrsrc*<br/>
-から*Clrdest*<br/>
+[in]*を使用します。*<br/>
+[in]*clrSrc*<br/>
+[in]*clrDest*<br/>
 
 ### <a name="return-value"></a>戻り値
 
 ### <a name="remarks"></a>解説
 
-##  <a name="maptosyscolor"></a>CMFCToolBarImages:: MapToSysColor
+## <a name="cmfctoolbarimagesmaptosyscolor"></a><a name="maptosyscolor"></a>CMFCツールバーイメージズ::マップスシスカラー
 
 ```
 static COLORREF __stdcall MapToSysColor(
@@ -975,14 +976,14 @@ static COLORREF __stdcall MapToSysColor(
 
 ### <a name="parameters"></a>パラメーター
 
-から*色*<br/>
-から*bUseRGBQUAD*<br/>
+[in]*色*<br/>
+[in]*を使用します。*<br/>
 
 ### <a name="return-value"></a>戻り値
 
 ### <a name="remarks"></a>解説
 
-##  <a name="maptosyscoloralpha"></a>CMFCToolBarImages:: MapToSysColorAlpha
+## <a name="cmfctoolbarimagesmaptosyscoloralpha"></a><a name="maptosyscoloralpha"></a>CMFCツールバーイメージズ::マップトシスカラーアルファ
 
 ```
 static COLORREF __stdcall MapToSysColorAlpha(COLORREF color);
@@ -990,15 +991,15 @@ static COLORREF __stdcall MapToSysColorAlpha(COLORREF color);
 
 ### <a name="parameters"></a>パラメーター
 
-から*色*<br/>
+[in]*色*<br/>
 
 ### <a name="return-value"></a>戻り値
 
 ### <a name="remarks"></a>解説
 
-##  <a name="mirror"></a>CMFCToolBarImages:: Mirror
+## <a name="cmfctoolbarimagesmirror"></a><a name="mirror"></a>CMFCツールバーイメージズ::ミラー
 
-ツールバーのイメージを、水平方向のミラーイメージに置き換えます。
+ツール バー イメージを水平のミラー イメージに置き換えます。
 
 ```
 BOOL Mirror();
@@ -1006,15 +1007,15 @@ BOOL Mirror();
 
 ### <a name="return-value"></a>戻り値
 
-イメージが正常にミラー化された場合は TRUE。それ以外の場合は FALSE。
+イメージが正常にミラーリングされた場合は TRUE。それ以外の場合は FALSE。
 
 ### <a name="remarks"></a>解説
 
-このメソッドは、右から左へ記述するシステムをサポートするために使用されます。
+このメソッドは、右から左への書き込みシステムをサポートするために使用されます。
 
-##  <a name="mirrorbitmap"></a>CMFCToolBarImages:: MirrorBitmap
+## <a name="cmfctoolbarimagesmirrorbitmap"></a><a name="mirrorbitmap"></a>イメージ::ミラービットマップ
 
-ビットマップを水平方向のミラーイメージに置き換えます。
+ビットマップを水平ミラー イメージに置き換えます。
 
 ```
 static BOOL MirrorBitmap(
@@ -1025,20 +1026,20 @@ static BOOL MirrorBitmap(
 ### <a name="parameters"></a>パラメーター
 
 *hbmp*<br/>
-[入力、出力]ミラー化するビットマップへのハンドル。
+[イン、アウト]ミラー化するビットマップへのハンドル。
 
-*cxImage*<br/>
-からイメージの幅 (ピクセル単位)。
+*イメージ*<br/>
+[in]イメージの幅 (ピクセル単位)。
 
 ### <a name="return-value"></a>戻り値
 
-イメージが正常にミラー化された場合は TRUE。それ以外の場合は FALSE。
+イメージが正常にミラーリングされた場合は TRUE。それ以外の場合は FALSE。
 
 ### <a name="remarks"></a>解説
 
-この関数は、右から左へ記述するシステムをサポートするために使用されます。
+この関数は、右から左への書き込みシステムをサポートするために使用されます。
 
-##  <a name="mirrorbitmapvert"></a>CMFCToolBarImages:: MirrorBitmapVert
+## <a name="cmfctoolbarimagesmirrorbitmapvert"></a><a name="mirrorbitmapvert"></a>イメージ::ミラービットマップバー
 
 ```
 static BOOL __stdcall MirrorBitmapVert(
@@ -1048,14 +1049,14 @@ static BOOL __stdcall MirrorBitmapVert(
 
 ### <a name="parameters"></a>パラメーター
 
-から*hbmp*<br/>
-から*Cyimage*<br/>
+[in]*hbmp*<br/>
+[in]*イメージ*<br/>
 
 ### <a name="return-value"></a>戻り値
 
 ### <a name="remarks"></a>解説
 
-##  <a name="mirrorvert"></a>CMFCToolBarImages:: MirrorVert
+## <a name="cmfctoolbarimagesmirrorvert"></a><a name="mirrorvert"></a>CMFCツールバーイメージズ::ミラーバート
 
 ```
 BOOL MirrorVert();
@@ -1065,7 +1066,7 @@ BOOL MirrorVert();
 
 ### <a name="remarks"></a>解説
 
-##  <a name="onsyscolorchange"></a>CMFCToolBarImages:: OnSysColorChange
+## <a name="cmfctoolbarimagesonsyscolorchange"></a><a name="onsyscolorchange"></a>CMFCツールバーイメージ::オンシスカラーチェンジ
 
 ```
 void OnSysColorChange();
@@ -1073,7 +1074,7 @@ void OnSysColorChange();
 
 ### <a name="remarks"></a>解説
 
-##  <a name="premultiplyalpha"></a>CMFCToolBarImages::P 再乗算 Yalpha
+## <a name="cmfctoolbarimagespremultiplyalpha"></a><a name="premultiplyalpha"></a>CMFCツールバーイメージ::P再乗算アルファ
 
 ```
 static BOOL __stdcall PreMultiplyAlpha(
@@ -1085,16 +1086,16 @@ BOOL PreMultiplyAlpha(HBITMAP hbmp);
 
 ### <a name="parameters"></a>パラメーター
 
-から*hbmp*<br/>
-から*Bautocheckpremlt*<br/>
+[in]*hbmp*<br/>
+[in]*b オートチェックプレムト*<br/>
 
 ### <a name="return-value"></a>戻り値
 
 ### <a name="remarks"></a>解説
 
-##  <a name="m_bdisabletruecoloralpha"></a>CMFCToolBarImages:: m_bDisableTrueColorAlpha
+## <a name="cmfctoolbarimagesm_bdisabletruecoloralpha"></a><a name="m_bdisabletruecoloralpha"></a>CMFCツールバーイメージズ::m_bDisableTrueColorAlpha
 
-Truecolor アルファブレンド (32 ビットカラー) が無効な場合は TRUE。
+truecolor アルファ ブレンディング (32 ビットカラー) が無効になっている場合は TRUE。
 
 ```
 static BOOL m_bDisableTrueColorAlpha;
@@ -1102,13 +1103,13 @@ static BOOL m_bDisableTrueColorAlpha;
 
 ### <a name="remarks"></a>解説
 
-このメンバー変数を FALSE に設定すると、ツールバーイメージの truecolor のアルファブレンドが有効になります。
+ツール バー イメージの truecolor アルファ ブレンドを有効にするには、このメンバー変数を FALSE に設定します。
 
-旧バージョンとの互換性のために既定値は TRUE です。
+下位互換性を保つために、既定値は TRUE です。
 
-##  <a name="preparedrawimage"></a>CMFCToolBarImages::P repareDrawImage
+## <a name="cmfctoolbarimagespreparedrawimage"></a><a name="preparedrawimage"></a>を見 :Pる
 
-指定されたサイズでツールバーイメージを描画するために必要なリソースを割り当てます。
+ツール バー イメージを指定したサイズで描画するために必要なリソースを割り当てます。
 
 ```
 BOOL PrepareDrawImage(
@@ -1120,26 +1121,26 @@ BOOL PrepareDrawImage(
 
 ### <a name="parameters"></a>パラメーター
 
-*ds*<br/>
-からイメージのレンダリングステージ間で割り当てられたリソースを格納する `CAfxDrawState` 構造体への参照。
+*Ds*<br/>
+[in]イメージレンダリングステージ`CAfxDrawState`間で割り当てられたリソースを格納する構造体への参照。
 
-*sizeImageDest*<br/>
-からコピー先のイメージのサイズを指定します。
+*サイズイメージデスト*<br/>
+[in]コピー先イメージのサイズを指定します。
 
-*bFadeInactive*<br/>
-から非アクティブなイメージをフェードアウトする場合は TRUE。
+*アクティブな状態*<br/>
+[in]アクティブでないイメージをフェードして描画する場合は TRUE。
 
 ### <a name="return-value"></a>戻り値
 
-ツールバーイメージを描画するために必要なリソースが正常に割り当てられた場合は TRUE。それ以外の場合は FALSE。
+ツール バー イメージの描画に必要なリソースが正常に割り当てられた場合は TRUE。。FALSE
 
 ### <a name="remarks"></a>解説
 
-このメソッドを呼び出した後、 [Cmfctoolbarimages](#draw)を呼び出すことができます。:D 生の回数は任意です。 描画が終了したら、 [Cmfctoolbarimages:: EndDrawImage](#enddrawimage)を呼び出して、`PrepareDrawImage`によって割り当てられたリソースを解放する必要があります。
+このメソッドを呼び出した後[、CMFCToolBarImages::Draw](#draw)を何度でも呼び出すことができます。 描画が完了したら[、CMFCToolBarImages::EndDrawImage](#enddrawimage)を呼び出して、によって`PrepareDrawImage`割り当てられたリソースを解放する必要があります。
 
-##  <a name="save"></a>CMFCToolBarImages:: 保存
+## <a name="cmfctoolbarimagessave"></a><a name="save"></a>CMFCツールバーイメージ::保存
 
-このツールバーイメージのセットにユーザー定義のイメージが含まれている場合、ツールバーイメージをファイルに格納します。
+ツール バー イメージのセットにユーザー定義イメージが含まれている場合は、ツール バー イメージをファイルに保存します。
 
 ```
 BOOL Save(LPCTSTR lpszBmpFileName=NULL);
@@ -1147,18 +1148,18 @@ BOOL Save(LPCTSTR lpszBmpFileName=NULL);
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszBmpFileName*<br/>
-ディスクファイルへのパス。
+*ファイル名*<br/>
+ディスク ファイルへのパス。
 
 ### <a name="return-value"></a>戻り値
 
-ツールバーイメージが正常に保存された場合は TRUE。それ以外の場合は FALSE。
+ツール バー イメージが正常に保存された場合は TRUE。それ以外の場合は FALSE。
 
 ### <a name="remarks"></a>解説
 
-ユーザー定義のイメージをディスクファイルに格納するには、このメソッドを呼び出します。 *Lpszbmpfilename*が NULL の場合、メソッドは、 [Cmfctoolbarimages:: Load](#load)メソッドによってビットマップが読み込まれたファイルにビットマップを格納します。
+ユーザー定義イメージをディスク ファイルに格納します。 *lpszBmpFileName*が NULL の場合、メソッドは、ビットマップが[読](#load)み込まれたファイルにビットマップを格納します。
 
-##  <a name="setalwayslight"></a>CMFCToolBarImages:: SetAlwaysLight
+## <a name="cmfctoolbarimagessetalwayslight"></a><a name="setalwayslight"></a>CMFCツールバーイメージ::セット常に光
 
 ```
 void SetAlwaysLight(BOOL bAlwaysLight = TRUE);
@@ -1166,13 +1167,13 @@ void SetAlwaysLight(BOOL bAlwaysLight = TRUE);
 
 ### <a name="parameters"></a>パラメーター
 
-から*わずか*に<br/>
+[in]*常に光を与*<br/>
 
 ### <a name="remarks"></a>解説
 
-##  <a name="setdisabledimagealpha"></a>CMFCToolBarImages:: SetDisabledImageAlpha
+## <a name="cmfctoolbarimagessetdisabledimagealpha"></a><a name="setdisabledimagealpha"></a>をイメージします。
 
-無効な画像に使用されるアルファチャネル (不透明度) の値を設定します。
+無効なイメージに使用するアルファ チャネル(不透明度)値を設定します。
 
 ```
 static void SetDisabledImageAlpha(BYTE nValue);
@@ -1180,14 +1181,14 @@ static void SetDisabledImageAlpha(BYTE nValue);
 
 ### <a name="parameters"></a>パラメーター
 
-*N 値*<br/>
-からアルファチャネルの新しい値。
+*n値*<br/>
+[in]アルファ チャネルの新しい値。
 
 ### <a name="remarks"></a>解説
 
-このメソッドを使用して、無効になっているイメージに対してカスタムのアルファ値を設定します。 既定値は127です。これにより、無効なボタンイメージは半透明になります。 値を0に設定した場合、無効になっているイメージは完全に透過的になります。 値255を設定した場合、無効になっているイメージは完全に不透明になります。
+このメソッドは、無効なイメージのカスタムアルファ値を設定するために使います。 既定値は 127 で、無効なボタン イメージは半透明になります。 値を 0 に設定すると、無効なイメージは完全に透明になります。 値を 255 に設定すると、無効なイメージは完全に不透明になります。
 
-##  <a name="setfadedimagealpha"></a>CMFCToolBarImages:: SetFadedImageAlpha
+## <a name="cmfctoolbarimagessetfadedimagealpha"></a><a name="setfadedimagealpha"></a>をイメージ:::セットフェードイメージアルファ
 
 ```
 static void __stdcall SetFadedImageAlpha(BYTE nValue);
@@ -1195,13 +1196,13 @@ static void __stdcall SetFadedImageAlpha(BYTE nValue);
 
 ### <a name="parameters"></a>パラメーター
 
-から*n 値*<br/>
+[in]*n値*<br/>
 
 ### <a name="remarks"></a>解説
 
-##  <a name="setimagesize"></a>CMFCToolBarImages:: SetImageSize
+## <a name="cmfctoolbarimagessetimagesize"></a><a name="setimagesize"></a>イメージを設定します。
 
-各ツールバーイメージ (ソースサイズ) のサイズを設定します。
+各ツール バー イメージのサイズ (ソース サイズ) を設定します。
 
 ```
 void SetImageSize(
@@ -1211,14 +1212,14 @@ void SetImageSize(
 
 ### <a name="parameters"></a>パラメーター
 
-*sizeImage*<br/>
-からツールバーイメージの新しいサイズ。
+*サイズイメージ*<br/>
+[in]ツール バー イメージの新しいサイズ。
 
 ### <a name="remarks"></a>解説
 
-既定では、ツールバーイメージのサイズは 16 x 15 ピクセルです。 別のサイズのツールバーイメージを使用する場合は、このメソッドを呼び出します。
+既定では、ツール バー イメージのサイズは 16 x 15 ピクセルです。 異なるサイズのツール バー イメージを使用する場合は、このメソッドを呼び出します。
 
-##  <a name="setlightpercentage"></a>CMFCToolBarImages:: Set電球の割合
+## <a name="cmfctoolbarimagessetlightpercentage"></a><a name="setlightpercentage"></a>コントロール バーイメージ:::ライトパーセンテージ
 
 ```
 void SetLightPercentage(int nValue);
@@ -1226,11 +1227,11 @@ void SetLightPercentage(int nValue);
 
 ### <a name="parameters"></a>パラメーター
 
-から*n 値*<br/>
+[in]*n値*<br/>
 
 ### <a name="remarks"></a>解説
 
-##  <a name="setmapto3dcolors"></a>CMFCToolBarImages:: SetMapTo3DColors
+## <a name="cmfctoolbarimagessetmapto3dcolors"></a><a name="setmapto3dcolors"></a>CMFCツールバーイメージズ:::セットマップ3Dカラー
 
 ```
 void SetMapTo3DColors(BOOL bMapTo3DColors);
@@ -1238,11 +1239,11 @@ void SetMapTo3DColors(BOOL bMapTo3DColors);
 
 ### <a name="parameters"></a>パラメーター
 
-から*bMapTo3DColors*<br/>
+[in]*bMapTo3Dカラー*<br/>
 
 ### <a name="remarks"></a>解説
 
-##  <a name="setpremultiplyautocheck"></a>CMFCToolBarImages:: SetPreMultiplyAutoCheck
+## <a name="cmfctoolbarimagessetpremultiplyautocheck"></a><a name="setpremultiplyautocheck"></a>CMFCツールバーイメージ:::セットプレ乗算オートチェック
 
 ```
 void SetPreMultiplyAutoCheck(BOOL bAuto = TRUE);
@@ -1250,11 +1251,11 @@ void SetPreMultiplyAutoCheck(BOOL bAuto = TRUE);
 
 ### <a name="parameters"></a>パラメーター
 
-から*Bauto*<br/>
+[in]*b自動*<br/>
 
 ### <a name="remarks"></a>解説
 
-##  <a name="setsingleimage"></a>CMFCToolBarImages:: SetSingleImage
+## <a name="cmfctoolbarimagessetsingleimage"></a><a name="setsingleimage"></a>をクリックします。
 
 ```
 void SetSingleImage();
@@ -1262,9 +1263,9 @@ void SetSingleImage();
 
 ### <a name="remarks"></a>解説
 
-##  <a name="settransparentcolor"></a>CMFCToolBarImages:: SetTransparentColor
+## <a name="cmfctoolbarimagessettransparentcolor"></a><a name="settransparentcolor"></a>CMFCツールバーイメージ::設定透明な色
 
-ツールバーイメージの透明色を設定します。
+ツール バー イメージの透明色を設定します。
 
 ```
 COLORREF SetTransparentColor(COLORREF clrTransparent);
@@ -1272,8 +1273,8 @@ COLORREF SetTransparentColor(COLORREF clrTransparent);
 
 ### <a name="parameters"></a>パラメーター
 
-*clrTransparent*<br/>
-からRGB 値。
+*clr透明*<br/>
+[in]RGB 値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1281,11 +1282,11 @@ COLORREF SetTransparentColor(COLORREF clrTransparent);
 
 ### <a name="remarks"></a>解説
 
-ユーザーまたはフレームワークによって[Cmfctoolbarimages](#draw)が呼び出されると、:D raw では、 *clrtransparent*によって指定された色と一致するピクセルは描画されません。
+ユーザーまたはフレームワークが[CMFCToolBarImages::Draw](#draw)を呼び出すとき、メソッドは*clrTransparent*で指定された色に一致するピクセルを描画しません。
 
-##  <a name="updateimage"></a>CMFCToolBarImages:: UpdateImage
+## <a name="cmfctoolbarimagesupdateimage"></a><a name="updateimage"></a>をクリックします。
 
-ユーザー定義のツールバーイメージをビットマップから更新します。
+ビットマップからユーザー定義のツール バー イメージを更新します。
 
 ```
 BOOL UpdateImage(
@@ -1295,19 +1296,19 @@ BOOL UpdateImage(
 
 ### <a name="parameters"></a>パラメーター
 
-*iImage*<br/>
-から更新するイメージの0から始まるインデックス。
+*iイメージ*<br/>
+[in]更新するイメージの 0 から始まるインデックス。
 
 *hbmp*<br/>
-からイメージを更新するビットマップを示すハンドル。
+[in]イメージの更新元のビットマップへのハンドル。
 
 ### <a name="return-value"></a>戻り値
 
-イメージが正常に更新された場合は TRUE。イメージリストがユーザー定義でも一時的でもない場合は FALSE。
+イメージが正常に更新された場合は TRUE。イメージ リストがユーザー定義または一時的でない場合は FALSE。
 
-##  <a name="convertto32bits"></a>CMFCToolBarImages:: ConvertTo32Bits
+## <a name="cmfctoolbarimagesconvertto32bits"></a><a name="convertto32bits"></a>32ビットを変換します。
 
-下線付きビットマップを 32 bpp イメージに変換します。
+下線付きのビットマップを 32 bpp イメージに変換します。
 
 ```
 BOOL ConvertTo32Bits(COLORREF clrTransparent = (COLORREF)-1);
@@ -1315,14 +1316,14 @@ BOOL ConvertTo32Bits(COLORREF clrTransparent = (COLORREF)-1);
 
 ### <a name="parameters"></a>パラメーター
 
-*clrTransparent*<br/>
+*clr透明*<br/>
 下線付きビットマップの透明色を指定します。
 
 ### <a name="remarks"></a>解説
 
-##  <a name="getbitsperpixel"></a>CMFCToolBarImages:: GetBitsPerPixel
+## <a name="cmfctoolbarimagesgetbitsperpixel"></a><a name="getbitsperpixel"></a>をクリックします。
 
-下線付きの画像の現在の解像度を返します。
+下線付きイメージの現在の解像度を返します。
 
 ```
 int GetBitsPerPixel() const;
@@ -1330,13 +1331,13 @@ int GetBitsPerPixel() const;
 
 ### <a name="return-value"></a>戻り値
 
-下線付きイメージの現在の解像度を表す整数値。ビット/ピクセル (bpp) 単位で指定します。
+下線付きイメージの現在の解像度を表す整数値 (ビット/ピクセル (bpp)。
 
 ### <a name="remarks"></a>解説
 
-##  <a name="getscale"></a>CMFCToolBarImages:: GetScale
+## <a name="cmfctoolbarimagesgetscale"></a><a name="getscale"></a>CMFCツールバーイメージ::ゲットスケール
 
-下線付きの画像の現在のスケール比率を返します。
+下線付きイメージの現在のスケール比を返します。
 
 ```
 double GetScale() const;
@@ -1344,13 +1345,13 @@ double GetScale() const;
 
 ### <a name="return-value"></a>戻り値
 
-現在のスケール比率を表す値。
+現在のスケール比を表す値。
 
 ### <a name="remarks"></a>解説
 
-##  <a name="isscaled"></a>CMFCToolBarImages:: IsScaled
+## <a name="cmfctoolbarimagesisscaled"></a><a name="isscaled"></a>CMFCツールバーイメージズ::イズスケーリング
 
-下線付きの画像が拡大縮小されているかどうかを示します。
+下線付きのイメージを拡大/縮小するかどうかを示します。
 
 ```
 BOOL IsScaled () const;
@@ -1358,13 +1359,13 @@ BOOL IsScaled () const;
 
 ### <a name="return-value"></a>戻り値
 
-下線付きのイメージをスケーリングする場合は TRUE。それ以外の場合は FALSE。
+下線付きのイメージが拡大または縮小される場合は TRUE。それ以外の場合は FALSE。
 
 ### <a name="remarks"></a>解説
 
-##  <a name="smoothresize"></a>CMFCToolBarImages:: SmoothResize
+## <a name="cmfctoolbarimagessmoothresize"></a><a name="smoothresize"></a>CMFCツールバーイメージ:::スムーズサイズ変更
 
-下線付きの画像のサイズを滑らかに変更します。
+下線付きイメージのサイズをスムーズに変更します。
 
 ```
 BOOL SmoothResize(double dblImageScale);
@@ -1372,8 +1373,8 @@ BOOL SmoothResize(double dblImageScale);
 
 ### <a name="parameters"></a>パラメーター
 
-*dblImageScale*<br/>
-スケールの比率。
+*スケール*<br/>
+スケール比。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1381,10 +1382,10 @@ BOOL SmoothResize(double dblImageScale);
 
 ### <a name="remarks"></a>解説
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[階層図](../../mfc/hierarchy-chart.md)<br/>
+[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
 [クラス](../../mfc/reference/mfc-classes.md)<br/>
-[CObject クラス](../../mfc/reference/cobject-class.md)<br/>
-[CMFCToolBar クラス](../../mfc/reference/cmfctoolbar-class.md)<br/>
+[Cオブジェクトクラス](../../mfc/reference/cobject-class.md)<br/>
+[クラス](../../mfc/reference/cmfctoolbar-class.md)<br/>
 [CMFCToolBarButton クラス](../../mfc/reference/cmfctoolbarbutton-class.md)

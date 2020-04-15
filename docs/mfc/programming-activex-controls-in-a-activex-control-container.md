@@ -1,5 +1,5 @@
 ---
-title: ActiveX コントロール コンテナー:ActiveX コントロール コンテナーで ActiveX コントロールのプログラミング
+title: 'ActiveX コントロール コンテナー : ActiveX コントロール コンテナーでの ActiveX コントロールのプログラミング'
 ms.date: 09/12/2018
 helpviewer_keywords:
 - ActiveX control containers [MFC], accessing ActiveX controls
@@ -12,90 +12,90 @@ helpviewer_keywords:
 - wrapper classes [MFC], using
 - ActiveX controls [MFC], wrapper classes
 ms.assetid: ef9b2480-92d6-4191-b16e-8055c4fd7b73
-ms.openlocfilehash: eaeb5275ce825272e1c605e7ceeefa24db7a32ab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9620f4d47197147db4972c9f2024f6018a705902
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62378116"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371188"
 ---
-# <a name="activex-control-containers-programming-activex-controls-in-an-activex-control-container"></a>ActiveX コントロール コンテナー:ActiveX コントロール コンテナーで ActiveX コントロールのプログラミング
+# <a name="activex-control-containers-programming-activex-controls-in-an-activex-control-container"></a>ActiveX コントロール コンテナー : ActiveX コントロール コンテナーでの ActiveX コントロールのプログラミング
 
-この記事は、公開されているにアクセスするためのプロセスを説明します[メソッド](../mfc/mfc-activex-controls-methods.md)と[プロパティ](../mfc/mfc-activex-controls-properties.md)の埋め込みの ActiveX コントロール。
+この資料では、埋め込まれた ActiveX コントロールの公開された[メソッド](../mfc/mfc-activex-controls-methods.md)と[プロパティ](../mfc/mfc-activex-controls-properties.md)にアクセスするプロセスについて説明します。
 
 >[!IMPORTANT]
-> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の置き換えの最新のテクノロジの詳細については、次を参照してください。 [ActiveX コントロール](activex-controls.md)します。
+> ActiveX は、新しい開発には使用しない従来のテクノロジです。 ActiveX に取って代わる最新テクノロジの詳細については、「 [ActiveX コントロール](activex-controls.md)」を参照してください。
 
-基本的には、次の手順には。
+基本的に、次の手順に従います。
 
-1. [ActiveX コンテナー プロジェクトに ActiveX コントロールを挿入](../mfc/inserting-a-control-into-a-control-container-application.md)ギャラリーを使用します。
+1. [ギャラリーを使用して ActiveX コンテナ プロジェクトに ActiveX コントロールを挿入](../mfc/inserting-a-control-into-a-control-container-application.md)します。
 
-1. [メンバー変数を定義する](../mfc/activex-control-containers-connecting-an-activex-control-to-a-member-variable.md)(またはその他の形式のアクセス)、ActiveX と同じ型のラッパー クラスを制御します。
+1. ActiveX コントロール ラッパー クラスと同じ型の[メンバー変数](../mfc/activex-control-containers-connecting-an-activex-control-to-a-member-variable.md)(または他の形式のアクセス) を定義します。
 
-1. [ActiveX コントロールをプログラム](#_core_programming_the_activex_control)ラッパー クラスのメンバー関数を使用して事前に定義します。
+1. ラッパー クラスの定義済みメンバー関数を使用して[ActiveX コントロールをプログラミング](#_core_programming_the_activex_control)します。
 
-詳細については、この ActiveX コントロール サポート (名前付きコンテナー) ダイアログ ベースのプロジェクトを作成したを想定しています。 円のサンプル コントロール円, は、結果のプロジェクトに追加されます。
+ここでは、ActiveX コントロールのサポートを使用してダイアログ ベースのプロジェクト (Container という名前) を作成したとします。 Circ サンプル コントロール Circ が、結果のプロジェクトに追加されます。
 
-プロジェクト (ステップ 1) に、円のコントロールを挿入すると後、は、円のコントロールのインスタンスをアプリケーションのメイン ダイアログ ボックスに挿入します。
+Circ コントロールがプロジェクトに挿入されたら (手順 1)、Circ コントロールのインスタンスをアプリケーションのメイン ダイアログ ボックスに挿入します。
 
 ## <a name="procedures"></a>手順
 
-#### <a name="to-add-the-circ-control-to-the-dialog-template"></a>円コントロール ダイアログ テンプレートを追加するには
+#### <a name="to-add-the-circ-control-to-the-dialog-template"></a>ダイアログ テンプレートに Circ コントロールを追加するには
 
-1. ActiveX コントロール コンテナーのプロジェクトを読み込みます。 この例では、使用、`Container`プロジェクト。
+1. ActiveX コントロール コンテナー プロジェクトを読み込みます。 この例では、プロジェクトを`Container`使用します。
 
-1. リソース ビュー タブをクリックします。
+1. [リソース ビュー] タブをクリックします。
 
-1. 開く、**ダイアログ**フォルダー。
+1. **ダイアログ**フォルダーを開きます。
 
-1. メイン ダイアログ ボックスのテンプレートをダブルクリックします。 この例では、使用**で**します。
+1. メイン ダイアログ ボックス テンプレートをダブルクリックします。 この例では、 **IDD_CONTAINER_DIALOG**を使用します。
 
-1. ツールボックスに円コントロール アイコンをクリックします。
+1. ツールボックスの Circ コントロール アイコンをクリックします。
 
-1. 円のコントロールを挿入 ダイアログ ボックス内のスポットをクリックします。
+1. ダイアログ ボックス内のスポットをクリックして、Circ コントロールを挿入します。
 
-1. **ファイル** メニューの 選択**すべて保存** ダイアログ ボックスのテンプレートのすべての変更を保存します。
+1. [**ファイル]** メニューの [**すべて保存]** を選択して、ダイアログ ボックス テンプレートに対するすべての変更を保存します。
 
-## <a name="modifications-to-the-project"></a>プロジェクトの変更
+## <a name="modifications-to-the-project"></a>プロジェクトへの変更
 
-円のコントロールにアクセスするコンテナー アプリケーションを有効にする Visual C に自動的に追加しますラッパー クラス (`CCirc`) 実装ファイル (します。CPP) コンテナー プロジェクトをラッパー クラスのヘッダー (します。H)、ダイアログ ボックスのヘッダー ファイルへのファイル:
+コンテナー アプリケーションが Circ コントロールにアクセスできるようにするために、Visual C++ はラッパー`CCirc`クラス ( ) 実装ファイル () を自動的に追加します。CPP) をコンテナー プロジェクトとラッパー クラス ヘッダー (.H) ファイルをダイアログ ボックスのヘッダー ファイルに移動します。
 
 [!code-cpp[NVC_MFC_AxCont#1](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_1.h)]
 
-##  <a name="_core_the_wrapper_class_header_28h29_file"></a> ラッパー クラスのヘッダー (します。H) ファイル
+## <a name="the-wrapper-class-header-h-file"></a><a name="_core_the_wrapper_class_header_28h29_file"></a>ラッパー クラス ヘッダー (.H) ファイル
 
-プロパティを取得および設定 (しメソッドを呼び出す)、円のコントロールの`CCirc`ラッパー クラスが公開されているすべてのメソッドとプロパティの宣言を提供します。 例では、これらの宣言内にある可変範囲H. 次の例は、クラスの部分`CCirc`ActiveX コントロールの公開されているインターフェイスを定義します。
+Circ コントロールのプロパティを取得して設定し、メソッドを呼び出`CCirc`すために、ラッパー クラスは、公開されているすべてのメソッドとプロパティの宣言を提供します。 この例では、これらの宣言は CIRC にあります。H。 次の例は、ActiveX`CCirc`コントロールの公開インターフェイスを定義するクラスの一部です。
 
 [!code-cpp[NVC_MFC_AxCont#2](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_2.h)]
 [!code-cpp[NVC_MFC_AxCont#3](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_3.h)]
 
-これらの関数は、通常の C++ 構文を使用して、アプリケーションのプロシージャの他の呼び出すことができます。 このメンバー関数は、コントロールのメソッドとプロパティにアクセスできる設定の使用に関する詳細については、セクションをご覧ください。 [ActiveX コントロールをプログラミング](#_core_programming_the_activex_control)します。
+これらの関数は、通常の C++ 構文を使用して、アプリケーションの他のプロシージャから呼び出すことができます。 このメンバ関数セットを使用してコントロールのメソッドとプロパティにアクセスする方法の詳細については[、「ActiveX コントロールのプログラミング](#_core_programming_the_activex_control)」を参照してください。
 
-##  <a name="_core_member_variable_modifications_to_the_project"></a> プロジェクトにメンバー変数の変更
+## <a name="member-variable-modifications-to-the-project"></a><a name="_core_member_variable_modifications_to_the_project"></a>プロジェクトへのメンバー変数の変更
 
-ActiveX コントロールは、プロジェクトに追加され、ダイアログ ボックスのコンテナーに埋め込まれているとは、プロジェクトの他の部分でアクセスできます。 コントロールにアクセスする最も簡単な方法が、[メンバー変数を作成](../mfc/activex-control-containers-connecting-an-activex-control-to-a-member-variable.md)ダイアログ クラスの`CContainerDlg`(ステップ 2)、つまり Visual C によってプロジェクトに追加するラッパー クラスと同じ型。 埋め込まれたコントロールをいつでもアクセスし、メンバー変数を使用できます。
+ActiveX コントロールをプロジェクトに追加し、ダイアログ ボックス コンテナに埋め込むと、プロジェクトの他の部分からアクセスできます。 コントロールにアクセスする最も簡単な方法は、Visual `CContainerDlg` C++ によってプロジェクトに追加されたラッパー クラスと同じ型のダイアログ クラス (手順 2) の[メンバー変数を作成](../mfc/activex-control-containers-connecting-an-activex-control-to-a-member-variable.md)することです。 その後、メンバー変数を使用して、いつでも埋め込みコントロールにアクセスできます。
 
-ときに、**メンバー変数の追加** ダイアログ ボックスを追加、*で*メンバー変数をプロジェクトにも追加します、次の行をヘッダー ファイル (します。H) の`CContainerDlg`クラス。
+[**メンバー変数の追加**] ダイアログ ボックスで*m_circctl*メンバー変数をプロジェクトに追加すると、ヘッダー ファイルに次の行も追加されます (.H) クラス`CContainerDlg`の:
 
 [!code-cpp[NVC_MFC_AxCont#4](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_4.h)]
 [!code-cpp[NVC_MFC_AxCont#5](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_5.h)]
 
-さらに、呼び出しを**DDX_Control**が自動的に追加、`CContainerDlg`の実装の`DoDataExchange`:
+また **、DDX_Control**の呼び出しは、 の`CContainerDlg`実装に自動的に`DoDataExchange`追加されます。
 
 [!code-cpp[NVC_MFC_AxCont#6](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_6.cpp)]
 
-##  <a name="_core_programming_the_activex_control"></a> ActiveX コントロールのプログラミング
+## <a name="programming-the-activex-control"></a><a name="_core_programming_the_activex_control"></a>ActiveX コントロールのプログラミング
 
-この時点では、ダイアログ テンプレートに ActiveX コントロールを挿入して、メンバー変数を作成します。 埋め込まれたコントロールのメソッドとプロパティへのアクセスに共通の C++ 構文を使用できます。
+この時点で、ダイアログ テンプレートに ActiveX コントロールを挿入し、そのメンバ変数を作成しました。 これで、一般的な C++ 構文を使用して、埋め込みコントロールのプロパティとメソッドにアクセスできるようになりました。
 
-説明したように (で[ラッパー クラスのヘッダー (します。H) ファイル](#_core_the_wrapper_class_header_28h29_file))、ヘッダー ファイル (します。H) の`CCirc`このケースの可変範囲内のラッパー クラスH には、取得し、公開されているプロパティ値を設定に使用できるメンバー関数の一覧が含まれています。 公開されたメソッドのメンバー関数も使用できます。
+前述のとおり ([ラッパー クラスヘッダー (.H) ファイル](#_core_the_wrapper_class_header_28h29_file))、ヘッダーファイル(.H)`CCirc`ラッパー クラス (この場合は CIRC) に対して。H は、公開されたプロパティ値を取得および設定するために使用できるメンバー関数の一覧を格納します。 公開メソッドのメンバー関数も使用できます。
 
-コントロールのプロパティを変更する一般的な場所は、`OnInitDialog`メイン ダイアログ クラスのメンバー関数。 ダイアログ ボックスが表示され、そのコントロールのいずれかを含む、その内容を初期化するために使用する前にのみ、この関数が呼び出されます。
+コントロールのプロパティを変更する一般的な場所は、メイン`OnInitDialog`ダイアログ クラスのメンバー関数にあります。 この関数は、ダイアログ ボックスが表示される直前に呼び出され、その内容 (コントロールを含む) を初期化するために使用されます。
 
-次のコード例では、*で*メンバー変数に埋め込まれた円のコントロールのキャプションと CircleShape プロパティを変更します。
+次のコード例では *、m_circctl*メンバー変数を使用して、埋め込まれた Circ コントロールの Caption プロパティと CircleShape プロパティを変更します。
 
 [!code-cpp[NVC_MFC_AxCont#7](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_7.cpp)]
 
 ## <a name="see-also"></a>関連項目
 
-[ActiveX コントロール コンテナー](../mfc/activex-control-containers.md)
+[ActiveX コントロール コンテナ](../mfc/activex-control-containers.md)

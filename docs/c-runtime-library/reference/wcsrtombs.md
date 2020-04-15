@@ -1,8 +1,9 @@
 ---
 title: wcsrtombs
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - wcsrtombs
+- _o_wcsrtombs
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - string conversion, wide characters
 - wide characters, strings
 ms.assetid: a8d21fec-0d36-4085-9d81-9b1c61c7259d
-ms.openlocfilehash: e6640a027b03b7aa0dceaf8e61af6cb43a44d6e0
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: af22a7d55c5f4958db6962e98f212fb5bb89e61e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70945047"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81328056"
 ---
 # <a name="wcsrtombs"></a>wcsrtombs
 
@@ -60,34 +62,36 @@ size_t wcsrtombs(
 *mbstr*<br/>
 結果として変換されたマルチバイト文字のアドレスの場所。
 
-*wcstr*<br/>
+*ウストル*<br/>
 変換されるワイド文字の文字列の場所を間接的に指します。
 
 *count*<br/>
 変換される文字数。
 
 *mbstate*<br/>
-**Mbstate_t**の変換状態オブジェクトへのポインター。
+**mbstate_t**変換状態オブジェクトへのポインター。
 
 ## <a name="return-value"></a>戻り値
 
 正常に変換されたバイト数を返します (null で終了する null バイトがあっても含まれません)。それ以外の場合は、エラーが発生した場合に -1 を返します。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-**Wcsrtombs**関数は、 *mbstate*に含まれる指定された変換の状態で始まるワイド文字の文字列を、 *wcstr*の間接的な値から*mbstr*のアドレスに変換します。 変換は、null 終端ワイド文字が検出された後、対応していない文字が検出されたとき、または次の文字が*カウント*に含まれる制限を超えたときまで、各文字に対して続行されます。 **Wcsrtombs**が、 *count*の前または後に、ワイド文字の null 文字 (L ' \ 0 ') を検出すると、それを8ビットの0に変換して停止します。
+**wcsrtombs**関数は、*指定した変換*状態から始まるワイド文字の文字列を、 wcstr で間接的に指す値から*mbstr*のアドレスに変換*mbstr*します。 null 終端ワイド文字が検出された後、対応しない文字が検出された場合、または次の文字が*count*に含まれる制限を超える場合まで、各文字の変換は継続されます。 **wcsrtombs が***、カウント*が発生する前または時にワイド文字のヌル文字 (L'\0') を検出すると、8 ビット 0 に変換して停止します。
 
-このため、 *mbstr*のマルチバイト文字列は、 **wcsrtombs**が変換中にワイド文字の null 文字を検出した場合にのみ、null で終了します。 *Wcstr*と*mbstr*が指すシーケンスが重なり合う場合、 **wcsrtombs**の動作は未定義になります。 **wcsrtombs**は、現在のロケールの LC_TYPE カテゴリの影響を受けます。
+したがって *、mbstr*のマルチバイト文字ストリングは、変換中に**wcsrtombs**がワイド文字のヌル文字を検出した場合にのみ、ヌル終了されます。 *wcstr*と*mbstr*によって指すシーケンスが重なっている場合 **、wcsrtombs**の動作は未定義です。 **wcsrtombs**は、現在のロケールのLC_TYPEカテゴリの影響を受けます。
 
-**Wcsrtombs**関数は、 [wcstombs、_wcstombs_l](wcstombs-wcstombs-l.md)の再起動によって異なります。 変換状態は、同じまたはその他の再開可能な関数への後続の呼び出しのために*mbstate*に格納されます。 再開可能な関数と再開不可能な関数を混用した場合、結果は未定義です。  たとえば、 **wcstombs**の代わりに**wcsrtombs**の後続の呼び出しが使用された場合、アプリケーションは**wcsrlen**ではなく**wcsrlen**を使用します。
+**wcsrtombs**関数は[、wcstombs](wcstombs-wcstombs-l.md)とは異なり、_wcstombs_l再起動性によって異なります。 変換状態は、同じ関数または他の再開可能な関数を呼び出す後続の呼び出しの場合は*mbstate*に格納されます。 再開可能な関数と再開不可能な関数を混用した場合、結果は未定義です。  たとえば、wcstombs の代わりに**wcsrtombs**への後続の呼び出しを使用した場合、アプリケーションは**wcsnlen**ではなく**wcsrlen**を使用**します**。
 
-*Mbstr*引数が**NULL**の場合、 **wcsrtombs**は、コピー先の文字列の必要なサイズをバイト単位で返します。 *Mbstate*が null の場合、内部**mbstate_t**の変換状態が使用されます。 文字シーケンス*wchar*に対応するマルチバイト文字表現がない場合は、-1 が返され、 **errno**は**EILSEQ**に設定されます。
+*mbstr*引数が**NULL**の場合 **、wcsrtombs は**、変換先文字列の必要なサイズをバイト単位で返します。 *mbstate*が null の場合、内部**mbstate_t**変換状態が使用されます。 文字シーケンス*wchar*に対応するマルチバイト文字表現がない場合は、-1 が返され **、errno**が**EILSEQ**に設定されます。
 
-C++ では、この関数にテンプレートのオーバーロードがあります。このオーバーロードは、この関数に対応するセキュリティで保護された新しい関数を呼び出します。 詳細については、「 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
+C++ では、この関数にテンプレートのオーバーロードがあります。このオーバーロードは、この関数に対応するセキュリティで保護された新しい関数を呼び出します。 詳細については、「[セキュリティ保護されたテンプレート オーバーロード](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
+
+既定では、この関数のグローバル状態はアプリケーションにスコープされます。 これを変更するには[、CRT のグローバル状態を](../global-state.md)参照してください。
 
 ## <a name="exceptions"></a>例外
 
-**Wcsrtombs**関数は、この関数の実行中に現在のスレッドの関数が**setlocale**を呼び出しておらず、 *mbstate*が null でない限り、マルチスレッドセーフです。
+**wcsrtombs**関数は、この関数が実行中に**setlocale**を呼び出す関数が存在せず *、mbstate*が null でない限り、マルチスレッド セーフです。
 
 ## <a name="example"></a>例
 
@@ -137,7 +141,7 @@ The string was successfuly converted.
 
 ## <a name="requirements"></a>必要条件
 
-|ルーチンによって返される値|必須ヘッダー|
+|ルーチン|必須ヘッダー|
 |-------------|---------------------|
 |**wcsrtombs**|\<wchar.h>|
 
@@ -145,7 +149,7 @@ The string was successfuly converted.
 
 [データ変換](../../c-runtime-library/data-conversion.md)<br/>
 [ロケール](../../c-runtime-library/locale.md)<br/>
-[マルチバイト文字のシーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[マルチバイト文字シーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [wcrtomb](wcrtomb.md)<br/>
 [wcrtomb_s](wcrtomb-s.md)<br/>
 [wctomb、_wctomb_l](wctomb-wctomb-l.md)<br/>

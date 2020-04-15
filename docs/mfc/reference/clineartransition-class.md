@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CLinearTransition [MFC], m_dblFinalValue
 - CLinearTransition [MFC], m_duration
 ms.assetid: 7fcb2dba-beb8-4933-9f5d-3b7fb1585ef0
-ms.openlocfilehash: 1a6348d1afd0117683bd31af61324b14e16f710c
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 1d3bc50255dae93bfa80e8212c2349db66db4eb6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69505744"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372273"
 ---
 # <a name="clineartransition-class"></a>CLinearTransition クラス
 
@@ -37,40 +37,40 @@ class CLinearTransition : public CBaseTransition;
 
 |名前|説明|
 |----------|-----------------|
-|[CLinearTransition:: CLinearTransition](#clineartransition)|線形遷移オブジェクトを構築し、duration と final 値を使用して初期化します。|
+|[C線遷移::C線形トランジション](#clineartransition)|線形遷移オブジェクトを構築し、期間と最終値を使用して初期化します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CLinearTransition:: Create](#create)|遷移ライブラリを呼び出して、カプセル化された遷移 COM オブジェクトを作成します。 ( [Cbasetransition:: Create](../../mfc/reference/cbasetransition-class.md#create)をオーバーライドします)。|
+|[C線遷移::作成](#create)|カプセル化された遷移 COM オブジェクトを作成する遷移ライブラリを呼び出します。 [(CBase トランジションをオーバーライドします。:作成](../../mfc/reference/cbasetransition-class.md#create).)|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
 |名前|説明|
 |----------|-----------------|
-|[CLinearTransition:: m_dblFinalValue](#m_dblfinalvalue)|遷移の終了時のアニメーション変数の値。|
-|[CLinearTransition:: m_duration](#m_duration)|遷移の継続時間。|
+|[C線遷移::m_dblFinalValue](#m_dblfinalvalue)|トランジションの終了時のアニメーション変数の値。|
+|[C線変遷::m_duration](#m_duration)|トランジションの期間。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-線形遷移では、アニメーション変数の値は、初期値から指定された最終的な値に直線的に遷移します。 すべての遷移は自動的にクリアされるため、operator new を使用して割り当てることをお勧めします。 カプセル化された IuiAnimateGroup 遷移 COM オブジェクトは、次に NULL になるまで、CAnimationController:: によって作成されます。 この COM オブジェクトの作成後にメンバー変数を変更しても効果はありません。
+直線遷移の間、アニメーション変数の値は、初期値から指定された最終値に直線的に遷移します。 すべてのトランジションは自動的にクリアされるため、演算子 new を使用して割り当てることをお勧めします。 カプセル化された IUIAnimationTransition COM オブジェクトは、それまでは NULL になるまで CAnimationController::AnimateGroup によって作成されます。 この COM オブジェクトの作成後にメンバー変数を変更しても、何も影響しません。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[CBaseTransition](../../mfc/reference/cbasetransition-class.md)
+[Cベーストランジション](../../mfc/reference/cbasetransition-class.md)
 
-[CLinearTransition](../../mfc/reference/clineartransition-class.md)
+[C線トランジション](../../mfc/reference/clineartransition-class.md)
 
 ## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxanimationcontroller.h
 
-##  <a name="clineartransition"></a>CLinearTransition:: CLinearTransition
+## <a name="clineartransitionclineartransition"></a><a name="clineartransition"></a>C線遷移::C線形トランジション
 
-線形遷移オブジェクトを構築し、duration と final 値を使用して初期化します。
+線形遷移オブジェクトを構築し、期間と最終値を使用して初期化します。
 
 ```
 CLinearTransition(
@@ -80,15 +80,15 @@ CLinearTransition(
 
 ### <a name="parameters"></a>パラメーター
 
-*duration*<br/>
-遷移の継続時間。
+*期間*<br/>
+トランジションの期間。
 
-*dblFinalValue*<br/>
-遷移の終了時のアニメーション変数の値。
+*最終価値*<br/>
+トランジションの終了時のアニメーション変数の値。
 
-##  <a name="create"></a>  CLinearTransition::Create
+## <a name="clineartransitioncreate"></a><a name="create"></a>C線遷移::作成
 
-遷移ライブラリを呼び出して、カプセル化された遷移 COM オブジェクトを作成します。
+カプセル化された遷移 COM オブジェクトを作成する遷移ライブラリを呼び出します。
 
 ```
 virtual BOOL Create(
@@ -98,24 +98,24 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>パラメーター
 
-*pLibrary*<br/>
-標準遷移のライブラリを定義する、 [Iuiの遷移 Tionlibrary インターフェイス](/windows/win32/api/uianimation/nn-uianimation-iuianimationtransitionlibrary)へのポインター。
+*pライブラリ*<br/>
+標準遷移のライブラリを定義する[IUIAnimationTransitionLibrary インターフェイス](/windows/win32/api/uianimation/nn-uianimation-iuianimationtransitionlibrary)へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
-移行が正常に作成された場合は TRUE。それ以外の場合は FALSE。
+遷移が正常に作成された場合は TRUE。それ以外の場合は FALSE。
 
-##  <a name="m_dblfinalvalue"></a>  CLinearTransition::m_dblFinalValue
+## <a name="clineartransitionm_dblfinalvalue"></a><a name="m_dblfinalvalue"></a>C線遷移::m_dblFinalValue
 
-遷移の終了時のアニメーション変数の値。
+トランジションの終了時のアニメーション変数の値。
 
 ```
 DOUBLE m_dblFinalValue;
 ```
 
-##  <a name="m_duration"></a>CLinearTransition:: m_duration
+## <a name="clineartransitionm_duration"></a><a name="m_duration"></a>C線変遷::m_duration
 
-遷移の継続時間。
+トランジションの期間。
 
 ```
 UI_ANIMATION_SECONDS m_duration;

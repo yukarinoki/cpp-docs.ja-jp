@@ -1,5 +1,5 @@
 ---
-title: CMFCRibbonFontComboBox クラス
+title: クラス
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCRibbonFontComboBox
@@ -22,14 +22,14 @@ helpviewer_keywords:
 - CMFCRibbonFontComboBox [MFC], RebuildFonts
 - CMFCRibbonFontComboBox [MFC], SetFont
 ms.assetid: 33b4db50-df4f-45fa-8f05-2e6e73c31435
-ms.openlocfilehash: 186c4bc3e1b26529ed0e000d2893e1b2d81c4304
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 822f4f6fe76bb5b82b455daec54ed96568ea6ba7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69504967"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375165"
 ---
-# <a name="cmfcribbonfontcombobox-class"></a>CMFCRibbonFontComboBox クラス
+# <a name="cmfcribbonfontcombobox-class"></a>クラス
 
 フォントの一覧を含むコンボ ボックスを実装します。 このコンボ ボックスをリボン パネルに配置できます。
 
@@ -57,7 +57,7 @@ class CMFCRibbonFontComboBox : public CMFCRibbonComboBox
 
 |名前|説明|
 |----------|-----------------|
-|[CMFCRibbonFontComboBox:: BuildFonts](#buildfonts)|リボンのフォント コンボ ボックスに、指定されたフォントの種類、文字セット、ピッチ、ファミリのフォントを設定します。|
+|[CMFCRibbonFontComboBox::BuildFonts](#buildfonts)|リボンのフォント コンボ ボックスに、指定されたフォントの種類、文字セット、ピッチ、ファミリのフォントを設定します。|
 |`CMFCRibbonFontComboBox::CreateObject`|このクラス型の動的インスタンスを作成するために、フレームワークで使用されます。|
 |[CMFCRibbonFontComboBox::GetCharSet](#getcharset)|指定された文字セットを返します。|
 |[CMFCRibbonFontComboBox::GetFontDesc](#getfontdesc)||
@@ -67,9 +67,9 @@ class CMFCRibbonFontComboBox : public CMFCRibbonComboBox
 |[CMFCRibbonFontComboBox::RebuildFonts](#rebuildfonts)|リボンのフォント コンボ ボックスに、以前に指定されたフォントの種類、文字セット、ピッチ、ファミリのフォントを設定します。|
 |[CMFCRibbonFontComboBox::SetFont](#setfont)|コンボ ボックスで、指定されたフォントを選択します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-オブジェクトを`CMFCRibbonFontComboBox`作成した後、 [CMFCRibbonPanel:: add](../../mfc/reference/cmfcribbonpanel-class.md#add)を呼び出して、オブジェクトをリボンパネルに追加します。
+作成したオブジェクトは`CMFCRibbonFontComboBox`[、CMFCRibbonPanel::Add](../../mfc/reference/cmfcribbonpanel-class.md#add)を呼び出して、リボン パネルに追加します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -87,11 +87,11 @@ class CMFCRibbonFontComboBox : public CMFCRibbonComboBox
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** afxRibbonComboBox
+**ヘッダー:** afxリボンコンボボックス.h
 
-##  <a name="buildfonts"></a>  CMFCRibbonFontComboBox::BuildFonts
+## <a name="cmfcribbonfontcomboboxbuildfonts"></a><a name="buildfonts"></a>コンボボックス::ビルドフォント
 
-リボンのコンボボックスにフォントを設定します。
+リボンのコンボ ボックスにフォントを設定します。
 
 ```
 void BuildFonts(
@@ -102,18 +102,18 @@ void BuildFonts(
 
 ### <a name="parameters"></a>パラメーター
 
-*nFontType*<br/>
-から追加するフォントのフォントの種類を指定します。
+*nフォントタイプ*<br/>
+[in]追加するフォントのフォントの種類を指定します。
 
-*nCharSet*<br/>
-から追加するフォントの文字セットを指定します。
+*nCharセット*<br/>
+[in]追加するフォントの文字セットを指定します。
 
-*nPitchAndFamily*<br/>
-から追加するフォントのピッチとファミリを指定します。
+*アンドファミリー*<br/>
+[in]追加するフォントのピッチとファミリを指定します。
 
-##  <a name="cmfcribbonfontcombobox"></a>  CMFCRibbonFontComboBox::CMFCRibbonFontComboBox
+## <a name="cmfcribbonfontcomboboxcmfcribbonfontcombobox"></a><a name="cmfcribbonfontcombobox"></a>コンボボックス::CMFCリボンフォントコンボボックス
 
-[CMFCRibbonFontComboBox](../../mfc/reference/cmfcribbonfontcombobox-class.md)オブジェクトを構築し、初期化します。
+[オブジェクトを](../../mfc/reference/cmfcribbonfontcombobox-class.md)構築して初期化します。
 
 ```
 CMFCRibbonFontComboBox(
@@ -127,29 +127,29 @@ CMFCRibbonFontComboBox(
 ### <a name="parameters"></a>パラメーター
 
 *nID*<br/>
-からユーザーがコンボボックスから項目を選択したときに実行されるコマンドのコマンド ID です。
+[in]ユーザーがコンボ ボックスから項目を選択したときに実行されるコマンドのコマンド ID。
 
-*nFontType*<br/>
-からコンボボックスに表示するフォントの種類を指定します。 有効なオプションは、DEVICE_FONTTYPE、RASTER_FONTTYPE、TRUETYPE_FONTTYPE、またはそのビットごとの任意の組み合わせです。
+*nフォントタイプ*<br/>
+[in]コンボ ボックスに表示するフォントの種類を指定します。 有効なオプションは、DEVICE_FONTTYPE、RASTER_FONTTYPE、TRUETYPE_FONTTYPE、またはそのビットごとの任意の組み合わせです。
 
-*nCharSet*<br/>
-からコンボボックス内のフォントを、指定した文字セットに属するフォントにフィルター処理します。
+*nCharセット*<br/>
+[in]コンボ ボックス内のフォントを、指定した文字セットに属するフォントにフィルターします。
 
-*nPitchAndFamily*<br/>
-からコンボボックスに表示されるフォントのピッチとファミリを指定します。
+*アンドファミリー*<br/>
+[in]コンボ ボックスに表示されるフォントのピッチとファミリを指定します。
 
-*nWidth*<br/>
-からコンボボックスの幅をピクセル単位で指定します。
+*n幅*<br/>
+[in]コンボ ボックスの幅をピクセル単位で指定します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-使用可能な*Nfonttype*パラメーター値の詳細については、Windows SDK のドキュメントの「 [EnumFontFamProc](/previous-versions/dd162621\(v=vs.85\)) 」を参照してください。
+可能な*nFontType*パラメーター値の詳細については、Windows SDK のドキュメントの[「列挙フォントファムプロ」](/previous-versions/dd162621\(v=vs.85\))を参照してください。
 
-*Ncharset*に割り当てることができる有効な文字セットと、 *nPitchAndFamily*に割り当てることができる有効な値の詳細については、Windows SDK のドキュメントの「 [LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw) 」を参照してください。
+*nCharSet*に割り当てることができる有効な文字セットと*nPitchAndFamily*に割り当てることができる有効な値の詳細については、Windows SDK ドキュメントの[LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw)を参照してください。
 
-##  <a name="getfontdesc"></a>  CMFCRibbonFontComboBox::GetFontDesc
+## <a name="cmfcribbonfontcomboboxgetfontdesc"></a><a name="getfontdesc"></a>コンボボックス::フォントを取得します。
 
-詳細については、Visual Studio のインストール**の\\VC atlmfc\\\\src mfc**フォルダーにあるソースコードを参照してください。
+詳細については、Visual Studio のインストールの**\\VC\\atlmfc\\src mfc**フォルダーにあるソース コードを参照してください。
 
 ```
 const CMFCFontInfo* GetFontDesc(int iIndex = -1) const;
@@ -157,25 +157,25 @@ const CMFCFontInfo* GetFontDesc(int iIndex = -1) const;
 
 ### <a name="parameters"></a>パラメーター
 
-から*iIndex*<br/>
+[in]*をクリックします。*<br/>
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="rebuildfonts"></a>  CMFCRibbonFontComboBox::RebuildFonts
+## <a name="cmfcribbonfontcomboboxrebuildfonts"></a><a name="rebuildfonts"></a>コンボボックス::リビルドフォント
 
-以前に指定したフォントの種類、文字セット、およびピッチとファミリのフォントをリボンのコンボボックスに設定します。
+リボンのコンボ ボックスに、以前に指定したフォントの種類、文字セット、ピッチとファミリのフォントを設定します。
 
 ```
 void RebuildFonts();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-このクラスの[コンストラクター](#cmfcribbonfontcombobox)の [リボンフォント] コンボボックスに含めるフォントの種類、文字セット、およびピッチとファミリを指定することも、 [CMFCRibbonFontComboBox:: buildfonts](#buildfonts)を呼び出すこともできます。
+このクラスの[コンストラクター](#cmfcribbonfontcombobox)のリボン フォント コンボ ボックスに含めるフォントの種類、文字セット、ピッチ、およびフォント ファミリを指定するか[、CMFCRibbonFontComboBox::BuildFonts](#buildfonts)を呼び出します。
 
-##  <a name="setfont"></a>  CMFCRibbonFontComboBox::SetFont
+## <a name="cmfcribbonfontcomboboxsetfont"></a><a name="setfont"></a>コンボボックス::フォントを設定します。
 
 コンボ ボックスで、指定されたフォントを選択します。
 
@@ -188,21 +188,21 @@ BOOL SetFont(
 
 ### <a name="parameters"></a>パラメーター
 
-' lpszName * 選択するフォントの名前を指定します。
+'lpszName* 選択するフォントの名前を指定します。
 
-*nCharSet*<br/>
+*nCharセット*<br/>
 選択したフォントの文字セットを指定します。
 
-*bExact*<br/>
-フォントを選択するときに文字セットが一致する必要があることを指定する場合は TRUE。フォントを選択するときに文字セットを無視できることを指定する場合は FALSE。
+*b正確な情報*<br/>
+フォントを選択するときに文字セットが一致する必要があることを指定する場合は TRUE。FALSE を指定すると、フォントの選択時に文字セットを無視できます。
 
 ### <a name="return-value"></a>戻り値
 
-指定したフォントが見つかり、選択された場合は0以外の。それ以外の場合は0。
+指定したフォントが見つかり、選択されている場合は 0 以外の値を指定します。それ以外の場合は、ゼロ。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="getcharset"></a>  CMFCRibbonFontComboBox::GetCharSet
+## <a name="cmfcribbonfontcomboboxgetcharset"></a><a name="getcharset"></a>コンボボックス::取得文字セット
 
 指定された文字セットを返します。
 
@@ -212,11 +212,11 @@ BYTE GetCharSet() const;
 
 ### <a name="return-value"></a>戻り値
 
-文字セット (Windows SDK のドキュメントの「LOGFONT」を参照してください)。
+文字セット (Windows SDK のドキュメントのログフォントを参照)。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="getfonttype"></a>  CMFCRibbonFontComboBox::GetFontType
+## <a name="cmfcribbonfontcomboboxgetfonttype"></a><a name="getfonttype"></a>コンボボックス::フォントタイプを取得します。
 
 コンボ ボックスに表示するフォントの種類を返します。 有効なオプションは、DEVICE_FONTTYPE、RASTER_FONTTYPE、TRUETYPE_FONTTYPE、またはそのビットごとの任意の組み合わせです。
 
@@ -226,11 +226,11 @@ int GetFontType() const;
 
 ### <a name="return-value"></a>戻り値
 
-フォントの種類 (Windows SDK ドキュメントの「EnumFontFamProc」を参照してください)。
+フォントの種類 (Windows SDK のドキュメントの列挙フォントファムプロを参照してください)。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="getpitchandfamily"></a>  CMFCRibbonFontComboBox::GetPitchAndFamily
+## <a name="cmfcribbonfontcomboboxgetpitchandfamily"></a><a name="getpitchandfamily"></a>コンボボックス::ゲットピッチアンドファミリー
 
 コンボ ボックスに表示されるフォントのピッチとファミリを返します。
 
@@ -240,12 +240,12 @@ BYTE GetPitchAndFamily() const;
 
 ### <a name="return-value"></a>戻り値
 
-ピッチとファミリ (Windows SDK のドキュメントの「LOGFONT」を参照してください)。
+ピッチとファミリ (Windows SDK のドキュメントのログフォントを参照)。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 ## <a name="see-also"></a>関連項目
 
-[階層図](../../mfc/hierarchy-chart.md)<br/>
+[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
 [クラス](../../mfc/reference/mfc-classes.md)<br/>
 [CMFCRibbonComboBox クラス](../../mfc/reference/cmfcribboncombobox-class.md)

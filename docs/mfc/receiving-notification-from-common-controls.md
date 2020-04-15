@@ -11,35 +11,35 @@ helpviewer_keywords:
 - Windows common controls [MFC], notifications
 - WM_NOTIFY message
 ms.assetid: 50194592-d60d-44d0-8ab3-338a2a2c63e7
-ms.openlocfilehash: 73315d4a1107204bc6adc885729fdeeaeb7f98d0
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 9205facb5ec4e2491308020d9667a27ab8deb96b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75298975"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371780"
 ---
 # <a name="receiving-notification-from-common-controls"></a>コモン コントロールからの通知の受信
 
-コモンコントロールは、ユーザーからの入力などのイベントがコントロールで発生したときに、通知メッセージを親ウィンドウに送信する子ウィンドウです。
+コモン コントロールは、ユーザーからの入力などのイベントがコントロールで発生したときに、親ウィンドウに通知メッセージを送信する子ウィンドウです。
 
-アプリケーションでは、これらの通知メッセージを使用して、ユーザーが実行する必要のあるアクションを決定します。 最も一般的なコントロールは、通知メッセージを WM_NOTIFY メッセージとして送信します。 Windows コントロールは、ほとんどの通知メッセージを WM_COMMAND メッセージとして送信します。 [CWnd:: OnNotify](../mfc/reference/cwnd-class.md#onnotify)は WM_NOTIFY メッセージのハンドラーです。 `CWnd::OnCommand`と同様に、`OnNotify` の実装は、メッセージマップでの処理のために通知メッセージを `OnCmdMsg` にディスパッチします。 通知を処理するためのメッセージマップエントリが ON_NOTIFY ます。 詳細については、「[テクニカルノート 61: ON_NOTIFY および WM_NOTIFY メッセージ](../mfc/tn061-on-notify-and-wm-notify-messages.md)」を参照してください。
+アプリケーションは、ユーザーが実行するアクションを決定するために、これらの通知メッセージに依存します。 一般的なコントロールでは、通知メッセージWM_NOTIFYメッセージとして送信されます。 Windows コントロールは、ほとんどの通知メッセージをWM_COMMANDメッセージとして送信します。 [CWnd::OnNotify](../mfc/reference/cwnd-class.md#onnotify)は、WM_NOTIFY メッセージのハンドラーです。 と同様`CWnd::OnCommand`に、の実装`OnNotify`は、メッセージ マップで`OnCmdMsg`処理するために通知メッセージを ディスパッチします。 通知を処理するためのメッセージ マップ エントリがON_NOTIFY。 詳細については、テクニカル[ノート 61: ON_NOTIFYおよびWM_NOTIFYメッセージ](../mfc/tn061-on-notify-and-wm-notify-messages.md)を参照してください。
 
-または、派生クラスが "メッセージリフレクション" を使用して独自の通知メッセージを処理することもできます。 詳細については、「[テクニカルノート 62: Windows コントロールのメッセージリフレクション](../mfc/tn062-message-reflection-for-windows-controls.md)」を参照してください。
+または、派生クラスは、"メッセージ リフレクション" を使用して独自の通知メッセージを処理できます。 詳細については、「[テクニカル ノート 62: Windows コントロールのメッセージ リフレクション](../mfc/tn062-message-reflection-for-windows-controls.md)」を参照してください。
 
-## <a name="retrieving-the-cursor-position-in-a-notification-message"></a>通知メッセージ内のカーソル位置を取得する
+## <a name="retrieving-the-cursor-position-in-a-notification-message"></a>通知メッセージ内のカーソル位置の取得
 
-場合によっては、コモンコントロールが特定の通知メッセージを受信したときにカーソルの現在位置を特定すると便利です。 たとえば、コモンコントロールが NM_RCLICK 通知メッセージを受信したときに、現在のカーソルの位置を確認すると便利です。
+コモン コントロールが特定の通知メッセージを受信した場合に、カーソルの現在位置を判断すると便利な場合があります。 たとえば、コモン コントロールがNM_RCLICK通知メッセージを受信したときに、現在のカーソル位置を確認すると便利です。
 
-`CWnd::GetCurrentMessage`を呼び出すことによってこれを実現する簡単な方法があります。 ただし、このメソッドは、メッセージが送信された時点のカーソル位置だけを取得します。 カーソルはメッセージの送信後に移動された可能性があるため、現在のカーソル位置を取得するには `CWnd::GetCursorPos` を呼び出す必要があります。
+これを行うには、 を呼び出す`CWnd::GetCurrentMessage`簡単な方法があります。 ただし、このメソッドは、メッセージが送信された時点でのカーソル位置のみを取得します。 メッセージの送信後にカーソルが移動されている可能性があるため、現在のカーソル`CWnd::GetCursorPos`位置を取得するために呼び出す必要があります。
 
 > [!NOTE]
->  `CWnd::GetCurrentMessage` は、メッセージハンドラー内でのみ呼び出す必要があります。
+> `CWnd::GetCurrentMessage`メッセージ ハンドラ内でのみ呼び出す必要があります。
 
-通知メッセージハンドラーの本文に次のコードを追加します (この例では NM_RCLICK)。
+通知メッセージ ハンドラーの本文に次のコードを追加します (この例では、NM_RCLICK)。
 
 [!code-cpp[NVC_MFCControlLadenDialog#4](../mfc/codesnippet/cpp/receiving-notification-from-common-controls_1.cpp)]
 
-この時点で、マウスカーソルの位置は `cursorPos` オブジェクトに格納されます。
+この時点で、マウス カーソルの位置がオブジェクトに`cursorPos`格納されます。
 
 ## <a name="see-also"></a>関連項目
 

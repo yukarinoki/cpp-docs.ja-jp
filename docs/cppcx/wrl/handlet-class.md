@@ -27,12 +27,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HandleT::operator= operator
 - Microsoft::WRL::Wrappers::HandleT::~HandleT, destructor
 ms.assetid: 3822b32a-a426-4d94-a54d-919d4df60ee2
-ms.openlocfilehash: f66fbe23c305be15e09928242175dfa7ce8c141b
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.openlocfilehash: bde7d7f1bd6730d96cb0f7a0d191a32eb8ed3e8c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821819"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371465"
 ---
 # <a name="handlet-class"></a>HandleT クラス
 
@@ -47,73 +47,73 @@ class HandleT;
 
 ### <a name="parameters"></a>パラメーター
 
-*HandleTraits*<br/>
-ハンドルの共通特性を定義する[handletraits](handletraits-structure.md)構造体のインスタンス。
+*ハンドルトレイツ*<br/>
+ハンドルの共通の特性を定義する[HandleTraits](handletraits-structure.md)構造体のインスタンス。
 
 ## <a name="members"></a>メンバー
 
-### <a name="public-typedefs"></a>パブリック Typedef
+### <a name="public-typedefs"></a>パブリック typedef
 
-[名前]     | 説明
+名前     | 説明
 -------- | -----------------------------
 `Traits` | `HandleTraits` と同義。
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-[名前]                                | 説明
+名前                                | 説明
 ----------------------------------- | --------------------------------------------------
-[ハンドラー Let:: ハンドラー Let](#handlet)        | `HandleT` クラスの新しいインスタンスを初期化します。
-[ハンドラーの Let:: ~ の実行](#tilde-handlet) | `HandleT` クラスのインスタンスを初期化解除します。
+[ハンドル::ハンドル](#handlet)        | `HandleT` クラスの新しいインスタンスを初期化します。
+[ハンドル::~ハンドル](#tilde-handlet) | クラスのインスタンスを初期化解除します`HandleT`。
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-[名前]                         | 説明
+名前                         | 説明
 ---------------------------- | ----------------------------------------------------------------------
-[実行の許可:: Attach](#attach)   | 指定したハンドルを現在の `HandleT` オブジェクトに関連付けます。
-[実行の許可:: 閉じる](#close)     | 現在の `HandleT` オブジェクトを閉じます。
-[使用方法::D etach](#detach)   | 現在の `HandleT` オブジェクトと基になるハンドルとの関連付けを解除します。
-[Get-help Let:: Get](#get)         | 基になるハンドルの値を取得します。
-[Let let:: IsValid](#isvalid) | 現在の `HandleT` オブジェクトがハンドルを表しているかどうかを示します。
+[ハンドル::アタッチ](#attach)   | 指定したハンドルを現在`HandleT`のオブジェクトに関連付けます。
+[ハンドルT::閉じる](#close)     | 現在の `HandleT` オブジェクトを閉じます。
+[ハンドルT::Dエタッハ](#detach)   | 現在`HandleT`のオブジェクトと基になるハンドルの関連付けを解除します。
+[ハンドル::ゲット](#get)         | 基になるハンドルの値を取得します。
+[ハンドル::イズバリ](#isvalid) | 現在`HandleT`のオブジェクトがハンドルを表すかどうかを示します。
 
 ### <a name="protected-methods"></a>プロテクト メソッド
 
-[名前]                                     | 説明
+名前                                     | 説明
 ---------------------------------------- | ------------------------------------
-[ハンドラー Let:: InternalClose](#internalclose) | 現在の `HandleT` オブジェクトを閉じます。
+[ハンドル::内部閉じる](#internalclose) | 現在の `HandleT` オブジェクトを閉じます。
 
 ### <a name="public-operators"></a>パブリック演算子
 
-[名前]                                   | 説明
+名前                                   | 説明
 -------------------------------------- | ----------------------------------------------------------------------------------
-[Let let:: operator =](#operator-assign) | 指定された `HandleT` オブジェクトの値を現在の `HandleT` オブジェクトに移動します。
+[ハンドルT::演算子=](#operator-assign) | 指定した`HandleT`オブジェクトの値を現在`HandleT`のオブジェクトに移動します。
 
-### <a name="protected-data-members"></a>保護されるデータ メンバー
+### <a name="protected-data-members"></a>プロテクト データ メンバー
 
-[名前]                        | 説明
+名前                        | 説明
 --------------------------- | ----------------------------------------------------------------
-[使用方法:: handle_](#handle) | `HandleT` オブジェクトによって表されるハンドルを格納します。
+[ハンドルT::handle_](#handle) | オブジェクトによって表されるハンドルを`HandleT`格納します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
 `HandleT`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-**ヘッダー:** corewrappers .h
+**ヘッダー:** コアラッパー.h
 
-**名前空間:** Microsoft:: WRL:: Wrapper
+**名前空間:** マイクロソフト::WRL::ラッパー
 
-## <a name="tilde-handlet"></a>ハンドラーの Let:: ~ の実行
+## <a name="handlethandlet"></a><a name="tilde-handlet"></a>ハンドル::~ハンドル
 
-`HandleT` クラスのインスタンスを初期化解除します。
+クラスのインスタンスを初期化解除します`HandleT`。
 
 ```cpp
 ~HandleT();
 ```
 
-## <a name="attach"></a>実行の許可:: Attach
+## <a name="handletattach"></a><a name="attach"></a>ハンドル::アタッチ
 
-指定したハンドルを現在の `HandleT` オブジェクトに関連付けます。
+指定したハンドルを現在`HandleT`のオブジェクトに関連付けます。
 
 ```cpp
 void Attach(
@@ -123,10 +123,10 @@ void Attach(
 
 ### <a name="parameters"></a>パラメーター
 
-*h*<br/>
+*H*<br/>
 ハンドル。
 
-## <a name="close"></a>実行の許可:: 閉じる
+## <a name="handletclose"></a><a name="close"></a>ハンドルT::閉じる
 
 現在の `HandleT` オブジェクトを閉じます。
 
@@ -134,15 +134,15 @@ void Attach(
 void Close();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
-現在の `HandleT` の基になるハンドルが閉じられ、`HandleT` が無効な状態に設定されています。
+現在`HandleT`のハンドルの基になるハンドルは閉じられ、`HandleT`無効な状態に設定されます。
 
-ハンドルが正常に終了しない場合は、呼び出し元のスレッドで例外が発生します。
+ハンドルが正しく閉じない場合は、呼び出し元のスレッドで例外が発生します。
 
-## <a name="detach"></a>使用方法::D etach
+## <a name="handletdetach"></a><a name="detach"></a>ハンドルT::Dエタッハ
 
-現在の `HandleT` オブジェクトと基になるハンドルとの関連付けを解除します。
+現在`HandleT`のオブジェクトと基になるハンドルの関連付けを解除します。
 
 ```cpp
 typename HandleTraits::Type Detach();
@@ -152,11 +152,11 @@ typename HandleTraits::Type Detach();
 
 基になるハンドル。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
-この操作が完了すると、現在の `HandleT` は無効な状態に設定されます。
+この操作が完了すると、現在`HandleT`の状態は無効に設定されます。
 
-## <a name="get"></a>Get-help Let:: Get
+## <a name="handletget"></a><a name="get"></a>ハンドル::ゲット
 
 基になるハンドルの値を取得します。
 
@@ -168,15 +168,15 @@ typename HandleTraits::Type Get() const;
 
 ハンドル。
 
-## <a name="handle"></a>使用方法:: handle_
+## <a name="handlethandle_"></a><a name="handle"></a>ハンドルT::handle_
 
-`HandleT` オブジェクトによって表されるハンドルを格納します。
+オブジェクトによって表されるハンドルを`HandleT`格納します。
 
 ```cpp
 typename HandleTraits::Type handle_;
 ```
 
-## <a name="handlet"></a>ハンドラー Let:: ハンドラー Let
+## <a name="handlethandlet"></a><a name="handlet"></a>ハンドル::ハンドル
 
 `HandleT` クラスの新しいインスタンスを初期化します。
 
@@ -193,14 +193,14 @@ HandleT(
 
 ### <a name="parameters"></a>パラメーター
 
-*h*<br/>
+*H*<br/>
 ハンドル。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
-最初のコンストラクターは、オブジェクトに対する有効なハンドルではない `HandleT` オブジェクトを初期化します。 2番目のコンストラクターは、パラメーター *h*から新しい `HandleT` オブジェクトを作成します。
+最初のコンストラクターは、オブジェクト`HandleT`への有効なハンドルではないオブジェクトを初期化します。 2 番目のコンストラクターは`HandleT`、パラメーター *h*から新しいオブジェクトを作成します。
 
-## <a name="internalclose"></a>ハンドラー Let:: InternalClose
+## <a name="handletinternalclose"></a><a name="internalclose"></a>ハンドル::内部閉じる
 
 現在の `HandleT` オブジェクトを閉じます。
 
@@ -210,15 +210,15 @@ virtual bool InternalClose();
 
 ### <a name="return-value"></a>戻り値
 
-現在の `HandleT` 正常に閉じられた場合は**true** 。それ以外の場合は**false**。
+現在`HandleT`のクローズが正常に終了した場合は**true。** それ以外の場合**は false。**
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
-`InternalClose()` は `protected`です。
+`InternalClose()` は `protected` です。
 
-## <a name="isvalid"></a>Let let:: IsValid
+## <a name="handletisvalid"></a><a name="isvalid"></a>ハンドル::イズバリ
 
-現在の `HandleT` オブジェクトがハンドルを表しているかどうかを示します。
+現在`HandleT`のオブジェクトがハンドルを表すかどうかを示します。
 
 ```cpp
 bool IsValid() const;
@@ -226,11 +226,11 @@ bool IsValid() const;
 
 ### <a name="return-value"></a>戻り値
 
-`HandleT` がハンドルを表している場合は**true** 。それ以外の場合は**false**。
+**が**ハンドルを`HandleT`表す場合は true、または a を表す場合は true。それ以外の場合**は false。**
 
-## <a name="operator-assign"></a>Let let:: operator =
+## <a name="handletoperator"></a><a name="operator-assign"></a>ハンドルT::演算子=
 
-指定された `HandleT` オブジェクトの値を現在の `HandleT` オブジェクトに移動します。
+指定した`HandleT`オブジェクトの値を現在`HandleT`のオブジェクトに移動します。
 
 ```cpp
 HandleT& operator=(
@@ -240,13 +240,13 @@ HandleT& operator=(
 
 ### <a name="parameters"></a>パラメーター
 
-*h*<br/>
+*H*<br/>
 ハンドルへの右辺値参照。
 
 ### <a name="return-value"></a>戻り値
 
-現在の `HandleT` オブジェクトへの参照。
+現在`HandleT`のオブジェクトへの参照。
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>解説
 
-この操作では、parameter *h*によって指定された `HandleT` オブジェクトを無効にします。
+この操作は、パラメータ`HandleT`*h*で指定されたオブジェクトを無効にします。

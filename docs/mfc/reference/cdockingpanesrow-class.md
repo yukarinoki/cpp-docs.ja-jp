@@ -1,5 +1,5 @@
 ---
-title: CDockingPanesRow クラス
+title: クラスをドッキングします。
 ms.date: 10/18/2018
 f1_keywords:
 - CDockingPanesRow
@@ -90,18 +90,18 @@ helpviewer_keywords:
 - CDockingPanesRow [MFC], ShowPane
 - CDockingPanesRow [MFC], UpdateVisibleState
 ms.assetid: e7a17832-0ebb-4bce-b799-cec9b60f76fe
-ms.openlocfilehash: e5720fa2ff8e85092b246002b7961ce3830ee7e3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8d6a6c4bb9a80dc9170029fd127a052f1bfaddda
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391193"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375573"
 ---
-# <a name="cdockingpanesrow-class"></a>CDockingPanesRow クラス
+# <a name="cdockingpanesrow-class"></a>クラスをドッキングします。
 
 ドッキング サイトの同じ水平または垂直の行 (列) に配置されるペインの一覧を管理します。
 
-詳細についてにあるソース コードを参照してください、 **VC\\atlmfc\\src\\mfc** Visual Studio のインストールのフォルダー。
+詳細については、Visual Studio のインストールの**\\VC\\atlmfc\\src mfc**フォルダーにあるソース コードを参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -123,7 +123,7 @@ class CDockingPanesRow : public CObject
 |----------|-----------------|
 |[CDockingPanesRow::AddPane](#addpane)||
 |[CDockingPanesRow::AddPaneFromRow](#addpanefromrow)||
-|[CDockingPanesRow::ArrangePanes](#arrangepanes)|指定された余白および間隔のパラメーターに基づいてウィンドウを並べて整列します。|
+|[チャッキングペインズロウ::整列ペイン](#arrangepanes)|指定された余白および間隔のパラメーターに基づいてウィンドウを並べて整列します。|
 |[CDockingPanesRow::CalcFixedLayout](#calcfixedlayout)||
 |[CDockingPanesRow::Create](#create)||
 |[CDockingPanesRow::ExpandStretchedPanes](#expandstretchedpanes)||
@@ -164,7 +164,7 @@ class CDockingPanesRow : public CObject
 |[CDockingPanesRow::ShowPane](#showpane)||
 |[CDockingPanesRow::UpdateVisibleState](#updatevisiblestate)||
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 `CDockingPanesRow` オブジェクトは、ドック サイト オブジェクトによって内部的に作成されます。
 
@@ -182,9 +182,9 @@ class CDockingPanesRow : public CObject
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** afxDockingPanesRow.h
+**ヘッダー:** afxDockingペインズロウ.h
 
-##  <a name="addpane"></a>  CDockingPanesRow::AddPane
+## <a name="cdockingpanesrowaddpane"></a><a name="addpane"></a>CDockingPanesRow::ペインの追加
 
 ```
 virtual void AddPane(
@@ -196,17 +196,17 @@ virtual void AddPane(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pControlBar*<br/>
+[in]*コントロールバー*<br/>
 
-[in]*dockMethod*<br/>
+[in]*ドックメソッド*<br/>
 
 [in]*lpRect*<br/>
 
-[in]*bAddLast*<br/>
+[in]*ラストを追加する*<br/>
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="addpanefromrow"></a>  CDockingPanesRow::AddPaneFromRow
+## <a name="cdockingpanesrowaddpanefromrow"></a><a name="addpanefromrow"></a>CDockingPanesRow::ペインの一行を追加します
 
 ```
 virtual void AddPaneFromRow(
@@ -216,15 +216,15 @@ virtual void AddPaneFromRow(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pControlBar*<br/>
+[in]*コントロールバー*<br/>
 
-[in]*dockMethod*<br/>
+[in]*ドックメソッド*<br/>
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="arrangepanes"></a>  CDockingPanesRow::ArrangePanes
+## <a name="cdockingpanesrowarrangepanes"></a><a name="arrangepanes"></a>チャッキングペインズロウ::整列ペイン
 
-指定された余白に従って行でウィンドウのドッキングと間隔パラメーターを配置します。
+指定した余白と間隔のパラメータに従って、ドッキング ペインを行に配置します。
 
 ```
 virtual void ArrangePanes(
@@ -234,17 +234,17 @@ virtual void ArrangePanes(
 
 ### <a name="parameters"></a>パラメーター
 
-*nMargin*<br/>
-[in]行の左上隅から最初のウィンドウのピクセル単位のオフセットを指定します。
+*nマージン*<br/>
+[in]行の左上隅からの最初のペインのオフセットをピクセル単位で指定します。
 
-*nSpacing*<br/>
-[in]ウィンドウのピクセル単位で間隔を指定します。
+*n間隔*<br/>
+[in]ペイン間の間隔をピクセル単位で指定します。
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-行が、ドッキング ウィンドウを整列するには、このメソッドを呼び出します。 このメソッドを呼び出した後に呼び出す必要がある`CDockingPanesRow::FixupVirtualRects(FALSE, NULL)`します。
+ドッキングする行のペインを配置します。 このメソッドを呼び出した後`CDockingPanesRow::FixupVirtualRects(FALSE, NULL)`、 を呼び出す必要があります。
 
-##  <a name="calcfixedlayout"></a>  CDockingPanesRow::CalcFixedLayout
+## <a name="cdockingpanesrowcalcfixedlayout"></a><a name="calcfixedlayout"></a>チャッキングペインズロウ::計算式レイアウト
 
 ```
 virtual CSize CalcFixedLayout(
@@ -254,15 +254,15 @@ virtual CSize CalcFixedLayout(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*bStretch*<br/>
+[in]*bストレッチ*<br/>
 
-[in] *bHorz*<br/>
+[in]*bHorz*<br/>
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="cdockingpanesrow"></a>  CDockingPanesRow::CDockingPanesRow
+## <a name="cdockingpanesrowcdockingpanesrow"></a><a name="cdockingpanesrow"></a>クッキングペインズロウ::Cドッキングペインズロウ
 
 ```
 CDockingPanesRow(
@@ -273,15 +273,15 @@ CDockingPanesRow(
 
 ### <a name="parameters"></a>パラメーター
 
-[in] *pParentDockBar*<br/>
+[in]*親のドックバー*<br/>
 
-[in]*nOffset*<br/>
+[in]*オフセット*<br/>
 
-[in] *nHeight*<br/>
+[in]*nHeight*<br/>
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="create"></a>  CDockingPanesRow::Create
+## <a name="cdockingpanesrowcreate"></a><a name="create"></a>チャッキングペインズロウ::作成
 
 ```
 virtual BOOL Create();
@@ -289,25 +289,25 @@ virtual BOOL Create();
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="expandstretchedpanes"></a>  CDockingPanesRow::ExpandStretchedPanes
+## <a name="cdockingpanesrowexpandstretchedpanes"></a><a name="expandstretchedpanes"></a>CDockingPanesRow::拡張ストレッチペイン
 
 ```
 void ExpandStretchedPanes();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="expandstretchedpanesrect"></a>  CDockingPanesRow::ExpandStretchedPanesRect
+## <a name="cdockingpanesrowexpandstretchedpanesrect"></a><a name="expandstretchedpanesrect"></a>CDockingPanesRow::拡張ストレッチペインズレクト
 
 ```
 void ExpandStretchedPanesRect();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="fixupvirtualrects"></a>  CDockingPanesRow::FixupVirtualRects
+## <a name="cdockingpanesrowfixupvirtualrects"></a><a name="fixupvirtualrects"></a>クドックペインズロウ::フィクスアップバーチャルレクト
 
 ```
 void FixupVirtualRects(
@@ -317,13 +317,13 @@ void FixupVirtualRects(
 
 ### <a name="parameters"></a>パラメーター
 
-[in] *bMoveBackToVirtualRect*<br/>
+[in]*仮想レクトに戻る*<br/>
 
-[in]*pBarToExclude*<br/>
+[in]*を除外します。*<br/>
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="getavailablelength"></a>  CDockingPanesRow::GetAvailableLength
+## <a name="cdockingpanesrowgetavailablelength"></a><a name="getavailablelength"></a>クドックペインズロウ::取得利用可能な長さ
 
 ```
 virtual int GetAvailableLength(BOOL bUseVirtualRect = FALSE) const;
@@ -331,13 +331,13 @@ virtual int GetAvailableLength(BOOL bUseVirtualRect = FALSE) const;
 
 ### <a name="parameters"></a>パラメーター
 
-[in] *bUseVirtualRect*<br/>
+[in]*バーチャルレクトを使用します。*<br/>
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="getavailablespace"></a>  CDockingPanesRow::GetAvailableSpace
+## <a name="cdockingpanesrowgetavailablespace"></a><a name="getavailablespace"></a>クドックペインズロウ::ゲット利用可能なスペース
 
 ```
 virtual void GetAvailableSpace(CRect& rect);
@@ -345,11 +345,11 @@ virtual void GetAvailableSpace(CRect& rect);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*rect*<br/>
+[in]*レクト*<br/>
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="getclientrect"></a>  CDockingPanesRow::GetClientRect
+## <a name="cdockingpanesrowgetclientrect"></a><a name="getclientrect"></a>クドックペインズロウ::Getクライアントレクト
 
 ```
 void GetClientRect(CRect& rect) const;
@@ -357,11 +357,11 @@ void GetClientRect(CRect& rect) const;
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*rect*<br/>
+[in]*レクト*<br/>
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="getdocksite"></a>  CDockingPanesRow::GetDockSite
+## <a name="cdockingpanesrowgetdocksite"></a><a name="getdocksite"></a>クドックペインズロウ::ゲットドックサイト
 
 ```
 CDockSite* GetDockSite() const;
@@ -369,9 +369,9 @@ CDockSite* GetDockSite() const;
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="getextraspace"></a>  CDockingPanesRow::GetExtraSpace
+## <a name="cdockingpanesrowgetextraspace"></a><a name="getextraspace"></a>クドックペインズロウ::ゲットエクストラスペース
 
 ```
 int GetExtraSpace() const;
@@ -379,9 +379,9 @@ int GetExtraSpace() const;
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="getgroupfrompane"></a>  CDockingPanesRow::GetGroupFromPane
+## <a name="cdockingpanesrowgetgroupfrompane"></a><a name="getgroupfrompane"></a>クドックペインズロウ::ゲットグループフロインペイン
 
 ```
 void GetGroupFromPane(
@@ -391,13 +391,13 @@ void GetGroupFromPane(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pBar*<br/>
+[in]*pバー*<br/>
 
 [in]*lst*<br/>
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="getid"></a>  CDockingPanesRow::GetID
+## <a name="cdockingpanesrowgetid"></a><a name="getid"></a>クッキングペインズロウ::ゲットID
 
 ```
 int GetID() const;
@@ -405,9 +405,9 @@ int GetID() const;
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="getmaxpanesize"></a>  CDockingPanesRow::GetMaxPaneSize
+## <a name="cdockingpanesrowgetmaxpanesize"></a><a name="getmaxpanesize"></a>クッキングペインズロウ::ゲットマックスペインサイズ
 
 ```
 int GetMaxPaneSize(BOOL bSkipHiddenBars = TRUE) const;
@@ -415,13 +415,13 @@ int GetMaxPaneSize(BOOL bSkipHiddenBars = TRUE) const;
 
 ### <a name="parameters"></a>パラメーター
 
-[in] *bSkipHiddenBars*<br/>
+[in]*バー*<br/>
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="getpanecount"></a>  CDockingPanesRow::GetPaneCount
+## <a name="cdockingpanesrowgetpanecount"></a><a name="getpanecount"></a>クッキングペインズロウ::GetPaneCount
 
 ```
 int GetPaneCount() const;
@@ -429,9 +429,9 @@ int GetPaneCount() const;
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="getpanelist"></a>  CDockingPanesRow::GetPaneList
+## <a name="cdockingpanesrowgetpanelist"></a><a name="getpanelist"></a>クドックペインズロウ::GetPaneリスト
 
 ```
 const CObList& GetPaneList() const;
@@ -439,9 +439,9 @@ const CObList& GetPaneList() const;
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="getrowalignment"></a>  CDockingPanesRow::GetRowAlignment
+## <a name="cdockingpanesrowgetrowalignment"></a><a name="getrowalignment"></a>クッキングペインズロウ::ゲットローアライメント
 
 ```
 DWORD GetRowAlignment() const;
@@ -449,9 +449,9 @@ DWORD GetRowAlignment() const;
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="getrowheight"></a>  CDockingPanesRow::GetRowHeight
+## <a name="cdockingpanesrowgetrowheight"></a><a name="getrowheight"></a>チャッキングペインズロウ::ゲットローハイト
 
 ```
 int GetRowHeight() const;
@@ -459,9 +459,9 @@ int GetRowHeight() const;
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="getrowoffset"></a>  CDockingPanesRow::GetRowOffset
+## <a name="cdockingpanesrowgetrowoffset"></a><a name="getrowoffset"></a>クッキングペインズロウ::ゲットローオフセット
 
 ```
 int GetRowOffset() const;
@@ -469,9 +469,9 @@ int GetRowOffset() const;
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="getvisiblecount"></a>  CDockingPanesRow::GetVisibleCount
+## <a name="cdockingpanesrowgetvisiblecount"></a><a name="getvisiblecount"></a>ウィンドウズペインズロウ::取得VisibleCount
 
 ```
 virtual int GetVisibleCount();
@@ -479,9 +479,9 @@ virtual int GetVisibleCount();
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="getwindowrect"></a>  CDockingPanesRow::GetWindowRect
+## <a name="cdockingpanesrowgetwindowrect"></a><a name="getwindowrect"></a>クッキングペインズロウ::GetWindowRect
 
 ```
 void GetWindowRect(CRect& rect) const;
@@ -489,11 +489,11 @@ void GetWindowRect(CRect& rect) const;
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*rect*<br/>
+[in]*レクト*<br/>
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="haspane"></a>  CDockingPanesRow::HasPane
+## <a name="cdockingpanesrowhaspane"></a><a name="haspane"></a>チャッキングペインズロウ::ハズペイン
 
 ```
 BOOL HasPane(CBasePane* pControlBar);
@@ -501,13 +501,13 @@ BOOL HasPane(CBasePane* pControlBar);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pControlBar*<br/>
+[in]*コントロールバー*<br/>
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="isempty"></a>  CDockingPanesRow::IsEmpty
+## <a name="cdockingpanesrowisempty"></a><a name="isempty"></a>チャッキングペインズロウ::IsEmpty
 
 ```
 virtual BOOL IsEmpty() const;
@@ -515,9 +515,9 @@ virtual BOOL IsEmpty() const;
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="isexclusiverow"></a>  CDockingPanesRow::IsExclusiveRow
+## <a name="cdockingpanesrowisexclusiverow"></a><a name="isexclusiverow"></a>チャッキングペインズロウ::イエクスクルーシブロウ
 
 ```
 virtual BOOL IsExclusiveRow() const;
@@ -525,9 +525,9 @@ virtual BOOL IsExclusiveRow() const;
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="ishorizontal"></a>  CDockingPanesRow::IsHorizontal
+## <a name="cdockingpanesrowishorizontal"></a><a name="ishorizontal"></a>チャッキングペインズロウ::イス水平
 
 ```
 bool IsHorizontal() const;
@@ -535,9 +535,9 @@ bool IsHorizontal() const;
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="isvisible"></a>  CDockingPanesRow::IsVisible
+## <a name="cdockingpanesrowisvisible"></a><a name="isvisible"></a>チャッキングペインズロウ::イズビジブル
 
 ```
 virtual BOOL IsVisible() const;
@@ -545,9 +545,9 @@ virtual BOOL IsVisible() const;
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="move"></a>  CDockingPanesRow::Move
+## <a name="cdockingpanesrowmove"></a><a name="move"></a>チャッキングペインズロウ::移動
 
 ```
 virtual void Move(int nOffset);
@@ -555,11 +555,11 @@ virtual void Move(int nOffset);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*nOffset*<br/>
+[in]*オフセット*<br/>
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="movepane"></a>  CDockingPanesRow::MovePane
+## <a name="cdockingpanesrowmovepane"></a><a name="movepane"></a>チャッキングペインズロウ::移動ペイン
 
 ```
 void MovePane(
@@ -587,25 +587,25 @@ void MovePane(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pControlBar*<br/>
+[in]*コントロールバー*<br/>
 
-[in]*ptOffset*<br/>
+[in]*ptオフセット*<br/>
 
-[in]*bSwapControlBars*<br/>
+[in]*コントロールバーを切り替える*<br/>
 
-[in] *hdwp*<br/>
+[in]*hdwp*<br/>
 
-[in]*rectTarget*<br/>
+[in]*レクトターゲット*<br/>
 
-[in]*nOffset*<br/>
+[in]*オフセット*<br/>
 
-[in]*bForward*<br/>
+[in]*bフォワード*<br/>
 
-[in]*nAbsolutOffset*<br/>
+[in]*アブソルトオフセット*<br/>
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="onresizepane"></a>  CDockingPanesRow::OnResizePane
+## <a name="cdockingpanesrowonresizepane"></a><a name="onresizepane"></a>CDockingPanesRow::オンリサイズペイン
 
 ```
 virtual void OnResizePane(CBasePane* pControlBar);
@@ -613,19 +613,19 @@ virtual void OnResizePane(CBasePane* pControlBar);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pControlBar*<br/>
+[in]*コントロールバー*<br/>
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="redrawall"></a>  CDockingPanesRow::RedrawAll
+## <a name="cdockingpanesrowredrawall"></a><a name="redrawall"></a>チャッキングペインズロウ::再描画
 
 ```
 void RedrawAll();
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="removepane"></a>  CDockingPanesRow::RemovePane
+## <a name="cdockingpanesrowremovepane"></a><a name="removepane"></a>CDockingPanesRow::ウィンドウの削除
 
 ```
 virtual void RemovePane(CPane* pControlBar);
@@ -633,11 +633,11 @@ virtual void RemovePane(CPane* pControlBar);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pControlBar*<br/>
+[in]*コントロールバー*<br/>
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="replacepane"></a>  CDockingPanesRow::ReplacePane
+## <a name="cdockingpanesrowreplacepane"></a><a name="replacepane"></a>CDockingPanesRow::置換ペイン
 
 ```
 virtual BOOL ReplacePane(
@@ -647,15 +647,15 @@ virtual BOOL ReplacePane(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pBarOld*<br/>
+[in]*をクリックします。*<br/>
 
-[in]*pBarNew*<br/>
+[in]*新しい*<br/>
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="repositionpanes"></a>  CDockingPanesRow::RepositionPanes
+## <a name="cdockingpanesrowrepositionpanes"></a><a name="repositionpanes"></a>CDockingPanesRow::再配置ペイン
 
 ```
 virtual void RepositionPanes(
@@ -667,17 +667,17 @@ virtual void RepositionPanes(
 
 ### <a name="parameters"></a>パラメーター
 
-[in] *rectNewParentBarArea*<br/>
+[in]*レクトニューペアレントバーエリア*<br/>
 
-[in]*nSide*<br/>
+[in]*nサイド*<br/>
 
-[in]*bExpand*<br/>
+[in]*展開する*<br/>
 
-[in]*nOffset*<br/>
+[in]*オフセット*<br/>
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="resize"></a>  CDockingPanesRow::Resize
+## <a name="cdockingpanesrowresize"></a><a name="resize"></a>CDockingPanesRow::サイズ変更
 
 ```
 virtual int Resize(int nOffset);
@@ -685,13 +685,13 @@ virtual int Resize(int nOffset);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*nOffset*<br/>
+[in]*オフセット*<br/>
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="resizebypanedivider"></a>  CDockingPanesRow::ResizeByPaneDivider
+## <a name="cdockingpanesrowresizebypanedivider"></a><a name="resizebypanedivider"></a>クドックペインズロウ::サイズ変更バイペインディバイダー
 
 ```
 virtual int ResizeByPaneDivider(int /*ignored*/);
@@ -699,13 +699,13 @@ virtual int ResizeByPaneDivider(int /*ignored*/);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*無視されます*<br/>
+[in]*無視される*<br/>
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="screentoclient"></a>  CDockingPanesRow::ScreenToClient
+## <a name="cdockingpanesrowscreentoclient"></a><a name="screentoclient"></a>クドックペインズロウ::スクリーントクライアント
 
 ```
 void ScreenToClient(CRect& rect) const;
@@ -713,11 +713,11 @@ void ScreenToClient(CRect& rect) const;
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*rect*<br/>
+[in]*レクト*<br/>
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="setextra"></a>  CDockingPanesRow::SetExtra
+## <a name="cdockingpanesrowsetextra"></a><a name="setextra"></a>チャッキングペインズロウ::セットエクストラ
 
 ```
 void SetExtra(
@@ -727,13 +727,13 @@ void SetExtra(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*nExtraSpace*<br/>
+[in]*nエクストラスペース*<br/>
 
-[in] *rowExtraAlign*<br/>
+[in]*行エクストラ整列*<br/>
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="showdocksiterow"></a>  CDockingPanesRow::ShowDockSiteRow
+## <a name="cdockingpanesrowshowdocksiterow"></a><a name="showdocksiterow"></a>チャッキングペインズロウ::ショードックサイトロウ
 
 ```
 virtual void ShowDockSiteRow(
@@ -743,13 +743,13 @@ virtual void ShowDockSiteRow(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*bShow*<br/>
+[in]*bショー*<br/>
 
-[in]*bDelay*<br/>
+[in]*bディレイ*<br/>
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="showpane"></a>  CDockingPanesRow::ShowPane
+## <a name="cdockingpanesrowshowpane"></a><a name="showpane"></a>チャッキングペインズロウ::ショーペイン
 
 ```
 virtual BOOL ShowPane(
@@ -760,17 +760,17 @@ virtual BOOL ShowPane(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pControlBar*<br/>
+[in]*コントロールバー*<br/>
 
-[in]*bShow*<br/>
+[in]*bショー*<br/>
 
-[in]*bDelay*<br/>
+[in]*bディレイ*<br/>
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
-##  <a name="updatevisiblestate"></a>  CDockingPanesRow::UpdateVisibleState
+## <a name="cdockingpanesrowupdatevisiblestate"></a><a name="updatevisiblestate"></a>ウィンドウズペインズロウ::更新VisibleState
 
 ```
 virtual void UpdateVisibleState(BOOL bDelay);
@@ -778,14 +778,14 @@ virtual void UpdateVisibleState(BOOL bDelay);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*bDelay*<br/>
+[in]*bディレイ*<br/>
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>解説
 
 ## <a name="see-also"></a>関連項目
 
-[階層図](../../mfc/hierarchy-chart.md)<br/>
+[階層グラフ](../../mfc/hierarchy-chart.md)<br/>
 [クラス](../../mfc/reference/mfc-classes.md)<br/>
-[CObject クラス](../../mfc/reference/cobject-class.md)<br/>
+[Cオブジェクトクラス](../../mfc/reference/cobject-class.md)<br/>
 [CDockSite クラス](../../mfc/reference/cdocksite-class.md)<br/>
-[CPane クラス](../../mfc/reference/cpane-class.md)
+[CPane Class](../../mfc/reference/cpane-class.md)
